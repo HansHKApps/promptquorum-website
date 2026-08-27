@@ -13,12 +13,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       title: 'Text-Generation-WebUI vs vLLM vs llama.cpp in 2026: Inference Engine Comparison',
       heroImage: '/images/text-generation-webui-vs-vllm-vs-llamacpp-overview-hero-en.webp',
       seoTitle: 'Text-Generation-WebUI vs vLLM vs llama.cpp',
-      intro: 'Text-Generation-WebUI, vLLM, and llama.cpp are three popular inference engines for running local LLMs, each optimized for different use cases. llama.cpp is the lightest and powers Ollama; vLLM is the fastest for high-throughput production APIs; Text-Generation-WebUI is the most feature-rich for experimentation. As of April 2026, vLLM dominates production deployments, llama.cpp dominates consumer devices, and Text-Generation-WebUI dominates research and fine-tuning workflows.',
+      intro: 'Text-Generation-WebUI, vLLM, and llama.cpp are three popular inference engines for running local LLMs, each optimized for different use cases. llama.cpp is the lightest and powers Ollama; vLLM is the fastest for high-throughput production APIs; Text-Generation-WebUI is the most feature-rich for experimentation. As of August 2026, vLLM (and increasingly SGLang for the largest production clusters) dominates production deployments, llama.cpp dominates consumer devices, and Text-Generation-WebUI dominates research and fine-tuning workflows.',
       metaDescription: 'vLLM dominates production (highest throughput). llama.cpp powers Ollama. Text-Generation-WebUI best for research and LoRA fine-tuning. 2026 comparison.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**Text-Generation-WebUI, vLLM, and llama.cpp are three popular inference engines for running local LLMs, each optimized for different use cases. llama.cpp is the lightest and powers Ollama; vLLM is the fastest for high-throughput production APIs; Text-Generation-WebUI is the most feature-rich for experimentation.**',
       audience: 'Engineers deploying local LLMs in production or enterprise environments',
-      dateModified: '2026-04-12',
+      dateModified: '2026-08-27',
       readTime: '13 min read',
       gammaEmbedUrl: '/presentations/text-generation-webui-vs-vllm-vs-llamacpp-static.html',
       gammaDescription: 'The slide deck below covers: vLLM vs llama.cpp vs Text-Generation-WebUI feature comparison, performance benchmarks (up to 1000+ tok/s), production decision framework, LoRA fine-tuning use cases, and regional compliance (EU/Japan/China). Download the PDF as an inference engine reference card.',
@@ -50,7 +50,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**llama.cpp** = lightweight, CPU-efficient, powers Ollama. Best for: Consumer laptops, single-user, zero dependencies.',
             '**vLLM** = production-grade, maximum GPU throughput, supports batching and distributed inference. Best for: API servers, multi-user, high throughput.',
             '**Text-Generation-WebUI** = feature-rich experimentation tool with a web UI built-in. Best for: Fine-tuning, LoRA testing, advanced settings tweaking.',
-            'As of April 2026, vLLM leads production use, llama.cpp leads consumer use, and Text-Generation-WebUI leads research/fine-tuning.',
+            'As of August 2026, vLLM leads production use (with SGLang gaining share for the largest deployments), llama.cpp leads consumer use, and Text-Generation-WebUI leads research/fine-tuning.',
           ],
         },
         whatIsInferenceEngine: {
@@ -88,7 +88,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'understanding-llama-cpp',
           title: 'Understanding llama.cpp: The Foundation',
           content: [
-            '**llama.cpp is a C++ implementation of LLM inference, originally written to run Meta\'s Llama model on consumer hardware without GPU acceleration.** As of April 2026, it remains the most lightweight and portable inference engine.',
+            '**llama.cpp is a C++ implementation of LLM inference, originally written to run Meta\'s Llama model on consumer hardware without GPU acceleration.** As of August 2026, it remains the most lightweight and portable inference engine.',
             '**Why llama.cpp dominates consumer use:**',
             '- Minimal memory overhead -- can run on 8 GB RAM with CPU alone.',
             '- Supports multiple GPU backends (NVIDIA, AMD, Apple Metal, Intel).',
@@ -107,9 +107,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '- **Batch processing**: Can process 50-100 prompts simultaneously, serving more users per GPU.',
             '- **Distributed inference**: Split a 70B model across multiple GPUs automatically.',
             '- **Wide model support**: Works with any HuggingFace model (Llama, Qwen, Mistral, Phi, etc.).',
-            'As of April 2026, most production local-LLM deployments in enterprises use vLLM. The trade-off is that vLLM requires NVIDIA GPUs; it has poor CPU performance.',
+            'As of August 2026, vLLM remains the most widely deployed production engine, though SGLang (also built on Paged Attention) has gained adoption at the largest scale for its faster structured-output and multi-model serving. The trade-off for vLLM is that it requires NVIDIA GPUs; it has poor CPU performance.',
           ],
-          codeBlock: '# Install vLLM\npip install vllm\n\n# Run a model via API\nvllm serve meta-llama/Llama-3.3-8B-Instruct \\\n  --host 0.0.0.0 --port 8000 \\\n  --gpu-memory-utilization 0.9\n\n# Now accessible at http://localhost:8000/v1/completions',
+          codeBlock: '# Install vLLM\npip install vllm\n\n# Run a model via API\nvllm serve meta-llama/Llama-3.2-3B-Instruct \\\n  --host 0.0.0.0 --port 8000 \\\n  --gpu-memory-utilization 0.9\n\n# Now accessible at http://localhost:8000/v1/completions',
           codeLanguage: 'bash',
         },
         textGenerationWebUI: {
@@ -130,12 +130,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'performance-tokens-per-second',
           title: 'How Fast Is Each Engine? Throughput Comparison?',
           content: [
-            '**Throughput (tokens per second) depends on the model size, hardware, and engine optimization.** As of April 2026, here are real-world benchmarks on consumer hardware:',
+            '**Throughput (tokens per second) depends on the model size, hardware, and engine optimization.** As of August 2026, here are real-world benchmarks on consumer hardware:',
           ],
           rows: [
-            { 'Scenario': 'Llama 3.3 8B on RTX 4090 (GPU)', 'llama.cpp': '150 tokens/sec', 'vLLM': '300 tokens/sec (with batching)', 'Text-Gen-WebUI': '150 tokens/sec' },
-            { 'Scenario': 'Llama 3.3 8B on 8-core CPU', 'llama.cpp': '5 tokens/sec', 'vLLM': '0.5 tokens/sec (unusable)', 'Text-Gen-WebUI': '4 tokens/sec' },
-            { 'Scenario': 'Llama 3.3 70B on 2× RTX 4090', 'llama.cpp': '20 tokens/sec (single GPU)', 'vLLM': '100 tokens/sec (distributed)', 'Text-Gen-WebUI': '20 tokens/sec' },
+            { 'Scenario': 'Llama 3.2 3B on RTX 4090 (GPU)', 'llama.cpp': '150 tokens/sec', 'vLLM': '300 tokens/sec (with batching)', 'Text-Gen-WebUI': '150 tokens/sec' },
+            { 'Scenario': 'Llama 3.2 3B on 8-core CPU', 'llama.cpp': '5 tokens/sec', 'vLLM': '0.5 tokens/sec (unusable)', 'Text-Gen-WebUI': '4 tokens/sec' },
+            { 'Scenario': 'Llama 4 Scout on 2× RTX 4090', 'llama.cpp': '20 tokens/sec (single GPU)', 'vLLM': '100 tokens/sec (distributed)', 'Text-Gen-WebUI': '20 tokens/sec' },
             { 'Scenario': 'Phi-3 3.8B on M4 MacBook Pro', 'llama.cpp': '30 tokens/sec', 'vLLM': 'N/A (no Metal support)', 'Text-Gen-WebUI': '25 tokens/sec' },
           ],
           columns: ['Scenario', 'llama.cpp', 'vLLM', 'Text-Gen-WebUI'],
@@ -146,7 +146,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'production-deployments',
           title: 'Which Engine for Production Deployments?',
           content: [
-            '**vLLM is the production standard as of April 2026.** Most companies running local LLM APIs in production use vLLM because of its throughput optimization and batching support. A single vLLM instance can serve 50+ concurrent users on one GPU, vs. 1-2 for llama.cpp.',
+            '**vLLM is the production standard as of August 2026** (alongside SGLang for the largest deployments). Most companies running local LLM APIs in production use vLLM because of its throughput optimization and batching support. A single vLLM instance can serve 50+ concurrent users on one GPU, vs. 1-2 for llama.cpp.',
             'However, production choice depends on your constraint:',
             '- **Serving 100+ requests/day with limited GPU**: Use vLLM (best throughput).',
             '- **Serving with only CPU or Apple Silicon**: Use llama.cpp via Ollama (best CPU support).',
@@ -173,8 +173,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           items: [
             '**EU / GDPR:** For EU enterprise deployments, vLLM running on-premises keeps all inference within EU infrastructure -- no tokens, prompts, or outputs leave your servers. For German BSI IT-Grundschutz compliance, vLLM is the recommended production engine because it provides structured audit logging via Prometheus metrics (/metrics endpoint), and all model versions are pinnable via HuggingFace model IDs for compliance documentation. Mistral models (Mistral AI, France, Apache 2.0) are the EU-preferred choice for vLLM production deployments -- EU origin, clean licence, strong performance. vLLM command: `vllm serve mistralai/Mistral-7B-Instruct-v0.3`',
-            '**Japan (METI):** METI AI governance requires documenting inference infrastructure. vLLM\'s structured Prometheus metrics satisfy audit trail requirements better than llama.cpp\'s stdout logging. For Japanese enterprise deployments, Qwen3 7B via vLLM is the recommended stack -- native Japanese tokenization plus production throughput. vLLM command: `vllm serve Qwen/Qwen3-7B-Instruct`',
-            '**China:** Under China\'s Data Security Law (数据安全法), all inference must remain on-premises for sensitive data. vLLM is compatible with Alibaba Cloud A10 and A100 GPU instances. Qwen3 (Alibaba) models are natively optimized for vLLM and provide the best Chinese-language throughput. For Chinese enterprise production: vLLM + Qwen3 14B on Alibaba Cloud is the standard stack as of April 2026.',
+            '**Japan (METI):** METI AI governance requires documenting inference infrastructure. vLLM\'s structured Prometheus metrics satisfy audit trail requirements better than llama.cpp\'s stdout logging. For Japanese enterprise deployments, Qwen3 8B via vLLM is the recommended stack -- native Japanese tokenization plus production throughput. vLLM command: `vllm serve Qwen/Qwen3-8B-Instruct`',
+            '**China:** Under China\'s Data Security Law (数据安全法), all inference must remain on-premises for sensitive data. vLLM is compatible with Alibaba Cloud A10 and A100 GPU instances. Qwen3 (Alibaba) models are natively optimized for vLLM and provide the best Chinese-language throughput. For Chinese enterprise production: vLLM + Qwen3 14B on Alibaba Cloud is the standard stack as of August 2026.',
           ],
         },
         commonMistakes: {
@@ -256,7 +256,7 @@ schema: {
         'description': 'vLLM dominates production (highest throughput). llama.cpp powers Ollama (lightest). Text-Generation-WebUI best for research. 2026 inference engine comparison.',
         'url': 'https://www.promptquorum.com/local-llms/text-generation-webui-vs-vllm-vs-llamacpp',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-04-12',
+        'dateModified': '2026-08-27',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -376,12 +376,12 @@ schema: {
       title: 'Text-Generation-WebUI vs vLLM vs llama.cpp en 2026: Comparación de Motores de Inferencia',
       heroImage: '/images/text-generation-webui-vs-vllm-vs-llamacpp-overview-hero-es.webp',
       seoTitle: 'Text-Generation-WebUI vs vLLM vs llama.cpp',
-      intro: 'Text-Generation-WebUI, vLLM y llama.cpp son tres motores de inferencia populares para ejecutar LLMs locales, cada uno optimizado para diferentes casos de uso. llama.cpp es el más ligero e impulsa Ollama; vLLM es el más rápido para APIs de producción de alto rendimiento; Text-Generation-WebUI es el más rico en funciones para la experimentación. A partir de abril de 2026, vLLM domina los despliegues de producción, llama.cpp domina los dispositivos de consumo, y Text-Generation-WebUI domina los flujos de trabajo de investigación y ajuste fino.',
+      intro: 'Text-Generation-WebUI, vLLM y llama.cpp son tres motores de inferencia populares para ejecutar LLMs locales, cada uno optimizado para diferentes casos de uso. llama.cpp es el más ligero e impulsa Ollama; vLLM es el más rápido para APIs de producción de alto rendimiento; Text-Generation-WebUI es el más rico en funciones para la experimentación. A partir de agosto de 2026, vLLM domina los despliegues de producción, llama.cpp domina los dispositivos de consumo, y Text-Generation-WebUI domina los flujos de trabajo de investigación y ajuste fino.',
       metaDescription: 'vLLM domina la producción (mayor rendimiento), llama.cpp impulsa Ollama (el más ligero) y Text-Generation-WebUI es ideal para investigación y LoRA. 2026.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**Text-Generation-WebUI, vLLM y llama.cpp son tres motores de inferencia populares para ejecutar LLMs locales, cada uno optimizado para diferentes casos de uso. llama.cpp es el más ligero e impulsa Ollama; vLLM es el más rápido para APIs de producción de alto rendimiento; Text-Generation-WebUI es el más rico en funciones para la experimentación.**',
       audience: 'Ingenieros que despliegan LLMs locales en entornos de producción o empresariales',
-      dateModified: '2026-04-12',
+      dateModified: '2026-08-27',
       readTime: '13 min de lectura',
       gammaEmbedUrl: '/presentations/text-generation-webui-vs-vllm-vs-llamacpp-static.html',
       gammaDescription: 'La presentación de diapositivas a continuación cubre: comparación de funciones de vLLM vs llama.cpp vs Text-Generation-WebUI, benchmarks de rendimiento (hasta 1.000+ tok/s), marco de decisión para producción, casos de uso de LoRA y cumplimiento normativo regional. Descarga el PDF como tarjeta de referencia de motores de inferencia.',
@@ -412,7 +412,7 @@ schema: {
             '**llama.cpp** = ligero, eficiente en CPU, impulsa Ollama. Ideal para: portátiles de consumo, usuario único, sin dependencias.',
             '**vLLM** = nivel producción, máximo rendimiento de GPU, compatible con procesamiento por lotes e inferencia distribuida. Ideal para: servidores API, multiusuario, alto rendimiento.',
             '**Text-Generation-WebUI** = herramienta de experimentación rica en funciones con UI web integrada. Ideal para: ajuste fino, pruebas LoRA, ajuste de configuraciones avanzadas.',
-            'A partir de abril de 2026, vLLM lidera el uso en producción, llama.cpp lidera el uso de consumo, y Text-Generation-WebUI lidera los flujos de trabajo de investigación y ajuste fino.',
+            'A partir de agosto de 2026, vLLM lidera el uso en producción, llama.cpp lidera el uso de consumo, y Text-Generation-WebUI lidera los flujos de trabajo de investigación y ajuste fino.',
           ],
         },
         whatIsInferenceEngine: {
@@ -450,7 +450,7 @@ schema: {
           id: 'understanding-llama-cpp',
           title: 'Entendiendo llama.cpp: La base',
           content: [
-            '**llama.cpp es una implementación en C++ de inferencia LLM, escrita originalmente para ejecutar el modelo Llama de Meta en hardware de consumo sin aceleración GPU.** A partir de abril de 2026, sigue siendo el motor de inferencia más ligero y portable.',
+            '**llama.cpp es una implementación en C++ de inferencia LLM, escrita originalmente para ejecutar el modelo Llama de Meta en hardware de consumo sin aceleración GPU.** A partir de agosto de 2026, sigue siendo el motor de inferencia más ligero y portable.',
             '**Por qué llama.cpp domina el uso de consumo:**',
             '- Sobrecarga de memoria mínima -- puede ejecutarse con solo 8 GB de RAM usando solo CPU.',
             '- Admite múltiples backends de GPU (NVIDIA, AMD, Apple Metal, Intel).',
@@ -469,9 +469,9 @@ schema: {
             '- **Procesamiento por lotes**: Puede procesar 50-100 prompts simultáneamente, sirviendo a más usuarios por GPU.',
             '- **Inferencia distribuida**: Divide automáticamente un modelo de 70B entre múltiples GPUs.',
             '- **Amplio soporte de modelos**: Funciona con cualquier modelo de HuggingFace (Llama, Qwen, Mistral, Phi, etc.).',
-            'A partir de abril de 2026, la mayoría de los despliegues de LLM local en producción en empresas usan vLLM. La compensación es que vLLM requiere GPUs NVIDIA; tiene un rendimiento deficiente en CPU.',
+            'A partir de agosto de 2026, la mayoría de los despliegues de LLM local en producción en empresas usan vLLM. La compensación es que vLLM requiere GPUs NVIDIA; tiene un rendimiento deficiente en CPU.',
           ],
-          codeBlock: '# Install vLLM\npip install vllm\n\n# Run a model via API\nvllm serve meta-llama/Llama-3.3-8B-Instruct \\\n  --host 0.0.0.0 --port 8000 \\\n  --gpu-memory-utilization 0.9\n\n# Now accessible at http://localhost:8000/v1/completions',
+          codeBlock: '# Install vLLM\npip install vllm\n\n# Run a model via API\nvllm serve meta-llama/Llama-3.2-3B-Instruct \\\n  --host 0.0.0.0 --port 8000 \\\n  --gpu-memory-utilization 0.9\n\n# Now accessible at http://localhost:8000/v1/completions',
           codeLanguage: 'bash',
         },
         textGenerationWebUI: {
@@ -492,12 +492,12 @@ schema: {
           id: 'performance-tokens-per-second',
           title: '¿Qué tan rápido es cada motor? Comparación de rendimiento',
           content: [
-            '**El rendimiento (tokens por segundo) depende del tamaño del modelo, el hardware y la optimización del motor.** A partir de abril de 2026, estos son los benchmarks del mundo real en hardware de consumo:',
+            '**El rendimiento (tokens por segundo) depende del tamaño del modelo, el hardware y la optimización del motor.** A partir de agosto de 2026, estos son los benchmarks del mundo real en hardware de consumo:',
           ],
           rows: [
-            { 'Escenario': 'Llama 3.3 8B en RTX 4090 (GPU)', 'llama.cpp': '150 tokens/seg', 'vLLM': '300 tokens/seg (con procesamiento por lotes)', 'Text-Gen-WebUI': '150 tokens/seg' },
-            { 'Escenario': 'Llama 3.3 8B en CPU de 8 núcleos', 'llama.cpp': '5 tokens/seg', 'vLLM': '0,5 tokens/seg (inutilizable)', 'Text-Gen-WebUI': '4 tokens/seg' },
-            { 'Escenario': 'Llama 3.3 70B en 2× RTX 4090', 'llama.cpp': '20 tokens/seg (GPU única)', 'vLLM': '100 tokens/seg (distribuido)', 'Text-Gen-WebUI': '20 tokens/seg' },
+            { 'Escenario': 'Llama 3.2 3B en RTX 4090 (GPU)', 'llama.cpp': '150 tokens/seg', 'vLLM': '300 tokens/seg (con procesamiento por lotes)', 'Text-Gen-WebUI': '150 tokens/seg' },
+            { 'Escenario': 'Llama 3.2 3B en CPU de 8 núcleos', 'llama.cpp': '5 tokens/seg', 'vLLM': '0,5 tokens/seg (inutilizable)', 'Text-Gen-WebUI': '4 tokens/seg' },
+            { 'Escenario': 'Llama 4 Scout en 2× RTX 4090', 'llama.cpp': '20 tokens/seg (GPU única)', 'vLLM': '100 tokens/seg (distribuido)', 'Text-Gen-WebUI': '20 tokens/seg' },
             { 'Escenario': 'Phi-3 3.8B en M4 MacBook Pro', 'llama.cpp': '30 tokens/seg', 'vLLM': 'N/A (sin soporte Metal)', 'Text-Gen-WebUI': '25 tokens/seg' },
           ],
           columns: ['Escenario', 'llama.cpp', 'vLLM', 'Text-Gen-WebUI'],
@@ -508,7 +508,7 @@ schema: {
           id: 'production-deployments',
           title: '¿Qué motor para despliegues de producción?',
           content: [
-            '**vLLM es el estándar de producción a partir de abril de 2026.** La mayoría de las empresas que ejecutan APIs de LLM local en producción usan vLLM por su optimización de rendimiento y soporte de procesamiento por lotes. Una sola instancia de vLLM puede servir a 50+ usuarios concurrentes en una GPU, frente a 1-2 para llama.cpp.',
+            '**vLLM es el estándar de producción a partir de agosto de 2026.** La mayoría de las empresas que ejecutan APIs de LLM local en producción usan vLLM por su optimización de rendimiento y soporte de procesamiento por lotes. Una sola instancia de vLLM puede servir a 50+ usuarios concurrentes en una GPU, frente a 1-2 para llama.cpp.',
             'Sin embargo, la elección de producción depende de tu restricción:',
             '- **Servir 100+ solicitudes/día con GPU limitada**: Usa vLLM (mejor rendimiento).',
             '- **Servir solo con CPU o Apple Silicon**: Usa llama.cpp a través de Ollama (mejor soporte CPU).',
@@ -535,8 +535,8 @@ schema: {
           ],
           items: [
             '**UE / GDPR:** Para despliegues empresariales en la UE, vLLM ejecutándose en las instalaciones mantiene toda la inferencia dentro de la infraestructura de la UE -- no salen tokens, prompts ni respuestas de tus servidores. Para el cumplimiento de BSI IT-Grundschutz alemán, vLLM es el motor de producción recomendado porque proporciona registro de auditoría estructurado a través de métricas Prometheus (endpoint /metrics), y todas las versiones de modelos son fijables mediante IDs de modelos de HuggingFace para la documentación de cumplimiento. Los modelos Mistral (Mistral AI, Francia, Apache 2.0) son la opción preferida de la UE para despliegues de producción con vLLM -- origen europeo, licencia limpia, buen rendimiento. Comando vLLM: `vllm serve mistralai/Mistral-7B-Instruct-v0.3`',
-            '**Japón (METI):** La gobernanza de IA de METI requiere documentar la infraestructura de inferencia. Las métricas estructuradas de Prometheus de vLLM satisfacen mejor los requisitos de registro de auditoría que el logging por stdout de llama.cpp. Para despliegues empresariales en Japón, Qwen3 7B a través de vLLM es la pila recomendada -- tokenización nativa en japonés más rendimiento de producción. Comando vLLM: `vllm serve Qwen/Qwen3-7B-Instruct`',
-            '**China:** Bajo la Ley de Seguridad de Datos de China (数据安全法), toda la inferencia debe permanecer en las instalaciones para datos sensibles. vLLM es compatible con instancias GPU A10 y A100 de Alibaba Cloud. Los modelos Qwen3 (Alibaba) están optimizados nativamente para vLLM y proporcionan el mejor rendimiento en lengua china. Para producción empresarial en China: vLLM + Qwen3 14B en Alibaba Cloud es la pila estándar a partir de abril de 2026.',
+            '**Japón (METI):** La gobernanza de IA de METI requiere documentar la infraestructura de inferencia. Las métricas estructuradas de Prometheus de vLLM satisfacen mejor los requisitos de registro de auditoría que el logging por stdout de llama.cpp. Para despliegues empresariales en Japón, Qwen3 8B a través de vLLM es la pila recomendada -- tokenización nativa en japonés más rendimiento de producción. Comando vLLM: `vllm serve Qwen/Qwen3-8B-Instruct`',
+            '**China:** Bajo la Ley de Seguridad de Datos de China (数据安全法), toda la inferencia debe permanecer en las instalaciones para datos sensibles. vLLM es compatible con instancias GPU A10 y A100 de Alibaba Cloud. Los modelos Qwen3 (Alibaba) están optimizados nativamente para vLLM y proporcionan el mejor rendimiento en lengua china. Para producción empresarial en China: vLLM + Qwen3 14B en Alibaba Cloud es la pila estándar a partir de agosto de 2026.',
           ],
         },
         commonMistakes: {
@@ -618,7 +618,7 @@ schema: {
         'description': 'vLLM domina la producción (mayor rendimiento). llama.cpp impulsa Ollama (el más ligero). Text-Generation-WebUI ideal para investigación. Comparación de motores de inferencia 2026.',
         'url': 'https://www.promptquorum.com/es/local-llms/text-generation-webui-vs-vllm-vs-llamacpp',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-04-12',
+        'dateModified': '2026-08-27',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -738,12 +738,12 @@ schema: {
       title: '⁨Text-Generation-WebUI⁩ مقابل ⁨vLLM⁩ مقابل ⁨llama.cpp⁩ في ⁨2026⁩: مقارنة محركات الاستدلال',
       heroImage: '/images/text-generation-webui-vs-vllm-vs-llamacpp-overview-hero-ar.webp',
       seoTitle: '⁨Text-Generation-WebUI⁩ مقابل ⁨vLLM⁩ و⁨llama.cpp 2026⁩',
-      intro: 'Text-Generation-WebUI وvLLM وllama.cpp ثلاثة محركات استدلال شائعة لتشغيل نماذج LLM المحلية، كلٌّ منها محسّن لحالات استخدام مختلفة. llama.cpp هو الأخف ويشغّل Ollama؛ وvLLM هو الأسرع لواجهات API الإنتاجية عالية الإنتاجية؛ وText-Generation-WebUI هو الأغنى بالميزات للتجريب. اعتبارًا من أبريل 2026، يهيمن vLLM على عمليات النشر الإنتاجية، ويهيمن llama.cpp على الأجهزة الاستهلاكية، ويهيمن Text-Generation-WebUI على سير عمل البحث والضبط الدقيق.',
+      intro: 'Text-Generation-WebUI وvLLM وllama.cpp ثلاثة محركات استدلال شائعة لتشغيل نماذج LLM المحلية، كلٌّ منها محسّن لحالات استخدام مختلفة. llama.cpp هو الأخف ويشغّل Ollama؛ وvLLM هو الأسرع لواجهات API الإنتاجية عالية الإنتاجية؛ وText-Generation-WebUI هو الأغنى بالميزات للتجريب. اعتبارًا من أغسطس 2026، يهيمن vLLM على عمليات النشر الإنتاجية، ويهيمن llama.cpp على الأجهزة الاستهلاكية، ويهيمن Text-Generation-WebUI على سير عمل البحث والضبط الدقيق.',
       metaDescription: '⁨vLLM⁩ يُنتج ⁨300⁩+ رمز/ثانية في الإنتاج؛ ⁨llama.cpp⁩ يشغّل ⁨Ollama⁩ (الأخف)؛ ⁨Text-Generation-WebUI⁩ الأمثل للبحث و⁨LoRA⁩. مقارنة محركات الاستدلال ⁨2026⁩.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**Text-Generation-WebUI وvLLM وllama.cpp ثلاثة محركات استدلال شائعة لتشغيل نماذج LLM المحلية، كلٌّ منها محسّن لحالات استخدام مختلفة. llama.cpp هو الأخف ويشغّل Ollama؛ وvLLM هو الأسرع لواجهات API الإنتاجية عالية الإنتاجية؛ وText-Generation-WebUI هو الأغنى بالميزات للتجريب.**',
       audience: 'المهندسون الذين ينشرون نماذج LLM المحلية في بيئات الإنتاج أو المؤسسات',
-      dateModified: '2026-04-12',
+      dateModified: '2026-08-27',
       readTime: '13 دقيقة قراءة',
       gammaEmbedUrl: '/presentations/text-generation-webui-vs-vllm-vs-llamacpp-static.html',
       gammaDescription: 'يغطي العرض التقديمي أدناه: مقارنة ميزات vLLM مقابل llama.cpp مقابل Text-Generation-WebUI، ومعايير الأداء (حتى 1000+ tok/ثانية)، وإطار قرار الإنتاج، وحالات استخدام LoRA، والامتثال التنظيمي الإقليمي. نزّل ملف PDF كبطاقة مرجعية لمحركات الاستدلال.',
@@ -774,7 +774,7 @@ schema: {
             '**llama.cpp** = خفيف، فعّال على CPU، يشغّل Ollama. مثالي لـ: الحواسيب المحمولة الاستهلاكية، مستخدم واحد، بلا اعتماديات.',
             '**vLLM** = بمستوى إنتاجي، أقصى إنتاجية GPU، يدعم المعالجة بالدُفعات والاستدلال الموزّع. مثالي لـ: خوادم API، متعدد المستخدمين، إنتاجية عالية.',
             '**Text-Generation-WebUI** = أداة تجريب غنية بالميزات بواجهة ويب مدمجة. مثالية لـ: الضبط الدقيق، واختبار LoRA، وضبط التكوينات المتقدمة.',
-            'اعتبارًا من أبريل 2026، يتصدّر vLLM الاستخدام الإنتاجي، ويتصدّر llama.cpp الاستخدام الاستهلاكي، ويتصدّر Text-Generation-WebUI سير عمل البحث والضبط الدقيق.',
+            'اعتبارًا من أغسطس 2026، يتصدّر vLLM الاستخدام الإنتاجي، ويتصدّر llama.cpp الاستخدام الاستهلاكي، ويتصدّر Text-Generation-WebUI سير عمل البحث والضبط الدقيق.',
           ],
         },
         whatIsInferenceEngine: {
@@ -812,7 +812,7 @@ schema: {
           id: 'understanding-llama-cpp',
           title: 'فهم llama.cpp: الأساس',
           content: [
-            '**llama.cpp هو تنفيذ بلغة C++ لاستدلال LLM، كُتب أصلًا لتشغيل نموذج Llama من Meta على عتاد استهلاكي دون تسريع GPU.** اعتبارًا من أبريل 2026، يبقى محرك الاستدلال الأخف والأكثر قابلية للنقل.',
+            '**llama.cpp هو تنفيذ بلغة C++ لاستدلال LLM، كُتب أصلًا لتشغيل نموذج Llama من Meta على عتاد استهلاكي دون تسريع GPU.** اعتبارًا من أغسطس 2026، يبقى محرك الاستدلال الأخف والأكثر قابلية للنقل.',
             '**لماذا يهيمن llama.cpp على الاستخدام الاستهلاكي:**',
             '- حمل ذاكرة إضافي ضئيل -- يمكن أن يعمل بذاكرة 8 GB من RAM فقط باستخدام CPU وحده.',
             '- يدعم خلفيات GPU متعددة (NVIDIA، AMD، Apple Metal، Intel).',
@@ -831,9 +831,9 @@ schema: {
             '- **المعالجة بالدُفعات**: يمكنه معالجة 50-100 موجّه في وقت واحد، لخدمة مزيد من المستخدمين لكل GPU.',
             '- **الاستدلال الموزّع**: يقسّم تلقائيًا نموذج 70B عبر عدة وحدات GPU.',
             '- **دعم واسع للنماذج**: يعمل مع أي نموذج من HuggingFace (Llama، Qwen، Mistral، Phi، إلخ).',
-            'اعتبارًا من أبريل 2026، تستخدم معظم عمليات نشر LLM المحلية الإنتاجية في المؤسسات vLLM. المقايضة أن vLLM يتطلب وحدات GPU من NVIDIA؛ وأداؤه ضعيف على CPU.',
+            'اعتبارًا من أغسطس 2026، تستخدم معظم عمليات نشر LLM المحلية الإنتاجية في المؤسسات vLLM. المقايضة أن vLLM يتطلب وحدات GPU من NVIDIA؛ وأداؤه ضعيف على CPU.',
           ],
-          codeBlock: '# Install vLLM\npip install vllm\n\n# Run a model via API\nvllm serve meta-llama/Llama-3.3-8B-Instruct \\\n  --host 0.0.0.0 --port 8000 \\\n  --gpu-memory-utilization 0.9\n\n# Now accessible at http://localhost:8000/v1/completions',
+          codeBlock: '# Install vLLM\npip install vllm\n\n# Run a model via API\nvllm serve meta-llama/Llama-3.2-3B-Instruct \\\n  --host 0.0.0.0 --port 8000 \\\n  --gpu-memory-utilization 0.9\n\n# Now accessible at http://localhost:8000/v1/completions',
           codeLanguage: 'bash',
         },
         textGenerationWebUI: {
@@ -854,12 +854,12 @@ schema: {
           id: 'performance-tokens-per-second',
           title: 'ما مدى سرعة كل محرك؟ مقارنة الأداء',
           content: [
-            '**تعتمد الإنتاجية (token في الثانية) على حجم النموذج والعتاد وتحسين المحرك.** اعتبارًا من أبريل 2026، هذه معايير من العالم الحقيقي على عتاد استهلاكي:',
+            '**تعتمد الإنتاجية (token في الثانية) على حجم النموذج والعتاد وتحسين المحرك.** اعتبارًا من أغسطس 2026، هذه معايير من العالم الحقيقي على عتاد استهلاكي:',
           ],
           rows: [
-            { 'Escenario': 'Llama 3.3 8B على RTX 4090 (GPU)', 'llama.cpp': '150 token/ثانية', 'vLLM': '300 token/ثانية (مع المعالجة بالدُفعات)', 'Text-Gen-WebUI': '150 token/ثانية' },
-            { 'Escenario': 'Llama 3.3 8B على CPU بـ 8 أنوية', 'llama.cpp': '5 token/ثانية', 'vLLM': '0.5 token/ثانية (غير قابل للاستخدام)', 'Text-Gen-WebUI': '4 token/ثانية' },
-            { 'Escenario': 'Llama 3.3 70B على 2× RTX 4090', 'llama.cpp': '20 token/ثانية (GPU واحدة)', 'vLLM': '100 token/ثانية (موزّع)', 'Text-Gen-WebUI': '20 token/ثانية' },
+            { 'Escenario': 'Llama 3.2 3B على RTX 4090 (GPU)', 'llama.cpp': '150 token/ثانية', 'vLLM': '300 token/ثانية (مع المعالجة بالدُفعات)', 'Text-Gen-WebUI': '150 token/ثانية' },
+            { 'Escenario': 'Llama 3.2 3B على CPU بـ 8 أنوية', 'llama.cpp': '5 token/ثانية', 'vLLM': '0.5 token/ثانية (غير قابل للاستخدام)', 'Text-Gen-WebUI': '4 token/ثانية' },
+            { 'Escenario': 'Llama 4 Scout على 2× RTX 4090', 'llama.cpp': '20 token/ثانية (GPU واحدة)', 'vLLM': '100 token/ثانية (موزّع)', 'Text-Gen-WebUI': '20 token/ثانية' },
             { 'Escenario': 'Phi-3 3.8B على M4 MacBook Pro', 'llama.cpp': '30 token/ثانية', 'vLLM': 'غير متاح (بلا دعم Metal)', 'Text-Gen-WebUI': '25 token/ثانية' },
           ],
           columns: ['السيناريو', 'llama.cpp', 'vLLM', 'Text-Gen-WebUI'],
@@ -870,7 +870,7 @@ schema: {
           id: 'production-deployments',
           title: 'أي محرك لعمليات النشر الإنتاجية؟',
           content: [
-            '**vLLM هو معيار الإنتاج اعتبارًا من أبريل 2026.** تستخدم معظم المؤسسات التي تشغّل واجهات API لـ LLM محلي في الإنتاج vLLM لتحسين الإنتاجية ودعم المعالجة بالدُفعات. يمكن لنسخة vLLM واحدة خدمة 50+ مستخدمًا متزامنًا على GPU واحدة، مقابل 1-2 لـ llama.cpp.',
+            '**vLLM هو معيار الإنتاج اعتبارًا من أغسطس 2026.** تستخدم معظم المؤسسات التي تشغّل واجهات API لـ LLM محلي في الإنتاج vLLM لتحسين الإنتاجية ودعم المعالجة بالدُفعات. يمكن لنسخة vLLM واحدة خدمة 50+ مستخدمًا متزامنًا على GPU واحدة، مقابل 1-2 لـ llama.cpp.',
             'مع ذلك، يعتمد اختيار الإنتاج على القيد لديك:',
             '- **خدمة 100+ طلب/يوم بـ GPU محدودة**: استخدم vLLM (أفضل إنتاجية).',
             '- **الخدمة على CPU فقط أو Apple Silicon**: استخدم llama.cpp عبر Ollama (أفضل دعم CPU).',
@@ -898,7 +898,7 @@ schema: {
           items: [
             '**الاتحاد الأوروبي / GDPR:** لعمليات النشر المؤسسية في الاتحاد الأوروبي، يبقي vLLM يعمل داخل المنشأة كل الاستدلال ضمن البنية التحتية للاتحاد الأوروبي -- لا يغادر أي token أو موجّه أو استجابة خوادمك. لامتثال BSI IT-Grundschutz الألماني، vLLM هو محرك الإنتاج الموصى به لأنه يوفّر سجل تدقيق منظّمًا عبر مقاييس Prometheus (نقطة النهاية /metrics)، وجميع إصدارات النماذج قابلة للتثبيت عبر معرّفات نماذج HuggingFace لتوثيق الامتثال. نماذج Mistral (Mistral AI، فرنسا، Apache 2.0) هي الخيار المفضّل في الاتحاد الأوروبي لعمليات النشر الإنتاجية بـ vLLM -- منشأ أوروبي، ترخيص نظيف، أداء جيد. أمر vLLM: `vllm serve mistralai/Mistral-7B-Instruct-v0.3`',
             '**منطقة الخليج / السعودية (PDPL):** للجهات في السعودية والإمارات العاملة بموجب أطر السيادة على الذكاء الاصطناعي ونظام حماية البيانات الشخصية (PDPL)، يبقي vLLM يعمل داخل المنشأة كل الاستدلال على عتاد سيادي. توفّر مقاييس Prometheus المنظّمة في vLLM سجل تدقيق يلبي متطلبات التوثيق الحكومية. للجهات التي تفضّل نموذجًا عربي المنشأ، يُعد Jais (G42) وALLaM وFalcon (TII، الإمارات) خيارات سيادية تعمل مع vLLM. أمر vLLM: `vllm serve tiiuae/falcon-7b-instruct`',
-            '**الصين:** بموجب قانون أمن البيانات الصيني (数据安全法)، يجب أن يبقى كل الاستدلال داخل المنشأة للبيانات الحساسة. يتوافق vLLM مع نسخ GPU من نوع A10 وA100 على Alibaba Cloud. نماذج Qwen3 (Alibaba) محسّنة أصليًا لـ vLLM وتوفّر أفضل أداء باللغة الصينية. للإنتاج المؤسسي في الصين: vLLM + Qwen3 14B على Alibaba Cloud هو الحزمة القياسية اعتبارًا من أبريل 2026.',
+            '**الصين:** بموجب قانون أمن البيانات الصيني (数据安全法)، يجب أن يبقى كل الاستدلال داخل المنشأة للبيانات الحساسة. يتوافق vLLM مع نسخ GPU من نوع A10 وA100 على Alibaba Cloud. نماذج Qwen3 (Alibaba) محسّنة أصليًا لـ vLLM وتوفّر أفضل أداء باللغة الصينية. للإنتاج المؤسسي في الصين: vLLM + Qwen3 14B على Alibaba Cloud هو الحزمة القياسية اعتبارًا من أغسطس 2026.',
           ],
         },
         commonMistakes: {
@@ -980,7 +980,7 @@ schema: {
         'description': 'يهيمن vLLM على الإنتاج (أعلى إنتاجية). يشغّل llama.cpp تطبيق Ollama (الأخف). Text-Generation-WebUI مثالي للبحث. مقارنة محركات الاستدلال 2026.',
         'url': 'https://www.promptquorum.com/ar/local-llms/text-generation-webui-vs-vllm-vs-llamacpp',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-04-12',
+        'dateModified': '2026-08-27',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'inLanguage': 'ar',
@@ -1102,7 +1102,7 @@ schema: {
       title: 'Text-Generation-WebUI vs vLLM vs llama.cpp em 2026: Comparação de Motores de Inferência',
       heroImage: '/images/text-generation-webui-vs-vllm-vs-llamacpp-overview-hero-pt.webp',
       seoTitle: 'Text-Generation-WebUI vs vLLM vs llama.cpp',
-      intro: 'Text-Generation-WebUI, vLLM e llama.cpp são três motores de inferência populares para executar LLMs locais, cada um otimizado para diferentes casos de uso. O llama.cpp é o mais leve e alimenta o Ollama; o vLLM é o mais rápido para APIs de produção de alto rendimento; o Text-Generation-WebUI é o mais rico em recursos para experimentação. A partir de abril de 2026, o vLLM domina as implantações de produção, o llama.cpp domina os dispositivos de consumo, e o Text-Generation-WebUI domina os fluxos de trabalho de pesquisa e fine-tuning.',
+      intro: 'Text-Generation-WebUI, vLLM e llama.cpp são três motores de inferência populares para executar LLMs locais, cada um otimizado para diferentes casos de uso. O llama.cpp é o mais leve e alimenta o Ollama; o vLLM é o mais rápido para APIs de produção de alto rendimento; o Text-Generation-WebUI é o mais rico em recursos para experimentação. A partir de agosto de 2026, o vLLM domina as implantações de produção, o llama.cpp domina os dispositivos de consumo, e o Text-Generation-WebUI domina os fluxos de trabalho de pesquisa e fine-tuning.',
       metaDescription: 'vLLM domina produção (maior rendimento), llama.cpp alimenta Ollama (mais leve) e Text-Generation-WebUI é ideal para pesquisa e LoRA. 2026.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**Text-Generation-WebUI, vLLM e llama.cpp são três motores de inferência populares para executar LLMs locais, cada um otimizado para diferentes casos de uso. O llama.cpp é o mais leve e alimenta o Ollama; o vLLM é o mais rápido para APIs de produção de alto rendimento; o Text-Generation-WebUI é o mais rico em recursos para experimentação.**',
@@ -1191,7 +1191,7 @@ schema: {
       title: 'Text-Generation-WebUI vs vLLM vs llama.cpp 2026: Vergleich von Inference-Engines',
       heroImage: '/images/text-generation-webui-vs-vllm-vs-llamacpp-overview-hero-de.webp',
       seoTitle: 'Text Generation WebUI vs. vLLM vs. llama.cpp 2026',
-      intro: 'Text-Generation-WebUI, vLLM und llama.cpp sind drei beliebte Inference-Engines zum Ausführen lokaler LLMs, jede optimiert für unterschiedliche Anwendungsfälle. llama.cpp ist die leichteste und unterstützt Ollama; vLLM ist die schnellste für High-Throughput-Production-APIs; Text-Generation-WebUI ist die funktionsreichste für Experimente. Im April 2026 dominiert vLLM Production-Deployments, llama.cpp dominiert Consumer-Geräte, und Text-Generation-WebUI dominiert Forschungs- und Fine-Tuning-Workflows.',
+      intro: 'Text-Generation-WebUI, vLLM und llama.cpp sind drei beliebte Inference-Engines zum Ausführen lokaler LLMs, jede optimiert für unterschiedliche Anwendungsfälle. llama.cpp ist die leichteste und unterstützt Ollama; vLLM ist die schnellste für High-Throughput-Production-APIs; Text-Generation-WebUI ist die funktionsreichste für Experimente. Im August 2026 dominiert vLLM Production-Deployments, llama.cpp dominiert Consumer-Geräte, und Text-Generation-WebUI dominiert Forschungs- und Fine-Tuning-Workflows.',
       metaDescription: 'vLLM dominiert Production (höchster Durchsatz). llama.cpp treibt Ollama an. Text-Generation-WebUI für Forschung und LoRA. Inference-Engine-Vergleich 2026.',
       publishDate: '2026-04-04',
       readTime: '13 Min. Lesezeit',
@@ -1225,7 +1225,7 @@ schema: {
           '**llama.cpp** = leichtgewichtig, CPU-effizient, unterstützt Ollama. Beste für: Consumer-Laptops, einzelne Benutzer, keine Abhängigkeiten.',
           '**vLLM** = Production-Grade, maximaler GPU-Durchsatz, unterstützt Batching und verteilte Inferenz. Beste für: API-Server, Multi-User, hoher Durchsatz.',
           '**Text-Generation-WebUI** = funktionsreiches Experimentier-Tool mit integrierter Web-UI. Beste für: Fine-Tuning, LoRA-Tests, erweiterte Einstellungsanpassungen.',
-          'Im April 2026 führt vLLM Production-Nutzung an, llama.cpp führt Consumer-Nutzung an, und Text-Generation-WebUI führt Forschungs-/Fine-Tuning-Workflows an.',
+          'Im August 2026 führt vLLM Production-Nutzung an, llama.cpp führt Consumer-Nutzung an, und Text-Generation-WebUI führt Forschungs-/Fine-Tuning-Workflows an.',
         ],
       },
       whatIsInferenceEngine: {
@@ -1263,7 +1263,7 @@ schema: {
         id: 'understanding-llama-cpp',
         title: 'llama.cpp verstehen: Die Grundlage',
         content: [
-          '**llama.cpp ist eine C++-Implementierung der LLM-Inferenz, ursprünglich geschrieben, um Metas Llama-Modell auf Consumer-Hardware ohne GPU-Beschleunigung auszuführen.** Im April 2026 bleibt es die leichteste und tragbarste Inference-Engine.',
+          '**llama.cpp ist eine C++-Implementierung der LLM-Inferenz, ursprünglich geschrieben, um Metas Llama-Modell auf Consumer-Hardware ohne GPU-Beschleunigung auszuführen.** Im August 2026 bleibt es die leichteste und tragbarste Inference-Engine.',
           '**Warum llama.cpp die Consumer-Nutzung dominiert:**',
           '- Minimaler Speicher-Overhead -- kann auf 8 GB RAM nur mit CPU ausgeführt werden.',
           '- Unterstützt mehrere GPU-Backends (NVIDIA, AMD, Apple Metal, Intel).',
@@ -1282,9 +1282,9 @@ schema: {
           '- **Batch-Verarbeitung**: Kann 50-100 Prompts gleichzeitig verarbeiten, mehr Benutzer pro GPU bedienen.',
           '- **Verteilte Inferenz**: Teilt automatisch ein 70B-Modell auf mehrere GPUs auf.',
           '- **Breite Modell-Unterstützung**: Funktioniert mit jedem HuggingFace-Modell (Llama, Qwen, Mistral, Phi, usw.).',
-          'Im April 2026 verwenden die meisten Production-LLM-Deployments in Unternehmen vLLM. Der Kompromiss ist, dass vLLM NVIDIA-GPUs benötigt; es hat schlechte CPU-Performance.',
+          'Im August 2026 verwenden die meisten Production-LLM-Deployments in Unternehmen vLLM. Der Kompromiss ist, dass vLLM NVIDIA-GPUs benötigt; es hat schlechte CPU-Performance.',
         ],
-        codeBlock: '# vLLM installieren\npip install vllm\n\n# Modell über API ausführen\nvllm serve meta-llama/Llama-3.3-8B-Instruct \\\n  --host 0.0.0.0 --port 8000 \\\n  --gpu-memory-utilization 0.9\n\n# Jetzt erreichbar unter http://localhost:8000/v1/completions',
+        codeBlock: '# vLLM installieren\npip install vllm\n\n# Modell über API ausführen\nvllm serve meta-llama/Llama-3.2-3B-Instruct \\\n  --host 0.0.0.0 --port 8000 \\\n  --gpu-memory-utilization 0.9\n\n# Jetzt erreichbar unter http://localhost:8000/v1/completions',
         codeLanguage: 'bash',
       },
       textGenerationWebUI: {
@@ -1305,12 +1305,12 @@ schema: {
         id: 'performance-tokens-per-second',
         title: 'Wie schnell ist jede Engine? Durchsatz-Vergleich',
         content: [
-          '**Der Durchsatz (Tokens pro Sekunde) hängt von der Modellgröße, Hardware und Engine-Optimierung ab.** Im April 2026 finden Sie hier Real-World-Benchmarks auf Consumer-Hardware:',
+          '**Der Durchsatz (Tokens pro Sekunde) hängt von der Modellgröße, Hardware und Engine-Optimierung ab.** Im August 2026 finden Sie hier Real-World-Benchmarks auf Consumer-Hardware:',
         ],
         rows: [
-          { 'Szenario': 'Llama 3.3 8B auf RTX 4090 (GPU)', 'llama.cpp': '150 Tokens/Sek.', 'vLLM': '300 Tokens/Sek. (mit Batching)', 'Text-Gen-WebUI': '150 Tokens/Sek.' },
-          { 'Szenario': 'Llama 3.3 8B auf 8-Core CPU', 'llama.cpp': '5 Tokens/Sek.', 'vLLM': '0,5 Tokens/Sek. (unbenutzbar)', 'Text-Gen-WebUI': '4 Tokens/Sek.' },
-          { 'Szenario': 'Llama 3.3 70B auf 2× RTX 4090', 'llama.cpp': '20 Tokens/Sek. (einzelne GPU)', 'vLLM': '100 Tokens/Sek. (verteilt)', 'Text-Gen-WebUI': '20 Tokens/Sek.' },
+          { 'Szenario': 'Llama 3.2 3B auf RTX 4090 (GPU)', 'llama.cpp': '150 Tokens/Sek.', 'vLLM': '300 Tokens/Sek. (mit Batching)', 'Text-Gen-WebUI': '150 Tokens/Sek.' },
+          { 'Szenario': 'Llama 3.2 3B auf 8-Core CPU', 'llama.cpp': '5 Tokens/Sek.', 'vLLM': '0,5 Tokens/Sek. (unbenutzbar)', 'Text-Gen-WebUI': '4 Tokens/Sek.' },
+          { 'Szenario': 'Llama 4 Scout auf 2× RTX 4090', 'llama.cpp': '20 Tokens/Sek. (einzelne GPU)', 'vLLM': '100 Tokens/Sek. (verteilt)', 'Text-Gen-WebUI': '20 Tokens/Sek.' },
           { 'Szenario': 'Phi-3 3.8B auf M4 MacBook Pro', 'llama.cpp': '30 Tokens/Sek.', 'vLLM': 'N/A (keine Metal-Unterstützung)', 'Text-Gen-WebUI': '25 Tokens/Sek.' },
         ],
         columns: ['Szenario', 'llama.cpp', 'vLLM', 'Text-Gen-WebUI'],
@@ -1321,7 +1321,7 @@ schema: {
         id: 'production-deployments',
         title: 'Welche Engine für Production-Deployments?',
         content: [
-          '**vLLM ist der Production-Standard im April 2026.** Die meisten Unternehmen, die lokale LLM-APIs in Production betreiben, verwenden vLLM aufgrund seiner Durchsatz-Optimierung und Batching-Unterstützung. Eine einzelne vLLM-Instanz kann 50+ gleichzeitige Benutzer auf einer GPU bedienen, gegenüber 1-2 für llama.cpp.',
+          '**vLLM ist der Production-Standard im August 2026.** Die meisten Unternehmen, die lokale LLM-APIs in Production betreiben, verwenden vLLM aufgrund seiner Durchsatz-Optimierung und Batching-Unterstützung. Eine einzelne vLLM-Instanz kann 50+ gleichzeitige Benutzer auf einer GPU bedienen, gegenüber 1-2 für llama.cpp.',
           'Die Production-Wahl hängt jedoch von Ihrer Einschränkung ab:',
           '- **100+ Anfragen/Tag mit begrenztem GPU**: Verwenden Sie vLLM (bester Durchsatz).',
           '- **Nur mit CPU oder Apple Silicon**: Verwenden Sie llama.cpp über Ollama (beste CPU-Unterstützung).',
@@ -1349,8 +1349,8 @@ schema: {
         ],
         items: [
           '**Deutschland / EU / DSGVO:** Für deutsche Unternehmens-Deployments muss vLLM auf lokalen deutschen Servern laufen, um DSGVO-Compliance zu gewährleisten -- keine Tokens, Prompts oder Outputs verlassen Ihre Infrastruktur. Für BSI IT-Grundschutz-Kataloge Compliance ist vLLM die empfohlene Production-Engine, da sie strukturiertes Audit-Logging über Prometheus-Metriken (/metrics Endpunkt) bietet, und alle Modellversionen über HuggingFace-Modell-IDs für Compliance-Dokumentation fixierbar sind. Mistral-Modelle (Mistral AI, Frankreich, Apache 2.0) sind die EU-bevorzugte Wahl für vLLM Production-Deployments -- EU-Ursprung, saubere Lizenz, starke Performance. vLLM-Befehl: `vllm serve mistralai/Mistral-7B-Instruct-v0.3`. Für DACH-Mittelstand-Unternehmen bietet vLLM die notwendige Skalierbarkeit für 50-500 Concurrent-User-Szenarien.',
-          '**Japan (METI):** METI AI Governance erfordert die Dokumentation der Inferenz-Infrastruktur. vLLMs strukturierte Prometheus-Metriken erfüllen Audit-Trail-Anforderungen besser als llama.cpps stdout-Logging. Für japanische Unternehmens-Deployments ist Qwen3 7B über vLLM der empfohlene Stack -- native japanische Tokenisierung plus Production-Durchsatz. vLLM-Befehl: `vllm serve Qwen/Qwen3-7B-Instruct`',
-          '**China:** Unter Chinas Datensicherheitsgesetz (数据安全法) muss alle Inferenz für sensible Daten on-premises bleiben. vLLM ist kompatibel mit Alibaba Cloud A10 und A100 GPU-Instanzen. Qwen3 (Alibaba) Modelle sind nativ für vLLM optimiert und bieten den besten chinesischen Sprachdurchsatz. Für chinesische Enterprise-Production: vLLM + Qwen3 14B auf Alibaba Cloud ist der Standard-Stack im April 2026.',
+          '**Japan (METI):** METI AI Governance erfordert die Dokumentation der Inferenz-Infrastruktur. vLLMs strukturierte Prometheus-Metriken erfüllen Audit-Trail-Anforderungen besser als llama.cpps stdout-Logging. Für japanische Unternehmens-Deployments ist Qwen3 8B über vLLM der empfohlene Stack -- native japanische Tokenisierung plus Production-Durchsatz. vLLM-Befehl: `vllm serve Qwen/Qwen3-8B-Instruct`',
+          '**China:** Unter Chinas Datensicherheitsgesetz (数据安全法) muss alle Inferenz für sensible Daten on-premises bleiben. vLLM ist kompatibel mit Alibaba Cloud A10 und A100 GPU-Instanzen. Qwen3 (Alibaba) Modelle sind nativ für vLLM optimiert und bieten den besten chinesischen Sprachdurchsatz. Für chinesische Enterprise-Production: vLLM + Qwen3 14B auf Alibaba Cloud ist der Standard-Stack im August 2026.',
         ],
       },
       commonMistakes: {
@@ -1444,7 +1444,7 @@ schema: {
       title: 'Text-Generation-WebUI vs vLLM vs llama.cpp en 2026 : Comparaison des moteurs d\'inférence',
       heroImage: '/images/text-generation-webui-vs-vllm-vs-llamacpp-overview-hero-fr.webp',
       seoTitle: 'Text-Generation-WebUI vs vLLM vs llama.cpp',
-      intro: 'Text-Generation-WebUI, vLLM et llama.cpp sont trois moteurs d\'inférence populaires pour exécuter des LLM locaux, chacun optimisé pour différents cas d\'usage. llama.cpp est le plus léger et alimente Ollama ; vLLM est le plus rapide pour les APIs de production haute capacité ; Text-Generation-WebUI est le plus riche en fonctionnalités pour l\'expérimentation. En avril 2026, vLLM domine les déploiements de production, llama.cpp domine les appareils consommateurs, et Text-Generation-WebUI domine les workflows de recherche et d\'ajustement fin.',
+      intro: 'Text-Generation-WebUI, vLLM et llama.cpp sont trois moteurs d\'inférence populaires pour exécuter des LLM locaux, chacun optimisé pour différents cas d\'usage. llama.cpp est le plus léger et alimente Ollama ; vLLM est le plus rapide pour les APIs de production haute capacité ; Text-Generation-WebUI est le plus riche en fonctionnalités pour l\'expérimentation. En août 2026, vLLM domine les déploiements de production, llama.cpp domine les appareils consommateurs, et Text-Generation-WebUI domine les workflows de recherche et d\'ajustement fin.',
       metaDescription: 'vLLM domine la production (débit maximal). llama.cpp alimente Ollama (le plus léger). Text-Generation-WebUI meilleur pour la recherche. Comparaison 2026 des moteurs d\'inférence.',
       publishDate: '2026-04-04',
       readTime: '13 min de lecture',
@@ -1478,7 +1478,7 @@ schema: {
             '**llama.cpp** = léger, efficace en CPU, alimente Ollama. Meilleur pour : portables consommateurs, mono-utilisateur, zéro dépendance.',
             '**vLLM** = production-grade, débit GPU maximal, supporte le batching et l\'inférence distribuée. Meilleur pour : serveurs API, multi-utilisateur, haut débit.',
             '**Text-Generation-WebUI** = outil d\'expérimentation riche en fonctionnalités avec UI web intégrée. Meilleur pour : ajustement fin, test LoRA, réglages avancés.',
-            'En avril 2026, vLLM mène l\'utilisation en production, llama.cpp mène l\'utilisation consommateur, et Text-Generation-WebUI mène les workflows de recherche/ajustement fin.',
+            'En août 2026, vLLM mène l\'utilisation en production, llama.cpp mène l\'utilisation consommateur, et Text-Generation-WebUI mène les workflows de recherche/ajustement fin.',
           ],
         },
         whatIsInferenceEngine: {
@@ -1513,7 +1513,7 @@ schema: {
         llamacpp: {
           title: 'Comprendre llama.cpp : La fondation',
           content: [
-            '**llama.cpp est une implémentation C++ de l\'inférence LLM, écrite à l\'origine pour exécuter le modèle Llama de Meta sur du matériel grand public sans accélération GPU.** En avril 2026, c\'est le moteur d\'inférence le plus léger et portable.',
+            '**llama.cpp est une implémentation C++ de l\'inférence LLM, écrite à l\'origine pour exécuter le modèle Llama de Meta sur du matériel grand public sans accélération GPU.** En août 2026, c\'est le moteur d\'inférence le plus léger et portable.',
             '**Pourquoi llama.cpp domine l\'utilisation consommateur :**',
             '- Surcharge mémoire minimale -- peut s\'exécuter sur 8 Go de RAM uniquement avec CPU.',
             '- Supporte plusieurs backends GPU (NVIDIA, AMD, Apple Metal, Intel).',
@@ -1531,9 +1531,9 @@ schema: {
             '- **Traitement batch** : peut traiter 50-100 invites simultanément, servant plus d\'utilisateurs par GPU.',
             '- **Inférence distribuée** : diviser automatiquement un modèle 70B sur plusieurs GPUs.',
             '- **Large support de modèles** : fonctionne avec n\'importe quel modèle HuggingFace (Llama, Qwen, Mistral, Phi, etc.).',
-            'En avril 2026, la plupart des déploiements LLM locaux en production dans les entreprises utilisent vLLM. Le compromis est que vLLM nécessite des GPUs NVIDIA ; il a une mauvaise performance CPU.',
+            'En août 2026, la plupart des déploiements LLM locaux en production dans les entreprises utilisent vLLM. Le compromis est que vLLM nécessite des GPUs NVIDIA ; il a une mauvaise performance CPU.',
           ],
-          codeBlock: '# Installer vLLM\npip install vllm\n\n# Exécuter un modèle via API\nvllm serve meta-llama/Llama-3.3-8B-Instruct \\\n  --host 0.0.0.0 --port 8000 \\\n  --gpu-memory-utilization 0.9\n\n# Accessible maintenant à http://localhost:8000/v1/completions',
+          codeBlock: '# Installer vLLM\npip install vllm\n\n# Exécuter un modèle via API\nvllm serve meta-llama/Llama-3.2-3B-Instruct \\\n  --host 0.0.0.0 --port 8000 \\\n  --gpu-memory-utilization 0.9\n\n# Accessible maintenant à http://localhost:8000/v1/completions',
           codeLanguage: 'bash',
         },
         textGenerationWebUI: {
@@ -1552,12 +1552,12 @@ schema: {
         performance: {
           title: 'Quelle est la vitesse de chaque moteur ? Comparaison des débits',
           content: [
-            '**Le débit (tokens par seconde) dépend de la taille du modèle, du matériel et de l\'optimisation du moteur.** En avril 2026, voici les benchmarks du monde réel sur du matériel grand public :',
+            '**Le débit (tokens par seconde) dépend de la taille du modèle, du matériel et de l\'optimisation du moteur.** En août 2026, voici les benchmarks du monde réel sur du matériel grand public :',
           ],
           rows: [
-            { 'Scénario': 'Llama 3.3 8B sur RTX 4090 (GPU)', 'llama.cpp': '150 tokens/s', 'vLLM': '300 tokens/s (avec batching)', 'Text-Gen-WebUI': '150 tokens/s' },
-            { 'Scénario': 'Llama 3.3 8B sur CPU 8 cœurs', 'llama.cpp': '5 tokens/s', 'vLLM': '0.5 tokens/s (inutilisable)', 'Text-Gen-WebUI': '4 tokens/s' },
-            { 'Scénario': 'Llama 3.3 70B sur 2× RTX 4090', 'llama.cpp': '20 tokens/s (GPU unique)', 'vLLM': '100 tokens/s (distribué)', 'Text-Gen-WebUI': '20 tokens/s' },
+            { 'Scénario': 'Llama 3.2 3B sur RTX 4090 (GPU)', 'llama.cpp': '150 tokens/s', 'vLLM': '300 tokens/s (avec batching)', 'Text-Gen-WebUI': '150 tokens/s' },
+            { 'Scénario': 'Llama 3.2 3B sur CPU 8 cœurs', 'llama.cpp': '5 tokens/s', 'vLLM': '0.5 tokens/s (inutilisable)', 'Text-Gen-WebUI': '4 tokens/s' },
+            { 'Scénario': 'Llama 4 Scout sur 2× RTX 4090', 'llama.cpp': '20 tokens/s (GPU unique)', 'vLLM': '100 tokens/s (distribué)', 'Text-Gen-WebUI': '20 tokens/s' },
             { 'Scénario': 'Phi-3 3.8B sur MacBook Pro M4', 'llama.cpp': '30 tokens/s', 'vLLM': 'N/A (pas de support Metal)', 'Text-Gen-WebUI': '25 tokens/s' },
           ],
           columns: ['Scénario', 'llama.cpp', 'vLLM', 'Text-Gen-WebUI'],
@@ -1567,7 +1567,7 @@ schema: {
         productionDeployments: {
           title: 'Quel moteur pour les déploiements de production ?',
           content: [
-            '**vLLM est le standard de production en avril 2026.** La plupart des entreprises exécutant des APIs LLM locales en production utilisent vLLM en raison de son optimisation de débit et de son support du batching. Une seule instance vLLM peut servir 50+ utilisateurs simultanés sur un GPU, contre 1-2 pour llama.cpp.',
+            '**vLLM est le standard de production en août 2026.** La plupart des entreprises exécutant des APIs LLM locales en production utilisent vLLM en raison de son optimisation de débit et de son support du batching. Une seule instance vLLM peut servir 50+ utilisateurs simultanés sur un GPU, contre 1-2 pour llama.cpp.',
             'Cependant, le choix de production dépend de votre contrainte :',
             '- **Servir 100+ requêtes/jour avec GPU limité** : utiliser vLLM (meilleur débit).',
             '- **Servir avec CPU uniquement ou Apple Silicon** : utiliser llama.cpp via Ollama (meilleur support CPU).',
@@ -1591,7 +1591,7 @@ schema: {
           ],
           items: [
             '**UE / RGPD** : Pour les déploiements en entreprise dans l\'UE, vLLM s\'exécutant sur site maintient toute l\'inférence au sein de l\'infrastructure de l\'UE -- aucun token, prompt ou résultat ne quitte vos serveurs. Pour la conformité BSI IT-Grundschutz allemande, vLLM est le moteur de production recommandé car il fournit un enregistrement d\'audit structuré via les métriques Prometheus (point de terminaison /metrics), et toutes les versions de modèles sont épinglables via les IDs de modèles HuggingFace pour la documentation de conformité. Les modèles Mistral (Mistral AI, France, Apache 2.0) sont le choix préféré de l\'UE pour les déploiements de production vLLM -- origine de l\'UE, licence propre, performance solide.',
-            '**Japon (METI)** : la gouvernance IA METI exige de documenter l\'infrastructure d\'inférence. Les métriques Prometheus structurées de vLLM satisfont les exigences de piste d\'audit mieux que l\'enregistrement stdout de llama.cpp. Pour les déploiements en entreprise japonais, Qwen3 7B via vLLM est la pile recommandée -- tokenization native du japonais plus débit de production.',
+            '**Japon (METI)** : la gouvernance IA METI exige de documenter l\'infrastructure d\'inférence. Les métriques Prometheus structurées de vLLM satisfont les exigences de piste d\'audit mieux que l\'enregistrement stdout de llama.cpp. Pour les déploiements en entreprise japonais, Qwen3 8B via vLLM est la pile recommandée -- tokenization native du japonais plus débit de production.',
             '**Chine** : selon la Loi sur la sécurité des données de Chine (数据安全法), toute l\'inférence doit rester sur site pour les données sensibles. vLLM est compatible avec les instances GPU Alibaba Cloud A10 et A100. Les modèles Qwen3 (Alibaba) sont nativement optimisés pour vLLM et fournissent le meilleur débit en langue chinoise.',
           ],
         },
@@ -1791,7 +1791,7 @@ schema: {
       title: 'Text-Generation-WebUI vs vLLM vs llama.cpp 2026：推論エンジン比較',
       heroImage: '/images/text-generation-webui-vs-vllm-vs-llamacpp-overview-hero-ja.webp',
       seoTitle: 'Text-Generation-WebUI vs vLLM vs llama.cpp',
-      intro: 'Text-Generation-WebUI、vLLM、llama.cpp は、ローカル LLM を実行するための 3 つの人気のある推論エンジンです。各エンジンは異なるユースケースに最適化されています。llama.cpp は最軽量で Ollama を駆動；vLLM は高スループット本番環境 API に最速；Text-Generation-WebUI は実験用に最も機能豊富です。2026 年 4 月時点で、vLLM は本番デプロイメントを主導し、llama.cpp はコンシューマーデバイスを主導し、Text-Generation-WebUI は研究・ファインチューニングワークフローを主導しています。',
+      intro: 'Text-Generation-WebUI、vLLM、llama.cpp は、ローカル LLM を実行するための 3 つの人気のある推論エンジンです。各エンジンは異なるユースケースに最適化されています。llama.cpp は最軽量で Ollama を駆動；vLLM は高スループット本番環境 API に最速；Text-Generation-WebUI は実験用に最も機能豊富です。2026 年 8 月時点で、vLLM は本番デプロイメントを主導し、llama.cpp はコンシューマーデバイスを主導し、Text-Generation-WebUI は研究・ファインチューニングワークフローを主導しています。',
       metaDescription: 'vLLM が本番環境を主導（最高スループット）。llama.cpp が Ollama を駆動（最軽量）。Text-Generation-WebUI は研究に最適。2026年推論エンジン比較。',
       publishDate: '2026-04-04',
       readTime: '13分で読める',
@@ -1825,7 +1825,7 @@ schema: {
             '**llama.cpp** = 軽量、CPU 効率、Ollama を駆動。最適な場合：コンシューマーノートパソコン、シングルユーザー、ゼロ依存。',
             '**vLLM** = 本番環境対応、GPU スループット最大、バッチ処理と分散推論をサポート。最適な場合：API サーバー、マルチユーザー、高スループット。',
             '**Text-Generation-WebUI** = 機能豊富な実験ツール、Web UI 組込。最適な場合：ファインチューニング、LoRA テスト、高度な設定調整。',
-            '2026 年 4 月時点で、vLLM は本番環境利用を主導、llama.cpp はコンシューマー利用を主導、Text-Generation-WebUI は研究・ファインチューニングを主導。',
+            '2026 年 8 月時点で、vLLM は本番環境利用を主導、llama.cpp はコンシューマー利用を主導、Text-Generation-WebUI は研究・ファインチューニングを主導。',
           ],
         },
         whatIsInferenceEngine: {
@@ -1858,7 +1858,7 @@ schema: {
         llamacpp: {
           title: 'llama.cpp を理解する：基盤',
           content: [
-            '**llama.cpp は LLM 推論の C++ 実装で、Meta の Llama モデルを GPU アクセラレーションなしでコンシューマーハードウェアで実行するために元々記述されました。**2026 年 4 月時点で、最も軽量でポータブルな推論エンジンです。',
+            '**llama.cpp は LLM 推論の C++ 実装で、Meta の Llama モデルを GPU アクセラレーションなしでコンシューマーハードウェアで実行するために元々記述されました。**2026 年 8 月時点で、最も軽量でポータブルな推論エンジンです。',
             '**llama.cpp がコンシューマー利用を支配する理由：**',
             '- メモリオーバーヘッド最小 -- CPU のみで 8GB RAM で実行可能。',
             '- 複数の GPU バックエンド（NVIDIA、AMD、Apple Metal、Intel）をサポート。',
@@ -1876,9 +1876,9 @@ schema: {
             '- **バッチ処理**：50-100 プロンプトを同時処理、GPU あたりより多くのユーザーにサービス。',
             '- **分散推論**：70B モデルを複数 GPU 間で自動的に分割。',
             '- **広いモデルサポート**：任意の HuggingFace モデルで動作（Llama、Qwen、Mistral、Phi など）。',
-            '2026 年 4 月時点で、企業内の本番環境ローカル LLM デプロイメントの大多数が vLLM を使用。トレードオフは vLLM が NVIDIA GPU を必須とすること；CPU パフォーマンスは不良。',
+            '2026 年 8 月時点で、企業内の本番環境ローカル LLM デプロイメントの大多数が vLLM を使用。トレードオフは vLLM が NVIDIA GPU を必須とすること；CPU パフォーマンスは不良。',
           ],
-          codeBlock: '# vLLM をインストール\npip install vllm\n\n# API 経由でモデルを実行\nvllm serve meta-llama/Llama-3.3-8B-Instruct \\\n  --host 0.0.0.0 --port 8000 \\\n  --gpu-memory-utilization 0.9\n\n# http://localhost:8000/v1/completions でアクセス可能',
+          codeBlock: '# vLLM をインストール\npip install vllm\n\n# API 経由でモデルを実行\nvllm serve meta-llama/Llama-3.2-3B-Instruct \\\n  --host 0.0.0.0 --port 8000 \\\n  --gpu-memory-utilization 0.9\n\n# http://localhost:8000/v1/completions でアクセス可能',
           codeLanguage: 'bash',
         },
         textGenerationWebUI: {
@@ -1897,12 +1897,12 @@ schema: {
         performance: {
           title: 'パフォーマンス：各エンジンはどの程度高速か？',
           content: [
-            '**スループット（1秒あたりのトークン）はモデルサイズ、ハードウェア、エンジン最適化に依存。** 2026 年 4 月時点で、コンシューマーハードウェア上の実世界ベンチマーク：',
+            '**スループット（1秒あたりのトークン）はモデルサイズ、ハードウェア、エンジン最適化に依存。** 2026 年 8 月時点で、コンシューマーハードウェア上の実世界ベンチマーク：',
           ],
           rows: [
-            { 'シナリオ': 'Llama 3.3 8B on RTX 4090（GPU）', 'llama.cpp': '150 トークン/秒', 'vLLM': '300 トークン/秒（バッチ処理時）', 'Text-Gen-WebUI': '150 トークン/秒' },
-            { 'シナリオ': 'Llama 3.3 8B on 8 コア CPU', 'llama.cpp': '5 トークン/秒', 'vLLM': '0.5 トークン/秒（使用不可）', 'Text-Gen-WebUI': '4 トークン/秒' },
-            { 'シナリオ': 'Llama 3.3 70B on 2× RTX 4090', 'llama.cpp': '20 トークン/秒（単一 GPU）', 'vLLM': '100 トークン/秒（分散）', 'Text-Gen-WebUI': '20 トークン/秒' },
+            { 'シナリオ': 'Llama 3.2 3B on RTX 4090（GPU）', 'llama.cpp': '150 トークン/秒', 'vLLM': '300 トークン/秒（バッチ処理時）', 'Text-Gen-WebUI': '150 トークン/秒' },
+            { 'シナリオ': 'Llama 3.2 3B on 8 コア CPU', 'llama.cpp': '5 トークン/秒', 'vLLM': '0.5 トークン/秒（使用不可）', 'Text-Gen-WebUI': '4 トークン/秒' },
+            { 'シナリオ': 'Llama 4 Scout on 2× RTX 4090', 'llama.cpp': '20 トークン/秒（単一 GPU）', 'vLLM': '100 トークン/秒（分散）', 'Text-Gen-WebUI': '20 トークン/秒' },
             { 'シナリオ': 'Phi-3 3.8B on M4 MacBook Pro', 'llama.cpp': '30 トークン/秒', 'vLLM': 'N/A（Metal サポートなし）', 'Text-Gen-WebUI': '25 トークン/秒' },
           ],
           columns: ['シナリオ', 'llama.cpp', 'vLLM', 'Text-Gen-WebUI'],
@@ -1910,7 +1910,7 @@ schema: {
         productionDeployments: {
           title: '本番環境デプロイメント用のエンジン',
           content: [
-            '**vLLM は 2026 年 4 月時点の本番環境標準。** ローカル LLM API を本番環境で実行する企業のほとんどが、スループット最適化とバッチ処理サポートのため vLLM を使用。単一 vLLM インスタンスは GPU 1 個あたり 50+ 同時ユーザーにサービス可能、llama.cpp の 1-2 に対し。',
+            '**vLLM は 2026 年 8 月時点の本番環境標準。** ローカル LLM API を本番環境で実行する企業のほとんどが、スループット最適化とバッチ処理サポートのため vLLM を使用。単一 vLLM インスタンスは GPU 1 個あたり 50+ 同時ユーザーにサービス可能、llama.cpp の 1-2 に対し。',
             'ただし、本番環境選択は制約に依存：',
             '- **GPU 限定で 100+ 要求/日をサービス**：vLLM を使用（最高スループット）。',
             '- **CPU のみまたは Apple Silicon でサービス**：Ollama 経由 llama.cpp を使用（最高 CPU サポート）。',
@@ -1933,7 +1933,7 @@ schema: {
             '**推論エンジンの選択は地域的コンプライアンスと異なる規制管轄区域全体の企業デプロイメントに直接的な含意。**',
           ],
           items: [
-            '**日本（METI）**：METI AI ガバナンス 2024 は推論インフラストラクチャのドキュメント化を要求。vLLM の構造化 Prometheus メトリクス（/metrics エンドポイント）は llama.cpp の stdout ログより監査証跡要件をより満たしやすい。日本企業デプロイメント用、Qwen3 7B via vLLM が推奨スタック -- ネイティブ日本語トークン化と本番環境スループット。vLLM コマンド：`vllm serve Qwen/Qwen3-7B-Instruct`',
+            '**日本（METI）**：METI AI ガバナンス 2024 は推論インフラストラクチャのドキュメント化を要求。vLLM の構造化 Prometheus メトリクス（/metrics エンドポイント）は llama.cpp の stdout ログより監査証跡要件をより満たしやすい。日本企業デプロイメント用、Qwen3 8B via vLLM が推奨スタック -- ネイティブ日本語トークン化と本番環境スループット。vLLM コマンド：`vllm serve Qwen/Qwen3-8B-Instruct`',
             '**東アジア（データ越境）**：シンガポール、台湾、韓国、オーストラリア等での ASEAN/APAC データ居住要件により、vLLM 地域ローカルデプロイメントが標準。モデル管理の汎用性のため Qwen3 または Llama 3.3 推奨。APAC 規制フレームワーク（PDPC シンガポール、PIPA 台湾）と互換性あり。',
             '**グローバル展開用**：エンタープライズ多地域デプロイメント時は、Mistral Small Instruct の vLLM 実装を考慮。EU 基準を満たし、APAC 規制と互換性あり、NVIDIA どのリージョンでも利用可能。',
           ],
@@ -2134,7 +2134,7 @@ schema: {
       title: 'Text-Generation-WebUI vs vLLM vs llama.cpp 2026：推理引擎对比',
       heroImage: '/images/text-generation-webui-vs-vllm-vs-llamacpp-overview-hero-zh.webp',
       seoTitle: 'Text-Generation-WebUI vs vLLM vs llama.cpp',
-      intro: 'Text-Generation-WebUI、vLLM 和 llama.cpp 是运行本地 LLM 的三种流行推理引擎，每种针对不同用例进行优化。llama.cpp 最轻量且驱动 Ollama；vLLM 对高吞吐量生产 API 最快；Text-Generation-WebUI 对实验最功能丰富。截至 2026 年 4 月，vLLM 主导生产部署，llama.cpp 主导消费设备，Text-Generation-WebUI 主导研究和微调工作流。',
+      intro: 'Text-Generation-WebUI、vLLM 和 llama.cpp 是运行本地 LLM 的三种流行推理引擎，每种针对不同用例进行优化。llama.cpp 最轻量且驱动 Ollama；vLLM 对高吞吐量生产 API 最快；Text-Generation-WebUI 对实验最功能丰富。截至 2026 年 8 月，vLLM 主导生产部署，llama.cpp 主导消费设备，Text-Generation-WebUI 主导研究和微调工作流。',
       metaDescription: 'vLLM 主导生产环境（最高吞吐量）。llama.cpp 驱动 Ollama（最轻量）。Text-Generation-WebUI 最适合研究。2026年推理引擎对比。',
       publishDate: '2026-04-04',
       readTime: '阅读约13分钟',
@@ -2168,7 +2168,7 @@ schema: {
             '**llama.cpp** = 轻量级、CPU 高效、驱动 Ollama。最适合：消费类笔记本、单用户、零依赖。',
             '**vLLM** = 生产级、最大 GPU 吞吐量、支持批处理和分布式推理。最适合：API 服务器、多用户、高吞吐量。',
             '**Text-Generation-WebUI** = 功能丰富的实验工具，内置 Web UI。最适合：微调、LoRA 测试、高级设置调整。',
-            '截至 2026 年 4 月，vLLM 主导生产使用，llama.cpp 主导消费使用，Text-Generation-WebUI 主导研究/微调工作流。',
+            '截至 2026 年 8 月，vLLM 主导生产使用，llama.cpp 主导消费使用，Text-Generation-WebUI 主导研究/微调工作流。',
           ],
         },
         whatIsInferenceEngine: {
@@ -2201,7 +2201,7 @@ schema: {
         llamacpp: {
           title: '了解 llama.cpp：基础',
           content: [
-            '**llama.cpp 是 LLM 推理的 C++ 实现，最初用于在不需要 GPU 加速的消费硬件上运行 Meta 的 Llama 模型。**截至 2026 年 4 月，它仍然是最轻量级和可移植的推理引擎。',
+            '**llama.cpp 是 LLM 推理的 C++ 实现，最初用于在不需要 GPU 加速的消费硬件上运行 Meta 的 Llama 模型。**截至 2026 年 8 月，它仍然是最轻量级和可移植的推理引擎。',
             '**llama.cpp 主导消费使用的原因：**',
             '- 内存开销最小 -- 可在仅 CPU 8GB RAM 上运行。',
             '- 支持多个 GPU 后端（NVIDIA、AMD、Apple Metal、Intel）。',
@@ -2219,9 +2219,9 @@ schema: {
             '- **批处理**：可同时处理 50-100 个提示，在每个 GPU 上为更多用户提供服务。',
             '- **分布式推理**：自动将 70B 模型分割到多个 GPU 上。',
             '- **广泛模型支持**：适用于任何 HuggingFace 模型（Llama、Qwen、Mistral、Phi 等）。',
-            '截至 2026 年 4 月，企业中大多数生产本地 LLM 部署都使用 vLLM。权衡是 vLLM 需要 NVIDIA GPU；CPU 性能很差。',
+            '截至 2026 年 8 月，企业中大多数生产本地 LLM 部署都使用 vLLM。权衡是 vLLM 需要 NVIDIA GPU；CPU 性能很差。',
           ],
-          codeBlock: '# 安装 vLLM\npip install vllm\n\n# 通过 API 运行模型\nvllm serve meta-llama/Llama-3.3-8B-Instruct \\\n  --host 0.0.0.0 --port 8000 \\\n  --gpu-memory-utilization 0.9\n\n# 现在可在 http://localhost:8000/v1/completions 访问',
+          codeBlock: '# 安装 vLLM\npip install vllm\n\n# 通过 API 运行模型\nvllm serve meta-llama/Llama-3.2-3B-Instruct \\\n  --host 0.0.0.0 --port 8000 \\\n  --gpu-memory-utilization 0.9\n\n# 现在可在 http://localhost:8000/v1/completions 访问',
           codeLanguage: 'bash',
         },
         textGenerationWebUI: {
@@ -2240,12 +2240,12 @@ schema: {
         performance: {
           title: '性能：各引擎速度如何？',
           content: [
-            '**吞吐量（每秒令牌数）取决于模型大小、硬件和引擎优化。** 截至 2026 年 4 月，消费硬件上的实际基准：',
+            '**吞吐量（每秒令牌数）取决于模型大小、硬件和引擎优化。** 截至 2026 年 8 月，消费硬件上的实际基准：',
           ],
           rows: [
-            { '场景': 'Llama 3.3 8B on RTX 4090（GPU）', 'llama.cpp': '150 令牌/秒', 'vLLM': '300 令牌/秒（批处理时）', 'Text-Gen-WebUI': '150 令牌/秒' },
-            { '场景': 'Llama 3.3 8B on 8 核 CPU', 'llama.cpp': '5 令牌/秒', 'vLLM': '0.5 令牌/秒（不可用）', 'Text-Gen-WebUI': '4 令牌/秒' },
-            { '场景': 'Llama 3.3 70B on 2× RTX 4090', 'llama.cpp': '20 令牌/秒（单 GPU）', 'vLLM': '100 令牌/秒（分布式）', 'Text-Gen-WebUI': '20 令牌/秒' },
+            { '场景': 'Llama 3.2 3B on RTX 4090（GPU）', 'llama.cpp': '150 令牌/秒', 'vLLM': '300 令牌/秒（批处理时）', 'Text-Gen-WebUI': '150 令牌/秒' },
+            { '场景': 'Llama 3.2 3B on 8 核 CPU', 'llama.cpp': '5 令牌/秒', 'vLLM': '0.5 令牌/秒（不可用）', 'Text-Gen-WebUI': '4 令牌/秒' },
+            { '场景': 'Llama 4 Scout on 2× RTX 4090', 'llama.cpp': '20 令牌/秒（单 GPU）', 'vLLM': '100 令牌/秒（分布式）', 'Text-Gen-WebUI': '20 令牌/秒' },
             { '场景': 'Phi-3 3.8B on M4 MacBook Pro', 'llama.cpp': '30 令牌/秒', 'vLLM': 'N/A（无 Metal 支持）', 'Text-Gen-WebUI': '25 令牌/秒' },
           ],
           columns: ['场景', 'llama.cpp', 'vLLM', 'Text-Gen-WebUI'],
@@ -2253,7 +2253,7 @@ schema: {
         productionDeployments: {
           title: '生产部署选择哪个引擎？',
           content: [
-            '**vLLM 是 2026 年 4 月的生产标准。** 大多数在生产中运行本地 LLM API 的公司使用 vLLM，因为其吞吐量优化和批处理支持。单个 vLLM 实例可在一个 GPU 上为 50+ 并发用户提供服务，而 llama.cpp 仅为 1-2 用户。',
+            '**vLLM 是 2026 年 8 月的生产标准。** 大多数在生产中运行本地 LLM API 的公司使用 vLLM，因为其吞吐量优化和批处理支持。单个 vLLM 实例可在一个 GPU 上为 50+ 并发用户提供服务，而 llama.cpp 仅为 1-2 用户。',
             '但是，生产选择取决于您的约束：',
             '- **每天为 100+ 请求提供服务且 GPU 有限**：使用 vLLM（最高吞吐量）。',
             '- **仅用 CPU 或 Apple Silicon 提供服务**：通过 Ollama 使用 llama.cpp（最佳 CPU 支持）。',
@@ -2276,7 +2276,7 @@ schema: {
             '**推理引擎的选择对不同地区和监管框架的合规性和企业部署有直接影响。**',
           ],
           items: [
-            '**中国（数据安全法）**：根据 2021 年《数据安全法》，所有推理必须在本地进行，敏感数据不能跨境传输。vLLM 与阿里云 A10 和 A100 GPU 实例兼容。Qwen3（阿里巴巴）模型针对 vLLM 本地优化，提供最佳中文语言吞吐量。对于中国企业生产：**vLLM + Qwen3 14B on 阿里云**是 2026 年 4 月的标准栈。数据合规性要求：所有推理日志和模型权重必须在中国大陆境内存储；使用阿里云数据库服务以满足合规审计要求。',
+            '**中国（数据安全法）**：根据 2021 年《数据安全法》，所有推理必须在本地进行，敏感数据不能跨境传输。vLLM 与阿里云 A10 和 A100 GPU 实例兼容。Qwen3（阿里巴巴）模型针对 vLLM 本地优化，提供最佳中文语言吞吐量。对于中国企业生产：**vLLM + Qwen3 14B on 阿里云**是 2026 年 8 月的标准栈。数据合规性要求：所有推理日志和模型权重必须在中国大陆境内存储；使用阿里云数据库服务以满足合规审计要求。',
             '**亚太地区（数据跨境）**：新加坡（PDPC）、澳大利亚（Privacy Act）和东南亚国家的数据跨境规则要求本地部署。vLLM 分布式推理支持跨地区 GPU 集群。对于多地区 APAC 部署：Qwen3 或 Llama 3.3 via vLLM 都适合，支持新加坡、悉尼和东京地区数据中心。数据管理：为每个司法管辖区使用单独的部署；不要跨地区复制训练数据或推理日志。',
             '**企业部署（金融、医疗、法律）**：在高度受管制的行业（银行、保险、医疗保健、律师事务所），vLLM 的 Prometheus 指标暴露（/metrics 端点）提供审计证跟踪满足合规要求。**建议**：部署 vLLM + 本地模型（Qwen3 或 Mistral Small）+ 专业加密存储（HSM 或密钥管理服务），并在企业防火墙后面。对于金融机构，使用 vLLM 的分布式推理跨多个 GPU 进行推理，每个 GPU 隔离在子网络中，并记录所有推理提示/响应到合规日志。',
           ],
@@ -2478,12 +2478,12 @@ schema: {
       title: 'Text-Generation-WebUI vs vLLM vs llama.cpp 2026년 비교: 추론 엔진 완벽 가이드',
     heroImage: '/images/text-generation-webui-vs-vllm-vs-llamacpp-overview-hero-ko.webp',
       seoTitle: 'Text-Generation-WebUI vs vLLM vs llama.cpp 비교 2026',
-      intro: 'Text-Generation-WebUI, vLLM, llama.cpp는 로컬 LLM 실행을 위한 세 가지 대표적인 추론 엔진으로, 각각 서로 다른 사용 목적에 최적화되어 있습니다. llama.cpp는 가장 가볍고 Ollama의 기반이 됩니다. vLLM은 고처리량 프로덕션 API에서 가장 빠릅니다. Text-Generation-WebUI는 실험 및 연구에 가장 풍부한 기능을 제공합니다. 2026년 4월 기준으로 vLLM은 프로덕션 배포 분야를, llama.cpp는 소비자 기기 분야를, Text-Generation-WebUI는 연구 및 파인튜닝 워크플로 분야를 주도하고 있습니다.',
+      intro: 'Text-Generation-WebUI, vLLM, llama.cpp는 로컬 LLM 실행을 위한 세 가지 대표적인 추론 엔진으로, 각각 서로 다른 사용 목적에 최적화되어 있습니다. llama.cpp는 가장 가볍고 Ollama의 기반이 됩니다. vLLM은 고처리량 프로덕션 API에서 가장 빠릅니다. Text-Generation-WebUI는 실험 및 연구에 가장 풍부한 기능을 제공합니다. 2026년 8월 기준으로 vLLM은 프로덕션 배포 분야를, llama.cpp는 소비자 기기 분야를, Text-Generation-WebUI는 연구 및 파인튜닝 워크플로 분야를 주도하고 있습니다.',
       metaDescription: 'vLLM은 프로덕션에 최적(최고 처리량). llama.cpp는 Ollama의 기반. Text-Generation-WebUI는 연구 및 LoRA 파인튜닝에 최적. 2026년 비교.',
       publishDate: '2026-04-04',
       leadAnswerBlock: 'Text-Generation-WebUI, vLLM, llama.cpp는 로컬 LLM 실행을 위한 세 가지 대표적인 추론 엔진으로, 각각 서로 다른 사용 목적에 최적화되어 있습니다. llama.cpp는 가장 가볍고 Ollama의 기반이 됩니다. vLLM은 고처리량 프로덕션 API에서 가장 빠릅니다. Text-Generation-WebUI는 실험 및 연구에 가장 풍부한 기능을 제공합니다.',
       audience: '프로덕션 또는 기업 환경에서 로컬 LLM을 배포하는 엔지니어',
-      dateModified: '2026-04-12',
+      dateModified: '2026-08-27',
       readTime: '13분 읽기',
       gammaEmbedUrl: '/presentations/text-generation-webui-vs-vllm-vs-llamacpp-static.html',
       gammaDescription: '아래 슬라이드 덱은 다음 내용을 다룹니다: vLLM vs llama.cpp vs Text-Generation-WebUI 기능 비교, 성능 벤치마크(최대 1000+ tok/s), 프로덕션 의사결정 프레임워크, LoRA 파인튜닝 사용 사례, 지역별 컴플라이언스(EU/일본/중국). PDF를 추론 엔진 참조 카드로 다운로드하십시오.',
@@ -2514,7 +2514,7 @@ schema: {
             '**llama.cpp** = 경량, CPU 효율적, Ollama의 기반. 최적 사용 환경: 소비자용 노트북, 단일 사용자, 의존성 없음.',
             '**vLLM** = 프로덕션급, 최대 GPU 처리량, 배칭 및 분산 추론 지원. 최적 사용 환경: API 서버, 다중 사용자, 고처리량.',
             '**Text-Generation-WebUI** = 내장 웹 UI가 있는 기능 풍부한 실험 도구. 최적 사용 환경: 파인튜닝, LoRA 테스트, 고급 설정 조정.',
-            '2026년 4월 기준으로 vLLM은 프로덕션 사용을, llama.cpp는 소비자 사용을, Text-Generation-WebUI는 연구/파인튜닝 분야를 주도하고 있습니다.',
+            '2026년 8월 기준으로 vLLM은 프로덕션 사용을, llama.cpp는 소비자 사용을, Text-Generation-WebUI는 연구/파인튜닝 분야를 주도하고 있습니다.',
           ],
         },
         whatIsInferenceEngine: {
@@ -2552,7 +2552,7 @@ schema: {
           id: 'understanding-llama-cpp',
           title: 'llama.cpp 이해하기: 기반 엔진',
           content: [
-            '**llama.cpp는 GPU 가속 없이도 소비자용 하드웨어에서 Meta의 Llama 모델을 실행하기 위해 처음 개발된 LLM 추론의 C++ 구현체입니다.** 2026년 4월 기준으로도 가장 가볍고 이식성이 높은 추론 엔진으로 남아 있습니다.',
+            '**llama.cpp는 GPU 가속 없이도 소비자용 하드웨어에서 Meta의 Llama 모델을 실행하기 위해 처음 개발된 LLM 추론의 C++ 구현체입니다.** 2026년 8월 기준으로도 가장 가볍고 이식성이 높은 추론 엔진으로 남아 있습니다.',
             '**llama.cpp가 소비자 사용 분야를 주도하는 이유:**',
             '- 최소 메모리 오버헤드 -- CPU만으로 8GB RAM에서 실행 가능.',
             '- 다양한 GPU 백엔드 지원 (NVIDIA, AMD, Apple Metal, Intel).',
@@ -2571,9 +2571,9 @@ schema: {
             '- **배치 처리**: 50-100개의 프롬프트를 동시에 처리하여 GPU당 더 많은 사용자를 서빙합니다.',
             '- **분산 추론**: 70B 모델을 여러 GPU에 자동으로 분산합니다.',
             '- **폭넓은 모델 지원**: HuggingFace 모델(Llama, Qwen, Mistral, Phi 등) 모두 지원.',
-            '2026년 4월 기준으로 기업의 대부분 프로덕션 로컬 LLM 배포에 vLLM이 사용됩니다. 단점은 vLLM이 NVIDIA GPU를 필요로 하며 CPU 성능이 낮다는 점입니다.',
+            '2026년 8월 기준으로 기업의 대부분 프로덕션 로컬 LLM 배포에 vLLM이 사용됩니다. 단점은 vLLM이 NVIDIA GPU를 필요로 하며 CPU 성능이 낮다는 점입니다.',
           ],
-          codeBlock: '# vLLM 설치\npip install vllm\n\n# API로 모델 실행\nvllm serve meta-llama/Llama-3.3-8B-Instruct \\\n  --host 0.0.0.0 --port 8000 \\\n  --gpu-memory-utilization 0.9\n\n# http://localhost:8000/v1/completions 에서 접근 가능',
+          codeBlock: '# vLLM 설치\npip install vllm\n\n# API로 모델 실행\nvllm serve meta-llama/Llama-3.2-3B-Instruct \\\n  --host 0.0.0.0 --port 8000 \\\n  --gpu-memory-utilization 0.9\n\n# http://localhost:8000/v1/completions 에서 접근 가능',
           codeLanguage: 'bash',
         },
         textGenerationWebUI: {
@@ -2594,12 +2594,12 @@ schema: {
           id: 'performance-tokens-per-second',
           title: '각 엔진의 속도는? 처리량 비교',
           content: [
-            '**처리량(초당 토큰 수)은 모델 크기, 하드웨어, 엔진 최적화에 따라 달라집니다.** 2026년 4월 기준 소비자용 하드웨어에서의 실제 벤치마크는 다음과 같습니다:',
+            '**처리량(초당 토큰 수)은 모델 크기, 하드웨어, 엔진 최적화에 따라 달라집니다.** 2026년 8월 기준 소비자용 하드웨어에서의 실제 벤치마크는 다음과 같습니다:',
           ],
           rows: [
-            { 'Scenario': 'Llama 3.3 8B (RTX 4090 GPU)', 'llama.cpp': '150 토큰/초', 'vLLM': '300 토큰/초 (배칭 시)', 'Text-Gen-WebUI': '150 토큰/초' },
-            { 'Scenario': 'Llama 3.3 8B (8코어 CPU)', 'llama.cpp': '5 토큰/초', 'vLLM': '0.5 토큰/초 (사용 불가)', 'Text-Gen-WebUI': '4 토큰/초' },
-            { 'Scenario': 'Llama 3.3 70B (RTX 4090 2장)', 'llama.cpp': '20 토큰/초 (단일 GPU)', 'vLLM': '100 토큰/초 (분산)', 'Text-Gen-WebUI': '20 토큰/초' },
+            { 'Scenario': 'Llama 3.2 3B (RTX 4090 GPU)', 'llama.cpp': '150 토큰/초', 'vLLM': '300 토큰/초 (배칭 시)', 'Text-Gen-WebUI': '150 토큰/초' },
+            { 'Scenario': 'Llama 3.2 3B (8코어 CPU)', 'llama.cpp': '5 토큰/초', 'vLLM': '0.5 토큰/초 (사용 불가)', 'Text-Gen-WebUI': '4 토큰/초' },
+            { 'Scenario': 'Llama 4 Scout (RTX 4090 2장)', 'llama.cpp': '20 토큰/초 (단일 GPU)', 'vLLM': '100 토큰/초 (분산)', 'Text-Gen-WebUI': '20 토큰/초' },
             { 'Scenario': 'Phi-3 3.8B (M4 MacBook Pro)', 'llama.cpp': '30 토큰/초', 'vLLM': '해당 없음 (Metal 미지원)', 'Text-Gen-WebUI': '25 토큰/초' },
           ],
           columns: ['Scenario', 'llama.cpp', 'vLLM', 'Text-Gen-WebUI'],
@@ -2610,7 +2610,7 @@ schema: {
           id: 'production-deployments',
           title: '프로덕션 배포에 적합한 엔진은?',
           content: [
-            '**vLLM은 2026년 4월 기준 프로덕션 표준입니다.** 프로덕션에서 로컬 LLM API를 운영하는 대부분의 기업은 처리량 최적화와 배칭 지원 덕분에 vLLM을 사용합니다. 단일 vLLM 인스턴스는 하나의 GPU에서 50명 이상의 동시 사용자를 서빙할 수 있으며, llama.cpp의 경우 1-2명에 불과합니다.',
+            '**vLLM은 2026년 8월 기준 프로덕션 표준입니다.** 프로덕션에서 로컬 LLM API를 운영하는 대부분의 기업은 처리량 최적화와 배칭 지원 덕분에 vLLM을 사용합니다. 단일 vLLM 인스턴스는 하나의 GPU에서 50명 이상의 동시 사용자를 서빙할 수 있으며, llama.cpp의 경우 1-2명에 불과합니다.',
             '그러나 프로덕션 선택은 제약 조건에 따라 달라집니다:',
             '- **제한된 GPU로 하루 100건 이상의 요청 서빙**: vLLM 사용 (최고 처리량).',
             '- **CPU 또는 Apple Silicon만으로 서빙**: Ollama 경유 llama.cpp 사용 (최고 CPU 지원).',
@@ -2637,8 +2637,8 @@ schema: {
           ],
           items: [
             '**EU / GDPR:** EU 기업 배포의 경우, 온프레미스에서 실행되는 vLLM은 모든 추론을 EU 인프라 내에 유지합니다 -- 토큰, 프롬프트, 출력 중 어느 것도 서버 외부로 전송되지 않습니다. 독일 BSI IT-Grundschutz 컴플라이언스를 위해 vLLM은 프로덕션 엔진으로 권장됩니다. Prometheus 메트릭(/metrics 엔드포인트)을 통한 구조화된 감사 로깅을 제공하며, 모든 모델 버전은 컴플라이언스 문서화를 위해 HuggingFace 모델 ID로 고정 가능합니다. Mistral 모델(Mistral AI, 프랑스, Apache 2.0)은 vLLM 프로덕션 배포를 위한 EU 선호 선택입니다 -- EU 출처, 명확한 라이선스, 우수한 성능. vLLM 명령어: `vllm serve mistralai/Mistral-7B-Instruct-v0.3`',
-            '**일본 (METI):** METI AI 거버넌스는 추론 인프라 문서화를 요구합니다. vLLM의 구조화된 Prometheus 메트릭은 llama.cpp의 stdout 로깅보다 감사 추적 요건을 더 잘 충족합니다. 일본 기업 배포의 경우, vLLM을 통한 Qwen3 7B가 권장 스택입니다 -- 네이티브 일본어 토크나이제이션과 프로덕션 처리량을 결합합니다. vLLM 명령어: `vllm serve Qwen/Qwen3-7B-Instruct`',
-            '**중국:** 중국 데이터 안전법(数据安全法)에 따라 민감한 데이터에 대한 모든 추론은 온프레미스에서 이루어져야 합니다. vLLM은 Alibaba Cloud A10 및 A100 GPU 인스턴스와 호환됩니다. Qwen3(Alibaba) 모델은 vLLM에 네이티브로 최적화되어 최고의 중국어 처리량을 제공합니다. 중국 기업 프로덕션 표준: 2026년 4월 기준 Alibaba Cloud에서의 vLLM + Qwen3 14B.',
+            '**일본 (METI):** METI AI 거버넌스는 추론 인프라 문서화를 요구합니다. vLLM의 구조화된 Prometheus 메트릭은 llama.cpp의 stdout 로깅보다 감사 추적 요건을 더 잘 충족합니다. 일본 기업 배포의 경우, vLLM을 통한 Qwen3 8B가 권장 스택입니다 -- 네이티브 일본어 토크나이제이션과 프로덕션 처리량을 결합합니다. vLLM 명령어: `vllm serve Qwen/Qwen3-8B-Instruct`',
+            '**중국:** 중국 데이터 안전법(数据安全法)에 따라 민감한 데이터에 대한 모든 추론은 온프레미스에서 이루어져야 합니다. vLLM은 Alibaba Cloud A10 및 A100 GPU 인스턴스와 호환됩니다. Qwen3(Alibaba) 모델은 vLLM에 네이티브로 최적화되어 최고의 중국어 처리량을 제공합니다. 중국 기업 프로덕션 표준: 2026년 8월 기준 Alibaba Cloud에서의 vLLM + Qwen3 14B.',
           ],
         },
         commonMistakes: {

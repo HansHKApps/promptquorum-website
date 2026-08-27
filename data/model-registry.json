@@ -996,6 +996,30 @@
       "source_url": "https://docs.mistral.ai/models/overview",
       "verified_date": "2026-08-27",
       "notes": "New small-model family per Mistral's own model catalog: Ministral 3 14B, Ministral 3 8B, Ministral 3 3B. Corroborated via AWS Bedrock (Ministral 14B 3.0, Ministral 3 8B, Ministral 3B). Relevant for this site's low-VRAM local-LLM hardware-tier content — not yet checked against any current site mentions this cycle."
+    },
+    {
+      "company": "Meta",
+      "family": "Llama",
+      "model": "Llama 3.2 1B",
+      "type": "open-weight",
+      "release_date": "2024-09",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://huggingface.co/meta-llama/Llama-3.2-1B-Instruct",
+      "verified_date": "2026-08-27",
+      "notes": "Smallest Llama 3.2 text model, no Llama 4 successor at this size class (Llama 4 only ships as large MoE variants). Remains the standard minimal-RAM/edge Llama pick. Added as exact-name entry, same pattern as Qwen3 8B/4B/1.7B."
+    },
+    {
+      "company": "Alibaba / Qwen",
+      "family": "Qwen",
+      "model": "Qwen3 3B",
+      "type": "open-weight",
+      "release_date": "2025-04",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://github.com/QwenLM/Qwen3.6",
+      "verified_date": "2026-08-27",
+      "notes": "Small-class dense variant. Qwen3.6 has only shipped 27B and 35B-A3B sizes (per the Qwen3.6 registry entry) -- no small-class successor exists yet, so Qwen3 3B remains current. Same exact-name-entry pattern as Qwen3 8B/4B/1.7B."
     }
   ],
   "sources": [
