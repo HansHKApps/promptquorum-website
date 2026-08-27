@@ -14,7 +14,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription: 'Local coding model benchmark: Qwen 3.6 27B (92.1% HumanEval, 77.2% SWE-bench), DeepSeek Coder ($0.14/1M), Mistral Devstral (agentic tasks). Cost, latency, hardware.',
     heroImage: '/images/qwen-coder-deepseek-mistral-swe-bench-hero-en.webp',
     publishDate: '2026-05-16',
-    dateModified: '2026-07-13',
+    dateModified: '2026-08-27',
+    last_full_refresh: '2026-08-27',
+    next_seo_review_due: '2026-10-01',
+    last_seo_review: '2026-08-27',
     readTime: '9 min read',
     educationalLevel: 'Intermediate',
     audience: 'Software developers choosing a local coding LLM for daily development workflows',
@@ -199,6 +202,7 @@ annual_local  = power_cost  # $1,073/year after hardware
         note: 'Latency figures are estimates from community benchmarks and testing, not official vendor measurements. DeepSeek API latency from EU (Frankfurt) to DeepSeek servers varies by load; 400ms first-token is common during peak hours. For autocomplete workflows, local inference is reliably faster.',
         callouts: [
           { type: 'warning', text: 'Ollama runtime default (VRAM-scaled) increases apparent throughput (fewer tokens to process) but truncates context. Set num_ctx 32768 for accurate coding latency measurements.' },
+          { type: 'note', text: 'Apple refreshed the Mac mini and Mac Studio lineup on August 25, 2026 (Mac mini M6/M5 Pro, Mac Studio M5 Max/M5 Ultra; shipping September 22, 2026), which supersedes the M4 Max configuration in the table above as a new-purchase option. PromptQuorum has not independently benchmarked the new M5 Max/M5 Ultra chips — the M4 Max figures above remain the most recent confirmed Apple Silicon numbers for this workload until updated testing is available.' },
         ],
       },
       hardware: {
@@ -209,7 +213,8 @@ annual_local  = power_cost  # $1,073/year after hardware
           '**Mistral Devstral Small 24B Q4_K_M**: 14 GB VRAM — RTX 4070 Ti Super (16 GB), RTX 3090 (24 GB), Apple M3/M4/M5 Pro 36 GB',
           '**Codestral 22B Q4_K_M**: 13 GB VRAM — RTX 4070 Ti (12 GB marginal, 16 GB recommended)',
           '**Running two models simultaneously**: RTX 4090 24 GB can hold Qwen 3.6 27B Q4_K_M + Devstral 24B Q4_K_M in a 48 GB dual-GPU setup. Apple M5 Max (128 GB unified, 460–614 GB/s bandwidth) comfortably runs both models simultaneously via MLX.',
-          '**Apple Silicon recommendation**: M5 Pro (64 GB unified memory) runs Qwen 3.6 27B at ~48 tokens/sec via MLX. M5 Max (128 GB) achieves ~55 tokens/sec for Qwen and can run both Qwen + Devstral simultaneously — the quietest and most power-efficient option. M4 Pro with 48 GB also suitable at 42 tokens/sec.',
+          '**Apple Silicon recommendation**: Apple refreshed the Mac mini and Mac Studio lineup on August 25, 2026 (shipping September 22, 2026), replacing the M4 Pro/M4 Max configurations with M5 Pro and M5 Max as the current new-purchase options. Mac mini M5 Pro ($1,699, 64 GB max unified memory) runs Qwen 3.6 27B at ~48 tokens/sec via MLX. Mac Studio M5 Max ($2,499, 128 GB max) achieves ~55 tokens/sec for Qwen and can run both Qwen + Devstral simultaneously — the quietest and most power-efficient option. Mac Studio M5 Ultra ($5,499 starting, 96–512 GB) exceeds what this workload needs but suits larger multi-model setups. A previous-generation M4 Pro (48 GB), common on the used market, remains suitable at ~42 tokens/sec — Apple no longer sells it new.',
+          '**Budget Apple Silicon option**: the entry-level Mac mini M6 ($899, 32 GB max unified memory) comfortably covers Mistral Devstral 24B (14 GB) and Codestral 22B (13 GB), though its lower memory bandwidth than the Pro/Max chips means noticeably slower tokens/sec than the M5 Pro figures above. PromptQuorum has not benchmarked the M6 yet.',
         ],
         codeBlock: `# Ollama config for Qwen 3.6 27B with num_ctx and GPU layers
 cat > Modelfile-qwen3-coder <<'EOF'
@@ -340,7 +345,7 @@ DEEPSEEK_MODEL=deepseek-chat
     metaDescription: 'Benchmark code : Qwen 3.6 27B (92,1% HumanEval, 77,2% SWE-bench), DeepSeek Coder (0,14 $/1M), Mistral Devstral (tâches agents). Coûts, latence, matériel requis.',
     heroImage: '/images/qwen-coder-deepseek-mistral-swe-bench-hero-fr.webp',
     publishDate: '2026-05-16',
-    dateModified: '2026-07-13',
+    dateModified: '2026-08-27',
     readTime: '9 min de lecture',
     educationalLevel: 'Intermediate',
     audience: 'Développeurs logiciel choisissant un LLM de code local pour leurs workflows de développement quotidien',
@@ -454,6 +459,7 @@ annual_local  = power_cost  # $1,073/year after hardware
         note: 'Les chiffres de latence sont des estimations issues de benchmarks communautaires et de tests, pas des mesures officielles des éditeurs. La latence de l\'API DeepSeek depuis l\'UE (Francfort) vers les serveurs DeepSeek varie selon la charge ; 400 ms pour le premier token est courant aux heures de pointe. Pour les workflows d\'autocomplétion, l\'inférence locale est systématiquement plus rapide.',
         callouts: [
           { type: 'warning', text: 'Le num_ctx par défaut d\'Ollama (2 048) augmente le débit apparent (moins de tokens à traiter) mais tronque le contexte. Définissez num_ctx 32768 pour des mesures de latence de codage précises.' },
+          { type: 'note', text: 'Apple a renouvelé la gamme Mac mini et Mac Studio le 25 août 2026 (Mac mini M6/M5 Pro, Mac Studio M5 Max/M5 Ultra ; livraison à partir du 22 septembre 2026), ce qui remplace la configuration M4 Max du tableau ci-dessus comme option d\'achat actuelle. PromptQuorum n\'a pas encore testé indépendamment les nouvelles puces M5 Max/M5 Ultra — les chiffres M4 Max ci-dessus restent les données Apple Silicon les plus récentes confirmées pour cette charge de travail, en attendant de nouveaux tests.' },
         ],
       },
       hardware: {
@@ -464,7 +470,8 @@ annual_local  = power_cost  # $1,073/year after hardware
           '**Mistral Devstral Small 24B Q4_K_M** : 14 Go VRAM — RTX 4070 Ti Super (16 Go), RTX 3090 (24 Go), Apple M3/M4/M5 Pro 36 Go',
           '**Codestral 22B Q4_K_M** : 13 Go VRAM — RTX 4070 Ti (12 Go en limite, 16 Go recommandé)',
           '**Faire tourner deux modèles simultanément** : une RTX 4090 24 Go peut charger Qwen 3.6 27B Q4_K_M + Devstral 24B Q4_K_M dans une configuration dual-GPU 48 Go. L\'Apple M5 Max (mémoire unifiée 128 Go, bande passante 460–614 Go/s) fait tourner confortablement les deux modèles simultanément via MLX.',
-          '**Recommandation Apple Silicon** : le M5 Pro (64 Go de mémoire unifiée) fait tourner Qwen 3.6 27B à ~48 tokens/sec via MLX. Le M5 Max (128 Go) atteint ~55 tokens/sec pour Qwen et peut faire tourner Qwen + Devstral simultanément — l\'option la plus silencieuse et économe en énergie. Le M4 Pro avec 48 Go est également adapté à 42 tokens/sec.',
+          '**Recommandation Apple Silicon** : Apple a renouvelé la gamme Mac mini et Mac Studio le 25 août 2026 (livraison à partir du 22 septembre 2026), remplaçant les configurations M4 Pro/M4 Max par le M5 Pro et le M5 Max comme options d\'achat actuelles. Le Mac mini M5 Pro (1 699 $, 64 Go de mémoire unifiée max) fait tourner Qwen 3.6 27B à ~48 tokens/sec via MLX. Le Mac Studio M5 Max (2 499 $, 128 Go max) atteint ~55 tokens/sec pour Qwen et peut faire tourner Qwen + Devstral simultanément — l\'option la plus silencieuse et économe en énergie. Le Mac Studio M5 Ultra (à partir de 5 499 $, 96–512 Go) dépasse les besoins de cette charge de travail mais convient à des configurations multi-modèles plus importantes. Un M4 Pro de génération précédente (48 Go), courant sur le marché de l\'occasion, reste adapté à ~42 tokens/sec — Apple ne le vend plus neuf. Prix indiqués en dollars US ; les tarifs européens n\'étaient pas encore publiés au moment de la rédaction.',
+          '**Option Apple Silicon économique** : le Mac mini M6 d\'entrée de gamme (899 $, 32 Go de mémoire unifiée max) couvre confortablement Mistral Devstral 24B (14 Go) et Codestral 22B (13 Go), même si sa bande passante mémoire inférieure aux puces Pro/Max se traduit par des tokens/sec nettement plus lents que les chiffres du M5 Pro ci-dessus. PromptQuorum n\'a pas encore testé le M6.',
         ],
         codeBlock: `# Ollama config for Qwen 3.6 27B with num_ctx and GPU layers
 cat > Modelfile-qwen3-coder <<'EOF'
@@ -631,7 +638,7 @@ DEEPSEEK_MODEL=deepseek-chat
     metaDescription: 'Benchmark de código local: Qwen 3.6 27B (92,1% HumanEval, 77,2% SWE-bench), DeepSeek Coder ($0,14/1M) y Mistral Devstral. Coste, latencia y hardware.',
     heroImage: '/images/qwen-coder-deepseek-mistral-swe-bench-hero-es.webp',
     publishDate: '2026-05-16',
-    dateModified: '2026-07-13',
+    dateModified: '2026-08-27',
     readTime: '9 min de lectura',
     educationalLevel: 'Intermediate',
     audience: 'Desarrolladores de software eligiendo un LLM local de código para sus flujos de trabajo diarios',
@@ -746,6 +753,7 @@ annual_local  = power_cost  # $1,073/año tras el hardware
         note: 'Las cifras de latencia son estimaciones de benchmarks de la comunidad y pruebas, no mediciones oficiales de los fabricantes. La latencia de la API de DeepSeek desde la UE (Frankfurt) a los servidores de DeepSeek varía según la carga; 400 ms de primer token es habitual en horas punta. Para flujos de trabajo de autocompletado, la inferencia local es sistemáticamente más rápida.',
         callouts: [
           { type: 'warning', text: 'El num_ctx predeterminado de Ollama (2048) aumenta el rendimiento aparente (menos tokens a procesar) pero trunca el contexto. Establece num_ctx 32768 para mediciones precisas de latencia de codificación.' },
+          { type: 'note', text: 'Apple renovó la gama Mac mini y Mac Studio el 25 de agosto de 2026 (Mac mini M6/M5 Pro, Mac Studio M5 Max/M5 Ultra; disponibles a partir del 22 de septiembre de 2026), lo que sustituye a la configuración M4 Max de la tabla anterior como opción de compra actual. PromptQuorum aún no ha evaluado de forma independiente los nuevos chips M5 Max/M5 Ultra — las cifras de M4 Max anteriores siguen siendo los datos de Apple Silicon más recientes confirmados para esta carga de trabajo hasta que haya nuevas pruebas disponibles.' },
         ],
       },
       hardware: {
@@ -756,7 +764,8 @@ annual_local  = power_cost  # $1,073/año tras el hardware
           '**Mistral Devstral Small 24B Q4_K_M**: 14 GB VRAM — RTX 4070 Ti Super (16 GB), RTX 3090 (24 GB), Apple M3/M4/M5 Pro 36 GB',
           '**Codestral 22B Q4_K_M**: 13 GB VRAM — RTX 4070 Ti (12 GB marginal, 16 GB recomendado)',
           '**Ejecutar dos modelos simultáneamente**: una RTX 4090 de 24 GB puede alojar Qwen 3.6 27B Q4_K_M + Devstral 24B Q4_K_M en una configuración dual-GPU de 48 GB. El Apple M5 Max (128 GB de memoria unificada, 460–614 GB/s de ancho de banda) ejecuta cómodamente ambos modelos simultáneamente vía MLX.',
-          '**Recomendación Apple Silicon**: M5 Pro (64 GB de memoria unificada) ejecuta Qwen 3.6 27B a ~48 tokens/seg vía MLX. M5 Max (128 GB) alcanza ~55 tokens/seg para Qwen y puede ejecutar Qwen + Devstral simultáneamente — la opción más silenciosa y eficiente energéticamente. M4 Pro con 48 GB también es adecuado a 42 tokens/seg.',
+          '**Recomendación Apple Silicon**: Apple renovó la gama Mac mini y Mac Studio el 25 de agosto de 2026 (disponibles a partir del 22 de septiembre de 2026), sustituyendo las configuraciones M4 Pro/M4 Max por el M5 Pro y el M5 Max como opciones de compra actuales. El Mac mini M5 Pro ($1,699, 64 GB de memoria unificada máx.) ejecuta Qwen 3.6 27B a ~48 tokens/seg vía MLX. El Mac Studio M5 Max ($2,499, 128 GB máx.) alcanza ~55 tokens/seg para Qwen y puede ejecutar Qwen + Devstral simultáneamente — la opción más silenciosa y eficiente energéticamente. El Mac Studio M5 Ultra (desde $5,499, 96–512 GB) excede lo que necesita esta carga de trabajo, pero es adecuado para configuraciones multi-modelo más grandes. Un M4 Pro de generación anterior (48 GB), común en el mercado de segunda mano, sigue siendo adecuado a ~42 tokens/seg — Apple ya no lo vende nuevo. Precios en dólares estadounidenses; los precios locales para tu país pueden variar según impuestos.',
+          '**Opción económica de Apple Silicon**: el Mac mini M6 de entrada ($899, 32 GB de memoria unificada máx.) cubre cómodamente Mistral Devstral 24B (14 GB) y Codestral 22B (13 GB), aunque su menor ancho de banda de memoria frente a los chips Pro/Max implica tokens/seg notablemente más lentos que las cifras del M5 Pro anteriores. PromptQuorum aún no ha evaluado el M6.',
         ],
         codeBlock: `# Configuración de Ollama para Qwen 3.6 27B con num_ctx y capas GPU
 cat > Modelfile-qwen3-coder <<'EOF'
@@ -851,7 +860,7 @@ DEEPSEEK_MODEL=deepseek-chat
     metaDescription: '⁨Qwen 3.6 27B⁩ يحقق ⁨92.1% HumanEval⁩ و⁨77.2% SWE-bench⁩ محليًا بـ ⁨16 GB VRAM⁩. مقارنة ⁨DeepSeek Coder⁩ ($⁨0.14/1M⁩) و⁨Mistral Devstral⁩: تكلفة وكمون وأجهزة.',
     heroImage: '/images/qwen-coder-deepseek-mistral-swe-bench-hero-ar.webp',
     publishDate: '2026-05-16',
-    dateModified: '2026-07-13',
+    dateModified: '2026-08-27',
     readTime: '9 دقائق قراءة',
     educationalLevel: 'Intermediate',
     audience: 'مطورو البرمجيات الذين يختارون نموذج LLM محلي للكود لسير عملهم اليومي',
@@ -966,6 +975,7 @@ annual_local  = power_cost  # $1,073/año tras el hardware
         note: 'أرقام الكمون تقديرات من معايير المجتمع واختبارات، وليست قياسات رسمية من المصنّعين. يتفاوت كمون API الخاص بـ DeepSeek من الاتحاد الأوروبي (فرانكفورت) إلى خوادم DeepSeek حسب الحمل؛ 400 مللي ثانية لأول token معتاد في أوقات الذروة. لسير عمل الإكمال التلقائي، الاستدلال المحلي أسرع باستمرار.',
         callouts: [
           { type: 'warning', text: 'قيمة num_ctx الافتراضية في Ollama (2048) ترفع الأداء الظاهري (عدد token أقل للمعالجة) لكنها تقتطع السياق. اضبط num_ctx 32768 لقياسات كمون برمجة دقيقة.' },
+          { type: 'note', text: 'حدّثت Apple تشكيلة Mac mini وMac Studio في 25 أغسطس 2026 (Mac mini M6/M5 Pro، Mac Studio M5 Max/M5 Ultra؛ الشحن اعتبارًا من 22 سبتمبر 2026)، ما يجعل تهيئة M4 Max في الجدول أعلاه غير متاحة للشراء الجديد. لم تُجرِ PromptQuorum بعد اختبارات مستقلة على شرائح M5 Max/M5 Ultra الجديدة — تظل أرقام M4 Max أعلاه أحدث بيانات Apple Silicon مؤكدة لهذا الحمل حتى تتوفر اختبارات محدّثة.' },
         ],
       },
       hardware: {
@@ -976,7 +986,8 @@ annual_local  = power_cost  # $1,073/año tras el hardware
           '**Mistral Devstral Small 24B Q4_K_M**: 14 GB من VRAM — RTX 4070 Ti Super (16 GB)، RTX 3090 (24 GB)، Apple M3/M4/M5 Pro 36 GB',
           '**Codestral 22B Q4_K_M**: 13 GB من VRAM — RTX 4070 Ti (12 GB هامشي، 16 GB موصى به)',
           '**تشغيل نموذجين في آن واحد**: RTX 4090 بسعة 24 GB يمكنها استضافة Qwen 3.6 27B Q4_K_M + Devstral 24B Q4_K_M في إعداد dual-GPU بسعة 48 GB. يشغّل Apple M5 Max (128 GB من الذاكرة الموحدة، عرض نطاق 460–614 GB/s) النموذجين معًا بأريحية عبر MLX.',
-          '**توصية Apple Silicon**: M5 Pro (64 GB من الذاكرة الموحدة) يشغّل Qwen 3.6 27B بـ ~48 token/ثانية عبر MLX. M5 Max (128 GB) يبلغ ~55 token/ثانية لـ Qwen ويمكنه تشغيل Qwen + Devstral معًا — الخيار الأهدأ والأكفأ في الطاقة. M4 Pro بسعة 48 GB مناسب أيضًا بـ 42 token/ثانية.',
+          '**توصية Apple Silicon**: حدّثت Apple تشكيلة Mac mini وMac Studio في 25 أغسطس 2026 (الشحن اعتبارًا من 22 سبتمبر 2026)، واستبدلت تهيئات M4 Pro/M4 Max بشرائح M5 Pro وM5 Max كخيارات الشراء الجديد الحالية. يشغّل Mac mini M5 Pro ($1,699، بحد أقصى 64 GB ذاكرة موحدة) Qwen 3.6 27B بـ ~48 token/ثانية عبر MLX. يبلغ Mac Studio M5 Max ($2,499، بحد أقصى 128 GB) ~55 token/ثانية لـ Qwen ويمكنه تشغيل Qwen وDevstral معًا — الخيار الأهدأ والأكفأ في الطاقة. يتجاوز Mac Studio M5 Ultra (من $5,499، 96–512 GB) احتياجات هذا الحمل لكنه مناسب لإعدادات متعددة النماذج الأكبر. لا يزال M4 Pro من الجيل السابق (48 GB)، الشائع في سوق الأجهزة المستعملة، مناسبًا بـ ~42 token/ثانية — لم تعد Apple تبيعه جديدًا. الأسعار بالدولار الأمريكي؛ لم تُنشر أسعار محلية لمنطقة الخليج وقت كتابة هذا المقال.',
+          '**خيار Apple Silicon اقتصادي**: يغطي Mac mini M6 للفئة الأساسية ($899، بحد أقصى 32 GB ذاكرة موحدة) بشكل مريح Mistral Devstral 24B (14 GB) وCodestral 22B (13 GB)، رغم أن عرض النطاق الترددي الأقل للذاكرة مقارنة بشرائح Pro/Max يعني سرعة token/ثانية أبطأ ملحوظًا من أرقام M5 Pro أعلاه. لم تختبر PromptQuorum شريحة M6 بعد.',
         ],
         codeBlock: `# Configuración de Ollama para Qwen 3.6 27B con num_ctx y capas GPU
 cat > Modelfile-qwen3-coder <<'EOF'
@@ -1072,7 +1083,7 @@ DEEPSEEK_MODEL=deepseek-chat
     metaDescription: 'Benchmark de código local: Qwen 3.6 27B (92,1% HumanEval, 77,2% SWE-bench), DeepSeek Coder ($0,14/1M) e Mistral Devstral. Custo, latência e hardware.',
     heroImage: '/images/qwen-coder-deepseek-mistral-swe-bench-hero-pt.webp',
     publishDate: '2026-05-16',
-    dateModified: '2026-07-13',
+    dateModified: '2026-08-27',
     readTime: '9 min de leitura',
     educationalLevel: 'Intermediate',
     audience: 'Desenvolvedores de software que escolhem um LLM local de código para seus fluxos de trabalho diários',
@@ -1201,6 +1212,7 @@ annual_local  = 0  # custo por token zero apos o hardware (eletricidade a parte)
         note: 'Os números de latência são estimativas de benchmarks da comunidade e testes, não medições oficiais dos fabricantes. A latência da API da DeepSeek a partir da UE (Frankfurt) até os servidores da DeepSeek varia conforme a carga; 400 ms até o primeiro token é comum em horários de pico. Para fluxos de autocomplete, a inferência local é sistematicamente mais rápida.',
         callouts: [
           { type: 'warning', text: 'O num_ctx padrão do Ollama (2048) aumenta a vazão aparente (menos tokens a processar), mas trunca o contexto. Defina num_ctx 32768 para medições precisas de latência de codificação.' },
+          { type: 'note', text: 'A Apple renovou a linha Mac mini e Mac Studio em 25 de agosto de 2026 (Mac mini M6/M5 Pro, Mac Studio M5 Max/M5 Ultra; embarque a partir de 22 de setembro de 2026), o que substitui a configuração M4 Max da tabela acima como opção de compra atual. A PromptQuorum ainda não testou de forma independente os novos chips M5 Max/M5 Ultra — os números do M4 Max acima seguem sendo os dados de Apple Silicon mais recentes confirmados para essa carga de trabalho até que novos testes estejam disponíveis.' },
         ],
       },
       hardware: {
@@ -1211,7 +1223,8 @@ annual_local  = 0  # custo por token zero apos o hardware (eletricidade a parte)
           '**Mistral Devstral Small 24B Q4_K_M**: 14 GB de VRAM — RTX 4070 Ti Super (16 GB), RTX 3090 (24 GB), Apple M3/M4/M5 Pro 36 GB',
           '**Codestral 22B Q4_K_M**: 13 GB de VRAM — RTX 4070 Ti (12 GB marginal, 16 GB recomendado)',
           '**Rodar dois modelos simultaneamente**: uma RTX 4090 de 24 GB pode hospedar Qwen 3.6 27B Q4_K_M + Devstral 24B Q4_K_M em uma configuração dual-GPU de 48 GB. O Apple M5 Max (128 GB de memória unificada, 460–614 GB/s de largura de banda) roda confortavelmente os dois modelos ao mesmo tempo via MLX.',
-          '**Recomendação Apple Silicon**: o M5 Pro (64 GB de memória unificada) roda o Qwen 3.6 27B a ~48 tokens/seg via MLX. O M5 Max (128 GB) atinge ~55 tokens/seg para o Qwen e consegue rodar Qwen + Devstral ao mesmo tempo — a opção mais silenciosa e eficiente em energia. O M4 Pro com 48 GB também é adequado a 42 tokens/seg.',
+          '**Recomendação Apple Silicon**: a Apple renovou a linha Mac mini e Mac Studio em 25 de agosto de 2026 (embarque a partir de 22 de setembro de 2026), substituindo as configurações M4 Pro/M4 Max pelo M5 Pro e M5 Max como opções de compra atuais. O Mac mini M5 Pro (US$ 1.699, até 64 GB de memória unificada) roda o Qwen 3.6 27B a ~48 tokens/seg via MLX. O Mac Studio M5 Max (US$ 2.499, até 128 GB) atinge ~55 tokens/seg para o Qwen e consegue rodar Qwen + Devstral ao mesmo tempo — a opção mais silenciosa e eficiente em energia. O Mac Studio M5 Ultra (a partir de US$ 5.499, 96–512 GB) excede o que essa carga de trabalho exige, mas serve para configurações multi-modelo maiores. Um M4 Pro de geração anterior (48 GB), comum no mercado de usados, continua adequado a ~42 tokens/seg — a Apple não vende mais o modelo novo. Preços em dólares americanos; a Apple ainda não havia publicado preços em reais no momento da redação, e o câmbio + impostos de importação tornam qualquer conversão direta imprecisa.',
+          '**Opção Apple Silicon econômica**: o Mac mini M6 de entrada (US$ 899, até 32 GB de memória unificada) cobre com folga o Mistral Devstral 24B (14 GB) e o Codestral 22B (13 GB), embora sua largura de banda de memória menor que a dos chips Pro/Max resulte em tokens/seg visivelmente mais lentos que os números do M5 Pro acima. A PromptQuorum ainda não testou o M6.',
         ],
         codeBlock: `# Configuração do Ollama para Qwen 3.6 27B com num_ctx e camadas de GPU
 cat > Modelfile-qwen3-coder <<'EOF'
@@ -1306,7 +1319,7 @@ DEEPSEEK_MODEL=deepseek-chat
     metaDescription: '로컬 코딩 모델 벤치마크: Qwen 3.6 27B(HumanEval 92.1%, SWE-bench 77.2%), DeepSeek Coder($0.14/1M), Mistral Devstral(에이전트 작업). 비용, 지연 시간, 하드웨어.',
     heroImage: '/images/qwen-coder-deepseek-mistral-swe-bench-hero-ko.webp',
     publishDate: '2026-05-16',
-    dateModified: '2026-07-13',
+    dateModified: '2026-08-27',
     readTime: '9분 읽기',
     educationalLevel: 'Intermediate',
     audience: '일상적인 개발 워크플로우에서 사용할 로컬 코딩 LLM을 선택하는 소프트웨어 개발자',
@@ -1435,6 +1448,7 @@ annual_local  = power_cost  # 하드웨어 이후 $1,073/년
         note: '지연 시간 수치는 공식 벤더 측정값이 아닌 커뮤니티 벤치마크 및 테스트를 통한 추정값입니다. EU(프랑크푸르트)에서 DeepSeek 서버로의 API 지연 시간은 부하에 따라 변동하며, 피크 시간대에는 첫 번째 토큰 400ms가 일반적입니다. 자동 완성 워크플로우의 경우, 로컬 추론이 안정적으로 더 빠릅니다.',
         callouts: [
           { type: 'warning', text: 'Ollama 기본 num_ctx 2048 설정은 처리할 토큰이 줄어들어 겉보기 처리량을 높이지만 컨텍스트를 잘라냅니다. 정확한 코딩 지연 시간을 측정하려면 num_ctx 32768로 설정하십시오.' },
+          { type: 'note', text: 'Apple은 2026년 8월 25일 Mac mini 및 Mac Studio 라인업을 새로 발표했습니다(Mac mini M6/M5 Pro, Mac Studio M5 Max/M5 Ultra, 2026년 9월 22일부터 배송). 이에 따라 위 표의 M4 Max 구성은 신규 구매 옵션에서 제외되었습니다. PromptQuorum은 아직 새로운 M5 Max/M5 Ultra 칩을 자체적으로 벤치마크하지 않았습니다 — 위의 M4 Max 수치는 새로운 테스트가 나올 때까지 이 작업 부하에 대해 확인된 가장 최근의 Apple Silicon 데이터입니다.' },
         ],
       },
       hardware: {
@@ -1445,7 +1459,8 @@ annual_local  = power_cost  # 하드웨어 이후 $1,073/년
           '**Mistral Devstral Small 24B Q4_K_M**: 14 GB VRAM — RTX 4070 Ti Super (16 GB), RTX 3090 (24 GB), Apple M3/M4/M5 Pro 36 GB (권장 구성)',
           '**Codestral 22B Q4_K_M**: 13 GB VRAM — RTX 4070 Ti (12 GB는 경계선, 16 GB 권장)',
           '**두 모델 동시 실행**: RTX 4090 24 GB에서는 Qwen 3.6 27B Q4_K_M과 Devstral 24B Q4_K_M을 동시에 실행할 수 없습니다. 48 GB 듀얼 GPU 구성(RTX 3090 두 대 또는 RTX 4090 두 대) 또는 96 GB 이상의 통합 메모리를 가진 Apple Silicon이 필요합니다. Apple M5 Max(통합 메모리 128 GB, 대역폭 460–614 GB/s)는 MLX를 통해 두 모델을 동시에 편리하게 실행할 수 있습니다.',
-          '**Apple Silicon 권장 사양**: M5 Pro(통합 메모리 64 GB)는 MLX를 통해 Qwen 3.6 27B를 ~48 토큰/초로 실행합니다. M5 Max(128 GB)는 Qwen 기준 ~55 토큰/초를 달성하며 Qwen과 Devstral을 동시에 실행할 수 있어 가장 조용하고 전력 효율적인 옵션입니다. 48 GB를 갖춘 M4 Pro도 42 토큰/초로 적합합니다.',
+          '**Apple Silicon 권장 사양**: Apple은 2026년 8월 25일 Mac mini 및 Mac Studio 라인업을 새로 발표하며(2026년 9월 22일부터 배송), 기존 M4 Pro/M4 Max 구성을 M5 Pro 및 M5 Max로 대체해 현재 신규 구매 옵션으로 제시했습니다. Mac mini M5 Pro($1,699, 통합 메모리 최대 64 GB)는 MLX를 통해 Qwen 3.6 27B를 ~48 토큰/초로 실행합니다. Mac Studio M5 Max($2,499, 최대 128 GB)는 Qwen 기준 ~55 토큰/초를 달성하며 Qwen과 Devstral을 동시에 실행할 수 있어 가장 조용하고 전력 효율적인 옵션입니다. Mac Studio M5 Ultra(시작가 $5,499, 96–512 GB)는 이 작업 부하에는 과분하지만 더 큰 멀티 모델 구성에 적합합니다. 중고 시장에서 흔히 볼 수 있는 이전 세대 M4 Pro(48 GB)도 ~42 토큰/초로 여전히 적합하지만, Apple은 더 이상 신제품으로 판매하지 않습니다. 가격은 미국 달러 기준이며, 작성 시점에 한국 정가는 발표되지 않았습니다.',
+          '**보급형 Apple Silicon 옵션**: 보급형 Mac mini M6($899, 통합 메모리 최대 32 GB)는 Mistral Devstral 24B(14 GB)와 Codestral 22B(13 GB)를 여유 있게 처리하지만, Pro/Max 칩보다 메모리 대역폭이 낮아 위의 M5 Pro 수치보다 토큰/초가 눈에 띄게 느립니다. PromptQuorum은 아직 M6을 벤치마크하지 않았습니다.',
         ],
         codeBlock: `# num_ctx 및 GPU 레이어를 설정한 Qwen 3.6 27B Ollama 구성
 cat > Modelfile-qwen3-coder <<'EOF'
