@@ -17,7 +17,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       intro: 'By late 2026: small-model quality per parameter keeps improving, on-device inference works on iPhones (A18) and Snapdragon X Elite phones, reasoning models improve step-by-step accuracy by 15–30%, and enterprise on-premises adoption is expected to grow, led by regulated industries. This guide covers the 5 key trends reshaping local AI in 2026–2027 with timelines, benchmarks, and adoption predictions.',
       metaDescription: 'Small-model quality keeps improving in 2026. Smartphones run local LLMs at 15–30 tok/sec. Enterprise on-prem adoption is growing, led by regulated industries.',
       publishDate: '2026-04-04',
-      dateModified: '2026-07-16',
+      dateModified: '2026-08-27',
+      last_full_refresh: '2026-08-27',
+      next_seo_review_due: '2026-10-01',
+      last_seo_review: '2026-08-27',
       leadAnswerBlock: '**By late 2026: small-model quality per parameter keeps improving, on-device inference works on iPhones (A18) and Snapdragon X Elite phones, reasoning models improve step-by-step accuracy by 15–30%, and enterprise on-premises adoption is expected to grow, led by regulated industries.**',
       audience: 'Developers and enterprise architects evaluating local LLM adoption timelines',
       readTime: '10 min read',
@@ -97,7 +100,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           content: [
             '**Reasoning models generate explicit chain-of-thought steps before answering.** DeepSeek-R1 and OpenAI o1 showed this improves accuracy on math, logic, and multi-step tasks by 15–30% over standard LLMs.',
             'Challenge: reasoning models generate 3–5× more tokens per response — slower output, higher VRAM usage.',
-            'Opportunity: local reasoning models (DeepSeek-R1 7B, QwQ-32B) enable complex analysis without cloud costs — viable on RTX 4090 or Mac Studio M2 Ultra.',
+            'Opportunity: local reasoning models (DeepSeek-R1 7B, QwQ-32B) enable complex analysis without cloud costs — viable on RTX 4090 or Mac Studio M5 Max.',
           ],
         },
         adoption: {
@@ -145,7 +148,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'What are reasoning models and how do they differ from standard LLMs?',
-              a: 'Reasoning models (DeepSeek-R1, OpenAI o1) generate explicit chain-of-thought steps before the final answer. This improves accuracy on math, logic, and multi-step tasks by 15–30%. Trade-off: 3–5× more tokens generated per response — slower and more VRAM-intensive. Local options: DeepSeek-R1 7B (RTX 4070 Ti+), QwQ-32B (RTX 4090 or Mac Studio M2 Ultra).',
+              a: 'Reasoning models (DeepSeek-R1, OpenAI o1) generate explicit chain-of-thought steps before the final answer. This improves accuracy on math, logic, and multi-step tasks by 15–30%. Trade-off: 3–5× more tokens generated per response — slower and more VRAM-intensive. Local options: DeepSeek-R1 7B (RTX 4070 Ti+), QwQ-32B (RTX 4090 or Mac Studio M5 Max).',
             },
             {
               q: 'When will fine-tuning local LLMs become easy?',
@@ -165,7 +168,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'What hardware will run local LLMs in 2027?',
-              a: 'By 2027: 7B models on smartphones (Apple A19, Snapdragon X3), 70B models on consumer desktops with 32 GB VRAM (RTX 5090 successor expected ~$2,500). Apple Silicon M5 Ultra (256+ GB unified memory projected) for 200B+ models natively. The hardware floor is dropping ~30% per year in cost-per-performance.',
+              a: 'By 2027: 7B models on smartphones (Apple A19, Snapdragon X3), 70B models on consumer desktops with 32 GB VRAM (RTX 5090 successor expected ~$2,500). Part of this prediction already arrived: Apple\'s Mac Studio M5 Ultra, refreshed in August 2026, ships with up to 512 GB of unified memory (96 GB standard; the 512 GB configuration ships from late October 2026) — enough to run 200B+ parameter models natively on one machine. The same refresh added the Mac mini M6 ($899, up to 32 GB), Mac mini M5 Pro ($1,699, up to 64 GB), and Mac Studio M5 Max ($2,499, up to 128 GB) below the Ultra tier. The hardware floor is dropping roughly 30% per year in cost-per-performance.',
             },
             {
               q: 'Is local LLM adoption accelerating in 2026?',
@@ -203,7 +206,7 @@ schema: {
         description: 'Small-model quality keeps improving in 2026. Smartphones run local LLMs at 15–30 tok/sec. Enterprise on-prem adoption is growing, led by regulated industries.',
         url: 'https://www.promptquorum.com/local-llms/future-of-local-llms',
         datePublished: '2026-04-04',
-        dateModified: '2026-07-16',
+        dateModified: '2026-08-27',
         inLanguage: 'en',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -294,7 +297,7 @@ schema: {
       intro: 'Para finales de 2026: la calidad por parámetro de los modelos pequeños sigue mejorando, la inferencia en dispositivo funciona en iPhones (A18) y teléfonos Snapdragon X Elite, los modelos de razonamiento mejoran la precisión en un 15–30%, y se espera que la adopción empresarial de inferencia local crezca, liderada por sectores regulados. Esta guía cubre las 5 tendencias clave que están redefiniendo la IA local en 2026–2027 con cronogramas, benchmarks y predicciones de adopción.',
       metaDescription: 'La calidad de los modelos pequeños por parámetro sigue mejorando en 2026 y los smartphones ejecutan LLMs a 15–30 tok/s.',
       publishDate: '2026-04-04',
-      dateModified: '2026-07-16',
+      dateModified: '2026-08-27',
       leadAnswerBlock: '**Para finales de 2026: la calidad por parámetro de los modelos pequeños sigue mejorando, la inferencia en dispositivo funciona en iPhones (A18) y teléfonos Snapdragon X Elite, los modelos de razonamiento mejoran la precisión en un 15–30%, y se espera que la adopción empresarial de inferencia local crezca, liderada por sectores regulados.**',
       audience: 'Desarrolladores y arquitectos empresariales que evalúan los cronogramas de adopción de LLMs locales',
       readTime: '10 min de lectura',
@@ -374,7 +377,7 @@ schema: {
           content: [
             '**Los modelos de razonamiento generan pasos explícitos de chain-of-thought antes de responder.** DeepSeek-R1 y OpenAI o1 demostraron que esto mejora la precisión en matemáticas, lógica y tareas multietapa en un 15–30% sobre los LLMs estándar.',
             'Desafío: los modelos de razonamiento generan 3–5× más tokens por respuesta — salida más lenta y mayor uso de VRAM.',
-            'Oportunidad: los modelos de razonamiento locales (DeepSeek-R1 7B, QwQ-32B) permiten análisis complejos sin costos de nube — viable en RTX 4090 o Mac Studio M2 Ultra.',
+            'Oportunidad: los modelos de razonamiento locales (DeepSeek-R1 7B, QwQ-32B) permiten análisis complejos sin costos de nube — viable en RTX 4090 o Mac Studio M5 Max.',
           ],
         },
         adoption: {
@@ -422,7 +425,7 @@ schema: {
             },
             {
               q: '¿Qué son los modelos de razonamiento y en qué se diferencian de los LLMs estándar?',
-              a: 'Los modelos de razonamiento (DeepSeek-R1, OpenAI o1) generan pasos explícitos de chain-of-thought antes de la respuesta final. Esto mejora la precisión en matemáticas, lógica y tareas multietapa en un 15–30%. Compromiso: 3–5× más tokens generados por respuesta — más lento y más intensivo en VRAM. Opciones locales: DeepSeek-R1 7B (RTX 4070 Ti+), QwQ-32B (RTX 4090 o Mac Studio M2 Ultra).',
+              a: 'Los modelos de razonamiento (DeepSeek-R1, OpenAI o1) generan pasos explícitos de chain-of-thought antes de la respuesta final. Esto mejora la precisión en matemáticas, lógica y tareas multietapa en un 15–30%. Compromiso: 3–5× más tokens generados por respuesta — más lento y más intensivo en VRAM. Opciones locales: DeepSeek-R1 7B (RTX 4070 Ti+), QwQ-32B (RTX 4090 o Mac Studio M5 Max).',
             },
             {
               q: '¿Cuándo será fácil hacer fine-tuning de LLMs locales?',
@@ -442,7 +445,7 @@ schema: {
             },
             {
               q: '¿Qué hardware ejecutará LLMs locales en 2027?',
-              a: 'Para 2027: modelos 7B en smartphones (Apple A19, Snapdragon X3), modelos 70B en equipos de escritorio de consumidor con 32 GB de VRAM (sucesor RTX 5090 esperado a ~2.500 €). Apple Silicon M5 Ultra (256+ GB de memoria unificada proyectada) para modelos 200B+ de forma nativa. El costo base del hardware cae ~30% al año en costo por rendimiento.',
+              a: 'Para 2027: modelos 7B en smartphones (Apple A19, Snapdragon X3), modelos 70B en equipos de escritorio de consumidor con 32 GB de VRAM (sucesor RTX 5090 esperado a ~2.500 €). Parte de esta predicción ya se cumplió: el Mac Studio M5 Ultra de Apple, renovado en agosto de 2026, ofrece hasta 512 GB de memoria unificada — suficiente para ejecutar modelos de 200B+ parámetros de forma nativa en un solo equipo. La misma renovación sumó nuevas configuraciones de Mac mini y Mac Studio por debajo del nivel Ultra. El costo base del hardware cae ~30% al año en costo por rendimiento.',
             },
             {
               q: '¿Se está acelerando la adopción de LLMs locales en 2026?',
@@ -480,7 +483,7 @@ schema: {
         description: 'Los modelos pequeños por parámetro siguen mejorando en calidad en 2026. Los smartphones ejecutan LLMs locales a 15–30 tok/seg. Los modelos de razonamiento mejoran la precisión un 15–30%. La adopción empresarial de inferencia local está creciendo.',
         url: 'https://www.promptquorum.com/es/local-llms/future-of-local-llms',
         datePublished: '2026-04-04',
-        dateModified: '2026-07-16',
+        dateModified: '2026-08-27',
         inLanguage: 'es',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -544,7 +547,7 @@ schema: {
           {
             '@type': 'Question',
             name: '¿Qué hardware ejecutará LLMs locales en 2027?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Para 2027: modelos 7B en smartphones (Apple A19, Snapdragon X3), modelos 70B en equipos de escritorio con 32 GB de VRAM (sucesor RTX 5090 esperado a ~2.500 €). Apple Silicon M5 Ultra (256+ GB de memoria unificada proyectada) para modelos 200B+ de forma nativa. El costo base del hardware cae ~30% al año en costo por rendimiento.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Para 2027: modelos 7B en smartphones (Apple A19, Snapdragon X3), modelos 70B en equipos de escritorio con 32 GB de VRAM (sucesor RTX 5090 esperado a ~2.500 €). El Mac Studio M5 Ultra de Apple (agosto 2026) ya ofrece hasta 512 GB de memoria unificada para modelos 200B+ de forma nativa. El costo base del hardware cae ~30% al año en costo por rendimiento.' },
           },
           {
             '@type': 'Question',
@@ -577,7 +580,7 @@ schema: {
       intro: 'بحلول نهاية 2026: تستمر جودة النماذج الصغيرة لكل معامل في التحسن، ويعمل الاستدلال على الجهاز على هواتف iPhone (A18) وهواتف Snapdragon X Elite، وتحسّن نماذج الاستدلال الدقة بنسبة 15–30%، ومن المتوقع أن ينمو تبني الاستدلال المحلي في المؤسسات، بقيادة القطاعات الخاضعة للتنظيم. يغطي هذا الدليل الاتجاهات الخمسة الرئيسية التي تعيد تشكيل الذكاء الاصطناعي المحلي في 2026–2027 مع الجداول الزمنية والمعايير وتنبؤات التبني.',
       metaDescription: 'جودة النماذج الصغيرة لكل معامل تستمر في التحسن في ⁨2026⁩؛ الهواتف تشغّل ⁨LLMs⁩ محلياً بسرعة ⁨15⁩–⁨30⁩ رمز/ثانية. تبني الاستدلال المحلي يتزايد.',
       publishDate: '2026-04-04',
-      dateModified: '2026-07-16',
+      dateModified: '2026-08-27',
       leadAnswerBlock: '**بحلول نهاية 2026: تستمر جودة النماذج الصغيرة لكل معامل في التحسن، ويعمل الاستدلال على الجهاز على هواتف iPhone (A18) وهواتف Snapdragon X Elite، وتحسّن نماذج الاستدلال الدقة بنسبة 15–30%، ومن المتوقع أن ينمو تبني الاستدلال المحلي في المؤسسات، بقيادة القطاعات الخاضعة للتنظيم.**',
       audience: 'المطورون ومهندسو المؤسسات الذين يقيّمون الجداول الزمنية لتبني نماذج LLM المحلية',
       readTime: '10 دقائق للقراءة',
@@ -657,7 +660,7 @@ schema: {
           content: [
             '**تولّد نماذج الاستدلال خطوات chain-of-thought صريحة قبل الإجابة.** أثبت DeepSeek-R1 و OpenAI o1 أن ذلك يحسّن الدقة في الرياضيات والمنطق والمهام متعددة الخطوات بنسبة 15–30% مقارنة بنماذج LLM القياسية.',
             'التحدي: تولّد نماذج الاستدلال 3–5× أكثر من الـ tokens لكل إجابة — مخرجات أبطأ واستخدام أكبر لـ VRAM.',
-            'الفرصة: تتيح نماذج الاستدلال المحلية (DeepSeek-R1 7B, QwQ-32B) تحليلات معقدة دون تكاليف سحابية — قابلة للتنفيذ على RTX 4090 أو Mac Studio M2 Ultra.',
+            'الفرصة: تتيح نماذج الاستدلال المحلية (DeepSeek-R1 7B, QwQ-32B) تحليلات معقدة دون تكاليف سحابية — قابلة للتنفيذ على RTX 4090 أو Mac Studio M5 Max.',
           ],
         },
         adoption: {
@@ -705,7 +708,7 @@ schema: {
             },
             {
               q: 'ما هي نماذج الاستدلال وكيف تختلف عن نماذج LLM القياسية؟',
-              a: 'تولّد نماذج الاستدلال (DeepSeek-R1, OpenAI o1) خطوات chain-of-thought صريحة قبل الإجابة النهائية. يحسّن ذلك الدقة في الرياضيات والمنطق والمهام متعددة الخطوات بنسبة 15–30%. المقايضة: 3–5× أكثر من الـ tokens المولّدة لكل إجابة — أبطأ وأكثر استهلاكًا لـ VRAM. الخيارات المحلية: DeepSeek-R1 7B (RTX 4070 Ti+), QwQ-32B (RTX 4090 أو Mac Studio M2 Ultra).',
+              a: 'تولّد نماذج الاستدلال (DeepSeek-R1, OpenAI o1) خطوات chain-of-thought صريحة قبل الإجابة النهائية. يحسّن ذلك الدقة في الرياضيات والمنطق والمهام متعددة الخطوات بنسبة 15–30%. المقايضة: 3–5× أكثر من الـ tokens المولّدة لكل إجابة — أبطأ وأكثر استهلاكًا لـ VRAM. الخيارات المحلية: DeepSeek-R1 7B (RTX 4070 Ti+), QwQ-32B (RTX 4090 أو Mac Studio M5 Max).',
             },
             {
               q: 'متى سيصبح fine-tuning نماذج LLM المحلية سهلاً؟',
@@ -725,7 +728,7 @@ schema: {
             },
             {
               q: 'ما الأجهزة التي ستشغّل نماذج LLM محلية في 2027؟',
-              a: 'بحلول 2027: نماذج 7B على الهواتف الذكية (Apple A19, Snapdragon X3)، ونماذج 70B على أجهزة سطح المكتب الاستهلاكية بسعة 32 GB من VRAM (خلف RTX 5090 المتوقع بنحو 2500 €). Apple Silicon M5 Ultra (256+ GB من الذاكرة الموحدة المتوقعة) لنماذج 200B+ بشكل أصلي. تنخفض التكلفة الأساسية للأجهزة بنحو 30% سنويًا في التكلفة لكل أداء.',
+              a: 'بحلول 2027: نماذج 7B على الهواتف الذكية (Apple A19, Snapdragon X3)، ونماذج 70B على أجهزة سطح المكتب الاستهلاكية بسعة 32 GB من VRAM (خلف RTX 5090 المتوقع بنحو 2500 €). تحقق جزء من هذا التوقع بالفعل: يوفر Mac Studio M5 Ultra من Apple، الذي جرى تحديثه في أغسطس 2026، حتى 512 GB من الذاكرة الموحدة — وهو ما يكفي لتشغيل نماذج تفوق 200B معلمة محليًا على جهاز واحد. أضاف التحديث نفسه إعدادات جديدة من Mac mini وMac Studio أقل من فئة Ultra. تنخفض التكلفة الأساسية للأجهزة بنحو 30% سنويًا في التكلفة لكل أداء.',
             },
             {
               q: 'هل يتسارع تبني نماذج LLM المحلية في 2026؟',
@@ -763,7 +766,7 @@ schema: {
         description: 'تستمر جودة النماذج الصغيرة لكل معامل في التحسن في 2026. تشغّل الهواتف الذكية نماذج LLM محلية بسرعة 15–30 tok/sec. تحسّن نماذج الاستدلال الدقة بنسبة 15–30%. يتزايد تبني الشركات للاستدلال المحلي.',
         url: 'https://www.promptquorum.com/ar/local-llms/future-of-local-llms',
         datePublished: '2026-04-04',
-        dateModified: '2026-07-16',
+        dateModified: '2026-08-27',
         inLanguage: 'ar',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -827,7 +830,7 @@ schema: {
           {
             '@type': 'Question',
             name: 'ما الأجهزة التي ستشغّل نماذج LLM محلية في 2027؟',
-            acceptedAnswer: { '@type': 'Answer', text: 'بحلول 2027: نماذج 7B على الهواتف الذكية (Apple A19, Snapdragon X3)، ونماذج 70B على أجهزة سطح المكتب بسعة 32 GB من VRAM (خلف RTX 5090 المتوقع بنحو 2500 €). Apple Silicon M5 Ultra (256+ GB من الذاكرة الموحدة المتوقعة) لنماذج 200B+ بشكل أصلي. تنخفض التكلفة الأساسية للأجهزة بنحو 30% سنويًا في التكلفة لكل أداء.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'بحلول 2027: نماذج 7B على الهواتف الذكية (Apple A19, Snapdragon X3)، ونماذج 70B على أجهزة سطح المكتب بسعة 32 GB من VRAM (خلف RTX 5090 المتوقع بنحو 2500 €). Mac Studio M5 Ultra من Apple (أغسطس 2026) يوفر الآن حتى 512 GB من الذاكرة الموحدة لنماذج 200B+ بشكل أصلي. تنخفض التكلفة الأساسية للأجهزة بنحو 30% سنويًا في التكلفة لكل أداء.' },
           },
           {
             '@type': 'Question',
@@ -860,7 +863,7 @@ schema: {
       intro: 'Para o final de 2026: a qualidade por parâmetro dos modelos pequenos continua melhorando, a inferência em dispositivo funciona em iPhones (A18) e telefones Snapdragon X Elite, os modelos de raciocínio melhoram a precisão em 15–30%, e espera-se que a adoção empresarial de inferência local cresça, liderada por setores regulados. Este guia cobre as 5 tendências principais que estão redefinindo a IA local em 2026–2027 com cronogramas, benchmarks e previsões de adoção.',
       metaDescription: 'A qualidade dos modelos pequenos por parâmetro continua melhorando em 2026 e smartphones executam LLMs a 15–30 tok/s.',
       publishDate: '2026-04-04',
-      dateModified: '2026-07-16',
+      dateModified: '2026-08-27',
       leadAnswerBlock: '**Para o final de 2026: a qualidade por parâmetro dos modelos pequenos continua melhorando, a inferência em dispositivo funciona em iPhones (A18) e telefones Snapdragon X Elite, os modelos de raciocínio melhoram a precisão em 15–30%, e espera-se que a adoção empresarial de inferência local cresça, liderada por setores regulados.**',
       audience: 'Desenvolvedores e arquitetos empresariais avaliando cronogramas de adoção de LLMs locais',
       readTime: '10 min de leitura',
@@ -931,7 +934,7 @@ schema: {
           items: [
             'Drivers: conformidade com LGPD/GDPR, redução de custos de API, privacidade de dados. Para o aprofundamento regulatório, veja [Soberania de dados e conformidade: o panorama para 2027](/pt/prompt-bites/local-ai-trend-2027-data-sovereignty-compliance).',
             'Casos de uso empresarial nº 1: RAG corporativo (Q&A de documentos internos).',
-            'Hardware preferido para empresas: Mac mini M4 Pro, Framework Desktop, servidores NVIDIA L40S.',
+            'Hardware preferido para empresas: Mac mini M5 Pro, Framework Desktop, servidores NVIDIA L40S.',
             'Para empresas brasileiras: LGPD + custos de câmbio tornam o local especialmente atraente vs. APIs em USD. Muitas equipes adotam uma arquitetura híbrida (local para cargas rotineiras, nuvem para picos) — veja [Roteamento híbrido local-nuvem: o que muda em 2027?](/pt/prompt-bites/local-ai-trend-2027-hybrid-local-cloud-routing).',
           ],
         },
@@ -991,7 +994,7 @@ schema: {
       intro: 'Bis Ende 2026: Die Modellqualität pro Parameter bei kleinen Modellen steigt weiter, On-Device-Inferenz funktioniert auf iPhones (A18) und Snapdragon X Elite Telefonen, Reasoning-Modelle verbessern Genauigkeit um 15–30%, und die Enterprise-Adoption von On-Premises-Inferenz wird voraussichtlich wachsen, angeführt von regulierten Branchen. Dieser Leitfaden behandelt die 5 Schlüsseltrends, die lokale KI 2026–2027 mit Zeitplänen, Benchmarks und Adoptionsprognosen umgestalten.',
       metaDescription: 'Die Zukunft lokaler LLMs: Modellqualität pro Parameter bei kleinen Modellen steigt weiter, Smartphones laufen mit 15–30 Token/Sek. Adoption wächst.',
       publishDate: '2026-04-04',
-      dateModified: '2026-07-16',
+      dateModified: '2026-08-27',
       leadAnswerBlock: '**Bis Ende 2026: Die Modellqualität pro Parameter bei kleinen Modellen steigt weiter, On-Device-Inferenz funktioniert auf iPhones (A18) und Snapdragon X Elite Telefonen, Reasoning-Modelle verbessern Genauigkeit um 15–30%, und die Enterprise-Adoption von On-Premises-Inferenz wird voraussichtlich wachsen, angeführt von regulierten Branchen.**',
       audience: 'Entwickler und Enterprise-Architekten, die Zeitpläne für lokale LLM-Adoption evaluieren',
       readTime: '10 Min. Lesezeit',
@@ -1071,7 +1074,7 @@ schema: {
           content: [
             '**Reasoning-Modelle generieren explizite Chain-of-Thought-Schritte vor der Antwort.** DeepSeek-R1 und OpenAI o1 zeigten, dass dies Genauigkeit bei Mathematik, Logik und Multi-Schritt-Aufgaben um 15–30% über Standard-LLMs verbessert.',
             'Herausforderung: Reasoning-Modelle generieren 3–5× mehr Tokens pro Antwort — langsamere Ausgabe, höhere VRAM-Nutzung.',
-            'Gelegenheit: lokale Reasoning-Modelle (DeepSeek-R1 7B, QwQ-32B) ermöglichen komplexe Analyse ohne Cloud-Kosten — machbar auf RTX 4090 oder Mac Studio M2 Ultra.',
+            'Gelegenheit: lokale Reasoning-Modelle (DeepSeek-R1 7B, QwQ-32B) ermöglichen komplexe Analyse ohne Cloud-Kosten — machbar auf RTX 4090 oder Mac Studio M5 Max.',
           ],
         },
         adoption: {
@@ -1119,7 +1122,7 @@ schema: {
             },
             {
               q: 'Was sind Reasoning-Modelle und wie unterscheiden sie sich von Standard-LLMs?',
-              a: 'Reasoning-Modelle (DeepSeek-R1, OpenAI o1) generieren explizite Chain-of-Thought-Schritte vor der Antwort. Dies verbessert Genauigkeit bei Mathematik, Logik und Multi-Schritt-Aufgaben um 15–30%. Kompromiss: 3–5× mehr Tokens pro Antwort — langsamer und VRAM-intensiver. Lokale Optionen: DeepSeek-R1 7B (RTX 4070 Ti+), QwQ-32B (RTX 4090 oder Mac Studio M2 Ultra).',
+              a: 'Reasoning-Modelle (DeepSeek-R1, OpenAI o1) generieren explizite Chain-of-Thought-Schritte vor der Antwort. Dies verbessert Genauigkeit bei Mathematik, Logik und Multi-Schritt-Aufgaben um 15–30%. Kompromiss: 3–5× mehr Tokens pro Antwort — langsamer und VRAM-intensiver. Lokale Optionen: DeepSeek-R1 7B (RTX 4070 Ti+), QwQ-32B (RTX 4090 oder Mac Studio M5 Max).',
             },
             {
               q: 'Wann wird Fine-Tuning von lokalen LLMs einfach?',
@@ -1139,7 +1142,7 @@ schema: {
             },
             {
               q: 'Welche Hardware führt 2027 lokale LLMs durch?',
-              a: 'Bis 2027: 7B-Modelle auf Smartphones (Apple A19, Snapdragon X3), 70B-Modelle auf Consumer-Desktops mit 32 GB VRAM (RTX 5090-Nachfolger erwartet ~2.699 €). Apple Silicon M5 Ultra (256+ GB unified memory projiziert) für 200B+ Modelle nativ. Hardware-Bodenpreis fällt ~30% pro Jahr in Cost-per-Performance.',
+              a: 'Bis 2027: 7B-Modelle auf Smartphones (Apple A19, Snapdragon X3), 70B-Modelle auf Consumer-Desktops mit 32 GB VRAM (RTX 5090-Nachfolger erwartet ~2.699 €). Dieser Teil der Vorhersage ist bereits eingetreten: Apples Mac Studio M5 Ultra, im August 2026 aktualisiert, bietet bis zu 512 GB unified memory — genug, um 200B+-Parameter-Modelle nativ auf einem einzigen Gerät auszuführen. Dieselbe Aktualisierung brachte neue Mac mini- und Mac Studio-Konfigurationen unterhalb der Ultra-Stufe. Hardware-Bodenpreis fällt ~30% pro Jahr in Cost-per-Performance.',
             },
             {
               q: 'Beschleunigt sich die lokale LLM-Adoption 2026?',
@@ -1185,7 +1188,7 @@ schema: {
         description: 'Die Modellqualität pro Parameter bei kleinen Modellen steigt 2026 weiter. Smartphones führen lokale LLMs mit 15–30 Token/Sek. aus. Reasoning-Modelle verbessern Genauigkeit um 15–30%. Die Enterprise-Adoption von On-Premises-Inferenz wächst.',
         url: 'https://www.promptquorum.com/de/local-llms/future-of-local-llms',
         datePublished: '2026-04-04',
-        dateModified: '2026-07-16',
+        dateModified: '2026-08-27',
         inLanguage: 'de',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -1249,7 +1252,7 @@ schema: {
           {
             '@type': 'Question',
             name: 'Welche Hardware 2027 für lokale LLMs?',
-            acceptedAnswer: { '@type': 'Answer', text: '7B auf Smartphones (A19, Snapdragon X3), 70B auf Consumer-Desktop 32 GB VRAM. Apple M5 Ultra für 200B+ nativ. Hardware-Bodenpreis fällt ~30% pro Jahr.' },
+            acceptedAnswer: { '@type': 'Answer', text: '7B auf Smartphones (A19, Snapdragon X3), 70B auf Consumer-Desktop 32 GB VRAM. Apple Mac Studio M5 Ultra (bis 512 GB, seit Aug. 2026) für 200B+ nativ. Hardware-Bodenpreis fällt ~30% pro Jahr.' },
           },
           {
             '@type': 'Question',
@@ -1292,7 +1295,7 @@ schema: {
       intro: 'D\'ici fin 2026 : la qualité par paramètre des petits modèles continue de s\'améliorer, l\'inférence sur appareil fonctionne sur les iPhones (A18) et les téléphones Snapdragon X Elite, les modèles de raisonnement améliorent la précision de 15–30%, et l\'adoption de l\'inférence sur site par les entreprises devrait croître, menée par les secteurs réglementés. Ce guide couvre les 5 tendances clés qui remodelent l\'IA locale en 2026–2027 avec les calendriers, les benchmarks et les prédictions d\'adoption.',
       metaDescription: 'La qualité par paramètre des petits modèles s\'améliore en 2026. Les smartphones exécutent des LLM locaux à 15–30 tok/s. L\'adoption sur site croît.',
       publishDate: '2026-04-04',
-      dateModified: '2026-07-16',
+      dateModified: '2026-08-27',
       leadAnswerBlock: '**D\'ici fin 2026 : la qualité par paramètre des petits modèles continue de s\'améliorer, l\'inférence sur appareil fonctionne sur les iPhones (A18) et les téléphones Snapdragon X Elite, les modèles de raisonnement améliorent la précision de 15–30%, et l\'adoption de l\'inférence sur site par les entreprises devrait croître, menée par les secteurs réglementés.**',
       audience: 'Développeurs et architectes d\'entreprise évaluant les calendriers d\'adoption des LLM locaux',
       readTime: '10 min de lecture',
@@ -1372,7 +1375,7 @@ schema: {
           content: [
             '**Les modèles de raisonnement génèrent des étapes explicites de pensée en chaîne avant de répondre.** DeepSeek-R1 et OpenAI o1 ont montré que cela améliore la précision sur les maths, la logique et les tâches multi-étapes de 15–30% par rapport aux LLM standards.',
             'Défi : les modèles de raisonnement génèrent 3–5× plus de tokens par réponse — sortie plus lente, utilisation VRAM plus élevée.',
-            'Opportunité : les modèles de raisonnement locaux (DeepSeek-R1 7B, QwQ-32B) permettent l\'analyse complexe sans coûts cloud — viable sur RTX 4090 ou Mac Studio M2 Ultra.',
+            'Opportunité : les modèles de raisonnement locaux (DeepSeek-R1 7B, QwQ-32B) permettent l\'analyse complexe sans coûts cloud — viable sur RTX 4090 ou Mac Studio M5 Max.',
           ],
         },
         adoption: {
@@ -1420,7 +1423,7 @@ schema: {
             },
             {
               q: 'Que sont les modèles de raisonnement et comment diffèrent-ils des LLM standards?',
-              a: 'Les modèles de raisonnement (DeepSeek-R1, OpenAI o1) génèrent des étapes explicites de pensée en chaîne avant la réponse finale. Cela améliore la précision sur les maths, la logique et les tâches multi-étapes de 15–30%. Compromis : 3–5× plus de tokens générés par réponse — plus lent et plus gourmand en VRAM. Options locales : DeepSeek-R1 7B (RTX 4070 Ti+), QwQ-32B (RTX 4090 ou Mac Studio M2 Ultra).',
+              a: 'Les modèles de raisonnement (DeepSeek-R1, OpenAI o1) génèrent des étapes explicites de pensée en chaîne avant la réponse finale. Cela améliore la précision sur les maths, la logique et les tâches multi-étapes de 15–30%. Compromis : 3–5× plus de tokens générés par réponse — plus lent et plus gourmand en VRAM. Options locales : DeepSeek-R1 7B (RTX 4070 Ti+), QwQ-32B (RTX 4090 ou Mac Studio M5 Max).',
             },
             {
               q: 'Quand le fine-tuning des LLM locaux deviendra-t-il facile?',
@@ -1440,7 +1443,7 @@ schema: {
             },
             {
               q: 'Quel matériel exécutera les LLM locaux en 2027?',
-              a: 'D\'ici 2027 : modèles 7B sur smartphones (Apple A19, Snapdragon X3), modèles 70B sur ordinateurs de bureau grand public avec 32 GB de VRAM (successeur RTX 5090 attendu ~2 699 €). Apple Silicon M5 Ultra (256+ GB de mémoire unifiée projetée) pour les modèles 200B+ en natif. L\'étage matériel baisse ~30% par an en coût par performance.',
+              a: 'D\'ici 2027 : modèles 7B sur smartphones (Apple A19, Snapdragon X3), modèles 70B sur ordinateurs de bureau grand public avec 32 GB de VRAM (successeur RTX 5090 attendu ~2 699 €). Une partie de cette prédiction s\'est déjà réalisée : le Mac Studio M5 Ultra d\'Apple, actualisé en août 2026, propose jusqu\'à 512 Go de mémoire unifiée — suffisant pour exécuter nativement des modèles de plus de 200 milliards de paramètres sur une seule machine. Cette même mise à jour a ajouté de nouvelles configurations Mac mini et Mac Studio sous le niveau Ultra. L\'étage matériel baisse ~30% par an en coût par performance.',
             },
             {
               q: 'L\'adoption des LLM locaux s\'accélère-t-elle en 2026?',
@@ -1478,7 +1481,7 @@ schema: {
         description: 'La qualité par paramètre des petits modèles s\'améliore en 2026. Les smartphones exécutent des LLM locaux à 15–30 tok/s. L\'adoption sur site croît.',
         url: 'https://www.promptquorum.com/fr/local-llms/future-of-local-llms',
         datePublished: '2026-04-04',
-        dateModified: '2026-07-16',
+        dateModified: '2026-08-27',
         inLanguage: 'fr',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -1542,7 +1545,7 @@ schema: {
           {
             '@type': 'Question',
             name: 'Quel matériel exécutera les LLM locaux en 2027?',
-            acceptedAnswer: { '@type': 'Answer', text: 'D\'ici 2027 : modèles 7B sur smartphones (Apple A19, Snapdragon X3), modèles 70B sur ordinateurs de bureau grand public avec 32 GB de VRAM (successeur RTX 5090 attendu ~2 699 €). Apple Silicon M5 Ultra (256+ GB de mémoire unifiée projetée) pour les modèles 200B+ en natif. L\'étage matériel baisse ~30% par an en coût par performance.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'D\'ici 2027 : modèles 7B sur smartphones (Apple A19, Snapdragon X3), modèles 70B sur ordinateurs de bureau grand public avec 32 GB de VRAM (successeur RTX 5090 attendu ~2 699 €). Le Mac Studio M5 Ultra d\'Apple (août 2026) offre déjà jusqu\'à 512 Go de mémoire unifiée pour les modèles 200B+ en natif. L\'étage matériel baisse ~30% par an en coût par performance.' },
           },
           {
             '@type': 'Question',
@@ -1575,7 +1578,7 @@ schema: {
       intro: '2026年末までに：小型モデルのパラメータ当たり品質が向上を続け、iPhone（A18）とSnapdragon X Eliteで端末推論が実用的、推論モデルが精度15–30%向上、そしてエンタープライズのオンプレミス推論導入は規制業界を中心に拡大が見込まれます。このガイドは2026–2027年にローカルAIを変える5つのトレンドをタイムライン、ベンチマーク、導入予測とともに解説します。',
       metaDescription: '小型モデルのパラメータ当たり品質は2026年も向上を続けています。スマートフォンは15–30トークン/秒でローカルLLMを実行。企業のオンプレミス推論導入は規制業界を中心に拡大しています。',
       publishDate: '2026-04-04',
-      dateModified: '2026-07-16',
+      dateModified: '2026-08-27',
       leadAnswerBlock: '**2026年末までに：小型モデルのパラメータ当たり品質が向上を続け、iPhone（A18）とSnapdragon X Eliteで端末推論が実用的、推論モデルが精度15–30%向上、そしてエンタープライズのオンプレミス推論導入は規制業界を中心に拡大が見込まれます。**',
       audience: 'ローカルLLM導入タイムラインを評価する開発者およびエンタープライズアーキテクト',
       readTime: '10分で読める',
@@ -1655,7 +1658,7 @@ schema: {
           content: [
             '**推論モデルは回答前に明示的段階思考ステップ生成。** DeepSeek-R1・OpenAI o1は数学・ロジック・複数ステップタスク精度を15–30%向上。',
             '課題：推論モデルは応答当たりトークン3–5倍生成 ← 出力遅い、VRAM多消費。',
-            '機会：ローカル推論モデル（DeepSeek-R1 7B、QwQ-32B）で複雑分析をクラウド不要 ← RTX 4090またはMac Studio M2 Ultra可能。',
+            '機会：ローカル推論モデル（DeepSeek-R1 7B、QwQ-32B）で複雑分析をクラウド不要 ← RTX 4090またはMac Studio M5 Max可能。',
           ],
         },
         adoption: {
@@ -1703,7 +1706,7 @@ schema: {
             },
             {
               q: '推論モデル、標準LLMと違い？',
-              a: '推論モデル（DeepSeek-R1、OpenAI o1）は最終回答前に明示的段階思考ステップ生成。数学・ロジック・複数ステップタスク精度15–30%向上。トレード：応答当たりトークン3–5倍生成 ← 出力遅い・VRAM多。ローカル選択肢：DeepSeek-R1 7B（RTX 4070 Ti以上）、QwQ-32B（RTX 4090またはMac Studio M2 Ultra）。',
+              a: '推論モデル（DeepSeek-R1、OpenAI o1）は最終回答前に明示的段階思考ステップ生成。数学・ロジック・複数ステップタスク精度15–30%向上。トレード：応答当たりトークン3–5倍生成 ← 出力遅い・VRAM多。ローカル選択肢：DeepSeek-R1 7B（RTX 4070 Ti以上）、QwQ-32B（RTX 4090またはMac Studio M5 Max）。',
             },
             {
               q: 'ローカルLLMファインチューニング簡単いつ？',
@@ -1723,7 +1726,7 @@ schema: {
             },
             {
               q: '2027年ローカルLLM実行硬体？',
-              a: '2027年までに：スマートフォンで7B型（Apple A19、Snapdragon X3）、消費者デスクトップ32GB VRAM で70B型（RTX 5090後継約¥370,000予定）。Apple Silicon M5 Ultra（256GB以上統一メモリ予計）で200B以上ネイティブ。硬体フロア年30%コスト/性能低下。',
+              a: '2027年までに：スマートフォンで7B型（Apple A19、Snapdragon X3）、消費者デスクトップ32GB VRAM で70B型（RTX 5090後継約¥370,000予定）。この予測の一部はすでに現実になりました：2026年8月に刷新されたApple Mac Studio M5 Ultraは最大512GBの統合メモリに対応し、200B以上のモデルを1台でネイティブ実行できます。同じ刷新でUltraより下位のMac miniおよびMac Studio構成も追加されました。硬体フロア年30%コスト/性能低下。',
             },
             {
               q: '2026年ローカルLLM採用加速？',
@@ -1761,7 +1764,7 @@ schema: {
         description: '小型モデルのパラメータ当たり品質は2026年も向上を続けています。スマートフォンは15–30トークン/秒でローカルLLMを実行。企業のオンプレミス推論導入は規制業界を中心に拡大しています。',
         url: 'https://www.promptquorum.com/ja/local-llms/future-of-local-llms',
         datePublished: '2026-04-04',
-        dateModified: '2026-07-16',
+        dateModified: '2026-08-27',
         inLanguage: 'ja',
         author: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -1825,7 +1828,7 @@ schema: {
           {
             '@type': 'Question',
             name: '2027年ローカルLLM実行硬体？',
-            acceptedAnswer: { '@type': 'Answer', text: '2027年までに：スマートフォンで7B型（Apple A19、Snapdragon X3）、消費者デスクトップ32GB VRAM で70B型（RTX 5090後継約¥370,000予定）。Apple Silicon M5 Ultra（256GB以上統一メモリ予計）で200B以上ネイティブ。硬体フロア年30%コスト/性能低下。' },
+            acceptedAnswer: { '@type': 'Answer', text: '2027年までに：スマートフォンで7B型（Apple A19、Snapdragon X3）、消費者デスクトップ32GB VRAM で70B型（RTX 5090後継約¥370,000予定）。この予測の一部はすでに現実になりました：2026年8月に刷新されたApple Mac Studio M5 Ultraは最大512GBの統合メモリに対応し、200B以上のモデルを1台でネイティブ実行できます。同じ刷新でUltraより下位のMac miniおよびMac Studio構成も追加されました。硬体フロア年30%コスト/性能低下。' },
           },
           {
             '@type': 'Question',
@@ -1858,7 +1861,7 @@ schema: {
       intro: '到2026年底：小型模型的参数效率持续提升，iPhone（A18）和Snapdragon X Elite上的端设备推理已经实用，推理模型将精度提高15–30%，企业本地推理的采用预计将持续增长，由受监管行业带头。本指南涵盖2026–2027年重塑本地AI的5大趋势，包括时间表、基准和采用预测。',
       metaDescription: '小型模型的参数效率在2026年持续提升。智能手机以15–30令牌/秒运行本地LLM。企业本地推理的采用正在增长，由受监管行业带头。',
       publishDate: '2026-04-04',
-      dateModified: '2026-07-16',
+      dateModified: '2026-08-27',
       leadAnswerBlock: '**到2026年底：小型模型的参数效率持续提升，iPhone（A18）和Snapdragon X Elite上的端设备推理已经实用，推理模型将精度提高15–30%，企业本地推理的采用预计将持续增长，由受监管行业带头。**',
       audience: '评估本地LLM采用时间表的开发者和企业架构师',
       readTime: '阅读约10分钟',
@@ -1938,7 +1941,7 @@ schema: {
           content: [
             '**推理模型在回答前生成明确逐步思考步骤。** DeepSeek-R1和OpenAI o1显示这在数学、逻辑和多步任务上将精度提高15–30%，对标标准LLM。',
             '挑战：推理模型每个应答生成3–5倍的令牌—输出较慢、VRAM耗用高。',
-            '机遇：本地推理模型（DeepSeek-R1 7B、QwQ-32B）实现复杂分析无云成本—在RTX 4090或Mac Studio M2 Ultra上可行。',
+            '机遇：本地推理模型（DeepSeek-R1 7B、QwQ-32B）实现复杂分析无云成本—在RTX 4090或Mac Studio M5 Max上可行。',
           ],
         },
         adoption: {
@@ -1986,7 +1989,7 @@ schema: {
             },
             {
               q: '推理模型与标准LLM有何不同？',
-              a: '推理模型（DeepSeek-R1、OpenAI o1）在最终答案前生成明确逐步思考步骤。在数学、逻辑和多步任务上将精度提高15–30%。折衷：每个应答生成3–5倍令牌—输出较慢、VRAM耗用高。本地选项：DeepSeek-R1 7B（RTX 4070 Ti+）、QwQ-32B（RTX 4090或Mac Studio M2 Ultra）。',
+              a: '推理模型（DeepSeek-R1、OpenAI o1）在最终答案前生成明确逐步思考步骤。在数学、逻辑和多步任务上将精度提高15–30%。折衷：每个应答生成3–5倍令牌—输出较慢、VRAM耗用高。本地选项：DeepSeek-R1 7B（RTX 4070 Ti+）、QwQ-32B（RTX 4090或Mac Studio M5 Max）。',
             },
             {
               q: '本地LLM微调何时变简单？',
@@ -2006,7 +2009,7 @@ schema: {
             },
             {
               q: '2027年什么硬件运行本地LLM？',
-              a: '2027年前：智能手机上7B模型（Apple A19、Snapdragon X3）、消费者台式机32GB VRAM上70B模型（RTX 5090后继约$2500预期）。Apple Silicon M5 Ultra（256GB以上统一内存预计）本地运行200B以上模型。硬件基准年30%成本/性能下降。',
+              a: '2027年前：智能手机上7B模型（Apple A19、Snapdragon X3）、消费者台式机32GB VRAM上70B模型（RTX 5090后继约$2500预期）。这部分预测已经成为现实：苹果的Mac Studio M5 Ultra在2026年8月更新后，最高支持512GB统一内存——足以在单台设备上原生运行200B以上参数的模型。同次更新还新增了低于Ultra级别的Mac mini和Mac Studio配置。硬件基准年30%成本/性能下降。',
             },
             {
               q: '2026年本地LLM采用加速？',
@@ -2044,7 +2047,7 @@ schema: {
         description: '小型模型的参数效率在2026年持续提升。智能手机以15–30令牌/秒运行本地LLM。企业本地推理的采用正在增长，由受监管行业带头。',
         url: 'https://www.promptquorum.com/zh/local-llms/future-of-local-llms',
         datePublished: '2026-04-04',
-        dateModified: '2026-07-16',
+        dateModified: '2026-08-27',
         inLanguage: 'zh',
         author: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -2108,7 +2111,7 @@ schema: {
           {
             '@type': 'Question',
             name: '2027年什么硬件运行本地LLM？',
-            acceptedAnswer: { '@type': 'Answer', text: '2027年前：智能手机上7B模型（Apple A19、Snapdragon X3）、消费者台式机32GB VRAM上70B模型（RTX 5090后继约$2500预期）。Apple Silicon M5 Ultra（256GB以上统一内存预计）本地运行200B以上模型。' },
+            acceptedAnswer: { '@type': 'Answer', text: '2027年前：智能手机上7B模型（Apple A19、Snapdragon X3）、消费者台式机32GB VRAM上70B模型（RTX 5090后继约$2500预期）。苹果Mac Studio M5 Ultra（2026年8月更新）现已支持最高512GB统一内存，本地运行200B以上模型。' },
           },
           {
             '@type': 'Question',
@@ -2141,7 +2144,7 @@ schema: {
       intro: '2026년 말까지: 소형 모델의 파라미터당 품질이 계속 향상되고 있고, 온디바이스 추론이 iPhone(A18) 및 Snapdragon X Elite 스마트폰에서 실용적으로 작동하며, 추론 모델이 단계별 정확도를 15–30% 향상시키고, 기업의 온프레미스 추론 도입은 규제 산업을 중심으로 성장할 것으로 예상됩니다. 이 가이드는 타임라인, 벤치마크, 도입 예측과 함께 2026–2027년 로컬 AI를 재편하는 5가지 핵심 트렌드를 다룹니다.',
       metaDescription: '소형 모델의 파라미터당 품질은 2026년에도 계속 향상되고 있습니다. 스마트폰이 15–30 tok/sec으로 로컬 LLM을 실행합니다. 기업의 온프레미스 추론 도입이 규제 산업을 중심으로 증가하고 있습니다.',
       publishDate: '2026-04-04',
-      dateModified: '2026-07-16',
+      dateModified: '2026-08-27',
       leadAnswerBlock: '**2026년 말까지: 소형 모델의 파라미터당 품질이 계속 향상되고 있고, 온디바이스 추론이 iPhone(A18) 및 Snapdragon X Elite 스마트폰에서 실용적으로 작동하며, 추론 모델이 단계별 정확도를 15–30% 향상시키고, 기업의 온프레미스 추론 도입은 규제 산업을 중심으로 성장할 것으로 예상됩니다.**',
       audience: '로컬 LLM 도입 일정을 평가하는 개발자 및 기업 아키텍트',
       readTime: '10분 읽기',
@@ -2248,7 +2251,7 @@ schema: {
           content: [
             '**추론 모델은 답변하기 전에 명시적인 연쇄 사고 단계를 생성합니다.** DeepSeek-R1과 OpenAI o1은 이것이 수학, 논리, 다단계 작업의 정확도를 표준 LLM 대비 15–30% 향상시킴을 보여주었습니다.',
             '과제: 추론 모델은 응답당 3–5배 더 많은 토큰을 생성합니다 — 출력이 느리고 VRAM 사용량이 높습니다.',
-            '기회: 로컬 추론 모델(DeepSeek-R1 7B, QwQ-32B)은 클라우드 비용 없이 복잡한 분석을 가능하게 합니다 — RTX 4090 또는 Mac Studio M2 Ultra에서 실행 가능합니다.',
+            '기회: 로컬 추론 모델(DeepSeek-R1 7B, QwQ-32B)은 클라우드 비용 없이 복잡한 분석을 가능하게 합니다 — RTX 4090 또는 Mac Studio M5 Max에서 실행 가능합니다.',
           ],
         },
         adoption: {
@@ -2296,7 +2299,7 @@ schema: {
             },
             {
               q: '추론 모델이란 무엇이며 표준 LLM과 어떻게 다른가요?',
-              a: '추론 모델(DeepSeek-R1, OpenAI o1)은 최종 답변 전에 명시적인 연쇄 사고 단계를 생성합니다. 수학, 논리, 다단계 작업의 정확도가 15–30% 향상됩니다. 트레이드오프: 응답당 3–5배 더 많은 토큰 생성 — 느리고 VRAM 집약적입니다. 로컬 옵션: DeepSeek-R1 7B(RTX 4070 Ti+), QwQ-32B(RTX 4090 또는 Mac Studio M2 Ultra).',
+              a: '추론 모델(DeepSeek-R1, OpenAI o1)은 최종 답변 전에 명시적인 연쇄 사고 단계를 생성합니다. 수학, 논리, 다단계 작업의 정확도가 15–30% 향상됩니다. 트레이드오프: 응답당 3–5배 더 많은 토큰 생성 — 느리고 VRAM 집약적입니다. 로컬 옵션: DeepSeek-R1 7B(RTX 4070 Ti+), QwQ-32B(RTX 4090 또는 Mac Studio M5 Max).',
             },
             {
               q: '로컬 LLM 파인튜닝은 언제 쉬워지나요?',
@@ -2316,7 +2319,7 @@ schema: {
             },
             {
               q: '2027년에 어떤 하드웨어가 로컬 LLM을 실행하게 되나요?',
-              a: '2027년까지: 스마트폰에서 7B 모델(Apple A19, Snapdragon X3), 32 GB VRAM 소비자 데스크톱에서 70B 모델(RTX 5090 후속 제품 예상 가격 약 $2,500). 200B+ 모델 네이티브 실행을 위한 Apple Silicon M5 Ultra(256+ GB 통합 메모리 예상). 하드웨어 비용 대비 성능은 연간 약 30% 하락하고 있습니다.',
+              a: '2027년까지: 스마트폰에서 7B 모델(Apple A19, Snapdragon X3), 32 GB VRAM 소비자 데스크톱에서 70B 모델(RTX 5090 후속 제품 예상 가격 약 $2,500). 이 예측의 일부는 이미 현실이 되었습니다: 2026년 8월에 새로워진 Apple Mac Studio M5 Ultra는 최대 512GB의 통합 메모리를 제공하며, 이는 200B+ 모델을 단일 기기에서 네이티브로 실행하기에 충분합니다. 같은 리프레시에서 Ultra 등급보다 낮은 새로운 Mac mini 및 Mac Studio 구성도 추가되었습니다. 하드웨어 비용 대비 성능은 연간 약 30% 하락하고 있습니다.',
             },
             {
               q: '2026년에 로컬 LLM 도입이 가속화되고 있나요?',
