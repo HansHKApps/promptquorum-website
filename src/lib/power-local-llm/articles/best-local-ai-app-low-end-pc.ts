@@ -260,9 +260,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'memory-thermals',
         title: 'Why Does 8 GB RAM Feel So Tight, and When Does the Laptop Throttle?',
         content:
-          '**On 8 GB RAM, the operating system already eats 2.5–3.5 GB before any model loads, leaving 4.5–5.5 GB for the model and its KV cache.** That ceiling is what makes Phi-4 Mini (3.8B Q4 ≈ 2.4 GB) the practical sweet spot and rules out any 7B model at any quantization for sustained use.',
+          '**On 8 GB RAM, the operating system already eats 2.5–3.5 GB before any model loads, leaving 4.5–5.5 GB for the model and its KV cache.** That ceiling is what makes Phi-4 Mini (3.8B Q4 ≈ 2.5 GB) the practical sweet spot and rules out any 7B model at any quantization for sustained use.',
         items: [
-          '**Working set vs. system RAM:** A model file on disk is smaller than its loaded working set. Phi-4 Mini Q4_K_M is ≈ 2.4 GB on disk but ≈ 3.0–3.5 GB in RAM once you add the KV cache for a 2048-token context. Cut the context to 1024 and you save ≈ 400 MB.',
+          '**Working set vs. system RAM:** A model file on disk is smaller than its loaded working set. Phi-4 Mini Q4_K_M is ≈ 2.5 GB on disk but ≈ 3.0–3.5 GB in RAM once you add the KV cache for a 2048-token context. Cut the context to 1024 and you save ≈ 400 MB.',
           '**Swap death:** When working set exceeds physical RAM, macOS and Linux start paging to SSD. Tokens-per-second drops 5–10× and the laptop becomes unresponsive. Watch `vm_stat` (Mac) or `free -h` (Linux) — if swap is climbing during inference, switch to a smaller model immediately.',
           '**Thermal throttling on ultraportables:** Fanless and single-fan laptops (MacBook Air M1, XPS 13, Surface Laptop Go) hit thermal limits within 3–5 minutes of sustained inference and step CPU clocks down 20–35%. Tokens/sec drops correspondingly.',
           '**Context length is a memory tax:** Default 4096 context allocates a 4096-token KV cache up front. On 1B models that is 200–300 MB; on 4B models it is 600–900 MB. Cut to 1024 unless you actually need long input.',
@@ -284,7 +284,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**On 8 GB RAM with no discrete GPU, stay under 4B parameters at Q4_K_M or below.** Q4_K_M is the standard quantization in 2026 — it loses ≈ 1% perplexity vs. FP16, fits in half the RAM, and is the default for most GGUF builds on Hugging Face. Listed by app:',
         items: [
-          '**Ollama:** `ollama pull phi3:mini` (Phi-4 Mini 3.8B Q4_K_M, ≈ 2.4 GB) is the default recommendation. For max speed, `ollama pull smollm2:1.7b` (≈ 1.0 GB). For chat polish, `ollama pull llama3.2:1b-instruct-q5_K_M` (≈ 0.85 GB).',
+          '**Ollama:** `ollama pull phi4-mini` (Phi-4 Mini 3.8B Q4_K_M, ≈ 2.5 GB) is the default recommendation. For max speed, `ollama pull smollm2:1.7b` (≈ 1.0 GB). For chat polish, `ollama pull llama3.2:1b-instruct-q5_K_M` (≈ 0.85 GB).',
           '**Jan:** Use the curated catalog → "Gemma 4 E2B Instruct Q4_K_M" (≈ 2 GB, Google\'s on-device Gemma 4 variant) on Apple Silicon, or "Phi-4 Mini Q4_K_M" on x86. Jan also accepts a Hugging Face URL paste for any GGUF.',
           '**GPT4All:** Use the in-app model browser → "Llama 3.2 1B Instruct Q4_0" (≈ 0.7 GB) for the lightest install, or "Phi-4 Mini Q4_K_M" if RAM allows. GPT4All defaults are tuned conservatively, so every visible entry runs — but the catalog has not moved since the v3.10.0 build of February 2025, so newer models such as Gemma 4 E2B are not in it.',
           '**llama.cpp:** Download GGUF directly from Hugging Face — `bartowski/Phi-4-mini-instruct-GGUF`, `bartowski/SmolLM2-1.7B-Instruct-GGUF`, or `bartowski/Llama-3.2-1B-Instruct-GGUF`. Run with `./llama-cli -m model.gguf -p "..." -c 1024 -t 4`.',
@@ -303,7 +303,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Default settings are tuned for 16 GB RAM and a discrete GPU. On 8 GB CPU-only, three knobs matter most:** context length, batch size, and thread count. Tuned together they are worth 30–60% more tokens/sec on the same hardware.',
         items: [
-          '**Context length — the biggest single win.** Cut from 4096 (default) to 1024. In Ollama: `OLLAMA_NUM_CTX=1024 ollama run phi3:mini`. In llama.cpp: `-c 1024`. RAM saving: 400–900 MB depending on model. Tokens/sec gain: 10–20%.',
+          '**Context length — the biggest single win.** Cut from 4096 (default) to 1024. In Ollama: `OLLAMA_NUM_CTX=1024 ollama run phi4-mini`. In llama.cpp: `-c 1024`. RAM saving: 400–900 MB depending on model. Tokens/sec gain: 10–20%.',
           '**Thread count — match physical cores, not logical.** Older CPUs (i5-8250U, Ryzen 5 5500U) have 4 physical / 8 logical cores. Set threads = 4, not 8. In llama.cpp: `-t 4`. In Ollama: `OLLAMA_NUM_THREAD=4`. Hyperthreading hurts inference because both threads compete for the same FP/SIMD unit.',
           '**Batch size for prompt processing — set to 8 on weak CPUs.** llama.cpp: `--n-batch 8`. Default 512 thrashes the L2 cache on 4-core CPUs. Tokens/sec gain on 4B models: 15–25%.',
           '**KV cache quantization — set to q8_0 to halve KV RAM.** llama.cpp: `--cache-type-k q8_0 --cache-type-v q8_0`. RAM saving: 150–400 MB at 1024 context, more at higher contexts. Quality impact: imperceptible.',
@@ -700,9 +700,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'memory-thermals',
         title: 'Warum fühlt sich 8 GB RAM so eng an, und wann drosselt der Laptop?',
         content:
-          '**Bei 8 GB RAM verbraucht das Betriebssystem bereits 2,5–3,5 GB, bevor irgendein Modell geladen wird, und lässt 4,5–5,5 GB für das Modell und seinen KV-Cache übrig.** Diese Obergrenze macht Phi-4 Mini (3,8B Q4 ≈ 2,4 GB) zum praktischen Sweet Spot und schließt jedes 7B-Modell bei jeder Quantisierung für den Dauerbetrieb aus.',
+          '**Bei 8 GB RAM verbraucht das Betriebssystem bereits 2,5–3,5 GB, bevor irgendein Modell geladen wird, und lässt 4,5–5,5 GB für das Modell und seinen KV-Cache übrig.** Diese Obergrenze macht Phi-4 Mini (3,8B Q4 ≈ 2,5 GB) zum praktischen Sweet Spot und schließt jedes 7B-Modell bei jeder Quantisierung für den Dauerbetrieb aus.',
         items: [
-          '**Working Set vs. System-RAM:** Eine Modelldatei auf der Festplatte ist kleiner als ihr geladener Working Set. Phi-4 Mini Q4_K_M ist ≈ 2,4 GB auf der Festplatte, aber ≈ 3,0–3,5 GB im RAM, sobald der KV-Cache für ein 2048-Token-Kontextfenster hinzukommt. Reduzieren Sie den Kontext auf 1024 und Sie sparen ≈ 400 MB.',
+          '**Working Set vs. System-RAM:** Eine Modelldatei auf der Festplatte ist kleiner als ihr geladener Working Set. Phi-4 Mini Q4_K_M ist ≈ 2,5 GB auf der Festplatte, aber ≈ 3,0–3,5 GB im RAM, sobald der KV-Cache für ein 2048-Token-Kontextfenster hinzukommt. Reduzieren Sie den Kontext auf 1024 und Sie sparen ≈ 400 MB.',
           '**Swap-Tod:** Wenn der Working Set den physischen RAM übersteigt, beginnen macOS und Linux mit dem Paging auf die SSD. Tokens-pro-Sekunde fallen um den Faktor 5–10 und der Laptop wird unresponsiv. Beobachten Sie `vm_stat` (Mac) oder `free -h` (Linux) — wenn Swap während der Inferenz steigt, wechseln Sie sofort zu einem kleineren Modell.',
           '**Thermal Throttling auf Ultraportables:** Lüfterlose und Single-Fan-Laptops (MacBook Air M1, XPS 13, Surface Laptop Go) erreichen innerhalb von 3–5 Minuten Dauerbetrieb das thermische Limit und takten die CPU um 20–35 % herunter. Tokens/Sek. fallen entsprechend.',
           '**Kontextlänge ist eine Speichersteuer:** Standard 4096 Kontext reserviert einen 4096-Token-KV-Cache vorab. Bei 1B-Modellen sind das 200–300 MB; bei 4B-Modellen sind es 600–900 MB. Reduzieren Sie auf 1024, sofern Sie nicht tatsächlich lange Eingaben benötigen.',
@@ -724,7 +724,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Auf 8 GB RAM ohne dedizierte GPU bleiben Sie unter 4B-Parametern bei Q4_K_M oder darunter.** Q4_K_M ist die Standard-Quantisierung in 2026 — sie verliert ≈ 1 % Perplexität gegenüber FP16, passt in halben RAM und ist der Standard für die meisten GGUF-Builds auf Hugging Face. Aufgelistet pro App:',
         items: [
-          '**Ollama:** `ollama pull phi3:mini` (Phi-4 Mini 3,8B Q4_K_M, ≈ 2,4 GB) ist die Standardempfehlung. Für maximale Geschwindigkeit `ollama pull smollm2:1.7b` (≈ 1,0 GB). Für Chat-Politur `ollama pull llama3.2:1b-instruct-q5_K_M` (≈ 0,85 GB).',
+          '**Ollama:** `ollama pull phi4-mini` (Phi-4 Mini 3,8B Q4_K_M, ≈ 2,5 GB) ist die Standardempfehlung. Für maximale Geschwindigkeit `ollama pull smollm2:1.7b` (≈ 1,0 GB). Für Chat-Politur `ollama pull llama3.2:1b-instruct-q5_K_M` (≈ 0,85 GB).',
           '**GPT4All:** Verwenden Sie den App-internen Modellbrowser → "Llama 3.2 1B Instruct Q4_0" (≈ 0,7 GB) für die leichteste Installation oder "Phi-4 Mini Q4_K_M", wenn der RAM es zulässt. GPT4All-Standards sind konservativ abgestimmt, daher läuft jeder sichtbare Eintrag — der Katalog hat sich seit dem Build v3.10.0 vom Februar 2025 jedoch nicht bewegt, neuere Modelle wie Gemma 4 E2B fehlen darin.',
           '**Jan:** Verwenden Sie den kuratierten Katalog → "Gemma 4 E2B Instruct Q4_K_M" (≈ 2 GB) auf Apple Silicon oder "Phi-4 Mini Q4_K_M" auf x86. Jan akzeptiert auch das Einfügen einer Hugging-Face-URL für jedes GGUF.',
           '**llama.cpp:** Laden Sie GGUF direkt von Hugging Face — `bartowski/Phi-4-mini-instruct-GGUF`, `bartowski/SmolLM2-1.7B-Instruct-GGUF` oder `bartowski/Llama-3.2-1B-Instruct-GGUF`. Ausführen mit `./llama-cli -m model.gguf -p "..." -c 1024 -t 4`.',
@@ -743,7 +743,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Standard-Einstellungen sind auf 16 GB RAM und eine dedizierte GPU abgestimmt. Auf 8 GB CPU-only zählen drei Stellschrauben am meisten:** Kontextlänge, Batch-Größe und Thread-Anzahl. Gemeinsam abgestimmt sind sie 30–60 % mehr Tokens/Sek. auf derselben Hardware wert.',
         items: [
-          '**Kontextlänge — der größte Einzelgewinn.** Reduzieren Sie von 4096 (Standard) auf 1024. In Ollama: `OLLAMA_NUM_CTX=1024 ollama run phi3:mini`. In llama.cpp: `-c 1024`. RAM-Ersparnis: 400–900 MB je nach Modell. Tokens/Sek.-Gewinn: 10–20 %.',
+          '**Kontextlänge — der größte Einzelgewinn.** Reduzieren Sie von 4096 (Standard) auf 1024. In Ollama: `OLLAMA_NUM_CTX=1024 ollama run phi4-mini`. In llama.cpp: `-c 1024`. RAM-Ersparnis: 400–900 MB je nach Modell. Tokens/Sek.-Gewinn: 10–20 %.',
           '**Thread-Anzahl — physische Kerne, nicht logische.** Ältere CPUs (i5-8250U, Ryzen 5 5500U) haben 4 physische / 8 logische Kerne. Setzen Sie Threads = 4, nicht 8. In llama.cpp: `-t 4`. In Ollama: `OLLAMA_NUM_THREAD=4`. Hyperthreading schadet der Inferenz, weil beide Threads um dieselbe FP/SIMD-Einheit konkurrieren.',
           '**Batch-Größe für Prompt-Verarbeitung — auf 8 bei schwachen CPUs.** llama.cpp: `--n-batch 8`. Standard 512 belastet den L2-Cache auf 4-Kern-CPUs. Tokens/Sek.-Gewinn auf 4B-Modellen: 15–25 %.',
           '**KV-Cache-Quantisierung — auf q8_0 setzen, um den KV-RAM zu halbieren.** llama.cpp: `--cache-type-k q8_0 --cache-type-v q8_0`. RAM-Ersparnis: 150–400 MB bei 1024 Kontext, mehr bei höheren Kontexten. Qualitätsauswirkung: nicht wahrnehmbar.',
@@ -1068,7 +1068,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Quel modèle et quelle quantification charger dans chaque app ?',
         content: '**Sur 8 Go RAM sans GPU dédié, restez sous 4B paramètres en Q4_K_M ou inférieur.** Q4_K_M est la quantification standard en 2026 — elle perd ≈ 1 % de perplexité face au FP16, tient en moitié moins de RAM, et c\'est la valeur par défaut pour la plupart des builds GGUF sur Hugging Face. Listé par app :',
         items: [
-          '**Ollama :** `ollama pull phi3:mini` (Phi-4 Mini 3.8B Q4_K_M, ≈ 2.4 Go) est la recommandation par défaut. Pour la vitesse maximale, `ollama pull smollm2:1.7b` (≈ 1.0 Go). Pour le rendu chat soigné, `ollama pull llama3.2:1b-instruct-q5_K_M` (≈ 0.85 Go).',
+          '**Ollama :** `ollama pull phi4-mini` (Phi-4 Mini 3.8B Q4_K_M, ≈ 2.4 Go) est la recommandation par défaut. Pour la vitesse maximale, `ollama pull smollm2:1.7b` (≈ 1.0 Go). Pour le rendu chat soigné, `ollama pull llama3.2:1b-instruct-q5_K_M` (≈ 0.85 Go).',
           '**GPT4All :** utilisez le navigateur de modèles intégré → "Llama 3.2 1B Instruct Q4_0" (≈ 0.7 Go) pour l\'installation la plus légère, ou "Phi-4 Mini Q4_K_M" si la RAM le permet. Les valeurs par défaut de GPT4All sont conservatrices, donc chaque entrée visible fonctionne — mais le catalogue n\'a pas bougé depuis le build v3.10.0 de février 2025, et des modèles plus récents comme Gemma 4 E2B n\'y figurent pas.',
           '**Jan :** utilisez le catalogue curé → "Gemma 4 E2B Instruct Q4_K_M" (≈ 2.6 Go) sur Apple Silicon, ou "Phi-4 Mini Q4_K_M" sur x86. Jan accepte aussi le collage d\'une URL Hugging Face pour n\'importe quel GGUF.',
           '**llama.cpp :** téléchargez les GGUF directement depuis Hugging Face — `bartowski/Phi-4-mini-instruct-GGUF`, `bartowski/SmolLM2-1.7B-Instruct-GGUF`, ou `bartowski/Llama-3.2-1B-Instruct-GGUF`. Lancez avec `./llama-cli -m model.gguf -p "..." -c 1024 -t 4`.',
@@ -1083,7 +1083,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Quels réglages apportent 30–60 % de tokens/s en plus sur PC modestes ?',
         content: '**Les réglages par défaut sont calibrés pour 16 Go RAM et un GPU dédié. Sur 8 Go CPU seul, trois leviers comptent le plus :** longueur de contexte, taille de batch, et nombre de threads. Réglés ensemble, ils valent 30–60 % de tokens/s en plus sur le même matériel.',
         items: [
-          '**Longueur de contexte — le plus gros gain unitaire.** Réduisez de 4096 (par défaut) à 1024. Dans Ollama : `OLLAMA_NUM_CTX=1024 ollama run phi3:mini`. Dans llama.cpp : `-c 1024`. Économie RAM : 400–900 Mo selon le modèle. Gain tokens/s : 10–20 %.',
+          '**Longueur de contexte — le plus gros gain unitaire.** Réduisez de 4096 (par défaut) à 1024. Dans Ollama : `OLLAMA_NUM_CTX=1024 ollama run phi4-mini`. Dans llama.cpp : `-c 1024`. Économie RAM : 400–900 Mo selon le modèle. Gain tokens/s : 10–20 %.',
           '**Nombre de threads — alignez sur les cœurs physiques, pas logiques.** Les anciens CPU (i5-8250U, Ryzen 5 5500U) ont 4 cœurs physiques / 8 logiques. Réglez threads = 4, pas 8. Dans llama.cpp : `-t 4`. Dans Ollama : `OLLAMA_NUM_THREAD=4`. L\'hyperthreading nuit à l\'inférence parce que les deux threads se disputent la même unité FP/SIMD.',
           '**Taille de batch pour le traitement de prompt — 8 sur les CPU modestes.** llama.cpp : `--n-batch 8`. Le défaut 512 surcharge le cache L2 sur les CPU 4 cœurs. Gain tokens/s sur modèles 4B : 15–25 %.',
           '**Quantification du cache KV — réglez sur q8_0 pour diviser par deux la RAM du cache KV.** llama.cpp : `--cache-type-k q8_0 --cache-type-v q8_0`. Économie RAM : 150–400 Mo à 1024 de contexte, plus à des contextes supérieurs. Impact qualité : imperceptible.',
@@ -1328,9 +1328,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'memory-thermals',
         title: 'なぜ8GB RAMは窮屈に感じるのか、ノートPCはいつスロットルするのか？',
         content:
-          '**8GB RAMでは、モデルロード前にOSが既に2.5〜3.5GBを消費しており、モデルとそのKVキャッシュに残るのは4.5〜5.5GBです。** この上限により、Phi-4 Mini（3.8B Q4 ≈ 2.4 GB）が実用的なスイートスポットとなり、持続使用ではあらゆる量子化の7Bモデルが除外されます。',
+          '**8GB RAMでは、モデルロード前にOSが既に2.5〜3.5GBを消費しており、モデルとそのKVキャッシュに残るのは4.5〜5.5GBです。** この上限により、Phi-4 Mini（3.8B Q4 ≈ 2.5 GB）が実用的なスイートスポットとなり、持続使用ではあらゆる量子化の7Bモデルが除外されます。',
         items: [
-          '**ワーキングセット vs システムRAM：** ディスク上のモデルファイルはロード後のワーキングセットより小さくなります。Phi-4 Mini Q4_K_Mはディスク上で ≈ 2.4 GBですが、2048トークンコンテキストのKVキャッシュを追加すると、RAM上では ≈ 3.0〜3.5 GBになります。コンテキストを1024に減らすと ≈ 400 MB節約できます。',
+          '**ワーキングセット vs システムRAM：** ディスク上のモデルファイルはロード後のワーキングセットより小さくなります。Phi-4 Mini Q4_K_Mはディスク上で ≈ 2.5 GBですが、2048トークンコンテキストのKVキャッシュを追加すると、RAM上では ≈ 3.0〜3.5 GBになります。コンテキストを1024に減らすと ≈ 400 MB節約できます。',
           '**スワップデス：** ワーキングセットが物理RAMを超えると、macOSとLinuxはSSDにページングを開始します。tok/秒は5〜10倍低下し、ノートPCは無反応になります。`vm_stat`（Mac）または`free -h`（Linux）を監視してください — 推論中にスワップが上昇している場合は、即座により小さいモデルに切り替えてください。',
           '**ウルトラポータブルでのサーマルスロットリング：** ファンレスや単一ファンノート（MacBook Air M1、XPS 13、Surface Laptop Go）は、3〜5分の連続推論で熱限界に到達し、CPUクロックを20〜35％低下させます。tok/秒もそれに応じて低下します。',
           '**コンテキスト長はメモリ税：** デフォルト4096コンテキストは事前に4096トークンのKVキャッシュを確保します。1Bモデルでは200〜300 MB、4Bモデルでは600〜900 MBです。長い入力が本当に必要でない限り、1024に切り詰めてください。',
@@ -1349,7 +1349,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**8GB RAM・専用GPUなしでは、Q4_K_M以下で4Bパラメータ未満を維持してください。** Q4_K_Mは2026年の標準量子化です — FP16比でperplexity ≈ 1％減、RAM半分、Hugging Face上のほとんどのGGUFビルドのデフォルト。アプリ別リスト：',
         items: [
-          '**Ollama：** `ollama pull phi3:mini`（Phi-4 Mini 3.8B Q4_K_M、≈ 2.4 GB）がデフォルト推奨。最大速度なら`ollama pull smollm2:1.7b`（≈ 1.0 GB）、洗練されたチャットなら`ollama pull llama3.2:1b-instruct-q5_K_M`（≈ 0.85 GB）。',
+          '**Ollama：** `ollama pull phi4-mini`（Phi-4 Mini 3.8B Q4_K_M、≈ 2.5 GB）がデフォルト推奨。最大速度なら`ollama pull smollm2:1.7b`（≈ 1.0 GB）、洗練されたチャットなら`ollama pull llama3.2:1b-instruct-q5_K_M`（≈ 0.85 GB）。',
           '**GPT4All：** アプリ内モデルブラウザを使用 → 「Llama 3.2 1B Instruct Q4_0」（≈ 0.7 GB）が最軽量インストール、RAMが許せば「Phi-4 Mini Q4_K_M」。GPT4Allのデフォルトは保守的に調整されているため表示される項目はすべて動作しますが、カタログは2025年2月のv3.10.0ビルド以降更新されておらず、Gemma 4 E2Bのような新しいモデルは含まれていません。',
           '**Jan：** キュレーションされたカタログを使用 → Apple Siliconでは「Gemma 4 E2B Instruct Q4_K_M」（≈ 2 GB）、x86では「Phi-4 Mini Q4_K_M」。JanはあらゆるGGUFのHugging Face URL貼り付けも受け付けます。',
           '**llama.cpp：** Hugging FaceからGGUFを直接ダウンロード — `bartowski/Phi-4-mini-instruct-GGUF`、`bartowski/SmolLM2-1.7B-Instruct-GGUF`、または`bartowski/Llama-3.2-1B-Instruct-GGUF`。`./llama-cli -m model.gguf -p "..." -c 1024 -t 4`で実行。',
@@ -1365,7 +1365,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**デフォルト設定は16GB RAMと専用GPU向けに調整されています。8GB CPU専用では、3つのつまみが最も重要です：** コンテキスト長、バッチサイズ、スレッド数。一緒に調整すれば、同一ハードウェアで30〜60％多くのtok/秒の価値があります。',
         items: [
-          '**コンテキスト長 — 最大の単一ゲイン。** 4096（デフォルト）から1024に削減します。Ollamaでは：`OLLAMA_NUM_CTX=1024 ollama run phi3:mini`。llama.cppでは：`-c 1024`。RAM節約：モデルにより400〜900 MB。tok/秒ゲイン：10〜20％。',
+          '**コンテキスト長 — 最大の単一ゲイン。** 4096（デフォルト）から1024に削減します。Ollamaでは：`OLLAMA_NUM_CTX=1024 ollama run phi4-mini`。llama.cppでは：`-c 1024`。RAM節約：モデルにより400〜900 MB。tok/秒ゲイン：10〜20％。',
           '**スレッド数 — 論理コアではなく物理コアに合わせる。** 旧CPU（i5-8250U、Ryzen 5 5500U）は物理4 / 論理8コアです。スレッド = 4に設定し、8にしないでください。llama.cppでは：`-t 4`。Ollamaでは：`OLLAMA_NUM_THREAD=4`。ハイパースレッディングは推論を阻害します。両スレッドが同じFP/SIMDユニットを争うためです。',
           '**プロンプト処理のバッチサイズ — 弱いCPUでは8に。** llama.cpp：`--n-batch 8`。デフォルト512は4コアCPUのL2キャッシュをスラッシングします。4Bモデルでのtok/秒ゲイン：15〜25％。',
           '**KVキャッシュ量子化 — q8_0に設定してKV RAMを半減。** llama.cpp：`--cache-type-k q8_0 --cache-type-v q8_0`。RAM節約：1024コンテキストで150〜400 MB、より高いコンテキストでさらに多く。品質への影響：知覚不能。',
@@ -1611,9 +1611,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'memory-thermals',
         title: '为什么8GB内存感觉如此紧张，笔记本何时会降频？',
         content:
-          '**在8GB内存上，操作系统在加载任何模型前已占用2.5–3.5GB，给模型及其KV缓存留下4.5–5.5GB。** 这一上限使Phi-4 Mini（3.8B Q4 ≈ 2.4 GB）成为实用甜点位，并排除任何量化的7B模型用于持续使用。',
+          '**在8GB内存上，操作系统在加载任何模型前已占用2.5–3.5GB，给模型及其KV缓存留下4.5–5.5GB。** 这一上限使Phi-4 Mini（3.8B Q4 ≈ 2.5 GB）成为实用甜点位，并排除任何量化的7B模型用于持续使用。',
         items: [
-          '**工作集 vs 系统内存：** 磁盘上的模型文件比加载后的工作集小。Phi-4 Mini Q4_K_M在磁盘上 ≈ 2.4 GB，但加载2048 token上下文的KV缓存后在内存中达到 ≈ 3.0–3.5 GB。将上下文降至1024可节省 ≈ 400 MB。',
+          '**工作集 vs 系统内存：** 磁盘上的模型文件比加载后的工作集小。Phi-4 Mini Q4_K_M在磁盘上 ≈ 2.5 GB，但加载2048 token上下文的KV缓存后在内存中达到 ≈ 3.0–3.5 GB。将上下文降至1024可节省 ≈ 400 MB。',
           '**交换死亡：** 当工作集超过物理内存时，macOS和Linux开始向SSD分页。tokens/秒下降5–10倍，笔记本变得无响应。监视 `vm_stat`（Mac）或 `free -h`（Linux）— 如果推理过程中交换上升，立即切换到更小的模型。',
           '**超便携笔记本上的热降频：** 无风扇和单风扇笔记本（MacBook Air M1、XPS 13、Surface Laptop Go）在持续推理3–5分钟后达到热限制，CPU时钟下降20–35%。tokens/秒相应下降。',
           '**上下文长度是内存税：** 默认4096上下文预先分配4096 token的KV缓存。在1B模型上是200–300 MB，在4B模型上是600–900 MB。除非确实需要长输入，否则削减到1024。',
@@ -1632,7 +1632,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**在8GB内存无独立GPU上，保持在4B参数Q4_K_M或更低。** Q4_K_M是2026年的标准量化 — 相比FP16损失 ≈ 1%困惑度，占用一半内存，是Hugging Face上大多数GGUF构建的默认。按应用列出：',
         items: [
-          '**Ollama：** `ollama pull phi3:mini`（Phi-4 Mini 3.8B Q4_K_M，≈ 2.4 GB）是默认推荐。最大速度选 `ollama pull smollm2:1.7b`（≈ 1.0 GB）。聊天精致度选 `ollama pull llama3.2:1b-instruct-q5_K_M`（≈ 0.85 GB）。',
+          '**Ollama：** `ollama pull phi4-mini`（Phi-4 Mini 3.8B Q4_K_M，≈ 2.5 GB）是默认推荐。最大速度选 `ollama pull smollm2:1.7b`（≈ 1.0 GB）。聊天精致度选 `ollama pull llama3.2:1b-instruct-q5_K_M`（≈ 0.85 GB）。',
           '**GPT4All：** 使用应用内模型浏览器 → "Llama 3.2 1B Instruct Q4_0"（≈ 0.7 GB）最轻量安装，或 "Phi-4 Mini Q4_K_M" 如果内存允许。GPT4All默认值经过保守调整，因此每个可见条目都能运行 — 但其目录自2025年2月的v3.10.0构建以来未再更新，Gemma 4 E2B等较新模型并不在其中。',
           '**Jan：** 使用精选目录 → Apple Silicon上选 "Gemma 4 E2B Instruct Q4_K_M"（≈ 2 GB），x86上选 "Phi-4 Mini Q4_K_M"。Jan也接受任意GGUF的Hugging Face URL粘贴。',
           '**llama.cpp：** 直接从Hugging Face下载GGUF — `bartowski/Phi-4-mini-instruct-GGUF`、`bartowski/SmolLM2-1.7B-Instruct-GGUF` 或 `bartowski/Llama-3.2-1B-Instruct-GGUF`。运行 `./llama-cli -m model.gguf -p "..." -c 1024 -t 4`。',
@@ -1648,7 +1648,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**默认设置针对16GB内存和独立GPU调整。在8GB CPU专用上，三个旋钮最重要：** 上下文长度、批量大小和线程数。一起调整，在同一硬件上价值30–60%更多tokens/秒。',
         items: [
-          '**上下文长度 — 最大单项收益。** 从4096（默认）削减到1024。Ollama中：`OLLAMA_NUM_CTX=1024 ollama run phi3:mini`。llama.cpp中：`-c 1024`。内存节省：根据模型400–900 MB。tokens/秒收益：10–20%。',
+          '**上下文长度 — 最大单项收益。** 从4096（默认）削减到1024。Ollama中：`OLLAMA_NUM_CTX=1024 ollama run phi4-mini`。llama.cpp中：`-c 1024`。内存节省：根据模型400–900 MB。tokens/秒收益：10–20%。',
           '**线程数 — 匹配物理核心，不是逻辑核心。** 旧CPU（i5-8250U、Ryzen 5 5500U）有4物理 / 8逻辑核心。设置线程 = 4，不是8。llama.cpp中：`-t 4`。Ollama中：`OLLAMA_NUM_THREAD=4`。超线程伤害推理，因为两个线程争夺同一FP/SIMD单元。',
           '**提示处理批量大小 — 弱CPU设为8。** llama.cpp：`--n-batch 8`。默认512在4核CPU上抖动L2缓存。4B模型上的tokens/秒收益：15–25%。',
           '**KV缓存量化 — 设为q8_0以将KV内存减半。** llama.cpp：`--cache-type-k q8_0 --cache-type-v q8_0`。内存节省：1024上下文下150–400 MB，更高上下文更多。质量影响：不可察觉。',
@@ -2018,9 +2018,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'memory-thermals',
         title: '¿Por qué 8 GB RAM se siente tan justo y cuándo empieza a limitarse el portátil?',
         content:
-          '**Con 8 GB RAM, el sistema operativo ya consume 2,5–3,5 GB antes de cargar cualquier modelo, dejando 4,5–5,5 GB para el modelo y su caché KV.** Ese techo convierte a Phi-4 Mini (3.8B Q4 ≈ 2,4 GB) en el punto óptimo práctico y descarta cualquier modelo de 7B con cualquier cuantización para uso sostenido.',
+          '**Con 8 GB RAM, el sistema operativo ya consume 2,5–3,5 GB antes de cargar cualquier modelo, dejando 4,5–5,5 GB para el modelo y su caché KV.** Ese techo convierte a Phi-4 Mini (3.8B Q4 ≈ 2,5 GB) en el punto óptimo práctico y descarta cualquier modelo de 7B con cualquier cuantización para uso sostenido.',
         items: [
-          '**Conjunto de trabajo vs RAM del sistema:** El archivo del modelo en disco es más pequeño que su conjunto de trabajo cargado. Phi-4 Mini Q4_K_M ocupa ≈ 2,4 GB en disco pero ≈ 3,0–3,5 GB en RAM una vez añadido el caché KV para un contexto de 2048 tokens. Recortar el contexto a 1024 ahorra ≈ 400 MB.',
+          '**Conjunto de trabajo vs RAM del sistema:** El archivo del modelo en disco es más pequeño que su conjunto de trabajo cargado. Phi-4 Mini Q4_K_M ocupa ≈ 2,5 GB en disco pero ≈ 3,0–3,5 GB en RAM una vez añadido el caché KV para un contexto de 2048 tokens. Recortar el contexto a 1024 ahorra ≈ 400 MB.',
           '**Muerte por swap:** Cuando el conjunto de trabajo supera la RAM física, macOS y Linux comienzan a paginar en el SSD. Los tokens/s caen entre 5 y 10 veces y el portátil se vuelve irresponsivo. Supervisa `vm_stat` (Mac) o `free -h` (Linux) — si el swap sube durante la inferencia, cambia inmediatamente a un modelo más pequeño.',
           '**Throttling térmico en ultraportátiles:** Los portátiles sin ventilador o de un solo ventilador (MacBook Air M1, XPS 13, Surface Laptop Go) alcanzan los límites térmicos en 3–5 minutos de inferencia sostenida y reducen los relojes de CPU un 20–35%. Los tokens/s caen de manera proporcional.',
           '**La longitud de contexto es un impuesto de memoria:** El contexto por defecto de 4096 reserva un caché KV de 4096 tokens de antemano. En modelos de 1B son 200–300 MB; en modelos de 4B son 600–900 MB. Recórtalo a 1024 salvo que realmente necesites entradas largas.',
@@ -2042,7 +2042,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Con 8 GB RAM y sin GPU dedicada, mantente por debajo de 4B parámetros en Q4_K_M o menos.** Q4_K_M es la cuantización estándar en 2026 — pierde ≈ 1% de perplejidad frente a FP16, cabe en la mitad de RAM y es el valor por defecto para la mayoría de builds GGUF en Hugging Face. Listado por app:',
         items: [
-          '**Ollama:** `ollama pull phi3:mini` (Phi-4 Mini 3.8B Q4_K_M, ≈ 2,4 GB) es la recomendación por defecto. Para máxima velocidad, `ollama pull smollm2:1.7b` (≈ 1,0 GB). Para mayor calidad de chat, `ollama pull llama3.2:1b-instruct-q5_K_M` (≈ 0,85 GB).',
+          '**Ollama:** `ollama pull phi4-mini` (Phi-4 Mini 3.8B Q4_K_M, ≈ 2,5 GB) es la recomendación por defecto. Para máxima velocidad, `ollama pull smollm2:1.7b` (≈ 1,0 GB). Para mayor calidad de chat, `ollama pull llama3.2:1b-instruct-q5_K_M` (≈ 0,85 GB).',
           '**GPT4All:** Usa el navegador de modelos integrado → "Llama 3.2 1B Instruct Q4_0" (≈ 0,7 GB) para la instalación más ligera, o "Phi-4 Mini Q4_K_M" si la RAM lo permite. Los valores por defecto de GPT4All son conservadores, así que toda entrada visible funciona — pero el catálogo no se ha movido desde la compilación v3.10.0 de febrero de 2025 y modelos más recientes como Gemma 4 E2B no aparecen en él.',
           '**Jan:** Usa el catálogo curado → "Gemma 4 E2B Instruct Q4_K_M" (≈ 2 GB) en Apple Silicon, o "Phi-4 Mini Q4_K_M" en x86. Jan también acepta pegar una URL de Hugging Face para cualquier GGUF.',
           '**llama.cpp:** Descarga el GGUF directamente de Hugging Face — `bartowski/Phi-4-mini-instruct-GGUF`, `bartowski/SmolLM2-1.7B-Instruct-GGUF` o `bartowski/Llama-3.2-1B-Instruct-GGUF`. Ejecuta con `./llama-cli -m model.gguf -p "..." -c 1024 -t 4`.',
@@ -2061,7 +2061,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Los valores por defecto están ajustados para 16 GB RAM y una GPU dedicada. Con 8 GB solo CPU, tres parámetros son los más importantes:** longitud de contexto, tamaño de batch y número de hilos. Ajustados juntos valen entre un 30 y un 60% más de tokens/s en el mismo hardware.',
         items: [
-          '**Longitud de contexto — la mayor ganancia individual.** Recorta de 4096 (por defecto) a 1024. En Ollama: `OLLAMA_NUM_CTX=1024 ollama run phi3:mini`. En llama.cpp: `-c 1024`. Ahorro de RAM: 400–900 MB según el modelo. Ganancia de tokens/s: 10–20%.',
+          '**Longitud de contexto — la mayor ganancia individual.** Recorta de 4096 (por defecto) a 1024. En Ollama: `OLLAMA_NUM_CTX=1024 ollama run phi4-mini`. En llama.cpp: `-c 1024`. Ahorro de RAM: 400–900 MB según el modelo. Ganancia de tokens/s: 10–20%.',
           '**Número de hilos — ajusta a núcleos físicos, no lógicos.** Las CPUs más antiguas (i5-8250U, Ryzen 5 5500U) tienen 4 físicos / 8 lógicos. Establece hilos = 4, no 8. En llama.cpp: `-t 4`. En Ollama: `OLLAMA_NUM_THREAD=4`. El hyperthreading perjudica la inferencia porque ambos hilos compiten por la misma unidad FP/SIMD.',
           '**Tamaño de batch para el procesamiento de prompts — ponlo en 8 en CPUs lentas.** llama.cpp: `--n-batch 8`. El valor por defecto de 512 satura la caché L2 en CPUs de 4 núcleos. Ganancia de tokens/s en modelos de 4B: 15–25%.',
           '**Cuantización de la caché KV — establécela en q8_0 para reducir a la mitad la RAM de KV.** llama.cpp: `--cache-type-k q8_0 --cache-type-v q8_0`. Ahorro de RAM: 150–400 MB a 1024 de contexto, más a contextos mayores. Impacto en calidad: imperceptible.',
@@ -2507,9 +2507,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'memory-thermals',
         title: 'Por que 8 GB RAM parece tão apertado e quando o notebook começa a sofrer throttling?',
         content:
-          '**Com 8 GB RAM, o sistema operacional já consome 2,5–3,5 GB antes de carregar qualquer modelo, deixando 4,5–5,5 GB para o modelo e seu cache KV.** Esse teto é o que torna o Phi-4 Mini (3.8B Q4 ≈ 2,4 GB) o ponto ideal prático e descarta qualquer modelo de 7B com qualquer quantização para uso sustentado.',
+          '**Com 8 GB RAM, o sistema operacional já consome 2,5–3,5 GB antes de carregar qualquer modelo, deixando 4,5–5,5 GB para o modelo e seu cache KV.** Esse teto é o que torna o Phi-4 Mini (3.8B Q4 ≈ 2,5 GB) o ponto ideal prático e descarta qualquer modelo de 7B com qualquer quantização para uso sustentado.',
         items: [
-          '**Conjunto de trabalho vs. RAM do sistema:** O arquivo do modelo em disco é menor do que seu conjunto de trabalho carregado. O Phi-4 Mini Q4_K_M ocupa ≈ 2,4 GB em disco, mas ≈ 3,0–3,5 GB em RAM depois de adicionar o cache KV para um contexto de 2048 tokens. Corte o contexto para 1024 e você economiza ≈ 400 MB.',
+          '**Conjunto de trabalho vs. RAM do sistema:** O arquivo do modelo em disco é menor do que seu conjunto de trabalho carregado. O Phi-4 Mini Q4_K_M ocupa ≈ 2,5 GB em disco, mas ≈ 3,0–3,5 GB em RAM depois de adicionar o cache KV para um contexto de 2048 tokens. Corte o contexto para 1024 e você economiza ≈ 400 MB.',
           '**Morte por swap:** Quando o conjunto de trabalho excede a RAM física, o macOS e o Linux começam a paginar no SSD. Os tokens por segundo caem de 5 a 10 vezes e o notebook fica sem resposta. Monitore o `vm_stat` (Mac) ou `free -h` (Linux) — se o swap subir durante a inferência, troque imediatamente por um modelo menor.',
           '**Throttling térmico em ultraportáteis:** Notebooks sem ventoinha ou com uma única ventoinha (MacBook Air M1, XPS 13, Surface Laptop Go) atingem os limites térmicos em 3–5 minutos de inferência sustentada e reduzem os clocks da CPU em 20–35%. Os tokens/s caem proporcionalmente.',
           '**O comprimento do contexto é um imposto de memória:** O contexto padrão de 4096 reserva um cache KV de 4096 tokens antecipadamente. Em modelos de 1B são 200–300 MB; em modelos de 4B são 600–900 MB. Corte para 1024 a menos que você realmente precise de entradas longas.',
@@ -2531,7 +2531,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Com 8 GB RAM e sem GPU dedicada, mantenha-se abaixo de 4B parâmetros em Q4_K_M ou menos.** O Q4_K_M é a quantização padrão em 2026 — perde ≈ 1% de perplexidade em relação ao FP16, cabe em metade da RAM e é o padrão para a maioria dos builds GGUF no Hugging Face. Listado por app:',
         items: [
-          '**Ollama:** `ollama pull phi3:mini` (Phi-4 Mini 3.8B Q4_K_M, ≈ 2,4 GB) é a recomendação padrão. Para velocidade máxima, `ollama pull smollm2:1.7b` (≈ 1,0 GB). Para maior qualidade de chat, `ollama pull llama3.2:1b-instruct-q5_K_M` (≈ 0,85 GB).',
+          '**Ollama:** `ollama pull phi4-mini` (Phi-4 Mini 3.8B Q4_K_M, ≈ 2,5 GB) é a recomendação padrão. Para velocidade máxima, `ollama pull smollm2:1.7b` (≈ 1,0 GB). Para maior qualidade de chat, `ollama pull llama3.2:1b-instruct-q5_K_M` (≈ 0,85 GB).',
           '**GPT4All:** Use o navegador de modelos integrado → "Llama 3.2 1B Instruct Q4_0" (≈ 0,7 GB) para a instalação mais leve, ou "Phi-4 Mini Q4_K_M" se a RAM permitir. Os padrões do GPT4All são conservadores, por isso toda entrada visível funciona — mas o catálogo não muda desde a build v3.10.0 de fevereiro de 2025, e modelos mais recentes como o Gemma 4 E2B não aparecem nele.',
           '**Jan:** Use o catálogo curado → "Gemma 4 E2B Instruct Q4_K_M" (≈ 2 GB) em Apple Silicon, ou "Phi-4 Mini Q4_K_M" em x86. O Jan também aceita colar uma URL do Hugging Face para qualquer GGUF.',
           '**llama.cpp:** Baixe o GGUF diretamente do Hugging Face — `bartowski/Phi-4-mini-instruct-GGUF`, `bartowski/SmolLM2-1.7B-Instruct-GGUF` ou `bartowski/Llama-3.2-1B-Instruct-GGUF`. Rode com `./llama-cli -m model.gguf -p "..." -c 1024 -t 4`.',
@@ -2550,7 +2550,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Os valores padrão são ajustados para 16 GB RAM e uma GPU dedicada. Com 8 GB só CPU, três parâmetros são os mais importantes:** comprimento de contexto, tamanho de batch e número de threads. Ajustados em conjunto, valem de 30 a 60% mais tokens/s no mesmo hardware.',
         items: [
-          '**Comprimento de contexto — o maior ganho individual.** Corte de 4096 (padrão) para 1024. No Ollama: `OLLAMA_NUM_CTX=1024 ollama run phi3:mini`. No llama.cpp: `-c 1024`. Economia de RAM: 400–900 MB dependendo do modelo. Ganho de tokens/s: 10–20%.',
+          '**Comprimento de contexto — o maior ganho individual.** Corte de 4096 (padrão) para 1024. No Ollama: `OLLAMA_NUM_CTX=1024 ollama run phi4-mini`. No llama.cpp: `-c 1024`. Economia de RAM: 400–900 MB dependendo do modelo. Ganho de tokens/s: 10–20%.',
           '**Número de threads — ajuste para núcleos físicos, não lógicos.** CPUs mais antigas (i5-8250U, Ryzen 5 5500U) têm 4 físicos / 8 lógicos. Defina threads = 4, não 8. No llama.cpp: `-t 4`. No Ollama: `OLLAMA_NUM_THREAD=4`. O hyperthreading prejudica a inferência porque ambas as threads competem pela mesma unidade FP/SIMD.',
           '**Tamanho de batch para o processamento de prompt — defina como 8 em CPUs fracas.** llama.cpp: `--n-batch 8`. O padrão de 512 satura o cache L2 em CPUs de 4 núcleos. Ganho de tokens/s em modelos de 4B: 15–25%.',
           '**Quantização do cache KV — defina como q8_0 para reduzir pela metade a RAM do KV.** llama.cpp: `--cache-type-k q8_0 --cache-type-v q8_0`. Economia de RAM: 150–400 MB com contexto 1024, mais em contextos maiores. Impacto na qualidade: imperceptível.',
@@ -2996,9 +2996,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'memory-thermals',
         title: 'لماذا يبدو 8 GB RAM ضيقاً جداً ومتى يبدأ الجهاز في الخنق الحراري؟',
         content:
-          '**مع 8 GB RAM، نظام التشغيل يستهلك 2.5-3.5 GB قبل تحميل أي نموذج، مما يترك 4.5-5.5 GB للنموذج وcache KV الخاص به.** هذا الحد هو ما يجعل Phi-4 Mini (3.8B Q4 ≈ 2.4 GB) نقطة التوازن العملي ويستبعد أي نموذج 7B بأي تكمية للاستخدام المستمر.',
+          '**مع 8 GB RAM، نظام التشغيل يستهلك 2.5-3.5 GB قبل تحميل أي نموذج، مما يترك 4.5-5.5 GB للنموذج وcache KV الخاص به.** هذا الحد هو ما يجعل Phi-4 Mini (3.8B Q4 ≈ 2.5 GB) نقطة التوازن العملي ويستبعد أي نموذج 7B بأي تكمية للاستخدام المستمر.',
         items: [
-          '**مجموعة العمل مقابل RAM النظام:** ملف النموذج على القرص أصغر من مجموعة عمله المحملة. Phi-4 Mini Q4_K_M يشغل ≈ 2.4 GB على القرص، لكن ≈ 3.0-3.5 GB في RAM بعد إضافة cache KV لسياق 2048 رمزاً. اخفض السياق إلى 1024 وتوفّر ≈ 400 MB.',
+          '**مجموعة العمل مقابل RAM النظام:** ملف النموذج على القرص أصغر من مجموعة عمله المحملة. Phi-4 Mini Q4_K_M يشغل ≈ 2.5 GB على القرص، لكن ≈ 3.0-3.5 GB في RAM بعد إضافة cache KV لسياق 2048 رمزاً. اخفض السياق إلى 1024 وتوفّر ≈ 400 MB.',
           '**الموت بالـswap:** عندما تتجاوز مجموعة العمل الـRAM الفيزيائية، يبدأ macOS وLinux في الترحيل إلى SSD. ينخفض الرموز/ثانية بمقدار 5-10× ويصبح الجهاز غير مستجيب. راقب `vm_stat` (Mac) أو `free -h` (Linux) — إذا ارتفع الـswap أثناء الاستدلال، انتقل فوراً إلى نموذج أصغر.',
           '**الخنق الحراري في الأولترابوك:** الأجهزة بدون مراوح أو بمروحة واحدة (MacBook Air M1 وXPS 13 وSurface Laptop Go) تصل إلى حدودها الحرارية خلال 3-5 دقائق من الاستدلال المستمر وتُخفض ترددات CPU بنسبة 20-35%. ينخفض الرموز/ثانية بالتناسب.',
           '**طول السياق هو ضريبة ذاكرة:** السياق الافتراضي 4096 يحجز cache KV بـ4096 رمزاً مسبقاً. في نماذج 1B هذا 200-300 MB؛ في نماذج 4B هذا 600-900 MB. اقطع إلى 1024 ما لم تحتج فعلاً مدخلات طويلة.',
@@ -3020,7 +3020,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**مع 8 GB RAM وبدون GPU مخصصة، ابقَ تحت 4B معامل بـQ4_K_M أو أقل.** Q4_K_M هو التكمية القياسية في 2026 — تفقد ≈ 1% من الـperplexity مقارنةً بـFP16، تناسب نصف الـRAM، وهي القياسية لمعظم builds GGUF على Hugging Face. مُدرَجة حسب التطبيق:',
         items: [
-          '**Ollama:** `ollama pull phi3:mini` (Phi-4 Mini 3.8B Q4_K_M، ≈ 2.4 GB) هو التوصية القياسية. لأقصى سرعة، `ollama pull smollm2:1.7b` (≈ 1.0 GB). لجودة دردشة أعلى، `ollama pull llama3.2:1b-instruct-q5_K_M` (≈ 0.85 GB).',
+          '**Ollama:** `ollama pull phi4-mini` (Phi-4 Mini 3.8B Q4_K_M، ≈ 2.5 GB) هو التوصية القياسية. لأقصى سرعة، `ollama pull smollm2:1.7b` (≈ 1.0 GB). لجودة دردشة أعلى، `ollama pull llama3.2:1b-instruct-q5_K_M` (≈ 0.85 GB).',
           '**GPT4All:** استخدم متصفح النماذج المدمج → "Llama 3.2 1B Instruct Q4_0" (≈ 0.7 GB) للتثبيت الأخف، أو "Phi-4 Mini Q4_K_M" إذا سمحت الـRAM. إعدادات GPT4All الافتراضية متحفظة لذا يعمل كل عنصر ظاهر — لكن الكتالوج لم يتغيّر منذ إصدار v3.10.0 في فبراير 2025، ولا تظهر فيه نماذج أحدث مثل Gemma 4 E2B.',
           '**Jan:** استخدم الكتالوج المنتقى → "Gemma 4 E2B Instruct Q4_K_M" (≈ 2 GB) على Apple Silicon، أو "Phi-4 Mini Q4_K_M" على x86. يقبل Jan أيضاً لصق URL من Hugging Face لأي GGUF.',
           '**llama.cpp:** نزّل GGUF مباشرةً من Hugging Face — `bartowski/Phi-4-mini-instruct-GGUF` أو `bartowski/SmolLM2-1.7B-Instruct-GGUF` أو `bartowski/Llama-3.2-1B-Instruct-GGUF`. شغّل بـ`./llama-cli -m model.gguf -p "..." -c 1024 -t 4`.',
@@ -3039,7 +3039,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**القيم الافتراضية مضبوطة لـ16 GB RAM وGPU مخصصة. مع 8 GB بـCPU فقط، ثلاثة معاملات هي الأهم:** طول السياق وحجم الدُفعة وعدد الخيوط. إذا ضُبطت معاً، تُضيف 30-60% من الرموز/ثانية على نفس الأجهزة.',
         items: [
-          '**طول السياق — أكبر مكسب فردي.** اخفض من 4096 (افتراضي) إلى 1024. في Ollama: `OLLAMA_NUM_CTX=1024 ollama run phi3:mini`. في llama.cpp: `-c 1024`. توفير الـRAM: 400-900 MB حسب النموذج. مكسب الرموز/ثانية: 10-20%.',
+          '**طول السياق — أكبر مكسب فردي.** اخفض من 4096 (افتراضي) إلى 1024. في Ollama: `OLLAMA_NUM_CTX=1024 ollama run phi4-mini`. في llama.cpp: `-c 1024`. توفير الـRAM: 400-900 MB حسب النموذج. مكسب الرموز/ثانية: 10-20%.',
           '**عدد الخيوط — اضبط على النوى الفيزيائية لا المنطقية.** المعالجات القديمة (i5-8250U وRyzen 5 5500U) لديها 4 فيزيائية / 8 منطقية. اضبط الخيوط = 4 لا 8. في llama.cpp: `-t 4`. في Ollama: `OLLAMA_NUM_THREAD=4`. Hyperthreading يُضر بالاستدلال لأن كلا الخيطين يتنافسان على نفس وحدة FP/SIMD.',
           '**حجم الدُفعة لمعالجة الموجّه — اضبط على 8 على المعالجات الضعيفة.** llama.cpp: `--n-batch 8`. الافتراضي 512 يُشبع cache L2 على معالجات 4 نوى. مكسب الرموز/ثانية على نماذج 4B: 15-25%.',
           '**تكمية cache KV — اضبط على q8_0 لتقليص RAM بنسبة النصف.** llama.cpp: `--cache-type-k q8_0 --cache-type-v q8_0`. توفير الـRAM: 150-400 MB مع سياق 1024، أكثر مع سياقات أكبر. تأثير الجودة: غير ملحوظ.',
@@ -3355,7 +3355,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '8 GB RAM이 왜 빡빡하게 느껴지고 언제 스로틀링이 시작되나요?',
         content: '**8 GB RAM에서 OS는 모델 로드 전에 2.5~3.5 GB를 차지하며, 모델과 KV 캐시에 4.5~5.5 GB가 남습니다.**',
         items: [
-          '**작업 세트 대 시스템 RAM:** Phi-4 Mini Q4_K_M은 디스크에서 ≈ 2.4 GB이지만 2048 컨텍스트에서 RAM에서 ≈ 3.0~3.5 GB입니다. 컨텍스트를 1024로 낮추면 ≈ 400 MB를 절약할 수 있습니다.',
+          '**작업 세트 대 시스템 RAM:** Phi-4 Mini Q4_K_M은 디스크에서 ≈ 2.5 GB이지만 2048 컨텍스트에서 RAM에서 ≈ 3.0~3.5 GB입니다. 컨텍스트를 1024로 낮추면 ≈ 400 MB를 절약할 수 있습니다.',
           '**스왑으로 인한 사망:** 작업 세트가 물리적 RAM을 초과하면 토큰/초가 5~10배 떨어집니다.',
           '**울트라북의 열 스로틀링:** 팬 없는 장치는 지속적 추론 3~5분 만에 CPU 주파수를 20~35% 낮춥니다.',
           '**컨텍스트 길이는 메모리 세금:** 기본 컨텍스트 4096은 4B 모델에서 600~900 MB KV 캐시를 예약합니다. 실제로 긴 입력이 필요하지 않다면 1024로 낮추세요.',
@@ -3371,7 +3371,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '각 앱에서 어떤 모델과 양자화를 다운로드해야 하나요?',
         content: '**8 GB RAM, 전용 GPU 없음에서는 Q4_K_M 이하의 4B 매개변수 이하로 유지하세요.**',
         items: [
-          '**Ollama:** `ollama pull phi3:mini` (Phi-4 Mini 3.8B Q4_K_M, ≈ 2.4 GB). 최고 속도는 `ollama pull smollm2:1.7b` (≈ 1.0 GB).',
+          '**Ollama:** `ollama pull phi4-mini` (Phi-4 Mini 3.8B Q4_K_M, ≈ 2.5 GB). 최고 속도는 `ollama pull smollm2:1.7b` (≈ 1.0 GB).',
           '**GPT4All:** 내장 모델 브라우저 → "Llama 3.2 1B Instruct Q4_0" (≈ 0.7 GB), RAM이 허용하면 "Phi-4 Mini Q4_K_M". 다만 카탈로그는 2025년 2월 v3.10.0 빌드 이후 갱신되지 않아 Gemma 4 E2B 같은 최신 모델은 포함되어 있지 않습니다.',
           '**Jan:** 큐레이션된 카탈로그 → Apple Silicon에서 "Gemma 4 E2B Instruct Q4_K_M" (≈ 2 GB), x86에서 "Phi-4 Mini Q4_K_M".',
           '**llama.cpp:** Hugging Face에서 직접 GGUF 다운로드. `./llama-cli -m model.gguf -p "..." -c 1024 -t 4`로 실행.',
@@ -3384,7 +3384,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '저사양 하드웨어에서 30~60% 더 많은 토큰/초를 얻는 설정은?',
         content: '**기본값은 16 GB RAM과 전용 GPU에 맞게 설정되어 있습니다. CPU 전용 8 GB에서는 컨텍스트 길이, 배치 크기, 스레드 수가 중요합니다.**',
         items: [
-          '**컨텍스트 길이 — 가장 큰 단일 향상.** 기본값 4096에서 1024로 낮추세요. Ollama: `OLLAMA_NUM_CTX=1024 ollama run phi3:mini`. llama.cpp: `-c 1024`. 토큰/초 향상: 10~20%.',
+          '**컨텍스트 길이 — 가장 큰 단일 향상.** 기본값 4096에서 1024로 낮추세요. Ollama: `OLLAMA_NUM_CTX=1024 ollama run phi4-mini`. llama.cpp: `-c 1024`. 토큰/초 향상: 10~20%.',
           '**스레드 수 — 물리적 코어로 설정.** llama.cpp: `-t 4`. Ollama: `OLLAMA_NUM_THREAD=4`.',
           '**프롬프트 배치 크기 — 8로 설정.** llama.cpp: `--n-batch 8`. 4B 모델에서 15~25% 향상.',
           '**KV 캐시 양자화 — q8_0으로 설정.** llama.cpp: `--cache-type-k q8_0 --cache-type-v q8_0`. RAM 절약: 150~400 MB.',
