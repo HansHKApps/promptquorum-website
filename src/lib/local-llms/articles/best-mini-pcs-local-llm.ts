@@ -2281,7 +2281,7 @@ schema: {
         '**PCIe x16 슬롯(풀 길이):** 독립형 GPU 장착에 필요합니다. 일부 미니 PC는 USB-C 외장 독을 사용하는데, eGPU는 내장 PCIe 대비 대역폭이 15~25% 감소합니다.',
         '**전력 예산:** 최소 450W SFX PSU가 필요합니다. RTX 5060 Ti(165W) + CPU(65W) + 보드(50W) = 280W 부하, 순간 피크는 420W 이상으로 급등합니다.',
         '**쿨링:** 액티브 케이스 팬이 필수입니다. 패시브 쿨링은 3B 유휴 시에는 작동하지만, 7B 지속 추론에는 강제 환기가 필요합니다.',
-        '**스토리지:** 최소 1TB SSD가 필요합니다. [Q4_K_M로 양자화된 7B 모델](/local-llms/llm-quantization-explained)은 디스크에 약 4GB를 차지하며, 5개 모델 라이브러리는 25GB를 채웁니다.',
+        '**스토리지:** 최소 1TB SSD가 필요합니다. [Q4_K_M로 양자화된 7B 모델](/ko/local-llms/llm-quantization-explained)은 디스크에 약 4GB를 차지하며, 5개 모델 라이브러리는 25GB를 채웁니다.',
       ],
     },
     'mac-mini': {
@@ -2301,7 +2301,7 @@ schema: {
         '**장점:** 무소음(추론 중 팬 소음 없음), 소형 폼 팩터, macOS + Asahi를 통한 Linux 지원, Ollama Metal GPU 가속이 즉시 작동합니다.',
         '**단점:** 두 칩 모두 RAM 업그레이드 불가. M6와 M5 Pro 모두 아직 독립적인 70B 토큰/초 벤치마크가 없습니다 — 둘 다 2026년 9월 22일에야 출시됩니다. Apple의 CPU 약 40% 향상, AI 최대 4배 향상 주장은 Apple 자체 마케팅 수치이며 제3자 측정값이 아닙니다.',
         '**명령어:** `ollama run llama3.3:70b-instruct-q4_K_M` — Apple Silicon에서 Metal을 통해 기본으로 작동합니다.',
-        '**M5 Pro 및 M5 Max 중심 비교(Mac Studio, MacBook Pro)는 [Apple Silicon M5 로컬 LLM 가이드 →](/local-llms/apple-silicon-m5-local-llm)를 참조하시기 바랍니다.**',
+        '**M5 Pro 및 M5 Max 중심 비교(Mac Studio, MacBook Pro)는 [Apple Silicon M5 로컬 LLM 가이드 →](/ko/local-llms/apple-silicon-m5-local-llm)를 참조하시기 바랍니다.**',
       ],
     },
     'framework-desktop': {
@@ -2335,7 +2335,7 @@ schema: {
       imageCaption: '미니 PC 플랫폼 가성비 비교: ASUS PN51 + RTX 5060 Ti가 약 $900에 최고 가성비 제공; Intel NUC 13 + Thunderbolt eGPU 독은 프리미엄 빌드 품질로 약 $1,300.',
       items: [
         '**Intel NUC 13 Pro(Core i7):** 소형, 업그레이드 가능한 65W CPU. Thunderbolt 3 eGPU 독으로 GPU 연결. $600(본체) + $450(RTX 5060 Ti) + $250(독) = $1,300. 최고 빌드 품질.',
-        '**ASUS PN51 또는 PN52(mini-ITX 베어본):** Ryzen 5($150) + 32GB RAM($80) + 1TB SSD($70) + [RTX 5060 Ti](/local-llms/best-budget-gpus-local-llm)($450) = $900. 최고 가성비.',
+        '**ASUS PN51 또는 PN52(mini-ITX 베어본):** Ryzen 5($150) + 32GB RAM($80) + 1TB SSD($70) + [RTX 5060 Ti](/ko/local-llms/best-budget-gpus-local-llm)($450) = $900. 최고 가성비.',
         '**Giada F350 또는 Zotac ZBOX Sphere(완제품):** 통합 GPU 전용. CPU 속도로 3B~7B에 적합. 독립형 GPU 추론에는 비추천.',
         '**커스텀 mini-ITX 빌드(Lian Li A4, Dan A4-H2O):** 가장 유연하지만 조립이 가장 까다로움. GPU 선택에 따라 $1,000~$1,400.',
       ],
@@ -2388,7 +2388,7 @@ schema: {
       items: [
         '**EU / GDPR:** 로컬 추론은 데이터 처리자 계약(GDPR 제28조)을 불필요하게 합니다. 법률, 의료, 금융 등 민감한 전문 데이터가 SCC 계약 부담 없이 EU 내에 유지됩니다.',
         '**일본 / APPI:** 개인정보보호법(APPI)은 국경을 넘는 데이터 이전에 명시적 동의를 요구합니다. 로컬 추론은 이 요건을 완전히 해소합니다.',
-        '**중국 / 데이터보안법:** 2021년 데이터보안법은 특정 범주의 데이터를 해외로 반출하는 것을 제한합니다. [Qwen3](/local-llms/top-open-source-models-ollama)를 로컬에서 구동하는 미니 PC는 클라우드 라우팅 없이 이 요건을 충족합니다.',
+        '**중국 / 데이터보안법:** 2021년 데이터보안법은 특정 범주의 데이터를 해외로 반출하는 것을 제한합니다. [Qwen3](/ko/local-llms/top-open-source-models-ollama)를 로컬에서 구동하는 미니 PC는 클라우드 라우팅 없이 이 요건을 충족합니다.',
       ],
     },
     mistakes: {
@@ -2427,12 +2427,12 @@ schema: {
       id: 'related-reading',
       title: '관련 자료',
       items: [
-        '[AMD Ryzen AI Max+ 미니 PC(2026)](/local-llms/best-amd-mini-pc-local-llm-2026) — 통합 메모리 64~128GB, 50 TOPS NPU, Linux ROCm 지원($1,200~$2,500)',
-        '[로컬 LLM을 위한 최고의 노트북](/local-llms/best-laptops-local-llm) — 휴대용 추론을 위한 GPU 요구사항, 열 스로틀링, 배터리 한계',
-        '[$1,000 이하 로컬 LLM PC 빌드](/local-llms/local-llm-workstation-build) — 최대 VRAM과 멀티 GPU 지원을 갖춘 풀 타워 ATX 빌드',
-        '[로컬 LLM을 위한 최고의 저가형 GPU](/local-llms/best-budget-gpus-local-llm) — RTX 5060 Ti vs RTX A4000 vs 중고 Quadro 카드 VRAM 및 가격 비교',
-        '[노트북에서 로컬 LLM 가이드](/local-llms/local-llm-on-laptop) — 전력 제한 하드웨어에서의 열 관리 및 배터리 수명',
-        '[LLM 양자화 설명](/local-llms/llm-quantization-explained) — Q4_K_M이 표준인 이유와 양자화가 VRAM 요구사항을 줄이는 방법',
+        '[AMD Ryzen AI Max+ 미니 PC(2026)](/ko/local-llms/best-amd-mini-pc-local-llm-2026) — 통합 메모리 64~128GB, 50 TOPS NPU, Linux ROCm 지원($1,200~$2,500)',
+        '[로컬 LLM을 위한 최고의 노트북](/ko/local-llms/best-laptops-local-llm) — 휴대용 추론을 위한 GPU 요구사항, 열 스로틀링, 배터리 한계',
+        '[$1,000 이하 로컬 LLM PC 빌드](/ko/local-llms/local-llm-workstation-build) — 최대 VRAM과 멀티 GPU 지원을 갖춘 풀 타워 ATX 빌드',
+        '[로컬 LLM을 위한 최고의 저가형 GPU](/ko/local-llms/best-budget-gpus-local-llm) — RTX 5060 Ti vs RTX A4000 vs 중고 Quadro 카드 VRAM 및 가격 비교',
+        '[노트북에서 로컬 LLM 가이드](/ko/local-llms/local-llm-on-laptop) — 전력 제한 하드웨어에서의 열 관리 및 배터리 수명',
+        '[LLM 양자화 설명](/ko/local-llms/llm-quantization-explained) — Q4_K_M이 표준인 이유와 양자화가 VRAM 요구사항을 줄이는 방법',
         '[로컬 LLM에 필요한 RAM 용량?](/prompt-bites/how-much-ram-for-7b-model) — GPU VRAM이 부족할 때의 시스템 RAM 요구사항과 오프로딩',
       ],
     },
@@ -2453,7 +2453,7 @@ schema: {
     '@type': 'TechArticle',
     'headline': '2026년 로컬 LLM을 위한 최고의 미니 PC: Mac Mini M6, M5 Pro, Framework Desktop',
     'description': '새로운 Mac mini(2026년 8월): M6는 899달러부터(최대 32GB), M5 Pro는 1,699달러부터(최대 64GB, 70B 구동에 필요). Framework Desktop 128GB: 70B를 초당 20 토큰 이상. ASUS PN51 + RTX 5060 Ti: $900. 2026년 전체 비교.',
-    'url': 'https://www.promptquorum.com/local-llms/best-mini-pcs-local-llm',
+    'url': 'https://www.promptquorum.com/ko/local-llms/best-mini-pcs-local-llm',
     'datePublished': '2026-04-05',
     'dateModified': '2026-08-26',
     'proficiencyLevel': 'Intermediate',
@@ -2475,7 +2475,7 @@ schema: {
   faqSchema: {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
-    'url': 'https://www.promptquorum.com/local-llms/best-mini-pcs-local-llm',
+    'url': 'https://www.promptquorum.com/ko/local-llms/best-mini-pcs-local-llm',
     'mainEntity': [
       { '@type': 'Question', 'name': '미니 PC에서 13B 모델을 원활하게 구동할 수 있습니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'RTX 5060 Ti(16GB) 또는 RTX 4070(12GB)을 사용하여 Q4 양자화로 가능합니다. RTX 4060 Ti(8GB)는 13B를 편안하게 구동하기에 너무 빠듯합니다 — VRAM 여유 공간이 1GB 미만으로 떨어집니다.' } },
       { '@type': 'Question', 'name': 'Intel NUC + 외장 RTX 5060 Ti eGPU 독은 로컬 LLM에 적합합니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': '네. TB3 eGPU는 대역폭이 15~20% 감소하여 7B 기준 초당 15 토큰 대신 12 토큰을 기대해야 합니다. 그러나 여전히 실용적이며 풀 타워가 불필요한 소형 공간에 적합합니다.' } },
@@ -2496,7 +2496,7 @@ schema: {
   itemListSchema: {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    'url': 'https://www.promptquorum.com/local-llms/best-mini-pcs-local-llm',
+    'url': 'https://www.promptquorum.com/ko/local-llms/best-mini-pcs-local-llm',
     'name': '2026년 로컬 LLM 추론을 위한 최고의 미니 PC',
     'numberOfItems': 5,
     'itemListElement': [
