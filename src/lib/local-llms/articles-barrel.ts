@@ -145,6 +145,7 @@ import { article as a_best_local_llms_portuguese_language_2026 } from "./article
 // Hardware Setups — PC build guides 2026-07-18
 import { article as a_local_llm_pc_build_1000 } from "./articles/local-llm-pc-build-1000";
 import { article as a_local_llm_pc_build_2000 } from "./articles/local-llm-pc-build-2000";
+import { article as a_best_llm_api_gateway_2026 } from "./articles/best-llm-api-gateway-2026";
 
 export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   "local-llm-lgpd-compliance-brazil-2026": a_local_llm_lgpd_compliance_brazil_2026,
@@ -283,4 +284,6 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
   // DeepSeek Series 2026-06-19
   "best-local-reasoning-model-deepseek-r1-2026": a_best_local_reasoning_model_deepseek_r1_2026,
   "deepseek-local-china-data-privacy-2026": a_deepseek_local_china_data_privacy_2026,
+  // Dev-tool comparison sprint 2026-08-27
+  "best-llm-api-gateway-2026": a_best_llm_api_gateway_2026,
 };
