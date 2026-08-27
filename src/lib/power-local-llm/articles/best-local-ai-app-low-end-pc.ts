@@ -54,7 +54,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GPT4All — lowest RAM floor (4 GB) and no-admin install, but no release since Feb 2025',
           'All four are free, run offline after install, and load standard GGUF model files',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -560,7 +560,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GPT4All — niedrigster RAM-Bedarf (4 GB) und Installation ohne Admin-Rechte, aber kein Release seit Februar 2025',
           'Alle vier sind kostenlos, laufen nach der Installation offline und laden Standard-GGUF-Modelldateien',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -954,7 +954,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GPT4All — plancher RAM le plus bas (4 Go) et installation sans droits admin, mais aucune version depuis février 2025',
           'Toutes les quatre sont gratuites, fonctionnent hors ligne après installation, et chargent les fichiers GGUF standards',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -1233,7 +1233,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GPT4All — 最低RAM要件が最も低く（4GB）管理者権限なしでインストール可能だが、2025年2月以降リリースなし',
           '4つすべて無料、インストール後オフライン動作、標準GGUFモデルファイルをロード',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -1516,7 +1516,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GPT4All — 内存门槛最低（4GB）且无需管理员权限安装，但自2025年2月起未发布新版本',
           '4款全部免费，安装后离线运行，加载标准GGUF模型文件',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -1812,7 +1812,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GPT4All — mínimo de RAM más bajo (4 GB) e instalación sin permisos de admin, pero sin versión nueva desde febrero de 2025',
           'Las cuatro son gratuitas, funcionan sin conexión tras instalar y cargan archivos de modelo GGUF estándar',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -2301,7 +2301,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GPT4All — menor exigência de RAM (4 GB) e instalação sem direitos de admin, mas sem nova versão desde fevereiro de 2025',
           'Os quatro são gratuitos, funcionam offline após a instalação e carregam arquivos de modelo GGUF padrão',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -2790,7 +2790,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GPT4All — أدنى متطلبات RAM (4 GB) وتثبيت بدون صلاحيات admin، لكن دون أي إصدار منذ فبراير 2025',
           'الأربعة مجانية وتعمل offline بعد التثبيت وتُحمِّل ملفات نماذج GGUF القياسية',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
@@ -3266,7 +3266,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'GPT4All — 가장 낮은 RAM 요건(4 GB)과 관리자 권한 없는 설치가 가능하지만 2025년 2월 이후 새 릴리스 없음',
           '네 앱 모두 무료이며 설치 후 오프라인 작동, 표준 GGUF 모델 파일 로드 가능',
         ],
-        updatedDate: '2026-05-07',
+        updatedDate: '2026-08-27',
       },
     },
     toc: [
