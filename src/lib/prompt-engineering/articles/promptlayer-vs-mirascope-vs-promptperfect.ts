@@ -1,6 +1,6 @@
 // PromptLayer vs Mirascope vs PromptPerfect comparison
 // Slug: promptlayer-vs-mirascope-vs-promptperfect
-// Written: 2026-05-01
+// Written: 2026-08-27
 
 import type { Language } from "@/lib/blog/blogContent";
 import type { PEArticle } from "@/lib/prompt-engineering/types";
@@ -11,10 +11,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
     heroImage: '/images/promptlayer-vs-mirascope-vs-promptperfect-overview-hero-en.webp',
     title: 'PromptLayer vs Mirascope vs PromptPerfect (2026)',
     seoTitle: 'PromptLayer vs Mirascope vs PromptPerfect 2026: Pick One',
-    metaDescription: 'PromptLayer ($49/mo) logs LLM calls, Mirascope (free) builds Python apps, PromptPerfect ($20/mo) rewrites prompts. Different problems — pick exactly one.',
-    intro: '**PromptLayer logs and versions LLM calls (free–$49/mo for small teams). Mirascope is a free Python SDK for type-safe LLM apps. PromptPerfect auto-rewrites prompts for better results ($0–$20/mo). These three tools solve different problems — pick exactly one based on your bottleneck.**',
+    metaDescription: 'PromptLayer ($49/mo) logs LLM calls, Mirascope (free) builds Python apps, PromptPerfect (shutting down Sept 2026) rewrote prompts. Compare before you pick.',
+    intro: '**PromptLayer logs and versions LLM calls (free–$49/mo for small teams). Mirascope is a free Python SDK for type-safe LLM apps. PromptPerfect auto-rewrote prompts for better results ($0–$20/mo), but it is shutting down on September 1, 2026. These three tools solve different problems — pick exactly one based on your bottleneck.**',
     publishDate: '2026-04-10',
-    dateModified: '2026-05-01',
+    dateModified: '2026-08-27',
     readTime: '8 min read',
     educationalLevel: 'Intermediate',
     audience: 'Prompt engineers and developers choosing between PromptLayer, Mirascope, and PromptPerfect',
@@ -22,7 +22,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
     aboutTopics: ['Prompt Management', 'LLM Observability', 'Prompt Optimization'],
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-10-10',
-    lastFactChecked: '2026-05-01',
+    lastFactChecked: '2026-08-27',
+    leadAnswerBlock: '**PromptLayer is the pick for teams logging LLM calls in production ($49/mo). Mirascope is the free, MIT-licensed choice for Python developers who want type-safe LLM code. PromptPerfect is shutting down September 1, 2026 and no longer accepts signups. Pick exactly one.**',
     toc: [
       { label: 'What PromptLayer, Mirascope, and PromptPerfect Each Do', anchor: '#what-is' },
       { label: 'How We Compared These Tools', anchor: '#evaluation-criteria' },
@@ -41,8 +42,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
     quickFacts: [
       'PromptLayer free tier: 2,500 requests/month, 10 prompt templates, 5 users; Pro plan $49/month',
       'PromptLayer Team plan: $500/month — 25 users, 100,000+ requests/month',
-      'Mirascope is open-source (Apache 2.0) with zero SaaS cost — supports 20+ LLM providers',
-      'PromptPerfect free tier: 10 optimizations/day; Pro plan $19.99/month (500/day), Pro Max $99.99/month (1,500/day)',
+      'Mirascope is open-source (MIT) with zero SaaS cost — supports 20+ LLM providers',
+      'PromptPerfect is shutting down September 1, 2026 (no new signups since June 2026) — was free tier 10 optimizations/day, Pro $19.99/month (500/day), Pro Max $99.99/month (1,500/day)',
       'PromptLayer supports OpenAI, Anthropic, Cohere, Azure OpenAI, and 10+ providers natively',
       'PromptPerfect supports text models (GPT-4, Claude) and image models (Midjourney, Stable Diffusion)',
     ],
@@ -52,7 +53,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           'PromptLayer is the only tool of the three built for production LLM observability — logging cost, latency, and usage per prompt version in real time.',
           'Mirascope is free and open-source — the right choice for Python developers who want type-safe LLM calls without a SaaS platform or monthly fee.',
-          'PromptPerfect targets non-developers: it rewrites prompts via a web UI, no code required, from $0 to $20/month (Pro) or $100/month (Pro Max).',
+          'PromptPerfect targeted non-developers with web-UI prompt rewriting, no code required, from $0 to $20/month (Pro Max) — but it stopped taking signups in June 2026 and shuts down entirely on September 1, 2026.',
           'These three tools do not compete — they solve different bottlenecks. You will not need all three.',
           'If you are logging production LLM calls: PromptLayer. Building Python apps: Mirascope. Improving prompts manually: PromptPerfect.',
           'None of these tools evaluate output quality systematically — for systematic eval, use Braintrust or Promptfoo.',
@@ -145,7 +146,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'Mirascope has no dashboard, no logging platform, and no SaaS subscription. It is a developer tool — it improves the development experience of writing LLM code, not the observability of running it. For production logging on top of Mirascope, teams typically add PromptLayer or a custom logging layer separately.',
         ],
         items: [
-          'License: Apache 2.0 open-source — $0 for any team size, no usage limits',
+          'License: MIT open-source — $0 for any team size, no usage limits',
           'Supported providers: OpenAI, Anthropic, Gemini, Mistral, Groq, Cohere, Together AI, and 15+ others',
           'Output validation: native Pydantic integration for structured extraction and type checking',
           'No dashboard, no logging, no hosted platform — pure developer library',
@@ -155,7 +156,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             type: 'tip',
             label: 'Zero Monthly Cost',
-            text: 'Mirascope is Apache-licensed open-source with no paid tier or usage limits. The only cost is the underlying LLM API calls (OpenAI, Anthropic, etc.). For Python teams on tight budgets, this is the lowest-friction starting point for structured LLM development.',
+            text: 'Mirascope is MIT-licensed open-source with no paid tier or usage limits. The only cost is the underlying LLM API calls (OpenAI, Anthropic, etc.). For Python teams on tight budgets, this is the lowest-friction starting point for structured LLM development.',
           },
         ],
       },
@@ -175,6 +176,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'Output: rewritten prompt + explanation of each change made',
         ],
         callouts: [
+          {
+            type: 'warning',
+            label: 'PromptPerfect Is Shutting Down',
+            text: 'Jina AI stopped accepting new PromptPerfect signups in June 2026. Following Elastic\'s October 2025 acquisition of Jina AI, PromptPerfect goes offline permanently on September 1, 2026, with account data deleted on October 1, 2026. Existing users should export their prompts now — do not build new workflows around this tool.',
+          },
           {
             type: 'warning',
             label: 'Non-Deterministic Output',
@@ -247,7 +253,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: [
           '**Choose PromptLayer if your team needs to monitor LLM calls in production, track cost per feature, or compare prompt versions on real traffic without a code deployment.**',
           '**Choose Mirascope if you are building Python applications that call LLMs and want type-safe, testable, provider-agnostic code at zero SaaS cost.**',
-          '**Choose PromptPerfect if you need to improve specific prompts quickly without writing code — particularly for image generation or content creation workflows.**',
+          '**Choose PromptPerfect if you need to improve specific prompts quickly without writing code — particularly for image generation or content creation workflows.** Note: PromptPerfect stopped accepting new signups in June 2026 and shuts down permanently on September 1, 2026, so this is only relevant if you already have an active account.',
           '**Before committing to any single provider, use [PromptQuorum](/features) to dispatch the same prompt to 25+ AI models simultaneously** — a model-agnostic validation step that confirms whether your prompt optimization generalizes across providers.',
           'Do not use PromptLayer if you are pre-production and have no live traffic to log — its observability features have no value without production data. Do not use Mirascope if your team does not write Python — it is a Python-only library with no web UI. Do not use PromptPerfect if you need automated, repeatable prompt testing — its non-deterministic output makes it unsuitable for CI/CD gates.',
           'For a full team setup workflow with prompt review ownership and CI/CD gates, see [Prompt Engineering Setup for Small Teams](/prompt-engineering/prompt-engineering-setup-small-teams).',
@@ -286,7 +292,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         numberedItems: [
           'Check whether you have live traffic. If yes and you need to debug costs or failures: PromptLayer. If no, skip PromptLayer until you launch — its value is zero without production data.',
           'Check whether your team writes Python. If yes and you want clean, type-safe LLM code: Mirascope. If no, Mirascope is not an option — it has no web UI and no non-Python SDK.',
-          'Check whether anyone on your team needs to improve prompts without writing code. If yes: PromptPerfect. If the team is all engineers: PromptPerfect is rarely the best fit.',
+          'Check whether anyone on your team needs to improve prompts without writing code. If yes: PromptPerfect (only if you already have an account — it stopped taking signups in June 2026 and shuts down September 1, 2026). If the team is all engineers: PromptPerfect is rarely the best fit.',
           'Check whether you need systematic quality evaluation — metrics, scoring, regression testing. If yes: none of these three tools covers that. Add Braintrust or Promptfoo for eval instead.',
           'Default path for most engineering teams: start with Mirascope (free, code quality), add PromptLayer once live (~$20/mo), and skip PromptPerfect unless you have non-developer prompt authors.',
         ],
@@ -312,7 +318,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'How much does PromptPerfect cost?',
-            a: 'PromptPerfect offers a free tier with 10 optimizations per day. The Pro plan costs $19.99/month for 500 optimizations/day with API access. The Pro Max plan costs $99.99/month for 1,500 optimizations/day with priority processing. Verify current pricing at promptperfect.jina.ai before purchasing.',
+            a: 'PromptPerfect is shutting down on September 1, 2026 and has not accepted new signups since June 2026, so this pricing only applies to existing accounts winding down. It offered a free tier with 10 optimizations per day, a Pro plan at $19.99/month for 500 optimizations/day with API access, and a Pro Max plan at $99.99/month for 1,500 optimizations/day with priority processing.',
           },
           {
             q: 'Should I choose PromptLayer or Mirascope?',
@@ -345,7 +351,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Sources',
         items: [
           '[PromptLayer Documentation](https://docs.promptlayer.com) — official documentation covering SDK setup, prompt versioning, A/B testing, and dashboard analytics.',
-          '[Mirascope GitHub Repository](https://github.com/Mirascope/mirascope) — Apache 2.0 source code, provider integration guides, and usage examples.',
+          '[Mirascope GitHub Repository](https://github.com/Mirascope/mirascope) — MIT source code, provider integration guides, and usage examples.',
           '[PromptPerfect by Jina AI](https://promptperfect.jina.ai) — official product page with pricing tiers, supported models, and API documentation.',
           '[PromptLayer Pricing](https://promptlayer.com/pricing) — current pricing tiers; verify before purchasing as plans may have changed.',
         ],
@@ -357,7 +363,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: 'PromptLayer vs Mirascope vs PromptPerfect (2026)',
       description: 'PromptLayer logs and versions LLM calls, Mirascope is a free Python SDK for type-safe LLM apps, PromptPerfect auto-rewrites prompts. Three tools, three different problems — pick exactly one.',
       datePublished: '2026-04-10',
-      dateModified: '2026-05-01',
+      dateModified: '2026-08-27',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: {
         '@type': 'Organization',
@@ -414,10 +420,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
     heroImage: '/images/promptlayer-vs-mirascope-vs-promptperfect-overview-hero-de.webp',
     title: 'PromptLayer vs Mirascope vs PromptPerfect (2026)',
     seoTitle: 'PromptLayer vs Mirascope vs PromptPerfect: Vergleich 2026',
-    metaDescription: 'PromptLayer ($49/Mo.) loggt LLM-Aufrufe, Mirascope (kostenlos) baut Python-Apps, PromptPerfect ($20/Mo.) schreibt Prompts — drei Probleme, ein Tool wählen.',
-    intro: '**PromptLayer protokolliert und versioniert LLM-Aufrufe (kostenlos bis $49/Monat für kleine Teams). Mirascope ist ein kostenloses Python-SDK für typsichere LLM-Apps. PromptPerfect schreibt Prompts automatisch für bessere Ergebnisse um ($0–$19,99/Monat). Diese drei Tools lösen unterschiedliche Probleme — wählen Sie genau eines basierend auf Ihrem Engpass.**',
+    metaDescription: 'PromptLayer ($49/Mo.) loggt LLM-Aufrufe, Mirascope (kostenlos) baut Python-Apps, PromptPerfect (Einstellung Sept. 2026) schrieb Prompts. Vergleich vor der Wahl.',
+    intro: '**PromptLayer protokolliert und versioniert LLM-Aufrufe (kostenlos bis $49/Monat für kleine Teams). Mirascope ist ein kostenloses Python-SDK für typsichere LLM-Apps. PromptPerfect schrieb Prompts automatisch für bessere Ergebnisse um ($0–$19,99/Monat), wird aber am 1. September 2026 eingestellt. Diese drei Tools lösen unterschiedliche Probleme — wählen Sie genau eines basierend auf Ihrem Engpass.**',
     publishDate: '2026-04-10',
-    dateModified: '2026-05-01',
+    dateModified: '2026-08-27',
     readTime: '8 Min. Lesezeit',
     educationalLevel: 'Intermediate',
     audience: 'Prompt-Engineers und Entwickler, die zwischen PromptLayer, Mirascope und PromptPerfect wählen',
@@ -425,7 +431,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
     aboutTopics: ['Prompt Management', 'LLM Observability', 'Prompt Optimization'],
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-10-10',
-    lastFactChecked: '2026-05-01',
+    lastFactChecked: '2026-08-27',
+    leadAnswerBlock: '**PromptLayer eignet sich für Teams, die LLM-Aufrufe in der Produktion protokollieren ($49/Monat). Mirascope ist die kostenlose, MIT-lizenzierte Open-Source-Wahl für Python-Entwickler, die typsicheren LLM-Code wollen. PromptPerfect wird am 1. September 2026 eingestellt und nimmt keine Anmeldungen mehr an. Wählen Sie genau eines.**',
     toc: [
       { label: 'Was PromptLayer, Mirascope und PromptPerfect jeweils können', anchor: '#what-is' },
       { label: 'Wie wir diese Tools verglichen haben', anchor: '#evaluation-criteria' },
@@ -444,8 +451,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
     quickFacts: [
       'PromptLayer Free-Tarif: 2.500 Anfragen/Monat, 10 Prompt-Templates, 5 Nutzer; Pro-Plan $49/Monat',
       'PromptLayer Team-Plan: $500/Monat — 25 Nutzer, 100.000+ Anfragen/Monat',
-      'Mirascope ist Open-Source (Apache 2.0) ohne SaaS-Kosten — unterstützt über 20 LLM-Provider',
-      'PromptPerfect Free-Tarif: 10 Optimierungen/Tag; Pro-Plan $19,99/Monat (500/Tag), Pro Max $99,99/Monat (1.500/Tag)',
+      'Mirascope ist Open-Source (MIT) ohne SaaS-Kosten — unterstützt über 20 LLM-Provider',
+      'PromptPerfect wird am 1. September 2026 eingestellt (keine Neuanmeldungen seit Juni 2026) — war Free-Tarif 10 Optimierungen/Tag, Pro $19,99/Monat (500/Tag), Pro Max $99,99/Monat (1.500/Tag)',
       'PromptLayer unterstützt OpenAI, Anthropic, Cohere, Azure OpenAI und 10+ Provider nativ',
       'PromptPerfect unterstützt Textmodelle (GPT-4, Claude) und Bildmodelle (Midjourney, Stable Diffusion)',
     ],
@@ -455,7 +462,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           'PromptLayer ist das einzige der drei Tools, das für die Observability von LLM-Aufrufen in der Produktion entwickelt wurde — es protokolliert Kosten, Latenz und Nutzung je Prompt-Version in Echtzeit.',
           'Mirascope ist kostenlos und Open-Source — die richtige Wahl für Python-Entwickler, die typsichere LLM-Aufrufe ohne SaaS-Plattform oder monatliche Gebühr benötigen.',
-          'PromptPerfect richtet sich an Nicht-Entwickler: Es schreibt Prompts über eine Web-Oberfläche um, ohne Code, von $0 bis $19,99/Monat (Pro) oder $99,99/Monat (Pro Max).',
+          'PromptPerfect richtete sich an Nicht-Entwickler mit Prompt-Umschreibung über eine Web-Oberfläche, ohne Code, von $0 bis $99,99/Monat (Pro Max) — nimmt aber seit Juni 2026 keine Neuanmeldungen mehr an und wird am 1. September 2026 komplett eingestellt.',
           'Diese drei Tools konkurrieren nicht miteinander — sie lösen unterschiedliche Engpässe. Sie werden nicht alle drei benötigen.',
           'LLM-Aufrufe in der Produktion protokollieren: PromptLayer. Python-Apps entwickeln: Mirascope. Prompts manuell verbessern: PromptPerfect.',
           'Keines dieser Tools evaluiert die Ausgabequalität systematisch — für systematische Evaluation eignen sich Braintrust oder Promptfoo.',
@@ -548,7 +555,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'Mirascope hat kein Dashboard, keine Logging-Plattform und kein SaaS-Abonnement. Es ist ein Entwickler-Tool — es verbessert die Entwicklungserfahrung beim Schreiben von LLM-Code, nicht die Observability beim Ausführen. Für Produktions-Logging ergänzen Teams typischerweise PromptLayer oder eine eigene Logging-Schicht.',
         ],
         items: [
-          'Lizenz: Apache 2.0 Open-Source — $0 für jede Teamgröße, keine Nutzungsbeschränkungen',
+          'Lizenz: MIT Open-Source — $0 für jede Teamgröße, keine Nutzungsbeschränkungen',
           'Unterstützte Provider: OpenAI, Anthropic, Gemini, Mistral, Groq, Cohere, Together AI und 15+ weitere',
           'Ausgabevalidierung: native Pydantic-Integration für strukturierte Extraktion und Typprüfung',
           'Kein Dashboard, kein Logging, keine gehostete Plattform — reine Entwicklerbibliothek',
@@ -558,7 +565,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             type: 'tip',
             label: 'Keine monatlichen Kosten',
-            text: 'Mirascope ist Apache-lizenziertes Open-Source ohne bezahlten Tarif oder Nutzungsbeschränkungen. Die einzigen Kosten sind die zugrunde liegenden LLM-API-Aufrufe (OpenAI, Anthropic usw.). Für Python-Teams mit knappem Budget ist dies der reibungsloseste Einstieg in die strukturierte LLM-Entwicklung.',
+            text: 'Mirascope ist MIT-lizenziertes Open-Source ohne bezahlten Tarif oder Nutzungsbeschränkungen. Die einzigen Kosten sind die zugrunde liegenden LLM-API-Aufrufe (OpenAI, Anthropic usw.). Für Python-Teams mit knappem Budget ist dies der reibungsloseste Einstieg in die strukturierte LLM-Entwicklung.',
           },
         ],
       },
@@ -578,6 +585,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'Ausgabe: umgeschriebener Prompt + Erklärung jeder vorgenommenen Änderung',
         ],
         callouts: [
+          {
+            type: 'warning',
+            label: 'PromptPerfect wird eingestellt',
+            text: 'Jina AI nimmt seit Juni 2026 keine Neuanmeldungen für PromptPerfect mehr an. Nach der Übernahme von Jina AI durch Elastic im Oktober 2025 wird PromptPerfect am 1. September 2026 endgültig abgeschaltet, Kontodaten werden am 1. Oktober 2026 gelöscht. Bestehende Nutzer sollten ihre Prompts jetzt exportieren — bauen Sie keine neuen Workflows auf diesem Tool auf.',
+          },
           {
             type: 'warning',
             label: 'Nicht-deterministische Ausgabe',
@@ -650,7 +662,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: [
           '**Wählen Sie PromptLayer, wenn Ihr Team LLM-Aufrufe in der Produktion überwachen, Kosten pro Feature verfolgen oder Prompt-Versionen auf echtem Traffic vergleichen muss — ohne ein Code-Deployment.**',
           '**Wählen Sie Mirascope, wenn Sie Python-Anwendungen entwickeln, die LLMs aufrufen, und typsicheren, testbaren, provider-agnostischen Code ohne SaaS-Kosten möchten.**',
-          '**Wählen Sie PromptPerfect, wenn Sie bestimmte Prompts schnell ohne Code verbessern müssen — insbesondere für Bildgenerierungs- oder Content-Creation-Workflows.**',
+          '**Wählen Sie PromptPerfect, wenn Sie bestimmte Prompts schnell ohne Code verbessern müssen — insbesondere für Bildgenerierungs- oder Content-Creation-Workflows.** Hinweis: PromptPerfect nimmt seit Juni 2026 keine Neuanmeldungen mehr an und wird am 1. September 2026 endgültig eingestellt — relevant also nur, wenn Sie bereits ein aktives Konto haben.',
           'Verwenden Sie PromptLayer nicht, wenn Sie noch vor der Produktion sind und keinen Live-Traffic zum Protokollieren haben — seine Observability-Funktionen haben ohne Produktionsdaten keinen Wert. Verwenden Sie Mirascope nicht, wenn Ihr Team kein Python schreibt — es ist eine reine Python-Bibliothek ohne Web-Oberfläche. Verwenden Sie PromptPerfect nicht, wenn Sie automatisierte, reproduzierbare Prompt-Tests benötigen — seine nicht-deterministische Ausgabe macht es für CI/CD-Gates ungeeignet.',
           'Für einen vollständigen Team-Setup-Workflow mit Prompt-Review-Zuständigkeiten und CI/CD-Gates siehe [Prompt Engineering Setup für kleine Teams](/de/prompt-engineering/prompt-engineering-setup-small-teams).',
         ],
@@ -689,7 +701,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         numberedItems: [
           'Prüfen Sie, ob Sie Live-Traffic haben. Falls ja und Sie Kosten oder Fehler debuggen müssen: PromptLayer. Falls nein, überspringen Sie PromptLayer bis zum Launch — sein Wert ist ohne Produktionsdaten gleich null.',
           'Prüfen Sie, ob Ihr Team Python schreibt. Falls ja und Sie sauberen, typsicheren LLM-Code möchten: Mirascope. Falls nein, ist Mirascope keine Option — es hat keine Web-Oberfläche und kein Nicht-Python-SDK.',
-          'Prüfen Sie, ob jemand in Ihrem Team Prompts ohne Code verbessern muss. Falls ja: PromptPerfect. Wenn das Team ausschließlich aus Entwicklern besteht, ist PromptPerfect selten die beste Wahl.',
+          'Prüfen Sie, ob jemand in Ihrem Team Prompts ohne Code verbessern muss. Falls ja: PromptPerfect (nur relevant mit bestehendem Konto — keine Neuanmeldungen seit Juni 2026, Einstellung am 1. September 2026). Wenn das Team ausschließlich aus Entwicklern besteht, ist PromptPerfect selten die beste Wahl.',
           'Prüfen Sie, ob Sie eine systematische Qualitätsevaluation benötigen — Metriken, Scoring, Regressionstests. Falls ja: Keines dieser drei Tools deckt das ab. Fügen Sie Braintrust oder Promptfoo für die Evaluation hinzu.',
           'Standardpfad für die meisten Engineering-Teams: Beginnen Sie mit Mirascope (kostenlos, Codequalität), fügen Sie PromptLayer nach dem Launch hinzu (~$49/Monat), und überspringen Sie PromptPerfect, es sei denn, Sie haben Nicht-Entwickler, die Prompts erstellen.',
         ],
@@ -715,7 +727,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'Was kostet PromptPerfect?',
-            a: 'PromptPerfect bietet einen kostenlosen Tarif mit 10 Optimierungen pro Tag. Der Pro-Plan kostet $19,99/Monat für 500 Optimierungen/Tag mit API-Zugang. Der Pro-Max-Plan kostet $99,99/Monat für 1.500 Optimierungen/Tag mit priorisierter Verarbeitung. Überprüfen Sie die aktuellen Preise auf promptperfect.jina.ai vor dem Kauf.',
+            a: 'PromptPerfect wird am 1. September 2026 eingestellt und nimmt seit Juni 2026 keine Neuanmeldungen mehr an — diese Preise gelten daher nur für bestehende, auslaufende Konten. Es bot einen kostenlosen Tarif mit 10 Optimierungen pro Tag, einen Pro-Plan für $19,99/Monat (500 Optimierungen/Tag, API-Zugang) und einen Pro-Max-Plan für $99,99/Monat (1.500 Optimierungen/Tag, priorisierte Verarbeitung).',
           },
           {
             q: 'Soll ich PromptLayer oder Mirascope wählen?',
@@ -739,7 +751,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'Ist PromptLayer für den deutschen Mittelstand geeignet?',
-            a: 'PromptLayer ist für kleine Teams (Pro: $49/Monat, bis 5 Nutzer) und mittelgroße Teams (Team: $500/Monat, bis 25 Nutzer) geeignet. Für BSI-Grundschutz-konforme Deployments im Mittelstand ist der Enterprise-Plan mit EU-Hosting erforderlich. Mirascope (Apache 2.0, kostenlos) ist die bevorzugte Wahl für Mittelstandsunternehmen, die DSGVO-Konformität ohne SaaS-Kosten benötigen. PromptPerfect eignet sich für kreative Mittelstandsteams ohne regulatorische Anforderungen, aber nicht für regulierte Branchen.',
+            a: 'PromptLayer ist für kleine Teams (Pro: $49/Monat, bis 5 Nutzer) und mittelgroße Teams (Team: $500/Monat, bis 25 Nutzer) geeignet. Für BSI-Grundschutz-konforme Deployments im Mittelstand ist der Enterprise-Plan mit EU-Hosting erforderlich. Mirascope (MIT, kostenlos) ist die bevorzugte Wahl für Mittelstandsunternehmen, die DSGVO-Konformität ohne SaaS-Kosten benötigen. PromptPerfect eignete sich für kreative Mittelstandsteams ohne regulatorische Anforderungen, ist aber ab 1. September 2026 nicht mehr verfügbar.',
           },
         ],
       },
@@ -756,7 +768,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Quellen',
         items: [
           '[PromptLayer-Dokumentation](https://docs.promptlayer.com) — offizielle Dokumentation zu SDK-Setup, Prompt-Versionierung, A/B-Tests und Dashboard-Analyse.',
-          '[Mirascope GitHub Repository](https://github.com/Mirascope/mirascope) — Apache-2.0-Quellcode, Provider-Integrations-Leitfäden und Nutzungsbeispiele.',
+          '[Mirascope GitHub Repository](https://github.com/Mirascope/mirascope) — MIT-Quellcode, Provider-Integrations-Leitfäden und Nutzungsbeispiele.',
           '[PromptPerfect von Jina AI](https://promptperfect.jina.ai) — offizielle Produktseite mit Preistarifen, unterstützten Modellen und API-Dokumentation.',
           '[PromptLayer Pricing](https://promptlayer.com/pricing) — aktuelle Preistariife; vor dem Kauf überprüfen, da sich Pläne möglicherweise geändert haben.',
         ],
@@ -768,7 +780,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: 'PromptLayer vs Mirascope vs PromptPerfect (2026)',
       description: 'PromptLayer protokolliert und versioniert LLM-Aufrufe, Mirascope ist ein kostenloses Python-SDK für typsichere LLM-Apps, PromptPerfect schreibt Prompts automatisch um. Drei Tools für drei verschiedene Probleme — je eines auswählen.',
       datePublished: '2026-04-10',
-      dateModified: '2026-05-01',
+      dateModified: '2026-08-27',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: {
         '@type': 'Organization',
@@ -825,10 +837,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
     heroImage: '/images/promptlayer-vs-mirascope-vs-promptperfect-overview-hero-es.webp',
     title: 'PromptLayer vs Mirascope vs PromptPerfect (2026)',
     seoTitle: 'PromptLayer vs Mirascope vs PromptPerfect 2026: elige uno',
-    metaDescription: 'PromptLayer ($49/mes) registra llamadas LLM, Mirascope (gratis) crea apps Python y PromptPerfect ($20/mes) reescribe prompts. Problemas distintos: elige uno.',
-    intro: '**PromptLayer registra y versiona llamadas LLM (gratis–$49/mes para equipos pequeños). Mirascope es un SDK Python gratuito para apps LLM type-safe. PromptPerfect reescribe prompts automáticamente para mejores resultados ($0–$20/mes). Estas tres herramientas resuelven problemas distintos — elige exactamente una según tu cuello de botella.**',
+    metaDescription: 'PromptLayer ($49/mes) registra llamadas LLM, Mirascope (gratis) crea apps Python, PromptPerfect (cierra sept. 2026) reescribía prompts. Compara y elige.',
+    intro: '**PromptLayer registra y versiona llamadas LLM (gratis–$49/mes para equipos pequeños). Mirascope es un SDK Python gratuito para apps LLM type-safe. PromptPerfect reescribía prompts automáticamente para mejores resultados ($0–$20/mes), pero cierra el 1 de septiembre de 2026. Estas tres herramientas resuelven problemas distintos — elige exactamente una según tu cuello de botella.**',
     publishDate: '2026-04-10',
-    dateModified: '2026-05-01',
+    dateModified: '2026-08-27',
     readTime: '8 min de lectura',
     educationalLevel: 'Intermediate',
     audience: 'Ingenieros de prompts y desarrolladores eligiendo entre PromptLayer, Mirascope y PromptPerfect',
@@ -836,7 +848,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
     aboutTopics: ['Gestión de Prompts', 'Observabilidad LLM', 'Optimización de Prompts'],
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-10-10',
-    lastFactChecked: '2026-05-01',
+    lastFactChecked: '2026-08-27',
+    leadAnswerBlock: '**PromptLayer es la opción para equipos que registran llamadas LLM en producción ($49/mes). Mirascope es la alternativa gratuita y de código abierto (MIT) para desarrolladores Python que quieren código LLM type-safe. PromptPerfect cierra el 1 de septiembre de 2026 y ya no acepta registros. Elige exactamente una.**',
     toc: [
       { label: 'Qué hacen PromptLayer, Mirascope y PromptPerfect', anchor: '#what-is' },
       { label: 'Cómo comparamos estas herramientas', anchor: '#evaluation-criteria' },
@@ -855,8 +868,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
     quickFacts: [
       'Tier gratuito de PromptLayer: 2.500 peticiones/mes, 10 plantillas de prompts, 5 usuarios; plan Pro $49/mes',
       'Plan Team de PromptLayer: $500/mes — 25 usuarios, 100.000+ peticiones/mes',
-      'Mirascope es open-source (Apache 2.0) con coste SaaS cero — soporta 20+ proveedores LLM',
-      'Tier gratuito de PromptPerfect: 10 optimizaciones/día; plan Pro $19.99/mes (500/día), Pro Max $99.99/mes (1.500/día)',
+      'Mirascope es open-source (MIT) con coste SaaS cero — soporta 20+ proveedores LLM',
+      'PromptPerfect cierra el 1 de septiembre de 2026 (sin nuevos registros desde junio de 2026) — era tier gratuito 10 optimizaciones/día, Pro $19.99/mes (500/día), Pro Max $99.99/mes (1.500/día)',
       'PromptLayer soporta OpenAI, Anthropic, Cohere, Azure OpenAI y 10+ proveedores de forma nativa',
       'PromptPerfect soporta modelos de texto (GPT-4, Claude) y modelos de imagen (Midjourney, Stable Diffusion)',
     ],
@@ -866,7 +879,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           'PromptLayer es la única herramienta de las tres construida para observabilidad LLM en producción — registra coste, latencia y uso por versión de prompt en tiempo real.',
           'Mirascope es gratuito y open-source — la elección correcta para desarrolladores Python que quieren llamadas LLM type-safe sin una plataforma SaaS ni tarifa mensual.',
-          'PromptPerfect se dirige a usuarios no técnicos: reescribe prompts vía una interfaz web, sin código requerido, desde $0 a $20/mes (Pro) o $100/mes (Pro Max).',
+          'PromptPerfect se dirigía a usuarios no técnicos con reescritura de prompts vía interfaz web, sin código, desde $0 a $99.99/mes (Pro Max) — pero dejó de aceptar registros en junio de 2026 y cierra por completo el 1 de septiembre de 2026.',
           'Estas tres herramientas no compiten — resuelven cuellos de botella diferentes. No necesitarás las tres.',
           'Si registras llamadas LLM en producción: PromptLayer. Si construyes apps Python: Mirascope. Si mejoras prompts manualmente: PromptPerfect.',
           'Ninguna de estas herramientas evalúa la calidad del output sistemáticamente — para eval sistemática, usa Braintrust o Promptfoo.',
@@ -959,7 +972,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'Mirascope no tiene dashboard, no tiene plataforma de logging ni suscripción SaaS. Es una herramienta para desarrolladores — mejora la experiencia de desarrollo de escribir código LLM, no la observabilidad de ejecutarlo. Para logging en producción sobre Mirascope, los equipos suelen añadir PromptLayer o una capa de logging personalizada por separado.',
         ],
         items: [
-          'Licencia: Apache 2.0 open-source — $0 para cualquier tamaño de equipo, sin límites de uso',
+          'Licencia: MIT open-source — $0 para cualquier tamaño de equipo, sin límites de uso',
           'Proveedores soportados: OpenAI, Anthropic, Gemini, Mistral, Groq, Cohere, Together AI y 15+ más',
           'Validación de output: integración nativa con Pydantic para extracción estructurada y verificación de tipos',
           'Sin dashboard, sin logging, sin plataforma alojada — biblioteca pura para desarrolladores',
@@ -969,7 +982,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             type: 'tip',
             label: 'Coste mensual cero',
-            text: 'Mirascope tiene licencia Apache open-source sin tier de pago ni límites de uso. El único coste son las llamadas a la API LLM subyacente (OpenAI, Anthropic, etc.). Para equipos Python con presupuesto ajustado, este es el punto de partida de menor fricción para el desarrollo LLM estructurado.',
+            text: 'Mirascope tiene licencia MIT open-source sin tier de pago ni límites de uso. El único coste son las llamadas a la API LLM subyacente (OpenAI, Anthropic, etc.). Para equipos Python con presupuesto ajustado, este es el punto de partida de menor fricción para el desarrollo LLM estructurado.',
           },
         ],
       },
@@ -989,6 +1002,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'Output: prompt reescrito + explicación de cada cambio realizado',
         ],
         callouts: [
+          {
+            type: 'warning',
+            label: 'PromptPerfect está cerrando',
+            text: 'Jina AI dejó de aceptar nuevos registros en PromptPerfect en junio de 2026. Tras la adquisición de Jina AI por Elastic en octubre de 2025, PromptPerfect cierra definitivamente el 1 de septiembre de 2026, y los datos de las cuentas se eliminarán el 1 de octubre de 2026. Los usuarios existentes deben exportar sus prompts ahora — no construyas nuevos flujos de trabajo sobre esta herramienta.',
+          },
           {
             type: 'warning',
             label: 'Output no determinista',
@@ -1061,7 +1079,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: [
           '**Elige PromptLayer si tu equipo necesita monitorizar llamadas LLM en producción, rastrear coste por feature o comparar versiones de prompts en tráfico real sin un despliegue de código.**',
           '**Elige Mirascope si estás construyendo aplicaciones Python que llaman a LLMs y quieres código type-safe, testeable y agnóstico al proveedor a coste SaaS cero.**',
-          '**Elige PromptPerfect si necesitas mejorar prompts específicos rápidamente sin escribir código — particularmente para generación de imágenes o flujos de trabajo de creación de contenido.**',
+          '**Elige PromptPerfect si necesitas mejorar prompts específicos rápidamente sin escribir código — particularmente para generación de imágenes o flujos de trabajo de creación de contenido.** Nota: PromptPerfect dejó de aceptar nuevos registros en junio de 2026 y cierra definitivamente el 1 de septiembre de 2026 — solo relevante si ya tienes una cuenta activa.',
           '**Antes de comprometerte con cualquier proveedor específico, usa [PromptQuorum](/features) para despachar el mismo prompt a 25+ modelos de IA simultáneamente** — un paso de validación agnóstico al modelo que confirma si tu optimización del prompt se generaliza entre proveedores.',
           'No uses PromptLayer si estás pre-producción y no tienes tráfico en vivo que registrar — sus características de observabilidad no tienen valor sin datos de producción. No uses Mirascope si tu equipo no escribe Python — es una biblioteca Python-only sin interfaz web. No uses PromptPerfect si necesitas testing de prompts automatizado y reproducible — su output no determinista lo hace inadecuado para gates CI/CD.',
           'Para un flujo de trabajo completo de configuración del equipo con propiedad de revisión de prompts y gates CI/CD, consulta [Configuración de prompt engineering para equipos pequeños](/es/prompt-engineering/prompt-engineering-setup-small-teams).',
@@ -1100,7 +1118,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         numberedItems: [
           'Comprueba si tienes tráfico en vivo. Si sí y necesitas depurar costes o fallos: PromptLayer. Si no, salta PromptLayer hasta que lances — su valor es cero sin datos de producción.',
           'Comprueba si tu equipo escribe Python. Si sí y quieres código LLM limpio y type-safe: Mirascope. Si no, Mirascope no es una opción — no tiene interfaz web ni SDK no-Python.',
-          'Comprueba si alguien en tu equipo necesita mejorar prompts sin escribir código. Si sí: PromptPerfect. Si el equipo son todos ingenieros: PromptPerfect raramente es la mejor opción.',
+          'Comprueba si alguien en tu equipo necesita mejorar prompts sin escribir código. Si sí: PromptPerfect (solo si ya tienes cuenta — sin registros desde junio de 2026, cierra el 1 de septiembre de 2026). Si el equipo son todos ingenieros: PromptPerfect raramente es la mejor opción.',
           'Comprueba si necesitas evaluación de calidad sistemática — métricas, scoring, testing de regresión. Si sí: ninguna de estas tres herramientas lo cubre. Añade Braintrust o Promptfoo para eval en su lugar.',
           'Camino por defecto para la mayoría de equipos de ingeniería: empieza con Mirascope (gratis, calidad de código), añade PromptLayer una vez en vivo (~$20/mes), y salta PromptPerfect a menos que tengas autores de prompts no técnicos.',
         ],
@@ -1126,7 +1144,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: '¿Cuánto cuesta PromptPerfect?',
-            a: 'PromptPerfect ofrece un tier gratuito con 10 optimizaciones por día. El plan Pro cuesta $19.99/mes para 500 optimizaciones/día con acceso a API. El plan Pro Max cuesta $99.99/mes para 1.500 optimizaciones/día con procesamiento prioritario. Verifica los precios actuales en promptperfect.jina.ai antes de comprar.',
+            a: 'PromptPerfect cierra el 1 de septiembre de 2026 y no acepta nuevos registros desde junio de 2026, por lo que estos precios solo aplican a cuentas existentes en fase de cierre. Ofrecía un tier gratuito con 10 optimizaciones por día, un plan Pro a $19.99/mes (500 optimizaciones/día, acceso a API) y un plan Pro Max a $99.99/mes (1.500 optimizaciones/día, procesamiento prioritario).',
           },
           {
             q: '¿Debo elegir PromptLayer o Mirascope?',
@@ -1159,7 +1177,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Fuentes',
         items: [
           '[Documentación de PromptLayer](https://docs.promptlayer.com) — documentación oficial que cubre configuración del SDK, versionado de prompts, A/B testing y análisis de dashboard.',
-          '[Repositorio GitHub de Mirascope](https://github.com/Mirascope/mirascope) — código fuente Apache 2.0, guías de integración de proveedores y ejemplos de uso.',
+          '[Repositorio GitHub de Mirascope](https://github.com/Mirascope/mirascope) — código fuente MIT, guías de integración de proveedores y ejemplos de uso.',
           '[PromptPerfect by Jina AI](https://promptperfect.jina.ai) — página oficial del producto con tiers de precios, modelos soportados y documentación de API.',
           '[Precios de PromptLayer](https://promptlayer.com/pricing) — tiers de precios actuales; verifica antes de comprar ya que los planes pueden haber cambiado.',
         ],
@@ -1171,7 +1189,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: 'PromptLayer vs Mirascope vs PromptPerfect (2026)',
       description: 'PromptLayer registra y versiona llamadas LLM, Mirascope es un SDK Python gratuito para apps LLM type-safe, PromptPerfect reescribe prompts automáticamente. Tres herramientas, tres problemas distintos — elige exactamente una.',
       datePublished: '2026-04-10',
-      dateModified: '2026-05-01',
+      dateModified: '2026-08-27',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: {
         '@type': 'Organization',
@@ -1228,10 +1246,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
     heroImage: '/images/promptlayer-vs-mirascope-vs-promptperfect-overview-hero-ar.webp',
     title: '⁨PromptLayer⁩ مقابل ⁨Mirascope⁩ مقابل ⁨PromptPerfect⁩ (⁨2026⁩)',
     seoTitle: '⁨PromptLayer⁩ مقابل ⁨Mirascope⁩ مقابل ⁨PromptPerfect 2026⁩',
-    metaDescription: '⁨PromptLayer⁩ ($⁨49⁩/شهر) يسجّل استدعاءات ⁨LLMs⁩، ⁨Mirascope⁩ (مجاني) يبني تطبيقات ⁨Python⁩، و⁨PromptPerfect⁩ ($⁨20⁩/شهر) يُحسّن الموجّهات. اختر واحدة.',
-    intro: '**PromptLayer يسجّل ويُصدر استدعاءات نماذج اللغة (مجاني حتى $49/شهر للفرق الصغيرة). Mirascope مكتبة Python مجانية ومفتوحة المصدر لبناء تطبيقات نماذج اللغة الآمنة من حيث النوع. PromptPerfect يُعيد كتابة الموجّهات تلقائيًا للحصول على نتائج أفضل ($0–$20/شهر). تحل هذه الأدوات الثلاث مشاكل مختلفة — اختر واحدة فقط بناءً على نقطة الاختناق لديك.**',
+    metaDescription: '⁨PromptLayer⁩ ($⁨49⁩/شهر) يسجّل استدعاءات ⁨LLMs⁩، ⁨Mirascope⁩ (مجاني) يبني تطبيقات ⁨Python⁩، و⁨PromptPerfect⁩ (يُغلق سبتمبر 2026) كان يُحسّن الموجّهات. قارن قبل الاختيار.',
+    intro: '**PromptLayer يسجّل ويُصدر استدعاءات نماذج اللغة (مجاني حتى $49/شهر للفرق الصغيرة). Mirascope مكتبة Python مجانية ومفتوحة المصدر لبناء تطبيقات نماذج اللغة الآمنة من حيث النوع. كان PromptPerfect يُعيد كتابة الموجّهات تلقائيًا للحصول على نتائج أفضل ($0–$20/شهر)، لكنه يُغلق نهائيًا في 1 سبتمبر 2026. تحل هذه الأدوات الثلاث مشاكل مختلفة — اختر واحدة فقط بناءً على نقطة الاختناق لديك.**',
     publishDate: '2026-04-10',
-    dateModified: '2026-05-01',
+    dateModified: '2026-08-27',
     readTime: '٨ دقائق للقراءة',
     educationalLevel: 'Intermediate',
     audience: 'مهندسو الموجّهات والمطوّرون الذين يختارون بين PromptLayer وMirascope وPromptPerfect',
@@ -1239,7 +1257,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
     aboutTopics: ['إدارة الموجّهات', 'مراقبة نماذج اللغة', 'تحسين الموجّهات'],
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-10-10',
-    lastFactChecked: '2026-05-01',
+    lastFactChecked: '2026-08-27',
+    leadAnswerBlock: '**PromptLayer هو الخيار الأمثل للفرق التي تسجّل استدعاءات LLM في الإنتاج ($49/شهر). Mirascope هو الخيار المجاني ومفتوح المصدر (MIT) لمطوّري Python الذين يريدون كودًا آمن الأنواع لـ LLM. يُغلق PromptPerfect نهائيًا في 1 سبتمبر 2026 ولم يعد يقبل تسجيلات جديدة. اختر واحدًا فقط.**',
     toc: [
       { label: 'ما الذي تفعله PromptLayer وMirascope وPromptPerfect', anchor: '#what-is' },
       { label: 'كيف نقارن هذه الأدوات', anchor: '#evaluation-criteria' },
@@ -1258,8 +1277,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
     quickFacts: [
       'الطبقة المجانية من PromptLayer: 2,500 طلب/شهر، 10 قوالب موجّهات، 5 مستخدمين؛ خطة Pro بـ $49/شهر',
       'خطة Team من PromptLayer: $500/شهر — 25 مستخدمًا، أكثر من 100,000 طلب/شهر',
-      'Mirascope مفتوح المصدر (Apache 2.0) بدون تكلفة SaaS — يدعم أكثر من 20 مزوّد نموذج لغوي',
-      'الطبقة المجانية من PromptPerfect: 10 تحسينات/يوم؛ Pro بـ $19.99/شهر (500/يوم)، Pro Max بـ $99.99/شهر (1,500/يوم)',
+      'Mirascope مفتوح المصدر (MIT) بدون تكلفة SaaS — يدعم أكثر من 20 مزوّد نموذج لغوي',
+      'يُغلق PromptPerfect نهائيًا في 1 سبتمبر 2026 (لا تسجيلات جديدة منذ يونيو 2026) — كان الطبقة المجانية 10 تحسينات/يوم، Pro بـ $19.99/شهر (500/يوم)، Pro Max بـ $99.99/شهر (1,500/يوم)',
       'PromptLayer يدعم OpenAI وAnthropic وCohere وAzure OpenAI وأكثر من 10 مزوّدين آخرين',
       'PromptPerfect يدعم نماذج النصوص (GPT-4 وClaude) ونماذج الصور (Midjourney وStable Diffusion)',
     ],
@@ -1269,7 +1288,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           'PromptLayer هو الأداة الوحيدة من بين الثلاث المُصمَّمة لمراقبة نماذج اللغة في بيئة الإنتاج — تسجّل التكلفة والكمون والاستخدام لكل إصدار من الموجّهات في الوقت الفعلي.',
           'Mirascope مجاني ومفتوح المصدر — الخيار الصحيح للمطوّرين بلغة Python الذين يريدون استدعاءات نماذج اللغة الآمنة من حيث النوع دون منصة SaaS أو رسوم شهرية.',
-          'PromptPerfect مُوجَّه للمستخدمين غير التقنيين: يُعيد كتابة الموجّهات عبر واجهة ويب دون الحاجة إلى كتابة كود، من $0 إلى $20/شهر (Pro) أو $100/شهر (Pro Max).',
+          'كان PromptPerfect مُوجَّهًا للمستخدمين غير التقنيين بإعادة كتابة الموجّهات عبر واجهة ويب دون كود، من $0 إلى $99.99/شهر (Pro Max) — لكنه توقّف عن قبول تسجيلات جديدة منذ يونيو 2026 ويُغلق بالكامل في 1 سبتمبر 2026.',
           'هذه الأدوات الثلاث لا تتنافس — كل منها تحل نقطة اختناق مختلفة. لن تحتاج إلى الثلاثة.',
           'إذا كنت تسجّل استدعاءات نماذج اللغة في الإنتاج: اختر PromptLayer. إذا كنت تبني تطبيقات Python: اختر Mirascope. إذا كنت تحسّن الموجّهات يدويًا: اختر PromptPerfect.',
           'لا تُقيّم أيٌّ من هذه الأدوات جودة المخرجات بشكل منهجي — للتقييم المنهجي، استخدم Braintrust أو Promptfoo.',
@@ -1367,7 +1386,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'لا تمتلك Mirascope لوحة تحكم ولا منصة تسجيل ولا اشتراكًا في SaaS. إنها أداة للمطوّرين — تُحسّن تجربة تطوير كتابة كود نماذج اللغة، لا المراقبة في تشغيله. للتسجيل في الإنتاج فوق Mirascope، تضيف الفرق عادةً PromptLayer أو طبقة تسجيل مخصصة بشكل منفصل.',
         ],
         items: [
-          'الترخيص: Apache 2.0 مفتوح المصدر — $0 لأي حجم فريق، دون قيود استخدام',
+          'الترخيص: MIT مفتوح المصدر — $0 لأي حجم فريق، دون قيود استخدام',
           'المزوّدون المدعومون: OpenAI وAnthropic وGemini وMistral وGroq وCohere وTogether AI وأكثر من 15 آخرين',
           'التحقق من المخرجات: تكامل أصلي مع Pydantic للاستخراج المنظّم والتحقق من الأنواع',
           'لا لوحة تحكم، لا تسجيل، لا منصة مستضافة — مكتبة بحتة للمطوّرين',
@@ -1377,7 +1396,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             type: 'tip',
             label: 'تكلفة شهرية صفرية',
-            text: 'Mirascope مرخَّص بموجب Apache مفتوح المصدر بدون طبقة مدفوعة أو قيود استخدام. التكلفة الوحيدة هي استدعاءات API لنموذج اللغة الأساسي (OpenAI وAnthropic وغيرهما). للفرق بلغة Python ذات الميزانية المحدودة، هذه هي نقطة البداية الأقل احتكاكًا لتطوير نماذج اللغة المنظّم.',
+            text: 'Mirascope مرخَّص بموجب MIT مفتوح المصدر بدون طبقة مدفوعة أو قيود استخدام. التكلفة الوحيدة هي استدعاءات API لنموذج اللغة الأساسي (OpenAI وAnthropic وغيرهما). للفرق بلغة Python ذات الميزانية المحدودة، هذه هي نقطة البداية الأقل احتكاكًا لتطوير نماذج اللغة المنظّم.',
           },
         ],
       },
@@ -1397,6 +1416,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'المخرج: موجّه مُعاد كتابته + شرح لكل تغيير أُجري',
         ],
         callouts: [
+          {
+            type: 'warning',
+            label: 'PromptPerfect في طريقه إلى الإغلاق',
+            text: 'توقّفت Jina AI عن قبول تسجيلات جديدة في PromptPerfect منذ يونيو 2026. وبعد استحواذ Elastic على Jina AI في أكتوبر 2025، يُغلق PromptPerfect نهائيًا في 1 سبتمبر 2026، وتُحذف بيانات الحسابات في 1 أكتوبر 2026. يجب على المستخدمين الحاليين تصدير موجّهاتهم الآن — لا تبنِ سير عمل جديدًا حول هذه الأداة.',
+          },
           {
             type: 'warning',
             label: 'مخرج غير حتمي',
@@ -1469,7 +1493,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: [
           '**اختر PromptLayer إذا كان فريقك يحتاج إلى مراقبة استدعاءات نماذج اللغة في الإنتاج، وتتبّع التكلفة لكل ميزة، أو مقارنة إصدارات الموجّهات على حركة المرور الحقيقية دون نشر كود.**',
           '**اختر Mirascope إذا كنت تبني تطبيقات Python تستدعي نماذج اللغة وتريد كودًا آمنًا من حيث النوع وقابلًا للاختبار وغير مرتبط بمزوّد محدد بتكلفة SaaS صفرية.**',
-          '**اختر PromptPerfect إذا كنت بحاجة إلى تحسين موجّهات محددة بسرعة دون كتابة كود — خاصةً لتوليد الصور أو سير عمل إنشاء المحتوى.**',
+          '**اختر PromptPerfect إذا كنت بحاجة إلى تحسين موجّهات محددة بسرعة دون كتابة كود — خاصةً لتوليد الصور أو سير عمل إنشاء المحتوى.** ملاحظة: توقّف PromptPerfect عن قبول تسجيلات جديدة منذ يونيو 2026 ويُغلق نهائيًا في 1 سبتمبر 2026 — هذا الخيار مناسب فقط إن كان لديك حساب نشط بالفعل.',
           '**قبل الالتزام بأي مزوّد محدد، استخدم [PromptQuorum](/features) لإرسال نفس الموجّه إلى أكثر من 25 نموذج ذكاء اصطناعي في آنٍ واحد** — خطوة تحقق مستقلة عن النموذج تؤكد ما إذا كان تحسين الموجّه لديك يتعمّم عبر المزوّدين.',
           'لا تستخدم PromptLayer إذا كنت قبل مرحلة الإنتاج وليس لديك حركة مرور مباشرة للتسجيل — ميزات المراقبة لا قيمة لها دون بيانات إنتاج. لا تستخدم Mirascope إذا لم يكتب فريقك Python — إنها مكتبة Python فقط بدون واجهة ويب. لا تستخدم PromptPerfect إذا كنت تحتاج إلى اختبار موجّهات آلي وقابل للتكرار — مخرجها غير الحتمي يجعلها غير مناسبة لبوابات CI/CD.',
           'لسير عمل إعداد فريق كامل مع ملكية مراجعة الموجّهات وبوابات CI/CD، راجع [إعداد هندسة الموجّهات للفرق الصغيرة](/ar/prompt-engineering/prompt-engineering-setup-small-teams).',
@@ -1508,7 +1532,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         numberedItems: [
           'تحقق مما إذا كان لديك حركة مرور مباشرة. إذا كانت الإجابة نعم وتحتاج إلى تصحيح التكاليف أو الأعطال: PromptLayer. إذا لا، تخطَّ PromptLayer حتى الإطلاق — قيمته صفرية دون بيانات إنتاج.',
           'تحقق مما إذا كان فريقك يكتب بلغة Python. إذا نعم وتريد كود نماذج لغة نظيفًا وآمنًا من حيث النوع: Mirascope. إذا لا، Mirascope ليس خيارًا — لا توجد واجهة ويب ولا SDK لغير Python.',
-          'تحقق مما إذا كان شخص ما في فريقك يحتاج إلى تحسين الموجّهات دون كتابة كود. إذا نعم: PromptPerfect. إذا كان الفريق كله مهندسين: PromptPerfect نادرًا ما يكون الخيار الأمثل.',
+          'تحقق مما إذا كان شخص ما في فريقك يحتاج إلى تحسين الموجّهات دون كتابة كود. إذا نعم: PromptPerfect (فقط إذا كان لديك حساب بالفعل — لا تسجيلات جديدة منذ يونيو 2026، ويُغلق في 1 سبتمبر 2026). إذا كان الفريق كله مهندسين: PromptPerfect نادرًا ما يكون الخيار الأمثل.',
           'تحقق مما إذا كنت تحتاج إلى تقييم منهجي للجودة — مقاييس وتسجيل نقاط واختبار الانحدار. إذا نعم: لا تغطي أيٌّ من هذه الأدوات الثلاث ذلك. أضف Braintrust أو Promptfoo للتقييم بدلاً من ذلك.',
           'المسار الافتراضي لمعظم فرق الهندسة: ابدأ بـ Mirascope (مجاني، جودة الكود)، أضف PromptLayer بمجرد الانتقال إلى الإنتاج (حوالي $20/شهر)، وتخطَّ PromptPerfect ما لم يكن لديك كتّاب موجّهات غير تقنيين.',
         ],
@@ -1534,7 +1558,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'كم يكلّف PromptPerfect؟',
-            a: 'PromptPerfect يقدّم طبقة مجانية بـ 10 تحسينات يوميًا. خطة Pro تكلّف $19.99/شهر لـ 500 تحسين/يوم مع وصول إلى API. خطة Pro Max تكلّف $99.99/شهر لـ 1,500 تحسين/يوم مع معالجة ذات أولوية. تحقق من الأسعار الحالية على promptperfect.jina.ai قبل الشراء.',
+            a: 'يُغلق PromptPerfect نهائيًا في 1 سبتمبر 2026 ولم يعد يقبل تسجيلات جديدة منذ يونيو 2026، لذا تنطبق هذه الأسعار فقط على الحسابات الحالية في طور الإغلاق. كان يقدّم طبقة مجانية بـ 10 تحسينات يوميًا، وخطة Pro بسعر $19.99/شهر (500 تحسين/يوم، وصول إلى API)، وخطة Pro Max بسعر $99.99/شهر (1,500 تحسين/يوم، معالجة ذات أولوية).',
           },
           {
             q: 'هل أختار PromptLayer أم Mirascope؟',
@@ -1567,7 +1591,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'المصادر',
         items: [
           '[وثائق PromptLayer](https://docs.promptlayer.com) — وثائق رسمية تغطي إعداد SDK وإصدار الموجّهات واختبار A/B وتحليلات لوحة التحكم.',
-          '[مستودع GitHub لـ Mirascope](https://github.com/Mirascope/mirascope) — كود المصدر Apache 2.0 وأدلة تكامل المزوّدين وأمثلة الاستخدام.',
+          '[مستودع GitHub لـ Mirascope](https://github.com/Mirascope/mirascope) — كود المصدر MIT وأدلة تكامل المزوّدين وأمثلة الاستخدام.',
           '[PromptPerfect بواسطة Jina AI](https://promptperfect.jina.ai) — صفحة المنتج الرسمية مع طبقات الأسعار والنماذج المدعومة ووثائق API.',
           '[أسعار PromptLayer](https://promptlayer.com/pricing) — طبقات الأسعار الحالية؛ تحقق قبل الشراء لأن الخطط قد تغيّرت.',
         ],
@@ -1579,7 +1603,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: 'PromptLayer vs Mirascope vs PromptPerfect (2026)',
       description: 'PromptLayer يسجّل ويُصدر استدعاءات نماذج اللغة، Mirascope مكتبة Python مجانية لتطبيقات نماذج اللغة الآمنة من حيث النوع، PromptPerfect يُعيد كتابة الموجّهات تلقائيًا. ثلاث أدوات، ثلاث مشاكل مختلفة — اختر واحدة فقط.',
       datePublished: '2026-04-10',
-      dateModified: '2026-05-01',
+      dateModified: '2026-08-27',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: {
         '@type': 'Organization',
@@ -1636,14 +1660,19 @@ export const article: Partial<Record<Language, PEArticle>> = {
     heroImage: '/images/promptlayer-vs-mirascope-vs-promptperfect-overview-hero-pt.webp',
     title: 'PromptLayer vs Mirascope vs PromptPerfect (2026)',
     seoTitle: 'PromptLayer vs Mirascope vs PromptPerfect 2026: escolha um',
-    metaDescription: 'PromptLayer (R$49/mês) registra chamadas LLM, Mirascope (grátis) cria apps Python e PromptPerfect (R$20/mês) reescreve prompts. Problemas distintos: escolha um.',
-    intro: '**PromptLayer registra e versiona chamadas LLM (grátis–$49/mês para equipes pequenas). Mirascope é um SDK Python gratuito para apps LLM type-safe. PromptPerfect reescreve prompts automaticamente para melhores resultados ($0–$20/mês). Essas três ferramentas resolvem problemas distintos — escolha exatamente uma de acordo com seu gargalo.**',
+    metaDescription: 'PromptLayer ($49/mês) registra chamadas LLM, Mirascope (grátis) cria apps Python, PromptPerfect (encerra set. 2026) reescrevia prompts. Compare e escolha.',
+    intro: '**PromptLayer registra e versiona chamadas LLM (grátis–$49/mês para equipes pequenas). Mirascope é um SDK Python gratuito para apps LLM type-safe. PromptPerfect reescrevia prompts automaticamente para melhores resultados ($0–$20/mês), mas está encerrando em setembro de 2026. Essas três ferramentas resolvem problemas distintos — escolha exatamente uma de acordo com seu gargalo.**',
     publishDate: '2026-04-10',
+    dateModified: '2026-08-27',
     readTime: '8 min de leitura',
     educationalLevel: 'Intermediate',
     audience: 'Engenheiros de prompts e desenvolvedores escolhendo entre PromptLayer, Mirascope e PromptPerfect',
     primaryTerm: 'PromptLayer vs Mirascope vs PromptPerfect',
     aboutTopics: ['Gerenciamento de Prompts', 'Observabilidade LLM', 'Otimização de Prompts'],
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2026-10-10',
+    lastFactChecked: '2026-08-27',
+    leadAnswerBlock: '**O PromptLayer é a escolha para equipes que registram chamadas LLM em produção ($49/mês). O Mirascope é a opção gratuita e open-source (MIT) para desenvolvedores Python que querem código LLM type-safe. O PromptPerfect está encerrando em 1º de setembro de 2026. Escolha exatamente um.**',
     toc: [
       { label: 'O que fazem PromptLayer, Mirascope e PromptPerfect', anchor: '#what-is' },
       { label: 'Como comparamos essas ferramentas', anchor: '#evaluation-criteria' },
@@ -1662,8 +1691,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
     quickFacts: [
       'Nível gratuito do PromptLayer: 2.500 solicitações/mês, 10 modelos de prompts, 5 usuários; plano Pro $49/mês',
       'Plano Team do PromptLayer: $500/mês — 25 usuários, 100.000+ solicitações/mês',
-      'Mirascope é open-source (Apache 2.0) sem custo SaaS — suporta 20+ provedores LLM',
-      'Nível gratuito do PromptPerfect: 10 otimizações/dia; plano Pro $19,99/mês (500/dia), Pro Max $99,99/mês (1.500/dia)',
+      'Mirascope é open-source (MIT) sem custo SaaS — suporta 20+ provedores LLM',
+      'O PromptPerfect encerra em 1º de setembro de 2026 (sem novos cadastros desde junho de 2026) — era nível gratuito 10 otimizações/dia, Pro $19,99/mês (500/dia), Pro Max $99,99/mês (1.500/dia)',
       'PromptLayer suporta OpenAI, Anthropic, Cohere, Azure OpenAI e 10+ provedores nativamente',
       'PromptPerfect suporta modelos de texto (GPT-4, Claude) e modelos de imagem (Midjourney, Stable Diffusion)',
     ],
@@ -1673,7 +1702,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           'PromptLayer é a única ferramenta das três construída para observabilidade LLM em produção — registra custo, latência e uso por versão de prompt em tempo real.',
           'Mirascope é gratuito e open-source — a escolha certa para desenvolvedores Python que querem chamadas LLM type-safe sem uma plataforma SaaS nem taxa mensal.',
-          'PromptPerfect se dirige a usuários não técnicos: reescreve prompts via interface web, sem código necessário, de $0 a $19,99/mês (Pro) ou $99,99/mês (Pro Max).',
+          'O PromptPerfect se dirigia a usuários não técnicos com reescrita de prompts via interface web, sem código, de $0 a $99,99/mês (Pro Max) — mas parou de aceitar cadastros em junho de 2026 e encerra totalmente em 1º de setembro de 2026.',
           'Essas três ferramentas não competem entre si — resolvem gargalos diferentes. Você não precisará das três.',
           'Se você registra chamadas LLM em produção: PromptLayer. Se você constrói apps Python: Mirascope. Se você melhora prompts manualmente: PromptPerfect.',
           'Nenhuma dessas ferramentas avalia a qualidade da saída sistematicamente — para avaliação sistemática, use Braintrust ou Promptfoo.',
@@ -1745,7 +1774,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'Mirascope não tem painel, não tem plataforma de logging nem assinatura SaaS. É uma ferramenta para desenvolvedores — melhora a experiência de desenvolvimento de escrever código LLM, não a observabilidade de executá-lo.',
         ],
         items: [
-          'Licença: Apache 2.0 open-source — $0 para qualquer tamanho de equipe, sem limites de uso',
+          'Licença: MIT open-source — $0 para qualquer tamanho de equipe, sem limites de uso',
           'Provedores suportados: OpenAI, Anthropic, Gemini, Mistral, Groq, Cohere, Together AI e 15+ mais',
           'Validação de output: integração nativa com Pydantic para extração estruturada e verificação de tipos',
           'Sem painel, sem logging, sem plataforma hospedada — biblioteca pura para desenvolvedores',
@@ -1755,7 +1784,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             type: 'tip',
             label: 'Custo mensal zero',
-            text: 'Mirascope tem licença Apache open-source sem nível pago nem limites de uso. O único custo são as chamadas à API LLM subjacente (OpenAI, Anthropic, etc.). Para equipes Python com orçamento limitado, este é o ponto de partida de menor atrito para o desenvolvimento LLM estruturado.',
+            text: 'Mirascope tem licença MIT open-source sem nível pago nem limites de uso. O único custo são as chamadas à API LLM subjacente (OpenAI, Anthropic, etc.). Para equipes Python com orçamento limitado, este é o ponto de partida de menor atrito para o desenvolvimento LLM estruturado.',
           },
         ],
       },
@@ -1775,6 +1804,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'Saída: prompt reescrito + explicação de cada alteração feita',
         ],
         callouts: [
+          {
+            type: 'warning',
+            label: 'O PromptPerfect está encerrando',
+            text: 'A Jina AI parou de aceitar novos cadastros no PromptPerfect em junho de 2026. Após a aquisição da Jina AI pela Elastic em outubro de 2025, o PromptPerfect encerra definitivamente em 1º de setembro de 2026, com exclusão dos dados de conta em 1º de outubro de 2026. Usuários existentes devem exportar seus prompts agora — não construa novos fluxos de trabalho em torno desta ferramenta.',
+          },
           {
             type: 'warning',
             label: 'Saída não determinística',
@@ -1812,7 +1846,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: [
           '**Escolha PromptLayer se sua equipe precisa monitorar chamadas LLM em produção, rastrear custo por funcionalidade ou comparar versões de prompts em tráfego real sem uma implantação de código.**',
           '**Escolha Mirascope se você está construindo aplicações Python que chamam LLMs e quer código type-safe, testável e agnóstico ao provedor a custo SaaS zero.**',
-          '**Escolha PromptPerfect se você precisa melhorar prompts específicos rapidamente sem escrever código — particularmente para geração de imagens ou fluxos de trabalho de criação de conteúdo.**',
+          '**Escolha PromptPerfect se você precisa melhorar prompts específicos rapidamente sem escrever código — particularmente para geração de imagens ou fluxos de trabalho de criação de conteúdo.** Atenção: o PromptPerfect parou de aceitar novos cadastros em junho de 2026 e encerra definitivamente em 1º de setembro de 2026 — só é relevante se você já tem uma conta ativa.',
           '**Antes de se comprometer com qualquer provedor específico, use o PromptQuorum para despachar o mesmo prompt para 25+ modelos de IA simultaneamente** — um passo de validação agnóstico ao modelo que confirma se sua otimização do prompt se generaliza entre provedores.',
           'Não use PromptLayer se você está em pré-produção e não tem tráfego ao vivo para registrar. Não use Mirascope se sua equipe não escreve Python. Não use PromptPerfect se você precisa de testes de prompts automatizados e reproduzíveis.',
         ],
@@ -1849,7 +1883,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         numberedItems: [
           'Verifique se você tem tráfego ao vivo. Se sim e precisa depurar custos ou falhas: PromptLayer. Se não, pule o PromptLayer até que você lance.',
           'Verifique se sua equipe escreve Python. Se sim e quer código LLM limpo e type-safe: Mirascope. Se não, Mirascope não é uma opção.',
-          'Verifique se alguém em sua equipe precisa melhorar prompts sem escrever código. Se sim: PromptPerfect.',
+          'Verifique se alguém em sua equipe precisa melhorar prompts sem escrever código. Se sim: PromptPerfect (só faz sentido se você já tem uma conta — sem novos cadastros desde junho de 2026, encerra em 1º de setembro de 2026).',
           'Verifique se você precisa de avaliação de qualidade sistemática — métricas, pontuação, testes de regressão. Se sim: nenhuma dessas três ferramentas cobre isso. Adicione Braintrust ou Promptfoo para avaliação.',
           'Caminho padrão para a maioria das equipes de engenharia: comece com Mirascope (grátis, qualidade de código), adicione PromptLayer uma vez em produção (~$49/mês), e pule PromptPerfect a menos que você tenha autores de prompts não técnicos.',
         ],
@@ -1867,7 +1901,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         faqs: [
           { q: 'Para que serve o PromptLayer?', a: 'PromptLayer registra cada chamada à API LLM em um painel com histórico de solicitações, custo, latência e rastreamento de versões de prompts. As equipes o usam para depurar falhas LLM em produção, rastrear o custo de API por funcionalidade e comparar versões de prompts em tráfego real.' },
           { q: 'Mirascope é melhor que LangChain?', a: 'Eles resolvem problemas distintos. Mirascope se concentra em chamadas LLM type-safe e agnósticas ao provedor com validação Pydantic. LangChain é um framework de orquestração mais amplo com chains, agentes e memória. Mirascope é a melhor opção para equipes que querem chamadas LLM limpas sem o overhead de abstração do LangChain; LangChain é melhor para fluxos de trabalho de agentes complexos.' },
-          { q: 'Quanto custa o PromptPerfect?', a: 'PromptPerfect oferece um nível gratuito com 10 otimizações por dia. O plano Pro custa $19,99/mês para 500 otimizações/dia com acesso à API. O plano Pro Max custa $99,99/mês para 1.500 otimizações/dia com processamento prioritário.' },
+          { q: 'Quanto custa o PromptPerfect?', a: 'O PromptPerfect encerra em 1º de setembro de 2026 e não aceita novos cadastros desde junho de 2026, então esses preços valem apenas para contas existentes em fase de encerramento. Ele oferecia um nível gratuito com 10 otimizações por dia, um plano Pro a $19,99/mês (500 otimizações/dia, acesso à API) e um plano Pro Max a $99,99/mês (1.500 otimizações/dia, processamento prioritário).' },
           { q: 'Devo escolher PromptLayer ou Mirascope?', a: 'Eles fazem coisas diferentes e a maioria das equipes precisa de ambos ou de nenhum. PromptLayer é uma plataforma de observabilidade — use-o quando você tiver tráfego ao vivo. Mirascope é uma biblioteca para desenvolvedores Python — use-o quando estiver escrevendo aplicações LLM e quiser código type-safe e testável.' },
           { q: 'Quantos provedores LLM o Mirascope suporta?', a: 'Mirascope suporta 20+ provedores, incluindo OpenAI, Anthropic (Claude), Google Gemini, Mistral, Groq, Cohere, Together AI e outros. Mudar de provedor requer alterar um parâmetro no decorador de função.' },
           { q: 'PromptLayer é o mesmo que uma ferramenta de versionamento de prompts?', a: 'PromptLayer inclui versionamento de prompts (armazena modelos por nome e versão, busca via API), mas seu valor principal é a observabilidade — registrar cada chamada LLM em produção com dados de custo, latência e erro.' },
@@ -1887,7 +1921,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Fontes',
         items: [
           '[Documentação do PromptLayer](https://docs.promptlayer.com) — documentação oficial que cobre configuração do SDK, versionamento de prompts, testes A/B e análise de painel.',
-          '[Repositório GitHub do Mirascope](https://github.com/Mirascope/mirascope) — código-fonte Apache 2.0, guias de integração de provedores e exemplos de uso.',
+          '[Repositório GitHub do Mirascope](https://github.com/Mirascope/mirascope) — código-fonte MIT, guias de integração de provedores e exemplos de uso.',
           '[PromptPerfect by Jina AI](https://promptperfect.jina.ai) — página oficial do produto com níveis de preços, modelos suportados e documentação da API.',
           '[Preços do PromptLayer](https://promptlayer.com/pricing) — níveis de preços atuais; verifique antes de comprar pois os planos podem ter mudado.',
         ],
@@ -1897,8 +1931,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'PromptLayer vs Mirascope vs PromptPerfect (2026)',
-      description: 'PromptLayer registra e versiona chamadas LLM, Mirascope é um SDK Python gratuito para apps LLM type-safe, PromptPerfect reescreve prompts automaticamente. Três ferramentas, três problemas distintos — escolha exatamente uma.',
+      description: 'PromptLayer registra e versiona chamadas LLM, Mirascope é um SDK Python gratuito para apps LLM type-safe, PromptPerfect (encerrando em setembro de 2026) reescrevia prompts automaticamente. Três ferramentas, três problemas distintos — escolha exatamente uma.',
       datePublished: '2026-04-10',
+      dateModified: '2026-08-27',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       url: 'https://www.promptquorum.com/pt/prompt-engineering/promptlayer-vs-mirascope-vs-promptperfect',
@@ -1933,10 +1968,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
     heroImage: '/images/promptlayer-vs-mirascope-vs-promptperfect-overview-hero-fr.webp',
     title: 'PromptLayer vs Mirascope vs PromptPerfect (2026)',
     seoTitle: 'Comparatif PromptLayer, Mirascope et PromptPerfect 2026',
-    metaDescription: 'PromptLayer ($49/mois) trace les appels LLM, Mirascope (gratuit) structure le code Python, PromptPerfect ($20/mois) réécrit les prompts. Choisir un outil.',
-    intro: '**PromptLayer journalise et versionne les appels LLM (gratuit à $49/mois pour les petites équipes). Mirascope est un SDK Python gratuit pour les applications LLM à typage fort. PromptPerfect réécrit automatiquement les prompts pour de meilleurs résultats ($0–$19.99/mois). Ces trois outils résolvent des problèmes distincts — choisissez exactement celui qui correspond à votre goulot d\'étranglement.**',
+    metaDescription: 'PromptLayer ($49/mois) trace les appels LLM, Mirascope (gratuit) structure le code Python, PromptPerfect (ferme en sept. 2026) réécrivait les prompts. Comparez.',
+    intro: '**PromptLayer journalise et versionne les appels LLM (gratuit à $49/mois pour les petites équipes). Mirascope est un SDK Python gratuit pour les applications LLM à typage fort. PromptPerfect réécrivait automatiquement les prompts pour de meilleurs résultats ($0–$19.99/mois), mais ferme définitivement le 1er septembre 2026. Ces trois outils résolvent des problèmes distincts — choisissez exactement celui qui correspond à votre goulot d\'étranglement.**',
     publishDate: '2026-04-10',
-    dateModified: '2026-05-01',
+    dateModified: '2026-08-27',
     readTime: '8 min de lecture',
     educationalLevel: 'Intermediate',
     audience: 'Ingénieurs prompt et développeurs choisissant entre PromptLayer, Mirascope et PromptPerfect',
@@ -1944,7 +1979,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
     aboutTopics: ['Prompt Management', 'LLM Observability', 'Prompt Optimization'],
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-10-10',
-    lastFactChecked: '2026-05-01',
+    lastFactChecked: '2026-08-27',
+    leadAnswerBlock: '**PromptLayer est le choix pour les équipes qui enregistrent les appels LLM en production ($49/mois). Mirascope est l\'option gratuite et open-source (MIT) pour les développeurs Python qui veulent du code LLM type-safe. PromptPerfect ferme définitivement le 1er septembre 2026 et n\'accepte plus d\'inscriptions. Choisissez-en exactement un.**',
     toc: [
       { label: 'Ce que font PromptLayer, Mirascope et PromptPerfect', anchor: '#what-is' },
       { label: 'Critères de comparaison des outils', anchor: '#evaluation-criteria' },
@@ -1963,8 +1999,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
     quickFacts: [
       'Plan gratuit PromptLayer : 2 500 requêtes/mois, 10 templates de prompts, 5 utilisateurs ; plan Pro à $49/mois',
       'Plan Team PromptLayer : $500/mois — 25 utilisateurs, 100 000+ requêtes/mois',
-      'Mirascope est open source (Apache 2.0) sans frais SaaS — supporte 20+ fournisseurs LLM',
-      'Plan gratuit PromptPerfect : 10 optimisations/jour ; plan Pro à $19.99/mois (500/jour), Pro Max à $99.99/mois (1 500/jour)',
+      'Mirascope est open source (MIT) sans frais SaaS — supporte 20+ fournisseurs LLM',
+      'PromptPerfect ferme le 1er septembre 2026 (plus de nouvelles inscriptions depuis juin 2026) — était plan gratuit 10 optimisations/jour, Pro à $19.99/mois (500/jour), Pro Max à $99.99/mois (1 500/jour)',
       'PromptLayer supporte OpenAI, Anthropic, Cohere, Azure OpenAI et 10+ fournisseurs nativement',
       'PromptPerfect supporte les modèles texte (GPT-4, Claude) et les modèles d\'image (Midjourney, Stable Diffusion)',
     ],
@@ -1974,7 +2010,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           'PromptLayer est le seul des trois outils conçu pour l\'observabilité LLM en production — il journalise les coûts, la latence et l\'usage par version de prompt en temps réel.',
           'Mirascope est gratuit et open source — le choix approprié pour les développeurs Python souhaitant des appels LLM à typage fort sans plateforme SaaS ni frais mensuels.',
-          'PromptPerfect cible les non-développeurs : il réécrit les prompts via une interface web, sans code, de $0 à $19.99/mois (Pro) ou $99.99/mois (Pro Max).',
+          'PromptPerfect ciblait les non-développeurs avec la réécriture de prompts via une interface web, sans code, de $0 à $99.99/mois (Pro Max) — mais il n\'accepte plus d\'inscriptions depuis juin 2026 et ferme entièrement le 1er septembre 2026.',
           'Ces trois outils ne se concurrencent pas — ils résolvent des problèmes différents. Vous n\'aurez pas besoin des trois.',
           'Pour journaliser les appels LLM en production : PromptLayer. Pour développer des apps Python : Mirascope. Pour améliorer les prompts manuellement : PromptPerfect.',
           'Aucun de ces outils n\'évalue la qualité des sorties de manière systématique — pour une évaluation systématique, utilisez Braintrust ou Promptfoo.',
@@ -2067,7 +2103,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'Mirascope n\'a pas de tableau de bord, pas de plateforme de journalisation, pas d\'abonnement SaaS. C\'est un outil développeur — il améliore l\'expérience de développement du code LLM, pas l\'observabilité à l\'exécution. Pour la journalisation en production, les équipes ajoutent généralement PromptLayer ou une couche de journalisation personnalisée.',
         ],
         items: [
-          'Licence : Apache 2.0 open source — $0 pour toute taille d\'équipe, sans limite d\'usage',
+          'Licence : MIT open source — $0 pour toute taille d\'équipe, sans limite d\'usage',
           'Fournisseurs supportés : OpenAI, Anthropic, Gemini, Mistral, Groq, Cohere, Together AI et 15+ autres',
           'Validation des sorties : intégration Pydantic native pour l\'extraction structurée et la vérification de types',
           'Pas de tableau de bord, pas de journalisation, pas de plateforme hébergée — bibliothèque développeur pure',
@@ -2077,7 +2113,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             type: 'tip',
             label: 'Zéro coût mensuel',
-            text: 'Mirascope est open source sous licence Apache, sans plan payant ni limite d\'usage. Le seul coût est celui des appels API LLM sous-jacents (OpenAI, Anthropic, etc.). Pour les équipes Python avec un budget serré, c\'est le point de départ le moins coûteux pour le développement LLM structuré.',
+            text: 'Mirascope est open source sous licence MIT, sans plan payant ni limite d\'usage. Le seul coût est celui des appels API LLM sous-jacents (OpenAI, Anthropic, etc.). Pour les équipes Python avec un budget serré, c\'est le point de départ le moins coûteux pour le développement LLM structuré.',
           },
         ],
       },
@@ -2097,6 +2133,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'Sortie : prompt réécrit + explication de chaque modification apportée',
         ],
         callouts: [
+          {
+            type: 'warning',
+            label: 'PromptPerfect ferme définitivement',
+            text: 'Jina AI n\'accepte plus de nouvelles inscriptions à PromptPerfect depuis juin 2026. Après le rachat de Jina AI par Elastic en octobre 2025, PromptPerfect ferme définitivement le 1er septembre 2026, avec suppression des données de compte le 1er octobre 2026. Les utilisateurs existants doivent exporter leurs prompts dès maintenant — ne construisez pas de nouveaux workflows autour de cet outil.',
+          },
           {
             type: 'warning',
             label: 'Sortie non-déterministe',
@@ -2169,7 +2210,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: [
           '**Choisissez PromptLayer si votre équipe doit surveiller les appels LLM en production, suivre le coût par fonctionnalité ou comparer des versions de prompts sur le trafic réel sans déploiement de code.**',
           '**Choisissez Mirascope si vous développez des applications Python appelant des LLMs et souhaitez du code à typage fort, testable et indépendant du fournisseur, sans coût SaaS.**',
-          '**Choisissez PromptPerfect si vous devez améliorer rapidement des prompts spécifiques sans écrire de code — notamment pour les workflows de génération d\'images ou de création de contenu.**',
+          '**Choisissez PromptPerfect si vous devez améliorer rapidement des prompts spécifiques sans écrire de code — notamment pour les workflows de génération d\'images ou de création de contenu.** Remarque : PromptPerfect n\'accepte plus de nouvelles inscriptions depuis juin 2026 et ferme définitivement le 1er septembre 2026 — pertinent uniquement si vous avez déjà un compte actif.',
           'N\'utilisez pas PromptLayer si vous êtes en pré-production sans trafic réel à journaliser — ses fonctionnalités d\'observabilité n\'ont aucune valeur sans données de production. N\'utilisez pas Mirascope si votre équipe n\'écrit pas Python — c\'est une bibliothèque Python uniquement, sans interface web. N\'utilisez pas PromptPerfect si vous avez besoin de tests de prompts automatisés et reproductibles — sa sortie non-déterministe le rend inadapté aux gates CI/CD.',
           'Pour un workflow complet de configuration d\'équipe avec gestion des revues de prompts et gates CI/CD, voir [Configuration de prompt engineering pour les petites équipes](/fr/prompt-engineering/prompt-engineering-setup-small-teams).',
         ],
@@ -2207,7 +2248,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         numberedItems: [
           'Vérifiez si vous avez du trafic réel. Si oui et que vous devez déboguer des coûts ou des erreurs : PromptLayer. Si non, ignorez PromptLayer jusqu\'au lancement — sa valeur est nulle sans données de production.',
           'Vérifiez si votre équipe écrit en Python. Si oui et que vous voulez du code LLM propre et typé : Mirascope. Si non, Mirascope n\'est pas une option — il n\'a pas d\'interface web ni de SDK non-Python.',
-          'Vérifiez si quelqu\'un dans votre équipe doit améliorer des prompts sans écrire de code. Si oui : PromptPerfect. Si l\'équipe est entièrement composée d\'ingénieurs, PromptPerfect est rarement le meilleur choix.',
+          'Vérifiez si quelqu\'un dans votre équipe doit améliorer des prompts sans écrire de code. Si oui : PromptPerfect (uniquement si vous avez déjà un compte — plus d\'inscriptions depuis juin 2026, fermeture le 1er septembre 2026). Si l\'équipe est entièrement composée d\'ingénieurs, PromptPerfect est rarement le meilleur choix.',
           'Vérifiez si vous avez besoin d\'une évaluation systématique de la qualité — métriques, scoring, tests de régression. Si oui : aucun de ces trois outils ne couvre cela. Ajoutez Braintrust ou Promptfoo pour l\'évaluation.',
           'Parcours par défaut pour la plupart des équipes d\'ingénierie : commencez avec Mirascope (gratuit, qualité du code), ajoutez PromptLayer une fois en production (~$49/mois), et ignorez PromptPerfect sauf si vous avez des auteurs de prompts non-développeurs.',
         ],
@@ -2233,7 +2274,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'Combien coûte PromptPerfect ?',
-            a: 'PromptPerfect propose un plan gratuit avec 10 optimisations par jour. Le plan Pro coûte $19.99/mois pour 500 optimisations/jour avec accès API. Le plan Pro Max coûte $99.99/mois pour 1 500 optimisations/jour avec traitement prioritaire. Vérifiez les tarifs actuels sur promptperfect.jina.ai avant tout achat.',
+            a: 'PromptPerfect ferme définitivement le 1er septembre 2026 et n\'accepte plus de nouvelles inscriptions depuis juin 2026 — ces tarifs ne concernent donc que les comptes existants en cours de fermeture. Il proposait un plan gratuit avec 10 optimisations par jour, un plan Pro à $19.99/mois (500 optimisations/jour, accès API) et un plan Pro Max à $99.99/mois (1 500 optimisations/jour, traitement prioritaire).',
           },
           {
             q: 'Dois-je choisir PromptLayer ou Mirascope ?',
@@ -2266,7 +2307,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Sources',
         items: [
           '[Documentation PromptLayer](https://docs.promptlayer.com) — documentation officielle couvrant la configuration SDK, le versionnage de prompts, les tests A/B et les analytics du tableau de bord.',
-          '[Dépôt GitHub Mirascope](https://github.com/Mirascope/mirascope) — code source Apache 2.0, guides d\'intégration des fournisseurs et exemples d\'utilisation.',
+          '[Dépôt GitHub Mirascope](https://github.com/Mirascope/mirascope) — code source MIT, guides d\'intégration des fournisseurs et exemples d\'utilisation.',
           '[PromptPerfect par Jina AI](https://promptperfect.jina.ai) — page produit officielle avec les plans tarifaires, les modèles supportés et la documentation API.',
           '[Tarifs PromptLayer](https://promptlayer.com/pricing) — plans tarifaires actuels ; à vérifier avant tout achat, les plans pouvant avoir évolué.',
         ],
@@ -2278,7 +2319,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: 'PromptLayer vs Mirascope vs PromptPerfect (2026)',
       description: 'PromptLayer journalise les appels LLM, Mirascope est un SDK Python gratuit pour applications à typage fort, PromptPerfect réécrit les prompts automatiquement. Trois outils pour trois problèmes distincts.',
       datePublished: '2026-04-10',
-      dateModified: '2026-05-01',
+      dateModified: '2026-08-27',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: {
         '@type': 'Organization',
@@ -2335,10 +2376,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
     heroImage: '/images/promptlayer-vs-mirascope-vs-promptperfect-overview-hero-ja.webp',
     title: 'PromptLayer vs Mirascope vs PromptPerfect（2026年）',
     seoTitle: 'PromptLayer vs Mirascope vs PromptPerfect 2026年：1つを選ぶ',
-    metaDescription: 'PromptLayer（$49/月）はLLMコールを記録、Mirascope（無料）はPython SDK、PromptPerfect（$19.99/月）はプロンプトを自動最適化。3ツールは異なる問題を解決 — 1つを選択。',
-    intro: '**PromptLayerはLLMコールをログ・バージョン管理します（無料〜小規模チーム向け$49/月）。MirascopeはPython SDKで型安全なLLMアプリを構築できます（無料）。PromptPerfectはプロンプトを自動的に書き換えて精度を向上させます（$0〜$19.99/月）。この3つのツールは異なる問題を解決するものです — ボトルネックに合わせて1つだけ選択してください。**',
+    metaDescription: 'PromptLayer（$49/月）はLLMコールを記録、Mirascope（無料）はPython SDK、PromptPerfect（2026年9月終了）はプロンプトを自動最適化していた。比較して1つを選択。',
+    intro: '**PromptLayerはLLMコールをログ・バージョン管理します（無料〜小規模チーム向け$49/月）。MirascopeはPython SDKで型安全なLLMアプリを構築できます（無料）。PromptPerfectはプロンプトを自動的に書き換えて精度を向上させていました（$0〜$19.99/月）が、2026年9月1日にサービスを終了します。この3つのツールは異なる問題を解決するものです — ボトルネックに合わせて1つだけ選択してください。**',
     publishDate: '2026-04-10',
-    dateModified: '2026-05-01',
+    dateModified: '2026-08-27',
     readTime: '8分で読める',
     educationalLevel: 'Intermediate',
     audience: 'PromptLayer、Mirascope、PromptPerfectの選択を検討しているプロンプトエンジニアと開発者',
@@ -2346,7 +2387,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
     aboutTopics: ['Prompt Management', 'LLM Observability', 'Prompt Optimization'],
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-10-10',
-    lastFactChecked: '2026-05-01',
+    lastFactChecked: '2026-08-27',
+    leadAnswerBlock: '**PromptLayerは本番環境でLLM呼び出しを記録したいチーム向けです（$49/月）。Mirascopeは型安全なLLMコードを求めるPython開発者向けの無料オープンソース（MIT）の選択肢です。PromptPerfectは2026年9月1日に完全にサービスを終了し、新規登録も受け付けていません。3つのうち1つだけを選んでください。**',
     toc: [
       { label: 'PromptLayer・Mirascope・PromptPerfectの機能概要', anchor: '#what-is' },
       { label: '比較方法', anchor: '#evaluation-criteria' },
@@ -2365,8 +2407,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
     quickFacts: [
       'PromptLayer無料プラン：2,500リクエスト/月、10プロンプトテンプレート、5ユーザー。Proは$49/月',
       'PromptLayerチームプラン：$500/月 — 25ユーザー、100,000件以上のリクエスト/月',
-      'MirascopeはオープンソースApache 2.0 — SaaSコスト不要、20以上のLLMプロバイダーに対応',
-      'PromptPerfect無料プラン：10回/日。Proプラン$19.99/月（500回/日）、Pro Max $99.99/月（1,500回/日）',
+      'Mirascopeはオープンソース（MIT）— SaaSコスト不要、20以上のLLMプロバイダーに対応',
+      'PromptPerfectは2026年9月1日にサービス終了（2026年6月以降新規登録なし）— 無料プラン10回/日、Proプラン$19.99/月（500回/日）、Pro Max $99.99/月（1,500回/日）だった',
       'PromptLayerはOpenAI、Anthropic、Cohere、Azure OpenAIおよび10以上のプロバイダーをネイティブサポート',
       'PromptPerfectはテキストモデル（GPT-4、Claude）および画像モデル（Midjourney、Stable Diffusion）に対応',
     ],
@@ -2376,7 +2418,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           '3ツールの中で本番環境のLLM観測に特化しているのはPromptLayerのみです — プロンプトバージョンごとのコスト・レイテンシ・利用状況をリアルタイムで記録します。',
           'Mirascopeは無料のオープンソースライブラリです — SaaSプラットフォームや月額費用なしに型安全なLLMコードを書きたいPython開発者に最適です。',
-          'PromptPerfectは非開発者向けです：コード不要でWeb UIからプロンプトを書き換えます。無料〜$19.99/月（Pro）または$99.99/月（Pro Max）。',
+          'PromptPerfectは非開発者向けにコード不要のWeb UIプロンプト書き換えを提供していました（無料〜$99.99/月、Pro Max）— しかし2026年6月から新規登録を停止しており、2026年9月1日に完全にサービスを終了します。',
           'この3つのツールは競合しません — それぞれ異なるボトルネックを解決します。3つ全てが必要になることはほぼありません。',
           '本番LLMコールの記録：PromptLayer。PythonアプリのLLM実装：Mirascope。コード不要のプロンプト改善：PromptPerfect。',
           'いずれのツールも出力品質を体系的に評価する機能はありません — 体系的な評価にはBraintrustまたはPromptfooを使用してください。',
@@ -2469,7 +2511,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'Mirascopeにはダッシュボードも、ロギングプラットフォームも、SaaSサブスクリプションもありません。開発者向けツールです — LLMコードを実行する際の可観測性ではなく、記述する際の開発体験を向上させます。Mirascope上で本番ログが必要なチームは、PromptLayerまたはカスタムロギングレイヤーを別途追加するのが一般的です。',
         ],
         items: [
-          'ライセンス：Apache 2.0オープンソース — チーム規模・利用量を問わず$0',
+          'ライセンス：MITオープンソース — チーム規模・利用量を問わず$0',
           '対応プロバイダー：OpenAI、Anthropic、Gemini、Mistral、Groq、Cohere、Together AI、その他15以上',
           '出力バリデーション：構造化抽出と型チェックのためのネイティブPydantic統合',
           'ダッシュボード・ロギング・ホステッドプラットフォームなし — 純粋な開発者ライブラリ',
@@ -2479,7 +2521,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             type: 'tip',
             label: '月額コストゼロ',
-            text: 'MirascopeはApacheライセンスのオープンソースで、有料プランも利用量制限もありません。コストはOpenAIやAnthropicなどの基盤となるLLM APIコール分のみです。予算の制約があるPythonチームにとって、構造化LLM開発の最も低摩擦な出発点です。',
+            text: 'MirascopeはMITライセンスのオープンソースで、有料プランも利用量制限もありません。コストはOpenAIやAnthropicなどの基盤となるLLM APIコール分のみです。予算の制約があるPythonチームにとって、構造化LLM開発の最も低摩擦な出発点です。',
           },
         ],
       },
@@ -2499,6 +2541,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '出力：書き換え済みプロンプト + 変更内容の説明',
         ],
         callouts: [
+          {
+            type: 'warning',
+            label: 'PromptPerfectはサービスを終了します',
+            text: 'Jina AIは2026年6月以降、PromptPerfectの新規登録受付を停止しています。2025年10月のElasticによるJina AI買収を受け、PromptPerfectは2026年9月1日に完全にサービスを終了し、アカウントデータは2026年10月1日に削除されます。既存ユーザーは今すぐプロンプトをエクスポートしてください — このツールを前提とした新しいワークフローは構築しないでください。',
+          },
           {
             type: 'warning',
             label: '非決定論的な出力',
@@ -2571,7 +2618,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: [
           '**本番環境でLLMコールを監視し、機能ごとのコストを追跡し、コードデプロイなしで実際のトラフィックでプロンプトバージョンを比較したいチームにはPromptLayerを選択してください。**',
           '**LLMを呼び出すPythonアプリを構築しており、SaaSコストゼロで型安全・テスト可能・プロバイダー非依存のコードが欲しい場合はMirascopeを選択してください。**',
-          '**コードを書かずに特定のプロンプトを素早く改善したい場合 — 特に画像生成やコンテンツ制作ワークフローでは — PromptPerfectを選択してください。**',
+          '**コードを書かずに特定のプロンプトを素早く改善したい場合 — 特に画像生成やコンテンツ制作ワークフローでは — PromptPerfectを選択してください。** 注意：PromptPerfectは2026年6月以降新規登録を停止しており、2026年9月1日に完全にサービスを終了します — 既にアカウントをお持ちの場合にのみ該当します。',
           'プロダクション前でログに記録するライブトラフィックがない場合はPromptLayerを使わないでください — Observability機能は本番データなしでは価値がありません。チームがPythonを書かない場合はMirascopeは選択肢になりません — Python専用ライブラリでWeb UIはありません。自動化・再現可能なプロンプトテストが必要な場合はPromptPerfectを使わないでください — 非決定論的な出力はCI/CDゲートには不適です。',
           'プロンプトレビューのオーナーシップとCI/CDゲートを含む完全なチームセットアップについては[小規模チームのプロンプトエンジニアリング設定](/ja/prompt-engineering/prompt-engineering-setup-small-teams)を参照してください。',
         ],
@@ -2608,7 +2655,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         numberedItems: [
           'ライブトラフィックがあるか確認する。ある場合でコストや失敗をデバッグしたい：PromptLayer。ない場合はローンチまでPromptLayerをスキップ — 本番データなしでは価値がゼロです。',
           'チームがPythonを書くか確認する。書く場合でクリーンな型安全LLMコードが欲しい：Mirascope。書かない場合はMirascopeは選択肢外 — Web UIも非Python SDKもありません。',
-          'チーム内でコードを書かずにプロンプトを改善したいメンバーがいるか確認する。いる場合：PromptPerfect。全員エンジニアの場合：PromptPerfectは最良の選択でないことが多いです。',
+          'チーム内でコードを書かずにプロンプトを改善したいメンバーがいるか確認する。いる場合：PromptPerfect（既存アカウントがある場合のみ有効 — 2026年6月から新規登録停止、2026年9月1日にサービス終了）。全員エンジニアの場合：PromptPerfectは最良の選択でないことが多いです。',
           '体系的な品質評価（メトリクス・スコアリング・回帰テスト）が必要か確認する。必要な場合：この3つのツールでは対応できません。代わりにBraintrustまたはPromptfooを追加してください。',
           'ほとんどのエンジニアリングチームのデフォルトパス：まずMirascope（無料、コード品質）から始め、ローンチ後にPromptLayerを追加（〜$49/月）、そして非開発者のプロンプト作成者がいない限りPromptPerfectはスキップする。',
         ],
@@ -2634,7 +2681,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'PromptPerfectの料金はいくらですか？',
-            a: 'PromptPerfectは1日10回の最適化が使える無料プランを提供しています。Proプランは月額$19.99で500回/日の最適化とAPIアクセスが含まれます。Pro Maxプランは月額$99.99で1,500回/日の最適化と優先処理が含まれます。購入前にpromptperfect.jina.aiで最新の価格を確認してください。',
+            a: 'PromptPerfectは2026年9月1日にサービスを終了し、2026年6月以降新規登録を受け付けていないため、この料金は縮小中の既存アカウントにのみ適用されます。1日10回の最適化が使える無料プラン、月額$19.99で500回/日の最適化とAPIアクセスを含むProプラン、月額$99.99で1,500回/日の最適化と優先処理を含むPro Maxプランを提供していました。',
           },
           {
             q: 'PromptLayerとMirascopeのどちらを選ぶべきですか？',
@@ -2667,7 +2714,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: '参考資料',
         items: [
           '[PromptLayer ドキュメント](https://docs.promptlayer.com) — SDKセットアップ・プロンプトバージョン管理・A/Bテスト・ダッシュボード分析をカバーする公式ドキュメント。',
-          '[Mirascope GitHubリポジトリ](https://github.com/Mirascope/mirascope) — Apache 2.0ソースコード、プロバイダー統合ガイド、使用例。',
+          '[Mirascope GitHubリポジトリ](https://github.com/Mirascope/mirascope) — MITソースコード、プロバイダー統合ガイド、使用例。',
           '[PromptPerfect by Jina AI](https://promptperfect.jina.ai) — 価格プラン・対応モデル・APIドキュメントを含む公式製品ページ。',
           '[PromptLayer 価格ページ](https://promptlayer.com/pricing) — 現在の価格プラン；購入前に確認してください（プランが変更されている場合があります）。',
         ],
@@ -2679,7 +2726,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: 'PromptLayer vs Mirascope vs PromptPerfect（2026年）',
       description: 'PromptLayerはLLMコールを記録・バージョン管理し、MirascopeはPythonで型安全なLLMアプリを構築し、PromptPerfectはプロンプトを自動最適化します。3つのツール、3つの異なる問題。',
       datePublished: '2026-04-10',
-      dateModified: '2026-05-01',
+      dateModified: '2026-08-27',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       url: 'https://www.promptquorum.com/ja/prompt-engineering/promptlayer-vs-mirascope-vs-promptperfect',
@@ -2732,10 +2779,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
     heroImage: '/images/promptlayer-vs-mirascope-vs-promptperfect-overview-hero-zh.webp',
     title: 'PromptLayer vs Mirascope vs PromptPerfect (2026)',
     seoTitle: 'PromptLayer vs Mirascope vs PromptPerfect 对比 2026：选一款',
-    metaDescription: 'PromptLayer（$49/月）记录 LLM 调用，Mirascope（免费）构建 Python 应用，PromptPerfect（$19.99/月）改写提示词。三款工具解决不同问题，按需选择一款。',
-    intro: '**PromptLayer 记录并版本化 LLM 调用（免费至小型团队 $49/月）。Mirascope 是免费的 Python SDK，用于构建类型安全的 LLM 应用。PromptPerfect 自动改写提示词以获得更好的结果（$0–$19.99/月）。这三款工具解决不同的问题 — 根据您的瓶颈选择其中一款。**',
+    metaDescription: 'PromptLayer（$49/月）记录 LLM 调用，Mirascope（免费）构建 Python 应用，PromptPerfect（2026年9月关闭）曾改写提示词。先比较，再选择一款。',
+    intro: '**PromptLayer 记录并版本化 LLM 调用（免费至小型团队 $49/月）。Mirascope 是免费的 Python SDK，用于构建类型安全的 LLM 应用。PromptPerfect 曾自动改写提示词以获得更好的结果（$0–$19.99/月），但将于 2026 年 9 月 1 日永久关闭。这三款工具解决不同的问题 — 根据您的瓶颈选择其中一款。**',
     publishDate: '2026-04-10',
-    dateModified: '2026-05-01',
+    dateModified: '2026-08-27',
     readTime: '阅读约8分钟',
     educationalLevel: 'Intermediate',
     audience: '正在评估 PromptLayer、Mirascope 和 PromptPerfect 的提示词工程师和开发者',
@@ -2743,7 +2790,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
     aboutTopics: ['Prompt Management', 'LLM Observability', 'Prompt Optimization'],
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-10-10',
-    lastFactChecked: '2026-05-01',
+    lastFactChecked: '2026-08-27',
+    leadAnswerBlock: '**PromptLayer 适合需要在生产环境中记录 LLM 调用的团队（$49/月）。Mirascope 是面向希望获得类型安全 LLM 代码的 Python 开发者的免费开源（MIT）选择。PromptPerfect 将于 2026 年 9 月 1 日永久关闭，且不再接受新用户注册。请只选择其中一个。**',
     toc: [
       { label: 'PromptLayer、Mirascope 和 PromptPerfect 各自的功能', anchor: '#what-is' },
       { label: '评估方法', anchor: '#evaluation-criteria' },
@@ -2762,8 +2810,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
     quickFacts: [
       'PromptLayer 免费套餐：2,500 次请求/月，10 个提示词模板，5 个用户；Pro 套餐 $49/月',
       'PromptLayer Team 套餐：$500/月 — 25 个用户，100,000+ 次请求/月',
-      'Mirascope 开源 Apache 2.0 — 无 SaaS 费用，支持 20 多个 LLM 提供商',
-      'PromptPerfect 免费套餐：10 次/天；Pro 套餐 $19.99/月（500 次/天），Pro Max $99.99/月（1,500 次/天）',
+      'Mirascope 开源（MIT）— 无 SaaS 费用，支持 20 多个 LLM 提供商',
+      'PromptPerfect 将于 2026 年 9 月 1 日关闭（自 2026 年 6 月起停止新用户注册）— 曾提供免费套餐 10 次/天，Pro 套餐 $19.99/月（500 次/天），Pro Max $99.99/月（1,500 次/天）',
       'PromptLayer 原生支持 OpenAI、Anthropic、Cohere、Azure OpenAI 及 10 多个提供商',
       'PromptPerfect 支持文本模型（GPT-4、Claude）和图像模型（Midjourney、Stable Diffusion）',
     ],
@@ -2773,7 +2821,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           '三款工具中，只有 PromptLayer 专为生产环境 LLM 可观测性而设计 — 实时记录每个提示词版本的成本、延迟和使用情况。',
           'Mirascope 免费且开源 — 适合希望在无 SaaS 平台和月费的情况下编写类型安全 LLM 代码的 Python 开发者。',
-          'PromptPerfect 面向非开发者：通过 Web 界面改写提示词，无需代码，$0 至 $19.99/月（Pro）或 $99.99/月（Pro Max）。',
+          'PromptPerfect 曾面向非开发者，通过 Web 界面改写提示词，无需代码，$0 至 $99.99/月（Pro Max）— 但自 2026 年 6 月起已停止注册，并将于 2026 年 9 月 1 日彻底关闭。',
           '这三款工具并不竞争 — 它们解决不同的瓶颈问题。您几乎不会同时需要三款。',
           '需要记录生产 LLM 调用：PromptLayer。需要构建 Python 应用：Mirascope。需要无代码改写提示词：PromptPerfect。',
           '这三款工具均不能系统性地评估输出质量 — 如需系统性评估，请使用 Braintrust 或 Promptfoo。',
@@ -2866,7 +2914,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'Mirascope 没有仪表板、日志平台或 SaaS 订阅。它是一个开发者工具 — 提升编写 LLM 代码的开发体验，而非运行时的可观测性。需要在 Mirascope 基础上进行生产日志记录的团队，通常会另外添加 PromptLayer 或自定义日志层。',
         ],
         items: [
-          '许可证：Apache 2.0 开源 — 不限团队规模，无使用限制，$0',
+          '许可证：MIT 开源 — 不限团队规模，无使用限制，$0',
           '支持提供商：OpenAI、Anthropic、Gemini、Mistral、Groq、Cohere、Together AI 及其他 15 个以上',
           '输出验证：原生 Pydantic 集成，用于结构化提取和类型检查',
           '无仪表板、无日志、无托管平台 — 纯粹的开发者库',
@@ -2876,7 +2924,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             type: 'tip',
             label: '零月费',
-            text: 'Mirascope 采用 Apache 许可证，无付费套餐或使用限制。唯一的成本是底层 LLM API 调用费用（OpenAI、Anthropic 等）。对于预算有限的 Python 团队，这是结构化 LLM 开发摩擦最小的起点。',
+            text: 'Mirascope 采用 MIT 许可证，无付费套餐或使用限制。唯一的成本是底层 LLM API 调用费用（OpenAI、Anthropic 等）。对于预算有限的 Python 团队，这是结构化 LLM 开发摩擦最小的起点。',
           },
         ],
       },
@@ -2896,6 +2944,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '输出：改写后的提示词 + 每处修改说明',
         ],
         callouts: [
+          {
+            type: 'warning',
+            label: 'PromptPerfect 即将关闭',
+            text: 'Jina AI 自 2026 年 6 月起已停止接受 PromptPerfect 的新用户注册。在 Elastic 于 2025 年 10 月收购 Jina AI 后，PromptPerfect 将于 2026 年 9 月 1 日永久下线，账户数据将于 2026 年 10 月 1 日被删除。现有用户应立即导出提示词 — 不要围绕该工具构建新的工作流。',
+          },
           {
             type: 'warning',
             label: '非确定性输出',
@@ -2968,7 +3021,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: [
           '**如果您的团队需要在生产环境中监控 LLM 调用、按功能追踪成本，或在不进行代码部署的情况下对真实流量比较提示词版本，请选择 PromptLayer。**',
           '**如果您正在构建调用 LLM 的 Python 应用，并希望以零 SaaS 成本实现类型安全、可测试、与提供商无关的代码，请选择 Mirascope。**',
-          '**如果您需要在不编写代码的情况下快速改进特定提示词 — 尤其是图像生成或内容创作工作流 — 请选择 PromptPerfect。**',
+          '**如果您需要在不编写代码的情况下快速改进特定提示词 — 尤其是图像生成或内容创作工作流 — 请选择 PromptPerfect。** 注意：PromptPerfect 自 2026 年 6 月起已停止接受新用户注册，并将于 2026 年 9 月 1 日永久关闭服务 — 仅对已有账户的用户有意义。',
           '如果您尚未上线且没有需要记录的实时流量，请勿使用 PromptLayer — 可观测性功能在没有生产数据的情况下毫无价值。如果您的团队不使用 Python，Mirascope 不是一个选项 — 它是纯 Python 库，没有 Web 界面。如果您需要自动化、可重现的提示词测试，请勿使用 PromptPerfect — 其非确定性输出不适合 CI/CD 质量门禁。',
           '关于包含提示词审查所有权和 CI/CD 门禁的完整团队配置工作流，请参阅 [小团队提示词工程配置](/zh/prompt-engineering/prompt-engineering-setup-small-teams)。',
         ],
@@ -3005,7 +3058,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         numberedItems: [
           '确认是否有实时流量。有的话且需要调试成本或故障：选 PromptLayer。没有的话，上线前跳过 PromptLayer — 没有生产数据，价值为零。',
           '确认团队是否编写 Python。是的话且希望有整洁的类型安全 LLM 代码：选 Mirascope。否的话，Mirascope 不是选项 — 没有 Web 界面，也没有非 Python SDK。',
-          '确认团队中是否有需要在不编写代码的情况下改进提示词的成员。有的话：选 PromptPerfect。全员都是工程师的话：PromptPerfect 通常不是最佳选择。',
+          '确认团队中是否有需要在不编写代码的情况下改进提示词的成员。有的话：选 PromptPerfect（仅当您已有账户 — 自 2026 年 6 月起停止注册，2026 年 9 月 1 日关闭）。全员都是工程师的话：PromptPerfect 通常不是最佳选择。',
           '确认是否需要系统性质量评估 — 指标、评分、回归测试。需要的话：这三款工具都无法覆盖。请改为添加 Braintrust 或 Promptfoo 进行评估。',
           '大多数工程团队的默认路径：从 Mirascope（免费，代码质量）开始，上线后添加 PromptLayer（约 $49/月），除非有非开发者提示词作者，否则跳过 PromptPerfect。',
         ],
@@ -3031,7 +3084,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'PromptPerfect 的价格是多少？',
-            a: 'PromptPerfect 提供每天 10 次优化的免费套餐。Pro 套餐每月 $19.99，含每天 500 次优化和 API 访问。Pro Max 套餐每月 $99.99，含每天 1,500 次优化和优先处理。购买前请在 promptperfect.jina.ai 核实最新价格。',
+            a: 'PromptPerfect 将于 2026 年 9 月 1 日永久关闭，自 2026 年 6 月起已停止接受新用户注册，因此该定价仅适用于正在退出服务的现有账户。此前它提供每天 10 次优化的免费套餐、每月 $19.99 含每天 500 次优化和 API 访问的 Pro 套餐，以及每月 $99.99 含每天 1,500 次优化和优先处理的 Pro Max 套餐。',
           },
           {
             q: '应该选择 PromptLayer 还是 Mirascope？',
@@ -3064,7 +3117,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: '参考资料',
         items: [
           '[PromptLayer 文档](https://docs.promptlayer.com) — 官方文档，涵盖 SDK 设置、提示词版本管理、A/B 测试和仪表板分析。',
-          '[Mirascope GitHub 仓库](https://github.com/Mirascope/mirascope) — Apache 2.0 源代码、提供商集成指南和使用示例。',
+          '[Mirascope GitHub 仓库](https://github.com/Mirascope/mirascope) — MIT 源代码、提供商集成指南和使用示例。',
           '[PromptPerfect by Jina AI](https://promptperfect.jina.ai) — 官方产品页面，含价格套餐、支持模型和 API 文档。',
           '[PromptLayer 价格页面](https://promptlayer.com/pricing) — 当前价格套餐；购买前请核实，套餐可能已有变动。',
         ],
@@ -3076,7 +3129,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: 'PromptLayer vs Mirascope vs PromptPerfect (2026)',
       description: 'PromptLayer 记录并版本化 LLM 调用，Mirascope 是构建类型安全 Python LLM 应用的免费库，PromptPerfect 自动改写提示词。三款工具，三个不同的问题。',
       datePublished: '2026-04-10',
-      dateModified: '2026-05-01',
+      dateModified: '2026-08-27',
       author: { '@type': 'Organization', name: 'PromptQuorum' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       url: 'https://www.promptquorum.com/zh/prompt-engineering/promptlayer-vs-mirascope-vs-promptperfect',
@@ -3128,10 +3181,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
     heroImage: '/images/promptlayer-vs-mirascope-vs-promptperfect-overview-hero-ko.webp',
     title: 'PromptLayer vs Mirascope vs PromptPerfect 비교 (2026)',
     seoTitle: 'PromptLayer vs Mirascope vs PromptPerfect 2026: 하나를 선택하십시오',
-    metaDescription: 'PromptLayer($49/월)는 LLM 호출을 기록하고, Mirascope(무료)는 Python 앱을 구축하며, PromptPerfect($20/월)는 프롬프트를 재작성합니다. 서로 다른 문제를 해결합니다 — 정확히 하나를 선택하십시오.',
-    intro: '**PromptLayer는 LLM 호출을 기록하고 버전 관리합니다(소규모 팀 기준 무료~$49/월). Mirascope는 타입 안전 LLM 앱을 위한 무료 Python SDK입니다. PromptPerfect는 더 나은 결과를 위해 프롬프트를 자동으로 재작성합니다($0~$20/월). 이 세 가지 도구는 서로 다른 문제를 해결합니다 — 병목 현상에 따라 정확히 하나를 선택하십시오.**',
+    metaDescription: 'PromptLayer($49/월)는 LLM 호출을 기록하고, Mirascope(무료)는 Python 앱을 구축하며, PromptPerfect(2026년 9월 종료)는 프롬프트를 재작성했습니다. 비교 후 하나를 선택하십시오.',
+    intro: '**PromptLayer는 LLM 호출을 기록하고 버전 관리합니다(소규모 팀 기준 무료~$49/월). Mirascope는 타입 안전 LLM 앱을 위한 무료 Python SDK입니다. PromptPerfect는 더 나은 결과를 위해 프롬프트를 자동으로 재작성했지만($0~$20/월), 2026년 9월 1일 서비스를 종료합니다. 이 세 가지 도구는 서로 다른 문제를 해결합니다 — 병목 현상에 따라 정확히 하나를 선택하십시오.**',
     publishDate: '2026-04-10',
-    dateModified: '2026-05-01',
+    dateModified: '2026-08-27',
     readTime: '8분 읽기',
     educationalLevel: 'Intermediate',
     audience: 'PromptLayer, Mirascope, PromptPerfect 중에서 선택하는 프롬프트 엔지니어 및 개발자',
@@ -3139,7 +3192,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
     aboutTopics: ['프롬프트 관리', 'LLM 옵저버빌리티', '프롬프트 최적화'],
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-10-10',
-    lastFactChecked: '2026-05-01',
+    lastFactChecked: '2026-08-27',
+    leadAnswerBlock: '**PromptLayer는 프로덕션 LLM 호출을 기록하는 팀에 적합합니다($49/월). Mirascope는 타입 안전 LLM 코드를 원하는 Python 개발자를 위한 무료 오픈소스(MIT) 선택지입니다. PromptPerfect는 2026년 9월 1일 서비스를 종료하며 더 이상 가입을 받지 않습니다. 정확히 하나만 선택하십시오.**',
     toc: [
       { label: 'PromptLayer, Mirascope, PromptPerfect 각각의 역할', anchor: '#what-is' },
       { label: '도구 비교 방법', anchor: '#evaluation-criteria' },
@@ -3158,8 +3212,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
     quickFacts: [
       'PromptLayer 무료 플랜: 월 2,500건 요청, 프롬프트 템플릿 10개, 사용자 5명; Pro 플랜 월 $49',
       'PromptLayer Team 플랜: 월 $500 — 사용자 25명, 월 100,000건 이상 요청',
-      'Mirascope는 오픈소스(Apache 2.0)로 SaaS 비용 없음 — 20개 이상의 LLM 공급자 지원',
-      'PromptPerfect 무료 플랜: 하루 최적화 10건; Pro 플랜 월 $19.99(하루 500건), Pro Max 월 $99.99(하루 1,500건)',
+      'Mirascope는 오픈소스(MIT)로 SaaS 비용 없음 — 20개 이상의 LLM 공급자 지원',
+      'PromptPerfect는 2026년 9월 1일 서비스 종료(2026년 6월부터 신규 가입 중단) — 무료 플랜 하루 10건, Pro 플랜 월 $19.99(하루 500건), Pro Max 월 $99.99(하루 1,500건)였음',
       'PromptLayer는 OpenAI, Anthropic, Cohere, Azure OpenAI 및 10개 이상의 공급자를 기본으로 지원',
       'PromptPerfect는 텍스트 모델(GPT-4, Claude)과 이미지 모델(Midjourney, Stable Diffusion) 지원',
     ],
@@ -3169,7 +3223,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         items: [
           'PromptLayer는 세 도구 중 유일하게 프로덕션 LLM 옵저버빌리티를 위해 구축된 도구입니다 — 프롬프트 버전별 비용, 지연 시간, 사용량을 실시간으로 기록합니다.',
           'Mirascope는 무료 오픈소스입니다 — SaaS 플랫폼이나 월정액 없이 타입 안전 LLM 호출을 원하는 Python 개발자에게 적합한 선택입니다.',
-          'PromptPerfect는 비개발자를 대상으로 합니다: 코드 없이 웹 UI를 통해 프롬프트를 재작성하며, 요금은 $0~$20/월(Pro) 또는 $100/월(Pro Max)입니다.',
+          'PromptPerfect는 비개발자를 대상으로 코드 없이 웹 UI로 프롬프트를 재작성했으며 요금은 $0~$99.99/월(Pro Max)이었습니다 — 하지만 2026년 6월부터 신규 가입을 받지 않으며 2026년 9월 1일 완전히 서비스를 종료합니다.',
           '이 세 가지 도구는 경쟁 관계가 아닙니다 — 각기 다른 병목 현상을 해결합니다. 세 가지 모두 필요하지는 않습니다.',
           '프로덕션 LLM 호출을 기록해야 한다면 PromptLayer, Python 앱을 구축한다면 Mirascope, 프롬프트를 수동으로 개선한다면 PromptPerfect를 사용하십시오.',
           '이 도구들 중 어느 것도 출력 품질을 체계적으로 평가하지 않습니다 — 체계적인 평가를 위해서는 Braintrust 또는 Promptfoo를 사용하십시오.',
@@ -3181,7 +3235,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: [
           '**PromptLayer, Mirascope, PromptPerfect는 거의 겹치지 않는 세 가지 서로 다른 워크플로 문제를 해결합니다.** PromptLayer는 LLM 호출에 옵저버빌리티를 추가합니다: 모든 요청을 기록하고, 비용과 지연 시간을 추적하며, 프롬프트 템플릿의 버전을 관리할 수 있습니다. Mirascope는 LLM 호출을 타입 안전하고 테스트 가능하며 공급자에 종속되지 않도록 만드는 Python 라이브러리입니다. PromptPerfect는 프롬프트를 입력받아 개선된 버전을 반환합니다 — 코드가 필요 없습니다.',
           '개발자들이 이 도구들을 혼동하는 이유: 세 가지 모두 프롬프트를 개선한다고 주장하지만, 단계와 사용자 유형이 다릅니다. PromptLayer는 어느 버전이 프로덕션에서 가장 성능이 좋은지 보여줌으로써 프롬프트를 개선합니다. Mirascope는 프롬프트를 구조화된 테스트 가능한 Python 함수로 만들어 개선합니다. PromptPerfect는 특정 모델에 맞게 프롬프트를 재작성하여 개선합니다.',
-          '프롬프트 엔지니어링 도구에 대한 더 넓은 순위는 [Best Prompt Engineering Tools 2026](/prompt-engineering/best-prompt-engineering-tools-2026)을 참조하십시오. 평가 및 CI/CD에 초점을 맞춘 도구는 [Braintrust vs PromptHub vs Vellum vs Promptfoo](/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo)를 참조하십시오.',
+          '프롬프트 엔지니어링 도구에 대한 더 넓은 순위는 [Best Prompt Engineering Tools 2026](/ko/prompt-engineering/best-prompt-engineering-tools-2026)을 참조하십시오. 평가 및 CI/CD에 초점을 맞춘 도구는 [Braintrust vs PromptHub vs Vellum vs Promptfoo](/ko/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo)를 참조하십시오.',
         ],
         snippets: [
           {
@@ -3262,7 +3316,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'Mirascope에는 대시보드, 로깅 플랫폼, SaaS 구독이 없습니다. 개발자 도구입니다 — LLM 코드를 작성하는 개발 경험을 향상시키며, 실행 중인 코드의 옵저버빌리티는 개선하지 않습니다. Mirascope 위에서 프로덕션 로깅을 위해 팀은 일반적으로 PromptLayer나 커스텀 로깅 레이어를 별도로 추가합니다.',
         ],
         items: [
-          '라이선스: Apache 2.0 오픈소스 — 팀 규모에 관계없이 $0, 사용량 제한 없음',
+          '라이선스: MIT 오픈소스 — 팀 규모에 관계없이 $0, 사용량 제한 없음',
           '지원 공급자: OpenAI, Anthropic, Gemini, Mistral, Groq, Cohere, Together AI 등 15개 이상',
           '출력 유효성 검사: 구조화된 추출 및 타입 검사를 위한 Pydantic 기본 통합',
           '대시보드, 로깅, 호스팅 플랫폼 없음 — 순수 개발자 라이브러리',
@@ -3272,7 +3326,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             type: 'tip',
             label: '월정액 비용 없음',
-            text: 'Mirascope는 Apache 라이선스 오픈소스로 유료 플랜이나 사용량 제한이 없습니다. 유일한 비용은 기반 LLM API 호출(OpenAI, Anthropic 등)입니다. 예산이 빠듯한 Python 팀에게 구조화된 LLM 개발의 가장 낮은 진입 장벽을 제공합니다.',
+            text: 'Mirascope는 MIT 라이선스 오픈소스로 유료 플랜이나 사용량 제한이 없습니다. 유일한 비용은 기반 LLM API 호출(OpenAI, Anthropic 등)입니다. 예산이 빠듯한 Python 팀에게 구조화된 LLM 개발의 가장 낮은 진입 장벽을 제공합니다.',
           },
         ],
       },
@@ -3292,6 +3346,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '출력: 재작성된 프롬프트 + 각 변경 사항에 대한 설명',
         ],
         callouts: [
+          {
+            type: 'warning',
+            label: 'PromptPerfect 서비스 종료 예정',
+            text: 'Jina AI는 2026년 6월부터 PromptPerfect의 신규 가입을 받지 않고 있습니다. 2025년 10월 Elastic의 Jina AI 인수에 따라 PromptPerfect는 2026년 9월 1일에 완전히 서비스가 종료되며, 계정 데이터는 2026년 10월 1일에 삭제됩니다. 기존 사용자는 지금 바로 프롬프트를 내보내야 합니다 — 이 도구를 기반으로 새로운 워크플로를 구축하지 마십시오.',
+          },
           {
             type: 'warning',
             label: '비결정적 출력',
@@ -3364,10 +3423,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: [
           '**팀이 프로덕션에서 LLM 호출을 모니터링하거나, 기능별 비용을 추적하거나, 코드 배포 없이 실제 트래픽에서 프롬프트 버전을 비교해야 한다면 PromptLayer를 선택하십시오.**',
           '**LLM을 호출하는 Python 애플리케이션을 구축하고 SaaS 비용 없이 타입 안전하고 테스트 가능하며 공급자에 종속되지 않는 코드를 원한다면 Mirascope를 선택하십시오.**',
-          '**코드 작성 없이 특정 프롬프트를 빠르게 개선해야 한다면, 특히 이미지 생성이나 콘텐츠 생성 워크플로에서는 PromptPerfect를 선택하십시오.**',
+          '**코드 작성 없이 특정 프롬프트를 빠르게 개선해야 한다면, 특히 이미지 생성이나 콘텐츠 생성 워크플로에서는 PromptPerfect를 선택하십시오.** 참고: PromptPerfect는 2026년 6월부터 신규 가입을 받지 않고 있으며 2026년 9월 1일에 완전히 서비스를 종료합니다 — 이미 활성 계정이 있는 경우에만 해당됩니다.',
           '**단일 공급자에 구속되기 전에 [PromptQuorum](/features)을 사용하여 동일한 프롬프트를 25개 이상의 AI 모델에 동시에 전송하십시오** — 프롬프트 최적화가 공급자 간에 일반화되는지 확인하는 모델 독립적 검증 단계입니다.',
           'PromptLayer는 기록할 라이브 트래픽이 없는 프리 프로덕션 단계에서는 사용하지 마십시오 — 옵저버빌리티 기능은 프로덕션 데이터 없이는 가치가 없습니다. Mirascope는 팀이 Python을 작성하지 않는다면 사용하지 마십시오 — 웹 UI도 Python 외 SDK도 없는 Python 전용 라이브러리입니다. PromptPerfect는 자동화되고 반복 가능한 프롬프트 테스트가 필요하다면 사용하지 마십시오 — 비결정적 출력으로 인해 CI/CD 게이트에 부적합합니다.',
-          '프롬프트 검토 소유권과 CI/CD 게이트를 포함한 전체 팀 설정 워크플로는 [Prompt Engineering Setup for Small Teams](/prompt-engineering/prompt-engineering-setup-small-teams)를 참조하십시오.',
+          '프롬프트 검토 소유권과 CI/CD 게이트를 포함한 전체 팀 설정 워크플로는 [Prompt Engineering Setup for Small Teams](/ko/prompt-engineering/prompt-engineering-setup-small-teams)를 참조하십시오.',
         ],
       },
       regionalContext: {
@@ -3403,7 +3462,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         numberedItems: [
           '라이브 트래픽이 있는지 확인하십시오. 있고 비용 또는 실패를 디버깅해야 한다면: PromptLayer. 없다면, 출시까지 PromptLayer를 건너뛰십시오 — 프로덕션 데이터 없이는 가치가 없습니다.',
           '팀이 Python을 작성하는지 확인하십시오. 그렇고 깔끔하고 타입 안전한 LLM 코드를 원한다면: Mirascope. 아니라면, Mirascope는 선택지가 아닙니다 — 웹 UI도 Python 외 SDK도 없습니다.',
-          '팀 중 코드 작성 없이 프롬프트를 개선해야 하는 사람이 있는지 확인하십시오. 있다면: PromptPerfect. 팀 전원이 엔지니어라면: PromptPerfect는 적합하지 않습니다.',
+          '팀 중 코드 작성 없이 프롬프트를 개선해야 하는 사람이 있는지 확인하십시오. 있다면: PromptPerfect(이미 계정이 있는 경우에만 해당 — 2026년 6월부터 신규 가입 중단, 2026년 9월 1일 서비스 종료). 팀 전원이 엔지니어라면: PromptPerfect는 적합하지 않습니다.',
           '체계적인 품질 평가 — 지표, 점수, 회귀 테스트 — 가 필요한지 확인하십시오. 필요하다면: 이 세 가지 도구 중 어느 것도 해당하지 않습니다. 대신 평가를 위해 Braintrust 또는 Promptfoo를 추가하십시오.',
           '대부분의 엔지니어링 팀을 위한 기본 경로: Mirascope(무료, 코드 품질)로 시작하고, 출시 후 PromptLayer를 추가하며(~$20/월), 비개발자 프롬프트 작성자가 없다면 PromptPerfect는 건너뛰십시오.',
         ],
@@ -3429,7 +3488,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'PromptPerfect의 비용은 얼마입니까?',
-            a: 'PromptPerfect는 하루 10건 최적화가 가능한 무료 플랜을 제공합니다. Pro 플랜은 API 접근이 포함된 하루 500건 최적화에 월 $19.99입니다. Pro Max 플랜은 우선 처리가 포함된 하루 1,500건 최적화에 월 $99.99입니다. 구매 전에 promptperfect.jina.ai에서 현재 가격을 확인하십시오.',
+            a: 'PromptPerfect는 2026년 9월 1일에 서비스를 종료하며 2026년 6월부터 신규 가입을 받지 않고 있으므로, 이 가격은 종료 절차 중인 기존 계정에만 적용됩니다. 하루 10건 최적화가 가능한 무료 플랜, API 접근이 포함된 하루 500건 최적화에 월 $19.99인 Pro 플랜, 우선 처리가 포함된 하루 1,500건 최적화에 월 $99.99인 Pro Max 플랜을 제공했습니다.',
           },
           {
             q: 'PromptLayer와 Mirascope 중 무엇을 선택해야 합니까?',
@@ -3452,17 +3511,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
       relatedReading: {
         title: '관련 자료',
         items: [
-          '[Braintrust vs PromptHub vs Vellum vs Promptfoo (2026) — 평가, CI/CD, A/B 테스트, 버전 관리를 다루는 4가지 도구 비교](/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo)',
-          '[Best Prompt Engineering Tools 2026 — 모든 프롬프트 워크플로 카테고리에 걸친 10개 이상의 도구 순위 개요](/prompt-engineering/best-prompt-engineering-tools-2026)',
-          '[Prompt Engineering Setup for Small Teams — 2~10인 팀을 위한 역할, 검토 워크플로, 도구 선택 결정](/prompt-engineering/prompt-engineering-setup-small-teams)',
-          '[How to Evaluate Prompt Quality — LLM 출력 정확도 및 관련성 측정을 위한 지표, 점수 함수, 프레임워크](/prompt-engineering/how-to-evaluate-prompt-quality)',
+          '[Braintrust vs PromptHub vs Vellum vs Promptfoo (2026) — 평가, CI/CD, A/B 테스트, 버전 관리를 다루는 4가지 도구 비교](/ko/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo)',
+          '[Best Prompt Engineering Tools 2026 — 모든 프롬프트 워크플로 카테고리에 걸친 10개 이상의 도구 순위 개요](/ko/prompt-engineering/best-prompt-engineering-tools-2026)',
+          '[Prompt Engineering Setup for Small Teams — 2~10인 팀을 위한 역할, 검토 워크플로, 도구 선택 결정](/ko/prompt-engineering/prompt-engineering-setup-small-teams)',
+          '[How to Evaluate Prompt Quality — LLM 출력 정확도 및 관련성 측정을 위한 지표, 점수 함수, 프레임워크](/ko/prompt-engineering/how-to-evaluate-prompt-quality)',
         ],
       },
       sources: {
         title: '출처',
         items: [
           '[PromptLayer Documentation](https://docs.promptlayer.com) — SDK 설정, 프롬프트 버전 관리, A/B 테스트, 대시보드 분석을 다루는 공식 문서.',
-          '[Mirascope GitHub Repository](https://github.com/Mirascope/mirascope) — Apache 2.0 소스 코드, 공급자 통합 가이드, 사용 예제.',
+          '[Mirascope GitHub Repository](https://github.com/Mirascope/mirascope) — MIT 소스 코드, 공급자 통합 가이드, 사용 예제.',
           '[PromptPerfect by Jina AI](https://promptperfect.jina.ai) — 가격 플랜, 지원 모델, API 문서가 포함된 공식 제품 페이지.',
           '[PromptLayer Pricing](https://promptlayer.com/pricing) — 현재 가격 플랜; 플랜이 변경될 수 있으므로 구매 전에 확인하십시오.',
         ],
@@ -3496,6 +3555,5 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
       ],
     },
-    leadAnswerBlock: 'PromptLayer는 프로덕션 LLM 호출을 기록하고($49/월), Mirascope는 무료 Python 라이브러리로 타입 안전 LLM 코드를 지원하며, PromptPerfect는 코드 없이 프롬프트를 재작성합니다($20/월). 세 도구는 서로 다른 문제를 해결하므로 하나만 선택하십시오.',
   },
 };
