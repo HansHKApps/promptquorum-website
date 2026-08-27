@@ -1798,7 +1798,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   theme: 'ツール＆プラットフォーム', heroImage: '/images/best-pe-tools-2026-overview-hero-ja.webp',
   title: 'プロンプトエンジニアリングツール2026：用途別ランキング',
   seoTitle: 'プロンプトエンジニアリングツール2026：用途別7選ランキング',
-  metaDescription: '2026年版。7つのプロンプトエンジニアリングツールを用途別に比較：Braintrust（評価）、Confident AI（自動評価）、Vellum（本番環境）、Promptfoo（テスト自動化）、PromptHub（バージョン管理）、LangSmith（トレーシング）。無料〜月額500ドル。',
+  metaDescription: '2026年版。7つのプロンプトエンジニアリングツールを用途別に比較：Braintrust（評価）、Confident AI（自動評価）、Vellum（本番環境）、Promptfoo（テスト自動化）、PromptHub（バージョン管理）、LangSmith（トレーシング）。無料〜月額249ドル。',
   ogTitle: 'プロンプトエンジニアリングツール7選——あなたの課題を解決するのは？',
   ogDescription: '評価、テスト、バージョン管理、本番運用、マルチモデル配信。用途別に1ツール。比較表あり。',
   twitterTitle: 'プロンプトエンジニアリングツール2026：徹底比較',
