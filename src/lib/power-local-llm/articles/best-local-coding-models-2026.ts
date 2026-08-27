@@ -57,12 +57,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'local llm humaneval',
     ],
     leadAnswerBlock:
-      '**Qwen3-Coder 30B is the default local coding model in May 2026 — strongest published HumanEval+ direction among open-weight models, 256K-token context, Apache 2.0 licence, and Q4_K_M weights that fit on a 24 GB GPU. DeepSeek Coder V3 is the heavyweight pick when you need the largest context window and have 48 GB+ of VRAM. Codestral 22B is the speed-and-licence pick for teams that need the Mistral non-commercial / commercial split clarified. Kimi K2.7 Code, Granite Code, and StarCoder 2 are situational choices for ecosystem fit (Llama tooling), enterprise-friendly licensing (Granite), or deep multi-language coverage (StarCoder 2). Pick by binding constraint — VRAM tier, context length, or licence — not by leaderboard rank.**',
+      '**Qwen3-Coder 30B is the default local coding model in May 2026 — strongest published HumanEval+ direction among open-weight models, 256K-token context, Apache 2.0 licence, and Q4_K_M weights that fit on a 24 GB GPU. DeepSeek Coder V3 is the heavyweight pick when you need the largest context window and have 48 GB+ of VRAM. Codestral 22B is the speed-and-licence pick for teams that need the Mistral non-commercial / commercial split clarified. Kimi K2.7 Code, Granite Code, and StarCoder 2 are situational choices for server-class agentic coding (Kimi K2.7 Code), enterprise-friendly licensing (Granite), or deep multi-language coverage (StarCoder 2). Pick by binding constraint — VRAM tier, context length, or licence — not by leaderboard rank.**',
     quickAnswerTop: {
       en: {
         question: 'Which local coding LLM is best for developers in 2026?',
         answer:
-          'Pick Qwen3-Coder 30B if you have 24 GB of VRAM and want the strongest open-weight coding model in May 2026 — it leads vendor-reported HumanEval+ direction, supports a 256K context window, and ships under Apache 2.0. Pick Qwen3-Coder 7B for laptops and 8 GB cards. Pick DeepSeek Coder V3 if you have 48 GB+ of VRAM and need the longest context window in this set for whole-repo work. Pick Codestral 22B for fast inference and a clear commercial-use story (Mistral Non-Production licence with paid Mistral commercial licensing available). Pick Kimi K2.7 Code for ecosystem fit if your existing stack already uses Llama models. Pick Granite Code or StarCoder 2 for enterprise licensing predictability or broad-language coverage. The decision is rarely about leaderboard rank; it is about which constraint — VRAM, context, or licence — binds first.',
+          'Pick Qwen3-Coder 30B if you have 24 GB of VRAM and want the strongest open-weight coding model in May 2026 — it leads vendor-reported HumanEval+ direction, supports a 256K context window, and ships under Apache 2.0. Pick Qwen3-Coder 7B for laptops and 8 GB cards. Pick DeepSeek Coder V3 if you have 48 GB+ of VRAM and need the longest context window in this set for whole-repo work. Pick Codestral 22B for fast inference and a clear commercial-use story (Mistral Non-Production licence with paid Mistral commercial licensing available). Pick Kimi K2.7 Code for server-class agentic coding if you have 300 GB+ of combined RAM/VRAM and run long-horizon tool loops. Pick Granite Code or StarCoder 2 for enterprise licensing predictability or broad-language coverage. The decision is rarely about leaderboard rank; it is about which constraint — VRAM, context, or licence — binds first.',
         bullets: [
           'Qwen3-Coder 30B — default local coding pick in May 2026: leading HumanEval+ direction, 256K context, Apache 2.0, fits on 24 GB GPU at Q4_K_M.',
           'Qwen3-Coder 7B — best laptop / 8 GB GPU pick. Surprisingly strong for autocomplete and small-file edits.',
@@ -379,7 +379,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Practical working context is what determines whether the model can hold your repo in mind, not the headline number. For multi-file refactors, prefer the actual recall column over the marketing column — Codestral\'s 32K is real, Llama 3.3\'s 128K is partial.',
+            text: 'Practical working context is what determines whether the model can hold your repo in mind, not the headline number. For multi-file refactors, prefer the actual recall column over the marketing column — Codestral\'s 32K is real, Granite Code 34B\'s 128K is partial.',
           },
         ],
         image: '/images/best-local-coding-models-2026-context-window-en.svg',
@@ -583,7 +583,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Qwen3-Coder 7B — beste Laptop-/8-GB-GPU-Wahl. Überraschend stark für Auto-Completion und kleine Datei-Edits.',
           'DeepSeek Coder V3 — längste Kontext-Fenster in dieser Gruppe; braucht 48 GB+ VRAM bei Q4_K_M für das volle Modell.',
           'Codestral 22B — schnellste in der 22B+-Klasse; klarerer kommerzieller Weg über Mistral-kommerzielle Lizenzierung.',
-          'Kimi K2.7 Code — wählen für Llama-Ökosystem-Passung (bestehende Tools, Fine-Tunes); Coding-Richtung hinten Qwen3-Coder.',
+          'Kimi K2.7 Code — der stärkste agentische Coder hier, aber 1T-MoE mit ~340 GB: nur für Server-Hardware, kein Laptop-Pfad.',
           'Granite Code (IBM) und StarCoder 2 (BigCode) — Enterprise-/Breiten-Wahlen; selten absolut beste, oft am meisten verteidigbar.',
         ],
         updatedDate: '2026-08-27',
@@ -614,7 +614,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Qwen3-Coder 30B ist die Standard-Wahl im Mai 2026** — beste veröffentlichte HumanEval+-Richtung unter Open-Source-Modellen, 256K-Kontext, Apache 2.0, Q4_K_M passt auf 24-GB-GPU.',
           '**DeepSeek Coder V3 für großes Budget** — längste Kontext-Fenster (128K), beste Raw-Performance, braucht 48 GB+ VRAM. Nur wenn Kontext-Länge bindend ist.',
           '**Codestral 22B für Geschwindigkeit und klare Lizenzierung** — schnellste Inferenz in dieser Klasse; Mistral-kommerzielle vs Non-Production-Lizenzen sind klar definiert.',
-          '**Kimi K2.7 Code für Ökosystem-Passung** — wenn Sie bereits Llama-Modelle haben, ist Umschalten kostspielig. Coding-Leistung hinter Qwen3-Coder.',
+          '**Kimi K2.7 Code für agentische Langzeit-Aufgaben** — 1T-MoE-Modell mit 256K-Kontext, aber ~340 GB RAM+VRAM nötig. Nur für Server-Hardware, nicht für Einzelentwickler.',
           '**Granite Code und StarCoder 2 sind Spezial-Wahlen** — Granite für Enterprise IBM-Vertrag; StarCoder 2 für unglaublich breite Sprachen-Abdeckung.',
           '**Alle sechs Modelle funktionieren lokal** — Unterschiede sind in Größe, Lizenz und Performance, nicht in "funktioniert vs funktioniert nicht".',
           '**Wählen nach bindender Beschränkung** — VRAM-Budget, Kontext-Länge oder Lizenz-Anforderungen, nicht Leaderboard-Rang.',
@@ -629,7 +629,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Modell': 'Qwen3-Coder 30B', 'Größe': '30B', 'Kontext': '256K', 'Lizenz': 'Apache 2.0', 'HumanEval+ Richtung': 'Führend', 'Beste Eigenschaft': 'Balance aus Performance und Größe', 'Q4_K_M VRAM': '~18 GB' },
           { 'Modell': 'DeepSeek Coder V3', 'Größe': '236B (MoE)', 'Kontext': '128K', 'Lizenz': 'Mistral', 'HumanEval+ Richtung': 'Top-Tier', 'Beste Eigenschaft': 'Längste Kontext-Fenster', 'Q4_K_M VRAM': '~48 GB (gekürzt)' },
           { 'Modell': 'Codestral 22B', 'Größe': '22B', 'Kontext': '32K', 'Lizenz': 'Mistral Commercial', 'HumanEval+ Richtung': 'Gut', 'Beste Eigenschaft': 'Schnellste Inferenz', 'Q4_K_M VRAM': '~13 GB' },
-          { 'Modell': 'Kimi K2.7 Code', 'Größe': '1T total / 32B active (MoE)', 'Kontext': '256K', 'Lizenz': 'Modified MIT', 'HumanEval+ Richtung': 'Solide', 'Beste Eigenschaft': 'Ökosystem-Passung', 'Q4_K_M VRAM': '~340 GB (RAM+VRAM)' },
+          { 'Modell': 'Kimi K2.7 Code', 'Größe': '1T total / 32B active (MoE)', 'Kontext': '256K', 'Lizenz': 'Modified MIT', 'HumanEval+ Richtung': 'Stark (agentisch)', 'Beste Eigenschaft': 'Agentische Langzeit-Aufgaben', 'Q4_K_M VRAM': '~340 GB (RAM+VRAM)' },
           { 'Modell': 'Granite Code 34B', 'Größe': '34B', 'Kontext': '8K', 'Lizenz': 'Apache 2.0', 'HumanEval+ Richtung': 'Gut', 'Beste Eigenschaft': 'Enterprise-Lizenz (IBM)', 'Q4_K_M VRAM': '~20 GB' },
           { 'Modell': 'StarCoder 2 15B', 'Größe': '15B', 'Kontext': '16K', 'Lizenz': 'BigCode Open RAIL', 'HumanEval+ Richtung': 'Solide', 'Beste Eigenschaft': 'Sprachen-Breite', 'Q4_K_M VRAM': '~9 GB' },
         ],
@@ -638,11 +638,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Detaillierte Vergleichstabelle',
         content: 'Alle relevanten Kriterien auf einen Blick. Benchmarks sind von Modell-Kartenseiten; Quantisierungs-VRAM ist Q4_K_M bei typischen Inferenz-Runtimes (llama.cpp, vLLM).',
-        columns: ['Kriterium', 'Qwen3-Coder 30B', 'DeepSeek V3', 'Codestral 22B', 'Llama 3.3', 'Granite 34B', 'StarCoder 2'],
+        columns: ['Kriterium', 'Qwen3-Coder 30B', 'DeepSeek V3', 'Codestral 22B', 'Kimi K2.7', 'Granite 34B', 'StarCoder 2'],
         rows: [
-          { 'Kriterium': 'Hauptstärke', 'Qwen3-Coder 30B': 'Balance', 'DeepSeek V3': 'Kontext', 'Codestral 22B': 'Geschwindigkeit', 'Llama 3.3': 'Ökosystem', 'Granite 34B': 'Enterprise', 'StarCoder 2': 'Sprachen' },
-          { 'Kriterium': 'Größe optimal für', 'Qwen3-Coder 30B': '24 GB GPU', 'DeepSeek V3': '48+ GB VRAM', 'Codestral 22B': '16 GB GPU', 'Llama 3.3': '48+ GB VRAM', 'Granite 34B': '24 GB GPU', 'StarCoder 2': '8 GB GPU' },
-          { 'Kriterium': 'Training-Fokus', 'Qwen3-Coder 30B': 'Code + Mathe', 'DeepSeek V3': 'Code nur', 'Codestral 22B': 'Code nur', 'Llama 3.3': 'Generalist (Code)', 'Granite 34B': 'Code + Enterprise', 'StarCoder 2': 'Multi-Sprache' },
+          { 'Kriterium': 'Hauptstärke', 'Qwen3-Coder 30B': 'Balance', 'DeepSeek V3': 'Kontext', 'Codestral 22B': 'Geschwindigkeit', 'Kimi K2.7': 'Agentisch/Kontext', 'Granite 34B': 'Enterprise', 'StarCoder 2': 'Sprachen' },
+          { 'Kriterium': 'Größe optimal für', 'Qwen3-Coder 30B': '24 GB GPU', 'DeepSeek V3': '48+ GB VRAM', 'Codestral 22B': '16 GB GPU', 'Kimi K2.7': '300+ GB RAM/VRAM', 'Granite 34B': '24 GB GPU', 'StarCoder 2': '8 GB GPU' },
+          { 'Kriterium': 'Training-Fokus', 'Qwen3-Coder 30B': 'Code + Mathe', 'DeepSeek V3': 'Code nur', 'Codestral 22B': 'Code nur', 'Kimi K2.7': 'Agentisches Coding', 'Granite 34B': 'Code + Enterprise', 'StarCoder 2': 'Multi-Sprache' },
         ],
         image: '/images/best-local-coding-models-2026-model-comparison-hero-de.webp',
         imageCaption: 'Sieben lokale Coding-Modelle im Vergleich: VRAM, Kontext-Fenster, Lizenz und bestes Einsatzszenario bei Q4_K_M im Mai 2026. Qwen3-Coder 30B ist die Standard-Wahl für 24-GB-GPUs.',
@@ -655,7 +655,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Sie haben 24 GB VRAM und brauchen starke allgemeine Coding-Performance?** → Qwen3-Coder 30B. Es ist der Punkt-Sieger. Beste HumanEval+-Leistung, perfekt in die 24-GB-Tier, Apache-2.0-freundlich.',
           '**Sie haben 8–16 GB und wollen starke Coding?** → Qwen3-Coder 7B oder Codestral 22B. Codestral ist schneller; Qwen3-Coder 7B ist überraschend fähig für kleine Dateien.',
           '**Sie haben 48 GB+ und brauchen sehr lange Kontext?** → DeepSeek Coder V3. 128K-Tokens ist ein großer Vorteil für Whole-Repo-Refactorings.',
-          '**Sie laufen bereits Llama-Infrastruktur?** → Kimi K2.7 Code. Ökosystem-Schmerzen bei einem Wechsel könnten den Performance-Gewinn negieren.',
+          '**Sie besitzen Server-Hardware mit 300 GB+ RAM/VRAM und brauchen den stärksten agentischen Coder?** → Kimi K2.7 Code. Für Einzelentwickler auf einer Maschine bleibt Qwen3-Coder 30B die bessere Standard-Wahl.',
           '**Sie brauchen kommerziell-freundliche Lizenzierung?** → Codestral (Mistral hat klare kommerzielle Tiers) oder Granite Code (IBM Enterprise).',
           '**Sie codieren in seltenen Sprachen?** → StarCoder 2. Es wurde auf 80+ Programmiersprachen trainiert; andere haben Schwerpunkt auf Python/Typescript/C++.',
         ],
@@ -701,11 +701,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       llamaCode: {
         id: 'kimi-k2-7-code',
         title: 'Kimi K2.7 Code: Detaillierte Analyse',
-        content: 'Kimi K2.7 Code ist die Ökosystem-Wahl — wenn Sie bereits Llama 3.3 / 3.2 laufen, Zahlen Sie nicht die Schmerz-Kosten eines vollständigen Ökosystem-Wechsels.',
+        content: 'Kimi K2.7 Code ist die Wahl für Teams, die bereits einen Multi-GPU-Server oder eine große Unified-Memory-Maschine besitzen und lange, agentische Coding-Läufe fahren — repository-weite Refactorings, Migrationen, mehrstufige Tool-Ketten.',
         items: [
-          '**Warum nicht Standard-Pick?** Coding-Performance ist ein Schritt hinter Qwen3-Coder (~87% HumanEval+ vs ~92%). Es ist nicht schlecht, aber nicht das beste.',
-          '**Wann wählen?** Sie haben bereits Llama-Tooling, Fine-Tunes, oder Deployments in Production. Der Ökosystem-Schmerz überwiegt den Performance-Nachteil.',
-          '**Lizenz?** Llama 3.3 Community License — Non-Commercial-Sektion ist komplizierter als Apache 2.0. Meta hat später clarified, dass ML Inference non-commercial nicht bedeutet, aber es ist komplexer.',
+          '**Warum nicht Standard-Pick?** Es gibt keine kleine Variante — 1T Gesamtparameter mit ~32B aktiven Parametern (MoE), keine Laptop- oder Single-GPU-Option. Für die meisten Entwickler ist Qwen3-Coder 30B der bessere Standard.',
+          '**Wann wählen?** Sie besitzen bereits die Inferenz-Hardware und lassen lange autonome Agent-Läufe laufen, bei denen sich der 256K-Kontext und die niedrigeren Reasoning-Token-Kosten von Moonshot AI auszahlen.',
+          '**Lizenz?** Modified MIT von Moonshot AI — kommerzielle Nutzung ist grundsätzlich erlaubt, aber ab einer bestimmten Deployment-Größe ist eine Namensnennung ("Kimi K2") Pflicht. Lesen Sie die Modifikation, bevor Sie es in einem Produkt ausliefern.',
         ],
         image: '/images/best-local-coding-models-2026-decision-tree-de.svg',
         imageCaption: 'Sechs-Fragen-Entscheidungsbaum zur Wahl des richtigen lokalen Coding-Modells: VRAM zuerst, dann Lizenz, Kontext, Agent-Stabilität, Sprachen-Breite und schließlich Geschwindigkeit vs. Qualität.',
@@ -735,7 +735,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Modelle, die nicht funktionieren',
         content: 'Es gibt auch Modelle, die nicht für lokale Coding gut sind — entweder aus Performance, Lizenz oder praktischen Gründen.',
         items: [
-          '**Kimi K2.7 Code (älter)** — Vorgänger zu Kimi K2.7 Code. Performance ist älter; nur wählen wenn Sie sehr old Tooling haben.',
+          '**Kimi K2.6 (älter)** — Vorgänger von Kimi K2.7 Code, ohne dediziertes Coding-Tuning. Nur wählen, wenn Sie bereits Tooling darauf aufgebaut haben.',
           '**Mistral Small ohne Code-Training** — Generales Mistral Small, nicht für Coding optimiert. Wenn Sie Mistral brauchen, verwenden Sie Codestral, nicht generales Mistral.',
           '**Phi-3 5B / 3.8B** — Zu klein für echte Coding. Auto-Complete Szenarios nur.',
           '**ONNX-konvertierte Modelle ohne explizites Code-Training** — Manche Leute konvertieren GPT-J oder andere zu ONNX und sagen "lokales Coding", aber ohne Code-Training werden Sie Halluzinationen sehen.',
@@ -1008,17 +1008,17 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'modèle de codage open source',
       'llm local humaneval',
     ],
-    leadAnswerBlock: '**Qwen3-Coder 30B est le modèle de codage standard en mai 2026 — meilleure direction HumanEval+ publiée parmi les modèles open-source, contexte 256K tokens, licence Apache 2.0, et poids Q4_K_M qui s\'ajustent sur un GPU 24 GB. DeepSeek Coder V3 est le choix poids-lourds quand vous avez besoin de la fenêtre de contexte la plus longue et 48 GB+ de VRAM. Codestral 22B est le choix vitesse-et-licence pour les équipes qui ont besoin de la scission non-commerciale/commerciale de Mistral clarifiée. Kimi K2.7 Code, Granite Code, et StarCoder 2 sont des choix situationnels pour compatibilité écosystème (Llama tooling), licences enterprise (Granite), ou couverture multi-langage profonde (StarCoder 2). Choisissez par contrainte bindante — tier VRAM, longueur contexte, ou licence — non par classement leaderboard.**',
+    leadAnswerBlock: '**Qwen3-Coder 30B est le modèle de codage standard en mai 2026 — meilleure direction HumanEval+ publiée parmi les modèles open-source, contexte 256K tokens, licence Apache 2.0, et poids Q4_K_M qui s\'ajustent sur un GPU 24 GB. DeepSeek Coder V3 est le choix poids-lourds quand vous avez besoin de la fenêtre de contexte la plus longue et 48 GB+ de VRAM. Codestral 22B est le choix vitesse-et-licence pour les équipes qui ont besoin de la scission non-commerciale/commerciale de Mistral clarifiée. Kimi K2.7 Code, Granite Code, et StarCoder 2 sont des choix situationnels pour tâches agentiques longue-durée sur matériel serveur (Kimi K2.7 Code), licences enterprise (Granite), ou couverture multi-langage profonde (StarCoder 2). Choisissez par contrainte bindante — tier VRAM, longueur contexte, ou licence — non par classement leaderboard.**',
     quickAnswerTop: {
       fr: {
         question: 'Quel LLM de codage local est le meilleur pour les développeurs en 2026 ?',
-        answer: 'Choisissez Qwen3-Coder 30B si vous avez 24 GB de VRAM et voulez le modèle de codage open-source le plus puissant en mai 2026 — il mène la direction HumanEval+ rapportée par fournisseur, supporte une fenêtre de contexte 256K, et est distribué sous Apache 2.0. Choisissez Qwen3-Coder 7B pour ordinateurs portables et cartes 8 GB. Choisissez DeepSeek Coder V3 si vous avez 48 GB+ de VRAM et avez besoin de la fenêtre de contexte la plus longue de cet ensemble pour le travail sur repo entier. Choisissez Codestral 22B pour l\'inférence rapide et une histoire commerciale claire (licence Mistral Non-Production avec licensing commercial Mistral payant disponible). Choisissez Kimi K2.7 Code pour compatibilité écosystème si votre pile existante utilise déjà des modèles Llama. Choisissez Granite Code ou StarCoder 2 pour prévisibilité de license enterprise ou couverture étendue de langage. La décision ne concerne rarement le classement leaderboard ; il s\'agit de quelle contrainte — VRAM, contexte, ou licence — devient bindante en premier.',
+        answer: 'Choisissez Qwen3-Coder 30B si vous avez 24 GB de VRAM et voulez le modèle de codage open-source le plus puissant en mai 2026 — il mène la direction HumanEval+ rapportée par fournisseur, supporte une fenêtre de contexte 256K, et est distribué sous Apache 2.0. Choisissez Qwen3-Coder 7B pour ordinateurs portables et cartes 8 GB. Choisissez DeepSeek Coder V3 si vous avez 48 GB+ de VRAM et avez besoin de la fenêtre de contexte la plus longue de cet ensemble pour le travail sur repo entier. Choisissez Codestral 22B pour l\'inférence rapide et une histoire commerciale claire (licence Mistral Non-Production avec licensing commercial Mistral payant disponible). Choisissez Kimi K2.7 Code si vous possédez déjà un serveur multi-GPU (300 Go+ de RAM/VRAM) et menez de longues tâches d\'agent autonome. Choisissez Granite Code ou StarCoder 2 pour prévisibilité de license enterprise ou couverture étendue de langage. La décision ne concerne rarement le classement leaderboard ; il s\'agit de quelle contrainte — VRAM, contexte, ou licence — devient bindante en premier.',
         bullets: [
           'Qwen3-Coder 30B — choix de codage standard en mai 2026 : direction HumanEval+ menant, contexte 256K, Apache 2.0, s\'ajuste sur GPU 24 GB à Q4_K_M.',
           'Qwen3-Coder 7B — meilleur choix ordinateur portable / GPU 8 GB. Surprenamment fort pour auto-complétion et petits édits de fichier.',
           'DeepSeek Coder V3 — fenêtre de contexte la plus longue de cet ensemble ; a besoin de 48 GB+ de VRAM à Q4_K_M pour le modèle complet.',
           'Codestral 22B — plus rapide de la couche 22B+ ; chemin commercial plus net via licensing commercial Mistral.',
-          'Kimi K2.7 Code — choisir pour compatibilité écosystème Llama (tooling existant, fine-tunes) ; direction de codage traîne Qwen3-Coder.',
+          'Kimi K2.7 Code — le codeur agentique le plus fort ici, mais 1T-MoE à ~340 Go : matériel serveur uniquement, aucun chemin portable.',
           'Granite Code (IBM) et StarCoder 2 (BigCode) — choix enterprise / couverture ; rarement le meilleur absolu, souvent le plus défendable en license.',
         ],
         updatedDate: '2026-08-27',
@@ -1049,7 +1049,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Qwen3-Coder 30B est le meilleur choix en mai 2026** — meilleure direction HumanEval+ publiée, contexte 256K, Apache 2.0, Q4_K_M s\'ajuste sur GPU 24 GB.',
           '**DeepSeek Coder V3 pour grand budget** — fenêtre de contexte la plus longue (128K), meilleure performance brute, a besoin de 48 GB+ VRAM. Seulement si la longueur contexte est bindante.',
           '**Codestral 22B pour vitesse et licence claire** — inférence la plus rapide de cette classe ; licences commerciales vs Non-Production Mistral clairement définies.',
-          '**Kimi K2.7 Code pour compatibilité écosystème** — si vous avez déjà des modèles Llama, changer est coûteux. Performance de codage derrière Qwen3-Coder.',
+          '**Kimi K2.7 Code pour tâches agentiques longue-durée** — modèle 1T-MoE avec contexte 256K, mais ~340 Go RAM+VRAM nécessaires. Réservé au matériel serveur, pas aux développeurs individuels.',
           '**Granite Code et StarCoder 2 sont des choix spécialisés** — Granite pour contrat IBM Enterprise; StarCoder 2 pour couverture de langage incroyablement large.',
           '**Les six modèles fonctionnent localement** — les différences sont dans taille, licence et performance, pas "fonctionne vs ne fonctionne pas".',
           '**Choisissez par contrainte bindante** — budget VRAM, longueur contexte ou requirements licence, non par classement leaderboard.',
@@ -1073,11 +1073,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Tableau de comparaison détaillé',
         content: 'Tous les critères pertinents en un coup d\'œil. Les benchmarks proviennent des pages fiche modèle; VRAM quantisé est Q4_K_M sur runtimes typiques d\'inférence.',
-        columns: ['Critère', 'Qwen3-Coder 30B', 'DeepSeek V3', 'Codestral 22B', 'Llama 3.3', 'Granite 34B', 'StarCoder 2'],
+        columns: ['Critère', 'Qwen3-Coder 30B', 'DeepSeek V3', 'Codestral 22B', 'Kimi K2.7', 'Granite 34B', 'StarCoder 2'],
         rows: [
-          { 'Critère': 'Force principale', 'Qwen3-Coder 30B': 'Balance', 'DeepSeek V3': 'Contexte', 'Codestral 22B': 'Vitesse', 'Llama 3.3': 'Écosystème', 'Granite 34B': 'Enterprise', 'StarCoder 2': 'Langues' },
-          { 'Critère': 'Taille optimal pour', 'Qwen3-Coder 30B': 'GPU 24 GB', 'DeepSeek V3': 'VRAM 48+ GB', 'Codestral 22B': 'GPU 16 GB', 'Llama 3.3': 'VRAM 48+ GB', 'Granite 34B': 'GPU 24 GB', 'StarCoder 2': 'GPU 8 GB' },
-          { 'Critère': 'Focus formation', 'Qwen3-Coder 30B': 'Code + Maths', 'DeepSeek V3': 'Code seul', 'Codestral 22B': 'Code seul', 'Llama 3.3': 'Généraliste (Code)', 'Granite 34B': 'Code + Enterprise', 'StarCoder 2': 'Multi-langue' },
+          { 'Critère': 'Force principale', 'Qwen3-Coder 30B': 'Balance', 'DeepSeek V3': 'Contexte', 'Codestral 22B': 'Vitesse', 'Kimi K2.7': 'Agentique/Contexte', 'Granite 34B': 'Enterprise', 'StarCoder 2': 'Langues' },
+          { 'Critère': 'Taille optimal pour', 'Qwen3-Coder 30B': 'GPU 24 GB', 'DeepSeek V3': 'VRAM 48+ GB', 'Codestral 22B': 'GPU 16 GB', 'Kimi K2.7': '300+ Go RAM/VRAM', 'Granite 34B': 'GPU 24 GB', 'StarCoder 2': 'GPU 8 GB' },
+          { 'Critère': 'Focus formation', 'Qwen3-Coder 30B': 'Code + Maths', 'DeepSeek V3': 'Code seul', 'Codestral 22B': 'Code seul', 'Kimi K2.7': 'Codage agentique', 'Granite 34B': 'Code + Enterprise', 'StarCoder 2': 'Multi-langue' },
         ],
         image: '/images/best-local-coding-models-2026-model-comparison-hero-fr.webp',
         imageCaption: 'Sept modèles de codage locaux comparés sur VRAM, fenêtre de contexte, licence et cas d\'utilisation optimal en mai 2026. Qwen3-Coder 30B est le choix par défaut pour GPU 24 Go.',
@@ -1090,7 +1090,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Vous avez 24 GB VRAM et voulez forte performance de codage général ?** → Qwen3-Coder 30B. C\'est le gagnant absolu. Meilleure performance HumanEval+, parfait dans le tier 24 GB, convivial Apache-2.0.',
           '**Vous avez 8–16 GB et voulez fort codage ?** → Qwen3-Coder 7B ou Codestral 22B. Codestral est plus rapide; Qwen3-Coder 7B est surprenamment capable pour petits fichiers.',
           '**Vous avez 48 GB+ et avez besoin de très long contexte ?** → DeepSeek Coder V3. 128K-tokens est grand avantage pour refactorisation whole-repo.',
-          '**Vous exécutez déjà infrastructure Llama ?** → Kimi K2.7 Code. Les douleurs écosystème d\'un switch pourraient outweigher le gain de performance.',
+          '**Vous possédez du matériel serveur (300 Go+ RAM/VRAM) et voulez le codeur agentique le plus puissant ?** → Kimi K2.7 Code. Pour un développeur seul sur une machine, Qwen3-Coder 30B reste le meilleur choix par défaut.',
           '**Vous avez besoin licensing commercially-friendly ?** → Codestral (Mistral a tiers commerciaux clairs) ou Granite Code (IBM Enterprise).',
           '**Vous codez dans langues rares ?** → StarCoder 2. Il a été entraîné sur 80+ langues de programmation; d\'autres ont emphase sur Python/Typescript/C++.',
         ],
@@ -1136,11 +1136,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       llamaCode: {
         id: 'kimi-k2-7-code',
         title: 'Kimi K2.7 Code : Analyse approfondie',
-        content: 'Kimi K2.7 Code est le choix écosystème — si vous déjà Llama 3.3 / 3.2 running, vous paieriez coûts-pain ecosystem-complet switch.',
+        content: 'Kimi K2.7 Code est le choix des équipes qui possèdent déjà un serveur multi-GPU ou une grande machine à mémoire unifiée et font tourner de longues tâches de codage agentique — refactorisations sur tout le dépôt, migrations, chaînes d\'outils multi-étapes.',
         items: [
-          '**Pourquoi pas choix standard ?** Performance codage est step-back derrière Qwen3-Coder (~87% HumanEval+ vs ~92%). C\'est pas mauvais, mais pas meilleur.',
-          '**Quand choisir ?** Vous avez déjà Llama-tooling, fine-tunes, ou production deployments. Les douleurs écosystème outweigh le performance-nachteil.',
-          '**License ?** Llama 3.3 Community License — Non-Commercial section est plus compliqué qu\'Apache 2.0. Meta a après clarified qu\'inférence ML non-commercial non veut dire, mais c\'est plus complexe.',
+          '**Pourquoi pas choix standard ?** Il n\'existe aucune petite variante — 1T de paramètres totaux avec ~32B actifs (MoE), aucune option laptop ni GPU unique. Pour la plupart des développeurs, Qwen3-Coder 30B reste le meilleur choix par défaut.',
+          '**Quand choisir ?** Vous possédez déjà le matériel d\'inférence et faites tourner de longues tâches d\'agent autonome, où le contexte 256K et le coût de reasoning-tokens plus bas de Moonshot AI se rentabilisent.',
+          '**License ?** Modified MIT de Moonshot AI — usage commercial autorisé, mais une mention d\'attribution ("Kimi K2") est requise au-delà d\'un certain seuil de déploiement. Lisez la modification avant de l\'intégrer dans un produit.',
         ],
         image: '/images/best-local-coding-models-2026-decision-tree-fr.svg',
         imageCaption: 'Arbre de décision en six questions pour choisir le bon modèle de codage local : VRAM d\'abord, puis licence, contexte, fiabilité agent, couverture linguistique et vitesse vs qualité.',
@@ -1170,7 +1170,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Modèles qui ne fonctionnent pas',
         content: 'Il y a aussi modèles non-good pour codage local — soit par performance, licence, ou raisons pratiques.',
         items: [
-          '**Kimi K2.7 Code (plus ancien)** — Prédécesseur à Kimi K2.7 Code. Performance est vieil; choisir seulement si très vieux tooling.',
+          '**Kimi K2.6 (plus ancien)** — Prédécesseur de Kimi K2.7 Code, sans tuning codage dédié. Choisir seulement si vous avez déjà du tooling construit dessus.',
           '**Mistral Small sans Code-Training** — Mistral Small général, non optimisé pour codage. Si vous besoin Mistral, utiliser Codestral, non Mistral général.',
           '**Phi-3 5B / 3.8B** — Trop petit pour vrai codage. Auto-complete scenarios seulement.',
           '**ONNX-converted Modèles sans code-training explicite** — Quelques gens convertissent GPT-J ou autres à ONNX et disent "codage local", mais sans code-training vous verrez hallucinations.',
@@ -1424,18 +1424,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'local llm humaneval',
     ],
     leadAnswerBlock:
-      '**Qwen3-Coder 30Bは2026年5月のデフォルトローカルコーディングモデルです — オープンウェイトモデル中で最強のHumanEval+方向を持ち、256Kトークンコンテキスト、Apache 2.0ライセンス、24GB GPUに対応するQ4_K_Mウェイトを備えています。DeepSeek Coder V3は最大のコンテキストウィンドウが必要な場合で、48GB以上のVRAMがある場合の重量級選択肢です。Codestral 22BはMistralのノンコマーシャル/コマーシャルライセンス分岐を明確にする必要があるチーム向けの高速・ライセンス選択肢です。Kimi K2.7 Code、Granite Code、StarCoder 2は生態系適合（Llamaツーリング）、エンタープライズフレンドリーなライセンス（Granite）、または深い多言語対応（StarCoder 2）のための状況別選択肢です。リーダーボードランクではなく、拘束制約（VRAMティア、コンテキスト長、またはライセンス）で選択してください。**',
+      '**Qwen3-Coder 30Bは2026年5月のデフォルトローカルコーディングモデルです — オープンウェイトモデル中で最強のHumanEval+方向を持ち、256Kトークンコンテキスト、Apache 2.0ライセンス、24GB GPUに対応するQ4_K_Mウェイトを備えています。DeepSeek Coder V3は最大のコンテキストウィンドウが必要な場合で、48GB以上のVRAMがある場合の重量級選択肢です。Codestral 22BはMistralのノンコマーシャル/コマーシャルライセンス分岐を明確にする必要があるチーム向けの高速・ライセンス選択肢です。Kimi K2.7 Code、Granite Code、StarCoder 2はサーバー級エージェント型コーディング（Kimi K2.7 Code）、エンタープライズフレンドリーなライセンス（Granite）、または深い多言語対応（StarCoder 2）のための状況別選択肢です。リーダーボードランクではなく、拘束制約（VRAMティア、コンテキスト長、またはライセンス）で選択してください。**',
     quickAnswerTop: {
       ja: {
         question: '2026年の開発者向けのベストローカルコーディングLLMはどれですか？',
         answer:
-          '24GBのVRAMがあり、2026年5月の最強のオープンウェイトコーディングモデルが必要な場合はQwen3-Coder 30Bを選択してください — ベンダー報告のHumanEval+方向で先導し、256Kコンテキストウィンドウをサポートし、Apache 2.0ライセンスで提供されています。ノートパソコンと8GBカード向けはQwen3-Coder 7Bを選択してください。48GB以上のVRAMがあり、リポジトリ全体の作業に最長のコンテキストウィンドウが必要な場合はDeepSeek Coder V3を選択してください。高速推論と明確なコマーシャル利用パスが必要な場合はCodestral 22Bを選択してください（Mistralノンプロダクションライセンスと有料Mistralコマーシャルライセンスが利用可能）。既存スタックが既にLlamaモデルを使用している場合は生態系適合のためKimi K2.7 Codeを選択してください。エンタープライズライセンス予測可能性または広言語対応のためGranite CodeまたはStarCoder 2を選択してください。決定はリーダーボードランクではなく、拘束制約（VRAM、コンテキスト、またはライセンス）についてです。',
+          '24GBのVRAMがあり、2026年5月の最強のオープンウェイトコーディングモデルが必要な場合はQwen3-Coder 30Bを選択してください — ベンダー報告のHumanEval+方向で先導し、256Kコンテキストウィンドウをサポートし、Apache 2.0ライセンスで提供されています。ノートパソコンと8GBカード向けはQwen3-Coder 7Bを選択してください。48GB以上のVRAMがあり、リポジトリ全体の作業に最長のコンテキストウィンドウが必要な場合はDeepSeek Coder V3を選択してください。高速推論と明確なコマーシャル利用パスが必要な場合はCodestral 22Bを選択してください（Mistralノンプロダクションライセンスと有料Mistralコマーシャルライセンスが利用可能）。300GB以上のRAM/VRAMを持ち、長時間のエージェント型ツールループを実行する場合はサーバー級のKimi K2.7 Codeを選択してください。エンタープライズライセンス予測可能性または広言語対応のためGranite CodeまたはStarCoder 2を選択してください。決定はリーダーボードランクではなく、拘束制約（VRAM、コンテキスト、またはライセンス）についてです。',
         bullets: [
           'Qwen3-Coder 30B — 2026年5月デフォルトローカルコーディング選択肢：先導HumanEval+方向、256Kコンテキスト、Apache 2.0、24GB GPUのQ4_K_Mで対応。',
           'Qwen3-Coder 7B — ベストノートパソコン/8GB GPU選択肢。自動補完と小ファイル編集で予想外に強力です。',
           'DeepSeek Coder V3 — このセット中の最大コンテキストウィンドウ。Q4_K_Mでフルモデルには48GB以上のVRAMが必要です。',
           'Codestral 22B — 22B+ティア中最速。Mistralコマーシャルライセンスによる明確なコマーシャル利用パス。',
-          'Kimi K2.7 Code — Llama生態系適合向けを選択（既存ツーリング、ファインチューン）；コーディング方向はQwen3-Coderに遅れています。',
+          'Kimi K2.7 Code — このガイドで最も強力なエージェント型コーダーですが、1T MoEで約340GB必要：サーバー級ハードウェア専用でノートパソコンでは動作しません。',
           'Granite Code（IBM）およびStarCoder 2（BigCode）— エンタープライズ/幅広い選択肢；絶対に最良であることはまれですが、最も防御可能なライセンスであることが多いです。',
         ],
         updatedDate: '2026-08-27',
@@ -1470,7 +1470,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Qwen3-Coder 7B** は最強の10B未満コーディングモデルです — 8～10GBカードに対応し、16GB MacBookで実行でき、30Bがオーバーキルである自動補完クラスワークフローに対応します。',
           '**DeepSeek Coder V3** はこのセット中の最大の実用的なコンテキストウィンドウを提供し、マルチファイル推論で優れています — しかしフルモデルはQ4_K_Mで48GB以上のVRAMが必要です。小さいMoE派生バリアントが24GBカードのギャップを埋めます。',
           '**Codestral 22B（Mistral）** は高速選択肢です — より低いアクティブパラメータ数、高速推論、Mistralコマーシャルライセンスを通じた明確なコマーシャルパス。コーディング方向ではQwen3-Coderより若干遅れていますが、トークン毎秒では上回ります。',
-          '**Kimi K2.7 Code** はQwen3-Coderの公開されたコーディング方向に遅れていますが、周囲の生態系（既存ファインチューン、Llama固有ツーリング）が生の順位より重要な場所で勝ちます。',
+          '**Kimi K2.7 Code**（Moonshot AI、2026年6月）はこのガイドで最も強力なエージェント型コーディングモデルです — Kimi K2.6をベースにしたコーディング特化ビルドで256Kコンテキストを備えますが、1T総パラメータ/約32Bアクティブ（MoE）で約340GB必要なため、サーバー級ハードウェア専用でワークステーション向けではありません。',
           '**Granite Code（IBM、Apache 2.0）** はライセンス明確性と監査態勢がリーダーボード位置より重要なエンタープライズコンテキスト向けに構築されています。34Bバリアントはファミリー中の最強です。8Bバリアントはノートパソコン選択肢です。',
           '**StarCoder 2（BigCode、BigCode OpenRAIL-M）** はこのセット中のプログラミング言語の最も広い範囲にまたがり、ニッチ言語（Rust、Lua、Haskell、Solidity）の強力な対応があります。',
           '**VRAMはほとんどの読者にとって拘束制約です。** Q4_K_Mで最大のモデルを選択し、コンテキストとツーリング向けに2～4GBのヘッドルームを残してください — リーダーボードスコアが最も高いモデルではなく。',
@@ -1487,7 +1487,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**エンタープライズ/監査フレンドリー選択:** Granite Code 34B（IBM、Apache 2.0）。',
           '**ニッチ言語選択:** StarCoder 2 15B（Rust、Lua、Haskell、Solidity対応）。',
           '**Q4_K_MでのVRAM計算：** おおよそ `（Bのパラメータ） × 0.6 GB` プラス 2～4 GB コンテキストオーバーヘッド。',
-          '**ライセンスは等しくありません。** Qwen3-Coder、DeepSeek Coder V3、Granite CodeはApache 2.0です。CodestralはMistralノンプロダクションライセンスと個別のコマーシャル条件があります。Llama 3.3はModified MITを使用します（Metaのポリシーゲート付きコマーシャルフレンドリー）。StarCoder 2はBigCode OpenRAIL-Mの下で提供されています。',
+          '**ライセンスは等しくありません。** Qwen3-Coder、DeepSeek Coder V3、Granite CodeはApache 2.0です。CodestralはMistralノンプロダクションライセンスと個別のコマーシャル条件があります。Kimi K2.7 Code（Moonshot AI）はModified MITを使用し、大規模デプロイでは帰属表示が必要です。StarCoder 2はBigCode OpenRAIL-Mの下で提供されています。',
         ],
       },
       comparisonTable: {
@@ -1541,11 +1541,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             'モデル': 'Kimi K2.7 Code',
-            'サイズ': '～70B（汎用）/8Bバリアント',
-            'VRAM（Q4_K_M）': '～40GB（70B）/～5GB（8B）',
-            'コンテキストウィンドウ': '128K',
+            'サイズ': '1T総パラメータ/32Bアクティブ（MoE）',
+            'VRAM（Q4_K_M）': '～340GB（RAM+VRAM合計）',
+            'コンテキストウィンドウ': '256K',
             'ライセンス': 'Modified MIT',
-            '最適な用途': 'Llama生態系適合、既存ファインチューンワークフロー',
+            '最適な用途': 'サーバー級エージェント型コーディング、長時間タスク',
           },
           {
             'モデル': 'Granite Code 34B',
@@ -1579,7 +1579,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'あなたの状況': '8GB GPUまたは16GB MacBookがある', '選択': 'Qwen3-Coder 7B' },
           { 'あなたの状況': '48GB以上のVRAMがあり、リポジトリ全体タスクで作業している', '選択': 'DeepSeek Coder V3' },
           { 'あなたの状況': 'コマーシャル製品を構築しており、ライセンス明確性が最も重要', '選択': 'Granite Code 34B（Apache 2.0）またはDeepSeek Coder V3（Apache 2.0）' },
-          { 'あなたの状況': '既にLlamaモデルを実行しており、スタック内で一貫性が欲しい', '選択': 'Kimi K2.7 Code 70B（VRAMが許可されている場合）または8Bバリアント' },
+          { 'あなたの状況': 'サーバー級ハードウェア（300GB以上のRAM/VRAM）があり、最強のエージェント型コーダーが欲しい', '選択': 'Kimi K2.7 Code' },
           { 'あなたの状況': 'Rust、Lua、Haskell、Solidity、またはその他のニッチ言語を書く', '選択': 'StarCoder 2 15B' },
           { 'あなたの状況': '優先順位は絶対品質ではなく、トークン毎秒である', '選択': 'Codestral 22B' },
         ],
@@ -1654,23 +1654,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       kimiCodeDeep: {
         id: 'kimi-k2-7-code',
-        title: 'Kimi K2.7 Code：生態系適合選択肢',
+        title: 'Kimi K2.7 Code：サーバー級エージェント型選択肢',
         content:
-          '**Kimi K2.7 Codeは既存スタックが既にLlamaモデルを実行している場合の正しい選択肢です。** その生のコーディング方向はQwen3-CoderおよびDeepSeekに遅れていますが、Llama周囲の生態系（ファインチューン、ツーリング、デプロイメントパターン）はこのガイド内のどのモデルファミリーより最大です。',
+          '**Kimi K2.7 Codeはこのガイドで最も強力なエージェント型コーディングモデルです — そして単一のコンシューマー向けGPUでは動作しない唯一のモデルでもあります。** Moonshot AIが2026年6月にKimi K2.6をベースとしたコーディング特化ビルドとしてリリースしました。1兆パラメータのMixture-of-Expertsモデルで、アクティブパラメータは約320億。公開されている最小の量子化でも約340GBが必要なため、ワークステーションではなくサーバー級ハードウェアを前提とします。',
         items: [
-          '**サイズ:** 70B（汎用、コード可能）、8B（ノートパソコン/8GB GPU）。70Bがヘッドラインモデルです；8Bは強力なツーリング対応による頻繁な自動補完選択肢です。',
-          '**コンテキストウィンドウ:** 128Kトークン。',
-          '**トレーニング重点:** 汎用（強力なコーディング能力）— Qwen3-CoderまたはCodestralと同じ方法でコーディング特化ではありません。そのコーディング強力さは深さではなく幅から来ています。',
-          '**ライセンス:** Modified MIT — Metaのポリシーゲートの下でコマーシャル利用が許可され、その上にある利用閾値と個別ライセンス条件を含みます。コマーシャル製品の統合前にライセンスを読んでください。',
-          '**Q4_K_MでのVRAM:** 70B向け～40GB（24GBカードはより小さいバリアントまたは攻撃的な量子化が必要）；8B向け～5GB。',
-          '**ツール呼び出し信頼性:** OpenAIスタイルツール呼び出しで良好；Cline厳格XMLスキーマでQwen3-Coderより信頼できない。8Bバリアントはエージェントループでツール呼び出しで強く奮闘しています。',
-          '**輝く場所:** 既にLlamaを実行中（既存インフラ、デプロイメントレシピ、ファインチューン）、時折非コード推論を伴う汎用コーディング。',
-          '**弱い場所:** 絶対コーディング方向は専門コーディングモデルに遅れています。コーディングが一次使用事例であり、Llama ロックインがない場合、Qwen3-Coderがより良いデフォルトです。',
+          '**サイズ:** サイズ展開は1つのみ — 1T総パラメータ、トークンあたり約32Bアクティブ（Mixture-of-Experts）。小型バリアントは存在せず、ノートパソコン向けの選択肢はありません。',
+          '**コンテキストウィンドウ:** Kimi K2.6から引き継いだ256Kトークン。',
+          '**トレーニング重点:** コーディング特化かつエージェント指向。Moonshotの報告によればK2.6と比較して推論トークンが約30%少なく、長時間タスクでの性能が向上— その差は単発の関数補完ではなく、複数ステップのタスクで表れます。',
+          '**ライセンス:** Modified MIT — 商用利用は許可されていますが、大規模デプロイメントには帰属表示の要件があります。製品に組み込む前に修正条項を確認してください。',
+          '**メモリフットプリント:** 同一アーキテクチャのK2.6で公開されている最小の量子化は約340GB。実用的な速度を得るには合計約350GBのRAM+VRAMが必要です。INT4が現実的なローカルフォーマットです。これはマルチGPUサーバーか非常に大きな統合メモリマシン向けであり、24GBカード向けではありません。',
+          '**ツール呼び出し信頼性:** 長時間にわたるエージェント型ツール利用に設計の焦点があり、それがここでの高密度コーディングモデルとの違いです。ワークロードがマルチステップのエージェントループではなくインライン補完である場合、追加のハードウェアはほとんど見返りがありません。',
+          '**輝く場所:** すでに推論用ハードウェアを保有し、長時間のエージェント型コーディングジョブ — リポジトリ全体のリファクター、複数ファイルにまたがる移行、継続的なツールループを実行するチーム。',
+          '**弱い場所:** ハードウェアのハードルがほぼすべての個人開発者にとって選択肢から外れる理由になります。1台のマシンで作業する場合、Qwen3-Coder 30Bがより良いデフォルトであり、日常的なコーディングでの差は10倍のハードウェアコストが示唆するよりもはるかに小さいです。',
         ],
         callouts: [
           {
             type: 'tip',
-            text: 'Llama 3.3 8Bは8GB GPUでの頻繁な自動補完選択肢です — しかしエージェントループ信頼性はそのサイズで急激に低下します。インライン補完向け8Bを使用し、チャットとリファクター作業向けより大きい（27B以上）ツール呼び出しチューン済みモデルにエスカレートしてください。Continue.devまたはClieの同じ構成内で2つのモデルが共通パターンです。',
+            text: 'Kimi K2.7 Codeは小型モデルと二者択一の関係ではありません。現実的なパターンは、開発者一人ひとりのマシンでインライン補完と日常のチャットにQwen3-Coder 30Bを使い、共有サーバー上のKimi K2.7 Codeはリポジトリ全体のリファクターや移行など、256Kコンテキストと低い推論トークンコストがハードウェア投資に見合う長時間のエージェント作業のために確保しておくことです。',
           },
         ],
       },
@@ -1746,7 +1746,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: '実用的作業コンテキストはマーケティング列ではなく、モデルがあなたのリポジトリを心に保つことができるかを決めます。マルチファイルリファクター向けには、見出しの数ではなく実際のリコール列を優先してください — Codestralの32Kは実際、Llama 3.3の128Kは部分的。',
+            text: '実用的作業コンテキストはマーケティング列ではなく、モデルがあなたのリポジトリを心に保つことができるかを決めます。マルチファイルリファクター向けには、見出しの数ではなく実際のリコール列を優先してください — Codestralの32Kは実際、Kimi K2.7 Codeの256Kは大部分が理論値です。',
           },
         ],
         image: '/images/best-local-coding-models-2026-context-window-ja.svg',
@@ -1783,7 +1783,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**1. あなたはどのくらいのVRAMを持っていますか？** 12GB未満：Qwen3-Coder 7B。12～16GB：Qwen3-Coder 7BまたはCodestral 22B。24GB：Qwen3-Coder 30B。48GB以上：DeepSeek Coder V3（フル）。',
           '**2. あなたはコマーシャル製品の内側で出荷していますか？** はい：Apache 2.0（Qwen3-Coder、DeepSeek Coder V3、Granite Code）を優先。Mistral コマーシャルライセンスを支払わない限りCodestralを避けてください。',
-          '**3. あなたは32K以上のコンテキストウィンドウが必要ですか？** はい：CodestralおよびStarCoder 2をスキップ。Qwen3-Coder、DeepSeek、Llama Code、またはGranite Codeを選択。',
+          '**3. あなたは32K以上のコンテキストウィンドウが必要ですか？** はい：CodestralおよびStarCoder 2をスキップ。Qwen3-Coder、DeepSeek、またはGranite Codeを選択（ハードウェアがあればKimi K2.7 Codeも）。',
           '**4. あなたはニッチ言語（Rust、Lua、Haskell、Solidity）を書いていますか？** はい：16Kコンテキスト制限にもかかわらずStarCoder 2 15B。',
           '**5. あなたは規制産業で、ライセンスとトレーニングデータプロビナンスが調達防御を必要としていますか？** はい：Granite Code 34Bはケースを最も簡単に作ります。',
           '**6. まだ不確かですか？** Qwen3-Coderにデフォルト — 24GB GPUがある場合は30B、そうでなければ7B。それをアウトグローする時に再評価。',
@@ -1795,7 +1795,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'plain-terms',
-            text: 'しない限りQwen3-Coderにピック。理由は：ハードウェア（12GB未満→7B；48GB以上→DeepSeek）、言語（ニッチ言語対応→StarCoder 2）、調達（規制産業→Granite Code）、またはエコシステムロックイン（既存Llamaインフラ→Kimi K2.7 Code）。Codestralはコマーシャルライセンスを支払うことができる場合の高速選択肢。',
+            text: 'しない限りQwen3-Coderにピック。理由は：ハードウェア（12GB未満→7B；48GB以上→DeepSeek）、言語（ニッチ言語対応→StarCoder 2）、調達（規制産業→Granite Code）、またはすでに保有するサーバー級ハードウェア（300GB以上のRAM/VRAM→Kimi K2.7 Code）。Codestralはコマーシャルライセンスを支払うことができる場合の高速選択肢。',
           },
         ],
         callouts: [
@@ -1829,7 +1829,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[DeepSeek Coder V3 Model Card](https://huggingface.co/deepseek-ai/DeepSeek-Coder-V3) — DeepSeek Coder V3向けのMoEアーキテクチャ詳細、コンテキストウィンドウ、ライセンス、およびベンチマーク方向。',
           '[Codestral Model Card](https://huggingface.co/mistralai/Codestral-22B-v0.1) — Codestral 22B向けのアーキテクチャ、コンテキストウィンドウ、およびライセンス条件。',
           '[Mistral Commercial Licensing](https://mistral.ai/commercial-licenses/) — Codestralおよび他のMistralノンプロダクションライセンスモデルのコマーシャル利用向けに必要な条件。',
-          '[Kimi K2.7 Code on Hugging Face](https://huggingface.co/moonshotai) — Llama 3.3ファミリー向けのサイズ、コンテキストウィンドウ、およびModified MIT テキスト。',
+          '[Kimi K2.7 Code on Hugging Face](https://huggingface.co/moonshotai) — Moonshot AIのモデルカード、量子化バリアント、およびModified MITライセンス全文。',
           '[Granite Code Model Cards（IBM）](https://huggingface.co/ibm-granite) — Granite Code向けのサイズ、コンテキストウィンドウ、トレーニングデータドキュメント、およびApache 2.0ライセンス。',
           '[StarCoder 2 Model Cards（BigCode）](https://huggingface.co/bigcode) — StarCoder 2向けのサイズ、コンテキストウィンドウ、言語対応、およびBigCode OpenRAIL-Mライセンス。',
           '[Ollama Model Library](https://ollama.com/library) — 上記の各モデル向けの量子化バリアント、ファイルサイズ、およびプルコマンド。',
@@ -1945,12 +1945,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'local llm humaneval',
     ],
     leadAnswerBlock:
-      '**Qwen3-Coder 30B是2026年5月的默认本地编码模型 — 在开放权重模型中具有最强的已发布HumanEval+方向、256K令牌上下文、Apache 2.0许可证和适合24GB GPU的Q4_K_M权重。DeepSeek Coder V3是需要最大上下文窗口且具有48GB以上VRAM的重量级选择。Codestral 22B是需要澄清Mistral非商业/商业许可证分割的团队的速度和许可证选择。Kimi K2.7 Code、Granite Code和StarCoder 2是生态系统适配（Llama工具）、企业友好许可证（Granite）或深度多语言覆盖（StarCoder 2）的情景选择。按约束条件选择 — VRAM级别、上下文长度或许可证 — 而不是按排行榜排名。**',
+      '**Qwen3-Coder 30B是2026年5月的默认本地编码模型 — 在开放权重模型中具有最强的已发布HumanEval+方向、256K令牌上下文、Apache 2.0许可证和适合24GB GPU的Q4_K_M权重。DeepSeek Coder V3是需要最大上下文窗口且具有48GB以上VRAM的重量级选择。Codestral 22B是需要澄清Mistral非商业/商业许可证分割的团队的速度和许可证选择。Kimi K2.7 Code、Granite Code和StarCoder 2是服务器级智能体编码（Kimi K2.7 Code）、企业友好许可证（Granite）或深度多语言覆盖（StarCoder 2）的情景选择。按约束条件选择 — VRAM级别、上下文长度或许可证 — 而不是按排行榜排名。**',
     quickAnswerTop: {
       zh: {
         question: '2026年开发者最佳的本地编码LLM是什么？',
         answer:
-          '如果您拥有24GB VRAM并想要2026年5月最强的开放权重编码模型，请选择Qwen3-Coder 30B — 它在供应商报告的HumanEval+方向中处于领先地位，支持256K上下文窗口，并采用Apache 2.0许可证。对于笔记本电脑和8GB卡，请选择Qwen3-Coder 7B。如果您拥有48GB以上的VRAM并需要此集合中最长的上下文窗口用于整个存储库工作，请选择DeepSeek Coder V3。对于快速推理和清晰的商业使用路径，请选择Codestral 22B（Mistral非生产许可证，带有可用的付费Mistral商业许可证）。如果您的现有堆栈已经使用Llama模型，请选择Kimi K2.7 Code以获得生态系统适配。对于企业许可证可预测性或广泛语言覆盖，请选择Granite Code或StarCoder 2。决策很少是关于排行榜排名的；而是关于哪个约束 — VRAM、上下文或许可证 — 最先生效。',
+          '如果您拥有24GB VRAM并想要2026年5月最强的开放权重编码模型，请选择Qwen3-Coder 30B — 它在供应商报告的HumanEval+方向中处于领先地位，支持256K上下文窗口，并采用Apache 2.0许可证。对于笔记本电脑和8GB卡，请选择Qwen3-Coder 7B。如果您拥有48GB以上的VRAM并需要此集合中最长的上下文窗口用于整个存储库工作，请选择DeepSeek Coder V3。对于快速推理和清晰的商业使用路径，请选择Codestral 22B（Mistral非生产许可证，带有可用的付费Mistral商业许可证）。如果您拥有300GB以上的RAM/VRAM并运行长时间的智能体工具循环，请选择服务器级的Kimi K2.7 Code。对于企业许可证可预测性或广泛语言覆盖，请选择Granite Code或StarCoder 2。决策很少是关于排行榜排名的；而是关于哪个约束 — VRAM、上下文或许可证 — 最先生效。',
         bullets: [
           'Qwen3-Coder 30B — 2026年5月默认本地编码选择：领先HumanEval+方向、256K上下文、Apache 2.0、在24GB GPU上的Q4_K_M中适配。',
           'Qwen3-Coder 7B — 最佳笔记本电脑/8GB GPU选择。在自动补完和小文件编辑中出人意料地强大。',
@@ -2008,7 +2008,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**企业/审计友好选择：** Granite Code 34B（IBM，Apache 2.0）。',
           '**小众语言选择：** StarCoder 2 15B（Rust、Lua、Haskell、Solidity覆盖）。',
           '**Q4_K_M中的VRAM数学：** 大约`（B中的参数）× 0.6 GB`加上2～4 GB上下文开销。',
-          '**许可证不相等。** Qwen3-Coder、DeepSeek Coder V3和Granite Code是Apache 2.0。Codestral拥有Mistral非生产许可证和单独的商业条款。Llama 3.3使用Modified MIT（Meta政策门控商业友好）。StarCoder 2在BigCode OpenRAIL-M下提供。',
+          '**许可证不相等。** Qwen3-Coder、DeepSeek Coder V3和Granite Code是Apache 2.0。Codestral拥有Mistral非生产许可证和单独的商业条款。Kimi K2.7 Code（Moonshot AI）采用Modified MIT许可证，大规模部署需要署名标注。StarCoder 2在BigCode OpenRAIL-M下提供。',
         ],
       },
       comparisonTable: {
@@ -2191,7 +2191,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Llama 3.3 8B是8GB GPU上的常见自动补完选择 — 但代理循环可靠性在该大小处急剧下降。对内联补完使用8B，升级到较大（27B+）工具调用调整模型用于聊天和重构工作。两个模型在同一个Continue.dev或Cline配置是常见模式。',
+            text: 'Kimi K2.7 Code与这里的小模型并非二选一关系。对于拥有相应硬件的团队，现实的做法是在每台开发者机器上运行Qwen3-Coder 30B用于内联补全和日常聊天，同时在共享服务器上保留Kimi K2.7 Code用于长时间的智能体任务——例如全仓库重构和迁移，此时其256K上下文和更低的推理token成本才能真正物有所值。',
           },
         ],
       },
@@ -2267,7 +2267,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: '实际工作上下文决定模型是否可以将您的存储库记在脑子里，而不是营销列。对于多文件重构，优先考虑实际回忆列而不是头条 — Codestral的32K是真实的，Llama 3.3的128K是部分的。',
+            text: '实际工作上下文决定模型是否可以将您的存储库记在脑子里，而不是营销列。对于多文件重构，优先考虑实际回忆列而不是头条 — Codestral的32K是真实的，Kimi K2.7 Code宣称的256K在很大程度上是理论值。',
           },
         ],
         image: '/images/best-local-coding-models-2026-context-window-zh.svg',
@@ -2316,7 +2316,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             type: 'plain-terms',
-            text: '除非您有特定理由，否则选择Qwen3-Coder。理由是：硬件（少于12GB→7B；超过48GB→DeepSeek）、语言（小众语言支持→StarCoder 2）、采购（规管产业→Granite Code）或生态系统锁定（现有Llama基础设施→Llama 3.3代码）。如果您可以为商业许可证付费，Codestral是速度选择。',
+            text: '除非您有特定理由，否则选择Qwen3-Coder。理由是：硬件（少于12GB→7B；超过48GB→DeepSeek）、语言（小众语言支持→StarCoder 2）、采购（规管产业→Granite Code）或已拥有服务器级硬件（300GB以上RAM/VRAM→Kimi K2.7 Code）。如果您可以为商业许可证付费，Codestral是速度选择。',
           },
         ],
         callouts: [
@@ -2350,7 +2350,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '[DeepSeek Coder V3模型卡](https://huggingface.co/deepseek-ai/DeepSeek-Coder-V3) — DeepSeek Coder V3的MoE架构详情、上下文窗口、许可证和基准方向。',
           '[Codestral模型卡](https://huggingface.co/mistralai/Codestral-22B-v0.1) — Codestral 22B的架构、上下文窗口和许可证条款。',
           '[Mistral商业许可](https://mistral.ai/commercial-licenses/) — Codestral和其他Mistral非生产许可模型商业使用所需条款。',
-          '[Kimi K2.7 Code（Hugging Face）](https://huggingface.co/moonshotai) — Llama 3.3系列的大小、上下文窗口和Modified MIT文本。',
+          '[Kimi K2.7 Code（Hugging Face）](https://huggingface.co/moonshotai) — Moonshot AI的模型卡、量化版本，以及Modified MIT许可证全文。',
           '[Granite代码模型卡（IBM）](https://huggingface.co/ibm-granite) — Granite Code的大小、上下文窗口、培训数据文档和Apache 2.0许可证。',
           '[StarCoder 2模型卡（BigCode）](https://huggingface.co/bigcode) — StarCoder 2的大小、上下文窗口、语言覆盖和BigCode OpenRAIL-M许可证。',
           '[Ollama模型库](https://ollama.com/library) — 上述各模型的量化变体、文件大小和拉动命令。',
@@ -2529,7 +2529,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Opción enterprise / apta para auditoría:** Granite Code 34B (IBM, Apache 2.0).',
           '**Opción para lenguajes de nicho:** StarCoder 2 15B (cobertura de Rust, Lua, Haskell, Solidity).',
           '**Cálculo de VRAM con Q4_K_M:** aproximadamente `(parámetros en B) × 0,6 GB` más 2-4 GB de overhead de contexto.',
-          '**Las licencias no son iguales.** Qwen3-Coder, DeepSeek Coder V3 y Granite Code son Apache 2.0. Codestral tiene la licencia Mistral Non-Production con condiciones comerciales separadas. Llama 3.3 usa la Modified MIT (apta para uso comercial con los filtros de política de Meta). StarCoder 2 se distribuye bajo BigCode OpenRAIL-M.',
+          '**Las licencias no son iguales.** Qwen3-Coder, DeepSeek Coder V3 y Granite Code son Apache 2.0. Codestral tiene la licencia Mistral Non-Production con condiciones comerciales separadas. Kimi K2.7 Code (Moonshot AI) usa la licencia Modified MIT, que exige atribución en despliegues a gran escala. StarCoder 2 se distribuye bajo BigCode OpenRAIL-M.',
         ],
       },
       comparisonTable: {
@@ -2712,7 +2712,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'El Llama 3.3 8B es una opción frecuente de autocompletado en GPUs de 8 GB — pero la fiabilidad en bucles de agentes cae bruscamente a ese tamaño. Usa el 8B para completados en línea y escala a un modelo de 27B+ entrenado para tool-calling para trabajo de chat y refactorización. Dos modelos en la misma configuración de Continue.dev o Cline es el patrón habitual.',
+            text: 'Kimi K2.7 Code no compite frente a los modelos más pequeños de esta guía. El patrón realista para un equipo que ya tiene el hardware es ejecutar Qwen3-Coder 30B en cada máquina de desarrollo para autocompletado y chat diario, reservando Kimi K2.7 Code en el servidor compartido para tareas de agente largas — refactorizaciones y migraciones de todo el repositorio, donde su contexto de 256K y su menor coste de tokens de razonamiento realmente compensan el hardware.',
           },
         ],
       },
@@ -2788,7 +2788,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'El contexto de trabajo práctico es lo que determina si el modelo puede mantener tu repositorio en mente, no el número del titular. Para refactorizaciones multiarchivo, prioriza la columna de recuperación real sobre la columna de marketing — los 32K de Codestral son reales, los 128K de Llama 3.3 son parciales.',
+            text: 'El contexto de trabajo práctico es lo que determina si el modelo puede mantener tu repositorio en mente, no el número del titular. Para refactorizaciones multiarchivo, prioriza la columna de recuperación real sobre la columna de marketing — los 32K de Codestral son reales, los 256K declarados de Kimi K2.7 Code son en gran parte teóricos.',
           },
         ],
         image: '/images/best-local-coding-models-2026-context-window-es.svg',
@@ -3177,7 +3177,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Opção enterprise / apta para auditoria:** Granite Code 34B (IBM, Apache 2.0).',
           '**Opção para linguagens de nicho:** StarCoder 2 15B (cobertura de Rust, Lua, Haskell, Solidity).',
           '**Cálculo de VRAM com Q4_K_M:** aproximadamente `(parâmetros em B) × 0,6 GB` mais 2-4 GB de overhead de contexto.',
-          '**As licenças não são iguais.** Qwen3-Coder, DeepSeek Coder V3 e Granite Code são Apache 2.0. O Codestral tem a licença Mistral Non-Production com condições comerciais separadas. O Llama 3.3 usa a Modified MIT (apta para uso comercial com os filtros de política da Meta). O StarCoder 2 é distribuído sob BigCode OpenRAIL-M.',
+          '**As licenças não são iguais.** Qwen3-Coder, DeepSeek Coder V3 e Granite Code são Apache 2.0. O Codestral tem a licença Mistral Non-Production com condições comerciais separadas. O Kimi K2.7 Code (Moonshot AI) usa a licença Modified MIT, que exige atribuição em implantações de grande escala. O StarCoder 2 é distribuído sob BigCode OpenRAIL-M.',
         ],
       },
       comparisonTable: {
@@ -3360,7 +3360,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'O Llama 3.3 8B é uma opção frequente de autocompletar em GPUs de 8 GB — mas a confiabilidade em loops de agentes cai bruscamente nesse tamanho. Use o 8B para conclusões em linha e escale para um modelo de 27B+ treinado para tool-calling para trabalho de chat e refatoração. Dois modelos na mesma configuração de Continue.dev ou Cline é o padrão habitual.',
+            text: 'O Kimi K2.7 Code não compete com os modelos menores desta guia. O padrão realista para uma equipe que já possui o hardware é rodar o Qwen3-Coder 30B em cada máquina de desenvolvimento para conclusão em linha e chat do dia a dia, reservando o Kimi K2.7 Code no servidor compartilhado para tarefas de agente longas — refatorações e migrações em todo o repositório, onde seu contexto de 256K e o menor custo de tokens de raciocínio realmente compensam o hardware.',
           },
         ],
       },
@@ -3436,7 +3436,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'O contexto de trabalho prático é o que determina se o modelo consegue manter o seu repositório em mente, não o número da manchete. Para refatorações multiarquivo, priorize a coluna de recuperação real sobre a coluna de marketing — os 32K do Codestral são reais, os 128K do Llama 3.3 são parciais.',
+            text: 'O contexto de trabalho prático é o que determina se o modelo consegue manter o seu repositório em mente, não o número da manchete. Para refatorações multiarquivo, priorize a coluna de recuperação real sobre a coluna de marketing — os 32K do Codestral são reais, os 256K declarados do Kimi K2.7 Code são em grande parte teóricos.',
           },
         ],
         image: '/images/best-local-coding-models-2026-context-window-pt.svg',
@@ -3825,7 +3825,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**الخيار المؤسسي / الصديق للتدقيق:** Granite Code 34B (IBM, Apache 2.0).',
           '**خيار اللغات المتخصصة:** StarCoder 2 15B (تغطية Rust وLua وHaskell وSolidity).',
           '**حسابات VRAM بضغط Q4_K_M:** تقريباً `(المعاملات بالمليار) × 0.6 جيجابايت` زائد 2-4 جيجابايت لحمولة السياق.',
-          '**التراخيص ليست متكافئة.** Qwen3-Coder وDeepSeek Coder V3 وGranite Code تعمل بموجب Apache 2.0. Codestral يحمل ترخيص Mistral غير الإنتاجي مع شروط تجارية منفصلة. Llama 3.3 يستخدم Modified MIT (صديقة للاستخدام التجاري مع قيود سياسة Meta). StarCoder 2 موزَّع بموجب BigCode OpenRAIL-M.',
+          '**التراخيص ليست متكافئة.** Qwen3-Coder وDeepSeek Coder V3 وGranite Code تعمل بموجب Apache 2.0. Codestral يحمل ترخيص Mistral غير الإنتاجي مع شروط تجارية منفصلة. يستخدم Kimi K2.7 Code (من Moonshot AI) ترخيص Modified MIT، الذي يتطلب نسب الفضل عند النشر على نطاق واسع. StarCoder 2 موزَّع بموجب BigCode OpenRAIL-M.',
         ],
       },
       comparisonTable: {
@@ -4008,7 +4008,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Llama 3.3 8B خيار إكمال تلقائي شائع على معالجات رسومات 8 جيجابايت — لكن موثوقية حلقات الوكلاء تنخفض بشكل حاد عند هذا الحجم. استخدم النموذج 8B للإكمالات الأسطرية، وأحّل إلى نموذج 27B+ مدرّب على استدعاء الأدوات لأعمال المحادثة وإعادة الهيكلة. نموذجان في نفس إعداد Continue.dev أو برنامج Cline هو النمط الشائع.',
+            text: 'لا يُعدّ Kimi K2.7 Code بديلاً حصرياً عن النماذج الأصغر في هذا الدليل. النمط الواقعي لفريق يملك العتاد بالفعل هو تشغيل Qwen3-Coder 30B على كل جهاز مطوّر للإكمال الأسطري والمحادثة اليومية، مع تخصيص Kimi K2.7 Code على الخادم المشترك لمهام الوكيل الطويلة — إعادة الهيكلة والترحيل على مستوى المستودع بأكمله، حيث يُبرر سياقه البالغ 256K وتكلفة رموز الاستدلال الأقل تكلفة العتاد.',
           },
         ],
       },
@@ -4084,7 +4084,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'السياق العملي للعمل هو ما يحدد ما إذا كان النموذج قادراً على استيعاب مستودعك في الذاكرة، لا الرقم التسويقي. في حالة إعادة الهيكلة متعددة الملفات، أعطِ الأولوية لعمود الاستدعاء الفعلي على العمود التسويقي — 32K لـ Codestral حقيقية، و128K لـ Llama 3.3 جزئية.',
+            text: 'السياق العملي للعمل هو ما يحدد ما إذا كان النموذج قادراً على استيعاب مستودعك في الذاكرة، لا الرقم التسويقي. في حالة إعادة الهيكلة متعددة الملفات، أعطِ الأولوية لعمود الاستدعاء الفعلي على العمود التسويقي — 32K لـ Codestral حقيقية، بينما الـ256K المُعلنة لـ Kimi K2.7 Code نظرية إلى حد كبير.',
           },
         ],
         image: '/images/best-local-coding-models-2026-context-window-es.svg',
@@ -4473,7 +4473,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**엔터프라이즈/감사 적합 선택지:** Granite Code 34B(IBM, Apache 2.0).',
           '**틈새 언어 선택지:** StarCoder 2 15B(Rust, Lua, Haskell, Solidity 커버리지).',
           '**Q4_K_M VRAM 계산:** 약 `(파라미터 수 B) × 0.6 GB` 더하기 컨텍스트 오버헤드 2-4 GB.',
-          '**라이선스는 동일하지 않습니다.** Qwen3-Coder, DeepSeek Coder V3, Granite Code는 Apache 2.0입니다. Codestral은 별도 상업 조건이 있는 Mistral Non-Production 라이선스입니다. Llama 3.3은 Modified MIT(Meta 정책 필터 포함 상업적 이용 적합)를 사용합니다. StarCoder 2는 BigCode OpenRAIL-M으로 배포됩니다.',
+          '**라이선스는 동일하지 않습니다.** Qwen3-Coder, DeepSeek Coder V3, Granite Code는 Apache 2.0입니다. Codestral은 별도 상업 조건이 있는 Mistral Non-Production 라이선스입니다. Kimi K2.7 Code(Moonshot AI)는 Modified MIT를 사용하며, 대규모 배포 시 출처 표시가 필요합니다. StarCoder 2는 BigCode OpenRAIL-M으로 배포됩니다.',
         ],
       },
       comparisonTable: {
@@ -4656,7 +4656,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Llama 3.3 8B는 8 GB GPU에서 자동완성에 자주 사용되지만 — 에이전트 루프 신뢰성은 그 크기에서 급격히 떨어집니다. 인라인 완성에 8B를 사용하고 채팅 및 리팩토링 작업에는 툴 콜링 훈련된 27B+ 모델로 확장하십시오. 동일한 Continue.dev나 Cline 설정에서 두 모델이 일반적인 패턴입니다.',
+            text: 'Kimi K2.7 Code는 여기 소개된 소형 모델과 양자택일 관계가 아닙니다. 이미 하드웨어를 보유한 팀의 현실적인 패턴은 각 개발자 머신에서 인라인 완성과 일상적인 채팅용으로 Qwen3-Coder 30B를 실행하고, 공유 서버의 Kimi K2.7 Code는 저장소 전체 리팩토링이나 마이그레이션처럼 256K 컨텍스트와 낮은 추론 토큰 비용이 하드웨어 투자에 값하는 장시간 에이전트 작업을 위해 남겨두는 것입니다.',
           },
         ],
       },
@@ -4732,7 +4732,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: '실용적 작업 컨텍스트가 모델이 저장소를 염두에 둘 수 있는지 결정합니다 — 헤드라인 숫자가 아닙니다. 멀티파일 리팩토링의 경우 마케팅 열보다 실제 회수 열을 우선시하십시오 — Codestral의 32K는 실제이고, Llama 3.3의 128K는 부분적입니다.',
+            text: '실용적 작업 컨텍스트가 모델이 저장소를 염두에 둘 수 있는지 결정합니다 — 헤드라인 숫자가 아닙니다. 멀티파일 리팩토링의 경우 마케팅 열보다 실제 회수 열을 우선시하십시오 — Codestral의 32K는 실제이고, Kimi K2.7 Code가 주장하는 256K는 대부분 이론상의 수치입니다.',
           },
         ],
         image: '/images/best-local-coding-models-2026-context-window-ko.svg',
