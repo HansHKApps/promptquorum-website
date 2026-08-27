@@ -12,7 +12,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     dateModified: '2026-08-27',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-27',
-    current_models_mentioned: ['Qwen3 7B', 'Phi-4 14B', 'Mistral Nemo 12B', 'Gemma 3 12B', 'DeepSeek-R1 14B'],
+    current_models_mentioned: ['Qwen3 8B', 'Phi-4 14B', 'DeepSeek-R1 7B'],
     current_hardware_mentioned: ['RTX 4060 8 GB', 'RTX 3060 12 GB', 'RTX 4060 Ti 16 GB'],
     educationalLevel: 'Beginner',
     audience: 'Buyers confused about whether a newer GPU generation beats more VRAM, and Ollama users deciding which card to buy',
@@ -92,9 +92,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'The right model to `ollama pull` depends entirely on which card you have. These are current, commonly recommended picks per VRAM tier — always confirm a specific model\'s actual VRAM use for your chosen quantization before pulling a large one.',
         ],
         items: [
-          '**RTX 4060 8 GB — stay in the 7B-9B range:** Qwen3 7B (general tasks, ~7 GB at Q4), Llama 3.1 8B, or Mistral Nemo 12B at a more aggressive quantization if VRAM is tight.',
+          '**RTX 4060 8 GB — stay in the 7B-9B range:** Qwen3 8B (general tasks, ~5 GB at Q4), Llama 3.1 8B, or DeepSeek-R1 7B for reasoning-heavy prompts.',
           '**RTX 3060 12 GB — 7B-9B for the fastest experience:** the same 7B-9B models run comfortably here too, with more headroom for a longer context window.',
-          '**RTX 3060 12 GB — 12B-14B is where the extra VRAM pays off:** Phi-4 14B at Q4_K_M (~9 GB), Qwen3 14B, DeepSeek-R1 14B, and Gemma 3 12B (strong for multilingual use) all fit; none of these load fully on the RTX 4060\'s 8 GB.',
+          '**RTX 3060 12 GB — 12B-14B is where the extra VRAM pays off:** Phi-4 14B at Q4_K_M (~9 GB) and Qwen3 14B at Q4_K_M both fit, as does Qwen3 8B at Q8 (~9 GB) if you would rather trade parameters for less quantization loss; none of these load fully on the RTX 4060\'s 8 GB.',
           '**Quantization guidance:** use Q5_K_M for 7B-8B models when VRAM allows — better quality than Q4 at a modest size increase. Use Q4_K_M for 12B-14B models on the RTX 3060; it is generally required to fit, not just an option.',
         ],
       },
@@ -124,7 +124,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'What is the best Ollama model for a 12 GB VRAM card?',
-            a: 'Phi-4 14B at Q4_K_M (~9 GB) is a commonly recommended pick for 12 GB cards like the RTX 3060 12GB, alongside Qwen3 14B and DeepSeek-R1 14B. For a faster, lighter option, Qwen3 7B or Llama 3.1 8B leave more headroom for a longer context window.',
+            a: 'Phi-4 14B at Q4_K_M (~9 GB) is a commonly recommended pick for 12 GB cards like the RTX 3060 12GB, alongside Qwen3 14B. For a faster, lighter option, Qwen3 8B or Llama 3.1 8B leave more headroom for a longer context window.',
           },
           {
             q: 'Why does NVIDIA sell an 8 GB card in 2026?',
@@ -157,7 +157,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     dateModified: '2026-08-27',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-27',
-    current_models_mentioned: ['Qwen3 7B', 'Phi-4 14B', 'Mistral Nemo 12B', 'Gemma 3 12B', 'DeepSeek-R1 14B'],
+    current_models_mentioned: ['Qwen3 8B', 'Phi-4 14B', 'DeepSeek-R1 7B'],
     current_hardware_mentioned: ['RTX 4060 8 GB', 'RTX 3060 12 GB', 'RTX 4060 Ti 16 GB'],
     educationalLevel: 'Beginner',
     audience: 'المشترون المرتبكون حول ما إذا كان جيل GPU أحدث يتفوق على سعة VRAM أكبر، ومستخدمو Ollama المترددون في اختيار البطاقة',
@@ -237,9 +237,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'يعتمد النموذج المناسب لأمر `ollama pull` كليًا على البطاقة التي تملكها. هذه اختيارات حالية وشائعة التوصية لكل فئة من VRAM — تحقق دائمًا من استهلاك VRAM الفعلي لنموذج معين عند مستوى الضغط الذي اخترته قبل سحب نموذج كبير.',
         ],
         items: [
-          '**RTX 4060 8 GB — التزم بنطاق 7B-9B:** Qwen3 7B (مهام عامة، ~7 GB بدقة Q4)، أو Llama 3.1 8B، أو Mistral Nemo 12B بضغط أكثر شدة إذا كانت VRAM ضيقة.',
+          '**RTX 4060 8 GB — التزم بنطاق 7B-9B:** Qwen3 8B (مهام عامة، ~5 GB بدقة Q4)، أو Llama 3.1 8B، أو DeepSeek-R1 7B للمطالبات التي تتطلب استدلالًا مكثفًا.',
           '**RTX 3060 12 GB — 7B-9B للحصول على أسرع تجربة:** نفس نماذج 7B-9B تعمل هنا بارتياح أيضًا، مع هامش أكبر لنافذة سياق أطول.',
-          '**RTX 3060 12 GB — هنا تُثمر سعة VRAM الإضافية لفئة 12B-14B:** Phi-4 14B بدقة Q4_K_M (~9 GB)، وQwen3 14B، وDeepSeek-R1 14B، وGemma 3 12B (قوي للاستخدام متعدد اللغات) — جميعها تستوعب؛ لا شيء منها يُحمَّل بالكامل على ذاكرة RTX 4060 البالغة 8 GB.',
+          '**RTX 3060 12 GB — هنا تُثمر سعة VRAM الإضافية لفئة 12B-14B:** Phi-4 14B بدقة Q4_K_M (~9 GB) وQwen3 14B بدقة Q4_K_M يستوعبهما كلاهما، وكذلك Qwen3 8B بدقة Q8 (~9 GB) إذا كنت تفضّل التضحية بعدد المعاملات مقابل فقد أقل بسبب التكميم؛ لا شيء منها يُحمَّل بالكامل على ذاكرة RTX 4060 البالغة 8 GB.',
           '**إرشادات الضغط:** استخدم Q5_K_M لنماذج 7B-8B عندما تسمح VRAM بذلك — جودة أفضل من Q4 مقابل زيادة متواضعة في الحجم. استخدم Q4_K_M لنماذج 12B-14B على RTX 3060؛ فهو مطلوب عمومًا للاستيعاب، وليس مجرد خيار.',
         ],
       },
@@ -269,7 +269,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'ما أفضل نموذج Ollama لبطاقة بسعة 12 GB من VRAM؟',
-            a: 'Phi-4 14B بدقة Q4_K_M (~9 GB) اختيار شائع التوصية لبطاقات 12 GB مثل RTX 3060 12GB، إلى جانب Qwen3 14B وDeepSeek-R1 14B. لخيار أسرع وأخف، تترك Qwen3 7B أو Llama 3.1 8B هامشًا أكبر لنافذة سياق أطول.',
+            a: 'Phi-4 14B بدقة Q4_K_M (~9 GB) اختيار شائع التوصية لبطاقات 12 GB مثل RTX 3060 12GB، إلى جانب Qwen3 14B. لخيار أسرع وأخف، تترك Qwen3 8B أو Llama 3.1 8B هامشًا أكبر لنافذة سياق أطول.',
           },
           {
             q: 'لماذا تبيع NVIDIA بطاقة 8 GB في 2026؟',
@@ -302,7 +302,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     dateModified: '2026-08-27',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-27',
-    current_models_mentioned: ['Qwen3 7B', 'Phi-4 14B', 'Mistral Nemo 12B', 'Gemma 3 12B', 'DeepSeek-R1 14B'],
+    current_models_mentioned: ['Qwen3 8B', 'Phi-4 14B', 'DeepSeek-R1 7B'],
     current_hardware_mentioned: ['RTX 4060 8 GB', 'RTX 3060 12 GB', 'RTX 4060 Ti 16 GB'],
     educationalLevel: 'Beginner',
     audience: 'Käufer, die unsicher sind, ob eine neuere GPU-Generation mehr VRAM schlägt, sowie Ollama-Nutzer bei der Kartenwahl',
@@ -382,9 +382,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Welches Modell Sie per `ollama pull` laden sollten, hängt vollständig von Ihrer Karte ab. Dies sind aktuelle, häufig empfohlene Picks je VRAM-Stufe — prüfen Sie vor dem Laden eines großen Modells immer den tatsächlichen VRAM-Bedarf bei der gewählten Quantisierung.',
         ],
         items: [
-          '**RTX 4060 8 GB — im Bereich 7B-9B bleiben:** Qwen3 7B (allgemeine Aufgaben, ~7 GB bei Q4), Llama 3.1 8B oder Mistral Nemo 12B bei stärkerer Quantisierung, wenn der VRAM knapp wird.',
+          '**RTX 4060 8 GB — im Bereich 7B-9B bleiben:** Qwen3 8B (allgemeine Aufgaben, ~5 GB bei Q4), Llama 3.1 8B oder DeepSeek-R1 7B für Prompts mit hohem Reasoning-Anteil.',
           '**RTX 3060 12 GB — 7B-9B für die schnellste Erfahrung:** dieselben 7B-9B-Modelle laufen hier ebenfalls komfortabel, mit mehr Spielraum für ein längeres Kontextfenster.',
-          '**RTX 3060 12 GB — bei 12B-14B zahlt sich der zusätzliche VRAM aus:** Phi-4 14B bei Q4_K_M (~9 GB), Qwen3 14B, DeepSeek-R1 14B und Gemma 3 12B (stark für mehrsprachige Nutzung) passen alle; keines davon lädt vollständig auf den 8 GB der RTX 4060.',
+          '**RTX 3060 12 GB — bei 12B-14B zahlt sich der zusätzliche VRAM aus:** Phi-4 14B bei Q4_K_M (~9 GB) und Qwen3 14B bei Q4_K_M passen beide, ebenso Qwen3 8B bei Q8 (~9 GB), wenn Sie lieber Parameter gegen geringeren Quantisierungsverlust tauschen; keines davon lädt vollständig auf den 8 GB der RTX 4060.',
           '**Quantisierungs-Empfehlung:** Nutzen Sie Q5_K_M für 7B-8B-Modelle, wenn der VRAM es erlaubt — bessere Qualität als Q4 bei moderat größerem Speicherbedarf. Nutzen Sie Q4_K_M für 12B-14B-Modelle auf der RTX 3060; das ist dort in der Regel erforderlich, nicht nur eine Option.',
         ],
       },
@@ -414,7 +414,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Was ist das beste Ollama-Modell für eine Karte mit 12 GB VRAM?',
-            a: 'Phi-4 14B bei Q4_K_M (~9 GB) ist eine häufig empfohlene Wahl für 12-GB-Karten wie die RTX 3060 12GB, neben Qwen3 14B und DeepSeek-R1 14B. Für eine schnellere, leichtere Option lassen Qwen3 7B oder Llama 3.1 8B mehr Spielraum für ein längeres Kontextfenster.',
+            a: 'Phi-4 14B bei Q4_K_M (~9 GB) ist eine häufig empfohlene Wahl für 12-GB-Karten wie die RTX 3060 12GB, neben Qwen3 14B. Für eine schnellere, leichtere Option lassen Qwen3 8B oder Llama 3.1 8B mehr Spielraum für ein längeres Kontextfenster.',
           },
           {
             q: 'Warum verkauft NVIDIA 2026 noch eine 8-GB-Karte?',
@@ -447,7 +447,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     dateModified: '2026-08-27',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-27',
-    current_models_mentioned: ['Qwen3 7B', 'Phi-4 14B', 'Mistral Nemo 12B', 'Gemma 3 12B', 'DeepSeek-R1 14B'],
+    current_models_mentioned: ['Qwen3 8B', 'Phi-4 14B', 'DeepSeek-R1 7B'],
     current_hardware_mentioned: ['RTX 4060 8 GB', 'RTX 3060 12 GB', 'RTX 4060 Ti 16 GB'],
     educationalLevel: 'Beginner',
     audience: 'Compradores confundidos sobre si una generación de GPU más nueva supera a más VRAM, y usuarios de Ollama que deciden qué tarjeta comprar',
@@ -527,9 +527,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'El modelo correcto para hacer `ollama pull` depende por completo de qué tarjeta tengas. Estas son opciones actuales y comúnmente recomendadas por nivel de VRAM — confirma siempre el uso real de VRAM de un modelo concreto en la cuantización elegida antes de descargar uno grande.',
         ],
         items: [
-          '**RTX 4060 8 GB — mantente en el rango 7B-9B:** Qwen3 7B (tareas generales, ~7 GB en Q4), Llama 3.1 8B, o Mistral Nemo 12B con una cuantización más agresiva si la VRAM está justa.',
+          '**RTX 4060 8 GB — mantente en el rango 7B-9B:** Qwen3 8B (tareas generales, ~5 GB en Q4), Llama 3.1 8B, o DeepSeek-R1 7B para prompts con mucho razonamiento.',
           '**RTX 3060 12 GB — 7B-9B para la experiencia más rápida:** los mismos modelos de 7B-9B también funcionan cómodamente aquí, con más margen para una ventana de contexto más larga.',
-          '**RTX 3060 12 GB — en 12B-14B es donde compensa la VRAM extra:** Phi-4 14B en Q4_K_M (~9 GB), Qwen3 14B, DeepSeek-R1 14B y Gemma 3 12B (fuerte para uso multilingüe) caben todos; ninguno carga por completo en los 8 GB de la RTX 4060.',
+          '**RTX 3060 12 GB — en 12B-14B es donde compensa la VRAM extra:** Phi-4 14B en Q4_K_M (~9 GB) y Qwen3 14B en Q4_K_M caben ambos, igual que Qwen3 8B en Q8 (~9 GB) si prefieres cambiar parámetros por menos pérdida de cuantización; ninguno carga por completo en los 8 GB de la RTX 4060.',
           '**Guía de cuantización:** usa Q5_K_M para modelos de 7B-8B cuando la VRAM lo permita — mejor calidad que Q4 con un aumento de tamaño modesto. Usa Q4_K_M para modelos de 12B-14B en la RTX 3060; ahí suele ser necesario para que quepan, no solo una opción.',
         ],
       },
@@ -559,7 +559,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '¿Cuál es el mejor modelo de Ollama para una tarjeta con 12 GB de VRAM?',
-            a: 'Phi-4 14B en Q4_K_M (~9 GB) es una opción comúnmente recomendada para tarjetas de 12 GB como la RTX 3060 12GB, junto con Qwen3 14B y DeepSeek-R1 14B. Para una opción más rápida y ligera, Qwen3 7B o Llama 3.1 8B dejan más margen para una ventana de contexto más larga.',
+            a: 'Phi-4 14B en Q4_K_M (~9 GB) es una opción comúnmente recomendada para tarjetas de 12 GB como la RTX 3060 12GB, junto con Qwen3 14B. Para una opción más rápida y ligera, Qwen3 8B o Llama 3.1 8B dejan más margen para una ventana de contexto más larga.',
           },
           {
             q: '¿Por qué NVIDIA vende una tarjeta de 8 GB en 2026?',
@@ -592,7 +592,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     dateModified: '2026-08-27',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-27',
-    current_models_mentioned: ['Qwen3 7B', 'Phi-4 14B', 'Mistral Nemo 12B', 'Gemma 3 12B', 'DeepSeek-R1 14B'],
+    current_models_mentioned: ['Qwen3 8B', 'Phi-4 14B', 'DeepSeek-R1 7B'],
     current_hardware_mentioned: ['RTX 4060 8 GB', 'RTX 3060 12 GB', 'RTX 4060 Ti 16 GB'],
     educationalLevel: 'Beginner',
     audience: 'Acheteurs se demandant si une nouvelle génération de GPU vaut mieux que davantage de VRAM, et utilisateurs d\'Ollama hésitant sur la carte à choisir',
@@ -672,9 +672,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Le bon modèle à télécharger avec `ollama pull` dépend entièrement de la carte que vous possédez. Voici des choix actuels et couramment recommandés par palier de VRAM — vérifiez toujours l\'usage réel de VRAM d\'un modèle donné à la quantification choisie avant de télécharger un gros modèle.',
         ],
         items: [
-          '**RTX 4060 8 Go — restez dans la plage 7B-9B :** Qwen3 7B (tâches générales, ~7 Go en Q4), Llama 3.1 8B, ou Mistral Nemo 12B avec une quantification plus agressive si la VRAM est serrée.',
+          '**RTX 4060 8 Go — restez dans la plage 7B-9B :** Qwen3 8B (tâches générales, ~5 Go en Q4), Llama 3.1 8B, ou DeepSeek-R1 7B pour les prompts à forte charge de raisonnement.',
           '**RTX 3060 12 Go — 7B-9B pour l\'expérience la plus rapide :** les mêmes modèles 7B-9B tournent aussi confortablement ici, avec plus de marge pour une fenêtre de contexte plus longue.',
-          '**RTX 3060 12 Go — le VRAM supplémentaire paie en 12B-14B :** Phi-4 14B en Q4_K_M (~9 Go), Qwen3 14B, DeepSeek-R1 14B et Gemma 3 12B (solide pour un usage multilingue) tiennent tous ; aucun ne se charge entièrement sur les 8 Go de la RTX 4060.',
+          '**RTX 3060 12 Go — le VRAM supplémentaire paie en 12B-14B :** Phi-4 14B en Q4_K_M (~9 Go) et Qwen3 14B en Q4_K_M tiennent tous les deux, tout comme Qwen3 8B en Q8 (~9 Go) si vous préférez échanger des paramètres contre moins de perte de quantification ; aucun ne se charge entièrement sur les 8 Go de la RTX 4060.',
           '**Conseils de quantification :** utilisez Q5_K_M pour les modèles 7B-8B quand la VRAM le permet — meilleure qualité que Q4 pour une taille modestement plus grande. Utilisez Q4_K_M pour les modèles 12B-14B sur la RTX 3060 ; c\'est généralement nécessaire pour que ça tienne, pas juste une option.',
         ],
       },
@@ -704,7 +704,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Quel est le meilleur modèle Ollama pour une carte à 12 Go de VRAM ?',
-            a: 'Phi-4 14B en Q4_K_M (~9 Go) est un choix couramment recommandé pour les cartes à 12 Go comme la RTX 3060 12 Go, aux côtés de Qwen3 14B et DeepSeek-R1 14B. Pour une option plus rapide et plus légère, Qwen3 7B ou Llama 3.1 8B laissent plus de marge pour une fenêtre de contexte plus longue.',
+            a: 'Phi-4 14B en Q4_K_M (~9 Go) est un choix couramment recommandé pour les cartes à 12 Go comme la RTX 3060 12 Go, aux côtés de Qwen3 14B. Pour une option plus rapide et plus légère, Qwen3 8B ou Llama 3.1 8B laissent plus de marge pour une fenêtre de contexte plus longue.',
           },
           {
             q: 'Pourquoi NVIDIA vend-elle une carte à 8 Go en 2026 ?',
@@ -737,7 +737,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     dateModified: '2026-08-27',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-27',
-    current_models_mentioned: ['Qwen3 7B', 'Phi-4 14B', 'Mistral Nemo 12B', 'Gemma 3 12B', 'DeepSeek-R1 14B'],
+    current_models_mentioned: ['Qwen3 8B', 'Phi-4 14B', 'DeepSeek-R1 7B'],
     current_hardware_mentioned: ['RTX 4060 8 GB', 'RTX 3060 12 GB', 'RTX 4060 Ti 16 GB'],
     educationalLevel: 'Beginner',
     audience: '新しいGPU世代がVRAM容量に勝るかどうか迷っている購入検討者、およびどちらのカードを買うべきか迷うOllamaユーザー',
@@ -817,9 +817,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '`ollama pull`すべき適切なモデルは、所有するカードによって完全に決まります。以下はVRAM階層ごとの現在よく推奨される選択肢です — 大きなモデルをpullする前に、選んだ量子化での実際のVRAM使用量を必ず確認してください。',
         ],
         items: [
-          '**RTX 4060 8GB — 7B-9B範囲に留める:** Qwen3 7B(一般タスク、Q4で約7GB)、Llama 3.1 8B、またはVRAMが厳しい場合はより強い量子化のMistral Nemo 12B。',
+          '**RTX 4060 8GB — 7B-9B範囲に留める:** Qwen3 8B(一般タスク、Q4で約5GB)、Llama 3.1 8B、または推論負荷の高いプロンプト向けにDeepSeek-R1 7B。',
           '**RTX 3060 12GB — 最速の体験には7B-9B:** 同じ7B-9Bモデルもここで快適に動作し、より長いコンテキストウィンドウの余裕があります。',
-          '**RTX 3060 12GB — 12B-14Bで追加VRAMが活きる:** Phi-4 14B(Q4_K_Mで約9GB)、Qwen3 14B、DeepSeek-R1 14B、Gemma 3 12B(多言語利用に強い)がすべて収まります。いずれもRTX 4060の8GBには完全には収まりません。',
+          '**RTX 3060 12GB — 12B-14Bで追加VRAMが活きる:** Phi-4 14B(Q4_K_Mで約9GB)とQwen3 14B(Q4_K_M)はどちらも収まり、量子化による劣化を抑えたい場合はQwen3 8BのQ8(約9GB)も選べます。いずれもRTX 4060の8GBには完全には収まりません。',
           '**量子化の指針:** VRAMに余裕があれば7B-8BモデルにはQ5_K_Mを使用してください — Q4よりやや大きくなりますが品質が向上します。RTX 3060の12B-14BモデルにはQ4_K_Mを使用してください。これは選択肢というより、収めるために一般的に必要です。',
         ],
       },
@@ -849,7 +849,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '12GB VRAMのカードに最適なOllamaモデルは何ですか?',
-            a: 'Phi-4 14B(Q4_K_Mで約9GB)は、RTX 3060 12GBのような12GBカード向けによく推奨される選択肢で、Qwen3 14BやDeepSeek-R1 14Bも同様です。より高速で軽い選択肢としては、Qwen3 7BやLlama 3.1 8Bがより長いコンテキストウィンドウの余裕を残します。',
+            a: 'Phi-4 14B(Q4_K_Mで約9GB)は、RTX 3060 12GBのような12GBカード向けによく推奨される選択肢で、Qwen3 14Bも同様です。より高速で軽い選択肢としては、Qwen3 8BやLlama 3.1 8Bがより長いコンテキストウィンドウの余裕を残します。',
           },
           {
             q: 'なぜNVIDIAは2026年に8GBカードを販売しているのですか?',
@@ -882,7 +882,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     dateModified: '2026-08-27',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-27',
-    current_models_mentioned: ['Qwen3 7B', 'Phi-4 14B', 'Mistral Nemo 12B', 'Gemma 3 12B', 'DeepSeek-R1 14B'],
+    current_models_mentioned: ['Qwen3 8B', 'Phi-4 14B', 'DeepSeek-R1 7B'],
     current_hardware_mentioned: ['RTX 4060 8 GB', 'RTX 3060 12 GB', 'RTX 4060 Ti 16 GB'],
     educationalLevel: 'Beginner',
     audience: '최신 GPU 세대가 더 많은 VRAM을 이기는지 혼란스러운 구매자, 그리고 어떤 카드를 살지 고민하는 Ollama 사용자',
@@ -962,9 +962,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '`ollama pull`할 적절한 모델은 전적으로 보유한 카드에 따라 달라집니다. 다음은 VRAM 등급별로 현재 흔히 추천되는 선택지입니다 — 큰 모델을 받기 전에 선택한 양자화 수준에서 해당 모델의 실제 VRAM 사용량을 항상 확인하십시오.',
         ],
         items: [
-          '**RTX 4060 8GB — 7B-9B 범위를 유지:** Qwen3 7B(일반 작업용, Q4에서 약 7GB), Llama 3.1 8B, 또는 VRAM이 빠듯할 경우 더 강한 양자화의 Mistral Nemo 12B.',
+          '**RTX 4060 8GB — 7B-9B 범위를 유지:** Qwen3 8B(일반 작업용, Q4에서 약 5GB), Llama 3.1 8B, 또는 추론 비중이 큰 프롬프트에는 DeepSeek-R1 7B.',
           '**RTX 3060 12GB — 가장 빠른 경험을 위한 7B-9B:** 동일한 7B-9B 모델도 여기서 편안하게 작동하며, 더 긴 컨텍스트 윈도우를 위한 여유가 더 많습니다.',
-          '**RTX 3060 12GB — 12B-14B에서 추가 VRAM이 빛을 발함:** Phi-4 14B(Q4_K_M에서 약 9GB), Qwen3 14B, DeepSeek-R1 14B, 그리고 Gemma 3 12B(다국어 사용에 강함)가 모두 들어맞습니다. 이 중 어느 것도 RTX 4060의 8GB에는 완전히 로드되지 않습니다.',
+          '**RTX 3060 12GB — 12B-14B에서 추가 VRAM이 빛을 발함:** Phi-4 14B(Q4_K_M에서 약 9GB)와 Qwen3 14B(Q4_K_M)가 모두 들어맞고, 양자화 손실을 줄이고 싶다면 Qwen3 8B의 Q8(약 9GB)도 선택할 수 있습니다. 이 중 어느 것도 RTX 4060의 8GB에는 완전히 로드되지 않습니다.',
           '**양자화 안내:** VRAM 여유가 있다면 7B-8B 모델에는 Q5_K_M을 사용하십시오 — Q4보다 크기가 약간 커지지만 품질이 더 좋습니다. RTX 3060의 12B-14B 모델에는 Q4_K_M을 사용하십시오. 이는 선택 사항이라기보다 대체로 맞추기 위해 필요합니다.',
         ],
       },
@@ -994,7 +994,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '12GB VRAM 카드에 가장 적합한 Ollama 모델은 무엇입니까?',
-            a: 'Phi-4 14B(Q4_K_M에서 약 9GB)는 RTX 3060 12GB 같은 12GB 카드에 흔히 추천되는 선택지이며, Qwen3 14B와 DeepSeek-R1 14B도 마찬가지입니다. 더 빠르고 가벼운 옵션으로는 Qwen3 7B나 Llama 3.1 8B가 더 긴 컨텍스트 윈도우를 위한 여유를 더 남깁니다.',
+            a: 'Phi-4 14B(Q4_K_M에서 약 9GB)는 RTX 3060 12GB 같은 12GB 카드에 흔히 추천되는 선택지이며, Qwen3 14B도 마찬가지입니다. 더 빠르고 가벼운 옵션으로는 Qwen3 8B나 Llama 3.1 8B가 더 긴 컨텍스트 윈도우를 위한 여유를 더 남깁니다.',
           },
           {
             q: '2026년에 NVIDIA는 왜 8GB 카드를 판매합니까?',
@@ -1027,7 +1027,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     dateModified: '2026-08-27',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-27',
-    current_models_mentioned: ['Qwen3 7B', 'Phi-4 14B', 'Mistral Nemo 12B', 'Gemma 3 12B', 'DeepSeek-R1 14B'],
+    current_models_mentioned: ['Qwen3 8B', 'Phi-4 14B', 'DeepSeek-R1 7B'],
     current_hardware_mentioned: ['RTX 4060 8 GB', 'RTX 3060 12 GB', 'RTX 4060 Ti 16 GB'],
     educationalLevel: 'Beginner',
     audience: 'Compradores confusos sobre se uma geração mais nova de GPU supera mais VRAM, e usuários de Ollama decidindo qual placa comprar',
@@ -1107,9 +1107,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'O modelo certo para dar `ollama pull` depende inteiramente de qual placa você tem. Estas são escolhas atuais e comumente recomendadas por faixa de VRAM — sempre confirme o uso real de VRAM de um modelo específico na quantização escolhida antes de baixar um modelo grande.',
         ],
         items: [
-          '**RTX 4060 8 GB — mantenha-se na faixa de 7B-9B:** Qwen3 7B (tarefas gerais, ~7 GB em Q4), Llama 3.1 8B, ou Mistral Nemo 12B com quantização mais agressiva se a VRAM estiver apertada.',
+          '**RTX 4060 8 GB — mantenha-se na faixa de 7B-9B:** Qwen3 8B (tarefas gerais, ~5 GB em Q4), Llama 3.1 8B, ou DeepSeek-R1 7B para prompts com muito raciocínio.',
           '**RTX 3060 12 GB — 7B-9B para a experiência mais rápida:** os mesmos modelos de 7B-9B também rodam confortavelmente aqui, com mais folga para uma janela de contexto maior.',
-          '**RTX 3060 12 GB — é em 12B-14B que a VRAM extra compensa:** Phi-4 14B em Q4_K_M (~9 GB), Qwen3 14B, DeepSeek-R1 14B e Gemma 3 12B (forte para uso multilíngue) cabem todos; nenhum deles carrega por completo nos 8 GB da RTX 4060.',
+          '**RTX 3060 12 GB — é em 12B-14B que a VRAM extra compensa:** Phi-4 14B em Q4_K_M (~9 GB) e Qwen3 14B em Q4_K_M cabem os dois, assim como Qwen3 8B em Q8 (~9 GB) se preferir trocar parâmetros por menos perda de quantização; nenhum deles carrega por completo nos 8 GB da RTX 4060.',
           '**Orientação de quantização:** use Q5_K_M para modelos de 7B-8B quando a VRAM permitir — melhor qualidade que Q4 com um aumento modesto de tamanho. Use Q4_K_M para modelos de 12B-14B na RTX 3060; ali isso geralmente é necessário para caber, não apenas uma opção.',
         ],
       },
@@ -1139,7 +1139,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Qual é o melhor modelo de Ollama para uma placa com 12 GB de VRAM?',
-            a: 'Phi-4 14B em Q4_K_M (~9 GB) é uma escolha comumente recomendada para placas de 12 GB como a RTX 3060 12GB, junto com Qwen3 14B e DeepSeek-R1 14B. Para uma opção mais rápida e leve, Qwen3 7B ou Llama 3.1 8B deixam mais folga para uma janela de contexto maior.',
+            a: 'Phi-4 14B em Q4_K_M (~9 GB) é uma escolha comumente recomendada para placas de 12 GB como a RTX 3060 12GB, junto com Qwen3 14B. Para uma opção mais rápida e leve, Qwen3 8B ou Llama 3.1 8B deixam mais folga para uma janela de contexto maior.',
           },
           {
             q: 'Por que a NVIDIA vende uma placa de 8 GB em 2026?',
@@ -1172,7 +1172,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     dateModified: '2026-08-27',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2027-02-27',
-    current_models_mentioned: ['Qwen3 7B', 'Phi-4 14B', 'Mistral Nemo 12B', 'Gemma 3 12B', 'DeepSeek-R1 14B'],
+    current_models_mentioned: ['Qwen3 8B', 'Phi-4 14B', 'DeepSeek-R1 7B'],
     current_hardware_mentioned: ['RTX 4060 8 GB', 'RTX 3060 12 GB', 'RTX 4060 Ti 16 GB'],
     educationalLevel: 'Beginner',
     audience: '对新一代 GPU 是否胜过更大显存感到困惑的买家，以及纠结该买哪张显卡的 Ollama 用户',
@@ -1252,9 +1252,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           '该用 `ollama pull` 拉取哪个模型，完全取决于你拥有哪张显卡。以下是按显存等级划分的当前常见推荐——在拉取大模型前，请务必确认该模型在所选量化下的实际显存占用。',
         ],
         items: [
-          '**RTX 4060 8 GB——保持在 7B-9B 范围内：** Qwen3 7B（通用任务，Q4 下约 7 GB）、Llama 3.1 8B，若显存吃紧可选用量化更激进的 Mistral Nemo 12B。',
+          '**RTX 4060 8 GB——保持在 7B-9B 范围内：** Qwen3 8B（通用任务，Q4 下约 5 GB）、Llama 3.1 8B，若提示词偏重推理可选用 DeepSeek-R1 7B。',
           '**RTX 3060 12 GB——7B-9B 获得最流畅体验：** 同样的 7B-9B 模型在这里也能轻松运行，并为更长的上下文窗口留出更多余量。',
-          '**RTX 3060 12 GB——12B-14B 正是额外显存发挥价值之处：** Phi-4 14B（Q4_K_M 下约 9 GB）、Qwen3 14B、DeepSeek-R1 14B 以及适合多语言场景的 Gemma 3 12B 均可装下；这些模型无一能完整加载到 RTX 4060 的 8 GB 显存中。',
+          '**RTX 3060 12 GB——12B-14B 正是额外显存发挥价值之处：** Phi-4 14B（Q4_K_M 下约 9 GB）与 Qwen3 14B（Q4_K_M）均可装下；若想减少量化损失，也可选择 Q8 精度的 Qwen3 8B（约 9 GB）。这些模型无一能完整加载到 RTX 4060 的 8 GB 显存中。',
           '**量化建议：** 显存允许时，7B-8B 模型使用 Q5_K_M——相比 Q4 体积略增但质量更好。RTX 3060 上的 12B-14B 模型使用 Q4_K_M；这通常是能否装下的必要条件，而不仅是一个可选项。',
         ],
       },
@@ -1284,7 +1284,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '12 GB 显存的显卡最适合哪个 Ollama 模型？',
-            a: 'Phi-4 14B（Q4_K_M 下约 9 GB）是 RTX 3060 12GB 等 12 GB 显卡的常见推荐选择，此外还有 Qwen3 14B 和 DeepSeek-R1 14B。若想要更快更轻量的选项，Qwen3 7B 或 Llama 3.1 8B 能为更长的上下文窗口留出更多空间。',
+            a: 'Phi-4 14B（Q4_K_M 下约 9 GB）是 RTX 3060 12GB 等 12 GB 显卡的常见推荐选择，此外还有 Qwen3 14B。若想要更快更轻量的选项，Qwen3 8B 或 Llama 3.1 8B 能为更长的上下文窗口留出更多空间。',
           },
           {
             q: '为什么 NVIDIA 在 2026 年还卖 8 GB 显卡？',
