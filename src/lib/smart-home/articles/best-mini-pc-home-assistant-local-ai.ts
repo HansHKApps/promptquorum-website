@@ -207,6 +207,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       comparison: {
         id: 'comparison',
+        itemHeadings: true,
         title: 'Comparison',
         content:
           '**Match the unit to your target model and budget.** Prices, power figures, and connectivity specs are approximate, drawn from manufacturer listings and independent hardware reviews as of August 2026 — confirm the current listing before buying.',
@@ -575,6 +576,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       comparison: {
         id: 'comparison',
+        itemHeadings: true,
         title: 'المقارنة',
         content:
           '**طابق الجهاز مع نموذجك المستهدف وميزانيتك.** الأسعار وأرقام استهلاك الطاقة ومواصفات الاتصال تقريبية، مستمدة من قوائم الشركات المصنّعة ومراجعات أجهزة مستقلة اعتبارًا من أغسطس 2026 — تأكد من السعر الحالي قبل الشراء.',
@@ -943,6 +945,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       comparison: {
         id: 'comparison',
+        itemHeadings: true,
         title: 'Vergleich',
         content:
           '**Passen Sie das Gerät an Ihr Zielmodell und Budget an.** Preise, Verbrauchsangaben und Anschlussdetails sind Näherungswerte, entnommen aus Herstellerangaben und unabhängigen Hardware-Tests, Stand August 2026 – prüfen Sie den aktuellen Preis vor dem Kauf.',
@@ -1311,6 +1314,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       comparison: {
         id: 'comparison',
+        itemHeadings: true,
         title: 'Comparación',
         content:
           '**Ajusta el equipo a tu modelo objetivo y presupuesto.** Los precios, las cifras de consumo y los datos de conectividad son aproximados, obtenidos de listados del fabricante y análisis de hardware independientes a agosto de 2026 — confirma el precio vigente antes de comprar.',
@@ -1678,6 +1682,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       comparison: {
         id: 'comparison',
+        itemHeadings: true,
         title: '비교',
         content:
           '**목표 모델과 예산에 맞는 기기를 선택하십시오.** 가격, 전력 수치, 연결 사양은 근사치이며, 2026년 8월 기준 제조사 게시 정보와 독립적인 하드웨어 리뷰에서 가져왔습니다 — 구매 전 현재 가격을 확인하십시오.',
@@ -2046,6 +2051,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       comparison: {
         id: 'comparison',
+        itemHeadings: true,
         title: 'Comparaison',
         content:
           '**Adaptez la machine à votre modèle cible et à votre budget.** Les prix, les chiffres de consommation et les caractéristiques réseau sont approximatifs, tirés des fiches constructeur et de tests matériels indépendants en date d\'août 2026 — vérifiez le prix actuel avant d\'acheter.',
@@ -2414,6 +2420,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       comparison: {
         id: 'comparison',
+        itemHeadings: true,
         title: '比較',
         content:
           '**目標のモデルと予算に合った機種を選びましょう。** 価格、消費電力、接続仕様の数値はおおよそのもので、2026年8月時点のメーカー公表情報と独立系ハードウェアレビューから引用しています——購入前に最新価格を確認してください。',
@@ -2782,6 +2789,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       comparison: {
         id: 'comparison',
+        itemHeadings: true,
         title: 'Comparação',
         content:
           '**Ajuste a máquina ao seu modelo-alvo e orçamento.** Os preços e os números de consumo são aproximados, obtidos de listagens do fabricante e análises de hardware independentes em agosto de 2026 — confira o preço atual antes de comprar.',
@@ -3150,6 +3158,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       comparison: {
         id: 'comparison',
+        itemHeadings: true,
         title: '比较',
         content:
           '**根据你的目标模型和预算选择机型。** 价格与功耗数据为近似值，来自 2026 年 8 月的厂商信息和独立硬件评测——购买前请确认当前价格。',
