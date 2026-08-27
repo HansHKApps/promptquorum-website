@@ -361,11 +361,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       contrarianDaily: {
         id: 'contrarian-daily',
         title: 'You Run LLMs >4 Hours Daily',
-        content: 'At the RunPod RTX 4090 midpoint rate ($0.50/hr): $0.50/hr × 4 hours × 30 days = $60/month. Over 18 months that\'s $1,080 — more than two-thirds of the cost of an actual RTX 4090 (roughly $1,599 retail as of July 2026). If your usage is consistent and predictable, buying is cheaper long-term.',
+        content: 'At the RunPod RTX 4090 midpoint rate ($0.50/hr): $0.50/hr × 4 hours × 30 days = $60/month. Over 18 months that\'s $1,080 — less than half the cost of an actual RTX 4090 (roughly $2,000–2,600 retail, EOL pricing as of August 2026). If your usage is consistent and predictable, buying is cheaper long-term.',
         image: '/images/cloud-gpu-rental-comparison-2026-buy-vs-rent-breakeven-en.svg',
-        imageCaption: 'Cost timeline comparing RunPod RTX 4090 rental at $0.50/hr against buying a $1,599 RTX 4090 outright, based on 4 hours of daily use. Renting stays cheaper until roughly 3,200 hours (about 27 months), after which owning the GPU costs less than continued RunPod rental.',
+        imageCaption: 'Cost timeline comparing RunPod RTX 4090 rental at $0.50/hr against buying a $2,000–2,600 RTX 4090 outright (EOL pricing, August 2026), based on 4 hours of daily use. Renting stays cheaper until roughly 4,600 hours (about 38 months), after which owning the GPU costs less than continued RunPod rental.',
         callouts: [
-          { type: '💡 The Math', text: 'Breakeven point: at $0.50/hr and 4 hours/day, that\'s roughly 3,200 rental hours — about 27 months of daily 4-hour usage. If you\'re past that, calculate ROI: GPU cost ÷ hourly rate = breakeven hours.' },
+          { type: '💡 The Math', text: 'Breakeven point: at $0.50/hr and 4 hours/day, that\'s roughly 4,600 rental hours — about 38 months of daily 4-hour usage. If you\'re past that, calculate ROI: GPU cost ($2,000–2,600) ÷ hourly rate ($0.50) = breakeven hours.' },
         ],
       },
       contrarianLatency: {
@@ -900,11 +900,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       contrarianDaily: {
         id: 'contrarian-daily',
         title: 'Ejecutas LLMs Más de 4 Horas al Día',
-        content: 'A la tarifa media de RunPod RTX 4090 ($0.50/hr): $0.50/hr × 4 horas × 30 días = $60/mes. En 18 meses eso son $1,080 — más de dos tercios del coste de una RTX 4090 real (unos $1,599 en comercio minorista a julio de 2026). Si tu uso es constante y predecible, comprar es más barato a largo plazo.',
+        content: 'A la tarifa media de RunPod RTX 4090 ($0.50/hr): $0.50/hr × 4 horas × 30 días = $60/mes. En 18 meses eso son $1,080 — menos de la mitad del coste de una RTX 4090 real (unos $2,000–2,600 en comercio minorista, precio EOL a agosto de 2026). Si tu uso es constante y predecible, comprar es más barato a largo plazo.',
         image: '/images/cloud-gpu-rental-comparison-2026-buy-vs-rent-breakeven-es.svg',
-        imageCaption: 'Línea de tiempo de costes que compara el alquiler de una RTX 4090 en RunPod a $0,50/hr frente a comprarla por $1.599, con un uso de 4 horas diarias. Alquilar sigue siendo más barato hasta unas 3.200 horas (unos 27 meses), tras lo cual comprar la GPU cuesta menos que seguir alquilando en RunPod.',
+        imageCaption: 'Línea de tiempo de costes que compara el alquiler de una RTX 4090 en RunPod a $0,50/hr frente a comprarla por $2.000–2.600 (precio EOL, agosto de 2026), con un uso de 4 horas diarias. Alquilar sigue siendo más barato hasta unas 4.600 horas (unos 38 meses), tras lo cual comprar la GPU cuesta menos que seguir alquilando en RunPod.',
         callouts: [
-          { type: '💡 El Cálculo', text: 'Punto de equilibrio: a $0.50/hr y 4 horas/día, son unas 3.200 horas de alquiler — unos 27 meses de uso diario de 4 horas. Si lo superas, calcula el ROI: coste de la GPU ÷ tarifa por hora = horas de equilibrio.' },
+          { type: '💡 El Cálculo', text: 'Punto de equilibrio: a $0.50/hr y 4 horas/día, son unas 4.600 horas de alquiler — unos 38 meses de uso diario de 4 horas. Si lo superas, calcula el ROI: coste de la GPU ($2.000–2.600) ÷ tarifa por hora ($0.50) = horas de equilibrio.' },
         ],
       },
       contrarianLatency: {
@@ -1458,11 +1458,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       contrarianDaily: {
         id: 'contrarian-daily',
         title: 'تشغّل نماذج LLM أكثر من 4 ساعات يومياً',
-        content: 'عند متوسط سعر RunPod RTX 4090 (0.50 دولار/ساعة): 0.50 دولار/ساعة × 4 ساعات × 30 يوماً = 60 دولاراً/شهرياً. خلال 18 شهراً يصبح ذلك 1,080 دولاراً — أكثر من ثلثي تكلفة RTX 4090 حقيقية (نحو 1,599 دولار بسعر التجزئة كما في يوليو 2026). إن كان استخدامك ثابتاً ومتوقَّعاً، الشراء أرخص على المدى الطويل.',
+        content: 'عند متوسط سعر RunPod RTX 4090 (0.50 دولار/ساعة): 0.50 دولار/ساعة × 4 ساعات × 30 يوماً = 60 دولاراً/شهرياً. خلال 18 شهراً يصبح ذلك 1,080 دولاراً — أقل من نصف تكلفة RTX 4090 حقيقية (نحو 2,000-2,600 دولار بسعر التجزئة، سعر EOL كما في أغسطس 2026). إن كان استخدامك ثابتاً ومتوقَّعاً، الشراء أرخص على المدى الطويل.',
         image: '/images/cloud-gpu-rental-comparison-2026-buy-vs-rent-breakeven-ar.svg',
-        imageCaption: 'جدول زمني للتكلفة يقارن استئجار RTX 4090 على RunPod بسعر 0.50$/ساعة مقابل شرائها مباشرة بـ1,599$، بافتراض استخدام 4 ساعات يومياً. يظل الاستئجار أرخص حتى نحو 3,200 ساعة (نحو 27 شهراً)، وبعدها تصبح ملكية وحدة GPU أرخص من الاستمرار في الاستئجار على RunPod.',
+        imageCaption: 'جدول زمني للتكلفة يقارن استئجار RTX 4090 على RunPod بسعر 0.50$/ساعة مقابل شرائها مباشرة بـ 2,000-2,600$ (سعر EOL، أغسطس 2026)، بافتراض استخدام 4 ساعات يومياً. يظل الاستئجار أرخص حتى نحو 4,600 ساعة (نحو 38 شهراً)، وبعدها تصبح ملكية وحدة GPU أرخص من الاستمرار في الاستئجار على RunPod.',
         callouts: [
-          { type: '💡 الحساب', text: 'نقطة التعادل: عند 0.50 دولار/ساعة و4 ساعات/يوم، ذلك نحو 3,200 ساعة استئجار — أي نحو 27 شهراً من الاستخدام اليومي لمدة 4 ساعات. إن تجاوزتها، احسب العائد: تكلفة GPU ÷ السعر بالساعة = ساعات التعادل.' },
+          { type: '💡 الحساب', text: 'نقطة التعادل: عند 0.50 دولار/ساعة و4 ساعات/يوم، ذلك نحو 4,600 ساعة استئجار — أي نحو 38 شهراً من الاستخدام اليومي لمدة 4 ساعات. إن تجاوزتها، احسب العائد: تكلفة GPU (2,000-2,600$) ÷ السعر بالساعة (0.50$) = ساعات التعادل.' },
         ],
       },
       contrarianLatency: {
@@ -2089,11 +2089,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       contrarianDaily: {
         id: 'contrarian-daily',
         title: 'Sie führen LLMs >4 Stunden täglich aus',
-        content: 'Zum RunPod-RTX-4090-Mittelwert ($0,50/h): $0,50/h × 4 Stunden × 30 Tage = $60/Monat. Über 18 Monate sind das $1.080 — mehr als zwei Drittel der Kosten einer RTX 4090 (ca. $1.599 Einzelhandel, Stand Juli 2026). Bei konsistenter, vorhersehbarer Nutzung ist Kaufen langfristig günstiger.',
+        content: 'Zum RunPod-RTX-4090-Mittelwert ($0,50/h): $0,50/h × 4 Stunden × 30 Tage = $60/Monat. Über 18 Monate sind das $1.080 — weniger als die Hälfte der Kosten einer RTX 4090 (ca. $2.000–2.600 Einzelhandel, EOL-Preis, Stand August 2026). Bei konsistenter, vorhersehbarer Nutzung ist Kaufen langfristig günstiger.',
         image: '/images/cloud-gpu-rental-comparison-2026-buy-vs-rent-breakeven-de.svg',
-        imageCaption: 'Kostenverlauf im Vergleich: RTX-4090-Miete bei RunPod für $0,50/h gegenüber dem Kauf für $1.599, bei 4 Stunden täglicher Nutzung. Mieten bleibt bis etwa 3.200 Stunden (rund 27 Monate) günstiger; danach ist der Kauf der GPU billiger als die fortgesetzte Miete bei RunPod.',
+        imageCaption: 'Kostenverlauf im Vergleich: RTX-4090-Miete bei RunPod für $0,50/h gegenüber dem Kauf für $2.000–2.600 (EOL-Preis, August 2026), bei 4 Stunden täglicher Nutzung. Mieten bleibt bis etwa 4.600 Stunden (rund 38 Monate) günstiger; danach ist der Kauf der GPU billiger als die fortgesetzte Miete bei RunPod.',
         callouts: [
-          { type: '💡 Die Mathematik', text: 'Break-Even-Punkt: bei $0,50/h und 4 Stunden/Tag sind das rund 3.200 Mietstunden — etwa 27 Monate täglicher 4-Stunden-Nutzung. Wenn Sie darüber hinausgehen, berechnen Sie den ROI: GPU-Kosten ÷ Stundensatz = Break-Even-Stunden.' },
+          { type: '💡 Die Mathematik', text: 'Break-Even-Punkt: bei $0,50/h und 4 Stunden/Tag sind das rund 4.600 Mietstunden — etwa 38 Monate täglicher 4-Stunden-Nutzung. Wenn Sie darüber hinausgehen, berechnen Sie den ROI: GPU-Kosten ($2.000–2.600) ÷ Stundensatz ($0,50) = Break-Even-Stunden.' },
         ],
       },
       contrarianLatency: {
@@ -2569,11 +2569,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       contrarianDaily: {
         id: 'contrarian-daily',
         title: 'Vous exécutez les LLM >4 heures par jour',
-        content: 'Au tarif médian RunPod RTX 4090 ($0,50/h) : $0,50/h × 4 heures × 30 jours = $60/mois. Sur 18 mois c\'est $1.080 — plus des deux tiers du coût d\'une véritable RTX 4090 (environ $1.599 au détail, juillet 2026). Si votre utilisation est cohérente et prévisible, l\'achat est plus économique à long terme.',
+        content: 'Au tarif médian RunPod RTX 4090 ($0,50/h) : $0,50/h × 4 heures × 30 jours = $60/mois. Sur 18 mois c\'est $1.080 — moins de la moitié du coût d\'une véritable RTX 4090 (environ $2.000–2.600 au détail, prix EOL, août 2026). Si votre utilisation est cohérente et prévisible, l\'achat est plus économique à long terme.',
         image: '/images/cloud-gpu-rental-comparison-2026-buy-vs-rent-breakeven-fr.svg',
-        imageCaption: 'Chronologie des coûts comparant la location d\'une RTX 4090 sur RunPod à $0,50/h à son achat pour $1 599, sur la base de 4 heures d\'utilisation quotidienne. La location reste moins chère jusqu\'à environ 3 200 heures (environ 27 mois), après quoi l\'achat du GPU coûte moins cher que la location continue sur RunPod.',
+        imageCaption: 'Chronologie des coûts comparant la location d\'une RTX 4090 sur RunPod à $0,50/h à son achat pour $2.000–2.600 (prix EOL, août 2026), sur la base de 4 heures d\'utilisation quotidienne. La location reste moins chère jusqu\'à environ 4 600 heures (environ 38 mois), après quoi l\'achat du GPU coûte moins cher que la location continue sur RunPod.',
         callouts: [
-          { type: '💡 Les mathématiques', text: 'Point d\'équilibre : à $0,50/h et 4 heures/jour, cela représente environ 3.200 heures de location — soit environ 27 mois d\'utilisation quotidienne de 4 heures. Si vous dépassez cela, calculez le ROI : Coût GPU ÷ Taux horaire = Heures d\'équilibre.' },
+          { type: '💡 Les mathématiques', text: 'Point d\'équilibre : à $0,50/h et 4 heures/jour, cela représente environ 4.600 heures de location — soit environ 38 mois d\'utilisation quotidienne de 4 heures. Si vous dépassez cela, calculez le ROI : Coût GPU ($2.000–2.600) ÷ Taux horaire ($0,50) = Heures d\'équilibre.' },
         ],
       },
       contrarianLatency: {
@@ -2961,11 +2961,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       contrarianDaily: {
         id: 'contrarian-daily',
         title: '毎日4時間以上LLMを実行している',
-        content: 'RunPod RTX 4090の中間価格($0.50/時間)で計算: $0.50/時間 × 4時間 × 30日 = 月額$60。18ヶ月でそれは$1,080 — RTX 4090実機(2026年7月時点で小売約$1,599)のコストの3分の2以上です。使用が一貫性があり予測可能な場合、購入は長期的にはより経済的です。',
+        content: 'RunPod RTX 4090の中間価格($0.50/時間)で計算: $0.50/時間 × 4時間 × 30日 = 月額$60。18ヶ月でそれは$1,080 — RTX 4090実機(2026年8月時点で小売約$2,000–2,600、EOL価格)のコストの半分未満です。使用が一貫性があり予測可能な場合、購入は長期的にはより経済的です。',
         image: '/images/cloud-gpu-rental-comparison-2026-buy-vs-rent-breakeven-ja.svg',
-        imageCaption: '1日4時間利用を前提に、RunPodでRTX 4090を$0.50/時間でレンタルする場合と$1,599で購入する場合のコスト推移比較。レンタルは約3,200時間(約27ヶ月)まで購入より安く、それ以降はGPUを所有する方がRunPodでのレンタル継続よりも安価。',
+        imageCaption: '1日4時間利用を前提に、RunPodでRTX 4090を$0.50/時間でレンタルする場合と$2,000–2,600で購入する場合(EOL価格、2026年8月)のコスト推移比較。レンタルは約4,600時間(約38ヶ月)まで購入より安く、それ以降はGPUを所有する方がRunPodでのレンタル継続よりも安価。',
         callouts: [
-          { type: '💡 数学', text: 'ブレークイーブンポイント:$0.50/時間・1日4時間の利用では約3,200レンタル時間 — 1日4時間利用で約27ヶ月に相当。それを超える場合、ROIを計算:GPU費用÷時間料金=ブレークイーブン時間。' },
+          { type: '💡 数学', text: 'ブレークイーブンポイント:$0.50/時間・1日4時間の利用では約4,600レンタル時間 — 1日4時間利用で約38ヶ月に相当。それを超える場合、ROIを計算:GPU費用($2,000–2,600)÷時間料金($0.50)=ブレークイーブン時間。' },
         ],
       },
       contrarianLatency: {
@@ -3353,11 +3353,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       contrarianDaily: {
         id: 'contrarian-daily',
         title: '您每天运行LLM >4小时',
-        content: '按RunPod RTX 4090中位价格($0.50/小时)计算: $0.50/小时 × 4小时 × 30天 = 每月$60。在18个月内,这是$1,080 — 超过真实RTX 4090成本(截至2026年7月零售约$1,599)的三分之二。如果您的使用是一致且可预测的,购买从长期来说更经济。',
+        content: '按RunPod RTX 4090中位价格($0.50/小时)计算: $0.50/小时 × 4小时 × 30天 = 每月$60。在18个月内,这是$1,080 — 不到真实RTX 4090成本(截至2026年8月零售约$2,000-2,600、EOL价格)的一半。如果您的使用是一致且可预测的,购买从长期来说更经济。',
         image: '/images/cloud-gpu-rental-comparison-2026-buy-vs-rent-breakeven-zh.svg',
-        imageCaption: '以每天使用4小时为前提，对比在RunPod以每小时$0.50租用RTX 4090与直接以$1,599购买的成本变化。租用在约3,200小时(约27个月)内更便宜，超过这个时间点后，拥有一块GPU比继续在RunPod租用更划算。',
+        imageCaption: '以每天使用4小时为前提，对比在RunPod以每小时$0.50租用RTX 4090与直接以$2,000-2,600购买的成本变化(EOL价格、2026年8月)。租用在约4,600小时(约38个月)内更便宜，超过这个时间点后，拥有一块GPU比继续在RunPod租用更划算。',
         callouts: [
-          { type: '💡 数学', text: '盈亏平衡点:按$0.50/小时、每天4小时计算,约为3,200租赁小时——相当于每天4小时使用约27个月。如果超过,计算ROI:GPU成本÷小时费率=盈亏平衡小时。' },
+          { type: '💡 数学', text: '盈亏平衡点:按$0.50/小时、每天4小时计算,约为4,600租赁小时——相当于每天4小时使用约38个月。如果超过,计算ROI:GPU成本($2,000-2,600)÷小时费率($0.50)=盈亏平衡小时。' },
         ],
       },
       contrarianLatency: {
@@ -3814,11 +3814,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     contrarianDaily: {
       id: 'contrarian-daily',
       title: '하루 4시간 이상 LLM을 실행하는 경우',
-      content: '$0.39/시간 × 4시간 × 30일 = RunPod RTX 4090 월 $46.80. 18개월이면 $843으로, 실제 RTX 4090 비용($1,599 소매가, 2026년 5월)의 절반 이상입니다. 사용량이 일정하고 예측 가능하다면 장기적으로 구매가 더 저렴합니다.',
+      content: '$0.50/시간 × 4시간 × 30일 = RunPod RTX 4090 월 $60. 18개월이면 $1,080으로, 실제 RTX 4090 비용(2026년 8월 소매가 약 $2,000–2,600, EOL 가격)의 절반 미만입니다. 사용량이 일정하고 예측 가능하다면 장기적으로 구매가 더 저렴합니다.',
       image: '/images/cloud-gpu-rental-comparison-2026-buy-vs-rent-breakeven-ko.svg',
-      imageCaption: '하루 4시간 사용을 기준으로, RunPod에서 RTX 4090을 시간당 $0.39에 렌탈했을 때의 누적 비용과 $1,599에 직접 구매하는 비용을 비교한 타임라인. 렌탈은 약 34개월(약 4,080시간)까지 구매보다 저렴하며, 이후에는 GPU를 직접 소유하는 편이 더 경제적입니다.',
+      imageCaption: '하루 4시간 사용을 기준으로, RunPod에서 RTX 4090을 시간당 $0.50에 렌탈했을 때의 누적 비용과 $2,000–2,600에 직접 구매하는 비용(EOL 가격, 2026년 8월)을 비교한 타임라인. 렌탈은 약 38개월(약 4,600시간)까지 구매보다 저렴하며, 이후에는 GPU를 직접 소유하는 편이 더 경제적입니다.',
       callouts: [
-        { type: '💡 계산 기준', text: '손익분기점: 월 4시간 사용 18개월(1,800시간). 이를 초과한다면 ROI를 계산하십시오: GPU 비용 ÷ 시간당 요금 = 손익분기 시간.' },
+        { type: '💡 계산 기준', text: '손익분기점: 시간당 $0.50, 일 4시간 사용 기준 약 4,600시간 렌탈 — 약 38개월 일일 4시간 사용에 해당. 초과 시 ROI 계산: GPU 비용($2,000–2,600) ÷ 시간당 요금($0.50) = 손익분기 시간.' },
       ],
     },
     contrarianLatency: {
