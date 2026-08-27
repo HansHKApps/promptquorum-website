@@ -9,6 +9,10 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
+      next_refresh_due: '2027-02-27',
+      last_full_refresh: '2026-08-27',
+      next_seo_review_due: '2026-10-01',
+      last_seo_review: '2026-08-27',
       theme: 'Getting Started',
       title: 'Local LLM on a Laptop: What Runs on 8GB, 16GB & Apple Silicon (2026)',
       seoTitle: 'Local LLM on a Laptop (2026): 8GB, 16GB & Apple Silicon',
@@ -17,14 +21,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       heroImage: '/images/local-llm-on-laptop-ram-tiers-hero-en.webp',
       twitterDescription: '7B models run on 8 GB laptops at 10–25 tok/sec. Apple Silicon M3: 50–80 tok/sec. Thermal throttling fix: use a stand + disable Turbo Boost. Q4_K_M guide.',
       publishDate: '2026-04-04',
-      dateModified: '2026-06-19',
+      dateModified: '2026-08-27',
       leadAnswerBlock: '**Running a local LLM on a laptop is deploying language models directly on your computer without cloud APIs or external data transmission.** The primary benefit is complete privacy and offline capability; performance depends on hardware (8 GB RAM minimum for 7B models, 16 GB for 13B).',
             comparisonTable: {
         columns: ['Setup', 'Model Size', 'Speed', 'Experience'],
         rows: [
           { 'Setup': '8 GB RAM CPU', 'Model Size': '3B–7B', 'Speed': '10–25 tok/sec', 'Experience': 'Usable for chat, summary, simple coding' },
           { 'Setup': '16 GB RAM CPU', 'Model Size': '7B–13B', 'Speed': '5–15 tok/sec', 'Experience': 'General use, no multitasking limits' },
-          { 'Setup': 'Apple Silicon (M2–M4)', 'Model Size': '7B–13B', 'Speed': '30–80 tok/sec', 'Experience': 'Fastest consumer option, best battery life' },
+          { 'Setup': 'Apple Silicon (M2–M5)', 'Model Size': '7B–13B', 'Speed': '30–80 tok/sec', 'Experience': 'Fastest consumer option, best battery life' },
           { 'Setup': 'GPU Laptop (RTX 4060, 8 GB VRAM)', 'Model Size': '7B–13B', 'Speed': '60–90 tok/sec', 'Experience': 'Fastest, but high heat and battery drain' },
         ],
       },
@@ -183,7 +187,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           snippetBlocks: [{ type: 'one-sentence', text: 'Laptops can run local LLMs: Apple Silicon MacBook Pro (M3/M4/M5) is the best at 50–80 tok/s on 7B models; minimum 8 GB RAM for 7B, 16 GB for 13B; expect 20–40% speed drop from thermal throttling after 10–15 min of sustained inference.' }, { type: 'plain-terms', text: 'Your laptop\'s main bottleneck for local AI is RAM — the model must fit entirely in memory. Thermal throttling means your chip slows itself down to avoid overheating, which drops token speed after sustained use. Use a cooling pad or lower the quantization (e.g., Q4_K_S instead of Q4_K_M) to reduce heat.' }],
           items: [
             'A 3B or 7B model at Q4_K_M quantization runs usably on any modern laptop with 8 GB RAM.',
-            'Apple Silicon MacBooks (M1, M2, M3, M4) outperform most Windows laptops for local inference due to unified memory and Metal GPU acceleration -- an M3 MacBook Pro runs a 7B model at 50-80 tok/sec.',
+            'Apple Silicon MacBooks (M1, M2, M3, M4, M5) outperform most Windows laptops for local inference due to unified memory and Metal GPU acceleration -- an M3 MacBook Pro runs a 7B model at 50-80 tok/sec.',
             'Thermal throttling reduces speed by 20-40% after 10-15 minutes of sustained generation. Use a laptop stand and disable Turbo Boost to maintain steady speed.',
             'Battery drain: expect 30-60% of battery per hour during active inference on most laptops. Plug in for extended sessions.',
             'On 8 GB RAM Windows/Linux laptops: use Q4_K_M models up to 7B. On 16 GB RAM: Q4_K_M models up to 13B, or Q5_K_M for 7B.',
@@ -302,7 +306,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'apple-vs-windows',
           title: 'Apple Silicon vs Windows Laptop: Which Is Better for Local LLMs?',
           content: [
-            '**Apple Silicon MacBooks (M1 through M4) are the best consumer laptops for local LLM inference.** The unified memory architecture means GPU and CPU share the same memory pool -- an M3 MacBook Pro with 18 GB of memory can run a 13B model entirely in GPU memory, achieving 50-80 tok/sec.',
+            '**Apple Silicon MacBooks (M1 through M5) are the best consumer laptops for local LLM inference.** The unified memory architecture means GPU and CPU share the same memory pool -- an M3 MacBook Pro with 18 GB of memory can run a 13B model entirely in GPU memory, achieving 50-80 tok/sec. The current MacBook Pro lineup (M5 Pro/M5 Max, launched March 2026) extends unified memory up to 64 GB on M5 Pro and 128 GB on M5 Max, with up to 307 GB/s and 614 GB/s of memory bandwidth respectively.',
             'Windows laptops with discrete NVIDIA GPUs can be faster if VRAM is sufficient (8 GB+). An NVIDIA RTX 4060 laptop GPU (8 GB VRAM) runs a 7B model at 60-90 tok/sec -- comparable to Apple M3 Pro. The downside is higher battery drain and heat generation.',
             'Windows laptops running on integrated Intel Iris Xe or AMD Radeon integrated graphics use CPU inference only, resulting in 8-20 tok/sec for 7B models.',
             '**Best models for integrated graphics (Intel Iris Xe / AMD Radeon):** With 16 GB RAM, the sweet spot is a 3B–7B model at Q4_K_M. Llama 3.2 3B runs at the top of the 8–20 tok/sec range, while Mistral Small (7B) sits at the lower end but gives noticeably better quality. The integrated GPU does not accelerate inference here -- the CPU does the work -- so prioritise a model that stays comfortably within RAM rather than chasing a larger size. For a step-by-step low-end setup, see [Fastest Local LLMs for Low-End PCs](/local-llms/fastest-local-llms-low-end-pcs).',
@@ -435,7 +439,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'What is the fastest laptop for local LLMs?',
-              a: 'Apple MacBook Pro M4 Pro/Max with 24–48 GB unified memory reaches 80–120 tok/sec on 13B models. On Windows, an NVIDIA RTX 4070/4090 laptop GPU (8–16 GB VRAM) achieves 60–130 tok/sec on 7B models.',
+              a: 'Apple MacBook Pro M5 Pro/M5 Max (launched March 2026) with up to 64–128 GB unified memory reaches 80–120 tok/sec on 13B models. On Windows, an NVIDIA RTX 4070/4090 laptop GPU (8–16 GB VRAM) achieves 60–130 tok/sec on 7B models.',
             },
             {
               q: 'Do I need a GPU for local LLMs?',
@@ -495,7 +499,7 @@ schema: {
         'description': 'Run local LLMs on laptops with 8 GB RAM. Covers best models (Llama 3.2 3B, Mistral Small, Qwen3 7B), thermal throttling fixes, battery optimization, and Q4_K_M quantization settings.',
         'url': 'https://www.promptquorum.com/local-llms/local-llm-on-laptop',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-06-19',
+        'dateModified': '2026-08-27',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Beginner',
@@ -653,14 +657,14 @@ schema: {
       heroImage: '/images/local-llm-on-laptop-ram-tiers-hero-es.webp',
       twitterDescription: 'Los modelos 7B se ejecutan en portátiles de 8 GB a 10–25 tok/seg. Apple Silicon M3: 50–80 tok/seg. Solución al throttling térmico: usa un soporte y desactiva Turbo Boost. Guía Q4_K_M.',
       publishDate: '2026-04-04',
-      dateModified: '2026-04-18',
+      dateModified: '2026-08-27',
       leadAnswerBlock: '**Ejecutar un LLM local en un portátil significa desplegar modelos de lenguaje directamente en tu ordenador sin APIs en la nube ni transmisión de datos externos.** El principal beneficio es la privacidad total y la capacidad de trabajar sin conexión; el rendimiento depende del hardware (mínimo 8 GB de RAM para modelos 7B, 16 GB para 13B).',
       comparisonTable: {
         columns: ['Configuración', 'Tamaño del modelo', 'Velocidad', 'Experiencia'],
         rows: [
           { 'Configuración': 'CPU 8 GB RAM', 'Tamaño del modelo': '3B–7B', 'Velocidad': '10–25 tok/seg', 'Experiencia': 'Útil para chat, resumen y código sencillo' },
           { 'Configuración': 'CPU 16 GB RAM', 'Tamaño del modelo': '7B–13B', 'Velocidad': '5–15 tok/seg', 'Experiencia': 'Uso general, sin límites de multitarea' },
-          { 'Configuración': 'Apple Silicon (M2–M4)', 'Tamaño del modelo': '7B–13B', 'Velocidad': '30–80 tok/seg', 'Experiencia': 'Opción de consumo más rápida, mejor duración de batería' },
+          { 'Configuración': 'Apple Silicon (M2–M5)', 'Tamaño del modelo': '7B–13B', 'Velocidad': '30–80 tok/seg', 'Experiencia': 'Opción de consumo más rápida, mejor duración de batería' },
           { 'Configuración': 'Portátil con GPU (RTX 4060, 8 GB VRAM)', 'Tamaño del modelo': '7B–13B', 'Velocidad': '60–90 tok/seg', 'Experiencia': 'Más rápido, pero con mucho calor y consumo de batería' },
         ],
       },
@@ -710,7 +714,7 @@ schema: {
           snippetBlocks: [{ type: 'one-sentence', text: 'Los portátiles pueden ejecutar LLMs locales: MacBook Pro Apple Silicon (M3/M4/M5) es el mejor con 50–80 tok/s en modelos 7B; mínimo 8 GB RAM para 7B, 16 GB para 13B; esperar una pérdida de velocidad del 20–40% por throttling térmico tras 10–15 min de inferencia sostenida.' }, { type: 'plain-terms', text: 'El cuello de botella principal para IA local en portátiles es la RAM — el modelo debe caber completamente en memoria. El throttling térmico ralentiza el chip para evitar el sobrecalentamiento. Usa un soporte refrigerador o una cuantización más baja (Q4_K_S en vez de Q4_K_M) para reducir el calor.' }],
           items: [
             'Un modelo 3B o 7B con cuantización Q4_K_M funciona de forma utilizable en cualquier portátil moderno con 8 GB de RAM.',
-            'Los MacBook con Apple Silicon (M1, M2, M3, M4) superan a la mayoría de portátiles Windows en inferencia local gracias a la memoria unificada y la aceleración GPU Metal -- un MacBook Pro M3 ejecuta un modelo 7B a 50–80 tok/seg.',
+            'Los MacBook con Apple Silicon (M1, M2, M3, M4, M5) superan a la mayoría de portátiles Windows en inferencia local gracias a la memoria unificada y la aceleración GPU Metal -- un MacBook Pro M3 ejecuta un modelo 7B a 50–80 tok/seg.',
             'El throttling térmico reduce la velocidad un 20–40% después de 10–15 minutos de generación sostenida. Usa un soporte para portátil y desactiva Turbo Boost para mantener una velocidad estable.',
             'Consumo de batería: espera entre un 30–60% por hora durante la inferencia activa en la mayoría de portátiles. Conecta a la corriente para sesiones largas.',
             'En portátiles Windows/Linux con 8 GB de RAM: usa modelos Q4_K_M hasta 7B. Con 16 GB: modelos Q4_K_M hasta 13B, o Q5_K_M para 7B.',
@@ -830,7 +834,7 @@ schema: {
           id: 'apple-vs-windows',
           title: 'Apple Silicon vs portátil Windows: ¿cuál es mejor para LLMs locales?',
           content: [
-            '**Los MacBook con Apple Silicon (M1 a M4) son los mejores portátiles de consumo para inferencia local de LLMs.** La arquitectura de memoria unificada significa que la GPU y la CPU comparten el mismo banco de memoria -- un MacBook Pro M3 con 18 GB de memoria puede ejecutar un modelo 13B íntegramente en memoria GPU, alcanzando 50–80 tok/seg.',
+            '**Los MacBook con Apple Silicon (M1 a M5) son los mejores portátiles de consumo para inferencia local de LLMs.** La arquitectura de memoria unificada significa que la GPU y la CPU comparten el mismo banco de memoria -- un MacBook Pro M3 con 18 GB de memoria puede ejecutar un modelo 13B íntegramente en memoria GPU, alcanzando 50–80 tok/seg. El MacBook Pro actual (M5 Pro/M5 Max, lanzado en marzo de 2026) amplía la memoria unificada hasta 64 GB en el M5 Pro y 128 GB en el M5 Max, con un ancho de banda de hasta 307 GB/s y 614 GB/s respectivamente.',
             'Los portátiles Windows con GPUs NVIDIA discretas pueden ser más rápidos si el VRAM es suficiente (8 GB o más). Una GPU NVIDIA RTX 4060 para portátil (8 GB VRAM) ejecuta un modelo 7B a 60–90 tok/seg -- comparable al Apple M3 Pro. El inconveniente es un mayor consumo de batería y generación de calor.',
             'Los portátiles Windows con gráficos integrados Intel Iris Xe o AMD Radeon usan solo inferencia por CPU, lo que resulta en 8–20 tok/seg para modelos 7B.',
             '**Mejores modelos para gráficos integrados (Intel Iris Xe / AMD Radeon):** Con 16 GB de RAM, el punto óptimo es un modelo 3B–7B en Q4_K_M. Llama 3.2 3B funciona en la parte alta del rango de 8–20 tok/seg, mientras que Mistral Small (7B) se sitúa en la parte baja pero ofrece una calidad notablemente mejor. La GPU integrada no acelera la inferencia aquí -- el trabajo lo hace la CPU -- así que prioriza un modelo que se mantenga cómodamente dentro de la RAM en lugar de buscar un tamaño mayor. Para una configuración de gama baja paso a paso, consulta [LLMs locales más rápidos para PCs de gama baja](/es/local-llms/fastest-local-llms-low-end-pcs).',
@@ -963,7 +967,7 @@ schema: {
             },
             {
               q: '¿Cuál es el portátil más rápido para LLMs locales?',
-              a: 'Apple MacBook Pro M4 Pro/Max con 24–48 GB de memoria unificada alcanza 80–120 tok/seg en modelos 13B. En Windows, una GPU NVIDIA RTX 4070/4090 para portátil (8–16 GB VRAM) logra 60–130 tok/seg en modelos 7B.',
+              a: 'Apple MacBook Pro M5 Pro/M5 Max (lanzado en marzo de 2026) con hasta 64–128 GB de memoria unificada alcanza 80–120 tok/seg en modelos 13B. En Windows, una GPU NVIDIA RTX 4070/4090 para portátil (8–16 GB VRAM) logra 60–130 tok/seg en modelos 7B.',
             },
             {
               q: '¿Necesito una GPU para LLMs locales?',
@@ -1023,7 +1027,7 @@ schema: {
         'description': 'Ejecuta LLMs locales en portátiles con 8 GB de RAM. Cubre los mejores modelos (Llama 3.2 3B, Mistral Small, Qwen3 7B), correcciones de throttling térmico, optimización de batería y configuración de cuantización Q4_K_M.',
         'url': 'https://www.promptquorum.com/es/local-llms/local-llm-on-laptop',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-06-19',
+        'dateModified': '2026-08-27',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Beginner',
@@ -1186,14 +1190,14 @@ schema: {
       heroImage: '/images/local-llm-on-laptop-ram-tiers-hero-ar.webp',
       twitterDescription: 'تعمل نماذج ⁨7B⁩ على أجهزة لابتوب بسعة ⁨8 GB⁩ بسرعة ⁨10⁩–⁨25 tok⁩/ث. ⁨Apple Silicon M3⁩: ⁨50⁩–⁨80 tok⁩/ث. حل خفض الأداء الحراري: استخدم حاملاً وعطّل ⁨Turbo Boost⁩. دليل ⁨Q4⁩_⁨K⁩_⁨M⁩.',
       publishDate: '2026-04-04',
-      dateModified: '2026-06-19',
+      dateModified: '2026-08-27',
       leadAnswerBlock: '**تشغيل نموذج LLM محلي على لابتوب يعني نشر نماذج اللغة مباشرةً على حاسوبك دون واجهات سحابية أو نقل بيانات خارجي.** الفائدة الأساسية هي الخصوصية الكاملة والقدرة على العمل دون اتصال؛ يعتمد الأداء على العتاد (8 GB من RAM كحد أدنى لنماذج 7B، 16 GB لنماذج 13B).',
       comparisonTable: {
         columns: ['الإعداد', 'حجم النموذج', 'السرعة', 'التجربة'],
         rows: [
           { 'الإعداد': 'CPU 8 GB RAM', 'حجم النموذج': '3B–7B', 'السرعة': '10–25 tok/ث', 'التجربة': 'مفيد للمحادثة والتلخيص والكود البسيط' },
           { 'الإعداد': 'CPU 16 GB RAM', 'حجم النموذج': '7B–13B', 'السرعة': '5–15 tok/ث', 'التجربة': 'استخدام عام، دون حدود لتعدد المهام' },
-          { 'الإعداد': 'Apple Silicon (M2–M4)', 'حجم النموذج': '7B–13B', 'السرعة': '30–80 tok/ث', 'التجربة': 'أسرع خيار استهلاكي، أفضل عمر بطارية' },
+          { 'الإعداد': 'Apple Silicon (M2–M5)', 'حجم النموذج': '7B–13B', 'السرعة': '30–80 tok/ث', 'التجربة': 'أسرع خيار استهلاكي، أفضل عمر بطارية' },
           { 'الإعداد': 'لابتوب بـ GPU (RTX 4060، 8 GB VRAM)', 'حجم النموذج': '7B–13B', 'السرعة': '60–90 tok/ث', 'التجربة': 'الأسرع، لكن بحرارة عالية واستهلاك بطارية' },
         ],
       },
@@ -1243,7 +1247,7 @@ schema: {
           snippetBlocks: [{ type: 'one-sentence', text: 'الحواسيب المحمولة قادرة على تشغيل النماذج اللغوية المحلية: MacBook Pro بـ Apple Silicon (M3/M4/M5) الأفضل بـ 50–80 رمز/ث على نماذج 7B؛ 8 جيجابايت RAM كحد أدنى لـ 7B، و16 جيجابايت لـ 13B؛ توقّع فقداناً 20–40% في السرعة بسبب التقييد الحراري بعد 10–15 دقيقة.' }, { type: 'plain-terms', text: 'العقبة الرئيسية في الحواسيب المحمولة هي RAM — يجب أن يتسع النموذج بالكامل في الذاكرة. التقييد الحراري يعني إبطاء الشريحة لمنع الارتفاع الحراري. استخدم قاعدة تبريد أو اختر ضغطاً أقل (مثل Q4_K_S عوضاً عن Q4_K_M) لتقليل الحرارة.' }],
           items: [
             'نموذج 3B أو 7B بتكميم Q4_K_M يعمل بشكل قابل للاستخدام على أي لابتوب حديث بذاكرة 8 GB من RAM.',
-            'أجهزة MacBook بـ Apple Silicon (M1، M2، M3، M4) تتفوق على معظم أجهزة لابتوب Windows في الاستدلال المحلي بفضل الذاكرة الموحدة وتسريع GPU من Metal -- يشغّل MacBook Pro M3 نموذج 7B بسرعة 50–80 tok/ث.',
+            'أجهزة MacBook بـ Apple Silicon (M1، M2، M3، M4، M5) تتفوق على معظم أجهزة لابتوب Windows في الاستدلال المحلي بفضل الذاكرة الموحدة وتسريع GPU من Metal -- يشغّل MacBook Pro M3 نموذج 7B بسرعة 50–80 tok/ث.',
             'يقلّص خفض الأداء الحراري السرعة بنسبة 20–40% بعد 10–15 دقيقة من التوليد المستمر. استخدم حاملاً للابتوب وعطّل Turbo Boost للحفاظ على سرعة ثابتة.',
             'استهلاك البطارية: توقع بين 30–60% في الساعة أثناء الاستدلال النشط على معظم أجهزة اللابتوب. وصّل بالكهرباء للجلسات الطويلة.',
             'على أجهزة لابتوب Windows/Linux بذاكرة 8 GB من RAM: استخدم نماذج Q4_K_M حتى 7B. بـ 16 GB: نماذج Q4_K_M حتى 13B، أو Q5_K_M لـ 7B.',
@@ -1363,7 +1367,7 @@ schema: {
           id: 'apple-vs-windows',
           title: 'Apple Silicon مقابل لابتوب Windows: أيهما أفضل لنماذج LLM المحلية؟',
           content: [
-            '**أجهزة MacBook بـ Apple Silicon (من M1 إلى M4) هي أفضل أجهزة لابتوب استهلاكية للاستدلال المحلي لنماذج LLM.** تعني بنية الذاكرة الموحدة أن GPU وCPU يتشاركان نفس بنك الذاكرة -- يستطيع MacBook Pro M3 بذاكرة 18 GB تشغيل نموذج 13B بالكامل في ذاكرة GPU، محققاً 50–80 tok/ث.',
+            '**أجهزة MacBook بـ Apple Silicon (من M1 إلى M5) هي أفضل أجهزة لابتوب استهلاكية للاستدلال المحلي لنماذج LLM.** تعني بنية الذاكرة الموحدة أن GPU وCPU يتشاركان نفس بنك الذاكرة -- يستطيع MacBook Pro M3 بذاكرة 18 GB تشغيل نموذج 13B بالكامل في ذاكرة GPU، محققاً 50–80 tok/ث. طراز MacBook Pro الحالي (M5 Pro/M5 Max، الذي أُطلق في مارس 2026) يوسّع الذاكرة الموحدة حتى 64 GB في M5 Pro و128 GB في M5 Max، بعرض نطاق ترددي يصل إلى 307 GB/ث و614 GB/ث على التوالي.',
             'أجهزة لابتوب Windows ببطاقات NVIDIA منفصلة قد تكون أسرع إذا كانت VRAM كافية (8 GB أو أكثر). تشغّل بطاقة NVIDIA RTX 4060 للابتوب (8 GB VRAM) نموذج 7B بسرعة 60–90 tok/ث -- مماثلة لـ Apple M3 Pro. العيب هو استهلاك بطارية أعلى وتوليد حرارة.',
             'أجهزة لابتوب Windows برسوميات Intel Iris Xe أو AMD Radeon المدمجة تستخدم استدلال CPU فقط، مما ينتج 8–20 tok/ث لنماذج 7B.',
             '**أفضل النماذج للرسوميات المدمجة (Intel Iris Xe / AMD Radeon):** بذاكرة 16 GB من RAM، النقطة المثلى هي نموذج 3B–7B بصيغة Q4_K_M. يعمل Llama 3.2 3B في أعلى نطاق 8–20 tok/ث، بينما يقع Mistral Small (7B) في الطرف الأدنى لكنه يمنح جودة أفضل بشكل ملحوظ. لا تسرّع GPU المدمجة الاستدلال هنا -- CPU هو من يقوم بالعمل -- لذا أعطِ الأولوية لنموذج يبقى بأريحية ضمن RAM بدلاً من ملاحقة حجم أكبر. للحصول على إعداد منخفض الفئة خطوة بخطوة، راجع [أسرع نماذج LLM المحلية للحواسيب منخفضة الفئة](/ar/local-llms/fastest-local-llms-low-end-pcs).',
@@ -1496,7 +1500,7 @@ schema: {
             },
             {
               q: 'ما أسرع لابتوب لنماذج LLM المحلية؟',
-              a: 'Apple MacBook Pro M4 Pro/Max بذاكرة موحدة 24–48 GB يحقق 80–120 tok/ث في نماذج 13B. على Windows، تحقق بطاقة NVIDIA RTX 4070/4090 للابتوب (8–16 GB VRAM) 60–130 tok/ث في نماذج 7B.',
+              a: 'Apple MacBook Pro M5 Pro/M5 Max (أُطلق في مارس 2026) بذاكرة موحدة تصل إلى 64–128 GB يحقق 80–120 tok/ث في نماذج 13B. على Windows، تحقق بطاقة NVIDIA RTX 4070/4090 للابتوب (8–16 GB VRAM) 60–130 tok/ث في نماذج 7B.',
             },
             {
               q: 'هل أحتاج إلى GPU لنماذج LLM المحلية؟',
@@ -1556,7 +1560,7 @@ schema: {
         'description': 'شغّل نماذج LLM محلية على أجهزة لابتوب بذاكرة 8 GB من RAM. يغطي أفضل النماذج (Llama 3.2 3B، Mistral Small، Qwen3 7B)، وإصلاحات خفض الأداء الحراري، وتحسين البطارية، وإعداد تكميم Q4_K_M.',
         'url': 'https://www.promptquorum.com/ar/local-llms/local-llm-on-laptop',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-06-19',
+        'dateModified': '2026-08-27',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Beginner',
@@ -1722,7 +1726,7 @@ schema: {
       heroImage: '/images/local-llm-on-laptop-ram-tiers-hero-de.webp',
       twitterDescription: '7B-Modelle auf 8 GB Laptops mit 10–25 Token/Sek. Apple Silicon M3: 50–80 Token/Sek. Thermal Throttling-Fix: Laptop-Ständer + Turbo Boost deaktivieren. Q4_K_M Guide.',
       publishDate: '2026-04-04',
-      dateModified: '2026-06-19',
+      dateModified: '2026-08-27',
       readTime: '8 Min. Lesezeit',
       educationalLevel: 'Beginner',
       primaryTerm: 'Local LLM Laptop',
@@ -1885,7 +1889,7 @@ schema: {
         appleSilicon: {
           title: 'Apple Silicon vs Windows-Laptop: Was ist besser für lokale LLMs?',
           content: [
-            '**Ab April 2026 sind Apple Silicon MacBooks (M1 bis M4) die besten Consumer-Laptops für lokale LLM-Inferenz.** Die [vereinheitlichte Speicher](/local-llms/gpu-vs-cpu-vs-apple-silicon) Architektur bedeutet, dass GPU und CPU den gleichen Speicherpool nutzen -- ein M3 MacBook Pro mit 18 GB Speicher kann ein 13B-Modell vollständig im GPU-Speicher ausführen und erreicht 50-80 Token/Sek.',
+            '**Apple Silicon MacBooks (M1 bis M5) sind die besten Consumer-Laptops für lokale LLM-Inferenz.** Die [vereinheitlichte Speicher](/local-llms/gpu-vs-cpu-vs-apple-silicon) Architektur bedeutet, dass GPU und CPU den gleichen Speicherpool nutzen -- ein M3 MacBook Pro mit 18 GB Speicher kann ein 13B-Modell vollständig im GPU-Speicher ausführen und erreicht 50-80 Token/Sek. Das aktuelle MacBook Pro (M5 Pro/M5 Max, Markteinführung März 2026) erweitert den vereinheitlichten Speicher auf bis zu 64 GB beim M5 Pro und 128 GB beim M5 Max, mit bis zu 307 GB/s bzw. 614 GB/s Speicherbandbreite.',
             'Windows-Laptops mit diskreten NVIDIA-GPUs können schneller sein, wenn der VRAM ausreichend ist (8 GB+). Eine NVIDIA RTX 4060 Laptop-GPU (8 GB VRAM) führt ein 7B-Modell mit 60-90 Token/Sek. aus -- vergleichbar mit Apple M3 Pro. Der Nachteil ist höherer Batterieverbrauch und Wärmeerzeugung.',
             'Windows-Laptops mit integrierter Intel Iris Xe oder AMD Radeon Grafik verwenden nur CPU-Inferenz, was zu 8-20 Token/Sek. für 7B-Modelle führt.',
             '**Beste Modelle für integrierte Grafik (Intel Iris Xe / AMD Radeon):** Mit 16 GB RAM ist der Sweet Spot ein 3B–7B-Modell in Q4_K_M. Llama 3.2 3B läuft am oberen Ende des Bereichs von 8–20 Token/Sek., während Mistral Small (7B) am unteren Ende liegt, aber spürbar bessere Qualität liefert. Die integrierte GPU beschleunigt die Inferenz hier nicht -- die CPU übernimmt die Arbeit -- priorisieren Sie also ein Modell, das komfortabel im RAM bleibt, statt eine größere Größe anzustreben. Für eine Schritt-für-Schritt-Einrichtung auf schwacher Hardware siehe [Schnellste Local LLMs für Low-End-PCs](/de/local-llms/fastest-local-llms-low-end-pcs).',
@@ -2003,7 +2007,7 @@ schema: {
             },
             {
               q: 'Was ist der schnellste Laptop zum Ausführen lokaler LLMs?',
-              a: 'Ab April 2026 ist das Apple MacBook Pro M4 Max/M5 Max (48 GB vereinheitlichter Speicher) der schnellste Consumer-Laptop für lokale LLM-Inferenz. Es erreicht 80-120 Token/Sek. bei einem 13B-Modell und kann 30B-Modelle bei Q4_K_M ausführen. Für Windows-Laptops erzeugt eine RTX 4090 Laptop-GPU (16 GB VRAM) 100-130 Token/Sek. bei 7B-Modellen, verbraucht aber erheblich mehr Energie und erzeugt mehr Wärme.',
+              a: 'Seit März 2026 ist das Apple MacBook Pro M5 Max (bis zu 128 GB vereinheitlichter Speicher, 614 GB/s Bandbreite) der schnellste Consumer-Laptop für lokale LLM-Inferenz. Es erreicht 80-120 Token/Sek. bei einem 13B-Modell und kann 30B-Modelle bei Q4_K_M ausführen. Für Windows-Laptops erzeugt eine RTX 4090 Laptop-GPU (16 GB VRAM) 100-130 Token/Sek. bei 7B-Modellen, verbraucht aber erheblich mehr Energie und erzeugt mehr Wärme.',
             },
             {
               q: 'Wie erkenne ich, ob mein Laptop Thermal Throttling macht?',
@@ -2027,7 +2031,7 @@ schema: {
             },
             {
               q: 'Was ist der schnellste Laptop für lokale LLMs?',
-              a: 'Apple MacBook Pro M4 Pro/Max mit 24–48 GB vereinheitlichtem Speicher erreicht 80–120 Token/Sek. bei 13B-Modellen. Auf Windows erzielt eine NVIDIA RTX 4070/4090 Laptop-GPU (8–16 GB VRAM) 60–130 Token/Sek. bei 7B-Modellen.',
+              a: 'Apple MacBook Pro M5 Pro/M5 Max mit bis zu 64–128 GB vereinheitlichtem Speicher erreicht 80–120 Token/Sek. bei 13B-Modellen. Auf Windows erzielt eine NVIDIA RTX 4070/4090 Laptop-GPU (8–16 GB VRAM) 60–130 Token/Sek. bei 7B-Modellen.',
             },
             {
               q: 'Benötige ich eine GPU für lokale LLMs?',
@@ -2047,7 +2051,7 @@ schema: {
           id: 'sources',
           title: 'Quellen',
           items: [
-            'Apple. (2026). "Apple M4 Max/M5 Max Chip Übersicht." Apple Developer. https://developer.apple.com/apple-silicon/ -- Vereinheitlichte Speicher-Architektur, ML-Leistungsbenchmarks und Stromeffizienz-Spezifikationen.',
+            'Apple. (2026). "Apple M5 Pro/M5 Max Chip Übersicht." Apple Developer. https://developer.apple.com/apple-silicon/ -- Vereinheitlichte Speicher-Architektur, ML-Leistungsbenchmarks und Stromeffizienz-Spezifikationen.',
             'Ollama. (2026). "Ollama Dokumentation." https://ollama.com/docs -- CPU/GPU-Inferenz-Konfiguration, CUDA/Metal-Beschleunigung und Kontextlängen-Einstellungen.',
             'llama.cpp Mitwirkende. (2026). "llama.cpp Performance-Benchmarks." https://github.com/ggerganov/llama.cpp -- Token-Durchsatzdaten über Hardware-Konfigurationen und Quantisierungsstufen.',
             'Hugging Face. (2026). "GGUF-Quantisierungs-Leitfaden." https://huggingface.co/docs/transformers/main/en/quantization/gguf -- Q2/Q4/Q5/Q8-Qualität vs Speicher-Kompromisse mit Benchmark-Ergebnissen.',
@@ -2061,7 +2065,7 @@ schema: {
         'description': 'Praxis-Guide für leistungsstarke Local LLMs auf Laptops mit wenig VRAM. Mit Quantisierungs-Tricks, besten Modellen und echten Performance-Benchmarks.',
         'url': 'https://www.promptquorum.com/de/local-llms/local-llm-on-laptop',
         'datePublished': '2026-01-01',
-        'dateModified': '2026-06-19',
+        'dateModified': '2026-08-27',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'proficiencyLevel': 'Beginner',
@@ -2105,7 +2109,7 @@ schema: {
           { '@type': 'Question', name: 'Wird das Ausführen eines Local LLM meinen Laptop über die Zeit hinweg beschädigen?', acceptedAnswer: { '@type': 'Answer', text: 'Nein -- moderne CPUs und GPUs sind für die sichere Handhabung kontinuierlicher hoher Lasten ausgelegt. Ein Laptop-Ständer und angemessene Belüftung verhindern übermäßige Wärmeentwicklung.' } },
           { '@type': 'Question', name: 'Kann ich ein Local LLM auf einem 4-GB-RAM-Laptop ausführen?', acceptedAnswer: { '@type': 'Answer', text: 'Kaum. Ein 2B-Modell benötigt etwa 1,7 GB RAM für das Modell, das OS benötigt 2-3 GB gleichzeitig. Bei 4 GB Gesamt-RAM wird Swap-Nutzung Inferenz 5-10× langsamer machen.' } },
           { '@type': 'Question', name: 'Benötigt mein Laptop eine dedizierte GPU?', acceptedAnswer: { '@type': 'Answer', text: 'Nein. Alle großen Local LLM-Tools laufen nur auf CPU. Eine dedizierte GPU beschleunigt die Inferenz erheblich, aber 3B-7B-Modelle sind mit 10-30 Token/Sek. nur auf CPU nutzbar.' } },
-          { '@type': 'Question', name: 'Was ist der schnellste Laptop?', acceptedAnswer: { '@type': 'Answer', text: 'Ab April 2026 ist das Apple MacBook Pro M4 Max/M5 Max (48 GB vereinheitlichter Speicher) der schnellste Consumer-Laptop für lokale LLM-Inferenz. Es erreicht 80-120 Token/Sek. bei einem 13B-Modell.' } },
+          { '@type': 'Question', name: 'Was ist der schnellste Laptop?', acceptedAnswer: { '@type': 'Answer', text: 'Seit März 2026 ist das Apple MacBook Pro M5 Max (bis zu 128 GB vereinheitlichter Speicher) der schnellste Consumer-Laptop für lokale LLM-Inferenz. Es erreicht 80-120 Token/Sek. bei einem 13B-Modell.' } },
           { '@type': 'Question', name: 'Wie erkenne ich Thermal Throttling?', acceptedAnswer: { '@type': 'Answer', text: 'Auf macOS: öffnen Sie Activity Monitor → Fenster → CPU-Nutzungs-Verlauf. Ein plötzlicher Rückgang der CPU-Frequenz weist auf Drosslung hin.' } },
           { '@type': 'Question', name: 'Kann ich mit Batteriestrom ein Local LLM ausführen?', acceptedAnswer: { '@type': 'Answer', text: 'Ja, aber Geschwindigkeit und Dauer sind reduziert. Im Akkubetrieb limitiert macOS automatisch CPU/GPU-Stromverbrauch, wodurch Inferenzgeschwindigkeit um 20-35% reduziert wird.' } },
           { '@type': 'Question', name: 'Was ist die beste Modellgröße für 8 GB RAM?', acceptedAnswer: { '@type': 'Answer', text: 'Ein 7B-Modell mit Q4_K_M ist das praktische Maximum für 8-GB-RAM-Laptops. Der empfohlene Standard ist llama3.2:3b für Multitasking.' } },
@@ -2218,7 +2222,7 @@ schema: {
           snippetBlocks: [{ type: 'one-sentence', text: 'Notebooks podem rodar LLMs locais: MacBook Pro Apple Silicon (M3/M4/M5) é o melhor com 50–80 tok/s em modelos 7B; mínimo 8 GB RAM para 7B, 16 GB para 13B; espere queda de 20–40% de velocidade por throttling térmico após 10–15 min.' }, { type: 'plain-terms', text: 'O principal gargalo para IA local em notebooks é a RAM — o modelo precisa caber inteiramente na memória. Throttling térmico é quando o chip desacelera para evitar superaquecimento. Use um suporte resfriador ou quantização menor (Q4_K_S em vez de Q4_K_M) para reduzir calor.' }],
           items: [
             'Notebooks de 8 GB de RAM: use modelos 3B–7B em Q4_K_M. Velocidade na CPU: 10–25 tok/s.',
-            'Apple Silicon M3/M4: 50–80 tok/s com Metal. O melhor hardware de notebook para LLMs locais.',
+            'Apple Silicon M3/M4/M5: 50–80 tok/s com Metal. O melhor hardware de notebook para LLMs locais.',
             'Intel Iris Xe: sem aceleração de GPU para LLMs. Somente CPU.',
             'Throttling térmico reduz a velocidade em 20–40% após 10–15 minutos. Use base de resfriamento.',
             'Recomendação para 8 GB: `ollama run llama3.2:3b`. Para 16 GB: `ollama run llama3.2:7b`.',
@@ -2337,7 +2341,7 @@ schema: {
           id: 'apple-vs-windows',
           title: 'Apple Silicon vs Notebook Windows: Qual É Melhor Para LLMs Locais?',
           content: [
-            '**Os MacBooks com Apple Silicon (M1 a M4) são os melhores notebooks de consumo para inferência de LLM local.** A arquitetura de memória unificada significa que GPU e CPU compartilham o mesmo pool de memória -- um MacBook Pro M3 com 18 GB de memória pode rodar um modelo 13B inteiramente na memória da GPU, alcançando 50-80 tok/s.',
+            '**Os MacBooks com Apple Silicon (M1 a M5) são os melhores notebooks de consumo para inferência de LLM local.** A arquitetura de memória unificada significa que GPU e CPU compartilham o mesmo pool de memória -- um MacBook Pro M3 com 18 GB de memória pode rodar um modelo 13B inteiramente na memória da GPU, alcançando 50-80 tok/s. O MacBook Pro atual (M5 Pro/M5 Max, lançado em março de 2026) amplia a memória unificada para até 64 GB no M5 Pro e 128 GB no M5 Max, com largura de banda de até 307 GB/s e 614 GB/s, respectivamente.',
             'Notebooks Windows com GPUs NVIDIA dedicadas podem ser mais rápidos se a VRAM for suficiente (8 GB+). Uma GPU de notebook NVIDIA RTX 4060 (8 GB de VRAM) roda um modelo 7B a 60-90 tok/s -- comparável ao Apple M3 Pro. A desvantagem é maior consumo de bateria e geração de calor.',
             'Notebooks Windows rodando com gráficos integrados Intel Iris Xe ou AMD Radeon usam apenas inferência em CPU, resultando em 8-20 tok/s para modelos 7B.',
             '**Melhores modelos para gráficos integrados (Intel Iris Xe / AMD Radeon):** Com 16 GB de RAM, o ponto ideal é um modelo 3B–7B em Q4_K_M. O Llama 3.2 3B roda no topo da faixa de 8–20 tok/s, enquanto o Mistral Small (7B) fica na parte inferior, mas oferece qualidade nitidamente melhor. A GPU integrada não acelera a inferência aqui -- a CPU faz o trabalho -- então priorize um modelo que caiba confortavelmente na RAM em vez de buscar um tamanho maior. Para uma configuração passo a passo para hardware básico, veja [LLMs locais mais rápidos para PCs básicos](/pt/local-llms/fastest-local-llms-low-end-pcs).',
@@ -2426,7 +2430,7 @@ schema: {
             { q: 'Quanto tempo a bateria dura rodando LLMs locais em um notebook?', a: 'Em uma bateria típica de 60 Wh: um modelo 7B na CPU consome 15-25 W -- dando 2-3 horas de inferência ativa. O Apple Silicon é mais eficiente (12-18 W), dando 3-4 horas. Um modelo 3B consome 6-10 W e estende a bateria para 5-6 horas.' },
             { q: 'Preciso de conexão com a internet para rodar um LLM local em um notebook?', a: 'Não. Depois de baixar o modelo (o que exige internet), a inferência é totalmente offline. O modelo roda inteiramente na CPU ou GPU do notebook. Isso torna os LLMs locais úteis para viagens, ambientes seguros ou locais com conectividade instável.' },
             { q: 'Posso rodar um LLM local com 8 GB de RAM?', a: 'Sim. Um notebook de 8 GB roda modelos 7B em quantização Q4_K_M (4,5 GB) a 10–25 tok/s na CPU, ou 30–80 tok/s no Apple Silicon.' },
-            { q: 'Qual é o notebook mais rápido para LLMs locais?', a: 'O MacBook Pro M4 Pro/Max da Apple com 24–48 GB de memória unificada atinge 80–120 tok/s em modelos 13B. No Windows, uma GPU de notebook NVIDIA RTX 4070/4090 (8–16 GB de VRAM) atinge 60–130 tok/s em modelos 7B.' },
+            { q: 'Qual é o notebook mais rápido para LLMs locais?', a: 'O MacBook Pro M5 Pro/M5 Max da Apple (lançado em março de 2026) com até 64–128 GB de memória unificada atinge 80–120 tok/s em modelos 13B. No Windows, uma GPU de notebook NVIDIA RTX 4070/4090 (8–16 GB de VRAM) atinge 60–130 tok/s em modelos 7B.' },
             { q: 'Preciso de uma GPU para LLMs locais?', a: 'Não — o Ollama e o LM Studio rodam somente com CPU. Uma GPU acelera a inferência de 10–25 tok/s para 50–90 tok/s em modelos 7B, mas não é obrigatória.' },
             { q: 'Quão lentos são os LLMs locais na CPU?', a: 'Um modelo 7B em Q4_K_M roda a 10–25 tok/s em uma CPU de notebook moderna -- lento o bastante para acompanhar lendo, mas rápido o bastante para chat e resumos. O Apple Silicon atinge 30–80 tok/s usando a memória unificada como GPU.' },
             { q: 'Rodar LLMs danifica um notebook?', a: 'Não. CPUs e GPUs são projetadas para carga sustentada via throttling térmico. Um suporte para notebook para ventilação e pausas ocasionais evitam calor excessivo; o ruído normal do cooler não é sinal de dano.' },
@@ -2479,7 +2483,7 @@ schema: {
       heroImage: '/images/local-llm-on-laptop-ram-tiers-hero-fr.webp',
       twitterDescription: 'Modèles 7B sur ordinateurs portables 8 Go avec 10–25 tok/sec. Apple Silicon M3: 50–80 tok/sec. Correction throttling: stand + désactiver Turbo Boost. Guide Q4_K_M.',
       publishDate: '2026-04-04',
-      dateModified: '2026-06-19',
+      dateModified: '2026-08-27',
       readTime: '8 min de lecture',
       educationalLevel: 'Beginner',
       primaryTerm: 'Local LLM ordinateur portable',
@@ -2643,7 +2647,7 @@ schema: {
         appleSilicon: {
           title: 'Apple Silicon vs Ordinateur portable Windows: Lequel est meilleur pour les Local LLMs?',
           content: [
-            '**À partir d\'avril 2026, les MacBooks Apple Silicon (M1 à M4) sont les meilleurs ordinateurs portables grand public pour l\'inférence Local LLM.** L\'architecture [mémoire unifiée](/local-llms/gpu-vs-cpu-vs-apple-silicon) signifie que le GPU et le CPU partagent le même pool de mémoire -- un MacBook Pro M3 avec 18 GB de mémoire peut exécuter un modèle 13B entièrement dans la mémoire GPU, atteignant 50-80 token/sec.',
+            '**Les MacBooks Apple Silicon (M1 à M5) sont les meilleurs ordinateurs portables grand public pour l\'inférence Local LLM.** L\'architecture [mémoire unifiée](/local-llms/gpu-vs-cpu-vs-apple-silicon) signifie que le GPU et le CPU partagent le même pool de mémoire -- un MacBook Pro M3 avec 18 GB de mémoire peut exécuter un modèle 13B entièrement dans la mémoire GPU, atteignant 50-80 token/sec. Le MacBook Pro actuel (M5 Pro/M5 Max, lancé en mars 2026) porte la mémoire unifiée jusqu\'à 64 GB sur le M5 Pro et 128 GB sur le M5 Max, avec une bande passante allant jusqu\'à 307 GB/s et 614 GB/s respectivement.',
             'Les ordinateurs portables Windows avec GPU NVIDIA discrets peuvent être plus rapides si la VRAM est suffisante (8 GB+). Un GPU ordinateur portable NVIDIA RTX 4060 (8 GB VRAM) exécute un modèle 7B à 60-90 token/sec -- comparable à Apple M3 Pro. L\'inconvénient est une consommation électrique plus élevée et une génération de chaleur plus importante.',
             'Les ordinateurs portables Windows exécutant un graphique intégré Intel Iris Xe ou AMD Radeon utilisent uniquement l\'inférence CPU, ce qui se traduit par 8-20 token/sec pour les modèles 7B.',
             '**Meilleurs modèles pour les graphiques intégrés (Intel Iris Xe / AMD Radeon) :** Avec 16 Go de RAM, l\'optimal est un modèle 3B–7B en Q4_K_M. Llama 3.2 3B atteint le haut de la plage 8–20 token/sec, tandis que Mistral Small (7B) se situe plus bas mais offre une qualité nettement supérieure. Le GPU intégré n\'accélère pas l\'inférence ici -- c\'est le CPU qui travaille -- privilégiez donc un modèle qui reste confortablement dans la RAM plutôt qu\'une taille supérieure. Pour une configuration bas de gamme pas à pas, voir [Local LLMs les plus rapides pour PC d\'entrée de gamme](/fr/local-llms/fastest-local-llms-low-end-pcs).',
@@ -2760,7 +2764,7 @@ schema: {
             },
             {
               q: 'Quel est l\'ordinateur portable le plus rapide pour exécuter des Local LLMs?',
-              a: 'À partir d\'avril 2026, Apple MacBook Pro M4 Max/M5 Max (48 GB mémoire unifiée) est l\'ordinateur portable grand public le plus rapide pour l\'inférence Local LLM. Il atteint 80-120 token/sec sur un modèle 13B et peut exécuter des modèles 30B à Q4_K_M. Pour les ordinateurs portables Windows, un GPU ordinateur portable RTX 4090 (16 GB VRAM) produit 100-130 token/sec sur des modèles 7B mais consomme considérablement plus d\'énergie et génère plus de chaleur.',
+              a: 'Depuis mars 2026, le MacBook Pro Apple M5 Max (jusqu\'à 128 GB de mémoire unifiée, 614 GB/s de bande passante) est l\'ordinateur portable grand public le plus rapide pour l\'inférence Local LLM. Il atteint 80-120 token/sec sur un modèle 13B et peut exécuter des modèles 30B à Q4_K_M. Pour les ordinateurs portables Windows, un GPU ordinateur portable RTX 4090 (16 GB VRAM) produit 100-130 token/sec sur des modèles 7B mais consomme considérablement plus d\'énergie et génère plus de chaleur.',
             },
             {
               q: 'Comment savoir si mon ordinateur portable fait l\'étranglement thermique?',
@@ -2784,7 +2788,7 @@ schema: {
             },
             {
               q: 'Quel est l\'ordinateur portable le plus rapide pour les Local LLMs?',
-              a: 'Apple MacBook Pro M4 Pro/Max avec 24–48 GB de mémoire unifiée atteint 80–120 token/sec sur des modèles 13B. Sur Windows, un GPU ordinateur portable NVIDIA RTX 4070/4090 (8–16 GB VRAM) réalise 60–130 token/sec sur des modèles 7B.',
+              a: 'Apple MacBook Pro M5 Pro/M5 Max avec jusqu\'à 64–128 GB de mémoire unifiée atteint 80–120 token/sec sur des modèles 13B. Sur Windows, un GPU ordinateur portable NVIDIA RTX 4070/4090 (8–16 GB VRAM) réalise 60–130 token/sec sur des modèles 7B.',
             },
             {
               q: 'Ai-je besoin d\'un GPU pour les Local LLMs?',
@@ -2803,7 +2807,7 @@ schema: {
         sources: {
           title: 'Sources',
           items: [
-            'Apple. (2026). "Apple M4 Max/M5 Max Chip Overview." Apple Developer. https://developer.apple.com/apple-silicon/ -- Architecture mémoire unifiée, benchmarks de performance ML et spécifications d\'efficacité énergétique.',
+            'Apple. (2026). "Apple M5 Pro/M5 Max Chip Overview." Apple Developer. https://developer.apple.com/apple-silicon/ -- Architecture mémoire unifiée, benchmarks de performance ML et spécifications d\'efficacité énergétique.',
             'Ollama. (2026). "Ollama Documentation." https://ollama.com/docs -- Configuration d\'inférence CPU/GPU, accélération CUDA/Metal et paramètres de longueur de contexte.',
             'llama.cpp Contributors. (2026). "llama.cpp Performance Benchmarks." https://github.com/ggerganov/llama.cpp -- Données de débit de tokens sur les configurations matérielles et les niveaux de quantification.',
             'Hugging Face. (2026). "GGUF Quantization Guide." https://huggingface.co/docs/transformers/main/en/quantization/gguf -- Compromis de qualité Q2/Q4/Q5/Q8 vs mémoire avec résultats de benchmarks.',
@@ -2817,7 +2821,7 @@ schema: {
         'description': 'Guide pratique pour exécuter des Local LLMs puissants avec peu de VRAM. Astuces de quantification, meilleurs modèles et benchmarks réels.',
         'url': 'https://www.promptquorum.com/fr/local-llms/local-llm-on-laptop',
         'datePublished': '2026-01-01',
-        'dateModified': '2026-06-19',
+        'dateModified': '2026-08-27',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'proficiencyLevel': 'Beginner',
@@ -2861,7 +2865,7 @@ schema: {
           { '@type': 'Question', name: 'L\'exécution d\'un Local LLM endommagera-t-elle mon ordinateur portable au fil du temps?', acceptedAnswer: { '@type': 'Answer', text: 'Non -- les CPU et GPU modernes gèrent les charges élevées continues en toute sécurité. Un support d\'ordinateur portable et une ventilation adéquate préviennent l\'accumulation excessive de chaleur.' } },
           { '@type': 'Question', name: 'Puis-je exécuter un Local LLM sur un ordinateur portable 4 GB RAM?', acceptedAnswer: { '@type': 'Answer', text: 'À peine. Un modèle 2B nécessite environ 1,7 GB de RAM, l\'OS a besoin de 2-3 GB simultanément. Avec 4 GB au total, l\'utilisation d\'échange rendra l\'inférence 5-10× plus lente.' } },
           { '@type': 'Question', name: 'Mon ordinateur portable a-t-il besoin d\'un GPU dédié?', acceptedAnswer: { '@type': 'Answer', text: 'Non. Tous les principaux outils Local LLM fonctionnent uniquement sur CPU. Un GPU dédié accélère l\'inférence, mais les modèles 3B-7B sont utilisables à 10-30 token/sec uniquement sur CPU.' } },
-          { '@type': 'Question', name: 'Quel est l\'ordinateur portable le plus rapide?', acceptedAnswer: { '@type': 'Answer', text: 'À partir d\'avril 2026, Apple MacBook Pro M4 Max/M5 Max (48 GB mémoire unifiée) est le plus rapide. Il atteint 80-120 token/sec sur un modèle 13B.' } },
+          { '@type': 'Question', name: 'Quel est l\'ordinateur portable le plus rapide?', acceptedAnswer: { '@type': 'Answer', text: 'Depuis mars 2026, Apple MacBook Pro M5 Max (jusqu\'à 128 GB mémoire unifiée) est le plus rapide. Il atteint 80-120 token/sec sur un modèle 13B.' } },
           { '@type': 'Question', name: 'Comment savoir si mon ordinateur portable fait l\'étranglement thermique?', acceptedAnswer: { '@type': 'Answer', text: 'Sur macOS: ouvrez Activity Monitor → Window → Historique d\'utilisation CPU. Une chute soudaine indique l\'étranglement.' } },
           { '@type': 'Question', name: 'Puis-je exécuter avec l\'alimentation par batterie?', acceptedAnswer: { '@type': 'Answer', text: 'Oui, mais la vitesse et la durée sont réduites. macOS limite automatiquement la consommation d\'énergie, réduisant la vitesse de 20-35%.' } },
           { '@type': 'Question', name: 'Quelle est la meilleure taille de modèle pour 8 GB RAM?', acceptedAnswer: { '@type': 'Answer', text: 'Un modèle 7B en Q4_K_M est le maximum pratique. Le standard recommandé est llama3.2:3b pour le multitâche.' } },
@@ -2891,7 +2895,7 @@ schema: {
       heroImage: '/images/local-llm-on-laptop-ram-tiers-hero-ja.webp',
       twitterDescription: '7B実行: 8GB ノートPCで 10–25 トークン/秒。Apple Silicon M3: 50–80 トークン/秒。熱対策: スタンド使用＋Turbo Boost無効化。Q4_K_M ガイド。',
       publishDate: '2026-04-04',
-      dateModified: '2026-06-19',
+      dateModified: '2026-08-27',
       readTime: '8分で読める',
       educationalLevel: 'Beginner',
       primaryTerm: 'ノートパソコン向けローカルLLM',
@@ -2939,7 +2943,7 @@ schema: {
           snippetBlocks: [{ type: 'one-sentence', text: 'ノートPCでローカルLLMを実行可能：Apple Silicon MacBook Pro（M3/M4/M5）が7Bモデルで50〜80トークン/秒と最良；7Bに最低8 GB RAM、13Bに16 GB必要；10〜15分の連続推論後にサーマルスロットリングで20〜40%速度低下の見込み。' }, { type: 'plain-terms', text: 'ノートPCでのローカルAIの最大ボトルネックはRAMです。モデル全体がメモリに収まらなければなりません。サーマルスロットリングとは、過熱防止のためにチップが自動的に速度を下げる機能です。冷却パッドや低量子化（Q4_K_SなどQ4_K_Mより低い）で発熱を抑えましょう。' }],
           items: [
             'Q4_K_M量子化の3Bまたは7Bモデルは、8GBのRAMを備えたどのモダンノートパソコンでも実用的に実行されます。',
-            'Apple Silicon MacBook（M1、M2、M3、M4）は統合メモリとMetal GPU加速のため、ほとんどのWindowsノートパソコンをローカル推論で上回ります--M3 MacBook Proは50-80トークン/秒で7Bモデルを実行します。',
+            'Apple Silicon MacBook（M1、M2、M3、M4、M5）は統合メモリとMetal GPU加速のため、ほとんどのWindowsノートパソコンをローカル推論で上回ります--M3 MacBook Proは50-80トークン/秒で7Bモデルを実行します。',
             'サーマルスロットリングは継続的な生成後10-15分で速度を20-40%削減します。ノートパソコンスタンドを使用し、Turbo Boostを無効化して、安定した速度を維持してください。',
             'バッテリー消費量：ほとんどのノートパソコンでアクティブな推論中、毎時30-60%のバッテリーを予想してください。長いセッションは接続してください。',
             '8GB RAM Windows/Linuxノートパソコン：7Bまでのq4_k_mモデルを使用。16GB RAM：13Bまでのq4_k_mモデル、または7Bの場合はq5_k_m。',
@@ -3055,7 +3059,7 @@ schema: {
         appleSilicon: {
           title: 'Apple Silicon vs Windowsノートパソコン：ローカルLLMに最適なのはどちらですか？',
           content: [
-            '**2026年4月現在、Apple Silicon MacBook（M1からM4）はローカルLLM推論向けの最高のコンシューマーノートパソコンです。** [統合メモリ](/local-llms/gpu-vs-cpu-vs-apple-silicon)アーキテクチャは、GPUとCPUが同じメモリプールを共有することを意味します--18GBのメモリを備えたM3 MacBook ProはGPUメモリ全体で13Bモデルを実行でき、50-80トークン/秒を実現できます。',
+            '**Apple Silicon MacBook（M1からM5）はローカルLLM推論向けの最高のコンシューマーノートパソコンです。** [統合メモリ](/local-llms/gpu-vs-cpu-vs-apple-silicon)アーキテクチャは、GPUとCPUが同じメモリプールを共有することを意味します--18GBのメモリを備えたM3 MacBook ProはGPUメモリ全体で13Bモデルを実行でき、50-80トークン/秒を実現できます。現行のMacBook Pro（M5 Pro/M5 Max、2026年3月発売）は統合メモリをM5 Proで最大64GB、M5 Maxで最大128GBまで拡張し、メモリ帯域幅もそれぞれ最大307GB/秒、614GB/秒に達します。',
             'VRAMが十分（8GB以上）な場合、専用NVIDIAグラフィックス搭載のWindowsノートパソコンがより高速になる可能性があります。NVIDIA RTX 4060ノートパソコンGPU（8GB VRAM）は60-90トークン/秒で7Bモデルを実行します--Apple M3 Proと同等です。欠点は、バッテリー消費量が多く、熱が多く生成されます。',
             'Intel Iris XeまたはAMD Radeon統合グラフィックス搭載のWindowsノートパソコンはCPU推論のみを使用し、7Bモデルで8-20トークン/秒になります。',
             '**統合グラフィックス（Intel Iris Xe / AMD Radeon）向けのベストモデル：** 16GB RAMでは、Q4_K_Mの3B–7Bモデルがスイートスポットです。Llama 3.2 3Bは8–20トークン/秒の範囲の上限で動作し、Mistral Small（7B）は下限ですが明らかに優れた品質を提供します。ここでは統合GPUは推論を加速しません--CPUが処理を行います--したがって、より大きなサイズを追い求めるよりも、RAM内に快適に収まるモデルを優先してください。低スペック環境向けのステップバイステップのセットアップは、[低スペックPC向け最速ローカルLLM](/ja/local-llms/fastest-local-llms-low-end-pcs)をご覧ください。',
@@ -3172,7 +3176,7 @@ schema: {
             },
             {
               q: 'ローカルLLMを実行するための最速のノートパソコンは何ですか？',
-              a: '2026年4月現在、Apple MacBook Pro M4 Max/M5 Max（48GB統合メモリ）はローカルLLM推論のための最速のコンシューマーノートパソコンです。13BモデルでB80-120トークン/秒を達成でき、Q4_K_Mで30Bモデルを実行できます。Windowsノートパソコンの場合、RTX 4090ノートパソコンGPU（16GB VRAM）は7Bモデルで100-130トークン/秒を生成しますが、かなり多くの電力を消費し、より多くの熱を生成します。',
+              a: '2026年3月以降、Apple MacBook Pro M5 Max（最大128GB統合メモリ、614GB/秒帯域幅）はローカルLLM推論のための最速のコンシューマーノートパソコンです。13Bモデルで80-120トークン/秒を達成でき、Q4_K_Mで30Bモデルを実行できます。Windowsノートパソコンの場合、RTX 4090ノートパソコンGPU（16GB VRAM）は7Bモデルで100-130トークン/秒を生成しますが、かなり多くの電力を消費し、より多くの熱を生成します。',
             },
             {
               q: 'ノートパソコンがサーマルスロットリングしているかどうかを知るにはどうすればよいですか？',
@@ -3196,7 +3200,7 @@ schema: {
             },
             {
               q: 'ローカルLLMに最速のノートパソコンは何ですか？',
-              a: '24–48GBの統合メモリを搭載したApple MacBook Pro M4 Pro/Maxが13Bモデルで80–120トークン/秒を達成します。WindowsではNVIDIA RTX 4070/4090ノートパソコンGPU（8–16GB VRAM）が7Bモデルで60–130トークン/秒を実現します。',
+              a: '最大64–128GBの統合メモリを搭載したApple MacBook Pro M5 Pro/M5 Maxが13Bモデルで80–120トークン/秒を達成します。WindowsではNVIDIA RTX 4070/4090ノートパソコンGPU（8–16GB VRAM）が7Bモデルで60–130トークン/秒を実現します。',
             },
             {
               q: 'ローカルLLMにGPUは必要ですか？',
@@ -3215,7 +3219,7 @@ schema: {
         sources: {
           title: 'ソース',
           items: [
-            'Apple. (2026). "Apple M4 Max/M5 Max Chipの概要。" Appleデベロッパー。https://developer.apple.com/apple-silicon/ --統合メモリアーキテクチャ、MLパフォーマンスベンチマーク、および電力効率仕様。',
+            'Apple. (2026). "Apple M5 Pro/M5 Max Chipの概要。" Appleデベロッパー。https://developer.apple.com/apple-silicon/ --統合メモリアーキテクチャ、MLパフォーマンスベンチマーク、および電力効率仕様。',
             'Ollama. (2026). "Ollama文書。" https://ollama.com/docs --CPU/GPU推論構成、CUDA/Metal加速、およびコンテキスト長設定。',
             'llama.cpp の貢献者。(2026). "llama.cpppパフォーマンスベンチマーク。" https://github.com/ggerganov/llama.cpp --ハードウェア構成と量子化レベル全体のトークンスループットデータ。',
             'Hugging Face. (2026). "GGUF量子化ガイド。" https://huggingface.co/docs/transformers/main/en/quantization/gguf -- Q2/Q4/Q5/Q8品質 vs メモリトレードオフ（ベンチマーク結果付き）。',
@@ -3229,7 +3233,7 @@ schema: {
         'description': '低VRAM環境で高性能Local LLMを動かす実践ガイド。量子化テクニック、おすすめモデル、実測ベンチマークを詳しく解説。',
         'url': 'https://www.promptquorum.com/ja/local-llms/local-llm-on-laptop',
         'datePublished': '2026-01-01',
-        'dateModified': '2026-06-19',
+        'dateModified': '2026-08-27',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'proficiencyLevel': 'Beginner',
@@ -3273,7 +3277,7 @@ schema: {
           { '@type': 'Question', name: 'ローカルLLMを実行することはノートパソコンに時間をかけて損傷を与えますか？', acceptedAnswer: { '@type': 'Answer', text: 'いいえ--最新のCPUとGPUはサーマルスロットリングを介して継続的な高負荷を安全に処理するために設計されています。ノートパソコンスタンドと適切な換気により、過剰な熱の蓄積が防止されます。' } },
           { '@type': 'Question', name: '4GB RAMノートパソコンでローカルLLMを実行できますか？', acceptedAnswer: { '@type': 'Answer', text: 'ほぼ。2Bモデルは約1.7GB RAMが必要で、OSは2-3GB必要です。4GB合計では、スワップ使用により推論が5-10倍遅くなります。' } },
           { '@type': 'Question', name: 'ノートパソコンはローカルLLM用に専用GPUを必要とますか？', acceptedAnswer: { '@type': 'Answer', text: 'いいえ。すべての主要なローカルLLMツールはCPU単独で実行されます。専用GPUは推論を加速しますが、3B-7Bモデルは10-30トークン/秒でCPU単独で使用可能です。' } },
-          { '@type': 'Question', name: 'ローカルLLMを実行するための最速のノートパソコンは何ですか？', acceptedAnswer: { '@type': 'Answer', text: '2026年4月現在、Apple MacBook Pro M4 Max/M5 Max（48GB統合メモリ）が最速です。13BモデルでB80-120トークン/秒を達成できます。' } },
+          { '@type': 'Question', name: 'ローカルLLMを実行するための最速のノートパソコンは何ですか？', acceptedAnswer: { '@type': 'Answer', text: '2026年3月以降、Apple MacBook Pro M5 Max（最大128GB統合メモリ）が最速です。13Bモデルで80-120トークン/秒を達成できます。' } },
           { '@type': 'Question', name: 'ノートパソコンがサーマルスロットリングしているかどうかを知るにはどうすればよいですか？', acceptedAnswer: { '@type': 'Answer', text: 'macOSで：Activity Monitor→Window→CPU使用履歴を開きます。CPUの周波数の急激な低下はスロットリングを示します。' } },
           { '@type': 'Question', name: 'バッテリー電力でローカルLLMを実行できますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい、ただし速度と期間は削減されます。macOSは自動的にCPU/GPU電力出力を制限し、推論速度を20-35%削減します。' } },
           { '@type': 'Question', name: '8GB RAMノートパソコンに最適なモデルサイズは何ですか？', acceptedAnswer: { '@type': 'Answer', text: 'Q4_K_Mの7Bモデルが実用的な最大です。推奨される標準はマルチタスク用のllama3.2:3bです。' } },
@@ -3303,7 +3307,7 @@ schema: {
       heroImage: '/images/local-llm-on-laptop-ram-tiers-hero-zh.webp',
       twitterDescription: '7B 运行：8GB 笔记本 10–25 词/秒。Apple Silicon M3：50–80 词/秒。降温方案：支架＋关闭 Turbo Boost。Q4_K_M 完全指南。',
       publishDate: '2026-04-04',
-      dateModified: '2026-06-19',
+      dateModified: '2026-08-27',
       readTime: '8分钟阅读',
       educationalLevel: 'Beginner',
       primaryTerm: '笔记本电脑本地LLM',
@@ -3351,7 +3355,7 @@ schema: {
           snippetBlocks: [{ type: 'one-sentence', text: '笔记本可以运行本地LLM：Apple Silicon MacBook Pro（M3/M4/M5）7B模型达50–80 tok/s最佳；7B最低需8 GB内存，13B需16 GB；持续推理10–15分钟后因热降频速度下降20–40%。' }, { type: 'plain-terms', text: '笔记本运行本地AI的主要瓶颈是内存——模型必须完全放入内存。热降频是指芯片为防止过热自动降速。可使用散热垫或降低量化精度（如Q4_K_S代替Q4_K_M）来减少发热。' }],
           items: [
             'Q4_K_M量化的3B或7B模型在任何配有8GB RAM的现代笔记本电脑上都可以实用地运行。',
-            'Apple Silicon MacBook（M1、M2、M3、M4）由于统一内存和Metal GPU加速，在本地推理中超过大多数Windows笔记本 -- M3 MacBook Pro以50-80令牌/秒运行7B模型。',
+            'Apple Silicon MacBook（M1、M2、M3、M4、M5）由于统一内存和Metal GPU加速，在本地推理中超过大多数Windows笔记本 -- M3 MacBook Pro以50-80令牌/秒运行7B模型。',
             '热节流在10-15分钟的持续生成后将速度降低20-40%。使用笔记本电脑支架并禁用Turbo Boost以保持稳定的速度。',
             '电池消耗：在大多数笔记本电脑上，活跃推理期间预计每小时30-60%的电池。对于较长的会话，请插入。',
             '在8GB RAM Windows/Linux笔记本电脑上：使用Q4_K_M型号至7B。在16GB RAM上：Q4_K_M型号至13B，或7B的Q5_K_M。',
@@ -3467,7 +3471,7 @@ schema: {
         appleSilicon: {
           title: 'Apple Silicon vs Windows笔记本：哪个对本地LLM更好？',
           content: [
-            '**截至2026年4月，Apple Silicon MacBook（M1至M4）是本地LLM推理的最佳消费级笔记本电脑。** [统一内存](/local-llms/gpu-vs-cpu-vs-apple-silicon)架构意味着GPU和CPU共享同一内存池 -- 配有18GB内存的M3 MacBook Pro可以完全在GPU内存中运行13B模型，达到50-80令牌/秒。',
+            '**Apple Silicon MacBook（M1至M5）是本地LLM推理的最佳消费级笔记本电脑。** [统一内存](/local-llms/gpu-vs-cpu-vs-apple-silicon)架构意味着GPU和CPU共享同一内存池 -- 配有18GB内存的M3 MacBook Pro可以完全在GPU内存中运行13B模型，达到50-80令牌/秒。当前的MacBook Pro（M5 Pro/M5 Max，2026年3月发布）将统一内存扩展到M5 Pro最高64GB、M5 Max最高128GB，内存带宽分别可达307GB/秒和614GB/秒。',
             '带有离散NVIDIA GPU的Windows笔记本电脑如果VRAM足够（8GB以上）可能更快。NVIDIA RTX 4060笔记本电脑GPU（8GB VRAM）以60-90令牌/秒运行7B模型 -- 可与Apple M3 Pro相比。缺点是更高的电池消耗和更多的热量生成。',
             '运行Intel Iris Xe或AMD Radeon集成显卡的Windows笔记本电脑仅使用CPU推理，对7B模型产生8-20令牌/秒。',
             '**集成显卡（Intel Iris Xe / AMD Radeon）的最佳模型：** 在16GB RAM下，最佳选择是Q4_K_M的3B–7B模型。Llama 3.2 3B位于8–20令牌/秒区间的上端，而Mistral Small（7B）处于下端但质量明显更好。这里集成GPU并不加速推理——由CPU完成工作——因此应优先选择能从容驻留在RAM中的模型，而非一味追求更大尺寸。如需分步的低端配置方案，请参阅[低端PC最快本地LLM](/zh/local-llms/fastest-local-llms-low-end-pcs)。',
@@ -3584,7 +3588,7 @@ schema: {
             },
             {
               q: '运行本地LLM的最快笔记本电脑是什么？',
-              a: '截至2026年4月，Apple MacBook Pro M4 Max/M5 Max（48GB统一内存）是本地LLM推理的最快消费级笔记本电脑。它在13B模型上达到80-120令牌/秒，可以在Q4_K_M处运行30B模型。对于Windows笔记本电脑，RTX 4090笔记本电脑GPU（16GB VRAM）在7B模型上产生100-130令牌/秒，但消耗更多功率并产生更多热量。',
+              a: '自2026年3月起，Apple MacBook Pro M5 Max（最高128GB统一内存，614GB/秒带宽）是本地LLM推理的最快消费级笔记本电脑。它在13B模型上达到80-120令牌/秒，可以在Q4_K_M处运行30B模型。对于Windows笔记本电脑，RTX 4090笔记本电脑GPU（16GB VRAM）在7B模型上产生100-130令牌/秒，但消耗更多功率并产生更多热量。',
             },
             {
               q: '我如何知道我的笔记本电脑是否进行热节流？',
@@ -3608,7 +3612,7 @@ schema: {
             },
             {
               q: '运行本地LLM最快的笔记本是什么？',
-              a: '配备24–48GB统一内存的Apple MacBook Pro M4 Pro/Max在13B模型上达到80–120令牌/秒。Windows上NVIDIA RTX 4070/4090笔记本GPU（8–16GB VRAM）在7B模型上实现60–130令牌/秒。',
+              a: '配备最高64–128GB统一内存的Apple MacBook Pro M5 Pro/M5 Max在13B模型上达到80–120令牌/秒。Windows上NVIDIA RTX 4070/4090笔记本GPU（8–16GB VRAM）在7B模型上实现60–130令牌/秒。',
             },
             {
               q: '运行本地LLM需要GPU吗？',
@@ -3627,7 +3631,7 @@ schema: {
         sources: {
           title: '来源',
           items: [
-            'Apple. (2026). "Apple M4 Max/M5 Max芯片概述。" Apple开发者。https://developer.apple.com/apple-silicon/ -- 统一内存架构、ML性能基准和功率效率规范。',
+            'Apple. (2026). "Apple M5 Pro/M5 Max芯片概述。" Apple开发者。https://developer.apple.com/apple-silicon/ -- 统一内存架构、ML性能基准和功率效率规范。',
             'Ollama. (2026). "Ollama文档。" https://ollama.com/docs -- CPU/GPU推理配置、CUDA/Metal加速和上下文长度设置。',
             'llama.cpp贡献者。(2026). "llama.cpp性能基准。" https://github.com/ggerganov/llama.cpp -- 硬件配置和量化级别的令牌吞吐量数据。',
             'Hugging Face. (2026). "GGUF量化指南。" https://huggingface.co/docs/transformers/main/en/quantization/gguf -- Q2/Q4/Q5/Q8质量与内存权衡，包括基准结果。',
@@ -3641,7 +3645,7 @@ schema: {
         'description': '低显存环境运行高性能 Local LLM 的完整指南。涵盖量化技巧、最佳模型推荐与真实性能测试。',
         'url': 'https://www.promptquorum.com/zh/local-llms/local-llm-on-laptop',
         'datePublished': '2026-01-01',
-        'dateModified': '2026-06-19',
+        'dateModified': '2026-08-27',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'proficiencyLevel': 'Beginner',
@@ -3685,7 +3689,7 @@ schema: {
           { '@type': 'Question', name: '运行本地LLM会随着时间推移损伤笔记本电脑吗？', acceptedAnswer: { '@type': 'Answer', text: '否 -- 现代CPU和GPU设计可安全处理持续的高负荷。笔记本电脑支架和适当的通风可防止过度热量积聚。' } },
           { '@type': 'Question', name: '我可以在4GB RAM笔记本电脑上运行本地LLM吗？', acceptedAnswer: { '@type': 'Answer', text: '勉强。2B模型需要约1.7GB RAM，操作系统需要2-3GB。在4GB总RAM下，交换使用使推理速度降低5-10倍。' } },
           { '@type': 'Question', name: '我的笔记本电脑需要专用GPU吗？', acceptedAnswer: { '@type': 'Answer', text: '否。所有主要的本地LLM工具仅在CPU上运行。专用GPU加速推理，但3B-7B模型可在10-30令牌/秒的CPU单独上使用。' } },
-          { '@type': 'Question', name: '运行本地LLM的最快笔记本电脑是什么？', acceptedAnswer: { '@type': 'Answer', text: '截至2026年4月，Apple MacBook Pro M4 Max/M5 Max（48GB统一内存）是最快的。它在13B模型上达到80-120令牌/秒。' } },
+          { '@type': 'Question', name: '运行本地LLM的最快笔记本电脑是什么？', acceptedAnswer: { '@type': 'Answer', text: '自2026年3月起，Apple MacBook Pro M5 Max（最高128GB统一内存）是最快的。它在13B模型上达到80-120令牌/秒。' } },
           { '@type': 'Question', name: '我如何知道笔记本电脑是否进行热节流？', acceptedAnswer: { '@type': 'Answer', text: '在macOS上：打开Activity Monitor → Window → CPU使用历史。在持续生成期间CPU频率的突然下降表示节流。' } },
           { '@type': 'Question', name: '我可以在电池电力上运行本地LLM吗？', acceptedAnswer: { '@type': 'Answer', text: '是的，但速度和持续时间降低。macOS限制CPU/GPU电源提取，相比插电性能降低推理速度20-35%。' } },
           { '@type': 'Question', name: '8GB RAM笔记本电脑最好的型号大小是什么？', acceptedAnswer: { '@type': 'Answer', text: 'Q4_K_M中的7B是实际最大值。推荐的标准是多任务处理的llama3.2:3b。' } },
@@ -3716,14 +3720,14 @@ schema: {
       heroImage: '/images/local-llm-on-laptop-ram-tiers-hero-ko.webp',
       twitterDescription: '7B 모델이 8GB 노트북에서 10~25토큰/초로 실행됩니다. Apple Silicon M3: 50~80토큰/초. 열 쓰로틀링 해결책: 스탠드 사용 + Turbo Boost 비활성화. Q4_K_M 가이드.',
       publishDate: '2026-04-04',
-      dateModified: '2026-06-19',
+      dateModified: '2026-08-27',
       leadAnswerBlock: '**노트북에서 로컬 LLM을 실행한다는 것은 클라우드 API나 외부 데이터 전송 없이 컴퓨터에 직접 언어 모델을 배포하는 것을 의미합니다.** 주요 장점은 완전한 개인 정보 보호와 오프라인 사용 가능성입니다. 성능은 하드웨어에 따라 달라지며, 7B 모델에는 최소 8GB RAM, 13B 모델에는 16GB RAM이 필요합니다.',
       comparisonTable: {
         columns: ['설정', '모델 크기', '속도', '사용 경험'],
         rows: [
           { '설정': '8GB RAM CPU', '모델 크기': '3B~7B', '속도': '10~25토큰/초', '사용 경험': '채팅, 요약, 간단한 코딩에 활용 가능' },
           { '설정': '16GB RAM CPU', '모델 크기': '7B~13B', '속도': '5~15토큰/초', '사용 경험': '멀티태스킹 제한 없이 일반적인 용도로 사용 가능' },
-          { '설정': 'Apple Silicon (M2~M4)', '모델 크기': '7B~13B', '속도': '30~80토큰/초', '사용 경험': '가장 빠른 일반 소비자용 옵션, 최상의 배터리 수명' },
+          { '설정': 'Apple Silicon (M2~M5)', '모델 크기': '7B~13B', '속도': '30~80토큰/초', '사용 경험': '가장 빠른 일반 소비자용 옵션, 최상의 배터리 수명' },
           { '설정': 'GPU 노트북 (RTX 4060, 8GB VRAM)', '모델 크기': '7B~13B', '속도': '60~90토큰/초', '사용 경험': '가장 빠르지만 발열이 높고 배터리 소모가 큼' },
         ],
       },
@@ -3797,7 +3801,7 @@ schema: {
           snippetBlocks: [{ type: 'one-sentence', text: '노트북에서 로컬 LLM 실행 가능: Apple Silicon MacBook Pro(M3/M4/M5)가 7B 모델에서 50–80 tok/s로 최고; 7B에 최소 8 GB RAM, 13B에 16 GB 필요; 10–15분 지속 추론 후 열 쓰로틀링으로 20–40% 속도 저하 예상.' }, { type: 'plain-terms', text: '노트북 로컬 AI의 주요 병목은 RAM — 모델 전체가 메모리에 들어야 합니다. 열 쓰로틀링은 과열 방지를 위해 칩이 자동으로 속도를 낮추는 것입니다. 쿨링 패드 사용하거나 더 낮은 양자화(Q4_K_M 대신 Q4_K_S)로 발열을 줄이세요.' }],
           items: [
             'Q4_K_M 양자화 방식의 3B 또는 7B 모델은 8GB RAM이 탑재된 최신 노트북에서 실용적으로 사용할 수 있습니다.',
-            'Apple Silicon MacBook(M1, M2, M3, M4)은 통합 메모리와 Metal GPU 가속 덕분에 대부분의 Windows 노트북보다 로컬 추론 성능이 뛰어납니다 -- M3 MacBook Pro는 7B 모델을 50~80토큰/초로 실행합니다.',
+            'Apple Silicon MacBook(M1, M2, M3, M4, M5)은 통합 메모리와 Metal GPU 가속 덕분에 대부분의 Windows 노트북보다 로컬 추론 성능이 뛰어납니다 -- M3 MacBook Pro는 7B 모델을 50~80토큰/초로 실행합니다.',
             '열 쓰로틀링은 지속적인 생성 작업 10~15분 후 속도를 20~40% 감소시킵니다. 안정적인 속도를 유지하려면 노트북 스탠드를 사용하고 Turbo Boost를 비활성화하십시오.',
             '배터리 소모: 대부분의 노트북에서 활성 추론 중 시간당 배터리의 30~60%가 소모됩니다. 장시간 세션에는 전원을 연결하십시오.',
             '8GB RAM Windows/Linux 노트북의 경우: 7B 이하의 Q4_K_M 모델을 사용하십시오. 16GB RAM의 경우: 13B 이하의 Q4_K_M 모델, 또는 7B에는 Q5_K_M을 사용하십시오.',
@@ -3917,7 +3921,7 @@ schema: {
           id: 'apple-vs-windows',
           title: 'Apple Silicon vs Windows 노트북: 로컬 LLM에 어느 것이 더 좋습니까?',
           content: [
-            '**Apple Silicon MacBook(M1~M4)은 로컬 LLM 추론을 위한 최고의 소비자용 노트북입니다.** 통합 메모리 아키텍처 덕분에 GPU와 CPU가 동일한 메모리 풀을 공유합니다 -- 18GB 메모리의 M3 MacBook Pro는 13B 모델 전체를 GPU 메모리에서 실행하여 50~80토큰/초를 달성합니다.',
+            '**Apple Silicon MacBook(M1~M5)은 로컬 LLM 추론을 위한 최고의 소비자용 노트북입니다.** 통합 메모리 아키텍처 덕분에 GPU와 CPU가 동일한 메모리 풀을 공유합니다 -- 18GB 메모리의 M3 MacBook Pro는 13B 모델 전체를 GPU 메모리에서 실행하여 50~80토큰/초를 달성합니다. 현재 MacBook Pro(M5 Pro/M5 Max, 2026년 3월 출시)는 통합 메모리를 M5 Pro 최대 64GB, M5 Max 최대 128GB까지 확장했으며, 메모리 대역폭은 각각 최대 307GB/s, 614GB/s입니다.',
             'VRAM이 충분한 경우(8GB 이상), 별도의 NVIDIA GPU가 탑재된 Windows 노트북이 더 빠를 수 있습니다. NVIDIA RTX 4060 노트북 GPU(8GB VRAM)는 7B 모델을 60~90토큰/초로 실행합니다 -- Apple M3 Pro와 비슷한 수준입니다. 단점은 배터리 소모가 많고 발열이 높다는 것입니다.',
             'Intel Iris Xe 또는 AMD Radeon 내장 그래픽을 사용하는 Windows 노트북은 CPU 추론만 사용하므로, 7B 모델에서 8~20토큰/초의 결과를 냅니다.',
             '**내장 그래픽(Intel Iris Xe / AMD Radeon)에 최적인 모델:** 16GB RAM에서는 Q4_K_M의 3B~7B 모델이 최적입니다. Llama 3.2 3B는 8~20토큰/초 범위의 상단에서 실행되고, Mistral Small(7B)은 하단에 위치하지만 눈에 띄게 더 나은 품질을 제공합니다. 여기서 내장 GPU는 추론을 가속하지 않으며 -- CPU가 작업을 처리합니다 -- 따라서 더 큰 크기를 추구하기보다 RAM 내에 여유 있게 들어가는 모델을 우선하십시오. 저사양 단계별 설정은 [저사양 PC를 위한 가장 빠른 로컬 LLM](/ko/local-llms/fastest-local-llms-low-end-pcs)을 참조하십시오.',
@@ -4050,7 +4054,7 @@ schema: {
             },
             {
               q: '로컬 LLM을 위한 가장 빠른 노트북은 무엇입니까?',
-              a: '24~48GB 통합 메모리의 Apple MacBook Pro M4 Pro/Max는 13B 모델에서 80~120토큰/초에 도달합니다. Windows에서는 NVIDIA RTX 4070/4090 노트북 GPU(8~16GB VRAM)가 7B 모델에서 60~130토큰/초를 달성합니다.',
+              a: '최대 64~128GB 통합 메모리의 Apple MacBook Pro M5 Pro/M5 Max(2026년 3월 출시)는 13B 모델에서 80~120토큰/초에 도달합니다. Windows에서는 NVIDIA RTX 4070/4090 노트북 GPU(8~16GB VRAM)가 7B 모델에서 60~130토큰/초를 달성합니다.',
             },
             {
               q: '로컬 LLM에 GPU가 필요합니까?',
