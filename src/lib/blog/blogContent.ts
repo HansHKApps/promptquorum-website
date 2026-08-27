@@ -20047,12 +20047,13 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
   promptToolsMarket2026: {
     en: {
       freshness_tier: 'monthly',
+      dateModified: '2026-08-27',
       category: 'Research',
       title: 'Prompt Optimization & Comparison Tools: Market Overview 2026',
       intro: 'The LLM Prompt Tools market reached $456M in 2024 (projected $1,018M by 2031). Independent comparison of 17 tools across 6 groups — pricing, features, and acquisition data. March 2026.',
       publishDate: 'Published March 24, 2026',
       readTime: '15 min read',
-      metaDescription: 'Compare frontier AI models (GPT-5.x, Claude 4.6, Gemini 3 Pro, DeepSeek V4) across reasoning, cost, speed, multimodal, deployment. Includes 170+ evaluation prompts. Free beta — July 2026.',
+      metaDescription: 'Independent comparison of 17 prompt optimization tools across 6 groups — pricing, features, and acquisition data. Market: $456M (2024), projected $1,018M (2031).',
       educationalLevel: 'Intermediate',
       sections: {
         downloadReport: {
@@ -20094,7 +20095,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         promptPerfect: {
           title: 'PromptPerfect',
-          content: 'PromptPerfect behaves like an integrated development environment (IDE) for prompts, focusing on real-time optimization with results delivered in approximately 10 seconds. It supports multi-goal optimization (for example, quality and cost) and multi-language prompt support with pre-built templates. Available as a standalone web dashboard and ChatGPT plugin.',
+          content: 'PromptPerfect behaves like an integrated development environment (IDE) for prompts, focusing on real-time optimization with results delivered in approximately 10 seconds. It supports multi-goal optimization (for example, quality and cost) and multi-language prompt support with pre-built templates. Available as a standalone web dashboard and ChatGPT plugin. PromptPerfect is shutting down on September 1, 2026 after parent company Jina AI was acquired by Elastic; new signups closed in June 2026.',
           columns: ['Plan', 'Price', 'Key Details'],
           rows: [
             { Plan: 'Free', Price: '$0', 'Key Details': '10 optimizations/month' },
@@ -20108,7 +20109,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           columns: ['Plan', 'Price', 'Seats', 'Key Features'],
           rows: [
             { Plan: 'Playground', Price: 'Free', Seats: '1', 'Key Features': 'Local storage, OpenAI models, community support' },
-            { Plan: 'Standard', Price: '$29/month', Seats: '1', 'Key Features': 'Cloud sync, 150+ models, prompt history, traceability' },
+            { Plan: 'Single', Price: '$29/month', Seats: '1', 'Key Features': 'Cloud sync, 150+ models, prompt history, traceability' },
             { Plan: 'Team', Price: '$99/month', Seats: '3 (+$19/additional)', 'Key Features': 'Shared workspace, real-time collaboration, user management' },
           ],
         },
@@ -20122,7 +20123,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           columns: ['Plan', 'Price', 'Key Features'],
           rows: [
             { Plan: 'Free', Price: '$0', 'Key Features': 'All features, unlimited seats, 2,000 req/month, public prompts only' },
-            { Plan: 'Solo', Price: '$12/user/month', 'Key Features': 'Private prompts, higher limits' },
+            { Plan: 'Pro', Price: '$12/user/month', 'Key Features': 'Private prompts, higher limits' },
             { Plan: 'Team', Price: '$20/user/month', 'Key Features': 'Full team features' },
           ],
         },
@@ -20143,7 +20144,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           columns: ['Plan', 'Price', 'Daily Executions', 'Users'],
           rows: [
             { Plan: 'Free', Price: '$0', 'Daily Executions': '50', Users: 'Up to 5' },
-            { Plan: 'Pro', Price: '$500/month', 'Daily Executions': '5,000', Users: 'Up to 5' },
+            { Plan: 'Pro', Price: '$50/month', 'Daily Executions': '5,000', Users: 'Up to 5' },
             { Plan: 'Enterprise', Price: 'Custom', 'Daily Executions': 'Unlimited', Users: 'Custom' },
           ],
         },
@@ -20178,7 +20179,6 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           rows: [
             { Plan: 'Developer', Price: '$0', Traces: '5,000', Users: 'Unlimited' },
             { Plan: 'Plus', Price: '$39/seat/month', Traces: '10,000', Users: 'Unlimited' },
-            { Plan: 'Team', Price: '$39/seat/month', Traces: '10,000', Users: 'Unlimited (enhanced)' },
             { Plan: 'Enterprise', Price: '~$100K+/year', Traces: 'Custom', Users: 'Custom' },
           ],
         },
@@ -20250,7 +20250,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             { Tool: 'Promptmetheus', Group: 'Consumer', 'Free Plan': 'Yes', 'Paid Starting': '$29/month', 'Best For': '150+ models, composability', 'Open Source': 'No' },
             { Tool: 'PromptHub', Group: 'Team', 'Free Plan': 'Yes', 'Paid Starting': '$12/user/month', 'Best For': 'Git-style versioning', 'Open Source': 'No' },
             { Tool: 'PromptLayer', Group: 'Team', 'Free Plan': 'Yes', 'Paid Starting': '$49/month', 'Best For': 'Logging, A/B testing', 'Open Source': 'No' },
-            { Tool: 'Vellum AI', Group: 'Team', 'Free Plan': 'Yes', 'Paid Starting': '$500/month', 'Best For': 'Visual orchestration', 'Open Source': 'No' },
+            { Tool: 'Vellum AI', Group: 'Team', 'Free Plan': 'Yes', 'Paid Starting': '$50/month', 'Best For': 'Visual orchestration', 'Open Source': 'No' },
             { Tool: 'Maxim AI', Group: 'Team', 'Free Plan': 'Yes', 'Paid Starting': 'Contact', 'Best For': 'Multi-turn agents', 'Open Source': 'No' },
             { Tool: 'Braintrust', Group: 'Eval', 'Free Plan': 'Yes', 'Paid Starting': '$249/month', 'Best For': 'Loop AI optimization', 'Open Source': 'No' },
             { Tool: 'LangSmith', Group: 'Eval', 'Free Plan': 'Yes', 'Paid Starting': '$39/user/month', 'Best For': 'LangChain/LangGraph tracing', 'Open Source': 'No' },
@@ -20348,7 +20348,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         promptPerfect: {
           title: 'PromptPerfect',
-          content: 'تعمل PromptPerfect كبيئة تطوير متكاملة (IDE) للـ Prompt، مع التركيز على التحسين الفوري وتقديم النتائج في نحو 10 ثوانٍ. تدعم التحسين متعدد الأهداف (مثل الجودة والتكلفة) ودعم الـ Prompt متعدد اللغات مع قوالب جاهزة. متوفّرة كلوحة تحكم ويب مستقلة وكإضافة (plugin) لـ ChatGPT.',
+          content: 'تعمل PromptPerfect كبيئة تطوير متكاملة (IDE) للـ Prompt، مع التركيز على التحسين الفوري وتقديم النتائج في نحو 10 ثوانٍ. تدعم التحسين متعدد الأهداف (مثل الجودة والتكلفة) ودعم الـ Prompt متعدد اللغات مع قوالب جاهزة. متوفّرة كلوحة تحكم ويب مستقلة وكإضافة (plugin) لـ ChatGPT. ستُغلق PromptPerfect نهائياً في 1 سبتمبر 2026 بعد استحواذ Elastic على الشركة الأم Jina AI؛ توقّف التسجيل الجديد في يونيو 2026.',
           columns: ['الخطة', 'السعر', 'التفاصيل'],
           rows: [
             { 'الخطة': 'Free', 'السعر': '$0', 'التفاصيل': '10 عمليات تحسين/شهرياً' },
@@ -20362,7 +20362,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           columns: ['الخطة', 'السعر', 'المقاعد', 'الميزات'],
           rows: [
             { 'الخطة': 'Playground', 'السعر': 'مجاني', 'المقاعد': '1', 'الميزات': 'تخزين محلي، نماذج OpenAI، دعم مجتمعي' },
-            { 'الخطة': 'Standard', 'السعر': '$29/شهرياً', 'المقاعد': '1', 'الميزات': 'مزامنة سحابية، أكثر من 150 نموذجاً، سجل الـ Prompt، إمكانية التتبّع' },
+            { 'الخطة': 'Single', 'السعر': '$29/شهرياً', 'المقاعد': '1', 'الميزات': 'مزامنة سحابية، أكثر من 150 نموذجاً، سجل الـ Prompt، إمكانية التتبّع' },
             { 'الخطة': 'Team', 'السعر': '$99/شهرياً', 'المقاعد': '3 (+$19/إضافي)', 'الميزات': 'مساحة عمل مشتركة، تعاون فوري، إدارة المستخدمين' },
           ],
         },
@@ -20376,7 +20376,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           columns: ['الخطة', 'السعر', 'الميزات'],
           rows: [
             { 'الخطة': 'Free', 'السعر': '$0', 'الميزات': 'جميع الميزات، مقاعد غير محدودة، 2,000 طلب/شهرياً، Prompt عامة فقط' },
-            { 'الخطة': 'Solo', 'السعر': '$12/مستخدم/شهرياً', 'الميزات': 'Prompt خاصة، حدود أعلى' },
+            { 'الخطة': 'Pro', 'السعر': '$12/مستخدم/شهرياً', 'الميزات': 'Prompt خاصة، حدود أعلى' },
             { 'الخطة': 'Team', 'السعر': '$20/مستخدم/شهرياً', 'الميزات': 'ميزات فريق كاملة' },
           ],
         },
@@ -20397,7 +20397,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           columns: ['الخطة', 'السعر', 'التنفيذات اليومية', 'المستخدمون'],
           rows: [
             { 'الخطة': 'Free', 'السعر': '$0', 'التنفيذات اليومية': '50', 'المستخدمون': 'حتى 5' },
-            { 'الخطة': 'Pro', 'السعر': '$500/شهرياً', 'التنفيذات اليومية': '5,000', 'المستخدمون': 'حتى 5' },
+            { 'الخطة': 'Pro', 'السعر': '$50/شهرياً', 'التنفيذات اليومية': '5,000', 'المستخدمون': 'حتى 5' },
             { 'الخطة': 'Enterprise', 'السعر': 'مخصّص', 'التنفيذات اليومية': 'غير محدود', 'المستخدمون': 'مخصّص' },
           ],
         },
@@ -20432,7 +20432,6 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           rows: [
             { 'الخطة': 'Developer', 'السعر': '$0', 'التتبّعات': '5,000', 'المستخدمون': 'غير محدود' },
             { 'الخطة': 'Plus', 'السعر': '$39/مقعد/شهرياً', 'التتبّعات': '10,000', 'المستخدمون': 'غير محدود' },
-            { 'الخطة': 'Team', 'السعر': '$39/مقعد/شهرياً', 'التتبّعات': '10,000', 'المستخدمون': 'غير محدود (محسّن)' },
             { 'الخطة': 'Enterprise', 'السعر': '~$100K+/سنوياً', 'التتبّعات': 'مخصّص', 'المستخدمون': 'مخصّص' },
           ],
         },
@@ -20504,7 +20503,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             { 'الأداة': 'Promptmetheus', 'المجموعة': 'مستهلك', 'خطة مجانية': 'نعم', 'بداية المدفوع': '$29/شهرياً', 'الأنسب لـ': 'أكثر من 150 نموذجاً، قابلية التركيب', 'مفتوح المصدر': 'لا' },
             { 'الأداة': 'PromptHub', 'المجموعة': 'فريق', 'خطة مجانية': 'نعم', 'بداية المدفوع': '$12/مستخدم/شهرياً', 'الأنسب لـ': 'إصدارات بأسلوب Git', 'مفتوح المصدر': 'لا' },
             { 'الأداة': 'PromptLayer', 'المجموعة': 'فريق', 'خطة مجانية': 'نعم', 'بداية المدفوع': '$49/شهرياً', 'الأنسب لـ': 'التسجيل واختبار A/B', 'مفتوح المصدر': 'لا' },
-            { 'الأداة': 'Vellum AI', 'المجموعة': 'فريق', 'خطة مجانية': 'نعم', 'بداية المدفوع': '$500/شهرياً', 'الأنسب لـ': 'التنسيق المرئي', 'مفتوح المصدر': 'لا' },
+            { 'الأداة': 'Vellum AI', 'المجموعة': 'فريق', 'خطة مجانية': 'نعم', 'بداية المدفوع': '$50/شهرياً', 'الأنسب لـ': 'التنسيق المرئي', 'مفتوح المصدر': 'لا' },
             { 'الأداة': 'Maxim AI', 'المجموعة': 'فريق', 'خطة مجانية': 'نعم', 'بداية المدفوع': 'تواصل', 'الأنسب لـ': 'الوكلاء متعدّدو الأدوار', 'مفتوح المصدر': 'لا' },
             { 'الأداة': 'Braintrust', 'المجموعة': 'تقييم', 'خطة مجانية': 'نعم', 'بداية المدفوع': '$249/شهرياً', 'الأنسب لـ': 'تحسين Loop بالذكاء الاصطناعي', 'مفتوح المصدر': 'لا' },
             { 'الأداة': 'LangSmith', 'المجموعة': 'تقييم', 'خطة مجانية': 'نعم', 'بداية المدفوع': '$39/مستخدم/شهرياً', 'الأنسب لـ': 'تتبّع LangChain/LangGraph', 'مفتوح المصدر': 'لا' },
@@ -20602,7 +20601,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         promptPerfect: {
           title: 'PromptPerfect',
-          content: 'PromptPerfect verhält sich wie eine integrierte Entwicklungsumgebung (IDE) für Prompts und konzentriert sich auf Echtzeit-Optimierung mit Ergebnissen in ca. 10 Sekunden. Es unterstützt Multi-Ziel-Optimierung (z. B. Qualität und Kosten) sowie mehrsprachige Prompts mit vorgefertigten Templates. Verfügbar als eigenständiges Web-Dashboard und ChatGPT-Plugin.',
+          content: 'PromptPerfect verhält sich wie eine integrierte Entwicklungsumgebung (IDE) für Prompts und konzentriert sich auf Echtzeit-Optimierung mit Ergebnissen in ca. 10 Sekunden. Es unterstützt Multi-Ziel-Optimierung (z. B. Qualität und Kosten) sowie mehrsprachige Prompts mit vorgefertigten Templates. Verfügbar als eigenständiges Web-Dashboard und ChatGPT-Plugin. PromptPerfect wird zum 1. September 2026 eingestellt, nachdem Muttergesellschaft Jina AI von Elastic übernommen wurde; Neuanmeldungen wurden bereits im Juni 2026 geschlossen.',
           columns: ['Plan', 'Preis', 'Details'],
           rows: [
             { 'Plan': 'Free', 'Preis': '$0', 'Details': '10 Optimierungen/Monat' },
@@ -20616,7 +20615,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           columns: ['Plan', 'Preis', 'Nutzer', 'Funktionen'],
           rows: [
             { 'Plan': 'Playground', 'Preis': 'Kostenlos', 'Nutzer': '1', 'Funktionen': 'Lokaler Speicher, OpenAI-Modelle, Community-Support' },
-            { 'Plan': 'Standard', 'Preis': '$29/Monat', 'Nutzer': '1', 'Funktionen': 'Cloud-Sync, 150+ Modelle, Prompt-History, Nachverfolgbarkeit' },
+            { 'Plan': 'Single', 'Preis': '$29/Monat', 'Nutzer': '1', 'Funktionen': 'Cloud-Sync, 150+ Modelle, Prompt-History, Nachverfolgbarkeit' },
             { 'Plan': 'Team', 'Preis': '$99/Monat', 'Nutzer': '3 (+$19/zusätzlich)', 'Funktionen': 'Gemeinsamer Workspace, Echtzeit-Kollaboration, Benutzerverwaltung' },
           ],
         },
@@ -20630,7 +20629,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           columns: ['Plan', 'Preis', 'Funktionen'],
           rows: [
             { 'Plan': 'Free', 'Preis': '$0', 'Funktionen': 'Alle Funktionen, unbegrenzte Sitze, 2.000 Anf./Monat, nur öffentliche Prompts' },
-            { 'Plan': 'Solo', 'Preis': '$12/Nutzer/Monat', 'Funktionen': 'Private Prompts, höhere Limits' },
+            { 'Plan': 'Pro', 'Preis': '$12/Nutzer/Monat', 'Funktionen': 'Private Prompts, höhere Limits' },
             { 'Plan': 'Team', 'Preis': '$20/Nutzer/Monat', 'Funktionen': 'Vollständige Team-Funktionen' },
           ],
         },
@@ -20651,7 +20650,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           columns: ['Plan', 'Preis', 'Ausführungen/Tag', 'Nutzer'],
           rows: [
             { 'Plan': 'Free', 'Preis': '$0', 'Ausführungen/Tag': '50', 'Nutzer': 'Bis zu 5' },
-            { 'Plan': 'Pro', 'Preis': '$500/Monat', 'Ausführungen/Tag': '5.000', 'Nutzer': 'Bis zu 5' },
+            { 'Plan': 'Pro', 'Preis': '$50/Monat', 'Ausführungen/Tag': '5.000', 'Nutzer': 'Bis zu 5' },
             { 'Plan': 'Enterprise', 'Preis': 'Individuell', 'Ausführungen/Tag': 'Unbegrenzt', 'Nutzer': 'Individuell' },
           ],
         },
@@ -20686,7 +20685,6 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           rows: [
             { 'Plan': 'Developer', 'Preis': '$0', 'Traces': '5.000', 'Nutzer': 'Unbegrenzt' },
             { 'Plan': 'Plus', 'Preis': '$39/Sitz/Monat', 'Traces': '10.000', 'Nutzer': 'Unbegrenzt' },
-            { 'Plan': 'Team', 'Preis': '$39/Sitz/Monat', 'Traces': '10.000', 'Nutzer': 'Unbegrenzt (erweitert)' },
             { 'Plan': 'Enterprise', 'Preis': 'ca. $100.000+/Jahr', 'Traces': 'Individuell', 'Nutzer': 'Individuell' },
           ],
         },
@@ -20758,7 +20756,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             { 'Tool': 'Promptmetheus', 'Gruppe': 'Verbraucher', 'Kostenlos': 'Ja', 'Kostenpflichtig ab': '$29/Monat', 'Ideal für': '150+ Modelle, Kompositionsfähigkeit', 'Open Source': 'Nein' },
             { 'Tool': 'PromptHub', 'Gruppe': 'Team', 'Kostenlos': 'Ja', 'Kostenpflichtig ab': '$12/Nutzer/Monat', 'Ideal für': 'Git-ähnliche Versionierung', 'Open Source': 'Nein' },
             { 'Tool': 'PromptLayer', 'Gruppe': 'Team', 'Kostenlos': 'Ja', 'Kostenpflichtig ab': '$49/Monat', 'Ideal für': 'Protokollierung, A/B-Tests', 'Open Source': 'Nein' },
-            { 'Tool': 'Vellum AI', 'Gruppe': 'Team', 'Kostenlos': 'Ja', 'Kostenpflichtig ab': '$500/Monat', 'Ideal für': 'Visuelle Orchestrierung', 'Open Source': 'Nein' },
+            { 'Tool': 'Vellum AI', 'Gruppe': 'Team', 'Kostenlos': 'Ja', 'Kostenpflichtig ab': '$50/Monat', 'Ideal für': 'Visuelle Orchestrierung', 'Open Source': 'Nein' },
             { 'Tool': 'Maxim AI', 'Gruppe': 'Team', 'Kostenlos': 'Ja', 'Kostenpflichtig ab': 'Kontakt', 'Ideal für': 'Mehrstufige Agenten', 'Open Source': 'Nein' },
             { 'Tool': 'Braintrust', 'Gruppe': 'Evaluierung', 'Kostenlos': 'Ja', 'Kostenpflichtig ab': '$249/Monat', 'Ideal für': 'Loop-KI-Optimierung', 'Open Source': 'Nein' },
             { 'Tool': 'LangSmith', 'Gruppe': 'Evaluierung', 'Kostenlos': 'Ja', 'Kostenpflichtig ab': '$39/Nutzer/Monat', 'Ideal für': 'LangChain/LangGraph-Tracing', 'Open Source': 'Nein' },
@@ -20820,7 +20818,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         downloadReport: {
           downloadCta: {
             label: 'Descargar Informe Completo en PDF',
-            href: '/es/pdfs/prompt-optimization-market-overview-2026.pdf',
+            href: '/pdfs/prompt-optimization-market-overview-2026.pdf',
             description: 'Descarga gratuita — informe completo con tablas de precios, comparaciones de herramientas y cronología de adquisiciones (PDF, marzo 2026)',
           },
         },
@@ -20856,7 +20854,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         promptPerfect: {
           title: 'PromptPerfect',
-          content: 'PromptPerfect actúa como un entorno de desarrollo integrado (IDE) para prompts, enfocándose en optimización en tiempo real con resultados entregados en aproximadamente 10 segundos. Soporta optimización multi-objetivo (por ejemplo, calidad y coste) y soporte de prompts en múltiples idiomas con plantillas preconstruidas. Disponible como dashboard web independiente y como plugin de ChatGPT.',
+          content: 'PromptPerfect actúa como un entorno de desarrollo integrado (IDE) para prompts, enfocándose en optimización en tiempo real con resultados entregados en aproximadamente 10 segundos. Soporta optimización multi-objetivo (por ejemplo, calidad y coste) y soporte de prompts en múltiples idiomas con plantillas preconstruidas. Disponible como dashboard web independiente y como plugin de ChatGPT. PromptPerfect cerrará el 1 de septiembre de 2026 tras la adquisición de su empresa matriz, Jina AI, por parte de Elastic; los nuevos registros se cerraron en junio de 2026.',
           columns: ['Plan', 'Precio', 'Detalles'],
           rows: [
             { 'Plan': 'Gratis', 'Precio': '$0', 'Detalles': '10 optimizaciones/mes' },
@@ -20870,7 +20868,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           columns: ['Plan', 'Precio', 'Asientos', 'Funciones Clave'],
           rows: [
             { 'Plan': 'Playground', 'Precio': 'Gratis', 'Asientos': '1', 'Funciones Clave': 'Almacenamiento local, modelos de OpenAI, soporte comunitario' },
-            { 'Plan': 'Standard', 'Precio': '$29/mes', 'Asientos': '1', 'Funciones Clave': 'Sincronización en la nube, 150+ modelos, historial de prompts, trazabilidad' },
+            { 'Plan': 'Single', 'Precio': '$29/mes', 'Asientos': '1', 'Funciones Clave': 'Sincronización en la nube, 150+ modelos, historial de prompts, trazabilidad' },
             { 'Plan': 'Team', 'Precio': '$99/mes', 'Asientos': '3 (+$19/adicional)', 'Funciones Clave': 'Espacio de trabajo compartido, colaboración en tiempo real, gestión de usuarios' },
           ],
         },
@@ -20884,7 +20882,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           columns: ['Plan', 'Precio', 'Funciones Clave'],
           rows: [
             { 'Plan': 'Gratis', 'Precio': '$0', 'Funciones Clave': 'Todas las funciones, asientos ilimitados, 2.000 solicitudes/mes, solo prompts públicos' },
-            { 'Plan': 'Solo', 'Precio': '$12/usuario/mes', 'Funciones Clave': 'Prompts privados, límites más altos' },
+            { 'Plan': 'Pro', 'Precio': '$12/usuario/mes', 'Funciones Clave': 'Prompts privados, límites más altos' },
             { 'Plan': 'Team', 'Precio': '$20/usuario/mes', 'Funciones Clave': 'Funciones de equipo completas' },
           ],
         },
@@ -20905,7 +20903,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           columns: ['Plan', 'Precio', 'Ejecuciones Diarias', 'Usuarios'],
           rows: [
             { 'Plan': 'Gratis', 'Precio': '$0', 'Ejecuciones Diarias': '50', 'Usuarios': 'Hasta 5' },
-            { 'Plan': 'Pro', 'Precio': '$500/mes', 'Ejecuciones Diarias': '5.000', 'Usuarios': 'Hasta 5' },
+            { 'Plan': 'Pro', 'Precio': '$50/mes', 'Ejecuciones Diarias': '5.000', 'Usuarios': 'Hasta 5' },
             { 'Plan': 'Enterprise', 'Precio': 'Personalizado', 'Ejecuciones Diarias': 'Ilimitado', 'Usuarios': 'Personalizado' },
           ],
         },
@@ -20940,7 +20938,6 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           rows: [
             { 'Plan': 'Developer', 'Precio': '$0', 'Trazas': '5.000', 'Usuarios': 'Ilimitado' },
             { 'Plan': 'Plus', 'Precio': '$39/asiento/mes', 'Trazas': '10.000', 'Usuarios': 'Ilimitado' },
-            { 'Plan': 'Team', 'Precio': '$39/asiento/mes', 'Trazas': '10.000', 'Usuarios': 'Ilimitado (mejorado)' },
             { 'Plan': 'Enterprise', 'Precio': '~$100K+/año', 'Trazas': 'Personalizado', 'Usuarios': 'Personalizado' },
           ],
         },
@@ -21012,7 +21009,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             { Herramienta: 'Promptmetheus', Grupo: 'Consumer', 'Plan Gratuito': 'Sí', 'Pago Desde': '$29/mes', 'Mejor Para': '150+ modelos, composabilidad', 'Open Source': 'No' },
             { Herramienta: 'PromptHub', Grupo: 'Team', 'Plan Gratuito': 'Sí', 'Pago Desde': '$12/usuario/mes', 'Mejor Para': 'Versionado al estilo Git', 'Open Source': 'No' },
             { Herramienta: 'PromptLayer', Grupo: 'Team', 'Plan Gratuito': 'Sí', 'Pago Desde': '$49/mes', 'Mejor Para': 'Registro, pruebas A/B', 'Open Source': 'No' },
-            { Herramienta: 'Vellum AI', Grupo: 'Team', 'Plan Gratuito': 'Sí', 'Pago Desde': '$500/mes', 'Mejor Para': 'Orquestación visual', 'Open Source': 'No' },
+            { Herramienta: 'Vellum AI', Grupo: 'Team', 'Plan Gratuito': 'Sí', 'Pago Desde': '$50/mes', 'Mejor Para': 'Orquestación visual', 'Open Source': 'No' },
             { Herramienta: 'Maxim AI', Grupo: 'Team', 'Plan Gratuito': 'Sí', 'Pago Desde': 'Contactar', 'Mejor Para': 'Agentes multi-turno', 'Open Source': 'No' },
             { Herramienta: 'Braintrust', Grupo: 'Eval', 'Plan Gratuito': 'Sí', 'Pago Desde': '$249/mes', 'Mejor Para': 'Optimización con Loop AI', 'Open Source': 'No' },
             { Herramienta: 'LangSmith', Grupo: 'Eval', 'Plan Gratuito': 'Sí', 'Pago Desde': '$39/usuario/mes', 'Mejor Para': 'Trazado de LangChain/LangGraph', 'Open Source': 'No' },
@@ -21110,7 +21107,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         promptPerfect: {
           title: 'PromptPerfect',
-          content: 'PromptPerfect fonctionne comme un environnement de développement intégré (IDE) pour les prompts, axé sur l\'optimisation en temps réel avec des résultats en environ 10 secondes. Il prend en charge l\'optimisation multi-objectifs (par exemple qualité et coût) et les prompts multilingues avec des modèles prédéfinis. Disponible en tableau de bord web autonome et en plugin ChatGPT.',
+          content: 'PromptPerfect fonctionne comme un environnement de développement intégré (IDE) pour les prompts, axé sur l\'optimisation en temps réel avec des résultats en environ 10 secondes. Il prend en charge l\'optimisation multi-objectifs (par exemple qualité et coût) et les prompts multilingues avec des modèles prédéfinis. Disponible en tableau de bord web autonome et en plugin ChatGPT. PromptPerfect fermera définitivement le 1er septembre 2026 après le rachat de sa société mère Jina AI par Elastic ; les nouvelles inscriptions ont été closes en juin 2026.',
           columns: ['Formule', 'Prix', 'Détails'],
           rows: [
             { 'Formule': 'Gratuit', 'Prix': '$0', 'Détails': '10 optimisations/mois' },
@@ -21124,7 +21121,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           columns: ['Formule', 'Prix', 'Sièges', 'Fonctionnalités'],
           rows: [
             { 'Formule': 'Playground', 'Prix': 'Gratuit', 'Sièges': '1', 'Fonctionnalités': 'Stockage local, modèles OpenAI, support communautaire' },
-            { 'Formule': 'Standard', 'Prix': '$29/mois', 'Sièges': '1', 'Fonctionnalités': 'Sync cloud, 150+ modèles, historique, traçabilité' },
+            { 'Formule': 'Single', 'Prix': '$29/mois', 'Sièges': '1', 'Fonctionnalités': 'Sync cloud, 150+ modèles, historique, traçabilité' },
             { 'Formule': 'Team', 'Prix': '$99/mois', 'Sièges': '3 (+$19/supplémentaire)', 'Fonctionnalités': 'Espace de travail partagé, collaboration temps réel, gestion des utilisateurs' },
           ],
         },
@@ -21138,7 +21135,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           columns: ['Formule', 'Prix', 'Fonctionnalités'],
           rows: [
             { 'Formule': 'Gratuit', 'Prix': '$0', 'Fonctionnalités': 'Toutes fonctionnalités, sièges illimités, 2 000 req/mois, prompts publics uniquement' },
-            { 'Formule': 'Solo', 'Prix': '$12/utilisateur/mois', 'Fonctionnalités': 'Prompts privés, limites plus élevées' },
+            { 'Formule': 'Pro', 'Prix': '$12/utilisateur/mois', 'Fonctionnalités': 'Prompts privés, limites plus élevées' },
             { 'Formule': 'Team', 'Prix': '$20/utilisateur/mois', 'Fonctionnalités': 'Fonctionnalités équipe complètes' },
           ],
         },
@@ -21159,7 +21156,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           columns: ['Formule', 'Prix', 'Exécutions/Jour', 'Utilisateurs'],
           rows: [
             { 'Formule': 'Gratuit', 'Prix': '$0', 'Exécutions/Jour': '50', 'Utilisateurs': 'Jusqu\'à 5' },
-            { 'Formule': 'Pro', 'Prix': '$500/mois', 'Exécutions/Jour': '5 000', 'Utilisateurs': 'Jusqu\'à 5' },
+            { 'Formule': 'Pro', 'Prix': '$50/mois', 'Exécutions/Jour': '5 000', 'Utilisateurs': 'Jusqu\'à 5' },
             { 'Formule': 'Enterprise', 'Prix': 'Sur devis', 'Exécutions/Jour': 'Illimité', 'Utilisateurs': 'Sur devis' },
           ],
         },
@@ -21194,7 +21191,6 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           rows: [
             { 'Formule': 'Developer', 'Prix': '$0', 'Traces': '5 000', 'Utilisateurs': 'Illimité' },
             { 'Formule': 'Plus', 'Prix': '$39/siège/mois', 'Traces': '10 000', 'Utilisateurs': 'Illimité' },
-            { 'Formule': 'Team', 'Prix': '$39/siège/mois', 'Traces': '10 000', 'Utilisateurs': 'Illimité (amélioré)' },
             { 'Formule': 'Enterprise', 'Prix': '~$100 000+/an', 'Traces': 'Sur devis', 'Utilisateurs': 'Sur devis' },
           ],
         },
@@ -21266,7 +21262,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             { 'Outil': 'Promptmetheus', 'Groupe': 'Grand public', 'Gratuit': 'Oui', 'Payant dès': '$29/mois', 'Idéal pour': '150+ modèles, composabilité', 'Open Source': 'Non' },
             { 'Outil': 'PromptHub', 'Groupe': 'Équipe', 'Gratuit': 'Oui', 'Payant dès': '$12/utilisateur/mois', 'Idéal pour': 'Versionnage Git', 'Open Source': 'Non' },
             { 'Outil': 'PromptLayer', 'Groupe': 'Équipe', 'Gratuit': 'Oui', 'Payant dès': '$49/mois', 'Idéal pour': 'Journalisation, tests A/B', 'Open Source': 'Non' },
-            { 'Outil': 'Vellum AI', 'Groupe': 'Équipe', 'Gratuit': 'Oui', 'Payant dès': '$500/mois', 'Idéal pour': 'Orchestration visuelle', 'Open Source': 'Non' },
+            { 'Outil': 'Vellum AI', 'Groupe': 'Équipe', 'Gratuit': 'Oui', 'Payant dès': '$50/mois', 'Idéal pour': 'Orchestration visuelle', 'Open Source': 'Non' },
             { 'Outil': 'Maxim AI', 'Groupe': 'Équipe', 'Gratuit': 'Oui', 'Payant dès': 'Contacter', 'Idéal pour': 'Agents multi-tours', 'Open Source': 'Non' },
             { 'Outil': 'Braintrust', 'Groupe': 'Évaluation', 'Gratuit': 'Oui', 'Payant dès': '$249/mois', 'Idéal pour': 'Optimisation IA Loop', 'Open Source': 'Non' },
             { 'Outil': 'LangSmith', 'Groupe': 'Évaluation', 'Gratuit': 'Oui', 'Payant dès': '$39/utilisateur/mois', 'Idéal pour': 'Traçage LangChain/LangGraph', 'Open Source': 'Non' },
@@ -21364,7 +21360,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         promptPerfect: {
           title: 'PromptPerfect',
-          content: 'PromptPerfectはプロンプト向けの統合開発環境（IDE）として機能し、約10秒でリアルタイム最適化結果を提供します。品質とコストなどのマルチ目標最適化、定型テンプレート付きの多言語プロンプトをサポート。スタンドアロンWebダッシュボードおよびChatGPTプラグインとして利用可能。',
+          content: 'PromptPerfectはプロンプト向けの統合開発環境（IDE）として機能し、約10秒でリアルタイム最適化結果を提供します。品質とコストなどのマルチ目標最適化、定型テンプレート付きの多言語プロンプトをサポート。スタンドアロンWebダッシュボードおよびChatGPTプラグインとして利用可能。親会社Jina AIがElasticに買収されたことを受け、PromptPerfectは2026年9月1日にサービスを終了します。新規登録は2026年6月に終了しました。',
           columns: ['プラン', '価格', '詳細'],
           rows: [
             { 'プラン': 'Free', '価格': '$0', '詳細': '10回最適化/月' },
@@ -21378,7 +21374,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           columns: ['プラン', '価格', 'シート数', '主な機能'],
           rows: [
             { 'プラン': 'Playground', '価格': '無料', 'シート数': '1', '主な機能': 'ローカルストレージ、OpenAIモデル、コミュニティサポート' },
-            { 'プラン': 'Standard', '価格': '$29/月', 'シート数': '1', '主な機能': 'クラウド同期、150以上のモデル、プロンプト履歴、追跡可能性' },
+            { 'プラン': 'Single', '価格': '$29/月', 'シート数': '1', '主な機能': 'クラウド同期、150以上のモデル、プロンプト履歴、追跡可能性' },
             { 'プラン': 'Team', '価格': '$99/月', 'シート数': '3（+$19/追加）', '主な機能': '共有ワークスペース、リアルタイム協働、ユーザー管理' },
           ],
         },
@@ -21392,7 +21388,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           columns: ['プラン', '価格', '主な機能'],
           rows: [
             { 'プラン': 'Free', '価格': '$0', '主な機能': '全機能、無制限シート、2,000リクエスト/月、パブリックプロンプトのみ' },
-            { 'プラン': 'Solo', '価格': '$12/ユーザー/月', '主な機能': 'プライベートプロンプト、上位制限' },
+            { 'プラン': 'Pro', '価格': '$12/ユーザー/月', '主な機能': 'プライベートプロンプト、上位制限' },
             { 'プラン': 'Team', '価格': '$20/ユーザー/月', '主な機能': '全チーム機能' },
           ],
         },
@@ -21413,7 +21409,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           columns: ['プラン', '価格', '1日の実行数', 'ユーザー数'],
           rows: [
             { 'プラン': 'Free', '価格': '$0', '1日の実行数': '50', 'ユーザー数': '最大5名' },
-            { 'プラン': 'Pro', '価格': '$500/月', '1日の実行数': '5,000', 'ユーザー数': '最大5名' },
+            { 'プラン': 'Pro', '価格': '$50/月', '1日の実行数': '5,000', 'ユーザー数': '最大5名' },
             { 'プラン': 'Enterprise', '価格': '要問合せ', '1日の実行数': '無制限', 'ユーザー数': '要問合せ' },
           ],
         },
@@ -21448,7 +21444,6 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           rows: [
             { 'プラン': 'Developer', '価格': '$0', 'トレース数': '5,000', 'ユーザー数': '無制限' },
             { 'プラン': 'Plus', '価格': '$39/シート/月', 'トレース数': '10,000', 'ユーザー数': '無制限' },
-            { 'プラン': 'Team', '価格': '$39/シート/月', 'トレース数': '10,000', 'ユーザー数': '無制限（強化版）' },
             { 'プラン': 'Enterprise', '価格': '約$100,000+/年', 'トレース数': '要問合せ', 'ユーザー数': '要問合せ' },
           ],
         },
@@ -21520,7 +21515,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             { 'ツール': 'Promptmetheus', 'グループ': '消費者', '無料': 'あり', '有料開始': '$29/月', '最適な用途': '150以上のモデル、合成可能性', 'オープンソース': 'なし' },
             { 'ツール': 'PromptHub', 'グループ': 'チーム', '無料': 'あり', '有料開始': '$12/ユーザー/月', '最適な用途': 'Gitスタイルバージョニング', 'オープンソース': 'なし' },
             { 'ツール': 'PromptLayer', 'グループ': 'チーム', '無料': 'あり', '有料開始': '$49/月', '最適な用途': 'ログ記録、A/Bテスト', 'オープンソース': 'なし' },
-            { 'ツール': 'Vellum AI', 'グループ': 'チーム', '無料': 'あり', '有料開始': '$500/月', '最適な用途': 'ビジュアルオーケストレーション', 'オープンソース': 'なし' },
+            { 'ツール': 'Vellum AI', 'グループ': 'チーム', '無料': 'あり', '有料開始': '$50/月', '最適な用途': 'ビジュアルオーケストレーション', 'オープンソース': 'なし' },
             { 'ツール': 'Maxim AI', 'グループ': 'チーム', '無料': 'あり', '有料開始': '要問合せ', '最適な用途': 'マルチターンエージェント', 'オープンソース': 'なし' },
             { 'ツール': 'Braintrust', 'グループ': '評価', '無料': 'あり', '有料開始': '$249/月', '最適な用途': 'Loop AIによる最適化', 'オープンソース': 'なし' },
             { 'ツール': 'LangSmith', 'グループ': '評価', '無料': 'あり', '有料開始': '$39/ユーザー/月', '最適な用途': 'LangChain/LangGraphトレース', 'オープンソース': 'なし' },
@@ -21618,7 +21613,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         promptPerfect: {
           title: 'PromptPerfect',
-          content: 'PromptPerfect像提示词专用IDE一样运作，专注于约10秒内交付实时优化结果。支持多目标优化（如质量与成本兼顾）以及带预置模板的多语言提示词支持。可作为独立Web仪表盘及ChatGPT插件使用。',
+          content: 'PromptPerfect像提示词专用IDE一样运作，专注于约10秒内交付实时优化结果。支持多目标优化（如质量与成本兼顾）以及带预置模板的多语言提示词支持。可作为独立Web仪表盘及ChatGPT插件使用。因母公司Jina AI被Elastic收购，PromptPerfect将于2026年9月1日关闭；新用户注册已于2026年6月停止。',
           columns: ['方案', '价格', '详情'],
           rows: [
             { '方案': '免费', '价格': '$0', '详情': '10次优化/月' },
@@ -21632,7 +21627,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           columns: ['方案', '价格', '席位', '主要功能'],
           rows: [
             { '方案': 'Playground', '价格': '免费', '席位': '1', '主要功能': '本地存储、OpenAI模型、社区支持' },
-            { '方案': 'Standard', '价格': '$29/月', '席位': '1', '主要功能': '云端同步、150+模型、提示词历史、可追溯性' },
+            { '方案': 'Single', '价格': '$29/月', '席位': '1', '主要功能': '云端同步、150+模型、提示词历史、可追溯性' },
             { '方案': 'Team', '价格': '$99/月', '席位': '3（+$19/额外席位）', '主要功能': '共享工作区、实时协作、用户管理' },
           ],
         },
@@ -21646,7 +21641,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           columns: ['方案', '价格', '主要功能'],
           rows: [
             { '方案': '免费', '价格': '$0', '主要功能': '全部功能、无限席位、2,000请求/月、仅限公开提示词' },
-            { '方案': 'Solo', '价格': '$12/用户/月', '主要功能': '私有提示词、更高限额' },
+            { '方案': 'Pro', '价格': '$12/用户/月', '主要功能': '私有提示词、更高限额' },
             { '方案': 'Team', '价格': '$20/用户/月', '主要功能': '完整团队功能' },
           ],
         },
@@ -21667,7 +21662,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           columns: ['方案', '价格', '每日执行数', '用户数'],
           rows: [
             { '方案': '免费', '价格': '$0', '每日执行数': '50', '用户数': '最多5人' },
-            { '方案': 'Pro', '价格': '$500/月', '每日执行数': '5,000', '用户数': '最多5人' },
+            { '方案': 'Pro', '价格': '$50/月', '每日执行数': '5,000', '用户数': '最多5人' },
             { '方案': 'Enterprise', '价格': '定制报价', '每日执行数': '无限', '用户数': '定制' },
           ],
         },
@@ -21702,7 +21697,6 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           rows: [
             { '方案': 'Developer', '价格': '$0', '追踪数': '5,000', '用户数': '无限' },
             { '方案': 'Plus', '价格': '$39/席位/月', '追踪数': '10,000', '用户数': '无限' },
-            { '方案': 'Team', '价格': '$39/席位/月', '追踪数': '10,000', '用户数': '无限（增强版）' },
             { '方案': 'Enterprise', '价格': '约$100,000+/年', '追踪数': '定制', '用户数': '定制' },
           ],
         },
@@ -21774,7 +21768,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             { '工具': 'Promptmetheus', '分组': '消费者', '免费': '是', '付费起价': '$29/月', '最适合': '150+模型、可组合性', '开源': '否' },
             { '工具': 'PromptHub', '分组': '团队', '免费': '是', '付费起价': '$12/用户/月', '最适合': 'Git风格版本控制', '开源': '否' },
             { '工具': 'PromptLayer', '分组': '团队', '免费': '是', '付费起价': '$49/月', '最适合': '日志记录、A/B测试', '开源': '否' },
-            { '工具': 'Vellum AI', '分组': '团队', '免费': '是', '付费起价': '$500/月', '最适合': '可视化编排', '开源': '否' },
+            { '工具': 'Vellum AI', '分组': '团队', '免费': '是', '付费起价': '$50/月', '最适合': '可视化编排', '开源': '否' },
             { '工具': 'Maxim AI', '分组': '团队', '免费': '是', '付费起价': '联系获取', '最适合': '多轮智能体', '开源': '否' },
             { '工具': 'Braintrust', '分组': '评估', '免费': '是', '付费起价': '$249/月', '最适合': 'Loop AI优化', '开源': '否' },
             { '工具': 'LangSmith', '分组': '评估', '免费': '是', '付费起价': '$39/用户/月', '最适合': 'LangChain/LangGraph追踪', '开源': '否' },
@@ -21872,7 +21866,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         promptPerfect: {
           title: 'PromptPerfect',
-          content: 'O PromptPerfect funciona como um ambiente de desenvolvimento integrado (IDE) para prompts, com foco em otimização em tempo real com resultados entregues em aproximadamente 10 segundos. Suporta otimização multi-objetivo (por exemplo, qualidade e custo) e suporte a prompts em múltiplos idiomas com modelos pré-construídos. Disponível como dashboard web independente e plugin do ChatGPT.',
+          content: 'O PromptPerfect funciona como um ambiente de desenvolvimento integrado (IDE) para prompts, com foco em otimização em tempo real com resultados entregues em aproximadamente 10 segundos. Suporta otimização multi-objetivo (por exemplo, qualidade e custo) e suporte a prompts em múltiplos idiomas com modelos pré-construídos. Disponível como dashboard web independente e plugin do ChatGPT. O PromptPerfect será encerrado em 1º de setembro de 2026, após a aquisição da controladora Jina AI pela Elastic; novos cadastros foram encerrados em junho de 2026.',
           columns: ['Plano', 'Preço', 'Detalhes'],
           rows: [
             { Plano: 'Gratuito', Preço: '$0', Detalhes: '10 otimizações/mês' },
@@ -21886,7 +21880,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           columns: ['Plano', 'Preço', 'Assentos', 'Recursos Principais'],
           rows: [
             { Plano: 'Playground', Preço: 'Gratuito', Assentos: '1', 'Recursos Principais': 'Armazenamento local, modelos OpenAI, suporte da comunidade' },
-            { Plano: 'Standard', Preço: '$29/mês', Assentos: '1', 'Recursos Principais': 'Sincronização cloud, 150+ modelos, histórico de prompts, rastreabilidade' },
+            { Plano: 'Single', Preço: '$29/mês', Assentos: '1', 'Recursos Principais': 'Sincronização cloud, 150+ modelos, histórico de prompts, rastreabilidade' },
             { Plano: 'Team', Preço: '$99/mês', Assentos: '3 (+$19/adicional)', 'Recursos Principais': 'Espaço de trabalho compartilhado, colaboração em tempo real, gerenciamento de usuários' },
           ],
         },
@@ -21900,7 +21894,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           columns: ['Plano', 'Preço', 'Recursos Principais'],
           rows: [
             { Plano: 'Gratuito', Preço: '$0', 'Recursos Principais': 'Todos os recursos, assentos ilimitados, 2.000 sol./mês, apenas prompts públicos' },
-            { Plano: 'Solo', Preço: '$12/usuário/mês', 'Recursos Principais': 'Prompts privados, limites mais altos' },
+            { Plano: 'Pro', Preço: '$12/usuário/mês', 'Recursos Principais': 'Prompts privados, limites mais altos' },
             { Plano: 'Team', Preço: '$20/usuário/mês', 'Recursos Principais': 'Recursos completos para equipes' },
           ],
         },
@@ -21921,7 +21915,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           columns: ['Plano', 'Preço', 'Execuções Diárias', 'Usuários'],
           rows: [
             { Plano: 'Gratuito', Preço: '$0', 'Execuções Diárias': '50', Usuários: 'Até 5' },
-            { Plano: 'Pro', Preço: '$500/mês', 'Execuções Diárias': '5.000', Usuários: 'Até 5' },
+            { Plano: 'Pro', Preço: '$50/mês', 'Execuções Diárias': '5.000', Usuários: 'Até 5' },
             { Plano: 'Enterprise', Preço: 'Personalizado', 'Execuções Diárias': 'Ilimitado', Usuários: 'Personalizado' },
           ],
         },
@@ -21956,7 +21950,6 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           rows: [
             { Plano: 'Developer', Preço: '$0', Rastreamentos: '5.000', Usuários: 'Ilimitado' },
             { Plano: 'Plus', Preço: '$39/assento/mês', Rastreamentos: '10.000', Usuários: 'Ilimitado' },
-            { Plano: 'Team', Preço: '$39/assento/mês', Rastreamentos: '10.000', Usuários: 'Ilimitado (aprimorado)' },
             { Plano: 'Enterprise', Preço: '~$100 mil+/ano', Rastreamentos: 'Personalizado', Usuários: 'Personalizado' },
           ],
         },
@@ -22028,7 +22021,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             { Ferramenta: 'Promptmetheus', Grupo: 'Consumidor', 'Plano Gratuito': 'Sim', 'Pago a Partir de': '$29/mês', 'Ideal Para': '150+ modelos, composabilidade', 'Código Aberto': 'Não' },
             { Ferramenta: 'PromptHub', Grupo: 'Equipe', 'Plano Gratuito': 'Sim', 'Pago a Partir de': '$12/usuário/mês', 'Ideal Para': 'Versionamento no estilo Git', 'Código Aberto': 'Não' },
             { Ferramenta: 'PromptLayer', Grupo: 'Equipe', 'Plano Gratuito': 'Sim', 'Pago a Partir de': '$49/mês', 'Ideal Para': 'Registro, testes A/B', 'Código Aberto': 'Não' },
-            { Ferramenta: 'Vellum AI', Grupo: 'Equipe', 'Plano Gratuito': 'Sim', 'Pago a Partir de': '$500/mês', 'Ideal Para': 'Orquestração visual', 'Código Aberto': 'Não' },
+            { Ferramenta: 'Vellum AI', Grupo: 'Equipe', 'Plano Gratuito': 'Sim', 'Pago a Partir de': '$50/mês', 'Ideal Para': 'Orquestração visual', 'Código Aberto': 'Não' },
             { Ferramenta: 'Maxim AI', Grupo: 'Equipe', 'Plano Gratuito': 'Sim', 'Pago a Partir de': 'Contato', 'Ideal Para': 'Agentes multi-turno', 'Código Aberto': 'Não' },
             { Ferramenta: 'Braintrust', Grupo: 'Avaliação', 'Plano Gratuito': 'Sim', 'Pago a Partir de': '$249/mês', 'Ideal Para': 'Otimização Loop AI', 'Código Aberto': 'Não' },
             { Ferramenta: 'LangSmith', Grupo: 'Avaliação', 'Plano Gratuito': 'Sim', 'Pago a Partir de': '$39/usuário/mês', 'Ideal Para': 'Rastreamento LangChain/LangGraph', 'Código Aberto': 'Não' },
@@ -22126,7 +22119,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         promptPerfect: {
           title: 'PromptPerfect',
-          content: 'PromptPerfect는 프롬프트를 위한 통합 개발 환경(IDE)처럼 작동하며, 약 10초 이내에 실시간 최적화 결과를 제공합니다. 품질과 비용 등 다중 목표 최적화와 사전 구축된 템플릿을 포함한 다국어 프롬프트 지원을 제공합니다. 독립형 웹 대시보드 및 ChatGPT 플러그인으로 이용 가능합니다.',
+          content: 'PromptPerfect는 프롬프트를 위한 통합 개발 환경(IDE)처럼 작동하며, 약 10초 이내에 실시간 최적화 결과를 제공합니다. 품질과 비용 등 다중 목표 최적화와 사전 구축된 템플릿을 포함한 다국어 프롬프트 지원을 제공합니다. 독립형 웹 대시보드 및 ChatGPT 플러그인으로 이용 가능합니다. 모회사 Jina AI가 Elastic에 인수됨에 따라 PromptPerfect는 2026년 9월 1일 서비스를 종료합니다. 신규 가입은 2026년 6월에 마감되었습니다.',
           columns: ['플랜', '가격', '주요 세부 사항'],
           rows: [
             { '플랜': 'Free', '가격': '$0', '주요 세부 사항': '월 10회 최적화' },
@@ -22140,7 +22133,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           columns: ['플랜', '가격', '시트 수', '주요 기능'],
           rows: [
             { '플랜': 'Playground', '가격': '무료', '시트 수': '1', '주요 기능': '로컬 저장, OpenAI 모델, 커뮤니티 지원' },
-            { '플랜': 'Standard', '가격': '$29/월', '시트 수': '1', '주요 기능': '클라우드 동기화, 150+ 모델, 프롬프트 기록, 추적 가능성' },
+            { '플랜': 'Single', '가격': '$29/월', '시트 수': '1', '주요 기능': '클라우드 동기화, 150+ 모델, 프롬프트 기록, 추적 가능성' },
             { '플랜': 'Team', '가격': '$99/월', '시트 수': '3 (+$19/추가)', '주요 기능': '공유 워크스페이스, 실시간 협업, 사용자 관리' },
           ],
         },
@@ -22154,7 +22147,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           columns: ['플랜', '가격', '주요 기능'],
           rows: [
             { '플랜': 'Free', '가격': '$0', '주요 기능': '전체 기능, 무제한 시트, 월 2,000 요청, 공개 프롬프트만 가능' },
-            { '플랜': 'Solo', '가격': '$12/사용자/월', '주요 기능': '비공개 프롬프트, 높은 한도' },
+            { '플랜': 'Pro', '가격': '$12/사용자/월', '주요 기능': '비공개 프롬프트, 높은 한도' },
             { '플랜': 'Team', '가격': '$20/사용자/월', '주요 기능': '전체 팀 기능' },
           ],
         },
@@ -22175,7 +22168,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           columns: ['플랜', '가격', '일일 실행 횟수', '사용자 수'],
           rows: [
             { '플랜': 'Free', '가격': '$0', '일일 실행 횟수': '50', '사용자 수': '최대 5명' },
-            { '플랜': 'Pro', '가격': '$500/월', '일일 실행 횟수': '5,000', '사용자 수': '최대 5명' },
+            { '플랜': 'Pro', '가격': '$50/월', '일일 실행 횟수': '5,000', '사용자 수': '최대 5명' },
             { '플랜': 'Enterprise', '가격': '맞춤 견적', '일일 실행 횟수': '무제한', '사용자 수': '맞춤' },
           ],
         },
@@ -22210,7 +22203,6 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           rows: [
             { '플랜': 'Developer', '가격': '$0', '트레이스 수': '5,000', '사용자 수': '무제한' },
             { '플랜': 'Plus', '가격': '$39/시트/월', '트레이스 수': '10,000', '사용자 수': '무제한' },
-            { '플랜': 'Team', '가격': '$39/시트/월', '트레이스 수': '10,000', '사용자 수': '무제한 (강화)' },
             { '플랜': 'Enterprise', '가격': '약 $100,000+/년', '트레이스 수': '맞춤', '사용자 수': '맞춤' },
           ],
         },
@@ -22282,7 +22274,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             { '도구': 'Promptmetheus', '그룹': '소비자', '무료 플랜': '있음', '유료 시작가': '$29/월', '최적 사용 사례': '150+ 모델, 합성 가능성', '오픈소스': '아니오' },
             { '도구': 'PromptHub', '그룹': '팀', '무료 플랜': '있음', '유료 시작가': '$12/사용자/월', '최적 사용 사례': 'Git 스타일 버전 관리', '오픈소스': '아니오' },
             { '도구': 'PromptLayer', '그룹': '팀', '무료 플랜': '있음', '유료 시작가': '$49/월', '최적 사용 사례': '로깅, A/B 테스트', '오픈소스': '아니오' },
-            { '도구': 'Vellum AI', '그룹': '팀', '무료 플랜': '있음', '유료 시작가': '$500/월', '최적 사용 사례': '시각적 오케스트레이션', '오픈소스': '아니오' },
+            { '도구': 'Vellum AI', '그룹': '팀', '무료 플랜': '있음', '유료 시작가': '$50/월', '최적 사용 사례': '시각적 오케스트레이션', '오픈소스': '아니오' },
             { '도구': 'Maxim AI', '그룹': '팀', '무료 플랜': '있음', '유료 시작가': '문의', '최적 사용 사례': '멀티턴 에이전트', '오픈소스': '아니오' },
             { '도구': 'Braintrust', '그룹': '평가', '무료 플랜': '있음', '유료 시작가': '$249/월', '최적 사용 사례': 'Loop AI 최적화', '오픈소스': '아니오' },
             { '도구': 'LangSmith', '그룹': '평가', '무료 플랜': '있음', '유료 시작가': '$39/사용자/월', '최적 사용 사례': 'LangChain/LangGraph 추적', '오픈소스': '아니오' },
