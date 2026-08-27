@@ -119,12 +119,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Install three free tools, pull one model, and you have autocomplete, chat, and agent mode in VS Code — same as Copilot, except nothing leaves your laptop. It takes about 30 minutes to set up and pays for itself in 8-14 months if you already own the hardware.',
           },
         ],
-        callouts: [
-          {
-            type: 'warning',
-            text: 'Status check, August 2026: Continue.dev still works and is still the fastest Copilot replacement to set up, but it is no longer actively developed. Cursor acquired the Continue team on 18 June 2026; the final release was v2.0.0 on 19 June 2026 and the repository is read-only. Apache 2.0 means it stays downloadable and it will keep working against Ollama for the foreseeable future, but there will be no fixes, and a future provider or VS Code API change will eventually break it. If you want a maintained VS Code agent instead, Cline is the active alternative — the Ollama and Qwen3-Coder half of this stack is unaffected either way.',
-          },
-        ],
         items: [
           '**Continue.dev** (free, open-source) — the VS Code/JetBrains extension. Ships autocomplete, chat, and agent mode. The Copilot-equivalent frontend.',
           '**Ollama** — the local model runtime. One-line install. Manages model downloads, quantization, GPU offload, and exposes an OpenAI-compatible API.',
@@ -132,6 +126,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Qwen3-Coder 7B** — fallback for 8-12 GB VRAM cards. Reaches 80-85% of 30B quality. Recommended for RTX 3060 12 GB and M3 Pro 16 GB Macs.',
         ],
         callouts: [
+          {
+            type: 'warning',
+            text: 'Status check, August 2026: Continue.dev still works and is still the fastest Copilot replacement to set up, but it is no longer actively developed. Cursor acquired the Continue team on 18 June 2026; the final release was v2.0.0 on 19 June 2026 and the repository is read-only. Apache 2.0 means it stays downloadable and it will keep working against Ollama for the foreseeable future, but there will be no fixes, and a future provider or VS Code API change will eventually break it. If you want a maintained VS Code agent instead, Cline is the active alternative — the Ollama and Qwen3-Coder half of this stack is unaffected either way.',
+          },
           {
             type: 'note',
             text: 'Continue.dev also supports Cline, Aider, and direct llama.cpp/vLLM endpoints. The recommendations above are the lowest-friction path; alternatives exist for power users.',
@@ -430,12 +428,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Installieren Sie drei kostenlose Tools, laden Sie ein Modell herunter, und Sie haben Autovervollständigung, Chat und Agent-Modus in VS Code – genau wie Copilot, nur dass nichts Ihren Laptop verlässt. Die Einrichtung dauert etwa 30 Minuten und amortisiert sich in 8–14 Monaten, wenn Sie die Hardware bereits besitzen.',
           },
         ],
-        callouts: [
-          {
-            type: 'warning',
-            text: 'Statuspruefung, August 2026: Continue.dev funktioniert weiterhin und bleibt der am schnellsten eingerichtete Copilot-Ersatz, wird aber nicht mehr aktiv entwickelt. Cursor hat das Continue-Team am 18. Juni 2026 uebernommen; die letzte Version war v2.0.0 vom 19. Juni 2026, das Repository ist schreibgeschuetzt. Dank Apache 2.0 bleibt es verfuegbar und laeuft auf absehbare Zeit weiter mit Ollama, aber es wird keine Fehlerbehebungen mehr geben, und eine kuenftige Aenderung an Provider- oder VS-Code-APIs wird es irgendwann unbrauchbar machen. Wenn Sie stattdessen einen gepflegten VS-Code-Agenten wollen, ist Cline die aktive Alternative — der Ollama- und Qwen3-Coder-Teil dieses Stacks ist davon nicht betroffen.',
-          },
-        ],
         items: [
           '**Continue.dev** (kostenlos, Open-Source) – die VS-Code/JetBrains-Erweiterung. Bietet Autovervollständigung, Chat und Agent-Modus. Das Copilot-gleichwertige Frontend.',
           '**Ollama** – die lokale Modell-Laufzeit. Einzeilige Installation. Verwaltet Modell-Downloads, Quantisierung, GPU-Auslagerung und stellt eine OpenAI-kompatible API bereit.',
@@ -443,6 +435,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Qwen3-Coder 7B** – Fallback für 8–12 GB VRAM-Karten. Erreicht 80–85 % der 30B-Qualität. Empfohlen für RTX 3060 12 GB und M3 Pro 16 GB Macs.',
         ],
         callouts: [
+          {
+            type: 'warning',
+            text: 'Statuspruefung, August 2026: Continue.dev funktioniert weiterhin und bleibt der am schnellsten eingerichtete Copilot-Ersatz, wird aber nicht mehr aktiv entwickelt. Cursor hat das Continue-Team am 18. Juni 2026 uebernommen; die letzte Version war v2.0.0 vom 19. Juni 2026, das Repository ist schreibgeschuetzt. Dank Apache 2.0 bleibt es verfuegbar und laeuft auf absehbare Zeit weiter mit Ollama, aber es wird keine Fehlerbehebungen mehr geben, und eine kuenftige Aenderung an Provider- oder VS-Code-APIs wird es irgendwann unbrauchbar machen. Wenn Sie stattdessen einen gepflegten VS-Code-Agenten wollen, ist Cline die aktive Alternative — der Ollama- und Qwen3-Coder-Teil dieses Stacks ist davon nicht betroffen.',
+          },
           {
             type: 'note',
             text: 'Continue.dev unterstützt auch Cline, Aider und direkte llama.cpp/vLLM-Endpunkte. Die oben genannten Empfehlungen sind der reibungsloseste Weg; Alternativen gibt es für Power User.',
@@ -748,12 +744,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Installez trois outils gratuits, téléchargez un modèle, et vous avez l\'autocomplétion, le chat et le mode agent dans VS Code – comme Copilot, sauf que rien ne quitte votre portable. La configuration prend environ 30 minutes et s\'amortit en 8–14 mois si vous avez déjà le matériel.',
           },
         ],
-        callouts: [
-          {
-            type: 'warning',
-            text: 'Point de situation, aout 2026 : Continue.dev fonctionne toujours et reste le remplacement de Copilot le plus rapide a mettre en place, mais il n\'est plus developpe activement. Cursor a acquis l\'equipe Continue le 18 juin 2026 ; la derniere version est la v2.0.0 du 19 juin 2026 et le depot est en lecture seule. La licence Apache 2.0 le garde telechargeable et il continuera de fonctionner avec Ollama dans un avenir proche, mais il n\'y aura plus de correctifs, et une future evolution des API fournisseur ou VS Code finira par le casser. Si vous voulez un agent VS Code maintenu, Cline est l\'alternative active — la partie Ollama et Qwen3-Coder de cette pile n\'est pas concernee.',
-          },
-        ],
         items: [
           '**Continue.dev** (gratuit, open-source) – l\'extension VS Code/JetBrains. Offre l\'autocomplétion, le chat et le mode agent. Le frontend équivalent à Copilot.',
           '**Ollama** – le runtime du modèle local. Installation d\'une ligne. Gère les téléchargements de modèles, la quantification, l\'export GPU et expose une API compatible OpenAI.',
@@ -761,6 +751,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Qwen3-Coder 7B** – secours pour cartes 8–12 Go VRAM. Atteint 80–85 % de la qualité 30B. Recommandé pour RTX 3060 12 Go et M3 Pro 16 Go Macs.',
         ],
         callouts: [
+          {
+            type: 'warning',
+            text: 'Point de situation, aout 2026 : Continue.dev fonctionne toujours et reste le remplacement de Copilot le plus rapide a mettre en place, mais il n\'est plus developpe activement. Cursor a acquis l\'equipe Continue le 18 juin 2026 ; la derniere version est la v2.0.0 du 19 juin 2026 et le depot est en lecture seule. La licence Apache 2.0 le garde telechargeable et il continuera de fonctionner avec Ollama dans un avenir proche, mais il n\'y aura plus de correctifs, et une future evolution des API fournisseur ou VS Code finira par le casser. Si vous voulez un agent VS Code maintenu, Cline est l\'alternative active — la partie Ollama et Qwen3-Coder de cette pile n\'est pas concernee.',
+          },
           {
             type: 'note',
             text: 'Continue.dev supporte aussi Cline, Aider et les points d\'extrémité llama.cpp/vLLM directs. Les recommandations ci-dessus sont le chemin le moins frictionnel ; des alternatives existent pour les power users.',
@@ -1058,12 +1052,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '3 つの無料ツールをインストールし、1 つのモデルをプルします。VS Code でオートコンプリート、チャット、エージェントモードを実現できます – Copilot と同じですが、ノートパソコンから何も出ません。セットアップには約 30 分かかり、既にハードウェアを所有していれば 8～14 ヶ月で回収できます。',
           },
         ],
-        callouts: [
-          {
-            type: 'warning',
-            text: 'ステータス確認（2026年8月）：Continue.devは今も動作し、最も早く導入できるCopilotの代替であることに変わりはありませんが、活発な開発は終了しています。Cursorが2026年6月18日にContinueチームを買収し、最終リリースは2026年6月19日のv2.0.0、リポジトリは読み取り専用です。Apache 2.0のため入手は可能で当面はOllamaと動作しますが、修正は行われず、将来のプロバイダーやVS Code APIの変更でいずれ動かなくなります。メンテナンスされたVS Codeエージェントが必要なら、Clineが現行の代替です。このスタックのOllamaとQwen3-Coderの部分には影響ありません。',
-          },
-        ],
         items: [
           '**Continue.dev**（無料、オープンソース）– VS Code/JetBrains 拡張機能。オートコンプリート、チャット、エージェントモードを提供します。Copilot 同等のフロントエンド。',
           '**Ollama** – ローカルモデルランタイム。1 行インストール。モデルダウンロード、量子化、GPU オフロード、OpenAI 互換 API を管理します。',
@@ -1071,6 +1059,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Qwen3-Coder 7B** – 8～12GB VRAM カード用フォールバック。30B の品質の 80～85% に達します。RTX 3060 12GB と M3 Pro 16GB Mac に推奨。',
         ],
         callouts: [
+          {
+            type: 'warning',
+            text: 'ステータス確認（2026年8月）：Continue.devは今も動作し、最も早く導入できるCopilotの代替であることに変わりはありませんが、活発な開発は終了しています。Cursorが2026年6月18日にContinueチームを買収し、最終リリースは2026年6月19日のv2.0.0、リポジトリは読み取り専用です。Apache 2.0のため入手は可能で当面はOllamaと動作しますが、修正は行われず、将来のプロバイダーやVS Code APIの変更でいずれ動かなくなります。メンテナンスされたVS Codeエージェントが必要なら、Clineが現行の代替です。このスタックのOllamaとQwen3-Coderの部分には影響ありません。',
+          },
           {
             type: 'note',
             text: 'Continue.dev は Cline、Aider、直接 llama.cpp/vLLM エンドポイントもサポートします。上記の推奨事項は最もスムーズなパス；パワーユーザーには代替案があります。',
@@ -1368,12 +1360,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '安装三个免费工具，下载一个模型，你就在 VS Code 中获得自动完成、聊天和代理模式 — 与 Copilot 相同，只是没有任何内容离开笔记本。设置约 30 分钟，8-14 个月内已有硬件就能回本。',
           },
         ],
-        callouts: [
-          {
-            type: 'warning',
-            text: '状态说明（2026年8月）：Continue.dev 仍可使用，也依然是最快上手的 Copilot 替代方案，但已不再积极开发。Cursor 于2026年6月18日收购了 Continue 团队，最终版本为2026年6月19日的 v2.0.0，仓库已设为只读。Apache 2.0 许可证保证它仍可下载，并在可预见的时间内继续配合 Ollama 工作，但不会再有修复，未来供应商或 VS Code API 的变化最终会使其失效。如果你需要持续维护的 VS Code 智能体，Cline 是当前的替代选择——本方案中 Ollama 与 Qwen3-Coder 部分不受影响。',
-          },
-        ],
         items: [
           '**Continue.dev**（免费、开源）— VS Code/JetBrains 扩展。提供自动完成、聊天和代理模式。Copilot 等效前端。',
           '**Ollama** — 本地模型运行时。一行安装。管理模型下载、量化、GPU 卸载，暴露 OpenAI 兼容 API。',
@@ -1381,6 +1367,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Qwen3-Coder 7B** — 8-12GB VRAM 卡的后备方案。达到 30B 的 80-85% 质量。推荐用于 RTX 3060 12GB 和 M3 Pro 16GB Mac。',
         ],
         callouts: [
+          {
+            type: 'warning',
+            text: '状态说明（2026年8月）：Continue.dev 仍可使用，也依然是最快上手的 Copilot 替代方案，但已不再积极开发。Cursor 于2026年6月18日收购了 Continue 团队，最终版本为2026年6月19日的 v2.0.0，仓库已设为只读。Apache 2.0 许可证保证它仍可下载，并在可预见的时间内继续配合 Ollama 工作，但不会再有修复，未来供应商或 VS Code API 的变化最终会使其失效。如果你需要持续维护的 VS Code 智能体，Cline 是当前的替代选择——本方案中 Ollama 与 Qwen3-Coder 部分不受影响。',
+          },
           {
             type: 'note',
             text: 'Continue.dev 也支持 Cline、Aider 和直接 llama.cpp/vLLM 端点。上述推荐是最低摩擦路径；高级用户也有其他选项。',
@@ -1678,12 +1668,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Instala tres herramientas gratuitas, descarga un modelo, y tendrás autocompletado, chat y modo agente en VS Code — igual que Copilot, solo que nada sale de tu portátil. La configuración tarda unos 30 minutos y se amortiza en 8–14 meses si ya tienes el hardware.',
           },
         ],
-        callouts: [
-          {
-            type: 'warning',
-            text: 'Comprobacion de estado, agosto de 2026: Continue.dev sigue funcionando y sigue siendo el reemplazo de Copilot mas rapido de configurar, pero ya no se desarrolla activamente. Cursor adquirio el equipo de Continue el 18 de junio de 2026; la ultima version fue la v2.0.0 del 19 de junio de 2026 y el repositorio es de solo lectura. La licencia Apache 2.0 lo mantiene descargable y seguira funcionando con Ollama en el futuro previsible, pero no habra correcciones y un cambio futuro en las API del proveedor o de VS Code acabara rompiendolo. Si prefieres un agente de VS Code mantenido, Cline es la alternativa activa; la parte de Ollama y Qwen3-Coder de esta pila no se ve afectada.',
-          },
-        ],
         items: [
           '**Continue.dev** (gratuito, código abierto) — la extensión para VS Code/JetBrains. Incluye autocompletado, chat y modo agente. El frontend equivalente a Copilot.',
           '**Ollama** — el runtime de modelos local. Instalación en una línea. Gestiona descargas de modelos, cuantización, descarga a GPU y expone una API compatible con OpenAI.',
@@ -1691,6 +1675,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Qwen3-Coder 7B** — alternativa para tarjetas de 8–12 GB de VRAM. Alcanza el 80–85% de la calidad del 30B. Recomendado para RTX 3060 12 GB y Macs M3 Pro 16 GB.',
         ],
         callouts: [
+          {
+            type: 'warning',
+            text: 'Comprobacion de estado, agosto de 2026: Continue.dev sigue funcionando y sigue siendo el reemplazo de Copilot mas rapido de configurar, pero ya no se desarrolla activamente. Cursor adquirio el equipo de Continue el 18 de junio de 2026; la ultima version fue la v2.0.0 del 19 de junio de 2026 y el repositorio es de solo lectura. La licencia Apache 2.0 lo mantiene descargable y seguira funcionando con Ollama en el futuro previsible, pero no habra correcciones y un cambio futuro en las API del proveedor o de VS Code acabara rompiendolo. Si prefieres un agente de VS Code mantenido, Cline es la alternativa activa; la parte de Ollama y Qwen3-Coder de esta pila no se ve afectada.',
+          },
           {
             type: 'note',
             text: 'Continue.dev también soporta Cline, Aider y endpoints directos de llama.cpp/vLLM. Las recomendaciones anteriores son el camino de menor fricción; existen alternativas para usuarios avanzados.',
@@ -2001,12 +1989,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Instale três ferramentas gratuitas, baixe um modelo e você terá autocompletar, chat e modo agente no VS Code — igual ao Copilot, só que nada sai do seu laptop. A configuração leva cerca de 30 minutos e se paga em 8–14 meses se você já tem o hardware.',
           },
         ],
-        callouts: [
-          {
-            type: 'warning',
-            text: 'Verificacao de status, agosto de 2026: o Continue.dev ainda funciona e continua sendo o substituto do Copilot mais rapido de configurar, mas nao esta mais em desenvolvimento ativo. A Cursor adquiriu a equipe do Continue em 18 de junho de 2026; a versao final foi a v2.0.0, de 19 de junho de 2026, e o repositorio e somente leitura. A licenca Apache 2.0 o mantem disponivel e ele seguira funcionando com o Ollama no futuro previsivel, mas nao havera correcoes, e uma futura mudanca nas APIs do provedor ou do VS Code acabara quebrando-o. Se voce prefere um agente de VS Code mantido, o Cline e a alternativa ativa — a parte de Ollama e Qwen3-Coder desta stack nao e afetada.',
-          },
-        ],
         items: [
           '**Continue.dev** (gratuito, open source) — a extensão para VS Code/JetBrains. Inclui autocompletar, chat e modo agente. O frontend equivalente ao Copilot.',
           '**Ollama** — o runtime de modelos local. Instalação em uma linha. Gerencia downloads de modelos, quantização, descarregamento para a GPU e expõe uma API compatível com OpenAI.',
@@ -2014,6 +1996,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Qwen3-Coder 7B** — alternativa para placas de 8–12 GB de VRAM. Alcança 80–85% da qualidade do 30B. Recomendado para RTX 3060 12 GB e Macs M3 Pro 16 GB.',
         ],
         callouts: [
+          {
+            type: 'warning',
+            text: 'Verificacao de status, agosto de 2026: o Continue.dev ainda funciona e continua sendo o substituto do Copilot mais rapido de configurar, mas nao esta mais em desenvolvimento ativo. A Cursor adquiriu a equipe do Continue em 18 de junho de 2026; a versao final foi a v2.0.0, de 19 de junho de 2026, e o repositorio e somente leitura. A licenca Apache 2.0 o mantem disponivel e ele seguira funcionando com o Ollama no futuro previsivel, mas nao havera correcoes, e uma futura mudanca nas APIs do provedor ou do VS Code acabara quebrando-o. Se voce prefere um agente de VS Code mantido, o Cline e a alternativa ativa — a parte de Ollama e Qwen3-Coder desta stack nao e afetada.',
+          },
           {
             type: 'note',
             text: 'O Continue.dev também suporta Cline, Aider e endpoints diretos de llama.cpp/vLLM. As recomendações acima são o caminho de menor atrito; existem alternativas para usuários avançados.',
@@ -2328,12 +2314,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Continue.dev هي إضافة مجانية تحل محل واجهة Copilot في VS Code. Ollama يُشغّل نموذج الكود على جهازك محليًا. Qwen3-Coder 30B هو النموذج الذي يُوفر الاقتراحات — كل شيء يبقى على جهازك ولا يُرسَل إلى الخارج.',
           },
         ],
-        callouts: [
-          {
-            type: 'warning',
-            text: 'تحقّق من الحالة، أغسطس 2026: لا يزال Continue.dev يعمل ويظل أسرع بديل لـCopilot من حيث الإعداد، لكنه لم يعد قيد التطوير النشط. استحوذت Cursor على فريق Continue في 18 يونيو 2026، وكان الإصدار الأخير v2.0.0 بتاريخ 19 يونيو 2026، والمستودع للقراءة فقط. رخصة Apache 2.0 تُبقيه متاحاً للتنزيل وسيظل يعمل مع Ollama في المدى المنظور، لكن لن تصدر إصلاحات، وأي تغيير مستقبلي في واجهات المزوّدين أو VS Code سيُعطّله في النهاية. وإن أردت وكيل VS Code مُصانًا، فإن Cline هو البديل النشط — أما جزءا Ollama وQwen3-Coder من هذه الحزمة فلا يتأثران.',
-          },
-        ],
         items: [
           '**Continue.dev:** إضافة مجانية مفتوحة المصدر لـ VS Code وJetBrains. تُضيف لوحة دردشة، وإكمالًا تلقائيًا مضمّنًا، ووضع وكيل يقرأ الملفات ويُحررها. الرابط: [continue.dev](https://continue.dev)',
           '**Ollama:** خادم استدلال محلي يُشغّل النماذج ويعرض API متوافقة مع OpenAI. أسهل طريقة لتشغيل نماذج محلية على جهاز Mac أو Linux أو Windows.',
@@ -2341,6 +2321,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Qwen3-Coder 7B Q4_K_M:** للأجهزة بـ 8 جيجابايت VRAM. تثبيت: `ollama pull qwen3-coder:7b`',
         ],
         callouts: [
+          {
+            type: 'warning',
+            text: 'تحقّق من الحالة، أغسطس 2026: لا يزال Continue.dev يعمل ويظل أسرع بديل لـCopilot من حيث الإعداد، لكنه لم يعد قيد التطوير النشط. استحوذت Cursor على فريق Continue في 18 يونيو 2026، وكان الإصدار الأخير v2.0.0 بتاريخ 19 يونيو 2026، والمستودع للقراءة فقط. رخصة Apache 2.0 تُبقيه متاحاً للتنزيل وسيظل يعمل مع Ollama في المدى المنظور، لكن لن تصدر إصلاحات، وأي تغيير مستقبلي في واجهات المزوّدين أو VS Code سيُعطّله في النهاية. وإن أردت وكيل VS Code مُصانًا، فإن Cline هو البديل النشط — أما جزءا Ollama وQwen3-Coder من هذه الحزمة فلا يتأثران.',
+          },
           { type: 'tip', text: 'إذا كنت تستخدم JetBrains (IntelliJ IDEA وWebStorm وما إلى ذلك)، تعمل Continue.dev بنفس الطريقة تمامًا — نفس الإعداد، نفس الملف `config.json`.' },
         ],
       },
@@ -2658,12 +2642,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '무료 도구 세 가지를 설치하고 모델을 다운로드하면 VS Code에서 자동완성·채팅·에이전트 모드를 사용할 수 있습니다 — Copilot과 동일하지만 노트북을 벗어나는 데이터가 없습니다. 설정에 약 30분이 걸리며, 하드웨어를 이미 보유하고 있다면 8–14개월에 본전을 뽑습니다.',
           },
         ],
-        callouts: [
-          {
-            type: 'warning',
-            text: '상태 확인(2026년 8월): Continue.dev는 지금도 작동하며 가장 빠르게 구성할 수 있는 Copilot 대체재라는 점도 그대로지만, 더 이상 활발히 개발되지 않습니다. Cursor가 2026년 6월 18일 Continue 팀을 인수했고, 마지막 릴리스는 2026년 6월 19일의 v2.0.0이며 저장소는 읽기 전용입니다. Apache 2.0 라이선스 덕분에 계속 내려받을 수 있고 당분간 Ollama와도 함께 작동하지만, 수정은 제공되지 않으며 향후 공급자나 VS Code API 변경으로 언젠가는 동작하지 않게 됩니다. 유지 관리되는 VS Code 에이전트를 원한다면 Cline이 현재의 대안입니다. 이 스택의 Ollama와 Qwen3-Coder 부분은 영향을 받지 않습니다.',
-          },
-        ],
         items: [
           '**Continue.dev**(무료, 오픈소스) — VS Code/JetBrains용 확장. 자동완성·채팅·에이전트 모드 포함. Copilot 대등 프런트엔드.',
           '**Ollama** — 로컬 모델 런타임. 한 줄 설치. 모델 다운로드·양자화·GPU 오프로드를 관리하고 OpenAI 호환 API를 제공합니다.',
@@ -2671,6 +2649,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Qwen3-Coder 7B** — 8–12 GB VRAM 그래픽카드용 대안. 30B 모델 품질의 80–85% 달성. RTX 3060 12 GB 및 Mac M3 Pro 16 GB에 권장.',
         ],
         callouts: [
+          {
+            type: 'warning',
+            text: '상태 확인(2026년 8월): Continue.dev는 지금도 작동하며 가장 빠르게 구성할 수 있는 Copilot 대체재라는 점도 그대로지만, 더 이상 활발히 개발되지 않습니다. Cursor가 2026년 6월 18일 Continue 팀을 인수했고, 마지막 릴리스는 2026년 6월 19일의 v2.0.0이며 저장소는 읽기 전용입니다. Apache 2.0 라이선스 덕분에 계속 내려받을 수 있고 당분간 Ollama와도 함께 작동하지만, 수정은 제공되지 않으며 향후 공급자나 VS Code API 변경으로 언젠가는 동작하지 않게 됩니다. 유지 관리되는 VS Code 에이전트를 원한다면 Cline이 현재의 대안입니다. 이 스택의 Ollama와 Qwen3-Coder 부분은 영향을 받지 않습니다.',
+          },
           {
             type: 'note',
             text: 'Continue.dev는 Cline, Aider, llama.cpp/vLLM 직접 엔드포인트도 지원합니다. 위 권장사항이 가장 진입 장벽이 낮은 경로이며, 고급 사용자를 위한 대안도 존재합니다.',
