@@ -326,7 +326,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '[Kojima et al. (2022). "Large Language Models are Zero-Shot Reasoners." NeurIPS.](https://arxiv.org/abs/2205.11916)',
           '[Brown et al. (2020). "Language Models are Few-Shot Learners." OpenAI.](https://arxiv.org/abs/2005.14165)',
           '[Touvron et al. (2023). "LLaMA: Open and Efficient Foundation Language Models." arXiv.](https://arxiv.org/abs/2302.13971)',
-          '[PromptQuorum documentation: Multi-Model Persona Testing.](https://www.promptquorum.com/docs/multi-model-testing)',
         ],
       },
       relatedReading: {
@@ -672,7 +671,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '[Kojima et al. (2022). „Large Language Models are Zero-Shot Reasoners." NeurIPS.](https://arxiv.org/abs/2205.11916)',
           '[Brown et al. (2020). „Language Models are Few-Shot Learners." OpenAI.](https://arxiv.org/abs/2005.14165)',
           '[Touvron et al. (2023). „LLaMA: Open and Efficient Foundation Language Models." arXiv.](https://arxiv.org/abs/2302.13971)',
-          '[PromptQuorum Dokumentation: Multi-Modell Persona Testing.](https://www.promptquorum.com/docs/multi-model-testing)',
         ],
       },
       relatedReading: {
@@ -2503,7 +2501,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '[Kojima et al. (2022). "Large Language Models are Zero-Shot Reasoners." NeurIPS.](https://arxiv.org/abs/2205.11916)',
           '[Brown et al. (2020). "Language Models are Few-Shot Learners." OpenAI.](https://arxiv.org/abs/2005.14165)',
           '[Touvron et al. (2023). "LLaMA: Open and Efficient Foundation Language Models." arXiv.](https://arxiv.org/abs/2302.13971)',
-          '[PromptQuorum documentation: Multi-Model Persona Testing.](https://www.promptquorum.com/docs/multi-model-testing)',
         ],
       },
       relatedReading: {
