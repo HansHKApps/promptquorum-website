@@ -332,7 +332,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Models that tool-call reliably for these harnesses (May 2026):** Qwen3-Coder 30B (best-in-class on Cline\'s XML format), DeepSeek Coder V3 (large context, strong on multi-step plans), Llama 3.3 70B (slow but reliable), Codestral 22B (fast, smaller plan horizon).',
           '**Models that struggle:** anything below 7B, most general-purpose models under 13B without coding fine-tunes, and quantizations harsher than Q4_K_M on the smaller end. Symptoms: malformed XML in Cline, paraphrased SEARCH blocks in Aider, fenced code that does not match the open file in Continue.dev.',
-          '**The fix is rarely "switch harness".** It is "switch model" or "raise quantization". A Qwen3-Coder 30B at Q4_K_M tool-calls reliably across all three harnesses. A Llama 3.2 7B at Q4 will fail in all three.',
+          '**The fix is rarely "switch harness".** It is "switch model" or "raise quantization". A Qwen3-Coder 30B at Q4_K_M tool-calls reliably across all three harnesses. A Llama 3.2 3B at Q4 will fail in all three.',
           '**Continue.dev\'s Agent mode** uses standard OpenAI tool-calling JSON. Most coding-tuned models handle this well.',
           '**Cline\'s XML format** is the most demanding — the model must produce exact XML structure. Coding-tuned models trained on diverse formats (Qwen3-Coder, DeepSeek Coder) handle this; general-purpose models often do not.',
           '**Aider has no tool calls per se** — it parses search-and-replace blocks from prose. The "reliability" question becomes "does the model reproduce SEARCH blocks verbatim", which most coding-tuned 22B+ models do well.',
@@ -830,7 +830,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Modelle, die diese Harnesses zuverlässig Tool-Call (Mai 2026):** Qwen3-Coder 30B (Best-in-Class auf Clines XML-Format), DeepSeek Coder V3 (großer Kontext, stark bei Multi-Step-Plänen), Llama 3.3 70B (langsam aber zuverlässig), Codestral 22B (schnell, kleinerer Plan-Horizont).',
           '**Modelle, die Schwierigkeiten haben:** alles unter 7B, die meisten Allzweck-Modelle unter 13B ohne Coding-Fine-Tunes und Quantisierungen strenger als Q4_K_M am unteren Ende. Symptome: malformed XML in Cline, paraphrasierte SEARCH-Blöcke in Aider, gefenceter Code, der nicht zur offenen Datei passt in Continue.dev.',
-          '**Die Lösung ist selten "wechseln Sie Harness".** Es ist "wechseln Sie Modell" oder "erhöhen Sie Quantisierung". Ein Qwen3-Coder 30B bei Q4_K_M Tool-Calls zuverlässig über alle drei Harnesses. Ein Llama 3.2 7B bei Q4 fehlschlag in allen drei.',
+          '**Die Lösung ist selten "wechseln Sie Harness".** Es ist "wechseln Sie Modell" oder "erhöhen Sie Quantisierung". Ein Qwen3-Coder 30B bei Q4_K_M Tool-Calls zuverlässig über alle drei Harnesses. Ein Llama 3.2 3B bei Q4 fehlschlag in allen drei.',
           '**Continues Agent-Modus** verwendet Standard OpenAI Tool-Calling JSON. Die meisten Coding-Tuned-Modelle handhaben das gut.',
           '**Clines XML-Format** ist das anspruchsvollste — das Modell muss exakte XML-Struktur produzieren. Coding-Tuned-Modelle, die auf vielfältigen Formaten trainiert wurden (Qwen3-Coder, DeepSeek Coder) handhaben das; Allzweck-Modelle oft nicht.',
           '**Aider hat keine Tool-Calls per se** — es parst Search-and-Replace-Blöcke aus Prosa. Die "Zuverlässigkeits"-Frage wird "reproduziert das Modell SEARCH-Blöcke wörtlich", was die meisten Coding-Tuned 22B+ Modelle gut machen.',
@@ -1332,7 +1332,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           "**Modèles qui font des appels d'outils fiables pour ces outils (mai 2026) :** Qwen3-Coder 30B (best-in-class sur le format XML de Cline), DeepSeek Coder V3 (grand contexte, fort sur les plans multi-étapes), Llama 3.3 70B (lent mais fiable), Codestral 22B (rapide, horizon de plan plus petit).",
           "**Modèles qui ont des difficultés :** tout en dessous de 7B, la plupart des modèles à usage général en dessous de 13B sans affinages de codage et les quantisations plus strictes que Q4_K_M à l'extrémité inférieure. Symptômes : XML malformé dans Cline, blocs SEARCH paraphrasés dans Aider, code clôturé qui ne correspond pas au fichier ouvert dans Continue.dev.",
-          "**La solution est rarement \"changer d'outil\".** C'est \"changer de modèle\" ou \"augmenter la quantisation\". Un Qwen3-Coder 30B à Q4_K_M fait des appels d'outils fiables sur les trois outils. Un Llama 3.2 7B à Q4 échouera dans les trois.",
+          "**La solution est rarement \"changer d'outil\".** C'est \"changer de modèle\" ou \"augmenter la quantisation\". Un Qwen3-Coder 30B à Q4_K_M fait des appels d'outils fiables sur les trois outils. Un Llama 3.2 3B à Q4 échouera dans les trois.",
           "**Le mode Agent de Continue.dev** utilise le JSON d'appel d'outil OpenAI standard. La plupart des modèles affinés au codage le gèrent bien.",
           "**Le format XML de Cline** est le plus exigeant — le modèle doit produire une structure XML exacte. Les modèles affinés au codage entraînés sur des formats divers (Qwen3-Coder, DeepSeek Coder) le gèrent ; les modèles à usage général souvent non.",
           "**Aider n'a pas d'appels d'outils per se** — il analyse les blocs de recherche-remplacement à partir de la prose. La question \"fiabilité\" devient \"le modèle reproduit-il les blocs SEARCH textuellement\", ce que la plupart des modèles affinés au codage 22B+ font bien.",
@@ -1834,7 +1834,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**これらのツール（2026 年 5 月）に対して信頼できるツール呼び出しをするモデル：** Qwen3-Coder 30B（Cline の XML 形式に対してクラス最高）、DeepSeek Coder V3（大きなコンテキスト、マルチステップのプランで強い）、Llama 3.3 70B（遅いが信頼できる）、Codestral 22B（高速で、より小さい計画展望）。',
           '**困難なモデル：** 7B 未満、13B 未満のほとんどの汎用モデルはコーディング微調整なし、下限での Q4_K_M より厳しい量子化。症状：Cline の不正な XML、Aider の言い換えられた SEARCH ブロック、Continue.dev の開いているファイルと一致しないフェンスコード。',
-          '**修正は、「ツール を切り替える」ことはめったにありません。** 「モデルを切り替える」または「量子化を上げる」です。Qwen3-Coder 30B at Q4_K_M は 3 つのツールすべてで信頼できるツール呼び出しをします。Llama 3.2 7B at Q4 は 3 つすべてで失敗します。',
+          '**修正は、「ツール を切り替える」ことはめったにありません。** 「モデルを切り替える」または「量子化を上げる」です。Qwen3-Coder 30B at Q4_K_M は 3 つのツールすべてで信頼できるツール呼び出しをします。Llama 3.2 3B at Q4 は 3 つすべてで失敗します。',
           '**Continue.dev の Agent モード**は標準的な OpenAI ツール呼び出し JSON を使用します。ほとんどのコーディング微調整モデルがこれをうまく処理します。',
           '**Cline の XML 形式**は最も要求が厳しい。モデルは正確な XML 構造を生成する必要があります。多様な形式でトレーニングされたコーディング微調整モデル（Qwen3-Coder、DeepSeek Coder）がこれを処理します。汎用モデルはしばしば処理しません。',
           '**Aider には ツール呼び出しが厳密にはない。** 散文から検索と置換ブロックを解析します。「信頼性」の質問は「モデルが SEARCH ブロックを逐語的に再現しているか」になります。ほとんどのコーディング微調整 22B+ モデルはこれをうまく処理します。',
@@ -2335,7 +2335,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**对这些工具可靠地进行工具调用的模型（2026 年 5 月）：** Qwen3-Coder 30B（Cline 的 XML 格式最好的），DeepSeek Coder V3（大上下文，多步计划强），Llama 3.3 70B（慢但可靠），Codestral 22B（快，较小的计划视野）。',
           '**困难的模型：** 7B 以下，13B 以下的大多数通用模型没有编码微调，下端比 Q4_K_M 更严格的量子化。症状：Cline 中格式错误的 XML、Aider 中改述的搜索块、Continue.dev 中与打开文件不匹配的围栏代码。',
-          '**修复很少是"切换工具"。** 这是"切换模型"或"提高量子化"。Qwen3-Coder 30B at Q4_K_M 在三个工具中进行可靠的工具调用。Llama 3.2 7B at Q4 在三个中都失败。',
+          '**修复很少是"切换工具"。** 这是"切换模型"或"提高量子化"。Qwen3-Coder 30B at Q4_K_M 在三个工具中进行可靠的工具调用。Llama 3.2 3B at Q4 在三个中都失败。',
           '**Continue.dev 的 Agent 模式**使用标准的 OpenAI 工具调用 JSON。大多数编码微调模型很好地处理这个。',
           '**Cline 的 XML 格式**是最苛刻的 — 模型必须生成精确的 XML 结构。在多种格式上训练的编码微调模型（Qwen3-Coder、DeepSeek Coder）处理这个；通用模型通常不处理。',
           '**Aider 没有工具调用，严格来说** — 它从散文中解析搜索和替换块。"可靠性"问题变为"模型是否按字面重现搜索块"，大多数编码微调 22B+ 模型都做得很好。',
@@ -2836,7 +2836,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Modelos que realizan llamadas a herramientas fiables para estas herramientas (mayo de 2026):** Qwen3-Coder 30B (el mejor en el formato XML de Cline), DeepSeek Coder V3 (contexto amplio, fuerte en planes de múltiples pasos), Llama 3.3 70B (lento pero fiable), Codestral 22B (rápido, menor horizonte de planificación).',
           '**Modelos que tienen dificultades:** cualquier cosa por debajo de 7B, la mayoría de los modelos de propósito general por debajo de 13B sin ajuste fino de código, y cuantizaciones más estrictas que Q4_K_M en el extremo inferior. Síntomas: XML mal formado en Cline, bloques SEARCH parafraseados en Aider, código delimitado que no coincide con el archivo abierto en Continue.dev.',
-          '**La solución raramente es "cambiar de herramienta".** Es "cambiar de modelo" o "subir la cuantización". Un Qwen3-Coder 30B en Q4_K_M realiza llamadas a herramientas de manera fiable en las tres herramientas. Un Llama 3.2 7B en Q4 fallará en las tres.',
+          '**La solución raramente es "cambiar de herramienta".** Es "cambiar de modelo" o "subir la cuantización". Un Qwen3-Coder 30B en Q4_K_M realiza llamadas a herramientas de manera fiable en las tres herramientas. Un Llama 3.2 3B en Q4 fallará en las tres.',
           '**El modo Agente de Continue.dev** usa JSON estándar de llamada a herramientas de OpenAI. La mayoría de los modelos ajustados para código lo manejan bien.',
           '**El formato XML de Cline** es el más exigente — el modelo debe producir una estructura XML exacta. Los modelos ajustados para código entrenados en formatos diversos (Qwen3-Coder, DeepSeek Coder) lo manejan; los modelos de propósito general con frecuencia no.',
           '**Aider no tiene llamadas a herramientas per se** — analiza bloques de búsqueda y reemplazo de la prosa. La pregunta de "fiabilidad" se convierte en "¿el modelo reproduce los bloques SEARCH literalmente?", lo que la mayoría de los modelos ajustados para código de 22B o más hacen bien.',
@@ -3351,7 +3351,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Modelos que realizam chamadas de ferramentas confiáveis para estas ferramentas (maio de 2026):** Qwen3-Coder 30B (o melhor no formato XML do Cline), DeepSeek Coder V3 (contexto amplo, forte em planos de várias etapas), Llama 3.3 70B (lento, mas confiável), Codestral 22B (rápido, menor horizonte de planejamento).',
           '**Modelos que têm dificuldades:** qualquer coisa abaixo de 7B, a maioria dos modelos de propósito geral abaixo de 13B sem ajuste fino de código, e quantizações mais agressivas que Q4_K_M na faixa inferior. Sintomas: XML malformado no Cline, blocos SEARCH parafraseados no Aider, código delimitado que não coincide com o arquivo aberto no Continue.dev.',
-          '**A solução raramente é "trocar de ferramenta".** É "trocar de modelo" ou "aumentar a quantização". Um Qwen3-Coder 30B em Q4_K_M realiza chamadas de ferramentas de maneira confiável nas três ferramentas. Um Llama 3.2 7B em Q4 vai falhar nas três.',
+          '**A solução raramente é "trocar de ferramenta".** É "trocar de modelo" ou "aumentar a quantização". Um Qwen3-Coder 30B em Q4_K_M realiza chamadas de ferramentas de maneira confiável nas três ferramentas. Um Llama 3.2 3B em Q4 vai falhar nas três.',
           '**O modo Agent do Continue.dev** usa JSON padrão de chamada de ferramentas da OpenAI. A maioria dos modelos ajustados para código lida bem com isso.',
           '**O formato XML do Cline** é o mais exigente — o modelo deve produzir uma estrutura XML exata. Os modelos ajustados para código treinados em formatos diversos (Qwen3-Coder, DeepSeek Coder) lidam com isso; os modelos de propósito geral frequentemente não.',
           '**O Aider não tem chamadas de ferramentas em si** — ele analisa blocos de busca e substituição da prosa. A pergunta de "confiabilidade" se torna "o modelo reproduz os blocos SEARCH literalmente?", o que a maioria dos modelos ajustados para código de 22B ou mais faz bem.',
@@ -3866,7 +3866,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**النماذج التي تُجري استدعاءات أدوات موثوقة لهذه الأدوات (مايو 2026):** Qwen3-Coder 30B (الأفضل في صيغة XML لـCline)، DeepSeek Coder V3 (سياق واسع، قوي في الخطط متعددة الخطوات)، Llama 3.3 70B (بطيء لكن موثوق)، Codestral 22B (سريع، أفق تخطيط أصغر).',
           '**النماذج التي تعاني:** أي شيء أقل من 7B، ومعظم نماذج الأغراض العامة أقل من 13B بدون ضبط دقيق للكود، والكميّات أعدوانية من Q4_K_M في الطرف الأدنى. الأعراض: XML مشوّه في Cline، وكتل SEARCH معاد صياغتها في Aider، وكود محدود لا يتطابق مع الملف المفتوح في Continue.dev.',
-          '**الحل نادراً ما يكون "تغيير الأداة".** بل "تغيير النموذج" أو "رفع درجة الكمية". يُجري Qwen3-Coder 30B بـQ4_K_M استدعاءات أدوات موثوقة في الأدوات الثلاث. سيفشل Llama 3.2 7B بـQ4 في الأدوات الثلاث.',
+          '**الحل نادراً ما يكون "تغيير الأداة".** بل "تغيير النموذج" أو "رفع درجة الكمية". يُجري Qwen3-Coder 30B بـQ4_K_M استدعاءات أدوات موثوقة في الأدوات الثلاث. سيفشل Llama 3.2 3B بـQ4 في الأدوات الثلاث.',
           '**وضع الوكيل في Continue.dev** يستخدم JSON استدعاء أدوات OpenAI القياسي. معظم النماذج المضبوطة دقيقاً للكود تتعامل معه جيداً.',
           '**صيغة XML لـCline** هي الأكثر صرامةً — يجب على النموذج إنتاج بنية XML محددة. النماذج المضبوطة دقيقاً للكود المدرّبة على صيغ متنوعة (Qwen3-Coder وDeepSeek Coder) تتعامل معها؛ نماذج الأغراض العامة كثيراً ما لا تفعل.',
           '**لا تملك أداة Aider استدعاءات أدوات بحد ذاتها** — تُحلل كتل بحث واستبدال من النثر. يصبح سؤال "الموثوقية" هو "هل يُعيد النموذج إنتاج كتل SEARCH حرفياً؟"، وهو ما تفعله معظم النماذج المضبوطة دقيقاً للكود من 22B فما فوق بشكل جيد.',
@@ -4381,7 +4381,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**이러한 도구들에 대해 신뢰할 수 있는 도구 호출을 수행하는 모델(2026년 5월):** Qwen3-Coder 30B(Cline의 XML 형식에서 최고), DeepSeek Coder V3(넓은 컨텍스트, 다단계 계획에서 강력), Llama 3.3 70B(느리지만 신뢰할 수 있음), Codestral 22B(빠르지만 계획 지평이 짧음).',
           '**어려움을 겪는 모델:** 7B 미만의 모든 것, 코드 미세 조정 없는 13B 미만의 대부분의 범용 모델, 하단에서 Q4_K_M보다 엄격한 양자화. 증상: Cline에서의 잘못된 형식의 XML, Aider에서의 바꿔 말해진 SEARCH 블록, Continue.dev에서의 열린 파일과 일치하지 않는 구분된 코드.',
-          '**해결책은 거의 "도구 변경"이 아닙니다.** "모델 변경" 또는 "양자화 향상"입니다. Q4_K_M의 Qwen3-Coder 30B는 세 도구 모두에서 신뢰할 수 있게 도구 호출을 수행합니다. Q4의 Llama 3.2 7B는 세 도구 모두에서 실패합니다.',
+          '**해결책은 거의 "도구 변경"이 아닙니다.** "모델 변경" 또는 "양자화 향상"입니다. Q4_K_M의 Qwen3-Coder 30B는 세 도구 모두에서 신뢰할 수 있게 도구 호출을 수행합니다. Q4의 Llama 3.2 3B는 세 도구 모두에서 실패합니다.',
           '**Continue.dev의 Agent 모드**는 표준 OpenAI 도구 호출 JSON을 사용합니다. 코드에 맞게 조정된 대부분의 모델이 잘 처리합니다.',
           '**Cline의 XML 형식**이 가장 까다롭습니다 — 모델이 정확한 XML 구조를 생성해야 합니다. 다양한 형식으로 훈련된 코드 조정 모델(Qwen3-Coder, DeepSeek Coder)이 처리합니다. 범용 모델은 종종 그렇지 않습니다.',
           '**Aider는 도구 호출이 없습니다** — 산문에서 검색 및 교체 블록을 구문 분석합니다. "신뢰성" 질문은 "모델이 SEARCH 블록을 문자 그대로 재현합니까?"가 됩니다. 22B 이상의 대부분의 코드 조정 모델이 잘 수행합니다.',
