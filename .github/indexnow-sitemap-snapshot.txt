@@ -448,6 +448,7 @@ https://www.promptquorum.com/prompt-engineering/how-to-evaluate-prompt-quality
 https://www.promptquorum.com/prompt-engineering/how-to-reduce-prompt-brittleness
 https://www.promptquorum.com/prompt-engineering/how-to-test-prompts-across-models
 https://www.promptquorum.com/prompt-engineering/knowledge-cutoffs-and-geo
+https://www.promptquorum.com/prompt-engineering/langsmith-vs-helicone-vs-langfuse-2026
 https://www.promptquorum.com/prompt-engineering/manual-vs-automated-prompt-optimization
 https://www.promptquorum.com/prompt-engineering/multi-model-prompt-testing-workflows
 https://www.promptquorum.com/prompt-engineering/negative-prompting
