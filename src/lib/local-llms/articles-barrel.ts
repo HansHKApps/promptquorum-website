@@ -147,6 +147,7 @@ import { article as a_local_llm_pc_build_1000 } from "./articles/local-llm-pc-bu
 import { article as a_local_llm_pc_build_2000 } from "./articles/local-llm-pc-build-2000";
 import { article as a_best_llm_api_gateway_2026 } from "./articles/best-llm-api-gateway-2026";
 import { article as a_best_ai_code_review_tools_2026 } from "./articles/best-ai-code-review-tools-2026";
+import { article as a_best_llm_fine_tuning_framework_2026 } from "./articles/best-llm-fine-tuning-framework-2026";
 
 export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> = {
   "local-llm-lgpd-compliance-brazil-2026": a_local_llm_lgpd_compliance_brazil_2026,
@@ -288,4 +289,5 @@ export const llmContent: Record<string, Partial<Record<Language, LLMArticle>>> =
   // Dev-tool comparison sprint 2026-08-27
   "best-llm-api-gateway-2026": a_best_llm_api_gateway_2026,
   "best-ai-code-review-tools-2026": a_best_ai_code_review_tools_2026,
+  "best-llm-fine-tuning-framework-2026": a_best_llm_fine_tuning_framework_2026,
 };

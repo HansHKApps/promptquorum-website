@@ -181,4 +181,5 @@ export const LLM_SLUG_TO_KEY: Record<string, string> = {
   // Dev-tool comparison sprint 2026-08-27
   'best-llm-api-gateway-2026':                    'best-llm-api-gateway-2026',
   'best-ai-code-review-tools-2026':               'best-ai-code-review-tools-2026',
+  'best-llm-fine-tuning-framework-2026':          'best-llm-fine-tuning-framework-2026',
 }
