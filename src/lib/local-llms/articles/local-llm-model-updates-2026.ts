@@ -11,7 +11,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       freshness_tier: 'semi_annual',
       theme: 'Best Models',
       title: 'Local LLM Model Updates 2026: Every Major Open-Weight Release This Year',
-      dateModified: '2026-07-30',
+      dateModified: '2026-08-28',
       last_full_refresh: '2026-07-30',
       next_refresh_due: '2027-01-30',
       seoTitle: 'Local LLM 2026: Every Major Model Release + Ollama Status',
@@ -42,6 +42,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'This page tracks every major open-weight local LLM release with its key specifications, benchmark scores, and Ollama availability, organized by quarter so you can see what shipped and when.' },
+            { type: 'plain-terms', text: "New local AI models come out constantly, and it's hard to keep track of which one is actually new versus just a re-release. This page is a running log: each entry lists the model, when it shipped, and whether you can pull it with Ollama yet, so you can quickly check if you're missing something worth trying." },
+          ],
           items: [
             '**Newest release**: Poolside Laguna XS 2.1 (July 2, 2026) -- agentic, long-horizon coding model, 33B total / 3B active MoE, SWE-bench Verified 70.9%.',
             '**Top open-weights model as of July 2026**: Z.ai GLM-5.2 (June 2026) -- 51 points on the independent Artificial Analysis Intelligence Index v4.1, #1 open-weights model and 4th overall; MIT licence.',
@@ -447,6 +451,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Esta página rastrea cada lanzamiento importante de LLM local de código abierto con sus especificaciones clave, puntuaciones de benchmark y disponibilidad en Ollama, organizados por trimestre para que puedas ver qué se lanzó y cuándo.' },
+            { type: 'plain-terms', text: 'Salen modelos de IA local constantemente, y es difícil saber cuál es realmente nuevo frente a solo una reedición. Esta página es un registro continuo: cada entrada indica el modelo, cuándo se lanzó y si ya se puede descargar con Ollama, para que puedas comprobar rápidamente si te falta probar algo interesante.' },
+          ],
           items: [
             '**Mayor lanzamiento del Q2 2026**: Google Gemma 4 (junio de 2026) -- Gemma 4 26B-A4B (MoE, 89% AIME 2026) y Gemma 4 E2B (~2 GB RAM, funciona en una Raspberry Pi 5) sustituyen a Gemma 3 como la familia de generación actual.',
             '**Mejor modelo open-weights a julio de 2026**: Z.ai GLM-5.2 (junio de 2026) -- 51 puntos en el índice independiente Artificial Analysis Intelligence Index v4.1, modelo open-weights nº1 y 4º en general; licencia MIT.',
@@ -798,6 +806,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'تتتبع هذه الصفحة كل إصدار رئيسي من نماذج LLM المحلية مفتوحة الأوزان مع مواصفاتها الأساسية ونتائج اختبارات الأداء ومدى توفرها عبر Ollama، مرتبة حسب الربع السنوي لمعرفة ما صدر ومتى.' },
+            { type: 'plain-terms', text: 'تصدر نماذج الذكاء الاصطناعي المحلية باستمرار، ومن الصعب معرفة أيها جديد فعلياً وأيها مجرد إعادة إصدار. هذه الصفحة سجل مستمر: كل عنصر يذكر النموذج، وتاريخ إصداره، وما إذا كان متاحاً بعد عبر Ollama، لتتمكن من التحقق بسرعة مما إذا كنت تفوّت شيئاً يستحق التجربة.' },
+          ],
           items: [
             '**أكبر إصدار في الربع الثاني 2026**: Google Gemma 4 (يونيو 2026) -- تحل Gemma 4 26B-A4B (بنية MoE، 89% AIME 2026) وGemma 4 E2B (~2 GB RAM، تعمل على Raspberry Pi 5) محل Gemma 3 كعائلة الجيل الحالي.',
             '**أفضل نموذج مفتوح الأوزان اعتباراً من يوليو 2026**: Z.ai GLM-5.2 (يونيو 2026) -- 51 نقطة على مؤشر Artificial Analysis Intelligence Index v4.1 المستقل، النموذج مفتوح الأوزان رقم 1 والرابع إجمالاً؛ رخصة MIT.',
@@ -1155,6 +1167,10 @@ schema: {
         tldr: {
           id: 'tldr',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Esta página rastreia todos os principais lançamentos de LLM local de código aberto com suas especificações principais, pontuações de benchmark e disponibilidade no Ollama, organizados por trimestre para que você veja o que foi lançado e quando.' },
+            { type: 'plain-terms', text: 'Novos modelos de IA local surgem o tempo todo, e é difícil saber quais são realmente novos e quais são apenas reedições. Esta página é um registro contínuo: cada entrada mostra o modelo, quando foi lançado e se já está disponível no Ollama, para que você possa verificar rapidamente se está perdendo algo que vale a pena experimentar.' },
+          ],
           items: [
             'GLM-5.2 (jun 2026): modelo open-weights nº1 no Artificial Analysis Intelligence Index v4.1 (51 pts, 4º geral); licença MIT. Ainda não está na biblioteca do Ollama.',
             'Qwen3.6 27B (jun 2026): 84% MMLU, contexto de 262K, 201 idiomas -- sucessor do Qwen3. `ollama pull batiai/qwen3.6-27b:q4`.',
@@ -1209,6 +1225,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'このページは、主要なオープンウェイトのローカルLLMリリースを、主要スペック、ベンチマークスコア、Ollamaでの利用可否とともに四半期ごとに整理して追跡しています。' },
+            { type: 'plain-terms', text: '新しいローカルAIモデルは絶えず登場しており、どれが本当に新しいものでどれが単なる再リリースなのかを把握するのは大変です。このページは継続的な記録として、各モデルがいつリリースされたか、Ollamaでまだ入手可能かどうかを一覧化しているため、試す価値のあるものを見逃していないか素早く確認できます。' },
+          ],
           title: '重要ポイント',
           items: [
             '**最大のQ2 2026リリース**：Google Gemma 4（2026年6月）-- Gemma 4 26B-A4B（MoE、AIME 2026で89%）と Gemma 4 E2B（~2 GB RAM、Raspberry Pi 5で動作)が、現行世代ファミリーとして Gemma 3 を置き換え。',
@@ -1461,6 +1481,10 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Diese Seite verfolgt jede wichtige Open-Weight-Veröffentlichung lokaler LLMs mit den wichtigsten Spezifikationen, Benchmark-Werten und der Verfügbarkeit über Ollama, gegliedert nach Quartal, damit Sie sehen, was wann erschienen ist.' },
+            { type: 'plain-terms', text: 'Ständig erscheinen neue lokale KI-Modelle, und es ist schwer zu erkennen, was wirklich neu ist und was nur eine erneute Veröffentlichung ist. Diese Seite ist ein laufendes Protokoll: Jeder Eintrag zeigt das Modell, wann es erschienen ist und ob es bereits über Ollama verfügbar ist, damit Sie schnell prüfen können, ob Sie etwas Interessantes verpasst haben.' },
+          ],
           items: [
             '**Größter Q2 2026 Release**: Google Gemma 4 (Juni 2026) -- Gemma 4 26B-A4B (MoE, 89 % AIME 2026) und Gemma 4 E2B (~2 GB RAM, läuft auf einem Raspberry Pi 5) lösen Gemma 3 als aktuelle Modellfamilie ab.',
             '**Bestes Open-Weights-Modell Stand Juli 2026**: Z.ai GLM-5.2 (Juni 2026) -- 51 Punkte im unabhängigen Artificial Analysis Intelligence Index v4.1, Nr. 1 unter Open-Weights-Modellen und Platz 4 insgesamt; MIT-Lizenz.',
@@ -1670,6 +1694,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: '本页追踪每一个重要的开源权重本地LLM发布，包括其关键规格、基准测试分数和Ollama可用性，按季度整理，方便查看发布内容和时间。' },
+            { type: 'plain-terms', text: '新的本地AI模型不断涌现，很难分辨哪些是真正的新模型、哪些只是重新发布。本页是一个持续更新的记录：每个条目列出模型名称、发布时间，以及是否已可通过Ollama获取，方便你快速查看是否错过了值得尝试的模型。' },
+          ],
           items: [
             '**Q2 2026最重要发布**：Google Gemma 4（2026年6月）-- Gemma 4 26B-A4B（MoE架构，AIME 2026达89%）与Gemma 4 E2B（约2 GB内存，可在Raspberry Pi 5上运行）取代Gemma 3成为现行代际家族。',
             '**截至2026年7月的顶级开源权重模型**：Z.ai GLM-5.2（2026年6月）-- 在独立基准Artificial Analysis Intelligence Index v4.1中获得51分，开源权重模型第1名、总榜第4名；MIT许可。',
@@ -2037,6 +2065,10 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: "Cette page recense chaque sortie majeure de LLM local en poids ouverts avec ses spécifications clés, ses scores de benchmark et sa disponibilité sur Ollama, organisée par trimestre pour voir ce qui est sorti et quand." },
+            { type: 'plain-terms', text: "De nouveaux modèles d'IA locale sortent en permanence, et il est difficile de savoir lequel est vraiment nouveau plutôt qu'une simple réédition. Cette page est un journal continu : chaque entrée indique le modèle, sa date de sortie, et s'il est déjà disponible via Ollama, pour vérifier rapidement si vous n'avez pas raté quelque chose qui vaut le coup d'essayer." },
+          ],
           items: [
             '**Plus grande release Q2 2026** : Google Gemma 4 (juin 2026) -- Gemma 4 26B-A4B (MoE, 89% AIME 2026) et Gemma 4 E2B (~2 GB RAM, tourne sur un Raspberry Pi 5) remplacent Gemma 3 comme famille de génération actuelle.',
             '**Meilleur modèle open-weights en juillet 2026** : Z.ai GLM-5.2 (juin 2026) -- 51 points sur l\'Artificial Analysis Intelligence Index v4.1 indépendant, modèle open-weights nº1 et 4e au classement général ; licence MIT.',
@@ -2260,6 +2292,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: '이 페이지는 주요 오픈 웨이트 로컬 LLM 출시를 핵심 사양, 벤치마크 점수, Ollama 지원 여부와 함께 분기별로 정리해 추적합니다.' },
+            { type: 'plain-terms', text: '새로운 로컬 AI 모델은 끊임없이 출시되며, 어떤 것이 진짜 새로운 모델이고 어떤 것이 단순 재출시인지 파악하기 어렵습니다. 이 페이지는 계속 업데이트되는 기록입니다: 각 항목에는 모델명, 출시 시점, Ollama로 아직 받을 수 있는지 여부가 나와 있어 놓친 모델이 없는지 빠르게 확인할 수 있습니다.' },
+          ],
           items: [
             '**2026년 Q2 최대 출시작**: Google Gemma 4 (2026년 6월) -- Gemma 4 26B-A4B (MoE, AIME 2026 89%)와 Gemma 4 E2B (약 2 GB RAM, Raspberry Pi 5에서 구동 가능)가 Gemma 3를 대체하는 현행 세대 패밀리로 등장했습니다.',
             '**2026년 7월 기준 최고의 오픈 웨이트 모델**: Z.ai GLM-5.2 (2026년 6월) -- 독립 벤치마크인 Artificial Analysis Intelligence Index v4.1에서 51점을 기록, 오픈 웨이트 모델 1위이자 전체 4위, MIT 라이선스.',
