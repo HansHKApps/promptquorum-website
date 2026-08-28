@@ -11,16 +11,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       freshness_tier: 'semi_annual',
       theme: 'Models by Use Case',
       title: 'Best Local LLMs for Code Review in 2026: Ranked by Bug Detection, Speed, and VRAM',
-      dateModified: '2026-08-27',
+      dateModified: '2026-08-28',
       last_full_refresh: '2026-08-27',
       next_seo_review_due: '2026-10-01',
       last_seo_review: '2026-08-27',
       seoTitle: 'Best Local LLMs for Code Review 2026: Accuracy vs Speed',
-      intro: '**As of April 2026, the best local LLMs for code review are Qwen3-Coder 32B (best overall accuracy), Llama 3.3 70B (best security analysis), and DeepSeek-R1 14B (best algorithmic review).** 7B models catch ~45% of real bugs -- too low for serious review. 32B+ models catch 80-88% and are the practical minimum for pre-merge code review pipelines.',
+      intro: '**The best local LLMs for code review are Qwen3-Coder 32B (best overall accuracy), Llama 3.3 70B (best security analysis), and DeepSeek-R1 14B (best algorithmic review).** 7B models catch ~45% of real bugs -- too low for serious review. 32B+ models catch 80-88% and are the practical minimum for pre-merge code review pipelines.',
       metaDescription: 'Qwen3-Coder 32B catches 88% of code review bugs. Llama 3.3 70B best for security. DeepSeek-R1 14B for algorithms. Comparison by code type -- 2026.',
       heroImage: '/images/best-local-llms-code-review-model-comparison-hero-en.webp',
       publishDate: '2026-04-05',
-      leadAnswerBlock: '**As of April 2026, the best local LLMs for code review are Qwen3-Coder 32B (best overall accuracy), Llama 3.3 70B (best security analysis), and DeepSeek-R1 14B (best algorithmic review).**',
+      leadAnswerBlock: '**The best local LLMs for code review are Qwen3-Coder 32B (best overall accuracy), Llama 3.3 70B (best security analysis), and DeepSeek-R1 14B (best algorithmic review).**',
       audience: 'Developers familiar with Ollama or LM Studio optimizing local LLM workflows',
       readTime: '8 min',
       educationalLevel: 'Intermediate',
@@ -42,6 +42,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'The best local LLMs for code review are Qwen3-Coder 32B for overall accuracy, Llama 3.3 70B for security analysis, and DeepSeek-R1 14B for algorithmic review; 7B models only catch about 45% of real bugs, while 32B+ models catch 80-88% and are the practical minimum for pre-merge review.' },
+            { type: 'plain-terms', text: "For code review, model size matters more than for most tasks -- a small 7B model will miss more than half of real bugs, which isn't good enough to trust before merging code. If you want a local model that actually catches problems reliably, 32B or larger is the realistic starting point, with different models being stronger at different things: general accuracy, security issues, or algorithmic logic." },
+          ],
           items: [
             '**7B models:** Too weak. Catch ~45% of bugs -- surface-level feedback only.',
             '**13B-14B models:** DeepSeek-R1 14B catches ~75% of bugs via chain-of-thought. Acceptable for algorithmic review.',
@@ -237,11 +241,11 @@ schema: {
       theme: 'Models by Use Case',
       title: 'Mejores LLMs locales para Code Review en 2026: Clasificados por detección de errores, velocidad y VRAM',
       seoTitle: 'Mejores LLMs locales para Code Review 2026: Precisión vs Velocidad',
-      intro: '**A partir de abril de 2026, los mejores LLMs locales para code review son Qwen3-Coder 32B (mejor precisión general), Llama 3.3 70B (mejor análisis de seguridad) y DeepSeek-R1 14B (mejor revisión algorítmica).** Los modelos de 7B detectan ~45% de los errores reales — demasiado bajo para una revisión seria. Los modelos de 32B+ detectan 80-88% y son el mínimo práctico para pipelines de code review pre-merge.',
+      intro: '**Los mejores LLMs locales para code review son Qwen3-Coder 32B (mejor precisión general), Llama 3.3 70B (mejor análisis de seguridad) y DeepSeek-R1 14B (mejor revisión algorítmica).** Los modelos de 7B detectan ~45% de los errores reales — demasiado bajo para una revisión seria. Los modelos de 32B+ detectan 80-88% y son el mínimo práctico para pipelines de code review pre-merge.',
       metaDescription: 'Qwen3-Coder 32B detecta el 88% de errores en code review. Llama 3.3 70B ideal para seguridad. DeepSeek-R1 14B para algoritmos. Comparación por tipo de código — 2026.',
       heroImage: '/images/best-local-llms-code-review-model-comparison-hero-es.webp',
       publishDate: '2026-04-05',
-      leadAnswerBlock: '**A partir de abril de 2026, los mejores LLMs locales para code review son Qwen3-Coder 32B (mejor precisión general), Llama 3.3 70B (mejor análisis de seguridad) y DeepSeek-R1 14B (mejor revisión algorítmica).**',
+      leadAnswerBlock: '**Los mejores LLMs locales para code review son Qwen3-Coder 32B (mejor precisión general), Llama 3.3 70B (mejor análisis de seguridad) y DeepSeek-R1 14B (mejor revisión algorítmica).**',
       audience: 'Desarrolladores familiarizados con Ollama o LM Studio que optimizan flujos de trabajo con LLMs locales',
       readTime: '8 min de lectura',
       educationalLevel: 'Intermediate',
@@ -262,6 +266,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Los mejores LLMs locales para revisión de código son Qwen3-Coder 32B en precisión general, Llama 3.3 70B en análisis de seguridad, y DeepSeek-R1 14B en revisión algorítmica; los modelos de 7B solo detectan alrededor del 45% de los errores reales, mientras que los de 32B+ detectan 80-88% y son el mínimo práctico antes de fusionar código.' },
+            { type: 'plain-terms', text: 'Para la revisión de código, el tamaño del modelo importa más que en la mayoría de las tareas: un modelo pequeño de 7B se perderá más de la mitad de los errores reales, lo cual no es suficiente para confiar antes de fusionar código. Si quieres un modelo local que realmente detecte problemas de forma fiable, 32B o más es el punto de partida realista, con distintos modelos siendo más fuertes en distintas cosas: precisión general, problemas de seguridad o lógica algorítmica.' },
+          ],
           items: [
             '**Modelos 7B:** Demasiado débiles. Detectan ~45% de los errores — feedback superficial solamente.',
             '**Modelos 13B-14B:** DeepSeek-R1 14B detecta ~75% de errores mediante chain-of-thought. Aceptable para revisión algorítmica.',
@@ -457,11 +465,11 @@ schema: {
       theme: 'Models by Use Case',
       title: 'أفضل نماذج ⁨LLM⁩ المحلية لمراجعة الكود في ⁨2026⁩: مصنّفة حسب كشف الأخطاء والسرعة و⁨VRAM⁩',
       seoTitle: 'مراجعة الكود بـ ⁨LLM⁩ محلي ⁨2026⁩: ⁨Qwen3-Coder⁩ و⁨DeepSeek⁩',
-      intro: '**اعتباراً من أبريل 2026، أفضل نماذج LLM المحلية لمراجعة الكود هي Qwen3-Coder 32B (أفضل دقة عامة)، وLlama 3.3 70B (أفضل تحليل أمني)، وDeepSeek-R1 14B (أفضل مراجعة خوارزمية).** تكشف نماذج 7B عن ~45% من الأخطاء الحقيقية — منخفض جداً لمراجعة جدية. تكشف نماذج 32B+ عن 80-88% وهي الحد الأدنى العملي لخطوط أنابيب مراجعة الكود قبل الدمج.',
+      intro: '**أفضل نماذج LLM المحلية لمراجعة الكود هي Qwen3-Coder 32B (أفضل دقة عامة)، وLlama 3.3 70B (أفضل تحليل أمني)، وDeepSeek-R1 14B (أفضل مراجعة خوارزمية).** تكشف نماذج 7B عن ~45% من الأخطاء الحقيقية — منخفض جداً لمراجعة جدية. تكشف نماذج 32B+ عن 80-88% وهي الحد الأدنى العملي لخطوط أنابيب مراجعة الكود قبل الدمج.',
       metaDescription: '⁨Qwen3-Coder 32B⁩ يكشف ⁨88%⁩ من أخطاء الكود. ⁨Llama 3.3 70B⁩ الأمثل لتحليل الأمن. ⁨DeepSeek-R1 14B⁩ للخوارزميات. نماذج ⁨7B⁩ تكشف ⁨45%⁩ فقط — غير كافٍ.',
       heroImage: '/images/best-local-llms-code-review-model-comparison-hero-ar.webp',
       publishDate: '2026-04-05',
-      leadAnswerBlock: '**اعتباراً من أبريل 2026، أفضل نماذج LLM المحلية لمراجعة الكود هي Qwen3-Coder 32B (أفضل دقة عامة)، وLlama 3.3 70B (أفضل تحليل أمني)، وDeepSeek-R1 14B (أفضل مراجعة خوارزمية).**',
+      leadAnswerBlock: '**أفضل نماذج LLM المحلية لمراجعة الكود هي Qwen3-Coder 32B (أفضل دقة عامة)، وLlama 3.3 70B (أفضل تحليل أمني)، وDeepSeek-R1 14B (أفضل مراجعة خوارزمية).**',
       audience: 'المطورون المعتادون على Ollama أو LM Studio الذين يحسّنون سير العمل بنماذج LLM المحلية',
       readTime: '8 دقائق للقراءة',
       educationalLevel: 'Intermediate',
@@ -482,6 +490,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'أفضل نماذج LLM المحلية لمراجعة الكود هي Qwen3-Coder 32B للدقة العامة، وLlama 3.3 70B لتحليل الأمان، وDeepSeek-R1 14B للمراجعة الخوارزمية؛ تكشف نماذج 7B عن نحو 45% فقط من الأخطاء الحقيقية، بينما تكشف نماذج 32B+ عن 80-88% وهي الحد الأدنى العملي قبل دمج الكود.' },
+            { type: 'plain-terms', text: 'بالنسبة لمراجعة الكود، يهم حجم النموذج أكثر من معظم المهام الأخرى -- سيفوت نموذج صغير بحجم 7B أكثر من نصف الأخطاء الحقيقية، وهو ما لا يكفي للثقة به قبل دمج الكود. إذا كنت تريد نموذجاً محلياً يكتشف المشكلات فعلاً بشكل موثوق، فإن 32B أو أكبر هو نقطة البداية الواقعية، مع تفوق نماذج مختلفة في جوانب مختلفة: الدقة العامة، أو مشكلات الأمان، أو المنطق الخوارزمي.' },
+          ],
           items: [
             '**نماذج 7B:** ضعيفة جداً. تكشف عن ~45% من الأخطاء — تغذية راجعة سطحية فقط.',
             '**نماذج 13B-14B:** يكشف DeepSeek-R1 14B عن ~75% من الأخطاء عبر سلسلة التفكير. مقبول للمراجعة الخوارزمية.',
@@ -676,7 +688,7 @@ schema: {
       theme: 'Modelle nach Anwendungsfall',
       title: 'Beste lokale LLMs für Code Review in 2026: Rangiert nach Fehlerdetection, Geschwindigkeit und VRAM',
       seoTitle: 'Lokale LLMs für Code Review 2026: Genauigkeit vs Tempo',
-      intro: '**Ab April 2026 sind die besten lokalen LLMs für Code Review Qwen3-Coder 32B (beste Gesamtgenauigkeit), Llama 3.3 70B (beste Sicherheitsanalyse) und DeepSeek-R1 14B (beste algorithmische Überprüfung).** 7B-Modelle erkennen nur ~45% echter Fehler -- zu niedrig für ernsthafte Reviews. 32B+ Modelle erkennen 80-88% und sind die praktische Mindestanforderung für Pre-Merge-Code-Review-Pipelines.',
+      intro: '**Die besten lokalen LLMs für Code Review sind Qwen3-Coder 32B (beste Gesamtgenauigkeit), Llama 3.3 70B (beste Sicherheitsanalyse) und DeepSeek-R1 14B (beste algorithmische Überprüfung).** 7B-Modelle erkennen nur ~45% echter Fehler -- zu niedrig für ernsthafte Reviews. 32B+ Modelle erkennen 80-88% und sind die praktische Mindestanforderung für Pre-Merge-Code-Review-Pipelines.',
       metaDescription: 'Qwen3-Coder 32B erkennt 88% der Code-Review-Fehler. Llama 3.3 70B beste für Sicherheit. DeepSeek-R1 14B für Algorithmen. Vergleich nach Code-Typ -- 2026.',
       heroImage: '/images/best-local-llms-code-review-model-comparison-hero-de.webp',
       publishDate: '2026-04-05',
@@ -700,6 +712,10 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Die besten lokalen LLMs für Code Review sind Qwen3-Coder 32B für die Gesamtgenauigkeit, Llama 3.3 70B für Sicherheitsanalysen und DeepSeek-R1 14B für algorithmische Überprüfungen; 7B-Modelle erkennen nur etwa 45 % echter Fehler, während 32B+-Modelle 80-88 % erkennen und das praktische Minimum vor dem Mergen sind.' },
+            { type: 'plain-terms', text: 'Bei Code Reviews spielt die Modellgröße eine größere Rolle als bei den meisten anderen Aufgaben -- ein kleines 7B-Modell übersieht mehr als die Hälfte der echten Fehler, was vor dem Mergen von Code nicht vertrauenswürdig genug ist. Wer ein lokales Modell möchte, das Probleme wirklich zuverlässig erkennt, sollte bei 32B oder größer anfangen, wobei sich verschiedene Modelle in unterschiedlichen Bereichen auszeichnen: allgemeine Genauigkeit, Sicherheitsprobleme oder algorithmische Logik.' },
+          ],
           items: [
             '**7B-Modelle:** Zu schwach. Erkennen ~45% der Fehler -- nur oberflächliches Feedback.',
             '**13B-14B-Modelle:** DeepSeek-R1 14B erkennt ~75% der Fehler durch Chain-of-Thought. Akzeptabel für algorithmische Überprüfung.',
@@ -897,7 +913,7 @@ schema: {
       theme: "Modèles par cas d'utilisation",
       title: "Meilleurs LLMs locaux pour Code Review en 2026 : Classés par détection de bugs, vitesse et VRAM",
       seoTitle: "LLMs locaux pour Code Review 2026 : Précision vs Vitesse",
-      intro: "**À partir d'avril 2026, les meilleurs LLMs locaux pour la revue de code sont Qwen3-Coder 32B (meilleure précision globale), Llama 3.3 70B (meilleure analyse de sécurité) et DeepSeek-R1 14B (meilleure analyse algorithmique).** Les modèles 7B détectent seulement ~45% des bugs réels -- trop peu pour une revue sérieuse. Les modèles 32B+ détectent 80-88% et constituent le minimum pratique pour les pipelines de revue de code pré-fusion.",
+      intro: "**Les meilleurs LLMs locaux pour la revue de code sont Qwen3-Coder 32B (meilleure précision globale), Llama 3.3 70B (meilleure analyse de sécurité) et DeepSeek-R1 14B (meilleure analyse algorithmique).** Les modèles 7B détectent seulement ~45% des bugs réels -- trop peu pour une revue sérieuse. Les modèles 32B+ détectent 80-88% et constituent le minimum pratique pour les pipelines de revue de code pré-fusion.",
       metaDescription: "Qwen3-Coder 32B détecte 88% des bugs de code review. Llama 3.3 70B meilleur pour sécurité. DeepSeek-R1 14B pour algorithmes. Comparaison par type -- 2026.",
       heroImage: '/images/best-local-llms-code-review-model-comparison-hero-fr.webp',
       publishDate: "2026-04-05",
@@ -921,6 +937,10 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: "Les meilleurs LLM locaux pour la revue de code sont Qwen3-Coder 32B pour la précision globale, Llama 3.3 70B pour l'analyse de sécurité, et DeepSeek-R1 14B pour la revue algorithmique ; les modèles 7B ne détectent qu'environ 45% des bugs réels, tandis que les modèles 32B+ en détectent 80-88% et constituent le minimum pratique avant fusion." },
+            { type: 'plain-terms', text: "Pour la revue de code, la taille du modèle compte plus que pour la plupart des tâches -- un petit modèle 7B ratera plus de la moitié des vrais bugs, ce qui n'est pas suffisant pour lui faire confiance avant de fusionner du code. Si vous voulez un modèle local qui détecte vraiment les problèmes de manière fiable, 32B ou plus est le point de départ réaliste, différents modèles étant plus forts sur différents aspects : précision générale, problèmes de sécurité, ou logique algorithmique." },
+          ],
           items: [
             "**Modèles 7B :** Trop faibles. Détectent ~45% des bugs -- feedback superficiel uniquement.",
             "**Modèles 13B-14B :** DeepSeek-R1 14B détecte ~75% des bugs via chaîne de pensée. Acceptable pour revue algorithmique.",
@@ -1116,7 +1136,7 @@ schema: {
     theme: '利用事例別モデル',
     title: '2026年ローカルコードレビュー向けベストLLM：バグ検出精度で分類、速度とVRAM比較',
     seoTitle: 'ローカルコードレビュー向けLLM 2026：精度 vs 速度',
-    intro: '**2026年4月時点で、ローカルコードレビュー向けのベストLLMはQwen3-Coder 32B（バグ検出率88%、VRAM 20GB）、Llama 3.3 70B（セキュリティ強化、VRAM 40GB）、DeepSeek-R1 14B（アルゴリズム分析、VRAM 10GB）です。コードレビューではサイズより精度が重要です。小さいモデル（8B）では見落としが増加。大型モデル（70B）でも設定次第で高速化可能です。**',
+    intro: '**ローカルコードレビュー向けのベストLLMはQwen3-Coder 32B（バグ検出率88%、VRAM 20GB）、Llama 3.3 70B（セキュリティ強化、VRAM 40GB）、DeepSeek-R1 14B（アルゴリズム分析、VRAM 10GB）です。コードレビューではサイズより精度が重要です。小さいモデル（8B）では見落としが増加。大型モデル（70B）でも設定次第で高速化可能です。**',
     metaDescription: 'Qwen3-Coder 32B はコードレビューバグの88%を検出します。Llama 3.3 70B がセキュリティに最適。DeepSeek-R1 14B はアルゴリズムに。2026年のコードタイプ別比較。',
     heroImage: '/images/best-local-llms-code-review-model-comparison-hero-ja.webp',
     publishDate: '2026-04-05',
@@ -1146,7 +1166,7 @@ schema: {
     theme: '按用途分类的模型',
     title: '2026年本地代码审查最佳LLM：按缺陷检测精度分类、速度与VRAM对比',
     seoTitle: '本地代码审查最佳LLM 2026：精度 vs 速度',
-    intro: '**截至2026年4月，本地代码审查的最佳LLM分别为：Qwen3-Coder 32B（缺陷检测率88%、VRAM 20GB）、Llama 3.3 70B（安全性增强、VRAM 40GB）、DeepSeek-R1 14B（算法分析、VRAM 10GB）。对于代码审查而言，精度比模型规模更重要。小型模型（8B）的遗漏率会显著上升。大型模型（70B）可通过恰当的配置实现加速。**',
+    intro: '**本地代码审查的最佳LLM分别为：Qwen3-Coder 32B（缺陷检测率88%、VRAM 20GB）、Llama 3.3 70B（安全性增强、VRAM 40GB）、DeepSeek-R1 14B（算法分析、VRAM 10GB）。对于代码审查而言，精度比模型规模更重要。小型模型（8B）的遗漏率会显著上升。大型模型（70B）可通过恰当的配置实现加速。**',
     metaDescription: 'Qwen3-Coder 32B 检测代码审查缺陷率88%。Llama 3.3 70B 安全性最优。DeepSeek-R1 14B 算法分析最强。2026年代码类型对比分析。',
     heroImage: '/images/best-local-llms-code-review-model-comparison-hero-zh.webp',
     publishDate: '2026-04-05',
@@ -1177,11 +1197,11 @@ schema: {
       theme: 'Models by Use Case',
       title: 'Melhores LLMs locais para Code Review em 2026: classificados por detecção de bugs, velocidade e VRAM',
       seoTitle: 'Melhores LLMs locais para Code Review 2026: Precisão vs Velocidade',
-      intro: '**A partir de abril de 2026, os melhores LLMs locais para code review são o Qwen3-Coder 32B (melhor precisão geral), o Llama 3.3 70B (melhor análise de segurança) e o DeepSeek-R1 14B (melhor revisão algorítmica).** Os modelos de 7B detectam ~45% dos bugs reais — baixo demais para uma revisão séria. Os modelos de 32B+ detectam 80-88% e são o mínimo prático para pipelines de code review pré-merge.',
+      intro: '**Os melhores LLMs locais para code review são o Qwen3-Coder 32B (melhor precisão geral), o Llama 3.3 70B (melhor análise de segurança) e o DeepSeek-R1 14B (melhor revisão algorítmica).** Os modelos de 7B detectam ~45% dos bugs reais — baixo demais para uma revisão séria. Os modelos de 32B+ detectam 80-88% e são o mínimo prático para pipelines de code review pré-merge.',
       metaDescription: 'O Qwen3-Coder 32B detecta 88% dos bugs em code review. Llama 3.3 70B ideal para segurança. DeepSeek-R1 14B para algoritmos. Comparação por tipo de código — 2026.',
       heroImage: '/images/best-local-llms-code-review-model-comparison-hero-pt.webp',
       publishDate: '2026-04-05',
-      leadAnswerBlock: '**A partir de abril de 2026, os melhores LLMs locais para code review são o Qwen3-Coder 32B (melhor precisão geral), o Llama 3.3 70B (melhor análise de segurança) e o DeepSeek-R1 14B (melhor revisão algorítmica).**',
+      leadAnswerBlock: '**Os melhores LLMs locais para code review são o Qwen3-Coder 32B (melhor precisão geral), o Llama 3.3 70B (melhor análise de segurança) e o DeepSeek-R1 14B (melhor revisão algorítmica).**',
       audience: 'Desenvolvedores familiarizados com Ollama ou LM Studio que otimizam fluxos de trabalho com LLMs locais',
       readTime: '8 min de leitura',
       educationalLevel: 'Intermediate',
@@ -1202,6 +1222,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Os melhores LLMs locais para code review são o Qwen3-Coder 32B em precisão geral, o Llama 3.3 70B em análise de segurança, e o DeepSeek-R1 14B em revisão algorítmica; modelos de 7B detectam apenas cerca de 45% dos bugs reais, enquanto modelos de 32B+ detectam 80-88% e são o mínimo prático antes do merge.' },
+            { type: 'plain-terms', text: 'Para revisão de código, o tamanho do modelo importa mais do que na maioria das tarefas -- um modelo pequeno de 7B vai perder mais da metade dos bugs reais, o que não é confiável o bastante antes de mesclar código. Se você quer um modelo local que realmente detecte problemas de forma confiável, 32B ou maior é o ponto de partida realista, com modelos diferentes sendo mais fortes em coisas diferentes: precisão geral, problemas de segurança ou lógica algorítmica.' },
+          ],
           items: [
             '**Modelos 7B:** Fracos demais. Detectam ~45% dos bugs — feedback superficial apenas.',
             '**Modelos 13B-14B:** O DeepSeek-R1 14B detecta ~75% dos bugs via chain-of-thought. Aceitável para revisão algorítmica.',
@@ -1397,11 +1421,11 @@ schema: {
       theme: 'Models by Use Case',
       title: '2026년 코드 리뷰에 최적화된 로컬 LLM 추천: 버그 탐지율, 속도, VRAM 기준 순위',
       seoTitle: '2026년 코드 리뷰용 최고 로컬 LLM: 정확도 vs 속도',
-      intro: '**2026년 4월 기준, 코드 리뷰에 가장 적합한 로컬 LLM은 Qwen3-Coder 32B(종합 정확도 1위), Llama 3.3 70B(보안 분석 1위), DeepSeek-R1 14B(알고리즘 리뷰 1위)입니다.** 7B 모델은 실제 버그의 약 45%만 탐지하므로 실질적인 코드 리뷰에는 부족합니다. 32B 이상 모델은 80~88%를 탐지하며, 병합 전 코드 리뷰 파이프라인의 실용적인 최소 기준이 됩니다.',
+      intro: '**코드 리뷰에 가장 적합한 로컬 LLM은 Qwen3-Coder 32B(종합 정확도 1위), Llama 3.3 70B(보안 분석 1위), DeepSeek-R1 14B(알고리즘 리뷰 1위)입니다.** 7B 모델은 실제 버그의 약 45%만 탐지하므로 실질적인 코드 리뷰에는 부족합니다. 32B 이상 모델은 80~88%를 탐지하며, 병합 전 코드 리뷰 파이프라인의 실용적인 최소 기준이 됩니다.',
       metaDescription: 'Qwen3-Coder 32B는 코드 리뷰 버그의 88%를 탐지합니다. 보안에는 Llama 3.3 70B, 알고리즘에는 DeepSeek-R1 14B가 최적입니다. 코드 유형별 비교 — 2026년.',
       heroImage: '/images/best-local-llms-code-review-model-comparison-hero-ko.webp',
       publishDate: '2026-04-05',
-      leadAnswerBlock: '**2026년 4월 기준, 코드 리뷰에 가장 적합한 로컬 LLM은 Qwen3-Coder 32B(종합 정확도 1위), Llama 3.3 70B(보안 분석 1위), DeepSeek-R1 14B(알고리즘 리뷰 1위)입니다.**',
+      leadAnswerBlock: '**코드 리뷰에 가장 적합한 로컬 LLM은 Qwen3-Coder 32B(종합 정확도 1위), Llama 3.3 70B(보안 분석 1위), DeepSeek-R1 14B(알고리즘 리뷰 1위)입니다.**',
       audience: 'Ollama 또는 LM Studio에 익숙하며 로컬 LLM 워크플로우를 최적화하려는 개발자',
       readTime: '8분',
       educationalLevel: 'Intermediate',
@@ -1436,6 +1460,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: '코드 리뷰에 가장 적합한 로컬 LLM은 종합 정확도에서 Qwen3-Coder 32B, 보안 분석에서 Llama 3.3 70B, 알고리즘 리뷰에서 DeepSeek-R1 14B입니다. 7B 모델은 실제 버그의 약 45%만 탐지하는 반면, 32B 이상 모델은 80~88%를 탐지하며 병합 전 검토의 실용적인 최소 기준입니다.' },
+            { type: 'plain-terms', text: '코드 리뷰에서는 대부분의 작업보다 모델 크기가 더 중요합니다 -- 작은 7B 모델은 실제 버그의 절반 이상을 놓치는데, 이는 코드를 병합하기 전에 신뢰하기에는 부족합니다. 문제를 실제로 안정적으로 잡아내는 로컬 모델을 원한다면 32B 이상이 현실적인 출발점이며, 모델마다 강점이 다릅니다: 전반적인 정확도, 보안 문제, 또는 알고리즘 로직.' },
+          ],
           items: [
             '**7B 모델:** 성능 부족. 버그의 약 45%만 탐지 — 표면적인 피드백만 제공합니다.',
             '**13B~14B 모델:** DeepSeek-R1 14B는 chain-of-thought 방식으로 버그의 약 75%를 탐지합니다. 알고리즘 리뷰에 적합합니다.',
