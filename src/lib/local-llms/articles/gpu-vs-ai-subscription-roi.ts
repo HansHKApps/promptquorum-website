@@ -16,7 +16,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       intro: 'A used RTX 5060 Ti 16 GB ($450) breaks even with ChatGPT Plus ($240/year) in 18–24 months at 5 hours per week of usage. As of April 2026, OpenAI offers 7 ChatGPT tiers ($0–$200/month). For users above 3 hours/week, buying a GPU is financially smarter. Heavy users (10+ hours/week) save $5,000+ over 5 years with full data privacy and offline capability. Local Llama 3.3 70B reaches ~82% of GPT-5.2 quality — the closest local-cloud parity in history.',
       metaDescription: 'Used RTX 5060 Ti ($450) breaks even with ChatGPT Plus ($240/yr) in 18–24 months at 5 hrs/week. Heavy users save $5,000+ over 5 years. Full ROI tables across 7 ChatGPT tiers.',
       publishDate: '2026-04-05',
-      dateModified: '2026-08-27',
+      dateModified: '2026-08-28',
       last_full_refresh: '2026-08-27',
       next_seo_review_due: '2026-10-01',
       last_seo_review: '2026-08-27',
@@ -40,6 +40,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'tldr': {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'A used RTX 5060 Ti 16GB ($450) breaks even against ChatGPT Plus ($240/year) in 18-24 months at 5 hours of weekly usage, and heavy users (10+ hours/week) save $5,000+ over five years by running a local model instead of paying for a subscription.' },
+            { type: 'plain-terms', text: "Whether buying a GPU beats paying for an AI subscription comes down to how much you actually use it. If you're a light user, a subscription is cheaper and simpler. But if you use AI heavily -- several hours a week -- the upfront cost of a GPU pays for itself within a year or two, and after that every query is free, private, and works offline." },
+          ],
           items: [
             'GPU purchase: RTX 5060 Ti new ($450) + $60/year power = $450 upfront, $60/year forever',
             'ChatGPT Plus: $240/year ($20/month). ChatGPT Pro $100: $1,200/year (launched April 9, 2026)',
@@ -329,7 +333,7 @@ schema: {
       intro: 'Una RTX 5060 Ti 16 GB de segunda mano ($450) alcanza el punto de equilibrio con ChatGPT Plus ($240/año) en 18–24 meses con 5 horas semanales de uso. En abril de 2026, OpenAI ofrece 7 niveles de ChatGPT ($0–$200/mes). Para usuarios que superan las 3 horas semanales, comprar una GPU es financieramente más inteligente. Los usuarios intensivos (10+ horas/semana) ahorran más de $5,000 en 5 años con privacidad total de datos y capacidad offline. Llama 3.3 70B alcanza ~82% de la calidad de GPT-5.2: la mayor paridad local-nube de la historia.',
       metaDescription: 'RTX 5060 Ti usada ($450) iguala a ChatGPT Plus ($240/año) en 18–24 meses a 5 h/semana. Los usuarios intensivos ahorran $5,000+ en 5 años. Tablas ROI.',
       publishDate: '2026-04-05',
-      dateModified: '2026-08-27',
+      dateModified: '2026-08-28',
       leadAnswerBlock: '**Una RTX 5060 Ti 16 GB de segunda mano ($450) alcanza el punto de equilibrio con ChatGPT Plus ($240/año) en 18–24 meses con 5 horas semanales de uso. En abril de 2026, OpenAI ofrece 7 niveles de ChatGPT ($0–$200/mes). Para usuarios que superan las 3 horas semanales, comprar una GPU es financieramente más inteligente. Los usuarios intensivos (10+ horas/semana) ahorran más de $5,000 en 5 años con privacidad total de datos y capacidad offline. Llama 3.3 70B alcanza ~82% de la calidad de GPT-5.2: la mayor paridad local-nube de la historia.**',
       audience: 'Usuarios que evalúan el ROI de GPU versus suscripción para su flujo de trabajo con IA',
       readTime: '9 min de lectura',
@@ -350,6 +354,10 @@ schema: {
         'tldr': {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Una RTX 5060 Ti de 16 GB usada ($450) alcanza el punto de equilibrio frente a ChatGPT Plus ($240/año) en 18-24 meses con 5 horas de uso semanal, y los usuarios intensivos (10+ horas/semana) ahorran más de $5,000 en cinco años al ejecutar un modelo local en lugar de pagar una suscripción.' },
+            { type: 'plain-terms', text: 'Si comprar una GPU supera a pagar una suscripción de IA depende de cuánto la uses realmente. Si eres un usuario ligero, una suscripción es más barata y sencilla. Pero si usas la IA intensamente -- varias horas a la semana -- el coste inicial de una GPU se amortiza en uno o dos años, y después cada consulta es gratis, privada y funciona sin conexión.' },
+          ],
           items: [
             'Compra de GPU: RTX 5060 Ti nueva ($450) + $60/año en electricidad = $450 inicial, $60/año para siempre',
             'ChatGPT Plus: $240/año ($20/mes). ChatGPT Pro $100: $1,200/año (lanzado el 9 de abril de 2026)',
@@ -639,7 +647,7 @@ schema: {
       intro: 'تبلغ RTX 5060 Ti 16 GB مستعملة (450$) نقطة التعادل مع ChatGPT Plus (240$/سنة) خلال 18–24 شهرًا باستخدام 5 ساعات أسبوعيًا. في أبريل 2026، تقدّم OpenAI 7 مستويات من ChatGPT (0$–200$/شهر). وللمستخدمين الذين يتجاوزون 3 ساعات أسبوعيًا، يكون شراء GPU أذكى ماليًا. ويوفر المستخدمون المكثفون (10+ ساعات/أسبوع) أكثر من 5000$ خلال 5 سنوات مع خصوصية بيانات كاملة وقدرة على العمل دون اتصال. يبلغ Llama 3.3 70B نحو 82% من جودة GPT-5.2: أعلى تكافؤ بين المحلي والسحابة في التاريخ.',
       metaDescription: '⁨RTX 5060 Ti⁩ مستعملة بـ ⁨450⁩$ تعادل ⁨ChatGPT Plus⁩ (⁨240⁩$/سنة) خلال ⁨18⁩–⁨24⁩ شهرًا بمعدل ⁨5⁩ ساعات أسبوعياً. المستخدمون المكثفون يوفرون ⁨5000⁩$+ في ⁨5⁩ سنوات.',
       publishDate: '2026-04-05',
-      dateModified: '2026-08-27',
+      dateModified: '2026-08-28',
       leadAnswerBlock: '**تبلغ RTX 5060 Ti 16 GB مستعملة (450$) نقطة التعادل مع ChatGPT Plus (240$/سنة) خلال 18–24 شهرًا باستخدام 5 ساعات أسبوعيًا. في أبريل 2026، تقدّم OpenAI 7 مستويات من ChatGPT (0$–200$/شهر). وللمستخدمين الذين يتجاوزون 3 ساعات أسبوعيًا، يكون شراء GPU أذكى ماليًا. ويوفر المستخدمون المكثفون (10+ ساعات/أسبوع) أكثر من 5000$ خلال 5 سنوات مع خصوصية بيانات كاملة وقدرة على العمل دون اتصال. يبلغ Llama 3.3 70B نحو 82% من جودة GPT-5.2: أعلى تكافؤ بين المحلي والسحابة في التاريخ.**',
       audience: 'المستخدمون الذين يقيّمون عائد استثمار GPU مقابل الاشتراك لسير عملهم مع الذكاء الاصطناعي',
       readTime: '9 دقائق للقراءة',
@@ -660,6 +668,10 @@ schema: {
         'tldr': {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'تصل بطاقة RTX 5060 Ti مستعملة بذاكرة 16 GB (450 دولاراً) إلى نقطة التعادل مقابل ChatGPT Plus (240 دولاراً سنوياً) خلال 18-24 شهراً عند استخدام 5 ساعات أسبوعياً، ويوفّر المستخدمون الكثيفون (10+ ساعات أسبوعياً) أكثر من 5,000 دولار على مدى خمس سنوات بتشغيل نموذج محلي بدلاً من دفع اشتراك.' },
+            { type: 'plain-terms', text: 'ما إذا كان شراء GPU يتفوق على دفع اشتراك ذكاء اصطناعي يعتمد على مدى استخدامك الفعلي له. إذا كنت مستخدماً خفيفاً، فالاشتراك أرخص وأبسط. لكن إذا كنت تستخدم الذكاء الاصطناعي بكثافة -- عدة ساعات أسبوعياً -- فإن التكلفة الأولية لبطاقة GPU تُسترد خلال سنة أو سنتين، وبعد ذلك يصبح كل استعلام مجانياً وخاصاً ويعمل دون اتصال بالإنترنت.' },
+          ],
           items: [
             'شراء GPU: RTX 5060 Ti جديدة (450$) + 60$/سنة كهرباء = 450$ مبدئيًا، 60$/سنة دائمًا',
             'ChatGPT Plus: 240$/سنة (20$/شهر). ChatGPT Pro 100: 1200$/سنة (أُطلق في 9 أبريل 2026)',
@@ -967,6 +979,10 @@ schema: {
         tldr: {
           id: 'tldr',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Uma RTX 5060 Ti usada de 16 GB ($450) atinge o ponto de equilíbrio em relação ao ChatGPT Plus ($240/ano) em 18-24 meses com 5 horas de uso semanal, e usuários intensos (10+ horas/semana) economizam mais de $5.000 em cinco anos rodando um modelo local em vez de pagar uma assinatura.' },
+            { type: 'plain-terms', text: 'Se comprar uma GPU supera pagar uma assinatura de IA depende de quanto você realmente a usa. Se você é um usuário leve, uma assinatura é mais barata e simples. Mas se você usa IA intensamente -- várias horas por semana -- o custo inicial de uma GPU se paga em um ou dois anos, e depois disso cada consulta é gratuita, privada e funciona offline.' },
+          ],
           items: [
             'RTX 5060 Ti 16 GB usada (~$350) atinge o ponto de equilíbrio com ChatGPT Plus em 18–24 meses com 5 h/semana.',
             'Usuários intensivos (10+ horas/semana) economizam $5.000+ em 5 anos com GPU local.',
@@ -1059,7 +1075,7 @@ schema: {
     intro: 'Eine gebrauchte RTX 5060 Ti 16 GB (449 €) amortisiert sich mit ChatGPT Plus (240 €/Jahr) in 18–24 Monaten bei 5 Stunden Nutzung pro Woche.',
     metaDescription: 'Gebrauchte RTX 5060 Ti (449 €) amortisiert sich mit ChatGPT Plus (240 €/Jahr) in 18 Monaten.',
     publishDate: '2026-04-05',
-    dateModified: '2026-08-27',
+    dateModified: '2026-08-28',
     leadAnswerBlock: '**Eine gebrauchte RTX 5060 Ti 16 GB (449 €) amortisiert sich mit ChatGPT Plus (240 €/Jahr) in 18–24 Monaten.**',
     audience: 'Nutzer, die GPU vs Abonnement-ROI evaluieren',
     readTime: '10 Min. Lesezeit',
@@ -1077,6 +1093,10 @@ schema: {
       'tldr': {
         id: 'key-takeaways',
         isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Eine gebrauchte RTX 5060 Ti mit 16 GB (450 $) amortisiert sich gegenüber ChatGPT Plus (240 $/Jahr) innerhalb von 18-24 Monaten bei 5 Stunden wöchentlicher Nutzung, und Vielnutzer (10+ Stunden/Woche) sparen über fünf Jahre mehr als 5.000 $, indem sie ein lokales Modell statt eines Abos nutzen.' },
+          { type: 'plain-terms', text: 'Ob sich der Kauf einer GPU gegenüber einem KI-Abo lohnt, hängt davon ab, wie viel man sie tatsächlich nutzt. Bei geringer Nutzung ist ein Abo günstiger und einfacher. Wer KI aber intensiv nutzt -- mehrere Stunden pro Woche -- amortisiert die Anschaffungskosten einer GPU innerhalb von ein bis zwei Jahren, und danach ist jede Anfrage kostenlos, privat und funktioniert offline.' },
+        ],
         items: [
           'GPU-Kauf: RTX 5060 Ti neu (449 €) + 57 €/Jahr Strom = 449 € Anschaffung, 57 €/Jahr für immer',
           'ChatGPT Plus: 240 €/Jahr (20 €/Monat). ChatGPT Pro 100 €: 1.200 €/Jahr (seit 9. April 2026)',
@@ -1361,7 +1381,7 @@ schema: {
       intro: 'Un RTX 5060 Ti 16 Go d\'occasion (450 €) s\'amortit face à ChatGPT Plus (240 €/an) en 18–24 mois à raison de 5 heures par semaine. En avril 2026, OpenAI propose 7 abonnements ChatGPT (0–200 $/mois). Pour une utilisation au-delà de 3 heures/semaine, acheter un GPU est financièrement plus judicieux. Les utilisateurs intensifs (10+ heures/semaine) économisent plus de 5 000 € sur 5 ans avec confidentialité complète et capacité hors ligne. Llama 3.3 70B atteint environ 82 % de la qualité de GPT-5.2 — la plus proche parité cloud-local jamais atteinte.',
       metaDescription: 'RTX 5060 Ti d\'occasion (450 €) s\'amortit face à ChatGPT Plus (240 €/an) en 18–24 mois à 5 h/sem. Économies 5 000 €+ sur 5 ans. Tableaux complets pour 7 abonnements.',
       publishDate: '2026-04-05',
-      dateModified: '2026-08-27',
+      dateModified: '2026-08-28',
       leadAnswerBlock: '**Un RTX 5060 Ti 16 Go d\'occasion (450 €) s\'amortit face à ChatGPT Plus (240 €/an) en 18–24 mois à raison de 5 heures par semaine. En avril 2026, OpenAI propose 7 abonnements ChatGPT (0–200 $/mois). Pour une utilisation au-delà de 3 heures/semaine, acheter un GPU est financièrement plus judicieux. Les utilisateurs intensifs (10+ heures/semaine) économisent plus de 5 000 € sur 5 ans avec confidentialité complète et capacité hors ligne. Llama 3.3 70B atteint environ 82 % de la qualité de GPT-5.2 — la plus proche parité cloud-local jamais atteinte.**',
       audience: 'Utilisateurs évaluant le ROI d\'un GPU face aux abonnements IA',
       readTime: '9 min de lecture',
@@ -1379,7 +1399,12 @@ schema: {
         { label: 'Questions fréquemment posées', anchor: '#faq' },
       ],
       sections: {
-        'tldr': { id: 'key-takeaways', isTldr: true, items: ['GPU : RTX 5060 Ti neuf (450 €) + 60 €/an électricité = 450 € initial, 60 €/an ensuite', 'ChatGPT Plus : 240 €/an (20 €/mois). ChatGPT Pro 100 € : 1 200 €/an (lancé le 9 avril 2026)', 'Seuil de rentabilité face à Plus : 18–24 mois à 5 h/sem. Face à Pro 100 € : 14 mois à 1 400+ h sur 5 ans', 'Économies 5 ans (5 h/sem) : GPU (750 € total) vs ChatGPT Plus (1 200 €) = 450 € d\'économies', 'Économies 5 ans (10 h/sem) : GPU (750 € total) vs ChatGPT Plus (1 200 €) = 450 € d\'économies', 'Économies 5 ans (40+ h/sem) : GPU (1 650 € total) vs Pro 100 € forcé (6 000 €) = 4 350 € d\'économies', 'Qualité : Abonnements = GPT-5.2/GPT-5.4 Pro (niveau frontier). Local = Llama 3.3 70B (82 % de GPT-5.2 sur MMLU)', 'Règle simple : 5+ heures/semaine = achetez un GPU. Tier Pro 100 € change l\'équation pour les utilisateurs 20+ h/sem.'] },
+        'tldr': { id: 'key-takeaways', isTldr: true,
+ snippetBlocks: [
+    { type: 'one-sentence', text: "Une RTX 5060 Ti 16 Go d'occasion (450 €) atteint le seuil de rentabilité face à ChatGPT Plus (240 €/an) en 18-24 mois pour 5 heures d'usage hebdomadaire, et les gros utilisateurs (10+ heures/semaine) économisent plus de 5 000 € sur cinq ans en faisant tourner un modèle local plutôt qu'en payant un abonnement." },
+    { type: 'plain-terms', text: "Acheter un GPU plutôt que payer un abonnement IA dépend de l'usage réel que vous en faites. Pour un usage léger, l'abonnement reste plus simple et moins cher. Mais pour un usage intensif -- plusieurs heures par semaine -- le coût initial d'un GPU est amorti en un ou deux ans, et ensuite chaque requête est gratuite, privée et fonctionne hors ligne." },
+  ],
+ items: ['GPU : RTX 5060 Ti neuf (450 €) + 60 €/an électricité = 450 € initial, 60 €/an ensuite', 'ChatGPT Plus : 240 €/an (20 €/mois). ChatGPT Pro 100 € : 1 200 €/an (lancé le 9 avril 2026)', 'Seuil de rentabilité face à Plus : 18–24 mois à 5 h/sem. Face à Pro 100 € : 14 mois à 1 400+ h sur 5 ans', 'Économies 5 ans (5 h/sem) : GPU (750 € total) vs ChatGPT Plus (1 200 €) = 450 € d\'économies', 'Économies 5 ans (10 h/sem) : GPU (750 € total) vs ChatGPT Plus (1 200 €) = 450 € d\'économies', 'Économies 5 ans (40+ h/sem) : GPU (1 650 € total) vs Pro 100 € forcé (6 000 €) = 4 350 € d\'économies', 'Qualité : Abonnements = GPT-5.2/GPT-5.4 Pro (niveau frontier). Local = Llama 3.3 70B (82 % de GPT-5.2 sur MMLU)', 'Règle simple : 5+ heures/semaine = achetez un GPU. Tier Pro 100 € change l\'équation pour les utilisateurs 20+ h/sem.'] },
         'quickFacts': { id: 'quick-facts', title: 'Faits clés', items: ['**Coût initial GPU:** 350 € (RTX 4070 d\'occasion) à 1 000 € (RTX 4090 d\'occasion)', '**Coût annuel exploitation GPU:** 30–60 €/an électricité (tarifs européens)', '**Coût abonnement:** 240 €/an (20 €/mois) ChatGPT Plus ou Claude Pro', '**Seuil de rentabilité:** 18 mois à 5 h/sem, 12 mois à 10 h/sem', '**Total GPU 5 ans:** 500 € (RTX 4070) vs 1 200 € abonnements = 700 € d\'économies', '**Coût électricité Europe:** 60 €/an (€0,30/kWh), seuil de rentabilité étendu à 2 ans', '**Valeur de revente GPU:** 60–70 % pour RTX 4070, 50–65 % pour RTX 4090 après 3 ans'] },
         'cost-structure': { id: 'cost-structure', title: 'Quelle est la structure des coûts de chaque modèle ?', content: ['**ChatGPT — 7 abonnements (à partir du 17 avril 2026):**'], rows: [{ 'Tier': 'Gratuit', 'Mensuel': '0 € (avec publicités)', 'Annuel': '0 €', 'Modèles': 'GPT-5.3' }, { 'Tier': 'Go', 'Mensuel': '8 €', 'Annuel': '96 €', 'Modèles': 'GPT-5.3' }, { 'Tier': 'Plus', 'Mensuel': '20 €', 'Annuel': '240 €', 'Modèles': 'GPT-5.2 + Thinking' }, { 'Tier': 'Pro 100 €', 'Mensuel': '100 €', 'Annuel': '1 200 €', 'Modèles': 'GPT-5.4 Pro (nouveau 9 avr 2026)' }, { 'Tier': 'Pro 200 €', 'Mensuel': '200 €', 'Annuel': '2 400 €', 'Modèles': 'Tous les modèles, 20× utilisation' }, { 'Tier': 'Entreprise', 'Mensuel': '25 €/utilisateur', 'Annuel': '300 €/utilisateur', 'Modèles': 'GPT-5.2 + admin' }, { 'Tier': 'Enterprise', 'Mensuel': 'Personnalisé', 'Annuel': 'Personnalisé', 'Modèles': 'Tous + SLA' }], columns: ['Tier', 'Mensuel', 'Annuel', 'Modèles'], callouts: [{ type: '📌 Point clé', text: 'Tier Pro 100 € (lancé le 9 avril 2026) offre GPT-5.4 Pro et 10× l\'utilisation vs Plus. Utilisateurs intensifs (40+ h/sem) doivent passer au Pro 100 € ou Pro 200 € en raison des limites de débit.' }, { type: '💡 Conseil', text: 'Claude Pro reste à 20 €/mois (240 €/an) avec accès à Claude Sonnet 4.5 (comparable à GPT-5.2).' }] },
         'gpuOptions': { id: 'gpu-options', title: 'Options d\'achat GPU (avril 2026)', content: ['**RTX 4070 d\'occasion (12 Go): 300–350 €, exécute modèles 7B–13B**', '**RTX 5060 Ti 16 Go neuf: 450 €, exécute 13B confortablement, recommandé pour débutants**', '**RTX 4090 d\'occasion (24 Go): 1 200–1 400 €, exécute 70B en Q4**', '**RTX 5090 neuf (32 Go): 1 999 €, exécute 70B Q4 + capacité supplémentaire**', '', '**Coût annuel exploitation:** 30–60 € électricité au tarif français (€0,20/kWh). Multiplier par 1,5–2× pour Europe du Nord.'], callouts: [{ type: '💡 Conseil', text: 'Achetez des GPUs d\'occasion sur eBay — une RTX 5060 Ti de 6 mois se vend à 85–90 % du prix neuf. RTX 4070 d\'occasion : 300–350 €.' }, { type: '📌 Point clé', text: 'Coûts électricité variables : France 0,20 €/kWh, Nord Europe 0,30 €/kWh. Intégrez votre tarif local.' }] },
@@ -1406,7 +1431,7 @@ schema: {
       intro: '中古RTX 5060 Ti 16 GB (¥56,000) がChatGPT Plus (¥30,000/年) と18–24ヶ月で損益分岐点に達します。週5時間の利用で2026年4月現在。OpenAIは7つのChatGPTティア (¥0–¥240,000/月) を提供しています。週3時間以上の利用者にはGPUの購入が経済的に有利です。重度利用者 (週10時間以上) は5年間で¥540万円以上節約できます。完全なデータプライバシーとオフライン機能を備えています。Llama 3.3 70Bはローカルでもクラウドとの最高の品質パリティ (約82%) を実現しています。',
       metaDescription: '中古RTX 5060 Ti (¥56,000) がChatGPT Plus (¥30,000/年) と18–24ヶ月で損益分岐点。重度利用者は5年で¥540万以上節約。7つのChatGPTティア全体でのROI表を確認できます。',
       publishDate: '2026-04-05',
-      dateModified: '2026-08-27',
+      dateModified: '2026-08-28',
       leadAnswerBlock: '**中古RTX 5060 Ti 16 GB (¥56,000) がChatGPT Plus (¥30,000/年) と18–24ヶ月で損益分岐点に達します。週5時間の利用で2026年4月現在。OpenAIは7つのChatGPTティア (¥0–¥240,000/月) を提供しています。週3時間以上の利用者にはGPUの購入が経済的に有利です。重度利用者 (週10時間以上) は5年間で¥540万円以上節約できます。完全なデータプライバシーとオフライン機能を備えています。Llama 3.3 70Bはローカルでもクラウドとの最高の品質パリティ (約82%) を実現しています。**',
       audience: 'AIワークフロー向けのGPU対サブスクリプションのROIを検討しているユーザー',
       readTime: '9分で読める',
@@ -1431,6 +1456,10 @@ schema: {
         'tldr': {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: '中古のRTX 5060 Ti 16GB（450ドル）は、週5時間の利用でChatGPT Plus（年間240ドル）と18〜24ヶ月で損益分岐点に達し、ヘビーユーザー（週10時間以上）はサブスクリプションの代わりにローカルモデルを実行することで5年間で5,000ドル以上節約できます。' },
+            { type: 'plain-terms', text: 'GPUを購入する方がAIサブスクリプションより得かどうかは、実際にどれだけ使うかによります。軽いユーザーなら、サブスクリプションの方が安く簡単です。しかし、週に数時間もAIを頻繁に使うなら、GPUの初期費用は1〜2年で元が取れ、その後はすべてのクエリが無料、プライベート、オフラインで動作します。' },
+          ],
           items: [
             'GPU購入: RTX 5060 Ti新品 (¥56,000) + ¥7,000/年の電気代 = ¥56,000先払い、以後¥7,000/年',
             'ChatGPT Plus: ¥30,000/年 (¥2,500/月)。ChatGPT Pro ¥150,000: ¥180,000/年 (2026年4月9日発売)',
@@ -1725,7 +1754,7 @@ schema: {
       intro: '二手RTX 5060 Ti 16 GB ($450) 与ChatGPT Plus ($240/年) 在18–24个月内收回成本。每周5小时的使用量。截至2026年4月，OpenAI提供7个ChatGPT级别 ($0–$200/月)。对于每周使用3小时以上的用户，购买GPU在经济上更聪明。重度用户 (每周10小时以上) 在5年内节省$5,000+，具有完整的数据隐私和离线功能。Llama 3.3 70B在本地实现了最高质量奇偶性 (约82%) ——历史上最接近的本地云奇偶性。',
       metaDescription: '二手RTX 5060 Ti ($450) 与ChatGPT Plus ($240/年) 在18–24个月内收回成本。每周5小时用量。重度用户5年省$5,000+。7个ChatGPT价格层级全表对比。',
       publishDate: '2026-04-05',
-      dateModified: '2026-08-27',
+      dateModified: '2026-08-28',
       leadAnswerBlock: '**二手RTX 5060 Ti 16 GB ($450) 与ChatGPT Plus ($240/年) 在18–24个月内收回成本。每周5小时的使用量。截至2026年4月，OpenAI提供7个ChatGPT级别 ($0–$200/月)。对于每周使用3小时以上的用户，购买GPU在经济上更聪明。重度用户 (每周10小时以上) 在5年内节省$5,000+，具有完整的数据隐私和离线功能。Llama 3.3 70B在本地实现了最高质量奇偶性 (约82%) ——历史上最接近的本地云奇偶性。**',
       audience: '考虑GPU vs订阅ROI的用户',
       readTime: '阅读约9分钟',
@@ -1750,6 +1779,10 @@ schema: {
         'tldr': {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: '二手RTX 5060 Ti 16GB（450美元）在每周使用5小时的情况下，18-24个月即可与ChatGPT Plus（每年240美元）打平，而重度用户（每周10小时以上）通过运行本地模型而非订阅，五年内可节省5,000美元以上。' },
+            { type: 'plain-terms', text: '购买GPU是否比订阅AI服务更划算，取决于你实际的使用量。如果你是轻度用户，订阅更便宜也更简单。但如果你重度使用AI——每周好几个小时——GPU的前期成本能在一两年内收回，之后每次查询都是免费、私密且离线可用的。' },
+          ],
           items: [
             'GPU购买: RTX 5060 Ti新品 ($450) + $60/年电力 = $450先期，之后永远$60/年',
             'ChatGPT Plus: $240/年 ($20/月)。ChatGPT Pro $100: $1,200/年 (2026年4月9日启动)',
@@ -2043,7 +2076,7 @@ schema: {
       intro: '중고 RTX 5060 Ti 16 GB ($450)는 주 5시간 사용 기준으로 18~24개월 만에 ChatGPT Plus ($240/년)와 손익분기점에 도달합니다. 2026년 4월 기준 OpenAI는 7가지 ChatGPT 요금제($0~$200/월)를 제공하고 있습니다. 주 3시간 이상 사용하는 이용자라면 GPU 구매가 재정적으로 더 유리합니다. 헤비 유저(주 10시간 이상)는 완전한 데이터 프라이버시와 오프라인 사용 기능을 갖추면서 5년간 $5,000 이상을 절약할 수 있습니다. 로컬 Llama 3.3 70B는 GPT-5.2 품질의 약 82%에 도달하며, 역사상 가장 높은 로컬-클라우드 품질 격차 해소를 보여줍니다.',
       metaDescription: '중고 RTX 5060 Ti ($450)는 주 5시간 사용 기준 18~24개월 만에 ChatGPT Plus ($240/년)와 손익분기점에 도달합니다. 헤비 유저는 5년간 $5,000 이상 절약 가능합니다. 7가지 ChatGPT 요금제별 완전한 ROI 표를 확인하세요.',
       publishDate: '2026-04-05',
-      dateModified: '2026-08-27',
+      dateModified: '2026-08-28',
       leadAnswerBlock: '**중고 RTX 5060 Ti 16 GB ($450)는 주 5시간 사용 기준으로 18~24개월 만에 ChatGPT Plus ($240/년)와 손익분기점에 도달합니다. 2026년 4월 기준 OpenAI는 7가지 ChatGPT 요금제($0~$200/월)를 제공하고 있습니다. 주 3시간 이상 사용하는 이용자라면 GPU 구매가 재정적으로 더 유리합니다. 헤비 유저(주 10시간 이상)는 완전한 데이터 프라이버시와 오프라인 사용 기능을 갖추면서 5년간 $5,000 이상을 절약할 수 있습니다. 로컬 Llama 3.3 70B는 GPT-5.2 품질의 약 82%에 도달하며, 역사상 가장 높은 로컬-클라우드 품질 격차 해소를 보여줍니다.**',
       audience: 'AI 워크플로에서 GPU 대 구독 ROI를 검토 중인 사용자',
       readTime: '9분 읽기',
@@ -2064,6 +2097,10 @@ schema: {
         'tldr': {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: '중고 RTX 5060 Ti 16GB($450)는 주당 5시간 사용 기준으로 ChatGPT Plus(연 $240)와 비교해 18~24개월 만에 손익분기점에 도달하며, 헤비 유저(주당 10시간 이상)는 구독료 대신 로컬 모델을 운영해 5년간 $5,000 이상을 절약합니다.' },
+            { type: 'plain-terms', text: 'GPU 구매가 AI 구독료보다 나은지는 실제로 얼마나 사용하는지에 달려 있습니다. 사용량이 적다면 구독이 더 저렴하고 간단합니다. 하지만 매주 몇 시간씩 AI를 많이 사용한다면, GPU의 초기 비용은 1~2년 안에 회수되며, 그 이후로는 모든 요청이 무료이고 사생활이 보호되며 오프라인에서도 작동합니다.' },
+          ],
           items: [
             'GPU 구매: RTX 5060 Ti 신품 ($450) + 전기요금 $60/년 = 초기비용 $450, 이후 $60/년',
             'ChatGPT Plus: $240/년 ($20/월). ChatGPT Pro $100: $1,200/년 (2026년 4월 9일 출시)',
