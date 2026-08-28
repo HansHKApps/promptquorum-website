@@ -6,12 +6,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Tool Comparisons',
     heroImage: '/images/best-frontend-for-ollama-overview-hero-en.webp',
     title: 'Best Frontend for Ollama?',
-    dateModified: '2026-06-20',
+    dateModified: '2026-08-28',
     seoTitle: 'Best Frontend for Ollama? | Prompt Bites | PromptQuorum',
-    metaDescription: 'Open WebUI is the best Ollama frontend. SillyTavern for roleplay, Jan for model management. All three are free and open source. Updated May 2026.',
+    metaDescription: 'Open WebUI is the best Ollama frontend. SillyTavern for roleplay, Jan for model management. All three are free and open source.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-06-18',
+    next_refresh_due: '2026-11-28',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
@@ -30,46 +30,6 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
         updatedDate: '2026-05',
       },
-      de: {
-        question: 'Bestes Frontend für Ollama?',
-        answer: 'Open WebUI ist das beste Ollama-Frontend für die meisten Nutzer, mit kostenlosem Zugriff auf eine funktionsreiche Oberfläche, Docker-Unterstützung und RAG-Funktionen. Es ist kostenlos, funktionsreich und läuft als Docker-Container. SillyTavern eignet sich besser für Rollenspiele. Jan ergänzt einen lokalen Modell-Manager.',
-        bullets: [
-          'Open WebUI: insgesamt am besten, Docker-basiert, ChatGPT-ähnliche Oberfläche',
-          'SillyTavern: am besten für kreatives Schreiben und Rollenspiele',
-          'Jan: integrierter Modell-Downloader und lokaler API-Server',
-        ],
-        updatedDate: '2026-05',
-      },
-      fr: {
-        question: 'Meilleur frontend pour Ollama ?',
-        answer: 'Open WebUI est le meilleur frontend Ollama pour la plupart des utilisateurs, avec accès gratuit à une interface riche, déploiement Docker et support RAG intégré. Il est gratuit, riche en fonctionnalités et fonctionne comme un conteneur Docker. SillyTavern est préférable pour le jeu de rôle. Jan ajoute un gestionnaire de modèles local.',
-        bullets: [
-          'Open WebUI : meilleur en général, basé sur Docker, interface similaire à ChatGPT',
-          'SillyTavern : meilleur pour l\'écriture créative et le jeu de rôle',
-          'Jan : téléchargeur de modèles intégré et serveur API local',
-        ],
-        updatedDate: '2026-05',
-      },
-      ja: {
-        question: 'Ollamaに最適なフロントエンドは？',
-        answer: 'Open WebUIはほとんどのユーザーにとって最適なOllamaフロントエンドで、無料で機能豊富な Docker ベースのインターフェースと RAG サポートを提供します。無料で機能豊富でDockerコンテナとして動作します。SillyTavernはロールプレイに最適です。Janはローカルモデルマネージャーを追加します。',
-        bullets: [
-          'Open WebUI：総合的に最優秀、Docker ベース、ChatGPT 風 UI',
-          'SillyTavern：クリエイティブライティングとロールプレイに最適',
-          'Jan：組み込みモデルダウンローダーとローカルAPIサーバー',
-        ],
-        updatedDate: '2026-05',
-      },
-      zh: {
-        question: 'Ollama 最佳前端是什么？',
-        answer: 'Open WebUI 是大多数用户的最佳 Ollama 前端，提供免费的功能丰富的界面，Docker 部署以及内置 RAG 支持。它免费、功能丰富，作为 Docker 容器运行。SillyTavern 更适合角色扮演。Jan 提供本地模型管理器。',
-        bullets: [
-          'Open WebUI：综合最佳，基于 Docker，类似 ChatGPT 的界面',
-          'SillyTavern：最适合创意写作和角色扮演',
-          'Jan：内置模型下载器和本地 API 服务器',
-        ],
-        updatedDate: '2026-05',
-      },
     },
     sections: {
       tldr: {
@@ -85,14 +45,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Open WebUI Is the Default Pick',
         content: [
-          '<strong>As of May 2026, Open WebUI is the recommended Ollama frontend for general use. This page is updated monthly — last verified May 2026.</strong> Open WebUI provides a ChatGPT-like chat interface, RAG document upload, user management, and support for connecting to multiple Ollama instances — all free and self-hosted as a Docker container accessible at localhost:3000.',
+          '<strong>Open WebUI is the recommended Ollama frontend for general use, with 150k+ GitHub stars and active development.</strong> It provides a ChatGPT-like chat interface, RAG document upload, user management, and support for connecting to multiple Ollama instances — all free and self-hosted as a Docker container accessible at localhost:3000.',
           'SillyTavern is the right choice when the primary use case is roleplay or collaborative fiction. It supports character cards (PNG files with embedded persona definitions), story branching, and lorebook context injection — features that Open WebUI and Jan do not have.',
           'The table below compares setup method and best use case for the three most popular Ollama frontends.',
         ],
         columns: ['Frontend', 'Setup', 'Best for'],
         rows: [
           { 'Frontend': 'Open WebUI', 'Setup': 'Docker', 'Best for': 'General chat + dev' },
-          { 'Frontend': 'SillyTavern', 'Setup': 'npm install', 'Best for': 'Roleplay + fiction' },
+          { 'Frontend': 'SillyTavern', 'Setup': 'git clone', 'Best for': 'Roleplay + fiction' },
           { 'Frontend': 'Jan', 'Setup': 'Desktop app', 'Best for': 'Model management + chat' },
         ],
       },
@@ -103,7 +63,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Open WebUI requires Docker and an already-running Ollama instance. SillyTavern requires Node.js and npm. Jan is standalone — install it as a desktop app and it handles model downloads and the chat interface in a single window.',
           'For a full breakdown of local LLM frontends including installation guides, see the <a href="/local-llms/best-local-llm-frontends" class="text-primary hover:underline">best local LLM frontends guide</a>.',
         ],
-        callouts: [{ type: 'info', text: 'Last verified: May 2026. If the data above looks stale, check the official project repositories on GitHub.' }],
+        callouts: [{ type: 'info', text: 'Verified August 2026 against the official GitHub repositories: Open WebUI (150k+ stars), SillyTavern (32k+ stars), Jan (44k+ stars). If a setup step above stops working, check the project docs first — install commands change more often than the recommendations do.' }],
       },
       faq: {
         id: 'faq',
@@ -111,7 +71,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Does Open WebUI work with Ollama?',
-            a: 'Yes. Open WebUI connects to Ollama by pointing to localhost:11434 (the default Ollama API address). Run `docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway ghcr.io/open-webui/open-webui:main` to start it alongside a running Ollama instance.',
+            a: 'Yes. Open WebUI connects to Ollama by pointing to localhost:11434 (the default Ollama API address). Run `docker run -d -p 3000:8080 -v open-webui:/app/backend/data -e OLLAMA_BASE_URL=http://host.docker.internal:11434 --add-host=host.docker.internal:host-gateway --name open-webui ghcr.io/open-webui/open-webui:main` to start it alongside a running Ollama instance.',
           },
           {
             q: 'Can I use SillyTavern with Ollama?',
@@ -134,11 +94,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/best-frontend-for-ollama-overview-hero-de.webp',
     title: 'Bestes Frontend für Ollama?',
     seoTitle: 'Bestes Frontend für Ollama? | Prompt Bites | PromptQuorum',
-    metaDescription: 'Open WebUI ist das beste Ollama-Frontend. SillyTavern für Rollenspiele. Jan ergänzt die Modellverwaltung. Alle kostenlos und Open Source. Aktualisiert Mai 2026.',
+    metaDescription: 'Open WebUI ist das beste Ollama-Frontend. SillyTavern für Rollenspiele. Jan ergänzt die Modellverwaltung. Alle kostenlos und Open Source.',
     publishDate: '2026-05-18',
-    dateModified: '2026-05-19',
+    dateModified: '2026-08-28',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-06-18',
+    next_refresh_due: '2026-11-28',
     quickAnswerTop: {
       de: {
         question: 'Bestes Frontend für Ollama?',
@@ -165,14 +125,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Open WebUI ist die erste Wahl',
         content: [
-          '<strong>Stand Mai 2026 ist Open WebUI das empfohlene Ollama-Frontend für den allgemeinen Einsatz. Diese Seite wird monatlich aktualisiert — zuletzt überprüft Mai 2026.</strong> Open WebUI bietet ein ChatGPT-ähnliches Chat-Interface, RAG-Dokumenten-Upload, Benutzerverwaltung und Unterstützung für mehrere Ollama-Instanzen — alles kostenlos und selbst gehostet als Docker-Container unter localhost:3000.',
+          '<strong>Open WebUI ist das empfohlene Ollama-Frontend für den allgemeinen Einsatz, mit über 150.000 GitHub-Sternen und aktiver Entwicklung.</strong> Es bietet ein ChatGPT-ähnliches Chat-Interface, RAG-Dokumenten-Upload, Benutzerverwaltung und Unterstützung für mehrere Ollama-Instanzen — alles kostenlos und selbst gehostet als Docker-Container unter localhost:3000.',
           'SillyTavern ist die richtige Wahl, wenn der primäre Anwendungsfall Rollenspiel oder kollaborative Fiktion ist. Es unterstützt Charakterkarten (PNG-Dateien mit eingebetteten Persona-Definitionen), Storyverzweigungen und Lorebook-Kontextinjektionen — Funktionen, die Open WebUI und Jan nicht haben.',
           'Die folgende Tabelle vergleicht Einrichtungsmethode und besten Anwendungsfall für die drei beliebtesten Ollama-Frontends.',
         ],
         columns: ['Frontend', 'Einrichtung', 'Am besten für'],
         rows: [
           { 'Frontend': 'Open WebUI', 'Einrichtung': 'Docker', 'Am besten für': 'Allgemeiner Chat + Entwicklung' },
-          { 'Frontend': 'SillyTavern', 'Einrichtung': 'npm install', 'Am besten für': 'Rollenspiel + Fiktion' },
+          { 'Frontend': 'SillyTavern', 'Einrichtung': 'git clone', 'Am besten für': 'Rollenspiel + Fiktion' },
           { 'Frontend': 'Jan', 'Einrichtung': 'Desktop-App', 'Am besten für': 'Modellverwaltung + Chat' },
         ],
       },
@@ -183,7 +143,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Open WebUI erfordert Docker und eine bereits laufende Ollama-Instanz. SillyTavern benötigt Node.js und npm. Jan ist eigenständig — installieren Sie es als Desktop-App, und es kümmert sich um Modell-Downloads und das Chat-Interface in einem einzigen Fenster.',
           'Für einen vollständigen Überblick über lokale LLM-Frontends einschließlich Installationsanleitungen siehe den <a href="/de/local-llms/best-local-llm-frontends" class="text-primary hover:underline">Vergleich der besten lokalen LLM-Frontends</a>.',
         ],
-        callouts: [{ type: 'info', text: 'Zuletzt überprüft: Mai 2026. Wenn die Daten oben veraltet aussehen, prüfen Sie die offiziellen Projekt-Repositories auf GitHub.' }],
+        callouts: [{ type: 'info', text: 'Geprüft im August 2026 gegen die offiziellen GitHub-Repositories: Open WebUI (über 150.000 Sterne), SillyTavern (über 32.000 Sterne), Jan (über 44.000 Sterne). Falls ein Einrichtungsschritt oben nicht mehr funktioniert, prüfen Sie zuerst die Projektdokumentation — Installationsbefehle ändern sich häufiger als die Empfehlungen.' }],
       },
       faq: {
         id: 'faq',
@@ -191,7 +151,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Funktioniert Open WebUI mit Ollama?',
-            a: 'Ja. Open WebUI verbindet sich mit Ollama durch Verweis auf localhost:11434 (die Standard-Ollama-API-Adresse). Führen Sie `docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway ghcr.io/open-webui/open-webui:main` aus, um es neben einer laufenden Ollama-Instanz zu starten.',
+            a: 'Ja. Open WebUI verbindet sich mit Ollama durch Verweis auf localhost:11434 (die Standard-Ollama-API-Adresse). Führen Sie `docker run -d -p 3000:8080 -v open-webui:/app/backend/data -e OLLAMA_BASE_URL=http://host.docker.internal:11434 --add-host=host.docker.internal:host-gateway --name open-webui ghcr.io/open-webui/open-webui:main` aus, um es neben einer laufenden Ollama-Instanz zu starten.',
           },
           {
             q: 'Kann ich SillyTavern mit Ollama verwenden?',
@@ -214,11 +174,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/best-frontend-for-ollama-overview-hero-fr.webp',
     title: 'Meilleur frontend pour Ollama ?',
     seoTitle: 'Meilleur frontend pour Ollama? | Prompt Bites | PromptQuorum',
-    metaDescription: 'Open WebUI est le meilleur frontend Ollama. SillyTavern pour le jeu de rôle. Jan ajoute la gestion de modèles. Tous gratuits. Mis à jour mai 2026.',
+    metaDescription: 'Open WebUI est le meilleur frontend Ollama. SillyTavern pour le jeu de rôle. Jan ajoute la gestion de modèles. Tous gratuits et open source.',
     publishDate: '2026-05-18',
-    dateModified: '2026-05-19',
+    dateModified: '2026-08-28',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-06-18',
+    next_refresh_due: '2026-11-28',
     quickAnswerTop: {
       fr: {
         question: 'Meilleur frontend pour Ollama ?',
@@ -245,14 +205,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Open WebUI est le choix par défaut',
         content: [
-          '<strong>En mai 2026, Open WebUI est le frontend Ollama recommandé pour un usage général. Cette page est mise à jour mensuellement — dernière vérification mai 2026.</strong> Open WebUI propose une interface de chat similaire à ChatGPT, le téléversement de documents RAG, la gestion des utilisateurs et la prise en charge de plusieurs instances Ollama — le tout gratuitement et en auto-hébergement comme un conteneur Docker accessible à localhost:3000.',
+          '<strong>Open WebUI est le frontend Ollama recommandé pour un usage général, avec plus de 150 000 étoiles GitHub et un développement actif.</strong> Il propose une interface de chat similaire à ChatGPT, le téléversement de documents RAG, la gestion des utilisateurs et la prise en charge de plusieurs instances Ollama — le tout gratuitement et en auto-hébergement comme un conteneur Docker accessible à localhost:3000.',
           'SillyTavern est le bon choix lorsque le cas d\'usage principal est le jeu de rôle ou la fiction collaborative. Il prend en charge les fiches de personnages (fichiers PNG avec définitions de personnages intégrées), les embranchements narratifs et l\'injection de contexte lorebook — des fonctionnalités absentes d\'Open WebUI et de Jan.',
           'Le tableau ci-dessous compare la méthode d\'installation et le meilleur cas d\'usage pour les trois frontends Ollama les plus populaires.',
         ],
         columns: ['Frontend', 'Installation', 'Idéal pour'],
         rows: [
           { 'Frontend': 'Open WebUI', 'Installation': 'Docker', 'Idéal pour': 'Chat général + dev' },
-          { 'Frontend': 'SillyTavern', 'Installation': 'npm install', 'Idéal pour': 'Jeu de rôle + fiction' },
+          { 'Frontend': 'SillyTavern', 'Installation': 'git clone', 'Idéal pour': 'Jeu de rôle + fiction' },
           { 'Frontend': 'Jan', 'Installation': 'Application de bureau', 'Idéal pour': 'Gestion modèles + chat' },
         ],
       },
@@ -263,7 +223,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Open WebUI nécessite Docker et une instance Ollama déjà en cours d\'exécution. SillyTavern nécessite Node.js et npm. Jan est autonome — installez-le comme une application de bureau et il gère les téléchargements de modèles et l\'interface de chat dans une seule fenêtre.',
           'Pour un aperçu complet des frontends LLM locaux incluant des guides d\'installation, consultez le <a href="/fr/local-llms/best-local-llm-frontends" class="text-primary hover:underline">guide des meilleurs frontends LLM locaux</a>.',
         ],
-        callouts: [{ type: 'info', text: 'Dernière vérification : mai 2026. Si les données ci-dessus semblent obsolètes, consultez les dépôts officiels des projets sur GitHub.' }],
+        callouts: [{ type: 'info', text: 'Vérifié en août 2026 sur les dépôts GitHub officiels : Open WebUI (plus de 150 000 étoiles), SillyTavern (plus de 32 000 étoiles), Jan (plus de 44 000 étoiles). Si une étape d\'installation ci-dessus ne fonctionne plus, consultez d\'abord la documentation du projet — les commandes d\'installation changent plus souvent que les recommandations.' }],
       },
       faq: {
         id: 'faq',
@@ -271,7 +231,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Open WebUI fonctionne-t-il avec Ollama ?',
-            a: 'Oui. Open WebUI se connecte à Ollama en pointant vers localhost:11434 (l\'adresse API Ollama par défaut). Exécutez `docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway ghcr.io/open-webui/open-webui:main` pour le démarrer aux côtés d\'une instance Ollama en cours d\'exécution.',
+            a: 'Oui. Open WebUI se connecte à Ollama en pointant vers localhost:11434 (l\'adresse API Ollama par défaut). Exécutez `docker run -d -p 3000:8080 -v open-webui:/app/backend/data -e OLLAMA_BASE_URL=http://host.docker.internal:11434 --add-host=host.docker.internal:host-gateway --name open-webui ghcr.io/open-webui/open-webui:main` pour le démarrer aux côtés d\'une instance Ollama en cours d\'exécution.',
           },
           {
             q: 'Puis-je utiliser SillyTavern avec Ollama ?',
@@ -294,11 +254,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/best-frontend-for-ollama-overview-hero-ja.webp',
     title: 'Ollamaに最適なフロントエンドは？',
     seoTitle: 'Ollamaに最適なフロントエンドは？| Prompt Bites | PromptQuorum',
-    metaDescription: 'Open WebUIはOllamaに最適なフロントエンドです。ロールプレイにはSillyTavern。Janはモデル管理を追加します。すべて無料でオープンソース。2026年5月更新。',
+    metaDescription: 'Open WebUIはOllamaに最適なフロントエンドです。ロールプレイにはSillyTavern。Janはモデル管理を追加します。すべて無料でオープンソース。',
     publishDate: '2026-05-18',
-    dateModified: '2026-05-19',
+    dateModified: '2026-08-28',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-06-18',
+    next_refresh_due: '2026-11-28',
     quickAnswerTop: {
       ja: {
         question: 'Ollamaに最適なフロントエンドは？',
@@ -325,14 +285,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Open WebUI がデフォルトの選択',
         content: [
-          '<strong>2026年5月時点で、Open WebUIは一般用途の推奨Ollamaフロントエンドです。このページは毎月更新されます — 最終確認: 2026年5月。</strong> Open WebUIはChatGPT風のチャットインターフェース、RAGドキュメントアップロード、ユーザー管理、複数のOllamaインスタンスへの接続サポートを提供し、すべて無料かつDockerコンテナとしてlocalhost:3000でセルフホスト可能です。',
+          '<strong>Open WebUIは一般用途の推奨Ollamaフロントエンドで、GitHubスター15万件超、活発に開発が続いています。</strong> ChatGPT風のチャットインターフェース、RAGドキュメントアップロード、ユーザー管理、複数のOllamaインスタンスへの接続サポートを提供し、すべて無料かつDockerコンテナとしてlocalhost:3000でセルフホスト可能です。',
           'SillyTavernはロールプレイや共同フィクションが主な用途の場合に適しています。キャラクターカード（ペルソナ定義が埋め込まれたPNGファイル）、ストーリー分岐、ロアブックコンテキスト注入をサポートしており、これらはOpen WebUIとJanにはない機能です。',
           '以下の表は、最も人気の高い3つのOllamaフロントエンドのセットアップ方法と最適な用途を比較しています。',
         ],
         columns: ['フロントエンド', 'セットアップ', '最適用途'],
         rows: [
           { 'フロントエンド': 'Open WebUI', 'セットアップ': 'Docker', '最適用途': '一般チャット＋開発' },
-          { 'フロントエンド': 'SillyTavern', 'セットアップ': 'npm install', '最適用途': 'ロールプレイ＋フィクション' },
+          { 'フロントエンド': 'SillyTavern', 'セットアップ': 'git clone', '最適用途': 'ロールプレイ＋フィクション' },
           { 'フロントエンド': 'Jan', 'セットアップ': 'デスクトップアプリ', '最適用途': 'モデル管理＋チャット' },
         ],
       },
@@ -343,7 +303,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Open WebUIにはDockerと既に実行中のOllamaインスタンスが必要です。SillyTavernはNode.jsとnpmを必要とします。Janはスタンドアロンです — デスクトップアプリとしてインストールすれば、1つのウィンドウでモデルダウンロードとチャットインターフェースを管理できます。',
           'インストールガイドを含むローカルLLMフロントエンドの詳細な比較については、<a href="/ja/local-llms/best-local-llm-frontends" class="text-primary hover:underline">最良のローカルLLMフロントエンドガイド</a>をご覧ください。',
         ],
-        callouts: [{ type: 'info', text: '最終確認: 2026年5月。上記のデータが古くなっている場合は、GitHubの公式プロジェクトリポジトリを確認してください。' }],
+        callouts: [{ type: 'info', text: '2026年8月に公式GitHubリポジトリで確認：Open WebUI（15万件超）、SillyTavern（3万2千件超）、Jan（4万4千件超）。上記の手順が動かなくなった場合は、まずプロジェクトのドキュメントを確認してください。導入コマンドは推奨内容より頻繁に変わります。' }],
       },
       faq: {
         id: 'faq',
@@ -351,7 +311,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Open WebUIはOllamaと連携しますか？',
-            a: 'はい。Open WebUIはlocalhost:11434（OllamaのデフォルトAPIアドレス）に接続します。`docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway ghcr.io/open-webui/open-webui:main`を実行して、実行中のOllamaインスタンスの横で起動します。',
+            a: 'はい。Open WebUIはlocalhost:11434（OllamaのデフォルトAPIアドレス）に接続します。`docker run -d -p 3000:8080 -v open-webui:/app/backend/data -e OLLAMA_BASE_URL=http://host.docker.internal:11434 --add-host=host.docker.internal:host-gateway --name open-webui ghcr.io/open-webui/open-webui:main`を実行して、実行中のOllamaインスタンスの横で起動します。',
           },
           {
             q: 'SillyTavernはOllamaで使用できますか？',
@@ -374,11 +334,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/best-frontend-for-ollama-overview-hero-zh.webp',
     title: 'Ollama 最佳前端是什么？',
     seoTitle: 'Ollama 最佳前端工具 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Open WebUI 是最佳 Ollama 前端。SillyTavern 适合角色扮演。Jan 提供模型管理。全部免费且开源。2026年5月更新。',
+    metaDescription: 'Open WebUI 是最佳 Ollama 前端。SillyTavern 适合角色扮演。Jan 提供模型管理。全部免费且开源。',
     publishDate: '2026-05-18',
-    dateModified: '2026-05-19',
+    dateModified: '2026-08-28',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-06-18',
+    next_refresh_due: '2026-11-28',
     quickAnswerTop: {
       zh: {
         question: 'Ollama 最佳前端是什么？',
@@ -405,14 +365,14 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Open WebUI 是默认首选',
         content: [
-          '<strong>截至2026年5月，Open WebUI是通用用途的推荐Ollama前端。本页每月更新——最后核实: 2026年5月。</strong> Open WebUI 提供类似 ChatGPT 的聊天界面、RAG 文档上传、用户管理以及连接多个 Ollama 实例的支持——全部免费且作为 Docker 容器自托管，可通过 localhost:3000 访问。',
+          '<strong>Open WebUI 是通用用途的推荐 Ollama 前端，GitHub 星标超过 15 万，且持续活跃开发。</strong> 它提供类似 ChatGPT 的聊天界面、RAG 文档上传、用户管理以及连接多个 Ollama 实例的支持——全部免费且作为 Docker 容器自托管，可通过 localhost:3000 访问。',
           'SillyTavern 是角色扮演或协作小说创作为主要用途时的正确选择。它支持角色卡（内嵌人物定义的 PNG 文件）、故事分支和世界书上下文注入——这些功能是 Open WebUI 和 Jan 所没有的。',
           '下表比较了三款最流行的 Ollama 前端的安装方式和最佳使用场景。',
         ],
         columns: ['前端', '安装方式', '最适合'],
         rows: [
           { '前端': 'Open WebUI', '安装方式': 'Docker', '最适合': '通用聊天 + 开发' },
-          { '前端': 'SillyTavern', '安装方式': 'npm install', '最适合': '角色扮演 + 小说' },
+          { '前端': 'SillyTavern', '安装方式': 'git clone', '最适合': '角色扮演 + 小说' },
           { '前端': 'Jan', '安装方式': '桌面应用', '最适合': '模型管理 + 聊天' },
         ],
       },
@@ -423,7 +383,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           'Open WebUI 需要 Docker 和已运行的 Ollama 实例。SillyTavern 需要 Node.js 和 npm。Jan 是独立的——将其作为桌面应用安装，它在一个窗口中处理模型下载和聊天界面。',
           '有关本地 LLM 前端（含安装指南）的完整对比，请参阅 <a href="/zh/local-llms/best-local-llm-frontends" class="text-primary hover:underline">最佳本地LLM前端指南</a>。',
         ],
-        callouts: [{ type: 'info', text: '最后核实: 2026年5月。如果上述数据已过时，请查看GitHub上的官方项目仓库。' }],
+        callouts: [{ type: 'info', text: '已于 2026 年 8 月核实官方 GitHub 仓库：Open WebUI（超 15 万星标）、SillyTavern（超 3.2 万星标）、Jan（超 4.4 万星标）。如果上述步骤失效，请先查看项目文档——安装命令的变动比推荐结论更频繁。' }],
       },
       faq: {
         id: 'faq',
@@ -431,7 +391,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Open WebUI 与 Ollama 兼容吗？',
-            a: '兼容。Open WebUI 通过指向 localhost:11434（Ollama 默认 API 地址）连接到 Ollama。运行 `docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway ghcr.io/open-webui/open-webui:main` 即可在运行中的 Ollama 实例旁启动。',
+            a: '兼容。Open WebUI 通过指向 localhost:11434（Ollama 默认 API 地址）连接到 Ollama。运行 `docker run -d -p 3000:8080 -v open-webui:/app/backend/data -e OLLAMA_BASE_URL=http://host.docker.internal:11434 --add-host=host.docker.internal:host-gateway --name open-webui ghcr.io/open-webui/open-webui:main` 即可在运行中的 Ollama 实例旁启动。',
           },
           {
             q: '可以将 SillyTavern 与 Ollama 配合使用吗？',
@@ -454,11 +414,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/best-frontend-for-ollama-overview-hero-es.webp',
     title: '¿Mejor frontend para Ollama?',
     seoTitle: '¿Mejor frontend para Ollama? | Prompt Bites | PromptQuorum',
-    metaDescription: 'Open WebUI es el mejor frontend para Ollama. SillyTavern para roleplay y Jan para gestión de modelos. Los tres son gratuitos y open source. Mayo 2026.',
+    metaDescription: 'Open WebUI es el mejor frontend para Ollama. SillyTavern para roleplay y Jan para gestión de modelos. Los tres son gratuitos y open source.',
     publishDate: '2026-05-18',
-    dateModified: '2026-05-31',
+    dateModified: '2026-08-28',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-06-18',
+    next_refresh_due: '2026-11-28',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     educationalLevel: 'Intermedio',
@@ -515,7 +475,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: '¿Es Open WebUI compatible con Ollama?',
-            a: 'Sí. Open WebUI se conecta a Ollama apuntando a localhost:11434 (la dirección API predeterminada de Ollama). Ejecuta `docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway ghcr.io/open-webui/open-webui:main` para iniciar junto a una instancia de Ollama en ejecución.',
+            a: 'Sí. Open WebUI se conecta a Ollama apuntando a localhost:11434 (la dirección API predeterminada de Ollama). Ejecuta `docker run -d -p 3000:8080 -v open-webui:/app/backend/data -e OLLAMA_BASE_URL=http://host.docker.internal:11434 --add-host=host.docker.internal:host-gateway --name open-webui ghcr.io/open-webui/open-webui:main` para iniciar junto a una instancia de Ollama en ejecución.',
           },
           {
             q: '¿Puedo usar SillyTavern con Ollama?',
@@ -538,11 +498,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/best-frontend-for-ollama-overview-hero-pt.webp',
     title: '¿Mejor frontend para Ollama?',
     seoTitle: 'Melhor frontend para Ollama? | Prompt Bites | PromptQuorum',
-    metaDescription: 'Open WebUI é o melhor frontend para Ollama. SillyTavern para roleplay e Jan para gestão de modelos. Os três são gratuitos e open source. Maio 2026.',
+    metaDescription: 'Open WebUI é o melhor frontend para Ollama. SillyTavern para roleplay e Jan para gestão de modelos. Os três são gratuitos e open source.',
     publishDate: '2026-05-18',
-    dateModified: '2026-06-02',
+    dateModified: '2026-08-28',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-06-18',
+    next_refresh_due: '2026-11-28',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     educationalLevel: 'Intermediate',
@@ -599,7 +559,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'O Open WebUI é compatível com Ollama?',
-            a: 'Sim. O Open WebUI conecta-se ao Ollama apontando para localhost:11434 (o endereço API padrão do Ollama). Execute `docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway ghcr.io/open-webui/open-webui:main` para iniciar junto a uma instância Ollama em execução.',
+            a: 'Sim. O Open WebUI conecta-se ao Ollama apontando para localhost:11434 (o endereço API padrão do Ollama). Execute `docker run -d -p 3000:8080 -v open-webui:/app/backend/data -e OLLAMA_BASE_URL=http://host.docker.internal:11434 --add-host=host.docker.internal:host-gateway --name open-webui ghcr.io/open-webui/open-webui:main` para iniciar junto a uma instância Ollama em execução.',
           },
           {
             q: 'Posso usar o SillyTavern com Ollama?',
@@ -622,11 +582,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/best-frontend-for-ollama-overview-hero-ar.webp',
     title: 'أفضل واجهة أمامية لـ ⁨Ollama⁩؟',
     seoTitle: 'أفضل واجهة لـ ⁨Ollama⁩: ⁨Open WebUI⁩ أو ⁨SillyTavern 2026⁩',
-    metaDescription: '⁨Open WebUI⁩ الأفضل لـ ⁨Ollama⁩: يعمل كحاوية ⁨Docker⁩ ويدعم ⁨RAG. SillyTavern⁩ للأدوار، ⁨Jan⁩ لإدارة النماذج. الثلاثة مجانية. مايو ⁨2026⁩.',
+    metaDescription: '⁨Open WebUI⁩ الأفضل لـ ⁨Ollama⁩: يعمل كحاوية ⁨Docker⁩ ويدعم ⁨RAG. SillyTavern⁩ للأدوار، ⁨Jan⁩ لإدارة النماذج. الثلاثة مجانية.',
     publishDate: '2026-05-18',
-    dateModified: '2026-06-20',
+    dateModified: '2026-08-28',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-06-18',
+    next_refresh_due: '2026-11-28',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     educationalLevel: 'متوسط',
@@ -683,7 +643,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'هل Open WebUI متوافق مع Ollama؟',
-            a: 'نعم. يتصل Open WebUI بـ Ollama عبر localhost:11434 (عنوان API الافتراضي لـ Ollama). نفّذ `docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway ghcr.io/open-webui/open-webui:main` لتشغيله إلى جانب نسخة Ollama قيد التشغيل.',
+            a: 'نعم. يتصل Open WebUI بـ Ollama عبر localhost:11434 (عنوان API الافتراضي لـ Ollama). نفّذ `docker run -d -p 3000:8080 -v open-webui:/app/backend/data -e OLLAMA_BASE_URL=http://host.docker.internal:11434 --add-host=host.docker.internal:host-gateway --name open-webui ghcr.io/open-webui/open-webui:main` لتشغيله إلى جانب نسخة Ollama قيد التشغيل.',
           },
           {
             q: 'هل يمكنني استخدام SillyTavern مع Ollama؟',
@@ -706,11 +666,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/best-frontend-for-ollama-overview-hero-ko.webp',
     title: 'Ollama 최적 프론트엔드는?',
     seoTitle: 'Ollama 최적 프론트엔드 비교: Open WebUI vs SillyTavern vs Jan 2026',
-    metaDescription: 'Ollama 프론트엔드 추천: Open WebUI가 대부분의 사용자에게 최선입니다. SillyTavern은 롤플레이, Jan은 모델 관리에 적합합니다. 세 가지 모두 무료 오픈소스입니다. 2026년 5월.',
+    metaDescription: 'Ollama 프론트엔드 추천: Open WebUI가 대부분의 사용자에게 최선입니다. SillyTavern은 롤플레이, Jan은 모델 관리에 적합합니다. 세 가지 모두 무료 오픈소스입니다.',
     publishDate: '2026-05-18',
-    dateModified: '2026-06-20',
+    dateModified: '2026-08-28',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-06-18',
+    next_refresh_due: '2026-11-28',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     educationalLevel: '중급',
@@ -746,7 +706,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       description: 'Open WebUI, SillyTavern, Jan 세 가지 Ollama 프론트엔드를 비교하고 사용 목적에 따른 최적 선택을 안내합니다.',
       url: 'https://www.promptquorum.com/ko/prompt-bites/best-frontend-for-ollama',
       datePublished: '2026-05-18',
-      dateModified: '2026-05-18',
+      dateModified: '2026-08-28',
       'proficiencyLevel': '중급',
     },
     breadcrumbSchema: {
@@ -820,7 +780,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           },
           {
             q: 'Open WebUI는 Ollama와 호환됩니까?',
-            a: '예. Open WebUI는 localhost:11434(Ollama의 기본 API 주소)를 통해 Ollama에 연결됩니다. 실행 중인 Ollama 인스턴스 옆에서 시작하려면 `docker run -d -p 3000:8080 --add-host=host.docker.internal:host-gateway ghcr.io/open-webui/open-webui:main` 명령을 실행하십시오.',
+            a: '예. Open WebUI는 localhost:11434(Ollama의 기본 API 주소)를 통해 Ollama에 연결됩니다. 실행 중인 Ollama 인스턴스 옆에서 시작하려면 `docker run -d -p 3000:8080 -v open-webui:/app/backend/data -e OLLAMA_BASE_URL=http://host.docker.internal:11434 --add-host=host.docker.internal:host-gateway --name open-webui ghcr.io/open-webui/open-webui:main` 명령을 실행하십시오.',
           },
           {
             q: 'SillyTavern을 Ollama와 함께 사용할 수 있습니까?',
