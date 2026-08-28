@@ -45,3 +45,6 @@ tools/competitor-sweep/sweep-report.md
 
 # Regenerated on every build by scripts/write-build-info.mjs (npm prebuild)
 public/build-info.json
+
+# Stale Vite build output — the Next.js build writes to .next/
+dist/

@@ -24,6 +24,7 @@ import { SMART_HOME_CATEGORIES } from './categories'
 import { smartHomeAlternates, smartHomeHubPath, smartHomeArticlePath } from './metadata-helpers'
 import { isSmartHomeArticlePublished, isSmartHomeHubPublished } from './published'
 import { formatDisplayDate } from '@/lib/formatDisplayDate'
+import { narrowArticleData } from '@/lib/narrowArticleData'
 
 const BASE = 'https://www.promptquorum.com'
 
@@ -358,7 +359,7 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
       {itemListSchemas.map((schema, i) => (
         <script key={`itemlist-${i}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       ))}
-      <SmartHomePostClient slug={slug} lang={lang} articleData={articleData!} />
+      <SmartHomePostClient slug={slug} lang={lang} {...narrowArticleData(articleData, lang)} />
     </>
   )
 }

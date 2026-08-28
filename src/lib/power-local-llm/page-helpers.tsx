@@ -20,6 +20,7 @@ const NEW_LABEL: Record<string, string> = { en: 'NEW', de: 'NEU', fr: 'NOUVEAU',
 const UPDATED_LABEL: Record<string, string> = { en: 'UPDATED', de: 'AKTUALISIERT', fr: 'MIS À JOUR', ja: '更新', zh: '已更新', es: 'ACTUALIZADO', pt: 'ATUALIZADO', ar: 'محدث', ko: '업데이트' }
 import { getPowerLLMGeoEntities } from '@/lib/geo-schema'
 import { toOutputLocale } from '@/lib/i18n/constants'
+import { narrowArticleData } from '@/lib/narrowArticleData'
 
 const BASE = 'https://www.promptquorum.com'
 
@@ -360,7 +361,7 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
       {itemListSchemas.map((schema, i) => (
         <script key={`itemlist-${i}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       ))}
-      <PowerLocalLLMPostClient slug={slug} lang={lang} articleData={articleData!} />
+      <PowerLocalLLMPostClient slug={slug} lang={lang} {...narrowArticleData(articleData, lang)} />
     </>
   )
 }

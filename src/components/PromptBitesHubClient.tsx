@@ -410,6 +410,10 @@ export function PromptBitesHubClient({ lang, articles, latestDateModified }: Pro
               width={1200}
               height={675}
               priority
+              // Pre-rendered at exactly these dimensions as WebP (12-37 KB), so Vercel's
+              // image optimizer has nothing to add — it only adds a billed transformation
+              // per source image (5,318 of them) and a redirect hop before LCP.
+              unoptimized
               className="w-full"
             />
           </figure>

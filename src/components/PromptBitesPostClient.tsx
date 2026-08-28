@@ -17,6 +17,9 @@ interface Props {
   slug: string
   lang: Language
   articleData: Partial<Record<Language, PromptBiteArticle>>
+  /** Locales this article exists in. Passed explicitly because `articleData` is
+   *  narrowed to the rendered locale (see src/lib/narrowArticleData.ts). */
+  availableLangs?: string[]
   // Resolved server-side: sibling-bite slug -> localized title. Avoids the
   // client needing the full promptBitesContent barrel just to render a few
   // "related bites" link labels.
@@ -435,7 +438,7 @@ function FaqSection({ title, faqs, lang: _lang }: { title?: string; faqs: Array<
   )
 }
 
-export function PromptBitesPostClient({ slug, lang, articleData, siblingTitles }: Props) {
+export function PromptBitesPostClient({ slug, lang, articleData, availableLangs, siblingTitles }: Props) {
   const article = articleData?.[lang] ?? articleData?.['en']
 
   if (!article) {
@@ -512,13 +515,17 @@ export function PromptBitesPostClient({ slug, lang, articleData, siblingTitles }
               width={1200}
               height={675}
               priority
+              // Pre-rendered at exactly these dimensions as WebP (12-37 KB), so Vercel's
+              // image optimizer has nothing to add — it only adds a billed transformation
+              // per source image (5,318 of them) and a redirect hop before LCP.
+              unoptimized
               className="w-full"
             />
           </figure>
         )}
 
         {/* Cross-language links */}
-        <LangLinksBar cluster="prompt-bites" slug={slug} availableLangs={Object.keys(articleData ?? {})} initialLang={lang} />
+        <LangLinksBar cluster="prompt-bites" slug={slug} availableLangs={availableLangs ?? Object.keys(articleData ?? {})} initialLang={lang} />
 
         {/* Affiliate disclosure — neutral third-party-link notice */}
         {(article as any).affiliateDisclosure && (

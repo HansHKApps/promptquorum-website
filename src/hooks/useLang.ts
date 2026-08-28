@@ -49,12 +49,30 @@ export function useLang(initialLang?: Lang): Lang {
     return () => window.removeEventListener('popstate', read)
   }, [])
 
-  // Strip a redundant `?lang=en` from the URL. Kept in its own effect, after the one
-  // above, so the rewrite never happens during the hydration commit.
+  // Legacy `?lang=` URL cleanup, in its own effect after the one above so the rewrite
+  // never happens during the hydration commit (that raced usePathname and produced
+  // React hydration errors).
+  //
+  // `?lang=en` is simply stripped. A non-English `?lang=xx` used to be honoured by
+  // swapping the rendered content client-side, which only worked because the page
+  // shipped all nine locale blocks to the browser. Now that the payload is narrowed to
+  // the rendered locale (src/lib/narrowArticleData.ts), send the reader to the real
+  // path-prefixed URL instead — they get the server-rendered translation, the correct
+  // <html lang>, and the canonical URL, rather than a client-side approximation.
   useEffect(() => {
-    if (window.location.pathname.match(PATH_LOCALE_RE)) return
-    if (new URLSearchParams(window.location.search).get('lang') !== 'en') return
-    window.history.replaceState({}, '', window.location.pathname + window.location.hash)
+    const { pathname, search, hash } = window.location
+    if (pathname.match(PATH_LOCALE_RE)) return
+
+    const raw = new URLSearchParams(search).get('lang')
+    if (!raw) return
+
+    if (raw === 'en') {
+      window.history.replaceState({}, '', pathname + hash)
+      return
+    }
+    if (!VALID_LANGS.includes(raw as Lang)) return
+
+    window.location.replace(`/${raw}${pathname}${hash}`)
   }, [])
 
   return lang

@@ -15,6 +15,7 @@ import { promptBitesAlternates, promptBitesHubPath, promptBitesArticlePath } fro
 import { getHubMetadata } from './hub-metadata'
 import { toOutputLocale } from '@/lib/i18n/constants'
 import { buildArticleImageObject } from '@/lib/imageObjectSchema'
+import { narrowArticleData } from '@/lib/narrowArticleData'
 
 const BASE = 'https://www.promptquorum.com'
 
@@ -195,7 +196,7 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
       <PromptBitesPostClient
         slug={slug}
         lang={lang}
-        articleData={articleData!}
+        {...narrowArticleData(articleData, lang)}
         siblingTitles={resolveSiblingTitles((article as any).siblingBites, lang)}
       />
     </>

@@ -9,6 +9,7 @@ import { COMING_SOON_SLUGS } from '@/lib/local-llms/comingSoon'
 import { generateAlternates } from '@/lib/hreflang'
 import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
 import { LocalLLMArticleJsonLd } from '@/lib/local-llms/jsonld'
+import { narrowArticleData } from '@/lib/narrowArticleData'
 
 export const dynamic = 'force-static'
 export const revalidate = 86400
@@ -185,7 +186,7 @@ export default async function LocalLLMsArticlePage({ params }: PageProps) {
   return (
     <>
       <LocalLLMArticleJsonLd slug={slug} articleKey={key} lang={selectedLang} />
-      <LocalLLMsPostClient slug={slug} initialLang={selectedLang} articleData={llmContent[key]} />
+      <LocalLLMsPostClient slug={slug} initialLang={selectedLang} {...narrowArticleData(llmContent[key], selectedLang)} />
     </>
   )
 }

@@ -20,6 +20,9 @@ interface Props {
   slug: string
   initialLang?: Language
   articleData: Partial<Record<Language, PEArticle>>
+  /** Locales this article exists in. Passed explicitly because `articleData` is
+   *  narrowed to the rendered locale (see src/lib/narrowArticleData.ts). */
+  availableLangs?: string[]
 }
 
 // Jump-to-section translations
@@ -1213,7 +1216,7 @@ const THEME_COLORS: Record<string, { dot: string; badge: string; label: string }
   'Policy & Compliance': { dot: 'bg-rose-400',   badge: 'bg-rose-50 text-rose-700 border border-rose-200',     label: 'Policy & Compliance' },
 }
 
-function PromptEngineeringPostContent({ slug, initialLang, articleData }: Props) {
+function PromptEngineeringPostContent({ slug, initialLang, articleData, availableLangs }: Props) {
   const clientLang = useLang(initialLang) as Language
   const lang: Language = clientLang
   const [searchQuery, setSearchQuery] = useState('')
@@ -1265,7 +1268,7 @@ function PromptEngineeringPostContent({ slug, initialLang, articleData }: Props)
         </div>
 
         {/* Cross-language links */}
-        <LangLinksBar cluster="prompt-engineering" slug={slug} availableLangs={Object.keys(articleData)} initialLang={lang} />
+        <LangLinksBar cluster="prompt-engineering" slug={slug} availableLangs={availableLangs ?? Object.keys(articleData)} initialLang={lang} />
 
         {/* Article intro paragraph */}
         {article.intro && (
@@ -1292,6 +1295,10 @@ function PromptEngineeringPostContent({ slug, initialLang, articleData }: Props)
               width={1200}
               height={675}
               priority
+              // Pre-rendered at exactly these dimensions as WebP (12-37 KB), so Vercel's
+              // image optimizer has nothing to add — it only adds a billed transformation
+              // per source image (5,318 of them) and a redirect hop before LCP.
+              unoptimized
               className="w-full"
             />
           </figure>

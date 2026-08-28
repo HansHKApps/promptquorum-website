@@ -27,6 +27,9 @@ interface Props {
   slug: string
   initialLang?: Language
   articleData: Partial<Record<Language, LLMArticle>>
+  /** Locales this article exists in. Passed explicitly because `articleData` is
+   *  narrowed to the rendered locale (see src/lib/narrowArticleData.ts). */
+  availableLangs?: string[]
 }
 
 // Section header translations
@@ -805,7 +808,7 @@ function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLM
   )
 }
 
-function LocalLLMsPostContent({ slug, initialLang, articleData }: Props) {
+function LocalLLMsPostContent({ slug, initialLang, articleData, availableLangs }: Props) {
   const clientLang = useLang(initialLang) as Language
   const lang: Language = clientLang
 
@@ -863,7 +866,7 @@ function LocalLLMsPostContent({ slug, initialLang, articleData }: Props) {
         </div>
 
         {/* Cross-language links */}
-        <LangLinksBar cluster="local-llms" slug={slug} availableLangs={Object.keys(articleData)} initialLang={lang} />
+        <LangLinksBar cluster="local-llms" slug={slug} availableLangs={availableLangs ?? Object.keys(articleData)} initialLang={lang} />
 
         {/* Affiliate disclosure — neutral third-party-link notice */}
         {(article as any).affiliateDisclosure && (
@@ -987,6 +990,10 @@ function LocalLLMsPostContent({ slug, initialLang, articleData }: Props) {
               height={675}
               sizes="(max-width: 768px) 100vw, 768px"
               priority
+              // Pre-rendered at exactly these dimensions as WebP (12-37 KB), so Vercel's
+              // image optimizer has nothing to add — it only adds a billed transformation
+              // per source image (5,318 of them) and a redirect hop before LCP.
+              unoptimized
               className="w-full"
             />
           </figure>

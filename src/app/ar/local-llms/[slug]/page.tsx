@@ -7,6 +7,7 @@ import { COMING_SOON_SLUGS } from '@/lib/local-llms/comingSoon'
 import { generateAlternates } from '@/lib/hreflang'
 import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
 import { LocalLLMArticleJsonLd } from '@/lib/local-llms/jsonld'
+import { narrowArticleData } from '@/lib/narrowArticleData'
 
 export const revalidate = 86400
 
@@ -136,7 +137,7 @@ export default async function ArLocalLLMsArticlePage({ params }: PageProps) {
       <LocalLLMsPostClient
         slug={slug}
         initialLang="ar"
-        articleData={llmContent[key]}
+        {...narrowArticleData(llmContent[key], "ar")}
       />
     </>
   )

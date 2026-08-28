@@ -6,6 +6,7 @@ import { PE_SLUG_TO_KEY } from '@/lib/prompt-engineering/slugs'
 import { generateAlternates } from '@/lib/hreflang'
 import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
 import { PEArticleJsonLd } from '@/lib/prompt-engineering/jsonld'
+import { narrowArticleData } from '@/lib/narrowArticleData'
 
 export const revalidate = 86400
 
@@ -78,7 +79,7 @@ export default async function ZhPromptEngineeringArticlePage({ params }: PagePro
       <PromptEngineeringPostClient
         slug={slug}
         initialLang="zh"
-        articleData={peContent[key]}
+        {...narrowArticleData(peContent[key], "zh")}
       />
     </>
   )

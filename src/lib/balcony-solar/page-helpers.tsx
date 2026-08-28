@@ -25,6 +25,7 @@ import { balconySolarAlternates, balconySolarHubPath, balconySolarArticlePath } 
 import { isBalconySolarArticlePublished, isBalconySolarHubPublished } from './published'
 import { isNewArticle, isUpdatedArticle } from '@/lib/article-freshness'
 import { formatDisplayDate } from '@/lib/formatDisplayDate'
+import { narrowArticleData } from '@/lib/narrowArticleData'
 
 const BASE = 'https://www.promptquorum.com'
 
@@ -352,7 +353,7 @@ export async function buildArticlePageElement(slug: string, lang: Lang) {
       {itemListSchemas.map((schema, i) => (
         <script key={`itemlist-${i}`} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       ))}
-      <BalconySolarPostClient slug={slug} lang={lang} articleData={articleData!} />
+      <BalconySolarPostClient slug={slug} lang={lang} {...narrowArticleData(articleData, lang)} />
     </>
   )
 }

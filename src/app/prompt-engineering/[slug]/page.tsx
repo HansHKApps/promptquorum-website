@@ -10,6 +10,7 @@ import { generateAlternates } from '@/lib/hreflang'
 import { PATH_PREFIX_LANGS } from '@/lib/i18n/constants'
 import { truncateTitle } from '@/lib/utils'
 import { PEArticleJsonLd } from '@/lib/prompt-engineering/jsonld'
+import { narrowArticleData } from '@/lib/narrowArticleData'
 
 export const dynamic = 'force-static'
 export const revalidate = 86400
@@ -209,7 +210,7 @@ export default async function PromptEngineeringArticlePage({ params }: PageProps
   return (
     <>
       <PEArticleJsonLd slug={slug} articleKey={key} lang={selectedLang} />
-      <PromptEngineeringPostClient slug={slug} initialLang={selectedLang} articleData={peContent[key]} />
+      <PromptEngineeringPostClient slug={slug} initialLang={selectedLang} {...narrowArticleData(peContent[key], selectedLang)} />
     </>
   )
 }

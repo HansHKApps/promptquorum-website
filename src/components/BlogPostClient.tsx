@@ -211,6 +211,10 @@ function BlogPostClientContent({ post, slug, initialLang, availableLangs }: Blog
                 height={675}
                 className="w-full rounded-lg border border-primary/20 shadow-sm"
                 priority
+                // Pre-rendered at exactly these dimensions as WebP (12-37 KB), so Vercel's
+                // image optimizer has nothing to add — it only adds a billed transformation
+                // per source image (5,318 of them) and a redirect hop before LCP.
+                unoptimized
               />
             </div>
           ) : null}

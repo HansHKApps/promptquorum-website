@@ -31,6 +31,9 @@ interface Props {
   slug: string
   lang: Language
   articleData: Partial<Record<Language, LLMArticle>>
+  /** Locales this article exists in. Passed explicitly because `articleData` is
+   *  narrowed to the rendered locale (see src/lib/narrowArticleData.ts). */
+  availableLangs?: string[]
 }
 
 // Section header translations
@@ -786,7 +789,7 @@ function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLM
   )
 }
 
-function BalconySolarPostContent({ slug, lang, articleData }: Props) {
+function BalconySolarPostContent({ slug, lang, articleData, availableLangs }: Props) {
 
   if (!articleData) {
     return <div className="min-h-screen bg-surface pt-32 flex items-center justify-center"><p className="text-text-secondary">Article not found.</p></div>
@@ -842,7 +845,7 @@ function BalconySolarPostContent({ slug, lang, articleData }: Props) {
         </div>
 
         {/* Cross-language links */}
-        <LangLinksBar cluster="balcony-solar" slug={slug} availableLangs={Object.keys(articleData)} initialLang={lang} />
+        <LangLinksBar cluster="balcony-solar" slug={slug} availableLangs={availableLangs ?? Object.keys(articleData)} initialLang={lang} />
 
         {/* Lead Answer Block — canonical definition for AI crawlers (Rule 31) */}
         {article.leadAnswerBlock && (
@@ -947,6 +950,10 @@ function BalconySolarPostContent({ slug, lang, articleData }: Props) {
               width={1200}
               height={675}
               priority
+              // Pre-rendered at exactly these dimensions as WebP (12-37 KB), so Vercel's
+              // image optimizer has nothing to add — it only adds a billed transformation
+              // per source image (5,318 of them) and a redirect hop before LCP.
+              unoptimized
               className="w-full"
             />
           </figure>
