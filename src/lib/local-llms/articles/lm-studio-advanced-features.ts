@@ -12,9 +12,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       theme: 'Tools & Interfaces',
       heroImage: '/images/lm-studio-advanced-features-overview-hero-en.webp',
       title: 'LM Studio Advanced Features in 2026: GPU Settings, LoRA, and Fine-Tuning',
-      dateModified: '2026-06-20',
+      dateModified: '2026-08-28',
       seoTitle: 'LM Studio vs Ollama: API Server, GPU Layers & LoRA 2026',
-      intro: 'LM Studio is primarily a chat app, but it also includes advanced features for developers: GPU memory configuration, context window adjustment, OpenAI-compatible API, and integration with fine-tuning tools. As of April 2026, LM Studio is expanding beyond chat to support professional workflows like LoRA fine-tuning and batch inference.',
+      intro: 'LM Studio is primarily a chat app, but it also includes advanced features for developers: GPU memory configuration, context window adjustment, OpenAI-compatible API, and integration with fine-tuning tools. LM Studio is expanding beyond chat to support professional workflows like LoRA fine-tuning and batch inference.',
       metaDescription: "LM Studio's API server (port 1234), GPU layers slider, context window tuning, LoRA load/unload, and batch inference: advanced guide for 2026.",
       publishDate: '2026-04-04',
       leadAnswerBlock: '**LM Studio is primarily a chat app, but it also includes advanced features for developers: GPU memory configuration, context window adjustment, OpenAI-compatible API, and integration with fine-tuning t.**',
@@ -29,7 +29,7 @@ schema: {
         'description': 'LM Studio advanced features: GPU optimization, context window, API, and batch inference. Developer guide for local LLM production workflows. 2026.',
         'url': 'https://www.promptquorum.com/local-llms/lm-studio-advanced-features',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-04-18',
+        'dateModified': '2026-08-28',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -134,6 +134,10 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: "LM Studio's advanced features for developers include GPU memory configuration, context window adjustment, an OpenAI-compatible local API server, and the ability to load pre-trained LoRA adapters -- though LoRA training itself is not built in." },
+            { type: 'plain-terms', text: "Beyond its chat window, LM Studio has settings meant for developers: how much of the model runs on your GPU, how long a conversation it can remember, and a local API server other apps can connect to. It can also load a LoRA adapter someone else trained, though you can't train one from inside LM Studio itself -- that still requires a separate tool." },
+          ],
           items: [
             'LM Studio has advanced settings in the Settings → Server tab (GPU options, context length).',
             'GPU memory can be manually set from 10% to 100% of VRAM -- lower values free up GPU for other apps.',
@@ -291,6 +295,10 @@ schema: {
       sections: {
         zusammenfassung: {
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Las funciones avanzadas de LM Studio para desarrolladores incluyen configuración de memoria GPU, ajuste de la ventana de contexto, un servidor API local compatible con OpenAI, y la capacidad de cargar adaptadores LoRA ya entrenados -- aunque el entrenamiento LoRA en sí no está integrado.' },
+            { type: 'plain-terms', text: 'Más allá de su ventana de chat, LM Studio tiene ajustes pensados para desarrolladores: cuánto del modelo se ejecuta en tu GPU, cuánto puede recordar una conversación, y un servidor API local al que otras apps pueden conectarse. También puede cargar un adaptador LoRA ya entrenado por otra persona, aunque no puedes entrenar uno desde dentro de LM Studio -- eso todavía requiere una herramienta aparte.' },
+          ],
           items: [
             'LM Studio hat erweiterte Einstellungen im Register Einstellungen → Server (GPU-Optionen, Kontextlänge).',
             'GPU-Speicher kann manuell von 10 % bis 100 % des VRAM eingestellt werden - niedrigere Werte geben GPU für andere Anwendungen frei.',
@@ -530,7 +538,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         datePublished: '2026-04-04',
-        dateModified: '2026-04-08',
+        dateModified: '2026-08-28',
         mainEntity: [
           {
             '@type': 'Question',
@@ -580,7 +588,7 @@ schema: {
         name: 'Wie man GPU-Speicher und Kontextfenster in LM Studio konfiguriert',
         description: 'Schritt-für-Schritt-Anleitung zur Optimierung der GPU-Speicherzuweisung, Kontextlänge, API-Setup, Batch-Inferenz und Benchmarking in LM Studio.',
         datePublished: '2026-04-04',
-        dateModified: '2026-04-08',
+        dateModified: '2026-08-28',
         inLanguage: 'de',
         step: [
           {
@@ -620,7 +628,7 @@ schema: {
         '@type': 'ItemList',
         name: 'LM Studio erweiterte Funktionen 2026: GPU-Einstellungen, LoRA und Fine-Tuning',
         datePublished: '2026-04-04',
-        dateModified: '2026-04-08',
+        dateModified: '2026-08-28',
         inLanguage: 'de',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'LM Studio hat erweiterte Einstellungen im Register Einstellungen → Server (GPU-Optionen, Kontextlänge).' },
@@ -671,6 +679,10 @@ schema: {
       sections: {
         pointsCles: {
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'تشمل الميزات المتقدمة لـ LM Studio للمطورين إعداد ذاكرة GPU، وضبط نافذة السياق، وخادم API محلي متوافق مع OpenAI، والقدرة على تحميل محوّلات LoRA مدرّبة مسبقاً -- رغم أن تدريب LoRA نفسه غير مدمج.' },
+            { type: 'plain-terms', text: 'إلى جانب نافذة المحادثة، يمتلك LM Studio إعدادات موجهة للمطورين: مقدار ما يعمل من النموذج على GPU لديك، ومدة تذكّره للمحادثة، وخادم API محلي يمكن لتطبيقات أخرى الاتصال به. يمكنه أيضاً تحميل محوّل LoRA دربه شخص آخر، لكن لا يمكنك تدريب واحد من داخل LM Studio نفسه -- ما زال ذلك يتطلب أداة منفصلة.' },
+          ],
           items: [
             'LM Studio offre des paramètres avancés : Paramètres → Serveur (options GPU, longueur contexte).',
             'La mémoire GPU est réglable de 10 % à 100 % du VRAM - les valeurs basses libèrent GPU pour autres apps.',
@@ -900,7 +912,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         datePublished: '2026-04-04',
-        dateModified: '2026-04-08',
+        dateModified: '2026-08-28',
         mainEntity: [
           {
             '@type': 'Question',
@@ -934,7 +946,7 @@ schema: {
         name: 'Comment configurer mémoire GPU et fenêtre contexte dans LM Studio',
         description: 'Guide étape par étape pour optimiser allocation GPU, longueur contexte, setup API, inférence batch et benchmarking dans LM Studio.',
         datePublished: '2026-04-04',
-        dateModified: '2026-04-08',
+        dateModified: '2026-08-28',
         inLanguage: 'fr',
         step: [
           {
@@ -974,7 +986,7 @@ schema: {
         '@type': 'ItemList',
         name: 'LM Studio : Fonctionnalités avancées 2026 (Paramètres GPU, LoRA et Fine-Tuning)',
         datePublished: '2026-04-04',
-        dateModified: '2026-04-08',
+        dateModified: '2026-08-28',
         inLanguage: 'fr',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'LM Studio offre paramètres avancés : Paramètres → Serveur (options GPU, longueur contexte).' },
@@ -1025,6 +1037,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'O LM Studioの開発者向け高度な機能には、GPUメモリ設定、コンテキストウィンドウ調整、OpenAI互換のローカルAPIサーバー、そして事前学習済みLoRAアダプターの読み込み機能が含まれます -- ただしLoRAトレーニング自体は組み込まれていません。' },
+            { type: 'plain-terms', text: 'チャットウィンドウの他に、LM Studioには開発者向けの設定があります：モデルのどれだけをGPUで実行するか、会話をどれだけ記憶できるか、そして他のアプリが接続できるローカルAPIサーバーです。他の人が訓練したLoRAアダプターを読み込むこともできますが、LM Studio自体の中でLoRAを訓練することはできません -- それには依然として別のツールが必要です。' },
+          ],
           items: [
             'LM Studioの高度な設定は「設定」→「サーバー」タブにあります（GPUオプション、コンテキスト長）。',
             'GPUメモリはVRAMの10%から100%まで手動で設定できます。値を下げると他のアプリ用にGPUが解放されます。',
@@ -1195,6 +1211,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'LM Studio面向开发者的高级功能包括GPU内存配置、上下文窗口调整、兼容OpenAI的本地API服务器，以及加载预训练LoRA适配器的能力——不过LoRA训练本身并未内置。' },
+            { type: 'plain-terms', text: '除了聊天窗口，LM Studio还提供面向开发者的设置：模型有多少部分运行在GPU上、对话能记住多长时间，以及一个供其他应用连接的本地API服务器。它还可以加载别人训练好的LoRA适配器，但你无法在LM Studio内部训练LoRA——这仍需要单独的工具。' },
+          ],
           items: [
             'LM Studio高级设置位于"设置"→"服务器"选项卡（GPU选项、上下文长度）。',
             'GPU内存可从VRAM的10%手动设置到100%——较低值可为其他应用释放GPU空间。',
@@ -1337,7 +1357,7 @@ schema: {
       heroImage: '/images/lm-studio-advanced-features-overview-hero-es.webp',
       title: 'LM Studio: Funciones avanzadas 2026 (GPU, LoRA y ajuste fino)',
       seoTitle: 'LM Studio 2026: API local, capas GPU y LoRA explicados',
-      intro: 'LM Studio es principalmente una app de chat, pero también incluye funciones avanzadas para desarrolladores: configuración de memoria GPU, ajuste de ventana de contexto, API compatible con OpenAI e integración con herramientas de ajuste fino. A partir de abril de 2026, LM Studio está expandiéndose más allá del chat para soportar flujos de trabajo profesionales como ajuste fino con LoRA e inferencia por lotes.',
+      intro: 'LM Studio es principalmente una app de chat, pero también incluye funciones avanzadas para desarrolladores: configuración de memoria GPU, ajuste de ventana de contexto, API compatible con OpenAI e integración con herramientas de ajuste fino. LM Studio está expandiéndose más allá del chat para soportar flujos de trabajo profesionales como ajuste fino con LoRA e inferencia por lotes.',
       metaDescription: 'Servidor API de LM Studio (puerto 1234), control de capas GPU, ajuste de la ventana de contexto, carga de LoRA e inferencia por lotes: guía avanzada 2026.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**LM Studio es principalmente una app de chat, pero también incluye funciones avanzadas para desarrolladores: configuración de memoria GPU, ajuste de ventana de contexto, API compatible con OpenAI e integración con herramientas de ajuste fino.**',
@@ -1352,7 +1372,7 @@ schema: {
         'description': 'Funciones avanzadas de LM Studio: optimización de GPU, ventana de contexto, API e inferencia por lotes. Guía para desarrolladores en flujos de trabajo locales de LLM en producción. 2026.',
         'url': 'https://www.promptquorum.com/es/local-llms/lm-studio-advanced-features',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-04-18',
+        'dateModified': '2026-08-28',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -1374,7 +1394,7 @@ schema: {
         'name': 'Configurar las funciones avanzadas de LM Studio',
         'description': 'Guía paso a paso para optimizar la asignación de GPU, la longitud del contexto, la configuración de la API, la inferencia por lotes y el benchmarking en LM Studio.',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-04-18',
+        'dateModified': '2026-08-28',
         'step': [
           { '@type': 'HowToStep', 'name': 'Configurar la memoria GPU', 'text': 'Abre Configuración → control deslizante de aceleración GPU. Ajusta del 10 al 100 % del VRAM. Valores menores liberan GPU para otras apps; valores mayores maximizan la velocidad de inferencia.' },
           { '@type': 'HowToStep', 'name': 'Ajustar la ventana de contexto', 'text': 'En Configuración, aumenta la longitud del contexto hasta el límite del modelo. Más contexto consume más VRAM, pero permite conversaciones más largas sin perder historial.' },
@@ -1388,7 +1408,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         datePublished: '2026-04-04',
-        dateModified: '2026-04-18',
+        dateModified: '2026-08-28',
         mainEntity: [
           {
             '@type': 'Question',
@@ -1460,6 +1480,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: "Die erweiterten Funktionen von LM Studio für Entwickler umfassen GPU-Speicherkonfiguration, Anpassung des Kontextfensters, einen OpenAI-kompatiblen lokalen API-Server und die Möglichkeit, vortrainierte LoRA-Adapter zu laden -- das LoRA-Training selbst ist jedoch nicht eingebaut." },
+            { type: 'plain-terms', text: 'Neben dem Chat-Fenster bietet LM Studio Einstellungen für Entwickler: wie viel des Modells auf der GPU läuft, wie lange sich eine Unterhaltung merken lässt, und einen lokalen API-Server, mit dem sich andere Apps verbinden können. Es kann auch einen von jemand anderem trainierten LoRA-Adapter laden, aber man kann keinen direkt in LM Studio trainieren -- dafür ist weiterhin ein separates Tool nötig.' },
+          ],
           items: [
             'LM Studio tiene configuración avanzada en la pestaña Configuración → Servidor (opciones de GPU, longitud de contexto).',
             'La memoria GPU puede ajustarse manualmente del 10 % al 100 % del VRAM -- valores más bajos liberan GPU para otras apps.',
@@ -1590,7 +1614,7 @@ schema: {
       heroImage: '/images/lm-studio-advanced-features-overview-hero-ar.webp',
       title: '⁨LM Studio⁩: الميزات المتقدمة ⁨2026⁩ (⁨GPU⁩ و⁨LoRA⁩ والضبط الدقيق)',
       seoTitle: '⁨LM Studio⁩: ⁨GPU⁩ و⁨API⁩ و⁨LoRA⁩ — إعداد متقدم ⁨2026⁩',
-      intro: 'يُعد LM Studio في المقام الأول تطبيق محادثة، لكنه يتضمن أيضًا ميزات متقدمة للمطورين: إعداد ذاكرة GPU وضبط نافذة السياق وواجهة API متوافقة مع OpenAI والتكامل مع أدوات الضبط الدقيق. اعتبارًا من أبريل 2026، يتوسع LM Studio إلى ما بعد المحادثة لدعم سير العمل الاحترافي مثل الضبط الدقيق باستخدام LoRA والاستدلال على دفعات.',
+      intro: 'يُعد LM Studio في المقام الأول تطبيق محادثة، لكنه يتضمن أيضًا ميزات متقدمة للمطورين: إعداد ذاكرة GPU وضبط نافذة السياق وواجهة API متوافقة مع OpenAI والتكامل مع أدوات الضبط الدقيق. يتوسع LM Studio إلى ما بعد المحادثة لدعم سير العمل الاحترافي مثل الضبط الدقيق باستخدام LoRA والاستدلال على دفعات.',
       metaDescription: 'خادم ⁨API⁩ على المنفذ ⁨1234⁩، تحكم دقيق في طبقات ⁨GPU⁩ من ⁨10%⁩ إلى ⁨100%⁩، توسيع نافذة السياق حتى ⁨32k⁩، وتحميل ⁨LoRA⁩ — دليل مطورين ⁨2026⁩.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**يُعد LM Studio في المقام الأول تطبيق محادثة، لكنه يتضمن أيضًا ميزات متقدمة للمطورين: إعداد ذاكرة GPU وضبط نافذة السياق وواجهة API متوافقة مع OpenAI والتكامل مع أدوات الضبط الدقيق.**',
@@ -1605,7 +1629,7 @@ schema: {
         'description': 'الميزات المتقدمة لـ LM Studio: تحسين GPU ونافذة السياق وواجهة API والاستدلال على دفعات. دليل للمطورين في سير عمل LLM المحلي بالإنتاج. 2026.',
         'url': 'https://www.promptquorum.com/ar/local-llms/lm-studio-advanced-features',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-04-18',
+        'dateModified': '2026-08-28',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'inLanguage': 'ar',
@@ -1629,7 +1653,7 @@ schema: {
         'description': 'دليل خطوة بخطوة لتحسين تخصيص GPU وطول السياق وإعداد واجهة API والاستدلال على دفعات وقياس الأداء في LM Studio.',
         'inLanguage': 'ar',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-04-18',
+        'dateModified': '2026-08-28',
         'step': [
           { '@type': 'HowToStep', 'name': 'إعداد ذاكرة GPU', 'text': 'افتح الإعدادات ← شريط تمرير تسريع GPU. اضبطه من 10 إلى 100% من VRAM. تُحرر القيم الأصغر GPU للتطبيقات الأخرى؛ بينما تُعظِّم القيم الأكبر سرعة الاستدلال.' },
           { '@type': 'HowToStep', 'name': 'ضبط نافذة السياق', 'text': 'في الإعدادات، زِد طول السياق حتى حد النموذج. يستهلك السياق الأكبر مزيدًا من VRAM، لكنه يتيح محادثات أطول دون فقدان السجل.' },
@@ -1644,7 +1668,7 @@ schema: {
         '@type': 'FAQPage',
         inLanguage: 'ar',
         datePublished: '2026-04-04',
-        dateModified: '2026-04-18',
+        dateModified: '2026-08-28',
         mainEntity: [
           {
             '@type': 'Question',
@@ -1716,6 +1740,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: "Les fonctionnalités avancées de LM Studio pour les développeurs incluent la configuration de la mémoire GPU, l'ajustement de la fenêtre de contexte, un serveur API local compatible OpenAI, et la possibilité de charger des adaptateurs LoRA pré-entraînés -- même si l'entraînement LoRA lui-même n'est pas intégré." },
+            { type: 'plain-terms', text: "En plus de sa fenêtre de chat, LM Studio propose des réglages pensés pour les développeurs : la part du modèle qui tourne sur le GPU, la durée pendant laquelle une conversation peut être mémorisée, et un serveur API local auquel d'autres applications peuvent se connecter. Il peut aussi charger un adaptateur LoRA entraîné par quelqu'un d'autre, mais on ne peut pas en entraîner un directement dans LM Studio -- cela nécessite toujours un outil séparé." },
+          ],
           items: [
             'يحتوي LM Studio على إعدادات متقدمة في علامة تبويب الإعدادات ← الخادم (خيارات GPU وطول السياق).',
             'يمكن ضبط ذاكرة GPU يدويًا من 10% إلى 100% من VRAM -- تُحرر القيم الأصغر GPU للتطبيقات الأخرى.',
@@ -1846,7 +1874,7 @@ schema: {
       heroImage: '/images/lm-studio-advanced-features-overview-hero-pt.webp',
       title: 'Recursos Avançados do LM Studio em 2026: GPU, LoRA e Fine-Tuning',
       seoTitle: 'LM Studio 2026: servidor API, camadas GPU e LoRA',
-      intro: 'LM Studio é principalmente um aplicativo de chat, mas também inclui recursos avançados para desenvolvedores: configuração de memória GPU, ajuste de janela de contexto, API compatível com OpenAI e integração com ferramentas de fine-tuning. A partir de abril de 2026, o LM Studio está se expandindo além do chat para suportar fluxos de trabalho profissionais como fine-tuning com LoRA e inferência em batch.',
+      intro: 'LM Studio é principalmente um aplicativo de chat, mas também inclui recursos avançados para desenvolvedores: configuração de memória GPU, ajuste de janela de contexto, API compatível com OpenAI e integração com ferramentas de fine-tuning. O LM Studio está se expandindo além do chat para suportar fluxos de trabalho profissionais como fine-tuning com LoRA e inferência em batch.',
       metaDescription: 'Servidor API do LM Studio (porta 1234), controle de camadas GPU, ajuste da janela de contexto, carregamento de LoRA e inferência em batch: guia avançado 2026.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**LM Studio é principalmente um aplicativo de chat, mas também inclui recursos avançados para desenvolvedores: configuração de memória GPU, ajuste de janela de contexto, API compatível com OpenAI e integração com ferramentas de fine-tuning.**',
@@ -1875,7 +1903,7 @@ schema: {
         'url': 'https://www.promptquorum.com/pt/local-llms/lm-studio-advanced-features',
         'inLanguage': 'pt-BR',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-04-18',
+        'dateModified': '2026-08-28',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -1905,6 +1933,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Os recursos avançados do LM Studio para desenvolvedores incluem configuração de memória GPU, ajuste de janela de contexto, um servidor API local compatível com OpenAI, e a capacidade de carregar adaptadores LoRA pré-treinados -- embora o treinamento LoRA em si não esteja integrado.' },
+            { type: 'plain-terms', text: 'Além da janela de chat, o LM Studio tem configurações voltadas para desenvolvedores: quanto do modelo roda na GPU, por quanto tempo uma conversa pode ser lembrada, e um servidor API local ao qual outros aplicativos podem se conectar. Ele também pode carregar um adaptador LoRA treinado por outra pessoa, mas você não pode treinar um dentro do próprio LM Studio -- isso ainda exige uma ferramenta separada.' },
+          ],
           items: [
             'LM Studio tem configurações avançadas na aba Configurações → Servidor (opções de GPU, comprimento de contexto).',
             'A memória GPU pode ser configurada manualmente de 10% a 100% da VRAM — valores menores liberam GPU para outros aplicativos.',
@@ -2018,7 +2050,7 @@ schema: {
     heroImage: '/images/lm-studio-advanced-features-overview-hero-ko.webp',
       title: 'LM Studio 고급 기능 2026: GPU 설정, LoRA, 파인튜닝',
       seoTitle: 'LM Studio vs Ollama: API 서버, GPU 레이어 & LoRA 2026',
-      intro: 'LM Studio는 기본적으로 채팅 앱이지만, 개발자를 위한 고급 기능도 포함하고 있습니다. GPU 메모리 구성, 컨텍스트 창 조정, OpenAI 호환 API, 파인튜닝 도구와의 통합이 가능합니다. 2026년 4월 기준으로 LM Studio는 채팅을 넘어 LoRA 파인튜닝과 배치 추론 등 전문적인 워크플로우를 지원하는 방향으로 확장되고 있습니다.',
+      intro: 'LM Studio는 기본적으로 채팅 앱이지만, 개발자를 위한 고급 기능도 포함하고 있습니다. GPU 메모리 구성, 컨텍스트 창 조정, OpenAI 호환 API, 파인튜닝 도구와의 통합이 가능합니다. LM Studio는 채팅을 넘어 LoRA 파인튜닝과 배치 추론 등 전문적인 워크플로우를 지원하는 방향으로 확장되고 있습니다.',
       metaDescription: 'LM Studio의 API 서버(포트 1234), GPU 레이어 슬라이더, 컨텍스트 창 조정, LoRA 로드/언로드, 배치 추론에 대한 2026년 고급 가이드입니다.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**LM Studio는 기본적으로 채팅 앱이지만, 개발자를 위한 고급 기능도 포함하고 있습니다. GPU 메모리 구성, 컨텍스트 창 조정, OpenAI 호환 API, 파인튜닝 도구와의 통합 기능을 제공합니다.**',
@@ -2033,7 +2065,7 @@ schema: {
         'description': 'LM Studio 고급 기능: GPU 최적화, 컨텍스트 창, API, 배치 추론. 로컬 LLM 프로덕션 워크플로우를 위한 개발자 가이드 2026.',
         'url': 'https://www.promptquorum.com/local-llms/lm-studio-advanced-features',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-04-18',
+        'dateModified': '2026-08-28',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -2137,6 +2169,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'LM Studio의 개발자용 고급 기능에는 GPU 메모리 설정, 컨텍스트 창 조정, OpenAI 호환 로컬 API 서버, 그리고 사전 학습된 LoRA 어댑터를 불러오는 기능이 포함되지만, LoRA 학습 자체는 내장되어 있지 않습니다.' },
+            { type: 'plain-terms', text: '채팅 창 외에도 LM Studio에는 개발자를 위한 설정이 있습니다: 모델의 얼마만큼이 GPU에서 실행되는지, 대화를 얼마나 기억할 수 있는지, 그리고 다른 앱이 연결할 수 있는 로컬 API 서버입니다. 다른 사람이 학습시킨 LoRA 어댑터를 불러올 수도 있지만, LM Studio 내부에서 직접 LoRA를 학습시킬 수는 없습니다 -- 이를 위해서는 여전히 별도의 도구가 필요합니다.' },
+          ],
           items: [
             'LM Studio에는 설정 → 서버 탭에 고급 설정이 있습니다(GPU 옵션, 컨텍스트 길이).',
             'GPU 메모리는 VRAM의 10%에서 100%까지 수동으로 설정할 수 있으며, 낮은 값으로 설정하면 다른 앱을 위해 GPU를 확보할 수 있습니다.',
