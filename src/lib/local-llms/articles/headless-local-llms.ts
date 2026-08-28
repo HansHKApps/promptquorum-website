@@ -25,12 +25,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       toc: [
         { label: 'Key Takeaways', anchor: '#key-takeaways' },
         { label: 'What Is Headless?', anchor: '#what-is-headless' },
-        { label: 'Headless Ollama', anchor: '#headless-ollama' },
-        { label: 'Headless vLLM', anchor: '#headless-vllm' },
-        { label: 'Production Deployment', anchor: '#production-deployment' },
         { label: 'Monitoring and Scaling', anchor: '#monitoring' },
         { label: 'Common Mistakes', anchor: '#common-mistakes' },
-        { label: 'Common Questions', anchor: '#common-questions' },
+        { label: 'Common Questions', anchor: '#faq' },
         { label: 'Related Reading', anchor: '#related-reading' },
         { label: 'Sources', anchor: '#sources' },
       ],
@@ -52,6 +49,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         whatIsHeadless: {
+          id: 'what-is-headless',
           title: 'What Does Headless Mean?',
           content: [
             '**Headless means the software runs as a service without a graphical user interface.** You interact via API calls (REST, gRPC) instead of clicking buttons.',
@@ -85,6 +83,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           codeLanguage: 'bash',
         },
         monitoring: {
+          id: 'monitoring',
           title: 'How to Monitor Headless Deployments?',
           content: [
             '**Monitor GPU memory, request latency, and error rates:**',
@@ -93,6 +92,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           codeLanguage: 'python',
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Common Mistakes With Headless Deployments',
           items: [
             '**Not monitoring VRAM.** Models can silently run out of memory. Monitor GPU before deploying to production.',
@@ -195,12 +195,9 @@ schema: {
       toc: [
         { label: 'Puntos clave', anchor: '#key-takeaways' },
         { label: '¿Qué es headless?', anchor: '#what-is-headless' },
-        { label: 'Ollama headless', anchor: '#headless-ollama' },
-        { label: 'vLLM headless', anchor: '#headless-vllm' },
-        { label: 'Despliegue en producción', anchor: '#production-deployment' },
         { label: 'Monitoreo y escalado', anchor: '#monitoring' },
         { label: 'Errores comunes', anchor: '#common-mistakes' },
-        { label: 'Preguntas frecuentes', anchor: '#common-questions' },
+        { label: 'Preguntas frecuentes', anchor: '#faq' },
         { label: 'Lecturas relacionadas', anchor: '#related-reading' },
         { label: 'Fuentes', anchor: '#sources' },
       ],
@@ -221,6 +218,7 @@ schema: {
           ],
         },
         whatIsHeadless: {
+          id: 'what-is-headless',
           title: '¿Qué significa headless?',
           content: [
             '**Headless significa que el software se ejecuta como servicio sin interfaz gráfica de usuario.** Interactúas mediante llamadas a la API (REST, gRPC) en lugar de hacer clic en botones.',
@@ -254,6 +252,7 @@ schema: {
           codeLanguage: 'bash',
         },
         monitoring: {
+          id: 'monitoring',
           title: '¿Cómo monitorear despliegues headless?',
           content: [
             '**Monitorea la memoria GPU, la latencia de solicitudes y las tasas de error:**',
@@ -262,6 +261,7 @@ schema: {
           codeLanguage: 'python',
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Errores comunes en despliegues headless',
           items: [
             '**No monitorear la VRAM.** Los modelos pueden quedarse sin memoria sin previo aviso. Monitorea la GPU antes de desplegar en producción.',
@@ -375,12 +375,9 @@ schema: {
       toc: [
         { label: 'النقاط الرئيسية', anchor: '#key-takeaways' },
         { label: 'ما المقصود بـ headless؟', anchor: '#what-is-headless' },
-        { label: 'Ollama بلا واجهة', anchor: '#headless-ollama' },
-        { label: 'vLLM بلا واجهة', anchor: '#headless-vllm' },
-        { label: 'النشر في الإنتاج', anchor: '#production-deployment' },
         { label: 'المراقبة والتوسّع', anchor: '#monitoring' },
         { label: 'أخطاء شائعة', anchor: '#common-mistakes' },
-        { label: 'الأسئلة الشائعة', anchor: '#common-questions' },
+        { label: 'الأسئلة الشائعة', anchor: '#faq' },
         { label: 'قراءات ذات صلة', anchor: '#related-reading' },
         { label: 'المصادر', anchor: '#sources' },
       ],
@@ -401,6 +398,7 @@ schema: {
           ],
         },
         whatIsHeadless: {
+          id: 'what-is-headless',
           title: 'ماذا يعني headless؟',
           content: [
             '**يعني headless أن البرنامج يعمل كخدمة دون واجهة رسومية للمستخدم.** تتفاعل عبر استدعاءات API (REST, gRPC) بدلًا من النقر على الأزرار.',
@@ -434,6 +432,7 @@ schema: {
           codeLanguage: 'bash',
         },
         monitoring: {
+          id: 'monitoring',
           title: 'كيف تراقب عمليات النشر بلا واجهة؟',
           content: [
             '**راقب ذاكرة GPU وزمن استجابة الطلبات ومعدلات الأخطاء:**',
@@ -442,6 +441,7 @@ schema: {
           codeLanguage: 'python',
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'أخطاء شائعة في عمليات النشر بلا واجهة',
           items: [
             '**عدم مراقبة VRAM.** قد تنفد ذاكرة النماذج دون سابق إنذار. راقب GPU قبل النشر في الإنتاج.',
@@ -555,12 +555,9 @@ schema: {
       toc: [
         { label: 'Pontos principais', anchor: '#key-takeaways' },
         { label: 'O que é headless?', anchor: '#what-is-headless' },
-        { label: 'Ollama headless', anchor: '#headless-ollama' },
-        { label: 'vLLM headless', anchor: '#headless-vllm' },
-        { label: 'Implantação em produção', anchor: '#production-deployment' },
         { label: 'Monitoramento e escalonamento', anchor: '#monitoring' },
         { label: 'Erros comuns', anchor: '#common-mistakes' },
-        { label: 'Perguntas frequentes', anchor: '#common-questions' },
+        { label: 'Perguntas frequentes', anchor: '#faq' },
         { label: 'Leituras relacionadas', anchor: '#related-reading' },
         { label: 'Fontes', anchor: '#sources' },
       ],
@@ -581,6 +578,7 @@ schema: {
           ],
         },
         whatIsHeadless: {
+          id: 'what-is-headless',
           title: 'O que significa headless?',
           content: [
             '**Headless significa que o software roda como serviço sem interface gráfica de usuário.** Você interage por meio de chamadas à API (REST, gRPC) em vez de clicar em botões.',
@@ -614,6 +612,7 @@ schema: {
           codeLanguage: 'bash',
         },
         monitoring: {
+          id: 'monitoring',
           title: 'Como monitorar implantações headless?',
           content: [
             '**Monitore a memória da GPU, a latência das requisições e as taxas de erro:**',
@@ -622,6 +621,7 @@ schema: {
           codeLanguage: 'python',
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Erros comuns em implantações headless',
           items: [
             '**Não monitorar a VRAM.** Os modelos podem ficar sem memória sem aviso. Monitore a GPU antes de implantar em produção.',
@@ -735,12 +735,9 @@ schema: {
       toc: [
         { label: 'Zusammenfassung', anchor: '#key-takeaways' },
         { label: 'Was ist Headless?', anchor: '#what-is-headless' },
-        { label: 'Ollama Headless', anchor: '#headless-ollama' },
-        { label: 'vLLM Headless', anchor: '#headless-vllm' },
-        { label: 'Produktionsdeployment', anchor: '#production-deployment' },
         { label: 'Überwachung und Skalierung', anchor: '#monitoring' },
         { label: 'Häufige Fehler', anchor: '#common-mistakes' },
-        { label: 'Häufig gestellte Fragen', anchor: '#common-questions' },
+        { label: 'Häufig gestellte Fragen', anchor: '#faq' },
         { label: 'Weiterführende Ressourcen', anchor: '#related-reading' },
         { label: 'Quellen', anchor: '#sources' },
       ],
@@ -761,6 +758,7 @@ schema: {
           ],
         },
         whatIsHeadless: {
+          id: 'what-is-headless',
           title: 'Was bedeutet Headless?',
           content: [
             '**Headless bedeutet, dass die Software als Dienst ohne grafische Benutzeroberfläche läuft.** Sie interagieren über API-Aufrufe (REST, gRPC) statt durch Klicks auf Buttons.',
@@ -795,6 +793,7 @@ schema: {
           codeLanguage: 'bash',
         },
         monitoring: {
+          id: 'monitoring',
           title: 'Wie überwache ich Headless-Deployments?',
           content: [
             '**Überwachen Sie GPU-Speicher, Request-Latenz und Fehlerquoten:**',
@@ -803,6 +802,7 @@ schema: {
           codeLanguage: 'python',
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Häufige Fehler bei Headless-Deployments',
           items: [
             '**VRAM nicht überwachen.** Modelle können stillschweigend keinen Speicher mehr haben. Überwachen Sie die GPU vor dem Produktionsdeployment.',
@@ -915,12 +915,9 @@ schema: {
       toc: [
         { label: 'Points clés', anchor: '#key-takeaways' },
         { label: 'Qu\'est-ce que Headless?', anchor: '#what-is-headless' },
-        { label: 'Ollama Headless', anchor: '#headless-ollama' },
-        { label: 'vLLM Headless', anchor: '#headless-vllm' },
-        { label: 'Déploiement en production', anchor: '#production-deployment' },
         { label: 'Surveillance et mise à l\'échelle', anchor: '#monitoring' },
         { label: 'Erreurs courantes', anchor: '#common-mistakes' },
-        { label: 'Questions fréquemment posées', anchor: '#common-questions' },
+        { label: 'Questions fréquemment posées', anchor: '#faq' },
         { label: 'Lectures connexes', anchor: '#related-reading' },
         { label: 'Sources', anchor: '#sources' },
       ],
@@ -941,6 +938,7 @@ schema: {
           ],
         },
         whatIsHeadless: {
+          id: 'what-is-headless',
           title: 'Qu\'est-ce que Headless signifie?',
           content: [
             '**Headless signifie que le logiciel s\'exécute en tant que service sans interface graphique.** Vous interagissez via des appels API (REST, gRPC) au lieu de cliquer sur des boutons.',
@@ -975,6 +973,7 @@ schema: {
           codeLanguage: 'bash',
         },
         monitoring: {
+          id: 'monitoring',
           title: 'Comment surveiller les déploiements Headless?',
           content: [
             '**Surveillez la mémoire GPU, la latence des requêtes et les taux d\'erreur :**',
@@ -983,6 +982,7 @@ schema: {
           codeLanguage: 'python',
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Erreurs courantes avec les déploiements Headless',
           items: [
             '**Ne pas surveiller la VRAM.** Les modèles peuvent silencieusement manquer de mémoire. Surveillez le GPU avant le déploiement en production.',
@@ -1085,12 +1085,9 @@ schema: {
       toc: [
         { label: '重要ポイント', anchor: '#key-takeaways' },
         { label: 'Headlessとは?', anchor: '#what-is-headless' },
-        { label: 'Ollama Headless', anchor: '#headless-ollama' },
-        { label: 'vLLM Headless', anchor: '#headless-vllm' },
-        { label: '本番環境へのデプロイ', anchor: '#production-deployment' },
         { label: '監視とスケーリング', anchor: '#monitoring' },
         { label: '一般的なミス', anchor: '#common-mistakes' },
-        { label: 'よくある質問', anchor: '#common-questions' },
+        { label: 'よくある質問', anchor: '#faq' },
         { label: '関連情報', anchor: '#related-reading' },
         { label: '参考資料', anchor: '#sources' },
       ],
@@ -1111,6 +1108,7 @@ schema: {
           ],
         },
         whatIsHeadless: {
+          id: 'what-is-headless',
           title: 'Headlessとは何か?',
           content: [
             '**Headlessはグラフィカルユーザーインターフェースなしでソフトウェアがサービスとして実行されることを意味します。** ボタンをクリックする代わりに、APIコール (REST、gRPC) で対話します。',
@@ -1144,6 +1142,7 @@ schema: {
           codeLanguage: 'bash',
         },
         monitoring: {
+          id: 'monitoring',
           title: 'Headlessデプロイメントを監視する方法',
           content: [
             '**GPUメモリ、リクエストレイテンシ、エラー率を監視してください:**',
@@ -1152,6 +1151,7 @@ schema: {
           codeLanguage: 'python',
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Headlessデプロイメント時の一般的なミス',
           items: [
             '**VRAMを監視しない。** モデルはメモリ不足に自動的になることがあります。本番環境デプロイ前にGPUを監視してください。',
@@ -1259,12 +1259,9 @@ schema: {
       toc: [
         { label: '核心要点', anchor: '#key-takeaways' },
         { label: '什么是Headless?', anchor: '#what-is-headless' },
-        { label: 'Ollama Headless', anchor: '#headless-ollama' },
-        { label: 'vLLM Headless', anchor: '#headless-vllm' },
-        { label: '生产部署', anchor: '#production-deployment' },
         { label: '监视和扩展', anchor: '#monitoring' },
         { label: '常见错误', anchor: '#common-mistakes' },
-        { label: '常见问题', anchor: '#common-questions' },
+        { label: '常见问题', anchor: '#faq' },
         { label: '相关阅读', anchor: '#related-reading' },
         { label: '参考资源', anchor: '#sources' },
       ],
@@ -1285,6 +1282,7 @@ schema: {
           ],
         },
         whatIsHeadless: {
+          id: 'what-is-headless',
           title: 'Headless是什么意思?',
           content: [
             '**Headless意味着软件作为服务运行,没有图形用户界面。** 您通过API调用(REST、gRPC)而不是点击按钮进行交互。',
@@ -1318,6 +1316,7 @@ schema: {
           codeLanguage: 'bash',
         },
         monitoring: {
+          id: 'monitoring',
           title: '如何监视Headless部署?',
           content: [
             '**监视GPU内存、请求延迟和错误率:**',
@@ -1326,6 +1325,7 @@ schema: {
           codeLanguage: 'python',
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Headless部署的常见错误',
           items: [
             '**不监视VRAM。** 模型可能无声地内存不足。在部署到生产前监视GPU。',
@@ -1434,12 +1434,9 @@ schema: {
       toc: [
         { label: '핵심 요점', anchor: '#key-takeaways' },
         { label: '헤드리스란?', anchor: '#what-is-headless' },
-        { label: '헤드리스 Ollama', anchor: '#headless-ollama' },
-        { label: '헤드리스 vLLM', anchor: '#headless-vllm' },
-        { label: '프로덕션 배포', anchor: '#production-deployment' },
         { label: '모니터링 및 확장', anchor: '#monitoring' },
         { label: '흔한 실수', anchor: '#common-mistakes' },
-        { label: '자주 묻는 질문', anchor: '#common-questions' },
+        { label: '자주 묻는 질문', anchor: '#faq' },
         { label: '관련 읽을거리', anchor: '#related-reading' },
         { label: '출처', anchor: '#sources' },
       ],
@@ -1460,6 +1457,7 @@ schema: {
           ],
         },
         whatIsHeadless: {
+          id: 'what-is-headless',
           title: '헤드리스란 무엇입니까?',
           content: [
             '**헤드리스란 소프트웨어가 그래픽 사용자 인터페이스 없이 서비스로 실행되는 것을 의미합니다.** 버튼을 클릭하는 대신 API 호출(REST, gRPC)을 통해 상호작용합니다.',
@@ -1493,6 +1491,7 @@ schema: {
           codeLanguage: 'bash',
         },
         monitoring: {
+          id: 'monitoring',
           title: '헤드리스 배포를 모니터링하는 방법은?',
           content: [
             '**GPU 메모리, 요청 지연 시간, 오류율을 모니터링하십시오:**',
@@ -1501,6 +1500,7 @@ schema: {
           codeLanguage: 'python',
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: '헤드리스 배포의 흔한 실수',
           items: [
             '**VRAM을 모니터링하지 않음.** 모델이 조용히 메모리를 소진할 수 있습니다. 프로덕션에 배포하기 전에 GPU를 모니터링하십시오.',

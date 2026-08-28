@@ -46,6 +46,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         models: {
+          id: 'models',
           title: 'Multimodal Models Available (April 2026)',
           rows: [
             { 'Model': 'Llama 3.2 Vision 11B', 'Image Support': 'Yes', 'VRAM': '8 GB', 'Speed': '3-5 sec/image', 'Best For': 'General vision' },
@@ -56,6 +57,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           columns: ['Model', 'Image Support', 'VRAM', 'Speed per Image', 'Best For'],
         },
         vision: {
+          id: 'vision',
           title: 'Vision Capabilities',
           content: [
             'Multimodal models can:',
@@ -70,12 +72,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         setup: {
+          id: 'setup',
           title: 'Setup and Usage',
           content: 'Using Llama 3.2 Vision with Ollama:',
           codeBlock: '# Pull the model\nollama pull llama3.2-vision:11b\n\n# Use it\nfrom ollama import Client\nclient = Client()\n\nwith open("image.jpg", "rb") as f:\n    image_data = f.read()\n\nresponse = client.generate(\n  model="llama3.2-vision:11b",\n  prompt="Describe this image",\n  images=[image_data]  # Pass image data\n)\n\nprint(response["response"])',
           codeLanguage: 'python',
         },
         useCases: {
+          id: 'use-cases',
           title: 'Real-World Use Cases',
           items: [
             '**Document processing:** Extract text from scanned PDFs without external OCR service.',
@@ -86,6 +90,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         performance: {
+          id: 'performance',
           title: 'Performance and Limitations',
           content: [
             '**Accuracy:** Good for document OCR and description, but not perfect for detailed analysis or small objects.',
@@ -157,6 +162,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         models: {
+          id: 'models',
           title: 'Modelos multimodales disponibles (abril de 2026)',
           rows: [
             { 'Modelo': 'Llama 3.2 Vision 11B', 'Soporte de imagen': 'Sí', 'VRAM': '8 GB', 'Velocidad': '3-5 seg/imagen', 'Mejor para': 'Visión general' },
@@ -167,6 +173,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           columns: ['Modelo', 'Soporte de imagen', 'VRAM', 'Velocidad por imagen', 'Mejor para'],
         },
         vision: {
+          id: 'vision',
           title: 'Capacidades de visión',
           content: [
             'Los modelos multimodales pueden:',
@@ -181,12 +188,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         setup: {
+          id: 'setup',
           title: 'Configuración y uso',
           content: 'Usando Llama 3.2 Vision con Ollama:',
           codeBlock: '# Pull the model\nollama pull llama3.2-vision:11b\n\n# Use it\nfrom ollama import Client\nclient = Client()\n\nwith open("image.jpg", "rb") as f:\n    image_data = f.read()\n\nresponse = client.generate(\n  model="llama3.2-vision:11b",\n  prompt="Describe this image",\n  images=[image_data]  # Pass image data\n)\n\nprint(response["response"])',
           codeLanguage: 'python',
         },
         useCases: {
+          id: 'use-cases',
           title: 'Casos de uso reales',
           items: [
             '**Procesamiento de documentos:** Extrae texto de PDFs escaneados sin servicio OCR externo.',
@@ -197,6 +206,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         performance: {
+          id: 'performance',
           title: 'Rendimiento y limitaciones',
           content: [
             '**Precisión:** Buena para OCR de documentos y descripción, pero no perfecta para análisis detallado u objetos pequeños.',
@@ -206,6 +216,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Errores comunes',
           items: [
             '**Esperar la precisión de GPT-4 Vision.** Los modelos locales son 20-30% menos precisos. Úsalos para dominios específicos, no para visión general.',
@@ -281,6 +292,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         models: {
+          id: 'models',
           title: 'النماذج متعددة الوسائط المتاحة (أبريل 2026)',
           rows: [
             { 'Modelo': 'Llama 3.2 Vision 11B', 'Soporte de imagen': 'نعم', 'VRAM': '8 GB', 'Velocidad': '3-5 ث/صورة', 'Mejor para': 'رؤية عامة' },
@@ -291,6 +303,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           columns: ['Modelo', 'Soporte de imagen', 'VRAM', 'Velocidad por imagen', 'Mejor para'],
         },
         vision: {
+          id: 'vision',
           title: 'قدرات الرؤية',
           content: [
             'يمكن للنماذج متعددة الوسائط:',
@@ -305,12 +318,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         setup: {
+          id: 'setup',
           title: 'الإعداد والاستخدام',
           content: 'باستخدام Llama 3.2 Vision مع Ollama:',
           codeBlock: '# Pull the model\nollama pull llama3.2-vision:11b\n\n# Use it\nfrom ollama import Client\nclient = Client()\n\nwith open("image.jpg", "rb") as f:\n    image_data = f.read()\n\nresponse = client.generate(\n  model="llama3.2-vision:11b",\n  prompt="Describe this image",\n  images=[image_data]  # Pass image data\n)\n\nprint(response["response"])',
           codeLanguage: 'python',
         },
         useCases: {
+          id: 'use-cases',
           title: 'حالات استخدام حقيقية',
           items: [
             '**معالجة المستندات:** يستخرج النص من ملفات PDF الممسوحة دون خدمة OCR خارجية.',
@@ -321,6 +336,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         performance: {
+          id: 'performance',
           title: 'الأداء والقيود',
           content: [
             '**الدقة:** جيدة لـ OCR المستندات والوصف، لكنها ليست مثالية للتحليل التفصيلي أو الكائنات الصغيرة.',
@@ -330,6 +346,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'أخطاء شائعة',
           items: [
             '**توقّع دقة GPT-4 Vision.** النماذج المحلية أقل دقة بنسبة 20-30%. استخدمها لمجالات محددة، لا للرؤية العامة.',
@@ -406,6 +423,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         models: {
+          id: 'models',
           title: 'Verfügbare multimodale Modelle (April 2026)',
           rows: [
             { 'Modell': 'Llama 3.2 Vision 11B', 'Bildunterstützung': 'Ja', 'VRAM': '8 GB', 'Geschwindigkeit': '3-5 Sek./Bild', 'Am besten für': 'Allgemeine Vision' },
@@ -416,6 +434,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           columns: ['Modell', 'Bildunterstützung', 'VRAM', 'Geschwindigkeit pro Bild', 'Am besten für'],
         },
         vision: {
+          id: 'vision',
           title: 'Vision-Fähigkeiten',
           content: [
             'Multimodale Modelle können:',
@@ -430,12 +449,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         setup: {
+          id: 'setup',
           title: 'Setup und Verwendung',
           content: 'Verwendung von Llama 3.2 Vision mit Ollama:',
           codeBlock: '# Pull the model\nollama pull llama3.2-vision:11b\n\n# Use it\nfrom ollama import Client\nclient = Client()\n\nwith open("image.jpg", "rb") as f:\n    image_data = f.read()\n\nresponse = client.generate(\n  model="llama3.2-vision:11b",\n  prompt="Describe this image",\n  images=[image_data]  # Pass image data\n)\n\nprint(response["response"])',
           codeLanguage: 'python',
         },
         useCases: {
+          id: 'use-cases',
           title: 'Praktische Anwendungsfälle',
           items: [
             '**Dokumentenverarbeitung:** Text aus gescannten PDFs extrahieren ohne externen OCR-Service.',
@@ -446,6 +467,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         performance: {
+          id: 'performance',
           title: 'Performance und Einschränkungen',
           content: [
             '**Genauigkeit:** Gut für Dokumenten-OCR und Beschreibung, aber nicht perfekt für detaillierte Analysen oder kleine Objekte.',
@@ -455,6 +477,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Häufige Fehler',
           items: [
             '**Erwarten Sie die Genauigkeit von GPT-4 Vision.** Lokale Modelle sind 20-30% weniger genau. Verwenden Sie für spezifische Domänen, nicht für allgemeine Vision.',
@@ -518,6 +541,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         models: {
+          id: 'models',
           title: 'Modèles multimodaux disponibles (avril 2026)',
           rows: [
             { 'Modèle': 'Llama 3.2 Vision 11B', 'Support d\'image': 'Oui', 'VRAM': '8 GB', 'Vitesse': '3-5 sec/image', 'Idéal pour': 'Vision générale' },
@@ -528,6 +552,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           columns: ['Modèle', 'Support d\'image', 'VRAM', 'Vitesse par image', 'Idéal pour'],
         },
         vision: {
+          id: 'vision',
           title: 'Capacités de vision',
           content: [
             'Les modèles multimodaux peuvent :',
@@ -542,12 +567,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         setup: {
+          id: 'setup',
           title: 'Installation et utilisation',
           content: 'Utilisation de Llama 3.2 Vision avec Ollama :',
           codeBlock: '# Pull the model\nollama pull llama3.2-vision:11b\n\n# Use it\nfrom ollama import Client\nclient = Client()\n\nwith open("image.jpg", "rb") as f:\n    image_data = f.read()\n\nresponse = client.generate(\n  model="llama3.2-vision:11b",\n  prompt="Describe this image",\n  images=[image_data]  # Pass image data\n)\n\nprint(response["response"])',
           codeLanguage: 'python',
         },
         useCases: {
+          id: 'use-cases',
           title: 'Cas d\'usage réels',
           items: [
             '**Traitement de documents :** Extrayez texte de PDFs numérisés sans service OCR externe.',
@@ -558,6 +585,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         performance: {
+          id: 'performance',
           title: 'Performance et limitations',
           content: [
             '**Précision :** Bonne pour OCR de documents et description, mais pas parfaite pour analyse détaillée ou petits objets.',
@@ -567,6 +595,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Erreurs courantes',
           items: [
             '**Attendre précision de GPT-4 Vision.** Modèles locaux sont 20-30% moins précis. Utilisez pour domaines spécifiques, pas vision générale.',
@@ -630,6 +659,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         models: {
+          id: 'models',
           title: '利用可能なマルチモーダルモデル (2026年4月)',
           rows: [
             { 'モデル': 'Llama 3.2 Vision 11B', '画像サポート': 'はい', 'VRAM': '8 GB', '速度': '3-5秒/画像', '最適用途': '汎用ビジョン' },
@@ -640,6 +670,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           columns: ['モデル', '画像サポート', 'VRAM', '画像あたりの速度', '最適用途'],
         },
         vision: {
+          id: 'vision',
           title: 'ビジョン機能',
           content: [
             'マルチモーダルモデルは以下が可能です:',
@@ -654,12 +685,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         setup: {
+          id: 'setup',
           title: 'セットアップと使用',
           content: 'Ollama でLlama 3.2 Visionを使用:',
           codeBlock: '# Pull the model\nollama pull llama3.2-vision:11b\n\n# Use it\nfrom ollama import Client\nclient = Client()\n\nwith open("image.jpg", "rb") as f:\n    image_data = f.read()\n\nresponse = client.generate(\n  model="llama3.2-vision:11b",\n  prompt="Describe this image",\n  images=[image_data]  # Pass image data\n)\n\nprint(response["response"])',
           codeLanguage: 'python',
         },
         useCases: {
+          id: 'use-cases',
           title: '実世界の使用例',
           items: [
             '**ドキュメント処理:** 外部OCRサービスなしでスキャンされたPDFからテキストを抽出。',
@@ -670,6 +703,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         performance: {
+          id: 'performance',
           title: 'パフォーマンスと制限',
           content: [
             '**精度:** ドキュメントOCRと説明には適していますが、詳細な分析や小さな物体には完全ではありません。',
@@ -679,6 +713,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'よくある間違い',
           items: [
             '**GPT-4 Visionの精度を期待する。** ローカルモデルは20-30%精度が低い。汎用ビジョンではなく、特定の領域に使用します。',
@@ -742,6 +777,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         models: {
+          id: 'models',
           title: '可用的多模态模型 (2026年4月)',
           rows: [
             { '模型': 'Llama 3.2 Vision 11B', '图像支持': '是', 'VRAM': '8 GB', '速度': '3-5秒/图像', '最适用': '通用视觉' },
@@ -752,6 +788,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           columns: ['模型', '图像支持', 'VRAM', '每张图像速度', '最适用'],
         },
         vision: {
+          id: 'vision',
           title: '视觉能力',
           content: [
             '多模态模型可以：',
@@ -766,12 +803,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         setup: {
+          id: 'setup',
           title: '设置和使用',
           content: '使用Ollama运行Llama 3.2 Vision：',
           codeBlock: '# Pull the model\nollama pull llama3.2-vision:11b\n\n# Use it\nfrom ollama import Client\nclient = Client()\n\nwith open("image.jpg", "rb") as f:\n    image_data = f.read()\n\nresponse = client.generate(\n  model="llama3.2-vision:11b",\n  prompt="Describe this image",\n  images=[image_data]  # Pass image data\n)\n\nprint(response["response"])',
           codeLanguage: 'python',
         },
         useCases: {
+          id: 'use-cases',
           title: '真实世界用例',
           items: [
             '**文档处理：** 无需外部OCR服务从扫描PDF提取文本。',
@@ -782,6 +821,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         performance: {
+          id: 'performance',
           title: '性能和限制',
           content: [
             '**准确性：** 适合文档OCR和描述，但不完美用于详细分析或小物体。',
@@ -791,6 +831,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: '常见错误',
           items: [
             '**期望GPT-4 Vision的准确性。** 本地模型准确性低20-30%。用于特定领域，不是通用视觉。',
@@ -853,6 +894,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         models: {
+          id: 'models',
           title: 'Modelos multimodais disponíveis (abril de 2026)',
           rows: [
             { 'Modelo': 'Llama 3.2 Vision 11B', 'Suporte a imagem': 'Sim', 'VRAM': '8 GB', 'Velocidade': '3-5 seg/imagem', 'Melhor para': 'Visão geral' },
@@ -863,6 +905,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           columns: ['Modelo', 'Suporte a imagem', 'VRAM', 'Velocidade por imagem', 'Melhor para'],
         },
         vision: {
+          id: 'vision',
           title: 'Capacidades de visão',
           content: [
             'Os modelos multimodais podem:',
@@ -877,12 +920,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         setup: {
+          id: 'setup',
           title: 'Configuração e uso',
           content: 'Usando o Llama 3.2 Vision com o Ollama:',
           codeBlock: '# Pull the model\nollama pull llama3.2-vision:11b\n\n# Use it\nfrom ollama import Client\nclient = Client()\n\nwith open("image.jpg", "rb") as f:\n    image_data = f.read()\n\nresponse = client.generate(\n  model="llama3.2-vision:11b",\n  prompt="Describe this image",\n  images=[image_data]  # Pass image data\n)\n\nprint(response["response"])',
           codeLanguage: 'python',
         },
         useCases: {
+          id: 'use-cases',
           title: 'Casos de uso reais',
           items: [
             '**Processamento de documentos:** Extrai texto de PDFs digitalizados sem serviço de OCR externo.',
@@ -893,6 +938,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         performance: {
+          id: 'performance',
           title: 'Desempenho e limitações',
           content: [
             '**Precisão:** Boa para OCR de documentos e descrição, mas não perfeita para análise detalhada ou objetos pequenos.',
@@ -902,6 +948,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Erros comuns',
           items: [
             '**Esperar a precisão do GPT-4 Vision.** Os modelos locais são 20-30% menos precisos. Use-os para domínios específicos, não para visão geral.',
@@ -977,6 +1024,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         models: {
+          id: 'models',
           title: '사용 가능한 멀티모달 모델 (2026년 4월)',
           rows: [
             { 'Model': 'Llama 3.2 Vision 11B', 'Image Support': '지원', 'VRAM': '8 GB', 'Speed': '이미지당 3~5초', 'Best For': '일반 비전' },
@@ -987,6 +1035,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           columns: ['Model', 'Image Support', 'VRAM', 'Speed per Image', 'Best For'],
         },
         vision: {
+          id: 'vision',
           title: '비전 기능',
           content: [
             '멀티모달 모델은 다음을 수행할 수 있습니다:',
@@ -1001,12 +1050,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         setup: {
+          id: 'setup',
           title: '설정 및 사용법',
           content: 'Ollama와 함께 Llama 3.2 Vision을 사용하는 방법:',
           codeBlock: '# Pull the model\nollama pull llama3.2-vision:11b\n\n# Use it\nfrom ollama import Client\nclient = Client()\n\nwith open("image.jpg", "rb") as f:\n    image_data = f.read()\n\nresponse = client.generate(\n  model="llama3.2-vision:11b",\n  prompt="Describe this image",\n  images=[image_data]  # Pass image data\n)\n\nprint(response["response"])',
           codeLanguage: 'python',
         },
         useCases: {
+          id: 'use-cases',
           title: '실제 활용 사례',
           items: [
             '**문서 처리:** 외부 OCR 서비스 없이 스캔된 PDF에서 텍스트를 추출합니다.',
@@ -1017,6 +1068,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         performance: {
+          id: 'performance',
           title: '성능 및 한계',
           content: [
             '**정확도:** 문서 OCR 및 설명에는 적합하지만, 세부 분석이나 소형 객체에서는 완벽하지 않습니다.',
@@ -1026,6 +1078,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: '자주 발생하는 실수',
           items: [
             '**GPT-4 Vision 수준의 정확도를 기대하는 것.** 로컬 모델은 20~30% 정확도가 낮습니다. 범용 비전이 아닌 특정 도메인에 사용하십시오.',

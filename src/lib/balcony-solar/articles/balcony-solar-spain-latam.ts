@@ -49,7 +49,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'What the Conflicting Sources Actually Say', anchor: '#conflicting-sources' },
       { label: 'Mexico: No Small-System Exemption', anchor: '#mexico' },
       { label: 'FAQ', anchor: '#faq' },
-      { label: 'Related Reading', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -155,7 +154,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Qué dicen realmente las fuentes contradictorias', anchor: '#conflicting-sources' },
       { label: 'México: sin exención para sistemas pequeños', anchor: '#mexico' },
       { label: 'Preguntas frecuentes', anchor: '#faq' },
-      { label: 'Lecturas relacionadas', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -262,7 +260,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'O que as fontes contraditórias realmente dizem', anchor: '#conflicting-sources' },
       { label: 'México: sem isenção para sistemas pequenos', anchor: '#mexico' },
       { label: 'Perguntas frequentes', anchor: '#faq' },
-      { label: 'Leituras relacionadas', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -369,7 +366,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'ما الذي تقوله المصادر المتضاربة فعليًا', anchor: '#conflicting-sources' },
       { label: 'المكسيك: لا إعفاء للأنظمة الصغيرة', anchor: '#mexico' },
       { label: 'الأسئلة الشائعة', anchor: '#faq' },
-      { label: 'قراءات ذات صلة', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -476,7 +472,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '矛盾する情報源が実際に述べていること', anchor: '#conflicting-sources' },
       { label: 'メキシコ：小規模システムの適用除外なし', anchor: '#mexico' },
       { label: 'よくある質問', anchor: '#faq' },
-      { label: '関連記事', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -583,7 +578,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '相互矛盾的信息来源究竟说了什么', anchor: '#conflicting-sources' },
       { label: '墨西哥：无小型系统豁免', anchor: '#mexico' },
       { label: '常见问题', anchor: '#faq' },
-      { label: '相关阅读', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -690,7 +684,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Ce que disent réellement les sources contradictoires', anchor: '#conflicting-sources' },
       { label: 'Mexique : aucune exemption pour petits systèmes', anchor: '#mexico' },
       { label: 'FAQ', anchor: '#faq' },
-      { label: 'Lectures connexes', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -797,7 +790,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Was die widersprüchlichen Quellen wirklich sagen', anchor: '#conflicting-sources' },
       { label: 'Mexiko: keine Ausnahme für Kleinanlagen', anchor: '#mexico' },
       { label: 'Häufige Fragen', anchor: '#faq' },
-      { label: 'Weiterführende Artikel', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -904,7 +896,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '상충하는 출처가 실제로 말하는 것', anchor: '#conflicting-sources' },
       { label: '멕시코: 소형 시스템 예외 없음', anchor: '#mexico' },
       { label: '자주 묻는 질문', anchor: '#faq' },
-      { label: '관련 자료', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {

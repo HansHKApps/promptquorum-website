@@ -29,8 +29,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
     toc: [
       { label: 'What Makes Content Team Prompting Different?', anchor: 'content_team_challenges' },
       { label: 'How to Encode Brand Voice in a Prompt', anchor: 'brand_voice_encoding' },
-      { label: '5 Reusable Content Prompt Templates', anchor: 'content_templates' },
-      { label: 'Editorial Review Workflow for AI-Generated Content', anchor: 'editorial_review' },
       { label: 'Quality Scoring Checklist for Content Prompts', anchor: 'quality_scoring' },
       { label: 'FAQ', anchor: 'faq' },
       { label: 'Related Reading', anchor: 'related_reading' },
@@ -1270,8 +1268,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
     toc: [
       { label: '콘텐츠 팀 프롬프팅이 다른 이유는 무엇입니까?', anchor: 'content_team_challenges' },
       { label: '프롬프트에 브랜드 보이스를 인코딩하는 방법', anchor: 'brand_voice_encoding' },
-      { label: '5가지 재사용 가능한 콘텐츠 프롬프트 템플릿', anchor: 'content_templates' },
-      { label: 'AI 생성 콘텐츠를 위한 편집 검토 워크플로우', anchor: 'editorial_review' },
       { label: '콘텐츠 프롬프트를 위한 품질 점수화 체크리스트', anchor: 'quality_scoring' },
       { label: 'FAQ', anchor: 'faq' },
       { label: '관련 읽기', anchor: 'related_reading' },

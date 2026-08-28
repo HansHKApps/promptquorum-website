@@ -26,11 +26,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       toc: [
         { label: 'Key Takeaways', anchor: '#key-takeaways' },
         { label: 'Q2–Q3 2026 Releases', anchor: '#q2-q3-2026-releases' },
-        { label: 'Q1 2026 Releases', anchor: '#q1-2026-releases' },
-        { label: 'Q4 2025 Releases', anchor: '#q4-2025-releases' },
-        { label: 'Q3 2025 Releases', anchor: '#q3-2025-releases' },
         { label: 'Quality Improvement 2024 to 2026', anchor: '#quality-improvement' },
-        { label: 'How to Stay Updated', anchor: '#how-to-stay-updated' },
         { label: 'Regional Context', anchor: '#regional-context' },
         { label: 'Common Mistakes', anchor: '#common-mistakes' },
         { label: 'Related Reading', anchor: '#related-reading' },
@@ -140,6 +136,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         regionalContext: {
+          id: 'regional-context',
           title: 'Local LLM Model Updates 2026: Regional Context',
           content: [
             '**EU / GDPR + AI Act:** The EU AI Act (effective February 2025) introduced documentation requirements for AI systems used in regulated contexts. As new local models release in 2026, EU organizations should note: Mistral AI (France) remains the only major EU-based open-weight model developer. Mistral Small 3.2 (February 2026) and Mistral Small continue to carry Apache 2.0 licences -- the cleanest compliance choice for regulated sectors. German BSI and French CNIL both recommend local inference for high-risk AI applications. For non-EU models (Llama, Qwen, Gemma, DeepSeek): all are usable under GDPR for local inference since no data leaves the organization. The compliance difference is in supplier documentation, not data handling. When upgrading to a new model, update the AI tool documentation with the new model version, quantization level, and GGUF filename.',
@@ -148,6 +145,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Common Mistakes When Tracking and Upgrading Local LLM Models',
           items: [
             '**Upgrading to every new release unnecessarily:** New model releases happen monthly. If your current model satisfies your use case, upgrading is optional. Evaluate a new model only when you hit specific quality limits: poor reasoning on complex tasks, weak multilingual output, or coding failures. Downloading a 4-40 GB model for marginal benchmark gains is wasted time and disk space.',
@@ -436,14 +434,10 @@ schema: {
       toc: [
         { label: 'Puntos clave', anchor: '#key-takeaways' },
         { label: 'Lanzamientos Q2–Q3 2026', anchor: '#q2-q3-2026-releases' },
-        { label: 'Lanzamientos Q1 2026', anchor: '#q1-2026-releases' },
-        { label: 'Lanzamientos Q4 2025', anchor: '#q4-2025-releases' },
-        { label: 'Lanzamientos Q3 2025', anchor: '#q3-2025-releases' },
         { label: 'Mejora de calidad 2024 a 2026', anchor: '#quality-improvement' },
-        { label: 'Cómo mantenerse actualizado', anchor: '#how-to-stay-updated' },
         { label: 'Contexto regional', anchor: '#regional-context' },
         { label: 'Errores comunes', anchor: '#common-mistakes' },
-        { label: 'Lectura relacionada', anchor: '#related-reading' },
+        { label: 'Lectura relacionada', anchor: '#related' },
         { label: 'Preguntas frecuentes', anchor: '#faq' },
         { label: 'Fuentes', anchor: '#sources' },
       ],
@@ -540,6 +534,7 @@ schema: {
           ],
         },
         regionalContext: {
+          id: 'regional-context',
           title: 'Actualizaciones de modelos LLM locales 2026: Contexto regional',
           content: [
             '**UE / RGPD + AI Act:** La Ley de IA de la UE (en vigor desde febrero de 2025) introdujo requisitos de documentación para sistemas de IA en contextos regulados. A medida que se lancen nuevos modelos locales en 2026, las organizaciones de la UE deben tener en cuenta: Mistral AI (Francia) sigue siendo el único desarrollador principal de modelos open-weight con sede en la UE. Mistral Small 3.2 (febrero de 2026) y Mistral Small mantienen licencias Apache 2.0 -- la opción de cumplimiento más limpia para sectores regulados. Tanto el BSI alemán como la CNIL francesa recomiendan la inferencia local para aplicaciones de IA de alto riesgo. Para modelos no europeos (Llama, Qwen, Gemma, DeepSeek): todos son utilizables bajo el RGPD para inferencia local ya que ningún dato abandona la organización. La diferencia en cumplimiento está en la documentación del proveedor, no en el tratamiento de datos. Al actualizar a un nuevo modelo, actualiza la documentación de la herramienta de IA con la nueva versión del modelo, el nivel de cuantización y el nombre del archivo GGUF.',
@@ -548,6 +543,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Errores comunes al rastrear y actualizar modelos LLM locales',
           items: [
             '**Actualizar a cada nuevo lanzamiento sin necesidad:** Los nuevos lanzamientos de modelos ocurren mensualmente. Si tu modelo actual satisface tu caso de uso, actualizar es opcional. Evalúa un nuevo modelo solo cuando alcances límites de calidad específicos: razonamiento deficiente en tareas complejas, salida multilingüe débil o fallos en código. Descargar un modelo de 4-40 GB por ganancias marginales en benchmarks es tiempo y espacio en disco desperdiciados.',
@@ -791,14 +787,10 @@ schema: {
       toc: [
         { label: 'النقاط الرئيسية', anchor: '#key-takeaways' },
         { label: 'إصدارات الربع الثاني والثالث 2026', anchor: '#q2-q3-2026-releases' },
-        { label: 'إصدارات الربع الأول 2026', anchor: '#q1-2026-releases' },
-        { label: 'إصدارات الربع الرابع 2025', anchor: '#q4-2025-releases' },
-        { label: 'إصدارات الربع الثالث 2025', anchor: '#q3-2025-releases' },
         { label: 'تحسّن الجودة من 2024 إلى 2026', anchor: '#quality-improvement' },
-        { label: 'كيف تبقى محدّثاً', anchor: '#how-to-stay-updated' },
         { label: 'السياق الإقليمي', anchor: '#regional-context' },
         { label: 'أخطاء شائعة', anchor: '#common-mistakes' },
-        { label: 'قراءة ذات صلة', anchor: '#related-reading' },
+        { label: 'قراءة ذات صلة', anchor: '#related' },
         { label: 'الأسئلة الشائعة', anchor: '#faq' },
         { label: 'المصادر', anchor: '#sources' },
       ],
@@ -895,6 +887,7 @@ schema: {
           ],
         },
         regionalContext: {
+          id: 'regional-context',
           title: 'تحديثات نماذج LLM المحلية 2026: السياق الإقليمي',
           content: [
             '**الاتحاد الأوروبي / GDPR + قانون الذكاء الاصطناعي:** أدخل قانون الذكاء الاصطناعي للاتحاد الأوروبي (الساري منذ فبراير 2025) متطلبات توثيق لأنظمة الذكاء الاصطناعي في السياقات المنظمة. مع صدور نماذج محلية جديدة في 2026، يجب على مؤسسات الاتحاد الأوروبي مراعاة: Mistral AI (فرنسا) لا تزال المطوّر الرئيسي الوحيد لنماذج مفتوحة الأوزان ومقره الاتحاد الأوروبي. يحافظ Mistral Small 3.2 (فبراير 2026) وMistral Small على رخص Apache 2.0 -- خيار الامتثال الأنظف للقطاعات المنظمة. يوصي كل من BSI الألماني وCNIL الفرنسي بالاستدلال المحلي لتطبيقات الذكاء الاصطناعي عالية الخطورة. للنماذج غير الأوروبية (Llama، Qwen، Gemma، DeepSeek): جميعها قابلة للاستخدام بموجب GDPR للاستدلال المحلي إذ لا تغادر أي بيانات المؤسسة. الفرق في الامتثال يكمن في توثيق المزوّد، وليس في معالجة البيانات. عند الترقية إلى نموذج جديد، حدّث توثيق أداة الذكاء الاصطناعي بإصدار النموذج الجديد ومستوى التكميم واسم ملف GGUF.',
@@ -903,6 +896,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'أخطاء شائعة عند تتبّع وتحديث نماذج LLM المحلية',
           items: [
             '**الترقية إلى كل إصدار جديد دون حاجة:** تحدث إصدارات النماذج الجديدة شهرياً. إذا كان نموذجك الحالي يلبّي حالة استخدامك، فالترقية اختيارية. قيّم نموذجاً جديداً فقط عندما تصل إلى حدود جودة محددة: استدلال ضعيف في المهام المعقدة، أو مخرجات متعددة اللغات ضعيفة، أو إخفاقات في الكود. تنزيل نموذج بحجم 4-40 GB مقابل مكاسب اختبار هامشية هو إهدار للوقت ومساحة القرص.',
@@ -1146,9 +1140,7 @@ schema: {
       toc: [
         { label: 'Pontos principais', anchor: '#tldr' },
         { label: 'Lançamentos do T2–T3 2026', anchor: '#q2-q3-2026-releases' },
-        { label: 'Lançamentos do T1 2026', anchor: '#q1-releases' },
-        { label: 'Modelos recomendados por tarefa', anchor: '#recommended' },
-        { label: 'FAQ', anchor: '#faq' },
+        { label: 'Lançamentos do T1 2026', anchor: '#q2-q3-2026-releases' },
       ],
       schema: {
         '@context': 'https://schema.org',
@@ -1210,14 +1202,10 @@ schema: {
       toc: [
         { label: '重要ポイント', anchor: '#key-takeaways' },
         { label: '2026年Q2～Q3リリース', anchor: '#q2-q3-2026-releases' },
-        { label: '2026年Q1リリース', anchor: '#q1-2026-releases' },
-        { label: '2025年Q4リリース', anchor: '#q4-2025-releases' },
-        { label: '2025年Q3リリース', anchor: '#q3-2025-releases' },
         { label: '品質改善 2024～2026', anchor: '#quality-improvement' },
-        { label: 'アップデート情報の入手方法', anchor: '#how-to-stay-updated' },
         { label: 'リージョナルコンテキスト', anchor: '#regional-context' },
         { label: 'よくある間違い', anchor: '#common-mistakes' },
-        { label: '関連資料', anchor: '#related-reading' },
+        { label: '関連資料', anchor: '#related' },
         { label: 'よくある質問', anchor: '#faq' },
         { label: 'ソース', anchor: '#sources' },
       ],
@@ -1314,6 +1302,7 @@ schema: {
           ],
         },
         regionalContext: {
+          id: 'regional-context',
           title: 'ローカルLLMモデルアップデート2026：リージョナルコンテキスト',
           content: [
             '**日本（METI）**：METI AI ガバナンスガイドラインでは、本番AI システムでのモデルバージョン変更の文書化が必要です。Llama 3.1 8B から新しいモデルにアップグレードする場合、以下を文書化します：前のモデルタグ、新しいモデルタグ、アップグレード日、変更理由。`ollama show <model>` コマンドはコンプライアンス記録用の正確なバージョン文字列を提供します。日本語展開の場合、Qwen3 はネイティブ CJK トークナイザーのため 2026 年も推奨ファミリーのままです。',
@@ -1322,6 +1311,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'ローカルLLMモデルの追跡とアップグレード時のよくある間違い',
           items: [
             '**不必要に新しいリリースにアップグレードする**：新しいモデルリリースは月単位で発生します。現在のモデルがユースケースを満たしている場合、アップグレードはオプションです。特定の品質制限に達した場合のみ新しいモデルを評価します：複雑なタスクの推論不足、弱い多言語出力、またはコーディング不足。限界的なベンチマーク向上のための 4～40GB モデルのダウンロードは時間とディスク容量の無駄です。',
@@ -1465,14 +1455,10 @@ schema: {
       toc: [
         { label: 'Wichtigste Erkenntnisse', anchor: '#key-takeaways' },
         { label: 'Q2–Q3 2026 Releases', anchor: '#q2-q3-2026-releases' },
-        { label: 'Q1 2026 Releases', anchor: '#q1-2026-releases' },
-        { label: 'Q4 2025 Releases', anchor: '#q4-2025-releases' },
-        { label: 'Q3 2025 Releases', anchor: '#q3-2025-releases' },
         { label: 'Qualitätsverbesserung 2024 bis 2026', anchor: '#quality-improvement' },
-        { label: 'Wie Sie auf dem Laufenden bleiben', anchor: '#how-to-stay-updated' },
         { label: 'Regionales Umfeld', anchor: '#regional-context' },
         { label: 'Häufige Fehler', anchor: '#common-mistakes' },
-        { label: 'Weiterführendes Material', anchor: '#related-reading' },
+        { label: 'Weiterführendes Material', anchor: '#related' },
         { label: 'Häufig gestellte Fragen', anchor: '#faq' },
         { label: 'Quellen', anchor: '#sources' },
       ],
@@ -1570,6 +1556,7 @@ schema: {
           ],
         },
         regionalContext: {
+          id: 'regional-context',
           title: 'Lokale LLM-Modell-Updates 2026: Regionales Umfeld',
           content: [
             '**EU / GDPR + AI Act:** Das EU AI Act (Gültig ab Februar 2025) führte Dokumentationsanforderungen für KI-Systeme in regulierten Kontexten ein. Wenn neue lokale Modelle 2026 veröffentlicht werden, sollten EU-Organisationen beachten: Mistral AI (Frankreich) bleibt der einzige große EU-basierte Open-Weight-Modellentwickler. Mistral Small 3.2 (Februar 2026) und Mistral Small tragen weiterhin Apache 2.0 Lizenzen -- die sauberste Compliance-Wahl für regulierte Sektoren. Deutsche BSI und französische CNIL empfehlen beide lokale Inferenz für hochriskante KI-Anwendungen. Für Non-EU-Modelle (Llama, Qwen, Gemma, DeepSeek): Alle sind unter GDPR für lokale Inferenz nutzbar, da keine Daten die Organisation verlassen. Der Compliance-Unterschied liegt in der Lieferanten-Dokumentation, nicht in der Datenbehandlung. Beim Upgrade auf ein neues Modell aktualisieren Sie die KI-Tool-Dokumentation mit der neuen Modellversion, Quantisierungslevel und GGUF-Dateiname. **BSI-Grundschutz-Kataloge:** Der deutsche BSI-Grundschutz-Katalog fordert die Dokumentation von KI-Systemversionsänderungen in Produktionsumgebungen. Lokale Open-Weight-Modelle unterliegen nicht den Registrierungsanforderungen wie Cloud-Services. DACH-Unternehmen (Deutschland, Österreich, Schweiz) in regulierten Sektoren (Finanzdienstleistungen, Gesundheitswesen, Recht) sollten sicherstellen, dass Modell-Upgrades im Risiko-Management-Prozess dokumentiert werden.',
@@ -1578,6 +1565,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Häufige Fehler beim Tracking und Upgrade lokaler LLM-Modelle',
           items: [
             '**Unnötiges Upgrade auf jeden neuen Release:** Neue Modell-Releases passieren monatlich. Wenn Ihr aktuelles Modell Ihren Use-Case erfüllt, ist ein Upgrade optional. Bewerten Sie ein neues Modell nur, wenn Sie spezifische Qualitätsgrenzen erreichen: schlechtes Reasoning bei komplexen Aufgaben, schwache multilinguale Ausgabe oder Codier-Fehler. Das Herunterladen eines 4-40 GB Modells für marginale Benchmark-Gewinne ist verschwendete Zeit und Speicherplatz.',
@@ -2049,14 +2037,10 @@ schema: {
       toc: [
         { label: 'Points clés', anchor: '#key-takeaways' },
         { label: 'Releases Q2–Q3 2026', anchor: '#q2-q3-2026-releases' },
-        { label: 'Releases Q1 2026', anchor: '#q1-2026-releases' },
-        { label: 'Releases Q4 2025', anchor: '#q4-2025-releases' },
-        { label: 'Releases Q3 2025', anchor: '#q3-2025-releases' },
         { label: 'Amélioration de la qualité 2024 à 2026', anchor: '#quality-improvement' },
-        { label: 'Comment rester à jour', anchor: '#how-to-stay-updated' },
         { label: 'Contexte régional', anchor: '#regional-context' },
         { label: 'Erreurs courantes', anchor: '#common-mistakes' },
-        { label: 'Lectures connexes', anchor: '#related-reading' },
+        { label: 'Lectures connexes', anchor: '#related' },
         { label: 'Questions fréquentes', anchor: '#faq' },
         { label: 'Sources', anchor: '#sources' },
       ],
@@ -2154,6 +2138,7 @@ schema: {
           ],
         },
         regionalContext: {
+          id: 'regional-context',
           title: 'Mises à jour des LLM locaux 2026 : Contexte régional',
           content: [
             '**UE / RGPD + AI Act** : l\'AI Act de l\'UE (en vigueur depuis février 2025) a introduit des exigences de documentation pour les systèmes d\'IA dans les contextes réglementés. Lorsque de nouveaux modèles locaux sortent en 2026, les organisations de l\'UE doivent noter : Mistral AI (France) reste le seul développeur majeur de modèles open-weight basé en UE. Mistral Small 3.2 (février 2026) et Mistral Small portent toujours des licences Apache 2.0 -- le choix de conformité le plus propre pour les secteurs réglementés. German BSI et French CNIL recommandent tous deux l\'inférence locale pour les applications d\'IA à haut risque. Pour les modèles non-UE (Llama, Qwen, Gemma, DeepSeek) : tous peuvent être utilisés en vertu du RGPD pour l\'inférence locale puisqu\'aucune donnée ne quitte l\'organisation. La différence de conformité réside dans la documentation du fournisseur, non dans le traitement des données. Lors de la mise à niveau vers un nouveau modèle, mettez à jour la documentation de l\'outil IA avec la nouvelle version de modèle, le niveau de quantification et le nom du fichier GGUF. **CNIL - Données sensibles** : la Commission Nationale de l\'Informatique et des Libertés (CNIL) recommande l\'inférence locale lorsqu\'elle traite des données professionnelles sensibles (données financières, médicales, légales). L\'utilisation de modèles locaux open-weight pour ces cas d\'usage satisfait aux recommandations de la CNIL sans modification supplémentaire.',
@@ -2162,6 +2147,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Erreurs courantes lors du suivi et de la mise à niveau des modèles LLM locaux',
           items: [
             '**Mise à niveau inutile vers chaque nouvelle release** : les releases de nouveaux modèles se produisent mensuellement. Si votre modèle actuel satisfait votre cas d\'utilisation, la mise à niveau est facultative. Évaluez un nouveau modèle uniquement lorsque vous atteignez des limites de qualité spécifiques : raisonnement faible sur les tâches complexes, sortie multilingue faible ou échecs de codage. Télécharger un modèle de 4-40 GB pour des gains de benchmark marginaux est du temps et de l\'espace disque gaspillés.',
@@ -2277,14 +2263,10 @@ schema: {
       toc: [
         { label: '핵심 요약', anchor: '#key-takeaways' },
         { label: '2026년 Q2~Q3 출시 모델', anchor: '#q2-q3-2026-releases' },
-        { label: '2026년 Q1 출시 모델', anchor: '#q1-2026-releases' },
-        { label: '2025년 Q4 출시 모델', anchor: '#q4-2025-releases' },
-        { label: '2025년 Q3 출시 모델', anchor: '#q3-2025-releases' },
         { label: '2024년부터 2026년까지의 품질 향상', anchor: '#quality-improvement' },
-        { label: '최신 정보를 유지하는 방법', anchor: '#how-to-stay-updated' },
         { label: '지역별 컨텍스트', anchor: '#regional-context' },
         { label: '일반적인 실수', anchor: '#common-mistakes' },
-        { label: '관련 자료', anchor: '#related-reading' },
+        { label: '관련 자료', anchor: '#related' },
         { label: '자주 묻는 질문', anchor: '#faq' },
         { label: '출처', anchor: '#sources' },
       ],
@@ -2380,6 +2362,7 @@ schema: {
           ],
         },
         regionalContext: {
+          id: 'regional-context',
           title: '로컬 LLM 모델 업데이트 2026: 지역별 컨텍스트',
           content: [
             '**EU / GDPR + AI 법**: 2025년 2월부터 발효된 EU AI 법은 규제 환경에서 사용되는 AI 시스템에 대한 문서화 요구 사항을 도입했습니다. 2026년에 새로운 로컬 모델이 출시됨에 따라 EU 조직들은 다음을 유의해야 합니다: Mistral AI (프랑스)는 주요 EU 기반 오픈 웨이트 모델 개발사로 유일합니다. Mistral Small 3.2 (2026년 2월)와 Mistral Small은 계속해서 Apache 2.0 라이선스를 제공합니다 -- 규제 분야에서 가장 깔끔한 컴플라이언스 선택입니다. 독일 BSI와 프랑스 CNIL은 고위험 AI 애플리케이션에 로컬 추론을 권장합니다. EU 외 모델(Llama, Qwen, Gemma, DeepSeek)의 경우: 데이터가 조직 외부로 나가지 않으므로 로컬 추론에서 GDPR 하에 모두 사용 가능합니다. 컴플라이언스 차이는 공급업체 문서화에 있으며 데이터 처리 방식에 있지 않습니다. 새 모델로 업그레이드할 때는 AI 도구 문서를 새 모델 버전, 양자화 수준, GGUF 파일명으로 업데이트하십시오.',
@@ -2388,6 +2371,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: '로컬 LLM 모델 추적 및 업그레이드 시 일반적인 실수',
           items: [
             '**불필요하게 모든 새 출시 버전으로 업그레이드하기**: 새 모델 출시는 매달 이루어집니다. 현재 모델이 사용 목적을 충족한다면 업그레이드는 선택 사항입니다. 특정 품질 한계에 도달했을 때만 새 모델을 평가하십시오: 복잡한 작업에서의 낮은 추론 능력, 약한 다국어 출력, 또는 코딩 실패. 미미한 벤치마크 향상을 위해 4~40 GB 모델을 다운로드하는 것은 시간과 디스크 공간 낭비입니다.',

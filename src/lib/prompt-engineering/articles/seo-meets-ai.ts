@@ -243,6 +243,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           blockquote: 'One important caveat: a 2026 SearchAtlas study analyzing schema adoption vs. AI citation frequency across OpenAI, Gemini, and Perplexity found that higher schema coverage alone does not consistently produce higher LLM citation rates. Schema makes content easier to parse — but content authority, entity density, and answer-first structure remain the stronger citation signals.',
         },
         crawlerStack: {
+          id: 'which-ai-crawlers-should-you-unblock-in-robotstxt',
           title: 'Which AI Crawlers Should You Unblock in robots.txt?',
           content: [
             '**AI search platforms use dedicated crawlers distinct from Googlebot. Ensure none are blocked in your `robots.txt`:**',
@@ -429,6 +430,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         howToStart: {
+          id: 'how-to-optimize-content-for-geo',
           title: 'How to Optimize Content for GEO (Generative Engine Optimization)',
           callouts: [
             {
@@ -551,7 +553,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: 'So optimieren Sie Inhalte für GEO', anchor: '#how-to-optimize-content-for-geo' },
         { label: 'Häufige GEO-Fehler (und wie man sie behebt)', anchor: '#common-geo-mistakes-and-how-to-fix-them' },
         { label: 'Weiterführende Literatur', anchor: '#related-reading' },
-        { label: 'Häufig gestellte Fragen', anchor: '#frequently-asked-questions' },
+        { label: 'Häufig gestellte Fragen', anchor: '#faq' },
         { label: 'Quellen und weiterführende Ressourcen', anchor: '#sources-further-reading' },
       ],
       schema: {
@@ -665,6 +667,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         definition: {
+          id: 'geo-vs-seo-two-different-games',
           title: 'GEO vs. SEO: Zwei unterschiedliche Spielregeln',
           content: 'Für zwanzig Jahre war „Suchmaschinenoptimierung" gleichbedeutend mit Google-Ranking. 2026 muss die Definition expandiert werden. Generative Engine Optimization (GEO) ist das Gegenstück: die Praxis, Inhalte so zu strukturieren, dass KI-Suchmaschinen — nicht Menschen — deine Inhalte auswählen und zitieren. Diese Unterscheidung ist nicht semantisch; sie ist eine operative Verschiebung mit Konsequenzen.',
           callouts: [
@@ -707,6 +710,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           blockquoteSource: '[Aggarwal et al., 2023. Foundational GEO research](https://arxiv.org/abs/2311.09735)',
         },
         conversionAnalysis: {
+          id: 'why-ai-traffic-converts-differently',
           title: 'Warum KI-Such-Traffic anders konvertiert',
           content: [
             '**Hinweis zur Metrik:** Die Studien unten messen unterschiedliche Dinge — Session-Level-Konversionsrate (WebFX), Goal-Completion-Lift (Ahrefs), und B2B-spezifische Konversion (SEMrush). Diese Zahlen sind nicht direkt vergleichbar; jede ist dokumentiert und gekennzeichnet.',
@@ -724,6 +728,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           blockquoteSource: '[GPT-5 (OpenAI), Claude 4.8 Opus (Anthropic), Gemini 3 Pro (Google DeepMind) — 2026 Konversions-Benchmark]',
         },
         technicalFoundations: {
+          id: 'what-are-the-technical-foundations-of-geo',
           title: 'Was sind die technischen Grundlagen von GEO?',
           content: 'GEO hat vier Kernkomponenten: Crawlbarkeit, Vertrauensanker (Schema), Content-Struktur und Entity-Dichte. Jede muss vorhanden sein, damit KI-Engines dich reliabel zitieren.',
           callouts: [
@@ -740,6 +745,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           blockquoteSource: '[Milestone Research, 2026. JSON-LD Markup Impact on AI Citation](https://www.xseek.io/learnings)',
         },
         crawlerStack: {
+          id: 'which-ai-crawlers-should-you-unblock-in-robotstxt',
           title: 'Welche KI-Crawler sollte ich in robots.txt freigeben?',
           content: 'Die vier Haupt-KI-Suchmaschinen haben unterschiedliche Crawler-Identitäten. Du musst sie explizit erlauben; Standardbot-Erlaubnisse reichen nicht aus. Hier ist die Konfiguration für alle vier:',
           callouts: [
@@ -755,6 +761,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           blockquoteSource: '[Anthropic, OpenAI, Google DeepMind, Perplexity — 2026 Crawler-Spezifikationen]',
         },
         contentStructure: {
+          id: 'content-structure-what-ai-engines-actually-cite',
           title: 'Inhaltsstruktur: Was KI-Engines tatsächlich zitieren',
           content: [
             'KI-Engines zitieren nicht zufällig. Sie suchen nach Absätzen, die (1) eine klar isolierte Antwort enthalten, (2) kontextunabhängig verständlich sind, und (3) mit Entities oder Daten unterstützt werden. Strukturiere deinen Content mit diesem Muster:',
@@ -781,6 +788,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         goodExample: {
+          id: 'bad-vs-good-a-geo-compliant-rewrite',
           title: 'Schlecht vs. Gut: Ein GEO-konformes Rewrite',
           content: [
             '**Schlecht — Null-Information Prosa (wird nicht zitiert):**',
@@ -795,6 +803,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: 'Der erste Absatz ist Null-Information: Jeder könnte diesen Satz schreiben. Der zweite Absatz ist GEO-konform: Er nennt spezifische KI-Engines (mit Marktanteilen), definiert das Konzept (GEO), listet drei Anforderungen auf und verknüpft zu etabliertem Kontext (traditionelle SEO). Ein KI-Modell könnte diesen Absatz isolieren, in eine Antwort zitieren und die Quelle korrekt attribuieren. Das ist GEO-Sieg.',
         },
         seoFoundation: {
+          id: 'does-traditional-seo-still-matter-for-geo',
           title: 'Spielt die traditionelle SEO-Grundlage noch eine Rolle?',
           content: 'Ja. GEO ergänzt traditionelle SEO; es ersetzt sie nicht. Crawlbarkeit, HTTPS, Sitemap, Core Web Vitals und Nutzersignale bleiben wichtig, weil KI-Engines auf den gleichen Datenquellen aufbauen wie Googlebot. Aber GEO fügt neue Anforderungen hinzu, die über klassisches SEO hinausgehen.',
           snippets: [
@@ -836,6 +845,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         platformBreakdown: {
+          id: 'which-ai-platforms-dominate-the-search-market',
           title: 'Welche KI-Plattformen dominieren den Suchmarkt?',
           content: 'Vier KI-Suchmaschinen teilen sich den Markt. Jede nutzt unterschiedliche Crawl-Strategien, Ranking-Algorithmen und Quellenmodelle. Hier ist der Status quo, Q2 2026:',
           callouts: [
@@ -872,6 +882,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           blockquoteSource: '[Statista / Data.ai, 2026 Q2 KI-Search-Marktanteil]',
         },
         globalContext: {
+          id: 'how-does-geo-differ-across-regions-and-markets',
           title: 'Wie unterscheidet sich GEO in Regionen und Märkten?',
           content: [
             '**Im deutschsprachigen Raum (DACH):** Deutschland, Österreich und die Schweiz zeigen unterschiedliche KI-Such-Verhaltensweisen. Deutsche Nutzer bevorzugen Google und Gemini (60 % Marktanteil), während ChatGPT und Perplexity bei Tech-Profis und jüngeren Nutzern (25–40) beliebter sind. Für Mittelstands-B2B (Maschinenbau, Consulting, Softwareentwicklung) ist GEO kritisch, weil Entscheidungsträger Perplexity und Claude für schnelle Recherche nutzen. DSGVO-Compliance ist obligatorisch: KI-Crawler müssen in robots.txt explicit erlaubt sein, und deine Datenschutzerklärung muss KI-Training erwähnen. Für sensible Daten (finanzielle, medizinische, rechtliche Inhalte) empfehlen BSI-Grundschutz-Kataloge, lokale Modelle (Ollama, Llama 3.3, Mistral) zu nutzen, statt externe KI-APIs zu verlassen. Mittelstands-Websites sollten Schema-Markup implementieren und Antwort-First-Struktur für Produktseiten und Whitepapers verwenden.',
@@ -883,6 +894,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Weiterführende Literatur',
           items: [
             '[Write Better Code With AI](/de/prompt-engineering/write-better-code-with-ai) — Anwendung von GEO-konformer Struktur auf KI-gestützte Softwareentwicklung',
@@ -891,6 +903,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         howToStart: {
+          id: 'how-to-optimize-content-for-geo',
           title: 'So optimieren Sie Inhalte für GEO',
           callouts: [
             { type: 'best-practice', label: '🛠️ Best Practice', text: 'Beginne mit einer Key-Seite (z.B. deine Top-Produkt-Seite oder Leitartikel). Wende diese 5 Schritte an, messe Zitierfreqenz über 6 Wochen, skaliere dann auf andere Seiten.' },
@@ -919,6 +932,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-geo-mistakes-and-how-to-fix-them',
           title: 'Häufige GEO-Fehler (und wie man sie behebt)',
           mistakes: [
             {
@@ -987,6 +1001,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         sources: {
+          id: 'sources-further-reading',
           title: 'Quellen und weiterführende Ressourcen',
           items: [
             '[Aggarwal et al., 2023. "GEO: Generative Engine Optimization"](https://arxiv.org/abs/2311.09735) — das grundlegende akademische Papier, das GEO als Disziplin definiert und den Citation-Lift von strukturiertem Content misst',
@@ -1024,7 +1039,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: 'Cómo optimizar el contenido para GEO', anchor: '#how-to-optimize-content-for-geo' },
         { label: 'Errores comunes de GEO (y cómo solucionarlos)', anchor: '#common-geo-mistakes-and-how-to-fix-them' },
         { label: 'Lectura relacionada', anchor: '#related-reading' },
-        { label: 'Preguntas frecuentes', anchor: '#frequently-asked-questions' },
+        { label: 'Preguntas frecuentes', anchor: '#faq' },
         { label: 'Fuentes y lecturas adicionales', anchor: '#sources-further-reading' },
       ],
       schema: {
@@ -1135,6 +1150,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         definition: {
+          id: 'geo-vs-seo-two-different-games',
           title: 'GEO vs. SEO: Dos juegos diferentes',
           content: 'Durante veinte años, "optimización para motores de búsqueda" fue sinónimo de posicionamiento en Google. En 2026, la definición debe expandirse. La Optimización para Motores Generativos (GEO) es la práctica de estructurar el contenido para que los motores de búsqueda con IA — no los humanos — seleccionen y citen tu contenido. Esta distinción no es semántica; es un cambio operativo con consecuencias.',
           callouts: [
@@ -1153,6 +1169,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           blockquoteSource: '[Aggarwal et al., 2023. Investigación fundamental de GEO](https://arxiv.org/abs/2311.09735)',
         },
         conversionAnalysis: {
+          id: 'why-ai-traffic-converts-differently',
           title: 'Por qué el tráfico de búsqueda con IA convierte de manera diferente',
           content: [
             'El tráfico de búsqueda con IA convierte consistentemente 2–3× mejor que la búsqueda orgánica. La razón: la intención está muy cualificada. Un usuario que va a Perplexity quiere una respuesta precisa, a menudo muy específica — no una página de aterrizaje ni un argumento de ventas. Si tu contenido es citado en esa respuesta, ya confían en ti.',
@@ -1169,6 +1186,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           blockquoteSource: '[GPT-5 (OpenAI), Claude 4.8 Opus (Anthropic), Gemini 3 Pro (Google DeepMind) — Benchmark de conversión 2026]',
         },
         technicalFoundations: {
+          id: 'what-are-the-technical-foundations-of-geo',
           title: '¿Cuáles son los fundamentos técnicos de GEO?',
           content: 'GEO tiene cuatro componentes principales: capacidad de rastreo, anclas de confianza (esquema), estructura del contenido y densidad de entidades. Cada uno debe estar presente para que los motores de IA te citen de manera fiable.',
           callouts: [
@@ -1185,6 +1203,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           blockquoteSource: '[Milestone Research, 2026. Impacto del marcado JSON-LD en la cita de IA](https://www.xseek.io/learnings)',
         },
         crawlerStack: {
+          id: 'which-ai-crawlers-should-you-unblock-in-robotstxt',
           title: '¿Qué crawlers de IA deberías desbloquear en robots.txt?',
           content: 'Los cuatro principales motores de búsqueda con IA tienen diferentes identidades de crawler. Debes permitirlos explícitamente; los permisos estándar de bots no son suficientes.',
           callouts: [
@@ -1200,6 +1219,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           blockquoteSource: '[Anthropic, OpenAI, Google DeepMind, Perplexity — Especificaciones de crawlers 2026]',
         },
         contentStructure: {
+          id: 'content-structure-what-ai-engines-actually-cite',
           title: 'Estructura del contenido: qué citan realmente los motores de IA',
           content: [
             'Los motores de IA buscan párrafos que (1) contengan una respuesta claramente aislada, (2) sean comprensibles independientemente del contexto y (3) estén respaldados por entidades o datos.',
@@ -1220,6 +1240,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         goodExample: {
+          id: 'bad-vs-good-a-geo-compliant-rewrite',
           title: 'Malo vs. bueno: una reescritura conforme a GEO',
           content: [
             '**Malo — prosa de información cero (no se cita):**',
@@ -1234,6 +1255,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: 'El primer párrafo es de información cero: cualquiera podría escribir esa oración. El segundo párrafo es conforme a GEO: nombra motores de IA específicos con cuotas de mercado, define el concepto, enumera tres requisitos y vincula con contexto establecido. Un modelo de IA podría aislar este párrafo, citarlo en una respuesta y atribuir correctamente la fuente.',
         },
         seoFoundation: {
+          id: 'does-traditional-seo-still-matter-for-geo',
           title: '¿Sigue importando la base del SEO tradicional?',
           content: 'Sí. GEO complementa el SEO tradicional; no lo reemplaza. La capacidad de rastreo, HTTPS, sitemap, Core Web Vitals y las señales de los usuarios siguen siendo importantes porque los motores de IA se construyen sobre las mismas fuentes de datos que Googlebot.',
           snippets: [
@@ -1252,6 +1274,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         platformBreakdown: {
+          id: 'which-ai-platforms-dominate-the-search-market',
           title: '¿Qué plataformas de IA dominan el mercado de búsqueda?',
           content: 'Cuatro motores de búsqueda con IA se reparten el mercado. Aquí está el status quo, T2 2026:',
           callouts: [
@@ -1268,6 +1291,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           blockquoteSource: '[Statista / Data.ai, cuota de mercado de búsqueda con IA T2 2026]',
         },
         globalContext: {
+          id: 'how-does-geo-differ-across-regions-and-markets',
           title: '¿Cómo varía GEO por regiones y mercados?',
           content: [
             '**España y mercado hispanohablante:** Los usuarios de España prefieren Google y Gemini, mientras que ChatGPT y Perplexity son más populares entre profesionales de tecnología. Para B2B hispanohablante, GEO es fundamental porque los tomadores de decisiones usan Perplexity y Claude para investigación rápida. La LOPD-GDD y el RGPD son obligatorios: los crawlers de IA deben estar explícitamente permitidos en robots.txt.',
@@ -1279,6 +1303,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Lectura relacionada',
           items: [
             '[Escribe mejor código con IA](/es/prompt-engineering/write-better-code-with-ai) — Aplicación de la estructura conforme a GEO al desarrollo de software asistido por IA',
@@ -1287,6 +1312,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         howToStart: {
+          id: 'how-to-optimize-content-for-geo',
           title: 'Cómo optimizar el contenido para GEO',
           callouts: [
             { type: 'best-practice', label: '🛠️ Mejor práctica', text: 'Empieza con una página clave. Aplica estos 5 pasos, mide la frecuencia de citas durante 6 semanas, luego escala a otras páginas.' },
@@ -1300,6 +1326,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-geo-mistakes-and-how-to-fix-them',
           title: 'Errores comunes de GEO (y cómo solucionarlos)',
           mistakes: [
             { mistake: 'Bloquear los crawlers de IA en robots.txt', problem: 'Si bloqueas GPTBot, Perplexity, Google-Extended o Claude-Web, tu contenido no puede ser citado. Cero tráfico, cero exposición.', fix: 'Abre robots.txt. Permite todos los crawlers de IA para los cuatro proveedores principales.' },
@@ -1324,6 +1351,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         sources: {
+          id: 'sources-further-reading',
           title: 'Fuentes y lecturas adicionales',
           items: [
             '[Aggarwal et al., 2023. "GEO: Generative Engine Optimization"](https://arxiv.org/abs/2311.09735) — el artículo académico fundacional que define GEO como disciplina',
@@ -1362,7 +1390,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: 'كيفية تحسين المحتوى لـ GEO', anchor: '#how-to-optimize-content-for-geo' },
         { label: 'أخطاء GEO الشائعة (وكيفية إصلاحها)', anchor: '#common-geo-mistakes-and-how-to-fix-them' },
         { label: 'قراءة ذات صلة', anchor: '#related-reading' },
-        { label: 'الأسئلة الشائعة', anchor: '#frequently-asked-questions' },
+        { label: 'الأسئلة الشائعة', anchor: '#faq' },
         { label: 'المصادر والقراءات الإضافية', anchor: '#sources-further-reading' },
       ],
       schema: {
@@ -1473,6 +1501,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         definition: {
+          id: 'geo-vs-seo-two-different-games',
           title: 'GEO مقابل السيو: لعبتان مختلفتان',
           content: 'لعشرين عاماً، كان "تحسين محركات البحث" مرادفاً للتصدر في Google. في 2026، يجب توسيع التعريف. تحسين محركات البحث التوليدية (GEO) هو ممارسة هيكلة المحتوى كي تختاره محركات البحث بالذكاء الاصطناعي — لا البشر — وتستشهد به. هذا التمييز ليس دلالياً؛ إنه تحوّل تشغيلي له عواقب.',
           callouts: [
@@ -1491,6 +1520,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           blockquoteSource: '[Aggarwal et al., 2023. بحث GEO الأساسي](https://arxiv.org/abs/2311.09735)',
         },
         conversionAnalysis: {
+          id: 'why-ai-traffic-converts-differently',
           title: 'لماذا تتحوّل حركة مرور الذكاء الاصطناعي بشكل مختلف',
           content: [
             'تتحوّل حركة مرور البحث بالذكاء الاصطناعي باستمرار بمعدل أعلى بـ2–3× من البحث العضوي. السبب: النية مُؤهَّلة بدرجة عالية. المستخدم الذي يذهب إلى Perplexity يريد إجابة دقيقة، في أغلب الأحيان محددة جداً — لا صفحة هبوط ولا حجة مبيعات. إذا استُشهد بمحتواك في تلك الإجابة، فهم يثقون بك بالفعل.',
@@ -1507,6 +1537,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           blockquoteSource: '[GPT-5 (OpenAI) وClaude 4.8 Opus (Anthropic) وGemini 3 Pro (Google DeepMind) — معيار التحوّل 2026]',
         },
         technicalFoundations: {
+          id: 'what-are-the-technical-foundations-of-geo',
           title: 'ما هي الأسس التقنية لـ GEO؟',
           content: 'تمتلك GEO أربعة مكونات رئيسية: قابلية الزحف وأعمدة الثقة (المخطط) وبنية المحتوى وكثافة الكيانات. يجب أن يكون كل منها موجوداً لكي تستشهد محركات الذكاء الاصطناعي بك بشكل موثوق.',
           callouts: [
@@ -1523,6 +1554,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           blockquoteSource: '[بحث Milestone، 2026. تأثير ترميز JSON-LD على استشهاد الذكاء الاصطناعي](https://www.xseek.io/learnings)',
         },
         crawlerStack: {
+          id: 'which-ai-crawlers-should-you-unblock-in-robotstxt',
           title: 'أي زواحف الذكاء الاصطناعي يجب السماح بها في robots.txt؟',
           content: 'لمحركات البحث الأربعة الرئيسية بالذكاء الاصطناعي هويات زاحف مختلفة. يجب السماح لها صراحةً؛ أذونات الروبوتات القياسية غير كافية.',
           callouts: [
@@ -1538,6 +1570,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           blockquoteSource: '[Anthropic وOpenAI وGoogle DeepMind وPerplexity — مواصفات الزواحف 2026]',
         },
         contentStructure: {
+          id: 'content-structure-what-ai-engines-actually-cite',
           title: 'بنية المحتوى: ما تستشهد به محركات الذكاء الاصطناعي فعلاً',
           content: [
             'تبحث محركات الذكاء الاصطناعي عن فقرات (1) تحتوي على إجابة معزولة بوضوح، (2) مفهومة بشكل مستقل عن السياق، (3) مدعومة بكيانات أو بيانات.',
@@ -1558,6 +1591,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         goodExample: {
+          id: 'bad-vs-good-a-geo-compliant-rewrite',
           title: 'سيئ مقابل جيد: إعادة كتابة متوافقة مع GEO',
           content: [
             '**سيئ — نثر معلومات صفرية (لا يُستشهد به):**',
@@ -1572,6 +1606,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: 'الفقرة الأولى معلومات صفرية: أي شخص يمكنه كتابة تلك الجملة. الفقرة الثانية متوافقة مع GEO: تُسمّي محركات ذكاء اصطناعي محددة بحصص سوقية وتُعرّف المفهوم وتُدرج ثلاثة متطلبات وترتبط بسياق راسخ. يمكن لنموذج ذكاء اصطناعي عزل هذه الفقرة والاستشهاد بها في إجابة وإسناد المصدر بشكل صحيح.',
         },
         seoFoundation: {
+          id: 'does-traditional-seo-still-matter-for-geo',
           title: 'هل لا تزال أسس السيو التقليدي مهمة؟',
           content: 'نعم. GEO تكمل السيو التقليدي؛ لا تُحلّ محله. قابلية الزحف وHTTPS وخريطة الموقع وCore Web Vitals وإشارات المستخدمين لا تزال مهمة لأن محركات الذكاء الاصطناعي تبنى على مصادر البيانات نفسها التي يستخدمها Googlebot.',
           snippets: [
@@ -1590,6 +1625,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         platformBreakdown: {
+          id: 'which-ai-platforms-dominate-the-search-market',
           title: 'أي منصات ذكاء اصطناعي تهيمن على سوق البحث؟',
           content: 'أربعة محركات بحث بالذكاء الاصطناعي تتقاسم السوق. إليك الوضع الراهن، الربع الثاني 2026:',
           callouts: [
@@ -1606,6 +1642,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           blockquoteSource: '[Statista / Data.ai، حصة سوق البحث بالذكاء الاصطناعي الربع الثاني 2026]',
         },
         globalContext: {
+          id: 'how-does-geo-differ-across-regions-and-markets',
           title: 'كيف تختلف GEO عبر المناطق والأسواق؟',
           content: [
             '**المنطقة العربية:** يُفضّل المستخدمون في المنطقة العربية Google وGemini، بينما ChatGPT وPerplexity أكثر شيوعاً بين المحترفين التقنيين. لمحتوى B2B الناطق بالعربية، تُعدّ GEO أساسية لأن صانعي القرار يستخدمون Perplexity وClaude للبحث السريع. تحقق من اللوائح المحلية لحماية البيانات قبل إرسال بيانات المستخدمين إلى واجهات API للذكاء الاصطناعي السحابية.',
@@ -1617,6 +1654,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'قراءة ذات صلة',
           items: [
             '[اكتب كوداً أفضل بالذكاء الاصطناعي](/ar/prompt-engineering/write-better-code-with-ai) — تطبيق البنية المتوافقة مع GEO على تطوير البرمجيات بمساعدة الذكاء الاصطناعي',
@@ -1625,6 +1663,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         howToStart: {
+          id: 'how-to-optimize-content-for-geo',
           title: 'كيفية تحسين المحتوى لـ GEO',
           callouts: [
             { type: 'best-practice', label: '🛠️ أفضل ممارسة', text: 'ابدأ بصفحة رئيسية واحدة. طبّق هذه الخطوات الـ5، قِس وتيرة الاستشهادات لمدة 6 أسابيع، ثم وسِّع إلى صفحات أخرى.' },
@@ -1638,6 +1677,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-geo-mistakes-and-how-to-fix-them',
           title: 'أخطاء GEO الشائعة (وكيفية إصلاحها)',
           mistakes: [
             { mistake: 'حجب زواحف الذكاء الاصطناعي في robots.txt', problem: 'إذا حجبت GPTBot وPerplexity وGoogle-Extended وClaude-Web، لا يمكن الاستشهاد بمحتواك. صفر حركة مرور وصفر ظهور.', fix: 'افتح robots.txt. اسمح لجميع زواحف الذكاء الاصطناعي الأربعة الرئيسية.' },
@@ -1662,6 +1702,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         sources: {
+          id: 'sources-further-reading',
           title: 'المصادر والقراءات الإضافية',
           items: [
             '[Aggarwal et al., 2023. "GEO: Generative Engine Optimization"](https://arxiv.org/abs/2311.09735) — الورقة الأكاديمية التأسيسية التي تُعرّف GEO كتخصص',
@@ -1897,7 +1938,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: 'Comment optimiser le contenu pour GEO', anchor: '#how-to-optimize-content-for-geo' },
         { label: 'Erreurs GEO courantes et solutions', anchor: '#common-geo-mistakes-and-how-to-fix-them' },
         { label: 'Lectures complémentaires', anchor: '#related-reading' },
-        { label: 'Questions fréquemment posées', anchor: '#frequently-asked-questions' },
+        { label: 'Questions fréquemment posées', anchor: '#faq' },
         { label: 'Sources et ressources supplémentaires', anchor: '#sources-further-reading' },
       ],
       schema: {
@@ -2011,6 +2052,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         definition: {
+          id: 'geo-vs-seo-two-different-games',
           title: 'GEO vs SEO : deux jeux différents',
           content: 'Pendant vingt ans, « optimisation pour les moteurs de recherche » a signifié classement sur Google. En 2026, cette définition doit s\'étendre. Generative Engine Optimization (GEO) est son pendant : la pratique de structurer le contenu pour que les moteurs de recherche IA — pas les humains — le sélectionnent et le citent. Cette distinction n\'est pas sémantique ; c\'est un changement opérationnel avec des conséquences.',
           callouts: [
@@ -2053,6 +2095,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           blockquoteSource: '[Aggarwal et al., 2023. Recherche GEO fondatrice](https://arxiv.org/abs/2311.09735)',
         },
         conversionAnalysis: {
+          id: 'why-ai-traffic-converts-differently',
           title: 'Pourquoi le trafic de recherche IA convertit différemment',
           content: [
             '**Note sur les métriques :** les études ci-dessous mesurent des choses différentes — taux de conversion au niveau de la session (WebFX), lift de réalisation d\'objectifs (Ahrefs), et conversion B2B spécifique (SEMrush). Ces nombres ne sont pas directement comparables ; chacun est documenté et étiqueté.',
@@ -2070,6 +2113,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           blockquoteSource: '[GPT-5 (OpenAI), Claude 4.8 Opus (Anthropic), Gemini 3 Pro (Google DeepMind) — Benchmark de conversion 2026]',
         },
         technicalFoundations: {
+          id: 'what-are-the-technical-foundations-of-geo',
           title: 'Quels sont les fondamentaux techniques de GEO ?',
           content: 'GEO repose sur quatre composants clés : crawlabilité, ancrages de confiance (schéma), structure du contenu et densité d\'entités. Chacun doit être présent pour que les moteurs IA vous citent fiablement.',
           callouts: [
@@ -2086,6 +2130,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           blockquoteSource: '[Milestone Research, 2026. JSON-LD Markup Impact on AI Citation](https://www.xseek.io/learnings)',
         },
         crawlerStack: {
+          id: 'which-ai-crawlers-should-you-unblock-in-robotstxt',
           title: 'Quels robots IA dois-je autoriser dans robots.txt ?',
           content: 'Les quatre moteurs de recherche IA principaux ont des identités de crawler différentes. Vous devez les autoriser explicitement ; les autorisations de bot standard ne suffisent pas. Voici la configuration pour tous les quatre :',
           callouts: [
@@ -2101,6 +2146,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           blockquoteSource: '[Anthropic, OpenAI, Google DeepMind, Perplexity — Spécifications des crawlers 2026]',
         },
         contentStructure: {
+          id: 'content-structure-what-ai-engines-actually-cite',
           title: 'Structure du contenu : ce que les moteurs IA citent réellement',
           content: [
             'Les moteurs IA ne citent pas au hasard. Ils recherchent des paragraphes qui (1) contiennent une réponse isolée clairement, (2) sont compréhensibles indépendamment du contexte, et (3) sont soutenus par des entités ou des données. Structurez votre contenu selon ce modèle :',
@@ -2127,6 +2173,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         goodExample: {
+          id: 'bad-vs-good-a-geo-compliant-rewrite',
           title: 'Mauvais vs Bon : une réécriture compatible GEO',
           content: [
             '**Mauvais — prose zéro-information (ne sera pas citée) :**',
@@ -2141,6 +2188,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: 'Le premier paragraphe est zéro-information : n\'importe qui pourrait l\'écrire. Le deuxième paragraphe est compatible GEO : il nomme des moteurs IA spécifiques (avec parts de marché), définit le concept (GEO), énumère trois exigences et relie au contexte établi (SEO traditionnel). Un modèle IA pourrait isoler ce paragraphe, le citer dans une réponse, et attribuer correctement la source. C\'est une victoire GEO.',
         },
         seoFoundation: {
+          id: 'does-traditional-seo-still-matter-for-geo',
           title: 'Le SEO traditionnel est-il toujours pertinent ?',
           content: 'Oui. GEO complète le SEO traditionnel ; il ne le remplace pas. Crawlabilité, HTTPS, Sitemap, Core Web Vitals et signaux utilisateur restent importants, car les moteurs IA s\'appuient sur les mêmes sources de données que Googlebot. Mais GEO ajoute des exigences nouvelles qui vont au-delà du SEO classique.',
           snippets: [
@@ -2182,6 +2230,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         platformBreakdown: {
+          id: 'which-ai-platforms-dominate-the-search-market',
           title: 'Quelles plateformes IA dominent le marché ?',
           content: 'Quatre moteurs de recherche IA se partagent le marché. Chacun utilise des stratégies de crawl différentes, des algorithmes de classement et des modèles de sources. Voici l\'état des lieux, Q2 2026 :',
           callouts: [
@@ -2218,6 +2267,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           blockquoteSource: '[Statista / Data.ai, 2026 Q2 part de marché recherche IA]',
         },
         globalContext: {
+          id: 'how-does-geo-differ-across-regions-and-markets',
           title: 'Comment GEO diffère selon les régions',
           content: [
             '**En zone francophone (France, Belgique, Suisse) :** Les utilisateurs francophones privilégient aussi Google et Gemini, mais la CNIL (Commission Nationale de l\'Informatique et des Libertés) impose la prudence sur le traitement des données IA. GEO est moins établi que dans la zone anglophone, mais croît rapidement en Tech, SaaS et Média. Les entreprises françaises optimisent de plus en plus pour l\'attribution des sources — Perplexity cite plus que ChatGPT, et les sites français avec citations claires convertissent mieux. Pour le contenu B2B et financier français, envisagez de publier des politiques de données compatibles CNIL et de signaler si l\'inférence locale est utilisée.',
@@ -2229,6 +2279,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Lectures complémentaires',
           items: [
             '[Write Better Code With AI](/fr/prompt-engineering/write-better-code-with-ai) — application de la structure GEO-compatible à la génération de code assistée par IA',
@@ -2237,6 +2288,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         howToStart: {
+          id: 'how-to-optimize-content-for-geo',
           title: 'Comment optimiser le contenu pour GEO',
           callouts: [
             { type: 'best-practice', label: '🛠️ Bonne pratique', text: 'Commencez avec une page clé (par ex. votre page produit top ou article de référence). Appliquez ces 5 étapes, mesurez la fréquence de citation sur 6 semaines, puis élargissez à d\'autres pages.' },
@@ -2265,6 +2317,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-geo-mistakes-and-how-to-fix-them',
           title: 'Erreurs GEO courantes (et comment les corriger)',
           mistakes: [
             {
@@ -2333,6 +2386,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         sources: {
+          id: 'sources-further-reading',
           title: 'Sources et ressources supplémentaires',
           items: [
             '[Aggarwal et al., 2023. "GEO: Generative Engine Optimization"](https://arxiv.org/abs/2311.09735) — le document de recherche fondateur définissant GEO en tant que discipline et mesurant le lift de citation du contenu structuré',
@@ -2370,7 +2424,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: 'GEO向けコンテンツを最適化する方法', anchor: '#how-to-optimize-content-for-geo' },
         { label: 'GEOの一般的なミスと修正方法', anchor: '#common-geo-mistakes-and-how-to-fix-them' },
         { label: '関連資料', anchor: '#related-reading' },
-        { label: 'よくある質問', anchor: '#frequently-asked-questions' },
+        { label: 'よくある質問', anchor: '#faq' },
         { label: 'ソースと追加リソース', anchor: '#sources-further-reading' },
       ],
       schema: {
@@ -2484,6 +2538,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         definition: {
+          id: 'geo-vs-seo-two-different-games',
           title: 'GEO vs SEO：異なる2つのゲーム',
           content: '20年間、「検索エンジン最適化」はGoogleランキングと同義でした。2026年、定義は拡張される必要があります。Generative Engine Optimization（GEO）はその対応物です：AIが引用するようにコンテンツを構造化する実践。この区別は意味論的ではなく；結果を伴う運用上のシフトです。',
           callouts: [
@@ -2526,6 +2581,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           blockquoteSource: '[Aggarwal et al., 2023. Foundational GEO research](https://arxiv.org/abs/2311.09735)',
         },
         conversionAnalysis: {
+          id: 'why-ai-traffic-converts-differently',
           title: 'AI検索トラフィックが異なるコンバージョン率である理由',
           content: [
             '**メトリック注記：** 以下の研究は異なるものを測定します。セッションレベルのコンバージョン率（WebFX）、目標完了上昇度（Ahrefs）、B2B固有のコンバージョン（SEMrush）。これらの数値は直接比較できません；各者は文書化され、ラベル付けされています。',
@@ -2543,6 +2599,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           blockquoteSource: '[GPT-5（OpenAI）、Claude 4.8 Opus（Anthropic）、Gemini 3 Pro（Google DeepMind）— 2026コンバージョンベンチマーク]',
         },
         technicalFoundations: {
+          id: 'what-are-the-technical-foundations-of-geo',
           title: 'GEOの技術的基礎とは？',
           content: 'GEOは4つのコアコンポーネントがあります：クローラビリティ、信頼アンカー（スキーマ）、コンテンツ構造、エンティティ密度。各者がいなければならず、AI エンジンが信頼性を持ってあなたを引用します。',
           callouts: [
@@ -2556,6 +2613,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         crawlerStack: {
+          id: 'which-ai-crawlers-should-you-unblock-in-robotstxt',
           title: 'robots.txtでブロック解除すべきAIクローラーは？',
           content: 'AIクローラーをブロックすることはGEOをキルします。あなたのトラフィック目標がAI検索引用である場合、これらを許可します：',
           items: [
@@ -2568,6 +2626,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           blockquoteSource: 'OpenAI、Anthropic、Google、Perplexityクローラーポリシー（2026）',
         },
         contentStructure: {
+          id: 'content-structure-what-ai-engines-actually-cite',
           title: 'コンテンツ構造：AIエンジンが実際に引用する内容',
           content: 'AIエンジンは特定の構造パターンに応答します。逆エンジニアリングされた引用パターンから、高い引用傾向を持つコンテンツは：',
           items: [
@@ -2579,6 +2638,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         goodExample: {
+          id: 'bad-vs-good-a-geo-compliant-rewrite',
           title: '悪い例 vs 良い例：GEO対応の書き換え',
           content: '同じトピックに関する2つのバージョン。AIエンジンはどれを引用するか？',
           callouts: [
@@ -2596,6 +2656,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         seoFoundation: {
+          id: 'does-traditional-seo-still-matter-for-geo',
           title: '従来のSEO基礎はGEOにおいて重要ですか？',
           content: 'はい。GEOはSEOの上に構築されます。SEOなしではGEOはありません。',
           columns: ['レイヤー', '実施すること', 'GEOに重要な理由'],
@@ -2628,6 +2689,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         platformBreakdown: {
+          id: 'which-ai-platforms-dominate-the-search-market',
           title: 'AIプラットフォームで市場を支配するのはどれ？',
           content: '2026年の市場シェアと GEO優先順位：',
           columns: ['プラットフォーム', '市場シェア（AI検索）', 'GEO優先順位', 'ノート'],
@@ -2659,6 +2721,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         globalContext: {
+          id: 'how-does-geo-differ-across-regions-and-markets',
           title: '地域や市場によってGEOはどう異なるのか？',
           content: 'AIは世界的ですが、地域の規制と市場ニュアンスはGEO実装を形作ります。',
           items: [
@@ -2668,6 +2731,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: '関連資料',
           items: [
             '[Aggarwal et al., 2023. \"GEO: Generative Engine Optimization\"](https://arxiv.org/ja/abs/2311.09735) — GEOを規律として定義し、構造化コンテンツからの引用上昇度を測定する基礎的学術論文',
@@ -2676,6 +2740,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         howToStart: {
+          id: 'how-to-optimize-content-for-geo',
           title: 'GEO向けコンテンツを最適化する方法',
           numberedItems: [
             { title: 'robots.txtを監査する', whyItMatters: 'Disallow行でAI ボットを確認します。ChatGPT、Perplexity、Gemini、Claudeが許可されていることを確認します。' },
@@ -2687,6 +2752,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-geo-mistakes-and-how-to-fix-them',
           title: 'GEOの一般的なミスと修正方法',
           mistakes: [
             {
@@ -2760,6 +2826,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         sources: {
+          id: 'sources-further-reading',
           title: 'ソースと追加リソース',
           items: [
             '[Aggarwal et al., 2023. \"GEO: Generative Engine Optimization\"](https://arxiv.org/abs/2311.09735) — GEOを規律として定義し、構造化コンテンツからの引用上昇度を測定する基礎的学術論文',
@@ -2797,7 +2864,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: '如何为GEO优化内容', anchor: '#how-to-optimize-content-for-geo' },
         { label: 'GEO常见错误及其修复', anchor: '#common-geo-mistakes-and-how-to-fix-them' },
         { label: '相关阅读', anchor: '#related-reading' },
-        { label: '常见问题', anchor: '#frequently-asked-questions' },
+        { label: '常见问题', anchor: '#faq' },
         { label: '来源和额外资源', anchor: '#sources-further-reading' },
       ],
       schema: {
@@ -2911,6 +2978,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         definition: {
+          id: 'geo-vs-seo-two-different-games',
           title: 'GEO vs SEO：两种不同的游戏',
           content: '二十年来，"搜索引擎优化"与Google排名同义。2026年，定义需要扩展。生成式引擎优化（GEO）是对应物：结构化内容以使AI在合成回答时引用它。这种区别不是语义的；它是一个有后果的运营转变。',
           callouts: [
@@ -2953,6 +3021,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           blockquoteSource: '[Aggarwal et al., 2023. Foundational GEO research](https://arxiv.org/abs/2311.09735)',
         },
         conversionAnalysis: {
+          id: 'why-ai-traffic-converts-differently',
           title: 'AI搜索流量转化率差异的原因',
           content: [
             '**指标注：** 以下研究测量不同的东西。会话级转化率（WebFX）、目标完成提升（Ahrefs）和B2B特定转化（SEMrush）。这些数字不可直接比较；每个都有记录和标记。',
@@ -2970,6 +3039,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           blockquoteSource: '[GPT-5（OpenAI）、Claude 4.8 Opus（Anthropic）、Gemini 3 Pro（Google DeepMind）— 2026转化基准]',
         },
         technicalFoundations: {
+          id: 'what-are-the-technical-foundations-of-geo',
           title: 'GEO的技术基础是什么？',
           content: 'GEO有四个核心组件：可爬虫性、信任锚（模式）、内容结构、实体密度。每一个都必须存在，以便AI引擎可靠地引用你。',
           callouts: [
@@ -2983,6 +3053,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         crawlerStack: {
+          id: 'which-ai-crawlers-should-you-unblock-in-robotstxt',
           title: '应在robots.txt中解除阻止哪些AI爬虫？',
           content: '阻止AI爬虫会杀死GEO。如果你的流量目标是AI搜索引用，允许这些：',
           items: [
@@ -2995,6 +3066,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           blockquoteSource: 'OpenAI、Anthropic、Google、Perplexity爬虫政策（2026）',
         },
         contentStructure: {
+          id: 'content-structure-what-ai-engines-actually-cite',
           title: '内容结构：AI引擎实际引用的内容',
           content: 'AI引擎响应特定结构模式。从逆向工程的引用模式来看，具有高引用倾向的内容：',
           items: [
@@ -3006,6 +3078,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         goodExample: {
+          id: 'bad-vs-good-a-geo-compliant-rewrite',
           title: '不良示例 vs 良好示例：符合GEO的改写',
           content: '同一主题的两个版本。AI引擎会引用哪一个？',
           callouts: [
@@ -3023,6 +3096,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         seoFoundation: {
+          id: 'does-traditional-seo-still-matter-for-geo',
           title: '传统SEO基础对GEO重要吗？',
           content: '是的。GEO建立在SEO之上。没有SEO就没有GEO。',
           columns: ['层', '做什么', 'GEO为什么重要'],
@@ -3055,6 +3129,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         platformBreakdown: {
+          id: 'which-ai-platforms-dominate-the-search-market',
           title: '哪些AI平台主导搜索市场？',
           content: '2026年市场份额和GEO优先级：',
           columns: ['平台', '市场份额（AI搜索）', 'GEO优先级', '注'],
@@ -3086,6 +3161,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         globalContext: {
+          id: 'how-does-geo-differ-across-regions-and-markets',
           title: 'GEO如何在地区和市场间有所不同？',
           content: 'AI是全球性的，但区域法规和市场细微差别塑造GEO实施。',
           items: [
@@ -3095,6 +3171,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: '相关阅读',
           items: [
             '[Aggarwal et al., 2023. \"GEO: Generative Engine Optimization\"](https://arxiv.org/zh/abs/2311.09735) — 定义GEO为一门学科并测量结构化内容引用提升的基础学术论文',
@@ -3103,6 +3180,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         howToStart: {
+          id: 'how-to-optimize-content-for-geo',
           title: '如何为GEO优化内容',
           numberedItems: [
             { title: '审计robots.txt', whyItMatters: '检查Disallow行中的AI机器人。确保ChatGPT、Perplexity、Gemini、Claude被允许。' },
@@ -3114,6 +3192,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-geo-mistakes-and-how-to-fix-them',
           title: 'GEO常见错误及其修复',
           mistakes: [
             {
@@ -3187,6 +3266,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         sources: {
+          id: 'sources-further-reading',
           title: '来源和额外资源',
           items: [
             '[Aggarwal et al., 2023. \"GEO: Generative Engine Optimization\"](https://arxiv.org/abs/2311.09735) — 定义GEO为一门学科并测量结构化内容引用提升的基础学术论文',
@@ -3226,7 +3306,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: 'GEO를 위한 콘텐츠 최적화 방법', anchor: '#how-to-optimize-content-for-geo' },
         { label: '흔한 GEO 실수(와 수정 방법)', anchor: '#common-geo-mistakes-and-how-to-fix-them' },
         { label: '관련 읽기', anchor: '#related-reading' },
-        { label: '자주 묻는 질문', anchor: '#frequently-asked-questions' },
+        { label: '자주 묻는 질문', anchor: '#faq' },
         { label: '출처 및 추가 읽기', anchor: '#sources-further-reading' },
       ],
       schema: {
@@ -3361,6 +3441,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         definition: {
+          id: 'geo-vs-seo-two-different-games',
           title: 'GEO vs. SEO: 서로 다른 두 게임',
           content: [
             '**기존 SEO는 10개의 파란색 링크 중 한 자리를 차지하고, GEO는 AI 모델이 하나의 통합 답변에서 일반적으로 언급하는 2~7개 출처 중 하나로 인용되는 것을 목표로 합니다.** 순위 신호·콘텐츠 형식·성공 지표가 근본적으로 다릅니다. [AI 시스템의 작동 방식과 한계](/prompt-engineering/ai-limitations-what-llms-cant-do)를 이해하는 것이 GEO 최적화에 필수적입니다.',
@@ -3384,6 +3465,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           blockquote: 'SEO와 GEO 모두 명확성·권위·구조화 콘텐츠·사용자 의도라는 동일한 기반에 의존합니다. 차이점은 AI 엔진이 백링크와 클릭 지표 대신 엔티티 인식과 의미적 완전성을 통해 그 신호를 해석한다는 것입니다. 한 문장으로 요약하면: 기존 SEO가 1페이지를 차지하기 위한 경쟁이었다면, GEO는 AI가 이미 답을 알고 있을 때 인용하는 출처가 되는 것입니다.',
         },
         conversionAnalysis: {
+          id: 'why-ai-traffic-converts-differently',
           title: 'AI 트래픽이 다르게 전환되는 이유',
           content: [
             '**AI 검색 엔진을 통해 유입된 방문자는 유기 검색 방문자보다 훨씬 높은 전환율을 보입니다. AI가 이미 옵션을 합성·비교한 후 유입되기 때문입니다.**',
@@ -3405,6 +3487,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           blockquote: '전환 프리미엄은 B2B에서 특히 두드러집니다. Ahrefs는 자사 사이트에서 AI 검색 도구가 유기 검색보다 23배 높은 전환율을 보고했습니다. SEMrush는 500개 이상의 B2B 주제 연구에서 AI 검색 트래픽이 유기 대비 4.4배 높은 전환율을 확인했습니다. 그러나 SearchEngineLand의 973개 이커머스 사이트 분석에서는 AI 추천 방문자의 전환율이 유기보다 낮았습니다. 우위는 업무·업종에 따라 다릅니다. **PromptQuorum에서 테스트 완료 — 세 모델에 25개 브랜드 가시성 쿼리를 실행한 결과:** GPT-5(OpenAI)·Claude 4.8 Opus(Anthropic)·Gemini 3 Pro(Google DeepMind)는 25개 중 17개 사례에서 동일한 브랜드 출처를 인용했습니다. 8개 사례에서는 동일 쿼리에 대해 서로 다른 출처를 인용했으며, 이는 AI 인용이 결정론적이지 않음을 확인합니다. 여러 권위 있는 맥락에서 훈련 데이터에 등장할수록 인용 확률이 높아집니다.',
         },
         technicalFoundations: {
+          id: 'what-are-the-technical-foundations-of-geo',
           title: 'GEO의 기술적 토대란 무엇인가?',
           content: [
             '**올바른 JSON-LD 스키마 마크업이 있는 페이지는 마크업이 없는 페이지보다 리치 결과 노출 수가 최대 40% 많으며, 구조화 데이터를 올바르게 구현한 콘텐츠는 제어된 AI 인용 테스트에서 인용률이 최대 340% 높습니다.**',
@@ -3428,6 +3511,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           blockquote: '중요한 주의 사항: OpenAI·Gemini·Perplexity의 스키마 채택 대 AI 인용 빈도를 분석한 2026년 SearchAtlas 연구에 따르면 스키마 커버리지가 높다고 해서 LLM 인용률이 일관되게 높아지지는 않습니다. 스키마는 콘텐츠를 파싱하기 쉽게 만들지만, 콘텐츠 권위·엔티티 밀도·답변 우선 구조가 더 강력한 인용 신호로 남아 있습니다.',
         },
         crawlerStack: {
+          id: 'which-ai-crawlers-should-you-unblock-in-robotstxt',
           title: 'robots.txt에서 차단을 해제해야 할 AI 크롤러는?',
           content: [
             '**AI 검색 플랫폼은 Googlebot과 구별되는 전용 크롤러를 사용합니다. `robots.txt`에서 차단되어 있지 않은지 확인하십시오:**',
@@ -3448,6 +3532,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           blockquote: '새로운 `llms.txt` 표준은 `robots.txt`와 유사하게 AI 모델이 직접 수집할 수 있는 구조화된 사이트 요약을 제공하여, 인용 및 검색에 사용 가능한 콘텐츠를 신호합니다.',
         },
         contentStructure: {
+          id: 'content-structure-what-ai-engines-actually-cite',
           title: '콘텐츠 구조: AI 엔진이 실제로 인용하는 것',
           content: [
             '**리스트 기반 콘텐츠는 산문형 대안보다 AI 인용이 68% 많으며, 구조화된 Q&A 블록이 있는 FAQ 섹션은 AI 생성 응답에서 가시성이 45% 증가합니다.**',
@@ -3480,6 +3565,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         goodExample: {
+          id: 'bad-vs-good-a-geo-compliant-rewrite',
           title: '나쁜 예 vs. 좋은 예: GEO 준수 재작성',
           content: [
             '**나쁜 예 — 정보가 없는 산문 (인용되지 않음):**',
@@ -3495,6 +3581,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         seoFoundation: {
+          id: 'does-traditional-seo-still-matter-for-geo',
           title: 'GEO 시대에도 기존 SEO가 중요한가?',
           content: [
             '**웹사이트가 Google 상위 10위 파란색 링크에 포함된다면 Google AI Overviews에 출처로 인용될 확률이 25%입니다. SEO 권위가 GEO 가시성을 뒷받침합니다.**',
@@ -3544,6 +3631,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         platformBreakdown: {
+          id: 'which-ai-platforms-dominate-the-search-market',
           title: 'AI 검색 시장을 지배하는 플랫폼은?',
           content: [
             '**ChatGPT는 생성형 AI 검색 시장의 59.70%를 차지하며, Microsoft Copilot이 14.40%, Google Gemini가 13.50%로 뒤를 잇습니다. 대부분의 콘텐츠 전략에서 ChatGPT 최적화가 가장 높은 레버리지를 가진 GEO 투자입니다.**',
@@ -3591,6 +3679,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           blockquote: 'Perplexity AI는 사실 기반 쿼리의 100%에 출처 링크를 제공합니다. 이는 투명성이 가장 높은 AI 검색 플랫폼으로 인용 추적 측정이 가장 쉽습니다. Perplexity 최적화 모범 사례는 ChatGPT 및 Gemini 최적화에도 잘 전달됩니다.',
         },
         globalContext: {
+          id: 'how-does-geo-differ-across-regions-and-markets',
           title: 'GEO는 지역과 시장에 따라 어떻게 달라지는가?',
           content: [
             '유럽 기업들은 AI 생성 콘텐츠에 대한 투명성을 요구하고 기만적인 AI 시스템을 금지하는 EU AI Act 준수와 GEO 투자의 균형을 맞춰야 합니다. Mistral AI(프랑스)는 유럽 검색 존재감을 확대하고 있습니다. 유럽 AI 플랫폼을 위해 최적화된 콘텐츠는 EU의 엄격한 데이터 출처 귀속 요건을 준수해야 합니다.',
@@ -3606,6 +3695,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: '관련 읽기',
           items: [
             '[프롬프트 엔지니어링이란?](/prompt-engineering/what-is-prompt-engineering) — AI 시스템이 추출하고 인용하는 내용을 결정하는 구조화된 지침',
@@ -3614,6 +3704,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         howToStart: {
+          id: 'how-to-optimize-content-for-geo',
           title: 'GEO(생성형 엔진 최적화)를 위한 콘텐츠 최적화 방법',
           callouts: [
             {
@@ -3631,6 +3722,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-geo-mistakes-and-how-to-fix-them',
           title: '흔한 GEO 실수(와 수정 방법)',
           mistakes: [
             {
@@ -3699,6 +3791,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         sources: {
+          id: 'sources-further-reading',
           title: '출처 및 추가 읽기',
           items: [
             '[Aggarwal et al., 2023. "GEO: Generative Engine Optimization"](https://arxiv.org/abs/2311.09735) — GEO를 학문 분야로 정의하고 구조화 콘텐츠의 인용 상승을 측정한 기초 학술 논문',

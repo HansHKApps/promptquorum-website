@@ -32,14 +32,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: 'When Should You Use Gemini 3.1 Pro?', anchor: 'when-gemini' },
         { label: 'Which AI Model Is Best for Coding?', anchor: 'best-for-coding' },
         { label: 'Best LLM for Long Context or Large Documents?', anchor: 'best-for-long-context' },
-        { label: 'How to Choose If You\'re in China?', anchor: 'china-models' },
-        { label: 'GPT vs Claude vs Gemini: Quick Comparison', anchor: 'comparison-table' },
-        { label: 'How Do You Pick the Right Model?', anchor: 'how-to-pick' },
         { label: 'How Do Costs and Token Limits Compare?', anchor: 'costs-and-limits' },
         { label: 'Why Use Multiple Models?', anchor: 'why-multiple-models' },
         { label: 'How PromptQuorum Helps Compare Models', anchor: 'promptquorum-comparison' },
         { label: 'Practical Recipes', anchor: 'recipes' },
-        { label: 'How to Choose an AI Model (Step by Step)', anchor: 'how-to-choose-step-by-step' },
         { label: 'Common Mistakes', anchor: 'common-mistakes' },
         { label: 'FAQ', anchor: 'faq' },
         { label: 'Related Reading', anchor: 'related-reading' },
@@ -154,6 +150,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       sections: {
         definition: {
+          id: 'no-single-best-ai-model',
           title: 'No Single "Best" AI Model — Choose by Task',
           content: [
             '**No single AI model is best for every task. GPT-5.5 excels at tool integration and reasoning; Claude Opus 4.8 dominates writing and code quality; Gemini 3.1 Pro offers cost-effective performance and deep Google Workspace integration; DeepSeek and Baidu ERNIE are essential for mainland China workloads.**',
@@ -163,6 +160,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         decisionMatrix: {
+          id: 'quick-decision-matrix',
           title: 'Quick Decision Matrix — Pick Your Starting Model',
           content: '**Choose your starting model based on your primary task. Most teams use multiple models — start with the right one and switch as needed.**',
           items: [
@@ -211,6 +209,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         whatMatters: {
+          id: 'what-matters',
           title: 'What Matters When Choosing an AI Model?',
           content: '**Model selection should start from your use case and constraints, not hype or leaderboard position.** Here are the 7 dimensions that actually matter:',
           items: [
@@ -225,6 +224,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         gptSection: {
+          id: 'when-gpt',
           title: 'When Should You Use GPT-5.5?',
           content: '**GPT-5.5 is OpenAI\'s frontier multimodal model — strongest for tool-heavy agentic workflows with the most extensive third-party integrations and tools.** Use GPT-5.5 when tooling, integrations, and multimodal capabilities matter more than cost.',
           items: [
@@ -236,6 +236,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         claudeSection: {
+          id: 'when-claude',
           title: 'When Should You Use Claude Opus 4.8?',
           content: '**Claude Opus 4.8 from Anthropic excels at careful reasoning, writing quality, and code refactoring — with Constitutional AI safety training, the strongest safety architecture of any major commercial model.** Use Claude when output quality, clarity, and trustworthiness matter most.',
           items: [
@@ -247,6 +248,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         geminiSection: {
+          id: 'when-gemini',
           title: 'When Should You Use Gemini 3.1 Pro?',
           content: '**Gemini 3.1 Pro from Google DeepMind is cost-effective with the strongest long-context handling and deep Google Workspace integration.** Use Gemini when processing many long documents or when your team lives in Google Workspace.',
           items: [
@@ -258,6 +260,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         coding: {
+          id: 'best-for-coding',
           title: 'Which AI model is best for coding in 2026?',
           content: '**Claude Opus 4.8 excels at code quality and refactoring; GPT-5.5 dominates tool integration and multi-file reasoning; Gemini 3.1 Pro offers the best cost/quality ratio for batch tasks; DeepSeek is the choice for mainland China developers.** The "best" model for coding depends on your primary challenge: code quality, integration breadth, cost per token, or geography.',
           items: [
@@ -269,6 +272,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         longContext: {
+          id: 'best-for-long-context',
           title: 'Best LLM for long context or large documents 2026?',
           content: '**As of May 2026, all three frontier models support 1M context tokens (handles ~800 pages). The long-context gap has closed. For tasks requiring more than 1M tokens, consider local models like LLaMA 4 Scout (10M tokens).** Choose based on cost, retrieval precision, and whether you need to load multiple files simultaneously.',
           image: '/images/context-windows-chart.svg',
@@ -327,6 +331,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         costAndLimits: {
+          id: 'costs-and-limits',
           title: 'How Do Costs and Token Limits Compare?',
           content: '**All major models are priced per input and output token, with rate limits based on your tier.** Frontier models cost 10–100× more per token than budget models. Pricing varies by region (especially China).',
           items: [
@@ -339,6 +344,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         whyMultipleModels: {
+          id: 'why-multiple-models',
           title: 'Why use multiple AI models instead of one in 2026?',
           content: '**Benchmarks and leaderboards change every few months. Different tasks are best served by different models. And geographic constraints (EU data residency, China latency) force multi-model stacks.**',
           items: [
@@ -368,6 +374,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         practicalRecipes: {
+          id: 'promptquorum-comparison',
           title: 'Practical Recipes: 4 Ways to Use PromptQuorum for Model Comparison',
           content: '**Multi-model testing in PromptQuorum reveals which model works best for YOUR specific task, data, and brand — not generic benchmarks.** Here are 4 concrete scenarios:',
         },
@@ -405,6 +412,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Common Mistakes When Choosing an AI Model',
           mistakes: [
             {
@@ -1932,14 +1940,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       { label: '¿Cuándo usar Gemini 3.1 Pro?', anchor: 'when-gemini' },
       { label: '¿Qué modelo de IA es mejor para programar?', anchor: 'best-for-coding' },
       { label: '¿Mejor LLM para contexto largo o documentos grandes?', anchor: 'best-for-long-context' },
-      { label: '¿Cómo elegir si estás en China?', anchor: 'china-models' },
-      { label: 'GPT vs Claude vs Gemini: Comparación rápida', anchor: 'comparison-table' },
-      { label: '¿Cómo elegir el modelo correcto?', anchor: 'how-to-pick' },
       { label: '¿Cómo se comparan los costos y límites de tokens?', anchor: 'costs-and-limits' },
       { label: '¿Por qué usar múltiples modelos?', anchor: 'why-multiple-models' },
       { label: 'Cómo te ayuda PromptQuorum a comparar modelos', anchor: 'promptquorum-comparison' },
       { label: 'Recetas prácticas', anchor: 'recipes' },
-      { label: 'Cómo elegir un modelo de IA (paso a paso)', anchor: 'how-to-choose-step-by-step' },
       { label: 'Errores comunes', anchor: 'common-mistakes' },
       { label: 'Preguntas frecuentes', anchor: 'faq' },
       { label: 'Lectura relacionada', anchor: 'related-reading' },
@@ -2054,6 +2058,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     sections: {
       definition: {
+        id: 'no-single-best-ai-model',
         title: 'No hay un único "mejor" modelo de IA — Elige según la tarea',
         content: [
           '**Ningún modelo de IA es el mejor para todas las tareas. GPT-5.5 destaca en integración de herramientas y razonamiento; Claude Opus 4.8 domina en escritura y calidad de código; Gemini 3.1 Pro ofrece un rendimiento rentable e integración profunda con Google Workspace; DeepSeek y Baidu ERNIE son esenciales para cargas de trabajo en China continental.**',
@@ -2063,6 +2068,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       decisionMatrix: {
+        id: 'quick-decision-matrix',
         title: 'Matriz de decisión rápida — Elige tu modelo de partida',
         content: '**Elige tu modelo de partida según tu tarea principal. La mayoría de los equipos usan múltiples modelos — empieza con el correcto y cambia según sea necesario.**',
         items: [
@@ -2111,6 +2117,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       whatMatters: {
+        id: 'what-matters',
         title: '¿Qué importa al elegir un modelo de IA?',
         content: '**La selección de modelos debe partir de tu caso de uso y tus restricciones, no del hype o la posición en los rankings.** Aquí están las 7 dimensiones que realmente importan:',
         items: [
@@ -2125,6 +2132,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       gptSection: {
+        id: 'when-gpt',
         title: '¿Cuándo usar GPT-5.5?',
         content: '**GPT-5.5 es el modelo multimodal frontier de OpenAI — el más potente para flujos de trabajo agénticos con muchas herramientas, con las integraciones y herramientas de terceros más amplias.** Usa GPT-5.5 cuando las herramientas, las integraciones y las capacidades multimodales importan más que el costo.',
         items: [
@@ -2136,6 +2144,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       claudeSection: {
+        id: 'when-claude',
         title: '¿Cuándo usar Claude Opus 4.8?',
         content: '**Claude Opus 4.8 de Anthropic destaca en razonamiento cuidadoso, calidad de escritura y refactorización de código — con entrenamiento de seguridad por IA Constitucional, la arquitectura de seguridad más sólida de cualquier modelo comercial importante.** Usa Claude cuando la calidad del output, la claridad y la confiabilidad importan más.',
         items: [
@@ -2147,6 +2156,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       geminiSection: {
+        id: 'when-gemini',
         title: '¿Cuándo usar Gemini 3.1 Pro?',
         content: '**Gemini 3.1 Pro de Google DeepMind es rentable con el manejo de contexto largo más sólido e integración profunda con Google Workspace.** Usa Gemini cuando proceses muchos documentos largos o cuando tu equipo viva en Google Workspace.',
         items: [
@@ -2158,6 +2168,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       coding: {
+        id: 'best-for-coding',
         title: '¿Qué modelo de IA es mejor para programar en 2026?',
         content: '**Claude Opus 4.8 destaca en calidad de código y refactorización; GPT-5.5 domina la integración de herramientas y el razonamiento multi-archivo; Gemini 3.1 Pro ofrece la mejor relación costo/calidad para tareas por lotes; DeepSeek es la elección para desarrolladores en China continental.** El modelo "mejor" para programar depende de tu desafío principal: calidad del código, amplitud de integración, costo por token o geografía.',
         items: [
@@ -2169,6 +2180,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       longContext: {
+        id: 'best-for-long-context',
         title: '¿Cuál es el mejor LLM para contexto largo o documentos grandes en 2026?',
         content: '**A mayo de 2026, los tres modelos frontier soportan 1M de tokens de contexto (gestiona ~800 páginas). La brecha de contexto largo se ha cerrado. Para tareas que requieren más de 1M tokens, considera modelos locales como LLaMA 4 Scout (10M tokens).** Elige según el costo, la precisión de recuperación y si necesitas cargar múltiples archivos simultáneamente.',
         image: '/images/context-windows-chart.svg',
@@ -2227,6 +2239,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       costAndLimits: {
+        id: 'costs-and-limits',
         title: '¿Cómo se comparan los costos y los límites de tokens?',
         content: '**Todos los modelos principales tienen precios por token de entrada y salida, con límites de frecuencia basados en tu nivel.** Los modelos frontier cuestan 10–100 veces más por token que los modelos de presupuesto. Los precios varían según la región (especialmente China).',
         items: [
@@ -2239,6 +2252,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       whyMultipleModels: {
+        id: 'why-multiple-models',
         title: '¿Por qué usar múltiples modelos de IA en lugar de uno en 2026?',
         content: '**Los benchmarks y los rankings cambian cada pocos meses. Distintas tareas se sirven mejor con distintos modelos. Y las restricciones geográficas (residencia de datos en la UE, latencia en China) obligan a usar stacks multi-modelo.**',
         items: [
@@ -2268,6 +2282,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       practicalRecipes: {
+        id: 'promptquorum-comparison',
         title: 'Recetas prácticas: 4 formas de usar PromptQuorum para la comparación de modelos',
         content: '**Las pruebas multi-modelo en PromptQuorum revelan qué modelo funciona mejor para TU tarea, datos y marca específicos — no benchmarks genéricos.** Aquí tienes 4 escenarios concretos:',
       },
@@ -2305,6 +2320,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       commonMistakes: {
+        id: 'common-mistakes',
         title: 'Errores comunes al elegir un modelo de IA',
         mistakes: [
           {
@@ -2390,6 +2406,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       relatedReading: {
+        id: 'related-reading',
         title: 'Lectura relacionada',
         items: [
           '[Fundamentos: Tokens, costos y límites: La economía del prompting con IA](/es/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — entiende los precios de tokens, los límites de frecuencia y la optimización de costos',
@@ -2429,14 +2446,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       { label: 'Quando Usar o Gemini 3.1 Pro?', anchor: 'when-gemini' },
       { label: 'Qual Modelo de IA é Melhor para Programação?', anchor: 'best-for-coding' },
       { label: 'Melhor LLM para Contexto Longo ou Documentos Grandes?', anchor: 'best-for-long-context' },
-      { label: 'Como Escolher se Você Está na China?', anchor: 'china-models' },
-      { label: 'GPT vs Claude vs Gemini: Comparação Rápida', anchor: 'comparison-table' },
-      { label: 'Como Escolher o Modelo Certo?', anchor: 'how-to-pick' },
       { label: 'Como Custos e Limites de Tokens se Comparam?', anchor: 'costs-and-limits' },
       { label: 'Por Que Usar Vários Modelos?', anchor: 'why-multiple-models' },
       { label: 'Como o PromptQuorum Ajuda a Comparar Modelos', anchor: 'promptquorum-comparison' },
       { label: 'Receitas Práticas', anchor: 'recipes' },
-      { label: 'Como Escolher um Modelo de IA (Passo a Passo)', anchor: 'how-to-choose-step-by-step' },
       { label: 'Erros Comuns', anchor: 'common-mistakes' },
       { label: 'Perguntas Frequentes', anchor: 'faq' },
       { label: 'Leitura Relacionada', anchor: 'related-reading' },
@@ -2550,6 +2563,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     sections: {
       definition: {
+        id: 'no-single-best-ai-model',
         title: 'Não Existe um Único "Melhor" Modelo de IA — Escolha pela Tarefa',
         content: [
           '**Nenhum modelo de IA é o melhor para todas as tarefas. GPT-5.5 se destaca em integração de ferramentas e raciocínio; Claude Opus 4.8 domina em escrita e qualidade de código; Gemini 3.1 Pro oferece desempenho econômico e integração profunda com Google Workspace; DeepSeek e Baidu ERNIE são essenciais para cargas de trabalho na China continental.**',
@@ -2559,6 +2573,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       decisionMatrix: {
+        id: 'quick-decision-matrix',
         title: 'Matriz de Decisão Rápida — Escolha seu Modelo Inicial',
         content: '**Escolha seu modelo inicial com base na sua tarefa principal. A maioria das equipes usa vários modelos — comece com o certo e troque conforme necessário.**',
         items: [
@@ -2607,6 +2622,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       whatMatters: {
+        id: 'what-matters',
         title: 'O Que Importa ao Escolher um Modelo de IA?',
         content: '**A seleção de modelos deve começar pelo seu caso de uso e suas restrições, não pelo hype ou posição nos rankings.** Aqui estão as 7 dimensões que realmente importam:',
         items: [
@@ -2621,6 +2637,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       gptSection: {
+        id: 'when-gpt',
         title: 'Quando Usar o GPT-5.5?',
         content: '**O GPT-5.5 é o modelo multimodal frontier da OpenAI — mais forte para fluxos de trabalho agênticos com muitas ferramentas, com as integrações e ferramentas de terceiros mais extensas.** Use o GPT-5.5 quando ferramentas, integrações e capacidades multimodais importam mais que o custo.',
         items: [
@@ -2632,6 +2649,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       claudeSection: {
+        id: 'when-claude',
         title: 'Quando Usar o Claude Opus 4.8?',
         content: '**O Claude Opus 4.8 da Anthropic se destaca em raciocínio cuidadoso, qualidade de escrita e refatoração de código — com treinamento de segurança por IA Constitucional, a arquitetura de segurança mais sólida de qualquer modelo comercial importante.** Use o Claude quando a qualidade do output, clareza e confiabilidade importam mais.',
         items: [
@@ -2643,6 +2661,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       geminiSection: {
+        id: 'when-gemini',
         title: 'Quando Usar o Gemini 3.1 Pro?',
         content: '**O Gemini 3.1 Pro do Google DeepMind é econômico com o manuseio de contexto longo mais sólido e integração profunda com o Google Workspace.** Use o Gemini quando processar muitos documentos longos ou quando sua equipe vive no Google Workspace.',
         items: [
@@ -2654,6 +2673,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       coding: {
+        id: 'best-for-coding',
         title: 'Qual Modelo de IA é Melhor para Programação em 2026?',
         content: '**Claude Opus 4.8 se destaca em qualidade de código e refatoração; GPT-5.5 domina integração de ferramentas e raciocínio multi-arquivo; Gemini 3.1 Pro oferece a melhor relação custo/qualidade para tarefas em lote; DeepSeek é a escolha para desenvolvedores na China continental.** O modelo "melhor" para programação depende do seu desafio principal: qualidade de código, amplitude de integração, custo por token ou localização.',
         items: [
@@ -2665,6 +2685,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       longContext: {
+        id: 'best-for-long-context',
         title: 'Melhor LLM para Contexto Longo ou Documentos Grandes em 2026?',
         content: '**Em maio de 2026, os três modelos frontier suportam 1M tokens de contexto (gerencia ~800 páginas). A lacuna de contexto longo foi fechada. Para tarefas que requerem mais de 1M tokens, considere modelos locais como LLaMA 4 Scout (10M tokens).** Escolha com base no custo, precisão de recuperação e se você precisa carregar vários arquivos simultaneamente.',
         image: '/images/context-windows-chart.svg',
@@ -2723,6 +2744,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       costAndLimits: {
+        id: 'costs-and-limits',
         title: 'Como Custos e Limites de Tokens se Comparam?',
         content: '**Todos os modelos principais são precificados por token de entrada e saída, com limites de taxa baseados no seu nível.** Modelos frontier custam 10–100× mais por token que modelos de orçamento. Os preços variam por região (especialmente China).',
         items: [
@@ -2735,6 +2757,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       whyMultipleModels: {
+        id: 'why-multiple-models',
         title: 'Por Que Usar Vários Modelos de IA em Vez de Um em 2026?',
         content: '**Benchmarks e rankings mudam a cada poucos meses. Tarefas diferentes são mais bem atendidas por modelos diferentes. E restrições geográficas (residência de dados na UE, latência na China) forçam stacks multi-modelo.**',
         items: [
@@ -2764,6 +2787,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       practicalRecipes: {
+        id: 'promptquorum-comparison',
         title: 'Receitas Práticas: 4 Formas de Usar o PromptQuorum para Comparar Modelos',
         content: '**Testes multi-modelo no PromptQuorum revelam qual modelo funciona melhor para SUA tarefa, dados e marca específicos — não benchmarks genéricos.** Aqui estão 4 cenários concretos:',
       },
@@ -2801,6 +2825,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       commonMistakes: {
+        id: 'common-mistakes',
         title: 'Erros Comuns ao Escolher um Modelo de IA',
         mistakes: [
           {
@@ -2886,6 +2911,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       relatedReading: {
+        id: 'related-reading',
         title: 'Leitura Relacionada',
         items: [
           '[Fundamentos: Tokens, Custos e Limites: A Economia do Prompting com IA](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — entenda preços de tokens, limites de taxa e otimização de custos',
@@ -2927,14 +2953,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       { label: 'متى تستخدم Gemini 3.1 Pro؟', anchor: 'when-gemini' },
       { label: 'أي نموذج ذكاء اصطناعي أفضل للبرمجة؟', anchor: 'best-for-coding' },
       { label: 'أفضل LLM للسياق الطويل أو المستندات الكبيرة؟', anchor: 'best-for-long-context' },
-      { label: 'كيف تختار إذا كنت في الصين؟', anchor: 'china-models' },
-      { label: 'GPT مقابل Claude مقابل Gemini: مقارنة سريعة', anchor: 'comparison-table' },
-      { label: 'كيف تختار النموذج المناسب؟', anchor: 'how-to-pick' },
       { label: 'كيف تتقاطع التكاليف وحدود الرموز؟', anchor: 'costs-and-limits' },
       { label: 'لماذا تستخدم نماذج متعددة؟', anchor: 'why-multiple-models' },
       { label: 'كيف يساعدك PromptQuorum في مقارنة النماذج', anchor: 'promptquorum-comparison' },
       { label: 'وصفات عملية', anchor: 'recipes' },
-      { label: 'كيف تختار نموذج ذكاء اصطناعي (خطوة بخطوة)', anchor: 'how-to-choose-step-by-step' },
       { label: 'الأخطاء الشائعة', anchor: 'common-mistakes' },
       { label: 'الأسئلة الشائعة', anchor: 'faq' },
       { label: 'قراءة ذات صلة', anchor: 'related-reading' },
@@ -3049,6 +3071,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     sections: {
       definition: {
+        id: 'no-single-best-ai-model',
         title: 'لا يوجد نموذج ذكاء اصطناعي "أفضل" واحد — اختر حسب المهمة',
         content: [
           '**لا يوجد نموذج ذكاء اصطناعي هو الأفضل لجميع المهام. يتفوق GPT-5.5 في تكامل الأدوات والاستدلال؛ ويهيمن Claude Opus 4.8 على الكتابة وجودة الكود؛ ويقدم Gemini 3.1 Pro أداءً مقرون بالتكلفة المعقولة وتكاملاً عميقاً مع Google Workspace؛ وDeepSeek وBaidu ERNIE ضروريان لأعباء العمل في البر الرئيسي للصين.**',
@@ -3058,6 +3081,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       decisionMatrix: {
+        id: 'quick-decision-matrix',
         title: 'مصفوفة القرار السريع — اختر نموذجك الابتدائي',
         content: '**اختر نموذجك الابتدائي بناءً على مهمتك الرئيسية. تستخدم معظم الفرق نماذج متعددة — ابدأ بالنموذج الصحيح وبدّل حسب الحاجة.**',
         items: [
@@ -3106,6 +3130,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       whatMatters: {
+        id: 'what-matters',
         title: 'ما الذي يهم عند اختيار نموذج ذكاء اصطناعي؟',
         content: '**يجب أن ينطلق اختيار النموذج من حالة استخدامك وقيودك، وليس من الضجيج أو التصنيفات.** إليك الأبعاد السبعة التي تهم فعلاً:',
         items: [
@@ -3120,6 +3145,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       gptSection: {
+        id: 'when-gpt',
         title: 'متى تستخدم GPT-5.5؟',
         content: '**GPT-5.5 هو نموذج OpenAI متعدد الوسائط من مستوى الحافة — الأقوى لسير العمل الوكيل ذي الأدوات الكثيرة، مع أوسع تكاملات وأدوات من طرف ثالث.** استخدم GPT-5.5 عندما تكون الأدوات والتكاملات والقدرات متعددة الوسائط أهم من التكلفة.',
         items: [
@@ -3131,6 +3157,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       claudeSection: {
+        id: 'when-claude',
         title: 'متى تستخدم Claude Opus 4.8؟',
         content: '**يتفوق Claude Opus 4.8 من Anthropic في الاستدلال الدقيق وجودة الكتابة وإعادة هيكلة الكود — مع تدريب أمان الذكاء الاصطناعي الدستوري، أقوى بنية أمان لأي نموذج تجاري رئيسي.** استخدم Claude عندما تكون جودة الإخراج والوضوح والموثوقية أهم.',
         items: [
@@ -3142,6 +3169,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       geminiSection: {
+        id: 'when-gemini',
         title: 'متى تستخدم Gemini 3.1 Pro؟',
         content: '**Gemini 3.1 Pro من Google DeepMind فعّال من حيث التكلفة مع أقوى معالجة للسياق الطويل وتكامل عميق مع Google Workspace.** استخدم Gemini عند معالجة كميات كبيرة من المستندات الطويلة أو عندما يعيش فريقك في Google Workspace.',
         items: [
@@ -3153,6 +3181,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       coding: {
+        id: 'best-for-coding',
         title: 'أي نموذج ذكاء اصطناعي أفضل للبرمجة في 2026؟',
         content: '**يتفوق Claude Opus 4.8 في جودة الكود وإعادة الهيكلة؛ ويهيمن GPT-5.5 على تكامل الأدوات والاستدلال متعدد الملفات؛ ويقدم Gemini 3.1 Pro أفضل نسبة تكلفة/جودة للمهام الدفعية؛ وDeepSeek هو الاختيار للمطورين في البر الرئيسي للصين.** النموذج "الأفضل" للبرمجة يعتمد على تحديك الرئيسي: جودة الكود، أو اتساع التكامل، أو التكلفة لكل رمز، أو الجغرافيا.',
         items: [
@@ -3164,6 +3193,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       longContext: {
+        id: 'best-for-long-context',
         title: 'ما أفضل LLM للسياق الطويل أو المستندات الكبيرة في 2026؟',
         content: '**حتى مايو 2026، تدعم النماذج الثلاثة الحديثة 1M رمز سياق (تتعامل مع ~800 صفحة). لقد انتهت الفجوة في السياق الطويل. للمهام التي تتطلب أكثر من 1M رمز، فكّر في النماذج المحلية مثل LLaMA 4 Scout (10M رمز).** اختر بناءً على التكلفة ودقة الاسترجاع وما إذا كنت تحتاج إلى تحميل ملفات متعددة في وقت واحد.',
         image: '/images/context-windows-chart.svg',
@@ -3222,6 +3252,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       costAndLimits: {
+        id: 'costs-and-limits',
         title: 'كيف تتقاطع التكاليف وحدود الرموز؟',
         content: '**جميع النماذج الرئيسية لها أسعار لكل رمز إدخال وإخراج، مع حدود معدل بناءً على مستواك.** تكلف نماذج الحافة 10-100 مرة أكثر لكل رمز مقارنة بنماذج الميزانية. تختلف الأسعار حسب المنطقة (خاصة الصين).',
         items: [
@@ -3234,6 +3265,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       whyMultipleModels: {
+        id: 'why-multiple-models',
         title: 'لماذا تستخدم نماذج ذكاء اصطناعي متعددة بدلاً من واحد في 2026؟',
         content: '**تتغير المعايير والتصنيفات كل بضعة أشهر. تُخدَّم مهام مختلفة بشكل أفضل بنماذج مختلفة. وتُجبر القيود الجغرافية (إقامة البيانات في الاتحاد الأوروبي، وزمن الاستجابة في الصين) على استخدام stacks متعددة النماذج.**',
         items: [
@@ -3263,6 +3295,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       practicalRecipes: {
+        id: 'promptquorum-comparison',
         title: 'وصفات عملية: 4 طرق لاستخدام PromptQuorum لمقارنة النماذج',
         content: '**تكشف الاختبارات متعددة النماذج في PromptQuorum أي نموذج يعمل بشكل أفضل لمهمتك وبياناتك وعلامتك التجارية المحددة — وليس المعايير العامة.** إليك 4 سيناريوهات ملموسة:',
       },
@@ -3300,6 +3333,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       commonMistakes: {
+        id: 'common-mistakes',
         title: 'الأخطاء الشائعة عند اختيار نموذج ذكاء اصطناعي',
         mistakes: [
           {
@@ -3385,6 +3419,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       relatedReading: {
+        id: 'related-reading',
         title: 'قراءة ذات صلة',
         items: [
           '[أساسيات: الرموز والتكاليف والحدود: اقتصاديات الاستفسار بالذكاء الاصطناعي](/ar/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — افهم أسعار الرموز وحدود المعدل وتحسين التكاليف',

@@ -1964,11 +1964,6 @@ export const article: Partial<Record<Language, PEArticle>> = { en: {
     toc: [
       { label: '핵심 요점', anchor: 'key-takeaways' },
       { label: '왜 프롬프트를 테스트해야 합니까?', anchor: 'why-test-prompts' },
-      { label: 'Promptfoo: 빠른 CI/CD 테스트', anchor: 'promptfoo-fast-cicd-testing' },
-      { label: 'Braintrust: 느린 배치 평가', anchor: 'braintrust-slow-batch-evaluations' },
-      { label: 'DeepEval: RAG 파이프라인을 위한 RAGAS', anchor: 'deepeval-ragas-for-rag-pipelines' },
-      { label: 'LangSmith: 다단계 체인 트레이싱', anchor: 'langsmith-tracing-multi-step-chains' },
-      { label: 'Phoenix: LLM 앱 관찰 가능성', anchor: 'phoenix-observability-for-llm-apps' },
       { label: 'PromptQuorum: 테스트 전 모델 비교', anchor: 'promptquorum' },
       { label: '비교 표', anchor: 'comparison-table' },
       { label: '선택 방법', anchor: 'how-to-choose' },
@@ -2050,6 +2045,7 @@ export const article: Partial<Record<Language, PEArticle>> = { en: {
         ]
       },
       whyTestPrompts: {
+        id: 'why-test-prompts',
         title: '왜 프롬프트를 테스트해야 합니까?',
         content: '**이 가이드는 테스트 및 평가 도구에만 초점을 맞춥니다.** 프롬프트 엔지니어링 도구의 전체 개요는 [최고의 프롬프트 엔지니어링 도구 2026](/ko/prompt-engineering/best-prompt-engineering-tools-2026)을 참조하십시오. 팀 협업 기능은 [팀을 위한 최고의 프롬프트 최적화 도구](/ko/prompt-engineering/best-prompt-optimization-tools-for-teams)를 참조하십시오.\n\n**프롬프트 변경은 프로덕션을 중단시킵니다.** 단 하나의 재작성이 정확도를 5–10% 떨어뜨리거나 엣지 케이스를 놓치거나 톤을 바꿀 수 있습니다. 2026년 8월 기준, 대부분의 기업은 프롬프트를 전혀 테스트하지 않고 변경 사항을 임시로 전달합니다. 테스트는 사용자에게 도달하기 전에 회귀를 감지합니다. 두 가지 워크플로가 있습니다: CI/CD에서 빠른 단위 테스트 (초 단위, 자동화) 및 오프라인 느린 배치 평가 (분~시간, 인간 검토). 테스트 없이는 안전하게 반복할 수 없습니다.',
         snippets: [
@@ -2161,6 +2157,7 @@ export const article: Partial<Record<Language, PEArticle>> = { en: {
         ]
       },
       relatedReading: {
+        id: 'related-reading',
         title: '관련 읽을거리',
         items: [
           '[Braintrust vs PromptHub vs Vellum vs Promptfoo: 어떤 것을 사용합니까?](/ko/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo)',
@@ -2186,6 +2183,7 @@ export const article: Partial<Record<Language, PEArticle>> = { en: {
         ]
       },
       sources: {
+        id: 'sources',
         title: '출처',
         items: [
           '[Promptfoo GitHub](https://github.com/promptfoo/promptfoo) — 오픈 소스 CI/CD 프롬프트 테스트 프레임워크; 속도 및 기능 주장의 근거',

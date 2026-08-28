@@ -27,11 +27,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       primaryTerm: 'Code Review LLM',
       toc: [
         { label: 'Key Takeaways', anchor: '#key-takeaways' },
-        { label: 'Why Model Size Matters for Code Review', anchor: '#why-size' },
-        { label: 'Model Comparison Table', anchor: '#model-comparison' },
-        { label: 'Accuracy vs Speed Trade-offs', anchor: '#tradeoffs' },
-        { label: 'Setup: Local Code Review Pipeline', anchor: '#setup' },
-        { label: 'Regional Context', anchor: '#regional-context' },
+        { label: 'Why Model Size Matters for Code Review', anchor: '#key-takeaways' },
         { label: 'Common Mistakes', anchor: '#common-mistakes' },
         { label: 'Related Reading', anchor: '#related-reading' },
         { label: 'FAQ', anchor: '#faq' },
@@ -248,15 +244,8 @@ schema: {
       primaryTerm: 'Code Review LLM',
       toc: [
         { label: 'Puntos clave', anchor: '#key-takeaways' },
-        { label: 'Por qué el tamaño del modelo importa en code review', anchor: '#why-size' },
-        { label: 'Tabla comparativa de modelos', anchor: '#model-comparison' },
-        { label: 'Precisión vs Velocidad: compensaciones', anchor: '#tradeoffs' },
-        { label: 'Configuración: Pipeline local de code review', anchor: '#setup' },
-        { label: 'Contexto regional', anchor: '#regional-context' },
-        { label: 'Errores comunes', anchor: '#common-mistakes' },
-        { label: 'Lectura relacionada', anchor: '#related-reading' },
+        { label: 'Por qué el tamaño del modelo importa en code review', anchor: '#key-takeaways' },
         { label: 'FAQ', anchor: '#faq' },
-        { label: 'Fuentes', anchor: '#sources' },
       ],
       sections: {
         tldr: {
@@ -468,15 +457,8 @@ schema: {
       primaryTerm: 'Code Review LLM',
       toc: [
         { label: 'النقاط الرئيسية', anchor: '#key-takeaways' },
-        { label: 'لماذا يهم حجم النموذج في مراجعة الكود', anchor: '#why-size' },
-        { label: 'جدول مقارنة النماذج', anchor: '#model-comparison' },
-        { label: 'الدقة مقابل السرعة: المقايضات', anchor: '#tradeoffs' },
-        { label: 'الإعداد: خط أنابيب مراجعة كود محلي', anchor: '#setup' },
-        { label: 'السياق الإقليمي', anchor: '#regional-context' },
-        { label: 'أخطاء شائعة', anchor: '#common-mistakes' },
-        { label: 'قراءة ذات صلة', anchor: '#related-reading' },
+        { label: 'لماذا يهم حجم النموذج في مراجعة الكود', anchor: '#key-takeaways' },
         { label: 'الأسئلة الشائعة', anchor: '#faq' },
-        { label: 'المصادر', anchor: '#sources' },
       ],
       sections: {
         tldr: {
@@ -685,15 +667,8 @@ schema: {
       primaryTerm: 'Code Review LLM',
       toc: [
         { label: 'Zusammenfassung', anchor: '#key-takeaways' },
-        { label: 'Warum Modellgröße bei Code Review wichtig ist', anchor: '#why-size' },
-        { label: 'Modellvergleichstabelle', anchor: '#model-comparison' },
-        { label: 'Genauigkeit vs Geschwindigkeit - Abwägungen', anchor: '#tradeoffs' },
-        { label: 'Setup: Lokale Code-Review-Pipeline', anchor: '#setup' },
-        { label: 'Regionaler Kontext', anchor: '#regional-context' },
-        { label: 'Häufige Fehler', anchor: '#common-mistakes' },
-        { label: 'Weiterführende Ressourcen', anchor: '#related-reading' },
+        { label: 'Warum Modellgröße bei Code Review wichtig ist', anchor: '#key-takeaways' },
         { label: 'Häufig gestellte Fragen', anchor: '#faq' },
-        { label: 'Quellen', anchor: '#sources' },
       ],
       sections: {
         tldr: {
@@ -1188,15 +1163,8 @@ schema: {
       primaryTerm: 'Code Review LLM',
       toc: [
         { label: 'Pontos principais', anchor: '#key-takeaways' },
-        { label: 'Por que o tamanho do modelo importa no code review', anchor: '#why-size' },
-        { label: 'Tabela comparativa de modelos', anchor: '#model-comparison' },
-        { label: 'Precisão vs Velocidade: compensações', anchor: '#tradeoffs' },
-        { label: 'Configuração: Pipeline local de code review', anchor: '#setup' },
-        { label: 'Contexto regional', anchor: '#regional-context' },
-        { label: 'Erros comuns', anchor: '#common-mistakes' },
-        { label: 'Leituras relacionadas', anchor: '#related-reading' },
+        { label: 'Por que o tamanho do modelo importa no code review', anchor: '#key-takeaways' },
         { label: 'Perguntas frequentes', anchor: '#faq' },
-        { label: 'Fontes', anchor: '#sources' },
       ],
       sections: {
         tldr: {
@@ -1408,15 +1376,8 @@ schema: {
       primaryTerm: '코드 리뷰 LLM',
       toc: [
         { label: '핵심 요약', anchor: '#key-takeaways' },
-        { label: '코드 리뷰에서 모델 크기가 중요한 이유', anchor: '#why-size' },
-        { label: '모델 비교표', anchor: '#model-comparison' },
-        { label: '정확도 vs 속도 트레이드오프', anchor: '#tradeoffs' },
-        { label: '설정: 로컬 코드 리뷰 파이프라인', anchor: '#setup' },
-        { label: '지역별 맥락', anchor: '#regional-context' },
-        { label: '흔한 실수', anchor: '#common-mistakes' },
-        { label: '관련 읽을거리', anchor: '#related-reading' },
+        { label: '코드 리뷰에서 모델 크기가 중요한 이유', anchor: '#key-takeaways' },
         { label: 'FAQ', anchor: '#faq' },
-        { label: '출처', anchor: '#sources' },
       ],
       itemListSchema: {
         '@context': 'https://schema.org',

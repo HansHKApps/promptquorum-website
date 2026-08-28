@@ -62,7 +62,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Common Pitfalls', anchor: '#pitfalls' },
       { label: 'Trade Note: Hardware Tariffs', anchor: '#trade-note' },
       { label: 'Frequently Asked Questions', anchor: '#faq' },
-      { label: 'Related Reading', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -382,7 +381,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Häufige Fehler', anchor: '#pitfalls' },
       { label: 'Handelspolitischer Hinweis', anchor: '#trade-note' },
       { label: 'Häufig gestellte Fragen', anchor: '#faq' },
-      { label: 'Weiterführende Links', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -709,7 +707,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'الأخطاء الشائعة', anchor: '#pitfalls' },
       { label: 'ملاحظة تجارية: الرسوم الجمركية على الأجهزة', anchor: '#trade-note' },
       { label: 'الأسئلة الشائعة', anchor: '#faq' },
-      { label: 'قراءات ذات صلة', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -1033,7 +1030,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Errores comunes', anchor: '#pitfalls' },
       { label: 'Nota sobre aranceles comerciales', anchor: '#trade-note' },
       { label: 'Preguntas frecuentes', anchor: '#faq' },
-      { label: 'Lecturas relacionadas', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -1353,7 +1349,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Erreurs fréquentes', anchor: '#pitfalls' },
       { label: 'Note commerciale : droits de douane matériels', anchor: '#trade-note' },
       { label: 'Questions fréquemment posées', anchor: '#faq' },
-      { label: 'Lectures complémentaires', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -1673,7 +1668,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'よくある落とし穴', anchor: '#pitfalls' },
       { label: 'ハードウェア関税についての注記', anchor: '#trade-note' },
       { label: 'よくある質問', anchor: '#faq' },
-      { label: '関連記事', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -1997,7 +1991,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '일반적인 함정', anchor: '#pitfalls' },
       { label: '무역 참고: 하드웨어 관세', anchor: '#trade-note' },
       { label: '자주 묻는 질문', anchor: '#faq' },
-      { label: '관련 자료', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -2316,7 +2309,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Armadilhas Comuns', anchor: '#pitfalls' },
       { label: 'Nota Comercial: Tarifas de Hardware', anchor: '#trade-note' },
       { label: 'Perguntas Frequentes', anchor: '#faq' },
-      { label: 'Leitura Relacionada', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -2641,7 +2633,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '常见误区', anchor: '#pitfalls' },
       { label: '贸易说明：硬件关税', anchor: '#trade-note' },
       { label: '常见问题', anchor: '#faq' },
-      { label: '延伸阅读', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {

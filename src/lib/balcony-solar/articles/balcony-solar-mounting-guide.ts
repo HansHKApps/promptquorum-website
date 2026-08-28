@@ -43,7 +43,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Tilt Angle by Latitude', anchor: '#tilt-angle' },
       { label: 'Wind & Safety', anchor: '#wind-safety' },
       { label: 'FAQ', anchor: '#faq' },
-      { label: 'Related Reading', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -183,7 +182,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Ángulo de inclinación según la latitud', anchor: '#tilt-angle' },
       { label: 'Viento y seguridad', anchor: '#wind-safety' },
       { label: 'Preguntas frecuentes', anchor: '#faq' },
-      { label: 'Lecturas relacionadas', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -324,7 +322,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Ângulo de inclinação por latitude', anchor: '#tilt-angle' },
       { label: 'Vento e segurança', anchor: '#wind-safety' },
       { label: 'Perguntas frequentes', anchor: '#faq' },
-      { label: 'Leituras relacionadas', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -465,7 +462,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'زاوية الميل حسب خط العرض', anchor: '#tilt-angle' },
       { label: 'الرياح والسلامة', anchor: '#wind-safety' },
       { label: 'الأسئلة الشائعة', anchor: '#faq' },
-      { label: 'قراءات ذات صلة', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -606,7 +602,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Neigungswinkel nach Breitengrad', anchor: '#tilt-angle' },
       { label: 'Wind und Sicherheit', anchor: '#wind-safety' },
       { label: 'Häufige Fragen', anchor: '#faq' },
-      { label: 'Weiterführende Artikel', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -747,7 +742,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '緯度による傾斜角度', anchor: '#tilt-angle' },
       { label: '風と安全性', anchor: '#wind-safety' },
       { label: 'よくある質問', anchor: '#faq' },
-      { label: '関連記事', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -888,7 +882,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '按纬度确定倾角', anchor: '#tilt-angle' },
       { label: '抗风与安全', anchor: '#wind-safety' },
       { label: '常见问题', anchor: '#faq' },
-      { label: '相关阅读', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -1029,7 +1022,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Angle d\'inclinaison selon la latitude', anchor: '#tilt-angle' },
       { label: 'Vent et sécurité', anchor: '#wind-safety' },
       { label: 'Questions fréquentes', anchor: '#faq' },
-      { label: 'Lectures connexes', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -1170,7 +1162,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '위도별 경사각', anchor: '#tilt-angle' },
       { label: '바람과 안전', anchor: '#wind-safety' },
       { label: '자주 묻는 질문', anchor: '#faq' },
-      { label: '관련 자료', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {

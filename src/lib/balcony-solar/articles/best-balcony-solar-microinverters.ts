@@ -45,7 +45,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Grid-Code Compliance: UL 1741, IEEE 1547, and UL 3700', anchor: '#grid-code' },
       { label: 'Comparison Table', anchor: '#comparison-table' },
       { label: 'FAQ', anchor: '#faq' },
-      { label: 'Related Reading', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -191,7 +190,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Cumplimiento normativo: UL 1741, IEEE 1547 y UL 3700', anchor: '#grid-code' },
       { label: 'Tabla comparativa', anchor: '#comparison-table' },
       { label: 'Preguntas frecuentes', anchor: '#faq' },
-      { label: 'Lecturas relacionadas', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -339,7 +337,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Conformidade regulatória: UL 1741, IEEE 1547 e UL 3700', anchor: '#grid-code' },
       { label: 'Tabela comparativa', anchor: '#comparison-table' },
       { label: 'Perguntas frequentes', anchor: '#faq' },
-      { label: 'Leituras relacionadas', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -487,7 +484,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'التوافق مع معايير الشبكة: UL 1741 وIEEE 1547 وUL 3700', anchor: '#grid-code' },
       { label: 'جدول المقارنة', anchor: '#comparison-table' },
       { label: 'الأسئلة الشائعة', anchor: '#faq' },
-      { label: 'قراءات ذات صلة', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -634,7 +630,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '系統連系適合: UL 1741、IEEE 1547、UL 3700', anchor: '#grid-code' },
       { label: '比較表', anchor: '#comparison-table' },
       { label: 'よくある質問', anchor: '#faq' },
-      { label: '関連記事', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -781,7 +776,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '电网标准合规:UL 1741、IEEE 1547与UL 3700', anchor: '#grid-code' },
       { label: '对比表', anchor: '#comparison-table' },
       { label: '常见问题', anchor: '#faq' },
-      { label: '相关阅读', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -928,7 +922,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Conformité réglementaire : UL 1741, IEEE 1547 et UL 3700', anchor: '#grid-code' },
       { label: 'Tableau comparatif', anchor: '#comparison-table' },
       { label: 'FAQ', anchor: '#faq' },
-      { label: 'Lectures complémentaires', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -1076,7 +1069,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '전력망 표준 준수: UL 1741, IEEE 1547, UL 3700', anchor: '#grid-code' },
       { label: '비교표', anchor: '#comparison-table' },
       { label: '자주 묻는 질문', anchor: '#faq' },
-      { label: '관련 콘텐츠', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -1223,7 +1215,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Netzanschlussstandards: UL 1741, IEEE 1547 und UL 3700', anchor: '#grid-code' },
       { label: 'Vergleichstabelle', anchor: '#comparison-table' },
       { label: 'Häufige Fragen', anchor: '#faq' },
-      { label: 'Weiterführende Artikel', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {

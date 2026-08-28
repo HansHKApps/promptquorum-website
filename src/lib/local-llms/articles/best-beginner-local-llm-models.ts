@@ -1361,18 +1361,10 @@ schema: {
         { label: 'Início rápido: Rode seu primeiro LLM', anchor: '#quick-start' },
         { label: 'Como escolher um modelo para iniciantes', anchor: '#how-to-choose-a-beginner-model' },
         { label: '#1 Llama 3.2 3B -- Melhor modelo para iniciantes em geral', anchor: '#llama-3-2-3b' },
-        { label: '#2 Phi-4 Mini -- Melhor para pouca RAM', anchor: '#phi-4-mini' },
-        { label: '#3 Gemma 4 E2B -- O modelo 2B mais rápido', anchor: '#gemma-3-2b' },
-        { label: '#4 Llama 3.1 8B -- Melhor modelo 7B/8B completo', anchor: '#llama-3-3-8b' },
-        { label: '#5 Qwen3 8B -- Melhor para multilíngue', anchor: '#qwen3-8b' },
-        { label: 'Tabela de comparação completa', anchor: '#full-comparison' },
-        { label: 'Por qual modelo você deve começar?', anchor: '#which-model-to-start-with' },
         { label: 'Seleção de modelo por região', anchor: '#regional-context' },
-        { label: 'Como baixar e rodar os modelos?', anchor: '#how-to-download' },
         { label: 'Erros comuns', anchor: '#common-mistakes' },
         { label: 'Leituras relacionadas', anchor: '#related-reading' },
         { label: 'Perguntas frequentes', anchor: '#common-questions' },
-        { label: 'Fontes', anchor: '#sources' },
       ],
       quickAnswerTop: {
         pt: {

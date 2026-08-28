@@ -4520,20 +4520,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       toc: [
         { label: '关键要点', anchor: 'key-takeaways' },
-        { label: '欧盟合规期限', anchor: 'eu-compliance-deadlines' },
         { label: '关键数据点', anchor: 'ai-geopolitics-key-data-points' },
-        { label: 'AI军备竞争：美国、中国和欧盟', anchor: 'the-ai-arms-race' },
-        { label: 'EU AI法案：具体要求', anchor: 'eu-ai-act-requirements' },
-        { label: '欧盟成员国：国家AI战略', anchor: 'eu-member-states-strategies' },
         { label: '法国和Mistral：欧洲AI独立', anchor: 'france-mistral' },
         { label: '美国战略：CHIPS法案、NIST', anchor: 'us-strategy' },
-        { label: '中国AI战略：制造2025、CAC、DeepSeek', anchor: 'china-ai-strategy' },
-        { label: '中国：可用模型', anchor: 'china-available-models' },
         { label: '中国：内容过滤和CAC', anchor: 'china-content-filters' },
         { label: '中国：数据驻留和API', anchor: 'china-data-residency' },
-        { label: '全球AI监管对比', anchor: 'global-ai-regulation' },
         { label: 'AI地缘政治风险', anchor: 'ai-geopolitical-risks' },
-        { label: '关键定义', anchor: 'definitions' },
         { label: '常见问题', anchor: 'faq' },
       ],
       howToSchema: {
@@ -4662,6 +4654,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         keyStatistics: {
+          id: 'ai-geopolitics-key-data-points',
           title: 'AI地缘政治：关键数据点',
           content: [
             '以下数据代表了政府AI投资规模、硬件集中度和定义当前AI地缘政治竞争的研究能力。',
@@ -4797,6 +4790,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         franceMistral: {
+          id: 'france-mistral',
           title: '法国和Mistral：建立欧洲AI独立',
           content: [
             'Mistral AI是法国开源AI模型开发商，代表欧洲减少对OpenAI和Google的依赖的努力。Mistral Large是一个开源模型，由于其开源许可证，满足欧盟数据驻留要求——组织可以在自己的基础设施上本地运行它，无需将数据发送到美国。Mistral AI获得法国政府和European Innovation Council的资金支持。战略价值：一个独立的欧洲AI模型减少了对美国技术的依赖，并强化了欧盟的"战略自主权"言论。',
@@ -4815,6 +4809,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         usStrategy: {
+          id: 'us-strategy',
           title: '美国战略：行政令、CHIPS法案、NIST',
           content: [
             '美国采用分散的AI政策方法，优先级竞争力而非监管：',
@@ -4855,6 +4850,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         chinaContentFilters: {
+          id: 'china-content-filters',
           title: '中国：内容过滤和CAC要求',
           content: [
             'CAC的生成式AI措施（2023年）对所有中国生成式AI服务强制内容过滤。作为开发者，了解这些限制对于部署至关重要：',
@@ -4869,6 +4865,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         chinaDataResidency: {
+          id: 'china-data-residency',
           title: '中国：PIPL数据驻留、实用API和部署示例',
           content: [
             'PIPL（个人信息保护法，2021年）要求中国用户的个人数据存储在中国或通过官方安全评估程序进行转移：',
@@ -4911,6 +4908,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         aiGeopoliticalRisks: {
+          id: 'ai-geopolitical-risks',
           title: 'AI地缘政治风险：对组织的含义',
           content: [
             '对于部署AI的组织，地缘政治竞争创造了三种主要风险：',

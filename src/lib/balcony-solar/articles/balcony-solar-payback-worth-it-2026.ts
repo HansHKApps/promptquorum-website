@@ -45,7 +45,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'When It\'s Genuinely Not', anchor: '#genuinely-not' },
       { label: 'How to Calculate Your Own Number', anchor: '#calculate-your-own' },
       { label: 'FAQ', anchor: '#faq' },
-      { label: 'Related Reading', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -166,7 +165,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Cuándo Genuinamente No Vale la Pena', anchor: '#genuinely-not' },
       { label: 'Cómo Calcular Tu Propio Número', anchor: '#calculate-your-own' },
       { label: 'Preguntas Frecuentes', anchor: '#faq' },
-      { label: 'Lecturas Relacionadas', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -288,7 +286,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Quando Genuinamente Não Vale', anchor: '#genuinely-not' },
       { label: 'Como Calcular o Seu Próprio Número', anchor: '#calculate-your-own' },
       { label: 'Perguntas Frequentes', anchor: '#faq' },
-      { label: 'Leituras Relacionadas', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -410,7 +407,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'متى لا يستحق الاستثمار فعليًا', anchor: '#genuinely-not' },
       { label: 'كيفية حساب رقمك الخاص', anchor: '#calculate-your-own' },
       { label: 'الأسئلة الشائعة', anchor: '#faq' },
-      { label: 'قراءات ذات صلة', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -532,7 +528,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Wann es sich wirklich nicht lohnt', anchor: '#genuinely-not' },
       { label: 'So berechnen Sie Ihre eigene Zahl', anchor: '#calculate-your-own' },
       { label: 'Häufige Fragen', anchor: '#faq' },
-      { label: 'Weiterführende Artikel', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -654,7 +649,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '実際には元が取れないケース', anchor: '#genuinely-not' },
       { label: '自分の数値を計算する方法', anchor: '#calculate-your-own' },
       { label: 'よくある質問', anchor: '#faq' },
-      { label: '関連記事', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -776,7 +770,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '确实不划算的情况', anchor: '#genuinely-not' },
       { label: '如何计算属于你自己的数字', anchor: '#calculate-your-own' },
       { label: '常见问题', anchor: '#faq' },
-      { label: '相关阅读', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -898,7 +891,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Quand Cela N\'en Vaut Vraiment Pas la Peine', anchor: '#genuinely-not' },
       { label: 'Comment Calculer Votre Propre Chiffre', anchor: '#calculate-your-own' },
       { label: 'Questions Fréquentes', anchor: '#faq' },
-      { label: 'Lectures Connexes', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -1020,7 +1012,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '실제로 본전을 뽑지 못하는 경우', anchor: '#genuinely-not' },
       { label: '나만의 수치를 계산하는 방법', anchor: '#calculate-your-own' },
       { label: '자주 묻는 질문', anchor: '#faq' },
-      { label: '관련 읽을거리', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {

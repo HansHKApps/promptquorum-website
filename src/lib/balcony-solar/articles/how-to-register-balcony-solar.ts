@@ -62,7 +62,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Step-by-Step Per Market', anchor: '#step-by-step' },
       { label: 'Plug Type & Hardware Cost by Country', anchor: '#plug-type-cost' },
       { label: 'FAQ', anchor: '#faq' },
-      { label: 'Related Reading', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -214,7 +213,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Paso a paso por mercado', anchor: '#step-by-step' },
       { label: 'Tipo de enchufe y costo del equipo por país', anchor: '#plug-type-cost' },
       { label: 'Preguntas frecuentes', anchor: '#faq' },
-      { label: 'Lecturas relacionadas', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -367,7 +365,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Passo a passo por mercado', anchor: '#step-by-step' },
       { label: 'Tipo de plugue e custo do equipamento por país', anchor: '#plug-type-cost' },
       { label: 'Perguntas frequentes', anchor: '#faq' },
-      { label: 'Leituras relacionadas', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -520,7 +517,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'خطوة بخطوة لكل سوق', anchor: '#step-by-step' },
       { label: 'نوع القابس وتكلفة المعدات حسب الدولة', anchor: '#plug-type-cost' },
       { label: 'الأسئلة الشائعة', anchor: '#faq' },
-      { label: 'قراءات ذات صلة', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -673,7 +669,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '市場別ステップバイステップ', anchor: '#step-by-step' },
       { label: '国別のプラグの種類と機材価格', anchor: '#plug-type-cost' },
       { label: 'よくある質問', anchor: '#faq' },
-      { label: '関連記事', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -826,7 +821,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '各市场分步指南', anchor: '#step-by-step' },
       { label: '各国插头类型与硬件价格', anchor: '#plug-type-cost' },
       { label: '常见问题', anchor: '#faq' },
-      { label: '相关阅读', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -979,7 +973,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Étape par étape par marché', anchor: '#step-by-step' },
       { label: 'Type de prise et coût du matériel par pays', anchor: '#plug-type-cost' },
       { label: 'FAQ', anchor: '#faq' },
-      { label: 'Lectures complémentaires', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -1132,7 +1125,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '시장별 단계별 절차', anchor: '#step-by-step' },
       { label: '국가별 플러그 유형 및 하드웨어 비용', anchor: '#plug-type-cost' },
       { label: '자주 묻는 질문', anchor: '#faq' },
-      { label: '관련 자료', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -1285,7 +1277,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Schritt-für-Schritt je Markt', anchor: '#step-by-step' },
       { label: 'Steckertyp und Hardware-Kosten nach Land', anchor: '#plug-type-cost' },
       { label: 'Häufig gestellte Fragen', anchor: '#faq' },
-      { label: 'Weiterführende Artikel', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {

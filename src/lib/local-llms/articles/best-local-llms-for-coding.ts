@@ -97,12 +97,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       primaryTerm: 'local LLM for coding',
       toc: [
         { label: 'Key Takeaways', anchor: '#key-takeaways' },
-        { label: 'What Makes a Good Coding LLM?', anchor: '#what-makes-coding-llm' },
-        { label: '#1 Qwen3-Coder 32B', anchor: '#qwen25-coder-32b' },
-        { label: '#2 Qwen 3.6 27B', anchor: '#deepseek-coder-v2' },
-        { label: '#3 Qwen3 8B', anchor: '#qwen25-coder-7b' },
-        { label: '#4 Codestral 22B', anchor: '#starcoder2-15b' },
-        { label: '#5 Llama 3.1 8B (general fallback)', anchor: '#llama-31-8b' },
         { label: 'Best Coding LLMs for 8 GB VRAM', anchor: '#coding-llm-8gb-vram' },
         { label: 'Best Coding LLMs for 16 GB VRAM', anchor: '#coding-llm-16gb-vram' },
         { label: 'Best Coding LLMs for 6 GB VRAM', anchor: '#coding-llm-6gb-vram' },
@@ -110,7 +104,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { label: 'Real Coding Tasks Comparison', anchor: '#coding-examples' },
         { label: 'Speed vs Quality by Task', anchor: '#speed-quality-table' },
         { label: 'Quick Facts at a Glance', anchor: '#quick-facts' },
-        { label: 'Which Coding Model Should You Use?', anchor: '#which-model' },
+        { label: 'Which Coding Model Should You Use?', anchor: '#speed-quality-table' },
         { label: 'Who Should Use What', anchor: '#user-personas' },
         { label: 'When NOT to Use Local LLMs', anchor: '#when-not-to-use' },
         { label: 'Decision Comparison Matrix', anchor: '#local-vs-cloud-comparison' },
@@ -284,6 +278,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         humanEvalTable: {
+          id: 'humaneval-table',
           title: 'How Do Coding Models Compare? HumanEval + SWE-bench (July 2026)',
           rows: [
             { 'Model': 'Kimi K2.6 (MoE)', 'HumanEval': '—', 'SWE-bench': '58.6 (SWE-Bench Pro)', 'RAM': 'varies (quantized)', 'FIM': '—' },
@@ -428,6 +423,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         regionalContext: {
+          id: 'regional-context',
           title: 'How Do Regional Requirements Affect Your Coding Model Choice?',
           content: [
             '**EU / GDPR**',
@@ -440,6 +436,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'What Are Common Mistakes With Local Coding Models?',
           items: [
             '**Using HumanEval as the only benchmark for model selection:** HumanEval tests single-function Python generation. In real development, you need multi-file reasoning, test generation, and codebase understanding. SWE-bench is a better predictor of real-world coding performance. A model scoring 72% on HumanEval but 77% on SWE-bench (Qwen 3.6) will outperform a model at 87% HumanEval but untested on SWE-bench in practical workflows.',
@@ -664,12 +661,6 @@ schema: {
       primaryTerm: 'LLM local para programación',
       toc: [
         { label: 'Puntos clave', anchor: '#key-takeaways' },
-        { label: '¿Qué hace bueno a un LLM para programación?', anchor: '#what-makes-coding-llm' },
-        { label: '#1 Qwen3-Coder 32B', anchor: '#qwen25-coder-32b' },
-        { label: '#2 Qwen 3.6 27B', anchor: '#deepseek-coder-v2' },
-        { label: '#3 Qwen3 8B', anchor: '#qwen25-coder-7b' },
-        { label: '#4 Codestral 22B', anchor: '#starcoder2-15b' },
-        { label: '#5 Llama 3.1 8B (alternativa general)', anchor: '#llama-31-8b' },
         { label: 'Mejores LLMs de programación para 8 GB VRAM', anchor: '#coding-llm-8gb-vram' },
         { label: 'Mejores LLMs de programación para 16 GB VRAM', anchor: '#coding-llm-16gb-vram' },
         { label: 'Mejores LLMs de programación para 6 GB VRAM', anchor: '#coding-llm-6gb-vram' },
@@ -677,7 +668,7 @@ schema: {
         { label: 'Comparación de tareas reales de programación', anchor: '#coding-examples' },
         { label: 'Velocidad vs calidad por tarea', anchor: '#speed-quality-table' },
         { label: 'Datos rápidos de un vistazo', anchor: '#quick-facts' },
-        { label: '¿Qué modelo de programación deberías usar?', anchor: '#which-model' },
+        { label: '¿Qué modelo de programación deberías usar?', anchor: '#speed-quality-table' },
         { label: 'Quién debería usar qué', anchor: '#user-personas' },
         { label: 'Cuándo NO usar LLMs locales', anchor: '#when-not-to-use' },
         { label: 'Matriz de comparación de decisiones', anchor: '#local-vs-cloud-comparison' },
@@ -844,6 +835,7 @@ schema: {
           ],
         },
         humanEvalTable: {
+          id: 'humaneval-table',
           title: '¿Cómo se comparan los modelos de programación? HumanEval + SWE-bench (junio 2026)',
           rows: [
             { 'Modelo': 'Kimi K2.6 (MoE)', 'HumanEval': '—', 'SWE-bench': '58.6 (SWE-Bench Pro)', 'RAM': 'variable (cuantizado)', 'FIM': '—' },
@@ -983,6 +975,7 @@ schema: {
           ],
         },
         regionalContext: {
+          id: 'regional-context',
           title: '¿Cómo afectan los requisitos regionales a tu elección de modelo de programación?',
           content: [
             '**UE / RGPD**',
@@ -995,6 +988,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: '¿Cuáles son los errores comunes con los modelos de programación locales?',
           items: [
             '**Usar HumanEval como único benchmark para selección de modelos:** HumanEval evalúa la generación de funciones Python individuales. En el desarrollo real, necesitas razonamiento multi-archivo, generación de pruebas y comprensión de bases de código. SWE-bench es un mejor predictor del rendimiento de programación real. Un modelo que puntúa 72% en HumanEval pero 77% en SWE-bench (Qwen 3.6) superará en flujos de trabajo prácticos a un modelo con 87% en HumanEval pero sin prueba en SWE-bench.',
@@ -1151,12 +1145,6 @@ schema: {
       primaryTerm: 'LLM محلي للبرمجة',
       toc: [
         { label: 'النقاط الرئيسية', anchor: '#key-takeaways' },
-        { label: 'ما الذي يجعل نموذج LLM جيداً للبرمجة؟', anchor: '#what-makes-coding-llm' },
-        { label: '#1 Qwen3-Coder 32B', anchor: '#qwen25-coder-32b' },
-        { label: '#2 Qwen 3.6 27B', anchor: '#deepseek-coder-v2' },
-        { label: '#3 Qwen3 8B', anchor: '#qwen25-coder-7b' },
-        { label: '#4 Codestral 22B', anchor: '#starcoder2-15b' },
-        { label: '#5 Llama 3.1 8B (بديل عام)', anchor: '#llama-31-8b' },
         { label: 'أفضل نماذج LLM للبرمجة لـ 8 GB VRAM', anchor: '#coding-llm-8gb-vram' },
         { label: 'أفضل نماذج LLM للبرمجة لـ 16 GB VRAM', anchor: '#coding-llm-16gb-vram' },
         { label: 'أفضل نماذج LLM للبرمجة لـ 6 GB VRAM', anchor: '#coding-llm-6gb-vram' },
@@ -1164,7 +1152,7 @@ schema: {
         { label: 'مقارنة مهام برمجة حقيقية', anchor: '#coding-examples' },
         { label: 'السرعة مقابل الجودة حسب المهمة', anchor: '#speed-quality-table' },
         { label: 'حقائق سريعة في لمحة', anchor: '#quick-facts' },
-        { label: 'أي نموذج برمجة يجب أن تستخدم؟', anchor: '#which-model' },
+        { label: 'أي نموذج برمجة يجب أن تستخدم؟', anchor: '#speed-quality-table' },
         { label: 'من يجب أن يستخدم ماذا', anchor: '#user-personas' },
         { label: 'متى لا تستخدم نماذج LLM المحلية', anchor: '#when-not-to-use' },
         { label: 'مصفوفة مقارنة القرار', anchor: '#local-vs-cloud-comparison' },
@@ -1330,6 +1318,7 @@ schema: {
           ],
         },
         humanEvalTable: {
+          id: 'humaneval-table',
           title: 'كيف تُقارَن نماذج البرمجة؟ HumanEval + SWE-bench (يوليو 2026)',
           rows: [
             { 'النموذج': 'Kimi K2.6 (MoE)', 'HumanEval': '—', 'SWE-bench': '58.6 (SWE-Bench Pro)', 'RAM': 'متغير (مكمَّم)', 'FIM': '—' },
@@ -1469,6 +1458,7 @@ schema: {
           ],
         },
         regionalContext: {
+          id: 'regional-context',
           title: 'كيف تؤثر المتطلبات الإقليمية على اختيارك لنموذج البرمجة؟',
           content: [
             '**الاتحاد الأوروبي / GDPR**',
@@ -1481,6 +1471,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'ما الأخطاء الشائعة مع نماذج البرمجة المحلية؟',
           items: [
             '**استخدام HumanEval كمعيار وحيد لاختيار النماذج:** يقيّم HumanEval توليد دوال Python الفردية. في التطوير الحقيقي، تحتاج استدلالاً متعدد الملفات وتوليد اختبارات وفهم قواعد الكود. SWE-bench متنبئ أفضل بأداء البرمجة الحقيقي. نموذج يحقق 72% في HumanEval لكن 77% في SWE-bench (Qwen 3.6) سيتفوق في سير العمل العملي على نموذج بـ 87% في HumanEval لكن دون اختبار في SWE-bench.',
@@ -2065,18 +2056,11 @@ schema: {
       primaryTerm: 'lokales LLM für Programmierung',
       toc: [
         { label: 'Hauptergebnisse', anchor: '#key-takeaways' },
-        { label: 'Was macht ein gutes Programmier-LLM aus?', anchor: '#what-makes-coding-llm' },
-        { label: '#1 Kimi K2.6', anchor: '#qwen25-coder-32b' },
-        { label: '#2 Qwen 3.6 27B', anchor: '#deepseek-coder-v2' },
-        { label: '#3 Devstral Small 24B / Laguna XS 2.1', anchor: '#qwen25-coder-7b' },
-        { label: '#4 Codestral 22B', anchor: '#starcoder2-15b' },
-        { label: '#5 Qwen3 8B (beste Wahl für 8 GB RAM)', anchor: '#llama-31-8b' },
         { label: 'Beste Programmier-LLMs für 8 GB VRAM', anchor: '#coding-llm-8gb-vram' },
         { label: 'Beste Programmier-LLMs für 16 GB VRAM', anchor: '#coding-llm-16gb-vram' },
         { label: 'Beste Programmier-LLMs für 6 GB VRAM', anchor: '#coding-llm-6gb-vram' },
         { label: 'HumanEval-Benchmark-Tabelle', anchor: '#humaneval-table' },
         { label: 'Schnelle Fakten auf einen Blick', anchor: '#quick-facts' },
-        { label: 'Welches Programmiermodell solltest du verwenden?', anchor: '#which-model' },
         { label: 'Wer sollte was verwenden', anchor: '#user-personas' },
         { label: 'Wann du lokale LLMs NICHT verwenden solltest', anchor: '#when-not-to-use' },
         { label: 'Entscheidungsvergleichsmatrix', anchor: '#local-vs-cloud-comparison' },
@@ -2240,6 +2224,7 @@ schema: {
           ],
         },
         humanEvalTable: {
+          id: 'humaneval-table',
           title: 'Wie vergleichen sich Codierungsmodelle? HumanEval + SWE-bench (Juli 2026)',
           rows: [
             { 'Modell': 'Kimi K2.6 (MoE)', 'HumanEval': '—', 'SWE-bench': '58,6 (SWE-Bench Pro)', 'RAM': 'variiert (quantisiert)', 'FIM': '—' },
@@ -2360,6 +2345,7 @@ schema: {
           columns: ['Modell', 'Best für', 'VRAM', 'Speed', 'Stärke', 'Wann zu wählen'],
         },
         regionalContext: {
+          id: 'regional-context',
           title: 'Wie beeinflussen regionale Anforderungen deine Wahl des Programmiermodells?',
           content: [
             '**EU / DSGVO**',
@@ -2374,6 +2360,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Was sind häufige Fehler bei lokalen Programmiermodellen?',
           items: [
             '**Ein General-Purpose-Modell statt eines Code-spezifischen Modells verwenden:** Qwen3 8B (72% HumanEval) ist identisch mit Llama 3.1 8B General (72% HumanEval) auf dem Benchmark -- aber Qwen3-Coder beinhaltet FIM (Fill-in-the-Middle)-Unterstützung, die Llama 3.1 8B General nicht hat. Für IDE-Autovervollständigung verwende immer ein Code-spezifisches Modell.',
@@ -2517,18 +2504,11 @@ schema: {
       primaryTerm: 'LLM local pour la programmation',
       toc: [
         { label: 'Points clés', anchor: '#key-takeaways' },
-        { label: 'Qu\'est-ce qui rend un bon LLM pour la programmation?', anchor: '#what-makes-coding-llm' },
-        { label: '#1 Kimi K2.6', anchor: '#qwen25-coder-32b' },
-        { label: '#2 Qwen 3.6 27B', anchor: '#deepseek-coder-v2' },
-        { label: '#3 Devstral Small 24B / Laguna XS 2.1', anchor: '#qwen25-coder-7b' },
-        { label: '#4 Codestral 22B', anchor: '#starcoder2-15b' },
-        { label: '#5 Qwen3 8B (meilleur pour 8 GB RAM)', anchor: '#llama-31-8b' },
         { label: 'Meilleurs LLMs de programmation pour 8 GB VRAM', anchor: '#coding-llm-8gb-vram' },
         { label: 'Meilleurs LLMs de programmation pour 16 GB VRAM', anchor: '#coding-llm-16gb-vram' },
         { label: 'Meilleurs LLMs de programmation pour 6 GB VRAM', anchor: '#coding-llm-6gb-vram' },
         { label: 'Tableau de benchmark HumanEval', anchor: '#humaneval-table' },
         { label: 'Faits rapides en un coup d\'œil', anchor: '#quick-facts' },
-        { label: 'Quel modèle de programmation local utiliser?', anchor: '#which-model' },
         { label: 'Qui devrait utiliser quoi', anchor: '#user-personas' },
         { label: 'Quand NE PAS utiliser les LLMs locaux', anchor: '#when-not-to-use' },
         { label: 'Matrice de comparaison décisionnelle', anchor: '#local-vs-cloud-comparison' },
@@ -2691,6 +2671,7 @@ schema: {
           ],
         },
         humanEvalTable: {
+          id: 'humaneval-table',
           title: 'Comment les modèles de codage se comparent-ils ? HumanEval + SWE-bench (juillet 2026)',
           rows: [
             { 'Modèle': 'Kimi K2.6 (MoE)', 'HumanEval': '—', 'SWE-bench': '58.6 (SWE-Bench Pro)', 'RAM': 'variable (quantifié)', 'FIM': '—' },
@@ -2811,6 +2792,7 @@ schema: {
           columns: ['Modèle', 'Meilleur pour', 'VRAM', 'Vitesse', 'Point fort', 'Quand choisir'],
         },
         regionalContext: {
+          id: 'regional-context',
           title: 'Comment les exigences régionales affectent votre choix de modèle de programmation?',
           content: [
             '**EU / RGPD**',
@@ -2821,6 +2803,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Quelles sont les erreurs courantes avec les modèles de programmation locaux?',
           items: [
             '**Utiliser un modèle polyvalent au lieu d\'un modèle spécifique au code** : Qwen3 8B (72% HumanEval) fonctionne identiquement à Llama 3.1 8B général (72% HumanEval) sur le benchmark — mais Qwen3-Coder inclut le support FIM (Fill-in-the-Middle) que Llama 3.1 8B général n\'a pas. Pour l\'autocomplétion IDE, utilisez toujours un modèle spécifique au code.',
@@ -3702,12 +3685,6 @@ schema: {
       primaryTerm: '코딩용 로컬 LLM',
       toc: [
         { label: '핵심 요약', anchor: '#key-takeaways' },
-        { label: '훌륭한 코딩 LLM의 조건', anchor: '#what-makes-coding-llm' },
-        { label: '#1 Kimi K2.6', anchor: '#qwen25-coder-32b' },
-        { label: '#2 Qwen 3.6 27B', anchor: '#deepseek-coder-v2' },
-        { label: '#3 Devstral Small 24B / Laguna XS 2.1', anchor: '#qwen25-coder-7b' },
-        { label: '#4 Codestral 22B', anchor: '#starcoder2-15b' },
-        { label: '#5 Qwen3 8B (8GB 최적)', anchor: '#llama-31-8b' },
         { label: '8 GB VRAM 최고 코딩 LLM', anchor: '#coding-llm-8gb-vram' },
         { label: '16 GB VRAM 최고 코딩 LLM', anchor: '#coding-llm-16gb-vram' },
         { label: '6 GB VRAM 최고 코딩 LLM', anchor: '#coding-llm-6gb-vram' },
@@ -3715,7 +3692,7 @@ schema: {
         { label: '실제 코딩 작업 비교', anchor: '#coding-examples' },
         { label: '작업별 속도 대 품질', anchor: '#speed-quality-table' },
         { label: '한눈에 보는 빠른 사실', anchor: '#quick-facts' },
-        { label: '어떤 코딩 모델을 사용해야 합니까?', anchor: '#which-model' },
+        { label: '어떤 코딩 모델을 사용해야 합니까?', anchor: '#speed-quality-table' },
         { label: '사용자 유형별 추천', anchor: '#user-personas' },
         { label: '로컬 LLM을 사용하지 말아야 할 때', anchor: '#when-not-to-use' },
         { label: '의사결정 비교 매트릭스', anchor: '#local-vs-cloud-comparison' },
@@ -3881,6 +3858,7 @@ schema: {
           ],
         },
         humanEvalTable: {
+          id: 'humaneval-table',
           title: '코딩 모델 비교: HumanEval + SWE-bench (2026년 7월)',
           rows: [
             { 'Model': 'Kimi K2.6 (MoE)', 'HumanEval': '—', 'SWE-bench': '58.6 (SWE-Bench Pro)', 'RAM': '다양 (양자화)', 'FIM': '—' },
@@ -4020,6 +3998,7 @@ schema: {
           ],
         },
         regionalContext: {
+          id: 'regional-context',
           title: '지역별 요구사항이 코딩 모델 선택에 어떤 영향을 미칩니까?',
           content: [
             '**EU / GDPR**',
@@ -4032,6 +4011,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: '로컬 코딩 모델의 흔한 실수는 무엇입니까?',
           items: [
             '**모델 선택 시 HumanEval만을 유일한 벤치마크로 사용하는 것:** HumanEval은 단일 함수 Python 생성을 테스트합니다. 실제 개발에서는 멀티파일 추론, 테스트 생성, 코드베이스 이해가 필요합니다. SWE-bench가 실제 코딩 성능을 더 잘 예측합니다. HumanEval 72%이지만 SWE-bench 77% (Qwen 3.6)인 모델이 HumanEval 87%이지만 SWE-bench 미테스트인 모델을 실용적 워크플로우에서 능가할 것입니다.',

@@ -26,13 +26,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { label: 'Key Takeaways', anchor: '#key-takeaways' },
         { label: 'What Is RAG?', anchor: '#what-is-rag' },
         { label: 'Top 8 RAG Tools Comparison', anchor: '#top-8-rag-tools' },
-        { label: 'Easiest: Open WebUI RAG', anchor: '#easiest-open-webui' },
-        { label: 'Flexible: LlamaIndex', anchor: '#flexible-llamaindex' },
-        { label: 'Professional: LangChain', anchor: '#professional-langchain' },
-        { label: 'Open-Source Alternatives', anchor: '#open-source-alternatives' },
         { label: 'RAG vs Fine-Tuning', anchor: '#rag-vs-finetuning' },
         { label: 'Common Mistakes', anchor: '#common-mistakes' },
-        { label: 'Common Questions', anchor: '#common-questions' },
+        { label: 'Common Questions', anchor: '#faq' },
         { label: 'Related Reading', anchor: '#related-reading' },
         { label: 'Sources', anchor: '#sources' },
       ],
@@ -55,6 +51,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         whatIsRAG: {
+          id: 'what-is-rag',
           title: 'What Is RAG (Retrieval-Augmented Generation)?',
           content: [
             '**RAG is a technique that lets your LLM answer questions about your own documents without needing to fine-tune the model.**',
@@ -65,6 +62,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           imageCaption: 'RAG pipeline: documents are uploaded, split into chunks, converted to embeddings, and stored in a vector database, then matching chunks are retrieved to generate a sourced answer.',
         },
         top8Tools: {
+          id: 'top-8-rag-tools',
           title: 'Top 8 Local RAG Tools in 2026',
           rows: [
             { 'Tool': 'Open WebUI', 'Type': 'Web app (Docker)', 'Best For': 'Beginners, easiest setup', 'Vector DB': 'Built-in', 'Learning Curve': 'Zero' },
@@ -115,6 +113,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         ragVsFinetuning: {
+          id: 'rag-vs-finetuning',
           title: 'Should You Use RAG or Fine-Tuning?',
           content: 'Use this framework:',
           items: [
@@ -124,6 +123,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Common Mistakes With Local RAG',
           items: [
             '**Using the wrong chunk size.** Too small (100 tokens) = too many small pieces. Too large (2000 tokens) = not specific. Optimal is 500-1000 tokens.',
@@ -227,13 +227,9 @@ schema: {
         { label: 'Puntos clave', anchor: '#key-takeaways' },
         { label: '¿Qué es RAG?', anchor: '#what-is-rag' },
         { label: 'Comparativa de las 8 mejores herramientas RAG', anchor: '#top-8-rag-tools' },
-        { label: 'La más fácil: Open WebUI RAG', anchor: '#easiest-open-webui' },
-        { label: 'La más flexible: LlamaIndex', anchor: '#flexible-llamaindex' },
-        { label: 'La más profesional: LangChain', anchor: '#professional-langchain' },
-        { label: 'Alternativas open-source', anchor: '#open-source-alternatives' },
         { label: 'RAG vs. fine-tuning', anchor: '#rag-vs-finetuning' },
         { label: 'Errores comunes', anchor: '#common-mistakes' },
-        { label: 'Preguntas frecuentes', anchor: '#common-questions' },
+        { label: 'Preguntas frecuentes', anchor: '#faq' },
         { label: 'Lecturas relacionadas', anchor: '#related-reading' },
         { label: 'Fuentes', anchor: '#sources' },
       ],
@@ -255,6 +251,7 @@ schema: {
           ],
         },
         whatIsRAG: {
+          id: 'what-is-rag',
           title: '¿Qué es RAG (Retrieval-Augmented Generation)?',
           content: [
             '**RAG es una técnica que permite a tu LLM responder preguntas sobre tus propios documentos sin necesidad de hacer fine-tuning al modelo.**',
@@ -265,6 +262,7 @@ schema: {
           imageCaption: 'Flujo de RAG: los documentos se suben, se dividen en chunks, se convierten en embeddings y se almacenan en una base de datos vectorial; después se recuperan los chunks relevantes para generar una respuesta con fuentes.',
         },
         top8Tools: {
+          id: 'top-8-rag-tools',
           title: 'Las 8 mejores herramientas RAG locales en 2026',
           rows: [
             { 'Herramienta': 'Open WebUI', 'Tipo': 'Aplicación web (Docker)', 'Ideal para': 'Principiantes, configuración más sencilla', 'Base de datos vectorial': 'Integrada', 'Curva de aprendizaje': 'Ninguna' },
@@ -315,6 +313,7 @@ schema: {
           ],
         },
         ragVsFinetuning: {
+          id: 'rag-vs-finetuning',
           title: '¿Deberías usar RAG o fine-tuning?',
           content: 'Usa este criterio:',
           items: [
@@ -324,6 +323,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Errores comunes con RAG local',
           items: [
             '**Usar el tamaño de chunk incorrecto.** Muy pequeño (100 tokens) = demasiadas piezas pequeñas. Muy grande (2000 tokens) = poco específico. El óptimo es 500-1000 tokens.',
@@ -444,13 +444,9 @@ schema: {
         { label: 'النقاط الرئيسية', anchor: '#key-takeaways' },
         { label: 'ما هو RAG؟', anchor: '#what-is-rag' },
         { label: 'مقارنة أفضل 8 أدوات RAG', anchor: '#top-8-rag-tools' },
-        { label: 'الأسهل: Open WebUI RAG', anchor: '#easiest-open-webui' },
-        { label: 'الأكثر مرونة: LlamaIndex', anchor: '#flexible-llamaindex' },
-        { label: 'الأكثر احترافية: LangChain', anchor: '#professional-langchain' },
-        { label: 'بدائل مفتوحة المصدر', anchor: '#open-source-alternatives' },
         { label: 'RAG مقابل الضبط الدقيق', anchor: '#rag-vs-finetuning' },
         { label: 'أخطاء شائعة', anchor: '#common-mistakes' },
-        { label: 'الأسئلة الشائعة', anchor: '#common-questions' },
+        { label: 'الأسئلة الشائعة', anchor: '#faq' },
         { label: 'قراءات ذات صلة', anchor: '#related-reading' },
         { label: 'المصادر', anchor: '#sources' },
       ],
@@ -472,6 +468,7 @@ schema: {
           ],
         },
         whatIsRAG: {
+          id: 'what-is-rag',
           title: 'ما هو RAG (التوليد المعزّز بالاسترجاع)؟',
           content: [
             '**RAG تقنية تتيح لنموذج LLM لديك الإجابة عن أسئلة حول مستنداتك الخاصة دون الحاجة إلى ضبط النموذج بدقة.**',
@@ -482,6 +479,7 @@ schema: {
           imageCaption: 'مخطط RAG: تُرفع المستندات وتُقسَّم إلى أجزاء وتُحوَّل إلى تضمينات وتُخزَّن في قاعدة بيانات متجهية، ثم تُسترجع الأجزاء المطابقة لتوليد إجابة موثّقة بالمصادر.',
         },
         top8Tools: {
+          id: 'top-8-rag-tools',
           title: 'أفضل 8 أدوات RAG محلية في 2026',
           rows: [
             { 'الأداة': 'Open WebUI', 'النوع': 'تطبيق ويب (Docker)', 'مثالية لـ': 'المبتدئون، أبسط إعداد', 'قاعدة البيانات المتجهية': 'مدمجة', 'منحنى التعلّم': 'لا يوجد' },
@@ -532,6 +530,7 @@ schema: {
           ],
         },
         ragVsFinetuning: {
+          id: 'rag-vs-finetuning',
           title: 'هل يجب أن تستخدم RAG أم الضبط الدقيق؟',
           content: 'استخدم هذا المعيار:',
           items: [
@@ -541,6 +540,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'أخطاء شائعة مع RAG المحلي',
           items: [
             '**استخدام حجم جزء خاطئ.** صغير جداً (100 رمز) = أجزاء صغيرة كثيرة جداً. كبير جداً (2000 رمز) = غير محدد. الأمثل 500-1000 رمز.',
@@ -661,13 +661,9 @@ schema: {
         { label: 'Pontos principais', anchor: '#key-takeaways' },
         { label: 'O que é RAG?', anchor: '#what-is-rag' },
         { label: 'Comparativo das 8 melhores ferramentas RAG', anchor: '#top-8-rag-tools' },
-        { label: 'A mais fácil: Open WebUI RAG', anchor: '#easiest-open-webui' },
-        { label: 'A mais flexível: LlamaIndex', anchor: '#flexible-llamaindex' },
-        { label: 'A mais profissional: LangChain', anchor: '#professional-langchain' },
-        { label: 'Alternativas open-source', anchor: '#open-source-alternatives' },
         { label: 'RAG vs. fine-tuning', anchor: '#rag-vs-finetuning' },
         { label: 'Erros comuns', anchor: '#common-mistakes' },
-        { label: 'Perguntas frequentes', anchor: '#common-questions' },
+        { label: 'Perguntas frequentes', anchor: '#faq' },
         { label: 'Leituras relacionadas', anchor: '#related-reading' },
         { label: 'Fontes', anchor: '#sources' },
       ],
@@ -689,6 +685,7 @@ schema: {
           ],
         },
         whatIsRAG: {
+          id: 'what-is-rag',
           title: 'O que é RAG (Retrieval-Augmented Generation)?',
           content: [
             '**RAG é uma técnica que permite ao seu LLM responder perguntas sobre os seus próprios documentos sem precisar fazer fine-tuning no modelo.**',
@@ -699,6 +696,7 @@ schema: {
           imageCaption: 'Fluxo do RAG: os documentos são enviados, divididos em chunks, convertidos em embeddings e armazenados em um banco de dados vetorial; depois os chunks relevantes são recuperados para gerar uma resposta com fontes.',
         },
         top8Tools: {
+          id: 'top-8-rag-tools',
           title: 'As 8 melhores ferramentas RAG locais em 2026',
           rows: [
             { 'Ferramenta': 'Open WebUI', 'Tipo': 'Aplicativo web (Docker)', 'Ideal para': 'Iniciantes, configuração mais simples', 'Banco de dados vetorial': 'Integrado', 'Curva de aprendizado': 'Nenhuma' },
@@ -749,6 +747,7 @@ schema: {
           ],
         },
         ragVsFinetuning: {
+          id: 'rag-vs-finetuning',
           title: 'Você deve usar RAG ou fine-tuning?',
           content: 'Use este critério:',
           items: [
@@ -758,6 +757,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Erros comuns com RAG local',
           items: [
             '**Usar o tamanho de chunk errado.** Muito pequeno (100 tokens) = muitos pedaços pequenos. Muito grande (2000 tokens) = pouco específico. O ideal é 500-1000 tokens.',
@@ -878,13 +878,9 @@ schema: {
         { label: 'Zusammenfassung', anchor: '#key-takeaways' },
         { label: 'Was ist RAG?', anchor: '#what-is-rag' },
         { label: 'Beste 8 RAG-Tools im Vergleich', anchor: '#top-8-rag-tools' },
-        { label: 'Am einfachsten: Open WebUI RAG', anchor: '#easiest-open-webui' },
-        { label: 'Am flexibelsten: LlamaIndex', anchor: '#flexible-llamaindex' },
-        { label: 'Am professionellsten: LangChain', anchor: '#professional-langchain' },
-        { label: 'Open-Source-Alternativen', anchor: '#open-source-alternatives' },
         { label: 'RAG vs. Feinabstimmung', anchor: '#rag-vs-finetuning' },
         { label: 'Häufige Fehler', anchor: '#common-mistakes' },
-        { label: 'Häufig gestellte Fragen', anchor: '#common-questions' },
+        { label: 'Häufig gestellte Fragen', anchor: '#faq' },
         { label: 'Weiterführende Literatur', anchor: '#related-reading' },
         { label: 'Quellen', anchor: '#sources' },
       ],
@@ -906,6 +902,7 @@ schema: {
           ],
         },
         whatIsRAG: {
+          id: 'what-is-rag',
           title: 'Was ist RAG (Retrieval-Augmented Generation)?',
           content: [
             '**RAG ist eine Technik, die Ihrem LLM ermöglicht, Fragen zu Ihren eigenen Dokumenten zu beantworten, ohne das Modell feinabstimmen zu müssen.**',
@@ -916,6 +913,7 @@ schema: {
           imageCaption: 'RAG-Ablauf: Dokumente werden hochgeladen, in Chunks aufgeteilt, in Embeddings umgewandelt und in einer Vektordatenbank gespeichert; passende Chunks werden anschließend abgerufen, um eine quellenbasierte Antwort zu erzeugen.',
         },
         top8Tools: {
+          id: 'top-8-rag-tools',
           title: 'Beste 8 lokale RAG-Tools im 2026',
           rows: [
             { 'Werkzeug': 'Open WebUI', 'Typ': 'Web-App (Docker)', 'Am besten für': 'Anfänger, einfachstes Setup', 'Vektor DB': 'Integriert', 'Lernkurve': 'Keine' },
@@ -966,6 +964,7 @@ schema: {
           ],
         },
         ragVsFinetuning: {
+          id: 'rag-vs-finetuning',
           title: 'Sollten Sie RAG oder Feinabstimmung verwenden?',
           content: 'Verwenden Sie dieses Framework:',
           items: [
@@ -975,6 +974,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Häufige Fehler bei lokaler RAG',
           items: [
             '**Falsche Chunk-Größe verwenden.** Zu klein (100 Token) = zu viele kleine Stücke. Zu groß (2000 Token) = nicht spezifisch. Optimal sind 500-1000 Token.',
@@ -1092,13 +1092,9 @@ schema: {
         { label: 'Points clés', anchor: '#key-takeaways' },
         { label: 'Qu\'est-ce que RAG?', anchor: '#what-is-rag' },
         { label: 'Meilleurs 8 outils RAG en comparaison', anchor: '#top-8-rag-tools' },
-        { label: 'Le plus facile: Open WebUI RAG', anchor: '#easiest-open-webui' },
-        { label: 'Le plus flexible: LlamaIndex', anchor: '#flexible-llamaindex' },
-        { label: 'Le plus professionnel: LangChain', anchor: '#professional-langchain' },
-        { label: 'Alternatives open-source', anchor: '#open-source-alternatives' },
         { label: 'RAG vs Affinage', anchor: '#rag-vs-finetuning' },
         { label: 'Erreurs courantes', anchor: '#common-mistakes' },
-        { label: 'Questions courantes', anchor: '#common-questions' },
+        { label: 'Questions courantes', anchor: '#faq' },
         { label: 'Lectures complémentaires', anchor: '#related-reading' },
         { label: 'Sources', anchor: '#sources' },
       ],
@@ -1120,6 +1116,7 @@ schema: {
           ],
         },
         whatIsRAG: {
+          id: 'what-is-rag',
           title: 'Qu\'est-ce que RAG (Retrieval-Augmented Generation)?',
           content: [
             '**RAG est une technique qui permet à votre LLM de répondre à des questions sur vos propres documents sans avoir besoin de affiner le modèle.**',
@@ -1130,6 +1127,7 @@ schema: {
           imageCaption: 'Flux RAG : les documents sont téléchargés, divisés en chunks, convertis en embeddings et stockés dans une base de données vectorielle, puis les chunks pertinents sont récupérés pour générer une réponse sourcée.',
         },
         top8Tools: {
+          id: 'top-8-rag-tools',
           title: 'Meilleurs 8 outils RAG locaux en 2026',
           rows: [
             { 'Outil': 'Open WebUI', 'Type': 'Application web (Docker)', 'Idéal pour': 'Débutants, configuration la plus facile', 'Base de données vectorielle': 'Intégrée', 'Courbe d\'apprentissage': 'Aucune' },
@@ -1180,6 +1178,7 @@ schema: {
           ],
         },
         ragVsFinetuning: {
+          id: 'rag-vs-finetuning',
           title: 'Devriez-vous utiliser RAG ou l\'affinage?',
           content: 'Utilisez ce cadre:',
           items: [
@@ -1189,6 +1188,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Erreurs courantes avec RAG local',
           items: [
             '**Utiliser la mauvaise taille de chunk.** Trop petit (100 tokens) = trop de petits morceaux. Trop grand (2000 tokens) = pas spécifique. Optimal est 500-1000 tokens.',
@@ -1296,10 +1296,6 @@ schema: {
         { label: '重要ポイント', anchor: '#key-takeaways' },
         { label: 'RAG（検索拡張生成）とは何か？', anchor: '#what-is-rag' },
         { label: 'トップ8つのRAGツール比較', anchor: '#top-8-rag-tools' },
-        { label: '最も簡単：Open WebUI RAG', anchor: '#easiest-open-webui' },
-        { label: '最も柔軟：LlamaIndex', anchor: '#flexible-llamaindex' },
-        { label: '最も専門的：LangChain', anchor: '#professional-langchain' },
-        { label: 'オープンソースの代替案', anchor: '#open-source-alternatives' },
         { label: 'RAG対ファインチューニング', anchor: '#rag-vs-finetuning' },
         { label: 'よくある間違い', anchor: '#common-mistakes' },
         { label: 'よくある質問', anchor: '#common-questions' },
@@ -1324,6 +1320,7 @@ schema: {
           ],
         },
         whatIsRAG: {
+          id: 'what-is-rag',
           title: 'RAG（検索拡張生成）とは何か？',
           content: [
             '**RAGは、モデルをファインチューニングせずに、LLMが自分のドキュメントについて質問に答えられるようにする技術です。**',
@@ -1334,6 +1331,7 @@ schema: {
           imageCaption: 'RAGの流れ：ドキュメントをアップロードしてチャンクに分割し、埋め込みに変換してベクトルデータベースに保存、質問時に関連チャンクを検索して出典付きの回答を生成する。',
         },
         top8Tools: {
+          id: 'top-8-rag-tools',
           title: '2026年のトップ8つのローカルRAGツール',
           rows: [
             { 'ツール': 'Open WebUI', 'タイプ': 'Webアプリ（Docker）', '最適な用途': '初心者向け、最も簡単なセットアップ', 'ベクトルDB': '組み込み', '学習曲線': 'なし' },
@@ -1383,6 +1381,7 @@ schema: {
           ],
         },
         ragVsFinetuning: {
+          id: 'rag-vs-finetuning',
           title: 'RAG 対 ファインチューニング',
           content: [
             '**RAGを使用する場合**：ドキュメントが頻繁に変わる場合、出典の表示が必要な場合、事実情報を提供する場合。',
@@ -1391,6 +1390,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'よくある間違い',
           items: [
             '**チャンクサイズが大きすぎる**。1000 トークン以上のチャンクは、無関係な情報を含む可能性が高くなります。512～1000トークンを推奨。',
@@ -1548,10 +1548,6 @@ schema: {
         { label: '核心要点', anchor: '#key-takeaways' },
         { label: 'RAG（检索增强生成）是什么？', anchor: '#what-is-rag' },
         { label: '2026年排名前8的本地RAG工具', anchor: '#top-8-rag-tools' },
-        { label: '最简单：Open WebUI RAG', anchor: '#easiest-open-webui' },
-        { label: '最灵活：LlamaIndex', anchor: '#flexible-llamaindex' },
-        { label: '最专业：LangChain', anchor: '#professional-langchain' },
-        { label: '开源替代方案', anchor: '#open-source-alternatives' },
         { label: 'RAG与微调对比', anchor: '#rag-vs-finetuning' },
         { label: '常见错误', anchor: '#common-mistakes' },
         { label: '常见问题', anchor: '#common-questions' },
@@ -1576,6 +1572,7 @@ schema: {
           ],
         },
         whatIsRAG: {
+          id: 'what-is-rag',
           title: 'RAG（检索增强生成）是什么？',
           content: [
             '**RAG是一种技术，让LLM能够在不微调模型的情况下回答关于自己文档的问题。**',
@@ -1586,6 +1583,7 @@ schema: {
           imageCaption: 'RAG流程：上传文档、分割成块、转换为嵌入并存储在向量数据库中，随后检索匹配的块以生成带来源的答案。',
         },
         top8Tools: {
+          id: 'top-8-rag-tools',
           title: '2026年排名前8的本地RAG工具',
           rows: [
             { '工具': 'Open WebUI', '类型': '网络应用（Docker）', '最适合': '初学者，最简单的设置', '向量数据库': '内置', '学习曲线': '无' },
@@ -1635,6 +1633,7 @@ schema: {
           ],
         },
         ragVsFinetuning: {
+          id: 'rag-vs-finetuning',
           title: 'RAG与微调对比',
           content: [
             '**使用RAG的场景**：文档频繁变化、需要显示来源、提供事实信息。',
@@ -1643,6 +1642,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: '常见错误',
           items: [
             '**块大小过大**。超过1000个token的块容易包含无关信息。建议512-1000个token。',
@@ -1800,13 +1800,9 @@ schema: {
     { label: '핵심 요점', anchor: '#key-takeaways' },
     { label: 'RAG란 무엇인가?', anchor: '#what-is-rag' },
     { label: '상위 8개 RAG 도구 비교', anchor: '#top-8-rag-tools' },
-    { label: '가장 쉬운 선택: Open WebUI RAG', anchor: '#easiest-open-webui' },
-    { label: '가장 유연한 선택: LlamaIndex', anchor: '#flexible-llamaindex' },
-    { label: '전문가용 선택: LangChain', anchor: '#professional-langchain' },
-    { label: '오픈소스 대안', anchor: '#open-source-alternatives' },
     { label: 'RAG vs 파인튜닝', anchor: '#rag-vs-finetuning' },
     { label: '흔한 실수', anchor: '#common-mistakes' },
-    { label: '자주 묻는 질문', anchor: '#common-questions' },
+    { label: '자주 묻는 질문', anchor: '#faq' },
     { label: '관련 자료', anchor: '#related-reading' },
     { label: '출처', anchor: '#sources' },
   ],
@@ -1828,6 +1824,7 @@ schema: {
       ],
     },
     whatIsRAG: {
+      id: 'what-is-rag',
       title: 'RAG(검색 증강 생성)란 무엇입니까?',
       content: [
         '**RAG는 모델을 파인튜닝하지 않고도 LLM이 사용자 자신의 문서에 대한 질문에 답변할 수 있도록 하는 기법입니다.**',
@@ -1838,6 +1835,7 @@ schema: {
       imageCaption: 'RAG 파이프라인: 문서를 업로드하고 청크로 분할한 뒤 임베딩으로 변환하여 벡터 데이터베이스에 저장하고, 이후 일치하는 청크를 검색해 출처가 포함된 답변을 생성합니다.',
     },
     top8Tools: {
+      id: 'top-8-rag-tools',
       title: '2026년 상위 8개 로컬 RAG 도구',
       rows: [
         { 'Tool': 'Open WebUI', 'Type': '웹 앱 (Docker)', 'Best For': '입문자, 가장 쉬운 설치', 'Vector DB': '내장', 'Learning Curve': '없음' },
@@ -1888,6 +1886,7 @@ schema: {
       ],
     },
     ragVsFinetuning: {
+      id: 'rag-vs-finetuning',
       title: 'RAG와 파인튜닝 중 무엇을 사용해야 합니까?',
       content: '다음 기준을 참고하십시오:',
       items: [
@@ -1897,6 +1896,7 @@ schema: {
       ],
     },
     commonMistakes: {
+      id: 'common-mistakes',
       title: '로컬 RAG 사용 시 흔한 실수',
       items: [
         '**잘못된 청크 크기 사용.** 너무 작으면(100 토큰) 조각이 너무 많아집니다. 너무 크면(2000 토큰) 구체성이 부족합니다. 최적은 500-1000 토큰입니다.',

@@ -20,7 +20,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     primaryTerm: 'local LLM Brazilian Portuguese',
     toc: [
-      { label: 'Key Takeaways', anchor: '#tldr' },
+      { label: 'Key Takeaways', anchor: '#key-takeaways' },
       { label: 'Why Model Choice Matters for PT-BR', anchor: '#why-matters' },
       { label: 'Top Models for Brazilian Portuguese', anchor: '#top-models' },
       { label: 'VRAM Guide for PT Users', anchor: '#vram-setup' },
@@ -220,7 +220,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     primaryTerm: 'local LLM Brazilian Portuguese',
     toc: [
-      { label: 'Zusammenfassung', anchor: '#tldr' },
+      { label: 'Zusammenfassung', anchor: '#key-takeaways' },
       { label: 'Warum die Modellwahl für PT-BR entscheidend ist', anchor: '#why-matters' },
       { label: 'Top-Modelle für brasilianisches Portugiesisch', anchor: '#top-models' },
       { label: 'VRAM-Leitfaden für PT-Nutzer', anchor: '#vram-setup' },
@@ -424,7 +424,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     primaryTerm: 'local LLM Brazilian Portuguese',
     toc: [
-      { label: 'Puntos clave', anchor: '#tldr' },
+      { label: 'Puntos clave', anchor: '#key-takeaways' },
       { label: 'Por qué la elección del modelo importa para PT-BR', anchor: '#why-matters' },
       { label: 'Mejores modelos para portugués brasileño', anchor: '#top-models' },
       { label: 'Guía de VRAM para usuarios de PT', anchor: '#vram-setup' },
@@ -624,7 +624,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     primaryTerm: 'local LLM Brazilian Portuguese',
     toc: [
-      { label: 'Points clés', anchor: '#tldr' },
+      { label: 'Points clés', anchor: '#key-takeaways' },
       { label: "Pourquoi le choix du modèle compte pour le PT-BR", anchor: '#why-matters' },
       { label: 'Meilleurs modèles pour le portugais brésilien', anchor: '#top-models' },
       { label: 'Guide VRAM pour les utilisateurs PT', anchor: '#vram-setup' },
@@ -824,7 +824,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     primaryTerm: 'local LLM Brazilian Portuguese',
     toc: [
-      { label: '重要ポイント', anchor: '#tldr' },
+      { label: '重要ポイント', anchor: '#key-takeaways' },
       { label: 'PT-BRでモデル選択が重要な理由', anchor: '#why-matters' },
       { label: 'ブラジルポルトガル語向けトップモデル', anchor: '#top-models' },
       { label: 'PTユーザー向けVRAMガイド', anchor: '#vram-setup' },
@@ -1024,7 +1024,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     primaryTerm: 'local LLM Brazilian Portuguese',
     toc: [
-      { label: '核心要点', anchor: '#tldr' },
+      { label: '核心要点', anchor: '#key-takeaways' },
       { label: '为什么模型选择对 PT-BR 很重要', anchor: '#why-matters' },
       { label: '巴西葡萄牙语顶级模型', anchor: '#top-models' },
       { label: 'PT 用户的显存指南', anchor: '#vram-setup' },
@@ -1224,7 +1224,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     primaryTerm: 'local LLM Brazilian Portuguese',
     toc: [
-      { label: 'Pontos principais', anchor: '#tldr' },
+      { label: 'Pontos principais', anchor: '#key-takeaways' },
       { label: 'Por que a escolha do modelo importa para o PT-BR', anchor: '#why-matters' },
       { label: 'Melhores modelos para português do Brasil', anchor: '#top-models' },
       { label: 'Guia de VRAM para usuários de PT', anchor: '#vram-setup' },
@@ -1425,7 +1425,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     primaryTerm: 'local LLM Brazilian Portuguese',
     toc: [
-      { label: 'النقاط الرئيسية', anchor: '#tldr' },
+      { label: 'النقاط الرئيسية', anchor: '#key-takeaways' },
       { label: 'لماذا يهم اختيار النموذج للبرتغالية البرازيلية', anchor: '#why-matters' },
       { label: 'أفضل النماذج للبرتغالية البرازيلية', anchor: '#top-models' },
       { label: 'دليل VRAM لمستخدمي البرتغالية', anchor: '#vram-setup' },
@@ -1625,7 +1625,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     primaryTerm: 'local LLM Brazilian Portuguese',
     toc: [
-      { label: '핵심 내용', anchor: '#tldr' },
+      { label: '핵심 내용', anchor: '#key-takeaways' },
       { label: 'PT-BR에서 모델 선택이 중요한 이유', anchor: '#why-matters' },
       { label: '브라질 포르투갈어를 위한 최고의 모델', anchor: '#top-models' },
       { label: 'PT 사용자를 위한 VRAM 가이드', anchor: '#vram-setup' },

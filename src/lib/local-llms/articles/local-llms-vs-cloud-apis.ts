@@ -1248,6 +1248,7 @@ schema: {
           ],
         },
         coreDifference: {
+          id: 'what-is-the-core-difference',
           title: 'Quelle est la différence fondamentale entre les LLMs locaux et les APIs cloud ?',
           content: [
             '**Les LLMs locaux exécutent toutes les inférences sur votre propre matériel ; les APIs cloud envoient votre prompt à un serveur distant et retournent la réponse.** Un LLM local signifie que le fichier modèle est stocké sur votre disque et que tous les calculs s\'effectuent sur votre CPU ou GPU. Rien ne quitte votre machine. Vous ne payez rien par inférence, mais vous avez besoin d\'un matériel capable d\'exécuter le modèle.',
@@ -1258,6 +1259,7 @@ schema: {
           imageCaption: 'Flux de requête LLM local vs API cloud : l\'inférence locale conserve le prompt, le calcul et la réponse entièrement sur l\'appareil, tandis qu\'une API cloud envoie le prompt au serveur distant du fournisseur puis renvoie la réponse.',
         },
         fullComparison: {
+          id: 'full-comparison',
           title: 'Comment les LLMs locaux et les APIs cloud se comparent-ils sur 8 facteurs ?',
           rows: [
             { 'Facteur': 'Confidentialité des données', 'LLM local': 'Totale -- les données ne quittent jamais votre appareil', 'API cloud': 'Données traitées sur les serveurs du fournisseur ; soumises à leur politique de confidentialité' },
@@ -1272,6 +1274,7 @@ schema: {
           columns: ['Facteur', 'LLM local', 'API cloud'],
         },
         costComparison: {
+          id: 'how-do-costs-compare',
           title: 'Comment les coûts des LLMs locaux et des APIs cloud se comparent-ils ?',
           content: [
             '**Les APIs cloud coûtent $0,15-$60 par million de tokens ; les LLMs locaux coûtent $0 par token après l\'investissement matériel.** Les tarifs des APIs cloud varient selon le niveau du modèle. En 2026, les prix représentatifs par million de tokens : GPT-5.6 à $2,50 en entrée / $10 en sortie, Claude Opus 5 à $5,00 / $25, Gemini 3.1 Pro à $1,25 / $5, et GPT-5.6 Luna à $0,15 / $0,60.',
@@ -1280,6 +1283,7 @@ schema: {
           ],
         },
         privacy: {
+          id: 'which-is-more-private',
           title: 'Qu\'est-ce qui est le plus confidentiel : un LLM local ou une API cloud ?',
           content: [
             '**Les LLMs locaux sont catégoriquement plus confidentiels.** Aucun texte de prompt, aucun contexte et aucune donnée de réponse n\'est transmis à un serveur externe. Cela fait de l\'inférence locale la seule option viable pour les secteurs réglementés (santé HIPAA, finance PCI-DSS, confidentialité juridique) et pour les données personnelles devant rester sur l\'appareil.',
@@ -1291,6 +1295,7 @@ schema: {
           ],
         },
         speed: {
+          id: 'how-does-speed-compare',
           title: 'Comment la vitesse se compare-t-elle entre les modèles locaux et cloud ?',
           content: 'La vitesse dépend fortement du matériel. Avec CPU uniquement, un modèle 7B produit 10-30 tokens/s -- nettement plus lent que les APIs cloud. Avec un GPU moderne, l\'écart se réduit significativement :',
           rows: [
@@ -1303,6 +1308,7 @@ schema: {
           columns: ['Matériel', 'Modèle', 'Vitesse'],
         },
         quality: {
+          id: 'which-has-better-model-quality',
           title: 'Lequel offre la meilleure qualité de modèle : local ou cloud ?',
           content: [
             '**Les modèles cloud de pointe (GPT-5.6, Claude Sonnet 5, Gemini 3.1 Pro) dominent sur le raisonnement complexe ; les modèles locaux 13B atteignent la même qualité pour la synthèse, la traduction et les questions simples.** Sur les benchmarks MMLU (étendue des connaissances) et HumanEval (programmation), les modèles cloud de pointe obtiennent 85-90 % contre 65-80 % pour les meilleurs modèles locaux 70B.',
@@ -1311,6 +1317,7 @@ schema: {
           ],
         },
         whichToChoose: {
+          id: 'which-should-you-choose',
           title: 'Que devriez-vous choisir : LLM local ou API cloud ?',
           content: 'Utilisez ce cadre de décision :',
           items: [
@@ -1500,6 +1507,7 @@ schema: {
           ],
         },
         coreDifference: {
+          id: 'what-is-the-core-difference',
           title: 'ローカルLLMとクラウドAPIの根本的な違いは何ですか？',
           content: [
             '**ローカルLLMはすべての推論を自社ハードウェアで実行；クラウドAPIはプロンプトをリモートサーバーに送信して応答を返します。** ローカルLLMとはモデルファイルがディスクに保存され、すべての計算がCPUまたはGPU上で行われることを意味します。データはマシンから外へ出ません。推論ごとのコストはゼロですが、モデルを実行できるハードウェアが必要です。',
@@ -1510,6 +1518,7 @@ schema: {
           imageCaption: 'ローカルLLM vs クラウドAPIのリクエストフロー：ローカル推論はプロンプト・計算・応答をすべてデバイス上に保持するが、クラウドAPI呼び出しはプロンプトをプロバイダーのリモートサーバーへ送信し応答を返す。',
         },
         fullComparison: {
+          id: 'full-comparison',
           title: 'ローカルLLMとクラウドAPIを8つの要素で比較すると？',
           rows: [
             { '要素': 'データプライバシー', 'ローカルLLM': '完全 -- データはデバイスから出ない', 'クラウドAPI': 'プロバイダーサーバーで処理；プライバシーポリシーに従う' },
@@ -1524,6 +1533,7 @@ schema: {
           columns: ['要素', 'ローカルLLM', 'クラウドAPI'],
         },
         costComparison: {
+          id: 'how-do-costs-compare',
           title: 'ローカルLLMとクラウドAPIのコストはどう違いますか？',
           content: [
             '**クラウドAPIは100万トークンあたり$0.15〜$60；ローカルLLMはハードウェア投資後$0/トークン。** クラウドAPIの価格はモデルティアによって異なります。2026年の代表的な100万トークンあたりの価格：GPT-5.6が入力$2.50/出力$10、Claude Opus 5が$5.00/$25、Gemini 3.1 Proが$1.25/$5、GPT-5.6 Lunaが$0.15/$0.60。',
@@ -1532,6 +1542,7 @@ schema: {
           ],
         },
         privacy: {
+          id: 'which-is-more-private',
           title: 'プライバシーが高いのはローカルLLMとクラウドAPIのどちらですか？',
           content: [
             '**ローカルLLMは圧倒的にプライバシーが高いです。** プロンプトテキスト、コンテキスト、応答データのいずれも外部サーバーに送信されません。これにより、規制産業（医療HIPAA、金融PCI-DSS、法的特権）やデバイス上に留まらなければならない個人データに対して、ローカル推論が唯一の実行可能な選択肢となります。',
@@ -1543,6 +1554,7 @@ schema: {
           ],
         },
         speed: {
+          id: 'how-does-speed-compare',
           title: 'ローカルモデルとクラウドモデルの速度はどう違いますか？',
           content: '速度はハードウェアに大きく依存します。CPUのみの場合、7Bモデルは10〜30トークン/秒を生成します -- クラウドAPIより明らかに遅い。モダンなGPUを使用するとこのギャップは大幅に縮まります：',
           rows: [
@@ -1555,6 +1567,7 @@ schema: {
           columns: ['ハードウェア', 'モデル', '速度'],
         },
         quality: {
+          id: 'which-has-better-model-quality',
           title: 'モデル品質が高いのはローカルとクラウドのどちらですか？',
           content: [
             '**クラウドのフロンティアモデル（GPT-5.6、Claude Sonnet 5、Gemini 3.1 Pro）は複雑な推論でリード；ローカル13Bモデルは要約・翻訳・シンプルなQ&Aで同等の品質を達成します。** MMLU（知識の幅）とHumanEval（コーディング）ベンチマークでは、フロンティアクラウドモデルが85〜90%のスコアに対し、最良のローカル70Bモデルは65〜80%です。',
@@ -1563,6 +1576,7 @@ schema: {
           ],
         },
         whichToChoose: {
+          id: 'which-should-you-choose',
           title: 'ローカルLLMとクラウドAPIのどちらを選ぶべきですか？',
           content: 'この意思決定フレームワークを活用してください：',
           items: [
@@ -1752,6 +1766,7 @@ schema: {
           ],
         },
         coreDifference: {
+          id: 'what-is-the-core-difference',
           title: '本地LLM和云端API之间的核心区别是什么？',
           content: [
             '**本地LLM在您自己的硬件上运行所有推理；云端API将您的提示词发送到远程服务器并返回响应。** 本地LLM意味着模型文件存储在您的磁盘上，所有计算在您的CPU或GPU上进行。没有任何数据离开您的设备。每次推理无需付费，但需要能够运行模型的硬件。',
@@ -1762,6 +1777,7 @@ schema: {
           imageCaption: '本地LLM与云端API的请求流程对比：本地推理将提示词、计算和响应完全保留在设备上，而云端API调用会将提示词发送到提供商的远程服务器并返回响应。',
         },
         fullComparison: {
+          id: 'full-comparison',
           title: '本地LLM和云端API在8大因素上如何对比？',
           rows: [
             { '因素': '数据隐私', '本地LLM': '完全 -- 数据永不离开您的设备', '云端API': '数据在提供商服务器上处理；受其隐私政策约束' },
@@ -1776,6 +1792,7 @@ schema: {
           columns: ['因素', '本地LLM', '云端API'],
         },
         costComparison: {
+          id: 'how-do-costs-compare',
           title: '本地LLM和云端API的成本如何对比？',
           content: [
             '**云端API每百万token费用为$0.15-$60；本地LLM硬件投资后每token费用为$0。** 云端API价格因模型层级而异。2026年代表性价格（每百万token）：GPT-5.6输入$2.50/输出$10，Claude Opus 5 $5.00/$25，Gemini 3.1 Pro $1.25/$5，GPT-5.6 Luna $0.15/$0.60。',
@@ -1784,6 +1801,7 @@ schema: {
           ],
         },
         privacy: {
+          id: 'which-is-more-private',
           title: '本地LLM和云端API哪个更注重隐私？',
           content: [
             '**本地LLM在隐私方面具有绝对优势。** 没有任何提示词文本、上下文或响应数据传输到外部服务器。这使本地推理成为受监管行业（医疗HIPAA、金融PCI-DSS、法律特权）以及必须留在设备上的个人数据的唯一可行选项。',
@@ -1795,6 +1813,7 @@ schema: {
           ],
         },
         speed: {
+          id: 'how-does-speed-compare',
           title: '本地模型和云端模型的速度如何对比？',
           content: '速度在很大程度上取决于硬件。仅使用CPU时，7B模型产生10-30 token/秒 -- 明显慢于云端API。使用现代GPU，差距大幅缩小：',
           rows: [
@@ -1807,6 +1826,7 @@ schema: {
           columns: ['硬件', '模型', '速度'],
         },
         quality: {
+          id: 'which-has-better-model-quality',
           title: '本地和云端哪个模型质量更好？',
           content: [
             '**云端前沿模型（GPT-5.6、Claude Sonnet 5、Gemini 3.1 Pro）在复杂推理上领先；本地13B模型在摘要、翻译和简单问答上达到同等质量。** 在MMLU（知识广度）和HumanEval（编程）基准测试中，前沿云端模型得分85-90%，而最好的本地70B模型得分65-80%。',
@@ -1815,6 +1835,7 @@ schema: {
           ],
         },
         whichToChoose: {
+          id: 'which-should-you-choose',
           title: '应该选择本地LLM还是云端API？',
           content: '使用此决策框架：',
           items: [

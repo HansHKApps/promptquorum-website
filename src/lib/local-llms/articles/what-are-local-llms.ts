@@ -313,6 +313,7 @@ schema: {
           ],
         },
         whatIsLocalLlm: {
+          id: 'what-is-a-local-llm',
           title: '¿Qué es un LLM local?',
           content: [
             '**Un LLM local (modelo de lenguaje grande) es un modelo de IA que se ejecuta en hardware bajo tu control: tu portátil, ordenador de escritorio o servidor local.** Los pesos del modelo se almacenan como un archivo en tu disco, y todo el procesamiento ocurre en tu propia CPU o GPU. Ningún texto de los prompts ni datos de respuesta se transmite a ningún servidor externo.',
@@ -321,6 +322,7 @@ schema: {
           ],
         },
         howItWorks: {
+          id: 'how-does-a-local-llm-work',
           title: '¿Cómo funciona un LLM local?',
           content: [
             '**Ejecutar un LLM local implica tres capas que trabajan juntas: el archivo del modelo, el motor de inferencia y la interfaz.**',
@@ -574,6 +576,7 @@ schema: {
           ],
         },
         whatIsLocalLlm: {
+          id: 'what-is-a-local-llm',
           title: 'ما هو نموذج LLM المحلي؟',
           content: [
             '**نموذج LLM المحلي (نموذج لغة كبير) هو نموذج ذكاء اصطناعي يعمل على عتاد تحت سيطرتك: حاسوبك المحمول، أو المكتبي، أو خادم محلي.** تُخزّن أوزان النموذج كملف على قرصك، وتحدث كل المعالجة على CPU أو GPU الخاص بك. لا يُنقل أي نص من الموجّهات أو بيانات استجابة إلى أي خادم خارجي.',
@@ -582,6 +585,7 @@ schema: {
           ],
         },
         howItWorks: {
+          id: 'how-does-a-local-llm-work',
           title: 'كيف يعمل نموذج LLM المحلي؟',
           content: [
             '**يتضمن تشغيل نموذج LLM محلي ثلاث طبقات تعمل معًا: ملف النموذج، ومحرك الاستدلال، والواجهة.**',
@@ -837,6 +841,7 @@ schema: {
           ],
         },
         whatIsLocalLlm: {
+          id: 'what-is-a-local-llm',
           title: 'O que é um LLM local?',
           content: [
             '**Um LLM local (modelo de linguagem grande) é um modelo de IA que roda em hardware sob o seu controle: seu notebook, desktop ou servidor local.** Os pesos do modelo são armazenados como um arquivo no seu disco, e todo o processamento ocorre na sua própria CPU ou GPU. Nenhum texto dos prompts nem dados de resposta são transmitidos para qualquer servidor externo.',
@@ -845,6 +850,7 @@ schema: {
           ],
         },
         howItWorks: {
+          id: 'how-does-a-local-llm-work',
           title: 'Como funciona um LLM local?',
           content: [
             '**Rodar um LLM local envolve três camadas que trabalham juntas: o arquivo do modelo, o motor de inferência e a interface.**',
@@ -1076,7 +1082,7 @@ schema: {
         { label: 'LLM local vs API cloud : différences', anchor: '#local-llm-vs-cloud-api' },
         { label: 'Quels formats de modèles sont utilisés ?', anchor: '#which-model-formats-are-used' },
         { label: 'Quand utiliser un LLM local ?', anchor: '#when-should-you-use-a-local-llm' },
-        { label: 'Questions fréquentes', anchor: '#common-questions' },
+        { label: 'Questions fréquentes', anchor: '#faq' },
       ],
 
       howToSchema: {
@@ -1119,6 +1125,7 @@ schema: {
           ],
         },
         whatIsLocalLlm: {
+          id: 'what-is-a-local-llm',
           title: 'Qu\'est-ce qu\'un LLM local ?',
           content: [
             '**Un LLM local est un modèle IA fonctionnant sur votre propre matériel -- laptop, desktop, serveur local.** Les poids sont stockés comme fichier, tous les calculs se font sur votre CPU ou GPU. Aucune donnée ne quitte votre machine.',
@@ -1127,6 +1134,7 @@ schema: {
           ],
         },
         howItWorks: {
+          id: 'how-does-a-local-llm-work',
           title: 'Comment fonctionne un LLM local ?',
           content: [
             '**Trois couches : fichier modèle, moteur d\'inférence, interface.**',
@@ -1138,6 +1146,7 @@ schema: {
           imageCaption: 'Les trois couches d\'un LLM local : le fichier modèle (GGUF ou safetensors, ~4,5 GB en Q4_K_M pour un modèle 7B) chargé par un moteur d\'inférence (Ollama, LM Studio, llama.cpp), exposé via une interface comme l\'API REST sur localhost:11434.',
         },
         hardware: {
+          id: 'what-hardware-do-you-need',
           title: 'Quel matériel pour un LLM local ?',
           content: 'Les besoins dépendent du modèle et de la rapidité désirée.',
           rows: [
@@ -1154,6 +1163,7 @@ schema: {
           content: 'Oui, énormément. NVIDIA RTX 4070 Ti (12 GB VRAM) : 80-120 tokens/sec (4-8× plus rapide). Apple Silicon Macs (M1-M5) : 40-80 tokens/sec sans GPU discret grâce à la mémoire unifiée. Voir [LLMs locaux sur laptop](/fr/local-llms/local-llm-on-laptop) pour tips matériel spécifiques.',
         },
         vsCloud: {
+          id: 'local-llm-vs-cloud-api',
           title: 'Différence : LLM local vs API cloud ?',
           content: 'Compromis : confidentialité + coût vs puissance + vitesse. Voir la [comparaison complète](/fr/local-llms/local-llms-vs-cloud-apis).',
           rows: [
@@ -1169,6 +1179,7 @@ schema: {
           imageCaption: 'Comparaison LLM local vs API cloud : le local tourne à 0€ par token sans que les données ne quittent la machine à 10-120 tok/sec, tandis que l\'API cloud coûte 0,15-15€ par million de tokens à 50-200 tok/sec et nécessite une connexion internet active.',
         },
         modelFormats: {
+          id: 'which-model-formats-are-used',
           title: 'Formats de modèles pour LLMs locaux ?',
           content: [
             '**GGUF** : format dominant. Développé par llama.cpp, supporte quantifications multiples en un fichier. `ollama pull llama3.2` télécharge GGUF en interne.',
@@ -1177,6 +1188,7 @@ schema: {
           ],
         },
         whenToUse: {
+          id: 'when-should-you-use-a-local-llm',
           title: 'Quand utiliser un LLM local ?',
           items: [
             '**Données sensibles** : dossiers médicaux, légaux, financiers, donnees personnelles (RGPD).',
@@ -1261,7 +1273,7 @@ schema: {
         { label: 'ローカルLLM vs クラウドAPI：違いは？', anchor: '#local-llm-vs-cloud-api' },
         { label: 'モデル形式は？', anchor: '#which-model-formats-are-used' },
         { label: 'いつローカルLLMを使うべき？', anchor: '#when-should-you-use-a-local-llm' },
-        { label: 'よくある質問', anchor: '#common-questions' },
+        { label: 'よくある質問', anchor: '#faq' },
       ],
       itemListSchema: {
         '@context': 'https://schema.org',
@@ -1291,6 +1303,7 @@ schema: {
           ],
         },
         whatIsLocalLlm: {
+          id: 'what-is-a-local-llm',
           title: 'ローカルLLMとは何か',
           content: [
             '**ローカルLLM（大規模言語モデル）は、あなたが制御するハードウェア上で実行されるAIモデルです。** ノートパソコン、デスクトップ、またはオンプレミスサーバーでも構いません。モデルの重みはファイルとしてディスク上に保存され、すべての処理はあなた自身のCPUまたはGPU上で行われます。プロンプトテキストもレスポンスデータも外部サーバーに送信されません。',
@@ -1299,6 +1312,7 @@ schema: {
           ],
         },
         howItWorks: {
+          id: 'how-does-a-local-llm-work',
           title: 'ローカルLLMはどう動くか',
           content: [
             '**ローカルLLM実行には3層が協働します：モデルファイル、推論エンジン、インターフェース。**',
@@ -1310,6 +1324,7 @@ schema: {
           imageCaption: 'ローカルLLMの3層構造：モデルファイル（GGUFまたはsafetensors、7BモデルのQ4_K_Mで約4.5GB）を推論エンジン（Ollama、LM Studio、llama.cpp）が読み込み、localhost:11434のREST APIなどのインターフェースを通じて公開する。',
         },
         hardware: {
+          id: 'what-hardware-do-you-need',
           title: 'ローカルLLM実行に必要なハードウェア',
           content: '必要なハードウェアは、どのモデルを実行したいか、どのくらいの速度が必要かで決まります。',
           rows: [
@@ -1326,6 +1341,7 @@ schema: {
           content: 'はい、劇的に改善します。NVIDIA RTX 4070 Ti（12GB VRAM）は7Bモデルを80～120トークン/秒で実行（CPU のみの4～8倍高速）。Apple Silicon Mac（M1、M2、M3、M4、M5）は統合メモリを使用し、専用GPUなしで7Bモデルで40～80トークン/秒を達成します。ラップトップユーザー向けに、[ラップトップでローカルLLMを実行](/ja/local-llms/local-llm-on-laptop)でハードウェア固有のアドバイスをご覧ください。',
         },
         vsCloud: {
+          id: 'local-llm-vs-cloud-api',
           title: 'ローカルLLMとクラウドAPI：何が違うか',
           content: 'トレードオフの関係：プライバシー＋コスト vs 機能＋速度。詳しくは[ローカルLLM vs クラウドAPI](/ja/local-llms/local-llms-vs-cloud-apis)をご覧ください。',
           rows: [
@@ -1341,6 +1357,7 @@ schema: {
           imageCaption: 'ローカルLLMとクラウドAPIの比較：ローカルはデータが端末を出ることなく$0/トークン、10～120 tok/secで動作し、クラウドAPIは$0.15～15/100万トークン、50～200 tok/secでインターネット接続が必須。',
         },
         modelFormats: {
+          id: 'which-model-formats-are-used',
           title: 'ローカルLLMのモデル形式は？',
           content: [
             '**GGUF**（GPT-Generated Unified Format）：ローカル推論の標準形式。llama.cpp プロジェクトが開発し、1つのファイルで複数の量子化レベルをサポート。`ollama pull llama3.2`を実行すると、Ollamaは内部でGGUF ファイルをダウンロードします。',
@@ -1349,6 +1366,7 @@ schema: {
           ],
         },
         whenToUse: {
+          id: 'when-should-you-use-a-local-llm',
           title: 'いつローカルLLMを使う？',
           items: [
             '**機密データ処理**--医療記録、法的書類、財務データ、個人識別情報（PII）が外部に流出してはならない場合。',
@@ -1433,7 +1451,7 @@ schema: {
         { label: '本地LLM与云API：有何不同？', anchor: '#local-llm-vs-cloud-api' },
         { label: '使用什么模型格式？', anchor: '#which-model-formats-are-used' },
         { label: '何时使用本地LLM？', anchor: '#when-should-you-use-a-local-llm' },
-        { label: '常见问题', anchor: '#common-questions' },
+        { label: '常见问题', anchor: '#faq' },
       ],
       itemListSchema: {
         '@context': 'https://schema.org',
@@ -1463,6 +1481,7 @@ schema: {
           ],
         },
         whatIsLocalLlm: {
+          id: 'what-is-a-local-llm',
           title: '什么是本地LLM',
           content: [
             '**本地LLM（大型语言模型）是在您控制的硬件上运行的AI模型。** 可以是笔记本、台式机或本地服务器。模型权重存储为磁盘文件，所有处理在您自己的CPU或GPU上进行。无数据发送到外部服务器。',
@@ -1471,6 +1490,7 @@ schema: {
           ],
         },
         howItWorks: {
+          id: 'how-does-a-local-llm-work',
           title: '本地LLM如何工作',
           content: [
             '三层协作：模型文件、推理引擎、界面。',
@@ -1482,6 +1502,7 @@ schema: {
           imageCaption: '本地LLM的三层结构：模型文件（GGUF或safetensors，7B模型在Q4_K_M量化下约4.5GB）由推理引擎（Ollama、LM Studio、llama.cpp）加载，通过localhost:11434的REST API等界面对外提供访问。',
         },
         hardware: {
+          id: 'what-hardware-do-you-need',
           title: '运行本地LLM需要什么硬件',
           content: '硬件要求取决于您要运行哪个模型以及需要的速度。',
           rows: [
@@ -1498,6 +1519,7 @@ schema: {
           content: '是的，大幅加快。NVIDIA RTX 4070 Ti（12GB VRAM）运行7B模型80-120 tokens/秒（仅CPU的4-8倍）。Apple Silicon Mac（M1、M2、M3、M4、M5）使用统一内存达到7B模型40-80 tokens/秒，无独立GPU。笔记本用户见[在笔记本上运行本地LLM](/zh/local-llms/local-llm-on-laptop)获取硬件特定建议。',
         },
         vsCloud: {
+          id: 'local-llm-vs-cloud-api',
           title: '本地LLM与云API的区别',
           content: '核心权衡：隐私+成本 vs 能力+速度。完整比较见[本地LLM vs 云API](/zh/local-llms/local-llms-vs-cloud-apis)。',
           rows: [
@@ -1513,6 +1535,7 @@ schema: {
           imageCaption: '本地LLM与云API对比：本地以每token $0的成本运行，数据永不离开设备，速度10-120 tokens/秒；云API每100万tokens收费$0.15-15，速度50-200 tokens/秒，且需要持续联网。',
         },
         modelFormats: {
+          id: 'which-model-formats-are-used',
           title: '本地LLM使用什么模型格式',
           content: [
             '**GGUF**（GPT-Generated Unified Format）：本地推理的标准格式。由llama.cpp项目开发，一个文件中支持多个量化级别。`ollama pull llama3.2`内部下载GGUF文件。',
@@ -1521,6 +1544,7 @@ schema: {
           ],
         },
         whenToUse: {
+          id: 'when-should-you-use-a-local-llm',
           title: '何时使用本地LLM',
           items: [
             '1. **处理敏感数据**--医疗记录、法律文件、财务数据、个人身份信息（PII）不能离开基础设施。',
@@ -1605,7 +1629,7 @@ schema: {
         { label: 'Lokales LLM vs Cloud-API: Wo ist der Unterschied?', anchor: '#local-llm-vs-cloud-api' },
         { label: 'Welche Modellformate werden verwendet?', anchor: '#which-model-formats-are-used' },
         { label: 'Wann sollten Sie ein lokales LLM verwenden?', anchor: '#when-should-you-use-a-local-llm' },
-        { label: 'Häufig gestellte Fragen', anchor: '#common-questions' },
+        { label: 'Häufig gestellte Fragen', anchor: '#faq' },
       ],
       itemListSchema: {
         '@context': 'https://schema.org',
@@ -1635,6 +1659,7 @@ schema: {
           ],
         },
         whatIsLocalLlm: {
+          id: 'what-is-a-local-llm',
           title: 'Was ist ein lokales LLM?',
           content: [
             '**Ein lokales LLM (großes Sprachmodell) ist ein KI-Modell, das auf Hardware unter Ihrer Kontrolle ausgeführt wird -- Ihrem Laptop, Desktop oder lokalen Server.** Die Modellgewichte werden als Datei auf Ihrem Datenträger gespeichert, und alle Verarbeitungsvorgänge erfolgen auf Ihrer eigenen CPU oder GPU. Keine Prompt-Texte oder Antwortdaten werden an externe Server übertragen.',
@@ -1643,6 +1668,7 @@ schema: {
           ],
         },
         howItWorks: {
+          id: 'how-does-a-local-llm-work',
           title: 'Wie funktioniert ein lokales LLM?',
           content: [
             '**Das Ausführen eines lokalen LLM umfasst drei zusammenwirkende Schichten: die Modelldatei, die Inferenz-Engine und die Schnittstelle.**',
@@ -1654,6 +1680,7 @@ schema: {
           imageCaption: 'Die drei Schichten eines lokalen LLM: die Modelldatei (GGUF oder safetensors, ~4,5 GB bei Q4_K_M für ein 7B-Modell), geladen von einer Inferenz-Engine (Ollama, LM Studio, llama.cpp), bereitgestellt über eine Schnittstelle wie die REST-API unter localhost:11434.',
         },
         hardware: {
+          id: 'what-hardware-do-you-need',
           title: 'Welche Hardware benötigen Sie zum Ausführen eines lokalen LLM?',
           content: 'Die Hardware-Anforderungen hängen vollständig davon ab, welches Modell Sie ausführen möchten und wie schnell Sie Antworten benötigen.',
           rows: [
@@ -1670,6 +1697,7 @@ schema: {
           content: 'GPU-Beschleunigung verbessert die Geschwindigkeit dramatisch. Eine NVIDIA RTX 4070 Ti (12 GB VRAM) führt ein 7B-Modell mit 80-120 Tokens/Sek. aus -- 4-8× schneller als nur CPU-Modus. Apple Silicon Macs (M1, M2, M3, M4, M5) verwenden einheitlichen Speicher und erreichen auf 7B-Modellen 40-80 Tokens/Sek. ohne diskrete GPU. Für Laptop-Benutzer siehe [Wie man lokale LLMs auf einem Laptop ausführt](/de/local-llms/local-llm-on-laptop) für Hardware-spezifische Tipps.',
         },
         vsCloud: {
+          id: 'local-llm-vs-cloud-api',
           title: 'Worin besteht der Unterschied zwischen lokalen LLMs und Cloud-APIs?',
           content: 'Der Kern-Kompromiss ist Datenschutz und Kosten vs. Fähigkeit und Geschwindigkeit. Siehe den vollständigen Vergleich unter [Lokale LLMs vs. Cloud-APIs](/de/local-llms/local-llms-vs-cloud-apis).',
           rows: [
@@ -1685,6 +1713,7 @@ schema: {
           imageCaption: 'Vergleich lokales LLM vs. Cloud-API: Lokal läuft es für 0 € pro Token, ohne dass Daten das Gerät verlassen, bei 10-120 Tokens/Sek., während die Cloud-API 0,15-15 € pro 1 Mio. Tokens kostet, 50-200 Tokens/Sek. erreicht und eine aktive Internetverbindung benötigt.',
         },
         modelFormats: {
+          id: 'which-model-formats-are-used',
           title: 'Welche Modellformate werden für lokale LLMs verwendet?',
           content: [
             '**GGUF** (GPT-Generated Unified Format) ist das dominante Format für lokale Inferenz. Entwickelt vom llama.cpp-Projekt, GGUF-Dateien enthalten alle Modell-Metadaten und unterstützen mehrere Quantisierungsstufen in einer einzelnen Datei. Wenn Sie `ollama pull llama3.2` ausführen, lädt Ollama intern eine GGUF-Datei herunter.',
@@ -1693,6 +1722,7 @@ schema: {
           ],
         },
         whenToUse: {
+          id: 'when-should-you-use-a-local-llm',
           title: 'Wann sollten Sie ein lokales LLM statt einer Cloud-API verwenden?',
           items: [
             '**Verarbeitung sensibler Daten** -- medizinische Unterlagen, Rechtsdokumente, Finanzdaten oder jegliche personenbezogene Daten (PII), die Ihre Infrastruktur nicht verlassen dürfen.',
@@ -1810,6 +1840,7 @@ schema: {
           ],
         },
         whatIsLocalLlm: {
+          id: 'what-is-a-local-llm',
           title: '로컬 LLM이란?',
           content: [
             '**로컬 LLM(대형 언어 모델)은 노트북, 데스크톱, 온프레미스 서버 등 사용자가 직접 제어하는 하드웨어에서 실행되는 AI 모델입니다.** 모델 가중치는 디스크의 파일로 저장되며, 모든 처리는 사용자의 CPU 또는 GPU에서 이루어집니다. 프롬프트 텍스트나 응답 데이터는 외부 서버로 전송되지 않습니다.',
@@ -1818,6 +1849,7 @@ schema: {
           ],
         },
         howItWorks: {
+          id: 'how-does-a-local-llm-work',
           title: '로컬 LLM은 어떻게 작동하나요?',
           content: [
             '**로컬 LLM 실행에는 세 가지 계층이 함께 작동합니다: 모델 파일, 추론 엔진, 인터페이스.**',

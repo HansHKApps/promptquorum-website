@@ -1889,12 +1889,6 @@ schema: {
       primaryTerm: 'LLM local para programação',
       toc: [
         { label: 'Pontos principais', anchor: '#tldr' },
-        { label: 'Melhores modelos de codificação local', anchor: '#best-models' },
-        { label: 'Integração com VS Code', anchor: '#vscode' },
-        { label: 'Geração de código', anchor: '#code-generation' },
-        { label: 'Revisão de código', anchor: '#code-review' },
-        { label: 'Escrita de testes', anchor: '#test-writing' },
-        { label: 'FAQ', anchor: '#faq' },
       ],
       schema: {
         '@context': 'https://schema.org',

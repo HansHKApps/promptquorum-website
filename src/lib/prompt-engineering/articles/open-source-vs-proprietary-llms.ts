@@ -3047,14 +3047,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: '什么是开源LLM', anchor: 'what-is-open-source' },
         { label: '什么是专有LLM', anchor: 'what-is-proprietary' },
         { label: '关键概念与定义', anchor: 'definitions' },
-        { label: '开源与专有LLM有什么区别', anchor: 'key-differences' },
         { label: '开放权重模型现状', anchor: 'open-source-landscape' },
         { label: '专有LLM现状', anchor: 'proprietary-landscape' },
         { label: '性能基准对比', anchor: 'performance-benchmarks' },
         { label: '成本分析', anchor: 'cost-analysis' },
         { label: '功能对比表', anchor: 'feature-comparison' },
         { label: '全面对比', anchor: 'comparison-table' },
-        { label: '地区合规与部署', anchor: 'regional-context' },
         { label: '常见问题', anchor: 'faq' },
         { label: '参考来源', anchor: 'sources' },
       ],
@@ -3215,6 +3213,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         whatIsOpenSource: {
+          id: 'what-is-open-source',
           title: '什么是开源LLM？',
           content: [
             '**"开源"与"开放权重"并不同义。** 开源许可证（Apache 2.0、MIT、GPL）适用于源代码，允许不受限制的商业和私人使用。开放权重意味着训练好的模型权重可以下载，但可能受专门许可证的限制。LLaMA 3.1是开放权重，而非开源——Meta在Llama Community License 2.1下发布权重，允许商业使用但包含限制，禁止将衍生模型命名为"LLaMA"且要求署名。',
@@ -3224,6 +3223,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         whatIsProprietary: {
+          id: 'what-is-proprietary',
           title: '什么是专有LLM？',
           content: [
             '**专有LLM是封闭模型，只能通过API访问——供应商控制权重、训练数据、安全对齐和所有更新。** OpenAI（GPT-5.6）、Anthropic（Claude Opus 4.8）、Google（Gemini 3.1 Pro）和Mistral API都是专有的。您无法下载权重、查看训练数据、在本地运行推理或直接定制模型权重。',
@@ -3233,6 +3233,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         definitions: {
+          id: 'definitions',
           title: '关键概念与定义',
           content: [
             '**开放权重模型。** 一种大型语言模型，其训练权重（训练过程中学习的数值参数）公开可用，可以下载、修改、微调和自托管。示例：LLaMA 3.1（Meta）、Mistral Large 2（Mistral AI）、Qwen 3（阿里巴巴）。不要与开源许可证混淆；"开放权重"是指可下载的模型文件，不一定是源代码或符合OSI的许可证。',
@@ -3264,6 +3265,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         featureComparison: {
+          id: 'feature-comparison',
           title: '快速功能对比',
           columns: ['功能', '开源LLM', '专有LLM'],
           rows: [
@@ -3320,6 +3322,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         openSourceLandscape: {
+          id: 'open-source-landscape',
           title: '2026年开放权重市场格局',
           content: [
             '**开源LLM允许组织下载、检查和修改模型权重，然后在没有供应商依赖或按token API成本的情况下在本地部署。** 2026年领先的模型是Meta的LLaMA 3.1、Mistral Large 2、Qwen 3以及其他在社区许可证下发布的模型。',
@@ -3330,6 +3333,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         proprietaryLandscape: {
+          id: 'proprietary-landscape',
           title: '2026年专有模型市场格局',
           content: [
             '**专有LLM完全通过供应商控制的API访问；模型权重从不发布，无法下载、修改或在本地部署。** 用户按token API计费，并接受供应商对模型更新、安全策略和性能特性的控制。',
@@ -3340,6 +3344,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         performanceBenchmarks: {
+          id: 'performance-benchmarks',
           title: '基准性能：2026年的差距现状',
           content: [
             '**专有模型在通用推理（MMLU）上仍然领先，但差距已缩小至7–8个百分点。** MMLU（大规模多任务语言理解）是涵盖57个学术学科的广泛基准。要了解[LLM实际工作原理](/zh/prompt-engineering/how-llms-actually-work)对推理能力的重要性，请阅读我们关于transformer架构的深度解析。当前分数：',
@@ -3359,6 +3364,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         costAnalysis: {
+          id: 'cost-analysis',
           title: '成本分析：API定价与自托管对比',
           content: [
             '**直接成本对比：专有API在低量时占优；开放权重自托管在规模化时胜出。** 交叉点通常为每天500万至1000万token。在此阈值以下，API简便性和无基础设施成本有利于专有模型。在此之上，开放权重自托管具有成本效益。',
@@ -3403,6 +3409,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         comparisonTable: {
+          id: 'comparison-table',
           title: '开源与专有LLM的关键差异',
           content: '**开放权重模型在规模化时成本更低，支持完整定制化；专有模型以更高的按token成本提供更快的价值实现时间和托管基础设施。** 每天低于500万token时，专有API通常更便宜。每天超过1000万token时，自托管的开放权重在成本上胜出。根据您的量、隐私需求和基础设施准备情况做出选择。',
           columns: ['维度', '开放权重模型', '专有模型'],
@@ -3562,6 +3569,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         sources: {
+          id: 'sources',
           title: '参考来源',
           items: [
             'Meta AI，"Llama 3 Herd of Models"（Touvron等，2024年）——架构、上下文窗口、基准分数和训练数据文档',

@@ -92,6 +92,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       comparison: {
+        id: 'manual-vs-automated-comparison',
         title: 'Manual vs Automated: Quick Comparison',
         content: '**Choose based on three factors: prompt count, evaluation data, and scaling needs.** Manual optimization is rewriting a prompt based on test failures — it is direct control but does not scale beyond ~50 production prompts. Automated optimization uses frameworks (DSPy, TextGrad) to rewrite prompts algorithmically — it scales to 100+ but requires labeled data and metrics. A third validation step — running the same prompt across multiple models using a [prompt optimization platform](/features) — confirms which version generalizes best before committing to production.',
         columns: ['Factor', 'Manual Optimization', 'Automated Optimization'],
@@ -104,6 +105,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       manualWins: {
+        id: 'when-manual-wins',
         title: 'When Manual Optimization Wins',
         items: [
           'Fewer than 50 production prompts—the overhead of setting up data and metrics is not worth it',
@@ -115,6 +117,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       automatedWins: {
+        id: 'when-automated-wins',
         title: 'When Automated Optimization Wins',
         items: [
           'More than 100 production prompts—the engineering cost of manual iteration becomes prohibitive',
@@ -126,6 +129,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       tools: {
+        id: 'tools-dspy-textgrad-promptfoo',
         title: 'Tools: DSPy, TextGrad, Promptfoo Compared',
         content: '**Three main tools support automated or semi-automated optimization:**',
         columns: ['Tool', 'Approach', 'Maturity', 'Scale', 'Best For'],
@@ -137,6 +141,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       hybrid: {
+        id: 'hybrid-workflow',
         title: 'Hybrid Workflow: Manual + Automated Together',
         content: 'The real world is hybrid. Start with manual optimization to build intuition and evaluation data. Graduate to automated once you have scale.',
         numberedItems: [
@@ -148,6 +153,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       costAnalysis: {
+        id: 'cost-analysis',
         title: 'Cost Analysis: Manual vs Automated',
         content: '**At what prompt count does automated become cheaper than manual?** Break-even is roughly 50–80 prompts.',
         items: [
@@ -295,6 +301,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       comparison: {
+        id: 'manual-vs-automated-comparison',
         title: 'Manuell vs Automatisiert: Schnellvergleich',
         content: '**Wählen Sie basierend auf drei Faktoren: Prompt-Anzahl, Evaluierungsdaten und Skalierungsbedarf.** Manuelle Optimierung ist das Umschreiben eines Prompts basierend auf Testfehlern — es ist direkte Kontrolle, skaliert aber nicht über ~50 Produktions-Prompts. Automatisierte Optimierung nutzt Frameworks (DSPy, TextGrad), um Prompts algorithmisch umzuschreiben — es skaliert auf 100+, erfordert aber gekennzeichnete Daten und Metriken.',
         columns: ['Faktor', 'Manuelle Optimierung', 'Automatisierte Optimierung'],
@@ -307,6 +314,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       manualWins: {
+        id: 'when-manual-wins',
         title: 'Wann Manuelle Optimierung Gewinnt',
         items: [
           'Weniger als 50 Produktions-Prompts — Overhead des Setup von Daten und Metriken lohnt sich nicht',
@@ -318,6 +326,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       automatedWins: {
+        id: 'when-automated-wins',
         title: 'Wann Automatisierte Optimierung Gewinnt',
         items: [
           'Mehr als 100 Produktions-Prompts — Kosten manuelle Iteration wird unerschwinglich',
@@ -329,6 +338,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       tools: {
+        id: 'tools-dspy-textgrad-promptfoo',
         title: 'Tools: DSPy, TextGrad, Promptfoo im Vergleich',
         content: '**Drei Hauptwerkzeuge unterstützen automatisierte oder semi-automatisierte Optimierung:**',
         columns: ['Tool', 'Ansatz', 'Reife', 'Skalierung', 'Beste für'],
@@ -340,6 +350,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       hybrid: {
+        id: 'hybrid-workflow',
         title: 'Hybrid-Workflow: Manuell + Automatisiert zusammen',
         content: 'Die echte Welt ist hybrid. Beginnen Sie mit manueller Optimierung, um Intuition und Evaluierungsdaten aufzubauen. Wechseln Sie zur Automatisierung, sobald Sie Skalierung haben.',
         numberedItems: [
@@ -351,6 +362,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       costAnalysis: {
+        id: 'cost-analysis',
         title: 'Kostenanalyse: Manuell vs Automatisiert',
         content: '**Ab welcher Prompt-Anzahl wird Automatisierung billiger als Manuell?** Breakeven liegt etwa bei 50–80 Prompts.',
         items: [
@@ -363,6 +375,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       mistakes: {
+        id: 'common-mistakes',
         title: 'Häufige Fehler',
         items: [
           'DSPy ohne gekennzeichnete Daten ausführen — DSPy lernt von Beispielen. Ohne 50+ gekennzeichnete (Eingabe, Ausgabe)-Paare trainiert es auf Rauschen. Beginnen Sie mit 10–20 manuelle Iterationen, dokumentieren Sie Paare, dann nutzen Sie sie als Trainingssatz.',
@@ -391,6 +404,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       relatedReading: {
+        id: 'related-reading',
         title: 'Weiterführende Lektüre',
         items: [
           '[Grundlagen der Prompt-Optimierung: 6 Kernhebel](/de/prompt-engineering/fundamentals-of-prompt-optimization)',
@@ -403,6 +417,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       sources: {
+        id: 'sources',
         title: 'Quellen',
         items: [
           'Khattab, O., Potts, C., & Zaharia, M. (2024). "DSPy: Compiling Declarative Language Model Calls into State-of-the-art Retrieval-Augmented Systems." arXiv:2310.03714',
@@ -500,6 +515,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       comparison: {
+        id: 'manual-vs-automated-comparison',
         title: 'Manual vs automatizado: comparativa rápida',
         content: '**Elige según tres factores: número de prompts, datos de evaluación y necesidades de escala.** La optimización manual es reescribir un prompt basado en fallos de tests — es control directo pero no escala más allá de ~50 prompts en producción. La optimización automatizada usa frameworks (DSPy, TextGrad) para reescribir prompts algorítmicamente — escala a 100+ pero requiere datos etiquetados y métricas. Un tercer paso de validación — ejecutar el mismo prompt en múltiples modelos usando una [plataforma de optimización de prompts](/features) — confirma qué versión se generaliza mejor antes de comprometerse con producción.',
         columns: ['Factor', 'Optimización manual', 'Optimización automatizada'],
@@ -512,6 +528,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       manualWins: {
+        id: 'when-manual-wins',
         title: 'Cuándo gana la optimización manual',
         items: [
           'Menos de 50 prompts en producción — el overhead de configurar datos y métricas no vale la pena',
@@ -523,6 +540,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       automatedWins: {
+        id: 'when-automated-wins',
         title: 'Cuándo gana la optimización automatizada',
         items: [
           'Más de 100 prompts en producción — el coste de la iteración manual de ingeniería se vuelve prohibitivo',
@@ -534,6 +552,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       tools: {
+        id: 'tools-dspy-textgrad-promptfoo',
         title: 'Herramientas: DSPy, TextGrad, Promptfoo comparados',
         content: '**Tres herramientas principales soportan la optimización automatizada o semi-automatizada:**',
         columns: ['Herramienta', 'Enfoque', 'Madurez', 'Escala', 'Ideal para'],
@@ -545,6 +564,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       hybrid: {
+        id: 'hybrid-workflow',
         title: 'Flujo de trabajo híbrido: manual + automatizado juntos',
         content: 'El mundo real es híbrido. Empieza con optimización manual para construir intuición y datos de evaluación. Avanza a automatizado una vez que tienes escala.',
         numberedItems: [
@@ -556,6 +576,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       costAnalysis: {
+        id: 'cost-analysis',
         title: 'Análisis de costes: manual vs automatizado',
         content: '**¿A qué número de prompts se vuelve automatizado más barato que manual?** El punto de equilibrio es aproximadamente 50–80 prompts.',
         items: [
@@ -568,6 +589,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       mistakes: {
+        id: 'common-mistakes',
         title: 'Errores comunes',
         items: [
           'Ejecutar DSPy sin datos etiquetados — DSPy aprende de ejemplos. Sin 50+ pares etiquetados (entrada, salida), entrena con ruido. Empieza con iteraciones manuales, documenta los pares, luego úsalos como datos de entrenamiento.',
@@ -594,6 +616,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       relatedReading: {
+        id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
           '[Fundamentos de la optimización de prompts: 6 palancas core](/es/prompt-engineering/fundamentals-of-prompt-optimization)',
@@ -606,6 +629,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       sources: {
+        id: 'sources',
         title: 'Fuentes',
         items: [
           'Khattab, O., Potts, C., & Zaharia, M. (2024). "DSPy: Compiling Declarative Language Model Calls into State-of-the-art Retrieval-Augmented Systems." arXiv:2310.03714',
@@ -703,6 +727,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       comparison: {
+        id: 'manual-vs-automated-comparison',
         title: 'Manual vs automatizado: comparativo rápido',
         content: '**Escolha com base em três fatores: número de prompts, dados de avaliação e necessidades de escala.** A otimização manual é reescrever um prompt com base em falhas de testes — é controle direto, mas não escala além de ~50 prompts em produção. A otimização automatizada usa frameworks (DSPy, TextGrad) para reescrever prompts algoritmicamente — escala para 100+, mas requer dados rotulados e métricas. Um terceiro passo de validação — executar o mesmo prompt em múltiplos modelos usando uma [plataforma de otimização de prompts](/features) — confirma qual versão se generaliza melhor antes de se comprometer com produção.',
         columns: ['Fator', 'Otimização manual', 'Otimização automatizada'],
@@ -715,6 +740,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       manualWins: {
+        id: 'when-manual-wins',
         title: 'Quando a otimização manual vence',
         items: [
           'Menos de 50 prompts em produção — o overhead de configurar dados e métricas não vale a pena',
@@ -726,6 +752,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       automatedWins: {
+        id: 'when-automated-wins',
         title: 'Quando a otimização automatizada vence',
         items: [
           'Mais de 100 prompts em produção — o custo da iteração manual de engenharia torna-se proibitivo',
@@ -737,6 +764,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       tools: {
+        id: 'tools-dspy-textgrad-promptfoo',
         title: 'Ferramentas: DSPy, TextGrad, Promptfoo comparados',
         content: '**Três ferramentas principais suportam a otimização automatizada ou semi-automatizada:**',
         columns: ['Ferramenta', 'Abordagem', 'Maturidade', 'Escala', 'Ideal para'],
@@ -748,6 +776,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       hybrid: {
+        id: 'hybrid-workflow',
         title: 'Fluxo de trabalho híbrido: manual + automatizado juntos',
         content: 'O mundo real é híbrido. Comece com otimização manual para construir intuição e dados de avaliação. Avance para automatizado quando tiver escala.',
         numberedItems: [
@@ -759,6 +788,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       costAnalysis: {
+        id: 'cost-analysis',
         title: 'Análise de custos: manual vs automatizado',
         content: '**Em quantos prompts o automatizado se torna mais barato que o manual?** O ponto de equilíbrio é aproximadamente 50–80 prompts.',
         items: [
@@ -771,6 +801,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       mistakes: {
+        id: 'common-mistakes',
         title: 'Erros comuns',
         items: [
           'Executar o DSPy sem dados rotulados — o DSPy aprende com exemplos. Sem 50+ pares rotulados (entrada, saída), treina com ruído. Comece com iterações manuais, documente os pares, depois use-os como dados de treinamento.',
@@ -797,6 +828,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       relatedReading: {
+        id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
           '[Fundamentos da otimização de prompts: 6 alavancas core](/pt/prompt-engineering/fundamentals-of-prompt-optimization)',
@@ -809,6 +841,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       sources: {
+        id: 'sources',
         title: 'Fontes',
         items: [
           'Khattab, O., Potts, C., & Zaharia, M. (2024). "DSPy: Compiling Declarative Language Model Calls into State-of-the-art Retrieval-Augmented Systems." arXiv:2310.03714',
@@ -906,6 +939,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       comparison: {
+        id: 'manual-vs-automated-comparison',
         title: 'Manuel vs Automatisé : Comparaison rapide',
         content: '**Choisissez selon trois facteurs : nombre de prompts, données d\'évaluation et besoins de scalabilité.** L\'optimisation manuelle est la réécriture d\'un prompt basée sur les échecs de tests — c\'est le contrôle direct mais ne s\'étend pas au-delà de ~50 prompts de production. L\'optimisation automatisée utilise des frameworks (DSPy, TextGrad) pour réécrire les prompts algorithmiquement — elle s\'étend à 100+ mais nécessite données étiquetées et métriques.',
         columns: ['Facteur', 'Optimisation manuelle', 'Optimisation automatisée'],
@@ -918,6 +952,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       manualWins: {
+        id: 'when-manual-wins',
         title: 'Quand l\'optimisation manuelle gagne',
         items: [
           'Moins de 50 prompts de production — l\'overhead de mise en place de données et métriques ne vaut pas la peine',
@@ -929,6 +964,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       automatedWins: {
+        id: 'when-automated-wins',
         title: 'Quand l\'optimisation automatisée gagne',
         items: [
           'Plus de 100 prompts de production — le coût de l\'itération manuelle devient prohibitif',
@@ -940,6 +976,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       tools: {
+        id: 'tools-dspy-textgrad-promptfoo',
         title: 'Outils : DSPy, TextGrad, Promptfoo comparés',
         content: '**Trois outils principaux supportent l\'optimisation automatisée ou semi-automatisée :**',
         columns: ['Outil', 'Approche', 'Maturité', 'Scalabilité', 'Meilleur pour'],
@@ -951,6 +988,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       hybrid: {
+        id: 'hybrid-workflow',
         title: 'Flux de travail hybride : Manuel + Automatisé ensemble',
         content: 'Le monde réel est hybride. Commencez par l\'optimisation manuelle pour construire l\'intuition et les données d\'évaluation. Basculez vers l\'automatisation une fois que vous avez une scalabilité.',
         numberedItems: [
@@ -962,6 +1000,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       costAnalysis: {
+        id: 'cost-analysis',
         title: 'Analyse des coûts : Manuel vs Automatisé',
         content: '**À quel nombre de prompts l\'automatisation devient-elle moins chère que le manuel ?** Le seuil de rentabilité est environ 50–80 prompts.',
         items: [
@@ -974,6 +1013,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       mistakes: {
+        id: 'common-mistakes',
         title: 'Erreurs courantes',
         items: [
           'Exécuter DSPy sans données étiquetées — DSPy apprend des exemples. Sans 50+ paires (entrée, sortie) étiquetées, il entraîne sur bruit et produit pires prompts que itération manuelle. Commencez par 10–20 optimisations manuelles, documentez paires, utilisez-les comme ensemble d\'entraînement.',
@@ -1000,6 +1040,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       relatedReading: {
+        id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
           '[Fondamentaux de l\'optimisation de prompts : 6 leviers cœur](/fr/prompt-engineering/fundamentals-of-prompt-optimization)',

@@ -1101,8 +1101,6 @@ schema: {
       toc: [
         { label: 'Pontos principais', anchor: '#key-takeaways' },
         { label: 'Dados rápidos', anchor: '#quick-facts' },
-        { label: 'Comparativo de desempenho', anchor: '#performance' },
-        { label: 'Análise de custo por tok/s', anchor: '#cost-per-tok' },
         { label: 'Throttling térmico explicado', anchor: '#thermal-throttling' },
         { label: 'Quando escolher laptop', anchor: '#when-laptop' },
         { label: 'Quando escolher desktop', anchor: '#when-desktop' },

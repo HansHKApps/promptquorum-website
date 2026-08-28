@@ -1408,7 +1408,6 @@ schema: {
         { label: 'Bestes lokales LLM für Poesie', anchor: '#poetry-writing' },
         { label: 'Schlechter Prompt vs. guter Prompt', anchor: '#prompt-examples' },
         { label: 'Regionaler Kontext', anchor: '#regional-context' },
-        { label: 'Häufig gestellte Fragen', anchor: '#common-questions' },
       ],
       sections: {
         tldr: {
@@ -1428,6 +1427,7 @@ schema: {
           ],
         },
         howToEvaluate: {
+          id: 'how-to-evaluate',
           title: 'Wie bewerten Sie die Qualität lokaler LLMs für kreatives Schreiben?',
           content: [
             '**Objektive Benchmarks messen Wissen und Reasoning, nicht kreative Qualität.** Um ein Modell für kreatives Schreiben zu bewerten, testen Sie es direkt mit den Prompts, die Sie verwenden möchten:',
@@ -1442,6 +1442,7 @@ schema: {
           imageCaption: 'Kreatives Schreiben LLM-Vergleich: Llama 3.3 70B (40GB, beste Prosa), Mistral 24B (14GB, 16GB-Tier), Llama 3.1 8B (6GB, Einstieg).',
         },
         llama33: {
+          id: 'llama-3-3-70b',
           title: '#1 Meta Llama 3.3 70B -- beste Prosaqualität im lokalen Bereich',
           content: [
             '**Llama 3.3 70B produziert die natürlichste und vielfältigste englische Prosa aller lokal ausführbaren Modelle.** Das Training auf einem vielfältigen englischsprachigen Textkorpus gibt ihm die breiteste stilistische Spanne -- von minimalistischer literarischer Fiktion bis zu Thriller-Pacing. Long-Form-Kohärenz (1.000-3.000 Wörter) ist deutlich besser als jedes 7B- oder 13B-Modell.',
@@ -1459,6 +1460,7 @@ schema: {
           imageCaption: 'Qualitätsspektrum für kreatives Schreiben: 8B bis 500 Wörter, 24B bis 2K Wörter, 70B hält 1K-3K Wort-Szenen mit breitstem Stilbereich.',
         },
         mistralSmall: {
+          id: 'mistral-small',
           title: '#2 Mistral Small 3.1 24B -- beste kreative Schreibqualität für 16 GB RAM',
           content: [
             '**Mistral Small 3.1 24B liefert kreative Schreibqualität, die deutlich über jedem 7B-Modell liegt, während es in 14 GB RAM passt.** Die Instruktionsbefolge ist präzise genug, um detaillierte Spezifikationen zu handhaben ("schreiben Sie in zweiter Person, Präsens, mit kurzen, prägnanten Sätzen"), ohne nach wenigen Absätzen abzudriften.',
@@ -1466,6 +1468,7 @@ schema: {
           ],
         },
         llama318: {
+          id: 'llama-3-1-8b',
           title: '#3 Llama 3.1 8B -- beste kreative Schreibqualität für 8 GB RAM',
           content: [
             '**Im 8-GB-RAM-Bereich übertrifft Llama 3.1 8B Qwen3 7B und Mistral Small für englisches kreatives Schreiben.** Qwen3 ist stärker bei Coding und strukturierten Aufgaben, aber seine englische Prosa-Generierung ist weniger fließend für Erzählzwecke.',
@@ -1473,6 +1476,7 @@ schema: {
           ],
         },
         fineTuned: {
+          id: 'fine-tuned-models',
           title: '#4 Community Fine-Tunes für Fiktion und Roleplay',
           content: [
             '**Die lokale LLM-Community verwaltet spezialisierte Fine-Tunes, die auf Fiktionskorpora trainiert sind und Basis-Modelle bei längeren Erzählaufgaben übertreffen.** Diese sind auf Hugging Face verfügbar und können in LM Studio oder Ollama (über benutzerdefinierte Modelfiles) geladen werden:',
@@ -1486,6 +1490,7 @@ schema: {
           ],
         },
         promptingTips: {
+          id: 'prompting-tips',
           title: 'Prompting-Tipps zur Verbesserung des kreativen Schreibens mit lokalen LLMs',
           items: [
             '**Stil konkret spezifizieren**: "Schreiben Sie im Stil von Cormac McCarthy -- knappe Dialoge, lange beschreibende Sätze, keine Anführungszeichen" übertrifft "schreiben Sie literarische Fiktion."',
@@ -1722,7 +1727,6 @@ schema: {
         { label: 'Meilleur LLM local pour la poésie', anchor: '#poetry-writing' },
         { label: 'Mauvais prompt vs bon prompt', anchor: '#prompt-examples' },
         { label: 'Contexte régional', anchor: '#regional-context' },
-        { label: 'Questions fréquentes', anchor: '#common-questions' },
       ],
       sections: {
         tldr: {
@@ -1742,6 +1746,7 @@ schema: {
           ],
         },
         howToEvaluate: {
+          id: 'how-to-evaluate',
           title: 'Comment évaluer la qualité des LLMs locaux',
           content: [
             '**Les benchmarks objectifs mesurent les connaissances, pas la créativité.** Testez directement avec vos prompts :',
@@ -1756,6 +1761,7 @@ schema: {
           imageCaption: 'Comparaison LLMs créatifs: Llama 3.3 70B (40GB, meilleure prose), Mistral 24B (14GB, niveau 16GB), Llama 3.1 8B (6GB, entrée).',
         },
         llama33: {
+          id: 'llama-3-3-70b',
           title: '#1 Llama 3.3 70B -- meilleure prose localement',
           content: [
             '**Llama 3.3 70B produit la prose anglaise la plus naturelle.** Entraîné sur corpus textuels divers, range stylistique très large. Cohérence long format (1K-3K mots) supérieure aux modèles 7B/13B.',
@@ -1773,6 +1779,7 @@ schema: {
           imageCaption: 'Spectre qualité LLM créatif: 8B jusqu\'à 500 mots, 24B 2K mots, 70B soutient scènes 1K-3K mots avec plus large plage stylistique.',
         },
         mistralSmall: {
+          id: 'mistral-small',
           title: '#2 Mistral Small 3.1 24B -- meilleur 16 GB RAM',
           content: [
             '**Mistral Small 3.1 24B qualité créative notable, entre dans 14 GB RAM.** Suivi instructions précis, gère spécifications détaillées sans dérives.',
@@ -1780,6 +1787,7 @@ schema: {
           ],
         },
         llama318: {
+          id: 'llama-3-1-8b',
           title: '#3 Llama 3.1 8B -- meilleur 8 GB RAM',
           content: [
             '**À 8 GB RAM, Llama 3.1 8B surpasse Qwen3 7B et Mistral Small.** Qwen3 plus fort coding, mais prose moins fluide narratif.',
@@ -1787,6 +1795,7 @@ schema: {
           ],
         },
         fineTuned: {
+          id: 'fine-tuned-models',
           title: '#4 Fine-tunes spécialisés fiction/roleplay',
           content: [
             '**Communauté maintient fine-tunes entraînés corpus fiction, surpassent modèles base.** Disponibles Hugging Face, chargeable LM Studio/Ollama :',
@@ -1800,6 +1809,7 @@ schema: {
           ],
         },
         promptingTips: {
+          id: 'prompting-tips',
           title: 'Conseils pour meilleure créativité',
           items: [
             '**Style concret**: "McCarthy -- dialogues épars, longues phrases, sans guillemets" > "fiction littéraire".',
@@ -2021,7 +2031,6 @@ schema: {
         { label: '詩(ポエトリー)に最適なローカルLLM', anchor: '#poetry-writing' },
         { label: '悪いプロンプト vs 良いプロンプト', anchor: '#prompt-examples' },
         { label: '地域別の背景', anchor: '#regional-context' },
-        { label: 'よくある質問', anchor: '#common-questions' },
       ],
       sections: {
         tldr: {
@@ -2041,6 +2050,7 @@ schema: {
           ],
         },
         howToEvaluate: {
+          id: 'how-to-evaluate',
           title: 'ローカルLLMの創作文章品質をどう評価するか',
           content: [
             '**客観的ベンチマークは知識と推論を測定しますが、創作品質は測定しません。** 創作文章用のモデルを評価するには、使用予定のプロンプトで直接テストしてください。',
@@ -2056,6 +2066,7 @@ schema: {
           imageCaption: '創作文章ローカルLLM比較: Llama 3.3 70B(40GB、最高品質)、Mistral 24B(14GB、16GBクラス)、Llama 3.1 8B(6GB、入門クラス)。',
         },
         llama33: {
+          id: 'llama-3-3-70b',
           title: '#1 Meta Llama 3.3 70B - ローカルで最高の散文品質',
           content: [
             '**Llama 3.3 70Bはローカル実行可能な任意のモデルの中で最も自然で多様な英語散文を生成します。**多様な英語テキストコーパスのトレーニングにより、最広範な文体レンジが得られます。',
@@ -2073,6 +2084,7 @@ schema: {
           imageCaption: '創作文章品質スペクトラム: 8Bは500語まで、24Bは2K語まで、70Bは1K-3K語シーンを維持し最広スタイル範囲。',
         },
         mistralSmall: {
+          id: 'mistral-small',
           title: '#2 Mistral Small 3.1 24B - 16GB RAM向け最高の創作文章',
           content: [
             '**Mistral Small 3** .1 24Bは、7Bモデルより明らかに優れた創作文章品質を提供しながら、14GB RAMに収まります。詳細なスタイル仕様を処理するのに十分な精度があります。',
@@ -2080,6 +2092,7 @@ schema: {
           ],
         },
         llama318: {
+          id: 'llama-3-1-8b',
           title: '#3 Llama 3.1 8B - 8GB RAM向け最高の創作文章',
           content: [
             '**8GB RAMレベルでは、Llama 3** .1 8BはQwen3 7BおよびMistral Smallを英語創作文章で上回ります。Qwen3はコーディングと構造化タスクで強力ですが、英語散文生成はナレーティブ目的で流動性が低くなります。',
@@ -2087,6 +2100,7 @@ schema: {
           ],
         },
         fineTuned: {
+          id: 'fine-tuned-models',
           title: '#4 フィクション・ロールプレイ用コミュニティファインチューン',
           content: [
             '**ローカルLLMコミュニティは、フィクションコーパスでトレーニングされた専門のファインチューンを保持しており、長編ナレーティブタスクでベースモデルを上回ります。** これらはHugging Faceで利用でき、LM StudioまたはOllama（カスタムModelfilesを使用）で読み込むことができます。',
@@ -2100,6 +2114,7 @@ schema: {
           ],
         },
         promptingTips: {
+          id: 'prompting-tips',
           title: 'ローカルLLMの創作文章を改善するプロンプティングコツ',
           content: [
             '**実践的なテクニック：創作出力の質を大幅に向上させるプロンプティング手法です。**',
@@ -2333,7 +2348,6 @@ schema: {
         { label: '最适合诗歌创作的本地LLM', anchor: '#poetry-writing' },
         { label: '不好的提示 vs 好的提示', anchor: '#prompt-examples' },
         { label: '区域背景', anchor: '#regional-context' },
-        { label: '常见问题', anchor: '#common-questions' },
       ],
       sections: {
         tldr: {
@@ -2353,6 +2367,7 @@ schema: {
           ],
         },
         howToEvaluate: {
+          id: 'how-to-evaluate',
           title: '如何评估本地LLM的创意写作质量',
           content: [
             '**客观基准测试衡量的是知识和推理，而非创意质量。** 要评估一个模型的创意写作能力，需要直接用你计划使用的提示进行测试。',
@@ -2368,6 +2383,7 @@ schema: {
           imageCaption: '创意写作本地LLM对比: Llama 3.3 70B（40GB，最佳散文）、Mistral 24B（14GB，16GB级）、Llama 3.1 8B（6GB，入门级）。',
         },
         llama33: {
+          id: 'llama-3-3-70b',
           title: '#1 Meta Llama 3.3 70B - 本地最佳散文质量',
           content: [
             '**Llama 3.3 70B生成任何本地可运行模型中最自然、最多样的英文散文。**其在多样化英文文本语料库上的训练赋予了它最广泛的文体范围----从极简主义文学小说到类型化惊悚小说的节奏。长篇连贯性（1000-3000字）明显优于任何7B或13B模型。',
@@ -2385,6 +2401,7 @@ schema: {
           imageCaption: '创意写作质量谱: 8B处理500字故事，24B支持2K字，70B维持1K-3K字场景，风格范围最广。',
         },
         mistralSmall: {
+          id: 'mistral-small',
           title: '#2 Mistral Small 3.1 24B - 16GB RAM最佳创意写作',
           content: [
             '**Mistral Small 3** .1 24B提供的创意写作质量明显优于任何7B模型，同时适配14GB内存。其指令遵循足够精确，可以处理详细的风格规范（"用第二人称、现在时、短而有力的句子写作"）而不会在几段后偏离。',
@@ -2392,6 +2409,7 @@ schema: {
           ],
         },
         llama318: {
+          id: 'llama-3-1-8b',
           title: '#3 Llama 3.1 8B - 8GB RAM最佳创意写作',
           content: [
             '**在8GB内存级别，Llama 3** .1 8B在英文创意写作中优于Qwen3 7B和Mistral Small。Qwen3在编码和结构化任务中更强，但其英文散文生成对叙事目的来说流畅性较低。',
@@ -2399,6 +2417,7 @@ schema: {
           ],
         },
         fineTuned: {
+          id: 'fine-tuned-models',
           title: '#4 小说和角色扮演社区微调模型',
           content: [
             '**本地LLM社区维护在小说语料库上训练的专门微调模型，在长篇叙事任务中优于基础模型。** 这些在Hugging Face上可用，可在LM Studio或Ollama中加载。',
@@ -2413,6 +2432,7 @@ schema: {
           ],
         },
         promptingTips: {
+          id: 'prompting-tips',
           title: '改进本地LLM创意写作的提示技巧',
           items: [
             '**具体指定风格**："用Cormac McCarthy的风格写作----稀疏对话、长描述句子、无引号"优于"写文学小说"。',

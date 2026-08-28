@@ -48,7 +48,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'What This Means for Buyers', anchor: '#what-it-means' },
       { label: 'FAQ', anchor: '#faq' },
       { label: 'Sources', anchor: '#sources' },
-      { label: 'Related Reading', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -173,7 +172,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Arabia Saudita', anchor: '#saudi-arabia' },
       { label: 'Qué significa esto para los compradores', anchor: '#what-it-means' },
       { label: 'Preguntas frecuentes', anchor: '#faq' },
-      { label: 'Lecturas relacionadas', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -287,7 +285,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Arábia Saudita', anchor: '#saudi-arabia' },
       { label: 'O que isso significa para compradores', anchor: '#what-it-means' },
       { label: 'Perguntas frequentes', anchor: '#faq' },
-      { label: 'Leituras relacionadas', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -401,7 +398,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'المملكة العربية السعودية', anchor: '#saudi-arabia' },
       { label: 'ماذا يعني هذا للمشترين', anchor: '#what-it-means' },
       { label: 'الأسئلة الشائعة', anchor: '#faq' },
-      { label: 'قراءات ذات صلة', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -515,7 +511,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'サウジアラビア', anchor: '#saudi-arabia' },
       { label: '購入者にとっての意味', anchor: '#what-it-means' },
       { label: 'よくある質問', anchor: '#faq' },
-      { label: '関連記事', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -629,7 +624,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '沙特阿拉伯', anchor: '#saudi-arabia' },
       { label: '这对购买者意味着什么', anchor: '#what-it-means' },
       { label: '常见问题', anchor: '#faq' },
-      { label: '相关阅读', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -743,7 +737,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Arabie saoudite', anchor: '#saudi-arabia' },
       { label: 'Ce que cela signifie pour les acheteurs', anchor: '#what-it-means' },
       { label: 'FAQ', anchor: '#faq' },
-      { label: 'Lectures connexes', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -857,7 +850,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '사우디아라비아', anchor: '#saudi-arabia' },
       { label: '구매자에게 의미하는 바', anchor: '#what-it-means' },
       { label: '자주 묻는 질문', anchor: '#faq' },
-      { label: '관련 자료', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -971,7 +963,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Saudi-Arabien', anchor: '#saudi-arabia' },
       { label: 'Was das für Käufer bedeutet', anchor: '#what-it-means' },
       { label: 'Häufig gestellte Fragen', anchor: '#faq' },
-      { label: 'Weiterführende Artikel', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {

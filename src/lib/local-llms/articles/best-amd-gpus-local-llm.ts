@@ -130,13 +130,8 @@ schema: {
         ]
       },
       toc: [
-        { label: 'TLDR', anchor: '#tldr' },
-        { label: 'Which AMD GPUs Are Actually Worth Using?', anchor: '#which-amd' },
-        { label: 'How Do AMD GPUs Compare to RTX on Price and Speed?', anchor: '#amd-vs-nvidia' },
-        { label: 'What\'s the ROCm Setup Friction for AMD?', anchor: '#rocm-setup' },
-        { label: 'Can You Run Ollama and vLLM on AMD?', anchor: '#software-support' },
-        { label: 'When Should You Actually Buy AMD Over NVIDIA?', anchor: '#when-buy-amd' },
-        { label: 'Common AMD Adoption Mistakes', anchor: '#mistakes' },
+        { label: 'TLDR', anchor: '#key-takeaways' },
+        { label: 'Which AMD GPUs Are Actually Worth Using?', anchor: '#key-takeaways' },
         { label: 'FAQ', anchor: '#faq' },
       ],
       sections: {
@@ -378,13 +373,8 @@ schema: {
         ]
       },
       toc: [
-        { label: 'Puntos clave', anchor: '#tldr' },
-        { label: '¿Qué GPUs AMD realmente valen la pena?', anchor: '#which-amd' },
-        { label: '¿Cómo se comparan las GPUs AMD con RTX en precio y rendimiento?', anchor: '#amd-vs-nvidia' },
-        { label: '¿Cuál es la fricción de configuración de ROCm para AMD?', anchor: '#rocm-setup' },
-        { label: '¿Puedes ejecutar Ollama y vLLM en AMD?', anchor: '#software-support' },
-        { label: '¿Cuándo deberías comprar AMD en lugar de NVIDIA?', anchor: '#when-buy-amd' },
-        { label: 'Errores comunes al adoptar AMD', anchor: '#mistakes' },
+        { label: 'Puntos clave', anchor: '#key-takeaways' },
+        { label: '¿Qué GPUs AMD realmente valen la pena?', anchor: '#key-takeaways' },
         { label: 'Preguntas frecuentes', anchor: '#faq' },
       ],
       sections: {
@@ -624,13 +614,8 @@ schema: {
         ]
       },
       toc: [
-        { label: 'النقاط الرئيسية', anchor: '#tldr' },
-        { label: 'أي كروت رسوميات AMD تستحق العناء فعلًا؟', anchor: '#which-amd' },
-        { label: 'كيف تُقارن كروت رسوميات AMD بـ RTX في السعر والأداء؟', anchor: '#amd-vs-nvidia' },
-        { label: 'ما احتكاك إعداد ROCm لـ AMD؟', anchor: '#rocm-setup' },
-        { label: 'هل يمكنك تشغيل Ollama وvLLM على AMD؟', anchor: '#software-support' },
-        { label: 'متى ينبغي أن تشتري AMD بدلًا من NVIDIA؟', anchor: '#when-buy-amd' },
-        { label: 'الأخطاء الشائعة عند تبنّي AMD', anchor: '#mistakes' },
+        { label: 'النقاط الرئيسية', anchor: '#key-takeaways' },
+        { label: 'أي كروت رسوميات AMD تستحق العناء فعلًا؟', anchor: '#key-takeaways' },
         { label: 'الأسئلة الشائعة', anchor: '#faq' },
       ],
       sections: {
@@ -869,13 +854,8 @@ schema: {
         ]
       },
       toc: [
-        { label: 'Pontos principais', anchor: '#tldr' },
-        { label: 'Quais GPUs AMD realmente valem a pena?', anchor: '#which-amd' },
-        { label: 'Como as GPUs AMD se comparam às RTX em preço e desempenho?', anchor: '#amd-vs-nvidia' },
-        { label: 'Qual é a fricção de configuração do ROCm para AMD?', anchor: '#rocm-setup' },
-        { label: 'Você pode rodar Ollama e vLLM em AMD?', anchor: '#software-support' },
-        { label: 'Quando você deve comprar AMD em vez de NVIDIA?', anchor: '#when-buy-amd' },
-        { label: 'Erros comuns ao adotar AMD', anchor: '#mistakes' },
+        { label: 'Pontos principais', anchor: '#key-takeaways' },
+        { label: 'Quais GPUs AMD realmente valem a pena?', anchor: '#key-takeaways' },
         { label: 'Perguntas frequentes', anchor: '#faq' },
       ],
       sections: {
@@ -1036,13 +1016,9 @@ schema: {
       educationalLevel: 'Intermediate',
       primaryTerm: 'AMD GPU',
       toc: [
-        { label: 'Zusammenfassung', anchor: '#tldr' },
-        { label: 'Welche AMD-GPUs lohnen sich wirklich?', anchor: '#which-amd' },
+        { label: 'Zusammenfassung', anchor: '#key-takeaways' },
+        { label: 'Welche AMD-GPUs lohnen sich wirklich?', anchor: '#key-takeaways' },
         { label: 'Wie vergleichen sich AMD-GPUs mit RTX bei Preis und Geschwindigkeit?', anchor: '#amd-vs-nvidia' },
-        { label: 'Welche ROCm-Einrichtungsherausforderungen gibt es?', anchor: '#rocm-setup' },
-        { label: 'Können Sie Ollama und vLLM auf AMD ausführen?', anchor: '#software-support' },
-        { label: 'Wann sollten Sie AMD statt NVIDIA kaufen?', anchor: '#when-buy-amd' },
-        { label: 'Häufige AMD-Adoptionfehler', anchor: '#mistakes' },
         { label: 'Häufig gestellte Fragen', anchor: '#faq' },
       ],
       sections: {
@@ -1191,6 +1167,7 @@ schema: {
           { '@type': 'ListItem', position: 8, name: 'Fazit (April 2026): Verwenden Sie AMD nur, wenn Sie bereits AMD-Hardware haben, oder wenn Sie ein großartiges gebrauchtes Angebot finden (€300 für eine 16-GB-Karte). Andernfalls ist NVIDIA CUDA immer noch einfacher.' },
         ],
         regionalContext: {
+          id: 'amd-vs-nvidia',
           title: 'Regionale Akzeptanz und Compliance-Kontext',
           content: [
             '**Deutsche Mittelständler wählen lokale LLM-Tools aufgrund von DSGVO-Compliance-Funktionen.** Tools, die alle Daten lokal verarbeiten (Ollama, LM Studio, llama.cpp), erfüllen EU-Datenresidenz-Anforderungen automatisch. Organisationen in Deutschland, Österreich und der Schweiz bewerten Tools auf deaktivierte Telemetrie, keine Cloud-Synchronisierung und luftgekoppelte Bereitstellungsfähigkeit. PromptQuorum verbindet sich mit lokalen Tool-Endpunkten, ohne Daten durch externe Server zu leiten.',
@@ -1212,13 +1189,9 @@ schema: {
       educationalLevel: 'Intermediate',
       primaryTerm: 'GPU AMD',
       toc: [
-        { label: 'Résumé', anchor: '#tldr' },
-        { label: 'Quels GPU AMD en valent vraiment la peine?', anchor: '#which-amd' },
+        { label: 'Résumé', anchor: '#key-takeaways' },
+        { label: 'Quels GPU AMD en valent vraiment la peine?', anchor: '#key-takeaways' },
         { label: 'Comment les GPU AMD se comparent-ils à RTX en prix et vitesse?', anchor: '#amd-vs-nvidia' },
-        { label: 'Quelle friction de configuration ROCm?', anchor: '#rocm-setup' },
-        { label: 'Pouvez-vous exécuter Ollama et vLLM sur AMD?', anchor: '#software-support' },
-        { label: 'Quand acheter AMD plutôt que NVIDIA?', anchor: '#when-buy-amd' },
-        { label: 'Erreurs courantes d\'adoption AMD', anchor: '#mistakes' },
         { label: 'Questions fréquentes', anchor: '#faq' },
       ],
       sections: {
@@ -1368,6 +1341,7 @@ schema: {
           { '@type': 'ListItem', position: 8, name: 'Verdict (avril 2026) : Utilisez AMD uniquement si vous possédez déjà du matériel AMD, ou trouvez une excellente affaire d\'occasion (300 € pour une carte 16 Go). Sinon, NVIDIA CUDA reste plus simple.' },
         ],
         regionalContext: {
+          id: 'amd-vs-nvidia',
           title: 'Contexte d\'adoption régionale et conformité',
           content: [
             '**Les entreprises françaises et européennes choisissent les LLM locaux pour la conformité RGPD.** Les outils qui traitent toutes les données localement (Ollama, LM Studio, llama.cpp) satisfont automatiquement les exigences de résidence des données de l\'UE. CNIL recommande les LLM locaux comme solution idéale pour données sensibles professionnelles. Les organisations valorisent la télémétrie désactivée, absence synchronisation cloud, et capacité déploiement isolé.',
@@ -1389,13 +1363,8 @@ schema: {
       educationalLevel: 'Intermediate',
       primaryTerm: 'AMD GPU',
       toc: [
-        { label: '重要ポイント', anchor: '#tldr' },
-        { label: '実際に価値のある AMD GPU は？', anchor: '#which-amd' },
-        { label: 'AMD GPU と RTX の価格・性能対比', anchor: '#amd-vs-nvidia' },
-        { label: 'ROCm セットアップの課題', anchor: '#rocm-setup' },
-        { label: 'Ollama と vLLM を AMD で実行できるか', anchor: '#software-support' },
-        { label: 'AMD を NVIDIA の代わりに購入すべき場合', anchor: '#when-buy-amd' },
-        { label: 'AMD 導入における一般的な過ちと注意点', anchor: '#mistakes' },
+        { label: '重要ポイント', anchor: '#key-takeaways' },
+        { label: '実際に価値のある AMD GPU は？', anchor: '#key-takeaways' },
         { label: 'よくある質問', anchor: '#faq' },
       ],
       sections: {
@@ -1570,13 +1539,8 @@ schema: {
       educationalLevel: 'Intermediate',
       primaryTerm: 'AMD GPU',
       toc: [
-        { label: '核心要点', anchor: '#tldr' },
-        { label: '哪些 AMD GPU 值得考虑？', anchor: '#which-amd' },
-        { label: 'AMD GPU 与 RTX 的价格和性能对比', anchor: '#amd-vs-nvidia' },
-        { label: 'ROCm 设置的难点', anchor: '#rocm-setup' },
-        { label: '能否在 AMD 上运行 Ollama 和 vLLM？', anchor: '#software-support' },
-        { label: '何时应购买 AMD 而非 NVIDIA？', anchor: '#when-buy-amd' },
-        { label: 'AMD 采用的常见错误', anchor: '#mistakes' },
+        { label: '核心要点', anchor: '#key-takeaways' },
+        { label: '哪些 AMD GPU 值得考虑？', anchor: '#key-takeaways' },
         { label: '常见问题', anchor: '#faq' },
       ],
       sections: {
@@ -1863,13 +1827,8 @@ schema: {
       ]
     },
     toc: [
-      { label: '요약', anchor: '#tldr' },
-      { label: '실제로 사용할 만한 AMD GPU는?', anchor: '#which-amd' },
-      { label: 'AMD GPU와 RTX의 가격·성능 비교', anchor: '#amd-vs-nvidia' },
-      { label: 'AMD ROCm 설정의 부담은?', anchor: '#rocm-setup' },
-      { label: 'AMD에서 Ollama와 vLLM을 실행할 수 있는가?', anchor: '#software-support' },
-      { label: 'AMD를 NVIDIA 대신 선택해야 하는 경우', anchor: '#when-buy-amd' },
-      { label: 'AMD 도입 시 흔한 실수', anchor: '#mistakes' },
+      { label: '요약', anchor: '#key-takeaways' },
+      { label: '실제로 사용할 만한 AMD GPU는?', anchor: '#key-takeaways' },
       { label: '자주 묻는 질문', anchor: '#faq' },
     ],
     sections: {

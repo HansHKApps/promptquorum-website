@@ -388,7 +388,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
     { label: 'Auswahl nach Anwendungsfall', anchor: '#how-to-choose' },
     { label: 'Tool-Stack aufbauen', anchor: '#how-to-build-stack' },
     { label: 'Häufige Fehler', anchor: '#common-mistakes' },
-    { label: 'Regionale Compliance-Hinweise', anchor: '#regional-considerations' },
     { label: 'Häufig gestellte Fragen', anchor: '#faq' }
   ],
   sections: {
@@ -1766,7 +1765,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
     { label: 'Choix par cas d\'usage', anchor: '#how-to-choose' },
     { label: 'Construire votre stack', anchor: '#how-to-build-stack' },
     { label: 'Erreurs courantes', anchor: '#common-mistakes' },
-    { label: 'Conformité régionale', anchor: '#regional-considerations' },
     { label: 'Questions fréquemment posées', anchor: '#faq' }
   ],
   sections: {
@@ -1830,7 +1828,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
     { label: 'ツールの選び方', anchor: '#how-to-choose' },
     { label: 'ツールスタックの構築方法', anchor: '#how-to-build-stack' },
     { label: 'よくある間違い', anchor: '#common-mistakes' },
-    { label: '地域別コンプライアンス', anchor: '#regional-considerations' },
     { label: '日本ユーザーのための活用ポイント', anchor: '#japan-context' },
     { label: 'よくあるご質問', anchor: '#faq' },
   ],
@@ -2159,7 +2156,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
     { label: '如何选择工具', anchor: '#how-to-choose' },
     { label: '如何构建工具堆栈', anchor: '#how-to-build-stack' },
     { label: '常见错误', anchor: '#common-mistakes' },
-    { label: '地区合规说明', anchor: '#regional-considerations' },
     { label: '中国企业的应用方案', anchor: '#china-context' },
     { label: '常见问题', anchor: '#faq' },
   ],

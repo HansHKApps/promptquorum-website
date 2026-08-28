@@ -1372,13 +1372,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       primaryTerm: 'Qwen vs Llama vs Mistral 2026',
       toc: [
         { label: 'Principais conclusões', anchor: '#key-takeaways' },
-        { label: 'Tabela de benchmarks', anchor: '#benchmark-table' },
-        { label: 'Qwen3 em detalhes', anchor: '#qwen3' },
-        { label: 'Llama 4 Scout em detalhes', anchor: '#llama4' },
-        { label: 'Mistral Small 3.1 em detalhes', anchor: '#mistral' },
-        { label: 'Por tamanho: 7B-8B vs 14B-27B vs 70B+', anchor: '#by-size' },
-        { label: 'Qual modelo para qual caso de uso', anchor: '#use-cases' },
-        { label: 'Início rápido com Ollama', anchor: '#quick-start' },
         { label: 'Perguntas frequentes', anchor: '#faq' },
       ],
       sections: {
@@ -1479,13 +1472,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { label: 'Schlüsselergebnisse', anchor: '#key-takeaways' },
         { label: 'Modellfamilien-Übersicht', anchor: '#model-family-overview' },
         { label: 'Benchmark-Vergleich', anchor: '#benchmark-comparison' },
-        { label: 'Qwen3: Stärken und Schwächen', anchor: '#qwen2-5' },
         { label: 'Llama 3.x: Stärken und Schwächen', anchor: '#llama-3' },
         { label: 'Mistral: Stärken und Schwächen', anchor: '#mistral' },
         { label: 'Tool Calling und Reasoning im Vergleich', anchor: '#tool-calling' },
         { label: 'Welche Familie gewinnt nach Task?', anchor: '#which-family-wins-by-task' },
         { label: 'Größen-für-Größen-Vergleich', anchor: '#size-for-size-comparison' },
-        { label: 'Vermächtnis: Mistral 24B vs Qwen 14B vs Llama 8B', anchor: '#legacy-benchmark-reference' },
         { label: 'Regionaler Kontext', anchor: '#regional-context' },
         { label: 'Häufig gestellte Fragen', anchor: '#faq' },
         { label: 'Häufige Fehler', anchor: '#common-mistakes' },
@@ -1791,7 +1782,6 @@ schema: {
       primaryTerm: 'Qwen vs Llama vs Mistral',
       toc: [
         { label: 'Points clés', anchor: '#key-takeaways' },
-        { label: 'Aperçu des familles de modèles', anchor: '#model-family-overview' },
         { label: 'Comparaison des benchmarks', anchor: '#benchmark-comparison' },
         { label: 'Qwen3.8-27B : Forces et faiblesses', anchor: '#qwen3-strengths' },
         { label: 'Llama 4 Scout : Forces et faiblesses', anchor: '#llama4-strengths' },
@@ -1799,7 +1789,7 @@ schema: {
         { label: 'Appels d\'outils et capacités agentic', anchor: '#tool-calling' },
         { label: 'Quelle famille gagne par tâche ?', anchor: '#which-family-wins-by-task' },
         { label: 'Comparaison taille par taille', anchor: '#size-for-size-comparison' },
-        { label: 'Héritage : Mistral 24B vs Qwen 14B vs Llama 8B', anchor: '#legacy-benchmark-reference' },
+        { label: 'Héritage : Mistral 24B vs Qwen 14B vs Llama 8B', anchor: '#size-for-size-comparison' },
         { label: 'Comment démarrer', anchor: '#how-to-get-started' },
         { label: 'Contexte régional', anchor: '#regional-context' },
         { label: 'Erreurs courantes', anchor: '#common-mistakes' },
@@ -2085,15 +2075,8 @@ schema: {
       primaryTerm: 'Qwen vs Llama vs Mistral',
       toc: [
         { label: '重要なポイント', anchor: '#key-takeaways' },
-        { label: 'モデルファミリー概要', anchor: '#model-family-overview' },
-        { label: 'ベンチマーク比較', anchor: '#benchmark-comparison' },
-        { label: 'Qwen3：強み と弱み', anchor: '#qwen2-5' },
-        { label: 'Llama 3.x：強み と弱み', anchor: '#llama-3' },
         { label: 'Mistral：強み と弱み', anchor: '#mistral' },
         { label: 'タスク別にはどのファミリーが勝つ？', anchor: '#which-family-wins-by-task' },
-        { label: 'サイズ別比較', anchor: '#size-for-size-comparison' },
-        { label: 'レガシー：Mistral 24B vs Qwen 14B vs Llama 8B', anchor: '#legacy-benchmark-reference' },
-        { label: '始める方法', anchor: '#how-to-get-started' },
         { label: '地域的コンテキスト', anchor: '#regional-context' },
         { label: 'よくある質問', anchor: '#faq' },
         { label: '一般的な誤り', anchor: '#common-mistakes' },
@@ -2161,6 +2144,7 @@ schema: {
           ],
         },
         mistral: {
+          id: 'mistral',
           title: 'Mistral：最高の効率と最強の7B級の歴史',
           content: [
             '**Mistral AIはこの比較で最もパラメータ効率の良いモデルを生産します。** Mistral Small 3.1は24Bで70Bクラスに近いベンチマークスコアを提供しながら、わずか14 GB RAMしか必要としません----この比較のどのモデルよりも最高の品質対RAM比。',
@@ -2186,6 +2170,7 @@ schema: {
           note: '推論集約的なタスク（数学、ロジック、コード レビュー）の場合：DeepSeek-R1（MIT ライセンス、7B-32B）は MATH ベンチマークですべての 3 つのファミリーを上回ります。 (DeepSeekはその後、オープンウェイトの新世代としてDeepSeek-V4—Flash/Pro—をリリースしました。R1/V3は引き続きローカルで利用可能です。)',
         },
         byTask: {
+          id: 'which-family-wins-by-task',
           title: 'タスク別にはどのモデルファミリーが勝つ？',
           rows: [
             { 'タスク': 'Python / JavaScriptコーディング', '勝者': 'Qwen3', '理由': 'すべてのサイズティアで最高のHumanEval' },
@@ -2222,6 +2207,7 @@ schema: {
           codeLanguage: 'bash',
         },
         sources: {
+          id: 'sources',
           title: 'ソース',
           items: [
             '**Qwen3 Technical Report**（Alibaba DAMO Academy、2024）-- arXiv:2412.15115 -- コーディング、数学、多言語タスク全体の全サイズバリアントに対するベンチマークデータ。',
@@ -2231,6 +2217,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: '模型ファミリー選択時の一般的な誤り',
           items: [
             '異なるパラメータ数のモデルを比較----Qwen 32B対Llama 70Bはりんご対りんご比較ではない。',
@@ -2241,6 +2228,7 @@ schema: {
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: '関連読書',
           items: [
             '[最高のLocal LLMs 2026](/local-llms/best-local-llms-2026) -- 現在の最高のモデルの全体的なランキング',
@@ -2252,6 +2240,7 @@ schema: {
           ],
         },
         regionalContext: {
+          id: 'regional-context',
           title: '地域的コンテキスト：EU/GDPR、日本、中国',
           content: [
             '**EU/GDPR**：Mistralモデルはフランスの下のEU管轄で製造され、GDPR Article 5要件適合を満たすクリアなデータプロベナンストレイルを与える。Meta Llamaモデルはmodel cardで訓練データの血統を開示。Qwen3はAlibaba（中国発祥）により製造されており、いくつかのEUデータ保護当局はGDPR Chapter Vの下でクロスボーダー転送レビューのためにフラグ。規制EUインダストリーの場合、MistralまたはON-PREMISESデプロイメント付きllamaが最もリスク低い選択肢。',
@@ -2370,15 +2359,8 @@ schema: {
       primaryTerm: 'Qwen vs Llama vs Mistral',
       toc: [
         { label: '关键要点', anchor: '#key-takeaways' },
-        { label: '模型族概述', anchor: '#model-family-overview' },
-        { label: '基准对比', anchor: '#benchmark-comparison' },
-        { label: 'Qwen3：优势和劣势', anchor: '#qwen2-5' },
-        { label: 'Llama 3.x：优势和劣势', anchor: '#llama-3' },
         { label: 'Mistral：优势和劣势', anchor: '#mistral' },
         { label: '按任务划分，哪个族获胜？', anchor: '#which-family-wins-by-task' },
-        { label: '大小对大小比较', anchor: '#size-for-size-comparison' },
-        { label: '遗产版本：Mistral 24B vs Qwen 14B vs Llama 8B', anchor: '#legacy-benchmark-reference' },
-        { label: '如何开始', anchor: '#how-to-get-started' },
         { label: '地区背景', anchor: '#regional-context' },
         { label: '常见问题', anchor: '#faq' },
         { label: '常见误区', anchor: '#common-mistakes' },
@@ -2446,6 +2428,7 @@ schema: {
           ],
         },
         mistral: {
+          id: 'mistral',
           title: 'Mistral：最佳效率和最强的7B级历史',
           content: [
             '**Mistral AI生产本对比中最参数高效的模型。** Mistral Small 3.1在24B处提供接近70B级的基准分数，仅需14 GB RAM----本对比中任何模型的最佳质量对RAM比。',
@@ -2471,6 +2454,7 @@ schema: {
           note: '对于推理密集型任务（数学、逻辑、代码审查）：DeepSeek-R1（MIT许可证，7B-32B）在MATH基准上超过所有三个系列。 (DeepSeek 此后发布了开源权重新一代模型 DeepSeek-V4——Flash/Pro;R1/V3 仍可在本地正常使用。)',
         },
         byTask: {
+          id: 'which-family-wins-by-task',
           title: '按任务划分，哪个模型族获胜？',
           rows: [
             { '任务': 'Python / JavaScript编码', '获胜者': 'Qwen3', '原因': '所有大小级别上最高的HumanEval' },
@@ -2507,6 +2491,7 @@ schema: {
           codeLanguage: 'bash',
         },
         sources: {
+          id: 'sources',
           title: '来源',
           items: [
             '**Qwen3技术报告**（Alibaba DAMO Academy，2024）-- arXiv:2412.15115 -- 所有大小变体编码、数学和多语言任务的基准数据。',
@@ -2516,6 +2501,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: '选择模型族时的常见误区',
           items: [
             '比较不同参数数的模型----Qwen 32B对Llama 70B不是苹果对苹果的测试。',
@@ -2526,6 +2512,7 @@ schema: {
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: '相关阅读',
           items: [
             '[最佳本地LLMs 2026](/local-llms/best-local-llms-2026) -- 当前最佳模型的总体排名',
@@ -2537,6 +2524,7 @@ schema: {
           ],
         },
         regionalContext: {
+          id: 'regional-context',
           title: '地区背景：欧盟/GDPR、日本和中国',
           content: [
             '**欧盟/GDPR**：Mistral模型在欧盟司法管辖区的法国生产，给予它满足GDPR第5条要求的清晰数据来源跟踪。Meta Llama模型在他们的模型卡中披露训练数据血统。Qwen3由Alibaba（中国源）生产，某些欧盟数据保护当局标记为在GDPR第V章下进行跨境转移审查。对于受管制的欧盟工业，Mistral或带有现场部署的Llama是风险最低的选择。',

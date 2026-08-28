@@ -25,13 +25,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       toc: [
         { label: 'Key Takeaways', anchor: '#key-takeaways' },
         { label: 'Which Local LLMs Support Multiple Languages?', anchor: '#which-llms-support-multiple-languages' },
-        { label: 'Best Models for European Languages', anchor: '#best-models-for-european-languages' },
-        { label: 'Best Models for Asian Languages', anchor: '#best-models-for-asian-languages' },
-        { label: 'Best Models for Arabic and Middle Eastern Languages', anchor: '#best-models-for-arabic' },
-        { label: 'How to Benchmark Multilingual Quality', anchor: '#how-to-benchmark-multilingual-quality' },
-        { label: 'Multilingual Comparison Table', anchor: '#multilingual-comparison-table' },
         { label: 'Common Mistakes with Multilingual Models', anchor: '#common-mistakes' },
-        { label: 'Common Questions', anchor: '#common-questions' },
+        { label: 'Common Questions', anchor: '#faq' },
       ],
       sections: {
         tldr: {
@@ -51,6 +46,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         whichSupport: {
+          id: 'which-llms-support-multiple-languages',
           title: 'Which Local LLMs Actually Support Multiple Languages?',
           content: [
             '**"Supporting" a language means more than generating text in that language.** True multilingual support requires: training data in the language (not just translation), tokenization optimized for the language\'s script, and fine-tuning on instruction-following in the language.',
@@ -126,6 +122,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           imageCaption: 'Multilingual LLM comparison 2026: Qwen3 8B leads across all Asian languages (Chinese, Japanese, Korean with ★★★★-★★★★★ ratings). Mistral Small matches Qwen3 on European languages (French/German). Star ratings (1-5) reflect 2026 benchmarks.',
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'What Are the Common Mistakes When Using Multilingual Local LLMs?',
           faqs: [
             {
@@ -202,13 +199,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       toc: [
         { label: 'Puntos clave', anchor: '#key-takeaways' },
         { label: '¿Qué LLM locales admiten varios idiomas?', anchor: '#which-llms-support-multiple-languages' },
-        { label: 'Mejores modelos para idiomas europeos', anchor: '#best-models-for-european-languages' },
-        { label: 'Mejores modelos para idiomas asiáticos', anchor: '#best-models-for-asian-languages' },
-        { label: 'Mejores modelos para árabe y lenguas de Oriente Medio', anchor: '#best-models-for-arabic' },
-        { label: 'Cómo evaluar la calidad multilingue', anchor: '#how-to-benchmark-multilingual-quality' },
-        { label: 'Tabla comparativa multilingue', anchor: '#multilingual-comparison-table' },
         { label: 'Errores comunes con modelos multilingues', anchor: '#common-mistakes' },
-        { label: 'Preguntas frecuentes', anchor: '#common-questions' },
+        { label: 'Preguntas frecuentes', anchor: '#faq' },
       ],
       sections: {
         tldr: {
@@ -227,6 +219,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         whichSupport: {
+          id: 'which-llms-support-multiple-languages',
           title: '¿Qué LLM locales admiten realmente varios idiomas?',
           content: [
             '**"Admitir" un idioma significa más que generar texto en ese idioma.** El soporte multilingue real requiere: datos de entrenamiento en el idioma (no solo traducción), tokenización optimizada para el script del idioma, y ajuste fino en el seguimiento de instrucciones en ese idioma.',
@@ -302,6 +295,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           imageCaption: 'Comparativa de LLM multilingues 2026: Qwen3 8B lidera en todos los idiomas asiáticos (chino, japonés, coreano con valoraciones ★★★★-★★★★★). Mistral Small iguala a Qwen3 en idiomas europeos (francés/alemán). Valoraciones en estrellas (1-5) reflejan benchmarks 2026.',
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: '¿Cuáles son los errores comunes al usar LLM locales multilingues?',
           faqs: [
             {
@@ -539,13 +533,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       toc: [
         { label: 'النقاط الرئيسية', anchor: '#key-takeaways' },
         { label: 'أي نماذج LLM المحلية تدعم عدة لغات؟', anchor: '#which-llms-support-multiple-languages' },
-        { label: 'أفضل النماذج للغات الأوروبية', anchor: '#best-models-for-european-languages' },
-        { label: 'أفضل النماذج للغات الآسيوية', anchor: '#best-models-for-asian-languages' },
-        { label: 'أفضل النماذج للعربية ولغات الشرق الأوسط', anchor: '#best-models-for-arabic' },
-        { label: 'كيفية تقييم الجودة متعددة اللغات', anchor: '#how-to-benchmark-multilingual-quality' },
-        { label: 'جدول المقارنة متعدد اللغات', anchor: '#multilingual-comparison-table' },
         { label: 'أخطاء شائعة مع النماذج متعددة اللغات', anchor: '#common-mistakes' },
-        { label: 'الأسئلة الشائعة', anchor: '#common-questions' },
+        { label: 'الأسئلة الشائعة', anchor: '#faq' },
       ],
       sections: {
         tldr: {
@@ -564,6 +553,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         whichSupport: {
+          id: 'which-llms-support-multiple-languages',
           title: 'أي نماذج LLM المحلية تدعم فعلًا عدة لغات؟',
           content: [
             '**"دعم" لغة يعني أكثر من توليد نص بتلك اللغة.** الدعم الحقيقي متعدد اللغات يتطلب: بيانات تدريب باللغة (لا مجرد ترجمة)، وترميزًا محسّنًا لنص اللغة، وضبطًا دقيقًا على اتباع التعليمات بتلك اللغة.',
@@ -639,6 +629,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           imageCaption: 'مقارنة نماذج LLM متعددة اللغات 2026: Qwen3 8B يتصدر في جميع اللغات الآسيوية (الصينية، اليابانية، الكورية بتقييمات ★★★★-★★★★★). Mistral Small يضاهي Qwen3 في اللغات الأوروبية (الفرنسية/الألمانية). تقييمات النجوم (1-5) تعكس اختبارات أداء 2026.',
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'ما الأخطاء الشائعة عند استخدام نماذج LLM المحلية متعددة اللغات؟',
           faqs: [
             {
@@ -876,11 +867,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       toc: [
         { label: 'Pontos principais', anchor: '#key-takeaways' },
         { label: 'Quais LLMs locais suportam vários idiomas?', anchor: '#which-llms-support-multiple-languages' },
-        { label: 'Melhores modelos para idiomas europeus', anchor: '#best-models-for-european-languages' },
-        { label: 'Melhores modelos para idiomas asiáticos', anchor: '#best-models-for-asian-languages' },
-        { label: 'Melhores modelos para árabe e línguas do Oriente Médio', anchor: '#best-models-for-arabic' },
-        { label: 'Como avaliar a qualidade multilíngue', anchor: '#how-to-benchmark-multilingual-quality' },
-        { label: 'Tabela comparativa multilíngue', anchor: '#multilingual-comparison-table' },
         { label: 'Erros comuns com modelos multilíngues', anchor: '#common-mistakes' },
         { label: 'Perguntas frequentes', anchor: '#common-questions' },
       ],
@@ -902,6 +888,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         whichSupport: {
+          id: 'which-llms-support-multiple-languages',
           title: 'Quais LLMs locais realmente suportam vários idiomas?',
           content: [
             '**"Suportar" um idioma significa mais do que gerar texto nesse idioma.** O suporte multilíngue real requer: dados de treinamento no idioma (não apenas tradução), tokenização otimizada para o script do idioma, e ajuste fino no seguimento de instruções nesse idioma.',
@@ -985,6 +972,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           columns: ['Idioma', 'Qwen3 8B', 'Llama 3.1 8B', 'Mistral Small', 'Gemma 4 E2B'],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Erros comuns com modelos multilíngues',
           items: [
             '**Assumir que qualquer LLM suporta bem todos os idiomas.** O Llama 3.1 8B tem suporte limitado ao japonês, coreano e árabe — para esses idiomas, use Qwen3 ou Gemma 4.',
@@ -1056,7 +1044,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       educationalLevel: 'Intermediate',
       primaryTerm: 'Multilingual LLM',
       toc: [
-        { label: 'Zusammenfassung', anchor: '#tldr' },
+        { label: 'Zusammenfassung', anchor: '#key-takeaways' },
         { label: 'Welche Sprachen unterstützen lokale LLMs?', anchor: '#which-support' },
         { label: 'Beste lokale LLMs für europäische Sprachen', anchor: '#european' },
         { label: 'Beste lokale LLMs für asiatische Sprachen', anchor: '#asian' },
@@ -1084,6 +1072,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         whichSupport: {
+          id: 'which-support',
           title: 'Welche Sprachen unterstützen lokale LLMs?',
           content: 'Alle modernen lokalen Sprachmodelle (Qwen3, Llama 3.3, Mistral, Gemma) unterstützen mindestens die Top-10-Sprachen nach Sprecherinnen- und Sprecherzahl. Die Unterstützungsqualität variiert jedoch stark: Qwen3 dominiert asiatische Sprachen, während Mistral und Llama bei europäischen Sprachen konkurrieren.',
           columns: ['Sprachfamilie', 'Qwen3 8B', 'Llama 3.1 8B', 'Mistral Small', 'Gemma 4 E2B'],
@@ -1133,6 +1122,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ]
         },
         european: {
+          id: 'european',
           title: 'Beste lokale LLMs für europäische Sprachen',
           content: 'Bei europäischen Sprachen (Französisch, Deutsch, Spanisch, Italienisch) sind **Mistral Small** und **Qwen3 8B** gleichwertig. Mistral hat einen Vorteil bei Französisch und Deutsch; Qwen3 ist bei Spanisch und Italienisch leicht besser. Beide benötigen nur 8 GB VRAM im Q4_K_M-Format.',
           items: [
@@ -1145,6 +1135,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ]
         },
         asian: {
+          id: 'asian',
           title: 'Beste lokale LLMs für asiatische Sprachen',
           content: 'Qwen3 8B dominiert asiatische Sprachen deutlich. Bei Chinesisch, Japanisch und Koreanisch erreicht es 4-5 Sterne, während Llama und Mistral 1-2 Sterne erhalten. Für Unternehmen in Japan, Südkorea oder China ist Qwen3 die einzige praktische Wahl.',
           columns: ['Sprache', 'Qwen3 8B', 'Llama 3.1 8B', 'Mistral Small'],
@@ -1170,10 +1161,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ]
         },
         arabic: {
+          id: 'arabic',
           title: 'Arabische Sprachunterstützung',
           content: 'Arabisch ist für lokale Modelle eine Herausforderung. Qwen3 erreicht 3 Sterne bei Modernes Standardarabisch (MSA), während Llama und Mistral nur 1-2 Sterne erhalten. Dialektales Arabisch (Ägyptisch, Golf-Arabisch) wird von keinem 7B-Modell gut unterstützt; 13B-Modelle oder spezialisierte Modelle sind erforderlich. Für Unternehmen im Nahen Osten: Qwen3 8B ist das beste verfügbare kleine Modell, aber für Produktionsaufgaben sollten Sie 13B-Modelle in Betracht ziehen.'
         },
         howToBenchmark: {
+          id: 'how-to-benchmark',
           title: 'Benchmarking mehrsprachiger LLMs',
           content: 'Benchmarks wie MMLU und JMT-bench messen nur Englisch und Japanisch. Für echte Mehrsprachigkeit testen Sie mit realen Aufgaben: Dokumentzusammenfassung in Ihrer Zielsprache, Domain-spezifische Fragen (Recht, Medizin, Finanzen) und kulturelle Kontextualisierung. Hier sind bewährte Verfahren:',
           numberedItems: [
@@ -1184,6 +1177,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ]
         },
         comparisonTable: {
+          id: 'comparison-table',
           title: 'Vergleichstabelle: Qwen3 vs. Llama vs. Mistral vs. Gemma',
           content: 'Diese Tabelle fasst die Sprachunterstützung zusammen. Bewertungen basieren auf JMT-bench (Japanisch), MMLU (allgemein) und sprachspezifischen Evaluierungen (2026).',
           columns: ['Sprachgruppe', 'Qwen3 8B', 'Llama 3.1 8B', 'Mistral Small', 'Gemma 4 E2B'],
@@ -1235,6 +1229,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           imageCaption: 'Mehrsprachige LLM-Vergleichstabelle 2026: Qwen3 8B dominiert alle asiatischen Sprachen (Chinesisch, Japanisch, Koreanisch mit 4-5 Sternen); Mistral Small konkurriert bei französischen und deutschen Sprachen (4 Sterne). Bewertungen basieren auf JMT-bench, MMLU und sprachspezifischen Evaluierungen.'
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Häufige Fehler bei mehrsprachigen LLMs',
           faqs: [
             {
@@ -1584,7 +1579,7 @@ schema: {
       educationalLevel: 'Intermediate',
       primaryTerm: 'LLM multilingue local',
       toc: [
-        { label: 'Points clés', anchor: '#tldr' },
+        { label: 'Points clés', anchor: '#key-takeaways' },
         { label: 'Quelles langues supportent les LLMs locaux ?', anchor: '#which-support' },
         { label: 'Meilleurs LLMs locaux pour les langues européennes', anchor: '#european' },
         { label: 'Meilleurs LLMs locaux pour les langues asiatiques', anchor: '#asian' },
@@ -1612,6 +1607,7 @@ schema: {
           ],
         },
         whichSupport: {
+          id: 'which-support',
           title: 'Quelles langues supportent les LLMs locaux ?',
           content: 'Tous les modèles locaux modernes (Qwen3, Llama 3.3, Mistral, Gemma) prennent en charge au moins les 10 principales langues par nombre de locuteurs. Cependant, la qualité du support varie considérablement : Qwen3 domine les langues asiatiques, tandis que Mistral et Llama rivalisent sur les langues européennes.',
           columns: ['Groupe linguistique', 'Qwen3 8B', 'Llama 3.1 8B', 'Mistral Small', 'Gemma 4 E2B'],
@@ -1661,6 +1657,7 @@ schema: {
           ]
         },
         european: {
+          id: 'european',
           title: 'Meilleurs LLMs locaux pour les langues européennes',
           content: 'Pour les langues européennes (français, allemand, espagnol, italien), **Mistral Small** et **Qwen3 8B** sont équivalents. Mistral a un avantage sur le français et l\'allemand ; Qwen3 est légèrement meilleur sur l\'espagnol et l\'italien. Les deux nécessitent seulement 8 GB VRAM au format Q4_K_M. Pour la conformité RGPD, Mistral AI étant une entreprise française, elle est recommandée par la CNIL pour le traitement local des données sensibles (financières, médicales, juridiques).',
           items: [
@@ -1673,6 +1670,7 @@ schema: {
           ]
         },
         asian: {
+          id: 'asian',
           title: 'Meilleurs LLMs locaux pour les langues asiatiques',
           content: 'Qwen3 8B domine clairement les langues asiatiques. Pour le chinois, le japonais et le coréen, il obtient 4-5 étoiles, tandis que Llama et Mistral reçoivent 1-2 étoiles. Pour les organisations au Japon, en Corée du Sud ou en Chine, Qwen3 est le seul choix pratique.',
           columns: ['Langue', 'Qwen3 8B', 'Llama 3.1 8B', 'Mistral Small'],
@@ -1698,10 +1696,12 @@ schema: {
           ]
         },
         arabic: {
+          id: 'arabic',
           title: 'Support de la langue arabe',
           content: 'L\'arabe est un défi pour les modèles locaux. Qwen3 obtient 3 étoiles en arabe moderne standard (MSA), tandis que Llama et Mistral n\'obtiennent que 1-2 étoiles. L\'arabe dialectal (égyptien, golfe) n\'est bien soutenu par aucun modèle 7B ; des modèles 13B ou spécialisés sont nécessaires. Pour les organisations au Moyen-Orient : Qwen3 8B est le meilleur petit modèle disponible, mais pour les tâches de production, envisagez des modèles 13B.'
         },
         howToBenchmark: {
+          id: 'how-to-benchmark',
           title: 'Évaluation des LLMs multilingues',
           content: 'Les benchmarks comme MMLU et JMT-bench mesurent uniquement l\'anglais et le japonais. Pour la véritable multilingualité, testez avec des tâches réelles : résumé de documents dans votre langue cible, questions spécifiques au domaine (droit, médecine, finance) et contextualisation culturelle. Voici les meilleures pratiques :',
           numberedItems: [
@@ -1712,6 +1712,7 @@ schema: {
           ]
         },
         comparisonTable: {
+          id: 'comparison-table',
           title: 'Tableau comparatif : Qwen3 vs Llama vs Mistral vs Gemma',
           content: 'Ce tableau résume le support linguistique. Les évaluations sont basées sur JMT-bench (japonais), MMLU (général) et les évaluations spécifiques aux langues (2026).',
           columns: ['Groupe linguistique', 'Qwen3 8B', 'Llama 3.1 8B', 'Mistral Small', 'Gemma 4 E2B'],
@@ -1763,6 +1764,7 @@ schema: {
           imageCaption: 'Tableau de comparaison des LLMs multilingues 2026 : Qwen3 8B domine toutes les langues asiatiques (chinois, japonais, coréen avec 4-5 étoiles) ; Mistral Small rivalise sur les langues françaises et allemandes (4 étoiles). Les évaluations sont basées sur JMT-bench, MMLU et les évaluations spécifiques aux langues.'
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Erreurs courantes avec les LLMs multilingues',
           faqs: [
             {
@@ -2087,7 +2089,7 @@ schema: {
       educationalLevel: 'Intermediate',
       primaryTerm: '多言語ローカルLLM',
       toc: [
-        { label: '重要ポイント', anchor: '#tldr' },
+        { label: '重要ポイント', anchor: '#key-takeaways' },
         { label: 'ローカルLLMはどの言語をサポートしていますか？', anchor: '#which-support' },
         { label: 'ヨーロッパ言語向けベストローカルLLM', anchor: '#european' },
         { label: 'アジア言語向けベストローカルLLM', anchor: '#asian' },
@@ -2115,6 +2117,7 @@ schema: {
           ],
         },
         whichSupport: {
+          id: 'which-support',
           title: 'ローカルLLMはどの言語をサポートしていますか？',
           content: '全ての最新ローカルモデル（Qwen3、Llama 3.3、Mistral、Gemma）は最低限、話者数トップ10言語をサポート。ただしサポート品質は大きく異なる：Qwen3はアジア言語を支配、Mistral と Llama はヨーロッパ言語で競争。',
           columns: ['言語グループ', 'Qwen3 8B', 'Llama 3.1 8B', 'Mistral Small', 'Gemma 4 E2B'],
@@ -2164,6 +2167,7 @@ schema: {
           ]
         },
         european: {
+          id: 'european',
           title: 'ヨーロッパ言語向けベストローカルLLM',
           content: 'フランス語、ドイツ語、スペイン語、イタリア語：**Mistral Small** と **Qwen3 8B** は同等。Mistral はフランス語とドイツ語に優位；Qwen3 はスペイン語とイタリア語で若干優秀。両者とも Q4_K_M で 8GB VRAM のみ必要。日本でのMETI AI統治に続き、ヨーロッパでも地域データセキュリティを重視する傾向が強化。',
           items: [
@@ -2176,6 +2180,7 @@ schema: {
           ]
         },
         asian: {
+          id: 'asian',
           title: 'アジア言語向けベストローカルLLM',
           content: 'Qwen3 8B はアジア言語を圧倒的に支配。中国語、日本語、韓国語で 4-5つ星達成一方、Llama と Mistral は 1-2つ星。日本、韓国、中国の企業にとって Qwen3 が唯一の実用的選択肢。',
           columns: ['言語', 'Qwen3 8B', 'Llama 3.1 8B', 'Mistral Small'],
@@ -2201,10 +2206,12 @@ schema: {
           ]
         },
         arabic: {
+          id: 'arabic',
           title: 'アラビア言語サポート',
           content: 'アラビア語はローカルモデルに課題。Qwen3 は現代標準アラビア語（MSA）で 3つ星、Llama と Mistral は 1-2つ星のみ。方言アラビア語（エジプト、湾岸）は 7B モデルで十分にサポートされず；13B モデル または専門モデル が必要。中東企業向け：Qwen3 8B は最良の小規模モデル、ただしプロダクション用途では 13B モデル を推奨。'
         },
         howToBenchmark: {
+          id: 'how-to-benchmark',
           title: '多言語LLMの評価',
           content: 'MMLU と JMT-bench は英語と日本語のみを測定。真の多言語性を検証するには実タスク（目標言語でのドキュメント要約、ドメイン固有質問、文化コンテキスト化）でテスト。ベストプラクティス：',
           numberedItems: [
@@ -2215,6 +2222,7 @@ schema: {
           ]
         },
         comparisonTable: {
+          id: 'comparison-table',
           title: '比較表：Qwen3 vs Llama vs Mistral vs Gemma',
           content: '本表は言語サポートをまとめ。評価は JMT-bench（日本語）、MMLU（一般）、言語固有評価（2026）に基づく。',
           columns: ['言語グループ', 'Qwen3 8B', 'Llama 3.1 8B', 'Mistral Small', 'Gemma 4 E2B'],
@@ -2266,6 +2274,7 @@ schema: {
           imageCaption: '多言語LLM比較表 2026：Qwen3 8B はすべてのアジア言語を支配（中国語・日本語・韓国語で4-5つ星）；Mistral Small はフランス語・ドイツ語で競争（4つ星）。評価は JMT-bench、MMLU、言語固有評価に基づく。'
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: '多言語LLM使用時の一般的なミス',
           faqs: [
             {
@@ -2597,13 +2606,8 @@ schema: {
       toc: [
         { label: '核心要点', anchor: '#key-takeaways' },
         { label: '哪些本地LLM实际支持多种语言？', anchor: '#which-llms-support-multiple-languages' },
-        { label: '欧洲语言的最佳模型', anchor: '#best-models-for-european-languages' },
-        { label: '日语、韩语和中文的最佳模型', anchor: '#best-models-for-asian-languages' },
-        { label: '阿拉伯语和中东语言的最佳模型', anchor: '#best-models-for-arabic' },
-        { label: '如何对多语言质量进行基准测试', anchor: '#how-to-benchmark-multilingual-quality' },
-        { label: '多语言本地LLM比较表', anchor: '#multilingual-comparison-table' },
         { label: '使用多语言模型的常见错误', anchor: '#common-mistakes' },
-        { label: '常见问题', anchor: '#common-questions' },
+        { label: '常见问题', anchor: '#faq' },
       ],
       sections: {
         tldr: {
@@ -2622,6 +2626,7 @@ schema: {
           ],
         },
         whichSupport: {
+          id: 'which-llms-support-multiple-languages',
           title: '哪些本地LLM实际支持多种语言？',
           content: '所有主流本地模型（Qwen3、Llama 3.3、Mistral、Gemma）至少支持前10大语言。但支持质量差异很大：Qwen3主导亚洲语言，Mistral和Llama在欧洲语言上具有竞争力。',
           columns: ['语言组', 'Qwen3 8B', 'Llama 3.1 8B', 'Mistral Small', 'Gemma 4 E2B'],
@@ -2686,6 +2691,7 @@ schema: {
           imageCaption: '多语言LLM对比2026：Qwen3 8B主导所有亚洲语言（中文5星，日语/韩语4星）；Mistral Small在法语/德语上竞争（4星）。评级基于JMT-bench、MMLU及语言专项评估。'
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: '使用多语言本地LLM时的常见错误',
           faqs: [
             {
@@ -2812,13 +2818,8 @@ schema: {
       toc: [
         { label: '핵심 요약', anchor: '#key-takeaways' },
         { label: '다국어를 지원하는 로컬 LLM은 무엇입니까?', anchor: '#which-llms-support-multiple-languages' },
-        { label: '유럽 언어에 최적화된 모델', anchor: '#best-models-for-european-languages' },
-        { label: '아시아 언어에 최적화된 모델', anchor: '#best-models-for-asian-languages' },
-        { label: '아랍어 및 중동 언어에 최적화된 모델', anchor: '#best-models-for-arabic' },
-        { label: '다국어 품질 벤치마크 방법', anchor: '#how-to-benchmark-multilingual-quality' },
-        { label: '다국어 비교표', anchor: '#multilingual-comparison-table' },
         { label: '다국어 모델 사용 시 흔한 실수', anchor: '#common-mistakes' },
-        { label: '자주 묻는 질문', anchor: '#common-questions' },
+        { label: '자주 묻는 질문', anchor: '#faq' },
       ],
       sections: {
         tldr: {
@@ -2837,6 +2838,7 @@ schema: {
           ],
         },
         whichSupport: {
+          id: 'which-llms-support-multiple-languages',
           title: '실제로 다국어를 지원하는 로컬 LLM은 무엇입니까?',
           content: [
             '**언어를 "지원"한다는 것은 단순히 해당 언어로 텍스트를 생성하는 것 이상을 의미합니다.** 진정한 다국어 지원을 위해서는 해당 언어의 학습 데이터(번역이 아닌 원문), 해당 언어의 문자 체계에 최적화된 토크나이저, 해당 언어에서의 명령 수행에 대한 파인튜닝이 필요합니다.',
@@ -2912,6 +2914,7 @@ schema: {
           imageCaption: '2026년 다국어 LLM 비교: Qwen3 8B는 모든 아시아 언어(중국어, 일본어, 한국어에서 ★★★★~★★★★★)에서 선두를 차지합니다. Mistral Small은 유럽 언어(프랑스어/독일어)에서 Qwen3에 필적합니다. 별점(1~5)은 2026년 벤치마크를 기반으로 합니다.',
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: '다국어 로컬 LLM 사용 시 흔한 실수는 무엇입니까?',
           faqs: [
             {

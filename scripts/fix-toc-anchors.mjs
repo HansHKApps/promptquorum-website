@@ -120,12 +120,19 @@ function sectionIndexForAnchor(body, sections, anchor) {
   return candidates.length === 1 ? candidates[0] : -1
 }
 
-/** The `id:` this section already declares, if any. */
+/**
+ * The `id:` this section already declares, if any.
+ *
+ * Not all sections are pretty-printed — plenty are written with every property on the
+ * line after the opening brace — so this looks at the head of the section body rather
+ * than for an indented `id:` on its own line. Missing one of these produced duplicate
+ * `id` keys, which TypeScript rejects outright.
+ */
 function explicitId(body, sections, i) {
   const from = sections[i].at
   const to = i + 1 < sections.length ? sections[i + 1].at : body.length
-  const re = new RegExp(`\\n${sections[i].indent}  id:\\s*'([^']+)'`)
-  return body.slice(from, to).match(re)?.[1] ?? null
+  const head = body.slice(from, Math.min(to, from + 400))
+  return head.match(/[{,]\s*id:\s*'([^']+)'/)?.[1] ?? null
 }
 
 let addedIds = 0

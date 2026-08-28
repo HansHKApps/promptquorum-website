@@ -28,8 +28,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: 'The Signal-to-Noise Problem', anchor: 'signal-noise' },
         { label: 'How to Write Prompts for AI Code Review', anchor: 'prompts' },
         { label: 'The Code Review Prompt Framework', anchor: 'framework' },
-        { label: 'Bad vs Good Prompts', anchor: 'bad-vs-good' },
-        { label: 'Chain-of-Thought for Complex Logic', anchor: 'cot' },
         { label: 'Security-Focused AI Code Review', anchor: 'security' },
         { label: 'AI Bug Triaging', anchor: 'bug-triaging' },
         { label: 'Context Window and Codebase Coverage', anchor: 'context' },
@@ -192,6 +190,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         definition: {
+          id: 'what-it-does',
           title: 'What AI Code Review Actually Does',
           content: [
             'AI code review tools analyse pull requests, detect logic bugs, flag security vulnerabilities, enforce coding standards, and generate actionable fix suggestions — operating in seconds rather than the hours required for manual peer review.',
@@ -201,6 +200,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         toolComparison: {
+          id: 'tools',
           title: 'AI Code Review Tools: Which One to Use',
           content: [
             'CodeRabbit leads the market with 2 million+ connected repositories and 13 million+ PRs processed; GitHub Copilot Code Review is the lowest-friction entry point for teams already on GitHub; Greptile achieves the highest bug detection rate through full-codebase indexing.',
@@ -222,6 +222,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         signalToNoise: {
+          id: 'signal-noise',
           title: 'Why Is Signal-to-Noise a Problem in AI Code Review?',
           content: [
             'AI code review tools currently catch style issues at near-100% accuracy while catching critical runtime bugs at 42–46% — creating a comment volume problem that causes developer adoption collapse.',
@@ -236,6 +237,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         promptStructure: {
+          id: 'prompts',
           title: 'How to Write Prompts for AI Code Review',
           content: [
             'Scoped, context-rich prompts — specifying language, framework, review priorities, and output format — reduce false positives and improve signal quality; vague prompts like "review this code" produce generic, high-noise output.',
@@ -246,6 +248,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         promptFramework: {
+          id: 'framework',
           title: 'What Is the Code Review Prompt Framework?',
           content: [
             'Use this structure for any AI code review request:',
@@ -290,6 +293,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         security: {
+          id: 'security',
           title: 'How Do You Perform Security-Focused AI Code Review?',
           content: [
             'AI-powered SAST (Static Application Security Testing) tools trained on real-world vulnerability datasets achieve bug detection scores of 84–92 out of 100 on AI-generated code — compared to 65% accuracy for rule-based methods and 94% for transformer-based models in deep learning benchmarks.',
@@ -314,6 +318,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         bugTriaging: {
+          id: 'bug-triaging',
           title: 'What Is AI Bug Triaging?',
           content: [
             'AI-powered bug triaging achieves 85–90% accuracy in severity classification — compared to 60–70% for manual methods — while reducing triage time by 65% and cutting false positives by up to 60%.',
@@ -326,6 +331,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         contextWindow: {
+          id: 'context',
           title: 'Why Does Context Window Size Determine Codebase Coverage?',
           content: [
             'A model\'s context window determines how much of your codebase it can analyse simultaneously — the difference between reviewing a single file, a full PR diff, and an entire repository determines which bugs are detectable.',
@@ -342,6 +348,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         globalContext: {
+          id: 'regional',
           title: 'How Do Regional Regulations Affect AI Code Review?',
           content: [
             'European enterprises sending source code to external AI APIs must conduct a Data Protection Impact Assessment (DPIA) under GDPR Article 35 before deployment — source code containing personal data processing logic is classified as high-risk automated processing. The CNIL (France\'s data protection authority) confirmed in January 2026 that both GDPR and the EU AI Act apply simultaneously to AI-assisted code review when personal data is processed. European enterprises are paralysed between AI adoption and regulatory compliance risk — €1.2 billion in GDPR fines were levied in 2024, including a €30.5 million penalty against Clearview AI.',
@@ -365,6 +372,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         howToStart: {
+          id: 'how-to',
           title: 'How to Use AI for Code Review',
           numberedItems: [
             '**Brief the AI on your codebase architecture, naming conventions, and constraints before asking it to review code.** Provide a short context doc: \'This is a Next.js app. We use TypeScript strict mode, no `any` types, all components must have JSDoc, all API endpoints must have rate limiting.\' Without this, the AI makes generic comments that miss project-specific issues.',
@@ -376,6 +384,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Common Mistakes in AI Code Review',
           mistakes: [
             {
@@ -457,6 +466,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         sources: {
+          id: 'sources',
           title: 'Sources & Further Reading',
           items: [
             '[Graphite, 2025. "Effective prompt engineering for AI code reviews"](https://graphite.com/guides/effective-prompt-engineering-ai-code-reviews) — technical guide to scoped prompts for reducing false positives and improving signal',
@@ -485,15 +495,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: 'Was KI Code Review wirklich tut', anchor: 'what-it-does' },
         { label: 'KI Code Review Tools Vergleich', anchor: 'tools' },
         { label: 'Das Signal-Rausch-Problem', anchor: 'signal-noise' },
-        { label: 'Prompts für KI Code Review schreiben', anchor: 'prompts' },
         { label: 'Das Code Review Prompt Framework', anchor: 'framework' },
-        { label: 'Schlechte vs. gute Prompts', anchor: 'bad-vs-good' },
-        { label: 'Chain-of-Thought für komplexe Logik', anchor: 'cot' },
         { label: 'Sicherheitsorientierte KI Code Review', anchor: 'security' },
         { label: 'KI Bug Triaging', anchor: 'bug-triaging' },
         { label: 'Context Window und Codebase Abdeckung', anchor: 'context' },
         { label: 'Globale und regionale Überlegungen', anchor: 'regional' },
-        { label: 'Wie man KI für Code Review nutzt', anchor: 'how-to' },
         { label: 'Weiterführende Literatur', anchor: 'related-reading' },
         { label: 'FAQ', anchor: 'faq' },
         { label: 'Quellen', anchor: 'sources' },
@@ -513,6 +519,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         definition: {
+          id: 'what-it-does',
           title: 'Was KI Code Review wirklich tut',
           content: [
             'KI Code Review Tools analysieren Pull Requests, erkennen Logik-Bugs, kennzeichnen Sicherheitsschwachstellen, erzwingen Coding Standards und generieren actionable Fix-Vorschläge — arbeiten in Sekunden statt der Stunden für manuelle Peer Reviews.',
@@ -521,6 +528,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         toolComparison: {
+          id: 'tools',
           title: 'KI Code Review Tools: Welches man verwenden sollte',
           content: [
             'CodeRabbit führt den Markt mit 2 Millionen+ verbundenen Repositories an; GitHub Copilot Code Review ist der am wenigsten frikative Einstiegspunkt; Greptile erreicht die höchste Bug-Erkennungsrate durch vollständige Codebase-Indexierung.',
@@ -536,6 +544,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           tableFormat: true,
         },
         signalToNoise: {
+          id: 'signal-noise',
           title: 'Warum ist Signal-Rausch-Verhältnis ein Problem?',
           content: [
             'KI Code Review Tools erkennen Stil-Probleme mit nahezu 100% Genauigkeit, während sie kritische Runtime-Bugs mit 42–46% erkennen — ein Kommentar-Volumen-Problem.',
@@ -544,6 +553,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         promptFramework: {
+          id: 'framework',
           title: 'Das Code Review Prompt Framework',
           content: ['Verwenden Sie diese Struktur für jede KI Code Review Anfrage:'],
           items: [
@@ -562,6 +572,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         security: {
+          id: 'security',
           title: 'Wie führt man sicherheitsorientierte KI Code Review durch?',
           content: [
             'KI-powered SAST (Static Application Security Testing) Tools, die auf realen Schwachstelle-Datensätzen trainiert sind, erreichen Bug-Erkennungswerte von 84–92 aus 100 für KI-generierten Code — verglichen mit 65% Genauigkeit für regelbasierte Methoden.',
@@ -576,6 +587,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           tableFormat: true,
         },
         bugTriaging: {
+          id: 'bug-triaging',
           title: 'Was ist KI Bug Triaging?',
           content: [
             'KI-powered Bug Triaging erreicht 85–90% Genauigkeit bei Schweregrad-Klassifizierung — verglichen mit 60–70% für manuelle Methoden — während Triaging-Zeit um 65% reduziert wird.',
@@ -583,6 +595,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         contextWindow: {
+          id: 'context',
           title: 'Warum bestimmt Context Window Größe die Codebase Abdeckung?',
           content: [
             'Ein Modells Context Window bestimmt, wie viel Ihrer Codebase es gleichzeitig analysieren kann — der Unterschied zwischen der Überprüfung einer einzelnen Datei, eines vollständigen PR diff und eines gesamten Repositories bestimmt, welche Bugs erkennbar sind.',
@@ -597,6 +610,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           tableFormat: true,
         },
         globalContext: {
+          id: 'regional',
           title: 'Wie beeinflussen regionale Vorschriften KI Code Review?',
           content: [
             '**EU / GDPR** — Europäische Unternehmen, die Quellcode an externe KI APIs senden, müssen eine Datenschutz-Folgenabschätzung (DPIA) unter GDPR Artikel 35 durchführen. Die CNIL (Frankreichs Datenschutzbehörde) bestätigte im Januar 2026, dass sowohl GDPR als auch das EU-KI-Gesetz gleichzeitig auf KI-unterstützte Code Review anwendbar sind. Für EU-Teams bieten CodeRabbit und Augment Code On-Premise/Self-Hosted-Bereitstellung für Teams mit 500+ Sitzen an.',
@@ -605,6 +619,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Weiterführende Literatur',
           items: [
             '[Schreiben Sie besseren Code mit KI](/de/prompt-engineering/write-better-code-with-ai) — wie Prompts für Code-Generierung strukturiert werden',
@@ -638,6 +653,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Quellen & Weiterführende Lesung',
           items: [
             '[Graphite, 2025. "Effective prompt engineering for AI code reviews"]',
@@ -711,8 +727,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: 'El problema señal/ruido', anchor: 'signal-noise' },
         { label: 'Cómo escribir prompts para revisión de código con IA', anchor: 'prompts' },
         { label: 'El framework de prompts para revisión de código', anchor: 'framework' },
-        { label: 'Prompts malos vs. buenos', anchor: 'bad-vs-good' },
-        { label: 'Chain-of-Thought para lógica compleja', anchor: 'cot' },
         { label: 'Revisión de código con IA enfocada en seguridad', anchor: 'security' },
         { label: 'Triaje de bugs con IA', anchor: 'bug-triaging' },
         { label: 'Ventana de contexto y cobertura del código base', anchor: 'context' },
@@ -878,6 +892,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         definition: {
+          id: 'what-it-does',
           title: 'Qué hace realmente la revisión de código con IA',
           content: [
             'Las herramientas de revisión de código con IA analizan pull requests, detectan bugs de lógica, señalan vulnerabilidades de seguridad, aplican estándares de codificación y generan sugerencias de corrección accionables — funcionando en segundos en lugar de las horas que requiere la revisión manual por pares.',
@@ -887,6 +902,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         toolComparison: {
+          id: 'tools',
           title: 'Herramientas de revisión de código con IA: cuál usar',
           content: [
             'CodeRabbit lidera el mercado con más de 2 millones de repositorios conectados y más de 13 millones de PRs procesados; GitHub Copilot Code Review es el punto de entrada con menor fricción para equipos que ya usan GitHub; Greptile alcanza la mayor tasa de detección de bugs mediante indexación completa del código base.',
@@ -907,6 +923,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         signalToNoise: {
+          id: 'signal-noise',
           title: '¿Por qué la relación señal/ruido es un problema en la revisión de código con IA?',
           content: [
             'Las herramientas de revisión de código con IA actualmente detectan problemas de estilo con una precisión cercana al 100 % mientras detectan bugs críticos en tiempo de ejecución al 42–46 % — creando un problema de volumen de comentarios que provoca el colapso de la adopción por parte de los desarrolladores.',
@@ -921,6 +938,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         promptStructure: {
+          id: 'prompts',
           title: 'Cómo escribir prompts para revisión de código con IA',
           content: [
             'Los prompts acotados y con contexto rico — que especifican lenguaje, framework, prioridades de revisión y formato de salida — reducen los falsos positivos y mejoran la calidad de la señal; los prompts vagos como "revisa este código" producen salidas genéricas con mucho ruido.',
@@ -931,6 +949,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         promptFramework: {
+          id: 'framework',
           title: '¿Cuál es el framework de prompts para revisión de código?',
           content: [
             'Usa esta estructura para cualquier solicitud de revisión de código con IA:',
@@ -975,6 +994,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         security: {
+          id: 'security',
           title: '¿Cómo se realiza una revisión de código con IA enfocada en seguridad?',
           content: [
             'Las herramientas SAST (Static Application Security Testing) impulsadas por IA entrenadas en conjuntos de datos de vulnerabilidades reales logran puntuaciones de detección de bugs de 84–92 sobre 100 en código generado por IA — en comparación con el 65 % de precisión para métodos basados en reglas y el 94 % para modelos basados en transformadores en benchmarks de aprendizaje profundo.',
@@ -999,6 +1019,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         bugTriaging: {
+          id: 'bug-triaging',
           title: '¿Qué es el triaje de bugs con IA?',
           content: [
             'El triaje de bugs impulsado por IA logra entre el 85 y el 90 % de precisión en clasificación de gravedad — en comparación con el 60–70 % para métodos manuales — mientras reduce el tiempo de triaje en un 65 % y recorta los falsos positivos hasta en un 60 %.',
@@ -1011,6 +1032,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         contextWindow: {
+          id: 'context',
           title: '¿Por qué el tamaño de la ventana de contexto determina la cobertura del código base?',
           content: [
             'La ventana de contexto de un modelo determina cuánto de tu código base puede analizar simultáneamente — la diferencia entre revisar un solo archivo, un diff de PR completo y todo un repositorio determina qué bugs son detectables.',
@@ -1027,6 +1049,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         globalContext: {
+          id: 'regional',
           title: '¿Cómo afectan las regulaciones regionales a la revisión de código con IA?',
           content: [
             'Las empresas europeas que envían código fuente a APIs de IA externas deben realizar una Evaluación de Impacto de Protección de Datos (EIPD) bajo el Artículo 35 del RGPD antes del despliegue — el código fuente que contiene lógica de procesamiento de datos personales se clasifica como procesamiento automatizado de alto riesgo. La CNIL (autoridad francesa de protección de datos) confirmó en enero de 2026 que tanto el RGPD como la Ley de IA de la UE se aplican simultáneamente a la revisión de código asistida por IA cuando se procesan datos personales. Para equipos de la UE, CodeRabbit y Augment Code ofrecen despliegue on-premise/autohospedado para equipos de 500+ puestos.',
@@ -1036,6 +1059,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         relatedReading: {
+          id: 'related-reading',
           title: 'Lectura relacionada',
           items: [
             '[Escribe mejor código con IA](/es/prompt-engineering/write-better-code-with-ai) — cómo estructurar prompts para generación de código que produce salidas revisables',
@@ -1050,6 +1074,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         howToStart: {
+          id: 'how-to',
           title: 'Cómo usar IA para revisión de código',
           numberedItems: [
             '**Informa a la IA sobre la arquitectura de tu código base, convenciones de nombres y restricciones antes de pedirle que revise código.** Proporciona un documento de contexto breve: "Esta es una app Next.js. Usamos TypeScript en modo estricto, sin tipos `any`, todos los componentes deben tener JSDoc, todos los endpoints API deben tener limitación de tasa." Sin esto, la IA hace comentarios genéricos que pierden problemas específicos del proyecto.',
@@ -1061,6 +1086,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Errores comunes en la revisión de código con IA',
           mistakes: [
             {
@@ -1142,6 +1168,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         sources: {
+          id: 'sources',
           title: 'Fuentes y lecturas adicionales',
           items: [
             '[Graphite, 2025. "Effective prompt engineering for AI code reviews"](https://graphite.com/guides/effective-prompt-engineering-ai-code-reviews) — guía técnica de prompts acotados para reducir falsos positivos y mejorar la señal',
@@ -1168,8 +1195,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: 'مشكلة نسبة الإشارة إلى الضوضاء', anchor: 'signal-noise' },
         { label: 'كيفية كتابة تعليمات لمراجعة الكود بالذكاء الاصطناعي', anchor: 'prompts' },
         { label: 'إطار تعليمات مراجعة الكود', anchor: 'framework' },
-        { label: 'التعليمات السيئة مقابل الجيدة', anchor: 'bad-vs-good' },
-        { label: 'سلسلة التفكير للمنطق المعقد', anchor: 'cot' },
         { label: 'مراجعة الكود بالذكاء الاصطناعي المركَّزة على الأمان', anchor: 'security' },
         { label: 'فرز الأخطاء بالذكاء الاصطناعي', anchor: 'bug-triaging' },
         { label: 'نافذة السياق وتغطية قاعدة الكود', anchor: 'context' },
@@ -1335,6 +1360,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         definition: {
+          id: 'what-it-does',
           title: 'ما تفعله مراجعة الكود بالذكاء الاصطناعي فعليًا',
           content: [
             'تحلل أدوات مراجعة الكود بالذكاء الاصطناعي طلبات السحب وتكتشف أخطاء المنطق وتُشير إلى ثغرات الأمان وتُطبِّق معايير الترميز وتولِّد اقتراحات إصلاح قابلة للتنفيذ — تعمل في ثوانٍ بدلًا من الساعات التي تتطلبها المراجعة اليدوية من الأقران.',
@@ -1344,6 +1370,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         toolComparison: {
+          id: 'tools',
           title: 'أدوات مراجعة الكود بالذكاء الاصطناعي: أيها تستخدم',
           content: [
             'CodeRabbit يتصدر السوق بأكثر من 2 مليون مستودع متصل وأكثر من 13 مليون طلب سحب معالَج؛ GitHub Copilot Code Review هو نقطة الدخول الأقل احتكاكًا للفرق التي تستخدم GitHub بالفعل؛ Greptile يحقق أعلى معدل اكتشاف أخطاء من خلال فهرسة قاعدة الكود الكاملة.',
@@ -1364,6 +1391,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         signalToNoise: {
+          id: 'signal-noise',
           title: 'لماذا نسبة الإشارة إلى الضوضاء مشكلة في مراجعة الكود بالذكاء الاصطناعي؟',
           content: [
             'تكتشف أدوات مراجعة الكود بالذكاء الاصطناعي حاليًا مشكلات الأسلوب بدقة قريبة من 100٪ بينما تكتشف الأخطاء الحرجة في وقت التشغيل بنسبة 42-46٪ — مما يُفرز مشكلة حجم تعليقات تُسبِّب انهيار التبني من المطورين.',
@@ -1378,6 +1406,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         promptStructure: {
+          id: 'prompts',
           title: 'كيفية كتابة تعليمات لمراجعة الكود بالذكاء الاصطناعي',
           content: [
             'التعليمات ذات النطاق المحدد والسياق الغني — التي تُحدِّد اللغة والإطار وأولويات المراجعة وتنسيق المخرجات — تُقلِّل النتائج الإيجابية الكاذبة وتُحسِّن جودة الإشارة؛ التعليمات الغامضة مثل "راجع هذا الكود" تُنتج مخرجات عامة مع ضوضاء كثيرة.',
@@ -1388,6 +1417,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         promptFramework: {
+          id: 'framework',
           title: 'ما هو إطار التعليمات لمراجعة الكود؟',
           content: [
             'استخدم هذا الهيكل لأي طلب مراجعة كود بالذكاء الاصطناعي:',
@@ -1432,6 +1462,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         security: {
+          id: 'security',
           title: 'كيف تُجري مراجعة كود بالذكاء الاصطناعي مركَّزة على الأمان؟',
           content: [
             'أدوات SAST المدعومة بالذكاء الاصطناعي المُدرَّبة على مجموعات بيانات الثغرات الحقيقية تحقق درجات اكتشاف أخطاء 84-92 من 100 في الكود المولَّد بالذكاء الاصطناعي — مقارنةً بدقة 65٪ للأساليب القائمة على القواعد و94٪ للنماذج القائمة على المحوِّل في معايير التعلم العميق.',
@@ -1456,6 +1487,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         bugTriaging: {
+          id: 'bug-triaging',
           title: 'ما هو فرز الأخطاء بالذكاء الاصطناعي؟',
           content: [
             'يحقق فرز الأخطاء المدعوم بالذكاء الاصطناعي دقة 85 إلى 90٪ في تصنيف الخطورة — مقارنةً بـ 60-70٪ للأساليب اليدوية — مع تقليل وقت الفرز بنسبة 65٪ وخفض النتائج الإيجابية الكاذبة بما يصل إلى 60٪.',
@@ -1468,6 +1500,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         contextWindow: {
+          id: 'context',
           title: 'لماذا يُحدِّد حجم نافذة السياق تغطية قاعدة الكود؟',
           content: [
             'تُحدِّد نافذة سياق النموذج مقدار كودك الذي يستطيع تحليله في وقت واحد — الفرق بين مراجعة ملف واحد وفرق طلب سحب كامل ومستودع كامل يُحدِّد ما هو قابل للاكتشاف من الأخطاء.',
@@ -1484,6 +1517,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         globalContext: {
+          id: 'regional',
           title: 'كيف تؤثر اللوائح الإقليمية على مراجعة الكود بالذكاء الاصطناعي؟',
           content: [
             'الشركات الأوروبية التي ترسل الكود المصدري إلى واجهات API خارجية للذكاء الاصطناعي يجب أن تُجري تقييم تأثير حماية البيانات (DPIA) بموجب المادة 35 من GDPR قبل النشر — الكود المصدري الذي يحتوي منطق معالجة البيانات الشخصية يُصنَّف كمعالجة آلية عالية المخاطر. أكدت CNIL (هيئة حماية البيانات الفرنسية) في يناير 2026 أن كلًا من GDPR وقانون الذكاء الاصطناعي الأوروبي ينطبقان في وقت واحد على مراجعة الكود المدعومة بالذكاء الاصطناعي حين تُعالَج البيانات الشخصية. لفرق الاتحاد الأوروبي، تقدم CodeRabbit وAugment Code نشرًا داخليًا/ذاتي الاستضافة للفرق التي تضم 500+ مقعد.',
@@ -1493,6 +1527,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         relatedReading: {
+          id: 'related-reading',
           title: 'قراءة ذات صلة',
           items: [
             '[اكتب كودًا أفضل بالذكاء الاصطناعي](/ar/prompt-engineering/write-better-code-with-ai) — كيفية هيكلة التعليمات لتوليد الكود الذي ينتج مخرجات قابلة للمراجعة',
@@ -1507,6 +1542,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         howToStart: {
+          id: 'how-to',
           title: 'كيفية استخدام الذكاء الاصطناعي لمراجعة الكود',
           numberedItems: [
             '**أبلغ الذكاء الاصطناعي بمعمارية قاعدة الكود واصطلاحات التسمية والقيود قبل طلبه مراجعة الكود.** قدِّم وثيقة سياق موجزة: "هذا تطبيق Next.js. نستخدم TypeScript في الوضع الصارم، بلا أنواع `any`، يجب أن تحتوي جميع المكونات على JSDoc، يجب أن تحتوي جميع نقاط نهاية API على تحديد للمعدل." بدون ذلك، يقدم الذكاء الاصطناعي تعليقات عامة تفوِّت المشكلات الخاصة بالمشروع.',
@@ -1518,6 +1554,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'الأخطاء الشائعة في مراجعة الكود بالذكاء الاصطناعي',
           mistakes: [
             {
@@ -1599,6 +1636,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         sources: {
+          id: 'sources',
           title: 'المصادر والقراءات الإضافية',
           items: [
             '[Graphite, 2025. "Effective prompt engineering for AI code reviews"](https://graphite.com/guides/effective-prompt-engineering-ai-code-reviews) — دليل تقني للتعليمات ذات النطاق المحدد لتقليل النتائج الإيجابية الكاذبة وتحسين الإشارة',
@@ -1624,8 +1662,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: 'O problema sinal/ruído', anchor: 'signal-noise' },
         { label: 'Como escrever prompts para revisão de código com IA', anchor: 'prompts' },
         { label: 'O framework de prompts para revisão de código', anchor: 'framework' },
-        { label: 'Prompts ruins vs. bons', anchor: 'bad-vs-good' },
-        { label: 'Chain-of-Thought para lógica complexa', anchor: 'cot' },
         { label: 'Revisão de código com IA focada em segurança', anchor: 'security' },
         { label: 'Triagem de bugs com IA', anchor: 'bug-triaging' },
         { label: 'Janela de contexto e cobertura da base de código', anchor: 'context' },
@@ -1791,6 +1827,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         definition: {
+          id: 'what-it-does',
           title: 'O que a revisão de código com IA realmente faz',
           content: [
             'As ferramentas de revisão de código com IA analisam pull requests, detectam bugs de lógica, sinalizam vulnerabilidades de segurança, aplicam padrões de codificação e geram sugestões de correção acionáveis — operando em segundos em vez das horas exigidas pela revisão manual por pares.',
@@ -1800,6 +1837,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         toolComparison: {
+          id: 'tools',
           title: 'Ferramentas de revisão de código com IA: qual usar',
           content: [
             'CodeRabbit lidera o mercado com mais de 2 milhões de repositórios conectados e mais de 13 milhões de PRs processados; GitHub Copilot Code Review é o ponto de entrada com menor atrito para equipes que já usam GitHub; Greptile atinge a maior taxa de detecção de bugs mediante indexação completa da base de código.',
@@ -1820,6 +1858,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         signalToNoise: {
+          id: 'signal-noise',
           title: 'Por que a relação sinal/ruído é um problema na revisão de código com IA?',
           content: [
             'As ferramentas de revisão de código com IA atualmente detectam problemas de estilo com precisão próxima a 100% enquanto detectam bugs críticos em tempo de execução com 42–46% — criando um problema de volume de comentários que provoca o colapso da adoção por desenvolvedores.',
@@ -1834,6 +1873,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         promptStructure: {
+          id: 'prompts',
           title: 'Como escrever prompts para revisão de código com IA',
           content: [
             'Prompts com escopo e contexto rico — especificando linguagem, framework, prioridades de revisão e formato de saída — reduzem os falsos positivos e melhoram a qualidade do sinal; prompts vagos como "revise este código" produzem saídas genéricas com muito ruído.',
@@ -1844,6 +1884,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         promptFramework: {
+          id: 'framework',
           title: 'Qual é o framework de prompts para revisão de código?',
           content: [
             'Use esta estrutura para qualquer solicitação de revisão de código com IA:',
@@ -1888,6 +1929,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         security: {
+          id: 'security',
           title: 'Como realizar revisão de código com IA focada em segurança?',
           content: [
             'As ferramentas SAST (Static Application Security Testing) impulsionadas por IA treinadas em conjuntos de dados de vulnerabilidades reais alcançam pontuações de detecção de bugs de 84–92 de 100 em código gerado por IA — comparado a 65% de precisão para métodos baseados em regras e 94% para modelos baseados em transformadores em benchmarks de aprendizado profundo.',
@@ -1912,6 +1954,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         bugTriaging: {
+          id: 'bug-triaging',
           title: 'O que é triagem de bugs com IA?',
           content: [
             'A triagem de bugs impulsionada por IA alcança entre 85% e 90% de precisão na classificação de gravidade — comparado a 60–70% para métodos manuais — enquanto reduz o tempo de triagem em 65% e recorta os falsos positivos em até 60%.',
@@ -1924,6 +1967,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         contextWindow: {
+          id: 'context',
           title: 'Por que o tamanho da janela de contexto determina a cobertura da base de código?',
           content: [
             'A janela de contexto de um modelo determina quanto de sua base de código ele pode analisar simultaneamente — a diferença entre revisar um único arquivo, um diff de PR completo e um repositório inteiro determina quais bugs são detectáveis.',
@@ -1940,6 +1984,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         globalContext: {
+          id: 'regional',
           title: 'Como as regulamentações regionais afetam a revisão de código com IA?',
           content: [
             'Empresas europeias que enviam código-fonte para APIs de IA externas devem realizar uma Avaliação de Impacto de Proteção de Dados (AIPD) sob o Artigo 35 do GDPR antes da implantação — o código-fonte contendo lógica de processamento de dados pessoais é classificado como processamento automatizado de alto risco. A CNIL (autoridade francesa de proteção de dados) confirmou em janeiro de 2026 que tanto o GDPR quanto a Lei de IA da UE se aplicam simultaneamente à revisão de código assistida por IA quando dados pessoais são processados. Para equipes da UE, CodeRabbit e Augment Code oferecem implantação on-premise/auto-hospedada para equipes com 500+ assentos.',
@@ -1949,6 +1994,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         relatedReading: {
+          id: 'related-reading',
           title: 'Leitura relacionada',
           items: [
             '[Escreva código melhor com IA](/pt/prompt-engineering/write-better-code-with-ai) — como estruturar prompts para geração de código que produz saídas revisáveis',
@@ -1963,6 +2009,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         howToStart: {
+          id: 'how-to',
           title: 'Como usar IA para revisão de código',
           numberedItems: [
             '**Informe a IA sobre a arquitetura da sua base de código, convenções de nomenclatura e restrições antes de pedir que ela revise o código.** Forneça um documento de contexto breve: "Este é um aplicativo Next.js. Usamos TypeScript em modo estrito, sem tipos `any`, todos os componentes devem ter JSDoc, todos os endpoints de API devem ter limitação de taxa." Sem isso, a IA faz comentários genéricos que perdem problemas específicos do projeto.',
@@ -1974,6 +2021,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Erros comuns na revisão de código com IA',
           mistakes: [
             {
@@ -2055,6 +2103,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         sources: {
+          id: 'sources',
           title: 'Fontes e leituras adicionais',
           items: [
             '[Graphite, 2025. "Effective prompt engineering for AI code reviews"](https://graphite.com/guides/effective-prompt-engineering-ai-code-reviews) — guia técnico de prompts com escopo para reduzir falsos positivos e melhorar o sinal',
@@ -2083,15 +2132,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: 'Ce que la Révision de Code par IA Fait Réellement', anchor: 'what-it-does' },
         { label: 'Comparaison des Outils de Révision de Code par IA', anchor: 'tools' },
         { label: 'Pourquoi le Rapport Signal-Bruit est un Problème', anchor: 'signal-noise' },
-        { label: 'Rédaction de Prompts pour la Révision de Code par IA', anchor: 'prompts' },
         { label: 'Le Framework de Prompt de Révision de Code', anchor: 'framework' },
-        { label: 'Mauvais vs Bons Prompts', anchor: 'bad-vs-good' },
-        { label: 'Chain-of-Thought pour la Logique Complexe', anchor: 'cot' },
         { label: 'Révision de Code par IA Orientée vers la Sécurité', anchor: 'security' },
         { label: 'Triage des Bugs par IA', anchor: 'bug-triaging' },
         { label: 'Context Window et Couverture de la Base de Code', anchor: 'context' },
         { label: 'Considérations Globales et Régionales', anchor: 'regional' },
-        { label: 'Comment Utiliser l\'IA pour la Révision de Code', anchor: 'how-to' },
         { label: 'Lectures Complémentaires', anchor: 'related-reading' },
         { label: 'FAQ', anchor: 'faq' },
         { label: 'Sources', anchor: 'sources' },
@@ -2111,6 +2156,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         definition: {
+          id: 'what-it-does',
           title: 'Ce que la Révision de Code par IA Fait Réellement',
           content: [
             'Les outils de révision de code par IA analysent les pull requests, détectent les bugs de logique, signalent les failles de sécurité, appliquent les normes de codage et génèrent des suggestions de correctifs exploitables — fonctionnent en secondes au lieu des heures pour les révisions manuelles.',
@@ -2119,6 +2165,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         toolComparison: {
+          id: 'tools',
           title: 'Outils de Révision de Code par IA : Lequel Utiliser',
           content: [
             'CodeRabbit mène le marché avec 2 millions+ de dépôts connectés ; GitHub Copilot Code Review est le point d\'entrée le moins frictionnel ; Greptile atteint le taux de détection de bugs le plus élevé via l\'indexation complète de la base de code.',
@@ -2134,6 +2181,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           tableFormat: true,
         },
         signalToNoise: {
+          id: 'signal-noise',
           title: 'Pourquoi le Rapport Signal-Bruit est un Problème ?',
           content: [
             'Les outils de révision de code par IA détectent les problèmes de style avec une précision proche de 100%, tandis qu\'ils détectent les bugs d\'exécution critiques avec 42–46% — un problème de volume de commentaires.',
@@ -2142,6 +2190,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         promptFramework: {
+          id: 'framework',
           title: 'Le Framework de Prompt de Révision de Code',
           content: ['Utilisez cette structure pour chaque demande de révision de code par IA :'],
           items: [
@@ -2160,6 +2209,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         security: {
+          id: 'security',
           title: 'Comment Mener une Révision de Code par IA Orientée vers la Sécurité ?',
           content: [
             'Les outils SAST (Static Application Security Testing) alimentés par IA, entraînés sur des ensembles de données de vulnérabilités réelles, atteignent des taux de détection de bugs de 84–92 sur 100 pour le code généré par IA — comparé à 65% de précision pour les méthodes basées sur des règles.',
@@ -2174,6 +2224,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           tableFormat: true,
         },
         bugTriaging: {
+          id: 'bug-triaging',
           title: 'Qu\'est-ce que le Triage des Bugs par IA ?',
           content: [
             'Le triage des bugs alimenté par IA atteint une précision de classification de la gravité de 85–90% — comparé à 60–70% pour les méthodes manuelles — tandis que le temps de triage est réduit de 65%.',
@@ -2181,6 +2232,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         contextWindow: {
+          id: 'context',
           title: 'Pourquoi la Taille du Context Window Détermine-t-elle la Couverture de la Base de Code ?',
           content: [
             'La fenêtre de contexte d\'un modèle détermine la quantité de votre base de code qu\'il peut analyser simultanément — la différence entre vérifier un seul fichier, un diff PR complet et un dépôt entier détermine quels bugs sont détectables.',
@@ -2195,6 +2247,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           tableFormat: true,
         },
         globalContext: {
+          id: 'regional',
           title: 'Comment les Réglementations Régionales Affectent-elles la Révision de Code par IA ?',
           content: [
             '**UE / RGPD** — Les entreprises européennes envoyant du code source à des APIs IA externes doivent effectuer une évaluation d\'impact relative à la protection des données (EIPD) en vertu de l\'article 35 du RGPD. La CNIL (autorité de protection des données de la France) a confirmé en janvier 2026 que le RGPD et la Loi sur l\'IA de l\'UE s\'appliquent tous deux simultanément à la révision de code assistée par IA. Pour les équipes de l\'UE, CodeRabbit et Augment Code offrent un déploiement On-Premise/Self-Hosted pour les équipes de 500+ sièges.',
@@ -2203,6 +2256,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Lectures Complémentaires',
           items: [
             '[Écrire un Meilleur Code avec l\'IA](/fr/prompt-engineering/write-better-code-with-ai) — comment les prompts pour la génération de code sont structurés',
@@ -2236,6 +2290,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Sources & Lectures Complémentaires',
           items: [
             '[Graphite, 2025. "Effective prompt engineering for AI code reviews"]',
@@ -2311,15 +2366,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: 'AI コードレビューが実際にすること', anchor: 'what-it-does' },
         { label: 'AI コードレビューツール比較', anchor: 'tools' },
         { label: 'なぜシグナル・ノイズ比が問題なのか', anchor: 'signal-noise' },
-        { label: 'AI コードレビュー用プロンプト作成', anchor: 'prompts' },
         { label: 'コードレビュープロンプトフレームワーク', anchor: 'framework' },
-        { label: '悪いプロンプト vs 良いプロンプト', anchor: 'bad-vs-good' },
-        { label: '複雑なロジック向けChain-of-Thought', anchor: 'cot' },
         { label: 'セキュリティ指向のAIコードレビュー', anchor: 'security' },
         { label: 'AI バグトリアージ', anchor: 'bug-triaging' },
         { label: 'コンテキストウィンドウとコードベース範囲', anchor: 'context' },
         { label: 'グローバルおよび地域的な考慮事項', anchor: 'regional' },
-        { label: 'AI をコードレビューに使用する方法', anchor: 'how-to' },
         { label: '関連資料', anchor: 'related-reading' },
         { label: 'FAQ', anchor: 'faq' },
         { label: 'ソース', anchor: 'sources' },
@@ -2339,6 +2390,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         definition: {
+          id: 'what-it-does',
           title: 'AI コードレビューが実際にすること',
           content: [
             'AI コードレビューツールはプルリクエストを分析し、ロジックバグを検出し、セキュリティ脆弱性を特定し、コーディング標準を強制し、実行可能なフィックス提案を生成——手動ピアレビューの時間ではなく秒単位で動作します。',
@@ -2347,6 +2399,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         toolComparison: {
+          id: 'tools',
           title: 'AI コードレビューツール：どれを使うべきか',
           content: [
             'CodeRabbit は200万以上の接続リポジトリでマーケットをリード；GitHub Copilot Code Review は最も摩擦の少ないエントリーポイント；Greptile は完全コードベースインデックス化による最高バグ検出率を達成。',
@@ -2362,6 +2415,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           tableFormat: true,
         },
         signalToNoise: {
+          id: 'signal-noise',
           title: 'なぜシグナル・ノイズ比が問題なのか？',
           content: [
             'AI コードレビューツールはスタイル問題をほぼ100%の精度で検出する一方、重大な実行時バグを42～46%で検出します——これはコメント量の問題です。',
@@ -2370,6 +2424,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         promptFramework: {
+          id: 'framework',
           title: 'コードレビュープロンプトフレームワーク',
           content: ['すべての AI コードレビューリクエストにこの構造を使用してください：'],
           items: [
@@ -2388,6 +2443,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         security: {
+          id: 'security',
           title: 'セキュリティ指向のAIコードレビューを実施する方法は？',
           content: [
             '実際の脆弱性データセットで訓練された AI駆動SAST (Static Application Security Testing) ツールは、AI 生成コードで84～92/100 のバグ検出率を達成——ルールベース手法の65%の精度と比較して。',
@@ -2402,6 +2458,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           tableFormat: true,
         },
         bugTriaging: {
+          id: 'bug-triaging',
           title: '「AI バグトリアージ」とは何ですか？',
           content: [
             'AI 駆動バグトリアージは手動手法の60～70%と比較して85～90%の重大度分類精度を達成——同時にトリアージ時間を65%削減します。',
@@ -2409,6 +2466,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         contextWindow: {
+          id: 'context',
           title: 'コンテキストウィンドウサイズはコードベース範囲をどのように決定するのか？',
           content: [
             'モデルのコンテキストウィンドウは、一度に分析できるコードベース量を決定します——単一ファイル、完全な PR diff、またはリポジトリ全体を確認する違いは、どのバグが検出可能かを決定します。',
@@ -2423,6 +2481,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           tableFormat: true,
         },
         globalContext: {
+          id: 'regional',
           title: '地域規制はAIコードレビューにどのような影響を与えるのか？',
           content: [
             '**EU / GDPR** —— EU 企業がソースコードを外部 AI API に送信する場合、GDPR 第35条に基づくデータ保護影響評価 (DPIA) を実施する必要があります。フランスのデータ保護機関である CNIL は2026年1月に、GDPR と EU AI Act の両方が AI 支援コードレビューに同時に適用されることを確認しました。EU チーム向けに CodeRabbit と Augment Code は500席以上のチーム向けにオンプレミス/セルフホスティングデプロイメントを提供しています。',
@@ -2431,6 +2490,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: '関連資料',
           items: [
             '[AI でより良いコードを書く](/ja/prompt-engineering/write-better-code-with-ai) —— コード生成プロンプトの構造化方法',
@@ -2464,6 +2524,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         sources: {
+          id: 'sources',
           title: 'ソース & 関連資料',
           items: [
             '[Graphite、2025年。「AI コードレビューの効果的なプロンプトエンジニアリング」]',
@@ -2539,15 +2600,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: 'AI 代码审查实际做什么', anchor: 'what-it-does' },
         { label: 'AI 代码审查工具比较', anchor: 'tools' },
         { label: '为什么信号噪声比是个问题', anchor: 'signal-noise' },
-        { label: '为 AI 代码审查编写提示', anchor: 'prompts' },
         { label: '代码审查提示框架', anchor: 'framework' },
-        { label: '糟糕提示 vs 好提示', anchor: 'bad-vs-good' },
-        { label: '复杂逻辑的思维链', anchor: 'cot' },
         { label: '安全导向的 AI 代码审查', anchor: 'security' },
         { label: 'AI 错误分类', anchor: 'bug-triaging' },
         { label: '上下文窗口和代码库覆盖', anchor: 'context' },
         { label: '全球和地区考虑因素', anchor: 'regional' },
-        { label: '如何使用 AI 进行代码审查', anchor: 'how-to' },
         { label: '相关阅读', anchor: 'related-reading' },
         { label: 'FAQ', anchor: 'faq' },
         { label: '来源', anchor: 'sources' },
@@ -2567,6 +2624,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         definition: {
+          id: 'what-it-does',
           title: 'AI 代码审查实际做什么',
           content: [
             'AI 代码审查工具分析拉取请求，检测逻辑错误，标记安全漏洞，强制编码标准，生成可执行的修复建议——在几秒内而不是手动审查的数小时。',
@@ -2575,6 +2633,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         toolComparison: {
+          id: 'tools',
           title: 'AI 代码审查工具：应该使用哪一个',
           content: [
             'CodeRabbit 以 200 万+ 个连接的存储库领先市场；GitHub Copilot Code Review 是摩擦最少的入口点；Greptile 通过完整代码库索引达到最高错误检测率。',
@@ -2590,6 +2649,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           tableFormat: true,
         },
         signalToNoise: {
+          id: 'signal-noise',
           title: '为什么信号噪声比是个问题？',
           content: [
             'AI 代码审查工具以接近 100% 的准确率检测风格问题，同时以 42–46% 的准确率检测关键运行时错误——这是评论量问题。',
@@ -2598,6 +2658,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         promptFramework: {
+          id: 'framework',
           title: '代码审查提示框架',
           content: ['对每个 AI 代码审查请求使用此结构：'],
           items: [
@@ -2616,6 +2677,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         security: {
+          id: 'security',
           title: '如何进行安全导向的 AI 代码审查？',
           content: [
             '在真实漏洞数据集上训练的 AI 驱动 SAST（静态应用安全测试）工具对 AI 生成代码达到 84–92/100 的错误检测率——相比基于规则方法的 65% 准确率。',
@@ -2630,6 +2692,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           tableFormat: true,
         },
         bugTriaging: {
+          id: 'bug-triaging',
           title: '什么是 AI 错误分类？',
           content: [
             'AI 驱动的错误分类在重大程度分类中达到 85–90% 的准确率——相比手动方法的 60–70%——同时将分类时间减少 65%。',
@@ -2637,6 +2700,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         contextWindow: {
+          id: 'context',
           title: '上下文窗口大小如何决定代码库覆盖范围？',
           content: [
             '模型的上下文窗口决定了它可以同时分析的代码库数量——检查单个文件、完整 PR diff 或整个存储库的差异决定了哪些错误是可检测的。',
@@ -2651,6 +2715,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           tableFormat: true,
         },
         globalContext: {
+          id: 'regional',
           title: '区域法规如何影响 AI 代码审查？',
           content: [
             '**欧盟 / GDPR** —— 将源代码发送到外部 AI API 的欧洲企业必须根据 GDPR 第 35 条进行数据保护影响评估 (DPIA)。法国数据保护机构 CNIL 在 2026 年 1 月确认 GDPR 和 EU AI Act 都同时适用于 AI 辅助代码审查。对于欧盟团队，CodeRabbit 和 Augment Code 为 500+ 席位的团队提供内部部署/自托管部署。',
@@ -2659,6 +2724,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: '相关阅读',
           items: [
             '[用 AI 编写更好的代码](/zh/prompt-engineering/write-better-code-with-ai) —— 代码生成提示的结构化方式',
@@ -2692,6 +2758,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         sources: {
+          id: 'sources',
           title: '来源与相关阅读',
           items: [
             '[Graphite，2025 年。"AI 代码审查的有效提示工程"]',
@@ -2768,8 +2835,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
       { label: '신호 대 잡음 문제', anchor: 'signal-noise' },
       { label: 'AI 코드 리뷰를 위한 프롬프트 작성법', anchor: 'prompts' },
       { label: '코드 리뷰 프롬프트 프레임워크', anchor: 'framework' },
-      { label: '나쁜 vs. 좋은 프롬프트', anchor: 'bad-vs-good' },
-      { label: '복잡한 로직을 위한 Chain-of-Thought', anchor: 'cot' },
       { label: '보안 중심 AI 코드 리뷰', anchor: 'security' },
       { label: 'AI 버그 트리아지', anchor: 'bug-triaging' },
       { label: '컨텍스트 윈도우와 코드베이스 커버리지', anchor: 'context' },
@@ -2932,6 +2997,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       definition: {
+        id: 'what-it-does',
         title: 'AI 코드 리뷰가 실제로 하는 일',
         content: [
           'AI 코드 리뷰 도구는 풀 리퀘스트를 분석하고, 로직 버그를 감지하며, 보안 취약점을 표시하고, 코딩 표준을 적용하며, 실행 가능한 수정 제안을 생성합니다 — 수동 동료 리뷰에 필요한 시간 대신 초 단위로 작동합니다.',
@@ -2941,6 +3007,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       toolComparison: {
+        id: 'tools',
         title: 'AI 코드 리뷰 도구: 어떤 것을 사용할까',
         content: [
           'CodeRabbit는 200만 개 이상의 연결된 저장소와 1,300만 개 이상의 처리된 PR로 시장을 선도합니다; GitHub Copilot Code Review는 이미 GitHub를 사용하는 팀에게 가장 마찰이 낮은 진입점입니다; Greptile는 전체 코드베이스 인덱싱을 통해 가장 높은 버그 감지율을 달성합니다.',
@@ -2961,6 +3028,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       signalToNoise: {
+        id: 'signal-noise',
         title: 'AI 코드 리뷰에서 신호 대 잡음 비율이 왜 문제입니까?',
         content: [
           'AI 코드 리뷰 도구는 현재 스타일 문제를 거의 100% 정확도로 감지하면서 중요한 런타임 버그는 42~46%만 감지합니다 — 개발자 채택률 붕괴를 유발하는 코멘트 볼륨 문제를 만들어냅니다.',
@@ -2975,6 +3043,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       promptStructure: {
+        id: 'prompts',
         title: 'AI 코드 리뷰를 위한 프롬프트 작성법',
         content: [
           '범위가 한정되고 컨텍스트가 풍부한 프롬프트 — 언어, 프레임워크, 리뷰 우선순위, 출력 형식을 지정하는 — 는 허위 양성을 줄이고 신호 품질을 향상시킵니다; "이 코드를 검토하세요"와 같은 모호한 프롬프트는 잡음이 많은 일반적인 출력을 생성합니다.',
@@ -2985,6 +3054,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       promptFramework: {
+        id: 'framework',
         title: '코드 리뷰 프롬프트 프레임워크란 무엇입니까?',
         content: [
           'AI 코드 리뷰 요청에 이 구조를 사용하십시오:',
@@ -3029,6 +3099,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       security: {
+        id: 'security',
         title: '보안 중심 AI 코드 리뷰는 어떻게 수행합니까?',
         content: [
           '실제 취약점 데이터셋으로 훈련된 AI 기반 SAST (Static Application Security Testing) 도구는 AI 생성 코드에서 버그 감지 점수 84~92/100을 달성합니다 — 규칙 기반 방법의 65% 정확도와 딥러닝 벤치마크의 트랜스포머 기반 모델 94% 대비.',
@@ -3053,6 +3124,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       bugTriaging: {
+        id: 'bug-triaging',
         title: 'AI 버그 트리아지란 무엇입니까?',
         content: [
           'AI 기반 버그 트리아지는 심각도 분류에서 85~90%의 정확도를 달성합니다 — 수동 방법의 60~70% 대비 — 트리아지 시간을 65% 줄이고 허위 양성을 최대 60%까지 삭감합니다.',
@@ -3065,6 +3137,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       contextWindow: {
+        id: 'context',
         title: '컨텍스트 윈도우 크기가 코드베이스 커버리지를 결정하는 이유는 무엇입니까?',
         content: [
           '모델의 컨텍스트 윈도우는 동시에 얼마나 많은 코드베이스를 분석할 수 있는지를 결정합니다 — 단일 파일, 전체 PR diff, 전체 저장소를 검토하는 차이가 어떤 버그가 감지 가능한지를 결정합니다.',
@@ -3081,6 +3154,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       globalContext: {
+        id: 'regional',
         title: '지역별 규정이 AI 코드 리뷰에 어떤 영향을 미칩니까?',
         content: [
           '개인 데이터 처리 로직이 포함된 소스 코드를 외부 AI API로 보내는 유럽 기업은 배포 전에 GDPR 제35조에 따라 데이터 보호 영향 평가 (DPIA)를 수행해야 합니다 — 개인 데이터 처리 로직이 포함된 소스 코드는 고위험 자동화 처리로 분류됩니다. 프랑스 데이터 보호 당국 CNIL은 2026년 1월에 개인 데이터를 처리할 때 AI 지원 코드 리뷰에 GDPR과 EU AI법이 동시에 적용된다고 확인했습니다. EU 팀의 경우 CodeRabbit와 Augment Code는 500+ 시트 팀을 위한 온프레미스/자체 호스팅 배포를 제공합니다.',
@@ -3090,6 +3164,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       relatedReading: {
+        id: 'related-reading',
         title: '관련 읽을거리',
         items: [
           '[AI로 더 나은 코드 작성하기](/ko/prompt-engineering/write-better-code-with-ai) — 검토 가능한 출력을 생성하는 코드 생성을 위한 프롬프트 구조화 방법',
@@ -3105,6 +3180,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       howToStart: {
+        id: 'how-to',
         title: 'AI를 코드 리뷰에 활용하는 방법',
         numberedItems: [
           '**코드를 검토하도록 요청하기 전에 코드베이스 아키텍처, 명명 규칙, 제약 조건을 AI에게 알리십시오.** 간단한 컨텍스트 문서를 제공하십시오: "이것은 Next.js 앱입니다. 우리는 엄격 모드의 TypeScript를 사용하고, any 타입이 없으며, 모든 컴포넌트에 JSDoc이 있어야 하고, 모든 API 엔드포인트에는 속도 제한이 있어야 합니다." 이것 없이 AI는 프로젝트별 문제를 놓치는 일반적인 코멘트를 합니다.',
@@ -3116,6 +3192,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       commonMistakes: {
+        id: 'common-mistakes',
         title: 'AI 코드 리뷰에서 흔한 실수',
         mistakes: [
           {
@@ -3197,6 +3274,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       sources: {
+        id: 'sources',
         title: '참고 자료 및 추가 읽을거리',
         items: [
           '[Graphite, 2025. "Effective prompt engineering for AI code reviews"](https://graphite.com/guides/effective-prompt-engineering-ai-code-reviews) — 허위 양성을 줄이고 신호를 향상시키기 위한 범위 한정 프롬프트 기술 가이드',

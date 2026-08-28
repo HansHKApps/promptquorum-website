@@ -30,7 +30,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { label: 'When to Choose Each', anchor: '#when-to-choose' },
         { label: 'Can You Use Both?', anchor: '#use-both' },
         { label: 'Common Mistakes', anchor: '#common-mistakes' },
-        { label: 'Common Questions', anchor: '#common-questions' },
+        { label: 'Common Questions', anchor: '#faq' },
         { label: 'Related Reading', anchor: '#related-reading' },
         { label: 'Sources', anchor: '#sources' },
       ],
@@ -52,6 +52,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         desktopApps: {
+          id: 'desktop-apps',
           title: 'What Are Desktop Applications?',
           content: [
             '**Desktop apps are native applications that run directly on your operating system.** Examples: LM Studio, Jan AI.',
@@ -60,6 +61,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         webUIs: {
+          id: 'web-uis',
           title: 'What Are Web UIs?',
           content: [
             '**Web UIs are interfaces accessed through your browser.** They run a web server (usually in Docker) and serve a browser-based interface. Examples: Open WebUI, Enchanted UI.',
@@ -70,6 +72,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           imageCaption: 'Desktop app vs Web UI architecture: desktop apps install as a native process on one device with no network required, while Web UI runs in Docker and is reachable from any device via URL.',
         },
         featureComp: {
+          id: 'feature-comparison',
           title: 'Feature Comparison: Desktop vs Web UI',
           rows: [
             { 'Feature': 'Setup complexity', 'Desktop': 'Very easy', 'Web UI': 'Medium' },
@@ -85,6 +88,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           columns: ['Feature', 'Desktop', 'Web UI'],
         },
         whenToChoose: {
+          id: 'when-to-choose',
           title: 'When Should You Choose Desktop vs Web UI?',
           content: 'Choose desktop app if:',
           items: [
@@ -110,6 +114,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         useBoth: {
+          id: 'use-both',
           title: 'Can You Run Both Desktop and Web UI Simultaneously?',
           content: [
             '**Yes, but with caveats.** Both will try to use the same GPU and models. You can run them both using the same Ollama backend (they share the model), but inference performance will be split.',
@@ -117,6 +122,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Common Mistakes With Desktop vs Web UI',
           items: [
             '**Thinking desktop is always simpler.** Desktop is simpler initially, but web UIs have better features. For learning, desktop is simpler.',
@@ -213,7 +219,7 @@ schema: {
         { label: 'Cuándo elegir cada una', anchor: '#when-to-choose' },
         { label: '¿Puedes usar ambas?', anchor: '#use-both' },
         { label: 'Errores comunes', anchor: '#common-mistakes' },
-        { label: 'Preguntas frecuentes', anchor: '#common-questions' },
+        { label: 'Preguntas frecuentes', anchor: '#faq' },
         { label: 'Lecturas relacionadas', anchor: '#related-reading' },
         { label: 'Fuentes', anchor: '#sources' },
       ],
@@ -234,6 +240,7 @@ schema: {
           ],
         },
         desktopApps: {
+          id: 'desktop-apps',
           title: '¿Qué son las aplicaciones de escritorio?',
           content: [
             '**Las apps de escritorio son aplicaciones nativas que se ejecutan directamente en tu sistema operativo.** Ejemplos: LM Studio, Jan AI.',
@@ -242,6 +249,7 @@ schema: {
           ],
         },
         webUIs: {
+          id: 'web-uis',
           title: '¿Qué son las interfaces web?',
           content: [
             '**Las interfaces web son interfaces a las que se accede a través del navegador.** Ejecutan un servidor web (normalmente en Docker) y sirven una interfaz basada en navegador. Ejemplos: Open WebUI, Enchanted UI.',
@@ -252,6 +260,7 @@ schema: {
           imageCaption: 'Arquitectura de app de escritorio vs Web UI: las apps de escritorio se ejecutan como proceso nativo en un dispositivo sin red, mientras que la Web UI se ejecuta en Docker y es accesible desde cualquier dispositivo vía URL.',
         },
         featureComp: {
+          id: 'feature-comparison',
           title: 'Comparación de funciones: Desktop vs Web UI',
           rows: [
             { 'Función': 'Complejidad de configuración', 'Desktop': 'Muy fácil', 'Web UI': 'Media' },
@@ -267,6 +276,7 @@ schema: {
           columns: ['Función', 'Desktop', 'Web UI'],
         },
         whenToChoose: {
+          id: 'when-to-choose',
           title: '¿Cuándo debes elegir una app de escritorio?',
           content: 'Elige una app de escritorio si:',
           items: [
@@ -292,6 +302,7 @@ schema: {
           ],
         },
         useBoth: {
+          id: 'use-both',
           title: '¿Puedes ejecutar Desktop e interfaz web al mismo tiempo?',
           content: [
             '**Sí, pero con matices.** Ambas intentarán usar la misma GPU y los mismos modelos. Puedes ejecutarlas usando el mismo backend de Ollama (comparten el modelo), pero el rendimiento de inferencia se dividirá.',
@@ -299,6 +310,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Errores comunes con Desktop vs Web UI',
           items: [
             '**Pensar que el escritorio siempre es más simple.** El escritorio es más sencillo al principio, pero las interfaces web tienen mejores funciones. Para aprender, el escritorio es más simple.',
@@ -396,7 +408,7 @@ schema: {
         { label: 'متى تختار كلاً منهما', anchor: '#when-to-choose' },
         { label: 'هل يمكنك استخدام كليهما؟', anchor: '#use-both' },
         { label: 'الأخطاء الشائعة', anchor: '#common-mistakes' },
-        { label: 'الأسئلة الشائعة', anchor: '#common-questions' },
+        { label: 'الأسئلة الشائعة', anchor: '#faq' },
         { label: 'قراءات ذات صلة', anchor: '#related-reading' },
         { label: 'المصادر', anchor: '#sources' },
       ],
@@ -417,6 +429,7 @@ schema: {
           ],
         },
         desktopApps: {
+          id: 'desktop-apps',
           title: 'ما تطبيقات سطح المكتب؟',
           content: [
             '**تطبيقات سطح المكتب هي تطبيقات أصلية تعمل مباشرة على نظام تشغيلك.** أمثلة: LM Studio، Jan AI.',
@@ -425,6 +438,7 @@ schema: {
           ],
         },
         webUIs: {
+          id: 'web-uis',
           title: 'ما واجهات الويب؟',
           content: [
             '**واجهات الويب هي واجهات يُوصَل إليها عبر المتصفح.** تشغّل خادم ويب (عادةً في Docker) وتخدم واجهة قائمة على المتصفح. أمثلة: Open WebUI، Enchanted UI.',
@@ -435,6 +449,7 @@ schema: {
           imageCaption: 'بنية تطبيق سطح المكتب مقابل واجهة الويب: يعمل تطبيق سطح المكتب كعملية أصلية على جهاز واحد دون شبكة، بينما تعمل واجهة الويب في Docker ويمكن الوصول إليها من أي جهاز عبر URL.',
         },
         featureComp: {
+          id: 'feature-comparison',
           title: 'مقارنة الميزات: سطح المكتب مقابل واجهة الويب',
           rows: [
             { 'الميزة': 'تعقيد الإعداد', 'سطح المكتب': 'سهل جداً', 'واجهة الويب': 'متوسط' },
@@ -450,6 +465,7 @@ schema: {
           columns: ['الميزة', 'سطح المكتب', 'واجهة الويب'],
         },
         whenToChoose: {
+          id: 'when-to-choose',
           title: 'متى ينبغي أن تختار تطبيق سطح مكتب؟',
           content: 'اختر تطبيق سطح مكتب إن:',
           items: [
@@ -475,6 +491,7 @@ schema: {
           ],
         },
         useBoth: {
+          id: 'use-both',
           title: 'هل يمكنك تشغيل سطح المكتب وواجهة الويب في آن واحد؟',
           content: [
             '**نعم، لكن مع تحفّظات.** سيحاول كلاهما استخدام GPU والنماذج نفسها. يمكنك تشغيلهما باستخدام خلفية Ollama نفسها (يتشاركان النموذج)، لكن أداء الاستدلال سينقسم.',
@@ -482,6 +499,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'الأخطاء الشائعة في سطح المكتب مقابل واجهة الويب',
           items: [
             '**الاعتقاد أن سطح المكتب أبسط دائماً.** سطح المكتب أبسط في البداية، لكن واجهات الويب بميزات أفضل. للتعلّم، سطح المكتب أبسط.',
@@ -581,7 +599,7 @@ schema: {
         { label: 'Quando escolher cada um', anchor: '#when-to-choose' },
         { label: 'Você pode usar os dois?', anchor: '#use-both' },
         { label: 'Erros comuns', anchor: '#common-mistakes' },
-        { label: 'Perguntas frequentes', anchor: '#common-questions' },
+        { label: 'Perguntas frequentes', anchor: '#faq' },
         { label: 'Leituras relacionadas', anchor: '#related-reading' },
         { label: 'Fontes', anchor: '#sources' },
       ],
@@ -602,6 +620,7 @@ schema: {
           ],
         },
         desktopApps: {
+          id: 'desktop-apps',
           title: 'O que são os aplicativos de desktop?',
           content: [
             '**Os apps de desktop são aplicativos nativos que rodam diretamente no seu sistema operacional.** Exemplos: LM Studio, Jan AI.',
@@ -610,6 +629,7 @@ schema: {
           ],
         },
         webUIs: {
+          id: 'web-uis',
           title: 'O que são as interfaces web?',
           content: [
             '**As interfaces web são interfaces acessadas pelo navegador.** Elas rodam um servidor web (normalmente em Docker) e servem uma interface baseada no navegador. Exemplos: Open WebUI, Enchanted UI.',
@@ -620,6 +640,7 @@ schema: {
           imageCaption: 'Arquitetura de app de desktop vs Web UI: apps de desktop rodam como processo nativo em um dispositivo sem necessidade de rede, enquanto a Web UI roda no Docker e é acessível de qualquer dispositivo via URL.',
         },
         featureComp: {
+          id: 'feature-comparison',
           title: 'Comparação de recursos: Desktop vs Web UI',
           rows: [
             { 'Recurso': 'Complexidade de configuração', 'Desktop': 'Muito fácil', 'Web UI': 'Média' },
@@ -635,6 +656,7 @@ schema: {
           columns: ['Recurso', 'Desktop', 'Web UI'],
         },
         whenToChoose: {
+          id: 'when-to-choose',
           title: 'Quando você deve escolher um app de desktop?',
           content: 'Escolha um app de desktop se:',
           items: [
@@ -660,6 +682,7 @@ schema: {
           ],
         },
         useBoth: {
+          id: 'use-both',
           title: 'Você pode rodar Desktop e interface web ao mesmo tempo?',
           content: [
             '**Sim, mas com ressalvas.** Ambas tentarão usar a mesma GPU e os mesmos modelos. Você pode rodá-las usando o mesmo backend do Ollama (compartilham o modelo), mas o desempenho de inferência será dividido.',
@@ -667,6 +690,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Erros comuns com Desktop vs Web UI',
           items: [
             '**Achar que o desktop é sempre mais simples.** O desktop é mais simples no início, mas as interfaces web têm melhores recursos. Para aprender, o desktop é mais simples.',
@@ -786,6 +810,7 @@ schema: {
           ],
         },
         desktopApps: {
+          id: 'desktop-apps',
           title: 'Was sind Desktop-Anwendungen?',
           content: [
             '**Desktop-Apps sind native Anwendungen, die direkt auf Ihrem Betriebssystem ausgeführt werden.** Beispiele: LM Studio, Jan AI.',
@@ -794,6 +819,7 @@ schema: {
           ],
         },
         webUIs: {
+          id: 'web-uis',
           title: 'Was sind Web-UIs?',
           content: [
             '**Web-UIs sind Oberflächen, auf die über Ihren Browser zugegriffen wird.** Sie führen einen Webserver (normalerweise in Docker) aus und servieren eine Browser-basierte Oberfläche. Beispiele: Open WebUI, Enchanted UI.',
@@ -804,6 +830,7 @@ schema: {
           imageCaption: 'Desktop-App vs Web-UI Architektur: Desktop-Apps laufen als nativer Prozess auf einem Gerät ohne Netzwerk, Web-UI läuft in Docker und ist von jedem Gerät über eine URL erreichbar.',
         },
         featureComp: {
+          id: 'feature-comparison',
           title: 'Funktionsvergleich: Desktop vs Web-UI',
           rows: [
             { 'Merkmal': 'Setup-Komplexität', 'Desktop': 'Sehr einfach', 'Web-UI': 'Mittel' },
@@ -819,6 +846,7 @@ schema: {
           columns: ['Merkmal', 'Desktop', 'Web-UI'],
         },
         whenToChoose: {
+          id: 'when-to-choose',
           title: 'Wann sollten Sie Desktop-App wählen?',
           content: 'Wählen Sie Desktop-App, wenn:',
           items: [
@@ -844,6 +872,7 @@ schema: {
           ],
         },
         useBoth: {
+          id: 'use-both',
           title: 'Können Sie Desktop und Web-UI gleichzeitig ausführen?',
           content: [
             '**Ja, aber mit Vorbehalten.** Beide versuchen, dieselbe GPU und Modelle zu nutzen. Sie können beide mit demselben Ollama-Backend ausführen (sie teilen sich das Modell), aber die Inferenzleistung wird aufgeteilt.',
@@ -851,6 +880,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Häufige Fehler bei Desktop vs Web-UI',
           items: [
             '**Denken, Desktop ist immer einfacher.** Desktop ist anfangs einfacher, aber Web-UIs haben bessere Funktionen. Zum Lernen ist Desktop einfacher.',
@@ -969,6 +999,7 @@ schema: {
           ],
         },
         desktopApps: {
+          id: 'desktop-apps',
           title: 'Que sont les applications de bureau ?',
           content: [
             '**Les apps de bureau sont des applications natives qui s\'exécutent directement sur votre système d\'exploitation.** Exemples: LM Studio, Jan AI.',
@@ -977,6 +1008,7 @@ schema: {
           ],
         },
         webUIs: {
+          id: 'web-uis',
           title: 'Que sont les interfaces Web ?',
           content: [
             '**Les interfaces Web sont des interfaces accessibles via votre navigateur.** Elles exécutent un serveur Web (généralement dans Docker) et proposent une interface basée sur navigateur. Exemples: Open WebUI, Enchanted UI.',
@@ -987,6 +1019,7 @@ schema: {
           imageCaption: 'Architecture app de bureau vs interface Web : les apps de bureau s\'exécutent comme processus natif sur un appareil sans réseau requis, tandis que l\'interface Web s\'exécute dans Docker et est accessible depuis n\'importe quel appareil via URL.',
         },
         featureComp: {
+          id: 'feature-comparison',
           title: 'Comparaison des fonctionnalités : Bureau vs Interface Web',
           rows: [
             { 'Fonctionnalité': 'Complexité setup', 'Bureau': 'Très simple', 'Interface Web': 'Moyen' },
@@ -1002,6 +1035,7 @@ schema: {
           columns: ['Fonctionnalité', 'Bureau', 'Interface Web'],
         },
         whenToChoose: {
+          id: 'when-to-choose',
           title: 'Quand choisir une app de bureau ?',
           content: 'Choisissez app de bureau si:',
           items: [
@@ -1027,6 +1061,7 @@ schema: {
           ],
         },
         useBoth: {
+          id: 'use-both',
           title: 'Pouvez-vous exécuter Bureau et Interface Web simultanément ?',
           content: [
             '**Oui, mais avec réserves.** Les deux essaient d\'utiliser les mêmes GPU et modèles. Vous pouvez les exécuter tous deux en utilisant le même backend Ollama (ils partagent le modèle), mais la performance d\'inférence sera divisée.',
@@ -1034,6 +1069,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Erreurs courantes avec Bureau vs Interface Web',
           items: [
             '**Penser que bureau est toujours plus simple.** Bureau est plus simple initialement, mais interfaces Web ont meilleures fonctionnalités. Pour apprendre, bureau est plus simple.',
@@ -1152,6 +1188,7 @@ schema: {
           ],
         },
         desktopApps: {
+          id: 'desktop-apps',
           title: 'デスクトップアプリケーションとは?',
           content: [
             '**デスクトップアプリはオペレーティングシステム上で直接実行するネイティブアプリケーションです。** 例: LM Studio、Jan AI。',
@@ -1160,6 +1197,7 @@ schema: {
           ],
         },
         webUIs: {
+          id: 'web-uis',
           title: 'Web UIとは?',
           content: [
             '**Web UIはブラウザを通じてアクセスするインターフェースです。** Webサーバー (通常Docker内) を実行し、ブラウザベースのインターフェースを提供。例: Open WebUI、Enchanted UI。',
@@ -1170,6 +1208,7 @@ schema: {
           imageCaption: 'デスクトップアプリ対Web UIのアーキテクチャ: デスクトップアプリはネットワーク不要で単一デバイス上のネイティブプロセスとして動作し、Web UIはDockerで実行されURLで任意のデバイスからアクセス可能。',
         },
         featureComp: {
+          id: 'feature-comparison',
           title: '機能比較: デスクトップ対Webインターフェース',
           rows: [
             { '機能': 'セットアップ複雑さ', 'デスクトップ': 'とてもシンプル', 'Web UI': '中程度' },
@@ -1185,6 +1224,7 @@ schema: {
           columns: ['機能', 'デスクトップ', 'Web UI'],
         },
         whenToChoose: {
+          id: 'when-to-choose',
           title: 'デスクトップアプリをいつ選ぶか?',
           content: 'デスクトップアプリを選択する場合:',
           items: [
@@ -1210,6 +1250,7 @@ schema: {
           ],
         },
         useBoth: {
+          id: 'use-both',
           title: 'デスクトップとWeb UIを同時に実行できますか?',
           content: [
             '**はい、ただし注意があります。** 両方は同じGPUとモデルを使用しようとします。同じOllamaバックエンド (モデル共有) を使って両方を実行できますが、推論パフォーマンスは分割されます。',
@@ -1217,6 +1258,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'デスクトップ対Web UIの一般的な間違い',
           items: [
             '**デスクトップは常にシンプルだと思う。** デスクトップは最初シンプルですが、Web UIはより良い機能。学習用にはデスクトップがシンプル。',
@@ -1335,6 +1377,7 @@ schema: {
           ],
         },
         desktopApps: {
+          id: 'desktop-apps',
           title: '什么是桌面应用？',
           content: [
             '**桌面应用是直接在操作系统上运行的本机应用程序。** 示例：LM Studio、Jan AI。',
@@ -1343,6 +1386,7 @@ schema: {
           ],
         },
         webUIs: {
+          id: 'web-uis',
           title: '什么是Web UI？',
           content: [
             '**Web UI是通过浏览器访问的界面。** 它们运行Web服务器（通常在Docker中）并提供基于浏览器的界面。示例：Open WebUI、Enchanted UI。',
@@ -1353,6 +1397,7 @@ schema: {
           imageCaption: '桌面应用对Web UI架构对比：桌面应用作为本机进程在单一设备上运行且无需网络，而Web UI在Docker中运行，可通过URL从任意设备访问。',
         },
         featureComp: {
+          id: 'feature-comparison',
           title: '功能比较：桌面应用对Web UI',
           rows: [
             { '功能': '设置复杂度', '桌面': '非常简单', 'Web UI': '中等' },
@@ -1368,6 +1413,7 @@ schema: {
           columns: ['功能', '桌面', 'Web UI'],
         },
         whenToChoose: {
+          id: 'when-to-choose',
           title: '何时选择桌面应用？',
           content: '选择桌面应用如果：',
           items: [
@@ -1393,6 +1439,7 @@ schema: {
           ],
         },
         useBoth: {
+          id: 'use-both',
           title: '可以同时运行桌面应用和Web UI吗？',
           content: [
             '**是的，但有注意事项。** 两者都会尝试使用相同的GPU和模型。您可以使用相同的Ollama后端运行两者（它们共享模型），但推论性能会被分割。',
@@ -1400,6 +1447,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: '桌面应用对Web UI的常见错误',
           items: [
             '**认为桌面始终更简单。** 桌面最初更简单，但Web UI功能更好。对于学习，桌面更简单。',
@@ -1496,7 +1544,7 @@ schema: {
         { label: '각 방식의 선택 시점', anchor: '#when-to-choose' },
         { label: '두 방식을 동시에 사용할 수 있습니까?', anchor: '#use-both' },
         { label: '일반적인 실수', anchor: '#common-mistakes' },
-        { label: '자주 묻는 질문', anchor: '#common-questions' },
+        { label: '자주 묻는 질문', anchor: '#faq' },
         { label: '관련 읽을거리', anchor: '#related-reading' },
         { label: '출처', anchor: '#sources' },
       ],
@@ -1517,6 +1565,7 @@ schema: {
           ],
         },
         desktopApps: {
+          id: 'desktop-apps',
           title: '데스크톱 애플리케이션이란 무엇입니까?',
           content: [
             '**데스크톱 앱은 운영 체제에서 직접 실행되는 네이티브 애플리케이션입니다.** 예: LM Studio, Jan AI.',
@@ -1525,6 +1574,7 @@ schema: {
           ],
         },
         webUIs: {
+          id: 'web-uis',
           title: '웹 UI란 무엇입니까?',
           content: [
             '**웹 UI는 브라우저를 통해 접근하는 인터페이스입니다.** 웹 서버(보통 Docker)를 실행하고 브라우저 기반 인터페이스를 제공합니다. 예: Open WebUI, Enchanted UI.',
@@ -1535,6 +1585,7 @@ schema: {
           imageCaption: '데스크톱 앱과 웹 UI의 아키텍처 비교: 데스크톱 앱은 네트워크 없이 단일 기기에서 네이티브 프로세스로 실행되며, 웹 UI는 Docker에서 실행되어 URL로 모든 기기에서 접근할 수 있습니다.',
         },
         featureComp: {
+          id: 'feature-comparison',
           title: '기능 비교: 데스크톱 vs 웹 UI',
           rows: [
             { 'Feature': '설정 복잡도', 'Desktop': '매우 쉬움', 'Web UI': '보통' },
@@ -1550,6 +1601,7 @@ schema: {
           columns: ['Feature', 'Desktop', 'Web UI'],
         },
         whenToChoose: {
+          id: 'when-to-choose',
           title: '데스크톱 vs 웹 UI 중 언제 무엇을 선택해야 합니까?',
           content: '다음의 경우 데스크톱 앱을 선택하십시오:',
           items: [
@@ -1575,6 +1627,7 @@ schema: {
           ],
         },
         useBoth: {
+          id: 'use-both',
           title: '데스크톱과 웹 UI를 동시에 실행할 수 있습니까?',
           content: [
             '**가능하지만 주의 사항이 있습니다.** 두 방식 모두 동일한 GPU와 모델을 사용하려 합니다. 동일한 Ollama 백엔드를 통해 두 방식을 함께 실행할 수 있지만(모델을 공유), 추론 성능이 분산됩니다.',
@@ -1582,6 +1635,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: '데스크톱 vs 웹 UI 관련 일반적인 실수',
           items: [
             '**데스크톱이 항상 더 간단하다고 생각하는 것.** 데스크톱은 초기에는 더 간단하지만, 웹 UI가 더 나은 기능을 제공합니다. 학습 목적에는 데스크톱이 더 간단합니다.',

@@ -2114,11 +2114,6 @@ schema: {
       toc: [
         { label: 'Pontos principais', anchor: '#tldr' },
         { label: 'O que são agentes de IA?', anchor: '#what-are-agents' },
-        { label: 'Arquitetura LangGraph', anchor: '#langgraph-architecture' },
-        { label: 'Ferramentas para agentes', anchor: '#agent-tools' },
-        { label: 'Implementação com Ollama', anchor: '#implementation' },
-        { label: 'Erros comuns', anchor: '#mistakes' },
-        { label: 'FAQ', anchor: '#faq' },
       ],
       schema: {
         '@context': 'https://schema.org',
@@ -2150,6 +2145,7 @@ schema: {
           ],
         },
         regionalContext: {
+          id: 'what-are-agents',
           title: 'Contexto regional e conformidade',
           content: [
             '**Brasil (LGPD / ANPD)** — Agentes de IA locais mantêm todos os dados de prompt na sua infraestrutura, atendendo à LGPD (Lei nº 13.709/2018). Nenhuma chamada a API de nuvem é feita durante a inferência, satisfazendo os requisitos de residência de dados da ANPD.',

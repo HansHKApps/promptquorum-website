@@ -30,7 +30,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { label: 'Performance and VRAM', anchor: '#performance' },
         { label: 'Advanced Configuration', anchor: '#advanced' },
         { label: 'Common Mistakes', anchor: '#common-mistakes' },
-        { label: 'Common Questions', anchor: '#common-questions' },
+        { label: 'Common Questions', anchor: '#faq' },
         { label: 'Related Reading', anchor: '#related-reading' },
         { label: 'Sources', anchor: '#sources' },
       ],
@@ -52,6 +52,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         vscodeContinue: {
+          id: 'vscode-continue',
           title: 'How to Set Up Continue.dev in VS Code?',
           content: 'Continue.dev is a VS Code extension for local and cloud code completions.',
           image: '/images/local-llms-with-vscode-cursor-continue-setup-flow-en.svg',
@@ -60,6 +61,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           codeLanguage: 'json',
         },
         cursor: {
+          id: 'cursor-editor',
           title: 'How to Use Local Models in Cursor?',
           content: [
             '**Cursor is a VS Code fork optimized for AI-assisted coding.** It has built-in support for local models via Ollama.',
@@ -68,6 +70,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           codeLanguage: 'bash',
         },
         bestModels: {
+          id: 'best-models',
           title: 'Which Models Are Best for Code?',
           image: '/images/local-llms-with-vscode-cursor-best-coding-models-table-en.svg',
           imageCaption: 'Comparison table of five local coding models -- Qwen3-Coder 7B, Code Llama 7B/13B, Mistral Small, and DeepSeek-Coder 6.7B -- showing HumanEval scores, VRAM requirements, and speed for use in VS Code and Cursor.',
@@ -81,6 +84,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           columns: ['Model', 'HumanEval', 'VRAM', 'Speed', 'Best For'],
         },
         performance: {
+          id: 'performance',
           title: 'What Latency and VRAM Should You Expect?',
           content: [
             '**Completion latency (time to first token) is critical for IDE experience.** As of April 2026, here are typical numbers:',
@@ -94,12 +98,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           columns: ['Hardware', 'Model', 'Latency', 'Throughput'],
         },
         advanced: {
+          id: 'advanced',
           title: 'Advanced Configuration for Code Completions',
           content: 'Fine-tune the experience with these settings:',
           codeBlock: '# config.json advanced settings\n{\n  "tabAutocompleteModel": {\n    "contextLength": 2048,     # How much code context to send\n    "maxTokens": 50            # Max tokens per completion\n  },\n  "completionOptions": {\n    "maxContextTokens": 1024,\n    "maxSuggestionsCount": 5,\n    "debounceWaitMs": 200      # Wait before showing completions (ms)\n  },\n  # For faster inference, use smaller context:\n  "models": [{\n    "contextLength": 1024      # Smaller context = faster\n  }]\n}\n\n# For best speed on 8GB machines:\n# - Use 7B model (not 13B)\n# - Set maxTokens to 30\n# - Set debounceWaitMs to 500 (less flickering)',
           codeLanguage: 'json',
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Common Mistakes With Local Code Completions',
           items: [
             '**Not tuning debounce latency.** If completions feel "laggy", increase debounceWaitMs (e.g., to 400 ms) to avoid showing incomplete suggestions.',
@@ -278,7 +284,7 @@ schema: {
         { label: 'Performance und VRAM', anchor: '#performance' },
         { label: 'Erweiterte Konfiguration', anchor: '#advanced' },
         { label: 'Häufige Fehler', anchor: '#common-mistakes' },
-        { label: 'Häufig gestellte Fragen', anchor: '#common-questions' },
+        { label: 'Häufig gestellte Fragen', anchor: '#faq' },
         { label: 'Weiterführende Lektüre', anchor: '#related-reading' },
         { label: 'Quellen', anchor: '#sources' },
       ],
@@ -300,6 +306,7 @@ schema: {
           ],
         },
         vscodeContinue: {
+          id: 'vscode-continue',
           title: 'Wie richten Sie Continue.dev in VS Code ein?',
           content: 'Continue.dev ist eine VS Code-Erweiterung für lokale und Cloud-Code-Vervollständigung.',
           image: '/images/local-llms-with-vscode-cursor-continue-setup-flow-de.svg',
@@ -332,6 +339,7 @@ schema: {
           columns: ['Modell', 'HumanEval', 'VRAM', 'Geschwindigkeit', 'Beste für'],
         },
         performance: {
+          id: 'performance',
           title: 'Welche Latenz und welchen VRAM sollten Sie erwarten?',
           content: [
             '**Vervollständigungslatenz (Zeit bis zum ersten Token) ist kritisch für die IDE-Erfahrung.** Stand April 2026 sind hier typische Zahlen:',
@@ -348,6 +356,7 @@ schema: {
           note: '**Hinweis zu Performance-Daten**: Latenz und Durchsatz gemessen mit Qwen3-Coder 7B Q4_K_M-Format, Batch-Größe = 1, auf frischem System (keine Hintergrund-Aufgaben). Ihre tatsächliche Performance hängt ab von OS, VRAM-Verfügbarkeit, Quantisierungsformat und gleichzeitiger Last.',
         },
         advanced: {
+          id: 'advanced',
           title: 'Wie konfigurieren Sie Code-Vervollständigungen für Performance?',
           content: [
             '**Feinabstimmung der Erfahrung mit diesen Einstellungen:**',
@@ -358,6 +367,7 @@ schema: {
           codeLanguage: 'json',
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Was sind häufige Fehler bei der Einrichtung lokaler Code-Vervollständigungen?',
           items: [
             '**Keine Debounce-Latenz-Optimierung**: Falls Vervollständigungen sich "langsam" anfühlen, erhöhen Sie debounceWaitMs (z.B. auf 400 ms), um unvollständige Vorschläge zu vermeiden.',
@@ -404,6 +414,7 @@ schema: {
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Weiterführende Lektüre',
           items: [
             '[Beste KI-Coding-Assistenten für lokale LLM](/de/local-llms/best-ai-coding-assistant-local-llm) -- Umfassender Vergleich von Cursor, Continue.dev, Cody, Tabnine und Windsurf mit Unterstützung für lokale LLMs.',
@@ -490,7 +501,7 @@ schema: {
         { label: 'Performance et RAM', anchor: '#performance' },
         { label: 'Configuration avancée', anchor: '#advanced' },
         { label: 'Erreurs courantes', anchor: '#common-mistakes' },
-        { label: 'Questions fréquentes', anchor: '#common-questions' },
+        { label: 'Questions fréquentes', anchor: '#faq' },
         { label: 'Lectures connexes', anchor: '#related-reading' },
         { label: 'Sources', anchor: '#sources' },
       ],
@@ -512,6 +523,7 @@ schema: {
           ],
         },
         vscodeContinue: {
+          id: 'vscode-continue',
           title: 'Comment configurer Continue.dev dans VS Code ?',
           content: 'Continue.dev est une extension VS Code pour les complétions de code locales et cloud.',
           image: '/images/local-llms-with-vscode-cursor-continue-setup-flow-fr.svg',
@@ -544,6 +556,7 @@ schema: {
           columns: ['Modèle', 'HumanEval', 'RAM', 'Vitesse', 'Meilleur pour'],
         },
         performance: {
+          id: 'performance',
           title: 'Quelle latence et quelle RAM devez-vous attendre ?',
           content: [
             '**La latence de complétude (temps jusqu\'au premier jeton) est critique pour l\'expérience de l\'IDE.** À partir d\'avril 2026, voici les chiffres typiques :',
@@ -560,6 +573,7 @@ schema: {
           note: '**Remarque sur les données de performance** : Latence et débit mesurés avec format Qwen3-Coder 7B Q4_K_M, taille de lot = 1, sur système frais (pas de tâches en arrière-plan). Vos performances réelles dépendent du SE, de la disponibilité RAM, du format de quantification et de la charge simultanée.',
         },
         advanced: {
+          id: 'advanced',
           title: 'Comment configurez-vous les complétions de code pour les performances ?',
           content: [
             '**Affinez l\'expérience avec ces paramètres :**',
@@ -570,6 +584,7 @@ schema: {
           codeLanguage: 'json',
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Quelles sont les erreurs courantes lors de la configuration des complétions de code local ?',
           items: [
             '**Ne pas optimiser la latence de debounce** : Si les complétions semblent « lentes », augmentez debounceWaitMs (par exemple à 400 ms) pour éviter les suggestions incomplètes.',
@@ -601,6 +616,7 @@ schema: {
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Lectures connexes',
           items: [
             '[Meilleur assistant IA de code pour LLM local](/fr/local-llms/best-ai-coding-assistant-local-llm) -- Comparaison complète de Cursor, Continue.dev, Cody, Tabnine et Windsurf avec support LLM local.',
@@ -686,7 +702,7 @@ schema: {
         { label: 'パフォーマンスとVRAM', anchor: '#performance' },
         { label: '高度な設定', anchor: '#advanced' },
         { label: '一般的な間違い', anchor: '#common-mistakes' },
-        { label: 'よくある質問', anchor: '#common-questions' },
+        { label: 'よくある質問', anchor: '#faq' },
         { label: '関連情報', anchor: '#related-reading' },
         { label: 'ソース', anchor: '#sources' },
       ],
@@ -708,6 +724,7 @@ schema: {
           ],
         },
         vscodeContinue: {
+          id: 'vscode-continue',
           title: 'VS CodeでContinue.devをセットアップするにはどうすればよいですか？',
           content: 'Continue.devはローカルおよびクラウドコード補完用のVS Code拡張機能です。',
           image: '/images/local-llms-with-vscode-cursor-continue-setup-flow-ja.svg',
@@ -740,6 +757,7 @@ schema: {
           columns: ['モデル', 'HumanEval', 'VRAM', '速度', '最適：'],
         },
         performance: {
+          id: 'performance',
           title: 'どのレイテンシとVRAMを期待すべきですか？',
           content: [
             '**補完レイテンシ（最初のトークンまでの時間）はIDE体験に不可欠です。** 2026年4月現在、ここに典型的な数値があります：',
@@ -756,6 +774,7 @@ schema: {
           note: '**パフォーマンスデータに関する注記**：Qwen3-Coder 7B Q4_K_Mフォーマット、バッチサイズ = 1、新規システム（バックグラウンドタスクなし）で測定されたレイテンシとスループット。実際のパフォーマンスはOS、VRAM可用性、量子化形式、および同時負荷に依存します。',
         },
         advanced: {
+          id: 'advanced',
           title: 'パフォーマンスのためにコード補完を設定するにはどうすればよいですか？',
           content: [
             'これらの設定で体験を微調整：',
@@ -766,6 +785,7 @@ schema: {
           codeLanguage: 'json',
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'ローカルコード補完セットアップで何が一般的な間違いですか？',
           items: [
             '**Debounceレイテンシを調整しない**：補完が「遅い」と感じたら、debounceWaitMsを増やす（例えば400 ms）して不完全な提案を表示しない。',
@@ -812,6 +832,7 @@ schema: {
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: '関連情報',
           items: [
             '[ローカルLLM向け最高のAIコーディングアシスタント](/ja/local-llms/best-ai-coding-assistant-local-llm) -- Cursor、Continue.dev、Cody、Tabnine、Windsurfの包括的な比較とローカルLLMサポート。',
@@ -823,6 +844,7 @@ schema: {
           ],
         },
         sources: {
+          id: 'sources',
           title: 'ソース',
           items: [
             'Continue.dev Team. (2026). "Continue Documentation." https://docs.continue.dev/ -- Official setup guide, config.json reference, and local model integration instructions.',
@@ -897,7 +919,7 @@ schema: {
         { label: '性能和显存', anchor: '#performance' },
         { label: '高级配置', anchor: '#advanced' },
         { label: '常见错误', anchor: '#common-mistakes' },
-        { label: '常见问题', anchor: '#common-questions' },
+        { label: '常见问题', anchor: '#faq' },
         { label: '相关阅读', anchor: '#related-reading' },
         { label: '源代码', anchor: '#sources' },
       ],
@@ -919,6 +941,7 @@ schema: {
           ],
         },
         vscodeContinue: {
+          id: 'vscode-continue',
           title: '如何在VS Code中设置Continue.dev？',
           content: 'Continue.dev是VS Code扩展，用于本地和云代码补全。',
           image: '/images/local-llms-with-vscode-cursor-continue-setup-flow-zh.svg',
@@ -951,6 +974,7 @@ schema: {
           columns: ['模型', 'HumanEval', '显存', '速度', '最佳用途'],
         },
         performance: {
+          id: 'performance',
           title: '您应该期望什么样的延迟和显存？',
           content: [
             '**补全延迟（到第一个token的时间）对IDE体验至关重要。** 截至2026年4月，以下是典型数字：',
@@ -967,6 +991,7 @@ schema: {
           note: '**性能数据说明**：使用Qwen3-Coder 7B Q4_K_M格式、批大小 = 1、新鲜系统（无后台任务）测量的延迟和吞吐量。您的实际性能取决于OS、显存可用性、量化格式和并发负载。',
         },
         advanced: {
+          id: 'advanced',
           title: '如何配置代码补全以获得最佳性能？',
           content: [
             '使用这些设置微调体验：',
@@ -977,6 +1002,7 @@ schema: {
           codeLanguage: 'json',
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: '设置本地代码补全时有哪些常见错误？',
           items: [
             '**不调整去抖延迟**：如果补全感觉"迟缓"，增加debounceWaitMs（例如400毫秒）以避免显示不完整建议。',
@@ -1008,6 +1034,7 @@ schema: {
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: '相关阅读',
           items: [
             '[本地LLM最佳AI编码助手](/zh/local-llms/best-ai-coding-assistant-local-llm) -- Cursor、Continue.dev、Cody、Tabnine和Windsurf与本地LLM支持的全面对比。',
@@ -1019,6 +1046,7 @@ schema: {
           ],
         },
         sources: {
+          id: 'sources',
           title: '源代码',
           items: [
             'Continue.dev Team. (2026). "Continue Documentation." https://docs.continue.dev/ -- Official setup guide, config.json reference, and local model integration instructions.',
@@ -1096,7 +1124,7 @@ schema: {
         { label: 'Rendimiento y VRAM', anchor: '#performance' },
         { label: 'Configuración avanzada', anchor: '#advanced' },
         { label: 'Errores comunes', anchor: '#common-mistakes' },
-        { label: 'Preguntas frecuentes', anchor: '#common-questions' },
+        { label: 'Preguntas frecuentes', anchor: '#faq' },
         { label: 'Lecturas relacionadas', anchor: '#related-reading' },
         { label: 'Fuentes', anchor: '#sources' },
       ],
@@ -1117,6 +1145,7 @@ schema: {
           ],
         },
         vscodeContinue: {
+          id: 'vscode-continue',
           title: '¿Cómo configurar Continue.dev en VS Code?',
           content: 'Continue.dev es una extensión de VS Code para completaciones de código locales y en la nube.',
           image: '/images/local-llms-with-vscode-cursor-continue-setup-flow-es.svg',
@@ -1125,6 +1154,7 @@ schema: {
           codeLanguage: 'json',
         },
         cursor: {
+          id: 'cursor-editor',
           title: '¿Cómo usar modelos locales en Cursor?',
           content: [
             '**Cursor es un fork de VS Code optimizado para la programación asistida por IA.** Tiene soporte integrado para modelos locales mediante Ollama.',
@@ -1133,6 +1163,7 @@ schema: {
           codeLanguage: 'bash',
         },
         bestModels: {
+          id: 'best-models',
           title: '¿Qué modelos son los mejores para código?',
           image: '/images/local-llms-with-vscode-cursor-best-coding-models-table-es.svg',
           imageCaption: 'Tabla comparativa de cinco modelos de código locales -- Qwen3-Coder 7B, Code Llama 7B/13B, Mistral Small y DeepSeek-Coder 6.7B -- con puntuaciones HumanEval, requisitos de VRAM y velocidad para VS Code y Cursor.',
@@ -1149,6 +1180,7 @@ schema: {
           columns: ['Modelo', 'HumanEval', 'VRAM', 'Velocidad', 'Ideal para'],
         },
         performance: {
+          id: 'performance',
           title: '¿Qué latencia y VRAM debes esperar?',
           content: [
             '**La latencia de completación (tiempo hasta el primer token) es fundamental para la experiencia en el IDE.** A partir de abril de 2026, estos son los valores típicos:',
@@ -1165,6 +1197,7 @@ schema: {
           note: '**Nota sobre los datos de rendimiento**: Latencia y rendimiento medidos con el formato Qwen3-Coder 7B Q4_K_M, tamaño de lote = 1, en un sistema sin carga (sin tareas en segundo plano). Tu rendimiento real depende del sistema operativo, la disponibilidad de VRAM, el formato de cuantización y la carga concurrente.',
         },
         advanced: {
+          id: 'advanced',
           title: '¿Cómo configurar las completaciones de código para obtener el mejor rendimiento?',
           content: [
             'Ajusta la experiencia con estos parámetros:',
@@ -1175,6 +1208,7 @@ schema: {
           codeLanguage: 'json',
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: '¿Cuáles son los errores comunes al configurar completaciones de código locales?',
           items: [
             '**No ajustar la latencia de debounce**: Si las completaciones se sienten "lentas", aumenta debounceWaitMs (por ejemplo, a 400 ms) para evitar mostrar sugerencias incompletas.',
@@ -1206,6 +1240,7 @@ schema: {
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Lecturas relacionadas',
           items: [
             '[Mejor asistente de código IA para LLM local](/es/local-llms/best-ai-coding-assistant-local-llm) -- Comparativa completa de Cursor, Continue.dev, Cody, Tabnine y Windsurf con soporte para LLM local.',
@@ -1217,6 +1252,7 @@ schema: {
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Fuentes',
           items: [
             'Continue.dev Team. (2026). "Continue Documentation." https://docs.continue.dev/ -- Official setup guide, config.json reference, and local model integration instructions.',
@@ -1294,7 +1330,7 @@ schema: {
         { label: 'الأداء وVRAM', anchor: '#performance' },
         { label: 'الإعداد المتقدم', anchor: '#advanced' },
         { label: 'أخطاء شائعة', anchor: '#common-mistakes' },
-        { label: 'الأسئلة الشائعة', anchor: '#common-questions' },
+        { label: 'الأسئلة الشائعة', anchor: '#faq' },
         { label: 'قراءات ذات صلة', anchor: '#related-reading' },
         { label: 'المصادر', anchor: '#sources' },
       ],
@@ -1315,6 +1351,7 @@ schema: {
           ],
         },
         vscodeContinue: {
+          id: 'vscode-continue',
           title: 'كيف تُعِدّ Continue.dev في VS Code؟',
           content: 'Continue.dev إضافة لـVS Code لإكمالات الشيفرة المحلية والسحابية.',
           image: '/images/local-llms-with-vscode-cursor-continue-setup-flow-ar.svg',
@@ -1323,6 +1360,7 @@ schema: {
           codeLanguage: 'json',
         },
         cursor: {
+          id: 'cursor-editor',
           title: 'كيف تستخدم النماذج المحلية في Cursor؟',
           content: [
             '**Cursor نسخة معدّلة من VS Code محسّنة للبرمجة المدعومة بالذكاء الاصطناعي.** لديه دعم مدمج للنماذج المحلية عبر Ollama.',
@@ -1331,6 +1369,7 @@ schema: {
           codeLanguage: 'bash',
         },
         bestModels: {
+          id: 'best-models',
           title: 'أي النماذج الأفضل للشيفرة؟',
           image: '/images/local-llms-with-vscode-cursor-best-coding-models-table-ar.svg',
           imageCaption: 'جدول مقارنة لخمسة نماذج برمجة محلية -- Qwen3-Coder 7B وCode Llama 7B/13B وMistral Small وDeepSeek-Coder 6.7B -- يوضح درجات HumanEval ومتطلبات VRAM والسرعة للاستخدام في VS Code وCursor.',
@@ -1347,6 +1386,7 @@ schema: {
           columns: ['Modelo', 'HumanEval', 'VRAM', 'Velocidad', 'Ideal para'],
         },
         performance: {
+          id: 'performance',
           title: 'ما زمن الاستجابة وVRAM الذي يجب توقّعه؟',
           content: [
             '**زمن استجابة الإكمال (الوقت حتى الرمز الأول) أساسي لتجربة الـIDE.** اعتبارًا من أبريل 2026، هذه هي القيم النموذجية:',
@@ -1363,6 +1403,7 @@ schema: {
           note: '**ملاحظة حول بيانات الأداء**: زمن الاستجابة والإنتاجية مقيسان بصيغة Qwen3-Coder 7B Q4_K_M، حجم الدفعة = 1، على نظام دون حمل (بلا مهام في الخلفية). يعتمد أداؤك الفعلي على نظام التشغيل وتوافر VRAM وصيغة التكميم والحمل المتزامن.',
         },
         advanced: {
+          id: 'advanced',
           title: 'كيف تُعِدّ إكمالات الشيفرة للحصول على أفضل أداء؟',
           content: [
             'اضبط التجربة بهذه المعاملات:',
@@ -1373,6 +1414,7 @@ schema: {
           codeLanguage: 'json',
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'ما الأخطاء الشائعة عند إعداد إكمالات الشيفرة المحلية؟',
           items: [
             '**عدم ضبط زمن استجابة debounce**: إذا بدت الإكمالات "بطيئة"، زِد debounceWaitMs (مثلًا إلى 400 مللي ثانية) لتجنّب عرض اقتراحات غير مكتملة.',
@@ -1404,6 +1446,7 @@ schema: {
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'قراءات ذات صلة',
           items: [
             '[أفضل مساعد شيفرة بالذكاء الاصطناعي لـLLM محلي](/ar/local-llms/best-ai-coding-assistant-local-llm) -- مقارنة كاملة لـCursor وContinue.dev وCody وTabnine وWindsurf بدعم LLM محلي.',
@@ -1415,6 +1458,7 @@ schema: {
           ],
         },
         sources: {
+          id: 'sources',
           title: 'المصادر',
           items: [
             'Continue.dev Team. (2026). "Continue Documentation." https://docs.continue.dev/ -- Official setup guide, config.json reference, and local model integration instructions.',
@@ -1492,7 +1536,7 @@ schema: {
         { label: 'Desempenho e VRAM', anchor: '#performance' },
         { label: 'Configuração avançada', anchor: '#advanced' },
         { label: 'Erros comuns', anchor: '#common-mistakes' },
-        { label: 'Perguntas frequentes', anchor: '#common-questions' },
+        { label: 'Perguntas frequentes', anchor: '#faq' },
         { label: 'Leituras relacionadas', anchor: '#related-reading' },
         { label: 'Fontes', anchor: '#sources' },
       ],
@@ -1513,6 +1557,7 @@ schema: {
           ],
         },
         vscodeContinue: {
+          id: 'vscode-continue',
           title: 'Como configurar o Continue.dev no VS Code?',
           content: 'O Continue.dev é uma extensão do VS Code para completamentos de código locais e em nuvem.',
           image: '/images/local-llms-with-vscode-cursor-continue-setup-flow-pt.svg',
@@ -1521,6 +1566,7 @@ schema: {
           codeLanguage: 'json',
         },
         cursor: {
+          id: 'cursor-editor',
           title: 'Como usar modelos locais no Cursor?',
           content: [
             '**O Cursor é um fork do VS Code otimizado para a programação assistida por IA.** Ele tem suporte integrado a modelos locais via Ollama.',
@@ -1529,6 +1575,7 @@ schema: {
           codeLanguage: 'bash',
         },
         bestModels: {
+          id: 'best-models',
           title: 'Quais modelos são os melhores para código?',
           image: '/images/local-llms-with-vscode-cursor-best-coding-models-table-pt.svg',
           imageCaption: 'Tabela comparativa de cinco modelos de codificação locais -- Qwen3-Coder 7B, Code Llama 7B/13B, Mistral Small e DeepSeek-Coder 6.7B -- com pontuações HumanEval, requisitos de VRAM e velocidade para VS Code e Cursor.',
@@ -1545,6 +1592,7 @@ schema: {
           columns: ['Modelo', 'HumanEval', 'VRAM', 'Velocidade', 'Ideal para'],
         },
         performance: {
+          id: 'performance',
           title: 'Que latência e VRAM você deve esperar?',
           content: [
             '**A latência de completamento (tempo até o primeiro token) é fundamental para a experiência no IDE.** A partir de abril de 2026, estes são os valores típicos:',
@@ -1561,6 +1609,7 @@ schema: {
           note: '**Nota sobre os dados de desempenho**: Latência e vazão medidas com o formato Qwen3-Coder 7B Q4_K_M, batch size = 1, em um sistema sem carga (sem tarefas em segundo plano). Sua vazão real depende do sistema operacional, da disponibilidade de VRAM, do formato de quantização e da carga concorrente.',
         },
         advanced: {
+          id: 'advanced',
           title: 'Como configurar os completamentos de código para o melhor desempenho?',
           content: [
             'Ajuste a experiência com estes parâmetros:',
@@ -1571,6 +1620,7 @@ schema: {
           codeLanguage: 'json',
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Quais são os erros comuns ao configurar completamentos de código locais?',
           items: [
             '**Não ajustar a latência de debounce**: Se os completamentos parecerem "lentos", aumente o debounceWaitMs (por exemplo, para 400 ms) para evitar mostrar sugestões incompletas.',
@@ -1602,6 +1652,7 @@ schema: {
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Leituras relacionadas',
           items: [
             '[Melhor assistente de código com IA para LLM local](/pt/local-llms/best-ai-coding-assistant-local-llm) -- Comparativo completo de Cursor, Continue.dev, Cody, Tabnine e Windsurf com suporte a LLM local.',
@@ -1613,6 +1664,7 @@ schema: {
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Fontes',
           items: [
             'Continue.dev Team. (2026). "Continue Documentation." https://docs.continue.dev/ -- Official setup guide, config.json reference, and local model integration instructions.',
@@ -1693,7 +1745,7 @@ schema: {
         { label: '성능 및 VRAM', anchor: '#performance' },
         { label: '고급 설정', anchor: '#advanced' },
         { label: '자주 발생하는 실수', anchor: '#common-mistakes' },
-        { label: '자주 묻는 질문', anchor: '#common-questions' },
+        { label: '자주 묻는 질문', anchor: '#faq' },
         { label: '관련 자료', anchor: '#related-reading' },
         { label: '출처', anchor: '#sources' },
       ],
@@ -1714,6 +1766,7 @@ schema: {
           ],
         },
         vscodeContinue: {
+          id: 'vscode-continue',
           title: 'VS Code에서 Continue.dev를 설정하는 방법은 무엇입니까?',
           content: 'Continue.dev는 로컬 및 클라우드 코드 자동 완성을 위한 VS Code 확장입니다.',
           image: '/images/local-llms-with-vscode-cursor-continue-setup-flow-ko.svg',
@@ -1722,6 +1775,7 @@ schema: {
           codeLanguage: 'json',
         },
         cursor: {
+          id: 'cursor-editor',
           title: 'Cursor에서 로컬 모델을 사용하는 방법은 무엇입니까?',
           content: [
             '**Cursor는 AI 지원 코딩에 최적화된 VS Code 포크입니다.** Ollama를 통한 로컬 모델 지원이 내장되어 있습니다.',
@@ -1730,6 +1784,7 @@ schema: {
           codeLanguage: 'bash',
         },
         bestModels: {
+          id: 'best-models',
           title: '코드용으로 가장 적합한 모델은 무엇입니까?',
           image: '/images/local-llms-with-vscode-cursor-best-coding-models-table-ko.svg',
           imageCaption: '다섯 개의 로컬 코딩 모델 비교표 — Qwen3-Coder 7B, Code Llama 7B/13B, Mistral Small, DeepSeek-Coder 6.7B — VS Code와 Cursor에서 사용할 HumanEval 점수, VRAM 요구 사항, 속도를 보여준다.',
@@ -1743,6 +1798,7 @@ schema: {
           columns: ['Model', 'HumanEval', 'VRAM', 'Speed', 'Best For'],
         },
         performance: {
+          id: 'performance',
           title: '예상 지연 시간과 VRAM은 얼마입니까?',
           content: [
             '**자동 완성 지연 시간(첫 번째 토큰까지의 시간)은 IDE 경험에 매우 중요합니다.** 2026년 4월 기준 대표적인 수치는 다음과 같습니다:',
@@ -1756,12 +1812,14 @@ schema: {
           columns: ['Hardware', 'Model', 'Latency', 'Throughput'],
         },
         advanced: {
+          id: 'advanced',
           title: '코드 자동 완성을 위한 고급 설정',
           content: '다음 설정으로 경험을 세밀하게 조정하십시오:',
           codeBlock: '# config.json advanced settings\n{\n  "tabAutocompleteModel": {\n    "contextLength": 2048,     # How much code context to send\n    "maxTokens": 50            # Max tokens per completion\n  },\n  "completionOptions": {\n    "maxContextTokens": 1024,\n    "maxSuggestionsCount": 5,\n    "debounceWaitMs": 200      # Wait before showing completions (ms)\n  },\n  # For faster inference, use smaller context:\n  "models": [{\n    "contextLength": 1024      # Smaller context = faster\n  }]\n}\n\n# For best speed on 8GB machines:\n# - Use 7B model (not 13B)\n# - Set maxTokens to 30\n# - Set debounceWaitMs to 500 (less flickering)',
           codeLanguage: 'json',
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: '로컬 코드 자동 완성의 자주 발생하는 실수',
           items: [
             '**디바운스 지연 시간 미조정.** 자동 완성이 "느리게" 느껴진다면 debounceWaitMs를 늘리십시오(예: 400ms). 불완전한 제안이 나타나는 것을 방지할 수 있습니다.',

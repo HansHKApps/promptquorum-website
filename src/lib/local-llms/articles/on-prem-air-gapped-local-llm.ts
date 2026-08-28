@@ -55,6 +55,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         whatIsAirGapped: {
+          id: 'what-is-air-gapped',
           title: 'What Does Air-Gapped Mean?',
           content: [
             '**Air-gapped infrastructure has no network connection to the internet or any external system.** All data and computation stays on isolated hardware.',
@@ -64,6 +65,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         architecture: {
+          id: 'architecture',
           title: 'What Does Typical Air-Gapped Architecture Look Like?',
           content: [
             '**A single machine or small cluster, completely isolated, with restricted physical access.**',
@@ -79,6 +81,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         networkIsolation: {
+          id: 'network-isolation',
           title: 'How Do You Isolate Networks From External Connections?',
           content: [
             '**Isolation is enforced at multiple levels:**',
@@ -91,6 +94,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         modelManagement: {
+          id: 'model-management',
           title: 'How Do You Manage Models in Air-Gapped Environments?',
           content: [
             '**Model updates are manual, requiring physical media transfer or internal secure processes.**',
@@ -105,6 +109,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         updates: {
+          id: 'updates',
           title: 'How Do You Handle Updates and Patching?',
           content: [
             '**Security updates and model updates are manual:**',
@@ -117,6 +122,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         security: {
+          id: 'security',
           title: 'How Do You Ensure Security in Air-Gapped Systems?',
           content: [
             '**Air-gapped inherently more secure (no external attacks), but new risks emerge:**',
@@ -130,6 +136,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Common Air-Gapped Deployment Mistakes',
           items: [
             '**Incomplete isolation:** Leaving one port open, one wireless card enabled, or allowing USB devices defeats air-gapping. Audit rigorously.',
@@ -322,6 +329,7 @@ schema: {
           ],
         },
         whatIsAirGapped: {
+          id: 'what-is-air-gapped',
           title: '¿Qué significa air-gapped?',
           content: [
             '**La infraestructura air-gapped no tiene conexión de red a internet ni a ningún sistema externo.** Todos los datos y la computación permanecen en hardware aislado.',
@@ -331,6 +339,7 @@ schema: {
           ],
         },
         architecture: {
+          id: 'architecture',
           title: '¿Cómo es una arquitectura air-gapped típica?',
           content: [
             '**Una sola máquina o un pequeño clúster, completamente aislado, con acceso físico restringido.**',
@@ -346,6 +355,7 @@ schema: {
           ],
         },
         networkIsolation: {
+          id: 'network-isolation',
           title: '¿Cómo se aíslan las redes de las conexiones externas?',
           content: [
             '**El aislamiento se aplica en múltiples niveles:**',
@@ -358,6 +368,7 @@ schema: {
           ],
         },
         modelManagement: {
+          id: 'model-management',
           title: '¿Cómo se gestionan los modelos en entornos air-gapped?',
           content: [
             '**Las actualizaciones de modelos son manuales y requieren transferencia de medios físicos o procesos internos seguros.**',
@@ -372,6 +383,7 @@ schema: {
           ],
         },
         updates: {
+          id: 'updates',
           title: '¿Cómo se gestionan las actualizaciones y los parches?',
           content: [
             '**Las actualizaciones de seguridad y de modelos son manuales:**',
@@ -384,6 +396,7 @@ schema: {
           ],
         },
         security: {
+          id: 'security',
           title: '¿Cómo se garantiza la seguridad en sistemas air-gapped?',
           content: [
             '**Air-gapped es inherentemente más seguro (sin ataques externos), pero surgen nuevos riesgos:**',
@@ -397,6 +410,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Errores comunes en el despliegue air-gapped',
           items: [
             '**Aislamiento incompleto:** dejar un puerto abierto, una tarjeta inalámbrica habilitada o permitir dispositivos USB anula el air-gapping. Audita rigurosamente.',
@@ -589,6 +603,7 @@ schema: {
           ],
         },
         whatIsAirGapped: {
+          id: 'what-is-air-gapped',
           title: 'ماذا يعني النشر المعزول؟',
           content: [
             '**البنية التحتية المعزولة بلا اتصال شبكي بالإنترنت أو بأي نظام خارجي.** تبقى جميع البيانات والحوسبة على عتاد معزول.',
@@ -598,6 +613,7 @@ schema: {
           ],
         },
         architecture: {
+          id: 'architecture',
           title: 'كيف تبدو البنية المعزولة النموذجية؟',
           content: [
             '**جهاز واحد أو عنقود صغير، معزول تمامًا، بوصول مادي مقيّد.**',
@@ -613,6 +629,7 @@ schema: {
           ],
         },
         networkIsolation: {
+          id: 'network-isolation',
           title: 'كيف تُعزَل الشبكات عن الاتصالات الخارجية؟',
           content: [
             '**يُطبَّق العزل على مستويات متعددة:**',
@@ -625,6 +642,7 @@ schema: {
           ],
         },
         modelManagement: {
+          id: 'model-management',
           title: 'كيف تُدار النماذج في البيئات المعزولة؟',
           content: [
             '**تحديثات النماذج يدوية وتتطلب نقل وسائط مادية أو عمليات داخلية آمنة.**',
@@ -639,6 +657,7 @@ schema: {
           ],
         },
         updates: {
+          id: 'updates',
           title: 'كيف تُدار التحديثات والتصحيحات؟',
           content: [
             '**تحديثات الأمان والنماذج يدوية:**',
@@ -651,6 +670,7 @@ schema: {
           ],
         },
         security: {
+          id: 'security',
           title: 'كيف يُضمَن الأمان في الأنظمة المعزولة؟',
           content: [
             '**النشر المعزول أكثر أمانًا بطبيعته (بلا هجمات خارجية)، لكن تنشأ مخاطر جديدة:**',
@@ -664,6 +684,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'أخطاء شائعة في النشر المعزول',
           items: [
             '**عزل غير كامل:** ترك منفذ مفتوح أو بطاقة لاسلكية مفعّلة أو السماح بأجهزة USB يبطل العزل. دقّق بصرامة.',
@@ -856,6 +877,7 @@ schema: {
           ],
         },
         whatIsAirGapped: {
+          id: 'what-is-air-gapped',
           title: 'O que significa air-gapped?',
           content: [
             '**A infraestrutura air-gapped não tem conexão de rede com a internet nem com nenhum sistema externo.** Todos os dados e a computação permanecem em hardware isolado.',
@@ -865,6 +887,7 @@ schema: {
           ],
         },
         architecture: {
+          id: 'architecture',
           title: 'Como é uma arquitetura air-gapped típica?',
           content: [
             '**Uma única máquina ou um pequeno cluster, completamente isolado, com acesso físico restrito.**',
@@ -1747,6 +1770,7 @@ schema: {
           ],
         },
         whatIsAirGapped: {
+          id: 'what-is-air-gapped',
           title: '气隙意味着什么?',
           content: [
             '**气隙基础设施与互联网或任何外部系统都没有网络连接。** 所有数据和计算都保留在隔离硬件上。',
@@ -1756,6 +1780,7 @@ schema: {
           ],
         },
         architecture: {
+          id: 'architecture',
           title: '典型气隙架构是什么样的?',
           content: [
             '**一台机器或小型集群，完全隔离，具有受限的物理访问。**',
@@ -1771,6 +1796,7 @@ schema: {
           ],
         },
         networkIsolation: {
+          id: 'network-isolation',
           title: '如何将网络与外部连接隔离?',
           content: [
             '**隔离在多个级别强制执行:**',
@@ -1783,6 +1809,7 @@ schema: {
           ],
         },
         modelManagement: {
+          id: 'model-management',
           title: '如何在气隙环境中管理模型?',
           content: [
             '**模型更新是手动的，需要物理媒体传输或内部安全流程。**',
@@ -1797,6 +1824,7 @@ schema: {
           ],
         },
         updates: {
+          id: 'updates',
           title: '如何处理更新和补丁?',
           content: [
             '**安全更新和模型更新是手动的:**',
@@ -1809,6 +1837,7 @@ schema: {
           ],
         },
         security: {
+          id: 'security',
           title: '如何确保气隙系统中的安全?',
           content: [
             '**气隙本质上更安全 (无外部攻击)，但会出现新风险:**',
@@ -1822,6 +1851,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: '常见的气隙部署错误',
           items: [
             '**不完整隔离:** 留下一个开放端口、启用一个无线卡或允许USB设备会破坏气隙。严格审计。',
@@ -2015,6 +2045,7 @@ schema: {
           ],
         },
         whatIsAirGapped: {
+          id: 'what-is-air-gapped',
           title: '에어갭이란 무엇입니까?',
           content: [
             '**에어갭 인프라는 인터넷이나 외부 시스템에 대한 네트워크 연결이 전혀 없습니다.** 모든 데이터와 연산은 격리된 하드웨어 내에서만 이루어집니다.',
@@ -2024,6 +2055,7 @@ schema: {
           ],
         },
         architecture: {
+          id: 'architecture',
           title: '일반적인 에어갭 아키텍처는 어떻게 구성됩니까?',
           content: [
             '**단일 머신 또는 소규모 클러스터로 완전 격리되어 있으며, 물리적 접근이 엄격히 제한됩니다.**',
@@ -2039,6 +2071,7 @@ schema: {
           ],
         },
         networkIsolation: {
+          id: 'network-isolation',
           title: '외부 연결로부터 네트워크를 어떻게 격리합니까?',
           content: [
             '**격리는 여러 레벨에서 적용됩니다:**',
@@ -2051,6 +2084,7 @@ schema: {
           ],
         },
         modelManagement: {
+          id: 'model-management',
           title: '에어갭 환경에서 모델을 어떻게 관리합니까?',
           content: [
             '**모델 업데이트는 수동으로 이루어지며, 물리적 매체 이전 또는 내부 보안 프로세스가 필요합니다.**',
@@ -2065,6 +2099,7 @@ schema: {
           ],
         },
         updates: {
+          id: 'updates',
           title: '업데이트 및 패치를 어떻게 처리합니까?',
           content: [
             '**보안 업데이트와 모델 업데이트는 수동으로 진행됩니다:**',
@@ -2077,6 +2112,7 @@ schema: {
           ],
         },
         security: {
+          id: 'security',
           title: '에어갭 시스템에서 보안을 어떻게 보장합니까?',
           content: [
             '**에어갭은 본질적으로 더 안전하지만(외부 공격 없음), 새로운 위험이 등장합니다:**',
@@ -2090,6 +2126,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: '에어갭 배포의 흔한 실수',
           items: [
             '**불완전한 격리:** 포트 하나를 열어두거나, 무선 카드를 활성화하거나, USB 기기를 허용하면 에어갭이 무력화됩니다. 철저히 감사합니다.',

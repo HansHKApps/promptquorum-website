@@ -1732,17 +1732,10 @@ schema: {
       primaryTerm: 'Local LLM Laptop',
       toc: [
         { label: 'Kurze Antwort: Welches lokale LLM läuft auf Ihrem Laptop?', anchor: '#quick-answer-ram' },
-        { label: 'Zusammenfassung', anchor: '#zusammenfassung' },
-        { label: 'Können Sie ein Local LLM auf einem Laptop ausführen?', anchor: '#laptop-moglich' },
         { label: 'Können Sie RAG auf einem Laptop ausführen?', anchor: '#rag-laptop' },
         { label: 'Welches Setup brauchen Sie?', anchor: '#use-case' },
-        { label: 'Welche lokalen LLM-Modelle laufen am besten auf einem Laptop?', anchor: '#beste-modelle' },
         { label: 'Apple Silicon vs Windows-Laptop', anchor: '#apple-vs-windows' },
         { label: 'Wie verhindert man Thermal Throttling auf einem Laptop?', anchor: '#thermal-throttling' },
-        { label: 'Wie viel Akku verbraucht ein lokales LLM?', anchor: '#akkulaufzeit' },
-        { label: 'Welche Quantisierungsstufe sollten Sie auf einem Laptop verwenden?', anchor: '#quantisierung' },
-        { label: 'Welche Datenschutzgesetze gelten beim Ausführen lokaler LLMs?', anchor: '#regionale-compliance' },
-        { label: 'Häufige Fehler beim Ausführen lokaler LLMs auf Laptops', anchor: '#haufige-fehler' },
         { label: 'Weiterführende Ressourcen', anchor: '#weiterführende-ressourcen' },
         { label: 'Häufig gestellte Fragen', anchor: '#faq' },
         { label: 'Quellen', anchor: '#quellen' },
@@ -1887,6 +1880,7 @@ schema: {
           ],
         },
         appleSilicon: {
+          id: 'apple-vs-windows',
           title: 'Apple Silicon vs Windows-Laptop: Was ist besser für lokale LLMs?',
           content: [
             '**Apple Silicon MacBooks (M1 bis M5) sind die besten Consumer-Laptops für lokale LLM-Inferenz.** Die [vereinheitlichte Speicher](/local-llms/gpu-vs-cpu-vs-apple-silicon) Architektur bedeutet, dass GPU und CPU den gleichen Speicherpool nutzen -- ein M3 MacBook Pro mit 18 GB Speicher kann ein 13B-Modell vollständig im GPU-Speicher ausführen und erreicht 50-80 Token/Sek. Das aktuelle MacBook Pro (M5 Pro/M5 Max, Markteinführung März 2026) erweitert den vereinheitlichten Speicher auf bis zu 64 GB beim M5 Pro und 128 GB beim M5 Max, mit bis zu 307 GB/s bzw. 614 GB/s Speicherbandbreite.',
@@ -1911,6 +1905,7 @@ schema: {
           ],
         },
         thermals: {
+          id: 'thermal-throttling',
           title: 'Wie verhindern Sie Thermal Throttling auf einem Laptop?',
           content: [
             '**Thermal Throttling tritt auf, wenn die CPU oder GPU ihre Temperaturgrenze erreicht und die Taktgeschwindigkeit reduziert, um abzukühlen.** Bei der lokalen LLM-Inferenz geschieht dies normalerweise nach 10-15 Minuten kontinuierlicher Generierung und reduziert die Geschwindigkeit um 20-40%.',
@@ -2489,17 +2484,9 @@ schema: {
       primaryTerm: 'Local LLM ordinateur portable',
       toc: [
         { label: 'Réponse rapide : quel LLM local tourne sur votre portable ?', anchor: '#quick-answer-ram' },
-        { label: 'Résumé clé', anchor: '#resume-cle' },
-        { label: 'Pouvez-vous exécuter un Local LLM sur un ordinateur portable?', anchor: '#peux-executer' },
         { label: 'Peut-on faire du RAG sur un ordinateur portable ?', anchor: '#rag-laptop' },
         { label: 'Quelle configuration vous convient?', anchor: '#use-case' },
-        { label: '8 GB RAM vs 16 GB RAM', anchor: '#8gb-vs-16gb-ram' },
-        { label: 'Quels modèles LLM locaux fonctionnent le mieux sur un ordinateur portable?', anchor: '#meilleurs-modeles' },
         { label: 'Apple Silicon vs Ordinateur portable Windows', anchor: '#apple-vs-windows' },
-        { label: 'Comment gérer l\'étranglement thermique sur un ordinateur portable?', anchor: '#gerer-thermique' },
-        { label: 'Quelle autonomie de batterie consomme un LLM local?', anchor: '#autonomie-batterie' },
-        { label: 'Quel niveau de quantification utiliser sur un ordinateur portable?', anchor: '#conseils-quantification' },
-        { label: 'Quelles lois de confidentialité s\'appliquent aux LLMs locaux?', anchor: '#contexte-regional' },
         { label: 'Quelles sont les erreurs courantes lors de l\'exécution de LLMs locaux?', anchor: '#erreurs-courantes' },
         { label: 'Lectures complémentaires', anchor: '#lectures-complementaires' },
         { label: 'Questions fréquemment posées', anchor: '#faq' },
@@ -2645,6 +2632,7 @@ schema: {
           ],
         },
         appleSilicon: {
+          id: 'apple-vs-windows',
           title: 'Apple Silicon vs Ordinateur portable Windows: Lequel est meilleur pour les Local LLMs?',
           content: [
             '**Les MacBooks Apple Silicon (M1 à M5) sont les meilleurs ordinateurs portables grand public pour l\'inférence Local LLM.** L\'architecture [mémoire unifiée](/local-llms/gpu-vs-cpu-vs-apple-silicon) signifie que le GPU et le CPU partagent le même pool de mémoire -- un MacBook Pro M3 avec 18 GB de mémoire peut exécuter un modèle 13B entièrement dans la mémoire GPU, atteignant 50-80 token/sec. Le MacBook Pro actuel (M5 Pro/M5 Max, lancé en mars 2026) porte la mémoire unifiée jusqu\'à 64 GB sur le M5 Pro et 128 GB sur le M5 Max, avec une bande passante allant jusqu\'à 307 GB/s et 614 GB/s respectivement.',
@@ -2711,6 +2699,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'erreurs-courantes',
           title: 'Quelles sont les erreurs courantes lors de l\'exécution de Local LLMs sur un ordinateur portable?',
           items: [
             '**Exécuter un modèle trop grand pour la RAM disponible** → bascule sur le disque, ralentissant l\'inférence de 10–25 à 1–3 token/sec.',
@@ -2721,6 +2710,7 @@ schema: {
           ],
         },
         relatedReading: {
+          id: 'lectures-complementaires',
           title: 'Lectures complémentaires',
           items: [
             '[Qu\'est-ce que les Local LLMs?](/local-llms/what-are-local-llms) -- guide fondamental sur le fonctionnement de l\'inférence locale et les composants matériels importants',
@@ -2901,17 +2891,10 @@ schema: {
       primaryTerm: 'ノートパソコン向けローカルLLM',
       toc: [
         { label: 'クイック回答：どのローカルLLMがあなたのノートパソコンで動くか？', anchor: '#quick-answer-ram' },
-        { label: '重要なポイント', anchor: '#key-points' },
-        { label: 'ノートパソコンでローカルLLMを実行できますか？', anchor: '#can-run' },
         { label: 'ノートパソコンでRAGを実行できますか？', anchor: '#rag-laptop' },
         { label: '自分に合った構成は？', anchor: '#use-case' },
-        { label: '8GB RAM vs 16GB RAM', anchor: '#ram-comparison' },
         { label: 'ノートパソコンに最適なローカルLLMモデルはどれですか？', anchor: '#best-models' },
         { label: 'Apple Silicon vs Windowsノートパソコン', anchor: '#apple-vs-windows' },
-        { label: 'ノートパソコンのサーマルスロットリングをどう防ぐか？', anchor: '#thermal-management' },
-        { label: 'ローカルLLM実行中のバッテリー消費量はどれくらいか？', anchor: '#battery-drain' },
-        { label: 'ノートパソコンでどの量子化レベルを使うべきか？', anchor: '#quantization-tips' },
-        { label: 'ローカルLLM実行時に適用されるプライバシー法は？', anchor: '#regional-compliance' },
         { label: 'ノートパソコンでLLMを実行する際のよくある間違い', anchor: '#common-mistakes' },
         { label: '関連するリソース', anchor: '#related-resources' },
         { label: 'よくある質問', anchor: '#faq' },
@@ -3028,6 +3011,7 @@ schema: {
           columns: ['シナリオ', '8GB RAM', '16GB RAM'],
         },
         bestModels: {
+          id: 'best-models',
           title: 'ノートパソコン向けのベストローカルLLMモデルは何ですか？',
           content: 'これらのモデルはノートパソコンの制約用に特別に選択されています--品質、RAM使用量、および継続的な生成速度のバランスをとっています。異なるノートパソコン構成でのVRAM要件についての詳細ガイドは、[VRAM要件ガイド →](/ja/local-llms/how-much-vram-local-llm)をご参照ください。[Ollama](/local-llms/how-to-install-ollama)をインストールして、これらのいずれかを単一のコマンドで実行します。GPUなしで実行しますか？専用ガイドをご覧ください：**[CPUのみのベストローカルLLM 2026](/ja/local-llms/best-cpu-only-llm)**。',
           rows: [
@@ -3057,6 +3041,7 @@ schema: {
           ],
         },
         appleSilicon: {
+          id: 'apple-vs-windows',
           title: 'Apple Silicon vs Windowsノートパソコン：ローカルLLMに最適なのはどちらですか？',
           content: [
             '**Apple Silicon MacBook（M1からM5）はローカルLLM推論向けの最高のコンシューマーノートパソコンです。** [統合メモリ](/local-llms/gpu-vs-cpu-vs-apple-silicon)アーキテクチャは、GPUとCPUが同じメモリプールを共有することを意味します--18GBのメモリを備えたM3 MacBook ProはGPUメモリ全体で13Bモデルを実行でき、50-80トークン/秒を実現できます。現行のMacBook Pro（M5 Pro/M5 Max、2026年3月発売）は統合メモリをM5 Proで最大64GB、M5 Maxで最大128GBまで拡張し、メモリ帯域幅もそれぞれ最大307GB/秒、614GB/秒に達します。',
@@ -3123,6 +3108,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'ノートパソコンでローカルLLMを実行するときの一般的な間違いは何ですか？',
           items: [
             '**利用可能なRAMに対して大きすぎるモデルを実行する** → ディスクにスワップし、推論速度が10–25から1–3トークン/秒に低下。',
@@ -3133,6 +3119,7 @@ schema: {
           ],
         },
         relatedReading: {
+          id: 'related-resources',
           title: '関連するリソース',
           items: [
             '[ローカルLLMとは何ですか？](/local-llms/what-are-local-llms)--ローカル推論がどのように機能し、どのハードウェアコンポーネントが重要かについての基本ガイド',
@@ -3217,6 +3204,7 @@ schema: {
           ],
         },
         sources: {
+          id: 'sources',
           title: 'ソース',
           items: [
             'Apple. (2026). "Apple M5 Pro/M5 Max Chipの概要。" Appleデベロッパー。https://developer.apple.com/apple-silicon/ --統合メモリアーキテクチャ、MLパフォーマンスベンチマーク、および電力効率仕様。',
@@ -3313,17 +3301,10 @@ schema: {
       primaryTerm: '笔记本电脑本地LLM',
       toc: [
         { label: '快速解答：哪种本地LLM能在你的笔记本上运行？', anchor: '#quick-answer-ram' },
-        { label: '关键要点', anchor: '#key-points' },
-        { label: '您可以在笔记本上运行本地LLM吗？', anchor: '#can-run' },
         { label: '可以在笔记本上运行RAG吗？', anchor: '#rag-laptop' },
         { label: '哪种配置适合您？', anchor: '#use-case' },
-        { label: '8GB RAM vs 16GB RAM', anchor: '#ram-comparison' },
         { label: '哪些本地LLM模型在笔记本上运行最佳？', anchor: '#best-models' },
         { label: 'Apple Silicon vs Windows笔记本', anchor: '#apple-vs-windows' },
-        { label: '如何防止笔记本上的热节流？', anchor: '#thermal-management' },
-        { label: '运行本地LLM消耗多少电池？', anchor: '#battery-drain' },
-        { label: '笔记本上应使用哪种量化级别？', anchor: '#quantization-tips' },
-        { label: '运行本地LLM适用哪些隐私法律？', anchor: '#regional-compliance' },
         { label: '在笔记本上运行LLM的常见错误', anchor: '#common-mistakes' },
         { label: '相关资源', anchor: '#related-resources' },
         { label: '常见问题', anchor: '#faq' },
@@ -3440,6 +3421,7 @@ schema: {
           columns: ['场景', '8GB RAM', '16GB RAM'],
         },
         bestModels: {
+          id: 'best-models',
           title: '笔记本电脑最佳本地LLM模型是什么？',
           content: '这些模型专门为笔记本电脑限制而选择 -- 平衡质量、RAM使用和持续生成速度。关于不同笔记本电脑配置中VRAM要求的详细指南，见[VRAM需求指南 →](/zh/local-llms/how-much-vram-local-llm)。安装[Ollama](/local-llms/how-to-install-ollama)以使用单个命令运行这些模型中的任何一个。完全不用GPU？请参阅专门指南：**[最佳纯CPU本地LLM 2026](/zh/local-llms/best-cpu-only-llm)**。',
           rows: [
@@ -3469,6 +3451,7 @@ schema: {
           ],
         },
         appleSilicon: {
+          id: 'apple-vs-windows',
           title: 'Apple Silicon vs Windows笔记本：哪个对本地LLM更好？',
           content: [
             '**Apple Silicon MacBook（M1至M5）是本地LLM推理的最佳消费级笔记本电脑。** [统一内存](/local-llms/gpu-vs-cpu-vs-apple-silicon)架构意味着GPU和CPU共享同一内存池 -- 配有18GB内存的M3 MacBook Pro可以完全在GPU内存中运行13B模型，达到50-80令牌/秒。当前的MacBook Pro（M5 Pro/M5 Max，2026年3月发布）将统一内存扩展到M5 Pro最高64GB、M5 Max最高128GB，内存带宽分别可达307GB/秒和614GB/秒。',
@@ -3535,6 +3518,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: '在笔记本电脑上运行本地LLM时，有哪些常见错误？',
           items: [
             '**运行超出可用RAM的模型** → 写入磁盘交换，推理速度从10–25降至1–3令牌/秒。',
@@ -3545,6 +3529,7 @@ schema: {
           ],
         },
         relatedReading: {
+          id: 'related-resources',
           title: '相关资源',
           items: [
             '[什么是本地LLM？](/local-llms/what-are-local-llms) -- 关于本地推理如何工作以及哪些硬件组件重要的基础指南',
@@ -3629,6 +3614,7 @@ schema: {
           ],
         },
         sources: {
+          id: 'sources',
           title: '来源',
           items: [
             'Apple. (2026). "Apple M5 Pro/M5 Max芯片概述。" Apple开发者。https://developer.apple.com/apple-silicon/ -- 统一内存架构、ML性能基准和功率效率规范。',

@@ -26,7 +26,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       educationalLevel: 'Intermediate',
       primaryTerm: 'Cloud GPU Computing',
       toc: [
-        { label: 'TLDR', anchor: '#tldr' },
         { label: 'Hourly Cost Breakdown: Local vs Cloud', anchor: '#hourly' },
         { label: 'When Does Local Break Even?', anchor: '#breakeven' },
         { label: 'Cloud GPU Providers Compared (2026)', anchor: '#providers' },
@@ -210,7 +209,6 @@ schema: {
       educationalLevel: 'Intermediate',
       primaryTerm: 'Cloud GPU Computing',
       toc: [
-        { label: 'Puntos clave', anchor: '#tldr' },
         { label: 'Desglose de costos por hora: Local vs Nube', anchor: '#hourly' },
         { label: '¿Cuándo alcanza el equilibrio lo local?', anchor: '#breakeven' },
         { label: 'Comparativa de proveedores de GPU en la nube (2026)', anchor: '#providers' },
@@ -394,7 +392,6 @@ schema: {
       educationalLevel: 'Intermediate',
       primaryTerm: 'Cloud GPU Computing',
       toc: [
-        { label: 'النقاط الرئيسية', anchor: '#tldr' },
         { label: 'تفصيل التكلفة لكل ساعة: محلي مقابل سحابي', anchor: '#hourly' },
         { label: 'متى يبلغ الخيار المحلي نقطة التعادل؟', anchor: '#breakeven' },
         { label: 'مقارنة مزودي GPU السحابية (2026)', anchor: '#providers' },
@@ -579,7 +576,6 @@ schema: {
       educationalLevel: 'Intermediate',
       primaryTerm: 'Cloud GPU Computing',
       toc: [
-        { label: 'Pontos principais', anchor: '#tldr' },
         { label: 'Detalhamento do custo por hora: Local vs Nuvem', anchor: '#hourly' },
         { label: 'Quando o local atinge o equilíbrio?', anchor: '#breakeven' },
         { label: 'Comparativo de provedores de GPU em nuvem (2026)', anchor: '#providers' },
@@ -1328,7 +1324,6 @@ schema: {
       educationalLevel: 'Intermediate',
       primaryTerm: '클라우드 GPU 컴퓨팅',
       toc: [
-        { label: 'TL;DR 요약', anchor: '#tldr' },
         { label: '시간당 비용 분석: 로컬 vs 클라우드', anchor: '#hourly' },
         { label: '로컬 GPU의 손익분기점은 언제입니까?', anchor: '#breakeven' },
         { label: '클라우드 GPU 공급업체 비교 (2026)', anchor: '#providers' },

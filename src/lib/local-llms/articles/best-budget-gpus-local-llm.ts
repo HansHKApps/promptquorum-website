@@ -44,14 +44,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       educationalLevel: 'Beginner',
       primaryTerm: 'Budget GPU',
       toc: [
-        { label: 'TLDR', anchor: '#tldr' },
+        { label: 'TLDR', anchor: '#key-takeaways' },
         { label: 'What Can You Run on RTX 3060 12GB?', anchor: '#rtx-3060-12gb' },
         { label: 'What Can You Run on RTX 3060 6GB?', anchor: '#rtx-3060-6gb' },
         { label: 'How Does RTX 3060 Compare to Other Budget GPUs?', anchor: '#which-budget-gpus' },
         { label: 'How Much VRAM Do You Need for 7B Models?', anchor: '#vram-7b' },
         { label: 'Which Models Run Best on RTX 3060 by Use Case?', anchor: '#best-by-use-case' },
         { label: 'Used vs. New: Where Should You Buy?', anchor: '#used-vs-new' },
-        { label: 'What Are the Most Common Budget GPU Mistakes?', anchor: '#mistakes' },
         { label: 'FAQ', anchor: '#faq' },
       ],
       sections: {
@@ -410,14 +409,11 @@ schema: {
       educationalLevel: 'Beginner',
       primaryTerm: 'Budget GPU',
       toc: [
-        { label: 'Puntos clave', anchor: '#tldr' },
+        { label: 'Puntos clave', anchor: '#key-takeaways' },
         { label: '¿Qué puedes ejecutar en RTX 3060 12GB?', anchor: '#rtx-3060-12gb' },
         { label: '¿Qué puedes ejecutar en RTX 3060 6GB?', anchor: '#rtx-3060-6gb' },
         { label: 'RTX 3060 vs otras GPUs económicas', anchor: '#which-budget-gpus' },
-        { label: '¿Cuánta VRAM necesitas para modelos 7B?', anchor: '#vram-7b' },
         { label: 'Mejores modelos por caso de uso en RTX 3060', anchor: '#best-by-use-case' },
-        { label: 'Usada vs. nueva: ¿dónde comprar?', anchor: '#used-vs-new' },
-        { label: 'Errores comunes con GPUs económicas', anchor: '#mistakes' },
         { label: 'FAQ', anchor: '#faq' },
       ],
       sections: {
@@ -748,14 +744,11 @@ rows: [
       educationalLevel: 'Beginner',
       primaryTerm: 'Budget GPU',
       toc: [
-        { label: 'النقاط الرئيسية', anchor: '#tldr' },
+        { label: 'النقاط الرئيسية', anchor: '#key-takeaways' },
         { label: 'ماذا يمكنك تشغيله على RTX 3060 12GB؟', anchor: '#rtx-3060-12gb' },
         { label: 'ماذا يمكنك تشغيله على RTX 3060 6GB؟', anchor: '#rtx-3060-6gb' },
         { label: 'RTX 3060 مقابل بطاقات GPU اقتصادية أخرى', anchor: '#which-budget-gpus' },
-        { label: 'كم تحتاج من VRAM لنماذج 7B؟', anchor: '#vram-7b' },
         { label: 'أفضل النماذج حسب حالة الاستخدام على RTX 3060', anchor: '#best-by-use-case' },
-        { label: 'مستعملة مقابل جديدة: من أين تشتري؟', anchor: '#used-vs-new' },
-        { label: 'أخطاء شائعة مع بطاقات GPU الاقتصادية', anchor: '#mistakes' },
         { label: 'الأسئلة الشائعة', anchor: '#faq' },
       ],
       sections: {
@@ -1098,14 +1091,13 @@ rows: [
       educationalLevel: 'Beginner',
       primaryTerm: 'Budget GPU',
       toc: [
-        { label: 'Pontos-chave', anchor: '#tldr' },
+        { label: 'Pontos-chave', anchor: '#key-takeaways' },
         { label: 'O que você pode rodar na RTX 3060 12 GB?', anchor: '#rtx-3060-12gb' },
         { label: 'O que você pode rodar na RTX 3060 6 GB?', anchor: '#rtx-3060-6gb' },
         { label: 'RTX 3060 vs outras GPUs econômicas', anchor: '#which-budget-gpus' },
         { label: 'Quanta VRAM você precisa para modelos 7B?', anchor: '#vram-7b' },
         { label: 'Melhores modelos por caso de uso na RTX 3060', anchor: '#best-by-use-case' },
         { label: 'Usada vs. nova: onde comprar?', anchor: '#used-vs-new' },
-        { label: 'Erros comuns com GPUs econômicas', anchor: '#mistakes' },
         { label: 'FAQ', anchor: '#faq' },
       ],
       sections: {
@@ -1368,15 +1360,11 @@ rows: [
       educationalLevel: 'Beginner',
       primaryTerm: 'Budget-GPU',
       toc: [
-        { label: 'Zusammenfassung', anchor: '#tldr' },
+        { label: 'Zusammenfassung', anchor: '#next-steps' },
         { label: 'Was läuft auf der RTX 3060 12GB?', anchor: '#rtx-3060-12gb' },
         { label: 'Was läuft auf der RTX 3060 6GB?', anchor: '#rtx-3060-6gb' },
         { label: 'RTX 3060 vs. andere Budget-GPUs', anchor: '#which-budget-gpus' },
-        { label: 'Wie viel VRAM brauchen Sie für 7B-Modelle?', anchor: '#vram-7b' },
         { label: 'Beste Modelle nach Anwendungsfall auf der RTX 3060', anchor: '#best-by-use-case' },
-        { label: 'Gebraucht vs. neu: Wo sollten Sie kaufen?', anchor: '#used-vs-new' },
-        { label: 'Häufige Budget-GPU-Fehler', anchor: '#mistakes' },
-        { label: 'FAQ', anchor: '#faq' },
       ],
       sections: {
         tldr: { id: 'key-takeaways', isTldr: true, items: [
@@ -1533,15 +1521,11 @@ rows: [
       educationalLevel: 'Beginner',
       primaryTerm: 'GPU économique',
       toc: [
-        { label: 'Points clés', anchor: '#tldr' },
+        { label: 'Points clés', anchor: '#next-steps' },
         { label: 'Que peut faire tourner la RTX 3060 12GB ?', anchor: '#rtx-3060-12gb' },
         { label: 'Que peut faire tourner la RTX 3060 6GB ?', anchor: '#rtx-3060-6gb' },
         { label: 'RTX 3060 vs autres GPU économiques', anchor: '#which-budget-gpus' },
-        { label: 'Combien de VRAM faut-il pour les modèles 7B ?', anchor: '#vram-7b' },
         { label: 'Meilleurs modèles par usage sur RTX 3060', anchor: '#best-by-use-case' },
-        { label: 'Occasion ou neuf : où acheter ?', anchor: '#used-vs-new' },
-        { label: 'Erreurs courantes avec les GPU économiques', anchor: '#mistakes' },
-        { label: 'FAQ', anchor: '#faq' },
       ],
       sections: {
         tldr: { id: 'key-takeaways', isTldr: true, items: [
@@ -1707,15 +1691,11 @@ rows: [
       educationalLevel: 'Intermediate',
       primaryTerm: 'ローカルLLMの予算GPU',
       toc: [
-        { label: '重要ポイント', anchor: '#tldr' },
+        { label: '重要ポイント', anchor: '#next-steps' },
         { label: 'RTX 3060 12GBで何が動く？', anchor: '#rtx-3060-12gb' },
         { label: 'RTX 3060 6GBで何が動く？', anchor: '#rtx-3060-6gb' },
         { label: 'RTX 3060 vs 他のバジェットGPU', anchor: '#which-budget-gpus' },
-        { label: '7Bモデルに必要なVRAMは？', anchor: '#vram-7b' },
         { label: 'RTX 3060でのユースケース別最適モデル', anchor: '#best-by-use-case' },
-        { label: '中古 vs 新品：どこで買う？', anchor: '#used-vs-new' },
-        { label: 'よくあるバジェットGPUの間違い', anchor: '#mistakes' },
-        { label: 'FAQ', anchor: '#faq' },
       ],
       sections: {
         tldr: { id: 'key-takeaways',
@@ -1843,14 +1823,11 @@ rows: [{ 'GPU': 'RTX 3060 12GB ★', 'VRAM': '12 GB', '価格（中古）': '¥2
       educationalLevel: 'Intermediate',
       primaryTerm: '本地LLM预算GPU',
       toc: [
-        { label: '核心要点', anchor: '#tldr' },
+        { label: '核心要点', anchor: '#key-takeaways' },
         { label: 'RTX 3060 12GB能运行什么？', anchor: '#rtx-3060-12gb' },
         { label: 'RTX 3060 6GB能运行什么？', anchor: '#rtx-3060-6gb' },
         { label: 'RTX 3060 vs 其他预算GPU', anchor: '#which-budget-gpus' },
-        { label: '7B模型需要多少VRAM？', anchor: '#vram-7b' },
         { label: 'RTX 3060按用途选最佳模型', anchor: '#best-by-use-case' },
-        { label: '二手 vs 全新：在哪买？', anchor: '#used-vs-new' },
-        { label: '常见预算GPU错误', anchor: '#mistakes' },
         { label: '常见问题', anchor: '#faq' },
       ],
       sections: {
@@ -2036,6 +2013,7 @@ rows: [
           { '@type': 'ListItem', position: 6, name: '在预算GPU中避免使用DDR5 RAM和高端CPU----它们不会提高LLM速度。' },
         ],
         regionalContext: {
+          id: 'which-budget-gpus',
           title: '地区采纳和合规背景',
           content: [
             '**中国GPU市场受国家采购政策和本地制造激励影响。** 中国企业优先购买本地设计的GPU（如华为昇腾）或NVIDIA进口卡。国务院指导要求科技公司采用本地计算基础设施以提高自给自足。PromptQuorum帮助评估符合政策和预算目标的硬件选项。',
@@ -2115,14 +2093,11 @@ rows: [
       educationalLevel: 'Beginner',
       primaryTerm: '예산형 GPU',
       toc: [
-        { label: '요약', anchor: '#tldr' },
+        { label: '요약', anchor: '#key-takeaways' },
         { label: 'RTX 3060 12GB에서 실행 가능한 모델은?', anchor: '#rtx-3060-12gb' },
         { label: 'RTX 3060 6GB에서 실행 가능한 모델은?', anchor: '#rtx-3060-6gb' },
         { label: 'RTX 3060 대 다른 예산형 GPU 비교', anchor: '#which-budget-gpus' },
-        { label: '7B 모델에 필요한 VRAM 용량은?', anchor: '#vram-7b' },
         { label: 'RTX 3060에서 용도별 최적 모델', anchor: '#best-by-use-case' },
-        { label: '중고 vs. 신품: 어디서 구매해야 할까?', anchor: '#used-vs-new' },
-        { label: '예산형 GPU 구매 시 흔한 실수', anchor: '#mistakes' },
         { label: '자주 묻는 질문', anchor: '#faq' },
       ],
       sections: {

@@ -85,14 +85,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
       },
       toc: [
-        { label: 'TLDR', anchor: '#tldr' },
-        { label: 'Feature Comparison Table', anchor: '#features' },
-        { label: 'User Interface & Ease of Use', anchor: '#ui' },
-        { label: 'Speed & Performance', anchor: '#speed' },
-        { label: 'Model Library & Download Management', anchor: '#models' },
-        { label: 'API Support & Integrations', anchor: '#api' },
-        { label: 'Privacy & Data Handling', anchor: '#privacy' },
-        { label: 'Common Misconceptions', anchor: '#mistakes' },
+        { label: 'TLDR', anchor: '#key-takeaways' },
         { label: 'FAQ', anchor: '#faq' },
       ],
       sections: {
@@ -328,16 +321,9 @@ schema: {
         },
       },
       toc: [
-        { label: 'Zusammenfassung', anchor: '#tldr' },
-        { label: 'Schnellübersicht', anchor: '#quickFacts' },
+        { label: 'Zusammenfassung', anchor: '#key-takeaways' },
+        { label: 'Schnellübersicht', anchor: '#faq' },
         { label: 'Funktionsvergleich', anchor: '#features' },
-        { label: 'Benutzeroberfläche und Benutzerfreundlichkeit', anchor: '#ui' },
-        { label: 'Geschwindigkeit und Leistung', anchor: '#speed' },
-        { label: 'Modellbibliothek und Download-Verwaltung', anchor: '#models' },
-        { label: 'API-Unterstützung und Integrationen', anchor: '#api' },
-        { label: 'Datenschutz und Datenverwaltung', anchor: '#privacy' },
-        { label: 'Häufige Missverständnisse', anchor: '#mistakes' },
-        { label: 'Die wichtigsten Unterschiede verstehen', anchor: '#snippets' },
         { label: 'Häufig gestellte Fragen', anchor: '#faq' },
       ],
       sections: {
@@ -561,6 +547,7 @@ schema: {
           { '@type': 'ListItem', position: 8, name: 'Für Desktop-GUI: LM Studio für Anfänger, Jan AI für Entwickler.' },
         ],
         regionalContext: {
+          id: 'features',
           title: 'Regionale Adoption und Compliance-Kontext',
           content: [
             '**Deutschland und DACH-Region (DSGVO und BSI)** -- Deutsche, österreichische und Schweizer Unternehmen wählen lokale LLM-Tools basierend auf DSGVO-Compliance-Fähigkeiten aus. Tools, die Daten vollständig auf dem Gerät verarbeiten (Ollama, LM Studio, llama.cpp), erfüllen EU-Datenschutzanforderungen standardmäßig. Organisationen bewerten Tools auf deaktivierte Telemetrie, ohne Cloud-Synchronisierung und für isolierte Bereitstellungsunterstützung. Die BSI-Grundschutz-Kataloge legen nahe, dass lokale Inferenz-Tools für Mittelständler mit hohen Compliance-Anforderungen (Finanzsektor, Gesundheitswesen, Rechtswesen) geeignet sind.',
@@ -597,16 +584,9 @@ schema: {
         },
       },
       toc: [
-        { label: 'Points clés', anchor: '#tldr' },
-        { label: 'Faits essentiels', anchor: '#quickFacts' },
+        { label: 'Points clés', anchor: '#key-takeaways' },
+        { label: 'Faits essentiels', anchor: '#faq' },
         { label: 'Tableau comparatif des fonctionnalités', anchor: '#features' },
-        { label: 'Interface utilisateur et facilité d\'usage', anchor: '#ui' },
-        { label: 'Vitesse et performance', anchor: '#speed' },
-        { label: 'Bibliothèque de modèles et téléchargements', anchor: '#models' },
-        { label: 'Support API et intégrations', anchor: '#api' },
-        { label: 'Confidentialité et traitement des données', anchor: '#privacy' },
-        { label: 'Idées reçues courantes', anchor: '#mistakes' },
-        { label: 'Comprendre les différences clés', anchor: '#snippets' },
         { label: 'Questions fréquentes', anchor: '#faq' },
       ],
       sections: {
@@ -826,6 +806,7 @@ schema: {
           { '@type': 'ListItem', position: 8, name: 'Interface bureau : LM Studio pour débutants, Jan AI pour développeurs.' },
         ],
         regionalContext: {
+          id: 'features',
           title: 'Contexte d\'adoption régionale et conformité',
           content: [
             '**Union européenne (RGPD et directive ePrivacy)** -- Organisations évaluent les outils LLM locaux selon les critères de conformité RGPD. La CNIL recommande l\'inférence IA locale pour données sensibles professionnelles (données juridiques, médicales, financières) car elle élimine le transfert de données en dehors de l\'organisation. Outils traitant données entièrement sur appareil (Ollama, LM Studio, llama.cpp) satisfont exigences résidence données. PromptQuorum se connecte aux endpoints locaux sans router données via serveurs externes.',
@@ -862,17 +843,9 @@ schema: {
         },
       },
       toc: [
-        { label: '重要ポイント', anchor: '#tldr' },
-        { label: 'クイックファクト', anchor: '#quickFacts' },
+        { label: '重要ポイント', anchor: '#key-takeaways' },
+        { label: 'クイックファクト', anchor: '#faq' },
         { label: '機能比較表', anchor: '#features' },
-        { label: 'ユーザーインターフェースと使いやすさ', anchor: '#ui' },
-        { label: 'スピードとパフォーマンス', anchor: '#speed' },
-        { label: 'モデルライブラリとダウンロード管理', anchor: '#models' },
-        { label: 'APIサポートとインテグレーション', anchor: '#api' },
-        { label: 'プライバシーとデータ管理', anchor: '#privacy' },
-        { label: 'よくある誤解', anchor: '#mistakes' },
-        { label: '主な違いを理解する', anchor: '#snippets' },
-        { label: 'おすすめの使い方', anchor: '#recommended' },
         { label: 'よくある質問', anchor: '#faq' },
       ],
       sections: {
@@ -1101,6 +1074,7 @@ schema: {
           { '@type': 'ListItem', position: 8, name: 'デスクトップGUIならば：初心者ならLM Studio、開発者ならJan AI。' },
         ],
         regionalContext: {
+          id: 'features',
           title: '地域別採用とコンプライアンスコンテキスト',
           content: [
             '**日本（METI AIガバナンス 2024）** -- 日本の企業はMETI 2024 AIガバナンスガイドラインを満たす監査ログ、バージョン管理統合、ドキュメント化されたAPIインターフェースを備えたツールを優先しています。ローカルLLMツールは内部IT承認を受ける前にデータ分離を実証する必要があります。',
@@ -1137,17 +1111,9 @@ schema: {
       educationalLevel: 'Beginner',
       primaryTerm: '本地LLM桌面应用',
       toc: [
-        { label: '核心要点', anchor: '#tldr' },
-        { label: '快速概览', anchor: '#quickFacts' },
+        { label: '核心要点', anchor: '#key-takeaways' },
+        { label: '快速概览', anchor: '#faq' },
         { label: '功能对比表', anchor: '#features' },
-        { label: '用户界面与易用性', anchor: '#ui' },
-        { label: '速度与性能', anchor: '#speed' },
-        { label: '模型库与下载管理', anchor: '#models' },
-        { label: 'API支持与集成', anchor: '#api' },
-        { label: '隐私与数据处理', anchor: '#privacy' },
-        { label: '常见误区', anchor: '#mistakes' },
-        { label: '理解核心差异', anchor: '#snippets' },
-        { label: '实用建议', anchor: '#recommended' },
         { label: '常见问题', anchor: '#faq' },
       ],
       sections: {
@@ -1376,6 +1342,7 @@ schema: {
           { '@type': 'ListItem', position: 8, name: '桌面GUI：初学者选LM Studio，开发者选Jan AI。' },
         ],
         regionalContext: {
+          id: 'features',
           title: '区域采用及合规背景',
           content: [
             '**中国（数据安全法）** -- 根据2021年《数据安全法》，中国企业优先选择本地LLM工具以确保数据驻留合规。本地推论工具（Ollama、LM Studio、llama.cpp）完全符合数据安全法要求。对于金融、医疗、政务等受管制行业，本地AI推论消除了数据跨境风险。Qwen3等国内模型与两款工具兼容性完整。PromptQuorum通过本地端点连接，数据永不经过外部服务器。',
@@ -1413,16 +1380,9 @@ schema: {
         },
       },
       toc: [
-        { label: 'Resumen', anchor: '#tldr' },
-        { label: 'Datos rápidos', anchor: '#quickFacts' },
+        { label: 'Resumen', anchor: '#key-takeaways' },
+        { label: 'Datos rápidos', anchor: '#faq' },
         { label: 'Tabla de comparación de funciones', anchor: '#features' },
-        { label: 'Interfaz y facilidad de uso', anchor: '#ui' },
-        { label: 'Velocidad y rendimiento', anchor: '#speed' },
-        { label: 'Biblioteca de modelos y descarga', anchor: '#models' },
-        { label: 'Soporte API e integraciones', anchor: '#api' },
-        { label: 'Privacidad y gestión de datos', anchor: '#privacy' },
-        { label: 'Errores comunes', anchor: '#mistakes' },
-        { label: 'Entender las diferencias clave', anchor: '#snippets' },
         { label: 'Preguntas frecuentes', anchor: '#faq' },
       ],
       sections: {
@@ -1639,6 +1599,7 @@ schema: {
           { '@type': 'ListItem', position: 8, name: 'Para GUI de escritorio: LM Studio si eres principiante, Jan AI si eres desarrollador.' },
         ],
         regionalContext: {
+          id: 'features',
           title: 'Adopción regional y contexto de cumplimiento',
           content: [
             '**España y Latinoamérica (RGPD/GDPR y privacidad)** — Las empresas en España y Latinoamérica que manejan datos personales deben cumplir el Reglamento General de Protección de Datos (RGPD en España) o sus equivalentes locales (LFPDPPP en México, Ley 25.326 en Argentina, Ley 1581 en Colombia). Las herramientas LLM locales satisfacen los requisitos de residencia de datos por defecto al mantener toda la inferencia en el dispositivo local.',
@@ -1673,16 +1634,9 @@ schema: {
         updatedDate: '2026-05-06',
       },
       toc: [
-        { label: 'ملخص', anchor: '#tldr' },
-        { label: 'حقائق سريعة', anchor: '#quickFacts' },
+        { label: 'ملخص', anchor: '#key-takeaways' },
+        { label: 'حقائق سريعة', anchor: '#faq' },
         { label: 'جدول مقارنة الميزات', anchor: '#features' },
-        { label: 'الواجهة وسهولة الاستخدام', anchor: '#ui' },
-        { label: 'السرعة والأداء', anchor: '#speed' },
-        { label: 'مكتبة النماذج والتنزيل', anchor: '#models' },
-        { label: 'دعم API والتكاملات', anchor: '#api' },
-        { label: 'الخصوصية وإدارة البيانات', anchor: '#privacy' },
-        { label: 'الأخطاء الشائعة', anchor: '#mistakes' },
-        { label: 'فهم الاختلافات الرئيسية', anchor: '#snippets' },
         { label: 'الأسئلة الشائعة', anchor: '#faq' },
       ],
       sections: {
@@ -1901,6 +1855,7 @@ schema: {
           { '@type': 'ListItem', position: 8, name: 'لواجهة سطح المكتب الرسومية: LM Studio إذا كنت مبتدئًا، Jan AI إذا كنت مطورًا.' },
         ],
         regionalContext: {
+          id: 'features',
           title: 'الاعتماد الإقليمي وسياق الامتثال',
           content: [
             '**منطقة الشرق الأوسط وشمال إفريقيا (حماية البيانات والخصوصية)** — يجب على الشركات في المنطقة التي تتعامل مع البيانات الشخصية الامتثال لأنظمة حماية البيانات المحلية (مثل نظام حماية البيانات الشخصية في المملكة العربية السعودية، وقانون حماية البيانات الشخصية في الإمارات). تلبي أدوات LLM المحلية متطلبات إقامة البيانات افتراضيًا بإبقاء كل الاستدلال على الجهاز المحلي.',
@@ -1938,10 +1893,6 @@ schema: {
       toc: [
         { label: 'Pontos principais', anchor: '#tldr' },
         { label: 'Comparativo de recursos', anchor: '#features' },
-        { label: 'Quando usar Jan AI', anchor: '#when-jan' },
-        { label: 'Quando usar LM Studio', anchor: '#when-lm-studio' },
-        { label: 'Privacidade e telemetria', anchor: '#privacy' },
-        { label: 'FAQ', anchor: '#faq' },
       ],
       schema: {
         '@context': 'https://schema.org',
@@ -1973,6 +1924,7 @@ schema: {
           ],
         },
         regionalContext: {
+          id: 'features',
           title: 'Contexto regional e conformidade',
           content: [
             '**Brasil (LGPD / ANPD)** — Empresas no Brasil que lidam com dados pessoais devem cumprir a LGPD (Lei nº 13.709/2018) e as diretrizes da ANPD. As ferramentas de LLM local satisfazem os requisitos de residência de dados por padrão, mantendo toda a inferência no dispositivo local.',
@@ -2011,14 +1963,7 @@ schema: {
         },
       },
       toc: [
-        { label: 'TLDR', anchor: '#tldr' },
-        { label: '기능 비교 표', anchor: '#features' },
-        { label: '사용자 인터페이스 및 사용 편의성', anchor: '#ui' },
-        { label: '속도 및 성능', anchor: '#speed' },
-        { label: '모델 라이브러리 및 다운로드 관리', anchor: '#models' },
-        { label: 'API 지원 및 통합', anchor: '#api' },
-        { label: '프라이버시 및 데이터 처리', anchor: '#privacy' },
-        { label: '일반적인 오해', anchor: '#mistakes' },
+        { label: 'TLDR', anchor: '#key-takeaways' },
         { label: 'FAQ', anchor: '#faq' },
       ],
       sections: {

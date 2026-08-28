@@ -50,12 +50,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       toc: [
         { label: 'Key Takeaways', anchor: '#key-takeaways' },
         { label: 'Why Local LLMs Are Not Automatically Private', anchor: '#why-not-automatically-private' },
-        { label: 'The 12-Item Security Checklist', anchor: '#the-12-item-checklist' },
         { label: 'Model Provenance: Where to Download Safely', anchor: '#model-provenance' },
         { label: 'Network Isolation: Blocking Outbound Connections', anchor: '#network-isolation' },
         { label: 'Telemetry Settings by Tool', anchor: '#telemetry-settings' },
         { label: 'Threat Model', anchor: '#threat-model' },
-        { label: 'Common Questions', anchor: '#common-questions' },
+        { label: 'Common Questions', anchor: '#faq' },
       ],
       sections: {
         areLLMsSecure: {
@@ -77,6 +76,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         whyNotAutoPrivate: {
+          id: 'why-not-automatically-private',
           title: 'Why Are Local LLMs Not Automatically Private?',
           content: [
             '**The model inference itself is private -- your prompts are never sent to the model provider\'s servers.** But three other data flows can leak information:',
@@ -152,6 +152,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           imageCaption: 'Verify every item before working with sensitive or regulated data.',
         },
         modelProvenance: {
+          id: 'model-provenance',
           title: 'Where should you download local LLM models safely?',
           content: [
             '**Model weights are large binary files.** A malicious GGUF file could exploit vulnerabilities in the parser used by llama.cpp. As of 2026, no widespread GGUF-based malware has been confirmed, but the attack surface exists.',
@@ -164,12 +165,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         networkIsolation: {
+          id: 'network-isolation',
           title: 'How Do You Block Outbound Connections from Local LLMs?',
           content: '**Block outbound connections after the model is downloaded to prevent the inference tool from phoning home.** On macOS, use `pf` firewall; on Linux, use `ufw` or OpenSnitch:',
           codeBlock: '# macOS -- block Ollama outbound with pf firewall\n# Add to /etc/pf.conf:\nblock out proto tcp from any to any user ollama\n\n# Linux -- block with ufw\nsudo ufw deny out from any to any app ollama\n\n# Or use Little Snitch (macOS) / OpenSnitch (Linux)\n# for per-application network control with a GUI',
           codeLanguage: 'bash',
         },
         telemetry: {
+          id: 'telemetry-settings',
           title: 'How Do You Disable Telemetry in Local LLM Tools?',
           rows: [
             { 'Tool': 'Ollama', 'Telemetry Default': 'None collected', 'How to Confirm': 'Check github.com/ollama/ollama -- no analytics code' },
@@ -401,12 +404,11 @@ schema: {
     toc: [
       { label: 'Puntos clave', anchor: '#key-takeaways' },
       { label: 'Por qué los LLMs locales no son automáticamente privados', anchor: '#why-not-automatically-private' },
-      { label: 'La lista de verificación de 12 elementos', anchor: '#the-12-item-checklist' },
       { label: 'Procedencia del modelo: dónde descargar de forma segura', anchor: '#model-provenance' },
       { label: 'Aislamiento de red: bloquear conexiones salientes', anchor: '#network-isolation' },
       { label: 'Configuración de telemetría por herramienta', anchor: '#telemetry-settings' },
       { label: 'Modelo de amenazas', anchor: '#threat-model' },
-      { label: 'Preguntas frecuentes', anchor: '#common-questions' },
+      { label: 'Preguntas frecuentes', anchor: '#faq' },
     ],
     sections: {
       areLLMsSecure: {
@@ -427,6 +429,7 @@ schema: {
         ],
       },
       whyNotAutoPrivate: {
+        id: 'why-not-automatically-private',
         title: '¿Por qué los LLMs locales no son automáticamente privados?',
         content: [
           '**La inferencia del modelo en sí es privada -- tus prompts nunca se envían a los servidores del proveedor del modelo.** Pero otros tres flujos de datos pueden filtrar información:',
@@ -492,6 +495,7 @@ schema: {
           imageCaption: 'Verifica cada punto antes de trabajar con datos sensibles o regulados.',
         },
       modelProvenance: {
+        id: 'model-provenance',
         title: '¿Dónde descargar los modelos de LLMs locales de forma segura?',
         content: [
           '**Los pesos del modelo son archivos binarios grandes.** Un archivo GGUF malicioso podría explotar vulnerabilidades en el parser utilizado por llama.cpp. A partir de 2026, no se ha confirmado ningún malware generalizado basado en GGUF, pero la superficie de ataque existe.',
@@ -504,12 +508,14 @@ schema: {
         ],
       },
       networkIsolation: {
+        id: 'network-isolation',
         title: '¿Cómo bloquear las conexiones salientes de los LLMs locales?',
         content: '**Bloquea las conexiones salientes después de descargar el modelo para evitar que la herramienta de inferencia haga llamadas al exterior.** En macOS, usa el firewall `pf`; en Linux, usa `ufw` u OpenSnitch:',
         codeBlock: '# macOS -- block Ollama outbound with pf firewall\n# Add to /etc/pf.conf:\nblock out proto tcp from any to any user ollama\n\n# Linux -- block with ufw\nsudo ufw deny out from any to any app ollama\n\n# Or use Little Snitch (macOS) / OpenSnitch (Linux)\n# for per-application network control with a GUI',
         codeLanguage: 'bash',
       },
       telemetry: {
+        id: 'telemetry-settings',
         title: '¿Cómo deshabilitar la telemetría en las herramientas de LLMs locales?',
         rows: [
           { 'Herramienta': 'Ollama', 'Telemetría por defecto': 'Ninguna', 'Cómo confirmar': 'Verifica github.com/ollama/ollama -- sin código de análisis' },
@@ -741,12 +747,11 @@ schema: {
     toc: [
       { label: 'النقاط الرئيسية', anchor: '#key-takeaways' },
       { label: 'لماذا نماذج LLM المحلية ليست خاصة تلقائيًا', anchor: '#why-not-automatically-private' },
-      { label: 'قائمة التحقق المكوّنة من 12 عنصرًا', anchor: '#the-12-item-checklist' },
       { label: 'مصدر النموذج: من أين تُنزّل بأمان', anchor: '#model-provenance' },
       { label: 'عزل الشبكة: حظر الاتصالات الصادرة', anchor: '#network-isolation' },
       { label: 'إعدادات القياس عن بُعد لكل أداة', anchor: '#telemetry-settings' },
       { label: 'نموذج التهديد', anchor: '#threat-model' },
-      { label: 'الأسئلة الشائعة', anchor: '#common-questions' },
+      { label: 'الأسئلة الشائعة', anchor: '#faq' },
     ],
     sections: {
       areLLMsSecure: {
@@ -767,6 +772,7 @@ schema: {
         ],
       },
       whyNotAutoPrivate: {
+        id: 'why-not-automatically-private',
         title: 'لماذا نماذج LLM المحلية ليست خاصة تلقائيًا؟',
         content: [
           '**استدلال النموذج نفسه خاص — لا تُرسَل مطالباتك أبدًا إلى خوادم مزوّد النموذج.** لكن ثلاثة تدفقات بيانات أخرى قد تُسرّب المعلومات:',
@@ -832,6 +838,7 @@ schema: {
           imageCaption: 'تحقق من كل عنصر قبل العمل مع بيانات حساسة أو خاضعة للتنظيم.',
         },
       modelProvenance: {
+        id: 'model-provenance',
         title: 'من أين تُنزّل نماذج LLM المحلية بأمان؟',
         content: [
           '**أوزان النموذج ملفات ثنائية كبيرة.** قد يستغل ملف GGUF ضار ثغرات في المحلّل (parser) المستخدم من قبل llama.cpp. اعتبارًا من 2026، لم يُؤكَّد أي برنامج ضار واسع الانتشار قائم على GGUF، لكن سطح الهجوم موجود.',
@@ -844,12 +851,14 @@ schema: {
         ],
       },
       networkIsolation: {
+        id: 'network-isolation',
         title: 'كيف تحظر الاتصالات الصادرة لنماذج LLM المحلية؟',
         content: '**احظر الاتصالات الصادرة بعد تنزيل النموذج لمنع أداة الاستدلال من إجراء مكالمات خارجية.** على macOS، استخدم جدار الحماية `pf`؛ على Linux، استخدم `ufw` أو OpenSnitch:',
         codeBlock: '# macOS -- block Ollama outbound with pf firewall\n# Add to /etc/pf.conf:\nblock out proto tcp from any to any user ollama\n\n# Linux -- block with ufw\nsudo ufw deny out from any to any app ollama\n\n# Or use Little Snitch (macOS) / OpenSnitch (Linux)\n# for per-application network control with a GUI',
         codeLanguage: 'bash',
       },
       telemetry: {
+        id: 'telemetry-settings',
         title: 'كيف تعطّل القياس عن بُعد في أدوات نماذج LLM المحلية؟',
         rows: [
           { 'Herramienta': 'Ollama', 'Telemetría por defecto': 'لا شيء', 'Cómo confirmar': 'تحقق من github.com/ollama/ollama — بلا شيفرة تحليلات' },
@@ -1081,7 +1090,6 @@ schema: {
       { label: 'Pontos principais', anchor: '#tldr' },
       { label: 'Lista de verificação de 12 passos', anchor: '#checklist' },
       { label: 'Conformidade LGPD', anchor: '#lgpd' },
-      { label: 'Configuração air-gapped', anchor: '#air-gapped' },
       { label: 'FAQ', anchor: '#faq' },
     ],
     schema: {
@@ -1113,6 +1121,7 @@ schema: {
         ],
       },
       lgpdContext: {
+        id: 'lgpd',
         title: 'Conformidade com LGPD e ANPD no Brasil',
         content: [
           '**A Lei Geral de Proteção de Dados (LGPD, Lei nº 13.709/2018)** e as diretrizes da Autoridade Nacional de Proteção de Dados (ANPD) exigem controles adequados para dados pessoais sensíveis. A inferência de LLM local mantém todos os dados de prompt na sua infraestrutura.',
@@ -1121,6 +1130,7 @@ schema: {
         ],
       },
       checklist: {
+        id: 'checklist',
         title: 'O que inclui a lista de verificação de segurança para LLMs locais?',
         content: '**Verifique cada item abaixo antes de trabalhar com dados sensíveis ou regulados.** A lista de verificação cobre as lacunas de privacidade e segurança mais comuns em configurações do Ollama, LM Studio, Jan AI e GPT4All.',
         numberedItems: [
@@ -1197,12 +1207,11 @@ schema: {
     toc: [
       { label: 'Wichtigste Erkenntnisse', anchor: '#key-takeaways' },
       { label: 'Warum lokale LLMs nicht automatisch privat sind', anchor: '#why-not-automatically-private' },
-      { label: 'Die 12-Punkte-Sicherheitscheckliste', anchor: '#the-12-item-checklist' },
       { label: 'Modellherkunft: Sichere Download-Quellen', anchor: '#model-provenance' },
       { label: 'Netzwerkisolation: Ausgehende Verbindungen blockieren', anchor: '#network-isolation' },
       { label: 'Telemetrie-Einstellungen nach Tool', anchor: '#telemetry-settings' },
       { label: 'Threat Model', anchor: '#threat-model' },
-      { label: 'Häufige Fragen', anchor: '#common-questions' },
+      { label: 'Häufige Fragen', anchor: '#faq' },
     ],
     sections: {
       areLLMsSecure: {
@@ -1223,6 +1232,7 @@ schema: {
         ],
       },
       whyNotAutoPrivate: {
+        id: 'why-not-automatically-private',
         title: 'Warum sind lokale LLMs nicht automatisch privat?',
         content: [
           '**Die Modell-Inferenz selbst ist privat -- Ihre Prompts werden niemals an die Server des Modellanbieters gesendet.** Aber drei weitere Datenflüsse können zu Informationslecks führen:',
@@ -1296,6 +1306,7 @@ schema: {
         ],
       },
       modelProvenance: {
+        id: 'model-provenance',
         title: 'Wo sollten Sie lokale LLM-Modelgewichte sicher herunterladen?',
         content: [
           '**Modellgewichte sind große Binärdateien.** Eine bösartige GGUF-Datei könnte Schwachstellen im von llama.cpp verwendeten Parser ausnutzen. Ab 2026 wurde keine weit verbreitete GGUF-basierte Malware bestätigt, aber die Angriffsfläche existiert.',
@@ -1308,12 +1319,14 @@ schema: {
         ],
       },
       networkIsolation: {
+        id: 'network-isolation',
         title: 'Wie Sie ausgehende Verbindungen von lokalen LLMs blockieren',
         content: '**Blockieren Sie ausgehende Verbindungen nach dem Modell-Download, um zu verhindern, dass das Inferenz-Tool nach Hause "telefoniert".** Unter macOS verwenden Sie `pf` Firewall; unter Linux verwenden Sie `ufw` oder OpenSnitch:',
         codeBlock: '# macOS -- Ollama ausgehend mit pf Firewall blockieren\n# Fügen Sie zu /etc/pf.conf hinzu:\nblock out proto tcp from any to any user ollama\n\n# Linux -- blockieren mit ufw\nsudo ufw deny out from any to any app ollama\n\n# Oder verwenden Sie Little Snitch (macOS) / OpenSnitch (Linux)\n# für anwendungsspezifische Netzwerkkontrolle mit GUI',
         codeLanguage: 'bash',
       },
       telemetry: {
+        id: 'telemetry-settings',
         title: 'Wie Sie Telemetrie in lokalen LLM-Tools deaktivieren',
         rows: [
           { 'Tool': 'Ollama', 'Telemetrie Standard': 'Keine erfasst', 'Überprüfung': 'github.com/ollama/ollama -- kein Analytics-Code' },
@@ -1448,12 +1461,11 @@ schema: {
     toc: [
       { label: 'Points Clés', anchor: '#key-takeaways' },
       { label: 'Pourquoi les LLM Locaux Ne Sont Pas Automatiquement Privés', anchor: '#why-not-automatically-private' },
-      { label: 'Liste de Contrôle de Sécurité en 12 Points', anchor: '#the-12-item-checklist' },
       { label: 'Provenance du Modèle : Téléchargements Sécurisés', anchor: '#model-provenance' },
       { label: 'Isolation Réseau : Bloquer les Connexions Sortantes', anchor: '#network-isolation' },
       { label: 'Paramètres de Télémétrie par Outil', anchor: '#telemetry-settings' },
       { label: 'Modèle de Menace', anchor: '#threat-model' },
-      { label: 'Questions Courantes', anchor: '#common-questions' },
+      { label: 'Questions Courantes', anchor: '#faq' },
     ],
     sections: {
       areLLMsSecure: {
@@ -1474,6 +1486,7 @@ schema: {
         ],
       },
       whyNotAutoPrivate: {
+        id: 'why-not-automatically-private',
         title: 'Pourquoi les LLM Locaux Ne Sont Pas Automatiquement Privés ?',
         content: [
           '**L\'inférence du modèle est privée -- vos invites ne partent jamais aux serveurs du fournisseur.** Trois autres flux de données risquent des fuites :',
@@ -1538,6 +1551,7 @@ schema: {
           imageCaption: 'Vérifiez chaque point avant de traiter des données sensibles ou réglementées.',
         },
       modelProvenance: {
+        id: 'model-provenance',
         title: 'Où télécharger les poids de modèles de manière fiable ?',
         content: [
           '**Poids de modèles : fichiers binaires volumineux.** GGUF malveillant exploite failles llama.cpp. 2026 : pas de malware GGUF confirmé, mais surface d\'attaque existe.',
@@ -1550,12 +1564,14 @@ schema: {
         ],
       },
       networkIsolation: {
+        id: 'network-isolation',
         title: 'Comment Bloquer les Connexions Sortantes',
         content: 'Confidentialité maximale : règle firewall pour isoler l\'outil après téléchargement du modèle :',
         codeBlock: '# macOS -- bloquer Ollama avec pf firewall\n# Ajouter à /etc/pf.conf :\nblock out proto tcp from any to any user ollama\n\n# Linux -- bloquer avec ufw\nsudo ufw deny out from any to any app ollama\n\n# Ou utiliser Little Snitch (macOS) / OpenSnitch (Linux)\n# pour contrôle par application avec interface',
         codeLanguage: 'bash',
       },
       telemetry: {
+        id: 'telemetry-settings',
         title: 'Comment Désactiver la Télémétrie',
         rows: [
           { 'Outil': 'Ollama', 'Télémétrie Défaut': 'Aucune', 'Vérification': 'github.com/ollama/ollama -- pas de code analytics' },
@@ -1654,12 +1670,11 @@ schema: {
     toc: [
       { label: '重要なポイント', anchor: '#key-takeaways' },
       { label: 'ローカルLLMが自動的にプライベートでない理由', anchor: '#why-not-automatically-private' },
-      { label: '12項目のセキュリティチェックリスト', anchor: '#the-12-item-checklist' },
       { label: 'モデル出所：安全なダウンロード方法', anchor: '#model-provenance' },
       { label: 'ネットワーク分離：アウトバウンド接続をブロック', anchor: '#network-isolation' },
       { label: 'ツール別テレメトリ設定', anchor: '#telemetry-settings' },
       { label: '脅威モデル', anchor: '#threat-model' },
-      { label: 'よくある質問', anchor: '#common-questions' },
+      { label: 'よくある質問', anchor: '#faq' },
     ],
     sections: {
       areLLMsSecure: {
@@ -1680,6 +1695,7 @@ schema: {
         ],
       },
       whyNotAutoPrivate: {
+        id: 'why-not-automatically-private',
         title: 'ローカルLLMが自動的にプライベートでない理由',
         content: [
           '**モデル推論自体はプライベートです。** プロンプトはモデルプロバイダーのサーバーに送信されません。しかし、他の3つのデータフローが情報漏洩を引き起こす可能性があります：',
@@ -1756,6 +1772,7 @@ schema: {
         ],
       },
       modelProvenance: {
+        id: 'model-provenance',
         title: 'ローカルLLMモデルウェイトの安全なダウンロード場所',
         content: 'モデルウェイトは大きなバイナリファイルです。悪意のあるGGUFファイルはllama.cppで使用されるパーサーの脆弱性を悪用する可能性があります。2026年現在、広く確認されたGGUFベースのマルウェアはありませんが、攻撃面は存在します。',
         items: [
@@ -1766,12 +1783,14 @@ schema: {
         ],
       },
       networkIsolation: {
+        id: 'network-isolation',
         title: 'ローカルLLMからのアウトバウンド接続をブロックする方法',
         content: '**モデルダウンロード後の推論ツール「電話がかかる」のを防ぐため、アウトバウンド接続をブロックしてください。** macOSでは`pf`ファイアウォールを使用。Linuxでは`ufw`またはOpenSnitch：',
         codeBlock: '# macOS -- pfファイアウォールでOllamaのアウトバウンドをブロック\n# /etc/pf.confに追加：\nblock out proto tcp from any to any user ollama\n\n# Linux -- ufwでブロック\nsudo ufw deny out from any to any app ollama\n\n# またはLittle Snitch（macOS）/OpenSnitch（Linux）を使用\n# GUIで単位プリケーションごとのネットワーク制御が可能',
         codeLanguage: 'bash',
       },
       telemetry: {
+        id: 'telemetry-settings',
         title: 'ローカルLLMツールでテレメトリを無効化する方法',
         rows: [
           { 'ツール': 'Ollama', 'テレメトリデフォルト': 'なし', '確認方法': 'github.com/ollama/ollama -- アナリティクスコードなし' },
@@ -1883,12 +1902,11 @@ schema: {
     toc: [
       { label: '关键要点', anchor: '#key-takeaways' },
       { label: '为什么本地LLM不自动保护隐私', anchor: '#why-not-automatically-private' },
-      { label: '12项安全检查清单', anchor: '#the-12-item-checklist' },
       { label: '模型来源：安全下载位置', anchor: '#model-provenance' },
       { label: '网络隔离：阻止出站连接', anchor: '#network-isolation' },
       { label: '按工具分类的遥测设置', anchor: '#telemetry-settings' },
       { label: '威胁模型', anchor: '#threat-model' },
-      { label: '常见问题', anchor: '#common-questions' },
+      { label: '常见问题', anchor: '#faq' },
     ],
     sections: {
       areLLMsSecure: {
@@ -1909,6 +1927,7 @@ schema: {
         ],
       },
       whyNotAutoPrivate: {
+        id: 'why-not-automatically-private',
         title: '为什么本地LLM不自动保护隐私？',
         content: [
           '**模型推理本身是私密的----您的提示永远不会发送到模型提供商的服务器。** 但是，其他三个数据流可能导致信息泄露：',
@@ -1985,6 +2004,7 @@ schema: {
         ],
       },
       modelProvenance: {
+        id: 'model-provenance',
         title: '在哪里安全下载本地LLM模型权重',
         content: '模型权重是大型二进制文件。恶意GGUF文件可能利用llama.cpp使用的解析器中的漏洞。截至2026年，虽然尚未确认广泛的基于GGUF的恶意软件，但攻击面存在。',
         items: [
@@ -1995,12 +2015,14 @@ schema: {
         ],
       },
       networkIsolation: {
+        id: 'network-isolation',
         title: '如何阻止来自本地LLM的出站连接',
         content: '**在下载模型后阻止出站连接，以防止推理工具"回家拨号"。** 在macOS上使用`pf`防火墙；在Linux上使用`ufw`或OpenSnitch：',
         codeBlock: '# macOS -- 使用pf防火墙阻止Ollama出站\n# 添加到/etc/pf.conf：\nblock out proto tcp from any to any user ollama\n\n# Linux -- 使用ufw阻止\nsudo ufw deny out from any to any app ollama\n\n# 或使用Little Snitch（macOS）/ OpenSnitch（Linux）\n# 用于具有GUI的单应用网络控制',
         codeLanguage: 'bash',
       },
       telemetry: {
+        id: 'telemetry-settings',
         title: '如何禁用本地LLM工具中的遥测',
         rows: [
           { '工具': 'Ollama', '遥测默认': '不收集', '验证方式': '检查github.com/ollama/ollama -- 没有分析代码' },
@@ -2147,12 +2169,11 @@ schema: {
       toc: [
         { label: '핵심 요약', anchor: '#key-takeaways' },
         { label: '로컬 LLM이 자동으로 비공개가 아닌 이유', anchor: '#why-not-automatically-private' },
-        { label: '12가지 보안 체크리스트', anchor: '#the-12-item-checklist' },
         { label: '모델 출처: 안전하게 다운로드하는 방법', anchor: '#model-provenance' },
         { label: '네트워크 격리: 아웃바운드 연결 차단', anchor: '#network-isolation' },
         { label: '도구별 텔레메트리 설정', anchor: '#telemetry-settings' },
         { label: '위협 모델', anchor: '#threat-model' },
-        { label: '자주 묻는 질문', anchor: '#common-questions' },
+        { label: '자주 묻는 질문', anchor: '#faq' },
       ],
       sections: {
         areLLMsSecure: {
@@ -2173,6 +2194,7 @@ schema: {
           ],
         },
         whyNotAutoPrivate: {
+          id: 'why-not-automatically-private',
           title: '로컬 LLM이 자동으로 비공개가 아닌 이유는 무엇입니까?',
           content: [
             '**모델 추론 자체는 비공개입니다. 프롬프트는 절대 모델 제공자의 서버로 전송되지 않습니다.** 그러나 세 가지 다른 데이터 흐름이 정보를 유출할 수 있습니다:',
@@ -2238,6 +2260,7 @@ schema: {
           imageCaption: '민감하거나 규제 대상 데이터를 다루기 전 모든 항목을 확인하세요.',
         },
         modelProvenance: {
+          id: 'model-provenance',
           title: '로컬 LLM 모델을 어디에서 안전하게 다운로드해야 합니까?',
           content: [
             '**모델 가중치는 대용량 바이너리 파일입니다.** 악성 GGUF 파일은 llama.cpp에서 사용하는 파서의 취약점을 악용할 수 있습니다. 2026년 현재 광범위한 GGUF 기반 악성코드는 확인되지 않았지만, 공격 표면은 존재합니다.',
@@ -2250,12 +2273,14 @@ schema: {
           ],
         },
         networkIsolation: {
+          id: 'network-isolation',
           title: '로컬 LLM에서 아웃바운드 연결을 어떻게 차단합니까?',
           content: '**모델을 다운로드한 후 아웃바운드 연결을 차단하여 추론 도구가 외부에 연락하는 것을 방지하십시오.** macOS에서는 `pf` 방화벽을 사용하고, Linux에서는 `ufw` 또는 OpenSnitch를 사용하십시오:',
           codeBlock: '# macOS -- pf 방화벽으로 Ollama 아웃바운드 차단\n# /etc/pf.conf에 추가:\nblock out proto tcp from any to any user ollama\n\n# Linux -- ufw로 차단\nsudo ufw deny out from any to any app ollama\n\n# 또는 Little Snitch(macOS) / OpenSnitch(Linux) 사용\n# GUI로 애플리케이션별 네트워크 제어',
           codeLanguage: 'bash',
         },
         telemetry: {
+          id: 'telemetry-settings',
           title: '로컬 LLM 도구에서 텔레메트리를 어떻게 비활성화합니까?',
           rows: [
             { 'Tool': 'Ollama', 'Telemetry Default': '수집하지 않음', 'How to Confirm': 'github.com/ollama/ollama 확인 -- 분석 코드 없음' },

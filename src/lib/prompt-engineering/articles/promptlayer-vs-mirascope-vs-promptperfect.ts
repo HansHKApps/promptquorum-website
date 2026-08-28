@@ -756,6 +756,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       relatedReading: {
+        id: 'related-reading',
         title: 'Weiterführende Links',
         items: [
           '[Braintrust vs PromptHub vs Vellum vs Promptfoo (2026) — 4-Tool-Vergleich für Evaluation, CI/CD, A/B-Tests und Versionskontrolle](/de/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo)',
@@ -765,6 +766,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       sources: {
+        id: 'sources',
         title: 'Quellen',
         items: [
           '[PromptLayer-Dokumentation](https://docs.promptlayer.com) — offizielle Dokumentation zu SDK-Setup, Prompt-Versionierung, A/B-Tests und Dashboard-Analyse.',
@@ -1165,6 +1167,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       relatedReading: {
+        id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
           '[Braintrust vs PromptHub vs Vellum vs Promptfoo (2026) — comparativa de 4 herramientas que cubre eval, CI/CD, A/B testing y control de versiones](/es/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo)',
@@ -1174,6 +1177,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       sources: {
+        id: 'sources',
         title: 'Fuentes',
         items: [
           '[Documentación de PromptLayer](https://docs.promptlayer.com) — documentación oficial que cubre configuración del SDK, versionado de prompts, A/B testing y análisis de dashboard.',
@@ -1579,6 +1583,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       relatedReading: {
+        id: 'related-reading',
         title: 'قراءات ذات صلة',
         items: [
           '[Braintrust vs PromptHub vs Vellum vs Promptfoo (2026) — مقارنة 4 أدوات تغطي التقييم و CI/CD واختبار A/B والتحكم في الإصدارات](/ar/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo)',
@@ -1588,6 +1593,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       sources: {
+        id: 'sources',
         title: 'المصادر',
         items: [
           '[وثائق PromptLayer](https://docs.promptlayer.com) — وثائق رسمية تغطي إعداد SDK وإصدار الموجّهات واختبار A/B وتحليلات لوحة التحكم.',
@@ -1909,6 +1915,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       relatedReading: {
+        id: 'related-reading',
         title: 'Leituras relacionadas',
         items: [
           '[Braintrust vs PromptHub vs Vellum vs Promptfoo (2026) — comparativa de 4 ferramentas que cobre avaliação, CI/CD, testes A/B e controle de versões](/pt/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo)',
@@ -1918,6 +1925,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       sources: {
+        id: 'sources',
         title: 'Fontes',
         items: [
           '[Documentação do PromptLayer](https://docs.promptlayer.com) — documentação oficial que cobre configuração do SDK, versionamento de prompts, testes A/B e análise de painel.',
@@ -2295,6 +2303,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       relatedReading: {
+        id: 'related-reading',
         title: 'Lectures complémentaires',
         items: [
           '[Braintrust vs PromptHub vs Vellum vs Promptfoo (2026) — comparatif 4 outils pour l\'évaluation, CI/CD, tests A/B et contrôle de version](/fr/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo)',
@@ -2702,6 +2711,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       relatedReading: {
+        id: 'related-reading',
         title: '関連記事',
         items: [
           '[Braintrust vs PromptHub vs Vellum vs Promptfoo（2026年）— 評価・CI/CD・A/Bテスト・バージョン管理をカバーする4ツール比較](/ja/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo)',
@@ -2711,6 +2721,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       sources: {
+        id: 'sources',
         title: '参考資料',
         items: [
           '[PromptLayer ドキュメント](https://docs.promptlayer.com) — SDKセットアップ・プロンプトバージョン管理・A/Bテスト・ダッシュボード分析をカバーする公式ドキュメント。',
@@ -3105,6 +3116,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       relatedReading: {
+        id: 'related-reading',
         title: '延伸阅读',
         items: [
           '[Braintrust vs PromptHub vs Vellum vs Promptfoo (2026) — 涵盖评估、CI/CD、A/B 测试和版本管理的四工具对比](/zh/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo)',
@@ -3114,6 +3126,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       sources: {
+        id: 'sources',
         title: '参考资料',
         items: [
           '[PromptLayer 文档](https://docs.promptlayer.com) — 官方文档，涵盖 SDK 设置、提示词版本管理、A/B 测试和仪表板分析。',
@@ -3509,6 +3522,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       relatedReading: {
+        id: 'related-reading',
         title: '관련 자료',
         items: [
           '[Braintrust vs PromptHub vs Vellum vs Promptfoo (2026) — 평가, CI/CD, A/B 테스트, 버전 관리를 다루는 4가지 도구 비교](/ko/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo)',
@@ -3518,6 +3532,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       sources: {
+        id: 'sources',
         title: '출처',
         items: [
           '[PromptLayer Documentation](https://docs.promptlayer.com) — SDK 설정, 프롬프트 버전 관리, A/B 테스트, 대시보드 분석을 다루는 공식 문서.',

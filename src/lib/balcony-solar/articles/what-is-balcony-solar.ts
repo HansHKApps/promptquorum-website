@@ -43,7 +43,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Is Balcony Solar Legal Where You Live?', anchor: '#legality' },
       { label: 'What Does Balcony Solar Cost — and Save?', anchor: '#costs' },
       { label: 'FAQ', anchor: '#faq' },
-      { label: 'Related Reading', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -217,7 +216,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '¿Es legal la energía solar de balcón donde vives?', anchor: '#legality' },
       { label: '¿Cuánto cuesta y cuánto ahorra la energía solar de balcón?', anchor: '#costs' },
       { label: 'Preguntas frecuentes', anchor: '#faq' },
-      { label: 'Lecturas relacionadas', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -390,7 +388,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'A Energia Solar de Varanda É Legal Onde Você Mora?', anchor: '#legality' },
       { label: 'Quanto Custa — e Quanto a Energia Solar de Varanda Economiza?', anchor: '#costs' },
       { label: 'Perguntas Frequentes', anchor: '#faq' },
-      { label: 'Leituras Relacionadas', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -563,7 +560,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'هل الطاقة الشمسية للشرفة قانونية في مكان إقامتك؟', anchor: '#legality' },
       { label: 'كم تكلف الطاقة الشمسية للشرفة — وكم توفر؟', anchor: '#costs' },
       { label: 'الأسئلة الشائعة', anchor: '#faq' },
-      { label: 'قراءات ذات صلة', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -736,7 +732,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'お住まいの地域でバルコニーソーラーは合法か', anchor: '#legality' },
       { label: 'バルコニーソーラーの費用と節約効果', anchor: '#costs' },
       { label: 'よくある質問', anchor: '#faq' },
-      { label: '関連記事', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -908,7 +903,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '在你所在地区,阳台光伏是否合法?', anchor: '#legality' },
       { label: '阳台光伏的成本与节省是多少?', anchor: '#costs' },
       { label: '常见问题', anchor: '#faq' },
-      { label: '相关阅读', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -1080,7 +1074,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Le solaire de balcon est-il légal là où vous vivez ?', anchor: '#legality' },
       { label: 'Combien coûte le solaire de balcon — et combien fait-il économiser ?', anchor: '#costs' },
       { label: 'Questions fréquentes', anchor: '#faq' },
-      { label: 'Lectures connexes', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -1253,7 +1246,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '거주 지역에서 베란다 태양광은 합법인가?', anchor: '#legality' },
       { label: '베란다 태양광의 비용과 절감 효과는?', anchor: '#costs' },
       { label: '자주 묻는 질문', anchor: '#faq' },
-      { label: '관련 글', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -1425,7 +1417,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Ist ein Balkonkraftwerk bei mir erlaubt?', anchor: '#legality' },
       { label: 'Was kostet ein Balkonkraftwerk — und was spart es?', anchor: '#costs' },
       { label: 'Häufige Fragen', anchor: '#faq' },
-      { label: 'Weiterführende Artikel', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {

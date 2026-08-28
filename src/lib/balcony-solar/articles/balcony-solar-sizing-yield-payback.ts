@@ -58,7 +58,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Payback Estimate by Country', anchor: '#payback-by-country' },
       { label: 'With vs. Without Battery', anchor: '#with-vs-without-battery' },
       { label: 'FAQ', anchor: '#faq' },
-      { label: 'Related Reading', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -187,7 +186,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Estimación de amortización por país', anchor: '#payback-by-country' },
       { label: 'Con batería frente a sin batería', anchor: '#with-vs-without-battery' },
       { label: 'Preguntas frecuentes', anchor: '#faq' },
-      { label: 'Lecturas relacionadas', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -317,7 +315,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Estimativa de retorno por país', anchor: '#payback-by-country' },
       { label: 'Com bateria vs. sem bateria', anchor: '#with-vs-without-battery' },
       { label: 'Perguntas frequentes', anchor: '#faq' },
-      { label: 'Leituras relacionadas', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -447,7 +444,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'تقدير استرداد التكلفة حسب الدولة', anchor: '#payback-by-country' },
       { label: 'مع البطارية مقابل بدونها', anchor: '#with-vs-without-battery' },
       { label: 'الأسئلة الشائعة', anchor: '#faq' },
-      { label: 'قراءات ذات صلة', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -577,7 +573,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '国別の回収期間目安', anchor: '#payback-by-country' },
       { label: 'バッテリーあり・なしの比較', anchor: '#with-vs-without-battery' },
       { label: 'よくある質問', anchor: '#faq' },
-      { label: '関連記事', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -707,7 +702,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '各国回本周期估算', anchor: '#payback-by-country' },
       { label: '有无电池对比', anchor: '#with-vs-without-battery' },
       { label: '常见问题', anchor: '#faq' },
-      { label: '相关阅读', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -837,7 +831,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Estimation d\'amortissement par pays', anchor: '#payback-by-country' },
       { label: 'Avec vs. sans batterie', anchor: '#with-vs-without-battery' },
       { label: 'FAQ', anchor: '#faq' },
-      { label: 'Lectures connexes', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -967,7 +960,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '국가별 투자회수 기간 추정치', anchor: '#payback-by-country' },
       { label: '배터리 유무 비교', anchor: '#with-vs-without-battery' },
       { label: '자주 묻는 질문', anchor: '#faq' },
-      { label: '관련 자료', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -1097,7 +1089,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Amortisationsschätzung nach Land', anchor: '#payback-by-country' },
       { label: 'Mit vs. ohne Batterie', anchor: '#with-vs-without-battery' },
       { label: 'Häufig gestellte Fragen', anchor: '#faq' },
-      { label: 'Weiterführende Artikel', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {

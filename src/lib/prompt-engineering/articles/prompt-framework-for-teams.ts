@@ -89,6 +89,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: 'Teams with 3+ people or multiple use cases need a shared prompt framework to maintain consistency and reduce onboarding time. Choose CO-STAR for complex multi-step tasks with varying audience and style, CRAFT for content and brand voice work, RISEN for instructional writing, RTF for technical documentation and structured output, or build a custom framework if you modify a standard framework the same way 3+ times per workflow. Onboarding time ranges from 1 hour (CRAFT, RTF) to 2 hours (CO-STAR) to 4–8 hours (custom). Run test prompts across GPT-5.6 and Claude Sonnet 5 via PromptQuorum to catch model-specific issues early.',
       },
       framework_vs_no_framework: {
+        id: 'framework_vs_no_framework',
         title: 'Should Your Team Use a Framework at All?',
         content: [
           '**Teams with 1–2 people writing simple prompts for a single use case can skip a formal framework — the overhead is not justified.** Teams with 3 or more people, multiple use cases, or inconsistent output quality should standardize on one framework before adding more people.',
@@ -97,6 +98,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       decision_matrix: {
+        id: 'decision_matrix',
         title: 'Decision Matrix: Which Framework Fits Your Use Case?',
         content: [
           '**Use this matrix to match your team\'s primary use case to the framework designed for it.** Select the framework that covers 80%+ of your prompts — handle the remaining 20% with a secondary framework or minor prompt-level adjustments.',
@@ -111,6 +113,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       costar: {
+        id: 'costar',
         title: 'When to Use CO-STAR',
         content: [
           '**CO-STAR is the right choice when your prompts require multiple constraints that must be defined explicitly before the task: audience, style, tone, and response format all vary between prompts.** If all your prompts share the same audience and style, CO-STAR adds components you fill in identically every time — use CRAFT or RTF instead.',
@@ -119,6 +122,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       craft: {
+        id: 'craft',
         title: 'When to Use CRAFT',
         content: [
           '**CRAFT is the right choice for content teams, marketing copy, and brand voice work where the model\'s role and the target outcome are the primary drivers.** CRAFT is faster to complete than CO-STAR when audience and tone are fixed — you define the role (writer, editor, copywriter), action (write, rewrite, summarize), format (paragraph, list, tagline), and target (conversion, awareness, retention).',
@@ -127,6 +131,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       when_custom: {
+        id: 'when_custom',
         title: 'When a Custom Framework Is Better Than an Existing One',
         content: [
           '**Build a custom framework when three signals appear: you modify a standard framework the same way every time, output requires a component no standard framework covers, or team compliance with the framework is below 80%.** Meeting any one of these signals is sufficient reason to invest in a custom framework.',
@@ -135,6 +140,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       onboarding: {
+        id: 'onboarding',
         title: 'How to Onboard Your Team to a New Framework',
         content: [
           '**Onboarding to a new framework takes 1–2 hours of guided instruction and 1 week of supervised practice — not months of independent experimentation.** The fastest onboarding path: one 90-minute session covering the framework structure, then 5 supervised prompts with structured feedback, then 2 weeks of independent prompting with a weekly review.',
@@ -219,7 +225,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
       { label: 'Wann CO-STAR verwenden', anchor: 'costar' },
       { label: 'Wann CRAFT verwenden', anchor: 'craft' },
       { label: 'Wann ein eigenes Framework besser ist als ein vorhandenes', anchor: 'when_custom' },
-      { label: 'Wie Sie Ihr Team in ein neues Framework einarbeiten', anchor: 'onboarding' },
       { label: 'Häufig gestellte Fragen', anchor: 'faq' },
       { label: 'Weiterführende Artikel', anchor: 'related_reading' },
       { label: 'Quellen', anchor: 'sources' },
@@ -263,6 +268,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     sections: {
       framework_vs_no_framework: {
+        id: 'framework_vs_no_framework',
         title: 'Braucht Ihr Team überhaupt ein Framework?',
         content: [
           '**Teams mit 1–2 Personen, die einfache Prompts für einen einzelnen Anwendungsfall schreiben, können auf ein formales Framework verzichten — der Aufwand ist nicht gerechtfertigt.** Teams mit 3 oder mehr Personen, mehreren Anwendungsfällen oder inkonsistenter Ausgabequalität sollten sich auf ein Framework standardisieren, bevor weitere Personen hinzukommen.',
@@ -271,6 +277,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       decision_matrix: {
+        id: 'decision_matrix',
         title: 'Entscheidungsmatrix: Welches Framework passt zu Ihrem Anwendungsfall?',
         content: [
           '**Nutzen Sie diese Matrix, um den primären Anwendungsfall Ihres Teams dem dafür konzipierten Framework zuzuordnen.** Wählen Sie das Framework, das 80%+ Ihrer Prompts abdeckt — die restlichen 20% mit einem sekundären Framework oder kleineren Prompt-Anpassungen lösen.',
@@ -285,6 +292,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       costar: {
+        id: 'costar',
         title: 'Wann CO-STAR verwenden',
         content: [
           '**CO-STAR ist die richtige Wahl, wenn Ihre Prompts mehrere Einschränkungen erfordern, die explizit vor der Aufgabe definiert werden müssen: Zielgruppe, Stil, Ton und Antwortformat variieren zwischen Prompts.** Wenn alle Ihre Prompts dieselbe Zielgruppe und denselben Stil teilen, fügt CO-STAR Komponenten hinzu, die Sie jedes Mal identisch ausfüllen — verwenden Sie stattdessen CRAFT oder RTF.',
@@ -293,6 +301,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       craft: {
+        id: 'craft',
         title: 'Wann CRAFT verwenden',
         content: [
           '**CRAFT ist die richtige Wahl für Content-Teams, Marketing-Texte und Markenstimme-Arbeit, bei der die Rolle des Modells und das Zielergebnis die Haupttreiber sind.** CRAFT ist schneller auszufüllen als CO-STAR, wenn Zielgruppe und Ton festgelegt sind.',
@@ -301,6 +310,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       when_custom: {
+        id: 'when_custom',
         title: 'Wann ein eigenes Framework besser ist als ein vorhandenes',
         content: [
           '**Erstellen Sie ein eigenes Framework, wenn drei Signale auftreten: Sie ändern ein Standard-Framework jedes Mal auf dieselbe Weise, die Ausgabe erfordert eine Komponente, die kein Standard-Framework abdeckt, oder die Team-Compliance mit dem Framework liegt unter 80%.** Jedes dieser Signale allein ist ausreichend Grund.',
@@ -435,6 +445,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     sections: {
       framework_vs_no_framework: {
+        id: 'framework_vs_no_framework',
         title: '¿Tu equipo necesita un framework?',
         content: [
           '**Los equipos de 1–2 personas que escriben prompts simples para un único caso de uso pueden prescindir de un framework formal — la sobrecarga no está justificada.** Los equipos con 3 o más personas, múltiples casos de uso o calidad de salida inconsistente deberían estandarizar en un framework antes de añadir más personas.',
@@ -443,6 +454,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       decision_matrix: {
+        id: 'decision_matrix',
         title: 'Matriz de decisión: ¿qué framework se adapta a tu caso de uso?',
         content: [
           '**Usa esta matriz para asociar el caso de uso principal de tu equipo con el framework diseñado para él.** Selecciona el framework que cubre el 80%+ de tus prompts.',
@@ -457,6 +469,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       costar: {
+        id: 'costar',
         title: 'Cuándo usar CO-STAR',
         content: [
           '**CO-STAR es la elección correcta cuando tus prompts requieren múltiples restricciones que deben definirse explícitamente antes de la tarea: audiencia, estilo, tono y formato de respuesta varían entre prompts.** Si todos tus prompts comparten la misma audiencia y estilo, CO-STAR añade componentes que rellenas de forma idéntica cada vez — usa CRAFT o RTF en su lugar.',
@@ -465,6 +478,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       craft: {
+        id: 'craft',
         title: 'Cuándo usar CRAFT',
         content: [
           '**CRAFT es la elección correcta para equipos de contenido, copy de marketing y trabajo de voz de marca donde el rol del modelo y el resultado objetivo son los principales impulsores.** CRAFT es más rápido de completar que CO-STAR cuando la audiencia y el tono están fijos.',
@@ -473,6 +487,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       when_custom: {
+        id: 'when_custom',
         title: 'Cuándo un framework personalizado es mejor que uno existente',
         content: [
           '**Crea un framework personalizado cuando aparezcan tres señales: modificas un framework estándar de la misma forma cada vez, la salida requiere un componente que ningún framework estándar cubre, o el cumplimiento del equipo con el framework está por debajo del 80%.** Cualquiera de estas señales es razón suficiente para invertir en un framework personalizado.',
@@ -511,6 +526,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       onboarding: {
+        id: 'onboarding',
         title: 'Cómo incorporar a tu equipo en un nuevo framework',
         content: [
           '**La incorporación a un nuevo framework requiere 1–2 horas de instrucción guiada y 1 semana de práctica supervisada — no meses de experimentación independiente.** La ruta de incorporación más rápida: una sesión de 90 minutos que cubra la estructura del framework, luego 5 prompts supervisados con feedback estructurado, luego 2 semanas de prompting independiente con una revisión semanal.',
@@ -614,6 +630,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     sections: {
       framework_vs_no_framework: {
+        id: 'framework_vs_no_framework',
         title: 'Sua equipe precisa de um framework?',
         content: [
           '**Equipes de 1–2 pessoas que escrevem prompts simples para um único caso de uso podem dispensar um framework formal — a sobrecarga não é justificada.** Equipes com 3 ou mais pessoas, múltiplos casos de uso ou qualidade de saída inconsistente devem se padronizar em um framework antes de adicionar mais pessoas.',
@@ -622,6 +639,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       decision_matrix: {
+        id: 'decision_matrix',
         title: 'Matriz de decisão: qual framework se adapta ao seu caso de uso?',
         content: [
           '**Use esta matriz para associar o caso de uso principal da sua equipe ao framework projetado para ele.** Selecione o framework que cobre 80%+ dos seus prompts.',
@@ -636,6 +654,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       costar: {
+        id: 'costar',
         title: 'Quando usar CO-STAR',
         content: [
           '**CO-STAR é a escolha certa quando seus prompts exigem múltiplas restrições que devem ser definidas explicitamente antes da tarefa: público, estilo, tom e formato de resposta variam entre prompts.** Se todos os seus prompts compartilham o mesmo público e estilo, CO-STAR adiciona componentes que você preenche de forma idêntica a cada vez — use CRAFT ou RTF em vez disso.',
@@ -644,6 +663,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       craft: {
+        id: 'craft',
         title: 'Quando usar CRAFT',
         content: [
           '**CRAFT é a escolha certa para equipes de conteúdo, copy de marketing e trabalho de voz de marca onde o papel do modelo e o resultado alvo são os principais impulsores.** CRAFT é mais rápido de completar do que CO-STAR quando o público e o tom estão fixos.',
@@ -652,6 +672,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       when_custom: {
+        id: 'when_custom',
         title: 'Quando um framework personalizado é melhor que um existente',
         content: [
           '**Crie um framework personalizado quando três sinais aparecerem: você modifica um framework padrão da mesma forma a cada vez, a saída requer um componente que nenhum framework padrão cobre, ou a conformidade da equipe com o framework está abaixo de 80%.** Qualquer um desses sinais é razão suficiente para investir em um framework personalizado.',
@@ -690,6 +711,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       onboarding: {
+        id: 'onboarding',
         title: 'Como integrar sua equipe a um novo framework',
         content: [
           '**A integração a um novo framework requer 1–2 horas de instrução guiada e 1 semana de prática supervisionada — não meses de experimentação independente.** O caminho de integração mais rápido: uma sessão de 90 minutos cobrindo a estrutura do framework, depois 5 prompts supervisionados com feedback estruturado, depois 2 semanas de prompting independente com uma revisão semanal.',
@@ -750,7 +772,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
       { label: 'Quand utiliser CO-STAR', anchor: 'costar' },
       { label: 'Quand utiliser CRAFT', anchor: 'craft' },
       { label: 'Quand un framework personnalisé est meilleur qu\'un existant', anchor: 'when_custom' },
-      { label: 'Intégrer votre équipe à un nouveau framework', anchor: 'onboarding' },
       { label: 'Questions fréquemment posées', anchor: 'faq' },
       { label: 'Lectures complémentaires', anchor: 'related_reading' },
       { label: 'Sources', anchor: 'sources' },
@@ -794,6 +815,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     sections: {
       framework_vs_no_framework: {
+        id: 'framework_vs_no_framework',
         title: 'Votre équipe a-t-elle besoin d\'un framework ?',
         content: [
           '**Les équipes de 1 à 2 personnes écrivant des prompts simples pour un seul cas d\'usage peuvent se passer d\'un framework formel — la charge n\'est pas justifiée.** Les équipes de 3 personnes ou plus, avec plusieurs cas d\'usage ou une qualité de sortie incohérente, devraient se standardiser sur un framework avant d\'agrandir l\'équipe.',
@@ -802,6 +824,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       decision_matrix: {
+        id: 'decision_matrix',
         title: 'Matrice de décision : quel framework convient à votre cas d\'usage ?',
         content: [
           '**Utilisez cette matrice pour associer le cas d\'usage principal de votre équipe au framework conçu pour lui.** Sélectionnez le framework qui couvre 80%+ de vos prompts.',
@@ -816,6 +839,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       costar: {
+        id: 'costar',
         title: 'Quand utiliser CO-STAR',
         content: [
           '**CO-STAR est le bon choix lorsque vos prompts nécessitent plusieurs contraintes à définir explicitement avant la tâche : public, style, ton et format de réponse varient entre les prompts.** Si tous vos prompts partagent le même public et le même style, CO-STAR ajoute des composants que vous remplissez de manière identique à chaque fois.',
@@ -824,6 +848,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       craft: {
+        id: 'craft',
         title: 'Quand utiliser CRAFT',
         content: [
           '**CRAFT est le bon choix pour les équipes de contenu, le marketing et le travail de voix de marque où le rôle du modèle et le résultat cible sont les principaux moteurs.** CRAFT est plus rapide à compléter que CO-STAR lorsque le public et le ton sont fixes.',
@@ -832,6 +857,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       when_custom: {
+        id: 'when_custom',
         title: 'Quand un framework personnalisé est meilleur qu\'un existant',
         content: [
           '**Créez un framework personnalisé lorsque trois signaux apparaissent : vous modifiez un framework standard de la même façon à chaque fois, la sortie requiert un composant qu\'aucun framework standard ne couvre, ou la conformité de l\'équipe au framework est inférieure à 80%.** La présence d\'un seul de ces signaux suffit à justifier l\'investissement.',
@@ -922,7 +948,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
       { label: 'CO-STARを使う状況', anchor: 'costar' },
       { label: 'CRAFTを使う状況', anchor: 'craft' },
       { label: 'カスタムフレームワークが既存のものより優れている場合', anchor: 'when_custom' },
-      { label: '新しいフレームワークへのチームのオンボーディング', anchor: 'onboarding' },
       { label: 'よくある質問', anchor: 'faq' },
       { label: '関連資料', anchor: 'related_reading' },
       { label: 'ソース', anchor: 'sources' },
@@ -966,6 +991,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     sections: {
       framework_vs_no_framework: {
+        id: 'framework_vs_no_framework',
         title: 'チームにフレームワークは必要ですか？',
         content: [
           '**単一のユースケースに対して単純なプロンプトを書く1〜2人のチームは、正式なフレームワークをスキップできます——オーバーヘッドは正当化されません。** 3人以上のチーム、複数のユースケース、または一貫性のない出力品質を持つチームは、チームを拡大する前に一つのフレームワークに標準化すべきです。',
@@ -974,6 +1000,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       decision_matrix: {
+        id: 'decision_matrix',
         title: '決定マトリクス：どのフレームワークがあなたのユースケースに合いますか？',
         content: [
           '**このマトリクスを使用して、チームの主要ユースケースを設計されたフレームワークに一致させます。** プロンプトの80%以上をカバーするフレームワークを選択します。',
@@ -988,6 +1015,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       costar: {
+        id: 'costar',
         title: 'CO-STARを使う状況',
         content: [
           '**CO-STARは、プロンプトがタスクの前に明示的に定義する必要がある複数の制約を必要とする場合の正しい選択です：プロンプト間でオーディエンス、スタイル、トーン、レスポンスフォーマットが変化します。** すべてのプロンプトが同じオーディエンスとスタイルを共有する場合、CO-STARは毎回同じように埋めるコンポーネントを追加します——代わりにCRAFTまたはRTFを使用してください。',
@@ -996,6 +1024,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       craft: {
+        id: 'craft',
         title: 'CRAFTを使う状況',
         content: [
           '**CRAFTは、モデルの役割とターゲットの成果が主要なドライバーであるコンテンツチーム、マーケティングコピー、ブランドボイスの作業に適した選択です。** オーディエンスとトーンが固定されている場合、CRAFTはCO-STARより速く完成します。',
@@ -1004,6 +1033,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       when_custom: {
+        id: 'when_custom',
         title: 'カスタムフレームワークが既存のものより優れている場合',
         content: [
           '**3つのシグナルが現れたときにカスタムフレームワークを構築します：毎回同じ方法で標準フレームワークを変更する、出力に標準フレームワークがカバーしないコンポーネントが必要、またはチームのフレームワーク準拠率が80%未満。** これらのシグナルの一つでも十分な理由です。',
@@ -1096,7 +1126,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
       { label: '何时使用CO-STAR', anchor: 'costar' },
       { label: '何时使用CRAFT', anchor: 'craft' },
       { label: '何时自定义框架优于现有框架', anchor: 'when_custom' },
-      { label: '如何为新框架培训团队', anchor: 'onboarding' },
       { label: '常见问题', anchor: 'faq' },
       { label: '相关资料', anchor: 'related_reading' },
       { label: '来源', anchor: 'sources' },
@@ -1140,6 +1169,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     sections: {
       framework_vs_no_framework: {
+        id: 'framework_vs_no_framework',
         title: '团队是否需要框架？',
         content: [
           '**为单一用例编写简单Prompt的1到2人团队可以跳过正式框架——开销不合理。** 拥有3人或以上、多个用例或输出质量不一致的团队应该在扩大团队规模之前标准化到一个框架。',
@@ -1148,6 +1178,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       decision_matrix: {
+        id: 'decision_matrix',
         title: '决策矩阵：哪个框架适合你的用例？',
         content: [
           '**使用此矩阵将团队的主要用例与为其设计的框架匹配。** 选择覆盖80%以上Prompt的框架。',
@@ -1162,6 +1193,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       costar: {
+        id: 'costar',
         title: '何时使用CO-STAR',
         content: [
           '**当Prompt需要在任务前明确定义的多种约束时，CO-STAR是正确的选择：受众、风格、语气和响应格式在各个Prompt之间有所不同。** 如果所有Prompt共享相同的受众和风格，CO-STAR添加了每次都相同填写的组件——改用CRAFT或RTF。',
@@ -1170,6 +1202,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       craft: {
+        id: 'craft',
         title: '何时使用CRAFT',
         content: [
           '**对于模型的角色和目标结果是主要驱动因素的内容团队、营销文案和品牌声音工作，CRAFT是正确的选择。** 当受众和语气固定时，CRAFT比CO-STAR完成得更快。',
@@ -1178,6 +1211,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       when_custom: {
+        id: 'when_custom',
         title: '何时自定义框架优于现有框架',
         content: [
           '**当三个信号出现时构建自定义框架：每次以相同方式修改标准框架、输出需要标准框架未涵盖的组件、或团队对框架的遵守率低于80%。** 满足任何一个信号都是投资自定义框架的充分理由。',
@@ -1314,6 +1348,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     sections: {
       framework_vs_no_framework: {
+        id: 'framework_vs_no_framework',
         title: '팀에 프레임워크가 필요합니까?',
         content: [
           '**단일 사용 사례를 위한 단순한 prompt를 작성하는 1-2명의 팀은 공식 프레임워크를 생략할 수 있습니다 — 오버헤드가 정당화되지 않습니다.** 3명 이상, 여러 사용 사례, 또는 일관성 없는 출력 품질을 가진 팀은 더 많은 사람을 추가하기 전에 하나의 프레임워크로 표준화해야 합니다.',
@@ -1322,6 +1357,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       decision_matrix: {
+        id: 'decision_matrix',
         title: '의사결정 매트릭스: 사용 사례에 맞는 프레임워크는?',
         content: [
           '**이 매트릭스를 사용하여 팀의 주요 사용 사례를 해당 목적으로 설계된 프레임워크와 매칭하십시오.** 프롬프트의 80% 이상을 커버하는 프레임워크를 선택하십시오.',
@@ -1336,6 +1372,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       costar: {
+        id: 'costar',
         title: 'CO-STAR를 사용하는 경우',
         content: [
           '**prompt가 작업 전에 명시적으로 정의되어야 하는 여러 제약 조건이 필요할 때 CO-STAR가 올바른 선택입니다: 청중, 스타일, 톤, 그리고 응답 형식이 prompt마다 다릅니다.** 모든 prompt가 동일한 청중과 스타일을 공유한다면 CO-STAR는 매번 동일하게 채우는 구성 요소를 추가합니다 — 대신 CRAFT 또는 RTF를 사용하십시오.',
@@ -1344,6 +1381,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       craft: {
+        id: 'craft',
         title: 'CRAFT를 사용하는 경우',
         content: [
           '**모델의 역할과 목표 결과가 주요 동인인 콘텐츠 팀, 마케팅 카피, 브랜드 보이스 작업에 CRAFT가 올바른 선택입니다.** 청중과 톤이 고정되어 있을 때 CRAFT는 CO-STAR보다 빠르게 완료됩니다.',
@@ -1352,6 +1390,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       when_custom: {
+        id: 'when_custom',
         title: '커스텀 프레임워크가 기존 것보다 나은 경우',
         content: [
           '**세 가지 신호가 나타날 때 커스텀 프레임워크를 구축하십시오: 매번 동일한 방식으로 표준 프레임워크를 수정하거나, 출력에 표준 프레임워크가 다루지 않는 구성 요소가 필요하거나, 팀의 프레임워크 준수율이 80% 미만인 경우.** 이 신호 중 하나라도 충족되면 커스텀 프레임워크에 투자하기에 충분한 이유입니다.',
@@ -1390,6 +1429,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       onboarding: {
+        id: 'onboarding',
         title: '팀을 새 프레임워크에 온보딩하는 방법',
         content: [
           '**새 프레임워크로의 온보딩은 1-2시간의 가이드 지도와 1주일의 감독 실습이 필요합니다 — 수개월의 독립적인 실험이 필요하지 않습니다.** 가장 빠른 온보딩 경로: 프레임워크 구조를 다루는 90분 세션, 그 다음 구조화된 피드백이 있는 5개의 감독 prompt, 그 다음 주간 검토가 있는 2주간의 독립적인 프롬프팅.',
@@ -1494,6 +1534,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     sections: {
       framework_vs_no_framework: {
+        id: 'framework_vs_no_framework',
         title: 'هل يحتاج فريقك إلى إطار عمل؟',
         content: [
           '**الفرق المكونة من 1–2 شخص والتي تكتب prompts بسيطة لحالة استخدام واحدة يمكنها الاستغناء عن إطار عمل رسمي — التكلفة لا تبرر الفائدة.** أما الفرق المكونة من 3 أشخاص أو أكثر، أو تلك التي لديها حالات استخدام متعددة أو جودة مخرجات غير متسقة، فينبغي توحيد إطار العمل قبل إضافة مزيد من الأعضاء.',
@@ -1502,6 +1543,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       decision_matrix: {
+        id: 'decision_matrix',
         title: 'مصفوفة القرار: أي إطار عمل يناسب حالة استخدامك؟',
         content: [
           '**استخدم هذه المصفوفة لربط حالة الاستخدام الرئيسية لفريقك بإطار العمل المصمم لها.** اختر الإطار الذي يغطي 80% أو أكثر من الـ prompts التي تكتبها.',
@@ -1516,6 +1558,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       costar: {
+        id: 'costar',
         title: 'متى تستخدم CO-STAR',
         content: [
           '**CO-STAR هو الخيار الصحيح عندما تتطلب الـ prompts قيوداً متعددة يجب تحديدها صراحةً قبل المهمة: الجمهور والأسلوب والنبرة وشكل الاستجابة تتباين بين الـ prompts.** إذا كانت جميع الـ prompts تشترك في نفس الجمهور والأسلوب، فإن CO-STAR يضيف مكونات تملؤها بشكل متطابق في كل مرة — استخدم CRAFT أو RTF عوضاً عن ذلك.',
@@ -1524,6 +1567,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       craft: {
+        id: 'craft',
         title: 'متى تستخدم CRAFT',
         content: [
           '**CRAFT هو الخيار الصحيح لفرق المحتوى ونصوص التسويق وعمل هوية العلامة التجارية حيث يكون دور النموذج والنتيجة المستهدفة هما المحركان الرئيسيان.** CRAFT أسرع في الإكمال من CO-STAR عندما يكون الجمهور والنبرة ثابتين.',
@@ -1532,6 +1576,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       when_custom: {
+        id: 'when_custom',
         title: 'متى يكون الإطار المخصص أفضل من الإطارات الموجودة',
         content: [
           '**أنشئ إطار عمل مخصصاً عندما تظهر ثلاث إشارات: تعديل إطار قياسي بنفس الطريقة في كل مرة، أو يتطلب المخرج مكوناً لا يغطيه أي إطار قياسي، أو يكون التزام الفريق بالإطار أقل من 80%.** أي من هذه الإشارات يكفي وحده لتبرير الاستثمار في إطار عمل مخصص.',
@@ -1570,6 +1615,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       onboarding: {
+        id: 'onboarding',
         title: 'كيفية تأهيل فريقك في إطار عمل جديد',
         content: [
           '**يتطلب التأهيل في إطار عمل جديد 1–2 ساعة من التعليم الموجه وأسبوع من الممارسة الإشرافية — وليس أشهراً من التجربة المستقلة.** أسرع مسار للتأهيل: جلسة مدتها 90 دقيقة تغطي هيكل الإطار، ثم 5 prompts مشرف عليها مع تغذية راجعة منظمة، ثم أسبوعان من كتابة الـ prompts المستقلة مع مراجعة أسبوعية.',

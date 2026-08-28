@@ -26,7 +26,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       educationalLevel: 'Beginner',
       primaryTerm: 'Return on Investment',
       toc: [
-        { label: 'TLDR', anchor: '#tldr' },
         { label: 'Quick Facts', anchor: '#quick-facts' },
         { label: 'Cost Structure: GPU vs Subscriptions', anchor: '#cost-structure' },
         { label: 'Breakeven Analysis by Usage Level', anchor: '#breakeven' },
@@ -336,7 +335,6 @@ schema: {
       educationalLevel: 'Beginner',
       primaryTerm: 'Return on Investment',
       toc: [
-        { label: 'Puntos clave', anchor: '#tldr' },
         { label: 'Datos rápidos', anchor: '#quick-facts' },
         { label: 'Estructura de costos: GPU vs suscripciones', anchor: '#cost-structure' },
         { label: 'Análisis del punto de equilibrio por nivel de uso', anchor: '#breakeven' },
@@ -646,7 +644,6 @@ schema: {
       educationalLevel: 'Beginner',
       primaryTerm: 'Return on Investment',
       toc: [
-        { label: 'النقاط الرئيسية', anchor: '#tldr' },
         { label: 'حقائق سريعة', anchor: '#quick-facts' },
         { label: 'بنية التكلفة: GPU مقابل الاشتراكات', anchor: '#cost-structure' },
         { label: 'تحليل نقطة التعادل حسب مستوى الاستخدام', anchor: '#breakeven' },
@@ -957,10 +954,7 @@ schema: {
       toc: [
         { label: 'Pontos principais', anchor: '#tldr' },
         { label: 'Dados rápidos', anchor: '#quick-facts' },
-        { label: 'Estrutura de custos: GPU vs assinaturas', anchor: '#cost-structure' },
         { label: 'Análise do ponto de equilíbrio por nível de uso', anchor: '#breakeven' },
-        { label: 'Comparativo de ROI em 5 anos', anchor: '#five-year-roi' },
-        { label: 'Erros comuns', anchor: '#common-mistakes' },
         { label: 'Perguntas frequentes', anchor: '#faq' },
       ],
       sections: {
@@ -1066,7 +1060,6 @@ schema: {
     educationalLevel: 'Beginner',
     primaryTerm: 'Return on Investment',
     toc: [
-      { label: 'Zusammenfassung', anchor: '#tldr' },
       { label: 'Schnelle Fakten', anchor: '#quick-facts' },
       { label: 'Kostenstruktur', anchor: '#cost-structure' },
       { label: 'Payback-Analyse', anchor: '#breakeven' },
@@ -1368,7 +1361,6 @@ schema: {
       educationalLevel: 'Beginner',
       primaryTerm: 'Return on Investment',
       toc: [
-        { label: 'Points clés', anchor: '#tldr' },
         { label: 'Faits clés', anchor: '#quick-facts' },
         { label: 'Structure des coûts : GPU vs abonnements', anchor: '#cost-structure' },
         { label: 'Analyse du seuil de rentabilité par niveau d\'utilisation', anchor: '#breakeven' },
@@ -1413,7 +1405,6 @@ schema: {
       educationalLevel: 'Beginner',
       primaryTerm: 'Return on Investment',
       toc: [
-        { label: '重要ポイント', anchor: '#tldr' },
         { label: 'クイックファクト', anchor: '#quick-facts' },
         { label: 'コスト構造: GPU対サブスクリプション', anchor: '#cost-structure' },
         { label: 'GPU購入オプション', anchor: '#gpu-options' },
@@ -1424,8 +1415,6 @@ schema: {
         { label: '地域別コンテキスト: 電力・規制', anchor: '#regional-context' },
         { label: 'よくある質問', anchor: '#faq' },
         { label: '一般的な誤り', anchor: '#common-mistakes' },
-        { label: '関連資料', anchor: '#related-reading' },
-        { label: '参考文献', anchor: '#sources' },
       ],
       sections: {
         'tldr': {
@@ -1732,7 +1721,6 @@ schema: {
       educationalLevel: 'Beginner',
       primaryTerm: 'Return on Investment',
       toc: [
-        { label: '核心要点', anchor: '#tldr' },
         { label: '快速事实', anchor: '#quick-facts' },
         { label: '成本结构对比', anchor: '#cost-structure' },
         { label: 'GPU购买选项', anchor: '#gpu-options' },
@@ -1743,8 +1731,6 @@ schema: {
         { label: '地区背景', anchor: '#regional-context' },
         { label: '常见问题', anchor: '#faq' },
         { label: '常见错误', anchor: '#common-mistakes' },
-        { label: '相关阅读', anchor: '#related-reading' },
-        { label: '参考资料', anchor: '#sources' },
       ],
       sections: {
         'tldr': {
@@ -2050,7 +2036,6 @@ schema: {
       educationalLevel: 'Beginner',
       primaryTerm: '투자 수익률',
       toc: [
-        { label: '요약', anchor: '#tldr' },
         { label: '핵심 사실', anchor: '#quick-facts' },
         { label: '비용 구조: GPU vs 구독', anchor: '#cost-structure' },
         { label: '사용량별 손익분기점 분석', anchor: '#breakeven' },

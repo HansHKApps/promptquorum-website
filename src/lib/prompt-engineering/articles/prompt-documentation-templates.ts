@@ -81,6 +81,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       why_documentation: {
+        id: 'why_documentation',
         title: 'Why Undocumented Prompts Break Teams',
         snippets: [
           { type: 'in-one-sentence', text: 'Undocumented prompts break teams through silent regression, duplication, and knowledge loss — each preventable with 5–10 minutes of documentation per prompt.' },
@@ -96,6 +97,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       six_templates: {
+        id: 'six_templates',
         title: '6 Prompt Documentation Templates',
         content: [
           '**Six templates cover the full prompt lifecycle from first draft to production retirement.** Each template is designed to take under 10 minutes to complete and provide the minimum information required for each lifecycle stage.',
@@ -113,6 +115,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       storage_options: {
+        id: 'storage_options',
         title: 'Where to Store Prompt Documentation',
         content: [
           '**Store prompt documentation in the same system as the prompt.** If the prompt lives in code, store docs in Git. If it lives in a GUI tool, store docs in that tool\'s notes or linked doc.',
@@ -129,6 +132,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       common_doc_mistakes: {
+        id: 'common_doc_mistakes',
         title: 'Common Documentation Mistakes',
         mistakes: [
           {
@@ -168,6 +172,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       related_reading: {
+        id: 'related_reading',
         title: 'Related Reading',
         items: [
           { title: 'Prompt Version Control', url: '/prompt-engineering/prompt-version-control-workflows' },
@@ -262,6 +267,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       why_documentation: {
+        id: 'why_documentation',
         title: 'Warum undokumentierte Prompts Teams zerstören',
         snippets: [
           { type: 'in-one-sentence', text: 'Undokumentierte Prompts zerstören Teams durch stille Regression, Duplizierung und Wissensverlust — jedes durch 5–10 Minuten Dokumentation pro Prompt vermeidbar.' },
@@ -277,6 +283,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       six_templates: {
+        id: 'six_templates',
         title: '6 Prompt-Dokumentationsvorlagen',
         content: [
           '**Sechs Vorlagen decken den gesamten Prompt-Lebenszyklus ab.** Jede Vorlage ist so konzipiert, dass sie in unter 10 Minuten ausgefüllt werden kann.',
@@ -294,6 +301,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       storage_options: {
+        id: 'storage_options',
         title: 'Wo Prompt-Dokumentation gespeichert werden soll',
         content: [
           '**Speichern Sie die Prompt-Dokumentation im selben System wie den Prompt.**',
@@ -309,6 +317,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       common_doc_mistakes: {
+        id: 'common_doc_mistakes',
         title: 'Häufige Dokumentationsfehler',
         mistakes: [
           {
@@ -347,6 +356,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       related_reading: {
+        id: 'related_reading',
         title: 'Weiterführende Artikel',
         items: [
           { title: 'Prompt Version Control', url: '/prompt-engineering/prompt-version-control-workflows' },
@@ -357,6 +367,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       sources: {
+        id: 'sources',
         title: 'Quellen',
         items: [
           { title: 'Git Documentation: Version Control', url: 'https://git-scm.com/doc' },
@@ -442,6 +453,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       why_documentation: {
+        id: 'why_documentation',
         title: 'Por qué los prompts sin documentar rompen los equipos',
         snippets: [
           { type: 'in-one-sentence', text: 'Los prompts sin documentar rompen los equipos mediante regresión silenciosa, duplicación y pérdida de conocimiento — cada una prevenible con 5–10 minutos de documentación por prompt.' },
@@ -457,6 +469,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       six_templates: {
+        id: 'six_templates',
         title: '6 plantillas de documentación de prompts',
         content: [
           '**Seis plantillas cubren el ciclo de vida completo del prompt desde el primer borrador hasta la retirada en producción.** Cada plantilla está diseñada para completarse en menos de 10 minutos y proporcionar la información mínima requerida para cada etapa del ciclo de vida.',
@@ -474,6 +487,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       storage_options: {
+        id: 'storage_options',
         title: 'Dónde almacenar la documentación de prompts',
         content: [
           '**Almacena la documentación de prompts en el mismo sistema que el prompt.** Si el prompt vive en código, almacena los docs en Git. Si vive en una herramienta GUI, almacena los docs en las notas de esa herramienta o en un doc enlazado.',
@@ -490,6 +504,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       common_doc_mistakes: {
+        id: 'common_doc_mistakes',
         title: 'Errores comunes de documentación',
         mistakes: [
           {
@@ -528,6 +543,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       related_reading: {
+        id: 'related_reading',
         title: 'Lectura relacionada',
         items: [
           { title: 'Control de versiones de prompts', url: '/es/prompt-engineering/prompt-version-control-workflows' },
@@ -538,6 +554,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       sources: {
+        id: 'sources',
         title: 'Fuentes',
         items: [
           { title: 'Git Documentation: Version Control', url: 'https://git-scm.com/doc' },
@@ -623,6 +640,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       why_documentation: {
+        id: 'why_documentation',
         title: 'لماذا تُدمِّر الأوامر غير الموثقة الفرق',
         snippets: [
           { type: 'in-one-sentence', text: 'الأوامر غير الموثقة تُدمِّر الفرق من خلال التراجع الصامت والتكرار وفقدان المعرفة — وكل ذلك قابل للوقاية بـ5-10 دقائق توثيق لكل أمر.' },
@@ -638,6 +656,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       six_templates: {
+        id: 'six_templates',
         title: '6 قوالب لتوثيق الأوامر',
         content: [
           '**ستة قوالب تغطي دورة حياة الأمر الكاملة من المسودة الأولى إلى التقاعد في الإنتاج.** كل قالب مصمَّم ليكتمل في أقل من 10 دقائق ويوفر الحد الأدنى من المعلومات المطلوبة لكل مرحلة من مراحل دورة الحياة.',
@@ -655,6 +674,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       storage_options: {
+        id: 'storage_options',
         title: 'أين تحفظ توثيق الأوامر',
         content: [
           '**احتفظ بتوثيق الأوامر في النظام ذاته الذي يحتوي على الأمر.** إذا كان الأمر يعيش في الكود، احتفظ بالوثائق في Git. وإذا كان يعيش في أداة واجهة رسومية، احتفظ بالوثائق في ملاحظات تلك الأداة أو في مستند مرتبط.',
@@ -671,6 +691,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       common_doc_mistakes: {
+        id: 'common_doc_mistakes',
         title: 'أخطاء التوثيق الشائعة',
         mistakes: [
           {
@@ -709,6 +730,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       related_reading: {
+        id: 'related_reading',
         title: 'قراءة ذات صلة',
         items: [
           { title: 'التحكم في إصدارات الأوامر', url: '/ar/prompt-engineering/prompt-version-control-workflows' },
@@ -719,6 +741,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       sources: {
+        id: 'sources',
         title: 'المصادر',
         items: [
           { title: 'Git Documentation: Version Control', url: 'https://git-scm.com/doc' },
@@ -803,6 +826,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       why_documentation: {
+        id: 'why_documentation',
         title: 'Por que os prompts sem documentação quebram as equipes',
         snippets: [
           { type: 'in-one-sentence', text: 'Os prompts sem documentação quebram as equipes por meio de regressão silenciosa, duplicação e perda de conhecimento — cada um prevenível com 5–10 minutos de documentação por prompt.' },
@@ -818,6 +842,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       six_templates: {
+        id: 'six_templates',
         title: '6 modelos de documentação de prompts',
         content: [
           '**Seis modelos cobrem o ciclo de vida completo do prompt desde o primeiro rascunho até a aposentadoria em produção.** Cada modelo foi projetado para ser concluído em menos de 10 minutos e fornecer as informações mínimas necessárias para cada etapa do ciclo de vida.',
@@ -835,6 +860,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       storage_options: {
+        id: 'storage_options',
         title: 'Onde armazenar a documentação de prompts',
         content: [
           '**Armazene a documentação de prompts no mesmo sistema que o prompt.** Se o prompt está no código, armazene os docs no Git. Se está em uma ferramenta GUI, armazene os docs nas notas dessa ferramenta ou em um doc vinculado.',
@@ -851,6 +877,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       common_doc_mistakes: {
+        id: 'common_doc_mistakes',
         title: 'Erros comuns de documentação',
         mistakes: [
           {
@@ -889,6 +916,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       related_reading: {
+        id: 'related_reading',
         title: 'Leitura relacionada',
         items: [
           { title: 'Controle de versões de prompts', url: '/pt/prompt-engineering/prompt-version-control-workflows' },
@@ -899,6 +927,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       sources: {
+        id: 'sources',
         title: 'Fontes',
         items: [
           { title: 'Git Documentation: Version Control', url: 'https://git-scm.com/doc' },
@@ -983,6 +1012,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       why_documentation: {
+        id: 'why_documentation',
         title: 'Pourquoi les prompts non documentés font échouer les équipes',
         snippets: [
           { type: 'in-one-sentence', text: 'Les prompts non documentés font échouer les équipes par régression silencieuse, duplication et perte de connaissances — chacun évitable avec 5 à 10 minutes de documentation par prompt.' },
@@ -998,6 +1028,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       six_templates: {
+        id: 'six_templates',
         title: '6 modèles de documentation des prompts',
         content: [
           '**Six modèles couvrent l\'intégralité du cycle de vie des prompts.** Chaque modèle est conçu pour être complété en moins de 10 minutes.',
@@ -1015,6 +1046,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       storage_options: {
+        id: 'storage_options',
         title: 'Où stocker la documentation des prompts',
         content: [
           '**Stockez la documentation des prompts dans le même système que le prompt.**',
@@ -1030,6 +1062,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       common_doc_mistakes: {
+        id: 'common_doc_mistakes',
         title: 'Erreurs courantes de documentation',
         mistakes: [
           {
@@ -1067,6 +1100,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       related_reading: {
+        id: 'related_reading',
         title: 'Lectures complémentaires',
         items: [
           { title: 'Prompt Version Control', url: '/prompt-engineering/prompt-version-control-workflows' },
@@ -1161,6 +1195,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       why_documentation: {
+        id: 'why_documentation',
         title: '文書化されていないPromptがなぜチームを失敗させるのか',
         snippets: [
           { type: 'in-one-sentence', text: '文書化されていないPromptは静かな回帰、重複、知識の損失によってチームを失敗させます — Promptごとに5〜10分の文書化で各々防げます。' },
@@ -1176,6 +1211,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       six_templates: {
+        id: 'six_templates',
         title: '6つのPrompt文書化テンプレート',
         content: [
           '**6つのテンプレートがPromptのライフサイクル全体をカバーします。** 各テンプレートは10分以内に記入できるように設計されています。',
@@ -1193,6 +1229,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       storage_options: {
+        id: 'storage_options',
         title: 'Prompt文書化の保存場所',
         content: [
           '**Promptと同じシステムにPrompt文書化を保存します。**',
@@ -1208,6 +1245,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       common_doc_mistakes: {
+        id: 'common_doc_mistakes',
         title: 'よくある文書化の間違い',
         mistakes: [
           {
@@ -1245,6 +1283,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       related_reading: {
+        id: 'related_reading',
         title: '関連記事',
         items: [
           { title: 'Prompt Version Control', url: '/prompt-engineering/prompt-version-control-workflows' },
@@ -1255,6 +1294,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       sources: {
+        id: 'sources',
         title: '情報源',
         items: [
           { title: 'Git Documentation: Version Control', url: 'https://git-scm.com/doc' },
@@ -1339,6 +1379,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       why_documentation: {
+        id: 'why_documentation',
         title: '未文档化的Prompt为何让团队陷入困境',
         snippets: [
           { type: 'in-one-sentence', text: '未文档化的Prompt以三种方式让团队失败：静默回归、重复创建和知识流失——每种都可以通过每个Prompt5至10分钟的文档化来预防。' },
@@ -1354,6 +1395,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       six_templates: {
+        id: 'six_templates',
         title: '6种Prompt文档化模板',
         content: [
           '**6个模板覆盖了Prompt的完整生命周期。** 每个模板设计为10分钟以内可完成填写。',
@@ -1371,6 +1413,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       storage_options: {
+        id: 'storage_options',
         title: 'Prompt文档的存储位置',
         content: [
           '**将Prompt文档存储在与Prompt相同的系统中。**',
@@ -1386,6 +1429,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       common_doc_mistakes: {
+        id: 'common_doc_mistakes',
         title: '常见文档化错误',
         mistakes: [
           {
@@ -1424,6 +1468,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       related_reading: {
+        id: 'related_reading',
         title: '相关阅读',
         items: [
           { title: 'Prompt Version Control', url: '/prompt-engineering/prompt-version-control-workflows' },
@@ -1434,6 +1479,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       sources: {
+        id: 'sources',
         title: '参考来源',
         items: [
           { title: 'Git Documentation: Version Control', url: 'https://git-scm.com/doc' },
@@ -1519,6 +1565,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     why_documentation: {
+      id: 'why_documentation',
       title: '문서화되지 않은 프롬프트가 팀을 망가뜨리는 이유',
       snippets: [
         { type: 'in-one-sentence', text: '문서화되지 않은 프롬프트는 조용한 회귀, 중복 작성, 지식 손실을 통해 팀을 망가뜨립니다 — 각각 프롬프트당 5~10분의 문서화로 예방할 수 있습니다.' },
@@ -1534,6 +1581,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     six_templates: {
+      id: 'six_templates',
       title: '6가지 프롬프트 문서화 템플릿',
       content: [
         '**6가지 템플릿이 첫 번째 초안부터 프로덕션 폐기까지 전체 프롬프트 수명 주기를 다룹니다.** 각 템플릿은 완성하는 데 10분 이내가 걸리도록 설계되었으며, 각 수명 주기 단계에 필요한 최소한의 정보를 제공합니다.',
@@ -1551,6 +1599,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     storage_options: {
+      id: 'storage_options',
       title: '프롬프트 문서화 저장 위치',
       content: [
         '**프롬프트 문서화를 프롬프트와 동일한 시스템에 저장하세요.** 프롬프트가 코드에 있다면 Git에 문서를 저장하세요. GUI 도구에 있다면 해당 도구의 노트나 링크된 문서에 저장하세요.',
@@ -1567,6 +1616,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     common_doc_mistakes: {
+      id: 'common_doc_mistakes',
       title: '일반적인 문서화 실수',
       mistakes: [
         {
@@ -1606,6 +1656,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     related_reading: {
+      id: 'related_reading',
       title: '관련 읽기',
       items: [
         { title: '프롬프트 버전 관리', url: '/prompt-engineering/prompt-version-control-workflows' },
@@ -1616,6 +1667,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     sources: {
+      id: 'sources',
       title: '출처',
       items: [
         { title: 'Git Documentation: Version Control', url: 'https://git-scm.com/doc' },

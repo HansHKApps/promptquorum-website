@@ -806,7 +806,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: '¿Cuándo deberías usar salida estructurada?', anchor: '#when-should-you-use-structured-output' },
         { label: 'Cómo usar salida estructurada y modo JSON', anchor: '#how-to-use-structured-output-and-json-mode' },
         { label: 'Lecturas relacionadas', anchor: '#related-reading' },
-        { label: 'Preguntas frecuentes', anchor: '#frequently-asked-questions' },
+        { label: 'Preguntas frecuentes', anchor: '#faq' },
         { label: 'Fuentes', anchor: '#sources' },
       ],
       sections: {
@@ -838,6 +838,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         whatIsStructured: {
+          id: 'what-structured-output-is',
           title: 'Qué es la salida estructurada',
           content: [
             '**La salida estructurada significa pedirle al modelo que siga un esquema fijo —como listas, tablas o JSON— para que las herramientas posteriores puedan analizar los resultados de forma fiable.** En lugar de un párrafo libre, defines campos, tipos y valores permitidos.',
@@ -856,6 +857,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         whatIsJSON: {
+          id: 'what-json-mode-is',
           title: 'Qué es el modo JSON',
           content: [
             '**El modo JSON es una variante más estricta de la salida estructurada donde el modelo recibe instrucciones —o se configura— para devolver solo JSON válido.** En modo JSON, todo lo que el modelo produce debe ser analizable como JSON sin limpieza adicional.',
@@ -870,6 +872,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         whyItMatters: {
+          id: 'why-structured-output-and-json-mode-matter',
           title: 'Por qué importan la salida estructurada y el modo JSON',
           content: [
             '**La salida estructurada y el modo JSON importan porque te permiten convertir los modelos de lenguaje en componentes de sistemas más grandes, no solo asistentes de chat.** Cuando la salida es predecible, puedes:',
@@ -886,6 +889,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         jsonVsFunctionCalling: {
+          id: 'json-mode-vs-function-calling-vs-schema-prompting',
           title: 'Modo JSON vs llamada a funciones vs prompting con esquema',
           content: [
             '**Existen tres métodos para obtener salida estructurada de los LLMs. Cada uno tiene diferentes fortalezas y debilidades:**',
@@ -897,6 +901,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         example: {
+          id: 'example-free-text-vs-structured-json',
           title: 'Ejemplo: texto libre vs JSON estructurado',
           content: [
             '**La diferencia se hace evidente al comparar un prompt de texto libre con uno de JSON estructurado para la misma tarea.** Aquí clasificamos y resumimos un email de cliente.',
@@ -908,6 +913,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         bestPractices: {
+          id: 'best-practices-for-structured-output-and-json-mode',
           title: 'Mejores prácticas para la salida estructurada y el modo JSON',
           content: [
             '**Para obtener salidas estructuradas fiables, debes ser explícito, consistente y estricto en tus prompts.** Algunas prácticas ayudan mucho:',
@@ -927,6 +933,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         modelComparison: {
+          id: 'model-comparison-json-compliance-by-provider',
           title: 'Comparación de modelos: cumplimiento JSON por proveedor',
           content: [
             '**Diferentes modelos tienen diferentes niveles de soporte nativo para el modo JSON.** A partir de abril de 2026, así se clasifican los principales proveedores:',
@@ -943,6 +950,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         regulatedEnvironments: {
+          id: 'structured-output-in-regulated-environments',
           title: 'Salida estructurada en entornos regulados',
           content: [
             '**La salida estructurada es especialmente valiosa en industrias reguladas porque impone una extracción de datos consistente, registros de auditoría y documentación de cumplimiento.** Las diferentes regiones tienen diferentes requisitos:',
@@ -954,6 +962,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Errores comunes',
           content: [
             '**Evita estos errores frecuentes al implementar salida estructurada y modo JSON:**',
@@ -967,6 +976,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         whenToUseJsonMode: {
+          id: 'when-to-use-json-mode-vs-alternatives',
           title: 'Cuándo usar modo JSON vs alternativas',
           content: [
             '**Elige el modo JSON cuando necesites imposición estricta del esquema y salida determinista. Evítalo cuando la creatividad y el razonamiento abierto son lo que importa.**',
@@ -979,6 +989,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         whenToUseStructuredOutput: {
+          id: 'when-should-you-use-structured-output',
           title: '¿Cuándo deberías usar salida estructurada?',
           content: [
             '**La salida estructurada brilla en tres escenarios principales. Úsala cuando necesitas resultados deterministas y legibles por máquinas:**',
@@ -990,6 +1001,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         howToStart: {
+          id: 'how-to-use-structured-output-and-json-mode',
           title: 'Cómo usar la salida estructurada y el modo JSON',
           numberedItems: [
             '**Para extracción de datos y salidas legibles por máquinas, usa el modo JSON (disponible en OpenAI GPT-5.6, Anthropic Claude, Google Gemini y otros).** Esto garantiza que el modelo devuelva JSON válido, no prosa. Ejemplo: extrae información de producto como JSON con las claves: nombre, precio, descripción, valoración.',
@@ -1007,6 +1019,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           codeLanguage: 'json',
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Lecturas relacionadas',
           content: [
             '**Amplía tu conocimiento con estos temas relacionados de prompt engineering:**',
@@ -1038,6 +1051,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Fuentes',
           items: [
             '[Documentación del modo JSON de OpenAI](https://platform.openai.com/docs/guides/json-mode) — Guía oficial del modo JSON en la API de OpenAI.',
@@ -1115,7 +1129,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: 'متى يجب استخدام المخرجات المهيكلة؟', anchor: '#when-should-you-use-structured-output' },
         { label: 'كيفية استخدام المخرجات المهيكلة ووضع JSON', anchor: '#how-to-use-structured-output-and-json-mode' },
         { label: 'قراءات ذات صلة', anchor: '#related-reading' },
-        { label: 'الأسئلة الشائعة', anchor: '#frequently-asked-questions' },
+        { label: 'الأسئلة الشائعة', anchor: '#faq' },
         { label: 'المصادر', anchor: '#sources' },
       ],
       sections: {
@@ -1147,6 +1161,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         whatIsStructured: {
+          id: 'what-structured-output-is',
           title: 'ما هي المخرجات المهيكلة',
           content: [
             '**المخرجات المهيكلة تعني طلب النموذج اتباع مخطط ثابت — كالقوائم أو الجداول أو JSON — حتى تستطيع الأدوات اللاحقة تحليل النتائج بشكل موثوق.** بدلاً من فقرة حرة، تُعرّف الحقول والأنواع والقيم المسموح بها.',
@@ -1165,6 +1180,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         whatIsJSON: {
+          id: 'what-json-mode-is',
           title: 'ما هو وضع JSON',
           content: [
             '**وضع JSON هو نوع أكثر صرامة من المخرجات المهيكلة حيث يُوجَّه النموذج — أو يُضبط — لإعادة JSON صالح فقط.** في وضع JSON، كل ما يُنتجه النموذج يجب أن يكون قابلاً للتحليل كـJSON دون تنظيف إضافي.',
@@ -1179,6 +1195,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         whyItMatters: {
+          id: 'why-structured-output-and-json-mode-matter',
           title: 'لماذا تهم المخرجات المهيكلة ووضع JSON',
           content: [
             '**تهم المخرجات المهيكلة ووضع JSON لأنهما يُتيحان تحويل النماذج اللغوية إلى مكونات لأنظمة أكبر، وليس مجرد مساعدات دردشة.** عندما تكون المخرجات قابلة للتنبؤ، يمكنك:',
@@ -1195,6 +1212,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         jsonVsFunctionCalling: {
+          id: 'json-mode-vs-function-calling-vs-schema-prompting',
           title: 'وضع JSON مقابل استدعاء الوظائف مقابل برومبت المخطط',
           content: [
             '**ثمة ثلاثة طرق للحصول على مخرجات مهيكلة من النماذج اللغوية الكبيرة. لكل منها نقاط قوة وضعف مختلفة:**',
@@ -1206,6 +1224,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         example: {
+          id: 'example-free-text-vs-structured-json',
           title: 'مثال: نص حر مقابل JSON مهيكل',
           content: [
             '**يتضح الفرق عند مقارنة برومبت نص حر مع برومبت JSON مهيكل لنفس المهمة.** هنا نُصنّف ونلخّص بريداً إلكترونياً من عميل.',
@@ -1217,6 +1236,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         bestPractices: {
+          id: 'best-practices-for-structured-output-and-json-mode',
           title: 'أفضل الممارسات للمخرجات المهيكلة ووضع JSON',
           content: [
             '**للحصول على مخرجات مهيكلة موثوقة، يجب أن تكون صريحاً ومتسقاً وصارماً في برومبتاتك.** بعض الممارسات تُساعد كثيراً:',
@@ -1236,6 +1256,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         modelComparison: {
+          id: 'model-comparison-json-compliance-by-provider',
           title: 'مقارنة النماذج: امتثال JSON حسب المزود',
           content: [
             '**تمتلك النماذج المختلفة مستويات مختلفة من الدعم الأصيل لوضع JSON.** اعتباراً من أبريل 2026، هكذا تُصنَّف المزودون الرئيسيون:',
@@ -1252,6 +1273,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         regulatedEnvironments: {
+          id: 'structured-output-in-regulated-environments',
           title: 'المخرجات المهيكلة في البيئات المنظّمة',
           content: [
             '**المخرجات المهيكلة ذات قيمة خاصة في الصناعات المنظّمة لأنها تُلزم باستخراج بيانات متسق وسجلات تدقيق وتوثيق امتثال.** تختلف المتطلبات باختلاف المناطق:',
@@ -1263,6 +1285,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'الأخطاء الشائعة',
           content: [
             '**تجنّب هذه الأخطاء الشائعة عند تنفيذ المخرجات المهيكلة ووضع JSON:**',
@@ -1276,6 +1299,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         whenToUseJsonMode: {
+          id: 'when-to-use-json-mode-vs-alternatives',
           title: 'متى تستخدم وضع JSON مقابل البدائل',
           content: [
             '**اختر وضع JSON عندما تحتاج إلى إلزام صارم بالمخطط ومخرجات حتمية. تجنّبه عندما تكون الإبداعية والتفكير المفتوح هو ما يهم.**',
@@ -1288,6 +1312,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         whenToUseStructuredOutput: {
+          id: 'when-should-you-use-structured-output',
           title: 'متى يجب استخدام المخرجات المهيكلة؟',
           content: [
             '**تتألق المخرجات المهيكلة في ثلاثة سيناريوهات رئيسية. استخدمها عندما تحتاج نتائج حتمية وقابلة للقراءة الآلية:**',
@@ -1299,6 +1324,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         howToStart: {
+          id: 'how-to-use-structured-output-and-json-mode',
           title: 'كيفية استخدام المخرجات المهيكلة ووضع JSON',
           numberedItems: [
             '**لاستخراج البيانات والمخرجات القابلة للقراءة الآلية، استخدم وضع JSON (متاح في OpenAI GPT-5.6 وAnthropic Claude وGoogle Gemini وغيرهم).** يضمن هذا أن يُعيد النموذج JSON صالحاً وليس نثراً. مثال: استخرج معلومات المنتج كـJSON بالمفاتيح: الاسم والسعر والوصف والتقييم.',
@@ -1316,6 +1342,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           codeLanguage: 'json',
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'قراءات ذات صلة',
           content: [
             '**وسّع معرفتك بهذه المواضيع المرتبطة بهندسة البرومبت:**',
@@ -1347,6 +1374,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         sources: {
+          id: 'sources',
           title: 'المصادر',
           items: [
             '[توثيق وضع JSON من OpenAI](https://platform.openai.com/docs/guides/json-mode) — الدليل الرسمي لوضع JSON في واجهة برمجة تطبيقات OpenAI.',
@@ -1547,7 +1575,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       { label: '구조화된 출력을 언제 사용해야 합니까?', anchor: '#when-should-you-use-structured-output' },
       { label: '구조화된 출력과 JSON 모드 사용 방법', anchor: '#how-to-use-structured-output-and-json-mode' },
       { label: '관련 읽기', anchor: '#related-reading' },
-      { label: '자주 묻는 질문', anchor: '#frequently-asked-questions' },
+      { label: '자주 묻는 질문', anchor: '#faq' },
       { label: '출처', anchor: '#sources' },
     ],
     sections: {
@@ -1579,6 +1607,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       whatIsStructured: {
+        id: 'what-structured-output-is',
         title: '구조화된 출력이란',
         content: [
           '**구조화된 출력은 다운스트림 도구가 결과를 안정적으로 파싱할 수 있도록 모델에 목록, 표 또는 JSON과 같은 고정된 스키마를 따르도록 요청하는 것을 의미합니다.** 자유 형식 단락 대신 필드, 유형 및 허용된 값을 정의합니다.',
@@ -1597,6 +1626,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       whatIsJSON: {
+        id: 'what-json-mode-is',
         title: 'JSON 모드란',
         content: [
           '**JSON 모드는 모델이 유효한 JSON만 반환하도록 지시 또는 구성되는 구조화된 출력의 더 엄격한 변형입니다.** JSON 모드에서는 모델이 출력하는 모든 것이 추가 정리 없이 JSON으로 파싱 가능해야 합니다.',
@@ -1611,6 +1641,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       whyItMatters: {
+        id: 'why-structured-output-and-json-mode-matter',
         title: '구조화된 출력과 JSON 모드가 중요한 이유',
         content: [
           '**구조화된 출력과 JSON 모드가 중요한 이유는 단순한 채팅 도우미가 아닌 더 큰 시스템의 구성 요소로 언어 모델을 변환할 수 있기 때문입니다.** 출력이 예측 가능하면 다음을 수행할 수 있습니다:',
@@ -1627,6 +1658,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       jsonVsFunctionCalling: {
+        id: 'json-mode-vs-function-calling-vs-schema-prompting',
         title: 'JSON 모드 vs 함수 호출 vs 스키마 프롬프팅',
         content: [
           '**LLM에서 구조화된 출력을 얻기 위한 세 가지 방법이 존재합니다. 각각은 서로 다른 강점과 약점을 가지고 있습니다:**',
@@ -1638,6 +1670,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       example: {
+        id: 'example-free-text-vs-structured-json',
         title: '예시: 자유 텍스트 vs 구조화된 JSON',
         content: [
           '**동일한 작업에 대한 자유 형식 프롬프트와 구조화된 JSON 프롬프트를 비교하면 차이가 명확해집니다.** 여기서는 고객 이메일을 분류하고 요약합니다.',
@@ -1649,6 +1682,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       bestPractices: {
+        id: 'best-practices-for-structured-output-and-json-mode',
         title: '구조화된 출력과 JSON 모드의 모범 사례',
         content: [
           '**신뢰할 수 있는 구조화된 출력을 얻으려면 프롬프트에서 명시적이고 일관되며 엄격해야 합니다.** 몇 가지 관행이 많은 도움이 됩니다:',
@@ -1668,6 +1702,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       modelComparison: {
+        id: 'model-comparison-json-compliance-by-provider',
         title: '모델 비교: 제공업체별 JSON 준수',
         content: [
           '**다양한 모델은 기본 JSON 모드 지원 수준이 다릅니다.** 2026년 4월 기준, 주요 제공업체의 순위는 다음과 같습니다:',
@@ -1684,6 +1719,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       regulatedEnvironments: {
+        id: 'structured-output-in-regulated-environments',
         title: '규제 환경에서의 구조화된 출력',
         content: [
           '**구조화된 출력은 일관된 데이터 추출, 감사 추적 및 규정 준수 문서를 강제하기 때문에 규제된 산업에서 특히 가치 있습니다.** 지역마다 다른 요구사항이 있습니다:',
@@ -1695,6 +1731,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       commonMistakes: {
+        id: 'common-mistakes',
         title: '일반적인 실수',
         content: [
           '**구조화된 출력과 JSON 모드를 구현할 때 다음과 같은 빈번한 오류를 피하십시오:**',
@@ -1708,6 +1745,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       whenToUseJsonMode: {
+        id: 'when-to-use-json-mode-vs-alternatives',
         title: 'JSON 모드 vs 대안 사용 시점',
         content: [
           '**엄격한 스키마 적용 및 결정론적 출력이 필요할 때 JSON 모드를 선택하십시오. 창의성과 개방형 추론이 중요할 때는 피하십시오.**',
@@ -1720,6 +1758,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       whenToUseStructuredOutput: {
+        id: 'when-should-you-use-structured-output',
         title: '구조화된 출력을 언제 사용해야 합니까?',
         content: [
           '**구조화된 출력은 세 가지 주요 시나리오에서 빛을 발합니다. 결정론적이고 기계 판독 가능한 결과가 필요할 때 사용하십시오:**',
@@ -1731,6 +1770,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       howToStart: {
+        id: 'how-to-use-structured-output-and-json-mode',
         title: '구조화된 출력과 JSON 모드 사용 방법',
         numberedItems: [
           '**데이터 추출 및 기계 판독 가능한 출력의 경우 JSON 모드(OpenAI GPT-5.6, Anthropic Claude, Google Gemini 등에서 사용 가능)를 사용하십시오.** 이렇게 하면 모델이 산문이 아닌 유효한 JSON을 반환하게 됩니다. 예시: 제품 정보를 키(이름, 가격, 설명, 평점)가 있는 JSON으로 추출.',
@@ -1748,6 +1788,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         codeLanguage: 'json',
       },
       relatedReading: {
+        id: 'related-reading',
         title: '관련 읽기',
         content: [
           '**관련 프롬프트 엔지니어링 주제로 지식을 확장하십시오:**',
@@ -1779,6 +1820,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       sources: {
+        id: 'sources',
         title: '출처',
         items: [
           '[OpenAI JSON 모드 문서](https://platform.openai.com/docs/guides/json-mode) — OpenAI API의 JSON 모드에 대한 공식 가이드.',

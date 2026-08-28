@@ -900,8 +900,6 @@ while True:
       { label: 'Tamanhos de modelos Whisper', anchor: '#model-sizes' },
       { label: 'Metal vs Core ML vs ANE', anchor: '#metal-vs-coreml' },
       { label: 'Configuração: whisper.cpp', anchor: '#setup' },
-      { label: 'Streaming em tempo real', anchor: '#realtime' },
-      { label: 'Pipeline de assistente de voz', anchor: '#integration' },
       { label: 'Melhor configuração por Mac', anchor: '#model-choice' },
       { label: 'STT local vs nuvem', anchor: '#cloud-comparison' },
       { label: 'Pontos-chave', anchor: '#faq' },

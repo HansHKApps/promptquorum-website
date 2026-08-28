@@ -1364,7 +1364,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Mac Studio M5 Max: melhor custo-benefício', anchor: '#comparison-table' },
       { label: 'Mac Studio M5 Ultra: desempenho máximo', anchor: '#comparison-table' },
       { label: 'MacBook Pro 16" M5 Max: opção portátil', anchor: '#comparison-table' },
-      { label: 'Nossas recomendações', anchor: '#verdict' },
       { label: 'Benchmarks de desempenho LLM local', anchor: '#benchmarks' },
       { label: 'Apple Silicon vs estação de trabalho PC', anchor: '#apple-vs-pc' },
       { label: 'MLX vs Ollama vs llama.cpp no Mac', anchor: '#inference-engines' },

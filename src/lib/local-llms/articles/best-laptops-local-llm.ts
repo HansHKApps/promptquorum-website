@@ -37,7 +37,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         updatedDate: '2026-07-30',
       },
       toc: [
-        { label: 'TLDR', anchor: '#tldr' },
+        { label: 'TLDR', anchor: '#key-takeaways' },
         { label: 'What GPU Do You Need in a Laptop?', anchor: '#gpu-specs' },
         { label: 'Best Laptops for Local LLMs (2026)', anchor: '#best-models' },
         { label: 'Performance Expectations: Desktop vs. Laptop', anchor: '#perf-gap' },
@@ -340,7 +340,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         updatedDate: '2026-07-30',
       },
       toc: [
-        { label: 'Puntos clave', anchor: '#tldr' },
+        { label: 'Puntos clave', anchor: '#key-takeaways' },
         { label: '¿Qué GPU necesitas en una laptop?', anchor: '#gpu-specs' },
         { label: 'Mejores laptops para LLMs locales (2026)', anchor: '#best-models' },
         { label: 'Rendimiento esperado: escritorio vs. laptop', anchor: '#perf-gap' },
@@ -564,7 +564,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         updatedDate: '2026-07-30',
       },
       toc: [
-        { label: 'النقاط الرئيسية', anchor: '#tldr' },
+        { label: 'النقاط الرئيسية', anchor: '#key-takeaways' },
         { label: 'ما GPU التي تحتاجها في اللابتوب؟', anchor: '#gpu-specs' },
         { label: 'أفضل أجهزة لابتوب لنماذج LLM المحلية (2026)', anchor: '#best-models' },
         { label: 'الأداء المتوقع: سطح المكتب مقابل اللابتوب', anchor: '#perf-gap' },
@@ -789,7 +789,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         updatedDate: '2026-07-30',
       },
       toc: [
-        { label: 'Pontos principais', anchor: '#tldr' },
+        { label: 'Pontos principais', anchor: '#key-takeaways' },
         { label: 'Qual GPU você precisa em um notebook?', anchor: '#gpu-specs' },
         { label: 'Melhores notebooks para LLMs locais (2026)', anchor: '#best-models' },
         { label: 'Desempenho esperado: desktop vs. notebook', anchor: '#perf-gap' },
@@ -1013,7 +1013,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         updatedDate: '2026-07-30',
       },
       toc: [
-        { label: 'Zusammenfassung', anchor: '#tldr' },
+        { label: 'Zusammenfassung', anchor: '#key-takeaways' },
         { label: 'Welche GPU benötigen Sie in einem Laptop?', anchor: '#gpu-specs' },
         { label: 'Beste Laptops für lokale LLMs (2026)', anchor: '#best-models' },
         { label: 'Leistungserwartungen: Desktop vs. Laptop', anchor: '#perf-gap' },
@@ -1236,7 +1236,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         updatedDate: '2026-07-30',
       },
       toc: [
-        { label: 'Résumé', anchor: '#tldr' },
+        { label: 'Résumé', anchor: '#key-takeaways' },
         { label: 'Quel GPU Avez-Vous Besoin dans un Ordinateur Portable?', anchor: '#gpu-specs' },
         { label: 'Meilleurs Ordinateurs Portables pour LLM Locaux (2026)', anchor: '#best-models' },
         { label: 'Attentes de Performance: Ordinateur de Bureau vs. Ordinateur Portable', anchor: '#perf-gap' },
@@ -1459,7 +1459,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         updatedDate: '2026-07-30',
       },
       toc: [
-        { label: 'まとめ', anchor: '#tldr' },
+        { label: 'まとめ', anchor: '#key-takeaways' },
         { label: 'ノートパソコンに必要なGPUは?', anchor: '#gpu-specs' },
         { label: 'ローカルLLM向けベストノートパソコン(2026年)', anchor: '#best-models' },
         { label: 'パフォーマンス期待値: デスクトップ vs ノートパソコン', anchor: '#perf-gap' },
@@ -1682,7 +1682,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         updatedDate: '2026-07-30',
       },
       toc: [
-        { label: '总结', anchor: '#tldr' },
+        { label: '总结', anchor: '#key-takeaways' },
         { label: '笔记本电脑需要什么GPU?', anchor: '#gpu-specs' },
         { label: '本地LLM最佳笔记本电脑(2026年)', anchor: '#best-models' },
         { label: '性能预期: 台式机 vs 笔记本电脑', anchor: '#perf-gap' },
@@ -1905,7 +1905,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     updatedDate: '2026-07-30',
   },
   toc: [
-    { label: '요약', anchor: '#tldr' },
+    { label: '요약', anchor: '#key-takeaways' },
     { label: '노트북에 필요한 GPU는?', anchor: '#gpu-specs' },
     { label: '로컬 LLM 최고 노트북 (2026년)', anchor: '#best-models' },
     { label: '성능 기대치: 데스크톱 vs. 노트북', anchor: '#perf-gap' },

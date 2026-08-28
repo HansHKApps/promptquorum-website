@@ -81,6 +81,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       framework_vs_technique: {
+        id: 'framework_vs_technique',
         title: 'Framework vs. Technique: What Is the Difference?',
         snippets: [
           { type: 'in-one-sentence', text: 'A prompt framework is a structural template defining which components belong in every prompt; a technique is a pattern applied within one of those components.' },
@@ -96,6 +97,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       when_to_build: {
+        id: 'when_to_build',
         title: 'When to Build a Custom Prompt Framework',
         content: [
           '**Build a custom framework when you apply the same 3+ modifications to a standard framework for every prompt in a given workflow.** If you always prepend a compliance anchor, append a citation requirement, and inject a terminology glossary — those are components, not ad-hoc additions.',
@@ -121,6 +123,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       five_step_process: {
+        id: 'five_step_process',
         title: 'Building a Custom Prompt Framework: 5-Step Process',
         content: [
           '**The 5-step process: define the goal → identify components → test on 10 prompts → refine → document.** Each step has a clear exit criterion. Don\'t skip to step 5 — documentation of an untested framework creates false confidence.',
@@ -137,6 +140,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       support_example: {
+        id: 'support_example',
         title: 'Example: Building a Framework for a Support Team',
         content: [
           '**A support team\'s custom framework — named REPAIR — consists of 5 components: Role, Escalation condition, Policy anchor, Action path, Intent confirmation.** Standard frameworks like CO-STAR and CRAFT don\'t include escalation logic or policy anchoring, which every support prompt requires.',
@@ -161,6 +165,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       common_mistakes: {
+        id: 'common_mistakes',
         title: 'Common Mistakes When Building Custom Frameworks',
         content: [
           '**The most common mistake is building a framework before testing 20+ real prompts manually.** Frameworks built from theory rather than observed patterns include components that sound important but get skipped in practice — which trains the team to ignore framework sections.',
@@ -208,6 +213,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       related_reading: {
+        id: 'related_reading',
         title: 'Related Reading',
         items: [
           { title: 'CO-STAR Framework: Components and When to Use It', url: '/prompt-engineering/co-star-framework' },
@@ -273,7 +279,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
       { label: 'Framework vs. Technik', anchor: 'framework_vs_technique' },
       { label: 'Wann ein eigenes Framework sinnvoll ist', anchor: 'when_to_build' },
       { label: 'Eigenes Framework in 5 Schritten', anchor: 'five_step_process' },
-      { label: 'Beispiel: REPAIR-Framework für Support-Teams', anchor: 'support_example' },
       { label: 'Häufige Fehler', anchor: 'common_mistakes' },
       { label: 'Häufig gestellte Fragen', anchor: 'faq' },
       { label: 'Weiterführende Artikel', anchor: 'related_reading' },
@@ -320,6 +325,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       framework_vs_technique: {
+        id: 'framework_vs_technique',
         title: 'Framework vs. Technik: Was ist der Unterschied?',
         snippets: [
           { type: 'in-one-sentence', text: 'Ein Prompt-Framework ist eine strukturelle Vorlage, die festlegt, welche Komponenten in jeden Prompt gehören; eine Technik ist ein Muster, das innerhalb einer dieser Komponenten angewendet wird.' },
@@ -335,6 +341,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       when_to_build: {
+        id: 'when_to_build',
         title: 'Wann sollten Sie ein eigenes Prompt-Framework entwickeln?',
         content: [
           '**Entwickeln Sie ein eigenes Framework, wenn Sie für jeden Prompt in einem Workflow dieselben 3+ Modifikationen an einem Standardframework vornehmen.** Wenn Sie immer einen Compliance-Anker ergänzen, eine Zitierpflicht anhängen und ein Fachvokabular einpflegen — sind das Komponenten, keine Ad-hoc-Ergänzungen.',
@@ -349,6 +356,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       five_step_process: {
+        id: 'five_step_process',
         title: 'Eigenes Prompt-Framework in 5 Schritten entwickeln',
         content: [
           '**Der 5-Schritte-Prozess: Ziel definieren → Komponenten identifizieren → an 10 Prompts testen → verfeinern → dokumentieren.** Jeder Schritt hat ein klares Abschlusskriterium. Überspringen Sie nicht zu Schritt 5 — die Dokumentation eines ungetesteten Frameworks erzeugt falsches Vertrauen.',
@@ -365,6 +373,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       common_mistakes: {
+        id: 'common_mistakes',
         title: 'Häufige Fehler beim Entwickeln eigener Frameworks',
         content: [
           '**Der häufigste Fehler ist, ein Framework zu entwickeln, bevor 20+ reale Prompts manuell getestet wurden.** Frameworks, die aus der Theorie heraus entwickelt werden, enthalten Komponenten, die wichtig klingen, in der Praxis aber übersprungen werden.',
@@ -388,6 +397,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       related_reading: {
+        id: 'related_reading',
         title: 'Weiterführende Artikel',
         items: [
           { title: 'CO-STAR Framework: Components and When to Use It', url: '/prompt-engineering/co-star-framework' },
@@ -399,6 +409,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       sources: {
+        id: 'sources',
         title: 'Quellen',
         items: [
           { title: 'OpenAI Prompt Engineering Guide', url: 'https://platform.openai.com/docs/guides/prompt-engineering' },
@@ -501,6 +512,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       framework_vs_technique: {
+        id: 'framework_vs_technique',
         title: 'Framework vs. Técnica: ¿Cuál es la diferencia?',
         snippets: [
           { type: 'in-one-sentence', text: 'Un framework de prompts es una plantilla estructural que define qué componentes pertenecen a cada prompt; una técnica es un patrón aplicado dentro de uno de esos componentes.' },
@@ -516,6 +528,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       when_to_build: {
+        id: 'when_to_build',
         title: 'Cuándo construir un framework de prompts personalizado',
         content: [
           '**Construye un framework personalizado cuando aplicas las mismas 3+ modificaciones a un framework estándar para cada prompt de un flujo de trabajo dado.** Si siempre añades un ancla de cumplimiento, requisito de citas y glosario de terminología — esos son componentes, no adiciones ad hoc.',
@@ -541,6 +554,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       five_step_process: {
+        id: 'five_step_process',
         title: 'Construir un framework de prompts personalizado: proceso de 5 pasos',
         content: [
           '**El proceso de 5 pasos: define el objetivo → identifica componentes → prueba en 10 prompts → refina → documenta.** Cada paso tiene un criterio de salida claro. No saltes al paso 5 — documentar un framework no probado crea falsa confianza.',
@@ -557,6 +571,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       support_example: {
+        id: 'support_example',
         title: 'Ejemplo: Construir un framework para un equipo de soporte',
         content: [
           '**El framework personalizado de un equipo de soporte — llamado REPAIR — consta de 5 componentes: Role, Escalation condition, Policy anchor, Action path, Intent confirmation.** Los frameworks estándar como CO-STAR y CRAFT no incluyen lógica de escalación ni anclaje de políticas, que cada prompt de soporte requiere.',
@@ -581,6 +596,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       common_mistakes: {
+        id: 'common_mistakes',
         title: 'Errores comunes al construir frameworks personalizados',
         content: [
           '**El error más común es construir un framework antes de probar manualmente 20+ prompts reales.** Los frameworks construidos desde la teoría en lugar de patrones observados incluyen componentes que suenan importantes pero se omiten en la práctica.',
@@ -628,6 +644,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       related_reading: {
+        id: 'related_reading',
         title: 'Lecturas relacionadas',
         items: [
           { title: 'Framework CO-STAR: Componentes y cuándo usarlo', url: '/es/prompt-engineering/co-star-framework' },
@@ -639,6 +656,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       sources: {
+        id: 'sources',
         title: 'Fuentes',
         items: [
           { title: 'OpenAI Prompt Engineering Guide', url: 'https://platform.openai.com/docs/guides/prompt-engineering' },
@@ -741,6 +759,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       framework_vs_technique: {
+        id: 'framework_vs_technique',
         title: 'Framework vs. Técnica: qual é a diferença?',
         snippets: [
           { type: 'in-one-sentence', text: 'Um framework de prompts é um modelo estrutural que define quais componentes pertencem a cada prompt; uma técnica é um padrão aplicado dentro de um desses componentes.' },
@@ -756,6 +775,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       when_to_build: {
+        id: 'when_to_build',
         title: 'Quando construir um framework de prompts personalizado',
         content: [
           '**Construa um framework personalizado quando aplicar as mesmas 3+ modificações a um framework padrão para cada prompt de um determinado fluxo de trabalho.** Se você sempre adiciona uma âncora de conformidade, requisito de citação e glossário de terminologia — esses são componentes, não adições ad hoc.',
@@ -781,6 +801,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       five_step_process: {
+        id: 'five_step_process',
         title: 'Construir um framework de prompts personalizado: processo de 5 etapas',
         content: [
           '**O processo de 5 etapas: defina o objetivo → identifique componentes → teste em 10 prompts → refine → documente.** Cada etapa tem um critério de saída claro. Não pule para a etapa 5 — documentar um framework não testado cria falsa confiança.',
@@ -797,6 +818,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       support_example: {
+        id: 'support_example',
         title: 'Exemplo: Construir um framework para uma equipe de suporte',
         content: [
           '**O framework personalizado de uma equipe de suporte — chamado REPAIR — consiste em 5 componentes: Role, Escalation condition, Policy anchor, Action path, Intent confirmation.** Frameworks padrão como CO-STAR e CRAFT não incluem lógica de escalonamento nem ancoragem de políticas, que cada prompt de suporte exige.',
@@ -821,6 +843,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       common_mistakes: {
+        id: 'common_mistakes',
         title: 'Erros comuns ao construir frameworks personalizados',
         content: [
           '**O erro mais comum é construir um framework antes de testar manualmente 20+ prompts reais.** Frameworks construídos a partir da teoria em vez de padrões observados incluem componentes que soam importantes mas são omitidos na prática.',
@@ -868,6 +891,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       related_reading: {
+        id: 'related_reading',
         title: 'Leituras relacionadas',
         items: [
           { title: 'Framework CO-STAR: Componentes e quando usá-lo', url: '/pt/prompt-engineering/co-star-framework' },
@@ -879,6 +903,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       sources: {
+        id: 'sources',
         title: 'Fontes',
         items: [
           { title: 'OpenAI Prompt Engineering Guide', url: 'https://platform.openai.com/docs/guides/prompt-engineering' },
@@ -980,6 +1005,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       framework_vs_technique: {
+        id: 'framework_vs_technique',
         title: 'Framework vs. technique : quelle est la différence ?',
         snippets: [
           { type: 'in-one-sentence', text: 'Un framework de prompts est un modèle structurel définissant quels composants appartiennent à chaque prompt ; une technique est un modèle appliqué à l\'intérieur d\'un de ces composants.' },
@@ -995,6 +1021,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       when_to_build: {
+        id: 'when_to_build',
         title: 'Quand créer un framework de prompts personnalisé',
         content: [
           '**Créez un framework personnalisé lorsque vous appliquez les mêmes 3+ modifications à un framework standard pour chaque prompt d\'un workflow.** Si vous ajoutez toujours une contrainte de conformité, un vocabulaire de domaine et un schéma de sortie — ces éléments doivent devenir des composants de votre propre framework.',
@@ -1009,6 +1036,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       five_step_process: {
+        id: 'five_step_process',
         title: 'Créer un framework de prompts personnalisé en 5 étapes',
         content: [
           '**Le processus en 5 étapes : définir l\'objectif → identifier les composants → tester sur 10 prompts → affiner → documenter.** Chaque étape a un critère de sortie clair. Ne sautez pas à l\'étape 5 — documenter un framework non testé crée une fausse confiance.',
@@ -1025,6 +1053,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       support_example: {
+        id: 'support_example',
         title: 'Exemple : créer un framework pour une équipe support',
         content: [
           '**Le framework personnalisé d\'une équipe support — nommé REPAIR — comprend 5 composants : Role, Escalation condition, Policy anchor, Action path, Intent confirmation.** Les frameworks standard comme CO-STAR et CRAFT n\'incluent pas la logique d\'escalade ni l\'ancrage de politique, nécessaires pour chaque prompt support.',
@@ -1035,6 +1064,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       common_mistakes: {
+        id: 'common_mistakes',
         title: 'Erreurs courantes lors de la création de frameworks personnalisés',
         content: [
           '**L\'erreur la plus courante est de créer un framework sans tester 20+ prompts réels manuellement.** Les frameworks construits à partir de la théorie incluent des composants qui semblent importants mais sont ignorés en pratique.',
@@ -1058,6 +1088,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       related_reading: {
+        id: 'related_reading',
         title: 'Lectures complémentaires',
         items: [
           { title: 'CO-STAR Framework: Components and When to Use It', url: '/prompt-engineering/co-star-framework' },
@@ -1170,6 +1201,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       framework_vs_technique: {
+        id: 'framework_vs_technique',
         title: 'フレームワーク vs テクニック：何が違うのか？',
         snippets: [
           { type: 'in-one-sentence', text: 'プロンプトフレームワークは各プロンプトに必要なコンポーネントを定義する構造テンプレートであり、テクニックはそのコンポーネントの一つの中で適用されるパターンです。' },
@@ -1185,6 +1217,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       when_to_build: {
+        id: 'when_to_build',
         title: 'カスタムプロンプトフレームワークが必要なとき',
         content: [
           '**特定のワークフローで毎回同じ3つ以上の変更を加えるときにカスタムフレームワークを構築します。** コンプライアンスアンカー、引用要件、専門用語集を常に追加している場合、それらはコンポーネントであり、アドホックな追加ではありません。',
@@ -1199,6 +1232,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       five_step_process: {
+        id: 'five_step_process',
         title: '5ステップでカスタムプロンプトフレームワークを構築する',
         content: [
           '**5ステッププロセス：目標定義 → コンポーネント特定 → 10プロンプトでテスト → 改良 → 文書化。** 各ステップには明確な完了基準があります。ステップ5に飛ばないこと—テストされていないフレームワークの文書化は誤った信頼を生み出します。',
@@ -1215,6 +1249,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       support_example: {
+        id: 'support_example',
         title: '例：サポートチーム向けフレームワーク構築',
         content: [
           '**あるサポートチームのカスタムフレームワーク — REPAIRと命名 — は5つのコンポーネントで構成されます：Role、Escalation condition、Policy anchor、Action path、Intent confirmation。** CO-STARやCRAFTなどの標準フレームワークには、すべてのサポートプロンプトが必要とするエスカレーションロジックやポリシーアンカリングが含まれていません。',
@@ -1237,6 +1272,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       common_mistakes: {
+        id: 'common_mistakes',
         title: '独自フレームワーク構築時のよくある間違い',
         content: [
           '**最も一般的な間違いは、20以上の実際のプロンプトを手動でテストする前にフレームワークを構築することです。** 理論から構築されたフレームワークには、重要そうに見えても実際にはスキップされるコンポーネントが含まれます。',
@@ -1260,6 +1296,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       related_reading: {
+        id: 'related_reading',
         title: '関連記事',
         items: [
           { title: 'CO-STAR Framework: Components and When to Use It', url: '/prompt-engineering/co-star-framework' },
@@ -1271,6 +1308,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       sources: {
+        id: 'sources',
         title: '情報源',
         items: [
           { title: 'OpenAI Prompt Engineering Guide', url: 'https://platform.openai.com/docs/guides/prompt-engineering' },
@@ -1372,6 +1410,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       framework_vs_technique: {
+        id: 'framework_vs_technique',
         title: '框架与技术的区别是什么？',
         snippets: [
           { type: 'in-one-sentence', text: 'Prompt框架是定义每条Prompt所需组件的结构模板；技术是在这些组件之一内应用的模式。' },
@@ -1387,6 +1426,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       when_to_build: {
+        id: 'when_to_build',
         title: '何时构建自定义Prompt框架',
         content: [
           '**当您在特定工作流中对每条Prompt进行相同的3项以上修改时，就应该构建自定义框架。** 如果您总是需要添加合规性约束、引用要求和术语表——这些应该成为自定义框架的正式组件，而不是手动添加项。',
@@ -1401,6 +1441,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       five_step_process: {
+        id: 'five_step_process',
         title: '5步构建自定义Prompt框架',
         content: [
           '**5步流程：定义目标 → 识别组件 → 在10条Prompt上测试 → 改进 → 文档化。** 每步都有明确的完成标准。不要跳到第5步——对未经测试的框架进行文档化会产生虚假的信心。',
@@ -1417,6 +1458,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       support_example: {
+        id: 'support_example',
         title: '示例：为支持团队构建框架',
         content: [
           '**一个支持团队的自定义框架——命名为REPAIR——包含5个组件：Role、Escalation condition、Policy anchor、Action path、Intent confirmation。** CO-STAR和CRAFT等标准框架不包含每条支持Prompt都需要的升级逻辑和策略锚定。',
@@ -1439,6 +1481,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       common_mistakes: {
+        id: 'common_mistakes',
         title: '构建自定义框架的常见错误',
         content: [
           '**最常见的错误是在手动测试20条以上真实Prompt之前就构建框架。** 从理论而非观察到的模式构建的框架包含听起来重要但实际上被跳过的组件。',
@@ -1462,6 +1505,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       related_reading: {
+        id: 'related_reading',
         title: '相关阅读',
         items: [
           { title: 'CO-STAR Framework: Components and When to Use It', url: '/prompt-engineering/co-star-framework' },
@@ -1473,6 +1517,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       sources: {
+        id: 'sources',
         title: '参考来源',
         items: [
           { title: 'OpenAI Prompt Engineering Guide', url: 'https://platform.openai.com/docs/guides/prompt-engineering' },
@@ -1575,6 +1620,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       framework_vs_technique: {
+        id: 'framework_vs_technique',
         title: 'إطار العمل مقابل الأسلوب: ما الفرق؟',
         snippets: [
           { type: 'in-one-sentence', text: 'إطار عمل الأوامر هو قالب هيكلي يحدد المكونات التي ينبغي أن يتضمنها كل أمر؛ أما الأسلوب فهو نمط يُطبَّق داخل أحد تلك المكونات.' },
@@ -1590,6 +1636,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       when_to_build: {
+        id: 'when_to_build',
         title: 'متى تبني إطار عمل مخصصاً للأوامر',
         content: [
           '**ابنِ إطاراً مخصصاً عندما تطبّق نفس 3 تعديلات أو أكثر على إطار قياسي لكل أمر في سير عمل معين.** إذا كنت تضيف دائماً ارتكازاً على السياسة، واشتراطاً للاستشهادات، ومسرداً للمصطلحات — فهذه مكونات لا إضافات عشوائية.',
@@ -1615,6 +1662,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       five_step_process: {
+        id: 'five_step_process',
         title: 'بناء إطار عمل مخصص للأوامر: عملية من 5 خطوات',
         content: [
           '**العملية المكونة من 5 خطوات: حدد الهدف ← حدد المكونات ← اختبر على 10 أوامر ← حسّن ← وثّق.** لكل خطوة معيار خروج واضح. لا تتخطى إلى الخطوة الخامسة — توثيق إطار عمل غير مختبر يولّد ثقة زائفة.',
@@ -1631,6 +1679,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       support_example: {
+        id: 'support_example',
         title: 'مثال: بناء إطار عمل لفريق دعم',
         content: [
           '**إطار العمل المخصص لفريق الدعم — المسمى REPAIR — يتألف من 5 مكونات: Role وEscalation condition وPolicy anchor وAction path وIntent confirmation.** لا تتضمن الأطر القياسية كـCO-STAR وCRAFT منطق التصعيد أو ارتكاز السياسة اللذين يحتاجهما كل أمر دعم.',
@@ -1655,6 +1704,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       common_mistakes: {
+        id: 'common_mistakes',
         title: 'الأخطاء الشائعة عند بناء أطر عمل مخصصة',
         content: [
           '**الخطأ الأكثر شيوعاً هو بناء إطار عمل قبل اختبار 20 أمراً حقيقياً أو أكثر يدوياً.** أطر العمل المبنية نظرياً بدلاً من الاستناد إلى أنماط مُلاحظة تتضمن مكونات تبدو مهمة لكن تُهمَل في التطبيق الفعلي.',
@@ -1702,6 +1752,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       related_reading: {
+        id: 'related_reading',
         title: 'قراءات ذات صلة',
         items: [
           { title: 'إطار عمل CO-STAR: المكونات ومتى تستخدمه', url: '/ar/prompt-engineering/co-star-framework' },
@@ -1713,6 +1764,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       sources: {
+        id: 'sources',
         title: 'المصادر',
         items: [
           { title: 'OpenAI Prompt Engineering Guide', url: 'https://platform.openai.com/docs/guides/prompt-engineering' },
@@ -1814,6 +1866,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       framework_vs_technique: {
+        id: 'framework_vs_technique',
         title: '프레임워크 vs. 기법: 차이점은 무엇입니까?',
         snippets: [
           { type: 'in-one-sentence', text: '프롬프트 프레임워크는 각 프롬프트에 어떤 구성 요소가 필요한지 정의하는 구조적 템플릿이며, 기법은 그러한 구성 요소 중 하나 안에서 적용되는 패턴입니다.' },
@@ -1829,6 +1882,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       when_to_build: {
+        id: 'when_to_build',
         title: '커스텀 프롬프트 프레임워크를 구축해야 할 때',
         content: [
           '**특정 업무 흐름의 모든 프롬프트에 대해 표준 프레임워크에 동일한 3가지 이상의 수정을 적용할 때 커스텀 프레임워크를 구축하십시오.** 항상 규정 준수 앵커, 인용 요구사항, 용어 사전을 추가한다면 — 그것들은 구성 요소이지 임시 추가 사항이 아닙니다.',
@@ -1854,6 +1908,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       five_step_process: {
+        id: 'five_step_process',
         title: '커스텀 프롬프트 프레임워크 구축: 5단계 프로세스',
         content: [
           '**5단계 프로세스: 목표 정의 → 구성 요소 식별 → 10개 프롬프트 테스트 → 개선 → 문서화.** 각 단계에는 명확한 완료 기준이 있습니다. 5단계로 건너뛰지 마십시오 — 검증되지 않은 프레임워크를 문서화하면 잘못된 자신감을 심어줍니다.',
@@ -1870,6 +1925,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       support_example: {
+        id: 'support_example',
         title: '예시: 지원팀을 위한 프레임워크 구축',
         content: [
           '**지원팀의 커스텀 프레임워크 — REPAIR라고 불리는 — 는 5개의 구성 요소로 구성됩니다: Role, Escalation condition, Policy anchor, Action path, Intent confirmation.** CO-STAR, CRAFT 같은 표준 프레임워크는 모든 지원 프롬프트에 필요한 에스컬레이션 로직과 정책 앵커링을 포함하지 않습니다.',
@@ -1894,6 +1950,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       common_mistakes: {
+        id: 'common_mistakes',
         title: '커스텀 프레임워크 구축 시 흔한 실수',
         content: [
           '**가장 흔한 실수는 실제 프롬프트 20개 이상을 수동으로 테스트하기 전에 프레임워크를 구축하는 것입니다.** 관찰된 패턴이 아닌 이론에서 구축된 프레임워크는 실전에서 생략되는 중요하게 들리는 구성 요소를 포함합니다.',
@@ -1941,6 +1998,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       related_reading: {
+        id: 'related_reading',
         title: '관련 읽기',
         items: [
           '[CO-STAR 프레임워크: 구성 요소와 사용 시기](/ko/prompt-engineering/co-star-framework)',
@@ -1952,6 +2010,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       sources: {
+        id: 'sources',
         title: '출처',
         items: [
           { title: 'OpenAI Prompt Engineering Guide', url: 'https://platform.openai.com/docs/guides/prompt-engineering' },

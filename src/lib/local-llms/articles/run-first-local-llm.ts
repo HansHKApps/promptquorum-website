@@ -403,6 +403,7 @@ schema: {
           ],
         },
         step1: {
+          id: 'step-1-install-ollama',
           title: 'Paso 1: Instalar Ollama',
           content: 'Ollama es la forma más rápida de ejecutar un LLM local. Instálalo con un comando o una descarga de 2 minutos:',
           codeBlock: '# macOS (Homebrew)\nbrew install ollama\n\n# Linux\ncurl -fsSL https://ollama.com/install.sh | sh\n\n# Windows: download installer from ollama.com/download',
@@ -417,6 +418,7 @@ schema: {
           codeLanguage: 'bash',
         },
         step2: {
+          id: 'step-2-choose-your-first-model',
           title: 'Paso 2: Elegir tu primer modelo',
           content: 'Elige un modelo según la RAM disponible. Si tienes dudas, empieza con `llama3.2:3b` — funciona en cualquier máquina con 4 GB de RAM y produce resultados útiles:',
           rows: [
@@ -430,6 +432,7 @@ schema: {
           imageCaption: 'Selector del primer modelo por RAM: 4 GB para llama3.2:1b (1,3 GB), 8 GB para Llama 3.2 3B (2 GB, inicio recomendado), 8-16 GB para Llama 3.1 8B (4,7 GB), 16+ GB para mistral:7b o qwen2.5:7b (4-5 GB).',
         },
         step3: {
+          id: 'step-3-pull-the-model',
           title: 'Paso 3: Descargar el modelo',
           content: 'Descarga el modelo con `ollama pull`. El modelo se guarda en `~/.ollama/models` y solo necesita descargarse una vez:',
           codeBlock: 'ollama pull llama3.2\n\n# Or pull a specific size variant\nollama pull llama3.2:3b\nollama pull llama3.1:8b',
@@ -750,6 +753,7 @@ schema: {
           ],
         },
         step1: {
+          id: 'step-1-install-ollama',
           title: 'الخطوة 1: تثبيت Ollama',
           content: 'Ollama هو أسرع طريقة لتشغيل نموذج LLM محلي. ثبّته بأمر واحد أو تنزيل من دقيقتين:',
           codeBlock: '# macOS (Homebrew)\nbrew install ollama\n\n# Linux\ncurl -fsSL https://ollama.com/install.sh | sh\n\n# Windows: download installer from ollama.com/download',
@@ -764,6 +768,7 @@ schema: {
           codeLanguage: 'bash',
         },
         step2: {
+          id: 'step-2-choose-your-first-model',
           title: 'الخطوة 2: اختيار أول نموذج',
           content: 'اختر نموذجًا حسب RAM المتاح. إذا كنت في شك، ابدأ بـ `llama3.2:3b` — يعمل على أي جهاز بسعة 4 GB من RAM وينتج نتائج مفيدة:',
           rows: [
@@ -777,6 +782,7 @@ schema: {
           imageCaption: 'اختيار أول نموذج حسب RAM: 4 GB لـ llama3.2:1b (1.3 GB)، 8 GB لـ Llama 3.2 3B (2 GB، البداية الموصى بها)، 8-16 GB لـ Llama 3.1 8B (4.7 GB)، 16+ GB لـ mistral:7b أو qwen2.5:7b (4-5 GB).',
         },
         step3: {
+          id: 'step-3-pull-the-model',
           title: 'الخطوة 3: تنزيل النموذج',
           content: 'نزّل النموذج بـ `ollama pull`. يُحفظ النموذج في `~/.ollama/models` ويحتاج إلى التنزيل مرة واحدة فقط:',
           codeBlock: 'ollama pull llama3.2\n\n# Or pull a specific size variant\nollama pull llama3.2:3b\nollama pull llama3.1:8b',
@@ -1148,6 +1154,7 @@ schema: {
           ],
         },
         step1: {
+          id: 'step-1-install-ollama',
           title: 'Schritt 1: Ollama installieren',
           content: 'Ollama ist der schnellste Weg, ein lokales LLM auszuführen. Installieren Sie es mit einem Befehl oder einem 2-Minuten-Download:',
           codeBlock: '# macOS (Homebrew)\nbrew install ollama\n\n# Linux\ncurl -fsSL https://ollama.com/install.sh | sh\n\n# Windows: Installer von ollama.com/download herunterladen',
@@ -1162,6 +1169,7 @@ schema: {
           codeLanguage: 'bash',
         },
         step2: {
+          id: 'step-2-choose-your-first-model',
           title: 'Schritt 2: Erstes Modell wählen',
           content: 'Wählen Sie ein Modell passend zu Ihrem verfügbaren RAM. Im Zweifel starten Sie mit `llama3.2:3b` -- es läuft auf jedem Rechner mit 4 GB RAM und liefert brauchbare Ergebnisse:',
           rows: [
@@ -1175,6 +1183,7 @@ schema: {
           imageCaption: 'Erste Modellwahl nach RAM: 4 GB passt zu llama3.2:1b (1,3 GB), 8 GB passt zu Llama 3.2 3B (2 GB, empfohlener Start), 8-16 GB passt zu Llama 3.1 8B (4,7 GB), 16+ GB passt zu mistral:7b oder qwen2.5:7b (4-5 GB).',
         },
         step3: {
+          id: 'step-3-pull-the-model',
           title: 'Schritt 3: Modell herunterladen',
           content: 'Laden Sie das Modell mit `ollama pull` herunter. Das Modell wird unter `~/.ollama/models` gespeichert und muss nur einmal heruntergeladen werden:',
           codeBlock: 'ollama pull llama3.2\n\n# Oder eine bestimmte Größenvariante laden\nollama pull llama3.2:3b\nollama pull llama3.1:8b',
@@ -1400,10 +1409,13 @@ schema: {
             { type: 'one-sentence', text: "Exécuter votre premier LLM local prend moins de 10 minutes : installez Ollama, lancez une commande comme `ollama run llama3.2` pour télécharger un petit modèle, et discutez dans votre terminal sans clé API, compte ni connexion Internet après le téléchargement initial." },
             { type: 'plain-terms', text: "Aucune configuration particulière n'est nécessaire pour essayer un modèle d'IA local. Installez un programme gratuit (Ollama), tapez une seule commande, et il télécharge un petit modèle et ouvre un chat directement dans votre terminal. Après ce premier téléchargement, tout fonctionne entièrement hors ligne -- pas de compte, pas de clé API, pas de facture mensuelle." },
           ], items: ['Le chemin le plus rapide : installez Ollama → exécutez `ollama run llama3.2` → discutez dans votre terminal. Durée totale : moins de 5 minutes avec une connexion rapide.', 'Pour les machines avec 8 Go de RAM : commencez avec `llama3.2:3b` (2 Go de téléchargement) ou `phi4-mini` (2,3 Go). Les deux fonctionnent sur n\'importe quel laptop moderne.', 'Attendez 15-40 tokens/sec sur CPU, 60-120 tokens/sec sur un GPU milieu de gamme ou Apple Silicon.', 'Les premières réponses peuvent sembler plus lentes que les APIs cloud -- les modèles locaux échangent vitesse contre confidentialité et coût zéro.', 'Après le téléchargement initial du modèle, tout fonctionne hors ligne. Aucune connexion Internet requise pour les sessions suivantes.'] },
-        step1: { title: 'Étape 1 : Installer Ollama', content: 'Ollama est le moyen le plus rapide d\'exécuter un LLM local. Installez-le avec une commande ou un téléchargement de 2 minutes :', codeBlock: '# macOS (Homebrew)\nbrew install ollama\n\n# Linux\ncurl -fsSL https://ollama.com/install.sh | sh\n\n# Windows: download installer from ollama.com/download', codeLanguage: 'bash' },
+        step1: {
+          id: 'step-1-install-ollama', title: 'Étape 1 : Installer Ollama', content: 'Ollama est le moyen le plus rapide d\'exécuter un LLM local. Installez-le avec une commande ou un téléchargement de 2 minutes :', codeBlock: '# macOS (Homebrew)\nbrew install ollama\n\n# Linux\ncurl -fsSL https://ollama.com/install.sh | sh\n\n# Windows: download installer from ollama.com/download', codeLanguage: 'bash' },
         step1Detail: { title: 'Vérifier qu\'Ollama fonctionne', content: 'Après l\'installation, confirmez qu\'Ollama est actif :', codeBlock: 'curl http://localhost:11434\n# Expected output: Ollama is running', codeLanguage: 'bash' },
-        step2: { title: 'Étape 2 : Choisir votre premier modèle', content: 'Choisissez un modèle en fonction de votre RAM disponible. En cas de doute, commencez avec `llama3.2:3b` -- il fonctionne sur toute machine avec 4 Go de RAM et produit des résultats utiles :', rows: [{ 'Votre RAM': '4 Go', 'Modèle recommandé': 'llama3.2:1b', 'Taille du téléchargement': '~1,3 Go', 'Pourquoi': 'Plus petit modèle Llama utilisable' }, { 'Votre RAM': '8 Go', 'Modèle recommandé': 'Llama 3.2 3B', 'Taille du téléchargement': '~2 Go', 'Pourquoi': 'Meilleur rapport qualité/taille pour débutants' }, { 'Votre RAM': '8-16 Go', 'Modèle recommandé': 'Llama 3.1 8B', 'Taille du téléchargement': '~4,7 Go', 'Pourquoi': 'Modèle polyvalent performant' }, { 'Votre RAM': '16+ Go', 'Modèle recommandé': 'mistral:7b ou qwen2.5:7b', 'Taille du téléchargement': '~4-5 Go', 'Pourquoi': 'Qualité compétitive, inférence rapide' }], columns: ['Votre RAM', 'Modèle recommandé', 'Taille du téléchargement', 'Pourquoi'] },
-        step3: { title: 'Étape 3 : Télécharger le modèle', content: 'Téléchargez le modèle avec `ollama pull`. Le modèle est enregistré dans `~/.ollama/models` et ne doit être téléchargé qu\'une seule fois :', codeBlock: 'ollama pull llama3.2\n\n# Or pull a specific size variant\nollama pull llama3.2:3b\nollama pull llama3.1:8b', codeLanguage: 'bash' },
+        step2: {
+          id: 'step-2-choose-your-first-model', title: 'Étape 2 : Choisir votre premier modèle', content: 'Choisissez un modèle en fonction de votre RAM disponible. En cas de doute, commencez avec `llama3.2:3b` -- il fonctionne sur toute machine avec 4 Go de RAM et produit des résultats utiles :', rows: [{ 'Votre RAM': '4 Go', 'Modèle recommandé': 'llama3.2:1b', 'Taille du téléchargement': '~1,3 Go', 'Pourquoi': 'Plus petit modèle Llama utilisable' }, { 'Votre RAM': '8 Go', 'Modèle recommandé': 'Llama 3.2 3B', 'Taille du téléchargement': '~2 Go', 'Pourquoi': 'Meilleur rapport qualité/taille pour débutants' }, { 'Votre RAM': '8-16 Go', 'Modèle recommandé': 'Llama 3.1 8B', 'Taille du téléchargement': '~4,7 Go', 'Pourquoi': 'Modèle polyvalent performant' }, { 'Votre RAM': '16+ Go', 'Modèle recommandé': 'mistral:7b ou qwen2.5:7b', 'Taille du téléchargement': '~4-5 Go', 'Pourquoi': 'Qualité compétitive, inférence rapide' }], columns: ['Votre RAM', 'Modèle recommandé', 'Taille du téléchargement', 'Pourquoi'] },
+        step3: {
+          id: 'step-3-pull-the-model', title: 'Étape 3 : Télécharger le modèle', content: 'Téléchargez le modèle avec `ollama pull`. Le modèle est enregistré dans `~/.ollama/models` et ne doit être téléchargé qu\'une seule fois :', codeBlock: 'ollama pull llama3.2\n\n# Or pull a specific size variant\nollama pull llama3.2:3b\nollama pull llama3.1:8b', codeLanguage: 'bash' },
         step3Progress: { title: 'À quoi ressemble le téléchargement ?', content: 'Ollama affiche la progression du téléchargement dans le terminal. Un modèle `llama3.2:3b` prend 2-5 minutes sur une connexion haut débit classique. Le modèle est stocké compressé -- les 2 Go téléchargés s\'expandent à environ 2,3 Go sur disque.', codeBlock: 'pulling manifest\npulling 966de95ca8dc... 100% ▕████████████████▏ 1.9 GB\npulling 9f436a92eb8b... 100% ▕████████████████▏   42 B\nverifying sha256 digest\nwriting manifest\nsuccess', codeLanguage: 'text' },
         step4: { id: 'step-4-run-and-chat', title: 'Étape 4 : Lancer le modèle et envoyer votre premier prompt', content: 'Démarrez une session de chat interactive :', codeBlock: 'ollama run llama3.2\n\n# Ollama loads the model and shows a prompt:\n>>> Send a message (/? for help)', codeLanguage: 'bash' },
         step4Chat: { title: 'Votre première conversation', content: 'Tapez un message et appuyez sur Entrée. Le modèle diffuse sa réponse token par token :', codeBlock: '>>> What are local LLMs?\n\nLocal LLMs (large language models) are AI models that run entirely\non your own hardware -- your laptop, desktop, or server. Unlike cloud\nservices such as ChatGPT or Claude, local LLMs process everything\nlocally with no data sent to external servers...', codeLanguage: 'text' },
@@ -1503,10 +1515,13 @@ schema: {
             { type: 'one-sentence', text: '初めてのローカルLLM実行は10分もかかりません。Ollamaをインストールし、`ollama run llama3.2`のようなコマンドで小さなモデルをダウンロードし、ターミナルでチャットを始めるだけで、初回ダウンロード後はAPIキー、アカウント、インターネット接続が不要です。' },
             { type: 'plain-terms', text: 'ローカルAIモデルを試すのに特別な設定は必要ありません。無料プログラム（Ollama）をインストールし、コマンドを1つ入力するだけで、小さなモデルがダウンロードされ、ターミナルで直接チャットが開始されます。この最初のダウンロードの後は、アカウントもAPIキーも月額料金も不要で、完全にオフラインで動作します。' },
           ], items: ['最速の手順：Ollamaをインストール → `ollama run llama3.2`を実行 → ターミナルでチャット。高速接続なら合計5分以内。', '8 GBのRAMマシン：`llama3.2:3b`（2 GBのダウンロード）または`phi4-mini`（2.3 GB）から始めてください。どちらも最新のノートパソコンで動作します。', 'CPUで15-40トークン/秒、ミッドレンジGPUまたはApple Siliconで60-120トークン/秒が期待できます。', '最初のレスポンスはクラウドAPIより遅く感じる場合があります。ローカルモデルは速度をプライバシーとゼロコストと交換します。', '初期モデルのダウンロード後は、すべてオフラインで動作します。次回以降のセッションにインターネット接続は不要です。'] },
-        step1: { title: 'ステップ1：Ollamaをインストール', content: 'Ollamaはローカルで動作するLLMを実行する最速の方法です。1つのコマンドまたは2分のダウンロードでインストールできます：', codeBlock: '# macOS (Homebrew)\nbrew install ollama\n\n# Linux\ncurl -fsSL https://ollama.com/install.sh | sh\n\n# Windows: download installer from ollama.com/download', codeLanguage: 'bash', image: '/images/run-first-local-llm-setup-flow-en.svg', imageCaption: 'インストールから最初の応答まで4ステップ：Ollamaをインストール（約2分）、llama3.2:3bをダウンロード（約2 GB、2〜5分）、実行してチャット、モデル読み込み5〜30秒後に最初の応答。合計10分未満、ダウンロード後は完全オフラインで動作。' },
+        step1: {
+          id: 'step-1-install-ollama', title: 'ステップ1：Ollamaをインストール', content: 'Ollamaはローカルで動作するLLMを実行する最速の方法です。1つのコマンドまたは2分のダウンロードでインストールできます：', codeBlock: '# macOS (Homebrew)\nbrew install ollama\n\n# Linux\ncurl -fsSL https://ollama.com/install.sh | sh\n\n# Windows: download installer from ollama.com/download', codeLanguage: 'bash', image: '/images/run-first-local-llm-setup-flow-en.svg', imageCaption: 'インストールから最初の応答まで4ステップ：Ollamaをインストール（約2分）、llama3.2:3bをダウンロード（約2 GB、2〜5分）、実行してチャット、モデル読み込み5〜30秒後に最初の応答。合計10分未満、ダウンロード後は完全オフラインで動作。' },
         step1Detail: { title: 'Ollamaが動作していることを確認', content: 'インストール後、Ollamaがアクティブであることを確認します：', codeBlock: 'curl http://localhost:11434\n# Expected output: Ollama is running', codeLanguage: 'bash' },
-        step2: { title: 'ステップ2：最初のモデルを選択', content: '利用可能なRAMに基づいてモデルを選択します。迷った場合は`llama3.2:3b`から始めてください。4 GBのRAMを搭載したあらゆるマシンで動作し、有用な出力を生成します：', rows: [{ 'お使いのRAM': '4 GB', '推奨モデル': 'llama3.2:1b', 'ダウンロードサイズ': '約1.3 GB', '理由': '最小限の使えるLlamaモデル' }, { 'お使いのRAM': '8 GB', '推奨モデル': 'Llama 3.2 3B', 'ダウンロードサイズ': '約2 GB', '理由': '初心者向けの最高の品質/サイズ比' }, { 'お使いのRAM': '8-16 GB', '推奨モデル': 'Llama 3.1 8B', 'ダウンロードサイズ': '約4.7 GB', '理由': '強力な汎用モデル' }, { 'お使いのRAM': '16 GB以上', '推奨モデル': 'mistral:7b または qwen2.5:7b', 'ダウンロードサイズ': '約4-5 GB', '理由': '競争力のある品質、高速な推論' }], columns: ['お使いのRAM', '推奨モデル', 'ダウンロードサイズ', '理由'], image: '/images/run-first-local-llm-ram-model-picker-en.svg', imageCaption: 'RAM別の最初のモデル選び：4 GBはllama3.2:1b（1.3 GB）、8 GBはLlama 3.2 3B（2 GB、推奨の出発点）、8-16 GBはLlama 3.1 8B（4.7 GB）、16 GB以上はmistral:7bまたはqwen2.5:7b（4-5 GB）。' },
-        step3: { title: 'ステップ3：モデルをダウンロード', content: '`ollama pull`でモデルをダウンロードします。モデルは`~/.ollama/models`に保存され、一度だけダウンロードすれば使えます：', codeBlock: 'ollama pull llama3.2\n\n# Or pull a specific size variant\nollama pull llama3.2:3b\nollama pull llama3.1:8b', codeLanguage: 'bash' },
+        step2: {
+          id: 'step-2-choose-your-first-model', title: 'ステップ2：最初のモデルを選択', content: '利用可能なRAMに基づいてモデルを選択します。迷った場合は`llama3.2:3b`から始めてください。4 GBのRAMを搭載したあらゆるマシンで動作し、有用な出力を生成します：', rows: [{ 'お使いのRAM': '4 GB', '推奨モデル': 'llama3.2:1b', 'ダウンロードサイズ': '約1.3 GB', '理由': '最小限の使えるLlamaモデル' }, { 'お使いのRAM': '8 GB', '推奨モデル': 'Llama 3.2 3B', 'ダウンロードサイズ': '約2 GB', '理由': '初心者向けの最高の品質/サイズ比' }, { 'お使いのRAM': '8-16 GB', '推奨モデル': 'Llama 3.1 8B', 'ダウンロードサイズ': '約4.7 GB', '理由': '強力な汎用モデル' }, { 'お使いのRAM': '16 GB以上', '推奨モデル': 'mistral:7b または qwen2.5:7b', 'ダウンロードサイズ': '約4-5 GB', '理由': '競争力のある品質、高速な推論' }], columns: ['お使いのRAM', '推奨モデル', 'ダウンロードサイズ', '理由'], image: '/images/run-first-local-llm-ram-model-picker-en.svg', imageCaption: 'RAM別の最初のモデル選び：4 GBはllama3.2:1b（1.3 GB）、8 GBはLlama 3.2 3B（2 GB、推奨の出発点）、8-16 GBはLlama 3.1 8B（4.7 GB）、16 GB以上はmistral:7bまたはqwen2.5:7b（4-5 GB）。' },
+        step3: {
+          id: 'step-3-pull-the-model', title: 'ステップ3：モデルをダウンロード', content: '`ollama pull`でモデルをダウンロードします。モデルは`~/.ollama/models`に保存され、一度だけダウンロードすれば使えます：', codeBlock: 'ollama pull llama3.2\n\n# Or pull a specific size variant\nollama pull llama3.2:3b\nollama pull llama3.1:8b', codeLanguage: 'bash' },
         step3Progress: { title: 'ダウンロードの様子', content: 'Ollamaはターミナルにダウンロードの進行状況を表示します。`llama3.2:3b`モデルは一般的なブロードバンド接続で2-5分かかります。モデルは圧縮状態で保存されます。2 GBのダウンロードがディスク上で約2.3 GBに展開されます。', codeBlock: 'pulling manifest\npulling 966de95ca8dc... 100% ▕████████████████▏ 1.9 GB\npulling 9f436a92eb8b... 100% ▕████████████████▏   42 B\nverifying sha256 digest\nwriting manifest\nsuccess', codeLanguage: 'text' },
         step4: { id: 'step-4-run-and-chat', title: 'ステップ4：モデルを起動して最初のプロンプトを送信', content: 'インタラクティブなチャットセッションを開始します：', codeBlock: 'ollama run llama3.2\n\n# Ollama loads the model and shows a prompt:\n>>> Send a message (/? for help)', codeLanguage: 'bash' },
         step4Chat: { title: '最初の会話', content: 'メッセージを入力してEnterキーを押します。モデルはトークンごとにレスポンスをストリーミングします：', codeBlock: '>>> What are local LLMs?\n\nLocal LLMs (large language models) are AI models that run entirely\non your own hardware -- your laptop, desktop, or server. Unlike cloud\nservices such as ChatGPT or Claude, local LLMs process everything\nlocally with no data sent to external servers...', codeLanguage: 'text' },
@@ -1606,10 +1621,13 @@ schema: {
             { type: 'one-sentence', text: '运行你的第一个本地LLM不到10分钟：安装Ollama，运行像`ollama run llama3.2`这样的命令下载一个小模型，然后在终端中开始聊天，初始下载后无需API密钥、账户或互联网连接。' },
             { type: 'plain-terms', text: '试用本地AI模型不需要任何特殊设置。安装一个免费程序（Ollama），输入一条命令，它就会下载一个小模型并直接在终端打开聊天。首次下载完成后，一切完全离线运行——无需账户、无需API密钥、无需月费。' },
           ], items: ['最快路径：安装Ollama → 运行`ollama run llama3.2` → 在终端开始聊天。网速较快时全程不超过5分钟。', '8 GB RAM机器：从`llama3.2:3b`（2 GB下载）或`phi4-mini`（2.3 GB）开始。两者均可在任何现代笔记本电脑上运行。', 'CPU上预计15-40个令牌/秒，中端GPU或Apple Silicon上预计60-120个令牌/秒。', '首次响应可能比云API慢——本地模型以速度换取隐私和零成本。', '初始模型下载后，一切都在离线状态运行。后续会话无需互联网连接。'] },
-        step1: { title: '第一步：安装Ollama', content: 'Ollama是运行本地LLM的最快方式。用一条命令或2分钟下载完成安装：', codeBlock: '# macOS (Homebrew)\nbrew install ollama\n\n# Linux\ncurl -fsSL https://ollama.com/install.sh | sh\n\n# Windows: download installer from ollama.com/download', codeLanguage: 'bash', image: '/images/run-first-local-llm-setup-flow-en.svg', imageCaption: '从安装到首个响应共4步：安装Ollama（约2分钟）、下载llama3.2:3b（约2 GB，2-5分钟）、运行并聊天，模型加载5-30秒后获得首个响应——总计不到10分钟，下载完成后完全离线运行。' },
+        step1: {
+          id: 'step-1-install-ollama', title: '第一步：安装Ollama', content: 'Ollama是运行本地LLM的最快方式。用一条命令或2分钟下载完成安装：', codeBlock: '# macOS (Homebrew)\nbrew install ollama\n\n# Linux\ncurl -fsSL https://ollama.com/install.sh | sh\n\n# Windows: download installer from ollama.com/download', codeLanguage: 'bash', image: '/images/run-first-local-llm-setup-flow-en.svg', imageCaption: '从安装到首个响应共4步：安装Ollama（约2分钟）、下载llama3.2:3b（约2 GB，2-5分钟）、运行并聊天，模型加载5-30秒后获得首个响应——总计不到10分钟，下载完成后完全离线运行。' },
         step1Detail: { title: '验证Ollama正在运行', content: '安装后，确认Ollama处于活动状态：', codeBlock: 'curl http://localhost:11434\n# Expected output: Ollama is running', codeLanguage: 'bash' },
-        step2: { title: '第二步：选择您的第一个模型', content: '根据可用RAM选择模型。拿不准时，从`llama3.2:3b`开始——它可在4 GB RAM的任何机器上运行并产生有用输出：', rows: [{ '您的RAM': '4 GB', '推荐模型': 'llama3.2:1b', '下载大小': '约1.3 GB', '原因': '最小可用的Llama模型' }, { '您的RAM': '8 GB', '推荐模型': 'Llama 3.2 3B', '下载大小': '约2 GB', '原因': '初学者最佳质量/大小比' }, { '您的RAM': '8-16 GB', '推荐模型': 'Llama 3.1 8B', '下载大小': '约4.7 GB', '原因': '强大的通用模型' }, { '您的RAM': '16 GB以上', '推荐模型': 'mistral:7b 或 qwen2.5:7b', '下载大小': '约4-5 GB', '原因': '有竞争力的质量，推理速度快' }], columns: ['您的RAM', '推荐模型', '下载大小', '原因'], image: '/images/run-first-local-llm-ram-model-picker-en.svg', imageCaption: '按RAM选择首个模型：4 GB选llama3.2:1b（1.3 GB）、8 GB选Llama 3.2 3B（2 GB，推荐起点）、8-16 GB选Llama 3.1 8B（4.7 GB）、16 GB以上选mistral:7b或qwen2.5:7b（4-5 GB）。' },
-        step3: { title: '第三步：下载模型', content: '使用`ollama pull`下载模型。模型保存到`~/.ollama/models`，只需下载一次：', codeBlock: 'ollama pull llama3.2\n\n# Or pull a specific size variant\nollama pull llama3.2:3b\nollama pull llama3.1:8b', codeLanguage: 'bash' },
+        step2: {
+          id: 'step-2-choose-your-first-model', title: '第二步：选择您的第一个模型', content: '根据可用RAM选择模型。拿不准时，从`llama3.2:3b`开始——它可在4 GB RAM的任何机器上运行并产生有用输出：', rows: [{ '您的RAM': '4 GB', '推荐模型': 'llama3.2:1b', '下载大小': '约1.3 GB', '原因': '最小可用的Llama模型' }, { '您的RAM': '8 GB', '推荐模型': 'Llama 3.2 3B', '下载大小': '约2 GB', '原因': '初学者最佳质量/大小比' }, { '您的RAM': '8-16 GB', '推荐模型': 'Llama 3.1 8B', '下载大小': '约4.7 GB', '原因': '强大的通用模型' }, { '您的RAM': '16 GB以上', '推荐模型': 'mistral:7b 或 qwen2.5:7b', '下载大小': '约4-5 GB', '原因': '有竞争力的质量，推理速度快' }], columns: ['您的RAM', '推荐模型', '下载大小', '原因'], image: '/images/run-first-local-llm-ram-model-picker-en.svg', imageCaption: '按RAM选择首个模型：4 GB选llama3.2:1b（1.3 GB）、8 GB选Llama 3.2 3B（2 GB，推荐起点）、8-16 GB选Llama 3.1 8B（4.7 GB）、16 GB以上选mistral:7b或qwen2.5:7b（4-5 GB）。' },
+        step3: {
+          id: 'step-3-pull-the-model', title: '第三步：下载模型', content: '使用`ollama pull`下载模型。模型保存到`~/.ollama/models`，只需下载一次：', codeBlock: 'ollama pull llama3.2\n\n# Or pull a specific size variant\nollama pull llama3.2:3b\nollama pull llama3.1:8b', codeLanguage: 'bash' },
         step3Progress: { title: '下载过程展示', content: 'Ollama在终端显示下载进度。`llama3.2:3b`模型在典型宽带连接上需要2-5分钟。模型以压缩形式存储——2 GB的下载在磁盘上展开为约2.3 GB。', codeBlock: 'pulling manifest\npulling 966de95ca8dc... 100% ▕████████████████▏ 1.9 GB\npulling 9f436a92eb8b... 100% ▕████████████████▏   42 B\nverifying sha256 digest\nwriting manifest\nsuccess', codeLanguage: 'text' },
         step4: { id: 'step-4-run-and-chat', title: '第四步：运行模型并发送第一个提示词', content: '启动交互式聊天会话：', codeBlock: 'ollama run llama3.2\n\n# Ollama loads the model and shows a prompt:\n>>> Send a message (/? for help)', codeLanguage: 'bash' },
         step4Chat: { title: '您的第一次对话', content: '输入消息并按Enter键。模型逐个令牌流式输出响应：', codeBlock: '>>> What are local LLMs?\n\nLocal LLMs (large language models) are AI models that run entirely\non your own hardware -- your laptop, desktop, or server. Unlike cloud\nservices such as ChatGPT or Claude, local LLMs process everything\nlocally with no data sent to external servers...', codeLanguage: 'text' },
@@ -1670,6 +1688,7 @@ schema: {
           ],
         },
         step1: {
+          id: 'step-1-install-ollama',
           title: 'Passo 1: Instalar o Ollama',
           content: 'O Ollama é a forma mais rápida de rodar um LLM local. Instale-o com um comando ou um download de 2 minutos:',
           codeBlock: '# macOS (Homebrew)\nbrew install ollama\n\n# Linux\ncurl -fsSL https://ollama.com/install.sh | sh\n\n# Windows: download installer from ollama.com/download',
@@ -1684,6 +1703,7 @@ schema: {
           codeLanguage: 'bash',
         },
         step2: {
+          id: 'step-2-choose-your-first-model',
           title: 'Passo 2: Escolher seu primeiro modelo',
           content: 'Escolha um modelo conforme a RAM disponível. Na dúvida, comece com `llama3.2:3b` — funciona em qualquer máquina com 4 GB de RAM e produz resultados úteis:',
           rows: [
@@ -1697,6 +1717,7 @@ schema: {
           imageCaption: 'Escolha do primeiro modelo por RAM: 4 GB para llama3.2:1b (1,3 GB), 8 GB para Llama 3.2 3B (2 GB, ponto de partida recomendado), 8-16 GB para Llama 3.1 8B (4,7 GB), 16+ GB para mistral:7b ou qwen2.5:7b (4-5 GB).',
         },
         step3: {
+          id: 'step-3-pull-the-model',
           title: 'Passo 3: Baixar o modelo',
           content: 'Baixe o modelo com `ollama pull`. O modelo é salvo em `~/.ollama/models` e só precisa ser baixado uma vez:',
           codeBlock: 'ollama pull llama3.2\n\n# Or pull a specific size variant\nollama pull llama3.2:3b\nollama pull llama3.1:8b',
@@ -2081,6 +2102,7 @@ schema: {
           ],
         },
         step1: {
+          id: 'step-1-install-ollama',
           title: '1단계: Ollama 설치',
           content: 'Ollama는 로컬 LLM을 가장 빠르게 실행할 수 있는 도구입니다. 명령어 하나 또는 2분 이내의 다운로드로 설치할 수 있습니다:',
           codeBlock: '# macOS (Homebrew)\nbrew install ollama\n\n# Linux\ncurl -fsSL https://ollama.com/install.sh | sh\n\n# Windows: ollama.com/download에서 설치 파일을 다운로드하십시오',
@@ -2095,6 +2117,7 @@ schema: {
           codeLanguage: 'bash',
         },
         step2: {
+          id: 'step-2-choose-your-first-model',
           title: '2단계: 첫 모델 선택',
           content: '사용 가능한 RAM에 따라 모델을 선택하십시오. 어떤 모델을 선택해야 할지 모르겠다면 `llama3.2:3b`로 시작하십시오. RAM 4 GB 이상의 모든 기기에서 실행되며 유용한 결과를 제공합니다:',
           rows: [
@@ -2108,6 +2131,7 @@ schema: {
           imageCaption: 'RAM별 첫 모델 선택: 4GB는 llama3.2:1b(1.3GB), 8GB는 Llama 3.2 3B(2GB, 추천 시작점), 8~16GB는 Llama 3.1 8B(4.7GB), 16GB 이상은 mistral:7b 또는 qwen2.5:7b(4~5GB).',
         },
         step3: {
+          id: 'step-3-pull-the-model',
           title: '3단계: 모델 다운로드',
           content: '`ollama pull` 명령어로 모델을 다운로드하십시오. 모델은 `~/.ollama/models`에 저장되며 한 번만 다운로드하면 됩니다:',
           codeBlock: 'ollama pull llama3.2\n\n# 또는 특정 크기 변형을 다운로드\nollama pull llama3.2:3b\nollama pull llama3.1:8b',

@@ -83,6 +83,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       what_is_governance: {
+        id: 'what_is_governance',
         title: 'What Prompt Governance Is and Why It Matters',
         snippets: [
           { type: 'in-one-sentence', text: 'Prompt governance is the system of roles, review gates, and deployment rules that controls which prompts reach production and how they are monitored once live.' },
@@ -98,6 +99,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       ownership_model: {
+        id: 'ownership_model',
         title: 'Who Owns Prompts? The 3-Role Ownership Model',
         content: [
           '**Three roles cover prompt governance for most teams: Author, Reviewer, and Approver.** Each role has a distinct responsibility and a distinct veto point.',
@@ -118,6 +120,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       review_gates: {
+        id: 'review_gates',
         title: 'Review Gates Every Prompt Must Pass Before Deployment',
         content: [
           '**A prompt must pass at least three gates before production: automated quality tests, peer review, and security scan.** Each gate has a binary outcome — pass or block. No exceptions.',
@@ -138,6 +141,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       rollback: {
+        id: 'rollback',
         title: 'How to Roll Back a Failing Prompt in Production',
         content: [
           '**A prompt rollback should take under 5 minutes if version control is configured in advance.** The rollback procedure has four steps: detect (monitoring alert or user report), identify (which prompt version caused the regression), revert (point deployment config to previous version tag), and confirm (verify output quality restores).',
@@ -157,6 +161,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       audit_trail: {
+        id: 'audit_trail',
         title: 'Audit Trail: What to Log and Why',
         content: [
           '**An audit trail for prompts must capture: who changed the prompt, what changed, when, why (change rationale), and which review gates it passed.** This is the minimum required by NIST AI RMF and EU AI Act for high-risk AI systems.',
@@ -173,6 +178,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       tools: {
+        id: 'tools',
         title: 'Tools for Prompt Governance',
         content: [
           '**The minimum viable governance stack is Git + a test runner.** PromptHub, Braintrust, and Vellum each add structure on top of that baseline.',
@@ -200,6 +206,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       related_reading: {
+        id: 'related_reading',
         title: 'Related Reading',
         items: [
           { title: 'Prompt Review Workflow for Teams', url: '/prompt-engineering/prompt-review-workflow-for-teams' },
@@ -295,6 +302,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       what_is_governance: {
+        id: 'what_is_governance',
         title: 'Was Prompt-Governance ist und warum sie wichtig ist',
         snippets: [
           { type: 'in-one-sentence', text: 'Prompt-Governance ist das System aus Rollen, Review-Gates und Deployment-Regeln, das kontrolliert, welche Prompts die Produktion erreichen und wie sie nach dem Go-live überwacht werden.' },
@@ -310,6 +318,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       ownership_model: {
+        id: 'ownership_model',
         title: 'Das 3-Rollen-Eigentümermodell für Prompts',
         content: [
           '**Drei Rollen decken die Prompt-Governance für die meisten Teams ab: Autor, Reviewer und Genehmiger.** Jede Rolle hat eine eigene Verantwortung und einen eigenen Vetopunkt.',
@@ -321,6 +330,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       review_gates: {
+        id: 'review_gates',
         title: 'Review-Gates, die jeder Prompt vor dem Deployment bestehen muss',
         content: [
           '**Ein Prompt muss mindestens drei Gates bestehen: automatisierte Qualitätstests, Peer-Review und Sicherheitsscan.** Jedes Gate hat ein binäres Ergebnis — bestanden oder blockiert.',
@@ -335,6 +345,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       rollback: {
+        id: 'rollback',
         title: 'How to Roll Back a Failing Prompt in Production',
         content: [
           '**A prompt rollback should take under 5 minutes if version control is configured in advance.** The rollback procedure has four steps: detect (monitoring alert or user report), identify (which prompt version caused the regression), revert (point deployment config to previous version tag), and confirm (verify output quality restores).',
@@ -353,6 +364,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       audit_trail: {
+        id: 'audit_trail',
         title: 'Audit-Trail: Was protokolliert werden muss und warum',
         content: [
           '**Ein Audit-Trail für Prompts muss erfassen: Wer den Prompt geändert hat, was geändert wurde, wann, warum (Änderungsbegründung) und welche Review-Gates bestanden wurden.** Dies ist das Minimum, das NIST AI RMF und EU AI Act für Hochrisiko-KI-Systeme fordern.',
@@ -368,6 +380,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       tools: {
+        id: 'tools',
         title: 'Tools für Prompt-Governance',
         content: [
           '**Der minimale Governance-Stack ist Git + ein Test-Runner.** PromptHub, Braintrust und Vellum fügen jeweils Struktur über dieser Basis hinzu.',
@@ -394,6 +407,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       related_reading: {
+        id: 'related_reading',
         title: 'Weiterführende Artikel',
         items: [
           { title: 'Prompt Review Workflow for Teams', url: '/prompt-engineering/prompt-review-workflow-for-teams' },
@@ -404,6 +418,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       sources: {
+        id: 'sources',
         title: 'Quellen',
         items: [
           { title: 'NIST AI Risk Management Framework (AI RMF 1.0)', url: 'https://www.nist.gov/system/files/documents/2023/01/26/AI%20RMF%201.0.pdf' },
@@ -490,6 +505,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       what_is_governance: {
+        id: 'what_is_governance',
         title: 'Qué es la governance de prompts y por qué importa',
         snippets: [
           { type: 'in-one-sentence', text: 'La governance de prompts es el sistema de roles, gates de revisión y reglas de despliegue que controla qué prompts llegan a producción y cómo se monitorizan una vez en vivo.' },
@@ -505,6 +521,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       ownership_model: {
+        id: 'ownership_model',
         title: '¿Quién posee los prompts? El modelo de propiedad con 3 roles',
         content: [
           '**Tres roles cubren la governance de prompts para la mayoría de los equipos: Autor, Revisor y Aprobador.** Cada rol tiene una responsabilidad distinta y un punto de veto distinto.',
@@ -525,6 +542,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       review_gates: {
+        id: 'review_gates',
         title: 'Gates de revisión que todo prompt debe superar antes del despliegue',
         content: [
           '**Un prompt debe superar al menos tres gates antes de producción: pruebas de calidad automatizadas, revisión por pares y escaneo de seguridad.** Cada gate tiene un resultado binario — pasar o bloquear. Sin excepciones.',
@@ -545,6 +563,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       rollback: {
+        id: 'rollback',
         title: 'Cómo revertir un prompt fallido en producción',
         content: [
           '**Un rollback de prompt debería tardar menos de 5 minutos si el control de versiones está configurado de antemano.** El procedimiento de rollback tiene cuatro pasos: detectar (alerta de monitorización o reporte de usuario), identificar (qué versión del prompt causó la regresión), revertir (apuntar la config de despliegue a la etiqueta de versión anterior) y confirmar (verificar que la calidad de salida se restaura).',
@@ -564,6 +583,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       audit_trail: {
+        id: 'audit_trail',
         title: 'Traza de auditoría: qué registrar y por qué',
         content: [
           '**Una traza de auditoría para prompts debe capturar: quién cambió el prompt, qué cambió, cuándo, por qué (justificación del cambio) y qué gates de revisión superó.** Este es el mínimo requerido por NIST AI RMF y el EU AI Act para sistemas de IA de alto riesgo.',
@@ -580,6 +600,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       tools: {
+        id: 'tools',
         title: 'Herramientas para la governance de prompts',
         content: [
           '**El stack mínimo viable de governance es Git + un test runner.** PromptHub, Braintrust y Vellum añaden estructura sobre esa base.',
@@ -607,6 +628,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       related_reading: {
+        id: 'related_reading',
         title: 'Lectura relacionada',
         items: [
           { title: 'Flujo de revisión de prompts para equipos', url: '/es/prompt-engineering/prompt-review-workflow-for-teams' },
@@ -617,6 +639,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       sources: {
+        id: 'sources',
         title: 'Fuentes',
         items: [
           { title: 'NIST AI Risk Management Framework (AI RMF 1.0)', url: 'https://www.nist.gov/system/files/documents/2023/01/26/AI%20RMF%201.0.pdf' },
@@ -701,6 +724,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       what_is_governance: {
+        id: 'what_is_governance',
         title: 'O que é governance de prompts e por que importa',
         snippets: [
           { type: 'in-one-sentence', text: 'A governance de prompts é o sistema de papéis, gates de revisão e regras de implantação que controla quais prompts chegam à produção e como são monitorados uma vez em produção.' },
@@ -716,6 +740,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       ownership_model: {
+        id: 'ownership_model',
         title: 'Quem possui os prompts? O modelo de propriedade com 3 papéis',
         content: [
           '**Três papéis cobrem a governance de prompts para a maioria das equipes: Autor, Revisor e Aprovador.** Cada papel tem uma responsabilidade distinta e um ponto de veto distinto.',
@@ -736,6 +761,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       review_gates: {
+        id: 'review_gates',
         title: 'Gates de revisão que todo prompt deve passar antes da implantação',
         content: [
           '**Um prompt deve passar por pelo menos três gates antes da produção: testes de qualidade automatizados, revisão por pares e varredura de segurança.** Cada gate tem um resultado binário — passar ou bloquear. Sem exceções.',
@@ -756,6 +782,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       rollback: {
+        id: 'rollback',
         title: 'Como reverter um prompt com falha em produção',
         content: [
           '**Um rollback de prompt deve levar menos de 5 minutos se o controle de versões estiver configurado antecipadamente.** O procedimento de rollback tem quatro etapas: detectar (alerta de monitoramento ou relato do usuário), identificar (qual versão do prompt causou a regressão), reverter (apontar a configuração de implantação para a etiqueta de versão anterior) e confirmar (verificar que a qualidade da saída é restaurada).',
@@ -775,6 +802,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       audit_trail: {
+        id: 'audit_trail',
         title: 'Trilha de auditoria: o que registrar e por quê',
         content: [
           '**Uma trilha de auditoria para prompts deve capturar: quem alterou o prompt, o que foi alterado, quando, por quê (justificativa da alteração) e quais gates de revisão foram aprovados.** Este é o mínimo exigido pelo NIST AI RMF, pela LGPD/ANPD e pelo EU AI Act para sistemas de IA de alto risco.',
@@ -791,6 +819,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       tools: {
+        id: 'tools',
         title: 'Ferramentas para governance de prompts',
         content: [
           '**O stack mínimo viável de governance é Git + um test runner.** PromptHub, Braintrust e Vellum adicionam estrutura sobre essa base.',
@@ -818,6 +847,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       related_reading: {
+        id: 'related_reading',
         title: 'Leitura relacionada',
         items: [
           { title: 'Fluxo de revisão de prompts para equipes', url: '/pt/prompt-engineering/prompt-review-workflow-for-teams' },
@@ -828,6 +858,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       sources: {
+        id: 'sources',
         title: 'Fontes',
         items: [
           { title: 'NIST AI Risk Management Framework (AI RMF 1.0)', url: 'https://www.nist.gov/system/files/documents/2023/01/26/AI%20RMF%201.0.pdf' },
@@ -914,6 +945,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       what_is_governance: {
+        id: 'what_is_governance',
         title: 'Ce qu\'est la gouvernance des prompts et pourquoi elle compte',
         snippets: [
           { type: 'in-one-sentence', text: 'La gouvernance des prompts est le système de rôles, de gates de révision et de règles de déploiement qui contrôle quels prompts atteignent la production et comment ils sont surveillés.' },
@@ -929,6 +961,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       ownership_model: {
+        id: 'ownership_model',
         title: 'Qui est propriétaire des prompts ? Le modèle à 3 rôles',
         content: [
           '**Trois rôles couvrent la gouvernance des prompts pour la plupart des équipes : Auteur, Réviseur et Approbateur.**',
@@ -940,6 +973,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       review_gates: {
+        id: 'review_gates',
         title: 'Gates de révision que chaque prompt doit passer avant le déploiement',
         content: [
           '**Un prompt doit passer au moins trois gates : tests qualité automatisés, revue par les pairs et scan de sécurité.** Chaque gate a un résultat binaire — passage ou blocage.',
@@ -954,6 +988,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       rollback: {
+        id: 'rollback',
         title: 'Comment annuler un prompt défaillant en production',
         content: [
           '**Un rollback de prompt devrait prendre moins de 5 minutes si le contrôle de version est configuré à l\'avance.**',
@@ -972,6 +1007,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       audit_trail: {
+        id: 'audit_trail',
         title: 'Piste d\'audit : que journaliser et pourquoi',
         content: [
           '**Une piste d\'audit pour les prompts doit capturer : qui a modifié le prompt, ce qui a changé, quand, pourquoi (justification du changement), et quels gates de révision ont été passés.**',
@@ -987,6 +1023,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       tools: {
+        id: 'tools',
         title: 'Outils de gouvernance des prompts',
         content: [
           '**Le stack de gouvernance minimal est Git + un test runner.**',
@@ -1013,6 +1050,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       related_reading: {
+        id: 'related_reading',
         title: 'Lectures complémentaires',
         items: [
           { title: 'Prompt Review Workflow for Teams', url: '/prompt-engineering/prompt-review-workflow-for-teams' },
@@ -1108,6 +1146,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       what_is_governance: {
+        id: 'what_is_governance',
         title: 'Promptガバナンスとは何か・なぜ重要か',
         snippets: [
           { type: 'in-one-sentence', text: 'Promptガバナンスは、どのPromptが本番環境に到達し、稼働後どのように監視されるかを制御する役割・レビューゲート・デプロイルールのシステムです。' },
@@ -1123,6 +1162,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       ownership_model: {
+        id: 'ownership_model',
         title: 'Promptを誰が所有するか？3役割所有モデル',
         content: [
           '**3つの役割がほとんどのチームのPromptガバナンスをカバーします：作成者（Author）、レビュアー（Reviewer）、承認者（Approver）。**',
@@ -1134,6 +1174,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       review_gates: {
+        id: 'review_gates',
         title: 'デプロイ前にすべてのPromptが通過すべきレビューゲート',
         content: [
           '**Promptは最低3つのゲートを通過する必要があります：自動品質テスト、ピアレビュー、セキュリティスキャン。** 各ゲートの結果は二値（合格または不合格）です。例外なし。',
@@ -1148,6 +1189,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       rollback: {
+        id: 'rollback',
         title: '本番環境で失敗したPromptのロールバック方法',
         content: [
           '**バージョン管理が事前に設定されていれば、Promptのロールバックは5分未満で完了します。** ロールバック手順は4ステップ：検出（監視アラートまたはユーザーレポート）、特定（どのPromptバージョンが回帰を引き起こしたか）、リバート（デプロイ設定を前のバージョンタグに向ける）、確認（出力品質が回復することを確認）。',
@@ -1166,6 +1208,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       audit_trail: {
+        id: 'audit_trail',
         title: '監査証跡：何をログに記録するか・なぜか',
         content: [
           '**Promptの監査証跡には、誰がPromptを変更したか、何が変更されたか、いつ、なぜ（変更理由）、どのレビューゲートに合格したかを記録する必要があります。** これはNIST AI RMFとEU AI Actが高リスクAIシステムに要求する最低限です。',
@@ -1181,6 +1224,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       tools: {
+        id: 'tools',
         title: 'Promptガバナンスのツール',
         content: [
           '**最小限のガバナンススタックはGit + テストランナーです。** PromptHub、Braintrust、Vellumはそのベースラインの上に構造を追加します。',
@@ -1207,6 +1251,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       related_reading: {
+        id: 'related_reading',
         title: '関連記事',
         items: [
           { title: 'Prompt Review Workflow for Teams', url: '/prompt-engineering/prompt-review-workflow-for-teams' },
@@ -1217,6 +1262,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       sources: {
+        id: 'sources',
         title: '情報源',
         items: [
           { title: 'NIST AI Risk Management Framework (AI RMF 1.0)', url: 'https://www.nist.gov/system/files/documents/2023/01/26/AI%20RMF%201.0.pdf' },
@@ -1303,6 +1349,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       what_is_governance: {
+        id: 'what_is_governance',
         title: 'ما هي حوكمة التعليمات ولماذا تهم',
         snippets: [
           { type: 'in-one-sentence', text: 'حوكمة التعليمات هي منظومة الأدوار وبوابات المراجعة وقواعد النشر التي تتحكم في أي التعليمات تصل إلى الإنتاج وكيفية مراقبتها بعد التشغيل المباشر.' },
@@ -1318,6 +1365,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       ownership_model: {
+        id: 'ownership_model',
         title: 'من يملك التعليمات؟ نموذج الملكية بثلاثة أدوار',
         content: [
           '**ثلاثة أدوار تغطي حوكمة التعليمات لمعظم الفرق: المؤلف، والمراجع، والمعتمِد.** لكل دور مسؤولية مميزة ونقطة حق نقض مميزة.',
@@ -1338,6 +1386,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       review_gates: {
+        id: 'review_gates',
         title: 'بوابات المراجعة التي يجب على كل تعليمة اجتيازها قبل النشر',
         content: [
           '**يجب على التعليمة اجتياز ثلاث بوابات على الأقل قبل الإنتاج: اختبارات جودة آلية، ومراجعة الأقران، وفحص الأمان.** كل بوابة نتيجتها ثنائية — نجاح أو حجب. بلا استثناءات.',
@@ -1358,6 +1407,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       rollback: {
+        id: 'rollback',
         title: 'كيفية التراجع عن تعليمة فاشلة في الإنتاج',
         content: [
           '**التراجع عن تعليمة يجب أن يستغرق أقل من 5 دقائق إذا كان التحكم في الإصدارات مُعداً مسبقاً.** إجراء التراجع له أربع خطوات: الكشف (تنبيه المراقبة أو تقرير المستخدم)، والتحديد (أي إصدار تعليمة تسبب في الانحدار)، والعودة (توجيه إعداد النشر إلى وسم الإصدار السابق)، والتأكيد (التحقق من استعادة جودة المخرجات).',
@@ -1377,6 +1427,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       audit_trail: {
+        id: 'audit_trail',
         title: 'سجل التدقيق: ما يجب تسجيله ولماذا',
         content: [
           '**يجب أن يسجل سجل تدقيق التعليمات: من غيّر التعليمة، وماذا تغير، ومتى، ولماذا (مبرر التغيير)، وأي بوابات مراجعة اجتازها.** هذا هو الحد الأدنى المطلوب بموجب NIST AI RMF وقانون الذكاء الاصطناعي الأوروبي للأنظمة عالية المخاطر.',
@@ -1393,6 +1444,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       tools: {
+        id: 'tools',
         title: 'أدوات حوكمة التعليمات',
         content: [
           '**الحزمة الدنيا للحوكمة هي Git + مشغّل اختبارات.** PromptHub وBraintrust وVellum تضيف هيكلاً فوق تلك القاعدة.',
@@ -1420,6 +1472,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       related_reading: {
+        id: 'related_reading',
         title: 'قراءة ذات صلة',
         items: [
           { title: 'سير عمل مراجعة التعليمات للفرق', url: '/prompt-engineering/prompt-review-workflow-for-teams' },
@@ -1430,6 +1483,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       sources: {
+        id: 'sources',
         title: 'المصادر',
         items: [
           { title: 'NIST AI Risk Management Framework (AI RMF 1.0)', url: 'https://www.nist.gov/system/files/documents/2023/01/26/AI%20RMF%201.0.pdf' },
@@ -1515,6 +1569,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       what_is_governance: {
+        id: 'what_is_governance',
         title: 'Prompt治理是什么及其重要性',
         snippets: [
           { type: 'in-one-sentence', text: 'Prompt治理是控制哪些Prompt进入生产环境以及上线后如何监控的角色、审查门控和部署规则体系。' },
@@ -1530,6 +1585,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       ownership_model: {
+        id: 'ownership_model',
         title: '谁拥有Prompt？3角色所有权模型',
         content: [
           '**三个角色覆盖大多数团队的Prompt治理：作者（Author）、审查员（Reviewer）和批准人（Approver）。**',
@@ -1541,6 +1597,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       review_gates: {
+        id: 'review_gates',
         title: 'Prompt部署前必须通过的每个审查门控',
         content: [
           '**Prompt在生产前必须通过至少三个门控：自动质量测试、同行审查和安全扫描。** 每个门控有二值结果——通过或阻止。无例外。',
@@ -1555,6 +1612,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       rollback: {
+        id: 'rollback',
         title: '如何回滚生产环境中失败的Prompt',
         content: [
           '**如果版本控制提前配置好，Prompt回滚应该在5分钟内完成。** 回滚程序有四个步骤：检测（监控警报或用户报告）、识别（哪个Prompt版本导致了回归）、还原（将部署配置指向之前的版本标签）和确认（验证输出质量恢复）。',
@@ -1573,6 +1631,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       audit_trail: {
+        id: 'audit_trail',
         title: '审计记录：需要记录什么及为何记录',
         content: [
           '**Prompt的审计记录必须包含：谁修改了Prompt、修改了什么、何时、为何（变更理由），以及通过了哪些审查门控。** 这是NIST AI RMF和EU AI Act对高风险AI系统的最低要求。',
@@ -1588,6 +1647,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       tools: {
+        id: 'tools',
         title: 'Prompt治理工具',
         content: [
           '**最小可行治理栈是Git + 测试运行器。** PromptHub、Braintrust和Vellum在该基础上各自添加了结构。',
@@ -1615,6 +1675,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       related_reading: {
+        id: 'related_reading',
         title: '相关阅读',
         items: [
           { title: 'Prompt Review Workflow for Teams', url: '/prompt-engineering/prompt-review-workflow-for-teams' },
@@ -1625,6 +1686,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       sources: {
+        id: 'sources',
         title: '参考来源',
         items: [
           { title: 'NIST AI Risk Management Framework (AI RMF 1.0)', url: 'https://www.nist.gov/system/files/documents/2023/01/26/AI%20RMF%201.0.pdf' },
@@ -1710,6 +1772,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       what_is_governance: {
+        id: 'what_is_governance',
         title: '프롬프트 거버넌스란 무엇이며 왜 중요한가',
         snippets: [
           { type: 'in-one-sentence', text: '프롬프트 거버넌스는 어떤 프롬프트가 프로덕션에 도달하는지, 라이브 상태에서 어떻게 모니터링되는지를 제어하는 역할·검토 게이트·배포 규칙의 체계입니다.' },
@@ -1725,6 +1788,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       ownership_model: {
+        id: 'ownership_model',
         title: '프롬프트 소유자는 누구인가? 3역할 소유 모델',
         content: [
           '**3개 역할이 대부분 팀의 프롬프트 거버넌스를 담당합니다: 작성자(Author), 검토자(Reviewer), 승인자(Approver).** 각 역할은 고유한 책임과 거부권 지점을 갖습니다.',
@@ -1745,6 +1809,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       review_gates: {
+        id: 'review_gates',
         title: '모든 프롬프트가 배포 전 통과해야 하는 검토 게이트',
         content: [
           '**프롬프트는 프로덕션 전 최소 3개 게이트를 통과해야 합니다: 자동화 품질 테스트, 동료 검토, 보안 스캔.** 각 게이트는 이진 결과를 갖습니다 — 통과 또는 차단. 예외 없습니다.',
@@ -1765,6 +1830,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       rollback: {
+        id: 'rollback',
         title: '프로덕션에서 실패한 프롬프트 롤백 방법',
         content: [
           '**버전 관리가 사전에 구성되어 있으면 프롬프트 롤백은 5분 이내에 완료되어야 합니다.** 롤백 절차는 4단계입니다: 감지(모니터링 경보 또는 사용자 보고), 식별(어떤 프롬프트 버전이 회귀를 일으켰는지), 복구(배포 구성을 이전 버전 태그로 지정), 확인(출력 품질이 회복되었는지 검증).',
@@ -1784,6 +1850,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       audit_trail: {
+        id: 'audit_trail',
         title: '감사 추적: 기록할 내용과 이유',
         content: [
           '**프롬프트의 감사 추적은 반드시 기록해야 합니다: 누가 프롬프트를 변경했는지, 무엇이 변경되었는지, 언제, 왜(변경 근거), 어떤 검토 게이트를 통과했는지.** 이것이 고위험 AI 시스템에 대해 NIST AI RMF와 EU AI Act가 요구하는 최소 요건입니다.',
@@ -1800,6 +1867,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       tools: {
+        id: 'tools',
         title: '프롬프트 거버넌스 도구',
         content: [
           '**최소 실행 가능 거버넌스 스택은 Git + 테스트 러너입니다.** PromptHub, Braintrust, Vellum은 각각 그 기반 위에 구조를 추가합니다.',
@@ -1827,6 +1895,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       related_reading: {
+        id: 'related_reading',
         title: '관련 읽기',
         items: [
           { title: '팀을 위한 프롬프트 검토 워크플로', url: '/ko/prompt-engineering/prompt-review-workflow-for-teams' },
@@ -1837,6 +1906,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       sources: {
+        id: 'sources',
         title: '출처',
         items: [
           { title: 'NIST AI Risk Management Framework (AI RMF 1.0)', url: 'https://www.nist.gov/system/files/documents/2023/01/26/AI%20RMF%201.0.pdf' },

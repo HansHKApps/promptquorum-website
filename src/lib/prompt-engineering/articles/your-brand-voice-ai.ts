@@ -131,6 +131,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         definition: {
+          id: 'definition',
           title: 'What Is Brand Voice AI?',
           content: [
             '**Brand voice AI is a conditioning layer, not a new model.** It is a layer on top of general AI models that learns your specific tone, style, and vocabulary from examples, then applies those rules to every piece of content it generates or reviews.',
@@ -144,6 +145,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         toolProcess: {
+          id: 'tool-process',
           title: 'How Do Brand Voice AI Tools Learn Your Tone?',
           content: [
             '**Most tools learn your voice in three steps: ingest, analyse, apply.** Most brand voice AI tools learn your voice in three steps: ingest examples, analyse patterns, and generate a reusable voice profile you can apply on demand.',
@@ -180,6 +182,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         applications: {
+          id: 'applications',
           title: 'Where Does Brand Voice AI Fit in Your Workflow?',
           content: [
             '**Brand voice AI is most valuable in three places: first drafts, cross-channel consistency, and voice QA.** Brand voice AI is most valuable in three places: first drafts, cross-channel consistency, and quality assurance of existing content.',
@@ -201,6 +204,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         promptStructure: {
+          id: 'prompt-structure',
           title: 'How Do You Train AI to Speak in Your Brand Voice?',
           content: [
             '**Training brand voice AI comes down to three inputs: clear voice rules, strong examples, and explicit "never use" lists.** Training brand voice AI comes down to giving it clear voice rules, strong examples, and explicit instructions about what to avoid.',
@@ -219,6 +223,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         brandVoiceExample: {
+          id: 'brand-voice-example',
           title: 'What Does a Brand Voice Guidelines Template Look Like?',
           content: [
             'A typical "brand voice" instruction you might store and reuse with your AI looks like this (adapted from real-world examples):',
@@ -233,6 +238,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         guardrails: {
+          id: 'guardrails',
           title: 'How Do You Prevent AI from Diluting Your Brand Voice?',
           content: [
             '**Without guardrails, brand voice AI slowly drifts into generic marketing language.** You prevent this by combining training data, hard "do/don\'t" lists, and AI-based QA on top of the AI that generates content.',
@@ -257,6 +263,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         howToStart: {
+          id: 'how-to-start',
           title: 'How Do You Start Training AI With Your Brand Voice?',
           numberedItems: [
             '**Define 3–5 voice pillars as simple adjectives describing your brand tone.** Examples: \'clear, helpful, confident, approachable\' or \'technical, authoritative, accessible.\' These become your reference whenever you brief AI. Write them down and share with your team.',
@@ -2761,6 +2768,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         definition: {
+          id: 'definition',
           title: '브랜드 보이스 AI란 무엇입니까?',
           content: [
             '**브랜드 보이스 AI는 새로운 모델이 아닌 조건화 레이어입니다.** 이것은 범용 AI 모델 위의 레이어로, 예시에서 귀사의 특정 톤, 스타일, 어휘를 학습한 다음 생성하거나 검토하는 모든 콘텐츠에 해당 규칙을 적용합니다.',
@@ -2774,6 +2782,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         toolProcess: {
+          id: 'tool-process',
           title: '브랜드 보이스 AI 도구는 어떻게 귀사의 톤을 학습합니까?',
           content: [
             '**대부분의 도구는 세 단계로 귀사의 보이스를 학습합니다: 수집, 분석, 적용.** 대부분의 브랜드 보이스 AI 도구는 세 단계로 귀사의 보이스를 학습합니다. 예시를 수집하고, 패턴을 분석하고, 필요에 따라 적용할 수 있는 재사용 가능한 보이스 프로필을 생성합니다.',
@@ -2810,6 +2819,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         applications: {
+          id: 'applications',
           title: '브랜드 보이스 AI는 워크플로에서 어디에 적합합니까?',
           content: [
             '**브랜드 보이스 AI는 세 가지 곳에서 가장 가치 있습니다: 초안 작성, 채널 간 일관성, 보이스 QA.** 브랜드 보이스 AI는 세 가지 곳에서 가장 가치 있습니다. 초안 작성, 채널 간 일관성, 기존 콘텐츠 품질 보증입니다.',
@@ -2831,6 +2841,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         promptStructure: {
+          id: 'prompt-structure',
           title: 'AI가 브랜드 보이스로 말하도록 어떻게 훈련합니까?',
           content: [
             '**브랜드 보이스 AI 훈련은 세 가지 입력으로 귀결됩니다: 명확한 보이스 규칙, 강력한 예시, 명시적인 "절대 사용하지 말 것" 목록.** 브랜드 보이스 AI 훈련은 명확한 보이스 규칙, 강력한 예시, 피해야 할 것에 대한 명시적인 지침을 제공하는 것입니다.',
@@ -2849,6 +2860,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         brandVoiceExample: {
+          id: 'brand-voice-example',
           title: '브랜드 보이스 가이드라인 템플릿은 어떻게 생겼습니까?',
           content: [
             'AI와 함께 저장하고 재사용할 수 있는 일반적인 "브랜드 보이스" 지침은 다음과 같습니다(실제 사례에서 적용):',
@@ -2863,6 +2875,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         guardrails: {
+          id: 'guardrails',
           title: 'AI가 브랜드 보이스를 희석시키는 것을 어떻게 방지합니까?',
           content: [
             '**가드레일 없이는 브랜드 보이스 AI가 서서히 일반적인 마케팅 언어로 변질됩니다.** 훈련 데이터, 엄격한 "해야 할 것/하지 말아야 할 것" 목록, 그리고 콘텐츠를 생성하는 AI 위에서 AI 기반 QA를 결합하여 이를 방지합니다.',
@@ -2887,6 +2900,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         howToStart: {
+          id: 'how-to-start',
           title: '브랜드 보이스로 AI 훈련을 어떻게 시작합니까?',
           numberedItems: [
             '**브랜드 톤을 설명하는 간단한 형용사로 보이스 필러 3~5개를 정의하십시오.** 예: \'명확한, 도움이 되는, 자신감 있는, 친근한\' 또는 \'기술적인, 권위 있는, 접근하기 쉬운.\' 이것이 AI에게 브리핑할 때마다 참고 기준이 됩니다. 기록하고 팀과 공유하십시오.',
@@ -2953,6 +2967,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         relatedReading: {
+          id: 'related-reading',
           title: '관련 읽을거리',
           items: [
             '[페르소나 프롬프팅: AI에게 목소리와 개성 부여하기](/prompt-engineering/persona-prompting) — 일관된 캐릭터와 톤을 위한 직접 관련 기법',
@@ -2965,6 +2980,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         sources: {
+          id: 'sources',
           title: '출처',
           items: [
             '[Jasper Brand Voice 문서](https://www.jasper.ai/features/brand-voice) — 보이스 프로필 생성 및 적용 기능 개요',

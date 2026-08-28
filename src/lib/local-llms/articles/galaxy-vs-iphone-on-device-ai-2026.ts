@@ -528,6 +528,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ]
       },
       relatedReading: {
+        id: 'related-reading',
         title: '관련 자료',
         items: [
           'Apple WWDC 2026 공지 — AFM 3 아키텍처 및 PCC 개요',
@@ -697,6 +698,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ]
       },
       relatedReading: {
+        id: 'related-reading',
         title: 'Lecturas relacionadas',
         items: [
           'Anuncio Apple WWDC 2026 — descripción general de arquitectura AFM 3 y PCC',

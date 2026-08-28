@@ -73,6 +73,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: 'A workflow is a prompt with a trigger, output routing, and error handling — not just a prompt run automatically. Automate when frequency exceeds 5 runs per week, inputs are structured, and output always routes to the same next step. Four production templates cover the most common use cases: document processing, research pipeline, code review, and customer triage.',
       },
       prompt_vs_workflow: {
+        id: 'prompt_vs_workflow',
         title: 'The Difference Between a Prompt and a Workflow',
         snippets: [
           { type: 'in-one-sentence', text: 'A workflow is a prompt that runs automatically when a trigger fires and routes its output to a defined next step without human intervention.' },
@@ -88,6 +89,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       triggering: {
+        id: 'triggering',
         title: 'Triggering Conditions and State Management',
         content: [
           '**Three trigger types cover almost all production prompt workflows: event-based, schedule-based, and threshold-based.** Choosing the wrong trigger type is one of the main reasons workflows run too often, not often enough, or on stale data.',
@@ -99,6 +101,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       four_templates: {
+        id: 'four_templates',
         title: '4 Workflow Templates for Production Teams',
         content: [
           '**Four templates cover the most common production use cases: document processing, research pipeline, code review, and customer triage.** Each template defines the trigger, the prompt chain, the output routing, and the recommended tools.',
@@ -111,6 +114,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       tools: {
+        id: 'tools',
         title: 'Tools for Building Prompt Workflows',
         content: [
           '**The right tool depends on whether your team prefers visual automation, code-first pipelines, or multi-model dispatch.** Use one primary tool and add PromptQuorum for model-layer decisions.',
@@ -122,6 +126,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       when_to_automate: {
+        id: 'when_to_automate',
         title: 'When to Automate vs. Stay Manual',
         content: [
           '**Automate a prompt workflow when: frequency exceeds 5 runs per week, inputs are structured and predictable, and output routes to a defined next step every time.** All three conditions must be true for automation to pay off.',
@@ -130,6 +135,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       common_mistakes: {
+        id: 'common_mistakes',
         title: 'Common Mistakes When Building Prompt Workflows',
         mistakes: [
           { mistake: 'Building workflows before validating the prompt', problem: 'If the underlying prompt fails, the workflow amplifies the failure at scale', fix: 'Test and validate the core prompt against 10+ real examples before wiring it into a workflow' },
@@ -161,6 +167,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       related_reading: {
+        id: 'related_reading',
         title: 'Related Reading',
         items: [
           { title: 'Prompt Chaining: Multi-Step Prompting', url: '/prompt-engineering/prompt-chaining' },
@@ -246,6 +253,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: 'Ein Workflow ist ein Prompt mit einem Auslöser, Output-Routing und Fehlerbehandlung — nicht nur ein automatisch ausgeführter Prompt. Automatisieren Sie bei mehr als 5 Ausführungen pro Woche mit strukturierten Eingaben. Vier Produktionsvorlagen decken die häufigsten Anwendungsfälle ab.',
       },
       prompt_vs_workflow: {
+        id: 'prompt_vs_workflow',
         title: 'Der Unterschied zwischen einem Prompt und einem Workflow',
         snippets: [
           { type: 'in-one-sentence', text: 'Ein Workflow ist ein Prompt, der automatisch ausgeführt wird, wenn ein Auslöser feuert, und seine Ausgabe an einen definierten nächsten Schritt weiterleitet.' },
@@ -261,6 +269,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       triggering: {
+        id: 'triggering',
         title: 'Auslösebedingungen und State Management',
         content: [
           '**Drei Auslöser-Typen decken fast alle Produktions-Prompt-Workflows ab: ereignisbasiert, zeitplanbasiert und schwellenwertbasiert.** Die Wahl des falschen Auslöser-Typs ist einer der häufigsten Gründe, warum Workflows zu oft, zu selten oder mit veralteten Daten ausgeführt werden.',
@@ -272,6 +281,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       four_templates: {
+        id: 'four_templates',
         title: '4 Workflow-Vorlagen für Produktionsteams',
         content: [
           '**Vier Vorlagen decken die häufigsten Produktionsanwendungsfälle ab: Dokumentenverarbeitung, Recherche-Pipeline, Code-Review und Kundentriage.**',
@@ -284,6 +294,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       tools: {
+        id: 'tools',
         title: 'Tools für die Erstellung von Prompt-Workflows',
         content: [
           '**Das richtige Tool hängt davon ab, ob Ihr Team visuelle Automatisierung, codebasierte Pipelines oder Multi-Modell-Dispatch bevorzugt.**',
@@ -295,6 +306,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       when_to_automate: {
+        id: 'when_to_automate',
         title: 'Wann automatisieren, wann manuell bleiben?',
         content: [
           '**Automatisieren Sie einen Prompt-Workflow, wenn: die Häufigkeit 5 Ausführungen pro Woche überschreitet, Eingaben strukturiert und vorhersehbar sind und die Ausgabe jedes Mal an einen definierten nächsten Schritt weitergeleitet wird.** Alle drei Bedingungen müssen erfüllt sein.',
@@ -303,6 +315,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       common_mistakes: {
+        id: 'common_mistakes',
         title: 'Häufige Fehler beim Aufbau von Prompt-Workflows',
         mistakes: [
           { mistake: 'Workflow vor der Validierung des Prompts aufbauen', problem: 'Wenn der zugrunde liegende Prompt fehlschlägt, verstärkt der Workflow den Fehler im großen Maßstab', fix: 'Testen und validieren Sie den Kern-Prompt an 10+ realen Beispielen, bevor Sie ihn in einen Workflow integrieren' },
@@ -332,6 +345,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       related_reading: {
+        id: 'related_reading',
         title: 'Weiterführende Lektüre',
         items: [
           { title: 'Prompt Chaining: Multi-Step Prompting', url: '/prompt-engineering/prompt-chaining' },
@@ -342,6 +356,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       sources: {
+        id: 'sources',
         title: 'Quellen',
         items: [
           { title: 'n8n Documentation', url: 'https://docs.n8n.io' },
@@ -417,6 +432,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: 'Un flujo de trabajo es un prompt con un activador, enrutamiento de salida y manejo de errores — no solo un prompt ejecutado automáticamente. Automatiza cuando la frecuencia supera 5 ejecuciones por semana con entradas estructuradas. Cuatro plantillas de producción cubren los casos de uso más comunes.',
       },
       prompt_vs_workflow: {
+        id: 'prompt_vs_workflow',
         title: 'La diferencia entre un prompt y un flujo de trabajo',
         snippets: [
           { type: 'in-one-sentence', text: 'Un flujo de trabajo es un prompt que se ejecuta automáticamente cuando un activador se dispara y enruta su salida a un siguiente paso definido sin intervención humana.' },
@@ -432,6 +448,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       triggering: {
+        id: 'triggering',
         title: 'Condiciones de activación y gestión de estado',
         content: [
           '**Tres tipos de activadores cubren casi todos los flujos de trabajo de prompts de producción: basado en eventos, basado en programación y basado en umbrales.** Elegir el tipo de activador equivocado es una de las principales razones por las que los flujos de trabajo se ejecutan demasiado a menudo, no suficientemente o con datos obsoletos.',
@@ -443,6 +460,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       four_templates: {
+        id: 'four_templates',
         title: '4 plantillas de flujos de trabajo para equipos de producción',
         content: [
           '**Cuatro plantillas cubren los casos de uso de producción más comunes: procesamiento de documentos, pipeline de investigación, revisión de código y triage de clientes.**',
@@ -455,6 +473,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       tools: {
+        id: 'tools',
         title: 'Herramientas para construir flujos de trabajo de prompts',
         content: [
           '**La herramienta correcta depende de si tu equipo prefiere automatización visual, pipelines de código primero o despacho multi-modelo.**',
@@ -466,6 +485,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       when_to_automate: {
+        id: 'when_to_automate',
         title: 'Cuándo automatizar vs mantener manual',
         content: [
           '**Automatiza un flujo de trabajo de prompts cuando: la frecuencia supera 5 ejecuciones por semana, las entradas son estructuradas y predecibles, y la salida se enruta a un siguiente paso definido cada vez.** Las tres condiciones deben ser verdaderas para que la automatización sea rentable.',
@@ -474,6 +494,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       common_mistakes: {
+        id: 'common_mistakes',
         title: 'Errores comunes al construir flujos de trabajo de prompts',
         mistakes: [
           { mistake: 'Construir flujos de trabajo antes de validar el prompt', problem: 'Si el prompt subyacente falla, el flujo de trabajo amplifica el fallo a escala', fix: 'Prueba y valida el prompt principal en 10+ ejemplos reales antes de conectarlo a un flujo de trabajo' },
@@ -503,6 +524,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       related_reading: {
+        id: 'related_reading',
         title: 'Lecturas relacionadas',
         items: [
           { title: 'Encadenamiento de prompts: prompting multi-paso', url: '/prompt-engineering/prompt-chaining' },
@@ -513,6 +535,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       sources: {
+        id: 'sources',
         title: 'Fuentes',
         items: [
           { title: 'n8n Documentation', url: 'https://docs.n8n.io' },
@@ -588,6 +611,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: 'سير العمل هو أمر له مشغّل وتوجيه للمخرجات ومعالجة أخطاء — وليس مجرد أمر يُشغَّل تلقائياً. أتمت عندما يتجاوز التكرار 5 مرات في الأسبوع مع مدخلات منظمة. أربعة قوالب إنتاجية تغطي أكثر حالات الاستخدام شيوعاً.',
       },
       prompt_vs_workflow: {
+        id: 'prompt_vs_workflow',
         title: 'الفرق بين الأمر وسير العمل',
         snippets: [
           { type: 'in-one-sentence', text: 'سير العمل هو أمر يعمل تلقائياً عند إطلاق مشغّل ويوجّه مخرجاته إلى خطوة تالية محددة دون تدخل بشري.' },
@@ -603,6 +627,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       triggering: {
+        id: 'triggering',
         title: 'شروط التشغيل وإدارة الحالة',
         content: [
           '**ثلاثة أنواع من المشغّلات تغطي تقريباً جميع سير العمل الإنتاجية: القائم على الأحداث والقائم على الجدول والقائم على العتبة.** اختيار النوع الخاطئ من المشغّل هو أحد الأسباب الرئيسية لتشغيل سير العمل بتكرار مفرط أو غير كافٍ أو على بيانات قديمة.',
@@ -614,6 +639,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       four_templates: {
+        id: 'four_templates',
         title: '4 قوالب لسير العمل لفرق الإنتاج',
         content: [
           '**أربعة قوالب تغطي أكثر حالات الاستخدام الإنتاجية شيوعاً: معالجة المستندات وخط أنابيب البحث ومراجعة الكود وفرز العملاء.**',
@@ -626,6 +652,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       tools: {
+        id: 'tools',
         title: 'أدوات بناء سير عمل الأوامر',
         content: [
           '**الأداة المناسبة تعتمد على ما إذا كان فريقك يفضّل الأتمتة المرئية أو خطوط الأنابيب البرمجية أو التوزيع متعدد النماذج.**',
@@ -637,6 +664,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       when_to_automate: {
+        id: 'when_to_automate',
         title: 'متى تُؤتمت مقابل البقاء يدوياً',
         content: [
           '**أتمت سير عمل الأوامر عندما: يتجاوز التكرار 5 مرات في الأسبوع، والمدخلات منظمة ومتوقعة، وتُوجَّه المخرجات إلى خطوة تالية محددة في كل مرة.** يجب أن تصح الشروط الثلاثة حتى تكون الأتمتة مجدية.',
@@ -645,6 +673,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       common_mistakes: {
+        id: 'common_mistakes',
         title: 'الأخطاء الشائعة في بناء سير عمل الأوامر',
         mistakes: [
           { mistake: 'بناء سير العمل قبل التحقق من الأمر', problem: 'إذا فشل الأمر الأساسي، يُضخّم سير العمل الإخفاق على نطاق واسع', fix: 'اختبر وتحقق من الأمر الأساسي على 10 أمثلة حقيقية أو أكثر قبل ربطه بسير العمل' },
@@ -674,6 +703,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       related_reading: {
+        id: 'related_reading',
         title: 'قراءة ذات صلة',
         items: [
           { title: 'ربط الأوامر: الإدخال متعدد الخطوات', url: '/prompt-engineering/prompt-chaining' },
@@ -684,6 +714,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       sources: {
+        id: 'sources',
         title: 'المصادر',
         items: [
           { title: 'n8n Documentation', url: 'https://docs.n8n.io' },
@@ -759,6 +790,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: 'Um fluxo de trabalho é um prompt com um acionador, roteamento de saída e tratamento de erros — não apenas um prompt executado automaticamente. Automatize quando a frequência ultrapassar 5 execuções por semana com entradas estruturadas. Quatro modelos de produção cobrem os casos de uso mais comuns.',
       },
       prompt_vs_workflow: {
+        id: 'prompt_vs_workflow',
         title: 'A diferença entre um prompt e um fluxo de trabalho',
         snippets: [
           { type: 'in-one-sentence', text: 'Um fluxo de trabalho é um prompt que é executado automaticamente quando um acionador dispara e roteia sua saída para uma etapa seguinte definida sem intervenção humana.' },
@@ -774,6 +806,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       triggering: {
+        id: 'triggering',
         title: 'Condições de acionamento e gerenciamento de estado',
         content: [
           '**Três tipos de acionadores cobrem quase todos os fluxos de trabalho de prompts em produção: baseado em eventos, baseado em agendamento e baseado em limiar.** Escolher o tipo de acionador errado é uma das principais razões pelas quais os fluxos de trabalho são executados com muita frequência, com pouca frequência ou com dados desatualizados.',
@@ -785,6 +818,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       four_templates: {
+        id: 'four_templates',
         title: '4 modelos de fluxos de trabalho para equipes de produção',
         content: [
           '**Quatro modelos cobrem os casos de uso de produção mais comuns: processamento de documentos, pipeline de pesquisa, revisão de código e triagem de clientes.**',
@@ -797,6 +831,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       tools: {
+        id: 'tools',
         title: 'Ferramentas para construir fluxos de trabalho de prompts',
         content: [
           '**A ferramenta certa depende de se sua equipe prefere automação visual, pipelines code-first ou despacho multi-modelo.**',
@@ -808,6 +843,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       when_to_automate: {
+        id: 'when_to_automate',
         title: 'Quando automatizar vs manter manual',
         content: [
           '**Automatize um fluxo de trabalho de prompts quando: a frequência ultrapassar 5 execuções por semana, as entradas forem estruturadas e previsíveis, e a saída for roteada para uma próxima etapa definida a cada vez.** As três condições devem ser verdadeiras para que a automação seja rentável.',
@@ -816,6 +852,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       common_mistakes: {
+        id: 'common_mistakes',
         title: 'Erros comuns ao construir fluxos de trabalho de prompts',
         mistakes: [
           { mistake: 'Construir fluxos de trabalho antes de validar o prompt', problem: 'Se o prompt subjacente falha, o fluxo de trabalho amplifica a falha em escala', fix: 'Teste e valide o prompt principal em 10+ exemplos reais antes de conectá-lo a um fluxo de trabalho' },
@@ -845,6 +882,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       related_reading: {
+        id: 'related_reading',
         title: 'Leituras relacionadas',
         items: [
           { title: 'Encadeamento de prompts: prompting em múltiplas etapas', url: '/pt/prompt-engineering/prompt-chaining' },
@@ -855,6 +893,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       sources: {
+        id: 'sources',
         title: 'Fontes',
         items: [
           { title: 'n8n Documentation', url: 'https://docs.n8n.io' },
@@ -930,6 +969,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: 'Un workflow est un prompt avec un déclencheur, un routage de sortie et une gestion des erreurs — pas seulement un prompt exécuté automatiquement. Automatisez quand la fréquence dépasse 5 exécutions par semaine avec des entrées structurées. Quatre modèles de production couvrent les cas d\'usage les plus courants.',
       },
       prompt_vs_workflow: {
+        id: 'prompt_vs_workflow',
         title: 'La différence entre un prompt et un workflow',
         snippets: [
           { type: 'in-one-sentence', text: 'Un workflow est un prompt qui s\'exécute automatiquement quand un déclencheur se déclenche et achemine sa sortie vers une étape suivante définie sans intervention humaine.' },
@@ -945,6 +985,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       triggering: {
+        id: 'triggering',
         title: 'Conditions de déclenchement et gestion de l\'état',
         content: [
           '**Trois types de déclencheurs couvrent presque tous les workflows de prompts en production : événementiel, planifié, et par seuil.** Choisir le mauvais type de déclencheur est l\'une des principales raisons pour lesquelles les workflows s\'exécutent trop souvent, pas assez, ou sur des données périmées.',
@@ -956,6 +997,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       four_templates: {
+        id: 'four_templates',
         title: '4 modèles de workflows pour les équipes en production',
         content: [
           '**Quatre modèles couvrent les cas d\'usage les plus courants : traitement de documents, pipeline de recherche, revue de code et triage client.**',
@@ -968,6 +1010,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       tools: {
+        id: 'tools',
         title: 'Outils pour créer des workflows de prompts',
         content: [
           '**Le bon outil dépend de si votre équipe préfère l\'automatisation visuelle, les pipelines basés sur le code, ou le dispatch multi-modèle.**',
@@ -979,6 +1022,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       when_to_automate: {
+        id: 'when_to_automate',
         title: 'Quand automatiser vs rester manuel',
         content: [
           '**Automatisez un workflow de prompts lorsque : la fréquence dépasse 5 exécutions par semaine, les entrées sont structurées et prévisibles, et la sortie est acheminée vers une étape suivante définie à chaque fois.** Les trois conditions doivent être vraies pour que l\'automatisation soit rentable.',
@@ -987,6 +1031,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       common_mistakes: {
+        id: 'common_mistakes',
         title: 'Erreurs courantes lors de la construction de workflows de prompts',
         mistakes: [
           { mistake: 'Construire des workflows avant de valider le prompt', problem: 'Si le prompt sous-jacent échoue, le workflow amplifie l\'échec à grande échelle', fix: 'Testez et validez le prompt principal sur 10+ exemples réels avant de l\'intégrer dans un workflow' },
@@ -1016,6 +1061,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       related_reading: {
+        id: 'related_reading',
         title: 'Lectures connexes',
         items: [
           { title: 'Prompt Chaining: Multi-Step Prompting', url: '/prompt-engineering/prompt-chaining' },
@@ -1101,6 +1147,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: 'ワークフローはトリガー、出力ルーティング、エラー処理を持つプロンプトです——単に自動実行されるプロンプトではありません。週5回以上の頻度で構造化された入力がある場合に自動化します。4つの本番テンプレートが最も一般的なユースケースをカバーします。',
       },
       prompt_vs_workflow: {
+        id: 'prompt_vs_workflow',
         title: 'プロンプトとワークフローの違い',
         snippets: [
           { type: 'in-one-sentence', text: 'ワークフローはトリガーが発火したときに自動実行され、人間の介入なしに定義された次のステップに出力をルーティングするプロンプトです。' },
@@ -1116,6 +1163,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       triggering: {
+        id: 'triggering',
         title: 'トリガー条件と状態管理',
         content: [
           '**3つのトリガータイプがほぼすべての本番プロンプトワークフローをカバーします：イベントベース、スケジュールベース、しきい値ベース。** 間違ったトリガータイプを選択することが、ワークフローが多すぎる頻度で、少なすぎる頻度で、または古いデータで実行される主な理由の一つです。',
@@ -1127,6 +1175,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       four_templates: {
+        id: 'four_templates',
         title: '本番チーム向け4つのワークフローテンプレート',
         content: [
           '**4つのテンプレートが最も一般的な本番ユースケースをカバーします：文書処理、リサーチパイプライン、コードレビュー、顧客トリアージ。**',
@@ -1139,6 +1188,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       tools: {
+        id: 'tools',
         title: 'プロンプトワークフロー構築のためのツール',
         content: [
           '**適切なツールは、チームがビジュアル自動化、コードファーストパイプライン、またはマルチモデルディスパッチを好むかどうかによって異なります。**',
@@ -1150,6 +1200,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       when_to_automate: {
+        id: 'when_to_automate',
         title: '自動化すべき状況と手動で行うべき状況',
         content: [
           '**プロンプトワークフローを自動化する条件：頻度が週5回を超える、入力が構造化されて予測可能、出力が毎回定義された次のステップにルーティングされる。** 自動化が効果を発揮するには3つの条件すべてが真でなければなりません。',
@@ -1158,6 +1209,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       common_mistakes: {
+        id: 'common_mistakes',
         title: 'プロンプトワークフロー構築時のよくある間違い',
         mistakes: [
           { mistake: 'プロンプトを検証する前にワークフローを構築する', problem: '基礎となるプロンプトが失敗すると、ワークフローはその失敗を大規模に増幅する', fix: 'ワークフローに組み込む前に、10以上の実際の例に対してコアプロンプトをテストして検証する' },
@@ -1187,6 +1239,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       related_reading: {
+        id: 'related_reading',
         title: '関連記事',
         items: [
           { title: 'Prompt Chaining: Multi-Step Prompting', url: '/prompt-engineering/prompt-chaining' },
@@ -1197,6 +1250,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       sources: {
+        id: 'sources',
         title: '参考資料',
         items: [
           { title: 'n8n Documentation', url: 'https://docs.n8n.io' },
@@ -1272,6 +1326,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: '工作流是带有触发器、输出路由和错误处理的Prompt——而不仅仅是自动运行的Prompt。当频率超过每周5次且输入结构化时进行自动化。四个生产模板涵盖最常见的用例。',
       },
       prompt_vs_workflow: {
+        id: 'prompt_vs_workflow',
         title: 'Prompt和工作流之间的区别',
         snippets: [
           { type: 'in-one-sentence', text: '工作流是当触发器触发时自动运行并将其输出路由到定义的下一步而无需人工干预的Prompt。' },
@@ -1287,6 +1342,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       triggering: {
+        id: 'triggering',
         title: '触发条件和状态管理',
         content: [
           '**三种触发类型涵盖几乎所有生产Prompt工作流：基于事件、基于计划和基于阈值。** 选择错误的触发类型是工作流运行过于频繁、不够频繁或在陈旧数据上运行的主要原因之一。',
@@ -1298,6 +1354,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       four_templates: {
+        id: 'four_templates',
         title: '生产团队的4个工作流模板',
         content: [
           '**4个模板涵盖最常见的生产用例：文档处理、研究管道、代码审查和客户分诊。**',
@@ -1310,6 +1367,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       tools: {
+        id: 'tools',
         title: '构建Prompt工作流的工具',
         content: [
           '**正确的工具取决于你的团队偏好可视化自动化、代码优先管道还是多模型调度。**',
@@ -1321,6 +1379,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       when_to_automate: {
+        id: 'when_to_automate',
         title: '何时自动化与手动操作',
         content: [
           '**自动化Prompt工作流的条件：频率超过每周5次、输入结构化且可预测、输出每次都路由到定义好的下一步。** 自动化要回报成本，三个条件都必须成立。',
@@ -1329,6 +1388,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       common_mistakes: {
+        id: 'common_mistakes',
         title: '构建Prompt工作流时的常见错误',
         mistakes: [
           { mistake: '在验证Prompt之前构建工作流', problem: '如果底层Prompt失败，工作流会在大规模上放大失败', fix: '在将其接入工作流之前，针对10+个真实示例测试和验证核心Prompt' },
@@ -1358,6 +1418,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       related_reading: {
+        id: 'related_reading',
         title: '相关阅读',
         items: [
           { title: 'Prompt Chaining: Multi-Step Prompting', url: '/prompt-engineering/prompt-chaining' },
@@ -1368,6 +1429,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       sources: {
+        id: 'sources',
         title: '参考来源',
         items: [
           { title: 'n8n Documentation', url: 'https://docs.n8n.io' },
@@ -1444,6 +1506,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: '워크플로우는 단순히 자동으로 실행되는 프롬프트가 아니라, 트리거, 출력 라우팅, 오류 처리를 갖춘 프롬프트입니다. 주 5회 이상 실행되고, 입력이 구조화되어 있으며, 출력이 항상 동일한 다음 단계로 라우팅될 때 자동화를 적용하십시오. 네 가지 프로덕션 템플릿이 가장 일반적인 사용 사례를 다룹니다: 문서 처리, 리서치 파이프라인, 코드 리뷰, 고객 분류.',
       },
       prompt_vs_workflow: {
+        id: 'prompt_vs_workflow',
         title: '프롬프트와 워크플로우의 차이',
         snippets: [
           { type: 'in-one-sentence', text: '워크플로우는 트리거가 발생하면 자동으로 실행되고, 인간의 개입 없이 출력을 정의된 다음 단계로 라우팅하는 프롬프트입니다.' },
@@ -1459,6 +1522,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       triggering: {
+        id: 'triggering',
         title: '트리거 조건과 상태 관리',
         content: [
           '**세 가지 트리거 유형이 거의 모든 프로덕션 프롬프트 워크플로우를 커버합니다: 이벤트 기반, 일정 기반, 임계값 기반.** 잘못된 트리거 유형을 선택하는 것이 워크플로우가 너무 자주, 충분히 자주 실행되지 않거나, 오래된 데이터에서 실행되는 주요 원인 중 하나입니다.',
@@ -1470,6 +1534,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       four_templates: {
+        id: 'four_templates',
         title: '프로덕션 팀을 위한 4가지 워크플로우 템플릿',
         content: [
           '**네 가지 템플릿이 가장 일반적인 프로덕션 사용 사례를 커버합니다: 문서 처리, 리서치 파이프라인, 코드 리뷰, 고객 분류.** 각 템플릿은 트리거, 프롬프트 체인, 출력 라우팅, 권장 도구를 정의합니다.',
@@ -1482,6 +1547,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       tools: {
+        id: 'tools',
         title: '프롬프트 워크플로우 구축 도구',
         content: [
           '**올바른 도구는 팀이 시각적 자동화, 코드 우선 파이프라인, 멀티 모델 디스패치 중 무엇을 선호하는지에 달려 있습니다.** 하나의 기본 도구를 사용하고 모델 레이어 결정에는 PromptQuorum을 추가하십시오.',
@@ -1493,6 +1559,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       when_to_automate: {
+        id: 'when_to_automate',
         title: '자동화 vs. 수동 유지: 언제 선택할 것인가',
         content: [
           '**프롬프트 워크플로우를 자동화하는 조건: 빈도가 주 5회를 초과하고, 입력이 구조화되어 예측 가능하며, 출력이 매번 정의된 다음 단계로 라우팅될 때.** 세 가지 조건이 모두 충족되어야 자동화가 효과를 발휘합니다.',
@@ -1501,6 +1568,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       common_mistakes: {
+        id: 'common_mistakes',
         title: '프롬프트 워크플로우 구축 시 흔한 실수',
         mistakes: [
           { mistake: '프롬프트 검증 전 워크플로우 구축', problem: '기본 프롬프트가 실패하면 워크플로우가 대규모로 실패를 증폭시킵니다', fix: '워크플로우에 연결하기 전에 10개 이상의 실제 예시에 대해 핵심 프롬프트를 테스트하고 검증하십시오' },
@@ -1532,6 +1600,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       related_reading: {
+        id: 'related_reading',
         title: '관련 읽기',
         items: [
           { title: '프롬프트 체이닝: 다단계 프롬프팅', url: '/prompt-engineering/prompt-chaining' },
@@ -1542,6 +1611,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       sources: {
+        id: 'sources',
         title: '출처',
         items: [
           { title: 'n8n Documentation', url: 'https://docs.n8n.io' },

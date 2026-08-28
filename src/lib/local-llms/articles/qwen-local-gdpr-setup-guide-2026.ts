@@ -79,7 +79,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Disk Encryption', anchor: 'disk-encryption' },
       { label: 'Article 30 Audit Trail', anchor: 'article-30' },
       { label: 'What to Document for Your DPA', anchor: 'dpa-docs' },
-      { label: 'FAQ', anchor: 'faq' },
     ],
     sections: {
       tldr: {
@@ -1169,7 +1168,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '디스크 암호화', anchor: 'disk-encryption' },
       { label: '제30조 감사 기록', anchor: 'article-30' },
       { label: 'DPA에 제출할 문서', anchor: 'dpa-docs' },
-      { label: 'FAQ', anchor: 'faq' },
     ],
     sections: {
       tldr: {

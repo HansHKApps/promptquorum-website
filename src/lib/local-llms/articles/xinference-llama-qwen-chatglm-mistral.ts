@@ -938,11 +938,6 @@ print(embedding.data[0].embedding[:5])`,
     },
     toc: [
       { label: 'Principais conclusões', anchor: '#key-takeaways' },
-      { label: 'Por que usar Xinference em vez de Ollama?', anchor: '#vs-ollama' },
-      { label: 'Modelos suportados', anchor: '#supported-models' },
-      { label: 'Instalação', anchor: '#installation' },
-      { label: 'Lançar modelos', anchor: '#launch-models' },
-      { label: 'Xinference vs Ollama vs vLLM', anchor: '#comparison' },
       { label: 'Perguntas frequentes', anchor: '#faq' },
     ],
     sections: {

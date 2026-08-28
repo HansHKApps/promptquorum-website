@@ -107,6 +107,7 @@ schema: {
           ],
         },
         whatIsSmall: {
+          id: 'what-is-small-llm',
           title: 'What Is a "Small" Local LLM and When Should You Use One?',
           content: [
             '**A small local LLM is typically defined as a model with fewer than 4 billion parameters.** At Q4_K_M quantization, these models require 1.5-3 GB of RAM -- well within the constraints of entry-level laptops with 4-8 GB total memory.',
@@ -115,11 +116,13 @@ schema: {
           ],
         },
         modelSelectionGuide: {
+          id: 'model-selection-guide',
           title: 'Which Model Should You Use? Quick Decision Guide?',
           image: '/images/small-llm-decision-tree-mockup.svg',
           imageCaption: 'Decision tree: choose by priority (reasoning, speed, or coding). Default to Llama 3.2 3B if unsure.',
         },
         phi4mini: {
+          id: 'phi-4-mini',
           title: 'Phi-4 Mini 3.8B -- Best Reasoning Performance in the Sub-4B Class',
           content: [
             '**Microsoft Phi-4 Mini achieves 68% on MMLU and 70% on HumanEval -- scores that exceed many 7B models released before 2025.** This is possible because Phi-4 Mini was trained on a curated synthetic dataset focused on reasoning and problem-solving, rather than broad web text.',
@@ -153,6 +156,7 @@ schema: {
           columns: ['Spec', 'Value'],
         },
         qwen25_3b: {
+          id: 'qwen2-5-3b',
           title: 'Qwen3 3B -- Best Small Model for Coding Tasks',
           content: [
             '**Qwen3 3B scores 65% on HumanEval -- 5 percentage points above Llama 3.2 3B -- making it the best choice for coding tasks at the 3B scale.** It includes JSON mode and function calling support, and natively handles 29 languages.',
@@ -169,6 +173,7 @@ schema: {
           columns: ['Spec', 'Value'],
         },
         llama32_3b: {
+          id: 'llama-3-2-3b',
           title: 'Llama 3.2 3B -- Best General-Purpose Small Model',
           content: [
             '**Meta Llama 3.2 3B is the most widely documented and community-supported 3B model.** It scores 58% on MMLU and 60% on HumanEval -- slightly below Phi-4 Mini on both -- but has the widest tool support, the most fine-tunes available, and the largest collection of community guides.',
@@ -184,10 +189,12 @@ schema: {
           columns: ['Spec', 'Value'],
         },
         llama32_1b: {
+          id: 'llama-3-2-1b',
           title: 'Llama 3.2 1B -- Absolute Minimum for Any Useful Output',
           content: 'Llama 3.2 1B requires only 1.3 GB of RAM and generates 60-90 tok/sec on CPU -- the fastest locally-runnable model. Output quality is marginal: it handles very simple classification and keyword extraction but struggles with coherent multi-sentence responses. As of August 2026, use Llama 3.2 1B only when RAM is genuinely the binding constraint (under 3 GB available) or for testing tool integrations.',
         },
         comparisonTable: {
+          id: 'comparison-table',
           title: 'Full Comparison: Best Small Local LLMs Under 4B Parameters',
           image: '/images/small-local-llm-models-performance-tier-hero-en.webp',
           imageCaption: 'Performance tiers: Phi-4 Mini leads on reasoning and coding, Gemma 4 E2B leads on context length (128K) at the smallest RAM footprint, Qwen3 excels at coding.',
@@ -201,6 +208,7 @@ schema: {
           columns: ['Model', 'MMLU', 'HumanEval', 'RAM', 'Context', 'Best For'],
         },
         regionalContext: {
+          id: 'regional-context',
           title: 'Small Local LLMs by Region',
           content: [
             '**EU / GDPR:** For EU professionals running AI on constrained hardware -- field work, air-gapped environments, older enterprise laptops -- small local models provide GDPR-compliant inference with zero data egress. A Phi-4 Mini 3.8B running on a standard-issue corporate laptop (8 GB RAM) keeps all processed text on-device under GDPR Article 5 (data minimization). For German BSI compliance documentation: Phi-4 Mini (Microsoft, MIT licence), Gemma 4 E2B (Google, Apache 2.0), and Llama 3.2 3B (Meta, Llama Community licence) all provide versioned model identifiers via their Ollama tags, satisfying AI tool documentation requirements. Mistral does not currently offer a sub-4B model. For EU organizations preferring an EU-origin model at this size class, options are limited until Mistral releases a sub-4B variant.',
@@ -209,6 +217,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'What Are the Common Mistakes When Running Small Local LLMs?',
           items: [
             '**Using Q8_0 quantization instead of Q4_K_M:** Q8_0 requires nearly double the RAM of Q4_K_M for minimal quality improvement at small scale. A Llama 3.2 3B model at Q8_0 needs ~3.8 GB RAM vs ~2.5 GB for Q4_K_M. On a 4 GB machine, Q8_0 may trigger swap usage and make inference 3-5x slower. Always use Q4_K_M as the default for sub-4B models.',
@@ -217,6 +226,7 @@ schema: {
           ],
         },
         quantizationGuide: {
+          id: 'quantization-guide',
           title: 'Understanding Quantization: RAM vs Quality Trade-off',
           image: '/images/small-local-llm-models-quantization-tradeoff-hero-en.webp',
           imageCaption: 'Quantization trade-off: Q4_K_M (2.5 GB, -0.5% quality) is the recommended default. Q8_0 uses 3.8 GB with no quality gain. Q3_K_M (1.8 GB, -1.8% loss) for extreme RAM constraints.',
@@ -389,6 +399,7 @@ schema: {
           ],
         },
         whatIsSmall: {
+          id: 'what-is-small-llm',
           title: '¿Qué es un LLM local "pequeño" y cuándo deberías usar uno?',
           content: [
             '**Un LLM local pequeño se define típicamente como un modelo con menos de 4.000 millones de parámetros.** Con cuantización Q4_K_M, estos modelos requieren 1,5-3 GB de RAM -- perfectamente dentro de las limitaciones de portátiles de gama básica con 4-8 GB de memoria total.',
@@ -397,11 +408,13 @@ schema: {
           ],
         },
         modelSelectionGuide: {
+          id: 'model-selection-guide',
           title: '¿Qué modelo deberías usar? Guía de decisión rápida',
           image: '/images/small-llm-decision-tree-mockup.svg',
           imageCaption: 'Árbol de decisión: elige según prioridad (razonamiento, velocidad o código). Por defecto, Llama 3.2 3B si no estás seguro.',
         },
         phi4mini: {
+          id: 'phi-4-mini',
           title: 'Phi-4 Mini 3.8B -- Mejor rendimiento de razonamiento en la clase sub-4B',
           content: [
             '**Microsoft Phi-4 Mini alcanza el 68% en MMLU y el 70% en HumanEval -- puntuaciones que superan a muchos modelos 7B lanzados antes de 2025.** Esto es posible porque Phi-4 Mini fue entrenado con un conjunto de datos sintético curado, centrado en el razonamiento y la resolución de problemas, en lugar de texto web genérico.',
@@ -418,6 +431,7 @@ schema: {
           columns: ['Especificación', 'Valor'],
         },
         gemma2: {
+          id: 'gemma-4-e2b',
           title: 'Gemma 4 E2B -- El mejor modelo local pequeño/edge',
           content: [
             '**Google Gemma 4 E2B es la generación actual de modelo pequeño, y sustituye al antiguo Gemma 2 2B.** Obtiene 60% en MMLU Pro (un benchmark más exigente que el MMLU original), 44% en LiveCodeBench v6 y 43,4% en GPQA Diamond, según la propia ficha de modelo de Google. Tiene 2,3B de parámetros efectivos (5,1B incluyendo embeddings) y cabe en ~2 GB de RAM.',
@@ -434,6 +448,7 @@ schema: {
           columns: ['Especificación', 'Valor'],
         },
         qwen25_3b: {
+          id: 'qwen2-5-3b',
           title: 'Qwen3 3B -- Mejor modelo pequeño para tareas de código',
           content: [
             '**Qwen3 3B obtiene un 65% en HumanEval -- 5 puntos porcentuales por encima de Llama 3.2 3B -- convirtiéndolo en la mejor opción para tareas de código a escala 3B.** Incluye modo JSON y soporte de llamadas a funciones, y maneja de forma nativa 29 idiomas.',
@@ -450,6 +465,7 @@ schema: {
           columns: ['Especificación', 'Valor'],
         },
         llama32_3b: {
+          id: 'llama-3-2-3b',
           title: 'Llama 3.2 3B -- Mejor modelo pequeño de uso general',
           content: [
             '**Meta Llama 3.2 3B es el modelo 3B más documentado y con mayor soporte de la comunidad.** Obtiene un 58% en MMLU y un 60% en HumanEval -- ligeramente por debajo de Phi-4 Mini en ambos -- pero tiene el soporte de herramientas más amplio, más ajustes finos disponibles y la mayor colección de guías comunitarias.',
@@ -465,10 +481,12 @@ schema: {
           columns: ['Especificación', 'Valor'],
         },
         llama32_1b: {
+          id: 'llama-3-2-1b',
           title: 'Llama 3.2 1B -- Mínimo absoluto para cualquier salida útil',
           content: 'Llama 3.2 1B requiere solo 1,3 GB de RAM y genera 60-90 tok/seg en CPU -- el modelo ejecutable localmente más rápido. La calidad de salida es marginal: maneja clasificaciones muy simples y extracción de palabras clave, pero tiene dificultades con respuestas coherentes de varias frases. A partir de abril de 2026, usa Llama 3.2 1B solo cuando la RAM es genuinamente la restricción principal (menos de 3 GB disponibles) o para probar integraciones de herramientas.',
         },
         comparisonTable: {
+          id: 'comparison-table',
           title: 'Comparativa completa: mejores LLMs locales pequeños de menos de 4B parámetros',
           image: '/images/small-local-llm-models-performance-tier-hero-es.webp',
           imageCaption: 'Niveles de rendimiento: Phi-4 Mini lidera en razonamiento y código, Gemma 4 E2B lidera en longitud de contexto (128K) con la menor huella de RAM, Qwen3 destaca en código.',
@@ -482,11 +500,13 @@ schema: {
           columns: ['Modelo', 'MMLU', 'HumanEval', 'RAM', 'Contexto', 'Mejor para'],
         },
         quantizationGuide: {
+          id: 'quantization-guide',
           title: 'Entendiendo la cuantización: equilibrio entre RAM y calidad',
           image: '/images/small-local-llm-models-quantization-tradeoff-hero-es.webp',
           imageCaption: 'Equilibrio de cuantización: Q4_K_M (2,5 GB, -0,5% de calidad) es el valor predeterminado recomendado. Q8_0 usa 3,8 GB sin ganancia de calidad. Q3_K_M (1,8 GB, -1,8% de pérdida) para restricciones extremas de RAM.',
         },
         regionalContext: {
+          id: 'regional-context',
           title: 'LLMs locales pequeños por región',
           content: [
             '**UE / RGPD:** Para profesionales de la UE que trabajan con hardware limitado -- trabajo de campo, entornos aislados, portátiles empresariales más antiguos -- los modelos locales pequeños proporcionan inferencia compatible con el RGPD sin salida de datos. Un Phi-4 Mini 3.8B ejecutándose en un portátil corporativo estándar (8 GB de RAM) mantiene todo el texto procesado en el dispositivo bajo el Artículo 5 del RGPD (minimización de datos). Para la documentación de cumplimiento del BSI alemán: Phi-4 Mini (Microsoft, licencia MIT) y Llama 3.2 3B (Meta, licencia de la comunidad Llama) proporcionan identificadores de modelos versionados a través de sus etiquetas de Ollama, satisfaciendo los requisitos de documentación de herramientas de IA. Mistral no ofrece actualmente un modelo sub-4B. Para organizaciones de la UE que prefieren un modelo de origen europeo en esta clase de tamaño, las opciones son limitadas hasta que Mistral lance una variante sub-4B.',
@@ -495,6 +515,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: '¿Cuáles son los errores comunes al ejecutar LLMs locales pequeños?',
           items: [
             '**Usar cuantización Q8_0 en lugar de Q4_K_M:** Q8_0 requiere casi el doble de RAM que Q4_K_M con una mejora mínima de calidad a pequeña escala. Un modelo Llama 3.2 3B con Q8_0 necesita ~3,8 GB de RAM frente a ~2,5 GB con Q4_K_M. En una máquina de 4 GB, Q8_0 puede activar el uso de swap y hacer la inferencia 3-5 veces más lenta. Usa siempre Q4_K_M como valor predeterminado para modelos sub-4B.',
@@ -672,6 +693,7 @@ schema: {
           ],
         },
         whatIsSmall: {
+          id: 'what-is-small-llm',
           title: 'ما هو نموذج LLM المحلي "الصغير" ومتى يجب أن تستخدم واحدًا؟',
           content: [
             '**يُعرّف نموذج LLM المحلي الصغير عادةً بأنه نموذج بأقل من 4 مليارات معامل.** بتكميم Q4_K_M، تتطلب هذه النماذج 1.5-3 GB من RAM -- ضمن قيود الحواسيب المحمولة الأساسية بذاكرة إجمالية 4-8 GB تمامًا.',
@@ -680,11 +702,13 @@ schema: {
           ],
         },
         modelSelectionGuide: {
+          id: 'model-selection-guide',
           title: 'أي نموذج يجب أن تستخدم؟ دليل قرار سريع',
           image: '/images/small-llm-decision-tree-mockup.svg',
           imageCaption: 'شجرة القرار: اختر حسب الأولوية (الاستدلال، أو السرعة، أو البرمجة). افتراضيًا، Llama 3.2 3B إذا لم تكن متأكدًا.',
         },
         phi4mini: {
+          id: 'phi-4-mini',
           title: 'Phi-4 Mini 3.8B -- أفضل أداء استدلال في فئة أقل من 4B',
           content: [
             '**يحقق Microsoft Phi-4 Mini 68% في MMLU و70% في HumanEval -- درجات تتفوق على كثير من نماذج 7B الصادرة قبل 2025.** هذا ممكن لأن Phi-4 Mini دُرّب على مجموعة بيانات اصطناعية منسّقة، تركز على الاستدلال وحل المشكلات، بدلًا من نص ويب عام.',
@@ -701,6 +725,7 @@ schema: {
           columns: ['المواصفة', 'القيمة'],
         },
         gemma2: {
+          id: 'gemma-4-e2b',
           title: 'Gemma 4 E2B -- أفضل نموذج صغير/للأجهزة الطرفية',
           content: [
             '**Google Gemma 4 E2B هو الجيل الحالي من النماذج الصغيرة، ويحل محل Gemma 2 2B القديم.** يحقق 60% في MMLU Pro (معيار أصعب من MMLU الأصلي)، و44% في LiveCodeBench v6، و43.4% في GPQA Diamond، وفقاً لبطاقة نموذج Google الرسمية. يمتلك 2.3B من المعاملات الفعالة (5.1B شاملةً التضمينات) ويناسب ~2 GB من RAM.',
@@ -717,6 +742,7 @@ schema: {
           columns: ['المواصفة', 'القيمة'],
         },
         qwen25_3b: {
+          id: 'qwen2-5-3b',
           title: 'Qwen3 3B -- أفضل نموذج صغير لمهام البرمجة',
           content: [
             '**يحصل Qwen3 3B على 65% في HumanEval -- بفارق 5 نقاط مئوية فوق Llama 3.2 3B -- مما يجعله الخيار الأفضل لمهام البرمجة على نطاق 3B.** يتضمن وضع JSON ودعم استدعاء الدوال، ويتعامل أصليًا مع 29 لغة.',
@@ -733,6 +759,7 @@ schema: {
           columns: ['المواصفة', 'القيمة'],
         },
         llama32_3b: {
+          id: 'llama-3-2-3b',
           title: 'Llama 3.2 3B -- أفضل نموذج صغير للاستخدام العام',
           content: [
             '**يُعد Meta Llama 3.2 3B أكثر نماذج 3B توثيقًا ودعمًا مجتمعيًا.** يحصل على 58% في MMLU و60% في HumanEval -- أقل قليلًا من Phi-4 Mini في كليهما -- لكنه يملك أوسع دعم للأدوات، ومزيدًا من عمليات الضبط الدقيق المتاحة، وأكبر مجموعة من الأدلة المجتمعية.',
@@ -748,10 +775,12 @@ schema: {
           columns: ['المواصفة', 'القيمة'],
         },
         llama32_1b: {
+          id: 'llama-3-2-1b',
           title: 'Llama 3.2 1B -- الحد الأدنى المطلق لأي مخرجات مفيدة',
           content: 'يتطلب Llama 3.2 1B 1.3 GB فقط من RAM ويولّد 60-90 tok/ثانية على CPU -- أسرع نموذج قابل للتشغيل محليًا. جودة المخرجات هامشية: يتعامل مع تصنيفات بسيطة جدًا واستخراج الكلمات المفتاحية، لكنه يواجه صعوبة مع الاستجابات المتماسكة متعددة الجمل. اعتبارًا من أبريل 2026، استخدم Llama 3.2 1B فقط عندما تكون RAM فعليًا هي القيد الأساسي (أقل من 3 GB متاحة) أو لاختبار تكاملات الأدوات.',
         },
         comparisonTable: {
+          id: 'comparison-table',
           title: 'مقارنة كاملة: أفضل نماذج LLM المحلية الصغيرة أقل من 4B معاملات',
           image: '/images/small-local-llm-models-performance-tier-hero-ar.webp',
           imageCaption: 'مستويات الأداء: تُظهر درجات MMLU وHumanEval أن Phi-4 Mini يتصدّر في الاستدلال والبرمجة، وGemma 2 الأسرع على CPU، وQwen3 يتفوق في البرمجة.',
@@ -765,11 +794,13 @@ schema: {
           columns: ['النموذج', 'MMLU', 'HumanEval', 'RAM', 'السياق', 'الأفضل لـ'],
         },
         quantizationGuide: {
+          id: 'quantization-guide',
           title: 'فهم التكميم: الموازنة بين RAM والجودة',
           image: '/images/small-local-llm-models-quantization-tradeoff-hero-ar.webp',
           imageCaption: 'موازنة التكميم: Q4_K_M (2.5 GB، -0.5% جودة) هو الافتراضي الموصى به. يستخدم Q8_0 3.8 GB دون مكسب في الجودة. Q3_K_M (1.8 GB، -1.8% فقدان) لقيود RAM القصوى.',
         },
         regionalContext: {
+          id: 'regional-context',
           title: 'نماذج LLM المحلية الصغيرة حسب المنطقة',
           content: [
             '**الاتحاد الأوروبي / GDPR:** للمهنيين في الاتحاد الأوروبي الذين يعملون بعتاد محدود -- العمل الميداني، والبيئات المعزولة، والحواسيب المحمولة المؤسسية الأقدم -- توفّر النماذج المحلية الصغيرة استدلالًا متوافقًا مع GDPR دون خروج البيانات. يحافظ Phi-4 Mini 3.8B يعمل على حاسوب محمول مؤسسي قياسي (8 GB من RAM) على كل النص المعالج داخل الجهاز بموجب المادة 5 من GDPR (تقليل البيانات). لتوثيق امتثال BSI الألماني: يوفّر Phi-4 Mini (Microsoft، ترخيص MIT) وLlama 3.2 3B (Meta، ترخيص مجتمع Llama) معرّفات نماذج مرقّمة عبر وسوم Ollama، بما يلبي متطلبات توثيق أدوات الذكاء الاصطناعي. لا تقدّم Mistral حاليًا نموذجًا أقل من 4B. لمؤسسات الاتحاد الأوروبي التي تفضّل نموذجًا أوروبي المنشأ في فئة الحجم هذه، الخيارات محدودة حتى تطلق Mistral نسخة أقل من 4B.',
@@ -778,6 +809,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'ما هي الأخطاء الشائعة عند تشغيل نماذج LLM المحلية الصغيرة؟',
           items: [
             '**استخدام تكميم Q8_0 بدلًا من Q4_K_M:** يتطلب Q8_0 ضعف RAM تقريبًا مقارنة بـ Q4_K_M مع تحسّن جودة ضئيل على النطاق الصغير. نموذج Llama 3.2 3B بـ Q8_0 يحتاج ~3.8 GB من RAM مقابل ~2.5 GB بـ Q4_K_M. على جهاز بذاكرة 4 GB، قد يُفعّل Q8_0 استخدام swap ويجعل الاستدلال أبطأ بـ 3-5 مرات. استخدم دائمًا Q4_K_M كقيمة افتراضية للنماذج أقل من 4B.',
@@ -953,6 +985,7 @@ schema: {
           ],
         },
         whatIsSmall: {
+          id: 'what-is-small-llm',
           title: 'O que é um LLM local "pequeno" e quando você deve usar um?',
           content: [
             '**Um LLM local pequeno é tipicamente definido como um modelo com menos de 4 bilhões de parâmetros.** Com quantização Q4_K_M, esses modelos exigem 1,5-3 GB de RAM -- perfeitamente dentro das limitações de notebooks de entrada com 4-8 GB de memória total.',
@@ -961,11 +994,13 @@ schema: {
           ],
         },
         modelSelectionGuide: {
+          id: 'model-selection-guide',
           title: 'Qual modelo você deve usar? Guia de decisão rápida',
           image: '/images/small-llm-decision-tree-mockup.svg',
           imageCaption: 'Árvore de decisão: escolha conforme a prioridade (raciocínio, velocidade ou código). Por padrão, Llama 3.2 3B se você não tiver certeza.',
         },
         phi4mini: {
+          id: 'phi-4-mini',
           title: 'Phi-4 Mini 3.8B -- Melhor desempenho de raciocínio na classe sub-4B',
           content: [
             '**O Microsoft Phi-4 Mini atinge 68% no MMLU e 70% no HumanEval -- pontuações que superam muitos modelos 7B lançados antes de 2025.** Isso é possível porque o Phi-4 Mini foi treinado com um conjunto de dados sintético curado, focado em raciocínio e resolução de problemas, em vez de texto web genérico.',
@@ -982,6 +1017,7 @@ schema: {
           columns: ['Especificação', 'Valor'],
         },
         gemma2: {
+          id: 'gemma-4-e2b',
           title: 'Gemma 4 E2B -- O melhor modelo local pequeno/edge',
           content: [
             '**O Google Gemma 4 E2B é a geração atual de modelo pequeno, substituindo o antigo Gemma 2 2B.** Obtém 60% no MMLU Pro (um benchmark mais exigente que o MMLU original), 44% no LiveCodeBench v6 e 43,4% no GPQA Diamond, segundo a própria ficha de modelo do Google. Tem 2,3B de parâmetros efetivos (5,1B incluindo embeddings) e cabe em ~2 GB de RAM.',
@@ -998,6 +1034,7 @@ schema: {
           columns: ['Especificação', 'Valor'],
         },
         qwen25_3b: {
+          id: 'qwen2-5-3b',
           title: 'Qwen3 3B -- Melhor modelo pequeno para tarefas de código',
           content: [
             '**O Qwen3 3B obtém 65% no HumanEval -- 5 pontos percentuais acima do Llama 3.2 3B -- tornando-o a melhor opção para tarefas de código em escala 3B.** Inclui modo JSON e suporte a chamadas de função, e lida nativamente com 29 idiomas.',
@@ -1014,6 +1051,7 @@ schema: {
           columns: ['Especificação', 'Valor'],
         },
         llama32_3b: {
+          id: 'llama-3-2-3b',
           title: 'Llama 3.2 3B -- Melhor modelo pequeno de uso geral',
           content: [
             '**O Meta Llama 3.2 3B é o modelo 3B mais documentado e com maior suporte da comunidade.** Obtém 58% no MMLU e 60% no HumanEval -- um pouco abaixo do Phi-4 Mini em ambos -- mas tem o suporte de ferramentas mais amplo, mais fine-tunes disponíveis e a maior coleção de guias da comunidade.',
@@ -1029,10 +1067,12 @@ schema: {
           columns: ['Especificação', 'Valor'],
         },
         llama32_1b: {
+          id: 'llama-3-2-1b',
           title: 'Llama 3.2 1B -- Mínimo absoluto para qualquer saída útil',
           content: 'O Llama 3.2 1B exige apenas 1,3 GB de RAM e gera 60-90 tok/seg na CPU -- o modelo executável localmente mais rápido. A qualidade da saída é marginal: dá conta de classificações muito simples e extração de palavras-chave, mas tem dificuldade com respostas coerentes de várias frases. A partir de abril de 2026, use o Llama 3.2 1B só quando a RAM for genuinamente a restrição principal (menos de 3 GB disponíveis) ou para testar integrações de ferramentas.',
         },
         comparisonTable: {
+          id: 'comparison-table',
           title: 'Comparativo completo: melhores LLMs locais pequenos de menos de 4B parâmetros',
           image: '/images/small-local-llm-models-performance-tier-hero-pt.webp',
           imageCaption: 'Níveis de desempenho: o Phi-4 Mini lidera em raciocínio e código, o Gemma 4 E2B lidera em contexto (128K) com a menor pegada de RAM, o Qwen3 se destaca em código.',
@@ -1046,11 +1086,13 @@ schema: {
           columns: ['Modelo', 'MMLU', 'HumanEval', 'RAM', 'Contexto', 'Melhor para'],
         },
         quantizationGuide: {
+          id: 'quantization-guide',
           title: 'Entendendo a quantização: equilíbrio entre RAM e qualidade',
           image: '/images/small-local-llm-models-quantization-tradeoff-hero-pt.webp',
           imageCaption: 'Equilíbrio de quantização: Q4_K_M (2,5 GB, -0,5% de qualidade) é o padrão recomendado. O Q8_0 usa 3,8 GB sem ganho de qualidade. Q3_K_M (1,8 GB, -1,8% de perda) para restrições extremas de RAM.',
         },
         regionalContext: {
+          id: 'regional-context',
           title: 'LLMs locais pequenos por região',
           content: [
             '**UE / GDPR e Brasil / LGPD:** Para profissionais que trabalham com hardware limitado -- trabalho de campo, ambientes isolados, notebooks empresariais mais antigos -- os modelos locais pequenos oferecem inferência em conformidade sem saída de dados. Um Phi-4 Mini 3.8B rodando em um notebook corporativo padrão (8 GB de RAM) mantém todo o texto processado no dispositivo, sob o Artigo 5 do GDPR (minimização de dados) e o princípio equivalente da LGPD brasileira. Phi-4 Mini (Microsoft, licença MIT) e Llama 3.2 3B (Meta, licença da comunidade Llama) fornecem identificadores de modelos versionados via suas tags do Ollama, satisfazendo os requisitos de documentação de ferramentas de IA. A Mistral não oferece atualmente um modelo sub-4B.',
@@ -1059,6 +1101,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Quais são os erros comuns ao rodar LLMs locais pequenos?',
           items: [
             '**Usar quantização Q8_0 em vez de Q4_K_M:** O Q8_0 exige quase o dobro de RAM do Q4_K_M com uma melhora mínima de qualidade em pequena escala. Um modelo Llama 3.2 3B com Q8_0 precisa de ~3,8 GB de RAM ante ~2,5 GB com Q4_K_M. Em uma máquina de 4 GB, o Q8_0 pode acionar o uso de swap e deixar a inferência 3-5 vezes mais lenta. Use sempre Q4_K_M como padrão para modelos sub-4B.',
@@ -1871,6 +1914,7 @@ schema: {
           ],
         },
         whatIsSmall: {
+          id: 'what-is-small-llm',
           title: '"소형" 로컬 LLM이란 무엇이며 언제 사용해야 합니까?',
           content: [
             '**소형 로컬 LLM은 일반적으로 40억 개 미만의 파라미터를 가진 모델로 정의됩니다.** Q4_K_M 양자화에서 이러한 모델은 1.5~3 GB의 RAM을 필요로 합니다 -- RAM 4~8 GB의 보급형 노트북 제약 조건 내에서 충분히 실행 가능합니다.',
@@ -1879,11 +1923,13 @@ schema: {
           ],
         },
         modelSelectionGuide: {
+          id: 'model-selection-guide',
           title: '어떤 모델을 사용해야 합니까? 빠른 선택 가이드',
           image: '/images/small-llm-decision-tree-mockup.svg',
           imageCaption: '결정 트리: 우선순위(추론, 속도, 코딩)에 따라 선택하십시오. 확실하지 않다면 Llama 3.2 3B를 기본으로 사용하십시오.',
         },
         phi4mini: {
+          id: 'phi-4-mini',
           title: 'Phi-4 Mini 3.8B -- 4B 미만 클래스에서 최고 추론 성능',
           content: [
             '**Microsoft Phi-4 Mini는 MMLU 68%와 HumanEval 70%를 달성합니다 -- 2025년 이전에 출시된 많은 7B 모델을 능가하는 점수입니다.** 이는 Phi-4 Mini가 광범위한 웹 텍스트가 아닌 추론과 문제 해결에 초점을 맞춘 정제된 합성 데이터셋으로 학습되었기 때문에 가능합니다.',
@@ -1900,6 +1946,7 @@ schema: {
           columns: ['Spec', 'Value'],
         },
         gemma2: {
+          id: 'gemma-4-e2b',
           title: 'Gemma 4 E2B -- 최고의 소형/엣지 모델',
           content: [
             '**Google Gemma 4 E2B는 현세대 소형 모델로, 이전 세대 Gemma 2 2B를 대체합니다.** Google 공식 모델 카드에 따르면 MMLU Pro(기존 MMLU보다 어려운 벤치마크)에서 60%, LiveCodeBench v6에서 44%, GPQA Diamond에서 43.4%를 기록했습니다. 유효 파라미터는 2.3B(임베딩 포함 5.1B)이며 약 2 GB RAM에 들어갑니다.',
@@ -1916,6 +1963,7 @@ schema: {
           columns: ['Spec', 'Value'],
         },
         qwen25_3b: {
+          id: 'qwen2-5-3b',
           title: 'Qwen3 3B -- 코딩 작업에 최적인 소형 모델',
           content: [
             '**Qwen3 3B는 HumanEval에서 65%를 기록합니다 -- Llama 3.2 3B보다 5퍼센트포인트 높아 3B 규모에서 코딩 작업에 최적의 선택입니다.** JSON 모드와 함수 호출 지원을 포함하며, 29개 언어를 기본으로 처리합니다.',
@@ -1932,6 +1980,7 @@ schema: {
           columns: ['Spec', 'Value'],
         },
         llama32_3b: {
+          id: 'llama-3-2-3b',
           title: 'Llama 3.2 3B -- 최고 범용 소형 모델',
           content: [
             '**Meta Llama 3.2 3B는 가장 광범위하게 문서화되고 커뮤니티에서 지원되는 3B 모델입니다.** MMLU 58%와 HumanEval 60%를 기록합니다 -- 두 항목 모두 Phi-4 Mini보다 약간 낮지만 -- 가장 넓은 도구 지원, 가장 많은 파인튜닝 모델, 가장 방대한 커뮤니티 가이드 컬렉션을 갖추고 있습니다.',
@@ -1947,10 +1996,12 @@ schema: {
           columns: ['Spec', 'Value'],
         },
         llama32_1b: {
+          id: 'llama-3-2-1b',
           title: 'Llama 3.2 1B -- 유용한 출력을 위한 절대 최소 사양',
           content: 'Llama 3.2 1B는 RAM 1.3 GB만 필요하며 CPU에서 초당 60~90 토큰을 생성합니다 -- 로컬에서 실행 가능한 가장 빠른 모델입니다. 출력 품질은 한계 수준입니다: 매우 간단한 분류와 키워드 추출은 처리하지만 일관성 있는 여러 문장 응답에는 어려움을 겪습니다. 2026년 4월 기준, Llama 3.2 1B는 RAM이 실제로 제약 요인인 경우(가용 RAM 3 GB 미만)나 도구 통합 테스트 목적으로만 사용하십시오.',
         },
         comparisonTable: {
+          id: 'comparison-table',
           title: '전체 비교: 4B 미만 최고 소형 로컬 LLM',
           image: '/images/small-local-llm-models-performance-tier-hero-ko.webp',
           imageCaption: '성능 등급: MMLU와 HumanEval 점수는 Phi-4 Mini가 추론과 코딩에서 선두임을 보여줍니다. Gemma 2는 CPU에서 가장 빠르며, Qwen3은 코딩에서 탁월합니다.',
@@ -1964,6 +2015,7 @@ schema: {
           columns: ['모델', 'MMLU', 'HumanEval', 'RAM', '컨텍스트', '최적 용도'],
         },
         regionalContext: {
+          id: 'regional-context',
           title: '지역별 소형 로컬 LLM',
           content: [
             '**EU / GDPR:** 제약된 하드웨어 -- 현장 작업, 에어갭 환경, 구형 기업 노트북 -- 에서 AI를 실행하는 EU 전문가의 경우, 소형 로컬 모델은 데이터 외부 유출 없이 GDPR 준수 추론을 제공합니다. 표준 기업 노트북(RAM 8 GB)에서 실행되는 Phi-4 Mini 3.8B는 GDPR 제5조(데이터 최소화) 하에 처리된 모든 텍스트를 온디바이스에 보관합니다. 독일 BSI 준수 문서화의 경우: Phi-4 Mini(Microsoft, MIT 라이선스)와 Llama 3.2 3B(Meta, Llama Community 라이선스) 모두 Ollama 태그를 통해 버전이 지정된 모델 식별자를 제공하여 AI 도구 문서화 요건을 충족합니다. Mistral은 현재 4B 미만 모델을 제공하지 않습니다. 이 크기 클래스에서 EU 출신 모델을 선호하는 EU 조직의 경우, Mistral이 4B 미만 버전을 출시할 때까지 선택지가 제한적입니다.',
@@ -1972,6 +2024,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: '소형 로컬 LLM 실행 시 흔한 실수는 무엇입니까?',
           items: [
             '**Q4_K_M 대신 Q8_0 양자화 사용:** Q8_0은 소형 모델에서 품질 개선이 미미함에도 Q4_K_M 대비 거의 두 배의 RAM을 필요로 합니다. Q8_0의 Llama 3.2 3B 모델은 Q4_K_M의 ~2.5 GB 대비 ~3.8 GB의 RAM이 필요합니다. RAM 4 GB 기기에서 Q8_0은 스왑 사용을 유발하여 추론 속도를 3~5배 느리게 만들 수 있습니다. 4B 미만 모델에는 항상 Q4_K_M을 기본값으로 사용하십시오.',
@@ -1980,6 +2033,7 @@ schema: {
           ],
         },
         quantizationGuide: {
+          id: 'quantization-guide',
           title: '양자화 이해: RAM 대 품질 트레이드오프',
           image: '/images/small-local-llm-models-quantization-tradeoff-hero-ko.webp',
           imageCaption: '양자화 트레이드오프: Q4_K_M(2.5 GB, 품질 -0.5%)이 권장 기본값입니다. Q8_0은 품질 향상 없이 3.8 GB를 사용합니다. 극도로 RAM이 제한된 경우 Q3_K_M(1.8 GB, 품질 손실 -1.8%)을 고려하십시오.',

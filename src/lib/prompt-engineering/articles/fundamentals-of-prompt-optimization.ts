@@ -1194,6 +1194,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         localLLMTldr: {
+          id: 'key-takeaways-for-local-llm-users',
           title: 'Puntos clave para usuarios de LLM local',
           items: [
             'La optimización de prompts es más crítica para los modelos locales — los modelos cuantizados (4-bit, 8-bit) son más sensibles a las instrucciones ambiguas que las APIs de frontier en la nube',
@@ -1205,6 +1206,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         definition: {
+          id: 'what-is-prompt-optimization',
           title: '¿Qué es la optimización de prompts?',
           content: [
             '**La optimización de prompts es el proceso iterativo de revisar un prompt existente para mejorar la calidad, precisión o consistencia de la salida de IA para una tarea específica.** Se aplica a todos los modelos principales — GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro y modelos ejecutados localmente via Ollama o LM Studio. Donde el prompt engineering diseña la estructura inicial del prompt, la optimización de prompts diagnostica qué está fallando y aplica cambios dirigidos hasta que la salida cumpla un estándar definido.',
@@ -1217,6 +1219,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         vsPromptEngineering: {
+          id: 'prompt-optimization-vs-prompt-engineering',
           title: 'Optimización de prompts vs prompt engineering',
           content: [
             '**La optimización de prompts y el prompt engineering son disciplinas complementarias que trabajan en secuencia.** El prompt engineering diseña un prompt desde cero usando bloques de construcción (objetivo, contexto, ejemplos, restricciones, formato de salida, rol). La optimización de prompts toma un prompt existente y lo mejora mediante revisión iterativa. Necesitas ambos: el prompt engineering te lleva a "funciona"; la optimización de prompts te lleva a "fiable".',
@@ -1231,6 +1234,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         whyOptimize: {
+          id: 'why-prompt-optimization-matters',
           title: 'Por qué importa la optimización de prompts',
           content: [
             '**La optimización de prompts elimina las salidas inconsistentes de IA diagnosticando sistemáticamente qué falla y arreglando una variable a la vez.** Un prompt vago produce una salida vaga. Un prompt mal especificado produce una respuesta fuera del objetivo. Antes/después real: un prompt sin optimizar dice "Resume este artículo." Ejecutado 3 veces en el mismo artículo, produce salidas totalmente diferentes. Después de la optimización — añadir formato de salida ("3 viñetas, ≤20 palabras cada una"), un rol ("analista") y especificidad ("Lista los 3 hallazgos clave, no la metodología") — el mismo prompt produce resultados consistentes y en especificación las 3 veces, en GPT-5.5, Claude y Gemini.',
@@ -1244,6 +1248,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         sixLevers: {
+          id: 'the-6-optimization-levers',
           title: 'Las 6 palancas de optimización',
           content: [
             '**Cada prompt consiste en seis variables independientes que puedes ajustar para mejorar la salida.** Estas son las "palancas" de la optimización. Cuando un prompt falla, el fallo se remonta a una o más de estas palancas que no están configuradas correctamente.',
@@ -1265,6 +1270,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         optimizationProcess: {
+          id: 'the-6-step-optimization-process',
           title: 'El proceso de optimización de 6 pasos',
           content: [
             '**La optimización de prompts es un proceso sistemático y medible.** Cada paso estrecha el diagnóstico: identificas el síntoma, lo mapeas a una palanca, cambias una variable, pruebas en múltiples modelos y mides la mejora.',
@@ -1293,6 +1299,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         measurementCriteria: {
+          id: 'how-to-measure-prompt-quality',
           title: 'Cómo medir la calidad del prompt',
           content: [
             '**No puedes optimizar lo que no puedes medir.** Los siguientes criterios definen si un prompt ha tenido éxito. Usa estos puntos de control después de cada iteración:',
@@ -1314,6 +1321,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         beforeAfterExamples: {
+          id: 'what-does-prompt-optimization-look-like-in-practice',
           title: '¿Cómo se ve la optimización de prompts en la práctica?',
           content: [
             '**La optimización de prompts es visible en el cambio de instrucciones vagas a precisas.** Estos pares antes/después muestran cada una de las 6 palancas en acción:',
@@ -1329,6 +1337,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         definitionBoxes: {
+          id: 'what-do-these-prompt-optimization-terms-mean',
           title: '¿Qué significan estos términos de optimización de prompts?',
           content: [],
           items: [
@@ -1346,6 +1355,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         modelSpecificTips: {
+          id: 'model-specific-optimization-tips',
           title: 'Consejos de optimización específicos por modelo',
           content: [
             '**Las 6 palancas de optimización se aplican a todos los modelos principales — GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro y Mistral Large.** Sin embargo, cada modelo responde de manera diferente a la densidad de instrucciones, la especificidad del formato y la definición de rol. A continuación, consejos de ajuste específicos por modelo:',
@@ -1362,6 +1372,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         localLLMExamples: {
+          id: 'optimizing-prompts-for-local-llms-ollama-lm-studio',
           title: 'Optimización de prompts para LLMs locales (Ollama, LM Studio)',
           content: [
             '**Los modelos locales ejecutados via Ollama o LM Studio responden a las mismas 6 palancas de optimización, pero con tolerancias más estrictas.** Los modelos cuantizados (4-bit, 8-bit) tienen menor capacidad de seguimiento de instrucciones en comparación con las APIs de frontier de precisión completa — se benefician más de prompts más simples y explícitos y son más propensos a fallar en instrucciones ambiguas.',
@@ -1374,6 +1385,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         commonMistakes: {
+          id: 'the-7-most-common-optimization-mistakes',
           title: 'Los 7 errores de optimización más comunes',
           content: [
             '**La mayoría de la optimización falla por errores de proceso, no por malentendidos conceptuales.** Aquí están los escollos más comunes y cómo evitarlos:',
@@ -1410,6 +1422,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         advancedTechniques: {
+          id: 'prompt-optimization-techniques-advanced-methods',
           title: 'Técnicas de optimización de prompts: métodos avanzados',
           content: [
             '**Más allá de las 6 palancas principales, las técnicas avanzadas de optimización de prompts aplican patrones especializados para corregir modos de fallo específicos.** Aprende qué técnicas aplicar según tu desafío de optimización:',
@@ -1440,6 +1453,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         promptLibrary: {
+          id: 'saving-optimized-prompts-to-a-library',
           title: 'Guardar prompts optimizados en una biblioteca',
           content: [
             '**Un prompt optimizado es un activo duradero.** Una vez que has probado un prompt en 3 modelos, has confirmado que funciona en 5–10 entradas representativas y has documentado qué hace cada palanca — guárdalo. Una biblioteca de prompts te permite reutilizar prompts optimizados en proyectos, compartirlos con tu equipo y mejorarlos con el tiempo.',
@@ -1450,6 +1464,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         regionalCompliance: {
+          id: 'prompt-optimization-and-regulatory-compliance',
           title: 'Optimización de prompts y cumplimiento regulatorio',
           content: [
             '**En los mercados regulados, la optimización sistemática de prompts es un requisito de cumplimiento, no solo una mejor práctica.** La Ley de IA de la UE clasifica los sistemas de IA utilizados en contextos de alto riesgo — reclutamiento, puntuación crediticia, infraestructura crítica, dispositivos médicos — como que requieren salidas documentadas, comprobables y auditables. Una biblioteca de prompts con control de versiones con registros de iteración, resultados de prueba antes/después y registros de calidad de salida satisface directamente los requisitos del Acto para la documentación técnica y la supervisión humana.',
@@ -1458,6 +1473,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         multilingualReach: {
+          id: 'prompt-optimization-across-languages-and-regions',
           title: 'Optimización de prompts en idiomas y regiones',
           content: [
             '**La optimización de prompts es una disciplina universal — las 6 palancas y el proceso de 6 pasos se aplican independientemente del idioma en que esté escrito tu prompt.** Sin embargo, los términos de búsqueda locales difieren significativamente, los modelos principales varían por región y algunos idiomas exponen desafíos de optimización únicos.',
@@ -1477,6 +1493,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         relatedReading: {
+          id: 'related-reading',
           title: 'Lecturas relacionadas',
           items: [
             '[¿Qué es el prompt engineering?](/es/prompt-engineering/what-is-prompt-engineering) — la definición pilar y los bloques de construcción principales del diseño de prompts',
@@ -1674,6 +1691,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         localLLMTldr: {
+          id: 'key-takeaways-for-local-llm-users',
           title: 'النقاط الرئيسية لمستخدمي النماذج اللغوية المحلية',
           items: [
             'تحسين الموجّهات أكثر أهمية للنماذج المحلية — النماذج المكمّمة (4-bit، 8-bit) أكثر حساسيةً للتعليمات الغامضة مقارنةً بواجهات APIs السحابية الحدية',
@@ -1685,6 +1703,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         definition: {
+          id: 'what-is-prompt-optimization',
           title: 'ما تحسين الموجّهات؟',
           content: [
             '**تحسين الموجّهات هو العملية التكرارية لمراجعة موجّه موجود لتحسين الجودة أو الدقة أو الاتساق في مخرجات الذكاء الاصطناعي لمهمة محددة.** ينطبق على جميع النماذج الرئيسية — GPT-5.5 وClaude Opus 4.8 وGemini 3.1 Pro والنماذج التي تعمل محليًا عبر Ollama أو LM Studio. حيث تُصمّم هندسة الموجّهات البنية الأولية للموجّه، يُشخّص تحسين الموجّهات ما يفشل ويُطبّق تغييرات موجَّهة حتى تستوفي المخرجات معيارًا محددًا.',
@@ -1697,6 +1716,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         vsPromptEngineering: {
+          id: 'prompt-optimization-vs-prompt-engineering',
           title: 'تحسين الموجّهات مقابل هندسة الموجّهات',
           content: [
             '**تحسين الموجّهات وهندسة الموجّهات تخصصان متكاملان يعملان بالتسلسل.** تُصمّم هندسة الموجّهات موجّهًا من الصفر باستخدام عناصر البناء (الهدف، السياق، الأمثلة، القيود، تنسيق المخرجات، الدور). يأخذ تحسين الموجّهات موجّهًا موجودًا ويُحسّنه بالمراجعة التكرارية. تحتاج كليهما: هندسة الموجّهات تُوصلك إلى "يعمل"؛ تحسين الموجّهات يُوصلك إلى "موثوق".',
@@ -1711,6 +1731,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         whyOptimize: {
+          id: 'why-prompt-optimization-matters',
           title: 'لماذا يهم تحسين الموجّهات',
           content: [
             '**يُزيل تحسين الموجّهات المخرجات غير المتسقة للذكاء الاصطناعي بتشخيص ما يفشل بشكل منهجي وإصلاح متغير واحد في كل مرة.** الموجّه الغامض يُنتج مخرجات غامضة. الموجّه سيء التحديد يُنتج استجابة خارج الهدف. قبل/بعد حقيقي: موجّه غير مُحسَّن يقول "لخّص هذا المقال." عند تشغيله 3 مرات على نفس المقال، يُنتج مخرجات مختلفة تمامًا. بعد التحسين — إضافة تنسيق مخرجات ("3 نقاط، ≤20 كلمة لكل نقطة") ودورًا ("محلل") وتحديدًا دقيقًا ("اسرد 3 نتائج رئيسية، ليس المنهجية") — يُنتج نفس الموجّه نتائج متسقة ومطابقة للمواصفات 3 مرات، في GPT-5.5 وClaude وGemini.',
@@ -1724,6 +1745,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         sixLevers: {
+          id: 'the-6-optimization-levers',
           title: 'الرافعات الست للتحسين',
           content: [
             '**كل موجّه يتكوّن من ستة متغيرات مستقلة يمكنك ضبطها لتحسين المخرجات.** هذه هي "الرافعات" للتحسين. حين يفشل موجّه، يعود الفشل إلى واحدة أو أكثر من هذه الرافعات التي لم تُهيَّأ بشكل صحيح.',
@@ -1745,6 +1767,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         optimizationProcess: {
+          id: 'the-6-step-optimization-process',
           title: 'عملية التحسين من 6 خطوات',
           content: [
             '**تحسين الموجّهات عملية منهجية وقابلة للقياس.** كل خطوة تُضيّق التشخيص: تُحدّد العَرَض، وتربطه برافعة، وتُغيّر متغيرًا، وتختبر على نماذج متعددة، وتقيس التحسين.',
@@ -1773,6 +1796,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         measurementCriteria: {
+          id: 'how-to-measure-prompt-quality',
           title: 'كيفية قياس جودة الموجّه',
           content: [
             '**لا يمكن تحسين ما لا يمكن قياسه.** المعايير التالية تحدد ما إذا كان الموجّه قد نجح. استخدم نقاط التحقق هذه بعد كل تكرار:',
@@ -1794,6 +1818,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         beforeAfterExamples: {
+          id: 'what-does-prompt-optimization-look-like-in-practice',
           title: 'كيف يبدو تحسين الموجّهات في الممارسة؟',
           content: [
             '**تحسين الموجّهات يظهر في التحوّل من التعليمات الغامضة إلى الدقيقة.** تُظهر أزواج قبل/بعد هذه كل رافعة من الرافعات الست في العمل:',
@@ -1809,6 +1834,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         definitionBoxes: {
+          id: 'what-do-these-prompt-optimization-terms-mean',
           title: 'ماذا تعني مصطلحات تحسين الموجّهات؟',
           content: [],
           items: [
@@ -1826,6 +1852,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         modelSpecificTips: {
+          id: 'model-specific-optimization-tips',
           title: 'نصائح تحسين خاصة بكل نموذج',
           content: [
             '**الرافعات الست للتحسين تنطبق على جميع النماذج الرئيسية — GPT-5.5 وClaude Opus 4.8 وGemini 3.1 Pro وMistral Large.** غير أن كل نموذج يستجيب بشكل مختلف لكثافة التعليمات وتحديد التنسيق وتعريف الدور. في ما يلي نصائح الضبط الخاصة بكل نموذج:',
@@ -1842,6 +1869,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         localLLMExamples: {
+          id: 'optimizing-prompts-for-local-llms-ollama-lm-studio',
           title: 'تحسين الموجّهات للنماذج اللغوية المحلية (Ollama، LM Studio)',
           content: [
             '**النماذج المحلية التي تعمل عبر Ollama أو LM Studio تستجيب لنفس الرافعات الست للتحسين، لكن بتفاوتات أكثر صرامة.** النماذج المكمّمة (4-bit، 8-bit) لديها قدرة أقل على اتباع التعليمات مقارنةً بواجهات APIs الحدية — تستفيد أكثر من موجّهات أبسط وأكثر صراحةً.',
@@ -1854,6 +1882,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         commonMistakes: {
+          id: 'the-7-most-common-optimization-mistakes',
           title: 'أكثر 7 أخطاء تحسين شيوعًا',
           content: [
             '**معظم التحسين يفشل بسبب أخطاء في العملية، ليس بسبب سوء فهم مفاهيمي.** إليك المزالق الأكثر شيوعًا وكيفية تجنبها:',
@@ -1890,6 +1919,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         advancedTechniques: {
+          id: 'prompt-optimization-techniques-advanced-methods',
           title: 'تقنيات تحسين الموجّهات: الطرق المتقدمة',
           content: [
             '**بعيدًا عن الرافعات الست الرئيسية، تُطبّق تقنيات التحسين المتقدمة أنماطًا متخصصة لتصحيح أوضاع فشل محددة.** تعلّم أي التقنيات تُطبّق وفقًا لتحدي تحسينك:',
@@ -1920,6 +1950,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         promptLibrary: {
+          id: 'saving-optimized-prompts-to-a-library',
           title: 'حفظ الموجّهات المُحسَّنة في مكتبة',
           content: [
             '**الموجّه المُحسَّن أصل دائم.** بمجرد اختبار موجّه على 3 نماذج وتأكيد عمله على 5–10 مدخلات تمثيلية وتوثيق ما تفعله كل رافعة — احفظه. تُتيح لك مكتبة الموجّهات إعادة استخدام الموجّهات المُحسَّنة عبر المشاريع ومشاركتها مع فريقك وتحسينها بمرور الوقت.',
@@ -1929,6 +1960,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         regionalCompliance: {
+          id: 'prompt-optimization-and-regulatory-compliance',
           title: 'تحسين الموجّهات والامتثال التنظيمي',
           content: [
             '**في الأسواق المُنظَّمة، تحسين الموجّهات المنهجي متطلب امتثال، وليس مجرد ممارسة فضلى.** يُصنّف قانون الذكاء الاصطناعي الأوروبي أنظمة الذكاء الاصطناعي المستخدمة في سياقات عالية الخطورة — التوظيف، التسجيل الائتماني، البنية التحتية الحرجة، الأجهزة الطبية — كأنظمة تتطلب مخرجات موثَّقة وقابلة للتحقق والتدقيق.',
@@ -1937,6 +1969,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         multilingualReach: {
+          id: 'prompt-optimization-across-languages-and-regions',
           title: 'تحسين الموجّهات عبر اللغات والمناطق',
           content: [
             '**تحسين الموجّهات تخصص عالمي — الرافعات الست وعملية الـ6 خطوات تنطبق بغض النظر عن لغة كتابة موجّهك.** غير أن مصطلحات البحث المحلية تختلف بشكل ملحوظ، والنماذج الرئيسية تتباين حسب المنطقة.',
@@ -1956,6 +1989,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         relatedReading: {
+          id: 'related-reading',
           title: 'قراءات ذات صلة',
           items: [
             'ما هندسة الموجّهات؟ — التعريف المحوري والعناصر الأساسية لتصميم الموجّهات',
@@ -2103,22 +2137,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       toc: [
-        { label: 'Points clés à retenir', anchor: 'points-cles-a-retenir' },
-        { label: 'Points clés pour les utilisateurs de LLM locaux', anchor: 'points-cles-pour-les-utilisateurs-de-llm-locaux' },
         { label: 'Qu\'est-ce que l\'optimisation de prompt ?', anchor: 'qu-est-ce-que-l-optimisation-de-prompt' },
         { label: 'Optimisation de prompt vs ingénierie de prompt', anchor: 'optimisation-de-prompt-vs-ingenierie-de-prompt' },
         { label: 'Pourquoi l\'optimisation de prompt est importante', anchor: 'pourquoi-l-optimisation-de-prompt-est-importante' },
         { label: 'Les 6 leviers d\'optimisation', anchor: 'les-6-leviers-d-optimisation' },
-        { label: 'Le processus d\'optimisation en 6 étapes', anchor: 'le-processus-d-optimisation-en-6-etapes' },
-        { label: 'Comment mesurer la qualité des prompts', anchor: 'comment-mesurer-la-qualite-des-prompts' },
-        { label: 'À quoi ressemble l\'optimisation de prompt dans la pratique ?', anchor: 'a-quoi-ressemble-l-optimisation-de-prompt-dans-la-pratique' },
-        { label: 'Conseils d\'optimisation spécifiques aux modèles', anchor: 'conseils-d-optimisation-specifiques-aux-modeles' },
         { label: 'Optimiser les prompts pour les LLM locaux', anchor: 'optimiser-les-prompts-pour-les-llm-locaux-ollama-lm-studio' },
         { label: 'Les 7 erreurs d\'optimisation les plus courantes', anchor: 'les-7-erreurs-d-optimisation-les-plus-courantes' },
-        { label: 'Techniques d\'optimisation de prompt : méthodes avancées', anchor: 'techniques-d-optimisation-de-prompt-methodes-avancees' },
-        { label: 'Sauvegarder les prompts optimisés dans une bibliothèque', anchor: 'sauvegarder-les-prompts-optimises-dans-une-bibliotheque' },
-        { label: 'Conformité réglementaire', anchor: 'conformite-reglementaire' },
-        { label: 'Langues et régions', anchor: 'optimisation-de-prompt-dans-differentes-langues-et-regions' },
         { label: 'Que signifient ces termes d\'optimisation de prompt ?', anchor: 'que-signifient-ces-termes-d-optimisation-de-prompt' },
         { label: 'Lectures connexes', anchor: 'lectures-connexes' },
         { label: 'FAQ', anchor: 'faq-optimisation-de-prompt' },
@@ -2159,6 +2183,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         vsPromptEngineering: {
+          id: 'optimisation-de-prompt-vs-ingenierie-de-prompt',
           title: 'Optimisation de prompt vs ingénierie de prompt',
           content: [
             '**L\'optimisation de prompt et l\'ingénierie de prompt sont des disciplines complémentaires qui fonctionnent en séquence.** L\'ingénierie de prompt conçoit un prompt à partir de zéro en utilisant des éléments constitutifs (objectif, contexte, exemples, contraintes, format de sortie, rôle). L\'optimisation de prompt prend un prompt existant et l\'améliore par révision itérative. Vous avez besoin des deux : l\'ingénierie de prompt vous amène à « fonctionnel » ; l\'optimisation de prompt vous amène à « fiable ».',
@@ -2612,25 +2637,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       toc: [
-        { label: '重要なポイント', anchor: 'jyuyouteki-pointo' },
-        { label: 'ローカルLLMユーザーの重要なポイント', anchor: 'rokal-llm-yuza-jyuyouteki-pointo' },
-        { label: 'プロンプト最適化とは？', anchor: 'puromputo-saikoka-to-ha' },
-        { label: 'プロンプト最適化とプロンプトエンジニアリング', anchor: 'puromputo-saikoka-to-puromputo-enjinia' },
-        { label: 'プロンプト最適化が重要な理由', anchor: 'puromputo-saikoka-ga-jyuyou' },
-        { label: '6つの最適化レバー', anchor: '6tsu-saikoka-reba' },
-        { label: '6ステップの最適化プロセス', anchor: '6suteppu-saikoka-purossu' },
-        { label: 'プロンプト品質を測定する方法', anchor: 'puromputo-hinshitsu-sokutei' },
-        { label: 'プロンプト最適化は実践ではどのように見えるか？', anchor: 'puromputo-saikoka-jissenn' },
-        { label: 'モデル固有の最適化のヒント', anchor: 'moderu-koyuu-saikoka-hinto' },
-        { label: 'ローカルLLMのプロンプト最適化', anchor: 'rokal-llm-puromputo-saikoka' },
-        { label: '7つの最も一般的な最適化エラー', anchor: '7tsu-saikoka-era' },
-        { label: 'プロンプト最適化テクニック：高度な方法', anchor: 'puromputo-saikoka-kodo' },
-        { label: '最適化されたプロンプトをライブラリに保存する', anchor: 'saikoka-raiburari' },
-        { label: '規制準拠', anchor: 'kiseizyunkyou' },
-        { label: '言語と地域', anchor: 'gengo-chiiki' },
-        { label: 'これらのプロンプト最適化用語は何ですか？', anchor: 'puromputo-saikoka-yougo' },
-        { label: '関連読書', anchor: 'kanren-dokusho' },
-        { label: 'FAQ', anchor: 'faq-puromputo-saikoka' },
       ],
       sections: {
         tldr: {
@@ -3061,25 +3067,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       toc: [
-        { label: '关键要点', anchor: 'guan-jian-yao-dian' },
-        { label: '本地LLM用户的关键要点', anchor: 'ben-di-llm-yong-hu-guan-jian-yao-dian' },
-        { label: '什么是提示词优化？', anchor: 'shi-me-shi-ti-shi-ci-you-hua' },
-        { label: '提示词优化与提示词工程的对比', anchor: 'ti-shi-ci-you-hua-yu-ti-shi-ci-gong-cheng' },
-        { label: '为什么提示词优化很重要', anchor: 'wei-shi-me-ti-shi-ci-you-hua-hen-zhong-yao' },
-        { label: '6个优化杠杆', anchor: '6ge-you-hua-gang-gan' },
-        { label: '6步优化流程', anchor: '6bu-you-hua-liu-cheng' },
-        { label: '如何衡量提示词质量', anchor: 'ru-he-heng-liang-ti-shi-ci-zhi-liang' },
-        { label: '提示词优化在实践中是什么样的？', anchor: 'ti-shi-ci-you-hua-zai-shi-jian' },
-        { label: '特定模型的优化提示', anchor: 'te-ding-mo-xing-you-hua-ti-shi' },
-        { label: '为本地LLM优化提示词', anchor: 'wei-ben-di-llm-you-hua-ti-shi-ci' },
-        { label: '7个最常见的优化错误', anchor: '7ge-zui-chang-jian-you-hua-cuo-wu' },
-        { label: '提示词优化技巧：高级方法', anchor: 'ti-shi-ci-you-hua-ji-qiao-gao-ji' },
-        { label: '将优化的提示词保存到库', anchor: 'jiang-you-hua-ti-shi-ci-bao-cun-dao-ku' },
-        { label: '监管合规', anchor: 'jian-guan-he-gui' },
-        { label: '语言和地区', anchor: 'yu-yan-he-di-qu' },
-        { label: '这些提示词优化术语是什么意思？', anchor: 'zhe-xie-ti-shi-ci-you-hua-shu-yu' },
-        { label: '相关阅读', anchor: 'xiang-guan-yue-du' },
-        { label: 'FAQ', anchor: 'faq-ti-shi-ci-you-hua' },
       ],
       sections: {
         tldr: {
@@ -3535,24 +3522,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ],
     toc: [
       { label: 'Principais conclusões', anchor: 'key-takeaways' },
-      { label: 'Principais conclusões para usuários de LLM local', anchor: 'key-takeaways-for-local-llm-users' },
-      { label: 'O que é otimização de prompts?', anchor: 'what-is-prompt-optimization' },
-      { label: 'Otimização de prompts vs prompt engineering', anchor: 'prompt-optimization-vs-prompt-engineering' },
-      { label: 'Por que a otimização de prompts importa', anchor: 'why-prompt-optimization-matters' },
-      { label: 'As 6 alavancas de otimização', anchor: 'the-6-optimization-levers' },
-      { label: 'O processo de otimização de 6 etapas', anchor: 'the-6-step-optimization-process' },
-      { label: 'Como medir a qualidade do prompt', anchor: 'how-to-measure-prompt-quality' },
-      { label: 'Como é a otimização de prompts na prática?', anchor: 'what-does-prompt-optimization-look-like-in-practice' },
-      { label: 'Dicas de otimização específicas por modelo', anchor: 'model-specific-optimization-tips' },
-      { label: 'Otimizando prompts para LLMs locais', anchor: 'optimizing-prompts-for-local-llms-ollama-lm-studio' },
-      { label: 'Os 7 erros de otimização mais comuns', anchor: 'the-7-most-common-optimization-mistakes' },
-      { label: 'Técnicas de otimização de prompts: métodos avançados', anchor: 'prompt-optimization-techniques-advanced-methods' },
-      { label: 'Salvando prompts otimizados em uma biblioteca', anchor: 'saving-optimized-prompts-to-a-library' },
-      { label: 'Conformidade regulatória', anchor: 'prompt-optimization-and-regulatory-compliance' },
-      { label: 'Idiomas e regiões', anchor: 'prompt-optimization-across-languages-and-regions' },
-      { label: 'O que significam esses termos de otimização de prompts?', anchor: 'what-do-these-prompt-optimization-terms-mean' },
-      { label: 'Leitura relacionada', anchor: 'related-reading' },
-      { label: 'FAQ', anchor: 'faq-prompt-optimization' },
     ],
     faqSchema: {
       '@context': 'https://schema.org',
@@ -4133,6 +4102,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       localLLMTldr: {
+        id: 'key-takeaways-for-local-llm-users',
         title: '로컬 LLM 사용자를 위한 핵심 요점',
         items: [
           '프롬프트 최적화는 로컬 모델에 더욱 중요합니다 — 양자화된 모델(4-bit, 8-bit)은 클라우드 frontier API보다 모호한 지시에 더 민감합니다.',
@@ -4144,6 +4114,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       definition: {
+        id: 'what-is-prompt-optimization',
         title: '프롬프트 최적화란?',
         content: [
           '**프롬프트 최적화는 특정 작업에 대한 AI 출력의 품질, 정확성 또는 일관성을 향상시키기 위해 기존 프롬프트를 반복적으로 수정하는 프로세스입니다.** 모든 주요 모델 — GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro, 그리고 Ollama 또는 LM Studio를 통해 로컬에서 실행되는 모델 — 에 적용됩니다. 프롬프트 엔지니어링이 프롬프트의 초기 구조를 설계하는 곳에서, 프롬프트 최적화는 무엇이 실패하는지 진단하고 출력이 정의된 기준을 충족할 때까지 목표 변경을 적용합니다.',
@@ -4153,6 +4124,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       vsPromptEngineering: {
+        id: 'prompt-optimization-vs-prompt-engineering',
         title: '프롬프트 최적화 vs 프롬프트 엔지니어링',
         content: [
           '**프롬프트 최적화와 프롬프트 엔지니어링은 순서대로 작동하는 보완적인 학문입니다.** 프롬프트 엔지니어링은 구성 요소(목표, 컨텍스트, 예시, 제약 조건, 출력 형식, 역할)를 사용하여 처음부터 프롬프트를 설계합니다. 프롬프트 최적화는 기존 프롬프트를 가져다가 반복적 수정을 통해 개선합니다. 둘 다 필요합니다: 프롬프트 엔지니어링은 "작동함"까지 이끌고; 프롬프트 최적화는 "신뢰할 수 있음"까지 이끕니다.',
@@ -4167,6 +4139,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       whyOptimize: {
+        id: 'why-prompt-optimization-matters',
         title: '프롬프트 최적화가 중요한 이유',
         content: [
           '**프롬프트 최적화는 무엇이 실패하는지 체계적으로 진단하고 한 번에 하나의 변수를 수정하여 불일관한 AI 출력을 제거합니다.** 모호한 프롬프트는 모호한 출력을 생성합니다. 실제 전후 사례: 최적화되지 않은 프롬프트 "이 기사를 요약하라"를 같은 기사에서 3번 실행하면 완전히 다른 출력을 생성합니다. 최적화 후 — 출력 형식("3개 항목, 각 ≤20단어"), 역할("분석가"), 구체성("방법론이 아닌 3가지 핵심 발견을 나열하라")을 추가하면 — 같은 프롬프트가 GPT-5.5, Claude, Gemini에서 3번 모두 일관되고 사양에 맞는 결과를 생성합니다.',
@@ -4180,6 +4153,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       sixLevers: {
+        id: 'the-6-optimization-levers',
         title: '6가지 최적화 레버',
         content: [
           '**모든 프롬프트는 출력을 개선하기 위해 조정할 수 있는 6가지 독립 변수로 구성됩니다.** 이것이 최적화의 "레버"입니다. 프롬프트가 실패하면 실패는 올바르게 설정되지 않은 하나 이상의 레버로 추적됩니다.',
@@ -4201,6 +4175,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       optimizationProcess: {
+        id: 'the-6-step-optimization-process',
         title: '6단계 최적화 프로세스',
         content: [
           '**프롬프트 최적화는 체계적이고 측정 가능한 프로세스입니다.** 각 단계는 진단을 좁힙니다: 증상을 식별하고, 레버에 매핑하고, 하나의 변수를 변경하고, 여러 모델에서 테스트하고, 개선을 측정합니다.',
@@ -4229,6 +4204,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       measurementCriteria: {
+        id: 'how-to-measure-prompt-quality',
         title: '프롬프트 품질 측정 방법',
         content: [
           '**측정할 수 없는 것은 최적화할 수 없습니다.** 다음 기준은 프롬프트가 성공했는지 여부를 정의합니다. 각 반복 후 이러한 체크포인트를 사용하십시오:',
@@ -4250,6 +4226,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       beforeAfterExamples: {
+        id: 'what-does-prompt-optimization-look-like-in-practice',
         title: '프롬프트 최적화는 실제로 어떻게 보입니까?',
         content: [
           '**프롬프트 최적화는 모호한 지시에서 정밀한 지시로의 전환에서 볼 수 있습니다.** 이 전후 쌍은 6가지 레버 각각이 작동하는 것을 보여줍니다:',
@@ -4265,6 +4242,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       definitionBoxes: {
+        id: 'what-do-these-prompt-optimization-terms-mean',
         title: '이 프롬프트 최적화 용어들은 무엇을 의미합니까?',
         content: [],
         items: [
@@ -4282,6 +4260,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       modelSpecificTips: {
+        id: 'model-specific-optimization-tips',
         title: '모델별 최적화 팁',
         content: [
           '**6가지 최적화 레버는 모든 주요 모델 — GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro, Mistral Large — 에 적용됩니다.** 그러나 각 모델은 지시 밀도, 형식 구체성, 역할 정의에 다르게 반응합니다. 다음은 모델별 조정 팁입니다:',
@@ -4295,6 +4274,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       localLLMExamples: {
+        id: 'optimizing-prompts-for-local-llms-ollama-lm-studio',
         title: '로컬 LLM을 위한 프롬프트 최적화 (Ollama, LM Studio)',
         content: [
           '**Ollama 또는 LM Studio를 통해 실행되는 로컬 모델은 동일한 6가지 최적화 레버에 반응하지만 더 엄격한 허용 오차를 가집니다.** 양자화된 모델(4-bit, 8-bit)은 전체 정밀도 frontier API에 비해 지시 준수 능력이 낮습니다 — 더 단순하고 명시적인 프롬프트에서 더 많은 혜택을 받고 모호한 지시에서 실패하기 더 쉽습니다.',
@@ -4307,6 +4287,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       commonMistakes: {
+        id: 'the-7-most-common-optimization-mistakes',
         title: '7가지 가장 흔한 최적화 실수',
         content: [
           '**대부분의 최적화는 개념적 오해가 아닌 프로세스 오류로 실패합니다.** 다음은 가장 흔한 함정과 이를 피하는 방법입니다:',
@@ -4343,6 +4324,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       advancedTechniques: {
+        id: 'prompt-optimization-techniques-advanced-methods',
         title: '프롬프트 최적화 기술: 고급 방법',
         content: [
           '**6가지 주요 레버를 넘어 고급 프롬프트 최적화 기술은 특정 실패 방식을 수정하기 위해 특화된 패턴을 적용합니다.** 최적화 도전에 따라 적용할 기술을 배우십시오:',
@@ -4373,6 +4355,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       promptLibrary: {
+        id: 'saving-optimized-prompts-to-a-library',
         title: '최적화된 프롬프트를 라이브러리에 저장',
         content: [
           '**최적화된 프롬프트는 지속적인 자산입니다.** 3개 모델에서 프롬프트를 테스트하고, 5–10개의 대표적인 입력에서 작동하는지 확인하고, 각 레버가 무엇을 하는지 문서화한 후 — 저장하십시오. 프롬프트 라이브러리를 사용하면 프로젝트 전반에 걸쳐 최적화된 프롬프트를 재사용하고, 팀과 공유하고, 시간이 지남에 따라 개선할 수 있습니다.',
@@ -4383,6 +4366,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       regionalCompliance: {
+        id: 'prompt-optimization-and-regulatory-compliance',
         title: '프롬프트 최적화와 규정 준수',
         content: [
           '**규제 시장에서 체계적인 프롬프트 최적화는 모범 사례일 뿐만 아니라 규정 준수 요구 사항입니다.** EU AI 법은 고위험 맥락에서 사용되는 AI 시스템 — 채용, 신용 점수, 중요 인프라, 의료 기기 — 이 문서화되고 검증 가능하며 감사 가능한 출력을 요구합니다. 반복 기록, 전후 테스트 결과, 출력 품질 기록이 있는 버전 관리된 프롬프트 라이브러리는 기술 문서 및 인간 감독에 대한 법의 요구 사항을 직접 충족합니다.',
@@ -4391,6 +4375,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       multilingualReach: {
+        id: 'prompt-optimization-across-languages-and-regions',
         title: '언어 및 지역에 걸친 프롬프트 최적화',
         content: [
           '**프롬프트 최적화는 보편적인 학문입니다 — 6가지 레버와 6단계 프로세스는 프롬프트가 작성된 언어에 관계없이 적용됩니다.** 그러나 로컬 검색어가 크게 다르고, 주요 모델이 지역별로 다르며, 일부 언어는 고유한 최적화 도전을 노출합니다.',
@@ -4410,6 +4395,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       relatedReading: {
+        id: 'related-reading',
         title: '관련 읽기',
         items: [
           '[프롬프트 엔지니어링이란?](/ko/prompt-engineering/what-is-prompt-engineering) — 프롬프트 설계의 기둥 정의와 주요 구성 요소',
