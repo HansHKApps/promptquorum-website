@@ -12,12 +12,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       theme: 'GPU Buying Guides',
       title: 'Used GPUs for Local LLMs: Best Value Picks',
       heroImage: '/images/used-gpus-for-local-llms-overview-hero-en.webp',
-      dateModified: '2026-06-20',
       seoTitle: 'Best Used GPUs for Local LLMs: RTX 3060, 3080, 4090 Buying Guide',
-      intro: '**Used GPUs offer 30-50% savings over new, with minimal performance risk on reputable models like RTX 3060 12GB and RTX 3080.** As of April 2026, the used market is flooded with ex-mining and ex-gaming cards at stable prices. Buying used makes sense for your first rig or when upgrading; mining cards are risky unless you can test on-site.',
+      intro: '**Used GPUs offer 30-50% savings over new, with minimal performance risk on reputable models like RTX 3060 12GB and RTX 3080.** The used market is generally well-stocked with ex-mining and ex-gaming cards at fairly stable prices. Buying used makes sense for your first rig or when upgrading; mining cards are risky unless you can test on-site.',
       metaDescription: 'Best used GPUs for local LLMs: RTX 3060, 3080, 3090, 4090. Where to buy, risk assessment, how to bench-test.',
       publishDate: '2026-04-05',
-      leadAnswerBlock: '**Used GPUs offer 30-50% savings over new, with minimal performance risk on reputable models like RTX 3060 12GB and RTX 3080. As of April 2026, the used market is flooded with ex-mining and ex-gaming cards at stable prices.**',
+      dateModified: '2026-08-28',
+      leadAnswerBlock: '**Used GPUs offer 30-50% savings over new, with minimal performance risk on reputable models like RTX 3060 12GB and RTX 3080. The used market is generally well-stocked with ex-mining and ex-gaming cards at fairly stable prices.**',
       audience: 'Developers familiar with Ollama or LM Studio optimizing local LLM workflows',
       readTime: '8 min',
       educationalLevel: 'Intermediate',
@@ -37,6 +37,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Used GPUs like the RTX 3060 12GB ($200-250) and RTX 3080 10GB ($350-400) offer 30-50% savings over new with minimal risk, while mining cards run 30% cheaper but need an in-person VRAM stress test before you buy.' },
+            { type: 'plain-terms', text: 'You can save a lot of money buying a used graphics card for running local AI models instead of a new one, as long as you avoid cards that were run 24/7 for cryptocurrency mining without checking them first. A gently used gaming card is nearly as reliable as new; a used mining card needs a memory stress test before you hand over money.' },
+          ],
           items: [
             'RTX 3060 12GB used ($200-250) and RTX 3080 10GB used ($350-400) are the safest bets--high volume, stable pricing, proven VRAM health.',
             'Mining cards are 30% cheaper but carry 10-20% risk of VRAM degradation. Only buy if you can stress-test on-site for 2+ hours.',
@@ -150,7 +154,7 @@ schema: {
         'description': 'Best used GPUs for local LLMs: RTX 3060, 3080, 3090, 4090. Where to buy, risk assessment, how to bench-test.',
         'url': 'https://www.promptquorum.com/local-llms/used-gpus-for-local-llms',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-06-14',
+        'dateModified': '2026-08-28',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -247,10 +251,10 @@ schema: {
       title: 'GPUs de segunda mano para LLMs locales: Las mejores opciones por precio',
       heroImage: '/images/used-gpus-for-local-llms-overview-hero-es.webp',
       seoTitle: 'GPUs de segunda mano para LLMs locales: RTX 3060, 3080, 4090',
-      intro: '**Las GPUs de segunda mano ofrecen un ahorro del 30-50% frente a las nuevas, con un riesgo de rendimiento mínimo en modelos de probada fiabilidad como la RTX 3060 12GB y la RTX 3080.** En abril de 2026, el mercado de segunda mano está inundado de tarjetas ex-minería y ex-gaming a precios estables. Comprar de segunda mano tiene sentido para tu primer equipo o al actualizar; las tarjetas de minería son arriesgadas a menos que puedas probarlas in situ.',
+      intro: '**Las GPUs de segunda mano ofrecen un ahorro del 30-50% frente a las nuevas, con un riesgo de rendimiento mínimo en modelos de probada fiabilidad como la RTX 3060 12GB y la RTX 3080.** El mercado de segunda mano suele estar bien surtido de tarjetas ex-minería y ex-gaming a precios relativamente estables. Comprar de segunda mano tiene sentido para tu primer equipo o al actualizar; las tarjetas de minería son arriesgadas a menos que puedas probarlas in situ.',
       metaDescription: 'Mejores GPUs de segunda mano para LLMs locales: RTX 3060, 3080, 3090, 4090. Dónde comprar, evaluación de riesgos y cómo hacer pruebas de rendimiento.',
       publishDate: '2026-04-05',
-      leadAnswerBlock: '**Las GPUs de segunda mano ofrecen un ahorro del 30-50% frente a las nuevas, con un riesgo mínimo en modelos como la RTX 3060 12GB y la RTX 3080. En abril de 2026, el mercado de segunda mano está inundado de tarjetas ex-minería y ex-gaming a precios estables.**',
+      leadAnswerBlock: '**Las GPUs de segunda mano ofrecen un ahorro del 30-50% frente a las nuevas, con un riesgo mínimo en modelos como la RTX 3060 12GB y la RTX 3080. El mercado de segunda mano suele estar bien surtido de tarjetas ex-minería y ex-gaming a precios relativamente estables.**',
       audience: 'Desarrolladores familiarizados con Ollama o LM Studio que optimizan flujos de trabajo de LLMs locales',
       readTime: '8 min de lectura',
       educationalLevel: 'Intermediate',
@@ -269,6 +273,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Las GPUs de segunda mano como la RTX 3060 12GB ($200-250) y la RTX 3080 10GB ($350-400) ofrecen un ahorro del 30-50% frente a las nuevas con riesgo mínimo, mientras que las tarjetas de minería son un 30% más baratas pero necesitan una prueba de estrés de VRAM en persona antes de comprarlas.' },
+            { type: 'plain-terms', text: 'Puedes ahorrar mucho dinero comprando una tarjeta gráfica de segunda mano para ejecutar modelos de IA locales en lugar de una nueva, siempre que evites las tarjetas que estuvieron minando criptomonedas 24/7 sin comprobarlas antes. Una tarjeta de gaming poco usada es casi tan fiable como una nueva; una tarjeta de minería usada necesita una prueba de estrés de memoria antes de que entregues el dinero.' },
+          ],
           items: [
             'La RTX 3060 12GB de segunda mano ($200-250) y la RTX 3080 10GB de segunda mano ($350-400) son las apuestas más seguras: alto volumen en el mercado, precios estables y VRAM de salud comprobada.',
             'Las tarjetas de minería son un 30% más baratas, pero presentan un riesgo de degradación del VRAM del 10-20%. Cómprala solo si puedes hacer una prueba de estrés in situ durante 2 horas o más.',
@@ -382,7 +390,7 @@ schema: {
         'description': 'Mejores GPUs de segunda mano para LLMs locales: RTX 3060, 3080, 3090, 4090. Dónde comprar, evaluación de riesgos y cómo hacer pruebas de rendimiento.',
         'url': 'https://www.promptquorum.com/es/local-llms/used-gpus-for-local-llms',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-06-14',
+        'dateModified': '2026-08-28',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -458,10 +466,10 @@ schema: {
       title: 'وحدات ⁨GPU⁩ المستعملة لنماذج ⁨LLM⁩ المحلية: أفضل الخيارات حسب السعر',
       heroImage: '/images/used-gpus-for-local-llms-overview-hero-ar.webp',
       seoTitle: '⁨GPU⁩ مستعملة لنماذج ⁨LLM⁩ المحلية: ⁨RTX 3060⁩ و⁨3080⁩ و⁨4090⁩',
-      intro: '**توفّر وحدات GPU المستعملة 30-50% مقارنة بالجديدة، مع مخاطر أداء ضئيلة في الطُرز الموثوقة المُثبتة مثل RTX 3060 12GB وRTX 3080.** في أبريل 2026، السوق المستعمل مغمور ببطاقات سابقة للتعدين وسابقة للألعاب بأسعار مستقرة. الشراء المستعمل منطقي لأول جهاز لك أو عند الترقية؛ بطاقات التعدين محفوفة بالمخاطر ما لم تستطع اختبارها في الموقع.',
+      intro: '**توفّر وحدات GPU المستعملة 30-50% مقارنة بالجديدة، مع مخاطر أداء ضئيلة في الطُرز الموثوقة المُثبتة مثل RTX 3060 12GB وRTX 3080.** السوق المستعمل عادةً ما يكون مليئًا ببطاقات سابقة للتعدين وسابقة للألعاب بأسعار مستقرة نسبيًا. الشراء المستعمل منطقي لأول جهاز لك أو عند الترقية؛ بطاقات التعدين محفوفة بالمخاطر ما لم تستطع اختبارها في الموقع.',
       metaDescription: '⁨RTX 3060 12GB⁩ مستعملة بـ ⁨200-250⁩ دولارًا توفّر ⁨40%⁩ عن السعر الجديد. دليل ⁨GPU⁩ مستعملة لـ ⁨LLM⁩ المحلي: أين تشتري، اختبار ⁨VRAM⁩، مخاطر التعدين. ⁨2026⁩.',
       publishDate: '2026-04-05',
-      leadAnswerBlock: '**توفّر وحدات GPU المستعملة 30-50% مقارنة بالجديدة، مع مخاطر ضئيلة في طُرز مثل RTX 3060 12GB وRTX 3080. في أبريل 2026، السوق المستعمل مغمور ببطاقات سابقة للتعدين وسابقة للألعاب بأسعار مستقرة.**',
+      leadAnswerBlock: '**توفّر وحدات GPU المستعملة 30-50% مقارنة بالجديدة، مع مخاطر ضئيلة في طُرز مثل RTX 3060 12GB وRTX 3080. السوق المستعمل عادةً ما يكون مليئًا ببطاقات سابقة للتعدين وسابقة للألعاب بأسعار مستقرة نسبيًا.**',
       audience: 'المطورون المُلمّون بـ Ollama أو LM Studio الذين يحسّنون سير عمل نماذج LLM المحلية',
       readTime: '8 دقائق قراءة',
       educationalLevel: 'Intermediate',
@@ -480,6 +488,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'توفّر بطاقات GPU المستعملة مثل RTX 3060 12GB (200-250$) وRTX 3080 10GB (350-400$) توفيرًا بنسبة 30-50% مقارنة بالجديدة مع مخاطر ضئيلة، بينما تكون بطاقات التعدين أرخص بنسبة 30% لكنها تحتاج اختبار إجهاد لذاكرة VRAM حضوريًا قبل الشراء.' },
+            { type: 'plain-terms', text: 'يمكنك توفير الكثير من المال بشراء بطاقة رسومات مستعملة لتشغيل نماذج الذكاء الاصطناعي المحلية بدلاً من بطاقة جديدة، طالما تجنبت البطاقات التي عملت على مدار الساعة في تعدين العملات الرقمية دون فحصها أولاً. البطاقة المستخدمة قليلاً للألعاب موثوقة تقريبًا مثل الجديدة؛ أما بطاقة التعدين المستعملة فتحتاج اختبار إجهاد للذاكرة قبل أن تدفع المال.' },
+          ],
           items: [
             'RTX 3060 12GB المستعملة ($200-250) وRTX 3080 10GB المستعملة ($350-400) هما الخياران الأكثر أمانًا: حجم كبير في السوق، أسعار مستقرة، وVRAM مُثبت الصحة.',
             'بطاقات التعدين أرخص بنسبة 30%، لكنها تنطوي على خطر تدهور VRAM بنسبة 10-20%. اشترِها فقط إذا أمكنك إجراء اختبار إجهاد في الموقع لمدة ساعتين أو أكثر.',
@@ -593,7 +605,7 @@ schema: {
         'description': 'أفضل وحدات GPU المستعملة لنماذج LLM المحلية: RTX 3060، 3080، 3090، 4090. أين تشتري، وتقييم المخاطر، وكيفية اختبار الأداء.',
         'url': 'https://www.promptquorum.com/ar/local-llms/used-gpus-for-local-llms',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-06-14',
+        'dateModified': '2026-08-28',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'inLanguage': 'ar',
@@ -671,10 +683,10 @@ schema: {
       title: 'GPUs usadas para LLMs locais: As melhores opções por preço',
       heroImage: '/images/used-gpus-for-local-llms-overview-hero-pt.webp',
       seoTitle: 'Melhores GPUs usadas para LLMs locais: RTX 3060, 3080, 4090 — Guia de compra',
-      intro: '**As GPUs usadas oferecem uma economia de 30-50% em relação às novas, com risco mínimo de desempenho em modelos de confiabilidade comprovada como a RTX 3060 12GB e a RTX 3080.** Em abril de 2026, o mercado de usados está repleto de placas ex-mineração e ex-gaming a preços estáveis. Comprar usado faz sentido para seu primeiro setup ou ao atualizar; placas de mineração são arriscadas a menos que você possa testá-las in loco.',
+      intro: '**As GPUs usadas oferecem uma economia de 30-50% em relação às novas, com risco mínimo de desempenho em modelos de confiabilidade comprovada como a RTX 3060 12GB e a RTX 3080.** O mercado de usados costuma estar bem abastecido de placas ex-mineração e ex-gaming a preços relativamente estáveis. Comprar usado faz sentido para seu primeiro setup ou ao atualizar; placas de mineração são arriscadas a menos que você possa testá-las in loco.',
       metaDescription: 'Melhores GPUs usadas para LLMs locais: RTX 3060, 3080, 3090, 4090. Onde comprar, avaliação de riscos e como fazer benchmarks.',
       publishDate: '2026-04-05',
-      leadAnswerBlock: '**As GPUs usadas oferecem uma economia de 30-50% em relação às novas, com risco mínimo em modelos como a RTX 3060 12GB e a RTX 3080. Em abril de 2026, o mercado de usados está repleto de placas ex-mineração e ex-gaming a preços estáveis.**',
+      leadAnswerBlock: '**As GPUs usadas oferecem uma economia de 30-50% em relação às novas, com risco mínimo em modelos como a RTX 3060 12GB e a RTX 3080. O mercado de usados costuma estar bem abastecido de placas ex-mineração e ex-gaming a preços relativamente estáveis.**',
       audience: 'Desenvolvedores familiarizados com Ollama ou LM Studio que otimizam fluxos de trabalho de LLMs locais',
       readTime: '8 min de leitura',
       educationalLevel: 'Intermediate',
@@ -693,6 +705,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'GPUs usadas como a RTX 3060 12GB ($200-250) e a RTX 3080 10GB ($350-400) oferecem uma economia de 30-50% em relação às novas com risco mínimo, enquanto as placas de mineração custam 30% menos, mas precisam de um teste de estresse de VRAM presencial antes da compra.' },
+            { type: 'plain-terms', text: 'Você pode economizar bastante dinheiro comprando uma placa de vídeo usada para rodar modelos de IA locais em vez de uma nova, desde que evite placas que rodaram 24/7 minerando criptomoedas sem serem verificadas antes. Uma placa de jogos pouco usada é quase tão confiável quanto uma nova; uma placa de mineração usada precisa de um teste de estresse de memória antes de você fechar negócio.' },
+          ],
           items: [
             'RTX 3060 12GB usada (R$ 1.200-1.500) e RTX 3080 10GB usada (R$ 1.800-2.200) são as apostas mais seguras — alto volume no mercado, preços estáveis, saúde de VRAM comprovada.',
             'Placas de mineração são 30% mais baratas, mas apresentam risco de degradação de VRAM de 10-20%. Compre apenas se puder fazer teste de estresse in loco por 2 horas ou mais.',
@@ -807,7 +823,7 @@ schema: {
         url: 'https://www.promptquorum.com/pt/local-llms/used-gpus-for-local-llms',
         inLanguage: 'pt-BR',
         datePublished: '2026-04-05',
-        dateModified: '2026-06-14',
+        dateModified: '2026-08-28',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
@@ -879,10 +895,10 @@ schema: {
       title: 'Gebrauchte GPUs für lokale LLMs: Die besten Sparangebote',
       heroImage: '/images/used-gpus-for-local-llms-overview-hero-de.webp',
       seoTitle: 'Gebrauchte GPUs für lokale LLMs 2026: Wert & Risiken',
-      intro: '**Gebrauchte GPUs bieten 30-50% Ersparnis gegenüber Neuware bei minimalem Leistungsrisiko bei bewährten Modellen wie RTX 3060 12GB und RTX 3080.** Im April 2026 ist der Gebrauchtmarkt von Ex-Mining- und Ex-Gaming-Karten zu stabilen Preisen überschwemmt. Der Kauf von gebrauchter Hardware macht Sinn für Ihr erstes System oder beim Aufrüsten; Mining-Karten sind riskant, es sei denn, Sie können vor Ort testen.',
+      intro: '**Gebrauchte GPUs bieten 30-50% Ersparnis gegenüber Neuware bei minimalem Leistungsrisiko bei bewährten Modellen wie RTX 3060 12GB und RTX 3080.** Der Gebrauchtmarkt ist in der Regel gut mit Ex-Mining- und Ex-Gaming-Karten zu relativ stabilen Preisen versorgt. Der Kauf von gebrauchter Hardware macht Sinn für Ihr erstes System oder beim Aufrüsten; Mining-Karten sind riskant, es sei denn, Sie können vor Ort testen.',
       metaDescription: 'Beste gebrauchte GPUs für lokale LLMs: RTX 3060, 3080, 3090, 4090. Wo kaufen, Risikobewertung, Bench-Test-Anleitung.',
       publishDate: '2026-04-05',
-      leadAnswerBlock: '**Gebrauchte GPUs bieten 30-50% Ersparnis gegenüber Neuware bei minimalem Leistungsrisiko bei bewährten Modellen wie RTX 3060 12GB und RTX 3080. Im April 2026 ist der Gebrauchtmarkt von Ex-Mining- und Ex-Gaming-Karten zu stabilen Preisen überschwemmt.**',
+      leadAnswerBlock: '**Gebrauchte GPUs bieten 30-50% Ersparnis gegenüber Neuware bei minimalem Leistungsrisiko bei bewährten Modellen wie RTX 3060 12GB und RTX 3080. Der Gebrauchtmarkt ist in der Regel gut mit Ex-Mining- und Ex-Gaming-Karten zu relativ stabilen Preisen versorgt.**',
       audience: 'Entwickler, die mit Ollama oder LM Studio lokale LLM-Workflows optimieren',
       readTime: '8 Min. Lesezeit',
       educationalLevel: 'Intermediate',
@@ -901,6 +917,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Gebrauchte GPUs wie die RTX 3060 12GB (200-250 $) und die RTX 3080 10GB (350-400 $) bieten 30-50 % Ersparnis gegenüber Neuware bei minimalem Risiko, während Mining-Karten 30 % günstiger sind, aber vor dem Kauf einen persönlichen VRAM-Stresstest benötigen.' },
+            { type: 'plain-terms', text: 'Sie können beim Kauf einer gebrauchten Grafikkarte für lokale KI-Modelle viel Geld sparen, solange Sie Karten vermeiden, die rund um die Uhr fürs Krypto-Mining liefen, ohne vorher geprüft zu werden. Eine kaum genutzte Gaming-Karte ist fast so zuverlässig wie neu; eine gebrauchte Mining-Karte braucht vor dem Kauf einen Speicher-Stresstest.' },
+          ],
           items: [
             'RTX 3060 12GB gebraucht (€180-220) und RTX 3080 10GB gebraucht (€320-360) sind die sichersten Wetten – hohe Marktmenge, stabile Preise, bewährte VRAM-Gesundheit.',
             'Mining-Karten sind 30% billiger, aber mit 10-20% Risiko von VRAM-Verschleiß. Kaufen Sie nur, wenn Sie vor Ort 2+ Stunden Stress-Test durchführen können.',
@@ -1016,7 +1036,7 @@ schema: {
         'description': 'Beste gebrauchte GPUs für lokale LLMs: RTX 3060, 3080, 3090, 4090. Wo kaufen, Risikobewertung, Bench-Test-Anleitung.',
         'url': 'https://www.promptquorum.com/de/local-llms/used-gpus-for-local-llms',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-06-14',
+        'dateModified': '2026-08-28',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -1102,10 +1122,10 @@ schema: {
       title: 'GPU utilisés pour LLMs locaux : Meilleures offres de valeur',
       heroImage: '/images/used-gpus-for-local-llms-overview-hero-fr.webp',
       seoTitle: 'Meilleures GPU utilisées pour LLMs : Guide d\'achat RTX 3060, 3080, 4090',
-      intro: '**Les GPU utilisés offrent 30-50% d\'économies par rapport aux neufs, avec un risque de performance minimal sur des modèles éprouvés comme RTX 3060 12GB et RTX 3080.** En avril 2026, le marché des occasion est inondé de cartes ex-mining et ex-gaming à des prix stables. L\'achat d\'occasion a du sens pour votre premier système ou lors d\'une mise à niveau ; les cartes minières sont risquées sauf si vous pouvez tester sur site.',
+      intro: '**Les GPU utilisés offrent 30-50% d\'économies par rapport aux neufs, avec un risque de performance minimal sur des modèles éprouvés comme RTX 3060 12GB et RTX 3080.** Le marché de l\'occasion est généralement bien approvisionné en cartes ex-mining et ex-gaming à des prix relativement stables. L\'achat d\'occasion a du sens pour votre premier système ou lors d\'une mise à niveau ; les cartes minières sont risquées sauf si vous pouvez tester sur site.',
       metaDescription: 'Meilleures GPU utilisées pour LLMs locaux : RTX 3060, 3080, 3090, 4090. Où acheter, évaluation des risques, test de performance.',
       publishDate: '2026-04-05',
-      leadAnswerBlock: '**Les GPU utilisés offrent 30-50% d\'économies par rapport aux neufs, avec un risque minimal sur des modèles comme RTX 3060 12GB et RTX 3080. En avril 2026, le marché des occasion est inondé de cartes ex-mining et ex-gaming.**',
+      leadAnswerBlock: '**Les GPU utilisés offrent 30-50% d\'économies par rapport aux neufs, avec un risque minimal sur des modèles comme RTX 3060 12GB et RTX 3080. Le marché de l\'occasion est généralement bien approvisionné en cartes ex-mining et ex-gaming.**',
       audience: 'Développeurs familiers avec Ollama ou LM Studio optimisant les workflows LLM locaux',
       readTime: '8 min de lecture',
       educationalLevel: 'Intermediate',
@@ -1124,6 +1144,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: "Les GPU d'occasion comme la RTX 3060 12GB (200-250 $) et la RTX 3080 10GB (350-400 $) offrent 30-50 % d'économies par rapport au neuf avec un risque minimal, tandis que les cartes de minage coûtent 30 % de moins mais nécessitent un test de stress VRAM en personne avant l'achat." },
+            { type: 'plain-terms', text: "Vous pouvez économiser beaucoup d'argent en achetant une carte graphique d'occasion pour exécuter des modèles d'IA locaux plutôt qu'une neuve, à condition d'éviter les cartes qui ont miné des cryptomonnaies 24h/24 sans avoir été vérifiées au préalable. Une carte de jeu peu utilisée est presque aussi fiable qu'une neuve ; une carte de minage d'occasion nécessite un test de stress mémoire avant de conclure l'achat." },
+          ],
           items: [
             'RTX 3060 12GB utilisée (€160-190) et RTX 3080 10GB utilisée (€300-330) sont les paris les plus sûrs – volume élevé, prix stables, santé VRAM éprouvée.',
             'Les cartes minières sont 30% moins chères mais comportent un risque de 10-20% de dégradation VRAM. Achetez seulement si vous pouvez tester sur site pendant 2+ heures.',
@@ -1237,7 +1261,7 @@ schema: {
         'description': 'Meilleures GPU utilisées pour LLMs locaux : RTX 3060, 3080, 3090, 4090. Où acheter, évaluation des risques, test de performance.',
         'url': 'https://www.promptquorum.com/fr/local-llms/used-gpus-for-local-llms',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-06-14',
+        'dateModified': '2026-08-28',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -1313,10 +1337,10 @@ schema: {
       title: 'ローカルLLM向け中古GPU：ベストバリューピック',
       heroImage: '/images/used-gpus-for-local-llms-overview-hero-ja.webp',
       seoTitle: '中古GPUローカルLLMガイド：RTX 3060、3080、4090購入ガイド',
-      intro: '**中古GPUは新品比30-50%の節約を提供し、RTX 3060 12GBやRTX 3080などの実績あるモデルでの性能リスクは最小限です。** 2026年4月現在、中古市場は安定した価格の元マイニングおよび元ゲーミングカードで溢れています。中古購入は初回構築やアップグレード時に理にかなっており、マイニングカードは現地でテストできない限りリスキーです。',
+      intro: '**中古GPUは新品比30-50%の節約を提供し、RTX 3060 12GBやRTX 3080などの実績あるモデルでの性能リスクは最小限です。** 中古市場は通常、比較的安定した価格の元マイニングおよび元ゲーミングカードが豊富に流通しています。中古購入は初回構築やアップグレード時に理にかなっており、マイニングカードは現地でテストできない限りリスキーです。',
       metaDescription: 'ローカルLLM向け最高の中古GPU：RTX 3060、3080、3090、4090。購入方法、リスク評価、ベンチマークテスト。',
       publishDate: '2026-04-05',
-      leadAnswerBlock: '**中古GPUは新品比30-50%の節約を提供し、RTX 3060 12GBやRTX 3080などのモデルでのリスクは最小限です。2026年4月現在、中古市場は元マイニングおよび元ゲーミングカードで溢れています。**',
+      leadAnswerBlock: '**中古GPUは新品比30-50%の節約を提供し、RTX 3060 12GBやRTX 3080などのモデルでのリスクは最小限です。中古市場は元マイニングおよび元ゲーミングカードが豊富に流通しています。**',
       audience: 'OllamaまたはLM Studioに精通し、ローカルLLMワークフローを最適化する開発者',
       readTime: '8分で読める',
       educationalLevel: 'Intermediate',
@@ -1335,6 +1359,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'RTX 3060 12GB（200～250ドル）やRTX 3080 10GB（350～400ドル）のような中古GPUは新品比30～50%の節約になりリスクも最小限ですが、マイニングカードは30%安い一方で購入前に現地でのVRAMストレステストが必要です。' },
+            { type: 'plain-terms', text: '新品の代わりに中古のグラフィックカードをローカルAIモデル用に購入すれば、大幅に節約できます。ただし、事前確認なしに24時間365日暗号通貨のマイニングに使われていたカードは避ける必要があります。軽く使用されたゲーミングカードは新品とほぼ同等の信頼性がありますが、中古のマイニングカードは購入前にメモリのストレステストが必要です。' },
+          ],
           items: [
             'RTX 3060 12GB中古（¥26,000-32,500）およびRTX 3080 10GB中古（¥45,500-52,000）が最も安全な選択肢です。高い取引量、安定した価格、実績あるVRAM健全性。',
             'マイニングカードは30%安いですが、VRAM劣化の10-20%リスクがあります。2時間以上のストレステストを現地でできる場合のみ購入してください。',
@@ -1448,7 +1476,7 @@ schema: {
         'description': 'ローカルLLM向け最高の中古GPU：RTX 3060、3080、3090、4090。購入方法、リスク評価、ベンチマークテスト。',
         'url': 'https://www.promptquorum.com/ja/local-llms/used-gpus-for-local-llms',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-06-14',
+        'dateModified': '2026-08-28',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -1524,10 +1552,10 @@ schema: {
       title: '本地LLM二手GPU：最佳价值选择',
       heroImage: '/images/used-gpus-for-local-llms-overview-hero-zh.webp',
       seoTitle: '本地LLM最佳二手GPU：RTX 3060、3080、4090购买指南',
-      intro: '**二手GPU提供新品30-50%的节省，在RTX 3060 12GB和RTX 3080等经过验证的型号上性能风险最小。** 截至2026年4月，二手市场充斥着来自前采矿和前游戏的卡，价格稳定。购买二手对于首次构建或升级很有意义；采矿卡有风险，除非您可以现场测试。',
+      intro: '**二手GPU提供新品30-50%的节省，在RTX 3060 12GB和RTX 3080等经过验证的型号上性能风险最小。** 二手市场通常充斥着来自前采矿和前游戏的卡，价格相对稳定。购买二手对于首次构建或升级很有意义；采矿卡有风险，除非您可以现场测试。',
       metaDescription: '本地LLM最佳二手GPU：RTX 3060、3080、3090、4090。购买位置、风险评估、基准测试。',
       publishDate: '2026-04-05',
-      leadAnswerBlock: '**二手GPU提供新品30-50%的节省，在RTX 3060 12GB和RTX 3080等型号上风险最小。截至2026年4月，二手市场充斥着来自前采矿和前游戏的卡，价格稳定。**',
+      leadAnswerBlock: '**二手GPU提供新品30-50%的节省，在RTX 3060 12GB和RTX 3080等型号上风险最小。二手市场通常充斥着来自前采矿和前游戏的卡，价格相对稳定。**',
       audience: '熟悉Ollama或LM Studio优化本地LLM工作流的开发者',
       readTime: '阅读约8分钟',
       educationalLevel: 'Intermediate',
@@ -1546,6 +1574,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: '像RTX 3060 12GB（200-250美元）和RTX 3080 10GB（350-400美元）这样的二手GPU比新品节省30-50%且风险极低，而挖矿卡便宜30%，但购买前需要现场进行显存压力测试。' },
+            { type: 'plain-terms', text: '购买二手显卡运行本地AI模型（而非购买新卡）可以节省不少钱，只要避开那些未经检测就24小时不间断挖矿的卡即可。轻度使用的游戏卡几乎和新卡一样可靠；而二手挖矿卡在您付款前需要进行显存压力测试。' },
+          ],
           items: [
             'RTX 3060 12GB二手（$200-250）和RTX 3080 10GB二手（$350-400）是最安全的选择—高交易量、稳定价格、经过验证的VRAM健康状况。',
             '采矿卡便宜30%，但有10-20%的VRAM降级风险。仅在您可以现场进行2小时以上压力测试时购买。',
@@ -1659,7 +1691,7 @@ schema: {
         'description': '本地LLM最佳二手GPU：RTX 3060、3080、3090、4090。购买位置、风险评估、基准测试。',
         'url': 'https://www.promptquorum.com/zh/local-llms/used-gpus-for-local-llms',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-06-14',
+        'dateModified': '2026-08-28',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -1735,10 +1767,10 @@ schema: {
       title: '중고 GPU로 로컬 LLM 구동하기: 최고의 가성비 선택',
     heroImage: '/images/used-gpus-for-local-llms-overview-hero-ko.webp',
       seoTitle: '로컬 LLM용 최고의 중고 GPU: RTX 3060, 3080, 4090 구매 가이드',
-      intro: '**중고 GPU는 신품 대비 30~50% 절감을 제공하며, RTX 3060 12GB 및 RTX 3080과 같은 검증된 모델은 성능 리스크가 거의 없습니다.** 2026년 4월 기준, 중고 시장에는 채굴용 및 게이밍용 카드가 안정적인 가격으로 대량 공급되고 있습니다. 첫 번째 장비 구성이나 업그레이드 시 중고 구매는 합리적인 선택입니다. 단, 채굴용 카드는 현장에서 직접 테스트할 수 있는 경우에만 구매하십시오.',
+      intro: '**중고 GPU는 신품 대비 30~50% 절감을 제공하며, RTX 3060 12GB 및 RTX 3080과 같은 검증된 모델은 성능 리스크가 거의 없습니다.** 중고 시장에는 일반적으로 채굴용 및 게이밍용 카드가 비교적 안정적인 가격으로 대량 공급되고 있습니다. 첫 번째 장비 구성이나 업그레이드 시 중고 구매는 합리적인 선택입니다. 단, 채굴용 카드는 현장에서 직접 테스트할 수 있는 경우에만 구매하십시오.',
       metaDescription: '로컬 LLM용 최고의 중고 GPU: RTX 3060, 3080, 3090, 4090. 구매처, 리스크 평가, 벤치마크 테스트 방법.',
       publishDate: '2026-04-05',
-      leadAnswerBlock: '중고 GPU는 신품 대비 30~50% 절감을 제공하며, RTX 3060 12GB 및 RTX 3080과 같은 검증된 모델은 성능 리스크가 거의 없습니다. 2026년 4월 기준, 중고 시장에는 채굴용 및 게이밍용 카드가 안정적인 가격으로 대량 공급되고 있습니다.',
+      leadAnswerBlock: '중고 GPU는 신품 대비 30~50% 절감을 제공하며, RTX 3060 12GB 및 RTX 3080과 같은 검증된 모델은 성능 리스크가 거의 없습니다. 중고 시장에는 일반적으로 채굴용 및 게이밍용 카드가 비교적 안정적인 가격으로 대량 공급되고 있습니다.',
       audience: 'Ollama 또는 LM Studio를 활용하여 로컬 LLM 워크플로우를 최적화하는 개발자',
       readTime: '8분',
       educationalLevel: 'Intermediate',
@@ -1757,6 +1789,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'RTX 3060 12GB($200-250)와 RTX 3080 10GB($350-400) 같은 중고 GPU는 신품 대비 30-50% 절감되며 위험도 낮지만, 채굴용 카드는 30% 더 저렴한 대신 구매 전 직접 VRAM 스트레스 테스트가 필요합니다.' },
+            { type: 'plain-terms', text: '사전 점검 없이 24시간 암호화폐 채굴에 사용된 카드만 피한다면, 신품 대신 중고 그래픽 카드를 구입해 로컬 AI 모델을 실행하는 것으로 많은 돈을 절약할 수 있습니다. 가볍게 사용된 게이밍 카드는 신품만큼이나 신뢰할 수 있으며, 중고 채굴용 카드는 구매하기 전에 메모리 스트레스 테스트가 필요합니다.' },
+          ],
           items: [
             'RTX 3060 12GB 중고($200~250)와 RTX 3080 10GB 중고($350~400)는 가장 안전한 선택입니다. 거래량이 많고 가격이 안정적이며 VRAM 상태가 검증되어 있습니다.',
             '채굴용 카드는 30% 저렴하지만 VRAM 열화 리스크가 10~20%에 달합니다. 현장에서 2시간 이상 스트레스 테스트를 할 수 있는 경우에만 구매하십시오.',
