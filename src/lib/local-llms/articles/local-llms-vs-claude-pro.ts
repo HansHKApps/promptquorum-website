@@ -14,7 +14,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       title: 'Local LLMs vs Claude Pro: Privacy, Cost, and Quality',
       heroImage: '/images/local-llms-vs-claude-pro-overview-hero-en.webp',
       seoTitle: 'Local LLMs vs Claude Pro: Cost, Privacy & Quality',
-      intro: '**Claude Pro costs $20/month (same as ChatGPT Plus) but offers stronger privacy (Anthropic does not train on chat history) and superior long-context reasoning (200K token window).** As of August 2026, a local Llama 3.3 70B setup (dual RTX 4070s ~$550 used, recommended, or a used RTX 4090 at $2,000–2,600 now that NVIDIA has discontinued it) matches Claude Sonnet 4.6 quality on 80% of tasks and is cheaper than Claude Pro within about 3 years with dual 4070s. Local LLMs win on privacy, cost, and long document handling.',
+      intro: '**Claude Pro costs $20/month (same as ChatGPT Plus) but offers stronger privacy (Anthropic does not train on chat history) and superior long-context reasoning (200K token window).** As of August 2026, a local Llama 3.3 70B setup (dual RTX 4070s ~$550 used, recommended, or a used RTX 4090 at $2,000–2,600 now that NVIDIA has discontinued it) matches Claude Sonnet 5 quality on 80% of tasks and is cheaper than Claude Pro within about 3 years with dual 4070s. Local LLMs win on privacy, cost, and long document handling.',
       metaDescription: 'Claude Pro costs $20/month; dual RTX 4070s (~$550 used) running Llama 3.3 70B break even in about 3 years. A used RTX 4090 now costs $2,000-2,600 (discontinued). Full comparison.',
       publishDate: '2026-04-05',
       dateModified: '2026-08-28',
@@ -94,7 +94,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'On 80% of real-world tasks (summarization, Q&A, data extraction, coding), Llama 3.3 70B and Claude Sonnet 5 produce equivalent output. On edge cases (subtle narrative analysis, domain-specific creative writing), Claude is marginally better. [How Much VRAM Do You Need for Local LLMs?](/local-llms/how-much-vram-local-llm) covers hardware requirements for running 70B models.',
           ],
           callouts: [
-            { type: '💡 Pro Tip', text: 'On the HumanEval coding benchmark, Llama 3.3 70B scored approximately 2 percentage points higher than Claude Sonnet 4.6 in April 2026 testing (EvalPlus leaderboard; results vary by benchmark version and task distribution).' },
+            { type: '💡 Pro Tip', text: 'On the HumanEval coding benchmark, Llama 3.3 70B scored approximately 2 percentage points higher than Claude Sonnet 5 in April 2026 testing (EvalPlus leaderboard; results vary by benchmark version and task distribution).' },
           ],
           snippetBlocks: [
             {
@@ -266,7 +266,7 @@ schema: {
       title: 'LLMs Locales vs Claude Pro: Privacidad, Costo y Calidad',
       heroImage: '/images/local-llms-vs-claude-pro-overview-hero-es.webp',
       seoTitle: 'LLMs Locales vs Claude Pro: Costo, Privacidad y Calidad',
-      intro: '**Claude Pro cuesta $20/mes (igual que ChatGPT Plus) pero ofrece mayor privacidad (Anthropic no entrena con el historial de chat) y razonamiento superior en contexto largo (ventana de 200K tokens).** Desde agosto de 2026, una configuración local de Llama 3.3 70B (dos RTX 4070s usadas ~$550, recomendado, o una RTX 4090 usada a $2,000–2,600 ahora que NVIDIA la descontinuó) iguala la calidad de Claude Sonnet 4.6 en el 80% de las tareas y resulta más barata que Claude Pro en unos 3 años con dos RTX 4070s. Los LLMs locales ganan en privacidad, costo y manejo de documentos largos.',
+      intro: '**Claude Pro cuesta $20/mes (igual que ChatGPT Plus) pero ofrece mayor privacidad (Anthropic no entrena con el historial de chat) y razonamiento superior en contexto largo (ventana de 200K tokens).** Desde agosto de 2026, una configuración local de Llama 3.3 70B (dos RTX 4070s usadas ~$550, recomendado, o una RTX 4090 usada a $2,000–2,600 ahora que NVIDIA la descontinuó) iguala la calidad de Claude Sonnet 5 en el 80% de las tareas y resulta más barata que Claude Pro en unos 3 años con dos RTX 4070s. Los LLMs locales ganan en privacidad, costo y manejo de documentos largos.',
       metaDescription: 'Claude Pro cuesta $20/mes; dos RTX 4070s (~$550 usadas) con Llama 3.3 70B se amortizan en ~3 años. Una RTX 4090 usada ahora cuesta $2,000-2,600 (descontinuada). Comparativa completa.',
       publishDate: '2026-04-05',
       dateModified: '2026-08-28',
@@ -346,7 +346,7 @@ schema: {
             'En el 80% de las tareas del mundo real (resumen, Q&A, extracción de datos, código), Llama 3.3 70B y Claude Sonnet 5 producen resultados equivalentes. En casos límite (análisis narrativo sutil, escritura creativa de dominio específico), Claude es marginalmente mejor. [¿Cuánta VRAM necesitas para LLMs locales?](/es/local-llms/how-much-vram-local-llm) cubre los requisitos de hardware para ejecutar modelos de 70B.',
           ],
           callouts: [
-            { type: '💡 Consejo profesional', text: 'En el benchmark HumanEval, Llama 3.3 70B obtuvo aproximadamente 2 puntos porcentuales más que Claude Sonnet 4.6 en pruebas de abril de 2026 (EvalPlus leaderboard; los resultados varían según la versión del benchmark y la distribución de tareas).' },
+            { type: '💡 Consejo profesional', text: 'En el benchmark HumanEval, Llama 3.3 70B obtuvo aproximadamente 2 puntos porcentuales más que Claude Sonnet 5 en pruebas de abril de 2026 (EvalPlus leaderboard; los resultados varían según la versión del benchmark y la distribución de tareas).' },
           ],
           snippetBlocks: [
             {
@@ -518,7 +518,7 @@ schema: {
       title: 'نماذج ⁨LLM⁩ المحلية مقابل ⁨Claude Pro⁩: الخصوصية والتكلفة والجودة',
       heroImage: '/images/local-llms-vs-claude-pro-overview-hero-ar.webp',
       seoTitle: '⁨LLM⁩ محلي مقابل ⁨Claude Pro⁩: التكلفة والخصوصية ⁨2026⁩',
-      intro: '**يكلّف Claude Pro 20$/شهر (مثل ChatGPT Plus) لكنه يقدّم خصوصية أعلى (لا تتدرّب Anthropic على سجل الدردشة) واستدلالًا متفوّقًا في السياق الطويل (نافذة 200K رمز).** اعتبارًا من أغسطس 2026، يضاهي إعداد Llama 3.3 70B محلي (بطاقتا RTX 4070 مستعملتان ~550$، وهو الخيار الموصى به، أو RTX 4090 مستعملة بـ2,000–2,600$ بعد أن أوقفت NVIDIA إنتاجها) جودة Claude Sonnet 4.6 في 80% من المهام ويصبح أرخص من Claude Pro خلال نحو 3 سنوات مع بطاقتي RTX 4070. تفوز نماذج LLM المحلية في الخصوصية والتكلفة ومعالجة المستندات الطويلة.',
+      intro: '**يكلّف Claude Pro 20$/شهر (مثل ChatGPT Plus) لكنه يقدّم خصوصية أعلى (لا تتدرّب Anthropic على سجل الدردشة) واستدلالًا متفوّقًا في السياق الطويل (نافذة 200K رمز).** اعتبارًا من أغسطس 2026، يضاهي إعداد Llama 3.3 70B محلي (بطاقتا RTX 4070 مستعملتان ~550$، وهو الخيار الموصى به، أو RTX 4090 مستعملة بـ2,000–2,600$ بعد أن أوقفت NVIDIA إنتاجها) جودة Claude Sonnet 5 في 80% من المهام ويصبح أرخص من Claude Pro خلال نحو 3 سنوات مع بطاقتي RTX 4070. تفوز نماذج LLM المحلية في الخصوصية والتكلفة ومعالجة المستندات الطويلة.',
       metaDescription: '⁨Claude Pro⁩ بـ ⁨20⁩$/شهر؛ بطاقتا ⁨RTX 4070⁩ (~⁨550⁩$ مستعملة) مع ⁨Llama 3.3 70B⁩ تتعادلان خلال ⁨3⁩ سنوات تقريباً. ⁨RTX 4090⁩ مستعملة الآن ⁨2,000⁩–⁨2,600⁩$ (أُوقف إنتاجها). مقارنة كاملة.',
       publishDate: '2026-04-05',
       dateModified: '2026-08-28',
@@ -598,7 +598,7 @@ schema: {
             'في 80% من المهام الواقعية (التلخيص، الأسئلة والأجوبة، استخراج البيانات، الشيفرة)، يُنتج Llama 3.3 70B وClaude Sonnet 5 نتائج متكافئة. في الحالات الحدّية (التحليل السردي الدقيق، الكتابة الإبداعية المتخصصة)، Claude أفضل هامشيًا. [كم تحتاج من VRAM لنماذج LLM المحلية؟](/ar/local-llms/how-much-vram-local-llm) يغطي متطلبات العتاد لتشغيل نماذج 70B.',
           ],
           callouts: [
-            { type: '💡 نصيحة احترافية', text: 'في معيار HumanEval للبرمجة، سجّل Llama 3.3 70B نحو 2 نقطة مئوية أعلى من Claude Sonnet 4.6 في اختبارات أبريل 2026 (قائمة EvalPlus leaderboard؛ تتفاوت النتائج حسب إصدار المعيار وتوزيع المهام).' },
+            { type: '💡 نصيحة احترافية', text: 'في معيار HumanEval للبرمجة، سجّل Llama 3.3 70B نحو 2 نقطة مئوية أعلى من Claude Sonnet 5 في اختبارات أبريل 2026 (قائمة EvalPlus leaderboard؛ تتفاوت النتائج حسب إصدار المعيار وتوزيع المهام).' },
           ],
           snippetBlocks: [
             {
@@ -770,7 +770,7 @@ schema: {
       title: 'LLMs Locais vs Claude Pro: Privacidade, Custo e Qualidade',
       heroImage: '/images/local-llms-vs-claude-pro-overview-hero-pt.webp',
       seoTitle: 'LLMs Locais vs Claude Pro: Custo, Privacidade e Qualidade',
-      intro: '**O Claude Pro custa $20/mês (igual ao ChatGPT Plus) mas oferece maior privacidade (a Anthropic não treina com o histórico de chat) e raciocínio superior em contexto longo (janela de 200K tokens).** Desde agosto de 2026, uma configuração local de Llama 3.3 70B (duas RTX 4070s usadas ~$550, recomendado, ou uma RTX 4090 usada a $2.000–2.600 agora que a NVIDIA a descontinuou) iguala a qualidade do Claude Sonnet 4.6 em 80% das tarefas e sai mais barata que o Claude Pro em cerca de 3 anos com as duas RTX 4070s. Os LLMs locais vencem em privacidade, custo e processamento de documentos longos.',
+      intro: '**O Claude Pro custa $20/mês (igual ao ChatGPT Plus) mas oferece maior privacidade (a Anthropic não treina com o histórico de chat) e raciocínio superior em contexto longo (janela de 200K tokens).** Desde agosto de 2026, uma configuração local de Llama 3.3 70B (duas RTX 4070s usadas ~$550, recomendado, ou uma RTX 4090 usada a $2.000–2.600 agora que a NVIDIA a descontinuou) iguala a qualidade do Claude Sonnet 5 em 80% das tarefas e sai mais barata que o Claude Pro em cerca de 3 anos com as duas RTX 4070s. Os LLMs locais vencem em privacidade, custo e processamento de documentos longos.',
       metaDescription: 'Claude Pro custa $20/mês; duas RTX 4070s (~$550 usadas) com Llama 3.3 70B se pagam em ~3 anos. Uma RTX 4090 usada agora custa $2.000-2.600 (descontinuada). Comparação completa.',
       publishDate: '2026-04-05',
       dateModified: '2026-08-28',
@@ -850,7 +850,7 @@ schema: {
             'Em 80% das tarefas do mundo real (resumo, Q&A, extração de dados, código), o Llama 3.3 70B e o Claude Sonnet 5 produzem resultados equivalentes. Em casos extremos (análise narrativa sutil, escrita criativa de domínio específico), o Claude é marginalmente melhor.',
           ],
           callouts: [
-            { type: '💡 Dica profissional', text: 'No benchmark HumanEval, o Llama 3.3 70B obteve aproximadamente 2 pontos percentuais acima do Claude Sonnet 4.6 em testes de abril de 2026 (EvalPlus leaderboard; resultados variam por versão do benchmark e distribuição de tarefas).' },
+            { type: '💡 Dica profissional', text: 'No benchmark HumanEval, o Llama 3.3 70B obteve aproximadamente 2 pontos percentuais acima do Claude Sonnet 5 em testes de abril de 2026 (EvalPlus leaderboard; resultados variam por versão do benchmark e distribuição de tarefas).' },
           ],
           snippetBlocks: [
             {
@@ -1000,7 +1000,7 @@ schema: {
       title: 'Lokale LLMs vs Claude Pro: Datenschutz, Kosten und Qualität',
       heroImage: '/images/local-llms-vs-claude-pro-overview-hero-de.webp',
       seoTitle: 'Lokale LLMs vs Claude Pro: Kosten, Datenschutz & Qualität',
-      intro: '**Claude Pro kostet 20€/Monat (dasselbe wie ChatGPT Plus) bietet aber stärkeren Datenschutz (Anthropic trainiert nicht auf Chat-Verlauf) und überlegenes Langkontext-Reasoning (200K-Token-Fenster).** Seit August 2026 entspricht ein lokales Llama 3.3 70B Setup (dual RTX 4070s gebraucht ca. 500€, empfohlen, oder eine gebrauchte RTX 4090 für 2.100–2.800€, seit NVIDIA sie eingestellt hat) Claude Sonnet 4.6 Qualität bei 80% der Aufgaben und ist mit dual 4070s nach rund 3 Jahren günstiger als Claude Pro. Lokale LLMs gewinnen bei Datenschutz, Kosten und Langdokumentverarbeitung.',
+      intro: '**Claude Pro kostet 20€/Monat (dasselbe wie ChatGPT Plus) bietet aber stärkeren Datenschutz (Anthropic trainiert nicht auf Chat-Verlauf) und überlegenes Langkontext-Reasoning (200K-Token-Fenster).** Seit August 2026 entspricht ein lokales Llama 3.3 70B Setup (dual RTX 4070s gebraucht ca. 500€, empfohlen, oder eine gebrauchte RTX 4090 für 2.100–2.800€, seit NVIDIA sie eingestellt hat) Claude Sonnet 5 Qualität bei 80% der Aufgaben und ist mit dual 4070s nach rund 3 Jahren günstiger als Claude Pro. Lokale LLMs gewinnen bei Datenschutz, Kosten und Langdokumentverarbeitung.',
       metaDescription: 'Lokale LLMs vs. Claude Pro 2026: Dual RTX 4070s (~500€ gebraucht) amortisieren sich in ~3 Jahren. Eine gebrauchte RTX 4090 kostet jetzt 2.100-2.800€ (eingestellt). Kosten, Datenschutz, Qualität im Vergleich.',
       publishDate: '2026-04-05',
       dateModified: '2026-08-28',
@@ -1080,7 +1080,7 @@ schema: {
             'Bei 80% der Real-World-Aufgaben (Zusammenfassung, Q&A, Datenextraktion, Coding) erzeugen Llama 3.3 70B und Claude Sonnet 5 äquivalente Output. Bei Edge Cases (subtile narrative Analyse, domänenspezifisches kreatives Schreiben) ist Claude marginal besser. [Wie viel VRAM brauchen Sie für lokale LLMs?](/de/local-llms/how-much-vram-local-llm) behandelt Hardware-Anforderungen für die Ausführung von 70B-Modellen.',
           ],
           callouts: [
-            { type: '💡 Pro Tipp', text: 'Im HumanEval-Coding-Benchmark erzielte Llama 3.3 70B in Tests vom April 2026 ca. 2 Prozentpunkte mehr als Claude Sonnet 4.6 (EvalPlus-Leaderboard; Ergebnisse variieren je nach Benchmark-Version und Aufgabenverteilung).' },
+            { type: '💡 Pro Tipp', text: 'Im HumanEval-Coding-Benchmark erzielte Llama 3.3 70B in Tests vom April 2026 ca. 2 Prozentpunkte mehr als Claude Sonnet 5 (EvalPlus-Leaderboard; Ergebnisse variieren je nach Benchmark-Version und Aufgabenverteilung).' },
           ],
           snippetBlocks: [
             {
@@ -1262,7 +1262,7 @@ schema: {
       title: 'LLMs Locaux vs Claude Pro: Confidentialité, Coûts et Qualité',
       heroImage: '/images/local-llms-vs-claude-pro-overview-hero-fr.webp',
       seoTitle: 'LLMs Locaux vs Claude Pro: Coûts, Confidentialité & Qualité',
-      intro: '**Claude Pro coûte 20€/mois (identique à ChatGPT Plus) mais offre une confidentialité plus robuste (Anthropic n\'entraîne pas sur l\'historique de chat) et un raisonnement long contexte supérieur (fenêtre de 200K tokens).** Depuis août 2026, une configuration locale Llama 3.3 70B (dual RTX 4070s d\'occasion ~550€, recommandé, ou une RTX 4090 d\'occasion à 2 100–2 800€ depuis son arrêt par NVIDIA) atteint la qualité Claude Sonnet 4.6 sur 80 % des tâches et devient moins chère que Claude Pro en environ 3 ans avec dual 4070s. Les LLMs locaux dominent en confidentialité, coûts et traitement de longs documents.',
+      intro: '**Claude Pro coûte 20€/mois (identique à ChatGPT Plus) mais offre une confidentialité plus robuste (Anthropic n\'entraîne pas sur l\'historique de chat) et un raisonnement long contexte supérieur (fenêtre de 200K tokens).** Depuis août 2026, une configuration locale Llama 3.3 70B (dual RTX 4070s d\'occasion ~550€, recommandé, ou une RTX 4090 d\'occasion à 2 100–2 800€ depuis son arrêt par NVIDIA) atteint la qualité Claude Sonnet 5 sur 80 % des tâches et devient moins chère que Claude Pro en environ 3 ans avec dual 4070s. Les LLMs locaux dominent en confidentialité, coûts et traitement de longs documents.',
       metaDescription: 'Claude Pro coûte 20€/mois; dual RTX 4070s (~550€ d\'occasion) exécutant Llama 3.3 70B s\'amortissent en ~3 ans. Une RTX 4090 d\'occasion coûte désormais 2 100-2 800€ (arrêtée). Comparaison complète.',
       publishDate: '2026-04-05',
       dateModified: '2026-08-28',
@@ -1342,7 +1342,7 @@ schema: {
             'Sur 80 % des tâches réelles (résumé, Q&R, extraction données, coding), Llama 3.3 70B et Claude Sonnet 5 produisent output équivalent. Sur cas limites (analyse narrative subtile, rédaction créative domaine-spécifique), Claude est marginalement meilleur. [Combien de VRAM faut-il pour LLMs locaux?](/fr/local-llms/how-much-vram-local-llm) couvre les exigences matériel pour exécuter modèles 70B.',
           ],
           callouts: [
-            { type: '💡 Conseil utile', text: 'Sur benchmarks coding (HumanEval), Llama 3.3 70B surpasse Claude Sonnet 4.6 de ~2 % depuis avril 2026.' },
+            { type: '💡 Conseil utile', text: 'Sur benchmarks coding (HumanEval), Llama 3.3 70B surpasse Claude Sonnet 5 de ~2 % depuis avril 2026.' },
           ],
           snippetBlocks: [
             {
@@ -1514,7 +1514,7 @@ schema: {
       title: 'ローカルLLM vs Claude Pro: プライバシー、コスト、品質比較',
       heroImage: '/images/local-llms-vs-claude-pro-overview-hero-ja.webp',
       seoTitle: 'ローカルLLM vs Claude Pro: コスト・プライバシー・品質',
-      intro: '**Claude Proは月¥3,200（ChatGPT Plusと同額）ですが、より強力なプライバシー（Anthropicはチャット履歴で学習しない）と優れた長文脈推論（200Kトークンウィンドウ）を提供します。** 2026年8月時点で、ローカルLlama 3.3 70Bセットアップ（中古dual RTX 4070s約¥105,000、推奨、またはNVIDIAが生産終了した中古RTX 4090約¥380,000～490,000）はClaude Sonnet 4.6の品質に80%のタスクで匹敵し、dual 4070sなら約3.7年でClaude Proより安くなります。ローカルLLMはプライバシー、コスト、長文書処理で優位です。',
+      intro: '**Claude Proは月¥3,200（ChatGPT Plusと同額）ですが、より強力なプライバシー（Anthropicはチャット履歴で学習しない）と優れた長文脈推論（200Kトークンウィンドウ）を提供します。** 2026年8月時点で、ローカルLlama 3.3 70Bセットアップ（中古dual RTX 4070s約¥105,000、推奨、またはNVIDIAが生産終了した中古RTX 4090約¥380,000～490,000）はClaude Sonnet 5の品質に80%のタスクで匹敵し、dual 4070sなら約3.7年でClaude Proより安くなります。ローカルLLMはプライバシー、コスト、長文書処理で優位です。',
       metaDescription: 'Claude Proは月¥3,200; 中古dual RTX 4070s（約¥105,000）でLlama 3.3 70Bを実行し、約3.7年で回収。中古RTX 4090は現在¥380,000～490,000（生産終了）。完全比較。',
       publishDate: '2026-04-05',
       dateModified: '2026-08-28',
@@ -1594,7 +1594,7 @@ schema: {
             '現実的なタスク（要約、Q&A、データ抽出、コーディング）の80%で、Llama 3.3 70BとClaude Sonnet 5は同等の出力を生成します。エッジケース（微妙な物語分析、ドメイン特有の創造的執筆）では、Claudeが若干優位です。[ローカルLLMに必要なVRAM](/ja/local-llms/how-much-vram-local-llm)は70Bモデル実行のハードウェア要件をカバーしています。',
           ],
           callouts: [
-            { type: '💡 プロのコツ', text: 'HumanEvalコーディングベンチマークでは、Llama 3.3 70Bは2026年4月のテストでClaude Sonnet 4.6を約2ポイント上回りました（EvalPlusリーダーボード；結果はベンチマークバージョンとタスク分布によって異なります）。' },
+            { type: '💡 プロのコツ', text: 'HumanEvalコーディングベンチマークでは、Llama 3.3 70Bは2026年4月のテストでClaude Sonnet 5を約2ポイント上回りました（EvalPlusリーダーボード；結果はベンチマークバージョンとタスク分布によって異なります）。' },
           ],
           snippetBlocks: [
             {
@@ -1766,7 +1766,7 @@ schema: {
       title: '本地LLM vs Claude Pro: 隐私、成本与质量对比',
       heroImage: '/images/local-llms-vs-claude-pro-overview-hero-zh.webp',
       seoTitle: '本地LLM vs Claude Pro: 成本·隐私·品质',
-      intro: '**Claude Pro月$20（同ChatGPT Plus）但提供更强隐私保护（Anthropic不用聊天记录训练模型）和更优长文脉络推理（200K令牌窗口）。** 截至2026年8月，本地Llama 3.3 70B设置（双RTX 4070s二手约$550，推荐，或NVIDIA已停产的二手RTX 4090售价$2,000-2,600）在80%任务上匹配Claude Sonnet 4.6质量，使用双RTX 4070s约3年即比Claude Pro更划算。本地LLM在隐私、成本和长文档处理上更胜一筹。',
+      intro: '**Claude Pro月$20（同ChatGPT Plus）但提供更强隐私保护（Anthropic不用聊天记录训练模型）和更优长文脉络推理（200K令牌窗口）。** 截至2026年8月，本地Llama 3.3 70B设置（双RTX 4070s二手约$550，推荐，或NVIDIA已停产的二手RTX 4090售价$2,000-2,600）在80%任务上匹配Claude Sonnet 5质量，使用双RTX 4070s约3年即比Claude Pro更划算。本地LLM在隐私、成本和长文档处理上更胜一筹。',
       metaDescription: 'Claude Pro月$20；双RTX 4070s（二手约$550）运行Llama 3.3 70B，约3年收回成本。二手RTX 4090现售$2,000-2,600（已停产）。完整比较。',
       publishDate: '2026-04-05',
       dateModified: '2026-08-28',
@@ -1846,7 +1846,7 @@ schema: {
             '在80%现实任务（摘要、Q&A、数据提取、编码）上，Llama 3.3 70B和Claude Sonnet 5产生等效输出。在边界情况（细微叙述分析、域特定创意写作）上，Claude略占上风。[本地LLM需要多少VRAM?](/zh/local-llms/how-much-vram-local-llm)涵盖运行70B模型的硬件要求。',
           ],
           callouts: [
-            { type: '💡 专业建议', text: '在HumanEval编码基准上，Llama 3.3 70B在2026年4月的测试中比Claude Sonnet 4.6高出约2个百分点（EvalPlus排行榜；结果因基准版本和任务分布而异）。' },
+            { type: '💡 专业建议', text: '在HumanEval编码基准上，Llama 3.3 70B在2026年4月的测试中比Claude Sonnet 5高出约2个百分点（EvalPlus排行榜；结果因基准版本和任务分布而异）。' },
           ],
           snippetBlocks: [
             {
@@ -2018,7 +2018,7 @@ schema: {
       title: '로컬 LLM vs Claude Pro: 프라이버시, 비용, 품질 비교',
     heroImage: '/images/local-llms-vs-claude-pro-overview-hero-ko.webp',
       seoTitle: '로컬 LLM vs Claude Pro: 비용, 프라이버시, 품질 비교',
-      intro: '**Claude Pro는 월 $20(ChatGPT Plus와 동일)이지만, 더 강력한 프라이버시(Anthropic은 대화 기록으로 훈련하지 않음)와 뛰어난 장문 맥락 추론(200K 토큰 컨텍스트 창)을 제공합니다.** 2026년 8월 기준, 로컬 Llama 3.3 70B 환경(중고 듀얼 RTX 4070 ~$550, 권장, 또는 NVIDIA가 단종한 중고 RTX 4090 $2,000~2,600)은 80%의 작업에서 Claude Sonnet 4.6과 동등한 품질을 제공하며, 듀얼 RTX 4070 기준 약 3년이면 Claude Pro보다 저렴해집니다. 로컬 LLM은 프라이버시, 비용, 장문 문서 처리에서 우위를 보입니다.',
+      intro: '**Claude Pro는 월 $20(ChatGPT Plus와 동일)이지만, 더 강력한 프라이버시(Anthropic은 대화 기록으로 훈련하지 않음)와 뛰어난 장문 맥락 추론(200K 토큰 컨텍스트 창)을 제공합니다.** 2026년 8월 기준, 로컬 Llama 3.3 70B 환경(중고 듀얼 RTX 4070 ~$550, 권장, 또는 NVIDIA가 단종한 중고 RTX 4090 $2,000~2,600)은 80%의 작업에서 Claude Sonnet 5과 동등한 품질을 제공하며, 듀얼 RTX 4070 기준 약 3년이면 Claude Pro보다 저렴해집니다. 로컬 LLM은 프라이버시, 비용, 장문 문서 처리에서 우위를 보입니다.',
       metaDescription: 'Claude Pro는 월 $20이며, 듀얼 RTX 4070(중고 ~$550)으로 구동하는 Llama 3.3 70B는 약 3년 후 손익분기점에 도달합니다. 중고 RTX 4090은 현재 $2,000~2,600(단종). 전면 비교 분석.',
       publishDate: '2026-04-05',
       dateModified: '2026-08-28',
@@ -2098,7 +2098,7 @@ schema: {
             '실제 업무의 80%(요약, Q&A, 데이터 추출, 코딩)에서 Llama 3.3 70B와 Claude Sonnet 5은 동등한 결과를 냅니다. 엣지 케이스(미묘한 서사 분석, 도메인별 창작)에서는 Claude가 미세하게 우위입니다. [로컬 LLM에 필요한 VRAM 용량](/local-llms/how-much-vram-local-llm)에서 70B 모델 구동을 위한 하드웨어 요구 사항을 확인하실 수 있습니다.',
           ],
           callouts: [
-            { type: '💡 Pro Tip', text: 'HumanEval 코딩 벤치마크에서 Llama 3.3 70B는 2026년 4월 테스트 기준 Claude Sonnet 4.6보다 약 2퍼센트포인트 높은 점수를 기록했습니다(EvalPlus 리더보드; 결과는 벤치마크 버전 및 작업 분포에 따라 다를 수 있습니다).' },
+            { type: '💡 Pro Tip', text: 'HumanEval 코딩 벤치마크에서 Llama 3.3 70B는 2026년 4월 테스트 기준 Claude Sonnet 5보다 약 2퍼센트포인트 높은 점수를 기록했습니다(EvalPlus 리더보드; 결과는 벤치마크 버전 및 작업 분포에 따라 다를 수 있습니다).' },
           ],
           snippetBlocks: [
             {
