@@ -17,7 +17,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       intro: '**llama.cpp is fastest per-token for small models; Ollama is simplest; vLLM is best for throughput/batching.** As of April 2026, choose based on use case: casual chat → Ollama; single-user speed → llama.cpp; multi-user/batching → vLLM. All three run the same models and produce identical output--speed/throughput differ.',
       metaDescription: 'llama.cpp delivers 38 tok/s speed. Ollama offers 5-min simplicity. vLLM provides 250+ throughput. Complete RTX 4090 benchmark matrix and comparison.',
       publishDate: '2026-04-05',
-      dateModified: '2026-04-19',
+      dateModified: '2026-08-28',
       leadAnswerBlock: '**llama.cpp is fastest per-token for small models; Ollama is simplest; vLLM is best for throughput/batching. As of April 2026, choose based on use case: casual chat → Ollama; single-user speed → llama.cpp; multi-user/batching → vLLM.**',
       audience: 'Developers familiar with Ollama or LM Studio optimizing local LLM workflows',
       readTime: '9 min',
@@ -41,7 +41,7 @@ schema: {
         'description': 'llama.cpp: 38 tok/s single-token (fastest). Ollama: 5-min setup (simplest). vLLM: 250+ tok/s batched (highest throughput). RTX 4090 benchmarks, feature matrix. April 2026.',
         'url': 'https://www.promptquorum.com/local-llms/llamacpp-vs-ollama-vs-vllm',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-04-19',
+        'dateModified': '2026-08-28',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Intermediate',
@@ -112,7 +112,7 @@ schema: {
         },
         'speedRTX3060': {
           title: 'Speed Comparison — RTX 3060 12 GB',
-          content: 'Benchmarked on RTX 3060 12 GB, Llama 3.2 8B Q4_K_M, single request, April 2026:',
+          content: 'Benchmarked on RTX 3060 12 GB, Llama 3.1 8B Q4_K_M, single request, April 2026:',
           rows: [
             { 'Backend': 'llama.cpp', 'Tokens/sec': '52', 'ms/token': '19', 'VRAM Used': '5.2 GB', 'Batch Throughput': 'N/A' },
             { 'Backend': 'Ollama', 'Tokens/sec': '48', 'ms/token': '21', 'VRAM Used': '5.4 GB', 'Batch Throughput': 'N/A' },
@@ -249,7 +249,7 @@ schema: {
       intro: '**llama.cpp es el más rápido por token en modelos pequeños; Ollama es el más simple; vLLM es el mejor para throughput y batching.** A partir de abril de 2026, elige según tu caso de uso: chat casual → Ollama; velocidad para un solo usuario → llama.cpp; multi-usuario/batching → vLLM. Los tres ejecutan los mismos modelos y producen salidas idénticas — solo difieren en velocidad y throughput.',
       metaDescription: 'llama.cpp: 38 tok/s (más rápido). Ollama: setup en 5 min (más simple). vLLM: 250+ tok/s en batch (mayor throughput). Benchmarks RTX 4090. 2026.',
       publishDate: '2026-04-05',
-      dateModified: '2026-04-19',
+      dateModified: '2026-08-28',
       leadAnswerBlock: '**llama.cpp es el más rápido por token en modelos pequeños; Ollama es el más simple; vLLM es el mejor para throughput y batching. A partir de abril de 2026, elige según tu caso de uso: chat casual → Ollama; velocidad para un solo usuario → llama.cpp; multi-usuario/batching → vLLM.**',
       audience: 'Desarrolladores familiarizados con Ollama o LM Studio que optimizan flujos de trabajo con LLM locales',
       readTime: '9 min de lectura',
@@ -273,7 +273,7 @@ schema: {
         'description': 'llama.cpp: 38 tok/s por token (más rápido). Ollama: 5 minutos de setup (más simple). vLLM: 250+ tok/s en batch (mayor throughput). Benchmarks RTX 4090. Abril 2026.',
         'url': 'https://www.promptquorum.com/es/local-llms/llamacpp-vs-ollama-vs-vllm',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-04-19',
+        'dateModified': '2026-08-28',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Intermediate',
@@ -349,7 +349,7 @@ schema: {
         },
         'speedRTX3060': {
           title: 'Benchmarks de velocidad — RTX 3060 12 GB',
-          content: 'Medido en RTX 3060 12 GB, Llama 3.2 8B Q4_K_M, solicitud única, abril de 2026:',
+          content: 'Medido en RTX 3060 12 GB, Llama 3.1 8B Q4_K_M, solicitud única, abril de 2026:',
           rows: [
             { 'Backend': 'llama.cpp', 'Tokens/seg': '52', 'ms/token': '19', 'VRAM usada': '5.2 GB', 'Throughput en batch': 'N/A' },
             { 'Backend': 'Ollama', 'Tokens/seg': '48', 'ms/token': '21', 'VRAM usada': '5.4 GB', 'Throughput en batch': 'N/A' },
@@ -486,7 +486,7 @@ schema: {
       intro: '**llama.cpp هو الأسرع لكل token على النماذج الصغيرة؛ و Ollama هو الأبسط؛ و vLLM هو الأفضل للإنتاجية والـ batching.** اعتبارًا من أبريل 2026، اختر حسب حالة استخدامك: محادثة عادية ← Ollama؛ سرعة لمستخدم واحد ← llama.cpp؛ متعدد المستخدمين/batching ← vLLM. تشغّل الثلاثة النماذج نفسها وتنتج مخرجات متطابقة — وتختلف فقط في السرعة والإنتاجية.',
       metaDescription: '⁨llama.cpp⁩ يُنجز ⁨38 tok/s⁩ (الأسرع لمستخدم واحد)؛ ⁨vLLM⁩ يصل إلى ⁨250+ tok/s⁩ في الدُّفعة؛ ⁨Ollama⁩ إعداد في ⁨5⁩ دقائق. معايير ⁨RTX 4090 2026⁩.',
       publishDate: '2026-04-05',
-      dateModified: '2026-04-19',
+      dateModified: '2026-08-28',
       leadAnswerBlock: '**llama.cpp هو الأسرع لكل token على النماذج الصغيرة؛ و Ollama هو الأبسط؛ و vLLM هو الأفضل للإنتاجية والـ batching. اعتبارًا من أبريل 2026، اختر حسب حالة استخدامك: محادثة عادية ← Ollama؛ سرعة لمستخدم واحد ← llama.cpp؛ متعدد المستخدمين/batching ← vLLM.**',
       audience: 'المطورون الملمّون بـ Ollama أو LM Studio الذين يحسّنون مسارات عمل نماذج LLM المحلية',
       readTime: '9 دقائق للقراءة',
@@ -510,7 +510,7 @@ schema: {
         'description': 'llama.cpp: 38 tok/s لكل token (الأسرع). Ollama: 5 دقائق إعداد (الأبسط). vLLM: 250+ tok/s في الدفعة (أعلى إنتاجية). معايير RTX 4090. أبريل 2026.',
         'url': 'https://www.promptquorum.com/ar/local-llms/llamacpp-vs-ollama-vs-vllm',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-04-19',
+        'dateModified': '2026-08-28',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Intermediate',
@@ -586,7 +586,7 @@ schema: {
         },
         'speedRTX3060': {
           title: 'معايير السرعة — RTX 3060 12 GB',
-          content: 'قُيس على RTX 3060 12 GB، Llama 3.2 8B Q4_K_M، طلب فردي، أبريل 2026:',
+          content: 'قُيس على RTX 3060 12 GB، Llama 3.1 8B Q4_K_M، طلب فردي، أبريل 2026:',
           rows: [
             { 'الخلفية': 'llama.cpp', 'Tokens/ثانية': '52', 'ms/token': '19', 'VRAM المستخدمة': '5.2 GB', 'إنتاجية الدفعة': 'N/A' },
             { 'الخلفية': 'Ollama', 'Tokens/ثانية': '48', 'ms/token': '21', 'VRAM المستخدمة': '5.4 GB', 'إنتاجية الدفعة': 'N/A' },
@@ -819,7 +819,7 @@ schema: {
         },
         'speedRTX3060': {
           title: 'Benchmarks de velocidade — RTX 3060 12 GB',
-          content: 'Medido na RTX 3060 12 GB, Llama 3.2 8B Q4_K_M, solicitação única, abril de 2026:',
+          content: 'Medido na RTX 3060 12 GB, Llama 3.1 8B Q4_K_M, solicitação única, abril de 2026:',
           rows: [
             { 'Backend': 'llama.cpp', 'Tokens/s': '52', 'ms/token': '19', 'VRAM usada': '5.2 GB', 'Throughput em batch': 'N/A' },
             { 'Backend': 'Ollama', 'Tokens/s': '48', 'ms/token': '21', 'VRAM usada': '5.4 GB', 'Throughput em batch': 'N/A' },
@@ -951,7 +951,7 @@ schema: {
       intro: '**llama.cpp ist am schnellsten pro Token bei kleinen Modellen; Ollama ist am einfachsten; vLLM ist am besten für Durchsatz und Batching.** Stand April 2026: Wählen Sie nach Anwendungsfall – gelegentlicher Chat → Ollama; Einzelnutzer-Geschwindigkeit → llama.cpp; Multi-User/Batching → vLLM. Alle drei führen dieselben Modelle aus und erzeugen identische Ausgaben – Geschwindigkeit und Durchsatz unterscheiden sich.',
       metaDescription: 'llama.cpp: 38 Tok/s Single-Token (schnellstes). Ollama: 5-Min-Setup (einfachstes). vLLM: 250+ Tok/s Batch (höchster Durchsatz). RTX 4090 Benchmarks. April 2026.',
       publishDate: '2026-04-05',
-      dateModified: '2026-04-19',
+      dateModified: '2026-08-28',
       leadAnswerBlock: '**llama.cpp ist am schnellsten pro Token bei kleinen Modellen; Ollama ist am einfachsten; vLLM ist am besten für Durchsatz und Batching. Stand April 2026: Wählen Sie nach Anwendungsfall – gelegentlicher Chat → Ollama; Einzelnutzer-Geschwindigkeit → llama.cpp; Multi-User/Batching → vLLM.**',
       audience: 'Entwickler, die mit Ollama oder LM Studio vertraut sind und ihren lokalen LLM-Workflow optimieren möchten',
       readTime: '9 Min. Lesezeit',
@@ -975,7 +975,7 @@ schema: {
         'description': 'llama.cpp: 38 Tok/s Single-Token (schnellstes). Ollama: 5-Min-Setup (einfachstes). vLLM: 250+ Tok/s Batch (höchster Durchsatz). RTX 4090 Benchmarks. April 2026.',
         'url': 'https://www.promptquorum.com/de/local-llms/llamacpp-vs-ollama-vs-vllm',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-04-19',
+        'dateModified': '2026-08-28',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Intermediate',
@@ -1046,7 +1046,7 @@ schema: {
         },
         'speedRTX3060': {
           title: 'Geschwindigkeits-Benchmarks — RTX 3060 12 GB',
-          content: 'Gemessen auf RTX 3060 12 GB, Llama 3.2 8B Q4_K_M, Einzelanfrage, April 2026:',
+          content: 'Gemessen auf RTX 3060 12 GB, Llama 3.1 8B Q4_K_M, Einzelanfrage, April 2026:',
           rows: [
             { 'Backend': 'llama.cpp', 'Token/Sek.': '52', 'ms/Token': '19', 'VRAM-Nutzung': '5,2 GB', 'Batch-Durchsatz': 'N/A' },
             { 'Backend': 'Ollama', 'Token/Sek.': '48', 'ms/Token': '21', 'VRAM-Nutzung': '5,4 GB', 'Batch-Durchsatz': 'N/A' },
@@ -1276,7 +1276,7 @@ schema: {
         },
         'speedRTX3060': {
           title: 'Benchmarks de vitesse — RTX 3060 12 Go',
-          content: 'Mesuré sur RTX 3060 12 Go, Llama 3.2 8B Q4_K_M, requête unique, avril 2026 :',
+          content: 'Mesuré sur RTX 3060 12 Go, Llama 3.1 8B Q4_K_M, requête unique, avril 2026 :',
           rows: [
             { 'Backend': 'llama.cpp', 'Tokens/s': '52', 'ms/token': '19', 'VRAM utilisé': '5.2 Go', 'Débit par lots': 'N/A' },
             { 'Backend': 'Ollama', 'Tokens/s': '48', 'ms/token': '21', 'VRAM utilisé': '5.4 Go', 'Débit par lots': 'N/A' },
@@ -1497,8 +1497,8 @@ schema: {
           imageCaption: '速度・スループット比較：llama.cpp 38トークン/秒（26ms/トークン）、Ollama 36トークン/秒、vLLMシングルリクエスト時34トークン/秒、バッチ時250+トークン/秒（10同時リクエスト）。RTX 4090 24GB、Llama 3.3 70B Q4_K_M。',
         },
         'speedRTX3060': {
-          title: 'RTX 3060 12GB — Llama 3.2 8B Q4_K_M',
-          content: 'RTX 3060 12GB、Llama 3.2 8B Q4_K_M、シングルリクエスト、2026年4月計測：',
+          title: 'RTX 3060 12GB — Llama 3.1 8B Q4_K_M',
+          content: 'RTX 3060 12GB、Llama 3.1 8B Q4_K_M、シングルリクエスト、2026年4月計測：',
           rows: [
             { 'バックエンド': 'llama.cpp', 'トークン/秒': '52', 'ms/トークン': '19', 'VRAM使用量': '5.2 GB', 'バッチスループット': 'N/A' },
             { 'バックエンド': 'Ollama', 'トークン/秒': '48', 'ms/トークン': '21', 'VRAM使用量': '5.4 GB', 'バッチスループット': 'N/A' },
@@ -1679,8 +1679,8 @@ schema: {
           imageCaption: 'llama.cpp、Ollama和vLLM在RTX 4090上运行Llama 3.3 70B Q4_K_M的速度对比（token/s）',
         },
         speedRTX3060: {
-          title: 'RTX 3060 12GB — Llama 3.2 8B Q4_K_M',
-          content: 'RTX 3060 12GB、Llama 3.2 8B Q4_K_M、单请求、2026年4月计测：',
+          title: 'RTX 3060 12GB — Llama 3.1 8B Q4_K_M',
+          content: 'RTX 3060 12GB、Llama 3.1 8B Q4_K_M、单请求、2026年4月计测：',
           columns: ['后端', 'token/s', 'ms/token', 'VRAM用量', '批处理吞吐量'],
           rows: [
             { '后端': 'llama.cpp', 'token/s': '52', 'ms/token': '19', 'VRAM用量': '5.2 GB', '批处理吞吐量': 'N/A' },
@@ -2124,7 +2124,7 @@ schema: {
         },
         speedRTX3060: {
           title: '속도 비교 — RTX 3060 12 GB',
-          content: 'RTX 3060 12 GB, Llama 3.2 8B Q4_K_M, 단일 요청, 2026년 4월 벤치마크:',
+          content: 'RTX 3060 12 GB, Llama 3.1 8B Q4_K_M, 단일 요청, 2026년 4월 벤치마크:',
           rows: [
             { '백엔드': 'llama.cpp', 'Tokens/sec': '52', 'ms/token': '19', 'VRAM 사용량': '5.2 GB', '배치 처리량': 'N/A' },
             { '백엔드': 'Ollama', 'Tokens/sec': '48', 'ms/token': '21', 'VRAM 사용량': '5.4 GB', '배치 처리량': 'N/A' },
