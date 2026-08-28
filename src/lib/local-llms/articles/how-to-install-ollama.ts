@@ -11,7 +11,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       freshness_tier: 'annual',
       theme: 'Getting Started',
       title: 'Install Ollama: 2-Minute Setup for macOS, Windows & Linux',
-      dateModified: '2026-06-21',
+      dateModified: '2026-08-28',
       seoTitle: 'Install Ollama: 2-Minute Setup for macOS, Windows & Linux',
       intro: 'Ollama installs in under 2 minutes on macOS, Windows, and Linux. After installation, one command downloads and runs any model from the Ollama library -- no Python environment, no configuration files, and no GPU required to get started. Ollama maintains a curated model library at ollama.com/library, including Meta Llama 3.3, Qwen3, and Mistral.',
       metaDescription: 'Install Ollama in 2 minutes on any OS: download, run `ollama run llama3.2`, start chatting. Complete setup guide with troubleshooting for Beginners 2026.',
@@ -59,7 +59,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'What Is Ollama and Why Use It?',
           content: [
             '**Ollama is an open-source inference engine that runs large language models locally.** It packages model management, the llama.cpp inference backend, and an OpenAI-compatible REST API into a single lightweight application. No Python, no conda environment, and no CUDA setup is required.',
-            'Ollama maintains a curated model library (ollama.com/library) with one-command downloads for Meta Llama 3.3, Microsoft Phi-3, Google Gemma 2, Mistral, Qwen3, and other models. A model is downloaded once and cached on disk -- subsequent runs skip the download and load straight from disk, though Ollama unloads an idle model from memory after its keep-alive window (5 minutes by default), so a cold reload still takes as long as loading the model fresh.',
+            'Ollama maintains a curated model library (ollama.com/library) with one-command downloads for Meta Llama 3.3, Microsoft Phi-4-mini, Google Gemma 4, Mistral, Qwen3, and other models. A model is downloaded once and cached on disk -- subsequent runs skip the download and load straight from disk, though Ollama unloads an idle model from memory after its keep-alive window (5 minutes by default), so a cold reload still takes as long as loading the model fresh.',
             'For alternatives to Ollama, see [Local LLM One-Click Installers](/local-llms/local-llm-one-click-installers). To compare Ollama with LM Studio, see [How to Install LM Studio](/local-llms/how-to-install-lm-studio).',
           ],
         },
@@ -222,7 +222,7 @@ schema: {
         'description': 'Install Ollama in 2 minutes on any OS: download, run ollama run llama3.2, start chatting. Complete setup guide with troubleshooting for Beginners 2026.',
         'url': 'https://www.promptquorum.com/local-llms/how-to-install-ollama',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-06-21',
+        'dateModified': '2026-08-28',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -346,7 +346,7 @@ schema: {
           title: '¿Qué es Ollama y por qué usarlo?',
           content: [
             '**Ollama es un motor de inferencia de código abierto que ejecuta grandes modelos de lenguaje de forma local.** Integra la gestión de modelos, el backend de inferencia llama.cpp y una API REST compatible con OpenAI en una sola aplicación ligera. Sin Python, sin entorno conda y sin configuración de CUDA.',
-            'Ollama mantiene una biblioteca de modelos curada (ollama.com/library) con descargas en un solo comando para Meta Llama 3.3, Microsoft Phi-3, Google Gemma 2, Mistral, Qwen3 y más de 100 modelos adicionales. Un modelo se descarga una vez y se almacena en caché en disco -- las ejecuciones posteriores arrancan en menos de 5 segundos.',
+            'Ollama mantiene una biblioteca de modelos curada (ollama.com/library) con descargas en un solo comando para Meta Llama 3.3, Microsoft Phi-4-mini, Google Gemma 4, Mistral, Qwen3 y más de 100 modelos adicionales. Un modelo se descarga una vez y se almacena en caché en disco -- las ejecuciones posteriores arrancan en menos de 5 segundos.',
             'Para ver alternativas a Ollama, consulta [Instaladores de LLM local con un clic](/es/local-llms/local-llm-one-click-installers). Para comparar Ollama con LM Studio, consulta [Cómo instalar LM Studio](/es/local-llms/how-to-install-lm-studio).',
           ],
         },
@@ -634,7 +634,7 @@ schema: {
           title: 'ما هو Ollama ولماذا تستخدمه؟',
           content: [
             '**Ollama محرك استدلال مفتوح المصدر يشغّل نماذج اللغة الكبيرة محليًا.** يدمج إدارة النماذج وخلفية الاستدلال llama.cpp وواجهة REST API متوافقة مع OpenAI في تطبيق واحد خفيف. دون Python ودون بيئة conda ودون إعداد CUDA.',
-            'يحافظ Ollama على مكتبة نماذج منتقاة (ollama.com/library) بتنزيلات بأمر واحد لـ Meta Llama 3.3 و Microsoft Phi-3 و Google Gemma 2 و Mistral و Qwen3 وأكثر من 100 نموذج إضافي. يُنزَّل النموذج مرة واحدة ويُخزَّن مؤقتًا على القرص -- وتنطلق التشغيلات اللاحقة في أقل من 5 ثوانٍ.',
+            'يحافظ Ollama على مكتبة نماذج منتقاة (ollama.com/library) بتنزيلات بأمر واحد لـ Meta Llama 3.3 و Microsoft Phi-4-mini و Google Gemma 4 و Mistral و Qwen3 وأكثر من 100 نموذج إضافي. يُنزَّل النموذج مرة واحدة ويُخزَّن مؤقتًا على القرص -- وتنطلق التشغيلات اللاحقة في أقل من 5 ثوانٍ.',
             'للاطلاع على بدائل Ollama، راجع [مثبّتات LLM المحلية بنقرة واحدة](/ar/local-llms/local-llm-one-click-installers). ولمقارنة Ollama بـ LM Studio، راجع [كيفية تثبيت LM Studio](/ar/local-llms/how-to-install-lm-studio).',
           ],
         },
@@ -974,7 +974,7 @@ schema: {
         pullAndRun: {
           id: 'pull-and-run-your-first-model',
           title: 'Baixar e executar o primeiro modelo',
-          codeBlock: '# Baixar e executar Llama 3.2 8B (padrão)\nollama run llama3.2\n\n# Outros modelos populares\nollama run phi4-mini      # 3.8B, rápido\nollama run qwen3:8b       # Qwen3 com PT-BR\nollama run aya:8b         # Multilíngue 101 idiomas\n\n# Listar modelos instalados\nollama list\n\n# API REST (compatível com OpenAI)\ncurl http://localhost:11434/api/generate \\\n  -d \'{"model": "llama3.2", "prompt": "Olá!"}\'',
+          codeBlock: '# Baixar e executar Llama 3.2 (padrão)\nollama run llama3.2\n\n# Outros modelos populares\nollama run phi4-mini      # 3.8B, rápido\nollama run qwen3:8b       # Qwen3 com PT-BR\nollama run aya:8b         # Multilíngue 101 idiomas\n\n# Listar modelos instalados\nollama list\n\n# API REST (compatível com OpenAI)\ncurl http://localhost:11434/api/generate \\\n  -d \'{"model": "llama3.2", "prompt": "Olá!"}\'',
           codeLanguage: 'bash',
         },
         recommendedModels: {
@@ -1179,7 +1179,7 @@ schema: {
           title: 'Was ist Ollama und warum sollte ich es nutzen?',
           content: [
             '**Ollama ist eine Open-Source-Inference-Engine, die große Sprachmodelle lokal ausführt.** Sie kombiniert Modellverwaltung, das llama.cpp-Inference-Backend und eine OpenAI-kompatible REST-API in einer einzigen leichten Anwendung. Keine Python, keine Conda-Umgebung und kein CUDA-Setup erforderlich.',
-            'Ollama betreut eine kuratierte Modellbibliothek (ollama.com/library) mit Ein-Befehl-Downloads für Meta Llama 3.3, Microsoft Phi-3, Google Gemma 2, Mistral, Qwen3 und über 100 weitere Modelle. Ein Modell wird einmal heruntergeladen und auf der Festplatte zwischengespeichert -- nachfolgende Ausführungen starten in unter 5 Sekunden.',
+            'Ollama betreut eine kuratierte Modellbibliothek (ollama.com/library) mit Ein-Befehl-Downloads für Meta Llama 3.3, Microsoft Phi-4-mini, Google Gemma 4, Mistral, Qwen3 und über 100 weitere Modelle. Ein Modell wird einmal heruntergeladen und auf der Festplatte zwischengespeichert -- nachfolgende Ausführungen starten in unter 5 Sekunden.',
             'Für Alternativen zu Ollama siehe [Local-LLM-One-Click-Installer](/de/local-llms/local-llm-one-click-installers). Zum Vergleich von Ollama und LM Studio siehe [So installieren Sie LM Studio](/de/local-llms/how-to-install-lm-studio).',
           ],
           blockquote: 'In einem Satz: Ollama ist ein Tool zum Herunterladen und lokalen Ausführen von Open-Source-Sprachmodellen (wie Mistral oder Llama 3.3) auf Ihrem Computer mit nur einem Befehl.',
@@ -1510,7 +1510,7 @@ schema: {
           title: 'Qu\'est-ce qu\'Ollama et pourquoi l\'utiliser ?',
           content: [
             '**Ollama est un moteur d\'inférence open-source qui exécute de grands modèles de langage localement.** Il combine la gestion de modèles, le backend d\'inférence llama.cpp et une API REST compatible OpenAI dans une seule application légère. Aucun Python, aucun environnement conda et aucune configuration CUDA requise.',
-            'Ollama maintient une bibliothèque de modèles triée sur le volet (ollama.com/library) avec des téléchargements en une seule commande pour Meta Llama 3.3, Microsoft Phi-3, Google Gemma 2, Mistral, Qwen3 et plus de 100 autres modèles. Un modèle est téléchargé une fois et mis en cache sur le disque -- les exécutions ultérieures démarrent en moins de 5 secondes.',
+            'Ollama maintient une bibliothèque de modèles triée sur le volet (ollama.com/library) avec des téléchargements en une seule commande pour Meta Llama 3.3, Microsoft Phi-4-mini, Google Gemma 4, Mistral, Qwen3 et plus de 100 autres modèles. Un modèle est téléchargé une fois et mis en cache sur le disque -- les exécutions ultérieures démarrent en moins de 5 secondes.',
             'Pour les alternatives à Ollama, voir [Installateurs Local LLM en un clic](/fr/local-llms/local-llm-one-click-installers). Pour comparer Ollama avec LM Studio, voir [Installation de LM Studio](/fr/local-llms/how-to-install-lm-studio).',
           ],
           blockquote: 'En une phrase : Ollama est un outil pour télécharger et exécuter localement des modèles de langage open-source (comme Mistral ou Llama 3.3) sur votre ordinateur avec une seule commande.',
@@ -1841,7 +1841,7 @@ schema: {
           title: 'Ollama とは何か、そしてなぜ使用するのか？',
           content: [
             '**Ollama は大規模言語モデルをローカルで実行するオープンソースの推論エンジンです。** モデル管理、llama.cpp 推論バックエンド、OpenAI 互換 REST API を単一の軽量アプリケーションに結合します。Python なし、conda 環境なし、CUDA セットアップなし。',
-            'Ollama は Meta Llama 3.3、Microsoft Phi-3、Google Gemma 2、Mistral、Qwen3、および 100 以上の他のモデル用にワンコマンド ダウンロード機能を備えたキュレーションされたモデル ライブラリ（ollama.com/library）を保持しています。モデルは 1 回ダウンロードされてディスクにキャッシュされ、以降の実行は 5 秒以内に開始します。',
+            'Ollama は Meta Llama 3.3、Microsoft Phi-4-mini、Google Gemma 4、Mistral、Qwen3、および 100 以上の他のモデル用にワンコマンド ダウンロード機能を備えたキュレーションされたモデル ライブラリ（ollama.com/library）を保持しています。モデルは 1 回ダウンロードされてディスクにキャッシュされ、以降の実行は 5 秒以内に開始します。',
             'Ollama の代わりについては、[Local LLM ワンクリック インストーラー](/ja/local-llms/local-llm-one-click-installers) を参照してください。Ollama と LM Studio を比較するには、[LM Studio のインストール方法](/ja/local-llms/how-to-install-lm-studio) を参照してください。',
           ],
           blockquote: '一文で表すと、Ollama はオープンソース言語モデル（Mistral や Llama 3.3 など）をコンピュータにダウンロードしてローカルで実行するツールで、1 つのコマンドで実行できます。',
@@ -2172,7 +2172,7 @@ schema: {
           title: '什么是 Ollama，为什么使用它？',
           content: [
             '**Ollama 是一个开源推理引擎，在本地运行大型语言模型。** 它将模型管理、llama.cpp 推理后端和 OpenAI 兼容的 REST API 整合到一个轻量级应用程序中。无需 Python、无需 conda 环境、无需 CUDA 设置。',
-            'Ollama 维护一个精选的模型库（ollama.com/library），提供 Meta Llama 3.3、Microsoft Phi-3、Google Gemma 2、Mistral、Qwen3 等 100 多个模型的一键下载。模型下载一次并缓存在磁盘上 -- 后续运行在 5 秒内启动。',
+            'Ollama 维护一个精选的模型库（ollama.com/library），提供 Meta Llama 3.3、Microsoft Phi-4-mini、Google Gemma 4、Mistral、Qwen3 等 100 多个模型的一键下载。模型下载一次并缓存在磁盘上 -- 后续运行在 5 秒内启动。',
             '有关 Ollama 的替代品，请参阅 [Local LLM 一键安装程序](/zh/local-llms/local-llm-one-click-installers)。要比较 Ollama 和 LM Studio，请参阅 [如何安装 LM Studio](/zh/local-llms/how-to-install-lm-studio)。',
           ],
           blockquote: '一句话来说，Ollama 是一个工具，用于在计算机上下载和本地运行开源语言模型（如 Mistral 或 Llama 3.3），只需一个命令。',
@@ -2498,7 +2498,7 @@ schema: {
           title: 'Ollama란 무엇이며 왜 사용합니까?',
           content: [
             '**Ollama는 대형 언어 모델을 로컬에서 실행하는 오픈 소스 추론 엔진입니다.** 모델 관리, llama.cpp 추론 백엔드, OpenAI 호환 REST API를 단일 경량 애플리케이션으로 패키징합니다. Python, conda 환경, CUDA 설정이 필요하지 않습니다.',
-            'Ollama는 Meta Llama 3.3, Microsoft Phi-3, Google Gemma 2, Mistral, Qwen3 및 100개 이상의 다른 모델을 원클릭으로 다운로드할 수 있는 큐레이션된 모델 라이브러리(ollama.com/library)를 유지 관리합니다. 모델은 한 번 다운로드되어 디스크에 캐시됩니다 -- 이후 실행은 5초 이내에 시작됩니다.',
+            'Ollama는 Meta Llama 3.3, Microsoft Phi-4-mini, Google Gemma 4, Mistral, Qwen3 및 100개 이상의 다른 모델을 원클릭으로 다운로드할 수 있는 큐레이션된 모델 라이브러리(ollama.com/library)를 유지 관리합니다. 모델은 한 번 다운로드되어 디스크에 캐시됩니다 -- 이후 실행은 5초 이내에 시작됩니다.',
             'Ollama의 대안은 [로컬 LLM 원클릭 설치 프로그램](/local-llms/local-llm-one-click-installers)을 참조하십시오. Ollama와 LM Studio의 비교는 [LM Studio 설치 방법](/local-llms/how-to-install-lm-studio)을 참조하십시오.',
           ],
         },
