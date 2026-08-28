@@ -16,7 +16,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       metaDescription: 'AMD RX 7900 XTX matches RTX 4090 at 24 GB VRAM for $450–550 used — $500 cheaper. ROCm adds 5–10 h setup friction. The best AMD GPU for local LLMs in 2026.',
       heroImage: '/images/best-amd-gpus-local-llm-price-performance-hero-en.webp',
       publishDate: '2026-04-05',
-      dateModified: '2026-07-14',
+      dateModified: '2026-08-28',
       leadAnswerBlock: '**AMD RX 6800 XT and RX 7900 XTX are solid NVIDIA alternatives, offering 15-20% better compute-per-dollar, but suffer from weaker ONNX Runtime and vLLM driver support.**',
       quickAnswerTop: {
         question: 'Are AMD GPUs good for running local LLMs?',
@@ -40,7 +40,7 @@ schema: {
         'description': 'Compare AMD RX 7900 XTX, 6800 XT vs NVIDIA RTX. ROCm setup, vLLM performance, cost-per-TFLOP analysis. When to buy AMD over CUDA. Updated July 2026.',
         'url': 'https://www.promptquorum.com/local-llms/best-amd-gpus-local-llm',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-07-14',
+        'dateModified': '2026-08-28',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -70,7 +70,7 @@ schema: {
           {
             '@type': 'Question',
             'name': 'Is AMD RX 7900 XTX better than RTX 4090?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Similar speed, same VRAM (24GB). RX 7900 XTX is $200-300 cheaper used ($450-550 vs. $1,000-1,300). ROCm setup is the trade-off.' }
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Similar speed, same VRAM (24GB). RX 7900 XTX is $1,450-2,050 cheaper used ($450-550 vs. $2,000-2,600 — RTX 4090 prices rose sharply after NVIDIA discontinued it in 2026). ROCm setup is the trade-off.' }
           },
           {
             '@type': 'Question',
@@ -176,7 +176,7 @@ schema: {
             { '0': 'RX 7900 XT', '1': '20GB', '2': '2,540', '3': '$400-480', '4': '+20%', '5': 'RTX 4080 (similar)' },
             { '0': 'RX 7900 XTX', '1': '24GB', '2': '2,750', '3': '$450-550', '4': '+15%', '5': 'RTX 4090 (similar speed)' },
             { '0': 'RTX 3080', '1': '10GB', '2': '1,456', '3': '$350-400', '4': '--', '5': '--' },
-            { '0': 'RTX 4090', '1': '24GB', '2': '2,752', '3': '$1,000-1,300', '4': '--', '5': '--' },
+            { '0': 'RTX 4090', '1': '24GB', '2': '2,752', '3': '$2,000-2,600', '4': '--', '5': '--' },
           ],
           columns: ['GPU', 'VRAM', 'TFLOPS', 'Price Used', 'Perf/$ vs. RTX', 'Equivalent RTX'],
           image: '/images/best-amd-gpus-local-llm-price-performance-hero-en.webp',
@@ -254,7 +254,7 @@ schema: {
           title: 'Frequently Asked Questions',
           faqs: [
             { q: 'Should I buy AMD RX 6800 XT or NVIDIA RTX 3080 for local LLMs?', a: 'RTX 3080 if you value simplicity (CUDA "just works"). RX 6800 XT if you want 25% better value and don\'t mind 5-10 hours ROCm setup.' },
-            { q: 'Is AMD RX 7900 XTX better than RTX 4090?', a: 'Similar speed, same VRAM (24GB). RX 7900 XTX is $200-300 cheaper used ($450-550 vs. $1,000-1,300). ROCm setup is the trade-off.' },
+            { q: 'Is AMD RX 7900 XTX better than RTX 4090?', a: 'Similar speed, same VRAM (24GB). RX 7900 XTX is $1,450-2,050 cheaper used ($450-550 vs. $2,000-2,600 — RTX 4090 prices rose sharply after NVIDIA discontinued it in 2026). ROCm setup is the trade-off.' },
             { q: 'Can I use AMD GPUs with Ollama?', a: 'Technically yes. In our April 2026 testing (Ollama v0.3.x, ROCm 6.x), ROCm support was inconsistent — GPU detection failed on some configurations and CPU fallback was common. Check the current AMD compatibility list at github.com/ollama/ollama; for reliable AMD inference today, vLLM or llama.cpp are the safer paths.' },
             { q: 'What\'s the best AMD path for local LLMs in 2026?', a: 'Llama.cpp (HIP backend) + Text Generation WebUI. Both have solid AMD support. Avoid Ollama.' },
             { q: 'Do I need Ubuntu for AMD ROCm, or does Windows work?', a: 'Windows support exists (HIP on Windows), but in our April 2026 testing it was less stable than Ubuntu. Ubuntu is the recommended path.' },
@@ -310,7 +310,7 @@ schema: {
         'description': 'Compara AMD RX 7900 XTX, 6800 XT vs NVIDIA RTX. Configuración de ROCm, rendimiento en vLLM, análisis de coste por TFLOP. Cuándo elegir AMD sobre CUDA. Abril 2026.',
         'url': 'https://www.promptquorum.com/es/local-llms/best-amd-gpus-local-llm',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-07-14',
+        'dateModified': '2026-08-28',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -338,7 +338,7 @@ schema: {
           {
             '@type': 'Question',
             'name': '¿La AMD RX 7900 XTX es mejor que la RTX 4090?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Velocidad similar, misma VRAM (24GB). La RX 7900 XTX es $200-300 más barata de segunda mano ($450-550 vs. $1,000-1,300). La configuración de ROCm es el contrapeso.' }
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Velocidad similar, misma VRAM (24GB). La RX 7900 XTX es $1,450-2,050 más barata de segunda mano ($450-550 vs. $2,000-2,600 — el precio de la RTX 4090 usada subió mucho tras su descontinuación por NVIDIA en 2026). La configuración de ROCm es el contrapeso.' }
           },
           {
             '@type': 'Question',
@@ -419,7 +419,7 @@ schema: {
             { 'GPU': 'RX 7900 XT', 'VRAM': '20GB', 'TFLOPS': '2,540', 'Precio (2ª mano)': '~$400-480', 'Rend./$ vs. RTX': '+20%', 'RTX equivalente': 'RTX 4080 (similar)' },
             { 'GPU': 'RX 7900 XTX', 'VRAM': '24GB', 'TFLOPS': '2,750', 'Precio (2ª mano)': '~$450-550', 'Rend./$ vs. RTX': '+15%', 'RTX equivalente': 'RTX 4090 (velocidad similar)' },
             { 'GPU': 'RTX 3080', 'VRAM': '10GB', 'TFLOPS': '1,456', 'Precio (2ª mano)': '~$350-400', 'Rend./$ vs. RTX': '--', 'RTX equivalente': '--' },
-            { 'GPU': 'RTX 4090', 'VRAM': '24GB', 'TFLOPS': '2,752', 'Precio (2ª mano)': '~$1,000-1,300', 'Rend./$ vs. RTX': '--', 'RTX equivalente': '--' },
+            { 'GPU': 'RTX 4090', 'VRAM': '24GB', 'TFLOPS': '2,752', 'Precio (2ª mano)': '~$2,000-2,600', 'Rend./$ vs. RTX': '--', 'RTX equivalente': '--' },
           ],
           columns: ['GPU', 'VRAM', 'TFLOPS', 'Precio (2ª mano)', 'Rend./$ vs. RTX', 'RTX equivalente'],
         
@@ -486,7 +486,7 @@ schema: {
           title: 'Preguntas frecuentes',
           faqs: [
             { q: '¿Debo comprar la AMD RX 6800 XT o la NVIDIA RTX 3080 para LLMs locales?', a: 'RTX 3080 si valoras la simplicidad (CUDA funciona sin problemas). RX 6800 XT si quieres un 25% más de valor y no te importan 5-10 horas de configuración de ROCm.' },
-            { q: '¿La AMD RX 7900 XTX es mejor que la RTX 4090?', a: 'Velocidad similar, misma VRAM (24GB). La RX 7900 XTX es $200-300 más barata de segunda mano ($450-550 vs. $1,000-1,300). La configuración de ROCm es el contrapeso.' },
+            { q: '¿La AMD RX 7900 XTX es mejor que la RTX 4090?', a: 'Velocidad similar, misma VRAM (24GB). La RX 7900 XTX es $1,450-2,050 más barata de segunda mano ($450-550 vs. $2,000-2,600 — el precio de la RTX 4090 usada subió mucho tras su descontinuación por NVIDIA en 2026). La configuración de ROCm es el contrapeso.' },
             { q: '¿Puedo usar GPUs AMD con Ollama?', a: 'Técnicamente sí. En nuestras pruebas de abril de 2026 (Ollama v0.3.x, ROCm 6.x), el soporte ROCm fue inconsistente — la detección de GPU falló en algunas configuraciones y el fallback a CPU fue frecuente. Compruebe la lista de compatibilidad AMD actualizada en github.com/ollama/ollama; para inferencia AMD fiable hoy, vLLM o llama.cpp son opciones más seguras.' },
             { q: '¿Cuál es el mejor camino AMD para LLMs locales en 2026?', a: 'Llama.cpp (backend HIP) + Text Generation WebUI. Ambos tienen buen soporte para AMD. Evita Ollama.' },
             { q: '¿Necesito Ubuntu para AMD ROCm, o Windows funciona también?', a: 'El soporte en Windows existe (HIP on Windows), pero es más reciente y menos estable. Ubuntu es el camino recomendado.' },
@@ -554,7 +554,7 @@ schema: {
         'description': 'قارن AMD RX 7900 XTX و6800 XT مقابل NVIDIA RTX. إعداد ROCm، الأداء في vLLM، تحليل التكلفة لكل TFLOP. متى تختار AMD على CUDA. أبريل 2026.',
         'url': 'https://www.promptquorum.com/ar/local-llms/best-amd-gpus-local-llm',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-07-14',
+        'dateModified': '2026-08-28',
         'inLanguage': 'ar',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
@@ -584,7 +584,7 @@ schema: {
           {
             '@type': 'Question',
             'name': 'هل AMD RX 7900 XTX أفضل من RTX 4090؟',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'سرعة متماثلة، نفس VRAM (24GB). RX 7900 XTX أرخص بـ 200-300 دولار مستعملة (450-550 دولارًا مقابل 1,000-1,300 دولار). إعداد ROCm هو الثمن المقابل.' }
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'سرعة متماثلة، نفس VRAM (24GB). RX 7900 XTX أرخص بـ 1,450-2,050 دولارًا مستعملة (450-550 دولارًا مقابل 2,000-2,600 دولار — ارتفع سعر RTX 4090 المستعملة بشدة بعد أن أوقفت NVIDIA إنتاجها في 2026). إعداد ROCm هو الثمن المقابل.' }
           },
           {
             '@type': 'Question',
@@ -665,7 +665,7 @@ schema: {
             { 'GPU': 'RX 7900 XT', 'VRAM': '20GB', 'TFLOPS': '2,540', 'Precio (2ª mano)': 'نحو 400-480 دولارًا', 'Rend./$ vs. RTX': '+20%', 'RTX equivalente': 'RTX 4080 (متماثل)' },
             { 'GPU': 'RX 7900 XTX', 'VRAM': '24GB', 'TFLOPS': '2,750', 'Precio (2ª mano)': 'نحو 450-550 دولارًا', 'Rend./$ vs. RTX': '+15%', 'RTX equivalente': 'RTX 4090 (سرعة متماثلة)' },
             { 'GPU': 'RTX 3080', 'VRAM': '10GB', 'TFLOPS': '1,456', 'Precio (2ª mano)': 'نحو 350-400 دولار', 'Rend./$ vs. RTX': '--', 'RTX equivalente': '--' },
-            { 'GPU': 'RTX 4090', 'VRAM': '24GB', 'TFLOPS': '2,752', 'Precio (2ª mano)': 'نحو 1,000-1,300 دولار', 'Rend./$ vs. RTX': '--', 'RTX equivalente': '--' },
+            { 'GPU': 'RTX 4090', 'VRAM': '24GB', 'TFLOPS': '2,752', 'Precio (2ª mano)': 'نحو 2,000-2,600 دولار', 'Rend./$ vs. RTX': '--', 'RTX equivalente': '--' },
           ],
           columns: ['GPU', 'VRAM', 'TFLOPS', 'Precio (2ª mano)', 'Rend./$ vs. RTX', 'RTX equivalente'],
         
@@ -732,7 +732,7 @@ schema: {
           title: 'الأسئلة الشائعة',
           faqs: [
             { q: 'هل أشتري AMD RX 6800 XT أم NVIDIA RTX 3080 لنماذج LLM المحلية؟', a: 'RTX 3080 إن كنت تقدّر البساطة (CUDA يعمل دون مشاكل). RX 6800 XT إن أردت قيمة أكبر بنسبة 25% ولا تمانع 5-10 ساعات من إعداد ROCm.' },
-            { q: 'هل AMD RX 7900 XTX أفضل من RTX 4090؟', a: 'سرعة متماثلة، نفس VRAM (24GB). RX 7900 XTX أرخص بـ 200-300 دولار مستعملة (450-550 دولارًا مقابل 1,000-1,300 دولار). إعداد ROCm هو الثمن المقابل.' },
+            { q: 'هل AMD RX 7900 XTX أفضل من RTX 4090؟', a: 'سرعة متماثلة، نفس VRAM (24GB). RX 7900 XTX أرخص بـ 1,450-2,050 دولارًا مستعملة (450-550 دولارًا مقابل 2,000-2,600 دولار — ارتفع سعر RTX 4090 المستعملة بشدة بعد أن أوقفت NVIDIA إنتاجها في 2026). إعداد ROCm هو الثمن المقابل.' },
             { q: 'هل يمكنني استخدام كروت رسوميات AMD مع Ollama؟', a: 'تقنيًا نعم. وفقاً لاختباراتنا في أبريل 2026 (Ollama v0.3.x، ROCm 6.x): كان دعم ROCm غير متسق في اختباراتنا — فشل اكتشاف GPU في بعض التكوينات والتراجع إلى المعالج كان متكرراً. راجع قائمة التوافق الحالية مع AMD على github.com/ollama/ollama قبل الالتزام؛ vLLM أو llama.cpp هما المسارات الأكثر أماناً للاستدلال على AMD اليوم.' },
             { q: 'ما أفضل مسار AMD لنماذج LLM المحلية في 2026؟', a: 'Llama.cpp (خلفية HIP) + Text Generation WebUI. كلاهما بدعم جيد لـ AMD. تجنّب Ollama.' },
             { q: 'هل أحتاج Ubuntu لـ AMD ROCm، أم يعمل Windows أيضًا؟', a: 'الدعم في Windows موجود (HIP on Windows)، لكنه أحدث وأقل استقرارًا. Ubuntu هو المسار الموصى به.' },
@@ -801,7 +801,7 @@ schema: {
         'description': 'Compare AMD RX 7900 XTX, 6800 XT vs NVIDIA RTX. Configuração de ROCm, desempenho no vLLM, análise de custo por TFLOP. Quando escolher AMD em vez de CUDA. Abril 2026.',
         'url': 'https://www.promptquorum.com/pt/local-llms/best-amd-gpus-local-llm',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-07-14',
+        'dateModified': '2026-08-28',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -829,7 +829,7 @@ schema: {
           {
             '@type': 'Question',
             'name': 'A AMD RX 7900 XTX é melhor que a RTX 4090?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Velocidade semelhante, mesma VRAM (24GB). A RX 7900 XTX é US$ 200-300 mais barata de segunda mão (US$ 450-550 vs. US$ 1.000-1.300). A configuração do ROCm é o contrapeso.' }
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Velocidade semelhante, mesma VRAM (24GB). A RX 7900 XTX é US$ 1.450-2.050 mais barata de segunda mão (US$ 450-550 vs. US$ 2.000-2.600 — o preço da RTX 4090 usada subiu muito depois que a NVIDIA a descontinuou em 2026). A configuração do ROCm é o contrapeso.' }
           },
           {
             '@type': 'Question',
@@ -910,7 +910,7 @@ schema: {
             { 'GPU': 'RX 7900 XT', 'VRAM': '20GB', 'TFLOPS': '2.540', 'Preço (2ª mão)': '~US$ 400-480', 'Desemp./$ vs. RTX': '+20%', 'RTX equivalente': 'RTX 4080 (similar)' },
             { 'GPU': 'RX 7900 XTX', 'VRAM': '24GB', 'TFLOPS': '2.750', 'Preço (2ª mão)': '~US$ 450-550', 'Desemp./$ vs. RTX': '+15%', 'RTX equivalente': 'RTX 4090 (velocidade similar)' },
             { 'GPU': 'RTX 3080', 'VRAM': '10GB', 'TFLOPS': '1.456', 'Preço (2ª mão)': '~US$ 350-400', 'Desemp./$ vs. RTX': '--', 'RTX equivalente': '--' },
-            { 'GPU': 'RTX 4090', 'VRAM': '24GB', 'TFLOPS': '2.752', 'Preço (2ª mão)': '~US$ 1.000-1.300', 'Desemp./$ vs. RTX': '--', 'RTX equivalente': '--' },
+            { 'GPU': 'RTX 4090', 'VRAM': '24GB', 'TFLOPS': '2.752', 'Preço (2ª mão)': '~US$ 2.000-2.600', 'Desemp./$ vs. RTX': '--', 'RTX equivalente': '--' },
           ],
           columns: ['GPU', 'VRAM', 'TFLOPS', 'Preço (2ª mão)', 'Desemp./$ vs. RTX', 'RTX equivalente'],
         
@@ -977,7 +977,7 @@ schema: {
           title: 'Perguntas frequentes',
           faqs: [
             { q: 'Devo comprar a AMD RX 6800 XT ou a NVIDIA RTX 3080 para LLMs locais?', a: 'RTX 3080 se você valoriza a simplicidade (o CUDA funciona sem problemas). RX 6800 XT se você quer 25% mais valor e não se importa com 5-10 horas de configuração do ROCm.' },
-            { q: 'A AMD RX 7900 XTX é melhor que a RTX 4090?', a: 'Velocidade semelhante, mesma VRAM (24GB). A RX 7900 XTX é US$ 200-300 mais barata de segunda mão (US$ 450-550 vs. US$ 1.000-1.300). A configuração do ROCm é o contrapeso.' },
+            { q: 'A AMD RX 7900 XTX é melhor que a RTX 4090?', a: 'Velocidade semelhante, mesma VRAM (24GB). A RX 7900 XTX é US$ 1.450-2.050 mais barata de segunda mão (US$ 450-550 vs. US$ 2.000-2.600 — o preço da RTX 4090 usada subiu muito depois que a NVIDIA a descontinuou em 2026). A configuração do ROCm é o contrapeso.' },
             { q: 'Posso usar GPUs AMD com o Ollama?', a: 'Tecnicamente sim. Com base nos nossos testes de abril de 2026 (Ollama v0.3.x, ROCm 6.x), o suporte ROCm foi inconsistente — a deteção de GPU falhou em algumas configurações e o fallback para CPU foi frequente. Verifique a lista de compatibilidade AMD atual em github.com/ollama/ollama antes de decidir; para inferência AMD fiável hoje, vLLM ou llama.cpp são os caminhos mais seguros.' },
             { q: 'Qual é o melhor caminho AMD para LLMs locais em 2026?', a: 'Llama.cpp (backend HIP) + Text Generation WebUI. Ambos têm bom suporte para AMD. Evite o Ollama.' },
             { q: 'Preciso de Ubuntu para o AMD ROCm, ou o Windows também funciona?', a: 'O suporte no Windows existe (HIP no Windows), mas é mais recente e menos estável. O Ubuntu é o caminho recomendado.' },
@@ -1078,7 +1078,7 @@ schema: {
             { 'GPU': 'RX 7900 XT', 'VRAM': '20 GB', 'TFLOPS': '2.540', 'Preis gebraucht': '400-480 €', 'Leistung/€ vs. RTX': '+20%', 'Equivalent RTX': 'RTX 4080 (ähnlich)' },
             { 'GPU': 'RX 7900 XTX', 'VRAM': '24 GB', 'TFLOPS': '2.750', 'Preis gebraucht': '450-550 €', 'Leistung/€ vs. RTX': '+15%', 'Equivalent RTX': 'RTX 4090 (ähnliche Geschwindigkeit)' },
             { 'GPU': 'RTX 3080', 'VRAM': '10 GB', 'TFLOPS': '1.456', 'Preis gebraucht': '350-400 €', 'Leistung/€ vs. RTX': '--', 'Equivalent RTX': '--' },
-            { 'GPU': 'RTX 4090', 'VRAM': '24 GB', 'TFLOPS': '2.752', 'Preis gebraucht': '1.000-1.300 €', 'Leistung/€ vs. RTX': '--', 'Equivalent RTX': '--' },
+            { 'GPU': 'RTX 4090', 'VRAM': '24 GB', 'TFLOPS': '2.752', 'Preis gebraucht': '2.100-2.800 €', 'Leistung/€ vs. RTX': '--', 'Equivalent RTX': '--' },
           ],
           columns: ['GPU', 'VRAM', 'TFLOPS', 'Preis gebraucht', 'Leistung/€ vs. RTX', 'Equivalent RTX'],
         
@@ -1145,7 +1145,7 @@ schema: {
           title: 'Häufig gestellte Fragen',
           faqs: [
             { q: 'Sollte ich AMD RX 6800 XT oder NVIDIA RTX 3080 für lokale LLMs kaufen?', a: 'RTX 3080, wenn Sie Einfachheit bevorzugen (CUDA „funktioniert einfach"). RX 6800 XT, wenn Sie 25% besseren Wert und 5-10 Stunden ROCm-Einrichtung nicht stört.' },
-            { q: 'Ist AMD RX 7900 XTX besser als RTX 4090?', a: 'Ähnliche Geschwindigkeit, gleicher VRAM (24 GB). RX 7900 XTX ist 200-300 € günstiger gebraucht (450-550 € vs. 1.000-1.300 €). ROCm-Einrichtung ist der Kompromiss.' },
+            { q: 'Ist AMD RX 7900 XTX besser als RTX 4090?', a: 'Ähnliche Geschwindigkeit, gleicher VRAM (24 GB). RX 7900 XTX ist 1.550-2.350 € günstiger gebraucht (450-550 € vs. 2.100-2.800 € — der Preis gebrauchter RTX 4090 stieg stark, nachdem NVIDIA sie 2026 eingestellt hat). ROCm-Einrichtung ist der Kompromiss.' },
             { q: 'Kann ich AMD-GPUs mit Ollama verwenden?', a: 'Technisch ja. In unseren Tests (April 2026, Ollama v0.3.x, ROCm 6.x) war die ROCm-Unterstützung inkonsistent — GPU-Erkennung schlug bei einigen Konfigurationen fehl, CPU-Fallback war häufig. Prüfen Sie die aktuelle AMD-Kompatibilitätsliste auf github.com/ollama/ollama vor dem Einsatz; für zuverlässige AMD-Inferenz heute sind vLLM oder llama.cpp die sichereren Wege.' },
             { q: 'Was ist der beste AMD-Pfad für lokale LLMs 2026?', a: 'Llama.cpp (HIP-Backend) + Text Generation WebUI. Beide haben solide AMD-Unterstützung. Vermeiden Sie Ollama.' },
             { q: 'Brauche ich Ubuntu für AMD ROCm, oder funktioniert Windows?', a: 'Windows-Unterstützung existiert (HIP auf Windows), aber sie war in unseren Tests April 2026 weniger stabil als auf Ubuntu. Ubuntu ist der empfohlene Pfad.' },
@@ -1254,7 +1254,7 @@ schema: {
             { 'GPU': 'RX 7900 XT', 'VRAM': '20 Go', 'TFLOPS': '2.540', 'Prix occasion': '400-480 €', 'Perf/€ vs RTX': '+20%', 'RTX équivalent': 'RTX 4080 (similaire)' },
             { 'GPU': 'RX 7900 XTX', 'VRAM': '24 Go', 'TFLOPS': '2.750', 'Prix occasion': '450-550 €', 'Perf/€ vs RTX': '+15%', 'RTX équivalent': 'RTX 4090 (vitesse similaire)' },
             { 'GPU': 'RTX 3080', 'VRAM': '10 Go', 'TFLOPS': '1.456', 'Prix occasion': '350-400 €', 'Perf/€ vs RTX': '--', 'RTX équivalent': '--' },
-            { 'GPU': 'RTX 4090', 'VRAM': '24 Go', 'TFLOPS': '2.752', 'Prix occasion': '1.000-1.300 €', 'Perf/€ vs RTX': '--', 'RTX équivalent': '--' },
+            { 'GPU': 'RTX 4090', 'VRAM': '24 Go', 'TFLOPS': '2.752', 'Prix occasion': '2.100-2.800 €', 'Perf/€ vs RTX': '--', 'RTX équivalent': '--' },
           ],
           columns: ['GPU', 'VRAM', 'TFLOPS', 'Prix occasion', 'Perf/€ vs RTX', 'RTX équivalent'],
         
@@ -1321,7 +1321,7 @@ schema: {
           title: 'Questions fréquentes',
           faqs: [
             { q: 'Devrais-je acheter AMD RX 6800 XT ou NVIDIA RTX 3080 pour LLM locaux?', a: 'RTX 3080 si vous privilégiez simplicité (CUDA « marche »). RX 6800 XT si vous voulez 25% meilleur rapport et tolérez 5-10 h configuration ROCm.' },
-            { q: 'AMD RX 7900 XTX est-elle meilleure que RTX 4090?', a: 'Vitesse similaire, même VRAM (24 Go). RX 7900 XTX 200-300 € moins cher occasion (450-550 € vs 1.000-1.300 €). Configuration ROCm est le compromis.' },
+            { q: 'AMD RX 7900 XTX est-elle meilleure que RTX 4090?', a: 'Vitesse similaire, même VRAM (24 Go). RX 7900 XTX 1 550-2 350 € moins cher occasion (450-550 € vs 2 100-2 800 € — le prix de la RTX 4090 occasion a fortement augmenté depuis son arrêt par NVIDIA en 2026). Configuration ROCm est le compromis.' },
             { q: 'Puis-je utiliser GPU AMD avec Ollama?', a: 'Techniquement oui. Dans nos tests d\'avril 2026 (Ollama v0.3.x, ROCm 6.x), le support ROCm était inconsistant — la détection GPU a échoué sur certaines configurations et le repli CPU était fréquent. Vérifiez la liste de compatibilité AMD actuelle sur github.com/ollama/ollama ; vLLM ou llama.cpp sont les chemins plus fiables pour AMD aujourd\'hui.' },
             { q: 'Quel est le meilleur chemin AMD pour LLM locaux 2026?', a: 'Llama.cpp (backend HIP) + Text Generation WebUI. Tous deux ont support AMD solide. Évitez Ollama.' },
             { q: 'Ai-je besoin Ubuntu pour AMD ROCm, ou Windows fonctionne?', a: 'Le support Windows existe (HIP sur Windows), mais il était moins stable qu\'Ubuntu dans nos tests d\'avril 2026. Ubuntu est le chemin recommandé.' },
@@ -1431,7 +1431,7 @@ schema: {
             { 'GPU': 'RX 7900 XT', 'VRAM': '20GB', 'TFLOPS': '2.540', '中古価格': '¥50,000-55,000', '性能/円 vs RTX': '+20%', '等効 RTX': 'RTX 4080（相当）' },
             { 'GPU': 'RX 7900 XTX', 'VRAM': '24GB', 'TFLOPS': '2.750', '中古価格': '¥55,000-65,000', '性能/円 vs RTX': '+15%', '等効 RTX': 'RTX 4090（相当速度）' },
             { 'GPU': 'RTX 3080', 'VRAM': '10GB', 'TFLOPS': '1.456', '中古価格': '¥40,000-45,000', '性能/円 vs RTX': '--', '等効 RTX': '--' },
-            { 'GPU': 'RTX 4090', 'VRAM': '24GB', 'TFLOPS': '2.752', '中古価格': '¥120,000-150,000', '性能/円 vs RTX': '--', '等効 RTX': '--' },
+            { 'GPU': 'RTX 4090', 'VRAM': '24GB', 'TFLOPS': '2.752', '中古価格': '¥245,000-320,000', '性能/円 vs RTX': '--', '等効 RTX': '--' },
           ],
           columns: ['GPU', 'VRAM', 'TFLOPS', '中古価格', '性能/円 vs RTX', '等効 RTX'],
         
@@ -1498,7 +1498,7 @@ schema: {
           title: 'よくある質問',
           faqs: [
             { q: 'ローカル LLM に AMD RX 6800 XT または NVIDIA RTX 3080 を購入すべきか？', a: 'シンプルさを優先する場合は RTX 3080（CUDA「即座に機能」）。25% 優れたコスト・パフォーマンスで 5-10 時間の ROCm セットアップを厭わない場合は RX 6800 XT。' },
-            { q: 'AMD RX 7900 XTX は RTX 4090 より優れているか？', a: '速度は同等、VRAM は同じ（24GB）。RX 7900 XTX は中古 ¥55,000-65,000 対 ¥120,000-150,000。ROCm セットアップはトレードオフです。' },
+            { q: 'AMD RX 7900 XTX は RTX 4090 より優れているか？', a: '速度は同等、VRAM は同じ（24GB）。RX 7900 XTX は中古 ¥55,000-65,000 に対し、RTX 4090 は中古¥245,000-320,000（NVIDIAが2026年に生産終了して以降、価格が大幅上昇）。ROCm セットアップはトレードオフです。' },
             { q: 'AMD GPU を Ollama で使用できるか？', a: '技術的には可能です。2026年4月のテスト（Ollama v0.3.x、ROCm 6.x）では、ROCmサポートは不安定でした——一部の構成でGPU検出が失敗し、CPUフォールバックが頻繁でした。導入前にgithub.com/ollama/ollamaで最新のAMD互換性リストを確認してください；信頼性の高いAMD推論には、vLLM または llama.cpp がより安全な選択肢です。' },
             { q: '2026 年のローカル LLM に最適な AMD パスは何か？', a: 'Llama.cpp（HIP バックエンド）+ Text Generation WebUI。両方とも AMD に堅実なサポートがあります。Ollama を避けてください。' },
             { q: 'AMD ROCm に Ubuntu が必要か、それとも Windows でも機能するか？', a: 'Windows サポートが存在（Windows 上の HIP）しますが、2026年4月テスト時点ではUbuntuより不安定でした。Ubuntu が推奨パスです。' },
@@ -1612,7 +1612,7 @@ schema: {
             { 'GPU': 'RX 7900 XT', 'VRAM': '20GB', 'TFLOPS': '2,540', '二手价格': '$400-480', '性价比 vs RTX': '+20%', '等效 RTX': 'RTX 4080（相当）' },
             { 'GPU': 'RX 7900 XTX', 'VRAM': '24GB', 'TFLOPS': '2,750', '二手价格': '$450-550', '性价比 vs RTX': '+15%', '等效 RTX': 'RTX 4090（相当速度）' },
             { 'GPU': 'RTX 3080', 'VRAM': '10GB', 'TFLOPS': '1,456', '二手价格': '$350-400', '性价比 vs RTX': '--', '等效 RTX': '--' },
-            { 'GPU': 'RTX 4090', 'VRAM': '24GB', 'TFLOPS': '2,752', '二手价格': '$1,000-1,300', '性价比 vs RTX': '--', '等效 RTX': '--' },
+            { 'GPU': 'RTX 4090', 'VRAM': '24GB', 'TFLOPS': '2,752', '二手价格': '$2,000-2,600', '性价比 vs RTX': '--', '等效 RTX': '--' },
           ],
           columns: ['GPU', 'VRAM', 'TFLOPS', '二手价格', '性价比 vs RTX', '等效 RTX'],
         
@@ -1680,7 +1680,7 @@ schema: {
           title: '常见问题',
           faqs: [
             { q: '本地 LLM 应购买 AMD RX 6800 XT 还是 NVIDIA RTX 3080？', a: '优先简单则 RTX 3080（CUDA「即用」）。优先 25% 更优性价比且可承受 5-10 小时 ROCm 设置则 RX 6800 XT。' },
-            { q: 'AMD RX 7900 XTX 优于 RTX 4090 吗？', a: '速度相当，VRAM 相同（24GB）。RX 7900 XTX 二手 $450-550 对比 $1,000-1,300。ROCm 设置是权衡。' },
+            { q: 'AMD RX 7900 XTX 优于 RTX 4090 吗？', a: '速度相当，VRAM 相同（24GB）。RX 7900 XTX 二手 $450-550，比二手RTX 4090的$2,000-2,600便宜$1,450-2,050（NVIDIA于2026年停产后RTX 4090二手价大幅上涨）。ROCm 设置是权衡。' },
             { q: '能用 Ollama 使用 AMD GPU 吗？', a: '技术上可以。在我们2026年4月的测试（Ollama v0.3.x，ROCm 6.x）中，ROCm支持不稳定——某些配置下GPU检测失败，CPU回退常见。在决定使用前，请查看github.com/ollama/ollama上的最新AMD兼容性列表；对于可靠的AMD推理，vLLM或llama.cpp是更安全的选择。' },
             { q: '2026 年本地 LLM 最优 AMD 路径？', a: 'Llama.cpp（HIP 后端）+ Text Generation WebUI。两者都对 AMD 有坚实支持。避免 Ollama。' },
             { q: 'AMD ROCm 需要 Ubuntu 还是 Windows 也可？', a: 'Windows 支持存在（Windows 上 HIP），但在我们2026年4月的测试中不如Ubuntu稳定。Ubuntu 是推荐路径。' },
@@ -1763,7 +1763,7 @@ schema: {
     metaDescription: 'AMD RX 6800 XT, RX 7900 XTX vs NVIDIA RTX 비교: ROCm 설치, vLLM 성능, TFLOP당 비용 분석, AMD 선택 시기. 2026년 4월 업데이트.',
     heroImage: '/images/best-amd-gpus-local-llm-price-performance-hero-ko.webp',
     publishDate: '2026-04-05',
-    dateModified: '2026-04-18',
+    dateModified: '2026-08-28',
     lastFactChecked: '2026-04-18',
     next_refresh_due: '2026-10-05',
     leadAnswerBlock: '**AMD RX 6800 XT와 RX 7900 XTX는 NVIDIA의 견실한 대안으로, 달러당 연산 성능이 15-20% 우수하지만 ONNX Runtime 및 vLLM 드라이버 지원이 상대적으로 취약합니다.**',
@@ -1778,7 +1778,7 @@ schema: {
       'description': 'AMD RX 7900 XTX, 6800 XT vs NVIDIA RTX 비교. ROCm 설치, vLLM 성능, TFLOP당 비용 분석. CUDA 대신 AMD를 선택해야 하는 경우. 2026년 4월.',
       'url': 'https://www.promptquorum.com/ko/local-llms/best-amd-gpus-local-llm',
       'datePublished': '2026-04-05',
-      'dateModified': '2026-04-18',
+      'dateModified': '2026-08-28',
       'inLanguage': 'ko',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
@@ -1808,7 +1808,7 @@ schema: {
         {
           '@type': 'Question',
           'name': 'AMD RX 7900 XTX가 RTX 4090보다 우수합니까?',
-          'acceptedAnswer': { '@type': 'Answer', 'text': '속도는 비슷하고 VRAM도 동일(24GB)합니다. RX 7900 XTX는 중고 기준 $200-300 더 저렴합니다($450-550 대 $1,000-1,300). ROCm 설정이 트레이드오프입니다.' }
+          'acceptedAnswer': { '@type': 'Answer', 'text': '속도는 비슷하고 VRAM도 동일(24GB)합니다. RX 7900 XTX는 중고 기준 $1,450-2,050 더 저렴합니다($450-550 대 $2,000-2,600 — NVIDIA가 2026년 단종한 이후 중고 RTX 4090 가격이 크게 상승). ROCm 설정이 트레이드오프입니다.' }
         },
         {
           '@type': 'Question',
@@ -1904,7 +1904,7 @@ schema: {
           { '0': 'RX 7900 XT', '1': '20GB', '2': '2,540', '3': '$400-480', '4': '+20%', '5': 'RTX 4080 (유사)' },
           { '0': 'RX 7900 XTX', '1': '24GB', '2': '2,750', '3': '$450-550', '4': '+15%', '5': 'RTX 4090 (유사 속도)' },
           { '0': 'RTX 3080', '1': '10GB', '2': '1,456', '3': '$350-400', '4': '--', '5': '--' },
-          { '0': 'RTX 4090', '1': '24GB', '2': '2,752', '3': '$1,000-1,300', '4': '--', '5': '--' },
+          { '0': 'RTX 4090', '1': '24GB', '2': '2,752', '3': '$2,000-2,600', '4': '--', '5': '--' },
         ],
         columns: ['GPU', 'VRAM', 'TFLOPS', '중고 가격', '달러당 성능 vs. RTX', '동급 RTX'],
       
@@ -1971,7 +1971,7 @@ schema: {
         title: '자주 묻는 질문',
         faqs: [
           { q: '로컬 LLM용으로 AMD RX 6800 XT와 NVIDIA RTX 3080 중 어느 것을 구입해야 합니까?', a: '단순함을 중시한다면 RTX 3080(CUDA는 바로 작동합니다). 25% 더 나은 가성비를 원하고 5-10시간의 ROCm 설정을 감수할 수 있다면 RX 6800 XT를 권장합니다.' },
-          { q: 'AMD RX 7900 XTX가 RTX 4090보다 우수합니까?', a: '속도는 비슷하고 VRAM도 동일(24GB)합니다. RX 7900 XTX는 중고 기준 $200-300 더 저렴합니다($450-550 대 $1,000-1,300). ROCm 설정이 트레이드오프입니다.' },
+          { q: 'AMD RX 7900 XTX가 RTX 4090보다 우수합니까?', a: '속도는 비슷하고 VRAM도 동일(24GB)합니다. RX 7900 XTX는 중고 기준 $1,450-2,050 더 저렴합니다($450-550 대 $2,000-2,600 — NVIDIA가 2026년 단종한 이후 중고 RTX 4090 가격이 크게 상승). ROCm 설정이 트레이드오프입니다.' },
           { q: 'AMD GPU로 Ollama를 사용할 수 있습니까?', a: '기술적으로는 가능합니다. 2026년 4월 테스트(Ollama v0.3.x, ROCm 6.x)에서 ROCm 지원이 불안정했습니다 — 일부 구성에서 GPU 감지 실패, CPU 폴백이 잦았습니다. 사용 전 github.com/ollama/ollama에서 최신 AMD 호환성 목록을 확인하십시오; 안정적인 AMD 추론에는 vLLM 또는 llama.cpp가 더 안전한 경로입니다.' },
           { q: '2026년 로컬 LLM을 위한 최적의 AMD 경로는 무엇입니까?', a: 'Llama.cpp(HIP 백엔드) + Text Generation WebUI입니다. 두 도구 모두 AMD 지원이 견실합니다. Ollama는 피하십시오.' },
           { q: 'AMD ROCm에 Ubuntu가 필요합니까, 아니면 Windows에서도 작동합니까?', a: 'Windows 지원(HIP on Windows)도 있지만 더 최신이고 버그가 많습니다. Ubuntu가 권장 경로입니다.' },
