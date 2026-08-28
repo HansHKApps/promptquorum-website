@@ -5,8 +5,8 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-07-15',
-    last_full_refresh: '2026-06-15',
+    next_refresh_due: '2026-09-29',
+    last_full_refresh: '2026-08-29',
     theme: 'Hardware & Performance',
     heroImage: '/images/galaxy-vs-iphone-on-device-ai-2026-overview-hero-en.webp',
     title: 'Galaxy vs iPhone On-Device AI: Samsung Galaxy AI vs Apple Intelligence (2026)',
@@ -14,128 +14,24 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'Samsung Galaxy S26 (launched Feb 25, 2026) and Apple\'s refreshed Intelligence suite (WWDC June 9, 2026) represent two philosophies of on-device AI. Samsung is proactive—packing in more features (Galaxy AI), giving users control, and letting them choose local or cloud. Apple is depth-first—fewer features, more polish, cryptographically auditable privacy. This comparison examines what each platform actually does on-device, how they differ philosophically, and which is better for your privacy and performance needs.',
     metaDescription: 'Galaxy AI vs Apple Intelligence: Compare on-device AI features, privacy architecture, cloud fallback, and which smartphone is better for local LLM running.',
     publishDate: '2026-06-15',
-    dateModified: '2026-06-15',
+    dateModified: '2026-08-29',
     readTime: '12 min read',
     educationalLevel: 'Intermediate',
     audience: 'Smartphone buyers evaluating on-device AI, privacy-conscious users, developers considering platform for mobile LLM inference',
     primaryTerm: 'Galaxy AI vs Apple Intelligence',
     targetKeywords: ['galaxy ai vs apple intelligence', 'on device ai comparison', 'samsung vs iphone ai', 'galaxy s26 apple intelligence', 'iphone local ai'],
-    leadAnswerBlock: '**Samsung Galaxy AI (S26, Exynos 2600): hybrid on-device + cloud, proactive feature set (Call Screening, Now Nudge, Now Brief on-device; Creative Studio, Gemini agents cloud). Users choose privacy level via "Process data only on device" toggle. Apple Intelligence (iOS 27, AFM 3 architecture): on-device-first (3B/20B on-device models), cryptographically auditable Private Cloud Compute (PCC) for advanced tasks, no data storage. Winner depends on preferences: Samsung for feature breadth + user control; Apple for privacy architecture + polish. For running your own quantized LLMs: Samsung Exynos 2600 is faster (2.4x Stable Diffusion), making Galaxy S26 the better hardware choice.**',
+    leadAnswerBlock: '**Samsung Galaxy AI (S26, Exynos 2600): hybrid on-device + cloud, proactive feature set (Call Screening, Now Nudge, Now Brief on-device; Creative Studio, Gemini agents cloud). Users choose privacy level via "Process data only on device" toggle. Apple Intelligence (iOS 27, AFM 3 architecture): on-device-first (3B/20B on-device models), cryptographically auditable Private Cloud Compute (PCC) for advanced tasks, no data storage. Winner depends on preferences: Samsung for feature breadth + user control; Apple for privacy architecture + polish. For running your own quantized LLMs: Samsung Exynos 2600 is faster at Stable Diffusion generation than its own predecessor (2.4x vs. Exynos 2500; Apple hasn\'t published A18 Pro Stable Diffusion benchmarks), making Galaxy S26 the better-documented hardware choice.**',
     quickAnswerTop: {
       en: {
         question: 'Which is better: Galaxy AI or Apple Intelligence?',
-        answer: 'For on-device feature breadth and user control: Galaxy S26. For privacy architecture and polish: iPhone 16. For running your own LLMs: Galaxy S26 (Exynos 2600 is 2.4x faster at Stable Diffusion than A18 Pro). Both have strong on-device capabilities; the choice depends on whether you prioritize choice/features (Samsung) or auditable privacy/simplicity (Apple).',
+        answer: 'For on-device feature breadth and user control: Galaxy S26. For privacy architecture and polish: iPhone 16. For running your own LLMs: Galaxy S26 (Exynos 2600 is 2.4x faster at Stable Diffusion than its own predecessor; A18 Pro hasn\'t been benchmarked on Stable Diffusion). Both have strong on-device capabilities; the choice depends on whether you prioritize choice/features (Samsung) or auditable privacy/simplicity (Apple).',
         bullets: [
           'Galaxy AI: hybrid (on-device + cloud), user-controlled privacy toggle, more features at launch',
           'Apple Intelligence: on-device-first design, cryptographically auditable PCC, fewer features but polished',
-          'On-device speed: Exynos 2600 > Snapdragon 8 Elite Gen 5 > Apple A18 Pro for Stable Diffusion',
+          'On-device speed: Exynos 2600 is 2.4x faster than its predecessor at Stable Diffusion; Snapdragon 8 Elite Gen 5 and A18 Pro aren\'t directly benchmarked against it',
           'Privacy model: Samsung Knox Vault + on-device toggle vs Apple on-device default + PCC audit capability',
           'Cloud philosophy: Samsung proactive cloud features (Creative Studio, Gemini); Apple cloud as opt-in tier for complex reasoning',
           'Best for local LLMs: Galaxy S26 (Exynos 2600 + better tooling: Ollama, MLC Chat on Android)'
-        ],
-        updatedDate: '2026-06-15'
-      },
-      ko: {
-        question: 'Galaxy AI가 더 나은지 Apple Intelligence가 더 나은지?',
-        answer: '온디바이스 기능 범위와 사용자 제어: Galaxy S26. 프라이버시 아키텍처와 완성도: iPhone 16. 자신의 LLM 실행: Galaxy S26(Exynos 2600은 Stable Diffusion에서 A18 Pro보다 2.4배 빠릅니다). 둘 다 강력한 온디바이스 기능을 가지고 있습니다. 선택은 선택/기능(Samsung)을 우선시하거나 감사 가능한 프라이버시/단순성(Apple)을 우선시할지에 따라 달렸습니다.',
-        bullets: [
-          'Galaxy AI: 하이브리드(온디바이스+클라우드), 사용자 제어 프라이버시 토글, 출시 시 더 많은 기능',
-          'Apple Intelligence: 온디바이스 우선 디자인, 암호화로 감사 가능한 PCC, 더 적은 기능이지만 완성도 높음',
-          '온디바이스 속도: Exynos 2600 > Snapdragon 8 Elite Gen 5 > Apple A18 Pro(Stable Diffusion용)',
-          '프라이버시 모델: Samsung Knox Vault + 온디바이스 토글 vs Apple 온디바이스 기본값 + PCC 감사 기능',
-          '클라우드 철학: Samsung 능동적 클라우드 기능(Creative Studio, Gemini); Apple 복잡한 추론을 위한 옵트인 계층',
-          '로컬 LLM에 최적: Galaxy S26(Exynos 2600 + 더 나은 도구: Android의 Ollama, MLC Chat)'
-        ],
-        updatedDate: '2026-06-15'
-      },
-      de: {
-        question: 'Was ist besser: Galaxy AI oder Apple Intelligence?',
-        answer: 'Für On-Device-Feature-Breite und Benutzerkontrolle: Galaxy S26. Für Datenschutz-Architektur und Poliergrad: iPhone 16. Für das Ausführen eigener LLMs: Galaxy S26 (Exynos 2600 ist 2,4x schneller bei Stable Diffusion als A18 Pro). Beide haben starke On-Device-Funktionen; die Wahl hängt davon ab, ob Sie Auswahl/Features (Samsung) oder überprüfbaren Datenschutz/Einfachheit (Apple) priorisieren.',
-        bullets: [
-          'Galaxy AI: hybrid (on-device + cloud), benutzer-kontrollierter Datenschutz-Schalter, mehr Features',
-          'Apple Intelligence: On-Device-First-Design, kryptographisch überprüfbare PCC, weniger Features aber poliert',
-          'On-Device-Geschwindigkeit: Exynos 2600 > Snapdragon 8 Elite Gen 5 > Apple A18 Pro für Stable Diffusion',
-          'Datenschutz-Modell: Samsung Knox Vault + on-device Toggle vs Apple on-device Standard + PCC Audit',
-          'Cloud-Philosophie: Samsung proaktive Cloud-Funktionen; Apple Cloud als Opt-in-Tier',
-          'Best für lokale LLMs: Galaxy S26 (Exynos 2600 + besseres Tooling: Ollama, MLC Chat)'
-        ],
-        updatedDate: '2026-06-15'
-      },
-      fr: {
-        question: 'Lequel est meilleur: Galaxy AI ou Apple Intelligence?',
-        answer: 'Pour largeur de fonctionnalités on-device et contrôle utilisateur: Galaxy S26. Pour architecture de confidentialité et finition: iPhone 16. Pour exécuter vos propres LLM: Galaxy S26 (Exynos 2600 est 2,4x plus rapide à Stable Diffusion que A18 Pro). Les deux ont des capacités on-device fortes; le choix dépend si vous priorisez choix/fonctionnalités (Samsung) ou confidentialité auditable/simplicité (Apple).',
-        bullets: [
-          'Galaxy AI: hybride (on-device + cloud), toggle confidentialité contrôlé-utilisateur, plus de fonctionnalités',
-          'Apple Intelligence: conception on-device-first, PCC auditable cryptographiquement, moins de fonctionnalités mais polie',
-          'Vitesse on-device: Exynos 2600 > Snapdragon 8 Elite Gen 5 > Apple A18 Pro pour Stable Diffusion',
-          'Modèle confidentialité: Samsung Knox Vault + toggle on-device vs Apple par-défaut on-device + audit PCC',
-          'Philosophie cloud: Samsung fonctionnalités cloud proactives; Apple cloud comme couche opt-in',
-          'Meilleur pour LLMs locaux: Galaxy S26 (Exynos 2600 + meilleur outillage: Ollama, MLC Chat)'
-        ],
-        updatedDate: '2026-06-15'
-      },
-      es: {
-        question: '¿Cuál es mejor: Galaxy AI o Apple Intelligence?',
-        answer: 'Para amplitud de características en dispositivo y control del usuario: Galaxy S26. Para arquitectura de privacidad y acabado: iPhone 16. Para ejecutar sus propios LLM: Galaxy S26 (Exynos 2600 es 2,4x más rápido en Stable Diffusion que A18 Pro). Ambos tienen capacidades en dispositivo sólidas; la opción depende de si priorizas opción/características (Samsung) o privacidad auditable/simplicidad (Apple).',
-        bullets: [
-          'Galaxy AI: híbrido (en dispositivo + nube), palanca de privacidad controlada por el usuario, más funciones',
-          'Apple Intelligence: diseño en dispositivo primero, PCC auditable criptográficamente, menos funciones pero pulido',
-          'Velocidad en dispositivo: Exynos 2600 > Snapdragon 8 Elite Gen 5 > Apple A18 Pro para Stable Diffusion',
-          'Modelo de privacidad: Samsung Knox Vault + palanca en dispositivo vs Apple por-defecto en dispositivo + auditoría PCC',
-          'Filosofía en la nube: características Samsung en la nube proactivas; Apple nube como capa opt-in',
-          'Mejor para LLM locales: Galaxy S26 (Exynos 2600 + mejor herramienta: Ollama, MLC Chat)'
-        ],
-        updatedDate: '2026-06-15'
-      },
-      ja: {
-        question: 'Galaxy AIとApple Intelligenceのどちらが良いですか?',
-        answer: 'オンデバイス機能の幅とユーザーコントロール: Galaxy S26。プライバシーアーキテクチャと仕上げ: iPhone 16。独自のLLMを実行するため: Galaxy S26 (Exynos 2600はStable DiffusionでA18 Proの2.4倍高速)。どちらも強力なオンデバイス機能があります。選択は、選択肢/機能(Samsung)を優先するか、監査可能なプライバシー/シンプルさ(Apple)を優先するかによります。',
-        bullets: [
-          'Galaxy AI: ハイブリッド(オンデバイス+クラウド)、ユーザー制御プライバシートグル、より多くの機能',
-          'Apple Intelligence: オンデバイス優先設計、暗号的に監査可能なPCC、より少ないが洗練された機能',
-          'オンデバイス速度: Exynos 2600 > Snapdragon 8 Elite Gen 5 > Apple A18 Pro (Stable Diffusion)',
-          'プライバシーモデル: Samsung Knox Vault + オンデバイストグル vs Apple オンデバイスデフォルト + PCC監査',
-          'クラウド哲学: Samsung能動的クラウド機能; Apple クラウドはオプトイン層',
-          '地元のLLMに最適: Galaxy S26 (Exynos 2600 + より良いツーリング: Ollama、MLC Chat)'
-        ],
-        updatedDate: '2026-06-15'
-      },
-      zh: {
-        question: 'Galaxy AI还是Apple Intelligence哪个更好?',
-        answer: '就本地设备功能的广度和用户控制而言:Galaxy S26。就隐私架构和精致度而言:iPhone 16。用于运行自己的LLM:Galaxy S26(Exynos 2600在Stable Diffusion上的速度是A18 Pro的2.4倍)。两者都具有强大的本地设备功能;选择取决于您是优先考虑选择/功能(三星)还是可审计的隐私/简单性(苹果)。',
-        bullets: [
-          'Galaxy AI:混合(本地设备+云),用户控制隐私切换,更多功能',
-          'Apple Intelligence:本地设备优先设计,密码学可审计PCC,更少但精致的功能',
-          '本地设备速度:Exynos 2600 > Snapdragon 8 Elite Gen 5 > Apple A18 Pro(Stable Diffusion)',
-          '隐私模型:Samsung Knox Vault + 本地设备切换 vs Apple 本地设备默认值 + PCC审计',
-          '云理念:Samsung主动云功能; Apple 云作为选择加入层',
-          '最适合本地LLM:Galaxy S26(Exynos 2600 + 更好的工具:Ollama、MLC Chat)'
-        ],
-        updatedDate: '2026-06-15'
-      },
-      pt: {
-        question: 'Qual é melhor: Galaxy AI ou Apple Intelligence?',
-        answer: 'Para amplitude de recursos no dispositivo e controle do usuário: Galaxy S26. Para arquitetura de privacidade e acabamento: iPhone 16. Para executar seus próprios LLM: Galaxy S26 (Exynos 2600 é 2,4x mais rápido no Stable Diffusion que A18 Pro). Ambos têm recursos fortes no dispositivo; a escolha depende se você prioriza escolha/recursos (Samsung) ou privacidade auditável/simplicidade (Apple).',
-        bullets: [
-          'Galaxy AI: híbrido (no dispositivo + nuvem), toggle de privacidade controlado pelo usuário, mais recursos',
-          'Apple Intelligence: design no dispositivo primeiro, PCC auditável criptograficamente, menos recursos mas polido',
-          'Velocidade no dispositivo: Exynos 2600 > Snapdragon 8 Elite Gen 5 > Apple A18 Pro para Stable Diffusion',
-          'Modelo de privacidade: Samsung Knox Vault + toggle no dispositivo vs Apple padrão no dispositivo + auditoria PCC',
-          'Filosofia em nuvem: recursos Samsung em nuvem proativa; Apple nuvem como camada de opção de participação',
-          'Melhor para LLM locais: Galaxy S26 (Exynos 2600 + melhor ferramenta: Ollama, MLC Chat)'
-        ],
-        updatedDate: '2026-06-15'
-      },
-      ar: {
-        question: 'أيهما أفضل: Galaxy AI أم Apple Intelligence؟',
-        answer: 'لعرض ميزات الجهاز وتحكم المستخدم: Galaxy S26. لهندسة الخصوصية والأناقة: iPhone 16. لتشغيل LLMs الخاصة بك: Galaxy S26 (Exynos 2600 أسرع بمعامل 2.4 في Stable Diffusion من A18 Pro). كلاهما لديه قدرات قوية على الجهاز؛ يعتمد الاختيار على ما إذا كنت تعطي الأولوية للخيار/الميزات (Samsung) أم الخصوصية القابلة للتدقيق/البساطة (Apple).',
-        bullets: [
-          'Galaxy AI: هجين (على الجهاز + سحابة)، تبديل خصوصية يتحكم به المستخدم، مزيد من الميزات',
-          'Apple Intelligence: تصميم على الجهاز أولاً، PCC قابل للتدقيق تشفيراً، ميزات أقل لكن مصقولة',
-          'سرعة الجهاز: Exynos 2600 > Snapdragon 8 Elite Gen 5 > Apple A18 Pro لـ Stable Diffusion',
-          'نموذج الخصوصية: Samsung Knox Vault + تبديل على الجهاز مقابل Apple على الجهاز افتراضياً + تدقيق PCC',
-          'فلسفة السحابة: ميزات Samsung السحابية الاستباقية؛ Apple السحابة كطبقة اختيار',
-          'الأفضل لـ LLM المحلي: Galaxy S26 (Exynos 2600 + أداة أفضل: Ollama و MLC Chat)'
         ],
         updatedDate: '2026-06-15'
       }
@@ -261,36 +157,36 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Chip Performance for On-Device AI',
         image: '/images/galaxy-vs-iphone-on-device-ai-2026-onchip-architecture-en.svg',
         imageCaption: 'On-device AI architecture: Exynos 2600 (NPU) feeds the Personal Data Engine to power Galaxy AI features like Call Screening and Now Nudge directly on-device, while A18 Pro feeds AFM 3 Core (3B/20B) to power Apple Intelligence, escalating to Gemini or Private Cloud Compute only for complex tasks.',
-        columns: ['Metric', 'Exynos 2600 (Global S26/S26+)', 'Snapdragon 8 Elite Gen 5 (US/China/Japan S26, All S26 Ultra)', 'Apple A18 Pro (iPhone 16)'],
+        columns: ['Metric', 'Exynos 2600 (Global S26/S26+)', 'Snapdragon 8 Elite Gen 5', 'Apple A18 Pro (iPhone 16)'],
         rows: [
           {
             'Metric': 'Fab / Node',
             'Exynos 2600 (Global S26/S26+)': '2nm GAA (Samsung)',
-            'Snapdragon 8 Elite Gen 5 (US/China/Japan S26, All S26 Ultra)': '3nm FinFET (TSMC)',
+            'Snapdragon 8 Elite Gen 5': '3nm FinFET (TSMC)',
             'Apple A18 Pro (iPhone 16)': '3nm (TSMC, custom design)'
           },
           {
             'Metric': 'AI Gen-over-Gen Improvement',
             'Exynos 2600 (Global S26/S26+)': '+113% vs Exynos 2500',
-            'Snapdragon 8 Elite Gen 5 (US/China/Japan S26, All S26 Ultra)': '+39% vs Snapdragon 8 Gen 1',
+            'Snapdragon 8 Elite Gen 5': '+39% vs Snapdragon 8 Gen 1',
             'Apple A18 Pro (iPhone 16)': '+30% vs A17 Pro'
           },
           {
             'Metric': 'Stable Diffusion Speed',
             'Exynos 2600 (Global S26/S26+)': '2.4x faster than Exynos 2500',
-            'Snapdragon 8 Elite Gen 5 (US/China/Japan S26, All S26 Ultra)': 'Not published; likely between Snapdragon 8 Gen 1 and Exynos 2600',
+            'Snapdragon 8 Elite Gen 5': 'Not published; likely between Snapdragon 8 Gen 1 and Exynos 2600',
             'Apple A18 Pro (iPhone 16)': 'Not published; proprietary Neural Engine'
           },
           {
             'Metric': 'Memory Bandwidth',
             'Exynos 2600 (Global S26/S26+)': 'LPDDR5X 85.6 GB/s',
-            'Snapdragon 8 Elite Gen 5 (US/China/Japan S26, All S26 Ultra)': 'LPDDR5X 84.8 GB/s',
+            'Snapdragon 8 Elite Gen 5': 'LPDDR5X 84.8 GB/s',
             'Apple A18 Pro (iPhone 16)': 'LPDDR5X ~120 GB/s (estimated)'
           },
           {
             'Metric': 'For Running Open-Weight LLMs',
             'Exynos 2600 (Global S26/S26+)': 'Best choice (fastest + Android tools)',
-            'Snapdragon 8 Elite Gen 5 (US/China/Japan S26, All S26 Ultra)': 'Competitive (similar memory bandwidth)',
+            'Snapdragon 8 Elite Gen 5': 'Competitive (similar memory bandwidth)',
             'Apple A18 Pro (iPhone 16)': 'Limited tooling (iOS sandbox restricts LLM inference)'
           }
         ]
@@ -379,7 +275,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'description': 'Galaxy AI vs Apple Intelligence: Compare on-device AI features, privacy architecture, cloud fallback, and which smartphone is better for local LLM running.',
       'image': 'https://www.promptquorum.com/og-images/galaxy-vs-iphone-on-device-ai-2026.png',
       'datePublished': '2026-06-15',
-      'dateModified': '2026-06-15',
+      'dateModified': '2026-08-29',
       'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
       'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'inLanguage': 'en',
@@ -412,12 +308,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: '삼성 Galaxy S26(2026년 2월 25일 출시)과 Apple의 새로운 Intelligence 제품군(WWDC 6월 9일 2026)은 온디바이스 AI의 두 가지 철학을 나타냅니다. 삼성은 능동적입니다—더 많은 기능을 장착하고(Galaxy AI), 사용자에게 제어권을 주고, 로컬 또는 클라우드를 선택하도록 합니다. Apple은 깊이 우선입니다—더 적은 기능, 더 많은 완성도, 암호화로 감사 가능한 프라이버시. 이 비교는 각 플랫폼이 온디바이스에서 실제로 무엇을 하는지, 철학적으로 어떻게 다른지, 프라이버시 및 성능 필요에 맞는 것이 무엇인지를 살펴봅니다.',
     metaDescription: 'Galaxy AI vs Apple Intelligence: 온디바이스 AI 기능, 프라이버시 아키텍처, 클라우드 폴백, 로컬 LLM 실행에 더 나은 스마트폰 비교',
     publishDate: '2026-06-15',
-    dateModified: '2026-06-15',
+    dateModified: '2026-08-29',
     readTime: '12분 읽기',
     educationalLevel: 'Intermediate',
     audience: '온디바이스 AI를 평가하는 스마트폰 구매자, 프라이버시를 우려하는 사용자, 모바일 LLM 추론용 플랫폼을 고려하는 개발자',
     primaryTerm: 'Galaxy AI vs Apple Intelligence',
-    leadAnswerBlock: '**삼성 Galaxy AI(S26, Exynos 2600): 하이브리드 온디바이스+클라우드, 능동적 기능 집합(통화 스크리닝, Now Nudge, Now Brief 온디바이스; Creative Studio, Gemini 에이전트 클라우드). 사용자가 "디바이스에서만 데이터 처리" 토글을 통해 프라이버시 수준을 선택합니다. Apple Intelligence(iOS 27, AFM 3 아키텍처): 온디바이스 우선(3B/20B 온디바이스 모델), 암호화로 감사 가능한 Private Cloud Compute(PCC) 고급 작업용, 데이터 저장 없음. 승자는 선호도에 따라 달라집니다: 기능 범위+사용자 제어는 Samsung; 프라이버시 아키텍처+완성도는 Apple. 자신의 양자화 LLM 실행: Samsung Exynos 2600이 더 빠름(Stable Diffusion 2.4배), Galaxy S26이 더 나은 하드웨어 선택입니다.**',
+    leadAnswerBlock: '**삼성 Galaxy AI(S26, Exynos 2600): 하이브리드 온디바이스+클라우드, 능동적 기능 집합(통화 스크리닝, Now Nudge, Now Brief 온디바이스; Creative Studio, Gemini 에이전트 클라우드). 사용자가 "디바이스에서만 데이터 처리" 토글을 통해 프라이버시 수준을 선택합니다. Apple Intelligence(iOS 27, AFM 3 아키텍처): 온디바이스 우선(3B/20B 온디바이스 모델), 암호화로 감사 가능한 Private Cloud Compute(PCC) 고급 작업용, 데이터 저장 없음. 승자는 선호도에 따라 달라집니다: 기능 범위+사용자 제어는 Samsung; 프라이버시 아키텍처+완성도는 Apple. 자신의 양자화 LLM 실행: Samsung Exynos 2600은 이전 세대 대비 Stable Diffusion 생성 속도가 더 빠름(Exynos 2500 대비 2.4배; Apple은 A18 Pro의 Stable Diffusion 벤치마크를 공개하지 않음), Galaxy S26이 근거가 더 명확한 하드웨어 선택입니다.**',
+    quickAnswerTop: {
+      ko: {
+        question: 'Galaxy AI가 더 나은지 Apple Intelligence가 더 나은지?',
+        answer: '온디바이스 기능 범위와 사용자 제어: Galaxy S26. 프라이버시 아키텍처와 완성도: iPhone 16. 자신의 LLM 실행: Galaxy S26(Exynos 2600은 이전 세대보다 Stable Diffusion에서 2.4배 빠르며, A18 Pro는 Stable Diffusion 벤치마크가 공개된 적이 없습니다). 둘 다 강력한 온디바이스 기능을 가지고 있습니다. 선택은 선택/기능(Samsung)을 우선시하거나 감사 가능한 프라이버시/단순성(Apple)을 우선시할지에 따라 달렸습니다.',
+        bullets: [
+          'Galaxy AI: 하이브리드(온디바이스+클라우드), 사용자 제어 프라이버시 토글, 출시 시 더 많은 기능',
+          'Apple Intelligence: 온디바이스 우선 디자인, 암호화로 감사 가능한 PCC, 더 적은 기능이지만 완성도 높음',
+          '온디바이스 속도: Exynos 2600은 Stable Diffusion에서 이전 세대보다 2.4배 빠름; Snapdragon 8 Elite Gen 5와 A18 Pro는 직접 벤치마크되지 않음',
+          '프라이버시 모델: Samsung Knox Vault + 온디바이스 토글 vs Apple 온디바이스 기본값 + PCC 감사 기능',
+          '클라우드 철학: Samsung 능동적 클라우드 기능(Creative Studio, Gemini); Apple 복잡한 추론을 위한 옵트인 계층',
+          '로컬 LLM에 최적: Galaxy S26(Exynos 2600 + 더 나은 도구: Android의 Ollama, MLC Chat)'
+        ],
+        updatedDate: '2026-06-15'
+      }
+    },
     toc: [
       { label: '핵심 내용', anchor: '#key-takeaways' },
       { label: 'Galaxy AI vs Apple Intelligence: 핵심 철학', anchor: '#what-differs' },
@@ -493,10 +404,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '온디바이스 AI 칩 성능',
         image: '/images/galaxy-vs-iphone-on-device-ai-2026-onchip-architecture-ko.svg',
         imageCaption: '온디바이스 AI 아키텍처: Exynos 2600(NPU)이 Personal Data Engine을 구동해 통화 스크리닝, Now Nudge 등 Galaxy AI 기능을 온디바이스에서 직접 처리하며, A18 Pro는 AFM 3 Core(3B/20B)를 구동해 Apple Intelligence를 지원하고 복잡한 작업에서만 Gemini 또는 Private Cloud Compute로 확장합니다.',
-        columns: ['지표', 'Exynos 2600(글로벌 S26/S26+)', 'Snapdragon 8 Elite Gen 5(미국/중국/일본 S26, 모든 S26 Ultra)', 'Apple A18 Pro(iPhone 16)'],
+        columns: ['지표', 'Exynos 2600(글로벌 S26/S26+)', 'Snapdragon 8 Elite Gen 5', 'Apple A18 Pro(iPhone 16)'],
         rows: [
-          { '지표': '제조 / 노드', 'Exynos 2600(글로벌 S26/S26+)': '2nm GAA(Samsung)', 'Snapdragon 8 Elite Gen 5(미국/중국/일본 S26, 모든 S26 Ultra)': '3nm FinFET(TSMC)', 'Apple A18 Pro(iPhone 16)': '3nm(TSMC, 커스텀 디자인)' },
-          { '지표': 'AI 세대별 개선', 'Exynos 2600(글로벌 S26/S26+)': 'Exynos 2500 vs +113%', 'Snapdragon 8 Elite Gen 5(미국/중국/일본 S26, 모든 S26 Ultra)': 'Snapdragon 8 Gen 1 vs +39%', 'Apple A18 Pro(iPhone 16)': 'A17 Pro vs +30%' }
+          { '지표': '제조 / 노드', 'Exynos 2600(글로벌 S26/S26+)': '2nm GAA(Samsung)', 'Snapdragon 8 Elite Gen 5': '3nm FinFET(TSMC)', 'Apple A18 Pro(iPhone 16)': '3nm(TSMC, 커스텀 디자인)' },
+          { '지표': 'AI 세대별 개선', 'Exynos 2600(글로벌 S26/S26+)': 'Exynos 2500 vs +113%', 'Snapdragon 8 Elite Gen 5': 'Snapdragon 8 Gen 1 vs +39%', 'Apple A18 Pro(iPhone 16)': 'A17 Pro vs +30%' }
         ]
       },
       'which-to-choose': {
@@ -549,7 +460,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'description': 'Galaxy AI vs Apple Intelligence: 온디바이스 AI 기능, 프라이버시 아키텍처, 클라우드 폴백, 로컬 LLM 실행에 더 나은 스마트폰 비교',
       'image': 'https://www.promptquorum.com/og-images/galaxy-vs-iphone-on-device-ai-2026.png',
       'datePublished': '2026-06-15',
-      'dateModified': '2026-06-15',
+      'dateModified': '2026-08-29',
       'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
       'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'inLanguage': 'ko',
@@ -574,8 +485,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-07-15',
-    last_full_refresh: '2026-06-15',
+    next_refresh_due: '2026-09-29',
+    last_full_refresh: '2026-08-29',
     theme: 'Hardware & Performance',
     heroImage: '/images/galaxy-vs-iphone-on-device-ai-2026-overview-hero-es.webp',
     title: 'Galaxy vs iPhone IA en dispositivo: Samsung Galaxy AI vs Apple Intelligence (2026)',
@@ -583,21 +494,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'Samsung Galaxy S26 (lanzado 25 de febrero de 2026) y la suite actualizada de Intelligence de Apple (WWDC 9 de junio de 2026) representan dos filosofías de IA en dispositivo. Samsung es proactiva—empaquetando más funciones (Galaxy AI), otorgando a los usuarios control, y permitiéndoles elegir local o nube. Apple es profundidad-primero—menos funciones, más pulida, privacidad criptográficamente auditable. Esta comparación examina lo que cada plataforma realmente hace en dispositivo, cómo difieren filosóficamente, y cuál es mejor para tus necesidades de privacidad y rendimiento.',
     metaDescription: 'Galaxy AI vs Apple Intelligence: Compara características de IA en dispositivo, arquitectura de privacidad, fallback en nube, y qué teléfono inteligente es mejor para ejecutar LLM locales.',
     publishDate: '2026-06-15',
-    dateModified: '2026-06-15',
+    dateModified: '2026-08-29',
     readTime: 'Lectura de 12 minutos',
     educationalLevel: 'Intermediate',
     audience: 'Compradores de teléfonos inteligentes evaluando IA en dispositivo, usuarios conscientes de privacidad, desarrolladores considerando plataforma para inferencia LLM móvil',
     primaryTerm: 'Galaxy AI vs Apple Intelligence',
     targetKeywords: ['galaxy ai vs apple intelligence', 'comparacion ia en dispositivo', 'samsung vs iphone ai', 'galaxy s26 apple intelligence', 'iphone ia local'],
-    leadAnswerBlock: '**Samsung Galaxy AI (S26, Exynos 2600): híbrido en dispositivo + nube, conjunto de características proactivo (Call Screening, Now Nudge, Now Brief en dispositivo; Creative Studio, agentes Gemini en nube). Los usuarios eligen nivel de privacidad mediante palanca "Procesar datos solo en dispositivo". Apple Intelligence (iOS 27, arquitectura AFM 3): en dispositivo-primero (modelos 3B/20B en dispositivo), Private Cloud Compute (PCC) criptográficamente auditable para tareas avanzadas, sin almacenamiento de datos. El ganador depende de preferencias: Samsung por amplitud de características + control del usuario; Apple por arquitectura de privacidad + pulida. Para ejecutar tus propios LLMs cuantizados: Samsung Exynos 2600 es más rápido (2.4x Stable Diffusion), haciendo Galaxy S26 la mejor opción de hardware.**',
+    leadAnswerBlock: '**Samsung Galaxy AI (S26, Exynos 2600): híbrido en dispositivo + nube, conjunto de características proactivo (Call Screening, Now Nudge, Now Brief en dispositivo; Creative Studio, agentes Gemini en nube). Los usuarios eligen nivel de privacidad mediante palanca "Procesar datos solo en dispositivo". Apple Intelligence (iOS 27, arquitectura AFM 3): en dispositivo-primero (modelos 3B/20B en dispositivo), Private Cloud Compute (PCC) criptográficamente auditable para tareas avanzadas, sin almacenamiento de datos. El ganador depende de preferencias: Samsung por amplitud de características + control del usuario; Apple por arquitectura de privacidad + pulida. Para ejecutar tus propios LLMs cuantizados: Samsung Exynos 2600 es más rápido generando con Stable Diffusion que su propio predecesor (2.4x frente al Exynos 2500; Apple no ha publicado benchmarks de Stable Diffusion para el A18 Pro), haciendo de Galaxy S26 la opción de hardware mejor documentada.**',
     quickAnswerTop: {
       es: {
         question: '¿Cuál es mejor: Galaxy AI o Apple Intelligence?',
-        answer: 'Para amplitud de características en dispositivo y control del usuario: Galaxy S26. Para arquitectura de privacidad y acabado: iPhone 16. Para ejecutar tus propios LLMs: Galaxy S26 (Exynos 2600 es 2.4x más rápido en Stable Diffusion que A18 Pro). Ambos tienen capacidades en dispositivo sólidas; la opción depende de si priorizas opción/características (Samsung) o privacidad auditable/simplicidad (Apple).',
+        answer: 'Para amplitud de características en dispositivo y control del usuario: Galaxy S26. Para arquitectura de privacidad y acabado: iPhone 16. Para ejecutar tus propios LLMs: Galaxy S26 (Exynos 2600 es 2.4x más rápido en Stable Diffusion que su propio predecesor; Apple no ha publicado benchmarks de Stable Diffusion para el A18 Pro). Ambos tienen capacidades en dispositivo sólidas; la opción depende de si priorizas opción/características (Samsung) o privacidad auditable/simplicidad (Apple).',
         bullets: [
           'Galaxy AI: híbrido (en dispositivo + nube), palanca de privacidad controlada por usuario, más características en lanzamiento',
           'Apple Intelligence: diseño en dispositivo-primero, PCC auditable criptográficamente, menos características pero pulida',
-          'Velocidad en dispositivo: Exynos 2600 > Snapdragon 8 Elite Gen 5 > Apple A18 Pro para Stable Diffusion',
+          'Velocidad en dispositivo: Exynos 2600 es 2,4x más rápido que su predecesor en Stable Diffusion; Snapdragon 8 Elite Gen 5 y A18 Pro no han sido comparados directamente',
           'Modelo de privacidad: Samsung Knox Vault + palanca en dispositivo vs Apple en dispositivo por-defecto + capacidad de auditoría PCC',
           'Filosofía en nube: características Samsung en nube proactivas (Creative Studio, Gemini); Apple nube como nivel de opción para razonamiento complejo',
           'Mejor para LLMs locales: Galaxy S26 (Exynos 2600 + mejor herramienta: Ollama, MLC Chat en Android)'
@@ -674,9 +585,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Rendimiento de chip para IA en dispositivo',
         image: '/images/galaxy-vs-iphone-on-device-ai-2026-onchip-architecture-es.svg',
         imageCaption: 'Arquitectura de IA en dispositivo: Exynos 2600 (NPU) alimenta el Personal Data Engine para ejecutar funciones de Galaxy AI como Call Screening y Now Nudge directamente en dispositivo, mientras que A18 Pro alimenta AFM 3 Core (3B/20B) para Apple Intelligence, escalando a Gemini o Private Cloud Compute solo para tareas complejas.',
-        columns: ['Métrica', 'Exynos 2600 (S26/S26+ global)', 'Snapdragon 8 Elite Gen 5 (S26 EE.UU./China/Japón, todos S26 Ultra)', 'Apple A18 Pro (iPhone 16)'],
+        columns: ['Métrica', 'Exynos 2600 (S26/S26+ global)', 'Snapdragon 8 Elite Gen 5', 'Apple A18 Pro (iPhone 16)'],
         rows: [
-          { 'Métrica': 'Fab / Nodo', 'Exynos 2600 (S26/S26+ global)': '2nm GAA (Samsung)', 'Snapdragon 8 Elite Gen 5 (S26 EE.UU./China/Japón, todos S26 Ultra)': '3nm FinFET (TSMC)', 'Apple A18 Pro (iPhone 16)': '3nm (TSMC, diseño personalizado)' }
+          { 'Métrica': 'Fab / Nodo', 'Exynos 2600 (S26/S26+ global)': '2nm GAA (Samsung)', 'Snapdragon 8 Elite Gen 5': '3nm FinFET (TSMC)', 'Apple A18 Pro (iPhone 16)': '3nm (TSMC, diseño personalizado)' }
         ]
       },
       'which-to-choose': {
@@ -718,7 +629,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'description': 'Galaxy AI vs Apple Intelligence: Compara características de IA en dispositivo, arquitectura de privacidad, fallback en nube, y qué teléfono inteligente es mejor para ejecutar LLM locales.',
       'image': 'https://www.promptquorum.com/og-images/galaxy-vs-iphone-on-device-ai-2026.png',
       'datePublished': '2026-06-15',
-      'dateModified': '2026-06-15',
+      'dateModified': '2026-08-29',
       'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
       'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       'inLanguage': 'es',
