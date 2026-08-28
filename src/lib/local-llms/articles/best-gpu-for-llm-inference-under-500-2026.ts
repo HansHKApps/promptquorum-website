@@ -1515,7 +1515,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Hardware & Performance',
     title: '500ドル以下のLLM推論向けGPUおすすめランキング（2026年）',
     heroImage: '/images/best-gpu-for-llm-inference-under-500-2026-overview-hero-ja.webp',
-    seoTitle: '$500以下のLLM推論GPU: RTX 4060 Ti 16GBが最良（2026年7月）',
+    seoTitle: '$500以下のLLM推論GPU: RTX 4060 Ti 16GBが最良',
     metaDescription: '$500以下のローカルLLM推論に最良のバジェットGPUはRTX 4060 Ti 16GB（~¥88,000）：16GB VRAMで14BモデルをQ4で完全にGPU内実行。RTX 3060 12GB（~¥52,980）が最安の次点。2026年7月価格。',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,

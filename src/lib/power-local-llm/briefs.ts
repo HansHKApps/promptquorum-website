@@ -32,7 +32,7 @@ export const POWER_LLM_BRIEFS: Record<string, ArticleBrief> = {
   // ─── CATEGORY 1 — Easiest Desktop Apps ─────────────────────────────────
 
   'easiest-local-ai-app-windows-mac-linux': {
-    title: 'Easiest Local AI App for Each OS: Windows, Mac, Linux Picks (May 2026)',
+    title: 'Easiest Local AI App for Each OS: Windows, Mac, Linux Picks',
     meta: 'Different OS, different best app. Mac users want X, Windows users want Y, Linux users want Z. Specific picks based on real install testing.',
     articleType: 'Decision (segmented by OS)',
     serpIntent: 'Mixed — partly comparison, partly "best for [OS]" — Google shows guides and per-OS lists',

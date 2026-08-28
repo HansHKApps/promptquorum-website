@@ -10,7 +10,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
       theme: 'Tools & Interfaces',
-      title: 'Best Local LLM Stack for Developers (July 2026)',
+      title: 'Best Local LLM Stack for Developers (2026)',
       heroImage: '/images/local-llm-developer-stack-overview-hero-en.webp',
       dateModified: '2026-07-30',
       seoTitle: 'Local LLM Dev Stack: CLI → API → Production Setup Guide 2026',
@@ -245,7 +245,7 @@ schema: {
     es: {
       freshness_tier: 'semi_annual',
       theme: 'Tools & Interfaces',
-      title: 'Mejor Stack Local de LLM para Desarrolladores (julio 2026)',
+      title: 'Mejor Stack Local de LLM para Desarrolladores (2026)',
       heroImage: '/images/local-llm-developer-stack-overview-hero-es.webp',
       seoTitle: 'Stack LLM local para devs 2026: de CLI a producción',
       intro: '**Los desarrolladores deberían usar vLLM + FastAPI + la extensión de VS Code Copilot para inferencia local de LLM de nivel producción.** A partir de julio de 2026, este stack permite completaciones de código en tiempo real, procesamiento por lotes y compatibilidad con la API de OpenAI sin dependencia de un proveedor. Alternativa (más simple): Ollama + llama.cpp CLI para scripts puntuales.',
@@ -484,7 +484,7 @@ schema: {
     ar: {
       freshness_tier: 'semi_annual',
       theme: 'Tools & Interfaces',
-      title: 'أفضل حزمة ⁨LLM⁩ محلية للمطورين (يوليو ⁨2026⁩)',
+      title: 'أفضل حزمة ⁨LLM⁩ محلية للمطورين (⁨2026⁩)',
       heroImage: '/images/local-llm-developer-stack-overview-hero-ar.webp',
       seoTitle: 'حزمة ⁨LLM⁩ المحلية للمطورين ⁨2026⁩: ⁨Ollama⁩ إلى ⁨vLLM⁩',
       intro: '**ينبغي للمطورين استخدام vLLM + FastAPI + امتداد VS Code Copilot للاستدلال المحلي لـ LLM بمستوى الإنتاج.** اعتبارًا من يوليو 2026، تتيح هذه الحزمة إكمال الكود في الوقت الفعلي والمعالجة على دفعات والتوافق مع واجهة OpenAI دون الاعتماد على مزود واحد. البديل (الأبسط): Ollama + llama.cpp CLI للسكربتات العَرَضية.',
@@ -726,7 +726,7 @@ schema: {
     pt: {
       freshness_tier: 'semi_annual',
       theme: 'Tools & Interfaces',
-      title: 'Melhor Stack de LLM Local para Desenvolvedores (julho 2026)',
+      title: 'Melhor Stack de LLM Local para Desenvolvedores (2026)',
       heroImage: '/images/local-llm-developer-stack-overview-hero-pt.webp',
       seoTitle: 'Stack LLM local para devs 2026: do CLI à produção',
       intro: '**Os desenvolvedores devem usar vLLM + FastAPI + extensão VS Code Copilot para inferência de LLM local em nível de produção.** A partir de julho de 2026, esse stack permite completações de código em tempo real, processamento em batch e compatibilidade com a API OpenAI sem dependência de fornecedor. Alternativa (mais simples): Ollama + llama.cpp CLI para scripts pontuais.',
@@ -811,7 +811,7 @@ schema: {
     },
     de: {
       theme: 'Tools & Oberflächen',
-      title: 'Best Local LLM Stack für Entwickler (Juli 2026)',
+      title: 'Best Local LLM Stack für Entwickler (2026)',
       heroImage: '/images/local-llm-developer-stack-overview-hero-de.webp',
       seoTitle: 'Lokaler LLM-Entwickler-Stack 2026: Tools & Setup',
       intro: '**Entwickler sollten vLLM + FastAPI + VS Code Copilot-Erweiterung für produktionsreifen lokalen LLM-Betrieb verwenden.** Ab Juli 2026 ermöglicht dieser Stack Echtzeit-Code-Vervollständigungen, Batch-Verarbeitung und OpenAI-API-Kompatibilität ohne Vendor Lock-in. Alternative (einfacher): Ollama + llama.cpp CLI für einzelne Skripte.',
@@ -1027,7 +1027,7 @@ schema: {
     },
     fr: {
       theme: 'Outils & Interfaces',
-      title: 'Meilleur Stack LLM Local pour Développeurs (juillet 2026)',
+      title: 'Meilleur Stack LLM Local pour Développeurs (2026)',
       heroImage: '/images/local-llm-developer-stack-overview-hero-fr.webp',
       seoTitle: 'Stack LLM Local Dev : CLI → API → Production Guide 2026',
       intro: '**Les développeurs devraient utiliser vLLM + FastAPI + l\'extension VS Code Copilot pour une inférence LLM locale de qualité production.** En juillet 2026, ce stack permet des complétions de code en temps réel, le traitement par lots et la compatibilité OpenAI API sans dépendance fournisseur. Alternative (plus simple) : Ollama + llama.cpp CLI pour des scripts ponctuels.',
@@ -1240,7 +1240,7 @@ schema: {
     },
     ja: {
       theme: 'ツール＆インターフェース',
-      title: '開発者向けベストローカルLLMスタック（2026年7月）',
+      title: '開発者向けベストローカルLLMスタック（2026年）',
       heroImage: '/images/local-llm-developer-stack-overview-hero-ja.webp',
       seoTitle: 'ローカルLLM開発スタック：CLI→API→本番環境ガイド2026',
       intro: '**開発者は、本番グレードのローカルLLM推論にvLLM + FastAPI + VS Code Copilot拡張機能を使用してください。** 2026年7月現在、このスタックはリアルタイムのコード補完、バッチ処理、ベンダーロックインなしのOpenAI API互換性を実現します。代替案（よりシンプル）：単発スクリプト向けにOllama + llama.cpp CLIを使用してください。',
@@ -1451,7 +1451,7 @@ schema: {
     },
     zh: {
       theme: '工具与界面',
-      title: '开发者最佳本地LLM技术栈（2026年7月）',
+      title: '开发者最佳本地LLM技术栈（2026年）',
       heroImage: '/images/local-llm-developer-stack-overview-hero-zh.webp',
       seoTitle: '本地LLM开发栈：CLI→API→生产环境搭建指南2026',
       intro: '**开发者应使用vLLM + FastAPI + VS Code Copilot扩展来实现生产级本地LLM推理。** 截至2026年7月，该技术栈可实现实时代码补全、批处理以及无厂商锁定的OpenAI API兼容性。替代方案（更简单）：使用Ollama + llama.cpp CLI处理一次性脚本。',
@@ -1663,7 +1663,7 @@ schema: {
   ko: {
       freshness_tier: 'semi_annual',
       theme: '도구 및 인터페이스',
-      title: '개발자를 위한 최고의 로컬 LLM 스택 (2026년 7월)',
+      title: '개발자를 위한 최고의 로컬 LLM 스택 (2026년)',
     heroImage: '/images/local-llm-developer-stack-overview-hero-ko.webp',
       seoTitle: '로컬 LLM 개발 스택: CLI → API → 프로덕션 설정 가이드 2026',
       intro: '**개발자는 프로덕션 수준의 로컬 LLM 추론을 위해 vLLM + FastAPI + VS Code Copilot 확장을 사용해야 합니다.** 2026년 7월 기준으로, 이 스택은 벤더 종속 없이 실시간 코드 완성, 배치 처리, OpenAI API 호환성을 제공합니다. 대안(더 간단한 방법): 일회성 스크립트에는 Ollama + llama.cpp CLI를 사용하십시오.',
