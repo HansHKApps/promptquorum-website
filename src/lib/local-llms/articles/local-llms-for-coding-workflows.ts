@@ -47,6 +47,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Kimi K2.6 (58.6 SWE-Bench Pro, MoE) is the top local coding model as of July 2026, with Qwen3.8-27B (61.7% SWE-bench) as the best dense alternative -- both run locally via Ollama for private code generation, review, and testing.' },
+            { type: 'plain-terms', text: "You can use free, open AI models running on your own computer to help write, review, and test code -- similar to GitHub Copilot, but your code never leaves your machine and there's no subscription fee. It's a bit slower than cloud tools, but works well for boilerplate, code review, and test writing." },
+          ],
           items: [
             '**Best coding models (July 2026):** Kimi K2.6 (58.6 SWE-Bench Pro, MoE, best overall), Qwen3.8-27B (61.7% SWE-bench, best dense model), Devstral Small 24B (best agentic coding), Codestral 22B (best IDE autocomplete), Qwen3 8B (best for 8 GB VRAM).',
             '**Speed:** 2-5 seconds per suggestion for the largest models (Kimi K2.6, Qwen3.8-27B); under 2 seconds for FIM autocomplete (Codestral 22B, Qwen3 8B). Slower than GitHub Copilot (~300ms).',
@@ -306,6 +310,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Kimi K2.6 (58,6 SWE-Bench Pro, MoE) ist Stand Juli 2026 das beste lokale Coding-Modell, mit Qwen3.8-27B (61,7% SWE-bench) als bester dichter Alternative -- beide laufen lokal über Ollama für private Codegenerierung, Review und Tests.' },
+            { type: 'plain-terms', text: 'Sie können kostenlose, offene KI-Modelle auf Ihrem eigenen Computer nutzen, um Code zu schreiben, zu prüfen und zu testen -- ähnlich wie GitHub Copilot, aber Ihr Code verlässt niemals Ihren Rechner, und es fällt kein Abo an. Es ist etwas langsamer als Cloud-Tools, funktioniert aber gut für Boilerplate, Code-Reviews und das Schreiben von Tests.' },
+          ],
           items: [
             '**Beste Programmiermodelle (Juli 2026):** Kimi K2.6 (58,6 SWE-Bench Pro, MoE, insgesamt am besten), Qwen3.8-27B (61,7% SWE-bench, bestes dichtes Modell), Devstral Small 24B (bestes agentisches Programmieren), Codestral 22B (beste IDE-Autovervollständigung), Qwen3 8B (am besten für 8 GB VRAM).',
             '**Geschwindigkeit:** 2–5 Sekunden pro Vorschlag bei den größten Modellen (Kimi K2.6, Qwen3.8-27B); unter 2 Sekunden bei FIM-Autovervollständigung (Codestral 22B, Qwen3 8B). Langsamer als GitHub Copilot (~300ms).',
@@ -574,6 +582,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: "Kimi K2.6 (58,6 SWE-Bench Pro, MoE) est le meilleur modèle de codage local en juillet 2026, avec Qwen3.8-27B (61,7% SWE-bench) comme meilleure alternative dense -- tous deux fonctionnent localement via Ollama pour la génération, la relecture et les tests de code en privé." },
+            { type: 'plain-terms', text: "Vous pouvez utiliser des modèles d'IA ouverts et gratuits tournant sur votre propre ordinateur pour écrire, relire et tester du code -- comme GitHub Copilot, mais votre code ne quitte jamais votre machine et il n'y a pas d'abonnement. C'est un peu plus lent que les outils cloud, mais efficace pour le code répétitif, la relecture et l'écriture de tests." },
+          ],
           items: [
             '**Meilleurs modèles de programmation (juillet 2026) :** Kimi K2.6 (58,6 SWE-Bench Pro, MoE, meilleur au global), Qwen3.8-27B (61,7% SWE-bench, meilleur modèle dense), Devstral Small 24B (meilleur pour la programmation agentique), Codestral 22B (meilleure autocomplétion IDE), Qwen3 8B (meilleur pour 8 GB de VRAM).',
             '**Vitesse :** 2–5 secondes par suggestion pour les plus gros modèles (Kimi K2.6, Qwen3.8-27B) ; moins de 2 secondes pour l\'autocomplétion FIM (Codestral 22B, Qwen3 8B). Plus lent que GitHub Copilot (~300ms).',
@@ -832,6 +844,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Kimi K2.6（58.6 SWE-Bench Pro、MoE）は2026年7月時点で最良のローカルコーディングモデルであり、Qwen3.8-27B（61.7% SWE-bench）が最良のdense代替モデルです -- どちらもOllama経由でローカルに動作し、コード生成・レビュー・テストをプライベートに行えます。' },
+            { type: 'plain-terms', text: '自分のコンピューター上で動く無料のオープンAIモデルを使って、コードの記述・レビュー・テストを行えます -- GitHub Copilotに似ていますが、コードが自分のマシンから外に出ることはなく、サブスクリプション料金も不要です。クラウドツールより多少遅いものの、定型コード生成・コードレビュー・テスト作成にはよく機能します。' },
+          ],
           items: [
             '**最適なプログラミングモデル（2026年7月）：** Kimi K2.6（58.6 SWE-Bench Pro、MoE、総合ベスト）、Qwen3.8-27B（61.7% SWE-bench、最良のdenseモデル）、Devstral Small 24B（agentic codingに最適）、Codestral 22B（IDEオートコンプリートに最適）、Qwen3 8B（8 GB VRAMに最適）。',
             '**速度：** 最大級モデル（Kimi K2.6、Qwen3.8-27B）は提案あたり2～5秒。FIMオートコンプリート（Codestral 22B、Qwen3 8B）は2秒未満。GitHub Copilot（~300ms）より遅い。',
@@ -1090,6 +1106,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: '截至2026年7月，Kimi K2.6（58.6 SWE-Bench Pro，MoE）是最佳本地编程模型，Qwen3.8-27B（61.7% SWE-bench）是最佳稠密替代方案——两者都可通过Ollama在本地运行，实现私密的代码生成、审查和测试。' },
+            { type: 'plain-terms', text: '您可以使用在自己电脑上运行的免费开放AI模型来帮助编写、审查和测试代码——类似GitHub Copilot，但您的代码永远不会离开您的设备，也无需订阅费用。虽然比云端工具稍慢，但对于样板代码生成、代码审查和测试编写效果很好。' },
+          ],
           items: [
             '**最佳编程模型（2026年7月）：** Kimi K2.6（58.6 SWE-Bench Pro，MoE，综合最佳）、Qwen3.8-27B（61.7% SWE-bench，最佳稠密模型）、Devstral Small 24B（最佳agentic编程）、Codestral 22B（最佳IDE自动补全）、Qwen3 8B（最适合8 GB VRAM）。',
             '**速度：** 对于最大的模型（Kimi K2.6、Qwen3.8-27B），每个建议2-5秒；对于FIM自动补全（Codestral 22B、Qwen3 8B），不到2秒。比GitHub Copilot（~300ms）慢。',
@@ -1348,6 +1368,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Kimi K2.6 (58,6% SWE-Bench Pro, MoE) es el mejor modelo de programación local a partir de julio de 2026, con Qwen3.8-27B (61,7% SWE-bench) como la mejor alternativa densa -- ambos se ejecutan localmente vía Ollama para generación, revisión y pruebas de código privadas.' },
+            { type: 'plain-terms', text: 'Puedes usar modelos de IA abiertos y gratuitos que se ejecutan en tu propio ordenador para ayudarte a escribir, revisar y probar código -- similar a GitHub Copilot, pero tu código nunca sale de tu máquina y no hay cuota de suscripción. Es algo más lento que las herramientas en la nube, pero funciona bien para código repetitivo, revisión de código y escritura de pruebas.' },
+          ],
           items: [
             '**Mejores modelos de programación (julio de 2026):** Kimi K2.6 (58,6 SWE-Bench Pro, MoE, el mejor en general), Qwen3.8-27B (61,7% SWE-bench, el mejor modelo denso), Devstral Small 24B (el mejor para programación agéntica), Codestral 22B (mejor autocompletado en el IDE), Qwen3 8B (el mejor para 8 GB de VRAM).',
             '**Velocidad:** 2-5 segundos por sugerencia en los modelos más grandes (Kimi K2.6, Qwen3.8-27B); menos de 2 segundos para el autocompletado FIM (Codestral 22B, Qwen3 8B). Más lento que GitHub Copilot (~300 ms).',
@@ -1612,6 +1636,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'يُعد Kimi K2.6 (58.6 SWE-Bench Pro، MoE) أفضل نموذج برمجة محلي اعتبارًا من يوليو 2026، مع Qwen3.8-27B (61.7% SWE-bench) كأفضل بديل كثيف -- يعمل كلاهما محليًا عبر Ollama لتوليد الشيفرة ومراجعتها واختبارها بخصوصية تامة.' },
+            { type: 'plain-terms', text: 'يمكنك استخدام نماذج ذكاء اصطناعي مجانية ومفتوحة تعمل على حاسوبك الخاص للمساعدة في كتابة الشيفرة ومراجعتها واختبارها -- على غرار GitHub Copilot، لكن شيفرتك لا تغادر جهازك أبدًا ولا توجد رسوم اشتراك. إنها أبطأ قليلاً من أدوات السحابة، لكنها تعمل جيدًا للشيفرة النمطية ومراجعة الشيفرة وكتابة الاختبارات.' },
+          ],
           items: [
             '**أفضل نماذج البرمجة (يوليو 2026):** Kimi K2.6 (58.6 SWE-Bench Pro، MoE، الأفضل إجمالًا)، Qwen3.8-27B (61.7% SWE-bench، أفضل نموذج كثيف)، Devstral Small 24B (الأفضل للبرمجة الوكيلية agentic)، Codestral 22B (أفضل إكمال تلقائي في IDE)، Qwen3 8B (الأفضل لـ8 GB من VRAM).',
             '**السرعة:** 2-5 ثوانٍ لكل اقتراح في أكبر النماذج (Kimi K2.6، Qwen3.8-27B)؛ أقل من ثانيتين للإكمال التلقائي FIM (Codestral 22B، Qwen3 8B). أبطأ من GitHub Copilot (~300 مللي ثانية).',
@@ -1886,6 +1914,10 @@ schema: {
         tldr: {
           id: 'tldr',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'O Kimi K2.6 (58,6 SWE-Bench Pro, MoE) é o melhor modelo de programação local em julho de 2026, com o Qwen3.8-27B (61,7% SWE-bench) como a melhor alternativa densa -- ambos rodam localmente via Ollama para geração, revisão e testes de código privados.' },
+            { type: 'plain-terms', text: 'Você pode usar modelos de IA abertos e gratuitos rodando no seu próprio computador para ajudar a escrever, revisar e testar código -- parecido com o GitHub Copilot, mas seu código nunca sai da sua máquina e não há mensalidade. É um pouco mais lento que ferramentas na nuvem, mas funciona bem para código repetitivo, revisão de código e escrita de testes.' },
+          ],
           items: [
             'Kimi K2.6: 58,6 SWE-Bench Pro. MoE. Melhor modelo de programação local em geral. `ollama run kimi-k2.6`.',
             'Qwen3.8-27B: 61,7% SWE-bench. 22 GB de VRAM. Melhor modelo denso. `ollama run qwen3.8:27b`.',
@@ -1958,6 +1990,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Kimi K2.6(58.6 SWE-Bench Pro, MoE)는 2026년 7월 기준 최고의 로컬 코딩 모델이며, Qwen3.8-27B(61.7% SWE-bench)는 최고의 밀집 대안입니다 -- 두 모델 모두 Ollama를 통해 로컬에서 실행되어 비공개로 코드를 생성, 검토, 테스트할 수 있습니다.' },
+            { type: 'plain-terms', text: '자신의 컴퓨터에서 실행되는 무료 오픈 AI 모델을 사용해 코드를 작성, 검토, 테스트할 수 있습니다 -- GitHub Copilot과 비슷하지만 코드가 절대 내 컴퓨터를 벗어나지 않고 구독료도 없습니다. 클라우드 도구보다는 다소 느리지만, 보일러플레이트 생성, 코드 검토, 테스트 작성에는 효과적입니다.' },
+          ],
           items: [
             '**최고의 코딩 모델 (2026):** Qwen3-Coder 32B (92.7% HumanEval), Qwen3-Coder 7B (72% HumanEval), CodeLlama 34B (75%).',
             '**속도:** 코드 제안당 2~5초. 개발에 충분히 빠르지만 GitHub Copilot(~300ms)보다는 느립니다.',
