@@ -183,4 +183,5 @@ export const LLM_SLUG_TO_KEY: Record<string, string> = {
   'best-ai-code-review-tools-2026':               'best-ai-code-review-tools-2026',
   'best-llm-fine-tuning-framework-2026':          'best-llm-fine-tuning-framework-2026',
   'best-ai-agent-framework-2026':                 'best-ai-agent-framework-2026',
+  'best-llm-evaluation-tools-2026':               'best-llm-evaluation-tools-2026',
 }

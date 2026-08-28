@@ -1,0 +1,4575 @@
+import type { Language } from '@/lib/blog/blogContent'
+import type { LLMArticle } from '@/lib/local-llms/types'
+
+export const article: Partial<Record<Language, LLMArticle>> = {
+  en: {
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2027-02-28',
+    theme: 'Tools & Interfaces',
+    title: 'Best LLM Evaluation Tool 2026: Braintrust vs Weave vs Promptfoo',
+    seoTitle: 'Best LLM Evaluation Tool 2026',
+    metaDescription: 'Braintrust is free for 10,000 scores a month and $249 for Pro, Weave starts at $60, Promptfoo is MIT and free at any scale. Pricing verified August 2026.',
+    educationalLevel: 'Advanced',
+    audience: 'Engineering teams testing LLM applications before release',
+    affiliateDisclosure: true,
+    publishDate: '2026-08-28',
+    dateModified: '2026-08-28',
+    readTime: '13 min read',
+    primaryTerm: 'LLM evaluation tool',
+    targetKeywords: [
+      'best LLM evaluation tool 2026',
+      'Braintrust vs Weave vs Promptfoo',
+      'LLM eval platform comparison',
+      'promptfoo OpenAI acquisition',
+      'LLM as judge scoring tools',
+    ],
+    leadAnswerBlock: '**Braintrust is the strongest all-round evaluation platform for teams shipping LLM features to production, with a free tier covering 10,000 scores a month and Pro at $249. Weave is the natural choice if you already use Weights & Biases, starting at $60 a month but restricted to organisations under 50 employees. Promptfoo is the best free, CI-native option: MIT-licensed, free at any scale because it runs on your own machines, and now owned by OpenAI, which acquired it in March 2026 and committed publicly to keeping it open source under its current licence.**',
+    quickAnswerTop: {
+      question: 'Which LLM evaluation tool is best in 2026?',
+      answer: '**Braintrust for cross-functional teams who need non-engineers reviewing results, Weave if you are already on Weights & Biases, and Promptfoo if you want evals as version-controlled config with no vendor at all.** The split is not really about scoring features, since all three do LLM-as-judge, custom scorers and dataset regression testing. It is about where the eval runs and who looks at the output. A hosted UI is worth paying for when a product manager needs to review failures; it is wasted when one engineer runs evals in CI.',
+      bullets: [
+        '**Best overall for production teams:** Braintrust — free for 10,000 scores/mo, Pro $249/mo with $249 of model credits included',
+        '**Best if you use Weights & Biases:** Weave — free 1 GB/mo with unlimited seats, Pro from $60/mo under 50 employees',
+        '**Best free and CI-native:** Promptfoo — 24.6k stars, MIT, runs on your own infrastructure, no scale limit',
+        '**Best for security and red-teaming:** Promptfoo — its stated focus is vulnerability scanning and red-teaming, not just scoring',
+        '**None of the three** has a public affiliate programme for content creators, so nothing on this page is paid placement',
+        '**Skip a platform entirely** if you have fewer than about 20 test cases: a scored script in CI is enough',
+      ],
+      updatedDate: '2026-08-28',
+    },
+    toc: [
+      { label: 'Key takeaways', anchor: 'tldr' },
+      { label: 'Best choice for your situation', anchor: 'best-choice' },
+      { label: 'What an LLM eval tool actually does', anchor: 'what-is-llm-eval' },
+      { label: 'Full comparison table', anchor: 'comparison' },
+      { label: 'Braintrust: the production choice', anchor: 'braintrust' },
+      { label: 'Weave: the Weights & Biases choice', anchor: 'weave' },
+      { label: 'Promptfoo: the free CI-native choice', anchor: 'promptfoo' },
+      { label: 'What the OpenAI acquisition means for Promptfoo', anchor: 'promptfoo-openai' },
+      { label: 'How the pricing compares', anchor: 'pricing' },
+      { label: 'Self-hosting and data residency', anchor: 'self-hosting' },
+      { label: 'Who should use what', anchor: 'who-should-use' },
+      { label: 'Regional context: EU, Japan, China', anchor: 'regional-context' },
+      { label: 'Common mistakes', anchor: 'common-mistakes' },
+      { label: 'Skip this if…', anchor: 'skip-this-if' },
+      { label: 'Frequently asked questions', anchor: 'faq' },
+      { label: 'Final verdict', anchor: 'verdict' },
+      { label: 'Sources', anchor: 'sources' },
+      { label: 'Related reading', anchor: 'related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        isTldr: true,
+        items: [
+          '**Braintrust** — free Starter tier with 10,000 scores a month, 1 GB of processed data, 14-day retention, $10 of model credits and unlimited users. Pro is $249 a month and includes $249 of model credits, 5 GB of data, 50,000 scores and 30-day retention. Enterprise adds custom retention and on-prem or hosted deployment.',
+          '**Weave** — part of Weights & Biases. The free tier gives unlimited Weave seats and 1 GB a month of ingestion. Pro starts at $60 a month with 1.5 GB, but eligibility is explicitly limited to "early-stage teams fewer than 50 employees"; larger organisations must move to Enterprise. Extra ingestion is $0.10 per MB.',
+          '**Promptfoo** — 24.6k GitHub stars, MIT-licensed, and free at any scale because it runs as a CLI and library on infrastructure you already own. Your only cost is the model API spend the evals themselves consume, which every LLM-as-judge workflow incurs on any platform.',
+          '**OpenAI announced its acquisition of Promptfoo on 9 March 2026** and stated publicly that "Promptfoo will remain open source under the current license, and we will continue to service and support current customers." The repository is still MIT and was pushed the day this page was checked.',
+          '**A correction worth making:** several write-ups describe Braintrust\'s Pro model credits as a promotional rate dropping to $100 a month after 1 September 2026. No such expiry appears on Braintrust\'s pricing page. The only promotion it lists is "6–12 months free for qualifying startups". Budget from the vendor page.',
+          '**Promptfoo is a security tool as much as an eval tool.** Its own description leads with red-teaming, penetration testing and vulnerability scanning, and OpenAI framed the acquisition around agentic security testing. That is a real difference in emphasis from Braintrust and Weave.',
+          'None of the three has a public affiliate or referral programme for content creators. Weights & Biases runs a partner programme, but it is a reseller and technology-integration scheme aimed at consultancies, not a per-referral payout. PromptQuorum earns nothing from this page.',
+        ],
+      },
+      bestChoice: {
+        id: 'best-choice',
+        title: '🏆 Best choice for your situation',
+        content: '**Choose on where the eval runs and who reads the results, not on the scoring feature list — all three cover the same scoring primitives.** Read down and stop at the first line that describes you.',
+        items: [
+          '**Non-engineers need to review eval failures** → Braintrust. The hosted UI, human-review queues and dataset versioning exist for exactly that, and the free tier covers most early-stage volume.',
+          '**You already run Weights & Biases** → Weave. Evals land beside your existing experiment tracking, and the free tier gives unlimited seats. Check the under-50-employees limit before planning on Pro.',
+          '**You want evals as version-controlled config with no vendor** → Promptfoo. YAML or JS next to your code, diffable in a pull request, free regardless of scale.',
+          '**You are testing for prompt injection and agent security, not just quality** → Promptfoo. Red-teaming and vulnerability scanning are its stated purpose, and see [prompt security and injection testing tools](/prompt-engineering/prompt-security-tools-injection-testing).',
+          '**You have a handful of test cases and one engineer** → none of them yet. A scored script in CI is enough until the dataset is big enough to need management.',
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.braintrust.dev/pricing',
+            productName: 'Braintrust',
+            productCategory: 'dev-tool',
+            priceRange: 'Free 10,000 scores/mo; Pro $249/mo including $249 model credits',
+            label: 'Braintrust — see pricing',
+          },
+          {
+            url: 'https://github.com/promptfoo/promptfoo',
+            productName: 'Promptfoo',
+            productCategory: 'dev-tool',
+            priceRange: 'Free, MIT licence, any scale',
+            label: 'Promptfoo — open-source repository',
+          },
+        ],
+      },
+      whatIsLlmEval: {
+        id: 'what-is-llm-eval',
+        title: 'What an LLM eval tool actually does',
+        content: '**An LLM evaluation tool runs a dataset of test cases through your prompt or agent and scores each output, so you can tell whether a change made things better or worse before it reaches users.** A dataset is usually a set of input and expected-output pairs, drawn from production logs, written by hand as edge cases, or generated. Scorers range from deterministic checks like string match and JSON schema validation, through LLM-as-judge grading where a second model scores against a rubric, to custom functions you write yourself.\n\nThat is a different job from watching what the system does once it is live. Evaluation answers "is this change safe to ship"; production monitoring answers "what is it doing now". This page is about the first question. For the prompt-level view of the same problem, see [how to evaluate prompt quality](/prompt-engineering/how-to-evaluate-prompt-quality).',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'An LLM evaluation tool runs a fixed dataset of test cases through your prompt or agent, scores each output with deterministic checks, LLM-as-judge grading or custom functions, and reports whether a change improved or regressed quality before release.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'It is a test suite for something that does not give the same answer twice. Instead of asserting exact output, you score it, and you watch whether the average moves the wrong way when you change a prompt.',
+          },
+        ],
+        note: 'Adopt an eval platform once your test dataset is large enough that managing it in a spreadsheet or a script has become the bottleneck. Before that, a scored script in CI does the same job.',
+      },
+      comparison: {
+        id: 'comparison',
+        title: 'Braintrust vs Weave vs Promptfoo',
+        content: '**All three do LLM-as-judge, custom scorers and dataset regression testing, so the comparison is about hosting model, cost structure and eligibility.** Pricing was read from each vendor\'s own page on 28 August 2026, and repository figures from the GitHub API the same day.',
+        tableFormat: true,
+        itemHeadings: true,
+        columns: ['Criterion', 'Braintrust', 'Weave', 'Promptfoo'],
+        rows: [
+          { Criterion: 'Model', Braintrust: 'Hosted platform with UI', Weave: 'Hosted, part of W&B', Promptfoo: 'CLI and library you run' },
+          { Criterion: 'Licence', Braintrust: 'Commercial', Weave: 'Apache-2.0 SDK, hosted service', Promptfoo: 'MIT' },
+          { Criterion: 'Free tier', Braintrust: '10,000 scores/mo, 1 GB, 14-day retention', Weave: '1 GB/mo ingestion, unlimited seats', Promptfoo: 'Free at any scale' },
+          { Criterion: 'Paid entry', Braintrust: 'Pro $249/mo, $249 credits included', Weave: 'From $60/mo, 1.5 GB', Promptfoo: 'Enterprise tier, custom' },
+          { Criterion: 'Eligibility limit', Braintrust: 'None stated on paid tiers', Weave: 'Pro is under 50 employees only', Promptfoo: 'None' },
+          { Criterion: 'Overage', Braintrust: '$1.50 per 1,000 scores on Pro', Weave: '$0.10 per MB ingestion', Promptfoo: 'Only your model API spend' },
+          { Criterion: 'Self-hosting', Braintrust: 'Enterprise, on-prem or hosted', Weave: 'Enterprise single-tenant', Promptfoo: 'Default — runs on your machines' },
+          { Criterion: 'Affiliate programme', Braintrust: 'None found', Weave: 'None found', Promptfoo: 'None found' },
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Weave\'s Pro tier is not simply a cheaper plan: Weights & Biases states it is "for early-stage teams fewer than 50 employees" and that customers exceeding those guidelines must transition to Enterprise. If you are over that headcount, the real comparison is Braintrust Pro at $249 against a custom Enterprise quote, not against $60.',
+          },
+        ],
+      },
+      braintrust: {
+        id: 'braintrust',
+        title: 'Braintrust: the production choice',
+        content: '**Braintrust is the one to pick when people who do not write code need to look at eval results.** Its value is concentrated in the hosted UI, dataset versioning and human-review workflow, which is exactly the part you would otherwise have to build.',
+        rankedItems: [
+          {
+            rank: 1,
+            name: 'Braintrust — best for cross-functional production teams',
+            tagline: 'Free for 10,000 scores a month, Pro $249 with $249 of model credits included',
+            verdict: 'The free Starter tier is unusually generous for a hosted platform: 10,000 scores a month, 1 GB of processed data, 14 days of retention, $10 of model credits, and unlimited users, projects, datasets and experiments. Unlimited seats on a free tier matters here, because the whole reason to choose Braintrust is letting product managers and domain experts review failures without buying them licences. Pro at $249 a month raises that to 50,000 scores, 5 GB and 30-day retention, and includes $249 of model credits, which effectively offsets the LLM-as-judge spend for a mid-size workload. Overage is metered rather than blocking: $1.50 per 1,000 scores and $3 per GB on Pro. Enterprise adds custom retention and export, RBAC and on-prem or hosted deployment.',
+            pros: [
+              'Unlimited users even on the free tier, which is the point for cross-functional review',
+              'Free tier of 10,000 scores a month genuinely covers early-stage projects',
+              'Pro includes $249 of model credits, largely offsetting judge-model spend at that tier',
+              'On-prem or hosted deployment available for privacy-sensitive workloads',
+            ],
+            cons: [
+              '14-day retention on free is short if you want to compare against last month',
+              'Self-hosting requires Enterprise and a sales conversation, with no published price',
+              'Commercial platform, so unlike Promptfoo there is no fallback if pricing changes',
+            ],
+            affiliateLinks: [
+              {
+                url: 'https://www.braintrust.dev/pricing',
+                productName: 'Braintrust',
+                productCategory: 'dev-tool',
+                priceRange: 'Free 10,000 scores/mo; Pro $249/mo; Enterprise custom',
+                label: 'Braintrust — see pricing',
+              },
+            ],
+          },
+        ],
+        note: 'Use Braintrust when review is a team activity. If only engineers ever open the results, you are paying for a UI you will not use.',
+      },
+      weave: {
+        id: 'weave',
+        title: 'Weave: the Weights & Biases choice',
+        content: '**Weave is the obvious answer if your team already tracks experiments in Weights & Biases, and a harder sell if it does not.** The integration is the argument: evals land next to the runs you are already looking at.',
+        rankedItems: [
+          {
+            rank: 1,
+            name: 'Weave — best inside the Weights & Biases ecosystem',
+            tagline: 'Free 1 GB a month with unlimited seats, Pro from $60 under 50 employees',
+            verdict: 'Weave covers application evaluations, tracing and scorers, and the free tier gives unlimited Weave seats with 1 GB a month of ingestion, which is a reasonable starting point for a small team. Pro starts at $60 a month billed monthly with 1.5 GB, and additional ingestion is $0.10 per MB. The catch is eligibility rather than price: Weights & Biases states Pro is "for early-stage teams fewer than 50 employees" and that customers exceeding those guidelines must move to Enterprise. Enterprise is where the serious deployment options live, including a single-tenant option, HIPAA compliance, customer-managed encryption keys, SSO and audit logs. Note that single-tenant is closer to a dedicated instance than to true on-premise, so confirm the specifics with W&B before assuming it satisfies an on-prem-only requirement.',
+            pros: [
+              'Free tier with unlimited Weave seats and 1 GB a month of ingestion',
+              'Evals sit alongside existing W&B experiment tracking and registry',
+              'Enterprise offers single-tenant, HIPAA, customer-managed encryption keys and SSO',
+              'Pro entry price of $60 a month is the lowest paid tier of the three',
+            ],
+            cons: [
+              'Pro is restricted to organisations under 50 employees, which is a hard eligibility ceiling',
+              'Ingestion-metered pricing at $0.10/MB is harder to forecast than a score count',
+              'Weakest standalone case if you do not already use Weights & Biases',
+            ],
+            affiliateLinks: [
+              {
+                url: 'https://wandb.ai/site/pricing/',
+                productName: 'Weave',
+                productCategory: 'dev-tool',
+                priceRange: 'Free 1 GB/mo; Pro from $60/mo under 50 employees; Enterprise custom',
+                label: 'Weave — see Weights & Biases pricing',
+              },
+            ],
+          },
+        ],
+        note: 'Use Weave if W&B is already your system of record. If you are over 50 employees, price Enterprise before comparing it to Braintrust, because the $60 tier will not be available to you.',
+      },
+      promptfoo: {
+        id: 'promptfoo',
+        title: 'Promptfoo: the free CI-native choice',
+        content: '**Promptfoo is the one that costs nothing at any scale, because you run it yourself.** It is a CLI and library rather than a platform, so evals live as configuration next to your code and run wherever your tests already run.',
+        rankedItems: [
+          {
+            rank: 1,
+            name: 'Promptfoo — best free and CI-native option',
+            tagline: '24.6k stars, MIT-licensed, free at any scale, now owned by OpenAI',
+            verdict: 'Promptfoo has 24,638 GitHub stars and an MIT licence, and it was pushed the day this page was checked, so it is unambiguously active. Because it runs on infrastructure you already own, there is no per-score or per-gigabyte meter: your only cost is the model API spend the evals consume, which you would pay on any platform. Defining datasets as YAML, CSV or JS is more friction than clicking through a UI, but it makes evals diffable in a pull request, which is a genuine advantage when the eval config should be reviewed like any other code. Worth knowing what it actually is: the project describes itself as testing prompts, agents and RAG, with red-teaming, penetration testing and vulnerability scanning for AI. Security is not a side feature here, and OpenAI framed its acquisition around agentic security testing.',
+            pros: [
+              'Free at any scale, with no score or ingestion meter',
+              'Evals as version-controlled config, diffable and reviewable in a pull request',
+              'MIT-licensed, so there is no vendor to depend on if terms change',
+              'Red-teaming and vulnerability scanning are first-class, not bolted on',
+            ],
+            cons: [
+              'No hosted UI by default, so non-engineers have nothing to click through',
+              'YAML and CSV datasets are more setup friction than building one in a browser',
+              'Now owned by OpenAI, which is a governance consideration even with the open-source commitment',
+            ],
+            affiliateLinks: [
+              {
+                url: 'https://github.com/promptfoo/promptfoo',
+                productName: 'Promptfoo',
+                productCategory: 'dev-tool',
+                priceRange: 'Free, MIT licence, any scale',
+                label: 'Promptfoo — open-source repository',
+              },
+            ],
+          },
+        ],
+        note: 'Use Promptfoo when the people reading eval results are the same people writing the code. Add Braintrust later if review becomes cross-functional.',
+      },
+      promptfooOpenai: {
+        id: 'promptfoo-openai',
+        title: 'What the OpenAI acquisition means for Promptfoo',
+        content: '**OpenAI announced it was acquiring Promptfoo on 9 March 2026, and committed publicly to keeping it open source.** OpenAI\'s own statement reads: "Promptfoo will remain open source under the current license, and we will continue to service and support current customers." The acquisition was reported at the time by TechCrunch, CNBC and Forbes, and confirmed on both OpenAI\'s and Promptfoo\'s own sites.\n\nThe evidence on the ground supports the commitment so far. Nearly six months later the repository is still under the `promptfoo` organisation, still MIT-licensed, and was pushed the day this page was checked. That is what you would want to see.\n\nThe reason to think about it anyway is governance rather than licence. An evaluation tool is the thing you use to judge models, and it is now owned by a company that makes models. The MIT licence means you can fork if the project direction ever stops serving you, which is a real protection that Braintrust and Weave do not offer. But if your evaluation strategy depends on neutrality between model vendors, that is worth a deliberate decision rather than an assumption.',
+        callouts: [
+          {
+            type: 'note',
+            text: 'OpenAI said Promptfoo\'s technology will be integrated into OpenAI Frontier for automated red-teaming and agentic security testing. That is consistent with Promptfoo\'s existing security emphasis, and suggests the security side is likely to receive more investment than the general-purpose eval side.',
+          },
+        ],
+        note: 'Keep using Promptfoo if the MIT licence and local execution are what you value. Reconsider if vendor neutrality in your eval tooling is a stated requirement.',
+      },
+      pricing: {
+        id: 'pricing',
+        title: 'How the pricing compares',
+        content: '**Cost scales with data volume and judge-model spend, not seats — which is why unlimited users on the free tiers is more useful than it first sounds.** The table below prices a mid-size workload of roughly 50,000 eval scores a month.',
+        tableFormat: true,
+        itemHeadings: true,
+        columns: ['Scenario', 'Braintrust', 'Weave', 'Promptfoo'],
+        rows: [
+          { Scenario: 'Free tier limit', Braintrust: '10,000 scores, 1 GB, 14-day retention', Weave: '1 GB/mo ingestion, unlimited seats', Promptfoo: 'No limit' },
+          { Scenario: 'Paid tier', Braintrust: 'Pro $249/mo', Weave: 'From $60/mo', Promptfoo: 'None needed' },
+          { Scenario: 'Included at that tier', Braintrust: '50,000 scores, 5 GB, $249 credits', Weave: '1.5 GB ingestion', Promptfoo: 'Not applicable' },
+          { Scenario: '50,000 scores a month', Braintrust: 'Covered by Pro at $249', Weave: 'Depends on GB, likely over 1.5 GB', Promptfoo: 'Model API spend only' },
+          { Scenario: 'Overage rate', Braintrust: '$1.50 per 1,000 scores, $3/GB', Weave: '$0.10 per MB', Promptfoo: 'None' },
+          { Scenario: 'Eligibility ceiling', Braintrust: 'None stated', Weave: 'Pro under 50 employees', Promptfoo: 'None' },
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Several comparisons state that Braintrust\'s $249 of Pro model credits is a 2026 promotion dropping to $100 a month after 1 September 2026. That expiry does not appear on Braintrust\'s pricing page, which lists only "6–12 months free for qualifying startups" as a promotion. Price from the vendor page rather than from a comparison article, this one included.',
+          },
+        ],
+        note: 'Braintrust bills by score, Weave by gigabyte ingested. Those are not comparable units, so estimate both from your own workload before treating $60 as cheaper than $249.',
+      },
+      selfHosting: {
+        id: 'self-hosting',
+        title: 'Self-hosting and data residency',
+        content: '**Promptfoo is the only one of the three where self-hosting is the default rather than an enterprise upgrade.** Because it is a CLI and library, your test cases and model outputs never leave your environment unless you deliberately choose a hosted tier. For a team under data-residency rules, that removes the question entirely rather than answering it.\n\nBraintrust offers on-prem or hosted deployment, but on Enterprise only, which means custom pricing and a sales conversation. It is a real deployment option rather than a marketing line, but you cannot evaluate it self-serve.\n\nWeave\'s Enterprise tier offers a single-tenant option with customer-managed encryption keys, HIPAA compliance and secure private connectivity. Read that carefully: single-tenant with customer-managed keys is a dedicated instance, which is not the same thing as running inside your own perimeter. If your requirement is strictly on-premise, confirm the specifics with Weights & Biases rather than assuming the single-tenant option satisfies it.',
+        note: 'Choose Promptfoo when eval data cannot leave your infrastructure and you want that settled by architecture rather than by contract. Choose Braintrust Enterprise when you need on-prem plus a review UI.',
+      },
+      whoShouldUse: {
+        id: 'who-should-use',
+        title: 'Who should use what',
+        content: '**Team shape decides this more than feature lists.** Five profiles cover most readers.',
+        items: [
+          '**Solo developer on an MVP** → Promptfoo. No account, no meter, and nothing to remove if the project changes direction.',
+          '**Product team shipping an LLM feature with PM and QA review** → Braintrust. Unlimited users on the free tier is the specific thing that makes cross-functional review workable.',
+          '**Team already running Weights & Biases** → Weave, provided you are under 50 employees for Pro. Above that, price Enterprise before comparing.',
+          '**Security or platform team testing for prompt injection** → Promptfoo, whose red-teaming focus matches the task. See also [prompt security and injection testing tools](/prompt-engineering/prompt-security-tools-injection-testing).',
+          '**Team evaluating across several model providers** → Promptfoo or Braintrust, and route the calls through a gateway so provider comparison is a config change; see [the best LLM API gateway](/local-llms/best-llm-api-gateway-2026).',
+        ],
+      },
+      regionalContext: {
+        id: 'regional-context',
+        title: 'Evaluation tooling in the EU, Japan and China',
+        content: 'Eval datasets are usually built from production traffic, which makes them some of the most sensitive data in an LLM stack. That turns the hosted-versus-local choice into a compliance question in three major markets.',
+        subsections: [
+          {
+            title: 'European Union',
+            content: 'An eval dataset pulled from production logs contains whatever your users typed, which under the GDPR is processing like any other, and sending it to a US-hosted platform is a transfer within the meaning of Articles 44 to 49 unless the vendor\'s terms say otherwise. You need an Article 28 processor agreement with Braintrust or Weights & Biases if you use them. The EU AI Act also matters here in a way that favours evaluation generally: for systems in scope, being able to show you tested before deployment is part of the obligation rather than a nicety, and the Digital Omnibus deferred the Annex III high-risk duties to 2 December 2027 without removing them. Promptfoo running locally sidesteps the transfer question because the dataset never leaves.',
+          },
+          {
+            title: 'Japan',
+            content: 'METI\'s AI governance programme pushes firms towards auditable evidence that a system was tested before release, and eval runs are exactly that evidence when they are stored where you control them. A Promptfoo config committed to version control alongside its results is an audit artefact in a way that a hosted dashboard is not, because you can reproduce it from the repository years later. If you use a hosted platform instead, check retention: Braintrust\'s free tier keeps data 14 days, which is shorter than most audit expectations.',
+          },
+          {
+            title: 'China',
+            content: 'Under the Data Security Law (数据安全法) and the CAC\'s cross-border transfer rules, uploading an eval dataset built from mainland user traffic to a foreign platform is the compliance problem, not the evaluation itself. Deployments serving mainland teams generally need the eval to run on domestic infrastructure. Promptfoo is the only one of the three that does this by default, which makes it the practical choice regardless of feature preference — see [running local LLMs in China](/local-llms/deepseek-local-china-data-privacy-2026).',
+          },
+        ],
+        note: 'Run evals locally in any market where the dataset itself is the sensitive asset. Promptfoo makes that the default; the other two make it an enterprise conversation.',
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'Common mistakes when choosing an eval tool',
+        numberedItems: [
+          {
+            title: 'Comparing $60 against $249 without checking eligibility',
+            whyItMatters: 'Weave Pro is restricted to organisations under 50 employees. Above that headcount the real comparison is Braintrust Pro against a custom Weave Enterprise quote, and the $60 figure is not available to you at all.',
+          },
+          {
+            title: 'Budgeting around a Braintrust promotional expiry that is not published',
+            whyItMatters: 'The claim that Pro credits drop to $100 a month after 1 September 2026 does not appear on Braintrust\'s pricing page. Planning a migration around an expiry the vendor has not announced wastes effort; re-read the pricing page instead.',
+          },
+          {
+            title: 'Treating scores and gigabytes as comparable units',
+            whyItMatters: 'Braintrust meters scores, Weave meters ingestion. A workload that is comfortable inside 50,000 scores may or may not fit inside 1.5 GB depending on how large your traces are. Estimate both from your own data before ranking on price.',
+          },
+          {
+            title: 'Adopting a platform for a dataset of fifteen cases',
+            whyItMatters: 'Below roughly twenty test cases, a scored script in CI does the same job with no account, no meter and no retention limit. Platforms earn their keep when dataset management, not scoring, has become the bottleneck.',
+          },
+          {
+            title: 'Assuming single-tenant means on-premise',
+            whyItMatters: 'Weave\'s Enterprise single-tenant option with customer-managed keys is a dedicated instance, not deployment inside your own perimeter. If your requirement is strictly on-prem, confirm it with W&B rather than reading single-tenant as equivalent.',
+          },
+        ],
+      },
+      skipThisIf: {
+        id: 'skip-this-if',
+        title: 'Skip this if…',
+        content: '**If your test set is a dozen prompts and one engineer runs it, skip all three and write a scored script in CI.** You get the same regression signal without an account, a meter or a retention window, and you can graduate to a platform later without having wasted anything, since the dataset is the asset and it moves with you.\n\nThe threshold worth waiting for is when managing the dataset becomes the work: when you want to pull failing cases from production into the test set routinely, when someone who does not write code needs to grade outputs, or when you need to compare this month\'s results against last quarter\'s. Those are dataset-management problems, and that is what you are actually buying. Scoring itself is the easy part and always was.',
+        callouts: [
+          {
+            type: 'tip',
+            text: 'A practical trigger: adopt a platform the first time you find yourself building a spreadsheet to track which prompt version scored what. That spreadsheet is the product you are about to buy, and buying it is cheaper than maintaining it.',
+          },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Frequently asked questions',
+        faqs: [
+          {
+            q: 'What is the best LLM evaluation tool in 2026?',
+            a: 'Braintrust for teams where non-engineers review results, thanks to unlimited users even on the free tier. Weave if you already use Weights & Biases and are under 50 employees. Promptfoo if you want evals as version-controlled config that run on your own infrastructure at no cost. All three cover LLM-as-judge, custom scorers and dataset regression testing.',
+          },
+          {
+            q: 'Did OpenAI acquire Promptfoo?',
+            a: 'Yes. OpenAI announced the acquisition on 9 March 2026 and stated that Promptfoo will remain open source under its current licence and that existing customers will continue to be serviced and supported. As of late August 2026 the repository is still under the promptfoo organisation, still MIT-licensed, and actively maintained.',
+          },
+          {
+            q: 'How much does Braintrust cost?',
+            a: 'The free Starter tier includes 10,000 scores a month, 1 GB of processed data, 14-day retention, $10 of model credits and unlimited users. Pro is $249 a month and includes $249 of model credits, 50,000 scores, 5 GB and 30-day retention, with overage at $1.50 per 1,000 scores. Enterprise is custom-priced and adds on-prem or hosted deployment.',
+          },
+          {
+            q: 'Is Weave free, and what are the limits?',
+            a: 'Weave has a free tier with unlimited Weave seats and 1 GB a month of data ingestion. Pro starts at $60 a month with 1.5 GB, but Weights & Biases restricts it to early-stage teams with fewer than 50 employees; larger organisations must move to Enterprise. Additional ingestion is $0.10 per MB.',
+          },
+          {
+            q: 'Is Promptfoo really free at any scale?',
+            a: 'Yes, in the sense that the tool itself is MIT-licensed and runs on your own machines, so there is no per-score or per-gigabyte charge. You still pay for the model API calls the evaluations make, but that cost exists on every platform and is not specific to Promptfoo. An optional hosted Enterprise tier exists on top.',
+          },
+          {
+            q: 'Which one can I self-host?',
+            a: 'Promptfoo by default, since it is a CLI and library that runs wherever you run it. Braintrust offers on-prem or hosted deployment on its Enterprise plan. Weave offers a single-tenant Enterprise option with customer-managed encryption keys, which is a dedicated instance rather than true on-premise, so confirm the specifics if you have a strict on-prem requirement.',
+          },
+          {
+            q: 'Do any of these have affiliate programmes?',
+            a: 'We found no public affiliate or referral programme for content creators at Braintrust, Weights & Biases or Promptfoo. Weights & Biases runs a partner programme, but its public page describes reseller and technology-integration partnerships aimed at consultancies rather than a per-referral payout. Note also that usebraintrust.com is a separate talent marketplace, unrelated to braintrust.dev. PromptQuorum earns nothing from this page.',
+          },
+          {
+            q: 'What is the difference between evaluation and monitoring?',
+            a: 'Evaluation runs a fixed dataset before you ship and tells you whether a change improved or regressed quality. Monitoring watches live traffic after release and tells you what the system is doing now. This page covers the first. The two are complementary and many teams run both, but the tools and the questions are different.',
+          },
+        ],
+      },
+      verdict: {
+        id: 'verdict',
+        title: 'Final verdict',
+        items: [
+          '**Use Braintrust if** people who do not write code need to review eval results — next step: start on the free tier, which allows unlimited users, and see whether your PMs actually open it before paying for Pro.',
+          '**Use Weave if** Weights & Biases is already your system of record — next step: confirm you are under the 50-employee ceiling before planning on the $60 tier, and price Enterprise if you are not.',
+          '**Use Promptfoo if** you want evals as reviewable config with no vendor meter — next step: write your first dataset as YAML and run it in CI before evaluating anything hosted.',
+          '**Use Promptfoo specifically if** you are testing for prompt injection and agent security rather than output quality alone — next step: start with its red-teaming features, which is where OpenAI is directing investment.',
+          '**Skip all three if** you have a dozen test cases and one engineer — next step: write a scored script in CI and revisit when managing the dataset becomes the bottleneck.',
+        ],
+        note: 'We found no affiliate programme at any of the three vendors, and PromptQuorum is not enrolled in anything. Every link on this page goes to the vendor\'s own site or repository.',
+      },
+      sources: {
+        id: 'sources',
+        title: 'Sources',
+        links: [
+          { url: 'https://www.braintrust.dev/pricing', title: 'Braintrust pricing', description: 'Starter, Pro and Enterprise tiers with score, data and retention limits, and the startup promotion.' },
+          { url: 'https://wandb.ai/site/pricing/', title: 'Weights & Biases pricing', description: 'Weave free, Pro and Enterprise tiers, the under-50-employees restriction and the $0.10/MB ingestion rate.' },
+          { url: 'https://github.com/promptfoo/promptfoo', title: 'Promptfoo repository', description: 'Star count, MIT licence, and the project\'s own description of red-teaming and vulnerability scanning.' },
+          { url: 'https://openai.com/index/openai-to-acquire-promptfoo/', title: 'OpenAI: acquiring Promptfoo', description: 'OpenAI\'s own announcement, including the commitment to keep Promptfoo open source under its current licence.' },
+          { url: 'https://www.promptfoo.dev/blog/promptfoo-joining-openai/', title: 'Promptfoo: joining OpenAI', description: 'Promptfoo\'s own account of the acquisition.' },
+          { url: 'https://techcrunch.com/2026/03/09/openai-acquires-promptfoo-to-secure-its-ai-agents/', title: 'OpenAI acquires Promptfoo (TechCrunch)', description: 'Independent confirmation of the 9 March 2026 announcement.' },
+          { url: 'https://www.cnbc.com/2026/03/09/open-ai-cybersecurity-promptfoo-ai-agents.html', title: 'OpenAI to buy Promptfoo (CNBC)', description: 'Second independent report of the acquisition and its security framing.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Related reading',
+        items: [
+          '[Best prompt testing and evaluation tools](/prompt-engineering/best-prompt-testing-evaluation-tools) — the prompt-level view of the same problem',
+          '[How to evaluate prompt quality](/prompt-engineering/how-to-evaluate-prompt-quality) — building the rubric your scorers will apply',
+          '[Prompt evaluation metrics](/prompt-engineering/prompt-evaluation-metrics) — what to actually measure once you have a dataset',
+          '[Prompt security and injection testing tools](/prompt-engineering/prompt-security-tools-injection-testing) — the red-teaming side that Promptfoo leads on',
+          '[Best LLM API gateway](/local-llms/best-llm-api-gateway-2026) — routing eval calls across providers so comparison is a config change',
+        ],
+      },
+    },
+    schema: {
+      '@type': 'TechArticle',
+      headline: 'Best LLM Evaluation Tool 2026: Braintrust vs Weave vs Promptfoo',
+      description: 'Compares Braintrust, Weave and Promptfoo for LLM evaluation, with verified pricing, eligibility limits, self-hosting options and the OpenAI acquisition of Promptfoo. Verified August 2026.',
+      datePublished: '2026-08-28',
+      dateModified: '2026-08-28',
+      url: 'https://www.promptquorum.com/local-llms/best-llm-evaluation-tools-2026',
+      inLanguage: 'en',
+      proficiencyLevel: 'Advanced',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      about: [
+        { '@type': 'Thing', name: 'LLM evaluation' },
+        { '@type': 'Thing', name: 'Regression testing for AI' },
+      ],
+      mentions: [
+        { '@type': 'SoftwareApplication', name: 'Braintrust' },
+        { '@type': 'SoftwareApplication', name: 'Weave' },
+        { '@type': 'SoftwareApplication', name: 'Promptfoo' },
+      ],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'en',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'What is the best LLM evaluation tool in 2026?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Braintrust for teams where non-engineers review results, Weave if you already use Weights & Biases and are under 50 employees, and Promptfoo if you want evals as version-controlled config running free on your own infrastructure.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Did OpenAI acquire Promptfoo?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Yes. OpenAI announced the acquisition on 9 March 2026 and stated Promptfoo will remain open source under its current licence. As of late August 2026 the repository is still MIT-licensed and actively maintained.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'How much does Braintrust cost?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'The free Starter tier includes 10,000 scores a month, 1 GB of data, 14-day retention and unlimited users. Pro is $249 a month including $249 of model credits, 50,000 scores and 5 GB. Enterprise is custom-priced with on-prem or hosted deployment.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Is Weave free and what are the limits?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Weave has a free tier with unlimited seats and 1 GB a month of ingestion. Pro starts at $60 a month with 1.5 GB but is restricted to teams with fewer than 50 employees. Additional ingestion costs $0.10 per MB.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Do LLM evaluation tools have affiliate programmes?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'We found no public affiliate or referral programme at Braintrust, Weights & Biases or Promptfoo. The Weights & Biases partner programme is a reseller and integration scheme for consultancies, not a per-referral payout.',
+          },
+        },
+      ],
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'Best LLM evaluation tools (August 2026)',
+      inLanguage: 'en',
+      numberOfItems: 3,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Braintrust', description: 'Best for cross-functional production teams — free for 10,000 scores a month with unlimited users, Pro $249 including $249 of model credits' },
+        { '@type': 'ListItem', position: 2, name: 'Weave', description: 'Best inside the Weights & Biases ecosystem — free 1 GB a month with unlimited seats, Pro from $60 for teams under 50 employees' },
+        { '@type': 'ListItem', position: 3, name: 'Promptfoo', description: 'Best free and CI-native option — 24.6k stars, MIT-licensed, runs on your own infrastructure at any scale' },
+      ],
+    },
+  },
+
+  de: {
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2027-02-28',
+    theme: 'Tools & Interfaces',
+    title: 'Bestes LLM-Evaluationstool 2026: Braintrust, Weave oder Promptfoo',
+    seoTitle: 'Bestes LLM-Evaluationstool 2026',
+    metaDescription: 'Braintrust ist bis 10.000 Scores im Monat kostenlos und kostet 249 $ für Pro, Weave startet bei 60 $, Promptfoo ist MIT-lizenziert und in jeder Größe kostenlos. Preise geprüft im August 2026.',
+    educationalLevel: 'Advanced',
+    audience: 'Entwicklungsteams, die LLM-Anwendungen vor dem Release testen',
+    affiliateDisclosure: true,
+    publishDate: '2026-08-28',
+    dateModified: '2026-08-28',
+    readTime: '13 Min. Lesezeit',
+    primaryTerm: 'LLM-Evaluationstool',
+    targetKeywords: [
+      'bestes LLM-Evaluationstool 2026',
+      'Braintrust vs Weave vs Promptfoo',
+      'LLM-Eval-Plattform Vergleich',
+      'Promptfoo OpenAI Übernahme',
+      'LLM-as-Judge Bewertung',
+    ],
+    leadAnswerBlock: '**Braintrust ist die stärkste Allround-Plattform für Teams, die LLM-Funktionen in Produktion bringen: bis 10.000 Scores im Monat kostenlos, Pro für 249 $. Weave ist die naheliegende Wahl, wenn Sie ohnehin Weights & Biases nutzen, ab 60 $ im Monat, allerdings auf Organisationen unter 50 Mitarbeitenden beschränkt. Promptfoo ist die beste kostenlose, CI-native Option: MIT-lizenziert, in jeder Größenordnung kostenlos, weil es auf Ihren eigenen Rechnern läuft — und seit März 2026 im Besitz von OpenAI, das öffentlich zugesagt hat, es unter der bisherigen Lizenz quelloffen zu halten.**',
+    quickAnswerTop: {
+      question: 'Welches LLM-Evaluationstool ist 2026 das beste?',
+      answer: '**Braintrust für interdisziplinäre Teams, in denen auch Nicht-Entwickler Ergebnisse prüfen, Weave wenn Sie bereits Weights & Biases einsetzen, und Promptfoo, wenn Sie Evaluationen als versionierte Konfiguration ganz ohne Anbieter wollen.** Der Unterschied liegt nicht bei den Bewertungsfunktionen — alle drei beherrschen LLM-as-Judge, eigene Scorer und datensatzbasierte Regressionstests. Er liegt darin, wo die Auswertung läuft und wer die Ergebnisse liest. Eine gehostete Oberfläche lohnt sich, wenn eine Produktmanagerin Fehlschläge sichten muss; sie ist verschwendet, wenn eine einzelne Entwicklerin Evaluationen in der CI laufen lässt.',
+      bullets: [
+        '**Insgesamt am besten für Produktionsteams:** Braintrust — kostenlos bis 10.000 Scores/Monat, Pro 249 $/Monat inklusive 249 $ Modellguthaben',
+        '**Am besten mit Weights & Biases:** Weave — kostenlos 1 GB/Monat mit unbegrenzten Plätzen, Pro ab 60 $/Monat unter 50 Mitarbeitenden',
+        '**Am besten kostenlos und CI-nativ:** Promptfoo — 24,6k Sterne, MIT, läuft auf eigener Infrastruktur, ohne Mengengrenze',
+        '**Am besten für Sicherheit und Red Teaming:** Promptfoo — erklärter Schwerpunkt sind Schwachstellenanalyse und Red Teaming, nicht nur Bewertung',
+        '**Keines der drei** hat ein öffentliches Affiliate-Programm für Publisher, auf dieser Seite ist also nichts bezahlte Platzierung',
+        '**Verzichten Sie ganz auf eine Plattform,** wenn Sie weniger als etwa 20 Testfälle haben: ein bewertetes Skript in der CI genügt',
+      ],
+      updatedDate: '2026-08-28',
+    },
+    toc: [
+      { label: 'Kernaussagen', anchor: 'tldr' },
+      { label: 'Die beste Wahl für Ihre Situation', anchor: 'best-choice' },
+      { label: 'Was ein LLM-Evaluationstool tatsächlich leistet', anchor: 'what-is-llm-eval' },
+      { label: 'Vollständige Vergleichstabelle', anchor: 'comparison' },
+      { label: 'Braintrust: die Wahl für Produktion', anchor: 'braintrust' },
+      { label: 'Weave: die Wahl im Weights-&-Biases-Umfeld', anchor: 'weave' },
+      { label: 'Promptfoo: die kostenlose, CI-native Wahl', anchor: 'promptfoo' },
+      { label: 'Was die OpenAI-Übernahme für Promptfoo bedeutet', anchor: 'promptfoo-openai' },
+      { label: 'Wie sich die Preise vergleichen', anchor: 'pricing' },
+      { label: 'Selbstbetrieb und Datenresidenz', anchor: 'self-hosting' },
+      { label: 'Wer sollte was nutzen?', anchor: 'who-should-use' },
+      { label: 'Regionaler Kontext: EU, Japan, China', anchor: 'regional-context' },
+      { label: 'Häufige Fehler', anchor: 'common-mistakes' },
+      { label: 'Überspringen Sie das, wenn…', anchor: 'skip-this-if' },
+      { label: 'Häufig gestellte Fragen', anchor: 'faq' },
+      { label: 'Fazit', anchor: 'verdict' },
+      { label: 'Quellen', anchor: 'sources' },
+      { label: 'Weiterführende Artikel', anchor: 'related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        isTldr: true,
+        items: [
+          '**Braintrust** — kostenlose Starter-Stufe mit 10.000 Scores im Monat, 1 GB verarbeiteten Daten, 14 Tagen Aufbewahrung, 10 $ Modellguthaben und unbegrenzt vielen Nutzenden. Pro kostet 249 $ im Monat und enthält 249 $ Modellguthaben, 5 GB Daten, 50.000 Scores und 30 Tage Aufbewahrung. Enterprise ergänzt individuelle Aufbewahrung sowie On-Premises- oder gehostete Bereitstellung.',
+          '**Weave** — Teil von Weights & Biases. Die kostenlose Stufe bietet unbegrenzt viele Weave-Plätze und 1 GB Datenaufnahme im Monat. Pro beginnt bei 60 $ im Monat mit 1,5 GB, ist aber ausdrücklich auf „early-stage teams fewer than 50 employees" begrenzt; größere Organisationen müssen zu Enterprise wechseln. Zusätzliche Datenaufnahme kostet 0,10 $ pro MB.',
+          '**Promptfoo** — 24,6k GitHub-Sterne, MIT-lizenziert und in jeder Größenordnung kostenlos, weil es als CLI und Bibliothek auf Ihrer eigenen Infrastruktur läuft. Ihre einzigen Kosten sind die Modell-API-Ausgaben der Evaluationen selbst, die jeder LLM-as-Judge-Ablauf auf jeder Plattform verursacht.',
+          '**OpenAI hat die Übernahme von Promptfoo am 9. März 2026 angekündigt** und öffentlich erklärt: „Promptfoo will remain open source under the current license, and we will continue to service and support current customers." Das Repository ist weiterhin MIT-lizenziert und wurde am Prüftag dieser Seite aktualisiert.',
+          '**Eine Korrektur, die sich lohnt:** Mehrere Beiträge beschreiben das Pro-Modellguthaben von Braintrust als Aktionspreis, der nach dem 1. September 2026 auf 100 $ im Monat falle. Auf der Preisseite von Braintrust findet sich kein solches Enddatum. Die einzige dort genannte Aktion lautet „6–12 months free for qualifying startups". Kalkulieren Sie nach der Anbieterseite.',
+          '**Promptfoo ist ebenso Sicherheitswerkzeug wie Evaluationstool.** Die eigene Beschreibung beginnt mit Red Teaming, Penetrationstests und Schwachstellenanalyse, und OpenAI hat die Übernahme mit agentischer Sicherheitsprüfung begründet. Das ist ein echter Schwerpunktunterschied zu Braintrust und Weave.',
+          'Keines der drei hat ein öffentliches Affiliate- oder Empfehlungsprogramm für Publisher. Weights & Biases betreibt ein Partnerprogramm, das jedoch auf Wiederverkauf und technische Integration für Beratungshäuser zielt und keine Vergütung pro Empfehlung vorsieht. PromptQuorum verdient an dieser Seite nichts.',
+        ],
+      },
+      bestChoice: {
+        id: 'best-choice',
+        title: '🏆 Die beste Wahl für Ihre Situation',
+        content: '**Entscheiden Sie danach, wo die Auswertung läuft und wer die Ergebnisse liest, nicht nach der Funktionsliste — alle drei decken dieselben Bewertungsgrundlagen ab.** Lesen Sie von oben und halten Sie bei der ersten Zeile inne, die auf Sie zutrifft.',
+        items: [
+          '**Nicht-Entwickler müssen fehlgeschlagene Fälle prüfen** → Braintrust. Genau dafür existieren die gehostete Oberfläche, die Review-Warteschlangen und die Datensatzversionierung, und die kostenlose Stufe deckt das meiste frühe Volumen ab.',
+          '**Sie nutzen bereits Weights & Biases** → Weave. Evaluationen landen neben Ihrem bestehenden Experiment-Tracking, und die kostenlose Stufe bietet unbegrenzt viele Plätze. Prüfen Sie die 50-Mitarbeitenden-Grenze, bevor Sie mit Pro planen.',
+          '**Sie wollen Evaluationen als versionierte Konfiguration ohne Anbieter** → Promptfoo. YAML oder JS neben Ihrem Code, im Pull Request vergleichbar, unabhängig von der Größe kostenlos.',
+          '**Sie testen auf Prompt Injection und Agentensicherheit, nicht nur auf Qualität** → Promptfoo. Red Teaming und Schwachstellenanalyse sind sein erklärter Zweck; siehe [Werkzeuge für Prompt-Sicherheit und Injection-Tests](/de/prompt-engineering/prompt-security-tools-injection-testing).',
+          '**Sie haben eine Handvoll Testfälle und eine Entwicklerin** → noch keines davon. Ein bewertetes Skript in der CI genügt, bis der Datensatz groß genug ist, um Verwaltung zu brauchen.',
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.braintrust.dev/pricing',
+            productName: 'Braintrust',
+            productCategory: 'dev-tool',
+            priceRange: 'Kostenlos 10.000 Scores/Monat; Pro 249 $/Monat inkl. 249 $ Modellguthaben',
+            label: 'Braintrust — Preise ansehen',
+          },
+          {
+            url: 'https://github.com/promptfoo/promptfoo',
+            productName: 'Promptfoo',
+            productCategory: 'dev-tool',
+            priceRange: 'Kostenlos, MIT-Lizenz, jede Größenordnung',
+            label: 'Promptfoo — Open-Source-Repository',
+          },
+        ],
+      },
+      whatIsLlmEval: {
+        id: 'what-is-llm-eval',
+        title: 'Was ein LLM-Evaluationstool tatsächlich leistet',
+        content: '**Ein LLM-Evaluationstool schickt einen Datensatz von Testfällen durch Ihren Prompt oder Agenten und bewertet jede Ausgabe, damit Sie vor dem Release erkennen, ob eine Änderung besser oder schlechter geworden ist.** Ein Datensatz besteht meist aus Paaren von Eingabe und erwarteter Ausgabe — aus Produktionsprotokollen gezogen, als Grenzfälle von Hand geschrieben oder generiert. Die Scorer reichen von deterministischen Prüfungen wie Zeichenkettenvergleich und JSON-Schema-Validierung über LLM-as-Judge-Bewertung, bei der ein zweites Modell anhand einer Rubrik benotet, bis zu selbst geschriebenen Funktionen.\n\nDas ist eine andere Aufgabe als zu beobachten, was das System im Betrieb tut. Evaluation beantwortet „ist diese Änderung auslieferbar", Produktionsüberwachung beantwortet „was tut es gerade". Diese Seite behandelt die erste Frage. Die Prompt-Ebene desselben Problems behandelt [Prompt-Qualität bewerten](/de/prompt-engineering/how-to-evaluate-prompt-quality).',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Ein LLM-Evaluationstool schickt einen festen Datensatz von Testfällen durch Ihren Prompt oder Agenten, bewertet jede Ausgabe mit deterministischen Prüfungen, LLM-as-Judge-Benotung oder eigenen Funktionen und meldet, ob eine Änderung die Qualität vor dem Release verbessert oder verschlechtert hat.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Es ist eine Testsuite für etwas, das nie zweimal dieselbe Antwort gibt. Statt eine exakte Ausgabe zu prüfen, bewerten Sie sie und beobachten, ob der Durchschnitt bei einer Prompt-Änderung in die falsche Richtung wandert.',
+          },
+        ],
+        note: 'Führen Sie eine Evaluationsplattform ein, sobald Ihr Testdatensatz so groß ist, dass seine Verwaltung in Tabelle oder Skript zum Engpass wird. Davor leistet ein bewertetes Skript in der CI dasselbe.',
+      },
+      comparison: {
+        id: 'comparison',
+        title: 'Braintrust, Weave und Promptfoo im Vergleich',
+        content: '**Alle drei beherrschen LLM-as-Judge, eigene Scorer und datensatzbasierte Regressionstests; der Vergleich dreht sich also um Betriebsmodell, Kostenstruktur und Zugangsvoraussetzungen.** Die Preise stammen von den Seiten der Anbieter vom 28. August 2026, die Repository-Zahlen vom selben Tag aus der GitHub-API.',
+        tableFormat: true,
+        itemHeadings: true,
+        columns: ['Kriterium', 'Braintrust', 'Weave', 'Promptfoo'],
+        rows: [
+          { Kriterium: 'Modell', Braintrust: 'Gehostete Plattform mit Oberfläche', Weave: 'Gehostet, Teil von W&B', Promptfoo: 'CLI und Bibliothek im Eigenbetrieb' },
+          { Kriterium: 'Lizenz', Braintrust: 'Kommerziell', Weave: 'Apache-2.0-SDK, gehosteter Dienst', Promptfoo: 'MIT' },
+          { Kriterium: 'Kostenlose Stufe', Braintrust: '10.000 Scores/Monat, 1 GB, 14 Tage', Weave: '1 GB/Monat, unbegrenzte Plätze', Promptfoo: 'Kostenlos in jeder Größe' },
+          { Kriterium: 'Bezahlter Einstieg', Braintrust: 'Pro 249 $/Monat, 249 $ Guthaben inkl.', Weave: 'Ab 60 $/Monat, 1,5 GB', Promptfoo: 'Enterprise-Stufe, individuell' },
+          { Kriterium: 'Zugangsgrenze', Braintrust: 'Keine genannt', Weave: 'Pro nur unter 50 Mitarbeitenden', Promptfoo: 'Keine' },
+          { Kriterium: 'Mehrverbrauch', Braintrust: '1,50 $ je 1.000 Scores bei Pro', Weave: '0,10 $ pro MB Datenaufnahme', Promptfoo: 'Nur Ihre Modell-API-Kosten' },
+          { Kriterium: 'Selbstbetrieb', Braintrust: 'Enterprise, On-Premises oder gehostet', Weave: 'Enterprise, Single-Tenant', Promptfoo: 'Standard — läuft bei Ihnen' },
+          { Kriterium: 'Affiliate-Programm', Braintrust: 'Keines gefunden', Weave: 'Keines gefunden', Promptfoo: 'Keines gefunden' },
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Die Pro-Stufe von Weave ist nicht einfach ein günstigerer Tarif: Weights & Biases schreibt, sie sei „for early-stage teams fewer than 50 employees", und Kunden über diesen Richtwerten müssten zu Enterprise wechseln. Liegen Sie darüber, lautet der echte Vergleich Braintrust Pro zu 249 $ gegen ein individuelles Enterprise-Angebot, nicht gegen 60 $.',
+          },
+        ],
+      },
+      braintrust: {
+        id: 'braintrust',
+        title: 'Braintrust: die Wahl für Produktion',
+        content: '**Braintrust wählt man, wenn Menschen ohne Programmierkenntnisse die Evaluationsergebnisse ansehen müssen.** Sein Wert steckt in der gehosteten Oberfläche, der Datensatzversionierung und dem Review-Ablauf — also genau in dem Teil, den Sie sonst selbst bauen müssten.',
+        rankedItems: [
+          {
+            rank: 1,
+            name: 'Braintrust — am besten für interdisziplinäre Produktionsteams',
+            tagline: 'Kostenlos bis 10.000 Scores im Monat, Pro 249 $ inklusive 249 $ Modellguthaben',
+            verdict: 'Die kostenlose Starter-Stufe ist für eine gehostete Plattform ungewöhnlich großzügig: 10.000 Scores im Monat, 1 GB verarbeitete Daten, 14 Tage Aufbewahrung, 10 $ Modellguthaben sowie unbegrenzt viele Nutzende, Projekte, Datensätze und Experimente. Unbegrenzte Plätze in einer kostenlosen Stufe sind hier entscheidend, denn der ganze Grund für Braintrust ist, Produktverantwortliche und Fachleute Fehlschläge prüfen zu lassen, ohne ihnen Lizenzen zu kaufen. Pro für 249 $ im Monat hebt das auf 50.000 Scores, 5 GB und 30 Tage Aufbewahrung und enthält 249 $ Modellguthaben, was die Ausgaben für das bewertende Modell auf dieser Stufe weitgehend ausgleicht. Mehrverbrauch wird abgerechnet statt blockiert: 1,50 $ je 1.000 Scores und 3 $ pro GB bei Pro. Enterprise ergänzt individuelle Aufbewahrung und Export, RBAC sowie On-Premises- oder gehostete Bereitstellung.',
+            pros: [
+              'Unbegrenzt viele Nutzende schon in der kostenlosen Stufe, worum es hier gerade geht',
+              'Kostenlose Stufe mit 10.000 Scores im Monat deckt frühe Projekte wirklich ab',
+              'Pro enthält 249 $ Modellguthaben und gleicht damit die Bewertungskosten weitgehend aus',
+              'On-Premises- oder gehostete Bereitstellung für datenschutzsensible Lasten verfügbar',
+            ],
+            cons: [
+              '14 Tage Aufbewahrung in der kostenlosen Stufe sind kurz für Vergleiche mit dem Vormonat',
+              'Selbstbetrieb erfordert Enterprise und ein Vertriebsgespräch, ohne veröffentlichten Preis',
+              'Kommerzielle Plattform, also anders als bei Promptfoo kein Rückfallweg bei Preisänderungen',
+            ],
+            affiliateLinks: [
+              {
+                url: 'https://www.braintrust.dev/pricing',
+                productName: 'Braintrust',
+                productCategory: 'dev-tool',
+                priceRange: 'Kostenlos 10.000 Scores/Monat; Pro 249 $/Monat; Enterprise individuell',
+                label: 'Braintrust — Preise ansehen',
+              },
+            ],
+          },
+        ],
+        note: 'Nutzen Sie Braintrust, wenn die Prüfung Teamarbeit ist. Öffnen nur Entwickler die Ergebnisse, bezahlen Sie eine Oberfläche, die Sie nicht brauchen.',
+      },
+      weave: {
+        id: 'weave',
+        title: 'Weave: die Wahl im Weights-&-Biases-Umfeld',
+        content: '**Weave ist die naheliegende Antwort, wenn Ihr Team Experimente ohnehin in Weights & Biases verfolgt, und schwerer zu begründen, wenn nicht.** Die Integration ist das Argument: Evaluationen landen neben den Läufen, die Sie ohnehin ansehen.',
+        rankedItems: [
+          {
+            rank: 1,
+            name: 'Weave — am besten innerhalb des Weights-&-Biases-Ökosystems',
+            tagline: 'Kostenlos 1 GB im Monat mit unbegrenzten Plätzen, Pro ab 60 $ unter 50 Mitarbeitenden',
+            verdict: 'Weave deckt Anwendungsevaluationen, Tracing und Scorer ab, und die kostenlose Stufe bietet unbegrenzt viele Weave-Plätze bei 1 GB Datenaufnahme im Monat, was für ein kleines Team ein vernünftiger Einstieg ist. Pro beginnt bei 60 $ im Monat bei monatlicher Abrechnung mit 1,5 GB, zusätzliche Datenaufnahme kostet 0,10 $ pro MB. Der Haken liegt weniger im Preis als in der Zugangsvoraussetzung: Weights & Biases schreibt, Pro sei „for early-stage teams fewer than 50 employees", und Kunden über diesen Richtwerten müssten zu Enterprise wechseln. Bei Enterprise finden sich die ernsthaften Bereitstellungsoptionen, darunter Single-Tenant, HIPAA-Konformität, kundenverwaltete Schlüssel, SSO und Audit-Logs. Beachten Sie: Single-Tenant ist eher eine dedizierte Instanz als echter Eigenbetrieb, klären Sie die Details also mit W&B, bevor Sie annehmen, damit sei eine reine On-Premises-Anforderung erfüllt.',
+            pros: [
+              'Kostenlose Stufe mit unbegrenzten Weave-Plätzen und 1 GB Datenaufnahme im Monat',
+              'Evaluationen liegen neben bestehendem W&B-Experiment-Tracking und der Registry',
+              'Enterprise bietet Single-Tenant, HIPAA, kundenverwaltete Schlüssel und SSO',
+              'Mit 60 $ im Monat der niedrigste bezahlte Einstieg der drei',
+            ],
+            cons: [
+              'Pro ist auf Organisationen unter 50 Mitarbeitenden begrenzt, eine harte Obergrenze',
+              'Abrechnung nach Datenaufnahme zu 0,10 $/MB lässt sich schwerer vorhersagen als eine Score-Zahl',
+              'Ohne bestehenden W&B-Einsatz das schwächste eigenständige Argument',
+            ],
+            affiliateLinks: [
+              {
+                url: 'https://wandb.ai/site/pricing/',
+                productName: 'Weave',
+                productCategory: 'dev-tool',
+                priceRange: 'Kostenlos 1 GB/Monat; Pro ab 60 $/Monat unter 50 Mitarbeitenden; Enterprise individuell',
+                label: 'Weave — Preise von Weights & Biases ansehen',
+              },
+            ],
+          },
+        ],
+        note: 'Nutzen Sie Weave, wenn W&B ohnehin Ihr System of Record ist. Über 50 Mitarbeitenden kalkulieren Sie Enterprise, bevor Sie mit Braintrust vergleichen — die 60-$-Stufe steht Ihnen dann nicht offen.',
+      },
+      promptfoo: {
+        id: 'promptfoo',
+        title: 'Promptfoo: die kostenlose, CI-native Wahl',
+        content: '**Promptfoo ist das, was in jeder Größenordnung nichts kostet, weil Sie es selbst betreiben.** Es ist eine CLI und Bibliothek statt einer Plattform, Evaluationen liegen also als Konfiguration neben Ihrem Code und laufen dort, wo Ihre Tests ohnehin laufen.',
+        rankedItems: [
+          {
+            rank: 1,
+            name: 'Promptfoo — beste kostenlose und CI-native Option',
+            tagline: '24,6k Sterne, MIT-lizenziert, in jeder Größe kostenlos, inzwischen im Besitz von OpenAI',
+            verdict: 'Promptfoo hat 24.638 GitHub-Sterne und eine MIT-Lizenz und wurde am Prüftag dieser Seite aktualisiert, ist also unzweifelhaft aktiv. Da es auf Infrastruktur läuft, die Ihnen ohnehin gehört, gibt es keinen Zähler pro Score oder Gigabyte: Ihre einzigen Kosten sind die Modell-API-Ausgaben der Evaluationen, die Sie auf jeder Plattform hätten. Datensätze als YAML, CSV oder JS zu definieren ist mühsamer als Klicken in einer Oberfläche, macht Evaluationen aber im Pull Request vergleichbar — ein echter Vorteil, wenn die Konfiguration wie anderer Code geprüft werden soll. Wichtig zu wissen, was es wirklich ist: Das Projekt beschreibt sich als Test für Prompts, Agenten und RAG, mit Red Teaming, Penetrationstests und Schwachstellenanalyse für KI. Sicherheit ist hier keine Nebenfunktion, und OpenAI hat die Übernahme mit agentischer Sicherheitsprüfung begründet.',
+            pros: [
+              'In jeder Größenordnung kostenlos, ohne Score- oder Datenzähler',
+              'Evaluationen als versionierte Konfiguration, im Pull Request vergleich- und prüfbar',
+              'MIT-lizenziert, also kein Anbieter, von dem Sie bei Konditionsänderungen abhängen',
+              'Red Teaming und Schwachstellenanalyse sind erstklassig eingebaut, nicht angeflanscht',
+            ],
+            cons: [
+              'Standardmäßig keine gehostete Oberfläche, Nicht-Entwickler haben also nichts zum Anklicken',
+              'YAML- und CSV-Datensätze bedeuten mehr Einrichtungsaufwand als ein Aufbau im Browser',
+              'Inzwischen im Besitz von OpenAI, was trotz der Open-Source-Zusage eine Governance-Frage bleibt',
+            ],
+            affiliateLinks: [
+              {
+                url: 'https://github.com/promptfoo/promptfoo',
+                productName: 'Promptfoo',
+                productCategory: 'dev-tool',
+                priceRange: 'Kostenlos, MIT-Lizenz, jede Größenordnung',
+                label: 'Promptfoo — Open-Source-Repository',
+              },
+            ],
+          },
+        ],
+        note: 'Nutzen Sie Promptfoo, wenn dieselben Menschen die Ergebnisse lesen, die den Code schreiben. Ergänzen Sie Braintrust später, falls die Prüfung interdisziplinär wird.',
+      },
+      promptfooOpenai: {
+        id: 'promptfoo-openai',
+        title: 'Was die OpenAI-Übernahme für Promptfoo bedeutet',
+        content: '**OpenAI hat die Übernahme von Promptfoo am 9. März 2026 angekündigt und öffentlich zugesagt, es quelloffen zu halten.** Die eigene Formulierung lautet: „Promptfoo will remain open source under the current license, and we will continue to service and support current customers." Über die Übernahme berichteten damals TechCrunch, CNBC und Forbes; bestätigt ist sie auf den Seiten von OpenAI wie von Promptfoo.\n\nDer Befund stützt die Zusage bislang. Fast sechs Monate später liegt das Repository weiterhin in der Organisation `promptfoo`, ist weiterhin MIT-lizenziert und wurde am Prüftag dieser Seite aktualisiert. Genau das will man sehen.\n\nDennoch lohnt das Nachdenken — wegen der Governance, nicht der Lizenz. Ein Evaluationswerkzeug ist das, womit Sie Modelle beurteilen, und es gehört nun einem Unternehmen, das Modelle herstellt. Die MIT-Lizenz erlaubt einen Fork, falls die Projektrichtung Ihnen irgendwann nicht mehr dient — ein realer Schutz, den Braintrust und Weave nicht bieten. Hängt Ihre Evaluationsstrategie aber an Neutralität zwischen Modellanbietern, sollte das eine bewusste Entscheidung sein und keine Annahme.',
+        callouts: [
+          {
+            type: 'note',
+            text: 'OpenAI erklärte, Promptfoos Technik werde für automatisiertes Red Teaming und agentische Sicherheitsprüfung in OpenAI Frontier integriert. Das passt zum bestehenden Sicherheitsschwerpunkt von Promptfoo und legt nahe, dass die Sicherheitsseite mehr Investitionen erhalten dürfte als die allgemeine Evaluationsseite.',
+          },
+        ],
+        note: 'Bleiben Sie bei Promptfoo, wenn MIT-Lizenz und lokale Ausführung für Sie zählen. Prüfen Sie neu, wenn Anbieterneutralität im Evaluationswerkzeug eine ausdrückliche Anforderung ist.',
+      },
+      pricing: {
+        id: 'pricing',
+        title: 'Wie sich die Preise vergleichen',
+        content: '**Die Kosten skalieren mit Datenmenge und Ausgaben für das bewertende Modell, nicht mit Plätzen — weshalb unbegrenzte Nutzende in den kostenlosen Stufen nützlicher sind, als es zunächst klingt.** Die Tabelle kalkuliert eine mittlere Last von rund 50.000 Evaluations-Scores im Monat.',
+        tableFormat: true,
+        itemHeadings: true,
+        columns: ['Szenario', 'Braintrust', 'Weave', 'Promptfoo'],
+        rows: [
+          { Szenario: 'Grenze der kostenlosen Stufe', Braintrust: '10.000 Scores, 1 GB, 14 Tage', Weave: '1 GB/Monat, unbegrenzte Plätze', Promptfoo: 'Keine Grenze' },
+          { Szenario: 'Bezahlte Stufe', Braintrust: 'Pro 249 $/Monat', Weave: 'Ab 60 $/Monat', Promptfoo: 'Nicht nötig' },
+          { Szenario: 'Darin enthalten', Braintrust: '50.000 Scores, 5 GB, 249 $ Guthaben', Weave: '1,5 GB Datenaufnahme', Promptfoo: 'Nicht zutreffend' },
+          { Szenario: '50.000 Scores im Monat', Braintrust: 'Von Pro für 249 $ abgedeckt', Weave: 'Je nach GB, vermutlich über 1,5 GB', Promptfoo: 'Nur Modell-API-Kosten' },
+          { Szenario: 'Preis bei Mehrverbrauch', Braintrust: '1,50 $ je 1.000 Scores, 3 $/GB', Weave: '0,10 $ pro MB', Promptfoo: 'Keiner' },
+          { Szenario: 'Zugangsobergrenze', Braintrust: 'Keine genannt', Weave: 'Pro unter 50 Mitarbeitenden', Promptfoo: 'Keine' },
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Mehrere Vergleiche behaupten, die 249 $ Pro-Modellguthaben von Braintrust seien eine Aktion für 2026, die nach dem 1. September 2026 auf 100 $ im Monat falle. Dieses Enddatum steht nicht auf der Preisseite von Braintrust, die als einzige Aktion „6–12 months free for qualifying startups" nennt. Kalkulieren Sie nach der Anbieterseite statt nach einem Vergleichsartikel, auch nach diesem hier.',
+          },
+        ],
+        note: 'Braintrust rechnet nach Scores ab, Weave nach aufgenommenen Gigabyte. Das sind keine vergleichbaren Einheiten: Schätzen Sie beides aus Ihrer eigenen Last, bevor Sie 60 $ für günstiger als 249 $ halten.',
+      },
+      selfHosting: {
+        id: 'self-hosting',
+        title: 'Selbstbetrieb und Datenresidenz',
+        content: '**Promptfoo ist das einzige der drei, bei dem Selbstbetrieb der Normalfall ist und kein Enterprise-Upgrade.** Weil es CLI und Bibliothek ist, verlassen Ihre Testfälle und Modellausgaben Ihre Umgebung nie, sofern Sie sich nicht bewusst für eine gehostete Stufe entscheiden. Für ein Team unter Datenresidenzvorgaben erübrigt das die Frage, statt sie zu beantworten.\n\nBraintrust bietet On-Premises- oder gehostete Bereitstellung, aber nur mit Enterprise, also individueller Preis und Vertriebsgespräch. Es ist eine echte Bereitstellungsoption und keine Marketingzeile, nur eben nicht im Self-Service prüfbar.\n\nDie Enterprise-Stufe von Weave bietet eine Single-Tenant-Option mit kundenverwalteten Schlüsseln, HIPAA-Konformität und sicherer privater Anbindung. Lesen Sie das genau: Single-Tenant mit eigenen Schlüsseln ist eine dedizierte Instanz und nicht dasselbe wie ein Betrieb innerhalb Ihres Perimeters. Lautet die Anforderung strikt On-Premises, klären Sie die Details mit Weights & Biases, statt anzunehmen, die Single-Tenant-Option erfülle sie.',
+        note: 'Wählen Sie Promptfoo, wenn Evaluationsdaten Ihre Infrastruktur nicht verlassen dürfen und Sie das per Architektur statt per Vertrag klären wollen. Wählen Sie Braintrust Enterprise, wenn Sie On-Premises plus Prüfoberfläche brauchen.',
+      },
+      whoShouldUse: {
+        id: 'who-should-use',
+        title: 'Wer sollte was nutzen?',
+        content: '**Die Teamform entscheidet hier mehr als Funktionslisten.** Fünf Profile decken die meisten Leserinnen und Leser ab.',
+        items: [
+          '**Einzelentwicklerin an einem MVP** → Promptfoo. Kein Konto, kein Zähler, und nichts zu entfernen, falls das Projekt die Richtung wechselt.',
+          '**Produktteam, das eine LLM-Funktion mit PM- und QA-Prüfung ausliefert** → Braintrust. Unbegrenzte Nutzende in der kostenlosen Stufe sind genau das, was interdisziplinäre Prüfung praktikabel macht.',
+          '**Team, das bereits Weights & Biases nutzt** → Weave, sofern Sie für Pro unter 50 Mitarbeitenden liegen. Darüber kalkulieren Sie zuerst Enterprise.',
+          '**Sicherheits- oder Plattformteam, das auf Prompt Injection testet** → Promptfoo, dessen Red-Teaming-Schwerpunkt zur Aufgabe passt. Siehe auch [Werkzeuge für Prompt-Sicherheit und Injection-Tests](/de/prompt-engineering/prompt-security-tools-injection-testing).',
+          '**Team, das über mehrere Modellanbieter evaluiert** → Promptfoo oder Braintrust, und leiten Sie die Aufrufe über ein Gateway, damit der Anbietervergleich eine Konfigurationsänderung bleibt; siehe [das beste LLM-API-Gateway](/de/local-llms/best-llm-api-gateway-2026).',
+        ],
+      },
+      regionalContext: {
+        id: 'regional-context',
+        title: 'Evaluationswerkzeuge in der EU, in Japan und in China',
+        content: 'Evaluationsdatensätze entstehen meist aus Produktionsverkehr und gehören damit zu den sensibelsten Daten im LLM-Stack. Das macht die Wahl zwischen gehostet und lokal in drei wichtigen Märkten zur Compliance-Frage.',
+        subsections: [
+          {
+            title: 'Europäische Union',
+            content: 'Ein aus Produktionsprotokollen gezogener Evaluationsdatensatz enthält, was Ihre Nutzenden getippt haben, und ist nach der DSGVO eine Verarbeitung wie jede andere; ihn an eine in den USA gehostete Plattform zu senden, ist eine Übermittlung im Sinne der Artikel 44 bis 49, sofern die Vertragsbedingungen nichts anderes vorsehen. Für Braintrust oder Weights & Biases brauchen Sie einen Auftragsverarbeitungsvertrag nach Artikel 28. Der EU AI Act wirkt hier zugunsten von Evaluation überhaupt: Für erfasste Systeme gehört der Nachweis, vor dem Einsatz getestet zu haben, zur Pflicht und ist keine Kür; der Digital Omnibus hat die Hochrisiko-Pflichten aus Anhang III auf den 2. Dezember 2027 verschoben, nicht aufgehoben. Lokal betriebenes Promptfoo umgeht die Übermittlungsfrage, weil der Datensatz das Haus nie verlässt.',
+          },
+          {
+            title: 'Japan',
+            content: 'Das AI-Governance-Programm des METI drängt Unternehmen zu auditierbaren Nachweisen, dass ein System vor dem Release getestet wurde, und Evaluationsläufe sind genau dieser Nachweis, wenn sie dort liegen, wo Sie sie kontrollieren. Eine in die Versionsverwaltung eingecheckte Promptfoo-Konfiguration samt Ergebnissen ist ein Prüfartefakt, wie es ein gehostetes Dashboard nicht ist, weil Sie sie Jahre später aus dem Repository reproduzieren können. Nutzen Sie stattdessen eine gehostete Plattform, prüfen Sie die Aufbewahrung: Die kostenlose Stufe von Braintrust hält Daten 14 Tage, kürzer als die meisten Prüferwartungen.',
+          },
+          {
+            title: 'China',
+            content: 'Unter dem Datensicherheitsgesetz (数据安全法) und den CAC-Regeln zur grenzüberschreitenden Übermittlung besteht das Compliance-Problem darin, einen aus Festland-Nutzerverkehr gebildeten Evaluationsdatensatz auf eine ausländische Plattform zu laden, nicht in der Evaluation selbst. Bereitstellungen für Festlandteams verlangen in der Regel, dass die Auswertung auf inländischer Infrastruktur läuft. Promptfoo ist das einzige der drei, das dies standardmäßig tut, und damit unabhängig von Funktionsvorlieben die praktische Wahl — siehe [lokale LLMs in China betreiben](/de/local-llms/deepseek-local-china-data-privacy-2026).',
+          },
+        ],
+        note: 'Führen Sie Evaluationen lokal aus, wo der Datensatz selbst das schützenswerte Gut ist. Promptfoo macht das zum Standard, die anderen beiden zum Enterprise-Gespräch.',
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'Häufige Fehler bei der Wahl eines Evaluationstools',
+        numberedItems: [
+          {
+            title: '60 $ gegen 249 $ vergleichen, ohne die Zugangsvoraussetzung zu prüfen',
+            whyItMatters: 'Weave Pro ist auf Organisationen unter 50 Mitarbeitenden begrenzt. Darüber lautet der echte Vergleich Braintrust Pro gegen ein individuelles Weave-Enterprise-Angebot, und die 60-$-Zahl steht Ihnen gar nicht offen.',
+          },
+          {
+            title: 'Mit einem Braintrust-Aktionsende kalkulieren, das nicht veröffentlicht ist',
+            whyItMatters: 'Die Behauptung, das Pro-Guthaben falle nach dem 1. September 2026 auf 100 $ im Monat, steht nicht auf der Preisseite von Braintrust. Eine Migration um ein Enddatum zu planen, das der Anbieter nicht angekündigt hat, kostet unnötig Aufwand; lesen Sie stattdessen die Preisseite erneut.',
+          },
+          {
+            title: 'Scores und Gigabyte als vergleichbare Einheiten behandeln',
+            whyItMatters: 'Braintrust misst Scores, Weave misst Datenaufnahme. Eine Last, die bequem in 50.000 Scores passt, passt je nach Größe Ihrer Traces in 1,5 GB oder eben nicht. Schätzen Sie beides aus Ihren eigenen Daten, bevor Sie nach Preis sortieren.',
+          },
+          {
+            title: 'Eine Plattform für fünfzehn Testfälle einführen',
+            whyItMatters: 'Unterhalb von etwa zwanzig Testfällen leistet ein bewertetes Skript in der CI dasselbe — ohne Konto, ohne Zähler, ohne Aufbewahrungsgrenze. Plattformen lohnen sich, wenn die Datensatzverwaltung zum Engpass geworden ist, nicht die Bewertung.',
+          },
+          {
+            title: 'Single-Tenant mit On-Premises gleichsetzen',
+            whyItMatters: 'Die Enterprise-Single-Tenant-Option von Weave mit kundenverwalteten Schlüsseln ist eine dedizierte Instanz, keine Bereitstellung in Ihrem eigenen Perimeter. Lautet die Anforderung strikt On-Premises, klären Sie das mit W&B, statt Single-Tenant als gleichwertig zu lesen.',
+          },
+        ],
+      },
+      skipThisIf: {
+        id: 'skip-this-if',
+        title: 'Überspringen Sie das, wenn…',
+        content: '**Wenn Ihr Testsatz ein Dutzend Prompts umfasst und eine Entwicklerin ihn ausführt, überspringen Sie alle drei und schreiben Sie ein bewertetes Skript in der CI.** Sie erhalten dasselbe Regressionssignal ohne Konto, Zähler oder Aufbewahrungsfenster und können später ohne Verlust auf eine Plattform wechseln, denn der Datensatz ist das Gut und er wandert mit.\n\nDie Schwelle, auf die zu warten sich lohnt, ist der Punkt, an dem die Datensatzverwaltung zur eigentlichen Arbeit wird: wenn Sie fehlschlagende Fälle regelmäßig aus der Produktion in den Testsatz ziehen wollen, wenn jemand ohne Programmierkenntnisse Ausgaben benoten soll, oder wenn Sie die Ergebnisse dieses Monats mit denen des letzten Quartals vergleichen müssen. Das sind Verwaltungsprobleme, und genau die kaufen Sie ein. Das Bewerten selbst war immer der leichte Teil.',
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Ein praktischer Auslöser: Führen Sie eine Plattform ein, sobald Sie sich beim Bau einer Tabelle ertappen, die festhält, welche Prompt-Version was erreicht hat. Diese Tabelle ist das Produkt, das Sie gleich kaufen — und Kaufen ist günstiger als Pflegen.',
+          },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Häufig gestellte Fragen',
+        faqs: [
+          {
+            q: 'Welches LLM-Evaluationstool ist 2026 das beste?',
+            a: 'Braintrust für Teams, in denen Nicht-Entwickler die Ergebnisse prüfen, dank unbegrenzter Nutzender schon in der kostenlosen Stufe. Weave, wenn Sie bereits Weights & Biases nutzen und unter 50 Mitarbeitenden liegen. Promptfoo, wenn Sie Evaluationen als versionierte Konfiguration auf eigener Infrastruktur kostenlos ausführen wollen. Alle drei decken LLM-as-Judge, eigene Scorer und datensatzbasierte Regressionstests ab.',
+          },
+          {
+            q: 'Hat OpenAI Promptfoo übernommen?',
+            a: 'Ja. OpenAI kündigte die Übernahme am 9. März 2026 an und erklärte, Promptfoo bleibe unter der bisherigen Lizenz quelloffen und bestehende Kunden würden weiter betreut. Ende August 2026 liegt das Repository weiterhin in der Organisation promptfoo, ist weiterhin MIT-lizenziert und wird aktiv gepflegt.',
+          },
+          {
+            q: 'Was kostet Braintrust?',
+            a: 'Die kostenlose Starter-Stufe umfasst 10.000 Scores im Monat, 1 GB verarbeitete Daten, 14 Tage Aufbewahrung, 10 $ Modellguthaben und unbegrenzt viele Nutzende. Pro kostet 249 $ im Monat und enthält 249 $ Modellguthaben, 50.000 Scores, 5 GB und 30 Tage Aufbewahrung, mit Mehrverbrauch zu 1,50 $ je 1.000 Scores. Enterprise wird individuell kalkuliert und ergänzt On-Premises- oder gehostete Bereitstellung.',
+          },
+          {
+            q: 'Ist Weave kostenlos, und wo liegen die Grenzen?',
+            a: 'Weave hat eine kostenlose Stufe mit unbegrenzt vielen Weave-Plätzen und 1 GB Datenaufnahme im Monat. Pro beginnt bei 60 $ im Monat mit 1,5 GB, ist von Weights & Biases aber auf Teams mit weniger als 50 Mitarbeitenden begrenzt; größere Organisationen müssen zu Enterprise wechseln. Zusätzliche Datenaufnahme kostet 0,10 $ pro MB.',
+          },
+          {
+            q: 'Ist Promptfoo wirklich in jeder Größenordnung kostenlos?',
+            a: 'Ja, in dem Sinne, dass das Werkzeug selbst MIT-lizenziert ist und auf Ihren eigenen Rechnern läuft, es also keine Gebühr pro Score oder Gigabyte gibt. Sie zahlen weiterhin die Modell-API-Aufrufe der Evaluationen, doch diese Kosten fallen auf jeder Plattform an und sind nicht Promptfoo-spezifisch. Darüber hinaus existiert eine optionale gehostete Enterprise-Stufe.',
+          },
+          {
+            q: 'Welches kann ich selbst betreiben?',
+            a: 'Promptfoo standardmäßig, da es CLI und Bibliothek ist und dort läuft, wo Sie es starten. Braintrust bietet On-Premises- oder gehostete Bereitstellung in seinem Enterprise-Tarif. Weave bietet eine Single-Tenant-Enterprise-Option mit kundenverwalteten Schlüsseln, was eine dedizierte Instanz und kein echter Eigenbetrieb ist; klären Sie die Details, wenn Sie eine strikte On-Premises-Anforderung haben.',
+          },
+          {
+            q: 'Haben diese Anbieter Affiliate-Programme?',
+            a: 'Wir haben bei Braintrust, Weights & Biases und Promptfoo kein öffentliches Affiliate- oder Empfehlungsprogramm für Publisher gefunden. Weights & Biases betreibt ein Partnerprogramm, dessen öffentliche Seite jedoch Wiederverkaufs- und Integrationspartnerschaften für Beratungshäuser beschreibt und keine Vergütung pro Empfehlung. Beachten Sie außerdem, dass usebraintrust.com ein separater Talentmarktplatz ist und nichts mit braintrust.dev zu tun hat. PromptQuorum verdient an dieser Seite nichts.',
+          },
+          {
+            q: 'Was ist der Unterschied zwischen Evaluation und Monitoring?',
+            a: 'Evaluation lässt vor dem Release einen festen Datensatz laufen und sagt Ihnen, ob eine Änderung die Qualität verbessert oder verschlechtert hat. Monitoring beobachtet den Live-Verkehr nach dem Release und sagt Ihnen, was das System gerade tut. Diese Seite behandelt das Erste. Beides ergänzt sich, und viele Teams tun beides, doch Werkzeuge und Fragestellung unterscheiden sich.',
+          },
+          {
+            q: 'Ist DSGVO-konforme Evaluation mit einer US-Plattform möglich?',
+            a: 'Möglich ja, aber aufwendiger als lokale Auswertung. Evaluationsdatensätze stammen meist aus Produktionsprotokollen und enthalten damit echte Nutzereingaben, weshalb Sie einen Auftragsverarbeitungsvertrag nach Artikel 28 und eine tragfähige Übermittlungsgrundlage nach den Artikeln 44 bis 49 brauchen. Erschwerend kommt hinzu, dass ein Evaluationsdatensatz dauerhaft aufbewahrt wird, um Vergleiche über die Zeit zu erlauben, und damit länger existiert als ein einzelner Prompt. Für sensible Datensätze ist lokal ausgeführtes Promptfoo der deutlich einfachere Weg zur Rechtskonformität.',
+          },
+          {
+            q: 'Welches Werkzeug passt zu einem Mittelständler ohne eigenes ML-Team?',
+            a: 'In den meisten Fällen Promptfoo auf der bestehenden CI, weil es kostenlos ist, keine Vertragsprüfung auslöst und die Testdaten das Haus nicht verlassen — was die datenschutzrechtliche Bewertung erheblich verkürzt. Braintrusts kostenlose Stufe lohnt sich zusätzlich, wenn Fachabteilungen die Ergebnisse ansehen sollen, da unbegrenzt viele Nutzende enthalten sind. Weave Pro ist mit 60 $ zwar günstig, für einen Mittelständler mit mehr als 50 Mitarbeitenden aber schlicht nicht verfügbar; kalkulieren Sie dann Enterprise oder lassen Sie es.',
+          },
+        ],
+      },
+      verdict: {
+        id: 'verdict',
+        title: 'Fazit',
+        items: [
+          '**Nutzen Sie Braintrust, wenn** Menschen ohne Programmierkenntnisse die Evaluationsergebnisse prüfen müssen — nächster Schritt: mit der kostenlosen Stufe beginnen, die unbegrenzt viele Nutzende erlaubt, und prüfen, ob Ihre PMs sie tatsächlich öffnen, bevor Sie Pro bezahlen.',
+          '**Nutzen Sie Weave, wenn** Weights & Biases ohnehin Ihr System of Record ist — nächster Schritt: die 50-Mitarbeitenden-Grenze prüfen, bevor Sie mit der 60-$-Stufe planen, und andernfalls Enterprise kalkulieren.',
+          '**Nutzen Sie Promptfoo, wenn** Sie Evaluationen als prüfbare Konfiguration ohne Anbieterzähler wollen — nächster Schritt: den ersten Datensatz als YAML schreiben und in der CI laufen lassen, bevor Sie Gehostetes bewerten.',
+          '**Nutzen Sie gezielt Promptfoo, wenn** Sie auf Prompt Injection und Agentensicherheit testen und nicht allein auf Ausgabequalität — nächster Schritt: mit den Red-Teaming-Funktionen beginnen, dorthin lenkt OpenAI die Investitionen.',
+          '**Überspringen Sie alle drei, wenn** Sie ein Dutzend Testfälle und eine Entwicklerin haben — nächster Schritt: ein bewertetes Skript in der CI schreiben und erneut prüfen, wenn die Datensatzverwaltung zum Engpass wird.',
+        ],
+        note: 'Wir haben bei keinem der drei Anbieter ein Affiliate-Programm gefunden, und PromptQuorum ist nirgends angemeldet. Jeder Link auf dieser Seite führt zur Website oder zum Repository des Anbieters.',
+      },
+      sources: {
+        id: 'sources',
+        title: 'Quellen',
+        links: [
+          { url: 'https://www.braintrust.dev/pricing', title: 'Braintrust-Preise', description: 'Stufen Starter, Pro und Enterprise mit Score-, Daten- und Aufbewahrungsgrenzen sowie der Startup-Aktion.' },
+          { url: 'https://wandb.ai/site/pricing/', title: 'Preise von Weights & Biases', description: 'Weave-Stufen frei, Pro und Enterprise, die 50-Mitarbeitenden-Begrenzung und der Satz von 0,10 $/MB.' },
+          { url: 'https://github.com/promptfoo/promptfoo', title: 'Promptfoo-Repository', description: 'Sternzahl, MIT-Lizenz und die eigene Beschreibung von Red Teaming und Schwachstellenanalyse.' },
+          { url: 'https://openai.com/index/openai-to-acquire-promptfoo/', title: 'OpenAI: Übernahme von Promptfoo', description: 'Die eigene Ankündigung von OpenAI samt Zusage, Promptfoo unter der bisherigen Lizenz quelloffen zu halten.' },
+          { url: 'https://www.promptfoo.dev/blog/promptfoo-joining-openai/', title: 'Promptfoo: Zusammenschluss mit OpenAI', description: 'Die Darstellung der Übernahme durch Promptfoo selbst.' },
+          { url: 'https://techcrunch.com/2026/03/09/openai-acquires-promptfoo-to-secure-its-ai-agents/', title: 'OpenAI übernimmt Promptfoo (TechCrunch)', description: 'Unabhängige Bestätigung der Ankündigung vom 9. März 2026.' },
+          { url: 'https://www.cnbc.com/2026/03/09/open-ai-cybersecurity-promptfoo-ai-agents.html', title: 'OpenAI kauft Promptfoo (CNBC)', description: 'Zweiter unabhängiger Bericht zur Übernahme und ihrer Sicherheitsausrichtung.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Weiterführende Artikel',
+        items: [
+          '[Beste Werkzeuge zum Testen und Bewerten von Prompts](/de/prompt-engineering/best-prompt-testing-evaluation-tools) — dasselbe Problem auf Prompt-Ebene',
+          '[Prompt-Qualität bewerten](/de/prompt-engineering/how-to-evaluate-prompt-quality) — die Rubrik aufbauen, die Ihre Scorer anwenden',
+          '[Metriken zur Prompt-Bewertung](/de/prompt-engineering/prompt-evaluation-metrics) — was Sie mit einem Datensatz tatsächlich messen sollten',
+          '[Werkzeuge für Prompt-Sicherheit und Injection-Tests](/de/prompt-engineering/prompt-security-tools-injection-testing) — die Red-Teaming-Seite, bei der Promptfoo führt',
+          '[Bestes LLM-API-Gateway](/de/local-llms/best-llm-api-gateway-2026) — Evaluationsaufrufe über Anbieter hinweg leiten, damit der Vergleich eine Konfigurationsänderung bleibt',
+        ],
+      },
+    },
+    schema: {
+      '@type': 'TechArticle',
+      headline: 'Bestes LLM-Evaluationstool 2026: Braintrust, Weave oder Promptfoo',
+      description: 'Vergleicht Braintrust, Weave und Promptfoo zur LLM-Evaluation, mit geprüften Preisen, Zugangsgrenzen, Selbstbetriebsoptionen und der Übernahme von Promptfoo durch OpenAI. Geprüft im August 2026.',
+      datePublished: '2026-08-28',
+      dateModified: '2026-08-28',
+      url: 'https://www.promptquorum.com/de/local-llms/best-llm-evaluation-tools-2026',
+      inLanguage: 'de',
+      proficiencyLevel: 'Advanced',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      about: [
+        { '@type': 'Thing', name: 'LLM-Evaluation' },
+        { '@type': 'Thing', name: 'Regressionstests für KI' },
+      ],
+      mentions: [
+        { '@type': 'SoftwareApplication', name: 'Braintrust' },
+        { '@type': 'SoftwareApplication', name: 'Weave' },
+        { '@type': 'SoftwareApplication', name: 'Promptfoo' },
+      ],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'de',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'Welches LLM-Evaluationstool ist 2026 das beste?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Braintrust für Teams, in denen Nicht-Entwickler Ergebnisse prüfen, Weave bei bestehendem Weights-&-Biases-Einsatz unter 50 Mitarbeitenden, und Promptfoo für Evaluationen als versionierte Konfiguration auf eigener Infrastruktur.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Hat OpenAI Promptfoo übernommen?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Ja. OpenAI kündigte die Übernahme am 9. März 2026 an und erklärte, Promptfoo bleibe unter der bisherigen Lizenz quelloffen. Ende August 2026 ist das Repository weiterhin MIT-lizenziert und wird aktiv gepflegt.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Was kostet Braintrust?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Die kostenlose Starter-Stufe umfasst 10.000 Scores im Monat, 1 GB Daten, 14 Tage Aufbewahrung und unbegrenzt viele Nutzende. Pro kostet 249 $ im Monat inklusive 249 $ Modellguthaben, 50.000 Scores und 5 GB. Enterprise wird individuell kalkuliert.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Ist Weave kostenlos und wo liegen die Grenzen?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Weave hat eine kostenlose Stufe mit unbegrenzten Plätzen und 1 GB Datenaufnahme im Monat. Pro beginnt bei 60 $ im Monat mit 1,5 GB, ist aber auf Teams unter 50 Mitarbeitenden begrenzt. Zusätzliche Aufnahme kostet 0,10 $ pro MB.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Ist DSGVO-konforme Evaluation mit einer US-Plattform möglich?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Ja, aber aufwendiger als lokale Auswertung. Sie brauchen einen Auftragsverarbeitungsvertrag nach Artikel 28 und eine tragfähige Übermittlungsgrundlage. Da Evaluationsdatensätze aus Produktionsprotokollen stammen und dauerhaft aufbewahrt werden, ist lokal ausgeführtes Promptfoo bei sensiblen Daten der einfachere Weg.',
+          },
+        },
+      ],
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'Beste LLM-Evaluationstools (August 2026)',
+      inLanguage: 'de',
+      numberOfItems: 3,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Braintrust', description: 'Am besten für interdisziplinäre Produktionsteams — kostenlos bis 10.000 Scores im Monat mit unbegrenzten Nutzenden, Pro 249 $ inklusive 249 $ Modellguthaben' },
+        { '@type': 'ListItem', position: 2, name: 'Weave', description: 'Am besten im Weights-&-Biases-Ökosystem — kostenlos 1 GB im Monat mit unbegrenzten Plätzen, Pro ab 60 $ für Teams unter 50 Mitarbeitenden' },
+        { '@type': 'ListItem', position: 3, name: 'Promptfoo', description: 'Beste kostenlose und CI-native Option — 24,6k Sterne, MIT-lizenziert, läuft in jeder Größenordnung auf eigener Infrastruktur' },
+      ],
+    },
+  },
+
+  es: {
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2027-02-28',
+    theme: 'Tools & Interfaces',
+    title: 'Mejor herramienta de evaluación de LLM 2026: Braintrust, Weave o Promptfoo',
+    seoTitle: 'Mejor herramienta de evaluación de LLM 2026',
+    metaDescription: 'Braintrust es gratis hasta 10.000 puntuaciones al mes y cuesta 249 $ en Pro, Weave parte de 60 $, Promptfoo es MIT y gratuito a cualquier escala. Precios verificados en agosto de 2026.',
+    educationalLevel: 'Advanced',
+    audience: 'Equipos de ingeniería que prueban aplicaciones de LLM antes de publicarlas',
+    affiliateDisclosure: true,
+    publishDate: '2026-08-28',
+    dateModified: '2026-08-28',
+    readTime: '13 min de lectura',
+    primaryTerm: 'herramienta de evaluación de LLM',
+    targetKeywords: [
+      'mejor herramienta de evaluación de LLM 2026',
+      'Braintrust vs Weave vs Promptfoo',
+      'comparativa plataformas de evaluación LLM',
+      'Promptfoo adquisición OpenAI',
+      'puntuación LLM como juez',
+    ],
+    leadAnswerBlock: '**Braintrust es la plataforma de evaluación más completa para equipos que llevan funciones de LLM a producción: gratis hasta 10.000 puntuaciones al mes y 249 $ en Pro. Weave es la elección natural si ya usa Weights & Biases, desde 60 $ al mes, aunque limitada a organizaciones de menos de 50 empleados. Promptfoo es la mejor opción gratuita y nativa de CI: con licencia MIT, gratuita a cualquier escala porque se ejecuta en sus propias máquinas, y desde marzo de 2026 propiedad de OpenAI, que se comprometió públicamente a mantenerla de código abierto bajo su licencia actual.**',
+    quickAnswerTop: {
+      question: '¿Qué herramienta de evaluación de LLM es mejor en 2026?',
+      answer: '**Braintrust para equipos multidisciplinares donde personas no técnicas revisan resultados, Weave si ya está en Weights & Biases, y Promptfoo si quiere evaluaciones como configuración versionada sin proveedor alguno.** La diferencia no está en las funciones de puntuación: las tres hacen LLM como juez, evaluadores propios y pruebas de regresión sobre conjuntos de datos. Está en dónde se ejecuta la evaluación y quién lee los resultados. Una interfaz alojada compensa cuando una responsable de producto debe revisar los fallos; se desperdicia cuando una sola ingeniera lanza evaluaciones en CI.',
+      bullets: [
+        '**Mejor en conjunto para equipos en producción:** Braintrust — gratis hasta 10.000 puntuaciones/mes, Pro 249 $/mes con 249 $ de crédito de modelo incluido',
+        '**Mejor si usa Weights & Biases:** Weave — gratis 1 GB/mes con plazas ilimitadas, Pro desde 60 $/mes con menos de 50 empleados',
+        '**Mejor opción gratuita y nativa de CI:** Promptfoo — 24,6k estrellas, MIT, se ejecuta en su propia infraestructura, sin límite de escala',
+        '**Mejor para seguridad y red teaming:** Promptfoo — su enfoque declarado es el análisis de vulnerabilidades y el red teaming, no solo la puntuación',
+        '**Ninguna de las tres** tiene programa público de afiliados para creadores, así que nada en esta página es una colocación pagada',
+        '**Prescinda de una plataforma** si tiene menos de unos 20 casos de prueba: basta con un script puntuado en CI',
+      ],
+      updatedDate: '2026-08-28',
+    },
+    toc: [
+      { label: 'Puntos clave', anchor: 'tldr' },
+      { label: 'La mejor opción para su caso', anchor: 'best-choice' },
+      { label: 'Qué hace realmente una herramienta de evaluación', anchor: 'what-is-llm-eval' },
+      { label: 'Tabla comparativa completa', anchor: 'comparison' },
+      { label: 'Braintrust: la opción de producción', anchor: 'braintrust' },
+      { label: 'Weave: la opción de Weights & Biases', anchor: 'weave' },
+      { label: 'Promptfoo: la opción gratuita y nativa de CI', anchor: 'promptfoo' },
+      { label: 'Qué significa la adquisición por OpenAI', anchor: 'promptfoo-openai' },
+      { label: 'Cómo se comparan los precios', anchor: 'pricing' },
+      { label: 'Autoalojamiento y residencia de datos', anchor: 'self-hosting' },
+      { label: 'Quién debería usar qué', anchor: 'who-should-use' },
+      { label: 'Contexto regional: UE, Japón, China', anchor: 'regional-context' },
+      { label: 'Errores comunes', anchor: 'common-mistakes' },
+      { label: 'Sáltese esto si…', anchor: 'skip-this-if' },
+      { label: 'Preguntas frecuentes', anchor: 'faq' },
+      { label: 'Veredicto final', anchor: 'verdict' },
+      { label: 'Fuentes', anchor: 'sources' },
+      { label: 'Lecturas relacionadas', anchor: 'related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        isTldr: true,
+        items: [
+          '**Braintrust** — nivel Starter gratuito con 10.000 puntuaciones al mes, 1 GB de datos procesados, 14 días de retención, 10 $ de crédito de modelo y usuarios ilimitados. Pro cuesta 249 $ al mes e incluye 249 $ de crédito de modelo, 5 GB de datos, 50.000 puntuaciones y 30 días de retención. Enterprise añade retención personalizada y despliegue on-premise o alojado.',
+          '**Weave** — parte de Weights & Biases. El nivel gratuito da plazas ilimitadas de Weave y 1 GB al mes de ingesta. Pro parte de 60 $ al mes con 1,5 GB, pero la elegibilidad se limita explícitamente a «early-stage teams fewer than 50 employees»; las organizaciones mayores deben pasar a Enterprise. La ingesta adicional cuesta 0,10 $ por MB.',
+          '**Promptfoo** — 24,6k estrellas en GitHub, licencia MIT y gratuito a cualquier escala porque funciona como CLI y biblioteca sobre infraestructura que ya posee. Su único coste es el gasto de API del modelo que consumen las propias evaluaciones, algo que ocurre en cualquier plataforma con LLM como juez.',
+          '**OpenAI anunció la adquisición de Promptfoo el 9 de marzo de 2026** y declaró públicamente: «Promptfoo will remain open source under the current license, and we will continue to service and support current customers». El repositorio sigue siendo MIT y recibió cambios el día en que se comprobó esta página.',
+          '**Una corrección que conviene hacer:** varios artículos describen el crédito de modelo de Braintrust Pro como una tarifa promocional que baja a 100 $ al mes tras el 1 de septiembre de 2026. Ese vencimiento no aparece en la página de precios de Braintrust. La única promoción que figura es «6–12 months free for qualifying startups». Presupueste desde la página del proveedor.',
+          '**Promptfoo es tanto una herramienta de seguridad como de evaluación.** Su propia descripción empieza por red teaming, pruebas de penetración y análisis de vulnerabilidades, y OpenAI enmarcó la adquisición en torno a las pruebas de seguridad de agentes. Es una diferencia real de énfasis frente a Braintrust y Weave.',
+          'Ninguna de las tres tiene programa público de afiliados o referidos para creadores de contenido. Weights & Biases sí tiene un programa de partners, pero es un esquema de reventa e integración tecnológica dirigido a consultoras, no un pago por referido. PromptQuorum no gana nada con esta página.',
+        ],
+      },
+      bestChoice: {
+        id: 'best-choice',
+        title: '🏆 La mejor opción para su caso',
+        content: '**Elija por dónde se ejecuta la evaluación y quién lee los resultados, no por la lista de funciones de puntuación: las tres cubren las mismas primitivas.** Lea hacia abajo y deténgase en la primera línea que le describa.',
+        items: [
+          '**Personas que no programan necesitan revisar los fallos** → Braintrust. La interfaz alojada, las colas de revisión humana y el versionado de conjuntos de datos existen justo para eso, y el nivel gratuito cubre la mayor parte del volumen inicial.',
+          '**Ya usa Weights & Biases** → Weave. Las evaluaciones aparecen junto a su seguimiento de experimentos y el nivel gratuito da plazas ilimitadas. Compruebe el límite de 50 empleados antes de contar con Pro.',
+          '**Quiere evaluaciones como configuración versionada sin proveedor** → Promptfoo. YAML o JS junto a su código, comparable en un pull request y gratuito sea cual sea la escala.',
+          '**Está probando inyección de prompts y seguridad de agentes, no solo calidad** → Promptfoo. El red teaming y el análisis de vulnerabilidades son su propósito declarado; véase [herramientas de seguridad de prompts y pruebas de inyección](/es/prompt-engineering/prompt-security-tools-injection-testing).',
+          '**Tiene un puñado de casos de prueba y una sola ingeniera** → ninguna todavía. Un script puntuado en CI basta hasta que el conjunto de datos sea lo bastante grande como para necesitar gestión.',
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.braintrust.dev/pricing',
+            productName: 'Braintrust',
+            productCategory: 'dev-tool',
+            priceRange: 'Gratis 10.000 puntuaciones/mes; Pro 249 $/mes con 249 $ de crédito',
+            label: 'Braintrust — ver precios',
+          },
+          {
+            url: 'https://github.com/promptfoo/promptfoo',
+            productName: 'Promptfoo',
+            productCategory: 'dev-tool',
+            priceRange: 'Gratuito, licencia MIT, cualquier escala',
+            label: 'Promptfoo — repositorio de código abierto',
+          },
+        ],
+      },
+      whatIsLlmEval: {
+        id: 'what-is-llm-eval',
+        title: 'Qué hace realmente una herramienta de evaluación de LLM',
+        content: '**Una herramienta de evaluación de LLM pasa un conjunto de casos de prueba por su prompt o agente y puntúa cada salida, para que sepa si un cambio mejora o empeora las cosas antes de que llegue a los usuarios.** Un conjunto de datos suele ser una serie de pares de entrada y salida esperada, extraídos de registros de producción, escritos a mano como casos límite o generados. Los evaluadores van desde comprobaciones deterministas como coincidencia de cadenas y validación de esquema JSON, pasando por la calificación con LLM como juez, donde un segundo modelo puntúa contra una rúbrica, hasta funciones propias que usted escribe.\n\nEso es distinto de observar qué hace el sistema una vez en marcha. La evaluación responde «¿es seguro publicar este cambio?»; la monitorización de producción responde «¿qué está haciendo ahora?». Esta página trata la primera pregunta. Para la vista a nivel de prompt del mismo problema, véase [cómo evaluar la calidad de un prompt](/es/prompt-engineering/how-to-evaluate-prompt-quality).',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Una herramienta de evaluación de LLM pasa un conjunto fijo de casos de prueba por su prompt o agente, puntúa cada salida con comprobaciones deterministas, calificación con LLM como juez o funciones propias, e informa de si un cambio mejoró o degradó la calidad antes de publicarlo.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'Es una batería de pruebas para algo que nunca da dos veces la misma respuesta. En lugar de comprobar una salida exacta, la puntúa y vigila si la media se mueve en la dirección equivocada al cambiar un prompt.',
+          },
+        ],
+        note: 'Adopte una plataforma de evaluación cuando su conjunto de pruebas sea tan grande que gestionarlo en una hoja de cálculo o un script se haya convertido en el cuello de botella. Antes de eso, un script puntuado en CI hace el mismo trabajo.',
+      },
+      comparison: {
+        id: 'comparison',
+        title: 'Braintrust, Weave y Promptfoo comparados',
+        content: '**Las tres hacen LLM como juez, evaluadores propios y pruebas de regresión sobre conjuntos de datos, así que la comparación va de modelo de alojamiento, estructura de costes y elegibilidad.** Los precios se leyeron de las páginas de cada proveedor el 28 de agosto de 2026, y las cifras de repositorio de la API de GitHub ese mismo día.',
+        tableFormat: true,
+        itemHeadings: true,
+        columns: ['Criterio', 'Braintrust', 'Weave', 'Promptfoo'],
+        rows: [
+          { Criterio: 'Modelo', Braintrust: 'Plataforma alojada con interfaz', Weave: 'Alojada, parte de W&B', Promptfoo: 'CLI y biblioteca que usted ejecuta' },
+          { Criterio: 'Licencia', Braintrust: 'Comercial', Weave: 'SDK Apache-2.0, servicio alojado', Promptfoo: 'MIT' },
+          { Criterio: 'Nivel gratuito', Braintrust: '10.000 puntuaciones/mes, 1 GB, 14 días', Weave: '1 GB/mes de ingesta, plazas ilimitadas', Promptfoo: 'Gratis a cualquier escala' },
+          { Criterio: 'Entrada de pago', Braintrust: 'Pro 249 $/mes, 249 $ de crédito', Weave: 'Desde 60 $/mes, 1,5 GB', Promptfoo: 'Nivel Enterprise, personalizado' },
+          { Criterio: 'Límite de elegibilidad', Braintrust: 'Ninguno declarado', Weave: 'Pro solo con menos de 50 empleados', Promptfoo: 'Ninguno' },
+          { Criterio: 'Exceso de uso', Braintrust: '1,50 $ por 1.000 puntuaciones en Pro', Weave: '0,10 $ por MB de ingesta', Promptfoo: 'Solo su gasto de API del modelo' },
+          { Criterio: 'Autoalojamiento', Braintrust: 'Enterprise, on-premise o alojado', Weave: 'Enterprise, inquilino único', Promptfoo: 'Por defecto — se ejecuta en sus máquinas' },
+          { Criterio: 'Programa de afiliados', Braintrust: 'No encontrado', Weave: 'No encontrado', Promptfoo: 'No encontrado' },
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'El nivel Pro de Weave no es simplemente un plan más barato: Weights & Biases indica que es «for early-stage teams fewer than 50 employees» y que los clientes que superen esas pautas deben pasar a Enterprise. Si supera esa plantilla, la comparación real es Braintrust Pro a 249 $ frente a un presupuesto Enterprise personalizado, no frente a 60 $.',
+          },
+        ],
+      },
+      braintrust: {
+        id: 'braintrust',
+        title: 'Braintrust: la opción de producción',
+        content: '**Braintrust es la elección cuando personas que no escriben código necesitan mirar los resultados de la evaluación.** Su valor se concentra en la interfaz alojada, el versionado de conjuntos de datos y el flujo de revisión humana, que es justo la parte que de otro modo tendría que construir.',
+        rankedItems: [
+          {
+            rank: 1,
+            name: 'Braintrust — mejor para equipos de producción multidisciplinares',
+            tagline: 'Gratis hasta 10.000 puntuaciones al mes, Pro 249 $ con 249 $ de crédito incluido',
+            verdict: 'El nivel Starter gratuito es inusualmente generoso para una plataforma alojada: 10.000 puntuaciones al mes, 1 GB de datos procesados, 14 días de retención, 10 $ de crédito de modelo y usuarios, proyectos, conjuntos de datos y experimentos ilimitados. Las plazas ilimitadas en un nivel gratuito importan aquí, porque la razón misma de elegir Braintrust es dejar que responsables de producto y expertos de dominio revisen los fallos sin comprarles licencias. Pro, a 249 $ al mes, eleva eso a 50.000 puntuaciones, 5 GB y 30 días de retención, e incluye 249 $ de crédito de modelo, lo que compensa en buena medida el gasto del modelo juez en una carga mediana. El exceso se cobra en lugar de bloquear: 1,50 $ por 1.000 puntuaciones y 3 $ por GB en Pro. Enterprise añade retención y exportación personalizadas, RBAC y despliegue on-premise o alojado.',
+            pros: [
+              'Usuarios ilimitados incluso en el nivel gratuito, que es justo el sentido de elegirlo',
+              'El nivel gratuito de 10.000 puntuaciones al mes cubre de verdad los proyectos iniciales',
+              'Pro incluye 249 $ de crédito de modelo, compensando en gran parte el gasto del modelo juez',
+              'Despliegue on-premise o alojado disponible para cargas sensibles a la privacidad',
+            ],
+            cons: [
+              '14 días de retención en el nivel gratuito es poco si quiere comparar con el mes pasado',
+              'El autoalojamiento exige Enterprise y una conversación comercial, sin precio publicado',
+              'Plataforma comercial, así que a diferencia de Promptfoo no hay alternativa si cambian los precios',
+            ],
+            affiliateLinks: [
+              {
+                url: 'https://www.braintrust.dev/pricing',
+                productName: 'Braintrust',
+                productCategory: 'dev-tool',
+                priceRange: 'Gratis 10.000 puntuaciones/mes; Pro 249 $/mes; Enterprise personalizado',
+                label: 'Braintrust — ver precios',
+              },
+            ],
+          },
+        ],
+        note: 'Use Braintrust cuando la revisión sea una actividad de equipo. Si solo los ingenieros abren los resultados, está pagando por una interfaz que no usará.',
+      },
+      weave: {
+        id: 'weave',
+        title: 'Weave: la opción de Weights & Biases',
+        content: '**Weave es la respuesta obvia si su equipo ya sigue experimentos en Weights & Biases, y una venta más difícil si no lo hace.** La integración es el argumento: las evaluaciones aparecen junto a las ejecuciones que ya está mirando.',
+        rankedItems: [
+          {
+            rank: 1,
+            name: 'Weave — mejor dentro del ecosistema Weights & Biases',
+            tagline: 'Gratis 1 GB al mes con plazas ilimitadas, Pro desde 60 $ con menos de 50 empleados',
+            verdict: 'Weave cubre evaluaciones de aplicaciones, trazado y evaluadores, y el nivel gratuito da plazas ilimitadas de Weave con 1 GB al mes de ingesta, un punto de partida razonable para un equipo pequeño. Pro parte de 60 $ al mes con facturación mensual y 1,5 GB, y la ingesta adicional cuesta 0,10 $ por MB. El matiz está en la elegibilidad más que en el precio: Weights & Biases indica que Pro es «for early-stage teams fewer than 50 employees» y que quienes superen esas pautas deben pasar a Enterprise. En Enterprise están las opciones de despliegue serias, incluida la opción de inquilino único, cumplimiento HIPAA, claves de cifrado gestionadas por el cliente, SSO y registros de auditoría. Tenga en cuenta que inquilino único se acerca más a una instancia dedicada que a un verdadero on-premise, así que confirme los detalles con W&B antes de dar por hecho que satisface un requisito estricto de on-premise.',
+            pros: [
+              'Nivel gratuito con plazas de Weave ilimitadas y 1 GB al mes de ingesta',
+              'Las evaluaciones conviven con el seguimiento de experimentos y el registro de W&B',
+              'Enterprise ofrece inquilino único, HIPAA, claves gestionadas por el cliente y SSO',
+              'Con 60 $ al mes es la entrada de pago más baja de las tres',
+            ],
+            cons: [
+              'Pro está restringido a organizaciones de menos de 50 empleados, un techo rígido',
+              'La facturación por ingesta a 0,10 $/MB es más difícil de prever que un recuento de puntuaciones',
+              'El argumento independiente más débil si no usa ya Weights & Biases',
+            ],
+            affiliateLinks: [
+              {
+                url: 'https://wandb.ai/site/pricing/',
+                productName: 'Weave',
+                productCategory: 'dev-tool',
+                priceRange: 'Gratis 1 GB/mes; Pro desde 60 $/mes con menos de 50 empleados; Enterprise personalizado',
+                label: 'Weave — ver precios de Weights & Biases',
+              },
+            ],
+          },
+        ],
+        note: 'Use Weave si W&B ya es su sistema de registro. Si supera los 50 empleados, presupueste Enterprise antes de compararlo con Braintrust, porque el nivel de 60 $ no estará disponible para usted.',
+      },
+      promptfoo: {
+        id: 'promptfoo',
+        title: 'Promptfoo: la opción gratuita y nativa de CI',
+        content: '**Promptfoo es la que no cuesta nada a ninguna escala, porque la ejecuta usted.** Es una CLI y una biblioteca más que una plataforma, así que las evaluaciones viven como configuración junto a su código y se ejecutan donde ya se ejecutan sus pruebas.',
+        rankedItems: [
+          {
+            rank: 1,
+            name: 'Promptfoo — mejor opción gratuita y nativa de CI',
+            tagline: '24,6k estrellas, licencia MIT, gratis a cualquier escala, ahora propiedad de OpenAI',
+            verdict: 'Promptfoo tiene 24.638 estrellas en GitHub y licencia MIT, y recibió cambios el día en que se comprobó esta página, así que su actividad es inequívoca. Como se ejecuta sobre infraestructura que ya posee, no hay contador por puntuación ni por gigabyte: su único coste son las llamadas de API del modelo que consumen las evaluaciones, que pagaría en cualquier plataforma. Definir conjuntos de datos como YAML, CSV o JS supone más fricción que hacer clic en una interfaz, pero deja las evaluaciones comparables en un pull request, una ventaja real cuando la configuración debe revisarse como cualquier otro código. Conviene saber qué es en realidad: el proyecto se describe como pruebas de prompts, agentes y RAG, con red teaming, pruebas de penetración y análisis de vulnerabilidades para IA. La seguridad no es aquí una función secundaria, y OpenAI enmarcó su adquisición en torno a las pruebas de seguridad de agentes.',
+            pros: [
+              'Gratuito a cualquier escala, sin contador de puntuaciones ni de ingesta',
+              'Evaluaciones como configuración versionada, comparable y revisable en un pull request',
+              'Licencia MIT, así que no hay proveedor del que depender si cambian las condiciones',
+              'Red teaming y análisis de vulnerabilidades son de primera clase, no un añadido',
+            ],
+            cons: [
+              'Sin interfaz alojada por defecto, así que quienes no programan no tienen dónde hacer clic',
+              'Los conjuntos de datos en YAML y CSV suponen más fricción que construirlos en un navegador',
+              'Ahora propiedad de OpenAI, lo que es una consideración de gobernanza pese al compromiso de código abierto',
+            ],
+            affiliateLinks: [
+              {
+                url: 'https://github.com/promptfoo/promptfoo',
+                productName: 'Promptfoo',
+                productCategory: 'dev-tool',
+                priceRange: 'Gratuito, licencia MIT, cualquier escala',
+                label: 'Promptfoo — repositorio de código abierto',
+              },
+            ],
+          },
+        ],
+        note: 'Use Promptfoo cuando quienes leen los resultados sean las mismas personas que escriben el código. Añada Braintrust más adelante si la revisión pasa a ser multidisciplinar.',
+      },
+      promptfooOpenai: {
+        id: 'promptfoo-openai',
+        title: 'Qué significa para Promptfoo la adquisición por OpenAI',
+        content: '**OpenAI anunció que adquiría Promptfoo el 9 de marzo de 2026, y se comprometió públicamente a mantenerlo de código abierto.** La declaración de OpenAI dice: «Promptfoo will remain open source under the current license, and we will continue to service and support current customers». La adquisición fue recogida entonces por TechCrunch, CNBC y Forbes, y confirmada en las webs de OpenAI y de Promptfoo.\n\nLa evidencia sobre el terreno respalda el compromiso por ahora. Casi seis meses después, el repositorio sigue bajo la organización `promptfoo`, sigue con licencia MIT y recibió cambios el día en que se comprobó esta página. Es lo que uno querría ver.\n\nEl motivo para pensarlo de todos modos es de gobernanza, no de licencia. Una herramienta de evaluación es aquello con lo que juzga modelos, y ahora pertenece a una empresa que fabrica modelos. La licencia MIT significa que puede bifurcar el proyecto si su rumbo deja de servirle, una protección real que Braintrust y Weave no ofrecen. Pero si su estrategia de evaluación depende de la neutralidad entre proveedores de modelos, eso merece una decisión deliberada y no un supuesto.',
+        callouts: [
+          {
+            type: 'note',
+            text: 'OpenAI señaló que la tecnología de Promptfoo se integrará en OpenAI Frontier para red teaming automatizado y pruebas de seguridad de agentes. Es coherente con el énfasis de seguridad que ya tenía Promptfoo, y sugiere que ese lado recibirá más inversión que la evaluación de propósito general.',
+          },
+        ],
+        note: 'Siga con Promptfoo si lo que valora es la licencia MIT y la ejecución local. Reconsidérelo si la neutralidad de proveedor en su herramienta de evaluación es un requisito declarado.',
+      },
+      pricing: {
+        id: 'pricing',
+        title: 'Cómo se comparan los precios',
+        content: '**El coste escala con el volumen de datos y el gasto del modelo juez, no con las plazas, y por eso los usuarios ilimitados de los niveles gratuitos son más útiles de lo que parece.** La tabla calcula una carga mediana de unas 50.000 puntuaciones de evaluación al mes.',
+        tableFormat: true,
+        itemHeadings: true,
+        columns: ['Escenario', 'Braintrust', 'Weave', 'Promptfoo'],
+        rows: [
+          { Escenario: 'Límite del nivel gratuito', Braintrust: '10.000 puntuaciones, 1 GB, 14 días', Weave: '1 GB/mes de ingesta, plazas ilimitadas', Promptfoo: 'Sin límite' },
+          { Escenario: 'Nivel de pago', Braintrust: 'Pro 249 $/mes', Weave: 'Desde 60 $/mes', Promptfoo: 'No hace falta' },
+          { Escenario: 'Incluido en ese nivel', Braintrust: '50.000 puntuaciones, 5 GB, 249 $ crédito', Weave: '1,5 GB de ingesta', Promptfoo: 'No aplicable' },
+          { Escenario: '50.000 puntuaciones al mes', Braintrust: 'Cubierto por Pro a 249 $', Weave: 'Depende de los GB, probablemente más de 1,5', Promptfoo: 'Solo gasto de API del modelo' },
+          { Escenario: 'Tarifa por exceso', Braintrust: '1,50 $ por 1.000 puntuaciones, 3 $/GB', Weave: '0,10 $ por MB', Promptfoo: 'Ninguna' },
+          { Escenario: 'Techo de elegibilidad', Braintrust: 'Ninguno declarado', Weave: 'Pro con menos de 50 empleados', Promptfoo: 'Ninguno' },
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Varias comparativas afirman que los 249 $ de crédito de Braintrust Pro son una promoción de 2026 que baja a 100 $ al mes tras el 1 de septiembre de 2026. Ese vencimiento no aparece en la página de precios de Braintrust, que solo recoge «6–12 months free for qualifying startups» como promoción. Calcule desde la página del proveedor y no desde un artículo comparativo, este incluido.',
+          },
+        ],
+        note: 'Braintrust factura por puntuación y Weave por gigabyte ingerido. No son unidades comparables, así que estime ambas con su propia carga antes de considerar que 60 $ es más barato que 249 $.',
+      },
+      selfHosting: {
+        id: 'self-hosting',
+        title: 'Autoalojamiento y residencia de datos',
+        content: '**Promptfoo es la única de las tres donde el autoalojamiento es el modo por defecto y no una mejora empresarial.** Al ser una CLI y una biblioteca, sus casos de prueba y las salidas del modelo nunca salen de su entorno salvo que elija deliberadamente un nivel alojado. Para un equipo bajo normas de residencia de datos, eso elimina la pregunta en lugar de responderla.\n\nBraintrust ofrece despliegue on-premise o alojado, pero solo en Enterprise, lo que implica precio personalizado y conversación comercial. Es una opción de despliegue real y no una frase de marketing, pero no puede evaluarla en autoservicio.\n\nEl nivel Enterprise de Weave ofrece una opción de inquilino único con claves de cifrado gestionadas por el cliente, cumplimiento HIPAA y conectividad privada segura. Léalo con cuidado: inquilino único con claves propias es una instancia dedicada, que no es lo mismo que ejecutarse dentro de su propio perímetro. Si su requisito es estrictamente on-premise, confirme los detalles con Weights & Biases en lugar de suponer que la opción de inquilino único lo satisface.',
+        note: 'Elija Promptfoo cuando los datos de evaluación no puedan salir de su infraestructura y quiera resolverlo por arquitectura y no por contrato. Elija Braintrust Enterprise cuando necesite on-premise más una interfaz de revisión.',
+      },
+      whoShouldUse: {
+        id: 'who-should-use',
+        title: 'Quién debería usar qué',
+        content: '**La forma del equipo decide esto más que las listas de funciones.** Cinco perfiles cubren a la mayoría de lectores.',
+        items: [
+          '**Desarrolladora en solitario con un MVP** → Promptfoo. Sin cuenta, sin contador y sin nada que retirar si el proyecto cambia de rumbo.',
+          '**Equipo de producto que publica una función de LLM con revisión de PM y QA** → Braintrust. Los usuarios ilimitados del nivel gratuito son lo concreto que hace viable la revisión multidisciplinar.',
+          '**Equipo que ya usa Weights & Biases** → Weave, siempre que esté por debajo de 50 empleados para Pro. Por encima, presupueste Enterprise antes de comparar.',
+          '**Equipo de seguridad o de plataforma que prueba inyección de prompts** → Promptfoo, cuyo enfoque de red teaming encaja con la tarea. Véase también [herramientas de seguridad de prompts y pruebas de inyección](/es/prompt-engineering/prompt-security-tools-injection-testing).',
+          '**Equipo que evalúa entre varios proveedores de modelos** → Promptfoo o Braintrust, y enrute las llamadas por una pasarela para que comparar proveedores sea un cambio de configuración; véase [el mejor gateway de API para LLM](/es/local-llms/best-llm-api-gateway-2026).',
+        ],
+      },
+      regionalContext: {
+        id: 'regional-context',
+        title: 'Herramientas de evaluación en la UE, Japón y China',
+        content: 'Los conjuntos de datos de evaluación suelen construirse a partir del tráfico de producción, lo que los convierte en algunos de los datos más sensibles de una pila de LLM. Eso transforma la elección entre alojado y local en una cuestión de cumplimiento en tres mercados importantes.',
+        subsections: [
+          {
+            title: 'Unión Europea',
+            content: 'Un conjunto de evaluación extraído de registros de producción contiene lo que sus usuarios escribieron, lo que bajo el RGPD es tratamiento como cualquier otro, y enviarlo a una plataforma alojada en Estados Unidos es una transferencia en el sentido de los artículos 44 a 49 salvo que los términos del proveedor digan otra cosa. Necesita un contrato de encargado del artículo 28 con Braintrust o Weights & Biases si los usa. El Reglamento de IA también cuenta aquí de un modo que favorece a la evaluación en general: para los sistemas dentro de su ámbito, poder demostrar que probó antes del despliegue forma parte de la obligación y no es un detalle, y el Digital Omnibus aplazó los deberes de alto riesgo del anexo III al 2 de diciembre de 2027 sin eliminarlos. Promptfoo ejecutado en local esquiva la cuestión de la transferencia porque el conjunto de datos nunca sale.',
+          },
+          {
+            title: 'Japón',
+            content: 'El programa de gobernanza de IA del METI empuja a las empresas hacia pruebas auditables de que un sistema se verificó antes de publicarlo, y las ejecuciones de evaluación son exactamente esa prueba cuando se almacenan donde usted las controla. Una configuración de Promptfoo versionada junto a sus resultados es un artefacto de auditoría como no lo es un panel alojado, porque puede reproducirla desde el repositorio años después. Si en cambio usa una plataforma alojada, revise la retención: el nivel gratuito de Braintrust conserva los datos 14 días, menos de lo que suelen esperar las auditorías.',
+          },
+          {
+            title: 'China',
+            content: 'Bajo la Ley de Seguridad de Datos (数据安全法) y las normas de la CAC sobre transferencias transfronterizas, el problema de cumplimiento es subir a una plataforma extranjera un conjunto de evaluación construido con tráfico de usuarios de China continental, no la evaluación en sí. Los despliegues que dan servicio a equipos del continente suelen exigir que la evaluación se ejecute en infraestructura nacional. Promptfoo es la única de las tres que hace esto por defecto, lo que la convierte en la opción práctica al margen de preferencias de funciones: véase [ejecutar LLM locales en China](/es/local-llms/deepseek-local-china-data-privacy-2026).',
+          },
+        ],
+        note: 'Ejecute las evaluaciones en local en cualquier mercado donde el propio conjunto de datos sea el activo sensible. Promptfoo lo hace por defecto; las otras dos lo convierten en una conversación Enterprise.',
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'Errores comunes al elegir una herramienta de evaluación',
+        numberedItems: [
+          {
+            title: 'Comparar 60 $ con 249 $ sin comprobar la elegibilidad',
+            whyItMatters: 'Weave Pro está restringido a organizaciones de menos de 50 empleados. Por encima de esa plantilla la comparación real es Braintrust Pro frente a un presupuesto Enterprise personalizado de Weave, y la cifra de 60 $ no está disponible para usted.',
+          },
+          {
+            title: 'Presupuestar en torno a un vencimiento promocional de Braintrust que no está publicado',
+            whyItMatters: 'La afirmación de que el crédito de Pro baja a 100 $ al mes tras el 1 de septiembre de 2026 no aparece en la página de precios de Braintrust. Planificar una migración en torno a un vencimiento que el proveedor no ha anunciado desperdicia esfuerzo; vuelva a leer la página de precios.',
+          },
+          {
+            title: 'Tratar puntuaciones y gigabytes como unidades comparables',
+            whyItMatters: 'Braintrust mide puntuaciones y Weave mide ingesta. Una carga que cabe holgadamente en 50.000 puntuaciones puede caber o no en 1,5 GB según lo grandes que sean sus trazas. Estime ambas con sus propios datos antes de ordenar por precio.',
+          },
+          {
+            title: 'Adoptar una plataforma para un conjunto de quince casos',
+            whyItMatters: 'Por debajo de unos veinte casos de prueba, un script puntuado en CI hace el mismo trabajo sin cuenta, sin contador y sin límite de retención. Las plataformas se ganan su sitio cuando el cuello de botella es la gestión del conjunto de datos, no la puntuación.',
+          },
+          {
+            title: 'Suponer que inquilino único significa on-premise',
+            whyItMatters: 'La opción Enterprise de inquilino único de Weave con claves gestionadas por el cliente es una instancia dedicada, no un despliegue dentro de su propio perímetro. Si su requisito es estrictamente on-premise, confírmelo con W&B en lugar de leer inquilino único como equivalente.',
+          },
+        ],
+      },
+      skipThisIf: {
+        id: 'skip-this-if',
+        title: 'Sáltese esto si…',
+        content: '**Si su conjunto de pruebas son una docena de prompts y los ejecuta una sola ingeniera, sáltese las tres y escriba un script puntuado en CI.** Obtiene la misma señal de regresión sin cuenta, contador ni ventana de retención, y podrá pasar a una plataforma más adelante sin haber perdido nada, porque el activo es el conjunto de datos y se mueve con usted.\n\nEl umbral que merece la pena esperar llega cuando gestionar el conjunto de datos se convierte en el trabajo: cuando quiere llevar casos fallidos de producción al conjunto de pruebas de forma rutinaria, cuando alguien que no programa debe calificar salidas, o cuando necesita comparar los resultados de este mes con los del trimestre pasado. Esos son problemas de gestión de datos, y es lo que en realidad está comprando. La puntuación en sí siempre fue la parte fácil.',
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Un disparador práctico: adopte una plataforma la primera vez que se descubra montando una hoja de cálculo para seguir qué versión del prompt puntuó qué. Esa hoja es el producto que está a punto de comprar, y comprarlo sale más barato que mantenerlo.',
+          },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Preguntas frecuentes',
+        faqs: [
+          {
+            q: '¿Cuál es la mejor herramienta de evaluación de LLM en 2026?',
+            a: 'Braintrust para equipos donde personas no técnicas revisan resultados, gracias a los usuarios ilimitados incluso en el nivel gratuito. Weave si ya usa Weights & Biases y está por debajo de 50 empleados. Promptfoo si quiere evaluaciones como configuración versionada que se ejecuten gratis en su propia infraestructura. Las tres cubren LLM como juez, evaluadores propios y pruebas de regresión.',
+          },
+          {
+            q: '¿OpenAI adquirió Promptfoo?',
+            a: 'Sí. OpenAI anunció la adquisición el 9 de marzo de 2026 y declaró que Promptfoo seguirá siendo de código abierto bajo su licencia actual y que los clientes existentes seguirán recibiendo servicio y soporte. A finales de agosto de 2026 el repositorio sigue bajo la organización promptfoo, sigue con licencia MIT y se mantiene activamente.',
+          },
+          {
+            q: '¿Cuánto cuesta Braintrust?',
+            a: 'El nivel Starter gratuito incluye 10.000 puntuaciones al mes, 1 GB de datos procesados, 14 días de retención, 10 $ de crédito de modelo y usuarios ilimitados. Pro cuesta 249 $ al mes e incluye 249 $ de crédito, 50.000 puntuaciones, 5 GB y 30 días de retención, con exceso a 1,50 $ por 1.000 puntuaciones. Enterprise tiene precio personalizado y añade despliegue on-premise o alojado.',
+          },
+          {
+            q: '¿Weave es gratis y cuáles son los límites?',
+            a: 'Weave tiene un nivel gratuito con plazas ilimitadas y 1 GB al mes de ingesta de datos. Pro parte de 60 $ al mes con 1,5 GB, pero Weights & Biases lo restringe a equipos en fase inicial con menos de 50 empleados; las organizaciones mayores deben pasar a Enterprise. La ingesta adicional cuesta 0,10 $ por MB.',
+          },
+          {
+            q: '¿Promptfoo es realmente gratis a cualquier escala?',
+            a: 'Sí, en el sentido de que la herramienta tiene licencia MIT y se ejecuta en sus propias máquinas, así que no hay cargo por puntuación ni por gigabyte. Sigue pagando las llamadas de API del modelo que hacen las evaluaciones, pero ese coste existe en cualquier plataforma y no es específico de Promptfoo. Además existe un nivel Enterprise alojado opcional.',
+          },
+          {
+            q: '¿Cuál puedo autoalojar?',
+            a: 'Promptfoo por defecto, ya que es una CLI y biblioteca que se ejecuta donde usted la ejecute. Braintrust ofrece despliegue on-premise o alojado en su plan Enterprise. Weave ofrece una opción Enterprise de inquilino único con claves gestionadas por el cliente, que es una instancia dedicada más que un verdadero on-premise, así que confirme los detalles si tiene un requisito estricto.',
+          },
+          {
+            q: '¿Alguna tiene programa de afiliados?',
+            a: 'No encontramos programa público de afiliados o referidos para creadores en Braintrust, Weights & Biases ni Promptfoo. Weights & Biases tiene un programa de partners, pero su página pública describe asociaciones de reventa e integración tecnológica dirigidas a consultoras, no un pago por referido. Tenga en cuenta además que usebraintrust.com es un marketplace de talento independiente, sin relación con braintrust.dev. PromptQuorum no gana nada con esta página.',
+          },
+          {
+            q: '¿Qué diferencia hay entre evaluación y monitorización?',
+            a: 'La evaluación ejecuta un conjunto fijo de datos antes de publicar y le dice si un cambio mejoró o degradó la calidad. La monitorización observa el tráfico real tras la publicación y le dice qué está haciendo el sistema ahora. Esta página cubre lo primero. Son complementarias y muchos equipos hacen ambas, pero las herramientas y las preguntas son distintas.',
+          },
+        ],
+      },
+      verdict: {
+        id: 'verdict',
+        title: 'Veredicto final',
+        items: [
+          '**Use Braintrust si** personas que no escriben código deben revisar los resultados — siguiente paso: empiece por el nivel gratuito, que permite usuarios ilimitados, y compruebe si sus PM realmente lo abren antes de pagar Pro.',
+          '**Use Weave si** Weights & Biases ya es su sistema de registro — siguiente paso: confirme que está por debajo del techo de 50 empleados antes de contar con el nivel de 60 $, y presupueste Enterprise si no lo está.',
+          '**Use Promptfoo si** quiere evaluaciones como configuración revisable sin contador de proveedor — siguiente paso: escriba su primer conjunto de datos en YAML y ejecútelo en CI antes de evaluar nada alojado.',
+          '**Use Promptfoo en concreto si** está probando inyección de prompts y seguridad de agentes y no solo calidad de salida — siguiente paso: empiece por sus funciones de red teaming, que es donde OpenAI dirige la inversión.',
+          '**Sáltese las tres si** tiene una docena de casos de prueba y una sola ingeniera — siguiente paso: escriba un script puntuado en CI y vuelva a plantearlo cuando gestionar el conjunto de datos sea el cuello de botella.',
+        ],
+        note: 'No encontramos programa de afiliados en ninguno de los tres proveedores, y PromptQuorum no está inscrito en nada. Todos los enlaces de esta página llevan al sitio o repositorio del propio proveedor.',
+      },
+      sources: {
+        id: 'sources',
+        title: 'Fuentes',
+        links: [
+          { url: 'https://www.braintrust.dev/pricing', title: 'Precios de Braintrust', description: 'Niveles Starter, Pro y Enterprise con límites de puntuaciones, datos y retención, y la promoción para startups.' },
+          { url: 'https://wandb.ai/site/pricing/', title: 'Precios de Weights & Biases', description: 'Niveles gratuito, Pro y Enterprise de Weave, la restricción de menos de 50 empleados y la tarifa de 0,10 $/MB.' },
+          { url: 'https://github.com/promptfoo/promptfoo', title: 'Repositorio de Promptfoo', description: 'Número de estrellas, licencia MIT y la propia descripción del proyecto sobre red teaming y análisis de vulnerabilidades.' },
+          { url: 'https://openai.com/index/openai-to-acquire-promptfoo/', title: 'OpenAI: adquisición de Promptfoo', description: 'El anuncio de la propia OpenAI, incluido el compromiso de mantener Promptfoo de código abierto bajo su licencia actual.' },
+          { url: 'https://www.promptfoo.dev/blog/promptfoo-joining-openai/', title: 'Promptfoo: se une a OpenAI', description: 'La versión de la adquisición contada por el propio Promptfoo.' },
+          { url: 'https://techcrunch.com/2026/03/09/openai-acquires-promptfoo-to-secure-its-ai-agents/', title: 'OpenAI adquiere Promptfoo (TechCrunch)', description: 'Confirmación independiente del anuncio del 9 de marzo de 2026.' },
+          { url: 'https://www.cnbc.com/2026/03/09/open-ai-cybersecurity-promptfoo-ai-agents.html', title: 'OpenAI comprará Promptfoo (CNBC)', description: 'Segundo informe independiente de la adquisición y su enfoque de seguridad.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lecturas relacionadas',
+        items: [
+          '[Mejores herramientas de prueba y evaluación de prompts](/es/prompt-engineering/best-prompt-testing-evaluation-tools) — el mismo problema a nivel de prompt',
+          '[Cómo evaluar la calidad de un prompt](/es/prompt-engineering/how-to-evaluate-prompt-quality) — construir la rúbrica que aplicarán sus evaluadores',
+          '[Métricas de evaluación de prompts](/es/prompt-engineering/prompt-evaluation-metrics) — qué medir realmente una vez que tiene un conjunto de datos',
+          '[Herramientas de seguridad de prompts y pruebas de inyección](/es/prompt-engineering/prompt-security-tools-injection-testing) — el lado de red teaming donde Promptfoo lidera',
+          '[Mejor gateway de API para LLM](/es/local-llms/best-llm-api-gateway-2026) — enrutar las llamadas de evaluación entre proveedores para que comparar sea un cambio de configuración',
+        ],
+      },
+    },
+    schema: {
+      '@type': 'TechArticle',
+      headline: 'Mejor herramienta de evaluación de LLM 2026: Braintrust, Weave o Promptfoo',
+      description: 'Compara Braintrust, Weave y Promptfoo para evaluación de LLM, con precios verificados, límites de elegibilidad, opciones de autoalojamiento y la adquisición de Promptfoo por OpenAI. Verificado en agosto de 2026.',
+      datePublished: '2026-08-28',
+      dateModified: '2026-08-28',
+      url: 'https://www.promptquorum.com/es/local-llms/best-llm-evaluation-tools-2026',
+      inLanguage: 'es',
+      proficiencyLevel: 'Advanced',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      about: [
+        { '@type': 'Thing', name: 'Evaluación de LLM' },
+        { '@type': 'Thing', name: 'Pruebas de regresión para IA' },
+      ],
+      mentions: [
+        { '@type': 'SoftwareApplication', name: 'Braintrust' },
+        { '@type': 'SoftwareApplication', name: 'Weave' },
+        { '@type': 'SoftwareApplication', name: 'Promptfoo' },
+      ],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'es',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: '¿Cuál es la mejor herramienta de evaluación de LLM en 2026?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Braintrust para equipos donde personas no técnicas revisan resultados, Weave si ya usa Weights & Biases y está por debajo de 50 empleados, y Promptfoo si quiere evaluaciones como configuración versionada ejecutándose gratis en su propia infraestructura.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '¿OpenAI adquirió Promptfoo?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Sí. OpenAI anunció la adquisición el 9 de marzo de 2026 y declaró que Promptfoo seguirá siendo de código abierto bajo su licencia actual. A finales de agosto de 2026 el repositorio sigue con licencia MIT y se mantiene activamente.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '¿Cuánto cuesta Braintrust?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'El nivel Starter gratuito incluye 10.000 puntuaciones al mes, 1 GB de datos, 14 días de retención y usuarios ilimitados. Pro cuesta 249 $ al mes con 249 $ de crédito de modelo, 50.000 puntuaciones y 5 GB. Enterprise tiene precio personalizado con despliegue on-premise o alojado.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '¿Weave es gratis y cuáles son los límites?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Weave tiene un nivel gratuito con plazas ilimitadas y 1 GB al mes de ingesta. Pro parte de 60 $ al mes con 1,5 GB pero está restringido a equipos de menos de 50 empleados. La ingesta adicional cuesta 0,10 $ por MB.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: '¿Las herramientas de evaluación de LLM tienen programas de afiliados?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'No encontramos programa público de afiliados o referidos en Braintrust, Weights & Biases ni Promptfoo. El programa de partners de Weights & Biases es un esquema de reventa e integración para consultoras, no un pago por referido.',
+          },
+        },
+      ],
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'Mejores herramientas de evaluación de LLM (agosto de 2026)',
+      inLanguage: 'es',
+      numberOfItems: 3,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Braintrust', description: 'Mejor para equipos de producción multidisciplinares — gratis hasta 10.000 puntuaciones al mes con usuarios ilimitados, Pro 249 $ con 249 $ de crédito de modelo' },
+        { '@type': 'ListItem', position: 2, name: 'Weave', description: 'Mejor dentro del ecosistema Weights & Biases — gratis 1 GB al mes con plazas ilimitadas, Pro desde 60 $ para equipos de menos de 50 empleados' },
+        { '@type': 'ListItem', position: 3, name: 'Promptfoo', description: 'Mejor opción gratuita y nativa de CI — 24,6k estrellas, licencia MIT, se ejecuta en su propia infraestructura a cualquier escala' },
+      ],
+    },
+  },
+
+  fr: {
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2027-02-28',
+    theme: 'Tools & Interfaces',
+    title: 'Meilleur outil d\'evaluation de LLM 2026 : Braintrust, Weave ou Promptfoo',
+    seoTitle: 'Meilleur outil d\'evaluation de LLM 2026',
+    metaDescription: 'Braintrust est gratuit jusqu\'a 10 000 scores par mois et coute 249 $ en Pro, Weave demarre a 60 $, Promptfoo est sous MIT et gratuit a toute echelle. Tarifs verifies en aout 2026.',
+    educationalLevel: 'Advanced',
+    audience: 'Equipes d\'ingenierie testant des applications LLM avant mise en production',
+    affiliateDisclosure: true,
+    publishDate: '2026-08-28',
+    dateModified: '2026-08-28',
+    readTime: '13 min de lecture',
+    primaryTerm: 'outil d\'evaluation de LLM',
+    targetKeywords: [
+      'meilleur outil d\'evaluation LLM 2026',
+      'Braintrust vs Weave vs Promptfoo',
+      'comparatif plateformes d\'evaluation LLM',
+      'Promptfoo acquisition OpenAI',
+      'notation LLM comme juge',
+    ],
+    leadAnswerBlock: '**Braintrust est la plateforme d\'evaluation la plus complete pour les equipes qui mettent des fonctionnalites LLM en production : gratuite jusqu\'a 10 000 scores par mois et 249 $ en Pro. Weave est le choix naturel si vous utilisez deja Weights & Biases, a partir de 60 $ par mois, mais reservee aux organisations de moins de 50 salaries. Promptfoo est la meilleure option gratuite et native de la CI : sous licence MIT, gratuite quelle que soit l\'echelle puisqu\'elle tourne sur vos propres machines, et depuis mars 2026 propriete d\'OpenAI, qui s\'est engage publiquement a la garder open source sous sa licence actuelle.**',
+    quickAnswerTop: {
+      question: 'Quel outil d\'evaluation de LLM est le meilleur en 2026 ?',
+      answer: '**Braintrust pour les equipes pluridisciplinaires ou des non-developpeurs relisent les resultats, Weave si vous etes deja sur Weights & Biases, et Promptfoo si vous voulez des evaluations sous forme de configuration versionnee sans aucun fournisseur.** La difference ne tient pas aux fonctions de notation : les trois font du LLM comme juge, des scoreurs personnalises et des tests de regression sur jeux de donnees. Elle tient a l\'endroit ou l\'evaluation s\'execute et a qui en lit les resultats. Une interface hebergee vaut son prix quand une responsable produit doit examiner les echecs ; elle est gaspillee quand une seule ingenieure lance les evaluations en CI.',
+      bullets: [
+        '**Meilleur ensemble pour la production :** Braintrust — gratuit jusqu\'a 10 000 scores/mois, Pro 249 $/mois avec 249 $ de credits modele inclus',
+        '**Meilleur avec Weights & Biases :** Weave — gratuit 1 Go/mois avec sieges illimites, Pro des 60 $/mois sous 50 salaries',
+        '**Meilleure option gratuite et native CI :** Promptfoo — 24,6k etoiles, MIT, tourne sur votre propre infrastructure, sans limite d\'echelle',
+        '**Meilleur pour la securite et le red teaming :** Promptfoo — son objet declare est l\'analyse de vulnerabilites et le red teaming, pas seulement la notation',
+        '**Aucun des trois** n\'a de programme d\'affiliation public pour les createurs : rien sur cette page n\'est un placement paye',
+        '**Renoncez a une plateforme** si vous avez moins d\'une vingtaine de cas de test : un script note en CI suffit',
+      ],
+      updatedDate: '2026-08-28',
+    },
+    toc: [
+      { label: 'Points cles', anchor: 'tldr' },
+      { label: 'Le meilleur choix selon votre situation', anchor: 'best-choice' },
+      { label: 'Ce que fait vraiment un outil d\'evaluation', anchor: 'what-is-llm-eval' },
+      { label: 'Tableau comparatif complet', anchor: 'comparison' },
+      { label: 'Braintrust : le choix production', anchor: 'braintrust' },
+      { label: 'Weave : le choix Weights & Biases', anchor: 'weave' },
+      { label: 'Promptfoo : le choix gratuit et natif CI', anchor: 'promptfoo' },
+      { label: 'Ce que l\'acquisition par OpenAI change', anchor: 'promptfoo-openai' },
+      { label: 'Comparaison des tarifs', anchor: 'pricing' },
+      { label: 'Auto-hebergement et residence des donnees', anchor: 'self-hosting' },
+      { label: 'Qui devrait utiliser quoi', anchor: 'who-should-use' },
+      { label: 'Contexte regional : UE, Japon, Chine', anchor: 'regional-context' },
+      { label: 'Erreurs courantes', anchor: 'common-mistakes' },
+      { label: 'Passez votre chemin si…', anchor: 'skip-this-if' },
+      { label: 'Questions frequentes', anchor: 'faq' },
+      { label: 'Verdict final', anchor: 'verdict' },
+      { label: 'Sources', anchor: 'sources' },
+      { label: 'Lectures associees', anchor: 'related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        isTldr: true,
+        items: [
+          '**Braintrust** — offre Starter gratuite avec 10 000 scores par mois, 1 Go de donnees traitees, 14 jours de retention, 10 $ de credits modele et un nombre illimite d\'utilisateurs. Pro coute 249 $ par mois et comprend 249 $ de credits modele, 5 Go de donnees, 50 000 scores et 30 jours de retention. Enterprise ajoute une retention personnalisee et un deploiement sur site ou heberge.',
+          '**Weave** — partie de Weights & Biases. L\'offre gratuite donne des sieges Weave illimites et 1 Go d\'ingestion par mois. Pro demarre a 60 $ par mois avec 1,5 Go, mais l\'eligibilite se limite explicitement aux « early-stage teams fewer than 50 employees » ; les organisations plus grandes doivent passer a Enterprise. L\'ingestion supplementaire coute 0,10 $ par Mo.',
+          '**Promptfoo** — 24,6k etoiles GitHub, licence MIT, et gratuit a toute echelle puisqu\'il fonctionne comme CLI et bibliotheque sur une infrastructure que vous possedez deja. Votre seul cout est la depense d\'API modele consommee par les evaluations elles-memes, que tout flux avec LLM comme juge engendre sur n\'importe quelle plateforme.',
+          '**OpenAI a annonce l\'acquisition de Promptfoo le 9 mars 2026** et a declare publiquement : « Promptfoo will remain open source under the current license, and we will continue to service and support current customers. » Le depot est toujours sous MIT et a recu des modifications le jour de verification de cette page.',
+          '**Une correction qui s\'impose :** plusieurs articles decrivent les credits modele de Braintrust Pro comme un tarif promotionnel tombant a 100 $ par mois apres le 1er septembre 2026. Aucune echeance de ce type ne figure sur la page tarifaire de Braintrust. La seule promotion mentionnee est « 6–12 months free for qualifying startups ». Budgetez depuis la page de l\'editeur.',
+          '**Promptfoo est autant un outil de securite qu\'un outil d\'evaluation.** Sa propre description commence par le red teaming, les tests d\'intrusion et l\'analyse de vulnerabilites, et OpenAI a presente l\'acquisition sous l\'angle des tests de securite des agents. C\'est une vraie difference d\'accent avec Braintrust et Weave.',
+          'Aucun des trois n\'a de programme d\'affiliation ou de parrainage public pour les createurs de contenu. Weights & Biases exploite un programme de partenaires, mais il s\'agit d\'un dispositif de revente et d\'integration technique destine aux cabinets de conseil, pas d\'une remuneration par parrainage. PromptQuorum ne gagne rien sur cette page.',
+        ],
+      },
+      bestChoice: {
+        id: 'best-choice',
+        title: '🏆 Le meilleur choix selon votre situation',
+        content: '**Choisissez selon l\'endroit ou l\'evaluation s\'execute et selon qui en lit les resultats, pas selon la liste des fonctions de notation : les trois couvrent les memes primitives.** Parcourez la liste et arretez-vous a la premiere ligne qui vous decrit.',
+        items: [
+          '**Des personnes qui ne codent pas doivent examiner les echecs** → Braintrust. L\'interface hebergee, les files de relecture humaine et le versionnage des jeux de donnees existent precisement pour cela, et l\'offre gratuite couvre l\'essentiel du volume initial.',
+          '**Vous utilisez deja Weights & Biases** → Weave. Les evaluations arrivent a cote de votre suivi d\'experiences, et l\'offre gratuite donne des sieges illimites. Verifiez la limite des 50 salaries avant de compter sur Pro.',
+          '**Vous voulez des evaluations en configuration versionnee sans fournisseur** → Promptfoo. Du YAML ou du JS a cote de votre code, comparable dans une pull request, gratuit quelle que soit l\'echelle.',
+          '**Vous testez l\'injection de prompts et la securite des agents, pas seulement la qualite** → Promptfoo. Le red teaming et l\'analyse de vulnerabilites sont son objet declare ; voir [outils de securite des prompts et tests d\'injection](/fr/prompt-engineering/prompt-security-tools-injection-testing).',
+          '**Vous avez une poignee de cas de test et une seule ingenieure** → aucun pour l\'instant. Un script note en CI suffit jusqu\'a ce que le jeu de donnees soit assez gros pour demander une gestion.',
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.braintrust.dev/pricing',
+            productName: 'Braintrust',
+            productCategory: 'dev-tool',
+            priceRange: 'Gratuit 10 000 scores/mois ; Pro 249 $/mois avec 249 $ de credits',
+            label: 'Braintrust — voir les tarifs',
+          },
+          {
+            url: 'https://github.com/promptfoo/promptfoo',
+            productName: 'Promptfoo',
+            productCategory: 'dev-tool',
+            priceRange: 'Gratuit, licence MIT, toute echelle',
+            label: 'Promptfoo — depot open source',
+          },
+        ],
+      },
+      whatIsLlmEval: {
+        id: 'what-is-llm-eval',
+        title: 'Ce que fait vraiment un outil d\'evaluation de LLM',
+        content: '**Un outil d\'evaluation de LLM fait passer un jeu de cas de test dans votre invite ou votre agent et note chaque sortie, afin que vous sachiez si un changement ameliore ou degrade les choses avant qu\'il n\'atteigne les utilisateurs.** Un jeu de donnees se compose generalement de paires entree / sortie attendue, tirees des journaux de production, ecrites a la main comme cas limites, ou generees. Les scoreurs vont des controles deterministes comme la comparaison de chaines et la validation de schema JSON, a la notation par LLM comme juge ou un second modele note selon une grille, jusqu\'aux fonctions personnalisees que vous ecrivez vous-meme.\n\nC\'est un travail different de la surveillance de ce que fait le systeme une fois en ligne. L\'evaluation repond a « ce changement peut-il partir en production ? » ; la supervision repond a « que fait-il en ce moment ? ». Cette page traite la premiere question. Pour la vue au niveau de l\'invite, voir [comment evaluer la qualite d\'un prompt](/fr/prompt-engineering/how-to-evaluate-prompt-quality).',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Un outil d\'evaluation de LLM fait passer un jeu fixe de cas de test dans votre invite ou votre agent, note chaque sortie par des controles deterministes, une notation par LLM comme juge ou des fonctions personnalisees, et indique si un changement a ameliore ou degrade la qualite avant la mise en production.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'C\'est une suite de tests pour quelque chose qui ne donne jamais deux fois la meme reponse. Au lieu de verifier une sortie exacte, vous la notez et vous surveillez si la moyenne part dans le mauvais sens quand vous changez une invite.',
+          },
+        ],
+        note: 'Adoptez une plateforme d\'evaluation quand votre jeu de tests devient assez gros pour que sa gestion dans un tableur ou un script soit devenue le goulot d\'etranglement. Avant cela, un script note en CI fait le meme travail.',
+      },
+      comparison: {
+        id: 'comparison',
+        title: 'Braintrust, Weave et Promptfoo compares',
+        content: '**Les trois font du LLM comme juge, des scoreurs personnalises et des tests de regression sur jeux de donnees : la comparaison porte donc sur le mode d\'hebergement, la structure de couts et l\'eligibilite.** Les tarifs ont ete releves sur les pages des editeurs le 28 aout 2026, et les chiffres des depots via l\'API GitHub le meme jour.',
+        tableFormat: true,
+        itemHeadings: true,
+        columns: ['Critere', 'Braintrust', 'Weave', 'Promptfoo'],
+        rows: [
+          { Critere: 'Modele', Braintrust: 'Plateforme hebergee avec interface', Weave: 'Hebergee, partie de W&B', Promptfoo: 'CLI et bibliotheque que vous executez' },
+          { Critere: 'Licence', Braintrust: 'Commerciale', Weave: 'SDK Apache-2.0, service heberge', Promptfoo: 'MIT' },
+          { Critere: 'Offre gratuite', Braintrust: '10 000 scores/mois, 1 Go, 14 jours', Weave: '1 Go/mois d\'ingestion, sieges illimites', Promptfoo: 'Gratuit a toute echelle' },
+          { Critere: 'Entree payante', Braintrust: 'Pro 249 $/mois, 249 $ de credits', Weave: 'Des 60 $/mois, 1,5 Go', Promptfoo: 'Offre Enterprise, sur devis' },
+          { Critere: 'Limite d\'eligibilite', Braintrust: 'Aucune annoncee', Weave: 'Pro seulement sous 50 salaries', Promptfoo: 'Aucune' },
+          { Critere: 'Depassement', Braintrust: '1,50 $ par 1 000 scores en Pro', Weave: '0,10 $ par Mo d\'ingestion', Promptfoo: 'Seulement votre depense d\'API modele' },
+          { Critere: 'Auto-hebergement', Braintrust: 'Enterprise, sur site ou heberge', Weave: 'Enterprise, mono-locataire', Promptfoo: 'Par defaut — tourne chez vous' },
+          { Critere: 'Programme d\'affiliation', Braintrust: 'Aucun trouve', Weave: 'Aucun trouve', Promptfoo: 'Aucun trouve' },
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'L\'offre Pro de Weave n\'est pas simplement un forfait moins cher : Weights & Biases indique qu\'elle s\'adresse aux « early-stage teams fewer than 50 employees » et que les clients depassant ces criteres doivent passer a Enterprise. Au-dela de cet effectif, la vraie comparaison oppose Braintrust Pro a 249 $ a un devis Enterprise sur mesure, et non a 60 $.',
+          },
+        ],
+      },
+      braintrust: {
+        id: 'braintrust',
+        title: 'Braintrust : le choix production',
+        content: '**Braintrust est celui a retenir quand des personnes qui n\'ecrivent pas de code doivent regarder les resultats d\'evaluation.** Sa valeur se concentre dans l\'interface hebergee, le versionnage des jeux de donnees et le flux de relecture humaine, soit precisement la partie qu\'il faudrait sinon construire.',
+        rankedItems: [
+          {
+            rank: 1,
+            name: 'Braintrust — meilleur pour les equipes de production pluridisciplinaires',
+            tagline: 'Gratuit jusqu\'a 10 000 scores par mois, Pro 249 $ avec 249 $ de credits inclus',
+            verdict: 'L\'offre Starter gratuite est inhabituellement genereuse pour une plateforme hebergee : 10 000 scores par mois, 1 Go de donnees traitees, 14 jours de retention, 10 $ de credits modele, et un nombre illimite d\'utilisateurs, projets, jeux de donnees et experiences. Les sieges illimites dans une offre gratuite comptent ici, car toute la raison de choisir Braintrust est de laisser des responsables produit et des experts metier examiner les echecs sans leur acheter de licences. Pro, a 249 $ par mois, porte cela a 50 000 scores, 5 Go et 30 jours de retention, et comprend 249 $ de credits modele, ce qui compense largement la depense du modele juge pour une charge moyenne. Le depassement est facture plutot que bloquant : 1,50 $ par 1 000 scores et 3 $ par Go en Pro. Enterprise ajoute retention et export personnalises, RBAC et deploiement sur site ou heberge.',
+            pros: [
+              'Utilisateurs illimites des l\'offre gratuite, ce qui est precisement l\'interet',
+              'L\'offre gratuite de 10 000 scores par mois couvre reellement les projets debutants',
+              'Pro inclut 249 $ de credits modele, compensant largement la depense du modele juge',
+              'Deploiement sur site ou heberge disponible pour les charges sensibles',
+            ],
+            cons: [
+              '14 jours de retention en gratuit, c\'est court pour comparer au mois precedent',
+              'L\'auto-hebergement exige Enterprise et un echange commercial, sans tarif publie',
+              'Plateforme commerciale : contrairement a Promptfoo, aucun repli si les tarifs changent',
+            ],
+            affiliateLinks: [
+              {
+                url: 'https://www.braintrust.dev/pricing',
+                productName: 'Braintrust',
+                productCategory: 'dev-tool',
+                priceRange: 'Gratuit 10 000 scores/mois ; Pro 249 $/mois ; Enterprise sur devis',
+                label: 'Braintrust — voir les tarifs',
+              },
+            ],
+          },
+        ],
+        note: 'Utilisez Braintrust quand la relecture est une activite d\'equipe. Si seuls les ingenieurs ouvrent les resultats, vous payez une interface dont vous ne vous servirez pas.',
+      },
+      weave: {
+        id: 'weave',
+        title: 'Weave : le choix Weights & Biases',
+        content: '**Weave est la reponse evidente si votre equipe suit deja ses experiences dans Weights & Biases, et un argument plus difficile sinon.** L\'integration est le propos : les evaluations arrivent a cote des executions que vous regardez deja.',
+        rankedItems: [
+          {
+            rank: 1,
+            name: 'Weave — meilleur au sein de l\'ecosysteme Weights & Biases',
+            tagline: 'Gratuit 1 Go par mois avec sieges illimites, Pro des 60 $ sous 50 salaries',
+            verdict: 'Weave couvre les evaluations d\'applications, le tracage et les scoreurs, et l\'offre gratuite donne des sieges Weave illimites avec 1 Go d\'ingestion par mois, un point de depart raisonnable pour une petite equipe. Pro demarre a 60 $ par mois en facturation mensuelle avec 1,5 Go, et l\'ingestion supplementaire coute 0,10 $ par Mo. Le point d\'attention tient a l\'eligibilite plus qu\'au prix : Weights & Biases indique que Pro s\'adresse aux « early-stage teams fewer than 50 employees » et que les clients depassant ces criteres doivent passer a Enterprise. C\'est dans Enterprise que se trouvent les vraies options de deploiement, dont le mono-locataire, la conformite HIPAA, les cles de chiffrement gerees par le client, le SSO et les journaux d\'audit. Notez que le mono-locataire s\'apparente davantage a une instance dediee qu\'a un veritable sur site : confirmez les details aupres de W&B avant de supposer qu\'il satisfait une exigence strictement sur site.',
+            pros: [
+              'Offre gratuite avec sieges Weave illimites et 1 Go d\'ingestion par mois',
+              'Les evaluations cotoient le suivi d\'experiences et le registre W&B existants',
+              'Enterprise propose mono-locataire, HIPAA, cles gerees par le client et SSO',
+              'Avec 60 $ par mois, l\'entree payante la plus basse des trois',
+            ],
+            cons: [
+              'Pro est reserve aux organisations de moins de 50 salaries, un plafond ferme',
+              'La facturation a l\'ingestion a 0,10 $/Mo se previent moins bien qu\'un decompte de scores',
+              'L\'argument autonome le plus faible si vous n\'utilisez pas deja Weights & Biases',
+            ],
+            affiliateLinks: [
+              {
+                url: 'https://wandb.ai/site/pricing/',
+                productName: 'Weave',
+                productCategory: 'dev-tool',
+                priceRange: 'Gratuit 1 Go/mois ; Pro des 60 $/mois sous 50 salaries ; Enterprise sur devis',
+                label: 'Weave — voir les tarifs Weights & Biases',
+              },
+            ],
+          },
+        ],
+        note: 'Utilisez Weave si W&B est deja votre systeme de reference. Au-dela de 50 salaries, chiffrez Enterprise avant de comparer a Braintrust, car l\'offre a 60 $ ne vous sera pas accessible.',
+      },
+      promptfoo: {
+        id: 'promptfoo',
+        title: 'Promptfoo : le choix gratuit et natif CI',
+        content: '**Promptfoo est celui qui ne coute rien a aucune echelle, parce que vous l\'executez vous-meme.** C\'est une CLI et une bibliotheque plutot qu\'une plateforme : les evaluations vivent donc en configuration a cote de votre code et s\'executent la ou vos tests s\'executent deja.',
+        rankedItems: [
+          {
+            rank: 1,
+            name: 'Promptfoo — meilleure option gratuite et native CI',
+            tagline: '24,6k etoiles, licence MIT, gratuit a toute echelle, desormais propriete d\'OpenAI',
+            verdict: 'Promptfoo compte 24 638 etoiles GitHub et une licence MIT, et a recu des modifications le jour de verification de cette page : son activite ne fait aucun doute. Comme il tourne sur une infrastructure que vous possedez deja, il n\'y a ni compteur par score ni compteur par gigaoctet : votre seul cout est la depense d\'API modele consommee par les evaluations, que vous paieriez sur n\'importe quelle plateforme. Definir des jeux de donnees en YAML, CSV ou JS demande plus d\'effort que de cliquer dans une interface, mais rend les evaluations comparables dans une pull request, un avantage reel quand la configuration doit etre relue comme n\'importe quel code. Il vaut la peine de savoir ce que c\'est vraiment : le projet se decrit comme testant invites, agents et RAG, avec red teaming, tests d\'intrusion et analyse de vulnerabilites pour l\'IA. La securite n\'est pas ici une fonction secondaire, et OpenAI a presente son acquisition sous l\'angle des tests de securite des agents.',
+            pros: [
+              'Gratuit a toute echelle, sans compteur de scores ni d\'ingestion',
+              'Evaluations en configuration versionnee, comparable et relisible en pull request',
+              'Sous licence MIT : aucun fournisseur dont dependre si les conditions changent',
+              'Red teaming et analyse de vulnerabilites de premier ordre, pas ajoutes apres coup',
+            ],
+            cons: [
+              'Pas d\'interface hebergee par defaut : les non-developpeurs n\'ont rien a cliquer',
+              'Les jeux de donnees en YAML et CSV demandent plus de mise en place qu\'un navigateur',
+              'Desormais propriete d\'OpenAI, ce qui reste une question de gouvernance malgre l\'engagement open source',
+            ],
+            affiliateLinks: [
+              {
+                url: 'https://github.com/promptfoo/promptfoo',
+                productName: 'Promptfoo',
+                productCategory: 'dev-tool',
+                priceRange: 'Gratuit, licence MIT, toute echelle',
+                label: 'Promptfoo — depot open source',
+              },
+            ],
+          },
+        ],
+        note: 'Utilisez Promptfoo quand ceux qui lisent les resultats sont ceux qui ecrivent le code. Ajoutez Braintrust plus tard si la relecture devient pluridisciplinaire.',
+      },
+      promptfooOpenai: {
+        id: 'promptfoo-openai',
+        title: 'Ce que l\'acquisition par OpenAI change pour Promptfoo',
+        content: '**OpenAI a annonce l\'acquisition de Promptfoo le 9 mars 2026, en s\'engageant publiquement a le garder open source.** La declaration d\'OpenAI est la suivante : « Promptfoo will remain open source under the current license, and we will continue to service and support current customers. » L\'acquisition a ete relayee a l\'epoque par TechCrunch, CNBC et Forbes, et confirmee sur les sites d\'OpenAI comme de Promptfoo.\n\nLes faits sur le terrain confortent cet engagement pour l\'instant. Pres de six mois plus tard, le depot reste dans l\'organisation `promptfoo`, reste sous licence MIT, et a recu des modifications le jour de verification de cette page. C\'est ce qu\'on veut constater.\n\nLa raison d\'y reflechir malgre tout tient a la gouvernance, non a la licence. Un outil d\'evaluation est ce avec quoi vous jugez des modeles, et il appartient desormais a une entreprise qui fabrique des modeles. La licence MIT permet de bifurquer si l\'orientation du projet cesse un jour de vous servir, une protection reelle que n\'offrent ni Braintrust ni Weave. Mais si votre strategie d\'evaluation repose sur la neutralite entre fournisseurs de modeles, cela merite une decision deliberee plutot qu\'un presuppose.',
+        callouts: [
+          {
+            type: 'note',
+            text: 'OpenAI a indique que la technologie de Promptfoo serait integree a OpenAI Frontier pour le red teaming automatise et les tests de securite des agents. Cela concorde avec l\'accent securite deja present chez Promptfoo, et suggere que ce volet recevra plus d\'investissement que l\'evaluation generaliste.',
+          },
+        ],
+        note: 'Restez sur Promptfoo si la licence MIT et l\'execution locale sont ce que vous valorisez. Reexaminez si la neutralite fournisseur dans votre outillage d\'evaluation est une exigence declaree.',
+      },
+      pricing: {
+        id: 'pricing',
+        title: 'Comparaison des tarifs',
+        content: '**Le cout evolue avec le volume de donnees et la depense du modele juge, pas avec les sieges — d\'ou l\'interet, plus grand qu\'il n\'y parait, des utilisateurs illimites dans les offres gratuites.** Le tableau chiffre une charge moyenne d\'environ 50 000 scores d\'evaluation par mois.',
+        tableFormat: true,
+        itemHeadings: true,
+        columns: ['Scenario', 'Braintrust', 'Weave', 'Promptfoo'],
+        rows: [
+          { Scenario: 'Limite de l\'offre gratuite', Braintrust: '10 000 scores, 1 Go, 14 jours', Weave: '1 Go/mois d\'ingestion, sieges illimites', Promptfoo: 'Aucune limite' },
+          { Scenario: 'Offre payante', Braintrust: 'Pro 249 $/mois', Weave: 'Des 60 $/mois', Promptfoo: 'Aucune necessaire' },
+          { Scenario: 'Inclus a ce niveau', Braintrust: '50 000 scores, 5 Go, 249 $ de credits', Weave: '1,5 Go d\'ingestion', Promptfoo: 'Sans objet' },
+          { Scenario: '50 000 scores par mois', Braintrust: 'Couvert par Pro a 249 $', Weave: 'Selon les Go, probablement plus de 1,5', Promptfoo: 'Depense d\'API modele uniquement' },
+          { Scenario: 'Tarif de depassement', Braintrust: '1,50 $ par 1 000 scores, 3 $/Go', Weave: '0,10 $ par Mo', Promptfoo: 'Aucun' },
+          { Scenario: 'Plafond d\'eligibilite', Braintrust: 'Aucun annonce', Weave: 'Pro sous 50 salaries', Promptfoo: 'Aucun' },
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Plusieurs comparatifs affirment que les 249 $ de credits Pro de Braintrust sont une promotion 2026 tombant a 100 $ par mois apres le 1er septembre 2026. Cette echeance ne figure pas sur la page tarifaire de Braintrust, qui ne mentionne comme promotion que « 6–12 months free for qualifying startups ». Chiffrez depuis la page de l\'editeur plutot que depuis un article comparatif, y compris celui-ci.',
+          },
+        ],
+        note: 'Braintrust facture au score, Weave au gigaoctet ingere. Ce ne sont pas des unites comparables : estimez les deux a partir de votre propre charge avant de juger 60 $ moins cher que 249 $.',
+      },
+      selfHosting: {
+        id: 'self-hosting',
+        title: 'Auto-hebergement et residence des donnees',
+        content: '**Promptfoo est le seul des trois ou l\'auto-hebergement est le mode par defaut et non une montee en gamme entreprise.** Comme il s\'agit d\'une CLI et d\'une bibliotheque, vos cas de test et les sorties du modele ne quittent jamais votre environnement, sauf choix delibere d\'une offre hebergee. Pour une equipe soumise a des regles de residence des donnees, cela supprime la question plutot que d\'y repondre.\n\nBraintrust propose un deploiement sur site ou heberge, mais en Enterprise uniquement, ce qui suppose un tarif sur mesure et un echange commercial. C\'est une vraie option de deploiement et non une formule marketing, mais vous ne pouvez pas l\'evaluer en libre-service.\n\nL\'offre Enterprise de Weave propose une option mono-locataire avec cles de chiffrement gerees par le client, conformite HIPAA et connectivite privee securisee. Lisez cela attentivement : mono-locataire avec cles propres designe une instance dediee, ce qui n\'est pas la meme chose qu\'une execution dans votre propre perimetre. Si votre exigence est strictement sur site, confirmez les details aupres de Weights & Biases plutot que de supposer que l\'option mono-locataire y repond.',
+        note: 'Choisissez Promptfoo quand les donnees d\'evaluation ne peuvent pas quitter votre infrastructure et que vous voulez trancher par l\'architecture plutot que par contrat. Choisissez Braintrust Enterprise si vous voulez du sur site plus une interface de relecture.',
+      },
+      whoShouldUse: {
+        id: 'who-should-use',
+        title: 'Qui devrait utiliser quoi',
+        content: '**La forme de l\'equipe tranche davantage que les listes de fonctions.** Cinq profils couvrent la plupart des lecteurs.',
+        items: [
+          '**Developpeuse seule sur un MVP** → Promptfoo. Pas de compte, pas de compteur, et rien a retirer si le projet change de direction.',
+          '**Equipe produit livrant une fonctionnalite LLM avec relecture PM et QA** → Braintrust. Les utilisateurs illimites de l\'offre gratuite sont precisement ce qui rend la relecture pluridisciplinaire praticable.',
+          '**Equipe utilisant deja Weights & Biases** → Weave, a condition d\'etre sous 50 salaries pour Pro. Au-dela, chiffrez Enterprise avant de comparer.',
+          '**Equipe securite ou plateforme testant l\'injection de prompts** → Promptfoo, dont l\'orientation red teaming correspond a la tache. Voir aussi [outils de securite des prompts et tests d\'injection](/fr/prompt-engineering/prompt-security-tools-injection-testing).',
+          '**Equipe evaluant plusieurs fournisseurs de modeles** → Promptfoo ou Braintrust, et faites passer les appels par une passerelle pour que la comparaison reste un changement de configuration ; voir [la meilleure passerelle d\'API LLM](/fr/local-llms/best-llm-api-gateway-2026).',
+        ],
+      },
+      regionalContext: {
+        id: 'regional-context',
+        title: 'Les outils d\'evaluation dans l\'UE, au Japon et en Chine',
+        content: 'Les jeux de donnees d\'evaluation sont generalement construits a partir du trafic de production, ce qui en fait certaines des donnees les plus sensibles d\'une pile LLM. Le choix entre heberge et local devient donc une question de conformite sur trois marches majeurs.',
+        subsections: [
+          {
+            title: 'Union europeenne',
+            content: 'Un jeu d\'evaluation tire des journaux de production contient ce que vos utilisateurs ont ecrit, ce qui constitue un traitement au sens du RGPD comme n\'importe quel autre, et l\'envoyer vers une plateforme hebergee aux Etats-Unis est un transfert au sens des articles 44 a 49 sauf mention contraire dans les conditions de l\'editeur. Il vous faut un contrat de sous-traitance au titre de l\'article 28 avec Braintrust ou Weights & Biases si vous les utilisez. Le reglement europeen sur l\'IA compte aussi ici, d\'une maniere qui favorise l\'evaluation en general : pour les systemes concernes, pouvoir demontrer que vous avez teste avant deploiement releve de l\'obligation et non de l\'agrement, et le Digital Omnibus a reporte les devoirs a haut risque de l\'annexe III au 2 decembre 2027 sans les supprimer. Promptfoo execute en local contourne la question du transfert, puisque le jeu de donnees ne sort jamais.',
+          },
+          {
+            title: 'Japon',
+            content: 'Le programme de gouvernance de l\'IA du METI pousse les entreprises vers des preuves auditables qu\'un systeme a ete teste avant sa mise en service, et les executions d\'evaluation sont exactement cette preuve lorsqu\'elles sont conservees la ou vous les maitrisez. Une configuration Promptfoo versionnee a cote de ses resultats est un artefact d\'audit, ce qu\'un tableau de bord heberge n\'est pas, puisque vous pouvez la reproduire depuis le depot des annees plus tard. Si vous utilisez plutot une plateforme hebergee, verifiez la retention : l\'offre gratuite de Braintrust conserve les donnees 14 jours, moins que ce qu\'attendent la plupart des audits.',
+          },
+          {
+            title: 'Chine',
+            content: 'Sous la loi sur la securite des donnees (数据安全法) et les regles de la CAC relatives aux transferts transfrontaliers, le probleme de conformite consiste a televerser vers une plateforme etrangere un jeu d\'evaluation construit a partir du trafic d\'utilisateurs de Chine continentale, et non l\'evaluation elle-meme. Les deploiements servant des equipes du continent exigent generalement que l\'evaluation s\'execute sur une infrastructure domestique. Promptfoo est le seul des trois a le faire par defaut, ce qui en fait le choix pratique independamment des preferences fonctionnelles — voir [executer des LLM locaux en Chine](/fr/local-llms/deepseek-local-china-data-privacy-2026).',
+          },
+        ],
+        note: 'Executez les evaluations en local sur tout marche ou le jeu de donnees lui-meme constitue l\'actif sensible. Promptfoo en fait la norme ; les deux autres en font une discussion Enterprise.',
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'Erreurs courantes au moment de choisir un outil d\'evaluation',
+        numberedItems: [
+          {
+            title: 'Comparer 60 $ a 249 $ sans verifier l\'eligibilite',
+            whyItMatters: 'Weave Pro est reserve aux organisations de moins de 50 salaries. Au-dela de cet effectif, la vraie comparaison oppose Braintrust Pro a un devis Weave Enterprise sur mesure, et le chiffre de 60 $ ne vous est pas accessible.',
+          },
+          {
+            title: 'Budgeter autour d\'une echeance promotionnelle Braintrust qui n\'est pas publiee',
+            whyItMatters: 'L\'affirmation selon laquelle les credits Pro tombent a 100 $ par mois apres le 1er septembre 2026 ne figure pas sur la page tarifaire de Braintrust. Planifier une migration autour d\'une echeance que l\'editeur n\'a pas annoncee gaspille de l\'effort ; relisez plutot la page tarifaire.',
+          },
+          {
+            title: 'Traiter scores et gigaoctets comme des unites comparables',
+            whyItMatters: 'Braintrust compte des scores, Weave compte de l\'ingestion. Une charge qui tient confortablement dans 50 000 scores peut tenir ou non dans 1,5 Go selon la taille de vos traces. Estimez les deux a partir de vos propres donnees avant de classer par prix.',
+          },
+          {
+            title: 'Adopter une plateforme pour un jeu de quinze cas',
+            whyItMatters: 'En dessous d\'une vingtaine de cas de test, un script note en CI fait le meme travail sans compte, sans compteur et sans fenetre de retention. Les plateformes se justifient quand le goulot d\'etranglement est la gestion du jeu de donnees, pas la notation.',
+          },
+          {
+            title: 'Supposer que mono-locataire signifie sur site',
+            whyItMatters: 'L\'option Enterprise mono-locataire de Weave avec cles gerees par le client est une instance dediee, non un deploiement dans votre propre perimetre. Si votre exigence est strictement sur site, confirmez-le aupres de W&B plutot que de lire mono-locataire comme equivalent.',
+          },
+        ],
+      },
+      skipThisIf: {
+        id: 'skip-this-if',
+        title: 'Passez votre chemin si…',
+        content: '**Si votre jeu de tests compte une douzaine d\'invites et qu\'une seule ingenieure l\'execute, passez les trois et ecrivez un script note en CI.** Vous obtenez le meme signal de regression sans compte, sans compteur et sans fenetre de retention, et vous pourrez passer a une plateforme plus tard sans rien avoir perdu, puisque l\'actif est le jeu de donnees et qu\'il vous suit.\n\nLe seuil qu\'il vaut la peine d\'attendre, c\'est le moment ou la gestion du jeu de donnees devient le travail : quand vous voulez remonter regulierement des cas en echec de la production vers le jeu de tests, quand quelqu\'un qui ne code pas doit noter des sorties, ou quand vous devez comparer les resultats de ce mois a ceux du trimestre dernier. Ce sont des problemes de gestion de donnees, et c\'est cela que vous achetez reellement. La notation elle-meme a toujours ete la partie facile.',
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Un declencheur pratique : adoptez une plateforme la premiere fois que vous vous surprenez a batir un tableur pour suivre quelle version d\'invite a obtenu quel score. Ce tableur est le produit que vous vous appretez a acheter, et l\'acheter coute moins cher que le maintenir.',
+          },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Questions frequentes',
+        faqs: [
+          {
+            q: 'Quel est le meilleur outil d\'evaluation de LLM en 2026 ?',
+            a: 'Braintrust pour les equipes ou des non-developpeurs relisent les resultats, grace aux utilisateurs illimites des l\'offre gratuite. Weave si vous utilisez deja Weights & Biases et etes sous 50 salaries. Promptfoo si vous voulez des evaluations en configuration versionnee s\'executant gratuitement sur votre propre infrastructure. Les trois couvrent le LLM comme juge, les scoreurs personnalises et les tests de regression.',
+          },
+          {
+            q: 'OpenAI a-t-il acquis Promptfoo ?',
+            a: 'Oui. OpenAI a annonce l\'acquisition le 9 mars 2026 et a declare que Promptfoo resterait open source sous sa licence actuelle et que les clients existants continueraient d\'etre servis et accompagnes. Fin aout 2026, le depot reste dans l\'organisation promptfoo, reste sous licence MIT et est activement maintenu.',
+          },
+          {
+            q: 'Combien coute Braintrust ?',
+            a: 'L\'offre Starter gratuite comprend 10 000 scores par mois, 1 Go de donnees traitees, 14 jours de retention, 10 $ de credits modele et des utilisateurs illimites. Pro coute 249 $ par mois et comprend 249 $ de credits modele, 50 000 scores, 5 Go et 30 jours de retention, avec un depassement a 1,50 $ par 1 000 scores. Enterprise est sur devis et ajoute un deploiement sur site ou heberge.',
+          },
+          {
+            q: 'Weave est-il gratuit et quelles sont les limites ?',
+            a: 'Weave dispose d\'une offre gratuite avec des sieges illimites et 1 Go d\'ingestion par mois. Pro demarre a 60 $ par mois avec 1,5 Go, mais Weights & Biases le reserve aux equipes en phase initiale de moins de 50 salaries ; les organisations plus grandes doivent passer a Enterprise. L\'ingestion supplementaire coute 0,10 $ par Mo.',
+          },
+          {
+            q: 'Promptfoo est-il vraiment gratuit a toute echelle ?',
+            a: 'Oui, au sens ou l\'outil lui-meme est sous licence MIT et s\'execute sur vos propres machines : il n\'y a donc ni facturation par score ni par gigaoctet. Vous payez toujours les appels d\'API modele effectues par les evaluations, mais ce cout existe sur toute plateforme et n\'est pas propre a Promptfoo. Une offre Enterprise hebergee optionnelle existe par-dessus.',
+          },
+          {
+            q: 'Lequel puis-je auto-heberger ?',
+            a: 'Promptfoo par defaut, puisqu\'il s\'agit d\'une CLI et d\'une bibliotheque qui s\'executent la ou vous les lancez. Braintrust propose un deploiement sur site ou heberge dans son offre Enterprise. Weave propose une option Enterprise mono-locataire avec cles gerees par le client, qui est une instance dediee plutot qu\'un veritable sur site : confirmez les details si vous avez une exigence stricte.',
+          },
+          {
+            q: 'L\'un d\'eux a-t-il un programme d\'affiliation ?',
+            a: 'Nous n\'avons trouve aucun programme d\'affiliation ou de parrainage public pour les createurs chez Braintrust, Weights & Biases ni Promptfoo. Weights & Biases exploite un programme de partenaires, mais sa page publique decrit des partenariats de revente et d\'integration technique destines aux cabinets de conseil, non une remuneration par parrainage. Notez aussi que usebraintrust.com est une place de marche de talents distincte, sans lien avec braintrust.dev. PromptQuorum ne gagne rien sur cette page.',
+          },
+          {
+            q: 'Quelle difference entre evaluation et supervision ?',
+            a: 'L\'evaluation execute un jeu de donnees fixe avant la mise en production et vous dit si un changement a ameliore ou degrade la qualite. La supervision observe le trafic reel apres la mise en ligne et vous dit ce que fait le systeme maintenant. Cette page traite la premiere. Les deux sont complementaires et beaucoup d\'equipes font les deux, mais les outils et les questions different.',
+          },
+        ],
+      },
+      verdict: {
+        id: 'verdict',
+        title: 'Verdict final',
+        items: [
+          '**Utilisez Braintrust si** des personnes qui n\'ecrivent pas de code doivent relire les resultats — etape suivante : demarrez sur l\'offre gratuite, qui autorise des utilisateurs illimites, et verifiez si vos responsables produit l\'ouvrent reellement avant de payer Pro.',
+          '**Utilisez Weave si** Weights & Biases est deja votre systeme de reference — etape suivante : confirmez que vous etes sous le plafond des 50 salaries avant de compter sur l\'offre a 60 $, et chiffrez Enterprise sinon.',
+          '**Utilisez Promptfoo si** vous voulez des evaluations en configuration relisible sans compteur d\'editeur — etape suivante : ecrivez votre premier jeu de donnees en YAML et executez-le en CI avant d\'evaluer quoi que ce soit d\'heberge.',
+          '**Utilisez precisement Promptfoo si** vous testez l\'injection de prompts et la securite des agents et pas seulement la qualite des sorties — etape suivante : commencez par ses fonctions de red teaming, la ou OpenAI oriente ses investissements.',
+          '**Passez les trois si** vous avez une douzaine de cas de test et une seule ingenieure — etape suivante : ecrivez un script note en CI et revoyez la question quand la gestion du jeu de donnees deviendra le goulot d\'etranglement.',
+        ],
+        note: 'Nous n\'avons trouve de programme d\'affiliation chez aucun des trois editeurs, et PromptQuorum n\'est inscrit nulle part. Chaque lien de cette page mene au site ou au depot de l\'editeur.',
+      },
+      sources: {
+        id: 'sources',
+        title: 'Sources',
+        links: [
+          { url: 'https://www.braintrust.dev/pricing', title: 'Tarifs Braintrust', description: 'Offres Starter, Pro et Enterprise avec limites de scores, de donnees et de retention, et la promotion pour start-ups.' },
+          { url: 'https://wandb.ai/site/pricing/', title: 'Tarifs Weights & Biases', description: 'Offres Weave gratuite, Pro et Enterprise, la restriction des moins de 50 salaries et le tarif de 0,10 $/Mo.' },
+          { url: 'https://github.com/promptfoo/promptfoo', title: 'Depot Promptfoo', description: 'Nombre d\'etoiles, licence MIT, et la description par le projet de son red teaming et de son analyse de vulnerabilites.' },
+          { url: 'https://openai.com/index/openai-to-acquire-promptfoo/', title: 'OpenAI : acquisition de Promptfoo', description: 'L\'annonce d\'OpenAI elle-meme, dont l\'engagement a garder Promptfoo open source sous sa licence actuelle.' },
+          { url: 'https://www.promptfoo.dev/blog/promptfoo-joining-openai/', title: 'Promptfoo rejoint OpenAI', description: 'Le recit de l\'acquisition par Promptfoo lui-meme.' },
+          { url: 'https://techcrunch.com/2026/03/09/openai-acquires-promptfoo-to-secure-its-ai-agents/', title: 'OpenAI acquiert Promptfoo (TechCrunch)', description: 'Confirmation independante de l\'annonce du 9 mars 2026.' },
+          { url: 'https://www.cnbc.com/2026/03/09/open-ai-cybersecurity-promptfoo-ai-agents.html', title: 'OpenAI rachete Promptfoo (CNBC)', description: 'Second compte rendu independant de l\'acquisition et de son orientation securite.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Lectures associees',
+        items: [
+          '[Meilleurs outils de test et d\'evaluation d\'invites](/fr/prompt-engineering/best-prompt-testing-evaluation-tools) — le meme probleme au niveau de l\'invite',
+          '[Comment evaluer la qualite d\'un prompt](/fr/prompt-engineering/how-to-evaluate-prompt-quality) — batir la grille que vos scoreurs appliqueront',
+          '[Metriques d\'evaluation des invites](/fr/prompt-engineering/prompt-evaluation-metrics) — ce qu\'il faut reellement mesurer une fois le jeu de donnees constitue',
+          '[Outils de securite des prompts et tests d\'injection](/fr/prompt-engineering/prompt-security-tools-injection-testing) — le volet red teaming ou Promptfoo mene',
+          '[Meilleure passerelle d\'API LLM](/fr/local-llms/best-llm-api-gateway-2026) — router les appels d\'evaluation entre fournisseurs pour que la comparaison reste un changement de configuration',
+        ],
+      },
+    },
+    schema: {
+      '@type': 'TechArticle',
+      headline: 'Meilleur outil d\'evaluation de LLM 2026 : Braintrust, Weave ou Promptfoo',
+      description: 'Compare Braintrust, Weave et Promptfoo pour l\'evaluation de LLM, avec tarifs verifies, limites d\'eligibilite, options d\'auto-hebergement et l\'acquisition de Promptfoo par OpenAI. Verifie en aout 2026.',
+      datePublished: '2026-08-28',
+      dateModified: '2026-08-28',
+      url: 'https://www.promptquorum.com/fr/local-llms/best-llm-evaluation-tools-2026',
+      inLanguage: 'fr',
+      proficiencyLevel: 'Advanced',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      about: [
+        { '@type': 'Thing', name: 'Evaluation de LLM' },
+        { '@type': 'Thing', name: 'Tests de regression pour l\'IA' },
+      ],
+      mentions: [
+        { '@type': 'SoftwareApplication', name: 'Braintrust' },
+        { '@type': 'SoftwareApplication', name: 'Weave' },
+        { '@type': 'SoftwareApplication', name: 'Promptfoo' },
+      ],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'fr',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'Quel est le meilleur outil d\'evaluation de LLM en 2026 ?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Braintrust pour les equipes ou des non-developpeurs relisent les resultats, Weave si vous utilisez deja Weights & Biases et etes sous 50 salaries, et Promptfoo pour des evaluations en configuration versionnee s\'executant gratuitement sur votre propre infrastructure.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'OpenAI a-t-il acquis Promptfoo ?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Oui. OpenAI a annonce l\'acquisition le 9 mars 2026 et a declare que Promptfoo resterait open source sous sa licence actuelle. Fin aout 2026, le depot reste sous licence MIT et activement maintenu.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Combien coute Braintrust ?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'L\'offre Starter gratuite comprend 10 000 scores par mois, 1 Go de donnees, 14 jours de retention et des utilisateurs illimites. Pro coute 249 $ par mois avec 249 $ de credits modele, 50 000 scores et 5 Go. Enterprise est sur devis avec deploiement sur site ou heberge.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Weave est-il gratuit et quelles sont les limites ?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Weave dispose d\'une offre gratuite avec sieges illimites et 1 Go d\'ingestion par mois. Pro demarre a 60 $ par mois avec 1,5 Go mais est reserve aux equipes de moins de 50 salaries. L\'ingestion supplementaire coute 0,10 $ par Mo.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Les outils d\'evaluation de LLM ont-ils des programmes d\'affiliation ?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Nous n\'avons trouve aucun programme public d\'affiliation chez Braintrust, Weights & Biases ni Promptfoo. Le programme de partenaires de Weights & Biases est un dispositif de revente et d\'integration pour cabinets de conseil, non une remuneration par parrainage.',
+          },
+        },
+      ],
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'Meilleurs outils d\'evaluation de LLM (aout 2026)',
+      inLanguage: 'fr',
+      numberOfItems: 3,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Braintrust', description: 'Meilleur pour les equipes de production pluridisciplinaires — gratuit jusqu\'a 10 000 scores par mois avec utilisateurs illimites, Pro 249 $ avec 249 $ de credits modele' },
+        { '@type': 'ListItem', position: 2, name: 'Weave', description: 'Meilleur au sein de l\'ecosysteme Weights & Biases — gratuit 1 Go par mois avec sieges illimites, Pro des 60 $ pour les equipes de moins de 50 salaries' },
+        { '@type': 'ListItem', position: 3, name: 'Promptfoo', description: 'Meilleure option gratuite et native CI — 24,6k etoiles, licence MIT, tourne sur votre propre infrastructure a toute echelle' },
+      ],
+    },
+  },
+
+  pt: {
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2027-02-28',
+    theme: 'Tools & Interfaces',
+    title: 'Melhor ferramenta de avaliacao de LLM 2026: Braintrust, Weave ou Promptfoo',
+    seoTitle: 'Melhor ferramenta de avaliacao de LLM 2026',
+    metaDescription: 'Braintrust e gratuito ate 10.000 pontuacoes por mes e custa US$ 249 no Pro, Weave comeca em US$ 60, Promptfoo e MIT e gratuito em qualquer escala. Precos verificados em agosto de 2026.',
+    educationalLevel: 'Advanced',
+    audience: 'Times de engenharia que testam aplicacoes de LLM antes do lancamento',
+    affiliateDisclosure: true,
+    publishDate: '2026-08-28',
+    dateModified: '2026-08-28',
+    readTime: '13 min de leitura',
+    primaryTerm: 'ferramenta de avaliacao de LLM',
+    targetKeywords: [
+      'melhor ferramenta de avaliacao de LLM 2026',
+      'Braintrust vs Weave vs Promptfoo',
+      'comparativo plataformas de avaliacao LLM',
+      'Promptfoo aquisicao OpenAI',
+      'pontuacao LLM como juiz',
+    ],
+    leadAnswerBlock: '**O Braintrust e a plataforma de avaliacao mais completa para times que levam recursos de LLM a producao: gratuito ate 10.000 pontuacoes por mes e US$ 249 no Pro. O Weave e a escolha natural se voce ja usa o Weights & Biases, a partir de US$ 60 por mes, mas restrito a organizacoes com menos de 50 funcionarios. O Promptfoo e a melhor opcao gratuita e nativa de CI: licenca MIT, gratuito em qualquer escala porque roda nas suas proprias maquinas, e desde marco de 2026 propriedade da OpenAI, que se comprometeu publicamente a mante-lo de codigo aberto sob a licenca atual.**',
+    quickAnswerTop: {
+      question: 'Qual ferramenta de avaliacao de LLM e a melhor em 2026?',
+      answer: '**Braintrust para times multidisciplinares em que pessoas nao tecnicas revisam resultados, Weave se voce ja esta no Weights & Biases, e Promptfoo se quer avaliacoes como configuracao versionada sem fornecedor algum.** A diferenca nao esta nos recursos de pontuacao: as tres fazem LLM como juiz, avaliadores proprios e testes de regressao sobre conjuntos de dados. Esta em onde a avaliacao roda e quem le os resultados. Uma interface hospedada compensa quando uma gerente de produto precisa revisar falhas; e desperdicada quando uma unica engenheira roda avaliacoes na CI.',
+      bullets: [
+        '**Melhor no conjunto para producao:** Braintrust — gratuito ate 10.000 pontuacoes/mes, Pro US$ 249/mes com US$ 249 de credito de modelo incluso',
+        '**Melhor com Weights & Biases:** Weave — gratuito 1 GB/mes com assentos ilimitados, Pro a partir de US$ 60/mes abaixo de 50 funcionarios',
+        '**Melhor opcao gratuita e nativa de CI:** Promptfoo — 24,6 mil estrelas, MIT, roda na sua propria infraestrutura, sem limite de escala',
+        '**Melhor para seguranca e red teaming:** Promptfoo — seu foco declarado e analise de vulnerabilidades e red teaming, nao apenas pontuacao',
+        '**Nenhuma das tres** tem programa publico de afiliados para criadores, entao nada nesta pagina e insercao paga',
+        '**Dispense uma plataforma** se voce tem menos de cerca de 20 casos de teste: um script pontuado na CI basta',
+      ],
+      updatedDate: '2026-08-28',
+    },
+    toc: [
+      { label: 'Pontos principais', anchor: 'tldr' },
+      { label: 'A melhor escolha para o seu caso', anchor: 'best-choice' },
+      { label: 'O que uma ferramenta de avaliacao realmente faz', anchor: 'what-is-llm-eval' },
+      { label: 'Tabela comparativa completa', anchor: 'comparison' },
+      { label: 'Braintrust: a escolha de producao', anchor: 'braintrust' },
+      { label: 'Weave: a escolha do Weights & Biases', anchor: 'weave' },
+      { label: 'Promptfoo: a escolha gratuita e nativa de CI', anchor: 'promptfoo' },
+      { label: 'O que a aquisicao pela OpenAI significa', anchor: 'promptfoo-openai' },
+      { label: 'Como os precos se comparam', anchor: 'pricing' },
+      { label: 'Auto-hospedagem e residencia de dados', anchor: 'self-hosting' },
+      { label: 'Quem deve usar o que', anchor: 'who-should-use' },
+      { label: 'Contexto regional: UE, Japao, China', anchor: 'regional-context' },
+      { label: 'Erros comuns', anchor: 'common-mistakes' },
+      { label: 'Pule isto se…', anchor: 'skip-this-if' },
+      { label: 'Perguntas frequentes', anchor: 'faq' },
+      { label: 'Veredito final', anchor: 'verdict' },
+      { label: 'Fontes', anchor: 'sources' },
+      { label: 'Leitura relacionada', anchor: 'related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        isTldr: true,
+        items: [
+          '**Braintrust** — nivel Starter gratuito com 10.000 pontuacoes por mes, 1 GB de dados processados, 14 dias de retencao, US$ 10 de credito de modelo e usuarios ilimitados. O Pro custa US$ 249 por mes e inclui US$ 249 de credito de modelo, 5 GB de dados, 50.000 pontuacoes e 30 dias de retencao. O Enterprise acrescenta retencao personalizada e implantacao on-premise ou hospedada.',
+          '**Weave** — parte do Weights & Biases. O nivel gratuito da assentos Weave ilimitados e 1 GB por mes de ingestao. O Pro comeca em US$ 60 por mes com 1,5 GB, mas a elegibilidade e explicitamente limitada a "early-stage teams fewer than 50 employees"; organizacoes maiores precisam migrar para o Enterprise. A ingestao adicional custa US$ 0,10 por MB.',
+          '**Promptfoo** — 24,6 mil estrelas no GitHub, licenca MIT e gratuito em qualquer escala porque funciona como CLI e biblioteca sobre infraestrutura que voce ja possui. Seu unico custo e o gasto de API do modelo consumido pelas proprias avaliacoes, que qualquer fluxo com LLM como juiz gera em qualquer plataforma.',
+          '**A OpenAI anunciou a aquisicao do Promptfoo em 9 de marco de 2026** e declarou publicamente: "Promptfoo will remain open source under the current license, and we will continue to service and support current customers." O repositorio segue sob MIT e recebeu mudancas no dia em que esta pagina foi verificada.',
+          '**Uma correcao que vale fazer:** varios textos descrevem o credito de modelo do Braintrust Pro como uma tarifa promocional que cai para US$ 100 por mes apos 1 de setembro de 2026. Nenhum vencimento desse tipo aparece na pagina de precos do Braintrust. A unica promocao listada e "6–12 months free for qualifying startups". Orce pela pagina do fornecedor.',
+          '**O Promptfoo e tanto ferramenta de seguranca quanto de avaliacao.** Sua propria descricao comeca por red teaming, testes de intrusao e analise de vulnerabilidades, e a OpenAI enquadrou a aquisicao em torno de testes de seguranca de agentes. E uma diferenca real de enfase em relacao a Braintrust e Weave.',
+          'Nenhuma das tres tem programa publico de afiliados ou indicacao para criadores de conteudo. O Weights & Biases mantem um programa de parceiros, mas e um esquema de revenda e integracao tecnologica voltado a consultorias, nao um pagamento por indicacao. A PromptQuorum nao ganha nada com esta pagina.',
+        ],
+      },
+      bestChoice: {
+        id: 'best-choice',
+        title: '🏆 A melhor escolha para o seu caso',
+        content: '**Escolha por onde a avaliacao roda e quem le os resultados, nao pela lista de recursos de pontuacao: as tres cobrem as mesmas primitivas.** Leia para baixo e pare na primeira linha que descreva voce.',
+        items: [
+          '**Pessoas que nao programam precisam revisar as falhas** → Braintrust. A interface hospedada, as filas de revisao humana e o versionamento de conjuntos de dados existem exatamente para isso, e o nivel gratuito cobre a maior parte do volume inicial.',
+          '**Voce ja usa o Weights & Biases** → Weave. As avaliacoes aparecem ao lado do seu acompanhamento de experimentos, e o nivel gratuito da assentos ilimitados. Verifique o limite de 50 funcionarios antes de contar com o Pro.',
+          '**Voce quer avaliacoes como configuracao versionada sem fornecedor** → Promptfoo. YAML ou JS ao lado do seu codigo, comparavel em um pull request, gratuito em qualquer escala.',
+          '**Voce testa injecao de prompt e seguranca de agentes, nao apenas qualidade** → Promptfoo. Red teaming e analise de vulnerabilidades sao seu proposito declarado; veja [ferramentas de seguranca de prompt e testes de injecao](/pt/prompt-engineering/prompt-security-tools-injection-testing).',
+          '**Voce tem um punhado de casos de teste e uma unica engenheira** → nenhuma ainda. Um script pontuado na CI basta ate o conjunto de dados ficar grande o bastante para exigir gestao.',
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.braintrust.dev/pricing',
+            productName: 'Braintrust',
+            productCategory: 'dev-tool',
+            priceRange: 'Gratuito 10.000 pontuacoes/mes; Pro US$ 249/mes com US$ 249 de credito',
+            label: 'Braintrust — ver precos',
+          },
+          {
+            url: 'https://github.com/promptfoo/promptfoo',
+            productName: 'Promptfoo',
+            productCategory: 'dev-tool',
+            priceRange: 'Gratuito, licenca MIT, qualquer escala',
+            label: 'Promptfoo — repositorio de codigo aberto',
+          },
+        ],
+      },
+      whatIsLlmEval: {
+        id: 'what-is-llm-eval',
+        title: 'O que uma ferramenta de avaliacao de LLM realmente faz',
+        content: '**Uma ferramenta de avaliacao de LLM passa um conjunto de casos de teste pelo seu prompt ou agente e pontua cada saida, para que voce saiba se uma mudanca melhorou ou piorou as coisas antes de chegar aos usuarios.** Um conjunto de dados costuma ser uma serie de pares de entrada e saida esperada, extraidos de registros de producao, escritos a mao como casos limite ou gerados. Os avaliadores vao de verificacoes deterministas como comparacao de strings e validacao de esquema JSON, passando pela nota com LLM como juiz, em que um segundo modelo pontua contra uma rubrica, ate funcoes proprias que voce escreve.\n\nEsse e um trabalho diferente de observar o que o sistema faz depois de no ar. A avaliacao responde "esta mudanca pode ir para producao?"; o monitoramento responde "o que ele esta fazendo agora?". Esta pagina trata da primeira pergunta. Para a visao no nivel do prompt, veja [como avaliar a qualidade de um prompt](/pt/prompt-engineering/how-to-evaluate-prompt-quality).',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'Uma ferramenta de avaliacao de LLM passa um conjunto fixo de casos de teste pelo seu prompt ou agente, pontua cada saida com verificacoes deterministas, nota por LLM como juiz ou funcoes proprias, e informa se uma mudanca melhorou ou degradou a qualidade antes do lancamento.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'E uma suite de testes para algo que nunca da a mesma resposta duas vezes. Em vez de conferir uma saida exata, voce a pontua e observa se a media anda na direcao errada quando muda um prompt.',
+          },
+        ],
+        note: 'Adote uma plataforma de avaliacao quando seu conjunto de testes ficar grande o bastante para que gerencia-lo em planilha ou script vire o gargalo. Antes disso, um script pontuado na CI faz o mesmo trabalho.',
+      },
+      comparison: {
+        id: 'comparison',
+        title: 'Braintrust, Weave e Promptfoo comparados',
+        content: '**As tres fazem LLM como juiz, avaliadores proprios e testes de regressao sobre conjuntos de dados, entao a comparacao e sobre modelo de hospedagem, estrutura de custo e elegibilidade.** Os precos foram lidos nas paginas de cada fornecedor em 28 de agosto de 2026, e os numeros de repositorio na API do GitHub no mesmo dia.',
+        tableFormat: true,
+        itemHeadings: true,
+        columns: ['Criterio', 'Braintrust', 'Weave', 'Promptfoo'],
+        rows: [
+          { Criterio: 'Modelo', Braintrust: 'Plataforma hospedada com interface', Weave: 'Hospedada, parte do W&B', Promptfoo: 'CLI e biblioteca que voce executa' },
+          { Criterio: 'Licenca', Braintrust: 'Comercial', Weave: 'SDK Apache-2.0, servico hospedado', Promptfoo: 'MIT' },
+          { Criterio: 'Nivel gratuito', Braintrust: '10.000 pontuacoes/mes, 1 GB, 14 dias', Weave: '1 GB/mes de ingestao, assentos ilimitados', Promptfoo: 'Gratuito em qualquer escala' },
+          { Criterio: 'Entrada paga', Braintrust: 'Pro US$ 249/mes, US$ 249 de credito', Weave: 'A partir de US$ 60/mes, 1,5 GB', Promptfoo: 'Nivel Enterprise, sob medida' },
+          { Criterio: 'Limite de elegibilidade', Braintrust: 'Nenhum declarado', Weave: 'Pro so abaixo de 50 funcionarios', Promptfoo: 'Nenhum' },
+          { Criterio: 'Excedente', Braintrust: 'US$ 1,50 por 1.000 pontuacoes no Pro', Weave: 'US$ 0,10 por MB de ingestao', Promptfoo: 'So o gasto de API do modelo' },
+          { Criterio: 'Auto-hospedagem', Braintrust: 'Enterprise, on-premise ou hospedada', Weave: 'Enterprise, inquilino unico', Promptfoo: 'Padrao — roda nas suas maquinas' },
+          { Criterio: 'Programa de afiliados', Braintrust: 'Nao encontrado', Weave: 'Nao encontrado', Promptfoo: 'Nao encontrado' },
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'O nivel Pro do Weave nao e apenas um plano mais barato: o Weights & Biases afirma que ele e "for early-stage teams fewer than 50 employees" e que clientes que excedam essas diretrizes precisam migrar para o Enterprise. Acima desse quadro, a comparacao real e Braintrust Pro a US$ 249 contra um orcamento Enterprise sob medida, nao contra US$ 60.',
+          },
+        ],
+      },
+      braintrust: {
+        id: 'braintrust',
+        title: 'Braintrust: a escolha de producao',
+        content: '**O Braintrust e o que se escolhe quando pessoas que nao escrevem codigo precisam olhar os resultados da avaliacao.** Seu valor se concentra na interface hospedada, no versionamento de conjuntos de dados e no fluxo de revisao humana, justamente a parte que de outro modo voce teria de construir.',
+        rankedItems: [
+          {
+            rank: 1,
+            name: 'Braintrust — melhor para times de producao multidisciplinares',
+            tagline: 'Gratuito ate 10.000 pontuacoes por mes, Pro US$ 249 com US$ 249 de credito incluso',
+            verdict: 'O nivel Starter gratuito e incomumente generoso para uma plataforma hospedada: 10.000 pontuacoes por mes, 1 GB de dados processados, 14 dias de retencao, US$ 10 de credito de modelo e usuarios, projetos, conjuntos de dados e experimentos ilimitados. Assentos ilimitados num nivel gratuito importam aqui, porque a razao inteira de escolher o Braintrust e deixar gerentes de produto e especialistas de dominio revisarem falhas sem comprar licencas para eles. O Pro, a US$ 249 por mes, eleva isso a 50.000 pontuacoes, 5 GB e 30 dias de retencao, e inclui US$ 249 de credito de modelo, o que compensa boa parte do gasto do modelo juiz numa carga media. O excedente e cobrado em vez de bloquear: US$ 1,50 por 1.000 pontuacoes e US$ 3 por GB no Pro. O Enterprise acrescenta retencao e exportacao personalizadas, RBAC e implantacao on-premise ou hospedada.',
+            pros: [
+              'Usuarios ilimitados ja no nivel gratuito, que e exatamente o ponto',
+              'O nivel gratuito de 10.000 pontuacoes por mes cobre de fato projetos iniciais',
+              'O Pro inclui US$ 249 de credito de modelo, compensando boa parte do gasto do juiz',
+              'Implantacao on-premise ou hospedada disponivel para cargas sensiveis',
+            ],
+            cons: [
+              '14 dias de retencao no gratuito e pouco para comparar com o mes passado',
+              'A auto-hospedagem exige Enterprise e conversa comercial, sem preco publicado',
+              'Plataforma comercial: diferente do Promptfoo, nao ha alternativa se os precos mudarem',
+            ],
+            affiliateLinks: [
+              {
+                url: 'https://www.braintrust.dev/pricing',
+                productName: 'Braintrust',
+                productCategory: 'dev-tool',
+                priceRange: 'Gratuito 10.000 pontuacoes/mes; Pro US$ 249/mes; Enterprise sob medida',
+                label: 'Braintrust — ver precos',
+              },
+            ],
+          },
+        ],
+        note: 'Use o Braintrust quando a revisao for atividade de time. Se so engenheiros abrem os resultados, voce esta pagando por uma interface que nao vai usar.',
+      },
+      weave: {
+        id: 'weave',
+        title: 'Weave: a escolha do Weights & Biases',
+        content: '**O Weave e a resposta obvia se seu time ja acompanha experimentos no Weights & Biases, e uma venda mais dificil se nao acompanha.** A integracao e o argumento: as avaliacoes chegam ao lado das execucoes que voce ja olha.',
+        rankedItems: [
+          {
+            rank: 1,
+            name: 'Weave — melhor dentro do ecossistema Weights & Biases',
+            tagline: 'Gratuito 1 GB por mes com assentos ilimitados, Pro a partir de US$ 60 abaixo de 50 funcionarios',
+            verdict: 'O Weave cobre avaliacoes de aplicacoes, rastreamento e avaliadores, e o nivel gratuito da assentos Weave ilimitados com 1 GB por mes de ingestao, um ponto de partida razoavel para um time pequeno. O Pro comeca em US$ 60 por mes com cobranca mensal e 1,5 GB, e a ingestao adicional custa US$ 0,10 por MB. O detalhe esta na elegibilidade mais que no preco: o Weights & Biases afirma que o Pro e "for early-stage teams fewer than 50 employees" e que quem exceder essas diretrizes precisa migrar para o Enterprise. E no Enterprise que ficam as opcoes serias de implantacao, incluindo inquilino unico, conformidade HIPAA, chaves de criptografia gerenciadas pelo cliente, SSO e registros de auditoria. Note que inquilino unico se aproxima mais de uma instancia dedicada do que de um verdadeiro on-premise, entao confirme os detalhes com o W&B antes de supor que atende a uma exigencia estritamente on-premise.',
+            pros: [
+              'Nivel gratuito com assentos Weave ilimitados e 1 GB por mes de ingestao',
+              'As avaliacoes convivem com o acompanhamento de experimentos e o registro do W&B',
+              'O Enterprise oferece inquilino unico, HIPAA, chaves gerenciadas pelo cliente e SSO',
+              'Com US$ 60 por mes, a entrada paga mais baixa das tres',
+            ],
+            cons: [
+              'O Pro e restrito a organizacoes com menos de 50 funcionarios, um teto rigido',
+              'A cobranca por ingestao a US$ 0,10/MB e mais dificil de prever que uma contagem de pontuacoes',
+              'O argumento isolado mais fraco se voce ainda nao usa o Weights & Biases',
+            ],
+            affiliateLinks: [
+              {
+                url: 'https://wandb.ai/site/pricing/',
+                productName: 'Weave',
+                productCategory: 'dev-tool',
+                priceRange: 'Gratuito 1 GB/mes; Pro a partir de US$ 60/mes abaixo de 50 funcionarios; Enterprise sob medida',
+                label: 'Weave — ver precos do Weights & Biases',
+              },
+            ],
+          },
+        ],
+        note: 'Use o Weave se o W&B ja for seu sistema de registro. Acima de 50 funcionarios, orce o Enterprise antes de compara-lo ao Braintrust, porque o nivel de US$ 60 nao estara disponivel para voce.',
+      },
+      promptfoo: {
+        id: 'promptfoo',
+        title: 'Promptfoo: a escolha gratuita e nativa de CI',
+        content: '**O Promptfoo e o que nao custa nada em escala alguma, porque voce mesmo o executa.** E uma CLI e biblioteca, nao uma plataforma, entao as avaliacoes vivem como configuracao ao lado do seu codigo e rodam onde seus testes ja rodam.',
+        rankedItems: [
+          {
+            rank: 1,
+            name: 'Promptfoo — melhor opcao gratuita e nativa de CI',
+            tagline: '24,6 mil estrelas, licenca MIT, gratuito em qualquer escala, agora propriedade da OpenAI',
+            verdict: 'O Promptfoo tem 24.638 estrelas no GitHub e licenca MIT, e recebeu mudancas no dia em que esta pagina foi verificada, entao sua atividade e inequivoca. Como roda sobre infraestrutura que voce ja possui, nao ha medidor por pontuacao nem por gigabyte: seu unico custo sao as chamadas de API do modelo que as avaliacoes consomem, que voce pagaria em qualquer plataforma. Definir conjuntos de dados como YAML, CSV ou JS da mais trabalho que clicar numa interface, mas deixa as avaliacoes comparaveis num pull request, uma vantagem real quando a configuracao deve ser revisada como qualquer outro codigo. Vale saber o que ele e de fato: o projeto se descreve como teste de prompts, agentes e RAG, com red teaming, testes de intrusao e analise de vulnerabilidades para IA. Seguranca aqui nao e recurso secundario, e a OpenAI enquadrou sua aquisicao em torno de testes de seguranca de agentes.',
+            pros: [
+              'Gratuito em qualquer escala, sem medidor de pontuacoes nem de ingestao',
+              'Avaliacoes como configuracao versionada, comparavel e revisavel num pull request',
+              'Licenca MIT: nenhum fornecedor do qual depender se as condicoes mudarem',
+              'Red teaming e analise de vulnerabilidades sao de primeira classe, nao acrescimo',
+            ],
+            cons: [
+              'Sem interface hospedada por padrao: quem nao programa nao tem onde clicar',
+              'Conjuntos de dados em YAML e CSV dao mais trabalho que monta-los num navegador',
+              'Agora propriedade da OpenAI, o que e uma consideracao de governanca mesmo com o compromisso de codigo aberto',
+            ],
+            affiliateLinks: [
+              {
+                url: 'https://github.com/promptfoo/promptfoo',
+                productName: 'Promptfoo',
+                productCategory: 'dev-tool',
+                priceRange: 'Gratuito, licenca MIT, qualquer escala',
+                label: 'Promptfoo — repositorio de codigo aberto',
+              },
+            ],
+          },
+        ],
+        note: 'Use o Promptfoo quando quem le os resultados forem as mesmas pessoas que escrevem o codigo. Acrescente o Braintrust depois, se a revisao virar multidisciplinar.',
+      },
+      promptfooOpenai: {
+        id: 'promptfoo-openai',
+        title: 'O que a aquisicao pela OpenAI significa para o Promptfoo',
+        content: '**A OpenAI anunciou que adquiria o Promptfoo em 9 de marco de 2026, e se comprometeu publicamente a mante-lo de codigo aberto.** A declaracao da propria OpenAI diz: "Promptfoo will remain open source under the current license, and we will continue to service and support current customers." A aquisicao foi noticiada na epoca por TechCrunch, CNBC e Forbes, e confirmada nos sites da OpenAI e do Promptfoo.\n\nAs evidencias praticas sustentam o compromisso ate agora. Quase seis meses depois, o repositorio segue sob a organizacao `promptfoo`, segue com licenca MIT e recebeu mudancas no dia em que esta pagina foi verificada. E o que se quer ver.\n\nO motivo para pensar no assunto mesmo assim e governanca, nao licenca. Uma ferramenta de avaliacao e aquilo com que voce julga modelos, e agora pertence a uma empresa que fabrica modelos. A licenca MIT significa que voce pode bifurcar o projeto se o rumo dele deixar de servi-lo, uma protecao real que Braintrust e Weave nao oferecem. Mas se sua estrategia de avaliacao depende de neutralidade entre fornecedores de modelos, isso merece uma decisao deliberada e nao uma suposicao.',
+        callouts: [
+          {
+            type: 'note',
+            text: 'A OpenAI afirmou que a tecnologia do Promptfoo sera integrada ao OpenAI Frontier para red teaming automatizado e testes de seguranca de agentes. Isso e coerente com a enfase de seguranca que o Promptfoo ja tinha, e sugere que esse lado devera receber mais investimento que a avaliacao de proposito geral.',
+          },
+        ],
+        note: 'Continue com o Promptfoo se o que voce valoriza e a licenca MIT e a execucao local. Reconsidere se a neutralidade de fornecedor na sua ferramenta de avaliacao for um requisito declarado.',
+      },
+      pricing: {
+        id: 'pricing',
+        title: 'Como os precos se comparam',
+        content: '**O custo escala com volume de dados e gasto do modelo juiz, nao com assentos — e por isso usuarios ilimitados nos niveis gratuitos sao mais uteis do que parece a principio.** A tabela calcula uma carga media de cerca de 50.000 pontuacoes de avaliacao por mes.',
+        tableFormat: true,
+        itemHeadings: true,
+        columns: ['Cenario', 'Braintrust', 'Weave', 'Promptfoo'],
+        rows: [
+          { Cenario: 'Limite do nivel gratuito', Braintrust: '10.000 pontuacoes, 1 GB, 14 dias', Weave: '1 GB/mes de ingestao, assentos ilimitados', Promptfoo: 'Sem limite' },
+          { Cenario: 'Nivel pago', Braintrust: 'Pro US$ 249/mes', Weave: 'A partir de US$ 60/mes', Promptfoo: 'Nao e necessario' },
+          { Cenario: 'Incluso nesse nivel', Braintrust: '50.000 pontuacoes, 5 GB, US$ 249 credito', Weave: '1,5 GB de ingestao', Promptfoo: 'Nao se aplica' },
+          { Cenario: '50.000 pontuacoes por mes', Braintrust: 'Coberto pelo Pro a US$ 249', Weave: 'Depende dos GB, provavelmente acima de 1,5', Promptfoo: 'So gasto de API do modelo' },
+          { Cenario: 'Tarifa de excedente', Braintrust: 'US$ 1,50 por 1.000 pontuacoes, US$ 3/GB', Weave: 'US$ 0,10 por MB', Promptfoo: 'Nenhuma' },
+          { Cenario: 'Teto de elegibilidade', Braintrust: 'Nenhum declarado', Weave: 'Pro abaixo de 50 funcionarios', Promptfoo: 'Nenhum' },
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Varios comparativos afirmam que os US$ 249 de credito do Braintrust Pro sao uma promocao de 2026 que cai para US$ 100 por mes apos 1 de setembro de 2026. Esse vencimento nao aparece na pagina de precos do Braintrust, que lista apenas "6–12 months free for qualifying startups" como promocao. Calcule pela pagina do fornecedor e nao por um artigo comparativo, este incluido.',
+          },
+        ],
+        note: 'O Braintrust cobra por pontuacao e o Weave por gigabyte ingerido. Nao sao unidades comparaveis, entao estime as duas com sua propria carga antes de tratar US$ 60 como mais barato que US$ 249.',
+      },
+      selfHosting: {
+        id: 'self-hosting',
+        title: 'Auto-hospedagem e residencia de dados',
+        content: '**O Promptfoo e o unico dos tres em que a auto-hospedagem e o padrao e nao um upgrade empresarial.** Por ser CLI e biblioteca, seus casos de teste e as saidas do modelo nunca deixam seu ambiente, salvo se voce escolher deliberadamente um nivel hospedado. Para um time sob regras de residencia de dados, isso elimina a pergunta em vez de responde-la.\n\nO Braintrust oferece implantacao on-premise ou hospedada, mas so no Enterprise, o que significa preco sob medida e conversa comercial. E uma opcao real de implantacao e nao uma frase de marketing, mas voce nao consegue avalia-la em autoatendimento.\n\nO nivel Enterprise do Weave oferece uma opcao de inquilino unico com chaves de criptografia gerenciadas pelo cliente, conformidade HIPAA e conectividade privada segura. Leia com atencao: inquilino unico com chaves proprias e uma instancia dedicada, o que nao e a mesma coisa que rodar dentro do seu proprio perimetro. Se sua exigencia e estritamente on-premise, confirme os detalhes com o Weights & Biases em vez de supor que a opcao de inquilino unico a satisfaz.',
+        note: 'Escolha o Promptfoo quando os dados de avaliacao nao puderem deixar sua infraestrutura e voce quiser resolver isso por arquitetura e nao por contrato. Escolha o Braintrust Enterprise quando precisar de on-premise mais uma interface de revisao.',
+      },
+      whoShouldUse: {
+        id: 'who-should-use',
+        title: 'Quem deve usar o que',
+        content: '**O formato do time decide isso mais que listas de recursos.** Cinco perfis cobrem a maioria dos leitores.',
+        items: [
+          '**Desenvolvedora sozinha num MVP** → Promptfoo. Sem conta, sem medidor e sem nada a remover se o projeto mudar de rumo.',
+          '**Time de produto lancando um recurso de LLM com revisao de PM e QA** → Braintrust. Os usuarios ilimitados do nivel gratuito sao o ponto concreto que torna a revisao multidisciplinar viavel.',
+          '**Time que ja usa o Weights & Biases** → Weave, desde que esteja abaixo de 50 funcionarios para o Pro. Acima disso, orce o Enterprise antes de comparar.',
+          '**Time de seguranca ou plataforma testando injecao de prompt** → Promptfoo, cujo foco em red teaming combina com a tarefa. Veja tambem [ferramentas de seguranca de prompt e testes de injecao](/pt/prompt-engineering/prompt-security-tools-injection-testing).',
+          '**Time avaliando varios fornecedores de modelos** → Promptfoo ou Braintrust, e roteie as chamadas por um gateway para que comparar fornecedores seja uma mudanca de configuracao; veja [o melhor gateway de API para LLM](/pt/local-llms/best-llm-api-gateway-2026).',
+        ],
+      },
+      regionalContext: {
+        id: 'regional-context',
+        title: 'Ferramentas de avaliacao na UE, no Japao e na China',
+        content: 'Conjuntos de dados de avaliacao costumam ser construidos a partir do trafego de producao, o que os torna alguns dos dados mais sensiveis de uma pilha de LLM. Isso transforma a escolha entre hospedado e local numa questao de conformidade em tres mercados importantes.',
+        subsections: [
+          {
+            title: 'Uniao Europeia',
+            content: 'Um conjunto de avaliacao extraido de registros de producao contem o que seus usuarios digitaram, o que sob o GDPR e tratamento como qualquer outro, e envia-lo a uma plataforma hospedada nos EUA e transferencia nos termos dos artigos 44 a 49, salvo se os termos do fornecedor disserem o contrario. Voce precisa de um contrato de operador nos termos do artigo 28 com o Braintrust ou o Weights & Biases se os usar. O Regulamento de IA tambem pesa aqui de um jeito que favorece a avaliacao em geral: para sistemas no escopo, poder demonstrar que testou antes da implantacao faz parte da obrigacao e nao e um detalhe, e o Digital Omnibus adiou os deveres de alto risco do anexo III para 2 de dezembro de 2027 sem elimina-los. O Promptfoo rodando localmente contorna a questao da transferencia porque o conjunto de dados nunca sai.',
+          },
+          {
+            title: 'Japao',
+            content: 'O programa de governanca de IA do METI empurra empresas para provas auditaveis de que um sistema foi testado antes do lancamento, e execucoes de avaliacao sao exatamente essa prova quando ficam armazenadas onde voce as controla. Uma configuracao do Promptfoo versionada ao lado de seus resultados e um artefato de auditoria como um painel hospedado nao e, porque voce pode reproduzi-la do repositorio anos depois. Se em vez disso usar uma plataforma hospedada, verifique a retencao: o nivel gratuito do Braintrust guarda dados por 14 dias, menos do que a maioria das auditorias espera.',
+          },
+          {
+            title: 'China',
+            content: 'Sob a Lei de Seguranca de Dados (数据安全法) e as regras da CAC para transferencias transfronteiricas, o problema de conformidade e enviar a uma plataforma estrangeira um conjunto de avaliacao construido com trafego de usuarios da China continental, nao a avaliacao em si. Implantacoes que atendem times do continente normalmente exigem que a avaliacao rode em infraestrutura domestica. O Promptfoo e o unico dos tres que faz isso por padrao, o que o torna a escolha pratica independentemente de preferencias de recursos — veja [executar LLMs locais na China](/pt/local-llms/deepseek-local-china-data-privacy-2026).',
+          },
+        ],
+        note: 'Rode as avaliacoes localmente em qualquer mercado onde o proprio conjunto de dados seja o ativo sensivel. O Promptfoo faz disso o padrao; os outros dois transformam isso numa conversa Enterprise.',
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'Erros comuns ao escolher uma ferramenta de avaliacao',
+        numberedItems: [
+          {
+            title: 'Comparar US$ 60 com US$ 249 sem checar a elegibilidade',
+            whyItMatters: 'O Weave Pro e restrito a organizacoes com menos de 50 funcionarios. Acima desse quadro, a comparacao real e Braintrust Pro contra um orcamento Weave Enterprise sob medida, e o numero de US$ 60 nao esta disponivel para voce.',
+          },
+          {
+            title: 'Orcar em torno de um vencimento promocional do Braintrust que nao esta publicado',
+            whyItMatters: 'A afirmacao de que os creditos do Pro caem para US$ 100 por mes apos 1 de setembro de 2026 nao aparece na pagina de precos do Braintrust. Planejar uma migracao em torno de um vencimento que o fornecedor nao anunciou desperdica esforco; releia a pagina de precos.',
+          },
+          {
+            title: 'Tratar pontuacoes e gigabytes como unidades comparaveis',
+            whyItMatters: 'O Braintrust mede pontuacoes e o Weave mede ingestao. Uma carga que cabe folgada em 50.000 pontuacoes pode ou nao caber em 1,5 GB conforme o tamanho dos seus rastros. Estime as duas com seus proprios dados antes de ordenar por preco.',
+          },
+          {
+            title: 'Adotar uma plataforma para um conjunto de quinze casos',
+            whyItMatters: 'Abaixo de cerca de vinte casos de teste, um script pontuado na CI faz o mesmo trabalho sem conta, sem medidor e sem limite de retencao. Plataformas se justificam quando o gargalo e a gestao do conjunto de dados, nao a pontuacao.',
+          },
+          {
+            title: 'Supor que inquilino unico significa on-premise',
+            whyItMatters: 'A opcao Enterprise de inquilino unico do Weave com chaves gerenciadas pelo cliente e uma instancia dedicada, nao uma implantacao dentro do seu proprio perimetro. Se sua exigencia e estritamente on-premise, confirme com o W&B em vez de ler inquilino unico como equivalente.',
+          },
+        ],
+      },
+      skipThisIf: {
+        id: 'skip-this-if',
+        title: 'Pule isto se…',
+        content: '**Se seu conjunto de testes tem uma duzia de prompts e uma unica engenheira o executa, pule as tres e escreva um script pontuado na CI.** Voce obtem o mesmo sinal de regressao sem conta, medidor ou janela de retencao, e podera migrar para uma plataforma depois sem ter perdido nada, porque o ativo e o conjunto de dados e ele vai com voce.\n\nO limiar que vale esperar e quando gerenciar o conjunto de dados vira o trabalho: quando voce quer levar casos com falha da producao para o conjunto de testes rotineiramente, quando alguem que nao programa precisa dar nota as saidas, ou quando precisa comparar os resultados deste mes com os do trimestre passado. Esses sao problemas de gestao de dados, e e isso que voce esta de fato comprando. A pontuacao em si sempre foi a parte facil.',
+        callouts: [
+          {
+            type: 'tip',
+            text: 'Um gatilho pratico: adote uma plataforma na primeira vez que se pegar montando uma planilha para acompanhar qual versao do prompt pontuou o que. Essa planilha e o produto que voce esta prestes a comprar, e compra-lo sai mais barato que mante-lo.',
+          },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'Perguntas frequentes',
+        faqs: [
+          {
+            q: 'Qual e a melhor ferramenta de avaliacao de LLM em 2026?',
+            a: 'Braintrust para times em que pessoas nao tecnicas revisam resultados, gracas aos usuarios ilimitados ja no nivel gratuito. Weave se voce ja usa o Weights & Biases e esta abaixo de 50 funcionarios. Promptfoo se quer avaliacoes como configuracao versionada rodando de graca na sua propria infraestrutura. As tres cobrem LLM como juiz, avaliadores proprios e testes de regressao.',
+          },
+          {
+            q: 'A OpenAI adquiriu o Promptfoo?',
+            a: 'Sim. A OpenAI anunciou a aquisicao em 9 de marco de 2026 e declarou que o Promptfoo continuara de codigo aberto sob sua licenca atual e que os clientes existentes seguirao com servico e suporte. No fim de agosto de 2026 o repositorio segue sob a organizacao promptfoo, segue com licenca MIT e e mantido ativamente.',
+          },
+          {
+            q: 'Quanto custa o Braintrust?',
+            a: 'O nivel Starter gratuito inclui 10.000 pontuacoes por mes, 1 GB de dados processados, 14 dias de retencao, US$ 10 de credito de modelo e usuarios ilimitados. O Pro custa US$ 249 por mes e inclui US$ 249 de credito, 50.000 pontuacoes, 5 GB e 30 dias de retencao, com excedente a US$ 1,50 por 1.000 pontuacoes. O Enterprise tem preco sob medida e acrescenta implantacao on-premise ou hospedada.',
+          },
+          {
+            q: 'O Weave e gratuito e quais sao os limites?',
+            a: 'O Weave tem um nivel gratuito com assentos ilimitados e 1 GB por mes de ingestao de dados. O Pro comeca em US$ 60 por mes com 1,5 GB, mas o Weights & Biases o restringe a times em estagio inicial com menos de 50 funcionarios; organizacoes maiores precisam migrar para o Enterprise. A ingestao adicional custa US$ 0,10 por MB.',
+          },
+          {
+            q: 'O Promptfoo e mesmo gratuito em qualquer escala?',
+            a: 'Sim, no sentido de que a ferramenta tem licenca MIT e roda nas suas proprias maquinas, entao nao ha cobranca por pontuacao nem por gigabyte. Voce ainda paga as chamadas de API do modelo feitas pelas avaliacoes, mas esse custo existe em qualquer plataforma e nao e especifico do Promptfoo. Ha ainda um nivel Enterprise hospedado opcional por cima.',
+          },
+          {
+            q: 'Qual posso auto-hospedar?',
+            a: 'O Promptfoo por padrao, ja que e CLI e biblioteca e roda onde voce o executar. O Braintrust oferece implantacao on-premise ou hospedada no plano Enterprise. O Weave oferece uma opcao Enterprise de inquilino unico com chaves gerenciadas pelo cliente, que e uma instancia dedicada e nao um verdadeiro on-premise, entao confirme os detalhes se tiver exigencia estrita.',
+          },
+          {
+            q: 'Alguma delas tem programa de afiliados?',
+            a: 'Nao encontramos programa publico de afiliados ou indicacao para criadores no Braintrust, Weights & Biases nem Promptfoo. O Weights & Biases mantem um programa de parceiros, mas sua pagina publica descreve parcerias de revenda e integracao tecnologica voltadas a consultorias, nao um pagamento por indicacao. Note tambem que usebraintrust.com e um marketplace de talentos separado, sem relacao com braintrust.dev. A PromptQuorum nao ganha nada com esta pagina.',
+          },
+          {
+            q: 'Qual a diferenca entre avaliacao e monitoramento?',
+            a: 'A avaliacao roda um conjunto fixo de dados antes do lancamento e diz se uma mudanca melhorou ou degradou a qualidade. O monitoramento observa o trafego real depois do lancamento e diz o que o sistema esta fazendo agora. Esta pagina cobre o primeiro. Os dois se complementam e muitos times fazem ambos, mas as ferramentas e as perguntas sao diferentes.',
+          },
+        ],
+      },
+      verdict: {
+        id: 'verdict',
+        title: 'Veredito final',
+        items: [
+          '**Use o Braintrust se** pessoas que nao escrevem codigo precisam revisar os resultados — proximo passo: comece pelo nivel gratuito, que permite usuarios ilimitados, e veja se seus PMs realmente o abrem antes de pagar o Pro.',
+          '**Use o Weave se** o Weights & Biases ja for seu sistema de registro — proximo passo: confirme que esta abaixo do teto de 50 funcionarios antes de contar com o nivel de US$ 60, e orce o Enterprise se nao estiver.',
+          '**Use o Promptfoo se** quer avaliacoes como configuracao revisavel sem medidor de fornecedor — proximo passo: escreva seu primeiro conjunto de dados em YAML e rode-o na CI antes de avaliar qualquer coisa hospedada.',
+          '**Use o Promptfoo especificamente se** esta testando injecao de prompt e seguranca de agentes e nao apenas qualidade de saida — proximo passo: comece pelos recursos de red teaming, para onde a OpenAI esta direcionando investimento.',
+          '**Pule as tres se** voce tem uma duzia de casos de teste e uma unica engenheira — proximo passo: escreva um script pontuado na CI e reveja quando gerenciar o conjunto de dados virar o gargalo.',
+        ],
+        note: 'Nao encontramos programa de afiliados em nenhum dos tres fornecedores, e a PromptQuorum nao esta inscrita em nada. Todos os links desta pagina levam ao site ou repositorio do proprio fornecedor.',
+      },
+      sources: {
+        id: 'sources',
+        title: 'Fontes',
+        links: [
+          { url: 'https://www.braintrust.dev/pricing', title: 'Precos do Braintrust', description: 'Niveis Starter, Pro e Enterprise com limites de pontuacoes, dados e retencao, e a promocao para startups.' },
+          { url: 'https://wandb.ai/site/pricing/', title: 'Precos do Weights & Biases', description: 'Niveis gratuito, Pro e Enterprise do Weave, a restricao de menos de 50 funcionarios e a tarifa de US$ 0,10/MB.' },
+          { url: 'https://github.com/promptfoo/promptfoo', title: 'Repositorio do Promptfoo', description: 'Contagem de estrelas, licenca MIT e a descricao do proprio projeto sobre red teaming e analise de vulnerabilidades.' },
+          { url: 'https://openai.com/index/openai-to-acquire-promptfoo/', title: 'OpenAI: aquisicao do Promptfoo', description: 'O anuncio da propria OpenAI, incluindo o compromisso de manter o Promptfoo de codigo aberto sob sua licenca atual.' },
+          { url: 'https://www.promptfoo.dev/blog/promptfoo-joining-openai/', title: 'Promptfoo: juntando-se a OpenAI', description: 'O relato da aquisicao pelo proprio Promptfoo.' },
+          { url: 'https://techcrunch.com/2026/03/09/openai-acquires-promptfoo-to-secure-its-ai-agents/', title: 'OpenAI adquire Promptfoo (TechCrunch)', description: 'Confirmacao independente do anuncio de 9 de marco de 2026.' },
+          { url: 'https://www.cnbc.com/2026/03/09/open-ai-cybersecurity-promptfoo-ai-agents.html', title: 'OpenAI comprara o Promptfoo (CNBC)', description: 'Segundo relato independente da aquisicao e de seu enquadramento de seguranca.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'Leitura relacionada',
+        items: [
+          '[Melhores ferramentas de teste e avaliacao de prompts](/pt/prompt-engineering/best-prompt-testing-evaluation-tools) — o mesmo problema no nivel do prompt',
+          '[Como avaliar a qualidade de um prompt](/pt/prompt-engineering/how-to-evaluate-prompt-quality) — construir a rubrica que seus avaliadores vao aplicar',
+          '[Metricas de avaliacao de prompts](/pt/prompt-engineering/prompt-evaluation-metrics) — o que medir de fato depois de ter um conjunto de dados',
+          '[Ferramentas de seguranca de prompt e testes de injecao](/pt/prompt-engineering/prompt-security-tools-injection-testing) — o lado de red teaming em que o Promptfoo lidera',
+          '[Melhor gateway de API para LLM](/pt/local-llms/best-llm-api-gateway-2026) — rotear chamadas de avaliacao entre fornecedores para que comparar seja mudanca de configuracao',
+        ],
+      },
+    },
+    schema: {
+      '@type': 'TechArticle',
+      headline: 'Melhor ferramenta de avaliacao de LLM 2026: Braintrust, Weave ou Promptfoo',
+      description: 'Compara Braintrust, Weave e Promptfoo para avaliacao de LLM, com precos verificados, limites de elegibilidade, opcoes de auto-hospedagem e a aquisicao do Promptfoo pela OpenAI. Verificado em agosto de 2026.',
+      datePublished: '2026-08-28',
+      dateModified: '2026-08-28',
+      url: 'https://www.promptquorum.com/pt/local-llms/best-llm-evaluation-tools-2026',
+      inLanguage: 'pt-BR',
+      proficiencyLevel: 'Advanced',
+      author: { '@type': 'Person', name: 'Hans Kuepper' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      about: [
+        { '@type': 'Thing', name: 'Avaliacao de LLM' },
+        { '@type': 'Thing', name: 'Testes de regressao para IA' },
+      ],
+      mentions: [
+        { '@type': 'SoftwareApplication', name: 'Braintrust' },
+        { '@type': 'SoftwareApplication', name: 'Weave' },
+        { '@type': 'SoftwareApplication', name: 'Promptfoo' },
+      ],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'pt-BR',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'Qual e a melhor ferramenta de avaliacao de LLM em 2026?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Braintrust para times em que pessoas nao tecnicas revisam resultados, Weave se voce ja usa o Weights & Biases e esta abaixo de 50 funcionarios, e Promptfoo para avaliacoes como configuracao versionada rodando de graca na sua propria infraestrutura.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'A OpenAI adquiriu o Promptfoo?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Sim. A OpenAI anunciou a aquisicao em 9 de marco de 2026 e declarou que o Promptfoo continuara de codigo aberto sob sua licenca atual. No fim de agosto de 2026 o repositorio segue com licenca MIT e mantido ativamente.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Quanto custa o Braintrust?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'O nivel Starter gratuito inclui 10.000 pontuacoes por mes, 1 GB de dados, 14 dias de retencao e usuarios ilimitados. O Pro custa US$ 249 por mes com US$ 249 de credito de modelo, 50.000 pontuacoes e 5 GB. O Enterprise tem preco sob medida com implantacao on-premise ou hospedada.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'O Weave e gratuito e quais sao os limites?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'O Weave tem nivel gratuito com assentos ilimitados e 1 GB por mes de ingestao. O Pro comeca em US$ 60 por mes com 1,5 GB mas e restrito a times com menos de 50 funcionarios. A ingestao adicional custa US$ 0,10 por MB.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Ferramentas de avaliacao de LLM tem programas de afiliados?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Nao encontramos programa publico de afiliados no Braintrust, Weights & Biases nem Promptfoo. O programa de parceiros do Weights & Biases e um esquema de revenda e integracao para consultorias, nao um pagamento por indicacao.',
+          },
+        },
+      ],
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'Melhores ferramentas de avaliacao de LLM (agosto de 2026)',
+      inLanguage: 'pt-BR',
+      numberOfItems: 3,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Braintrust', description: 'Melhor para times de producao multidisciplinares — gratuito ate 10.000 pontuacoes por mes com usuarios ilimitados, Pro US$ 249 com US$ 249 de credito de modelo' },
+        { '@type': 'ListItem', position: 2, name: 'Weave', description: 'Melhor dentro do ecossistema Weights & Biases — gratuito 1 GB por mes com assentos ilimitados, Pro a partir de US$ 60 para times com menos de 50 funcionarios' },
+        { '@type': 'ListItem', position: 3, name: 'Promptfoo', description: 'Melhor opcao gratuita e nativa de CI — 24,6 mil estrelas, licenca MIT, roda na sua propria infraestrutura em qualquer escala' },
+      ],
+    },
+  },
+
+  ja: {
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2027-02-28',
+    theme: 'Tools & Interfaces',
+    title: '2026年 最適なLLM評価ツール：Braintrust・Weave・Promptfoo',
+    seoTitle: '2026年 最適なLLM評価ツール',
+    metaDescription: 'Braintrustは月1万スコアまで無料でProが249ドル、Weaveは60ドルから、PromptfooはMITでどの規模でも無料。2026年8月時点の確認済み価格。',
+    educationalLevel: 'Advanced',
+    audience: 'リリース前にLLMアプリケーションを検証する開発チーム',
+    affiliateDisclosure: true,
+    publishDate: '2026-08-28',
+    dateModified: '2026-08-28',
+    readTime: '13分で読めます',
+    primaryTerm: 'LLM評価ツール',
+    targetKeywords: [
+      'LLM評価ツール 2026',
+      'Braintrust Weave Promptfoo 比較',
+      'LLM評価プラットフォーム 比較',
+      'Promptfoo OpenAI 買収',
+      'LLM-as-Judge 採点',
+    ],
+    leadAnswerBlock: '**LLM機能を本番に投入するチームにとって最も総合力が高い評価基盤はBraintrustで、月1万スコアまで無料、Proは249ドルです。すでにWeights & Biasesを使っているならWeaveが自然な選択で、月60ドルから利用できますが、従業員50人未満の組織に限られます。Promptfooは最良の無料かつCIネイティブな選択肢です。MITライセンスで、自分のマシン上で動くためどの規模でも無料であり、2026年3月にOpenAIが買収したうえで、現行ライセンスのままオープンソースを維持すると公に表明しています。**',
+    quickAnswerTop: {
+      question: '2026年のLLM評価ツールはどれが最適ですか？',
+      answer: '**エンジニア以外が結果を確認する部門横断のチームにはBraintrust、すでにWeights & Biasesを使っているならWeave、ベンダーを一切介さずバージョン管理された設定として評価を持ちたいならPromptfooです。** 違いは採点機能にはありません。三つともLLM-as-Judge、独自スコアラー、データセットによる回帰テストを備えています。違いは、評価がどこで走り、誰が結果を読むかです。ホスト型の画面は、プロダクトマネージャーが失敗例を確認する必要があるときに費用に見合います。エンジニア一人がCIで評価を回すだけなら無駄になります。',
+      bullets: [
+        '**本番チームに総合的に最適：** Braintrust — 月1万スコアまで無料、Proは月249ドルで249ドル分のモデルクレジット込み',
+        '**Weights & Biases利用者に最適：** Weave — 月1GBまで無料で席数無制限、Proは従業員50人未満で月60ドルから',
+        '**無料かつCIネイティブで最適：** Promptfoo — スター2.46万、MIT、自社インフラで動作、規模の上限なし',
+        '**セキュリティとレッドチーミングに最適：** Promptfoo — 掲げる主眼は脆弱性診断とレッドチーミングであって採点だけではない',
+        '**三つとも** 発信者向けの公開アフィリエイトプログラムを持たないため、本ページに有料掲載は一切ありません',
+        '**プラットフォーム自体を見送るべき場合：** テストケースが20件未満なら、CIで採点するスクリプトで十分',
+      ],
+      updatedDate: '2026-08-28',
+    },
+    toc: [
+      { label: '要点', anchor: 'tldr' },
+      { label: '状況別の最適な選択', anchor: 'best-choice' },
+      { label: 'LLM評価ツールが実際に担うこと', anchor: 'what-is-llm-eval' },
+      { label: '比較表', anchor: 'comparison' },
+      { label: 'Braintrust：本番向けの選択', anchor: 'braintrust' },
+      { label: 'Weave：Weights & Biases向けの選択', anchor: 'weave' },
+      { label: 'Promptfoo：無料でCIネイティブな選択', anchor: 'promptfoo' },
+      { label: 'OpenAIによる買収が意味すること', anchor: 'promptfoo-openai' },
+      { label: '料金の比較', anchor: 'pricing' },
+      { label: '自社運用とデータ所在地', anchor: 'self-hosting' },
+      { label: '誰が何を使うべきか', anchor: 'who-should-use' },
+      { label: '地域別の状況：EU・日本・中国', anchor: 'regional-context' },
+      { label: 'よくある間違い', anchor: 'common-mistakes' },
+      { label: '見送るべき場合', anchor: 'skip-this-if' },
+      { label: 'よくある質問', anchor: 'faq' },
+      { label: '最終評価', anchor: 'verdict' },
+      { label: '出典', anchor: 'sources' },
+      { label: '関連記事', anchor: 'related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        isTldr: true,
+        items: [
+          '**Braintrust** — 無料のStarterは月1万スコア、処理データ1GB、保持14日、モデルクレジット10ドル、ユーザー数無制限。Proは月249ドルで、249ドル分のモデルクレジット、データ5GB、5万スコア、保持30日を含みます。Enterpriseは保持期間の個別設定と、オンプレミスまたはホスト型の導入を加えます。',
+          '**Weave** — Weights & Biasesの一部です。無料枠ではWeaveの席数が無制限で、取り込みは月1GB。Proは1.5GBで月60ドルからですが、対象は「early-stage teams fewer than 50 employees」と明記されており、これを超える組織はEnterpriseへ移る必要があります。追加の取り込みは1MBあたり0.10ドルです。',
+          '**Promptfoo** — GitHubスター2.46万、MITライセンス。すでに自社が持つインフラ上でCLIおよびライブラリとして動くため、どの規模でも無料です。かかるのは評価自体が消費するモデルAPIの費用だけで、これはどのプラットフォームでもLLM-as-Judgeを使えば発生します。',
+          '**OpenAIは2026年3月9日にPromptfooの買収を発表し**、「Promptfoo will remain open source under the current license, and we will continue to service and support current customers.」と公に述べました。リポジトリは現在もMITライセンスで、本ページの確認当日にも更新されています。',
+          '**訂正しておくべき点があります。** 複数の記事が、BraintrustのProモデルクレジットを2026年9月1日以降は月100ドルに下がる期間限定価格として説明しています。しかしBraintrustの料金ページにそのような終了日は記載されていません。掲載されている唯一の特典は「6–12 months free for qualifying startups」です。予算は提供元のページに基づいて組んでください。',
+          '**Promptfooは評価ツールであると同時にセキュリティツールです。** 自らの説明はレッドチーミング、侵入テスト、脆弱性診断から始まり、OpenAIも買収をエージェントのセキュリティ検証という文脈で説明しました。これはBraintrustやWeaveとの実質的な重点の違いです。',
+          '三つとも、発信者向けの公開アフィリエイトや紹介プログラムを持ちません。Weights & Biasesはパートナープログラムを運営していますが、これはコンサルティング企業を対象とした再販・技術連携の枠組みであり、紹介ごとの報酬ではありません。PromptQuorumは本ページから収益を得ていません。',
+        ],
+      },
+      bestChoice: {
+        id: 'best-choice',
+        title: '🏆 状況別の最適な選択',
+        content: '**採点機能の一覧ではなく、評価がどこで走り誰が結果を読むかで選んでください。三つとも同じ採点の基本要素を備えています。** 以下を上から読み、自分に当てはまる最初の行で止めてください。',
+        items: [
+          '**コードを書かない人が失敗例を確認する必要がある** → Braintrust。ホスト型の画面、人によるレビュー用のキュー、データセットのバージョン管理は、まさにそのために存在し、無料枠が初期の利用量の大半をまかないます。',
+          '**すでにWeights & Biasesを使っている** → Weave。評価が既存の実験管理の隣に並び、無料枠では席数が無制限です。Proを前提にする前に従業員50人の上限を確認してください。',
+          '**ベンダーなしで、バージョン管理された設定として評価を持ちたい** → Promptfoo。コードの隣に置くYAMLやJSで、プルリクエストで差分を確認でき、規模を問わず無料です。',
+          '**品質だけでなくプロンプトインジェクションやエージェントのセキュリティを検証している** → Promptfoo。レッドチーミングと脆弱性診断が掲げる目的です。[プロンプトのセキュリティとインジェクション検証ツール](/ja/prompt-engineering/prompt-security-tools-injection-testing)もご覧ください。',
+          '**テストケースがわずかで、担当エンジニアも一人** → まだどれも不要です。データセットが管理を要する規模になるまでは、CIで採点するスクリプトで足ります。',
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.braintrust.dev/pricing',
+            productName: 'Braintrust',
+            productCategory: 'dev-tool',
+            priceRange: '無料で月1万スコア、Proは月249ドルで249ドル分のクレジット付き',
+            label: 'Braintrust — 料金を見る',
+          },
+          {
+            url: 'https://github.com/promptfoo/promptfoo',
+            productName: 'Promptfoo',
+            productCategory: 'dev-tool',
+            priceRange: '無料、MITライセンス、規模の制限なし',
+            label: 'Promptfoo — オープンソースリポジトリ',
+          },
+        ],
+      },
+      whatIsLlmEval: {
+        id: 'what-is-llm-eval',
+        title: 'LLM評価ツールが実際に担うこと',
+        content: '**LLM評価ツールは、テストケースのデータセットをプロンプトやエージェントに通して各出力を採点し、変更が利用者に届く前に良くなったのか悪くなったのかを判断できるようにします。** データセットは通常、入力と期待出力の組で、本番ログから抽出したもの、境界ケースとして手書きしたもの、あるいは生成したものです。スコアラーは、文字列一致やJSONスキーマ検証のような決定的な検査から、二つ目のモデルが評価基準に沿って採点するLLM-as-Judge、さらに自分で書く独自関数まで幅があります。\n\nこれは、稼働後にシステムが何をしているかを見張るのとは別の仕事です。評価は「この変更を出して安全か」に答え、本番監視は「いま何をしているか」に答えます。本ページは前者を扱います。プロンプト単位で同じ問題を見る場合は[プロンプト品質の評価方法](/ja/prompt-engineering/how-to-evaluate-prompt-quality)をご覧ください。',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'LLM評価ツールとは、固定したテストケースのデータセットをプロンプトやエージェントに通し、決定的な検査・LLM-as-Judgeによる採点・独自関数で各出力を採点して、リリース前に変更が品質を改善したか劣化させたかを報告する仕組みです。',
+          },
+          {
+            type: 'plain-terms',
+            text: '同じ答えを二度返さないものに対するテストスイートです。厳密な出力を突き合わせる代わりに採点し、プロンプトを変えたときに平均が悪い方へ動かないかを見張ります。',
+          },
+        ],
+        note: 'テストデータセットが大きくなり、表計算やスクリプトでの管理そのものが足かせになった時点で評価プラットフォームを導入してください。それ以前は、CIで採点するスクリプトが同じ仕事をします。',
+      },
+      comparison: {
+        id: 'comparison',
+        title: 'Braintrust・Weave・Promptfooの比較',
+        content: '**三つともLLM-as-Judge、独自スコアラー、データセットによる回帰テストを備えているため、比較の軸はホスティング方式、費用構造、利用条件になります。** 料金は2026年8月28日に各社の料金ページから、リポジトリの数値は同日にGitHub APIから取得しました。',
+        tableFormat: true,
+        itemHeadings: true,
+        columns: ['評価軸', 'Braintrust', 'Weave', 'Promptfoo'],
+        rows: [
+          { 評価軸: '形態', Braintrust: '画面付きのホスト型基盤', Weave: 'ホスト型、W&Bの一部', Promptfoo: '自分で動かすCLIとライブラリ' },
+          { 評価軸: 'ライセンス', Braintrust: '商用', Weave: 'SDKはApache-2.0、サービスはホスト型', Promptfoo: 'MIT' },
+          { 評価軸: '無料枠', Braintrust: '月1万スコア、1GB、保持14日', Weave: '取り込み月1GB、席数無制限', Promptfoo: 'どの規模でも無料' },
+          { 評価軸: '有料の入り口', Braintrust: 'Pro 月249ドル、249ドル分クレジット', Weave: '月60ドルから、1.5GB', Promptfoo: 'Enterprise枠、個別見積' },
+          { 評価軸: '利用条件の上限', Braintrust: '明示なし', Weave: 'Proは従業員50人未満のみ', Promptfoo: 'なし' },
+          { 評価軸: '超過分', Braintrust: 'Proで1,000スコアあたり1.50ドル', Weave: '取り込み1MBあたり0.10ドル', Promptfoo: '自分のモデルAPI費用のみ' },
+          { 評価軸: '自社運用', Braintrust: 'Enterprise、オンプレミスまたはホスト型', Weave: 'Enterprise、シングルテナント', Promptfoo: '既定 — 自分の環境で動く' },
+          { 評価軸: 'アフィリエイト', Braintrust: '確認できず', Weave: '確認できず', Promptfoo: '確認できず' },
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'WeaveのProは単に安い料金というわけではありません。Weights & Biasesは「for early-stage teams fewer than 50 employees」向けと明記し、その基準を超える顧客はEnterpriseへ移行する必要があるとしています。人数がそれを超えるなら、実際の比較対象はBraintrust Proの249ドルと個別見積のEnterpriseであって、60ドルではありません。',
+          },
+        ],
+      },
+      braintrust: {
+        id: 'braintrust',
+        title: 'Braintrust：本番向けの選択',
+        content: '**Braintrustは、コードを書かない人が評価結果を見る必要があるときに選ぶものです。** その価値はホスト型の画面、データセットのバージョン管理、人によるレビューの流れに集中しており、これはまさに自前で作らねばならない部分です。',
+        rankedItems: [
+          {
+            rank: 1,
+            name: 'Braintrust — 部門横断の本番チームに最適',
+            tagline: '月1万スコアまで無料、Proは249ドルで249ドル分のクレジット込み',
+            verdict: '無料のStarter枠はホスト型基盤としては異例に手厚く、月1万スコア、処理データ1GB、保持14日、モデルクレジット10ドルに加え、ユーザー・プロジェクト・データセット・実験がいずれも無制限です。無料枠で席数が無制限である点はここで効いてきます。Braintrustを選ぶ理由そのものが、プロダクトマネージャーや業務の専門家にライセンスを買い与えずに失敗例を確認してもらうことだからです。月249ドルのProはこれを5万スコア、5GB、保持30日に引き上げ、249ドル分のモデルクレジットを含むため、中規模の負荷では採点用モデルの費用をおおむね相殺します。超過は遮断ではなく従量課金で、Proでは1,000スコアあたり1.50ドル、1GBあたり3ドルです。Enterpriseは保持と書き出しの個別設定、RBAC、オンプレミスまたはホスト型の導入を加えます。',
+            pros: [
+              '無料枠でもユーザー数が無制限で、これこそが選ぶ理由になる',
+              '月1万スコアの無料枠は初期段階のプロジェクトを実際にまかなえる',
+              'Proは249ドル分のモデルクレジットを含み、採点用モデルの費用を大きく相殺する',
+              '機微なデータを扱う用途向けにオンプレミスまたはホスト型の導入が可能',
+            ],
+            cons: [
+              '無料枠の保持14日は、前月と比べたい場合には短い',
+              '自社運用はEnterpriseと商談が必要で、価格が公開されていない',
+              '商用基盤のため、Promptfooと違い料金改定時の逃げ道がない',
+            ],
+            affiliateLinks: [
+              {
+                url: 'https://www.braintrust.dev/pricing',
+                productName: 'Braintrust',
+                productCategory: 'dev-tool',
+                priceRange: '無料で月1万スコア、Pro月249ドル、Enterpriseは個別見積',
+                label: 'Braintrust — 料金を見る',
+              },
+            ],
+          },
+        ],
+        note: 'レビューがチームの活動であるときにBraintrustを使ってください。結果を開くのがエンジニアだけなら、使わない画面に費用を払うことになります。',
+      },
+      weave: {
+        id: 'weave',
+        title: 'Weave：Weights & Biases向けの選択',
+        content: '**チームがすでにWeights & Biasesで実験を管理しているならWeaveが当然の答えで、そうでなければ説得力は落ちます。** 論点は統合そのもので、評価がすでに見ている実行結果の隣に並びます。',
+        rankedItems: [
+          {
+            rank: 1,
+            name: 'Weave — Weights & Biasesの環境で最適',
+            tagline: '月1GBまで無料で席数無制限、Proは従業員50人未満で月60ドルから',
+            verdict: 'Weaveはアプリケーションの評価、トレース、スコアラーを扱い、無料枠ではWeaveの席数が無制限で取り込みは月1GBと、小さなチームには妥当な出発点です。Proは月額課金で月60ドルから、1.5GBが付き、追加の取り込みは1MBあたり0.10ドルです。引っかかるのは価格より利用条件で、Weights & BiasesはProを「for early-stage teams fewer than 50 employees」向けとし、基準を超える顧客はEnterpriseへ移る必要があるとしています。本格的な導入の選択肢はEnterpriseにあり、シングルテナント、HIPAA準拠、顧客管理の暗号鍵、SSO、監査ログが含まれます。ただしシングルテナントは真のオンプレミスというより専用インスタンスに近いため、オンプレミス限定の要件を満たすと決めてかからず、W&Bに詳細を確認してください。',
+            pros: [
+              '無料枠でWeaveの席数が無制限、取り込みは月1GB',
+              '評価が既存のW&Bの実験管理やレジストリと並ぶ',
+              'Enterpriseはシングルテナント、HIPAA、顧客管理の暗号鍵、SSOを提供',
+              '月60ドルは三つの中で最も低い有料の入り口',
+            ],
+            cons: [
+              'Proは従業員50人未満の組織に限られ、これは動かせない上限',
+              '1MBあたり0.10ドルの取り込み課金はスコア数より見積もりにくい',
+              'すでにWeights & Biasesを使っていない場合、単体での説得力が最も弱い',
+            ],
+            affiliateLinks: [
+              {
+                url: 'https://wandb.ai/site/pricing/',
+                productName: 'Weave',
+                productCategory: 'dev-tool',
+                priceRange: '無料で月1GB、Proは従業員50人未満で月60ドルから、Enterpriseは個別見積',
+                label: 'Weave — Weights & Biasesの料金を見る',
+              },
+            ],
+          },
+        ],
+        note: 'W&Bがすでに記録の基盤になっているならWeaveを使ってください。従業員が50人を超えるなら、Braintrustと比べる前にEnterpriseを見積もってください。60ドルの枠は使えません。',
+      },
+      promptfoo: {
+        id: 'promptfoo',
+        title: 'Promptfoo：無料でCIネイティブな選択',
+        content: '**Promptfooはどの規模でも費用がかからないもので、理由は自分で動かすからです。** プラットフォームではなくCLIとライブラリなので、評価はコードの隣に設定として置かれ、テストがすでに走っている場所で実行されます。',
+        rankedItems: [
+          {
+            rank: 1,
+            name: 'Promptfoo — 無料かつCIネイティブで最良の選択肢',
+            tagline: 'スター2.46万、MITライセンス、どの規模でも無料、現在はOpenAIの所有',
+            verdict: 'PromptfooはGitHubスター24,638、ライセンスはMITで、本ページの確認当日にも更新されており、活動は明白です。すでに自社が持つインフラ上で動くため、スコアやギガバイト単位のメーターはありません。かかるのは評価が消費するモデルAPIの呼び出し費用だけで、これはどのプラットフォームでも支払うものです。データセットをYAML、CSV、JSで定義するのは画面をクリックするより手間ですが、プルリクエストで差分を確認できるようになり、評価設定を他のコードと同じようにレビューすべき場合には実利があります。実態を知っておく価値があります。プロジェクト自身の説明は、プロンプト・エージェント・RAGの検証に加え、AI向けのレッドチーミング、侵入テスト、脆弱性診断を挙げています。ここでのセキュリティは付随機能ではなく、OpenAIも買収をエージェントのセキュリティ検証という文脈で説明しました。',
+            pros: [
+              'どの規模でも無料で、スコアや取り込みのメーターがない',
+              '評価がバージョン管理された設定となり、プルリクエストで差分を確認しレビューできる',
+              'MITライセンスのため、条件が変わっても依存すべきベンダーがいない',
+              'レッドチーミングと脆弱性診断が後付けではなく中核',
+            ],
+            cons: [
+              '既定ではホスト型の画面がなく、コードを書かない人がクリックする先がない',
+              'YAMLやCSVのデータセットは、ブラウザで組み立てるより準備の手間が大きい',
+              '現在はOpenAIの所有であり、オープンソースの表明があってもガバナンス上の論点は残る',
+            ],
+            affiliateLinks: [
+              {
+                url: 'https://github.com/promptfoo/promptfoo',
+                productName: 'Promptfoo',
+                productCategory: 'dev-tool',
+                priceRange: '無料、MITライセンス、規模の制限なし',
+                label: 'Promptfoo — オープンソースリポジトリ',
+              },
+            ],
+          },
+        ],
+        note: '評価結果を読む人とコードを書く人が同じであるときにPromptfooを使ってください。レビューが部門横断になったら後からBraintrustを足せば済みます。',
+      },
+      promptfooOpenai: {
+        id: 'promptfoo-openai',
+        title: 'OpenAIによる買収がPromptfooにとって意味すること',
+        content: '**OpenAIは2026年3月9日にPromptfooの買収を発表し、オープンソースを維持すると公に約束しました。** OpenAI自身の文言は「Promptfoo will remain open source under the current license, and we will continue to service and support current customers.」です。買収は当時TechCrunch、CNBC、Forbesが報じ、OpenAIとPromptfooそれぞれのサイトでも確認できます。\n\n現時点の実態はその約束を裏づけています。ほぼ半年を経てもリポジトリは`promptfoo`組織のままで、MITライセンスのままで、本ページの確認当日にも更新されています。望ましい状態です。\n\nそれでも考えておくべき理由は、ライセンスではなくガバナンスにあります。評価ツールはモデルを判定するための道具であり、それがいまモデルを作る企業の所有になりました。MITライセンスは、プロジェクトの方向性が自分たちに合わなくなればフォークできることを意味し、これはBraintrustにもWeaveにもない実質的な保護です。ただし評価戦略がモデルベンダー間の中立性に依拠しているなら、それは前提として流すのではなく、意識的に決めるべき事柄です。',
+        callouts: [
+          {
+            type: 'note',
+            text: 'OpenAIは、Promptfooの技術を自動レッドチーミングとエージェントのセキュリティ検証のためにOpenAI Frontierへ統合すると述べています。これはPromptfooが元から持つセキュリティ重視と整合し、汎用の評価よりセキュリティ側に投資が向かう可能性を示唆します。',
+          },
+        ],
+        note: 'MITライセンスとローカル実行こそが重要なら、Promptfooを使い続けてください。評価ツールにおけるベンダー中立性が明示的な要件なら、改めて検討してください。',
+      },
+      pricing: {
+        id: 'pricing',
+        title: '料金の比較',
+        content: '**費用は席数ではなくデータ量と採点用モデルの支出で増えます。だからこそ無料枠のユーザー数無制限は、見た目以上に効いてきます。** 下表は月およそ5万スコアという中規模の負荷で試算しています。',
+        tableFormat: true,
+        itemHeadings: true,
+        columns: ['シナリオ', 'Braintrust', 'Weave', 'Promptfoo'],
+        rows: [
+          { シナリオ: '無料枠の上限', Braintrust: '1万スコア、1GB、保持14日', Weave: '取り込み月1GB、席数無制限', Promptfoo: '上限なし' },
+          { シナリオ: '有料の枠', Braintrust: 'Pro 月249ドル', Weave: '月60ドルから', Promptfoo: '不要' },
+          { シナリオ: 'その枠に含まれるもの', Braintrust: '5万スコア、5GB、249ドル分クレジット', Weave: '取り込み1.5GB', Promptfoo: '該当なし' },
+          { シナリオ: '月5万スコアの場合', Braintrust: '249ドルのProで収まる', Weave: 'GB次第、1.5GBを超える公算', Promptfoo: 'モデルAPI費用のみ' },
+          { シナリオ: '超過時の単価', Braintrust: '1,000スコア1.50ドル、1GB 3ドル', Weave: '1MBあたり0.10ドル', Promptfoo: 'なし' },
+          { シナリオ: '利用条件の上限', Braintrust: '明示なし', Weave: 'Proは従業員50人未満', Promptfoo: 'なし' },
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'いくつかの比較記事は、BraintrustのPro向け249ドル分クレジットを2026年の期間限定とし、2026年9月1日以降は月100ドルに下がると述べています。その終了日はBraintrustの料金ページには載っておらず、掲載されている特典は「6–12 months free for qualifying startups」だけです。比較記事ではなく提供元のページで試算してください。本ページも例外ではありません。',
+          },
+        ],
+        note: 'Braintrustはスコア単位、Weaveは取り込みギガバイト単位で課金します。比較可能な単位ではないので、60ドルを249ドルより安いと見なす前に、自分の負荷で両方を見積もってください。',
+      },
+      selfHosting: {
+        id: 'self-hosting',
+        title: '自社運用とデータ所在地',
+        content: '**三つのうち自社運用が既定であり、企業向けの上位機能ではないのはPromptfooだけです。** CLIとライブラリであるため、テストケースもモデルの出力も、ホスト型の枠をあえて選ばない限り自分の環境から出ません。データ所在地の規制下にあるチームにとって、これは問いに答えるのではなく問い自体を消し去ります。\n\nBraintrustはオンプレミスまたはホスト型の導入を提供しますが、Enterpriseに限られ、個別価格と商談が前提になります。マーケティング上の文言ではなく実在する導入形態ですが、セルフサービスでは評価できません。\n\nWeaveのEnterpriseは、顧客管理の暗号鍵、HIPAA準拠、安全なプライベート接続を伴うシングルテナントの選択肢を提供します。ここは慎重に読んでください。顧客管理鍵を伴うシングルテナントは専用インスタンスであり、自社の境界内で動かすことと同義ではありません。要件が厳密にオンプレミスなら、シングルテナントで満たされると決めてかからず、Weights & Biasesに詳細を確認してください。',
+        note: '評価データが自社インフラから出てはならず、契約ではなく設計でそれを担保したいならPromptfooを選んでください。オンプレミスに加えてレビュー用の画面も要るならBraintrust Enterpriseを選んでください。',
+      },
+      whoShouldUse: {
+        id: 'who-should-use',
+        title: '誰が何を使うべきか',
+        content: '**機能一覧よりもチームの形が判断を左右します。** 次の5類型でほとんどの読者を説明できます。',
+        items: [
+          '**MVPに取り組む個人開発者** → Promptfoo。アカウントもメーターも不要で、方針が変わっても取り除くものがありません。',
+          '**PMとQAのレビューを伴ってLLM機能を出すプロダクトチーム** → Braintrust。無料枠のユーザー数無制限こそが、部門横断のレビューを成立させる具体的な条件です。',
+          '**すでにWeights & Biasesを使っているチーム** → Weave。ただしProは従業員50人未満が条件です。超えるならまずEnterpriseを見積もってください。',
+          '**プロンプトインジェクションを検証するセキュリティまたは基盤チーム** → Promptfoo。レッドチーミング重視が用途と合致します。[プロンプトのセキュリティとインジェクション検証ツール](/ja/prompt-engineering/prompt-security-tools-injection-testing)もご覧ください。',
+          '**複数のモデル提供者にまたがって評価するチーム** → PromptfooまたはBraintrust。加えてゲートウェイ経由で呼び出しを振り分け、提供者の比較を設定変更で済ませてください。[最適なLLM APIゲートウェイ](/ja/local-llms/best-llm-api-gateway-2026)をご覧ください。',
+        ],
+      },
+      regionalContext: {
+        id: 'regional-context',
+        title: 'EU・日本・中国における評価ツール',
+        content: '評価データセットはたいてい本番のトラフィックから作られるため、LLM基盤の中でもとりわけ機微なデータになります。そのため、ホスト型かローカルかという選択は主要3市場でコンプライアンスの問題になります。',
+        subsections: [
+          {
+            title: '欧州連合',
+            content: '本番ログから抽出した評価データセットには利用者が入力した内容がそのまま含まれ、GDPRのもとでは他の処理と同様に扱われます。それを米国でホストされる基盤へ送ることは、提供者の契約条件に別段の定めがない限り第44条から第49条にいう移転にあたります。BraintrustやWeights & Biasesを使うなら、第28条に基づく処理者契約が必要です。EU AI法もここでは評価そのものを後押しする形で関わります。適用対象のシステムでは、導入前に検証したことを示せることが義務の一部であり任意の配慮ではありません。Digital OmnibusはAnnex IIIの高リスク義務を2027年12月2日へ先送りしましたが、なくしたわけではありません。ローカルで動かすPromptfooは、データセットが外に出ないため移転の問題自体を回避します。',
+          },
+          {
+            title: '日本',
+            content: '経済産業省のAIガバナンスの取り組みは、システムがリリース前に検証されたことを監査可能な形で示すよう企業を促します。評価の実行結果は、自分で管理できる場所に保管されていれば、まさにその証跡になります。バージョン管理に登録されたPromptfooの設定と結果は、ホスト型のダッシュボードにはない監査証跡です。数年後でもリポジトリから再現できるからです。代わりにホスト型を使うなら保持期間を確認してください。Braintrustの無料枠はデータを14日しか保持せず、多くの監査で期待される期間より短くなります。',
+          },
+          {
+            title: '中国',
+            content: 'データセキュリティ法（数据安全法）とCACの越境移転規則のもとでは、コンプライアンス上の問題は評価そのものではなく、中国本土の利用者トラフィックから作った評価データセットを国外の基盤へアップロードすることにあります。本土のチームに提供する場合、通常は評価を国内インフラで実行することが求められます。三つのうち既定でそれを満たすのはPromptfooだけであり、機能の好みにかかわらず現実的な選択になります。[中国でローカルLLMを運用する](/ja/local-llms/deepseek-local-china-data-privacy-2026)をご覧ください。',
+          },
+        ],
+        note: 'データセットそのものが守るべき資産となる市場では、評価をローカルで実行してください。Promptfooはそれを既定とし、他の二つはEnterpriseの相談事にします。',
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: '評価ツール選定でよくある間違い',
+        numberedItems: [
+          {
+            title: '利用条件を確かめずに60ドルと249ドルを比べる',
+            whyItMatters: 'Weave Proは従業員50人未満の組織に限られます。それを超える人数では、実際の比較対象はBraintrust Proと個別見積のWeave Enterpriseであり、60ドルという数字はそもそも使えません。',
+          },
+          {
+            title: '公開されていないBraintrustの特典終了日を前提に予算を組む',
+            whyItMatters: 'Proのクレジットが2026年9月1日以降に月100ドルへ下がるという記述は、Braintrustの料金ページにありません。提供元が告知していない終了日に合わせて移行を計画するのは労力の無駄です。料金ページを読み直してください。',
+          },
+          {
+            title: 'スコアとギガバイトを比較可能な単位として扱う',
+            whyItMatters: 'Braintrustはスコアを、Weaveは取り込み量を測ります。5万スコアに余裕で収まる負荷でも、トレースの大きさ次第で1.5GBに収まるとは限りません。価格で順位づけする前に、自分のデータで両方を見積もってください。',
+          },
+          {
+            title: '15件のデータセットのためにプラットフォームを導入する',
+            whyItMatters: 'テストケースがおおむね20件を下回るなら、CIで採点するスクリプトが同じ仕事を、アカウントもメーターも保持期限もなしに果たします。プラットフォームが値打ちを持つのは、採点ではなくデータセットの管理が足かせになったときです。',
+          },
+          {
+            title: 'シングルテナントをオンプレミスと同一視する',
+            whyItMatters: '顧客管理鍵を伴うWeaveのEnterpriseシングルテナントは専用インスタンスであって、自社の境界内での運用ではありません。要件が厳密にオンプレミスなら、同等と読まずにW&Bへ確認してください。',
+          },
+        ],
+      },
+      skipThisIf: {
+        id: 'skip-this-if',
+        title: '見送るべき場合',
+        content: '**テストセットが十数個のプロンプトで、実行するのがエンジニア一人なら、三つとも見送ってCIで採点するスクリプトを書いてください。** アカウントもメーターも保持期間もなしに同じ回帰の兆候が得られ、あとからプラットフォームへ移っても失うものはありません。資産はデータセットであり、それは一緒に移せるからです。\n\n待つ価値のある閾値は、データセットの管理そのものが仕事になったときです。失敗したケースを本番から日常的にテストセットへ取り込みたくなったとき、コードを書かない人が出力を採点する必要が出たとき、あるいは今月の結果を前四半期と比べる必要が出たときです。これらはデータ管理の問題であり、実際に買っているのはそこです。採点自体は昔から簡単な部分でした。',
+        callouts: [
+          {
+            type: 'tip',
+            text: '実務的な判断の合図があります。どのプロンプト版がどの点数だったかを追うために表計算を作り始めた自分に気づいたら、そのときがプラットフォーム導入の時期です。その表計算こそ、これから買おうとしている製品であり、買うほうが自分で保守するより安く済みます。',
+          },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'よくある質問',
+        faqs: [
+          {
+            q: '2026年に最適なLLM評価ツールは何ですか？',
+            a: 'エンジニア以外が結果を確認するチームには、無料枠でもユーザー数が無制限のBraintrustです。すでにWeights & Biasesを使っていて従業員50人未満ならWeave。自社インフラで無料で動くバージョン管理された設定として評価を持ちたいならPromptfooです。三つともLLM-as-Judge、独自スコアラー、データセットによる回帰テストを備えています。',
+          },
+          {
+            q: 'OpenAIはPromptfooを買収したのですか？',
+            a: 'はい。OpenAIは2026年3月9日に買収を発表し、Promptfooは現行ライセンスのままオープンソースを維持し、既存顧客への提供とサポートも継続すると述べました。2026年8月下旬時点で、リポジトリはpromptfoo組織のまま、MITライセンスのままで、活発に保守されています。',
+          },
+          {
+            q: 'Braintrustはいくらですか？',
+            a: '無料のStarter枠には月1万スコア、処理データ1GB、保持14日、モデルクレジット10ドル、ユーザー数無制限が含まれます。Proは月249ドルで、249ドル分のモデルクレジット、5万スコア、5GB、保持30日を含み、超過は1,000スコアあたり1.50ドルです。Enterpriseは個別見積で、オンプレミスまたはホスト型の導入が加わります。',
+          },
+          {
+            q: 'Weaveは無料ですか、制限は何ですか？',
+            a: 'Weaveには席数無制限で取り込み月1GBの無料枠があります。Proは1.5GBで月60ドルからですが、Weights & Biasesはこれを従業員50人未満の初期段階のチームに限定しており、より大きな組織はEnterpriseへ移る必要があります。追加の取り込みは1MBあたり0.10ドルです。',
+          },
+          {
+            q: 'Promptfooは本当にどの規模でも無料ですか？',
+            a: 'はい。ツール自体がMITライセンスで自分のマシン上で動くという意味で、スコア単位やギガバイト単位の課金はありません。評価が行うモデルAPIの呼び出し費用は引き続き発生しますが、それはどのプラットフォームでも生じるものでPromptfoo固有ではありません。加えて任意のホスト型Enterprise枠が上に用意されています。',
+          },
+          {
+            q: '自社で運用できるのはどれですか？',
+            a: '既定ではPromptfooです。CLIとライブラリなので、動かした場所で動きます。BraintrustはEnterpriseプランでオンプレミスまたはホスト型の導入を提供します。Weaveは顧客管理鍵を伴うEnterpriseのシングルテナントを提供しますが、これは真のオンプレミスというより専用インスタンスなので、厳密な要件がある場合は詳細を確認してください。',
+          },
+          {
+            q: 'これらにアフィリエイトプログラムはありますか？',
+            a: 'Braintrust、Weights & Biases、Promptfooのいずれについても、発信者向けの公開アフィリエイトや紹介プログラムは見つかりませんでした。Weights & Biasesはパートナープログラムを運営していますが、公開ページはコンサルティング企業向けの再販・技術連携の提携を説明しており、紹介ごとの報酬ではありません。なお usebraintrust.com は braintrust.dev とは無関係の人材マーケットプレイスです。PromptQuorumは本ページから収益を得ていません。',
+          },
+          {
+            q: '評価と監視の違いは何ですか？',
+            a: '評価はリリース前に固定のデータセットを実行し、変更が品質を改善したか劣化させたかを教えます。監視はリリース後の実トラフィックを見張り、システムがいま何をしているかを教えます。本ページは前者を扱います。両者は補完的で多くのチームが両方を行いますが、道具も問いも異なります。',
+          },
+        ],
+      },
+      verdict: {
+        id: 'verdict',
+        title: '最終評価',
+        items: [
+          '**Braintrustを選ぶべき場合：** コードを書かない人が評価結果を確認する必要があるとき。次の一手：ユーザー数無制限の無料枠から始め、Proを払う前にPMが実際に開くかどうかを確かめてください。',
+          '**Weaveを選ぶべき場合：** Weights & Biasesがすでに記録の基盤であるとき。次の一手：60ドルの枠を前提にする前に従業員50人の上限を確認し、超えるならEnterpriseを見積もってください。',
+          '**Promptfooを選ぶべき場合：** ベンダーのメーターなしに、レビューできる設定として評価を持ちたいとき。次の一手：最初のデータセットをYAMLで書いてCIで実行し、それからホスト型を検討してください。',
+          '**とくにPromptfooを選ぶべき場合：** 出力品質だけでなくプロンプトインジェクションやエージェントのセキュリティを検証しているとき。次の一手：OpenAIが投資を向けているレッドチーミング機能から始めてください。',
+          '**三つとも見送るべき場合：** テストケースが十数件でエンジニアも一人のとき。次の一手：CIで採点するスクリプトを書き、データセットの管理が足かせになったら改めて検討してください。',
+        ],
+        note: '三社のいずれについてもアフィリエイトプログラムは見つかっておらず、PromptQuorumはどこにも登録していません。本ページのすべてのリンクは各提供元のサイトまたはリポジトリへ遷移します。',
+      },
+      sources: {
+        id: 'sources',
+        title: '出典',
+        links: [
+          { url: 'https://www.braintrust.dev/pricing', title: 'Braintrust 料金', description: 'Starter・Pro・Enterpriseの各枠と、スコア・データ・保持期間の上限、スタートアップ向け特典。' },
+          { url: 'https://wandb.ai/site/pricing/', title: 'Weights & Biases 料金', description: 'Weaveの無料・Pro・Enterpriseの各枠、従業員50人未満という制限、1MBあたり0.10ドルの取り込み料金。' },
+          { url: 'https://github.com/promptfoo/promptfoo', title: 'Promptfooリポジトリ', description: 'スター数、MITライセンス、レッドチーミングと脆弱性診断に関するプロジェクト自身の説明。' },
+          { url: 'https://openai.com/index/openai-to-acquire-promptfoo/', title: 'OpenAI：Promptfooの買収', description: 'OpenAI自身の発表。現行ライセンスのままオープンソースを維持するという表明を含む。' },
+          { url: 'https://www.promptfoo.dev/blog/promptfoo-joining-openai/', title: 'Promptfoo：OpenAIへの参画', description: 'Promptfoo自身による買収の説明。' },
+          { url: 'https://techcrunch.com/2026/03/09/openai-acquires-promptfoo-to-secure-its-ai-agents/', title: 'OpenAIがPromptfooを買収（TechCrunch）', description: '2026年3月9日の発表に関する独立した確認。' },
+          { url: 'https://www.cnbc.com/2026/03/09/open-ai-cybersecurity-promptfoo-ai-agents.html', title: 'OpenAIがPromptfooを買収へ（CNBC）', description: '買収とそのセキュリティ面の位置づけに関する二つ目の独立した報道。' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '関連記事',
+        items: [
+          '[プロンプトの検証・評価に最適なツール](/ja/prompt-engineering/best-prompt-testing-evaluation-tools) — 同じ問題をプロンプト単位で見る',
+          '[プロンプト品質の評価方法](/ja/prompt-engineering/how-to-evaluate-prompt-quality) — スコアラーが適用する評価基準を組み立てる',
+          '[プロンプト評価の指標](/ja/prompt-engineering/prompt-evaluation-metrics) — データセットが揃ったあと実際に何を測るか',
+          '[プロンプトのセキュリティとインジェクション検証ツール](/ja/prompt-engineering/prompt-security-tools-injection-testing) — Promptfooが先行するレッドチーミングの側面',
+          '[最適なLLM APIゲートウェイ](/ja/local-llms/best-llm-api-gateway-2026) — 評価の呼び出しを提供者間で振り分け、比較を設定変更で済ませる',
+        ],
+      },
+    },
+    schema: {
+      '@type': 'TechArticle',
+      headline: '2026年 最適なLLM評価ツール：Braintrust・Weave・Promptfoo',
+      description: 'LLM評価についてBraintrust、Weave、Promptfooを比較。確認済みの料金、利用条件の上限、自社運用の選択肢、OpenAIによるPromptfoo買収まで扱う。2026年8月時点で確認。',
+      datePublished: '2026-08-28',
+      dateModified: '2026-08-28',
+      url: 'https://www.promptquorum.com/ja/local-llms/best-llm-evaluation-tools-2026',
+      inLanguage: 'ja',
+      proficiencyLevel: 'Advanced',
+      author: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      about: [
+        { '@type': 'Thing', name: 'LLMの評価' },
+        { '@type': 'Thing', name: 'AIの回帰テスト' },
+      ],
+      mentions: [
+        { '@type': 'SoftwareApplication', name: 'Braintrust' },
+        { '@type': 'SoftwareApplication', name: 'Weave' },
+        { '@type': 'SoftwareApplication', name: 'Promptfoo' },
+      ],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ja',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: '2026年に最適なLLM評価ツールは何ですか？',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'エンジニア以外が結果を確認するチームにはBraintrust、すでにWeights & Biasesを使い従業員50人未満ならWeave、自社インフラで無料で動く設定として評価を持ちたいならPromptfooです。',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'OpenAIはPromptfooを買収したのですか？',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'はい。OpenAIは2026年3月9日に買収を発表し、現行ライセンスのままオープンソースを維持すると述べました。2026年8月下旬時点でリポジトリはMITライセンスのままで、活発に保守されています。',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Braintrustはいくらですか？',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: '無料のStarter枠は月1万スコア、1GB、保持14日、ユーザー数無制限です。Proは月249ドルで249ドル分のモデルクレジット、5万スコア、5GBを含みます。Enterpriseは個別見積でオンプレミスまたはホスト型の導入が可能です。',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Weaveは無料ですか、制限は何ですか？',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Weaveには席数無制限で取り込み月1GBの無料枠があります。Proは1.5GBで月60ドルからですが、従業員50人未満のチームに限られます。追加の取り込みは1MBあたり0.10ドルです。',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'LLM評価ツールにアフィリエイトプログラムはありますか？',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Braintrust、Weights & Biases、Promptfooのいずれにも公開のアフィリエイトプログラムは見つかりませんでした。Weights & Biasesのパートナープログラムはコンサルティング企業向けの再販・連携の枠組みで、紹介ごとの報酬ではありません。',
+          },
+        },
+      ],
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: '最適なLLM評価ツール（2026年8月）',
+      inLanguage: 'ja',
+      numberOfItems: 3,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Braintrust', description: '部門横断の本番チームに最適 — 月1万スコアまで無料でユーザー数無制限、Proは249ドルで249ドル分のモデルクレジット付き' },
+        { '@type': 'ListItem', position: 2, name: 'Weave', description: 'Weights & Biasesの環境で最適 — 月1GBまで無料で席数無制限、Proは従業員50人未満のチーム向けに月60ドルから' },
+        { '@type': 'ListItem', position: 3, name: 'Promptfoo', description: '無料かつCIネイティブで最良 — スター2.46万、MITライセンス、どの規模でも自社インフラで動作' },
+      ],
+    },
+  },
+
+  zh: {
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2027-02-28',
+    theme: 'Tools & Interfaces',
+    title: '2026 年最佳 LLM 评估工具：Braintrust、Weave 与 Promptfoo',
+    seoTitle: '2026 年最佳 LLM 评估工具',
+    metaDescription: 'Braintrust 每月 1 万次评分内免费、Pro 249 美元，Weave 从 60 美元起，Promptfoo 采用 MIT 许可且任意规模免费。价格核实于 2026 年 8 月。',
+    educationalLevel: 'Advanced',
+    audience: '在发布前测试大模型应用的工程团队',
+    affiliateDisclosure: true,
+    publishDate: '2026-08-28',
+    dateModified: '2026-08-28',
+    readTime: '阅读时长 13 分钟',
+    primaryTerm: 'LLM 评估工具',
+    targetKeywords: [
+      '最佳 LLM 评估工具 2026',
+      'Braintrust Weave Promptfoo 对比',
+      'LLM 评估平台对比',
+      'Promptfoo 被 OpenAI 收购',
+      'LLM 作为评判者打分',
+    ],
+    leadAnswerBlock: '**对把大模型功能推向生产的团队来说，Braintrust 是综合实力最强的评估平台：每月 1 万次评分内免费，Pro 为 249 美元。如果你已经在用 Weights & Biases，Weave 是自然之选，每月 60 美元起，但仅限员工少于 50 人的组织。Promptfoo 是最好的免费且 CI 原生的选择：采用 MIT 许可，因为跑在你自己的机器上而在任意规模下免费，并且自 2026 年 3 月起归 OpenAI 所有，OpenAI 已公开承诺在现有许可下保持其开源。**',
+    quickAnswerTop: {
+      question: '2026 年哪款 LLM 评估工具最好？',
+      answer: '**需要非技术人员复核结果的跨职能团队选 Braintrust，已经在用 Weights & Biases 的选 Weave，想把评估做成受版本控制的配置且完全不依赖厂商的选 Promptfoo。** 差别并不在打分功能上，三者都支持以大模型作为评判者、自定义评分器和基于数据集的回归测试。差别在于评估在哪里运行、由谁来看结果。当产品经理需要复核失败样例时，托管界面物有所值；当只有一位工程师在 CI 里跑评估时，它就是浪费。',
+      bullets: [
+        '**生产团队综合最佳：** Braintrust — 每月 1 万次评分内免费，Pro 每月 249 美元并含 249 美元模型额度',
+        '**已用 Weights & Biases 者最佳：** Weave — 每月 1 GB 免费且席位不限，Pro 在员工少于 50 人时每月 60 美元起',
+        '**免费且 CI 原生最佳：** Promptfoo — 2.46 万星标，MIT，跑在你自己的基础设施上，没有规模上限',
+        '**安全与红队测试最佳：** Promptfoo — 它宣称的重点是漏洞扫描与红队测试，而不只是打分',
+        '**三者均无** 面向创作者的公开联盟计划，因此本页没有任何付费植入',
+        '**完全不必用平台：** 如果测试用例少于约 20 个，在 CI 里写个带评分的脚本就够了',
+      ],
+      updatedDate: '2026-08-28',
+    },
+    toc: [
+      { label: '要点速览', anchor: 'tldr' },
+      { label: '按场景选择', anchor: 'best-choice' },
+      { label: '评估工具究竟做什么', anchor: 'what-is-llm-eval' },
+      { label: '完整对比表', anchor: 'comparison' },
+      { label: 'Braintrust：生产之选', anchor: 'braintrust' },
+      { label: 'Weave：Weights & Biases 之选', anchor: 'weave' },
+      { label: 'Promptfoo：免费且 CI 原生之选', anchor: 'promptfoo' },
+      { label: '被 OpenAI 收购意味着什么', anchor: 'promptfoo-openai' },
+      { label: '价格如何比较', anchor: 'pricing' },
+      { label: '自托管与数据驻留', anchor: 'self-hosting' },
+      { label: '谁该用哪一个', anchor: 'who-should-use' },
+      { label: '地区背景：欧盟、日本、中国', anchor: 'regional-context' },
+      { label: '常见错误', anchor: 'common-mistakes' },
+      { label: '什么情况下不必用', anchor: 'skip-this-if' },
+      { label: '常见问题', anchor: 'faq' },
+      { label: '最终结论', anchor: 'verdict' },
+      { label: '来源', anchor: 'sources' },
+      { label: '延伸阅读', anchor: 'related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        isTldr: true,
+        items: [
+          '**Braintrust** — 免费的 Starter 档含每月 1 万次评分、1 GB 处理数据、14 天留存、10 美元模型额度以及不限数量的用户。Pro 每月 249 美元，含 249 美元模型额度、5 GB 数据、5 万次评分和 30 天留存。Enterprise 增加自定义留存以及本地或托管部署。',
+          '**Weave** — 隶属 Weights & Biases。免费档提供不限数量的 Weave 席位和每月 1 GB 数据摄入。Pro 每月 60 美元起、含 1.5 GB，但资格被明确限定为「early-stage teams fewer than 50 employees」；更大的组织必须转入 Enterprise。额外摄入为每 MB 0.10 美元。',
+          '**Promptfoo** — GitHub 星标 2.46 万，MIT 许可，且在任意规模下免费，因为它以 CLI 和库的形式运行在你已经拥有的基础设施上。你唯一的成本是评估本身消耗的模型 API 支出，而任何平台上的「大模型作为评判者」流程都会产生这笔费用。',
+          '**OpenAI 于 2026 年 3 月 9 日宣布收购 Promptfoo**，并公开表示：「Promptfoo will remain open source under the current license, and we will continue to service and support current customers。」该仓库目前仍为 MIT 许可，并在本页核实当天有过更新。',
+          '**有一处值得订正：** 多篇文章把 Braintrust Pro 的模型额度描述为促销价，称 2026 年 9 月 1 日后降至每月 100 美元。Braintrust 的定价页上并没有这样的到期日。页面列出的唯一促销是「6–12 months free for qualifying startups」。请按厂商页面编列预算。',
+          '**Promptfoo 既是评估工具，也是安全工具。** 它自己的描述以红队测试、渗透测试和漏洞扫描开头，OpenAI 也把这次收购放在智能体安全测试的语境下。这与 Braintrust 和 Weave 是实实在在的侧重差异。',
+          '三者都没有面向内容创作者的公开联盟或推荐计划。Weights & Biases 确有合作伙伴计划，但那是面向咨询公司的分销与技术集成机制，而非按推荐付费。PromptQuorum 不会从本页获得任何收入。',
+        ],
+      },
+      bestChoice: {
+        id: 'best-choice',
+        title: '🏆 按场景选择',
+        content: '**请按评估在哪里运行、由谁阅读结果来选，而不是按打分功能清单——三者覆盖的打分基本能力是一样的。** 往下读，在第一条符合你情况的地方停下。',
+        items: [
+          '**不写代码的人需要复核失败样例** → Braintrust。托管界面、人工复核队列与数据集版本管理正是为此存在，而免费档能覆盖早期阶段的大部分用量。',
+          '**你已经在用 Weights & Biases** → Weave。评估会出现在你既有的实验跟踪旁边，免费档还提供不限数量的席位。在指望 Pro 之前，先确认 50 人的限制。',
+          '**你想要不依赖厂商、受版本控制的评估配置** → Promptfoo。代码旁的 YAML 或 JS，可在拉取请求里比对差异，且无论规模都免费。',
+          '**你测试的是提示注入与智能体安全，而不只是质量** → Promptfoo。红队测试与漏洞扫描是它宣称的用途；参见[提示安全与注入测试工具](/zh/prompt-engineering/prompt-security-tools-injection-testing)。',
+          '**你只有寥寥几个测试用例、一位工程师** → 暂时都不需要。在数据集大到需要管理之前，CI 里一个带评分的脚本就够了。',
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.braintrust.dev/pricing',
+            productName: 'Braintrust',
+            productCategory: 'dev-tool',
+            priceRange: '免费每月 1 万次评分；Pro 每月 249 美元含 249 美元额度',
+            label: 'Braintrust — 查看价格',
+          },
+          {
+            url: 'https://github.com/promptfoo/promptfoo',
+            productName: 'Promptfoo',
+            productCategory: 'dev-tool',
+            priceRange: '免费，MIT 许可，任意规模',
+            label: 'Promptfoo — 开源仓库',
+          },
+        ],
+      },
+      whatIsLlmEval: {
+        id: 'what-is-llm-eval',
+        title: '评估工具究竟做什么',
+        content: '**LLM 评估工具把一组测试用例送进你的提示或智能体并为每个输出打分，让你在改动抵达用户之前就知道它是变好了还是变差了。** 数据集通常是一组「输入与期望输出」的配对，可能取自生产日志、作为边界情况手写，或由模型生成。评分器的范围很广：从字符串匹配、JSON 模式校验这类确定性检查，到由第二个模型依据评分标准打分的「大模型作为评判者」，再到你自己编写的自定义函数。\n\n这与观察系统上线后的行为是两码事。评估回答的是「这次改动能否安全发布」，生产监控回答的是「它现在正在做什么」。本页讨论前者。若想从提示层面看同一问题，参见[如何评估提示质量](/zh/prompt-engineering/how-to-evaluate-prompt-quality)。',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'LLM 评估工具会把一组固定的测试用例送进你的提示或智能体，用确定性检查、「大模型作为评判者」打分或自定义函数为每个输出评分，并在发布前报告某次改动提升还是拉低了质量。',
+          },
+          {
+            type: 'plain-terms',
+            text: '它是给「同一个问题不会给出两次相同答案」的东西准备的测试套件。你不再断言精确输出，而是给它打分，并观察改动提示时平均分是否往错误的方向走。',
+          },
+        ],
+        note: '当测试数据集大到用表格或脚本管理它本身成了瓶颈时，再引入评估平台。在那之前，CI 里一个带评分的脚本能完成同样的工作。',
+      },
+      comparison: {
+        id: 'comparison',
+        title: 'Braintrust、Weave 与 Promptfoo 对比',
+        content: '**三者都支持「大模型作为评判者」、自定义评分器和基于数据集的回归测试，因此比较的重点是托管方式、成本结构与资格限制。** 价格于 2026 年 8 月 28 日读取自各厂商自己的页面，仓库数据同日取自 GitHub API。',
+        tableFormat: true,
+        itemHeadings: true,
+        columns: ['评估维度', 'Braintrust', 'Weave', 'Promptfoo'],
+        rows: [
+          { 评估维度: '形态', Braintrust: '带界面的托管平台', Weave: '托管，隶属 W&B', Promptfoo: '由你运行的 CLI 与库' },
+          { 评估维度: '许可证', Braintrust: '商业', Weave: 'SDK 为 Apache-2.0，服务为托管', Promptfoo: 'MIT' },
+          { 评估维度: '免费档', Braintrust: '每月 1 万次评分、1 GB、14 天', Weave: '每月 1 GB 摄入、席位不限', Promptfoo: '任意规模免费' },
+          { 评估维度: '付费入门', Braintrust: 'Pro 每月 249 美元，含 249 美元额度', Weave: '每月 60 美元起，1.5 GB', Promptfoo: 'Enterprise 档，定制报价' },
+          { 评估维度: '资格上限', Braintrust: '未声明', Weave: 'Pro 仅限员工少于 50 人', Promptfoo: '无' },
+          { 评估维度: '超量计费', Braintrust: 'Pro 每 1,000 次评分 1.50 美元', Weave: '每 MB 摄入 0.10 美元', Promptfoo: '仅你的模型 API 支出' },
+          { 评估维度: '自托管', Braintrust: 'Enterprise，本地或托管', Weave: 'Enterprise，单租户', Promptfoo: '默认——跑在你的机器上' },
+          { 评估维度: '联盟计划', Braintrust: '未找到', Weave: '未找到', Promptfoo: '未找到' },
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Weave 的 Pro 档并不只是更便宜的套餐：Weights & Biases 明确表示它面向「early-stage teams fewer than 50 employees」，超出该指引的客户必须转入 Enterprise。如果你的人数超过这一线，真正的比较是 Braintrust Pro 的 249 美元对上一份定制的 Enterprise 报价，而不是对上 60 美元。',
+          },
+        ],
+      },
+      braintrust: {
+        id: 'braintrust',
+        title: 'Braintrust：生产之选',
+        content: '**当不写代码的人需要查看评估结果时，就该选 Braintrust。** 它的价值集中在托管界面、数据集版本管理与人工复核流程上，而这恰恰是你否则必须自己搭建的部分。',
+        rankedItems: [
+          {
+            rank: 1,
+            name: 'Braintrust — 跨职能生产团队最佳',
+            tagline: '每月 1 万次评分内免费，Pro 249 美元含 249 美元额度',
+            verdict: '对一个托管平台而言，免费的 Starter 档慷慨得不寻常：每月 1 万次评分、1 GB 处理数据、14 天留存、10 美元模型额度，以及不限数量的用户、项目、数据集与实验。免费档就提供不限席位在这里尤其重要，因为选择 Braintrust 的全部理由，正是让产品经理和领域专家无需为其购买许可就能复核失败样例。每月 249 美元的 Pro 把上限提到 5 万次评分、5 GB 与 30 天留存，并含 249 美元模型额度，对中等规模负载而言基本抵消了评判模型的开销。超量是计费而非阻断：Pro 档每 1,000 次评分 1.50 美元、每 GB 3 美元。Enterprise 增加自定义留存与导出、RBAC，以及本地或托管部署。',
+            pros: [
+              '免费档即不限用户数量，而这正是选择它的意义所在',
+              '每月 1 万次评分的免费档确实能覆盖早期项目',
+              'Pro 含 249 美元模型额度，很大程度上抵消了评判模型的开销',
+              '面向隐私敏感负载提供本地或托管部署',
+            ],
+            cons: [
+              '免费档 14 天留存，若想与上个月对比就偏短',
+              '自托管需要 Enterprise 并经商务沟通，且未公开价格',
+              '商业平台，不像 Promptfoo 那样在价格变动时还有退路',
+            ],
+            affiliateLinks: [
+              {
+                url: 'https://www.braintrust.dev/pricing',
+                productName: 'Braintrust',
+                productCategory: 'dev-tool',
+                priceRange: '免费每月 1 万次评分；Pro 每月 249 美元；Enterprise 定制',
+                label: 'Braintrust — 查看价格',
+              },
+            ],
+          },
+        ],
+        note: '当复核是团队活动时使用 Braintrust。如果只有工程师会打开结果，你就是在为一个用不上的界面付费。',
+      },
+      weave: {
+        id: 'weave',
+        title: 'Weave：Weights & Biases 之选',
+        content: '**如果你的团队已经在 Weights & Biases 里跟踪实验，Weave 是显而易见的答案；如果没有，说服力就弱得多。** 论据就是集成本身：评估会落在你本来就在看的运行记录旁边。',
+        rankedItems: [
+          {
+            rank: 1,
+            name: 'Weave — 在 Weights & Biases 生态内最佳',
+            tagline: '每月 1 GB 免费且席位不限，Pro 在员工少于 50 人时每月 60 美元起',
+            verdict: 'Weave 覆盖应用评估、追踪与评分器，免费档提供不限数量的 Weave 席位和每月 1 GB 摄入，对小团队而言是合理的起点。Pro 按月计费、每月 60 美元起并含 1.5 GB，额外摄入为每 MB 0.10 美元。真正的门槛在资格而非价格：Weights & Biases 表示 Pro 面向「early-stage teams fewer than 50 employees」，超出该指引的客户必须转入 Enterprise。严肃的部署选项都在 Enterprise 里，包括单租户、HIPAA 合规、客户自管加密密钥、SSO 与审计日志。请注意，单租户更接近专用实例而非真正的本地部署，因此在认定它满足仅限本地的合规要求之前，请向 W&B 确认细节。',
+            pros: [
+              '免费档提供不限数量的 Weave 席位与每月 1 GB 摄入',
+              '评估与既有的 W&B 实验跟踪和注册表并存',
+              'Enterprise 提供单租户、HIPAA、客户自管密钥与 SSO',
+              '每月 60 美元是三者中最低的付费入门价',
+            ],
+            cons: [
+              'Pro 仅限员工少于 50 人的组织，这是一道硬性上限',
+              '按 0.10 美元/MB 摄入计费比按评分次数更难预估',
+              '若你尚未使用 Weights & Biases，它作为独立方案的说服力最弱',
+            ],
+            affiliateLinks: [
+              {
+                url: 'https://wandb.ai/site/pricing/',
+                productName: 'Weave',
+                productCategory: 'dev-tool',
+                priceRange: '免费每月 1 GB；Pro 在员工少于 50 人时每月 60 美元起；Enterprise 定制',
+                label: 'Weave — 查看 Weights & Biases 价格',
+              },
+            ],
+          },
+        ],
+        note: '若 W&B 已是你的记录系统，就用 Weave。若员工超过 50 人，请先为 Enterprise 报价再与 Braintrust 比较，因为 60 美元那一档你用不上。',
+      },
+      promptfoo: {
+        id: 'promptfoo',
+        title: 'Promptfoo：免费且 CI 原生之选',
+        content: '**Promptfoo 是那个在任何规模下都不花钱的选择，原因是你自己运行它。** 它是 CLI 和库而非平台，因此评估以配置的形式与代码放在一起，并在你的测试本来就运行的地方执行。',
+        rankedItems: [
+          {
+            rank: 1,
+            name: 'Promptfoo — 最佳免费且 CI 原生的选择',
+            tagline: '2.46 万星标，MIT 许可，任意规模免费，现归 OpenAI 所有',
+            verdict: 'Promptfoo 有 24,638 个 GitHub 星标和 MIT 许可，并在本页核实当天有更新，活跃度毫无疑问。由于它跑在你已经拥有的基础设施上，不存在按评分或按 GB 的计量：你唯一的成本是评估消耗的模型 API 调用，而这在任何平台上都要付。把数据集定义为 YAML、CSV 或 JS 比在界面里点击更费事，但也让评估能在拉取请求里比对差异——当评估配置理应像其他代码一样被评审时，这是实打实的优势。值得弄清它究竟是什么：项目自述为测试提示、智能体与 RAG，并提供面向 AI 的红队测试、渗透测试与漏洞扫描。安全在这里不是附带功能，OpenAI 也把这次收购放在智能体安全测试的语境下。',
+            pros: [
+              '任意规模免费，没有评分或摄入计量',
+              '评估作为受版本控制的配置，可在拉取请求中比对与评审',
+              'MIT 许可，因此条款变动时不存在必须依赖的厂商',
+              '红队测试与漏洞扫描是一等能力，而非事后加装',
+            ],
+            cons: [
+              '默认没有托管界面，不写代码的人无处可点',
+              'YAML 与 CSV 数据集比在浏览器里搭建更费准备工夫',
+              '如今归 OpenAI 所有，即便有开源承诺，这仍是一个治理层面的考量',
+            ],
+            affiliateLinks: [
+              {
+                url: 'https://github.com/promptfoo/promptfoo',
+                productName: 'Promptfoo',
+                productCategory: 'dev-tool',
+                priceRange: '免费，MIT 许可，任意规模',
+                label: 'Promptfoo — 开源仓库',
+              },
+            ],
+          },
+        ],
+        note: '当阅读评估结果的人正是编写代码的人时，使用 Promptfoo。若日后复核变成跨职能的，再加上 Braintrust 即可。',
+      },
+      promptfooOpenai: {
+        id: 'promptfoo-openai',
+        title: '被 OpenAI 收购对 Promptfoo 意味着什么',
+        content: '**OpenAI 于 2026 年 3 月 9 日宣布收购 Promptfoo，并公开承诺保持其开源。** OpenAI 自己的表述是：「Promptfoo will remain open source under the current license, and we will continue to service and support current customers。」这笔收购当时由 TechCrunch、CNBC 与 Forbes 报道，并在 OpenAI 与 Promptfoo 各自的网站上得到确认。\n\n目前的实际情况支持这一承诺。近六个月过去，仓库仍在 `promptfoo` 组织之下，仍为 MIT 许可，并在本页核实当天有更新。这正是人们希望看到的。\n\n但仍值得思考的理由在于治理，而非许可。评估工具是你用来评判模型的东西，而它如今归一家制造模型的公司所有。MIT 许可意味着，一旦项目方向不再服务于你，你可以分叉——这是 Braintrust 与 Weave 都不提供的实质保护。不过，如果你的评估策略依赖于在模型厂商之间保持中立，那就该是一个有意识的决定，而不是一个默认假设。',
+        callouts: [
+          {
+            type: 'note',
+            text: 'OpenAI 表示 Promptfoo 的技术将被整合进 OpenAI Frontier，用于自动化红队测试与智能体安全检测。这与 Promptfoo 原有的安全侧重一致，也意味着安全方向可能比通用评估获得更多投入。',
+          },
+        ],
+        note: '如果你看重的是 MIT 许可与本地执行，就继续用 Promptfoo。如果评估工具的厂商中立性是一项明确要求，则需要重新考虑。',
+      },
+      pricing: {
+        id: 'pricing',
+        title: '价格如何比较',
+        content: '**成本随数据量与评判模型支出增长，而不是随席位增长——这也是免费档「不限用户」比乍看之下更有用的原因。** 下表按每月约 5 万次评估评分的中等负载测算。',
+        tableFormat: true,
+        itemHeadings: true,
+        columns: ['场景', 'Braintrust', 'Weave', 'Promptfoo'],
+        rows: [
+          { 场景: '免费档上限', Braintrust: '1 万次评分、1 GB、14 天', Weave: '每月 1 GB 摄入、席位不限', Promptfoo: '无上限' },
+          { 场景: '付费档', Braintrust: 'Pro 每月 249 美元', Weave: '每月 60 美元起', Promptfoo: '无需付费' },
+          { 场景: '该档包含', Braintrust: '5 万次评分、5 GB、249 美元额度', Weave: '1.5 GB 摄入', Promptfoo: '不适用' },
+          { 场景: '每月 5 万次评分', Braintrust: '249 美元的 Pro 可覆盖', Weave: '取决于 GB，很可能超过 1.5 GB', Promptfoo: '仅模型 API 支出' },
+          { 场景: '超量单价', Braintrust: '每 1,000 次评分 1.50 美元、每 GB 3 美元', Weave: '每 MB 0.10 美元', Promptfoo: '无' },
+          { 场景: '资格上限', Braintrust: '未声明', Weave: 'Pro 限员工少于 50 人', Promptfoo: '无' },
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '多篇对比称 Braintrust Pro 的 249 美元额度是 2026 年促销，2026 年 9 月 1 日后降至每月 100 美元。该到期日并未出现在 Braintrust 的定价页上，页面列出的促销只有「6–12 months free for qualifying startups」。请按厂商页面而非对比文章测算，本文亦不例外。',
+          },
+        ],
+        note: 'Braintrust 按评分计费，Weave 按摄入的 GB 计费。这不是可比的单位，因此在认定 60 美元比 249 美元便宜之前，请用你自己的负载把两者都估一遍。',
+      },
+      selfHosting: {
+        id: 'self-hosting',
+        title: '自托管与数据驻留',
+        content: '**三者之中，只有 Promptfoo 把自托管作为默认形态，而非企业版的升级项。** 因为它是 CLI 和库，除非你刻意选择托管档位，否则测试用例与模型输出永远不会离开你的环境。对受数据驻留规则约束的团队来说，这是消除了问题，而不是回答了问题。\n\nBraintrust 提供本地或托管部署，但仅限 Enterprise，这意味着定制报价与商务沟通。它是真实的部署选项而非营销措辞，只是你无法自助评估。\n\nWeave 的 Enterprise 档提供单租户选项，配合客户自管加密密钥、HIPAA 合规与安全私有连接。请仔细读：带自管密钥的单租户是一个专用实例，和运行在你自己的边界之内并不是一回事。如果你的要求严格限定为本地部署，请向 Weights & Biases 确认细节，而不要假定单租户就能满足。',
+        note: '当评估数据不能离开你的基础设施、且你希望靠架构而非合同来解决时，选择 Promptfoo。当你既需要本地部署又需要复核界面时，选择 Braintrust Enterprise。',
+      },
+      whoShouldUse: {
+        id: 'who-should-use',
+        title: '谁该用哪一个',
+        content: '**团队形态比功能清单更能决定结果。** 五类情形覆盖了大多数读者。',
+        items: [
+          '**独立开发者做 MVP** → Promptfoo。无需账号、没有计量，项目改变方向时也没有东西需要清理。',
+          '**带产品与测试复核、发布大模型功能的产品团队** → Braintrust。免费档不限用户数，正是让跨职能复核得以成立的那个具体条件。',
+          '**已经在用 Weights & Biases 的团队** → Weave，前提是 Pro 所要求的员工少于 50 人。超过则先为 Enterprise 报价再作比较。',
+          '**测试提示注入的安全或平台团队** → Promptfoo，其红队测试的侧重与任务相符。另见[提示安全与注入测试工具](/zh/prompt-engineering/prompt-security-tools-injection-testing)。',
+          '**跨多家模型供应商做评估的团队** → Promptfoo 或 Braintrust，并把调用经由网关路由，使供应商比较只是一次配置改动；参见[最佳 LLM API 网关](/zh/local-llms/best-llm-api-gateway-2026)。',
+        ],
+      },
+      regionalContext: {
+        id: 'regional-context',
+        title: '欧盟、日本与中国的评估工具',
+        content: '评估数据集通常由生产流量构建而成，因而属于大模型技术栈中最敏感的数据之一。这使得托管与本地之间的选择，在三个主要市场都成为合规问题。',
+        subsections: [
+          {
+            title: '欧盟',
+            content: '从生产日志中提取的评估数据集包含用户实际输入的内容，在 GDPR 之下与其他处理活动一样受约束；将其发送到托管于美国的平台，除非供应商条款另有说明，否则构成第 44 至 49 条意义上的传输。若使用 Braintrust 或 Weights & Biases，你需要与其签订第 28 条下的处理者协议。《人工智能法案》在这里的作用也总体上有利于评估：对于纳入监管范围的系统，能够证明你在部署前进行过测试属于义务的一部分，而非锦上添花；Digital Omnibus 将附件三的高风险义务推迟至 2027 年 12 月 2 日，但并未取消。在本地运行的 Promptfoo 绕开了传输问题，因为数据集根本不会外流。',
+          },
+          {
+            title: '日本',
+            content: '日本经济产业省的人工智能治理项目推动企业留存可审计的证据，证明系统在发布前经过测试；而当评估的运行记录保存在你可控的地方时，它正是这种证据。与结果一同纳入版本控制的 Promptfoo 配置是一份审计凭据，托管仪表盘则不是，因为你可以在数年之后从仓库中复现它。如果你改用托管平台，请留意留存期：Braintrust 免费档只保留 14 天数据，短于多数审计的期望。',
+          },
+          {
+            title: '中国',
+            content: '在《数据安全法》与国家网信办的跨境传输规则之下，合规问题在于把由中国大陆用户流量构建的评估数据集上传到境外平台，而不在评估本身。面向大陆团队的部署通常要求评估在境内基础设施上运行。三者之中只有 Promptfoo 默认如此，这使它无论功能偏好如何都是务实之选——参见[在中国运行本地 LLM](/zh/local-llms/deepseek-local-china-data-privacy-2026)。',
+          },
+        ],
+        note: '在数据集本身即为敏感资产的任何市场，都应在本地运行评估。Promptfoo 把这一点作为默认，另外两者则把它变成一场 Enterprise 层面的商谈。',
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: '选择评估工具时的常见错误',
+        numberedItems: [
+          {
+            title: '不查资格就拿 60 美元与 249 美元相比',
+            whyItMatters: 'Weave Pro 仅限员工少于 50 人的组织。超过这一人数，真正的比较是 Braintrust Pro 对上一份定制的 Weave Enterprise 报价，而 60 美元这个数字对你根本不可用。',
+          },
+          {
+            title: '围绕一个并未公布的 Braintrust 促销到期日编列预算',
+            whyItMatters: '「Pro 额度在 2026 年 9 月 1 日后降至每月 100 美元」这一说法并未出现在 Braintrust 的定价页上。围绕厂商从未宣布的到期日去规划迁移是白费力气；请重新阅读定价页。',
+          },
+          {
+            title: '把评分次数与 GB 当作可比单位',
+            whyItMatters: 'Braintrust 计量评分，Weave 计量摄入。一个在 5 万次评分内绰绰有余的负载，能否装进 1.5 GB 取决于你的追踪记录有多大。在按价格排序之前，请用你自己的数据把两者都估算一遍。',
+          },
+          {
+            title: '为十五个用例的数据集引入平台',
+            whyItMatters: '在大约二十个测试用例以下，CI 里一个带评分的脚本能完成同样的工作，且无需账号、没有计量、也没有留存期限制。平台真正值回票价，是在数据集管理而非打分成为瓶颈之时。',
+          },
+          {
+            title: '把单租户当成本地部署',
+            whyItMatters: 'Weave 带客户自管密钥的 Enterprise 单租户选项是一个专用实例，而不是部署在你自己的边界之内。如果你的要求严格限定为本地部署，请向 W&B 确认，而不要把单租户读作等价物。',
+          },
+        ],
+      },
+      skipThisIf: {
+        id: 'skip-this-if',
+        title: '什么情况下不必用',
+        content: '**如果你的测试集只有十来条提示、由一位工程师运行，那就把三者都跳过，在 CI 里写个带评分的脚本。** 你能得到同样的回归信号，却不需要账号、计量或留存窗口；日后转向平台也不会有任何损失，因为真正的资产是数据集，而它会随你一起走。\n\n值得等待的门槛，是数据集管理本身变成工作的时候：当你想例行地把生产中失败的样例收进测试集，当不写代码的人需要为输出评级，或当你需要把本月结果与上季度对比。这些都是数据管理问题，而那才是你真正在购买的东西。打分本身一直都是容易的那部分。',
+        callouts: [
+          {
+            type: 'tip',
+            text: '一个实用的触发条件：当你发现自己开始做一张表格来记录哪个提示版本得了多少分时，就该引入平台了。那张表格正是你即将购买的产品，而买下来比自己维护更便宜。',
+          },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: '常见问题',
+        faqs: [
+          {
+            q: '2026 年最好的 LLM 评估工具是哪个？',
+            a: '对需要非技术人员复核结果的团队是 Braintrust，因为免费档就不限用户数量。若你已在用 Weights & Biases 且员工少于 50 人，则是 Weave。若你想要在自己基础设施上免费运行、受版本控制的评估配置，则是 Promptfoo。三者都覆盖「大模型作为评判者」、自定义评分器与回归测试。',
+          },
+          {
+            q: 'OpenAI 收购 Promptfoo 了吗？',
+            a: '是的。OpenAI 于 2026 年 3 月 9 日宣布收购，并表示 Promptfoo 将在现有许可下保持开源，现有客户也将继续获得服务与支持。截至 2026 年 8 月下旬，该仓库仍在 promptfoo 组织之下、仍为 MIT 许可，并处于活跃维护中。',
+          },
+          {
+            q: 'Braintrust 多少钱？',
+            a: '免费的 Starter 档包含每月 1 万次评分、1 GB 处理数据、14 天留存、10 美元模型额度与不限数量的用户。Pro 每月 249 美元，含 249 美元额度、5 万次评分、5 GB 与 30 天留存，超量为每 1,000 次评分 1.50 美元。Enterprise 为定制报价，并增加本地或托管部署。',
+          },
+          {
+            q: 'Weave 免费吗，限制是什么？',
+            a: 'Weave 有一个免费档，提供不限数量的席位与每月 1 GB 数据摄入。Pro 每月 60 美元起、含 1.5 GB，但 Weights & Biases 将其限定为员工少于 50 人的早期团队；更大的组织必须转入 Enterprise。额外摄入为每 MB 0.10 美元。',
+          },
+          {
+            q: 'Promptfoo 真的在任意规模下免费吗？',
+            a: '是的，就工具本身而言：它采用 MIT 许可并运行在你自己的机器上，因此没有按评分或按 GB 的收费。你仍需为评估发起的模型 API 调用付费，但这笔成本在任何平台上都存在，并非 Promptfoo 特有。此外还有一个可选的托管 Enterprise 档位。',
+          },
+          {
+            q: '哪一个可以自托管？',
+            a: '默认是 Promptfoo，因为它是 CLI 和库，你在哪里运行它就在哪里跑。Braintrust 在其 Enterprise 套餐中提供本地或托管部署。Weave 提供带客户自管密钥的 Enterprise 单租户选项，那是专用实例而非真正的本地部署，若你有严格要求请确认细节。',
+          },
+          {
+            q: '它们有联盟计划吗？',
+            a: '我们在 Braintrust、Weights & Biases 与 Promptfoo 都没有找到面向创作者的公开联盟或推荐计划。Weights & Biases 确有合作伙伴计划，但其公开页面描述的是面向咨询公司的分销与技术集成合作，而非按推荐付费。另请注意 usebraintrust.com 是一个独立的人才市场，与 braintrust.dev 无关。PromptQuorum 不会从本页获得任何收入。',
+          },
+          {
+            q: '评估与监控有什么区别？',
+            a: '评估在发布前运行一个固定的数据集，告诉你某次改动提升还是拉低了质量。监控在发布后观察真实流量，告诉你系统现在正在做什么。本页讨论前者。两者互补，很多团队都会做，但工具与要回答的问题并不相同。',
+          },
+        ],
+      },
+      verdict: {
+        id: 'verdict',
+        title: '最终结论',
+        items: [
+          '**选 Braintrust，如果**不写代码的人需要复核评估结果——下一步：从允许不限用户数的免费档开始，先看你的产品经理是否真的会打开它，再决定要不要付费升级到 Pro。',
+          '**选 Weave，如果** Weights & Biases 已是你的记录系统——下一步：在指望 60 美元那一档之前先确认你在 50 人上限之内，若不在则为 Enterprise 报价。',
+          '**选 Promptfoo，如果**你想要不带厂商计量、可评审的评估配置——下一步：先用 YAML 写出第一个数据集并在 CI 里跑通，再去评估任何托管方案。',
+          '**尤其选 Promptfoo，如果**你测试的是提示注入与智能体安全，而不只是输出质量——下一步：从它的红队测试功能入手，那正是 OpenAI 投入资源的方向。',
+          '**三者都跳过，如果**你只有十来个测试用例和一位工程师——下一步：在 CI 里写个带评分的脚本，等数据集管理成为瓶颈时再回头考虑。',
+        ],
+        note: '我们在这三家厂商都没有找到联盟计划，PromptQuorum 也未加入任何计划。本页所有链接均指向各厂商自己的网站或代码仓库。',
+      },
+      sources: {
+        id: 'sources',
+        title: '来源',
+        links: [
+          { url: 'https://www.braintrust.dev/pricing', title: 'Braintrust 定价', description: 'Starter、Pro 与 Enterprise 各档的评分、数据与留存上限，以及面向初创公司的促销。' },
+          { url: 'https://wandb.ai/site/pricing/', title: 'Weights & Biases 定价', description: 'Weave 的免费、Pro 与 Enterprise 档位，员工少于 50 人的限制，以及每 MB 0.10 美元的摄入费率。' },
+          { url: 'https://github.com/promptfoo/promptfoo', title: 'Promptfoo 代码仓库', description: '星标数、MIT 许可，以及项目自身关于红队测试与漏洞扫描的描述。' },
+          { url: 'https://openai.com/index/openai-to-acquire-promptfoo/', title: 'OpenAI：收购 Promptfoo', description: 'OpenAI 自己的公告，含在现有许可下保持 Promptfoo 开源的承诺。' },
+          { url: 'https://www.promptfoo.dev/blog/promptfoo-joining-openai/', title: 'Promptfoo：加入 OpenAI', description: 'Promptfoo 自己对这次收购的说明。' },
+          { url: 'https://techcrunch.com/2026/03/09/openai-acquires-promptfoo-to-secure-its-ai-agents/', title: 'OpenAI 收购 Promptfoo（TechCrunch）', description: '对 2026 年 3 月 9 日公告的独立确认。' },
+          { url: 'https://www.cnbc.com/2026/03/09/open-ai-cybersecurity-promptfoo-ai-agents.html', title: 'OpenAI 将收购 Promptfoo（CNBC）', description: '关于这次收购及其安全定位的第二份独立报道。' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '延伸阅读',
+        items: [
+          '[最佳提示测试与评估工具](/zh/prompt-engineering/best-prompt-testing-evaluation-tools) — 同一问题在提示层面的视角',
+          '[如何评估提示质量](/zh/prompt-engineering/how-to-evaluate-prompt-quality) — 搭建评分器将要套用的评分标准',
+          '[提示评估指标](/zh/prompt-engineering/prompt-evaluation-metrics) — 有了数据集之后到底该测量什么',
+          '[提示安全与注入测试工具](/zh/prompt-engineering/prompt-security-tools-injection-testing) — Promptfoo 领先的红队测试方向',
+          '[最佳 LLM API 网关](/zh/local-llms/best-llm-api-gateway-2026) — 在供应商之间路由评估调用，使比较只是一次配置改动',
+        ],
+      },
+    },
+    schema: {
+      '@type': 'TechArticle',
+      headline: '2026 年最佳 LLM 评估工具：Braintrust、Weave 与 Promptfoo',
+      description: '对比用于大模型评估的 Braintrust、Weave 与 Promptfoo，包含核实过的价格、资格限制、自托管选项，以及 OpenAI 对 Promptfoo 的收购。核实于 2026 年 8 月。',
+      datePublished: '2026-08-28',
+      dateModified: '2026-08-28',
+      url: 'https://www.promptquorum.com/zh/local-llms/best-llm-evaluation-tools-2026',
+      inLanguage: 'zh',
+      proficiencyLevel: 'Advanced',
+      author: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      about: [
+        { '@type': 'Thing', name: '大模型评估' },
+        { '@type': 'Thing', name: 'AI 回归测试' },
+      ],
+      mentions: [
+        { '@type': 'SoftwareApplication', name: 'Braintrust' },
+        { '@type': 'SoftwareApplication', name: 'Weave' },
+        { '@type': 'SoftwareApplication', name: 'Promptfoo' },
+      ],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'zh',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: '2026 年最好的 LLM 评估工具是哪个？',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: '需要非技术人员复核结果的团队选 Braintrust，已用 Weights & Biases 且员工少于 50 人的选 Weave，想在自己基础设施上免费运行受版本控制评估配置的选 Promptfoo。',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'OpenAI 收购 Promptfoo 了吗？',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: '是的。OpenAI 于 2026 年 3 月 9 日宣布收购，并表示 Promptfoo 将在现有许可下保持开源。截至 2026 年 8 月下旬，该仓库仍为 MIT 许可并处于活跃维护中。',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Braintrust 多少钱？',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: '免费的 Starter 档含每月 1 万次评分、1 GB 数据、14 天留存与不限数量的用户。Pro 每月 249 美元，含 249 美元模型额度、5 万次评分与 5 GB。Enterprise 为定制报价，支持本地或托管部署。',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Weave 免费吗，限制是什么？',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Weave 有免费档，提供不限席位与每月 1 GB 摄入。Pro 每月 60 美元起、含 1.5 GB，但仅限员工少于 50 人的团队。额外摄入为每 MB 0.10 美元。',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'LLM 评估工具有联盟计划吗？',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: '我们在 Braintrust、Weights & Biases 与 Promptfoo 都没有找到公开的联盟计划。Weights & Biases 的合作伙伴计划是面向咨询公司的分销与集成机制，而非按推荐付费。',
+          },
+        },
+      ],
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: '最佳 LLM 评估工具（2026 年 8 月）',
+      inLanguage: 'zh',
+      numberOfItems: 3,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Braintrust', description: '跨职能生产团队最佳 — 每月 1 万次评分内免费且不限用户，Pro 249 美元含 249 美元模型额度' },
+        { '@type': 'ListItem', position: 2, name: 'Weave', description: 'Weights & Biases 生态内最佳 — 每月 1 GB 免费且席位不限，Pro 面向员工少于 50 人的团队每月 60 美元起' },
+        { '@type': 'ListItem', position: 3, name: 'Promptfoo', description: '最佳免费且 CI 原生的选择 — 2.46 万星标，MIT 许可，任意规模下跑在你自己的基础设施上' },
+      ],
+    },
+  },
+
+  ar: {
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2027-02-28',
+    theme: 'Tools & Interfaces',
+    title: 'أفضل أداة لتقييم النماذج اللغوية 2026: Braintrust وWeave وPromptfoo',
+    seoTitle: 'أفضل أداة لتقييم النماذج اللغوية 2026',
+    metaDescription: 'أداة Braintrust مجانية حتى 10 آلاف تقييم شهريًا وبـ249 دولارًا لباقة Pro، وWeave تبدأ من 60 دولارًا، وPromptfoo برخصة MIT ومجانية بأي حجم. أسعار موثقة في أغسطس 2026.',
+    educationalLevel: 'Advanced',
+    audience: 'فرق الهندسة التي تختبر تطبيقات النماذج اللغوية قبل الإطلاق',
+    affiliateDisclosure: true,
+    publishDate: '2026-08-28',
+    dateModified: '2026-08-28',
+    readTime: 'قراءة 13 دقيقة',
+    primaryTerm: 'أداة تقييم النماذج اللغوية',
+    targetKeywords: [
+      'أفضل أداة لتقييم النماذج اللغوية 2026',
+      'مقارنة Braintrust وWeave وPromptfoo',
+      'مقارنة منصات تقييم النماذج اللغوية',
+      'استحواذ OpenAI على Promptfoo',
+      'التقييم بنموذج لغوي كحكم',
+    ],
+    leadAnswerBlock: '**أداة Braintrust هي أقوى منصة تقييم شاملة للفرق التي تُطلق ميزات النماذج اللغوية في الإنتاج: مجانية حتى 10 آلاف تقييم شهريًا، وباقة Pro بـ249 دولارًا. وأداة Weave هي الخيار الطبيعي إن كنت تستخدم Weights & Biases أصلًا، ابتداءً من 60 دولارًا شهريًا، لكنها مقصورة على المؤسسات التي يقل عدد موظفيها عن 50. وأداة Promptfoo هي أفضل خيار مجاني وأصيل في التكامل المستمر: مرخّصة بـMIT، ومجانية عند أي حجم لأنها تعمل على أجهزتك، وأصبحت منذ مارس 2026 مملوكة لشركة OpenAI التي التزمت علنًا بإبقائها مفتوحة المصدر بموجب رخصتها الحالية.**',
+    quickAnswerTop: {
+      question: 'أي أداة لتقييم النماذج اللغوية هي الأفضل في 2026؟',
+      answer: '**Braintrust للفرق متعددة التخصصات التي يراجع فيها غير المبرمجين النتائج، وWeave إن كنت على Weights & Biases بالفعل، وPromptfoo إن أردت التقييمات في صورة إعدادات خاضعة لإدارة الإصدارات دون أي مزوّد.** الفارق ليس في وظائف التقييم، فالثلاثة تدعم استخدام نموذج لغوي كحكم، ومقيّمات مخصصة، واختبارات انحدار قائمة على مجموعات بيانات. الفارق في مكان تشغيل التقييم ومن يقرأ نتائجه. الواجهة المستضافة تستحق كلفتها حين تحتاج مديرة منتج إلى مراجعة حالات الفشل، وتضيع هدرًا حين تُشغّل مهندسة واحدة التقييمات في التكامل المستمر.',
+      bullets: [
+        '**الأفضل إجمالًا لفرق الإنتاج:** Braintrust — مجانية حتى 10 آلاف تقييم شهريًا، وPro بـ249 دولارًا شهريًا مع 249 دولارًا رصيد نماذج',
+        '**الأفضل لمستخدمي Weights & Biases:** Weave — مجانية بجيغابايت واحد شهريًا ومقاعد غير محدودة، وPro من 60 دولارًا شهريًا لمن يقل عددهم عن 50 موظفًا',
+        '**الأفضل مجانًا وضمن التكامل المستمر:** Promptfoo — 24.6 ألف نجمة، رخصة MIT، تعمل على بنيتك التحتية، دون حد للحجم',
+        '**الأفضل للأمن واختبار الفريق الأحمر:** Promptfoo — تركيزها المعلن هو فحص الثغرات واختبار الفريق الأحمر، لا مجرد التقييم',
+        '**لا يملك أي من الثلاثة** برنامج عمولة علنيًا لصنّاع المحتوى، فلا يوجد في هذه الصفحة أي إدراج مدفوع',
+        '**استغنِ عن المنصة كليًا** إن كان لديك أقل من نحو 20 حالة اختبار: يكفي سكربت يمنح درجات ضمن التكامل المستمر',
+      ],
+      updatedDate: '2026-08-28',
+    },
+    toc: [
+      { label: 'أبرز النقاط', anchor: 'tldr' },
+      { label: 'الخيار الأنسب لحالتك', anchor: 'best-choice' },
+      { label: 'ما الذي تفعله أداة التقييم فعليًا', anchor: 'what-is-llm-eval' },
+      { label: 'جدول المقارنة الكامل', anchor: 'comparison' },
+      { label: 'Braintrust: خيار الإنتاج', anchor: 'braintrust' },
+      { label: 'Weave: خيار Weights & Biases', anchor: 'weave' },
+      { label: 'Promptfoo: الخيار المجاني ضمن التكامل المستمر', anchor: 'promptfoo' },
+      { label: 'ماذا يعني استحواذ OpenAI', anchor: 'promptfoo-openai' },
+      { label: 'كيف تُقارَن الأسعار', anchor: 'pricing' },
+      { label: 'الاستضافة الذاتية وموقع إقامة البيانات', anchor: 'self-hosting' },
+      { label: 'من ينبغي أن يستخدم ماذا', anchor: 'who-should-use' },
+      { label: 'السياق الإقليمي: الاتحاد الأوروبي واليابان والصين', anchor: 'regional-context' },
+      { label: 'أخطاء شائعة', anchor: 'common-mistakes' },
+      { label: 'تجاوز هذا إن…', anchor: 'skip-this-if' },
+      { label: 'الأسئلة الشائعة', anchor: 'faq' },
+      { label: 'الخلاصة النهائية', anchor: 'verdict' },
+      { label: 'المصادر', anchor: 'sources' },
+      { label: 'قراءات ذات صلة', anchor: 'related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        isTldr: true,
+        items: [
+          '**Braintrust** — باقة Starter المجانية تشمل 10 آلاف تقييم شهريًا، وجيغابايت واحدًا من البيانات المعالجة، واحتفاظًا لأربعة عشر يومًا، و10 دولارات رصيد نماذج، وعدد مستخدمين غير محدود. وباقة Pro بـ249 دولارًا شهريًا وتشمل 249 دولارًا رصيد نماذج، و5 جيغابايت، و50 ألف تقييم، واحتفاظًا لثلاثين يومًا. وتضيف باقة Enterprise احتفاظًا مخصصًا ونشرًا محليًا أو مستضافًا.',
+          '**Weave** — جزء من Weights & Biases. تمنح الباقة المجانية مقاعد Weave غير محدودة وجيغابايت واحدًا من الاستيعاب شهريًا. وتبدأ Pro من 60 دولارًا شهريًا مع 1.5 جيغابايت، لكن الأهلية مقصورة صراحةً على «early-stage teams fewer than 50 employees»؛ والمؤسسات الأكبر عليها الانتقال إلى Enterprise. ويكلّف الاستيعاب الإضافي 0.10 دولار لكل ميغابايت.',
+          '**Promptfoo** — 24.6 ألف نجمة على GitHub، ورخصة MIT، ومجانية عند أي حجم لأنها تعمل بوصفها واجهة سطر أوامر ومكتبة على بنية تحتية تملكها أصلًا. وكلفتك الوحيدة هي إنفاق واجهة النموذج البرمجية الذي تستهلكه التقييمات نفسها، وهو ما يحدث في أي منصة عند استخدام نموذج لغوي كحكم.',
+          '**أعلنت OpenAI استحواذها على Promptfoo في 9 مارس 2026** وصرّحت علنًا: «Promptfoo will remain open source under the current license, and we will continue to service and support current customers.» ولا يزال المستودع مرخّصًا بـMIT وقد حُدّث في اليوم الذي جرى فيه التحقق من هذه الصفحة.',
+          '**تصويب يستحق الذكر:** تصف عدة مقالات رصيد نماذج باقة Pro لدى Braintrust بأنه سعر ترويجي ينخفض إلى 100 دولار شهريًا بعد 1 سبتمبر 2026. ولا يظهر أي تاريخ انتهاء من هذا القبيل على صفحة أسعار Braintrust. والعرض الوحيد المذكور فيها هو «6–12 months free for qualifying startups». ضع ميزانيتك انطلاقًا من صفحة المزوّد.',
+          '**Promptfoo أداة أمن بقدر ما هي أداة تقييم.** فوصفها الذاتي يبدأ باختبار الفريق الأحمر واختبار الاختراق وفحص الثغرات، وقد وضعت OpenAI الاستحواذ في سياق اختبار أمن الوكلاء. وهذا فارق حقيقي في التركيز عن Braintrust وWeave.',
+          'لا يملك أي من الثلاثة برنامج عمولة أو إحالة علنيًا لصنّاع المحتوى. وتدير Weights & Biases برنامج شركاء، لكنه ترتيب لإعادة البيع والتكامل التقني موجّه إلى بيوت الاستشارات، لا دفعًا مقابل كل إحالة. ومنصة PromptQuorum لا تكسب شيئًا من هذه الصفحة.',
+        ],
+      },
+      bestChoice: {
+        id: 'best-choice',
+        title: '🏆 الخيار الأنسب لحالتك',
+        content: '**اختر بناءً على مكان تشغيل التقييم ومن يقرأ النتائج، لا بناءً على قائمة وظائف التقييم؛ فالثلاثة تغطي المقومات نفسها.** اقرأ القائمة وتوقف عند أول سطر ينطبق عليك.',
+        items: [
+          '**يحتاج من لا يكتبون الشيفرة إلى مراجعة حالات الفشل** ← Braintrust. فالواجهة المستضافة وطوابير المراجعة البشرية وإدارة إصدارات مجموعات البيانات وُجدت لهذا تحديدًا، والباقة المجانية تغطي معظم الاستخدام في المراحل الأولى.',
+          '**تستخدم Weights & Biases بالفعل** ← Weave. إذ تظهر التقييمات إلى جانب تتبّع تجاربك القائم، وتمنح الباقة المجانية مقاعد غير محدودة. تحقق من حد الخمسين موظفًا قبل الاعتماد على Pro.',
+          '**تريد تقييمات في صورة إعدادات خاضعة لإدارة الإصدارات دون مزوّد** ← Promptfoo. ملفات YAML أو JS إلى جانب شيفرتك، قابلة للمقارنة في طلب سحب، ومجانية أيًا كان الحجم.',
+          '**تختبر حقن الموجّهات وأمن الوكلاء لا الجودة وحدها** ← Promptfoo. فاختبار الفريق الأحمر وفحص الثغرات هما غرضها المعلن؛ راجع [أدوات أمن الموجّهات واختبار الحقن](/ar/prompt-engineering/prompt-security-tools-injection-testing).',
+          '**لديك حفنة من حالات الاختبار ومهندسة واحدة** ← لا شيء منها بعد. يكفي سكربت يمنح درجات ضمن التكامل المستمر إلى أن تكبر مجموعة البيانات بما يستدعي إدارتها.',
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.braintrust.dev/pricing',
+            productName: 'Braintrust',
+            productCategory: 'dev-tool',
+            priceRange: 'مجانية 10 آلاف تقييم شهريًا؛ Pro بـ249 دولارًا شهريًا مع 249 دولارًا رصيدًا',
+            label: 'Braintrust — اطّلع على الأسعار',
+          },
+          {
+            url: 'https://github.com/promptfoo/promptfoo',
+            productName: 'Promptfoo',
+            productCategory: 'dev-tool',
+            priceRange: 'مجانية، رخصة MIT، أي حجم',
+            label: 'Promptfoo — المستودع مفتوح المصدر',
+          },
+        ],
+      },
+      whatIsLlmEval: {
+        id: 'what-is-llm-eval',
+        title: 'ما الذي تفعله أداة تقييم النماذج اللغوية فعليًا',
+        content: '**تمرّر أداة تقييم النماذج اللغوية مجموعةً من حالات الاختبار عبر موجّهك أو وكيلك وتمنح كل مخرَج درجة، لتعرف قبل أن يصل التغيير إلى المستخدمين ما إذا كان قد حسّن الأمور أم أساءها.** ومجموعة البيانات عادةً أزواج من المدخل والمخرَج المتوقع، مأخوذة من سجلات الإنتاج، أو مكتوبة يدويًا بوصفها حالات حدّية، أو مولّدة. وتتدرج المقيّمات من فحوص حتمية مثل مطابقة النصوص والتحقق من مخطط JSON، مرورًا بالتقييم بنموذج لغوي كحكم حيث يمنح نموذج ثانٍ درجةً وفق معيار، وصولًا إلى دوال مخصصة تكتبها بنفسك.\n\nوهذه مهمة مختلفة عن مراقبة ما يفعله النظام بعد إطلاقه. فالتقييم يجيب عن «هل هذا التغيير آمن للإطلاق؟»، بينما تجيب مراقبة الإنتاج عن «ماذا يفعل الآن؟». وهذه الصفحة تخص السؤال الأول. وللنظر إلى المشكلة نفسها على مستوى الموجّه، راجع [كيف تقيّم جودة الموجّه](/ar/prompt-engineering/how-to-evaluate-prompt-quality).',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'أداة تقييم النماذج اللغوية تمرّر مجموعة ثابتة من حالات الاختبار عبر موجّهك أو وكيلك، وتمنح كل مخرَج درجة عبر فحوص حتمية أو تقييم بنموذج لغوي كحكم أو دوال مخصصة، ثم تُبلّغ عمّا إذا كان التغيير قد حسّن الجودة أو أضعفها قبل الإطلاق.',
+          },
+          {
+            type: 'plain-terms',
+            text: 'إنها حزمة اختبارات لشيء لا يعطي الإجابة نفسها مرتين. فبدل التحقق من مخرَج بعينه، تمنحه درجة وتراقب إن كان المتوسط يتحرك في الاتجاه الخطأ حين تغيّر موجّهًا.',
+          },
+        ],
+        note: 'تبنَّ منصة تقييم حين تكبر مجموعة الاختبار إلى حد تصبح فيه إدارتها في جدول أو سكربت هي عنق الزجاجة. وقبل ذلك، يؤدي سكربت يمنح درجات ضمن التكامل المستمر العمل نفسه.',
+      },
+      comparison: {
+        id: 'comparison',
+        title: 'مقارنة بين Braintrust وWeave وPromptfoo',
+        content: '**الثلاثة تدعم استخدام نموذج لغوي كحكم ومقيّمات مخصصة واختبارات انحدار قائمة على مجموعات بيانات، لذا تدور المقارنة حول نمط الاستضافة وبنية التكلفة وشروط الأهلية.** قُرئت الأسعار من صفحات المزوّدين في 28 أغسطس 2026، وأرقام المستودعات من واجهة GitHub البرمجية في اليوم نفسه.',
+        tableFormat: true,
+        itemHeadings: true,
+        columns: ['المعيار', 'Braintrust', 'Weave', 'Promptfoo'],
+        rows: [
+          { المعيار: 'الشكل', Braintrust: 'منصة مستضافة بواجهة', Weave: 'مستضافة، جزء من W&B', Promptfoo: 'واجهة سطر أوامر ومكتبة تشغّلها بنفسك' },
+          { المعيار: 'الرخصة', Braintrust: 'تجارية', Weave: 'حزمة التطوير Apache-2.0، والخدمة مستضافة', Promptfoo: 'MIT' },
+          { المعيار: 'الباقة المجانية', Braintrust: '10 آلاف تقييم شهريًا، 1 غيغابايت، 14 يومًا', Weave: 'استيعاب 1 غيغابايت شهريًا، مقاعد غير محدودة', Promptfoo: 'مجانية بأي حجم' },
+          { المعيار: 'مدخل الدفع', Braintrust: 'Pro بـ249 دولارًا شهريًا مع 249 دولارًا رصيدًا', Weave: 'من 60 دولارًا شهريًا، 1.5 غيغابايت', Promptfoo: 'باقة Enterprise بسعر مخصص' },
+          { المعيار: 'حد الأهلية', Braintrust: 'لا شيء معلن', Weave: 'Pro لمن يقل عددهم عن 50 موظفًا فقط', Promptfoo: 'لا يوجد' },
+          { المعيار: 'تجاوز الحصة', Braintrust: '1.50 دولار لكل 1000 تقييم في Pro', Weave: '0.10 دولار لكل ميغابايت استيعاب', Promptfoo: 'فقط إنفاق واجهة النموذج البرمجية' },
+          { المعيار: 'الاستضافة الذاتية', Braintrust: 'Enterprise، محليًا أو مستضافًا', Weave: 'Enterprise، مستأجر واحد', Promptfoo: 'الوضع الافتراضي — تعمل على أجهزتك' },
+          { المعيار: 'برنامج العمولة', Braintrust: 'لم يُعثر عليه', Weave: 'لم يُعثر عليه', Promptfoo: 'لم يُعثر عليه' },
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'باقة Pro لدى Weave ليست مجرد خطة أرخص: إذ تنص Weights & Biases على أنها «for early-stage teams fewer than 50 employees»، وأن العملاء الذين يتجاوزون هذه الإرشادات عليهم الانتقال إلى Enterprise. فإن تجاوزت هذا العدد، تصبح المقارنة الحقيقية بين Braintrust Pro بـ249 دولارًا وعرض Enterprise مخصص، لا مقابل 60 دولارًا.',
+          },
+        ],
+      },
+      braintrust: {
+        id: 'braintrust',
+        title: 'Braintrust: خيار الإنتاج',
+        content: '**Braintrust هو ما تختاره حين يحتاج من لا يكتبون الشيفرة إلى النظر في نتائج التقييم.** فقيمته متركزة في الواجهة المستضافة وإدارة إصدارات مجموعات البيانات وسير المراجعة البشرية، وهو تحديدًا الجزء الذي كنت ستضطر إلى بنائه بنفسك.',
+        rankedItems: [
+          {
+            rank: 1,
+            name: 'Braintrust — الأفضل لفرق الإنتاج متعددة التخصصات',
+            tagline: 'مجانية حتى 10 آلاف تقييم شهريًا، وPro بـ249 دولارًا مع 249 دولارًا رصيدًا',
+            verdict: 'باقة Starter المجانية سخية على نحو غير معتاد بالنسبة إلى منصة مستضافة: 10 آلاف تقييم شهريًا، وجيغابايت واحد من البيانات المعالجة، واحتفاظ لأربعة عشر يومًا، و10 دولارات رصيد نماذج، إضافةً إلى مستخدمين ومشاريع ومجموعات بيانات وتجارب بلا حد. والمقاعد غير المحدودة في باقة مجانية تهم هنا تحديدًا، لأن سبب اختيار Braintrust أصلًا هو تمكين مديري المنتج وخبراء المجال من مراجعة حالات الفشل دون شراء تراخيص لهم. وترفع باقة Pro بـ249 دولارًا شهريًا ذلك إلى 50 ألف تقييم و5 جيغابايت واحتفاظ لثلاثين يومًا، وتشمل 249 دولارًا رصيد نماذج، وهو ما يعوّض إلى حد بعيد إنفاق نموذج الحكم في حِمل متوسط. والتجاوز يُحتسب بدل أن يُحجب: 1.50 دولار لكل 1000 تقييم و3 دولارات لكل جيغابايت في Pro. وتضيف Enterprise احتفاظًا وتصديرًا مخصصين، وتحكمًا بالأدوار، ونشرًا محليًا أو مستضافًا.',
+            pros: [
+              'مستخدمون غير محدودين حتى في الباقة المجانية، وهو بيت القصيد',
+              'الباقة المجانية بعشرة آلاف تقييم شهريًا تغطي فعلًا المشاريع في مراحلها الأولى',
+              'تشمل Pro رصيد نماذج بـ249 دولارًا، ما يعوّض معظم إنفاق نموذج الحكم',
+              'يتوفر نشر محلي أو مستضاف للأحمال الحساسة للخصوصية',
+            ],
+            cons: [
+              'الاحتفاظ لأربعة عشر يومًا في المجاني قصير إن أردت المقارنة بالشهر الماضي',
+              'الاستضافة الذاتية تتطلب Enterprise ومحادثة مع المبيعات، دون سعر منشور',
+              'منصة تجارية، فبخلاف Promptfoo لا يوجد بديل احتياطي إن تغيّرت الأسعار',
+            ],
+            affiliateLinks: [
+              {
+                url: 'https://www.braintrust.dev/pricing',
+                productName: 'Braintrust',
+                productCategory: 'dev-tool',
+                priceRange: 'مجانية 10 آلاف تقييم شهريًا؛ Pro بـ249 دولارًا شهريًا؛ Enterprise بسعر مخصص',
+                label: 'Braintrust — اطّلع على الأسعار',
+              },
+            ],
+          },
+        ],
+        note: 'استخدم Braintrust حين تكون المراجعة نشاطًا جماعيًا. فإن كان المهندسون وحدهم من يفتح النتائج، فأنت تدفع مقابل واجهة لن تستعملها.',
+      },
+      weave: {
+        id: 'weave',
+        title: 'Weave: خيار Weights & Biases',
+        content: '**Weave هي الجواب البديهي إن كان فريقك يتتبع تجاربه أصلًا في Weights & Biases، وأصعب في الإقناع إن لم يكن كذلك.** فالحجة هي التكامل نفسه: تصل التقييمات إلى جوار عمليات التشغيل التي تنظر إليها أصلًا.',
+        rankedItems: [
+          {
+            rank: 1,
+            name: 'Weave — الأفضل داخل منظومة Weights & Biases',
+            tagline: 'مجانية بجيغابايت واحد شهريًا ومقاعد غير محدودة، وPro من 60 دولارًا لمن يقل عددهم عن 50 موظفًا',
+            verdict: 'تغطي Weave تقييمات التطبيقات والتتبّع والمقيّمات، وتمنح الباقة المجانية مقاعد Weave غير محدودة مع جيغابايت واحد من الاستيعاب شهريًا، وهو منطلق معقول لفريق صغير. وتبدأ Pro من 60 دولارًا شهريًا بفوترة شهرية مع 1.5 جيغابايت، والاستيعاب الإضافي بـ0.10 دولار لكل ميغابايت. والعقبة في الأهلية أكثر منها في السعر: تنص Weights & Biases على أن Pro «for early-stage teams fewer than 50 employees»، وأن من يتجاوز هذه الإرشادات عليه الانتقال إلى Enterprise. وفي Enterprise تكمن خيارات النشر الجدية، ومنها خيار المستأجر الواحد، والامتثال لمعيار HIPAA، ومفاتيح تشفير يديرها العميل، والدخول الموحّد، وسجلات التدقيق. ولاحظ أن المستأجر الواحد أقرب إلى نسخة مخصصة منه إلى نشر محلي حقيقي، فتأكد من التفاصيل مع W&B قبل افتراض أنه يفي بمتطلب محلي صارم.',
+            pros: [
+              'باقة مجانية بمقاعد Weave غير محدودة وجيغابايت واحد من الاستيعاب شهريًا',
+              'التقييمات تقف إلى جانب تتبّع التجارب والسجل القائمين في W&B',
+              'تتيح Enterprise المستأجر الواحد وHIPAA ومفاتيح يديرها العميل والدخول الموحّد',
+              'بستين دولارًا شهريًا، أدنى مدخل مدفوع بين الثلاثة',
+            ],
+            cons: [
+              'Pro مقصورة على المؤسسات التي يقل عدد موظفيها عن 50، وهو سقف صارم',
+              'الاحتساب بالاستيعاب عند 0.10 دولار للميغابايت أصعب في التوقع من عدّ التقييمات',
+              'أضعف حجة قائمة بذاتها إن لم تكن تستخدم Weights & Biases أصلًا',
+            ],
+            affiliateLinks: [
+              {
+                url: 'https://wandb.ai/site/pricing/',
+                productName: 'Weave',
+                productCategory: 'dev-tool',
+                priceRange: 'مجانية 1 غيغابايت شهريًا؛ Pro من 60 دولارًا لمن يقل عددهم عن 50 موظفًا؛ Enterprise مخصص',
+                label: 'Weave — اطّلع على أسعار Weights & Biases',
+              },
+            ],
+          },
+        ],
+        note: 'استخدم Weave إن كانت W&B نظام السجل لديك أصلًا. وإن تجاوزت خمسين موظفًا، فسعّر Enterprise قبل مقارنتها بـBraintrust، لأن باقة الستين دولارًا لن تكون متاحة لك.',
+      },
+      promptfoo: {
+        id: 'promptfoo',
+        title: 'Promptfoo: الخيار المجاني ضمن التكامل المستمر',
+        content: '**Promptfoo هي التي لا تكلّف شيئًا عند أي حجم، لأنك تشغّلها بنفسك.** فهي واجهة سطر أوامر ومكتبة لا منصة، ومن ثمّ تعيش التقييمات في صورة إعدادات إلى جانب شيفرتك وتُنفَّذ حيث تُنفَّذ اختباراتك أصلًا.',
+        rankedItems: [
+          {
+            rank: 1,
+            name: 'Promptfoo — أفضل خيار مجاني وأصيل في التكامل المستمر',
+            tagline: '24.6 ألف نجمة، رخصة MIT، مجانية بأي حجم، ومملوكة الآن لـOpenAI',
+            verdict: 'لدى Promptfoo 24,638 نجمة على GitHub ورخصة MIT، وقد حُدّثت في اليوم الذي جرى فيه التحقق من هذه الصفحة، فنشاطها لا لبس فيه. ولأنها تعمل على بنية تحتية تملكها أصلًا، لا يوجد عدّاد لكل تقييم ولا لكل جيغابايت: كلفتك الوحيدة هي استدعاءات واجهة النموذج البرمجية التي تستهلكها التقييمات، وهي كلفة كنت ستدفعها على أي منصة. وتعريف مجموعات البيانات بصيغة YAML أو CSV أو JS أكثر عناءً من النقر في واجهة، لكنه يجعل التقييمات قابلة للمقارنة في طلب سحب، وهي ميزة حقيقية حين ينبغي مراجعة إعدادات التقييم كما تُراجع أي شيفرة أخرى. ويجدر معرفة ماهيتها فعلًا: يصف المشروع نفسه باختبار الموجّهات والوكلاء وأنظمة الاسترجاع، مع اختبار الفريق الأحمر واختبار الاختراق وفحص الثغرات للذكاء الاصطناعي. فالأمن هنا ليس ميزة جانبية، وقد وضعت OpenAI استحواذها في سياق اختبار أمن الوكلاء.',
+            pros: [
+              'مجانية عند أي حجم، دون عدّاد للتقييمات ولا للاستيعاب',
+              'تقييمات في صورة إعدادات خاضعة لإدارة الإصدارات، قابلة للمقارنة والمراجعة في طلب سحب',
+              'مرخّصة بـMIT، فلا مزوّد تعتمد عليه إن تغيّرت الشروط',
+              'اختبار الفريق الأحمر وفحص الثغرات من الدرجة الأولى، لا مُضافَين لاحقًا',
+            ],
+            cons: [
+              'لا واجهة مستضافة افتراضيًا، فلا شيء ينقر عليه من لا يكتبون الشيفرة',
+              'مجموعات البيانات بصيغتَي YAML وCSV تتطلب إعدادًا أكثر من بنائها في المتصفح',
+              'مملوكة الآن لـOpenAI، وهو اعتبار حوكمة رغم الالتزام بالمصدر المفتوح',
+            ],
+            affiliateLinks: [
+              {
+                url: 'https://github.com/promptfoo/promptfoo',
+                productName: 'Promptfoo',
+                productCategory: 'dev-tool',
+                priceRange: 'مجانية، رخصة MIT، أي حجم',
+                label: 'Promptfoo — المستودع مفتوح المصدر',
+              },
+            ],
+          },
+        ],
+        note: 'استخدم Promptfoo حين يكون من يقرأ نتائج التقييم هم أنفسهم من يكتبون الشيفرة. وأضف Braintrust لاحقًا إن صارت المراجعة متعددة التخصصات.',
+      },
+      promptfooOpenai: {
+        id: 'promptfoo-openai',
+        title: 'ماذا يعني استحواذ OpenAI بالنسبة إلى Promptfoo',
+        content: '**أعلنت OpenAI استحواذها على Promptfoo في 9 مارس 2026، والتزمت علنًا بإبقائها مفتوحة المصدر.** ونص تصريح OpenAI: «Promptfoo will remain open source under the current license, and we will continue to service and support current customers.» ونقلت الاستحواذَ حينها TechCrunch وCNBC وForbes، وأكّدته مواقع OpenAI وPromptfoo نفسها.\n\nوتدعم المؤشرات العملية هذا الالتزام حتى الآن. فبعد نحو ستة أشهر، لا يزال المستودع ضمن منظمة `promptfoo`، ولا يزال مرخّصًا بـMIT، وقد حُدّث في اليوم الذي جرى فيه التحقق من هذه الصفحة. وهذا ما يرغب المرء في رؤيته.\n\nأما سبب التفكير في الأمر رغم ذلك فهو الحوكمة لا الرخصة. فأداة التقييم هي ما تحكم به على النماذج، وهي الآن مملوكة لشركة تصنع النماذج. ورخصة MIT تعني أن بإمكانك التفريع إن توقف اتجاه المشروع يومًا عن خدمتك، وهي حماية حقيقية لا يوفّرها Braintrust ولا Weave. لكن إن كانت استراتيجيتك في التقييم تقوم على الحياد بين مزوّدي النماذج، فذلك يستحق قرارًا واعيًا لا افتراضًا صامتًا.',
+        callouts: [
+          {
+            type: 'note',
+            text: 'ذكرت OpenAI أن تقنية Promptfoo ستُدمج في OpenAI Frontier لأغراض اختبار الفريق الأحمر المؤتمت واختبار أمن الوكلاء. وهذا متسق مع تركيز Promptfoo الأمني القائم، ويشير إلى أن الجانب الأمني قد يحظى باستثمار أكبر من جانب التقييم العام.',
+          },
+        ],
+        note: 'واصل استخدام Promptfoo إن كان ما يهمك هو رخصة MIT والتشغيل المحلي. وأعد النظر إن كان حياد المزوّد في أدوات التقييم متطلبًا معلنًا لديك.',
+      },
+      pricing: {
+        id: 'pricing',
+        title: 'كيف تُقارَن الأسعار',
+        content: '**تتصاعد الكلفة مع حجم البيانات وإنفاق نموذج الحكم لا مع عدد المقاعد، ولهذا فإن المستخدمين غير المحدودين في الباقات المجانية أنفع مما يبدو للوهلة الأولى.** ويسعّر الجدول أدناه حِملًا متوسطًا يقارب 50 ألف تقييم شهريًا.',
+        tableFormat: true,
+        itemHeadings: true,
+        columns: ['السيناريو', 'Braintrust', 'Weave', 'Promptfoo'],
+        rows: [
+          { السيناريو: 'حد الباقة المجانية', Braintrust: '10 آلاف تقييم، 1 غيغابايت، 14 يومًا', Weave: 'استيعاب 1 غيغابايت شهريًا، مقاعد غير محدودة', Promptfoo: 'بلا حد' },
+          { السيناريو: 'الباقة المدفوعة', Braintrust: 'Pro بـ249 دولارًا شهريًا', Weave: 'من 60 دولارًا شهريًا', Promptfoo: 'غير لازمة' },
+          { السيناريو: 'المشمول في تلك الباقة', Braintrust: '50 ألف تقييم، 5 غيغابايت، 249 دولارًا رصيدًا', Weave: 'استيعاب 1.5 غيغابايت', Promptfoo: 'لا ينطبق' },
+          { السيناريو: '50 ألف تقييم شهريًا', Braintrust: 'تغطيها Pro بـ249 دولارًا', Weave: 'حسب الجيغابايت، والأرجح تجاوز 1.5', Promptfoo: 'إنفاق واجهة النموذج فقط' },
+          { السيناريو: 'سعر التجاوز', Braintrust: '1.50 دولار لكل 1000 تقييم، 3 دولارات للجيغابايت', Weave: '0.10 دولار لكل ميغابايت', Promptfoo: 'لا يوجد' },
+          { السيناريو: 'سقف الأهلية', Braintrust: 'لا شيء معلن', Weave: 'Pro لمن يقل عددهم عن 50 موظفًا', Promptfoo: 'لا يوجد' },
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'تزعم عدة مقارنات أن رصيد Braintrust Pro البالغ 249 دولارًا عرض ترويجي لعام 2026 ينخفض إلى 100 دولار شهريًا بعد 1 سبتمبر 2026. ولا يظهر هذا التاريخ على صفحة أسعار Braintrust التي لا تذكر من العروض سوى «6–12 months free for qualifying startups». سعّر انطلاقًا من صفحة المزوّد لا من مقال مقارنة، وهذا المقال منها.',
+          },
+        ],
+        note: 'تحتسب Braintrust بالتقييم، وتحتسب Weave بالجيغابايت المستوعب. وليستا وحدتين قابلتين للمقارنة، فقدّر كليهما من حِملك الفعلي قبل اعتبار الستين دولارًا أرخص من 249.',
+      },
+      selfHosting: {
+        id: 'self-hosting',
+        title: 'الاستضافة الذاتية وموقع إقامة البيانات',
+        content: '**Promptfoo هي الوحيدة بين الثلاث التي تكون فيها الاستضافة الذاتية هي الوضع الافتراضي لا ترقية مؤسسية.** فلأنها واجهة سطر أوامر ومكتبة، لا تغادر حالات اختبارك ولا مخرجات النموذج بيئتك ما لم تختر عمدًا باقة مستضافة. ولفريق يخضع لقواعد إقامة البيانات، فإن هذا يلغي السؤال بدل أن يجيب عنه.\n\nوتوفّر Braintrust نشرًا محليًا أو مستضافًا، لكن في Enterprise وحدها، ما يعني سعرًا مخصصًا ومحادثة مع المبيعات. وهو خيار نشر حقيقي لا عبارة تسويقية، غير أنك لا تستطيع تقييمه ذاتيًا.\n\nوتوفّر باقة Enterprise لدى Weave خيار المستأجر الواحد مع مفاتيح تشفير يديرها العميل، والامتثال لمعيار HIPAA، واتصالًا خاصًا آمنًا. اقرأ ذلك بتمعّن: فالمستأجر الواحد مع مفاتيح خاصة هو نسخة مخصصة، وهذا ليس كالتشغيل داخل نطاقك. فإن كان متطلبك محليًا بصرامة، تأكد من التفاصيل مع Weights & Biases بدل افتراض أن خيار المستأجر الواحد يفي به.',
+        note: 'اختر Promptfoo حين لا يجوز لبيانات التقييم مغادرة بنيتك التحتية وأردت حسم ذلك بالمعمار لا بالعقد. واختر Braintrust Enterprise حين تحتاج نشرًا محليًا مع واجهة للمراجعة.',
+      },
+      whoShouldUse: {
+        id: 'who-should-use',
+        title: 'من ينبغي أن يستخدم ماذا',
+        content: '**شكل الفريق يحسم هذا أكثر من قوائم الميزات.** وخمسة أنماط تغطي معظم القرّاء.',
+        items: [
+          '**مطوّرة منفردة تعمل على نموذج أولي** ← Promptfoo. لا حساب ولا عدّاد، ولا شيء تزيله إن غيّر المشروع اتجاهه.',
+          '**فريق منتج يطلق ميزة نموذج لغوي بمراجعة من إدارة المنتج والجودة** ← Braintrust. فالمستخدمون غير المحدودين في الباقة المجانية هم تحديدًا ما يجعل المراجعة متعددة التخصصات ممكنة.',
+          '**فريق يستخدم Weights & Biases بالفعل** ← Weave، شرط أن تكونوا دون خمسين موظفًا لأجل Pro. وفوق ذلك، سعّر Enterprise قبل المقارنة.',
+          '**فريق أمن أو منصة يختبر حقن الموجّهات** ← Promptfoo، إذ يتوافق تركيزها على الفريق الأحمر مع المهمة. راجع أيضًا [أدوات أمن الموجّهات واختبار الحقن](/ar/prompt-engineering/prompt-security-tools-injection-testing).',
+          '**فريق يقيّم عبر عدة مزوّدي نماذج** ← Promptfoo أو Braintrust، ووجّه الاستدعاءات عبر بوابة ليصبح تبديل المزوّد تغييرًا في الإعدادات؛ راجع [أفضل بوابة واجهات برمجة للنماذج اللغوية](/ar/local-llms/best-llm-api-gateway-2026).',
+        ],
+      },
+      regionalContext: {
+        id: 'regional-context',
+        title: 'أدوات التقييم في الاتحاد الأوروبي واليابان والصين',
+        content: 'تُبنى مجموعات بيانات التقييم عادةً من حركة الإنتاج، ما يجعلها من أكثر البيانات حساسية في منظومة النماذج اللغوية. وهذا يحوّل الاختيار بين المستضاف والمحلي إلى مسألة امتثال في ثلاث أسواق كبرى.',
+        subsections: [
+          {
+            title: 'الاتحاد الأوروبي',
+            content: 'مجموعة تقييم مستخرجة من سجلات الإنتاج تحتوي ما كتبه مستخدموك فعلًا، وهو بموجب اللائحة العامة لحماية البيانات معالجة كأي معالجة أخرى، وإرسالها إلى منصة مستضافة في الولايات المتحدة نقلٌ بمفهوم المواد من 44 إلى 49 ما لم تنص شروط المزوّد على خلاف ذلك. وتحتاج إلى عقد معالجة بموجب المادة 28 مع Braintrust أو Weights & Biases إن استخدمتهما. ويؤثر قانون الذكاء الاصطناعي هنا أيضًا على نحو يخدم التقييم عمومًا: فبالنسبة إلى الأنظمة المشمولة، تُعد القدرة على إثبات أنك اختبرت قبل النشر جزءًا من الالتزام لا تحسينًا اختياريًا، وقد أرجأت حزمة Digital Omnibus التزامات الملحق الثالث عالية المخاطر إلى 2 ديسمبر 2027 دون إلغائها. وتشغيل Promptfoo محليًا يتجاوز مسألة النقل أصلًا لأن مجموعة البيانات لا تغادر.',
+          },
+          {
+            title: 'اليابان',
+            content: 'يدفع برنامج حوكمة الذكاء الاصطناعي التابع لوزارة الاقتصاد والتجارة والصناعة الشركات نحو أدلة قابلة للتدقيق تثبت اختبار النظام قبل الإطلاق، وعمليات التقييم هي هذا الدليل بعينه حين تُحفظ حيث تتحكم بها. فملف إعدادات Promptfoo المودَع في نظام إدارة الإصدارات مع نتائجه أثرٌ للتدقيق بما لا تكونه لوحة معلومات مستضافة، لأنك تستطيع إعادة إنتاجه من المستودع بعد سنوات. وإن استخدمت منصة مستضافة بدلًا من ذلك، فتحقق من مدة الاحتفاظ: تحتفظ الباقة المجانية لدى Braintrust بالبيانات أربعة عشر يومًا، وهي أقصر مما تتوقعه معظم عمليات التدقيق.',
+          },
+          {
+            title: 'الصين',
+            content: 'بموجب قانون أمن البيانات (数据安全法) وقواعد إدارة الفضاء الإلكتروني بشأن النقل العابر للحدود، تكمن مشكلة الامتثال في رفع مجموعة تقييم مبنية من حركة مستخدمين في البر الرئيسي إلى منصة أجنبية، لا في التقييم نفسه. وعمليات النشر التي تخدم فرقًا في البر الرئيسي تتطلب عادةً تشغيل التقييم على بنية تحتية محلية. وPromptfoo هي الوحيدة بين الثلاث التي تفعل ذلك افتراضيًا، ما يجعلها الخيار العملي بصرف النظر عن تفضيلات الميزات — راجع [تشغيل النماذج اللغوية المحلية في الصين](/ar/local-llms/deepseek-local-china-data-privacy-2026).',
+          },
+        ],
+        note: 'شغّل التقييمات محليًا في أي سوق تكون فيه مجموعة البيانات نفسها هي الأصل الحساس. فـPromptfoo تجعل ذلك الوضع الافتراضي، بينما تحوّله الأداتان الأخريان إلى محادثة على مستوى Enterprise.',
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: 'أخطاء شائعة عند اختيار أداة تقييم',
+        numberedItems: [
+          {
+            title: 'مقارنة 60 دولارًا بـ249 دولارًا دون التحقق من الأهلية',
+            whyItMatters: 'باقة Weave Pro مقصورة على المؤسسات التي يقل عدد موظفيها عن 50. وفوق هذا العدد تصبح المقارنة الحقيقية بين Braintrust Pro وعرض Weave Enterprise مخصص، ورقم الستين دولارًا غير متاح لك أصلًا.',
+          },
+          {
+            title: 'وضع ميزانية حول تاريخ انتهاء عرض لدى Braintrust غير منشور',
+            whyItMatters: 'الزعم بأن رصيد Pro ينخفض إلى 100 دولار شهريًا بعد 1 سبتمبر 2026 لا يظهر على صفحة أسعار Braintrust. والتخطيط لهجرة حول تاريخ لم يعلنه المزوّد يهدر الجهد؛ أعد قراءة صفحة الأسعار بدلًا من ذلك.',
+          },
+          {
+            title: 'معاملة التقييمات والجيغابايتات كوحدتين قابلتين للمقارنة',
+            whyItMatters: 'تحتسب Braintrust التقييمات وتحتسب Weave الاستيعاب. فحِمل يتّسع بارتياح داخل 50 ألف تقييم قد يتّسع أو لا يتّسع داخل 1.5 جيغابايت تبعًا لحجم آثارك. قدّر كليهما من بياناتك قبل الترتيب بالسعر.',
+          },
+          {
+            title: 'تبنّي منصة لمجموعة من خمس عشرة حالة',
+            whyItMatters: 'دون نحو عشرين حالة اختبار، يؤدي سكربت يمنح درجات ضمن التكامل المستمر العمل نفسه بلا حساب ولا عدّاد ولا حد للاحتفاظ. والمنصات تستحق ثمنها حين تصبح إدارة مجموعة البيانات، لا التقييم، هي عنق الزجاجة.',
+          },
+          {
+            title: 'افتراض أن المستأجر الواحد يعني النشر المحلي',
+            whyItMatters: 'خيار Enterprise بمستأجر واحد لدى Weave مع مفاتيح يديرها العميل هو نسخة مخصصة، لا نشر داخل نطاقك. فإن كان متطلبك محليًا بصرامة، تأكد من ذلك مع W&B بدل قراءة المستأجر الواحد بوصفه مكافئًا.',
+          },
+        ],
+      },
+      skipThisIf: {
+        id: 'skip-this-if',
+        title: 'تجاوز هذا إن…',
+        content: '**إن كانت مجموعة اختبارك اثني عشر موجّهًا تشغّلها مهندسة واحدة، فتجاوز الثلاثة واكتب سكربتًا يمنح درجات ضمن التكامل المستمر.** ستحصل على إشارة الانحدار نفسها بلا حساب ولا عدّاد ولا نافذة احتفاظ، وستستطيع الانتقال إلى منصة لاحقًا دون أن تكون قد خسرت شيئًا، لأن الأصل هو مجموعة البيانات وهي تنتقل معك.\n\nوالعتبة التي يستحق انتظارها هي حين تصبح إدارة مجموعة البيانات هي العمل نفسه: حين تريد سحب الحالات الفاشلة من الإنتاج إلى مجموعة الاختبار بصورة روتينية، أو حين يحتاج من لا يكتب الشيفرة إلى منح المخرجات درجات، أو حين تحتاج إلى مقارنة نتائج هذا الشهر بنتائج الربع الماضي. هذه مشكلات إدارة بيانات، وهي ما تشتريه فعلًا. أما التقييم نفسه فقد كان دائمًا الجزء السهل.',
+        callouts: [
+          {
+            type: 'tip',
+            text: 'محفّز عملي: تبنَّ منصة أول مرة تجد نفسك فيها تبني جدولًا لتتبّع أي نسخة من الموجّه حصلت على أي درجة. فذلك الجدول هو المنتج الذي أنت على وشك شرائه، وشراؤه أرخص من صيانته.',
+          },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: 'الأسئلة الشائعة',
+        faqs: [
+          {
+            q: 'ما أفضل أداة لتقييم النماذج اللغوية في 2026؟',
+            a: 'Braintrust للفرق التي يراجع فيها غير المبرمجين النتائج، بفضل المستخدمين غير المحدودين حتى في الباقة المجانية. وWeave إن كنت تستخدم Weights & Biases أصلًا وعدد موظفيكم دون الخمسين. وPromptfoo إن أردت تقييمات في صورة إعدادات خاضعة لإدارة الإصدارات تعمل مجانًا على بنيتك التحتية. والثلاثة تغطي استخدام نموذج لغوي كحكم والمقيّمات المخصصة واختبارات الانحدار.',
+          },
+          {
+            q: 'هل استحوذت OpenAI على Promptfoo؟',
+            a: 'نعم. أعلنت OpenAI الاستحواذ في 9 مارس 2026 وذكرت أن Promptfoo ستبقى مفتوحة المصدر بموجب رخصتها الحالية وأن العملاء الحاليين سيستمرون في تلقّي الخدمة والدعم. وحتى أواخر أغسطس 2026 لا يزال المستودع ضمن منظمة promptfoo، ولا يزال مرخّصًا بـMIT، ويحظى بصيانة نشطة.',
+          },
+          {
+            q: 'كم تكلّف Braintrust؟',
+            a: 'تشمل باقة Starter المجانية 10 آلاف تقييم شهريًا، وجيغابايت واحدًا من البيانات المعالجة، واحتفاظًا لأربعة عشر يومًا، و10 دولارات رصيد نماذج، ومستخدمين غير محدودين. وباقة Pro بـ249 دولارًا شهريًا وتشمل 249 دولارًا رصيدًا، و50 ألف تقييم، و5 جيغابايت، واحتفاظًا لثلاثين يومًا، مع تجاوز بـ1.50 دولار لكل 1000 تقييم. وEnterprise بسعر مخصص وتضيف نشرًا محليًا أو مستضافًا.',
+          },
+          {
+            q: 'هل Weave مجانية وما حدودها؟',
+            a: 'لدى Weave باقة مجانية بمقاعد غير محدودة وجيغابايت واحد من استيعاب البيانات شهريًا. وتبدأ Pro من 60 دولارًا شهريًا مع 1.5 جيغابايت، لكن Weights & Biases تقصرها على الفرق في مراحلها الأولى التي يقل عدد موظفيها عن 50؛ والمؤسسات الأكبر عليها الانتقال إلى Enterprise. والاستيعاب الإضافي بـ0.10 دولار لكل ميغابايت.',
+          },
+          {
+            q: 'هل Promptfoo مجانية فعلًا عند أي حجم؟',
+            a: 'نعم، بمعنى أن الأداة نفسها مرخّصة بـMIT وتعمل على أجهزتك، فلا رسوم لكل تقييم ولا لكل جيغابايت. ولا تزال تدفع مقابل استدعاءات واجهة النموذج البرمجية التي تجريها التقييمات، لكن هذه الكلفة قائمة على أي منصة وليست خاصة بـPromptfoo. وتوجد فوق ذلك باقة Enterprise مستضافة اختيارية.',
+          },
+          {
+            q: 'أيها يمكنني استضافته ذاتيًا؟',
+            a: 'Promptfoo افتراضيًا، لأنها واجهة سطر أوامر ومكتبة تعمل حيث تشغّلها. وتوفّر Braintrust نشرًا محليًا أو مستضافًا في خطة Enterprise. وتوفّر Weave خيار Enterprise بمستأجر واحد مع مفاتيح يديرها العميل، وهو نسخة مخصصة أكثر منه نشرًا محليًا حقيقيًا، فتأكد من التفاصيل إن كان لديك متطلب صارم.',
+          },
+          {
+            q: 'هل لأي منها برنامج عمولة؟',
+            a: 'لم نجد برنامج عمولة أو إحالة علنيًا لصنّاع المحتوى لدى Braintrust ولا Weights & Biases ولا Promptfoo. وتدير Weights & Biases برنامج شركاء، لكن صفحته العلنية تصف شراكات إعادة بيع وتكامل تقني موجّهة إلى بيوت الاستشارات، لا دفعًا مقابل كل إحالة. ولاحظ أيضًا أن usebraintrust.com سوق مواهب منفصل لا صلة له بـbraintrust.dev. ومنصة PromptQuorum لا تكسب شيئًا من هذه الصفحة.',
+          },
+          {
+            q: 'ما الفرق بين التقييم والمراقبة؟',
+            a: 'يشغّل التقييم مجموعة بيانات ثابتة قبل الإطلاق ويخبرك إن كان التغيير قد حسّن الجودة أو أضعفها. أما المراقبة فتتابع الحركة الحية بعد الإطلاق وتخبرك بما يفعله النظام الآن. وهذه الصفحة تغطي الأول. والاثنان متكاملان وكثير من الفرق يمارس كليهما، لكن الأدوات والأسئلة مختلفة.',
+          },
+        ],
+      },
+      verdict: {
+        id: 'verdict',
+        title: 'الخلاصة النهائية',
+        items: [
+          '**استخدم Braintrust إن** كان على من لا يكتبون الشيفرة مراجعة النتائج — الخطوة التالية: ابدأ بالباقة المجانية التي تتيح مستخدمين غير محدودين، وتحقق مما إذا كان مديرو المنتج يفتحونها فعلًا قبل أن تدفع مقابل Pro.',
+          '**استخدم Weave إن** كانت Weights & Biases نظام السجل لديك أصلًا — الخطوة التالية: تأكد أنك دون سقف الخمسين موظفًا قبل الاعتماد على باقة الستين دولارًا، وسعّر Enterprise إن لم تكن كذلك.',
+          '**استخدم Promptfoo إن** أردت تقييمات في صورة إعدادات قابلة للمراجعة دون عدّاد مزوّد — الخطوة التالية: اكتب أول مجموعة بيانات بصيغة YAML وشغّلها في التكامل المستمر قبل تقييم أي حل مستضاف.',
+          '**استخدم Promptfoo تحديدًا إن** كنت تختبر حقن الموجّهات وأمن الوكلاء لا جودة المخرجات وحدها — الخطوة التالية: ابدأ بميزات الفريق الأحمر، فهي وجهة استثمار OpenAI.',
+          '**تجاوز الثلاثة إن** كان لديك اثنتا عشرة حالة اختبار ومهندسة واحدة — الخطوة التالية: اكتب سكربتًا يمنح درجات ضمن التكامل المستمر وأعد النظر حين تصبح إدارة مجموعة البيانات هي عنق الزجاجة.',
+        ],
+        note: 'لم نجد برنامج عمولة لدى أي من المزوّدين الثلاثة، ومنصة PromptQuorum غير مسجّلة في أي شيء. وكل رابط في هذه الصفحة يؤدي إلى موقع المزوّد أو مستودعه.',
+      },
+      sources: {
+        id: 'sources',
+        title: 'المصادر',
+        links: [
+          { url: 'https://www.braintrust.dev/pricing', title: 'أسعار Braintrust', description: 'باقات Starter وPro وEnterprise بحدود التقييمات والبيانات والاحتفاظ، والعرض الموجّه للشركات الناشئة.' },
+          { url: 'https://wandb.ai/site/pricing/', title: 'أسعار Weights & Biases', description: 'باقات Weave المجانية وPro وEnterprise، وقيد الخمسين موظفًا، وسعر 0.10 دولار لكل ميغابايت.' },
+          { url: 'https://github.com/promptfoo/promptfoo', title: 'مستودع Promptfoo', description: 'عدد النجوم ورخصة MIT ووصف المشروع نفسه لاختبار الفريق الأحمر وفحص الثغرات.' },
+          { url: 'https://openai.com/index/openai-to-acquire-promptfoo/', title: 'OpenAI: الاستحواذ على Promptfoo', description: 'إعلان OpenAI نفسها، ويتضمن الالتزام بإبقاء Promptfoo مفتوحة المصدر بموجب رخصتها الحالية.' },
+          { url: 'https://www.promptfoo.dev/blog/promptfoo-joining-openai/', title: 'Promptfoo: الانضمام إلى OpenAI', description: 'رواية Promptfoo نفسها عن الاستحواذ.' },
+          { url: 'https://techcrunch.com/2026/03/09/openai-acquires-promptfoo-to-secure-its-ai-agents/', title: 'OpenAI تستحوذ على Promptfoo (TechCrunch)', description: 'تأكيد مستقل لإعلان 9 مارس 2026.' },
+          { url: 'https://www.cnbc.com/2026/03/09/open-ai-cybersecurity-promptfoo-ai-agents.html', title: 'OpenAI تشتري Promptfoo (CNBC)', description: 'تقرير مستقل ثانٍ عن الاستحواذ وإطاره الأمني.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: 'قراءات ذات صلة',
+        items: [
+          '[أفضل أدوات اختبار الموجّهات وتقييمها](/ar/prompt-engineering/best-prompt-testing-evaluation-tools) — المشكلة نفسها على مستوى الموجّه',
+          '[كيف تقيّم جودة الموجّه](/ar/prompt-engineering/how-to-evaluate-prompt-quality) — بناء المعيار الذي ستطبّقه مقيّماتك',
+          '[مقاييس تقييم الموجّهات](/ar/prompt-engineering/prompt-evaluation-metrics) — ما ينبغي قياسه فعلًا بعد امتلاك مجموعة بيانات',
+          '[أدوات أمن الموجّهات واختبار الحقن](/ar/prompt-engineering/prompt-security-tools-injection-testing) — جانب الفريق الأحمر الذي تتصدره Promptfoo',
+          '[أفضل بوابة واجهات برمجة للنماذج اللغوية](/ar/local-llms/best-llm-api-gateway-2026) — توجيه استدعاءات التقييم بين المزوّدين ليصبح التبديل تغييرًا في الإعدادات',
+        ],
+      },
+    },
+    schema: {
+      '@type': 'TechArticle',
+      headline: 'أفضل أداة لتقييم النماذج اللغوية 2026: Braintrust وWeave وPromptfoo',
+      description: 'مقارنة بين Braintrust وWeave وPromptfoo لتقييم النماذج اللغوية، بأسعار موثقة وحدود أهلية وخيارات استضافة ذاتية واستحواذ OpenAI على Promptfoo. جرى التحقق في أغسطس 2026.',
+      datePublished: '2026-08-28',
+      dateModified: '2026-08-28',
+      url: 'https://www.promptquorum.com/ar/local-llms/best-llm-evaluation-tools-2026',
+      inLanguage: 'ar',
+      proficiencyLevel: 'Advanced',
+      author: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      about: [
+        { '@type': 'Thing', name: 'تقييم النماذج اللغوية' },
+        { '@type': 'Thing', name: 'اختبارات الانحدار للذكاء الاصطناعي' },
+      ],
+      mentions: [
+        { '@type': 'SoftwareApplication', name: 'Braintrust' },
+        { '@type': 'SoftwareApplication', name: 'Weave' },
+        { '@type': 'SoftwareApplication', name: 'Promptfoo' },
+      ],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ar',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: 'ما أفضل أداة لتقييم النماذج اللغوية في 2026؟',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Braintrust للفرق التي يراجع فيها غير المبرمجين النتائج، وWeave إن كنت تستخدم Weights & Biases وعدد موظفيكم دون الخمسين، وPromptfoo للتقييمات في صورة إعدادات خاضعة لإدارة الإصدارات تعمل مجانًا على بنيتك التحتية.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'هل استحوذت OpenAI على Promptfoo؟',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'نعم. أعلنت OpenAI الاستحواذ في 9 مارس 2026 وذكرت أن Promptfoo ستبقى مفتوحة المصدر بموجب رخصتها الحالية. وحتى أواخر أغسطس 2026 لا يزال المستودع مرخّصًا بـMIT ويحظى بصيانة نشطة.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'كم تكلّف Braintrust؟',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'تشمل باقة Starter المجانية 10 آلاف تقييم شهريًا وجيغابايت واحدًا واحتفاظًا لأربعة عشر يومًا ومستخدمين غير محدودين. وباقة Pro بـ249 دولارًا شهريًا مع 249 دولارًا رصيد نماذج و50 ألف تقييم و5 جيغابايت. وEnterprise بسعر مخصص مع نشر محلي أو مستضاف.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'هل Weave مجانية وما حدودها؟',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'لدى Weave باقة مجانية بمقاعد غير محدودة وجيغابايت واحد من الاستيعاب شهريًا. وتبدأ Pro من 60 دولارًا شهريًا مع 1.5 جيغابايت لكنها مقصورة على الفرق التي يقل عدد موظفيها عن 50. والاستيعاب الإضافي بـ0.10 دولار لكل ميغابايت.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'هل لأدوات تقييم النماذج اللغوية برامج عمولة؟',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'لم نجد برنامج عمولة علنيًا لدى Braintrust ولا Weights & Biases ولا Promptfoo. وبرنامج شركاء Weights & Biases ترتيب لإعادة البيع والتكامل موجّه إلى بيوت الاستشارات، لا دفعًا مقابل كل إحالة.',
+          },
+        },
+      ],
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: 'أفضل أدوات تقييم النماذج اللغوية (أغسطس 2026)',
+      inLanguage: 'ar',
+      numberOfItems: 3,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Braintrust', description: 'الأفضل لفرق الإنتاج متعددة التخصصات — مجانية حتى 10 آلاف تقييم شهريًا بمستخدمين غير محدودين، وPro بـ249 دولارًا مع 249 دولارًا رصيد نماذج' },
+        { '@type': 'ListItem', position: 2, name: 'Weave', description: 'الأفضل داخل منظومة Weights & Biases — مجانية بجيغابايت واحد شهريًا ومقاعد غير محدودة، وPro من 60 دولارًا للفرق دون خمسين موظفًا' },
+        { '@type': 'ListItem', position: 3, name: 'Promptfoo', description: 'أفضل خيار مجاني وأصيل في التكامل المستمر — 24.6 ألف نجمة، رخصة MIT، تعمل على بنيتك التحتية بأي حجم' },
+      ],
+    },
+  },
+
+  ko: {
+    freshness_tier: 'semi_annual',
+    next_refresh_due: '2027-02-28',
+    theme: 'Tools & Interfaces',
+    title: '2026년 최고의 LLM 평가 도구: Braintrust, Weave, Promptfoo',
+    seoTitle: '2026년 최고의 LLM 평가 도구',
+    metaDescription: 'Braintrust는 월 1만 건 채점까지 무료이고 Pro가 249달러, Weave는 60달러부터, Promptfoo는 MIT 라이선스로 규모와 무관하게 무료입니다. 2026년 8월 확인된 가격.',
+    educationalLevel: 'Advanced',
+    audience: '출시 전에 LLM 애플리케이션을 테스트하는 엔지니어링 팀',
+    affiliateDisclosure: true,
+    publishDate: '2026-08-28',
+    dateModified: '2026-08-28',
+    readTime: '읽는 데 13분',
+    primaryTerm: 'LLM 평가 도구',
+    targetKeywords: [
+      '최고의 LLM 평가 도구 2026',
+      'Braintrust Weave Promptfoo 비교',
+      'LLM 평가 플랫폼 비교',
+      'Promptfoo OpenAI 인수',
+      'LLM 심판 채점',
+    ],
+    leadAnswerBlock: '**LLM 기능을 프로덕션에 올리는 팀에게 가장 종합적인 평가 플랫폼은 Braintrust로, 월 1만 건 채점까지 무료이고 Pro는 249달러입니다. 이미 Weights & Biases를 쓰고 있다면 Weave가 자연스러운 선택이며 월 60달러부터지만, 직원 50명 미만 조직으로 제한됩니다. Promptfoo는 최고의 무료·CI 네이티브 선택지입니다. MIT 라이선스이고 자체 장비에서 돌기 때문에 어떤 규모에서도 무료이며, 2026년 3월부터 OpenAI 소유가 되었고 OpenAI는 현재 라이선스 그대로 오픈소스를 유지하겠다고 공개적으로 약속했습니다.**',
+    quickAnswerTop: {
+      question: '2026년 어떤 LLM 평가 도구가 가장 좋나요?',
+      answer: '**비개발자가 결과를 검토하는 교차 기능 팀에는 Braintrust, 이미 Weights & Biases를 쓴다면 Weave, 벤더 없이 버전 관리되는 설정으로 평가를 두고 싶다면 Promptfoo입니다.** 차이는 채점 기능에 있지 않습니다. 셋 다 LLM 심판, 사용자 정의 채점기, 데이터셋 기반 회귀 테스트를 지원합니다. 차이는 평가가 어디서 실행되고 누가 결과를 읽느냐입니다. 호스팅 화면은 프로덕트 매니저가 실패 사례를 검토해야 할 때 값을 합니다. 엔지니어 한 명이 CI에서 평가를 돌리는 경우엔 낭비입니다.',
+      bullets: [
+        '**프로덕션 팀 종합 최고:** Braintrust — 월 1만 건 채점까지 무료, Pro 월 249달러에 249달러 모델 크레딧 포함',
+        '**Weights & Biases 사용자에게 최적:** Weave — 월 1GB 무료에 좌석 무제한, Pro는 직원 50명 미만일 때 월 60달러부터',
+        '**무료·CI 네이티브 최적:** Promptfoo — 별 2.46만, MIT, 자체 인프라에서 실행, 규모 제한 없음',
+        '**보안과 레드팀 테스트 최적:** Promptfoo — 표방하는 초점이 취약점 스캐닝과 레드팀이지 채점만이 아님',
+        '**셋 다** 창작자 대상 공개 제휴 프로그램이 없어, 이 페이지에 유료 게재는 전혀 없습니다',
+        '**플랫폼 자체를 건너뛰세요** — 테스트 케이스가 약 20개 미만이면 CI에서 점수를 매기는 스크립트로 충분합니다',
+      ],
+      updatedDate: '2026-08-28',
+    },
+    toc: [
+      { label: '핵심 요약', anchor: 'tldr' },
+      { label: '상황별 최적 선택', anchor: 'best-choice' },
+      { label: '평가 도구가 실제로 하는 일', anchor: 'what-is-llm-eval' },
+      { label: '전체 비교표', anchor: 'comparison' },
+      { label: 'Braintrust: 프로덕션 선택지', anchor: 'braintrust' },
+      { label: 'Weave: Weights & Biases 선택지', anchor: 'weave' },
+      { label: 'Promptfoo: 무료·CI 네이티브 선택지', anchor: 'promptfoo' },
+      { label: 'OpenAI 인수가 의미하는 것', anchor: 'promptfoo-openai' },
+      { label: '가격 비교', anchor: 'pricing' },
+      { label: '자체 호스팅과 데이터 소재지', anchor: 'self-hosting' },
+      { label: '누가 무엇을 써야 하나', anchor: 'who-should-use' },
+      { label: '지역별 맥락: EU·일본·중국', anchor: 'regional-context' },
+      { label: '흔한 실수', anchor: 'common-mistakes' },
+      { label: '이런 경우엔 건너뛰세요', anchor: 'skip-this-if' },
+      { label: '자주 묻는 질문', anchor: 'faq' },
+      { label: '최종 결론', anchor: 'verdict' },
+      { label: '출처', anchor: 'sources' },
+      { label: '함께 읽기', anchor: 'related-reading' },
+    ],
+    sections: {
+      tldr: {
+        id: 'tldr',
+        isTldr: true,
+        items: [
+          '**Braintrust** — 무료 Starter 등급은 월 1만 건 채점, 처리 데이터 1GB, 14일 보존, 10달러 모델 크레딧, 무제한 사용자를 제공합니다. Pro는 월 249달러이며 249달러 모델 크레딧, 5GB 데이터, 5만 건 채점, 30일 보존을 포함합니다. Enterprise는 맞춤 보존과 온프레미스 또는 호스팅 배포를 더합니다.',
+          '**Weave** — Weights & Biases의 일부입니다. 무료 등급은 Weave 좌석 무제한과 월 1GB 수집을 제공합니다. Pro는 1.5GB로 월 60달러부터지만, 자격이 "early-stage teams fewer than 50 employees"로 명시적으로 제한되며 더 큰 조직은 Enterprise로 옮겨야 합니다. 추가 수집은 MB당 0.10달러입니다.',
+          '**Promptfoo** — GitHub 별 2.46만, MIT 라이선스이며, 이미 보유한 인프라에서 CLI와 라이브러리로 실행되므로 어떤 규모에서도 무료입니다. 유일한 비용은 평가 자체가 소비하는 모델 API 지출이며, 이는 어떤 플랫폼에서든 LLM 심판 방식이라면 발생합니다.',
+          '**OpenAI는 2026년 3월 9일 Promptfoo 인수를 발표하고** 공개적으로 밝혔습니다. "Promptfoo will remain open source under the current license, and we will continue to service and support current customers." 저장소는 여전히 MIT 라이선스이며 이 페이지를 확인한 당일에도 갱신되었습니다.',
+          '**바로잡을 대목이 있습니다.** 여러 글이 Braintrust Pro의 모델 크레딧을 2026년 9월 1일 이후 월 100달러로 내려가는 프로모션 가격으로 설명합니다. 그러나 Braintrust 가격 페이지에는 그런 종료일이 없습니다. 페이지에 실린 유일한 프로모션은 "6–12 months free for qualifying startups"입니다. 예산은 공급업체 페이지를 기준으로 잡으세요.',
+          '**Promptfoo는 평가 도구인 동시에 보안 도구입니다.** 자체 설명이 레드팀, 침투 테스트, 취약점 스캐닝으로 시작하며, OpenAI도 인수를 에이전트 보안 테스트라는 맥락에서 설명했습니다. 이는 Braintrust나 Weave와의 실질적인 무게중심 차이입니다.',
+          '셋 다 창작자를 위한 공개 제휴나 추천 프로그램이 없습니다. Weights & Biases는 파트너 프로그램을 운영하지만, 이는 컨설팅 회사를 대상으로 한 리셀러·기술 통합 체계이지 추천당 지급이 아닙니다. PromptQuorum은 이 페이지에서 수익을 얻지 않습니다.',
+        ],
+      },
+      bestChoice: {
+        id: 'best-choice',
+        title: '🏆 상황별 최적 선택',
+        content: '**채점 기능 목록이 아니라 평가가 어디서 실행되고 누가 결과를 읽는지로 고르세요. 셋 다 같은 채점 기본기를 갖췄습니다.** 아래를 읽어 내려가다 본인에게 해당하는 첫 줄에서 멈추세요.',
+        items: [
+          '**코드를 쓰지 않는 사람이 실패 사례를 검토해야 한다** → Braintrust. 호스팅 화면, 사람 검토 큐, 데이터셋 버전 관리가 바로 그것을 위해 존재하며, 무료 등급이 초기 단계 사용량 대부분을 감당합니다.',
+          '**이미 Weights & Biases를 쓰고 있다** → Weave. 평가가 기존 실험 추적 옆에 놓이고 무료 등급은 좌석이 무제한입니다. Pro를 전제하기 전에 직원 50명 제한을 확인하세요.',
+          '**벤더 없이 버전 관리되는 설정으로 평가를 두고 싶다** → Promptfoo. 코드 옆의 YAML이나 JS로, 풀 리퀘스트에서 차이를 볼 수 있고 규모와 무관하게 무료입니다.',
+          '**품질만이 아니라 프롬프트 인젝션과 에이전트 보안을 테스트한다** → Promptfoo. 레드팀과 취약점 스캐닝이 표방하는 목적입니다. [프롬프트 보안과 인젝션 테스트 도구](/ko/prompt-engineering/prompt-security-tools-injection-testing)도 참고하세요.',
+          '**테스트 케이스가 몇 개뿐이고 엔지니어도 한 명이다** → 아직 아무것도 필요 없습니다. 데이터셋이 관리가 필요할 만큼 커지기 전까지는 CI에서 점수를 매기는 스크립트로 충분합니다.',
+        ],
+        affiliateLinks: [
+          {
+            url: 'https://www.braintrust.dev/pricing',
+            productName: 'Braintrust',
+            productCategory: 'dev-tool',
+            priceRange: '무료 월 1만 건 채점, Pro 월 249달러에 249달러 크레딧 포함',
+            label: 'Braintrust — 가격 보기',
+          },
+          {
+            url: 'https://github.com/promptfoo/promptfoo',
+            productName: 'Promptfoo',
+            productCategory: 'dev-tool',
+            priceRange: '무료, MIT 라이선스, 규모 제한 없음',
+            label: 'Promptfoo — 오픈소스 저장소',
+          },
+        ],
+      },
+      whatIsLlmEval: {
+        id: 'what-is-llm-eval',
+        title: '평가 도구가 실제로 하는 일',
+        content: '**LLM 평가 도구는 테스트 케이스 데이터셋을 프롬프트나 에이전트에 통과시키고 각 출력에 점수를 매겨, 변경이 사용자에게 닿기 전에 좋아졌는지 나빠졌는지 알 수 있게 합니다.** 데이터셋은 보통 입력과 기대 출력의 쌍이며, 프로덕션 로그에서 뽑거나 경계 사례로 직접 쓰거나 생성한 것입니다. 채점기는 문자열 일치나 JSON 스키마 검증 같은 결정적 검사부터, 두 번째 모델이 기준표에 따라 채점하는 LLM 심판, 직접 작성하는 사용자 정의 함수까지 다양합니다.\n\n이는 시스템이 가동된 뒤 무엇을 하는지 지켜보는 것과는 다른 일입니다. 평가는 "이 변경을 내보내도 안전한가"에 답하고, 프로덕션 모니터링은 "지금 무엇을 하고 있나"에 답합니다. 이 페이지는 앞의 질문을 다룹니다. 같은 문제를 프롬프트 수준에서 보려면 [프롬프트 품질 평가 방법](/ko/prompt-engineering/how-to-evaluate-prompt-quality)을 참고하세요.',
+        snippetBlocks: [
+          {
+            type: 'one-sentence',
+            text: 'LLM 평가 도구는 고정된 테스트 케이스 데이터셋을 프롬프트나 에이전트에 통과시키고, 결정적 검사·LLM 심판 채점·사용자 정의 함수로 각 출력에 점수를 매겨, 출시 전에 변경이 품질을 개선했는지 떨어뜨렸는지 보고합니다.',
+          },
+          {
+            type: 'plain-terms',
+            text: '같은 답을 두 번 내놓지 않는 대상을 위한 테스트 스위트입니다. 정확한 출력을 단언하는 대신 점수를 매기고, 프롬프트를 바꿨을 때 평균이 잘못된 방향으로 움직이는지 지켜봅니다.',
+          },
+        ],
+        note: '테스트 데이터셋이 커져서 스프레드시트나 스크립트로 관리하는 것 자체가 병목이 되면 평가 플랫폼을 도입하세요. 그 전까지는 CI에서 점수를 매기는 스크립트가 같은 일을 합니다.',
+      },
+      comparison: {
+        id: 'comparison',
+        title: 'Braintrust, Weave, Promptfoo 비교',
+        content: '**셋 다 LLM 심판, 사용자 정의 채점기, 데이터셋 기반 회귀 테스트를 지원하므로 비교의 축은 호스팅 방식, 비용 구조, 자격 요건입니다.** 가격은 2026년 8월 28일 각 업체 페이지에서, 저장소 수치는 같은 날 GitHub API에서 읽었습니다.',
+        tableFormat: true,
+        itemHeadings: true,
+        columns: ['평가 항목', 'Braintrust', 'Weave', 'Promptfoo'],
+        rows: [
+          { '평가 항목': '형태', Braintrust: '화면이 있는 호스팅 플랫폼', Weave: '호스팅형, W&B의 일부', Promptfoo: '직접 실행하는 CLI와 라이브러리' },
+          { '평가 항목': '라이선스', Braintrust: '상용', Weave: 'SDK는 Apache-2.0, 서비스는 호스팅형', Promptfoo: 'MIT' },
+          { '평가 항목': '무료 등급', Braintrust: '월 1만 건 채점, 1GB, 14일', Weave: '월 1GB 수집, 좌석 무제한', Promptfoo: '어떤 규모에서도 무료' },
+          { '평가 항목': '유료 진입', Braintrust: 'Pro 월 249달러, 249달러 크레딧', Weave: '월 60달러부터, 1.5GB', Promptfoo: 'Enterprise 등급, 맞춤 견적' },
+          { '평가 항목': '자격 상한', Braintrust: '명시 없음', Weave: 'Pro는 직원 50명 미만만', Promptfoo: '없음' },
+          { '평가 항목': '초과 요금', Braintrust: 'Pro에서 1,000건당 1.50달러', Weave: '수집 MB당 0.10달러', Promptfoo: '본인의 모델 API 지출만' },
+          { '평가 항목': '자체 호스팅', Braintrust: 'Enterprise, 온프레미스 또는 호스팅', Weave: 'Enterprise, 단일 테넌트', Promptfoo: '기본값 — 본인 장비에서 실행' },
+          { '평가 항목': '제휴 프로그램', Braintrust: '찾지 못함', Weave: '찾지 못함', Promptfoo: '찾지 못함' },
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: 'Weave의 Pro는 단순히 더 싼 요금제가 아닙니다. Weights & Biases는 이를 "for early-stage teams fewer than 50 employees"라고 명시하며, 이 기준을 넘는 고객은 Enterprise로 전환해야 한다고 밝힙니다. 인원이 그 선을 넘는다면 실제 비교 대상은 Braintrust Pro의 249달러 대 맞춤 Enterprise 견적이지, 60달러가 아닙니다.',
+          },
+        ],
+      },
+      braintrust: {
+        id: 'braintrust',
+        title: 'Braintrust: 프로덕션 선택지',
+        content: '**코드를 쓰지 않는 사람이 평가 결과를 봐야 할 때 고르는 것이 Braintrust입니다.** 그 가치는 호스팅 화면, 데이터셋 버전 관리, 사람 검토 흐름에 집중되어 있는데, 이는 그러지 않으면 직접 만들어야 하는 부분입니다.',
+        rankedItems: [
+          {
+            rank: 1,
+            name: 'Braintrust — 교차 기능 프로덕션 팀에 최적',
+            tagline: '월 1만 건 채점까지 무료, Pro 249달러에 249달러 크레딧 포함',
+            verdict: '무료 Starter 등급은 호스팅 플랫폼치고 이례적으로 넉넉합니다. 월 1만 건 채점, 처리 데이터 1GB, 14일 보존, 10달러 모델 크레딧에 더해 사용자·프로젝트·데이터셋·실험이 모두 무제한입니다. 무료 등급의 무제한 좌석이 여기서 중요한 이유는, Braintrust를 고르는 이유 자체가 프로덕트 매니저와 도메인 전문가에게 라이선스를 사주지 않고도 실패 사례를 검토하게 하는 데 있기 때문입니다. 월 249달러의 Pro는 이를 5만 건 채점, 5GB, 30일 보존으로 올리고 249달러 모델 크레딧을 포함해, 중간 규모 작업에서는 심판 모델 지출을 사실상 상쇄합니다. 초과는 차단이 아니라 과금입니다. Pro에서 1,000건당 1.50달러, GB당 3달러입니다. Enterprise는 맞춤 보존과 내보내기, RBAC, 온프레미스 또는 호스팅 배포를 더합니다.',
+            pros: [
+              '무료 등급에서도 사용자 수 무제한이며, 이것이 바로 선택의 요점',
+              '월 1만 건 채점 무료 등급이 초기 프로젝트를 실제로 감당',
+              'Pro에 249달러 모델 크레딧이 포함되어 심판 모델 지출을 크게 상쇄',
+              '프라이버시가 민감한 작업을 위한 온프레미스 또는 호스팅 배포 제공',
+            ],
+            cons: [
+              '무료 등급의 14일 보존은 지난달과 비교하려면 짧음',
+              '자체 호스팅에는 Enterprise와 영업 상담이 필요하고 가격이 공개되지 않음',
+              '상용 플랫폼이라 Promptfoo와 달리 가격이 바뀌어도 대안이 없음',
+            ],
+            affiliateLinks: [
+              {
+                url: 'https://www.braintrust.dev/pricing',
+                productName: 'Braintrust',
+                productCategory: 'dev-tool',
+                priceRange: '무료 월 1만 건 채점, Pro 월 249달러, Enterprise 맞춤 견적',
+                label: 'Braintrust — 가격 보기',
+              },
+            ],
+          },
+        ],
+        note: '검토가 팀 활동일 때 Braintrust를 쓰세요. 엔지니어만 결과를 연다면 쓰지 않을 화면에 돈을 내는 셈입니다.',
+      },
+      weave: {
+        id: 'weave',
+        title: 'Weave: Weights & Biases 선택지',
+        content: '**팀이 이미 Weights & Biases에서 실험을 추적하고 있다면 Weave가 당연한 답이고, 그렇지 않다면 설득하기 더 어렵습니다.** 논거는 통합 그 자체입니다. 평가가 이미 보고 있는 실행 기록 옆에 놓입니다.',
+        rankedItems: [
+          {
+            rank: 1,
+            name: 'Weave — Weights & Biases 생태계 안에서 최적',
+            tagline: '월 1GB 무료에 좌석 무제한, Pro는 직원 50명 미만일 때 월 60달러부터',
+            verdict: 'Weave는 애플리케이션 평가, 추적, 채점기를 다루며, 무료 등급은 Weave 좌석 무제한과 월 1GB 수집을 제공해 소규모 팀에는 합리적인 출발점입니다. Pro는 월 단위 청구로 월 60달러부터 1.5GB를 제공하고, 추가 수집은 MB당 0.10달러입니다. 걸림돌은 가격보다 자격입니다. Weights & Biases는 Pro가 "for early-stage teams fewer than 50 employees" 대상이며, 이 기준을 넘는 고객은 Enterprise로 옮겨야 한다고 밝힙니다. 진지한 배포 옵션은 Enterprise에 있으며 단일 테넌트, HIPAA 준수, 고객 관리 암호화 키, SSO, 감사 로그가 포함됩니다. 다만 단일 테넌트는 진짜 온프레미스라기보다 전용 인스턴스에 가까우므로, 온프레미스 전용 요건을 충족한다고 단정하기 전에 W&B에 세부를 확인하세요.',
+            pros: [
+              '무료 등급에 Weave 좌석 무제한과 월 1GB 수집',
+              '평가가 기존 W&B 실험 추적 및 레지스트리와 나란히 놓임',
+              'Enterprise가 단일 테넌트, HIPAA, 고객 관리 키, SSO를 제공',
+              '월 60달러로 셋 중 가장 낮은 유료 진입가',
+            ],
+            cons: [
+              'Pro가 직원 50명 미만 조직으로 제한되며 이는 단단한 상한',
+              'MB당 0.10달러의 수집 과금은 채점 건수보다 예측이 어려움',
+              '이미 Weights & Biases를 쓰지 않는다면 단독 논거가 가장 약함',
+            ],
+            affiliateLinks: [
+              {
+                url: 'https://wandb.ai/site/pricing/',
+                productName: 'Weave',
+                productCategory: 'dev-tool',
+                priceRange: '무료 월 1GB, Pro는 직원 50명 미만일 때 월 60달러부터, Enterprise 맞춤',
+                label: 'Weave — Weights & Biases 가격 보기',
+              },
+            ],
+          },
+        ],
+        note: 'W&B가 이미 기록 시스템이라면 Weave를 쓰세요. 직원이 50명을 넘으면 Braintrust와 비교하기 전에 Enterprise를 견적받으세요. 60달러 등급은 쓸 수 없습니다.',
+      },
+      promptfoo: {
+        id: 'promptfoo',
+        title: 'Promptfoo: 무료·CI 네이티브 선택지',
+        content: '**Promptfoo는 어떤 규모에서도 비용이 들지 않는 쪽이며, 이유는 직접 실행하기 때문입니다.** 플랫폼이 아니라 CLI와 라이브러리이므로, 평가는 코드 옆에 설정으로 놓이고 테스트가 이미 돌고 있는 곳에서 실행됩니다.',
+        rankedItems: [
+          {
+            rank: 1,
+            name: 'Promptfoo — 최고의 무료·CI 네이티브 선택지',
+            tagline: '별 2.46만, MIT 라이선스, 어떤 규모에서도 무료, 현재 OpenAI 소유',
+            verdict: 'Promptfoo는 GitHub 별 24,638개에 MIT 라이선스이며, 이 페이지를 확인한 당일에도 갱신되어 활동성이 분명합니다. 이미 보유한 인프라에서 돌기 때문에 채점당·기가바이트당 계량이 없습니다. 유일한 비용은 평가가 소비하는 모델 API 호출이며, 이는 어느 플랫폼에서든 지불할 몫입니다. 데이터셋을 YAML, CSV, JS로 정의하는 것은 화면을 클릭하는 것보다 번거롭지만, 평가를 풀 리퀘스트에서 비교할 수 있게 해줍니다. 평가 설정을 다른 코드처럼 리뷰해야 한다면 이는 실질적인 이점입니다. 실체를 알아둘 가치가 있습니다. 프로젝트는 스스로를 프롬프트·에이전트·RAG 테스트로 소개하며, AI를 위한 레드팀, 침투 테스트, 취약점 스캐닝을 함께 내겁니다. 여기서 보안은 부수 기능이 아니며, OpenAI도 인수를 에이전트 보안 테스트의 맥락에서 설명했습니다.',
+            pros: [
+              '어떤 규모에서도 무료이며 채점이나 수집 계량이 없음',
+              '평가가 버전 관리되는 설정이 되어 풀 리퀘스트에서 비교·리뷰 가능',
+              'MIT 라이선스라 조건이 바뀌어도 의존할 벤더가 없음',
+              '레드팀과 취약점 스캐닝이 나중에 붙인 것이 아니라 일급 기능',
+            ],
+            cons: [
+              '기본적으로 호스팅 화면이 없어 코드를 쓰지 않는 사람이 클릭할 곳이 없음',
+              'YAML·CSV 데이터셋은 브라우저에서 만드는 것보다 준비 부담이 큼',
+              '이제 OpenAI 소유라, 오픈소스 약속이 있어도 거버넌스 측면의 고려사항이 남음',
+            ],
+            affiliateLinks: [
+              {
+                url: 'https://github.com/promptfoo/promptfoo',
+                productName: 'Promptfoo',
+                productCategory: 'dev-tool',
+                priceRange: '무료, MIT 라이선스, 규모 제한 없음',
+                label: 'Promptfoo — 오픈소스 저장소',
+              },
+            ],
+          },
+        ],
+        note: '평가 결과를 읽는 사람이 코드를 쓰는 사람과 같을 때 Promptfoo를 쓰세요. 검토가 교차 기능으로 바뀌면 나중에 Braintrust를 더하면 됩니다.',
+      },
+      promptfooOpenai: {
+        id: 'promptfoo-openai',
+        title: 'OpenAI 인수가 Promptfoo에 의미하는 것',
+        content: '**OpenAI는 2026년 3월 9일 Promptfoo 인수를 발표하며 오픈소스 유지를 공개적으로 약속했습니다.** OpenAI 자신의 표현은 이렇습니다. "Promptfoo will remain open source under the current license, and we will continue to service and support current customers." 인수는 당시 TechCrunch, CNBC, Forbes가 보도했고 OpenAI와 Promptfoo 각자의 사이트에서도 확인됩니다.\n\n현장의 정황은 지금까지 그 약속을 뒷받침합니다. 거의 여섯 달이 지난 지금도 저장소는 `promptfoo` 조직 아래에 있고, 여전히 MIT 라이선스이며, 이 페이지를 확인한 당일에도 갱신되었습니다. 보고 싶은 그림입니다.\n\n그럼에도 생각해볼 이유는 라이선스가 아니라 거버넌스입니다. 평가 도구는 모델을 판단하는 데 쓰는 물건인데, 이제 모델을 만드는 회사의 소유가 되었습니다. MIT 라이선스는 프로젝트 방향이 언젠가 자신에게 맞지 않게 되면 포크할 수 있다는 뜻이며, 이는 Braintrust나 Weave가 제공하지 않는 실질적 보호입니다. 다만 평가 전략이 모델 벤더 간 중립성에 기대고 있다면, 그것은 가정이 아니라 의식적인 결정이어야 합니다.',
+        callouts: [
+          {
+            type: 'note',
+            text: 'OpenAI는 Promptfoo의 기술을 자동 레드팀과 에이전트 보안 테스트를 위해 OpenAI Frontier에 통합하겠다고 밝혔습니다. 이는 Promptfoo가 원래 갖고 있던 보안 중심과 일치하며, 범용 평가보다 보안 쪽에 더 많은 투자가 갈 가능성을 시사합니다.',
+          },
+        ],
+        note: 'MIT 라이선스와 로컬 실행이 중요하다면 Promptfoo를 계속 쓰세요. 평가 도구의 벤더 중립성이 명시적 요구사항이라면 다시 검토하세요.',
+      },
+      pricing: {
+        id: 'pricing',
+        title: '가격 비교',
+        content: '**비용은 좌석이 아니라 데이터 양과 심판 모델 지출에 따라 늘어납니다. 그래서 무료 등급의 무제한 사용자가 처음 보이는 것보다 훨씬 유용합니다.** 아래 표는 월 약 5만 건 평가 채점이라는 중간 규모 작업을 기준으로 계산했습니다.',
+        tableFormat: true,
+        itemHeadings: true,
+        columns: ['시나리오', 'Braintrust', 'Weave', 'Promptfoo'],
+        rows: [
+          { 시나리오: '무료 등급 한도', Braintrust: '1만 건 채점, 1GB, 14일', Weave: '월 1GB 수집, 좌석 무제한', Promptfoo: '한도 없음' },
+          { 시나리오: '유료 등급', Braintrust: 'Pro 월 249달러', Weave: '월 60달러부터', Promptfoo: '필요 없음' },
+          { 시나리오: '해당 등급 포함 사항', Braintrust: '5만 건 채점, 5GB, 249달러 크레딧', Weave: '1.5GB 수집', Promptfoo: '해당 없음' },
+          { 시나리오: '월 5만 건 채점', Braintrust: '249달러 Pro로 커버', Weave: 'GB에 따라 다르며 1.5GB 초과 가능성', Promptfoo: '모델 API 지출만' },
+          { 시나리오: '초과 요율', Braintrust: '1,000건당 1.50달러, GB당 3달러', Weave: 'MB당 0.10달러', Promptfoo: '없음' },
+          { 시나리오: '자격 상한', Braintrust: '명시 없음', Weave: 'Pro는 직원 50명 미만', Promptfoo: '없음' },
+        ],
+        callouts: [
+          {
+            type: 'warning',
+            text: '여러 비교 글이 Braintrust Pro의 249달러 크레딧을 2026년 프로모션이며 2026년 9월 1일 이후 월 100달러로 내려간다고 서술합니다. 그 종료일은 Braintrust 가격 페이지에 없으며, 페이지가 프로모션으로 싣는 것은 "6–12 months free for qualifying startups"뿐입니다. 비교 기사가 아니라 공급업체 페이지를 기준으로 계산하세요. 이 글도 예외가 아닙니다.',
+          },
+        ],
+        note: 'Braintrust는 채점 단위로, Weave는 수집 기가바이트 단위로 과금합니다. 비교 가능한 단위가 아니므로, 60달러가 249달러보다 싸다고 보기 전에 자신의 작업량으로 둘 다 추정하세요.',
+      },
+      selfHosting: {
+        id: 'self-hosting',
+        title: '자체 호스팅과 데이터 소재지',
+        content: '**셋 중 자체 호스팅이 기업용 업그레이드가 아니라 기본값인 것은 Promptfoo뿐입니다.** CLI와 라이브러리이기 때문에, 호스팅 등급을 일부러 고르지 않는 한 테스트 케이스와 모델 출력은 결코 환경을 벗어나지 않습니다. 데이터 소재지 규정을 받는 팀에게 이는 질문에 답하는 것이 아니라 질문 자체를 없앱니다.\n\nBraintrust는 온프레미스 또는 호스팅 배포를 제공하지만 Enterprise에 한하며, 이는 맞춤 가격과 영업 상담을 뜻합니다. 마케팅 문구가 아니라 실제 배포 옵션이지만, 셀프서비스로 평가할 수는 없습니다.\n\nWeave의 Enterprise 등급은 고객 관리 암호화 키, HIPAA 준수, 안전한 사설 연결을 갖춘 단일 테넌트 옵션을 제공합니다. 이 대목은 꼼꼼히 읽으세요. 고객 관리 키를 쓰는 단일 테넌트는 전용 인스턴스이며, 자사 경계 안에서 실행하는 것과 같지 않습니다. 요구사항이 엄격히 온프레미스라면, 단일 테넌트가 이를 충족한다고 단정하지 말고 Weights & Biases에 세부를 확인하세요.',
+        note: '평가 데이터가 인프라를 벗어날 수 없고 그것을 계약이 아니라 설계로 해결하고 싶다면 Promptfoo를 고르세요. 온프레미스에 더해 검토 화면도 필요하다면 Braintrust Enterprise를 고르세요.',
+      },
+      whoShouldUse: {
+        id: 'who-should-use',
+        title: '누가 무엇을 써야 하나',
+        content: '**기능 목록보다 팀의 형태가 이를 결정합니다.** 다섯 가지 유형이 대부분의 독자를 포괄합니다.',
+        items: [
+          '**MVP를 만드는 1인 개발자** → Promptfoo. 계정도 계량기도 없고, 프로젝트 방향이 바뀌어도 치울 것이 없습니다.',
+          '**PM과 QA 검토를 거쳐 LLM 기능을 출시하는 제품 팀** → Braintrust. 무료 등급의 무제한 사용자가 교차 기능 검토를 가능하게 만드는 바로 그 조건입니다.',
+          '**이미 Weights & Biases를 쓰는 팀** → Weave, 단 Pro는 직원 50명 미만이어야 합니다. 그 이상이면 비교 전에 Enterprise를 견적받으세요.',
+          '**프롬프트 인젝션을 테스트하는 보안 또는 플랫폼 팀** → Promptfoo. 레드팀 중심이 과업과 맞습니다. [프롬프트 보안과 인젝션 테스트 도구](/ko/prompt-engineering/prompt-security-tools-injection-testing)도 참고하세요.',
+          '**여러 모델 제공자에 걸쳐 평가하는 팀** → Promptfoo 또는 Braintrust. 호출을 게이트웨이로 라우팅해 제공자 비교가 설정 변경이 되게 하세요. [최고의 LLM API 게이트웨이](/ko/local-llms/best-llm-api-gateway-2026)를 참고하세요.',
+        ],
+      },
+      regionalContext: {
+        id: 'regional-context',
+        title: 'EU·일본·중국에서의 평가 도구',
+        content: '평가 데이터셋은 대개 프로덕션 트래픽으로 만들어지므로, LLM 스택에서 가장 민감한 데이터에 속합니다. 그래서 호스팅형이냐 로컬이냐의 선택이 세 주요 시장에서 컴플라이언스 문제가 됩니다.',
+        subsections: [
+          {
+            title: '유럽연합',
+            content: '프로덕션 로그에서 뽑은 평가 데이터셋에는 사용자가 실제로 입력한 내용이 담기며, 이는 GDPR상 다른 처리와 마찬가지입니다. 이를 미국에 호스팅된 플랫폼으로 보내는 것은 벤더 약관에 별도 명시가 없는 한 제44조부터 제49조가 말하는 이전에 해당합니다. Braintrust나 Weights & Biases를 쓴다면 제28조에 따른 처리자 계약이 필요합니다. AI법도 여기서는 평가 전반에 유리하게 작용합니다. 적용 대상 시스템이라면 배포 전에 테스트했음을 보일 수 있는 것이 선택이 아니라 의무의 일부이며, Digital Omnibus는 부속서 III의 고위험 의무를 2027년 12월 2일로 미뤘을 뿐 없애지 않았습니다. 로컬에서 실행하는 Promptfoo는 데이터셋이 나가지 않으므로 이전 문제 자체를 비켜갑니다.',
+          },
+          {
+            title: '일본',
+            content: '경제산업성의 AI 거버넌스 프로그램은 시스템이 출시 전에 테스트되었다는 감사 가능한 증거를 갖추도록 기업을 이끌며, 평가 실행 기록은 여러분이 통제하는 곳에 보관될 때 바로 그 증거가 됩니다. 결과와 함께 버전 관리에 커밋된 Promptfoo 설정은 호스팅 대시보드에는 없는 감사 산출물입니다. 몇 년 뒤에도 저장소에서 재현할 수 있기 때문입니다. 대신 호스팅 플랫폼을 쓴다면 보존 기간을 확인하세요. Braintrust 무료 등급은 데이터를 14일 보관하는데, 이는 대부분의 감사 기대치보다 짧습니다.',
+          },
+          {
+            title: '중국',
+            content: '데이터보안법(数据安全法)과 국가인터넷정보판공실의 국경 간 이전 규정 아래에서, 컴플라이언스 문제는 평가 자체가 아니라 중국 본토 사용자 트래픽으로 만든 평가 데이터셋을 해외 플랫폼에 올리는 데 있습니다. 본토 팀을 대상으로 하는 배포는 대개 평가가 국내 인프라에서 실행될 것을 요구합니다. 셋 중 기본값으로 이를 충족하는 것은 Promptfoo뿐이며, 기능 선호와 무관하게 실용적인 선택이 됩니다. [중국에서 로컬 LLM 운영하기](/ko/local-llms/deepseek-local-china-data-privacy-2026)를 참고하세요.',
+          },
+        ],
+        note: '데이터셋 자체가 민감 자산인 시장에서는 평가를 로컬에서 실행하세요. Promptfoo는 이를 기본값으로 삼고, 나머지 둘은 Enterprise 상담 사안으로 만듭니다.',
+      },
+      commonMistakes: {
+        id: 'common-mistakes',
+        title: '평가 도구를 고를 때 흔한 실수',
+        numberedItems: [
+          {
+            title: '자격을 확인하지 않고 60달러와 249달러를 비교하는 것',
+            whyItMatters: 'Weave Pro는 직원 50명 미만 조직으로 제한됩니다. 그 인원을 넘으면 실제 비교는 Braintrust Pro 대 맞춤 Weave Enterprise 견적이며, 60달러라는 숫자는 애초에 쓸 수 없습니다.',
+          },
+          {
+            title: '공개되지 않은 Braintrust 프로모션 종료일을 기준으로 예산을 잡는 것',
+            whyItMatters: 'Pro 크레딧이 2026년 9월 1일 이후 월 100달러로 내려간다는 주장은 Braintrust 가격 페이지에 없습니다. 공급업체가 발표하지도 않은 종료일에 맞춰 마이그레이션을 계획하는 것은 노력 낭비입니다. 가격 페이지를 다시 읽으세요.',
+          },
+          {
+            title: '채점 건수와 기가바이트를 비교 가능한 단위로 취급하는 것',
+            whyItMatters: 'Braintrust는 채점을, Weave는 수집량을 잽니다. 5만 건 채점 안에 여유롭게 들어가는 작업이 1.5GB 안에 들어갈지는 트레이스 크기에 따라 다릅니다. 가격으로 순위를 매기기 전에 자신의 데이터로 둘 다 추정하세요.',
+          },
+          {
+            title: '열다섯 개짜리 데이터셋을 위해 플랫폼을 도입하는 것',
+            whyItMatters: '테스트 케이스가 대략 스무 개 아래라면 CI에서 점수를 매기는 스크립트가 계정도 계량기도 보존 한도도 없이 같은 일을 합니다. 플랫폼이 값을 하는 시점은 채점이 아니라 데이터셋 관리가 병목이 되었을 때입니다.',
+          },
+          {
+            title: '단일 테넌트를 온프레미스로 여기는 것',
+            whyItMatters: '고객 관리 키를 쓰는 Weave의 Enterprise 단일 테넌트 옵션은 전용 인스턴스이지 자사 경계 안의 배포가 아닙니다. 요구사항이 엄격히 온프레미스라면 단일 테넌트를 동등하게 읽지 말고 W&B에 확인하세요.',
+          },
+        ],
+      },
+      skipThisIf: {
+        id: 'skip-this-if',
+        title: '이런 경우엔 건너뛰세요',
+        content: '**테스트 세트가 프롬프트 열두 개이고 엔지니어 한 명이 돌린다면, 셋 다 건너뛰고 CI에서 점수를 매기는 스크립트를 쓰세요.** 계정도 계량기도 보존 기간도 없이 같은 회귀 신호를 얻고, 나중에 플랫폼으로 옮겨도 잃을 것이 없습니다. 자산은 데이터셋이고 그것은 함께 옮겨가기 때문입니다.\n\n기다릴 만한 기준선은 데이터셋 관리가 일 자체가 되는 시점입니다. 실패한 사례를 프로덕션에서 테스트 세트로 정기적으로 끌어오고 싶을 때, 코드를 쓰지 않는 사람이 출력에 등급을 매겨야 할 때, 또는 이번 달 결과를 지난 분기와 비교해야 할 때입니다. 이는 데이터 관리 문제이고, 여러분이 실제로 사는 것이 바로 그것입니다. 채점 자체는 예나 지금이나 쉬운 쪽이었습니다.',
+        callouts: [
+          {
+            type: 'tip',
+            text: '실용적인 신호가 있습니다. 어떤 프롬프트 버전이 몇 점을 받았는지 추적하려고 스프레드시트를 만들고 있는 자신을 발견한 그때가 플랫폼을 도입할 시점입니다. 그 스프레드시트가 바로 여러분이 사려는 제품이고, 사는 편이 직접 유지하는 것보다 쌉니다.',
+          },
+        ],
+      },
+      faq: {
+        id: 'faq',
+        title: '자주 묻는 질문',
+        faqs: [
+          {
+            q: '2026년 최고의 LLM 평가 도구는 무엇인가요?',
+            a: '비개발자가 결과를 검토하는 팀에는 Braintrust입니다. 무료 등급에서도 사용자가 무제한이기 때문입니다. 이미 Weights & Biases를 쓰고 직원이 50명 미만이라면 Weave. 자체 인프라에서 무료로 돌아가는 버전 관리된 설정으로 평가를 두고 싶다면 Promptfoo입니다. 셋 다 LLM 심판, 사용자 정의 채점기, 회귀 테스트를 지원합니다.',
+          },
+          {
+            q: 'OpenAI가 Promptfoo를 인수했나요?',
+            a: '네. OpenAI는 2026년 3월 9일 인수를 발표하며 Promptfoo가 현재 라이선스 그대로 오픈소스를 유지하고 기존 고객도 계속 서비스와 지원을 받는다고 밝혔습니다. 2026년 8월 말 기준 저장소는 여전히 promptfoo 조직 아래에 있고 MIT 라이선스이며 활발히 유지보수되고 있습니다.',
+          },
+          {
+            q: 'Braintrust는 얼마인가요?',
+            a: '무료 Starter 등급은 월 1만 건 채점, 처리 데이터 1GB, 14일 보존, 10달러 모델 크레딧, 무제한 사용자를 포함합니다. Pro는 월 249달러로 249달러 크레딧, 5만 건 채점, 5GB, 30일 보존을 포함하며 초과는 1,000건당 1.50달러입니다. Enterprise는 맞춤 견적이며 온프레미스 또는 호스팅 배포를 더합니다.',
+          },
+          {
+            q: 'Weave는 무료인가요, 한도는 어떻게 되나요?',
+            a: 'Weave에는 좌석 무제한과 월 1GB 데이터 수집을 제공하는 무료 등급이 있습니다. Pro는 1.5GB로 월 60달러부터이지만, Weights & Biases가 직원 50명 미만의 초기 단계 팀으로 제한하며 더 큰 조직은 Enterprise로 옮겨야 합니다. 추가 수집은 MB당 0.10달러입니다.',
+          },
+          {
+            q: 'Promptfoo는 정말 어떤 규모에서도 무료인가요?',
+            a: '네. 도구 자체가 MIT 라이선스이고 자체 장비에서 돌기 때문에 채점당·기가바이트당 요금이 없다는 의미에서 그렇습니다. 평가가 만드는 모델 API 호출 비용은 여전히 부담하지만, 그 비용은 어느 플랫폼에서나 존재하며 Promptfoo에 국한된 것이 아닙니다. 그 위에 선택 사항인 호스팅 Enterprise 등급이 있습니다.',
+          },
+          {
+            q: '어느 것을 자체 호스팅할 수 있나요?',
+            a: '기본적으로 Promptfoo입니다. CLI와 라이브러리라 실행하는 곳에서 돌아갑니다. Braintrust는 Enterprise 요금제에서 온프레미스 또는 호스팅 배포를 제공합니다. Weave는 고객 관리 키를 쓰는 Enterprise 단일 테넌트 옵션을 제공하는데, 이는 진짜 온프레미스라기보다 전용 인스턴스이므로 엄격한 요건이 있다면 세부를 확인하세요.',
+          },
+          {
+            q: '이 중 제휴 프로그램이 있는 곳이 있나요?',
+            a: 'Braintrust, Weights & Biases, Promptfoo 어디에서도 창작자 대상 공개 제휴나 추천 프로그램을 찾지 못했습니다. Weights & Biases는 파트너 프로그램을 운영하지만, 공개 페이지는 컨설팅 회사를 대상으로 한 리셀러·기술 통합 파트너십을 설명하며 추천당 지급이 아닙니다. 또한 usebraintrust.com은 braintrust.dev와 무관한 별개의 인재 마켓플레이스입니다. PromptQuorum은 이 페이지에서 수익을 얻지 않습니다.',
+          },
+          {
+            q: '평가와 모니터링의 차이는 무엇인가요?',
+            a: '평가는 출시 전에 고정된 데이터셋을 돌려 변경이 품질을 개선했는지 떨어뜨렸는지 알려줍니다. 모니터링은 출시 후 실제 트래픽을 지켜보며 시스템이 지금 무엇을 하는지 알려줍니다. 이 페이지는 앞의 것을 다룹니다. 둘은 상호 보완적이며 많은 팀이 둘 다 하지만, 도구도 던지는 질문도 다릅니다.',
+          },
+        ],
+      },
+      verdict: {
+        id: 'verdict',
+        title: '최종 결론',
+        items: [
+          '**Braintrust를 쓰세요:** 코드를 쓰지 않는 사람이 결과를 검토해야 한다면. 다음 단계는 사용자 무제한인 무료 등급으로 시작해, Pro 비용을 내기 전에 PM들이 실제로 열어보는지 확인하는 것입니다.',
+          '**Weave를 쓰세요:** Weights & Biases가 이미 기록 시스템이라면. 다음 단계는 60달러 등급을 전제하기 전에 직원 50명 상한 안에 있는지 확인하고, 아니라면 Enterprise를 견적받는 것입니다.',
+          '**Promptfoo를 쓰세요:** 벤더 계량기 없이 리뷰 가능한 설정으로 평가를 두고 싶다면. 다음 단계는 첫 데이터셋을 YAML로 작성해 CI에서 돌려본 뒤 호스팅 제품을 검토하는 것입니다.',
+          '**특히 Promptfoo를 쓰세요:** 출력 품질만이 아니라 프롬프트 인젝션과 에이전트 보안을 테스트한다면. 다음 단계는 OpenAI가 투자를 향하고 있는 레드팀 기능부터 시작하는 것입니다.',
+          '**셋 다 건너뛰세요:** 테스트 케이스가 열두 개이고 엔지니어도 한 명이라면. 다음 단계는 CI에서 점수를 매기는 스크립트를 쓰고, 데이터셋 관리가 병목이 되면 다시 검토하는 것입니다.',
+        ],
+        note: '세 업체 어디에서도 제휴 프로그램을 찾지 못했고, PromptQuorum은 어디에도 등록되어 있지 않습니다. 이 페이지의 모든 링크는 각 업체의 사이트나 저장소로 연결됩니다.',
+      },
+      sources: {
+        id: 'sources',
+        title: '출처',
+        links: [
+          { url: 'https://www.braintrust.dev/pricing', title: 'Braintrust 가격', description: 'Starter·Pro·Enterprise 등급의 채점·데이터·보존 한도와 스타트업 프로모션.' },
+          { url: 'https://wandb.ai/site/pricing/', title: 'Weights & Biases 가격', description: 'Weave 무료·Pro·Enterprise 등급, 직원 50명 미만 제한, MB당 0.10달러 수집 요율.' },
+          { url: 'https://github.com/promptfoo/promptfoo', title: 'Promptfoo 저장소', description: '별 수, MIT 라이선스, 레드팀과 취약점 스캐닝에 관한 프로젝트 자체 설명.' },
+          { url: 'https://openai.com/index/openai-to-acquire-promptfoo/', title: 'OpenAI: Promptfoo 인수', description: 'OpenAI 자체 발표. 현재 라이선스로 Promptfoo의 오픈소스를 유지하겠다는 약속 포함.' },
+          { url: 'https://www.promptfoo.dev/blog/promptfoo-joining-openai/', title: 'Promptfoo: OpenAI 합류', description: 'Promptfoo 자체의 인수 설명.' },
+          { url: 'https://techcrunch.com/2026/03/09/openai-acquires-promptfoo-to-secure-its-ai-agents/', title: 'OpenAI, Promptfoo 인수(TechCrunch)', description: '2026년 3월 9일 발표에 대한 독립적 확인.' },
+          { url: 'https://www.cnbc.com/2026/03/09/open-ai-cybersecurity-promptfoo-ai-agents.html', title: 'OpenAI, Promptfoo 인수 예정(CNBC)', description: '인수와 그 보안 맥락에 관한 두 번째 독립 보도.' },
+        ],
+      },
+      relatedReading: {
+        id: 'related-reading',
+        title: '함께 읽기',
+        items: [
+          '[최고의 프롬프트 테스트·평가 도구](/ko/prompt-engineering/best-prompt-testing-evaluation-tools) — 같은 문제를 프롬프트 수준에서 본 시각',
+          '[프롬프트 품질 평가 방법](/ko/prompt-engineering/how-to-evaluate-prompt-quality) — 채점기가 적용할 기준표 만들기',
+          '[프롬프트 평가 지표](/ko/prompt-engineering/prompt-evaluation-metrics) — 데이터셋을 갖춘 뒤 실제로 무엇을 측정할 것인가',
+          '[프롬프트 보안과 인젝션 테스트 도구](/ko/prompt-engineering/prompt-security-tools-injection-testing) — Promptfoo가 앞서는 레드팀 영역',
+          '[최고의 LLM API 게이트웨이](/ko/local-llms/best-llm-api-gateway-2026) — 평가 호출을 제공자 간에 라우팅해 비교를 설정 변경으로 만들기',
+        ],
+      },
+    },
+    schema: {
+      '@type': 'TechArticle',
+      headline: '2026년 최고의 LLM 평가 도구: Braintrust, Weave, Promptfoo',
+      description: 'LLM 평가를 위한 Braintrust, Weave, Promptfoo를 검증된 가격, 자격 제한, 자체 호스팅 옵션, OpenAI의 Promptfoo 인수와 함께 비교합니다. 2026년 8월 확인.',
+      datePublished: '2026-08-28',
+      dateModified: '2026-08-28',
+      url: 'https://www.promptquorum.com/ko/local-llms/best-llm-evaluation-tools-2026',
+      inLanguage: 'ko',
+      proficiencyLevel: 'Advanced',
+      author: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
+      about: [
+        { '@type': 'Thing', name: 'LLM 평가' },
+        { '@type': 'Thing', name: 'AI 회귀 테스트' },
+      ],
+      mentions: [
+        { '@type': 'SoftwareApplication', name: 'Braintrust' },
+        { '@type': 'SoftwareApplication', name: 'Weave' },
+        { '@type': 'SoftwareApplication', name: 'Promptfoo' },
+      ],
+      speakable: { '@type': 'SpeakableSpecification', cssSelector: ['.article-intro', '.key-takeaways'] },
+    },
+    faqSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      inLanguage: 'ko',
+      mainEntity: [
+        {
+          '@type': 'Question',
+          name: '2026년 최고의 LLM 평가 도구는 무엇인가요?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: '비개발자가 결과를 검토하는 팀에는 Braintrust, 이미 Weights & Biases를 쓰고 직원 50명 미만이라면 Weave, 자체 인프라에서 무료로 돌아가는 버전 관리된 설정으로 평가를 두고 싶다면 Promptfoo입니다.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'OpenAI가 Promptfoo를 인수했나요?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: '네. OpenAI는 2026년 3월 9일 인수를 발표하며 Promptfoo가 현재 라이선스 그대로 오픈소스를 유지한다고 밝혔습니다. 2026년 8월 말 기준 저장소는 여전히 MIT 라이선스이며 활발히 유지보수되고 있습니다.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Braintrust는 얼마인가요?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: '무료 Starter 등급은 월 1만 건 채점, 1GB 데이터, 14일 보존, 무제한 사용자를 포함합니다. Pro는 월 249달러로 249달러 모델 크레딧, 5만 건 채점, 5GB를 포함합니다. Enterprise는 맞춤 견적이며 온프레미스 또는 호스팅 배포를 제공합니다.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'Weave는 무료이고 한도는 어떻게 되나요?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Weave에는 좌석 무제한과 월 1GB 수집을 제공하는 무료 등급이 있습니다. Pro는 1.5GB로 월 60달러부터이지만 직원 50명 미만 팀으로 제한됩니다. 추가 수집은 MB당 0.10달러입니다.',
+          },
+        },
+        {
+          '@type': 'Question',
+          name: 'LLM 평가 도구에 제휴 프로그램이 있나요?',
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: 'Braintrust, Weights & Biases, Promptfoo 어디에서도 공개 제휴 프로그램을 찾지 못했습니다. Weights & Biases의 파트너 프로그램은 컨설팅 회사를 위한 리셀러·통합 체계이지 추천당 지급이 아닙니다.',
+          },
+        },
+      ],
+    },
+    itemListSchema: {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      name: '최고의 LLM 평가 도구(2026년 8월)',
+      inLanguage: 'ko',
+      numberOfItems: 3,
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Braintrust', description: '교차 기능 프로덕션 팀에 최적 — 월 1만 건 채점까지 무료에 사용자 무제한, Pro 249달러에 249달러 모델 크레딧 포함' },
+        { '@type': 'ListItem', position: 2, name: 'Weave', description: 'Weights & Biases 생태계에서 최적 — 월 1GB 무료에 좌석 무제한, Pro는 직원 50명 미만 팀에 월 60달러부터' },
+        { '@type': 'ListItem', position: 3, name: 'Promptfoo', description: '최고의 무료·CI 네이티브 선택지 — 별 2.46만, MIT 라이선스, 어떤 규모에서도 자체 인프라에서 실행' },
+      ],
+    },
+  },
+}
