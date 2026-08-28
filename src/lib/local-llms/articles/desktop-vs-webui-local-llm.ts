@@ -12,9 +12,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       theme: 'Tools & Interfaces',
       title: 'Desktop vs Web UI for Local LLMs: Which Interface Should You Choose?',
       heroImage: '/images/desktop-vs-webui-local-llm-overview-hero-en.webp',
-      dateModified: '2026-06-20',
+      dateModified: '2026-08-28',
       seoTitle: 'Desktop vs Web UI for Local LLMs',
-      intro: 'Local LLM tools come in two interface styles: desktop applications (LM Studio, Jan AI) and web UIs (Open WebUI, Enchanted UI). Desktop apps are simpler for consumers; web UIs are more powerful and shareable. As of April 2026, both approaches are mature, and the choice depends entirely on your workflow.',
+      intro: 'Local LLM tools come in two interface styles: desktop applications (LM Studio, Jan AI) and web UIs (Open WebUI, Enchanted UI). Desktop apps are simpler for consumers; web UIs are more powerful and shareable. Both approaches are mature, and the choice depends entirely on your workflow.',
       metaDescription: 'Desktop vs web UI for local LLMs 2026: comparison on interfaces, features, sharing, scalability. When to use each for production deployment.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**Local LLM tools come in two interface styles: desktop applications (LM Studio, Jan AI) and web UIs (Open WebUI, Enchanted UI). Desktop apps are simpler for consumers; web UIs are more powerful and shareable.**',
@@ -39,12 +39,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Local LLM tools come in two interface styles: desktop apps like LM Studio and Jan AI, which are simpler for individual consumers, and web UIs like Open WebUI, which are more powerful, shareable across a network, and better suited to multi-user or team setups.' },
+            { type: 'plain-terms', text: "If you're the only one using your local AI setup, a desktop app is the easiest choice -- install it, open it, chat. If you want to share access with family, coworkers, or run it on a home server everyone in the house can reach, a web UI makes more sense since it runs as a service other devices can connect to over the network." },
+          ],
           items: [
             '**Desktop apps** (LM Studio, Jan AI): Simple, single-user, no server setup. Best for consumers.',
             '**Web UIs** (Open WebUI, Enchanted): Browser-based, shareable, multi-user capable. Best for teams and power users.',
             'Both types connect to the same underlying models (Ollama, vLLM). You can switch between them.',
             'Desktop apps are easier for beginners; web UIs are more flexible for professionals.',
-            'As of April 2026, both are mature and production-ready.',
+            'Both are mature and production-ready.',
           ],
         },
         desktopApps: {
@@ -192,9 +196,10 @@ schema: {
       title: 'Desktop vs Web UI para LLMs locales: ¿Qué interfaz debes elegir?',
       heroImage: '/images/desktop-vs-webui-local-llm-overview-hero-es.webp',
       seoTitle: 'Desktop vs Web UI para LLMs locales',
-      intro: 'Las herramientas de LLM local vienen en dos estilos de interfaz: aplicaciones de escritorio (LM Studio, Jan AI) e interfaces web (Open WebUI, Enchanted UI). Las apps de escritorio son más sencillas para usuarios generales; las interfaces web son más potentes y se pueden compartir. Desde abril de 2026, ambos enfoques son maduros y la elección depende completamente de tu flujo de trabajo.',
+      intro: 'Las herramientas de LLM local vienen en dos estilos de interfaz: aplicaciones de escritorio (LM Studio, Jan AI) e interfaces web (Open WebUI, Enchanted UI). Las apps de escritorio son más sencillas para usuarios generales; las interfaces web son más potentes y se pueden compartir. Ambos enfoques son maduros y la elección depende completamente de tu flujo de trabajo.',
       metaDescription: 'Desktop vs Web UI para LLMs locales 2026: compara interfaces, funciones, compatibilidad y escalabilidad. Cuándo usar cada uno en producción.',
       publishDate: '2026-04-04',
+      dateModified: '2026-08-28',
       leadAnswerBlock: '**Las herramientas de LLM local vienen en dos estilos de interfaz: aplicaciones de escritorio (LM Studio, Jan AI) e interfaces web (Open WebUI, Enchanted UI). Las apps de escritorio son más sencillas para usuarios generales; las interfaces web son más potentes y se pueden compartir.**',
       audience: 'Principiantes que ejecutan su primer LLM local en hardware de consumo',
       readTime: '9 min de lectura',
@@ -216,12 +221,16 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Las herramientas de LLM local vienen en dos estilos de interfaz: apps de escritorio como LM Studio y Jan AI, más sencillas para un solo usuario, e interfaces web como Open WebUI, más potentes, compartibles en red y mejor adaptadas a configuraciones multiusuario o de equipo.' },
+            { type: 'plain-terms', text: 'Si eres el único que usa tu configuración de IA local, una app de escritorio es la opción más sencilla: instálala, ábrela y chatea. Si quieres compartir el acceso con familiares, compañeros de trabajo, o ejecutarlo en un servidor doméstico al que todos puedan acceder, una interfaz web tiene más sentido, ya que funciona como un servicio al que otros dispositivos pueden conectarse por red.' },
+          ],
           items: [
             '**Apps de escritorio** (LM Studio, Jan AI): Simples, para un solo usuario, sin configuración de servidor. Ideales para usuarios generales.',
             '**Interfaces web** (Open WebUI, Enchanted): Basadas en navegador, compartibles, con soporte multiusuario. Ideales para equipos y usuarios avanzados.',
             'Ambos tipos se conectan a los mismos modelos subyacentes (Ollama, vLLM). Puedes cambiar entre ellos.',
             'Las apps de escritorio son más fáciles para principiantes; las interfaces web son más flexibles para profesionales.',
-            'Desde abril de 2026, ambas opciones son maduras y están listas para producción.',
+            'Ambas opciones son maduras y están listas para producción.',
           ],
         },
         desktopApps: {
@@ -370,9 +379,10 @@ schema: {
       title: 'تطبيق سطح المكتب مقابل واجهة الويب لنماذج ⁨LLM⁩ المحلية: أي واجهة تختار؟',
       heroImage: '/images/desktop-vs-webui-local-llm-overview-hero-ar.webp',
       seoTitle: '⁨LM Studio⁩ و⁨Jan AI⁩ مقابل ⁨Open WebUI⁩ لنماذج ⁨LLM⁩',
-      intro: 'تأتي أدوات LLM المحلية بنمطي واجهة: تطبيقات سطح المكتب (LM Studio، Jan AI) وواجهات الويب (Open WebUI، Enchanted UI). تطبيقات سطح المكتب أبسط للمستخدمين العامين؛ واجهات الويب أقوى وقابلة للمشاركة. منذ أبريل 2026، النهجان ناضجان والاختيار يعتمد كلياً على سير عملك.',
+      intro: 'تأتي أدوات LLM المحلية بنمطي واجهة: تطبيقات سطح المكتب (LM Studio، Jan AI) وواجهات الويب (Open WebUI، Enchanted UI). تطبيقات سطح المكتب أبسط للمستخدمين العامين؛ واجهات الويب أقوى وقابلة للمشاركة. النهجان ناضجان والاختيار يعتمد كلياً على سير عملك.',
       metaDescription: '⁨LM Studio⁩ و⁨Jan AI⁩ أسهل للمستخدمين العامين. ⁨Open WebUI⁩ قابل للمشاركة وأقوى للإنتاج. قارن الميزات والتوافق وقابلية التوسّع في نشر ⁨LLM⁩ المحلي.',
       publishDate: '2026-04-04',
+      dateModified: '2026-08-28',
       leadAnswerBlock: '**تأتي أدوات LLM المحلية بنمطي واجهة: تطبيقات سطح المكتب (LM Studio، Jan AI) وواجهات الويب (Open WebUI، Enchanted UI). تطبيقات سطح المكتب أبسط للمستخدمين العامين؛ واجهات الويب أقوى وقابلة للمشاركة.**',
       audience: 'المبتدئون الذين يشغّلون أول LLM محلي لهم على عتاد استهلاكي',
       readTime: '9 دقائق للقراءة',
@@ -394,12 +404,16 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'تأتي أدوات LLM المحلية بنمطي واجهة: تطبيقات سطح مكتب مثل LM Studio وJan AI، وهي أبسط للمستخدم الفردي، وواجهات ويب مثل Open WebUI، وهي أقوى وقابلة للمشاركة عبر الشبكة وأنسب لإعدادات متعددة المستخدمين أو الفرق.' },
+            { type: 'plain-terms', text: 'إذا كنت الوحيد الذي يستخدم إعداد الذكاء الاصطناعي المحلي لديك، فإن تطبيق سطح المكتب هو الخيار الأبسط: ثبّته، افتحه، وابدأ الدردشة. إذا أردت مشاركة الوصول مع العائلة أو الزملاء، أو تشغيله على خادم منزلي يمكن للجميع الوصول إليه، فإن واجهة الويب أكثر منطقية لأنها تعمل كخدمة يمكن لأجهزة أخرى الاتصال بها عبر الشبكة.' },
+          ],
           items: [
             '**تطبيقات سطح المكتب** (LM Studio، Jan AI): بسيطة، لمستخدم واحد، دون إعداد خادم. مثالية للمستخدمين العامين.',
             '**واجهات الويب** (Open WebUI، Enchanted): قائمة على المتصفح، قابلة للمشاركة، بدعم متعدد المستخدمين. مثالية للفرق والمستخدمين المتقدمين.',
             'يتصل النوعان بالنماذج الأساسية نفسها (Ollama، vLLM). يمكنك التبديل بينهما.',
             'تطبيقات سطح المكتب أسهل للمبتدئين؛ واجهات الويب أكثر مرونة للمحترفين.',
-            'منذ أبريل 2026، كلا الخيارين ناضج وجاهز للإنتاج.',
+            'كلا الخيارين ناضج وجاهز للإنتاج.',
           ],
         },
         desktopApps: {
@@ -550,9 +564,10 @@ schema: {
       title: 'Desktop vs Web UI para LLMs locais: qual interface escolher?',
       heroImage: '/images/desktop-vs-webui-local-llm-overview-hero-pt.webp',
       seoTitle: 'Desktop vs Web UI para LLMs locais',
-      intro: 'As ferramentas de LLM local vêm em dois estilos de interface: aplicativos de desktop (LM Studio, Jan AI) e interfaces web (Open WebUI, Enchanted UI). Os apps de desktop são mais simples para usuários gerais; as interfaces web são mais poderosas e podem ser compartilhadas. Desde abril de 2026, ambas as abordagens são maduras e a escolha depende completamente do seu fluxo de trabalho.',
+      intro: 'As ferramentas de LLM local vêm em dois estilos de interface: aplicativos de desktop (LM Studio, Jan AI) e interfaces web (Open WebUI, Enchanted UI). Os apps de desktop são mais simples para usuários gerais; as interfaces web são mais poderosas e podem ser compartilhadas. Ambas as abordagens são maduras e a escolha depende completamente do seu fluxo de trabalho.',
       metaDescription: 'Desktop vs Web UI para LLMs locais 2026: compare interfaces, recursos, compatibilidade e escalabilidade. Quando usar cada um em produção.',
       publishDate: '2026-04-04',
+      dateModified: '2026-08-28',
       leadAnswerBlock: '**As ferramentas de LLM local vêm em dois estilos de interface: aplicativos de desktop (LM Studio, Jan AI) e interfaces web (Open WebUI, Enchanted UI). Os apps de desktop são mais simples para usuários gerais; as interfaces web são mais poderosas e podem ser compartilhadas.**',
       audience: 'Iniciantes rodando seu primeiro LLM local em hardware de consumo',
       readTime: '9 min de leitura',
@@ -574,12 +589,16 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'As ferramentas de LLM local vêm em dois estilos de interface: apps de desktop como LM Studio e Jan AI, mais simples para um único usuário, e interfaces web como Open WebUI, mais poderosas, compartilháveis em rede e mais adequadas para configurações multiusuário ou de equipe.' },
+            { type: 'plain-terms', text: 'Se você é o único que usa sua configuração de IA local, um app de desktop é a opção mais simples: instale, abra e converse. Se você quer compartilhar o acesso com família, colegas de trabalho, ou rodar em um servidor doméstico que todos possam acessar, uma interface web faz mais sentido, já que funciona como um serviço ao qual outros dispositivos podem se conectar pela rede.' },
+          ],
           items: [
             '**Apps de desktop** (LM Studio, Jan AI): Simples, para um único usuário, sem configuração de servidor. Ideais para usuários gerais.',
             '**Interfaces web** (Open WebUI, Enchanted): Baseadas no navegador, compartilháveis, com suporte multiusuário. Ideais para equipes e usuários avançados.',
             'Os dois tipos se conectam aos mesmos modelos subjacentes (Ollama, vLLM). Você pode alternar entre eles.',
             'Os apps de desktop são mais fáceis para iniciantes; as interfaces web são mais flexíveis para profissionais.',
-            'Desde abril de 2026, ambas as opções são maduras e prontas para produção.',
+            'Ambas as opções são maduras e prontas para produção.',
           ],
         },
         desktopApps: {
@@ -728,9 +747,10 @@ schema: {
       title: 'Desktop vs Web-UI für lokale LLMs: Welche Oberfläche sollten Sie wählen?',
       heroImage: '/images/desktop-vs-webui-local-llm-overview-hero-de.webp',
       seoTitle: 'Desktop vs Web-UI für lokale LLMs',
-      intro: 'Lokale LLM-Tools gibt es in zwei Oberflächenstilen: Desktop-Anwendungen (LM Studio, Jan AI) und Web-UIs (Open WebUI, Enchanted UI). Desktop-Apps sind für Verbraucher einfacher; Web-UIs sind leistungsstarker und teilbar. Ab April 2026 sind beide Ansätze reif, und die Wahl hängt ganz von Ihrem Workflow ab.',
+      intro: 'Lokale LLM-Tools gibt es in zwei Oberflächenstilen: Desktop-Anwendungen (LM Studio, Jan AI) und Web-UIs (Open WebUI, Enchanted UI). Desktop-Apps sind für Verbraucher einfacher; Web-UIs sind leistungsstarker und teilbar. Beide Ansätze sind reif, und die Wahl hängt ganz von Ihrem Workflow ab.',
       metaDescription: 'Desktop vs Web-UI für lokale LLMs 2026: Vergleich von Oberflächen, Funktionen, Freigabe, Skalierbarkeit. Wann welche für Produktionsbereitstellung wählen.',
       publishDate: '2026-04-04',
+      dateModified: '2026-08-28',
       leadAnswerBlock: '**Lokale LLM-Tools gibt es in zwei Oberflächenstilen: Desktop-Anwendungen (LM Studio, Jan AI) und Web-UIs (Open WebUI, Enchanted UI). Desktop-Apps sind für Verbraucher einfacher; Web-UIs sind leistungsstarker und teilbar.**',
       audience: 'Anfänger, die ihr erstes lokales LLM auf Consumer-Hardware ausführen',
       readTime: '9 Min. Lesezeit',
@@ -753,12 +773,16 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Lokale LLM-Tools gibt es in zwei Oberflächenstilen: Desktop-Apps wie LM Studio und Jan AI, die für einen einzelnen Nutzer einfacher sind, und Web-UIs wie Open WebUI, die leistungsstärker, im Netzwerk teilbar und besser für Mehrbenutzer- oder Team-Setups geeignet sind.' },
+            { type: 'plain-terms', text: 'Wer als einziger die eigene lokale KI-Umgebung nutzt, fährt mit einer Desktop-App am einfachsten: installieren, öffnen, loschatten. Wer den Zugriff mit Familie oder Kollegen teilen oder es auf einem Heimserver laufen lassen möchte, auf den alle im Haus zugreifen können, ist mit einer Web-UI besser bedient, da sie als Dienst läuft, mit dem sich andere Geräte über das Netzwerk verbinden können.' },
+          ],
           items: [
             '**Desktop-Apps** (LM Studio, Jan AI): Einfach, Einzelbenutzer, kein Server-Setup erforderlich. Best für Verbraucher.',
             '**Web-UIs** (Open WebUI, Enchanted): Browser-basiert, teilbar, Multi-User-fähig. Best für Teams und Power-User.',
             'Beide Typen verbinden sich mit denselben zugrunde liegenden Modellen (Ollama, vLLM). Sie können zwischen ihnen wechseln.',
             'Desktop-Apps sind für Anfänger einfacher; Web-UIs sind flexibler für Profis.',
-            'Ab April 2026 sind beide reif und produktionsbereit.',
+            'Beide sind reif und produktionsbereit.',
           ],
         },
         desktopApps: {
@@ -906,9 +930,10 @@ schema: {
       title: 'Bureau vs Interface Web pour LLM locaux : quelle interface choisir ?',
       heroImage: '/images/desktop-vs-webui-local-llm-overview-hero-fr.webp',
       seoTitle: 'Bureau vs interface Web pour LLM locaux',
-      intro: 'Les outils LLM locaux se présentent sous deux styles d\'interface : les applications de bureau (LM Studio, Jan AI) et les interfaces Web (Open WebUI, Enchanted UI). Les apps de bureau sont plus simples pour les consommateurs ; les interfaces Web sont plus puissantes et partageables. Depuis avril 2026, les deux approches sont matures, et le choix dépend entièrement de votre workflow.',
+      intro: 'Les outils LLM locaux se présentent sous deux styles d\'interface : les applications de bureau (LM Studio, Jan AI) et les interfaces Web (Open WebUI, Enchanted UI). Les apps de bureau sont plus simples pour les consommateurs ; les interfaces Web sont plus puissantes et partageables. Les deux approches sont matures, et le choix dépend entièrement de votre workflow.',
       metaDescription: 'Bureau vs interface Web pour LLM locaux 2026: comparaison d\'interfaces, fonctionnalités, partage, scalabilité. Quand utiliser chacun pour production.',
       publishDate: '2026-04-04',
+      dateModified: '2026-08-28',
       leadAnswerBlock: '**Les outils LLM locaux se présentent sous deux styles d\'interface : les applications de bureau (LM Studio, Jan AI) et les interfaces Web (Open WebUI, Enchanted UI). Les apps de bureau sont plus simples pour les consommateurs ; les interfaces Web sont plus puissantes et partageables.**',
       audience: 'Débutants exécutant leur premier LLM local sur matériel grand public',
       readTime: '9 min de lecture',
@@ -931,12 +956,16 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: "Les outils LLM locaux se présentent sous deux styles d'interface : les applications de bureau comme LM Studio et Jan AI, plus simples pour un utilisateur unique, et les interfaces web comme Open WebUI, plus puissantes, partageables sur le réseau et mieux adaptées aux configurations multi-utilisateurs ou d'équipe." },
+            { type: 'plain-terms', text: "Si vous êtes le seul utilisateur de votre configuration d'IA locale, une application de bureau est le choix le plus simple : installez, ouvrez, discutez. Si vous voulez partager l'accès avec votre famille, des collègues, ou faire tourner ça sur un serveur domestique accessible à tous, une interface web a plus de sens, car elle fonctionne comme un service auquel d'autres appareils peuvent se connecter via le réseau." },
+          ],
           items: [
             '**Apps de bureau** (LM Studio, Jan AI): Simple, mono-utilisateur, sans configuration serveur. Idéal pour les consommateurs.',
             '**Interfaces Web** (Open WebUI, Enchanted): Basées sur navigateur, partageables, multi-utilisateur. Idéal pour équipes et utilisateurs avancés.',
             'Les deux types se connectent aux mêmes modèles sous-jacents (Ollama, vLLM). Vous pouvez basculer entre eux.',
             'Apps de bureau plus faciles pour débutants; interfaces Web plus flexibles pour professionnels.',
-            'Depuis avril 2026, les deux sont matures et prêtes pour production.',
+            'Les deux sont matures et prêtes pour production.',
           ],
         },
         desktopApps: {
@@ -1084,9 +1113,10 @@ schema: {
       title: 'デスクトップ対Webインターフェース: ローカルLLMに最適なインターフェースを選択',
       heroImage: '/images/desktop-vs-webui-local-llm-overview-hero-ja.webp',
       seoTitle: 'デスクトップ対Webインターフェース',
-      intro: 'ローカルLLMツールは2つのインターフェーススタイルで提供されます: デスクトップアプリケーション (LM Studio、Jan AI) とWebUI (Open WebUI、Enchanted UI)。デスクトップアプリはコンシューマー向けでシンプル; WebUIはより強力で共有可能です。2026年4月現在、両方のアプローチは成熟しており、選択はワークフローに完全に依存します。',
+      intro: 'ローカルLLMツールは2つのインターフェーススタイルで提供されます: デスクトップアプリケーション (LM Studio、Jan AI) とWebUI (Open WebUI、Enchanted UI)。デスクトップアプリはコンシューマー向けでシンプル; WebUIはより強力で共有可能です。両方のアプローチは成熟しており、選択はワークフローに完全に依存します。',
       metaDescription: 'デスクトップ対Webインターフェース 2026: インターフェース、機能、共有、スケーラビリティの比較。本番展開に各を使用する時期。',
       publishDate: '2026-04-04',
+      dateModified: '2026-08-28',
       leadAnswerBlock: '**ローカルLLMツールは2つのインターフェーススタイルで提供されます: デスクトップアプリケーション (LM Studio、Jan AI) とWebUI (Open WebUI、Enchanted UI)。デスクトップアプリはコンシューマー向けでシンプル; WebUIはより強力で共有可能です。**',
       audience: 'コンシューマーハードウェアで初めてのローカルLLMを実行する初心者',
       readTime: '9分の読了',
@@ -1109,12 +1139,16 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'ローカルLLMツールには2つのインターフェーススタイルがあります。LM StudioやJan AIのようなデスクトップアプリは単一ユーザー向けにシンプルで、Open WebUIのようなWeb UIはより強力で、ネットワーク上で共有可能、複数ユーザーやチーム構成に適しています。' },
+            { type: 'plain-terms', text: '自分のローカルAI環境を使うのが自分だけなら、デスクトップアプリが最も簡単な選択肢です -- インストールして開いてチャットするだけです。家族や同僚とアクセスを共有したい、あるいは家にいる全員がアクセスできるホームサーバーで動かしたいなら、Web UIの方が理にかなっています。ネットワーク経由で他のデバイスが接続できるサービスとして動作するためです。' },
+          ],
           items: [
             '**デスクトップアプリ** (LM Studio、Jan AI): シンプル、シングルユーザー、サーバー設定不要。コンシューマー向けベスト。',
             '**Web UI** (Open WebUI、Enchanted): ブラウザベース、共有可能、マルチユーザー対応。チームとパワーユーザー向けベスト。',
             '両方のタイプは同じ基盤モデル (Ollama、vLLM) に接続します。それらの間で切り替え可能。',
             'デスクトップアプリは初心者向けが簡単; WebUIはプロ向けがより柔軟。',
-            '2026年4月現在、両方は成熟し本番対応。',
+            '両方は成熟し本番対応。',
           ],
         },
         desktopApps: {
@@ -1262,9 +1296,10 @@ schema: {
       title: '桌面应用对Web界面：本地LLM的最佳界面选择',
       heroImage: '/images/desktop-vs-webui-local-llm-overview-hero-zh.webp',
       seoTitle: '桌面应用对Web界面',
-      intro: '本地LLM工具有两种界面风格：桌面应用（LM Studio、Jan AI）和Web UI（Open WebUI、Enchanted UI）。桌面应用对消费者更简单；Web UI更强大且可共享。截至2026年4月，两种方法都已成熟，选择完全取决于您的工作流程。',
+      intro: '本地LLM工具有两种界面风格：桌面应用（LM Studio、Jan AI）和Web UI（Open WebUI、Enchanted UI）。桌面应用对消费者更简单；Web UI更强大且可共享。两种方法都已成熟，选择完全取决于您的工作流程。',
       metaDescription: '桌面应用对Web界面 2026: 界面、功能、共享、可扩展性比较。何时在本地LLM生产部署中使用各种。',
       publishDate: '2026-04-04',
+      dateModified: '2026-08-28',
       leadAnswerBlock: '**本地LLM工具有两种界面风格：桌面应用（LM Studio、Jan AI）和Web UI（Open WebUI、Enchanted UI）。桌面应用对消费者更简单；Web UI更强大且可共享。**',
       audience: '在消费级硬件上运行首个本地LLM的初学者',
       readTime: '9分钟阅读',
@@ -1287,12 +1322,16 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: '本地LLM工具有两种界面风格：像LM Studio和Jan AI这样的桌面应用对单个用户来说更简单，而像Open WebUI这样的Web UI则更强大、可在网络上共享，更适合多用户或团队场景。' },
+            { type: 'plain-terms', text: '如果只有你一个人使用本地AI环境，桌面应用是最简单的选择——安装、打开、聊天即可。如果你想与家人、同事共享访问权限，或在家庭服务器上运行让所有人都能访问，Web UI更合理，因为它作为一项服务运行，其他设备可以通过网络连接。' },
+          ],
           items: [
             '**桌面应用** (LM Studio、Jan AI): 简单、单用户、无需服务器设置。最适合消费者。',
             '**Web UI** (Open WebUI、Enchanted): 基于浏览器、可共享、多用户支持。最适合团队和高级用户。',
             '两种类型连接到相同的基础模型 (Ollama、vLLM)。可在它们之间切换。',
             '桌面应用对初学者更容易；Web UI对专业人士更灵活。',
-            '截至2026年4月，两者都已成熟并可用于生产。',
+            '两者都已成熟并可用于生产。',
           ],
         },
         desktopApps: {
@@ -1440,9 +1479,10 @@ schema: {
       title: '로컬 LLM용 데스크톱 vs 웹 UI: 어떤 인터페이스를 선택해야 합니까?',
     heroImage: '/images/desktop-vs-webui-local-llm-overview-hero-ko.webp',
       seoTitle: '로컬 LLM용 데스크톱 vs 웹 UI',
-      intro: '로컬 LLM 도구는 두 가지 인터페이스 방식으로 제공됩니다: 데스크톱 애플리케이션(LM Studio, Jan AI)과 웹 UI(Open WebUI, Enchanted UI). 데스크톱 앱은 일반 사용자에게 더 간단하며, 웹 UI는 더 강력하고 공유가 용이합니다. 2026년 4월 기준, 두 방식 모두 성숙한 단계에 이르렀으며 선택은 전적으로 워크플로우에 따라 결정됩니다.',
+      intro: '로컬 LLM 도구는 두 가지 인터페이스 방식으로 제공됩니다: 데스크톱 애플리케이션(LM Studio, Jan AI)과 웹 UI(Open WebUI, Enchanted UI). 데스크톱 앱은 일반 사용자에게 더 간단하며, 웹 UI는 더 강력하고 공유가 용이합니다. 두 방식 모두 성숙한 단계에 이르렀으며 선택은 전적으로 워크플로우에 따라 결정됩니다.',
       metaDescription: '로컬 LLM용 데스크톱 vs 웹 UI 2026: 인터페이스, 기능, 공유, 확장성 비교. 프로덕션 배포 시 각 방식의 활용 시점을 안내합니다.',
       publishDate: '2026-04-04',
+      dateModified: '2026-08-28',
       leadAnswerBlock: '**로컬 LLM 도구는 두 가지 인터페이스 방식으로 제공됩니다: 데스크톱 애플리케이션(LM Studio, Jan AI)과 웹 UI(Open WebUI, Enchanted UI). 데스크톱 앱은 일반 사용자에게 더 간단하며, 웹 UI는 더 강력하고 공유가 용이합니다.**',
       audience: '소비자용 하드웨어에서 처음으로 로컬 LLM을 실행하는 초보자',
       readTime: '9분 읽기',
@@ -1464,12 +1504,16 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: '로컬 LLM 도구는 두 가지 인터페이스 방식으로 제공됩니다. LM Studio와 Jan AI 같은 데스크톱 앱은 단일 사용자에게 더 간단하고, Open WebUI 같은 웹 UI는 더 강력하며 네트워크에서 공유 가능해 다중 사용자나 팀 환경에 더 적합합니다.' },
+            { type: 'plain-terms', text: '자신의 로컬 AI 환경을 혼자만 사용한다면 데스크톱 앱이 가장 간단한 선택입니다 -- 설치하고, 열고, 대화하면 됩니다. 가족이나 동료와 접근 권한을 공유하고 싶거나, 집에 있는 모두가 접근할 수 있는 홈서버에서 운영하고 싶다면 웹 UI가 더 합리적입니다. 네트워크를 통해 다른 기기가 연결할 수 있는 서비스로 동작하기 때문입니다.' },
+          ],
           items: [
             '**데스크톱 앱** (LM Studio, Jan AI): 간단하고 단일 사용자 방식이며 서버 설정이 필요 없습니다. 일반 사용자에게 최적입니다.',
             '**웹 UI** (Open WebUI, Enchanted): 브라우저 기반이며 공유 가능하고 다중 사용자를 지원합니다. 팀 및 파워 유저에게 최적입니다.',
             '두 방식 모두 동일한 기반 모델(Ollama, vLLM)에 연결됩니다. 두 방식 간에 전환이 가능합니다.',
             '데스크톱 앱은 초보자에게 더 쉽고, 웹 UI는 전문가에게 더 유연합니다.',
-            '2026년 4월 기준, 두 방식 모두 성숙하고 프로덕션 수준에 도달했습니다.',
+            '두 방식 모두 성숙하고 프로덕션 수준에 도달했습니다.',
           ],
         },
         desktopApps: {
