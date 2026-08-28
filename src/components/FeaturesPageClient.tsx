@@ -27,7 +27,7 @@ const ICONS = [Sparkles, Layers, Brain, Zap, Shield]
 const T = {
   en: {
     h1: 'PromptQuorum Features: 9 Frameworks, 25+ Models, 13 Analysis Types',
-    subtitle: 'Write structured prompts with 9 built-in frameworks, dispatch to 25+ AI models in parallel, and analyze responses with 13 consensus analysis types — including hallucination detection. As of April 2026.',
+    subtitle: 'Write structured prompts with 9 built-in frameworks, dispatch to 25+ AI models in parallel, and analyze responses with 13 consensus analysis types — including hallucination detection.',
     tldrTitle: 'Key Features at a Glance',
     tldrItems: [
       '9 prompt engineering frameworks (CO-STAR, CRAFT, RISEN, TRACE, APE, SPECS, Google, RTF)',
@@ -68,7 +68,7 @@ const T = {
   },
   de: {
     h1: 'Funktionen',
-    subtitle: 'Alles, was Sie brauchen, um bessere Prompts zu schreiben, effizienter zu testen und schneller zu optimieren. Stand: April 2026.',
+    subtitle: 'Alles, was Sie brauchen, um bessere Prompts zu schreiben, effizienter zu testen und schneller zu optimieren.',
     tldrTitle: 'Wichtigste Funktionen auf einen Blick',
     tldrItems: [
       '9 Prompt-Engineering-Frameworks (CO-STAR, CRAFT, RISEN, TRACE, APE, SPECS, Google, RTF)',
@@ -109,7 +109,7 @@ const T = {
   },
   fr: {
     h1: 'Fonctionnalités',
-    subtitle: 'Tout ce dont vous avez besoin pour écrire de meilleurs prompts, tester plus intelligemment et optimiser plus vite. À partir d\'avril 2026.',
+    subtitle: 'Tout ce dont vous avez besoin pour écrire de meilleurs prompts, tester plus intelligemment et optimiser plus vite.',
     tldrTitle: 'Fonctionnalités clés en un coup d\'œil',
     tldrItems: [
       '9 frameworks de prompt engineering (CO-STAR, CRAFT, RISEN, TRACE, APE, SPECS, Google, RTF)',
@@ -150,7 +150,7 @@ const T = {
   },
   ja: {
     h1: '機能',
-    subtitle: 'より良いプロンプトを書き、よりスマートにテストし、より速く最適化するために必要なすべて。2026年4月時点。',
+    subtitle: 'より良いプロンプトを書き、よりスマートにテストし、より速く最適化するために必要なすべて。',
     tldrTitle: '主要機能の概要',
     tldrItems: [
       '9つのプロンプトエンジニアリングフレームワーク（CO-STAR、CRAFT、RISEN、TRACE、APE、SPECS、Google、RTF）',
@@ -191,7 +191,7 @@ const T = {
   },
   zh: {
     h1: '功能',
-    subtitle: '编写更好提示词、更智能测试、更快优化所需的一切。截至 2026 年 4 月。',
+    subtitle: '编写更好提示词、更智能测试、更快优化所需的一切。',
     tldrTitle: '核心功能一览',
     tldrItems: [
       '9 种提示词工程框架（CO-STAR、CRAFT、RISEN、TRACE、APE、SPECS、Google、RTF）',
@@ -232,7 +232,7 @@ const T = {
   },
   es: {
     h1: 'Características de PromptQuorum: 9 Frameworks, 25+ Modelos, 13 Tipos de Análisis',
-    subtitle: 'Escribe prompts estructurados con 9 frameworks integrados, envíalos a 25+ modelos de IA en paralelo y analiza las respuestas con 13 tipos de análisis de consenso — incluyendo detección de alucinaciones. A partir de abril de 2026.',
+    subtitle: 'Escribe prompts estructurados con 9 frameworks integrados, envíalos a 25+ modelos de IA en paralelo y analiza las respuestas con 13 tipos de análisis de consenso — incluyendo detección de alucinaciones.',
     tldrTitle: 'Características principales de un vistazo',
     tldrItems: [
       '9 frameworks de prompt engineering (CO-STAR, CRAFT, RISEN, TRACE, APE, SPECS, Google, RTF)',
@@ -273,7 +273,7 @@ const T = {
   },
   pt: {
     h1: 'Recursos do PromptQuorum: 9 Frameworks, 25+ Modelos, 13 Tipos de Análise',
-    subtitle: 'Escreva prompts estruturados com 9 frameworks integrados, envie para 25+ modelos de IA em paralelo e analise as respostas com 13 tipos de análise de consenso — incluindo detecção de alucinação. A partir de abril de 2026.',
+    subtitle: 'Escreva prompts estruturados com 9 frameworks integrados, envie para 25+ modelos de IA em paralelo e analise as respostas com 13 tipos de análise de consenso — incluindo detecção de alucinação.',
     tldrTitle: 'Principais recursos em resumo',
     tldrItems: [
       '9 frameworks de prompt engineering (CO-STAR, CRAFT, RISEN, TRACE, APE, SPECS, Google, RTF)',
@@ -314,7 +314,7 @@ const T = {
   },
   ar: {
     h1: 'ميزات PromptQuorum: 9 أطر عمل، 25+ نموذج، 13 نوع تحليل',
-    subtitle: 'اكتب موجهات منظمة باستخدام 9 أطر عمل مدمجة، وأرسلها إلى 25+ نموذج ذكاء اصطناعي بالتوازي، وحلّل الاستجابات بـ 13 نوع تحليل للتوافق — بما في ذلك كشف الهلوسة. اعتبارًا من أبريل 2026.',
+    subtitle: 'اكتب موجهات منظمة باستخدام 9 أطر عمل مدمجة، وأرسلها إلى 25+ نموذج ذكاء اصطناعي بالتوازي، وحلّل الاستجابات بـ 13 نوع تحليل للتوافق — بما في ذلك كشف الهلوسة.',
     tldrTitle: 'الميزات الرئيسية في لمحة',
     tldrItems: [
       '9 أطر عمل لهندسة الموجهات (CO-STAR، CRAFT، RISEN، TRACE، APE، SPECS، Google، RTF)',
@@ -355,7 +355,7 @@ const T = {
   },
   ko: {
     h1: 'PromptQuorum 기능: 9가지 프레임워크, 25개 이상 모델, 13가지 분석 유형',
-    subtitle: '9가지 내장 프레임워크로 구조화된 프롬프트를 작성하고, 25개 이상의 AI 모델에 병렬로 전송하며, 13가지 합의 분석 유형으로 응답을 분석하세요 — 환각 감지 포함. 2026년 4월 기준.',
+    subtitle: '9가지 내장 프레임워크로 구조화된 프롬프트를 작성하고, 25개 이상의 AI 모델에 병렬로 전송하며, 13가지 합의 분석 유형으로 응답을 분석하세요 — 환각 감지 포함.',
     tldrTitle: '주요 기능 한눈에 보기',
     tldrItems: [
       '9가지 프롬프트 엔지니어링 프레임워크 (CO-STAR, CRAFT, RISEN, TRACE, APE, SPECS, Google, RTF)',
