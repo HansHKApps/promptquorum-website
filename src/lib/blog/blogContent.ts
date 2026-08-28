@@ -21325,7 +21325,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           downloadCta: {
             label: '完全レポートをPDFでダウンロード',
             href: '/pdfs/prompt-optimization-market-overview-2026.pdf',
-            description: '無料ダウンロード — 価格表・ツール比較・買収タイムライン付き完全市場レポート（PDF、2026年3月）',
+            description: '無料ダウンロード — 価格表・ツール比較・買収タイムライン付き完全市場レポート （PDF、）',
           },
         },
         marketOverview: {
@@ -21578,7 +21578,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           downloadCta: {
             label: '下载完整PDF报告',
             href: '/pdfs/prompt-optimization-market-overview-2026.pdf',
-            description: '免费下载——含定价表、工具对比及收购时间线的完整市场报告（PDF，2026年3月）',
+            description: '免费下载——含定价表、工具对比及收购时间线的完整市场报告 （PDF，）',
           },
         },
         marketOverview: {

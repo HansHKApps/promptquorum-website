@@ -1,0 +1,54 @@
+[
+  {
+    "path": "src/lib/blog/blogContent.ts",
+    "match": "（PDF、2026年3月）",
+    "reason": "Edition date of a downloadable PDF report, not a claim about the page. A reader needs to know which edition they are getting."
+  },
+  {
+    "path": "src/lib/blog/blogContent.ts",
+    "match": "（PDF，2026年3月）",
+    "reason": "Same PDF edition date, zh locale."
+  },
+
+  {
+    "path": "src/lib/local-llms/articles/best-ai-coding-assistant-local-llm.ts",
+    "match": "🔄 2026년 6월 업데이트",
+    "reason": "TODO(month-drift): the '🔄 <Month> <Year> Update' heading family. Here the date IS the heading, so stripping it leaves a bare emoji -- it needs replacement copy ('What Changed in This Update') written in EN and translated through the /geo-translation skill, not invented inline. Tracked; not a licence to keep the date."
+  },
+  {
+    "path": "src/lib/local-llms/articles/cloud-gpu-rental-comparison-2026.ts",
+    "match": "🔄 2026年7月更新",
+    "reason": "TODO(month-drift): same '🔄 … Update' heading family, zh."
+  },
+  {
+    "path": "src/lib/local-llms/articles/cloud-gpu-rental-comparison-2026.ts",
+    "match": "🔄 2026년 5월 업데이트",
+    "reason": "TODO(month-drift): same '🔄 … Update' heading family, ko."
+  },
+  {
+    "path": "src/lib/local-llms/articles/eu-cloud-gpu-gdpr-2026.ts",
+    "match": "🔄 2026年5月更新",
+    "reason": "TODO(month-drift): same '🔄 … Update' heading family, ja/zh."
+  },
+  {
+    "path": "src/lib/local-llms/articles/eu-cloud-gpu-gdpr-2026.ts",
+    "match": "🔄 2026년 5월 업데이트",
+    "reason": "TODO(month-drift): same '🔄 … Update' heading family, ko."
+  },
+
+  {
+    "path": "src/lib/local-llms/articles/top-open-source-models-ollama.ts",
+    "match": "（2026年7月）",
+    "reason": "TEMPORARY: this file is being rewritten on branch seo/ollama-v0331-refresh by a concurrent session (v0.32.0 -> v0.33.1). Editing it here would collide. Re-check and remove this entry once that branch lands."
+  },
+  {
+    "path": "src/lib/local-llms/articles/top-open-source-models-ollama.ts",
+    "match": "（2026年4月）",
+    "reason": "TEMPORARY: same concurrent branch. Re-check once it lands."
+  },
+  {
+    "path": "src/lib/prompt-bites/articles/best-ollama-models-right-now.ts",
+    "match": "2026",
+    "reason": "TEMPORARY: this file is also modified on branch seo/ollama-v0331-refresh. Its metaDescriptions carry 'sizes verified <month> 2026' stamps in all nine locales. Re-check and narrow or remove this entry once that branch lands."
+  }
+]

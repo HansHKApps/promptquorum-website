@@ -71,6 +71,16 @@ function validateFreshnessTier() {
   })
 }
 
+function validateMonthDrift() {
+  return new Promise((resolve, reject) => {
+    const child = spawn('node', ['scripts/validate-month-drift.mjs'], { stdio: 'inherit' })
+    child.on('close', code => {
+      if (code === 0) resolve()
+      else reject(new Error('Month drift validation failed'))
+    })
+  })
+}
+
 function generateSeoRegistry() {
   return new Promise((resolve) => {
     console.log('\n📊 Generating SEO registry...\n')
@@ -98,6 +108,7 @@ async function main() {
 
   try {
     await validateFreshnessTier()
+    await validateMonthDrift()
   } catch (err) {
     console.error('\n❌ Freshness tier validation failed. Please fix errors before building.\n')
     process.exit(1)

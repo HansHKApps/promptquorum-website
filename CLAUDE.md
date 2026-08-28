@@ -241,6 +241,46 @@ When implementing a new `/gamma` presentation for a prompt-engineering article:
 - `.git/hooks/pre-commit` runs `node scripts/validate-table-cell-length.mjs --staged` on every commit and **blocks** it if a staged article file has a table header >40 chars or cell >110 chars (i.e. an unambiguous full-sentence violation, not a few characters over target) and that section doesn't have `itemHeadings: true`. Fix by shortening the content or setting `itemHeadings: true`, per rule 6.
 - This hook is local to `.git/hooks/` (not tracked by git) — if you're on a fresh clone and it isn't firing, check `.git/hooks/pre-commit` exists and is executable.
 
+## No Month Names in Titles, Headings, or Meta Descriptions
+
+A month name in a title, heading, or meta description is a freshness claim
+someone has to keep true by hand, in nine languages, forever. That has never
+held here. An audit on 2026-08-28 found 48 page titles, 341 headings and 676
+descriptions naming a month, the oldest stuck on March, and the failure mode
+was usually locale drift: the English copy got refreshed and the other eight
+locales kept the old month, so non-EN SERPs advertised stale dates for pages
+that were current in English.
+
+**The signal is redundant.** Every article already renders a self-updating
+"Last updated <date>" badge from `dateModified` (via `formatDisplayDate`, all
+nine locales), plus the New/Updated badges in `src/lib/article-freshness.ts`.
+The hand-maintained month duplicated a signal the site computes for free.
+
+**The rule is about position, not presence:**
+
+- ❌ A month+year in **trailing stamp position** — inside a closing
+  parenthetical, or after a final dash/comma/colon:
+  `Performance Benchmarks (June 2026)`, `GPU-Preisvergleich — Juli 2026`,
+  `… — verified against primary sources, July 2026.`
+- ✅ A month+year **mid-sentence**, where the date is the fact rather than a
+  claim about the page's currency: `The Performance Gap Closed in July 2026`,
+  `EU AI Act deadline deferred to December 2027`, `per MIT Tech Review (May 2026)`.
+- ✅ Anything **day-precise**. A day number means an event:
+  `M5 Ultra: Confirmed August 25, 2026`.
+- ✅ **Body prose is never checked.** `src/lib` holds ~3,300 month mentions and
+  most are release dates, regulatory deadlines and knowledge cutoffs.
+
+Keep the **year** where the freshness tier calls for it — strip only the month.
+`Best Local LLMs August 2026: …` becomes `Best Local LLMs 2026: …`, never
+`Best Local LLMs: …`.
+
+**Enforcement:** `scripts/validate-month-drift.mjs` runs in `build-with-fix.js`
+(next to the freshness-tier validator) and in `.github/workflows/pr-checks.yml`,
+and **fails the build**. Deliberate exceptions go in
+`scripts/month-drift-allowlist.json` with a written reason. Note the validator
+matches full month names only — `Jan` is a product this site covers (Jan AI),
+not January.
+
 ## Freshness Tier (MANDATORY before writing any new article)
 
 Before writing or substantially editing any article, ask:

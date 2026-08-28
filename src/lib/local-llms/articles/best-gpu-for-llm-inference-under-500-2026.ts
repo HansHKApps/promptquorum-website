@@ -56,7 +56,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rankedItems: [
           {
             rank: 1,
-            title: 'RTX 4060 Ti 16GB — Best Overall (July 2026: ~$424)',
+            title: 'RTX 4060 Ti 16GB — Best Overall (~$424)',
             content: '**The NVIDIA GeForce RTX 4060 Ti 16GB is the clear winner for local LLM inference under $500 in July 2026.** Its 16 GB GDDR6 VRAM runs Qwen3 14B and Mistral 12B at Q4 fully in-GPU — and at Q8 quality with no swapping. The Ada Lovelace architecture\'s 288 GB/s memory bandwidth delivers 45–60 tok/s on 7B Q4 models and 18–25 tok/s on 14B Q8 with Ollama. At 165 W TDP, it runs comfortably on any 650 W PSU. Current price: ~$424 new on Amazon (verified July 2026).',
             affiliateLinks: [
               { label: 'RTX 4060 Ti 16GB on Amazon', url: 'https://www.amazon.com/s?k=RTX+4060+Ti+16GB' },
@@ -65,7 +65,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             rank: 2,
-            title: 'RTX 3060 12GB — Cheaper Runner-Up (July 2026: ~$339)',
+            title: 'RTX 3060 12GB — Cheaper Runner-Up (~$339)',
             content: 'The NVIDIA GeForce RTX 3060 12GB returned to retail at $339 new and is the cheapest CUDA card with adequate VRAM for local LLMs in July 2026. Its 12 GB GDDR6 runs 7B–13B models at Q4/Q8 comfortably; it cannot hold a 14B model at Q8, but a 14B at Q4 (~8.5 GB) fits. Benchmark: ~32–40 tok/s on Llama 3.1 8B Q4 with Ollama. The full CUDA toolchain means Ollama, LM Studio, vLLM, and LoRA fine-tuning all work out of the box on Windows and Linux. If you do not need 14B-at-Q8 headroom, the RTX 3060 12GB saves ~$85 over the RTX 4060 Ti while keeping the same NVIDIA software support.',
             affiliateLinks: [
               { label: 'RTX 3060 12GB on Amazon', url: 'https://www.amazon.com/s?k=RTX+3060+12GB' },
@@ -74,7 +74,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             rank: 3,
-            title: 'Intel Arc B580 12GB — Best Value Budget Pick (July 2026: ~$303)',
+            title: 'Intel Arc B580 12GB — Best Value Budget Pick (~$303)',
             content: 'The Intel Arc B580 12GB launched at $249 and trades at ~$303 in July 2026 — the cheapest new 12 GB card with a modern architecture on this list. It runs Ollama via the SYCL/oneAPI backend on both Linux and Windows. Performance is solid for 7B models: ~28–35 tok/s on Llama 3.1 8B Q4. The 12 GB VRAM cap limits you to 13B Q4 models. For a first GPU or secondary inference machine on a tight budget, the Arc B580 is the right call. Intel\'s driver support has improved substantially since launch.',
             affiliateLinks: [
               { label: 'Intel Arc B580 12GB on Amazon', url: 'https://www.amazon.com/s?k=Intel+Arc+B580' },
@@ -312,7 +312,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rankedItems: [
           {
             rank: 1,
-            title: 'RTX 4060 Ti 16GB — Mejor opción global (julio 2026: ~520 €)',
+            title: 'RTX 4060 Ti 16GB — Mejor opción global (~520 €)',
             content: '**La NVIDIA GeForce RTX 4060 Ti 16GB es la ganadora clara para inferencia LLM local por menos de 500 € en julio de 2026.** Sus 16 GB de VRAM GDDR6 ejecutan Qwen3 14B y Mistral 12B en Q4 completamente en GPU — y en calidad Q8 sin intercambio. La arquitectura Ada Lovelace con 288 GB/s de ancho de banda entrega 45–60 tok/s en modelos 7B Q4 y 18–25 tok/s en 14B Q8 con Ollama. Con 165 W TDP, funciona con cualquier fuente de 650 W. Precio actual: ~520 € nueva en PcComponentes/Amazon.es (verificado julio 2026).',
             affiliateLinks: [
               { label: 'RTX 4060 Ti 16GB en Amazon', url: 'https://www.amazon.com/s?k=RTX+4060+Ti+16GB' },
@@ -321,7 +321,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             rank: 2,
-            title: 'RTX 3060 12GB — Mejor alternativa económica (julio 2026: ~334 €)',
+            title: 'RTX 3060 12GB — Mejor alternativa económica (~334 €)',
             content: 'La NVIDIA GeForce RTX 3060 12GB volvió al mercado minorista a 334 € nueva y es la tarjeta CUDA más barata con VRAM adecuada para LLMs locales en julio de 2026. Sus 12 GB GDDR6 ejecutan modelos 7B–13B en Q4/Q8 con comodidad; no puede alojar un modelo 14B en Q8, pero un 14B en Q4 (~8.5 GB) cabe. Benchmark: ~32–40 tok/s en Llama 3.1 8B Q4 con Ollama. La cadena de herramientas CUDA completa significa que Ollama, LM Studio, vLLM y el fine-tuning LoRA funcionan de fábrica en Windows y Linux. Si no necesitas margen para 14B en Q8, la RTX 3060 12GB ahorra ~186 € frente a la RTX 4060 Ti manteniendo el mismo soporte de software NVIDIA.',
             affiliateLinks: [
               { label: 'RTX 3060 12GB en Amazon', url: 'https://www.amazon.com/s?k=RTX+3060+12GB' },
@@ -330,7 +330,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             rank: 3,
-            title: 'Intel Arc B580 12GB — Mejor opción económica (julio 2026: ~250 €)',
+            title: 'Intel Arc B580 12GB — Mejor opción económica (~250 €)',
             content: 'La Intel Arc B580 12GB se lanzó a 249 € y cotiza a ~250 € en julio de 2026 — la GPU con VRAM adecuada más asequible de esta lista. Ejecuta Ollama a través del backend SYCL/oneAPI en Linux y Windows. Rendimiento: ~28–35 tok/s en Llama 3.1 8B Q4. El límite de 12 GB VRAM te restringe a modelos 13B Q4. Para una primera GPU o una máquina de inferencia secundaria con presupuesto ajustado, la Arc B580 es la elección correcta.',
             affiliateLinks: [
               { label: 'Intel Arc B580 12GB en Amazon', url: 'https://www.amazon.com/s?k=Intel+Arc+B580' },
@@ -580,7 +580,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rankedItems: [
           {
             rank: 1,
-            title: 'RTX 4060 Ti 16GB — أفضل خيار شامل (يوليو 2026: ~$424)',
+            title: 'RTX 4060 Ti 16GB — أفضل خيار شامل (~$424)',
             content: '**بطاقة NVIDIA GeForce RTX 4060 Ti 16GB هي الفائز الواضح للاستدلال المحلي على نماذج LLM بأقل من $500 في يوليو 2026.** تتعامل 16 GB من VRAM من نوع GDDR6 مع Qwen3 14B وMistral 12B بجودة Q8 دون تبديل. بنية Ada Lovelace بعرض نطاق 288 GB/s تقدّم 45–60 tok/s على نماذج 7B Q4 و18–25 tok/s على 14B Q8 مع Ollama. باستهلاك 165 W TDP، تعمل مع أي مزود طاقة بسعة 650 W. السعر الحالي: ~$424 جديدة (مُحقَّق يوليو 2026).',
             affiliateLinks: [
               { label: 'RTX 4060 Ti 16GB على Amazon', url: 'https://www.amazon.com/s?k=RTX+4060+Ti+16GB' },
@@ -589,7 +589,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             rank: 2,
-            title: 'RTX 3060 12GB — أرخص بديل (يوليو 2026: ~$339)',
+            title: 'RTX 3060 12GB — أرخص بديل (~$339)',
             content: 'عادت بطاقة NVIDIA GeForce RTX 3060 12GB إلى المتاجر بسعر $339 جديدة، وهي أرخص بطاقة CUDA بذاكرة VRAM كافية للنماذج المحلية في يوليو 2026. تشغّل 12 GB من GDDR6 نماذج 7B–13B بتكميم Q4/Q8 بأريحية؛ لا تستطيع إيواء نموذج 14B بتكميم Q8، لكن نموذج 14B بتكميم Q4 (~8.5 GB) يناسبها. القياس: ~32–40 tok/s على Llama 3.1 8B Q4 مع Ollama. سلسلة أدوات CUDA الكاملة تعني أن Ollama وLM Studio وvLLM والضبط الدقيق LoRA تعمل جميعها من المصنع على Windows وLinux. إن لم تكن بحاجة إلى هامش 14B عند Q8، توفّر RTX 3060 12GB ~$85 مقارنة بـ RTX 4060 Ti مع الحفاظ على نفس دعم برمجيات NVIDIA.',
             affiliateLinks: [
               { label: 'RTX 3060 12GB على Amazon', url: 'https://www.amazon.com/s?k=RTX+3060+12GB' },
@@ -598,7 +598,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             rank: 3,
-            title: 'Intel Arc B580 12GB — أفضل خيار اقتصادي (يوليو 2026: ~$303)',
+            title: 'Intel Arc B580 12GB — أفضل خيار اقتصادي (~$303)',
             content: 'بطاقة Intel Arc B580 12GB صدرت بسعر $249 وتُتداول بـ ~$303 في يوليو 2026 — الأقل تكلفة من حيث VRAM الكافية في هذه القائمة. تشغّل Ollama عبر الواجهة الخلفية SYCL/oneAPI على Linux وWindows. الأداء: ~28–35 tok/s على Llama 3.1 8B Q4. حد 12 GB من VRAM يقيّدك بنماذج 13B Q4. لأول GPU أو جهاز استدلال ثانوي بميزانية محدودة، Arc B580 هي الاختيار الصحيح.',
             affiliateLinks: [
               { label: 'Intel Arc B580 12GB على Amazon', url: 'https://www.amazon.com/s?k=Intel+Arc+B580' },
@@ -803,7 +803,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Melhor GPU para inferência de LLM por menos de US$ 500 (2026)',
     heroImage: '/images/best-gpu-for-llm-inference-under-500-2026-overview-hero-pt.webp',
     seoTitle: 'Melhor GPU por menos de US$ 500 para LLM: RTX 4060 Ti 16GB',
-    metaDescription: 'A melhor GPU econômica para inferência de LLM local por menos de US$ 500 é a RTX 4060 Ti 16GB (~R$ 3.299 no Brasil): seus 16 GB de VRAM rodam modelos 14B em Q4 totalmente na GPU. A RTX 3060 12GB (~R$ 1.999) é a segunda colocada mais barata. Preços de julho 2026.',
+    metaDescription: 'A melhor GPU econômica para inferência de LLM local por menos de US$ 500 é a RTX 4060 Ti 16GB (~R$ 3.299 no Brasil): seus 16 GB de VRAM rodam modelos 14B em Q4 totalmente na GPU. A RTX 3060 12GB (~R$ 1.999) é a segunda colocada mais barata.',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
@@ -850,7 +850,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rankedItems: [
           {
             rank: 1,
-            title: 'RTX 4060 Ti 16GB — Melhor opção geral (julho 2026: ~R$ 3.299)',
+            title: 'RTX 4060 Ti 16GB — Melhor opção geral (~R$ 3.299)',
             content: '**A NVIDIA GeForce RTX 4060 Ti 16GB é a vencedora clara para inferência de LLM local por menos de US$ 500 em julho de 2026.** Seus 16 GB de VRAM GDDR6 dão conta de Qwen3 14B e Mistral 12B em qualidade Q8 sem swap. A arquitetura Ada Lovelace com 288 GB/s de largura de banda entrega 45–60 tok/s em modelos 7B Q4 e 18–25 tok/s em 14B Q8 com Ollama. Com 165 W de TDP, funciona com qualquer fonte de 650 W. Preço atual: ~R$ 3.299 nova (KaBuM!/Pichau, verificado julho 2026).',
             affiliateLinks: [
               { label: 'RTX 4060 Ti 16GB na Amazon', url: 'https://www.amazon.com/s?k=RTX+4060+Ti+16GB' },
@@ -859,7 +859,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             rank: 2,
-            title: 'RTX 3060 12GB — Melhor alternativa econômica (julho 2026: ~R$ 1.999)',
+            title: 'RTX 3060 12GB — Melhor alternativa econômica (~R$ 1.999)',
             content: 'A NVIDIA GeForce RTX 3060 12GB voltou ao varejo a R$ 1.999 nova e é a placa CUDA mais barata com VRAM adequada para LLMs locais em julho de 2026. Seus 12 GB GDDR6 rodam modelos 7B–13B em Q4/Q8 confortavelmente; ela não comporta um modelo 14B em Q8, mas um 14B em Q4 (~8,5 GB) cabe. Benchmark: ~32–40 tok/s no Llama 3.1 8B Q4 com Ollama. A cadeia de ferramentas CUDA completa significa que Ollama, LM Studio, vLLM e fine-tuning com LoRA funcionam de fábrica no Windows e no Linux. Se você não precisa de folga para 14B em Q8, a RTX 3060 12GB economiza ~R$ 1.300 em relação à RTX 4060 Ti mantendo o mesmo suporte de software NVIDIA.',
             affiliateLinks: [
               { label: 'RTX 3060 12GB na Amazon', url: 'https://www.amazon.com/s?k=RTX+3060+12GB' },
@@ -868,7 +868,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             rank: 3,
-            title: 'Intel Arc B580 12GB — Melhor opção econômica (julho 2026: ~R$ 1.919)',
+            title: 'Intel Arc B580 12GB — Melhor opção econômica (~R$ 1.919)',
             content: 'A Intel Arc B580 12GB foi lançada nos EUA a US$ 249 e está a ~R$ 1.919 no Brasil em julho de 2026 — a GPU com VRAM adequada mais acessível desta lista. Roda o Ollama pelo backend SYCL/oneAPI no Linux e no Windows. Desempenho: ~28–35 tok/s no Llama 3.1 8B Q4. O limite de 12 GB de VRAM restringe você a modelos 13B Q4. Para uma primeira GPU ou uma máquina de inferência secundária com orçamento apertado, a Arc B580 é a escolha certa.',
             affiliateLinks: [
               { label: 'Intel Arc B580 12GB na Amazon', url: 'https://www.amazon.com/s?k=Intel+Arc+B580' },
@@ -1119,7 +1119,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rankedItems: [
           {
             rank: 1,
-            title: 'RTX 4060 Ti 16GB — Bestes Gesamtpaket (Juli 2026: ~520 €)',
+            title: 'RTX 4060 Ti 16GB — Bestes Gesamtpaket (~520 €)',
             content: '**Die NVIDIA GeForce RTX 4060 Ti 16GB ist die klare Empfehlung für lokale LLM-Inferenz unter 500 € im Juli 2026.** 16 GB GDDR6 VRAM bieten Platz für Qwen3 14B und Mistral 12B mit Q8-Qualität ohne Auslagerung. Die Ada-Lovelace-Architektur liefert 45–60 Tok/s bei 7B-Q4-Modellen und 18–25 Tok/s bei 14B Q8 mit Ollama. 165 W TDP läuft problemlos an einem 650-W-Netzteil. Aktueller Preis: ~520 € neu (Geizhals.de, verifiziert Juli 2026).',
             affiliateLinks: [
               { label: 'RTX 4060 Ti 16GB bei Amazon.de', url: 'https://www.amazon.de/s?k=RTX+4060+Ti+16GB' },
@@ -1127,7 +1127,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             rank: 2,
-            title: 'RTX 3060 12GB — Günstigere Alternative (Juli 2026: ~334 €)',
+            title: 'RTX 3060 12GB — Günstigere Alternative (~334 €)',
             content: 'Die NVIDIA GeForce RTX 3060 12GB ist im Handel wieder für 334 € neu erhältlich und im Juli 2026 die günstigste CUDA-Karte mit ausreichend VRAM für lokale LLMs. Ihre 12 GB GDDR6 führen 7B–13B-Modelle mit Q4/Q8 problemlos aus; ein 14B-Modell passt nicht mit Q8, aber ein 14B mit Q4 (~8,5 GB) passt. Benchmark: ~32–40 Tok/s bei Llama 3.1 8B Q4 mit Ollama. Die volle CUDA-Toolchain bedeutet, dass Ollama, LM Studio, vLLM und LoRA-Fine-Tuning unter Windows und Linux sofort funktionieren. Wenn kein 14B-mit-Q8-Spielraum nötig ist, spart die RTX 3060 12GB ~186 € gegenüber der RTX 4060 Ti bei gleicher NVIDIA-Software-Unterstützung.',
             affiliateLinks: [
               { label: 'RTX 3060 12GB bei Amazon.de', url: 'https://www.amazon.de/s?k=RTX+3060+12GB' },
@@ -1135,7 +1135,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             rank: 3,
-            title: 'Intel Arc B580 12GB — Bestes Budget-Angebot (Juli 2026: ~250 €)',
+            title: 'Intel Arc B580 12GB — Bestes Budget-Angebot (~250 €)',
             content: 'Der Intel Arc B580 12GB startete bei 249 € und liegt im Juli 2026 bei ~250 € — die günstigste GPU mit ausreichend VRAM auf dieser Liste. Ollama läuft über den SYCL/oneAPI-Backend auf Linux und Windows. Leistung: ~28–35 Tok/s bei Llama 3.1 8B Q4. Die 12-GB-VRAM-Grenze beschränkt auf 13B-Q4-Modelle. Für einen Einstieg oder ein sekundäres Inferenzgerät mit kleinem Budget ist der Arc B580 die richtige Wahl.',
             affiliateLinks: [
               { label: 'Intel Arc B580 12GB bei Amazon.de', url: 'https://www.amazon.de/s?k=Intel+Arc+B580' },
@@ -1294,7 +1294,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Meilleure GPU pour l\'inférence LLM à moins de 500 € (2026)',
     heroImage: '/images/best-gpu-for-llm-inference-under-500-2026-overview-hero-fr.webp',
     seoTitle: 'Meilleure GPU sous 500 € pour LLM : RTX 4060 Ti 16 Go',
-    metaDescription: 'La meilleure GPU budget pour l\'inférence LLM locale sous 500 € est la RTX 4060 Ti 16 Go (~520 €) : ses 16 Go de VRAM font tourner les modèles 14B en Q4 entièrement en GPU. La RTX 3060 12 Go (~334 €) est l\'alternative moins chère. Prix de juillet 2026.',
+    metaDescription: 'La meilleure GPU budget pour l\'inférence LLM locale sous 500 € est la RTX 4060 Ti 16 Go (~520 €) : ses 16 Go de VRAM font tourner les modèles 14B en Q4 entièrement en GPU. La RTX 3060 12 Go (~334 €) est l\'alternative moins chère.',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
@@ -1341,7 +1341,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rankedItems: [
           {
             rank: 1,
-            title: 'RTX 4060 Ti 16 Go — Meilleur choix global (juillet 2026 : ~520 €)',
+            title: 'RTX 4060 Ti 16 Go — Meilleur choix global (~520 €)',
             content: '**La NVIDIA GeForce RTX 4060 Ti 16 Go est le choix évident pour l\'inférence LLM locale sous 500 € en juillet 2026.** Ses 16 Go de VRAM GDDR6 accueillent Qwen3 14B et Mistral 12B en qualité Q8 sans swap. L\'architecture Ada Lovelace délivre 45–60 tok/s sur les modèles 7B Q4 et 18–25 tok/s sur 14B Q8 avec Ollama. À 165 W, elle fonctionne avec n\'importe quelle alimentation 650 W. Prix actuel : ~520 € neuf (LDLC.com, vérifié juillet 2026).',
             affiliateLinks: [
               { label: 'RTX 4060 Ti 16 Go sur Amazon.fr', url: 'https://www.amazon.fr/s?k=RTX+4060+Ti+16GB' },
@@ -1349,7 +1349,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             rank: 2,
-            title: 'RTX 3060 12 Go — Meilleure alternative économique (juillet 2026 : ~334 €)',
+            title: 'RTX 3060 12 Go — Meilleure alternative économique (~334 €)',
             content: 'La NVIDIA GeForce RTX 3060 12 Go est revenue en boutique à 334 € neuf et constitue la carte CUDA la moins chère avec une VRAM suffisante pour les LLM locaux en juillet 2026. Ses 12 Go de GDDR6 font tourner confortablement les modèles 7B–13B en Q4/Q8 ; elle ne peut pas contenir un modèle 14B en Q8, mais un 14B en Q4 (~8,5 Go) tient. Benchmark : ~32–40 tok/s sur Llama 3.1 8B Q4 avec Ollama. La chaîne d\'outils CUDA complète signifie qu\'Ollama, LM Studio, vLLM et le fine-tuning LoRA fonctionnent sans configuration sous Windows et Linux. Si vous n\'avez pas besoin de la marge 14B-en-Q8, la RTX 3060 12 Go économise ~186 € par rapport à la RTX 4060 Ti tout en conservant le même support logiciel NVIDIA.',
             affiliateLinks: [
               { label: 'RTX 3060 12 Go sur Amazon.fr', url: 'https://www.amazon.fr/s?k=RTX+3060+12GB' },
@@ -1357,7 +1357,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             rank: 3,
-            title: 'Intel Arc B580 12 Go — Meilleur choix budget (juillet 2026 : ~250 €)',
+            title: 'Intel Arc B580 12 Go — Meilleur choix budget (~250 €)',
             content: 'L\'Intel Arc B580 12 Go a été lancé à 249 € et s\'échange à ~250 € en juillet 2026 — la GPU avec VRAM suffisante la moins chère de cette liste. Il fait tourner Ollama via le backend SYCL/oneAPI sur Linux et Windows. Performance : ~28–35 tok/s sur Llama 3.1 8B Q4. La limite de 12 Go restreint aux modèles 13B Q4. Pour une première GPU ou une machine d\'inférence secondaire avec un budget serré, l\'Arc B580 est le bon choix.',
             affiliateLinks: [
               { label: 'Intel Arc B580 12 Go sur Amazon.fr', url: 'https://www.amazon.fr/s?k=Intel+Arc+B580' },
@@ -1516,7 +1516,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: '500ドル以下のLLM推論向けGPUおすすめランキング（2026年）',
     heroImage: '/images/best-gpu-for-llm-inference-under-500-2026-overview-hero-ja.webp',
     seoTitle: '$500以下のLLM推論GPU: RTX 4060 Ti 16GBが最良',
-    metaDescription: '$500以下のローカルLLM推論に最良のバジェットGPUはRTX 4060 Ti 16GB（~¥88,000）：16GB VRAMで14BモデルをQ4で完全にGPU内実行。RTX 3060 12GB（~¥52,980）が最安の次点。2026年7月価格。',
+    metaDescription: '$500以下のローカルLLM推論に最良のバジェットGPUはRTX 4060 Ti 16GB（~¥88,000）：16GB VRAMで14BモデルをQ4で完全にGPU内実行。RTX 3060 12GB（~¥52,980）が最安の次点。',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
@@ -1563,7 +1563,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rankedItems: [
           {
             rank: 1,
-            title: 'RTX 4060 Ti 16GB — 総合1位（2026年7月：~¥88,000）',
+            title: 'RTX 4060 Ti 16GB — 総合1位 （~¥88,000）',
             content: '**NVIDIA GeForce RTX 4060 Ti 16GBは2026年7月時点で$500以下のローカルLLM推論で明確なおすすめです。** 16GB GDDR6 VRAMがQwen3 14BとMistral 12BをQ8品質でスワップなしに収容。Ada Lovelaceアーキテクチャが7B Q4モデルで45〜60トークン/秒、14B Q8で18〜25トークン/秒（Ollama使用時）を実現。165W TDPは650W電源で問題なし。現在価格：~¥88,000新品（kakaku.com、2026年7月確認済み）。',
             affiliateLinks: [
               { label: 'RTX 4060 Ti 16GB をAmazonで確認', url: 'https://www.amazon.co.jp/s?k=RTX+4060+Ti+16GB' },
@@ -1571,7 +1571,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             rank: 2,
-            title: 'RTX 3060 12GB — 最安の次点（2026年7月：~¥52,980）',
+            title: 'RTX 3060 12GB — 最安の次点 （~¥52,980）',
             content: 'NVIDIA GeForce RTX 3060 12GBは¥52,980新品で小売に復帰し、2026年7月時点でローカルLLM向けに十分なVRAMを備えた最安のCUDAカードです。12GB GDDR6は7B–13BモデルをQ4/Q8で快適に動作させます。14BモデルをQ8で収容することはできませんが、14BのQ4（~8.5GB）なら収まります。ベンチマーク：Llama 3.1 8B Q4で約32〜40トークン/秒（Ollama使用時）。完全なCUDAツールチェーンにより、Ollama・LM Studio・vLLM・LoRAファインチューニングがWindows・Linuxですぐに動作します。14BをQ8で動かす余裕が不要なら、RTX 3060 12GBは同じNVIDIAソフトウェアサポートを保ちつつRTX 4060 Tiより約¥35,000節約できます。',
             affiliateLinks: [
               { label: 'RTX 3060 12GB をAmazonで確認', url: 'https://www.amazon.co.jp/s?k=RTX+3060+12GB' },
@@ -1579,7 +1579,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             rank: 3,
-            title: 'Intel Arc B580 12GB — 最安バジェット選択肢（2026年7月：約¥70,000）',
+            title: 'Intel Arc B580 12GB — 最安バジェット選択肢 （約¥70,000）',
             content: 'Intel Arc B580 12GBは米国では$249で発売され、日本では2026年7月時点で約¥70,000——このリストで十分なVRAMを持つ最安クラスのGPU。SYCL/oneAPIバックエンドでLinux・WindowsのOllamaに対応。性能：Llama 3.1 8B Q4で約28〜35トークン/秒。12GB VRAM上限で13B Q4モデルまで対応。初めてのGPUや限られた予算のサブ推論マシンとしてArc B580は最適な選択です。',
             affiliateLinks: [
               { label: 'Intel Arc B580 12GB をAmazonで確認', url: 'https://www.amazon.co.jp/s?k=Intel+Arc+B580' },
@@ -1738,7 +1738,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: '2026年500美元以下LLM推理最佳GPU排行',
     heroImage: '/images/best-gpu-for-llm-inference-under-500-2026-overview-hero-zh.webp',
     seoTitle: '500美元以下LLM推理最佳GPU: RTX 4060 Ti 16GB',
-    metaDescription: '500美元以下本地LLM推理的最佳预算GPU是RTX 4060 Ti 16GB（~$424）：16GB显存可将14B模型Q4完全放入GPU运行。RTX 3060 12GB（~$339）是更便宜的次选。2026年7月价格。',
+    metaDescription: '500美元以下本地LLM推理的最佳预算GPU是RTX 4060 Ti 16GB（~$424）：16GB显存可将14B模型Q4完全放入GPU运行。RTX 3060 12GB（~$339）是更便宜的次选。',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     publishDate: '2026-05-26',
@@ -1785,7 +1785,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rankedItems: [
           {
             rank: 1,
-            title: 'RTX 4060 Ti 16GB — 综合最佳（2026年7月：~$424）',
+            title: 'RTX 4060 Ti 16GB — 综合最佳 （~$424）',
             content: '**NVIDIA GeForce RTX 4060 Ti 16GB是2026年7月$500以下本地LLM推理的明确赢家。** 16GB GDDR6显存可将Qwen3 14B和Mistral 12B Q4完全放入GPU运行——Q8质量下也无需交换。Ada Lovelace架构288 GB/s内存带宽在Ollama下7B Q4模型达到45–60 tok/s，14B Q8达到18–25 tok/s。165W功耗配合任意650W电源即可稳定运行。当前价格：~$424新品（2026年7月已核实）。',
             affiliateLinks: [
               { label: '在京东查看RTX 4060 Ti 16GB', url: 'https://search.jd.com/Search?keyword=RTX+4060+Ti+16GB' },
@@ -1794,7 +1794,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             rank: 2,
-            title: 'RTX 3060 12GB — 更便宜的次选（2026年7月：~$339）',
+            title: 'RTX 3060 12GB — 更便宜的次选 （~$339）',
             content: 'NVIDIA GeForce RTX 3060 12GB以$339新品重返零售，是2026年7月显存充足、可用于本地LLM的最便宜CUDA显卡。12GB GDDR6可轻松运行7B–13B模型的Q4/Q8；它无法容纳14B模型的Q8，但14B Q4（约8.5GB）可以放入。基准测试：Ollama下Llama 3.1 8B Q4约32–40 tok/s。完整的CUDA工具链意味着Ollama、LM Studio、vLLM和LoRA微调在Windows和Linux上均开箱即用。如果你不需要14B-Q8的余量，RTX 3060 12GB比RTX 4060 Ti省约$85，同时保持相同的NVIDIA软件支持。',
             affiliateLinks: [
               { label: '在京东查看RTX 3060 12GB', url: 'https://search.jd.com/Search?keyword=RTX+3060+12GB' },
@@ -1803,7 +1803,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             rank: 3,
-            title: 'Intel Arc B580 12GB — 最佳预算选择（2026年7月：~$303）',
+            title: 'Intel Arc B580 12GB — 最佳预算选择 （~$303）',
             content: 'Intel Arc B580 12GB发售价$249，2026年7月约$303——本列表中显存充足的最便宜GPU。通过SYCL/oneAPI后端在Linux和Windows上运行Ollama。性能：Llama 3.1 8B Q4约28–35 tok/s。12GB显存上限适合13B Q4模型。作为第一块GPU或预算有限的辅助推理机器，Arc B580是明智之选，Intel驱动支持也已大幅改善。',
             affiliateLinks: [
               { label: '在京东查看Intel Arc B580 12GB', url: 'https://search.jd.com/Search?keyword=Intel+Arc+B580' },
@@ -2013,7 +2013,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rankedItems: [
           {
             rank: 1,
-            title: 'RTX 4060 Ti 16GB — 종합 1위 (2026년 7월: ~$424)',
+            title: 'RTX 4060 Ti 16GB — 종합 1위 (~$424)',
             content: '**NVIDIA GeForce RTX 4060 Ti 16GB는 2026년 7월 $500 이하 로컬 LLM 추론에서 명확한 1위입니다.** 16GB GDDR6 VRAM은 Qwen3 14B, Mistral 12B를 스왑 없이 Q8 품질로 처리합니다. Ada Lovelace 아키텍처의 288GB/s 메모리 대역폭은 Ollama에서 7B Q4 기준 45~60 tok/s, 14B Q8 기준 18~25 tok/s를 제공합니다. 165W TDP로 650W 파워서플라이에서 안정적으로 작동합니다. 현재 가격: ~$424 신품 (2026년 7월 확인).',
             affiliateLinks: [
               { label: 'Amazon에서 RTX 4060 Ti 16GB 보기', url: 'https://www.amazon.com/s?k=RTX+4060+Ti+16GB' },
@@ -2022,7 +2022,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             rank: 2,
-            title: 'RTX 3060 12GB — 더 저렴한 차선책 (2026년 7월: ~$339)',
+            title: 'RTX 3060 12GB — 더 저렴한 차선책 (~$339)',
             content: 'NVIDIA GeForce RTX 3060 12GB는 신품 $339로 소매 시장에 복귀했으며, 2026년 7월 기준 로컬 LLM에 충분한 VRAM을 갖춘 가장 저렴한 CUDA 카드입니다. 12GB GDDR6로 7B~13B 모델을 Q4/Q8로 여유롭게 실행합니다. 14B 모델을 Q8로는 담을 수 없지만, 14B Q4(~8.5GB)는 맞습니다. 벤치마크: Ollama에서 Llama 3.1 8B Q4 기준 약 32~40 tok/s. 완전한 CUDA 도구 체인 덕분에 Ollama, LM Studio, vLLM, LoRA 파인튜닝이 Windows와 Linux에서 모두 즉시 작동합니다. 14B Q8 여유가 필요 없다면, RTX 3060 12GB는 동일한 NVIDIA 소프트웨어 지원을 유지하면서 RTX 4060 Ti보다 ~$85를 절약해 줍니다.',
             affiliateLinks: [
               { label: 'Amazon에서 RTX 3060 12GB 보기', url: 'https://www.amazon.com/s?k=RTX+3060+12GB' },
@@ -2031,7 +2031,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             rank: 3,
-            title: 'Intel Arc B580 12GB — 최고 보급형 선택지 (2026년 7월: ~$303)',
+            title: 'Intel Arc B580 12GB — 최고 보급형 선택지 (~$303)',
             content: 'Intel Arc B580 12GB는 $249로 출시되었으며 2026년 7월 ~$303에 거래됩니다 — 이 목록에서 충분한 VRAM을 갖춘 가장 저렴한 GPU. Linux와 Windows에서 SYCL/oneAPI 백엔드를 통해 Ollama를 실행합니다. 7B 모델 성능: Llama 3.1 8B Q4에서 약 28~35 tok/s. 12GB VRAM 상한은 13B Q4 모델까지입니다. 첫 번째 GPU나 보조 추론 머신으로 Arc B580은 영리한 선택이며, Intel 드라이버 지원도 크게 개선되었습니다.',
             affiliateLinks: [
               { label: 'Amazon에서 Intel Arc B580 12GB 보기', url: 'https://www.amazon.com/s?k=Intel+Arc+B580' },

@@ -882,7 +882,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-22',
     title: 'GDPR 风险比较: Qwen vs DeepSeek vs Llama vs Claude 2026',
     seoTitle: 'GDPR 风险矩阵: LLM 比较 Qwen DeepSeek Llama Claude | PromptQuorum',
-    metaDescription: 'GDPR合规LLM比较: DeepSeek API（风险最高）、Qwen本地（风险最低）、Llama本地、Claude/GPT API（中等风险）。按数据驻留、管辖权、ToS和SCC要求的风险矩阵。更新于2026年5月。',
+    metaDescription: 'GDPR合规LLM比较: DeepSeek API（风险最高）、Qwen本地（风险最低）、Llama本地、Claude/GPT API（中等风险）。按数据驻留、管辖权、ToS和SCC要求的风险矩阵。',
     publishDate: '2026-05-22',
     dateModified: '2026-07-13',
     readTime: '8分钟阅读',

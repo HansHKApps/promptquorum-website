@@ -727,7 +727,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
 
     costAndLimits: {
-      title: 'Token-Kosten und API-Grenzen (März 2026)',
+      title: 'Token-Kosten und API-Grenzen',
       content: 'Hier sind die aktuellen Preise. Alle werden nach Input- und Output-Tokens separat abgerechnet. Erinnern Sie sich, dass 1 Token ungefähr 4 Zeichen oder 0,75 Wörter ist.',
       items: [
         '**GPT-5.5:** $5 / $15 pro Million Tokens. Rate-Limit: bis zu 10.000 Anfragen/Min (kostenlos), bis zu 2M Anfragen/Min (betaalt). Best für kleine bis mittlere Volumen.',

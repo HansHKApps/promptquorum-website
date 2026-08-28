@@ -274,7 +274,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/which-ollama-models-support-vision-overview-hero-ja.webp',
     title: 'OllamaでVisionに対応しているモデルは？',
     seoTitle: 'OllamaのVision対応モデル2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'OllamaではLLaVA、Gemma 3マルチモーダル、Qwen-VLがVisionに対応しています。まずは ollama run llava から始めましょう。すべてOllama APIで画像を受け付けます。2026年5月確認済み。',
+    metaDescription: 'OllamaではLLaVA、Gemma 3マルチモーダル、Qwen-VLがVisionに対応しています。まずは ollama run llava から始めましょう。すべてOllama APIで画像を受け付けます。',
     publishDate: '2026-05-18',
     dateModified: '2026-06-21',
     freshness_tier: 'semi_annual',

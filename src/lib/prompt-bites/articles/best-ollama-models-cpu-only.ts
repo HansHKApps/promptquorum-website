@@ -288,7 +288,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Ollama',
     title: 'CPU専用で使えるOllamaの最適モデルは？',
     seoTitle: 'GPU不要Ollamaモデル2026：CPU専用ベスト3選 | PromptQuorum',
-    metaDescription: 'GPUなしの場合、Phi-4 Mini Q4がCPU専用の最適Ollamaモデルです。Llama 3.2 3B Q4は2GB以上のRAMで動作します。Gemma 2Bが最速。2026年5月確認済み。',
+    metaDescription: 'GPUなしの場合、Phi-4 Mini Q4がCPU専用の最適Ollamaモデルです。Llama 3.2 3B Q4は2GB以上のRAMで動作します。Gemma 2Bが最速。',
     heroImage: '/images/best-ollama-models-cpu-only-model-comparison-hero-ja.webp',
     publishDate: '2026-05-18',
     dateModified: '2026-07-16',

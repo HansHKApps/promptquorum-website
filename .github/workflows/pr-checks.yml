@@ -34,6 +34,9 @@ jobs:
       - name: Validate freshness tiers
         run: node scripts/validate-freshness-tier.mjs
 
+      - name: Validate month drift
+        run: node scripts/validate-month-drift.mjs
+
       - name: Validate no internal-note leakage
         run: node scripts/validate-no-internal-note-leakage.mjs
 

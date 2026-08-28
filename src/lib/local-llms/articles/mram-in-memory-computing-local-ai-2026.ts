@@ -353,7 +353,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     'mram-status-2026': {
       id: 'mram-status-2026',
-      title: 'Wo MRAM heute steht (August 2026)',
+      title: 'Wo MRAM heute steht',
       content: [
         '**Samsung SAIT Nature-Paper (Januar 2022):**',
       ],

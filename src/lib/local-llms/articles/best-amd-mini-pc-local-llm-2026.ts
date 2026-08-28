@@ -1429,7 +1429,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       benchmarks: {
         id: 'benchmarks',
-        title: 'اختبارات الأداء (تقديرية، مايو 2026)',
+        title: 'اختبارات الأداء (تقديرية)',
         content: 'بيانات الأداء الحقيقية لا تزال شحيحة لهذه الأجهزة المصغرة الجديدة. فيما يلي تقديرات مبنية على الاختبارات المرجعية لـ Ryzen AI Max+ 395. يختلف الأداء الفعلي حسب التبريد ونظام التشغيل ودقة النموذج.',
         items: [
           'Llama 3.1 8B (Q4_K_M): Minisforum/Beelink/AOOSTAR نحو 45–55 tok/s. GMKtec EVO-X2 نحو 40 tok/s.',
@@ -2829,7 +2829,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Hardware Setups',
     title: '2026年ローカルLLM向け最強AMDミニPC:AOOSTAR・Minisforum・Beelink・GMKtec徹底比較',
     seoTitle: 'AMD Ryzen AI Max+ミニPC比較2026:Minisforum vs Beelink',
-    metaDescription: 'AMD Ryzen AI Max+ ミニPC比較:Minisforum MS-A2・Beelink GTR9・AOOSTAR GEM12・GMKtec EVO-X2。スペック・価格・70Bモデル性能。2026年5月最新。',
+    metaDescription: 'AMD Ryzen AI Max+ ミニPC比較:Minisforum MS-A2・Beelink GTR9・AOOSTAR GEM12・GMKtec EVO-X2。スペック・価格・70Bモデル性能。',
     heroImage: '/images/best-amd-mini-pc-local-llm-2026-comparison-hero-ja.webp',
     publishDate: '2026-05-17',
     next_refresh_due: '2026-11-17',
@@ -3959,7 +3959,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       benchmarks: {
         id: 'benchmarks',
-        title: '성능 벤치마크 (2026년 5월 추정)',
+        title: '성능 벤치마크',
         content: '이 새로운 미니 PC들의 실측 벤치마크 데이터는 아직 부족합니다. 아래는 Ryzen AI Max+ 395 참조 벤치마크 기반 추정치입니다. 실제 성능은 쿨링, OS, 모델 정밀도에 따라 다릅니다.',
         items: [
           'Llama 3.1 8B (Q4_K_M): Minisforum/Beelink/AOOSTAR 약 45~55 tok/s. GMKtec EVO-X2 약 40 tok/s.',

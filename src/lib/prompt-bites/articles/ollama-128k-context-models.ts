@@ -259,7 +259,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/ollama-128k-context-models-overview-hero-ja.webp',
     title: 'Ollamaで128Kコンテキストに対応するモデルは？',
     seoTitle: 'Ollama 128Kコンテキスト2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Llama 3.1 8BとQwen 3 14BはOllamaで128K以上のコンテキストに対応。Qwen 3は1Mトークンに到達。フルコンテキストはVRAMを大幅に増加。2026年5月確認済み。',
+    metaDescription: 'Llama 3.1 8BとQwen 3 14BはOllamaで128K以上のコンテキストに対応。Qwen 3は1Mトークンに到達。フルコンテキストはVRAMを大幅に増加。',
     publishDate: '2026-05-18',
     dateModified: '2026-06-02',
     freshness_tier: 'semi_annual',

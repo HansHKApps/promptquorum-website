@@ -3870,7 +3870,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     pricingDetail: {
       id: 'pricing-breakdown',
-      title: 'GPU별 가격 상세 (2026년 5월)',
+      title: 'GPU별 가격 상세',
       content: '세 플랫폼의 주요 GPU 시간당 렌탈 요금입니다. 실제 비용은 실행 시간에 따라 다릅니다 (RunPod 분 단위, Vast.ai 초 단위, Lambda Labs 시간 단위에 분 단위 최종 청구).',
       columns: ['GPU', 'RunPod', 'Vast.ai', 'Lambda Labs'],
       rows: [

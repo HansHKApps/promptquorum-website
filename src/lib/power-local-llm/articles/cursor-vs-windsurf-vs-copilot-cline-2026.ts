@@ -416,7 +416,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       quickFacts: {
         id: 'quick-facts',
-        title: 'Kurzfakten (verifiziert im August 2026)',
+        title: 'Kurzfakten (verifiziert im)',
         content: 'Direkt verifiziert anhand von cursor.com/pricing, windsurf.com (leitet nach der Cognition-Übernahme auf devin.ai/pricing weiter), github.com/features/copilot/plans und cline.bot/pricing, abgeglichen mit unabhängigen Preis-Trackern. Die Abo-Preise für Entwickler-Tools ändern sich mit Tarifüberarbeitungen — prüfen Sie den aktuellen Preis vor dem Abschluss auf der Anbieterseite. Preise sind USD-Preise; die Anbieter zeigen keine gesondert recherchierbaren EUR-Listenpreise für diese Abos — beim Checkout kann eine lokale Zahlungswährung angeboten werden, die aktuellen USD-Preise gelten aber global.',
         items: [
           '**Cursor:** kostenloser Hobby-Tarif; Pro, Pro+ und Ultra teilen sich eine 20-$/Monat-Basis mit steigenden Nutzungs-Multiplikatoren (Pro+ ca. 3x, Ultra ca. 20x), zzgl. nutzungsbasierter Abrechnung nach Verbrauch des enthaltenen Kontingents; Teams ab 40 $/Nutzer/Monat.',
@@ -702,7 +702,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       quickFacts: {
         id: 'quick-facts',
-        title: 'Faits rapides (vérifiés en août 2026)',
+        title: 'Faits rapides (vérifiés en)',
         content: 'Vérifiés directement sur cursor.com/pricing, windsurf.com (redirige vers devin.ai/pricing après le rachat par Cognition), github.com/features/copilot/plans et cline.bot/pricing, recoupés avec des trackers de prix indépendants. Les tarifs des outils de développement changent avec les révisions de plans — confirmez le tarif actuel sur le site de l\'éditeur avant de vous abonner. Les prix sont en USD ; ces abonnements ne disposent pas de tarifs EUR distincts publiés — le paiement peut proposer une devise locale au moment du règlement, mais le tarif USD affiché est global.',
         items: [
           '**Cursor :** palier Hobby gratuit ; Pro, Pro+ et Ultra partagent tous une base à 20 $/mois avec des multiplicateurs d\'usage inclus croissants (Pro+ environ 3x, Ultra environ 20x), plus une facturation à l\'usage une fois l\'usage inclus épuisé ; Teams à partir de 40 $/utilisateur/mois.',
@@ -988,7 +988,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       quickFacts: {
         id: 'quick-facts',
-        title: 'Datos rápidos (verificados en agosto de 2026)',
+        title: 'Datos rápidos (verificados en)',
         content: 'Verificados directamente en cursor.com/pricing, windsurf.com (redirige a devin.ai/pricing tras la adquisición por Cognition), github.com/features/copilot/plans y cline.bot/pricing, contrastados con rastreadores de precios independientes. Los precios de las suscripciones de herramientas de desarrollo cambian con revisiones de planes — confirma el precio actual en el sitio del proveedor antes de suscribirte. Los precios están en USD; estas suscripciones no publican tarifas separadas en EUR — el pago puede ofrecer moneda local al finalizar la compra, pero la tarifa en USD mostrada es global.',
         items: [
           '**Cursor:** plan Hobby gratis; Pro, Pro+ y Ultra comparten una base de 20 $/mes con multiplicadores de uso incluido crecientes (Pro+ ≈3x, Ultra ≈20x), más facturación por uso una vez agotado el uso incluido; Teams desde 40 $/usuario/mes.',
@@ -1274,7 +1274,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       quickFacts: {
         id: 'quick-facts',
-        title: 'クイックファクト（2026年8月検証済み）',
+        title: 'クイックファクト （検証済み）',
         content: 'cursor.com/pricing、windsurf.com（Cognitionによる買収後devin.ai/pricingへリダイレクト）、github.com/features/copilot/plans、cline.bot/pricingで直接検証し、独立した価格追跡サイトと照合しました。開発ツールのサブスクリプション価格はプラン改定により変動します——契約前に各社サイトで最新料金を確認してください。価格はすべて米ドル建てで、これらのサブスクリプションに個別のJPY定価は公開されていません——決済時にローカル通貨が提示される場合がありますが、表示されているUSD料金がグローバル基準です。',
         items: [
           '**Cursor：** 無料Hobbyプラン。Pro、Pro+、Ultraはすべて月20ドルの共通ベースで、含まれる使用量の倍率が異なります（Pro+は約3倍、Ultraは約20倍）。含まれる使用量を超えると従量課金が発生します。Teamsは1ユーザー月40ドルから。',
@@ -1560,7 +1560,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       quickFacts: {
         id: 'quick-facts',
-        title: '快速事实（2026年8月核实）',
+        title: '快速事实',
         content: '直接在cursor.com/pricing、windsurf.com（Cognition收购后重定向至devin.ai/pricing）、github.com/features/copilot/plans和cline.bot/pricing上核实，并与独立价格追踪网站交叉核对。开发工具的订阅定价会随套餐调整而变化——订阅前请在厂商官网确认当前价格。以上均为美元定价；这些订阅未公布单独的人民币零售价——结账时可能显示本地货币选项，但所示美元价格为全球统一标准。',
         items: [
           '**Cursor：**免费Hobby档位；Pro、Pro+和Ultra共享20美元/月基础费，包含使用量倍数递增（Pro+约3倍，Ultra约20倍），超出包含用量后按需计费；Teams起价40美元/用户/月。',
@@ -1846,7 +1846,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       quickFacts: {
         id: 'quick-facts',
-        title: 'Fatos Rápidos (verificados em agosto de 2026)',
+        title: 'Fatos Rápidos (verificados em)',
         content: 'Verificados diretamente em cursor.com/pricing, windsurf.com (redireciona para devin.ai/pricing após a aquisição pela Cognition), github.com/features/copilot/plans e cline.bot/pricing, cruzados com rastreadores de preços independentes. Os preços de assinatura de ferramentas de desenvolvimento mudam com revisões de planos — confirme o valor atual no site do fornecedor antes de assinar. Os preços são em dólares (USD); essas assinaturas não publicam tabelas de preço separadas em reais — o checkout pode oferecer moeda local, mas o valor em USD exibido é global.',
         items: [
           '**Cursor:** plano Hobby grátis; Pro, Pro+ e Ultra compartilham uma base de 20 $/mês com multiplicadores de uso incluído crescentes (Pro+ cerca de 3x, Ultra cerca de 20x), mais cobrança por uso após esgotar o uso incluído; Teams a partir de 40 $/usuário/mês.',
@@ -2132,7 +2132,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       quickFacts: {
         id: 'quick-facts',
-        title: 'حقائق سريعة (تم التحقق منها في أغسطس 2026)',
+        title: 'حقائق سريعة (تم التحقق منها في)',
         content: 'تم التحقق مباشرة على cursor.com/pricing وwindsurf.com (يُعاد توجيهه إلى devin.ai/pricing بعد استحواذ Cognition) وgithub.com/features/copilot/plans وcline.bot/pricing، مع مقارنة مع متتبعات أسعار مستقلة. تتغير أسعار اشتراكات أدوات التطوير مع مراجعات الخطط — تأكد من السعر الحالي على موقع المزود قبل الاشتراك. الأسعار كلها بالدولار الأمريكي؛ لا تنشر هذه الاشتراكات أسعاراً محلية منفصلة — قد يعرض الدفع عملة محلية عند الدفع، لكن السعر بالدولار المعروض هو السعر العالمي.',
         items: [
           '**Cursor:** فئة Hobby مجانية؛ تشترك Pro وPro+ وUltra جميعاً في قاعدة 20 دولاراً/الشهر مع مضاعفات استخدام مضمّنة متصاعدة (Pro+ نحو 3 أضعاف، Ultra نحو 20 ضعفاً)، إضافة إلى فوترة قائمة على الاستخدام بعد استنفاد الاستخدام المضمّن؛ تبدأ Teams من 40 دولاراً/المستخدم/الشهر.',
@@ -2418,7 +2418,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       quickFacts: {
         id: 'quick-facts',
-        title: '빠른 사실(2026년 8월 확인)',
+        title: '빠른 사실',
         content: 'cursor.com/pricing, windsurf.com(Cognition 인수 후 devin.ai/pricing으로 리디렉션), github.com/features/copilot/plans, cline.bot/pricing에서 직접 확인했으며 독립적인 가격 추적 사이트와 교차 확인했습니다. 개발 도구 구독 가격은 요금제 개편에 따라 변경됩니다 — 구독 전 공급업체 사이트에서 현재 요금을 확인하십시오. 모든 가격은 미국 달러 기준이며, 이들 구독 서비스는 별도의 원화 정가를 공시하지 않습니다 — 결제 시 현지 통화가 표시될 수 있지만 표시된 USD 요금이 전 세계 공통 기준입니다.',
         items: [
           '**Cursor:** 무료 Hobby 요금제; Pro, Pro+, Ultra는 모두 월 20달러 기본 요금을 공유하며 포함 사용량 배수가 다릅니다(Pro+는 약 3배, Ultra는 약 20배). 포함 사용량 소진 후에는 사용량 기반 과금이 적용됩니다. Teams는 사용자당 월 40달러부터.',

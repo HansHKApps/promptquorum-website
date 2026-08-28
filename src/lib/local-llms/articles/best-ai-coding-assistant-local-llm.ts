@@ -2246,7 +2246,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     title: '2026年ローカルLLM最高のAIコーディングアシスタント：Cursor対Continue.dev対Cody比較',
     seoTitle: '2026年ローカルLLM対応の最高のAIコーディングアシスタント5選',
-    metaDescription: 'ローカルLLM対応のAIコーディングアシスタント5つを完全比較。Continue.dev、Cursor、Cody、Tabnine、Windsurf。価格、プライバシー、機能で最適なツール選択ガイド。2026年6月検証済み。',
+    metaDescription: 'ローカルLLM対応のAIコーディングアシスタント5つを完全比較。Continue.dev、Cursor、Cody、Tabnine、Windsurf。価格、プライバシー、機能で最適なツール選択ガイド。',
     heroImage: '/images/best-ai-coding-assistant-local-llm-comparison-hero-ja.webp',
     intro: 'Cursor、Continue.dev、Sourcegraph Codyなどのコーディングアシスタントは、開発者向けの必須ツールになりました。しかし、ほとんどの比較は重要な側面を見落としています。実際にローカルLLMをサポートするツールはどれですか？このガイドは、Ollama、LM Studio、またはllama.cppの統合を望む開発者向けに、5つの主要なAIコーディングアシスタントを比較しています。価格、ローカルLLMセットアップの深さ、IDE サポート、および実際のプライバシーへの影響をカバーしています。',
     publishDate: '2026-05-17',
@@ -2301,7 +2301,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Getting Started',
     title: '5款最佳本地LLM编程助手对比 2026',
     seoTitle: '5款本地LLM编程助手完整对比2026 | 隐私、成本、功能解读',
-    metaDescription: '对比5款支持本地LLM的编程助手：Continue.dev免费开源、Cursor性价比最佳、Cody企业协作、Tabnine数据最安全。按隐私需求、预算、功能选择最适合的工具。2026年6月验证。',
+    metaDescription: '对比5款支持本地LLM的编程助手：Continue.dev免费开源、Cursor性价比最佳、Cody企业协作、Tabnine数据最安全。按隐私需求、预算、功能选择最适合的工具。',
     heroImage: '/images/best-ai-coding-assistant-local-llm-comparison-hero-zh.webp',
     intro: '本地运行AI编程助手能保护企业代码隐私，满足监管要求。本指南对比5款领先工具，帮助您根据团队规模、预算、数据安全需求做出最佳选择。',
     publishDate: '2026-05-18',
@@ -2380,7 +2380,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     title: '로컬 LLM용 최고의 AI 코딩 어시스턴트 2026: Cursor vs Continue.dev vs Cody 비교',
     seoTitle: '로컬 LLM용 최고의 AI 코딩 어시스턴트 2026',
-    metaDescription: '네이티브 로컬 LLM 지원 AI 코딩 어시스턴트 5종 비교: Ollama, LM Studio, 가격, 프라이버시. Cursor vs Continue.dev vs Cody — 2026년 6월 검증.',
+    metaDescription: '네이티브 로컬 LLM 지원 AI 코딩 어시스턴트 5종 비교: Ollama, LM Studio, 가격, 프라이버시. Cursor vs Continue.dev vs Cody.',
     heroImage: '/images/best-ai-coding-assistant-local-llm-comparison-hero-ko.webp',
     intro: 'Cursor, Continue.dev, Sourcegraph Cody 같은 AI 코딩 어시스턴트는 개발자에게 필수 도구가 되었습니다. 그러나 대부분의 비교 글이 놓치는 핵심이 있습니다. 바로 어떤 도구가 실제로 로컬 LLM을 지원하는가입니다. 이 가이드는 클라우드 API가 아닌 Ollama, LM Studio, llama.cpp 연동을 원하는 개발자를 위해 5종의 AI 코딩 어시스턴트를 비교합니다. 가격, 로컬 LLM 설정 깊이, IDE 지원, 실질적인 프라이버시 영향을 다룹니다.',
     publishDate: '2026-05-17',

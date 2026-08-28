@@ -151,7 +151,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         bestModelsQuickPicks: {
           id: 'best-models-quick-picks',
-          title: '🏆 Best Local LLMs for Coding (July 2026 Quick Picks)',
+          title: '🏆 Best Local LLMs for Coding (Quick Picks)',
           items: [
             '**Best overall:** Kimi K2.6 (quantized) — 58.6 SWE-Bench Pro, MoE architecture, Modified MIT license. `ollama run kimi-k2.6`',
             '**Newest agentic challenger:** Laguna XS 2.1 — SWE-bench Verified 70.9%, long-horizon agentic coding, 256K context. `ollama run laguna-xs-2.1`',
@@ -712,7 +712,7 @@ schema: {
         },
         bestModelsQuickPicks: {
           id: 'best-models-quick-picks',
-          title: '🏆 Mejores LLMs locales para programación (selección rápida de julio 2026)',
+          title: '🏆 Mejores LLMs locales para programación (selección rápida de)',
           items: [
             '**Mejor en general:** Kimi K2.6 (cuantizado) — 58.6 en SWE-Bench Pro, arquitectura MoE, licencia MIT modificada. `ollama run kimi-k2.6`',
             '**Mejor modelo denso:** Qwen 3.6 27B — 77,2% SWE-bench, mejor opción no MoE. `ollama run qwen3.6:27b`',
@@ -1698,7 +1698,7 @@ schema: {
         },
         bestModelsQuickPicks: {
           id: 'best-models-quick-picks',
-          title: '🏆 Melhores LLMs Locais para Código (Escolhas Rápidas de Junho de 2026)',
+          title: '🏆 Melhores LLMs Locais para Código (Escolhas Rápidas de)',
           items: [
             '**Melhor no geral:** Kimi K2.6 (quantizado) — 58,6 SWE-Bench Pro, arquitetura MoE, licença MIT modificada. `ollama run kimi-k2.6`',
             '**Melhor modelo denso:** Qwen 3.6 27B — 77,2% SWE-bench, melhor opção sem MoE. `ollama run qwen3.6:27b`',
@@ -2103,7 +2103,7 @@ schema: {
         },
         bestModelsQuickPicks: {
           id: 'best-models-quick-picks',
-          title: '🏆 Beste lokale LLMs für Programmierung (Schnellauswahl Juli 2026)',
+          title: '🏆 Beste lokale LLMs für Programmierung (Schnellauswahl)',
           items: [
             '**Best insgesamt:** Kimi K2.6 (quantisiert) — 58.6 SWE-Bench Pro, MoE-Architektur, Modified MIT-Lizenz. `ollama run kimi-k2.6`',
             '**Neuester Agenten-Herausforderer:** Laguna XS 2.1 — SWE-bench Verified 70,9%, langfristiges agentisches Coding, 256K Kontext. `ollama run laguna-xs-2.1`',
@@ -2550,7 +2550,7 @@ schema: {
         },
         bestModelsQuickPicks: {
           id: 'best-models-quick-picks',
-          title: '🏆 Meilleurs LLMs locaux pour la programmation (sélection rapide juillet 2026)',
+          title: '🏆 Meilleurs LLMs locaux pour la programmation (sélection rapide)',
           items: [
             '**Meilleur global** : Kimi K2.6 (quantifié) — 58.6 SWE-Bench Pro, architecture MoE, licence MIT modifiée. `ollama run kimi-k2.6`',
             '**Nouveau challenger agentique** : Laguna XS 2.1 — SWE-bench Verified 70,9%, codage agentique de longue durée, contexte 256K. `ollama run laguna-xs-2.1`',
@@ -3061,7 +3061,7 @@ schema: {
         },
         bestModelsQuickPicks: {
           id: 'best-models-quick-picks',
-          title: '🏆 コーディング用最高のローカルLLM（2026年7月クイックピック）',
+          title: '🏆 コーディング用最高のローカルLLM （クイックピック）',
           items: [
             '**最高の全体：** Kimi K2.6（量子化）――58.6 SWE-Bench Pro、MoEアーキテクチャ、Modified MITライセンス。`ollama run kimi-k2.6`',
             '**最新のエージェント型対抗モデル：** Laguna XS 2.1――SWE-bench Verified 70.9%、長時間エージェントコーディング、256Kコンテキスト。`ollama run laguna-xs-2.1`',
@@ -3427,7 +3427,7 @@ schema: {
         },
         bestModelsQuickPicks: {
           id: 'best-models-quick-picks',
-          title: '🏆 最佳本地编码LLM（2026年7月快速推荐）',
+          title: '🏆 最佳本地编码LLM （快速推荐）',
           items: [
             '**最佳整体：** Kimi K2.6（量化版）——58.6 SWE-Bench Pro、MoE架构、修改版MIT许可证。`ollama run kimi-k2.6`',
             '**最新代理编码挑战者：** Laguna XS 2.1——SWE-bench Verified 70.9%，长时程代理编码，256K上下文。`ollama run laguna-xs-2.1`',
@@ -3735,7 +3735,7 @@ schema: {
         },
         bestModelsQuickPicks: {
           id: 'best-models-quick-picks',
-          title: '🏆 코딩용 최고 로컬 LLM (2026년 7월 빠른 선택)',
+          title: '🏆 코딩용 최고 로컬 LLM (빠른 선택)',
           items: [
             '**전체 최고:** Kimi K2.6 (양자화) — SWE-Bench Pro 58.6점, MoE 아키텍처, Modified MIT 라이선스. `ollama run kimi-k2.6`',
             '**최고의 밀집형 모델:** Qwen 3.6 27B — SWE-bench 77.2%, 최고의 비MoE 옵션. `ollama run qwen3.6:27b`',

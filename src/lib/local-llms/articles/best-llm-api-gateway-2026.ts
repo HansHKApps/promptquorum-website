@@ -1003,7 +1003,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@type': 'TechArticle',
       headline: 'LiteLLM vs. OpenRouter vs. Portkey: Bestes LLM-Gateway 2026',
-      description: 'Vergleich von LiteLLM, OpenRouter und Portkey/Prisma AIRS als LLM-API-Gateways: echte Preise, Selbst-Hosting-Optionen, Failover-Kontrolle und die Palo-Alto-Übernahme, die Portkeys Kategorie verändert hat. Geprüft im August 2026.',
+      description: 'Vergleich von LiteLLM, OpenRouter und Portkey/Prisma AIRS als LLM-API-Gateways: echte Preise, Selbst-Hosting-Optionen, Failover-Kontrolle und die Palo-Alto-Übernahme, die Portkeys Kategorie verändert hat.',
       datePublished: '2026-08-27',
       dateModified: '2026-08-27',
       url: 'https://www.promptquorum.com/de/local-llms/best-llm-api-gateway-2026',
@@ -1556,7 +1556,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@type': 'TechArticle',
       headline: 'LiteLLM vs OpenRouter vs Portkey: mejor gateway LLM 2026',
-      description: 'Comparativa de LiteLLM, OpenRouter y Portkey/Prisma AIRS como gateways de API LLM: precios reales, opciones de autoalojamiento, control del failover y la adquisición de Palo Alto que cambió la categoría de Portkey. Verificado en agosto de 2026.',
+      description: 'Comparativa de LiteLLM, OpenRouter y Portkey/Prisma AIRS como gateways de API LLM: precios reales, opciones de autoalojamiento, control del failover y la adquisición de Palo Alto que cambió la categoría de Portkey.',
       datePublished: '2026-08-27',
       dateModified: '2026-08-27',
       url: 'https://www.promptquorum.com/es/local-llms/best-llm-api-gateway-2026',
@@ -2630,7 +2630,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@type': 'TechArticle',
       headline: 'LiteLLM vs OpenRouter vs Portkey: melhor gateway LLM 2026',
-      description: 'Comparativo de LiteLLM, OpenRouter e Portkey/Prisma AIRS como gateways de API LLM: preços reais, opções de auto-hospedagem, controle de failover e a aquisição pela Palo Alto que mudou a categoria do Portkey. Verificado em agosto de 2026.',
+      description: 'Comparativo de LiteLLM, OpenRouter e Portkey/Prisma AIRS como gateways de API LLM: preços reais, opções de auto-hospedagem, controle de failover e a aquisição pela Palo Alto que mudou a categoria do Portkey.',
       datePublished: '2026-08-27',
       dateModified: '2026-08-27',
       url: 'https://www.promptquorum.com/pt/local-llms/best-llm-api-gateway-2026',

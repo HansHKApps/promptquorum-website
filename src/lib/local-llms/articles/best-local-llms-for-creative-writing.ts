@@ -2306,7 +2306,7 @@ schema: {
       title: '2026年最佳创意写作本地LLM：小说、诗歌和长篇内容排名',
       seoTitle: '2026年最佳创意写作本地LLM',
       intro: '2026年最佳创意写作本地LLM是Meta Llama 3.3 70B（最佳散文质量）、Mistral Small 3.1 24B（16GB RAM以下最佳质量）以及Fimbulvetr和Midnight-Rose等社区微调模型（专门针对小说和角色扮演）。创意写作性能并未被标准基准测试准确衡量----需要评估叙事连贯性、文体多样性以及对开放式提示的指令遵循。',
-      metaDescription: '2026年创意写作top 5本地LLM排名。Llama 3.3 70B最佳散文、Mistral 24B 16GB最优、角色扮演微调。按叙事连贯性评分。完全本地、免费beta、2026年4月更新。',
+      metaDescription: '2026年创意写作top 5本地LLM排名。Llama 3.3 70B最佳散文、Mistral 24B 16GB最优、角色扮演微调。按叙事连贯性评分。完全本地、免费beta、。',
       heroImage: '/images/best-local-llms-for-creative-writing-model-comparison-hero-zh.webp',
       publishDate: '2026-04-04',
       dateModified: '2026-08-28',
