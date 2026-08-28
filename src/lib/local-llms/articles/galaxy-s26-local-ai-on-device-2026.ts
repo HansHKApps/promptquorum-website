@@ -5,8 +5,8 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-07-15',
-    last_full_refresh: '2026-06-15',
+    next_refresh_due: '2026-09-29',
+    last_full_refresh: '2026-08-29',
     current_hardware_mentioned: ['Samsung Galaxy S26', 'Samsung Exynos 2600', 'Snapdragon 8 Elite Gen 5'],
     theme: 'Hardware & Performance',
     heroImage: '/images/galaxy-s26-local-ai-on-device-2026-overview-hero-en.webp',
@@ -36,110 +36,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         updatedDate: '2026-06-15'
       },
-      ko: {
-        question: '갤럭시 S26에서 클라우드로 데이터를 보내지 않고 온디바이스로 작동하는 갤럭시 AI 기능은 무엇입니까?',
-        answer: '전화 스크리닝(자동 응답), Now Nudge(문맥 제안), Now Brief(개인 요약), 스캠 탐지는 모두 Personal Data Engine(PDE)을 사용하여 로컬에서 데이터를 처리합니다. 갤럭시 AI 설정에서 "디바이스에서만 데이터 처리"를 활성화하면 지원되는 기능의 클라우드 폴백을 차단할 수 있습니다. 이미지 생성(Creative Studio)은 항상 삼성 클라우드 서버를 사용하므로 네트워크 연결이 필요합니다.',
-        bullets: [
-          '전화 스크리닝은 클라우드 왕복 없이 온디바이스에서 스팸 전화를 필터링합니다',
-          'Now Nudge는 화면 문맥을 로컬에서 읽고 한 번의 탭으로 제안을 표시합니다',
-          '스캠 탐지는 온디바이스 Gemini 모델을 실행하여 실시간으로 사기성 전화를 표시합니다',
-          '"디바이스에서만 데이터 처리" 토글을 활성화하여 지원되는 기능의 로컬 처리를 강제합니다',
-          'Creative Studio 이미지 생성은 클라우드만 지원(삼성 계정 + 네트워크 필요)',
-          'Exynos 2600은 Exynos 2500보다 Stable Diffusion에서 2.4배 더 빠릅니다'
-        ],
-        updatedDate: '2026-06-15'
-      },
-      de: {
-        question: 'Welche Galaxy-AI-Funktionen des S26 laufen lokal auf dem Gerät, ohne Daten in die Cloud zu senden?',
-        answer: 'Anruffilterung (beantwortet Anrufe lokal), Now Nudge (Kontextvorschläge), Now Brief (persönliche Zusammenfassungen) und Betrugserkennung verarbeiten alle Daten lokal mithilfe der Personal Data Engine (PDE). Sie können "Daten nur auf dem Gerät verarbeiten" in den Galaxy-AI-Einstellungen aktivieren, um Cloudfall-backs für unterstützte Funktionen zu blockieren. Bildgenerierung (Creative Studio) ist ausschließlich Cloud-gebunden und benötigt Samsung-Konto und Netzwerkverbindung.',
-        bullets: [
-          'Anruffilterung transkribiert und leitet Spamrufe lokal ohne Cloud-Roundtrip weiter',
-          'Now Nudge liest Bildschirmkontext lokal und zeigt One-Tap-Vorschläge',
-          'Betrugserkennung führt lokales Gemini-Modell aus, um betrügerische Anrufe in Echtzeit zu kennzeichnen',
-          'Aktivieren Sie den Schalter "Daten nur auf dem Gerät verarbeiten", um lokale Verarbeitung zu erzwingen',
-          'Creative Studio Bildgenerierung ist nur Cloud (erfordert Samsung-Konto + Netzwerk)',
-          'Exynos 2600 ist 2,4x schneller bei Stable Diffusion als Exynos 2500'
-        ],
-        updatedDate: '2026-06-15'
-      },
-      fr: {
-        question: 'Quelles fonctionnalités Galaxy AI du S26 s\'exécutent en local sur l\'appareil sans envoyer les données vers le cloud ?',
-        answer: 'Le filtrage des appels (répond aux appels localement), Now Nudge (suggestions contextuelles), Now Brief (résumés personnels) et la détection des escroqueries traitent tous les données localement à l\'aide du moteur de données personnelles (PDE). Vous pouvez activer "Traiter les données uniquement sur l\'appareil" dans les paramètres Galaxy AI pour bloquer les retours au cloud pour les fonctionnalités prises en charge. La génération d\'images (Creative Studio) dépend entièrement du cloud et nécessite un compte Samsung et une connexion réseau.',
-        bullets: [
-          'Le filtrage des appels transcrit et achemine les appels indésirables en local sans aller-retour cloud',
-          'Now Nudge lit le contexte de l\'écran localement et affiche les suggestions en un clic',
-          'La détection des escroqueries exécute un modèle Gemini local pour signaler les appels frauduleux en temps réel',
-          'Activez le bouton "Traiter les données uniquement sur l\'appareil" pour forcer le traitement local',
-          'La génération d\'images Creative Studio ne fonctionne que sur le cloud (nécessite un compte Samsung + réseau)',
-          'L\'Exynos 2600 est 2,4 fois plus rapide pour Stable Diffusion que l\'Exynos 2500'
-        ],
-        updatedDate: '2026-06-15'
-      },
-      es: {
-        question: '¿Qué características de Galaxy AI en el S26 se ejecutan localmente en el dispositivo sin enviar datos a la nube?',
-        answer: 'El filtrado de llamadas (responde llamadas localmente), Now Nudge (sugerencias contextuales), Now Brief (resúmenes personales) y la detección de fraudes procesan datos localmente usando el Motor de Datos Personales (PDE). Puede habilitar "Procesar datos solo en el dispositivo" en la configuración de Galaxy AI para bloquear las alternativas en la nube para funciones compatibles. La generación de imágenes (Creative Studio) depende completamente de la nube y requiere una cuenta de Samsung y conexión de red.',
-        bullets: [
-          'El filtrado de llamadas transcribe y enruta llamadas spam localmente sin viajes de ida y vuelta a la nube',
-          'Now Nudge lee el contexto de la pantalla localmente y muestra sugerencias táctiles rápidas',
-          'La detección de fraudes ejecuta un modelo Gemini local para marcar llamadas fraudulentas en tiempo real',
-          'Habilite el botón "Procesar datos solo en el dispositivo" para forzar el procesamiento local',
-          'La generación de imágenes de Creative Studio es solo en la nube (requiere cuenta de Samsung + red)',
-          'El Exynos 2600 es 2,4 veces más rápido en Stable Diffusion que el Exynos 2500'
-        ],
-        updatedDate: '2026-06-15'
-      },
-      ja: {
-        question: 'Galaxy S26でクラウドにデータを送信せずにオンデバイスで実行されるGalaxy AI機能は何ですか?',
-        answer: '通話フィルタリング(通話をローカルで応答)、Now Nudge(コンテキスト提案)、Now Brief(個人用ダイジェスト)、詐欺検出はすべてPersonal Data Engine(PDE)を使用してローカルでデータを処理します。Galaxy AI設定で「デバイスのみでデータを処理」を有効にすると、サポートされている機能のクラウドフォールバックをブロックできます。画像生成(Creative Studio)はクラウドのみに依存し、Samsungアカウントとネットワーク接続が必要です。',
-        bullets: [
-          '通話フィルタリングはクラウドのラウンドトリップなしにローカルでスパム通話をフィルタリングします',
-          'Now Nudgeは画面コンテキストをローカルで読み取り、ワンタップ提案を表示します',
-          '詐欺検出はローカルGeminiモデルを実行して、詐欺電話をリアルタイムでフラグを立てます',
-          '"デバイスのみでデータを処理"トグルを有効にして、ローカル処理を強制します',
-          'Creative Studioの画像生成はクラウドのみ(Samsungアカウント+ネットワークが必要)',
-          'Exynos 2600はStable DiffusionでExynos 2500の2.4倍高速です'
-        ],
-        updatedDate: '2026-06-15'
-      },
-      zh: {
-        question: '在Galaxy S26上，哪些Galaxy AI功能在本地设备上运行，而无需将数据发送到云端?',
-        answer: '通话过滤(本地应答通话)、Now Nudge(上下文建议)、Now Brief(个人摘要)和欺诈检测都使用个人数据引擎(PDE)在本地处理数据。您可以在Galaxy AI设置中启用"仅在设备上处理数据"来阻止支持的功能的云回退。图像生成(Creative Studio)完全依赖云，需要三星帐户和网络连接。',
-        bullets: [
-          '通话过滤在本地转录和路由垃圾电话，无需往返云端',
-          'Now Nudge在本地读取屏幕上下文，并显示一键建议',
-          '欺诈检测运行本地Gemini模型，实时标记欺诈电话',
-          '启用"仅在设备上处理数据"开关以强制本地处理',
-          'Creative Studio图像生成仅限云(需要三星帐户+网络)',
-          'Exynos 2600在Stable Diffusion上比Exynos 2500快2.4倍'
-        ],
-        updatedDate: '2026-06-15'
-      },
-      pt: {
-        question: 'Quais recursos do Galaxy AI do S26 são executados localmente no dispositivo sem enviar dados para a nuvem?',
-        answer: 'Filtragem de chamadas (responde chamadas localmente), Now Nudge (sugestões contextuais), Now Brief (resumos pessoais) e detecção de fraudes processam dados localmente usando o mecanismo de dados pessoais (PDE). Você pode ativar "Processar dados apenas no dispositivo" nas configurações do Galaxy AI para bloquear fallbacks na nuvem para recursos compatíveis. A geração de imagens (Creative Studio) depende totalmente da nuvem e requer uma conta Samsung e conexão de rede.',
-        bullets: [
-          'A filtragem de chamadas transcreve e roteia chamadas de spam localmente sem ida e volta na nuvem',
-          'Now Nudge lê o contexto da tela localmente e exibe sugestões com um toque',
-          'A detecção de fraudes executa um modelo Gemini local para sinalizar chamadas fraudulentas em tempo real',
-          'Ative o botão "Processar dados apenas no dispositivo" para forçar processamento local',
-          'A geração de imagens do Creative Studio é apenas na nuvem (requer conta Samsung + rede)',
-          'O Exynos 2600 é 2,4 vezes mais rápido em Stable Diffusion do que o Exynos 2500'
-        ],
-        updatedDate: '2026-06-15'
-      },
-      ar: {
-        question: 'ما هي ميزات Galaxy AI على Galaxy S26 التي تعمل محليًا على الجهاز دون إرسال البيانات إلى السحابة؟',
-        answer: 'تصفية المكالمات (الرد على المكالمات محليًا)، Now Nudge (اقتراحات السياق)، Now Brief (الملخصات الشخصية)، واكتشاف الاحتيال تعالج جميع البيانات محليًا باستخدام محرك البيانات الشخصية (PDE). يمكنك تفعيل "معالجة البيانات على الجهاز فقط" في إعدادات Galaxy AI لحظر بدائل السحابة للميزات المدعومة. توليد الصور (Creative Studio) يعتمد بالكامل على السحابة ويتطلب حساب Samsung واتصال شبكة.',
-        bullets: [
-          'تصفية المكالمات تنسخ وتعيد توجيه المكالمات غير المرغوبة محليًا دون عودة إلى السحابة',
-          'Now Nudge يقرأ سياق الشاشة محليًا ويعرض الاقتراحات برقة واحدة',
-          'اكتشاف الاحتيال يعمل نموذج Gemini محلي لتحديد المكالمات الاحتيالية في الوقت الفعلي',
-          'فعّل زر "معالجة البيانات على الجهاز فقط" لفرض المعالجة المحلية',
-          'توليد صور Creative Studio محصور في السحابة (يتطلب حساب Samsung + شبكة)',
-          'Exynos 2600 أسرع 2.4 مرة في Stable Diffusion من Exynos 2500'
-        ],
-        updatedDate: '2026-06-15'
-      }
     },
     toc: [
       { label: 'Key Takeaways', anchor: '#key-takeaways' },
@@ -455,12 +351,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: '2026년 2월 25일 출시된 갤럭시 S26은 삼성의 하이브리드 온디바이스·클라우드 AI 플랫폼인 Galaxy AI를 탑재합니다. 애플의 온디바이스 우선 방식과 달리 삼성은 로컬 처리와 클라우드 기능의 균형을 맞추고, 데이터 처리 위치를 사용자가 선택하도록 합니다. 이 가이드는 Galaxy AI가 실제로 온디바이스에서 어떻게 작동하는지, 어떤 기능이 클라우드가 필요한지, S26 하드웨어에서 자신의 오픈웨이트 LLM을 실행하는 방법을 설명합니다.',
     metaDescription: '갤럭시 S26 온디바이스 AI 설명: Galaxy AI 기능 중 온디바이스에서 작동하는 기능, 클라우드가 필요한 기능, Exynos 2600/Snapdragon 8 Elite Gen 5에서 Ollama 또는 MLC Chat을 실행하는 방법',
     publishDate: '2026-06-15',
-    dateModified: '2026-06-15',
+    dateModified: '2026-08-29',
     readTime: '10분 읽기',
     educationalLevel: 'Intermediate',
     audience: '온디바이스 AI에 관심 있는 안드로이드 사용자, 갤럭시 S26 구매자, 모바일 LLM 추론을 탐색하는 개발자',
     primaryTerm: '갤럭시 S26 온디바이스 AI',
     leadAnswerBlock: '**갤럭시 S26은 Galaxy AI를 탑재합니다. 온디바이스 처리(통화 스크리닝, Now Nudge, 스캠 탐지)와 클라우드 기능(Creative Studio 이미지 생성, Gemini 통합)을 혼합합니다. 개인 데이터 엔진(PDE)이 기반입니다. 프라이버시 토글: "디바이스에서만 데이터 처리"를 활성화하면 모든 클라우드 폴백을 제한합니다. Exynos 2600(2nm GAA, Exynos 2500 대비 +113% AI)은 온디바이스 추론에서 Snapdragon 8 Elite Gen 5보다 훨씬 빠릅니다. 자신의 LLM을 실행하려면: Q4 양자화 7B 모델이 LPDDR5X 85.6 GB/s에서 ~24 tokens/sec에 도달합니다.**',
+    quickAnswerTop: {
+      ko: {
+        question: '갤럭시 S26에서 클라우드로 데이터를 보내지 않고 온디바이스로 작동하는 갤럭시 AI 기능은 무엇입니까?',
+        answer: '전화 스크리닝(자동 응답), Now Nudge(문맥 제안), Now Brief(개인 요약), 스캠 탐지는 모두 Personal Data Engine(PDE)을 사용하여 로컬에서 데이터를 처리합니다. 갤럭시 AI 설정에서 "디바이스에서만 데이터 처리"를 활성화하면 지원되는 기능의 클라우드 폴백을 차단할 수 있습니다. 이미지 생성(Creative Studio)은 항상 삼성 클라우드 서버를 사용하므로 네트워크 연결이 필요합니다.',
+        bullets: [
+          '전화 스크리닝은 클라우드 왕복 없이 온디바이스에서 스팸 전화를 필터링합니다',
+          'Now Nudge는 화면 문맥을 로컬에서 읽고 한 번의 탭으로 제안을 표시합니다',
+          '스캠 탐지는 온디바이스 Gemini 모델을 실행하여 실시간으로 사기성 전화를 표시합니다',
+          '"디바이스에서만 데이터 처리" 토글을 활성화하여 지원되는 기능의 로컬 처리를 강제합니다',
+          'Creative Studio 이미지 생성은 클라우드만 지원(삼성 계정 + 네트워크 필요)',
+          'Exynos 2600은 Exynos 2500보다 Stable Diffusion에서 2.4배 더 빠릅니다'
+        ],
+        updatedDate: '2026-06-15'
+      },
+    },
     toc: [
       { label: '핵심 내용', anchor: '#key-takeaways' },
       { label: 'Galaxy AI란 무엇인가?', anchor: '#what-is-galaxy-ai' },
@@ -766,12 +677,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'Das Galaxy S26, das am 25. Februar 2026 eingeführt wurde, bringt Samsungs Hybrid-Plattform für lokale und Cloud-KI — Galaxy AI — in Ihre Tasche. Im Gegensatz zu Apples Ansatz mit lokaler KI konzentriert sich Samsung auf den Ausgleich zwischen lokaler Verarbeitung und Cloud-Funktionen, sodass Sie entscheiden können, wo Ihre Daten verarbeitet werden. Dieser Leitfaden erklärt, was Galaxy AI tatsächlich lokal auf dem Gerät tut, welche Funktionen Cloud benötigen, und wie Sie Ihre eigenen Open-Weight-LLMs auf der S26-Hardware ausführen.',
     metaDescription: 'Galaxy S26 Lokale KI erklärt: Welche Galaxy AI-Funktionen lokal laufen, welche Cloud benötigen, und wie Sie Ollama oder MLC Chat auf Exynos 2600/Snapdragon 8 Elite Gen 5 ausführen.',
     publishDate: '2026-06-15',
-    dateModified: '2026-06-15',
+    dateModified: '2026-08-29',
     readTime: '10 Min Lesezeit',
     educationalLevel: 'Intermediate',
     audience: 'Android-Nutzer interessiert an lokaler KI, Galaxy S26 Käufer, Entwickler die mobile LLM Inferenz erkunden',
     primaryTerm: 'Galaxy S26 lokale KI',
     leadAnswerBlock: '**Galaxy S26 betreibt Galaxy AI — eine Hybrid-Plattform, die lokale Verarbeitung(Anruffilterung, Now Nudge, Betrugserkennung) mit Cloud-Funktionen(Creative Studio Bildgenerierung, Gemini-Integration) mischt. Sie steuern das Datenschutz-Toggle: "Daten nur auf dem Gerät verarbeiten" beschränkt alles auf lokale Verarbeitung. Der Exynos 2600 (2nm GAA, +113% KI vs S25) ist deutlich schneller für lokale Inferenz als Snapdragon 8 Elite Gen 5, was das globale S26/S26+ zur besseren Wahl für lokale KI macht. Für Ihre eigenen LLMs: quantisierte 7B-Modelle bei Q4 (4-Bit) erreichen ~24 tokens/sec auf LPDDR5X 85,6 GB/s.**',
+    quickAnswerTop: {
+      de: {
+        question: 'Welche Galaxy-AI-Funktionen des S26 laufen lokal auf dem Gerät, ohne Daten in die Cloud zu senden?',
+        answer: 'Anruffilterung (beantwortet Anrufe lokal), Now Nudge (Kontextvorschläge), Now Brief (persönliche Zusammenfassungen) und Betrugserkennung verarbeiten alle Daten lokal mithilfe der Personal Data Engine (PDE). Sie können "Daten nur auf dem Gerät verarbeiten" in den Galaxy-AI-Einstellungen aktivieren, um Cloudfall-backs für unterstützte Funktionen zu blockieren. Bildgenerierung (Creative Studio) ist ausschließlich Cloud-gebunden und benötigt Samsung-Konto und Netzwerkverbindung.',
+        bullets: [
+          'Anruffilterung transkribiert und leitet Spamrufe lokal ohne Cloud-Roundtrip weiter',
+          'Now Nudge liest Bildschirmkontext lokal und zeigt One-Tap-Vorschläge',
+          'Betrugserkennung führt lokales Gemini-Modell aus, um betrügerische Anrufe in Echtzeit zu kennzeichnen',
+          'Aktivieren Sie den Schalter "Daten nur auf dem Gerät verarbeiten", um lokale Verarbeitung zu erzwingen',
+          'Creative Studio Bildgenerierung ist nur Cloud (erfordert Samsung-Konto + Netzwerk)',
+          'Exynos 2600 ist 2,4x schneller bei Stable Diffusion als Exynos 2500'
+        ],
+        updatedDate: '2026-06-15'
+      },
+    },
     toc: [
       { label: 'Wichtige Punkte', anchor: '#key-takeaways' },
       { label: 'Was ist Galaxy AI auf dem Galaxy S26?', anchor: '#what-is-galaxy-ai' },
@@ -1078,12 +1004,27 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'Le Galaxy S26, lancé le 25 février 2026, apporte la plateforme IA hybride locale et cloud de Samsung — Galaxy AI — dans votre poche. Contrairement à l\'approche locale d\'Apple, Samsung équilibre le traitement local avec les fonctionnalités cloud, vous laissant choisir où vos données sont traitées. Ce guide explique ce que Galaxy AI fait réellement sur l\'appareil, quelles fonctionnalités nécessitent le cloud, et comment exécuter vos propres LLM open-weight sur le matériel S26.',
     metaDescription: 'Galaxy S26 IA locale expliquée: quelles fonctionnalités Galaxy AI s\'exécutent localement, lesquelles nécessitent le cloud, et comment exécuter Ollama ou MLC Chat sur Exynos 2600/Snapdragon 8 Elite Gen 5.',
     publishDate: '2026-06-15',
-    dateModified: '2026-06-15',
+    dateModified: '2026-08-29',
     readTime: '10 min de lecture',
     educationalLevel: 'Intermediate',
     audience: 'Utilisateurs Android intéressés par l\'IA locale, acheteurs Galaxy S26, développeurs explorant l\'inférence LLM mobile',
     primaryTerm: 'Galaxy S26 IA locale',
     leadAnswerBlock: '**Le Galaxy S26 exécute Galaxy AI — une plateforme hybride mélangeant traitement local (filtrage d\'appels, Now Nudge, détection de fraude) avec des fonctionnalités cloud (génération d\'images Creative Studio, intégration Gemini). Vous contrôlez le toggle de confidentialité: "Traiter les données uniquement sur l\'appareil" limite tout au traitement local. L\'Exynos 2600 (2nm GAA, +113% IA vs S25) est beaucoup plus rapide pour l\'inférence locale que le Snapdragon 8 Elite Gen 5, ce qui rend le S26/S26+ global le meilleur choix pour l\'IA locale. Pour vos propres LLM: les modèles 7B quantifiés à Q4 (4-bit) atteignent ~24 tokens/sec sur LPDDR5X 85,6 GB/s.**',
+    quickAnswerTop: {
+      fr: {
+        question: 'Quelles fonctionnalités Galaxy AI du S26 s\'exécutent en local sur l\'appareil sans envoyer les données vers le cloud ?',
+        answer: 'Le filtrage des appels (répond aux appels localement), Now Nudge (suggestions contextuelles), Now Brief (résumés personnels) et la détection des escroqueries traitent tous les données localement à l\'aide du moteur de données personnelles (PDE). Vous pouvez activer "Traiter les données uniquement sur l\'appareil" dans les paramètres Galaxy AI pour bloquer les retours au cloud pour les fonctionnalités prises en charge. La génération d\'images (Creative Studio) dépend entièrement du cloud et nécessite un compte Samsung et une connexion réseau.',
+        bullets: [
+          'Le filtrage des appels transcrit et achemine les appels indésirables en local sans aller-retour cloud',
+          'Now Nudge lit le contexte de l\'écran localement et affiche les suggestions en un clic',
+          'La détection des escroqueries exécute un modèle Gemini local pour signaler les appels frauduleux en temps réel',
+          'Activez le bouton "Traiter les données uniquement sur l\'appareil" pour forcer le traitement local',
+          'La génération d\'images Creative Studio ne fonctionne que sur le cloud (nécessite un compte Samsung + réseau)',
+          'L\'Exynos 2600 est 2,4 fois plus rapide pour Stable Diffusion que l\'Exynos 2500'
+        ],
+        updatedDate: '2026-06-15'
+      },
+    },
     toc: [
       { label: 'Points Clés', anchor: '#key-takeaways' },
       { label: 'Qu\'est-ce que Galaxy AI sur le Galaxy S26?', anchor: '#what-is-galaxy-ai' },
@@ -1376,8 +1317,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-07-15',
-    last_full_refresh: '2026-06-15',
+    next_refresh_due: '2026-09-29',
+    last_full_refresh: '2026-08-29',
     theme: 'Hardware & Performance',
     heroImage: '/images/galaxy-s26-local-ai-on-device-2026-overview-hero-es.webp',
     title: 'Ejecutar IA Local en Galaxy S26: IA en Dispositivo Explicada (2026)',
@@ -1423,8 +1364,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ja: {
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-07-15',
-    last_full_refresh: '2026-06-15',
+    next_refresh_due: '2026-09-29',
+    last_full_refresh: '2026-08-29',
     theme: 'Hardware & Performance',
     heroImage: '/images/galaxy-s26-local-ai-on-device-2026-overview-hero-ja.webp',
     title: 'Galaxy S26 でのローカル AI 実行: オンデバイス AI を完全解説 (2026)',
@@ -1470,8 +1411,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-07-15',
-    last_full_refresh: '2026-06-15',
+    next_refresh_due: '2026-09-29',
+    last_full_refresh: '2026-08-29',
     theme: 'Hardware & Performance',
     heroImage: '/images/galaxy-s26-local-ai-on-device-2026-overview-hero-zh.webp',
     title: '在Galaxy S26上运行本地AI: 本地设备AI解析指南 (2026)',
@@ -1517,8 +1458,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-07-15',
-    last_full_refresh: '2026-06-15',
+    next_refresh_due: '2026-09-29',
+    last_full_refresh: '2026-08-29',
     theme: 'Hardware & Performance',
     heroImage: '/images/galaxy-s26-local-ai-on-device-2026-overview-hero-pt.webp',
     title: 'Executar IA Local no Galaxy S26: IA no Dispositivo Explicada (2026)',
@@ -1564,8 +1505,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   ar: {
     freshness_tier: 'monthly',
-    next_refresh_due: '2026-07-15',
-    last_full_refresh: '2026-06-15',
+    next_refresh_due: '2026-09-29',
+    last_full_refresh: '2026-08-29',
     theme: 'Hardware & Performance',
     heroImage: '/images/galaxy-s26-local-ai-on-device-2026-overview-hero-ar.webp',
     title: 'تشغيل الذكاء الاصطناعي المحلي على ⁨Galaxy S26⁩: شرح الذكاء الاصطناعي على الجهاز (⁨2026⁩)',
