@@ -185,4 +185,5 @@ export const LLM_SLUG_TO_KEY: Record<string, string> = {
   'best-ai-agent-framework-2026':                 'best-ai-agent-framework-2026',
   'best-llm-evaluation-tools-2026':               'best-llm-evaluation-tools-2026',
   'best-llm-observability-tools-2026':            'best-llm-observability-tools-2026',
+  'best-vector-database-2026':                    'best-vector-database-2026',
 }
