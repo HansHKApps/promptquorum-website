@@ -16,21 +16,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       current_models_mentioned: ['Laguna XS 2.1', 'Kimi K2.7 Code', 'Qwen3.8-27B', 'qwen3:30b', 'qwen3-coder:30b', 'Kimi K2.6', 'gpt-oss:20b', 'gpt-oss:120b', 'DeepSeek-R1', 'Gemma 4', 'GLM-5.3', 'Llama 4 Scout', 'Devstral Small 24B', 'Dolphin 3.0', 'Mistral Small', 'Phi-4 Mini'],
       current_benchmarks_used: ['SWE-bench', 'SWE-bench Verified', 'SWE-Bench Pro', 'SWE-bench Multilingual', 'LiveCodeBench', 'HumanEval', 'MATH'],
       theme: 'Best Models',
-      title: 'Ollama July 2026 Update: v0.32.0 + Best Models by Use Case',
+      title: 'Ollama Latest Version 2026: v0.33.1 + Best Models by Use Case',
       dateModified: '2026-08-28',
-      seoTitle: 'Ollama July 2026: v0.32.0 Update + Best Models by Use Case',
-      intro: 'The current Ollama version is v0.32.0 (July 11, 2026), adding an interactive "Chat, Code & Work" agent experience. The newest models added since June are Laguna XS 2.1 (Poolside, agentic coding) and Kimi K2.7 Code (Moonshot AI). Best overall on consumer hardware is still Qwen3.8-27B (61.7% SWE-bench, fits 24 GB at Q4); best for coding depends on your setup — see the use-case breakdown below.',
-      metaDescription: 'Ollama v0.32.0 (July 11 2026): current version, newest models, and the best Ollama model for chat, coding, RAG, vision, and reasoning. Benchmarks + pull commands.',
+      seoTitle: 'Ollama Latest Version 2026: v0.33.1 + 10 Best Models',
+      intro: 'The current Ollama version is v0.33.1 (August 26, 2026), which adds MLX Qwen3.8 Flash Next support, structured output, and GPU timeout fixes for slow storage. The v0.33 series also brought Claude Desktop gateway support and roughly halved time-to-first-token. Best overall on consumer hardware is still Qwen3.8-27B (61.7% SWE-bench, fits 24 GB at Q4); best for coding depends on your setup — see the use-case breakdown below.',
+      metaDescription: "Ollama's latest version is v0.33.1. See the full v0.32-v0.33 changelog, new models added in 2026, and which model is best for chat, coding and vision.",
       heroImage: '/images/top-open-source-models-ollama-use-case-picks-hero-en.webp',
       publishDate: '2026-04-04',
-      leadAnswerBlock: '**The current Ollama version is v0.32.0 (July 11, 2026). The newest models added since June are Laguna XS 2.1 (Poolside, 33B/3B active MoE, agentic coding) and Kimi K2.7 Code (Moonshot AI, coding-focused, built on K2.6). Best overall on consumer hardware is Qwen3.8-27B (61.7% SWE-bench, fits 24 GB at Q4). Other top picks: Kimi K2.6 or Laguna XS 2.1 (frontier/agentic coding), gpt-oss:20b (best small / 16 GB), qwen3:30b (balanced all-round), DeepSeek-R1 (reasoning), Gemma 4 (vision/tool calling, now ~90% faster on Apple Silicon), Dolphin 3.0 (uncensored general-purpose), and Llama 4 Scout (long-context 10M / multimodal). Most downloaded overall remains the Llama family.**',
+      leadAnswerBlock: '**The current Ollama version is v0.33.1 (August 26, 2026); v0.33.2 is available as a release candidate. The newest models added recently are Laguna XS 2.1 (Poolside, 33B/3B active MoE, agentic coding) and Kimi K2.7 Code (Moonshot AI, coding-focused, built on K2.6). Best overall on consumer hardware is Qwen3.8-27B (61.7% SWE-bench, fits 24 GB at Q4). Other top picks: Kimi K2.6 or Laguna XS 2.1 (frontier/agentic coding), gpt-oss:20b (best small / 16 GB), qwen3:30b (balanced all-round), DeepSeek-R1 (reasoning), Gemma 4 (vision/tool calling, now ~90% faster on Apple Silicon), Dolphin 3.0 (uncensored general-purpose), and Llama 4 Scout (long-context 10M / multimodal). Most downloaded overall remains the Llama family.**',
       quickAnswerTop: {
         en: {
-          question: 'What is the latest Ollama version and the best models in July 2026?',
-          answer: 'The latest Ollama version is v0.32.0 (July 11, 2026). The newest models added since June are Laguna XS 2.1 (Poolside, agentic coding) and Kimi K2.7 Code (Moonshot AI). The best open source Ollama models in July 2026 are Qwen3.8-27B (best overall on consumer hardware, 24 GB Q4), Kimi K2.6 or Laguna XS 2.1 (best coding, frontier/agentic), gpt-oss:20b (best small / 16 GB, adjustable reasoning), qwen3:30b (balanced all-round), Llama 4 Scout (best long-context 10M / multimodal), Dolphin 3.0 (best uncensored general-purpose), and DeepSeek-R1 (best reasoning). Install any with: ollama pull <model-name>',
+          question: 'What is the latest Ollama version and the best models in 2026?',
+          answer: 'The latest Ollama version is v0.33.1 (August 26, 2026), with v0.33.2 in release-candidate stage. The newest models added recently are Laguna XS 2.1 (Poolside, agentic coding) and Kimi K2.7 Code (Moonshot AI). The best open source Ollama models in 2026 are Qwen3.8-27B (best overall on consumer hardware, 24 GB Q4), Kimi K2.6 or Laguna XS 2.1 (best coding, frontier/agentic), gpt-oss:20b (best small / 16 GB, adjustable reasoning), qwen3:30b (balanced all-round), Llama 4 Scout (best long-context 10M / multimodal), Dolphin 3.0 (best uncensored general-purpose), and DeepSeek-R1 (best reasoning). Install any with: ollama pull <model-name>',
           bullets: [
-            '→Latest version: Ollama v0.32.0 (July 11, 2026) — interactive "Chat, Code & Work" agent experience, flash attention on older NVIDIA GPUs',
-            '→Newest since June: Laguna XS 2.1 (Poolside, 33B/3B active MoE, agentic coding), Kimi K2.7 Code (Moonshot AI, coding-focused)',
+            '→Latest version: Ollama v0.33.1 (August 26, 2026) — MLX Qwen3.8 Flash Next, structured output, GPU timeout fixes. v0.33.2 is a release candidate',
+            '→v0.33 series highlights: Claude Desktop gateway support (v0.33.0), desktop onboarding and ~2x faster model loading (v0.32.15), Qwen 3.8 27B support (v0.32.12)',
             '→Qwen3.8-27B — best overall on consumer hardware, 61.7% SWE-bench, fits 24 GB at Q4',
             '→Kimi K2.6 — frontier coding (SWE-Bench Pro 58.6), MoE (32B active/1T total), Modified MIT. Laguna XS 2.1 — agentic coding alternative (SWE-bench Verified 70.9%), OpenMDW-1.1',
             '→gpt-oss:20b — best small model, runs in 16 GB, ~o3-mini level, adjustable reasoning',
@@ -39,7 +39,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '→Dolphin 3.0 — best uncensored general-purpose model, built on Llama 3.1',
             '→DeepSeek-R1 — best reasoning/math; gpt-oss:20b for adjustable reasoning (DeepSeek has since released DeepSeek-V4 — Flash/Pro — as a newer open-weight generation; R1/V3 remain valid to run locally.)',
           ],
-          updatedDate: '2026-07-14',
+          updatedDate: '2026-08-28',
         },
         de: {
           question: 'Was sind die besten Open-Source-Modelle fuer Ollama im Juni 2026?',
@@ -102,7 +102,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { label: 'Key Takeaways', anchor: '#key-takeaways' },
         { label: 'Most Popular Models on Ollama', anchor: '#most-popular-models-on-ollama' },
         { label: 'Top Models by Use Case', anchor: '#top-models-by-category' },
-        { label: 'New in July 2026', anchor: '#new-july-2026' },
+        { label: 'Newest Models Added', anchor: '#new-july-2026' },
         { label: 'What Is DeepSeek-R1?', anchor: '#deepseek-r1' },
         { label: 'Vision Models on Ollama', anchor: '#vision-models' },
         { label: 'Full Top 10 Comparison Table', anchor: '#full-top-10-comparison' },
@@ -118,7 +118,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'key-takeaways',
           isTldr: true,
           snippetBlocks: [
-            { type: 'one-sentence', text: 'The best Ollama model in July 2026 is Qwen3.8-27B (61.7% SWE-bench, fits 24 GB at Q4); best for coding is Kimi K2.6 or Laguna XS 2.1.' },
+            { type: 'one-sentence', text: 'The best Ollama model in 2026 is Qwen3.8-27B (61.7% SWE-bench, fits 24 GB at Q4); best for coding is Kimi K2.6 or Laguna XS 2.1.' },
             { type: 'plain-terms', text: 'Ollama is a free tool that lets you run AI models on your own computer — no internet or API key needed. These are the top models you can download with a single command, organized by what you actually need them for.' },
           ],
           items: [
@@ -132,11 +132,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         whatsNew: {
           id: 'whats-new-ollama-july-2026',
-          title: 'What Is New in Ollama in July 2026?',
+          title: 'What Is the Latest Ollama Version and What Changed?',
           content: [
-            '**Current Ollama version: v0.32.0** (released July 11, 2026). This is the latest stable release, available via ollama.com/download. Update with `curl https://ollama.ai/install.sh | sh` (macOS: `brew upgrade ollama`), then confirm with `ollama --version`.',
-            '**What changed in the v0.31–v0.32 series (late June–July 2026):** v0.30.11 (June 25) added auto-install for Claude Code and opencode and fixed Windows hybrid-GPU classification. v0.30.12 (June 29) fixed tool-call detection in JSON strings. v0.31.1 (June 30) shipped a new MLX batch-matmul kernel that makes Gemma 4 generate tokens nearly 90% faster on Apple Silicon via multi-token prediction. v0.31.2 (July 6) enabled flash attention on older NVIDIA GPUs and fixed structured output for thinking models. v0.32.0 (July 11) introduced an interactive "Chat, Code & Work" agent experience and renamed the Codex App integration to ChatGPT. Full notes: github.com/ollama/ollama/releases.',
-            '**Newest models added since the last refresh (late June–July 2026):**',
+            '**Current Ollama version: v0.33.1** (released August 26, 2026). This is the latest stable release, available via ollama.com/download. A v0.33.2 release candidate landed August 27 but is not yet marked stable. Update with `curl https://ollama.ai/install.sh | sh` (macOS: `brew upgrade ollama`), then confirm with `ollama --version`.',
+            '**What changed in the v0.32–v0.33 series (July–August 2026):** v0.32.0 (July 11) introduced an interactive "Chat, Code & Work" agent experience and renamed the Codex App integration to ChatGPT. v0.32.12 (August 14) added Qwen 3.8 27B support with an MLX-optimised variant for Apple Silicon. v0.32.13 (August 14) added developer-instructions support for qwen3.8. v0.32.14 (August 15) shipped WebP transcoding for llama-server renderers and better handling of non-leading system messages. v0.32.15 (August 19) added a new desktop onboarding flow and roughly halved time-to-first-token through faster model loading. v0.33.0 (August 21) enabled Claude Desktop as a third-party gateway provider and made KV-cache prefill restore points far more reliable, so a cancelled long prefill can resume instead of reprocessing from scratch. v0.33.1 (August 26) added MLX Qwen3.8 Flash Next support, structured output, and GPU timeout fixes for slow storage. Full notes: github.com/ollama/ollama/releases.',
+            '**Newest models in the library (2026):**',
           ],
           items: [
             '**Laguna XS 2.1** (Poolside, July 2, 2026) — 33B total / 3B active MoE built for agentic coding and long-horizon local work: plan, write code, run tests, iterate. 256K context, OpenMDW-1.1 license. SWE-bench Verified 70.9%, SWE-bench Multilingual 63.1%. Pull: `ollama pull laguna-xs-2.1`',
@@ -148,14 +148,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**gpt-oss** (OpenAI, 2026) — Open-weight MoE: gpt-oss:20b (21B total / 3.6B active, runs in 16 GB, ~o3-mini level, adjustable reasoning) and gpt-oss:120b (80 GB). Pull: `ollama pull gpt-oss:20b`',
             '**Gemma 4** (Google, April 2, 2026) — Multimodal sizes E2B / E4B / E12B (26B MoE) / E27B (31B dense), all with vision and tool calling. Now ~90% faster on Apple Silicon (July 2026 MLX update). E4B runs in ~6 GB VRAM. Pull: `ollama pull gemma4:e4b`',
           ],
-          codeBlock: '# Update Ollama to the latest version (v0.32.0)\ncurl https://ollama.ai/install.sh | sh\n\n# Or on Mac: brew upgrade ollama\n\n# Check your current version\nollama --version  # outputs: ollama version 0.32.0\n\n# Pull the newest July 2026 models\nollama pull laguna-xs-2.1\nollama pull kimi-k2.7-code\nollama pull kimi-k2.6',
+          codeBlock: '# Update Ollama to the latest version (v0.33.1)\ncurl https://ollama.ai/install.sh | sh\n\n# Or on Mac: brew upgrade ollama\n\n# Check your current version\nollama --version  # outputs: ollama version 0.33.1\n\n# Pull the newest 2026 models\nollama pull laguna-xs-2.1\nollama pull kimi-k2.7-code\nollama pull kimi-k2.6',
           codeLanguage: 'bash',
         },
         mostPopular: {
           id: 'most-popular-models-on-ollama',
           title: 'Which Models Are Most Popular on Ollama in 2026?',
           content: [
-            '**Popularity on Ollama is measured by download counts visible on each model\'s library page.** As of July 2026, the top downloaded models are still dominated by Meta\'s Llama family -- Llama 3.2 3B is the most pulled model overall, largely due to its use as a first-install test model. However, Llama 4 Scout has climbed rapidly since its April 2026 release.',
+            '**Popularity on Ollama is measured by download counts visible on each model\'s library page.** As of August 2026, the top downloaded models are still dominated by Meta\'s Llama family -- Llama 3.2 3B is the most pulled model overall, largely due to its use as a first-install test model. However, Llama 4 Scout has climbed rapidly since its April 2026 release.',
             'Qwen3 is the fastest-growing model family in the Ollama library, with Qwen3 and the new Qwen3.8 dense variant quickly displacing Qwen2.5. DeepSeek-R1 saw major spikes following its release and remains highly downloaded for reasoning tasks. Dolphin 3.0 (Cognitive Computations, built on Llama 3.1) remains the most-pulled uncensored general-purpose model for users who want an unfiltered local assistant.',
             'Meta released **Llama 4** in April 2026 with Scout (17B active, 109B total, MoE) and Maverick (17B active, 400B total) variants. Llama 4 Scout is now stable in the Ollama library (`ollama pull llama4:scout`). The Llama 4 family uses Mixture-of-Experts (MoE) architecture — Scout needs ~55 GB VRAM at Q4 (it fits 24 GB only at 1.78-bit, ~20 tok/s).',
             'Scout\'s standout features are its 10M-token context window and multimodal input, not consumer-hardware fit. For lightweight setups (8 GB RAM), Llama 3.2 3B remains the easiest first model.',
@@ -201,8 +201,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         newApril2026: {
           id: 'new-july-2026',
-          title: 'Which Models Were Added to Ollama in July 2026?',
-          content: 'These are the newest models in the Ollama library as of July 2026, newest first. Confirm availability with `ollama pull <model>` before building workflows — new models appear at ollama.com/library within days of release.',
+          title: 'Which Models Were Added to Ollama Most Recently?',
+          content: 'These are the newest models in the Ollama library as of August 2026, newest first. Confirm availability with `ollama pull <model>` before building workflows — new models appear at ollama.com/library within days of release.',
           rows: [
             { 'Model': '[laguna-xs-2.1](https://ollama.com/library/laguna-xs-2.1)', 'Released': 'July 2, 2026', 'Best For': 'Poolside — agentic coding, 33B/3B active MoE, SWE-bench Verified 70.9%, 256K context', 'Ollama Command': 'ollama run laguna-xs-2.1' },
             { 'Model': 'kimi-k2.7-code', 'Released': 'June 2026', 'Best For': 'Moonshot AI — coding-focused agentic model built on Kimi K2.6', 'Ollama Command': 'ollama run kimi-k2.7-code' },
@@ -233,7 +233,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         visionModels: {
           id: 'vision-models',
           title: 'Which Ollama Models Support Image Input?',
-          content: 'As of July 2026, these models on Ollama support image input (multimodal): Gemma 4 supports both vision AND tool calling — unique among vision models on Ollama, and now runs nearly 90% faster on Apple Silicon after the July MLX update.',
+          content: 'As of August 2026, these models on Ollama support image input (multimodal): Gemma 4 supports both vision AND tool calling — unique among vision models on Ollama, and now runs nearly 90% faster on Apple Silicon after the July MLX update.',
           rows: [
             { 'Model': '[llama3.2-vision:11b](https://ollama.com/library/llama3.3)', 'RAM': '~8 GB', 'Image Support': 'Yes', 'Ollama Command': 'ollama run llama3.2-vision:11b' },
             { 'Model': '[llama3.2-vision:90b](https://ollama.com/library/llama3.3)', 'RAM': '~55 GB', 'Image Support': 'Yes', 'Ollama Command': 'ollama run llama3.2-vision:90b' },
@@ -248,7 +248,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         fullTop10: {
           id: 'full-top-10-comparison',
           title: 'What Are the Top 10 Open Source Models on Ollama?',
-          content: 'Download counts still favor Llama 3.x due to tutorial prevalence. For new projects in July 2026, prefer Qwen3.8-27B (best overall on consumer hardware), Kimi K2.6 or Laguna XS 2.1 (coding), gpt-oss:20b, and qwen3:30b.',
+          content: 'Download counts still favor Llama 3.x due to tutorial prevalence. For new projects in 2026, prefer Qwen3.8-27B (best overall on consumer hardware), Kimi K2.6 or Laguna XS 2.1 (coding), gpt-oss:20b, and qwen3:30b.',
           rows: [
             { '#': '1', 'Model': '[Qwen3.8-27B](https://ollama.com/library/qwen3)', 'Best For': 'Best overall on consumer hardware', 'RAM': '24 GB (Q4)', 'HumanEval': '61.7% SWE-bench' },
             { '#': '2', 'Model': '[Kimi K2.6](https://huggingface.co/moonshotai)', 'Best For': 'Frontier coding, MoE (32B/1T), Modified MIT', 'RAM': 'Quantized', 'HumanEval': '58.6 SWE-Bench Pro' },
@@ -263,7 +263,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           columns: ['#', 'Model', 'Best For', 'RAM', 'HumanEval'],
           image: '/images/top-open-source-models-ollama-top-models-hero-en.webp',
-          imageCaption: 'Top Ollama models July 2026: Qwen3.8-27B (best overall, 24 GB Q4), Kimi K2.6, Laguna XS 2.1 (agentic coding), gpt-oss:20b. Llama 4 Scout for 10M-token context (~55 GB).',
+          imageCaption: 'Top Ollama models 2026: Qwen3.8-27B (best overall, 24 GB Q4), Kimi K2.6, Laguna XS 2.1 (agentic coding), gpt-oss:20b. Llama 4 Scout for 10M-token context (~55 GB).',
         },
         howToBrowse: {
           id: 'how-to-browse-ollama-library',
@@ -363,7 +363,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'How often does the Ollama library get updated with new models?',
-              a: 'The Ollama team adds new models within days to weeks of major releases. Laguna XS 2.1 (July 2, 2026), Kimi K2.7 Code, Kimi K2.6 and Qwen3.8 all appeared within days of their releases. The current Ollama version is v0.32.0 (July 11, 2026). Follow the Ollama GitHub repository (github.com/ollama/ollama) or the Ollama Twitter/X account for new model announcements.',
+              a: 'The Ollama team adds new models within days to weeks of major releases. Laguna XS 2.1 (July 2, 2026), Kimi K2.7 Code, Kimi K2.6 and Qwen3.8 all appeared within days of their releases. The current Ollama version is v0.33.1 (August 26, 2026). Follow the Ollama GitHub repository (github.com/ollama/ollama) or the Ollama Twitter/X account for new model announcements.',
             },
             {
               q: 'What is the difference between `ollama pull` and `ollama run`?',
@@ -382,8 +382,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               a: 'Most are, but not all. Llama 3.x (Meta Llama Community Licence) restricts commercial use above 700M monthly active users. Mistral Small, Qwen3, and Gemma models use Apache 2.0 (fully commercial-friendly). Always verify the licence before enterprise deployment -- check the model\'s Hugging Face page or Ollama library entry.',
             },
             {
-              q: 'What are the best new Ollama models in July 2026?',
-              a: 'The latest additions are Laguna XS 2.1 (Poolside, OpenMDW-1.1 -- agentic long-horizon coding, SWE-bench Verified 70.9%, 33B/3B active MoE) and Kimi K2.7 Code (Moonshot AI -- coding-focused agentic model built on Kimi K2.6). Both join the established July lineup: Kimi K2.6 (Modified MIT, frontier MoE coding, SWE-Bench Pro 58.6), Qwen3.8-27B (best overall on consumer hardware, 61.7% SWE-bench), GLM-5.3 (744B/40B active MoE, MIT, SWE-Bench Pro 58.4), and gpt-oss:20b (best small / 16 GB, ~o3-mini). Pull commands: ollama run laguna-xs-2.1, ollama run kimi-k2.7-code, ollama run qwen3.8:27b, ollama run kimi-k2.6.',
+              q: 'What is the latest version of Ollama?',
+              a: 'The latest stable Ollama version is v0.33.1, released August 26, 2026. A v0.33.2 release candidate followed on August 27 but is not yet marked stable. Download it from ollama.com/download, or update in place with `curl https://ollama.ai/install.sh | sh` on Linux and `brew upgrade ollama` on macOS.',
+            },
+            {
+              q: 'Where can I find the Ollama changelog and release notes?',
+              a: 'Full release notes for every version live at github.com/ollama/ollama/releases, which lists each tag with its date and changelog. The most recent entries are v0.33.1 (August 26, 2026 -- MLX Qwen3.8 Flash Next, structured output, GPU timeout fixes), v0.33.0 (August 21 -- Claude Desktop gateway support, KV-cache prefill restore points), and v0.32.15 (August 19 -- desktop onboarding, roughly 2x faster model loading).',
+            },
+            {
+              q: 'How do I check which Ollama version I have installed?',
+              a: 'Run `ollama --version` in your terminal. It prints a line such as `ollama version 0.33.1`. If the number is lower than the current release, update with `curl https://ollama.ai/install.sh | sh` (Linux) or `brew upgrade ollama` (macOS), then run `ollama --version` again to confirm.',
+            },
+            {
+              q: 'What are the newest Ollama models in 2026?',
+              a: 'The latest additions are Laguna XS 2.1 (Poolside, OpenMDW-1.1 -- agentic long-horizon coding, SWE-bench Verified 70.9%, 33B/3B active MoE) and Kimi K2.7 Code (Moonshot AI -- coding-focused agentic model built on Kimi K2.6). Both join the established 2026 lineup: Kimi K2.6 (Modified MIT, frontier MoE coding, SWE-Bench Pro 58.6), Qwen3.8-27B (best overall on consumer hardware, 61.7% SWE-bench), GLM-5.3 (744B/40B active MoE, MIT, SWE-Bench Pro 58.4), and gpt-oss:20b (best small / 16 GB, ~o3-mini). Pull commands: ollama run laguna-xs-2.1, ollama run kimi-k2.7-code, ollama run qwen3.8:27b, ollama run kimi-k2.6.',
             },
             {
               q: 'Which Ollama models work best for Russian-language tasks?',
@@ -403,15 +415,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '[Ollama. (2026). "Ollama Model Library." ollama.com/library](https://ollama.com/library) -- Official model library, download counts, tags, and quantization options.',
             '[Google DeepMind. (2026). "Gemma 4 Technical Report."](https://ai.google.dev/) -- Vision + tool calling capabilities released April 2026.',
             '[Poolside. (2026). "Introducing Laguna XS 2.1." poolside.ai](https://poolside.ai/blog/introducing-laguna-xs-2-1) -- 33B/3B active MoE agentic coding model, SWE-bench Verified 70.9%, OpenMDW-1.1 license.',
-            '[Ollama. (2026). "Ollama Releases." github.com/ollama/ollama/releases](https://github.com/ollama/ollama/releases) -- Official release notes, v0.32.0 (July 11, 2026).',
+            '[Ollama. (2026). "Ollama Releases." github.com/ollama/ollama/releases](https://github.com/ollama/ollama/releases) -- Official release notes, v0.33.1 (August 26, 2026).',
           ],
         },
       },
 schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'headline': 'Best Open-Source Ollama Models July 2026: Top Models Ranked',
-        'description': 'Looking for new Ollama models? See the latest July 2026 releases, what is new, and which models are worth using for chat, coding, and reasoning.',
+        'headline': 'Ollama Latest Version 2026: v0.33.1 + Best Models by Use Case',
+        'description': 'Looking for the latest Ollama version and models? See v0.33.1, the full changelog, what is new, and which models are worth using for chat, coding, and reasoning.',
         'url': 'https://www.promptquorum.com/local-llms/top-open-source-models-ollama',
         'datePublished': '2026-04-04',
         'dateModified': '2026-08-28',
@@ -420,7 +432,7 @@ schema: {
         'audience': { '@type': 'Audience', 'audienceType': 'Beginners running their first local LLM on consumer hardware' },
         'about': [
           { '@type': 'Thing', 'name': 'Best Ollama models 2026' },
-          { '@type': 'Thing', 'name': 'Ollama model list July 2026' },
+          { '@type': 'Thing', 'name': 'Ollama model list 2026' },
           { '@type': 'Thing', 'name': 'DeepSeek-R1 Ollama' },
           { '@type': 'Thing', 'name': 'Gemma 4 Ollama' },
           { '@type': 'Thing', 'name': 'Qwen3.8 / Qwen3-Coder Ollama' },
@@ -433,7 +445,7 @@ schema: {
       itemListSchema: {
         '@context': 'https://schema.org',
         '@type': 'ItemList',
-        'name': 'Top Open Source Models on Ollama -- July 2026',
+        'name': 'Top Open Source Models on Ollama -- 2026',
         'description': 'The most downloaded and highest-performing open source models available via Ollama',
         'numberOfItems': 12,
         'itemListElement': [
@@ -516,7 +528,7 @@ schema: {
             'name': 'How often does the Ollama library get updated with new models?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'The Ollama team adds new models within days to weeks of major releases. Laguna XS 2.1 (July 2, 2026), Kimi K2.7 Code, Kimi K2.6 and Qwen3.8 all appeared within days of their releases. The current Ollama version is v0.32.0 (July 11, 2026). Follow the Ollama GitHub repository (github.com/ollama/ollama) or the Ollama Twitter/X account for new model announcements.',
+              'text': 'The Ollama team adds new models within days to weeks of major releases. Laguna XS 2.1 (July 2, 2026), Kimi K2.7 Code, Kimi K2.6 and Qwen3.8 all appeared within days of their releases. The current Ollama version is v0.33.1 (August 26, 2026). Follow the Ollama GitHub repository (github.com/ollama/ollama) or the Ollama Twitter/X account for new model announcements.',
             }
           },
           {
@@ -553,10 +565,34 @@ schema: {
           },
           {
             '@type': 'Question',
-            'name': 'What are the best new Ollama models in July 2026?',
+            'name': 'What is the latest version of Ollama?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'The latest additions are Laguna XS 2.1 (Poolside, OpenMDW-1.1 -- agentic long-horizon coding, SWE-bench Verified 70.9%, 33B/3B active MoE) and Kimi K2.7 Code (Moonshot AI -- coding-focused agentic model built on Kimi K2.6). Both join the established July lineup: Kimi K2.6 (Modified MIT, frontier MoE coding, SWE-Bench Pro 58.6), Qwen3.8-27B (best overall on consumer hardware, 61.7% SWE-bench), GLM-5.3 (744B/40B active MoE, MIT, SWE-Bench Pro 58.4), and gpt-oss:20b (best small / 16 GB, ~o3-mini). Pull commands: ollama run laguna-xs-2.1, ollama run kimi-k2.7-code, ollama run qwen3.8:27b, ollama run kimi-k2.6.',
+              'text': 'The latest stable Ollama version is v0.33.1, released August 26, 2026. A v0.33.2 release candidate followed on August 27 but is not yet marked stable. Download it from ollama.com/download, or update in place with `curl https://ollama.ai/install.sh | sh` on Linux and `brew upgrade ollama` on macOS.',
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Where can I find the Ollama changelog and release notes?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Full release notes for every version live at github.com/ollama/ollama/releases, which lists each tag with its date and changelog. The most recent entries are v0.33.1 (August 26, 2026 -- MLX Qwen3.8 Flash Next, structured output, GPU timeout fixes), v0.33.0 (August 21 -- Claude Desktop gateway support, KV-cache prefill restore points), and v0.32.15 (August 19 -- desktop onboarding, roughly 2x faster model loading).',
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'How do I check which Ollama version I have installed?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Run `ollama --version` in your terminal. It prints a line such as `ollama version 0.33.1`. If the number is lower than the current release, update with `curl https://ollama.ai/install.sh | sh` (Linux) or `brew upgrade ollama` (macOS), then run `ollama --version` again to confirm.',
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'What are the newest Ollama models in 2026?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'The latest additions are Laguna XS 2.1 (Poolside, OpenMDW-1.1 -- agentic long-horizon coding, SWE-bench Verified 70.9%, 33B/3B active MoE) and Kimi K2.7 Code (Moonshot AI -- coding-focused agentic model built on Kimi K2.6). Both join the established 2026 lineup: Kimi K2.6 (Modified MIT, frontier MoE coding, SWE-Bench Pro 58.6), Qwen3.8-27B (best overall on consumer hardware, 61.7% SWE-bench), GLM-5.3 (744B/40B active MoE, MIT, SWE-Bench Pro 58.4), and gpt-oss:20b (best small / 16 GB, ~o3-mini). Pull commands: ollama run laguna-xs-2.1, ollama run kimi-k2.7-code, ollama run qwen3.8:27b, ollama run kimi-k2.6.',
             }
           },
           {
@@ -570,18 +606,18 @@ schema: {
         ]
       },
       gammaEmbedUrl: '/presentations/top-open-source-models-ollama-static.html',
-      gammaDescription: 'The slide deck below covers: top Ollama models by download count, performance comparison (60-77% HumanEval/SWE-bench), best models by use case (chat, coding, agentic coding, reasoning, vision), DeepSeek-R1 chain-of-thought reasoning, and exact pull commands. Note: slides reflect the June 2026 refresh; the July 2026 update above (Ollama v0.32.0, Laguna XS 2.1, Kimi K2.7 Code) is not yet reflected in the deck. Download the PDF as your Ollama model selection reference card.',
+      gammaDescription: 'The slide deck below covers: top Ollama models by download count, performance comparison (60-77% HumanEval/SWE-bench), best models by use case (chat, coding, agentic coding, reasoning, vision), DeepSeek-R1 chain-of-thought reasoning, and exact pull commands. Note: slides reflect an earlier refresh; the current update above (Ollama v0.33.1, Laguna XS 2.1, Kimi K2.7 Code) is not yet reflected in the deck. Download the PDF as your Ollama model selection reference card.',
     },
     es: {
       freshness_tier: 'monthly',
       theme: 'Best Models',
-      title: 'Ollama Actualización Julio 2026: v0.32.0 + Top 10 Modelos Open Source',
-      seoTitle: 'Ollama Julio 2026 Actualización: v0.32.0 + Top 10 Modelos Clasificados',
-      intro:'Actualizado en julio de 2026. La versión actual de Ollama es v0.32.0 (lanzada el 11 de julio de 2026), que añade la experiencia interactiva de agente "Chat, Code & Work". Los modelos más nuevos de la biblioteca desde junio son Laguna XS 2.1 (Poolside, 2 de julio, programación agéntica de largo alcance) y Kimi K2.7 Code (Moonshot AI), que se suman a Kimi K2.6, Qwen3.8, GLM-5.3, gpt-oss y Gemma 4. Los más descargados en general siguen siendo la familia Llama (Llama 4 Scout, Llama 3.x); el mejor general en hardware de consumo sigue siendo Qwen3.8-27B (61,7% SWE-bench).',
-      metaDescription: 'Ollama v0.32.0 (11 julio 2026): novedades, nuevos modelos, top 10 open source clasificados — Qwen3.8-27B, Kimi K2.6, Laguna XS 2.1. Benchmarks + comandos pull.',
+      title: 'Ollama Última Versión 2026: v0.33.1 + Top 10 Modelos Open Source',
+      seoTitle: 'Ollama Última Versión 2026: v0.33.1 + Top 10 Modelos',
+      intro:'Actualizado en agosto de 2026. La versión actual de Ollama es v0.33.1 (lanzada el 26 de agosto de 2026), que añade soporte MLX para Qwen3.8 Flash Next, salida estructurada y correcciones de timeout de GPU. La serie v0.33 también trajo soporte de gateway para Claude Desktop. Los modelos más nuevos de la biblioteca son Laguna XS 2.1 (Poolside, 2 de julio, programación agéntica de largo alcance) y Kimi K2.7 Code (Moonshot AI), que se suman a Kimi K2.6, Qwen3.8, GLM-5.3, gpt-oss y Gemma 4. Los más descargados en general siguen siendo la familia Llama (Llama 4 Scout, Llama 3.x); el mejor general en hardware de consumo sigue siendo Qwen3.8-27B (61,7% SWE-bench).',
+      metaDescription: 'La última versión de Ollama es v0.33.1. Changelog completo v0.32-v0.33, nuevos modelos de 2026 y cuál elegir para chat, programación y visión.',
       heroImage: '/images/top-open-source-models-ollama-use-case-picks-hero-es.webp',
       publishDate: '2026-04-04',
-      leadAnswerBlock: '**La versión actual de Ollama es v0.32.0 (11 de julio de 2026). Los modelos más nuevos añadidos desde junio son Laguna XS 2.1 (Poolside, 33B/3B activos MoE, programación agéntica) y Kimi K2.7 Code (Moonshot AI, enfocado en programación, basado en K2.6). El mejor modelo general en hardware de consumo es Qwen3.8-27B (61,7% SWE-bench, cabe en 24 GB con Q4). Otras opciones destacadas: Kimi K2.6 o Laguna XS 2.1 (programación de frontera/agéntica), gpt-oss:20b (mejor pequeño / 16 GB), qwen3:30b (equilibrado), DeepSeek-R1 (razonamiento), Gemma 4 (visión/tool calling, ahora ~90% más rápido en Apple Silicon), Dolphin 3.0 (uso general sin censura) y Llama 4 Scout (contexto largo 10M / multimodal). Los más descargados en general siguen siendo la familia Llama.**',
+      leadAnswerBlock: '**La versión actual de Ollama es v0.33.1 (26 de agosto de 2026); v0.33.2 está disponible como candidata a versión. Los modelos más nuevos añadidos son Laguna XS 2.1 (Poolside, 33B/3B activos MoE, programación agéntica) y Kimi K2.7 Code (Moonshot AI, enfocado en programación, basado en K2.6). El mejor modelo general en hardware de consumo es Qwen3.8-27B (61,7% SWE-bench, cabe en 24 GB con Q4). Otras opciones destacadas: Kimi K2.6 o Laguna XS 2.1 (programación de frontera/agéntica), gpt-oss:20b (mejor pequeño / 16 GB), qwen3:30b (equilibrado), DeepSeek-R1 (razonamiento), Gemma 4 (visión/tool calling, ahora ~90% más rápido en Apple Silicon), Dolphin 3.0 (uso general sin censura) y Llama 4 Scout (contexto largo 10M / multimodal). Los más descargados en general siguen siendo la familia Llama.**',
       quickAnswerTop: {
         en: {
           question: 'What are the best open source models for Ollama in June 2026?',
@@ -657,7 +693,7 @@ schema: {
         { label: 'Puntos clave', anchor: '#key-takeaways' },
         { label: 'Modelos más populares en Ollama', anchor: '#most-popular-models-on-ollama' },
         { label: 'Mejores modelos por caso de uso', anchor: '#top-models-by-category' },
-        { label: 'Novedades de julio de 2026', anchor: '#new-july-2026' },
+        { label: 'Modelos añadidos recientemente', anchor: '#new-july-2026' },
         { label: '¿Qué es DeepSeek-R1?', anchor: '#deepseek-r1' },
         { label: 'Modelos de visión en Ollama', anchor: '#vision-models' },
         { label: 'Tabla comparativa Top 10 completa', anchor: '#full-top-10-comparison' },
@@ -687,11 +723,11 @@ schema: {
         },
         whatsNew: {
           id: 'whats-new-ollama-july-2026',
-          title: 'Novedades en Ollama — Actualización de julio de 2026',
+          title: '¿Cuál es la última versión de Ollama y qué ha cambiado?',
           content: [
-            '**Versión actual de Ollama: v0.32.0** (lanzada el 11 de julio de 2026). Es la última versión estable, disponible en ollama.com/download. Actualiza con `curl https://ollama.ai/install.sh | sh` (macOS: `brew upgrade ollama`) y confirma con `ollama --version`.',
-            '**Qué cambió en la serie v0.31–v0.32 (finales de junio–julio de 2026):** v0.30.11 (25 de junio) añadió instalación automática para Claude Code y opencode, y corrigió la clasificación de GPU híbrida en Windows. v0.30.12 (29 de junio) corrigió la detección de llamadas a herramientas en cadenas JSON. v0.31.1 (30 de junio) incorporó un nuevo kernel MLX de multiplicación de matrices por lotes que hace que Gemma 4 genere tokens casi un 90% más rápido en Apple Silicon mediante predicción multi-token. v0.31.2 (6 de julio) habilitó flash attention en GPU NVIDIA más antiguas y corrigió la salida estructurada para modelos de razonamiento. v0.32.0 (11 de julio) introdujo una experiencia interactiva de agente "Chat, Code & Work" y renombró la integración Codex App a ChatGPT. Notas completas: github.com/ollama/ollama/releases.',
-            '**Modelos más nuevos añadidos desde la última actualización (finales de junio–julio de 2026):**',
+            '**Versión actual de Ollama: v0.33.1** (lanzada el 26 de agosto de 2026). Es la última versión estable, disponible en ollama.com/download. El 27 de agosto apareció una candidata v0.33.2, todavía no marcada como estable. Actualiza con `curl https://ollama.ai/install.sh | sh` (macOS: `brew upgrade ollama`) y confirma con `ollama --version`.',
+            '**Qué cambió en la serie v0.32–v0.33 (julio–agosto de 2026):** v0.32.0 (11 de julio) introdujo una experiencia interactiva de agente "Chat, Code & Work" y renombró la integración Codex App a ChatGPT. v0.32.12 (14 de agosto) añadió soporte para Qwen 3.8 27B con una variante optimizada en MLX para Apple Silicon. v0.32.13 (14 de agosto) añadió soporte de instrucciones de desarrollador para qwen3.8. v0.32.14 (15 de agosto) incorporó transcodificación WebP para los renderizadores de llama-server. v0.32.15 (19 de agosto) añadió un nuevo flujo de bienvenida en el escritorio y redujo casi a la mitad el tiempo hasta el primer token gracias a una carga de modelos más rápida. v0.33.0 (21 de agosto) habilitó Claude Desktop como gateway de terceros y volvió mucho más fiables los puntos de restauración de la caché KV, de modo que un prefill largo cancelado puede reanudarse en lugar de reprocesarse. v0.33.1 (26 de agosto) añadió soporte MLX para Qwen3.8 Flash Next, salida estructurada y correcciones de timeout de GPU en almacenamiento lento. Notas completas: github.com/ollama/ollama/releases.',
+            '**Modelos más nuevos de la biblioteca (2026):**',
           ],
           items: [
             '**Laguna XS 2.1** (Poolside, 2 de julio de 2026) — 33B total / 3B activos MoE diseñado para programación agéntica y trabajo local de largo alcance: planifica, escribe código, ejecuta pruebas, itera. Contexto de 256K, licencia OpenMDW-1.1. SWE-bench Verified 70,9%, SWE-bench Multilingual 63,1%. Descarga: `ollama pull laguna-xs-2.1`',
@@ -703,7 +739,7 @@ schema: {
             '**gpt-oss** (OpenAI, 2026) — MoE de pesos abiertos: gpt-oss:20b (21B total / 3,6B activos, se ejecuta en 16 GB, ~nivel o3-mini, razonamiento ajustable) y gpt-oss:120b (80 GB). Descarga: `ollama pull gpt-oss:20b`',
             '**Gemma 4** (Google, 2 de abril de 2026) — Tamaños multimodales E2B / E4B / E12B (26B MoE) / E27B (31B denso), todos con visión y tool calling. Ahora ~90% más rápido en Apple Silicon (actualización MLX de julio de 2026). E4B se ejecuta en ~6 GB de VRAM. Descarga: `ollama pull gemma4:e4b`',
           ],
-          codeBlock: '# Update Ollama to the latest version (v0.32.0)\ncurl https://ollama.ai/install.sh | sh\n\n# Or on Mac: brew upgrade ollama\n\n# Check your current version\nollama --version  # outputs: ollama version 0.32.0\n\n# Pull the newest July 2026 models\nollama pull laguna-xs-2.1\nollama pull kimi-k2.7-code\nollama pull kimi-k2.6',
+          codeBlock: '# Update Ollama to the latest version (v0.33.1)\ncurl https://ollama.ai/install.sh | sh\n\n# Or on Mac: brew upgrade ollama\n\n# Check your current version\nollama --version  # outputs: ollama version 0.33.1\n\n# Pull the newest 2026 models\nollama pull laguna-xs-2.1\nollama pull kimi-k2.7-code\nollama pull kimi-k2.6',
           codeLanguage: 'bash',
         },
         mostPopular: {
@@ -748,7 +784,7 @@ schema: {
         },
         newApril2026: {
           id: 'new-july-2026',
-          title: 'Nuevos modelos Ollama — Lanzamientos de julio de 2026',
+          title: '¿Qué modelos se añadieron a Ollama más recientemente?',
           content: 'Estos son los modelos más nuevos de la biblioteca de Ollama en julio de 2026, del más reciente al más antiguo. Confirma la disponibilidad con `ollama pull <modelo>` antes de construir flujos de trabajo — los nuevos modelos aparecen en ollama.com/library a los pocos días de su lanzamiento.',
           rows: [
             { 'Modelo': '[laguna-xs-2.1](https://ollama.com/library/laguna-xs-2.1)', 'Lanzamiento': '2 de julio de 2026', 'Mejor para': 'Poolside — programación agéntica, 33B/3B activos MoE, SWE-bench Verified 70,9%, contexto 256K', 'Comando Ollama': 'ollama run laguna-xs-2.1' },
@@ -909,8 +945,20 @@ schema: {
               a: '`nomic-embed-text` es la opción estándar -- un modelo de 137M de parámetros que genera embeddings de 768 dimensiones, se ejecuta en milisegundos por documento y está específicamente diseñado para tareas de recuperación. Descárgalo con `ollama pull nomic-embed-text`. Úsalo con el RAG integrado de Open WebUI, OllamaEmbeddings de LangChain o LlamaIndex.',
             },
             {
+              q: '¿Cuál es la última versión de Ollama?',
+              a: 'La última versión estable de Ollama es la v0.33.1, publicada el 26 de agosto de 2026. El 27 de agosto apareció una candidata v0.33.2 que todavía no está marcada como estable. Descárgala en ollama.com/download o actualiza con `curl https://ollama.ai/install.sh | sh` en Linux y `brew upgrade ollama` en macOS.',
+            },
+            {
+              q: '¿Dónde puedo ver el changelog y las notas de versión de Ollama?',
+              a: 'Las notas de cada versión están en github.com/ollama/ollama/releases, con la fecha y el changelog de cada tag. Las entradas más recientes son v0.33.1 (26 de agosto de 2026 -- MLX Qwen3.8 Flash Next, salida estructurada, correcciones de timeout de GPU), v0.33.0 (21 de agosto -- gateway de Claude Desktop, puntos de restauración de la caché KV) y v0.32.15 (19 de agosto -- nuevo onboarding de escritorio, carga de modelos ~2x más rápida).',
+            },
+            {
+              q: '¿Cómo compruebo qué versión de Ollama tengo instalada?',
+              a: 'Ejecuta `ollama --version` en la terminal. Devuelve una línea como `ollama version 0.33.1`. Si el número es inferior al de la versión actual, actualiza con `curl https://ollama.ai/install.sh | sh` (Linux) o `brew upgrade ollama` (macOS) y vuelve a ejecutar `ollama --version` para confirmarlo.',
+            },
+            {
               q: '¿Con qué frecuencia se actualiza la biblioteca de Ollama con nuevos modelos?',
-              a: 'El equipo de Ollama añade nuevos modelos en días o semanas tras los lanzamientos principales. Laguna XS 2.1 (2 de julio de 2026), Kimi K2.7 Code, Kimi K2.6 y Qwen3.8 aparecieron a los pocos días de sus lanzamientos. La versión actual de Ollama es v0.32.0 (11 de julio de 2026). Sigue el repositorio GitHub de Ollama (github.com/ollama/ollama) o la cuenta de Twitter/X de Ollama para anuncios de nuevos modelos.',
+              a: 'El equipo de Ollama añade nuevos modelos en días o semanas tras los lanzamientos principales. Laguna XS 2.1 (2 de julio de 2026), Kimi K2.7 Code, Kimi K2.6 y Qwen3.8 aparecieron a los pocos días de sus lanzamientos. La versión actual de Ollama es v0.33.1 (11 de julio de 2026). Sigue el repositorio GitHub de Ollama (github.com/ollama/ollama) o la cuenta de Twitter/X de Ollama para anuncios de nuevos modelos.',
             },
             {
               q: '¿Cuál es la diferencia entre `ollama pull` y `ollama run`?',
@@ -951,8 +999,8 @@ schema: {
       schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'headline': 'Nuevos modelos Ollama julio de 2026: Últimos lanzamientos y actualizaciones',
-        'description': '¿Buscas nuevos modelos de Ollama? Consulta los últimos lanzamientos de julio de 2026, qué hay de nuevo y qué modelos vale la pena usar para chat, programación y razonamiento.',
+        'headline': 'Ollama última versión 2026: v0.33.1 + mejores modelos por caso de uso',
+        'description': '¿Buscas la última versión de Ollama y sus modelos? Consulta v0.33.1, el changelog completo, qué hay de nuevo y qué modelos vale la pena usar para chat, programación y razonamiento.',
         'url': 'https://www.promptquorum.com/es/local-llms/top-open-source-models-ollama',
         'datePublished': '2026-04-04',
         'dateModified': '2026-08-28',
@@ -1051,10 +1099,34 @@ schema: {
           },
           {
             '@type': 'Question',
+            'name': '¿Cuál es la última versión de Ollama?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'La última versión estable de Ollama es la v0.33.1, publicada el 26 de agosto de 2026. El 27 de agosto apareció una candidata v0.33.2 que todavía no está marcada como estable. Descárgala en ollama.com/download o actualiza con `curl https://ollama.ai/install.sh | sh` en Linux y `brew upgrade ollama` en macOS.',
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Dónde puedo ver el changelog y las notas de versión de Ollama?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Las notas de cada versión están en github.com/ollama/ollama/releases, con la fecha y el changelog de cada tag. Las entradas más recientes son v0.33.1 (26 de agosto de 2026 -- MLX Qwen3.8 Flash Next, salida estructurada, correcciones de timeout de GPU), v0.33.0 (21 de agosto -- gateway de Claude Desktop, puntos de restauración de la caché KV) y v0.32.15 (19 de agosto -- nuevo onboarding de escritorio, carga de modelos ~2x más rápida).',
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cómo compruebo qué versión de Ollama tengo instalada?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ejecuta `ollama --version` en la terminal. Devuelve una línea como `ollama version 0.33.1`. Si el número es inferior al de la versión actual, actualiza con `curl https://ollama.ai/install.sh | sh` (Linux) o `brew upgrade ollama` (macOS) y vuelve a ejecutar `ollama --version` para confirmarlo.',
+            }
+          },
+          {
+            '@type': 'Question',
             'name': '¿Con qué frecuencia se actualiza la biblioteca de Ollama con nuevos modelos?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'El equipo de Ollama añade nuevos modelos en días o semanas tras los lanzamientos principales. Laguna XS 2.1 (2 de julio de 2026), Kimi K2.7 Code, Kimi K2.6 y Qwen3.8 aparecieron a los pocos días de sus lanzamientos. La versión actual de Ollama es v0.32.0 (11 de julio de 2026). Sigue el repositorio GitHub de Ollama (github.com/ollama/ollama) o la cuenta de Twitter/X de Ollama para anuncios de nuevos modelos.',
+              'text': 'El equipo de Ollama añade nuevos modelos en días o semanas tras los lanzamientos principales. Laguna XS 2.1 (2 de julio de 2026), Kimi K2.7 Code, Kimi K2.6 y Qwen3.8 aparecieron a los pocos días de sus lanzamientos. La versión actual de Ollama es v0.33.1 (11 de julio de 2026). Sigue el repositorio GitHub de Ollama (github.com/ollama/ollama) o la cuenta de Twitter/X de Ollama para anuncios de nuevos modelos.',
             }
           },
           {
@@ -1113,19 +1185,19 @@ schema: {
     pt: {
       freshness_tier: 'monthly',
       theme: 'Best Models',
-      title: 'Ollama Atualização Julho 2026: v0.32.0 + Top 10 Modelos Open Source',
-      seoTitle: 'Ollama Julho 2026 Atualização: v0.32.0 + Top 10 Modelos Classificados',
-      intro: 'Atualizado em julho de 2026. A versão atual do Ollama é a v0.32.0 (lançada em 11 de julho de 2026), que amplia o suporte de hardware GGUF por meio do llama.cpp e atualiza o mecanismo MLX para Apple Silicon. Os modelos mais novos na biblioteca este mês são o Laguna XS 2.1 (Poolside, 2 de julho, MoE de 33B total / 3B ativo, programação agentiva de longo horizonte, contexto de 256K, SWE-bench Verified 70,9%, licença OpenMDW-1.1) e o Kimi K2.7 Code (Moonshot AI, ~junho de 2026, modelo agentivo focado em programação construído sobre o Kimi K2.6), somando-se a Kimi K2.6, Qwen3.8, GLM-5.3, gpt-oss e Gemma 4. O mais baixado em geral continua sendo a família Llama (Llama 4 Scout, Llama 3.x); o melhor geral em hardware de consumo é o Qwen3.8-27B (61,7% SWE-bench).',
-      metaDescription: 'Ollama v0.32.0 (11 julho 2026): novidades, novos modelos, top 10 open source classificados — Qwen3.8-27B, Kimi K2.6, gpt-oss:20b. Benchmarks + comandos pull.',
+      title: 'Ollama Versão Mais Recente 2026: v0.33.1 + Top 10 Modelos Open Source',
+      seoTitle: 'Ollama Versão Mais Recente 2026: v0.33.1 + Top 10 Modelos',
+      intro: 'Atualizado em agosto de 2026. A versão atual do Ollama é a v0.33.1 (lançada em 26 de agosto de 2026), que adiciona suporte MLX ao Qwen3.8 Flash Next, saída estruturada e correções de timeout de GPU. A série v0.33 também trouxe suporte de gateway para o Claude Desktop e reduziu quase pela metade o tempo até o primeiro token. Os modelos mais novos na biblioteca são o Laguna XS 2.1 (Poolside, 2 de julho, MoE de 33B total / 3B ativo, programação agentiva de longo horizonte, contexto de 256K, SWE-bench Verified 70,9%, licença OpenMDW-1.1) e o Kimi K2.7 Code (Moonshot AI, ~junho de 2026, modelo agentivo focado em programação construído sobre o Kimi K2.6), somando-se a Kimi K2.6, Qwen3.8, GLM-5.3, gpt-oss e Gemma 4. O mais baixado em geral continua sendo a família Llama (Llama 4 Scout, Llama 3.x); o melhor geral em hardware de consumo é o Qwen3.8-27B (61,7% SWE-bench).',
+      metaDescription: 'A versão mais recente do Ollama é a v0.33.1. Changelog completo v0.32-v0.33, novos modelos de 2026 e qual escolher para chat, programação e visão.',
       heroImage: '/images/top-open-source-models-ollama-use-case-picks-hero-pt.webp',
       publishDate: '2026-04-04',
-      leadAnswerBlock: '**A versão atual do Ollama é a v0.32.0 (11 de julho de 2026). Os modelos mais novos adicionados este mês são o Laguna XS 2.1 (Poolside, MoE de 33B total/3B ativo, programação agentiva, contexto de 256K) e o Kimi K2.7 Code (Moonshot AI, agentivo para programação). O melhor geral em hardware de consumo é o Qwen3.8-27B (61,7% SWE-bench, cabe em 24 GB com Q4). Outras opções destacadas: Kimi K2.6 (programação frontier), gpt-oss:20b (melhor pequeno / 16 GB), qwen3:30b (equilibrado), DeepSeek-R1 (raciocínio), Dolphin 3.0 (melhor sem censura / uso geral), Gemma 4 (visão/tool calling) e Llama 4 Scout (contexto longo 10M / multimodal). O mais baixado em geral continua sendo a família Llama.**',
+      leadAnswerBlock: '**A versão atual do Ollama é a v0.33.1 (26 de agosto de 2026); a v0.33.2 está disponível como candidata a lançamento. Os modelos mais novos adicionados são o Laguna XS 2.1 (Poolside, MoE de 33B total/3B ativo, programação agentiva, contexto de 256K) e o Kimi K2.7 Code (Moonshot AI, agentivo para programação). O melhor geral em hardware de consumo é o Qwen3.8-27B (61,7% SWE-bench, cabe em 24 GB com Q4). Outras opções destacadas: Kimi K2.6 (programação frontier), gpt-oss:20b (melhor pequeno / 16 GB), qwen3:30b (equilibrado), DeepSeek-R1 (raciocínio), Dolphin 3.0 (melhor sem censura / uso geral), Gemma 4 (visão/tool calling) e Llama 4 Scout (contexto longo 10M / multimodal). O mais baixado em geral continua sendo a família Llama.**',
       quickAnswerTop: {
         pt: {
-          question: 'Qual é a versão mais recente do Ollama e os melhores modelos em julho de 2026?', // VERIFY
-          answer: 'A versão mais recente do Ollama é a v0.32.0 (11 de julho de 2026). Os modelos mais novos adicionados este mês são o Laguna XS 2.1 (Poolside) e o Kimi K2.7 Code (Moonshot AI). Os principais modelos de código aberto do Ollama em julho de 2026 são Qwen3.8-27B (melhor geral em hardware de consumo, 24 GB Q4), Kimi K2.6 (melhor programação, MoE frontier), gpt-oss:20b (melhor pequeno / 16 GB, raciocínio ajustável), qwen3:30b (equilibrado), Dolphin 3.0 (melhor sem censura / uso geral), Llama 4 Scout (melhor contexto longo 10M / multimodal) e DeepSeek-R1 (melhor raciocínio). Instale qualquer um com: ollama pull <nome-do-modelo>', // VERIFY
+          question: 'Qual é a versão mais recente do Ollama e os melhores modelos em 2026?',
+          answer: 'A versão mais recente do Ollama é a v0.33.1 (26 de agosto de 2026), com a v0.33.2 em fase de candidata a lançamento. Os modelos mais novos adicionados são o Laguna XS 2.1 (Poolside) e o Kimi K2.7 Code (Moonshot AI). Os principais modelos de código aberto do Ollama em 2026 são Qwen3.8-27B (melhor geral em hardware de consumo, 24 GB Q4), Kimi K2.6 (melhor programação, MoE frontier), gpt-oss:20b (melhor pequeno / 16 GB, raciocínio ajustável), qwen3:30b (equilibrado), Dolphin 3.0 (melhor sem censura / uso geral), Llama 4 Scout (melhor contexto longo 10M / multimodal) e DeepSeek-R1 (melhor raciocínio). Instale qualquer um com: ollama pull <nome-do-modelo>', // VERIFY
           bullets: [
-            '→Versão mais recente: Ollama v0.32.0 (11 de julho de 2026) — suporte de hardware GGUF mais amplo, mecanismo MLX para Apple Silicon atualizado', // VERIFY
+            '→Versão mais recente: Ollama v0.33.1 (26 de agosto de 2026) — MLX Qwen3.8 Flash Next, saída estruturada, correções de timeout de GPU. A v0.33.2 é candidata a lançamento',
             '→Novidades deste mês: Laguna XS 2.1 (programação agentiva, contexto de 256K), Kimi K2.7 Code (agentivo para programação)', // VERIFY
             '→Qwen3.8-27B — melhor geral em hardware de consumo, 61,7% SWE-bench, cabe em 24 GB com Q4', // VERIFY
             '→Kimi K2.6 — programação frontier (SWE-Bench Pro 58.6), MoE (32B ativo/1T total), Modified MIT', // VERIFY
@@ -1177,7 +1249,10 @@ schema: {
           id: 'faq',
           title: 'Perguntas frequentes',
           faqs: [
-            { q: 'Qual é o melhor modelo Ollama em julho de 2026?', a: 'Qwen3.8-27B é o melhor em geral em hardware de consumo (61,7% SWE-bench, cabe em 24 GB com Q4). Para programação frontier: Kimi K2.6. Para modelo pequeno/16 GB: gpt-oss:20b. Para contexto longo: Llama 4 Scout.' },
+            { q: 'Qual é a versão mais recente do Ollama?', a: 'A versão estável mais recente do Ollama é a v0.33.1, lançada em 26 de agosto de 2026. Uma candidata v0.33.2 surgiu em 27 de agosto, mas ainda não foi marcada como estável. Baixe em ollama.com/download ou atualize com `curl https://ollama.ai/install.sh | sh` no Linux e `brew upgrade ollama` no macOS.' },
+            { q: 'Onde encontro o changelog e as notas de versão do Ollama?', a: 'As notas de cada versão ficam em github.com/ollama/ollama/releases, com data e changelog de cada tag. As entradas mais recentes são a v0.33.1 (26 de agosto de 2026 -- MLX Qwen3.8 Flash Next, saída estruturada, correções de timeout de GPU), a v0.33.0 (21 de agosto -- gateway do Claude Desktop, pontos de restauração do cache KV) e a v0.32.15 (19 de agosto -- novo onboarding no desktop, carregamento de modelos ~2x mais rápido).' },
+            { q: 'Como verifico qual versão do Ollama tenho instalada?', a: 'Rode `ollama --version` no terminal. Ele imprime uma linha como `ollama version 0.33.1`. Se o número for menor que o da versão atual, atualize com `curl https://ollama.ai/install.sh | sh` (Linux) ou `brew upgrade ollama` (macOS) e rode `ollama --version` de novo para confirmar.' },
+            { q: 'Qual é o melhor modelo Ollama em 2026?', a: 'Qwen3.8-27B é o melhor em geral em hardware de consumo (61,7% SWE-bench, cabe em 24 GB com Q4). Para programação frontier: Kimi K2.6. Para modelo pequeno/16 GB: gpt-oss:20b. Para contexto longo: Llama 4 Scout.' },
             { q: 'Qual modelo Ollama é melhor para programação?', a: 'Qwen3.8-27B para o melhor desempenho denso (61,7% SWE-bench). Kimi K2.6 para programação frontier (SWE-Bench Pro 58,6%). Devstral Small 24B para fluxos de trabalho agentivos em múltiplos arquivos. Codestral 22B para autocompletar em IDE (FIM).' },
             { q: 'Os modelos de código aberto no Ollama são realmente gratuitos para uso comercial?', a: 'A maioria sim, mas não todos. Llama 3.x (Meta Llama Community Licence) restringe o uso comercial acima de 700M de usuários ativos mensais. Mistral Small, Qwen3 e Gemma 3 usam Apache 2.0 (totalmente compatível com uso comercial). Verifique sempre a licença antes da implantação empresarial.' },
             { q: 'Quais são os melhores novos modelos do Ollama em 2026?', a: 'Lançamentos principais em 2026: Qwen3.8-27B (melhor geral em 24 GB, 61,7% SWE-bench), Kimi K2.6 (programação frontier, MoE), gpt-oss:20b (melhor pequeno/16 GB), Gemma 4 E4B (visão + tool calling) e Llama 4 Scout (contexto 10M, multimodal). Comandos: ollama run qwen3.8:27b, ollama run gpt-oss:20b, ollama run gemma4:e4b, ollama run llama4:scout.' },
@@ -1225,10 +1300,10 @@ schema: {
     },
     de: {
       theme: 'Best Models',
-      title: 'Ollama Update Juli 2026: v0.32.0 + Top 10 Open-Source-Modelle',
-      seoTitle: 'Ollama Juli 2026 Update: v0.32.0 + Top 10 Modelle (Rangliste)',
-      intro: 'Aktualisiert im Juli 2026. Die aktuelle Ollama-Version ist v0.32.0 (veröffentlicht am 11. Juli 2026), die eine interaktive "Chat, Code & Work"-Agenten-Erfahrung einführt. Die neuesten Modelle in der Bibliothek seit Juni sind Laguna XS 2.1 (Poolside, agentisches Coding) und Kimi K2.7 Code (Moonshot AI), die sich zu Kimi K2.6, Qwen3.8, GLM-5.3, gpt-oss und Gemma 4 gesellen. Am häufigsten heruntergeladen bleibt insgesamt die Llama-Familie (Llama 4 Scout, Llama 3.x); das beste Modell für Consumer-Hardware ist weiterhin Qwen3.8-27B (61,7% SWE-bench).',
-      metaDescription: 'Ollama v0.32.0 (11. Juli 2026): Neuerungen, neue Modelle, Top 10 Open Source — Qwen3.8-27B, Kimi K2.6, Laguna XS 2.1. Benchmarks + Pull-Befehle.',
+      title: 'Ollama Aktuelle Version 2026: v0.33.1 + Top 10 Open-Source-Modelle',
+      seoTitle: 'Ollama Aktuelle Version 2026: v0.33.1 + Top 10 Modelle',
+      intro: 'Aktualisiert im August 2026. Die aktuelle Ollama-Version ist v0.33.1 (veröffentlicht am 26. August 2026) und bringt MLX-Unterstützung für Qwen3.8 Flash Next, strukturierte Ausgabe sowie GPU-Timeout-Korrekturen. Die v0.33-Reihe brachte zudem Claude-Desktop-Gateway-Unterstützung. Die neuesten Modelle in der Bibliothek sind Laguna XS 2.1 (Poolside, agentisches Coding) und Kimi K2.7 Code (Moonshot AI), die sich zu Kimi K2.6, Qwen3.8, GLM-5.3, gpt-oss und Gemma 4 gesellen. Am häufigsten heruntergeladen bleibt insgesamt die Llama-Familie (Llama 4 Scout, Llama 3.x); das beste Modell für Consumer-Hardware ist weiterhin Qwen3.8-27B (61,7% SWE-bench).',
+      metaDescription: 'Die aktuelle Ollama-Version ist v0.33.1. Vollstaendiges Changelog v0.32-v0.33, neue Modelle 2026 und welches Modell fuer Chat, Coding und Vision passt.',
       heroImage: '/images/top-open-source-models-ollama-use-case-picks-hero-de.webp',
       publishDate: '2026-04-11',
       readTime: '9 Min. Lesezeit',
@@ -1264,11 +1339,11 @@ schema: {
         },
         whatsNew: {
           id: 'whats-new-ollama-july-2026',
-          title: 'Was ist neu in Ollama — Juli 2026 Update',
+          title: 'Was ist die aktuelle Ollama-Version und was hat sich geändert?',
           content: [
-            '**Aktuelle Ollama-Version: v0.32.0** (veröffentlicht am 11. Juli 2026). Dies ist die neueste stabile Version, verfügbar über ollama.com/download. Aktualisieren Sie mit `curl https://ollama.ai/install.sh | sh` (macOS: `brew upgrade ollama`), dann bestätigen Sie mit `ollama --version`.',
-            '**Was sich in der v0.31–v0.32-Reihe geändert hat (Ende Juni–Juli 2026):** v0.30.11 (25. Juni) fügte Auto-Install für Claude Code und opencode hinzu und behob eine Windows-Hybrid-GPU-Klassifizierung. v0.30.12 (29. Juni) behob die Tool-Call-Erkennung. v0.31.1 (30. Juni) brachte einen neuen MLX-Batch-Matmul-Kernel, der Gemma 4 auf Apple Silicon rund 90% schneller macht. v0.31.2 (6. Juli) aktivierte Flash Attention auf älteren NVIDIA-GPUs und behob strukturierte Ausgaben für Thinking-Modelle. v0.32.0 (11. Juli) führte die interaktive "Chat, Code & Work"-Agenten-Erfahrung ein und benannte die Codex-App-Integration in ChatGPT um. Vollständige Notizen: github.com/ollama/ollama/releases.',
-            '**Neueste Modelle, die seit dem letzten Update hinzugefügt wurden (Ende Juni–Juli 2026):**',
+            '**Aktuelle Ollama-Version: v0.33.1** (veröffentlicht am 26. August 2026). Dies ist die neueste stabile Version, verfügbar über ollama.com/download. Am 27. August erschien ein Release Candidate v0.33.2, der noch nicht als stabil markiert ist. Aktualisieren Sie mit `curl https://ollama.ai/install.sh | sh` (macOS: `brew upgrade ollama`), dann bestätigen Sie mit `ollama --version`.',
+            '**Was sich in der v0.32–v0.33-Reihe geändert hat (Juli–August 2026):** v0.32.0 (11. Juli) führte eine interaktive "Chat, Code & Work"-Agenten-Erfahrung ein und benannte die Codex-App-Integration in ChatGPT um. v0.32.12 (14. August) ergänzte Unterstützung für Qwen 3.8 27B samt MLX-optimierter Variante für Apple Silicon. v0.32.13 (14. August) brachte Developer-Instructions-Unterstützung für qwen3.8. v0.32.14 (15. August) lieferte WebP-Transcoding für llama-server-Renderer. v0.32.15 (19. August) ergänzte ein neues Desktop-Onboarding und halbierte die Zeit bis zum ersten Token nahezu. v0.33.0 (21. August) aktivierte Claude Desktop als Drittanbieter-Gateway und machte die Restore-Points des KV-Caches deutlich zuverlässiger, sodass ein abgebrochener langer Prefill fortgesetzt statt neu berechnet wird. v0.33.1 (26. August) ergänzte MLX-Unterstützung für Qwen3.8 Flash Next, strukturierte Ausgabe und GPU-Timeout-Korrekturen bei langsamem Speicher. Vollständige Notizen: github.com/ollama/ollama/releases.',
+            '**Neueste Modelle in der Bibliothek (2026):**',
           ],
           items: [
             '**Laguna XS 2.1** (Poolside, 2. Juli 2026) — 33B gesamt / 3B aktiv MoE für agentisches Coding und langfristige lokale Arbeit: planen, Code schreiben, Tests ausführen, iterieren. 256K Kontext, OpenMDW-1.1-Lizenz. SWE-bench Verified 70,9%, SWE-bench Multilingual 63,1%. Pull: `ollama pull laguna-xs-2.1`',
@@ -1280,7 +1355,7 @@ schema: {
             '**gpt-oss** (OpenAI, 2026) — Open-Weight MoE: gpt-oss:20b (21B gesamt / 3,6B aktiv, läuft in 16 GB, ~o3-mini-Niveau, einstellbares Reasoning) und gpt-oss:120b (80 GB).',
             '**Gemma 4** (Google, 2. April 2026) — Multimodale Größen E2B / E4B / E12B (26B MoE) / E27B (31B dicht), alle mit Vision und Tool Calling. Jetzt ~90% schneller auf Apple Silicon (MLX-Update Juli 2026). E4B läuft in ~6 GB VRAM.',
           ],
-          codeBlock: '# Ollama auf die neueste Version aktualisieren (v0.32.0)\ncurl https://ollama.ai/install.sh | sh\n\n# Oder auf Mac: brew upgrade ollama\n\n# Aktuelle Version prüfen\nollama --version  # Ausgabe: ollama version 0.32.0\n\n# Die neuesten Juli-2026-Modelle pullen\nollama pull laguna-xs-2.1\nollama pull kimi-k2.7-code\nollama pull kimi-k2.6',
+          codeBlock: '# Ollama auf die neueste Version aktualisieren (v0.33.1)\ncurl https://ollama.ai/install.sh | sh\n\n# Oder auf Mac: brew upgrade ollama\n\n# Aktuelle Version prüfen\nollama --version  # Ausgabe: ollama version 0.33.1\n\n# Die neuesten 2026-Modelle pullen\nollama pull laguna-xs-2.1\nollama pull kimi-k2.7-code\nollama pull kimi-k2.6',
           codeLanguage: 'bash',
         },
         mostPopular: {
@@ -1290,7 +1365,7 @@ schema: {
             '**Ollama verfügt über eine vollständig öffentlich zugängliche Download-Statistik.** Nach Daten aus Juli 2026:',
             '**Llama 3.2 3B** ist immer noch das am häufigsten heruntergeladene Modell insgesamt, großteils aufgrund seiner Verwendung als Standard-Testmodell beim ersten Install. Llama 4 Scout ist jedoch seit März 2026 schnell in den Rankings aufgestiegen und ist jetzt die bevorzugte Wahl für Qualität.',
             '**Qwen3 und Qwen3.8** sind die am schnellsten wachsende Modellfamilie in der Ollama-Bibliothek, mit Qwen3 und dem neuen Qwen3.8 dicht Variante schnell Qwen3 verdrängt. DeepSeek-R1 sah große Spitzen nach der Veröffentlichung und bleibt für Reasoning-Aufgaben stark heruntergeladen. Dolphin 3.0 (Cognitive Computations, aufbauend auf Llama 3.1) bleibt das meistgepullte unzensierte Allzweck-Modell für Nutzer, die einen ungefilterten lokalen Assistenten wollen.',
-            '**Llama 4 Scout** wurde von Meta im April 2026 mit Scout (17B aktiv, 109B gesamt, MoE) und Maverick (17B aktiv, 400B gesamt) Varianten veröffentlicht. Llama 4 Scout ist jetzt stabil in der Ollama-Bibliothek (`ollama pull llama4:scout`). Die Llama 4 Familie nutzt Mixture-of-Experts (MoE) Architektur – nur 17B Parameter sind pro Token aktiv, aber mit 109B Gesamtparametern benötigt Scout ~55 GB VRAM bei Q4 (passt in 24 GB nur bei 1,78-Bit, ~20 tok/s). Scouts Stärken sind das 10M-Token-Kontextfenster und multimodale Eingabe, nicht die Consumer-Hardware-Tauglichkeit. Für leichte Setups (8 GB RAM) bleibt Llama 3.2 3B das einfachste Einstiegsmodell. Kimi K2.6 (Moonshot AI, Modified MIT-Lizenz, 32B aktiv / 1T gesamt MoE) erreichte SWE-Bench Pro 58.6 und liegt damit gleichauf mit GPT-5.5. Laguna XS 2.1 (Poolside) ist der neueste Herausforderer im agentischen Coding, speziell für langfristige lokale Coding-Sitzungen gebaut. Qwen3.8-27B erzielte 61,7% SWE-bench als das beste Modell fuer Consumer-Hardware (passt in 24 GB bei Q4). OpenAIs Open-Weight gpt-oss:20b (21B gesamt / 3,6B aktiv MoE) läuft in 16 GB auf ~o3-mini-Niveau mit einstellbarem Reasoning. Das aktuelle Release, Ollama v0.32.0 (11. Juli 2026), führt die interaktive "Chat, Code & Work"-Agenten-Erfahrung ein. Die Ollama-Bibliothek umfasst mehrere hundert Modelle, wobei Laguna XS 2.1 und Kimi K2.7 Code die neuesten Ergänzungen seit dem Juni-Update sind.',
+            '**Llama 4 Scout** wurde von Meta im April 2026 mit Scout (17B aktiv, 109B gesamt, MoE) und Maverick (17B aktiv, 400B gesamt) Varianten veröffentlicht. Llama 4 Scout ist jetzt stabil in der Ollama-Bibliothek (`ollama pull llama4:scout`). Die Llama 4 Familie nutzt Mixture-of-Experts (MoE) Architektur – nur 17B Parameter sind pro Token aktiv, aber mit 109B Gesamtparametern benötigt Scout ~55 GB VRAM bei Q4 (passt in 24 GB nur bei 1,78-Bit, ~20 tok/s). Scouts Stärken sind das 10M-Token-Kontextfenster und multimodale Eingabe, nicht die Consumer-Hardware-Tauglichkeit. Für leichte Setups (8 GB RAM) bleibt Llama 3.2 3B das einfachste Einstiegsmodell. Kimi K2.6 (Moonshot AI, Modified MIT-Lizenz, 32B aktiv / 1T gesamt MoE) erreichte SWE-Bench Pro 58.6 und liegt damit gleichauf mit GPT-5.5. Laguna XS 2.1 (Poolside) ist der neueste Herausforderer im agentischen Coding, speziell für langfristige lokale Coding-Sitzungen gebaut. Qwen3.8-27B erzielte 61,7% SWE-bench als das beste Modell fuer Consumer-Hardware (passt in 24 GB bei Q4). OpenAIs Open-Weight gpt-oss:20b (21B gesamt / 3,6B aktiv MoE) läuft in 16 GB auf ~o3-mini-Niveau mit einstellbarem Reasoning. Das aktuelle Release ist Ollama v0.33.1 (26. August 2026) mit MLX-Unterstützung für Qwen3.8 Flash Next und strukturierter Ausgabe. Die Ollama-Bibliothek umfasst mehrere hundert Modelle, wobei Laguna XS 2.1 und Kimi K2.7 Code die neuesten Ergänzungen sind.',
           ],
         },
         byCategory: {
@@ -1434,6 +1509,18 @@ ollama run -m deepseek-r1:7b "Lösen Sie 2^10"
           title: 'Häufig gestellte Fragen',
           faqs: [
             {
+              q: 'Was ist die neueste Ollama-Version?',
+              a: 'Die neueste stabile Ollama-Version ist v0.33.1, veröffentlicht am 26. August 2026. Ein Release Candidate v0.33.2 folgte am 27. August, ist aber noch nicht als stabil markiert. Download über ollama.com/download oder Update mit `curl https://ollama.ai/install.sh | sh` unter Linux bzw. `brew upgrade ollama` unter macOS.',
+            },
+            {
+              q: 'Wo finde ich das Ollama-Changelog und die Release Notes?',
+              a: 'Die Release Notes aller Versionen stehen unter github.com/ollama/ollama/releases, jeweils mit Datum und Changelog. Die aktuellsten Einträge sind v0.33.1 (26. August 2026 -- MLX Qwen3.8 Flash Next, strukturierte Ausgabe, GPU-Timeout-Korrekturen), v0.33.0 (21. August -- Claude-Desktop-Gateway, KV-Cache-Restore-Points) und v0.32.15 (19. August -- neues Desktop-Onboarding, rund doppelt so schnelles Laden von Modellen).',
+            },
+            {
+              q: 'Wie prüfe ich, welche Ollama-Version installiert ist?',
+              a: 'Führen Sie `ollama --version` im Terminal aus. Die Ausgabe lautet etwa `ollama version 0.33.1`. Liegt die Nummer unter der aktuellen Version, aktualisieren Sie mit `curl https://ollama.ai/install.sh | sh` (Linux) oder `brew upgrade ollama` (macOS) und prüfen Sie danach erneut mit `ollama --version`.',
+            },
+            {
               q: 'Wie viel RAM brauche ich für ein lokales Modell?',
               a: '7B-Modelle benötigen 6,5-8 GB RAM. 13B-Modelle: 11-14 GB. 70B-Modelle: 42-48 GB mit Quantisierung (Q4_K_M). Kleiner (3B): 2-3 GB. Überprüfen Sie mit `ollama show [model-name]` vor dem Herunterladen.',
             },
@@ -1513,8 +1600,8 @@ ollama run -m deepseek-r1:7b "Lösen Sie 2^10"
 schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'headline': 'Ollama Update Juli 2026: Neueste Version und neue Modelle',
-        'description': 'Aktuelle Ollama-Version v0.32.0 (Juli 2026) und die neuesten Modelle: Laguna XS 2.1, Kimi K2.7 Code, Kimi K2.6, Qwen3.8. Verifizierte Benchmarks, RAM, Pull-Befehle.',
+        'headline': 'Ollama aktuelle Version 2026: v0.33.1 und die besten Modelle',
+        'description': 'Aktuelle Ollama-Version v0.33.1 (August 2026), vollstaendiges Changelog und die neuesten Modelle: Laguna XS 2.1, Kimi K2.7 Code, Kimi K2.6, Qwen3.8. Verifizierte Benchmarks, RAM, Pull-Befehle.',
         'url': 'https://www.promptquorum.com/de/local-llms/top-open-source-models-ollama',
         'datePublished': '2026-04-11',
         'dateModified': '2026-08-28',
@@ -1555,6 +1642,30 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': 'Was ist die neueste Ollama-Version?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Die neueste stabile Ollama-Version ist v0.33.1, veröffentlicht am 26. August 2026. Ein Release Candidate v0.33.2 folgte am 27. August, ist aber noch nicht als stabil markiert. Download über ollama.com/download oder Update mit `curl https://ollama.ai/install.sh | sh` unter Linux bzw. `brew upgrade ollama` unter macOS.',
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wo finde ich das Ollama-Changelog und die Release Notes?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Die Release Notes aller Versionen stehen unter github.com/ollama/ollama/releases, jeweils mit Datum und Changelog. Die aktuellsten Einträge sind v0.33.1 (26. August 2026 -- MLX Qwen3.8 Flash Next, strukturierte Ausgabe, GPU-Timeout-Korrekturen), v0.33.0 (21. August -- Claude-Desktop-Gateway, KV-Cache-Restore-Points) und v0.32.15 (19. August -- neues Desktop-Onboarding, rund doppelt so schnelles Laden von Modellen).',
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Wie prüfe ich, welche Ollama-Version installiert ist?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Führen Sie `ollama --version` im Terminal aus. Die Ausgabe lautet etwa `ollama version 0.33.1`. Liegt die Nummer unter der aktuellen Version, aktualisieren Sie mit `curl https://ollama.ai/install.sh | sh` (Linux) oder `brew upgrade ollama` (macOS) und prüfen Sie danach erneut mit `ollama --version`.',
+            }
+          },
           {
             '@type': 'Question',
             'name': 'Wie viel RAM brauche ich für ein lokales Modell?',
@@ -1666,10 +1777,10 @@ schema: {
     },
     fr: {
       theme: 'Best Models',
-      title: 'Ollama Mise à Jour Juillet 2026 : v0.32.0 + Top 10 Modèles Open Source',
-      seoTitle: 'Ollama Juillet 2026 Mise à Jour : v0.32.0 + Top 10 Modèles (Classés)',
-      intro: 'Mise à jour juillet 2026. La version actuelle d\'Ollama est la v0.32.0 (publiée le 11 juillet 2026), qui introduit une expérience d\'agent interactive « Chat, Code & Work ». Les modèles les plus récents de la bibliothèque sont Laguna XS 2.1 (Poolside, 2 juillet, codage agentique) et Kimi K2.7 Code (Moonshot AI, juin 2026), rejoignant Kimi K2.6, Qwen3.8, GLM-5.3, gpt-oss et Gemma 4. Le plus téléchargé reste la famille Llama (Llama 4 Scout, Llama 3.x) ; le meilleur global sur materiel grand public est Qwen3.8-27B (61,7% SWE-bench).',
-      metaDescription: 'Ollama v0.32.0 (11 juillet 2026) : nouveautés, nouveaux modèles, top 10 open source classés — Qwen3.8-27B, Laguna XS 2.1, Kimi K2.6, gpt-oss:20b. Benchmarks + commandes pull.',
+      title: 'Ollama Dernière Version 2026 : v0.33.1 + Top 10 Modèles Open Source',
+      seoTitle: 'Ollama Dernière Version 2026 : v0.33.1 + Top 10 Modèles',
+      intro: 'Mise à jour août 2026. La version actuelle d\'Ollama est la v0.33.1 (publiée le 26 août 2026), qui ajoute la prise en charge MLX de Qwen3.8 Flash Next, la sortie structurée et des correctifs de délai GPU. La série v0.33 a également apporté la passerelle Claude Desktop. Les modèles les plus récents de la bibliothèque sont Laguna XS 2.1 (Poolside, 2 juillet, codage agentique) et Kimi K2.7 Code (Moonshot AI, juin 2026), rejoignant Kimi K2.6, Qwen3.8, GLM-5.3, gpt-oss et Gemma 4. Le plus téléchargé reste la famille Llama (Llama 4 Scout, Llama 3.x) ; le meilleur global sur materiel grand public est Qwen3.8-27B (61,7% SWE-bench).',
+      metaDescription: 'La dernière version d\'Ollama est la v0.33.1. Changelog complet v0.32-v0.33, nouveaux modèles 2026 et lequel choisir pour le chat, le code et la vision.',
       heroImage: '/images/top-open-source-models-ollama-use-case-picks-hero-fr.webp',
       publishDate: '2026-04-11',
       readTime: '9 min de lecture',
@@ -1704,10 +1815,10 @@ schema: {
         },
         whatsNew: {
           id: 'whats-new-ollama-july-2026',
-          title: 'Quoi de Neuf dans Ollama — Mise à Jour Juillet 2026',
+          title: 'Quelle Est la Dernière Version d\'Ollama et Qu\'est-ce Qui a Changé ?',
           content: [
-            '**Version Ollama actuelle : v0.32.0** (publiée le 11 juillet 2026). C\'est la dernière version stable, disponible via ollama.com/download. Mettez à jour avec `curl https://ollama.ai/install.sh | sh` (macOS : `brew upgrade ollama`), puis vérifiez avec `ollama --version`.',
-            '**Ce qui a changé dans la série v0.31–v0.32 (fin juin–juillet 2026) :** La v0.30.11 (25 juin) a ajouté l\'installation automatique pour Claude Code et opencode et corrigé la classification hybride GPU sous Windows. La v0.30.12 (29 juin) a corrigé la détection d\'appel d\'outils dans les chaînes JSON. La v0.31.1 (30 juin) a livré un nouveau noyau MLX batch-matmul rendant Gemma 4 environ 90 % plus rapide sur Apple Silicon via la prédiction multi-tokens. La v0.31.2 (6 juillet) a activé le flash attention sur les GPU NVIDIA plus anciens et corrigé la sortie structurée pour les modèles de raisonnement. La v0.32.0 (11 juillet) a introduit une expérience d\'agent interactive « Chat, Code & Work » et renommé l\'intégration Codex App en ChatGPT. Notes complètes : github.com/ollama/ollama/releases.',
+            '**Version Ollama actuelle : v0.33.1** (publiée le 26 août 2026). C\'est la dernière version stable ; une release candidate v0.33.2 est parue le 27 août mais n\'est pas encore marquée stable, disponible via ollama.com/download. Mettez à jour avec `curl https://ollama.ai/install.sh | sh` (macOS : `brew upgrade ollama`), puis vérifiez avec `ollama --version`.',
+            '**Ce qui a changé dans la série v0.32–v0.33 (juillet–août 2026) :** La v0.32.0 (11 juillet) a introduit une expérience d\'agent interactive « Chat, Code & Work » et renommé l\'intégration Codex App en ChatGPT. La v0.32.12 (14 août) a ajouté la prise en charge de Qwen 3.8 27B avec une variante optimisée MLX pour Apple Silicon. La v0.32.13 (14 août) a ajouté la prise en charge des instructions développeur pour qwen3.8. La v0.32.14 (15 août) a apporté le transcodage WebP pour les moteurs de rendu llama-server. La v0.32.15 (19 août) a ajouté un nouveau parcours d\'accueil sur le bureau et réduit de près de moitié le délai avant le premier token. La v0.33.0 (21 août) a activé Claude Desktop comme passerelle tierce et fiabilisé les points de restauration du cache KV, permettant de reprendre un long prefill annulé au lieu de le recalculer. La v0.33.1 (26 août) a ajouté la prise en charge MLX de Qwen3.8 Flash Next, la sortie structurée et des correctifs de délai GPU sur stockage lent. Notes complètes : github.com/ollama/ollama/releases.',
             '**Nouveaux modèles ajoutés depuis la dernière mise à jour (fin juin–juillet 2026) :**',
           ],
           items: [
@@ -1720,7 +1831,7 @@ schema: {
             '**gpt-oss** (OpenAI, 2026) — MoE à poids ouverts : gpt-oss:20b (21B au total / 3,6B actif, tourne en 16 Go, ~niveau o3-mini, raisonnement reglable) et gpt-oss:120b (80 Go).',
             '**Gemma 4** (Google, 2 avril 2026) — Tailles multimodales E2B / E4B / E12B (26B MoE) / E27B (31B dense), toutes avec vision et appel d\'outils. Désormais ~90 % plus rapide sur Apple Silicon (mise à jour MLX de juillet 2026). E4B tourne en ~6 Go VRAM.',
           ],
-          codeBlock: '# Mettre à jour Ollama vers la dernière version (v0.32.0)\ncurl https://ollama.ai/install.sh | sh\n\n# Ou sur Mac : brew upgrade ollama\n\n# Vérifier la version actuelle\nollama --version  # Sortie : ollama version 0.32.0\n\n# Télécharger les nouveaux modèles de juillet 2026\nollama pull laguna-xs-2.1\nollama pull kimi-k2.7-code\nollama pull kimi-k2.6',
+          codeBlock: '# Mettre à jour Ollama vers la dernière version (v0.33.1)\ncurl https://ollama.ai/install.sh | sh\n\n# Ou sur Mac : brew upgrade ollama\n\n# Vérifier la version actuelle\nollama --version  # Sortie : ollama version 0.33.1\n\n# Télécharger les nouveaux modèles de juillet 2026\nollama pull laguna-xs-2.1\nollama pull kimi-k2.7-code\nollama pull kimi-k2.6',
           codeLanguage: 'bash',
         },
         mostPopular: {
@@ -1872,6 +1983,18 @@ ollama run -m deepseek-r1:7b "Résoudre 2^10"
           title: 'Questions fréquemment posées',
           faqs: [
             {
+              q: 'Quelle est la dernière version d\'Ollama ?',
+              a: 'La dernière version stable d\'Ollama est la v0.33.1, publiée le 26 août 2026. Une release candidate v0.33.2 a suivi le 27 août, mais elle n\'est pas encore marquée comme stable. Téléchargez-la sur ollama.com/download ou mettez à jour avec `curl https://ollama.ai/install.sh | sh` sous Linux et `brew upgrade ollama` sous macOS.',
+            },
+            {
+              q: 'Où trouver le changelog et les notes de version d\'Ollama ?',
+              a: 'Les notes de version de chaque tag figurent sur github.com/ollama/ollama/releases, avec la date et le changelog. Les entrées les plus récentes sont la v0.33.1 (26 août 2026 -- MLX Qwen3.8 Flash Next, sortie structurée, correctifs de délai GPU), la v0.33.0 (21 août -- passerelle Claude Desktop, points de restauration du cache KV) et la v0.32.15 (19 août -- nouveau parcours d\'accueil, chargement des modèles environ deux fois plus rapide).',
+            },
+            {
+              q: 'Comment vérifier quelle version d\'Ollama est installée ?',
+              a: 'Exécutez `ollama --version` dans le terminal. La sortie ressemble à `ollama version 0.33.1`. Si le numéro est inférieur à la version actuelle, mettez à jour avec `curl https://ollama.ai/install.sh | sh` (Linux) ou `brew upgrade ollama` (macOS), puis relancez `ollama --version` pour confirmer.',
+            },
+            {
               q: 'Combien de RAM me faut-il pour un modèle local ?',
               a: 'Modèles 7B : 6.5-8 GB RAM. 13B : 11-14 GB. 70B : 42-48 GB avec quantification (Q4_K_M). Petits (3B) : 2-3 GB. Vérifiez avec `ollama show [model-name]` avant le téléchargement.',
             },
@@ -1950,8 +2073,8 @@ ollama run -m deepseek-r1:7b "Résoudre 2^10"
 schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'headline': 'Mise à jour Ollama juillet 2026 : dernière version et nouveaux modèles',
-        'description': 'Version actuelle d\'Ollama v0.32.0 (juillet 2026) et les modèles les plus récents : Laguna XS 2.1, Kimi K2.7 Code, Kimi K2.6, Qwen3.8, DeepSeek V4. Benchmarks vérifiés, RAM, commandes pull.',
+        'headline': 'Ollama dernière version 2026 : v0.33.1 et les meilleurs modèles',
+        'description': 'Version actuelle d\'Ollama v0.33.1 (août 2026), changelog complet et modèles les plus récents : Laguna XS 2.1, Kimi K2.7 Code, Kimi K2.6, Qwen3.8, DeepSeek V4. Benchmarks vérifiés, RAM, commandes pull.',
         'url': 'https://www.promptquorum.com/fr/local-llms/top-open-source-models-ollama',
         'datePublished': '2026-04-11',
         'dateModified': '2026-08-28',
@@ -1992,6 +2115,30 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': 'Quelle est la dernière version d\'Ollama ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'La dernière version stable d\'Ollama est la v0.33.1, publiée le 26 août 2026. Une release candidate v0.33.2 a suivi le 27 août, mais elle n\'est pas encore marquée comme stable. Téléchargez-la sur ollama.com/download ou mettez à jour avec `curl https://ollama.ai/install.sh | sh` sous Linux et `brew upgrade ollama` sous macOS.',
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Où trouver le changelog et les notes de version d\'Ollama ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Les notes de version de chaque tag figurent sur github.com/ollama/ollama/releases, avec la date et le changelog. Les entrées les plus récentes sont la v0.33.1 (26 août 2026 -- MLX Qwen3.8 Flash Next, sortie structurée, correctifs de délai GPU), la v0.33.0 (21 août -- passerelle Claude Desktop, points de restauration du cache KV) et la v0.32.15 (19 août -- nouveau parcours d\'accueil, chargement des modèles environ deux fois plus rapide).',
+            }
+          },
+          {
+            '@type': 'Question',
+            'name': 'Comment vérifier quelle version d\'Ollama est installée ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Exécutez `ollama --version` dans le terminal. La sortie ressemble à `ollama version 0.33.1`. Si le numéro est inférieur à la version actuelle, mettez à jour avec `curl https://ollama.ai/install.sh | sh` (Linux) ou `brew upgrade ollama` (macOS), puis relancez `ollama --version` pour confirmer.',
+            }
+          },
           {
             '@type': 'Question',
             'name': 'Combien de RAM me faut-il pour un modèle local ?',
@@ -2103,10 +2250,10 @@ schema: {
     },
     ja: {
       theme: 'Best Models',
-      title: 'Ollama 2026年7月アップデート：v0.32.0 + トップ10オープンソースモデル',
-      seoTitle: 'Ollama 2026年7月 v0.32.0 アップデート + トップ10モデルランキング',
-      intro: '2026年7月更新。現在のOllamaバージョンはv0.32.0（2026年7月11日リリース）で、「Chat, Code & Work」エージェント体験を導入し、Codex AppはChatGPT Appに改称されました。今月ライブラリに加わった最新モデルはLaguna XS 2.1（Poolside、7月2日、33B総パラメータ/3B活性MoE、エージェント型長期タスク・コーディング向け、256Kコンテキスト）とKimi K2.7 Code（Moonshot AI、Kimi K2.6ベースのコーディング特化エージェントモデル）で、Kimi K2.6、Qwen3.8、GLM-5.3、gpt-oss、Gemma 4に加わります。全体での最多ダウンロードは引き続きLlamaファミリー（Llama 4 Scout、Llama 3.x）、コンシューマーハードウェアでの総合最高はQwen3.8-27B（61.7% SWE-bench）です。',
-      metaDescription: 'Ollama v0.32.0（2026年7月11日）：新機能、新モデル、トップ10 open sourceランキング — Qwen3.8-27B、Laguna XS 2.1、gpt-oss:20b。ベンチマーク + pullコマンド。',
+      title: 'Ollama最新バージョン2026：v0.33.1 + トップ10オープンソースモデル',
+      seoTitle: 'Ollama最新バージョン2026：v0.33.1 + トップ10モデル',
+      intro: '2026年8月更新。現在のOllamaバージョンはv0.33.1（2026年8月26日リリース）で、MLX Qwen3.8 Flash Nextのサポート、構造化出力、GPUタイムアウト修正を追加しました。v0.33系列ではClaude Desktopゲートウェイ対応も加わっています。ライブラリに加わった最新モデルはLaguna XS 2.1（Poolside、7月2日、33B総パラメータ/3B活性MoE、エージェント型長期タスク・コーディング向け、256Kコンテキスト）とKimi K2.7 Code（Moonshot AI、Kimi K2.6ベースのコーディング特化エージェントモデル）で、Kimi K2.6、Qwen3.8、GLM-5.3、gpt-oss、Gemma 4に加わります。全体での最多ダウンロードは引き続きLlamaファミリー（Llama 4 Scout、Llama 3.x）、コンシューマーハードウェアでの総合最高はQwen3.8-27B（61.7% SWE-bench）です。',
+      metaDescription: 'Ollamaの最新バージョンはv0.33.1です。v0.32〜v0.33の変更履歴、2026年の新モデル、チャット・コーディング・視覚用途別の最適モデルを解説。',
       heroImage: '/images/top-open-source-models-ollama-use-case-picks-hero-ja.webp',
       publishDate: '2026-04-11',
       readTime: '9分で読める',
@@ -2142,10 +2289,10 @@ schema: {
         },
         whatsNew: {
           id: 'whats-new-ollama-july-2026',
-          title: 'Ollama最新アップデート — 2026年7月',
+          title: 'Ollamaの最新バージョンと変更点は？',
           content: [
-            '**現在のOllamaバージョン：v0.32.0**（2026年7月11日リリース）。これが最新の安定版で、ollama.com/downloadから入手できます。`curl https://ollama.ai/install.sh | sh`（macOS：`brew upgrade ollama`）でアップデートし、`ollama --version`で確認してください。',
-            '**直近のポイントリリース（2026年6月〜7月）：** v0.30.11（6月25日）はClaude Code/opencodeの自動インストールとWindowsハイブリッドGPU修正を追加。v0.30.12（6月29日）はツール呼び出し検出の不具合を修正。v0.31.1（6月30日）はMLXバッチ行列積カーネルを刷新し、Apple SiliconでのGemma 4推論が約90%高速化。v0.31.2（7月6日）は旧世代NVIDIA GPU向けflash attentionと構造化出力の不具合修正を追加。v0.32.0（7月11日）は「Chat, Code & Work」エージェント体験を導入し、Codex AppはChatGPT Appに改称されました。詳細：github.com/ollama/ollama/releases。',
+            '**現在のOllamaバージョン：v0.33.1**（2026年8月26日リリース）。これが最新の安定版で、ollama.com/downloadから入手できます。8月27日にv0.33.2のリリース候補版が公開されましたが、まだ安定版ではありません。`curl https://ollama.ai/install.sh | sh`（macOS：`brew upgrade ollama`）でアップデートし、`ollama --version`で確認してください。',
+            '**v0.32〜v0.33系列の変更点（2026年7月〜8月）：** v0.32.0（7月11日）は「Chat, Code & Work」エージェント体験を導入。v0.32.12（8月14日）はQwen 3.8 27Bのサポートと、Apple Silicon向けMLX最適化版を追加。v0.32.13（8月14日）はqwen3.8の開発者インストラクション対応を追加。v0.32.14（8月15日）はllama-serverレンダラー向けWebPトランスコーディングを実装。v0.32.15（8月19日）は新しいデスクトップオンボーディングを追加し、モデル読み込みの高速化により初回トークンまでの時間をほぼ半減。v0.33.0（8月21日）はClaude Desktopをサードパーティゲートウェイとして利用可能にし、KVキャッシュの復元ポイントを大幅に安定化。中断された長いprefillを最初からやり直さず再開できます。v0.33.1（8月26日）はMLX Qwen3.8 Flash Nextのサポート、構造化出力、低速ストレージ環境でのGPUタイムアウト修正を追加。詳細：github.com/ollama/ollama/releases。',
             '**今月追加された最新モデル（2026年7月）：**',
           ],
           items: [
@@ -2159,7 +2306,7 @@ schema: {
             '**Gemma 4**（Google、2026年4月2日）— マルチモーダルサイズ E2B / E4B / E12B（26B MoE）/ E27B（31B密度）、すべてビジョンとツール呼び出し対応。QAT重みを2026年6月5日に追加。v0.31.1のMLXバッチ行列積カーネル刷新でApple Silicon推論が約90%高速化。E4Bは~6GB VRAMで動作。',
             '**Dolphin 3.0**（Cognitive Computations、継続保守）— 検閲なし・汎用チャットモデル、Llama 3.1ベース、コンテンツフィルタリングなし。プル：`ollama pull dolphin3`（旧`dolphin-mistral`は2024年の古いモデルのため非推奨）。',
           ],
-          codeBlock: '# Ollamaを最新版にアップデート（v0.32.0）\ncurl https://ollama.ai/install.sh | sh\n\n# またはMac：brew upgrade ollama\n\n# 現在のバージョンを確認\nollama --version  # 出力：ollama version 0.32.0\n\n# 2026年7月の最新モデルをプル\nollama pull laguna-xs-2.1\nollama pull kimi-k2.7-code\nollama pull dolphin3',
+          codeBlock: '# Ollamaを最新版にアップデート（v0.33.1）\ncurl https://ollama.ai/install.sh | sh\n\n# またはMac：brew upgrade ollama\n\n# 現在のバージョンを確認\nollama --version  # 出力：ollama version 0.33.1\n\n# 2026年7月の最新モデルをプル\nollama pull laguna-xs-2.1\nollama pull kimi-k2.7-code\nollama pull dolphin3',
           codeLanguage: 'bash',
         },
         mostPopular: {
@@ -2169,7 +2316,7 @@ schema: {
             '**Ollamaは完全公開ダウンロード統計を提供。** 2026年7月データより：',
             '**Llama 3.2 3B**は全体で最多ダウンロード。主にチュートリアルとして使用。コンシューマー向け品質では、Qwen3.8-27B（61.7% SWE-bench、Q4で24GBに収まる）が現在の総合最良の選択。',
             '**Qwen3・Qwen3.8**はOllama ライブラリで最速成長のモデルファミリー。Qwen3と新しいQwen 3.6密度バリアントがQwen3を急速に置き換え。DeepSeek-R1はリリース後に大きなスパイクを記録し、推論タスク向けに常に高ダウンロード状態。',
-            '**Meta Llama 4** 2026年4月リリースでScout（17B活性、109B合計、MoE）とMaverick（17B活性、400B合計）を展開。Ollama ライブラリで安定済み（`ollama pull llama4:scout`）。Llama 4はMoEアーキテクチャを採用し、トークンあたり17Bのみが活性だが、109B合計のためScoutはQ4で~55GB VRAMが必要（24GBは1.78ビットのみ、~20 tok/s）。Scoutの強みは10Mトークンのコンテキストとマルチモーダル入力であり、コンシューマーハードウェアへの適合性ではない。Ollama エコシステムは2026年4月に大幅拡張。Kimi K2.6（Moonshot AI、Modified MIT、32B活性/1T合計MoE）はSWE-Bench Pro 58.6を記録しGPT-5.5と同等。Qwen3.8-27Bは61.7% SWE-benchでコンシューマー向け総合最高を達成（Q4で24GBに収まる）。OpenAIのオープンウェイトgpt-oss:20b（21B合計/3.6B活性MoE）は16GBで~o3-miniレベル、推論調整可能で動作。現在のリリースであるOllama v0.32.0（2026年7月11日）は「Chat, Code & Work」エージェント体験を導入しました。Ollama ライブラリは現在数百のモデルを参照しており、今月の最新追加はLaguna XS 2.1（Poolside、エージェント型コーディング）とKimi K2.7 Code（Moonshot AI）です。',
+            '**Meta Llama 4** 2026年4月リリースでScout（17B活性、109B合計、MoE）とMaverick（17B活性、400B合計）を展開。Ollama ライブラリで安定済み（`ollama pull llama4:scout`）。Llama 4はMoEアーキテクチャを採用し、トークンあたり17Bのみが活性だが、109B合計のためScoutはQ4で~55GB VRAMが必要（24GBは1.78ビットのみ、~20 tok/s）。Scoutの強みは10Mトークンのコンテキストとマルチモーダル入力であり、コンシューマーハードウェアへの適合性ではない。Ollama エコシステムは2026年4月に大幅拡張。Kimi K2.6（Moonshot AI、Modified MIT、32B活性/1T合計MoE）はSWE-Bench Pro 58.6を記録しGPT-5.5と同等。Qwen3.8-27Bは61.7% SWE-benchでコンシューマー向け総合最高を達成（Q4で24GBに収まる）。OpenAIのオープンウェイトgpt-oss:20b（21B合計/3.6B活性MoE）は16GBで~o3-miniレベル、推論調整可能で動作。現在のリリースであるOllama v0.33.1（2026年8月26日）はMLX Qwen3.8 Flash Nextのサポートと構造化出力を追加しました。Ollama ライブラリは現在数百のモデルを参照しており、最新追加はLaguna XS 2.1（Poolside、エージェント型コーディング）とKimi K2.7 Code（Moonshot AI）です。',
           ],
         },
         byCategory: {
@@ -2284,6 +2431,18 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           title: 'Ollama選択の一般的ミス',
           faqs: [
             {
+              q: 'Ollamaの最新バージョンは？',
+              a: 'Ollamaの最新安定版はv0.33.1（2026年8月26日リリース）です。8月27日にv0.33.2のリリース候補版が続きましたが、まだ安定版ではありません。ollama.com/downloadから入手するか、Linuxでは`curl https://ollama.ai/install.sh | sh`、macOSでは`brew upgrade ollama`で更新できます。',
+            },
+            {
+              q: 'Ollamaの変更履歴とリリースノートはどこで見られますか？',
+              a: '各バージョンのリリースノートはgithub.com/ollama/ollama/releasesにあり、タグごとに日付と変更履歴が記載されています。最新の項目はv0.33.1（2026年8月26日 — MLX Qwen3.8 Flash Next、構造化出力、GPUタイムアウト修正）、v0.33.0（8月21日 — Claude Desktopゲートウェイ、KVキャッシュ復元ポイント）、v0.32.15（8月19日 — 新しいデスクトップオンボーディング、モデル読み込み約2倍高速化）です。',
+            },
+            {
+              q: 'インストール済みのOllamaバージョンを確認するには？',
+              a: 'ターミナルで`ollama --version`を実行します。`ollama version 0.33.1`のような行が出力されます。番号が最新版より低い場合は、`curl https://ollama.ai/install.sh | sh`（Linux）または`brew upgrade ollama`（macOS）で更新し、再度`ollama --version`で確認してください。',
+            },
+            {
               q: '大きいモデルタグをプルしたがRAM満杯。何が？',
               a: '確認なしプル。プル前に`ollama show [model-name]`実行。例：`ollama show llama3.1:70b`でRAM表示（約42-48GB、Q4量子化）。初心者は7B-13Bに留める（RAM 16GB以下）。`ollama rm [model-name]`で削除。',
             },
@@ -2310,6 +2469,18 @@ ollama run -m deepseek-r1:7b "2^10を解く"
           id: 'faq',
           title: 'よくある質問',
           faqs: [
+            {
+              q: 'Ollamaの最新バージョンは？',
+              a: 'Ollamaの最新安定版はv0.33.1（2026年8月26日リリース）です。8月27日にv0.33.2のリリース候補版が続きましたが、まだ安定版ではありません。ollama.com/downloadから入手するか、Linuxでは`curl https://ollama.ai/install.sh | sh`、macOSでは`brew upgrade ollama`で更新できます。',
+            },
+            {
+              q: 'Ollamaの変更履歴とリリースノートはどこで見られますか？',
+              a: '各バージョンのリリースノートはgithub.com/ollama/ollama/releasesにあり、タグごとに日付と変更履歴が記載されています。最新の項目はv0.33.1（2026年8月26日 — MLX Qwen3.8 Flash Next、構造化出力、GPUタイムアウト修正）、v0.33.0（8月21日 — Claude Desktopゲートウェイ、KVキャッシュ復元ポイント）、v0.32.15（8月19日 — 新しいデスクトップオンボーディング、モデル読み込み約2倍高速化）です。',
+            },
+            {
+              q: 'インストール済みのOllamaバージョンを確認するには？',
+              a: 'ターミナルで`ollama --version`を実行します。`ollama version 0.33.1`のような行が出力されます。番号が最新版より低い場合は、`curl https://ollama.ai/install.sh | sh`（Linux）または`brew upgrade ollama`（macOS）で更新し、再度`ollama --version`で確認してください。',
+            },
             {
               q: 'ローカルモデルに必要なRAM量は？',
               a: '7B：6.5-8GB。13B：11-14GB。70B：42-48GB（Q4_K_M量子化）。3B：2-3GB。プル前に`ollama show [model-name]`で確認。',
@@ -2389,8 +2560,8 @@ ollama run -m deepseek-r1:7b "2^10を解く"
 schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'headline': 'Ollama 2026年7月更新：最新バージョンと新モデル',
-        'description': '現在のOllamaバージョンv0.32.0（2026年7月）と最新モデル：Laguna XS 2.1、Kimi K2.7 Code、Qwen3.8、DeepSeek V4。検証済みベンチマーク、RAM、pullコマンド。',
+        'headline': 'Ollama最新バージョン2026：v0.33.1と用途別ベストモデル',
+        'description': '現在のOllamaバージョンv0.33.1（2026年8月）、完全な変更履歴と最新モデル：Laguna XS 2.1、Kimi K2.7 Code、Qwen3.8、DeepSeek V4。検証済みベンチマーク、RAM、pullコマンド。',
         'url': 'https://www.promptquorum.com/ja/local-llms/top-open-source-models-ollama',
         'datePublished': '2026-04-11',
         'dateModified': '2026-08-28',
@@ -2546,10 +2717,10 @@ schema: {
     },
     zh: {
       theme: 'Best Models',
-      title: 'Ollama 2026年7月更新：v0.32.0 + Top 10开源模型',
-      seoTitle: 'Ollama 2026年7月 v0.32.0 更新 + Top 10模型排名',
-      intro: '2026年7月更新。当前Ollama版本为v0.32.0（2026年7月11日发布），新增交互式"Chat, Code & Work"代理体验。自6月以来库中新增的最新模型为Laguna XS 2.1（Poolside，专注智能体编程）和Kimi K2.7 Code（Moonshot AI），与Kimi K2.6、Qwen3.8、GLM-5.3、gpt-oss和Gemma 4并列。总下载量最高仍为Llama系列（Llama 4 Scout、Llama 3.x）；消费级硬件综合最佳仍为Qwen3.8-27B（61.7% SWE-bench）。',
-      metaDescription: 'Ollama v0.32.0（2026年7月11日）：新功能、新模型、Top 10开源排名 — Qwen3.8-27B、Kimi K2.6、Laguna XS 2.1。基准测试 + pull命令。',
+      title: 'Ollama最新版本2026：v0.33.1 + Top 10开源模型',
+      seoTitle: 'Ollama最新版本2026：v0.33.1 + Top 10模型排名',
+      intro: '2026年8月更新。当前Ollama版本为v0.33.1（2026年8月26日发布），新增MLX Qwen3.8 Flash Next支持、结构化输出与GPU超时修复。v0.33系列还带来了Claude Desktop网关支持。库中新增的最新模型为Laguna XS 2.1（Poolside，专注智能体编程）和Kimi K2.7 Code（Moonshot AI），与Kimi K2.6、Qwen3.8、GLM-5.3、gpt-oss和Gemma 4并列。总下载量最高仍为Llama系列（Llama 4 Scout、Llama 3.x）；消费级硬件综合最佳仍为Qwen3.8-27B（61.7% SWE-bench）。',
+      metaDescription: 'Ollama最新版本为v0.33.1。完整的v0.32-v0.33更新日志、2026年新增模型，以及聊天、编程、视觉场景的最佳选择。',
       heroImage: '/images/top-open-source-models-ollama-use-case-picks-hero-zh.webp',
       publishDate: '2026-04-11',
       readTime: '阅读约9分钟',
@@ -2588,10 +2759,10 @@ schema: {
         },
         whatsNew: {
           id: 'whats-new-ollama-july-2026',
-          title: 'Ollama新增功能 — 2026年7月更新',
+          title: 'Ollama最新版本是什么？有哪些变化？',
           content: [
-            '**当前Ollama版本：v0.32.0**（2026年7月11日发布）。这是最新稳定版本，可通过ollama.com/download获取。使用`curl https://ollama.ai/install.sh | sh`更新（macOS：`brew upgrade ollama`），然后用`ollama --version`确认。',
-            '**v0.31–v0.32系列的变化（6月下旬-7月）：** v0.30.11（6月25日）为Claude Code和opencode新增自动安装，并修复Windows混合GPU分类问题。v0.30.12（6月29日）修复工具调用检测。v0.31.1（6月30日）新增MLX批量矩阵乘法内核，使Gemma 4在Apple Silicon上快约90%。v0.31.2（7月6日）在较旧NVIDIA GPU上启用flash attention，并修复思考模型的结构化输出问题。v0.32.0（7月11日）推出交互式"Chat, Code & Work"代理体验，并将Codex App集成更名为ChatGPT。完整说明：github.com/ollama/ollama/releases。',
+            '**当前Ollama版本：v0.33.1**（2026年8月26日发布）。这是最新稳定版本，可通过ollama.com/download获取。v0.33.2候选版本已于8月27日发布，但尚未标记为稳定版。使用`curl https://ollama.ai/install.sh | sh`更新（macOS：`brew upgrade ollama`），然后用`ollama --version`确认。',
+            '**v0.32-v0.33系列的变化（2026年7月-8月）：** v0.32.0（7月11日）引入交互式"Chat, Code & Work"代理体验。v0.32.12（8月14日）新增Qwen 3.8 27B支持及面向Apple Silicon的MLX优化版本。v0.32.13（8月14日）为qwen3.8新增开发者指令支持。v0.32.14（8月15日）为llama-server渲染器新增WebP转码。v0.32.15（8月19日）新增桌面端引导流程，并通过更快的模型加载将首个token的等待时间缩短近一半。v0.33.0（8月21日）启用Claude Desktop作为第三方网关，并显著提升KV缓存恢复点的可靠性，被取消的长prefill可以续跑而无需重新处理。v0.33.1（8月26日）新增MLX Qwen3.8 Flash Next支持、结构化输出，以及慢速存储下的GPU超时修复。完整说明：github.com/ollama/ollama/releases。',
             '**自上次更新以来新增的最新模型（6月下旬-7月）：**',
           ],
           items: [
@@ -2604,7 +2775,7 @@ schema: {
             '**gpt-oss**（OpenAI、2026年）— 开放权重MoE：gpt-oss:20b（21B总数 / 3.6B活跃，16GB可运行，~o3-mini水平，推理可调）和gpt-oss:120b（80GB）。',
             '**Gemma 4**（Google、2026年4月2日）— 多模态尺寸 E2B / E4B / E12B（26B MoE）/ E27B（31B密集），全部支持视觉和工具调用。现在Apple Silicon上快约90%（2026年7月MLX更新）。E4B在~6GB显存下运行。',
           ],
-          codeBlock: '# 更新Ollama到最新版本（v0.32.0）\ncurl https://ollama.ai/install.sh | sh\n\n# 或Mac：brew upgrade ollama\n\n# 检查当前版本\nollama --version  # 输出：ollama version 0.32.0\n\n# 拉取2026年7月最新模型\nollama pull laguna-xs-2.1\nollama pull kimi-k2.7-code\nollama pull kimi-k2.6',
+          codeBlock: '# 更新Ollama到最新版本（v0.33.1）\ncurl https://ollama.ai/install.sh | sh\n\n# 或Mac：brew upgrade ollama\n\n# 检查当前版本\nollama --version  # 输出：ollama version 0.33.1\n\n# 拉取2026年最新模型\nollama pull laguna-xs-2.1\nollama pull kimi-k2.7-code\nollama pull kimi-k2.6',
           codeLanguage: 'bash',
         },
         mostPopular: {
@@ -2613,7 +2784,7 @@ schema: {
           content: [
             '**Llama 3.2 3B** 仍为总下载量最高，主要作为初安装测试模型。在消费级硬件品质方面，Qwen3.8-27B（61.7% SWE-bench、Q4下可装入24GB）仍为综合最佳选择。',
             '**Qwen3和Qwen3.8** 是Ollama库中增长最快的模型家族，Qwen3和新的Qwen 3.6密集变体正在快速取代Qwen3。DeepSeek-R1在发布后出现大幅增长，并保持推理任务的高下载量。**Dolphin 3.0**（Cognitive Computations、基于Llama 3.1构建）是希望获得无内容过滤本地助手的用户中下载量最高的无审查通用模型，拉取命令为`ollama pull dolphin3`（不是已过时的`dolphin-mistral`）。',
-            '**Meta Llama 4** 于2026年4月推出Scout（17B活跃、109B总数、MoE）和Maverick（17B活跃、400B总数）变体。Llama 4 Scout现已稳定在Ollama库中（`ollama pull llama4:scout`）。Llama 4采用Mixture-of-Experts（MoE）架构，每个token仅17B参数活跃，但因109B总参数，Scout在Q4下需~55GB显存（24GB仅限1.78位，~20 tok/s）。Scout的亮点是10M token上下文窗口和多模态输入，而非消费级硬件适配性。Ollama生态在2026年4月显著扩展。Kimi K2.6（Moonshot AI、Modified MIT许可、32B活跃/1T总数MoE）取得SWE-Bench Pro 58.6，与GPT-5.5持平。Laguna XS 2.1（Poolside）是智能体编程领域的最新挑战者，专为长周期本地编程会话构建。Qwen3.8-27B达到61.7% SWE-bench，成为消费级硬件综合最佳（Q4下可装入24GB）。OpenAI的开放权重gpt-oss:20b（21B总数/3.6B活跃MoE）在16GB下以~o3-mini水平运行，推理可调。当前版本Ollama v0.32.0（2026年7月11日）推出交互式"Chat, Code & Work"代理体验。Ollama库现涵盖数百个精选模型，其中Laguna XS 2.1和Kimi K2.7 Code为6月更新以来的最新新增。',
+            '**Meta Llama 4** 于2026年4月推出Scout（17B活跃、109B总数、MoE）和Maverick（17B活跃、400B总数）变体。Llama 4 Scout现已稳定在Ollama库中（`ollama pull llama4:scout`）。Llama 4采用Mixture-of-Experts（MoE）架构，每个token仅17B参数活跃，但因109B总参数，Scout在Q4下需~55GB显存（24GB仅限1.78位，~20 tok/s）。Scout的亮点是10M token上下文窗口和多模态输入，而非消费级硬件适配性。Ollama生态在2026年4月显著扩展。Kimi K2.6（Moonshot AI、Modified MIT许可、32B活跃/1T总数MoE）取得SWE-Bench Pro 58.6，与GPT-5.5持平。Laguna XS 2.1（Poolside）是智能体编程领域的最新挑战者，专为长周期本地编程会话构建。Qwen3.8-27B达到61.7% SWE-bench，成为消费级硬件综合最佳（Q4下可装入24GB）。OpenAI的开放权重gpt-oss:20b（21B总数/3.6B活跃MoE）在16GB下以~o3-mini水平运行，推理可调。当前版本Ollama v0.33.1（2026年8月26日）新增MLX Qwen3.8 Flash Next支持与结构化输出。Ollama库现涵盖数百个精选模型，其中Laguna XS 2.1和Kimi K2.7 Code为最新新增。',
           ],
         },
         byCategory: {
@@ -2702,6 +2873,18 @@ schema: {
           title: '常见误区',
           faqs: [
             {
+              q: 'Ollama最新版本是什么？',
+              a: 'Ollama最新稳定版本为v0.33.1，发布于2026年8月26日。v0.33.2候选版本于8月27日发布，但尚未标记为稳定版。可从ollama.com/download下载，或在Linux上用`curl https://ollama.ai/install.sh | sh`、在macOS上用`brew upgrade ollama`更新。',
+            },
+            {
+              q: '在哪里可以查看Ollama更新日志和发布说明？',
+              a: '每个版本的发布说明都在github.com/ollama/ollama/releases，按标签列出日期和更新日志。最新条目为v0.33.1（2026年8月26日 — MLX Qwen3.8 Flash Next、结构化输出、GPU超时修复）、v0.33.0（8月21日 — Claude Desktop网关、KV缓存恢复点）和v0.32.15（8月19日 — 新桌面引导流程、模型加载速度约提升一倍）。',
+            },
+            {
+              q: '如何查看已安装的Ollama版本？',
+              a: '在终端运行`ollama --version`，会输出类似`ollama version 0.33.1`的一行。如果版本号低于当前版本，请用`curl https://ollama.ai/install.sh | sh`（Linux）或`brew upgrade ollama`（macOS）更新，然后再次运行`ollama --version`确认。',
+            },
+            {
               q: '中国企业使用本地LLM如何符合数据安全法？',
               a: '根据《中华人民共和国数据安全法》（2021年），敏感数据（用户、金融、医疗）在中国境内处理。本地推理完全满足此要求：数据不离开企业系统。推荐使用Qwen3系列（阿里开发，针对中文优化）或Llama 3.3。关键：选择与您数据分类相符的模型。',
             },
@@ -2728,6 +2911,18 @@ schema: {
           id: 'faq',
           title: '常见问题',
           faqs: [
+            {
+              q: 'Ollama最新版本是什么？',
+              a: 'Ollama最新稳定版本为v0.33.1，发布于2026年8月26日。v0.33.2候选版本于8月27日发布，但尚未标记为稳定版。可从ollama.com/download下载，或在Linux上用`curl https://ollama.ai/install.sh | sh`、在macOS上用`brew upgrade ollama`更新。',
+            },
+            {
+              q: '在哪里可以查看Ollama更新日志和发布说明？',
+              a: '每个版本的发布说明都在github.com/ollama/ollama/releases，按标签列出日期和更新日志。最新条目为v0.33.1（2026年8月26日 — MLX Qwen3.8 Flash Next、结构化输出、GPU超时修复）、v0.33.0（8月21日 — Claude Desktop网关、KV缓存恢复点）和v0.32.15（8月19日 — 新桌面引导流程、模型加载速度约提升一倍）。',
+            },
+            {
+              q: '如何查看已安装的Ollama版本？',
+              a: '在终端运行`ollama --version`，会输出类似`ollama version 0.33.1`的一行。如果版本号低于当前版本，请用`curl https://ollama.ai/install.sh | sh`（Linux）或`brew upgrade ollama`（macOS）更新，然后再次运行`ollama --version`确认。',
+            },
             {
               q: '本地LLM需要多少RAM？',
               a: '7B模型：6.5-8GB。13B模型：11-14GB。70B模型：42-48GB（Q4_K_M量子化）。3B模型：2-3GB。运行前用 `ollama show [model-name]` 检查确切要求。',
@@ -2809,8 +3004,8 @@ schema: {
 schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
-        'headline': 'Ollama 2026年7月更新：最新版本与新模型',
-        'description': '当前Ollama版本v0.32.0（2026年7月）及最新模型：Laguna XS 2.1、Kimi K2.7 Code、Qwen3.8、Kimi K2.6。验证基准、RAM需求、pull命令。',
+        'headline': 'Ollama最新版本2026：v0.33.1与最佳模型',
+        'description': '当前Ollama版本v0.33.1（2026年8月）、完整更新日志及最新模型：Laguna XS 2.1、Kimi K2.7 Code、Qwen3.8、Kimi K2.6。验证基准、RAM需求、pull命令。',
         'url': 'https://www.promptquorum.com/zh/local-llms/top-open-source-models-ollama',
         'datePublished': '2026-04-11',
         'dateModified': '2026-08-28',
@@ -2972,20 +3167,20 @@ schema: {
       current_models_mentioned: ['Laguna XS 2.1', 'Kimi K2.7 Code', 'Dolphin 3.0', 'Qwen3.8-27B', 'qwen3:30b', 'qwen3-coder:30b', 'Kimi K2.6', 'gpt-oss:20b', 'gpt-oss:120b', 'DeepSeek-R1', 'Gemma 4', 'GLM-5.3', 'Llama 4 Scout', 'Devstral Small 24B', 'Mistral Small', 'Phi-4 Mini'],
       current_benchmarks_used: ['SWE-bench', 'SWE-bench Verified', 'SWE-bench Multilingual', 'SWE-Bench Pro', 'HumanEval', 'MATH'],
       theme: 'Best Models',
-      title: 'Ollama 최고 오픈소스 모델 2026년 7월: Top 10 순위',
-      seoTitle: 'Ollama 최고 오픈소스 모델 2026년 7월: Top 10',
-      intro: '2026년 7월 업데이트. 현재 Ollama 버전은 v0.32.0(2026년 7월 11일 출시)으로, "Chat, Code & Work" 대화형 에이전트 경험을 추가했습니다. 6월 이후 라이브러리에 추가된 최신 모델은 Laguna XS 2.1(Poolside, 에이전틱 코딩)과 Kimi K2.7 Code(Moonshot AI)입니다. 소비자 하드웨어에서 가장 우수한 전반적 모델은 여전히 Qwen3.8-27B(61.7% SWE-bench, Q4에서 24GB에 적합)입니다.',
-      metaDescription: '2026년 7월 Ollama 최고 오픈소스 모델: Qwen3.8-27B(종합 최고), Kimi K2.6·Laguna XS 2.1(코딩), gpt-oss:20b(16GB). 검증된 벤치마크, RAM, pull 명령.',
+      title: 'Ollama 최신 버전 2026: v0.33.1 + 최고 오픈소스 모델 Top 10',
+      seoTitle: 'Ollama 최신 버전 2026: v0.33.1 + 모델 Top 10',
+      intro: '2026년 8월 업데이트. 현재 Ollama 버전은 v0.33.1(2026년 8월 26일 출시)로, MLX Qwen3.8 Flash Next 지원과 구조화된 출력, GPU 타임아웃 수정을 추가했습니다. v0.33 시리즈는 Claude Desktop 게이트웨이 지원도 함께 도입했습니다. 라이브러리에 추가된 최신 모델은 Laguna XS 2.1(Poolside, 에이전틱 코딩)과 Kimi K2.7 Code(Moonshot AI)입니다. 소비자 하드웨어에서 가장 우수한 전반적 모델은 여전히 Qwen3.8-27B(61.7% SWE-bench, Q4에서 24GB에 적합)입니다.',
+      metaDescription: 'Ollama 최신 버전은 v0.33.1입니다. v0.32~v0.33 전체 변경 이력, 2026년 신규 모델, 채팅·코딩·비전 용도별 최적 모델을 정리했습니다.',
       heroImage: '/images/top-open-source-models-ollama-use-case-picks-hero-ko.webp',
       publishDate: '2026-04-04',
-      leadAnswerBlock: '**현재 Ollama 버전은 v0.32.0(2026년 7월 11일)입니다. 6월 이후 추가된 최신 모델은 Laguna XS 2.1(Poolside, 33B 전체/3B 활성 MoE, 에이전틱 코딩)과 Kimi K2.7 Code(Moonshot AI, K2.6 기반 코딩 특화 모델)입니다. 소비자 하드웨어에서 가장 우수한 전반적 모델은 Qwen3.8-27B(61.7% SWE-bench, Q4에서 24GB에 적합)입니다. 기타 추천 모델: Kimi K2.6 또는 Laguna XS 2.1(최전선/에이전틱 코딩), gpt-oss:20b(소형 최강 / 16GB), qwen3:30b(균형잡힌 범용), DeepSeek-R1(추론), Gemma 4(비전/도구 호출, Apple Silicon에서 약 90% 빨라짐), Dolphin 3.0(무검열 범용), Llama 4 Scout(10M 긴 컨텍스트 / 멀티모달). 전체 다운로드 최다는 여전히 Llama 계열입니다.**',
+      leadAnswerBlock: '**현재 Ollama 버전은 v0.33.1(2026년 8월 26일)입니다. v0.33.2는 릴리스 후보로 제공됩니다. 최근 추가된 최신 모델은 Laguna XS 2.1(Poolside, 33B 전체/3B 활성 MoE, 에이전틱 코딩)과 Kimi K2.7 Code(Moonshot AI, K2.6 기반 코딩 특화 모델)입니다. 소비자 하드웨어에서 가장 우수한 전반적 모델은 Qwen3.8-27B(61.7% SWE-bench, Q4에서 24GB에 적합)입니다. 기타 추천 모델: Kimi K2.6 또는 Laguna XS 2.1(최전선/에이전틱 코딩), gpt-oss:20b(소형 최강 / 16GB), qwen3:30b(균형잡힌 범용), DeepSeek-R1(추론), Gemma 4(비전/도구 호출, Apple Silicon에서 약 90% 빨라짐), Dolphin 3.0(무검열 범용), Llama 4 Scout(10M 긴 컨텍스트 / 멀티모달). 전체 다운로드 최다는 여전히 Llama 계열입니다.**',
       quickAnswerTop: {
         ko: {
-          question: '2026년 7월 최신 Ollama 버전과 최고 모델은 무엇입니까?',
-          answer: '최신 Ollama 버전은 v0.32.0(2026년 7월 11일)입니다. 6월 이후 추가된 최신 모델은 Laguna XS 2.1(Poolside, 에이전틱 코딩)과 Kimi K2.7 Code(Moonshot AI)입니다. 2026년 7월 Ollama 상위 오픈소스 모델: Qwen3.8-27B(소비자 하드웨어 전반 최고, 24GB Q4), Kimi K2.6 또는 Laguna XS 2.1(코딩 최강, 최전선/에이전틱), gpt-oss:20b(소형 최강 / 16GB, 조정 가능한 추론), qwen3:30b(균형잡힌 범용), Llama 4 Scout(10M 긴 컨텍스트 / 멀티모달 최고), Dolphin 3.0(무검열 범용 최고), DeepSeek-R1(추론 최고). 설치: ollama pull <model-name>',
+          question: '최신 Ollama 버전과 2026년 최고 모델은 무엇입니까?',
+          answer: '최신 Ollama 버전은 v0.33.1(2026년 8월 26일)이며, v0.33.2는 릴리스 후보 단계입니다. 최근 추가된 최신 모델은 Laguna XS 2.1(Poolside, 에이전틱 코딩)과 Kimi K2.7 Code(Moonshot AI)입니다. 2026년 Ollama 상위 오픈소스 모델: Qwen3.8-27B(소비자 하드웨어 전반 최고, 24GB Q4), Kimi K2.6 또는 Laguna XS 2.1(코딩 최강, 최전선/에이전틱), gpt-oss:20b(소형 최강 / 16GB, 조정 가능한 추론), qwen3:30b(균형잡힌 범용), Llama 4 Scout(10M 긴 컨텍스트 / 멀티모달 최고), Dolphin 3.0(무검열 범용 최고), DeepSeek-R1(추론 최고). 설치: ollama pull <model-name>',
           bullets: [
-            '→최신 버전: Ollama v0.32.0(2026년 7월 11일) — "Chat, Code & Work" 대화형 에이전트 경험, 구형 NVIDIA GPU용 flash attention',
-            '→6월 이후 신규: Laguna XS 2.1(Poolside, 33B 전체/3B 활성 MoE, 에이전틱 코딩), Kimi K2.7 Code(Moonshot AI, 코딩 특화)',
+            '→최신 버전: Ollama v0.33.1(2026년 8월 26일) — MLX Qwen3.8 Flash Next, 구조화된 출력, GPU 타임아웃 수정. v0.33.2는 릴리스 후보',
+            '→v0.33 시리즈 주요 변경: Claude Desktop 게이트웨이 지원(v0.33.0), 데스크톱 온보딩 및 모델 로딩 약 2배 향상(v0.32.15), Qwen 3.8 27B 지원(v0.32.12)',
             '→Qwen3.8-27B — 소비자 하드웨어 전반 최고, 61.7% SWE-bench, Q4에서 24GB에 적합',
             '→Kimi K2.6 — 최전선 코딩(SWE-Bench Pro 58.6), MoE(32B 활성/1T 전체), Modified MIT. Laguna XS 2.1 — 에이전틱 코딩 대안(SWE-bench Verified 70.9%), OpenMDW-1.1',
             '→gpt-oss:20b — 소형 최강 모델, 16GB에서 실행, ~o3-mini 수준, 조정 가능한 추론',
@@ -2994,7 +3189,7 @@ schema: {
             '→Dolphin 3.0 — 무검열 범용 모델 최고, Llama 3.1 기반',
             '→DeepSeek-R1 — 추론/수학 최강; 조정 가능한 추론에는 gpt-oss:20b (DeepSeek는 이후 오픈 웨이트 신세대 모델인 DeepSeek-V4—Flash/Pro—를 출시했습니다. R1/V3는 계속 로컬에서 사용할 수 있습니다.)',
           ],
-          updatedDate: '2026-07-14',
+          updatedDate: '2026-08-28',
         },
       },
       audience: '소비자 하드웨어에서 처음으로 로컬 LLM을 실행하는 입문자',
@@ -3035,10 +3230,10 @@ schema: {
         },
         whatsNew: {
           id: 'whats-new-ollama-july-2026',
-          title: 'Ollama 신규 소식 — 2026년 7월 업데이트',
+          title: '최신 Ollama 버전은 무엇이며 무엇이 바뀌었습니까?',
           content: [
-            '**현재 Ollama 버전: v0.32.0**(2026년 7월 11일 출시). ollama.com/download에서 사용 가능한 최신 안정 릴리스입니다. `curl https://ollama.ai/install.sh | sh`(macOS: `brew upgrade ollama`)로 업데이트한 후 `ollama --version`으로 확인하십시오.',
-            '**v0.31~v0.32 시리즈의 변경 사항(2026년 6월 말~7월):** v0.30.11(6월 25일)은 Claude Code 및 opencode용 자동 설치를 추가하고 Windows 하이브리드 GPU 분류 문제를 수정했습니다. v0.30.12(6월 29일)는 JSON 문자열 내 도구 호출 감지 문제를 수정했습니다. v0.31.1(6월 30일)은 새로운 MLX 배치 행렬곱 커널을 도입하여 멀티토큰 예측을 통해 Apple Silicon에서 Gemma 4의 토큰 생성 속도를 거의 90% 향상시켰습니다. v0.31.2(7월 6일)는 구형 NVIDIA GPU에서 flash attention을 활성화하고 사고형 모델의 구조화된 출력을 수정했습니다. v0.32.0(7월 11일)은 대화형 "Chat, Code & Work" 에이전트 경험을 도입하고 Codex App 통합을 ChatGPT로 이름을 변경했습니다. 전체 노트: github.com/ollama/ollama/releases.',
+            '**현재 Ollama 버전: v0.33.1**(2026년 8월 26일 출시). ollama.com/download에서 사용 가능한 최신 안정 릴리스입니다. 8월 27일 v0.33.2 릴리스 후보가 나왔지만 아직 안정 버전으로 표시되지 않았습니다. `curl https://ollama.ai/install.sh | sh`(macOS: `brew upgrade ollama`)로 업데이트한 후 `ollama --version`으로 확인하십시오.',
+            '**v0.32~v0.33 시리즈의 변경 사항(2026년 7~8월):** v0.32.0(7월 11일)은 "Chat, Code & Work" 대화형 에이전트 경험을 도입했습니다. v0.32.12(8월 14일)는 Qwen 3.8 27B 지원과 Apple Silicon용 MLX 최적화 버전을 추가했습니다. v0.32.13(8월 14일)은 qwen3.8용 개발자 지시문 지원을 추가했습니다. v0.32.14(8월 15일)는 llama-server 렌더러용 WebP 트랜스코딩을 제공했습니다. v0.32.15(8월 19일)는 새로운 데스크톱 온보딩 흐름을 추가하고 모델 로딩 속도를 높여 첫 토큰까지의 시간을 약 절반으로 줄였습니다. v0.33.0(8월 21일)은 Claude Desktop을 서드파티 게이트웨이로 지원하고 KV 캐시 복원 지점의 안정성을 크게 개선해, 취소된 긴 prefill을 처음부터 다시 처리하지 않고 이어갈 수 있게 했습니다. v0.33.1(8월 26일)은 MLX Qwen3.8 Flash Next 지원, 구조화된 출력, 느린 스토리지 환경의 GPU 타임아웃 수정을 추가했습니다. 전체 노트: github.com/ollama/ollama/releases',
             '**지난 업데이트 이후 추가된 최신 모델(2026년 6월 말~7월):**',
           ],
           items: [
@@ -3051,7 +3246,7 @@ schema: {
             '**gpt-oss**(OpenAI, 2026년) — 오픈 웨이트 MoE: gpt-oss:20b(21B 전체 / 3.6B 활성, 16GB에서 실행, ~o3-mini 수준, 조정 가능한 추론)와 gpt-oss:120b(80GB). Pull: `ollama pull gpt-oss:20b`',
             '**Gemma 4**(Google, 2026년 4월 2일) — 멀티모달 크기 E2B / E4B / E12B(26B MoE) / E27B(31B 밀집), 모두 비전과 도구 호출 지원. Apple Silicon에서 이제 약 90% 빨라졌습니다(2026년 7월 MLX 업데이트). E4B는 ~6GB VRAM에서 실행됩니다. Pull: `ollama pull gemma4:e4b`',
           ],
-          codeBlock: '# Ollama를 최신 버전으로 업데이트 (v0.32.0)\ncurl https://ollama.ai/install.sh | sh\n\n# 또는 Mac에서: brew upgrade ollama\n\n# 현재 버전 확인\nollama --version  # 출력: ollama version 0.32.0\n\n# 2026년 7월 최신 모델 Pull\nollama pull laguna-xs-2.1\nollama pull kimi-k2.7-code\nollama pull kimi-k2.6',
+          codeBlock: '# Ollama를 최신 버전으로 업데이트 (v0.33.1)\ncurl https://ollama.ai/install.sh | sh\n\n# 또는 Mac에서: brew upgrade ollama\n\n# 현재 버전 확인\nollama --version  # 출력: ollama version 0.33.1\n\n# 2026년 7월 최신 모델 Pull\nollama pull laguna-xs-2.1\nollama pull kimi-k2.7-code\nollama pull kimi-k2.6',
           codeLanguage: 'bash',
         },
         mostPopular: {
@@ -3230,6 +3425,18 @@ schema: {
           title: 'Ollama 오픈소스 모델에 관한 자주 묻는 질문',
           faqs: [
             {
+              q: '최신 Ollama 버전은 무엇입니까?',
+              a: '최신 안정 버전은 v0.33.1이며 2026년 8월 26일에 출시되었습니다. 8월 27일에 v0.33.2 릴리스 후보가 뒤이어 나왔지만 아직 안정 버전으로 표시되지 않았습니다. ollama.com/download에서 받거나, Linux에서는 `curl https://ollama.ai/install.sh | sh`, macOS에서는 `brew upgrade ollama`로 업데이트하십시오.',
+            },
+            {
+              q: 'Ollama 변경 이력과 릴리스 노트는 어디에서 볼 수 있습니까?',
+              a: '모든 버전의 릴리스 노트는 github.com/ollama/ollama/releases에 있으며 태그별 날짜와 변경 이력이 정리되어 있습니다. 최신 항목은 v0.33.1(2026년 8월 26일 — MLX Qwen3.8 Flash Next, 구조화된 출력, GPU 타임아웃 수정), v0.33.0(8월 21일 — Claude Desktop 게이트웨이, KV 캐시 복원 지점), v0.32.15(8월 19일 — 새 데스크톱 온보딩, 모델 로딩 약 2배 향상)입니다.',
+            },
+            {
+              q: '설치된 Ollama 버전은 어떻게 확인합니까?',
+              a: '터미널에서 `ollama --version`을 실행하십시오. `ollama version 0.33.1`과 같은 줄이 출력됩니다. 번호가 현재 릴리스보다 낮으면 `curl https://ollama.ai/install.sh | sh`(Linux) 또는 `brew upgrade ollama`(macOS)로 업데이트한 뒤 `ollama --version`을 다시 실행해 확인하십시오.',
+            },
+            {
               q: 'Ollama 라이브러리에는 몇 개의 모델이 있습니까?',
               a: 'Ollama 라이브러리에는 공식 지원을 받는 수백 개의 큐레이팅된 모델이 있으며, 새로운 오픈 웨이트 릴리스가 나올 때마다 매주 늘어나고 있습니다. Hugging Face에는 커스텀 Modelfile을 통해 Ollama로 로드할 수 있는 수천 개의 추가 GGUF 모델이 있습니다.',
             },
@@ -3259,7 +3466,7 @@ schema: {
             },
             {
               q: 'Ollama 라이브러리는 얼마나 자주 새 모델로 업데이트됩니까?',
-              a: 'Ollama 팀은 주요 릴리스 후 며칠에서 몇 주 내에 새 모델을 추가합니다. Laguna XS 2.1(2026년 7월 2일), Kimi K2.7 Code, Kimi K2.6, Qwen 3.6은 모두 출시 후 며칠 내에 등장했습니다. 현재 Ollama 버전은 v0.32.0(2026년 7월 11일)입니다. 새 모델 발표를 위해 Ollama GitHub 저장소(github.com/ollama/ollama) 또는 Ollama Twitter/X 계정을 팔로우하십시오.',
+              a: 'Ollama 팀은 주요 릴리스 후 며칠에서 몇 주 내에 새 모델을 추가합니다. Laguna XS 2.1(2026년 7월 2일), Kimi K2.7 Code, Kimi K2.6, Qwen 3.6은 모두 출시 후 며칠 내에 등장했습니다. 현재 Ollama 버전은 v0.33.1(2026년 8월 26일)입니다. 새 모델 발표를 위해 Ollama GitHub 저장소(github.com/ollama/ollama) 또는 Ollama Twitter/X 계정을 팔로우하십시오.',
             },
             {
               q: '`ollama pull`과 `ollama run`의 차이는 무엇입니까?',
@@ -3299,7 +3506,7 @@ schema: {
             '[Ollama. (2026). "Ollama Model Library." ollama.com/library](https://ollama.com/library) -- 수백 개의 큐레이팅된 모델, 다운로드 수, 태그, 양자화 옵션이 있는 공식 모델 라이브러리.',
             '[Google DeepMind. (2026). "Gemma 4 Technical Report."](https://ai.google.dev/) -- 2026년 4월 출시된 비전 + 도구 호출 기능.',
             '[Poolside. (2026). "Introducing Laguna XS 2.1." poolside.ai](https://poolside.ai/blog/introducing-laguna-xs-2-1) -- 33B/3B 활성 MoE 에이전틱 코딩 모델, SWE-bench Verified 70.9%, OpenMDW-1.1 라이선스.',
-            '[Ollama. (2026). "Ollama Releases." github.com/ollama/ollama/releases](https://github.com/ollama/ollama/releases) -- 공식 릴리스 노트, v0.32.0(2026년 7월 11일).',
+            '[Ollama. (2026). "Ollama Releases." github.com/ollama/ollama/releases](https://github.com/ollama/ollama/releases) -- 공식 릴리스 노트, v0.33.1(2026년 8월 26일).',
           ],
         },
       },
@@ -3331,20 +3538,20 @@ schema: {
       current_models_mentioned: ['Laguna XS 2.1', 'Kimi K2.7 Code', 'Qwen3.8-27B', 'qwen3:30b', 'qwen3-coder:30b', 'Kimi K2.6', 'gpt-oss:20b', 'gpt-oss:120b', 'DeepSeek-R1', 'Gemma 4', 'GLM-5.3', 'Llama 4 Scout', 'Devstral Small 24B', 'Dolphin 3.0', 'Mistral Small', 'Phi-4 Mini'],
       current_benchmarks_used: ['SWE-bench', 'SWE-bench Verified', 'SWE-Bench Pro', 'SWE-bench Multilingual', 'HumanEval', 'MATH'],
       theme: 'Best Models',
-      title: 'تحديث ⁨Ollama⁩ يوليو ⁨2026⁩: ⁨v0.32.0⁩ + أفضل النماذج حسب الاستخدام',
-      seoTitle: '⁨Ollama⁩ يوليو ⁨2026⁩: تحديث ⁨v0.32.0⁩ + أفضل النماذج حسب الاستخدام',
-      intro: 'الإصدار الحالي من Ollama هو v0.32.0 (11 يوليو 2026)، ويضيف تجربة وكيل تفاعلية بعنوان "Chat, Code & Work". أحدث النماذج المضافة منذ يونيو هي Laguna XS 2.1 (من Poolside، للبرمجة الوكيلة) وKimi K2.7 Code (من Moonshot AI). لا يزال أفضل خيار عام على عتاد المستهلك هو Qwen3.8-27B (61.7% SWE-bench، يلائم 24 GB عند Q4)؛ ويعتمد أفضل خيار للبرمجة على إعدادك -- راجع التفصيل حسب حالة الاستخدام أدناه.',
-      metaDescription: '⁨Ollama⁩ ⁨v0.32.0⁩ (⁨11⁩ يوليو ⁨2026⁩): الإصدار الحالي، أحدث النماذج، وأفضل نموذج ⁨Ollama⁩ للدردشة والبرمجة وRAG والرؤية والاستدلال. معايير موثقة وأوامر ⁨pull⁩.',
+      title: 'أحدث إصدار ⁨Ollama⁩ ⁨2026⁩: ⁨v0.33.1⁩ + أفضل النماذج حسب الاستخدام',
+      seoTitle: 'أحدث إصدار ⁨Ollama⁩ ⁨2026⁩: ⁨v0.33.1⁩ + أفضل النماذج',
+      intro: 'الإصدار الحالي من Ollama هو v0.33.1 (26 أغسطس 2026)، ويضيف دعم MLX لـ Qwen3.8 Flash Next والمخرجات المهيكلة وإصلاحات مهلة GPU. كما جلبت سلسلة v0.33 دعم بوابة Claude Desktop. أحدث النماذج المضافة هي Laguna XS 2.1 (من Poolside، للبرمجة الوكيلة) وKimi K2.7 Code (من Moonshot AI). لا يزال أفضل خيار عام على عتاد المستهلك هو Qwen3.8-27B (61.7% SWE-bench، يلائم 24 GB عند Q4)؛ ويعتمد أفضل خيار للبرمجة على إعدادك -- راجع التفصيل حسب حالة الاستخدام أدناه.',
+      metaDescription: 'أحدث إصدار من ⁨Ollama⁩ هو ⁨v0.33.1⁩. سجل التغييرات الكامل ⁨v0.32-v0.33⁩، والنماذج الجديدة في ⁨2026⁩، وأفضل نموذج للدردشة والبرمجة والرؤية.',
       heroImage: '/images/top-open-source-models-ollama-use-case-picks-hero-ar.webp',
       publishDate: '2026-04-04',
-      leadAnswerBlock: '**الإصدار الحالي من Ollama هو v0.32.0 (11 يوليو 2026). أحدث النماذج المضافة منذ يونيو هي Laguna XS 2.1 (من Poolside، MoE بحجم 33B إجمالي/3B نشط، للبرمجة الوكيلة) وKimi K2.7 Code (من Moonshot AI، مخصص للبرمجة، مبني على K2.6). أفضل خيار عام على عتاد المستهلك هو Qwen3.8-27B (61.7% SWE-bench، يلائم 24 GB عند Q4). خيارات بارزة أخرى: Kimi K2.6 أو Laguna XS 2.1 (برمجة متقدمة/وكيلة)، gpt-oss:20b (أفضل نموذج صغير / 16 GB)، qwen3:30b (متوازن لكل الاستخدامات)، DeepSeek-R1 (الاستدلال)، Gemma 4 (الرؤية/استدعاء الأدوات، أصبح الآن أسرع بنحو 90% على Apple Silicon)، Dolphin 3.0 (عام الأغراض غير الخاضع للرقابة)، وLlama 4 Scout (سياق طويل 10M / متعدد الوسائط). الأكثر تنزيلاً عمومًا لا تزال عائلة Llama.**',
+      leadAnswerBlock: '**الإصدار الحالي من Ollama هو v0.33.1 (26 أغسطس 2026)، ويتوفر v0.33.2 كمرشّح إصدار. أحدث النماذج المضافة هي Laguna XS 2.1 (من Poolside، MoE بحجم 33B إجمالي/3B نشط، للبرمجة الوكيلة) وKimi K2.7 Code (من Moonshot AI، مخصص للبرمجة، مبني على K2.6). أفضل خيار عام على عتاد المستهلك هو Qwen3.8-27B (61.7% SWE-bench، يلائم 24 GB عند Q4). خيارات بارزة أخرى: Kimi K2.6 أو Laguna XS 2.1 (برمجة متقدمة/وكيلة)، gpt-oss:20b (أفضل نموذج صغير / 16 GB)، qwen3:30b (متوازن لكل الاستخدامات)، DeepSeek-R1 (الاستدلال)، Gemma 4 (الرؤية/استدعاء الأدوات، أصبح الآن أسرع بنحو 90% على Apple Silicon)، Dolphin 3.0 (عام الأغراض غير الخاضع للرقابة)، وLlama 4 Scout (سياق طويل 10M / متعدد الوسائط). الأكثر تنزيلاً عمومًا لا تزال عائلة Llama.**',
       quickAnswerTop: {
         ar: {
-          question: 'ما هو أحدث إصدار Ollama وأفضل النماذج في يوليو 2026؟',
-          answer: 'أحدث إصدار Ollama هو v0.32.0 (11 يوليو 2026). أحدث النماذج المضافة منذ يونيو هي Laguna XS 2.1 (من Poolside، للبرمجة الوكيلة) وKimi K2.7 Code (من Moonshot AI). أفضل نماذج Ollama مفتوحة المصدر في يوليو 2026: Qwen3.8-27B (أفضل خيار عام على عتاد المستهلك، 24 GB Q4)، Kimi K2.6 أو Laguna XS 2.1 (أفضل برمجة، متقدمة/وكيلة)، gpt-oss:20b (أفضل نموذج صغير / 16 GB، استدلال قابل للضبط)، qwen3:30b (متوازن لكل الاستخدامات)، Llama 4 Scout (أفضل سياق طويل 10M / متعدد الوسائط)، Dolphin 3.0 (أفضل نموذج عام الأغراض غير خاضع للرقابة)، وDeepSeek-R1 (أفضل استدلال). للتثبيت: ollama pull <model-name>',
+          question: 'ما هو أحدث إصدار Ollama وأفضل النماذج في 2026؟',
+          answer: 'أحدث إصدار Ollama هو v0.33.1 (26 أغسطس 2026)، مع v0.33.2 كمرشّح إصدار. أحدث النماذج المضافة هي Laguna XS 2.1 (من Poolside، للبرمجة الوكيلة) وKimi K2.7 Code (من Moonshot AI). أفضل نماذج Ollama مفتوحة المصدر في يوليو 2026: Qwen3.8-27B (أفضل خيار عام على عتاد المستهلك، 24 GB Q4)، Kimi K2.6 أو Laguna XS 2.1 (أفضل برمجة، متقدمة/وكيلة)، gpt-oss:20b (أفضل نموذج صغير / 16 GB، استدلال قابل للضبط)، qwen3:30b (متوازن لكل الاستخدامات)، Llama 4 Scout (أفضل سياق طويل 10M / متعدد الوسائط)، Dolphin 3.0 (أفضل نموذج عام الأغراض غير خاضع للرقابة)، وDeepSeek-R1 (أفضل استدلال). للتثبيت: ollama pull <model-name>',
           bullets: [
-            '→أحدث إصدار: Ollama v0.32.0 (11 يوليو 2026) — تجربة وكيل تفاعلية "Chat, Code & Work"، وflash attention لبطاقات NVIDIA الأقدم',
-            '→الأحدث منذ يونيو: Laguna XS 2.1 (من Poolside، MoE بحجم 33B/3B نشط، للبرمجة الوكيلة)، Kimi K2.7 Code (من Moonshot AI، مخصص للبرمجة)',
+            '→أحدث إصدار: Ollama v0.33.1 (26 أغسطس 2026) — دعم MLX لـ Qwen3.8 Flash Next، ومخرجات مهيكلة، وإصلاحات مهلة GPU. وv0.33.2 مرشّح إصدار',
+            '→أبرز تغييرات سلسلة v0.33: دعم بوابة Claude Desktop (v0.33.0)، وإعداد جديد لسطح المكتب وتحميل أسرع للنماذج بنحو الضعف (v0.32.15)، ودعم Qwen 3.8 27B (v0.32.12)',
             '→Qwen3.8-27B — أفضل خيار عام على عتاد المستهلك، 61.7% SWE-bench، يلائم 24 GB عند Q4',
             '→Kimi K2.6 — برمجة متقدمة (SWE-Bench Pro 58.6)، MoE (32B نشط/1T إجمالي)، Modified MIT. وLaguna XS 2.1 — بديل للبرمجة الوكيلة (SWE-bench Verified 70.9%)، OpenMDW-1.1',
             '→gpt-oss:20b — أفضل نموذج صغير، يعمل في 16 GB، بمستوى ~o3-mini، استدلال قابل للضبط',
@@ -3396,8 +3603,8 @@ schema: {
           id: 'whats-new-ollama-july-2026',
           title: 'الجديد في Ollama — تحديث يوليو 2026',
           content: [
-            '**إصدار Ollama الحالي: v0.32.0** (صدر في 11 يوليو 2026). هذا هو أحدث إصدار مستقر، ومتاح عبر ollama.com/download. حدِّث باستخدام `curl https://ollama.ai/install.sh | sh` (على macOS: `brew upgrade ollama`)، ثم تأكّد عبر `ollama --version`.',
-            '**ما الذي تغيّر في سلسلة v0.31–v0.32 (أواخر يونيو–يوليو 2026):** أضاف v0.30.11 (25 يونيو) التثبيت التلقائي لـ Claude Code وopencode، وأصلح تصنيف بطاقات GPU الهجينة في Windows. أصلح v0.30.12 (29 يونيو) اكتشاف استدعاء الأدوات داخل سلاسل JSON. قدّم v0.31.1 (30 يونيو) نواة ضرب مصفوفات MLX جديدة تجعل Gemma 4 يولّد التوكنات أسرع بنسبة تقارب 90% على Apple Silicon عبر التنبؤ متعدد التوكن. مكّن v0.31.2 (6 يوليو) خاصية flash attention على بطاقات NVIDIA الأقدم، وأصلح المخرجات المنظّمة لنماذج الاستدلال. قدّم v0.32.0 (11 يوليو) تجربة وكيل تفاعلية بعنوان "Chat, Code & Work"، وأعاد تسمية تكامل تطبيق Codex إلى ChatGPT. الملاحظات الكاملة: github.com/ollama/ollama/releases.',
+            '**إصدار Ollama الحالي: v0.33.1** (صدر في 26 أغسطس 2026). هذا هو أحدث إصدار مستقر، ومتاح عبر ollama.com/download. وصدر مرشّح الإصدار v0.33.2 في 27 أغسطس لكنه لم يُعتمد مستقرًا بعد. حدِّث باستخدام `curl https://ollama.ai/install.sh | sh` (على macOS: `brew upgrade ollama`)، ثم تأكّد عبر `ollama --version`.',
+            '**ما الذي تغيّر في سلسلة v0.32–v0.33 (يوليو–أغسطس 2026):** قدّم v0.32.0 (11 يوليو) تجربة وكيل تفاعلية بعنوان "Chat, Code & Work". وأضاف v0.32.12 (14 أغسطس) دعم Qwen 3.8 27B مع نسخة محسّنة بـ MLX لأجهزة Apple Silicon. وأضاف v0.32.13 (14 أغسطس) دعم تعليمات المطوّر لـ qwen3.8. وقدّم v0.32.14 (15 أغسطس) تحويل WebP لمحرّكات عرض llama-server. وأضاف v0.32.15 (19 أغسطس) تدفّق إعداد جديدًا لسطح المكتب وقلّص زمن أول توكن إلى النصف تقريبًا بفضل تحميل أسرع للنماذج. ومكّن v0.33.0 (21 أغسطس) استخدام Claude Desktop كبوابة من طرف ثالث، وجعل نقاط استعادة ذاكرة KV أكثر موثوقية بكثير، بحيث يمكن استئناف عملية prefill طويلة أُلغيت بدل إعادة معالجتها من الصفر. وأضاف v0.33.1 (26 أغسطس) دعم MLX لـ Qwen3.8 Flash Next والمخرجات المهيكلة وإصلاحات مهلة GPU على وحدات التخزين البطيئة. الملاحظات الكاملة: github.com/ollama/ollama/releases',
             '**أحدث النماذج المضافة منذ آخر تحديث (أواخر يونيو–يوليو 2026):**',
           ],
           items: [
@@ -3410,7 +3617,7 @@ schema: {
             '**gpt-oss** (OpenAI، 2026) — MoE مفتوح الأوزان: gpt-oss:20b (21B إجمالي / 3.6B نشط، يعمل في 16 GB، بمستوى ~o3-mini، استدلال قابل للضبط) وgpt-oss:120b (80 GB). للتنزيل: `ollama pull gpt-oss:20b`',
             '**Gemma 4** (Google، 2 أبريل 2026) — أحجام متعددة الوسائط E2B / E4B / E12B (26B MoE) / E27B (31B كثيف)، جميعها تدعم الرؤية واستدعاء الأدوات. أصبح الآن أسرع بنحو 90% على Apple Silicon (تحديث MLX يوليو 2026). يعمل E4B في ~6 GB VRAM. للتنزيل: `ollama pull gemma4:e4b`',
           ],
-          codeBlock: '# Update Ollama to the latest version (v0.32.0)\ncurl https://ollama.ai/install.sh | sh\n\n# Or on Mac: brew upgrade ollama\n\n# Check your current version\nollama --version  # outputs: ollama version 0.32.0\n\n# Pull the newest July 2026 models\nollama pull laguna-xs-2.1\nollama pull kimi-k2.7-code\nollama pull kimi-k2.6',
+          codeBlock: '# Update Ollama to the latest version (v0.33.1)\ncurl https://ollama.ai/install.sh | sh\n\n# Or on Mac: brew upgrade ollama\n\n# Check your current version\nollama --version  # outputs: ollama version 0.33.1\n\n# Pull the newest July 2026 models\nollama pull laguna-xs-2.1\nollama pull kimi-k2.7-code\nollama pull kimi-k2.6',
           codeLanguage: 'bash',
         },
         mostPopular: {
@@ -3586,6 +3793,18 @@ schema: {
           title: 'أسئلة شائعة حول النماذج مفتوحة المصدر على Ollama',
           faqs: [
             {
+              q: 'ما هو أحدث إصدار من Ollama؟',
+              a: 'أحدث إصدار مستقر من Ollama هو v0.33.1، وقد صدر في 26 أغسطس 2026. وتبعه مرشّح الإصدار v0.33.2 في 27 أغسطس، لكنه لم يُعتمد مستقرًا بعد. نزّله من ollama.com/download، أو حدّثه عبر `curl https://ollama.ai/install.sh | sh` على Linux و`brew upgrade ollama` على macOS.',
+            },
+            {
+              q: 'أين أجد سجل تغييرات Ollama وملاحظات الإصدارات؟',
+              a: 'تتوفّر ملاحظات كل إصدار على github.com/ollama/ollama/releases، مع تاريخ كل وسم وسجل تغييراته. وأحدث المدخلات هي v0.33.1 (26 أغسطس 2026 — دعم MLX لـ Qwen3.8 Flash Next، ومخرجات مهيكلة، وإصلاحات مهلة GPU)، وv0.33.0 (21 أغسطس — بوابة Claude Desktop، ونقاط استعادة ذاكرة KV)، وv0.32.15 (19 أغسطس — إعداد جديد لسطح المكتب، وتحميل أسرع للنماذج بنحو الضعف).',
+            },
+            {
+              q: 'كيف أتحقق من إصدار Ollama المثبّت لديّ؟',
+              a: 'نفّذ `ollama --version` في الطرفية. سيطبع سطرًا مثل `ollama version 0.33.1`. وإذا كان الرقم أقل من الإصدار الحالي، فحدّث عبر `curl https://ollama.ai/install.sh | sh` على Linux أو `brew upgrade ollama` على macOS، ثم نفّذ `ollama --version` مجددًا للتأكيد.',
+            },
+            {
               q: 'كم عدد النماذج في مكتبة Ollama؟',
               a: 'تضم مكتبة Ollama مئات النماذج المنسّقة بدعم رسمي، وينمو العدد أسبوعيًا مع صدور إصدارات جديدة مفتوحة الأوزان. وتستضيف Hugging Face آلاف نماذج GGUF الإضافية التي يمكن تحميلها عبر Ollama باستخدام ملفات Modelfile مخصّصة.',
             },
@@ -3651,7 +3870,7 @@ schema: {
             '[Ollama. (2026). "Ollama Model Library." ollama.com/library](https://ollama.com/library) -- مكتبة النماذج الرسمية بمئات النماذج المنسّقة وأعداد التنزيلات والوسوم وخيارات التكميم.',
             '[Google DeepMind. (2026). "Gemma 4 Technical Report."](https://ai.google.dev/) -- قدرات الرؤية + استدعاء الأدوات الصادرة في أبريل 2026.',
             '[Poolside. (2026). "Introducing Laguna XS 2.1." poolside.ai](https://poolside.ai/blog/introducing-laguna-xs-2-1) -- نموذج برمجة وكيلة MoE بحجم 33B/3B نشط، SWE-bench Verified 70.9%، رخصة OpenMDW-1.1.',
-            '[Ollama. (2026). "Ollama Releases." github.com/ollama/ollama/releases](https://github.com/ollama/ollama/releases) -- ملاحظات الإصدارات الرسمية، v0.32.0 (11 يوليو 2026).',
+            '[Ollama. (2026). "Ollama Releases." github.com/ollama/ollama/releases](https://github.com/ollama/ollama/releases) -- ملاحظات الإصدارات الرسمية، v0.33.1 (26 أغسطس 2026).',
           ],
         },
       },
