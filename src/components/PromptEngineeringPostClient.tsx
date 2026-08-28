@@ -14,6 +14,7 @@ import { GlossaryComparisonTable } from '@/components/GlossaryComparisonTable'
 import { ImageLightbox } from '@/components/ImageLightbox'
 import { CopyButton } from '@/components/CopyButton'
 import { parseContentBlocks } from '@/lib/parseContentBlocks'
+import { slugifySectionId, slugifyTermId } from '@/lib/sectionAnchor'
 
 interface Props {
   slug: string
@@ -642,9 +643,11 @@ function renderInlineLinks(text: string, lang: Language = 'en') {
 }
 
 function GlossaryTermCard({ row, lang, pathIds }: { row: { [key: string]: string }; lang: Language; pathIds?: string[] }) {
-  const termId = `term-${(row['Term'] || '').toLowerCase().replace(/[^a-z0-9]+/g, '-')}`
+  const termId = slugifyTermId(row['Term'] || '')
+  // No hover:border on this card — it has no link or handler, and the hover response
+  // read as "clickable" to readers, producing dead clicks.
   return (
-    <div id={termId} className="border border-primary/15 rounded-xl p-5 mb-3 hover:border-primary/30 transition-colors">
+    <div id={termId} className="border border-primary/15 rounded-xl p-5 mb-3 scroll-mt-24">
       {/* Term name */}
       <h3 className="font-bold text-text-primary text-base mb-2">{row['Term']}</h3>
 
@@ -764,7 +767,7 @@ function LearningPathCard({ path }: { path: LearningPath }) {
 
       <ol className="space-y-1.5">
         {path.terms.map((term, i) => {
-          const anchor = `term-${term.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`
+          const anchor = slugifyTermId(term)
           return (
             <li key={term} className="flex items-center gap-2 text-sm">
               <span className={`flex-shrink-0 w-5 h-5 rounded-full flex items-center justify-center text-xs font-bold text-white ${path.color.dot}`}>{i + 1}</span>
@@ -992,7 +995,7 @@ function SectionBlock({ section, colors, id, lang, slug, isGlossary, termPathMap
 
       {/* Image with caption */}
       {section.image && (
-        <figure className="my-8 flex flex-col items-center cursor-zoom-in" onClick={() => setLightboxImage({
+        <figure role="button" tabIndex={0} onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); e.currentTarget.click() } }} className="my-8 flex flex-col items-center cursor-zoom-in" onClick={() => setLightboxImage({
           src: section.image!,
           alt: section.imageCaption || (section.title ? `${section.title} diagram` : 'PromptQuorum article diagram'),
           caption: section.imageCaption,
@@ -1297,7 +1300,9 @@ function PromptEngineeringPostContent({ slug, initialLang, articleData }: Props)
         {/* Audience & difficulty signal (Rule 29) */}
         {article.educationalLevel && (
           <aside className="flex flex-wrap gap-2 mb-6 text-sm" aria-label="Article difficulty and audience">
-            <span className="inline-flex items-center gap-1.5 bg-primary/8 border border-primary/20 rounded-md px-3 py-1 font-medium text-primary">
+            {/* Metadata labels, not filter chips — no fill, no pill shape, so they don't
+                read as the interactive chips used elsewhere on this cluster. */}
+            <span className="inline-flex items-center gap-1.5 border border-gray-200 rounded-md px-3 py-1 font-medium text-text-primary">
               <span className="text-text-secondary font-normal">{POST_UI.levelLabel[lang] ?? POST_UI.levelLabel['en']}:</span>
               {LEVEL_DISPLAY[article.educationalLevel]?.[lang] ?? LEVEL_DISPLAY[article.educationalLevel]?.['en'] ?? article.educationalLevel}
             </span>
@@ -1425,7 +1430,7 @@ function PromptEngineeringPostContent({ slug, initialLang, articleData }: Props)
               const term = row['Term'] || ''
               const letter = term.charAt(0).toUpperCase()
               if (/[A-Z]/.test(letter) && !alphaIndex[letter]) {
-                alphaIndex[letter] = `term-${term.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`
+                alphaIndex[letter] = slugifyTermId(term)
               }
             })
           })
@@ -1450,16 +1455,24 @@ function PromptEngineeringPostContent({ slug, initialLang, articleData }: Props)
                   <p className="text-text-secondary text-sm mb-6">The 10 terms that matter most for AI practitioners building production systems in 2026 — ranked by industry adoption and search demand.</p>
                   <ol className="space-y-3">
                     {TRENDING_TERMS_2026.map(({ rank, term, reason }) => {
-                      const anchor = `term-${term.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`
+                      const anchor = slugifyTermId(term)
                       return (
-                        <li key={rank} className="flex gap-4 items-start p-4 border border-border rounded-xl hover:border-primary/30 transition-colors">
-                          <span className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 text-primary font-bold text-sm flex items-center justify-center">{rank}</span>
-                          <div>
-                            <a href={lang === 'en' ? `/prompt-engineering/prompt-engineering-glossary#${anchor}` : `/${lang}/prompt-engineering/prompt-engineering-glossary#${anchor}`} className="font-semibold text-text-primary hover:text-primary transition-colors">
-                              {term}
-                            </a>
-                            <p className="text-sm text-text-secondary mt-0.5">{reason}</p>
-                          </div>
+                        // The card carries the hover affordance, so the whole card navigates —
+                        // previously only the term itself did, and clicks on the rank badge or
+                        // the reason text did nothing.
+                        <li key={rank}>
+                          <a
+                            href={lang === 'en' ? `/prompt-engineering/prompt-engineering-glossary#${anchor}` : `/${lang}/prompt-engineering/prompt-engineering-glossary#${anchor}`}
+                            className="flex gap-4 items-start p-4 border border-border rounded-xl hover:border-primary/30 transition-colors group"
+                          >
+                            <span className="flex-shrink-0 w-8 h-8 rounded-full bg-primary/10 text-primary font-bold text-sm flex items-center justify-center">{rank}</span>
+                            <div>
+                              <span className="font-semibold text-text-primary group-hover:text-primary transition-colors">
+                                {term}
+                              </span>
+                              <p className="text-sm text-text-secondary mt-0.5">{reason}</p>
+                            </div>
+                          </a>
                         </li>
                       )
                     })}
@@ -1498,14 +1511,18 @@ function PromptEngineeringPostContent({ slug, initialLang, articleData }: Props)
                       <a
                         key={letter}
                         href={`#${anchor}`}
-                        className="w-7 h-7 flex items-center justify-center text-xs font-bold text-primary hover:bg-primary/10 rounded transition-colors"
+                        className="w-7 h-7 flex items-center justify-center text-xs font-bold text-primary bg-primary/5 hover:bg-primary/15 rounded transition-colors"
                       >
                         {letter}
                       </a>
                     ) : (
+                      // Letters with no term get no box and no bold weight — previously they were
+                      // the same size and shape as the links, differing only in opacity, so
+                      // readers clicked them expecting a jump.
                       <span
                         key={letter}
-                        className="w-7 h-7 flex items-center justify-center text-xs font-bold text-text-secondary/30 cursor-default"
+                        aria-hidden="true"
+                        className="w-7 h-7 flex items-center justify-center text-xs font-normal text-text-secondary/25 cursor-default select-none"
                       >
                         {letter}
                       </span>
@@ -1670,7 +1687,10 @@ function PromptEngineeringPostContent({ slug, initialLang, articleData }: Props)
               .filter(([, section]) => !section.rows || section.rows.length > 0)
 
             return sectionsToRender.map(([key, section]) => {
-              // Glossary explicit IDs take precedence; all other titled sections get auto-generated IDs
+              // Glossary section keys map to fixed IDs; everything else resolves through the
+              // shared helper, which honours the authored `section.id` that `toc[].anchor`
+              // is written against. This client used to skip `section.id` entirely and
+              // slugify the title instead, which left 67% of this cluster's TOC links dead.
               const glossaryIdMap: Record<string, string> = {
                 'corePrompting': 'core-prompting',
                 'agentsOrchestration': 'agents-orchestration',
@@ -1679,8 +1699,7 @@ function PromptEngineeringPostContent({ slug, initialLang, articleData }: Props)
                 'advancedTechniques': 'advanced-techniques',
                 'metricsProduction': 'metrics-production',
               }
-              const sectionId = glossaryIdMap[key]
-                ?? (section.title ? section.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') : undefined)
+              const sectionId = glossaryIdMap[key] ?? slugifySectionId(section, key)
               return (
                 <SectionBlock key={key} section={section} colors={colors} id={sectionId} lang={lang} slug={slug} isGlossary={slug === 'prompt-engineering-glossary'} termPathMap={slug === 'prompt-engineering-glossary' ? termPathMap : undefined} />
               )

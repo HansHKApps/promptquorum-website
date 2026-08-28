@@ -30,10 +30,10 @@ export function useLang(initialLang?: Lang): Lang {
         const params = new URLSearchParams(window.location.search)
         const rawLang = params.get('lang')
 
-        // Treat ?lang=en same as no lang param (redirect to base URL)
-        if (rawLang === 'en' && typeof window !== 'undefined') {
-          const newUrl = window.location.pathname + window.location.hash
-          window.history.replaceState({}, '', newUrl)
+        // Treat ?lang=en same as no lang param. The URL cleanup itself is deferred to the
+        // effect below — calling history.replaceState() here ran it inside the hydration
+        // pass, racing usePathname and producing React hydration errors (#418).
+        if (rawLang === 'en') {
           newLang = 'en'
         } else if (rawLang && VALID_LANGS.includes(rawLang as Lang)) {
           newLang = rawLang as Lang
@@ -47,6 +47,14 @@ export function useLang(initialLang?: Lang): Lang {
     read()
     window.addEventListener('popstate', read)
     return () => window.removeEventListener('popstate', read)
+  }, [])
+
+  // Strip a redundant `?lang=en` from the URL. Kept in its own effect, after the one
+  // above, so the rewrite never happens during the hydration commit.
+  useEffect(() => {
+    if (window.location.pathname.match(PATH_LOCALE_RE)) return
+    if (new URLSearchParams(window.location.search).get('lang') !== 'en') return
+    window.history.replaceState({}, '', window.location.pathname + window.location.hash)
   }, [])
 
   return lang

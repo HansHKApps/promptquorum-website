@@ -1,3 +1,5 @@
+'use client'
+
 import { useRef, useState, useEffect } from 'react'
 import { useLang } from '@/hooks/useLang'
 

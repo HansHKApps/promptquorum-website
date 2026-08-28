@@ -364,9 +364,11 @@ export function OptimizationShowcase({ lang = 'en' }: OptimizationShowcaseProps)
     <div className="max-w-4xl mx-auto">
       {/* Header */}
       <div className="mb-8 pb-6 border-b border-gray-200">
-        <a href="#" className="inline-flex items-center gap-1.5 text-gray-600 hover:text-purple-600 transition-colors text-sm font-medium mb-4">
+        {/* Mock-up of the app's back control, not real navigation — was an `href="#"`
+            anchor that jumped to the top of the page and read as broken. */}
+        <span className="inline-flex items-center gap-1.5 text-gray-600 text-sm font-medium mb-4" aria-hidden="true">
           {t.backToPrompt}
-        </a>
+        </span>
         <div>
           <h2 className="text-2xl font-semibold text-gray-900 mb-1">{t.optimizationResults}</h2>
           <p className="text-gray-600 text-sm">{t.reviewRefine}</p>

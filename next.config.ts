@@ -110,8 +110,12 @@ const nextConfig: NextConfig = {
   async headers() {
     const cspHeader = [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.onesignal.com https://scripts.clarity.ms https://*.vercel-analytics.com https://*.vercel-insights.com",
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.onesignal.com https://scripts.clarity.ms https://www.clarity.ms https://*.clarity.ms https://*.vercel-analytics.com https://*.vercel-insights.com",
       "worker-src 'self'",
+      // Without an explicit frame-src this fell back to `default-src 'self'`, which blocked
+      // every YouTube embed rendered by YouTubeFacade.tsx — a silent CSP violation on any
+      // article carrying a video.
+      "frame-src 'self' https://www.youtube-nocookie.com https://www.youtube.com",
       "style-src 'self' 'unsafe-inline'",
       "font-src 'self'",
       "img-src 'self' data: https:",

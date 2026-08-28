@@ -23,6 +23,7 @@ import { AFFILIATE_DISCLOSURE } from '@/lib/tracking/affiliate'
 import { VramCalculator } from '@/components/VramCalculator'
 import { QuickAnswer } from '@/components/QuickAnswer'
 import { parseContentBlocks } from '@/lib/parseContentBlocks'
+import { slugifySectionId, slugifyAnchor } from '@/lib/sectionAnchor'
 import { ImageLightbox } from '@/components/ImageLightbox'
 import { CopyButton } from '@/components/CopyButton'
 
@@ -669,11 +670,7 @@ function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLM
           {section.rows.map((row, i) => {
             const [nameCol, ...restCols] = section.columns!
             const name = row[nameCol] ?? row['0'] ?? ''
-            const itemId = name
-              .replace(/\*\*/g, '')
-              .toLowerCase()
-              .replace(/[^a-z0-9]+/g, '-')
-              .replace(/^-|-$/g, '')
+            const itemId = slugifyAnchor(name.replace(/\*\*/g, ''))
             return (
               <div key={i} id={itemId || undefined} className="border border-primary/10 rounded-xl p-4 scroll-mt-24">
                 <h3 className="text-lg font-bold text-text-primary mb-2">
@@ -758,7 +755,7 @@ function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLM
 
       {/* Image with caption */}
       {section.image && (
-        <figure className="my-8 flex flex-col items-center cursor-zoom-in" onClick={() => setLightboxImage({
+        <figure role="button" tabIndex={0} onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); e.currentTarget.click() } }} className="my-8 flex flex-col items-center cursor-zoom-in" onClick={() => setLightboxImage({
           src: section.image!,
           alt: section.imageCaption || (section.title ? `${section.title} diagram` : 'PromptQuorum article diagram'),
           caption: section.imageCaption,
@@ -1059,7 +1056,7 @@ function SmartHomePostContent({ slug, lang, articleData }: Props) {
         {/* Sections */}
         <article className="key-takeaways-container">
           {Object.entries(article.sections).map(([key, section]) => {
-            const sectionId = section.isTldr ? (section.id ?? 'key-takeaways') : (section.id ?? (section.title ? section.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') : undefined))
+            const sectionId = slugifySectionId(section, key)
             return (
               <SectionBlock key={key} section={section} colors={colors} id={sectionId} lang={lang} renderLinks={renderLinks} />
             )

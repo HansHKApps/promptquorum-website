@@ -1,3 +1,5 @@
+'use client';
+
 import { useEffect } from 'react';
 
 interface ImageLightboxProps {
@@ -17,24 +19,31 @@ export function ImageLightbox({ src, alt, caption, onClose }: ImageLightboxProps
   }, [onClose]);
 
   return (
+    // The overlay closes on click. The inner wrapper used to be `w-full h-full` with a
+    // stopPropagation handler, so it covered the entire viewport and swallowed every
+    // click — click-outside-to-close was unreachable and the whole overlay read as dead.
+    // The wrapper is now sized to its content, so the dark area around the image closes.
     <div
-      className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center"
+      className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4"
       onClick={onClose}
+      role="dialog"
+      aria-modal="true"
+      aria-label={alt}
     >
-      <div
-        className="relative w-full h-full flex flex-col items-center justify-center"
+      <button
+        onClick={onClose}
+        className="fixed top-4 right-4 text-white hover:text-gray-300 transition-colors z-10"
+        aria-label="Close"
+      >
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
+      <figure
+        className="relative flex flex-col items-center max-w-full max-h-full m-0"
         onClick={(e) => e.stopPropagation()}
       >
-        <button
-          onClick={onClose}
-          className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors z-10"
-          aria-label="Close"
-        >
-          <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-
         <img
           src={src}
           alt={alt}
@@ -46,7 +55,7 @@ export function ImageLightbox({ src, alt, caption, onClose }: ImageLightboxProps
             {caption}
           </figcaption>
         )}
-      </div>
+      </figure>
     </div>
   );
 }

@@ -373,7 +373,10 @@ export function PromptOptimizerShowcase({ lang = 'en' }: { lang?: Lang }) {
       <div className="p-4 bg-gray-50 rounded-lg border border-gray-200">
         <p className="text-sm text-text-secondary">
           📚 {t.helpOptimize}{' '}
-          <a href="#" className="text-blue-600 hover:text-blue-700 font-medium">
+          <a
+            href={lang === 'en' ? '/prompt-engineering' : `/${lang}/prompt-engineering`}
+            className="text-blue-600 hover:text-blue-700 font-medium"
+          >
             {t.promptEngineeringBestPractices}
           </a>
         </p>
