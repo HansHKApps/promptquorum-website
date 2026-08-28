@@ -42,3 +42,6 @@ tools/competitor-sweep/sweep-report.md
 
 # Validator disk caches (e.g. sameAs link-check results) — regenerated per run
 .cache/
+
+# Regenerated on every build by scripts/write-build-info.mjs (npm prebuild)
+public/build-info.json

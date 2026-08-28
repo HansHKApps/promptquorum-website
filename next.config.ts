@@ -191,6 +191,18 @@ const nextConfig: NextConfig = {
           { key: 'Cache-Control', value: 'public, max-age=300, s-maxage=300' },
         ],
       },
+      {
+        // Read by scripts/vercel-ignore-build-step.sh to age the live production
+        // build for the 3h build throttle. Must never be edge-cached, or the
+        // throttle reads a stale timestamp and skips builds indefinitely
+        // (overrides the catch-all `/:path*` Cache-Control above — last
+        // matching rule wins).
+        source: '/build-info.json',
+        headers: [
+          { key: 'Content-Type', value: 'application/json; charset=utf-8' },
+          { key: 'Cache-Control', value: 'public, max-age=0, must-revalidate' },
+        ],
+      },
     ]
   },
 }
