@@ -13,7 +13,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       title: 'Ollama Command Guide: Every Command Explained (2026)',
       heroImage: '/images/ollama-command-guide-overview-hero-en.webp',
       seoTitle: 'Ollama Command Reference 2026: pull, run, serve',
-      intro: 'Ollama is a command-line tool, and understanding its commands makes it much more powerful. This guide covers the essential commands: `ollama pull`, `ollama run`, `ollama list`, `ollama rm`, `ollama ps`, `ollama stop`, `ollama serve`, and advanced options like model quantization and custom Modelfiles. As of August 2026, these commands cover 95% of real-world use cases. Note: since Ollama v0.32.0 (July 2026), running the bare `ollama` command with no subcommand launches an interactive agent (chat, code, web search) rather than showing help text -- use `ollama run <model>` explicitly for a plain model chat session.',
+      intro: 'Ollama is a command-line tool, and understanding its commands makes it much more powerful. This guide covers the essential commands: `ollama pull`, `ollama run`, `ollama list`, `ollama rm`, `ollama ps`, `ollama stop`, `ollama serve`, and advanced options like model quantization and custom Modelfiles. These commands cover 95% of real-world use cases. Note: since Ollama v0.32.0 (July 2026), running the bare `ollama` command with no subcommand launches an interactive agent (chat, code, web search) rather than showing help text -- use `ollama run <model>` explicitly for a plain model chat session.',
       metaDescription: 'Ollama commands explained 2026: pull, run, list, rm, serve, create, with examples. Complete CLI reference covers 95% of use cases.',
       publishDate: '2026-04-04',
       dateModified: '2026-08-28',
@@ -41,6 +41,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'The essential Ollama commands are `ollama pull` (download a model), `ollama run` (chat with it), `ollama list` (see what you have), `ollama rm` (delete it), `ollama ps` (see what is loaded), and `ollama serve` (start the API) -- together they cover about 95% of real-world usage.' },
+            { type: 'plain-terms', text: "You don't need to memorize dozens of Ollama commands -- a handful cover almost everything you'll actually do: downloading a model, chatting with it, listing what's installed, removing what you don't need, and starting the background server other apps can talk to. Everything else is an advanced option you'll reach for occasionally, like custom Modelfiles or quantization settings." },
+          ],
           items: [
             '`ollama pull <model>` -- Download a model (e.g., `ollama pull llama3.2:3b`).',
             '`ollama run <model>` -- Start a chat with a model.',
@@ -50,7 +54,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '`ollama stop <model>` -- Unload a model from memory immediately, without waiting for the default keep-alive timeout.',
             '`ollama serve` -- Start the Ollama API server (runs automatically on Mac/Windows).',
             '`ollama create <name> -f <modelfile>` -- Build a custom model from a Modelfile.',
-            'As of August 2026, these commands are stable and cover all common use cases.',
+            'These commands are stable and cover all common use cases.',
           ],
         },
         essentialCommands: {
@@ -263,7 +267,7 @@ schema: {
           { '@type': 'ListItem', position: 6, name: '`ollama stop <model>` -- Unload a model from memory immediately.' },
           { '@type': 'ListItem', position: 7, name: '`ollama serve` -- Start the Ollama API server (runs automatically on Mac/Windows).' },
           { '@type': 'ListItem', position: 8, name: '`ollama create <name> -f <modelfile>` -- Build a custom model from a Modelfile.' },
-          { '@type': 'ListItem', position: 9, name: 'As of August 2026, these commands are stable and cover all common use cases.' },
+          { '@type': 'ListItem', position: 9, name: 'These commands are stable and cover all common use cases.' },
         ],
       },
     },
@@ -273,7 +277,7 @@ schema: {
       title: 'Guia de Comandos Ollama: Todos os Comandos Explicados (2026)',
       heroImage: '/images/ollama-command-guide-overview-hero-pt.webp',
       seoTitle: 'Referência de Comandos Ollama 2026: pull, run, serve',
-      intro: 'O Ollama é uma ferramenta de linha de comando, e entender seus comandos o torna muito mais poderoso. Este guia cobre os comandos essenciais: `ollama pull`, `ollama run`, `ollama list`, `ollama rm`, `ollama serve` e opções avançadas como quantização de modelos e Modelfiles personalizados. Em agosto de 2026, esses comandos cobrem 95% dos casos de uso do mundo real.',
+      intro: 'O Ollama é uma ferramenta de linha de comando, e entender seus comandos o torna muito mais poderoso. Este guia cobre os comandos essenciais: `ollama pull`, `ollama run`, `ollama list`, `ollama rm`, `ollama serve` e opções avançadas como quantização de modelos e Modelfiles personalizados. Esses comandos cobrem 95% dos casos de uso do mundo real.',
       metaDescription: 'Comandos Ollama explicados 2026: pull, run, list, rm, serve, create com exemplos. Referência CLI completa cobre 95% dos casos de uso.',
       publishDate: '2026-04-04',
       dateModified: '2026-08-28',
@@ -300,6 +304,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Os comandos essenciais do Ollama são `ollama pull` (baixar um modelo), `ollama run` (conversar com ele), `ollama list` (ver o que você tem), `ollama rm` (excluir), `ollama ps` (ver o que está carregado) e `ollama serve` (iniciar a API) -- juntos cobrem cerca de 95% do uso real.' },
+            { type: 'plain-terms', text: 'Você não precisa memorizar dezenas de comandos do Ollama -- alguns poucos cobrem quase tudo que você realmente fará: baixar um modelo, conversar com ele, listar o que está instalado, remover o que não precisa mais, e iniciar o servidor em segundo plano com o qual outros apps podem se comunicar. Todo o resto é uma opção avançada que você usará ocasionalmente, como Modelfiles personalizados ou configurações de quantização.' },
+          ],
           items: [
             '`ollama pull <model>` — Baixa um modelo (ex: `ollama pull llama3.2:3b`).',
             '`ollama run <model>` — Inicia um chat com um modelo.',
@@ -482,7 +490,7 @@ schema: {
       title: 'Ollama Befehls-Anleitung: Alle Befehle erklärt (2026)',
       heroImage: '/images/ollama-command-guide-overview-hero-de.webp',
       seoTitle: 'Ollama Befehls-Referenz 2026: pull, run, serve',
-      intro: 'Ollama ist ein Kommandozeilen-Werkzeug, und das Verständnis seiner Befehle macht es viel leistungsfähiger. Diese Anleitung behandelt die wesentlichen Befehle: `ollama pull`, `ollama run`, `ollama list`, `ollama rm`, `ollama serve` und erweiterte Optionen wie Modellquantisierung und benutzerdefinierte Modelfiles. Ab August 2026 decken diese Befehle 95% der realen Anwendungsfälle ab.',
+      intro: 'Ollama ist ein Kommandozeilen-Werkzeug, und das Verständnis seiner Befehle macht es viel leistungsfähiger. Diese Anleitung behandelt die wesentlichen Befehle: `ollama pull`, `ollama run`, `ollama list`, `ollama rm`, `ollama serve` und erweiterte Optionen wie Modellquantisierung und benutzerdefinierte Modelfiles. Diese Befehle decken 95% der realen Anwendungsfälle ab.',
       metaDescription: 'Ollama-Befehle erklärt 2026: pull, run, list, rm, serve, create mit Beispielen. Vollständige CLI-Referenz deckt 95% der Anwendungsfälle ab.',
       publishDate: '2026-04-04',
       dateModified: '2026-08-28',
@@ -509,6 +517,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Die wichtigsten Ollama-Befehle sind `ollama pull` (Modell herunterladen), `ollama run` (damit chatten), `ollama list` (installierte Modelle anzeigen), `ollama rm` (löschen), `ollama ps` (geladene Modelle anzeigen) und `ollama serve` (API starten) -- zusammen decken sie etwa 95% der realen Nutzung ab.' },
+            { type: 'plain-terms', text: 'Man muss sich nicht Dutzende Ollama-Befehle merken -- eine Handvoll deckt fast alles ab, was man tatsächlich braucht: ein Modell herunterladen, damit chatten, installierte Modelle auflisten, nicht mehr benötigte entfernen und den Hintergrundserver starten, mit dem andere Apps kommunizieren können. Der Rest sind erweiterte Optionen, die man gelegentlich nutzt, etwa benutzerdefinierte Modelfiles oder Quantisierungseinstellungen.' },
+          ],
           items: [
             '`ollama pull <model>` -- Modell herunterladen (z. B. `ollama pull llama3.2:3b`).',
             '`ollama run <model>` -- Chat-Sitzung mit einem Modell starten.',
@@ -726,7 +738,7 @@ schema: {
       title: 'Guide des commandes Ollama: Toutes les commandes expliquées (2026)',
       heroImage: '/images/ollama-command-guide-overview-hero-fr.webp',
       seoTitle: 'Référence des commandes Ollama 2026: pull, run, serve',
-      intro: 'Ollama est un outil en ligne de commande, et comprendre ses commandes le rend beaucoup plus puissant. Ce guide couvre les commandes essentielles: `ollama pull`, `ollama run`, `ollama list`, `ollama rm`, `ollama serve` et options avancées comme la quantification de modèle et les Modelfiles personnalisés. À partir d\'août 2026, ces commandes couvrent 95% des cas d\'usage réels.',
+      intro: 'Ollama est un outil en ligne de commande, et comprendre ses commandes le rend beaucoup plus puissant. Ce guide couvre les commandes essentielles: `ollama pull`, `ollama run`, `ollama list`, `ollama rm`, `ollama serve` et options avancées comme la quantification de modèle et les Modelfiles personnalisés. Ces commandes couvrent 95% des cas d\'usage réels.',
       metaDescription: 'Commandes Ollama expliquées 2026: pull, run, list, rm, serve, create avec exemples. Référence CLI complète couvre 95% des cas d\'usage.',
       publishDate: '2026-04-04',
       dateModified: '2026-08-28',
@@ -753,6 +765,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: "Les commandes Ollama essentielles sont `ollama pull` (télécharger un modèle), `ollama run` (discuter avec), `ollama list` (voir ce qui est installé), `ollama rm` (supprimer), `ollama ps` (voir ce qui est chargé) et `ollama serve` (démarrer l'API) -- ensemble, elles couvrent environ 95% de l'usage réel." },
+            { type: 'plain-terms', text: "Inutile de mémoriser des dizaines de commandes Ollama -- une poignée couvre presque tout ce que vous ferez réellement : télécharger un modèle, discuter avec, lister ce qui est installé, supprimer ce dont vous n'avez plus besoin, et démarrer le serveur en arrière-plan auquel d'autres applications peuvent se connecter. Le reste, ce sont des options avancées utilisées occasionnellement, comme les Modelfiles personnalisés ou les réglages de quantification." },
+          ],
           items: [
             '`ollama pull <model>` -- Télécharger un modèle (p. ex. `ollama pull llama3.2:3b`).',
             '`ollama run <model>` -- Démarrer une conversation avec un modèle.',
@@ -960,7 +976,7 @@ schema: {
       title: 'Ollama コマンドガイド: すべてのコマンド説明 (2026)',
       heroImage: '/images/ollama-command-guide-overview-hero-ja.webp',
       seoTitle: 'Ollama コマンドリファレンス 2026: pull, run, serve',
-      intro: 'Ollama はコマンドラインツールで、そのコマンドを理解することでより強力になります。このガイドは基本コマンドをカバーしています: `ollama pull`、`ollama run`、`ollama list`、`ollama rm`、`ollama serve` および高度なオプション（モデル量子化とカスタム Modelfiles）。2026 年 8 月時点で、これらのコマンドは実際の使用ケースの 95% をカバーしています。',
+      intro: 'Ollama はコマンドラインツールで、そのコマンドを理解することでより強力になります。このガイドは基本コマンドをカバーしています: `ollama pull`、`ollama run`、`ollama list`、`ollama rm`、`ollama serve` および高度なオプション（モデル量子化とカスタム Modelfiles）。これらのコマンドは実際の使用ケースの 95% をカバーしています。',
       metaDescription: 'Ollama コマンド説明 2026: pull, run, list, rm, serve, create と例。完全な CLI リファレンスが 95% の使用ケースをカバー。',
       publishDate: '2026-04-04',
       dateModified: '2026-08-28',
@@ -987,6 +1003,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Ollamaの基本コマンドは、`ollama pull`（モデルのダウンロード）、`ollama run`（チャット開始）、`ollama list`（インストール済みモデルの確認）、`ollama rm`（削除）、`ollama ps`（読み込み済みモデルの確認）、`ollama serve`（APIの起動）で、これらだけで実際の使用ケースの約95%をカバーします。' },
+            { type: 'plain-terms', text: 'Ollamaのコマンドを何十個も覚える必要はありません -- 実際に使うことのほとんどは、わずかなコマンドでカバーできます：モデルのダウンロード、チャット、インストール済みモデルの一覧表示、不要なモデルの削除、そして他のアプリが接続できるバックグラウンドサーバーの起動です。それ以外は、カスタムModelfileや量子化設定など、たまに使う高度なオプションです。' },
+          ],
           items: [
             '`ollama pull <model>` -- モデルをダウンロード（例: `ollama pull llama3.2:3b`）。',
             '`ollama run <model>` -- モデルとチャットセッションを開始。',
@@ -996,7 +1016,7 @@ schema: {
             '`ollama stop <model>` -- モデルを即座にメモリから解放。',
             '`ollama serve` -- Ollama API サーバーを開始（Mac/Windows では自動実行）。',
             '`ollama create <name> -f <modelfile>` -- Modelfile からカスタムモデルを作成。',
-            '2026 年 8 月時点で、これらのコマンドは安定し、すべての一般的な使用ケースをカバー。',
+            'これらのコマンドは安定し、すべての一般的な使用ケースをカバー。',
           ],
         },
         essentialCommands: {
@@ -1184,7 +1204,7 @@ schema: {
           { '@type': 'ListItem', 'position': 6, 'name': '`ollama stop <model>` -- モデルを即座にメモリから解放。' },
           { '@type': 'ListItem', 'position': 7, 'name': '`ollama serve` -- Ollama API サーバーを開始（Mac/Windows では自動実行）。' },
           { '@type': 'ListItem', 'position': 6, 'name': '`ollama create <name> -f <modelfile>` -- Modelfile からカスタムモデルを作成。' },
-          { '@type': 'ListItem', 'position': 7, 'name': '2026 年 8 月時点で、これらのコマンドは安定し、すべての一般的な使用ケースをカバー。' },
+          { '@type': 'ListItem', 'position': 7, 'name': 'これらのコマンドは安定し、すべての一般的な使用ケースをカバー。' },
         ],
       },
     },
@@ -1194,7 +1214,7 @@ schema: {
       title: 'Guía de Comandos de Ollama: Todos los Comandos Explicados (2026)',
       heroImage: '/images/ollama-command-guide-overview-hero-es.webp',
       seoTitle: 'Referencia de Comandos Ollama 2026: pull, run, serve',
-      intro: 'Ollama es una herramienta de línea de comandos, y entender sus comandos la hace mucho más poderosa. Esta guía cubre los comandos esenciales: `ollama pull`, `ollama run`, `ollama list`, `ollama rm`, `ollama serve` y opciones avanzadas como la cuantización de modelos y Modelfiles personalizados. A partir de agosto de 2026, estos comandos cubren el 95% de los casos de uso del mundo real.',
+      intro: 'Ollama es una herramienta de línea de comandos, y entender sus comandos la hace mucho más poderosa. Esta guía cubre los comandos esenciales: `ollama pull`, `ollama run`, `ollama list`, `ollama rm`, `ollama serve` y opciones avanzadas como la cuantización de modelos y Modelfiles personalizados. Estos comandos cubren el 95% de los casos de uso del mundo real.',
       metaDescription: 'Comandos de Ollama explicados 2026: pull, run, list, rm, serve, create con ejemplos. Referencia CLI completa cubre el 95% de los casos de uso.',
       publishDate: '2026-04-04',
       dateModified: '2026-08-28',
@@ -1221,6 +1241,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Los comandos esenciales de Ollama son `ollama pull` (descargar un modelo), `ollama run` (chatear con él), `ollama list` (ver lo que tienes), `ollama rm` (eliminarlo), `ollama ps` (ver lo que está cargado) y `ollama serve` (iniciar la API) -- juntos cubren cerca del 95% del uso real.' },
+            { type: 'plain-terms', text: 'No necesitas memorizar docenas de comandos de Ollama -- unos pocos cubren casi todo lo que realmente harás: descargar un modelo, chatear con él, listar lo instalado, eliminar lo que ya no necesitas, e iniciar el servidor en segundo plano al que otras apps pueden conectarse. El resto son opciones avanzadas que usarás ocasionalmente, como Modelfiles personalizados o ajustes de cuantización.' },
+          ],
           items: [
             '`ollama pull <model>` -- Descarga un modelo (p. ej., `ollama pull llama3.2:3b`).',
             '`ollama run <model>` -- Inicia un chat con un modelo.',
@@ -1230,7 +1254,7 @@ schema: {
             '`ollama stop <model>` -- Descarga un modelo de la memoria inmediatamente.',
             '`ollama serve` -- Inicia el servidor API de Ollama (se ejecuta automáticamente en Mac/Windows).',
             '`ollama create <name> -f <modelfile>` -- Construye un modelo personalizado desde un Modelfile.',
-            'A partir de agosto de 2026, estos comandos son estables y cubren todos los casos de uso comunes.',
+            'Estos comandos son estables y cubren todos los casos de uso comunes.',
           ],
         },
         essentialCommands: {
@@ -1443,7 +1467,7 @@ schema: {
           { '@type': 'ListItem', position: 6, name: '`ollama stop <model>` -- Descarga un modelo de la memoria inmediatamente.' },
           { '@type': 'ListItem', position: 7, name: '`ollama serve` -- Inicia el servidor API de Ollama (se ejecuta automáticamente en Mac/Windows).' },
           { '@type': 'ListItem', position: 6, name: '`ollama create <name> -f <modelfile>` -- Construye un modelo personalizado desde un Modelfile.' },
-          { '@type': 'ListItem', position: 7, name: 'A partir de agosto de 2026, estos comandos son estables y cubren todos los casos de uso comunes.' },
+          { '@type': 'ListItem', position: 7, name: 'Estos comandos son estables y cubren todos los casos de uso comunes.' },
         ],
       },
     },
@@ -1453,7 +1477,7 @@ schema: {
       title: 'دليل أوامر ⁨Ollama⁩: شرح جميع الأوامر (⁨2026⁩)',
       heroImage: '/images/ollama-command-guide-overview-hero-ar.webp',
       seoTitle: 'أوامر ⁨Ollama 2026⁩: ⁨pull⁩، ⁨run⁩، ⁨list⁩، ⁨serve⁩، ⁨create⁩',
-      intro: 'Ollama أداة سطر أوامر، وفهم أوامرها يجعلها أقوى بكثير. يغطي هذا الدليل الأوامر الأساسية: `ollama pull` و`ollama run` و`ollama list` و`ollama rm` و`ollama serve` وخيارات متقدمة مثل تكميم النماذج وملفات Modelfile المخصصة. اعتبارًا من أغسطس 2026، تغطي هذه الأوامر 95% من حالات الاستخدام الواقعية.',
+      intro: 'Ollama أداة سطر أوامر، وفهم أوامرها يجعلها أقوى بكثير. يغطي هذا الدليل الأوامر الأساسية: `ollama pull` و`ollama run` و`ollama list` و`ollama rm` و`ollama serve` وخيارات متقدمة مثل تكميم النماذج وملفات Modelfile المخصصة. تغطي هذه الأوامر 95% من حالات الاستخدام الواقعية.',
       metaDescription: '⁨6⁩ أوامر ⁨Ollama⁩ الأساسية تغطي ⁨95%⁩ من حالات الاستخدام: ⁨pull⁩، ⁨run⁩، ⁨list⁩، ⁨rm⁩، ⁨serve⁩، ⁨create⁩ مع أمثلة عملية وجدول تكميم ⁨GGUF⁩.',
       publishDate: '2026-04-04',
       dateModified: '2026-08-28',
@@ -1480,6 +1504,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'أوامر Ollama الأساسية هي `ollama pull` (تنزيل نموذج)، و`ollama run` (الدردشة معه)، و`ollama list` (رؤية ما لديك)، و`ollama rm` (حذفه)، و`ollama ps` (رؤية ما هو محمّل)، و`ollama serve` (تشغيل API) -- تغطي معاً نحو 95% من الاستخدام الفعلي.' },
+            { type: 'plain-terms', text: 'لست بحاجة لحفظ عشرات أوامر Ollama -- تغطي حفنة منها تقريباً كل ما ستفعله فعلياً: تنزيل نموذج، والدردشة معه، وسرد ما هو مثبّت، وحذف ما لا تحتاجه، وتشغيل الخادم في الخلفية الذي يمكن لتطبيقات أخرى التواصل معه. البقية خيارات متقدمة تستخدمها أحياناً، مثل ملفات Modelfile المخصصة أو إعدادات التكميم.' },
+          ],
           items: [
             '`ollama pull <model>` -- ينزّل نموذجًا (مثل `ollama pull llama3.2:3b`).',
             '`ollama run <model>` -- يبدأ محادثة مع نموذج.',
@@ -1489,7 +1517,7 @@ schema: {
             '`ollama stop <model>` -- يُفرغ نموذجًا من الذاكرة فورًا.',
             '`ollama serve` -- يبدأ خادم API الخاص بـ Ollama (يعمل تلقائيًا على Mac/Windows).',
             '`ollama create <name> -f <modelfile>` -- يبني نموذجًا مخصصًا من ملف Modelfile.',
-            'اعتبارًا من أغسطس 2026، هذه الأوامر مستقرة وتغطي جميع حالات الاستخدام الشائعة.',
+            'هذه الأوامر مستقرة وتغطي جميع حالات الاستخدام الشائعة.',
           ],
         },
         essentialCommands: {
@@ -1702,7 +1730,7 @@ schema: {
           { '@type': 'ListItem', position: 6, name: '`ollama stop <model>` -- يُفرغ نموذجًا من الذاكرة فورًا.' },
           { '@type': 'ListItem', position: 7, name: '`ollama serve` -- يبدأ خادم API الخاص بـ Ollama (يعمل تلقائيًا على Mac/Windows).' },
           { '@type': 'ListItem', position: 6, name: '`ollama create <name> -f <modelfile>` -- يبني نموذجًا مخصصًا من ملف Modelfile.' },
-          { '@type': 'ListItem', position: 7, name: 'اعتبارًا من أغسطس 2026، هذه الأوامر مستقرة وتغطي جميع حالات الاستخدام الشائعة.' },
+          { '@type': 'ListItem', position: 7, name: 'هذه الأوامر مستقرة وتغطي جميع حالات الاستخدام الشائعة.' },
         ],
       },
     },
@@ -1712,7 +1740,7 @@ schema: {
       title: 'Ollama 命令指南：每个命令详解 (2026)',
       heroImage: '/images/ollama-command-guide-overview-hero-zh.webp',
       seoTitle: 'Ollama 命令参考 2026：pull、run、serve',
-      intro: 'Ollama 是命令行工具，掌握其命令可以大幅提高工作效率。本指南涵盖基本命令：`ollama pull`、`ollama run`、`ollama list`、`ollama rm`、`ollama serve`，以及量化和自定义 Modelfiles 等高级选项。截至 2026 年 8 月，这些命令涵盖 95% 的实际应用场景。',
+      intro: 'Ollama 是命令行工具，掌握其命令可以大幅提高工作效率。本指南涵盖基本命令：`ollama pull`、`ollama run`、`ollama list`、`ollama rm`、`ollama serve`，以及量化和自定义 Modelfiles 等高级选项。这些命令涵盖 95% 的实际应用场景。',
       metaDescription: 'Ollama 命令详解 2026：pull、run、list、rm、serve、create 等完整 CLI 参考。涵盖 95% 的实际使用场景。',
       publishDate: '2026-04-04',
       dateModified: '2026-08-28',
@@ -1739,6 +1767,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Ollama的基本命令是`ollama pull`（下载模型）、`ollama run`（与其对话）、`ollama list`（查看已安装内容）、`ollama rm`（删除）、`ollama ps`（查看已加载内容）和`ollama serve`（启动API）——这些命令合计覆盖约95%的实际使用场景。' },
+            { type: 'plain-terms', text: '你不需要记住几十个Ollama命令——少数几个就能覆盖你实际会用到的大部分操作：下载模型、与其对话、列出已安装内容、删除不需要的模型，以及启动供其他应用连接的后台服务器。其余的都是偶尔才会用到的高级选项，比如自定义Modelfile或量化设置。' },
+          ],
           items: [
             '`ollama pull <model>` -- 下载模型（例如 `ollama pull llama3.2:3b`）。',
             '`ollama run <model>` -- 与模型开始聊天。',
@@ -1748,7 +1780,7 @@ schema: {
             '`ollama stop <model>` -- 立即从内存中卸载模型。',
             '`ollama serve` -- 启动 Ollama API 服务器（Mac/Windows 自动运行）。',
             '`ollama create <name> -f <modelfile>` -- 从 Modelfile 构建自定义模型。',
-            '截至 2026 年 8 月，这些命令稳定且涵盖所有常见用例。',
+            '这些命令稳定且涵盖所有常见用例。',
           ],
         },
         essentialCommands: {
@@ -1927,7 +1959,7 @@ schema: {
           { '@type': 'ListItem', 'position': 6, 'name': '`ollama stop <model>` -- 立即从内存中卸载模型。' },
           { '@type': 'ListItem', 'position': 7, 'name': '`ollama serve` -- 启动 Ollama API 服务器（Mac/Windows 自动运行）。' },
           { '@type': 'ListItem', 'position': 6, 'name': '`ollama create <name> -f <modelfile>` -- 从 Modelfile 构建自定义模型。' },
-          { '@type': 'ListItem', 'position': 7, 'name': '截至 2026 年 8 月，这些命令稳定且涵盖所有常见用例。' },
+          { '@type': 'ListItem', 'position': 7, 'name': '这些命令稳定且涵盖所有常见用例。' },
         ],
       },
     },
@@ -1937,7 +1969,7 @@ schema: {
       title: 'Ollama 명령어 가이드: 모든 명령어 완전 해설 (2026)',
     heroImage: '/images/ollama-command-guide-overview-hero-ko.webp',
       seoTitle: 'Ollama 명령어 레퍼런스 2026: pull, run, serve',
-      intro: 'Ollama는 명령줄 도구이며, 명령어를 이해하면 훨씬 강력하게 활용할 수 있습니다. 이 가이드에서는 핵심 명령어인 `ollama pull`, `ollama run`, `ollama list`, `ollama rm`, `ollama serve`, 그리고 모델 양자화 및 커스텀 Modelfile과 같은 고급 옵션을 다룹니다. 2026년 8월 기준으로 이 명령어들은 실제 사용 사례의 95%를 커버합니다.',
+      intro: 'Ollama는 명령줄 도구이며, 명령어를 이해하면 훨씬 강력하게 활용할 수 있습니다. 이 가이드에서는 핵심 명령어인 `ollama pull`, `ollama run`, `ollama list`, `ollama rm`, `ollama serve`, 그리고 모델 양자화 및 커스텀 Modelfile과 같은 고급 옵션을 다룹니다. 이 명령어들은 실제 사용 사례의 95%를 커버합니다.',
       metaDescription: 'Ollama 명령어 완전 해설 2026: pull, run, list, rm, serve, create 예시 포함. 사용 사례의 95%를 커버하는 완전한 CLI 레퍼런스.',
       publishDate: '2026-04-04',
       dateModified: '2026-08-28',
@@ -1964,6 +1996,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Ollama의 필수 명령어는 `ollama pull`(모델 다운로드), `ollama run`(대화 시작), `ollama list`(설치된 모델 확인), `ollama rm`(삭제), `ollama ps`(로드된 모델 확인), `ollama serve`(API 시작)이며, 이들만으로 실제 사용 사례의 약 95%를 커버합니다.' },
+            { type: 'plain-terms', text: 'Ollama 명령어를 수십 개 외울 필요는 없습니다 -- 몇 가지만 알면 실제로 하게 될 대부분의 작업을 커버할 수 있습니다: 모델 다운로드, 대화 시작, 설치된 모델 목록 확인, 필요 없는 모델 삭제, 그리고 다른 앱이 연결할 수 있는 백그라운드 서버 시작입니다. 나머지는 커스텀 Modelfile이나 양자화 설정처럼 가끔 사용하는 고급 옵션입니다.' },
+          ],
           items: [
             '`ollama pull <모델>` -- 모델을 다운로드합니다 (예: `ollama pull llama3.2:3b`).',
             '`ollama run <모델>` -- 모델과 채팅을 시작합니다.',
@@ -1973,7 +2009,7 @@ schema: {
             '`ollama stop <모델>` -- 모델을 즉시 메모리에서 언로드합니다.',
             '`ollama serve` -- Ollama API 서버를 시작합니다 (Mac/Windows에서는 자동으로 실행됩니다).',
             '`ollama create <이름> -f <modelfile>` -- Modelfile로 커스텀 모델을 빌드합니다.',
-            '2026년 8월 기준으로 이 명령어들은 안정적이며 모든 일반적인 사용 사례를 커버합니다.',
+            '이 명령어들은 안정적이며 모든 일반적인 사용 사례를 커버합니다.',
           ],
         },
         essentialCommands: {
@@ -2127,7 +2163,7 @@ schema: {
           { '@type': 'ListItem', position: 6, name: '`ollama stop <모델>` -- 모델을 즉시 메모리에서 언로드합니다.' },
           { '@type': 'ListItem', position: 7, name: '`ollama serve` -- Ollama API 서버를 시작합니다 (Mac/Windows에서는 자동으로 실행됩니다).' },
           { '@type': 'ListItem', position: 6, name: '`ollama create <이름> -f <modelfile>` -- Modelfile로 커스텀 모델을 빌드합니다.' },
-          { '@type': 'ListItem', position: 7, name: '2026년 8월 기준으로 이 명령어들은 안정적이며 모든 일반적인 사용 사례를 커버합니다.' },
+          { '@type': 'ListItem', position: 7, name: '이 명령어들은 안정적이며 모든 일반적인 사용 사례를 커버합니다.' },
         ],
       },
     },
