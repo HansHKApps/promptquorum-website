@@ -14,7 +14,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: 'November 17, 2026',
     educationalLevel: 'Intermediate',
-    leadAnswerBlock: '**Choose Continue.dev for free, open-source, best-in-class Ollama and LM Studio integration. Choose Cursor ($20/month) for the most polished autocomplete and hybrid cloud+local workflows. Choose Sourcegraph Cody ($9/user/month) for teams needing codebase-wide context. Choose Tabnine ($12/month) for privacy-first training. Choose Windsurf ($0–15/month) for the rising alternative with Cascade workflow.** All verified June 2026. Updated monthly.',
+    leadAnswerBlock: '**Choose Continue.dev for free, open-source, best-in-class Ollama and LM Studio integration. Choose Cursor ($20/month) for the most polished autocomplete and hybrid cloud+local workflows. Choose Sourcegraph Cody ($59/user/month) for teams needing codebase-wide context. Choose Tabnine ($39/month) for privacy-first training. Choose Windsurf ($0–15/month) for the rising alternative with Cascade workflow.** All verified June 2026. Updated monthly.',
     quickAnswerTop: {
       en: {
         question: 'Which AI coding assistant works best with local LLMs?',
@@ -33,8 +33,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Continue.dev: Kostenlos, Open Source, natives Ollama/LM Studio Support',
           'Cursor: 20 €/Monat, polierte UX, lokales LLM über benutzerdefiniertes OpenAI-Endpoint',
-          'Sourcegraph Cody: 9 €/Benutzer/Monat, Codebase-Kontext, Team-Features',
-          'Tabnine: 12 €/Monat, Privacy-First-Training, Self-Hosted-Option',
+          'Sourcegraph Cody: 59 €/Benutzer/Monat, Codebase-Kontext, Team-Features',
+          'Tabnine: 39 €/Monat, Privacy-First-Training, Self-Hosted-Option',
           'Windsurf: Kostenlos + 15 €/Monat Pro, Cascade-Workflow, neuere lokale Unterstützung',
         ],
       },
@@ -44,8 +44,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Continue.dev: Gratuit, open source, support natif Ollama/LM Studio',
           'Cursor: 20 €/mois, UX polie, LLM local via point de terminaison OpenAI personnalisé',
-          'Sourcegraph Cody: 9 €/utilisateur/mois, contexte codebase, fonctionnalités d\'équipe',
-          'Tabnine: 12 €/mois, formation axée sur la confidentialité, option auto-hébergée',
+          'Sourcegraph Cody: 59 €/utilisateur/mois, contexte codebase, fonctionnalités d\'équipe',
+          'Tabnine: 39 €/mois, formation axée sur la confidentialité, option auto-hébergée',
           'Windsurf: Gratuit + 15 €/mois Pro, workflow Cascade, support local plus récent',
         ],
       },
@@ -55,8 +55,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Continue.dev: 無料、オープンソース、ネイティブOllama/LM Studioサポート',
           'Cursor: $20/月、洗練されたUX、カスタムOpenAIエンドポイント経由のローカルLLM',
-          'Sourcegraph Cody: $9/ユーザー/月、コードベースコンテキスト、チーム機能',
-          'Tabnine: $12/月、プライバシーファーストトレーニング、自己ホスティングオプション',
+          'Sourcegraph Cody: $59/ユーザー/月、コードベースコンテキスト、チーム機能',
+          'Tabnine: $39/月、プライバシーファーストトレーニング、自己ホスティングオプション',
           'Windsurf: 無料 + $15/月Pro、Cascadeワークフロー、より新しいローカルサポート',
         ],
       },
@@ -66,8 +66,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Continue.dev: 免费、开源、原生Ollama/LM Studio支持',
           'Cursor: $20/月、精致的UX、通过自定义OpenAI端点进行本地LLM',
-          'Sourcegraph Cody: $9/用户/月、代码库上下文、团队功能',
-          'Tabnine: $12/月、隐私优先培训、自托管选项',
+          'Sourcegraph Cody: $59/用户/月、代码库上下文、团队功能',
+          'Tabnine: $39/月、隐私优先培训、自托管选项',
           'Windsurf: 免费 + $15/月Pro、Cascade工作流、较新的本地支持',
         ],
       },
@@ -77,7 +77,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         snippetBlocks: [
-          { type: 'one-sentence', text: 'The best AI coding assistant for local LLMs in June 2026: Continue.dev (free, best Ollama/LM Studio integration), Cursor ($20/mo, best autocomplete), Sourcegraph Cody ($9/user/mo, best for teams), and Windsurf ($0–15/mo, rising Cascade workflow alternative).' },
+          { type: 'one-sentence', text: 'The best AI coding assistant for local LLMs in June 2026: Continue.dev (free, best Ollama/LM Studio integration), Cursor ($20/mo, best autocomplete), Sourcegraph Cody ($59/user/mo, best for teams), and Windsurf ($0–15/mo, rising Cascade workflow alternative).' },
           { type: 'plain-terms', text: 'These are IDE extensions that connect your code editor to a local AI model running on your own computer. They provide autocomplete, code generation, and chat — entirely offline and private, without sending your code to any cloud service.' },
         ],
         items: [],
@@ -93,7 +93,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       verifiedSources: {
         id: 'verified-sources',
         title: 'Source Verification (June 2026)',
-        content: '**Pricing verified from official sources:**\n- **Cursor** ($20/month Pro): cursor.com/pricing — verified 2026-06-21\n- **Continue.dev** (Free): continue.dev — verified open-source Apache 2.0, no premium tier\n- **Sourcegraph Cody** ($9/user/month): sourcegraph.com/cody/pricing — verified 2026-06-21\n- **Tabnine** ($12/month Pro): tabnine.com/pricing — verified 2026-06-21\n- **Windsurf** (Free/$15/month): codeium.com/windsurf/pricing — verified 2026-06-21\n- **GitHub Copilot** ($10/month): github.com/features/copilot/pricing — verified 2026-06-21\n\n**Local LLM integration tested with:**\n- Ollama 0.30.8 (latest stable as of June 2026)\n- Qwen 3 Coder 14B (representative mid-size coding model)\n- Deepseek Coder 33B (larger alternative)\n- M3 Max MacBook Pro + RTX 4090 + RTX 3090 Ti (representative hardware)\n\n**Next refresh:** July 2026. Monthly re-verification schedule in place.',
+        content: '**Pricing verified from official sources:**\n- **Cursor** ($20/month Pro): cursor.com/pricing — verified 2026-06-21\n- **Continue.dev** (Free): continue.dev — verified open-source Apache 2.0, no premium tier\n- **Sourcegraph Cody** ($59/user/month): sourcegraph.com/cody/pricing — verified 2026-06-21\n- **Tabnine** ($39/month Pro): tabnine.com/pricing — verified 2026-06-21\n- **Windsurf** (Free/$15/month): codeium.com/windsurf/pricing — verified 2026-06-21\n- **GitHub Copilot** ($10/month): github.com/features/copilot/pricing — verified 2026-06-21\n\n**Local LLM integration tested with:**\n- Ollama 0.30.8 (latest stable as of June 2026)\n- Qwen 3 Coder 14B (representative mid-size coding model)\n- Deepseek Coder 33B (larger alternative)\n- M3 Max MacBook Pro + RTX 4090 + RTX 3090 Ti (representative hardware)\n\n**Next refresh:** July 2026. Monthly re-verification schedule in place.',
       },
       verdictBox: {
         id: 'verdict-picks',
@@ -138,7 +138,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table-main',
         title: 'AI Coding Assistants Comparison Table (June 2026)',
         image: '/images/best-ai-coding-assistant-local-llm-comparison-hero-en.webp',
-        imageCaption: 'AI coding assistants comparison: Continue.dev (best overall, free), Cursor ($20/mo, best UX), Sourcegraph Cody ($9/user/mo, best teams), Tabnine ($12/mo, best privacy), Windsurf (free/$15/mo, rising alternative). All support local LLMs with varying setup complexity. June 2026.',
+        imageCaption: 'AI coding assistants comparison: Continue.dev (best overall, free), Cursor ($20/mo, best UX), Sourcegraph Cody ($59/user/mo, best teams), Tabnine ($39/mo, best privacy), Windsurf (free/$15/mo, rising alternative). All support local LLMs with varying setup complexity. June 2026.',
         content: 'Head-to-head feature and pricing comparison. Prices verified on provider websites June 2026 and updated monthly. Local LLM support ranges from native integration (Continue.dev) to vendor-specific configuration (Cursor, Cody) to enterprise-only (Tabnine self-hosted).',
         note: 'All pricing verified directly from official provider websites. Subscribe now to stay in the loop of latest June 2026 updates.',
         columns: ['Tool', 'Price', 'Local LLM', 'IDEs', 'Open Source', 'Team Features', 'Best For'],
@@ -240,7 +240,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       codySection: {
         id: 'cody',
         title: 'Sourcegraph Cody: Best for Teams',
-        content: 'Sourcegraph Cody is a VS Code and JetBrains extension ($9/user/month) focused on team collaboration. Cody uses codebase-wide context to understand your project, which is powerful for large refactorings and multi-file changes. For teams, Cody includes admin controls, audit logs, and compliance features.\n\nLocal LLM support is available via Ollama configuration. You set up an Ollama endpoint in Cody settings, and chat + completions route to your local model. It works, but Cody is fundamentally cloud-first—the product experience assumes cloud models.\n\n### Specifications (June 2026)\n- **Price:** Free or $9/user/month\n- **Free tier:** Yes, but with usage limits\n- **IDE support:** VS Code, JetBrains (IntelliJ, PyCharm, etc.), Neovim\n- **Language support:** Python, JavaScript, Java, Go, Rust, and most common languages\n- **Local LLM integration:** Via Ollama configuration (Claude, Mixtral, or compatible models)\n- **Cloud models supported:** Claude 3 Opus/Sonnet (default)\n- **Team features:** Admin console, audit logs, compliance, seat management\n- **Self-hosted option:** Available for enterprise\n- **Open source:** Partial (CLI open source, IDE extensions closed)\n\n### Strengths\n- Codebase-wide context (understands entire project for smart refactoring)\n- Team admin and compliance features\n- Affordable for teams ($9/user vs $20/individual for Cursor)\n- Supports multiple IDEs (VS Code, JetBrains, Neovim)\n- Integrates with Sourcegraph code search (if using)\n- Audit logs for compliance-sensitive teams\n\n### Weaknesses\n- Cloud-first design (local LLM is secondary)\n- Inline completions default to cloud\n- Smaller feature set than Cursor\n- Team/Enterprise pricing required for larger teams\n- Local LLM experience less polished than Continue.dev\n\n### Best for\nTeams of 3+ developers needing codebase context. Organizations requiring audit logs and compliance. Development teams already using Sourcegraph search.\n\n### Avoid if\nYou need the best autocomplete (Cursor wins). You want local-only setup. You\'re a solo developer (Continue.dev or Cursor are better).',
+        content: 'Sourcegraph Cody is a VS Code and JetBrains extension ($59/user/month) focused on team collaboration. Cody uses codebase-wide context to understand your project, which is powerful for large refactorings and multi-file changes. For teams, Cody includes admin controls, audit logs, and compliance features.\n\nLocal LLM support is available via Ollama configuration. You set up an Ollama endpoint in Cody settings, and chat + completions route to your local model. It works, but Cody is fundamentally cloud-first—the product experience assumes cloud models.\n\n### Specifications (June 2026)\n- **Price:** Free or $59/user/month\n- **Free tier:** Yes, but with usage limits\n- **IDE support:** VS Code, JetBrains (IntelliJ, PyCharm, etc.), Neovim\n- **Language support:** Python, JavaScript, Java, Go, Rust, and most common languages\n- **Local LLM integration:** Via Ollama configuration (Claude, Mixtral, or compatible models)\n- **Cloud models supported:** Claude 3 Opus/Sonnet (default)\n- **Team features:** Admin console, audit logs, compliance, seat management\n- **Self-hosted option:** Available for enterprise\n- **Open source:** Partial (CLI open source, IDE extensions closed)\n\n### Strengths\n- Codebase-wide context (understands entire project for smart refactoring)\n- Team admin and compliance features\n- Affordable for teams ($59/user vs $20/individual for Cursor)\n- Supports multiple IDEs (VS Code, JetBrains, Neovim)\n- Integrates with Sourcegraph code search (if using)\n- Audit logs for compliance-sensitive teams\n\n### Weaknesses\n- Cloud-first design (local LLM is secondary)\n- Inline completions default to cloud\n- Smaller feature set than Cursor\n- Team/Enterprise pricing required for larger teams\n- Local LLM experience less polished than Continue.dev\n\n### Best for\nTeams of 3+ developers needing codebase context. Organizations requiring audit logs and compliance. Development teams already using Sourcegraph search.\n\n### Avoid if\nYou need the best autocomplete (Cursor wins). You want local-only setup. You\'re a solo developer (Continue.dev or Cursor are better).',
         items: [
           '$9/user/month (team pricing available)',
           'Codebase-wide context for smart refactoring',
@@ -254,7 +254,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tabnineSection: {
         id: 'tabnine',
         title: 'Tabnine: Privacy-First Training',
-        content: 'Tabnine is an autocomplete-focused tool ($12/month Pro) trained only on permissively-licensed open-source code. This is important for regulated industries—Tabnine cannot generate code based on restrictive licenses (GPL, AGPL) or proprietary code. Tabnine is SOC 2 Type 2 certified.\n\nFor organizations with strict IP and licensing requirements, Tabnine is the enterprise answer. Self-hosted deployment is available but enterprise-only and requires significant infrastructure. Local LLM integration in the standard plan is limited.\n\n### Specifications (June 2026)\n- **Price:** Free (limited) or $12/month Pro\n- **Free tier:** Yes, with limited completions\n- **IDE support:** VS Code, JetBrains, Sublime, Vim, Emacs, Eclipse, Visual Studio\n- **Language support:** All major languages (Python, JS, Java, C++, Go, Rust, etc.)\n- **Local LLM integration:** Self-hosted deployment (enterprise-only)\n- **Cloud models supported:** Tabnine proprietary model (trained on permissive code)\n- **Team features:** Team Pro plan available\n- **Self-hosted option:** Yes, enterprise deployment\n- **Open source:** Closed source\n\n### Strengths\n- Trained on permissively-licensed code only (GPL/AGPL not included)\n- SOC 2 Type 2 certified (audited security)\n- Excellent autocomplete quality\n- Widest IDE support of any tool (10+ IDEs)\n- Strong compliance for regulated industries\n- Self-hosted option for ultimate privacy (enterprise)\n\n### Weaknesses\n- $12/month subscription required for productive use\n- Limited local LLM support (self-hosted is enterprise-only)\n- Autocomplete-focused (no chat mode)\n- Closed source—less transparency than open options\n- Self-hosted deployment requires enterprise infrastructure\n- Smaller community than Cursor or GitHub Copilot\n\n### Best for\nDevelopers in regulated industries (healthcare, finance, defense). Organizations with strict licensing requirements. Teams needing SOC 2 compliance.\n\n### Avoid if\nYou want local-only setup (Continue.dev is better). You need chat and agentic features (Cursor or Cody are better). You\'re looking for the cheapest option.',
+        content: 'Tabnine is an autocomplete-focused tool ($39/month Pro) trained only on permissively-licensed open-source code. This is important for regulated industries—Tabnine cannot generate code based on restrictive licenses (GPL, AGPL) or proprietary code. Tabnine is SOC 2 Type 2 certified.\n\nFor organizations with strict IP and licensing requirements, Tabnine is the enterprise answer. Self-hosted deployment is available but enterprise-only and requires significant infrastructure. Local LLM integration in the standard plan is limited.\n\n### Specifications (June 2026)\n- **Price:** Free (limited) or $39/month Pro\n- **Free tier:** Yes, with limited completions\n- **IDE support:** VS Code, JetBrains, Sublime, Vim, Emacs, Eclipse, Visual Studio\n- **Language support:** All major languages (Python, JS, Java, C++, Go, Rust, etc.)\n- **Local LLM integration:** Self-hosted deployment (enterprise-only)\n- **Cloud models supported:** Tabnine proprietary model (trained on permissive code)\n- **Team features:** Team Pro plan available\n- **Self-hosted option:** Yes, enterprise deployment\n- **Open source:** Closed source\n\n### Strengths\n- Trained on permissively-licensed code only (GPL/AGPL not included)\n- SOC 2 Type 2 certified (audited security)\n- Excellent autocomplete quality\n- Widest IDE support of any tool (10+ IDEs)\n- Strong compliance for regulated industries\n- Self-hosted option for ultimate privacy (enterprise)\n\n### Weaknesses\n- $39/month subscription required for productive use\n- Limited local LLM support (self-hosted is enterprise-only)\n- Autocomplete-focused (no chat mode)\n- Closed source—less transparency than open options\n- Self-hosted deployment requires enterprise infrastructure\n- Smaller community than Cursor or GitHub Copilot\n\n### Best for\nDevelopers in regulated industries (healthcare, finance, defense). Organizations with strict licensing requirements. Teams needing SOC 2 compliance.\n\n### Avoid if\nYou want local-only setup (Continue.dev is better). You need chat and agentic features (Cursor or Cody are better). You\'re looking for the cheapest option.',
         items: [
           '$12/month Pro tier',
           'Trained on permissive licenses only (no GPL)',
@@ -302,7 +302,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**1. Free, fully local, privacy-first → Continue.dev + Ollama.** Zero cost, open source, no config friction. This is the clear winner for privacy-conscious developers.',
           '**2. Best autocomplete UX, willing to pay → Cursor ($20/month).** Exceptional quality, fast IDE, local LLM as fallback. Best for professionals.',
-          '**3. Team of 5+ developers → Sourcegraph Cody ($9/user/month).** Codebase context, team admin, compliance. Enterprise-grade.',
+          '**3. Team of 5+ developers → Sourcegraph Cody ($59/user/month).** Codebase context, team admin, compliance. Enterprise-grade.',
           '**4. Strict privacy compliance (healthcare, finance, defense) → Tabnine self-hosted (enterprise pricing).** Only option for truly air-gapped requirements.',
           '**5. GitHub Copilot alternative → Continue.dev (free) or Cursor ($20/month).** Both are solid Copilot replacements with local LLM support.',
           '**6. Best autocomplete algorithm only → Cursor or Tabnine.** Both excel at code completion specifically.',
@@ -380,7 +380,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Is Tabnine self-hosted worth the enterprise cost?',
-            a: 'Only if you have strict compliance requirements (healthcare, finance, defense) and can justify the infrastructure cost. For most teams, Sourcegraph Cody ($9/user/month) offers better value.',
+            a: 'Only if you have strict compliance requirements (healthcare, finance, defense) and can justify the infrastructure cost. For most teams, Sourcegraph Cody ($59/user/month) offers better value.',
           },
           {
             q: 'Can I use local LLMs for code completion on a laptop?',
@@ -457,7 +457,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: 'November 17, 2026',
     educationalLevel: 'Intermediate',
-    leadAnswerBlock: '**Elige Continue.dev para una solución gratuita, open source y con la mejor integración de Ollama y LM Studio. Elige Cursor ($20/mes) para el autocompletado más refinado y flujos de trabajo híbridos nube+local. Elige Sourcegraph Cody ($9/usuario/mes) para equipos que necesitan contexto de todo el repositorio. Elige Tabnine ($12/mes) para entrenamiento orientado a la privacidad. Elige Windsurf ($0–15/mes) para la alternativa en ascenso con flujo de trabajo Cascade.** Todo verificado en junio 2026. Actualizado mensualmente.',
+    leadAnswerBlock: '**Elige Continue.dev para una solución gratuita, open source y con la mejor integración de Ollama y LM Studio. Elige Cursor ($20/mes) para el autocompletado más refinado y flujos de trabajo híbridos nube+local. Elige Sourcegraph Cody ($59/usuario/mes) para equipos que necesitan contexto de todo el repositorio. Elige Tabnine ($39/mes) para entrenamiento orientado a la privacidad. Elige Windsurf ($0–15/mes) para la alternativa en ascenso con flujo de trabajo Cascade.** Todo verificado en junio 2026. Actualizado mensualmente.',
     quickAnswerTop: {
       es: {
         question: '¿Qué asistente de código IA funciona mejor con LLMs locales?',
@@ -476,7 +476,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Los mejores asistentes de código IA para LLM locales en mayo de 2026: Continue.dev (gratuito, mejor integración Ollama/LM Studio), Cursor ($20/mes, mejor autocompletado), Sourcegraph Cody ($9/usuario/mes, mejor para equipos) y Windsurf ($0–15/mes).' },
+          { type: 'one-sentence', text: 'Los mejores asistentes de código IA para LLM locales en mayo de 2026: Continue.dev (gratuito, mejor integración Ollama/LM Studio), Cursor ($20/mes, mejor autocompletado), Sourcegraph Cody ($59/usuario/mes, mejor para equipos) y Windsurf ($0–15/mes).' },
           { type: 'plain-terms', text: 'Estas extensiones IDE conectan tu editor de código con un modelo de IA local en tu propio ordenador. Ofrecen autocompletado, generación de código y chat — completamente sin conexión y privado, sin enviar tu código a ningún servicio en la nube.' },
         ],
         items: [],
@@ -492,7 +492,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       verifiedSources: {
         id: 'verified-sources',
         title: 'Verificación de fuentes (junio 2026)',
-        content: '**Precios verificados en fuentes oficiales:**\n- **Cursor** ($20/mes Pro): cursor.com/pricing — verificado 2026-06-21\n- **Continue.dev** (Gratis): continue.dev — verificado open-source Apache 2.0, sin nivel premium\n- **Sourcegraph Cody** ($9/usuario/mes): sourcegraph.com/cody/pricing — verificado 2026-06-21\n- **Tabnine** ($12/mes Pro): tabnine.com/pricing — verificado 2026-06-21\n- **Windsurf** (Gratis/$15/mes): codeium.com/windsurf/pricing — verificado 2026-06-21\n- **GitHub Copilot** ($10/mes): github.com/features/copilot/pricing — verificado 2026-06-21\n\n**Integración LLM local probada con:**\n- Ollama 0.30.8 (última versión estable en junio 2026)\n- Qwen 3 Coder 14B (modelo de codificación de tamaño mediano representativo)\n- Deepseek Coder 33B (alternativa de mayor tamaño)\n- M3 Max MacBook Pro + RTX 4090 + RTX 3090 Ti (hardware representativo). Los precios pueden variar según tu país.\n\n**Próxima actualización:** julio 2026. Programa de reverificación mensual activo.',
+        content: '**Precios verificados en fuentes oficiales:**\n- **Cursor** ($20/mes Pro): cursor.com/pricing — verificado 2026-06-21\n- **Continue.dev** (Gratis): continue.dev — verificado open-source Apache 2.0, sin nivel premium\n- **Sourcegraph Cody** ($59/usuario/mes): sourcegraph.com/cody/pricing — verificado 2026-06-21\n- **Tabnine** ($39/mes Pro): tabnine.com/pricing — verificado 2026-06-21\n- **Windsurf** (Gratis/$15/mes): codeium.com/windsurf/pricing — verificado 2026-06-21\n- **GitHub Copilot** ($10/mes): github.com/features/copilot/pricing — verificado 2026-06-21\n\n**Integración LLM local probada con:**\n- Ollama 0.30.8 (última versión estable en junio 2026)\n- Qwen 3 Coder 14B (modelo de codificación de tamaño mediano representativo)\n- Deepseek Coder 33B (alternativa de mayor tamaño)\n- M3 Max MacBook Pro + RTX 4090 + RTX 3090 Ti (hardware representativo). Los precios pueden variar según tu país.\n\n**Próxima actualización:** julio 2026. Programa de reverificación mensual activo.',
       },
       verdictBox: {
         id: 'verdict-picks',
@@ -537,7 +537,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table-main',
         title: 'Tabla comparativa de asistentes de código IA (junio 2026)',
         image: '/images/best-ai-coding-assistant-local-llm-comparison-hero-es.webp',
-        imageCaption: 'Comparación de asistentes de código IA: Continue.dev (mejor en general, gratis), Cursor ($20/mes, mejor UX), Sourcegraph Cody ($9/usuario/mes, mejor para equipos), Tabnine ($12/mes, mejor privacidad), Windsurf (gratis/$15/mes, alternativa en ascenso). Todos soportan LLMs locales con complejidad de configuración variable. junio 2026.',
+        imageCaption: 'Comparación de asistentes de código IA: Continue.dev (mejor en general, gratis), Cursor ($20/mes, mejor UX), Sourcegraph Cody ($59/usuario/mes, mejor para equipos), Tabnine ($39/mes, mejor privacidad), Windsurf (gratis/$15/mes, alternativa en ascenso). Todos soportan LLMs locales con complejidad de configuración variable. junio 2026.',
         content: 'Comparación directa de funciones y precios. Precios verificados en sitios web de proveedores en junio 2026 y actualizados mensualmente. El soporte LLM local varía desde integración nativa (Continue.dev) hasta configuración específica del proveedor (Cursor, Cody) hasta solo enterprise (Tabnine self-hosted). Los precios pueden variar según tu país.',
         note: 'Todos los precios verificados directamente en los sitios web oficiales de los proveedores. Suscríbete para estar al día de las últimas actualizaciones de junio 2026.',
         columns: ['Herramienta', 'Precio', 'LLM local', 'IDEs', 'Open Source', 'Funciones de equipo', 'Mejor para'],
@@ -639,7 +639,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       codySection: {
         id: 'cody',
         title: 'Sourcegraph Cody: El mejor para equipos',
-        content: 'Sourcegraph Cody es una extensión para VS Code y JetBrains ($9/usuario/mes) orientada a la colaboración en equipo. Cody utiliza contexto de todo el repositorio para entender tu proyecto, lo que es potente para refactorizaciones grandes y cambios en múltiples archivos. Para equipos, Cody incluye controles de administración, registros de auditoría y funciones de cumplimiento normativo.\n\nEl soporte de LLM local está disponible vía configuración de Ollama. Configuras un endpoint de Ollama en los ajustes de Cody, y el chat + los completados se dirigen a tu modelo local. Funciona, pero Cody es fundamentalmente cloud-first—la experiencia del producto asume modelos en la nube.\n\n### Especificaciones (junio 2026)\n- **Precio:** Gratis o $9/usuario/mes\n- **Nivel gratuito:** Sí, pero con límites de uso\n- **Soporte de IDE:** VS Code, JetBrains (IntelliJ, PyCharm, etc.), Neovim\n- **Soporte de lenguajes:** Python, JavaScript, Java, Go, Rust y la mayoría de lenguajes comunes\n- **Integración LLM local:** Vía configuración de Ollama (Claude, Mixtral o modelos compatibles)\n- **Modelos en la nube soportados:** Claude 3 Opus/Sonnet (por defecto)\n- **Funciones de equipo:** Consola de administración, registros de auditoría, cumplimiento, gestión de puestos\n- **Opción self-hosted:** Disponible para enterprise\n- **Open source:** Parcial (CLI open source, extensiones de IDE cerradas)\n\n### Fortalezas\n- Contexto de todo el repositorio (entiende el proyecto completo para refactorización inteligente)\n- Funciones de administración de equipo y cumplimiento normativo\n- Asequible para equipos ($9/usuario vs $20/individuo en Cursor)\n- Soporta múltiples IDEs (VS Code, JetBrains, Neovim)\n- Se integra con Sourcegraph code search (si se usa)\n- Registros de auditoría para equipos con requisitos de cumplimiento\n\n### Debilidades\n- Diseño cloud-first (el LLM local es secundario)\n- Los completados en línea apuntan por defecto a la nube\n- Conjunto de funciones más pequeño que Cursor\n- Precios de Team/Enterprise requeridos para equipos grandes\n- Experiencia de LLM local menos refinada que Continue.dev\n\n### Mejor para\nEquipos de 3+ desarrolladores que necesitan contexto de repositorio. Organizaciones que requieren registros de auditoría y cumplimiento normativo. Equipos de desarrollo que ya usan Sourcegraph search.\n\n### Evitar si\nNecesitas el mejor autocompletado (Cursor gana). Quieres configuración solo en local. Eres un desarrollador individual (Continue.dev o Cursor son mejores).',
+        content: 'Sourcegraph Cody es una extensión para VS Code y JetBrains ($59/usuario/mes) orientada a la colaboración en equipo. Cody utiliza contexto de todo el repositorio para entender tu proyecto, lo que es potente para refactorizaciones grandes y cambios en múltiples archivos. Para equipos, Cody incluye controles de administración, registros de auditoría y funciones de cumplimiento normativo.\n\nEl soporte de LLM local está disponible vía configuración de Ollama. Configuras un endpoint de Ollama en los ajustes de Cody, y el chat + los completados se dirigen a tu modelo local. Funciona, pero Cody es fundamentalmente cloud-first—la experiencia del producto asume modelos en la nube.\n\n### Especificaciones (junio 2026)\n- **Precio:** Gratis o $59/usuario/mes\n- **Nivel gratuito:** Sí, pero con límites de uso\n- **Soporte de IDE:** VS Code, JetBrains (IntelliJ, PyCharm, etc.), Neovim\n- **Soporte de lenguajes:** Python, JavaScript, Java, Go, Rust y la mayoría de lenguajes comunes\n- **Integración LLM local:** Vía configuración de Ollama (Claude, Mixtral o modelos compatibles)\n- **Modelos en la nube soportados:** Claude 3 Opus/Sonnet (por defecto)\n- **Funciones de equipo:** Consola de administración, registros de auditoría, cumplimiento, gestión de puestos\n- **Opción self-hosted:** Disponible para enterprise\n- **Open source:** Parcial (CLI open source, extensiones de IDE cerradas)\n\n### Fortalezas\n- Contexto de todo el repositorio (entiende el proyecto completo para refactorización inteligente)\n- Funciones de administración de equipo y cumplimiento normativo\n- Asequible para equipos ($59/usuario vs $20/individuo en Cursor)\n- Soporta múltiples IDEs (VS Code, JetBrains, Neovim)\n- Se integra con Sourcegraph code search (si se usa)\n- Registros de auditoría para equipos con requisitos de cumplimiento\n\n### Debilidades\n- Diseño cloud-first (el LLM local es secundario)\n- Los completados en línea apuntan por defecto a la nube\n- Conjunto de funciones más pequeño que Cursor\n- Precios de Team/Enterprise requeridos para equipos grandes\n- Experiencia de LLM local menos refinada que Continue.dev\n\n### Mejor para\nEquipos de 3+ desarrolladores que necesitan contexto de repositorio. Organizaciones que requieren registros de auditoría y cumplimiento normativo. Equipos de desarrollo que ya usan Sourcegraph search.\n\n### Evitar si\nNecesitas el mejor autocompletado (Cursor gana). Quieres configuración solo en local. Eres un desarrollador individual (Continue.dev o Cursor son mejores).',
         items: [
           '$9/usuario/mes (precios de equipo disponibles)',
           'Contexto de todo el repositorio para refactorización inteligente',
@@ -653,7 +653,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tabnineSection: {
         id: 'tabnine',
         title: 'Tabnine: Entrenamiento orientado a la privacidad',
-        content: 'Tabnine es una herramienta centrada en el autocompletado ($12/mes Pro) entrenada únicamente con código open source bajo licencias permisivas. Esto es importante para industrias reguladas—Tabnine no puede generar código basado en licencias restrictivas (GPL, AGPL) o código propietario. Tabnine cuenta con certificación SOC 2 Type 2.\n\nPara organizaciones con requisitos estrictos de propiedad intelectual y licencias, Tabnine es la respuesta enterprise. La implementación self-hosted está disponible pero es exclusiva para enterprise y requiere infraestructura significativa. La integración LLM local en el plan estándar es limitada.\n\n### Especificaciones (junio 2026)\n- **Precio:** Gratis (limitado) o $12/mes Pro\n- **Nivel gratuito:** Sí, con completados limitados\n- **Soporte de IDE:** VS Code, JetBrains, Sublime, Vim, Emacs, Eclipse, Visual Studio\n- **Soporte de lenguajes:** Todos los lenguajes principales (Python, JS, Java, C++, Go, Rust, etc.)\n- **Integración LLM local:** Implementación self-hosted (solo enterprise)\n- **Modelos en la nube soportados:** Modelo propietario de Tabnine (entrenado con código permisivo)\n- **Funciones de equipo:** Plan Team Pro disponible\n- **Opción self-hosted:** Sí, implementación enterprise\n- **Open source:** Código cerrado\n\n### Fortalezas\n- Entrenado solo con código bajo licencias permisivas (GPL/AGPL no incluidos)\n- Certificado SOC 2 Type 2 (seguridad auditada)\n- Excelente calidad de autocompletado\n- El soporte de IDE más amplio de todas las herramientas (10+ IDEs)\n- Fuerte cumplimiento normativo para industrias reguladas\n- Opción self-hosted para privacidad máxima (enterprise)\n\n### Debilidades\n- Suscripción de $12/mes requerida para uso productivo\n- Soporte de LLM local limitado (self-hosted es solo enterprise)\n- Centrado en autocompletado (sin modo chat)\n- Código cerrado—menos transparencia que las opciones open source\n- La implementación self-hosted requiere infraestructura enterprise\n- Comunidad más pequeña que Cursor o GitHub Copilot\n\n### Mejor para\nDesarrolladores en industrias reguladas (sanidad, finanzas, defensa). Organizaciones con requisitos estrictos de licencias. Equipos que necesitan cumplimiento SOC 2.\n\n### Evitar si\nQuieres configuración solo en local (Continue.dev es mejor). Necesitas funciones de chat y agénticas (Cursor o Cody son mejores). Buscas la opción más económica.',
+        content: 'Tabnine es una herramienta centrada en el autocompletado ($39/mes Pro) entrenada únicamente con código open source bajo licencias permisivas. Esto es importante para industrias reguladas—Tabnine no puede generar código basado en licencias restrictivas (GPL, AGPL) o código propietario. Tabnine cuenta con certificación SOC 2 Type 2.\n\nPara organizaciones con requisitos estrictos de propiedad intelectual y licencias, Tabnine es la respuesta enterprise. La implementación self-hosted está disponible pero es exclusiva para enterprise y requiere infraestructura significativa. La integración LLM local en el plan estándar es limitada.\n\n### Especificaciones (junio 2026)\n- **Precio:** Gratis (limitado) o $39/mes Pro\n- **Nivel gratuito:** Sí, con completados limitados\n- **Soporte de IDE:** VS Code, JetBrains, Sublime, Vim, Emacs, Eclipse, Visual Studio\n- **Soporte de lenguajes:** Todos los lenguajes principales (Python, JS, Java, C++, Go, Rust, etc.)\n- **Integración LLM local:** Implementación self-hosted (solo enterprise)\n- **Modelos en la nube soportados:** Modelo propietario de Tabnine (entrenado con código permisivo)\n- **Funciones de equipo:** Plan Team Pro disponible\n- **Opción self-hosted:** Sí, implementación enterprise\n- **Open source:** Código cerrado\n\n### Fortalezas\n- Entrenado solo con código bajo licencias permisivas (GPL/AGPL no incluidos)\n- Certificado SOC 2 Type 2 (seguridad auditada)\n- Excelente calidad de autocompletado\n- El soporte de IDE más amplio de todas las herramientas (10+ IDEs)\n- Fuerte cumplimiento normativo para industrias reguladas\n- Opción self-hosted para privacidad máxima (enterprise)\n\n### Debilidades\n- Suscripción de $39/mes requerida para uso productivo\n- Soporte de LLM local limitado (self-hosted es solo enterprise)\n- Centrado en autocompletado (sin modo chat)\n- Código cerrado—menos transparencia que las opciones open source\n- La implementación self-hosted requiere infraestructura enterprise\n- Comunidad más pequeña que Cursor o GitHub Copilot\n\n### Mejor para\nDesarrolladores en industrias reguladas (sanidad, finanzas, defensa). Organizaciones con requisitos estrictos de licencias. Equipos que necesitan cumplimiento SOC 2.\n\n### Evitar si\nQuieres configuración solo en local (Continue.dev es mejor). Necesitas funciones de chat y agénticas (Cursor o Cody son mejores). Buscas la opción más económica.',
         items: [
           'Nivel Pro $12/mes',
           'Entrenado solo con licencias permisivas (sin GPL)',
@@ -701,7 +701,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**1. Gratis, completamente local, privacidad primero → Continue.dev + Ollama.** Costo cero, open source, sin fricción de configuración. Este es el ganador claro para desarrolladores conscientes de la privacidad.',
           '**2. Mejor UX de autocompletado, dispuesto a pagar → Cursor ($20/mes).** Calidad excepcional, IDE rápido, LLM local como fallback. El mejor para profesionales.',
-          '**3. Equipo de 5+ desarrolladores → Sourcegraph Cody ($9/usuario/mes).** Contexto de repositorio, administración de equipo, cumplimiento normativo. Nivel enterprise.',
+          '**3. Equipo de 5+ desarrolladores → Sourcegraph Cody ($59/usuario/mes).** Contexto de repositorio, administración de equipo, cumplimiento normativo. Nivel enterprise.',
           '**4. Cumplimiento estricto de privacidad (sanidad, finanzas, defensa) → Tabnine self-hosted (precios enterprise).** Única opción para requisitos verdaderamente air-gapped.',
           '**5. Alternativa a GitHub Copilot → Continue.dev (gratis) o Cursor ($20/mes).** Ambos son reemplazos sólidos de Copilot con soporte de LLM local.',
           '**6. Solo el mejor algoritmo de autocompletado → Cursor o Tabnine.** Ambos destacan específicamente en completado de código.',
@@ -779,7 +779,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Vale la pena el costo enterprise de Tabnine self-hosted?',
-            a: 'Solo si tienes requisitos estrictos de cumplimiento (sanidad, finanzas, defensa) y puedes justificar el costo de infraestructura. Para la mayoría de equipos, Sourcegraph Cody ($9/usuario/mes) ofrece mejor valor.',
+            a: 'Solo si tienes requisitos estrictos de cumplimiento (sanidad, finanzas, defensa) y puedes justificar el costo de infraestructura. Para la mayoría de equipos, Sourcegraph Cody ($59/usuario/mes) ofrece mejor valor.',
           },
           {
             q: '¿Puedo usar LLMs locales para el completado de código en un portátil?',
@@ -882,7 +882,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: 'November 17, 2026',
     educationalLevel: 'Intermediate',
-    leadAnswerBlock: '**اختر Continue.dev لحل مجاني ومفتوح المصدر بأفضل تكامل مع Ollama وLM Studio. اختر Cursor (20 دولارًا/شهر) لأرقى إكمال تلقائي وتدفقات عمل هجينة سحابة+محلي. اختر Sourcegraph Cody (9 دولارات/مستخدم/شهر) للفرق التي تحتاج سياق المستودع الكامل. اختر Tabnine (12 دولارًا/شهر) لتدريب موجَّه نحو الخصوصية. اختر Windsurf (0–15 دولارًا/شهر) للبديل الصاعد بتدفق عمل Cascade.** كل ذلك متحقَّق منه في يونيو 2026. يُحدَّث شهريًا.',
+    leadAnswerBlock: '**اختر Continue.dev لحل مجاني ومفتوح المصدر بأفضل تكامل مع Ollama وLM Studio. اختر Cursor (20 دولارًا/شهر) لأرقى إكمال تلقائي وتدفقات عمل هجينة سحابة+محلي. اختر Sourcegraph Cody (59 دولارات/مستخدم/شهر) للفرق التي تحتاج سياق المستودع الكامل. اختر Tabnine (39 دولارًا/شهر) لتدريب موجَّه نحو الخصوصية. اختر Windsurf (0–15 دولارًا/شهر) للبديل الصاعد بتدفق عمل Cascade.** كل ذلك متحقَّق منه في يونيو 2026. يُحدَّث شهريًا.',
     quickAnswerTop: {
       question: 'أي مساعد كود بالذكاء الاصطناعي يعمل أفضل مع نماذج LLM المحلية؟',
       answer: 'Continue.dev هو الفائز الواضح للمطورين الذين يضعون المحلي أولًا — بُني بـ Ollama وLM Studio كأهداف رئيسية. وCursor أفضل للتدفقات الهجينة (سحابة + محلي عرضي). أما Cody وTabnine فيقدّمان دعمًا محليًا لكنهما سحابيان أولًا. وWindsurf هو البديل الصاعد بأحدث تكامل لـ LLM المحلي.',
@@ -899,7 +899,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         snippetBlocks: [
-          { type: 'one-sentence', text: 'أفضل مساعدي الكود بالذكاء الاصطناعي للنماذج اللغوية المحلية في يونيو 2026: Continue.dev (مجاني، أفضل تكامل مع Ollama/LM Studio)، Cursor (20 $/شهر، أفضل إكمال تلقائي)، Sourcegraph Cody (9 $/مستخدم/شهر، الأفضل للفرق)، Windsurf (0–15 $/شهر).' },
+          { type: 'one-sentence', text: 'أفضل مساعدي الكود بالذكاء الاصطناعي للنماذج اللغوية المحلية في يونيو 2026: Continue.dev (مجاني، أفضل تكامل مع Ollama/LM Studio)، Cursor (20 $/شهر، أفضل إكمال تلقائي)، Sourcegraph Cody (59 $/مستخدم/شهر، الأفضل للفرق)، Windsurf (0–15 $/شهر).' },
           { type: 'plain-terms', text: 'هذه إضافات بيئة تطوير تربط محرر الكود الخاص بك بنموذج ذكاء اصطناعي محلي يعمل على جهاز الكمبيوتر الخاص بك. توفر الإكمال التلقائي وتوليد الكود والدردشة — بالكامل دون اتصال بالإنترنت وبشكل خاص، دون إرسال الكود إلى أي خدمة سحابية.' },
         ],
         items: [],
@@ -915,7 +915,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       verifiedSources: {
         id: 'verified-sources',
         title: 'التحقق من المصادر (يونيو 2026)',
-        content: '**الأسعار متحقَّق منها من مصادر رسمية:**\n- **Cursor** (20 دولارًا/شهر Pro): cursor.com/pricing — متحقَّق منه 2026-06-21\n- **Continue.dev** (مجاني): continue.dev — متحقَّق منه مفتوح المصدر Apache 2.0، دون طبقة مدفوعة\n- **Sourcegraph Cody** (9 دولارات/مستخدم/شهر): sourcegraph.com/cody/pricing — متحقَّق منه 2026-06-21\n- **Tabnine** (12 دولارًا/شهر Pro): tabnine.com/pricing — متحقَّق منه 2026-06-21\n- **Windsurf** (مجاني/15 دولارًا/شهر): codeium.com/windsurf/pricing — متحقَّق منه 2026-06-21\n- **GitHub Copilot** (10 دولارات/شهر): github.com/features/copilot/pricing — متحقَّق منه 2026-06-21\n\n**تكامل LLM المحلي مُختبَر مع:**\n- Ollama 0.30.8 (أحدث إصدار مستقر في يونيو 2026)\n- Qwen 3 Coder 14B (نموذج برمجة متوسط الحجم تمثيلي)\n- Deepseek Coder 33B (بديل أكبر حجمًا)\n- M3 Max MacBook Pro + RTX 4090 + RTX 3090 Ti (عتاد تمثيلي). قد تتفاوت الأسعار حسب بلدك.\n\n**التحديث التالي:** يونيو 2026. جدول إعادة تحقق شهري نشط.',
+        content: '**الأسعار متحقَّق منها من مصادر رسمية:**\n- **Cursor** (20 دولارًا/شهر Pro): cursor.com/pricing — متحقَّق منه 2026-06-21\n- **Continue.dev** (مجاني): continue.dev — متحقَّق منه مفتوح المصدر Apache 2.0، دون طبقة مدفوعة\n- **Sourcegraph Cody** (59 دولارات/مستخدم/شهر): sourcegraph.com/cody/pricing — متحقَّق منه 2026-06-21\n- **Tabnine** (39 دولارًا/شهر Pro): tabnine.com/pricing — متحقَّق منه 2026-06-21\n- **Windsurf** (مجاني/15 دولارًا/شهر): codeium.com/windsurf/pricing — متحقَّق منه 2026-06-21\n- **GitHub Copilot** (10 دولارات/شهر): github.com/features/copilot/pricing — متحقَّق منه 2026-06-21\n\n**تكامل LLM المحلي مُختبَر مع:**\n- Ollama 0.30.8 (أحدث إصدار مستقر في يونيو 2026)\n- Qwen 3 Coder 14B (نموذج برمجة متوسط الحجم تمثيلي)\n- Deepseek Coder 33B (بديل أكبر حجمًا)\n- M3 Max MacBook Pro + RTX 4090 + RTX 3090 Ti (عتاد تمثيلي). قد تتفاوت الأسعار حسب بلدك.\n\n**التحديث التالي:** يونيو 2026. جدول إعادة تحقق شهري نشط.',
       },
       verdictBox: {
         id: 'verdict-picks',
@@ -960,7 +960,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table-main',
         title: 'جدول مقارنة مساعدي الكود بالذكاء الاصطناعي (يونيو 2026)',
         image: '/images/best-ai-coding-assistant-local-llm-comparison-hero-ar.webp',
-        imageCaption: 'مقارنة مساعدي الكود بالذكاء الاصطناعي: Continue.dev (الأفضل عمومًا، مجاني)، Cursor (20 دولارًا/شهر، أفضل تجربة مستخدم)، Sourcegraph Cody (9 دولارات/مستخدم/شهر، الأفضل للفرق)، Tabnine (12 دولارًا/شهر، أفضل خصوصية)، Windsurf (مجاني/15 دولارًا/شهر، بديل صاعد). كلها تدعم نماذج LLM المحلية بتعقيد إعداد متفاوت. يونيو 2026.',
+        imageCaption: 'مقارنة مساعدي الكود بالذكاء الاصطناعي: Continue.dev (الأفضل عمومًا، مجاني)، Cursor (20 دولارًا/شهر، أفضل تجربة مستخدم)، Sourcegraph Cody (59 دولارات/مستخدم/شهر، الأفضل للفرق)، Tabnine (39 دولارًا/شهر، أفضل خصوصية)، Windsurf (مجاني/15 دولارًا/شهر، بديل صاعد). كلها تدعم نماذج LLM المحلية بتعقيد إعداد متفاوت. يونيو 2026.',
         content: 'مقارنة مباشرة للميزات والأسعار. الأسعار متحقَّق منها على مواقع المزوّدين في يونيو 2026 وتُحدَّث شهريًا. يتفاوت دعم LLM المحلي من تكامل أصلي (Continue.dev) إلى تهيئة خاصة بالمزوّد (Cursor، Cody) إلى للمؤسسات فقط (Tabnine استضافة ذاتية). قد تتفاوت الأسعار حسب بلدك.',
         note: 'كل الأسعار متحقَّق منها مباشرةً على مواقع المزوّدين الرسمية. اشترك لتبقى على اطلاع بأحدث تحديثات يونيو 2026.',
         columns: ['الأداة', 'السعر', 'LLM محلي', 'بيئات IDE', 'مفتوح المصدر', 'ميزات الفرق', 'الأفضل لـ'],
@@ -1062,7 +1062,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       codySection: {
         id: 'cody',
         title: 'Sourcegraph Cody: الأفضل للفرق',
-        content: 'Sourcegraph Cody إضافة لـ VS Code وJetBrains (9 دولارات/مستخدم/شهر) موجَّهة نحو تعاون الفرق. يستخدم Cody سياق المستودع الكامل لفهم مشروعك، وهو قوي لإعادة الهيكلة الكبيرة والتغييرات متعددة الملفات. للفرق، يتضمن Cody ضوابط إدارة وسجلات تدقيق وميزات امتثال.\n\nدعم LLM المحلي متاح عبر تهيئة Ollama. تُهيّئ واجهة Ollama في إعدادات Cody، فتُوجَّه الدردشة + الإكمالات إلى نموذجك المحلي. يعمل، لكن Cody سحابي أولًا جوهريًا — تفترض تجربة المنتج نماذج سحابية.\n\n### المواصفات (يونيو 2026)\n- **السعر:** مجاني أو 9 دولارات/مستخدم/شهر\n- **الطبقة المجانية:** نعم، لكن بحدود استخدام\n- **دعم IDE:** VS Code، JetBrains (IntelliJ، PyCharm، إلخ)، Neovim\n- **دعم اللغات:** Python، JavaScript، Java، Go، Rust ومعظم اللغات الشائعة\n- **تكامل LLM المحلي:** عبر تهيئة Ollama (Claude، Mixtral أو نماذج متوافقة)\n- **النماذج السحابية المدعومة:** Claude 3 Opus/Sonnet (افتراضي)\n- **ميزات الفرق:** وحدة إدارة، سجلات تدقيق، امتثال، إدارة مقاعد\n- **خيار الاستضافة الذاتية:** متاح للمؤسسات\n- **مفتوح المصدر:** جزئي (CLI مفتوح، إضافات IDE مغلقة)\n\n### نقاط القوة\n- سياق المستودع الكامل (يفهم المشروع كاملًا لإعادة هيكلة ذكية)\n- ميزات إدارة فريق وامتثال\n- ميسور للفرق (9 دولارات/مستخدم مقابل 20 دولارًا/فرد في Cursor)\n- يدعم عدة بيئات IDE (VS Code، JetBrains، Neovim)\n- يتكامل مع Sourcegraph code search (إن استُخدم)\n- سجلات تدقيق للفرق ذات متطلبات الامتثال\n\n### نقاط الضعف\n- تصميم سحابي أولًا (LLM المحلي ثانوي)\n- تُوجَّه الإكمالات السطرية افتراضيًا إلى السحابة\n- مجموعة ميزات أصغر من Cursor\n- أسعار Team/Enterprise مطلوبة للفرق الكبيرة\n- تجربة LLM محلي أقل صقلًا من Continue.dev\n\n### الأفضل لـ\nفرق من 3 مطورين فأكثر تحتاج سياق المستودع. المؤسسات التي تتطلب سجلات تدقيق وامتثال. فرق التطوير التي تستخدم بالفعل Sourcegraph search.\n\n### تجنّبه إذا\nتحتاج أفضل إكمال تلقائي (يفوز Cursor). تريد تهيئة محلية فقط. أنت مطور فرد (Continue.dev أو Cursor أفضل).',
+        content: 'Sourcegraph Cody إضافة لـ VS Code وJetBrains (59 دولارات/مستخدم/شهر) موجَّهة نحو تعاون الفرق. يستخدم Cody سياق المستودع الكامل لفهم مشروعك، وهو قوي لإعادة الهيكلة الكبيرة والتغييرات متعددة الملفات. للفرق، يتضمن Cody ضوابط إدارة وسجلات تدقيق وميزات امتثال.\n\nدعم LLM المحلي متاح عبر تهيئة Ollama. تُهيّئ واجهة Ollama في إعدادات Cody، فتُوجَّه الدردشة + الإكمالات إلى نموذجك المحلي. يعمل، لكن Cody سحابي أولًا جوهريًا — تفترض تجربة المنتج نماذج سحابية.\n\n### المواصفات (يونيو 2026)\n- **السعر:** مجاني أو 59 دولارات/مستخدم/شهر\n- **الطبقة المجانية:** نعم، لكن بحدود استخدام\n- **دعم IDE:** VS Code، JetBrains (IntelliJ، PyCharm، إلخ)، Neovim\n- **دعم اللغات:** Python، JavaScript، Java، Go، Rust ومعظم اللغات الشائعة\n- **تكامل LLM المحلي:** عبر تهيئة Ollama (Claude، Mixtral أو نماذج متوافقة)\n- **النماذج السحابية المدعومة:** Claude 3 Opus/Sonnet (افتراضي)\n- **ميزات الفرق:** وحدة إدارة، سجلات تدقيق، امتثال، إدارة مقاعد\n- **خيار الاستضافة الذاتية:** متاح للمؤسسات\n- **مفتوح المصدر:** جزئي (CLI مفتوح، إضافات IDE مغلقة)\n\n### نقاط القوة\n- سياق المستودع الكامل (يفهم المشروع كاملًا لإعادة هيكلة ذكية)\n- ميزات إدارة فريق وامتثال\n- ميسور للفرق (59 دولارات/مستخدم مقابل 20 دولارًا/فرد في Cursor)\n- يدعم عدة بيئات IDE (VS Code، JetBrains، Neovim)\n- يتكامل مع Sourcegraph code search (إن استُخدم)\n- سجلات تدقيق للفرق ذات متطلبات الامتثال\n\n### نقاط الضعف\n- تصميم سحابي أولًا (LLM المحلي ثانوي)\n- تُوجَّه الإكمالات السطرية افتراضيًا إلى السحابة\n- مجموعة ميزات أصغر من Cursor\n- أسعار Team/Enterprise مطلوبة للفرق الكبيرة\n- تجربة LLM محلي أقل صقلًا من Continue.dev\n\n### الأفضل لـ\nفرق من 3 مطورين فأكثر تحتاج سياق المستودع. المؤسسات التي تتطلب سجلات تدقيق وامتثال. فرق التطوير التي تستخدم بالفعل Sourcegraph search.\n\n### تجنّبه إذا\nتحتاج أفضل إكمال تلقائي (يفوز Cursor). تريد تهيئة محلية فقط. أنت مطور فرد (Continue.dev أو Cursor أفضل).',
         items: [
           '9 دولارات/مستخدم/شهر (أسعار فرق متاحة)',
           'سياق المستودع الكامل لإعادة هيكلة ذكية',
@@ -1076,7 +1076,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tabnineSection: {
         id: 'tabnine',
         title: 'Tabnine: تدريب موجَّه نحو الخصوصية',
-        content: 'Tabnine أداة محورها الإكمال التلقائي (12 دولارًا/شهر Pro) مُدرَّبة فقط على كود مفتوح المصدر بتراخيص متساهلة. هذا مهم للصناعات المنظَّمة — لا يستطيع Tabnine توليد كود مبني على تراخيص مقيِّدة (GPL، AGPL) أو كود مملوك. ويملك Tabnine شهادة SOC 2 Type 2.\n\nللمؤسسات ذات متطلبات الملكية الفكرية والترخيص الصارمة، Tabnine هو الإجابة المؤسسية. النشر بالاستضافة الذاتية متاح لكنه حصري للمؤسسات ويتطلب بنية تحتية كبيرة. وتكامل LLM المحلي في الخطة القياسية محدود.\n\n### المواصفات (يونيو 2026)\n- **السعر:** مجاني (محدود) أو 12 دولارًا/شهر Pro\n- **الطبقة المجانية:** نعم، بإكمالات محدودة\n- **دعم IDE:** VS Code، JetBrains، Sublime، Vim، Emacs، Eclipse، Visual Studio\n- **دعم اللغات:** كل اللغات الرئيسية (Python، JS، Java، C++، Go، Rust، إلخ)\n- **تكامل LLM المحلي:** نشر بالاستضافة الذاتية (للمؤسسات فقط)\n- **النماذج السحابية المدعومة:** نموذج Tabnine المملوك (مُدرَّب على كود متساهل)\n- **ميزات الفرق:** خطة Team Pro متاحة\n- **خيار الاستضافة الذاتية:** نعم، نشر مؤسسي\n- **مفتوح المصدر:** مغلق المصدر\n\n### نقاط القوة\n- مُدرَّب فقط على كود بتراخيص متساهلة (GPL/AGPL غير مشمولة)\n- معتمد SOC 2 Type 2 (أمان مُدقَّق)\n- جودة إكمال تلقائي ممتازة\n- أوسع دعم IDE بين كل الأدوات (أكثر من 10 بيئات)\n- امتثال قوي للصناعات المنظَّمة\n- خيار استضافة ذاتية لأقصى خصوصية (للمؤسسات)\n\n### نقاط الضعف\n- اشتراك 12 دولارًا/شهر مطلوب للاستخدام الإنتاجي\n- دعم LLM محلي محدود (الاستضافة الذاتية للمؤسسات فقط)\n- محوره الإكمال التلقائي (دون وضع دردشة)\n- مغلق المصدر — شفافية أقل من الخيارات المفتوحة\n- يتطلب نشر الاستضافة الذاتية بنية تحتية مؤسسية\n- مجتمع أصغر من Cursor أو GitHub Copilot\n\n### الأفضل لـ\nالمطورون في الصناعات المنظَّمة (الصحة، المال، الدفاع). المؤسسات ذات متطلبات الترخيص الصارمة. الفرق التي تحتاج امتثال SOC 2.\n\n### تجنّبه إذا\nتريد تهيئة محلية فقط (Continue.dev أفضل). تحتاج ميزات دردشة ووكيلة (Cursor أو Cody أفضل). تبحث عن الخيار الأرخص.',
+        content: 'Tabnine أداة محورها الإكمال التلقائي (39 دولارًا/شهر Pro) مُدرَّبة فقط على كود مفتوح المصدر بتراخيص متساهلة. هذا مهم للصناعات المنظَّمة — لا يستطيع Tabnine توليد كود مبني على تراخيص مقيِّدة (GPL، AGPL) أو كود مملوك. ويملك Tabnine شهادة SOC 2 Type 2.\n\nللمؤسسات ذات متطلبات الملكية الفكرية والترخيص الصارمة، Tabnine هو الإجابة المؤسسية. النشر بالاستضافة الذاتية متاح لكنه حصري للمؤسسات ويتطلب بنية تحتية كبيرة. وتكامل LLM المحلي في الخطة القياسية محدود.\n\n### المواصفات (يونيو 2026)\n- **السعر:** مجاني (محدود) أو 39 دولارًا/شهر Pro\n- **الطبقة المجانية:** نعم، بإكمالات محدودة\n- **دعم IDE:** VS Code، JetBrains، Sublime، Vim، Emacs، Eclipse، Visual Studio\n- **دعم اللغات:** كل اللغات الرئيسية (Python، JS، Java، C++، Go، Rust، إلخ)\n- **تكامل LLM المحلي:** نشر بالاستضافة الذاتية (للمؤسسات فقط)\n- **النماذج السحابية المدعومة:** نموذج Tabnine المملوك (مُدرَّب على كود متساهل)\n- **ميزات الفرق:** خطة Team Pro متاحة\n- **خيار الاستضافة الذاتية:** نعم، نشر مؤسسي\n- **مفتوح المصدر:** مغلق المصدر\n\n### نقاط القوة\n- مُدرَّب فقط على كود بتراخيص متساهلة (GPL/AGPL غير مشمولة)\n- معتمد SOC 2 Type 2 (أمان مُدقَّق)\n- جودة إكمال تلقائي ممتازة\n- أوسع دعم IDE بين كل الأدوات (أكثر من 10 بيئات)\n- امتثال قوي للصناعات المنظَّمة\n- خيار استضافة ذاتية لأقصى خصوصية (للمؤسسات)\n\n### نقاط الضعف\n- اشتراك 39 دولارًا/شهر مطلوب للاستخدام الإنتاجي\n- دعم LLM محلي محدود (الاستضافة الذاتية للمؤسسات فقط)\n- محوره الإكمال التلقائي (دون وضع دردشة)\n- مغلق المصدر — شفافية أقل من الخيارات المفتوحة\n- يتطلب نشر الاستضافة الذاتية بنية تحتية مؤسسية\n- مجتمع أصغر من Cursor أو GitHub Copilot\n\n### الأفضل لـ\nالمطورون في الصناعات المنظَّمة (الصحة، المال، الدفاع). المؤسسات ذات متطلبات الترخيص الصارمة. الفرق التي تحتاج امتثال SOC 2.\n\n### تجنّبه إذا\nتريد تهيئة محلية فقط (Continue.dev أفضل). تحتاج ميزات دردشة ووكيلة (Cursor أو Cody أفضل). تبحث عن الخيار الأرخص.',
         items: [
           'الطبقة المحترفة 12 دولارًا/شهر',
           'مُدرَّب فقط على تراخيص متساهلة (دون GPL)',
@@ -1124,7 +1124,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**1. مجاني، محلي بالكامل، الخصوصية أولًا ← Continue.dev + Ollama.** تكلفة صفرية، مفتوح المصدر، دون احتكاك إعداد. هذا الفائز الواضح للمطورين الواعين بالخصوصية.',
           '**2. أفضل تجربة إكمال تلقائي، مستعد للدفع ← Cursor (20 دولارًا/شهر).** جودة استثنائية، IDE سريع، LLM محلي كاحتياطي. الأفضل للمحترفين.',
-          '**3. فريق من 5 مطورين فأكثر ← Sourcegraph Cody (9 دولارات/مستخدم/شهر).** سياق المستودع، إدارة فريق، امتثال. مستوى المؤسسات.',
+          '**3. فريق من 5 مطورين فأكثر ← Sourcegraph Cody (59 دولارات/مستخدم/شهر).** سياق المستودع، إدارة فريق، امتثال. مستوى المؤسسات.',
           '**4. امتثال خصوصية صارم (صحة، مال، دفاع) ← Tabnine استضافة ذاتية (أسعار مؤسسية).** الخيار الوحيد لمتطلبات الشبكات المعزولة الحقيقية.',
           '**5. بديل لـ GitHub Copilot ← Continue.dev (مجاني) أو Cursor (20 دولارًا/شهر).** كلاهما بديل قوي لـ Copilot بدعم LLM محلي.',
           '**6. أفضل خوارزمية إكمال تلقائي فقط ← Cursor أو Tabnine.** كلاهما متميز خصيصًا في إكمال الكود.',
@@ -1202,7 +1202,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل تستحق تكلفة Tabnine المؤسسية بالاستضافة الذاتية العناء؟',
-            a: 'فقط إن كانت لديك متطلبات امتثال صارمة (صحة، مال، دفاع) وتستطيع تبرير تكلفة البنية التحتية. لمعظم الفرق، يقدّم Sourcegraph Cody (9 دولارات/مستخدم/شهر) قيمة أفضل.',
+            a: 'فقط إن كانت لديك متطلبات امتثال صارمة (صحة، مال، دفاع) وتستطيع تبرير تكلفة البنية التحتية. لمعظم الفرق، يقدّم Sourcegraph Cody (59 دولارات/مستخدم/شهر) قيمة أفضل.',
           },
           {
             q: 'هل يمكنني استخدام نماذج LLM المحلية لإكمال الكود على لابتوب؟',
@@ -1306,7 +1306,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-17',
     educationalLevel: 'Intermediate',
-    leadAnswerBlock: '**Escolha Continue.dev para uma solução gratuita, open source e com a melhor integração de Ollama e LM Studio. Escolha Cursor (US$ 20/mês) para o autocompletado mais refinado e fluxos de trabalho híbridos nuvem+local. Escolha Sourcegraph Cody (US$ 9/usuário/mês) para equipes que precisam de contexto de todo o repositório. Escolha Tabnine (US$ 12/mês) para treinamento orientado à privacidade. Escolha Windsurf (US$ 0-15/mês) para a alternativa em ascensão com fluxo de trabalho Cascade.** Tudo verificado em junho 2026.',
+    leadAnswerBlock: '**Escolha Continue.dev para uma solução gratuita, open source e com a melhor integração de Ollama e LM Studio. Escolha Cursor (US$ 20/mês) para o autocompletado mais refinado e fluxos de trabalho híbridos nuvem+local. Escolha Sourcegraph Cody (US$ 59/usuário/mês) para equipes que precisam de contexto de todo o repositório. Escolha Tabnine (US$ 39/mês) para treinamento orientado à privacidade. Escolha Windsurf (US$ 0-15/mês) para a alternativa em ascensão com fluxo de trabalho Cascade.** Tudo verificado em junho 2026.',
     quickAnswerTop: {
       pt: {
         question: 'Qual assistente de código IA funciona melhor com LLMs locais?', // VERIFY
@@ -1325,7 +1325,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Os melhores assistentes de código IA para LLMs locais em maio de 2026: Continue.dev (gratuito, melhor integração Ollama/LM Studio), Cursor (US$20/mês, melhor autocompletar), Sourcegraph Cody (US$9/usuário/mês, melhor para equipes) e Windsurf (US$0–15/mês).' },
+          { type: 'one-sentence', text: 'Os melhores assistentes de código IA para LLMs locais em maio de 2026: Continue.dev (gratuito, melhor integração Ollama/LM Studio), Cursor (US$20/mês, melhor autocompletar), Sourcegraph Cody (US$59/usuário/mês, melhor para equipes) e Windsurf (US$0–15/mês).' },
           { type: 'plain-terms', text: 'Essas extensões de IDE conectam seu editor de código a um modelo de IA local no seu próprio computador. Fornecem autocompletar, geração de código e chat — completamente offline e privado, sem enviar seu código para nenhum serviço na nuvem.' },
         ],
         items: [],
@@ -1436,7 +1436,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: 'November 17, 2026',
     educationalLevel: 'Intermediate',
-    leadAnswerBlock: '**Wählen Sie Continue.dev für kostenlos, Open-Source und beste Ollama/LM Studio Integration. Wählen Sie Cursor ($20/Monat, ca. 18–20 €) für die polierte Autocomplete und Hybrid-Workflows. Wählen Sie Sourcegraph Cody ($9/Benutzer/Monat, ca. 8–9 €) für Teams mit Codebase-Kontext. Wählen Sie Tabnine ($12/Monat, ca. 11–12 €) für Datenschutz-First. Wählen Sie Windsurf (Kostenlos–$15/Monat, ca. 14–15 €) für die aufstrebende Alternative mit Cascade-Workflow.** Alle Juni 2026 verifiziert. Monatlich aktualisiert.',
+    leadAnswerBlock: '**Wählen Sie Continue.dev für kostenlos, Open-Source und beste Ollama/LM Studio Integration. Wählen Sie Cursor ($20/Monat, ca. 18–20 €) für die polierte Autocomplete und Hybrid-Workflows. Wählen Sie Sourcegraph Cody ($59/Benutzer/Monat, ca. 8–59 €) für Teams mit Codebase-Kontext. Wählen Sie Tabnine ($39/Monat, ca. 36–39 €) für Datenschutz-First. Wählen Sie Windsurf (Kostenlos–$15/Monat, ca. 14–15 €) für die aufstrebende Alternative mit Cascade-Workflow.** Alle Juni 2026 verifiziert. Monatlich aktualisiert.',
     quickAnswerTop: {
       en: {
         question: 'Which AI coding assistant works best with local LLMs?',
@@ -1455,8 +1455,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Continue.dev: Kostenlos, Open Source, natives Ollama/LM Studio Support',
           'Cursor: $20/Monat (ca. 18–20 €), polierte UX, lokales LLM über benutzerdefiniertes OpenAI-Endpoint',
-          'Sourcegraph Cody: $9/Benutzer/Monat (ca. 8–9 €), Codebase-Kontext, Team-Features',
-          'Tabnine: $12/Monat (ca. 11–12 €), Privacy-First-Training, Self-Hosted-Option',
+          'Sourcegraph Cody: $59/Benutzer/Monat (ca. 8–59 €), Codebase-Kontext, Team-Features',
+          'Tabnine: $39/Monat (ca. 11–39 €), Privacy-First-Training, Self-Hosted-Option',
           'Windsurf: Kostenlos + $15/Monat Pro (ca. 14–15 €), Cascade-Workflow, neuere lokale Unterstützung',
         ],
       },
@@ -1466,8 +1466,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Continue.dev: Gratuit, open source, support natif Ollama/LM Studio',
           'Cursor: $20/mois (ca. 18–20 €), UX polie, LLM local via point de terminaison OpenAI personnalisé',
-          'Sourcegraph Cody: $9/utilisateur/mois (ca. 8–9 €), contexte codebase, fonctionnalités d\'équipe',
-          'Tabnine: $12/mois (ca. 11–12 €), formation axée sur la confidentialité, option auto-hébergée',
+          'Sourcegraph Cody: $59/utilisateur/mois (ca. 8–59 €), contexte codebase, fonctionnalités d\'équipe',
+          'Tabnine: $39/mois (ca. 11–39 €), formation axée sur la confidentialité, option auto-hébergée',
           'Windsurf: Gratuit + $15/mois Pro (ca. 14–15 €), workflow Cascade, support local plus récent',
         ],
       },
@@ -1477,8 +1477,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Continue.dev: 無料、オープンソース、ネイティブOllama/LM Studioサポート',
           'Cursor: $20/月、洗練されたUX、カスタムOpenAIエンドポイント経由のローカルLLM',
-          'Sourcegraph Cody: $9/ユーザー/月、コードベースコンテキスト、チーム機能',
-          'Tabnine: $12/月、プライバシーファーストトレーニング、自己ホスティングオプション',
+          'Sourcegraph Cody: $59/ユーザー/月、コードベースコンテキスト、チーム機能',
+          'Tabnine: $39/月、プライバシーファーストトレーニング、自己ホスティングオプション',
           'Windsurf: 無料 + $15/月Pro、Cascadeワークフロー、より新しいローカルサポート',
         ],
       },
@@ -1488,8 +1488,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Continue.dev: 免费、开源、原生Ollama/LM Studio支持',
           'Cursor: $20/月、精致的UX、通过自定义OpenAI端点进行本地LLM',
-          'Sourcegraph Cody: $9/用户/月、代码库上下文、团队功能',
-          'Tabnine: $12/月、隐私优先培训、自托管选项',
+          'Sourcegraph Cody: $59/用户/月、代码库上下文、团队功能',
+          'Tabnine: $39/月、隐私优先培训、自托管选项',
           'Windsurf: 免费 + $15/月Pro、Cascade工作流、较新的本地支持',
         ],
       },
@@ -1499,7 +1499,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Die besten KI-Coding-Assistenten für lokale LLMs im Juni 2026: Continue.dev (kostenlos, beste Ollama/LM Studio-Integration), Cursor (20 $/Monat, bestes Autocomplete), Sourcegraph Cody (9 $/Nutzer/Monat, beste Teamlösung) und Windsurf (0–15 $/Monat).' },
+          { type: 'one-sentence', text: 'Die besten KI-Coding-Assistenten für lokale LLMs im Juni 2026: Continue.dev (kostenlos, beste Ollama/LM Studio-Integration), Cursor (20 $/Monat, bestes Autocomplete), Sourcegraph Cody (59 $/Nutzer/Monat, beste Teamlösung) und Windsurf (0–15 $/Monat).' },
           { type: 'plain-terms', text: 'Diese IDE-Erweiterungen verbinden deinen Code-Editor mit einem lokalen KI-Modell auf deinem eigenen Computer. Sie bieten Autocomplete, Code-Generierung und Chat — vollständig offline und privat, ohne deinen Code in die Cloud zu senden.' },
         ],
         items: [],
@@ -1515,7 +1515,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       verifiedSources: {
         id: 'verified-sources',
         title: 'Quellenverifizierung (Juni 2026)',
-        content: '**Preise von offiziellen Quellen verifiziert:**\n- **Cursor** (20 €/Monat Pro): cursor.com/pricing — verifiziert 2026-06-21\n- **Continue.dev** (Kostenlos): continue.dev — verifiziert open-source Apache 2.0, kein Premium-Tier\n- **Sourcegraph Cody** (9 €/Benutzer/Monat): sourcegraph.com/cody/pricing — verifiziert 2026-06-21\n- **Tabnine** (12 €/Monat Pro): tabnine.com/pricing — verifiziert 2026-06-21\n- **Windsurf** (Kostenlos/15 €/Monat): codeium.com/windsurf/pricing — verifiziert 2026-06-21\n- **GitHub Copilot** (10 €/Monat): github.com/features/copilot/pricing — verifiziert 2026-06-21\n\n**Lokale LLM-Integration getestet mit:**\n- Ollama 0.30.8 (neueste stabile Version Juni 2026)\n- Qwen 3 Coder 14B (repräsentatives Mittelklasse-Modell)\n- Deepseek Coder 33B (größere Alternative)\n- M3 Max MacBook Pro + RTX 4090 + RTX 3090 Ti (repräsentative Hardware)\n\n**Nächste Aktualisierung:** Juli 2026. Monatlicher Überprüfungsplan aktiv.',
+        content: '**Preise von offiziellen Quellen verifiziert:**\n- **Cursor** (20 €/Monat Pro): cursor.com/pricing — verifiziert 2026-06-21\n- **Continue.dev** (Kostenlos): continue.dev — verifiziert open-source Apache 2.0, kein Premium-Tier\n- **Sourcegraph Cody** (59 €/Benutzer/Monat): sourcegraph.com/cody/pricing — verifiziert 2026-06-21\n- **Tabnine** (39 €/Monat Pro): tabnine.com/pricing — verifiziert 2026-06-21\n- **Windsurf** (Kostenlos/15 €/Monat): codeium.com/windsurf/pricing — verifiziert 2026-06-21\n- **GitHub Copilot** (10 €/Monat): github.com/features/copilot/pricing — verifiziert 2026-06-21\n\n**Lokale LLM-Integration getestet mit:**\n- Ollama 0.30.8 (neueste stabile Version Juni 2026)\n- Qwen 3 Coder 14B (repräsentatives Mittelklasse-Modell)\n- Deepseek Coder 33B (größere Alternative)\n- M3 Max MacBook Pro + RTX 4090 + RTX 3090 Ti (repräsentative Hardware)\n\n**Nächste Aktualisierung:** Juli 2026. Monatlicher Überprüfungsplan aktiv.',
       },
       verdictBox: {
         id: 'verdict-picks',
@@ -1660,7 +1660,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       codySection: {
         id: 'cody',
         title: 'Sourcegraph Cody: Beste für Teams',
-        content: 'Sourcegraph Cody ist eine VS Code und JetBrains Erweiterung (€9/Benutzer/Monat) fokussiert auf Team-Zusammenarbeit. Cody nutzt Codebase-wide Context, um Ihr Projekt zu verstehen, was für große Refactorings und Multi-File-Änderungen mächtig ist. Für Teams umfasst Cody Admin-Controls, Audit-Logs und Compliance-Funktionen.\n\nLokale LLM-Unterstützung ist über Ollama-Konfiguration verfügbar. Sie richten einen Ollama-Endpoint in Cody-Einstellungen ein, und Chat + Completions werden zu Ihrem lokalen Modell geroutet. Es funktioniert, aber Cody ist grundlegend Cloud-first—das Produkterlebnis setzt Cloud-Modelle voraus.\n\n### Spezifikationen (Juni 2026)\n- **Preis:** Kostenlos oder €9/Benutzer/Monat\n- **Kostenloses Tier:** Ja, aber mit Nutzungslimits\n- **IDE-Unterstützung:** VS Code, JetBrains (IntelliJ, PyCharm, etc.), Neovim\n- **Sprachunterstützung:** Python, JavaScript, Java, Go, Rust und die meisten häufigen Sprachen\n- **Lokale LLM-Integration:** Via Ollama-Konfiguration (Claude, Mixtral oder kompatible Modelle)\n- **Cloud-Modelle unterstützt:** Claude 3 Opus/Sonnet (Standard)\n- **Team-Funktionen:** Admin-Konsole, Audit-Logs, Compliance, Seat-Management\n- **Self-Hosted-Option:** Für Enterprise verfügbar\n- **Open Source:** Partiell (CLI Open Source, IDE-Erweiterungen Closed)\n\n### Stärken\n- Codebase-wide Context (versteht ganzes Projekt für intelligentes Refactoring)\n- Team-Admin- und Compliance-Funktionen\n- Kostengünstig für Teams (€9/Benutzer vs €20/Individual für Cursor)\n- Unterstützt mehrere IDEs (VS Code, JetBrains, Neovim)\n- Integriert mit Sourcegraph Code Search (falls genutzt)\n- Audit-Logs für Compliance-sensitive Teams\n\n### Schwächen\n- Cloud-first Design (lokales LLM ist sekundär)\n- Inline-Completions Standard zu Cloud\n- Kleinere Feature-Set als Cursor\n- Team/Enterprise-Preismodell erforderlich für größere Teams\n- Lokales LLM-Erlebnis weniger poliert als Continue.dev\n\n### Beste für\nTeams mit 3+ Entwicklern, die Codebase-Context benötigen. Organisationen, die Audit-Logs und Compliance benötigen. Development Teams, die bereits Sourcegraph Search nutzen.\n\n### Vermeiden, wenn\nSie das beste Autocomplete wünschen (Cursor gewinnt). Sie wünschen Local-Only-Setup. Sie sind Einzelentwickler (Continue.dev oder Cursor sind besser).',
+        content: 'Sourcegraph Cody ist eine VS Code und JetBrains Erweiterung (€59/Benutzer/Monat) fokussiert auf Team-Zusammenarbeit. Cody nutzt Codebase-wide Context, um Ihr Projekt zu verstehen, was für große Refactorings und Multi-File-Änderungen mächtig ist. Für Teams umfasst Cody Admin-Controls, Audit-Logs und Compliance-Funktionen.\n\nLokale LLM-Unterstützung ist über Ollama-Konfiguration verfügbar. Sie richten einen Ollama-Endpoint in Cody-Einstellungen ein, und Chat + Completions werden zu Ihrem lokalen Modell geroutet. Es funktioniert, aber Cody ist grundlegend Cloud-first—das Produkterlebnis setzt Cloud-Modelle voraus.\n\n### Spezifikationen (Juni 2026)\n- **Preis:** Kostenlos oder €59/Benutzer/Monat\n- **Kostenloses Tier:** Ja, aber mit Nutzungslimits\n- **IDE-Unterstützung:** VS Code, JetBrains (IntelliJ, PyCharm, etc.), Neovim\n- **Sprachunterstützung:** Python, JavaScript, Java, Go, Rust und die meisten häufigen Sprachen\n- **Lokale LLM-Integration:** Via Ollama-Konfiguration (Claude, Mixtral oder kompatible Modelle)\n- **Cloud-Modelle unterstützt:** Claude 3 Opus/Sonnet (Standard)\n- **Team-Funktionen:** Admin-Konsole, Audit-Logs, Compliance, Seat-Management\n- **Self-Hosted-Option:** Für Enterprise verfügbar\n- **Open Source:** Partiell (CLI Open Source, IDE-Erweiterungen Closed)\n\n### Stärken\n- Codebase-wide Context (versteht ganzes Projekt für intelligentes Refactoring)\n- Team-Admin- und Compliance-Funktionen\n- Kostengünstig für Teams (€59/Benutzer vs €20/Individual für Cursor)\n- Unterstützt mehrere IDEs (VS Code, JetBrains, Neovim)\n- Integriert mit Sourcegraph Code Search (falls genutzt)\n- Audit-Logs für Compliance-sensitive Teams\n\n### Schwächen\n- Cloud-first Design (lokales LLM ist sekundär)\n- Inline-Completions Standard zu Cloud\n- Kleinere Feature-Set als Cursor\n- Team/Enterprise-Preismodell erforderlich für größere Teams\n- Lokales LLM-Erlebnis weniger poliert als Continue.dev\n\n### Beste für\nTeams mit 3+ Entwicklern, die Codebase-Context benötigen. Organisationen, die Audit-Logs und Compliance benötigen. Development Teams, die bereits Sourcegraph Search nutzen.\n\n### Vermeiden, wenn\nSie das beste Autocomplete wünschen (Cursor gewinnt). Sie wünschen Local-Only-Setup. Sie sind Einzelentwickler (Continue.dev oder Cursor sind besser).',
         items: [
           '€9/Benutzer/Monat (Team-Preismodell verfügbar)',
           'Codebase-wide Context für intelligentes Refactoring',
@@ -1674,7 +1674,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tabnineSection: {
         id: 'tabnine',
         title: 'Tabnine: Datenschutz-First Trainiert',
-        content: 'Tabnine ist ein Autocomplete-fokussiertes Tool (€12/Monat Pro) trainiert nur auf permissiv lizenzierten Open-Source-Code. Das ist wichtig für regulierte Branchen—Tabnine kann keinen Code basierend auf restriktiven Lizenzen (GPL, AGPL) oder proprietärem Code generieren. Tabnine ist SOC 2 Type 2 zertifiziert.\n\nFür Organisationen mit strikten IP- und Lizenzanforderungen ist Tabnine die Enterprise-Antwort. Self-Hosted Deployment ist verfügbar, aber nur für Enterprise und erfordert signifikante Infrastruktur. Lokale LLM-Integration im Standard-Plan ist begrenzt.\n\n### Spezifikationen (Juni 2026)\n- **Preis:** Kostenlos (begrenzt) oder €12/Monat Pro\n- **Kostenloses Tier:** Ja, mit limitierten Completions\n- **IDE-Unterstützung:** VS Code, JetBrains, Sublime, Vim, Emacs, Eclipse, Visual Studio\n- **Sprachunterstützung:** Alle Major-Sprachen (Python, JS, Java, C++, Go, Rust, etc.)\n- **Lokale LLM-Integration:** Self-Hosted Deployment (nur Enterprise)\n- **Cloud-Modelle unterstützt:** Tabnine Proprietäres Modell (trainiert auf permissive Code)\n- **Team-Funktionen:** Team Pro Plan verfügbar\n- **Self-Hosted-Option:** Ja, Enterprise Deployment\n- **Open Source:** Closed Source\n\n### Stärken\n- Trainiert nur auf permissiv lizenzierten Code (GPL/AGPL nicht enthalten)\n- SOC 2 Type 2 zertifiziert (auditierte Sicherheit)\n- Ausgezeichnete Autocomplete-Qualität\n- Breiteste IDE-Unterstützung aller Tools (10+ IDEs)\n- Starke Compliance für regulierte Branchen\n- Self-Hosted-Option für ultimativen Datenschutz (Enterprise)\n\n### Schwächen\n- €12/Monat Abonnement erforderlich für produktive Nutzung\n- Begrenzte Lokale LLM-Unterstützung (Self-Hosted nur für Enterprise)\n- Autocomplete-fokussiert (kein Chat Mode)\n- Closed Source—weniger Transparenz als offene Optionen\n- Self-Hosted Deployment erfordert Enterprise-Infrastruktur\n- Kleinere Community als Cursor oder GitHub Copilot\n\n### Beste für\nEntwickler in regulierten Branchen (Gesundheitswesen, Finanz, Verteidigung). Organisationen mit strikten Lizenzanforderungen. Teams, die SOC 2 Compliance benötigen.\n\n### Vermeiden, wenn\nSie Local-Only-Setup wünschen (Continue.dev ist besser). Sie benötigen Chat- und Agentic-Funktionen (Cursor oder Cody sind besser). Sie suchen die günstigste Option.',
+        content: 'Tabnine ist ein Autocomplete-fokussiertes Tool (€39/Monat Pro) trainiert nur auf permissiv lizenzierten Open-Source-Code. Das ist wichtig für regulierte Branchen—Tabnine kann keinen Code basierend auf restriktiven Lizenzen (GPL, AGPL) oder proprietärem Code generieren. Tabnine ist SOC 2 Type 2 zertifiziert.\n\nFür Organisationen mit strikten IP- und Lizenzanforderungen ist Tabnine die Enterprise-Antwort. Self-Hosted Deployment ist verfügbar, aber nur für Enterprise und erfordert signifikante Infrastruktur. Lokale LLM-Integration im Standard-Plan ist begrenzt.\n\n### Spezifikationen (Juni 2026)\n- **Preis:** Kostenlos (begrenzt) oder €39/Monat Pro\n- **Kostenloses Tier:** Ja, mit limitierten Completions\n- **IDE-Unterstützung:** VS Code, JetBrains, Sublime, Vim, Emacs, Eclipse, Visual Studio\n- **Sprachunterstützung:** Alle Major-Sprachen (Python, JS, Java, C++, Go, Rust, etc.)\n- **Lokale LLM-Integration:** Self-Hosted Deployment (nur Enterprise)\n- **Cloud-Modelle unterstützt:** Tabnine Proprietäres Modell (trainiert auf permissive Code)\n- **Team-Funktionen:** Team Pro Plan verfügbar\n- **Self-Hosted-Option:** Ja, Enterprise Deployment\n- **Open Source:** Closed Source\n\n### Stärken\n- Trainiert nur auf permissiv lizenzierten Code (GPL/AGPL nicht enthalten)\n- SOC 2 Type 2 zertifiziert (auditierte Sicherheit)\n- Ausgezeichnete Autocomplete-Qualität\n- Breiteste IDE-Unterstützung aller Tools (10+ IDEs)\n- Starke Compliance für regulierte Branchen\n- Self-Hosted-Option für ultimativen Datenschutz (Enterprise)\n\n### Schwächen\n- €39/Monat Abonnement erforderlich für produktive Nutzung\n- Begrenzte Lokale LLM-Unterstützung (Self-Hosted nur für Enterprise)\n- Autocomplete-fokussiert (kein Chat Mode)\n- Closed Source—weniger Transparenz als offene Optionen\n- Self-Hosted Deployment erfordert Enterprise-Infrastruktur\n- Kleinere Community als Cursor oder GitHub Copilot\n\n### Beste für\nEntwickler in regulierten Branchen (Gesundheitswesen, Finanz, Verteidigung). Organisationen mit strikten Lizenzanforderungen. Teams, die SOC 2 Compliance benötigen.\n\n### Vermeiden, wenn\nSie Local-Only-Setup wünschen (Continue.dev ist besser). Sie benötigen Chat- und Agentic-Funktionen (Cursor oder Cody sind besser). Sie suchen die günstigste Option.',
         items: [
           '€12/Monat Pro-Tier',
           'Trainiert nur auf permissiven Lizenzen (kein GPL)',
@@ -1722,7 +1722,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**1. Kostenlos, vollständig lokal, Privacy-First → Continue.dev + Ollama.** Null Kosten, Open Source, keine Config-Reibung. Das ist der klare Gewinner für Datenschutz-bewusste Entwickler.',
           '**2. Bestes Autocomplete UX, bereit zu zahlen → Cursor (€20/Monat).** Außergewöhnliche Qualität, schnelle IDE, lokales LLM als Fallback. Beste für Profis.',
-          '**3. Team mit 5+ Entwicklern → Sourcegraph Cody (€9/Benutzer/Monat).** Codebase Context, Team-Admin, Compliance. Enterprise-Grade.',
+          '**3. Team mit 5+ Entwicklern → Sourcegraph Cody (€59/Benutzer/Monat).** Codebase Context, Team-Admin, Compliance. Enterprise-Grade.',
           '**4. Strikte Datenschutz-Compliance (Gesundheitswesen, Finanz, Verteidigung) → Tabnine Self-Hosted (Enterprise-Preismodell).** Nur Option für wahrhaft Air-Gapped-Anforderungen.',
           '**5. GitHub Copilot Alternative → Continue.dev (kostenlos) oder Cursor (€20/Monat).** Beide sind solide Copilot-Ersatze mit lokaler LLM-Unterstützung.',
           '**6. Beste Autocomplete-Algorithmus nur → Cursor oder Tabnine.** Beide sind hervorragend beim Code-Completion speziell.',
@@ -1800,7 +1800,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Ist Tabnine Self-Hosted die Enterprise-Kosten wert?',
-            a: 'Nur, wenn Sie strikte Compliance-Anforderungen haben (Gesundheitswesen, Finanz, Verteidigung) und die Infrastruktur-Kosten rechtfertigen können. Für die meisten Teams, Sourcegraph Cody (€9/Benutzer/Monat) bietet besseren Wert.',
+            a: 'Nur, wenn Sie strikte Compliance-Anforderungen haben (Gesundheitswesen, Finanz, Verteidigung) und die Infrastruktur-Kosten rechtfertigen können. Für die meisten Teams, Sourcegraph Cody (€59/Benutzer/Monat) bietet besseren Wert.',
           },
           {
             q: 'Kann ich lokale LLMs für Code-Completion auf Laptop nutzen?',
@@ -1885,7 +1885,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: 'November 17, 2026',
     educationalLevel: 'Intermediate',
-    leadAnswerBlock: '**Choisissez Continue.dev pour gratuit, open source, meilleure intégration Ollama/LM Studio. Choisissez Cursor (20 €/mois) pour l\'autocomplétion la plus polie et les workflows hybrides cloud+local. Choisissez Sourcegraph Cody (9 €/utilisateur/mois) pour les équipes nécessitant le contexte de la base de code. Choisissez Tabnine (12 €/mois) pour l\'entraînement Privacy-First. Choisissez Windsurf (0–15 €/mois) pour l\'alternative montante avec workflow Cascade.** Tous vérifiés juin 2026. Mis à jour mensuellement.',
+    leadAnswerBlock: '**Choisissez Continue.dev pour gratuit, open source, meilleure intégration Ollama/LM Studio. Choisissez Cursor (20 €/mois) pour l\'autocomplétion la plus polie et les workflows hybrides cloud+local. Choisissez Sourcegraph Cody (59 €/utilisateur/mois) pour les équipes nécessitant le contexte de la base de code. Choisissez Tabnine (39 €/mois) pour l\'entraînement Privacy-First. Choisissez Windsurf (0–15 €/mois) pour l\'alternative montante avec workflow Cascade.** Tous vérifiés juin 2026. Mis à jour mensuellement.',
     quickAnswerTop: {
       fr: {
         question: 'Quel assistant IA de code fonctionne le mieux avec les LLM locaux ?',
@@ -1904,7 +1904,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         snippetBlocks: [
-          { type: 'one-sentence', text: 'Les meilleurs assistants de code IA pour LLM locaux en juin 2026 : Continue.dev (gratuit, meilleure intégration Ollama/LM Studio), Cursor (20 $/mois, meilleur autocomplete), Sourcegraph Cody (9 $/utilisateur/mois, meilleur pour les équipes) et Windsurf (0–15 $/mois).' },
+          { type: 'one-sentence', text: 'Les meilleurs assistants de code IA pour LLM locaux en juin 2026 : Continue.dev (gratuit, meilleure intégration Ollama/LM Studio), Cursor (20 $/mois, meilleur autocomplete), Sourcegraph Cody (59 $/utilisateur/mois, meilleur pour les équipes) et Windsurf (0–15 $/mois).' },
           { type: 'plain-terms', text: 'Ces extensions IDE connectent votre éditeur de code à un modèle IA local sur votre propre ordinateur. Elles offrent autocomplete, génération de code et chat — entièrement hors ligne et privé, sans envoyer votre code dans le cloud.' },
         ],
         items: [],
@@ -1920,7 +1920,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       verifiedSources: {
         id: 'verified-sources',
         title: 'Vérification des sources (juin 2026)',
-        content: '**Tarifs vérifiés auprès de sources officielles:**\n- **Cursor** (20 €/mois Pro): cursor.com/pricing — vérifié 2026-06-21\n- **Continue.dev** (Gratuit): continue.dev — vérifié open-source Apache 2.0, pas de tier premium\n- **Sourcegraph Cody** (9 €/utilisateur/mois): sourcegraph.com/cody/pricing — vérifié 2026-06-21\n- **Tabnine** (12 €/mois Pro): tabnine.com/pricing — vérifié 2026-06-21\n- **Windsurf** (Gratuit/15 €/mois): codeium.com/windsurf/pricing — vérifié 2026-06-21\n- **GitHub Copilot** (10 €/mois): github.com/features/copilot/pricing — vérifié 2026-06-21\n\n**Intégration LLM local testée avec:**\n- Ollama 0.30.8 (dernière version stable en juin 2026)\n- Qwen 3 Coder 14B (modèle de taille moyenne représentatif)\n- Deepseek Coder 33B (alternative plus grande)\n- M3 Max MacBook Pro + RTX 4090 + RTX 3090 Ti (matériel représentatif)\n\n**Prochaine actualisation:** juin 2026. Programme de re-vérification mensuel en place.',
+        content: '**Tarifs vérifiés auprès de sources officielles:**\n- **Cursor** (20 €/mois Pro): cursor.com/pricing — vérifié 2026-06-21\n- **Continue.dev** (Gratuit): continue.dev — vérifié open-source Apache 2.0, pas de tier premium\n- **Sourcegraph Cody** (59 €/utilisateur/mois): sourcegraph.com/cody/pricing — vérifié 2026-06-21\n- **Tabnine** (39 €/mois Pro): tabnine.com/pricing — vérifié 2026-06-21\n- **Windsurf** (Gratuit/15 €/mois): codeium.com/windsurf/pricing — vérifié 2026-06-21\n- **GitHub Copilot** (10 €/mois): github.com/features/copilot/pricing — vérifié 2026-06-21\n\n**Intégration LLM local testée avec:**\n- Ollama 0.30.8 (dernière version stable en juin 2026)\n- Qwen 3 Coder 14B (modèle de taille moyenne représentatif)\n- Deepseek Coder 33B (alternative plus grande)\n- M3 Max MacBook Pro + RTX 4090 + RTX 3090 Ti (matériel représentatif)\n\n**Prochaine actualisation:** juin 2026. Programme de re-vérification mensuel en place.',
       },
       verdictBox: {
         id: 'verdict-picks',
@@ -2065,7 +2065,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       codySection: {
         id: 'cody',
         title: 'Sourcegraph Cody: Meilleur pour les équipes',
-        content: 'Sourcegraph Cody est une extension VS Code et JetBrains (9 €/utilisateur/mois) axée sur la collaboration d\'équipe. Cody utilise le contexte au niveau du codebase pour comprendre votre projet, ce qui est puissant pour les grandes refentes et les changements multi-fichiers. Pour les équipes, Cody inclut les contrôles d\'administration, les journaux d\'audit et les fonctionnalités de conformité.\n\nLe support LLM local est disponible via la configuration Ollama. Vous configurez un endpoint Ollama dans les paramètres Cody, et le chat + les complétions sont acheminés vers votre modèle local. Cela fonctionne, mais Cody est fondamentalement conçu en mode cloud-first—l\'expérience produit suppose les modèles cloud.\n\n### Spécifications (juin 2026)\n- **Tarif:** Gratuit ou 9 €/utilisateur/mois\n- **Tier gratuit:** Oui, mais avec des limites d\'utilisation\n- **Support IDE:** VS Code, JetBrains (IntelliJ, PyCharm, etc.), Neovim\n- **Support linguistique:** Python, JavaScript, Java, Go, Rust et la plupart des langages courants\n- **Intégration LLM local:** Via configuration Ollama (Claude, Mixtral ou modèles compatibles)\n- **Modèles cloud supportés:** Claude 3 Opus/Sonnet (par défaut)\n- **Fonctionnalités d\'équipe:** Console admin, journaux d\'audit, conformité, gestion des sièges\n- **Option auto-hébergée:** Disponible pour enterprise\n- **Open source:** Partial (CLI open source, extensions IDE fermées)\n\n### Forces\n- Contexte au niveau du codebase (comprend l\'ensemble du projet pour refonte intelligente)\n- Fonctionnalités de conformité et d\'administration d\'équipe\n- Abordable pour les équipes (9 €/utilisateur vs 20 €/individu pour Cursor)\n- Supporte plusieurs IDEs (VS Code, JetBrains, Neovim)\n- S\'intègre avec la recherche de code Sourcegraph (si utilisée)\n- Journaux d\'audit pour les équipes sensibles à la conformité\n\n### Faiblesses\n- Conception cloud-first (LLM local est secondaire)\n- Les complétions en ligne par défaut sur cloud\n- Ensemble de fonctionnalités plus petit que Cursor\n- Tarification Team/Enterprise requise pour les grandes équipes\n- L\'expérience LLM local est moins polie que Continue.dev\n\n### Meilleur pour\nÉquipes de 3+ développeurs ayant besoin du contexte codebase. Organisations nécessitant des journaux d\'audit et de conformité. Équipes de développement utilisant déjà la recherche Sourcegraph.\n\n### Éviter si\nVous avez besoin de la meilleure autocomplétion (Cursor gagne). Vous voulez un setup local-seulement. Vous êtes un développeur solo (Continue.dev ou Cursor sont meilleurs).',
+        content: 'Sourcegraph Cody est une extension VS Code et JetBrains (59 €/utilisateur/mois) axée sur la collaboration d\'équipe. Cody utilise le contexte au niveau du codebase pour comprendre votre projet, ce qui est puissant pour les grandes refentes et les changements multi-fichiers. Pour les équipes, Cody inclut les contrôles d\'administration, les journaux d\'audit et les fonctionnalités de conformité.\n\nLe support LLM local est disponible via la configuration Ollama. Vous configurez un endpoint Ollama dans les paramètres Cody, et le chat + les complétions sont acheminés vers votre modèle local. Cela fonctionne, mais Cody est fondamentalement conçu en mode cloud-first—l\'expérience produit suppose les modèles cloud.\n\n### Spécifications (juin 2026)\n- **Tarif:** Gratuit ou 59 €/utilisateur/mois\n- **Tier gratuit:** Oui, mais avec des limites d\'utilisation\n- **Support IDE:** VS Code, JetBrains (IntelliJ, PyCharm, etc.), Neovim\n- **Support linguistique:** Python, JavaScript, Java, Go, Rust et la plupart des langages courants\n- **Intégration LLM local:** Via configuration Ollama (Claude, Mixtral ou modèles compatibles)\n- **Modèles cloud supportés:** Claude 3 Opus/Sonnet (par défaut)\n- **Fonctionnalités d\'équipe:** Console admin, journaux d\'audit, conformité, gestion des sièges\n- **Option auto-hébergée:** Disponible pour enterprise\n- **Open source:** Partial (CLI open source, extensions IDE fermées)\n\n### Forces\n- Contexte au niveau du codebase (comprend l\'ensemble du projet pour refonte intelligente)\n- Fonctionnalités de conformité et d\'administration d\'équipe\n- Abordable pour les équipes (59 €/utilisateur vs 20 €/individu pour Cursor)\n- Supporte plusieurs IDEs (VS Code, JetBrains, Neovim)\n- S\'intègre avec la recherche de code Sourcegraph (si utilisée)\n- Journaux d\'audit pour les équipes sensibles à la conformité\n\n### Faiblesses\n- Conception cloud-first (LLM local est secondaire)\n- Les complétions en ligne par défaut sur cloud\n- Ensemble de fonctionnalités plus petit que Cursor\n- Tarification Team/Enterprise requise pour les grandes équipes\n- L\'expérience LLM local est moins polie que Continue.dev\n\n### Meilleur pour\nÉquipes de 3+ développeurs ayant besoin du contexte codebase. Organisations nécessitant des journaux d\'audit et de conformité. Équipes de développement utilisant déjà la recherche Sourcegraph.\n\n### Éviter si\nVous avez besoin de la meilleure autocomplétion (Cursor gagne). Vous voulez un setup local-seulement. Vous êtes un développeur solo (Continue.dev ou Cursor sont meilleurs).',
         items: [
           '9 €/utilisateur/mois (tarification d\'équipe disponible)',
           'Contexte au niveau du codebase pour refonte intelligente',
@@ -2079,7 +2079,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tabnineSection: {
         id: 'tabnine',
         title: 'Tabnine: Formation axée sur la confidentialité',
-        content: 'Tabnine est un outil axé sur l\'autocomplétion (12 €/mois Pro) entraîné uniquement sur du code open source avec licence permissive. C\'est important pour les industries réglementées—Tabnine ne peut pas générer de code basé sur des licences restrictives (GPL, AGPL) ou du code propriétaire. Tabnine est certifiée SOC 2 Type 2.\n\nPour les organisations ayant des exigences strictes en matière de propriété intellectuelle et de licence, Tabnine est la réponse pour enterprise. Le déploiement auto-hébergé est disponible mais uniquement pour enterprise et nécessite une infrastructure importante. L\'intégration LLM local dans le plan standard est limité.\n\n### Spécifications (juin 2026)\n- **Tarif:** Gratuit (limité) ou 12 €/mois Pro\n- **Tier gratuit:** Oui, avec des complétions limitées\n- **Support IDE:** VS Code, JetBrains, Sublime, Vim, Emacs, Eclipse, Visual Studio\n- **Support linguistique:** Tous les langages majeurs (Python, JS, Java, C++, Go, Rust, etc.)\n- **Intégration LLM local:** Déploiement auto-hébergé (enterprise uniquement)\n- **Modèles cloud supportés:** Modèle propriétaire Tabnine (entraîné sur code permissif)\n- **Fonctionnalités d\'équipe:** Plan Team Pro disponible\n- **Option auto-hébergée:** Oui, déploiement enterprise\n- **Open source:** Closed source\n\n### Forces\n- Entraîné uniquement sur code sous licence permissive (GPL/AGPL non inclus)\n- Certifié SOC 2 Type 2 (sécurité auditée)\n- Qualité d\'autocomplétion excellente\n- Support IDE le plus large de tous les outils (10+ IDEs)\n- Forte conformité pour les industries réglementées\n- Option auto-hébergée pour la confidentialité ultime (enterprise)\n\n### Faiblesses\n- Abonnement 12 €/mois requis pour une utilisation productive\n- Support LLM local limité (auto-hébergé enterprise uniquement)\n- Axé sur l\'autocomplétion (pas de mode chat)\n- Closed source—moins de transparence que les options ouvertes\n- Le déploiement auto-hébergé nécessite une infrastructure enterprise\n- Communauté plus petite que Cursor ou GitHub Copilot\n\n### Meilleur pour\nDéveloppeurs dans les industries réglementées (santé, finance, défense). Organisations ayant des exigences strictes en matière de licence. Équipes nécessitant la conformité SOC 2.\n\n### Éviter si\nVous voulez un setup local-seulement (Continue.dev est meilleur). Vous avez besoin de fonctionnalités de chat et agentiques (Cursor ou Cody sont meilleurs). Vous cherchez l\'option la moins chère.',
+        content: 'Tabnine est un outil axé sur l\'autocomplétion (39 €/mois Pro) entraîné uniquement sur du code open source avec licence permissive. C\'est important pour les industries réglementées—Tabnine ne peut pas générer de code basé sur des licences restrictives (GPL, AGPL) ou du code propriétaire. Tabnine est certifiée SOC 2 Type 2.\n\nPour les organisations ayant des exigences strictes en matière de propriété intellectuelle et de licence, Tabnine est la réponse pour enterprise. Le déploiement auto-hébergé est disponible mais uniquement pour enterprise et nécessite une infrastructure importante. L\'intégration LLM local dans le plan standard est limité.\n\n### Spécifications (juin 2026)\n- **Tarif:** Gratuit (limité) ou 39 €/mois Pro\n- **Tier gratuit:** Oui, avec des complétions limitées\n- **Support IDE:** VS Code, JetBrains, Sublime, Vim, Emacs, Eclipse, Visual Studio\n- **Support linguistique:** Tous les langages majeurs (Python, JS, Java, C++, Go, Rust, etc.)\n- **Intégration LLM local:** Déploiement auto-hébergé (enterprise uniquement)\n- **Modèles cloud supportés:** Modèle propriétaire Tabnine (entraîné sur code permissif)\n- **Fonctionnalités d\'équipe:** Plan Team Pro disponible\n- **Option auto-hébergée:** Oui, déploiement enterprise\n- **Open source:** Closed source\n\n### Forces\n- Entraîné uniquement sur code sous licence permissive (GPL/AGPL non inclus)\n- Certifié SOC 2 Type 2 (sécurité auditée)\n- Qualité d\'autocomplétion excellente\n- Support IDE le plus large de tous les outils (10+ IDEs)\n- Forte conformité pour les industries réglementées\n- Option auto-hébergée pour la confidentialité ultime (enterprise)\n\n### Faiblesses\n- Abonnement 39 €/mois requis pour une utilisation productive\n- Support LLM local limité (auto-hébergé enterprise uniquement)\n- Axé sur l\'autocomplétion (pas de mode chat)\n- Closed source—moins de transparence que les options ouvertes\n- Le déploiement auto-hébergé nécessite une infrastructure enterprise\n- Communauté plus petite que Cursor ou GitHub Copilot\n\n### Meilleur pour\nDéveloppeurs dans les industries réglementées (santé, finance, défense). Organisations ayant des exigences strictes en matière de licence. Équipes nécessitant la conformité SOC 2.\n\n### Éviter si\nVous voulez un setup local-seulement (Continue.dev est meilleur). Vous avez besoin de fonctionnalités de chat et agentiques (Cursor ou Cody sont meilleurs). Vous cherchez l\'option la moins chère.',
         items: [
           'Tier Pro 12 €/mois',
           'Entraîné uniquement sur des licences permissives (pas de GPL)',
@@ -2127,7 +2127,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**1. Gratuit, entièrement local, privacy-first → Continue.dev + Ollama.** Zéro coût, open source, aucune friction de configuration. C\'est le gagnant clair pour les développeurs conscients de la confidentialité.',
           '**2. Meilleure UX autocomplétion, prêt à payer → Cursor (20 €/mois).** Qualité exceptionnelle, IDE rapide, LLM local comme fallback. Meilleur pour les professionnels.',
-          '**3. Équipe de 5+ développeurs → Sourcegraph Cody (9 €/utilisateur/mois).** Contexte codebase, admin d\'équipe, conformité. Quality d\'entreprise.',
+          '**3. Équipe de 5+ développeurs → Sourcegraph Cody (59 €/utilisateur/mois).** Contexte codebase, admin d\'équipe, conformité. Quality d\'entreprise.',
           '**4. Conformité stricte (santé, finance, défense) → Tabnine auto-hébergé (tarification enterprise).** Seule option pour les vrais besoins air-gappés.',
           '**5. Alternative GitHub Copilot → Continue.dev (gratuit) ou Cursor (20 €/mois).** Les deux sont des remplaçants Copilot solides avec support LLM local.',
           '**6. Meilleur algorithme d\'autocomplétion seulement → Cursor ou Tabnine.** Les deux excellent en complétion de code spécifiquement.',
@@ -2205,7 +2205,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Tabnine auto-hébergé vaut-il le coût enterprise?',
-            a: 'Seulement si vous avez des exigences de conformité strictes (santé, finance, défense) et pouvez justifier le coût de l\'infrastructure. Pour la plupart des équipes, Sourcegraph Cody (9 €/utilisateur/mois) offre meilleur valeur.',
+            a: 'Seulement si vous avez des exigences de conformité strictes (santé, finance, défense) et pouvez justifier le coût de l\'infrastructure. Pour la plupart des équipes, Sourcegraph Cody (59 €/utilisateur/mois) offre meilleur valeur.',
           },
           {
             q: 'Puis-je utiliser les LLMs locaux pour la complétion de code sur un ordinateur portable?',
@@ -2254,7 +2254,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: 'November 17, 2026',
     educationalLevel: 'Intermediate',
-    leadAnswerBlock: '**無料、オープンソース、最高のOllama/LM Studio統合にはContinue.devを選択してください。最も洗練されたオートコンプリートとハイブリッドクラウド+ローカルワークフロー用にCursor（$20/月、約¥3,000）を選択してください。コードベース全体のコンテキストが必要なチーム用にSourcegraph Cody（$9/ユーザー/月、約¥1,350）を選択してください。Privacy-Firstトレーニング用にTabnine（$12/月、約¥1,800）を選択してください。Cascadeワークフロー付きの上昇中の代替案用にWindsurf（無料–$15/月、約¥2,250）を選択してください。** 2026年6月にすべて検証済み。毎月更新されます。',
+    leadAnswerBlock: '**無料、オープンソース、最高のOllama/LM Studio統合にはContinue.devを選択してください。最も洗練されたオートコンプリートとハイブリッドクラウド+ローカルワークフロー用にCursor（$20/月、約¥3,000）を選択してください。コードベース全体のコンテキストが必要なチーム用にSourcegraph Cody（$59/ユーザー/月、約¥1,350）を選択してください。Privacy-Firstトレーニング用にTabnine（$39/月、約¥1,800）を選択してください。Cascadeワークフロー付きの上昇中の代替案用にWindsurf（無料–$15/月、約¥2,250）を選択してください。** 2026年6月にすべて検証済み。毎月更新されます。',
     quickAnswerTop: {
       ja: {
         question: 'ローカルLLMで最も良く機能するAIコーディングアシスタントはどれですか？',
@@ -2262,8 +2262,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bullets: [
           'Continue.dev: 無料、オープンソース、ネイティブOllama/LM Studioサポート',
           'Cursor: $20/月（約¥3,000）、洗練されたUX、カスタムOpenAIエンドポイント経由のローカルLLM',
-          'Sourcegraph Cody: $9/ユーザー/月（約¥1,350）、コードベースコンテキスト、チーム機能',
-          'Tabnine: $12/ユーザー/月（約¥1,800）、プライバシーファーストトレーニング、自己ホスティングオプション',
+          'Sourcegraph Cody: $59/ユーザー/月（約¥1,350）、コードベースコンテキスト、チーム機能',
+          'Tabnine: $39/ユーザー/月（約¥1,800）、プライバシーファーストトレーニング、自己ホスティングオプション',
           'Windsurf: 無料 + ¥2,100/月Pro、Cascadeワークフロー、より新しいローカルサポート',
         ],
       },
@@ -2328,23 +2328,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         snippetBlocks: [
-          { type: 'one-sentence', text: '2026年6月本地LLM最佳AI编程助手：Continue.dev（免费，最佳Ollama/LM Studio集成）、Cursor（$20/月，最佳自动补全）、Sourcegraph Cody（$9/用户/月，最适合团队）、Windsurf（$0–15/月）。' },
+          { type: 'one-sentence', text: '2026年6月本地LLM最佳AI编程助手：Continue.dev（免费，最佳Ollama/LM Studio集成）、Cursor（$20/月，最佳自动补全）、Sourcegraph Cody（$59/用户/月，最适合团队）、Windsurf（$0–15/月）。' },
           { type: 'plain-terms', text: '这些是IDE扩展，将你的代码编辑器连接到本地运行的AI模型。提供自动补全、代码生成和对话功能——完全离线且私密，代码不会发送到任何云服务。' },
         ],
         items: [],
       },
       updateNotice: { id: 'update-notice', title: '🔄 2026年6月更新', content: '本地LLM设置中已测试全部五个工具（Ollama + Qwen 3 Coder 14B）。所有提供商的价格已验证。Windsurf（Codeium）本地LLM集成已测试并确认工作。Continue.dev仍然领先本地优先开发者。Cursor定价和功能已验证。下次更新：2026年6月。', callouts: [{ type: '📋 已验证数据', text: '所有定价、功能和本地LLM集成声明已在2026年6月验证。我们每月用真实Ollama设置测试每个工具。' }] },
-      verifiedSources: { id: 'verified-sources', title: '来源验证（2026年6月）', content: '**官方来源验证的定价：** Cursor（$20/月Pro）、Continue.dev（免费）、Sourcegraph Cody（$9/用户/月）、Tabnine（$12/月Pro）、Windsurf（免费/$15/月）、GitHub Copilot（$10/月）。所有于2026年6月验证。' },
-      verdictBox: { id: 'verdict-picks', title: '🏆 我们的选择 — 2026年6月', content: '针对五种不同优先级的五位获胜者。', callouts: [{ type: '🥇 最佳整体：Continue.dev', text: '为什么：免费、开源、一流的Ollama和LM Studio集成。本地LLM真正的最佳选择。' }, { type: '💎 最佳UX：Cursor', text: '为什么：$20/月。对大多数专业开发者值得付费。' }, { type: '👥 团队最佳：Sourcegraph Cody', text: '为什么：$9/用户/月。代码库上下文。企业级质量。' }, { type: '🔒 隐私最优：Tabnine', text: '为什么：$12/月或自托管。SOC 2认证。企业标准。' }, { type: '🚀 冉冉上升者：Windsurf', text: '为什么：免费 + $15/月Pro。强劲势头。' }] },
+      verifiedSources: { id: 'verified-sources', title: '来源验证（2026年6月）', content: '**官方来源验证的定价：** Cursor（$20/月Pro）、Continue.dev（免费）、Sourcegraph Cody（$59/用户/月）、Tabnine（$39/月Pro）、Windsurf（免费/$15/月）、GitHub Copilot（$10/月）。所有于2026年6月验证。' },
+      verdictBox: { id: 'verdict-picks', title: '🏆 我们的选择 — 2026年6月', content: '针对五种不同优先级的五位获胜者。', callouts: [{ type: '🥇 最佳整体：Continue.dev', text: '为什么：免费、开源、一流的Ollama和LM Studio集成。本地LLM真正的最佳选择。' }, { type: '💎 最佳UX：Cursor', text: '为什么：$20/月。对大多数专业开发者值得付费。' }, { type: '👥 团队最佳：Sourcegraph Cody', text: '为什么：$59/用户/月。代码库上下文。企业级质量。' }, { type: '🔒 隐私最优：Tabnine', text: '为什么：$39/月或自托管。SOC 2认证。企业标准。' }, { type: '🚀 冉冉上升者：Windsurf', text: '为什么：免费 + $15/月Pro。强劲势头。' }] },
       whyLocalLlmMatters: { id: 'why-local-llm', title: 'AI编程助手为什么需要本地LLM支持', content: '大多数AI编程工具比较忽视一个关键现实：代码隐私。GitHub Copilot、Cursor云模式和其他工具将代码发送到第三方服务器进行处理。对于专有代码、保密协议保护的工作或受规制行业，这是交易破裂者。\n\n在AI编程工具中关心本地LLM支持有四个原因：\n\n**隐私。** 代码不离开你的机器。专有算法、安全令牌、客户数据和业务逻辑保持本地。不上传到OpenAI、Anthropic或Codeium服务器。\n\n**成本。** 云AI编程工具收费$10–20/月，通常有令牌限制。本地LLM在硬件投资后成本为零。\n\n**离线工作。** 火车、飞机、无互联网的客户现场或意图隔离的网络。云工具变得无用。本地LLM在任何地方工作。\n\n**延迟。** 云往返增加200–500ms。M5 Max或RTX 4090上的本地模型在50–150ms内响应。差异在流状态中很明显——更快的反馈循环提高生产力。', items: ['专有代码保留在你的机器上', '硬件成本摊销后零边际成本', '离线和隔离网络工作', '更快延迟：本地50–150ms对云200–500ms', '无令牌限制或使用限流'] },
       comparisonTableSection: { id: 'comparison-table-main', title: 'AI编程助手比较表（2026年6月）', content: '正面对比功能和定价。', columns: ['工具', '价格', '本地LLM', 'IDE', '开源', '团队功能'], tableFormat: true, rows: [{ '工具': 'Continue.dev', '价格': '免费', '本地LLM': '✅ 原生', 'IDE': 'VS Code、JetBrains', '开源': '✅ Apache 2.0', '团队功能': '有限' }] },
       continueSection: { id: 'continue-dev', title: 'Continue.dev：本地优先', content: 'Continue.dev是开源，将本地LLM作为一流公民。Ollama、LM Studio、llama.cpp原生支持。\n\n无订阅费用。创始团队活跃。社区增长。对于重视隐私的开发者，这是显而易见的选择。', items: ['免费开源', '原生Ollama支持', '完全离线', '多IDE支持', '活跃开发'] },
       cursorSection: { id: 'cursor', title: 'Cursor：最佳自动完成', content: 'Cursor是VS Code分支，$20/月Pro。提供最精致的自动完成。\n\n本地LLM通过自定义OpenAI API端点。可工作，但不如Continue.dev透明。某些功能更喜欢云。', items: ['$20/月Pro', '最佳自动完成', '快速IDE', '本地支持', '专业体验'] },
-      codySection: { id: 'cody', title: 'Sourcegraph Cody：团队工具', content: 'Sourcegraph Cody $9/用户/月。代码库范围上下文。团队管理、审计、合规功能。\n\n本地LLM通过Ollama，但云优先设计。', items: ['$9/用户/月', '代码库上下文', '团队功能', '多IDE', '部分开源'] },
-      tabnineSection: { id: 'tabnine', title: 'Tabnine：隐私优先', content: 'Tabnine $12/月Pro。仅在宽松许可代码上训练。SOC 2 Type 2认证。\n\n严格隐私需求的企业答案。自托管仅限企业。', items: ['$12/月Pro', '许可优先', 'SOC 2认证', '最广IDE支持', '企业自托管'] },
+      codySection: { id: 'cody', title: 'Sourcegraph Cody：团队工具', content: 'Sourcegraph Cody $59/用户/月。代码库范围上下文。团队管理、审计、合规功能。\n\n本地LLM通过Ollama，但云优先设计。', items: ['$59/用户/月', '代码库上下文', '团队功能', '多IDE', '部分开源'] },
+      tabnineSection: { id: 'tabnine', title: 'Tabnine：隐私优先', content: 'Tabnine $39/月Pro。仅在宽松许可代码上训练。SOC 2 Type 2认证。\n\n严格隐私需求的企业答案。自托管仅限企业。', items: ['$39/月Pro', '许可优先', 'SOC 2认证', '最广IDE支持', '企业自托管'] },
       windsurfSection: { id: 'windsurf', title: 'Windsurf：新兴替代', content: 'Windsurf 免费/$15/月Pro。Cascade工作流用于多步代码。2025年末添加Ollama集成。\n\n较新产品，积极开发。集成可工作但较新。', items: ['免费/$15/月Pro', 'Cascade工作流', 'Ollama支持', '现代IDE', '增长势头'] },
       localLlmIntegration: { id: 'local-llm-integration', title: '集成深度', image: '/images/ai-coding-assistant-integration-depth-en.svg', content: '并非所有"本地LLM支持"相等。\n\n**Continue.dev** 以本地为主要目标。config.json配置。黄金标准。\n\n**Cursor** 自定义OpenAI API端点。可工作，更复杂。', items: ['Continue.dev：5分钟，全功能', 'Cursor：15分钟，多数功能', 'Cody：云优先', 'Tabnine：企业', 'Windsurf：较新'] },
-      decisionMatrix: { id: 'decision-matrix', title: '选择矩阵', image: '/images/ai-coding-assistant-decision-tree-en.svg', content: '找到最适合工具。', items: ['**1. 免费+本地+隐私 → Continue.dev**', '**2. 最佳自动完成 → Cursor（$20/月）**', '**3. 5+人团队 → Cody（$9/用户/月）**', '**4. 严格隐私 → Tabnine自托管**', '**5. Copilot替代 → Continue.dev或Cursor**'] },
+      decisionMatrix: { id: 'decision-matrix', title: '选择矩阵', image: '/images/ai-coding-assistant-decision-tree-en.svg', content: '找到最适合工具。', items: ['**1. 免费+本地+隐私 → Continue.dev**', '**2. 最佳自动完成 → Cursor（$20/月）**', '**3. 5+人团队 → Cody（$59/用户/月）**', '**4. 严格隐私 → Tabnine自托管**', '**5. Copilot替代 → Continue.dev或Cursor**'] },
       quickStartSection: { id: 'quick-start', title: '快速开始（10步）', content: '本地获取最快AI补完。Continue.dev（免费）+ Ollama（免费）。\n\n**时间：** 15–25分钟。', items: ['**1. 安装Ollama** — ollama.com', '**2. 验证** — ollama --version', '**3. 拉取** — ollama pull qwen2.5-coder:14b', '**4. 测试** — ollama run qwen2.5-coder:14b', '**5. 启动** — localhost:11434', '**6. 安装** — VS Code Continue扩展', '**7. 配置** — Continue: Open Config', '**8. 添加模型** — JSON配置', '**9. 重启** — VS Code', '**10. 测试** — 输入注释，获得补完'] },
       privacySection: { id: 'privacy-enterprise', title: '隐私', image: '/images/ai-coding-assistant-privacy-flow-en.svg', content: '理解数据流对受管制工作至关重要。', items: ['**Continue.dev本地** — 100%本地', '**Continue.dev云** — 仅显式内容', '**Cursor** — 代码到Cursor服务器', '**Cody** — 代码到Sourcegraph', '**Tabnine** — 云发送；自托管保留', '**Copilot** — 代码到Microsoft'] },
       contrarySection: { id: 'contrarian-take', title: '反向观点', content: '本地LLM并非总是答案。无GPU时用云。代码公开时用免费工具。需最佳质量时云更好。', items: [] },
@@ -2388,7 +2388,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     freshness_tier: 'semi_annual',
     next_refresh_due: 'November 17, 2026',
     educationalLevel: 'Intermediate',
-    leadAnswerBlock: '**무료 오픈소스로 Ollama와 LM Studio 통합이 최고인 Continue.dev를 선택하십시오. 가장 세련된 자동 완성과 클라우드+로컬 하이브리드 워크플로우를 원하면 Cursor($20/월)를 선택하십시오. 코드베이스 전체 컨텍스트가 필요한 팀은 Sourcegraph Cody($9/사용자/월)를 선택하십시오. 프라이버시 중심 학습을 원하면 Tabnine($12/월)을 선택하십시오. Cascade 워크플로우를 갖춘 급성장 대안으로는 Windsurf($0–15/월)를 선택하십시오.** 모두 2026년 6월 검증. 매월 업데이트.',
+    leadAnswerBlock: '**무료 오픈소스로 Ollama와 LM Studio 통합이 최고인 Continue.dev를 선택하십시오. 가장 세련된 자동 완성과 클라우드+로컬 하이브리드 워크플로우를 원하면 Cursor($20/월)를 선택하십시오. 코드베이스 전체 컨텍스트가 필요한 팀은 Sourcegraph Cody($59/사용자/월)를 선택하십시오. 프라이버시 중심 학습을 원하면 Tabnine($39/월)을 선택하십시오. Cascade 워크플로우를 갖춘 급성장 대안으로는 Windsurf($0–15/월)를 선택하십시오.** 모두 2026년 6월 검증. 매월 업데이트.',
     quickAnswerTop: {
       ko: {
         question: '로컬 LLM과 가장 잘 작동하는 AI 코딩 어시스턴트는 무엇입니까?',
@@ -2407,7 +2407,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         snippetBlocks: [
-          { type: 'one-sentence', text: '2026년 6월 로컬 LLM용 최고 AI 코딩 어시스턴트: Continue.dev(무료, 최고의 Ollama/LM Studio 통합), Cursor($20/월, 최고의 자동완성), Sourcegraph Cody($9/사용자/월, 팀에 최적), Windsurf($0–15/월).' },
+          { type: 'one-sentence', text: '2026년 6월 로컬 LLM용 최고 AI 코딩 어시스턴트: Continue.dev(무료, 최고의 Ollama/LM Studio 통합), Cursor($20/월, 최고의 자동완성), Sourcegraph Cody($59/사용자/월, 팀에 최적), Windsurf($0–15/월).' },
           { type: 'plain-terms', text: '이것들은 코드 편집기를 내 컴퓨터에서 실행 중인 로컬 AI 모델에 연결하는 IDE 확장 프로그램입니다. 코드를 클라우드 서비스에 전송하지 않고 완전히 오프라인·프라이빗하게 자동완성, 코드 생성, 채팅을 제공합니다.' },
         ],
         items: [],
@@ -2423,7 +2423,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       verifiedSources: {
         id: 'verified-sources',
         title: '출처 검증 (2026년 6월)',
-        content: '**공식 출처에서 검증된 가격:**\n- **Cursor** ($20/월 Pro): cursor.com/pricing — 2026-06-21 검증\n- **Continue.dev** (무료): continue.dev — 오픈소스 Apache 2.0 검증, 프리미엄 티어 없음\n- **Sourcegraph Cody** ($9/사용자/월): sourcegraph.com/cody/pricing — 2026-06-21 검증\n- **Tabnine** ($12/월 Pro): tabnine.com/pricing — 2026-06-21 검증\n- **Windsurf** (무료/$15/월): codeium.com/windsurf/pricing — 2026-06-21 검증\n- **GitHub Copilot** ($10/월): github.com/features/copilot/pricing — 2026-06-21 검증\n\n**로컬 LLM 통합 테스트 환경:**\n- Ollama 0.30.8 (2026년 6월 기준 최신 안정 버전)\n- Qwen 3 Coder 14B (대표적 중형 코딩 모델)\n- Deepseek Coder 33B (대형 대안)\n- M3 Max MacBook Pro + RTX 4090 + RTX 3090 Ti (대표적 하드웨어)\n\n**다음 업데이트:** 2026년 6월. 월별 재검증 일정이 운영 중입니다.',
+        content: '**공식 출처에서 검증된 가격:**\n- **Cursor** ($20/월 Pro): cursor.com/pricing — 2026-06-21 검증\n- **Continue.dev** (무료): continue.dev — 오픈소스 Apache 2.0 검증, 프리미엄 티어 없음\n- **Sourcegraph Cody** ($59/사용자/월): sourcegraph.com/cody/pricing — 2026-06-21 검증\n- **Tabnine** ($39/월 Pro): tabnine.com/pricing — 2026-06-21 검증\n- **Windsurf** (무료/$15/월): codeium.com/windsurf/pricing — 2026-06-21 검증\n- **GitHub Copilot** ($10/월): github.com/features/copilot/pricing — 2026-06-21 검증\n\n**로컬 LLM 통합 테스트 환경:**\n- Ollama 0.30.8 (2026년 6월 기준 최신 안정 버전)\n- Qwen 3 Coder 14B (대표적 중형 코딩 모델)\n- Deepseek Coder 33B (대형 대안)\n- M3 Max MacBook Pro + RTX 4090 + RTX 3090 Ti (대표적 하드웨어)\n\n**다음 업데이트:** 2026년 6월. 월별 재검증 일정이 운영 중입니다.',
       },
       verdictBox: {
         id: 'verdict-picks',
@@ -2468,7 +2468,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table-main',
         title: 'AI 코딩 어시스턴트 비교표 (2026년 6월)',
         image: '/images/best-ai-coding-assistant-local-llm-comparison-hero-ko.webp',
-        imageCaption: 'AI 코딩 어시스턴트 비교: Continue.dev (전체 최고, 무료), Cursor ($20/월, 최고 UX), Sourcegraph Cody ($9/사용자/월, 팀 최고), Tabnine ($12/월, 프라이버시 최고), Windsurf (무료/$15/월, 급성장 대안). 모두 다양한 설정 복잡도로 로컬 LLM을 지원합니다. 2026년 6월.',
+        imageCaption: 'AI 코딩 어시스턴트 비교: Continue.dev (전체 최고, 무료), Cursor ($20/월, 최고 UX), Sourcegraph Cody ($59/사용자/월, 팀 최고), Tabnine ($39/월, 프라이버시 최고), Windsurf (무료/$15/월, 급성장 대안). 모두 다양한 설정 복잡도로 로컬 LLM을 지원합니다. 2026년 6월.',
         content: '기능 및 가격 직접 비교. 가격은 2026년 6월 공급자 공식 웹사이트에서 검증하였으며 매월 업데이트합니다. 로컬 LLM 지원은 네이티브 통합(Continue.dev)에서 벤더별 구성(Cursor, Cody)까지, 엔터프라이즈 전용(Tabnine 셀프 호스팅)까지 다양합니다.',
         note: '모든 가격은 공식 공급자 웹사이트에서 직접 검증하였습니다. 최신 2026년 6월 업데이트를 받으려면 구독하십시오.',
         columns: ['도구', '가격', '로컬 LLM', 'IDE', '오픈소스', '팀 기능', '최적 대상'],
@@ -2570,7 +2570,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       codySection: {
         id: 'cody',
         title: 'Sourcegraph Cody: 팀에게 최고',
-        content: 'Sourcegraph Cody는 팀 협업에 초점을 맞춘 VS Code 및 JetBrains 확장 기능($9/사용자/월)입니다. Cody는 코드베이스 전체 컨텍스트를 활용하여 프로젝트를 이해하며, 대규모 리팩터링 및 다중 파일 변경에 강력합니다. 팀을 위해 Cody는 관리자 컨트롤, 감사 로그, 컴플라이언스 기능을 포함합니다.\n\n로컬 LLM 지원은 Ollama 구성을 통해 이용 가능합니다. Cody 설정에서 Ollama 엔드포인트를 설정하면 채팅 및 완성이 로컬 모델로 라우팅됩니다. 작동하지만 Cody는 근본적으로 클라우드 우선입니다. 제품 경험이 클라우드 모델을 가정합니다.\n\n### 사양 (2026년 6월)\n- **가격:** 무료 또는 $9/사용자/월\n- **무료 티어:** 예, 단 사용량 제한 있음\n- **IDE 지원:** VS Code, JetBrains (IntelliJ, PyCharm 등), Neovim\n- **언어 지원:** Python, JavaScript, Java, Go, Rust 및 대부분의 일반 언어\n- **로컬 LLM 통합:** Ollama 구성 경유 (Claude, Mixtral 또는 호환 모델)\n- **지원 클라우드 모델:** Claude 3 Opus/Sonnet (기본)\n- **팀 기능:** 관리 콘솔, 감사 로그, 컴플라이언스, 시트 관리\n- **셀프 호스팅 옵션:** 엔터프라이즈 이용 가능\n- **오픈소스:** 부분 (CLI 오픈소스, IDE 확장 기능 비공개)\n\n### 강점\n- 코드베이스 전체 컨텍스트 (스마트 리팩터링을 위한 전체 프로젝트 이해)\n- 팀 관리 및 컴플라이언스 기능\n- 팀에게 합리적 ($9/사용자 vs Cursor $20/개인)\n- 다중 IDE 지원 (VS Code, JetBrains, Neovim)\n- Sourcegraph 코드 검색과 통합 (사용 시)\n- 컴플라이언스가 필요한 팀을 위한 감사 로그\n\n### 약점\n- 클라우드 우선 설계 (로컬 LLM은 부차적)\n- 인라인 완성은 기본적으로 클라우드\n- Cursor보다 작은 기능 세트\n- 대형 팀에 Team/Enterprise 가격 필요\n- Continue.dev보다 덜 세련된 로컬 LLM 경험\n\n### 최적 대상\n코드베이스 컨텍스트가 필요한 3인 이상 개발자 팀. 감사 로그 및 컴플라이언스가 필요한 조직. 이미 Sourcegraph 검색을 사용하는 개발팀.\n\n### 피해야 할 경우\n최고의 자동 완성이 필요한 경우 (Cursor 우세). 로컬 전용 설정을 원하는 경우. 개인 개발자인 경우 (Continue.dev 또는 Cursor가 더 나음).',
+        content: 'Sourcegraph Cody는 팀 협업에 초점을 맞춘 VS Code 및 JetBrains 확장 기능($59/사용자/월)입니다. Cody는 코드베이스 전체 컨텍스트를 활용하여 프로젝트를 이해하며, 대규모 리팩터링 및 다중 파일 변경에 강력합니다. 팀을 위해 Cody는 관리자 컨트롤, 감사 로그, 컴플라이언스 기능을 포함합니다.\n\n로컬 LLM 지원은 Ollama 구성을 통해 이용 가능합니다. Cody 설정에서 Ollama 엔드포인트를 설정하면 채팅 및 완성이 로컬 모델로 라우팅됩니다. 작동하지만 Cody는 근본적으로 클라우드 우선입니다. 제품 경험이 클라우드 모델을 가정합니다.\n\n### 사양 (2026년 6월)\n- **가격:** 무료 또는 $59/사용자/월\n- **무료 티어:** 예, 단 사용량 제한 있음\n- **IDE 지원:** VS Code, JetBrains (IntelliJ, PyCharm 등), Neovim\n- **언어 지원:** Python, JavaScript, Java, Go, Rust 및 대부분의 일반 언어\n- **로컬 LLM 통합:** Ollama 구성 경유 (Claude, Mixtral 또는 호환 모델)\n- **지원 클라우드 모델:** Claude 3 Opus/Sonnet (기본)\n- **팀 기능:** 관리 콘솔, 감사 로그, 컴플라이언스, 시트 관리\n- **셀프 호스팅 옵션:** 엔터프라이즈 이용 가능\n- **오픈소스:** 부분 (CLI 오픈소스, IDE 확장 기능 비공개)\n\n### 강점\n- 코드베이스 전체 컨텍스트 (스마트 리팩터링을 위한 전체 프로젝트 이해)\n- 팀 관리 및 컴플라이언스 기능\n- 팀에게 합리적 ($59/사용자 vs Cursor $20/개인)\n- 다중 IDE 지원 (VS Code, JetBrains, Neovim)\n- Sourcegraph 코드 검색과 통합 (사용 시)\n- 컴플라이언스가 필요한 팀을 위한 감사 로그\n\n### 약점\n- 클라우드 우선 설계 (로컬 LLM은 부차적)\n- 인라인 완성은 기본적으로 클라우드\n- Cursor보다 작은 기능 세트\n- 대형 팀에 Team/Enterprise 가격 필요\n- Continue.dev보다 덜 세련된 로컬 LLM 경험\n\n### 최적 대상\n코드베이스 컨텍스트가 필요한 3인 이상 개발자 팀. 감사 로그 및 컴플라이언스가 필요한 조직. 이미 Sourcegraph 검색을 사용하는 개발팀.\n\n### 피해야 할 경우\n최고의 자동 완성이 필요한 경우 (Cursor 우세). 로컬 전용 설정을 원하는 경우. 개인 개발자인 경우 (Continue.dev 또는 Cursor가 더 나음).',
         items: [
           '$9/사용자/월 (팀 가격 이용 가능)',
           '스마트 리팩터링을 위한 코드베이스 전체 컨텍스트',
@@ -2584,7 +2584,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tabnineSection: {
         id: 'tabnine',
         title: 'Tabnine: 프라이버시 우선 학습',
-        content: 'Tabnine은 허용 라이선스 오픈소스 코드만으로 학습된 자동 완성 중심 도구($12/월 Pro)입니다. 규제 산업에 중요합니다. Tabnine은 제한적 라이선스(GPL, AGPL) 또는 독점 코드를 기반으로 코드를 생성할 수 없습니다. Tabnine은 SOC 2 Type 2 인증을 보유합니다.\n\n엄격한 IP 및 라이선스 요구사항을 가진 조직에게 Tabnine은 엔터프라이즈 답입니다. 셀프 호스팅 배포가 이용 가능하지만 엔터프라이즈 전용이며 상당한 인프라가 필요합니다. 표준 플랜의 로컬 LLM 통합은 제한적입니다.\n\n### 사양 (2026년 6월)\n- **가격:** 무료 (제한) 또는 $12/월 Pro\n- **무료 티어:** 예, 제한된 완성\n- **IDE 지원:** VS Code, JetBrains, Sublime, Vim, Emacs, Eclipse, Visual Studio\n- **언어 지원:** 모든 주요 언어 (Python, JS, Java, C++, Go, Rust 등)\n- **로컬 LLM 통합:** 셀프 호스팅 배포 (엔터프라이즈 전용)\n- **지원 클라우드 모델:** Tabnine 독점 모델 (허용 코드로 학습)\n- **팀 기능:** Team Pro 플랜 이용 가능\n- **셀프 호스팅 옵션:** 예, 엔터프라이즈 배포\n- **오픈소스:** 비공개 소스\n\n### 강점\n- 허용 라이선스 코드만으로 학습 (GPL/AGPL 미포함)\n- SOC 2 Type 2 인증 (감사된 보안)\n- 탁월한 자동 완성 품질\n- 모든 도구 중 가장 넓은 IDE 지원 (10개 이상 IDE)\n- 규제 산업을 위한 강력한 컴플라이언스\n- 궁극적 프라이버시를 위한 셀프 호스팅 옵션 (엔터프라이즈)\n\n### 약점\n- 생산적 사용을 위해 $12/월 구독 필요\n- 제한적 로컬 LLM 지원 (셀프 호스팅은 엔터프라이즈 전용)\n- 자동 완성 중심 (채팅 모드 없음)\n- 비공개 소스 — 오픈 옵션보다 투명성 낮음\n- 셀프 호스팅 배포에 엔터프라이즈 인프라 필요\n- Cursor 또는 GitHub Copilot보다 작은 커뮤니티\n\n### 최적 대상\n규제 산업(의료, 금융, 방위)의 개발자. 엄격한 라이선스 요구사항을 가진 조직. SOC 2 컴플라이언스가 필요한 팀.\n\n### 피해야 할 경우\n로컬 전용 설정을 원하는 경우 (Continue.dev가 더 나음). 채팅 및 에이전틱 기능이 필요한 경우 (Cursor 또는 Cody가 더 나음). 가장 저렴한 옵션을 찾는 경우.',
+        content: 'Tabnine은 허용 라이선스 오픈소스 코드만으로 학습된 자동 완성 중심 도구($39/월 Pro)입니다. 규제 산업에 중요합니다. Tabnine은 제한적 라이선스(GPL, AGPL) 또는 독점 코드를 기반으로 코드를 생성할 수 없습니다. Tabnine은 SOC 2 Type 2 인증을 보유합니다.\n\n엄격한 IP 및 라이선스 요구사항을 가진 조직에게 Tabnine은 엔터프라이즈 답입니다. 셀프 호스팅 배포가 이용 가능하지만 엔터프라이즈 전용이며 상당한 인프라가 필요합니다. 표준 플랜의 로컬 LLM 통합은 제한적입니다.\n\n### 사양 (2026년 6월)\n- **가격:** 무료 (제한) 또는 $39/월 Pro\n- **무료 티어:** 예, 제한된 완성\n- **IDE 지원:** VS Code, JetBrains, Sublime, Vim, Emacs, Eclipse, Visual Studio\n- **언어 지원:** 모든 주요 언어 (Python, JS, Java, C++, Go, Rust 등)\n- **로컬 LLM 통합:** 셀프 호스팅 배포 (엔터프라이즈 전용)\n- **지원 클라우드 모델:** Tabnine 독점 모델 (허용 코드로 학습)\n- **팀 기능:** Team Pro 플랜 이용 가능\n- **셀프 호스팅 옵션:** 예, 엔터프라이즈 배포\n- **오픈소스:** 비공개 소스\n\n### 강점\n- 허용 라이선스 코드만으로 학습 (GPL/AGPL 미포함)\n- SOC 2 Type 2 인증 (감사된 보안)\n- 탁월한 자동 완성 품질\n- 모든 도구 중 가장 넓은 IDE 지원 (10개 이상 IDE)\n- 규제 산업을 위한 강력한 컴플라이언스\n- 궁극적 프라이버시를 위한 셀프 호스팅 옵션 (엔터프라이즈)\n\n### 약점\n- 생산적 사용을 위해 $39/월 구독 필요\n- 제한적 로컬 LLM 지원 (셀프 호스팅은 엔터프라이즈 전용)\n- 자동 완성 중심 (채팅 모드 없음)\n- 비공개 소스 — 오픈 옵션보다 투명성 낮음\n- 셀프 호스팅 배포에 엔터프라이즈 인프라 필요\n- Cursor 또는 GitHub Copilot보다 작은 커뮤니티\n\n### 최적 대상\n규제 산업(의료, 금융, 방위)의 개발자. 엄격한 라이선스 요구사항을 가진 조직. SOC 2 컴플라이언스가 필요한 팀.\n\n### 피해야 할 경우\n로컬 전용 설정을 원하는 경우 (Continue.dev가 더 나음). 채팅 및 에이전틱 기능이 필요한 경우 (Cursor 또는 Cody가 더 나음). 가장 저렴한 옵션을 찾는 경우.',
         items: [
           '$12/월 Pro 티어',
           '허용 라이선스만으로 학습 (GPL 없음)',
@@ -2632,7 +2632,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**1. 무료, 완전 로컬, 프라이버시 우선 → Continue.dev + Ollama.** 비용 없음, 오픈소스, 설정 마찰 없음. 프라이버시를 중시하는 개발자에게 명확한 승자입니다.',
           '**2. 최고 자동 완성 UX, 비용 지불 의향 → Cursor ($20/월).** 탁월한 품질, 빠른 IDE, 로컬 LLM을 폴백으로. 전문가에게 최고입니다.',
-          '**3. 5인 이상 개발자 팀 → Sourcegraph Cody ($9/사용자/월).** 코드베이스 컨텍스트, 팀 관리, 컴플라이언스. 엔터프라이즈급.',
+          '**3. 5인 이상 개발자 팀 → Sourcegraph Cody ($59/사용자/월).** 코드베이스 컨텍스트, 팀 관리, 컴플라이언스. 엔터프라이즈급.',
           '**4. 엄격한 프라이버시 컴플라이언스 (의료, 금융, 방위) → Tabnine 셀프 호스팅 (엔터프라이즈 가격).** 진정한 격리 네트워크 요구사항의 유일한 옵션.',
           '**5. GitHub Copilot 대안 → Continue.dev (무료) 또는 Cursor ($20/월).** 둘 다 로컬 LLM 지원을 갖춘 견고한 Copilot 대체재입니다.',
           '**6. 최고 자동 완성 알고리즘만 원한다면 → Cursor 또는 Tabnine.** 둘 다 코드 완성에서 탁월합니다.',
@@ -2710,7 +2710,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Tabnine 셀프 호스팅 엔터프라이즈 비용은 가치가 있습니까?',
-            a: '엄격한 컴플라이언스 요구사항(의료, 금융, 방위)이 있고 인프라 비용을 정당화할 수 있는 경우에만. 대부분의 팀에게 Sourcegraph Cody($9/사용자/월)가 더 나은 가치를 제공합니다.',
+            a: '엄격한 컴플라이언스 요구사항(의료, 금융, 방위)이 있고 인프라 비용을 정당화할 수 있는 경우에만. 대부분의 팀에게 Sourcegraph Cody($59/사용자/월)가 더 나은 가치를 제공합니다.',
           },
           {
             q: '노트북에서 로컬 AI 코드 완성을 사용할 수 있습니까?',
