@@ -12,13 +12,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       theme: 'Best Models',
       title: 'Best Local LLMs for Creative Writing in 2026: Fiction, Poetry, and Long-Form Content',
       seoTitle: 'Best Local LLMs for Creative Writing 2026',
-      intro: 'As of April 2026, the best local LLMs for creative writing are Meta Llama 3.3 70B (best prose quality), Mistral Small 3.1 24B (best quality under 16 GB RAM), and community fine-tunes like Fimbulvetr and Midnight-Rose (specialized for fiction and roleplay). Creative writing performance is not well captured by standard benchmarks -- it requires evaluating narrative coherence, stylistic range, and instruction-following on open-ended prompts.',
+      intro: 'The best local LLMs for creative writing are Meta Llama 3.3 70B (best prose quality), Mistral Small 3.1 24B (best quality under 16 GB RAM), and community fine-tunes like Fimbulvetr and Midnight-Rose (specialized for fiction and roleplay). Creative writing performance is not well captured by standard benchmarks -- it requires evaluating narrative coherence, stylistic range, and instruction-following on open-ended prompts.',
       metaDescription: '4 top local LLMs for creative writing: Llama 3.3 70B (best prose), Mistral 24B (best 16GB), fine-tunes (specialized voices). Find the right fit.',
       heroImage: '/images/best-local-llms-for-creative-writing-model-comparison-hero-en.webp',
       publishDate: '2026-04-04',
-      leadAnswerBlock: '**As of April 2026, the best local LLMs for creative writing are Meta Llama 3.3 70B (best prose quality), Mistral Small 3.1 24B (best quality under 16 GB RAM), and community fine-tunes like Fimbulvetr a.**',
+      leadAnswerBlock: '**The best local LLMs for creative writing are Meta Llama 3.3 70B (best prose quality), Mistral Small 3.1 24B (best quality under 16 GB RAM), and community fine-tunes like Fimbulvetr a.**',
       audience: 'Beginners running their first local LLM on consumer hardware',
-      dateModified: '2026-07-29',
+      dateModified: '2026-08-28',
       readTime: '8 min read',
       educationalLevel: 'Beginner',
       primaryTerm: 'local LLM creative writing',
@@ -27,7 +27,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Best Local LLMs for Creative Writing in 2026: Fiction, Poetry, and Long-Form Content',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-07-29',
+        'dateModified': '2026-08-28',
         'url': 'https://www.promptquorum.com/local-llms/best-local-llms-for-creative-writing',
         'proficiencyLevel': 'Beginner',
         'about': [
@@ -115,6 +115,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'The best local LLMs for creative writing are Meta Llama 3.3 70B for prose quality, Mistral Small 3.1 24B for the best quality under 16 GB RAM, and community fine-tunes like Fimbulvetr and Midnight-Rose for specialized fiction and roleplay voices.' },
+            { type: 'plain-terms', text: "Standard AI benchmarks don't measure creative writing well, since there's no single right answer to a story prompt. In practice, Llama 3.3 70B tends to produce the richest prose if you have the RAM for it, Mistral Small 3.1 24B is the best choice if you're limited to 16 GB, and community fine-tunes trained specifically on fiction and roleplay often outnumber general-purpose models for voice and tone." },
+          ],
           items: [
             'Standard benchmarks (MMLU, HumanEval) do not measure creative writing quality -- evaluate models with your own sample prompts.',
             '**Best overall prose**: Llama 3.3 70B -- most natural English narrative style at the locally-runnable scale.',
@@ -127,7 +131,7 @@ schema: {
           id: 'how-to-evaluate',
           title: 'How Do You Evaluate Local LLM Quality for Creative Writing?',
           content: [
-            '**As of April 2026, creative writing performance is not well captured by standard benchmarks (MMLU, HumanEval).** To evaluate a model for creative writing, test it directly with the types of prompts you plan to use:',
+            '**Creative writing performance is not well captured by standard benchmarks (MMLU, HumanEval).** To evaluate a model for creative writing, test it directly with the types of prompts you plan to use:',
           ],
           items: [
             '**Prose continuity test**: give the model the first two paragraphs of a scene and ask it to continue for 500 words. Does it maintain consistent tone, character voice, and narrative logic?',
@@ -348,13 +352,13 @@ schema: {
       theme: 'Best Models',
       title: 'Mejores LLM locales para escritura creativa en 2026: ficción, poesía y contenido de formato largo',
       seoTitle: 'Mejores LLM locales para escritura creativa 2026',
-      intro: 'A partir de abril de 2026, los mejores LLM locales para escritura creativa son Meta Llama 3.3 70B (mejor calidad de prosa), Mistral Small 3.1 24B (mejor calidad con menos de 16 GB de RAM) y fine-tunes de la comunidad como Fimbulvetr y Midnight-Rose (especializados en ficción y roleplay). El rendimiento en escritura creativa no se mide bien con los benchmarks estándar — requiere evaluar la coherencia narrativa, el rango estilístico y el seguimiento de instrucciones en prompts abiertos.',
+      intro: 'Los mejores LLM locales para escritura creativa son Meta Llama 3.3 70B (mejor calidad de prosa), Mistral Small 3.1 24B (mejor calidad con menos de 16 GB de RAM) y fine-tunes de la comunidad como Fimbulvetr y Midnight-Rose (especializados en ficción y roleplay). El rendimiento en escritura creativa no se mide bien con los benchmarks estándar — requiere evaluar la coherencia narrativa, el rango estilístico y el seguimiento de instrucciones en prompts abiertos.',
       metaDescription: '4 mejores LLM locales para escritura creativa: Llama 3.3 70B (mejor prosa), Mistral 24B (mejor en 16 GB) y fine-tunes para voces especializadas.',
       heroImage: '/images/best-local-llms-for-creative-writing-model-comparison-hero-es.webp',
       publishDate: '2026-04-04',
-      leadAnswerBlock: '**A partir de abril de 2026, los mejores LLM locales para escritura creativa son Meta Llama 3.3 70B (mejor calidad de prosa), Mistral Small 3.1 24B (mejor calidad con menos de 16 GB de RAM) y fine-tunes de la comunidad como Fimbulvetr.**',
+      leadAnswerBlock: '**Los mejores LLM locales para escritura creativa son Meta Llama 3.3 70B (mejor calidad de prosa), Mistral Small 3.1 24B (mejor calidad con menos de 16 GB de RAM) y fine-tunes de la comunidad como Fimbulvetr.**',
       audience: 'Principiantes ejecutando su primer LLM local en hardware de consumidor',
-      dateModified: '2026-07-29',
+      dateModified: '2026-08-28',
       readTime: '8 min de lectura',
       educationalLevel: 'Beginner',
       primaryTerm: 'LLM local escritura creativa',
@@ -363,7 +367,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Mejores LLM locales para escritura creativa en 2026: ficción, poesía y contenido de formato largo',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-07-29',
+        'dateModified': '2026-08-28',
         'url': 'https://www.promptquorum.com/es/local-llms/best-local-llms-for-creative-writing',
         'proficiencyLevel': 'Beginner',
         'about': [
@@ -450,6 +454,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Los mejores LLM locales para escritura creativa son Meta Llama 3.3 70B por la calidad de prosa, Mistral Small 3.1 24B por la mejor calidad con menos de 16 GB de RAM, y fine-tunes de la comunidad como Fimbulvetr y Midnight-Rose para voces especializadas en ficción y roleplay.' },
+            { type: 'plain-terms', text: 'Los benchmarks estándar de IA no miden bien la escritura creativa, ya que no hay una única respuesta correcta a un prompt narrativo. En la práctica, Llama 3.3 70B tiende a producir la prosa más rica si tienes la RAM necesaria, Mistral Small 3.1 24B es la mejor opción si estás limitado a 16 GB, y los fine-tunes de la comunidad entrenados específicamente para ficción y roleplay suelen superar a los modelos de propósito general en voz y tono.' },
+          ],
           items: [
             'Los benchmarks estándar (MMLU, HumanEval) no miden la calidad de escritura creativa — evalúa los modelos con tus propios prompts de muestra.',
             '**Mejor prosa general**: Llama 3.3 70B — el estilo narrativo en inglés más natural a escala ejecutable localmente.',
@@ -462,7 +470,7 @@ schema: {
           id: 'how-to-evaluate',
           title: '¿Cómo evaluar la calidad de un LLM local para escritura creativa?',
           content: [
-            '**A partir de abril de 2026, el rendimiento en escritura creativa no se mide bien con los benchmarks estándar (MMLU, HumanEval).** Para evaluar un modelo para escritura creativa, pruébalo directamente con los tipos de prompts que planeas usar:',
+            '**El rendimiento en escritura creativa no se mide bien con los benchmarks estándar (MMLU, HumanEval).** Para evaluar un modelo para escritura creativa, pruébalo directamente con los tipos de prompts que planeas usar:',
           ],
           items: [
             '**Prueba de continuidad de prosa**: dale al modelo los dos primeros párrafos de una escena y pídele que continúe durante 500 palabras. ¿Mantiene un tono, voz del personaje y lógica narrativa consistentes?',
@@ -682,13 +690,13 @@ schema: {
       theme: 'Best Models',
       title: 'أفضل نماذج ⁨LLM⁩ المحلية للكتابة الإبداعية في ⁨2026⁩: الروايات والشعر والمحتوى الطويل',
       seoTitle: '⁨LLM⁩ محلي للكتابة الإبداعية ⁨2026⁩: ⁨Llama⁩ و⁨Mistral⁩',
-      intro: 'اعتباراً من أبريل 2026، أفضل نماذج LLM المحلية للكتابة الإبداعية هي Meta Llama 3.3 70B (أفضل جودة نثر)، وMistral Small 3.1 24B (أفضل جودة بأقل من 16 GB من RAM)، والنماذج المضبوطة من المجتمع مثل Fimbulvetr وMidnight-Rose (متخصصة في الروايات وتقمّص الأدوار). لا يُقاس أداء الكتابة الإبداعية جيداً بالاختبارات القياسية — يتطلب تقييم التماسك السردي والمدى الأسلوبي واتباع التعليمات في الموجّهات المفتوحة.',
+      intro: 'أفضل نماذج LLM المحلية للكتابة الإبداعية هي Meta Llama 3.3 70B (أفضل جودة نثر)، وMistral Small 3.1 24B (أفضل جودة بأقل من 16 GB من RAM)، والنماذج المضبوطة من المجتمع مثل Fimbulvetr وMidnight-Rose (متخصصة في الروايات وتقمّص الأدوار). لا يُقاس أداء الكتابة الإبداعية جيداً بالاختبارات القياسية — يتطلب تقييم التماسك السردي والمدى الأسلوبي واتباع التعليمات في الموجّهات المفتوحة.',
       metaDescription: '⁨Llama 3.3 70B⁩ يقدّم أفضل جودة نثر محلياً. ⁨Mistral Small 3.1 24B⁩ الأمثل بـ ⁨16 GB RAM⁩. نماذج كـ ⁨Fimbulvetr⁩ متخصصة في الروايات وتقمّص الأدوار.',
       heroImage: '/images/best-local-llms-for-creative-writing-model-comparison-hero-ar.webp',
       publishDate: '2026-04-04',
-      leadAnswerBlock: '**اعتباراً من أبريل 2026، أفضل نماذج LLM المحلية للكتابة الإبداعية هي Meta Llama 3.3 70B (أفضل جودة نثر)، وMistral Small 3.1 24B (أفضل جودة بأقل من 16 GB من RAM)، والنماذج المضبوطة من المجتمع مثل Fimbulvetr.**',
+      leadAnswerBlock: '**أفضل نماذج LLM المحلية للكتابة الإبداعية هي Meta Llama 3.3 70B (أفضل جودة نثر)، وMistral Small 3.1 24B (أفضل جودة بأقل من 16 GB من RAM)، والنماذج المضبوطة من المجتمع مثل Fimbulvetr.**',
       audience: 'المبتدئون الذين يشغّلون أول نموذج LLM محلي لهم على عتاد استهلاكي',
-      dateModified: '2026-07-29',
+      dateModified: '2026-08-28',
       readTime: '8 دقائق للقراءة',
       educationalLevel: 'Beginner',
       primaryTerm: 'LLM محلي للكتابة الإبداعية',
@@ -697,7 +705,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'أفضل نماذج LLM المحلية للكتابة الإبداعية في 2026: الروايات والشعر والمحتوى الطويل',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-07-29',
+        'dateModified': '2026-08-28',
         'url': 'https://www.promptquorum.com/ar/local-llms/best-local-llms-for-creative-writing',
         'proficiencyLevel': 'Beginner',
         'about': [
@@ -784,6 +792,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'أفضل نماذج LLM المحلية للكتابة الإبداعية هي Meta Llama 3.3 70B لجودة النثر، وMistral Small 3.1 24B لأفضل جودة بأقل من 16 GB من RAM، والنماذج المضبوطة من المجتمع مثل Fimbulvetr وMidnight-Rose لأصوات متخصصة في الروايات وتقمّص الأدوار.' },
+            { type: 'plain-terms', text: 'لا تقيس اختبارات الذكاء الاصطناعي القياسية الكتابة الإبداعية جيداً، إذ لا توجد إجابة صحيحة واحدة لموجّه قصصي. عملياً، يميل Llama 3.3 70B لإنتاج نثر أغنى إذا توفرت لديك الذاكرة اللازمة، ويُعد Mistral Small 3.1 24B الخيار الأفضل إذا كنت محدوداً بـ 16 GB، وغالباً ما تتفوق النماذج المضبوطة من المجتمع المدرّبة خصيصاً على الروايات وتقمّص الأدوار على النماذج العامة من حيث الصوت والنبرة.' },
+          ],
           items: [
             'الاختبارات القياسية (MMLU، HumanEval) لا تقيس جودة الكتابة الإبداعية — قيّم النماذج بموجّهات العيّنة الخاصة بك.',
             '**أفضل نثر عموماً**: Llama 3.3 70B — أكثر أسلوب سردي إنجليزي طبيعي على نطاق قابل للتشغيل محلياً.',
@@ -796,7 +808,7 @@ schema: {
           id: 'how-to-evaluate',
           title: 'كيف تقيّم جودة نموذج LLM محلي للكتابة الإبداعية؟',
           content: [
-            '**اعتباراً من أبريل 2026، لا يُقاس أداء الكتابة الإبداعية جيداً بالاختبارات القياسية (MMLU، HumanEval).** لتقييم نموذج للكتابة الإبداعية، اختبره مباشرةً بأنواع الموجّهات التي تخطط لاستخدامها:',
+            '**لا يُقاس أداء الكتابة الإبداعية جيداً بالاختبارات القياسية (MMLU، HumanEval).** لتقييم نموذج للكتابة الإبداعية، اختبره مباشرةً بأنواع الموجّهات التي تخطط لاستخدامها:',
           ],
           items: [
             '**اختبار استمرارية النثر**: أعطِ النموذج أول فقرتين من مشهد واطلب منه المتابعة لـ 500 كلمة. هل يحافظ على نبرة وصوت شخصية ومنطق سردي متسق؟',
@@ -1016,13 +1028,13 @@ schema: {
       theme: 'Best Models',
       title: 'Melhores LLMs locais para escrita criativa em 2026: ficção, poesia e conteúdo de formato longo',
       seoTitle: 'Melhores LLMs locais para escrita criativa 2026',
-      intro: 'A partir de abril de 2026, os melhores LLMs locais para escrita criativa são Meta Llama 3.3 70B (melhor qualidade de prosa), Mistral Small 3.1 24B (melhor qualidade com menos de 16 GB de RAM) e fine-tunes da comunidade como Fimbulvetr e Midnight-Rose (especializados em ficção e roleplay). O desempenho em escrita criativa não é bem medido pelos benchmarks padrão — exige avaliar a coerência narrativa, o alcance estilístico e o seguimento de instruções em prompts abertos.',
+      intro: 'Os melhores LLMs locais para escrita criativa são Meta Llama 3.3 70B (melhor qualidade de prosa), Mistral Small 3.1 24B (melhor qualidade com menos de 16 GB de RAM) e fine-tunes da comunidade como Fimbulvetr e Midnight-Rose (especializados em ficção e roleplay). O desempenho em escrita criativa não é bem medido pelos benchmarks padrão — exige avaliar a coerência narrativa, o alcance estilístico e o seguimento de instruções em prompts abertos.',
       metaDescription: '4 melhores LLMs locais para escrita criativa: Llama 3.3 70B (melhor prosa), Mistral 24B (melhor em 16 GB) e fine-tunes para vozes especializadas.',
       heroImage: '/images/best-local-llms-for-creative-writing-model-comparison-hero-pt.webp',
       publishDate: '2026-04-04',
-      leadAnswerBlock: '**A partir de abril de 2026, os melhores LLMs locais para escrita criativa são Meta Llama 3.3 70B (melhor qualidade de prosa), Mistral Small 3.1 24B (melhor qualidade com menos de 16 GB de RAM) e fine-tunes da comunidade como Fimbulvetr.**',
+      leadAnswerBlock: '**Os melhores LLMs locais para escrita criativa são Meta Llama 3.3 70B (melhor qualidade de prosa), Mistral Small 3.1 24B (melhor qualidade com menos de 16 GB de RAM) e fine-tunes da comunidade como Fimbulvetr.**',
       audience: 'Iniciantes rodando seu primeiro LLM local em hardware de consumo',
-      dateModified: '2026-07-29',
+      dateModified: '2026-08-28',
       readTime: '8 min de leitura',
       educationalLevel: 'Beginner',
       primaryTerm: 'LLM local escrita criativa',
@@ -1031,7 +1043,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': 'Melhores LLMs locais para escrita criativa em 2026: ficção, poesia e conteúdo de formato longo',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-07-29',
+        'dateModified': '2026-08-28',
         'url': 'https://www.promptquorum.com/pt/local-llms/best-local-llms-for-creative-writing',
         'proficiencyLevel': 'Beginner',
         'about': [
@@ -1118,6 +1130,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Os melhores LLMs locais para escrita criativa são o Meta Llama 3.3 70B pela qualidade de prosa, o Mistral Small 3.1 24B pela melhor qualidade com menos de 16 GB de RAM, e fine-tunes da comunidade como Fimbulvetr e Midnight-Rose para vozes especializadas em ficção e roleplay.' },
+            { type: 'plain-terms', text: 'Os benchmarks padrão de IA não medem bem a escrita criativa, já que não há uma única resposta correta para um prompt narrativo. Na prática, o Llama 3.3 70B tende a produzir a prosa mais rica se você tiver a RAM necessária, o Mistral Small 3.1 24B é a melhor opção se você estiver limitado a 16 GB, e os fine-tunes da comunidade treinados especificamente para ficção e roleplay costumam superar os modelos de propósito geral em voz e tom.' },
+          ],
           items: [
             'Os benchmarks padrão (MMLU, HumanEval) não medem a qualidade de escrita criativa — avalie os modelos com os seus próprios prompts de amostra.',
             '**Melhor prosa geral**: Llama 3.3 70B — o estilo narrativo em inglês mais natural em escala executável localmente.',
@@ -1130,7 +1146,7 @@ schema: {
           id: 'how-to-evaluate',
           title: 'Como avaliar a qualidade de um LLM local para escrita criativa?',
           content: [
-            '**A partir de abril de 2026, o desempenho em escrita criativa não é bem medido pelos benchmarks padrão (MMLU, HumanEval).** Para avaliar um modelo para escrita criativa, teste-o diretamente com os tipos de prompts que você planeja usar:',
+            '**O desempenho em escrita criativa não é bem medido pelos benchmarks padrão (MMLU, HumanEval).** Para avaliar um modelo para escrita criativa, teste-o diretamente com os tipos de prompts que você planeja usar:',
           ],
           items: [
             '**Teste de continuidade de prosa**: dê ao modelo os dois primeiros parágrafos de uma cena e peça que continue por 500 palavras. Ele mantém um tom, voz de personagem e lógica narrativa consistentes?',
@@ -1353,6 +1369,7 @@ schema: {
       metaDescription: 'Die besten lokalen LLMs für kreatives Schreiben 2026: unzensierte Modelle und Top-Modelle für Belletristik, Rollenspiele und Storytelling.',
       heroImage: '/images/best-local-llms-for-creative-writing-model-comparison-hero-de.webp',
       publishDate: '2026-04-04',
+      dateModified: '2026-08-28',
       readTime: '8 min Lesedauer',
       educationalLevel: 'Anfänger',
       primaryTerm: 'lokales LLM kreatives Schreiben',
@@ -1398,6 +1415,10 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Die besten lokalen LLMs für kreatives Schreiben sind Meta Llama 3.3 70B für die Prosaqualität, Mistral Small 3.1 24B für die beste Qualität unter 16 GB RAM, und Community-Fine-Tunes wie Fimbulvetr und Midnight-Rose für spezialisierte Stimmen in Fiktion und Rollenspiel.' },
+            { type: 'plain-terms', text: 'Standard-KI-Benchmarks messen kreatives Schreiben nicht gut, da es auf einen Geschichten-Prompt keine einzig richtige Antwort gibt. In der Praxis liefert Llama 3.3 70B die reichhaltigste Prosa, wenn genug RAM vorhanden ist, Mistral Small 3.1 24B ist die beste Wahl bei 16 GB Limit, und speziell auf Fiktion und Rollenspiel trainierte Community-Fine-Tunes übertreffen bei Stimme und Ton oft Allzweckmodelle.' },
+          ],
           items: [
             'Standard-Benchmarks (MMLU, HumanEval) messen nicht die Qualität des kreativen Schreibens -- testen Sie Modelle direkt mit Ihren Prompts.',
             '**Beste Prosa insgesamt**: Llama 3.3 70B -- natürlichster englischer Narrativ-Stil im lokalen Bereich.',
@@ -1624,7 +1645,7 @@ schema: {
         'headline': 'Beste lokale LLMs für kreatives Schreiben 2026',
         'url': 'https://www.promptquorum.com/de/local-llms/best-local-llms-for-creative-writing',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-07-29',
+        'dateModified': '2026-08-28',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'proficiencyLevel': 'Anfänger',
@@ -1662,6 +1683,7 @@ schema: {
       metaDescription: 'Top 5 LLMs locaux fiction, poésie, long format 2026. Llama 3.3 70B prose, Mistral 24B 16GB, fine-tunes roleplay. Évalués cohérence narrative. Gratuit, avril 2026.',
       heroImage: '/images/best-local-llms-for-creative-writing-model-comparison-hero-fr.webp',
       publishDate: '2026-04-04',
+      dateModified: '2026-08-28',
       readTime: '8 min de lecture',
       educationalLevel: 'Débutant',
       primaryTerm: 'LLM local écriture créative',
@@ -1707,6 +1729,10 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: "Les meilleurs LLM locaux pour l'écriture créative sont Meta Llama 3.3 70B pour la qualité de la prose, Mistral Small 3.1 24B pour la meilleure qualité sous 16 Go de RAM, et des fine-tunes communautaires comme Fimbulvetr et Midnight-Rose pour des voix spécialisées en fiction et roleplay." },
+            { type: 'plain-terms', text: "Les benchmarks d'IA classiques ne mesurent pas bien l'écriture créative, car il n'existe pas de réponse unique correcte à un prompt narratif. En pratique, Llama 3.3 70B produit la prose la plus riche si vous avez assez de RAM, Mistral Small 3.1 24B est le meilleur choix si vous êtes limité à 16 Go, et les fine-tunes communautaires entraînés spécifiquement pour la fiction et le roleplay surpassent souvent les modèles généralistes en voix et en ton." },
+          ],
           items: [
             'Les benchmarks standard ne mesurent pas la qualité créative -- testez directement avec vos propres prompts.',
             '**Meilleure prose**: Llama 3.3 70B -- style narratif anglais le plus naturel à l\'échelle locale.',
@@ -1921,7 +1947,7 @@ schema: {
         'headline': 'Meilleurs LLMs locaux pour écriture créative 2026',
         'url': 'https://www.promptquorum.com/fr/local-llms/best-local-llms-for-creative-writing',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-07-29',
+        'dateModified': '2026-08-28',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'proficiencyLevel': 'Débutant',
@@ -1956,6 +1982,7 @@ schema: {
       metaDescription: '2026年の創作文章向けトップ5ローカルLLM。Llama 3.3 70B最高の散文、Mistral 24B16GB最適、ロールプレイ特化ファインチューン。物語の一貫性で評価。完全ローカル、4月 2026.',
       heroImage: '/images/best-local-llms-for-creative-writing-model-comparison-hero-ja.webp',
       publishDate: '2026-04-04',
+      dateModified: '2026-08-28',
       readTime: '8分読',
       educationalLevel: '初心者',
       primaryTerm: 'ローカルLLM創作文章',
@@ -2001,6 +2028,10 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: '創作文章向けの最良のローカルLLMは、散文品質ならMeta Llama 3.3 70B、16GB RAM以下での最高品質ならMistral Small 3.1 24B、フィクションやロールプレイに特化した声を求めるならFimbulvetrやMidnight-Roseのようなコミュニティファインチューニングモデルです。' },
+            { type: 'plain-terms', text: '標準的なAIベンチマークは創作文章をうまく測定できません。物語プロンプトには唯一の正解がないためです。実際には、十分なRAMがあればLlama 3.3 70Bが最も豊かな散文を生み出し、16GBに制限されている場合はMistral Small 3.1 24Bが最良の選択肢であり、フィクションやロールプレイ専用に訓練されたコミュニティファインチューニングモデルは、声とトーンの面で汎用モデルを上回ることがよくあります。' },
+          ],
           items: [
             '標準ベンチマーク（MMLU、HumanEval）は創作文章の品質を測定しません。自分のサンプルプロンプトで直接評価してください。',
             '**全体で最高の散文**: Llama 3.3 70B -- ローカル実行可能スケールで最も自然な英語ナレーティブスタイル。',
@@ -2218,7 +2249,7 @@ schema: {
         'headline': '2026年の最高の創作文章向けローカルLLM',
         'url': 'https://www.promptquorum.com/ja/local-llms/best-local-llms-for-creative-writing',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-07-29',
+        'dateModified': '2026-08-28',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'proficiencyLevel': '初心者',
@@ -2263,6 +2294,7 @@ schema: {
       metaDescription: '2026年创意写作top 5本地LLM排名。Llama 3.3 70B最佳散文、Mistral 24B 16GB最优、角色扮演微调。按叙事连贯性评分。完全本地、免费beta、2026年4月更新。',
       heroImage: '/images/best-local-llms-for-creative-writing-model-comparison-hero-zh.webp',
       publishDate: '2026-04-04',
+      dateModified: '2026-08-28',
       readTime: '8分钟阅读',
       educationalLevel: '初学者',
       primaryTerm: '本地LLM创意写作',
@@ -2308,6 +2340,10 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: '创意写作方面最好的本地LLM是：散文质量方面为Meta Llama 3.3 70B，16GB内存以下的最佳质量为Mistral Small 3.1 24B，专门用于小说和角色扮演声音的社区微调模型如Fimbulvetr和Midnight-Rose。' },
+            { type: 'plain-terms', text: '标准AI基准测试不能很好地衡量创意写作，因为故事提示没有单一的正确答案。实际上，如果你有足够的内存，Llama 3.3 70B往往能生成最丰富的散文；如果内存限制在16GB，Mistral Small 3.1 24B是最佳选择；而专门针对小说和角色扮演训练的社区微调模型在声音和语气方面往往优于通用模型。' },
+          ],
           items: [
             '标准基准（MMLU、HumanEval）无法测量创意写作质量----直接用自己的示例提示测试模型。',
             '**整体最佳散文**：Llama 3.3 70B----本地可运行规模中最自然的英文叙事风格。',
@@ -2523,7 +2559,7 @@ schema: {
         'headline': '2026年最佳创意写作本地LLM',
         'url': 'https://www.promptquorum.com/zh/local-llms/best-local-llms-for-creative-writing',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-07-29',
+        'dateModified': '2026-08-28',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'proficiencyLevel': '初学者',
@@ -2565,13 +2601,13 @@ schema: {
       theme: '최고의 모델',
       title: '2026년 창작 글쓰기를 위한 최고의 로컬 LLM: 소설, 시, 장편 콘텐츠',
       seoTitle: '창작 글쓰기를 위한 최고의 로컬 LLM 2026',
-      intro: '2026년 4월 기준, 창작 글쓰기를 위한 최고의 로컬 LLM은 Meta Llama 3.3 70B(최고의 산문 품질), Mistral Small 3.1 24B(16 GB RAM 이하에서 최고의 품질), 그리고 Fimbulvetr 및 Midnight-Rose와 같은 커뮤니티 파인튜닝 모델(소설 및 롤플레이에 특화)입니다. 창작 글쓰기 성능은 표준 벤치마크로 잘 측정되지 않습니다 -- 이를 평가하려면 서사적 일관성, 문체 범위, 그리고 개방형 프롬프트에 대한 지시 이행 능력을 직접 평가해야 합니다.',
+      intro: '창작 글쓰기를 위한 최고의 로컬 LLM은 Meta Llama 3.3 70B(최고의 산문 품질), Mistral Small 3.1 24B(16 GB RAM 이하에서 최고의 품질), 그리고 Fimbulvetr 및 Midnight-Rose와 같은 커뮤니티 파인튜닝 모델(소설 및 롤플레이에 특화)입니다. 창작 글쓰기 성능은 표준 벤치마크로 잘 측정되지 않습니다 -- 이를 평가하려면 서사적 일관성, 문체 범위, 그리고 개방형 프롬프트에 대한 지시 이행 능력을 직접 평가해야 합니다.',
       metaDescription: '창작 글쓰기를 위한 상위 4개 로컬 LLM: Llama 3.3 70B(최고의 산문), Mistral 24B(16GB 최적), 파인튜닝 모델(특화된 문체). 적합한 모델을 찾아보십시오.',
       heroImage: '/images/best-local-llms-for-creative-writing-model-comparison-hero-ko.webp',
       publishDate: '2026-04-04',
-      leadAnswerBlock: '**2026년 4월 기준, 창작 글쓰기를 위한 최고의 로컬 LLM은 Meta Llama 3.3 70B(최고의 산문 품질), Mistral Small 3.1 24B(16 GB RAM 이하에서 최고의 품질), 그리고 Fimbulvetr와 같은 커뮤니티 파인튜닝 모델입니다.**',
+      leadAnswerBlock: '**창작 글쓰기를 위한 최고의 로컬 LLM은 Meta Llama 3.3 70B(최고의 산문 품질), Mistral Small 3.1 24B(16 GB RAM 이하에서 최고의 품질), 그리고 Fimbulvetr와 같은 커뮤니티 파인튜닝 모델입니다.**',
       audience: '일반 소비자용 하드웨어에서 처음으로 로컬 LLM을 실행하는 초보자',
-      dateModified: '2026-07-29',
+      dateModified: '2026-08-28',
       readTime: '8분 읽기',
       educationalLevel: 'Beginner',
       primaryTerm: '로컬 LLM 창작 글쓰기',
@@ -2580,7 +2616,7 @@ schema: {
         '@type': 'TechArticle',
         'headline': '2026년 창작 글쓰기를 위한 최고의 로컬 LLM: 소설, 시, 장편 콘텐츠',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-07-29',
+        'dateModified': '2026-08-28',
         'url': 'https://www.promptquorum.com/ko/local-llms/best-local-llms-for-creative-writing',
         'proficiencyLevel': 'Beginner',
         'about': [
@@ -2667,6 +2703,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: '창작 글쓰기에 가장 적합한 로컬 LLM은 산문 품질 면에서 Meta Llama 3.3 70B, 16GB RAM 이하에서 최고 품질인 Mistral Small 3.1 24B, 그리고 소설과 롤플레이에 특화된 Fimbulvetr와 Midnight-Rose 같은 커뮤니티 파인튜닝 모델입니다.' },
+            { type: 'plain-terms', text: '표준 AI 벤치마크는 창작 글쓰기를 잘 측정하지 못합니다. 이야기 프롬프트에는 단 하나의 정답이 없기 때문입니다. 실제로는 충분한 RAM이 있다면 Llama 3.3 70B가 가장 풍부한 산문을 만들어내고, 16GB로 제한된다면 Mistral Small 3.1 24B가 최선의 선택이며, 소설과 롤플레이용으로 특별히 훈련된 커뮤니티 파인튜닝 모델은 목소리와 톤 면에서 범용 모델을 종종 능가합니다.' },
+          ],
           items: [
             '표준 벤치마크(MMLU, HumanEval)는 창작 글쓰기 품질을 측정하지 않습니다 -- 직접 작성한 샘플 프롬프트로 모델을 평가하십시오.',
             '**전반적으로 최고의 산문**: Llama 3.3 70B -- 로컬에서 실행 가능한 규모 내에서 가장 자연스러운 서사 문체.',
@@ -2679,7 +2719,7 @@ schema: {
           id: 'how-to-evaluate',
           title: '로컬 LLM의 창작 글쓰기 품질을 어떻게 평가합니까?',
           content: [
-            '**2026년 4월 기준, 창작 글쓰기 성능은 표준 벤치마크(MMLU, HumanEval)로 잘 측정되지 않습니다.** 창작 글쓰기를 위해 모델을 평가하려면 실제로 사용할 유형의 프롬프트로 직접 테스트해야 합니다:',
+            '**창작 글쓰기 성능은 표준 벤치마크(MMLU, HumanEval)로 잘 측정되지 않습니다.** 창작 글쓰기를 위해 모델을 평가하려면 실제로 사용할 유형의 프롬프트로 직접 테스트해야 합니다:',
           ],
           items: [
             '**산문 연속성 테스트**: 장면의 첫 두 단락을 모델에게 제공하고 500단어로 이어서 쓰도록 요청하십시오. 일관된 어조, 캐릭터 목소리, 서사적 논리를 유지합니까?',
