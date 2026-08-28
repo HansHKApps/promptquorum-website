@@ -672,6 +672,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'El mejor modelo de Ollama en julio de 2026 es Qwen3.8-27B (61,7% SWE-bench, cabe en 24 GB con Q4); el mejor para programación es Kimi K2.6 o Laguna XS 2.1.' },
+            { type: 'plain-terms', text: 'Ollama es una herramienta gratuita que te permite ejecutar modelos de IA en tu propio ordenador, sin necesitar internet ni una clave de API. Estos son los mejores modelos que puedes descargar con un solo comando, organizados según lo que realmente necesitas.' },
+          ],
           items: [
             '**Mejor general en hardware de consumo**: Qwen3.8-27B (61,7% SWE-bench, cabe en 24 GB con Q4). Equilibrado todoterreno: qwen3:30b.',
             '**Más descargados**: Llama 3.2 3B (tutoriales) y la familia Llama -- soporte más amplio de herramientas.',
@@ -1149,6 +1153,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'O melhor modelo do Ollama em julho de 2026 é o Qwen3.8-27B (61,7% SWE-bench, cabe em 24 GB com Q4); o melhor para programação é o Kimi K2.6 ou o Laguna XS 2.1.' },
+            { type: 'plain-terms', text: 'O Ollama é uma ferramenta gratuita que permite rodar modelos de IA no seu próprio computador — sem precisar de internet ou chave de API. Estes são os melhores modelos disponíveis para download com um único comando, organizados pelo que você realmente precisa.' },
+          ],
           items: [
             '**Melhor geral em hardware de consumo**: Qwen3.8-27B — 61,7% SWE-bench, cabe em 24 GB com Q4.',
             '**Melhor programação frontier**: Kimi K2.6 — MoE, SWE-Bench Pro 58,6%, licença MIT modificada.',
@@ -1244,6 +1252,10 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Das beste Ollama-Modell im Juli 2026 ist Qwen3.8-27B (61,7% SWE-bench, passt in 24 GB bei Q4); am besten für Coding ist Kimi K2.6 oder Laguna XS 2.1.' },
+            { type: 'plain-terms', text: 'Ollama ist ein kostenloses Tool, mit dem Sie KI-Modelle auf Ihrem eigenen Computer ausführen können — ohne Internet oder API-Schlüssel. Dies sind die besten Modelle, die Sie mit einem einzigen Befehl herunterladen können, geordnet danach, wofür Sie sie tatsächlich brauchen.' },
+          ],
           items: [
             '**Bestes Modell fuer Consumer-Hardware**: Qwen3.8-27B (61,7% SWE-bench, passt in 24 GB bei Q4). Ausgewogen: qwen3:30b.',
             '**Am meisten heruntergeladen**: Llama 3.2 3B (Tutorials) und die Llama-Familie.',
@@ -1681,6 +1693,10 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: "Le meilleur modèle Ollama en juillet 2026 est Qwen3.8-27B (61,7% SWE-bench, tient en 24 Go en Q4) ; le meilleur pour le codage est Kimi K2.6 ou Laguna XS 2.1." },
+            { type: 'plain-terms', text: "Ollama est un outil gratuit qui permet d'exécuter des modèles d'IA sur votre propre ordinateur, sans internet ni clé API. Voici les meilleurs modèles téléchargeables en une seule commande, classés selon vos besoins réels." },
+          ],
           items: [
             '**Meilleur global sur materiel grand public** : Qwen3.8-27B (61,7% SWE-bench, tient en 24 Go en Q4). Polyvalent : qwen3:30b.',
             '**Plus téléchargés** : Llama 3.2 3B (tutoriels) et la famille Llama.',
@@ -2108,6 +2124,10 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: '2026年7月時点で最良のOllamaモデルはQwen3.8-27B（61.7% SWE-bench、Q4で24GBに収まる）で、コーディングにはKimi K2.6またはLaguna XS 2.1が最適です。' },
+            { type: 'plain-terms', text: 'Ollamaは、インターネットやAPIキーなしで自分のコンピューター上でAIモデルを実行できる無料のツールです。ここでは、用途別に整理された、1つのコマンドでダウンロードできる主要モデルを紹介します。' },
+          ],
           items: [
             '**コンシューマー向け総合最高**：Qwen3.8-27B（61.7% SWE-bench、Q4で24GBに収まる）。バランス型：qwen3:30b。',
             '**最多ダウンロード**：Llama 3.2 3B（チュートリアル向け）とLlamaファミリー。',
@@ -2545,6 +2565,10 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: '2026年7月最佳的Ollama模型是Qwen3.8-27B（61.7% SWE-bench，Q4下可装入24GB）；编程方面最佳选择是Kimi K2.6或Laguna XS 2.1。' },
+            { type: 'plain-terms', text: 'Ollama是一款免费工具，让您无需联网或API密钥即可在自己的电脑上运行AI模型。以下是您可以用一条命令下载的顶级模型，按实际用途分类整理。' },
+          ],
           items: [
             '**消费级硬件综合最佳**：Qwen3.8-27B（61.7% SWE-bench、Q4下可装入24GB）。均衡全能：qwen3:30b。',
             '**最多下载**：Llama 3.2 3B（教程向）和Llama系列。',
@@ -2979,6 +3003,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: '2026년 7월 기준 최고의 Ollama 모델은 Qwen3.8-27B(61.7% SWE-bench, Q4에서 24GB에 적합)이며, 코딩에는 Kimi K2.6 또는 Laguna XS 2.1이 최적입니다.' },
+            { type: 'plain-terms', text: 'Ollama는 인터넷 연결이나 API 키 없이 자신의 컴퓨터에서 AI 모델을 실행할 수 있게 해주는 무료 도구입니다. 여기서는 실제로 필요한 용도별로 정리된, 명령어 하나로 다운로드할 수 있는 최고의 모델들을 소개합니다.' },
+          ],
           items: [
             '**소비자 하드웨어 전반 최고**: Qwen3.8-27B(61.7% SWE-bench, Q4에서 24GB에 적합). 균형잡힌 범용: qwen3:30b.',
             '**다운로드 최다**: Llama 3.2 3B(튜토리얼용)와 Llama 계열 -- 가장 넓은 도구 지원.',
@@ -3334,6 +3362,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'أفضل نموذج على Ollama في يوليو 2026 هو Qwen3.8-27B (61.7% SWE-bench، يلائم 24 GB عند Q4)؛ وأفضل خيار للبرمجة هو Kimi K2.6 أو Laguna XS 2.1.' },
+            { type: 'plain-terms', text: 'Ollama أداة مجانية تتيح لك تشغيل نماذج الذكاء الاصطناعي على حاسوبك الخاص -- دون الحاجة إلى إنترنت أو مفتاح API. هذه أفضل النماذج التي يمكنك تنزيلها بأمر واحد، منظّمة حسب ما تحتاجه فعليًا.' },
+          ],
           items: [
             '**أفضل خيار عام على عتاد المستهلك**: Qwen3.8-27B (61.7% SWE-bench، يلائم 24 GB عند Q4). متوازن لكل الاستخدامات: qwen3:30b.',
             '**الأكثر تنزيلاً**: Llama 3.2 3B (للدروس) وعائلة Llama -- أوسع دعم للأدوات.',
