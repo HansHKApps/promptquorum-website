@@ -12,12 +12,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       theme: 'Tools & Interfaces',
       title: 'Jan AI vs LM Studio: Which Is Better for Local LLMs?',
       heroImage: '/images/lm-studio-vs-jan-ai-overview-hero-en.webp',
-      dateModified: '2026-06-20',
       seoTitle: 'Jan AI vs LM Studio 2026: Features, Speed, UI Comparison',
-      intro: '**LM Studio (v0.4.16) and Jan AI (v0.8.2) are both desktop apps for running local LLMs without CLI overhead.** As of June 2026, LM Studio excels at simplicity and model management; Jan AI is open-source and emphasizes privacy/extensibility. For casual users, LM Studio. For developers wanting control, Jan AI. Neither is dramatically faster than Ollama + OpenWebUI.',
-      metaDescription: 'Jan AI vs LM Studio June 2026: Feature comparison, privacy, UI, API support. LM Studio 0.4.16 vs Jan AI 0.8.2. Which local LLM desktop app is better?',
+      intro: '**LM Studio (v0.4.16) and Jan AI (v0.8.2) are both desktop apps for running local LLMs without CLI overhead.** LM Studio excels at simplicity and model management; Jan AI is open-source and emphasizes privacy/extensibility. For casual users, LM Studio. For developers wanting control, Jan AI. Neither is dramatically faster than Ollama + OpenWebUI.',
+      metaDescription: 'Jan AI vs LM Studio: Feature comparison, privacy, UI, API support. LM Studio 0.4.16 vs Jan AI 0.8.2. Which local LLM desktop app is better?',
       publishDate: '2026-04-05',
-      leadAnswerBlock: '**LM Studio (v0.4.16) and Jan AI (v0.8.2) are both desktop apps for running local LLMs without CLI overhead. As of June 2026, LM Studio excels at simplicity and model management; Jan AI is open-source and emphasizes privacy/extensibility.**',
+      dateModified: '2026-08-28',
+      leadAnswerBlock: '**LM Studio (v0.4.16) and Jan AI (v0.8.2) are both desktop apps for running local LLMs without CLI overhead. LM Studio excels at simplicity and model management; Jan AI is open-source and emphasizes privacy/extensibility.**',
       audience: 'Beginners running their first local LLM on consumer hardware',
       readTime: '7 min',
       educationalLevel: 'Beginner',
@@ -100,6 +100,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'LM Studio (v0.4.16) is the simpler, more stable desktop app for beginners with built-in model discovery, while Jan AI (v0.8.2) is the fully open-source, plugin-friendly option for developers who want finer API control -- neither is faster than a plain Ollama + OpenWebUI setup.' },
+            { type: 'plain-terms', text: 'Both are free desktop apps for running AI models on your own computer without touching a command line. LM Studio has a more polished, beginner-friendly interface and has been stable for years. Jan AI is fully open-source with no telemetry and lets developers customize things more, like running multiple model servers on different ports. Pick LM Studio if you just want it to work; pick Jan AI if you want to tinker.' },
+          ],
           items: [
             'LM Studio: Simpler, more stable, 3-year track record. Best for beginners.',
             'Jan AI: Newer, plugin system, better for developers. More frequent updates.',
@@ -305,7 +309,7 @@ schema: {
       intro: '**LM Studio und Jan AI sind beide Desktop-Anwendungen zum Ausführen lokaler LLMs ohne CLI-Overhead.** Im April 2026 zeichnet sich LM Studio durch Einfachheit und Modellverwaltung aus; Jan AI ist neuer und legt Wert auf Datenschutz und Erweiterbarkeit. Für gelegentliche Benutzer: LM Studio. Für Entwickler, die Kontrolle mögen: Jan AI. Keine davon ist drastisch schneller als Ollama + OpenWebUI.',
       metaDescription: 'Jan AI: Open-Source, datenschutzorientiert, Plugins. LM Studio: einfaches Setup, HuggingFace-Suche, stabil. Welches passt für Sie? April 2026.',
       publishDate: '2026-04-05',
-      dateModified: '2026-04-08',
+      dateModified: '2026-08-28',
       readTime: '7 Min. Lesezeit',
       educationalLevel: 'Beginner',
       primaryTerm: 'LLM-Desktop-Anwendung',
@@ -341,6 +345,10 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'LM Studio (v0.4.16) ist die einfachere, stabilere Desktop-App für Einsteiger mit integrierter Modellsuche, während Jan AI (v0.8.2) die vollständig quelloffene, plugin-freundliche Option für Entwickler ist, die feinere API-Kontrolle wollen -- keines von beiden ist schneller als eine einfache Ollama + OpenWebUI-Kombination.' },
+            { type: 'plain-terms', text: 'Beide sind kostenlose Desktop-Apps, um KI-Modelle auf dem eigenen Computer auszuführen, ohne die Kommandozeile anzufassen. LM Studio hat eine polierte, einsteigerfreundliche Oberfläche und ist seit Jahren stabil. Jan AI ist vollständig quelloffen, ohne Telemetrie, und lässt Entwicklern mehr Anpassungsmöglichkeiten, etwa mehrere Modell-Server auf verschiedenen Ports. Wählen Sie LM Studio, wenn es einfach funktionieren soll; wählen Sie Jan AI, wenn Sie gerne experimentieren.' },
+          ],
           items: [
             'LM Studio: Einfacher, stabiler, 3 Jahre Erfolgsbilanz. Ideal für Anfänger.',
             'Jan AI: Neuere Lösung, Plug-in-System, besser für Entwickler. Häufigere Updates.',
@@ -570,7 +578,7 @@ schema: {
       intro: '**LM Studio et Jan AI sont des applications de bureau pour exécuter des LLM locaux.** En avril 2026, LM Studio excelle en simplicité et gestion de modèles ; Jan AI, plus récent, privilégie la confidentialité et l\'extensibilité. Pour l\'usage occasionnel : LM Studio. Pour les développeurs : Jan AI. Aucune n\'est drastiquement plus rapide qu\'Ollama + OpenWebUI.',
       metaDescription: 'Jan AI : open-source, confidentialité, plugins. LM Studio : installation rapide, HuggingFace intégrée, fiable. Lequel choisir ? Comparaison 2026.',
       publishDate: '2026-04-05',
-      dateModified: '2026-04-08',
+      dateModified: '2026-08-28',
       readTime: '7 min de lecture',
       educationalLevel: 'Beginner',
       primaryTerm: 'Application LLM bureau',
@@ -606,6 +614,10 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: "LM Studio (v0.4.16) est l'application de bureau la plus simple et stable pour les débutants, avec découverte de modèles intégrée, tandis que Jan AI (v0.8.2) est l'option entièrement open source et compatible avec les plugins pour les développeurs souhaitant un contrôle API plus fin -- aucune des deux n'est plus rapide qu'une simple combinaison Ollama + OpenWebUI." },
+            { type: 'plain-terms', text: "Les deux sont des applications de bureau gratuites pour exécuter des modèles d'IA sur votre propre ordinateur sans toucher à la ligne de commande. LM Studio propose une interface plus soignée et adaptée aux débutants, stable depuis des années. Jan AI est entièrement open source, sans télémétrie, et laisse plus de possibilités de personnalisation aux développeurs, comme l'exécution de plusieurs serveurs de modèles sur différents ports. Choisissez LM Studio si vous voulez que ça fonctionne simplement ; choisissez Jan AI si vous aimez bricoler." },
+          ],
           items: [
             'LM Studio : simple, stable, 3 ans de suivi. Idéal pour débutants.',
             'Jan AI : plus récent, système de plugins, meilleur pour développeurs. Mises à jour fréquentes.',
@@ -831,7 +843,7 @@ schema: {
       intro: '**LM StudioとJan AIはどちらもローカルLLMを実行するためのデスクトップアプリです。** 2026年4月時点で、LM Studioはシンプルさとモデル管理に優れています。Jan AIはより新しく、プライバシーと拡張性を重視しています。カジュアルユーザーならLM Studio、開発者ならJan AIがおすすめです。どちらもOllamaやOpenWebUIの組み合わせよりも劇的に高速ではありません。',
       metaDescription: 'Jan AIはオープンソース、プライバシー重視、プラグイン対応。LM Studioは初心者向けで高速セットアップ。比較ガイド2026。',
       publishDate: '2026-04-05',
-      dateModified: '2026-04-08',
+      dateModified: '2026-08-28',
       readTime: '7分で読める',
       educationalLevel: 'Beginner',
       primaryTerm: 'LLMデスクトップアプリ',
@@ -868,6 +880,10 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'LM Studio（v0.4.16）は、モデル検索機能が組み込まれた、初心者向けのよりシンプルで安定したデスクトップアプリです。一方Jan AI（v0.8.2）は、より細かいAPI制御を求める開発者向けの、完全オープンソースでプラグイン対応のオプションです -- どちらも単純なOllama + OpenWebUI構成より速いわけではありません。' },
+            { type: 'plain-terms', text: 'どちらも、コマンドラインを使わずに自分のコンピューター上でAIモデルを実行できる無料のデスクトップアプリです。LM Studioは洗練された初心者向けのインターフェースを持ち、何年も安定して動作しています。Jan AIは完全にオープンソースでテレメトリーがなく、複数のモデルサーバーを異なるポートで実行するなど、開発者がより多くカスタマイズできます。とにかく動けばいいならLM Studio、いじり倒したいならJan AIを選んでください。' },
+          ],
           items: [
             'LM Studio：シンプル、安定、3年の信頼実績。初心者向け。',
             'Jan AI：新しい、プラグインシステム、開発者向け。更新が頻繁。',
@@ -1116,7 +1132,7 @@ schema: {
         },
       },
       publishDate: '2026-04-05',
-      dateModified: '2026-04-08',
+      dateModified: '2026-08-28',
       readTime: '阅读约7分钟',
       educationalLevel: 'Beginner',
       primaryTerm: '本地LLM桌面应用',
@@ -1139,6 +1155,10 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'LM Studio（v0.4.16）是更简单、更稳定的桌面应用，内置模型发现功能，适合初学者；而Jan AI（v0.8.2）是完全开源、支持插件的选项，适合需要更精细API控制的开发者——两者都不比简单的Ollama + OpenWebUI组合更快。' },
+            { type: 'plain-terms', text: '两者都是免费的桌面应用，可在您自己的电脑上运行AI模型，无需接触命令行。LM Studio拥有更精致、更适合新手的界面，多年来一直稳定运行。Jan AI完全开源、无遥测，让开发者拥有更多自定义空间，例如在不同端口上运行多个模型服务器。如果只想让它正常运作，选LM Studio；如果喜欢折腾，选Jan AI。' },
+          ],
           items: [
             'LM Studio：简洁、稳定、3年历史。最适合初学者。',
             'Jan AI：更新、插件系统、更好支持开发者。更新频繁。',
@@ -1374,7 +1394,7 @@ schema: {
       intro: '**LM Studio y Jan AI son ambas aplicaciones de escritorio para ejecutar LLMs locales sin el overhead de la CLI.** A partir de abril de 2026, LM Studio destaca en simplicidad y gestión de modelos; Jan AI es más reciente y prioriza privacidad y extensibilidad. Para usuarios ocasionales, LM Studio. Para desarrolladores que quieren control, Jan AI. Ninguna es dramáticamente más rápida que Ollama + OpenWebUI.',
       metaDescription: 'Jan AI vs LM Studio: compara funciones, privacidad, interfaz y soporte API. ¿Qué app LLM de escritorio es mejor? Jan es open-source con extensiones.',
       publishDate: '2026-04-05',
-      dateModified: '2026-04-08',
+      dateModified: '2026-08-28',
       readTime: '7 min de lectura',
       educationalLevel: 'Beginner',
       primaryTerm: 'Aplicación LLM de escritorio',
@@ -1409,6 +1429,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'LM Studio (v0.4.16) es la aplicación de escritorio más sencilla y estable para principiantes, con descubrimiento de modelos integrado, mientras que Jan AI (v0.8.2) es la opción totalmente de código abierto y compatible con plugins para desarrolladores que quieren un control más fino de la API -- ninguna de las dos es más rápida que una configuración simple de Ollama + OpenWebUI.' },
+            { type: 'plain-terms', text: 'Ambas son aplicaciones de escritorio gratuitas para ejecutar modelos de IA en tu propio ordenador sin tocar la línea de comandos. LM Studio tiene una interfaz más pulida y amigable para principiantes, y lleva años siendo estable. Jan AI es totalmente de código abierto, sin telemetría, y permite a los desarrolladores personalizar más cosas, como ejecutar varios servidores de modelos en distintos puertos. Elige LM Studio si solo quieres que funcione; elige Jan AI si te gusta trastear.' },
+          ],
           items: [
             'LM Studio: más simple, más estable, 3 años de historial. Mejor para principiantes.',
             'Jan AI: más reciente, sistema de plugins, mejor para desarrolladores. Actualizaciones más frecuentes.',
@@ -1632,7 +1656,7 @@ schema: {
       intro: '**كل من LM Studio وJan AI تطبيقا سطح مكتب لتشغيل نماذج LLM المحلية دون عبء سطر الأوامر.** اعتبارًا من أبريل 2026، يتميز LM Studio بالبساطة وإدارة النماذج؛ أما Jan AI فهو أحدث ويُعطي الأولوية للخصوصية وقابلية التوسعة. للمستخدمين العاديين، LM Studio. للمطورين الذين يريدون التحكم، Jan AI. ولا أحدهما أسرع بشكل ملحوظ من Ollama + OpenWebUI.',
       metaDescription: '⁨LM Studio⁩ أفضل للمبتدئين: واجهة أبسط وبحث ⁨HuggingFace⁩ مدمج. ⁨Jan AI⁩ للمطورين: مفتوح المصدر وبلا قياس عن بُعد. كلاهما يستخدم ⁨llama.cpp⁩.',
       publishDate: '2026-04-05',
-      dateModified: '2026-04-08',
+      dateModified: '2026-08-28',
       readTime: '7 دقائق للقراءة',
       educationalLevel: 'Beginner',
       primaryTerm: 'تطبيق LLM لسطح المكتب',
@@ -1665,6 +1689,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'يُعد LM Studio (الإصدار 0.4.16) تطبيق سطح المكتب الأبسط والأكثر استقرارًا للمبتدئين، مع اكتشاف نماذج مدمج، بينما يُعد Jan AI (الإصدار 0.8.2) الخيار مفتوح المصدر بالكامل والمتوافق مع الإضافات للمطورين الراغبين في تحكم أدق بواجهة API -- لا يتفوق أي منهما في السرعة على إعداد بسيط لـOllama + OpenWebUI.' },
+            { type: 'plain-terms', text: 'كلاهما تطبيقا سطح مكتب مجانيان لتشغيل نماذج الذكاء الاصطناعي على حاسوبك الخاص دون لمس سطر الأوامر. يتميز LM Studio بواجهة أكثر أناقة وسهولة للمبتدئين، وقد ظل مستقرًا لسنوات. أما Jan AI فهو مفتوح المصدر بالكامل، دون أي تتبع للاستخدام، ويتيح للمطورين تخصيصًا أكبر، مثل تشغيل عدة خوادم نماذج على منافذ مختلفة. اختر LM Studio إذا أردته أن يعمل ببساطة؛ واختر Jan AI إذا كنت تحب التجريب.' },
+          ],
           items: [
             'LM Studio: أبسط، أكثر استقرارًا، سجل من 3 سنوات. أفضل للمبتدئين.',
             'Jan AI: أحدث، نظام إضافات، أفضل للمطورين. تحديثات أكثر تكرارًا.',
@@ -1932,6 +1960,10 @@ schema: {
         tldr: {
           id: 'tldr',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'O LM Studio (v0.4.16) é o aplicativo de desktop mais simples e estável para iniciantes, com descoberta de modelos integrada, enquanto o Jan AI (v0.8.2) é a opção totalmente open-source e compatível com plugins para desenvolvedores que querem um controle mais refinado de API -- nenhum dos dois é mais rápido que uma configuração simples de Ollama + OpenWebUI.' },
+            { type: 'plain-terms', text: 'Ambos são aplicativos de desktop gratuitos para rodar modelos de IA no seu próprio computador sem tocar na linha de comando. O LM Studio tem uma interface mais polida e amigável para iniciantes, e é estável há anos. O Jan AI é totalmente open-source, sem telemetria, e permite que desenvolvedores personalizem mais, como rodar vários servidores de modelo em portas diferentes. Escolha o LM Studio se você só quer que funcione; escolha o Jan AI se gosta de mexer nas coisas.' },
+          ],
           items: [
             'LM Studio é melhor para iniciantes — interface mais simples, estável, busca integrada de modelos HuggingFace.',
             'Jan AI é melhor para desenvolvedores — open-source, sem telemetria, sistema de plugins, melhor controle de endpoints API.',
@@ -1993,6 +2025,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'LM Studio(v0.4.16)는 모델 검색 기능이 내장된 초보자용의 더 간단하고 안정적인 데스크톱 앱이며, Jan AI(v0.8.2)는 더 세밀한 API 제어를 원하는 개발자를 위한 완전 오픈소스, 플러그인 친화적인 옵션입니다 -- 둘 다 단순한 Ollama + OpenWebUI 구성보다 빠르지는 않습니다.' },
+            { type: 'plain-terms', text: '둘 다 명령줄을 다룰 필요 없이 자신의 컴퓨터에서 AI 모델을 실행할 수 있는 무료 데스크톱 앱입니다. LM Studio는 더 세련되고 초보자 친화적인 인터페이스를 가지고 있으며 수년간 안정적으로 작동해왔습니다. Jan AI는 완전 오픈소스이며 텔레메트리가 없고, 서로 다른 포트에서 여러 모델 서버를 실행하는 등 개발자가 더 많이 커스터마이징할 수 있게 해줍니다. 그냥 작동하기만 하면 된다면 LM Studio를, 이것저것 만져보고 싶다면 Jan AI를 선택하십시오.' },
+          ],
           items: [
             'LM Studio: 더 단순하고, 더 안정적이며, 3년의 실적이 있습니다. 초보자에게 최적입니다.',
             'Jan AI: 더 최신이고, 플러그인 시스템이 있으며, 개발자에게 더 적합합니다. 더 빈번한 업데이트.',
