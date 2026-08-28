@@ -12,7 +12,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       theme: 'Tools & Interfaces',
       title: 'Local LLMs With VS Code and Cursor: Setup and Best Practices',
       heroImage: '/images/local-llms-with-vscode-cursor-overview-hero-en.webp',
-      dateModified: '2026-07-13',
+      dateModified: '2026-08-28',
       seoTitle: 'Local LLMs in VS Code and Cursor: 2026 Setup Guide',
       intro: 'VS Code and Cursor (an AI-first code editor) can both use local LLMs for code completions and suggestions, via Continue.dev extension (VS Code) or direct integration (Cursor). As of April 2026, local code completions are practical for 7B-13B models and require 8-16 GB RAM. This guide covers setup, best models, and performance tuning.',
       metaDescription: 'Use Ollama with VS Code via Continue.dev for local code completions -- no API key needed. Best models, VRAM requirements, and Cursor integration for 2026.',
@@ -42,7 +42,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           items: [
             'VS Code uses Continue.dev extension to connect to local models (Ollama, LM Studio, vLLM).',
             'Cursor is a VS Code fork with built-in local model support. No extension needed.',
-            '**Best local models for code**: Qwen3-Coder 7B, Llama Code 13B, or Mistral Small.',
+            '**Best local models for code**: Qwen3-Coder 7B, Code Llama 13B, or Mistral Small.',
             'Expect 2-5 second completion latency on consumer GPUs with 7B models.',
             'As of April 2026, local code completions are practical for personal use, not yet production-grade for teams.',
           ],
@@ -66,12 +66,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         bestModels: {
           title: 'Which Models Are Best for Code?',
           image: '/images/local-llms-with-vscode-cursor-best-coding-models-table-en.svg',
-          imageCaption: 'Comparison table of five local coding models -- Qwen3-Coder 7B, Llama Code 7B/13B, Mistral Small, and DeepSeek-Coder 6.7B -- showing HumanEval scores, VRAM requirements, and speed for use in VS Code and Cursor.',
+          imageCaption: 'Comparison table of five local coding models -- Qwen3-Coder 7B, Code Llama 7B/13B, Mistral Small, and DeepSeek-Coder 6.7B -- showing HumanEval scores, VRAM requirements, and speed for use in VS Code and Cursor.',
           rows: [
             { 'Model': 'Qwen3-Coder 7B', 'HumanEval': '72%', 'VRAM': '4.7 GB', 'Speed': 'Fast', 'Best For': 'Best balance, fastest' },
-            { 'Model': 'Llama Code 7B', 'HumanEval': '69%', 'VRAM': '4.7 GB', 'Speed': 'Fast', 'Best For': 'General coding' },
+            { 'Model': 'Code Llama 7B', 'HumanEval': '69%', 'VRAM': '4.7 GB', 'Speed': 'Fast', 'Best For': 'General coding' },
             { 'Model': 'Mistral Small', 'HumanEval': '61%', 'VRAM': '4.5 GB', 'Speed': 'Very fast', 'Best For': 'Lightweight, EU servers' },
-            { 'Model': 'Llama Code 13B', 'HumanEval': '74%', 'VRAM': '8.5 GB', 'Speed': 'Medium', 'Best For': 'Better quality on 16GB machines' },
+            { 'Model': 'Code Llama 13B', 'HumanEval': '74%', 'VRAM': '8.5 GB', 'Speed': 'Medium', 'Best For': 'Better quality on 16GB machines' },
             { 'Model': 'DeepSeek-Coder 6.7B', 'HumanEval': '68%', 'VRAM': '4 GB', 'Speed': 'Fast', 'Best For': 'Lightweight alternative' },
           ],
           columns: ['Model', 'HumanEval', 'VRAM', 'Speed', 'Best For'],
@@ -157,7 +157,7 @@ schema: {
         'description': 'Use Ollama with VS Code via Continue.dev for local code completions -- no API key needed. Best models, VRAM requirements, and Cursor integration for 2026.',
         'url': 'https://www.promptquorum.com/local-llms/local-llms-with-vscode-cursor',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-07-13',
+        'dateModified': '2026-08-28',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -212,7 +212,7 @@ schema: {
             'name': 'What is the minimum VRAM for usable local code completions?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': '8 GB VRAM is the minimum for usable code completions with a 7B model at Q4_K_M quantization (~4.5 GB). With only 8 GB, you have little headroom. 12 GB or more is recommended for comfortable use with Qwen3-Coder 7B or Llama Code 7B.',
+              'text': '8 GB VRAM is the minimum for usable code completions with a 7B model at Q4_K_M quantization (~4.5 GB). With only 8 GB, you have little headroom. 12 GB or more is recommended for comfortable use with Qwen3-Coder 7B or Code Llama 7B.',
             },
           },
           {
@@ -220,7 +220,7 @@ schema: {
             'name': 'Which model is best for code completions with Ollama?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Qwen3-Coder 7B is the best balance of speed and quality, scoring 72% on HumanEval and requiring only 4.7 GB VRAM. For 16 GB+ VRAM, Llama Code 13B (74% HumanEval, 8.5 GB VRAM) improves quality further.',
+              'text': 'Qwen3-Coder 7B is the best balance of speed and quality, scoring 72% on HumanEval and requiring only 4.7 GB VRAM. For 16 GB+ VRAM, Code Llama 13B (74% HumanEval, 8.5 GB VRAM) improves quality further.',
             },
           },
           {
@@ -264,7 +264,7 @@ schema: {
       heroImage: '/images/local-llms-with-vscode-cursor-overview-hero-de.webp',
       seoTitle: 'Lokale LLMs in VS Code & Cursor: Einrichtung 2026',
       intro: 'VS Code und Cursor (ein KI-fokussierter Code-Editor) können beide lokale LLMs für Code-Vervollständigungen und Vorschläge nutzen, über die Continue.dev-Erweiterung (VS Code) oder direkte Integration (Cursor). Stand April 2026 sind lokale Code-Vervollständigungen praktisch für 7B-13B-Modelle und erfordern 8-16 GB RAM. Dieser Leitfaden behandelt Einrichtung, beste Modelle und Performance-Tuning.',
-      metaDescription: 'Lokale LLMs in VS Code mit Continue.dev und Cursor einrichten. Beste Modelle: Qwen-Coder 7B, Llama Code 13B. Performance-Optimierung, Latenz, VRAM-Leitfaden.',
+      metaDescription: 'Lokale LLMs in VS Code mit Continue.dev und Cursor einrichten. Beste Modelle: Qwen-Coder 7B, Code Llama 13B. Performance-Optimierung, Latenz, VRAM-Leitfaden.',
       publishDate: '2026-04-04',
       readTime: '10 Min. Lesezeit',
       educationalLevel: 'Intermediate',
@@ -286,7 +286,7 @@ schema: {
           items: [
             'VS Code nutzt die Continue.dev-Erweiterung, um sich mit lokalen Modellen zu verbinden (Ollama, LM Studio, vLLM).',
             'Cursor ist ein VS Code-Fork mit eingebauter lokaler Modellunterstützung. Keine Erweiterung erforderlich.',
-            '**Beste lokale Modelle für Code**: Qwen3-Coder 7B, Llama Code 13B oder Mistral Small.',
+            '**Beste lokale Modelle für Code**: Qwen3-Coder 7B, Code Llama 13B oder Mistral Small.',
             'Erwarten Sie 2-5 Sekunden Vervollständigungslatenz auf Consumer-GPUs mit 7B-Modellen.',
             'Stand April 2026 sind lokale Code-Completions für Einzelnutzer praktisch, noch nicht produktionsreif für Teams.',
           ],
@@ -310,15 +310,15 @@ schema: {
         bestModels: {
           title: 'Welche Modelle eignen sich am besten für Code?',
           image: '/images/local-llms-with-vscode-cursor-best-coding-models-table-de.svg',
-          imageCaption: 'Vergleichstabelle von fünf lokalen Coding-Modellen -- Qwen3-Coder 7B, Llama Code 7B/13B, Mistral Small und DeepSeek-Coder 6,7B -- mit HumanEval-Werten, VRAM-Bedarf und Geschwindigkeit für VS Code und Cursor.',
+          imageCaption: 'Vergleichstabelle von fünf lokalen Coding-Modellen -- Qwen3-Coder 7B, Code Llama 7B/13B, Mistral Small und DeepSeek-Coder 6,7B -- mit HumanEval-Werten, VRAM-Bedarf und Geschwindigkeit für VS Code und Cursor.',
           content: [
             '⚠️ **VRAM-Regel**: Haben Sie immer 2-3 GB mehr freien VRAM als das Modell benötigt. Ein 7B-Modell bei Q4 (4,7 GB) benötigt insgesamt 8 GB VRAM bei Ausführung in VS Code oder Cursor.',
           ],
           rows: [
             { 'Modell': 'Qwen3-Coder 7B', 'HumanEval': '72%', 'VRAM': '4,7 GB', 'Geschwindigkeit': 'Schnell', 'Beste für': 'Beste Balance, schnellste' },
-            { 'Modell': 'Llama Code 7B', 'HumanEval': '69%', 'VRAM': '4,7 GB', 'Geschwindigkeit': 'Schnell', 'Beste für': 'Allgemeine Programmierung' },
+            { 'Modell': 'Code Llama 7B', 'HumanEval': '69%', 'VRAM': '4,7 GB', 'Geschwindigkeit': 'Schnell', 'Beste für': 'Allgemeine Programmierung' },
             { 'Modell': 'Mistral Small', 'HumanEval': '61%', 'VRAM': '4,5 GB', 'Geschwindigkeit': 'Sehr schnell', 'Beste für': 'Leichtgewicht, EU-Server' },
-            { 'Modell': 'Llama Code 13B', 'HumanEval': '74%', 'VRAM': '8,5 GB', 'Geschwindigkeit': 'Mittel', 'Beste für': 'Bessere Qualität bei 16GB-Maschinen' },
+            { 'Modell': 'Code Llama 13B', 'HumanEval': '74%', 'VRAM': '8,5 GB', 'Geschwindigkeit': 'Mittel', 'Beste für': 'Bessere Qualität bei 16GB-Maschinen' },
             { 'Modell': 'DeepSeek-Coder 6,7B', 'HumanEval': '68%', 'VRAM': '4 GB', 'Geschwindigkeit': 'Schnell', 'Beste für': 'Leichtgewicht-Alternative' },
           ],
           columns: ['Modell', 'HumanEval', 'VRAM', 'Geschwindigkeit', 'Beste für'],
@@ -421,7 +421,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'headline': 'Lokale LLMs mit VS Code und Cursor: Einrichtung und Best Practices',
-        'description': 'Lokale LLMs in VS Code mit Continue.dev und Cursor einrichten. Beste Modelle: Qwen-Coder 7B, Llama Code 13B. Performance-Optimierung, Latenz, VRAM-Leitfaden.',
+        'description': 'Lokale LLMs in VS Code mit Continue.dev und Cursor einrichten. Beste Modelle: Qwen-Coder 7B, Code Llama 13B. Performance-Optimierung, Latenz, VRAM-Leitfaden.',
         'url': 'https://www.promptquorum.com/de/local-llms/local-llms-with-vscode-cursor',
         'datePublished': '2026-04-04',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
@@ -460,7 +460,7 @@ schema: {
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'VS Code nutzt die Continue.dev-Erweiterung, um sich mit lokalen Modellen zu verbinden (Ollama, LM Studio, vLLM).' },
           { '@type': 'ListItem', position: 2, name: 'Cursor ist ein VS Code-Fork mit eingebauter lokaler Modellunterstützung. Keine Erweiterung erforderlich.' },
-          { '@type': 'ListItem', position: 3, name: '**Beste lokale Modelle für Code**: Qwen3-Coder 7B, Llama Code 13B oder Mistral Small.' },
+          { '@type': 'ListItem', position: 3, name: '**Beste lokale Modelle für Code**: Qwen3-Coder 7B, Code Llama 13B oder Mistral Small.' },
           { '@type': 'ListItem', position: 4, name: 'Erwarten Sie 2-5 Sekunden Vervollständigungslatenz auf Consumer-GPUs mit 7B-Modellen.' },
           { '@type': 'ListItem', position: 5, name: 'Stand April 2026 sind lokale Code-Completions für Einzelnutzer praktisch, noch nicht produktionsreif für Teams.' },
         ],
@@ -472,7 +472,7 @@ schema: {
       heroImage: '/images/local-llms-with-vscode-cursor-overview-hero-fr.webp',
       seoTitle: 'LLM Locaux dans VS Code & Cursor : Configuration 2026',
       intro: 'VS Code et Cursor (un éditeur de code axé sur l\'IA) peuvent tous deux utiliser des LLM locaux pour les complétions et suggestions de code, via l\'extension Continue.dev (VS Code) ou l\'intégration directe (Cursor). Depuis avril 2026, les complétions de code locales sont pratiques pour les modèles 7B-13B et nécessitent 8-16 Go de RAM. Ce guide couvre la configuration, les meilleurs modèles et l\'optimisation des performances.',
-      metaDescription: 'Configurez les LLM locaux dans VS Code avec Continue.dev et Cursor. Meilleurs modèles : Qwen-Coder 7B, Llama Code 13B. Performance, latence, RAM.',
+      metaDescription: 'Configurez les LLM locaux dans VS Code avec Continue.dev et Cursor. Meilleurs modèles : Qwen-Coder 7B, Code Llama 13B. Performance, latence, RAM.',
       publishDate: '2026-04-04',
       readTime: '9 min de lecture',
       educationalLevel: 'Intermediate',
@@ -494,7 +494,7 @@ schema: {
           items: [
             'VS Code utilise l\'extension Continue.dev pour se connecter aux modèles locaux (Ollama, LM Studio, vLLM).',
             'Cursor est un fork VS Code avec support de modèle local intégré. Aucune extension requise.',
-            '**Meilleurs modèles locaux pour le code** : Qwen3-Coder 7B, Llama Code 13B ou Mistral Small.',
+            '**Meilleurs modèles locaux pour le code** : Qwen3-Coder 7B, Code Llama 13B ou Mistral Small.',
             'Attendez-vous à 2-5 secondes de latence de complétude sur les GPU grand public avec des modèles 7B.',
             'Depuis avril 2026, les complétions de code locales sont pratiques pour usage personnel, pas encore prêtes pour la production d\'équipe.',
           ],
@@ -518,15 +518,15 @@ schema: {
         bestModels: {
           title: 'Quels modèles conviennent le mieux au code ?',
           image: '/images/local-llms-with-vscode-cursor-best-coding-models-table-fr.svg',
-          imageCaption: 'Tableau comparatif de cinq modèles de codage locaux -- Qwen3-Coder 7B, Llama Code 7B/13B, Mistral Small et DeepSeek-Coder 6,7B -- avec scores HumanEval, besoins en RAM et vitesse pour VS Code et Cursor.',
+          imageCaption: 'Tableau comparatif de cinq modèles de codage locaux -- Qwen3-Coder 7B, Code Llama 7B/13B, Mistral Small et DeepSeek-Coder 6,7B -- avec scores HumanEval, besoins en RAM et vitesse pour VS Code et Cursor.',
           content: [
             '⚠️ **Règle RAM** : Ayez toujours 2-3 Go de RAM libre de plus que ce que le modèle nécessite. Un modèle 7B en Q4 (4,7 Go) nécessite 8 Go de RAM totale lors de l\'exécution dans VS Code ou Cursor.',
           ],
           rows: [
             { 'Modèle': 'Qwen3-Coder 7B', 'HumanEval': '72%', 'RAM': '4,7 Go', 'Vitesse': 'Rapide', 'Meilleur pour': 'Meilleur équilibre, le plus rapide' },
-            { 'Modèle': 'Llama Code 7B', 'HumanEval': '69%', 'RAM': '4,7 Go', 'Vitesse': 'Rapide', 'Meilleur pour': 'Codage général' },
+            { 'Modèle': 'Code Llama 7B', 'HumanEval': '69%', 'RAM': '4,7 Go', 'Vitesse': 'Rapide', 'Meilleur pour': 'Codage général' },
             { 'Modèle': 'Mistral Small', 'HumanEval': '61%', 'RAM': '4,5 Go', 'Vitesse': 'Très rapide', 'Meilleur pour': 'Léger, serveurs UE' },
-            { 'Modèle': 'Llama Code 13B', 'HumanEval': '74%', 'RAM': '8,5 Go', 'Vitesse': 'Moyen', 'Meilleur pour': 'Meilleure qualité sur 16Go' },
+            { 'Modèle': 'Code Llama 13B', 'HumanEval': '74%', 'RAM': '8,5 Go', 'Vitesse': 'Moyen', 'Meilleur pour': 'Meilleure qualité sur 16Go' },
             { 'Modèle': 'DeepSeek-Coder 6,7B', 'HumanEval': '68%', 'RAM': '4 Go', 'Vitesse': 'Rapide', 'Meilleur pour': 'Alternative légère' },
           ],
           columns: ['Modèle', 'HumanEval', 'RAM', 'Vitesse', 'Meilleur pour'],
@@ -613,7 +613,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'headline': 'LLM Locaux avec VS Code et Cursor : Configuration et Bonnes Pratiques',
-        'description': 'Configurez les LLM locaux dans VS Code avec Continue.dev et Cursor. Meilleurs modèles : Qwen-Coder 7B, Llama Code 13B. Performance, latence, RAM.',
+        'description': 'Configurez les LLM locaux dans VS Code avec Continue.dev et Cursor. Meilleurs modèles : Qwen-Coder 7B, Code Llama 13B. Performance, latence, RAM.',
         'url': 'https://www.promptquorum.com/fr/local-llms/local-llms-with-vscode-cursor',
         'datePublished': '2026-04-04',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
@@ -652,7 +652,7 @@ schema: {
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'VS Code utilise l\'extension Continue.dev pour se connecter aux modèles locaux (Ollama, LM Studio, vLLM).' },
           { '@type': 'ListItem', position: 2, name: 'Cursor est un fork VS Code avec support de modèle local intégré. Aucune extension requise.' },
-          { '@type': 'ListItem', position: 3, name: '**Meilleurs modèles locaux pour le code** : Qwen3-Coder 7B, Llama Code 13B ou Mistral Small.' },
+          { '@type': 'ListItem', position: 3, name: '**Meilleurs modèles locaux pour le code** : Qwen3-Coder 7B, Code Llama 13B ou Mistral Small.' },
           { '@type': 'ListItem', position: 4, name: 'Attendez-vous à 2-5 secondes de latence de complétude sur les GPU grand public avec des modèles 7B.' },
           { '@type': 'ListItem', position: 5, name: 'Depuis avril 2026, les complétions de code locales sont pratiques pour usage personnel, pas encore prêtes pour la production d\'équipe.' },
         ],
@@ -686,7 +686,7 @@ schema: {
           items: [
             'VS CodeはContinue.dev拡張機能を使用してローカルモデル（Ollama、LM Studio、vLLM）に接続します。',
             'Cursorはビルトインのローカルモデルサポート付きのVS Codeフォークです。拡張機能は不要です。',
-            '**コードの最高のローカルモデル**：Qwen3-Coder 7B、Llama Code 13B、またはMistral Small。',
+            '**コードの最高のローカルモデル**：Qwen3-Coder 7B、Code Llama 13B、またはMistral Small。',
             '7Bモデルを使用したコンシューマーGPUで2〜5秒の補完レイテンシを予想してください。',
             '2026年4月現在、ローカルコード補完は個人使用に実用的ですが、チーム向けはまだ本番レベルではありません。',
           ],
@@ -710,15 +710,15 @@ schema: {
         bestModels: {
           title: 'コードに最適なモデルはどれですか？',
           image: '/images/local-llms-with-vscode-cursor-best-coding-models-table-ja.svg',
-          imageCaption: 'Qwen3-Coder 7B、Llama Code 7B/13B、Mistral Small、DeepSeek-Coder 6.7Bという5つのローカルコーディングモデルを、HumanEvalスコア、VRAM要件、速度で比較した表（VS CodeとCursor向け）。',
+          imageCaption: 'Qwen3-Coder 7B、Code Llama 7B/13B、Mistral Small、DeepSeek-Coder 6.7Bという5つのローカルコーディングモデルを、HumanEvalスコア、VRAM要件、速度で比較した表（VS CodeとCursor向け）。',
           content: [
             '⚠️ **VRAM規則**：モデルが必要とするVRAMより2〜3 GB多い空きVRAMを常に持つ。Q4のときの7Bモデル（4.7 GB）はVS CodeまたはCursorで実行するときに合計8 GBのVRAMを必要とします。',
           ],
           rows: [
             { 'モデル': 'Qwen3-Coder 7B', 'HumanEval': '72%', 'VRAM': '4.7 GB', '速度': '速い', '最適：': '最高のバランス、最速' },
-            { 'モデル': 'Llama Code 7B', 'HumanEval': '69%', 'VRAM': '4.7 GB', '速度': '速い', '最適：': '一般的なコーディング' },
+            { 'モデル': 'Code Llama 7B', 'HumanEval': '69%', 'VRAM': '4.7 GB', '速度': '速い', '最適：': '一般的なコーディング' },
             { 'モデル': 'Mistral Small', 'HumanEval': '61%', 'VRAM': '4.5 GB', '速度': '非常に速い', '最適：': '軽量、EUサーバー' },
-            { 'モデル': 'Llama Code 13B', 'HumanEval': '74%', 'VRAM': '8.5 GB', '速度': '中程度', '最適：': '16GBマシンで品質向上' },
+            { 'モデル': 'Code Llama 13B', 'HumanEval': '74%', 'VRAM': '8.5 GB', '速度': '中程度', '最適：': '16GBマシンで品質向上' },
             { 'モデル': 'DeepSeek-Coder 6.7B', 'HumanEval': '68%', 'VRAM': '4 GB', '速度': '速い', '最適：': '軽量代替案' },
           ],
           columns: ['モデル', 'HumanEval', 'VRAM', '速度', '最適：'],
@@ -859,7 +859,7 @@ schema: {
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'VS CodeはContinue.dev拡張機能を使用してローカルモデル（Ollama、LM Studio、vLLM）に接続します。' },
           { '@type': 'ListItem', position: 2, name: 'Cursorはビルトインのローカルモデルサポート付きのVS Codeフォークです。拡張機能は不要です。' },
-          { '@type': 'ListItem', position: 3, name: '**コードの最高のローカルモデル**：Qwen3-Coder 7B、Llama Code 13B、またはMistral Small。' },
+          { '@type': 'ListItem', position: 3, name: '**コードの最高のローカルモデル**：Qwen3-Coder 7B、Code Llama 13B、またはMistral Small。' },
           { '@type': 'ListItem', position: 4, name: '7Bモデルを使用したコンシューマーGPUで2〜5秒の補完レイテンシを予想。' },
           { '@type': 'ListItem', position: 5, name: '2026年4月現在、ローカルコード補完は個人使用に実用的ですが、チーム向けはまだ本番レベルではありません。' },
         ],
@@ -893,7 +893,7 @@ schema: {
           items: [
             'VS Code使用Continue.dev扩展连接到本地模型（Ollama、LM Studio、vLLM）。',
             'Cursor是一个VS Code分支，具有内置的本地模型支持。无需扩展。',
-            '**最佳代码本地模型**：Qwen3-Coder 7B、Llama Code 13B或Mistral Small。',
+            '**最佳代码本地模型**：Qwen3-Coder 7B、Code Llama 13B或Mistral Small。',
             '使用7B模型在消费者GPU上预期2-5秒补全延迟。',
             '截至2026年4月，本地代码补全对个人使用很实用，但对团队还不是生产级。',
           ],
@@ -917,15 +917,15 @@ schema: {
         bestModels: {
           title: '哪些模型最适合代码？',
           image: '/images/local-llms-with-vscode-cursor-best-coding-models-table-zh.svg',
-          imageCaption: '五个本地编码模型的对比表——Qwen3-Coder 7B、Llama Code 7B/13B、Mistral Small和DeepSeek-Coder 6.7B——展示了在VS Code和Cursor中使用的HumanEval分数、显存需求和速度。',
+          imageCaption: '五个本地编码模型的对比表——Qwen3-Coder 7B、Code Llama 7B/13B、Mistral Small和DeepSeek-Coder 6.7B——展示了在VS Code和Cursor中使用的HumanEval分数、显存需求和速度。',
           content: [
             '⚠️ **显存规则**：始终拥有比模型需求多2-3 GB的空闲显存。Q4时的7B模型（4.7 GB）在VS Code或Cursor中运行时需要总计8 GB显存。',
           ],
           rows: [
             { '模型': 'Qwen3-Coder 7B', 'HumanEval': '72%', '显存': '4.7 GB', '速度': '快速', '最佳用途': '最佳平衡、最快' },
-            { '模型': 'Llama Code 7B', 'HumanEval': '69%', '显存': '4.7 GB', '速度': '快速', '最佳用途': '通用编码' },
+            { '模型': 'Code Llama 7B', 'HumanEval': '69%', '显存': '4.7 GB', '速度': '快速', '最佳用途': '通用编码' },
             { '模型': 'Mistral Small', 'HumanEval': '61%', '显存': '4.5 GB', '速度': '非常快', '最佳用途': '轻量、EU服务器' },
-            { '模型': 'Llama Code 13B', 'HumanEval': '74%', '显存': '8.5 GB', '速度': '中等', '最佳用途': '16GB机器质量更好' },
+            { '模型': 'Code Llama 13B', 'HumanEval': '74%', '显存': '8.5 GB', '速度': '中等', '最佳用途': '16GB机器质量更好' },
             { '模型': 'DeepSeek-Coder 6.7B', 'HumanEval': '68%', '显存': '4 GB', '速度': '快速', '最佳用途': '轻量替代品' },
           ],
           columns: ['模型', 'HumanEval', '显存', '速度', '最佳用途'],
@@ -1051,7 +1051,7 @@ schema: {
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'VS Code使用Continue.dev扩展连接到本地模型（Ollama、LM Studio、vLLM）。' },
           { '@type': 'ListItem', position: 2, name: 'Cursor是一个VS Code分支，具有内置的本地模型支持。无需扩展。' },
-          { '@type': 'ListItem', position: 3, name: '**最佳代码本地模型**：Qwen3-Coder 7B、Llama Code 13B或Mistral Small。' },
+          { '@type': 'ListItem', position: 3, name: '**最佳代码本地模型**：Qwen3-Coder 7B、Code Llama 13B或Mistral Small。' },
           { '@type': 'ListItem', position: 4, name: '在消费者GPU上使用7B模型时，预期2-5秒补全延迟。' },
           { '@type': 'ListItem', position: 5, name: '截至2026年4月，本地代码补全对个人使用很实用，但对团队还不是生产级。' },
         ],
@@ -1087,7 +1087,7 @@ schema: {
           items: [
             'VS Code usa la extensión Continue.dev para conectarse a modelos locales (Ollama, LM Studio, vLLM).',
             'Cursor es un fork de VS Code con soporte nativo para modelos locales. No necesitas ninguna extensión.',
-            '**Mejores modelos locales para código**: Qwen3-Coder 7B, Llama Code 13B o Mistral Small.',
+            '**Mejores modelos locales para código**: Qwen3-Coder 7B, Code Llama 13B o Mistral Small.',
             'Espera una latencia de completación de 2-5 segundos en GPUs de consumo con modelos 7B.',
             'A partir de abril de 2026, las completaciones de código locales son prácticas para uso personal, pero aún no están listas para producción en equipos.',
           ],
@@ -1111,15 +1111,15 @@ schema: {
         bestModels: {
           title: '¿Qué modelos son los mejores para código?',
           image: '/images/local-llms-with-vscode-cursor-best-coding-models-table-es.svg',
-          imageCaption: 'Tabla comparativa de cinco modelos de código locales -- Qwen3-Coder 7B, Llama Code 7B/13B, Mistral Small y DeepSeek-Coder 6.7B -- con puntuaciones HumanEval, requisitos de VRAM y velocidad para VS Code y Cursor.',
+          imageCaption: 'Tabla comparativa de cinco modelos de código locales -- Qwen3-Coder 7B, Code Llama 7B/13B, Mistral Small y DeepSeek-Coder 6.7B -- con puntuaciones HumanEval, requisitos de VRAM y velocidad para VS Code y Cursor.',
           content: [
             '⚠️ **Regla de VRAM**: Ten siempre 2-3 GB de VRAM libre por encima de lo que requiere el modelo. Un modelo 7B en Q4 (4,7 GB) necesita 8 GB de VRAM en total al ejecutarse en VS Code o Cursor.',
           ],
           rows: [
             { 'Modelo': 'Qwen3-Coder 7B', 'HumanEval': '72%', 'VRAM': '4,7 GB', 'Velocidad': 'Rápido', 'Ideal para': 'Mejor equilibrio, más veloz' },
-            { 'Modelo': 'Llama Code 7B', 'HumanEval': '69%', 'VRAM': '4,7 GB', 'Velocidad': 'Rápido', 'Ideal para': 'Programación general' },
+            { 'Modelo': 'Code Llama 7B', 'HumanEval': '69%', 'VRAM': '4,7 GB', 'Velocidad': 'Rápido', 'Ideal para': 'Programación general' },
             { 'Modelo': 'Mistral Small', 'HumanEval': '61%', 'VRAM': '4,5 GB', 'Velocidad': 'Muy rápido', 'Ideal para': 'Ligero, servidores UE' },
-            { 'Modelo': 'Llama Code 13B', 'HumanEval': '74%', 'VRAM': '8,5 GB', 'Velocidad': 'Medio', 'Ideal para': 'Mejor calidad en máquinas de 16 GB' },
+            { 'Modelo': 'Code Llama 13B', 'HumanEval': '74%', 'VRAM': '8,5 GB', 'Velocidad': 'Medio', 'Ideal para': 'Mejor calidad en máquinas de 16 GB' },
             { 'Modelo': 'DeepSeek-Coder 6.7B', 'HumanEval': '68%', 'VRAM': '4 GB', 'Velocidad': 'Rápido', 'Ideal para': 'Alternativa ligera' },
           ],
           columns: ['Modelo', 'HumanEval', 'VRAM', 'Velocidad', 'Ideal para'],
@@ -1245,7 +1245,7 @@ schema: {
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'VS Code usa la extensión Continue.dev para conectarse a modelos locales (Ollama, LM Studio, vLLM).' },
           { '@type': 'ListItem', position: 2, name: 'Cursor es un fork de VS Code con soporte nativo para modelos locales. No necesitas ninguna extensión.' },
-          { '@type': 'ListItem', position: 3, name: '**Mejores modelos locales para código**: Qwen3-Coder 7B, Llama Code 13B o Mistral Small.' },
+          { '@type': 'ListItem', position: 3, name: '**Mejores modelos locales para código**: Qwen3-Coder 7B, Code Llama 13B o Mistral Small.' },
           { '@type': 'ListItem', position: 4, name: 'Espera una latencia de completación de 2-5 segundos en GPUs de consumo con modelos 7B.' },
           { '@type': 'ListItem', position: 5, name: 'A partir de abril de 2026, las completaciones de código locales son prácticas para uso personal, pero aún no están listas para producción en equipos.' },
         ],
@@ -1281,7 +1281,7 @@ schema: {
           items: [
             'يستخدم VS Code إضافة Continue.dev للاتصال بالنماذج المحلية (Ollama، LM Studio، vLLM).',
             'Cursor هو نسخة معدّلة (fork) من VS Code بدعم أصلي للنماذج المحلية. لا تحتاج أي إضافة.',
-            '**أفضل النماذج المحلية للشيفرة**: Qwen3-Coder 7B، Llama Code 13B أو Mistral Small.',
+            '**أفضل النماذج المحلية للشيفرة**: Qwen3-Coder 7B، Code Llama 13B أو Mistral Small.',
             'توقّع زمن استجابة إكمال 2-5 ثوانٍ على بطاقات GPU استهلاكية مع نماذج 7B.',
             'اعتبارًا من أبريل 2026، إكمالات الشيفرة المحلية عملية للاستخدام الشخصي، لكنها ليست جاهزة بعد للإنتاج في الفرق.',
           ],
@@ -1305,15 +1305,15 @@ schema: {
         bestModels: {
           title: 'أي النماذج الأفضل للشيفرة؟',
           image: '/images/local-llms-with-vscode-cursor-best-coding-models-table-ar.svg',
-          imageCaption: 'جدول مقارنة لخمسة نماذج برمجة محلية -- Qwen3-Coder 7B وLlama Code 7B/13B وMistral Small وDeepSeek-Coder 6.7B -- يوضح درجات HumanEval ومتطلبات VRAM والسرعة للاستخدام في VS Code وCursor.',
+          imageCaption: 'جدول مقارنة لخمسة نماذج برمجة محلية -- Qwen3-Coder 7B وCode Llama 7B/13B وMistral Small وDeepSeek-Coder 6.7B -- يوضح درجات HumanEval ومتطلبات VRAM والسرعة للاستخدام في VS Code وCursor.',
           content: [
             '⚠️ **قاعدة VRAM**: احتفظ دائمًا بـ2-3 GB من VRAM متاحة فوق ما يتطلبه النموذج. نموذج 7B في Q4 (4.7 GB) يحتاج 8 GB من VRAM إجمالًا عند التشغيل في VS Code أو Cursor.',
           ],
           rows: [
             { 'Modelo': 'Qwen3-Coder 7B', 'HumanEval': '72%', 'VRAM': '4.7 GB', 'Velocidad': 'سريع', 'Ideal para': 'أفضل توازن، الأسرع' },
-            { 'Modelo': 'Llama Code 7B', 'HumanEval': '69%', 'VRAM': '4.7 GB', 'Velocidad': 'سريع', 'Ideal para': 'برمجة عامة' },
+            { 'Modelo': 'Code Llama 7B', 'HumanEval': '69%', 'VRAM': '4.7 GB', 'Velocidad': 'سريع', 'Ideal para': 'برمجة عامة' },
             { 'Modelo': 'Mistral Small', 'HumanEval': '61%', 'VRAM': '4.5 GB', 'Velocidad': 'سريع جدًا', 'Ideal para': 'خفيف، خوادم الاتحاد الأوروبي' },
-            { 'Modelo': 'Llama Code 13B', 'HumanEval': '74%', 'VRAM': '8.5 GB', 'Velocidad': 'متوسط', 'Ideal para': 'أفضل جودة على أجهزة 16 GB' },
+            { 'Modelo': 'Code Llama 13B', 'HumanEval': '74%', 'VRAM': '8.5 GB', 'Velocidad': 'متوسط', 'Ideal para': 'أفضل جودة على أجهزة 16 GB' },
             { 'Modelo': 'DeepSeek-Coder 6.7B', 'HumanEval': '68%', 'VRAM': '4 GB', 'Velocidad': 'سريع', 'Ideal para': 'بديل خفيف' },
           ],
           columns: ['Modelo', 'HumanEval', 'VRAM', 'Velocidad', 'Ideal para'],
@@ -1439,7 +1439,7 @@ schema: {
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'يستخدم VS Code إضافة Continue.dev للاتصال بالنماذج المحلية (Ollama، LM Studio، vLLM).' },
           { '@type': 'ListItem', position: 2, name: 'Cursor نسخة معدّلة من VS Code بدعم أصلي للنماذج المحلية. لا تحتاج أي إضافة.' },
-          { '@type': 'ListItem', position: 3, name: '**أفضل النماذج المحلية للشيفرة**: Qwen3-Coder 7B، Llama Code 13B أو Mistral Small.' },
+          { '@type': 'ListItem', position: 3, name: '**أفضل النماذج المحلية للشيفرة**: Qwen3-Coder 7B، Code Llama 13B أو Mistral Small.' },
           { '@type': 'ListItem', position: 4, name: 'توقّع زمن استجابة إكمال 2-5 ثوانٍ على بطاقات GPU استهلاكية مع نماذج 7B.' },
           { '@type': 'ListItem', position: 5, name: 'اعتبارًا من أبريل 2026، إكمالات الشيفرة المحلية عملية للاستخدام الشخصي، لكنها ليست جاهزة بعد للإنتاج في الفرق.' },
         ],
@@ -1475,7 +1475,7 @@ schema: {
           items: [
             'O VS Code usa a extensão Continue.dev para se conectar a modelos locais (Ollama, LM Studio, vLLM).',
             'O Cursor é um fork do VS Code com suporte nativo a modelos locais. Você não precisa de nenhuma extensão.',
-            '**Melhores modelos locais para código**: Qwen3-Coder 7B, Llama Code 13B ou Mistral Small.',
+            '**Melhores modelos locais para código**: Qwen3-Coder 7B, Code Llama 13B ou Mistral Small.',
             'Espere uma latência de completamento de 2-5 segundos em GPUs de consumo com modelos 7B.',
             'A partir de abril de 2026, os completamentos de código locais são práticos para uso pessoal, mas ainda não estão prontos para produção em equipes.',
           ],
@@ -1499,15 +1499,15 @@ schema: {
         bestModels: {
           title: 'Quais modelos são os melhores para código?',
           image: '/images/local-llms-with-vscode-cursor-best-coding-models-table-pt.svg',
-          imageCaption: 'Tabela comparativa de cinco modelos de codificação locais -- Qwen3-Coder 7B, Llama Code 7B/13B, Mistral Small e DeepSeek-Coder 6.7B -- com pontuações HumanEval, requisitos de VRAM e velocidade para VS Code e Cursor.',
+          imageCaption: 'Tabela comparativa de cinco modelos de codificação locais -- Qwen3-Coder 7B, Code Llama 7B/13B, Mistral Small e DeepSeek-Coder 6.7B -- com pontuações HumanEval, requisitos de VRAM e velocidade para VS Code e Cursor.',
           content: [
             '⚠️ **Regra de VRAM**: Tenha sempre 2-3 GB de VRAM livre acima do que o modelo exige. Um modelo 7B em Q4 (4,7 GB) precisa de 8 GB de VRAM no total ao rodar no VS Code ou no Cursor.',
           ],
           rows: [
             { 'Modelo': 'Qwen3-Coder 7B', 'HumanEval': '72%', 'VRAM': '4,7 GB', 'Velocidade': 'Rápido', 'Ideal para': 'Melhor equilíbrio, mais veloz' },
-            { 'Modelo': 'Llama Code 7B', 'HumanEval': '69%', 'VRAM': '4,7 GB', 'Velocidade': 'Rápido', 'Ideal para': 'Programação geral' },
+            { 'Modelo': 'Code Llama 7B', 'HumanEval': '69%', 'VRAM': '4,7 GB', 'Velocidade': 'Rápido', 'Ideal para': 'Programação geral' },
             { 'Modelo': 'Mistral Small', 'HumanEval': '61%', 'VRAM': '4,5 GB', 'Velocidade': 'Muito rápido', 'Ideal para': 'Leve, servidores UE' },
-            { 'Modelo': 'Llama Code 13B', 'HumanEval': '74%', 'VRAM': '8,5 GB', 'Velocidade': 'Médio', 'Ideal para': 'Melhor qualidade em máquinas de 16 GB' },
+            { 'Modelo': 'Code Llama 13B', 'HumanEval': '74%', 'VRAM': '8,5 GB', 'Velocidade': 'Médio', 'Ideal para': 'Melhor qualidade em máquinas de 16 GB' },
             { 'Modelo': 'DeepSeek-Coder 6.7B', 'HumanEval': '68%', 'VRAM': '4 GB', 'Velocidade': 'Rápido', 'Ideal para': 'Alternativa leve' },
           ],
           columns: ['Modelo', 'HumanEval', 'VRAM', 'Velocidade', 'Ideal para'],
@@ -1633,7 +1633,7 @@ schema: {
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'O VS Code usa a extensão Continue.dev para se conectar a modelos locais (Ollama, LM Studio, vLLM).' },
           { '@type': 'ListItem', position: 2, name: 'O Cursor é um fork do VS Code com suporte nativo a modelos locais. Você não precisa de nenhuma extensão.' },
-          { '@type': 'ListItem', position: 3, name: '**Melhores modelos locais para código**: Qwen3-Coder 7B, Llama Code 13B ou Mistral Small.' },
+          { '@type': 'ListItem', position: 3, name: '**Melhores modelos locais para código**: Qwen3-Coder 7B, Code Llama 13B ou Mistral Small.' },
           { '@type': 'ListItem', position: 4, name: 'Espere uma latência de completamento de 2-5 segundos em GPUs de consumo com modelos 7B.' },
           { '@type': 'ListItem', position: 5, name: 'A partir de abril de 2026, os completamentos de código locais são práticos para uso pessoal, mas ainda não estão prontos para produção em equipes.' },
         ],
@@ -1672,7 +1672,7 @@ schema: {
           items: [
             'VS Code는 Continue.dev 확장을 사용하여 로컬 모델(Ollama, LM Studio, vLLM)에 연결합니다.',
             'Cursor는 VS Code 포크로 로컬 모델 지원이 내장되어 있습니다. 별도 확장이 필요하지 않습니다.',
-            '**코드용 최적 로컬 모델**: Qwen3-Coder 7B, Llama Code 13B 또는 Mistral Small.',
+            '**코드용 최적 로컬 모델**: Qwen3-Coder 7B, Code Llama 13B 또는 Mistral Small.',
             '7B 모델 기준 소비자 GPU에서 2~5초의 자동 완성 지연을 예상하십시오.',
             '2026년 4월 기준, 로컬 코드 자동 완성은 개인 사용에는 실용적이나 팀 프로덕션 환경에는 아직 적합하지 않습니다.',
           ],
@@ -1696,12 +1696,12 @@ schema: {
         bestModels: {
           title: '코드용으로 가장 적합한 모델은 무엇입니까?',
           image: '/images/local-llms-with-vscode-cursor-best-coding-models-table-ko.svg',
-          imageCaption: '다섯 개의 로컬 코딩 모델 비교표 — Qwen3-Coder 7B, Llama Code 7B/13B, Mistral Small, DeepSeek-Coder 6.7B — VS Code와 Cursor에서 사용할 HumanEval 점수, VRAM 요구 사항, 속도를 보여준다.',
+          imageCaption: '다섯 개의 로컬 코딩 모델 비교표 — Qwen3-Coder 7B, Code Llama 7B/13B, Mistral Small, DeepSeek-Coder 6.7B — VS Code와 Cursor에서 사용할 HumanEval 점수, VRAM 요구 사항, 속도를 보여준다.',
           rows: [
             { 'Model': 'Qwen3-Coder 7B', 'HumanEval': '72%', 'VRAM': '4.7 GB', 'Speed': '빠름', 'Best For': '최상의 균형, 가장 빠름' },
-            { 'Model': 'Llama Code 7B', 'HumanEval': '69%', 'VRAM': '4.7 GB', 'Speed': '빠름', 'Best For': '일반 코딩' },
+            { 'Model': 'Code Llama 7B', 'HumanEval': '69%', 'VRAM': '4.7 GB', 'Speed': '빠름', 'Best For': '일반 코딩' },
             { 'Model': 'Mistral Small', 'HumanEval': '61%', 'VRAM': '4.5 GB', 'Speed': '매우 빠름', 'Best For': '경량, EU 서버' },
-            { 'Model': 'Llama Code 13B', 'HumanEval': '74%', 'VRAM': '8.5 GB', 'Speed': '보통', 'Best For': '16GB 머신에서 더 높은 품질' },
+            { 'Model': 'Code Llama 13B', 'HumanEval': '74%', 'VRAM': '8.5 GB', 'Speed': '보통', 'Best For': '16GB 머신에서 더 높은 품질' },
             { 'Model': 'DeepSeek-Coder 6.7B', 'HumanEval': '68%', 'VRAM': '4 GB', 'Speed': '빠름', 'Best For': '경량 대안' },
           ],
           columns: ['Model', 'HumanEval', 'VRAM', 'Speed', 'Best For'],
