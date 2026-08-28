@@ -435,5 +435,24 @@
       "ctr": 0,
       "period": "last 90 days"
     }
+  },
+  {
+    "id": "0b7b082f-4a79-471e-ba66-318984c874d8",
+    "slug": "/local-llms/how-much-unified-memory-for-local-llm",
+    "date": "2026-08-28T21:15:32.301Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Memory Guide for Local LLMs 2026: 16\u2013128GB",
+        "new": "Unified Memory = VRAM: 16GB=7B, 64GB=34B, 128GB=70B (2026)"
+      }
+    ],
+    "reason": "Top 2 queries by impressions, 'apple silicon unified memory local llm vram shared memory' (725 impr, pos 5.9, 0% CTR) and 'apple silicon unified memory gpu access all memory local llm' (648 impr, pos 8.0, 0% CTR) -- 1,373 of ~1,300+ total impressions on VRAM/shared-memory/GPU-access intent -- while title contained none of those terms. metaDescription already stated the VRAM equivalence; title did not. Rewrote title to lead with the VRAM-equivalence hook and tier=model-size pattern, parallel to sibling page how-much-vram-local-llm's shipped title structure. Applied across all 9 locales.",
+    "baseline": {
+      "impressions": 1373,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "last 90 days"
+    }
   }
 ]
