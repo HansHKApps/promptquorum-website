@@ -346,12 +346,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             a: '7B Q4 is the Goldilocks zone: 8–15 tokens/sec, acceptable quality. 3B Q4 is faster (24–36 tokens/sec) but lower quality. 1B Q4 is ultra-fast (50+ tokens/sec) but very limited. 13B+ is too slow.'
           },
           {
-            q: 'Wird LPDDR5X-PIM in Galaxy S27 sein?',
-            a: 'Unklar, aber wahrscheinlicher als zuvor angenommen. Samsung zeigte LPDDR5X-PIM im August 2026 auf der Hot Chips 2026 als validierten, getesteten Chip (3,01x Durchsatzgewinn), pinkompatibel mit Standard-LPDDR5X. Es ist noch nicht in einem ausgelieferten Telefon-SoC verbaut — Edge-KI-Beschleuniger dürften es zuerst bekommen, Galaxy S27 (2027) könnte folgen.'
+            q: 'Will LPDDR5X-PIM be in the Galaxy S27?',
+            a: 'Unclear, but more likely than previously assumed. Samsung showed LPDDR5X-PIM at Hot Chips 2026 in August 2026 as a validated, tested chip (3.01x throughput gain), pin-compatible with standard LPDDR5X. It is not yet built into any shipping phone SoC — edge AI accelerators are likely to get it first, and the Galaxy S27 (2027) could follow.'
           },
           {
-            q: 'Kann die Speicherbandbreite für KI-Inferenz erhöht werden?',
-            a: 'Ja, aber mit Limits. LPDDR6 (~200 GB/s, 2027-2028) und das jetzt validierte LPDDR5X-PIM (3,01x gemessener Durchsatzgewinn, August 2026) verbessern On-Device-Inferenz spürbar. Aber physische Grenzen verhindern HBM-ähnliche Bandbreite in Telefonen. Die 14x-Rohbandbreiten-Lücke wird sich in der Praxis auf etwa 4-6x reduzieren, nicht verschwinden.'
+            q: 'Can memory bandwidth for AI inference be increased?',
+            a: 'Yes, but within limits. LPDDR6 (~200 GB/s, 2027-2028) and the now-validated LPDDR5X-PIM (3.01x measured throughput gain, August 2026) both improve on-device inference noticeably. But physical constraints prevent HBM-class bandwidth in phones. The 14x raw-bandwidth gap narrows to roughly 4-6x in practice rather than disappearing.'
           }
         ]
       },
