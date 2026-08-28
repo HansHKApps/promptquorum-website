@@ -180,4 +180,5 @@ export const LLM_SLUG_TO_KEY: Record<string, string> = {
   'deepseek-local-china-data-privacy-2026':       'deepseek-local-china-data-privacy-2026',
   // Dev-tool comparison sprint 2026-08-27
   'best-llm-api-gateway-2026':                    'best-llm-api-gateway-2026',
+  'best-ai-code-review-tools-2026':               'best-ai-code-review-tools-2026',
 }
