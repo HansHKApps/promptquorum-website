@@ -20,7 +20,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       intro: '**Yes, you can run a local LLM on your phone in 2026 — but only small models (1–3B on iPhone, up to 7B on flagship Android).** Expect 3–5 tok/sec, not the 80–150 tok/sec you get on desktop. The trade-off is worth it for offline chat, private note-taking, and lightweight AI tasks without API costs or internet. This guide covers the best mobile LLM apps today (PocketPal AI, MLC Chat, Ollama iOS), setup tutorials for Android & iOS, and what hardware actually runs them.',
       metaDescription: 'MLC LLM vs Ollama for Android: MLC Chat runs on-device (Play Store), Ollama needs a desktop server. PocketPal AI (500K+ downloads), MLC Chat, Ollama iOS — 1–3B on iPhone, 7B on Snapdragon X. Performance benchmarks.',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-27',
+      dateModified: '2026-08-28',
       leadAnswerBlock: '**You can run local LLMs on your phone — 1–3B on iPhone (3 tok/sec), 7B on Snapdragon X Android (5 tok/sec), 13B on iPad M4 (15 tok/sec). Slow but practical for offline chat, private notes, and lightweight AI without API costs.**',
       audience: 'Developers and mobile users evaluating offline AI and on-device LLM inference for iOS and Android',
       readTime: '10 min read',
@@ -49,6 +49,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'You can run a local LLM directly on your phone in 2026, but only small models -- 1-3B on iPhone, up to 7B on flagship Android with Snapdragon X -- at 3-15 tokens per second, far slower than the 80-150 tok/sec of a desktop GPU.' },
+            { type: 'plain-terms', text: "Yes, your phone can run AI models without an internet connection, but expect a much smaller and slower model than what you'd run on a computer. It's a real trade-off: slower responses in exchange for complete privacy, zero API cost, and offline access -- useful for chatting, private note-taking, or lightweight tasks when you don't have signal or don't want your data leaving the device." },
+          ],
           items: [
             '**It works today** — but only small models. iPhone runs 1–3B, Android runs 3–7B, iPad handles 13B.',
             '**Expect 3–15 tok/sec** — usable for chat and Q&A, not for long-form generation.',
@@ -316,7 +320,7 @@ schema: {
         url: 'https://www.promptquorum.com/local-llms/mobile-local-llms',
         inLanguage: 'en',
         datePublished: '2026-04-04',
-        dateModified: '2026-08-27',
+        dateModified: '2026-08-28',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         proficiencyLevel: 'Intermediate',
@@ -475,7 +479,7 @@ schema: {
       intro: '**Ja, Sie können ein lokales LLM auf Ihrem Handy ausführen — aber nur kleine Modelle (1–3B auf iPhone, bis 7B auf Flaggschiff-Android).** Erwarten Sie 3–5 Tok/Sek, nicht die 80–150 Tok/Sek vom Desktop. Der Kompromiss lohnt sich für Offline-Chat, private Notizen und leichte KI-Aufgaben ohne API-Kosten oder Internet. Dieser Leitfaden zeigt die besten mobilen LLM-Apps heute (PocketPal AI, MLC Chat, Ollama iOS), Setup-Anleitungen für Android & iOS, und welche Hardware diese wirklich ausführt.',
       metaDescription: 'Beste lokale LLM-Apps für Android und iOS 2026: MLC LLM, PocketPal AI und Ollama. Modelle auf dem Smartphone ausführen, Performance und Akku.',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-27',
+      dateModified: '2026-08-28',
       leadAnswerBlock: '**Sie können lokale LLMs auf Ihrem Handy ausführen — 1–3B auf iPhone (3 Tok/Sek), 7B auf Snapdragon X Android (5 Tok/Sek), 13B auf iPad M4 (15 Tok/Sek). Langsam, aber praktisch für Offline-Chat, private Notizen und leichte KI ohne API-Kosten.**',
       audience: 'Entwickler und Mobile-Ingenieure, die On-Device-LLM-Inferenz für iOS und Android evaluieren',
       readTime: '10 Min. Lesezeit',
@@ -502,6 +506,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Sie können lokale LLMs direkt auf Ihrem Smartphone ausführen -- 1-3B auf dem iPhone, bis zu 7B auf Top-Android-Geräten mit Snapdragon X -- bei 3-15 Tokens pro Sekunde, deutlich langsamer als die 80-150 Tokens/Sekunde einer Desktop-GPU.' },
+            { type: 'plain-terms', text: 'Ja, Ihr Smartphone kann KI-Modelle ohne Internetverbindung ausführen, aber erwarten Sie ein deutlich kleineres und langsameres Modell als auf einem Computer. Es ist ein echter Kompromiss: langsamere Antworten im Austausch für vollständige Privatsphäre, keine API-Kosten und Offline-Zugriff -- nützlich zum Chatten, für private Notizen oder leichte Aufgaben ohne Signal oder ohne dass Daten das Gerät verlassen.' },
+          ],
           items: [
             '**Es funktioniert heute** — aber nur kleine Modelle. iPhone führt 1–3B aus, Android 3–7B, iPad bewältigt 13B.',
             '**Erwarten Sie 3–15 Tok/Sek** — nutzbar für Chat und Frage-Antwort, nicht für lange Texterstellung.',
@@ -770,7 +778,7 @@ schema: {
         url: 'https://www.promptquorum.com/de/local-llms/mobile-local-llms',
         inLanguage: 'de',
         datePublished: '2026-04-04',
-        dateModified: '2026-08-27',
+        dateModified: '2026-08-28',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         proficiencyLevel: 'Intermediate',
@@ -869,7 +877,7 @@ schema: {
       intro: '**Oui, vous pouvez exécuter un LLM local sur votre téléphone en 2026 — mais uniquement les petits modèles (1–3B sur iPhone, jusqu\'à 7B sur Android haut de gamme).** Attendez 3–5 tok/sec, pas les 80–150 tok/sec du bureau. Le compromis vaut le coup pour le chat hors ligne, les notes privées et les tâches IA légères sans coûts API ni internet. Ce guide couvre les meilleures applications LLM mobiles (PocketPal AI, MLC Chat, Ollama iOS), des tutoriels de configuration pour Android & iOS, et le matériel qui les exécute vraiment.',
       metaDescription: 'Top apps LLM mobiles pour Android (MLC LLM, PocketPal AI 500K+ téléchargements) & iOS (Ollama iOS, Private LLM). 1–3B sur iPhone, 7B sur Snapdragon X. Guides de configuration & benchmarks.',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-27',
+      dateModified: '2026-08-28',
       leadAnswerBlock: '**Vous pouvez exécuter des LLM locaux sur votre téléphone — 1–3B sur iPhone (3 tok/sec), 7B sur Snapdragon X Android (5 tok/sec), 13B sur iPad M4 (15 tok/sec). Lent mais pratique pour le chat hors ligne, les notes privées et l\'IA légère sans coûts API.**',
       audience: 'Développeurs et ingénieurs mobiles évaluant l\'inférence LLM on-device pour iOS et Android',
       readTime: '10 min de lecture',
@@ -896,6 +904,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: "Vous pouvez exécuter un LLM local directement sur votre téléphone -- 1-3B sur iPhone, jusqu'à 7B sur un Android haut de gamme avec Snapdragon X -- à 3-15 tokens par seconde, bien plus lent que les 80-150 tokens/sec d'un GPU de bureau." },
+            { type: 'plain-terms', text: "Oui, votre téléphone peut exécuter des modèles d'IA sans connexion internet, mais attendez-vous à un modèle bien plus petit et plus lent que sur un ordinateur. C'est un vrai compromis : des réponses plus lentes en échange d'une confidentialité totale, d'un coût d'API nul et d'un accès hors ligne -- utile pour discuter, prendre des notes privées ou des tâches légères sans réseau ou sans vouloir que vos données quittent l'appareil." },
+          ],
           items: [
             '**Ça fonctionne aujourd\'hui** — mais uniquement les petits modèles. iPhone exécute 1–3B, Android 3–7B, iPad gère 13B.',
             '**Attendez 3–15 tok/sec** — utilisable pour le chat et Q&R, pas pour la génération longue.',
@@ -1156,7 +1168,7 @@ schema: {
         url: 'https://www.promptquorum.com/fr/local-llms/mobile-local-llms',
         inLanguage: 'fr',
         datePublished: '2026-04-04',
-        dateModified: '2026-08-27',
+        dateModified: '2026-08-28',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         proficiencyLevel: 'Intermediate',
@@ -1253,7 +1265,7 @@ schema: {
       intro: '**2026年、スマートフォンでローカルLLMを実行できます — ただし小型モデルのみ（iPhoneで1–3B、フラッグシップAndroidで最大7B）。** 速度は3–5トークン/秒で、デスクトップの80–150トークン/秒には及びません。オフラインチャット、プライベートメモ、APIコストゼロの軽量AIタスクには十分実用的です。このガイドでは、最高のモバイルLLMアプリ（PocketPal AI、MLC Chat、Ollama iOS）、Android & iOSの設定チュートリアル、そして実装可能なハードウェアを解説します。',
       metaDescription: 'Android向けトップモバイルLLMアプリ（MLC LLM、PocketPal AI 50万ダウンロード以上）& iOS（Ollama iOS、Private LLM）。iPhone 1–3B、Snapdragon X 7B対応。設定ガイドとベンチマーク。',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-27',
+      dateModified: '2026-08-28',
       leadAnswerBlock: '**スマートフォンでローカルLLMを実行可能 — iPhoneで1–3B（3トークン/秒）、Snapdragon X Androidで7B（5トークン/秒）、iPad M4で13B（15トークン/秒）。遅いですがオフラインチャット、プライベートメモ、APIコストゼロの軽量AIに実用的です。**',
       audience: 'iOS・Android向けオンデバイスLLM推論を評価する開発者とモバイルエンジニア',
       readTime: '10分で読める',
@@ -1280,6 +1292,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'スマートフォンで直接ローカルLLMを実行できます -- iPhoneでは1〜3B、Snapdragon X搭載のハイエンドAndroidでは最大7Bまで、毎秒3〜15トークンで動作し、デスクトップGPUの毎秒80〜150トークンよりはるかに遅くなります。' },
+            { type: 'plain-terms', text: 'はい、スマートフォンはインターネット接続なしでAIモデルを実行できますが、コンピューターで動かすものよりはるかに小さく遅いモデルになると考えてください。これは本当のトレードオフです：応答は遅くなりますが、完全なプライバシー、APIコストゼロ、オフラインアクセスが得られます。電波がない場所や、データを端末外に出したくない場合のチャットや、プライベートなメモ、軽量なタスクに役立ちます。' },
+          ],
           items: [
             '**iPhone (A18)**：1–3Bモデル、約3トークン/秒。Llama 3.2 1Bが実用的。',
             '**Android (Snapdragon X)**：7Bモデル、約5トークン/秒。チャットに実用的。',
@@ -1540,7 +1556,7 @@ schema: {
         url: 'https://www.promptquorum.com/ja/local-llms/mobile-local-llms',
         inLanguage: 'ja',
         datePublished: '2026-04-04',
-        dateModified: '2026-08-27',
+        dateModified: '2026-08-28',
         author: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         proficiencyLevel: 'Intermediate',
@@ -1637,7 +1653,7 @@ schema: {
       intro: '**2026年，您可以在手机上运行本地LLM——但仅限小型模型（iPhone上1–3B，旗舰Android上最大7B）。** 速度为3–5令牌/秒，远低于桌面端的80–150令牌/秒。对于离线聊天、私密笔记和无需API费用的轻量AI任务，这个折衷是值得的。本指南涵盖最佳移动LLM应用（PocketPal AI、MLC Chat、Ollama iOS）、Android与iOS设置教程，以及真正支持这些应用的硬件。',
       metaDescription: 'Android顶级移动LLM应用（MLC LLM、PocketPal AI 50万+下载量）与iOS（Ollama iOS、Private LLM）。iPhone 1–3B，Snapdragon X 7B。设置指南和基准测试数据。',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-27',
+      dateModified: '2026-08-28',
       leadAnswerBlock: '**在手机上运行本地LLM——iPhone运行1–3B（3令牌/秒），Snapdragon X Android运行7B（5令牌/秒），iPad M4运行13B（15令牌/秒）。速度慢但适用于离线聊天、私密笔记和零API成本的轻量AI。**',
       audience: '评估iOS和Android端设备LLM推理的开发者和移动工程师',
       readTime: '阅读约10分钟',
@@ -1664,6 +1680,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: '可以直接在手机上运行本地LLM——iPhone上为1-3B，搭载骁龙X的高端安卓机型最高可达7B——速度为每秒3-15个令牌，远低于桌面GPU的每秒80-150个令牌。' },
+            { type: 'plain-terms', text: '是的，你的手机可以在没有网络连接的情况下运行AI模型，但预期它会比电脑上运行的模型小得多、慢得多。这是一个真实的权衡：响应速度变慢，换来完全的隐私、零API成本和离线访问——适合在没有信号或不想让数据离开设备时聊天、私人笔记或轻量任务。' },
+          ],
           items: [
             '**今天就能用** — 但仅限小型模型。iPhone运行1–3B，Android运行3–7B，iPad支持13B。',
             '**速度3–15令牌/秒** — 可用于聊天和问答，不适合长文本生成。',
@@ -1924,7 +1944,7 @@ schema: {
         url: 'https://www.promptquorum.com/zh/local-llms/mobile-local-llms',
         inLanguage: 'zh',
         datePublished: '2026-04-04',
-        dateModified: '2026-08-27',
+        dateModified: '2026-08-28',
         author: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         proficiencyLevel: 'Intermediate',
@@ -2021,7 +2041,7 @@ schema: {
       intro: '**Sí, puedes ejecutar un LLM local en tu teléfono en 2026, pero solo modelos pequeños (1–3B en iPhone, hasta 7B en Android de gama alta).** Espera 3–5 tok/seg, no los 80–150 tok/seg que obtienes en escritorio. La compensación vale la pena para chat sin conexión, notas privadas y tareas de IA ligeras sin costos de API ni internet. Esta guía cubre las mejores apps de LLM móvil (PocketPal AI, MLC Chat, Ollama iOS), tutoriales de configuración para Android e iOS, y qué hardware realmente las ejecuta.',
       metaDescription: 'MLC LLM y PocketPal AI (500K+ descargas) en Android; Ollama iOS y Private LLM en iPhone. Ejecuta Llama 1–3B sin internet en cualquier móvil 2026.',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-27',
+      dateModified: '2026-08-28',
       leadAnswerBlock: '**Puedes ejecutar LLMs locales en tu teléfono: 1–3B en iPhone (3 tok/seg), 7B en Snapdragon X Android (5 tok/seg), 13B en iPad M4 (15 tok/seg). Lento pero práctico para chat sin conexión, notas privadas e IA ligera sin costos de API.**',
       audience: 'Desarrolladores y usuarios móviles que evalúan la inferencia de LLM en dispositivo para iOS y Android',
       readTime: '10 min de lectura',
@@ -2048,6 +2068,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Puedes ejecutar un LLM local directamente en tu teléfono -- de 1 a 3B en iPhone, hasta 7B en Android de gama alta con Snapdragon X -- a 3-15 tokens por segundo, mucho más lento que los 80-150 tokens/seg de una GPU de escritorio.' },
+            { type: 'plain-terms', text: 'Sí, tu teléfono puede ejecutar modelos de IA sin conexión a internet, pero espera un modelo mucho más pequeño y lento que el que usarías en un ordenador. Es un compromiso real: respuestas más lentas a cambio de privacidad total, coste de API cero y acceso sin conexión -- útil para chatear, tomar notas privadas o tareas ligeras cuando no tienes señal o no quieres que tus datos salgan del dispositivo.' },
+          ],
           items: [
             '**Funciona hoy** — pero solo modelos pequeños. iPhone ejecuta 1–3B, Android 3–7B, iPad maneja 13B.',
             '**Espera 3–15 tok/seg** — útil para chat y preguntas, no para generación de texto largo.',
@@ -2310,7 +2334,7 @@ schema: {
         url: 'https://www.promptquorum.com/es/local-llms/mobile-local-llms',
         inLanguage: 'es',
         datePublished: '2026-04-04',
-        dateModified: '2026-08-27',
+        dateModified: '2026-08-28',
         author: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         proficiencyLevel: 'Intermediate',
@@ -2407,7 +2431,7 @@ schema: {
       intro: '**نعم، يمكنك تشغيل نموذج LLM محلي على هاتفك في 2026، لكن نماذج صغيرة فقط (1–3B على iPhone، حتى 7B على Android المتطور).** توقّع 3–5 tok/ث، لا 80–150 tok/ث التي تحصل عليها على سطح المكتب. تستحق المقايضة العناء للمحادثة دون اتصال والملاحظات الخاصة ومهام الذكاء الاصطناعي الخفيفة بلا تكاليف API ولا إنترنت. يغطي هذا الدليل أفضل تطبيقات LLM للهواتف (PocketPal AI، MLC Chat، Ollama iOS)، ودروس الإعداد لـ Android وiOS، وأي عتاد يشغّلها فعلًا.',
       metaDescription: 'تطبيقات ⁨LLM⁩ للهواتف: ⁨MLC LLM⁩ و⁨PocketPal AI⁩ (⁨500K⁩+ تنزيل) على ⁨Android⁩؛ ⁨Ollama iOS⁩ و⁨Private LLM⁩ على ⁨iOS⁩. شغّل ⁨1⁩–⁨3B⁩ على ⁨iPhone⁩ و⁨7B⁩ على ⁨Snapdragon X⁩.',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-27',
+      dateModified: '2026-08-28',
       leadAnswerBlock: '**يمكنك تشغيل نماذج LLM محلية على هاتفك: 1–3B على iPhone (3 tok/ث)، 7B على Snapdragon X Android (5 tok/ث)، 13B على iPad M4 (15 tok/ث). بطيء لكنه عملي للمحادثة دون اتصال والملاحظات الخاصة والذكاء الاصطناعي الخفيف بلا تكاليف API.**',
       audience: 'المطورون ومستخدمو الهواتف الذين يقيّمون استدلال LLM على الجهاز لـ iOS وAndroid',
       readTime: '10 دقائق قراءة',
@@ -2434,6 +2458,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'يمكنك تشغيل نموذج LLM محلي مباشرة على هاتفك -- من 1 إلى 3B على iPhone، وحتى 7B على هواتف Android الرائدة بمعالج Snapdragon X -- بسرعة 3-15 token في الثانية، أبطأ بكثير من 80-150 token/ثانية لبطاقة GPU لسطح المكتب.' },
+            { type: 'plain-terms', text: 'نعم، يمكن لهاتفك تشغيل نماذج الذكاء الاصطناعي دون اتصال بالإنترنت، لكن توقّع نموذجاً أصغر وأبطأ بكثير مما تستخدمه على حاسوب. إنها مقايضة حقيقية: ردود أبطأ مقابل خصوصية كاملة، وتكلفة API صفرية، ووصول دون اتصال -- مفيد للدردشة، والملاحظات الخاصة، والمهام الخفيفة عندما لا تملك إشارة أو لا تريد أن تغادر بياناتك الجهاز.' },
+          ],
           items: [
             '**يعمل اليوم** — لكن نماذج صغيرة فقط. iPhone يشغّل 1–3B، Android 3–7B، iPad يتعامل مع 13B.',
             '**توقّع 3–15 tok/ث** — مفيد للمحادثة والأسئلة، لا لتوليد نص طويل.',
@@ -2696,7 +2724,7 @@ schema: {
         url: 'https://www.promptquorum.com/ar/local-llms/mobile-local-llms',
         inLanguage: 'ar',
         datePublished: '2026-04-04',
-        dateModified: '2026-08-27',
+        dateModified: '2026-08-28',
         author: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         proficiencyLevel: 'Intermediate',
@@ -2820,6 +2848,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Você pode rodar um LLM local diretamente no seu celular -- de 1 a 3B no iPhone, até 7B em Android topo de linha com Snapdragon X -- a 3-15 tokens por segundo, bem mais lento que os 80-150 tokens/seg de uma GPU de desktop.' },
+            { type: 'plain-terms', text: 'Sim, seu celular pode rodar modelos de IA sem conexão à internet, mas espere um modelo bem menor e mais lento do que você usaria em um computador. É uma troca real: respostas mais lentas em troca de privacidade total, custo zero de API e acesso offline -- útil para conversar, fazer anotações privadas ou tarefas leves quando você não tem sinal ou não quer que seus dados saiam do dispositivo.' },
+          ],
           items: [
             '**Funciona hoje** — mas apenas modelos pequenos. iPhone executa 1–3B, Android 3–7B, iPad gerencia 13B.',
             '**Espere 3–15 tok/s** — útil para chat e perguntas, não para geração de texto longo.',
@@ -3072,7 +3104,7 @@ schema: {
       intro: '**네, 2026년에는 스마트폰에서 로컬 LLM을 실행할 수 있습니다 — 단, 소형 모델(iPhone에서 1–3B, 플래그십 Android에서 최대 7B)만 가능합니다.** 데스크톱에서 경험하는 80–150 tok/sec가 아닌 3–5 tok/sec를 기대하십시오. 오프라인 채팅, 개인 메모, API 비용이나 인터넷 없이 처리하는 경량 AI 작업에는 충분히 가치 있는 트레이드오프입니다. 이 가이드에서는 현재 최고의 모바일 LLM 앱(PocketPal AI, MLC Chat, Ollama iOS), Android & iOS 설치 튜토리얼, 그리고 실제로 실행 가능한 하드웨어를 다룹니다.',
       metaDescription: 'Android(MLC LLM, PocketPal AI — 50만 다운로드 이상) & iOS(Ollama iOS, Private LLM)용 최고의 모바일 LLM 앱. iPhone에서 1–3B, Snapdragon X에서 7B 실행. 설치 가이드 및 성능 벤치마크.',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-27',
+      dateModified: '2026-08-28',
       leadAnswerBlock: '스마트폰에서 로컬 LLM을 실행할 수 있습니다 — iPhone에서 1–3B(3 tok/sec), Snapdragon X Android에서 7B(5 tok/sec), iPad M4에서 13B(15 tok/sec). 속도는 느리지만 오프라인 채팅, 개인 메모, API 비용 없는 경량 AI 활용에는 충분히 실용적입니다.',
       audience: '오프라인 AI 및 iOS·Android 온디바이스 LLM 추론을 평가하는 개발자 및 모바일 사용자',
       readTime: '10분 분량',
@@ -3100,6 +3132,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: '휴대폰에서 직접 로컬 LLM을 실행할 수 있습니다 -- iPhone에서는 1~3B, Snapdragon X를 탑재한 최신 Android에서는 최대 7B까지, 초당 3~15 토큰의 속도로 동작하며 데스크톱 GPU의 초당 80~150 토큰보다 훨씬 느립니다.' },
+            { type: 'plain-terms', text: '네, 휴대폰은 인터넷 연결 없이도 AI 모델을 실행할 수 있지만, 컴퓨터에서 사용하는 것보다 훨씬 작고 느린 모델이 될 것으로 예상하세요. 이는 실질적인 트레이드오프입니다: 응답 속도는 느려지지만 완전한 프라이버시, 제로 API 비용, 오프라인 접근을 얻을 수 있습니다. 신호가 없거나 데이터가 기기 밖으로 나가는 것을 원하지 않을 때 채팅, 개인 메모, 가벼운 작업에 유용합니다.' },
+          ],
           items: [
             '**오늘부터 작동합니다** — 단, 소형 모델만. iPhone은 1–3B, Android는 3–7B, iPad는 13B까지 실행 가능합니다.',
             '**3–15 tok/sec를 기대하십시오** — 채팅과 Q&A에는 쓸 만하지만, 장문 생성에는 적합하지 않습니다.',
