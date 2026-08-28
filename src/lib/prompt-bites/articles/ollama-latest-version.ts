@@ -6,12 +6,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Ollama',
     heroImage: '/images/ollama-latest-version-overview-hero-en.webp',
     title: 'What Is the Latest Ollama Version?',
-    dateModified: '2026-06-21',
+    dateModified: '2026-08-28',
     seoTitle: 'Latest Ollama Version 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Latest Ollama release on GitHub. Run ollama --version to check. Linux: rerun install script. Mac/Windows: download from ollama.com. Updated May 2026.',
+    metaDescription: 'Latest Ollama release on GitHub. Run ollama --version to check. Linux: rerun install script. Mac/Windows: download from ollama.com.',
     publishDate: '2026-05-18',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-06-18',
+    next_refresh_due: '2026-11-28',
     current_models_mentioned: [],
     current_hardware_mentioned: [],
     educationalLevel: 'Beginner',
@@ -30,11 +30,6 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         ],
         updatedDate: '2026-05',
       },
-      de: { question: 'Was ist die neueste Ollama-Version?', answer: 'Die aktuelle Version finden Sie auf ollama.com oder der Ollama GitHub-Release-Seite. Unter Linux aktualisieren Sie mit dem Installationsskript. Unter Mac/Windows laden Sie den neuesten Installer herunter.', bullets: ['Prüfen: github.com/ollama/ollama/releases für die neueste Version', 'Linux-Update: curl -fsSL https://ollama.com/install.sh | sh', 'Mac/Windows: Installer von ollama.com erneut herunterladen'], updatedDate: '2026-05' },
-      fr: { question: 'Quelle est la dernière version d\'Ollama ?', answer: 'Consultez ollama.com ou la page des releases GitHub d\'Ollama pour la version actuelle. Sur Linux, utilisez le script d\'installation pour mettre à jour. Sur Mac/Windows, téléchargez le dernier installateur.', bullets: ['Vérifier : github.com/ollama/ollama/releases pour la dernière version', 'Mise à jour Linux : curl -fsSL https://ollama.com/install.sh | sh', 'Mac/Windows : re-télécharger l\'installateur depuis ollama.com'], updatedDate: '2026-05' },
-      ja: { question: 'Ollamaの最新バージョンは何ですか？', answer: '現在のバージョンはollama.comまたはOllama GitHubリリースページで確認できます。Linuxはインストールスクリプトで更新します。Mac/Windowsは最新インストーラーをダウンロードしてください。', bullets: ['確認先：github.com/ollama/ollama/releases', 'Linuxアップデート：curl -fsSL https://ollama.com/install.sh | sh', 'Mac/Windows：ollama.comからインストーラーを再ダウンロード'], updatedDate: '2026-05' },
-      zh: { question: 'Ollama的最新版本是什么？', answer: '请访问ollama.com或Ollama GitHub发布页面查看当前版本。Linux用户运行安装脚本即可更新。Mac/Windows用户重新下载最新安装程序即可。', bullets: ['查看：github.com/ollama/ollama/releases获取最新版本', 'Linux更新：curl -fsSL https://ollama.com/install.sh | sh', 'Mac/Windows：从ollama.com重新下载安装程序'], updatedDate: '2026-05' },
-      es: { question: '¿Cuál es la versión más reciente de Ollama?', answer: 'Comprueba ollama.com o la página de lanzamientos de GitHub de Ollama para la versión actual. En Linux, ejecuta el script de instalación para actualizar. En Mac/Windows, descarga el instalador más reciente.', bullets: ['Comprobar: github.com/ollama/ollama/releases para la versión más reciente', 'Actualización en Linux: curl -fsSL https://ollama.com/install.sh | sh', 'Mac/Windows: volver a descargar el instalador desde ollama.com'], updatedDate: '2026-05' },
     },
     sections: {
       tldr: {
@@ -50,9 +45,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Where to Check Ollama\'s Version',
         content: [
-          '<strong>As of May 2026, the latest stable Ollama release is listed at github.com/ollama/ollama/releases — that page shows the exact version number and release notes. This page is updated monthly — last verified May 2026.</strong>',
+          '<strong>The latest stable Ollama release is always listed at github.com/ollama/ollama/releases — that page shows the exact version number and release notes.</strong>',
           'Run <code>ollama --version</code> in a terminal to see your installed build. The output is one line. If the GitHub releases page shows a higher version number, your install is behind.',
-          'New model families — including Llama 3.3 and Qwen 3 — require a minimum Ollama version to load correctly. Recent releases also include faster GGUF loading and better multi-GPU context handling — improvements that compound across daily use.',
+          'New model families — including gpt-oss and Qwen3.5 — require a minimum Ollama version to load correctly. Recent releases also include faster GGUF loading and better multi-GPU context handling — improvements that compound across daily use.',
         ],
       },
       body2: {
@@ -69,7 +64,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { 'Platform': 'Windows', 'Update Method': 'Re-download .exe from ollama.com', 'Notes': 'Run installer, models kept' },
         ],
         codeBlock: 'curl -fsSL https://ollama.com/install.sh | sh',
-        callouts: [{ type: 'info', text: 'Last verified: May 2026. If the data above looks stale, check the official Ollama GitHub releases page or model library.' }],
+        callouts: [{ type: 'info', text: 'This page intentionally does not pin a version number, since Ollama ships new releases continually. Always check github.com/ollama/ollama/releases for the current one.' }],
       },
       faq: {
         id: 'faq',
@@ -107,11 +102,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/ollama-latest-version-overview-hero-de.webp',
     title: 'Was ist die neueste Ollama-Version?',
     seoTitle: 'Neueste Ollama-Version 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Aktuelle Ollama-Version auf GitHub prüfen. Linux-Update: Installationsskript neu ausführen. Mac/Windows: Installer von ollama.com herunterladen. Stand Mai 2026.',
+    metaDescription: 'Aktuelle Ollama-Version auf GitHub prüfen. Linux-Update: Installationsskript neu ausführen. Mac/Windows: Installer von ollama.com herunterladen.',
     publishDate: '2026-05-18',
-    dateModified: '2026-06-21',
+    dateModified: '2026-08-28',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-06-18',
+    next_refresh_due: '2026-11-28',
     is_living_page: true,
     quickAnswerTop: {
       de: {
@@ -139,9 +134,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Wo Sie die Ollama-Version prüfen können',
         content: [
-          '<strong>Stand Mai 2026: Die neueste stabile Ollama-Version ist unter github.com/ollama/ollama/releases aufgeführt — dort sind die genaue Versionsnummer und die Release-Notes zu finden. Diese Seite wird monatlich aktualisiert — zuletzt überprüft im Mai 2026.</strong>',
+          '<strong>Die jeweils neueste stabile Ollama-Version ist unter github.com/ollama/ollama/releases aufgeführt — dort finden Sie die genaue Versionsnummer und die Release-Notes.</strong>',
           '<code>ollama --version</code> in einem Terminal ausführen, um den installierten Build zu sehen. Die Ausgabe besteht aus einer Zeile. Wenn die GitHub-Releases-Seite eine höhere Versionsnummer anzeigt, ist Ihre Installation veraltet.',
-          'Neue Modellfamilien — darunter Llama 3.3 und Qwen 3 — erfordern eine Mindestversion von Ollama, um korrekt geladen zu werden. Neuere Releases beinhalten auch schnelleres GGUF-Laden und bessere Multi-GPU-Kontextverarbeitung — Verbesserungen, die sich im täglichen Einsatz summieren.',
+          'Neue Modellfamilien — darunter gpt-oss und Qwen3.5 — erfordern eine Mindestversion von Ollama, um korrekt geladen zu werden. Neuere Releases beinhalten auch schnelleres GGUF-Laden und bessere Multi-GPU-Kontextverarbeitung — Verbesserungen, die sich im täglichen Einsatz summieren.',
         ],
       },
       body2: {
@@ -158,7 +153,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { 'Plattform': 'Windows', 'Updatemethode': '.exe von ollama.com erneut herunterladen', 'Hinweise': 'Installer ausführen, Modelle bleiben erhalten' },
         ],
         codeBlock: 'curl -fsSL https://ollama.com/install.sh | sh',
-        callouts: [{ type: 'info', text: 'Zuletzt überprüft: Mai 2026. Wenn die Daten oben veraltet aussehen, prüfen Sie die offizielle Ollama GitHub-Release-Seite oder die Modell-Bibliothek.' }],
+        callouts: [{ type: 'info', text: 'Diese Seite legt sich absichtlich nicht auf eine Versionsnummer fest, da Ollama laufend neue Releases veröffentlicht. Prüfen Sie stets github.com/ollama/ollama/releases für die aktuelle Version.' }],
       },
       faq: {
         id: 'faq',
@@ -196,11 +191,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/ollama-latest-version-overview-hero-fr.webp',
     title: 'Quelle est la dernière version d\'Ollama ?',
     seoTitle: 'Version Ollama actuelle 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Sur GitHub : dernière version Ollama. Linux : relancer le script d\'installation. Mac/Windows : réinstaller depuis ollama.com. Vérifié mai 2026.',
+    metaDescription: 'Sur GitHub : dernière version Ollama. Linux : relancer le script d\'installation. Mac/Windows : réinstaller depuis ollama.com.',
     publishDate: '2026-05-18',
-    dateModified: '2026-06-21',
+    dateModified: '2026-08-28',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-06-18',
+    next_refresh_due: '2026-11-28',
     is_living_page: true,
     quickAnswerTop: {
       fr: {
@@ -228,9 +223,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Où vérifier la version d\'Ollama',
         content: [
-          '<strong>En mai 2026, la dernière version stable d\'Ollama est listée sur github.com/ollama/ollama/releases — cette page affiche le numéro de version exact et les notes de release. Cette page est mise à jour mensuellement — dernière vérification mai 2026.</strong>',
+          '<strong>La dernière version stable d\'Ollama est toujours listée sur github.com/ollama/ollama/releases — cette page affiche le numéro de version exact et les notes de release.</strong>',
           'Exécutez <code>ollama --version</code> dans un terminal pour voir votre build installé. La sortie tient sur une ligne. Si la page des releases GitHub affiche un numéro de version supérieur, votre installation est en retard.',
-          'Les nouvelles familles de modèles — dont Llama 3.3 et Qwen 3 — nécessitent une version minimale d\'Ollama pour se charger correctement. Les versions récentes incluent également un chargement GGUF plus rapide et une meilleure gestion du contexte multi-GPU — des améliorations qui s\'accumulent à l\'usage quotidien.',
+          'Les nouvelles familles de modèles — dont gpt-oss et Qwen3.5 — nécessitent une version minimale d\'Ollama pour se charger correctement. Les versions récentes incluent également un chargement GGUF plus rapide et une meilleure gestion du contexte multi-GPU — des améliorations qui s\'accumulent à l\'usage quotidien.',
         ],
       },
       body2: {
@@ -247,7 +242,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { 'Plateforme': 'Windows', 'Méthode de mise à jour': 'Retélécharger le .exe depuis ollama.com', 'Remarques': 'Lancer l\'installeur, modèles conservés' },
         ],
         codeBlock: 'curl -fsSL https://ollama.com/install.sh | sh',
-        callouts: [{ type: 'info', text: 'Dernière vérification : mai 2026. Si les données ci-dessus semblent obsolètes, consultez la page officielle des releases GitHub d\'Ollama ou la bibliothèque de modèles.' }],
+        callouts: [{ type: 'info', text: 'Cette page ne fige volontairement aucun numéro de version, car Ollama publie de nouvelles releases en continu. Consultez toujours github.com/ollama/ollama/releases pour la version actuelle.' }],
       },
       faq: {
         id: 'faq',
@@ -285,11 +280,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/ollama-latest-version-overview-hero-ja.webp',
     title: 'Ollamaの最新バージョンは？',
     seoTitle: 'Ollama 2026最新バージョン確認 | Prompt Bites | PromptQuorum',
-    metaDescription: 'ollama --versionで現在のバージョンを確認できます。最新リリースはGitHubで公開。Linuxはインストールスクリプト再実行、Mac/Windowsはollama.comから再ダウンロード。2026年5月更新。',
+    metaDescription: 'ollama --versionで現在のバージョンを確認できます。最新リリースはGitHubで公開。Linuxはインストールスクリプト再実行、Mac/Windowsはollama.comから再ダウンロード。',
     publishDate: '2026-05-18',
-    dateModified: '2026-06-21',
+    dateModified: '2026-08-28',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-06-18',
+    next_refresh_due: '2026-11-28',
     is_living_page: true,
     quickAnswerTop: {
       ja: {
@@ -317,9 +312,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Ollamaのバージョンを確認する場所',
         content: [
-          '<strong>2026年5月現在、最新の安定版Ollamaリリースはgithub.com/ollama/ollama/releasesに掲載されています — 正確なバージョン番号とリリースノートが確認できます。このページは毎月更新されています — 最終確認: 2026年5月。</strong>',
+          '<strong>最新の安定版Ollamaリリースは常にgithub.com/ollama/ollama/releasesに掲載されています — 正確なバージョン番号とリリースノートが確認できます。</strong>',
           'ターミナルで <code>ollama --version</code> を実行して、インストール済みのビルドを確認してください。出力は1行です。GitHubリリースページがより高いバージョン番号を示している場合、インストールが古くなっています。',
-          'Llama 3.3やQwen 3を含む新しいモデルファミリーは、正しく読み込むために最低限のOllamaバージョンが必要です。最近のリリースには、より高速なGGUFロードとマルチGPUコンテキスト処理の改善も含まれており、日常的な使用での効果が蓄積されます。',
+          'gpt-ossやQwen3.5を含む新しいモデルファミリーは、正しく読み込むために最低限のOllamaバージョンが必要です。最近のリリースには、より高速なGGUFロードとマルチGPUコンテキスト処理の改善も含まれており、日常的な使用での効果が蓄積されます。',
         ],
       },
       body2: {
@@ -336,7 +331,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { 'プラットフォーム': 'Windows', '更新方法': 'ollama.comから.exeを再ダウンロード', '備考': 'インストーラーを実行、モデルは保持' },
         ],
         codeBlock: 'curl -fsSL https://ollama.com/install.sh | sh',
-        callouts: [{ type: 'info', text: '最終確認: 2026年5月。上記のデータが古くなっている場合は、公式のOllama GitHubリリースページまたはモデルライブラリを確認してください。' }],
+        callouts: [{ type: 'info', text: 'Ollamaは継続的に新しいリリースを出すため、このページは意図的にバージョン番号を固定していません。常にgithub.com/ollama/ollama/releasesで最新版を確認してください。' }],
       },
       faq: {
         id: 'faq',
@@ -374,11 +369,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/ollama-latest-version-overview-hero-zh.webp',
     title: 'Ollama最新版本是什么？',
     seoTitle: 'Ollama 2026 最新版本查询 | Prompt Bites | PromptQuorum',
-    metaDescription: '在GitHub查看最新Ollama版本。运行ollama --version检查已安装版本。Linux重新运行安装脚本，Mac/Windows从ollama.com重新下载安装程序。2026年5月更新。',
+    metaDescription: '在GitHub查看最新Ollama版本。运行ollama --version检查已安装版本。Linux重新运行安装脚本，Mac/Windows从ollama.com重新下载安装程序。',
     publishDate: '2026-05-18',
-    dateModified: '2026-06-21',
+    dateModified: '2026-08-28',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-06-18',
+    next_refresh_due: '2026-11-28',
     is_living_page: true,
     quickAnswerTop: {
       zh: {
@@ -406,9 +401,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: '在哪里查看Ollama版本',
         content: [
-          '<strong>截至2026年5月，最新稳定版Ollama发布在github.com/ollama/ollama/releases — 该页面显示确切的版本号和发布说明。此页面每月更新 — 最后验证于2026年5月。</strong>',
+          '<strong>最新稳定版 Ollama 始终发布在 github.com/ollama/ollama/releases — 该页面显示确切的版本号和发布说明。</strong>',
           '在终端运行 <code>ollama --version</code> 查看已安装的版本。输出只有一行。如果GitHub发布页面显示更高的版本号，说明您的安装已过时。',
-          '包括Llama 3.3和Qwen 3在内的新模型系列需要最低Ollama版本才能正确加载。最新版本还包括更快的GGUF加载和更好的多GPU上下文处理 — 日常使用中积累的改进效果明显。',
+          '包括 gpt-oss 和 Qwen3.5 在内的新模型系列需要最低 Ollama 版本才能正确加载。最新版本还包括更快的 GGUF 加载和更好的多 GPU 上下文处理 — 日常使用中积累的改进效果明显。',
         ],
       },
       body2: {
@@ -425,7 +420,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { '平台': 'Windows', '更新方式': '从ollama.com重新下载.exe', '备注': '运行安装程序，模型保留' },
         ],
         codeBlock: 'curl -fsSL https://ollama.com/install.sh | sh',
-        callouts: [{ type: 'info', text: '最后核实: 2026年5月。如果上述数据已过时,请查看Ollama的官方GitHub发布页面或模型库。' }],
+        callouts: [{ type: 'info', text: '由于 Ollama 持续发布新版本，本页故意不固定具体版本号。请始终查看 github.com/ollama/ollama/releases 获取当前版本。' }],
       },
       faq: {
         id: 'faq',
@@ -465,9 +460,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Versão mais recente do Ollama 2026 | PromptQuorum',
     metaDescription: 'Verifique a versão atual do Ollama no GitHub. Execute ollama --version. Linux: execute novamente o script de instalação; Mac/Windows: baixe em ollama.com.',
     publishDate: '2026-05-18',
-    dateModified: '2026-06-21',
+    dateModified: '2026-08-28',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-06-18',
+    next_refresh_due: '2026-11-28',
     is_living_page: true,
     quickAnswerTop: {
       pt: {
@@ -495,9 +490,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Onde verificar a versão do Ollama',
         content: [
-          '<strong>Em maio de 2026, o lançamento estável mais recente do Ollama está listado em github.com/ollama/ollama/releases — essa página mostra o número exato da versão e as notas de lançamento. Esta página é atualizada mensalmente — última verificação em maio de 2026.</strong>',
+          '<strong>O lançamento estável mais recente do Ollama está sempre listado em github.com/ollama/ollama/releases — essa página mostra o número exato da versão e as notas de lançamento.</strong>',
           'Execute <code>ollama --version</code> em um terminal para ver sua versão instalada. A saída é uma única linha. Se a página de lançamentos do GitHub mostrar um número de versão mais alto, sua instalação está desatualizada.',
-          'Novas famílias de modelos — incluindo Llama 3.3 e Qwen 3 — requerem uma versão mínima do Ollama para carregar corretamente. Lançamentos recentes também incluem carregamento GGUF mais rápido e melhor gerenciamento de contexto multi-GPU — melhorias que se acumulam no uso diário.',
+          'Novas famílias de modelos — incluindo gpt-oss e Qwen3.5 — requerem uma versão mínima do Ollama para carregar corretamente. Lançamentos recentes também incluem carregamento GGUF mais rápido e melhor gerenciamento de contexto multi-GPU — melhorias que se acumulam no uso diário.',
         ],
       },
       body2: {
@@ -514,7 +509,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { 'Plataforma': 'Windows', 'Método de atualização': 'Baixar novamente o .exe em ollama.com', 'Notas': 'Execute o instalador, modelos mantidos' },
         ],
         codeBlock: 'curl -fsSL https://ollama.com/install.sh | sh',
-        callouts: [{ type: 'info', text: 'Última verificação: maio de 2026. Se os dados acima parecerem desatualizados, consulte a página oficial de lançamentos do GitHub do Ollama ou a biblioteca de modelos.' }],
+        callouts: [{ type: 'info', text: 'Esta página não fixa um número de versão de propósito, já que o Ollama lança novas versões continuamente. Sempre confira github.com/ollama/ollama/releases para a versão atual.' }],
       },
       faq: {
         id: 'faq',
@@ -554,9 +549,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Versión más reciente de Ollama 2026 | PromptQuorum',
     metaDescription: 'Consulta la versión actual de Ollama en GitHub. Ejecuta ollama --version. Linux: relanza el script de instalación; Mac/Windows: descarga desde ollama.com.',
     publishDate: '2026-05-18',
-    dateModified: '2026-06-21',
+    dateModified: '2026-08-28',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-06-18',
+    next_refresh_due: '2026-11-28',
     is_living_page: true,
     quickAnswerTop: {
       es: {
@@ -584,9 +579,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Dónde comprobar la versión de Ollama',
         content: [
-          '<strong>A mayo de 2026, la última versión estable de Ollama está disponible en github.com/ollama/ollama/releases — esa página muestra el número de versión exacto y las notas de lanzamiento. Esta página se actualiza mensualmente — última verificación mayo 2026.</strong>',
+          '<strong>La última versión estable de Ollama siempre está disponible en github.com/ollama/ollama/releases — esa página muestra el número de versión exacto y las notas de lanzamiento.</strong>',
           'Ejecuta <code>ollama --version</code> en una terminal para ver tu versión instalada. La salida es una sola línea. Si la página de lanzamientos de GitHub muestra un número de versión superior, tu instalación está desactualizada.',
-          'Las nuevas familias de modelos — incluyendo Llama 3.3 y Qwen 3 — requieren una versión mínima de Ollama para cargarse correctamente. Los lanzamientos recientes también incluyen carga GGUF más rápida y mejor gestión de contexto multi-GPU — mejoras que se acumulan en el uso diario.',
+          'Las nuevas familias de modelos — incluyendo gpt-oss y Qwen3.5 — requieren una versión mínima de Ollama para cargarse correctamente. Los lanzamientos recientes también incluyen carga GGUF más rápida y mejor gestión de contexto multi-GPU — mejoras que se acumulan en el uso diario.',
         ],
       },
       body2: {
@@ -643,9 +638,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'إصدار ⁨Ollama⁩ الأحدث ⁨2026⁩: فحص وتحديث سريع',
     metaDescription: 'شغّل ⁨ollama --version⁩ لمعرفة إصدارك المثبّت. ⁨Linux⁩: أعد سكريبت التثبيت بأمر واحد. ⁨Mac⁩ و⁨Windows⁩: حمّل المثبّت من ⁨ollama.com⁩. النماذج لا تُحذف.',
     publishDate: '2026-05-18',
-    dateModified: '2026-06-21',
+    dateModified: '2026-08-28',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-06-18',
+    next_refresh_due: '2026-11-28',
     is_living_page: true,
     quickAnswerTop: {
       ar: {
@@ -673,9 +668,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'أين تتحقق من إصدار Ollama',
         content: [
-          '<strong>في مايو 2026، أحدث إصدار مستقر من Ollama متاح على github.com/ollama/ollama/releases — تلك الصفحة تعرض رقم الإصدار الدقيق وملاحظات الإصدار. هذه الصفحة تُحدَّث شهرياً — آخر تحقق مايو 2026.</strong>',
+          '<strong>أحدث إصدار مستقر من Ollama متاح دائمًا على github.com/ollama/ollama/releases — تلك الصفحة تعرض رقم الإصدار الدقيق وملاحظات الإصدار.</strong>',
           'شغّل <code>ollama --version</code> في طرفية لمعرفة إصدارك المثبّت. المخرجات سطر واحد. إذا أظهرت صفحة إصدارات GitHub رقماً أعلى، فإصدارك قديم.',
-          'عائلات النماذج الجديدة — بما فيها Llama 3.3 وQwen 3 — تتطلب حداً أدنى من إصدار Ollama لتُحمَّل بشكل صحيح. تتضمن الإصدارات الأخيرة أيضاً تحميلاً أسرع لـ GGUF وإدارة أفضل للسياق متعدد GPU — تحسينات تتراكم في الاستخدام اليومي.',
+          'عائلات النماذج الجديدة — بما فيها gpt-oss وQwen3.5 — تتطلب حداً أدنى من إصدار Ollama لتُحمَّل بشكل صحيح. تتضمن الإصدارات الأخيرة أيضاً تحميلاً أسرع لـ GGUF وإدارة أفضل للسياق متعدد GPU — تحسينات تتراكم في الاستخدام اليومي.',
         ],
       },
       body2: {
@@ -692,7 +687,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { 'المنصة': 'Windows', 'طريقة التحديث': 'إعادة تنزيل .exe من ollama.com', 'ملاحظات': 'شغّل المثبّت، النماذج محفوظة' },
         ],
         codeBlock: 'curl -fsSL https://ollama.com/install.sh | sh',
-        callouts: [{ type: 'info', text: 'آخر تحقق: مايو 2026. إذا بدت البيانات أعلاه قديمة، راجع صفحة إصدارات GitHub الرسمية لـ Ollama أو مكتبة النماذج.' }],
+        callouts: [{ type: 'info', text: 'لا تُثبّت هذه الصفحة رقم إصدار عمدًا، لأن Ollama يصدر إصدارات جديدة باستمرار. راجع دائمًا github.com/ollama/ollama/releases للإصدار الحالي.' }],
       },
       faq: {
         id: 'faq',
@@ -732,9 +727,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     seoTitle: 'Ollama 최신 버전 2026 | Prompt Bites | PromptQuorum',
     metaDescription: 'ollama --version 명령으로 설치된 버전을 확인하십시오. GitHub 릴리스 페이지에서 최신 버전을 확인할 수 있습니다. Linux는 설치 스크립트 재실행, Mac/Windows는 ollama.com에서 재다운로드하십시오.',
     publishDate: '2026-05-18',
-    dateModified: '2026-06-21',
+    dateModified: '2026-08-28',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-06-18',
+    next_refresh_due: '2026-11-28',
     is_living_page: true,
     quickAnswerTop: {
       ko: {
@@ -762,9 +757,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Ollama 버전을 확인하는 방법',
         content: [
-          '<strong>2026년 5월 기준, 최신 안정 버전 Ollama 릴리스는 github.com/ollama/ollama/releases에서 확인할 수 있습니다 — 해당 페이지에서 정확한 버전 번호와 릴리스 노트를 확인할 수 있습니다. 이 페이지는 매월 업데이트됩니다 — 최종 확인: 2026년 5월.</strong>',
+          '<strong>최신 안정 버전 Ollama 릴리스는 항상 github.com/ollama/ollama/releases에서 확인할 수 있습니다 — 해당 페이지에서 정확한 버전 번호와 릴리스 노트를 볼 수 있습니다.</strong>',
           '터미널에서 <code>ollama --version</code>을 실행하면 설치된 빌드를 확인할 수 있습니다. 출력은 한 줄입니다. GitHub 릴리스 페이지에 더 높은 버전 번호가 표시되면 현재 설치가 오래된 것입니다.',
-          'Llama 3.3 및 Qwen 3을 포함한 새로운 모델 계열은 올바르게 로드하기 위해 최소 Ollama 버전이 필요합니다. 최신 릴리스에는 더 빠른 GGUF 로딩과 향상된 멀티 GPU 컨텍스트 처리가 포함되어 있으며, 이러한 개선 사항은 일상적인 사용에서 누적됩니다.',
+          'gpt-oss 및 Qwen3.5를 포함한 새로운 모델 계열은 올바르게 로드하기 위해 최소 Ollama 버전이 필요합니다. 최신 릴리스에는 더 빠른 GGUF 로딩과 향상된 멀티 GPU 컨텍스트 처리가 포함되어 있으며, 이러한 개선 사항은 일상적인 사용에서 누적됩니다.',
         ],
       },
       body2: {
@@ -781,7 +776,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           { '플랫폼': 'Windows', '업데이트 방법': 'ollama.com에서 .exe 재다운로드', '참고 사항': '설치 프로그램 실행, 모델 유지' },
         ],
         codeBlock: 'curl -fsSL https://ollama.com/install.sh | sh',
-        callouts: [{ type: 'info', text: '최종 확인: 2026년 5월. 위의 데이터가 오래된 것으로 보이면 공식 Ollama GitHub 릴리스 페이지 또는 모델 라이브러리를 확인하십시오.' }],
+        callouts: [{ type: 'info', text: 'Ollama가 지속적으로 새 버전을 출시하므로, 이 페이지는 의도적으로 특정 버전 번호를 고정하지 않습니다. 항상 github.com/ollama/ollama/releases에서 현재 버전을 확인하십시오.' }],
       },
       faq: {
         id: 'faq',
