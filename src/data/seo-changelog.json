@@ -372,5 +372,29 @@
       "ctr": 0.00999957083386979,
       "period": "2026-07-31 to 2026-08-27"
     }
+  },
+  {
+    "id": "8b214ec6-b6f1-4dfd-a13e-e8a945177d02",
+    "slug": "/local-llms/apple-silicon-m5-local-llm",
+    "date": "2026-08-28T19:15:46.834Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "M5 Pro vs M5 Max 2026: Apple Silicon Benchmark Comparison",
+        "new": "M5 Pro vs M5 Max 2026: Bandwidth, Speed & LLM Benchmarks"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Compare Apple M5 Pro, M5 Max, and M5 Ultra for local LLM: Mac mini, Mac Studio, MacBook Pro unified memory, bandwidth, tokens/sec benchmarks. 2026 guide.",
+        "new": "M5 Pro vs M5 Max bandwidth (307-614 GB/s), tokens/sec benchmarks, and how to speed up Ollama on Apple Silicon M5. Mac mini, Studio, MacBook Pro compared."
+      }
+    ],
+    "reason": "geo-meta-optimizer coherence-B2 fix: single largest query on the page ('ollama macbook pro m5 speed optimization', 273 impr, pos 7.7, 0% CTR — more than the next 3 queries combined) had no matching content anywhere on the page. Added a new 'How to Speed Up Ollama on Apple Silicon M5' section (concrete tuning: ollama ps GPU-offload check, freeing unified memory, num_ctx, quantization choice, MacBook Pro thermal/power management, OLLAMA_MAX_LOADED_MODELS) plus a matching FAQ entry, in all 9 locales (FR required syncing both faqs[] and the separate faqSchema.mainEntity[] it maintains). Bandwidth cluster (~242 impr across 10 query variants, ~0% CTR) was already well-covered in the body (307/460/614 GB/s, up to 1.2 TB/s) — Diagnosis A, fixed via title/meta wording only, no body change needed there. Comparison-cluster queries left untouched (already converting 11-20% in places).",
+    "baseline": {
+      "impressions": 34797,
+      "clicks": 257,
+      "ctr": 0.007385694169037561,
+      "period": "2026-07-31 to 2026-08-27"
+    }
   }
 ]
