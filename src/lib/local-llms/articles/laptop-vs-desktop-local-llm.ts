@@ -21,7 +21,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       intro: 'Laptops are portable but thermally limited (7-13B models max, ~15 tok/sec, throttle after 15-20 min). Desktops offer unlimited scalability (any model, 100+ tok/sec, no throttle). The cost gap: $19 per tok/sec (desktop) vs $100+ per tok/sec (laptop). Choose laptop for mobility, desktop for power and reliability.',
       metaDescription: 'Desktop RTX 4070 Ti: 80 tok/sec sustained at $19/tok/sec. MacBook M5 Max: 55-70 tok/sec (est.), throttles after 15-18 min, $100/tok/sec. Full thermal data, cost analysis, M5 Max 70B capability, and 2026 buying guide.',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-26',
+      dateModified: '2026-08-28',
       leadAnswerBlock: '**Laptops are portable but thermally limited (7-13B models max, ~15 tok/sec, throttle after 15-20 min). Desktops offer unlimited scalability (any model, 100+ tok/sec, no throttle). The cost gap: $19 per tok/sec (desktop) vs $100+ per tok/sec (laptop). Choose laptop for mobility, desktop for power and reliability.**',
       audience: 'Beginners running their first local LLM on consumer hardware',
       readTime: '9 min read',
@@ -50,6 +50,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Laptops are portable but thermally limited to 7-13B models at around 15 tokens/sec before throttling within 15-20 minutes, while desktops scale to any model size at 100+ tokens/sec with no throttling, at roughly $19 per tok/sec versus $100+ per tok/sec on a laptop.' },
+            { type: 'plain-terms', text: "A laptop is great if you need to run a model on the go, but its cooling system can't sustain full speed for long -- expect it to slow down after 15-20 minutes of heavy use. A desktop has no such limit and costs far less per unit of speed, since laptop chips carry a steep premium for fitting into a thin, battery-powered chassis. Pick a laptop for mobility, a desktop if raw performance and value matter more." },
+          ],
           items: [
             '**Desktop wins on performance**: RTX 4070 Ti delivers 80 tok/sec sustained; MacBook Pro M5 Max reaches 55-70 tok/sec (est.) before throttling.',
             '**Thermal throttling is critical**: MacBook M5 Max throttles after 15-18 minutes; desktops run 24/7 with no performance drop.',
@@ -291,7 +295,7 @@ schema: {
         'description': 'Desktop RTX 4070 Ti: 80 tok/sec sustained at $19/tok/sec. MacBook M5 Max: 55-70 tok/sec (est.), throttles after 15-18 min, $50-70/tok/sec. Full thermal data, cost analysis, M5 Max 70B capability, and 2026 buying guide.',
         'url': 'https://www.promptquorum.com/local-llms/laptop-vs-desktop-local-llm',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-08-26',
+        'dateModified': '2026-08-28',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Beginner',
@@ -375,7 +379,7 @@ schema: {
       intro: 'Los laptops son portátiles pero están limitados térmicamente (máximo modelos 7-13B, ~15 tok/seg, throttling después de 15-20 min). Los escritorios ofrecen escalabilidad ilimitada (cualquier modelo, 100+ tok/seg, sin throttling). La brecha de costo: $19 por tok/seg (escritorio) vs $100+ por tok/seg (laptop). Elige laptop para movilidad, escritorio para potencia y fiabilidad.',
       metaDescription: 'Escritorio RTX 4070 Ti: 80 tok/s sostenidos a $19/tok/s. MacBook M5 Max: 55–70 tok/s, con throttling tras 15–18 min, $100/tok/s. Datos térmicos y de costos.',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-26',
+      dateModified: '2026-08-28',
       leadAnswerBlock: '**Los laptops son portátiles pero están limitados térmicamente (máximo modelos 7-13B, ~15 tok/seg, throttling después de 15-20 min). Los escritorios ofrecen escalabilidad ilimitada (cualquier modelo, 100+ tok/seg, sin throttling). La brecha de costo: $19 por tok/seg (escritorio) vs $100+ por tok/seg (laptop). Elige laptop para movilidad, escritorio para potencia y fiabilidad.**',
       audience: 'Principiantes que ejecutan su primer LLM local en hardware de consumo',
       readTime: '9 min de lectura',
@@ -403,6 +407,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Los portátiles son portátiles pero están limitados térmicamente a modelos de 7-13B a unos 15 tokens/seg antes de bajar de rendimiento en 15-20 minutos, mientras que los sobremesa escalan a cualquier tamaño de modelo a 100+ tokens/seg sin throttling, a aproximadamente 19$ por tok/seg frente a 100$+ por tok/seg en un portátil.' },
+            { type: 'plain-terms', text: 'Un portátil es genial si necesitas ejecutar un modelo mientras te desplazas, pero su sistema de refrigeración no puede mantener la velocidad máxima durante mucho tiempo -- espera que se ralentice tras 15-20 minutos de uso intenso. Un sobremesa no tiene ese límite y cuesta mucho menos por unidad de velocidad, ya que los chips de portátil llevan un sobrecoste considerable por encajar en un chasis fino y alimentado por batería. Elige un portátil por movilidad, un sobremesa si el rendimiento puro y el valor importan más.' },
+          ],
           items: [
             '**El escritorio gana en rendimiento**: RTX 4070 Ti entrega 80 tok/seg sostenidos; MacBook Pro M5 Max alcanza 55-70 tok/seg (est.) antes del throttling.',
             '**El throttling térmico es crítico**: MacBook M5 Max hace throttling después de 15-18 minutos; los escritorios funcionan 24/7 sin caída de rendimiento.',
@@ -644,7 +652,7 @@ schema: {
         'description': 'Escritorio RTX 4070 Ti: 80 tok/seg sostenido a $19/tok/seg. MacBook M5 Max: 55-70 tok/seg (est.), throttling después de 15-18 min, $50-70/tok/seg. Datos térmicos completos, análisis de costos, capacidad 70B del M5 Max y guía de compra 2026.',
         'url': 'https://www.promptquorum.com/es/local-llms/laptop-vs-desktop-local-llm',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-08-26',
+        'dateModified': '2026-08-28',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Beginner',
@@ -728,7 +736,7 @@ schema: {
       intro: 'الحواسيب المحمولة قابلة للحمل لكنها محدودة حراريًا (نماذج 7-13B كحد أقصى، ~15 tok/sec، اختناق بعد 15-20 دقيقة). توفر الحواسيب المكتبية توسّعًا غير محدود (أي نموذج، 100+ tok/sec، دون اختناق). فجوة التكلفة: 19$ لكل tok/sec (مكتبي) مقابل 100$+ لكل tok/sec (محمول). اختر المحمول للتنقل، والمكتبي للقوة والموثوقية.',
       metaDescription: 'مكتبي ⁨RTX 4070 Ti⁩ يُنتج ⁨80 tok/s⁩ مستدامة بـ ⁨19⁩$/⁨tok/s⁩؛ ⁨MacBook M5 Max⁩ يختنق بعد ⁨18⁩ دقيقة عند ⁨100⁩$/⁨tok/s⁩. مقارنة حرارية وتكلفة شاملة.',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-26',
+      dateModified: '2026-08-28',
       leadAnswerBlock: '**الحواسيب المحمولة قابلة للحمل لكنها محدودة حراريًا (نماذج 7-13B كحد أقصى، ~15 tok/sec، اختناق بعد 15-20 دقيقة). توفر الحواسيب المكتبية توسّعًا غير محدود (أي نموذج، 100+ tok/sec، دون اختناق). فجوة التكلفة: 19$ لكل tok/sec (مكتبي) مقابل 100$+ لكل tok/sec (محمول). اختر المحمول للتنقل، والمكتبي للقوة والموثوقية.**',
       audience: 'المبتدئون الذين يشغّلون أول نموذج LLM محلي على أجهزة استهلاكية',
       readTime: '9 دقائق للقراءة',
@@ -756,6 +764,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'أجهزة الكمبيوتر المحمولة قابلة للنقل لكنها محدودة حرارياً بنماذج 7-13B بسرعة نحو 15 token/ثانية قبل أن يبدأ التقييد الحراري خلال 15-20 دقيقة، بينما تتوسع أجهزة سطح المكتب لأي حجم نموذج بسرعة 100+ token/ثانية دون تقييد، بتكلفة نحو 19$ لكل tok/ثانية مقابل 100$+ لكل tok/ثانية على كمبيوتر محمول.' },
+            { type: 'plain-terms', text: 'الكمبيوتر المحمول رائع إذا كنت بحاجة لتشغيل نموذج أثناء التنقل، لكن نظام تبريده لا يمكنه الحفاظ على السرعة الكاملة لفترة طويلة -- توقّع أن يتباطأ بعد 15-20 دقيقة من الاستخدام المكثف. جهاز سطح المكتب لا يملك هذا القيد ويكلّف أقل بكثير لكل وحدة سرعة، لأن رقائق الكمبيوتر المحمول تحمل تكلفة إضافية كبيرة لتناسب هيكلاً رقيقاً يعمل بالبطارية. اختر كمبيوتراً محمولاً للتنقل، وسطح مكتب إذا كان الأداء الخام والقيمة أهم.' },
+          ],
           items: [
             '**يفوز المكتبي في الأداء**: تقدّم RTX 4070 Ti 80 tok/sec مستدامة؛ ويبلغ MacBook Pro M5 Max 55-70 tok/sec (تقديري) قبل الاختناق.',
             '**الاختناق الحراري حاسم**: يختنق MacBook M5 Max بعد 15-18 دقيقة؛ بينما تعمل الحواسيب المكتبية 24/7 دون انخفاض في الأداء.',
@@ -997,7 +1009,7 @@ schema: {
         'description': 'مكتبي RTX 4070 Ti: 80 tok/sec مستدامة بـ 19$/tok/sec. MacBook M5 Max: 55-70 tok/sec (تقديري)، اختناق بعد 15-18 دقيقة، 50$-70$/tok/sec. بيانات حرارية كاملة وتحليل تكلفة وقدرة M5 Max على 70B ودليل شراء 2026.',
         'url': 'https://www.promptquorum.com/ar/local-llms/laptop-vs-desktop-local-llm',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-08-26',
+        'dateModified': '2026-08-28',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Beginner',
@@ -1101,6 +1113,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Notebooks são portáteis, mas termicamente limitados a modelos de 7-13B a cerca de 15 tokens/seg antes de reduzir o desempenho em 15-20 minutos, enquanto desktops escalam para qualquer tamanho de modelo a 100+ tokens/seg sem redução, a cerca de $19 por tok/seg contra $100+ por tok/seg em um notebook.' },
+            { type: 'plain-terms', text: 'Um notebook é ótimo se você precisa rodar um modelo em movimento, mas seu sistema de resfriamento não consegue manter a velocidade máxima por muito tempo -- espere que ele desacelere após 15-20 minutos de uso intenso. Um desktop não tem esse limite e custa muito menos por unidade de velocidade, já que os chips de notebook carregam um sobrepreço considerável por caber em um chassi fino e alimentado por bateria. Escolha um notebook pela mobilidade, um desktop se desempenho puro e custo-benefício importam mais.' },
+          ],
           items: [
             'Desktop (RTX 4070 Ti): 80 tok/s sustentados, $19/tok/s, modelos ilimitados. Melhor para uso regular.',
             'MacBook M5 Max: 55–70 tok/s, throttling após 15–18 min, $100+/tok/s. Melhor para mobilidade.',
@@ -1228,7 +1244,7 @@ schema: {
       intro: 'Laptops sind tragbar, aber thermisch begrenzt (7–13B-Modelle maximal, ~15 Tok/Sek). Desktops bieten unbegrenzte Skalierbarkeit (beliebige Modelle, 100+ Tok/Sek). Stand April 2026: Laptop für Mobilität, Desktop für Leistung.',
       metaDescription: 'RTX 4070 Ti: 80 Tok/Sek, 21 €/Tok/Sek. MacBook M4 Max: 35 Tok/Sek, Drosselung nach 18 Min. 70B-Modelle: Desktop oder Mac Studio. Kaufratgeber 2026.',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-26',
+      dateModified: '2026-08-28',
       leadAnswerBlock: '**Laptops sind tragbar, aber thermisch begrenzt (7–13B-Modelle maximal, ~15 Tok/Sek). Desktops bieten unbegrenzte Skalierbarkeit (beliebige Modelle, 100+ Tok/Sek). Stand April 2026: Laptop für Mobilität, Desktop für Leistung.**',
       audience: 'Einsteiger, die ihr erstes lokales LLM auf Consumer-Hardware betreiben',
       readTime: '9 Min. Lesezeit',
@@ -1253,6 +1269,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Laptops sind portabel, aber thermisch auf 7-13B-Modelle bei etwa 15 Tokens/Sekunde begrenzt, bevor sie innerhalb von 15-20 Minuten drosseln, während Desktops auf jede Modellgröße bei 100+ Tokens/Sekunde ohne Drosselung skalieren, für etwa 19 $ pro Tok/Sek. gegenüber 100 $+ pro Tok/Sek. bei einem Laptop.' },
+            { type: 'plain-terms', text: 'Ein Laptop ist großartig, wenn man ein Modell unterwegs ausführen muss, aber seine Kühlung kann die volle Geschwindigkeit nicht lange halten -- nach 15-20 Minuten intensiver Nutzung wird er langsamer. Ein Desktop hat diese Grenze nicht und kostet pro Geschwindigkeitseinheit deutlich weniger, da Laptop-Chips einen erheblichen Aufpreis dafür tragen, in ein dünnes, batteriebetriebenes Gehäuse zu passen. Für Mobilität ein Laptop, für rohe Leistung und Preis-Leistung ein Desktop.' },
+          ],
           items: [
             '**Desktop gewinnt bei der Leistung**: RTX 4070 Ti liefert dauerhaft 80 Tok/Sek; MacBook Pro M4 Max erreicht 35 Tok/Sek, bevor es drosselt.',
             '**Thermisches Throttling ist entscheidend**: MacBook M4 Max drosselt nach 18 Minuten; Desktops laufen rund um die Uhr ohne Leistungsabfall.',
@@ -1464,7 +1484,7 @@ schema: {
         'description': 'RTX 4070 Ti: 80 Tok/Sek, 21 €/Tok/Sek. MacBook M4 Max: 35 Tok/Sek, Drosselung nach 18 Min. 70B-Modelle: Desktop oder Mac Studio. Kaufratgeber 2026.',
         'url': 'https://www.promptquorum.com/de/local-llms/laptop-vs-desktop-local-llm',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-08-26',
+        'dateModified': '2026-08-28',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Beginner',
@@ -1555,7 +1575,7 @@ schema: {
       intro: 'Les laptops sont portables mais thermiquement limités (modèles 7–13B max, ~15 tok/s). Les bureaux offrent une scalabilité illimitée (n\'importe quel modèle, 100+ tok/s). En avril 2026 : laptop pour la mobilité, bureau pour la puissance.',
       metaDescription: 'RTX 4070 Ti : 80 tok/s, 21 €/tok/s. MacBook M4 Max : 35 tok/s, throttling après 18 min. Modèles 70B nécessitent un bureau. Guide d\'achat avril 2026.',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-26',
+      dateModified: '2026-08-28',
       leadAnswerBlock: '**Les laptops sont portables mais thermiquement limités (modèles 7–13B max, ~15 tok/s). Les bureaux offrent une scalabilité illimitée (n\'importe quel modèle, 100+ tok/s). En avril 2026 : laptop pour la mobilité, bureau pour la puissance.**',
       audience: 'Débutants configurant leur premier LLM local sur du matériel grand public',
       readTime: '9 min de lecture',
@@ -1580,6 +1600,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: "Les ordinateurs portables sont mobiles mais thermiquement limités aux modèles 7-13B à environ 15 tokens/sec avant de brider après 15-20 minutes, tandis que les ordinateurs de bureau montent en charge sur n'importe quelle taille de modèle à 100+ tokens/sec sans bridage, pour environ 19 $ par tok/sec contre 100 $+ par tok/sec sur un portable." },
+            { type: 'plain-terms', text: "Un portable est idéal pour faire tourner un modèle en déplacement, mais son système de refroidissement ne peut pas maintenir la vitesse maximale longtemps -- attendez-vous à un ralentissement après 15-20 minutes d'usage intensif. Un ordinateur de bureau n'a pas cette limite et coûte bien moins par unité de vitesse, car les puces de portable portent une prime importante pour tenir dans un boîtier fin alimenté par batterie. Choisissez un portable pour la mobilité, un bureau si la performance brute et le rapport qualité-prix comptent plus." },
+          ],
           items: [
             '**Le bureau gagne en performance** : RTX 4070 Ti délivre 80 tok/s en continu ; MacBook Pro M4 Max atteint 35 tok/s avant throttling.',
             '**Le throttling thermique est critique** : MacBook M4 Max bride après 18 minutes ; les bureaux fonctionnent 24h/24 sans perte de performance.',
@@ -1782,7 +1806,7 @@ schema: {
         'description': 'RTX 4070 Ti : 80 tok/s, 21 €/tok/s. MacBook M4 Max : 35 tok/s, throttling après 18 min. Modèles 70B nécessitent un bureau. Guide d\'achat avril 2026.',
         'url': 'https://www.promptquorum.com/fr/local-llms/laptop-vs-desktop-local-llm',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-08-26',
+        'dateModified': '2026-08-28',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Beginner',
@@ -1860,11 +1884,11 @@ schema: {
       title: 'ローカルLLM向けラップトップ vs デスクトップ 2026：コスト・速度・70B対応能力',
       heroImage: '/images/laptop-vs-desktop-local-llm-overview-hero-ja.webp',
       seoTitle: 'ローカルLLM向けラップトップ vs デスクトップ 2026：購入ガイド',
-      intro: 'ラップトップは携帯性に優れますが熱的制約があります（最大7〜13Bモデル、約15トークン/秒）。デスクトップは無限のスケーラビリティを提供します（任意のモデル、100トークン/秒以上）。2026年4月現在：移動性ならラップトップ、性能ならデスクトップを選択してください。',
+      intro: 'ラップトップは携帯性に優れますが熱的制約があります（最大7〜13Bモデル、約15トークン/秒）。デスクトップは無限のスケーラビリティを提供します（任意のモデル、100トークン/秒以上）。移動性ならラップトップ、性能ならデスクトップを選択してください。',
       metaDescription: 'RTX 4070 Ti：80トークン/秒、コスト19ドル/トークン/秒。MacBook M4 Max：35トークン/秒（18分後にスロットリング）、約100ドル/トークン/秒。70Bモデルの実行にはデスクトップまたはMac Studio M5 Maxが必要。2026年8月更新の購入ガイド。',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-26',
-      leadAnswerBlock: '**ラップトップは携帯性に優れますが熱的制約があります（最大7〜13Bモデル、約15トークン/秒）。デスクトップは無限のスケーラビリティを提供します（任意のモデル、100トークン/秒以上）。2026年4月現在：移動性ならラップトップ、性能ならデスクトップを選択してください。**',
+      dateModified: '2026-08-28',
+      leadAnswerBlock: '**ラップトップは携帯性に優れますが熱的制約があります（最大7〜13Bモデル、約15トークン/秒）。デスクトップは無限のスケーラビリティを提供します（任意のモデル、100トークン/秒以上）。移動性ならラップトップ、性能ならデスクトップを選択してください。**',
       audience: '初めてローカルLLMをコンシューマーハードウェアで動かす初心者',
       readTime: '9分で読める',
       educationalLevel: 'Beginner',
@@ -1888,6 +1912,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'ノートパソコンは持ち運びできますが、熱的な制約により7〜13Bモデルを約15トークン/秒までしか実行できず、15〜20分でスロットリングが始まります。一方デスクトップはどんなモデルサイズでも100トークン/秒以上でスケールし、スロットリングもありません。コストはデスクトップが約19ドル/tok/秒、ノートパソコンは100ドル以上/tok/秒です。' },
+            { type: 'plain-terms', text: '外出先でモデルを実行する必要があるならノートパソコンは優れていますが、冷却システムが最大速度を長く維持できません -- 激しい使用から15〜20分後には速度が落ちると考えてください。デスクトップにはそのような制限がなく、速度あたりのコストもはるかに低くなります。ノートパソコン用チップは薄型でバッテリー駆動の筐体に収めるための割高なコストがかかるためです。可搬性を重視するならノートパソコン、純粋な性能とコストパフォーマンスを重視するならデスクトップを選びましょう。' },
+          ],
           items: [
             '**デスクトップの性能が優位**：RTX 4070 Tiは持続的に80トークン/秒を実現；MacBook Pro M4 Maxはスロットリング前に35トークン/秒でピークに達します。',
             '**熱的スロットリングは重大**：MacBook M4 Maxは18分後にスロットリングが発生；デスクトップは性能低下なく24時間365日稼働します。',
@@ -2090,7 +2118,7 @@ schema: {
         'description': 'RTX 4070 Ti：80トークン/秒、コスト19ドル/トークン/秒。MacBook M4 Max：35トークン/秒（18分後にスロットリング）、約100ドル/トークン/秒。70Bモデルの実行にはデスクトップまたはMac Studio M5 Maxが必要。2026年8月更新の購入ガイド。',
         'url': 'https://www.promptquorum.com/ja/local-llms/laptop-vs-desktop-local-llm',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-08-26',
+        'dateModified': '2026-08-28',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Beginner',
@@ -2168,11 +2196,11 @@ schema: {
       title: '本地LLM笔记本 vs 台式机 2026：成本、速度与70B模型能力',
       heroImage: '/images/laptop-vs-desktop-local-llm-overview-hero-zh.webp',
       seoTitle: '本地LLM笔记本 vs 台式机 2026：成本效率与70B支持对比',
-      intro: '笔记本便于携带但受散热限制（最大7~13B模型，约15令牌/秒）。台式机提供无限扩展能力（任意模型，100令牌/秒以上）。2026年4月：移动性选笔记本，性能选台式机。',
+      intro: '笔记本便于携带但受散热限制（最大7~13B模型，约15令牌/秒）。台式机提供无限扩展能力（任意模型，100令牌/秒以上）。移动性选笔记本，性能选台式机。',
       metaDescription: 'RTX 4070 Ti：80令牌/秒，成本19美元/令牌/秒。MacBook M4 Max：35令牌/秒（18分钟后降频），约100美元/令牌/秒。运行70B模型需要台式机或Mac Studio M5 Max。2026年8月更新的购买指南。',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-26',
-      leadAnswerBlock: '**笔记本便于携带但受散热限制（最大7~13B模型，约15令牌/秒）。台式机提供无限扩展能力（任意模型，100令牌/秒以上）。2026年4月：移动性选笔记本，性能选台式机。**',
+      dateModified: '2026-08-28',
+      leadAnswerBlock: '**笔记本便于携带但受散热限制（最大7~13B模型，约15令牌/秒）。台式机提供无限扩展能力（任意模型，100令牌/秒以上）。移动性选笔记本，性能选台式机。**',
       audience: '首次在消费级硬件上运行本地LLM的初级用户',
       readTime: '阅读约9分钟',
       educationalLevel: 'Beginner',
@@ -2196,6 +2224,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: '笔记本电脑便携但受散热限制，只能在约15 token/秒的速度下运行7-13B模型，15-20分钟后就会开始降频；而台式机可以在无降频的情况下以100+ token/秒运行任意大小的模型，成本约为每tok/秒19美元，而笔记本电脑则超过每tok/秒100美元。' },
+            { type: 'plain-terms', text: '如果你需要在外出时运行模型，笔记本电脑很不错，但它的散热系统无法长时间维持最高速度——预计在高强度使用15-20分钟后就会降速。台式机没有这个限制，而且每单位速度的成本要低得多，因为笔记本芯片为了塞进轻薄、靠电池供电的机身，要承担相当高的溢价。想要便携性选笔记本电脑，想要极致性能和性价比就选台式机。' },
+          ],
           items: [
             '**台式机性能占优**：RTX 4070 Ti持续输出80令牌/秒；MacBook Pro M4 Max在降频前峰值达35令牌/秒。',
             '**散热降频至关重要**：MacBook M4 Max 18分钟后降频；台式机全天候运行无性能损失。',
@@ -2398,7 +2430,7 @@ schema: {
         'description': 'RTX 4070 Ti：80令牌/秒，成本19美元/令牌/秒。MacBook M4 Max：35令牌/秒（18分钟后降频），约100美元/令牌/秒。运行70B模型需要台式机或Mac Studio M5 Max。2026年8月更新的购买指南。',
         'url': 'https://www.promptquorum.com/zh/local-llms/laptop-vs-desktop-local-llm',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-08-26',
+        'dateModified': '2026-08-28',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Beginner',
@@ -2482,7 +2514,7 @@ schema: {
       intro: '노트북은 휴대성이 있지만 열 제한이 있습니다(최대 7-13B 모델, ~15 tok/sec, 15-20분 후 스로틀링). 데스크톱은 무제한 확장성을 제공합니다(모든 모델, 100+ tok/sec, 스로틀링 없음). 비용 격차: 데스크톱은 tok/sec당 $19, 노트북은 tok/sec당 $100 이상입니다. 이동성이 필요하면 노트북을, 성능과 안정성이 필요하면 데스크톱을 선택하십시오.',
       metaDescription: '데스크톱 RTX 4070 Ti: 지속 80 tok/s, tok/s당 $19. MacBook M5 Max: 55-70 tok/s, 15-18분 후 스로틀링, tok/s당 $100. 전체 열 데이터와 비용 분석, 2026 구매 가이드.',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-26',
+      dateModified: '2026-08-28',
       leadAnswerBlock: '**노트북은 휴대성이 있지만 열 제한이 있습니다(최대 7-13B 모델, ~15 tok/sec, 15-20분 후 스로틀링). 데스크톱은 무제한 확장성을 제공합니다(모든 모델, 100+ tok/sec, 스로틀링 없음). 비용 격차: 데스크톱은 tok/sec당 $19, 노트북은 tok/sec당 $100 이상입니다. 이동성이 필요하면 노트북을, 성능과 안정성이 필요하면 데스크톱을 선택하십시오.**',
       audience: '소비자 하드웨어에서 처음으로 로컬 LLM을 실행하는 초보자',
       readTime: '9분 읽기',
@@ -2510,6 +2542,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: '노트북은 휴대성이 좋지만 열 제약으로 7~13B 모델을 초당 약 15토큰 속도로만 실행할 수 있으며 15~20분 후 스로틀링이 시작되는 반면, 데스크톱은 스로틀링 없이 어떤 모델 크기든 초당 100토큰 이상으로 확장되며, 비용은 데스크톱이 tok/초당 약 19달러, 노트북은 tok/초당 100달러 이상입니다.' },
+            { type: 'plain-terms', text: '이동 중에 모델을 실행해야 한다면 노트북이 좋지만, 냉각 시스템이 최고 속도를 오래 유지하지 못합니다 -- 강도 높은 사용 15~20분 후에는 속도가 느려질 것으로 예상하세요. 데스크톱은 그런 제한이 없고 속도 단위당 비용도 훨씬 저렴합니다. 노트북용 칩은 얇고 배터리로 구동되는 본체에 들어가기 위해 상당한 프리미엄을 지불하기 때문입니다. 휴대성을 원한다면 노트북을, 순수 성능과 가성비를 원한다면 데스크톱을 선택하세요.' },
+          ],
           items: [
             '**데스크톱이 성능에서 우세합니다**: RTX 4070 Ti는 지속 80 tok/sec를 제공하며, MacBook Pro M5 Max는 스로틀링 전까지 55-70 tok/sec(추정)에 도달합니다.',
             '**열 스로틀링이 중요합니다**: MacBook M5 Max는 15-18분 후 스로틀링이 발생하며, 데스크톱은 성능 저하 없이 24/7 운영이 가능합니다.',
@@ -2751,7 +2787,7 @@ schema: {
         'description': '데스크톱 RTX 4070 Ti: 지속 80 tok/sec, tok/sec당 $19. MacBook M5 Max: 55-70 tok/sec(추정), 15-18분 후 스로틀링, tok/sec당 $50-70. 전체 열 데이터, 비용 분석, M5 Max 70B 지원 여부, 2026 구매 가이드.',
         'url': 'https://www.promptquorum.com/local-llms/laptop-vs-desktop-local-llm',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-08-26',
+        'dateModified': '2026-08-28',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Beginner',
