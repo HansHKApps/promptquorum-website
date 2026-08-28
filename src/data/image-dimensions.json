@@ -14364,6 +14364,51 @@
     "width": 1200,
     "height": 675
   },
+  "/images/cursor-vs-windsurf-vs-copilot-cline-2026-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/cursor-vs-windsurf-vs-copilot-cline-2026-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/cursor-vs-windsurf-vs-copilot-cline-2026-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/cursor-vs-windsurf-vs-copilot-cline-2026-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/cursor-vs-windsurf-vs-copilot-cline-2026-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/cursor-vs-windsurf-vs-copilot-cline-2026-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/cursor-vs-windsurf-vs-copilot-cline-2026-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/cursor-vs-windsurf-vs-copilot-cline-2026-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/cursor-vs-windsurf-vs-copilot-cline-2026-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
   "/images/deepseek-local-china-data-privacy-2026-hosted-vs-local-comparison-en.svg": {
     "encodingFormat": "image/svg+xml",
     "width": 800,
@@ -20440,6 +20485,51 @@
     "height": 675
   },
   "/images/knowledge-cutoffs-and-geo-search-layer-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/langsmith-vs-helicone-vs-langfuse-overview-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/langsmith-vs-helicone-vs-langfuse-overview-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/langsmith-vs-helicone-vs-langfuse-overview-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/langsmith-vs-helicone-vs-langfuse-overview-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/langsmith-vs-helicone-vs-langfuse-overview-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/langsmith-vs-helicone-vs-langfuse-overview-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/langsmith-vs-helicone-vs-langfuse-overview-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/langsmith-vs-helicone-vs-langfuse-overview-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/langsmith-vs-helicone-vs-langfuse-overview-hero-zh.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675
@@ -31045,6 +31135,51 @@
     "height": 675
   },
   "/images/persona-prompting-overview-hero-zh.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026-hero-ar.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026-hero-de.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026-hero-en.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026-hero-es.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026-hero-fr.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026-hero-ja.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026-hero-ko.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026-hero-pt.webp": {
+    "encodingFormat": "image/webp",
+    "width": 1200,
+    "height": 675
+  },
+  "/images/pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026-hero-zh.webp": {
     "encodingFormat": "image/webp",
     "width": 1200,
     "height": 675

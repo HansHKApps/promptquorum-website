@@ -202,7 +202,7 @@
         },
         {
           "url": "/images/run-first-local-llm-ram-model-picker-en.svg",
-          "title": "First model picker by RAM: 4 GB fits llama3.2:1b (1.3 GB), 8 GB fits Llama 3.2 3B (2 GB, recommended start), 8-16 GB fits Llama 3.3 8B (4.7 GB), 16+ GB fits mistral:7b or qwen2.5:7b (4-5 GB)."
+          "title": "First model picker by RAM: 4 GB fits llama3.2:1b (1.3 GB), 8 GB fits Llama 3.2 3B (2 GB, recommended start), 8-16 GB fits Llama 3.1 8B (4.7 GB), 16+ GB fits mistral:7b or qwen2.5:7b (4-5 GB)."
         }
       ]
     },
@@ -334,7 +334,7 @@
         },
         {
           "url": "/images/local-llm-on-laptop-model-picks-hero-en.webp",
-          "title": "Llama 3.2 3B fits 8 GB laptops at 25-45 tok/s; Llama 3.3 8B needs 16 GB but gives the best quality at this size."
+          "title": "Llama 3.2 3B fits 8 GB laptops at 25-45 tok/s; Llama 3.1 8B needs 16 GB but gives the best quality at this size."
         },
         {
           "url": "/images/apple-silicon-unified-memory.svg",
@@ -427,11 +427,11 @@
       "images": [
         {
           "url": "/images/best-local-llms-2026-ranked-comparison-hero-en.webp",
-          "title": "Top 5 local LLMs ranked for July 2026: Qwen3.6 27B leads overall at 84% MMLU and ~17 GB RAM, followed by Gemma 4 26B-A4B (89% AIME, ~15 GB), Qwen2.5-Coder 7B (88% HumanEval, ~5 GB), Phi-4-mini (~2.5 GB), and Gemma 4 E2B (~2 GB)."
+          "title": "Top 5 local LLMs ranked for August 2026: Qwen3.8-27B leads overall at 89.2% GPQA Diamond and ~24 GB RAM, followed by Gemma 4 26B-A4B (89% AIME, ~15 GB), Qwen2.5-Coder 7B (88% HumanEval, ~5 GB), Phi-4-mini (~2.5 GB), and Gemma 4 E2B (~2 GB)."
         },
         {
           "url": "/images/best-local-llms-2026-ram-tier-picker-hero-en.webp",
-          "title": "RAM tier picker for local LLMs: Gemma 4 E2B fits ~2 GB, Phi-4-mini ~2.5 GB, Qwen2.5-Coder 7B ~5 GB, Gemma 4 26B-A4B ~15 GB, and Qwen3.6 27B needs ~17 GB (24 GB+ recommended)."
+          "title": "RAM tier picker for local LLMs: Gemma 4 E2B fits ~2 GB, Phi-4-mini ~2.5 GB, Qwen2.5-Coder 7B ~5 GB, Gemma 4 26B-A4B ~15 GB, and Qwen3.8-27B needs ~24 GB."
         }
       ]
     },
@@ -547,7 +547,7 @@
       "images": [
         {
           "url": "/images/best-local-llms-for-creative-writing-model-comparison-hero-en.webp",
-          "title": "Creative writing local LLM comparison: Llama 3.3 70B (40GB, best prose), Mistral 24B (14GB, 16GB tier), Llama 3.3 8B (6GB, entry tier)."
+          "title": "Creative writing local LLM comparison: Llama 3.3 70B (40GB, best prose), Mistral 24B (14GB, 16GB tier), Llama 3.1 8B (6GB, entry tier)."
         },
         {
           "url": "/images/best-local-llms-for-creative-writing-quality-spectrum-hero-en.webp",
@@ -582,7 +582,7 @@
         },
         {
           "url": "/images/small-local-llm-models-performance-tier-hero-en.webp",
-          "title": "Performance tiers: MMLU and HumanEval scores show Phi-4 Mini leads on reasoning and coding, Gemma 2 is fastest on CPU, Qwen3 excels at coding."
+          "title": "Performance tiers: Phi-4 Mini leads on reasoning and coding, Gemma 4 E2B leads on context length (128K) at the smallest RAM footprint, Qwen3 excels at coding."
         },
         {
           "url": "/images/small-local-llm-models-quantization-tradeoff-hero-en.webp",
@@ -777,7 +777,7 @@
       ]
     },
     "glm-5-2-open-weights-frontier-2026": {
-      "dateModified": "2026-06-28",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-06-28",
       "hasSections": true,
@@ -795,7 +795,7 @@
       "images": [
         {
           "url": "/images/glm-5-2-intelligence-index-en.svg",
-          "title": "Artificial Analysis Intelligence Index v4.1 (June 2026): Claude Fable 5 scores 56, GLM-5.2 scores 51 (#1 open weights, 4th overall), MiniMax-M3 and DeepSeek V4 Pro both score 44, GLM-5.1 scores 40."
+          "title": "Artificial Analysis Intelligence Index (August 2026): Claude Fable 5 leads at ~62, Kimi K3 (Moonshot AI) is #1 open weights at 57, GLM-5.2 is #2 open weights at ~52.6 (down from #1 at its June 2026 launch), MiniMax-M3 and DeepSeek V4 Pro both score 44."
         },
         {
           "url": "/images/glm-5-2-home-vs-quantized-en.svg",
@@ -885,7 +885,7 @@
       ]
     },
     "text-generation-webui-vs-vllm-vs-llamacpp": {
-      "dateModified": "2026-04-12",
+      "dateModified": "2026-08-27",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -982,7 +982,7 @@
       ]
     },
     "ollama-command-guide": {
-      "dateModified": "2026-04-19",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -1108,8 +1108,8 @@
       "images": []
     },
     "local-llm-hardware-guide-2026": {
-      "dateModified": "2026-08-26",
-      "lastFactChecked": "2026-08-26",
+      "dateModified": "2026-08-27",
+      "lastFactChecked": "2026-08-27",
       "publishDate": "2026-04-04",
       "hasSections": true,
       "langs": [
@@ -1154,7 +1154,7 @@
         },
         {
           "url": "/images/mac-hardware-comparison-en.svg",
-          "title": "Mac hardware comparison: 8 GB M-series (3-4B models), M3 Pro 16\" (18GB, 7-8B), Mac mini M6 (32GB, 8-14B, $899), M5 Pro (64GB, 32B, $1,699), M5 Max (128GB, 70B at Q4_K_M ~12-15 tok/sec, $2,499), Mac Studio M5 Ultra (up to 512GB, 70B+/GLM-5.2 capacity, $5,499). 16 GB unified is the comfortable minimum for 7B models on a Mac."
+          "title": "Mac hardware comparison: 8 GB M-series (3-4B models), M3 Pro 16\" (18GB, 7-8B), Mac mini M6 (32GB, 8-14B, $899), M5 Pro (64GB, 32B, $1,699), M5 Max (128GB, 70B at Q4_K_M ~12-15 tok/sec, $2,499), Mac Studio M5 Ultra (up to 512GB, 70B+/GLM-5.3 capacity, $5,499). 16 GB unified is the comfortable minimum for 7B models on a Mac."
         },
         {
           "url": "/images/server-vs-consumer-en.svg",
@@ -1163,7 +1163,7 @@
       ]
     },
     "vram-calculator-local-llm": {
-      "dateModified": "2026-04-19",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -1193,7 +1193,7 @@
         },
         {
           "url": "/images/vram-calculator-local-llm-gpu-scenarios-en.svg",
-          "title": "Real-world GPU scenarios: RTX 4090 (24 GB), RTX 4080 (16 GB), RTX 4070 Ti (12 GB), M5 Max Mac (36 GB), and RTX 3060 (12 GB) — what Llama 3.3 models each can run at various quantization levels."
+          "title": "Real-world GPU scenarios: RTX 5090 (32 GB), RTX 4090 (24 GB), RTX 5070 Ti (16 GB), M5 Max Mac (36 GB), and RTX 5070 (12 GB) — what different model sizes each can run at various quantization levels."
         },
         {
           "url": "/images/vram-calculator-local-llm-overhead-en.svg",
@@ -1241,7 +1241,7 @@
       ]
     },
     "apple-silicon-vs-nvidia-gpu-local-llm": {
-      "dateModified": "2026-08-26",
+      "dateModified": "2026-08-27",
       "lastFactChecked": null,
       "publishDate": "2026-05-15",
       "hasSections": true,
@@ -1259,7 +1259,7 @@
       "images": []
     },
     "double-local-llm-speed": {
-      "dateModified": "2026-04-19",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -1375,7 +1375,7 @@
       ]
     },
     "multi-gpu-local-llms": {
-      "dateModified": "2026-04-16",
+      "dateModified": "2026-08-27",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -1401,7 +1401,7 @@
         },
         {
           "url": "/images/multi-gpu-local-llms-performance-table-en.svg",
-          "title": "8-row GPU performance comparison for 70B models: single RTX 4090 cannot fit 70B, dual RTX 4090 delivers 100 tok/sec ($3,600), RTX 5090 32GB runs 70B Q4 at 40–50 tok/sec ($2,000), dual RTX 5090 handles 405B Q4 at 25–35 tok/sec ($4,000)."
+          "title": "8-row GPU performance comparison for 70B models: single RTX 4090 cannot fit 70B, dual RTX 4090 delivers 100 tok/sec ($4,600), RTX 5090 32GB runs 70B Q4 at 40–50 tok/sec ($2,000), dual RTX 5090 handles 405B Q4 at 25–35 tok/sec ($4,000)."
         },
         {
           "url": "/images/multi-gpu-local-llms-when-to-use-en.svg",
@@ -2367,7 +2367,7 @@
       "images": [
         {
           "url": "/images/model-selection-business-writing.svg",
-          "title": "Mistral Small 3.1 24B excels at precise, concise emails with best tone control (8-15 sec). Llama 3.3 8B adapts well to brand voice examples (5-10 sec). Qwen3 7B is fastest with native multilingual support for non-English business correspondence (3-8 sec)."
+          "title": "Mistral Small 3.1 24B excels at precise, concise emails with best tone control (8-15 sec). Llama 3.1 8B adapts well to brand voice examples (5-10 sec). Qwen3 7B is fastest with native multilingual support for non-English business correspondence (3-8 sec)."
         },
         {
           "url": "/images/common-mistakes-prevention-en.svg",
@@ -2674,7 +2674,7 @@
         },
         {
           "url": "/images/cloud-gpu-rental-comparison-2026-buy-vs-rent-breakeven-en.svg",
-          "title": "Cost timeline comparing RunPod RTX 4090 rental at $0.50/hr against buying a $1,599 RTX 4090 outright, based on 4 hours of daily use. Renting stays cheaper until roughly 3,200 hours (about 27 months), after which owning the GPU costs less than continued RunPod rental."
+          "title": "Cost timeline comparing RunPod RTX 4090 rental at $0.50/hr against buying a $2,000–2,600 RTX 4090 outright (EOL pricing, August 2026), based on 4 hours of daily use. Renting stays cheaper until roughly 4,600 hours (about 38 months), after which owning the GPU costs less than continued RunPod rental."
         }
       ]
     },
@@ -2848,7 +2848,7 @@
       "images": [
         {
           "url": "/images/m5-pro-max-llm-benchmarks-2026-tokens-per-sec-hero-en.webp",
-          "title": "Tokens/sec by model size: M5 Pro reaches 50–60 tok/s on Llama 3.3 8B Q4 and 8–12 tok/s on 70B Q4; M5 Max nearly doubles both to 100–120 tok/s and 16–22 tok/s; RTX 4090 leads 8B at 80–100 tok/s but cannot fit 34B or 70B in its 24GB VRAM."
+          "title": "Tokens/sec by model size: M5 Pro reaches 50–60 tok/s on Llama 3.1 8B Q4 and 8–12 tok/s on 70B Q4; M5 Max nearly doubles both to 100–120 tok/s and 16–22 tok/s; RTX 4090 leads 8B at 80–100 tok/s but cannot fit 34B or 70B in its 24GB VRAM."
         },
         {
           "url": "/images/m5-pro-max-llm-benchmarks-2026-which-to-buy-hero-en.webp",
@@ -2875,7 +2875,7 @@
       "images": [
         {
           "url": "/images/how-much-unified-memory-for-local-llm-tier-fit-chart-hero-en.webp",
-          "title": "Unified memory tiers 16GB, 36GB, 64GB, and 128GB against five model sizes: Phi-4 3.8B fits every tier, Llama 3.3 8B is tight at 16GB, Llama 3.3 13B needs 36GB minimum, Qwen3 34B needs 64GB, and Llama 3.3 70B needs 128GB."
+          "title": "Unified memory tiers 16GB, 36GB, 64GB, and 128GB against five model sizes: Phi-4 3.8B fits every tier, Llama 3.1 8B is tight at 16GB, Llama 3.3 13B needs 36GB minimum, Qwen3 34B needs 64GB, and Llama 3.3 70B needs 128GB."
         },
         {
           "url": "/images/how-much-unified-memory-for-local-llm-buy-decision-tree-hero-en.webp",
@@ -2933,7 +2933,7 @@
         },
         {
           "url": "/images/ollama-mac-multi-model-memory-budget-en.svg",
-          "title": "Multi-model memory budget on a 36 GB Mac: Llama 3.3 8B (8 GB) + LLaVA 7B Vision (7 GB) + macOS overhead (4 GB) = 19 GB used, leaving 17 GB free with OLLAMA_MAX_LOADED_MODELS=3."
+          "title": "Multi-model memory budget on a 36 GB Mac: Llama 3.1 8B (8 GB) + LLaVA 7B Vision (7 GB) + macOS overhead (4 GB) = 19 GB used, leaving 17 GB free with OLLAMA_MAX_LOADED_MODELS=3."
         }
       ]
     },
@@ -3629,6 +3629,17 @@
           "title": "Decision tree for choosing between the hosted DeepSeek API and self-hosted open weights, based on whether EU personal data is involved and whether local inference infrastructure is available."
         }
       ]
+    },
+    "best-llm-api-gateway-2026": {
+      "dateModified": "2026-08-27",
+      "lastFactChecked": null,
+      "publishDate": "2026-08-27",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de"
+      ],
+      "images": []
     }
   },
   "prompt-engineering": {
@@ -4703,6 +4714,24 @@
       ],
       "images": []
     },
+    "langsmith-vs-helicone-vs-langfuse": {
+      "dateModified": "2026-08-27",
+      "lastFactChecked": "2026-08-27",
+      "publishDate": "2026-08-27",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
     "promptlayer-vs-mirascope-vs-promptperfect": {
       "dateModified": "2026-08-27",
       "lastFactChecked": "2026-08-27",
@@ -4794,7 +4823,7 @@
       "images": []
     },
     "how-to-test-prompts-across-models": {
-      "dateModified": "2026-04-10",
+      "dateModified": "2026-08-27",
       "lastFactChecked": null,
       "publishDate": "2026-04-10",
       "hasSections": true,
@@ -5190,8 +5219,8 @@
       "images": []
     },
     "knowledge-cutoffs-and-geo": {
-      "dateModified": "2026-06-13",
-      "lastFactChecked": "2026-06-13",
+      "dateModified": "2026-08-27",
+      "lastFactChecked": "2026-08-27",
       "publishDate": "2026-06-12",
       "hasSections": true,
       "langs": [
@@ -5219,7 +5248,7 @@
   },
   "power-local-llm": {
     "anythingllm-vs-privategpt-vs-openwebui-rag": {
-      "dateModified": "2026-06-19",
+      "dateModified": "2026-08-27",
       "lastFactChecked": null,
       "publishDate": "2026-05-07",
       "hasSections": true,
@@ -5624,7 +5653,7 @@
       "images": []
     },
     "best-local-ai-app-low-end-pc": {
-      "dateModified": "2026-05-07",
+      "dateModified": "2026-08-27",
       "lastFactChecked": null,
       "publishDate": "2026-05-07",
       "hasSections": true,
@@ -5642,7 +5671,7 @@
       "images": [
         {
           "url": "/images/best-local-ai-app-low-end-pc-tokens-per-sec-en.svg",
-          "title": "Tokens/sec on 8 GB RAM, no GPU: llama.cpp 5–18 tok/s (fastest, requires compile), Ollama 4–14 tok/s (best balance), Jan 3–11 tok/s (best on Apple Silicon), GPT4All 3–10 tok/s (easiest install, 4 GB floor)."
+          "title": "Tokens/sec on 8 GB RAM, no GPU: llama.cpp 5–18 tok/s (fastest, requires compile), Ollama 4–14 tok/s (best balance), Jan 3–11 tok/s (best GUI, Apple Silicon native), GPT4All 3–10 tok/s (4 GB floor, unreleased since Feb 2025)."
         },
         {
           "url": "/images/best-local-ai-app-low-end-pc-ram-budget-en.svg",
@@ -5651,7 +5680,7 @@
       ]
     },
     "best-local-coding-models-2026": {
-      "dateModified": "2026-05-07",
+      "dateModified": "2026-08-27",
       "lastFactChecked": null,
       "publishDate": "2026-05-07",
       "hasSections": true,
@@ -5830,7 +5859,7 @@
       ]
     },
     "chat-with-1000-pdfs-locally": {
-      "dateModified": "2026-05-07",
+      "dateModified": "2026-08-27",
       "lastFactChecked": null,
       "publishDate": "2026-05-07",
       "hasSections": true,
@@ -5869,7 +5898,7 @@
       ]
     },
     "continue-dev-vs-cline-vs-aider-local": {
-      "dateModified": "2026-05-07",
+      "dateModified": "2026-08-27",
       "lastFactChecked": null,
       "publishDate": "2026-05-07",
       "hasSections": true,
@@ -5908,7 +5937,7 @@
       ]
     },
     "local-ai-agents-business-workflows-eu-compliance": {
-      "dateModified": "2026-05-07",
+      "dateModified": "2026-08-27",
       "lastFactChecked": null,
       "publishDate": "2026-05-07",
       "hasSections": true,
@@ -5926,7 +5955,7 @@
       "images": []
     },
     "local-ai-agents-with-mcp-2026": {
-      "dateModified": "2026-05-07",
+      "dateModified": "2026-08-27",
       "lastFactChecked": null,
       "publishDate": "2026-05-07",
       "hasSections": true,
@@ -5948,12 +5977,12 @@
         },
         {
           "url": "/images/local-ai-agents-with-mcp-2026-setup-flow-en.svg",
-          "title": "Six-step Ollama and Goose setup flow: install Ollama, pull a tool-calling model like gemma4:27b, install Goose via pipx, configure the provider, add the filesystem MCP server, and verify with a real task in about 15 minutes."
+          "title": "Six-step Ollama and Goose setup flow: install Ollama, pull a tool-calling model like gemma4:31b, install Goose via pipx, configure the provider, add the filesystem MCP server, and verify with a real task in about 15 minutes."
         }
       ]
     },
     "lm-studio-vs-jan-vs-gpt4all-2026": {
-      "dateModified": "2026-05-07",
+      "dateModified": "2026-08-27",
       "lastFactChecked": null,
       "publishDate": "2026-05-07",
       "hasSections": true,
@@ -5971,15 +6000,15 @@
       "images": [
         {
           "url": "/images/lm-studio-jan-gpt4all-comparison-table-en.svg",
-          "title": "LM Studio vs Jan vs GPT4All feature comparison (2026, tested on M5 MacBook + RTX 4070): LM Studio leads on speed (38 tok/s M5, 74 tok/s RTX 4070) and model library; Jan wins on privacy (zero telemetry, AGPL open-source); GPT4All has the smallest install (290 MB) and lowest RAM requirement (4 GB)."
+          "title": "LM Studio vs Jan vs GPT4All feature comparison (2026, tested on M5 MacBook + RTX 4070): LM Studio leads on speed (38 tok/s M5, 74 tok/s RTX 4070) and model library; Jan wins on privacy (zero telemetry, Apache 2.0 open-source); GPT4All has the smallest install (290 MB) and lowest RAM requirement (4 GB)."
         },
         {
           "url": "/images/lm-studio-jan-gpt4all-verdict-en.svg",
-          "title": "Which local AI desktop app to pick: LM Studio for max speed on RTX 3060+ or M3+ Mac and built-in PDF chat; Jan for AGPL open-source and zero telemetry including EU compliance; GPT4All for older 8 GB RAM hardware or users who want the simplest possible install."
+          "title": "Which local AI desktop app to pick: LM Studio for max speed on RTX 3060+ or M3+ Mac and built-in PDF chat; Jan for Apache 2.0 open-source and zero telemetry including EU compliance; GPT4All for older 8 GB RAM hardware or users who want the simplest possible install."
         },
         {
           "url": "/images/lm-studio-jan-gpt4all-speed-benchmarks-en.svg",
-          "title": "Speed benchmarks on real hardware (Llama 3.3 8B Q4_K_M): LM Studio leads at 38/74/52 tok/s on M5/RTX4070/RTX3060; Jan at 32/65/48 tok/s; GPT4All at 24/52/40 tok/s. CPU-only (Intel Core Ultra 7): LM Studio 11, Jan 10, GPT4All 9 tok/s."
+          "title": "Speed benchmarks on real hardware (Llama 3.1 8B Q4_K_M): LM Studio leads at 38/74/52 tok/s on M5/RTX4070/RTX3060; Jan at 32/65/48 tok/s; GPT4All at 24/52/40 tok/s. CPU-only (Intel Core Ultra 7): LM Studio 11, Jan 10, GPT4All 9 tok/s."
         },
         {
           "url": "/images/lm-studio-jan-gpt4all-ux-onboarding-en.svg",
@@ -5987,12 +6016,12 @@
         },
         {
           "url": "/images/lm-studio-jan-gpt4all-privacy-telemetry-en.svg",
-          "title": "Privacy comparison: Jan has zero telemetry and AGPL open-source code; GPT4All has opt-in-only telemetry and MIT licence; LM Studio has anonymous opt-out telemetry and is proprietary. None of the three send prompts or conversation data anywhere."
+          "title": "Privacy comparison: Jan has zero telemetry and Apache 2.0 open-source code; GPT4All has opt-in-only telemetry and MIT licence; LM Studio has anonymous opt-out telemetry and is proprietary. None of the three send prompts or conversation data anywhere."
         }
       ]
     },
     "local-ai-app-non-technical-users": {
-      "dateModified": "2026-07-08",
+      "dateModified": "2026-08-27",
       "lastFactChecked": null,
       "publishDate": "2026-05-07",
       "hasSections": true,
@@ -6030,12 +6059,12 @@
         },
         {
           "url": "/images/local-ai-nontechnical-lmstudio-mac-speed-en.svg",
-          "title": "LM Studio model speed on Apple Silicon: Phi-4 Mini achieves 55–70 tok/s on M3 8 GB; Llama 3.3 8B Q4_K_M reaches 35–42 tok/s on M3 Pro 16 GB with custom Metal kernels."
+          "title": "LM Studio model speed on Apple Silicon: Phi-4 Mini achieves 55–70 tok/s on M3 8 GB; Llama 3.1 8B Q4_K_M reaches 35–42 tok/s on M3 Pro 16 GB with custom Metal kernels."
         }
       ]
     },
     "local-ai-app-with-built-in-rag": {
-      "dateModified": "2026-06-14",
+      "dateModified": "2026-08-27",
       "lastFactChecked": null,
       "publishDate": "2026-05-07",
       "hasSections": true,
@@ -6053,16 +6082,16 @@
       "images": [
         {
           "url": "/images/local-ai-app-with-built-in-rag-capacity-scorecard-en.svg",
-          "title": "AnythingLLM handles up to 5,000 documents (~50,000 pages) across 10+ file formats; LM Studio supports about 30 documents per chat with 4 formats; Jan + Documents handles about 200 documents with 4 formats and AGPL open-source code."
+          "title": "AnythingLLM handles up to 5,000 documents (~50,000 pages) across 10+ file formats; LM Studio supports about 30 documents per chat with 4 formats; Jan + Documents handles about 200 documents with 4 formats and Apache 2.0 open-source code."
         },
         {
           "url": "/images/local-ai-app-with-built-in-rag-query-accuracy-en.svg",
-          "title": "Query accuracy across 5 test questions on a 1,047-page manual and 412-page paper: AnythingLLM answered 5 of 5 correctly, LM Studio 4 of 5, Jan + Documents 2 of 5, using Llama 3.3 8B as the chat model."
+          "title": "Query accuracy across 5 test questions on a 1,047-page manual and 412-page paper: AnythingLLM answered 5 of 5 correctly, LM Studio 4 of 5, Jan + Documents 2 of 5, using Llama 3.1 8B as the chat model."
         }
       ]
     },
     "local-coding-llm-without-internet": {
-      "dateModified": "2026-05-07",
+      "dateModified": "2026-08-27",
       "lastFactChecked": null,
       "publishDate": "2026-05-07",
       "hasSections": true,
@@ -6101,7 +6130,7 @@
       ]
     },
     "local-llm-code-review-ci-cd": {
-      "dateModified": "2026-05-07",
+      "dateModified": "2026-08-27",
       "lastFactChecked": null,
       "publishDate": "2026-05-07",
       "hasSections": true,
@@ -6230,7 +6259,7 @@
       "images": []
     },
     "local-rag-for-private-business-data": {
-      "dateModified": "2026-05-07",
+      "dateModified": "2026-08-27",
       "lastFactChecked": null,
       "publishDate": "2026-05-07",
       "hasSections": true,
@@ -6248,7 +6277,7 @@
       "images": []
     },
     "local-rag-on-your-pdfs-step-by-step": {
-      "dateModified": "2026-05-07",
+      "dateModified": "2026-08-27",
       "lastFactChecked": null,
       "publishDate": "2026-05-07",
       "hasSections": true,
@@ -6266,15 +6295,15 @@
       "images": [
         {
           "url": "/images/local-rag-on-your-pdfs-step-by-step-rag-architecture-en.svg",
-          "title": "Local RAG stack: Ollama (runtime, localhost:11434), Llama 3.3 8B Q4_K_M (~4.9 GB, answer model), AnythingLLM Desktop (UI + LanceDB vector store), and nomic-embed-text-v1.5 (~280 MB embedder). Data flows: PDFs → AnythingLLM → nomic-embed-text → LanceDB → Llama 3.3 8B → Answer."
+          "title": "Local RAG stack: Ollama (runtime, localhost:11434), Qwen3 8B Q4_K_M (~5.2 GB, answer model), AnythingLLM Desktop (UI + LanceDB vector store), and nomic-embed-text-v1.5 (~274 MB embedder). Data flows: PDFs → AnythingLLM → nomic-embed-text → LanceDB → Qwen3 8B → Answer."
         },
         {
           "url": "/images/local-rag-on-your-pdfs-step-by-step-prerequisites-en.svg",
-          "title": "System requirements: 16 GB RAM (floor for Llama 3.3 8B Q4 + AnythingLLM), 20 GB free disk, 50 Mbps for the model pull. macOS 12+, Windows 10/11, or Linux. No admin needed for AnythingLLM."
+          "title": "System requirements: 16 GB RAM (floor for Qwen3 8B Q4 + AnythingLLM), 20 GB free disk, 50 Mbps for the model pull. macOS 12+, Windows 10/11, or Linux. No admin needed for AnythingLLM."
         },
         {
           "url": "/images/local-rag-on-your-pdfs-step-by-step-model-options-en.svg",
-          "title": "Model options by RAM: Llama 3.3 8B Q4_K_M (~4.9 GB, 16 GB RAM, ~8 min at 50 Mbps) is recommended; Phi-4 Mini Q4 (~2.4 GB, 8 GB RAM, ~4 min) for low-memory machines; Mistral Small Q4_K_M (~4.1 GB, 16 GB RAM, ~7 min) as an alternative."
+          "title": "Model options by RAM: Qwen3 8B Q4_K_M (~5.2 GB, 16 GB RAM, ~8 min at 50 Mbps) is recommended; Phi-4 Mini Q4 (~2.5 GB, 8 GB RAM, ~4 min) for low-memory machines; Mistral Small 4 Q4_K_M (~4.1 GB, 16 GB RAM, ~7 min) as an alternative."
         },
         {
           "url": "/images/local-rag-on-your-pdfs-step-by-step-install-flow-en.svg",
@@ -6282,7 +6311,7 @@
         },
         {
           "url": "/images/local-rag-on-your-pdfs-step-by-step-config-flow-en.svg",
-          "title": "Step 4 in two panels: LLM Preference (Provider = Ollama, Endpoint = http://127.0.0.1:11434, Model = llama3.3:8b-instruct-q4_K_M), then Embedding Preference (pull nomic-embed-text first, then select nomic-embed-text:latest via Ollama)."
+          "title": "Step 4 in two panels: LLM Preference (Provider = Ollama, Endpoint = http://127.0.0.1:11434, Model = qwen3:8b), then Embedding Preference (pull nomic-embed-text first, then select nomic-embed-text:latest via Ollama)."
         },
         {
           "url": "/images/local-rag-on-your-pdfs-step-by-step-embed-flow-en.svg",
@@ -6298,7 +6327,7 @@
         },
         {
           "url": "/images/local-rag-on-your-pdfs-step-by-step-troubleshooting-en.svg",
-          "title": "Six failure modes: connection refused (run ollama serve), stalled pull (Ctrl+C → df -h → retry), hanging embed (wait 30–60 s), off-topic chunks (apply Steps 4 + 7), short/generic answers (set llama3.3:8b-instruct-q4_K_M, bump Top-K), empty chunks from scanned PDFs (run ocrmypdf first)."
+          "title": "Six failure modes: connection refused (run ollama serve), stalled pull (Ctrl+C → df -h → retry), hanging embed (wait 30–60 s), off-topic chunks (apply Steps 4 + 7), short/generic answers (set qwen3:8b, bump Top-K), empty chunks from scanned PDFs (run ocrmypdf first)."
         }
       ]
     },
@@ -6360,7 +6389,7 @@
       ]
     },
     "replace-github-copilot-with-local-llm": {
-      "dateModified": "2026-05-07",
+      "dateModified": "2026-08-27",
       "lastFactChecked": null,
       "publishDate": "2026-05-07",
       "hasSections": true,
@@ -6510,7 +6539,7 @@
       ]
     },
     "local-llm-email-and-calendar-automation": {
-      "dateModified": "2026-05-08",
+      "dateModified": "2026-08-27",
       "lastFactChecked": null,
       "publishDate": "2026-05-07",
       "hasSections": true,
@@ -6783,7 +6812,7 @@
       "images": [
         {
           "url": "/images/build-local-voice-assistant-2026-pipeline-architecture-en.svg",
-          "title": "Offline voice assistant pipeline: whisper.cpp speech-to-text, Ollama-served Llama 3.3 8B for reasoning, and Piper TTS for speech output, connected by a Python orchestrator with an optional OpenWakeWord or Porcupine wake-word gate."
+          "title": "Offline voice assistant pipeline: whisper.cpp speech-to-text, Ollama-served Llama 3.1 8B for reasoning, and Piper TTS for speech output, connected by a Python orchestrator with an optional OpenWakeWord or Porcupine wake-word gate."
         },
         {
           "url": "/images/build-local-voice-assistant-2026-latency-by-hardware-en.svg",
@@ -6884,6 +6913,42 @@
           "title": "Total system cost to run 7B to 96B models locally: NVIDIA wins under $1,500; Apple wins at the 70B tier (Mac Studio M4 Max 64GB ~$3,199 vs $7,000+ multi-GPU system)."
         }
       ]
+    },
+    "cursor-vs-windsurf-vs-copilot-cline-2026": {
+      "dateModified": "2026-08-27",
+      "lastFactChecked": null,
+      "publishDate": "2026-08-27",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "pinecone-vs-weaviate-vs-qdrant-vs-chroma-2026": {
+      "dateModified": "2026-08-27",
+      "lastFactChecked": null,
+      "publishDate": "2026-08-27",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
     },
     "qwen-local-deployment-complete-guide-2026": {
       "dateModified": "2026-08-27",
@@ -8463,7 +8528,7 @@
       "images": []
     },
     "aiModelKnowledgeCutoffDates": {
-      "dateModified": "2026-06-13",
+      "dateModified": "2026-08-27",
       "lastFactChecked": null,
       "publishDate": "2026-06-12",
       "hasSections": true,
