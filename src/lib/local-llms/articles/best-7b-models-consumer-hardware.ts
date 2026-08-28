@@ -111,7 +111,7 @@ schema: {
       },
       toc: [
         { label: 'Quick Facts', anchor: '#quick-facts' },
-        { label: 'TLDR', anchor: '#tldr' },
+        { label: 'TLDR', anchor: '#key-takeaways' },
         { label: '7B Model Comparison Table', anchor: '#table' },
         { label: 'Head-to-Head: Llama 3.1 8B vs Mistral vs Qwen3', anchor: '#comparison' },
         { label: 'Reasoning & Math Performance', anchor: '#reasoning' },
@@ -378,7 +378,7 @@ schema: {
       },
       toc: [
         { label: 'Datos rápidos', anchor: '#quick-facts' },
-        { label: 'Puntos clave', anchor: '#tldr' },
+        { label: 'Puntos clave', anchor: '#key-takeaways' },
         { label: 'Tabla comparativa de modelos 7B', anchor: '#table' },
         { label: 'Cara a cara: Llama 3.1 8B vs Mistral vs Qwen3', anchor: '#comparison' },
         { label: 'Rendimiento en razonamiento y matemáticas', anchor: '#reasoning' },
@@ -648,7 +648,7 @@ schema: {
       },
       toc: [
         { label: 'حقائق سريعة', anchor: '#quick-facts' },
-        { label: 'النقاط الرئيسية', anchor: '#tldr' },
+        { label: 'النقاط الرئيسية', anchor: '#key-takeaways' },
         { label: 'جدول مقارنة نماذج 7B', anchor: '#table' },
         { label: 'وجهًا لوجه: Llama 3.1 8B مقابل Mistral مقابل Qwen3', anchor: '#comparison' },
         { label: 'الأداء في الاستدلال والرياضيات', anchor: '#reasoning' },
@@ -871,7 +871,7 @@ schema: {
       },
       toc: [
         { label: 'Dados rápidos', anchor: '#quick-facts' },
-        { label: 'Pontos-chave', anchor: '#tldr' },
+        { label: 'Pontos-chave', anchor: '#key-takeaways' },
         { label: 'Tabela comparativa de modelos 7B', anchor: '#table' },
         { label: 'Frente a frente: Llama 3.1 8B vs Mistral vs Qwen3', anchor: '#comparison' },
         { label: 'Desempenho em raciocínio e matemática', anchor: '#reasoning' },
@@ -1133,7 +1133,7 @@ schema: {
       },
       toc: [
         { label: 'Schnellübersicht', anchor: '#quick-facts' },
-        { label: 'Zusammenfassung', anchor: '#tldr' },
+        { label: 'Zusammenfassung', anchor: '#key-takeaways' },
         { label: '7B-Modell-Vergleichstabelle', anchor: '#table' },
         { label: 'Direktvergleich: Llama 3.1 8B vs. Mistral vs. Qwen3', anchor: '#comparison' },
         { label: 'Reasoning- & Mathematik-Leistung', anchor: '#reasoning' },
@@ -1402,7 +1402,7 @@ schema: {
       },
       toc: [
         { label: 'Points clés rapides', anchor: '#quick-facts' },
-        { label: 'Points clés', anchor: '#tldr' },
+        { label: 'Points clés', anchor: '#key-takeaways' },
         { label: 'Tableau comparatif 7B', anchor: '#table' },
         { label: 'Llama 3.1 8B vs Mistral vs Qwen3 : comparatif direct', anchor: '#comparison' },
         { label: 'Raisonnement & performances mathématiques', anchor: '#reasoning' },
@@ -1668,7 +1668,7 @@ schema: {
       },
       toc: [
         { label: 'クイックファクト', anchor: '#quick-facts' },
-        { label: '重要ポイント', anchor: '#tldr' },
+        { label: '重要ポイント', anchor: '#key-takeaways' },
         { label: '7Bモデル比較表', anchor: '#table' },
         { label: 'Llama 3.1 8B vs Mistral vs Qwen3：直接比較', anchor: '#comparison' },
         { label: '推論・数学性能', anchor: '#reasoning' },
@@ -1934,7 +1934,7 @@ schema: {
       },
       toc: [
         { label: '快速概览', anchor: '#quick-facts' },
-        { label: '核心要点', anchor: '#tldr' },
+        { label: '核心要点', anchor: '#key-takeaways' },
         { label: '7B模型对比表', anchor: '#table' },
         { label: 'Llama 3.1 8B vs Mistral vs Qwen3直接对比', anchor: '#comparison' },
         { label: '推理与数学性能', anchor: '#reasoning' },
@@ -2209,7 +2209,7 @@ schema: {
     },
     toc: [
       { label: '빠른 사실 정리', anchor: '#quick-facts' },
-      { label: '핵심 요약', anchor: '#tldr' },
+      { label: '핵심 요약', anchor: '#key-takeaways' },
       { label: '7B 모델 비교표', anchor: '#table' },
       { label: '직접 비교: Llama 3.1 8B vs Mistral vs Qwen3', anchor: '#comparison' },
       { label: '추론 및 수학 성능', anchor: '#reasoning' },

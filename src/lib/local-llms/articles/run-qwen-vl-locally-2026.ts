@@ -1106,13 +1106,7 @@ LOCAL_VISION_MODEL=qwen2-vl:7b
     },
     toc: [
       { label: 'Principais conclusões', anchor: '#key-takeaways' },
-      { label: 'Por que Qwen2-VL para visão local', anchor: '#why-qwen2-vl' },
-      { label: 'Tamanhos de modelo e hardware', anchor: '#model-sizes' },
       { label: 'Configuração com Ollama', anchor: '#ollama-setup' },
-      { label: 'Configuração com LM Studio', anchor: '#lm-studio-setup' },
-      { label: 'OCR de documentos multilíngue', anchor: '#multilingual-ocr' },
-      { label: 'Qwen2-VL vs LLaVA vs Llama 3.2 Vision', anchor: '#comparison' },
-      { label: 'Uso com API', anchor: '#api-usage' },
       { label: 'Perguntas frequentes', anchor: '#faq' },
     ],
     sections: {

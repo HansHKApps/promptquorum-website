@@ -92,6 +92,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ]
         },
         whatIsChainOfThought: {
+          id: 'what-is-chain-of-thought',
           title: 'What Chain-of-Thought Prompting Is',
           content: [
             '**Chain-of-thought prompting asks the model to reason step by step before giving a final conclusion.** Instead of returning only "the answer," the model writes out intermediate calculations, logical steps, or explanations.',
@@ -99,6 +100,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         whyItMatters: {
+          id: 'why-it-matters',
           title: 'Why Chain-of-Thought Prompting Matters',
           content: [
             '**Chain-of-thought prompting matters because it makes model behavior more transparent on tasks that involve multi-step reasoning.** When you see each step, you can spot misinterpretations, missing assumptions, or arithmetic errors.',
@@ -113,6 +115,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         whenItHelps: {
+          id: 'when-it-helps',
           title: 'When Chain-of-Thought Helps (and When It Doesn\'t)',
           content: [
             '**Chain-of-thought prompting helps most on tasks that naturally break into clear steps, but it is not necessary for every prompt.** It shines wherever the path is as important as the destination.',
@@ -132,6 +135,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         example: {
+          id: 'example-without-vs-with',
           title: 'Example: Without vs With Chain of Thought',
           content: [
             '**The difference becomes clear when you compare a direct-answer prompt with one that explicitly asks for reasoning.** Here is a simple decision example.',
@@ -143,6 +147,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         howToWrite: {
+          id: 'how-to-write',
           title: 'How to Write Effective Chain-of-Thought Prompts',
           content: [
             '**To write effective chain-of-thought prompts, you should define the structure of the reasoning and the structure of the final answer.** Vague requests like "explain more" are less reliable than concrete instructions.',
@@ -161,6 +166,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         inPromptQuorum: {
+          id: 'in-promptquorum',
           title: 'Chain-of-Thought Prompting in PromptQuorum',
           content: [
             '**PromptQuorum is a multi-model AI dispatch tool where you can apply chain-of-thought prompting consistently across different models.** You write one structured chain-of-thought prompt and send it to several providers in parallel.',
@@ -179,6 +185,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         howToStart: {
+          id: 'how-to-start',
           title: 'How to Use Chain-of-Thought (CoT) Prompting',
           numberedItems: [
             '**For logic, reasoning, or debugging tasks, ask the model to \'think step by step\' before answering.** Instead of \'What is the bug?\', ask \'Trace the execution step by step, then identify the bug.\'',
@@ -189,6 +196,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         mathExample: {
+          id: 'math-example',
           title: 'Math Example: Revenue Calculation',
           content: [
             '**Without CoT, a model might give a single final answer. With CoT, the model shows calculations step by step.**',
@@ -202,6 +210,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         reasoningModels: {
+          id: 'reasoning-models',
           title: 'CoT vs Built-In Reasoning Models (2026)',
           content: [
             '**In 2026, the frontier models—Claude Opus 4.8, OpenAI o3, Gemini Deep Think—have built-in reasoning modes that internalize chain-of-thought automatically.** You do not need to add "think step by step" instructions on these models.',
@@ -225,6 +234,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         cotVariants: {
+          id: 'cot-variants',
           title: 'Chain-of-Thought Variants and Extensions',
           content: [
             '**Beyond the basic "think step by step" pattern, researchers have developed several CoT variants, each optimized for different problem types.**',
@@ -238,6 +248,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         modelComparison: {
+          id: 'model-comparison',
           title: 'Model Comparison: How Models Handle CoT Prompting (2026)',
           columns: ['Model', 'Prompt-Level CoT', 'Built-In Reasoning', 'Best Use Case', 'Cost (approx.)'],
           rows: [
@@ -303,6 +314,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Sources & Further Reading',
           items: [
             'Wei, J., Wang, X., Schuurmans, D., et al. (2022). "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models." NeurIPS 2022. arXiv:2201.11903',
@@ -442,15 +454,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
   aboutTopics: ['Chain-of-Thought Prompting', 'Strukturiertes Denken', 'Prompt Engineering', 'Reasoning Models'],
   toc: [
     { label: 'Zusammenfassung', anchor: '#zusammenfassung' },
-    { label: 'Schnellübersicht', anchor: '#schnellubersicht' },
-    { label: 'Was ist Chain-of-Thought Prompting?', anchor: '#was-ist-chain-of-thought' },
     { label: 'Warum es wichtig ist', anchor: '#warum-wichtig' },
-    { label: 'Wann es hilft (und wann nicht)', anchor: '#wann-es-hilft' },
-    { label: 'Beispiel: Mit und ohne Chain of Thought', anchor: '#beispiel' },
     { label: 'Mathe-Beispiel: Umsatzberechnung', anchor: '#mathe-beispiel' },
-    { label: 'Effektive Prompts schreiben', anchor: '#prompts-schreiben' },
     { label: 'Chain-of-Thought in PromptQuorum', anchor: '#in-promptquorum' },
-    { label: 'Wie Sie CoT nutzen', anchor: '#wie-nutzen' },
     { label: 'CoT vs. integrierte Reasoning-Modelle', anchor: '#reasoning-modelle' },
     { label: 'Chain-of-Thought Varianten', anchor: '#cot-varianten' },
     { label: 'Modellvergleich', anchor: '#modellvergleich' },
@@ -514,6 +520,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     whyItMatters: {
+      id: 'warum-wichtig',
       title: 'Warum Chain-of-Thought Prompting wichtig ist',
       content: [
         '**Chain-of-Thought Prompting ist wichtig, weil es das Verhalten von Modellen bei mehrstufigen Denkaufgaben transparenter macht.** Wenn Sie jeden Schritt sehen, können Sie Missinterpretationen, fehlende Annahmen oder Rechenfehler erkennen.',
@@ -576,6 +583,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     inPromptQuorum: {
+      id: 'in-promptquorum',
       title: 'Chain-of-Thought Prompting in PromptQuorum',
       content: [
         '**PromptQuorum ist ein Multi-Model-KI-Dispatchingtool, bei dem Sie Chain-of-Thought Prompting konsistent über verschiedene Modelle hinweg anwenden können.** Sie schreiben einen strukturierten Chain-of-Thought Prompt und versenden ihn parallel an mehrere Anbieter.',
@@ -603,6 +611,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     mathExample: {
+      id: 'mathe-beispiel',
       title: 'Mathe-Beispiel: Umsatzberechnung',
       content: [
         '**Ohne CoT gibt das Modell möglicherweise nur eine abschließende Antwort. Mit CoT zeigt das Modell Berechnungen schrittweise.**',
@@ -616,6 +625,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     reasoningModels: {
+      id: 'reasoning-modelle',
       title: 'CoT vs. integrierte Reasoning-Modelle (2026)',
       content: [
         '**2026 haben die Frontier-Modelle – Claude Opus 4.8, OpenAI o3, Gemini Deep Think – integrierte Denkmodi, die Chain-of-Thought automatisch internalisieren.** Sie müssen keine „denk Schritt für Schritt"-Anweisungen auf diesen Modellen hinzufügen.',
@@ -639,6 +649,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     cotVariants: {
+      id: 'cot-varianten',
       title: 'Chain-of-Thought Varianten und Erweiterungen',
       content: [
         '**Über das grundlegende „denk Schritt für Schritt"-Muster hinaus haben Forscher mehrere CoT-Varianten entwickelt, die jeweils für verschiedene Problemtypen optimiert sind.**',
@@ -652,6 +663,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     modelComparison: {
+      id: 'modellvergleich',
       title: 'Modellvergleich: Wie Modelle CoT Prompting handhaben (2026)',
       columns: ['Modell', 'Prompt-Level CoT', 'Integriertes Thinking', 'Bester Anwendungsfall', 'Kosten (ca.)'],
       rows: [
@@ -667,6 +679,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     relatedReading: {
+      id: 'literatur',
       title: 'Weiterführende Literatur',
       items: [
         '[Was ist Prompt Engineering? Ein kompletter Leitfaden 2026](/de/prompt-engineering/what-is-prompt-engineering)',
@@ -716,6 +729,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     sources: {
+      id: 'quellen',
       title: 'Quellen und weiterführende Literatur',
       items: [
         'Wei, J., Wang, X., Schuurmans, D., et al. (2022). „Chain-of-Thought Prompting Elicits Reasoning in Large Language Models." NeurIPS 2022. arXiv:2201.11903',
@@ -909,6 +923,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ]
     },
     quickFacts: {
+      id: 'quick-facts',
       title: 'Datos rápidos',
       numberedItems: [
         '**Acuñado por:** Wei et al. (2022), Google Brain — artículo fundacional en NeurIPS 2022',
@@ -920,6 +935,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ]
     },
     whatIsChainOfThought: {
+      id: 'what-is-chain-of-thought',
       title: 'Qué es el chain-of-thought prompting',
       content: [
         '**El chain-of-thought prompting le pide al modelo que razone paso a paso antes de llegar a una conclusión final.** En lugar de devolver solo "la respuesta", el modelo escribe cálculos intermedios, pasos lógicos o explicaciones.',
@@ -927,6 +943,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     whyItMatters: {
+      id: 'why-it-matters',
       title: 'Por qué importa el chain-of-thought prompting',
       content: [
         '**El chain-of-thought prompting importa porque hace que el comportamiento del modelo sea más transparente en tareas que implican razonamiento de múltiples pasos.** Cuando ves cada paso, puedes detectar malinterpretaciones, suposiciones faltantes o errores aritméticos.',
@@ -941,6 +958,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     whenItHelps: {
+      id: 'when-it-helps',
       title: 'Cuándo ayuda el chain-of-thought (y cuándo no)',
       content: [
         '**El chain-of-thought prompting ayuda más en tareas que se dividen naturalmente en pasos claros, pero no es necesario para cada prompt.** Brilla donde el camino es tan importante como el destino.',
@@ -960,6 +978,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     example: {
+      id: 'example-without-vs-with',
       title: 'Ejemplo: Sin y con chain-of-thought',
       content: [
         '**La diferencia se hace clara cuando comparas un prompt de respuesta directa con uno que pide razonamiento explícitamente.** Aquí hay un ejemplo de decisión simple.',
@@ -971,6 +990,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     howToWrite: {
+      id: 'how-to-write',
       title: 'Cómo escribir prompts chain-of-thought efectivos',
       content: [
         '**Para escribir prompts chain-of-thought efectivos, debes definir la estructura del razonamiento y la estructura de la respuesta final.** Las solicitudes vagas como "explica más" son menos fiables que las instrucciones concretas.',
@@ -989,6 +1009,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     inPromptQuorum: {
+      id: 'in-promptquorum',
       title: 'Chain-of-thought prompting en PromptQuorum',
       content: [
         '**PromptQuorum es una herramienta de despacho de IA multi-modelo donde puedes aplicar chain-of-thought prompting de forma consistente en diferentes modelos.** Escribes un prompt chain-of-thought estructurado y lo envías a varios proveedores en paralelo.',
@@ -1006,6 +1027,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     howToStart: {
+      id: 'how-to-start',
       title: 'Cómo usar el CoT prompting',
       numberedItems: [
         '**Para tareas de lógica, razonamiento o depuración, pide al modelo que "piense paso a paso" antes de responder.** En lugar de "¿cuál es el bug?", pregunta "Sigue la ejecución paso a paso, luego identifica el bug."',
@@ -1016,6 +1038,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     mathExample: {
+      id: 'math-example',
       title: 'Ejemplo matemático: cálculo de ingresos',
       content: [
         '**Sin CoT, un modelo podría dar una sola respuesta final. Con CoT, el modelo muestra los cálculos paso a paso.**',
@@ -1029,6 +1052,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     reasoningModels: {
+      id: 'reasoning-models',
       title: 'CoT vs modelos de razonamiento integrados (2026)',
       content: [
         '**En 2026, los modelos de frontera — Claude Opus 4.8, OpenAI o3, Gemini Deep Think — tienen modos de razonamiento integrados que internalizan chain-of-thought automáticamente.** No necesitas añadir instrucciones "piensa paso a paso" en estos modelos.',
@@ -1052,6 +1076,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     cotVariants: {
+      id: 'cot-variants',
       title: 'Variantes y extensiones de chain-of-thought',
       content: [
         '**Más allá del patrón básico "piensa paso a paso", los investigadores han desarrollado varias variantes de CoT, cada una optimizada para diferentes tipos de problemas.**',
@@ -1065,6 +1090,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     modelComparison: {
+      id: 'model-comparison',
       title: 'Comparación de modelos: cómo manejan el CoT prompting (2026)',
       columns: ['Modelo', 'CoT a nivel de prompt', 'Razonamiento integrado', 'Mejor caso de uso', 'Costo (aprox.)'],
       rows: [
@@ -1080,6 +1106,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     relatedReading: {
+      id: 'related-reading',
       title: 'Lecturas relacionadas',
       items: [
         '[¿Qué es el prompt engineering? Guía completa 2026](/es/prompt-engineering/what-is-prompt-engineering)',
@@ -1129,6 +1156,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     sources: {
+      id: 'sources',
       title: 'Fuentes y lecturas adicionales',
       items: [
         'Wei, J., Wang, X., Schuurmans, D., et al. (2022). "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models." NeurIPS 2022. arXiv:2201.11903',
@@ -1322,6 +1350,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ]
     },
     quickFacts: {
+      id: 'quick-facts',
       title: 'حقائق سريعة',
       numberedItems: [
         '**صاغه:** Wei وآخرون (2022)، Google Brain — الورقة التأسيسية في NeurIPS 2022',
@@ -1333,6 +1362,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ]
     },
     whatIsChainOfThought: {
+      id: 'what-is-chain-of-thought',
       title: 'ما هو توجيه سلسلة الأفكار',
       content: [
         '**توجيه سلسلة الأفكار يطلب من النموذج الاستدلال خطوةً بخطوة قبل الوصول إلى استنتاج نهائي.** بدلًا من إرجاع "الإجابة" فحسب، يكتب النموذج حسابات وسيطة وخطوات منطقية وشروحات.',
@@ -1340,6 +1370,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     whyItMatters: {
+      id: 'why-it-matters',
       title: 'لماذا يهم توجيه سلسلة الأفكار',
       content: [
         '**توجيه سلسلة الأفكار مهم لأنه يجعل سلوك النموذج أكثر شفافيةً في المهام التي تنطوي على استدلال متعدد الخطوات.** حين ترى كل خطوة، يمكنك اكتشاف سوء الفهم والافتراضات المفقودة والأخطاء الحسابية.',
@@ -1354,6 +1385,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     whenItHelps: {
+      id: 'when-it-helps',
       title: 'متى يُساعد سلسلة الأفكار (ومتى لا)',
       content: [
         '**توجيه سلسلة الأفكار يُساعد أكثر في المهام التي تنقسم طبيعيًا إلى خطوات واضحة، لكنه ليس ضروريًا لكل تعليمة.** يتألق حين يكون المسار بأهمية الوجهة.',
@@ -1373,6 +1405,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     example: {
+      id: 'example-without-vs-with',
       title: 'مثال: بدون سلسلة الأفكار ومعها',
       content: [
         '**الفرق يتضح حين تقارن تعليمة إجابة مباشرة بأخرى تطلب الاستدلال صراحةً.** إليك مثال قرار بسيط.',
@@ -1384,6 +1417,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     howToWrite: {
+      id: 'how-to-write',
       title: 'كيفية كتابة تعليمات سلسلة الأفكار الفعَّالة',
       content: [
         '**لكتابة تعليمات سلسلة أفكار فعَّالة، يجب تحديد بنية الاستدلال وبنية الإجابة النهائية.** الطلبات المبهمة مثل "اشرح أكثر" أقل موثوقية من التعليمات المحددة.',
@@ -1402,6 +1436,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     inPromptQuorum: {
+      id: 'in-promptquorum',
       title: 'توجيه سلسلة الأفكار في PromptQuorum',
       content: [
         '**PromptQuorum أداة إرسال ذكاء اصطناعي متعدد النماذج حيث يمكنك تطبيق توجيه سلسلة الأفكار باتساق عبر نماذج مختلفة.** تكتب تعليمةً منظَّمة لسلسلة الأفكار وترسلها إلى عدة مزودين بالتوازي.',
@@ -1419,6 +1454,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     howToStart: {
+      id: 'how-to-start',
       title: 'كيفية استخدام CoT',
       numberedItems: [
         '**في مهام المنطق والاستدلال أو التصحيح، اطلب من النموذج "التفكير خطوةً بخطوة" قبل الإجابة.** بدلًا من "ما الخطأ؟" اسأل "تتبَّع التنفيذ خطوةً بخطوة، ثم حدِّد الخطأ."',
@@ -1429,6 +1465,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     mathExample: {
+      id: 'math-example',
       title: 'مثال رياضي: حساب الإيرادات',
       content: [
         '**بدون CoT، قد يُعطي النموذج إجابةً نهائية واحدة. مع CoT، يُظهر النموذج الحسابات خطوةً بخطوة.**',
@@ -1442,6 +1479,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     reasoningModels: {
+      id: 'reasoning-models',
       title: 'CoT مقابل نماذج الاستدلال المُدمَجة (2026)',
       content: [
         '**في 2026، نماذج الحدود — Claude Opus 4.8 وOpenAI o3 وGemini Deep Think — تمتلك أوضاع استدلال مُدمَجة تُدخِل سلسلة الأفكار تلقائيًا.** لست بحاجة إلى إضافة تعليمات "فكِّر خطوةً بخطوة" في هذه النماذج.',
@@ -1465,6 +1503,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     cotVariants: {
+      id: 'cot-variants',
       title: 'متغيرات وامتدادات سلسلة الأفكار',
       content: [
         '**إلى جانب النمط الأساسي "فكِّر خطوةً بخطوة"، طوَّر الباحثون عدة متغيرات لـ CoT، كل منها مُحسَّن لأنواع مختلفة من المشكلات.**',
@@ -1478,6 +1517,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     modelComparison: {
+      id: 'model-comparison',
       title: 'مقارنة النماذج: كيف تتعامل مع CoT (2026)',
       columns: ['النموذج', 'CoT على مستوى التعليمات', 'الاستدلال المُدمَج', 'أفضل حالة استخدام', 'التكلفة (تقريبًا)'],
       rows: [
@@ -1493,6 +1533,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     relatedReading: {
+      id: 'related-reading',
       title: 'قراءة ذات صلة',
       items: [
         '[ما هي هندسة التعليمات؟ دليل شامل 2026](/ar/prompt-engineering/what-is-prompt-engineering)',
@@ -1542,6 +1583,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     sources: {
+      id: 'sources',
       title: 'المصادر والقراءات الإضافية',
       items: [
         'Wei, J., Wang, X., Schuurmans, D., وآخرون (2022). "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models." NeurIPS 2022. arXiv:2201.11903',
@@ -1735,6 +1777,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ]
     },
     quickFacts: {
+      id: 'quick-facts',
       title: 'Dados rápidos',
       numberedItems: [
         '**Cunhado por:** Wei et al. (2022), Google Brain — artigo fundacional no NeurIPS 2022',
@@ -1746,6 +1789,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ]
     },
     whatIsChainOfThought: {
+      id: 'what-is-chain-of-thought',
       title: 'O que é o chain-of-thought prompting',
       content: [
         '**O chain-of-thought prompting pede ao modelo que raciocine passo a passo antes de chegar a uma conclusão final.** Em vez de retornar apenas "a resposta", o modelo escreve cálculos intermediários, etapas lógicas ou explicações.',
@@ -1753,6 +1797,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     whyItMatters: {
+      id: 'why-it-matters',
       title: 'Por que o chain-of-thought prompting importa',
       content: [
         '**O chain-of-thought prompting importa porque torna o comportamento do modelo mais transparente em tarefas que envolvem raciocínio de múltiplas etapas.** Quando você vê cada etapa, pode detectar interpretações equivocadas, suposições ausentes ou erros aritméticos.',
@@ -1767,6 +1812,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     whenItHelps: {
+      id: 'when-it-helps',
       title: 'Quando o chain-of-thought ajuda (e quando não)',
       content: [
         '**O chain-of-thought prompting ajuda mais em tarefas que se dividem naturalmente em etapas claras, mas não é necessário para cada prompt.** Brilha onde o caminho é tão importante quanto o destino.',
@@ -1785,6 +1831,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     example: {
+      id: 'example-without-vs-with',
       title: 'Exemplo: Sem e com chain-of-thought',
       content: [
         '**A diferença fica clara quando você compara um prompt de resposta direta com um que pede raciocínio explicitamente.**',
@@ -1795,6 +1842,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     howToWrite: {
+      id: 'how-to-write',
       title: 'Como escrever prompts chain-of-thought eficazes',
       content: [
         '**Para escrever prompts chain-of-thought eficazes, você deve definir a estrutura do raciocínio e a estrutura da resposta final.** Solicitações vagas como "explique mais" são menos confiáveis do que instruções concretas.',
@@ -1813,6 +1861,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     inPromptQuorum: {
+      id: 'in-promptquorum',
       title: 'Chain-of-thought prompting no PromptQuorum',
       content: [
         '**O PromptQuorum é uma ferramenta de despacho de IA multi-modelo onde você pode aplicar chain-of-thought prompting de forma consistente em diferentes modelos.** Você escreve um prompt chain-of-thought estruturado e o envia para vários provedores em paralelo.',
@@ -1830,6 +1879,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     howToStart: {
+      id: 'how-to-start',
       title: 'Como usar o CoT prompting',
       numberedItems: [
         '**Para tarefas de lógica, raciocínio ou depuração, peça ao modelo que "pense passo a passo" antes de responder.** Em vez de "qual é o bug?", pergunte "Siga a execução passo a passo, depois identifique o bug."',
@@ -1840,6 +1890,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     mathExample: {
+      id: 'math-example',
       title: 'Exemplo matemático: cálculo de receita',
       content: [
         '**Sem CoT, um modelo pode dar uma única resposta final. Com CoT, o modelo mostra os cálculos passo a passo.**',
@@ -1852,6 +1903,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     reasoningModels: {
+      id: 'reasoning-models',
       title: 'CoT vs modelos de raciocínio integrados (2026)',
       content: [
         '**Em 2026, modelos de fronteira — Claude Opus 4.8, OpenAI o3, Gemini Deep Think — têm modos de raciocínio integrados que internalizam chain-of-thought automaticamente.** Você não precisa adicionar instruções "pense passo a passo" nesses modelos.',
@@ -1875,6 +1927,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     cotVariants: {
+      id: 'cot-variants',
       title: 'Variantes e extensões de chain-of-thought',
       content: [
         '**Além do padrão básico "pense passo a passo", os pesquisadores desenvolveram várias variantes de CoT, cada uma otimizada para diferentes tipos de problemas.**',
@@ -1888,6 +1941,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     modelComparison: {
+      id: 'model-comparison',
       title: 'Comparação de modelos: como lidam com CoT prompting (2026)',
       columns: ['Modelo', 'CoT no nível do prompt', 'Raciocínio integrado', 'Melhor caso de uso', 'Custo (aprox.)'],
       rows: [
@@ -1903,6 +1957,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     relatedReading: {
+      id: 'related-reading',
       title: 'Leituras relacionadas',
       items: [
         '[O que é prompt engineering? Guia completo 2026](/pt/prompt-engineering/what-is-prompt-engineering)',
@@ -1952,6 +2007,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     sources: {
+      id: 'sources',
       title: 'Fontes e leituras adicionais',
       items: [
         'Wei, J., Wang, X., Schuurmans, D., et al. (2022). "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models." NeurIPS 2022. arXiv:2201.11903',
@@ -2095,15 +2151,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
     { label: 'Qu\'est-ce que le Chain-of-Thought Prompting ?', anchor: '#quest-ce-que' },
     { label: 'Pourquoi cela importe', anchor: '#pourquoi-importe' },
     { label: 'Quand cela aide (et quand ce n\'est pas nécessaire)', anchor: '#quand-aide' },
-    { label: 'Exemple : avec et sans Chain-of-Thought', anchor: '#exemple' },
-    { label: 'Exemple mathématique : calcul de chiffre d\'affaires', anchor: '#exemple-maths' },
     { label: 'Comment écrire des prompts efficaces', anchor: '#prompts-efficaces' },
     { label: 'Chain-of-Thought dans PromptQuorum', anchor: '#in-promptquorum' },
     { label: 'Comment utiliser CoT', anchor: '#comment-utiliser' },
     { label: 'CoT vs modèles de raisonnement intégrés', anchor: '#cot-vs-raisonnement' },
     { label: 'Variantes Chain-of-Thought', anchor: '#variantes' },
-    { label: 'Comparaison de modèles', anchor: '#comparaison-modeles' },
-    { label: 'Ressources connexes', anchor: '#ressources' },
     { label: 'FAQ', anchor: '#faq' },
     { label: 'Sources', anchor: '#sources' },
   ],
@@ -2133,6 +2185,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
   sections: {
     tldr: {
+      id: 'points-cles',
       isTldr: true,
       title: 'Points clés',
       numberedItems: [
@@ -2156,6 +2209,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ]
     },
     whatIsChainOfThought: {
+      id: 'quest-ce-que',
       title: 'Qu\'est-ce que le Chain-of-Thought Prompting ?',
       content: [
         '**Le Chain-of-Thought Prompting incite le modèle à argumenter pas à pas avant de conclure.** Au lieu de retourner simplement « la réponse », le modèle écrit les calculs intermédiaires, les étapes logiques ou les explications.',
@@ -2163,6 +2217,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     whyItMatters: {
+      id: 'pourquoi-importe',
       title: 'Pourquoi le Chain-of-Thought Prompting importe',
       content: [
         '**Le Chain-of-Thought Prompting importe car il rend le comportement des modèles plus transparent sur les tâches multi-étapes.** En voyant chaque étape, vous pouvez repérer les malinterprétations, les hypothèses manquantes ou les erreurs de calcul.',
@@ -2177,6 +2232,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     whenItHelps: {
+      id: 'quand-aide',
       title: 'Quand le Chain-of-Thought aide',
       content: [
         '**Le Chain-of-Thought Prompting brille sur les tâches qui se divisent naturellement en étapes claires, mais n\'est pas nécessaire pour chaque prompt.** Il excelle quand le chemin est aussi important que la destination.',
@@ -2207,6 +2263,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     howToWrite: {
+      id: 'prompts-efficaces',
       title: 'Comment écrire des prompts Chain-of-Thought efficaces',
       content: [
         '**Pour écrire des prompts Chain-of-Thought efficaces, vous devez définir la structure du raisonnement et celle de la réponse finale.** Les demandes vagues comme « explique plus » sont moins fiables que des instructions concrètes.',
@@ -2225,6 +2282,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     inPromptQuorum: {
+      id: 'in-promptquorum',
       title: 'Chain-of-Thought Prompting dans PromptQuorum',
       content: [
         '**PromptQuorum est un outil de dispatch multi-modèles où vous pouvez appliquer le Chain-of-Thought Prompting de manière cohérente sur différents modèles.** Vous écrivez un prompt Chain-of-Thought structuré et l\'envoyez à plusieurs fournisseurs en parallèle.',
@@ -2242,6 +2300,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     howToStart: {
+      id: 'comment-utiliser',
       title: 'Comment utiliser le Chain-of-Thought (CoT) Prompting',
       numberedItems: [
         '**Pour les tâches logiques, de raisonnement ou de dépannage, demandez au modèle de « réfléchir pas à pas » avant de répondre.** Au lieu de « Quel est le bug? », demandez « Retracez l\'exécution pas à pas, puis identifiez le bug."',
@@ -2265,6 +2324,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     reasoningModels: {
+      id: 'cot-vs-raisonnement',
       title: 'CoT vs modèles de raisonnement intégrés (2026)',
       content: [
         '**En 2026, les modèles frontière – Claude Opus 4.8, OpenAI o3, Gemini Deep Think – disposent de modes de raisonnement intégrés qui internalisent automatiquement le Chain-of-Thought.** Vous n\'avez pas besoin d\'ajouter des instructions « réfléchis pas à pas » sur ces modèles.',
@@ -2288,6 +2348,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     cotVariants: {
+      id: 'variantes',
       title: 'Variantes et extensions Chain-of-Thought',
       content: [
         '**Au-delà du modèle de base « réfléchis pas à pas », les chercheurs ont développé plusieurs variantes CoT, chacune optimisée pour différents types de problèmes.**',
@@ -2365,6 +2426,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     sources: {
+      id: 'sources',
       title: 'Sources et ressources supplémentaires',
       items: [
         'Wei, J., Wang, X., Schuurmans, D., et al. (2022). « Chain-of-Thought Prompting Elicits Reasoning in Large Language Models. » NeurIPS 2022. arXiv:2201.11903',
@@ -2505,16 +2567,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
   toc: [
     { label: '重要ポイント', anchor: '#juuyou-pointo' },
     { label: 'クイックファクト', anchor: '#quick-facts' },
-    { label: 'Chain-of-Thoughtプロンプティングとは', anchor: '#what-is' },
-    { label: '重要な理由', anchor: '#why-matters' },
-    { label: 'いつ役立つのか (いつ役立たないのか)', anchor: '#when-helps' },
     { label: '例: CoTなし/あり', anchor: '#example' },
     { label: '数学の例: 収益計算', anchor: '#math-example' },
-    { label: '効果的なプロンプトの書き方', anchor: '#how-write' },
     { label: 'PromptQuorumでのChain-of-Thought', anchor: '#in-promptquorum' },
-    { label: 'Chain-of-Thoughtの使い方', anchor: '#how-start' },
-    { label: 'CoT対組み込み推論モデル', anchor: '#cot-vs' },
-    { label: 'Chain-of-Thought バリエーション', anchor: '#variants' },
     { label: 'モデル比較', anchor: '#model-comparison' },
     { label: '関連リソース', anchor: '#related' },
     { label: 'FAQ', anchor: '#faq' },
@@ -2546,6 +2601,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
   sections: {
     tldr: {
+      id: 'juuyou-pointo',
       isTldr: true,
       title: '重要ポイント',
       numberedItems: [
@@ -2558,6 +2614,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ]
     },
     quickFacts: {
+      id: 'quick-facts',
       title: 'クイックファクト',
       numberedItems: [
         '**提唱:** Wei et al. (2022)、Google Brain — NeurIPS 2022の基礎論文',
@@ -2610,6 +2667,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     example: {
+      id: 'example',
       title: '例: Chain-of-Thoughtなしとありの比較',
       content: [
         '**直接的な回答プロンプトと推論を明示的に要求するプロンプトを比較すると、違いが明確になります。** 以下は簡単な意思決定の例です。',
@@ -2640,6 +2698,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     inPromptQuorum: {
+      id: 'in-promptquorum',
       title: 'PromptQuorumでのChain-of-Thoughtプロンプティング',
       content: [
         '**PromptQuorumは、異なるモデル全体でChain-of-Thoughtプロンプティングを一貫して適用できるマルチモデルAIディスパッチツールです。** 1つの構造化されたChain-of-Thoughtプロンプトを書き、複数のプロバイダーに並行して送信します。',
@@ -2668,6 +2727,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     mathExample: {
+      id: 'math-example',
       title: '数学の例: 収益計算',
       content: [
         '**CoTなしではモデルは単一の最終回答を与えるかもしれません。CoTではモデルは計算をステップバイステップで表示します。**',
@@ -2717,6 +2777,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     modelComparison: {
+      id: 'model-comparison',
       title: 'モデル比較: 2026年のCoTプロンプティング対応状況',
       columns: ['モデル', 'プロンプトレベルCoT', '組み込み推論', 'ベストユースケース', 'コスト(約)'],
       rows: [
@@ -2732,6 +2793,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     relatedReading: {
+      id: 'related',
       title: '関連リソース',
       items: [
         '[プロンプトエンジニアリングとは? 完全ガイド2026](/ja/prompt-engineering/what-is-prompt-engineering)',
@@ -2781,6 +2843,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     sources: {
+      id: 'sources',
       title: 'ソースと追加参考文献',
       items: [
         'Wei, J., Wang, X., Schuurmans, D., et al. (2022). 「Chain-of-Thought Prompting Elicits Reasoning in Large Language Models」 NeurIPS 2022。arXiv:2201.11903',
@@ -2919,18 +2982,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
   next_refresh_due: '2026-11-03',
   aboutTopics: ['链式思维提示词', '结构化推理', '提示词工程', '推理模型'],
   toc: [
-    { label: '核心要点', anchor: '#hexin-yaoqidian' },
-    { label: '快速事实', anchor: '#kuaisu-shishi' },
-    { label: '什么是链式思维提示词?', anchor: '#what-is' },
-    { label: '为什么重要', anchor: '#why-important' },
-    { label: '何时有效(及何时无效)', anchor: '#when-helps' },
     { label: '示例: 有无链式思维对比', anchor: '#example' },
     { label: '数学示例: 收益计算', anchor: '#math-example' },
-    { label: '如何编写有效提示词', anchor: '#how-write' },
     { label: 'PromptQuorum中的链式思维', anchor: '#in-promptquorum' },
-    { label: '开始使用链式思维', anchor: '#how-start' },
-    { label: 'CoT对内置推理模型', anchor: '#cot-vs-reasoning' },
-    { label: '链式思维变体', anchor: '#variants' },
     { label: '模型对比', anchor: '#model-comparison' },
     { label: '相关资源', anchor: '#related' },
     { label: 'FAQ', anchor: '#faq' },
@@ -3026,6 +3080,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     example: {
+      id: 'example',
       title: '案例: 有无链式思维的对比',
       content: [
         '**对比直接答案提示词和明确要求推理的提示词时，差异变得清晰。** 以下是一个简单的决策例子。',
@@ -3056,6 +3111,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     inPromptQuorum: {
+      id: 'in-promptquorum',
       title: 'PromptQuorum中的链式思维提示词',
       content: [
         '**PromptQuorum是一个多模型AI调度工具，你可以在不同模型上一致地应用链式思维提示词。** 你写一个结构化的链式思维提示词并将其并行发送到多个提供商。',
@@ -3084,6 +3140,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     mathExample: {
+      id: 'math-example',
       title: '数学示例: 收益计算',
       content: [
         '**无CoT时，模型可能给出单一最终答案。有CoT时，模型逐步展示计算。**',
@@ -3133,6 +3190,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     modelComparison: {
+      id: 'model-comparison',
       title: '模型对比: 2026年模型如何处理CoT提示词',
       columns: ['模型', '提示词级CoT', '内置推理', '最佳用途', '成本(约)'],
       rows: [
@@ -3148,6 +3206,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     relatedReading: {
+      id: 'related',
       title: '相关资源',
       items: [
         '[什么是提示词工程? 完整指南2026](/zh/prompt-engineering/what-is-prompt-engineering)',
@@ -3197,6 +3256,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     sources: {
+      id: 'sources',
       title: '来源和进一步阅读',
       items: [
         'Wei, J., Wang, X., Schuurmans, D., et al. (2022). 「Chain-of-Thought Prompting Elicits Reasoning in Large Language Models」 NeurIPS 2022。arXiv:2201.11903',
@@ -3390,6 +3450,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ]
     },
     quickFacts: {
+      id: 'quick-facts',
       title: '빠른 사실',
       numberedItems: [
         '**최초 제안자:** Wei 외 (2022), Google Brain — NeurIPS 2022 창시 논문',
@@ -3401,6 +3462,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ]
     },
     whatIsChainOfThought: {
+      id: 'what-is-chain-of-thought',
       title: 'Chain-of-thought 프롬프팅이란 무엇인가',
       content: [
         '**Chain-of-thought 프롬프팅은 모델이 최종 결론에 도달하기 전에 단계별로 추론하도록 요청합니다.** 답변만 반환하는 대신, 모델이 중간 계산, 논리적 단계, 설명을 작성합니다.',
@@ -3408,6 +3470,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     whyItMatters: {
+      id: 'why-it-matters',
       title: 'Chain-of-thought 프롬프팅이 중요한 이유',
       content: [
         '**Chain-of-thought 프롬프팅은 다단계 추론이 필요한 작업에서 모델의 동작을 더 투명하게 만들기 때문에 중요합니다.** 각 단계를 볼 수 있으면 오해, 누락된 가정, 산술 오류를 발견할 수 있습니다.',
@@ -3422,6 +3485,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     whenItHelps: {
+      id: 'when-it-helps',
       title: '언제 Chain-of-thought가 도움이 되는가 (그리고 언제 아닌가)',
       content: [
         '**Chain-of-thought 프롬프팅은 명확한 단계로 자연스럽게 나뉘는 작업에서 가장 도움이 되지만, 모든 프롬프트에 필요한 것은 아닙니다.** 목적지만큼 경로가 중요할 때 빛을 발합니다.',
@@ -3441,6 +3505,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     example: {
+      id: 'example-without-vs-with',
       title: '예시: Chain-of-thought 없음 vs. 있음',
       content: [
         '**직접 답변 프롬프트와 명시적으로 추론을 요청하는 프롬프트를 비교하면 차이가 분명해집니다.** 간단한 의사결정 예시입니다.',
@@ -3452,6 +3517,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     howToWrite: {
+      id: 'how-to-write',
       title: '효과적인 Chain-of-thought 프롬프트 작성법',
       content: [
         '**효과적인 chain-of-thought 프롬프트를 작성하려면 추론 구조와 최종 답변 구조를 모두 정의해야 합니다.** 더 설명해줘 같은 막연한 요청은 구체적인 지시보다 신뢰성이 떨어집니다.',
@@ -3470,6 +3536,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     inPromptQuorum: {
+      id: 'in-promptquorum',
       title: 'PromptQuorum에서의 Chain-of-thought 프롬프팅',
       content: [
         '**PromptQuorum은 여러 모델에서 chain-of-thought 프롬프팅을 일관성 있게 적용할 수 있는 멀티모델 AI 디스패치 도구입니다.** 구조화된 chain-of-thought 프롬프트를 작성하고 여러 공급자에게 병렬로 전송합니다.',
@@ -3487,6 +3554,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     howToStart: {
+      id: 'how-to-start',
       title: 'CoT 프롬프팅 사용 방법',
       numberedItems: [
         '**논리, 추론, 디버깅 작업에서는 모델에게 답변 전에 단계별로 생각해라고 요청하세요.** 버그가 뭐야? 대신 실행 과정을 단계별로 추적한 다음 버그를 찾아줘라고 질문하세요.',
@@ -3497,6 +3565,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     mathExample: {
+      id: 'math-example',
       title: '수학 예시: 매출 계산',
       content: [
         '**CoT 없이는 모델이 단일 최종 답변을 줄 수 있습니다. CoT를 사용하면 모델은 단계별로 계산을 보여줍니다.**',
@@ -3510,6 +3579,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     reasoningModels: {
+      id: 'reasoning-models',
       title: 'CoT vs. 내장 추론 모델 (2026)',
       content: [
         '**2026년에는 Claude Opus 4.8, OpenAI o3, Gemini Deep Think 같은 최전선 모델들이 chain-of-thought를 자동으로 내부화하는 내장 추론 모드를 갖추고 있습니다.** 이러한 모델에는 단계별로 생각해라는 지시를 추가할 필요가 없습니다.',
@@ -3533,6 +3603,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     cotVariants: {
+      id: 'cot-variants',
       title: 'Chain-of-thought의 변형 및 확장',
       content: [
         '**기본 단계별로 생각해 패턴을 넘어, 연구자들은 서로 다른 유형의 문제에 최적화된 여러 CoT 변형을 개발했습니다.**',
@@ -3546,6 +3617,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     modelComparison: {
+      id: 'model-comparison',
       title: '모델 비교: 2026년 CoT 프롬프팅 처리 방식',
       columns: ['모델', '프롬프트 수준 CoT', '내장 추론', '최적 사용 사례', '비용 (약)'],
       rows: [
@@ -3561,6 +3633,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     relatedReading: {
+      id: 'related-reading',
       title: '관련 자료',
       items: [
         '[프롬프트 엔지니어링이란? 2026 완벽 가이드](/ko/prompt-engineering/what-is-prompt-engineering)',
@@ -3610,6 +3683,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     sources: {
+      id: 'sources',
       title: '출처 및 추가 자료',
       items: [
         'Wei, J., Wang, X., Schuurmans, D., et al. (2022). "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models." NeurIPS 2022. arXiv:2201.11903',

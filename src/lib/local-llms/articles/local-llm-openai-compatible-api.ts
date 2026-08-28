@@ -2819,11 +2819,6 @@ schema: {
       toc: [
         { label: 'Pontos principais', anchor: '#tldr' },
         { label: 'Ports de API por ferramenta', anchor: '#api-ports' },
-        { label: 'Integração Python', anchor: '#python' },
-        { label: 'Integração Node.js', anchor: '#nodejs' },
-        { label: 'Streaming', anchor: '#streaming' },
-        { label: 'Function calling', anchor: '#function-calling' },
-        { label: 'FAQ', anchor: '#faq' },
       ],
       schema: {
         '@context': 'https://schema.org',
@@ -3033,6 +3028,7 @@ schema: {
           ],
         },
         regionalContext: {
+          id: 'api-ports',
           title: 'Contexto regional e conformidade',
           content: [
             '**Brasil (LGPD / ANPD)** — A API de LLM local mantém todos os dados de prompt na sua infraestrutura. A LGPD (Lei nº 13.709/2018) exige controles adequados para dados pessoais sensíveis. A inferência local elimina a necessidade de Acordos de Processamento de Dados com provedores de nuvem.',

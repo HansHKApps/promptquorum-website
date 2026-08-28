@@ -23,7 +23,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       educationalLevel: 'Intermediate',
       primaryTerm: 'VPN',
       toc: [
-        { label: 'TLDR', anchor: '#tldr' },
+        { label: 'TLDR', anchor: '#key-takeaways' },
         { label: 'VPN Protocols: WireGuard vs OpenVPN', anchor: '#protocols' },
         { label: 'Setup: VPN Server on LLM Network', anchor: '#setup' },
         { label: 'Performance Impact', anchor: '#perf' },
@@ -258,7 +258,7 @@ schema: {
       educationalLevel: 'Intermediate',
       primaryTerm: 'VPN',
       toc: [
-        { label: 'Zusammenfassung', anchor: '#tldr' },
+        { label: 'Zusammenfassung', anchor: '#key-takeaways' },
         { label: 'VPN-Protokolle: WireGuard vs OpenVPN', anchor: '#protocols' },
         { label: 'Setup: VPN-Server im LLM-Netzwerk', anchor: '#setup' },
         { label: 'Leistungsauswirkungen', anchor: '#perf' },
@@ -513,7 +513,7 @@ schema: {
       educationalLevel: 'Intermediate',
       primaryTerm: 'VPN',
       toc: [
-        { label: 'Résumé', anchor: '#tldr' },
+        { label: 'Résumé', anchor: '#key-takeaways' },
         { label: 'Protocoles VPN : WireGuard vs OpenVPN', anchor: '#protocols' },
         { label: 'Configuration : serveur VPN sur réseau LLM', anchor: '#setup' },
         { label: 'Impact sur les performances', anchor: '#perf' },
@@ -707,7 +707,7 @@ schema: {
       educationalLevel: 'Intermediate',
       primaryTerm: 'VPN',
       toc: [
-        { label: 'TLDR', anchor: '#tldr' },
+        { label: 'TLDR', anchor: '#key-takeaways' },
         { label: 'VPNプロトコル：WireGuard対OpenVPN', anchor: '#protocols' },
         { label: 'セットアップ：LLMネットワーク上のVPNサーバー', anchor: '#setup' },
         { label: 'パフォーマンスへの影響', anchor: '#perf' },
@@ -901,7 +901,7 @@ schema: {
       educationalLevel: 'Intermediate',
       primaryTerm: 'VPN',
       toc: [
-        { label: '摘要', anchor: '#tldr' },
+        { label: '摘要', anchor: '#key-takeaways' },
         { label: 'VPN 协议：WireGuard 与 OpenVPN', anchor: '#protocols' },
         { label: '设置：LLM 网络上的 VPN 服务器', anchor: '#setup' },
         { label: '性能影响', anchor: '#perf' },
@@ -1095,7 +1095,7 @@ schema: {
       educationalLevel: 'Intermediate',
       primaryTerm: 'VPN',
       toc: [
-        { label: 'Puntos clave', anchor: '#tldr' },
+        { label: 'Puntos clave', anchor: '#key-takeaways' },
         { label: 'Protocolos VPN: WireGuard vs OpenVPN', anchor: '#protocols' },
         { label: 'Configuración: servidor VPN en la red LLM', anchor: '#setup' },
         { label: 'Impacto en el rendimiento', anchor: '#perf' },
@@ -1331,7 +1331,7 @@ schema: {
       educationalLevel: 'Intermediate',
       primaryTerm: 'VPN',
       toc: [
-        { label: 'النقاط الرئيسية', anchor: '#tldr' },
+        { label: 'النقاط الرئيسية', anchor: '#key-takeaways' },
         { label: 'بروتوكولات VPN: WireGuard مقابل OpenVPN', anchor: '#protocols' },
         { label: 'الإعداد: خادم VPN في شبكة LLM', anchor: '#setup' },
         { label: 'أثر الأداء', anchor: '#perf' },
@@ -1748,7 +1748,7 @@ schema: {
       educationalLevel: 'Intermediate',
       primaryTerm: 'VPN',
       toc: [
-        { label: 'TLDR', anchor: '#tldr' },
+        { label: 'TLDR', anchor: '#key-takeaways' },
         { label: 'VPN 프로토콜: WireGuard vs OpenVPN', anchor: '#protocols' },
         { label: '설정: LLM 네트워크에 VPN 서버 구성', anchor: '#setup' },
         { label: '성능 영향', anchor: '#perf' },

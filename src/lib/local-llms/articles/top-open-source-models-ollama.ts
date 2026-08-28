@@ -1143,10 +1143,6 @@ schema: {
       primaryTerm: 'melhores modelos Ollama 2026',
       toc: [
         { label: 'Principais conclusões', anchor: '#key-takeaways' },
-        { label: 'Top 10 modelos Ollama em julho 2026', anchor: '#top-10' },
-        { label: 'Melhores modelos por caso de uso', anchor: '#by-use-case' },
-        { label: 'Comparação de benchmarks', anchor: '#benchmarks' },
-        { label: 'Guia de início rápido', anchor: '#quick-start' },
         { label: 'Perguntas frequentes', anchor: '#faq' },
       ],
       sections: {
@@ -1728,6 +1724,7 @@ schema: {
           codeLanguage: 'bash',
         },
         mostPopular: {
+          id: 'most-popular',
           title: 'Les modèles les plus populaires sur Ollama',
           content: [
             '**Ollama dispose de statistiques de téléchargement entièrement publiques.** Selon les données de juillet 2026 :',
@@ -1737,6 +1734,7 @@ schema: {
           ],
         },
         byCategory: {
+          id: 'by-category',
           title: 'Meilleurs modèles par catégorie',
           content: 'La qualité de la sortie d\'un modèle dépend fortement de la façon dont vous le promptez. Pour des techniques structurées applicables à tous les modèles locaux — chain-of-thought, exemples few-shot et formatage de sortie — consultez le [guide de prompt engineering](https://www.promptquorum.com/fr/prompt-engineering). Pour les tâches de raisonnement, [le prompt engineering de chaîne de pensée](https://www.promptquorum.com/fr/prompt-engineering/chain-of-thought-prompting) améliore considérablement la qualité des sorties DeepSeek-R1 et Qwen3. Pour déterminer la RAM requise pour chaque modèle, consultez le [guide des exigences VRAM →](/fr/local-llms/how-much-vram-local-llm). Pour les workflows d\'agents avec Gemini 4, voir [Tree-of-Thought et ReAct](https://www.promptquorum.com/fr/prompt-engineering/tree-of-thought-react). Une fois qu\'un modèle à appel d\'outils de cette liste est intégré dans une boucle multi-étapes avec accès aux fichiers et aux bases de données, voir [Agents IA locaux avec MCP](/fr/power-local-llm/local-ai-agents-with-mcp-2026) pour le pattern d\'orchestration open source.',
           items: [
@@ -1762,6 +1760,7 @@ schema: {
           imageCaption: 'Sélection Ollama par cas d\'usage : juillet 2026. Chat : llama4:scout, codage : qwen3.8:27b ou laguna-xs-2.1, raisonnement : deepseek-r1:7b.',
         },
         deepseekR1: {
+          id: 'deepseek-r1',
           title: 'DeepSeek-R1 : Percée en raisonnement',
           content: 'DeepSeek-R1 a été lancé en janvier 2025 et représente une avancée significative en raisonnement sur tailles locales. Le modèle effectue un raisonnement explicite en chaîne de pensée (CoT) : vous voyez les chaînes de pensée internes du modèle avant la réponse finale.',
           codeBlock: `ollama run deepseek-r1:7b
@@ -1783,6 +1782,7 @@ schema: {
           ],
         },
         visionModels: {
+          id: 'vision-models',
           title: 'Modèles de vision sur Ollama',
           content: 'Quatre modèles de vision remarquables sont maintenant nativement disponibles sur Ollama :',
           columns: ['Modèle', 'RAM', 'Support image', 'Commande Ollama'],
@@ -1796,6 +1796,7 @@ schema: {
           ],
         },
         fullTop10: {
+          id: 'full-top-10',
           title: 'Comparaison complète du Top 10',
           content: 'Les 10 modèles les plus téléchargés sur Ollama en avril 2026 selon les téléchargements mensuels :',
           columns: ['#', 'Modèle', 'Meilleur pour', 'RAM', 'HumanEval'],
@@ -1815,6 +1816,7 @@ schema: {
           ],
         },
         howToBrowse: {
+          id: 'how-to-browse',
           title: 'Comment parcourir la bibliothèque Ollama ?',
           content: 'Il existe deux façons de travailler avec les modèles Ollama. **Changer de modèle installé :** Dans l\'application Ollama pour Mac, cliquez sur le bouton déroulant de modèle en bas du champ de saisie du chat (affiche le nom du modèle actuel, ex. "gemma3:1b") pour basculer entre les modèles installés localement. **Trouver et télécharger de nouveaux modèles :** Visitez ollama.com/library pour parcourir plusieurs centaines de modèles par catégorie, puis utilisez les commandes CLI ci-dessous pour les télécharger.',
           codeBlock: `ollama list
@@ -2161,6 +2163,7 @@ schema: {
           codeLanguage: 'bash',
         },
         mostPopular: {
+          id: 'most-popular',
           title: 'Ollama最人気モデル',
           content: [
             '**Ollamaは完全公開ダウンロード統計を提供。** 2026年7月データより：',
@@ -2170,6 +2173,7 @@ schema: {
           ],
         },
         byCategory: {
+          id: 'by-category',
           title: 'カテゴリ別トップモデル',
           content: 'モデルの出力品質はプロンプトの設計に大きく左右されます。Chain-of-Thought、Few-Shot例、出力フォーマットなど、すべてのローカルモデルで使える構造化テクニックについては[プロンプトエンジニアリングガイド](https://www.promptquorum.com/ja/prompt-engineering)をご覧ください。推論タスク用に、[Chain-of-Thoughtプロンプティング](https://www.promptquorum.com/ja/prompt-engineering/chain-of-thought-prompting)はDeepSeek-R1とQwen3出力品質を大幅に改善。各モデルに必要なRAMを確認するには、[VRAM要件ガイド →](/ja/local-llms/how-much-vram-local-llm)をご参照ください。Gemma 4エージェントワークフロー用は[Tree-of-Thoughtと ReAct](https://www.promptquorum.com/ja/prompt-engineering/tree-of-thought-react)参照。このリストにあるツール呼び出し対応モデルを、ファイルアクセスやデータベース照会まで含むマルチステップのループに組み込む方法は、[MCP を使ったローカル AI エージェント](/ja/power-local-llm/local-ai-agents-with-mcp-2026)を参照してください。オープンソースのオーケストレーションパターンを解説しています。',
           items: [
@@ -2195,6 +2199,7 @@ schema: {
           imageCaption: '用途別Ollamaモデル選択：2026年7月。チャット：llama4:scout、コーディング：qwen3.8:27b、推論：deepseek-r1:7b。',
         },
         deepseekR1: {
+          id: 'deepseek-r1',
           title: 'DeepSeek-R1：推論ブレークスルー',
           content: 'DeepSeek-R1は2025年1月リリース。ローカルサイズでの推論大躍進。Chain-of-Thought（CoT）実装で思考過程を表示。',
           codeBlock: `ollama run deepseek-r1:7b
@@ -2216,6 +2221,7 @@ schema: {
           ],
         },
         visionModels: {
+          id: 'vision-models',
           title: 'ビジョンモデル',
           content: '4つの優秀ビジョンモデルがOllamaネイティブ対応：',
           columns: ['モデル', 'RAM', '画像対応', 'Ollamaコマンド'],
@@ -2229,6 +2235,7 @@ schema: {
           ],
         },
         fullTop10: {
+          id: 'full-top-10',
           title: 'トップ10完全比較',
           content: '2026年4月Ollama月間DL数トップ10：',
           columns: ['#', 'モデル', '最適用途', 'RAM', 'HumanEval'],
@@ -2248,6 +2255,7 @@ schema: {
           ],
         },
         howToBrowse: {
+          id: 'how-to-browse',
           title: 'Ollama ライブラリの探索方法',
           content: 'Ollamaモデルの操作には2つの方法があります。**インストール済みモデルの切り替え：** Ollama Macアプリのチャット入力欄下部にあるモデルドロップダウンボタン（例："gemma3:1b"と表示）をクリックして、ローカルにインストールされたモデルを切り替えます。**新しいモデルの検索・ダウンロード：** ollama.com/libraryで数百のモデルをカテゴリ別に検索し、以下のCLIコマンドでインストールします。',
           codeBlock: `ollama list
@@ -2556,7 +2564,7 @@ schema: {
         { label: '完整Top 10排行', anchor: '#full-top-10' },
         { label: '如何浏览和选择模型', anchor: '#how-to-browse' },
         { label: '常见误区', anchor: '#common-mistakes' },
-        { label: '常见问题', anchor: '#faq-section' },
+        { label: '常见问题', anchor: '#faq' },
         { label: '相关阅读', anchor: '#related-reading' },
         { label: '参考来源', anchor: '#sources' },
       ],
@@ -2600,6 +2608,7 @@ schema: {
           codeLanguage: 'bash',
         },
         mostPopular: {
+          id: 'most-popular',
           title: '最受欢迎的模型（2026年7月）',
           content: [
             '**Llama 3.2 3B** 仍为总下载量最高，主要作为初安装测试模型。在消费级硬件品质方面，Qwen3.8-27B（61.7% SWE-bench、Q4下可装入24GB）仍为综合最佳选择。',
@@ -2608,6 +2617,7 @@ schema: {
           ],
         },
         byCategory: {
+          id: 'by-category',
           title: '按用途分类',
           content: '模型的输出质量在很大程度上取决于你的提示方式。关于适用于所有本地模型的结构化技术——包括思维链、Few-Shot示例和输出格式化——请参阅[Prompt工程指南](https://www.promptquorum.com/zh/prompt-engineering)。对于推理任务，[Chain-of-Thought提示](https://www.promptquorum.com/zh/prompt-engineering/chain-of-thought-prompting)显著改善DeepSeek-R1和Qwen3输出质量。了解每个模型所需的VRAM，见[VRAM需求指南 →](/zh/local-llms/how-much-vram-local-llm)。对于Gemma 4代理工作流，见[Tree-of-Thought和ReAct](https://www.promptquorum.com/zh/prompt-engineering/tree-of-thought-react)。一旦把这份榜单中的工具调用模型接入具备文件访问和数据库查询能力的多步循环，就可以参阅[使用 MCP 的本地 AI 代理](/zh/power-local-llm/local-ai-agents-with-mcp-2026)，了解这套开源编排方案。',
           items: [
@@ -2633,6 +2643,7 @@ schema: {
           imageCaption: '按用途选择Ollama：2026年7月。聊天llama4:scout，编码kimi-k2.6 / laguna-xs-2.1，推理deepseek-r1:7b。',
         },
         deepseekR1: {
+          id: 'deepseek-r1',
           title: 'DeepSeek-R1：2026年推理最强的模型',
           content: [
             '**DeepSeek-R1 7B在推理任务中表现最强。** 采用Chain-of-Thought（思维链）架构，让模型在生成答案前进行"思考"。',
@@ -2646,6 +2657,7 @@ schema: {
           imageCaption: 'DeepSeek-R1 7B vs Mistral Small: MATH 52% vs 28%。链式思维推理模型 -- 较慢，精度显著提升。',
         },
         visionModels: {
+          id: 'vision-models',
           title: '视觉和多模态模型对比',
           content: '2026年4月，以下开源视觉模型可在Ollama中本地运行：',
           columns: ['模型', 'RAM要求', '图像支持', 'Ollama命令'],
@@ -2659,6 +2671,7 @@ schema: {
           ],
         },
         fullTop10: {
+          id: 'full-top-10',
           title: 'Ollama完整Top 10模型排行（2026年4月）',
           content: '根据Ollama官方下载统计和HumanEval、MMLU基准：',
           columns: ['排名', '模型', '最适用于', 'RAM要求', 'HumanEval'],
@@ -2678,12 +2691,14 @@ schema: {
           ],
         },
         howToBrowse: {
+          id: 'how-to-browse',
           title: '如何浏览和选择Ollama模型',
           content: '使用Ollama模型有两种方式。**切换已安装模型：** 在Ollama Mac应用中，点击聊天输入框底部的模型下拉按钮（显示当前模型名，如"gemma3:1b"）切换本地已安装的模型。**查找并下载新模型：** 访问ollama.com/library按类别浏览数百个精选模型，然后使用下方CLI命令下载安装。',
           codeBlock: 'ollama pull llama3.1:8b\nollama run llama3.2',
           codeLanguage: 'bash',
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: '常见误区',
           faqs: [
             {
@@ -2768,6 +2783,7 @@ schema: {
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: '相关阅读',
           items: [
             '[如何安装Ollama：完整指南](/zh/local-llms/how-to-install-ollama)',
@@ -2780,6 +2796,7 @@ schema: {
           ],
         },
         sources: {
+          id: 'sources',
           title: '参考来源',
           items: [
             '[Ollama官方库](https://ollama.ai/library)----所有支持的模型和下载命令',

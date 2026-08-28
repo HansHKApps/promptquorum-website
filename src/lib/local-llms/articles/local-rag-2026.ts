@@ -24,7 +24,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       primaryTerm: 'local RAG pipeline',
       toc: [
         { label: 'Key Takeaways', anchor: '#key-takeaways' },
-        { label: 'How RAG Works', anchor: '#how-rag-works' },
         { label: 'Document Chunking Strategy', anchor: '#chunking' },
         { label: 'Vector Databases 2026', anchor: '#vector-databases' },
         { label: 'Embedding Models', anchor: '#embedding-models' },
@@ -32,7 +31,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { label: 'Evaluation and Optimization', anchor: '#evaluation' },
         { label: 'Production RAG Patterns', anchor: '#production' },
         { label: 'Common Mistakes', anchor: '#common-mistakes' },
-        { label: 'Common Questions', anchor: '#common-questions' },
+        { label: 'Common Questions', anchor: '#faq' },
         { label: 'Related Reading', anchor: '#related-reading' },
         { label: 'Sources', anchor: '#sources' },
       ],
@@ -69,6 +68,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         chunking: {
+          id: 'chunking',
           title: 'What Is the Optimal Chunking Strategy?',
           content: [
             '**Chunking strategy determines retrieval quality.** Bad chunking = relevant information split across chunks, retrieval fails.',
@@ -81,6 +81,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           codeLanguage: 'python',
         },
         vectorDatabases: {
+          id: 'vector-databases',
           title: 'Which Vector Database Should You Use?',
           image: '/images/local-rag-2026-vector-db-comparison-en.svg',
           imageCaption: 'Five vector databases compared for local RAG: Chroma (embedded, under 1M documents), Qdrant and Milvus (distributed, unlimited capacity), Weaviate (graph plus vector), and Pinecone (managed cloud).',
@@ -94,6 +95,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           columns: ['Database', 'Type', 'Capacity', 'Setup Effort', 'Best For'],
         },
         embeddings: {
+          id: 'embedding-models',
           title: 'What Embedding Model Should You Choose?',
           rows: [
             { 'Model': 'nomic-embed-text (local)', 'Dimensions': '768', 'Speed': 'Fast', 'Quality': 'Excellent', 'Recommendation': 'Best for local RAG' },
@@ -104,6 +106,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           columns: ['Model', 'Vector Dimensions', 'Speed', 'Quality', 'Recommendation'],
         },
         retrieval: {
+          id: 'retrieval',
           title: 'How Do You Optimize Retrieval Quality?',
           content: [
             '**Retrieval quality** determines RAG success. Good retrieval = good answers. Bad retrieval = hallucinations.',
@@ -117,6 +120,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         evaluation: {
+          id: 'evaluation',
           title: 'How Do You Evaluate RAG Quality?',
           content: [
             '**RAG quality has two dimensions: (1) retrieval quality (did we get relevant chunks?), and (2) generation quality (did the LLM answer well?).**',
@@ -126,6 +130,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         production: {
+          id: 'production',
           title: 'Production RAG Patterns',
           content: 'For production services, use these patterns:',
           items: [
@@ -137,6 +142,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Common Mistakes in Local RAG Implementation',
           items: [
             '**Chunking documents wrong.** Too many small chunks = retrieval noise. Too few large chunks = split information. Test chunk sizes empirically.',
@@ -245,7 +251,6 @@ schema: {
       primaryTerm: 'local RAG pipeline',
       toc: [
         { label: 'Puntos clave', anchor: '#key-takeaways' },
-        { label: 'Cómo funciona RAG', anchor: '#how-rag-works' },
         { label: 'Estrategia de chunking de documentos', anchor: '#chunking' },
         { label: 'Bases de datos vectoriales 2026', anchor: '#vector-databases' },
         { label: 'Modelos de embedding', anchor: '#embedding-models' },
@@ -253,7 +258,7 @@ schema: {
         { label: 'Evaluación y optimización', anchor: '#evaluation' },
         { label: 'Patrones RAG en producción', anchor: '#production' },
         { label: 'Errores comunes', anchor: '#common-mistakes' },
-        { label: 'Preguntas frecuentes', anchor: '#common-questions' },
+        { label: 'Preguntas frecuentes', anchor: '#faq' },
         { label: 'Lecturas relacionadas', anchor: '#related-reading' },
         { label: 'Fuentes', anchor: '#sources' },
       ],
@@ -289,6 +294,7 @@ schema: {
           ],
         },
         chunking: {
+          id: 'chunking',
           title: '¿Cuál es la estrategia de chunking óptima?',
           content: [
             '**La estrategia de chunking determina la calidad de recuperación.** Un mal chunking = información relevante dividida entre fragmentos, la recuperación falla.',
@@ -301,6 +307,7 @@ schema: {
           codeLanguage: 'python',
         },
         vectorDatabases: {
+          id: 'vector-databases',
           title: '¿Qué base de datos vectorial deberías usar?',
           image: '/images/local-rag-2026-vector-db-comparison-en.svg',
           imageCaption: 'Cinco bases de datos vectoriales comparadas para RAG local: Chroma (integrada, menos de 1M de documentos), Qdrant y Milvus (distribuidas, capacidad ilimitada), Weaviate (grafo más vector) y Pinecone (gestionada en la nube).',
@@ -314,6 +321,7 @@ schema: {
           columns: ['Base de datos', 'Tipo', 'Capacidad', 'Esfuerzo de configuración', 'Ideal para'],
         },
         embeddings: {
+          id: 'embedding-models',
           title: '¿Qué modelo de embedding deberías elegir?',
           rows: [
             { 'Modelo': 'nomic-embed-text (local)', 'Dimensiones': '768', 'Velocidad': 'Rápida', 'Calidad': 'Excelente', 'Recomendación': 'Mejor para RAG local' },
@@ -324,6 +332,7 @@ schema: {
           columns: ['Modelo', 'Dimensiones del vector', 'Velocidad', 'Calidad', 'Recomendación'],
         },
         retrieval: {
+          id: 'retrieval',
           title: '¿Cómo optimizas la calidad de recuperación?',
           content: [
             '**La calidad de recuperación** determina el éxito del RAG. Buena recuperación = buenas respuestas. Mala recuperación = alucinaciones.',
@@ -337,6 +346,7 @@ schema: {
           ],
         },
         evaluation: {
+          id: 'evaluation',
           title: '¿Cómo evalúas la calidad del RAG?',
           content: [
             '**La calidad del RAG tiene dos dimensiones: (1) calidad de recuperación (¿obtuvimos fragmentos relevantes?), y (2) calidad de generación (¿respondió bien el LLM?).**',
@@ -346,6 +356,7 @@ schema: {
           ],
         },
         production: {
+          id: 'production',
           title: 'Patrones RAG en producción',
           content: 'Para servicios en producción, utiliza estos patrones:',
           items: [
@@ -357,6 +368,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Errores comunes en la implementación de RAG local',
           items: [
             '**Chunking incorrecto de documentos.** Demasiados fragmentos pequeños = ruido en la recuperación. Pocos fragmentos grandes = información dividida. Probar tamaños de fragmento de forma empírica.',
@@ -479,7 +491,6 @@ schema: {
       primaryTerm: 'local RAG pipeline',
       toc: [
         { label: 'النقاط الرئيسية', anchor: '#key-takeaways' },
-        { label: 'كيف يعمل RAG', anchor: '#how-rag-works' },
         { label: 'استراتيجية تقسيم المستندات', anchor: '#chunking' },
         { label: 'قواعد البيانات المتجهية 2026', anchor: '#vector-databases' },
         { label: 'نماذج embedding', anchor: '#embedding-models' },
@@ -487,7 +498,7 @@ schema: {
         { label: 'التقييم والتحسين', anchor: '#evaluation' },
         { label: 'أنماط RAG في الإنتاج', anchor: '#production' },
         { label: 'أخطاء شائعة', anchor: '#common-mistakes' },
-        { label: 'الأسئلة الشائعة', anchor: '#common-questions' },
+        { label: 'الأسئلة الشائعة', anchor: '#faq' },
         { label: 'قراءات ذات صلة', anchor: '#related-reading' },
         { label: 'المصادر', anchor: '#sources' },
       ],
@@ -523,6 +534,7 @@ schema: {
           ],
         },
         chunking: {
+          id: 'chunking',
           title: 'ما استراتيجية التقسيم المثلى؟',
           content: [
             '**تحدّد استراتيجية التقسيم جودة الاسترجاع.** تقسيم سيئ = معلومات ذات صلة مقسّمة بين الأجزاء، يفشل الاسترجاع.',
@@ -535,6 +547,7 @@ schema: {
           codeLanguage: 'python',
         },
         vectorDatabases: {
+          id: 'vector-databases',
           title: 'أي قاعدة بيانات متجهية يجب أن تستخدم؟',
           image: '/images/local-rag-2026-vector-db-comparison-en.svg',
           imageCaption: 'مقارنة بين خمس قواعد بيانات متجهية لـ RAG المحلي: Chroma (مدمجة، أقل من مليون مستند)، Qdrant وMilvus (موزّعة، سعة غير محدودة)، Weaviate (رسم بياني مع متجه)، وPinecone (مُدارة سحابيًا).',
@@ -548,6 +561,7 @@ schema: {
           columns: ['قاعدة البيانات', 'النوع', 'السعة', 'جهد الإعداد', 'الأفضل لـ'],
         },
         embeddings: {
+          id: 'embedding-models',
           title: 'أي نموذج embedding يجب أن تختار؟',
           rows: [
             { 'النموذج': 'nomic-embed-text (محلي)', 'أبعاد المتجه': '768', 'السرعة': 'سريع', 'الجودة': 'ممتاز', 'التوصية': 'الأفضل لـRAG المحلي' },
@@ -558,6 +572,7 @@ schema: {
           columns: ['النموذج', 'أبعاد المتجه', 'السرعة', 'الجودة', 'التوصية'],
         },
         retrieval: {
+          id: 'retrieval',
           title: 'كيف تحسّن جودة الاسترجاع؟',
           content: [
             '**تحدّد جودة الاسترجاع** نجاح RAG. استرجاع جيد = إجابات جيدة. استرجاع سيئ = هلوسات.',
@@ -571,6 +586,7 @@ schema: {
           ],
         },
         evaluation: {
+          id: 'evaluation',
           title: 'كيف تقيّم جودة RAG؟',
           content: [
             '**لجودة RAG بُعدان: (1) جودة الاسترجاع (هل حصلنا على أجزاء ذات صلة؟)، و(2) جودة التوليد (هل أجاب LLM جيدًا؟).**',
@@ -580,6 +596,7 @@ schema: {
           ],
         },
         production: {
+          id: 'production',
           title: 'أنماط RAG في الإنتاج',
           content: 'لخدمات الإنتاج، استخدم هذه الأنماط:',
           items: [
@@ -591,6 +608,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'أخطاء شائعة في تنفيذ RAG المحلي',
           items: [
             '**تقسيم المستندات بشكل خاطئ.** أجزاء صغيرة كثيرة جدًا = ضوضاء في الاسترجاع. أجزاء كبيرة قليلة = معلومات مقسّمة. اختبر أحجام الأجزاء تجريبيًا.',
@@ -713,7 +731,6 @@ schema: {
       primaryTerm: 'pipeline RAG local',
       toc: [
         { label: 'Pontos principais', anchor: '#key-takeaways' },
-        { label: 'Como o RAG funciona', anchor: '#how-rag-works' },
         { label: 'Estratégia de chunking de documentos', anchor: '#chunking' },
         { label: 'Bancos de dados vetoriais 2026', anchor: '#vector-databases' },
         { label: 'Modelos de embedding', anchor: '#embedding-models' },
@@ -721,7 +738,7 @@ schema: {
         { label: 'Avaliação e otimização', anchor: '#evaluation' },
         { label: 'Padrões RAG em produção', anchor: '#production' },
         { label: 'Erros comuns', anchor: '#common-mistakes' },
-        { label: 'Perguntas frequentes', anchor: '#common-questions' },
+        { label: 'Perguntas frequentes', anchor: '#faq' },
         { label: 'Leituras relacionadas', anchor: '#related-reading' },
         { label: 'Fontes', anchor: '#sources' },
       ],
@@ -757,6 +774,7 @@ schema: {
           ],
         },
         chunking: {
+          id: 'chunking',
           title: 'Qual é a estratégia de chunking ideal?',
           content: [
             '**A estratégia de chunking determina a qualidade da recuperação.** Chunking ruim = informação relevante dividida entre fragmentos, a recuperação falha.',
@@ -769,6 +787,7 @@ schema: {
           codeLanguage: 'python',
         },
         vectorDatabases: {
+          id: 'vector-databases',
           title: 'Qual banco de dados vetorial usar?',
           image: '/images/local-rag-2026-vector-db-comparison-en.svg',
           imageCaption: 'Cinco bancos de dados vetoriais comparados para RAG local: Chroma (integrado, menos de 1M de documentos), Qdrant e Milvus (distribuídos, capacidade ilimitada), Weaviate (grafo mais vetor) e Pinecone (gerenciado na nuvem).',
@@ -782,6 +801,7 @@ schema: {
           columns: ['Banco de dados', 'Tipo', 'Capacidade', 'Esforço de configuração', 'Ideal para'],
         },
         embeddings: {
+          id: 'embedding-models',
           title: 'Qual modelo de embedding escolher?',
           rows: [
             { 'Modelo': 'nomic-embed-text (local)', 'Dimensões': '768', 'Velocidade': 'Rápida', 'Qualidade': 'Excelente', 'Recomendação': 'Melhor para RAG local' },
@@ -792,6 +812,7 @@ schema: {
           columns: ['Modelo', 'Dimensões do vetor', 'Velocidade', 'Qualidade', 'Recomendação'],
         },
         retrieval: {
+          id: 'retrieval',
           title: 'Como otimizar a qualidade de recuperação?',
           content: [
             '**A qualidade de recuperação** determina o sucesso do RAG. Boa recuperação = boas respostas. Má recuperação = alucinações.',
@@ -805,6 +826,7 @@ schema: {
           ],
         },
         evaluation: {
+          id: 'evaluation',
           title: 'Como avaliar a qualidade do RAG?',
           content: [
             '**A qualidade do RAG tem duas dimensões: (1) qualidade de recuperação (obtivemos fragmentos relevantes?), e (2) qualidade de geração (o LLM respondeu bem?).**',
@@ -814,6 +836,7 @@ schema: {
           ],
         },
         production: {
+          id: 'production',
           title: 'Padrões RAG em produção',
           content: 'Para serviços em produção, use estes padrões:',
           items: [
@@ -825,6 +848,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Erros comuns na implementação de RAG local',
           items: [
             '**Chunking incorreto de documentos.** Fragmentos muito pequenos = ruído na recuperação. Poucos fragmentos grandes = informação dividida. Testar tamanhos de fragmento empiricamente.',
@@ -937,7 +961,6 @@ schema: {
       primaryTerm: 'lokale RAG-Pipeline',
       toc: [
         { label: 'Zusammenfassung', anchor: '#key-takeaways' },
-        { label: 'Wie RAG funktioniert', anchor: '#how-rag-works' },
         { label: 'Dokumenten-Chunk-Strategie', anchor: '#chunking' },
         { label: 'Vektordatenbanken 2026', anchor: '#vector-databases' },
         { label: 'Embedding-Modelle', anchor: '#embedding-models' },
@@ -945,7 +968,7 @@ schema: {
         { label: 'Evaluierung und Optimierung', anchor: '#evaluation' },
         { label: 'Produktions-RAG-Muster', anchor: '#production' },
         { label: 'Häufige Fehler', anchor: '#common-mistakes' },
-        { label: 'Häufig gestellte Fragen', anchor: '#common-questions' },
+        { label: 'Häufig gestellte Fragen', anchor: '#faq' },
         { label: 'Weiterführende Literatur', anchor: '#related-reading' },
         { label: 'Quellen', anchor: '#sources' },
       ],
@@ -982,6 +1005,7 @@ schema: {
           ],
         },
         chunking: {
+          id: 'chunking',
           title: 'Was ist die optimale Chunk-Strategie?',
           content: [
             '**Chunk-Strategie bestimmt Abruf-Qualität.** Schlechtes Chunking = relevante Informationen auf Chunks verteilt, Abruf schlägt fehl.',
@@ -994,6 +1018,7 @@ schema: {
           codeLanguage: 'python',
         },
         vectorDatabases: {
+          id: 'vector-databases',
           title: 'Welche Vektordatenbank sollten Sie verwenden?',
           image: '/images/local-rag-2026-vector-db-comparison-en.svg',
           imageCaption: 'Fünf Vektordatenbanken für lokales RAG im Vergleich: Chroma (eingebettet, unter 1 Mio. Dokumente), Qdrant und Milvus (verteilt, unbegrenzte Kapazität), Weaviate (Graph plus Vektor) und Pinecone (verwaltete Cloud-Lösung).',
@@ -1007,6 +1032,7 @@ schema: {
           columns: ['Datenbank', 'Typ', 'Kapazität', 'Einrichtungsaufwand', 'Am besten für'],
         },
         embeddings: {
+          id: 'embedding-models',
           title: 'Welches Embedding-Modell sollten Sie wählen?',
           rows: [
             { 'Modell': 'nomic-embed-text (lokal)', 'Dimensionen': '768', 'Geschwindigkeit': 'Schnell', 'Qualität': 'Ausgezeichnet', 'Empfehlung': 'Best für lokale RAG' },
@@ -1017,6 +1043,7 @@ schema: {
           columns: ['Modell', 'Dimensionen', 'Geschwindigkeit', 'Qualität', 'Empfehlung'],
         },
         retrieval: {
+          id: 'retrieval',
           title: 'Wie optimieren Sie die Abruf-Qualität?',
           content: [
             '**Abruf-Qualität** bestimmt RAG-Erfolg. Guter Abruf = gute Antworten. Schlechter Abruf = Halluzinationen.',
@@ -1030,6 +1057,7 @@ schema: {
           ],
         },
         evaluation: {
+          id: 'evaluation',
           title: 'Wie bewerten Sie RAG-Qualität?',
           content: [
             '**RAG-Qualität hat zwei Dimensionen: (1) Abruf-Qualität (bekamen wir relevante Chunks?), und (2) Generierungs-Qualität (antwortete das LLM gut?)**',
@@ -1039,6 +1067,7 @@ schema: {
           ],
         },
         production: {
+          id: 'production',
           title: 'Produktions-RAG-Muster',
           content: 'Verwenden Sie für Produktionsdienste diese Muster:',
           items: [
@@ -1050,6 +1079,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Häufige Fehler bei lokaler RAG-Implementierung',
           items: [
             '**Dokumente falsch chunken.** Zu viele kleine Chunks = Abruf-Rauschen. Zu wenige große Chunks = Information verteilt. Chunk-Größen empirisch testen.',
@@ -1157,7 +1187,6 @@ schema: {
       primaryTerm: 'pipeline RAG local',
       toc: [
         { label: 'Points clés', anchor: '#key-takeaways' },
-        { label: 'Comment fonctionne RAG', anchor: '#how-rag-works' },
         { label: 'Stratégie de chunking de documents', anchor: '#chunking' },
         { label: 'Bases de données vectorielles 2026', anchor: '#vector-databases' },
         { label: 'Modèles d\'embedding', anchor: '#embedding-models' },
@@ -1165,7 +1194,7 @@ schema: {
         { label: 'Évaluation et optimisation', anchor: '#evaluation' },
         { label: 'Modèles de RAG en production', anchor: '#production' },
         { label: 'Erreurs courantes', anchor: '#common-mistakes' },
-        { label: 'Questions courantes', anchor: '#common-questions' },
+        { label: 'Questions courantes', anchor: '#faq' },
         { label: 'Lectures complémentaires', anchor: '#related-reading' },
         { label: 'Sources', anchor: '#sources' },
       ],
@@ -1202,6 +1231,7 @@ schema: {
           ],
         },
         chunking: {
+          id: 'chunking',
           title: 'Quelle est la stratégie de chunking optimale ?',
           content: [
             '**La stratégie de chunking détermine la qualité de récupération.** Mauvais chunking = informations pertinentes divisées sur chunks, récupération échoue.',
@@ -1214,6 +1244,7 @@ schema: {
           codeLanguage: 'python',
         },
         vectorDatabases: {
+          id: 'vector-databases',
           title: 'Quelle base de données vectorielle devriez-vous utiliser ?',
           image: '/images/local-rag-2026-vector-db-comparison-en.svg',
           imageCaption: 'Cinq bases de données vectorielles comparées pour le RAG local : Chroma (intégrée, moins d\'1M de documents), Qdrant et Milvus (distribuées, capacité illimitée), Weaviate (graphe plus vecteur) et Pinecone (gérée dans le cloud).',
@@ -1227,6 +1258,7 @@ schema: {
           columns: ['Base de données', 'Type', 'Capacité', 'Effort installation', 'Idéal pour'],
         },
         embeddings: {
+          id: 'embedding-models',
           title: 'Quel modèle d\'embedding devriez-vous choisir ?',
           rows: [
             { 'Modèle': 'nomic-embed-text (local)', 'Dimensions': '768', 'Vitesse': 'Rapide', 'Qualité': 'Excellente', 'Recommandation': 'Meilleur pour RAG local' },
@@ -1237,6 +1269,7 @@ schema: {
           columns: ['Modèle', 'Dimensions', 'Vitesse', 'Qualité', 'Recommandation'],
         },
         retrieval: {
+          id: 'retrieval',
           title: 'Comment optimisez-vous la qualité de récupération ?',
           content: [
             '**La qualité de récupération** détermine le succès de RAG. Bonne récupération = bonnes réponses. Mauvaise récupération = hallucinations.',
@@ -1250,6 +1283,7 @@ schema: {
           ],
         },
         evaluation: {
+          id: 'evaluation',
           title: 'Comment évaluez-vous la qualité de RAG ?',
           content: [
             '**La qualité de RAG a deux dimensions : (1) qualité récupération (avons-nous des chunks pertinents ?), et (2) qualité génération (l\'LLM a-t-il bien répondu ?)**',
@@ -1259,6 +1293,7 @@ schema: {
           ],
         },
         production: {
+          id: 'production',
           title: 'Modèles de RAG en production',
           content: 'Pour services production, utilisez ces modèles :',
           items: [
@@ -1270,6 +1305,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Erreurs courantes dans l\'implémentation de RAG local',
           items: [
             '**Mauvais chunking documents.** Trop petit chunks = bruit récupération. Trop gros chunks = information divisée. Tester tailles chunks empiriquement.',
@@ -1377,7 +1413,6 @@ schema: {
       primaryTerm: 'local RAG pipeline',
       toc: [
         { label: '重要ポイント', anchor: '#key-takeaways' },
-        { label: 'RAGの仕組み', anchor: '#how-rag-works' },
         { label: '最適なチャンキング戦略', anchor: '#chunking' },
         { label: 'ベクターデータベース2026', anchor: '#vector-databases' },
         { label: '埋め込みモデルの選択', anchor: '#embedding-models' },
@@ -1421,6 +1456,7 @@ schema: {
           ],
         },
         chunking: {
+          id: 'chunking',
           title: '最適なチャンキング戦略とは何ですか？',
           content: [
             '**チャンキング戦略は検索品質を決定します。** 悪いチャンキング = 関連情報がチャンク間に分割される、検索失敗。',
@@ -1433,6 +1469,7 @@ schema: {
           codeLanguage: 'python',
         },
         vectorDatabases: {
+          id: 'vector-databases',
           title: 'どのベクターデータベースを使うべきですか？',
           image: '/images/local-rag-2026-vector-db-comparison-en.svg',
           imageCaption: 'ローカルRAG向けに5つのベクターデータベースを比較。Chroma（組み込み、100万文書未満）、QdrantとMilvus（分散、無制限の容量）、Weaviate（グラフ＋ベクトル）、Pinecone（マネージドクラウド）。',
@@ -1446,6 +1483,7 @@ schema: {
           columns: ['データベース', 'タイプ', '容量', 'セットアップの手間', '推奨用途'],
         },
         embeddings: {
+          id: 'embedding-models',
           title: 'どの埋め込みモデルを選ぶべきですか？',
           rows: [
             { 'モデル': 'nomic-embed-text（ローカル）', '次元': '768', '速度': '速い', '品質': '優秀', '推奨': 'ローカルRAGに最適' },
@@ -1456,6 +1494,7 @@ schema: {
           columns: ['モデル', 'ベクトル次元', '速度', '品質', '推奨'],
         },
         retrieval: {
+          id: 'retrieval',
           title: '検索品質をどのように最適化しますか？',
           content: [
             '**検索品質** はRAG成功を決定します。良い検索 = 良い回答。悪い検索 = ハルシネーション。',
@@ -1469,6 +1508,7 @@ schema: {
           ],
         },
         evaluation: {
+          id: 'evaluation',
           title: '評価と最適化：RAGシステムをテストする方法',
           content: [
             '**主要指標：**',
@@ -1485,6 +1525,7 @@ schema: {
           ],
         },
         production: {
+          id: 'production',
           title: '本番環境RAGの3つのパターン',
           content: [
             '**パターン1：個人RAG（ローカル、単一ユーザー）**',
@@ -1655,7 +1696,6 @@ schema: {
       primaryTerm: 'local RAG pipeline',
       toc: [
         { label: '核心要点', anchor: '#key-takeaways' },
-        { label: 'RAG 如何工作', anchor: '#how-rag-works' },
         { label: '最优分块策略', anchor: '#chunking' },
         { label: '2026 向量数据库', anchor: '#vector-databases' },
         { label: '嵌入模型选择', anchor: '#embedding-models' },
@@ -1699,6 +1739,7 @@ schema: {
           ],
         },
         chunking: {
+          id: 'chunking',
           title: '最优的分块策略是什么？',
           content: [
             '**分块策略决定检索质量。** 不良分块 = 相关信息分散在多个片段，检索失败。',
@@ -1711,6 +1752,7 @@ schema: {
           codeLanguage: 'python',
         },
         vectorDatabases: {
+          id: 'vector-databases',
           title: '应该使用哪个向量数据库？',
           image: '/images/local-rag-2026-vector-db-comparison-en.svg',
           imageCaption: '针对本地RAG比较五种向量数据库：Chroma（内置，少于100万文档）、Qdrant和Milvus（分布式，容量无限制）、Weaviate（图+向量）、Pinecone（托管云服务）。',
@@ -1724,6 +1766,7 @@ schema: {
           columns: ['数据库', '类型', '容量', '设置难度', '最适合'],
         },
         embeddings: {
+          id: 'embedding-models',
           title: '应选择哪个嵌入模型？',
           rows: [
             { '模型': 'nomic-embed-text（本地）', '维度': '768', '速度': '快', '质量': '优秀', '推荐': '本地RAG最佳' },
@@ -1734,6 +1777,7 @@ schema: {
           columns: ['模型', '向量维度', '速度', '质量', '推荐'],
         },
         retrieval: {
+          id: 'retrieval',
           title: '如何优化检索质量？',
           content: [
             '**检索质量** 决定RAG成败。好的检索 = 好的答案。差的检索 = 幻觉。',
@@ -1747,6 +1791,7 @@ schema: {
           ],
         },
         evaluation: {
+          id: 'evaluation',
           title: '评估与优化：如何测试RAG系统',
           content: [
             '**关键指标：**',
@@ -1763,6 +1808,7 @@ schema: {
           ],
         },
         production: {
+          id: 'production',
           title: '生产环境RAG的三种模式',
           content: [
             '**模式1：个人RAG（本地、单用户）**',
@@ -1933,7 +1979,6 @@ schema: {
       primaryTerm: '로컬 RAG 파이프라인',
       toc: [
         { label: '핵심 요약', anchor: '#key-takeaways' },
-        { label: 'RAG 작동 원리', anchor: '#how-rag-works' },
         { label: '문서 청킹 전략', anchor: '#chunking' },
         { label: '벡터 데이터베이스 2026', anchor: '#vector-databases' },
         { label: '임베딩 모델', anchor: '#embedding-models' },
@@ -1941,7 +1986,7 @@ schema: {
         { label: '평가 및 최적화', anchor: '#evaluation' },
         { label: '프로덕션 RAG 패턴', anchor: '#production' },
         { label: '흔한 실수들', anchor: '#common-mistakes' },
-        { label: '자주 묻는 질문', anchor: '#common-questions' },
+        { label: '자주 묻는 질문', anchor: '#faq' },
         { label: '관련 읽을거리', anchor: '#related-reading' },
         { label: '출처', anchor: '#sources' },
       ],
@@ -1977,6 +2022,7 @@ schema: {
           ],
         },
         chunking: {
+          id: 'chunking',
           title: '최적의 청킹 전략은 무엇입니까?',
           content: [
             '**청킹 전략이 검색 품질을 결정합니다.** 잘못된 청킹 = 관련 정보가 청크 사이에 분산되어 검색 실패.',
@@ -1989,6 +2035,7 @@ schema: {
           codeLanguage: 'python',
         },
         vectorDatabases: {
+          id: 'vector-databases',
           title: '어떤 벡터 데이터베이스를 사용해야 합니까?',
           image: '/images/local-rag-2026-vector-db-comparison-en.svg',
           imageCaption: '로컬 RAG를 위한 5개 벡터 데이터베이스 비교: Chroma(내장형, 100만 건 미만), Qdrant와 Milvus(분산형, 무제한 용량), Weaviate(그래프 + 벡터), Pinecone(관리형 클라우드).',
@@ -2002,6 +2049,7 @@ schema: {
           columns: ['Database', '유형', '용량', '설정 난이도', '최적 사용 사례'],
         },
         embeddings: {
+          id: 'embedding-models',
           title: '어떤 임베딩 모델을 선택해야 합니까?',
           rows: [
             { 'Model': 'nomic-embed-text (로컬)', 'Dimensions': '768', 'Speed': '빠름', 'Quality': '우수', 'Recommendation': '로컬 RAG에 최적' },
@@ -2012,6 +2060,7 @@ schema: {
           columns: ['모델', '벡터 차원', '속도', '품질', '권장 사항'],
         },
         retrieval: {
+          id: 'retrieval',
           title: '검색 품질을 어떻게 최적화합니까?',
           content: [
             '**검색 품질**이 RAG 성공을 결정합니다. 좋은 검색 = 좋은 답변. 나쁜 검색 = 환각 현상.',
@@ -2025,6 +2074,7 @@ schema: {
           ],
         },
         evaluation: {
+          id: 'evaluation',
           title: 'RAG 품질을 어떻게 평가합니까?',
           content: [
             '**RAG 품질에는 두 가지 차원이 있습니다: (1) 검색 품질 (관련 청크를 가져왔는가?), (2) 생성 품질 (LLM이 잘 답변했는가?).**',
@@ -2034,6 +2084,7 @@ schema: {
           ],
         },
         production: {
+          id: 'production',
           title: '프로덕션 RAG 패턴',
           content: '프로덕션 서비스를 위해 다음 패턴을 사용하십시오:',
           items: [
@@ -2045,6 +2096,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: '로컬 RAG 구현 시 흔한 실수들',
           items: [
             '**문서 청킹 오류.** 너무 작은 청크가 많으면 = 검색 노이즈. 너무 큰 청크가 적으면 = 정보 분산. 청크 크기를 실험적으로 테스트하십시오.',

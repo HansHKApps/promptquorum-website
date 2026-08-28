@@ -69,6 +69,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: 'A prompt library solves discovery, duplication, and quality baseline. Build one when 3+ people write prompts or 20+ prompts are in active use. Use /prompts/[theme]/[slug]-v[N].[ext] structure, Git tags for production versions, and a three-role access model. Deprecate prompts with no usage in 90 days.',
       },
       what_is_library: {
+        id: 'what_is_library',
         title: 'What Is a Prompt Library?',
         snippets: [
           { type: 'in-one-sentence', text: 'A prompt library is a shared, versioned, searchable repository of prompts that a team can discover, reuse, and improve over time.' },
@@ -84,6 +85,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       folder_structure: {
+        id: 'folder_structure',
         title: 'Folder Structure and Naming Conventions',
         content: [
           '**Use the pattern `/prompts/[theme]/[slug]-v[version].[ext]` for all prompt files.** This structure allows filtering by theme, sorting by version, and identifying the format (`.md` for markdown, `.txt` for plain text, `.json` for structured prompts) at a glance.',
@@ -109,6 +111,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       version_control: {
+        id: 'version_control',
         title: 'Version Control Strategies for Prompt Libraries',
         content: [
           '**Use Git tags to mark production versions of prompts: tag `prompt/ticket-triage/v2` when that version is deployed to production.** This makes rollback deterministic — revert to the tagged commit, not to an ambiguous "last stable" state.',
@@ -117,6 +120,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       access_control: {
+        id: 'access_control',
         title: 'Access Control and Ownership',
         content: [
           '**A three-role model covers most teams: contributor (can add), owner/reviewer (can modify), approver (can deploy to production).** Collapsing these roles — letting anyone edit and deploy — is the primary cause of prompt regression in shared libraries.',
@@ -128,6 +132,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       deprecation: {
+        id: 'deprecation',
         title: 'Review and Deprecation Workflow',
         content: [
           '**Run a quarterly review of the prompt library: check usage metrics, evaluate whether current versions still meet quality standards, and identify prompts ready for deprecation.** A prompt that no one uses in 90 days is a maintenance burden, not an asset.',
@@ -136,6 +141,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       common_mistakes: {
+        id: 'common_mistakes',
         title: 'Common Mistakes in Prompt Library Management',
         mistakes: [
           { mistake: 'Flat folder structure with no theme organization', problem: 'With 20+ prompts, files become unsearchable and team members duplicate work because they cannot find existing prompts', fix: 'Organize prompts by theme: /prompts/[theme]/[slug]-v[N].txt. Maximum 20 prompts per theme folder.' },
@@ -167,6 +173,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       related_reading: {
+        id: 'related_reading',
         title: 'Related Reading',
         items: [
           { title: 'Build a Prompt Library', url: '/prompt-engineering/build-a-prompt-library' },
@@ -249,6 +256,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: 'Eine Prompt-Bibliothek löst Auffindbarkeit, Duplizierung und Qualitätsbasis. Erstellen Sie eine, wenn 3+ Personen Prompts schreiben oder 20+ Prompts aktiv genutzt werden. Verwenden Sie die /prompts/[Thema]/[Slug]-v[N].[Ext]-Struktur, Git-Tags für Produktionsversionen und ein Drei-Rollen-Zugriffsmodell.',
       },
       what_is_library: {
+        id: 'what_is_library',
         title: 'Was ist eine Prompt-Bibliothek?',
         snippets: [
           { type: 'in-one-sentence', text: 'Eine Prompt-Bibliothek ist ein gemeinsames, versioniertes, durchsuchbares Repository von Prompts, das ein Team entdecken, wiederverwenden und im Laufe der Zeit verbessern kann.' },
@@ -264,6 +272,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       folder_structure: {
+        id: 'folder_structure',
         title: 'Ordnerstruktur und Namenskonventionen',
         content: [
           '**Verwenden Sie das Muster `/prompts/[Thema]/[Slug]-v[Version].[Ext]` für alle Prompt-Dateien.** Diese Struktur ermöglicht das Filtern nach Thema, Sortieren nach Version und das Erkennen des Formats (`.md` für Markdown, `.json` für strukturierte Prompts) auf einen Blick.',
@@ -277,6 +286,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: [],
       },
       version_control: {
+        id: 'version_control',
         title: 'Versionskontrollstrategien für Prompt-Bibliotheken',
         content: [
           '**Verwenden Sie Git-Tags, um Produktionsversionen von Prompts zu markieren: Tag `prompt/ticket-triage/v2`, wenn diese Version in Produktion geht.** Das macht Rollbacks deterministisch — zurück zum getaggten Commit, nicht zu einem unklaren „letzten stabilen" Zustand.',
@@ -285,6 +295,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       access_control: {
+        id: 'access_control',
         title: 'Zugriffssteuerung und Eigenverantwortung',
         content: [
           '**Ein Drei-Rollen-Modell deckt die meisten Teams ab: Mitwirkender (kann hinzufügen), Eigentümer/Reviewer (kann ändern), Genehmiger (kann in Produktion deployen).** Das Zusammenführen dieser Rollen — wenn jeder bearbeiten und deployen kann — ist die Hauptursache für Prompt-Regression in gemeinsamen Bibliotheken.',
@@ -296,6 +307,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       deprecation: {
+        id: 'deprecation',
         title: 'Review- und Deprecation-Workflow',
         content: [
           '**Führen Sie vierteljährlich eine Überprüfung der Prompt-Bibliothek durch: Nutzungsmetriken prüfen, beurteilen, ob aktuelle Versionen noch Qualitätsstandards erfüllen, und Prompts identifizieren, die für die Deprecation bereit sind.** Ein Prompt, den in 90 Tagen niemand nutzt, ist eine Wartungslast, kein Asset.',
@@ -304,6 +316,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       common_mistakes: {
+        id: 'common_mistakes',
         title: 'Häufige Fehler bei der Prompt-Bibliotheksverwaltung',
         mistakes: [
           { mistake: 'Flache Ordnerstruktur ohne Themenorganisation', problem: 'Mit 20+ Prompts werden Dateien undurchsuchbar und Teammitglieder duplizieren Arbeit, weil sie vorhandene Prompts nicht finden können', fix: 'Prompts nach Thema organisieren: /prompts/[Thema]/[Slug]-v[N].txt. Maximal 20 Prompts pro Themenordner.' },
@@ -334,6 +347,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       related_reading: {
+        id: 'related_reading',
         title: 'Weiterführende Lektüre',
         items: [
           { title: 'Build a Prompt Library', url: '/prompt-engineering/build-a-prompt-library' },
@@ -344,6 +358,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       sources: {
+        id: 'sources',
         title: 'Quellen',
         items: [
           { title: 'Git Documentation: Branch Protection', url: 'https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches' },
@@ -416,6 +431,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: 'Una biblioteca de prompts resuelve el descubrimiento, la duplicación y la línea base de calidad. Construye una cuando 3+ personas escriben prompts o 20+ prompts están en uso activo. Usa la estructura /prompts/[tema]/[slug]-v[N].[ext], etiquetas Git para versiones de producción y un modelo de acceso de tres roles. Depreca los prompts sin uso en 90 días.',
       },
       what_is_library: {
+        id: 'what_is_library',
         title: '¿Qué es una biblioteca de prompts?',
         snippets: [
           { type: 'in-one-sentence', text: 'Una biblioteca de prompts es un repositorio compartido, versionado y consultable de prompts que un equipo puede descubrir, reutilizar y mejorar a lo largo del tiempo.' },
@@ -431,6 +447,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       folder_structure: {
+        id: 'folder_structure',
         title: 'Estructura de carpetas y convenciones de nombres',
         content: [
           '**Usa el patrón `/prompts/[tema]/[slug]-v[versión].[ext]` para todos los archivos de prompts.** Esta estructura permite filtrar por tema, ordenar por versión e identificar el formato (`.md` para markdown, `.txt` para texto plano, `.json` para prompts estructurados) de un vistazo.',
@@ -456,6 +473,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       version_control: {
+        id: 'version_control',
         title: 'Estrategias de control de versiones para bibliotecas de prompts',
         content: [
           '**Usa etiquetas Git para marcar las versiones de producción de los prompts: etiqueta `prompt/ticket-triage/v2` cuando esa versión se despliegue en producción.** Esto hace que el rollback sea determinista — revertir al commit etiquetado, no a un estado ambiguo de "último estable".',
@@ -464,6 +482,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       access_control: {
+        id: 'access_control',
         title: 'Control de acceso y propiedad',
         content: [
           '**Un modelo de tres roles cubre la mayoría de los equipos: contribuidor (puede añadir), propietario/revisor (puede modificar), aprobador (puede desplegar en producción).** Fusionar estos roles — permitir que cualquiera edite y despliegue — es la principal causa de regresión de prompts en bibliotecas compartidas.',
@@ -475,6 +494,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       deprecation: {
+        id: 'deprecation',
         title: 'Flujo de revisión y deprecación',
         content: [
           '**Ejecuta una revisión trimestral de la biblioteca de prompts: comprueba las métricas de uso, evalúa si las versiones actuales siguen cumpliendo los estándares de calidad e identifica los prompts listos para deprecar.** Un prompt que nadie usa en 90 días es una carga de mantenimiento, no un activo.',
@@ -483,6 +503,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       common_mistakes: {
+        id: 'common_mistakes',
         title: 'Errores comunes en la gestión de biblioteca de prompts',
         mistakes: [
           { mistake: 'Estructura de carpetas plana sin organización por tema', problem: 'Con 20+ prompts, los archivos se vuelven imposibles de buscar y los miembros del equipo duplican trabajo porque no pueden encontrar prompts existentes', fix: 'Organiza los prompts por tema: /prompts/[tema]/[slug]-v[N].txt. Máximo 20 prompts por carpeta de tema.' },
@@ -513,6 +534,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       related_reading: {
+        id: 'related_reading',
         title: 'Lecturas relacionadas',
         items: [
           { title: 'Construye una biblioteca de prompts', url: '/prompt-engineering/build-a-prompt-library' },
@@ -523,6 +545,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       sources: {
+        id: 'sources',
         title: 'Fuentes',
         items: [
           { title: 'Git Documentation: Branch Protection', url: 'https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches' },
@@ -593,6 +616,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: 'Uma biblioteca de prompts resolve a descoberta, a duplicação e a linha de base de qualidade. Construa uma quando 3+ pessoas escrevem prompts ou 20+ prompts estão em uso ativo. Use a estrutura /prompts/[tema]/[slug]-v[N].[ext], etiquetas Git para versões de produção e um modelo de acesso de três papéis. Deprecie os prompts sem uso em 90 dias.',
       },
       what_is_library: {
+        id: 'what_is_library',
         title: 'O que é uma biblioteca de prompts?',
         snippets: [
           { type: 'in-one-sentence', text: 'Uma biblioteca de prompts é um repositório compartilhado, versionado e pesquisável de prompts que uma equipe pode descobrir, reutilizar e aprimorar ao longo do tempo.' },
@@ -608,6 +632,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       folder_structure: {
+        id: 'folder_structure',
         title: 'Estrutura de pastas e convenções de nomes',
         content: [
           '**Use o padrão `/prompts/[tema]/[slug]-v[versão].[ext]` para todos os arquivos de prompts.** Essa estrutura permite filtrar por tema, ordenar por versão e identificar o formato (`.md` para markdown, `.txt` para texto simples, `.json` para prompts estruturados) de um olhar.',
@@ -633,6 +658,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       version_control: {
+        id: 'version_control',
         title: 'Estratégias de controle de versões para bibliotecas de prompts',
         content: [
           '**Use etiquetas Git para marcar as versões de produção dos prompts: etiquete `prompt/ticket-triage/v2` quando essa versão for implantada em produção.** Isso torna o rollback determinístico — reverta para o commit etiquetado, não para um estado ambíguo de "último estável".',
@@ -641,6 +667,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       access_control: {
+        id: 'access_control',
         title: 'Controle de acesso e propriedade',
         content: [
           '**Um modelo de três papéis cobre a maioria das equipes: contribuidor (pode adicionar), proprietário/revisor (pode modificar), aprovador (pode implantar em produção).** Mesclar esses papéis — permitir que qualquer pessoa edite e implante — é a principal causa de regressão de prompts em bibliotecas compartilhadas.',
@@ -652,6 +679,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       deprecation: {
+        id: 'deprecation',
         title: 'Fluxo de revisão e depreciação',
         content: [
           '**Execute uma revisão trimestral da biblioteca de prompts: verifique as métricas de uso, avalie se as versões atuais ainda atendem aos padrões de qualidade e identifique os prompts prontos para deprecação.** Um prompt que ninguém usa em 90 dias é uma carga de manutenção, não um ativo.',
@@ -660,6 +688,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       common_mistakes: {
+        id: 'common_mistakes',
         title: 'Erros comuns no gerenciamento de biblioteca de prompts',
         mistakes: [
           { mistake: 'Estrutura de pastas plana sem organização por tema', problem: 'Com 20+ prompts, os arquivos se tornam impossíveis de pesquisar e os membros da equipe duplicam trabalho porque não conseguem encontrar prompts existentes', fix: 'Organize os prompts por tema: /prompts/[tema]/[slug]-v[N].txt. Máximo de 20 prompts por pasta de tema.' },
@@ -690,6 +719,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       related_reading: {
+        id: 'related_reading',
         title: 'Leituras relacionadas',
         items: [
           { title: 'Construa uma biblioteca de prompts', url: '/prompt-engineering/build-a-prompt-library' },
@@ -700,6 +730,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       sources: {
+        id: 'sources',
         title: 'Fontes',
         items: [
           { title: 'Git Documentation: Branch Protection', url: 'https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches' },
@@ -772,6 +803,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: 'Une bibliothèque de prompts résout la découverte, la duplication et la base de qualité. Créez-en une quand 3+ personnes écrivent des prompts ou 20+ prompts sont en usage actif. Utilisez la structure /prompts/[thème]/[slug]-v[N].[ext], des tags Git pour les versions de production, et un modèle d\'accès à trois rôles.',
       },
       what_is_library: {
+        id: 'what_is_library',
         title: 'Qu\'est-ce qu\'une bibliothèque de prompts ?',
         snippets: [
           { type: 'in-one-sentence', text: 'Une bibliothèque de prompts est un dépôt partagé, versionné et consultable de prompts qu\'une équipe peut découvrir, réutiliser et améliorer dans le temps.' },
@@ -787,6 +819,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       folder_structure: {
+        id: 'folder_structure',
         title: 'Structure de dossiers et conventions de nommage',
         content: [
           '**Utilisez le pattern `/prompts/[thème]/[slug]-v[version].[ext]` pour tous les fichiers de prompts.** Cette structure permet de filtrer par thème, de trier par version et d\'identifier le format (`.md` pour markdown, `.json` pour les prompts structurés) en un coup d\'œil.',
@@ -800,6 +833,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: [],
       },
       version_control: {
+        id: 'version_control',
         title: 'Stratégies de contrôle de version pour les bibliothèques de prompts',
         content: [
           '**Utilisez des tags Git pour marquer les versions de production des prompts : tag `prompt/ticket-triage/v2` lorsque cette version est déployée en production.** Cela rend les retours arrière déterministes — retour au commit tagué, pas à un état "dernier stable" ambigu.',
@@ -808,6 +842,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       access_control: {
+        id: 'access_control',
         title: 'Contrôle d\'accès et propriété',
         content: [
           '**Un modèle à trois rôles couvre la plupart des équipes : contributeur (peut ajouter), propriétaire/réviseur (peut modifier), approbateur (peut déployer en production).** Fusionner ces rôles est la principale cause de régression de prompts dans les bibliothèques partagées.',
@@ -819,6 +854,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       deprecation: {
+        id: 'deprecation',
         title: 'Workflow de révision et de dépréciation',
         content: [
           '**Effectuez une révision trimestrielle de la bibliothèque de prompts : vérifiez les métriques d\'utilisation, évaluez si les versions actuelles répondent encore aux standards de qualité, et identifiez les prompts prêts pour la dépréciation.** Un prompt que personne n\'utilise en 90 jours est une charge de maintenance, pas un asset.',
@@ -827,6 +863,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       common_mistakes: {
+        id: 'common_mistakes',
         title: 'Erreurs courantes dans la gestion de bibliothèque de prompts',
         mistakes: [
           { mistake: 'Structure de dossiers plate sans organisation par thème', problem: 'Avec 20+ prompts, les fichiers deviennent introuvables et les membres de l\'équipe dupliquent le travail', fix: 'Organisez les prompts par thème : /prompts/[thème]/[slug]-v[N].txt. Maximum 20 prompts par dossier thématique.' },
@@ -857,6 +894,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       related_reading: {
+        id: 'related_reading',
         title: 'Lectures connexes',
         items: [
           { title: 'Build a Prompt Library', url: '/prompt-engineering/build-a-prompt-library' },
@@ -939,6 +977,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: 'プロンプトライブラリは発見性、重複、品質ベースラインを解決します。3人以上がプロンプトを書くか20以上のプロンプトが積極的に使用されている場合に構築します。/prompts/[テーマ]/[スラッグ]-v[N].[拡張子]構造、Gitタグ、3ロールアクセスモデルを使用します。',
       },
       what_is_library: {
+        id: 'what_is_library',
         title: 'プロンプトライブラリとは何ですか？',
         snippets: [
           { type: 'in-one-sentence', text: 'プロンプトライブラリとは、チームが発見、再利用、時間をかけて改善できるプロンプトの共有、バージョン管理、検索可能なリポジトリです。' },
@@ -954,6 +993,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       folder_structure: {
+        id: 'folder_structure',
         title: 'フォルダ構造と命名規則',
         content: [
           '**すべてのプロンプトファイルに `/prompts/[テーマ]/[スラッグ]-v[バージョン].[拡張子]` というパターンを使用します。** この構造により、テーマでのフィルタリング、バージョンでのソート、フォーマットの一目での識別が可能になります。',
@@ -967,6 +1007,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: [],
       },
       version_control: {
+        id: 'version_control',
         title: 'プロンプトライブラリのバージョン管理戦略',
         content: [
           '**Gitタグを使用してプロンプトの本番バージョンをマークします：そのバージョンが本番にデプロイされたときに `prompt/ticket-triage/v2` とタグを付けます。** これによりロールバックが決定論的になります。',
@@ -975,6 +1016,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       access_control: {
+        id: 'access_control',
         title: 'アクセス制御と所有権',
         content: [
           '**3つのロールモデルがほとんどのチームをカバーします：コントリビューター（追加可）、オーナー/レビュアー（変更可）、承認者（本番にデプロイ可）。** これらのロールを統合することが共有ライブラリでのプロンプト回帰の主な原因です。',
@@ -986,6 +1028,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       deprecation: {
+        id: 'deprecation',
         title: 'レビューと廃止ワークフロー',
         content: [
           '**四半期ごとにプロンプトライブラリのレビューを実行します：使用メトリクスを確認し、現在のバージョンが品質標準を満たしているかを評価し、廃止の準備ができているプロンプトを特定します。** 90日間誰も使用しないプロンプトはアセットではなくメンテナンスの負担です。',
@@ -994,6 +1037,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       common_mistakes: {
+        id: 'common_mistakes',
         title: 'プロンプトライブラリ管理のよくある間違い',
         mistakes: [
           { mistake: 'テーマ整理なしのフラットなフォルダ構造', problem: '20以上のプロンプトがあると、ファイルが検索不可能になり、チームメンバーは既存のプロンプトを見つけられないため作業を重複する', fix: 'テーマ別にプロンプトを整理する：/prompts/[テーマ]/[スラッグ]-v[N].txt。テーマフォルダごとに最大20プロンプト。' },
@@ -1024,6 +1068,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       related_reading: {
+        id: 'related_reading',
         title: '関連記事',
         items: [
           { title: 'Build a Prompt Library', url: '/prompt-engineering/build-a-prompt-library' },
@@ -1034,6 +1079,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       sources: {
+        id: 'sources',
         title: '参考資料',
         items: [
           { title: 'Git Documentation: Branch Protection', url: 'https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches' },
@@ -1106,6 +1152,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: 'Prompt库解决发现性、重复和质量基线问题。当3人以上写Prompt或20个以上Prompt积极使用时构建。使用/prompts/[主题]/[标识符]-v[N].[扩展名]结构、Git标签和三角色访问模型。',
       },
       what_is_library: {
+        id: 'what_is_library',
         title: '什么是Prompt库？',
         snippets: [
           { type: 'in-one-sentence', text: 'Prompt库是一个共享的、受版本控制的、可搜索的Prompt仓库，团队可以随时间发现、重用和改进。' },
@@ -1121,6 +1168,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       folder_structure: {
+        id: 'folder_structure',
         title: '文件夹结构和命名规范',
         content: [
           '**对所有Prompt文件使用 `/prompts/[主题]/[标识符]-v[版本].[扩展名]` 的模式。** 这种结构允许按主题过滤、按版本排序，并一目了然地识别格式。',
@@ -1134,6 +1182,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: [],
       },
       version_control: {
+        id: 'version_control',
         title: 'Prompt库的版本控制策略',
         content: [
           '**使用Git标签标记Prompt的生产版本：当该版本部署到生产环境时打标签 `prompt/ticket-triage/v2`。** 这使回滚具有确定性。',
@@ -1142,6 +1191,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       access_control: {
+        id: 'access_control',
         title: '访问控制和所有权',
         content: [
           '**三角色模型适合大多数团队：贡献者（可以添加）、所有者/审查者（可以修改）、审批者（可以部署到生产环境）。** 合并这些角色是共享库中Prompt回归的主要原因。',
@@ -1153,6 +1203,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       deprecation: {
+        id: 'deprecation',
         title: '审查和弃用工作流',
         content: [
           '**每季度对Prompt库进行审查：检查使用指标、评估当前版本是否仍满足质量标准，并识别准备弃用的Prompt。** 90天内没有人使用的Prompt是维护负担，而非资产。',
@@ -1161,6 +1212,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       common_mistakes: {
+        id: 'common_mistakes',
         title: 'Prompt库管理中的常见错误',
         mistakes: [
           { mistake: '没有主题组织的平面文件夹结构', problem: '有20个以上Prompt时，文件变得不可搜索，团队成员因为找不到现有Prompt而重复工作', fix: '按主题组织Prompt：/prompts/[主题]/[标识符]-v[N].txt。每个主题文件夹最多20个Prompt。' },
@@ -1191,6 +1243,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       related_reading: {
+        id: 'related_reading',
         title: '相关阅读',
         items: [
           { title: 'Build a Prompt Library', url: '/prompt-engineering/build-a-prompt-library' },
@@ -1201,6 +1254,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       sources: {
+        id: 'sources',
         title: '参考来源',
         items: [
           { title: 'Git Documentation: Branch Protection', url: 'https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches' },
@@ -1273,6 +1327,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: '프롬프트 라이브러리는 검색·중복·품질 기준선 문제를 해결합니다. 프롬프트 작성자가 3명 이상이거나 20개 이상의 프롬프트가 활성 사용 중일 때 구축하십시오. /prompts/[주제]/[slug]-v[N].[ext] 구조, 프로덕션 버전을 위한 Git 태그, 3역할 접근 모델을 사용하십시오. 90일간 미사용 프롬프트는 사용 중단하십시오.',
       },
       what_is_library: {
+        id: 'what_is_library',
         title: '프롬프트 라이브러리란 무엇인가',
         snippets: [
           { type: 'in-one-sentence', text: '프롬프트 라이브러리는 팀이 시간이 지남에 따라 검색·재사용·개선할 수 있는 공유·버전 관리·검색 가능한 프롬프트 저장소입니다.' },
@@ -1288,6 +1343,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       folder_structure: {
+        id: 'folder_structure',
         title: '폴더 구조와 명명 규칙',
         content: [
           '**모든 프롬프트 파일에 `/prompts/[주제]/[slug]-v[버전].[ext]` 패턴을 사용하십시오.** 이 구조를 통해 주제별 필터링, 버전별 정렬, 형식(마크다운은 `.md`, 일반 텍스트는 `.txt`, 구조화된 프롬프트는 `.json`) 식별을 한눈에 할 수 있습니다.',
@@ -1313,6 +1369,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       version_control: {
+        id: 'version_control',
         title: '프롬프트 라이브러리의 버전 관리 전략',
         content: [
           '**Git 태그를 사용하여 프롬프트의 프로덕션 버전을 표시하십시오: 해당 버전이 프로덕션에 배포될 때 `prompt/ticket-triage/v2`로 태그를 지정하십시오.** 이렇게 하면 롤백이 결정적이 됩니다 — 모호한 "마지막 안정 버전" 상태가 아닌 태그된 커밋으로 되돌립니다.',
@@ -1321,6 +1378,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       access_control: {
+        id: 'access_control',
         title: '접근 제어와 소유권',
         content: [
           '**3역할 모델이 대부분의 팀을 담당합니다: 기여자(추가 가능), 소유자/검토자(수정 가능), 승인자(프로덕션 배포 가능).** 이 역할을 합치는 것 — 누구나 편집하고 배포 가능하게 하는 것 — 이 공유 라이브러리의 프롬프트 회귀의 주요 원인입니다.',
@@ -1332,6 +1390,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       deprecation: {
+        id: 'deprecation',
         title: '검토 흐름과 사용 중단',
         content: [
           '**분기별 프롬프트 라이브러리 검토를 실행하십시오: 사용 메트릭을 확인하고, 현재 버전이 여전히 품질 기준을 충족하는지 평가하며, 사용 중단 준비가 된 프롬프트를 식별하십시오.** 90일간 아무도 사용하지 않는 프롬프트는 자산이 아닌 유지보수 부담입니다.',
@@ -1340,6 +1399,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       common_mistakes: {
+        id: 'common_mistakes',
         title: '프롬프트 라이브러리 관리의 일반적인 실수',
         mistakes: [
           { mistake: '주제 구성 없는 평면 폴더 구조', problem: '프롬프트가 20개 이상이면 파일 검색이 불가능해지고 팀원들이 기존 프롬프트를 찾지 못해 작업을 중복합니다', fix: '주제별로 프롬프트를 구성하십시오: /prompts/[주제]/[slug]-v[N].txt. 주제 폴더당 최대 20개 프롬프트.' },
@@ -1370,6 +1430,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       related_reading: {
+        id: 'related_reading',
         title: '관련 읽기',
         items: [
           { title: '프롬프트 라이브러리 구축', url: '/prompt-engineering/build-a-prompt-library' },
@@ -1380,6 +1441,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       sources: {
+        id: 'sources',
         title: '출처',
         items: [
           { title: 'Git Documentation: Branch Protection', url: 'https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches' },
@@ -1452,6 +1514,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         content: 'تحل مكتبة التلقينات مشكلات الاكتشاف والتكرار وخط أساس الجودة. أنشئها عندما يكتب 3 أشخاص أو أكثر التلقينات أو يكون هناك 20 تلقينًا أو أكثر في الاستخدام النشط. استخدم بنية /prompts/[theme]/[slug]-v[N].[ext]، وعلامات Git لإصدارات الإنتاج، ونموذج وصول بثلاثة أدوار. أهمل التلقينات غير المستخدمة خلال 90 يومًا.',
       },
       what_is_library: {
+        id: 'what_is_library',
         title: 'ما هي مكتبة التلقينات؟',
         snippets: [
           { type: 'in-one-sentence', text: 'مكتبة التلقينات هي مستودع مشترك ومُصدَر وقابل للبحث يمكن للفريق اكتشافه وإعادة استخدامه وتحسينه بمرور الوقت.' },
@@ -1467,6 +1530,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       folder_structure: {
+        id: 'folder_structure',
         title: 'بنية المجلدات واصطلاحات التسمية',
         content: [
           '**استخدم النمط `/prompts/[theme]/[slug]-v[version].[ext]` لجميع ملفات التلقينات.** تتيح هذه البنية التصفية حسب الموضوع، والفرز حسب الإصدار، وتحديد التنسيق (`.md` للـ markdown، `.txt` للنص العادي، `.json` للتلقينات المنظمة) للوهلة الأولى.',
@@ -1492,6 +1556,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       version_control: {
+        id: 'version_control',
         title: 'استراتيجيات التحكم بالإصدارات لمكتبات التلقينات',
         content: [
           '**استخدم علامات Git لتمييز إصدارات الإنتاج من التلقينات: ضع علامة `prompt/ticket-triage/v2` عند نشر ذلك الإصدار في الإنتاج.** هذا يجعل التراجع محددًا — العودة إلى الـ commit المُوسَم، لا إلى حالة "آخر استقرار" الغامضة.',
@@ -1500,6 +1565,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       access_control: {
+        id: 'access_control',
         title: 'التحكم بالوصول والملكية',
         content: [
           '**نموذج الثلاثة أدوار يغطي معظم الفرق: مساهم (يمكنه الإضافة)، مالك/مراجع (يمكنه التعديل)، موافق (يمكنه النشر في الإنتاج).** دمج هذه الأدوار — السماح لأي شخص بالتعديل والنشر — هو السبب الرئيسي لتراجع التلقينات في المكتبات المشتركة.',
@@ -1511,6 +1577,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       deprecation: {
+        id: 'deprecation',
         title: 'سير عمل المراجعة والإهمال',
         content: [
           '**نفِّذ مراجعة ربع سنوية لمكتبة التلقينات: تحقق من مقاييس الاستخدام، وقيِّم ما إذا كانت الإصدارات الحالية لا تزال تلبي معايير الجودة، وحدد التلقينات الجاهزة للإهمال.** التلقين الذي لا يستخدمه أحد في 90 يومًا هو عبء صيانة وليس أصلًا.',
@@ -1519,6 +1586,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       common_mistakes: {
+        id: 'common_mistakes',
         title: 'الأخطاء الشائعة في إدارة مكتبة التلقينات',
         mistakes: [
           { mistake: 'بنية مجلدات مسطحة دون تنظيم حسب الموضوع', problem: 'مع 20 تلقينًا أو أكثر، تصبح الملفات غير قابلة للبحث ويضاعف أعضاء الفريق العمل لأنهم لا يجدون التلقينات الموجودة', fix: 'نظِّم التلقينات حسب الموضوع: /prompts/[theme]/[slug]-v[N].txt. 20 تلقينًا كحد أقصى لكل مجلد موضوع.' },
@@ -1549,6 +1617,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       related_reading: {
+        id: 'related_reading',
         title: 'قراءات ذات صلة',
         items: [
           { title: 'بناء مكتبة تلقينات', url: '/prompt-engineering/build-a-prompt-library' },
@@ -1559,6 +1628,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       sources: {
+        id: 'sources',
         title: 'المصادر',
         items: [
           { title: 'Git Documentation: Branch Protection', url: 'https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches' },

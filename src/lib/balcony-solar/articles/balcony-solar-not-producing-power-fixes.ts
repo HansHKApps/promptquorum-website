@@ -43,7 +43,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'When It\'s a Monitoring Problem, Not a Power Problem', anchor: '#monitoring-vs-power' },
       { label: 'When to Contact Support', anchor: '#contact-support' },
       { label: 'FAQ', anchor: '#faq' },
-      { label: 'Related Reading', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -187,7 +186,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Wenn das Monitoring das Problem ist, nicht die Erzeugung', anchor: '#monitoring-vs-power' },
       { label: 'Wann Sie den Support kontaktieren sollten', anchor: '#contact-support' },
       { label: 'Häufige Fragen', anchor: '#faq' },
-      { label: 'Weiterführende Links', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -331,7 +329,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Cuando es un problema de monitoreo, no de energía', anchor: '#monitoring-vs-power' },
       { label: 'Cuándo contactar con soporte', anchor: '#contact-support' },
       { label: 'Preguntas frecuentes', anchor: '#faq' },
-      { label: 'Lecturas relacionadas', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -475,7 +472,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Quando é um problema de monitoramento, não de energia', anchor: '#monitoring-vs-power' },
       { label: 'Quando contatar o suporte', anchor: '#contact-support' },
       { label: 'Perguntas frequentes', anchor: '#faq' },
-      { label: 'Leituras relacionadas', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -619,7 +615,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'عندما تكون المشكلة في المراقبة، لا في الطاقة', anchor: '#monitoring-vs-power' },
       { label: 'متى تتواصل مع الدعم', anchor: '#contact-support' },
       { label: 'الأسئلة الشائعة', anchor: '#faq' },
-      { label: 'قراءات ذات صلة', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -763,7 +758,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '発電の問題ではなく監視の問題である場合', anchor: '#monitoring-vs-power' },
       { label: 'サポートに連絡すべきタイミング', anchor: '#contact-support' },
       { label: 'よくある質問', anchor: '#faq' },
-      { label: '関連記事', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -907,7 +901,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '监控问题而非发电问题的情况', anchor: '#monitoring-vs-power' },
       { label: '何时联系客服', anchor: '#contact-support' },
       { label: '常见问题', anchor: '#faq' },
-      { label: '相关阅读', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -1051,7 +1044,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Quand c\'est un problème de surveillance, pas de production', anchor: '#monitoring-vs-power' },
       { label: 'Quand contacter le support', anchor: '#contact-support' },
       { label: 'FAQ', anchor: '#faq' },
-      { label: 'Lectures connexes', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -1195,7 +1187,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '발전 문제가 아니라 모니터링 문제인 경우', anchor: '#monitoring-vs-power' },
       { label: '고객 지원팀에 연락해야 할 때', anchor: '#contact-support' },
       { label: '자주 묻는 질문', anchor: '#faq' },
-      { label: '관련 읽을거리', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {

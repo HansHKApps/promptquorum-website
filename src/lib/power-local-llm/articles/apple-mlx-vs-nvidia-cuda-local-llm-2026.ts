@@ -3673,7 +3673,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
     },
     toc: [
-      { label: '핵심 요점', anchor: '#tldr' },
+      { label: '핵심 요점', anchor: '#key-takeaways' },
       { label: '아키텍처 차이점', anchor: '#architecture' },
       { label: '성능 벤치마크', anchor: '#benchmarks' },
       { label: '비용 비교', anchor: '#cost' },

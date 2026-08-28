@@ -49,7 +49,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'What to Look For', anchor: '#what-to-look-for' },
       { label: 'China Hardware & Price Note', anchor: '#china-price-note' },
       { label: 'FAQ', anchor: '#faq' },
-      { label: 'Related Reading', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -233,7 +232,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Qué Buscar', anchor: '#what-to-look-for' },
       { label: 'Nota Sobre Hardware y Precios de China', anchor: '#china-price-note' },
       { label: 'Preguntas Frecuentes', anchor: '#faq' },
-      { label: 'Lecturas Relacionadas', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -425,7 +423,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'O Que Observar', anchor: '#what-to-look-for' },
       { label: 'Nota Sobre Hardware e Preços da China', anchor: '#china-price-note' },
       { label: 'Perguntas Frequentes', anchor: '#faq' },
-      { label: 'Leituras Relacionadas', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -617,7 +614,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'ما الذي يجب البحث عنه', anchor: '#what-to-look-for' },
       { label: 'ملاحظة حول أجهزة وأسعار الصين', anchor: '#china-price-note' },
       { label: 'الأسئلة الشائعة', anchor: '#faq' },
-      { label: 'قراءات ذات صلة', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -808,7 +804,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '選び方のポイント', anchor: '#what-to-look-for' },
       { label: '中国製ハードウェアと価格に関する注記', anchor: '#china-price-note' },
       { label: 'よくある質問', anchor: '#faq' },
-      { label: '関連記事', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -999,7 +994,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '选购要点', anchor: '#what-to-look-for' },
       { label: '中国制造硬件与价格说明', anchor: '#china-price-note' },
       { label: '常见问题', anchor: '#faq' },
-      { label: '相关阅读', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -1190,7 +1184,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Ce qu\'il faut vérifier', anchor: '#what-to-look-for' },
       { label: 'Note sur le matériel et les prix chinois', anchor: '#china-price-note' },
       { label: 'Questions fréquentes', anchor: '#faq' },
-      { label: 'Lectures complémentaires', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -1382,7 +1375,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '확인해야 할 사항', anchor: '#what-to-look-for' },
       { label: '중국산 하드웨어 및 가격 참고사항', anchor: '#china-price-note' },
       { label: '자주 묻는 질문', anchor: '#faq' },
-      { label: '관련 읽을거리', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -1573,7 +1565,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Worauf Sie achten sollten', anchor: '#what-to-look-for' },
       { label: 'Hinweis zu chinesischer Hardware & Preisen', anchor: '#china-price-note' },
       { label: 'Häufige Fragen', anchor: '#faq' },
-      { label: 'Weiterführende Artikel', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {

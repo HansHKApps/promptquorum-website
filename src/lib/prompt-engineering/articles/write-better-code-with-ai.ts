@@ -519,7 +519,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: 'Häufige Fehler beim Einsatz von KI für Code', anchor: '#common-mistakes-when-using-ai-for-code' },
         { label: 'Weiterführende Lektüre', anchor: '#related-reading' },
         { label: 'Schritt-für-Schritt Workflow: Besseren Code mit KI schreiben', anchor: '#step-by-step-workflow-write-better-code-with-ai' },
-        { label: 'Häufig gestellte Fragen', anchor: '#frequently-asked-questions' },
+        { label: 'Häufig gestellte Fragen', anchor: '#faq' },
         { label: 'Quellen und weiterführendes Material', anchor: '#sources-further-reading' },
       ],
       schema: {
@@ -738,6 +738,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         directAnswer: {
+          id: 'the-direct-answer-prompt-quality-determines-code-quality',
           title: 'Die direkte Antwort: Prompt-Qualität bestimmt Code-Qualität',
           content: [
             '**Der Output jeder KI-Programmier-Session ist nur so gut wie die Anweisung, die du gibst — ein vager Prompt erzeugt vagen Code, ein strukturierter Prompt erzeugt Production-Ready-Code.** Large Language Models (LLMs) — die Klasse neuronaler Netzwerke hinter GPT-5, Claude 4.8 Opus und Gemini 3 Pro — "verstehen" Ihr Projekt nicht; sie sagen das nächste wahrscheinlichste Token basierend auf Mustern vorher, die sie aus Milliarden Codezeilen gelernt haben.',
@@ -747,6 +748,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         modelComparison: {
+          id: 'which-ai-model-to-use-for-coding-tasks',
           title: 'Welches KI-Modell für Programmieraufgaben nutzen',
           content: [
             '**Im April 2026 zeichnen sich verschiedene Modelle bei verschiedenen Programmieraufgaben aus — das Routen Ihres Prompts zum richtigen Modell reduziert Fehler und Token-Kosten.**',
@@ -788,6 +790,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         promptStructure: {
+          id: 'how-to-write-prompts-that-produce-better-code',
           title: 'Wie man Prompts schreibt, die besseren Code erzeugen',
           content: [
             '**Strukturierte Prompts — die Rolle, Ziel, Constraints und Output-Format vor der Code-Anfrage definieren — erzeugen messbar weniger Fehler als offene Anfragen.** Das Kernprinzip: minimieren Sie die Spekulation des Modells. Jede Annahme, die das Modell in Ihrem Namen trifft, ist ein potenzieller Fehler. Spezifizieren Sie die Programmiersprache, Ziel-Laufzeit, Edge Cases, Performance-Constraints und erwartetes Output-Format explizit. In DACH-Enterprises ist die Adoption strukturierter Prompts deutlich höher als in anglo-amerikanischen Teams, weil die "Pünktlichkeit" des Specifications-basierten Ansatzes europäischen Entwicklungs-Prozessen entspricht.',
@@ -801,12 +804,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         chainOfThought: {
+          id: 'how-does-chain-of-thought-prompting-improve-debugging',
           title: 'Wie verbessert Chain-of-Thought Prompting das Code-Debugging',
           content: [
             '**[Chain-of-Thought (CoT) Prompting](/de/prompt-engineering/chain-of-thought-prompting) — das Modell auffordernd, vor der Produktion einer endgültigen Antwort schritt für schritt zu argumentieren — reduziert Debugging-Fehler durch Inspektierbarkeit der Modell-Logik.** CoT Prompting ist eine Technik, die ein LLM auffordert, intermediate Argumentation-Schritte zu erzeugen, bevor es Output produziert. Beim Debugging bedeutet das, das Modell verfolgt den Fehler-Pfad explizit, was Ihnen erlaubt, genau zu identifizieren, wo die Logik zusammenbricht.',
           ],
         },
         rules: {
+          id: 'how-to-inject-coding-rules-as-persistent-instructions',
           title: 'Programmierregeln in persistente Anweisungen integrieren',
           content: [
             '**Regeln — kurze Sätze expliziter Anweisungen in System-Prompts oder Projekt-Konfiguration — machen KI-Programmier-Tools konsistent über Sessions, nicht nur bei Single-Shot-Generierung.** Moderne Programmier-Tools (Cursor, GitHub Copilot, Claude Code) unterstützen projektweite Regeln, die über alle Interaktionen hinweg persistieren. Diese funktionieren als Architektur-Vertrag zwischen Ihnen und dem Modell. Die Verwendung von [Rollen-Definition](/de/prompt-engineering/persona-prompting) als Basis-Regel macht alle nachfolgenden Anfragen konsistent. Beispiele effektiver Regeln:',
@@ -819,6 +824,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         codingTools: {
+          id: 'which-ai-coding-tool-has-the-lowest-hallucination-rate',
           title: 'Welches KI-Programmier-Tool hat die niedrigste Halluzinations-Rate',
           content: [
             '**Eine Halluzination in KI-Programmierung bezieht sich auf generierten Output, der plausibel aussieht, aber nicht-existente Funktionen, Bibliotheken oder APIs referenziert.** Cursor berichtet die niedrigste Halluzinations-Rate bei ~10–15% wegen projekt-weiter Retrieval-Augmented Generation (RAG) Indexierung — die Ihren Codebase indexiert, um dem Modell relevanten Kontext zu geben. GitHub Copilot läuft bei ~15–20% mit nur File-Level-Context. Claude Code erzeugt Long-Context-Codebase-Verständnis für Multi-File-Refactoring-Aufgaben.',
@@ -859,6 +865,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         security: {
+          id: 'the-security-problem-what-ai-gets-wrong',
           title: 'Das Security-Problem: Was KI falsch versteht',
           content: [
             '**Im April 2026 erzeugt KI Code mit Sicherheitslücken in 45% der Fälle — eine Rate, die sich nicht verbessert hat, während Modelle leistungsfähiger geworden sind.** Ein 2025 Veracode-Bericht zeigte, dass LLMs sich beim Wählen zwischen einer sicheren und unsicheren Implementierung 45% der Zeit für die unsichere Option entschieden. Akademische Forschung bestätigt diesen Muster: über 40% der KI-generierten Code-Lösungen enthalten [Sicherheitsfehler](/de/prompt-engineering/prompt-injection-and-security).',
@@ -871,6 +878,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         multiModelCheck: {
+          id: 'the-multi-model-cross-check-method',
           title: 'Die Multi-Modell-Cross-Check-Methode',
           content: [
             '**Das Durchführen des gleichen Prompts durch mehrere Modelle gleichzeitig reduziert die Chance, eine halluzinierte Dependency oder unsichere Implementierung zu akzeptieren — weil unabhängige Modelle selten die gleiche spezifische falsche Detail halluzinieren.**',
@@ -878,6 +886,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         parameters: {
+          id: 'how-do-temperature-and-context-window-settings-affect-code-quality',
           title: 'Wie beeinflussen Temperature und Context Window die Code-Qualität',
           content: [
             '**[Temperature (T)](/de/prompt-engineering/temperature-and-top-p-control-ai-creativity) kontrolliert die Zufälligkeit der KI-Output: für Code-Generierung erzeugt T = 0,0–0,3 deterministischen, konservativen Output; T = 0,7–1,0 erhöht kreative Variation aber auch Fehlerrate.** Temperature ist ein Hyperparameter, der auf die Softmax Wahrscheinlichkeits-Verteilung über das Modell-Vokabular angewendet wird. Bei T = 0,0 wählt das Modell immer das höchst-wahrscheinliche Token — erzeugt deterministischen Output.',
@@ -905,6 +914,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         globalContext: {
+          id: 'how-does-ai-coding-vary-by-region',
           title: 'Wie variiert KI-Programmierung regional',
           content: [
             '**Europäische Entwicklungs-Teams adoptieren zunehmend Mistral AI (in Frankreich entwickelt) für Programmieraufgaben, wo EU AI Act Compliance und Data Residency zählen.** Mistral Large und Mistral Small sind verfügbar für lokales Deployment über Ollama, gewährleisten kein Code verlässt On-Premise Infrastruktur — kritisch unter GDPR für Teams, die sensible Quellcode verarbeiten. Die BSI TR-03183 Richtlinie (Deutschland) empfiehlt für Hochrisiko-Code-Generierung in staatlichen Stellen lokale Modelle mit Offline-Architektur und keine Cloud-APIs.',
@@ -913,6 +923,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes-when-using-ai-for-code',
           title: 'Häufige Fehler beim Einsatz von KI für Code',
           content: [
             '**Vermeiden Sie diese häufigen Fehler beim Arbeiten mit KI-Programmier-Tools:**',
@@ -926,6 +937,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Weiterführende Lektüre',
           items: [
             '[Chain-of-Thought Prompting](/de/prompt-engineering/chain-of-thought-prompting) — Step-by-Step-Argumentation für Logik- und Debugging-Aufgaben',
@@ -937,6 +949,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         howToStart: {
+          id: 'step-by-step-workflow-write-better-code-with-ai',
           title: 'Schritt-für-Schritt Workflow: Besseren Code mit KI schreiben',
           numberedItems: [
             '**Definieren Sie Ihre Rolle und Constraints voraus.** Bevor Sie die Anfrage schreiben, geben Sie an \'Du bist ein Senior [Sprache] Engineer,\' das Ziel-Framework (React, FastAPI, etc.) und alle Architektur-Constraints (keine neuen Packages, strikte Type Safety, etc.).',
@@ -1001,6 +1014,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         sources: {
+          id: 'sources-further-reading',
           title: 'Quellen und weiterführendes Material',
           items: [
             '[Wei et al., 2022. "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models"](https://arxiv.org/abs/2201.11903) — grundlegendes Papier über Step-by-Step-Argumentation in LLMs',
@@ -1039,7 +1053,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: 'Errores comunes al usar IA para código', anchor: '#common-mistakes-when-using-ai-for-code' },
         { label: 'Lectura relacionada', anchor: '#related-reading' },
         { label: 'Flujo de trabajo paso a paso: escribir mejor código con IA', anchor: '#step-by-step-workflow-write-better-code-with-ai' },
-        { label: 'Preguntas frecuentes', anchor: '#frequently-asked-questions' },
+        { label: 'Preguntas frecuentes', anchor: '#faq' },
         { label: 'Fuentes y lecturas adicionales', anchor: '#sources-further-reading' },
       ],
       schema: {
@@ -1127,6 +1141,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         directAnswer: {
+          id: 'the-direct-answer-prompt-quality-determines-code-quality',
           title: 'La respuesta directa: la calidad del prompt determina la calidad del código',
           content: [
             '**La salida de cualquier sesión de programación con IA es tan buena como la instrucción que das — un prompt vago produce código vago, un prompt estructurado produce código listo para producción.** Los LLMs no "entienden" tu proyecto; predicen el siguiente token más probable basándose en patrones aprendidos de miles de millones de líneas de código.',
@@ -1135,6 +1150,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         modelComparison: {
+          id: 'which-ai-model-to-use-for-coding-tasks',
           title: 'Qué modelo de IA usar para tareas de programación',
           content: [
             '**En abril de 2026, diferentes modelos destacan en diferentes tareas de programación — enrutar tu prompt al modelo correcto reduce errores y costos de tokens.**',
@@ -1152,6 +1168,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         promptStructure: {
+          id: 'how-to-write-prompts-that-produce-better-code',
           title: 'Cómo escribir prompts que produzcan mejor código',
           content: [
             '**Los prompts estructurados producen mediblemente menos errores que las solicitudes abiertas.** El principio central: minimiza la especulación del modelo. Especifica el lenguaje de programación, el tiempo de ejecución objetivo, los casos límite y el formato de salida esperado explícitamente.',
@@ -1165,12 +1182,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         chainOfThought: {
+          id: 'how-does-chain-of-thought-prompting-improve-debugging',
           title: '¿Cómo mejora el prompting Chain-of-Thought la depuración de código?',
           content: [
             '**El prompting CoT — pidiendo al modelo que razone paso a paso antes de producir una respuesta final — reduce los errores de depuración mediante la inspeccionabilidad de la lógica del modelo.** Para la depuración, esto significa que el modelo rastrea la ruta del error explícitamente, lo que te permite identificar exactamente dónde se rompe la lógica.',
           ],
         },
         rules: {
+          id: 'how-to-inject-coding-rules-as-persistent-instructions',
           title: 'Cómo inyectar reglas de programación como instrucciones persistentes',
           content: [
             '**Las reglas — conjuntos cortos de instrucciones explícitas en prompts de sistema o configuración del proyecto — hacen que las herramientas de programación con IA sean consistentes entre sesiones.** Las herramientas modernas (Cursor, GitHub Copilot, Claude Code) admiten reglas a nivel de proyecto que persisten en todas las interacciones. Ejemplos de reglas eficaces:',
@@ -1183,6 +1202,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         codingTools: {
+          id: 'which-ai-coding-tool-has-the-lowest-hallucination-rate',
           title: '¿Qué herramienta de programación con IA tiene la menor tasa de alucinación?',
           content: [
             '**Una alucinación en la programación con IA se refiere a la salida generada que parece plausible pero hace referencia a funciones, bibliotecas o APIs inexistentes.** Cursor reporta la menor tasa de alucinación con ~10–15 % debido a la indexación RAG a nivel de proyecto. GitHub Copilot funciona con ~15–20 % con solo contexto a nivel de archivo.',
@@ -1198,6 +1218,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         security: {
+          id: 'the-security-problem-what-ai-gets-wrong',
           title: 'El problema de seguridad: qué malentiende la IA',
           content: [
             '**En abril de 2026, la IA genera código con vulnerabilidades de seguridad en el 45 % de los casos.** Un informe de Veracode de 2025 mostró que los LLMs eligen la implementación insegura en lugar de la segura el 45 % de las veces.',
@@ -1210,12 +1231,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         multiModelCheck: {
+          id: 'the-multi-model-cross-check-method',
           title: 'El método de verificación cruzada multi-modelo',
           content: [
             '**Ejecutar el mismo prompt en múltiples modelos simultáneamente reduce la probabilidad de aceptar una dependencia alucinada o una implementación insegura.** PromptQuorum es una herramienta de despacho de IA multi-modelo que envía un prompt a múltiples proveedores de IA simultáneamente y muestra todas las respuestas lado a lado.',
           ],
         },
         parameters: {
+          id: 'how-do-temperature-and-context-window-settings-affect-code-quality',
           title: '¿Cómo afectan los ajustes de Temperatura y ventana de contexto a la calidad del código?',
           content: [
             '**La Temperatura (T) controla la aleatoriedad de la salida de IA: para la generación de código, T = 0,0–0,3 produce salida determinista y conservadora; T = 0,7–1,0 aumenta la variación creativa pero también la tasa de errores.**',
@@ -1230,6 +1253,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         globalContext: {
+          id: 'how-does-ai-coding-vary-by-region',
           title: '¿Cómo varía la programación con IA por región?',
           content: [
             '**Los equipos de desarrollo europeos adoptan cada vez más Mistral AI (desarrollado en Francia) para tareas de programación donde el cumplimiento de la Ley de IA de la UE y la residencia de datos importan.**',
@@ -1238,6 +1262,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes-when-using-ai-for-code',
           title: 'Errores comunes al usar IA para código',
           content: ['**Evita estos errores comunes al trabajar con herramientas de programación con IA:**'],
           items: [
@@ -1249,6 +1274,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Lectura relacionada',
           items: [
             '[Chain-of-Thought Prompting](/es/prompt-engineering/chain-of-thought-prompting) — razonamiento paso a paso para tareas de lógica y depuración',
@@ -1259,6 +1285,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         howToStart: {
+          id: 'step-by-step-workflow-write-better-code-with-ai',
           title: 'Flujo de trabajo paso a paso: escribir mejor código con IA',
           numberedItems: [
             '**Define tu rol y restricciones de antemano.** Antes de escribir la solicitud, especifica el rol, el framework objetivo y cualquier restricción de arquitectura.',
@@ -1283,6 +1310,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         sources: {
+          id: 'sources-further-reading',
           title: 'Fuentes y lecturas adicionales',
           items: [
             '[Wei et al., 2022. "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models"](https://arxiv.org/abs/2201.11903) — artículo fundamental sobre el razonamiento paso a paso en LLMs',
@@ -1322,7 +1350,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: 'الأخطاء الشائعة عند استخدام الذكاء الاصطناعي للكود', anchor: '#common-mistakes-when-using-ai-for-code' },
         { label: 'قراءة ذات صلة', anchor: '#related-reading' },
         { label: 'مسار العمل خطوة بخطوة: كتابة كود أفضل بالذكاء الاصطناعي', anchor: '#step-by-step-workflow-write-better-code-with-ai' },
-        { label: 'الأسئلة الشائعة', anchor: '#frequently-asked-questions' },
+        { label: 'الأسئلة الشائعة', anchor: '#faq' },
         { label: 'المصادر والقراءات الإضافية', anchor: '#sources-further-reading' },
       ],
       schema: {
@@ -1410,6 +1438,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         directAnswer: {
+          id: 'the-direct-answer-prompt-quality-determines-code-quality',
           title: 'الإجابة المباشرة: جودة الطلب تحدد جودة الكود',
           content: [
             '**مخرجات أي جلسة برمجة بالذكاء الاصطناعي بجودة التعليمة التي تعطيها — طلب مبهم يُنتج كودًا مبهمًا، وطلب منظم يُنتج كودًا جاهزًا للإنتاج.** نماذج LLM لا "تفهم" مشروعك؛ بل تتنبأ بالرمز التالي الأكثر احتمالًا بناءً على أنماط مُتعلَّمة من مليارات السطور البرمجية.',
@@ -1418,6 +1447,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         modelComparison: {
+          id: 'which-ai-model-to-use-for-coding-tasks',
           title: 'أي نموذج ذكاء اصطناعي يُستخدم لمهام البرمجة',
           content: [
             '**في أبريل 2026، نماذج مختلفة تتفوق في مهام برمجة مختلفة — توجيه طلبك للنموذج الصحيح يقلّل الأخطاء وتكاليف الرموز.**',
@@ -1435,6 +1465,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         promptStructure: {
+          id: 'how-to-write-prompts-that-produce-better-code',
           title: 'كيف تكتب طلبات تُنتج كودًا أفضل',
           content: [
             '**الطلبات المنظمة تُنتج أخطاء أقل قياسيًا من الطلبات المفتوحة.** المبدأ الجوهري: قلّص تخمينات النموذج. حدد لغة البرمجة وبيئة التشغيل المستهدفة والحالات الحدية وتنسيق المخرجات المتوقع صراحةً.',
@@ -1448,12 +1479,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         chainOfThought: {
+          id: 'how-does-chain-of-thought-prompting-improve-debugging',
           title: 'كيف يُحسّن استدعاء Chain-of-Thought تصحيح الكود؟',
           content: [
             '**استدعاء CoT — طلب من النموذج الاستدلال خطوة بخطوة قبل إنتاج إجابة نهائية — يقلّل أخطاء التصحيح من خلال إمكانية فحص منطق النموذج.** للتصحيح، هذا يعني أن النموذج يتتبع مسار الخطأ صراحةً، مما يتيح لك تحديد بالضبط أين ينهار المنطق.',
           ],
         },
         rules: {
+          id: 'how-to-inject-coding-rules-as-persistent-instructions',
           title: 'كيف تُدخل قواعد البرمجة كتعليمات دائمة',
           content: [
             '**القواعد — مجموعات قصيرة من التعليمات الصريحة في طلبات النظام أو إعداد المشروع — تجعل أدوات البرمجة بالذكاء الاصطناعي متسقة عبر الجلسات.** الأدوات الحديثة (Cursor وGitHub Copilot وClaude Code) تدعم القواعد على مستوى المشروع التي تستمر عبر جميع التفاعلات. أمثلة على قواعد فعّالة:',
@@ -1466,6 +1499,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         codingTools: {
+          id: 'which-ai-coding-tool-has-the-lowest-hallucination-rate',
           title: 'أي أداة برمجة بالذكاء الاصطناعي لديها أدنى معدل هلوسة؟',
           content: [
             '**الهلوسة في البرمجة بالذكاء الاصطناعي تشير إلى المخرجات المُولَّدة التي تبدو معقولة لكنها تستشهد بدوال أو مكتبات أو APIs غير موجودة.** Cursor يُبلّغ عن أدنى معدل هلوسة بنحو 10–15% بسبب فهرسة RAG على مستوى المشروع. GitHub Copilot يعمل بنحو 15–20% مع سياق على مستوى الملف فقط.',
@@ -1481,6 +1515,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         security: {
+          id: 'the-security-problem-what-ai-gets-wrong',
           title: 'مشكلة الأمان: ما يُسيء فهمه الذكاء الاصطناعي',
           content: [
             '**في أبريل 2026، يُولَّد الذكاء الاصطناعي كودًا يحتوي ثغرات أمنية في 45% من الحالات.** تقرير Veracode لعام 2025 أظهر أن نماذج LLM تختار التنفيذ غير الآمن بدلًا من الآمن 45% من الوقت.',
@@ -1493,12 +1528,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         multiModelCheck: {
+          id: 'the-multi-model-cross-check-method',
           title: 'أسلوب التحقق المتقاطع متعدد النماذج',
           content: [
             '**تشغيل نفس الطلب على نماذج متعددة في آنٍ واحد يقلّل احتمالية قبول تبعية مُهلوَّسة أو تنفيذ غير آمن.** PromptQuorum هي أداة إرسال ذكاء اصطناعي متعددة النماذج ترسل طلبًا إلى مزودين متعددين في وقت واحد وتعرض جميع الإجابات جنبًا إلى جنب.',
           ],
         },
         parameters: {
+          id: 'how-do-temperature-and-context-window-settings-affect-code-quality',
           title: 'كيف تؤثر إعدادات درجة الحرارة ونافذة السياق على جودة الكود؟',
           content: [
             '**درجة الحرارة (T) تتحكم في عشوائية مخرجات الذكاء الاصطناعي: لتوليد الكود، T = 0.0–0.3 تُنتج مخرجات حتمية ومحافظة؛ T = 0.7–1.0 تزيد التنوع الإبداعي لكن أيضًا معدل الأخطاء.**',
@@ -1513,6 +1550,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         globalContext: {
+          id: 'how-does-ai-coding-vary-by-region',
           title: 'كيف تتفاوت البرمجة بالذكاء الاصطناعي حسب المنطقة؟',
           content: [
             '**الفرق الأوروبية تتبنى بشكل متزايد Mistral AI (المطوّر في فرنسا) لمهام البرمجة حيث يهم الامتثال لقانون الذكاء الاصطناعي الأوروبي وإقامة البيانات.**',
@@ -1521,6 +1559,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes-when-using-ai-for-code',
           title: 'الأخطاء الشائعة عند استخدام الذكاء الاصطناعي للكود',
           content: ['**تجنّب هذه الأخطاء الشائعة عند العمل مع أدوات البرمجة بالذكاء الاصطناعي:**'],
           items: [
@@ -1532,6 +1571,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'قراءة ذات صلة',
           items: [
             '[استدعاء Chain-of-Thought](/ar/prompt-engineering/chain-of-thought-prompting) — الاستدلال خطوة بخطوة لمهام المنطق والتصحيح',
@@ -1542,6 +1582,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         howToStart: {
+          id: 'step-by-step-workflow-write-better-code-with-ai',
           title: 'مسار العمل خطوة بخطوة: كتابة كود أفضل بالذكاء الاصطناعي',
           numberedItems: [
             '**حدّد دورك وقيودك مسبقًا.** قبل كتابة الطلب، حدد الدور والإطار المستهدف وأي قيود معمارية.',
@@ -1566,6 +1607,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         sources: {
+          id: 'sources-further-reading',
           title: 'المصادر والقراءات الإضافية',
           items: [
             '[Wei et al., 2022. "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models"](https://arxiv.org/abs/2201.11903) — المقالة الأساسية حول الاستدلال خطوة بخطوة في نماذج LLM',
@@ -1616,7 +1658,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: 'Erros comuns ao usar IA para código', anchor: '#common-mistakes-when-using-ai-for-code' },
         { label: 'Leitura relacionada', anchor: '#related-reading' },
         { label: 'Fluxo de trabalho passo a passo: escrever código melhor com IA', anchor: '#step-by-step-workflow-write-better-code-with-ai' },
-        { label: 'Perguntas frequentes', anchor: '#frequently-asked-questions' },
+        { label: 'Perguntas frequentes', anchor: '#faq' },
         { label: 'Fontes e leituras adicionais', anchor: '#sources-further-reading' },
       ],
       schema: {
@@ -1677,6 +1719,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         directAnswer: {
+          id: 'the-direct-answer-prompt-quality-determines-code-quality',
           title: 'A resposta direta: a qualidade do prompt determina a qualidade do código',
           content: [
             '**A saída de qualquer sessão de codificação com IA é tão boa quanto a instrução que você dá — um prompt vago produz código vago, um prompt estruturado produz código pronto para produção.** LLMs não "entendem" seu projeto; eles preveem o próximo token mais provável com base em padrões aprendidos de bilhões de linhas de código.',
@@ -1684,6 +1727,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         modelComparison: {
+          id: 'which-ai-model-to-use-for-coding-tasks',
           title: 'Qual modelo de IA usar para tarefas de codificação',
           content: [
             '**Em abril de 2026, diferentes modelos se destacam em diferentes tarefas de codificação — encaminhar seu prompt para o modelo certo reduz erros e custos de tokens.**',
@@ -1699,6 +1743,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         promptStructure: {
+          id: 'how-to-write-prompts-that-produce-better-code',
           title: 'Como escrever prompts que produzem código melhor',
           content: [
             '**Prompts estruturados produzem medidavelmente menos erros do que solicitações abertas.** O princípio central: minimize a especulação do modelo. Especifique a linguagem de programação, o runtime alvo, os casos extremos e o formato de saída esperado explicitamente.',
@@ -1712,12 +1757,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         chainOfThought: {
+          id: 'how-does-chain-of-thought-prompting-improve-debugging',
           title: 'Como o prompting Chain-of-Thought melhora a depuração de código?',
           content: [
             '**O prompting CoT — pedindo ao modelo que raciocine passo a passo antes de produzir uma resposta final — reduz erros de depuração por meio da inspecionabilidade da lógica do modelo.** Para depuração, isso significa que o modelo rastreia o caminho do erro explicitamente, permitindo que você identifique exatamente onde a lógica falha.',
           ],
         },
         rules: {
+          id: 'how-to-inject-coding-rules-as-persistent-instructions',
           title: 'Como injetar regras de codificação como instruções persistentes',
           content: [
             '**Regras — conjuntos curtos de instruções explícitas em prompts de sistema ou configuração de projeto — tornam as ferramentas de codificação com IA consistentes entre sessões.** Ferramentas modernas (Cursor, GitHub Copilot, Claude Code) suportam regras de nível de projeto que persistem em todas as interações.',
@@ -1730,6 +1777,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         codingTools: {
+          id: 'which-ai-coding-tool-has-the-lowest-hallucination-rate',
           title: 'Qual ferramenta de codificação com IA tem a menor taxa de alucinação?',
           content: [
             '**Uma alucinação em codificação com IA refere-se à saída gerada que parece plausível, mas faz referência a funções, bibliotecas ou APIs inexistentes.** Cursor reporta a menor taxa de alucinação com ~10–15% devido à indexação RAG de nível de projeto.',
@@ -1744,6 +1792,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         security: {
+          id: 'the-security-problem-what-ai-gets-wrong',
           title: 'O problema de segurança: o que a IA erra',
           content: [
             '**Em abril de 2026, IA gera código com vulnerabilidades de segurança em 45% dos casos.** Um relatório da Veracode de 2025 mostrou que LLMs escolhem a implementação insegura em vez da segura 45% das vezes.',
@@ -1755,12 +1804,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         multiModelCheck: {
+          id: 'the-multi-model-cross-check-method',
           title: 'O método de verificação cruzada multi-modelo',
           content: [
             '**Executar o mesmo prompt em múltiplos modelos simultaneamente reduz a probabilidade de aceitar uma dependência alucinada ou uma implementação insegura.** PromptQuorum é uma ferramenta de despacho de IA multi-modelo que envia um prompt a múltiplos provedores de IA simultaneamente e mostra todas as respostas lado a lado.',
           ],
         },
         parameters: {
+          id: 'how-do-temperature-and-context-window-settings-affect-code-quality',
           title: 'Como os ajustes de Temperatura e janela de contexto afetam a qualidade do código?',
           content: [
             '**Temperatura (T) controla a aleatoriedade da saída de IA: para geração de código, T = 0,0–0,3 produz saída determinística e conservadora; T = 0,7–1,0 aumenta a variação criativa mas também a taxa de erros.**',
@@ -1774,6 +1825,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes-when-using-ai-for-code',
           title: 'Erros comuns ao usar IA para código',
           content: ['**Evite estes erros comuns ao trabalhar com ferramentas de codificação com IA:**'],
           items: [
@@ -1785,6 +1837,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Leitura relacionada',
           items: [
             '[Chain-of-Thought Prompting](/pt/prompt-engineering/chain-of-thought-prompting) — raciocínio passo a passo para tarefas de lógica e depuração',
@@ -1794,6 +1847,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         howToStart: {
+          id: 'step-by-step-workflow-write-better-code-with-ai',
           title: 'Fluxo de trabalho passo a passo: escrever código melhor com IA',
           numberedItems: [
             '**Defina sua função e restrições antecipadamente.** Antes de escrever a solicitação, especifique a função, o framework alvo e quaisquer restrições de arquitetura.',
@@ -1816,6 +1870,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         sources: {
+          id: 'sources-further-reading',
           title: 'Fontes e leituras adicionais',
           items: [
             '[Wei et al., 2022. "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models"](https://arxiv.org/abs/2201.11903) — artigo fundamental sobre raciocínio passo a passo em LLMs',
@@ -1855,7 +1910,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: 'Erreurs Courantes lors de l\'Utilisation de l\'IA pour le Codage', anchor: '#common-mistakes-when-using-ai-for-code' },
         { label: 'Lectures Recommandées', anchor: '#related-reading' },
         { label: 'Workflow Étape par Étape : Écrire du Code Meilleur avec l\'IA', anchor: '#step-by-step-workflow-write-better-code-with-ai' },
-        { label: 'Questions Fréquemment Posées', anchor: '#frequently-asked-questions' },
+        { label: 'Questions Fréquemment Posées', anchor: '#faq' },
         { label: 'Sources et Lectures Supplémentaires', anchor: '#sources-further-reading' },
       ],
       schema: {
@@ -2060,6 +2115,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         directAnswer: {
+          id: 'the-direct-answer-prompt-quality-determines-code-quality',
           title: 'La Réponse Directe : La Qualité des Prompts Détermine la Qualité du Code',
           content: [
             '**La sortie de toute session de codage IA est aussi bonne que l\'instruction que vous donnez — un prompt vague produit du code vague, un prompt structuré produit du code prêt pour la production.** Les modèles de langage de grande taille (LLM) — la classe de réseaux de neurones derrière GPT-5, Claude 4.8 Opus et Gemini 3 Pro — ne « comprennent » pas votre projet ; ils prédisent le token le plus probable basé sur les patterns appris de milliards de lignes de code.',
@@ -2069,6 +2125,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         modelComparison: {
+          id: 'which-ai-model-to-use-for-coding-tasks',
           title: 'Quel Modèle d\'IA Utiliser pour le Codage',
           content: [
             '**En avril 2026, les différents modèles excèlent dans les différentes tâches de codage — router votre prompt vers le bon modèle réduit les erreurs et les coûts en tokens.**',
@@ -2110,6 +2167,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         promptStructure: {
+          id: 'how-to-write-prompts-that-produce-better-code',
           title: 'Comment Écrire des Prompts Qui Produisent du Code Meilleur',
           content: [
             '**Les prompts structurés — ceux qui définissent le rôle, l\'objectif, les contraintes et le format de sortie avant de demander du code — produisent mesurably moins d\'erreurs que les requêtes ouvertes.** Le principe core : minimiser les hypothèses du modèle. Chaque hypothèse que le modèle fait en votre nom est une erreur potentielle. Spécifiez explicitement le langage de programmation, le runtime cible, les cas limites, les contraintes de performance et le format de sortie attendu.',
@@ -2125,12 +2183,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         chainOfThought: {
+          id: 'how-does-chain-of-thought-prompting-improve-debugging',
           title: 'Comment le Chain-of-Thought Améliore le Débogage',
           content: [
             '**[Le Chain-of-Thought (CoT) prompting](/fr/prompt-engineering/chain-of-thought-prompting) — demander au modèle de raisonner étape par étape avant de produire une réponse finale — réduit les erreurs de débogage en rendant la logique du modèle inspectable.** Le CoT prompting est une technique qui demande à un LLM de générer des étapes de raisonnement intermédiaires avant de produire la sortie. Pour le débogage, cela signifie que le modèle trace le chemin d\'erreur explicitement, vous permettant d\'identifier exactement où la logique s\'effondre.',
           ],
         },
         rules: {
+          id: 'how-to-inject-coding-rules-as-persistent-instructions',
           title: 'Comment Injecter des Règles de Codage dans les Instructions Persistantes',
           content: [
             '**Les règles — des ensembles courts d\'instructions explicites intégrés dans les prompts système ou la configuration du projet — rendent les outils de codage IA cohérents sur les sessions, pas seulement dans la génération à coup unique.** Les outils de codage modernes (Cursor, GitHub Copilot, Claude Code) supportent les règles au niveau du projet qui persistent à travers toutes les interactions. Ces fonctionnent comme un contrat architectural entre vous et le modèle. Utiliser la [définition du rôle](/fr/prompt-engineering/persona-prompting) comme règle fondamentale rend toutes les requêtes ultérieures cohérentes. Exemples de règles efficaces :',
@@ -2143,6 +2203,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         codingTools: {
+          id: 'which-ai-coding-tool-has-the-lowest-hallucination-rate',
           title: 'Quel Outil de Codage IA a le Taux d\'Hallucination le Plus Bas',
           content: [
             '**Une hallucination dans le codage IA se réfère à une sortie générée qui semble plausible mais référence des fonctions, bibliothèques ou API inexistantes.** Cursor rapporte le taux d\'hallucination le plus bas à environ 10–15 % grâce à l\'indexage RAG (Retrieval-Augmented Generation) au niveau du projet — qui indexe votre codebase pour fournir au modèle un contexte pertinent. GitHub Copilot fonctionne à environ 15–20 % avec uniquement le contexte au niveau du fichier. Claude Code offre une compréhension codebase de long contexte pour les tâches de refactorisation multi-fichiers.',
@@ -2183,6 +2244,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         security: {
+          id: 'the-security-problem-what-ai-gets-wrong',
           title: 'Le Problème de Sécurité : Ce que l\'IA ne Comprend Pas',
           content: [
             '**En avril 2026, l\'IA génère du code avec des vulnérabilités de sécurité dans 45 % des cas — un taux qui ne s\'est pas amélioré à mesure que les modèles sont devenus plus capables.** Un rapport Veracode 2025 a trouvé que quand on donne un choix entre une implémentation sécurisée et insécurisée, les modèles d\'IA génératifs ont choisi l\'option insécurisée 45 % du temps. La recherche académique confirme ce pattern : plus de 40 % des solutions de code générées par l\'IA contiennent des [flaws de sécurité](/fr/prompt-engineering/prompt-injection-and-security).',
@@ -2195,6 +2257,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         multiModelCheck: {
+          id: 'the-multi-model-cross-check-method',
           title: 'La Méthode de Vérification Multi-Modèles',
           content: [
             '**Exécuter le même prompt à travers plusieurs modèles simultanément réduit la chance d\'accepter une dépendance halluccinée ou une implémentation insécurisée — car les modèles indépendants fabriquent rarement le même détail incorrect spécifique.**',
@@ -2202,6 +2265,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         parameters: {
+          id: 'how-do-temperature-and-context-window-settings-affect-code-quality',
           title: 'Comment la Température et la Fenêtre de Contexte Affectent la Qualité du Code',
           content: [
             '**[La Température (T)](/fr/prompt-engineering/temperature-and-top-p-control-ai-creativity) contrôle le caractère aléatoire de la sortie IA : pour la génération de code, T = 0,0–0,3 produit une sortie déterministe et conservative ; T = 0,7–1,0 augmente la variation créative mais aussi le taux d\'erreur.** La température est un hyperparamètre appliqué à la distribution de probabilité softmax sur le vocabulaire du modèle. À T = 0,0, le modèle sélectionne toujours le token la plus haute probabilité — produisant une sortie déterministe.',
@@ -2229,6 +2293,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         globalContext: {
+          id: 'how-does-ai-coding-vary-by-region',
           title: 'Comment le Codage IA Varie par Région',
           content: [
             '**Les équipes de développement européennes adoptent de plus en plus Mistral AI (développé en France) pour les tâches de codage où la conformité à la loi sur l\'IA de l\'UE et la résidence des données comptent.** Mistral Large et Mistral Small sont disponibles pour le déploiement local via Ollama, assurant qu\'aucun code ne quitte l\'infrastructure on-premise — critique sous le RGPD pour les équipes traitant du code source sensible.',
@@ -2237,6 +2302,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes-when-using-ai-for-code',
           title: 'Erreurs Courantes lors de l\'Utilisation de l\'IA pour le Codage',
           content: [
             '**Évitez ces erreurs fréquentes quand vous travaillez avec les outils de codage IA :**',
@@ -2250,6 +2316,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Lectures Recommandées',
           items: [
             '[Chain-of-Thought Prompting](/fr/prompt-engineering/chain-of-thought-prompting) — raisonnement étape par étape pour les tâches de logique et débogage',
@@ -2261,6 +2328,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         howToStart: {
+          id: 'step-by-step-workflow-write-better-code-with-ai',
           title: 'Workflow Étape par Étape : Écrire du Code Meilleur avec l\'IA',
           numberedItems: [
             '**Définissez votre rôle et vos contraintes à l\'avance.** Avant d\'écrire la requête, précisez « Vous êtes un ingénieur [langage] senior », le framework cible (React, FastAPI, etc.) et toute contrainte architecturale (pas de nouveaux packages, sécurité de type stricte, etc.).',
@@ -2325,6 +2393,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         sources: {
+          id: 'sources-further-reading',
           title: 'Sources et Lectures Supplémentaires',
           items: [
             '[Wei et al., 2022. « Chain-of-Thought Prompting Elicits Reasoning in Large Language Models »](https://arxiv.org/abs/2201.11903) — article fondateur sur le raisonnement étape par étape dans les LLM',
@@ -2363,7 +2432,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: 'AIでコードを書く時の一般的な間違い', anchor: '#common-mistakes-when-using-ai-for-code' },
         { label: '関連記事', anchor: '#related-reading' },
         { label: 'ステップバイステップワークフロー：AIでコード品質を向上させる', anchor: '#step-by-step-workflow-write-better-code-with-ai' },
-        { label: 'よくある質問', anchor: '#frequently-asked-questions' },
+        { label: 'よくある質問', anchor: '#faq' },
         { label: '参考資料と関連リンク', anchor: '#sources-further-reading' },
       ],
       schema: {
@@ -2568,6 +2637,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         directAnswer: {
+          id: 'the-direct-answer-prompt-quality-determines-code-quality',
           title: '直接的な答え：プロンプト品質はコード品質を決定する',
           content: [
             '**AI コーディングセッションの出力は、提供する指示と同等です。曖昧なプロンプトは曖昧なコード、構造化されたプロンプトは本番環境対応のコードを生成します。** 大規模言語モデル（LLM）はプロジェクトを「理解」しません。代わりに、数十億行のコードから学んだパターンに基づいて、次の最も可能性の高いトークンを予測します。',
@@ -2577,6 +2647,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         modelComparison: {
+          id: 'which-ai-model-to-use-for-coding-tasks',
           title: 'コーディングタスクに最適なAIモデルの選び方',
           content: [
             '**2026年4月時点では、異なるモデルが異なるコーディングタスクで優れています。プロンプトを正しいモデルにルーティングすることで、エラーと トークンコストが削減されます。**',
@@ -2594,6 +2665,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         promptStructure: {
+          id: 'how-to-write-prompts-that-produce-better-code',
           title: 'より良いコードを生成するプロンプトの書き方',
           content: [
             '**構造化プロンプト - 役割、目的、制約、出力形式を定義するプロンプト - はオープンエンドの質問より著しく少ないエラーを生成します。** 核となる原則：モデルの推測を最小化。プログラミング言語、ターゲットランタイム、エッジケース、パフォーマンス制約、期待される出力形式を明示的に指定します。',
@@ -2607,12 +2679,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         chainOfThought: {
+          id: 'how-does-chain-of-thought-prompting-improve-debugging',
           title: 'Chain-of-Thoughtプロンプティングはデバッグをどう改善するか',
           content: [
             '**[Chain-of-Thought（CoT）プロンプティング](/ja/prompt-engineering/chain-of-thought-prompting) - 最終的な答えを生成する前にステップバイステップで推論するようモデルに要求する - デバッグエラーを削減し、モデルのロジックを検査可能にします。** CoT プロンプティングは、出力を生成する前に中間推論ステップを生成するよう LLM に要求するテクニックです。デバッグの場合、これはモデルがエラーパスを明示的にトレースすることを意味し、正確に特定できます。',
           ],
         },
         rules: {
+          id: 'how-to-inject-coding-rules-as-persistent-instructions',
           title: 'コーディングルールを永続的な指示として埋め込む方法',
           content: [
             '**ルール - システムプロンプトまたはプロジェクト設定に埋め込まれた短い明示的な指示セット - AI コーディングツールを単一ショット生成ではなく、セッション全体で一貫性のあるものにします。** 最新のコーディングツール（Cursor、GitHub Copilot、Claude Code）はプロジェクトレベルのルールをサポートしています。これはあなたとモデルの間のアーキテクチャ契約として機能します。',
@@ -2625,6 +2699,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         codingTools: {
+          id: 'which-ai-coding-tool-has-the-lowest-hallucination-rate',
           title: '幻覚率が最も低いAIコーディングツールはどれか',
           content: [
             '**AI コーディングでの幻覚は、存在しない関数、ライブラリ、または API を参照する、もっともらしい見える出力です。** Cursor は、プロジェクトレベルの Retrieval-Augmented Generation（RAG）インデックス作成による約 10～15% の最低幻覚率を報告します。GitHub Copilot はファイルレベルのコンテキストのみで 15～20% で動作。Claude Code は複数ファイルリファクタリングタスクのための長コンテキストコードベース理解を提供。',
@@ -2640,6 +2715,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         security: {
+          id: 'the-security-problem-what-ai-gets-wrong',
           title: 'セキュリティの問題：AIが誤るところ',
           content: [
             '**2026年4月時点では、AI はコード生成の 45% でセキュリティ脆弱性を生成します。** 2025年の Veracode レポートでは、安全な実装と不安全な実装の間で選択肢を与えられた場合、生成的 AI モデルは 45% の確率で不安全なオプションを選択することが判明しています。',
@@ -2652,6 +2728,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         multiModelCheck: {
+          id: 'the-multi-model-cross-check-method',
           title: 'マルチモデル相互検証法',
           content: [
             '**同じプロンプトを複数のモデルで同時に実行することで、幻覚化された依存関係または不安全な実装を受け入れる確率が低減されます。**',
@@ -2659,6 +2736,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         parameters: {
+          id: 'how-do-temperature-and-context-window-settings-affect-code-quality',
           title: 'Temperatureとコンテキストウィンドウはコード品質にどう影響するか',
           content: [
             '**[Temperature（T）](/ja/prompt-engineering/temperature-and-top-p-control-ai-creativity) は AI 出力のランダム性を制御：コード生成の場合、T = 0.0～0.3 は決定論的で保守的な出力を生成；T = 0.7～1.0 は創造的変動を増加。** Temperature は、モデルの語彙上のソフトマックス確率分布に適用されるハイパーパラメータです。',
@@ -2674,6 +2752,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         globalContext: {
+          id: 'how-does-ai-coding-vary-by-region',
           title: 'AIコーディングは地域によってどう異なるか',
           content: [
             '**ヨーロッパ開発チームは、EU AI法コンプライアンスとデータ常駐が重要なコーディングタスク向けに、Mistral AI（フランス開発）の採用がますます増えています。** Mistral Large と Mistral Small は Ollama 経由でローカルデプロイが可能です。',
@@ -2682,6 +2761,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes-when-using-ai-for-code',
           title: 'AIでコードを書く時の一般的な間違い',
           content: [
             '**AI コーディングツール使用時に以下の頻繁なエラーを回避：**',
@@ -2696,6 +2776,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: '関連記事',
           items: [
             '[Chain-of-Thought プロンプティング](/ja/prompt-engineering/chain-of-thought-prompting) - ロジックとデバッグタスクのための推論',
@@ -2707,6 +2788,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         howToStart: {
+          id: 'step-by-step-workflow-write-better-code-with-ai',
           title: 'ステップバイステップワークフロー：AIでコード品質を向上させる',
           numberedItems: [
             '**役割と制約を事前に定義。** リクエストを書く前に、シニア [言語] エンジニア、ターゲットフレームワーク、アーキテクチャ制約を指定。',
@@ -2767,6 +2849,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         sources: {
+          id: 'sources-further-reading',
           title: '参考資料と関連リンク',
           items: [
             '[Wei et al., 2022. 「Chain-of-Thought プロンプティングは大規模言語モデルで推論を引き出す」](https://arxiv.org/abs/2201.11903) - LLM のステップバイステップ推論に関する基礎論文',
@@ -2805,7 +2888,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: '使用AI编码的常见错误', anchor: '#common-mistakes-when-using-ai-for-code' },
         { label: '相关阅读', anchor: '#related-reading' },
         { label: '分步工作流：使用AI编写更好的代码', anchor: '#step-by-step-workflow-write-better-code-with-ai' },
-        { label: '常见问题', anchor: '#frequently-asked-questions' },
+        { label: '常见问题', anchor: '#faq' },
         { label: '参考资料与进一步阅读', anchor: '#sources-further-reading' },
       ],
       schema: {
@@ -3002,6 +3085,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         directAnswer: {
+          id: 'the-direct-answer-prompt-quality-determines-code-quality',
           title: '直接答案：提示词质量决定代码质量',
           content: [
             '**任何AI编码会话的输出质量只取决于你给出的指令 — 模糊的提示词会产生模糊的代码，结构化的提示词会产生生产就绪的代码。** 大语言模型（LLM） — GPT-5、Claude 4.8 Opus和Gemini 3 Pro等神经网络类别 — 不"理解"你的项目；它们根据从数十亿行代码学习到的模式预测下一个最可能的token。',
@@ -3011,6 +3095,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         modelComparison: {
+          id: 'which-ai-model-to-use-for-coding-tasks',
           title: '编码任务应该使用哪个AI模型',
           content: [
             '**截至2026年4月，不同的模型在不同的编码任务中表现出色 — 将你的提示词路由到正确的模型会减少错误和token成本。**',
@@ -3052,6 +3137,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         promptStructure: {
+          id: 'how-to-write-prompts-that-produce-better-code',
           title: '如何编写能产生更好代码的提示词',
           content: [
             '**结构化提示词 — 那些定义角色、目标、约束条件和输出格式的提示词 — 产生的错误明显少于开放式请求。** 核心原则：最小化模型的猜测。模型代你做出的每一个假设都是一个潜在错误。明确指定编程语言、目标运行时、边界情况、性能约束和预期输出格式。',
@@ -3066,12 +3152,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         chainOfThought: {
+          id: 'how-does-chain-of-thought-prompting-improve-debugging',
           title: '思路链提示词如何改进调试？',
           content: [
             '**[思路链（CoT）提示词](/zh/prompt-engineering/chain-of-thought-prompting) — 要求模型在生成最终答案前逐步推理 — 通过使模型的逻辑可检查来减少调试错误。** CoT提示词是一种要求LLM在生成输出前生成中间推理步骤的技术。对于调试，这意味着模型明确追踪错误路径，让你能识别逻辑确切破裂的地方。',
           ],
         },
         rules: {
+          id: 'how-to-inject-coding-rules-as-persistent-instructions',
           title: '如何将编码规则注入为持久指令',
           content: [
             '**规则 — 嵌入在系统提示或项目配置中的简短明确指令集 — 使AI编码工具在会话中保持一致，而不仅仅在单次生成中。** 现代编码工具（Cursor、GitHub Copilot、Claude Code）支持跨所有交互持久化的项目级规则。这些充当你和模型之间的架构合约。使用[角色定义](/zh/prompt-engineering/persona-prompting)作为基础规则使所有后续请求保持一致。有效规则的示例：',
@@ -3084,6 +3172,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         codingTools: {
+          id: 'which-ai-coding-tool-has-the-lowest-hallucination-rate',
           title: '哪个AI编码工具的幻觉率最低？',
           content: [
             '**AI编码中的幻觉是指生成的输出看起来合理但引用不存在的函数、库或API。** Cursor由于项目级检索增强生成（RAG）索引而报告最低幻觉率约10–15% — 它索引你的代码库以向模型提供相关上下文。GitHub Copilot以约15–20%的速率运行，仅具有文件级上下文。Claude Code为多文件重构任务提供长上下文代码库理解。',
@@ -3124,6 +3213,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         security: {
+          id: 'the-security-problem-what-ai-gets-wrong',
           title: '安全问题：AI处理不当的方面',
           content: [
             '**截至2026年4月，AI在45%的情况下生成含有安全漏洞的代码 — 这个比率随着模型变得更有能力而没有改进。** 一份2025年Veracode报告发现，当在安全和不安全的实现之间做出选择时，生成式AI模型在45%的时间内选择了不安全的选项。学术研究证实了这一模式：超过40%的AI生成代码解决方案包含[安全缺陷](/zh/prompt-engineering/prompt-injection-and-security)。',
@@ -3136,6 +3226,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         multiModelCheck: {
+          id: 'the-multi-model-cross-check-method',
           title: '多模型交叉检验方法',
           content: [
             '**同时通过多个模型运行相同的提示词会减少接受幻觉依赖或不安全实现的机会 — 因为独立的模型很少会编造相同的具体错误细节。**',
@@ -3143,6 +3234,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         parameters: {
+          id: 'how-do-temperature-and-context-window-settings-affect-code-quality',
           title: '温度和上下文窗口设置如何影响代码质量？',
           content: [
             '**[温度（T）](/zh/prompt-engineering/temperature-and-top-p-control-ai-creativity)控制AI输出的随机性：对于代码生成，T = 0.0–0.3产生确定性、保守的输出；T = 0.7–1.0增加创意变化但也增加错误率。** 温度是应用于模型词汇表上softmax概率分布的超参数。在T = 0.0时，模型始终选择最高概率的token — 产生确定性输出。',
@@ -3170,6 +3262,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         globalContext: {
+          id: 'how-does-ai-coding-vary-by-region',
           title: 'AI编码在不同地区如何变化？',
           content: [
             '**欧洲开发团队越来越多地采用Mistral AI（在法国开发）进行编码任务，其中EU AI Act合规性和数据驻留很重要。** Mistral Large和Mistral Small可通过Ollama本地部署，确保没有代码离开本地基础设施 — 对于处理敏感源代码的团队在GDPR下至关重要。',
@@ -3178,6 +3271,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes-when-using-ai-for-code',
           title: '使用AI编码的常见错误',
           content: [
             '**使用AI编码工具时要避免这些常见错误：**',
@@ -3191,6 +3285,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: '相关阅读',
           items: [
             '[思路链提示词](/zh/prompt-engineering/chain-of-thought-prompting) — 用于逻辑和调试任务的分步推理',
@@ -3202,6 +3297,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         howToStart: {
+          id: 'step-by-step-workflow-write-better-code-with-ai',
           title: '分步工作流：使用AI编写更好的代码',
           numberedItems: [
             '**提前定义你的角色和约束。** 在编写请求之前，指定"你是一位资深[语言]工程师"、目标框架（React、FastAPI等）和任何架构约束（没有新包、严格类型安全等）。',
@@ -3262,6 +3358,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         sources: {
+          id: 'sources-further-reading',
           title: '参考资料与进一步阅读',
           items: [
             '[Wei et al., 2022. "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models"](https://arxiv.org/abs/2201.11903) — 关于LLM中分步推理的基础论文',
@@ -3300,7 +3397,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: 'AI 코딩 사용 시 흔한 실수', anchor: '#common-mistakes-when-using-ai-for-code' },
         { label: '관련 읽기', anchor: '#related-reading' },
         { label: '단계별 워크플로우: AI로 더 나은 코드 작성', anchor: '#step-by-step-workflow-write-better-code-with-ai' },
-        { label: '자주 묻는 질문', anchor: '#frequently-asked-questions' },
+        { label: '자주 묻는 질문', anchor: '#faq' },
         { label: '출처 및 추가 읽기', anchor: '#sources-further-reading' },
       ],
       schema: {
@@ -3487,6 +3584,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         directAnswer: {
+          id: 'the-direct-answer-prompt-quality-determines-code-quality',
           title: '직접 답변: 프롬프트 품질이 코드 품질을 결정합니다',
           content: [
             '**AI 코딩 세션의 출력은 제공하는 지시만큼만 좋습니다 — 모호한 프롬프트는 모호한 코드를 생성하고, 구조화된 프롬프트는 프로덕션 준비 코드를 생성합니다.** 대형 언어 모델(LLM) — GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro를 뒷받침하는 신경망 계열 — 은 사용자의 프로젝트를 "이해"하지 않습니다. 수십억 줄의 코드에서 학습한 패턴을 기반으로 다음으로 가장 가능성 있는 토큰을 예측합니다.',
@@ -3496,6 +3594,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         modelComparison: {
+          id: 'which-ai-model-to-use-for-coding-tasks',
           title: '코딩 작업에 사용할 AI 모델',
           content: [
             '**2026년 4월 기준으로, 각 모델은 서로 다른 코딩 작업에서 뛰어납니다 — 프롬프트를 적절한 모델로 라우팅하면 오류와 토큰 비용을 줄일 수 있습니다.**',
@@ -3537,6 +3636,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         promptStructure: {
+          id: 'how-to-write-prompts-that-produce-better-code',
           title: '더 나은 코드를 생성하는 프롬프트 작성 방법',
           content: [
             '**역할, 목표, 제약 조건, 출력 형식을 코드 요청 전에 정의하는 구조화된 프롬프트는 개방형 요청보다 측정 가능하게 더 적은 오류를 생성합니다.** 핵심 원칙: 모델의 추측을 최소화하십시오. 모델이 사용자를 대신하여 내리는 모든 가정은 잠재적 오류입니다. 프로그래밍 언어, 대상 런타임, 엣지 케이스, 성능 제약 조건, 예상 출력 형식을 명시적으로 지정하십시오.',
@@ -3550,12 +3650,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         chainOfThought: {
+          id: 'how-does-chain-of-thought-prompting-improve-debugging',
           title: 'Chain-of-Thought 프롬프팅은 어떻게 디버깅을 개선합니까?',
           content: [
             '**[Chain-of-Thought (CoT) 프롬프팅](/prompt-engineering/chain-of-thought-prompting) — 최종 답변을 생성하기 전에 모델이 단계별로 추론하도록 요청하는 것 — 은 모델의 논리를 검사 가능하게 만들어 디버깅 오류를 줄입니다.** CoT 프롬프팅은 LLM이 출력을 생성하기 전에 중간 추론 단계를 생성하도록 요청하는 기법입니다. 디버깅의 경우, 이는 모델이 오류 경로를 명시적으로 추적하여 논리가 어디서 무너지는지 정확히 파악할 수 있음을 의미합니다.',
           ],
         },
         rules: {
+          id: 'how-to-inject-coding-rules-as-persistent-instructions',
           title: '영구 지침으로 코딩 규칙을 주입하는 방법',
           content: [
             '**규칙 — 시스템 프롬프트 또는 프로젝트 구성에 삽입된 명시적 지시의 짧은 집합 — 은 단일 생성뿐만 아니라 세션 전체에 걸쳐 AI 코딩 도구를 일관성 있게 만듭니다.** 최신 코딩 도구(Cursor, GitHub Copilot, Claude Code)는 모든 상호 작용에 걸쳐 지속되는 프로젝트 수준 규칙을 지원합니다. 이는 사용자와 모델 간의 아키텍처 계약으로 기능합니다. 기초 규칙으로 [역할 정의](/prompt-engineering/persona-prompting)를 사용하면 모든 후속 요청이 일관성을 갖습니다. 효과적인 규칙의 예:',
@@ -3568,6 +3670,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         codingTools: {
+          id: 'which-ai-coding-tool-has-the-lowest-hallucination-rate',
           title: '환각률이 가장 낮은 AI 코딩 도구는 무엇입니까?',
           content: [
             '**AI 코딩에서 환각은 존재하지 않는 함수, 라이브러리 또는 API를 참조하지만 그럴듯하게 보이는 생성 출력을 의미합니다.** Cursor는 프로젝트 수준 검색 증강 생성(RAG) 인덱싱 덕분에 ~10–15%로 가장 낮은 환각률을 보고합니다 — 이는 모델에 관련 컨텍스트를 제공하기 위해 코드베이스를 인덱싱합니다. GitHub Copilot은 파일 수준 컨텍스트만으로 ~15–20%에서 작동합니다. Claude Code는 다중 파일 리팩토링 작업을 위한 장문 컨텍스트 코드베이스 이해를 제공합니다.',
@@ -3608,6 +3711,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         security: {
+          id: 'the-security-problem-what-ai-gets-wrong',
           title: '보안 문제: AI가 잘못 처리하는 것',
           content: [
             '**2026년 4월 기준으로, AI는 45%의 경우에서 보안 취약점이 있는 코드를 생성합니다 — 모델이 더 발전해도 개선되지 않은 비율입니다.** 2025년 Veracode 보고서에 따르면 안전한 구현과 안전하지 않은 구현 중 선택이 주어졌을 때, 생성형 AI 모델은 45%의 경우에 안전하지 않은 옵션을 선택했습니다. 학술 연구에서도 이 패턴이 확인됩니다: AI 생성 코드 솔루션의 40% 이상에 [보안 결함](/prompt-engineering/prompt-injection-and-security)이 있습니다.',
@@ -3620,6 +3724,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         multiModelCheck: {
+          id: 'the-multi-model-cross-check-method',
           title: '다중 모델 교차 검증 방법',
           content: [
             '**동일한 프롬프트를 여러 모델에 동시에 실행하면 환각된 의존성이나 안전하지 않은 구현을 수용할 가능성이 줄어듭니다 — 독립적인 모델들은 동일한 특정 잘못된 세부 사항을 거의 조작하지 않기 때문입니다.**',
@@ -3627,6 +3732,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         parameters: {
+          id: 'how-do-temperature-and-context-window-settings-affect-code-quality',
           title: 'Temperature 및 Context Window 설정은 코드 품질에 어떤 영향을 미칩니까?',
           content: [
             '**[Temperature (T)](/prompt-engineering/temperature-and-top-p-control-ai-creativity)는 AI 출력의 무작위성을 제어합니다: 코드 생성의 경우, T = 0.0–0.3은 결정론적이고 보수적인 출력을 생성하며; T = 0.7–1.0은 창의적 변동을 늘리지만 오류율도 증가합니다.** Temperature는 모델 어휘에 대한 소프트맥스 확률 분포에 적용되는 하이퍼파라미터입니다. T = 0.0에서 모델은 항상 가장 높은 확률의 토큰을 선택합니다 — 결정론적 출력을 생성합니다.',
@@ -3654,6 +3760,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         globalContext: {
+          id: 'how-does-ai-coding-vary-by-region',
           title: 'AI 코딩은 지역마다 어떻게 다릅니까?',
           content: [
             '**유럽 개발 팀은 EU AI Act 준수와 데이터 거주지가 중요한 코딩 작업에서 점점 더 Mistral AI(프랑스 개발)를 채택하고 있습니다.** Mistral Large와 Mistral Small은 Ollama를 통한 로컬 배포로 이용할 수 있으며, 코드가 온프레미스 인프라를 벗어나지 않도록 보장합니다 — 민감한 소스 코드를 처리하는 팀에게는 GDPR 하에서 중요합니다.',
@@ -3662,6 +3769,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes-when-using-ai-for-code',
           title: 'AI 코딩 사용 시 흔한 실수',
           content: [
             '**AI 코딩 도구를 사용할 때 이러한 빈번한 오류를 피하십시오:**',
@@ -3675,6 +3783,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: '관련 읽기',
           items: [
             '[Chain-of-Thought 프롬프팅](/prompt-engineering/chain-of-thought-prompting) — 논리 및 디버깅 작업을 위한 단계별 추론',
@@ -3686,6 +3795,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         howToStart: {
+          id: 'step-by-step-workflow-write-better-code-with-ai',
           title: '단계별 워크플로우: AI로 더 나은 코드 작성',
           numberedItems: [
             '**역할과 제약 조건을 미리 정의하십시오.** 요청을 작성하기 전에 \'당신은 시니어 [언어] 엔지니어입니다,\' 대상 프레임워크(React, FastAPI 등), 그리고 아키텍처 제약 조건(새 패키지 없음, 엄격한 타입 안전성 등)을 명시하십시오.',
@@ -3742,6 +3852,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         sources: {
+          id: 'sources-further-reading',
           title: '출처 및 추가 읽기',
           items: [
             '[Wei et al., 2022. "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models"](https://arxiv.org/abs/2201.11903) — LLM의 단계별 추론에 관한 기초 논문',

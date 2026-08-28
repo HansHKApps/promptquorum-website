@@ -26,7 +26,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       educationalLevel: 'Intermediate',
       primaryTerm: 'Operating Systems',
       toc: [
-        { label: 'TLDR', anchor: '#tldr' },
         { label: 'Hardware Cost by OS', anchor: '#hardware-cost' },
         { label: 'Software Setup & Complexity', anchor: '#setup' },
         { label: 'Inference Performance Comparison', anchor: '#performance' },
@@ -292,7 +291,6 @@ schema: {
       educationalLevel: 'Intermediate',
       primaryTerm: 'Operating Systems',
       toc: [
-        { label: 'Puntos clave', anchor: '#tldr' },
         { label: 'Costo de hardware por sistema operativo', anchor: '#hardware-cost' },
         { label: 'Configuración de software y complejidad', anchor: '#setup' },
         { label: 'Comparación de rendimiento de inferencia', anchor: '#performance' },
@@ -563,7 +561,6 @@ schema: {
       educationalLevel: 'Intermediate',
       primaryTerm: 'Operating Systems',
       toc: [
-        { label: 'النقاط الرئيسية', anchor: '#tldr' },
         { label: 'تكلفة العتاد حسب نظام التشغيل', anchor: '#hardware-cost' },
         { label: 'إعداد البرمجيات والتعقيد', anchor: '#setup' },
         { label: 'مقارنة أداء الاستدلال', anchor: '#performance' },
@@ -834,7 +831,6 @@ schema: {
       educationalLevel: 'Intermediate',
       primaryTerm: 'Operating Systems',
       toc: [
-        { label: 'Pontos principais', anchor: '#tldr' },
         { label: 'Custo de hardware por sistema operacional', anchor: '#hardware-cost' },
         { label: 'Configuração de software e complexidade', anchor: '#setup' },
         { label: 'Comparação de desempenho de inferência', anchor: '#performance' },
@@ -1024,14 +1020,12 @@ schema: {
       educationalLevel: 'Fortgeschrittene',
       primaryTerm: 'Betriebssysteme',
       toc: [
-        { label: 'Zusammenfassung', anchor: '#tldr' },
         { label: 'Hardwarekosten nach OS', anchor: '#hardware-cost' },
         { label: 'Software-Setup & Komplexität', anchor: '#setup' },
         { label: 'Inferenzleistungsvergleich', anchor: '#performance' },
         { label: 'Tool/Framework-Unterstützung nach OS', anchor: '#tools' },
         { label: 'Gesamtkostenanalyse', anchor: '#tco' },
         { label: 'Häufige Fehler vermeiden', anchor: '#common-mistakes' },
-        { label: 'Regionale Überlegungen', anchor: '#regional-context' },
         { label: 'Häufig gestellte Fragen', anchor: '#faq' },
       ],
       gammaEmbedUrl: '/presentations/mac-vs-windows-vs-linux-local-llm-static.html',
@@ -1236,7 +1230,6 @@ schema: {
           educationalLevel: 'Intermédiaire',
           primaryTerm: 'Systèmes d\'exploitation',
           toc: [
-            { label: 'Résumé', anchor: '#tldr' },
             { label: 'Coût du matériel par système d\'exploitation', anchor: '#hardware-cost' },
             { label: 'Configuration logicielle et complexité', anchor: '#setup' },
             { label: 'Comparaison des performances d\'inférence', anchor: '#performance' },
@@ -1501,7 +1494,6 @@ schema: {
           educationalLevel: '中級',
           primaryTerm: 'オペレーティングシステム',
           toc: [
-            { label: '要点', anchor: '#tldr' },
             { label: 'OS別ハードウェアコスト', anchor: '#hardware-cost' },
             { label: 'ソフトウェア設定と複雑さ', anchor: '#setup' },
             { label: '推論パフォーマンス比較', anchor: '#performance' },
@@ -1754,7 +1746,6 @@ schema: {
           educationalLevel: '中级',
           primaryTerm: '操作系统',
           toc: [
-            { label: '要点总结', anchor: '#tldr' },
             { label: '按操作系统划分的硬件成本', anchor: '#hardware-cost' },
             { label: '软件设置与复杂性', anchor: '#setup' },
             { label: '推理性能对比', anchor: '#performance' },
@@ -2006,7 +1997,6 @@ schema: {
       educationalLevel: 'Intermediate',
       primaryTerm: '운영 체제',
       toc: [
-        { label: '요약', anchor: '#tldr' },
         { label: 'OS별 하드웨어 비용', anchor: '#hardware-cost' },
         { label: '소프트웨어 설정 및 복잡성', anchor: '#setup' },
         { label: '추론 성능 비교', anchor: '#performance' },

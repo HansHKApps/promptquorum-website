@@ -53,6 +53,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         gdpr: {
+          id: 'gdpr',
           title: 'GDPR: What Does Compliance Mean for AI?',
           content: [
             '**GDPR (General Data Protection Regulation) applies to any processing of EU residents\' personal data, regardless of where your company is located.**',
@@ -63,6 +64,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         hipaa: {
+          id: 'hipaa',
           title: 'How Does HIPAA Protect Patient Privacy?',
           content: [
             '**HIPAA (Health Insurance Portability and Accountability Act) applies to healthcare providers, insurers, and anyone handling Protected Health Information (PHI).**',
@@ -75,6 +77,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         soc2: {
+          id: 'soc2',
           title: 'What Does SOC2 Type II Require?',
           content: [
             '**SOC2 (Service Organization Control) is a compliance certification for organizations processing enterprise data.** Type II requires 6+ months of audit evidence.',
@@ -88,6 +91,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         euAiAct: {
+          id: 'eu-ai-act',
           title: 'What Does the EU AI Act Require?',
           content: [
             '**The EU AI Act (2024) imposes new requirements on AI systems deployed in the EU, regardless of vendor location.**',
@@ -102,6 +106,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         documentation: {
+          id: 'documentation',
           title: 'What Documentation and Audit Trails Are Required?',
           content: [
             '**Compliance requires comprehensive documentation and logging:**',
@@ -117,6 +122,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Common Enterprise Compliance Mistakes',
           items: [
             '**Assuming cloud vendors are compliant for you.** Even if vendor has SOC2, you are still responsible for GDPR and HIPAA compliance. Cloud does not absolve liability.',
@@ -321,6 +327,7 @@ schema: {
           ],
         },
         gdpr: {
+          id: 'gdpr',
           title: 'GDPR: ¿Qué significa el cumplimiento para la IA?',
           content: [
             '**El GDPR (Reglamento General de Protección de Datos) se aplica a cualquier tratamiento de datos personales de residentes de la UE, independientemente de dónde esté ubicada tu empresa.**',
@@ -332,6 +339,7 @@ schema: {
           ],
         },
         hipaa: {
+          id: 'hipaa',
           title: '¿Cómo protege HIPAA la privacidad de los pacientes?',
           content: [
             '**HIPAA (Ley de Portabilidad y Responsabilidad del Seguro Médico) se aplica a proveedores de atención médica, aseguradoras y cualquier entidad que maneje Información de Salud Protegida (PHI).**',
@@ -344,6 +352,7 @@ schema: {
           ],
         },
         soc2: {
+          id: 'soc2',
           title: '¿Qué exige SOC2 Type II?',
           content: [
             '**SOC2 (Service Organization Control) es una certificación de cumplimiento para organizaciones que procesan datos empresariales.** Type II requiere 6+ meses de evidencia de auditoría.',
@@ -357,6 +366,7 @@ schema: {
           ],
         },
         euAiAct: {
+          id: 'eu-ai-act',
           title: '¿Qué exige la Ley de IA de la UE?',
           content: [
             '**La Ley de IA de la UE (2024) impone nuevos requisitos a los sistemas de IA desplegados en la UE, independientemente de la ubicación del proveedor.**',
@@ -371,6 +381,7 @@ schema: {
           ],
         },
         documentation: {
+          id: 'documentation',
           title: '¿Qué documentación y registros de auditoría son necesarios?',
           content: [
             '**El cumplimiento exige documentación y registro exhaustivos:**',
@@ -386,6 +397,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Errores comunes de cumplimiento empresarial',
           items: [
             '**Asumir que los proveedores de nube cumplen por ti.** Aunque el proveedor tenga SOC2, sigues siendo responsable del cumplimiento del GDPR y HIPAA. La nube no elimina tu responsabilidad legal.',
@@ -589,6 +601,7 @@ schema: {
           ],
         },
         gdpr: {
+          id: 'gdpr',
           title: 'GDPR: ماذا يعني الامتثال للذكاء الاصطناعي؟',
           content: [
             '**ينطبق GDPR (اللائحة العامة لحماية البيانات) على أي معالجة لبيانات شخصية لمقيمي الاتحاد الأوروبي، بغض النظر عن موقع شركتك.**',
@@ -600,6 +613,7 @@ schema: {
           ],
         },
         hipaa: {
+          id: 'hipaa',
           title: 'كيف يحمي HIPAA خصوصية المرضى؟',
           content: [
             '**ينطبق HIPAA (قانون قابلية نقل التأمين الصحي والمساءلة) على مقدمي الرعاية الصحية وشركات التأمين وأي كيان يتعامل مع معلومات الصحة المحمية (PHI).**',
@@ -612,6 +626,7 @@ schema: {
           ],
         },
         soc2: {
+          id: 'soc2',
           title: 'ماذا يتطلب SOC2 Type II؟',
           content: [
             '**SOC2 (ضوابط منظمة الخدمة) شهادة امتثال للمنظمات التي تعالج بيانات المؤسسات.** يتطلب Type II 6+ أشهر من أدلة التدقيق.',
@@ -625,6 +640,7 @@ schema: {
           ],
         },
         euAiAct: {
+          id: 'eu-ai-act',
           title: 'ماذا يتطلب قانون الذكاء الاصطناعي للاتحاد الأوروبي؟',
           content: [
             '**يفرض قانون الذكاء الاصطناعي للاتحاد الأوروبي (2024) متطلبات جديدة على أنظمة الذكاء الاصطناعي المنشورة في الاتحاد الأوروبي، بغض النظر عن موقع المزود.**',
@@ -639,6 +655,7 @@ schema: {
           ],
         },
         documentation: {
+          id: 'documentation',
           title: 'ما التوثيق وسجلات التدقيق اللازمة؟',
           content: [
             '**يقتضي الامتثال توثيقاً وتسجيلاً شاملين:**',
@@ -654,6 +671,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'أخطاء الامتثال المؤسسي الشائعة',
           items: [
             '**افتراض أن مزودي السحابة يمتثلون نيابةً عنك.** حتى لو كان لدى المزود SOC2، تبقى مسؤولاً عن امتثال GDPR وHIPAA. السحابة لا تلغي مسؤوليتك القانونية.',
@@ -1034,6 +1052,7 @@ schema: {
           ],
         },
         gdpr: {
+          id: 'gdpr',
           title: 'DSGVO: Was bedeutet Compliance für KI?',
           content: [
             '**Die DSGVO (Datenschutz-Grundverordnung) gilt für jede Verarbeitung personenbezogener Daten von EU-Bewohnern, unabhängig davon, wo Ihr Unternehmen ansässig ist.**',
@@ -1045,6 +1064,7 @@ schema: {
           ],
         },
         hipaa: {
+          id: 'hipaa',
           title: 'Wie schützt HIPAA die Patientendaten?',
           content: [
             '**HIPAA (Health Insurance Portability and Accountability Act) gilt für Gesundheitsanbieter, Versicherer und jeden, der geschützte Gesundheitsinformationen (PHI) verarbeitet.**',
@@ -1057,6 +1077,7 @@ schema: {
           ],
         },
         soc2: {
+          id: 'soc2',
           title: 'Was erfordert SOC2 Type II?',
           content: [
             '**SOC2 (Service Organization Control) ist eine Compliance-Zertifizierung für Organisationen, die Unternehmensdaten verarbeiten.** Type II erfordert 6+ Monate Auditleitfaden.',
@@ -1070,6 +1091,7 @@ schema: {
           ],
         },
         euAiAct: {
+          id: 'eu-ai-act',
           title: 'Was erfordert die EU-KI-Verordnung?',
           content: [
             '**Die EU-KI-Verordnung (2024) stellt neue Anforderungen an KI-Systeme, die in der EU bereitgestellt werden, unabhängig vom Anbieterstandort.**',
@@ -1084,6 +1106,7 @@ schema: {
           ],
         },
         documentation: {
+          id: 'documentation',
           title: 'Welche Dokumentation und Audit-Trails sind erforderlich?',
           content: [
             '**Compliance erfordert umfassende Dokumentation und Protokollierung:**',
@@ -1099,6 +1122,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Häufige Enterprise Compliance-Fehler',
           items: [
             '**Annahme, dass Cloud-Anbieter für Sie compliant sind.** Auch wenn der Anbieter SOC2 hat, sind Sie immer noch verantwortlich für DSGVO- und HIPAA-Compliance. Cloud hebt die Haftung nicht auf.',
@@ -1253,6 +1277,7 @@ schema: {
           ],
         },
         gdpr: {
+          id: 'gdpr',
           title: 'RGPD: Que signifie la conformité pour l\'IA?',
           content: [
             '**Le RGPD s\'applique à tout traitement de données personnelles de résidents de l\'UE, indépendamment du lieu d\'implantation de votre entreprise.**',
@@ -1264,6 +1289,7 @@ schema: {
           ],
         },
         hipaa: {
+          id: 'hipaa',
           title: 'Comment HIPAA protège-t-il la confidentialité des patients?',
           content: [
             '**HIPAA s\'applique aux fournisseurs de soins de santé, assureurs et quiconque traite des informations de santé protégées (PHI).**',
@@ -1276,6 +1302,7 @@ schema: {
           ],
         },
         soc2: {
+          id: 'soc2',
           title: 'Que requiert SOC2 Type II?',
           content: [
             '**SOC2 est une certification de conformité pour les organisations traitant les données d\'entreprise.** Type II exige 6+ mois de preuves d\'audit.',
@@ -1289,6 +1316,7 @@ schema: {
           ],
         },
         euAiAct: {
+          id: 'eu-ai-act',
           title: 'Que requiert la Loi IA UE?',
           content: [
             '**La Loi IA UE (2024) impose de nouvelles exigences aux systèmes IA déployés dans l\'UE, indépendamment du lieu du vendeur.**',
@@ -1303,6 +1331,7 @@ schema: {
           ],
         },
         documentation: {
+          id: 'documentation',
           title: 'Quelle documentation et pistes d\'audit sont requises?',
           content: [
             '**La conformité nécessite une documentation et une journalisation complètes:**',
@@ -1318,6 +1347,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Erreurs courantes de conformité d\'entreprise',
           items: [
             '**Supposer que les vendeurs cloud sont conformes pour vous.** Même si le vendeur a SOC2, vous êtes toujours responsable de la conformité RGPD et HIPAA. Le cloud n\'absout pas la responsabilité.',
@@ -1461,6 +1491,7 @@ schema: {
           ],
         },
         gdpr: {
+          id: 'gdpr',
           title: 'GDPR: AIコンプライアンスの意味は？',
           content: [
             '**GDPR（一般データ保護規制）はEU住民の個人データ処理に適用される。企業の所在地に関係なく。**',
@@ -1471,6 +1502,7 @@ schema: {
           ],
         },
         hipaa: {
+          id: 'hipaa',
           title: 'HIPAAは患者プライバシーをどう保護するか？',
           content: [
             '**HIPAA（医療保険の携行可能性と説明責任法）は医療提供者、保険会社、PHI（保護健康情報）を扱うすべての者に適用。**',
@@ -1483,6 +1515,7 @@ schema: {
           ],
         },
         soc2: {
+          id: 'soc2',
           title: 'SOC2 Type IIは何が必要か？',
           content: [
             '**SOC2（サービス組織コントロール）はエンタープライズデータ処理組織のコンプライアンス認証。** Type IIは6ヶ月以上の監査証拠が必要。',
@@ -1496,6 +1529,7 @@ schema: {
           ],
         },
         euAiAct: {
+          id: 'eu-ai-act',
           title: 'EU AI Actは何が必要か？',
           content: [
             '**EU AI Act（2024）はEUに展開されたAIシステムに新要件を課す。ベンダーの場所に関係なく。**',
@@ -1510,6 +1544,7 @@ schema: {
           ],
         },
         documentation: {
+          id: 'documentation',
           title: 'ドキュメントと監査ログは何が必要か？',
           content: [
             '**コンプライアンスは包括的なドキュメントとログを要求:**',
@@ -1525,6 +1560,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'よくあるエンタープライズコンプライアンス間違い',
           items: [
             '**Cloud ベンダーがあなたのためにコンプライアンスと仮定。** ベンダーがSOC2を持っていても、あなたはGDPRとHIPAAコンプライアンスで責任がある。Cloudは責任を排除しない。',
@@ -1667,6 +1703,7 @@ schema: {
           ],
         },
         gdpr: {
+          id: 'gdpr',
           title: 'GDPR：合规对 AI 意味着什么？',
           content: [
             '**GDPR（通用数据保护条例）适用于任何处理 EU 居民个人数据的情况，无论贵公司位置在哪。**',
@@ -1677,6 +1714,7 @@ schema: {
           ],
         },
         hipaa: {
+          id: 'hipaa',
           title: 'HIPAA 如何保护患者隐私？',
           content: [
             '**HIPAA（医疗保险携带和问责法）适用于医疗提供者、保险公司和任何处理 PHI（受保护的健康信息）的人。**',
@@ -1689,6 +1727,7 @@ schema: {
           ],
         },
         soc2: {
+          id: 'soc2',
           title: 'SOC2 Type II 需要什么？',
           content: [
             '**SOC2（服务组织控制）是处理企业数据的组织的合规认证。** Type II 需要 6+ 个月的审计证据。',
@@ -1702,6 +1741,7 @@ schema: {
           ],
         },
         euAiAct: {
+          id: 'eu-ai-act',
           title: 'EU AI Act 需要什么？',
           content: [
             '**EU AI Act（2024）对在 EU 部署的 AI 系统施加新要求，无论供应商位置。**',
@@ -1716,6 +1756,7 @@ schema: {
           ],
         },
         documentation: {
+          id: 'documentation',
           title: '需要什么文档和审计日志？',
           content: [
             '**合规需要全面的文档和日志：**',
@@ -1731,6 +1772,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: '常见企业合规错误',
           items: [
             '**假设云供应商为您处理合规。** 即使供应商有 SOC2，您仍然要为 GDPR 和 HIPAA 合规负责。云不能消除责任。',
@@ -1873,6 +1915,7 @@ schema: {
           ],
         },
         gdpr: {
+          id: 'gdpr',
           title: 'GDPR: AI에서 컴플라이언스는 무엇을 의미합니까?',
           content: [
             '**GDPR(일반 데이터 보호 규정)은 회사 위치에 관계없이 EU 거주자의 개인 데이터 처리에 적용됩니다.**',
@@ -1883,6 +1926,7 @@ schema: {
           ],
         },
         hipaa: {
+          id: 'hipaa',
           title: 'HIPAA는 환자 프라이버시를 어떻게 보호합니까?',
           content: [
             '**HIPAA(의료 보험 이동성 및 책임법)는 의료 제공자, 보험사 및 보호 건강 정보(PHI)를 취급하는 모든 사람에게 적용됩니다.**',
@@ -1895,6 +1939,7 @@ schema: {
           ],
         },
         soc2: {
+          id: 'soc2',
           title: 'SOC2 Type II는 무엇을 요구합니까?',
           content: [
             '**SOC2(서비스 조직 통제)는 기업 데이터를 처리하는 조직을 위한 컴플라이언스 인증입니다.** Type II는 6개월 이상의 감사 증거를 요구합니다.',
@@ -1908,6 +1953,7 @@ schema: {
           ],
         },
         euAiAct: {
+          id: 'eu-ai-act',
           title: 'EU AI Act는 무엇을 요구합니까?',
           content: [
             '**EU AI Act(2024)는 공급업체 위치에 관계없이 EU에 배포되는 AI 시스템에 새로운 요구 사항을 부과합니다.**',
@@ -1922,6 +1968,7 @@ schema: {
           ],
         },
         documentation: {
+          id: 'documentation',
           title: '어떤 문서화 및 감사 추적이 필요합니까?',
           content: [
             '**컴플라이언스는 포괄적인 문서화 및 로깅을 요구합니다:**',
@@ -1937,6 +1984,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: '일반적인 기업 컴플라이언스 실수',
           items: [
             '**클라우드 공급업체가 대신 컴플라이언스를 충족해 준다고 가정하는 것.** 공급업체가 SOC2를 보유하고 있더라도 GDPR 및 HIPAA 준수에 대한 책임은 여전히 귀하에게 있습니다. 클라우드는 책임을 면제해 주지 않습니다.',

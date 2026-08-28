@@ -1001,10 +1001,6 @@ schema: {
       primaryTerm: 'consumo de energia de LLM local',
       toc: [
         { label: 'Pontos principais', anchor: '#tldr' },
-        { label: 'Consumo de energia por GPU', anchor: '#gpu-power' },
-        { label: 'Custo de eletricidade por região', anchor: '#electricity-cost' },
-        { label: 'Apple Silicon vs NVIDIA', anchor: '#apple-vs-nvidia' },
-        { label: 'Resfriamento', anchor: '#cooling' },
         { label: 'FAQ', anchor: '#faq' },
       ],
       schema: {

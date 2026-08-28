@@ -52,6 +52,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         architecture: {
+          id: 'architecture',
           title: 'How Do You Scale From Single Machine to Distributed System?',
           content: [
             '**Progression from single machine to production:**',
@@ -65,6 +66,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           columns: ['Deployment Stage', 'Number of GPUs', 'Concurrent Users', 'SLA Uptime', 'Infrastructure Setup'],
         },
         loadBalancing: {
+          id: 'load-balancing',
           title: 'How Do You Implement Load Balancing?',
           content: [
             '**Load balancer routes requests to least-busy inference pod.**',
@@ -76,6 +78,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           codeLanguage: 'yaml',
         },
         redundancy: {
+          id: 'redundancy',
           title: 'How Do You Implement Redundancy and Failover?',
           content: [
             '**High availability requires redundant components:**',
@@ -86,6 +89,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         monitoring: {
+          id: 'monitoring',
           title: 'What Should You Monitor?',
           content: [
             '**Enterprise deployments must monitor:**',
@@ -101,6 +105,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         cost: {
+          id: 'cost',
           title: 'How Do You Optimize Costs at Scale?',
           content: [
             'At scale, focus on:',
@@ -114,6 +119,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Common Enterprise Scaling Mistakes',
           items: [
             '**Ignoring latency requirements.** Agree on p99 latency SLA before deploying. 2-second latency may seem OK until users complain.',
@@ -310,6 +316,7 @@ schema: {
           ],
         },
         architecture: {
+          id: 'architecture',
           title: '¿Cómo escalar de una sola máquina a un sistema distribuido?',
           content: [
             '**Progresión de máquina única a producción:**',
@@ -323,6 +330,7 @@ schema: {
           columns: ['Etapa de despliegue', 'Número de GPUs', 'Usuarios concurrentes', 'Disponibilidad SLA', 'Configuración de infraestructura'],
         },
         loadBalancing: {
+          id: 'load-balancing',
           title: '¿Cómo implementar el balanceo de carga?',
           content: [
             '**El balanceador de carga enruta las solicitudes al pod de inferencia menos ocupado.**',
@@ -334,6 +342,7 @@ schema: {
           codeLanguage: 'yaml',
         },
         redundancy: {
+          id: 'redundancy',
           title: '¿Cómo implementar redundancia y conmutación por error?',
           content: [
             '**La alta disponibilidad requiere componentes redundantes:**',
@@ -344,6 +353,7 @@ schema: {
           ],
         },
         monitoring: {
+          id: 'monitoring',
           title: '¿Qué debes monitorear?',
           content: [
             '**Los despliegues empresariales deben monitorear:**',
@@ -359,6 +369,7 @@ schema: {
           ],
         },
         cost: {
+          id: 'cost',
           title: '¿Cómo optimizar costos a escala?',
           content: [
             'A escala, enfócate en:',
@@ -372,6 +383,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Errores comunes al escalar en la empresa',
           items: [
             '**Ignorar los requisitos de latencia.** Acuerda el SLA de latencia p99 antes del despliegue. Una latencia de 2 segundos puede parecer correcta hasta que los usuarios se quejen.',
@@ -568,6 +580,7 @@ schema: {
           ],
         },
         architecture: {
+          id: 'architecture',
           title: 'كيف توسّع من جهاز واحد إلى نظام موزّع؟',
           content: [
             '**التدرّج من جهاز واحد إلى بيئة الإنتاج:**',
@@ -581,6 +594,7 @@ schema: {
           columns: ['مرحلة النشر', 'عدد وحدات GPU', 'المستخدمون المتزامنون', 'اتفاقية مستوى الخدمة للتوفر', 'تكوين البنية التحتية'],
         },
         loadBalancing: {
+          id: 'load-balancing',
           title: 'كيف تطبّق موازنة الحمل؟',
           content: [
             '**يوجّه موازن الحمل الطلبات إلى حُجيرة الاستدلال الأقل انشغالًا.**',
@@ -592,6 +606,7 @@ schema: {
           codeLanguage: 'yaml',
         },
         redundancy: {
+          id: 'redundancy',
           title: 'كيف تطبّق التكرار وتجاوز الفشل؟',
           content: [
             '**يتطلب التوفر العالي مكونات متكررة:**',
@@ -602,6 +617,7 @@ schema: {
           ],
         },
         monitoring: {
+          id: 'monitoring',
           title: 'ماذا يجب أن تراقب؟',
           content: [
             '**يجب أن تراقب عمليات النشر المؤسسية:**',
@@ -617,6 +633,7 @@ schema: {
           ],
         },
         cost: {
+          id: 'cost',
           title: 'كيف تحسّن التكاليف على نطاق واسع؟',
           content: [
             'على نطاق واسع، ركّز على:',
@@ -630,6 +647,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'أخطاء شائعة عند التوسع في المؤسسة',
           items: [
             '**تجاهل متطلبات زمن الاستجابة.** اتفق على اتفاقية مستوى خدمة لزمن استجابة p99 قبل النشر. قد يبدو زمن استجابة 2 ثانية مقبولًا حتى يشتكي المستخدمون.',
@@ -972,6 +990,7 @@ schema: {
           ],
         },
         architecture: {
+          id: 'architecture',
           title: 'Wie skalierst du vom Single-Machine- zum verteilten System?',
           content: [
             '**Progression von Single Machine zu Production:**',
@@ -985,6 +1004,7 @@ schema: {
           columns: ['Deployment-Stufe', 'Anzahl GPUs', 'Gleichzeitige Benutzer', 'SLA-Verfügbarkeit', 'Infrastruktur-Setup'],
         },
         loadBalancing: {
+          id: 'load-balancing',
           title: 'Wie implementierst du Load Balancing?',
           content: [
             '**Load Balancer leitet Anfragen an den am wenigsten belasteten Inference-Pod weiter.**',
@@ -996,6 +1016,7 @@ schema: {
           codeLanguage: 'yaml',
         },
         redundancy: {
+          id: 'redundancy',
           title: 'Wie implementierst du Redundanz und Failover?',
           content: [
             '**Hochverfügbarkeit erfordert redundante Komponenten:**',
@@ -1006,6 +1027,7 @@ schema: {
           ],
         },
         monitoring: {
+          id: 'monitoring',
           title: 'Was solltest du überwachen?',
           content: [
             '**Enterprise-Deployments müssen folgende Metriken überwachen:**',
@@ -1021,6 +1043,7 @@ schema: {
           ],
         },
         cost: {
+          id: 'cost',
           title: 'Wie optimierst du Kosten in der Skalierung?',
           content: [
             'Konzentriere dich bei der Skalierung auf:',
@@ -1034,6 +1057,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Häufige Fehler beim Enterprise-Skalieren',
           items: [
             '**Latenzanforderungen ignorieren.** Einige dich auf p99-Latenz-SLA vor dem Deployment. 2-Sekunden-Latenz mag OK aussehen, bis Benutzer sich beschweren.',
@@ -1255,6 +1279,7 @@ schema: {
           ],
         },
         architecture: {
+          id: 'architecture',
           title: 'Comment passer à l\'échelle d\'une machine unique à un système distribué ?',
           content: [
             '**Progression de la machine unique à la production :**',
@@ -1268,6 +1293,7 @@ schema: {
           columns: ['Étape de déploiement', 'Nombre de GPU', 'Utilisateurs simultanés', 'Disponibilité SLA', 'Configuration d\'infrastructure'],
         },
         loadBalancing: {
+          id: 'load-balancing',
           title: 'Comment implémenter l\'équilibrage de charge ?',
           content: [
             '**L\'équilibreur de charge achemine les requêtes vers le pod d\'inférence le moins occupé.**',
@@ -1279,6 +1305,7 @@ schema: {
           codeLanguage: 'yaml',
         },
         redundancy: {
+          id: 'redundancy',
           title: 'Comment implémenter la redondance et le basculement ?',
           content: [
             '**La haute disponibilité nécessite des composants redondants :**',
@@ -1289,6 +1316,7 @@ schema: {
           ],
         },
         monitoring: {
+          id: 'monitoring',
           title: 'Que devez-vous surveiller ?',
           content: [
             '**Les déploiements d\'entreprise doivent surveiller :**',
@@ -1304,6 +1332,7 @@ schema: {
           ],
         },
         cost: {
+          id: 'cost',
           title: 'Comment optimiser les coûts à l\'échelle ?',
           content: [
             'À l\'échelle, concentrez-vous sur :',
@@ -1317,6 +1346,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Erreurs courantes en matière de mise à l\'échelle d\'entreprise',
           items: [
             '**Ignorer les exigences de latence.** Accordez-vous sur la SLA de latence p99 avant le déploiement. Une latence de 2 secondes peut sembler correcte jusqu\'à ce que les utilisateurs se plaignent.',
@@ -1516,6 +1546,7 @@ schema: {
           ],
         },
         architecture: {
+          id: 'architecture',
           title: '単一マシンから分散システムへどのようにスケーリングしますか？',
           content: [
             '**単一マシンから本番環境への進行：**',
@@ -1529,6 +1560,7 @@ schema: {
           columns: ['デプロイメントステージ', 'GPU数', '同時ユーザー数', 'SLA稼働率', 'インフラストラクチャセットアップ'],
         },
         loadBalancing: {
+          id: 'load-balancing',
           title: 'ロードバランシングはどのように実装しますか？',
           content: [
             '**ロードバランサーは、リクエストを最も負荷の低い推論ポッドにルーティングします。**',
@@ -1540,6 +1572,7 @@ schema: {
           codeLanguage: 'yaml',
         },
         redundancy: {
+          id: 'redundancy',
           title: '冗長性とフェイルオーバーはどのように実装しますか？',
           content: [
             '**高可用性には冗長なコンポーネントが必要です：**',
@@ -1550,6 +1583,7 @@ schema: {
           ],
         },
         monitoring: {
+          id: 'monitoring',
           title: '何を監視すべきですか？',
           content: [
             '**エンタープライズデプロイメントは以下を監視する必要があります：**',
@@ -1565,6 +1599,7 @@ schema: {
           ],
         },
         cost: {
+          id: 'cost',
           title: 'スケール時にコストを最適化するにはどうしますか？',
           content: [
             'スケール時には以下に焦点を当てます：',
@@ -1578,6 +1613,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'エンタープライズスケーリングの一般的なミス',
           items: [
             '**レイテンシ要件を無視します。** デプロイメント前にp99レイテンシSLAに同意してください。2秒のレイテンシは良好に見えるかもしれませんが、ユーザーが不平を言うまでです。',
@@ -1777,6 +1813,7 @@ schema: {
           ],
         },
         architecture: {
+          id: 'architecture',
           title: '如何从单机扩展到分布式系统？',
           content: [
             '**从单机到生产环境的演进：**',
@@ -1790,6 +1827,7 @@ schema: {
           columns: ['部署阶段', 'GPU数量', '并发用户', 'SLA可用性', '基础设施设置'],
         },
         loadBalancing: {
+          id: 'load-balancing',
           title: '如何实现负载均衡？',
           content: [
             '**负载均衡器将请求路由到负载最低的推理Pod。**',
@@ -1801,6 +1839,7 @@ schema: {
           codeLanguage: 'yaml',
         },
         redundancy: {
+          id: 'redundancy',
           title: '如何实现冗余性和故障转移？',
           content: [
             '**高可用性需要冗余组件：**',
@@ -1811,6 +1850,7 @@ schema: {
           ],
         },
         monitoring: {
+          id: 'monitoring',
           title: '需要监控什么？',
           content: [
             '**企业级部署必须监控：**',
@@ -1826,6 +1866,7 @@ schema: {
           ],
         },
         cost: {
+          id: 'cost',
           title: '如何大规模优化成本？',
           content: [
             '大规模时，关注：',
@@ -1839,6 +1880,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: '企业级扩展的常见错误',
           items: [
             '**忽视延迟要求。** 部署前同意p99延迟SLA。2秒延迟看似可以，直到用户抱怨。',
@@ -2051,6 +2093,7 @@ schema: {
           ],
         },
         architecture: {
+          id: 'architecture',
           title: '단일 머신에서 분산 시스템으로 어떻게 확장하십니까?',
           content: [
             '**단일 머신에서 프로덕션으로의 발전 단계:**',
@@ -2064,6 +2107,7 @@ schema: {
           columns: ['배포 단계', 'GPU 수', '동시 사용자 수', 'SLA 가동률', '인프라 설정'],
         },
         loadBalancing: {
+          id: 'load-balancing',
           title: '로드 밸런싱을 어떻게 구현하십니까?',
           content: [
             '**로드 밸런서는 요청을 가장 여유로운 인퍼런스 파드로 라우팅합니다.**',
@@ -2075,6 +2119,7 @@ schema: {
           codeLanguage: 'yaml',
         },
         redundancy: {
+          id: 'redundancy',
           title: '이중화와 페일오버를 어떻게 구현하십니까?',
           content: [
             '**고가용성은 이중화된 구성 요소를 필요로 합니다:**',
@@ -2085,6 +2130,7 @@ schema: {
           ],
         },
         monitoring: {
+          id: 'monitoring',
           title: '무엇을 모니터링해야 하십니까?',
           content: [
             '**엔터프라이즈 배포에서 반드시 모니터링해야 할 항목:**',
@@ -2100,6 +2146,7 @@ schema: {
           ],
         },
         cost: {
+          id: 'cost',
           title: '규모에서 비용을 어떻게 최적화하십니까?',
           content: [
             '규모에서는 다음 사항에 집중하십시오:',
@@ -2113,6 +2160,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: '흔한 엔터프라이즈 확장 실수',
           items: [
             '**지연 시간 요건을 무시하는 것.** 배포 전에 p99 지연 시간 SLA를 합의하십시오. 2초의 지연 시간은 사용자가 불만을 제기하기 전까지는 괜찮아 보일 수 있습니다.',

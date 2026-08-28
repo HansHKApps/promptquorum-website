@@ -43,7 +43,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'A Note on Rooftop Solar Sales Calls', anchor: '#rooftop-lead-gen' },
       { label: 'When Should You Combine Both?', anchor: '#when-to-combine' },
       { label: 'FAQ', anchor: '#faq' },
-      { label: 'Related Reading', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -180,7 +179,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Una nota sobre las llamadas de ventas de solar en tejado', anchor: '#rooftop-lead-gen' },
       { label: '¿Cuándo deberías combinar ambas?', anchor: '#when-to-combine' },
       { label: 'FAQ', anchor: '#faq' },
-      { label: 'Lecturas relacionadas', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -318,7 +316,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Uma observação sobre as ligações de vendas de solar no telhado', anchor: '#rooftop-lead-gen' },
       { label: 'Quando você deve combinar as duas?', anchor: '#when-to-combine' },
       { label: 'FAQ', anchor: '#faq' },
-      { label: 'Leituras relacionadas', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -456,7 +453,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'ملاحظة حول مكالمات مبيعات الطاقة الشمسية للسطح', anchor: '#rooftop-lead-gen' },
       { label: 'متى يجب الجمع بين الاثنين؟', anchor: '#when-to-combine' },
       { label: 'الأسئلة الشائعة', anchor: '#faq' },
-      { label: 'قراءات ذات صلة', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -596,7 +592,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '屋根置きソーラーの営業電話について', anchor: '#rooftop-lead-gen' },
       { label: 'いつ両方を組み合わせるべきか？', anchor: '#when-to-combine' },
       { label: 'よくある質問', anchor: '#faq' },
-      { label: '関連記事', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -736,7 +731,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '关于屋顶光伏销售电话的提示', anchor: '#rooftop-lead-gen' },
       { label: '什么时候应该两者结合？', anchor: '#when-to-combine' },
       { label: '常见问题', anchor: '#faq' },
-      { label: '相关阅读', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -876,7 +870,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Une note sur les appels commerciaux du solaire de toiture', anchor: '#rooftop-lead-gen' },
       { label: 'Quand faut-il combiner les deux ?', anchor: '#when-to-combine' },
       { label: 'FAQ', anchor: '#faq' },
-      { label: 'Lectures connexes', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -1016,7 +1009,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '지붕 태양광 영업 전화에 대한 참고사항', anchor: '#rooftop-lead-gen' },
       { label: '언제 둘 다 결합해야 할까요?', anchor: '#when-to-combine' },
       { label: '자주 묻는 질문', anchor: '#faq' },
-      { label: '관련 자료', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -1156,7 +1148,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Hinweis zu Verkaufsgesprächen bei Dachanlagen', anchor: '#rooftop-lead-gen' },
       { label: 'Wann lohnt es sich, beides zu kombinieren?', anchor: '#when-to-combine' },
       { label: 'Häufige Fragen', anchor: '#faq' },
-      { label: 'Weiterführende Artikel', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {

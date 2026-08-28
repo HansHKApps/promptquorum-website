@@ -25,7 +25,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       educationalLevel: 'Intermediate',
       primaryTerm: 'RTX GPU Comparison',
       toc: [
-        { label: 'TLDR', anchor: '#tldr' },
+        { label: 'TLDR', anchor: '#key-takeaways' },
         { label: 'What Are the Raw Speed Differences?', anchor: '#speed-diff' },
         { label: 'Does VRAM Matter Between 4090 and 5090?', anchor: '#vram-diff' },
         { label: 'Cost Per Token: Which Is Actually Cheaper?', anchor: '#cost-per-token' },
@@ -199,7 +199,7 @@ schema: {
       educationalLevel: 'Intermediate',
       primaryTerm: 'RTX GPU Comparison',
       toc: [
-        { label: 'Puntos clave', anchor: '#tldr' },
+        { label: 'Puntos clave', anchor: '#key-takeaways' },
         { label: '¿Cuáles son las diferencias reales de velocidad?', anchor: '#speed-diff' },
         { label: '¿Importa la VRAM entre la 4090 y la 5090?', anchor: '#vram-diff' },
         { label: 'Coste por token: ¿cuál es realmente más barata?', anchor: '#cost-per-token' },
@@ -382,7 +382,7 @@ schema: {
       educationalLevel: 'Intermediate',
       primaryTerm: 'مقارنة بطاقات RTX',
       toc: [
-        { label: 'النقاط الرئيسية', anchor: '#tldr' },
+        { label: 'النقاط الرئيسية', anchor: '#key-takeaways' },
         { label: 'ما الفروق الفعلية في السرعة؟', anchor: '#speed-diff' },
         { label: 'هل تهم VRAM بين 4090 و5090؟', anchor: '#vram-diff' },
         { label: 'التكلفة لكل token: أيها أرخص فعلًا؟', anchor: '#cost-per-token' },
@@ -565,7 +565,7 @@ schema: {
       educationalLevel: 'Intermediate',
       primaryTerm: 'RTX GPU-Vergleich',
       toc: [
-        { label: 'Zusammenfassung', anchor: '#tldr' },
+        { label: 'Zusammenfassung', anchor: '#key-takeaways' },
         { label: 'Was sind die Geschwindigkeitsunterschiede?', anchor: '#speed-diff' },
         { label: 'Spielt VRAM zwischen 4090 und 5090 eine Rolle?', anchor: '#vram-diff' },
         { label: 'Kosten pro Token: Welche ist tatsächlich günstiger?', anchor: '#cost-per-token' },
@@ -738,7 +738,7 @@ schema: {
       educationalLevel: 'Intermediate',
       primaryTerm: 'Comparaison GPU RTX',
       toc: [
-        { label: 'Résumé', anchor: '#tldr' },
+        { label: 'Résumé', anchor: '#key-takeaways' },
         { label: 'Quelles sont les différences réelles de vitesse ?', anchor: '#speed-diff' },
         { label: 'La VRAM fait-elle une différence entre la 4090 et la 5090 ?', anchor: '#vram-diff' },
         { label: 'Coût par token : laquelle est vraiment la moins chère ?', anchor: '#cost-per-token' },
@@ -921,7 +921,7 @@ schema: {
       educationalLevel: 'Intermediate',
       primaryTerm: 'RTX GPU比較',
       toc: [
-        { label: 'まとめ', anchor: '#tldr' },
+        { label: 'まとめ', anchor: '#key-takeaways' },
         { label: '実際の速度差は?', anchor: '#speed-diff' },
         { label: '4090と5090でVRAMの差は重要か?', anchor: '#vram-diff' },
         { label: 'トークンあたりコスト: 実際どちらが安い?', anchor: '#cost-per-token' },
@@ -1104,7 +1104,7 @@ schema: {
       educationalLevel: 'Intermediate',
       primaryTerm: 'RTX GPU对比',
       toc: [
-        { label: '要点总结', anchor: '#tldr' },
+        { label: '要点总结', anchor: '#key-takeaways' },
         { label: '真实的速度差异是多少？', anchor: '#speed-diff' },
         { label: '4090和5090之间VRAM重要吗？', anchor: '#vram-diff' },
         { label: '每token成本：哪个真正更便宜？', anchor: '#cost-per-token' },
@@ -1287,7 +1287,7 @@ schema: {
       educationalLevel: 'Intermediate',
       primaryTerm: 'RTX GPU Comparison',
       toc: [
-        { label: 'Pontos principais', anchor: '#tldr' },
+        { label: 'Pontos principais', anchor: '#key-takeaways' },
         { label: 'Quais são as diferenças reais de velocidade?', anchor: '#speed-diff' },
         { label: 'A VRAM faz diferença entre a 4090 e a 5090?', anchor: '#vram-diff' },
         { label: 'Custo por token: qual é realmente mais barata?', anchor: '#cost-per-token' },
@@ -1470,7 +1470,7 @@ schema: {
       educationalLevel: 'Intermediate',
       primaryTerm: 'RTX GPU 비교',
       toc: [
-        { label: 'TL;DR', anchor: '#tldr' },
+        { label: 'TL;DR', anchor: '#key-takeaways' },
         { label: '실제 속도 차이는?', anchor: '#speed-diff' },
         { label: '4090과 5090의 VRAM 차이가 중요한가?', anchor: '#vram-diff' },
         { label: '토큰당 비용: 실제로 어느 쪽이 저렴한가?', anchor: '#cost-per-token' },

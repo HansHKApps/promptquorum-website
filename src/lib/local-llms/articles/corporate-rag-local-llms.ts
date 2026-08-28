@@ -51,6 +51,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         useCases: {
+          id: 'use-cases',
           title: 'What Documents Can Corporate RAG Handle?',
           rows: [
             { 'Document Type': 'Employee handbook', 'Use': 'Policy lookup ("How much PTO do I have?")', 'Users': 'All employees' },
@@ -63,6 +64,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           columns: ['Document Type', 'RAG Use', 'Typical Users'],
         },
         ingestion: {
+          id: 'ingestion',
           title: 'How Do You Ingest Documents at Scale?',
           content: [
             '**Ingestion pipeline converts documents to embeddings and stores in vector DB.**',
@@ -77,6 +79,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         architecture: {
+          id: 'architecture',
           title: 'How Do You Design Multi-User Corporate RAG?',
           content: [
             'Typical stack:',
@@ -90,6 +93,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         retrievalQuality: {
+          id: 'retrieval-quality',
           title: 'How Do You Ensure Retrieval Quality?',
           content: [
             '**Poor retrieval = poor answers.** Quality depends on:',
@@ -103,6 +107,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         governance: {
+          id: 'governance',
           title: 'How Do You Implement Governance and Access Control?',
           content: [
             '**Corporate RAG must track access for compliance:**',
@@ -116,6 +121,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Common Corporate RAG Mistakes',
           items: [
             '**Ingesting without cleaning.** Old documents, duplicates, test files = retrieval noise. Clean before ingesting.',
@@ -311,6 +317,7 @@ schema: {
           ],
         },
         useCases: {
+          id: 'use-cases',
           title: '¿Qué documentos puede gestionar el RAG corporativo?',
           rows: [
             { 'Tipo de documento': 'Manual del empleado', 'Uso de RAG': 'Consulta de políticas ("¿Cuántos días de vacaciones tengo?")', 'Usuarios típicos': 'Todos los empleados' },
@@ -323,6 +330,7 @@ schema: {
           columns: ['Tipo de documento', 'Uso de RAG', 'Usuarios típicos'],
         },
         ingestion: {
+          id: 'ingestion',
           title: '¿Cómo ingestas documentos a escala?',
           content: [
             '**El pipeline de ingesta convierte los documentos en embeddings y los almacena en la base de datos vectorial.**',
@@ -337,6 +345,7 @@ schema: {
           ],
         },
         architecture: {
+          id: 'architecture',
           title: '¿Cómo diseñas un RAG corporativo multiusuario?',
           content: [
             'Stack típico:',
@@ -350,6 +359,7 @@ schema: {
           ],
         },
         retrievalQuality: {
+          id: 'retrieval-quality',
           title: '¿Cómo garantizas la calidad de recuperación?',
           content: [
             '**Recuperación deficiente = respuestas deficientes.** La calidad depende de:',
@@ -363,6 +373,7 @@ schema: {
           ],
         },
         governance: {
+          id: 'governance',
           title: '¿Cómo implementas la gobernanza y el control de acceso?',
           content: [
             '**El RAG corporativo debe registrar el acceso para cumplir con la normativa:**',
@@ -376,6 +387,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Errores comunes en el RAG corporativo',
           items: [
             '**Ingestar sin limpiar.** Documentos antiguos, duplicados, archivos de prueba = ruido en la recuperación. Limpia antes de ingestar.',
@@ -571,6 +583,7 @@ schema: {
           ],
         },
         useCases: {
+          id: 'use-cases',
           title: 'أي مستندات يمكن لـ RAG المؤسسي إدارتها؟',
           rows: [
             { 'نوع المستند': 'دليل الموظف', 'استخدام RAG': 'استعلام السياسات ("كم يوم إجازة لدي؟")', 'المستخدمون النموذجيون': 'جميع الموظفين' },
@@ -583,6 +596,7 @@ schema: {
           columns: ['نوع المستند', 'استخدام RAG', 'المستخدمون النموذجيون'],
         },
         ingestion: {
+          id: 'ingestion',
           title: 'كيف تستوعب المستندات على نطاق واسع؟',
           content: [
             '**يحوّل خط الاستيعاب المستندات إلى تضمينات ويخزّنها في قاعدة بيانات المتجهات.**',
@@ -597,6 +611,7 @@ schema: {
           ],
         },
         architecture: {
+          id: 'architecture',
           title: 'كيف تصمم RAG مؤسسياً متعدد المستخدمين؟',
           content: [
             'الحزمة النموذجية:',
@@ -610,6 +625,7 @@ schema: {
           ],
         },
         retrievalQuality: {
+          id: 'retrieval-quality',
           title: 'كيف تضمن جودة الاسترجاع؟',
           content: [
             '**استرجاع رديء = إجابات رديئة.** تعتمد الجودة على:',
@@ -623,6 +639,7 @@ schema: {
           ],
         },
         governance: {
+          id: 'governance',
           title: 'كيف تنفّذ الحوكمة والتحكم بالوصول؟',
           content: [
             '**يجب أن يسجّل RAG المؤسسي الوصول للامتثال للوائح:**',
@@ -636,6 +653,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'الأخطاء الشائعة في RAG المؤسسي',
           items: [
             '**الاستيعاب دون تنظيف.** المستندات القديمة والمكررة وملفات الاختبار = ضوضاء في الاسترجاع. نظّف قبل الاستيعاب.',
@@ -834,6 +852,7 @@ schema: {
           ],
         },
         useCases: {
+          id: 'use-cases',
           title: 'Quais documentos o RAG corporativo consegue gerenciar?',
           rows: [
             { 'Tipo de documento': 'Manual do funcionário', 'Uso do RAG': 'Consulta de políticas ("Quantos dias de férias tenho?")', 'Usuários típicos': 'Todos os funcionários' },
@@ -846,6 +865,7 @@ schema: {
           columns: ['Tipo de documento', 'Uso do RAG', 'Usuários típicos'],
         },
         ingestion: {
+          id: 'ingestion',
           title: 'Como ingerir documentos em escala?',
           content: [
             '**O pipeline de ingestão converte os documentos em embeddings e os armazena no banco de dados vetorial.**',
@@ -860,6 +880,7 @@ schema: {
           ],
         },
         architecture: {
+          id: 'architecture',
           title: 'Como projetar um RAG corporativo multiusuário?',
           content: [
             'Stack típica:',
@@ -873,6 +894,7 @@ schema: {
           ],
         },
         retrievalQuality: {
+          id: 'retrieval-quality',
           title: 'Como garantir a qualidade de recuperação?',
           content: [
             '**Recuperação deficiente = respostas deficientes.** A qualidade depende de:',
@@ -886,6 +908,7 @@ schema: {
           ],
         },
         governance: {
+          id: 'governance',
           title: 'Como implementar a governança e o controle de acesso?',
           content: [
             '**O RAG corporativo deve registrar o acesso para conformidade regulatória, incluindo a LGPD no Brasil:**',
@@ -900,6 +923,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Erros comuns no RAG corporativo',
           items: [
             '**Ingerir sem limpar.** Documentos antigos, duplicados, arquivos de teste = ruído na recuperação. Limpe antes de ingerir.',
@@ -1037,6 +1061,7 @@ schema: {
           ],
         },
         useCases: {
+          id: 'use-cases',
           title: 'Welche Dokumenttypen kann Corporate RAG verarbeiten?',
           rows: [
             { 'Dokumenttyp': 'Mitarbeiterhandbuch', 'RAG-Anwendung': 'Richtlinienlookup („Wie viel Urlaub habe ich?")', 'Typische Nutzer': 'Alle Mitarbeiter' },
@@ -1049,6 +1074,7 @@ schema: {
           columns: ['Dokumenttyp', 'RAG-Anwendung', 'Typische Nutzer'],
         },
         ingestion: {
+          id: 'ingestion',
           title: 'Wie nehmen Sie Dokumente im großen Maßstab auf?',
           content: [
             '**Aufnahmepipeline konvertiert Dokumente zu Embeddings und speichert sie in Vektor-DB.**',
@@ -1063,6 +1089,7 @@ schema: {
           ],
         },
         architecture: {
+          id: 'architecture',
           title: 'Wie gestalten Sie Multi-Nutzer Corporate RAG?',
           content: [
             'Typischer Stack:',
@@ -1076,6 +1103,7 @@ schema: {
           ],
         },
         retrievalQuality: {
+          id: 'retrieval-quality',
           title: 'Wie stellen Sie Retrieval-Qualität sicher?',
           content: [
             '**Schlechtes Retrieval = schlechte Antworten.** Qualität hängt ab von:',
@@ -1089,6 +1117,7 @@ schema: {
           ],
         },
         governance: {
+          id: 'governance',
           title: 'Wie implementieren Sie Governance und Zugriffskontrolle?',
           content: [
             '**Corporate RAG muss Zugriff für Compliance verfolgen. In Deutschland ist DSGVO-Artikel 28 (Auftragsverarbeitung) zentral — lokale RAG Systeme müssen als AV-verträge zwischen Unternehmen und Betreiber dokumentiert sein.**',
@@ -1104,6 +1133,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Häufige Corporate RAG Fehler',
           items: [
             '**Aufnahme ohne Bereinigung.** Alte Dokumente, Duplikate, Test-Dateien = Retrieval-Rauschen. Reinigen Sie vorher.',
@@ -1323,6 +1353,7 @@ schema: {
           ],
         },
         useCases: {
+          id: 'use-cases',
           title: 'Quels documents la RAG d\'entreprise peut-elle traiter ?',
           rows: [
             { 'Type de document': 'Manuel des employés', 'Utilisation RAG': 'Lookup de politique (« Combien de congés ai-je ? »)', 'Utilisateurs typiques': 'Tous les employés' },
@@ -1335,6 +1366,7 @@ schema: {
           columns: ['Type de document', 'Utilisation RAG', 'Utilisateurs typiques'],
         },
         ingestion: {
+          id: 'ingestion',
           title: 'Comment ingérer des documents à l\'échelle ?',
           content: [
             '**Pipeline d\'ingestion convertit les documents en embeddings et les stocke dans une base de données vectorielle.**',
@@ -1349,6 +1381,7 @@ schema: {
           ],
         },
         architecture: {
+          id: 'architecture',
           title: 'Comment concevoir une RAG multi-utilisateurs d\'entreprise ?',
           content: [
             'Pile typique :',
@@ -1362,6 +1395,7 @@ schema: {
           ],
         },
         retrievalQuality: {
+          id: 'retrieval-quality',
           title: 'Comment assurer la qualité de la récupération ?',
           content: [
             '**Mauvaise récupération = mauvaises réponses.** La qualité dépend de :',
@@ -1375,6 +1409,7 @@ schema: {
           ],
         },
         governance: {
+          id: 'governance',
           title: 'Comment implémenter la gouvernance et le contrôle d\'accès ?',
           content: [
             '**La RAG d\'entreprise doit tracker l\'accès pour conformité. La CNIL recommande l\'IA locale pour les données sensibles professionnelles (données financières, médicales, juridiques).**',
@@ -1388,6 +1423,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Erreurs courantes en RAG d\'entreprise',
           items: [
             '**Ingestion sans nettoyage.** Anciens documents, doublons, fichiers test = bruit récupération. Nettoyer avant ingestion.',
@@ -1571,6 +1607,7 @@ schema: {
           ],
         },
         useCases: {
+          id: 'use-cases',
           title: '企業RAGが処理できるドキュメントの種類',
           rows: [
             { '文書タイプ': '従業員ハンドブック', 'RAG利用': 'ポリシー検索（「休暇日数はいくつですか？」）', '典型的なユーザー': 'すべての従業員' },
@@ -1583,6 +1620,7 @@ schema: {
           columns: ['文書タイプ', 'RAG利用', '典型的なユーザー'],
         },
         ingestion: {
+          id: 'ingestion',
           title: '大規模での文書取り込み方法',
           content: [
             '**取り込みパイプラインはドキュメントをEmbedding に変換し、ベクトルDBに保存します。**',
@@ -1597,6 +1635,7 @@ schema: {
           ],
         },
         architecture: {
+          id: 'architecture',
           title: 'マルチユーザー企業RAGの設計方法',
           content: [
             '典型的なスタック：',
@@ -1610,6 +1649,7 @@ schema: {
           ],
         },
         retrievalQuality: {
+          id: 'retrieval-quality',
           title: '検索品質の確保方法',
           content: [
             '**検索が悪い＝答えが悪い。**品質は以下に依存します：',
@@ -1623,6 +1663,7 @@ schema: {
           ],
         },
         governance: {
+          id: 'governance',
           title: 'ガバナンスとアクセス制御の実装',
           content: [
             '**企業RAGはコンプライアンスのためのアクセスを追跡する必要があります。METIのAIガバナンス2024は、エンタープライズデプロイメントにおける日本のレギュラトリーフレームワークを定義しています。**',
@@ -1636,6 +1677,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: '企業RAGの一般的なエラー',
           items: [
             '**クリーニングなしの取り込み。**古いドキュメント、重複、テストファイル＝検索ノイズ。取り込み前にクリーニング。',
@@ -1824,6 +1866,7 @@ schema: {
           ],
         },
         useCases: {
+          id: 'use-cases',
           title: '企业RAG可以处理哪些文档？',
           rows: [
             { '文档类型': '员工手册', 'RAG用途': '政策查询（"我有多少假期？"）', '典型用户': '所有员工' },
@@ -1836,6 +1879,7 @@ schema: {
           columns: ['文档类型', 'RAG用途', '典型用户'],
         },
         ingestion: {
+          id: 'ingestion',
           title: '如何大规模摄取文档？',
           content: [
             '**摄取管道将文档转换为嵌入并存储在向量数据库中。**',
@@ -1850,6 +1894,7 @@ schema: {
           ],
         },
         architecture: {
+          id: 'architecture',
           title: '如何设计多用户企业RAG？',
           content: [
             '典型堆栈：',
@@ -1863,6 +1908,7 @@ schema: {
           ],
         },
         retrievalQuality: {
+          id: 'retrieval-quality',
           title: '如何确保检索质量？',
           content: [
             '**检索差=答案差。**质量取决于：',
@@ -1876,6 +1922,7 @@ schema: {
           ],
         },
         governance: {
+          id: 'governance',
           title: '如何实施治理和访问控制？',
           content: [
             '**企业RAG必须跟踪访问以实现合规性。中国2021年《数据安全法》规定了本地推理对跨境数据流的合规要求。**',
@@ -1889,6 +1936,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: '企业RAG常见错误',
           items: [
             '**无清理摄取。**旧文档、重复项、测试文件=检索噪声。摄取前清理。',
@@ -2077,6 +2125,7 @@ schema: {
           ],
         },
         useCases: {
+          id: 'use-cases',
           title: '기업용 RAG가 처리할 수 있는 문서는 무엇입니까?',
           rows: [
             { 'Document Type': '직원 핸드북', 'Use': '정책 조회 ("연차가 얼마나 남았습니까?")', 'Users': '전체 직원' },
@@ -2089,6 +2138,7 @@ schema: {
           columns: ['Document Type', 'RAG 활용', '주요 사용자'],
         },
         ingestion: {
+          id: 'ingestion',
           title: '대규모 문서를 어떻게 수집합니까?',
           content: [
             '**수집 파이프라인은 문서를 임베딩으로 변환하여 벡터 DB에 저장합니다.**',
@@ -2103,6 +2153,7 @@ schema: {
           ],
         },
         architecture: {
+          id: 'architecture',
           title: '다중 사용자 기업용 RAG는 어떻게 설계합니까?',
           content: [
             '일반적인 스택 구성:',
@@ -2116,6 +2167,7 @@ schema: {
           ],
         },
         retrievalQuality: {
+          id: 'retrieval-quality',
           title: '검색 품질은 어떻게 보장합니까?',
           content: [
             '**검색 품질이 낮으면 답변 품질도 낮습니다.** 품질은 다음 요소에 따라 달라집니다:',
@@ -2129,6 +2181,7 @@ schema: {
           ],
         },
         governance: {
+          id: 'governance',
           title: '거버넌스와 접근 제어는 어떻게 구현합니까?',
           content: [
             '**기업용 RAG는 컴플라이언스를 위한 접근 추적이 필수입니다:**',
@@ -2142,6 +2195,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: '기업용 RAG에서 흔한 실수',
           items: [
             '**정리 없이 수집하기.** 오래된 문서, 중복 파일, 테스트 파일은 검색 노이즈를 유발합니다. 수집 전에 정리하십시오.',

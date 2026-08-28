@@ -378,7 +378,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: 'Constrained Prompting in regulierten Umgebungen', anchor: '#constrained-prompting-in-regulated-environments' },
         { label: 'Häufige Fehler', anchor: '#common-mistakes' },
         { label: 'Weiterführende Ressourcen', anchor: '#related-reading' },
-        { label: 'Häufig gestellte Fragen', anchor: '#frequently-asked-questions' },
+        { label: 'Häufig gestellte Fragen', anchor: '#faq' },
         { label: 'Quellen', anchor: '#sources' },
       ],
       schema: {
@@ -462,6 +462,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         whatIsConstrained: {
+          id: 'what-is-constrained-prompting',
           title: 'Was ist Constrained Prompting?',
           content: [
             '**Constrained Prompting bedeutet, explizite Regeln über Inhalt, Struktur, Länge und Verhalten direkt im Prompt zu definieren.** Statt einer lockeren Anweisung wie „fasse das zusammen" legen Sie zulässige Formate, erforderliche Felder, verbotene Themen und Validierungsregeln fest.',
@@ -476,6 +477,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         whyItMatters: {
+          id: 'why-does-constrained-prompting-matter',
           title: 'Warum ist Constrained Prompting wichtig?',
           content: [
             '**Constrained Prompting ist immer dann wichtig, wenn die Modellausgaben in Menschen, Prozesse oder andere Systeme fließen, die auf vorhersehbares Verhalten angewiesen sind.** Ohne Constraints können identische Prompts unterschiedliche Strukturen oder Detailmengen über mehrere Durchläufe hinweg produzieren.',
@@ -488,6 +490,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         typesOfConstraints: {
+          id: 'which-constraint-types-can-you-use',
           title: 'Arten von Constraints, die Sie nutzen können',
           content: [
             '**Sie können Prompts entlang mehrerer Dimensionen einschränken: Struktur, Inhalt, Stil, Länge und Sicherheit.** Je präziser Sie sind, desto konsistenter werden die Ausgaben.',
@@ -513,6 +516,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         example: {
+          id: 'unconstrained-vs-constrained-prompt-an-example',
           title: 'Beispiel: Ungeconstrainteter vs. Geconstrainteter Prompt',
           content: [
             '**Die Auswirkung von Constrained Prompting wird am deutlichsten, wenn Sie einen ungeconstrainteten Prompt mit einem geconstrainteten für die gleiche Aufgabe vergleichen.** Hier entwirft eine Zusammenfassung für ein B2B-Produkt.',
@@ -527,6 +531,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         whenToUse: {
+          id: 'when-should-you-use-constrained-prompting',
           title: 'Wann Sie Constrained Prompting einsetzen sollten',
           content: [
             '**Sie sollten Constrained Prompting immer dann einsetzen, wenn Korrektheit und Konsistenz wichtiger sind als maximale Kreativität.** Dies gilt besonders in operativen, analytischen und regulierten Kontexten.',
@@ -543,6 +548,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         howPQSupports: {
+          id: 'how-does-promptquorum-support-constrained-prompting',
           title: 'Wie PromptQuorum Constrained Prompting unterstützt',
           content: [
             '**PromptQuorum ist ein Multi-Model-KI-Dispatch-Tool, das speziell für die Zusammenarbeit mit Constrained Prompting konzipiert ist – indem Sie strukturierte Prompt-Frameworks definieren, speichern und wiederverwenden können.** Sie können Constraints mit Frameworks wie SPECS, RTF oder Googles Prompting Guide verbinden und sie an mehrere Modelle gleichzeitig versenden.',
@@ -555,6 +561,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         howToStart: {
+          id: 'how-to-use-constrained-prompting',
           title: 'Wie Sie mit Constrained Prompting beginnen',
           numberedItems: [
             '**Identifizieren Sie für Ihre Aufgabe relevante Ausgabe-Constraints: Länge, Format, Vokabular, Umfang, Sicherheit.** Beispiel: „Antwort muss ≤100 Wörter sein, JSON-Format, nur technische Begriffe verwenden, nur aktuelle Entwicklungen abdecken (2024+), darf keine Konkurrenten nennen."',
@@ -568,6 +575,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Häufige Fehler',
           mistakes: [
             {
@@ -637,6 +645,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Weiterführende Ressourcen',
           items: [
             '[Was ist Prompt Engineering?](/de/prompt-engineering/what-is-prompt-engineering) — Grundlagen vor Anwendung von Constraints.',
@@ -664,6 +673,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Quellen',
           items: [
             '**OpenAI. (2026).** "Strukturierte Ausgaben — JSON Mode und Responses API." https://platform.openai.com/docs/guides/structured-outputs — Server-seitige JSON-Schema-Durchsetzung für GPT-5.6 mit 100% Schema-Adhäsion.',
@@ -707,7 +717,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: 'Constrained prompting en entornos regulados', anchor: '#constrained-prompting-in-regulated-environments' },
         { label: 'Errores comunes', anchor: '#common-mistakes' },
         { label: 'Lecturas relacionadas', anchor: '#related-reading' },
-        { label: 'FAQ', anchor: '#frequently-asked-questions' },
+        { label: 'FAQ', anchor: '#faq' },
         { label: 'Fuentes', anchor: '#sources' },
       ],
       schema: {
@@ -787,6 +797,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         whatIsConstrained: {
+          id: 'what-is-constrained-prompting',
           title: '¿Qué es el constrained prompting?',
           content: [
             '**El constrained prompting significa añadir reglas explícitas sobre contenido, estructura, longitud y comportamiento directamente en tu prompt.** En lugar de una instrucción vaga como "resume esto", especificas formatos permitidos, campos requeridos, temas prohibidos y reglas de validación. Esta es una técnica central de [prompt engineering](/prompt-engineering/what-is-prompt-engineering).',
@@ -801,6 +812,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         whyItMatters: {
+          id: 'why-does-constrained-prompting-matter',
           title: '¿Por qué importa el constrained prompting?',
           content: [
             '**El constrained prompting importa siempre que la salida del modelo alimente a personas, procesos u otros sistemas que dependen de un comportamiento predecible.** Sin constraints, el mismo prompt puede producir estructuras o niveles de detalle diferentes entre ejecuciones.',
@@ -816,6 +828,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         typesOfConstraints: {
+          id: 'which-constraint-types-can-you-use',
           title: '¿Qué tipos de constraints puedes usar?',
           content: [
             '**Puedes restringir los prompts en varias dimensiones: estructura, contenido, estilo, longitud y seguridad.** Cuanto más preciso seas, más consistentes serán las salidas. Aprende cómo encajan en [prompts estructurados](/prompt-engineering/rtf-framework).',
@@ -842,6 +855,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         example: {
+          id: 'unconstrained-vs-constrained-prompt-an-example',
           title: 'Prompt sin constraints vs con constraints: un ejemplo',
           content: [
             '**El impacto del constrained prompting es más fácil de ver cuando comparas un prompt sin constraints con uno con constraints para la misma tarea.** Aquí redactamos un breve resumen de producto.',
@@ -861,6 +875,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         whenToUse: {
+          id: 'when-should-you-use-constrained-prompting',
           title: '¿Cuándo debes usar constrained prompting?',
           content: [
             '**Debes usar constrained prompting siempre que la corrección y la consistencia sean más importantes que la máxima creatividad.** Esto es especialmente válido en contextos operativos, analíticos y regulados. Combinado con [ejemplos few-shot](/prompt-engineering/zero-shot-vs-few-shot), las constraints se vuelven aún más potentes.',
@@ -877,6 +892,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         howPQSupports: {
+          id: 'how-does-promptquorum-support-constrained-prompting',
           title: '¿Cómo soporta PromptQuorum el constrained prompting?',
           content: [
             '**PromptQuorum es una herramienta de despacho de IA multi-modelo diseñada para trabajar bien con constrained prompting, permitiéndote definir, guardar y reutilizar frameworks de prompts estructurados.** Puedes combinar constraints con frameworks como [SPECS](/prompt-engineering/specs-framework), [RTF](/prompt-engineering/rtf-framework) o la Guía de Prompting de Google y enviarlos a varios modelos a la vez.',
@@ -893,6 +909,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         howToStart: {
+          id: 'how-to-use-constrained-prompting',
           title: 'Cómo usar constrained prompting',
           numberedItems: [
             '**Identifica las constraints de salida relevantes para tu tarea: longitud, formato, vocabulario, alcance, seguridad.** Ejemplo: \'La respuesta debe tener ≤100 palabras, formato JSON, usar solo términos técnicos, cubrir solo desarrollos recientes (2024+), no debe mencionar competidores.\'',
@@ -939,6 +956,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Errores comunes',
           mistakes: [
             {
@@ -974,6 +992,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Lecturas relacionadas',
           items: [
             '[¿Qué es el prompt engineering?](/es/prompt-engineering/what-is-prompt-engineering) — Fundamentos antes de aplicar constraints.',
@@ -999,6 +1018,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Fuentes',
           items: [
             '**OpenAI. (2026).** "Structured Outputs — Modo JSON y Responses API." https://platform.openai.com/docs/guides/structured-outputs — Aplicación de esquema JSON del lado del servidor para GPT-5.6 con 100 % de adherencia al esquema.',
@@ -1042,7 +1062,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: 'الموجّهات المقيّدة في البيئات المنظّمة', anchor: '#constrained-prompting-in-regulated-environments' },
         { label: 'الأخطاء الشائعة', anchor: '#common-mistakes' },
         { label: 'قراءات ذات صلة', anchor: '#related-reading' },
-        { label: 'الأسئلة الشائعة', anchor: '#frequently-asked-questions' },
+        { label: 'الأسئلة الشائعة', anchor: '#faq' },
         { label: 'المصادر', anchor: '#sources' },
       ],
       schema: {
@@ -1122,6 +1142,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         whatIsConstrained: {
+          id: 'what-is-constrained-prompting',
           title: 'ما هي الموجّهات المقيّدة؟',
           content: [
             '**الموجّهات المقيّدة تعني إضافة قواعد صريحة حول المحتوى والبنية والطول والسلوك مباشرةً في موجّهك.** بدلًا من تعليمة مبهمة مثل "لخّص هذا"، تحدد التنسيقات المسموح بها والحقول المطلوبة والمواضيع المحظورة وقواعد التحقق. هذه تقنية محورية في [هندسة الموجّهات](/prompt-engineering/what-is-prompt-engineering).',
@@ -1136,6 +1157,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         whyItMatters: {
+          id: 'why-does-constrained-prompting-matter',
           title: 'لماذا تهم الموجّهات المقيّدة؟',
           content: [
             '**تهم الموجّهات المقيّدة كلما أطعمت مخرجات النموذج أشخاصًا أو عمليات أو أنظمة أخرى تعتمد على سلوك قابل للتنبؤ.** بدون قيود، يمكن أن ينتج الموجّه ذاته بنى أو مستويات تفصيل مختلفة بين الجلسات.',
@@ -1151,6 +1173,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         typesOfConstraints: {
+          id: 'which-constraint-types-can-you-use',
           title: 'ما أنواع القيود التي يمكنك استخدامها؟',
           content: [
             '**يمكنك تقييد الموجّهات في أبعاد متعددة: البنية والمحتوى والأسلوب والطول والأمان.** كلما كنت أكثر دقة، كانت المخرجات أكثر اتساقًا.',
@@ -1177,6 +1200,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         example: {
+          id: 'unconstrained-vs-constrained-prompt-an-example',
           title: 'موجّه بلا قيود مقابل موجّه بقيود: مثال',
           content: [
             '**تأثير الموجّهات المقيّدة أوضح ما يكون عند مقارنة موجّه غير مقيّد بموجّه مقيّد للمهمة ذاتها.** إليك مثالًا لكتابة ملخص منتج موجز.',
@@ -1191,6 +1215,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         whenToUse: {
+          id: 'when-should-you-use-constrained-prompting',
           title: 'متى تستخدم الموجّهات المقيّدة؟',
           content: [
             '**استخدم الموجّهات المقيّدة كلما كانت الدقة والاتساق أهم من الإبداع الأقصى.** ينطبق هذا بشكل خاص في السياقات التشغيلية والتحليلية والمنظّمة.',
@@ -1207,6 +1232,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         howPQSupports: {
+          id: 'how-does-promptquorum-support-constrained-prompting',
           title: 'كيف تدعم PromptQuorum الموجّهات المقيّدة؟',
           content: [
             '**PromptQuorum أداة إرسال ذكاء اصطناعي متعددة النماذج مصمّمة للعمل جيدًا مع الموجّهات المقيّدة، تتيح لك تعريف أطر الموجّهات المنظّمة وحفظها وإعادة استخدامها.** يمكنك دمج القيود مع أطر مثل [SPECS](/prompt-engineering/specs-framework) أو [RTF](/prompt-engineering/rtf-framework) وإرسالها إلى نماذج متعددة في آنٍ واحد.',
@@ -1223,6 +1249,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         howToStart: {
+          id: 'how-to-use-constrained-prompting',
           title: 'كيف تستخدم الموجّهات المقيّدة',
           numberedItems: [
             '**حدّد قيود المخرجات ذات الصلة بمهمتك: الطول والتنسيق والمفردات والنطاق والأمان.** مثال: "يجب أن تكون الاستجابة ≤100 كلمة، بتنسيق JSON، بمصطلحات تقنية فقط، تغطي التطورات الأخيرة فقط (2024+)، لا تذكر المنافسين."',
@@ -1269,6 +1296,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'الأخطاء الشائعة',
           mistakes: [
             {
@@ -1304,6 +1332,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'قراءات ذات صلة',
           items: [
             '[ما هي هندسة الموجّهات؟](/ar/prompt-engineering/what-is-prompt-engineering) — الأساسيات قبل تطبيق القيود.',
@@ -1329,6 +1358,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         sources: {
+          id: 'sources',
           title: 'المصادر',
           items: [
             '**OpenAI. (2026).** "Structured Outputs — وضع JSON وResponses API." https://platform.openai.com/docs/guides/structured-outputs',
@@ -1370,7 +1400,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: 'Constrained prompting em ambientes regulamentados', anchor: '#constrained-prompting-in-regulated-environments' },
         { label: 'Erros comuns', anchor: '#common-mistakes' },
         { label: 'Leituras relacionadas', anchor: '#related-reading' },
-        { label: 'FAQ', anchor: '#frequently-asked-questions' },
+        { label: 'FAQ', anchor: '#faq' },
         { label: 'Fontes', anchor: '#sources' },
       ],
       schema: {
@@ -1450,6 +1480,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         whatIsConstrained: {
+          id: 'what-is-constrained-prompting',
           title: 'O que é o constrained prompting?',
           content: [
             '**O constrained prompting significa adicionar regras explícitas sobre conteúdo, estrutura, comprimento e comportamento diretamente em seu prompt.** Em vez de uma instrução vaga como "resuma isso", você especifica formatos permitidos, campos obrigatórios, tópicos proibidos e regras de validação.',
@@ -1464,6 +1495,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         whyItMatters: {
+          id: 'why-does-constrained-prompting-matter',
           title: 'Por que o constrained prompting importa?',
           content: [
             '**O constrained prompting importa sempre que a saída do modelo alimenta pessoas, processos ou outros sistemas que dependem de comportamento previsível.** Sem restrições, o mesmo prompt pode produzir estruturas ou níveis de detalhe diferentes entre execuções.',
@@ -1479,6 +1511,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         typesOfConstraints: {
+          id: 'which-constraint-types-can-you-use',
           title: 'Quais tipos de restrições você pode usar?',
           content: [
             '**Você pode restringir prompts em várias dimensões: estrutura, conteúdo, estilo, comprimento e segurança.** Quanto mais preciso você for, mais consistentes serão as saídas.',
@@ -1505,6 +1538,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         example: {
+          id: 'unconstrained-vs-constrained-prompt-an-example',
           title: 'Prompt sem restrições vs com restrições: um exemplo',
           content: [
             '**O impacto do constrained prompting é mais fácil de ver quando você compara um prompt sem restrições com um com restrições para a mesma tarefa.**',
@@ -1519,6 +1553,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         whenToUse: {
+          id: 'when-should-you-use-constrained-prompting',
           title: 'Quando você deve usar constrained prompting?',
           content: [
             '**Você deve usar constrained prompting sempre que a correção e a consistência sejam mais importantes do que a máxima criatividade.**',
@@ -1535,6 +1570,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         howPQSupports: {
+          id: 'how-does-promptquorum-support-constrained-prompting',
           title: 'Como o PromptQuorum suporta o constrained prompting?',
           content: [
             '**O PromptQuorum é uma ferramenta de despacho de IA multi-modelo projetada para trabalhar bem com constrained prompting, permitindo que você defina, salve e reutilize frameworks de prompts estruturados.**',
@@ -1551,6 +1587,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         howToStart: {
+          id: 'how-to-use-constrained-prompting',
           title: 'Como usar constrained prompting',
           numberedItems: [
             '**Identifique as restrições de saída relevantes para sua tarefa: comprimento, formato, vocabulário, escopo, segurança.** Exemplo: \'A resposta deve ter ≤100 palavras, formato JSON, usar apenas termos técnicos, cobrir apenas desenvolvimentos recentes (2024+), não deve mencionar concorrentes.\'',
@@ -1597,6 +1634,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Erros comuns',
           mistakes: [
             {
@@ -1632,6 +1670,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Leituras relacionadas',
           items: [
             '[O que é prompt engineering?](/pt/prompt-engineering/what-is-prompt-engineering) — Fundamentos antes de aplicar restrições.',
@@ -1657,6 +1696,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Fontes',
           items: [
             '**OpenAI. (2026).** "Structured Outputs — Modo JSON e Responses API." https://platform.openai.com/docs/guides/structured-outputs',
@@ -1696,11 +1736,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
     { label: 'Quand utiliser le prompting avec contraintes', anchor: '#when-should-you-use-constrained-prompting' },
     { label: 'Comment PromptQuorum supporte les contraintes', anchor: '#how-does-promptquorum-support-constrained-prompting' },
     { label: 'Comment intégrer le prompting avec contraintes', anchor: '#how-to-use-constrained-prompting' },
-    { label: 'Exécution au niveau de l\'API', anchor: '#api-level-constraint-enforcement' },
-    { label: 'Prompting avec contraintes dans les environnements régulés', anchor: '#constrained-prompting-in-regulated-environments' },
     { label: 'Erreurs courantes', anchor: '#common-mistakes' },
     { label: 'Lectures complémentaires', anchor: '#related-reading' },
-    { label: 'Questions fréquentes', anchor: '#frequently-asked-questions' },
+    { label: 'Questions fréquentes', anchor: '#faq' },
     { label: 'Sources', anchor: '#sources' },
   ],
   schema: {
@@ -1783,6 +1821,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     whatIsConstrained: {
+      id: 'what-is-constrained-prompting',
       title: 'Qu\'est-ce que le prompting avec contraintes ?',
       content: [
         'Le prompting avec contraintes signifie indiquer au modèle exactement comment forcer sa réponse dans un schéma prédéfini. Au lieu de demander : « Qu\'en penses-tu ? », vous demandez : « Réponds en JSON avec les champs : { sentiment: "positif"|"négatif"|"neutre", confiance: 0–1, raison: string } ».',
@@ -1803,6 +1842,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ]
     },
     whyItMatters: {
+      id: 'why-does-constrained-prompting-matter',
       title: 'Pourquoi le prompting avec contraintes est crucial',
       content: [
         'Sans contraintes, les LLM génèrent du texte libre qui varie d\'une exécution à l\'autre. Votre application ne peut pas faire confiance à la structure ou au contenu. Avec les contraintes, les modèles restent dans les limites que vous avez définies.',
@@ -1815,6 +1855,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ]
     },
     typesOfConstraints: {
+      id: 'which-constraint-types-can-you-use',
       title: 'Types de contraintes de prompting',
       content: 'Les contraintes varient en rigueur et en complexité. Voici les principales :',
       tableFormat: true,
@@ -1848,6 +1889,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ]
     },
     example: {
+      id: 'unconstrained-vs-constrained-prompt-an-example',
       title: 'Exemple : Classification avec contraintes',
       content: 'Considérez ce cas d\'usage : vous avez un ticket client et vous voulez qu\'un LLM le classe automatiquement.',
       blockquote: 'Exemple de prompt sans contrainte : « Classe ce ticket client. » → Le modèle répond : « Ce ticket parle d\'une demande d\'accès client. Il semble urgent. Voici mes suggestions ... »',
@@ -1859,6 +1901,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ]
     },
     whenToUse: {
+      id: 'when-should-you-use-constrained-prompting',
       title: 'Quand utiliser le prompting avec contraintes',
       content: [
         'Le prompting avec contraintes est idéal pour les cas où votre application dépend d\'une structure de sortie prévisible.',
@@ -1874,6 +1917,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ]
     },
     howPQSupports: {
+      id: 'how-does-promptquorum-support-constrained-prompting',
       title: 'Comment PromptQuorum supporte le prompting avec contraintes',
       content: 'PromptQuorum inclut des outils natifs pour tester et valider les contraintes à l\'échelle :',
       items: [
@@ -1885,6 +1929,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ]
     },
     howToStart: {
+      id: 'how-to-use-constrained-prompting',
       title: 'Intégrer le prompting avec contraintes : 5 étapes',
       numberedItems: [
         {
@@ -1910,6 +1955,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ]
     },
     commonMistakes: {
+      id: 'common-mistakes',
       title: 'Erreurs courantes avec les contraintes',
       mistakes: [
         {
@@ -1940,6 +1986,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ]
     },
     relatedReading: {
+      id: 'related-reading',
       title: 'Lectures complémentaires',
       items:  [
         'Grammars LLM : Forcer la Structure de Sortie — Approches formelles au-delà des contraintes',
@@ -1986,6 +2033,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ]
     },
     sources: {
+      id: 'sources',
       title: 'Sources et références',
       items: [
         '[OpenAI : Function Calling et Structured Outputs](https://platform.openai.com/docs/guides/function-calling) — Official docs',
@@ -2015,6 +2063,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   aboutTopics: ['プロンプトエンジニアリング', 'AIモデルの信頼性', 'アウトプット検証'],
   sections: {
     tldr: {
+      id: 'tldr',
       isTldr: true,
       title: '重要ポイント',
       numberedItems: [
@@ -2028,6 +2077,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ]
     },
     quickFacts: {
+      id: 'quick-facts',
       title: 'クイックファクト',
       numberedItems: [
         '制約の種類：フォーマット（JSON/XML）、列挙型（限定値）、長さ制限、ネストされたスキーマ、セマンティック',
@@ -2039,6 +2089,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ]
     },
     whatIsConstrained: {
+      id: 'what-is-constrained-prompting',
       title: '制約付きプロンプティングとは',
       content: [
         '制約付きプロンプティングは、モデルに出力スキーマを明確に強制することです。「どう思いますか？」と聞く代わりに、「JSONで返してください。フィールド構成：{ sentiment: "positive"|"negative"|"neutral", confidence: 0–1, reason: string }」と指定します。',
@@ -2059,6 +2110,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ]
     },
     whyItMatters: {
+      id: 'why-does-constrained-prompting-matter',
       title: 'なぜ制約付きプロンプティングが重要か',
       content: [
         '制約がないと、LLMは実行ごとに異なる形式や内容のテキストを生成します。アプリケーションは構造やコンテンツを信頼できません。制約があれば、モデルは定義した範囲内に留まります。',
@@ -2071,6 +2123,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ]
     },
     typesOfConstraints: {
+      id: 'which-constraint-types-can-you-use',
       title: '制約付きプロンプティングの種類',
       content: '制約は厳密さと複雑さが異なります。主な種類は以下です。',
       tableFormat: true,
@@ -2104,6 +2157,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ]
     },
     example: {
+      id: 'unconstrained-vs-constrained-prompt-an-example',
       title: '例：制約ありのサポートチケット分類',
       content: 'ユースケース：顧客サポートチケットをLLMで自動分類します。',
       blockquote: '制約なしの例：「このチケットを分類してください」→ 出力：「このチケットはクライアントアクセス要求について述べています。緊急のようです。提案は…」',
@@ -2115,6 +2169,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ]
     },
     whenToUse: {
+      id: 'when-should-you-use-constrained-prompting',
       title: 'いつ制約付きプロンプティングを使うか',
       content: [
         '制約付きプロンプティングは、アプリケーションが予測可能な出力構造に依存する場合に最適です。',
@@ -2130,6 +2185,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ]
     },
     howPQSupports: {
+      id: 'how-does-promptquorum-support-constrained-prompting',
       title: 'PromptQuorumが制約付きプロンプティングをサポートする方法',
       content: '「PromptQuorum」は、制約テストと検証を大規模に実行するネイティブツールを備えています。',
       items: [
@@ -2141,6 +2197,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ]
     },
     howToStart: {
+      id: 'how-to-use-constrained-prompting',
       title: '制約付きプロンプティング統合：5ステップ',
       numberedItems: [
         {
@@ -2166,6 +2223,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ]
     },
     apiLevelEnforcement: {
+      id: 'api-level-constraint-enforcement',
       title: 'APIレベルの制約強制',
       content: '多くのLLM APIプロバイダーは、プロンプトレベルの制約に加えて、APIレベルでの制約強制もサポートしています。これらは、プロバイダーのシステム側でスキーマ準拠を検証し、無効な応答を拒否します。',
       items: [
@@ -2182,6 +2240,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ]
     },
     regionalContext: {
+      id: 'constrained-prompting-in-regulated-environments',
       title: '規制環境での制約付きプロンプティング',
       content: '制約付きプロンプティングは、データ保護と規制コンプライアンスが必須の環境で特に価値があります。日本およびアジア太平洋地域では以下が重要です。',
       items: [
@@ -2191,6 +2250,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ]
     },
     commonMistakes: {
+      id: 'common-mistakes',
       title: '制約付きプロンプティングの一般的なミス',
       mistakes: [
         {
@@ -2221,6 +2281,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ]
     },
     relatedReading: {
+      id: 'related-reading',
       title: '参考資料',
       items:  [
         'LLM文法：出力構造の強制 — 制約を超えた形式的アプローチ',
@@ -2279,6 +2340,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ]
     },
     sources: {
+      id: 'sources',
       title: 'ソースと参考文献',
       items: [
         '[OpenAI：関数呼び出しと構造化出力](https://platform.openai.com/docs/guides/function-calling) — 公式ドキュメント',
@@ -2301,7 +2363,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     { label: '規制環境での制約付きプロンプティング', anchor: '#constrained-prompting-in-regulated-environments' },
     { label: '制約付きプロンプティングの一般的なミス', anchor: '#common-mistakes' },
     { label: '参考資料', anchor: '#related-reading' },
-    { label: 'よくある質問', anchor: '#frequently-asked-questions' },
+    { label: 'よくある質問', anchor: '#faq' },
     { label: 'ソースと参考文献', anchor: '#sources' }
   ],
   schema: {
@@ -2510,6 +2572,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   aboutTopics: ['提示工程', 'AI模型可靠性', '输出验证'],
   sections: {
     tldr: {
+      id: 'tldr',
       isTldr: true,
       title: '核心要点',
       numberedItems: [
@@ -2523,6 +2586,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ]
     },
     quickFacts: {
+      id: 'quick-facts',
       title: '快速事实',
       numberedItems: [
         '约束类型：格式（JSON/XML）、枚举（限制值）、长度限制、嵌套架构、语义约束',
@@ -2534,6 +2598,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ]
     },
     whatIsConstrained: {
+      id: 'what-is-constrained-prompting',
       title: '什么是受限提示',
       content: [
         '受限提示是指明确强制模型输出架构。与其问"你的想法是什么？"，你指定"以JSON返回。字段结构：{ sentiment: "positive"|"negative"|"neutral", confidence: 0–1, reason: string }"。',
@@ -2554,6 +2619,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ]
     },
     whyItMatters: {
+      id: 'why-does-constrained-prompting-matter',
       title: '受限提示为什么重要',
       content: [
         '没有约束，LLM会生成执行之间格式和内容变化的自由文本。应用无法信任结构或内容。有了约束，模型保持在定义的范围内。',
@@ -2566,6 +2632,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ]
     },
     typesOfConstraints: {
+      id: 'which-constraint-types-can-you-use',
       title: '受限提示的类型',
       content: '约束在严密性和复杂性上有所不同。主要类型如下：',
       tableFormat: true,
@@ -2599,6 +2666,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ]
     },
     example: {
+      id: 'unconstrained-vs-constrained-prompt-an-example',
       title: '示例：客户支持工单分类',
       content: '用例：用LLM自动分类客户支持工单。',
       blockquote: '无约束示例："请分类这个工单。"→ 输出："此工单涉及客户访问请求。似乎很紧急。我的建议是..."',
@@ -2610,6 +2678,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ]
     },
     whenToUse: {
+      id: 'when-should-you-use-constrained-prompting',
       title: '何时使用受限提示',
       content: [
         '受限提示最适合应用依赖可预测输出结构的情况。',
@@ -2625,6 +2694,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ]
     },
     howPQSupports: {
+      id: 'how-does-promptquorum-support-constrained-prompting',
       title: 'PromptQuorum如何支持受限提示',
       content: 'PromptQuorum包含原生工具用于大规模测试和验证约束：',
       items: [
@@ -2636,6 +2706,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ]
     },
     howToStart: {
+      id: 'how-to-use-constrained-prompting',
       title: '受限提示集成：5个步骤',
       numberedItems: [
         {
@@ -2661,6 +2732,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ]
     },
     apiLevelEnforcement: {
+      id: 'api-level-constraint-enforcement',
       title: 'API级别的约束强制',
       content: '许多LLM API提供商除了提示级约束外，还支持API级约束强制。这些在提供商系统层验证架构遵守，拒绝无效响应。',
       items: [
@@ -2677,6 +2749,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ]
     },
     regionalContext: {
+      id: 'constrained-prompting-in-regulated-environments',
       title: '企业和合规环境',
       content: '受限提示在数据保护和法规合规必须的环境中特别有价值。对于亚太地区企业来说，以下至关重要。',
       items: [
@@ -2686,6 +2759,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ]
     },
     commonMistakes: {
+      id: 'common-mistakes',
       title: '受限提示的常见错误',
       mistakes: [
         {
@@ -2716,6 +2790,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ]
     },
     relatedReading: {
+      id: 'related-reading',
       title: '相关阅读',
       items:  [
         'LLM文法：强制输出结构 — 约束之外的形式化方法',
@@ -2774,6 +2849,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ]
     },
     sources: {
+      id: 'sources',
       title: '来源和参考',
       items: [
         '[OpenAI：函数调用和结构化输出](https://platform.openai.com/docs/guides/function-calling) — 官方文档',
@@ -2796,7 +2872,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     { label: '企业和合规环境', anchor: '#constrained-prompting-in-regulated-environments' },
     { label: '受限提示的常见错误', anchor: '#common-mistakes' },
     { label: '相关阅读', anchor: '#related-reading' },
-    { label: '常见问题', anchor: '#frequently-asked-questions' },
+    { label: '常见问题', anchor: '#faq' },
     { label: '来源和参考', anchor: '#sources' }
   ],
   schema: {
@@ -3017,7 +3093,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       { label: '규제 환경에서의 제약 프롬프팅', anchor: '#constrained-prompting-in-regulated-environments' },
       { label: '일반적인 실수', anchor: '#common-mistakes' },
       { label: '관련 읽을거리', anchor: '#related-reading' },
-      { label: '자주 묻는 질문', anchor: '#frequently-asked-questions' },
+      { label: '자주 묻는 질문', anchor: '#faq' },
       { label: '출처', anchor: '#sources' },
     ],
     schema: {
@@ -3097,6 +3173,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       whatIsConstrained: {
+        id: 'what-is-constrained-prompting',
         title: '제약 프롬프팅이란?',
         content: [
           '**제약 프롬프팅이란 콘텐츠, 구조, 길이, 동작에 관한 명시적인 규칙을 프롬프트에 직접 추가하는 것을 의미합니다.** "이것을 요약하라"와 같은 느슨한 지시어 대신, 허용되는 형식, 필수 필드, 금지된 주제, 검증 규칙을 명시합니다. 이것은 핵심 [프롬프트 엔지니어링](/prompt-engineering/what-is-prompt-engineering) 기법입니다.',
@@ -3111,6 +3188,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       whyItMatters: {
+        id: 'why-does-constrained-prompting-matter',
         title: '제약 프롬프팅이 중요한 이유',
         content: [
           '**제약 프롬프팅은 모델 출력이 예측 가능한 동작에 의존하는 사람, 프로세스 또는 다른 시스템에 공급될 때마다 중요합니다.** 제약 없이는 동일한 프롬프트가 여러 실행에서 다른 구조나 세부 수준을 생성할 수 있습니다.',
@@ -3126,6 +3204,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       typesOfConstraints: {
+        id: 'which-constraint-types-can-you-use',
         title: '사용할 수 있는 제약 유형',
         content: [
           '**프롬프트를 여러 차원으로 제약할 수 있습니다: 구조, 콘텐츠, 스타일, 길이, 안전.** 더 정밀할수록 출력이 더 일관됩니다. 이것이 [구조화된 프롬프트](/prompt-engineering/rtf-framework)에 어떻게 맞는지 알아보십시오.',
@@ -3152,6 +3231,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       example: {
+        id: 'unconstrained-vs-constrained-prompt-an-example',
         title: '제약 없는 프롬프트 vs 제약 있는 프롬프트: 예시',
         content: [
           '**제약 프롬프팅의 영향은 동일한 작업에 대해 제약 없는 프롬프트와 제약 있는 프롬프트를 비교할 때 가장 쉽게 볼 수 있습니다.** 여기서는 짧은 제품 요약을 작성합니다.',
@@ -3171,6 +3251,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       whenToUse: {
+        id: 'when-should-you-use-constrained-prompting',
         title: '제약 프롬프팅을 언제 사용해야 하는가?',
         content: [
           '**최대한의 창의성보다 정확성과 일관성이 더 중요할 때 제약 프롬프팅을 사용해야 합니다.** 이는 운영적, 분석적, 규제적 맥락에서 특히 사실입니다. [퓨샷 예시](/prompt-engineering/zero-shot-vs-few-shot)와 결합하면 제약이 훨씬 더 강력해집니다.',
@@ -3187,6 +3268,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       howPQSupports: {
+        id: 'how-does-promptquorum-support-constrained-prompting',
         title: 'PromptQuorum이 제약 프롬프팅을 지원하는 방법',
         content: [
           '**PromptQuorum은 구조화된 프롬프트 프레임워크를 정의, 저장, 재사용할 수 있도록 하여 제약 프롬프팅과 잘 작동하도록 설계된 다중 모델 AI 디스패치 도구입니다.** [SPECS](/prompt-engineering/specs-framework), [RTF](/prompt-engineering/rtf-framework), 또는 Google의 프롬프팅 가이드와 같은 프레임워크와 제약을 결합하여 여러 모델에 동시에 전송할 수 있습니다.',
@@ -3203,6 +3285,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       howToStart: {
+        id: 'how-to-use-constrained-prompting',
         title: '제약 프롬프팅 사용 방법',
         numberedItems: [
           '**작업과 관련된 출력 제약을 식별하십시오: 길이, 형식, 어휘, 범위, 안전.** 예: \'응답은 ≤100단어, JSON 형식, 기술 용어만 사용, 최근 개발 사항(2024+)만 다루고, 경쟁사를 언급해서는 안 됩니다.\'',
@@ -3250,6 +3333,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       commonMistakes: {
+        id: 'common-mistakes',
         title: '일반적인 실수',
         mistakes: [
           {
@@ -3285,6 +3369,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       relatedReading: {
+        id: 'related-reading',
         title: '관련 읽을거리',
         items: [
           '[프롬프트 엔지니어링이란?](/prompt-engineering/what-is-prompt-engineering) — 제약을 적용하기 전의 기초.',
@@ -3310,6 +3395,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       sources: {
+        id: 'sources',
         title: '출처',
         items: [
           '**OpenAI. (2026).** "구조화된 출력 — JSON 모드 및 응답 API." https://platform.openai.com/docs/guides/structured-outputs — GPT-5.6를 위한 100% 스키마 준수의 서버 측 JSON 스키마 적용.',

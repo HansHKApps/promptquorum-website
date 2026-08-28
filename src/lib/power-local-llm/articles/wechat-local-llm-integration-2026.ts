@@ -120,6 +120,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     ],
     sections: {
       tldr: {
+        id: 'tldr',
         isTldr: true,
         items: [
           'WeChatFerry (Windows) is the most reliable WeChat PC hook available in 2026 — runs alongside WeChat without modifying its binary',
@@ -368,6 +369,7 @@ while True:
     ],
     sections: {
       tldr: {
+        id: 'tldr',
         isTldr: true,
         items: [
           'WeChatFerry (Windows) ist der zuverlässigste WeChat-PC-Hook 2026 – läuft neben WeChat ohne Binärmodifikation',
@@ -571,6 +573,7 @@ while True:
     ],
     sections: {
       tldr: {
+        id: 'tldr',
         isTldr: true,
         items: [
           'WeChatFerry (Windows) est le hook WeChat PC le plus fiable en 2026',
@@ -771,6 +774,7 @@ while True:
     ],
     sections: {
       tldr: {
+        id: 'tldr',
         isTldr: true,
         items: [
           'WeChatFerry（Windows）は2026年で最も信頼性の高いWeChat PCフック',
@@ -975,6 +979,7 @@ while True:
     ],
     sections: {
       tldr: {
+        id: 'tldr',
         isTldr: true,
         items: [
           'WeChatFerry（Windows）是2026年最稳定的微信PC客户端钩子——无需修改微信二进制文件',
@@ -1223,6 +1228,7 @@ while True:
     ],
     sections: {
       tldr: {
+        id: 'tldr',
         isTldr: true,
         items: [
           'WeChatFerry (Windows) es el hook más fiable para el cliente WeChat PC en 2026: se ejecuta junto a WeChat sin modificar su binario',
@@ -1476,6 +1482,7 @@ while True:
     ],
     sections: {
       tldr: {
+        id: 'tldr',
         isTldr: true,
         items: [
           'WeChatFerry(Windows)는 2026년 WeChat PC 클라이언트를 위한 가장 신뢰할 수 있는 훅입니다: 바이너리를 수정하지 않고 WeChat과 함께 실행됩니다',
@@ -1729,6 +1736,7 @@ while True:
     ],
     sections: {
       tldr: {
+        id: 'tldr',
         isTldr: true,
         items: [
           'O WeChatFerry (Windows) é o hook mais confiável para o cliente WeChat PC em 2026: roda ao lado do WeChat sem modificar seu binário',
@@ -1983,6 +1991,7 @@ while True:
     ],
     sections: {
       tldr: {
+        id: 'tldr',
         isTldr: true,
         items: [
           'WeChatFerry (Windows) هو الربط الأكثر موثوقية لعميل WeChat PC في 2026: يعمل بجانب WeChat دون تعديل ملفاته الثنائية',

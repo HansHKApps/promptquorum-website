@@ -32,16 +32,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { label: 'In Plain Terms', anchor: '#in-plain-terms' },
         { label: 'Key Takeaways', anchor: '#key-takeaways' },
         { label: 'Quick Decision: Local vs Cloud', anchor: '#quick-decision' },
-        { label: 'Why Are Local LLMs Worse Than GPT-5.6 on Complex Tasks?', anchor: '#limitation-1-output-quality' },
-        { label: 'How Fast Are Local LLMs Compared to Cloud APIs?', anchor: '#limitation-2-inference-speed' },
-        { label: 'What Hardware Do You Need to Run Local LLMs?', anchor: '#limitation-3-hardware-requirements' },
-        { label: 'Why Can\'t Local LLMs Access Real-Time Information?', anchor: '#limitation-4-no-real-time-info' },
-        { label: 'How Hard Is It to Set Up and Maintain a Local LLM?', anchor: '#limitation-5-setup-complexity' },
-        { label: 'How Large Is the Context Window of Local LLMs?', anchor: '#limitation-6-context-window' },
         { label: 'When NOT to Use Local LLMs', anchor: '#when-not-to-use' },
         { label: 'Best Local LLM by Use Case', anchor: '#best-choice' },
         { label: 'Quick Facts', anchor: '#quick-facts' },
-        { label: 'When Should You Use Cloud Instead?', anchor: '#when-to-use-cloud' },
         { label: 'Common Questions About Local LLM Limitations', anchor: '#faq' },
       ],
 schema: {
@@ -645,16 +638,9 @@ schema: {
         { label: 'En términos simples', anchor: '#in-plain-terms' },
         { label: 'Puntos clave', anchor: '#key-takeaways' },
         { label: 'Decisión rápida: Local vs Nube', anchor: '#quick-decision' },
-        { label: '¿Por qué los LLMs locales son peores que GPT-5.6 en tareas complejas?', anchor: '#limitation-1-output-quality' },
-        { label: '¿Qué tan rápidos son los LLMs locales frente a las APIs en la nube?', anchor: '#limitation-2-inference-speed' },
-        { label: '¿Qué hardware necesitas para ejecutar LLMs locales?', anchor: '#limitation-3-hardware-requirements' },
-        { label: '¿Por qué los LLMs locales no tienen acceso a información en tiempo real?', anchor: '#limitation-4-no-real-time-info' },
-        { label: '¿Qué tan difícil es configurar y mantener un LLM local?', anchor: '#limitation-5-setup-complexity' },
-        { label: '¿Cuál es la ventana de contexto de los LLMs locales?', anchor: '#limitation-6-context-window' },
         { label: 'Cuándo NO usar LLMs locales', anchor: '#when-not-to-use' },
         { label: 'Mejor LLM local por caso de uso', anchor: '#best-choice' },
         { label: 'Datos rápidos', anchor: '#quick-facts' },
-        { label: '¿Cuándo deberías usar la nube?', anchor: '#when-to-use-cloud' },
         { label: 'Preguntas frecuentes sobre LLMs locales', anchor: '#faq' },
       ],
       schema: {
@@ -1146,16 +1132,9 @@ schema: {
         { label: 'بكلمات بسيطة', anchor: '#in-plain-terms' },
         { label: 'النقاط الرئيسية', anchor: '#key-takeaways' },
         { label: 'قرار سريع: محلي مقابل سحابة', anchor: '#quick-decision' },
-        { label: 'لماذا تكون نماذج LLM المحلية أسوأ من GPT-5.6 في المهام المعقدة؟', anchor: '#limitation-1-output-quality' },
-        { label: 'ما مدى سرعة نماذج LLM المحلية مقابل واجهات API السحابية؟', anchor: '#limitation-2-inference-speed' },
-        { label: 'أي أجهزة تحتاج لتشغيل نماذج LLM المحلية؟', anchor: '#limitation-3-hardware-requirements' },
-        { label: 'لماذا لا تملك نماذج LLM المحلية وصولًا إلى المعلومات في الوقت الفعلي؟', anchor: '#limitation-4-no-real-time-info' },
-        { label: 'ما مدى صعوبة إعداد نموذج LLM محلي وصيانته؟', anchor: '#limitation-5-setup-complexity' },
-        { label: 'ما نافذة سياق نماذج LLM المحلية؟', anchor: '#limitation-6-context-window' },
         { label: 'متى لا تستخدم نماذج LLM المحلية', anchor: '#when-not-to-use' },
         { label: 'أفضل LLM محلي حسب حالة الاستخدام', anchor: '#best-choice' },
         { label: 'حقائق سريعة', anchor: '#quick-facts' },
-        { label: 'متى ينبغي أن تستخدم السحابة؟', anchor: '#when-to-use-cloud' },
         { label: 'الأسئلة الشائعة حول نماذج LLM المحلية', anchor: '#faq' },
       ],
       schema: {
@@ -1642,10 +1621,6 @@ schema: {
       primaryTerm: 'limitações de LLM local',
       toc: [
         { label: 'Pontos principais', anchor: '#tldr' },
-        { label: '6 limitações principais', anchor: '#limitations' },
-        { label: 'Quando usar LLM local', anchor: '#when-local' },
-        { label: 'Quando usar API na nuvem', anchor: '#when-cloud' },
-        { label: 'Erros comuns', anchor: '#mistakes' },
         { label: 'Leitura relacionada', anchor: '#related-reading' },
         { label: 'FAQ', anchor: '#faq' },
       ],
@@ -1756,16 +1731,11 @@ schema: {
         { label: 'In einfachen Worten', anchor: '#in-plain-terms' },
         { label: 'Wichtigste Erkenntnisse', anchor: '#key-takeaways' },
         { label: 'Schnelle Entscheidung', anchor: '#quick-decision' },
-        { label: 'Grenze 1: Geschwindigkeit', anchor: '#speed-limitations' },
-        { label: 'Grenze 2: Qualität', anchor: '#quality-limitations' },
-        { label: 'Grenze 3: Hardware', anchor: '#hardware-requirements' },
-        { label: 'Grenze 4: Einrichtungszeit', anchor: '#setup-time' },
         { label: 'Grenze 5: Kontextfenster', anchor: '#context-window' },
-        { label: 'Grenze 6: Keine Echtzeitgarantien', anchor: '#no-realtime-guarantees' },
         { label: 'Wann Sie KEINE lokalen Modelle verwenden sollten', anchor: '#when-not-to-use' },
         { label: 'Beste lokale LLMs nach Anwendungsfall', anchor: '#best-choice' },
         { label: 'Schnellübersicht', anchor: '#quick-facts' },
-        { label: 'Häufig gestellte Fragen', anchor: '#faqs' },
+        { label: 'Häufig gestellte Fragen', anchor: '#faq' },
         { label: 'Quellen und Links', anchor: '#sources' }
       ],
 schema: {
@@ -1991,10 +1961,12 @@ schema: {
       gammaDescription: 'Interaktive 14-Folien-Präsentation: Die 6 Grenzen von lokalen LLMs, Hardwareanforderungen (8–40 GB RAM), Geschwindigkeitsvergleich (10–25 Token/s CPU vs. 80–150 Token/s Cloud), Qualitätslücke (Benchmarks MMLU, HumanEval), Einrichtungszeit (20–40 Min lokal vs. 5 Min Cloud), Entscheidungsbaum (lokal vs. Cloud). Mit Printfunktion als PDF herunterladen.',
       sections: {
         inOneSentence: {
+          id: 'in-one-sentence',
           title: 'In einem Satz',
           content: 'Lokale LLMs bieten Datenschutz, sind aber 4–10× langsamer, benötigen mindestens 16 GB Hardware und liefern niedrigere Qualität als Cloud APIs — verwenden Sie sie nur für Offline-Szenarien oder nicht-zeitkritische Batch-Verarbeitung.'
         },
         inPlainTerms: {
+          id: 'in-plain-terms',
           title: 'In einfachen Worten',
           content: [
             '<strong>Lokale LLMs:</strong> Sie laden ein Sprachmodell auf Ihren Computer herunter (Ollama, LM Studio). Alle Daten bleiben privat. Nachteil: langsam, begrenzte Intelligenz, kompliziertes Setup.',
@@ -2017,6 +1989,7 @@ schema: {
           ]
         },
         quickDecision: {
+          id: 'quick-decision',
           title: 'Schnelle Entscheidung: Lokal oder Cloud?',
           content: [
             '<strong>Verwenden Sie LOKAL, wenn:</strong>',
@@ -2183,6 +2156,7 @@ schema: {
           }
         },
         contextWindow: {
+          id: 'context-window',
           title: 'Grenze 5: Kontextfenster — Lokal maximal 32K vs. Cloud 128K–200K',
           content: 'Ein Kontextfenster ist die Länge des Gedächtnisses eines Modells. Lokale Modelle unterstützen typischerweise 4K–32K Token (~ 8K–64K Wörter). Cloud APIs bieten 128K–200K Token. Das bedeutet: Lokal können Sie max 50–80 Seiten Text auf einmal verarbeiten; Cloud kann ganze Bücher (> 300 Seiten) auf einmal analysieren.'
         },
@@ -2250,6 +2224,7 @@ schema: {
           ]
         },
         whenNotToUse: {
+          id: 'when-not-to-use',
           title: 'Wann Sie KEINE lokalen Modelle verwenden sollten',
           content: [
             '<strong>❌ Nicht lokal für Produktion ohne SLA-Backup:</strong> Wenn Ihr Service Kundendaten behandelt und Downtime kostet. Lokale Hardware crasht; Cloud hat Redundanz.',
@@ -2260,6 +2235,7 @@ schema: {
           ]
         },
         bestChoice: {
+          id: 'best-choice',
           title: 'Beste lokale LLMs nach Anwendungsfall',
           content: 'Für alle Anwendungsfälle: <strong>Verwenden Sie Ollama oder LM Studio</strong> (beide kostenlos, unterstützen identische Modelle).',
           columns: ['Anwendungsfall', '16 GB RAM', '40+ GB RAM', 'Empfehlung'],
@@ -2273,6 +2249,7 @@ schema: {
           ]
         },
         quickFacts: {
+          id: 'quick-facts',
           title: 'Schnellübersicht: Lokal vs. Cloud',
           columns: ['Kriterium', 'Lokal (Ollama/LM Studio)', 'Cloud (OpenAI/Anthropic)'],
           rows: [
@@ -2353,6 +2330,7 @@ schema: {
           ]
         },
         sources: {
+          id: 'sources',
           title: 'Quellen und Referenzen',
           items: [
             '[Ollama — Download & Installation](https://ollama.ai)',
@@ -2410,16 +2388,11 @@ schema: {
         { label: 'En termes simples', anchor: '#in-plain-terms' },
         { label: 'Points clés', anchor: '#key-takeaways' },
         { label: 'Décision rapide : local vs cloud', anchor: '#quick-decision' },
-        { label: 'Limitation 1 : vitesse', anchor: '#speed-limitations' },
-        { label: 'Limitation 2 : qualité', anchor: '#quality-limitations' },
-        { label: 'Limitation 3 : matériel', anchor: '#hardware-requirements' },
-        { label: 'Limitation 4 : temps de configuration', anchor: '#setup-time' },
         { label: 'Limitation 5 : fenêtre de contexte', anchor: '#context-window' },
-        { label: 'Limitation 6 : pas de garanties temps réel', anchor: '#no-realtime-guarantees' },
         { label: 'Quand NE PAS utiliser les LLMs locaux', anchor: '#when-not-to-use' },
         { label: 'Meilleur LLM local par cas d\'usage', anchor: '#best-choice' },
         { label: 'Synthèse rapide', anchor: '#quick-facts' },
-        { label: 'Questions fréquemment posées', anchor: '#faqs' },
+        { label: 'Questions fréquemment posées', anchor: '#faq' },
         { label: 'Sources et références', anchor: '#sources' }
       ],
 schema: {
@@ -2629,10 +2602,12 @@ schema: {
       gammaDescription: 'Présentation interactive 14 diapositives : les 6 limitations des LLMs locaux, exigences matériel (8–40 GB RAM), comparaison vitesse (10–25 tokens/s CPU vs. 80–150 tokens/s cloud), écart qualité (benchmarks MMLU, HumanEval), temps de configuration (20–40 min local vs. 5 min cloud), arbre décisionnel (local vs. cloud). Avec fonction impression pour télécharger en PDF.',
       sections: {
         inOneSentence: {
+          id: 'in-one-sentence',
           title: 'En une phrase',
           content: 'Les LLMs locaux offrent la confidentialité mais sont 4–10 fois plus lents, exigent 16 GB minimum et offrent qualité inférieure à Cloud APIs — utilisez-les seulement pour scénarios hors ligne ou traitement batch non urgent.'
         },
         inPlainTerms: {
+          id: 'in-plain-terms',
           title: 'En termes simples',
           content: [
             '<strong>LLMs locaux :</strong> Vous téléchargez un modèle de langage sur votre ordinateur (Ollama, LM Studio). Toutes les données restent privées. Inconvénients : lent, intelligence limitée, installation complexe.',
@@ -2655,6 +2630,7 @@ schema: {
           ]
         },
         quickDecision: {
+          id: 'quick-decision',
           title: 'Décision rapide : local ou cloud ?',
           content: [
             '<strong>Utilisez LOCAL si :</strong>',
@@ -2822,6 +2798,7 @@ schema: {
           }
         },
         contextWindow: {
+          id: 'context-window',
           title: 'Limitation 5 : fenêtre contexte — local max 32K vs. cloud 128K–200K',
           content: 'Fenêtre contexte = durée mémoire du modèle. Modèles locaux supportent typiquement 4K–32K tokens (~ 8K–64K mots). Cloud APIs offrent 128K–200K tokens. Cela signifie : local peut traiter max 50–80 pages texte simultanément ; cloud peut analyser livres entiers (> 300 pages) en une seule query.'
         },
@@ -2889,6 +2866,7 @@ schema: {
           ]
         },
         whenNotToUse: {
+          id: 'when-not-to-use',
           title: 'Quand NE PAS utiliser modèles locaux',
           content: [
             '<strong>❌ Pas local pour production sans backup SLA :</strong> Si service traite données client et downtime coûte. Matériel local crash ; cloud redondance.',
@@ -2899,6 +2877,7 @@ schema: {
           ]
         },
         bestChoice: {
+          id: 'best-choice',
           title: 'Meilleur LLM local par cas d\'usage',
           content: 'Pour tous cas : <strong>utilisez Ollama ou LM Studio</strong> (tous deux gratuits, supportent modèles identiques).',
           columns: ['Cas d\'usage', '16 GB RAM', '40+ GB RAM', 'Recommandation'],
@@ -2912,6 +2891,7 @@ schema: {
           ]
         },
         quickFacts: {
+          id: 'quick-facts',
           title: 'Synthèse rapide : local vs. cloud',
           columns: ['Critère', 'Local (Ollama/LM Studio)', 'Cloud (OpenAI/Anthropic)'],
           rows: [
@@ -2992,6 +2972,7 @@ schema: {
           ]
         },
         sources: {
+          id: 'sources',
           title: 'Sources et références',
           items: [
             '[Ollama — Téléchargement & Installation](https://ollama.ai)',
@@ -3049,16 +3030,11 @@ schema: {
         { label: '簡潔に説明', anchor: '#in-plain-terms' },
         { label: '重要ポイント', anchor: '#key-takeaways' },
         { label: '素早い判断：ローカル vs クラウド', anchor: '#quick-decision' },
-        { label: '限界1：速度', anchor: '#speed-limitations' },
-        { label: '限界2：品質', anchor: '#quality-limitations' },
-        { label: '限界3：ハードウェア', anchor: '#hardware-requirements' },
-        { label: '限界4：セットアップ時間', anchor: '#setup-time' },
         { label: '限界5：コンテキストウィンドウ', anchor: '#context-window' },
-        { label: '限界6：リアルタイム保証なし', anchor: '#no-realtime-guarantees' },
         { label: 'ローカルLLMを使ってはいけない場合', anchor: '#when-not-to-use' },
         { label: '用途別ベストローカルLLM', anchor: '#best-choice' },
         { label: 'クイックファクト', anchor: '#quick-facts' },
-        { label: 'よくある質問', anchor: '#faqs' },
+        { label: 'よくある質問', anchor: '#faq' },
         { label: 'リファレンス＆出典', anchor: '#sources' }
       ],
 schema: {
@@ -3271,10 +3247,12 @@ schema: {
       gammaDescription: '14スライドインタラクティブプレゼン ： ローカルLLMの6つの限界、ハードウェア要件（8–40 GB RAM）、速度比較（CPU 10–25トークン/秒 vs. クラウド 80–150トークン/秒）、品質ギャップ（MMLU、HumanEval ベンチマーク）、セットアップ時間（ローカル 20–40分 vs. クラウド5分）、判断ツリー（ローカル vs. クラウド）。PDF ダウンロード機能付き。',
       sections: {
         inOneSentence: {
+          id: 'in-one-sentence',
           title: '1文で',
           content: 'ローカルLLMはプライバシー提供しますが4–10倍遅く、最低16 GBが必要で、Cloud API より品質低い — オフラインシナリオか緊急でないバッチ処理のみに使用してください。'
         },
         inPlainTerms: {
+          id: 'in-plain-terms',
           title: '簡潔に説明',
           content: [
             '<strong>ローカルLLM ：</strong> 言語モデルをコンピュータにダウンロード（Ollama、LM Studio）。すべてのデータはプライベート。短所 ： 遅い、能力限定、セットアップ複雑。',
@@ -3297,6 +3275,7 @@ schema: {
           ]
         },
         quickDecision: {
+          id: 'quick-decision',
           title: '素早い判断：ローカル or クラウド？',
           content: [
             '<strong>ローカルを使う場合 ：</strong>',
@@ -3464,6 +3443,7 @@ schema: {
           }
         },
         contextWindow: {
+          id: 'context-window',
           title: '限界5：コンテキストウィンドウ — ローカル最大32K vs. クラウド128K–200K',
           content: 'コンテキストウィンドウ = モデルのメモリ長さ。ローカルモデルは通常4K–32Kトークン（約8K–64K単語）サポート。Cloud API は128K–200K。意味 ： ローカルは最大50–80ページテキスト一度に；クラウドは本丸全体（> 300ページ）一度に分析可。'
         },
@@ -3531,6 +3511,7 @@ schema: {
           ]
         },
         whenNotToUse: {
+          id: 'when-not-to-use',
           title: 'ローカルLLMを使ってはいけない場合',
           content: [
             '<strong>❌ SLA バックアップなし本番に非ローカル ：</strong> サービスが顧客データ処理でダウンタイム = コスト。ローカルハードは落ちる；クラウド = 冗長。',
@@ -3541,6 +3522,7 @@ schema: {
           ]
         },
         bestChoice: {
+          id: 'best-choice',
           title: '用途別ベストローカルLLM',
           content: 'すべての用途 ： <strong>Ollama または LM Studio を使用</strong>（両方無料、同じモデルサポート）。',
           columns: ['用途', '16 GB RAM', '40+ GB RAM', '推奨'],
@@ -3554,6 +3536,7 @@ schema: {
           ]
         },
         quickFacts: {
+          id: 'quick-facts',
           title: 'クイックファクト : ローカル vs. クラウド',
           columns: ['指標', 'Local（Ollama/LM Studio）', 'Cloud（OpenAI/Anthropic）'],
           rows: [
@@ -3634,6 +3617,7 @@ schema: {
           ]
         },
         sources: {
+          id: 'sources',
           title: 'リファレンス＆出典',
           items: [
             '[Ollama — ダウンロード＆インストール](https://ollama.ai)',
@@ -3691,16 +3675,11 @@ schema: {
         { label: '简单来说', anchor: '#in-plain-terms' },
         { label: '要点总结', anchor: '#key-takeaways' },
         { label: '快速判断：本地vs云', anchor: '#quick-decision' },
-        { label: '限制1：速度', anchor: '#speed-limitations' },
-        { label: '限制2：质量', anchor: '#quality-limitations' },
-        { label: '限制3：硬件', anchor: '#hardware-requirements' },
-        { label: '限制4：设置时间', anchor: '#setup-time' },
         { label: '限制5：上下文窗口', anchor: '#context-window' },
-        { label: '限制6：无实时保障', anchor: '#no-realtime-guarantees' },
         { label: '不应该使用本地LLM的情况', anchor: '#when-not-to-use' },
         { label: '按用途选择最佳本地LLM', anchor: '#best-choice' },
         { label: '快速对比', anchor: '#quick-facts' },
-        { label: '常见问题', anchor: '#faqs' },
+        { label: '常见问题', anchor: '#faq' },
         { label: '参考和资源', anchor: '#sources' }
       ],
 schema: {
@@ -3813,10 +3792,12 @@ schema: {
       gammaDescription: '14张幻灯片交互式演示文稿：本地LLM的6个限制、硬件要求（8–40 GB RAM）、速度对比（CPU 10–25 token/秒vs云80–150 token/秒）、质量差距（MMLU、HumanEval基准）、设置时间（本地20–40分钟vs云5分钟）、判断树（本地vs云）。包含PDF下载功能。',
       sections: {
         inOneSentence: {
+          id: 'in-one-sentence',
           title: '一句话说明',
           content: '本地LLM提供隐私但速度慢4–10倍，需要最低16 GB硬件，质量低于Cloud API——仅用于离线场景或非紧急批处理。'
         },
         inPlainTerms: {
+          id: 'in-plain-terms',
           title: '简单来说',
           content: [
             '<strong>本地LLM ：</strong> 将语言模型下载到电脑（Ollama、LM Studio）。所有数据保持私密。缺点：慢、能力有限、设置复杂。',
@@ -3839,6 +3820,7 @@ schema: {
           ]
         },
         quickDecision: {
+          id: 'quick-decision',
           title: '快速判断：本地或云？',
           content: [
             '<strong>使用本地当：</strong>',
@@ -4006,6 +3988,7 @@ schema: {
           }
         },
         contextWindow: {
+          id: 'context-window',
           title: '限制5：上下文窗口——本地最多32K vs云128K–200K',
           content: '上下文窗口=模型记忆长度。本地模型通常支持4K–32K token（约8K–64K词）。Cloud API提供128K–200K。意思是：本地最多一次处理50–80页文本；云可一次分析整本书（> 300页）。'
         },
@@ -4073,6 +4056,7 @@ schema: {
           ]
         },
         whenNotToUse: {
+          id: 'when-not-to-use',
           title: '不应该使用本地LLM的情况',
           content: [
             '<strong>❌ 生产无SLA备份时不用本地：</strong> 如果服务处理客户数据且停机很贵。本地硬件会崩溃；云有冗余。',
@@ -4083,6 +4067,7 @@ schema: {
           ]
         },
         bestChoice: {
+          id: 'best-choice',
           title: '按用途选择最佳本地LLM',
           content: '所有用途：<strong>使用Ollama或LM Studio</strong>（都免费、支持相同模型）。',
           columns: ['用途', '16 GB RAM', '40+ GB RAM', '建议'],
@@ -4096,6 +4081,7 @@ schema: {
           ]
         },
         quickFacts: {
+          id: 'quick-facts',
           title: '快速对比：本地vs云',
           columns: ['指标', '本地（Ollama/LM Studio）', '云（OpenAI/Anthropic）'],
           rows: [
@@ -4131,6 +4117,7 @@ schema: {
           ]
         },
         sources: {
+          id: 'sources',
           title: '参考和资源',
           items: [
             '[Ollama — 下载与安装](https://ollama.ai)',
@@ -4189,16 +4176,9 @@ schema: {
         { label: '쉬운 설명', anchor: '#in-plain-terms' },
         { label: '핵심 요점', anchor: '#key-takeaways' },
         { label: '빠른 결정: 로컬 vs 클라우드', anchor: '#quick-decision' },
-        { label: '로컬 LLM이 복잡한 작업에서 GPT-5.6보다 왜 더 나쁜가?', anchor: '#limitation-1-output-quality' },
-        { label: '로컬 LLM은 클라우드 API와 비교하여 얼마나 빠른가?', anchor: '#limitation-2-inference-speed' },
-        { label: '로컬 LLM을 실행하려면 어떤 하드웨어가 필요한가?', anchor: '#limitation-3-hardware-requirements' },
-        { label: '로컬 LLM이 실시간 정보에 접근할 수 없는 이유는?', anchor: '#limitation-4-no-real-time-info' },
-        { label: '로컬 LLM 설정 및 유지관리는 얼마나 어려운가?', anchor: '#limitation-5-setup-complexity' },
-        { label: '로컬 LLM의 컨텍스트 윈도우 크기는?', anchor: '#limitation-6-context-window' },
         { label: '로컬 LLM을 사용하지 말아야 할 때', anchor: '#when-not-to-use' },
         { label: '사용 사례별 최적 로컬 LLM', anchor: '#best-choice' },
         { label: '빠른 사실 확인', anchor: '#quick-facts' },
-        { label: '클라우드를 사용해야 할 때는?', anchor: '#when-to-use-cloud' },
         { label: '로컬 LLM 한계에 관한 자주 묻는 질문', anchor: '#faq' },
       ],
       schema: {

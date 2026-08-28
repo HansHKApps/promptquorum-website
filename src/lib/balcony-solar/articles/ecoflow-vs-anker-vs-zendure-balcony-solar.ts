@@ -47,7 +47,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Verdict by Use Case', anchor: '#verdict' },
       { label: 'Sources', anchor: '#sources' },
       { label: 'FAQ', anchor: '#faq' },
-      { label: 'Related Reading', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -190,7 +189,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Veredicto según el caso de uso', anchor: '#verdict' },
       { label: 'Fuentes', anchor: '#sources' },
       { label: 'Preguntas frecuentes', anchor: '#faq' },
-      { label: 'Lecturas relacionadas', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -334,7 +332,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Veredito por caso de uso', anchor: '#verdict' },
       { label: 'Fontes', anchor: '#sources' },
       { label: 'Perguntas frequentes', anchor: '#faq' },
-      { label: 'Leituras relacionadas', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -478,7 +475,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'الحكم حسب حالة الاستخدام', anchor: '#verdict' },
       { label: 'المصادر', anchor: '#sources' },
       { label: 'الأسئلة الشائعة', anchor: '#faq' },
-      { label: 'قراءات ذات صلة', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -622,7 +618,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '用途別の結論', anchor: '#verdict' },
       { label: '出典', anchor: '#sources' },
       { label: 'よくある質問', anchor: '#faq' },
-      { label: '関連記事', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -766,7 +761,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '按使用场景给出结论', anchor: '#verdict' },
       { label: '资料来源', anchor: '#sources' },
       { label: '常见问题', anchor: '#faq' },
-      { label: '相关阅读', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -910,7 +904,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Verdict par cas d\'usage', anchor: '#verdict' },
       { label: 'Sources', anchor: '#sources' },
       { label: 'FAQ', anchor: '#faq' },
-      { label: 'Lectures connexes', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -1054,7 +1047,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Fazit nach Anwendungsfall', anchor: '#verdict' },
       { label: 'Quellen', anchor: '#sources' },
       { label: 'Häufig gestellte Fragen', anchor: '#faq' },
-      { label: 'Weiterführende Artikel', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -1198,7 +1190,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '사용 사례별 결론', anchor: '#verdict' },
       { label: '출처', anchor: '#sources' },
       { label: '자주 묻는 질문', anchor: '#faq' },
-      { label: '관련 자료', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {

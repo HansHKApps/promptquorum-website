@@ -23,7 +23,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       educationalLevel: 'Intermediate',
       primaryTerm: 'Used GPU',
       toc: [
-        { label: 'TLDR', anchor: '#tldr' },
+        { label: 'TLDR', anchor: '#key-takeaways' },
         { label: 'Which Used GPUs Are Safest to Buy?', anchor: '#safest-cards' },
         { label: 'How Much Should You Pay for Used GPUs?', anchor: '#pricing' },
         { label: 'Mining Cards vs. Gaming Cards: What\'s the Difference?', anchor: '#mining-vs-gaming' },
@@ -260,7 +260,7 @@ schema: {
       educationalLevel: 'Intermediate',
       primaryTerm: 'GPU de segunda mano',
       toc: [
-        { label: 'Puntos clave', anchor: '#tldr' },
+        { label: 'Puntos clave', anchor: '#key-takeaways' },
         { label: '¿Qué GPUs de segunda mano son más seguras?', anchor: '#safest-cards' },
         { label: '¿Cuánto deberías pagar por una GPU de segunda mano?', anchor: '#pricing' },
         { label: 'Tarjetas de minería vs. tarjetas gaming: ¿cuál es la diferencia?', anchor: '#mining-vs-gaming' },
@@ -475,7 +475,7 @@ schema: {
       educationalLevel: 'Intermediate',
       primaryTerm: 'GPU مستعملة',
       toc: [
-        { label: 'النقاط الرئيسية', anchor: '#tldr' },
+        { label: 'النقاط الرئيسية', anchor: '#key-takeaways' },
         { label: 'أي وحدات GPU المستعملة أكثر أمانًا؟', anchor: '#safest-cards' },
         { label: 'كم يجب أن تدفع مقابل GPU مستعملة؟', anchor: '#pricing' },
         { label: 'بطاقات التعدين مقابل بطاقات الألعاب: ما الفرق؟', anchor: '#mining-vs-gaming' },
@@ -692,7 +692,7 @@ schema: {
       educationalLevel: 'Intermediate',
       primaryTerm: 'GPU usada',
       toc: [
-        { label: 'Resumo', anchor: '#tldr' },
+        { label: 'Resumo', anchor: '#key-takeaways' },
         { label: 'Quais GPUs usadas são mais seguras para comprar?', anchor: '#safest-cards' },
         { label: 'Quanto pagar por GPUs usadas?', anchor: '#pricing' },
         { label: 'Placas de mineração vs. gaming: qual a diferença?', anchor: '#mining-vs-gaming' },
@@ -904,7 +904,7 @@ schema: {
       educationalLevel: 'Intermediate',
       primaryTerm: 'Gebrauchte GPU',
       toc: [
-        { label: 'Zusammenfassung', anchor: '#tldr' },
+        { label: 'Zusammenfassung', anchor: '#key-takeaways' },
         { label: 'Welche gebrauchten GPUs sind am sichersten zu kaufen?', anchor: '#safest-cards' },
         { label: 'Wie viel sollten Sie für gebrauchte GPUs bezahlen?', anchor: '#pricing' },
         { label: 'Mining-Karten vs. Gaming-Karten: Was ist der Unterschied?', anchor: '#mining-vs-gaming' },
@@ -1131,7 +1131,7 @@ schema: {
       educationalLevel: 'Intermediate',
       primaryTerm: 'GPU utilisée',
       toc: [
-        { label: 'Points clés', anchor: '#tldr' },
+        { label: 'Points clés', anchor: '#key-takeaways' },
         { label: 'Quelles GPU utilisées sont les plus sûres à acheter ?', anchor: '#safest-cards' },
         { label: 'Combien devriez-vous payer pour les GPU utilisées ?', anchor: '#pricing' },
         { label: 'Cartes minières vs cartes gaming : Quelle est la différence ?', anchor: '#mining-vs-gaming' },
@@ -1346,7 +1346,7 @@ schema: {
       educationalLevel: 'Intermediate',
       primaryTerm: '中古GPU',
       toc: [
-        { label: '重要ポイント', anchor: '#tldr' },
+        { label: '重要ポイント', anchor: '#key-takeaways' },
         { label: '購入するのに最も安全な中古GPUはどれですか？', anchor: '#safest-cards' },
         { label: '中古GPUにいくら払うべきですか？', anchor: '#pricing' },
         { label: 'マイニングカードvs.ゲーミングカード：違いは何ですか？', anchor: '#mining-vs-gaming' },
@@ -1561,7 +1561,7 @@ schema: {
       educationalLevel: 'Intermediate',
       primaryTerm: '二手GPU',
       toc: [
-        { label: '核心要点', anchor: '#tldr' },
+        { label: '核心要点', anchor: '#key-takeaways' },
         { label: '哪些二手GPU最安全购买？', anchor: '#safest-cards' },
         { label: '二手GPU应该花多少钱？', anchor: '#pricing' },
         { label: '采矿卡vs游戏卡：有什么区别？', anchor: '#mining-vs-gaming' },
@@ -1776,7 +1776,7 @@ schema: {
       educationalLevel: 'Intermediate',
       primaryTerm: '중고 GPU',
       toc: [
-        { label: 'TLDR', anchor: '#tldr' },
+        { label: 'TLDR', anchor: '#key-takeaways' },
         { label: '가장 안전하게 구매할 수 있는 중고 GPU는?', anchor: '#safest-cards' },
         { label: '중고 GPU 적정 가격은 얼마인가?', anchor: '#pricing' },
         { label: '채굴용 카드 vs 게이밍 카드: 차이점은?', anchor: '#mining-vs-gaming' },

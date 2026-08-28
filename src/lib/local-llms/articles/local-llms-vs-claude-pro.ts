@@ -24,7 +24,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       educationalLevel: 'Intermediate',
       primaryTerm: 'Claude Pro',
       toc: [
-        { label: 'TLDR', anchor: '#tldr' },
         { label: 'Quick Facts', anchor: '#quick-facts' },
         { label: 'Claude Pro vs Local LLM Pricing', anchor: '#pricing' },
         { label: 'Privacy: Anthropic vs Self-Hosted', anchor: '#privacy' },
@@ -276,7 +275,6 @@ schema: {
       educationalLevel: 'Intermediate',
       primaryTerm: 'Claude Pro',
       toc: [
-        { label: 'Puntos clave', anchor: '#tldr' },
         { label: 'Datos rápidos', anchor: '#quick-facts' },
         { label: 'Precio: Claude Pro vs LLMs locales', anchor: '#pricing' },
         { label: 'Privacidad: Anthropic vs autoalojado', anchor: '#privacy' },
@@ -528,7 +526,6 @@ schema: {
       educationalLevel: 'Intermediate',
       primaryTerm: 'Claude Pro',
       toc: [
-        { label: 'النقاط الرئيسية', anchor: '#tldr' },
         { label: 'حقائق سريعة', anchor: '#quick-facts' },
         { label: 'السعر: Claude Pro مقابل نماذج LLM المحلية', anchor: '#pricing' },
         { label: 'الخصوصية: Anthropic مقابل الاستضافة الذاتية', anchor: '#privacy' },
@@ -780,7 +777,6 @@ schema: {
       educationalLevel: 'Intermediate',
       primaryTerm: 'Claude Pro',
       toc: [
-        { label: 'Pontos principais', anchor: '#tldr' },
         { label: 'Dados rápidos', anchor: '#quick-facts' },
         { label: 'Preço: Claude Pro vs LLMs locais', anchor: '#pricing' },
         { label: 'Privacidade: Anthropic vs autoalojado', anchor: '#privacy' },
@@ -1010,7 +1006,6 @@ schema: {
       educationalLevel: 'Intermediate',
       primaryTerm: 'Claude Pro',
       toc: [
-        { label: 'Zusammenfassung', anchor: '#tldr' },
         { label: 'Schnelle Fakten', anchor: '#quick-facts' },
         { label: 'Claude Pro vs Lokale LLM-Preisgestaltung', anchor: '#pricing' },
         { label: 'Datenschutz: Anthropic vs Selbstgehostet', anchor: '#privacy' },
@@ -1272,7 +1267,6 @@ schema: {
       educationalLevel: 'Intermediate',
       primaryTerm: 'Claude Pro',
       toc: [
-        { label: 'Résumé', anchor: '#tldr' },
         { label: 'Faits rapides', anchor: '#quick-facts' },
         { label: 'Différence de prix: Claude Pro vs LLMs locaux', anchor: '#pricing' },
         { label: 'Confidentialité: Anthropic vs Auto-hébergé', anchor: '#privacy' },
@@ -1524,7 +1518,6 @@ schema: {
       educationalLevel: 'Intermediate',
       primaryTerm: 'Claude Pro',
       toc: [
-        { label: '重要ポイント', anchor: '#tldr' },
         { label: '重要な事実', anchor: '#quick-facts' },
         { label: 'Claude ProとローカルLLMの価格差', anchor: '#pricing' },
         { label: 'プライバシー: Anthropic対自己ホスト', anchor: '#privacy' },
@@ -1776,7 +1769,6 @@ schema: {
       educationalLevel: 'Intermediate',
       primaryTerm: 'Claude Pro',
       toc: [
-        { label: '核心要点', anchor: '#tldr' },
         { label: '重要事实', anchor: '#quick-facts' },
         { label: 'Claude Pro与本地LLM价格差异', anchor: '#pricing' },
         { label: '隐私: Anthropic vs 自建部署', anchor: '#privacy' },
@@ -2028,7 +2020,6 @@ schema: {
       educationalLevel: 'Intermediate',
       primaryTerm: 'Claude Pro',
       toc: [
-        { label: 'TL;DR', anchor: '#tldr' },
         { label: '빠른 요약', anchor: '#quick-facts' },
         { label: 'Claude Pro vs 로컬 LLM 가격', anchor: '#pricing' },
         { label: '프라이버시: Anthropic vs 자체 호스팅', anchor: '#privacy' },

@@ -37,7 +37,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         'Compliance by constraint: GDPR, HIPAA, SOC2 audits are easier with negative prompting baked into templates — violations are prevented in generation, not caught downstream',
       ],
       toc: [
-        { label: 'Key Takeaways', anchor: 'key-takeaways' },
         { label: 'What Negative Prompting Is', anchor: 'what-is-negative-prompting' },
         { label: 'Why It Matters', anchor: 'why-it-matters' },
         { label: 'What You Can Constrain', anchor: 'what-you-can-constrain' },
@@ -67,6 +66,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       sections: {
         whatIsNegativePrompting: {
+          id: 'what-is-negative-prompting',
           title: 'What Negative Prompting Is',
           content: [
             '**Negative prompting means adding explicit "do not" rules to your prompts alongside what you want the model to do.** Instead of only describing the target output, you also specify unwanted topics, tones, formats, or mistakes.',
@@ -74,6 +74,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         whyItMatters: {
+          id: 'why-it-matters',
           title: 'Why Negative Prompting Matters',
           content: [
             '**Negative prompting matters because real-world outputs are constrained not just by goals, but by limits—brand, legal, safety, and quality constraints.** A good result is often "correct and within boundaries," not just "useful."',
@@ -91,6 +92,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         whatYouCanConstrain: {
+          id: 'what-you-can-constrain',
           title: 'What You Can Constrain With Negative Prompts',
           content: [
             '**You can apply negative prompting to content, style, structure, and behavior.** The goal is to be specific enough that the model knows exactly what to avoid.',
@@ -109,6 +111,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         example: {
+          id: 'example',
           title: 'Example: Without vs With Negative Prompting',
           content: [
             '**The effect of negative prompting becomes clear when you compare a generic prompt with one that encodes explicit "do not" rules.** Here is a product description example.',
@@ -120,6 +123,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         whenToUse: {
+          id: 'when-to-use',
           title: 'When to Use Negative Prompting',
           content: [
             '**You should use negative prompting whenever you have clear examples of what you never want to see again.** It is especially helpful in repeatable workflows where the same mistakes keep reappearing.',
@@ -156,6 +160,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         howToStart: {
+          id: 'how-to-use',
           title: 'How to Use Negative Prompting',
           numberedItems: [
             '**Identify what you don\'t want in the output: specific words, tones, styles, or approaches.** Example: \'Do not use marketing buzzwords. Do not make promises. Do not reference competitors.\'',
@@ -505,7 +510,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
     'PromptQuorum permite bloques de constraints negativas reutilizables en todos los modelos — define una vez, aplica en todas partes',
   ],
   toc: [
-    { label: 'Puntos clave', anchor: 'key-takeaways' },
     { label: 'Qué es el negative prompting', anchor: 'what-is-negative-prompting' },
     { label: 'Por qué importa', anchor: 'why-it-matters' },
     { label: 'Qué puedes restringir', anchor: 'what-you-can-constrain' },
@@ -535,6 +539,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
   sections: {
     whatIsNegativePrompting: {
+      id: 'what-is-negative-prompting',
       title: 'Qué es el negative prompting',
       content: [
         '**El negative prompting significa añadir reglas explícitas de "no hacer" a tus prompts junto con lo que quieres que haga el modelo.** En lugar de describir solo la salida objetivo, también especificas temas, tonos, formatos o errores no deseados.',
@@ -542,6 +547,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     whyItMatters: {
+      id: 'why-it-matters',
       title: 'Por qué importa el negative prompting',
       content: [
         '**El negative prompting importa porque las salidas del mundo real están restringidas no solo por objetivos, sino por límites — de marca, legales, de seguridad y de calidad.** Un buen resultado a menudo es "correcto y dentro de los límites", no solo "útil".',
@@ -559,6 +565,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     whatYouCanConstrain: {
+      id: 'what-you-can-constrain',
       title: 'Qué puedes restringir con los prompts negativos',
       content: [
         '**Puedes aplicar el negative prompting al contenido, el estilo, la estructura y el comportamiento.** El objetivo es ser lo suficientemente específico para que el modelo sepa exactamente qué evitar.',
@@ -577,6 +584,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     example: {
+      id: 'example',
       title: 'Ejemplo: sin y con negative prompting',
       content: [
         '**El efecto del negative prompting queda claro cuando comparas un prompt genérico con uno que codifica reglas explícitas de "no hacer".** Aquí hay un ejemplo de descripción de producto.',
@@ -588,6 +596,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     whenToUse: {
+      id: 'when-to-use',
       title: 'Cuándo usar el negative prompting',
       content: [
         '**Debes usar el negative prompting siempre que tengas ejemplos claros de lo que nunca quieres volver a ver.** Es especialmente útil en workflows repetibles donde siguen apareciendo los mismos errores.',
@@ -623,6 +632,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     howToStart: {
+      id: 'how-to-use',
       title: 'Cómo usar el negative prompting',
       numberedItems: [
         '**Identifica qué no quieres en la salida: palabras, tonos, estilos o enfoques específicos.** Ejemplo: "No usar palabras de marketing. No hacer promesas. No referenciar competidores."',
@@ -810,7 +820,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
     'PromptQuorum يتيح كتل قيود سلبية قابلة لإعادة الاستخدام عبر جميع النماذج — حدّدها مرة واحدة وطبّقها في كل مكان',
   ],
   toc: [
-    { label: 'النقاط الرئيسية', anchor: 'key-takeaways' },
     { label: 'ما هو البرومبت السلبي', anchor: 'what-is-negative-prompting' },
     { label: 'لماذا يهم', anchor: 'why-it-matters' },
     { label: 'ما الذي يمكنك تقييده', anchor: 'what-you-can-constrain' },
@@ -840,6 +849,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
   sections: {
     whatIsNegativePrompting: {
+      id: 'what-is-negative-prompting',
       title: 'ما هو البرومبت السلبي',
       content: [
         '**البرومبت السلبي يعني إضافة قواعد "لا تفعل" صريحة إلى برومبتاتك جنبًا إلى جنب مع ما تريد من النموذج فعله.** بدلًا من وصف المخرجات المستهدفة فقط، تُحدّد أيضًا المواضيع والنبرات والتنسيقات أو الأخطاء غير المرغوبة.',
@@ -847,6 +857,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     whyItMatters: {
+      id: 'why-it-matters',
       title: 'لماذا يهم البرومبت السلبي',
       content: [
         '**البرومبت السلبي مهم لأن مخرجات العالم الحقيقي لا تقيّدها الأهداف فحسب، بل الحدود أيضًا — حدود العلامة التجارية والقانون والسلامة والجودة.** النتيجة الجيدة غالبًا ما تكون "صحيحة وضمن الحدود"، لا مجرد "مفيدة".',
@@ -864,6 +875,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     whatYouCanConstrain: {
+      id: 'what-you-can-constrain',
       title: 'ما الذي يمكنك تقييده بالبرومبتات السلبية',
       content: [
         '**يمكنك تطبيق البرومبت السلبي على المحتوى والأسلوب والبنية والسلوك.** الهدف أن تكون محددًا بما يكفي حتى يعرف النموذج بالضبط ما يجب تجنبه.',
@@ -882,6 +894,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     example: {
+      id: 'example',
       title: 'مثال: بدون وبوجود البرومبت السلبي',
       content: [
         '**يتضح تأثير البرومبت السلبي حين تقارن برومبتًا عامًا بآخر يتضمن قواعد "لا تفعل" صريحة.** إليك مثالًا على وصف المنتج.',
@@ -893,6 +906,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     whenToUse: {
+      id: 'when-to-use',
       title: 'متى تستخدم البرومبت السلبي',
       content: [
         '**يجب استخدام البرومبت السلبي كلما كانت لديك أمثلة واضحة على ما لا تريد رؤيته مطلقًا.** وهو مفيد بشكل خاص في سير العمل المتكررة حيث تظهر الأخطاء ذاتها باستمرار.',
@@ -928,6 +942,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     howToStart: {
+      id: 'how-to-use',
       title: 'كيفية استخدام البرومبت السلبي',
       numberedItems: [
         '**حدّد ما لا تريده في المخرجات: كلمات أو نبرات أو أساليب أو مقاربات محددة.** مثال: "لا تستخدم مصطلحات تسويقية. لا تقطع وعودًا. لا تشر إلى المنافسين."',
@@ -1111,7 +1126,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
     'O PromptQuorum permite blocos de restrições negativas reutilizáveis em todos os modelos — defina uma vez, aplique em todo lugar',
   ],
   toc: [
-    { label: 'Pontos-chave', anchor: 'key-takeaways' },
     { label: 'O que é o negative prompting', anchor: 'what-is-negative-prompting' },
     { label: 'Por que importa', anchor: 'why-it-matters' },
     { label: 'O que você pode restringir', anchor: 'what-you-can-constrain' },
@@ -1140,6 +1154,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
   sections: {
     whatIsNegativePrompting: {
+      id: 'what-is-negative-prompting',
       title: 'O que é o negative prompting',
       content: [
         '**O negative prompting significa adicionar regras explícitas de "não fazer" aos seus prompts junto com o que você quer que o modelo faça.** Em vez de descrever apenas a saída desejada, você também especifica tópicos, tons, formatos ou erros indesejados.',
@@ -1147,6 +1162,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     whyItMatters: {
+      id: 'why-it-matters',
       title: 'Por que o negative prompting importa',
       content: [
         '**O negative prompting importa porque as saídas do mundo real são restringidas não apenas por objetivos, mas por limites — de marca, legais, de segurança e de qualidade.** Um bom resultado frequentemente é "correto e dentro dos limites", não apenas "útil".',
@@ -1164,6 +1180,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     whatYouCanConstrain: {
+      id: 'what-you-can-constrain',
       title: 'O que você pode restringir com prompts negativos',
       content: [
         '**Você pode aplicar o negative prompting ao conteúdo, ao estilo, à estrutura e ao comportamento.** O objetivo é ser específico o suficiente para que o modelo saiba exatamente o que evitar.',
@@ -1182,6 +1199,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     example: {
+      id: 'example',
       title: 'Exemplo: sem e com negative prompting',
       content: [
         '**O efeito do negative prompting fica claro quando você compara um prompt genérico com um que codifica regras explícitas de "não fazer".** Aqui está um exemplo de descrição de produto.',
@@ -1193,6 +1211,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     whenToUse: {
+      id: 'when-to-use',
       title: 'Quando usar o negative prompting',
       content: [
         '**Você deve usar o negative prompting sempre que tiver exemplos claros do que nunca mais quer ver.** É especialmente útil em workflows repetíveis onde os mesmos erros continuam aparecendo.',
@@ -1228,6 +1247,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     howToStart: {
+      id: 'how-to-use',
       title: 'Como usar o negative prompting',
       numberedItems: [
         '**Identifique o que você não quer na saída: palavras, tons, estilos ou abordagens específicos.** Exemplo: "Não usar palavras de marketing. Não fazer promessas. Não referenciar concorrentes."',
@@ -1423,7 +1443,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
     { label: 'Conformité des Modèles', anchor: 'model-compliance' },
     { label: 'Exemple : Sans et Avec Guidage Négatif', anchor: 'example' },
     { label: 'Quand Utiliser le Guidage Négatif', anchor: 'when-to-use' },
-    { label: 'Erreurs Courantes', anchor: 'common-mistakes' },
     { label: 'Comment Utiliser le Guidage Négatif', anchor: 'how-to-use' },
     { label: 'Questions Fréquemment Posées', anchor: 'faq' },
     { label: 'Sources', anchor: 'sources' },
@@ -1463,6 +1482,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     whatIsNegativePrompting: {
+      id: 'what-is-negative-prompting',
       title: 'Qu\'est-ce que le Guidage Négatif',
       content: [
         '**Le guidage négatif consiste à ajouter des règles explicites « ne pas faire » à une invite, aux côtés d\'instructions positives.** Ces règles contraignent le contenu (pas de conseils médicaux), la tonalité (pas de mots hyperboliques), la structure (pas de listes à puces), ou le comportement (jamais fabriquer de données).',
@@ -1476,6 +1496,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       blockquoteSource: 'Modèle de garde-fou',
     },
     whyItMatters: {
+      id: 'why-it-matters',
       title: 'Pourquoi C\'est Important',
       content: [
         '**Le guidage négatif est important parce que les sorties réelles sont contraintes non seulement par des objectifs, mais par des limites—marque, légalité, sécurité, qualité.** Un bon résultat est souvent « correct ET dans les limites », pas simplement « utile ».',
@@ -1489,6 +1510,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     whatYouCanConstrain: {
+      id: 'what-you-can-constrain',
       title: 'Ce Que Vous Pouvez Contraindre',
       content: [
         '**Vous pouvez appliquer le guidage négatif au contenu, à la tonalité, à la structure et au comportement.** L\'objectif est d\'être suffisamment spécifique pour que le modèle sache exactement ce à éviter.',
@@ -1688,6 +1710,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     sources: {
+      id: 'sources',
       items: [
         'Schulhoff, S., et al. (2024). « The Prompt Report: A Systematic Survey of Prompting Techniques. » arXiv:2406.06608',
         'OpenAI. (2026). « Prompt Engineering Guide. » [platform.openai.com/docs/guides/prompt-engineering](https://platform.openai.com/docs/guides/prompt-engineering)',
@@ -1776,7 +1799,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
     { label: 'モデル別コンプライアンス', anchor: 'model-compliance' },
     { label: '例：なし／あり', anchor: 'example' },
     { label: 'いつ使うか', anchor: 'when-to-use' },
-    { label: 'よくある間違い', anchor: 'common-mistakes' },
     { label: '使い方', anchor: 'how-to-use' },
     { label: 'よくある質問', anchor: 'faq' },
     { label: '参考資料', anchor: 'sources' },
@@ -1816,6 +1838,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     whatIsNegativePrompting: {
+      id: 'what-is-negative-prompting',
       title: 'ネガティブプロンプティングとは',
       content: [
         '**ネガティブプロンプティングとは、プロンプトに明示的な「してはいけないこと」ルールを追加することです。** これらのルールはコンテンツ（医学的助言なし）、トーン（大げさな言葉なし）、構造（箇条書きなし）、または振る舞い（データを作らない）を制約します。',
@@ -1829,6 +1852,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       blockquoteSource: '保護柵パターン',
     },
     whyItMatters: {
+      id: 'why-it-matters',
       title: 'なぜ重要なのか',
       content: [
         '**ネガティブプロンプティングが重要なのは、実世界の出力は目標だけでなく制限（ブランド、法務、セキュリティ、品質）で制約されるからです。** よい結果はしばしば「正確かつ制限内」です。',
@@ -1842,6 +1866,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     whatYouCanConstrain: {
+      id: 'what-you-can-constrain',
       title: '制約できる内容',
       content: [
         '**ネガティブプロンプティングをコンテンツ、トーン、構造、振る舞いに適用できます。** 目標は、モデルが正確に何を避けるべきかを知るのに十分な具体性です。',
@@ -2041,6 +2066,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     sources: {
+      id: 'sources',
       items: [
         'Schulhoff, S., et al. (2024). "The Prompt Report: A Systematic Survey of Prompting Techniques." arXiv:2406.06608',
         'OpenAI. (2026). "Prompt Engineering Guide." [platform.openai.com/docs/guides/prompt-engineering](https://platform.openai.com/docs/guides/prompt-engineering)',
@@ -2196,7 +2222,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
     '제약을 통한 컴플라이언스: GDPR, HIPAA, SOC2 감사는 네거티브 프롬프팅이 템플릿에 내장되면 더 쉬워집니다 — 위반은 생성 단계에서 방지되고, 하류에서 발견되지 않습니다',
   ],
   toc: [
-    { label: '핵심 요약', anchor: 'key-takeaways' },
     { label: '네거티브 프롬프팅이란', anchor: 'what-is-negative-prompting' },
     { label: '중요한 이유', anchor: 'why-it-matters' },
     { label: '제한할 수 있는 것', anchor: 'what-you-can-constrain' },
@@ -2226,6 +2251,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
   },
   sections: {
     whatIsNegativePrompting: {
+      id: 'what-is-negative-prompting',
       title: '네거티브 프롬프팅이란',
       content: [
         '**네거티브 프롬프팅이란 모델에게 원하는 것을 지시하는 것과 함께 프롬프트에 명시적인 "금지" 규칙을 추가하는 것을 의미합니다.** 목표 출력만 설명하는 대신, 원하지 않는 주제, 어조, 형식 또는 실수도 지정합니다.',
@@ -2233,6 +2259,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     whyItMatters: {
+      id: 'why-it-matters',
       title: '네거티브 프롬프팅이 중요한 이유',
       content: [
         '**네거티브 프롬프팅이 중요한 이유는 실제 출력이 목표뿐만 아니라 한계—브랜드, 법적, 안전 및 품질 제약—에 의해서도 제한되기 때문입니다.** 좋은 결과는 종종 "단순히 유용한" 것이 아니라 "정확하고 경계 내에" 있는 것입니다.',
@@ -2250,6 +2277,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     whatYouCanConstrain: {
+      id: 'what-you-can-constrain',
       title: '네거티브 프롬프트로 제한할 수 있는 것',
       content: [
         '**네거티브 프롬프팅을 내용, 스타일, 구조 및 동작에 적용할 수 있습니다.** 목표는 모델이 정확히 무엇을 피해야 하는지 알 수 있을 만큼 구체적이어야 한다는 것입니다.',
@@ -2268,6 +2296,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     example: {
+      id: 'example',
       title: '예시: 네거티브 프롬프팅 전후 비교',
       content: [
         '**네거티브 프롬프팅의 효과는 일반적인 프롬프트와 명시적인 "금지" 규칙을 인코딩한 프롬프트를 비교할 때 명확해집니다.** 다음은 제품 설명 예시입니다.',
@@ -2279,6 +2308,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     whenToUse: {
+      id: 'when-to-use',
       title: '네거티브 프롬프팅 사용 시기',
       content: [
         '**다시는 보고 싶지 않은 것에 대한 명확한 예시가 있을 때마다 네거티브 프롬프팅을 사용해야 합니다.** 같은 실수가 계속 반복되는 반복 가능한 워크플로에서 특히 유용합니다.',
@@ -2314,6 +2344,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     howToStart: {
+      id: 'how-to-use',
       title: '네거티브 프롬프팅 사용 방법',
       numberedItems: [
         '**출력에서 원하지 않는 것을 파악하십시오: 특정 단어, 어조, 스타일 또는 접근 방식.** 예시: \'마케팅 전문 용어를 사용하지 마십시오. 약속을 하지 마십시오. 경쟁사를 언급하지 마십시오.\'',

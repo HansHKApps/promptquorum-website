@@ -1005,10 +1005,6 @@ for filename, review in reviews:
         { label: 'Escrita e criação de conteúdo', anchor: '#writing' },
         { label: 'Desenvolvimento de software e revisão de código', anchor: '#coding' },
         { label: 'RAG local (perguntas sobre documentos)', anchor: '#rag' },
-        { label: 'Agentes IA e workflows', anchor: '#agents' },
-        { label: 'Servidor API multi-usuário', anchor: '#api' },
-        { label: 'Fine-tuning e pesquisa', anchor: '#finetuning' },
-        { label: 'Chat em tempo real (streaming)', anchor: '#streaming' },
         { label: 'FAQ', anchor: '#faq' },
       ],
       sections: {

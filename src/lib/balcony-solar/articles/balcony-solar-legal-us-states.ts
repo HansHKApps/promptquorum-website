@@ -67,7 +67,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'States to Watch', anchor: '#states-to-watch' },
       { label: 'How to Check Your Utility', anchor: '#check-your-utility' },
       { label: 'FAQ', anchor: '#faq' },
-      { label: 'Related Reading', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -216,7 +215,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Beobachtungswerte Bundesstaaten', anchor: '#states-to-watch' },
       { label: 'So prüfen Sie Ihren Netzbetreiber', anchor: '#check-your-utility' },
       { label: 'Häufige Fragen', anchor: '#faq' },
-      { label: 'Weiterführende Artikel', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -365,7 +363,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Estados a seguir', anchor: '#states-to-watch' },
       { label: 'Cómo consultar a tu compañía eléctrica', anchor: '#check-your-utility' },
       { label: 'Preguntas frecuentes', anchor: '#faq' },
-      { label: 'Lecturas relacionadas', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -514,7 +511,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Estados para acompanhar', anchor: '#states-to-watch' },
       { label: 'Como verificar sua concessionária', anchor: '#check-your-utility' },
       { label: 'Perguntas frequentes', anchor: '#faq' },
-      { label: 'Leituras relacionadas', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -663,7 +659,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'ولايات يجب متابعتها', anchor: '#states-to-watch' },
       { label: 'كيفية التحقق من شركة الكهرباء لديك', anchor: '#check-your-utility' },
       { label: 'الأسئلة الشائعة', anchor: '#faq' },
-      { label: 'قراءات ذات صلة', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -812,7 +807,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '注目すべき州', anchor: '#states-to-watch' },
       { label: '電力会社への確認方法', anchor: '#check-your-utility' },
       { label: 'よくある質問', anchor: '#faq' },
-      { label: '関連記事', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -961,7 +955,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '值得关注的州', anchor: '#states-to-watch' },
       { label: '如何核实你的电力公司政策', anchor: '#check-your-utility' },
       { label: '常见问题', anchor: '#faq' },
-      { label: '相关阅读', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -1110,7 +1103,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'États à surveiller', anchor: '#states-to-watch' },
       { label: 'Comment vérifier auprès de votre fournisseur d\'électricité', anchor: '#check-your-utility' },
       { label: 'FAQ', anchor: '#faq' },
-      { label: 'Lectures complémentaires', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -1259,7 +1251,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '주목할 주', anchor: '#states-to-watch' },
       { label: '전력회사 확인 방법', anchor: '#check-your-utility' },
       { label: '자주 묻는 질문', anchor: '#faq' },
-      { label: '관련 글', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {

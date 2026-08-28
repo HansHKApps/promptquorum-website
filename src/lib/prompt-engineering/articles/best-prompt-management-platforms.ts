@@ -240,6 +240,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       portkey: {
+        id: 'portkey-llm-gateway',
         title: 'Portkey: LLM Gateway & Routing',
         content:
           '**Portkey is a gateway that routes requests across multiple LLMs with fallback and failover.** Send one request to Portkey, it routes to GPT-5.6, and if that fails, automatically falls back to Claude. Also handles prompt versioning, cost aggregation, and API key management. Useful for teams building resilient LLM applications. Portkey also added a native MCP Gateway (OAuth 2.1 authentication for MCP-server traffic) in 2026, and Palo Alto Networks completed its acquisition of Portkey on May 29, 2026, and Portkey now operates as the Prisma AIRS AI Gateway — enterprise buyers should confirm which entity holds their contract and support agreement.',
@@ -250,11 +251,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       buildVsBuy: {
+        id: 'build-vs-buy',
         title: 'Build vs Buy: Should You Build Your Own?',
         content:
           '**Building a prompt management system takes 2-4 weeks of engineering time.** You need: a database for prompts, versioning logic, a REST API for fetching, permission controls, audit logs, and a web UI. Platforms handle all this. Build only if you need features platforms do not offer (e.g., custom approval workflows, integration with internal tools, data residency). For most teams, buying is faster and cheaper.',
       },
       comparisonTable: {
+        id: 'comparison-table',
         title: 'Comparison Table: Feature Matrix',
         content: '**As of July 2026, here is the feature breakdown:**',
         columns: [
@@ -309,6 +312,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       howToChoose: {
+        id: 'how-to-choose',
         title: 'How to Choose Your Stack',
         content:
           '**Start with team size and workflow stage.** Startups (<5 people): just use Git + Vellum. Small teams (5-20): PromptHub (versioning) + Vellum (production). Large teams (20+): PromptHub + Vellum + PromptLayer + LangSmith. Add Portkey if you need multi-LLM routing.',
@@ -335,6 +339,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
           {
@@ -655,11 +660,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       buildVsBuy: {
+        id: 'build-vs-buy',
         title: 'Bauen vs. Kaufen: Sollte ich ein System selbst bauen?',
         content:
           '**Selbstbau eines Prompt-Management-Systems erfordert 2–4 Wochen Ingenieursarbeit.** Sie benötigen: eine Datenbank für Prompts, Versionierungs-Logik, eine REST API zum Abrufen, Zugriffskontrolle, Audit Logs und eine Web UI. Plattformen handhaben all das. Bauen Sie nur, wenn Sie Features benötigen, die Plattformen nicht anbieten (z. B. Custom Approval Workflows, Integration mit internen Tools, Datenresidenz). Für die meisten Teams ist Kaufen schneller und günstiger.',
       },
       comparisonTable: {
+        id: 'comparison-table',
         title: 'Vergleichstabelle: Feature Matrix',
         content: '**Stand Juli 2026, hier ist die Feature-Übersicht:**',
         columns: [
@@ -714,11 +721,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       howToChoose: {
+        id: 'how-to-choose',
         title: 'Wie wähle ich meinen Stack?',
         content:
           '**Beginnen Sie mit Team-Größe und Workflow-Phase.** Startups (<5 Personen): nutzen Sie Git + Vellum. Kleine Teams (5–20): PromptHub (Versionierung) + Vellum (Production). Große Teams (20+): PromptHub + Vellum + PromptLayer + LangSmith. Fügen Sie Portkey hinzu, wenn Sie Multi-LLM Routing benötigen.',
       },
       commonMistakes: {
+        id: 'common-mistakes',
         title: 'Häufige Fehler',
         items: [
           'Git für Prompt-Versionierung nutzen – Git behandelt Prompts als Code. Plattformen behandeln Prompts als Parameter mit Metadaten (Modell, Temperature, Token Limits). Nutzen Sie statt dessen eine Prompt-Plattform.',
@@ -728,6 +737,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       relatedReading: {
+        id: 'related-reading',
         title: 'Weiterführende Ressourcen',
         items: [
           '[Die besten Prompt Engineering Tools 2026: Nach Use Case bewertet](/de/prompt-engineering/best-prompt-engineering-tools-2026)',
@@ -739,6 +749,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
           {
@@ -784,6 +795,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       sources: {
+        id: 'sources',
         title: 'Quellen',
         items: [
           '[PromptHub Dokumentation](https://prompthub.com/docs)',
@@ -2414,6 +2426,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       portkey: {
+        id: 'portkey-llm-gateway',
         title: 'Portkey: Passerelle LLM & routage',
         content:
           "**Portkey est une passerelle qui route les requêtes entre plusieurs LLMs avec fallback.** Envoyez une requête à Portkey, elle route vers GPT-5.6, si cela échoue, bascule automatiquement à Claude. Gère aussi le versioning des prompts, l'agrégation des coûts et la gestion des clés API. Utile pour construire des applications LLM résilientes. Portkey a aussi ajouté une MCP Gateway native (authentification OAuth 2.1 pour le trafic des serveurs MCP) en 2026, et Palo Alto Networks a finalisé l'acquisition de Portkey le 29 mai 2026, et Portkey opère désormais sous le nom Prisma AIRS AI Gateway — les acheteurs enterprise doivent vérifier quelle entité gère leur contrat et leur support.",
@@ -2424,11 +2437,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       buildVsBuy: {
+        id: 'build-vs-buy',
         title: 'Construire vs. Acheter: Dois-je construire mon propre système?',
         content:
           "**Construire un système de gestion des prompts prend 2–4 semaines d'ingénierie.** Vous avez besoin: base de données, logique de versioning, API REST, contrôle d'accès, logs d'audit et UI web. Les plateformes le font. Construisez seulement si vous avez besoin de fonctionnalités que les plateformes n'offrent pas. Acheter est plus rapide et moins cher pour la plupart.",
       },
       comparisonTable: {
+        id: 'comparison-table',
         title: 'Tableau comparatif: Matrice de fonctionnalités',
         content:
           '**En juillet 2026, voici la répartition des fonctionnalités:**',
@@ -2484,11 +2499,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       howToChoose: {
+        id: 'how-to-choose',
         title: 'Comment choisir votre pile?',
         content:
           "**Commencez par la taille de l'équipe et la phase du workflow.** Startups (<5): Git + Vellum. Petites équipes (5–20): PromptHub (versioning) + Vellum (production). Grandes équipes (20+): PromptHub + Vellum + PromptLayer + LangSmith. Ajoutez Portkey pour le routage multi-LLM.",
       },
       commonMistakes: {
+        id: 'common-mistakes',
         title: 'Erreurs courantes',
         items: [
           'Utiliser Git pour le versioning des prompts – Git traite les prompts comme du code. Les plateformes les traitent comme des paramètres avec métadonnées. Utilisez une plateforme à la place.',
@@ -2498,6 +2515,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       relatedReading: {
+        id: 'related-reading',
         title: 'Lectures connexes',
         items: [
           "[Meilleures outils d'ingénierie des prompts 2026: Classées par cas d'usage](/fr/prompt-engineering/best-prompt-engineering-tools-2026)",
@@ -2509,6 +2527,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
           {
@@ -2783,6 +2802,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       whatIsPromptManagement: {
+        id: 'what-is-prompt-management',
         title: 'プロンプト管理とは?',
         content:
           '**「プロンプトはどこに保存するか」の問題を解決します。**プラットフォームなしだと、チームはノートブックでアドホックに編集、履歴を失う、悪い変更を戻せない、監査証跡がありません。管理プラットフォームは次を実現: バージョニング（変更を追跡）、チーム協業（reviewとapprovalワークフロー）、デプロイメント（本番に提供）、ロギング（使用と費用を追跡）。2026年7月現在、ほとんどのチームは手動でプロンプト管理。ガバナンスとコスト追跡が重要になり、採用が加速。',
@@ -2838,11 +2858,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       buildVsBuy: {
+        id: 'build-vs-buy',
         title: '構築 vs. 購入: 自分で構築すべき?',
         content:
           '**プロンプト管理システムの構築には2～4週間のエンジニアリング。**必要: プロンプト用DB、バージョニングロジック、取得用REST API、権限管理、監査ログ、Web UI。プラットフォームはこれをすべて提供。プラットフォームが提供しないカスタム機能が必要な場合のみ構築。ほとんどのチームは購入が速く、安い。',
       },
       comparisonTable: {
+        id: 'comparison-table',
         title: '比較表: 機能マトリクス',
         content: '**2026年7月現在の機能分類:**',
         columns: [
@@ -2897,11 +2919,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       howToChoose: {
+        id: 'how-to-choose',
         title: 'スタック選択ガイド',
         content:
           '**チームサイズとワークフロー段階で判断。**スタートアップ（<5人）: Git + Vellum。小規模チーム（5～20）: PromptHub（バージョニング） + Vellum（本番）。大規模チーム（20+）: PromptHub + Vellum + PromptLayer + LangSmith。マルチLLMルーティングが必要ならPortkeyを追加。',
       },
       commonMistakes: {
+        id: 'common-mistakes',
         title: 'よくある間違い',
         items: [
           'Gitでプロンプトをバージョニング – Gitはプロンプトをコードのように扱う。プラットフォームはパラメータとしてメタデータ（モデル、温度、トークン上限）で扱う。プロンプトプラットフォームを使用。',
@@ -2911,6 +2935,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       relatedReading: {
+        id: 'related-reading',
         title: '関連記事',
         items: [
           '[プロンプトエンジニアリング最高のツール 2026: ユースケース別ランク](/ja/prompt-engineering/best-prompt-engineering-tools-2026)',
@@ -2922,6 +2947,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
           {
@@ -2967,6 +2993,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       sources: {
+        id: 'sources',
         title: 'ソース',
         items: [
           '[PromptHub ドキュメント](https://prompthub.com/docs)',
@@ -3184,6 +3211,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       whatIsPromptManagement: {
+        id: 'what-is-prompt-management',
         title: '什么是提示词管理?',
         content:
           '**提示词管理平台解决"我的提示词存储在哪里"的问题。** 没有平台的情况下，团队在笔记本中临时编辑提示词、丢失版本历史、无法回滚错误更改、没有审计跟踪。管理平台实现: 版本控制（追踪每个变化）、团队协作（代码审查和批准工作流）、部署（将提示词投入生产）、日志（追踪使用和成本）。截至2026年7月，大多数团队仍手动管理提示词。随着治理和成本跟踪变得关键，采用正在加速。',
@@ -3199,6 +3227,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       vellum: {
+        id: 'vellum-production-deployment',
         title: 'Vellum: 生产部署',
         content:
           '**Vellum是唯一为生产部署而构建的平台。** 对提示词进行A/B测试，在变体间路由流量（50/50拆分、灰度发布），测量延迟和准确性，然后推出胜者。包括实时显示性能下降的监控仪表板。与大多数LLM API集成（OpenAI、Anthropic、Cohere）。截至2026年7月，Vellum的公开主页主打一款独立的消费级产品——个人AI助理"Vellum: Your Personal Intelligence"；注册前请确认您账户中的生产部署方案仍然有效。',
@@ -3229,6 +3258,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       portkey: {
+        id: 'portkey-llm-gateway',
         title: 'Portkey: LLM网关 & 路由',
         content:
           '**Portkey是在多个LLM间路由请求并具有故障转移的网关。** 向Portkey发送一个请求，它路由到GPT-5.6，如果失败，自动故障转移到Claude。还处理提示词版本控制、成本聚合和API密钥管理。对于构建弹性LLM应用的团队很有用。Portkey于2026年新增原生MCP网关（面向MCP服务器流量的OAuth 2.1身份验证），Palo Alto Networks于2026年5月29日完成对Portkey的收购，Portkey现已更名为Prisma AIRS AI Gateway运营——企业买家应确认由哪个实体负责其合同与支持。',
@@ -3239,11 +3269,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       buildVsBuy: {
+        id: 'build-vs-buy',
         title: '自建 vs. 购买: 应该自己构建系统吗?',
         content:
           '**构建提示词管理系统需要2-4周的工程工作。** 需要: 提示词数据库、版本控制逻辑、REST API用于获取、权限控制、审计日志、Web UI。平台处理所有这些。只有在需要平台不提供的功能时才构建。对大多数团队来说，购买更快更便宜。',
       },
       comparisonTable: {
+        id: 'comparison-table',
         title: '对比表: 功能矩阵',
         content: '**截至2026年7月，以下是功能分类:**',
         columns: ['平台', '版本控制', '部署', '团队功能', '成本跟踪', '定价'],
@@ -3291,11 +3323,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       howToChoose: {
+        id: 'how-to-choose',
         title: '如何选择您的技术栈',
         content:
           '**从团队规模和工作流阶段开始。** 创业公司（<5人）: 使用Git + Vellum。小团队（5-20）: PromptHub（版本控制）+ Vellum（生产）。大团队（20+）: PromptHub + Vellum + PromptLayer + LangSmith。如需多LLM路由则添加Portkey。',
       },
       commonMistakes: {
+        id: 'common-mistakes',
         title: '常见错误',
         items: [
           '使用Git进行提示词版本控制 — Git将提示词视为代码。平台将提示词视为带元数据的参数（模型、温度、代币限制）。改用提示词平台。',
@@ -3305,6 +3339,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       relatedReading: {
+        id: 'related-reading',
         title: '相关阅读',
         items: [
           '[提示工程最佳工具 2026: 按用例排名](/zh/prompt-engineering/best-prompt-engineering-tools-2026)',
@@ -3316,6 +3351,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       faq: {
+        id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
           {
@@ -3361,6 +3397,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       sources: {
+        id: 'sources',
         title: '资源',
         items: [
           '[PromptHub文档](https://prompthub.com/docs)',

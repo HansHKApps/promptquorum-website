@@ -430,6 +430,7 @@ schema: {
           codeLanguage: 'bash',
         },
         commands: {
+          id: 'useful-ollama-commands',
           title: 'Comandos útiles de Ollama',
           rows: [
             { 'Comando': 'ollama list', 'Qué hace': 'Muestra todos los modelos descargados y sus tamaños' },
@@ -722,6 +723,7 @@ schema: {
           codeLanguage: 'bash',
         },
         commands: {
+          id: 'useful-ollama-commands',
           title: 'أوامر مفيدة في Ollama',
           rows: [
             { 'الأمر': 'ollama list', 'ما يفعله': 'يعرض كل النماذج المنزَّلة وأحجامها' },
@@ -2610,6 +2612,7 @@ schema: {
           codeLanguage: 'bash',
         },
         commands: {
+          id: 'useful-ollama-commands',
           title: '유용한 Ollama 명령어',
           rows: [
             { '명령어': 'ollama list', '기능': '다운로드된 모든 모델과 크기 표시' },

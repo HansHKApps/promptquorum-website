@@ -24,8 +24,6 @@ export const article: Partial<Record<Language, PEArticle>> = { en: { theme: 'Fra
     { label: '프롬프트 엔지니어링이란?', anchor: 'what-is-prompt-engineering' },
     { label: 'RAG란?', anchor: 'what-is-rag' },
     { label: '나란히 비교', anchor: 'comparison' },
-    { label: '프롬프트 엔지니어링: 강점과 한계', anchor: 'prompt-engineering-strengths-limits' },
-    { label: 'RAG: 강점과 한계', anchor: 'rag-strengths-limits' },
     { label: '비용 및 지연 시간 트레이드오프', anchor: 'cost-latency' },
     { label: '의사결정 프레임워크', anchor: 'decision-framework' },
     { label: '흔한 실수', anchor: 'common-mistakes' },
@@ -148,14 +146,17 @@ export const article: Partial<Record<Language, PEArticle>> = { en: { theme: 'Fra
       ]
     },
     whatIsPromptEngineering: {
+      id: 'what-is-prompt-engineering',
       title: '프롬프트 엔지니어링이란?',
       content: '**프롬프트 엔지니어링은 더 나은 LLM 응답을 얻기 위해 텍스트 프롬프트를 최적화하는 것입니다.** 모델을 변경하거나 외부 데이터를 추가하지 않습니다. 프롬프트 자체를 변경합니다. 지시 명확성, 예시, 출력 형식, 톤, 단계별 추론이 포함됩니다. 예시: "JSON 형식으로 답변하십시오"(형식), "다음은 3가지 예시입니다"(few-shot), "단계별로 생각하십시오"(추론 구조). 프롬프트 엔지니어링이 효과적인 이유는 LLM이 문구에 민감하기 때문입니다. 동일한 질문도 다르게 표현하면 다른 품질의 응답이 나옵니다.'
     },
     whatIsRAG: {
+      id: 'what-is-rag',
       title: 'RAG란?',
       content: '**RAG(Retrieval-Augmented Generation)는 외부 지식 베이스에서 관련 문서를 검색한 후 이를 LLM 프롬프트에 입력합니다.** LLM은 프롬프트와 검색된 컨텍스트 모두를 기반으로 응답을 생성합니다. 예시: 사용자가 "회사 반품 정책이 무엇입니까?"라고 질문 → RAG가 정책 문서를 검색 → LLM이 해당 문서를 기반으로 답변 생성. RAG는 "사실에 대한 환각" 문제를 해결합니다. LLM이 추측하는 대신 문서를 참조합니다.'
     },
     comparison: {
+      id: 'comparison',
       title: '나란히 비교',
       content: '다음은 직접 비교입니다:',
       columns: ['항목', '프롬프트 엔지니어링', 'RAG'],
@@ -178,14 +179,17 @@ export const article: Partial<Record<Language, PEArticle>> = { en: { theme: 'Fra
       content: '**강점:** (1) 환각 제거 — 응답이 검색된 문서에 근거합니다. (2) 실시간 지식 — 검색을 통해 오늘의 데이터, 재무 보고서, 이메일을 가져올 수 있습니다. (3) 개인화 — 사용자별 문서를 검색할 수 있습니다. (4) 컴플라이언스 — 모델이 접근하는 데이터를 제어할 수 있습니다. (5) 설명 가능성 — 어떤 문서가 인용되었는지 표시할 수 있습니다.\n\n**한계:** (1) 검색 품질이 중요 — 검색 품질이 낮으면 답변도 낮아집니다. (2) 높은 비용 — 검색 + 임베딩 + 더 긴 프롬프트 = 2~5배 비용 증가. (3) 높은 지연 시간 — 검색에 500ms~2s가 추가됩니다. (4) 인프라 복잡성 — 벡터 DB, 임베딩 모델, 검색 로직이 필요합니다. (5) 여전히 환각 가능 — 검색된 문서가 불완전하거나 상충될 경우 LLM이 여전히 실수할 수 있습니다.'
     },
     costLatency: {
+      id: 'cost-latency',
       title: '비용 및 지연 시간 트레이드오프',
       content: '**비용:** 프롬프트 엔지니어링은 LLM 토큰 비용만 발생합니다(요청당 $0.001~0.01). RAG는 다음이 추가됩니다: (1) 임베딩 API(1K 토큰당 $0.0001~0.001), (2) 벡터 DB 스토리지(쿼리당 $0.01~0.10), (3) 더 긴 프롬프트(컨텍스트 윈도우에 더 많은 토큰). 총 RAG 비용: 요청당 $0.005~0.05(2~5배 더 많음). 월 100만 요청 기준: PE는 $1,000~10,000. RAG는 $5,000~50,000.\n\n**지연 시간:** PE는 ~200ms(단일 LLM 호출). RAG는 ~1~3s: (1) 쿼리 임베딩: 100~300ms, (2) 벡터 DB 검색: 10~100ms, (3) 문서 검색: 100~500ms, (4) LLM 생성: 500~2000ms. 트레이드오프: RAG는 느리지만 지식 작업에서 더 정확합니다.'
     },
     decisionFramework: {
+      id: 'decision-framework',
       title: '의사결정 프레임워크',
       content: '**3가지 질문을 하십시오:**\n\n**1. LLM이 이미 해당 지식을 보유하고 있습니까?** 작업이 일반적인 추론(수학, 논리, 창의적 글쓰기, 코딩)이라면 LLM이 충분히 알고 있을 가능성이 높습니다. 프롬프트 엔지니어링을 사용하십시오.\n\n작업에 다음이 필요한 경우: 회사 문서, 실시간 데이터, 도메인 전문 지식, 전용 정보 — LLM은 이를 보유하지 않습니다. RAG를 사용하십시오.\n\n**2. 비용/지연 시간 허용 범위는 어느 정도입니까?** 응답 시간이 500ms 미만이고 최소 비용이 필요한 경우(예: 대용량 공개 API), 프롬프트 엔지니어링을 사용하십시오. 1~3s와 2~5배 비용 증가를 감당할 수 있다면 RAG를 사용하십시오.\n\n**3. 사실 정확도가 얼마나 중요합니까?** 환각이 허용되지 않는 경우(법률, 금융, 의료 조언), RAG를 사용하십시오. 어느 정도의 환각이 허용되는 경우(브레인스토밍, 창의적 글쓰기), 프롬프트 엔지니어링을 사용하십시오.\n\n**의사결정 트리:**\n- 지식 작업 + 정확도 중요? → RAG\n- 일반적인 추론? → 프롬프트 엔지니어링\n- 둘 다 필요? → RAG + 프롬프트 엔지니어링(컨텍스트 검색 후 제시 방법 최적화)'
     },
     commonMistakes: {
+      id: 'common-mistakes',
       title: '흔한 실수',
       items: [
         '프롬프트 엔지니어링으로 충분한 작업에 RAG를 사용하는 것 — 불필요한 비용과 지연 시간을 추가합니다. 예시: GPT-5.5에게 "프랑스의 수도는 어디입니까?"라고 묻는 데 RAG가 필요하지 않습니다.',
@@ -197,10 +201,12 @@ export const article: Partial<Record<Language, PEArticle>> = { en: { theme: 'Fra
       ]
     },
     combine: {
+      id: 'combine',
       title: '두 가지를 함께 사용할 수 있는가?',
       content: '**예 — 그리고 그렇게 해야 합니다.** 지식 집약적 애플리케이션을 위한 최적의 접근 방식은 다음과 같습니다: (1) RAG(관련 문서 검색), (2) 프롬프트 엔지니어링(컨텍스트가 LLM에 제시되는 방식 최적화). 예시: 지원 문서 검색 → 컨텍스트 형식을 프롬프트 엔지니어링으로 최적화 → LLM이 유용한 응답 생성. 이는 RAG의 정확성과 프롬프트 엔지니어링의 명확성을 결합합니다. 대부분의 프로덕션 시스템은 두 가지를 모두 사용합니다.'
     },
     relatedReading: {
+      id: 'related-reading',
       title: '관련 읽기',
       items: [
         '[프롬프트 엔지니어링이란? 초보자 가이드](/prompt-engineering/what-is-prompt-engineering)',
@@ -258,6 +264,7 @@ export const article: Partial<Record<Language, PEArticle>> = { en: { theme: 'Fra
       ]
     },
     sources: {
+      id: 'sources',
       title: '참고 자료',
       items: [
         '[프롬프트 엔지니어링 가이드 - OpenAI](https://platform.openai.com/docs/guides/prompt-engineering)',

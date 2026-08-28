@@ -50,7 +50,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Country Pages', anchor: '#country-pages' },
       { label: 'How These Rules Are Changing', anchor: '#how-rules-are-changing' },
       { label: 'FAQ', anchor: '#faq' },
-      { label: 'Related Reading', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -176,7 +175,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Länderseiten', anchor: '#country-pages' },
       { label: 'Wie sich diese Regeln ändern', anchor: '#how-rules-are-changing' },
       { label: 'Häufige Fragen', anchor: '#faq' },
-      { label: 'Weiterführende Artikel', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -302,7 +300,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Páginas por país', anchor: '#country-pages' },
       { label: 'Cómo están cambiando estas normas', anchor: '#how-rules-are-changing' },
       { label: 'Preguntas frecuentes', anchor: '#faq' },
-      { label: 'Lecturas relacionadas', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -428,7 +425,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Páginas por país', anchor: '#country-pages' },
       { label: 'Como essas regras estão mudando', anchor: '#how-rules-are-changing' },
       { label: 'Perguntas frequentes', anchor: '#faq' },
-      { label: 'Leituras relacionadas', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -554,7 +550,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'صفحات الدول', anchor: '#country-pages' },
       { label: 'كيف تتغير هذه القواعد', anchor: '#how-rules-are-changing' },
       { label: 'الأسئلة الشائعة', anchor: '#faq' },
-      { label: 'قراءات ذات صلة', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -680,7 +675,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '国別ページ', anchor: '#country-pages' },
       { label: 'これらのルールはどう変化しているか', anchor: '#how-rules-are-changing' },
       { label: 'よくある質問', anchor: '#faq' },
-      { label: '関連記事', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -806,7 +800,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '各国专页', anchor: '#country-pages' },
       { label: '这些规则如何变化', anchor: '#how-rules-are-changing' },
       { label: '常见问题', anchor: '#faq' },
-      { label: '相关阅读', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -932,7 +925,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Pages par pays', anchor: '#country-pages' },
       { label: 'Comment ces règles évoluent', anchor: '#how-rules-are-changing' },
       { label: 'FAQ', anchor: '#faq' },
-      { label: 'Lectures complémentaires', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -1058,7 +1050,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '국가별 페이지', anchor: '#country-pages' },
       { label: '규정은 어떻게 변화하고 있는가', anchor: '#how-rules-are-changing' },
       { label: '자주 묻는 질문', anchor: '#faq' },
-      { label: '관련 읽을거리', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {

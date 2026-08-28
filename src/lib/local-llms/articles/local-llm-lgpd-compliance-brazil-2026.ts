@@ -20,7 +20,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     primaryTerm: 'LGPD local AI compliance',
     toc: [
-      { label: 'Key Takeaways', anchor: '#tldr' },
+      { label: 'Key Takeaways', anchor: '#key-takeaways' },
       { label: 'What Is the LGPD?', anchor: '#lgpd-overview' },
       { label: 'Why Cloud AI Struggles with LGPD', anchor: '#cloud-ai-failures' },
       { label: 'How Local AI Addresses Data Sovereignty', anchor: '#local-llm-solution' },
@@ -222,7 +222,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     primaryTerm: 'LGPD local AI compliance',
     toc: [
-      { label: 'Pontos principais', anchor: '#tldr' },
+      { label: 'Pontos principais', anchor: '#key-takeaways' },
       { label: 'O que é a LGPD?', anchor: '#lgpd-overview' },
       { label: 'Por que a IA na nuvem tem dificuldade com a LGPD', anchor: '#cloud-ai-failures' },
       { label: 'Como a IA local resolve a soberania de dados', anchor: '#local-llm-solution' },
@@ -425,7 +425,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     primaryTerm: 'LGPD local AI compliance',
     toc: [
-      { label: 'Zusammenfassung', anchor: '#tldr' },
+      { label: 'Zusammenfassung', anchor: '#key-takeaways' },
       { label: 'Was ist die LGPD?', anchor: '#lgpd-overview' },
       { label: 'Warum Cloud-KI mit der LGPD kämpft', anchor: '#cloud-ai-failures' },
       { label: 'Wie lokale KI Datensouveränität adressiert', anchor: '#local-llm-solution' },
@@ -633,7 +633,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     primaryTerm: 'LGPD local AI compliance',
     toc: [
-      { label: 'Puntos clave', anchor: '#tldr' },
+      { label: 'Puntos clave', anchor: '#key-takeaways' },
       { label: '¿Qué es la LGPD?', anchor: '#lgpd-overview' },
       { label: 'Por qué la IA en la nube tiene dificultades con la LGPD', anchor: '#cloud-ai-failures' },
       { label: 'Cómo la IA local aborda la soberanía de datos', anchor: '#local-llm-solution' },
@@ -837,7 +837,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     primaryTerm: 'LGPD local AI compliance',
     toc: [
-      { label: 'Points clés', anchor: '#tldr' },
+      { label: 'Points clés', anchor: '#key-takeaways' },
       { label: 'Qu\'est-ce que la LGPD ?', anchor: '#lgpd-overview' },
       { label: 'Pourquoi l\'IA cloud peine avec la LGPD', anchor: '#cloud-ai-failures' },
       { label: 'Comment l\'IA locale traite la souveraineté des données', anchor: '#local-llm-solution' },
@@ -1041,7 +1041,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     primaryTerm: 'LGPD local AI compliance',
     toc: [
-      { label: '重要ポイント', anchor: '#tldr' },
+      { label: '重要ポイント', anchor: '#key-takeaways' },
       { label: 'LGPDとは何か？', anchor: '#lgpd-overview' },
       { label: 'クラウドAIがLGPDで苦戦する理由', anchor: '#cloud-ai-failures' },
       { label: 'ローカルAIがデータ主権にどう対応するか', anchor: '#local-llm-solution' },
@@ -1245,7 +1245,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     primaryTerm: 'LGPD local AI compliance',
     toc: [
-      { label: '核心要点', anchor: '#tldr' },
+      { label: '核心要点', anchor: '#key-takeaways' },
       { label: '什么是 LGPD？', anchor: '#lgpd-overview' },
       { label: '云端 AI 为何在 LGPD 方面举步维艰', anchor: '#cloud-ai-failures' },
       { label: '本地 AI 如何应对数据主权', anchor: '#local-llm-solution' },
@@ -1449,7 +1449,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     primaryTerm: 'LGPD local AI compliance',
     toc: [
-      { label: 'النقاط الرئيسية', anchor: '#tldr' },
+      { label: 'النقاط الرئيسية', anchor: '#key-takeaways' },
       { label: 'ما هو LGPD؟', anchor: '#lgpd-overview' },
       { label: 'لماذا يواجه الذكاء الاصطناعي السحابي صعوبات مع LGPD', anchor: '#cloud-ai-failures' },
       { label: 'كيف يعالج الذكاء الاصطناعي المحلي سيادة البيانات', anchor: '#local-llm-solution' },
@@ -1653,7 +1653,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     educationalLevel: 'Intermediate',
     primaryTerm: 'LGPD local AI compliance',
     toc: [
-      { label: '핵심 내용', anchor: '#tldr' },
+      { label: '핵심 내용', anchor: '#key-takeaways' },
       { label: 'LGPD란 무엇인가?', anchor: '#lgpd-overview' },
       { label: '클라우드 AI가 LGPD에서 어려움을 겪는 이유', anchor: '#cloud-ai-failures' },
       { label: '로컬 AI가 데이터 주권을 다루는 방식', anchor: '#local-llm-solution' },

@@ -110,6 +110,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         definition: {
+          id: 'definition',
           title: 'What Are Prompt Evaluation Metrics?',
           content: '**Prompt evaluation metrics are quantitative signals that tell you whether a prompt reliably produces the intended output across the inputs that matter.** Without metrics, prompt evaluation is subjective: two engineers reviewing the same prompt against different examples will reach different conclusions.\n\nThe right metric depends on what your prompt is supposed to produce. A JSON extraction prompt needs different metrics than a creative writing prompt. When you choose the right metric for your task, you can [evaluate prompt quality](/prompt-engineering/how-to-evaluate-prompt-quality) systematically. Choosing the wrong metric produces misleading scores that tell you nothing about real production quality.',
           snippets: [
@@ -121,6 +122,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         metricTypes: {
+          id: 'metric-types',
           title: 'What Metrics Apply to Structured Output vs Free Text vs Code?',
           content: '**Output type determines which metric is valid. Using BLEU on JSON outputs or pass/fail on creative generation tasks produces meaningless scores.**',
           columns: ['Output Type', 'Recommended Metric', 'Why'],
@@ -137,6 +139,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         passRate: {
+          id: 'pass-rate',
           title: 'What Is Pass Rate and Why Is It the Most Useful Metric?',
           content: '**Pass rate is the percentage of test inputs where the prompt output meets the defined success criteria — and it is the most actionable metric because it maps directly to the production failure rate.** A pass rate of 92% means 8% of real user requests will fail.\n\nPass rate = passing outputs / total test cases\n\nFor structured outputs, define "pass" precisely before running tests: valid JSON, required fields present, values within allowed enum, length under the specified limit. For classification, "pass" means the correct label was returned.\n\nTrack pass rate per prompt version. A drop of more than 5 percentage points is a regression. A drop of more than 10 percentage points should block production deployment. As of April 2026, PromptQuorum observes median pass rates of 88–94% for GPT-5.5 JSON extraction prompts on first deployment. When you [build a prompt library](/prompt-engineering/build-a-prompt-library), establish baseline pass rates for each prompt to detect regressions.',
           callouts: [
@@ -144,6 +147,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         bleu: {
+          id: 'bleu',
           title: 'What Is BLEU Score and When Should You Use It?',
           content: '**BLEU (Bilingual Evaluation Understudy) score measures n-gram overlap between a model output and a reference text.** It is the standard metric for machine translation and is appropriate for any task where the output should closely match a reference.\n\nBLEU is misleading for:\n\n- **JSON or structured output:** BLEU scores format tokens, not semantic correctness\n- **Instruction-following:** A prompt that follows all instructions but paraphrases differently will score low on BLEU\n- **Creative generation:** BLEU penalizes lexical variety even when quality is high\n\nWhen BLEU is appropriate: translation tasks where a gold reference exists, summarization against a human-written summary, extractive QA with expected verbatim answers.',
           callouts: [
@@ -151,6 +155,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         semanticSimilarity: {
+          id: 'semantic-similarity',
           title: 'What Is Semantic Similarity Scoring?',
           content: '**Semantic similarity measures how close two texts are in meaning by computing the cosine similarity of their embeddings.** It outperforms BLEU for paraphrase and rewriting tasks because it captures meaning rather than word choice.\n\nHow it works: embed the model output and the reference using OpenAI text-embedding-3-small or a local embedding model, then compute cosine similarity. Scores above 0.85 typically indicate semantically equivalent content.\n\nLimitations: semantic similarity does not check factual accuracy, does not detect format violations, and can score hallucinated content highly if the hallucination is semantically similar to the expected answer.',
           callouts: [
@@ -158,6 +163,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         llmAsJudge: {
+          id: 'llm-as-judge',
           title: 'What Is LLM-as-Judge Evaluation?',
           content: '**LLM-as-judge uses a capable model — typically GPT-5.5 or Claude Opus 4.8 — to score outputs against a rubric.** This scales evaluation to thousands of test cases without human review and handles quality dimensions that binary metrics cannot capture: coherence, tone, completeness, and factual accuracy.\n\nThe judge approach requires:\n\n1. A detailed rubric (scoring criteria per dimension)\n2. A structured output format (e.g., JSON with score + justification)\n3. When you [test prompts across models](/prompt-engineering/how-to-test-prompts-across-models), calibrate the judge against human judgments for your specific task',
           columns: ['Dimension', 'Advantage', 'Limitation'],
@@ -180,6 +186,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         regressionMetrics: {
+          id: 'regression-metrics',
           title: 'How Do You Detect Metric Regression?',
           content: '**Track your primary metric per prompt version and alert when it drops more than 5 percentage points from the established baseline.** Run the same test set before and after every prompt change, model update, or temperature adjustment.\n\nWhen you implement [prompt audit and regression risk](/prompt-engineering/prompt-audit-and-regression-risk) detection, follow this workflow:\n\n1. Record the current metric score as baseline (e.g., pass rate = 91%)\n2. Make the prompt change\n3. Re-run the full test set\n4. Compare new score against baseline\n5. If drop > 5 points: block the change, investigate, fix\n\nFor automated regression detection in CI/CD, tools like [Promptfoo](https://www.promptfoo.dev) integrate with GitHub Actions and can fail a PR if pass rate drops below a threshold.',
           callouts: [
@@ -187,6 +194,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         howToStart: {
+          id: 'how-to-start',
           title: 'How To Start Measuring Prompt Evaluation Metrics',
           numberedItems: [
             'Identify your prompt output type: structured data, classification, translation/summarization, paraphrase, free text, or code.',
@@ -201,6 +209,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'What Mistakes Should You Avoid with Prompt Evaluation Metrics?',
           items: [
             '**Mistake: Using BLEU on JSON or instruction-following prompts.** Fix: BLEU measures n-gram overlap, not format compliance or instruction adherence. Use binary pass/fail for structured outputs.',
@@ -235,6 +244,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         regionalConsiderations: {
+          id: 'regional-considerations',
           title: 'What Regional Factors Affect Prompt Evaluation Requirements?',
           content: '**Regulatory frameworks increasingly require documented AI quality metrics, with specific obligations depending on jurisdiction and risk classification.**\n\n- **EU (AI Act 2025–2026):** High-risk AI systems must demonstrate documented testing with quantitative quality metrics. Prompt evaluation records — test sets, pass rates, regression baselines — provide audit-ready evidence for AI Act transparency requirements.\n\n- **US (SOC 2 / NIST AI RMF):** SOC 2 Type II audits expect documented quality assurance for AI-driven processes. Prompt evaluation metrics with version history satisfy change management and quality control audit requirements.\n\n- **Multilingual evaluation:** When deploying prompts across languages, evaluate each language variant separately. BLEU scores and semantic similarity thresholds differ significantly between language pairs. A prompt scoring 0.92 similarity in English may score 0.78 in German due to syntactic differences.',
         },
@@ -357,6 +367,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         definition: {
+          id: 'definition',
           title: 'Was sind Prompt-Evaluierungsmetriken?',
           content: '**Prompt-Evaluierungsmetriken sind quantitative Signale, die Ihnen sagen, ob ein Prompt zuverlässig die beabsichtigte Ausgabe über die Eingaben hinweg produziert, die wichtig sind.** Ohne Metriken ist die Prompt-Evaluierung subjektiv: zwei Ingenieure, die denselben Prompt gegen verschiedene Beispiele überprüfen, werden zu unterschiedlichen Schlussfolgerungen gelangen.\n\nDie richtige Metrik hängt davon ab, was Ihr Prompt produzieren soll. Ein JSON-Extraktions-Prompt benötigt andere Metriken als ein Kreativschreib-Prompt. Wenn Sie die richtige Metrik für Ihre Aufgabe wählen, können Sie [die Prompt-Qualität systematisch evaluieren](/de/prompt-engineering/how-to-evaluate-prompt-quality). Die Auswahl der falschen Metrik führt zu irreführenden Scores, die Sie nichts über echte Produktionsqualität sagen.',
           snippets: [
@@ -368,6 +379,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         metricTypes: {
+          id: 'metric-types',
           title: 'Welche Metriken gelten für strukturierte Ausgaben, Freitext und Code?',
           content: '**Der Ausgabetyp bestimmt, welche Metrik gültig ist. Die Verwendung von BLEU auf JSON-Ausgaben oder Bestehen/Durchfallen auf kreativer Generierung führt zu bedeutungslosen Scores.**',
           columns: ['Ausgabetyp', 'Empfohlene Metrik', 'Warum'],
@@ -384,6 +396,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         passRate: {
+          id: 'pass-rate',
           title: 'Was ist Pass Rate und warum ist sie die nützlichste Metrik?',
           content: '**Pass Rate ist der Prozentsatz der Testeingaben, bei denen die Prompt-Ausgabe die definierten Erfolgskriterien erfüllt — und sie ist die aussagekräftigste Metrik, da sie sich direkt auf die Produktionsfehlerquote abbildet.** Eine Pass Rate von 92% bedeutet, dass 8% der echten Benutzeranfragen fehlschlagen.\n\nPass Rate = bestandene Ausgaben / Gesamtzahl Testfälle\n\nFür strukturierte Ausgaben definieren Sie „Bestehen" präzise vor Testbeginn: gültiges JSON, erforderliche Felder vorhanden, Werte innerhalb zulässiger Enumerationen, Länge unter angegebenem Limit. Für Klassifizierung bedeutet „Bestehen" die richtige Etikette wurde zurückgegeben.\n\nVerfolgen Sie Pass Rate pro Prompt-Version. Ein Rückgang von mehr als 5 Prozentpunkten ist eine Regression. Ein Rückgang von mehr als 10 Prozentpunkten sollte die Produktionsbereitstellung blockieren. Ab April 2026 beobachtet PromptQuorum Median-Pass-Rates von 88–94% für GPT-5.5 JSON-Extraktions-Prompts bei erster Bereitstellung. Wenn Sie [eine Prompt-Bibliothek aufbauen](/de/prompt-engineering/build-a-prompt-library), etablieren Sie Baseline-Pass-Rates für jeden Prompt zur Regressionserkennung.',
           callouts: [
@@ -391,6 +404,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         bleu: {
+          id: 'bleu',
           title: 'Was ist BLEU-Score und wann sollte man ihn verwenden?',
           content: '**BLEU (Bilingual Evaluation Understudy) Score misst n-Gramm-Überlap zwischen einer Modellausgabe und einem Referenztext.** Er ist die Standard-Metrik für maschinelle Übersetzung und geeignet für jede Aufgabe, bei der die Ausgabe stark mit einer Referenz übereinstimmen sollte.\n\nBLEU ist irreführend für:\n\n- **JSON oder strukturierte Ausgabe:** BLEU bewertet Format-Tokens, nicht semantische Korrektheit\n- **Befolgung von Anweisungen:** Ein Prompt, der alle Anweisungen befolgt, aber anders umschreibt, wird auf BLEU niedrig bewertet\n- **Kreative Generierung:** BLEU benachteiligt lexikalische Vielfalt, auch wenn die Qualität hoch ist\n\nWann BLEU geeignet ist: Übersetzungsaufgaben, wenn eine Gold-Referenz existiert, Zusammenfassung gegen eine von Menschen geschriebene Zusammenfassung, extraktive QA mit erwarteten verbatim-Antworten.',
           callouts: [
@@ -398,6 +412,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         semanticSimilarity: {
+          id: 'semantic-similarity',
           title: 'Was ist semantische Ähnlichkeitsbewertung?',
           content: '**Semantische Ähnlichkeit misst, wie nahe sich zwei Texte in der Bedeutung sind, durch Berechnung der Cosinus-Ähnlichkeit ihrer Embeddings.** Sie übertrifft BLEU für Paraphrase- und Umschreibungsaufgaben, da sie Bedeutung statt Wortauswahl erfasst.\n\nWie es funktioniert: Embedden Sie die Modellausgabe und die Referenz mit OpenAI text-embedding-3-small oder einem lokalen Embedding-Modell, dann berechnen Sie Cosinus-Ähnlichkeit. Scores über 0,85 deuten typischerweise auf semantisch gleichwertige Inhalte hin.\n\nEinschränkungen: Semantische Ähnlichkeit überprüft keine faktische Genauigkeit, erkennt Format-Verstöße nicht und kann halluzinierte Inhalte hoch bewerten, wenn die Halluzination semantisch ähnlich zur erwarteten Antwort ist.',
           callouts: [
@@ -405,6 +420,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         llmAsJudge: {
+          id: 'llm-as-judge',
           title: 'Was ist LLM-as-Judge-Evaluierung?',
           content: '**LLM-as-Judge nutzt ein leistungsstarkes Modell — typischerweise GPT-5.5 oder Claude Opus 4,7 — zur Bewertung von Ausgaben gegen ein Bewertungsschema.** Dies skaliert die Evaluierung auf Tausende von Testfällen ohne menschliche Überprüfung und behandelt Qualitätsdimensionen, die binäre Metriken nicht erfassen: Kohärenz, Ton, Vollständigkeit und faktische Genauigkeit.\n\nDer Judge-Ansatz erfordert:\n\n1. Ein detailliertes Bewertungsschema (Kriterien pro Dimension)\n2. Ein strukturiertes Ausgabeformat (z.B. JSON mit Score + Begründung)\n3. Wenn Sie [Prompts über Modelle hinweg testen](/de/prompt-engineering/how-to-test-prompts-across-models), kalibrieren Sie den Judge gegen menschliche Urteile für Ihre spezifische Aufgabe',
           columns: ['Dimension', 'Vorteil', 'Einschränkung'],
@@ -427,6 +443,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         regressionMetrics: {
+          id: 'regression-metrics',
           title: 'Wie erkennt man Metrikregressionen?',
           content: '**Verfolgen Sie Ihre primäre Metrik pro Prompt-Version und alarmieren Sie, wenn sie mehr als 5 Prozentpunkte unter der etablierten Baseline fällt.** Führen Sie denselben Testsatz vor und nach jeder Prompt-Änderung, Model-Update oder Temperatur-Anpassung aus.\n\nWenn Sie [Prompt-Audit und Regressions-Risiko](/de/prompt-engineering/prompt-audit-and-regression-risk) Erkennung implementieren, befolgen Sie diesen Workflow:\n\n1. Zeichnen Sie den aktuellen Metrik-Score als Baseline auf (z.B. Pass Rate = 91%)\n2. Führen Sie die Prompt-Änderung durch\n3. Führen Sie den vollständigen Testsatz erneut aus\n4. Vergleichen Sie neuen Score gegen Baseline\n5. Wenn Rückgang > 5 Punkte: Blockieren, untersuchen, beheben\n\nFür automatisierte Regressionserkennung in CI/CD: Tools wie [Promptfoo](https://www.promptfoo.dev) integrieren mit GitHub Actions und können einen PR fehlschlagen lassen, wenn Pass Rate unter Schwellenwert fällt.',
           callouts: [
@@ -434,6 +451,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         howToStart: {
+          id: 'how-to-start',
           title: 'Wie startet man mit Prompt-Evaluierungsmetriken?',
           numberedItems: [
             'Identifizieren Sie Ihren Prompt-Ausgabetyp: strukturierte Daten, Klassifizierung, Übersetzung/Zusammenfassung, Paraphrase, Freitext oder Code.',
@@ -448,6 +466,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Welche Fehler sollte man bei Prompt-Evaluierungsmetriken vermeiden?',
           items: [
             '**Fehler: BLEU auf JSON oder Befolgung von Anweisungen verwenden.** Behebung: BLEU misst n-Gramm-Überlap, nicht Format-Einhaltung oder Befolgung. Verwenden Sie binäres Bestehen/Durchfallen für strukturierte Ausgaben.',
@@ -484,10 +503,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         regionalConsiderations: {
+          id: 'regional-considerations',
           title: 'Welche regionalen Faktoren beeinflussen Prompt-Evaluierungsanforderungen?',
           content: '**Regulatorische Rahmen verlangen zunehmend dokumentierte KI-Qualitätsmetriken, mit spezifischen Anforderungen je nach Jurisdiktion und Risikoklassifizierung.**\n\n- **EU (AI Act 2025–2026):** Hochrisiko-KI-Systeme müssen dokumentiertes Testen mit quantitativen Qualitätsmetriken nachweisen. Prompt-Evaluierungs-Aufzeichnungen — Testsätze, Pass Rates, Regressions-Baselines — bieten Audit-bereite Evidenz für AI Act Transparenzanforderungen.\n\n- **USA (SOC 2 / NIST AI RMF):** SOC 2 Type II Audits erwarten dokumentiertes QA für KI-gesteuerte Prozesse. Prompt-Evaluierungs-Metriken mit Versionsverlauf erfüllen Change-Management und Quality-Control-Audit-Anforderungen.\n\n- **DACH (Deutschland, Österreich, Schweiz):** BSI-Grundschutz-Kataloge verlangen für IT-Systeme mit KI-Komponenten das Protokollieren von Qualitäts-Metriken. Lokale Evaluierung ohne Drittanbieter-APIs erfüllt Datenresidenz-Anforderungen der DSGVO. DIN EN ISO 9001-QM-Integration dokumentiert die Evaluierungs-Baseline und -Regeln als Prozessüberwachungsnachweis.\n\n- **Mehrsprachige Evaluierung:** Wenn Sie Prompts über Sprachen hinweg bereitstellen, evaluieren Sie jede Sprachvariante separat. BLEU-Scores und semantische Ähnlichkeits-Schwellenwerte unterscheiden sich erheblich zwischen Sprachpaaren. Ein Prompt mit 0,92 Ähnlichkeit im Englischen könnte 0,78 im Deutschen erreichen wegen syntaktischer Unterschiede.',
         },
         sources: {
+          id: 'sources',
           title: 'Quellen',
           items: [
             '[Promptfoo-Dokumentation (promptfoo.dev)](https://www.promptfoo.dev) — Open-Source Prompt-Evaluierungs-Framework mit eingebauten Metriken einschließlich LLM-as-Judge',
@@ -604,6 +625,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         definition: {
+          id: 'definition',
           title: '¿Qué son las métricas de evaluación de prompts?',
           content: '**Las métricas de evaluación de prompts son señales cuantitativas que te dicen si un prompt produce de forma fiable la salida esperada en las entradas que importan.** Sin métricas, la evaluación de prompts es subjetiva. La métrica correcta depende de lo que se supone que debe producir tu prompt. Cuando eliges la métrica correcta para tu tarea, puedes [evaluar la calidad del prompt](/es/prompt-engineering/how-to-evaluate-prompt-quality) de forma sistemática.',
           snippets: [
@@ -615,6 +637,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         metricTypes: {
+          id: 'metric-types',
           title: '¿Qué métricas aplican a la salida estructurada vs texto libre vs código?',
           content: '**El tipo de salida determina qué métrica es válida. Usar BLEU en salidas JSON o pass/fail en tareas de generación creativa produce puntuaciones sin sentido.**',
           columns: ['Tipo de salida', 'Métrica recomendada', 'Por qué'],
@@ -631,6 +654,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         passRate: {
+          id: 'pass-rate',
           title: '¿Qué es el pass rate y por qué es la métrica más útil?',
           content: '**El pass rate es el porcentaje de entradas de prueba donde la salida del prompt cumple los criterios de éxito definidos — y es la métrica más útil porque se mapea directamente a la tasa de fallos en producción.** Un pass rate del 92 % significa que el 8 % de las solicitudes reales de usuarios fallarán.\n\nPass rate = salidas que pasan / total de casos de prueba\n\nPara salidas estructuradas, define "pasar" con precisión antes de ejecutar las pruebas: JSON válido, campos requeridos presentes, valores dentro del enum permitido, longitud por debajo del límite especificado.\n\nRastrea el pass rate por versión de prompt. Una caída de más de 5 puntos porcentuales es una regresión. Una caída de más de 10 puntos debe bloquear el despliegue en producción.',
           callouts: [
@@ -638,6 +662,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         bleu: {
+          id: 'bleu',
           title: '¿Qué es la puntuación BLEU y cuándo debes usarla?',
           content: '**La puntuación BLEU (Bilingual Evaluation Understudy) mide la superposición de n-gramas entre una salida del modelo y un texto de referencia.** Es la métrica estándar para la traducción automática y es apropiada para cualquier tarea donde la salida debe coincidir estrechamente con una referencia.\n\nBLEU es engañoso para:\n\n- **Salida JSON o estructurada:** BLEU puntúa los tokens de formato, no la corrección semántica\n- **Seguimiento de instrucciones:** Un prompt que sigue todas las instrucciones pero parafrasea diferente puntuará bajo en BLEU\n- **Generación creativa:** BLEU penaliza la variedad léxica incluso cuando la calidad es alta\n\nCuándo BLEU es apropiado: tareas de traducción donde existe una referencia de oro, resumen frente a un resumen escrito por humanos, preguntas y respuestas extractivas con respuestas verbatim esperadas.',
           callouts: [
@@ -645,6 +670,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         semanticSimilarity: {
+          id: 'semantic-similarity',
           title: '¿Qué es la puntuación de similitud semántica?',
           content: '**La similitud semántica mide qué tan cercanos están dos textos en significado calculando la similitud coseno de sus embeddings.** Supera a BLEU para tareas de paráfrasis y reescritura porque captura el significado en lugar de la elección de palabras.\n\nCómo funciona: embed la salida del modelo y la referencia usando text-embedding-3-small de OpenAI o un modelo de embedding local, luego calcula la similitud coseno. Las puntuaciones por encima de 0,85 generalmente indican contenido semánticamente equivalente.\n\nLimitaciones: la similitud semántica no verifica la exactitud factual, no detecta violaciones de formato y puede puntuar alto el contenido alucinado si la alucinación es semánticamente similar a la respuesta esperada.',
           callouts: [
@@ -652,6 +678,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         llmAsJudge: {
+          id: 'llm-as-judge',
           title: '¿Qué es la evaluación LLM-as-judge?',
           content: '**LLM-as-judge usa un modelo capaz — típicamente GPT-5.5 o Claude Opus 4.8 — para puntuar las salidas contra una rúbrica.** Esto escala la evaluación a miles de casos de prueba sin revisión humana y maneja dimensiones de calidad que las métricas binarias no pueden capturar: coherencia, tono, completitud y exactitud factual.',
           columns: ['Dimensión', 'Ventaja', 'Limitación'],
@@ -674,6 +701,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         regressionMetrics: {
+          id: 'regression-metrics',
           title: '¿Cómo detectas la regresión de métricas?',
           content: '**Rastrea tu métrica principal por versión de prompt y alerta cuando caiga más de 5 puntos porcentuales desde la línea base establecida.** Ejecuta el mismo conjunto de prueba antes y después de cada cambio de prompt, actualización del modelo o ajuste de temperature.\n\nSigue este workflow:\n\n1. Registra la puntuación de la métrica actual como línea base (por ejemplo, pass rate = 91 %)\n2. Haz el cambio de prompt\n3. Vuelve a ejecutar el conjunto de prueba completo\n4. Compara la nueva puntuación con la línea base\n5. Si la caída > 5 puntos: bloquea el cambio, investiga, corrige\n\nPara la detección de regresión automatizada en CI/CD, herramientas como Promptfoo se integran con GitHub Actions y pueden fallar un PR si el pass rate cae por debajo de un umbral.',
           callouts: [
@@ -681,6 +709,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         howToStart: {
+          id: 'how-to-start',
           title: 'Cómo empezar a medir las métricas de evaluación de prompts',
           numberedItems: [
             'Identifica tu tipo de salida de prompt: datos estructurados, clasificación, traducción/resumen, paráfrasis, texto libre o código.',
@@ -695,6 +724,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: '¿Qué errores debes evitar con las métricas de evaluación de prompts?',
           items: [
             '**Error: usar BLEU en JSON o seguimiento de instrucciones.** Solución: BLEU mide la superposición de n-gramas, no el cumplimiento del formato o el seguimiento de instrucciones. Usa pass/fail binario para salidas estructuradas.',
@@ -731,10 +761,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         regionalConsiderations: {
+          id: 'regional-considerations',
           title: '¿Qué factores regionales influyen en los requisitos de evaluación de prompts?',
           content: '**Los marcos regulatorios exigen cada vez más métricas de calidad de IA documentadas, con requisitos específicos según la jurisdicción y la clasificación de riesgos.**\n\n- **UE (AI Act 2025–2026):** Los sistemas de IA de alto riesgo deben demostrar pruebas documentadas con métricas de calidad cuantitativas. Los registros de evaluación de prompts — conjuntos de prueba, pass rates, líneas base de regresión — proporcionan evidencia lista para auditoría.\n\n- **EE. UU. (SOC 2 / NIST AI RMF):** Las auditorías SOC 2 Type II esperan QA documentada para los procesos impulsados por IA. Las métricas de evaluación de prompts con historial de versiones satisfacen los requisitos de auditoría de gestión del cambio.\n\n- **Evaluación multilingüe:** Si despliegas prompts en múltiples idiomas, evalúa cada variante de idioma por separado. Las puntuaciones BLEU y los umbrales de similitud semántica difieren significativamente entre pares de idiomas.',
         },
         sources: {
+          id: 'sources',
           title: 'Fuentes',
           items: [
             '[Documentación de Promptfoo (promptfoo.dev)](https://www.promptfoo.dev) — Framework de evaluación de prompts de código abierto con métricas integradas incluyendo LLM-as-judge',
@@ -851,6 +883,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         definition: {
+          id: 'definition',
           title: 'ما هي مقاييس تقييم البرومبتات؟',
           content: '**مقاييس تقييم البرومبتات إشارات كمية تُخبرك ما إذا كان البرومبت ينتج المخرجات المتوقعة بشكل موثوق عبر المدخلات المهمة.** بدون مقاييس، تقييم البرومبتات ذاتي. المقياس الصحيح يعتمد على ما يُفترض أن ينتجه برومبتك. حين تختار المقياس الصحيح لمهمتك، يمكنك [تقييم جودة البرومبت](/ar/prompt-engineering/how-to-evaluate-prompt-quality) بشكل منهجي.',
           snippets: [
@@ -862,6 +895,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         metricTypes: {
+          id: 'metric-types',
           title: 'أي مقاييس تنطبق على المخرجات المنظمة مقابل النص الحر مقابل الكود؟',
           content: '**نوع المخرجات يحدد أي مقياس صالح. استخدام BLEU في مخرجات JSON أو pass/fail في مهام التوليد الإبداعي يُنتج درجات بلا معنى.**',
           columns: ['نوع المخرجات', 'المقياس المُوصى به', 'السبب'],
@@ -878,6 +912,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         passRate: {
+          id: 'pass-rate',
           title: 'ما هو pass rate ولماذا هو المقياس الأكثر فائدة؟',
           content: '**pass rate هو النسبة المئوية لمدخلات الاختبار حيث تفي مخرجات البرومبت بمعايير النجاح المحددة — وهو المقياس الأكثر فائدة لأنه يتوافق مباشرةً مع معدل الفشل في الإنتاج.** pass rate بنسبة 92% يعني أن 8% من طلبات المستخدمين الحقيقيين ستفشل.\n\nPass rate = المخرجات الناجحة / إجمالي حالات الاختبار\n\nللمخرجات المنظمة، عرّف "النجاح" بدقة قبل تشغيل الاختبارات: JSON صالح، الحقول المطلوبة موجودة، القيم ضمن enum المسموح، الطول تحت الحد المحدد.\n\nتتبّع pass rate حسب إصدار البرومبت. انخفاض أكثر من 5 نقاط مئوية انحدار. انخفاض أكثر من 10 نقاط يجب أن يحجب النشر في الإنتاج.',
           callouts: [
@@ -885,6 +920,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         bleu: {
+          id: 'bleu',
           title: 'ما هي درجة BLEU ومتى يجب استخدامها؟',
           content: '**درجة BLEU (Bilingual Evaluation Understudy) تقيس تداخل n-gram بين مخرجات النموذج ونص مرجعي.** هي المقياس المعياري للترجمة الآلية ومناسبة لأي مهمة يجب أن تتطابق فيها المخرجات عن كثب مع المرجع.\n\nBLEU مضلّل لـ:\n\n- **مخرجات JSON أو المنظمة:** BLEU تُقيّم رموز التنسيق لا الصحة الدلالية\n- **اتباع التعليمات:** برومبت يتبع جميع التعليمات لكن يُصيغ بشكل مختلف سيحصل على درجة BLEU منخفضة\n- **التوليد الإبداعي:** BLEU يُعاقب التنوع المعجمي حتى حين تكون الجودة عالية\n\nمتى يكون BLEU مناسبًا: مهام الترجمة حيث يوجد مرجع ذهبي، التلخيص مقابل ملخص بشري، أسئلة وأجوبة استخراجية مع إجابات حرفية متوقعة.',
           callouts: [
@@ -892,6 +928,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         semanticSimilarity: {
+          id: 'semantic-similarity',
           title: 'ما هي درجة التشابه الدلالي؟',
           content: '**التشابه الدلالي يقيس مدى قرب نصّين في المعنى بحساب تشابه جيب التمام لـembeddings الخاصة بهما.** يتفوق على BLEU في مهام الصياغة وإعادة الكتابة لأنه يلتقط المعنى لا اختيار الكلمات.\n\nكيف يعمل: ضمّن مخرجات النموذج والمرجع باستخدام text-embedding-3-small من OpenAI أو نموذج embedding محلي، ثم احسب تشابه جيب التمام. الدرجات فوق 0.85 تشير عادةً إلى محتوى مكافئ دلاليًا.\n\nالقيود: التشابه الدلالي لا يتحقق من الدقة الواقعية، ولا يكتشف انتهاكات التنسيق، وقد يُعطي درجات عالية للمحتوى المُهلوَس إذا كانت الهلوسة مشابهة دلاليًا للإجابة المتوقعة.',
           callouts: [
@@ -899,6 +936,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         llmAsJudge: {
+          id: 'llm-as-judge',
           title: 'ما هو تقييم LLM-as-judge؟',
           content: '**LLM-as-judge يستخدم نموذجًا قادرًا — عادةً GPT-5.5 أو Claude Opus 4.8 — لتقييم المخرجات مقابل رابطة.** هذا يُوسّع التقييم إلى آلاف حالات الاختبار دون مراجعة بشرية ويتعامل مع أبعاد الجودة التي لا تستطيع المقاييس الثنائية التقاطها: الاتساق والنبرة والاكتمال والدقة الواقعية.',
           columns: ['البُعد', 'الميزة', 'القيد'],
@@ -921,6 +959,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         regressionMetrics: {
+          id: 'regression-metrics',
           title: 'كيف تكتشف انحدار المقاييس؟',
           content: '**تتبّع مقياسك الرئيسي حسب إصدار البرومبت وأطلق تنبيهًا حين ينخفض أكثر من 5 نقاط مئوية عن خط الأساس المعتمد.** شغّل نفس مجموعة الاختبار قبل وبعد كل تغيير في البرومبت أو تحديث للنموذج أو تعديل في درجة الحرارة.\n\nاتبع هذا سير العمل:\n\n1. سجّل درجة المقياس الحالية كخط أساسي (مثلًا pass rate = 91%)\n2. أجرِ تغيير البرومبت\n3. أعِد تشغيل مجموعة الاختبار الكاملة\n4. قارن الدرجة الجديدة بالخط الأساسي\n5. إذا كان الانخفاض > 5 نقاط: احجب التغيير وافحص وأصلح\n\nللكشف التلقائي عن الانحدار في CI/CD، أدوات مثل Promptfoo تتكامل مع GitHub Actions ويمكنها إيقاف PR إذا انخفض pass rate عن عتبة.',
           callouts: [
@@ -928,6 +967,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         howToStart: {
+          id: 'how-to-start',
           title: 'كيف تبدأ قياس مقاييس تقييم البرومبتات',
           numberedItems: [
             'حدّد نوع مخرجات برومبتك: بيانات منظمة أو تصنيف أو ترجمة/تلخيص أو صياغة أو نص حر أو كود.',
@@ -942,6 +982,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'ما الأخطاء التي يجب تجنبها مع مقاييس تقييم البرومبتات؟',
           items: [
             '**خطأ: استخدام BLEU في JSON أو اتباع التعليمات.** الحل: BLEU يقيس تداخل n-gram لا امتثال التنسيق أو اتباع التعليمات. استخدم pass/fail ثنائي للمخرجات المنظمة.',
@@ -978,10 +1019,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         regionalConsiderations: {
+          id: 'regional-considerations',
           title: 'ما العوامل الإقليمية التي تؤثر على متطلبات تقييم البرومبتات؟',
           content: '**الأطر التنظيمية تتطلب بشكل متزايد مقاييس جودة ذكاء اصطناعي موثّقة، مع متطلبات محددة حسب الولاية القضائية وتصنيف المخاطر.**\n\n- **الاتحاد الأوروبي (قانون الذكاء الاصطناعي 2025–2026):** سجلات تقييم البرومبتات توفر أدلة جاهزة للتدقيق.\n\n- **الولايات المتحدة (SOC 2 / NIST AI RMF):** مقاييس تقييم البرومبتات مع سجل الإصدارات تُلبّي متطلبات التدقيق.\n\n- **التقييم متعدد اللغات:** إذا كنت تنشر برومبتات بلغات متعددة، قيّم كل متغيّر لغوي بشكل مستقل.',
         },
         sources: {
+          id: 'sources',
           title: 'المصادر',
           items: [
             '[وثائق Promptfoo (promptfoo.dev)](https://www.promptfoo.dev) — إطار تقييم برومبتات مفتوح المصدر',
@@ -1094,6 +1137,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         definition: {
+          id: 'definition',
           title: 'O que são métricas de avaliação de prompts?',
           content: '**As métricas de avaliação de prompts são sinais quantitativos que dizem se um prompt produz de forma confiável a saída esperada nas entradas que importam.** Sem métricas, a avaliação de prompts é subjetiva. A métrica correta depende do que seu prompt deve produzir. Quando você escolhe a métrica correta para sua tarefa, pode [avaliar a qualidade do prompt](/pt/prompt-engineering/how-to-evaluate-prompt-quality) de forma sistemática.',
           snippets: [
@@ -1105,6 +1149,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         metricTypes: {
+          id: 'metric-types',
           title: 'Quais métricas se aplicam a saídas estruturadas vs texto livre vs código?',
           content: '**O tipo de saída determina qual métrica é válida. Usar BLEU em saídas JSON ou pass/fail em tarefas de geração criativa produz pontuações sem sentido.**',
           columns: ['Tipo de saída', 'Métrica recomendada', 'Por quê'],
@@ -1121,6 +1166,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         passRate: {
+          id: 'pass-rate',
           title: 'O que é o pass rate e por que é a métrica mais útil?',
           content: '**O pass rate é a porcentagem de entradas de teste onde a saída do prompt atende aos critérios de sucesso definidos — e é a métrica mais útil porque mapeia diretamente para a taxa de falhas em produção.** Um pass rate de 92% significa que 8% das solicitações reais de usuários falharão.\n\nPass rate = saídas que passam / total de casos de teste\n\nPara saídas estruturadas, defina "passar" com precisão antes de executar os testes: JSON válido, campos obrigatórios presentes, valores dentro do enum permitido, comprimento abaixo do limite especificado.\n\nRastreie o pass rate por versão de prompt. Uma queda de mais de 5 pontos percentuais é uma regressão. Uma queda de mais de 10 pontos deve bloquear a implantação em produção.',
           callouts: [
@@ -1128,6 +1174,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         bleu: {
+          id: 'bleu',
           title: 'O que é a pontuação BLEU e quando você deve usá-la?',
           content: '**A pontuação BLEU (Bilingual Evaluation Understudy) mede a sobreposição de n-gramas entre uma saída do modelo e um texto de referência.** É a métrica padrão para tradução automática e é apropriada para qualquer tarefa onde a saída deve corresponder estreitamente a uma referência.\n\nBLEU é enganoso para:\n\n- **Saída JSON ou estruturada:** BLEU pontua os tokens de formatação, não a correção semântica\n- **Seguimento de instruções:** Um prompt que segue todas as instruções mas parafraseia diferente pontuará baixo em BLEU\n- **Geração criativa:** BLEU penaliza a variedade lexical mesmo quando a qualidade é alta\n\nQuando BLEU é apropriado: tarefas de tradução onde existe uma referência de ouro, resumo frente a um resumo escrito por humanos, perguntas e respostas extrativas com respostas verbatim esperadas.',
           callouts: [
@@ -1135,6 +1182,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         semanticSimilarity: {
+          id: 'semantic-similarity',
           title: 'O que é a pontuação de similaridade semântica?',
           content: '**A similaridade semântica mede quão próximos dois textos estão em significado calculando a similaridade cosseno de seus embeddings.** Supera o BLEU para tarefas de paráfrase e reescrita porque captura o significado em vez da escolha de palavras.\n\nComo funciona: embed a saída do modelo e a referência usando text-embedding-3-small da OpenAI ou um modelo de embedding local, depois calcule a similaridade cosseno. Pontuações acima de 0,85 geralmente indicam conteúdo semanticamente equivalente.\n\nLimitações: a similaridade semântica não verifica a exatidão factual, não detecta violações de formato e pode pontuar alto conteúdo alucinado se a alucinação for semanticamente similar à resposta esperada.',
           callouts: [
@@ -1142,6 +1190,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         llmAsJudge: {
+          id: 'llm-as-judge',
           title: 'O que é avaliação LLM-as-judge?',
           content: '**LLM-as-judge usa um modelo capaz — tipicamente GPT-5.5 ou Claude Opus 4.8 — para pontuar saídas contra uma rubrica.** Isso escala a avaliação para milhares de casos de teste sem revisão humana e lida com dimensões de qualidade que métricas binárias não conseguem capturar: coerência, tom, completude e exatidão factual.',
           columns: ['Dimensão', 'Vantagem', 'Limitação'],
@@ -1164,6 +1213,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         regressionMetrics: {
+          id: 'regression-metrics',
           title: 'Como você detecta regressão de métricas?',
           content: '**Rastreie sua métrica principal por versão de prompt e alerte quando cair mais de 5 pontos percentuais desde a linha de base estabelecida.** Execute o mesmo conjunto de teste antes e depois de cada alteração de prompt, atualização de modelo ou ajuste de temperature.\n\nSiga este fluxo de trabalho:\n\n1. Registre a pontuação da métrica atual como linha de base (por exemplo, pass rate = 91%)\n2. Faça a alteração de prompt\n3. Execute novamente o conjunto de teste completo\n4. Compare a nova pontuação com a linha de base\n5. Se a queda > 5 pontos: bloqueie a alteração, investigue, corrija\n\nPara detecção de regressão automatizada em CI/CD, ferramentas como Promptfoo se integram com GitHub Actions e podem reprovar um PR se o pass rate cair abaixo de um limiar.',
           callouts: [
@@ -1171,6 +1221,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         howToStart: {
+          id: 'how-to-start',
           title: 'Como começar a medir as métricas de avaliação de prompts',
           numberedItems: [
             'Identifique seu tipo de saída de prompt: dados estruturados, classificação, tradução/resumo, paráfrase, texto livre ou código.',
@@ -1185,6 +1236,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Quais erros você deve evitar com métricas de avaliação de prompts?',
           items: [
             '**Erro: usar BLEU em JSON ou seguimento de instruções.** Solução: BLEU mede sobreposição de n-gramas, não conformidade de formato ou seguimento de instruções. Use pass/fail binário para saídas estruturadas.',
@@ -1221,10 +1273,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         regionalConsiderations: {
+          id: 'regional-considerations',
           title: 'Quais fatores regionais influenciam os requisitos de avaliação de prompts?',
           content: '**Os frameworks regulatórios exigem cada vez mais métricas de qualidade de IA documentadas, com requisitos específicos por jurisdição e classificação de riscos.**\n\n- **Brasil (LGPD/ANPD):** A Lei Geral de Proteção de Dados e a Autoridade Nacional de Proteção de Dados definem as regras de conformidade para dados usados em sistemas de IA. Os registros de avaliação de prompts — conjuntos de teste, pass rates, linhas de base de regressão — fornecem evidências prontas para auditoria.\n\n- **EUA (SOC 2 / NIST AI RMF):** As auditorias SOC 2 Type II esperam QA documentada para processos impulsionados por IA. Métricas de avaliação de prompts com histórico de versões satisfazem os requisitos de auditoria de gestão de mudanças.\n\n- **Avaliação multilíngue:** Se você implanta prompts em múltiplos idiomas, avalie cada variante de idioma separadamente. As pontuações BLEU e os limiares de similaridade semântica diferem significativamente entre pares de idiomas.',
         },
         sources: {
+          id: 'sources',
           title: 'Fontes',
           items: [
             '[Documentação do Promptfoo (promptfoo.dev)](https://www.promptfoo.dev) — Framework de avaliação de prompts open-source com métricas integradas incluindo LLM-as-judge',
@@ -1343,6 +1397,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         definition: {
+          id: 'definition',
           title: 'Que sont les métriques d\'évaluation de prompts ?',
           content: '**Les métriques d\'évaluation de prompts sont des signaux quantitatifs indiquant si un prompt produit fiablement la sortie souhaitée sur l\'ensemble des entrées importantes.** Sans elles, l\'évaluation est subjective : deux ingénieurs examinant le même prompt sur différents exemples aboutissent à des conclusions différentes.\n\nLa bonne métrique dépend de ce que votre prompt produit. Un prompt d\'extraction JSON nécessite d\'autres métriques qu\'un prompt créatif. Quand vous choisissez la bonne métrique, vous pouvez [évaluer la qualité de manière systématique](/fr/prompt-engineering/how-to-evaluate-prompt-quality). Choisir mal produit des scores trompeurs masquant la vraie qualité de production.',
           snippets: [
@@ -1354,6 +1409,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         metricTypes: {
+          id: 'metric-types',
           title: 'Quelles métriques selon le type de sortie ?',
           content: '**Le type de sortie détermine la métrique valide. Appliquer BLEU sur JSON ou oui/non sur génération créative produit des scores dénués de sens.**',
           columns: ['Type de sortie', 'Métrique recommandée', 'Pourquoi'],
@@ -1370,6 +1426,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         passRate: {
+          id: 'pass-rate',
           title: 'Qu\'est-ce que le taux de réussite et pourquoi est-il si utile ?',
           content: '**Le taux de réussite est le pourcentage d\'entrées de test où la sortie rencontre les critères de succès — et c\'est la métrique la plus utile car elle se traduit directement par le taux d\'erreur en production.** Un taux de 92% signifie 8% des demandes réelles échoueront.\n\nTaux de réussite = sorties réussies / nombre total de tests\n\nPour les sorties structurées, définissez « réussite » précisément avant les tests : JSON valide, champs obligatoires présents, valeurs dans l\'énumération admissible, longueur sous la limite. Pour la classification, « réussite » signifie le label correct est retourné.\n\nSuivez le taux de réussite par version de prompt. Une chute de plus de 5 points est une régression. Plus de 10 points bloque le déploiement en production. En avril 2026, PromptQuorum observe des taux médians de 88–94% pour les prompts d\'extraction JSON avec GPT-5.5 au premier déploiement. Quand vous [construisez une bibliothèque](/fr/prompt-engineering/build-a-prompt-library), établissez les baselines pour détecter les régressions.',
           callouts: [
@@ -1377,6 +1434,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         bleu: {
+          id: 'bleu',
           title: 'Score BLEU : quand l\'utiliser ?',
           content: '**BLEU (Bilingual Evaluation Understudy) mesure le chevauchement n-gramme entre une sortie modèle et un texte de référence.** C\'est la métrique standard pour la traduction automatique et convient pour toute tâche où la sortie doit correspondre étroitement à une référence.\n\nBLEU est trompeur pour :\n\n- **JSON ou sortie structurée :** BLEU note les tokens de format, pas la correction sémantique\n- **Exécution d\'instructions :** Un prompt obéissant à toutes les instructions mais paraphrasant différemment scores mal sur BLEU\n- **Génération créative :** BLEU pénalise la diversité lexicale même quand la qualité est haute\n\nQuand BLEU convient : traductions où une référence existe, résumés comparés à un résumé humain, QA extractif avec réponses verbatimes attendues.',
           callouts: [
@@ -1384,6 +1442,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         semanticSimilarity: {
+          id: 'semantic-similarity',
           title: 'Similarité sémantique : comment ça marche ?',
           content: '**La similarité sémantique mesure la proximité du sens entre deux textes en calculant la similarité cosinus de leurs embeddings.** Elle surpasse BLEU pour les paraphrases et reformulations car elle capture le sens plutôt que le choix de mots.\n\nComment ça marche : Embeddez la sortie modèle et la référence avec OpenAI text-embedding-3-small ou un modèle d\'embedding local, puis calculez la similarité cosinus. Les scores > 0,85 indiquent généralement un contenu sémantiquement équivalent.\n\nLimitations : la similarité sémantique ne vérifie pas l\'exactitude factuelle, ne détecte pas les violations de format, et peut noter le contenu hallucciné haut si proche sémantiquement de la réponse attendue.',
           callouts: [
@@ -1391,6 +1450,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         llmAsJudge: {
+          id: 'llm-as-judge',
           title: 'LLM-as-Judge : l\'évaluation par modèle',
           content: '**LLM-as-Judge utilise un modèle capable — généralement GPT-5.5 ou Claude Opus 4.8 — pour noter les sorties selon une rubrique.** Cela scale l\'évaluation à des milliers de cas sans examen humain et gère les dimensions de qualité que les métriques binaires manquent : cohérence, ton, complétude, exactitude factuelle.\n\nL\'approche du juge requiert :\n\n1. Une rubrique détaillée (critères de notation par dimension)\n2. Un format de sortie structuré (par ex. JSON avec score + justification)\n3. Quand vous [testez les prompts sur plusieurs modèles](/fr/prompt-engineering/how-to-test-prompts-across-models), calibrez le juge contre les jugements humains pour votre tâche',
           columns: ['Dimension', 'Avantage', 'Limitation'],
@@ -1413,6 +1473,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         regressionMetrics: {
+          id: 'regression-metrics',
           title: 'Comment détecter une régression de métriques ?',
           content: '**Suivez votre métrique primaire par version et alertez si elle baisse de plus de 5 points de la baseline établie.** Exécutez le même ensemble de test avant et après chaque changement de prompt, mise à jour de modèle ou ajustement de température.\n\nQuand vous implémentez [l\'audit de prompts et la détection du risque de régression](/fr/prompt-engineering/prompt-audit-and-regression-risk), suivez ce flux :\n\n1. Enregistrez le score actuel comme baseline (par ex. taux de réussite = 91%)\n2. Faites le changement de prompt\n3. Relancez l\'ensemble complet de test\n4. Comparez le nouveau score à la baseline\n5. Si chute > 5 points : bloquer, investiguer, corriger\n\nPour la détection automatisée dans CI/CD, des outils comme [Promptfoo](https://www.promptfoo.dev) s\'intègrent avec GitHub Actions et peuvent échouer une PR si le taux baisse.',
           callouts: [
@@ -1420,6 +1481,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         howToStart: {
+          id: 'how-to-start',
           title: 'Par où commencer avec les métriques d\'évaluation ?',
           numberedItems: [
             'Identifiez votre type de sortie : données structurées, classification, traduction/résumé, paraphrase, texte libre ou code.',
@@ -1434,6 +1496,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Erreurs courantes à éviter',
           items: [
             '**Erreur : BLEU sur JSON ou exécution d\'instructions.** Correction : BLEU mesure le chevauchement n-gramme, pas la conformité de format. Utilisez réussite/échec binaire pour structuré.',
@@ -1470,6 +1533,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         regionalConsiderations: {
+          id: 'regional-considerations',
           title: 'Facteurs régionaux et obligations réglementaires',
           content: '**Les cadres réglementaires exigent de plus en plus des métriques documentées, avec obligations spécifiques selon la juridiction et la classification de risque.**\n\n- **UE (AI Act 2025–2026) :** Les systèmes IA à haut risque doivent démontrer des tests documentés avec métriques de qualité quantitatives. Les enregistrements d\'évaluation — ensembles, taux, baselines — fournissent des preuves auditables pour les exigences de transparence.\n\n- **USA (SOC 2 / NIST AI RMF) :** Les audits SOC 2 Type II attendent l\'assurance qualité documentée. Les métriques d\'évaluation avec historique de version satisfont les exigences de gestion des changements et de contrôle qualité.\n\n- **France (CNIL) :** Les directives CNIL recommandent l\'inférence locale pour les données professionnelles sensibles. Documentez le taux de réussite et les baselines comme preuve de gestion des risques.\n\n- **Évaluation multilingue :** En déployant sur plusieurs langues, évaluez chaque variante séparément. Les seuils BLEU et similarité diffèrent significativement entre paires. Un prompt à 0,92 en anglais peut être 0,78 en français due aux différences syntaxiques.',
         },
@@ -1592,6 +1656,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         definition: {
+          id: 'definition',
           title: 'プロンプト評価指標とは何か？',
           content: '**プロンプト評価指標は、プロンプトが重要な入力全体にわたって意図した出力を確実に生成するかを示す定量的シグナルです。** 指標がなければプロンプト評価は主観的になります。異なる例に対して同じプロンプトを検討する2人のエンジニアは異なる結論に達します。\n\n正しい指標はプロンプトが何を生成すべきかに依存します。JSON抽出プロンプトは創作文プロンプトとは異なる指標が必要です。正しい指標をタスク用に選ぶと、[プロンプト品質を体系的に評価できます](/ja/prompt-engineering/how-to-evaluate-prompt-quality)。間違った指標を選ぶと、本当の本番環境品質について何も言わない誤解を招くスコアが生じます。',
           snippets: [
@@ -1603,6 +1668,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         metricTypes: {
+          id: 'metric-types',
           title: '出力タイプ別：適切なメトリクスの選び方',
           content: '**出力タイプが有効な指標を決定します。JSON上でBLEUを適用するか、創作生成で合格/不合格を適用すると、意味がないスコアが生じます。**',
           columns: ['出力タイプ', '推奨メトリクス', '理由'],
@@ -1619,6 +1685,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         passRate: {
+          id: 'pass-rate',
           title: '合格率とは？なぜ最も有用な指標なのか？',
           content: '**合格率は、定義された成功基準を満たすテスト入力の割合です。最も実用的な指標です。本番環境の失敗率に直結するからです。** 92%の合格率は、実際のユーザーリクエストの8%が失敗することを意味します。\n\n合格率 = 合格出力 / テストケース総数\n\n構造化出力の場合、テスト前に「合格」を正確に定義してください：有効なJSON、必須フィールド存在、列挙値内の値、指定限度以下の長さ。分類の場合、「合格」は正しいラベルが返されたことを意味します。\n\nプロンプトバージョンごとに合格率を追跡します。5ポイント以上の低下は回帰です。10ポイント以上の低下は本番デプロイをブロックすべきです。2026年4月時点で、PromptQuorumは初回デプロイでGPT-5.5 JSON抽出プロンプトで88–94%の中央合格率を観察しています。[プロンプトライブラリを構築する](/ja/prompt-engineering/build-a-prompt-library)場合、各プロンプトのベースライン合格率を確立して回帰を検出してください。',
           callouts: [
@@ -1626,6 +1693,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         bleu: {
+          id: 'bleu',
           title: 'BLEUスコアの使いどころ',
           content: '**BLEU（Bilingual Evaluation Understudy）はモデル出力と参照テキスト間のn-gram重複を測定します。** 機械翻訳の標準指標で、出力が参照と密接に一致すべきあらゆるタスクに適切です。\n\nBLEUが誤解を招く場合 ：\n\n- **JSONまたは構造化出力：** BLEUはフォーマットトークンを評点し、意味的正確性ではなく\n- **命令遵守：** すべての命令に従うが異なるフレーズを使うプロンプトはBLEUで低スコアになる\n- **創作生成：** BLEUは品質が高いときでも辞書の多様性にペナルティを与える\n\nBLEUが適切な場合：参照が存在する翻訳タスク、人間が書いた要約との比較、予想される逐語的回答を含むQA抽出。',
           callouts: [
@@ -1633,6 +1701,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         semanticSimilarity: {
+          id: 'semantic-similarity',
           title: '意味的類似度スコアリングとは？',
           content: '**意味的類似度は、埋め込みのコサイン類似度を計算することで、2つのテキストの意味がどの程度近いかを測定します。** 言葉の選択ではなく意味を捉えるため、言い換え・言い直しタスクでBLEUを上回ります。\n\n動作方法：OpenAI text-embedding-3-smallまたはローカル埋め込みモデルを使用してモデル出力と参照を埋め込み、コサイン類似度を計算します。0.85超のスコアは通常、意味的に等価なコンテンツを示します。\n\n制限事項：意味的類似度は事実正確性をチェックしません、形式違反を検出しません、期待する回答に意味的に類似したハルシネーション内容を高く評点する可能性があります。',
           callouts: [
@@ -1640,6 +1709,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         llmAsJudge: {
+          id: 'llm-as-judge',
           title: 'LLM-as-Judgeによる評価',
           content: '**LLM-as-JudgeはGPT-5.5やClaude Opus 4.8などの高性能モデルを使用してルーブリックに基づいて出力を評点します。** これにより評価が数千のテストケースに拡張可能になり、人間の審査なしで、二値指標では捉えられない品質次元を扱います。一貫性、トーン、完全性、事実的正確性。\n\nJudgeアプローチには以下が必要です ：\n\n1. 詳細なルーブリック（次元ごとに評点基準）\n2. 構造化出力形式（例：スコア + 正当性を含むJSON）\n3. [複数モデル間でプロンプトをテストする](/ja/prompt-engineering/how-to-test-prompts-across-models)場合、あなたの特定タスクに対してJudgeを人間の判定と校正します',
           columns: ['評価軸', 'メリット', 'デメリット'],
@@ -1662,6 +1732,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         regressionMetrics: {
+          id: 'regression-metrics',
           title: 'メトリクスの回帰をどのように検出するか？',
           content: '**プロンプトバージョンごとに主要指標を追跡し、確立されたベースラインから5ポイント以上低下したらアラートを出します。** プロンプト変更、モデル更新、温度調整のたびに変更前後で同じテストセットを実行します。\n\n[プロンプト監査と回帰リスク](/ja/prompt-engineering/prompt-audit-and-regression-risk)検出を実装するとき、このワークフローに従ってください ：\n\n1. 現在の指標スコアをベースラインとして記録（例：合格率 = 91%）\n2. プロンプト変更を実施\n3. 完全なテストセットを再実行\n4. 新しいスコアをベースラインと比較\n5. 低下 > 5ポイント：ブロック、調査、修正\n\nCI/CDで自動回帰検出するために、[Promptfoo](https://www.promptfoo.dev)などのツールはGitHub Actionsと統合し、合格率が閾値を下回ったときPRを失敗させます。',
           callouts: [
@@ -1669,6 +1740,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         howToStart: {
+          id: 'how-to-start',
           title: 'プロンプト評価指標の始め方',
           numberedItems: [
             'プロンプト出力タイプを特定：構造化データ、分類、翻訳/要約、言い換え、自由記述、またはコード。',
@@ -1683,6 +1755,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'よくある間違いと対策',
           items: [
             '**間違い：JSONまたは命令遵守にBLEUを使用。** 修正：BLEUはn-gram重複を測定し、形式遵守や命令遵守ではなく。構造化出力には二値合格/不合格を使用。',
@@ -1719,10 +1792,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         regionalConsiderations: {
+          id: 'regional-considerations',
           title: '地域別の規制要件とプロンプト評価',
           content: '**規制枠組みはますますAI品質メトリクスの記録を要求し、管轄区域とリスク分類に応じた具体的義務があります。**\n\n- **METI AI Governance Guidelines 2024（日本）：** 経済産業省のガイドラインでは、AI評価とモニタリングの記録が推奨されています。プロンプト評価メトリクス、テストセット、回帰ベースラインは、AI品質管理の証拠として機能します。\n\n- **EU AI Act 2025–2026：** 高リスク AI システムは定量的品質メトリクスを用いた記録されたテストを実証する必要があります。プロンプト評価記録はAI Act透明性要件の監査対応証拠を提供します。\n\n- **データセキュリティ法（中国）：** 中国でのプロンプト評価ログ（個人データを含む可能性あり）はオンショア保持する必要があります。ローカルLLMと在中評価インフラを検討。\n\n- **多言語評価：** プロンプトを複数言語で展開する場合、言語バリアントごとに別途評価します。BLEUスコアと意味的類似度閾値は言語ペア間で大きく異なります。英語で0.92の類似度は、文法的違いのため日本語で0.75になる可能性があります。',
         },
         sources: {
+          id: 'sources',
           title: '参考文献',
           items: [
             '[Promptfooドキュメント（promptfoo.dev）](https://www.promptfoo.dev) — オープンソースプロンプト評価フレームワーク、LLM-as-Judge含む内蔵メトリクス',
@@ -1841,6 +1916,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         definition: {
+          id: 'definition',
           title: '什么是提示词评估指标？',
           content: '**提示词评估指标是定量信号，告诉你提示词是否在重要的输入范围内可靠地生成预期输出。** 没有指标的提示词评估是主观的：两个工程师针对不同示例审查相同的提示词会得出不同的结论。\n\n正确的指标取决于你的提示词应该生成什么。JSON提取提示词需要不同于创意写作提示词的指标。当你为任务选择正确的指标时，可以[系统地评估提示词质量](/zh/prompt-engineering/how-to-evaluate-prompt-quality)。选择错误的指标会产生误导性的分数，这些分数对实际生产质量没有任何帮助。',
           snippets: [
@@ -1852,6 +1928,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         metricTypes: {
+          id: 'metric-types',
           title: '不同输出类型适用哪些评估指标？',
           content: '**输出类型决定了有效的指标。在JSON输出上应用BLEU或在创意生成上应用通过/失败会产生无意义的分数。**',
           columns: ['输出类型', '推荐指标', '原因'],
@@ -1868,6 +1945,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         passRate: {
+          id: 'pass-rate',
           title: '通过率：为什么是最实用的指标？',
           content: '**通过率是测试输入中满足定义的成功标准的百分比——也是最实用的指标，因为它直接映射到生产失败率。** 92%的通过率意味着实际用户请求的8%会失败。\n\n通过率 = 合格输出 / 总测试用例\n\n对于结构化输出，在测试前精确定义「合格」：有效JSON、必填字段存在、值在允许的枚举内、长度在指定限制以下。对于分类，「合格」意味着返回了正确的标签。\n\n按提示词版本追踪通过率。下降超过5个百分点是回归。下降超过10个百分点应阻止生产部署。截至2026年4月，PromptQuorum在首次部署时对GPT-5.5 JSON提取提示词观察到88–94%的中位数通过率。当你[构建提示词库](/zh/prompt-engineering/build-a-prompt-library)时，为每个提示词建立基准通过率以检测回归。',
           callouts: [
@@ -1875,6 +1953,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         bleu: {
+          id: 'bleu',
           title: 'BLEU分数：适用场景与局限性',
           content: '**BLEU（双语评估替身）分数测量模型输出和参考文本之间的n-gram重叠。** 它是机器翻译的标准指标，适用于输出应该与参考文本紧密匹配的任何任务。\n\nBLEU误导的情况：\n\n- **JSON或结构化输出：** BLEU对格式token评分，而非语义正确性\n- **遵循指令：** 遵循所有指令但措辞不同的提示词在BLEU上得分低\n- **创意生成：** BLEU即使在质量高时也对词汇多样性罚分\n\nBLEU适当的情况：参考文本存在的翻译任务、与人类撰写的摘要比较、预期逐字答案的抽取式QA。',
           callouts: [
@@ -1882,6 +1961,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         semanticSimilarity: {
+          id: 'semantic-similarity',
           title: '语义相似度评分',
           content: '**语义相似度通过计算两个文本的嵌入的余弦相似度来测量它们在含义上的接近程度。** 它在改写和言语改述任务中超过BLEU，因为它捕捉意义而非措辞选择。\n\n工作原理：使用OpenAI text-embedding-3-small或本地嵌入模型嵌入模型输出和参考，然后计算余弦相似度。超过0.85的分数通常表示语义等价的内容。\n\n局限性：语义相似度不检查事实准确性，不检测格式违规，如果幻想内容在语义上与预期答案相似，可能对其评分较高。',
           callouts: [
@@ -1889,6 +1969,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         llmAsJudge: {
+          id: 'llm-as-judge',
           title: 'LLM-as-Judge评估方法',
           content: '**LLM-as-Judge使用强大的模型（通常是GPT-5.5或Claude Opus 4.8）根据标准对输出进行评分。** 这将评估扩展到数千个测试用例，无需人工审查，并处理二值指标无法捕捉的质量维度：连贯性、语气、完整性和事实准确性。\n\nJudge方法需要：\n\n1. 详细的标准（每个维度的评分标准）\n2. 结构化的输出格式（例如包含分数和理由的JSON）\n3. 当你[跨模型测试提示词](/zh/prompt-engineering/how-to-test-prompts-across-models)时，针对你的特定任务将Judge与人工判断相校准',
           columns: ['评估维度', '优势', '局限性'],
@@ -1911,6 +1992,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         regressionMetrics: {
+          id: 'regression-metrics',
           title: '如何检测指标回归？',
           content: '**按提示词版本追踪主要指标，并在其从既定基准下降超过5个百分点时发出警报。** 每次提示词变更、模型更新或温度调整前后运行相同的测试集。\n\n当你实现[提示词审计和回归风险](/zh/prompt-engineering/prompt-audit-and-regression-risk)检测时，遵循此工作流程：\n\n1. 将当前指标分数记录为基准（例如通过率 = 91%）\n2. 进行提示词变更\n3. 重新运行完整测试集\n4. 将新分数与基准进行比较\n5. 如果下降 > 5点：阻止、调查、修复\n\n对于CI/CD中的自动回归检测，[Promptfoo](https://www.promptfoo.dev)等工具与GitHub Actions集成，如果通过率下降到阈值以下可以导致PR失败。',
           callouts: [
@@ -1918,6 +2000,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         howToStart: {
+          id: 'how-to-start',
           title: '如何开始使用提示词评估指标',
           numberedItems: [
             '确定提示词输出类型：结构化数据、分类、翻译/摘要、改写、自由文本或代码。',
@@ -1932,6 +2015,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: '常见错误与解决方案',
           items: [
             '**错误：在JSON或遵循指令上使用BLEU。** 解决方案：BLEU测量n-gram重叠，不是格式合规性或指令遵从。对结构化输出使用二值通过/失败。',
@@ -1968,10 +2052,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         regionalConsiderations: {
+          id: 'regional-considerations',
           title: '地区合规要求与提示词评估',
           content: '**规制框架日益要求记录AI质量指标，不同司法管辖区和风险分类有具体要求。**\n\n**中国（数据安全法2021）：**\n数据安全法要求在中国范围内存储涉及业务和客户数据的评估日志。提示词评估集和指标必须本地存储，不能上传到国外服务器。金融、医疗、法律等受监管行业必须使用国产LLM（如Qwen3、ChatGLM）进行评估，以满足数据主权要求。建议建立本地评估基础设施和离线评估环境。\n\n**亚太地区（数据跨境传输）：**\nAPAC许多国家对个人数据和业务数据的跨境转移有严格的限制。新加坡、日本、印度、韩国等都有各自的数据驻留要求。如果评估数据包含客户或员工信息，需要在本地国家保留。建议在每个重要市场部署本地评估服务，避免将测试集和结果发送到云端。\n\n**欧盟（AI法案2025–2026）：**\n高风险AI系统必须证明使用定量质量指标的记录测试。提示词评估记录为AI法案透明性要求提供审计就绪证据。\n\n**多语言评估：**\n在多种语言中部署提示词时，分别评估每个语言变体。BLEU分数和语义相似度阈值因语言对而异。英文中的0.92相似度在中文中可能是0.75，因为语法差异。中文评估应使用中文特化的嵌入模型，并为中文语境调整阈值。',
         },
         sources: {
+          id: 'sources',
           title: '参考来源',
           items: [
             '[Promptfoo文档（promptfoo.dev）](https://www.promptfoo.dev) — 开源提示词评估框架，包含LLM-as-Judge内置指标',
@@ -2088,6 +2174,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         definition: {
+          id: 'definition',
           title: 'Prompt 평가 지표란 무엇입니까?',
           content: '**Prompt 평가 지표는 prompt가 중요한 입력에 걸쳐 의도한 출력을 안정적으로 생성하는지 알려주는 정량적 신호입니다.** 지표 없이는 prompt 평가가 주관적입니다. 올바른 지표는 prompt가 무엇을 생성해야 하는지에 달려 있습니다. 작업에 올바른 지표를 선택하면 체계적으로 [prompt 품질을 평가](/ko/prompt-engineering/how-to-evaluate-prompt-quality)할 수 있습니다.',
           snippets: [
@@ -2099,6 +2186,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         metricTypes: {
+          id: 'metric-types',
           title: '구조화된 출력 vs 자유 텍스트 vs 코드에 어떤 지표가 적용됩니까?',
           content: '**출력 유형이 어떤 지표가 유효한지 결정합니다. JSON 출력에 BLEU를 사용하거나 창의적 생성 작업에 pass/fail을 사용하면 의미 없는 점수가 나옵니다.**',
           columns: ['출력 유형', '권장 지표', '이유'],
@@ -2115,6 +2203,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         passRate: {
+          id: 'pass-rate',
           title: 'Pass rate란 무엇이며 왜 가장 유용한 지표입니까?',
           content: '**Pass rate는 prompt 출력이 정의된 성공 기준을 충족하는 테스트 입력의 비율입니다 — 프로덕션 실패율에 직접 매핑되기 때문에 가장 실행 가능한 지표입니다.** Pass rate 92%는 실제 사용자 요청의 8%가 실패한다는 것을 의미합니다.\n\nPass rate = 통과한 출력 / 총 테스트 케이스\n\n구조화된 출력의 경우, 테스트를 실행하기 전에 "통과"를 정확하게 정의하십시오: 유효한 JSON, 필수 필드 존재, 허용된 열거형 내의 값, 지정된 한도 미만의 길이.\n\nPrompt 버전별 pass rate를 추적하십시오. 5포인트 이상 하락은 회귀입니다. 10포인트 이상 하락은 프로덕션 배포를 차단해야 합니다.',
           callouts: [
@@ -2122,6 +2211,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         bleu: {
+          id: 'bleu',
           title: 'BLEU 점수란 무엇이며 언제 사용해야 합니까?',
           content: '**BLEU(Bilingual Evaluation Understudy) 점수는 모델 출력과 참조 텍스트 간의 n-그램 겹침을 측정합니다.** 기계 번역의 표준 지표이며 출력이 참조와 밀접하게 일치해야 하는 모든 작업에 적합합니다.\n\nBLEU가 오해의 소지가 있는 경우:\n\n- **JSON 또는 구조화된 출력:** BLEU는 형식 토큰을 점수화하며 의미론적 정확성을 점수화하지 않음\n- **지시 따르기:** 모든 지시를 따르지만 다르게 의역한 prompt는 BLEU에서 낮은 점수를 받음\n- **창의적 생성:** BLEU는 품질이 높을 때도 어휘 다양성을 벌점함\n\nBLEU가 적합한 경우: 금 참조가 있는 번역 작업, 인간이 작성한 요약과 비교한 요약, 예상 단어 그대로의 답변이 있는 추출적 QA.',
           callouts: [
@@ -2129,6 +2219,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         semanticSimilarity: {
+          id: 'semantic-similarity',
           title: '시맨틱 유사성 점수란 무엇입니까?',
           content: '**시맨틱 유사성은 임베딩의 코사인 유사성을 계산하여 두 텍스트가 의미상 얼마나 가까운지 측정합니다.** 단어 선택이 아닌 의미를 포착하기 때문에 의역 및 재작성 작업에서 BLEU를 능가합니다.\n\n작동 방식: OpenAI text-embedding-3-small 또는 로컬 임베딩 모델을 사용하여 모델 출력과 참조를 임베딩하고, 코사인 유사성을 계산합니다. 0.85 이상의 점수는 일반적으로 의미론적으로 동등한 콘텐츠를 나타냅니다.\n\n한계: 시맨틱 유사성은 사실적 정확성을 확인하지 않고, 형식 위반을 감지하지 않으며, 환각이 예상 답변과 의미론적으로 유사하면 높은 점수를 줄 수 있습니다.',
           callouts: [
@@ -2136,6 +2227,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         llmAsJudge: {
+          id: 'llm-as-judge',
           title: 'LLM-as-judge 평가란 무엇입니까?',
           content: '**LLM-as-judge는 유능한 모델 — 일반적으로 GPT-5.5 또는 Claude Opus 4.8 — 을 사용하여 루브릭에 따라 출력을 점수화합니다.** 이것은 인간 검토 없이 수천 건의 테스트 케이스로 평가를 확장하고 이진 지표가 포착할 수 없는 품질 차원을 처리합니다: 일관성, 톤, 완전성, 사실적 정확성.',
           columns: ['차원', '장점', '한계'],
@@ -2158,6 +2250,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         regressionMetrics: {
+          id: 'regression-metrics',
           title: '지표 회귀를 어떻게 감지합니까?',
           content: '**Prompt 버전별 기본 지표를 추적하고 설정된 기준선에서 5포인트 이상 하락할 때 경보를 울리십시오.** 모든 prompt 변경, 모델 업데이트, 또는 temperature 조정 전후에 동일한 테스트 세트를 실행하십시오.\n\n[prompt 감사 및 회귀 위험](/ko/prompt-engineering/prompt-audit-and-regression-risk) 감지를 구현할 때 이 워크플로우를 따르십시오:\n\n1. 현재 지표 점수를 기준선으로 기록합니다 (예: pass rate = 91%)\n2. Prompt 변경을 수행합니다\n3. 전체 테스트 세트를 다시 실행합니다\n4. 새 점수를 기준선과 비교합니다\n5. 하락 > 5포인트: 변경을 차단하고, 조사하고, 수정합니다\n\nCI/CD에서 자동화된 회귀 감지를 위해 Promptfoo 같은 도구가 GitHub Actions와 통합되어 pass rate가 임계값 아래로 떨어지면 PR을 실패시킬 수 있습니다.',
           callouts: [
@@ -2165,6 +2258,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         howToStart: {
+          id: 'how-to-start',
           title: 'Prompt 평가 지표 측정을 시작하는 방법',
           numberedItems: [
             'Prompt 출력 유형을 파악하십시오: 구조화된 데이터, 분류, 번역/요약, 의역, 자유 텍스트, 코드.',
@@ -2179,6 +2273,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Prompt 평가 지표에서 피해야 할 실수는 무엇입니까?',
           items: [
             '**실수: JSON 또는 지시 따르기 prompt에 BLEU 사용.** 해결책: BLEU는 n-그램 겹침을 측정하며 형식 준수나 지시 준수를 측정하지 않습니다. 구조화된 출력에는 이진 pass/fail을 사용하십시오.',
@@ -2213,10 +2308,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         regionalConsiderations: {
+          id: 'regional-considerations',
           title: '어떤 지역적 요소가 Prompt 평가 요구사항에 영향을 미칩니까?',
           content: '**규제 프레임워크는 관할권과 위험 분류에 따라 특정 의무를 가진 문서화된 AI 품질 지표를 점점 더 요구하고 있습니다.**\n\n- **EU (AI Act 2025–2026):** 고위험 AI 시스템은 정량적 품질 지표를 사용한 문서화된 테스트를 증명해야 합니다. Prompt 평가 기록 — 테스트 세트, pass rate, 회귀 기준선 — 은 AI Act 투명성 요구사항을 위한 감사 준비 증거를 제공합니다.\n\n- **미국 (SOC 2 / NIST AI RMF):** SOC 2 Type II 감사는 AI 기반 프로세스에 대한 문서화된 품질 보증을 기대합니다. 버전 기록이 있는 Prompt 평가 지표는 변경 관리 및 품질 관리 감사 요구사항을 충족합니다.\n\n- **다국어 평가:** 여러 언어에 걸쳐 prompt를 배포할 때 각 언어 변형을 별도로 평가하십시오. BLEU 점수와 시맨틱 유사성 임계값은 언어 쌍 간에 크게 다릅니다. 한국어 평가에서는 한국어 특화 임베딩 모델을 사용하고 한국어 컨텍스트에 맞게 임계값을 조정하십시오.',
         },
         sources: {
+          id: 'sources',
           title: '출처',
           items: [
             '[Promptfoo 문서 (promptfoo.dev)](https://www.promptfoo.dev) — LLM-as-judge를 포함한 내장 지표가 있는 오픈소스 prompt 평가 프레임워크',

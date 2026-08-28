@@ -40,7 +40,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       educationalLevel: 'Beginner',
       primaryTerm: 'Low-End LLM',
       toc: [
-        { label: 'TLDR', anchor: '#tldr' },
+        { label: 'TLDR', anchor: '#key-takeaways' },
         { label: 'What is the Fastest Model for Your Hardware?', anchor: '#hardware-decision' },
         { label: 'Which Model Should You Use?', anchor: '#model-picker' },
         { label: 'Which Local LLM Should You Run on Your Hardware?', anchor: '#by-hardware' },
@@ -526,7 +526,7 @@ schema: {
       educationalLevel: 'Beginner',
       primaryTerm: 'Low-End LLM',
       toc: [
-        { label: 'Puntos clave', anchor: '#tldr' },
+        { label: 'Puntos clave', anchor: '#key-takeaways' },
         { label: '¿Cuál es el modelo más rápido para tu hardware?', anchor: '#hardware-decision' },
         { label: '¿Qué modelo deberías usar?', anchor: '#model-picker' },
         { label: '¿Qué LLM local deberías ejecutar en tu hardware?', anchor: '#by-hardware' },
@@ -901,7 +901,7 @@ schema: {
       educationalLevel: 'Beginner',
       primaryTerm: 'LLM منخفض المواصفات',
       toc: [
-        { label: 'النقاط الرئيسية', anchor: '#tldr' },
+        { label: 'النقاط الرئيسية', anchor: '#key-takeaways' },
         { label: 'ما النموذج الأسرع لعتادك؟', anchor: '#hardware-decision' },
         { label: 'أي نموذج ينبغي أن تستخدم؟', anchor: '#model-picker' },
         { label: 'أي LLM محلي ينبغي أن تشغّل على عتادك؟', anchor: '#by-hardware' },
@@ -1279,7 +1279,7 @@ schema: {
       educationalLevel: 'Beginner',
       primaryTerm: 'LLM de baixo custo',
       toc: [
-        { label: 'Pontos principais', anchor: '#tldr' },
+        { label: 'Pontos principais', anchor: '#key-takeaways' },
         { label: 'Qual modelo é mais rápido para o seu hardware?', anchor: '#hardware-decision' },
         { label: 'Qual modelo você deve usar?', anchor: '#model-picker' },
         { label: 'Qual LLM local você deve executar no seu hardware?', anchor: '#by-hardware' },
@@ -1596,7 +1596,7 @@ schema: {
       educationalLevel: 'Beginner',
       primaryTerm: 'Low-End LLM',
       toc: [
-        { label: 'Zusammenfassung', anchor: '#tldr' },
+        { label: 'Zusammenfassung', anchor: '#key-takeaways' },
         { label: 'Welches Modell ist das schnellste für Ihre Hardware?', anchor: '#hardware-decision' },
         { label: 'Welches Modell sollten Sie verwenden?', anchor: '#model-picker' },
         { label: 'Welches lokale LLM sollten Sie auf Ihrer Hardware ausführen?', anchor: '#by-hardware' },
@@ -1973,7 +1973,7 @@ schema: {
       educationalLevel: 'Beginner',
       primaryTerm: 'Low-End LLM',
       toc: [
-        { label: 'Points clés', anchor: '#tldr' },
+        { label: 'Points clés', anchor: '#key-takeaways' },
         { label: 'Quel est le modèle le plus rapide pour votre matériel ?', anchor: '#hardware-decision' },
         { label: 'Quel modèle devriez-vous utiliser ?', anchor: '#model-picker' },
         { label: 'Quel LLM local faire tourner sur votre matériel ?', anchor: '#by-hardware' },
@@ -2348,7 +2348,7 @@ schema: {
       educationalLevel: 'Beginner',
       primaryTerm: 'Low-End LLM',
       toc: [
-        { label: '重要ポイント', anchor: '#tldr' },
+        { label: '重要ポイント', anchor: '#key-takeaways' },
         { label: 'あなたのハードウェアに最速のモデルは？', anchor: '#hardware-decision' },
         { label: 'どのモデルを使うべきか？', anchor: '#model-picker' },
         { label: 'ハードウェア別おすすめローカルLLM', anchor: '#by-hardware' },
@@ -2723,7 +2723,7 @@ schema: {
       educationalLevel: 'Beginner',
       primaryTerm: '低配LLM',
       toc: [
-        { label: '核心要点', anchor: '#tldr' },
+        { label: '核心要点', anchor: '#key-takeaways' },
         { label: '适合您硬件的最快模型是什么？', anchor: '#hardware-decision' },
         { label: '您应该使用哪种模型？', anchor: '#model-picker' },
         { label: '您应在您的硬件上运行哪种本地LLM？', anchor: '#by-hardware' },
@@ -3098,7 +3098,7 @@ schema: {
       educationalLevel: 'Beginner',
       primaryTerm: '저사양 LLM',
       toc: [
-        { label: '요약', anchor: '#tldr' },
+        { label: '요약', anchor: '#key-takeaways' },
         { label: '하드웨어에 맞는 가장 빠른 모델은 무엇입니까?', anchor: '#hardware-decision' },
         { label: '어떤 모델을 사용해야 합니까?', anchor: '#model-picker' },
         { label: '하드웨어에 맞는 로컬 LLM은 무엇입니까?', anchor: '#by-hardware' },

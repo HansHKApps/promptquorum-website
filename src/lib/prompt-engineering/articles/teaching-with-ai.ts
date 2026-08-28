@@ -617,7 +617,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: 'Häufige Fehler bei der Verwendung von KI im Bildungswesen', anchor: '#common-mistakes-when-using-ai-in-education' },
         { label: 'Schritt für Schritt: KI in den Unterricht integrieren', anchor: '#step-by-step-integrating-ai-into-your-teaching' },
         { label: 'Weiterführende Literatur', anchor: '#related-reading' },
-        { label: 'Häufig gestellte Fragen', anchor: '#frequently-asked-questions' },
+        { label: 'Häufig gestellte Fragen', anchor: '#faq' },
         { label: 'Quellen und weitere Ressourcen', anchor: '#sources-further-reading' },
       ],
       schema: {
@@ -858,6 +858,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         definition: {
+          id: 'what-ai-teaching-tools-actually-do',
           title: 'Was KI-Lehrkräfte-Tools wirklich tun',
           content: [
             '**Im Mai 2026 führen KI-Lehrkräfte-Tools vier unterschiedliche Funktionen aus: personalisierte Nachhilfe, Unterrichtsplangenerierung, automatisiertes Bewertungsfeedback und Reduktion von Verwaltungsaufgaben — jedes erfordert ein anderes Tool und eine andere Prompt-Struktur.**',
@@ -869,6 +870,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         toolComparison: {
+          id: 'which-ai-tools-should-teachers-use-in-2026',
           title: 'Welche KI-Tools sollten Lehrkräfte 2026 nutzen?',
           content: [
             '**Khanmigo (Khan Academy), MagicSchool und ChatGPT (OpenAI) erfüllen jeweils unterschiedliche Klassenzimmerfunktionen — die Wahl des falschen Tools für die Aufgabe verschwendet Zeit und Chancen.**',
@@ -970,6 +972,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         promptStructure: {
+          id: 'how-to-write-prompts-for-teaching-tasks',
           title: 'Wie schreibe ich Prompts für Unterrichtsaufgaben',
           content: [
             '**Ein strukturierter Lehrkräfte-Prompt — einer, der Klassenstufe, Fach, Lernziel, Vorwissen, Zeitbeschränkungen und Ausgabeformat spezifiziert — erzeugt classroom-ready Materialien ohne Bearbeitung; ein unstrukturierter Prompt erzeugt einen generischen Entwurf, der 30+ Minuten Überarbeitung erfordert.**',
@@ -991,6 +994,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         goodExample: {
+          id: 'the-five-component-teacher-prompt',
           title: 'Der fünfteilige Lehrkräfte-Prompt',
           content: [
             'Guter Prompt — fünfteilige Struktur:',
@@ -1004,6 +1008,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         assessmentPrompt: {
+          id: 'how-do-you-prompt-ai-for-assessment-feedback',
           title: 'Wie schreibe ich KI-Prompts für Bewertungsfeedback?',
           content: [
             '**Für Formativ-Bewertung: Inkludieren Sie Ihre Rubrik-Kriterien direkt im Prompt, damit die KI Ihre Benotungsstandards versteht und sie konsistent über alle Schülereinreichungen anwendet.**',
@@ -1015,6 +1020,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         learningOutcomes: {
+          id: 'does-ai-tutoring-improve-learning-outcomes',
           title: 'Verbessert KI-Nachhilfe wirklich die Lernergebnisse?',
           content: [
             '**Schüler, die KI-Tutorialsysteme nutzen, überbieten Gleichaltrige in traditionelle Unterrichtung um 15–35 % in standardisierten Bewertungen über 21 empirische Studien hinweg.**',
@@ -1032,6 +1038,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         integrityProblem: {
+          id: 'how-detectable-is-ai-cheating-in-schools',
           title: 'Wie erkennbar ist KI-Betrug in Schulen?',
           content: [
             '**Aktuelle KI-Erkennungstools haben in begutachteten Studien falsch-positive Raten von 15–30 %, was bedeutet, dass sie für risikoreiche akademische Integritätsentscheidungen unzuverlässig sind — und viele Schüler nutzen [KI-Halluzinationen](/de/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) strategisch, um Erkennung zu vermeiden.**',
@@ -1053,6 +1060,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         regulatoryContext: {
+          id: 'how-does-the-eu-ai-act-affect-schools',
           title: 'Wie wirkt sich der EU AI Act auf Schulen aus?',
           content: [
             '**Der EU AI Act klassifiziert KI-Systeme im Bildungswesen als „hochriskant\" — das bedeutet, Tools, die Prüfungsbewertung, Lernpfade oder Schülerbewertung beeinflussen, unterliegen obligatorischer Transparenz, menschlicher Überwachung und Verzerrungsvermeidungsanforderungen.**',
@@ -1089,6 +1097,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes-when-using-ai-in-education',
           title: 'Häufige Fehler bei der Verwendung von KI im Bildungswesen',
           content: [
             '**Diese fünf Fallstricke kosten Lehrkräften Zeit und können rechtliche oder ethische Probleme erzeugen — alle sind einfach mit dem richtigen Prozess zu beheben.**',
@@ -1106,6 +1115,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Weiterführende Literatur',
           items: [
             '[Was ist Prompt-Engineering?](/de/prompt-engineering/what-is-prompt-engineering) — die grundlegenden Prinzipien hinter effektiven KI-Anweisungen',
@@ -1120,6 +1130,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         howToStart: {
+          id: 'step-by-step-integrating-ai-into-your-teaching',
           title: 'Schritt für Schritt: KI in den Unterricht integrieren',
           content: [
             '**Folgen Sie diesen fünf Schritte, um KI in Ihren Unterricht zu integrieren, ohne Lernergebnisse zu stören oder akademische Integritäts-Standards zu verletzen.**',
@@ -1188,6 +1199,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         sources: {
+          id: 'sources-further-reading',
           title: 'Quellen und weitere Ressourcen',
           content: [
             '**Alle Statistiken und Befunde in diesem Artikel sind von begutachteter Forschung, amtlicher Regierungsleitlinien und dokumentierten institutionellen Richtlinien beschafft.** Letzte Faktenchecks: 2026-04-28 (gegen aktuelle Claude Sonnet 5, GPT-5.6, Gemini 3.1 Pro Modelle; aktuelle Khanmigo-Preise bei Khan Academy; aktuelle EU AI Act Artikel 4-Leitlinien gültig ab 2025).',
@@ -1231,7 +1243,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: 'Errores comunes al usar IA en la educación', anchor: '#common-mistakes-when-using-ai-in-education' },
         { label: 'Paso a paso: Integrar IA en tu enseñanza', anchor: '#step-by-step-integrating-ai-into-your-teaching' },
         { label: 'Lectura relacionada', anchor: '#related-reading' },
-        { label: 'Preguntas frecuentes', anchor: '#frequently-asked-questions' },
+        { label: 'Preguntas frecuentes', anchor: '#faq' },
         { label: 'Fuentes y lecturas adicionales', anchor: '#sources-further-reading' },
       ],
       schema: {
@@ -1359,6 +1371,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         definition: {
+          id: 'what-ai-teaching-tools-actually-do',
           title: 'Qué hacen realmente las herramientas de enseñanza con IA',
           content: [
             '**En mayo de 2026, las herramientas de enseñanza con IA realizan cuatro funciones distintas: tutoría personalizada, generación de planes de lección, retroalimentación de evaluación automatizada y reducción de tareas administrativas — cada una requiere una herramienta y una estructura de prompt diferentes.**',
@@ -1370,6 +1383,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         toolComparison: {
+          id: 'which-ai-tools-should-teachers-use-in-2026',
           title: '¿Qué herramientas de IA deberían usar los docentes en 2026?',
           content: [
             '**Khanmigo (Khan Academy), MagicSchool y ChatGPT (OpenAI) sirven cada uno para diferentes funciones del aula — elegir la herramienta incorrecta para la tarea desperdicia tiempo y oportunidades.**',
@@ -1411,6 +1425,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         promptStructure: {
+          id: 'how-to-write-prompts-for-teaching-tasks',
           title: 'Cómo escribir prompts para tareas de enseñanza',
           content: [
             '**Un prompt estructurado para docentes — que especifica el nivel de grado, la materia, el objetivo de aprendizaje, el conocimiento previo, las restricciones de tiempo y el formato de salida — produce materiales listos para el aula sin edición; un prompt no estructurado produce un borrador genérico que requiere más de 30 minutos de revisión.**',
@@ -1432,6 +1447,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         goodExample: {
+          id: 'the-five-component-teacher-prompt',
           title: 'El prompt de docente de cinco componentes',
           content: [
             'Prompt bueno — estructura de cinco partes:',
@@ -1445,6 +1461,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         assessmentPrompt: {
+          id: 'how-do-you-prompt-ai-for-assessment-feedback',
           title: '¿Cómo escribes prompts de IA para retroalimentación de evaluación?',
           content: [
             '**Para la evaluación formativa: incluye los criterios de tu rúbrica directamente en el prompt para que la IA comprenda tus estándares de calificación y los aplique de manera coherente en todas las entregas de los estudiantes.**',
@@ -1456,6 +1473,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         learningOutcomes: {
+          id: 'does-ai-tutoring-improve-learning-outcomes',
           title: '¿La tutoría con IA mejora realmente los resultados de aprendizaje?',
           content: [
             '**Los estudiantes que usan sistemas de tutoría con IA superan a sus pares en la instrucción tradicional entre un 15 y un 35 % en evaluaciones estandarizadas en 21 estudios empíricos.**',
@@ -1473,6 +1491,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         integrityProblem: {
+          id: 'how-detectable-is-ai-cheating-in-schools',
           title: '¿Qué tan detectable es el engaño con IA en las escuelas?',
           content: [
             '**Las herramientas actuales de detección de IA tienen tasas de falsos positivos del 15–30 % en estudios revisados por pares, lo que significa que son poco fiables para decisiones de integridad académica de alto riesgo.**',
@@ -1494,6 +1513,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         regulatoryContext: {
+          id: 'how-does-the-eu-ai-act-affect-schools',
           title: '¿Cómo afecta la Ley de IA de la UE a las escuelas?',
           content: [
             '**La Ley de IA de la UE clasifica los sistemas de IA en la educación como "de alto riesgo" — lo que significa que las herramientas que influyen en la calificación de exámenes, las rutas de aprendizaje o la evaluación de los estudiantes están sujetas a requisitos obligatorios de transparencia, supervisión humana y evitación de sesgos.**',
@@ -1529,6 +1549,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes-when-using-ai-in-education',
           title: 'Errores comunes al usar IA en la educación',
           content: [
             '**Estos cinco errores les cuestan tiempo a los docentes y pueden crear problemas legales o éticos — todos se solucionan fácilmente con el proceso correcto.**',
@@ -1546,6 +1567,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Lectura relacionada',
           items: [
             '[¿Qué es el Prompt Engineering?](/es/prompt-engineering/what-is-prompt-engineering) — los principios fundamentales detrás de las instrucciones de IA eficaces',
@@ -1559,6 +1581,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         howToStart: {
+          id: 'step-by-step-integrating-ai-into-your-teaching',
           title: 'Paso a paso: Integrar IA en tu enseñanza',
           content: [
             '**Sigue estos cinco pasos para integrar la IA en tu enseñanza sin interrumpir los resultados de aprendizaje ni violar los estándares de integridad académica.**',
@@ -1623,6 +1646,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         sources: {
+          id: 'sources-further-reading',
           title: 'Fuentes y lecturas adicionales',
           content: [
             '**Todas las estadísticas y hallazgos en este artículo provienen de investigaciones revisadas por pares, directrices gubernamentales oficiales y políticas institucionales documentadas.** Última verificación de hechos: 2026-04-28.',
@@ -1667,7 +1691,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: 'الأخطاء الشائعة عند استخدام الذكاء الاصطناعي في التعليم', anchor: '#common-mistakes-when-using-ai-in-education' },
         { label: 'خطوة بخطوة: دمج الذكاء الاصطناعي في تدريسك', anchor: '#step-by-step-integrating-ai-into-your-teaching' },
         { label: 'قراءة ذات صلة', anchor: '#related-reading' },
-        { label: 'الأسئلة الشائعة', anchor: '#frequently-asked-questions' },
+        { label: 'الأسئلة الشائعة', anchor: '#faq' },
         { label: 'المصادر وقراءات إضافية', anchor: '#sources-further-reading' },
       ],
       schema: {
@@ -1795,6 +1819,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         definition: {
+          id: 'what-ai-teaching-tools-actually-do',
           title: 'ما تفعله أدوات التدريس بالذكاء الاصطناعي فعلاً',
           content: [
             '**في مايو 2026، تؤدي أدوات التدريس بالذكاء الاصطناعي أربع وظائف متميزة: التدريس الفردي الشخصي وتوليد خطط الدروس والتغذية الراجعة الآلية للتقييم وتقليل المهام الإدارية — كل منها يتطلب أداةً وبنية برومبت مختلفتين.**',
@@ -1806,6 +1831,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         toolComparison: {
+          id: 'which-ai-tools-should-teachers-use-in-2026',
           title: 'أي أدوات ذكاء اصطناعي يجب على المعلمين استخدامها في 2026؟',
           content: [
             '**Khanmigo (Khan Academy) وMagicSchool وChatGPT (OpenAI) يخدمون كل منهم وظائف مختلفة في الفصل — اختيار الأداة الخاطئة للمهمة يُهدر الوقت والفرص.**',
@@ -1847,6 +1873,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         promptStructure: {
+          id: 'how-to-write-prompts-for-teaching-tasks',
           title: 'كيفية كتابة برومبتات لمهام التدريس',
           content: [
             '**برومبت منظم للمعلمين — يُحدّد المستوى الدراسي والمادة وهدف التعلم والمعرفة السابقة وقيود الوقت وصيغة المخرج — يُنتج مواد جاهزة للفصل دون تحرير؛ بينما ينتج برومبت غير منظم مسودة عامة تتطلب أكثر من 30 دقيقة من المراجعة.**',
@@ -1868,6 +1895,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         goodExample: {
+          id: 'the-five-component-teacher-prompt',
           title: 'برومبت المعلم المؤلف من خمسة مكونات',
           content: [
             'برومبت جيد — بنية من خمسة أجزاء:',
@@ -1881,6 +1909,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         assessmentPrompt: {
+          id: 'how-do-you-prompt-ai-for-assessment-feedback',
           title: 'كيف تكتب برومبتات ذكاء اصطناعي لتغذية راجعة التقييم؟',
           content: [
             '**للتقييم التكويني: أدرج معايير معيارك مباشرةً في البرومبت حتى يفهم الذكاء الاصطناعي معايير تقييمك ويطبّقها باتساق على جميع تسليمات الطلاب.**',
@@ -1892,6 +1921,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         learningOutcomes: {
+          id: 'does-ai-tutoring-improve-learning-outcomes',
           title: 'هل يُحسّن التدريس الفردي بالذكاء الاصطناعي نتائج التعلم فعلاً؟',
           content: [
             '**الطلاب الذين يستخدمون أنظمة التدريس الفردي بالذكاء الاصطناعي يتفوقون على أقرانهم في التعليم التقليدي بنسبة 15–35٪ في التقييمات الموحّدة في 21 دراسة تجريبية.**',
@@ -1909,6 +1939,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         integrityProblem: {
+          id: 'how-detectable-is-ai-cheating-in-schools',
           title: 'ما مدى قابلية كشف الغش بالذكاء الاصطناعي في المدارس؟',
           content: [
             '**أدوات كشف الذكاء الاصطناعي الحالية لها معدلات إيجابية كاذبة 15–30٪ في الدراسات المراجَعة من الأقران، مما يعني أنها غير موثوقة لقرارات النزاهة الأكاديمية عالية المخاطر.**',
@@ -1930,6 +1961,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         regulatoryContext: {
+          id: 'how-does-the-eu-ai-act-affect-schools',
           title: 'كيف يؤثر قانون الذكاء الاصطناعي الأوروبي على المدارس؟',
           content: [
             '**قانون الذكاء الاصطناعي الأوروبي يُصنّف أنظمة الذكاء الاصطناعي في التعليم كـ"عالية المخاطر" — مما يعني أن الأدوات التي تؤثر على تصنيف الامتحانات أو مسارات التعلم أو تقييم الطلاب تخضع لمتطلبات إلزامية في الشفافية والإشراف البشري وتجنب التحيز.**',
@@ -1965,6 +1997,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes-when-using-ai-in-education',
           title: 'الأخطاء الشائعة عند استخدام الذكاء الاصطناعي في التعليم',
           content: [
             '**هذه الأخطاء الخمسة تُكلّف المعلمين الوقت وقد تخلق مشكلات قانونية أو أخلاقية — كلها قابلة للحل بسهولة مع العملية الصحيحة.**',
@@ -1982,6 +2015,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'قراءة ذات صلة',
           items: [
             '[ما هي هندسة البرومبت؟](/ar/prompt-engineering/what-is-prompt-engineering) — المبادئ الأساسية وراء تعليمات الذكاء الاصطناعي الفعّالة',
@@ -1995,6 +2029,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         howToStart: {
+          id: 'step-by-step-integrating-ai-into-your-teaching',
           title: 'خطوة بخطوة: دمج الذكاء الاصطناعي في تدريسك',
           content: [
             '**اتبع هذه الخطوات الخمس لدمج الذكاء الاصطناعي في تدريسك دون تعطيل نتائج التعلم أو انتهاك معايير النزاهة الأكاديمية.**',
@@ -2059,6 +2094,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         sources: {
+          id: 'sources-further-reading',
           title: 'المصادر وقراءات إضافية',
           content: [
             '**جميع الإحصاءات والنتائج في هذه المقالة مستقاة من أبحاث مراجَعة من الأقران وإرشادات حكومية رسمية وسياسات مؤسسية موثقة.** آخر تحقق من الحقائق: 2026-04-28.',
@@ -2295,7 +2331,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     { label: 'Erreurs courantes dans l\'utilisation de l\'IA en éducation', anchor: '#common-mistakes-when-using-ai-in-education' },
     { label: 'Étape par étape : intégrer l\'IA dans l\'enseignement', anchor: '#step-by-step-integrating-ai-into-your-teaching' },
     { label: 'Lectures complémentaires', anchor: '#related-reading' },
-    { label: 'Questions fréquemment posées', anchor: '#frequently-asked-questions' },
+    { label: 'Questions fréquemment posées', anchor: '#faq' },
     { label: 'Sources et ressources supplémentaires', anchor: '#sources-further-reading' },
   ],
   schema: {
@@ -2520,6 +2556,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     definition: {
+      id: 'what-ai-teaching-tools-actually-do',
       title: 'Ce que les outils pédagogiques IA font vraiment',
       content: [
         '**En avril 2026, les outils pédagogiques IA exécutent quatre fonctions distinctes : tutorat personnalisé, génération de plans d\'études, rétroaction d\'évaluation automatisée et réduction des tâches administratives — chacun nécessite un outil différent et une structure de prompt différente.**',
@@ -2531,6 +2568,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     toolComparison: {
+      id: 'which-ai-tools-should-teachers-use-in-2026',
       title: 'Quels outils IA les enseignants doivent-ils utiliser en 2026 ?',
       content: [
         '**Khanmigo (Khan Academy), MagicSchool et ChatGPT (OpenAI) remplissent chacun des fonctions de classe distinctes — choisir le mauvais outil pour la tâche gaspille temps et opportunités.**',
@@ -2631,6 +2669,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     promptStructure: {
+      id: 'how-to-write-prompts-for-teaching-tasks',
       title: 'Comment rédiger des prompts pour les tâches pédagogiques',
       content: [
         '**Un prompt d\'enseignant structuré — qui spécifie le niveau de classe, la matière, l\'objectif d\'apprentissage, les connaissances préalables, les contraintes de temps et le format de sortie — produit du matériel prêt pour la classe sans édition ; un prompt non structuré produit un brouillon générique nécessitant 30+ minutes de retouche.**',
@@ -2652,6 +2691,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     goodExample: {
+      id: 'the-five-component-teacher-prompt',
       title: 'Le prompt pédagogue à cinq composants',
       content: [
         'Bon prompt — structure à cinq composants :',
@@ -2665,6 +2705,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     assessmentPrompt: {
+      id: 'how-do-you-prompt-ai-for-assessment-feedback',
       title: 'Comment rédiger des prompts IA pour les commentaires d\'évaluation ?',
       content: [
         '**Pour l\'évaluation formative : incluez vos critères de rubrique directement dans le prompt, afin que l\'IA comprenne vos normes de notation et les applique régulièrement à tous les travaux des élèves.**',
@@ -2676,6 +2717,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     learningOutcomes: {
+      id: 'does-ai-tutoring-improve-learning-outcomes',
       title: 'Le tutorat par IA améliore-t-il vraiment les résultats ?',
       content: [
         '**Les élèves utilisant des systèmes tutoriels IA surpassent les pairs en enseignement traditionnel de 15–35 % aux évaluations normalisées sur 21 études empiriques.**',
@@ -2693,6 +2735,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     integrityProblem: {
+      id: 'how-detectable-is-ai-cheating-in-schools',
       title: 'La triche par IA est-elle détectable dans les établissements scolaires ?',
       content: [
         '**Les outils de détection d\'IA actuels ont des taux de faux positifs de 15–30 % dans les études examinées par les pairs, ce qui les rend peu fiables pour les décisions d\'intégrité académique à haut risque — et de nombreux élèves utilisent stratégiquement les [hallucinations d\'IA](/fr/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) pour éviter la détection.**',
@@ -2714,6 +2757,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     regulatoryContext: {
+      id: 'how-does-the-eu-ai-act-affect-schools',
       title: 'Comment la Loi IA de l\'UE affecte-t-elle les écoles ?',
       content: [
         '**La Loi IA de l\'UE classe les systèmes IA en éducation comme « haut risque » — ce qui signifie que les outils affectant l\'évaluation d\'examen, les parcours d\'apprentissage ou l\'évaluation des élèves sont soumis à des exigences obligatoires de transparence, de supervision humaine et d\'atténuation des biais.**',
@@ -2736,6 +2780,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     commonMistakes: {
+      id: 'common-mistakes-when-using-ai-in-education',
       title: 'Erreurs courantes dans l\'utilisation de l\'IA en éducation',
       content: [
         '**Ces cinq pièges coûtent du temps aux enseignants et peuvent créer des problèmes juridiques ou éthiques — tous sont faciles à corriger avec le processus approprié.**',
@@ -2753,6 +2798,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     howToStart: {
+      id: 'step-by-step-integrating-ai-into-your-teaching',
       title: 'Étape par étape : intégrer l\'IA dans l\'enseignement',
       content: [
         '**Suivez ces cinq étapes pour intégrer l\'IA dans votre enseignement sans perturber les résultats d\'apprentissage ni violer les normes d\'intégrité académique.**',
@@ -2769,6 +2815,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     relatedReading: {
+      id: 'related-reading',
       title: 'Lectures complémentaires',
       items: [
         '[Qu\'est-ce que l\'engineering des prompts ?](/fr/prompt-engineering/what-is-prompt-engineering) — les principes fondamentaux derrière les instructions IA efficaces',
@@ -2830,6 +2877,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     sources: {
+      id: 'sources-further-reading',
       title: 'Sources et ressources supplémentaires',
       content: [
         '**Toutes les statistiques et conclusions dans cet article proviennent de recherche examinée par les pairs, de directives gouvernementales officielles et de politiques institutionnelles documentées.** Dernières vérifications factuelles : 2026-04-28 (contre les modèles Claude Sonnet 5, GPT-5.6, Gemini 3.1 Pro actuels ; tarifs Khanmigo actuels chez Khan Academy ; directives article 4 de la Loi IA de l\'UE actuelles applicables à partir de 2025).',
@@ -2871,7 +2919,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     { label: '教育でのAI使用における一般的な落とし穴', anchor: '#common-mistakes-when-using-ai-in-education' },
     { label: 'ステップバイステップ：AIを指導に統合する', anchor: '#step-by-step-integrating-ai-into-your-teaching' },
     { label: '関連リソース', anchor: '#related-reading' },
-    { label: 'よくある質問', anchor: '#frequently-asked-questions' },
+    { label: 'よくある質問', anchor: '#faq' },
     { label: 'ソースと参考資料', anchor: '#sources-further-reading' },
   ],
   schema: {
@@ -3001,6 +3049,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     definition: {
+      id: 'what-ai-teaching-tools-actually-do',
       title: '教育用AIツールが実際に行うこと',
       content: [
         '**2026年4月時点で、教育用AIツールは4つの異なる機能を実行します：パーソナライズチューター、カリキュラム生成、自動評価フィードバック、管理作業削減 - 各機能は異なるツールと異なるプロンプト構造を必要とします。**',
@@ -3012,6 +3061,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     toolComparison: {
+      id: 'which-ai-tools-should-teachers-use-in-2026',
       title: '2026年に教師が使うべきAIツール',
       content: [
         '**Khanmigo（Khan Academy）、MagicSchool、ChatGPT（OpenAI）は各異なる教室機能を遂行します—タスク向けの間違ったツール選択は時間と機会を浪費します。**',
@@ -3052,6 +3102,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     promptStructure: {
+      id: 'how-to-write-prompts-for-teaching-tasks',
       title: '教育タスク向けプロンプトの書き方',
       content: [
         '**構造化教師プロンプト—クラスレベル、対象、学習目標、前提知識、時間制約、出力形式を指定—は編集不要の教室対応資料を生み出します；非構造化プロンプトは30+分の修正が必要な汎用ドラフトを生み出します。**',
@@ -3073,6 +3124,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     goodExample: {
+      id: 'the-five-component-teacher-prompt',
       title: '5つのコンポーネント教師プロンプト',
       content: [
         '良いプロンプト—5コンポーネント構造：',
@@ -3086,6 +3138,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     assessmentPrompt: {
+      id: 'how-do-you-prompt-ai-for-assessment-feedback',
       title: '評価フィードバック向けAIプロンプトの書き方',
       content: [
         '**形成評価向け：ルーブリック基準をプロンプトに直接含めます、AIがあなたの採点基準を理解し、すべての生徒作業に一貫して適用できるように。**',
@@ -3097,6 +3150,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     learningOutcomes: {
+      id: 'does-ai-tutoring-improve-learning-outcomes',
       title: 'AIチューターは本当に学習成果を向上させるか',
       content: [
         '**AI先生システムを使う生徒は21の経験的研究全体で標準化評価で従来の教えより15～35%を上回ります。**',
@@ -3114,6 +3168,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     integrityProblem: {
+      id: 'how-detectable-is-ai-cheating-in-schools',
       title: '学校におけるAI不正はどの程度検出可能か',
       content: [
         '**現在のAI検出ツールは査読済み研究で15～30%の偽陽性率を持つため、高リスク学業不正決定向けに信頼できません—多くの生徒は戦略的に[AI幻覚](/ja/prompt-engineering/ai-hallucinations-why-ai-makes-things-up)を使って検出を回避します。**',
@@ -3134,6 +3189,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     regulatoryContext: {
+      id: 'how-does-the-eu-ai-act-affect-schools',
       title: 'EU AI法が学校にどう影響するか',
       content: [
         '**EU AI法は教育のAIシステムを「高リスク」と分類—試験評価、学習パス、または生徒評価に影響するツールは透明性、人間監督、バイアス軽減への強制要件が受ける。**',
@@ -3156,6 +3212,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     commonMistakes: {
+      id: 'common-mistakes-when-using-ai-in-education',
       title: '教育でのAI使用における一般的な落とし穴',
       content: [
         '**これら5つの落とし穴は教師時間を費用が掛かり法的/倫理的問題を作成できます—すべては適切なプロセスで簡単に修正。**',
@@ -3173,6 +3230,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     howToStart: {
+      id: 'step-by-step-integrating-ai-into-your-teaching',
       title: 'ステップバイステップ：AIを指導に統合する',
       content: [
         '**これら5つのステップに従い、学習成果を破害または学業不整基準違反なしにAIを指導に統合。**',
@@ -3189,6 +3247,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     relatedReading: {
+      id: 'related-reading',
       title: '関連リソース',
       items: [
         '[プロンプト工学とは何か](/ja/prompt-engineering/what-is-prompt-engineering) — 効果的なAI指示の背後にある基本的原理',
@@ -3220,6 +3279,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
     },
     sources: {
+      id: 'sources-further-reading',
       title: 'ソースと参考資料',
       content: [
         '**この記事内のすべての統計と結論は査読済み研究、政府ガイドラインとドキュメント制度ポリシーから取得されます。** 最終ファクトチェック：2026-04-28（現在Claude Sonnet 5、GPT-5.6、Gemini 3.1 Proモデル；Khan AcademyでのKhanmigo現在価格；2025年から有効のEU AI法第4条ガイドライン）。',
@@ -3260,7 +3320,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: 'AI在教学中的常见误区', anchor: '#common-mistakes-when-using-ai-in-education' },
         { label: '分步指南：将AI融入教学实践', anchor: '#step-by-step-integrating-ai-into-your-teaching' },
         { label: '相关资源', anchor: '#related-reading' },
-        { label: '常见问题', anchor: '#frequently-asked-questions' },
+        { label: '常见问题', anchor: '#faq' },
         { label: '信息来源', anchor: '#sources-further-reading' },
       ],
       schema: {
@@ -3518,6 +3578,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         definition: {
+          id: 'what-ai-teaching-tools-actually-do',
           title: 'AI教学工具的实际功能',
           content: [
             '**AI教学工具不替代教师——它们增强特定任务的效率，使教师从管理性工作中解放出来投入教学。** AI在课程规划、学生评估反馈、个性化练习生成和内容改写中最有效。AI不适合进行主观评分（论文成绩）或学生面向的开放式对话，除非有人类审查。',
@@ -3526,6 +3587,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         toolComparison: {
+          id: 'which-ai-tools-should-teachers-use-in-2026',
           title: '2026年教师应该选择哪些AI工具？',
           content: [
             '**每个AI工具在教学中有不同的目的。** 选择应基于任务（课程规划vs.学生辅导）、所需的工具深度（快速内容生成vs.完整工作流平台）和预算。',
@@ -3579,6 +3641,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         promptStructure: {
+          id: 'how-to-write-prompts-for-teaching-tasks',
           title: '如何为教学任务编写提示词',
           content: [
             '**结构化提示词的五个要素产生可预测的、高质量的教学AI输出：** 角色（「你是一位有15年经验的高中化学教师」）、目标（「创建一个关于分子键的引入课程」）、学生背景（「适合11年级，包括2名有学习障碍的学生」）、约束条件（「避免方程——侧重概念」）和输出格式（「Markdown大纲，包括引入钩子、主要概念、检查理解问题」）。',
@@ -3587,6 +3650,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         promptFramework: {
+          id: 'the-five-component-teacher-prompt',
           title: '五步教师提示词框架',
           content: [
             '**此五步提示词框架适用于任何教学任务——课程计划、反馈、创意资源生成或学生辅导。复制此模板，为您的特定学生和目标进行定制。** 这是迄今为止产生一致、高质量教学AI输出的最可靠方法。',
@@ -3612,6 +3676,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           codeLanguage: 'plaintext',
         },
         assessmentPrompt: {
+          id: 'how-do-you-prompt-ai-for-assessment-feedback',
           title: '如何用AI生成评估反馈？',
           content: [
             '**有效的评估反馈需要三个要素：明确的标准（学生知道什么是优秀）、具体的证据（「你在第3段使用了三个过渡词」）和可行的改进路径（「下次尝试……」）。** 大多数学生提交作业从AI得到的反馈是笼统的（「很好的工作！」），这在改进学习中无效。',
@@ -3629,6 +3694,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         learningOutcomes: {
+          id: 'does-ai-tutoring-improve-learning-outcomes',
           title: 'AI辅导是否真的能改善学习成效？',
           content: [
             '**是的——证据是强有力的且不断增长的。** 2024年哈佛大学的一项随机对照试验涉及194名本科物理学生，发现AI辅导产生的学习增长是主动学习课堂的两倍以上，学生用更少的时间完成相同的成果。',
@@ -3642,6 +3708,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         integrityProblem: {
+          id: 'how-detectable-is-ai-cheating-in-schools',
           title: '学校的AI作弊检测有多可靠？',
           content: [
             '**AI检测工具的可靠性远低于教育者认为的。** 目前的AI检测软件有15–30%的假阳性率，意味着每100份完全合法的学生提交中，最多30份可能被错误标记为AI生成的。',
@@ -3655,6 +3722,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         regulatoryContext: {
+          id: 'how-does-the-eu-ai-act-affect-schools',
           title: '中国、亚太和企业的AI监管',
           content: [
             '**不同地区对教育AI有不同的监管框架。** 全球学校应了解其司法管辖区的要求。',
@@ -3673,6 +3741,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes-when-using-ai-in-education',
           title: 'AI在教学中的常见误区',
           content: [
             '**误区1：直接向学生展示AI答案。** 学生学习通过做（认知努力），而不是通过观看。给学生一个AI生成的论文大纲而不让他们思考问题会削弱学习。改为：使用AI生成多个大纲选项，让学生选择和改进。',
@@ -3684,6 +3753,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         howToStart: {
+          id: 'step-by-step-integrating-ai-into-your-teaching',
           title: '分步指南：将AI融入教学实践',
           content: [
             '**开始使用AI进行教学的最快方法：从一个小任务开始，如课程计划或反馈，并扩大。** 这是分步工作流：',
@@ -3700,6 +3770,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: '相关资源',
           items: [
             '[什么是提示词工程](/zh/prompt-engineering/what-is-prompt-engineering) — 有效AI指令背后的基本原理',
@@ -3731,6 +3802,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         sources: {
+          id: 'sources-further-reading',
           title: '信息来源',
           content: [
             '**此文章中的所有统计数据和结论均来自同行评审研究、政府指南和机构政策。** 最终事实检查：2026-04-28（当前模型：Claude Sonnet 5、GPT-5.6、Gemini 3.1 Pro；Khan Academy上Khanmigo的当前价格；EU AI法第4条指南自2025年起生效）。',
@@ -3790,7 +3862,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: '교육에서 AI 사용 시 흔한 실수', anchor: '#common-mistakes-when-using-ai-in-education' },
         { label: '단계별: AI를 교육에 통합하기', anchor: '#step-by-step-integrating-ai-into-your-teaching' },
         { label: '관련 자료', anchor: '#related-reading' },
-        { label: '자주 묻는 질문', anchor: '#frequently-asked-questions' },
+        { label: '자주 묻는 질문', anchor: '#faq' },
         { label: '출처 및 추가 자료', anchor: '#sources-further-reading' },
       ],
       leadAnswerBlock: '2026년 AI 튜터링은 학습 효과를 두 배로 높이지만, 핵심은 구조화된 프롬프트에 있습니다. 역할, 목표, 학생 맥락, 제약 조건, 출력 형식의 5가지 구성 요소를 포함한 프롬프트는 교사의 주당 5–13시간을 절약합니다. 하버드 RCT(n=194)에서 AI 튜터링은 능동적 학습 교실보다 0.73–1.3 표준편차 더 높은 학습 효과를 기록했습니다.',
@@ -3820,6 +3892,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         definition: {
+          id: 'what-ai-teaching-tools-actually-do',
           title: 'AI 교육 도구가 실제로 하는 일',
           content: [
             '**2026년 5월 기준으로 AI 교육 도구는 네 가지 고유한 기능을 수행합니다: 개인화된 튜터링, 수업 계획 생성, 자동화된 평가 피드백, 행정 업무 감소 — 각각 서로 다른 도구와 프롬프트 구조가 필요합니다.**',
@@ -3831,6 +3904,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         toolComparison: {
+          id: 'which-ai-tools-should-teachers-use-in-2026',
           title: '2026년 교사가 사용해야 할 AI 도구는?',
           content: [
             '**Khanmigo(Khan Academy), MagicSchool, ChatGPT(OpenAI)는 각각 서로 다른 교실 기능을 제공합니다 — 과제에 맞지 않는 도구를 선택하면 시간과 기회를 낭비합니다.**',
@@ -3932,6 +4006,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         promptStructure: {
+          id: 'how-to-write-prompts-for-teaching-tasks',
           title: '교육 과제에 맞는 프롬프트 작성 방법',
           content: [
             '**학년 수준, 과목, 학습 목표, 사전 지식, 시간 제약, 출력 형식을 명시하는 구조화된 교사 프롬프트는 편집 없이 교실에서 바로 사용할 수 있는 자료를 생성합니다. 반면 비구조화된 프롬프트는 30분 이상의 수정이 필요한 일반적인 초안을 생성합니다.**',
@@ -3953,6 +4028,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         goodExample: {
+          id: 'the-five-component-teacher-prompt',
           title: '5가지 구성 요소 교사 프롬프트',
           content: [
             '좋은 프롬프트 — 5가지 구성 요소 구조:',
@@ -3966,6 +4042,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         assessmentPrompt: {
+          id: 'how-do-you-prompt-ai-for-assessment-feedback',
           title: '평가 피드백을 위한 AI 프롬프트 작성 방법',
           content: [
             '**형성 평가를 위해서는 루브릭 기준을 프롬프트에 직접 포함하여 AI가 귀하의 채점 기준을 이해하고 모든 학생 제출물에 일관되게 적용하도록 하십시오.**',
@@ -3977,6 +4054,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         learningOutcomes: {
+          id: 'does-ai-tutoring-improve-learning-outcomes',
           title: 'AI 튜터링이 학습 성과를 향상시키는가?',
           content: [
             '**AI 튜터링 시스템을 사용하는 학생들은 21개의 경험적 연구에서 표준화된 평가에서 전통적인 교육의 동료들보다 15–35% 더 높은 성과를 냅니다.**',
@@ -3994,6 +4072,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         integrityProblem: {
+          id: 'how-detectable-is-ai-cheating-in-schools',
           title: '학교에서 AI 부정행위는 얼마나 탐지 가능한가?',
           content: [
             '**현재 AI 탐지 도구는 동료 검토 연구에서 15–30%의 위양성률을 보이므로 고위험 학업 청렴도 결정에는 신뢰할 수 없으며 — 많은 학생들이 [AI 환각](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up)을 탐지를 회피하기 위해 전략적으로 사용합니다.**',
@@ -4015,6 +4094,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         regulatoryContext: {
+          id: 'how-does-the-eu-ai-act-affect-schools',
           title: 'EU AI Act가 학교에 미치는 영향',
           content: [
             '**EU AI Act는 교육에 사용되는 AI 시스템을 "고위험"으로 분류합니다 — 즉 시험 채점, 학습 경로, 학생 평가에 영향을 미치는 도구는 의무적인 투명성, 인간 감독, 편향 방지 요구 사항을 받습니다.**',
@@ -4037,6 +4117,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes-when-using-ai-in-education',
           title: '교육에서 AI 사용 시 흔한 실수',
           content: [
             '**이 다섯 가지 함정은 교사의 시간을 낭비하고 법적 또는 윤리적 문제를 야기할 수 있습니다 — 올바른 프로세스를 통해 모두 쉽게 수정할 수 있습니다.**',
@@ -4054,6 +4135,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: '관련 자료',
           items: [
             '[프롬프트 엔지니어링이란?](/prompt-engineering/what-is-prompt-engineering) — 효과적인 AI 지침 뒤에 있는 기본 원칙',
@@ -4068,6 +4150,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         howToStart: {
+          id: 'step-by-step-integrating-ai-into-your-teaching',
           title: '단계별: AI를 교육에 통합하기',
           content: [
             '**학습 성과를 방해하거나 학업 청렴도 기준을 위반하지 않고 AI를 교육에 통합하려면 이 다섯 가지 단계를 따르십시오.**',
@@ -4128,6 +4211,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         sources: {
+          id: 'sources-further-reading',
           title: '출처 및 추가 자료',
           content: [
             '**이 기사의 모든 통계와 결과물은 동료 검토 연구, 공식 정부 지침, 공개적으로 문서화된 기관 정책에서 출처를 가져왔습니다.** 마지막 사실 확인: 2026-05-04(현재 Claude Sonnet 5, GPT-5.6, Gemini 3.1 Pro 모델 기준; Khan Academy의 현재 Khanmigo 가격 기준; 2025년부터 시행되는 현재 EU AI Act Article 4 지침 기준).',

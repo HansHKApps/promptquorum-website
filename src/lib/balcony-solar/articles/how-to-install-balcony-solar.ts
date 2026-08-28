@@ -44,7 +44,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Plug Types, Simplified', anchor: '#plug-types' },
       { label: 'Troubleshooting', anchor: '#troubleshooting' },
       { label: 'FAQ', anchor: '#faq' },
-      { label: 'Related Reading', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -201,7 +200,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Tipos de enchufe, simplificado', anchor: '#plug-types' },
       { label: 'Solución de problemas', anchor: '#troubleshooting' },
       { label: 'Preguntas frecuentes', anchor: '#faq' },
-      { label: 'Lecturas relacionadas', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -360,7 +358,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Tipos de tomada, simplificado', anchor: '#plug-types' },
       { label: 'Solução de problemas', anchor: '#troubleshooting' },
       { label: 'Perguntas frequentes', anchor: '#faq' },
-      { label: 'Leituras relacionadas', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -519,7 +516,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'أنواع القوابس، ببساطة', anchor: '#plug-types' },
       { label: 'استكشاف الأخطاء وإصلاحها', anchor: '#troubleshooting' },
       { label: 'الأسئلة الشائعة', anchor: '#faq' },
-      { label: 'قراءات ذات صلة', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -680,7 +676,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Steckertypen vereinfacht', anchor: '#plug-types' },
       { label: 'Fehlersuche', anchor: '#troubleshooting' },
       { label: 'Häufige Fragen', anchor: '#faq' },
-      { label: 'Weiterführende Artikel', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -839,7 +834,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'プラグの種類をわかりやすく', anchor: '#plug-types' },
       { label: 'トラブルシューティング', anchor: '#troubleshooting' },
       { label: 'よくある質問', anchor: '#faq' },
-      { label: '関連記事', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -998,7 +992,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '插头类型简介', anchor: '#plug-types' },
       { label: '故障排除', anchor: '#troubleshooting' },
       { label: '常见问题', anchor: '#faq' },
-      { label: '相关阅读', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -1157,7 +1150,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Types de prises, simplifiés', anchor: '#plug-types' },
       { label: 'Dépannage', anchor: '#troubleshooting' },
       { label: 'FAQ', anchor: '#faq' },
-      { label: 'Lectures complémentaires', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -1316,7 +1308,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '플러그 유형 한눈에 보기', anchor: '#plug-types' },
       { label: '문제 해결', anchor: '#troubleshooting' },
       { label: '자주 묻는 질문', anchor: '#faq' },
-      { label: '관련 읽을거리', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {

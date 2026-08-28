@@ -324,6 +324,7 @@ schema: {
           ],
         },
         whatIsLmStudio: {
+          id: 'what-is-lm-studio',
           title: '¿Qué es LM Studio?',
           content: [
             '**LM Studio es una aplicación de escritorio para ejecutar LLMs locales.** Proporciona un navegador gráfico de modelos, una interfaz de chat integrada y un servidor de API local, todo en una sola app. Internamente usa llama.cpp para la inferencia, el mismo motor que impulsa [Ollama](/es/local-llms/how-to-install-ollama).',
@@ -596,6 +597,7 @@ schema: {
           ],
         },
         whatIsLmStudio: {
+          id: 'what-is-lm-studio',
           title: 'ما هو LM Studio؟',
           content: [
             '**LM Studio تطبيق سطح مكتب لتشغيل نماذج LLM المحلية.** يوفر متصفح نماذج رسوميًا وواجهة محادثة مدمجة وخادم API محلي، كلها في تطبيق واحد. ويستخدم داخليًا llama.cpp للاستدلال، وهو المحرك نفسه الذي يشغّل [Ollama](/ar/local-llms/how-to-install-ollama).',
@@ -1087,9 +1089,6 @@ schema: {
         { label: 'Download und Installation', anchor: '#download-and-install' },
         { label: 'Modell suchen und herunterladen', anchor: '#find-and-download' },
         { label: 'Mit dem Chat beginnen', anchor: '#start-chatting' },
-        { label: 'Modelleinstellungen anpassen', anchor: '#adjust-settings' },
-        { label: 'Lokalen Server aktivieren', anchor: '#enable-server' },
-        { label: 'Mit Python verbinden', anchor: '#connect-python' },
         { label: 'LM Studio vs Ollama', anchor: '#lm-studio-vs-ollama' },
         { label: 'Fehlerbehebung', anchor: '#troubleshooting' },
         { label: 'Regionaler Kontext', anchor: '#regional-context' },
@@ -1117,6 +1116,7 @@ schema: {
           ],
         },
         whatIsLmStudio: {
+          id: 'what-is-lm-studio',
           title: 'Was ist LM Studio?',
           content: [
             '**LM Studio ist eine Desktop-Anwendung zum Ausführen lokaler LLMs.** Es bietet einen grafischen Modellbrowser, eine integrierte Chat-Benutzeroberfläche und einen lokalen API-Server -- alles in einer App. Unter der Haube verwendet es llama.cpp für Inferenz, das gleiche Modul, das Ollama antreibt (/de/local-llms/how-to-install-ollama).',
@@ -1125,6 +1125,7 @@ schema: {
           ],
         },
         requirements: {
+          id: 'system-requirements',
           title: 'Welche Systemanforderungen hat LM Studio?',
           columns: ['Spezifikation', 'Minimum', 'Empfohlen'],
           rows: [
@@ -1135,6 +1136,7 @@ schema: {
           ],
         },
         download: {
+          id: 'download-and-install',
           title: 'Wie laden Sie LM Studio herunter und installieren es',
           numberedItems: [
             'Gehen Sie zu lmstudio.ai und klicken Sie auf die Download-Schaltfläche für Ihr Betriebssystem.',
@@ -1147,6 +1149,7 @@ schema: {
           imageCaption: 'LM Studio Installationsablauf: Download von lmstudio.ai, Installation unter macOS, Windows oder Linux, Suche eines GGUF-Modells auf Hugging Face, Wahl der Q4_K_M-Quantisierung (~4,5 GB) und Chat-Start in 5-30 Sekunden.',
         },
         findModel: {
+          id: 'find-and-download',
           title: 'Wie finden und laden Sie ein Modell in LM Studio herunter',
           content: 'Verwenden Sie die Registerkarte „Search" (Lupe-Symbol in der linken Seitenleiste), um Modelle zu finden:',
           numberedItems: [
@@ -1160,6 +1163,7 @@ schema: {
           imageCaption: 'RAM-basierter Quantisierungsleitfaden für LM Studio: 8 GB RAM eignen sich für Q4_K_M (~4,5 GB, ~1% Qualitätsverlust); 16 GB RAM eignen sich für Q5_K_M oder Q6_K (~5,7-6,5 GB, nahezu verlustfrei) mit Spielraum für 8K+ Token Kontext.',
         },
         firstChat: {
+          id: 'start-chatting',
           title: 'Wie beginnen Sie zu chatten mit einem Modell in LM Studio',
           numberedItems: [
             'Klicken Sie auf die Registerkarte „Chat" (Sprechblase-Symbol) in der linken Seitenleiste.',
@@ -1206,6 +1210,7 @@ response = client.chat.completions.create(
 print(response.choices[0].message.content)`,
         },
         vsOllama: {
+          id: 'lm-studio-vs-ollama',
           title: 'Was sollten Sie verwenden: LM Studio oder Ollama?',
           columns: ['Faktor', 'LM Studio', 'Ollama'],
           rows: [
@@ -1218,6 +1223,7 @@ print(response.choices[0].message.content)`,
           ],
         },
         troubleshooting: {
+          id: 'troubleshooting',
           title: 'Wie beheben Sie häufige LM Studio-Probleme?',
           faqs: [
             {
@@ -1239,6 +1245,7 @@ print(response.choices[0].message.content)`,
           ],
         },
         regionalContext: {
+          id: 'regional-context',
           title: 'LM Studio für datenschutzsensible Anwendungsfälle',
           content: [
             '**EU / DSGVO**: LM Studio mit lokalen Modellen ist eine der datenschutzfreundlichsten KI-Konfigurationen für Desktop-Nutzer, da keine Inferenzdaten das Gerät verlassen. Keine Eingabetexte, Kontexte oder Ausgaben werden außerhalb des Geräts übertragen -- DSGVO Artikel 46 Transfermechanismen finden keine Anwendung. Für EU-Fachleute, die mit personenbezogenen Daten arbeiten (Rechtsdokumente, medizinische Unterlagen, Finanzanalysen), bietet LM Studio auf einem MacBook M-Serie oder Windows-Arbeitsplatz mit dedizierter GPU eine vollständig konforme lokale Inferenz-Umgebung. Die BSI-Grundschutz-Kataloge empfehlen lokale Inferenz für KI-Systeme, die sensitive personenbezogene Daten verarbeiten. Für den deutschen Mittelstand ohne IT-Personal ist die GUI von LM Studio der einfachste Weg zu DSGVO-konformem KI-Einsatz, ohne Terminal-Befehle erlernen zu müssen. Artikel 28 DSGVO-Auftragsverarbeiter fallen weg, da keine Daten an externe API-Anbieter gehen.',
@@ -1247,6 +1254,7 @@ print(response.choices[0].message.content)`,
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Welche häufigen Fehler gibt es bei der Installation von LM Studio?',
           items: [
             '**Nicht genügend System-RAM für das in den LM Studio-Einstellungen ausgewählte Modell zuweisen.** Überprüfen Sie die Modell-Dateigröße und multiplizieren Sie mit 1,2 -- das ist der erforderliche Mindest-RAM. Ein 4,5-GB Q4_K_M 7B-Modell benötigt ~5,4 GB freien RAM.',
@@ -1257,6 +1265,7 @@ print(response.choices[0].message.content)`,
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Weiterführende Literatur',
           items: [
             '[Was sind lokale LLMs?](/de/local-llms/what-are-local-llms) -- Kernkonzepte und Komponenten',
@@ -1461,9 +1470,6 @@ schema: {
         { label: 'Télécharger et installer', anchor: '#download-and-install' },
         { label: 'Trouver et télécharger un modèle', anchor: '#find-and-download' },
         { label: 'Commencer à discuter', anchor: '#start-chatting' },
-        { label: 'Ajuster les paramètres du modèle', anchor: '#adjust-settings' },
-        { label: 'Activer le serveur local', anchor: '#enable-server' },
-        { label: 'Se connecter via Python', anchor: '#connect-python' },
         { label: 'LM Studio vs Ollama', anchor: '#lm-studio-vs-ollama' },
         { label: 'Dépannage', anchor: '#troubleshooting' },
         { label: 'Contexte régional', anchor: '#regional-context' },
@@ -1491,6 +1497,7 @@ schema: {
           ],
         },
         whatIsLmStudio: {
+          id: 'what-is-lm-studio',
           title: 'Qu\'est-ce que LM Studio ?',
           content: [
             '**LM Studio est une application desktop pour exécuter des LLM locaux.** Elle fournit un navigateur de modèles graphique, une interface de chat intégrée et un serveur API local -- tout dans une seule application. Sous le capot, elle utilise llama.cpp pour l\'inférence, le même moteur qui alimente [Ollama](/fr/local-llms/how-to-install-ollama).',
@@ -1499,6 +1506,7 @@ schema: {
           ],
         },
         requirements: {
+          id: 'system-requirements',
           title: 'Quelles sont les exigences système pour LM Studio ?',
           rows: [
             { 'Spécification': 'Système d\'exploitation', 'Minimum': 'macOS 13.6, Windows 10, Ubuntu 22.04', 'Recommandé': 'macOS 14+, Windows 11, Ubuntu 24.04' },
@@ -1509,6 +1517,7 @@ schema: {
           columns: ['Spécification', 'Minimum', 'Recommandé'],
         },
         download: {
+          id: 'download-and-install',
           title: 'Comment télécharger et installer LM Studio ?',
           numberedItems: [
             'Allez sur lmstudio.ai et cliquez sur le bouton télécharger pour votre système d\'exploitation.',
@@ -1521,6 +1530,7 @@ schema: {
           imageCaption: 'Flux d\'installation de LM Studio : téléchargement depuis lmstudio.ai, installation sur macOS, Windows ou Linux, recherche d\'un modèle GGUF sur Hugging Face, choix de la quantification Q4_K_M (~4,5 Go), et démarrage du chat en 5-30 secondes.',
         },
         findModel: {
+          id: 'find-and-download',
           title: 'Comment trouver et télécharger un modèle dans LM Studio ?',
           content: 'Utilisez l\'onglet Recherche (icône loupe dans la barre latérale gauche) pour trouver des modèles :',
           numberedItems: [
@@ -1534,6 +1544,7 @@ schema: {
           imageCaption: 'Guide de quantification selon la RAM pour LM Studio : 8 Go de RAM conviennent à Q4_K_M (~4,5 Go, ~1% de perte de qualité) ; 16 Go de RAM conviennent à Q5_K_M ou Q6_K (~5,7-6,5 Go, quasi sans perte) avec marge pour un contexte de 8K+ tokens.',
         },
         firstChat: {
+          id: 'start-chatting',
           title: 'Comment commencer à discuter avec un modèle dans LM Studio ?',
           numberedItems: [
             'Cliquez sur l\'onglet Chat (icône bulle de dialogue) dans la barre latérale gauche.',
@@ -1569,6 +1580,7 @@ schema: {
           codeLanguage: 'python',
         },
         vsOllama: {
+          id: 'lm-studio-vs-ollama',
           title: 'Lequel choisir : LM Studio ou Ollama ?',
           rows: [
             { 'Facteur': 'Interface', 'LM Studio': 'Application desktop graphique', 'Ollama': 'Terminal + API' },
@@ -1581,6 +1593,7 @@ schema: {
           columns: ['Facteur', 'LM Studio', 'Ollama'],
         },
         troubleshooting: {
+          id: 'troubleshooting',
           title: 'Comment dépanner les problèmes courants de LM Studio ?',
           faqs: [
             {
@@ -1602,6 +1615,7 @@ schema: {
           ],
         },
         regionalContext: {
+          id: 'regional-context',
           title: 'LM Studio pour les cas d\'usage sensibles à la confidentialité',
           content: [
             '**UE / RGPD** : La CNIL recommande le déploiement d\'IA locale pour les professionnels français traitant des données personnelles. LM Studio exécutant des modèles locaux est l\'une des configurations IA les plus respectueuses de la vie privée pour les utilisateurs de bureau, car aucune donnée d\'inférence ne quitte l\'appareil. Aucun texte de prompt, contexte ou sortie n\'est transmis en dehors de l\'appareil -- les mécanismes de transfert RGPD Article 46 ne s\'appliquent pas. Pour les professionnels de l\'UE gérant des données personnelles (documents juridiques, notes médicales, analyse financière), LM Studio sur un MacBook M-series ou une station de travail Windows avec GPU discret fournit un environnement d\'inférence locale entièrement conforme. Les directives BSI allemandes recommandent l\'inférence locale pour les systèmes d\'IA traitant des données personnelles sensibles. L\'interface graphique de LM Studio rend cette configuration accessible aux professionnels non techniques qui ne peuvent pas utiliser les outils de terminal comme Ollama.',
@@ -1610,6 +1624,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Quelles sont les erreurs courantes lors de l\'installation de LM Studio ?',
           items: [
             '**Ne pas allouer suffisamment de RAM système pour le modèle que vous avez sélectionné.** Vérifiez la taille du fichier modèle et multipliez par 1,2 -- c\'est la RAM libre minimale requise. Un modèle 7B Q4_K_M de 4,5 GB nécessite ~5,4 GB de RAM libres.',
@@ -1620,6 +1635,7 @@ schema: {
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Lectures complémentaires',
           items: [
             '[Qu\'est-ce que les LLM locaux ?](/fr/local-llms/what-are-local-llms) -- Concepts et composants clés',
@@ -1778,9 +1794,6 @@ schema: {
         { label: 'ダウンロードとインストール', anchor: '#download-and-install' },
         { label: 'モデルの検索とダウンロード', anchor: '#find-and-download' },
         { label: 'チャット開始', anchor: '#start-chatting' },
-        { label: 'モデル設定の調整', anchor: '#adjust-settings' },
-        { label: 'ローカルサーバーの有効化', anchor: '#enable-server' },
-        { label: 'Pythonで接続', anchor: '#connect-python' },
         { label: 'LM Studio vs Ollama', anchor: '#lm-studio-vs-ollama' },
         { label: 'トラブルシューティング', anchor: '#troubleshooting' },
         { label: '地域コンテキスト', anchor: '#regional-context' },
@@ -1808,6 +1821,7 @@ schema: {
           ],
         },
         whatIsLmStudio: {
+          id: 'what-is-lm-studio',
           title: 'LM Studio とは',
           content: [
             '**LM Studioはローカルの大規模言語モデル（LLM）を実行するためのデスクトップアプリケーション。** グラフィカルモデルブラウザ、組み込みのチャットインターフェース、およびローカルAPIサーバー--すべて1つのアプリケーションに含まれている。内部では、推論にllama.cppを使用。これは[Ollama](/ja/local-llms/how-to-install-ollama)を動かすのと同じエンジン。',
@@ -1816,6 +1830,7 @@ schema: {
           ],
         },
         requirements: {
+          id: 'system-requirements',
           title: 'LM Studioのシステム要件は何ですか？',
           rows: [
             { '仕様': 'オペレーティングシステム', '最小要件': 'macOS 13.6、Windows 10、Ubuntu 22.04', '推奨': 'macOS 14+、Windows 11、Ubuntu 24.04' },
@@ -1826,6 +1841,7 @@ schema: {
           columns: ['仕様', '最小要件', '推奨'],
         },
         download: {
+          id: 'download-and-install',
           title: 'LM Studioをダウンロードしてインストールする方法',
           numberedItems: [
             'lmstudio.aiにアクセスして、お使いのOSのダウンロードボタンをクリック。',
@@ -1838,6 +1854,7 @@ schema: {
           imageCaption: 'LM Studioのインストールの流れ: lmstudio.aiからダウンロード、macOS・Windows・Linuxへのインストール、Hugging FaceでのGGUFモデル検索、Q4_K_M量子化（約4.5GB）の選択、5〜30秒でのチャット開始。',
         },
         findModel: {
+          id: 'find-and-download',
           title: 'LM Studioでモデルを検索してダウンロードする方法',
           content: '検索タブ（左サイドバーの虫眼鏡アイコン）を使用してモデルを検索：',
           numberedItems: [
@@ -1851,6 +1868,7 @@ schema: {
           imageCaption: 'LM StudioのRAM別量子化ガイド: 8GBのRAMにはQ4_K_M（約4.5GB、品質低下約1%）が適し、16GBのRAMにはQ5_K_MまたはQ6_K（約5.7〜6.5GB、ほぼ無損失）が適し、8K以上のコンテキストに余裕がある。',
         },
         firstChat: {
+          id: 'start-chatting',
           title: 'LM Studioでモデルとのチャットを開始する方法',
           numberedItems: [
             '左サイドバーのチャットタブ（吹き出しアイコン）をクリック。',
@@ -1886,6 +1904,7 @@ schema: {
           codeLanguage: 'python',
         },
         vsOllama: {
+          id: 'lm-studio-vs-ollama',
           title: 'LM StudioまたはOllamaを選択する方法',
           rows: [
             { '要素': 'インターフェース', 'LM Studio': 'グラフィカルデスクトップアプリ', 'Ollama': 'ターミナル + API' },
@@ -1898,6 +1917,7 @@ schema: {
           columns: ['要素', 'LM Studio', 'Ollama'],
         },
         troubleshooting: {
+          id: 'troubleshooting',
           title: 'LM Studioの一般的な問題をトラブルシューティングする方法',
           faqs: [
             {
@@ -1919,6 +1939,7 @@ schema: {
           ],
         },
         regionalContext: {
+          id: 'regional-context',
           title: 'プライバシーに敏感なユースケース向けのLM Studio',
           content: [
             '**日本（METI）**：METI AI Governance Guidelinesは、AI推論がどこで発生するかを文書化することを要求。LM Studioは固定パスをディスク上に保持--すべての推論はデバイス、モデルファイル、およびバージョンに追跡可能。日本の企業チームは、機密規制およびコンプライアンス作業のためのゼロ出口文書分析ツールとしてLM Studioを使用。METI要件では、リモートAPI呼び出しなしで、オンプレミス推論実装が必須。',
@@ -1927,6 +1948,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'LM Studioをインストールするときの一般的な間違いは何ですか？',
           items: [
             '**選択したモデルに十分なシステムRAMを割り当てていない。** モデルファイルサイズをチェックして1.2を掛ける--これは必要な最小空きRAM。4.5GB Q4_K_M 7Bモデルは～5.4GB空きRAMが必要。',
@@ -1937,6 +1959,7 @@ schema: {
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: '関連読み物',
           items: [
             '[ローカルLLMとは何ですか？](/ja/local-llms/what-are-local-llms) -- コア概念とコンポーネント',
@@ -1965,6 +1988,7 @@ schema: {
           ],
         },
         sources: {
+          id: 'sources',
           title: 'ソース',
           items: [
             'LM Studio. (2026). "LM Studioドキュメンテーションおよびリリースノート。" lmstudio.ai. https://lmstudio.ai/docs -- 公式インストールガイド、APIドキュメンテーション、およびハードウェア互換情報。',
@@ -2048,9 +2072,6 @@ schema: {
         { label: '下载和安装', anchor: '#download-and-install' },
         { label: '查找和下载模型', anchor: '#find-and-download' },
         { label: '开始聊天', anchor: '#start-chatting' },
-        { label: '调整模型设置', anchor: '#adjust-settings' },
-        { label: '启用本地服务器', anchor: '#enable-server' },
-        { label: '通过 Python 连接', anchor: '#connect-python' },
         { label: 'LM Studio vs Ollama', anchor: '#lm-studio-vs-ollama' },
         { label: '故障排除', anchor: '#troubleshooting' },
         { label: '地区背景', anchor: '#regional-context' },
@@ -2078,6 +2099,7 @@ schema: {
           ],
         },
         whatIsLmStudio: {
+          id: 'what-is-lm-studio',
           title: 'LM Studio 是什么？',
           content: [
             '**LM Studio 是运行本地 LLM 的桌面应用程序。** 它提供图形模型浏览器、内置聊天界面和本地 API 服务器 - 全部在一个应用中。在内部，它使用 llama.cpp 进行推理，这是与 Ollama（[Ollama](/zh/local-llms/how-to-install-ollama)）相同的引擎。',
@@ -2086,6 +2108,7 @@ schema: {
           ],
         },
         requirements: {
+          id: 'system-requirements',
           title: 'LM Studio 的系统要求是什么？',
           rows: [
             { '规格': '操作系统', '最低要求': 'macOS 13.6、Windows 10、Ubuntu 22.04', '推荐': 'macOS 14+、Windows 11、Ubuntu 24.04' },
@@ -2096,6 +2119,7 @@ schema: {
           columns: ['规格', '最低要求', '推荐'],
         },
         download: {
+          id: 'download-and-install',
           title: '如何下载和安装 LM Studio',
           numberedItems: [
             '访问 lmstudio.ai 并单击您的操作系统的下载按钮。',
@@ -2108,6 +2132,7 @@ schema: {
           imageCaption: 'LM Studio 安装流程：从 lmstudio.ai 下载，在 macOS、Windows 或 Linux 上安装，在 Hugging Face 搜索 GGUF 模型，选择 Q4_K_M 量化（约 4.5GB），5-30 秒内开始聊天。',
         },
         findModel: {
+          id: 'find-and-download',
           title: '如何在 LM Studio 中查找和下载模型',
           content: '使用搜索选项卡（左侧边栏中的放大镜图标）查找模型：',
           numberedItems: [
@@ -2121,6 +2146,7 @@ schema: {
           imageCaption: 'LM Studio 按 RAM 选择量化指南：8GB RAM 适合 Q4_K_M（约 4.5GB，质量损失约 1%）；16GB RAM 适合 Q5_K_M 或 Q6_K（约 5.7-6.5GB，几乎无损），并为 8K+ token 上下文留有余量。',
         },
         firstChat: {
+          id: 'start-chatting',
           title: '如何在 LM Studio 中开始与模型聊天',
           numberedItems: [
             '单击左侧边栏中的聊天选项卡（语音气泡图标）。',
@@ -2156,6 +2182,7 @@ schema: {
           codeLanguage: 'python',
         },
         vsOllama: {
+          id: 'lm-studio-vs-ollama',
           title: '应该使用 LM Studio 还是 Ollama',
           rows: [
             { '因素': '界面', 'LM Studio': '图形桌面应用', 'Ollama': '终端 + API' },
@@ -2168,6 +2195,7 @@ schema: {
           columns: ['因素', 'LM Studio', 'Ollama'],
         },
         troubleshooting: {
+          id: 'troubleshooting',
           title: '如何排查 LM Studio 常见问题',
           faqs: [
             {
@@ -2189,6 +2217,7 @@ schema: {
           ],
         },
         regionalContext: {
+          id: 'regional-context',
           title: '对隐私敏感的用例 LM Studio',
           content: [
             '**中国（数据安全法）**：LM Studio 支持通过 Hugging Face 搜索原生 Qwen3 模型 - 在模型浏览器中搜索"qwen2.5"以查找所有可用大小。对于中文文本工作流，Qwen3 8B 或 14B 比同参数数量的西方训练模型在中文文本上提供 30-40% 更好的令牌效率。所有推理在本地运行，根据中国数据安全法（数据安全法），无外部 API 调用。',
@@ -2197,6 +2226,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: '安装 LM Studio 时常见的错误是什么',
           items: [
             '**未为所选模型分配足够的系统 RAM。** 检查模型文件大小并乘以 1.2 - 这是所需的最小可用 RAM。4.5GB Q4_K_M 7B 模型需要约 5.4GB 可用 RAM。',
@@ -2207,6 +2237,7 @@ schema: {
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: '延伸阅读',
           items: [
             '[什么是本地 LLM？](/zh/local-llms/what-are-local-llms) -- 核心概念和组件',
@@ -2235,6 +2266,7 @@ schema: {
           ],
         },
         sources: {
+          id: 'sources',
           title: '资源',
           items: [
             'LM Studio. (2026). "LM Studio 文档和发行说明。" lmstudio.ai. https://lmstudio.ai/docs -- 官方安装指南、API 文档和硬件兼容性信息。',
@@ -2342,6 +2374,7 @@ schema: {
           ],
         },
         whatIsLmStudio: {
+          id: 'what-is-lm-studio',
           title: 'LM Studio란 무엇입니까?',
           content: [
             '**LM Studio는 로컬 LLM을 실행하기 위한 데스크톱 애플리케이션입니다.** 그래픽 모델 브라우저, 내장 채팅 인터페이스, 로컬 API 서버를 하나의 앱에서 제공합니다. 내부적으로는 [Ollama](/ko/local-llms/how-to-install-ollama)와 동일한 엔진인 llama.cpp를 추론에 사용합니다.',

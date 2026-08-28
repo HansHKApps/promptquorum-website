@@ -23,7 +23,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       educationalLevel: 'Advanced',
       primaryTerm: 'Air-Gapped Workflow',
       toc: [
-        { label: 'TLDR', anchor: '#tldr' },
+        { label: 'TLDR', anchor: '#key-takeaways' },
         { label: 'Air-Gapped Architecture', anchor: '#architecture' },
         { label: 'Data Transfer Workflow', anchor: '#workflow' },
         { label: 'Encryption & Key Management', anchor: '#encryption' },
@@ -208,7 +208,7 @@ schema: {
       educationalLevel: 'Advanced',
       primaryTerm: 'Flujo de trabajo air-gapped',
       toc: [
-        { label: 'Puntos clave', anchor: '#tldr' },
+        { label: 'Puntos clave', anchor: '#key-takeaways' },
         { label: 'Arquitectura air-gapped', anchor: '#architecture' },
         { label: 'Flujo de transferencia de datos', anchor: '#workflow' },
         { label: 'Cifrado y gestión de claves', anchor: '#encryption' },
@@ -436,7 +436,7 @@ schema: {
       educationalLevel: 'Advanced',
       primaryTerm: 'سير عمل معزول عن الشبكة',
       toc: [
-        { label: 'النقاط الرئيسية', anchor: '#tldr' },
+        { label: 'النقاط الرئيسية', anchor: '#key-takeaways' },
         { label: 'البنية المعزولة عن الشبكة', anchor: '#architecture' },
         { label: 'سير نقل البيانات', anchor: '#workflow' },
         { label: 'التشفير وإدارة المفاتيح', anchor: '#encryption' },
@@ -664,7 +664,7 @@ schema: {
       educationalLevel: 'Advanced',
       primaryTerm: 'Fluxo de trabalho air-gapped',
       toc: [
-        { label: 'Pontos principais', anchor: '#tldr' },
+        { label: 'Pontos principais', anchor: '#key-takeaways' },
         { label: 'Arquitetura air-gapped', anchor: '#architecture' },
         { label: 'Fluxo de transferência de dados', anchor: '#workflow' },
         { label: 'Criptografia e gestão de chaves', anchor: '#encryption' },
@@ -892,7 +892,7 @@ schema: {
       educationalLevel: 'Advanced',
       primaryTerm: 'Isolierte Workflow',
       toc: [
-        { label: 'Zusammenfassung', anchor: '#tldr' },
+        { label: 'Zusammenfassung', anchor: '#key-takeaways' },
         { label: 'Segmentierte Architektur', anchor: '#architecture' },
         { label: 'Datenübertragungs-Workflow', anchor: '#workflow' },
         { label: 'Verschlüsselung & Schlüsselverwaltung', anchor: '#encryption' },
@@ -1135,7 +1135,7 @@ schema: {
       educationalLevel: 'Advanced',
       primaryTerm: 'Flux de travail isolé',
       toc: [
-        { label: 'Résumé', anchor: '#tldr' },
+        { label: 'Résumé', anchor: '#key-takeaways' },
         { label: 'Architecture isolée', anchor: '#architecture' },
         { label: 'Flux de transfert de données', anchor: '#workflow' },
         { label: 'Chiffrement et gestion des clés', anchor: '#encryption' },
@@ -1363,7 +1363,7 @@ schema: {
       educationalLevel: 'Advanced',
       primaryTerm: 'エアギャップワークフロー',
       toc: [
-        { label: '概要', anchor: '#tldr' },
+        { label: '概要', anchor: '#key-takeaways' },
         { label: 'エアギャップアーキテクチャ', anchor: '#architecture' },
         { label: 'データ転送ワークフロー', anchor: '#workflow' },
         { label: '暗号化とキー管理', anchor: '#encryption' },
@@ -1591,7 +1591,7 @@ schema: {
       educationalLevel: 'Advanced',
       primaryTerm: '气隙工作流',
       toc: [
-        { label: '概述', anchor: '#tldr' },
+        { label: '概述', anchor: '#key-takeaways' },
         { label: '气隙架构', anchor: '#architecture' },
         { label: '数据转移工作流', anchor: '#workflow' },
         { label: '加密和密钥管理', anchor: '#encryption' },
@@ -1819,7 +1819,7 @@ schema: {
       educationalLevel: 'Advanced',
       primaryTerm: 'Air-Gapped 워크플로우',
       toc: [
-        { label: 'TLDR', anchor: '#tldr' },
+        { label: 'TLDR', anchor: '#key-takeaways' },
         { label: 'Air-Gapped 아키텍처', anchor: '#architecture' },
         { label: '데이터 전송 워크플로우', anchor: '#workflow' },
         { label: '암호화 및 키 관리', anchor: '#encryption' },

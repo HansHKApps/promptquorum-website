@@ -24,15 +24,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       educationalLevel: 'Beginner',
       primaryTerm: 'Chat UI',
       toc: [
-        { label: 'TLDR', anchor: '#tldr' },
-        { label: 'Quick Decision', anchor: '#decision' },
-        { label: 'Feature Comparison', anchor: '#features' },
-        { label: 'Chat Experience Differences', anchor: '#chat' },
-        { label: 'Multi-User & Team Use', anchor: '#multiuser' },
-        { label: 'Character/Roleplay Capabilities', anchor: '#roleplay' },
-        { label: 'SillyTavern-Only Features', anchor: '#sillyonly' },
-        { label: 'Customization & Theming', anchor: '#customization' },
-        { label: 'Common Mistakes', anchor: '#mistakes' },
+        { label: 'TLDR', anchor: '#key-takeaways' },
+        { label: 'Quick Decision', anchor: '#key-takeaways' },
         { label: 'FAQ', anchor: '#faq' },
       ],
       sections: {
@@ -239,8 +232,8 @@ schema: {
       educationalLevel: 'Beginner',
       primaryTerm: 'Chat-Oberfläche',
       toc: [
-        { label: 'Zusammenfassung', anchor: '#tldr' },
-        { label: 'Schnelle Entscheidung', anchor: '#decision' },
+        { label: 'Zusammenfassung', anchor: '#key-takeaways' },
+        { label: 'Schnelle Entscheidung', anchor: '#key-takeaways' },
         { label: 'Funktionsvergleich', anchor: '#features' },
         { label: 'Chat-Erfahrungsunterschiede', anchor: '#chat' },
         { label: 'Multi-User & Team-Nutzung', anchor: '#multiuser' },
@@ -287,6 +280,7 @@ schema: {
           columns: ['Anwendungsfall', 'Empfehlung', 'Begründung'],
         },
         features: {
+          id: 'features',
           title: 'Funktionsvergleich',
           content: '**Beide Tools verbinden sich mit denselben Backends — der Unterschied liegt in der Oberfläche und den Funktionen.**',
           image: '/images/open-webui-vs-sillytavern-feature-comparison-en.svg',
@@ -306,6 +300,7 @@ schema: {
           columns: ['Funktion', 'Open WebUI', 'SillyTavern'],
         },
         chat: {
+          id: 'chat',
           title: 'Chat-Erfahrungsunterschiede',
           content: [
             '**Open WebUI** fühlt sich wie eine professionelle Version von ChatGPT an: saubere Oberfläche, Konversationsverlauf, Dokument-Upload und Plugin-Unterstützung. Das Standard-Layout ist für produktive Arbeit optimiert.',
@@ -315,6 +310,7 @@ schema: {
           ],
         },
         multiuser: {
+          id: 'multiuser',
           title: 'Multi-User & Team-Nutzung',
           content: [
             '**Open WebUI** wurde für Multi-User-Deployment entwickelt: jeder Benutzer hat ein eigenes Konto, separate Konversationsverläufe und individuelle Einstellungen. Administratoren können Benutzer verwalten, API-Zugriffsschlüssel setzen und Nutzungsstatistiken einsehen.',
@@ -324,6 +320,7 @@ schema: {
           ],
         },
         roleplay: {
+          id: 'roleplay',
           title: 'Charakter- und Rollenspiel-Funktionen',
           content: [
             '**SillyTavern** ist das einzige lokale LLM-Frontend mit vollständiger Charakter-Rollenspiel-Unterstützung. Character Cards (TavernAI JSON) speichern Persönlichkeit, Aussehen, Sprache und Hintergeschichte.',
@@ -334,6 +331,7 @@ schema: {
           ],
         },
         sillyonly: {
+          id: 'sillyonly',
           title: 'Exklusive SillyTavern-Funktionen (nicht in Open WebUI)',
           content: '**Open WebUI lässt diese Funktionen bewusst aus — sein Fokus ist professioneller Chat, nicht immersive Fiktion. SillyTavern ist das einzige lokale LLM-Frontend mit diesem Funktionsumfang.**',
           items: [
@@ -346,6 +344,7 @@ schema: {
           ],
         },
         customization: {
+          id: 'customization',
           title: 'Anpassung & Themes',
           content: [
             '**Open WebUI** bietet Theme-Anpassung, benutzerdefinierte System-Prompts und Plugin-Unterstützung. Die Erweiterungs-API ermöglicht das Hinzufügen neuer Funktionen ohne Frontend-Modifikation.',
@@ -354,6 +353,7 @@ schema: {
           ],
         },
         mistakes: {
+          id: 'mistakes',
           title: 'Häufige Fehler',
           items: [
             '**SillyTavern für Team-Chat verwenden:** SillyTavern ist Einzelnutzer-Software. Für Teams ist Open WebUI mit eingebautem Multi-User-Support die richtige Wahl.',
@@ -482,8 +482,8 @@ schema: {
       educationalLevel: 'Beginner',
       primaryTerm: 'Interface Chat',
       toc: [
-        { label: 'Points clés', anchor: '#tldr' },
-        { label: 'Décision rapide', anchor: '#decision' },
+        { label: 'Points clés', anchor: '#key-takeaways' },
+        { label: 'Décision rapide', anchor: '#key-takeaways' },
         { label: 'Comparatif fonctionnel', anchor: '#features' },
         { label: 'Expérience de chat', anchor: '#chat' },
         { label: 'Usage multi-utilisateur', anchor: '#multiuser' },
@@ -530,6 +530,7 @@ schema: {
           columns: ["Cas d'usage", 'Recommandé', 'Raison'],
         },
         features: {
+          id: 'features',
           title: 'Comparatif fonctionnel',
           content: '**Les deux outils se connectent aux mêmes backends — la différence est dans l\'interface et les fonctionnalités.**',
           image: '/images/open-webui-vs-sillytavern-feature-comparison-en.svg',
@@ -549,6 +550,7 @@ schema: {
           columns: ['Fonctionnalité', 'Open WebUI', 'SillyTavern'],
         },
         chat: {
+          id: 'chat',
           title: 'Expérience de chat',
           content: [
             '**Open WebUI** ressemble à une version professionnelle de ChatGPT : interface épurée, historique de conversations, import de documents et plugins. La mise en page est optimisée pour le travail productif.',
@@ -558,6 +560,7 @@ schema: {
           ],
         },
         multiuser: {
+          id: 'multiuser',
           title: 'Usage multi-utilisateur & équipe',
           content: [
             '**Open WebUI** est conçu pour le déploiement multi-utilisateur : chaque utilisateur dispose de son propre compte, historique et paramètres. Les administrateurs gèrent les utilisateurs, définissent les clés d\'accès API et consultent les statistiques d\'utilisation.',
@@ -567,6 +570,7 @@ schema: {
           ],
         },
         roleplay: {
+          id: 'roleplay',
           title: 'Roleplay et fonctionnalités de personnages',
           content: [
             '**SillyTavern** est la seule interface LLM locale avec support complet du roleplay de personnages. Les fiches (JSON TavernAI) stockent personnalité, apparence, langage et histoire.',
@@ -577,6 +581,7 @@ schema: {
           ],
         },
         sillyonly: {
+          id: 'sillyonly',
           title: 'Fonctions exclusives SillyTavern (absentes d\'Open WebUI)',
           content: '**Open WebUI exclut délibérément ces fonctions — son périmètre est le chat professionnel, pas la fiction immersive. SillyTavern est la seule interface LLM locale avec cet ensemble de fonctionnalités.**',
           items: [
@@ -589,6 +594,7 @@ schema: {
           ],
         },
         customization: {
+          id: 'customization',
           title: 'Personnalisation & thèmes',
           content: [
             '**Open WebUI** propose la personnalisation des thèmes, des system prompts sur mesure et le support des plugins. L\'API d\'extension permet d\'ajouter des fonctionnalités sans modifier le frontend.',
@@ -597,6 +603,7 @@ schema: {
           ],
         },
         mistakes: {
+          id: 'mistakes',
           title: 'Erreurs fréquentes',
           items: [
             '**Utiliser SillyTavern pour le chat d\'équipe :** SillyTavern est mono-utilisateur. Pour les équipes, utilisez Open WebUI avec son support multi-utilisateur intégré.',
@@ -715,15 +722,8 @@ schema: {
       educationalLevel: 'Beginner',
       primaryTerm: 'チャットUI',
       toc: [
-        { label: '重要ポイント', anchor: '#tldr' },
-        { label: '素早い決定', anchor: '#decision' },
-        { label: '機能比較', anchor: '#features' },
-        { label: 'チャット体験の違い', anchor: '#chat' },
-        { label: 'マルチユーザー＆チーム利用', anchor: '#multiuser' },
-        { label: 'キャラクター/ロールプレイ機能', anchor: '#roleplay' },
-        { label: 'SillyTavern限定機能', anchor: '#sillyonly' },
-        { label: 'カスタマイズ＆テーマ', anchor: '#customization' },
-        { label: '一般的な誤解', anchor: '#mistakes' },
+        { label: '重要ポイント', anchor: '#key-takeaways' },
+        { label: '素早い決定', anchor: '#key-takeaways' },
         { label: 'FAQ', anchor: '#faq' },
       ],
       sections: {
@@ -930,15 +930,8 @@ schema: {
       educationalLevel: 'Beginner',
       primaryTerm: '聊天界面',
       toc: [
-        { label: '核心要点', anchor: '#tldr' },
-        { label: '快速决策', anchor: '#decision' },
-        { label: '功能对比', anchor: '#features' },
-        { label: '聊天体验差异', anchor: '#chat' },
-        { label: '多用户＆团队使用', anchor: '#multiuser' },
-        { label: '角色/扮演功能', anchor: '#roleplay' },
-        { label: 'SillyTavern独有功能', anchor: '#sillyonly' },
-        { label: '自定义＆主题', anchor: '#customization' },
-        { label: '常见误解', anchor: '#mistakes' },
+        { label: '核心要点', anchor: '#key-takeaways' },
+        { label: '快速决策', anchor: '#key-takeaways' },
         { label: '常见问题', anchor: '#faq' },
       ],
       sections: {
@@ -1145,15 +1138,8 @@ schema: {
       educationalLevel: 'Beginner',
       primaryTerm: 'Interfaz de Chat',
       toc: [
-        { label: 'Puntos clave', anchor: '#tldr' },
-        { label: 'Decisión rápida', anchor: '#decision' },
-        { label: 'Comparativa de funciones', anchor: '#features' },
-        { label: 'Diferencias en la experiencia de chat', anchor: '#chat' },
-        { label: 'Uso multiusuario y en equipo', anchor: '#multiuser' },
-        { label: 'Funciones de personaje y roleplay', anchor: '#roleplay' },
-        { label: 'Funciones exclusivas de SillyTavern', anchor: '#sillyonly' },
-        { label: 'Personalización y temas', anchor: '#customization' },
-        { label: 'Errores frecuentes', anchor: '#mistakes' },
+        { label: 'Puntos clave', anchor: '#key-takeaways' },
+        { label: 'Decisión rápida', anchor: '#key-takeaways' },
         { label: 'FAQ', anchor: '#faq' },
       ],
       sections: {
@@ -1364,15 +1350,8 @@ schema: {
       educationalLevel: 'Beginner',
       primaryTerm: 'واجهة المحادثة',
       toc: [
-        { label: 'النقاط الرئيسية', anchor: '#tldr' },
-        { label: 'قرار سريع', anchor: '#decision' },
-        { label: 'مقارنة الميزات', anchor: '#features' },
-        { label: 'الفروق في تجربة المحادثة', anchor: '#chat' },
-        { label: 'الاستخدام متعدد المستخدمين والفريق', anchor: '#multiuser' },
-        { label: 'ميزات الشخصيات وroleplay', anchor: '#roleplay' },
-        { label: 'ميزات حصرية لـ SillyTavern', anchor: '#sillyonly' },
-        { label: 'التخصيص والسمات', anchor: '#customization' },
-        { label: 'أخطاء شائعة', anchor: '#mistakes' },
+        { label: 'النقاط الرئيسية', anchor: '#key-takeaways' },
+        { label: 'قرار سريع', anchor: '#key-takeaways' },
         { label: 'الأسئلة الشائعة', anchor: '#faq' },
       ],
       sections: {
@@ -1583,15 +1562,8 @@ schema: {
       educationalLevel: 'Beginner',
       primaryTerm: 'Interface de Chat',
       toc: [
-        { label: 'Pontos principais', anchor: '#tldr' },
-        { label: 'Decisão rápida', anchor: '#decision' },
-        { label: 'Comparativo de recursos', anchor: '#features' },
-        { label: 'Diferenças na experiência de chat', anchor: '#chat' },
-        { label: 'Uso multiusuário e em equipe', anchor: '#multiuser' },
-        { label: 'Recursos de personagem e roleplay', anchor: '#roleplay' },
-        { label: 'Recursos exclusivos do SillyTavern', anchor: '#sillyonly' },
-        { label: 'Personalização e temas', anchor: '#customization' },
-        { label: 'Erros frequentes', anchor: '#mistakes' },
+        { label: 'Pontos principais', anchor: '#key-takeaways' },
+        { label: 'Decisão rápida', anchor: '#key-takeaways' },
         { label: 'FAQ', anchor: '#faq' },
       ],
       sections: {
@@ -1764,15 +1736,8 @@ schema: {
       educationalLevel: 'Beginner',
       primaryTerm: 'Chat UI',
       toc: [
-        { label: 'TLDR', anchor: '#tldr' },
-        { label: '빠른 결정', anchor: '#decision' },
-        { label: '기능 비교', anchor: '#features' },
-        { label: '채팅 경험 차이', anchor: '#chat' },
-        { label: '다중 사용자 및 팀 활용', anchor: '#multiuser' },
-        { label: '캐릭터/롤플레이 기능', anchor: '#roleplay' },
-        { label: 'SillyTavern 전용 기능', anchor: '#sillyonly' },
-        { label: '커스터마이제이션 및 테마', anchor: '#customization' },
-        { label: '흔한 실수', anchor: '#mistakes' },
+        { label: 'TLDR', anchor: '#key-takeaways' },
+        { label: '빠른 결정', anchor: '#key-takeaways' },
         { label: 'FAQ', anchor: '#faq' },
       ],
       itemListSchema: {

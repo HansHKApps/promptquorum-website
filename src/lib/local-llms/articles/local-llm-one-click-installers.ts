@@ -1020,11 +1020,6 @@ schema: {
       primaryTerm: 'instalador de LLM local',
       toc: [
         { label: 'Pontos principais', anchor: '#tldr' },
-        { label: 'Comparativo de instaladores', anchor: '#comparison' },
-        { label: 'Ollama', anchor: '#ollama' },
-        { label: 'LM Studio', anchor: '#lm-studio' },
-        { label: 'Jan AI', anchor: '#jan-ai' },
-        { label: 'GPT4All', anchor: '#gpt4all' },
         { label: 'FAQ', anchor: '#faq' },
       ],
       schema: {

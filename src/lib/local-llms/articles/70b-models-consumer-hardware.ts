@@ -57,6 +57,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         whatHardware: {
+          id: 'what-hardware',
           title: 'What Hardware Can Actually Run a 70B Local LLM?',
           content: [
             '**A 70B model at Q4_K_M quantization requires approximately 40-43 GB of memory that is accessible to the inference engine.** This can come from GPU VRAM, unified system memory (Apple Silicon), system RAM, or a combination via layer offloading.',
@@ -78,6 +79,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           columns: ['Hardware', 'Can Run 70B?', 'Speed (70B Q4)', 'Notes'],
         },
         ramByQuant: {
+          id: 'ram-requirements',
           title: 'How Much RAM Does a 70B Model Need at Each Quantization Level?',
           image: '/images/70b-models-consumer-hardware-quantization-tradeoff-hero-en.webp',
           imageCaption: 'Quantization trade-off curve: Q4_K_M (recommended) requires 40-43 GB RAM with only 1-3% quality loss versus FP16, balancing practicality and performance for consumer hardware.',
@@ -92,6 +94,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           columns: ['Quantization', 'RAM Required', 'Quality', 'Practical?'],
         },
         appleSilicon: {
+          id: 'apple-silicon',
           title: 'Why Is Apple Silicon the Best Consumer Option for 70B Models?',
           content: [
             '**Apple Silicon uses unified memory -- the CPU and GPU share the same physical memory pool.** An M5 Max MacBook Pro with 64 GB of unified memory can run a 70B model at Q4_K_M entirely on GPU, achieving 20-30 tok/sec with no layer offloading overhead.',
@@ -101,6 +104,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         dgxSpark: {
+          id: 'dgx-spark',
           title: 'NVIDIA DGX Spark: 128GB Unified Memory for 70B Models',
           content: [
             '**The NVIDIA DGX Spark ($4,699) is a compact desktop AI computer launched in October 2025, built on the GB10 Grace Blackwell Superchip with 128GB of unified LPDDR5x memory.** Its unified memory architecture means GPU and CPU share the same 128GB pool -- similar to Apple Silicon but with CUDA acceleration.',
@@ -118,6 +122,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           columns: ['Spec', 'Value'],
         },
         nvidiaOffload: {
+          id: 'nvidia-layer-offloading',
           title: 'How Does NVIDIA GPU + Layer Offloading Work for 70B Models?',
           content: 'Ollama and llama.cpp support splitting a model across GPU VRAM and system RAM. Layers loaded in VRAM run at GPU speed; layers in system RAM run at CPU speed:',
           image: '/images/70b-layer-offloading.svg',
@@ -126,6 +131,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           codeLanguage: 'bash',
         },
         cpuOnly: {
+          id: 'cpu-only',
           title: 'Is CPU-Only 70B Inference Practical?',
           content: [
             '**A 70B model at Q4_K_M on a high-core-count CPU (AMD Threadripper, Intel Xeon) with 64 GB RAM produces 1-3 tokens/sec.** At 2 tok/sec, a 200-word response takes approximately 75 seconds.',
@@ -133,6 +139,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         which70b: {
+          id: 'which-model',
           title: 'Which 70B Model Should You Run Locally?',
           rows: [
             { 'Model': 'Llama 3.3 70B', 'MMLU': '82%', 'HumanEval': '88%', 'Best For': 'General English tasks, instruction-following' },
@@ -142,6 +149,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           columns: ['Model', 'MMLU', 'HumanEval', 'Best For'],
         },
         regionalContext: {
+          id: 'regional-context',
           title: 'Running 70B Models Locally: Regional Context',
           content: [
             '**EU / GDPR**: A 70B local model represents the practical ceiling of privately-runnable AI quality. For EU enterprises processing sensitive data -- legal documents, medical records, financial analysis -- a 70B model running on-premises delivers GPT-4 2023 quality with full GDPR compliance. No prompt content, context, or output leaves the organization\'s infrastructure.',
@@ -152,6 +160,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'What Are the Common Mistakes When Running 70B Models on Consumer Hardware?',
           faqs: [
             {
@@ -375,6 +384,7 @@ schema: {
           ],
         },
         whatHardware: {
+          id: 'what-hardware',
           title: '¿Qué hardware puede realmente ejecutar un LLM local 70B?',
           content: [
             '**Un modelo 70B con cuantización Q4_K_M requiere aproximadamente 40-43 GB de memoria accesible para el motor de inferencia.** Esto puede provenir de VRAM de la GPU, memoria unificada del sistema (Apple Silicon), RAM del sistema, o una combinación mediante layer offloading.',
@@ -396,6 +406,7 @@ schema: {
           columns: ['Hardware', '¿Puede ejecutar 70B?', 'Velocidad (70B Q4)', 'Notas'],
         },
         ramByQuant: {
+          id: 'ram-requirements',
           title: '¿Cuánta RAM necesita un modelo 70B en cada nivel de cuantización?',
           image: '/images/70b-models-consumer-hardware-quantization-tradeoff-hero-es.webp',
           imageCaption: 'Curva de compromiso de cuantización: Q4_K_M (recomendado) requiere 40-43 GB de RAM con solo 1-3% de pérdida de calidad frente a FP16, equilibrando practicidad y rendimiento para hardware de consumo.',
@@ -410,6 +421,7 @@ schema: {
           columns: ['Cuantización', 'RAM requerida', 'Calidad', '¿Práctico?'],
         },
         appleSilicon: {
+          id: 'apple-silicon',
           title: '¿Por qué Apple Silicon es la mejor opción de consumo para modelos 70B?',
           content: [
             '**Apple Silicon usa memoria unificada -- la CPU y la GPU comparten el mismo grupo de memoria física.** Un MacBook Pro M5 Max con 64 GB de memoria unificada puede ejecutar un modelo 70B en Q4_K_M completamente en la GPU, alcanzando 20-30 tok/seg sin el overhead del layer offloading.',
@@ -419,6 +431,7 @@ schema: {
           ],
         },
         dgxSpark: {
+          id: 'dgx-spark',
           title: 'NVIDIA DGX Spark: 128 GB de memoria unificada para modelos 70B',
           content: [
             '**El NVIDIA DGX Spark ($4,699) es un ordenador de escritorio de IA compacto lanzado en octubre de 2025, basado en el GB10 Grace Blackwell Superchip con 128 GB de memoria unificada LPDDR5x.** Su arquitectura de memoria unificada significa que la GPU y la CPU comparten el mismo pool de 128 GB -- similar a Apple Silicon pero con aceleración CUDA.',
@@ -436,6 +449,7 @@ schema: {
           columns: ['Especificación', 'Valor'],
         },
         nvidiaOffload: {
+          id: 'nvidia-layer-offloading',
           title: '¿Cómo funciona la GPU NVIDIA + layer offloading para modelos 70B?',
           content: 'Ollama y llama.cpp permiten dividir un modelo entre la VRAM de la GPU y la RAM del sistema. Las capas cargadas en VRAM se ejecutan a velocidad GPU; las capas en RAM del sistema se ejecutan a velocidad CPU:',
           image: '/images/70b-layer-offloading.svg',
@@ -444,6 +458,7 @@ schema: {
           codeLanguage: 'bash',
         },
         cpuOnly: {
+          id: 'cpu-only',
           title: '¿Es práctica la inferencia 70B solo con CPU?',
           content: [
             '**Un modelo 70B en Q4_K_M en una CPU de alto número de núcleos (AMD Threadripper, Intel Xeon) con 64 GB de RAM produce 1-3 tokens/seg.** A 2 tok/seg, una respuesta de 200 palabras tarda aproximadamente 75 segundos.',
@@ -451,6 +466,7 @@ schema: {
           ],
         },
         which70b: {
+          id: 'which-model',
           title: '¿Qué modelo 70B deberías ejecutar localmente?',
           rows: [
             { 'Modelo': 'Llama 3.3 70B', 'MMLU': '82%', 'HumanEval': '88%', 'Ideal para': 'Tareas generales en inglés, seguimiento de instrucciones' },
@@ -460,6 +476,7 @@ schema: {
           columns: ['Modelo', 'MMLU', 'HumanEval', 'Ideal para'],
         },
         regionalContext: {
+          id: 'regional-context',
           title: 'Ejecutar modelos 70B localmente: contexto regional',
           content: [
             '**UE / RGPD**: Un modelo local 70B representa el límite práctico de la calidad de IA ejecutable de forma privada. Para empresas de la UE que procesan datos sensibles -- documentos legales, registros médicos, análisis financiero -- un modelo 70B en local entrega calidad GPT-4 2023 con pleno cumplimiento del RGPD. Ningún prompt, contexto ni salida abandona la infraestructura de la organización.',
@@ -470,6 +487,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: '¿Cuáles son los errores comunes al ejecutar modelos 70B en hardware de consumo?',
           faqs: [
             {
@@ -693,6 +711,7 @@ schema: {
           ],
         },
         whatHardware: {
+          id: 'what-hardware',
           title: 'ما العتاد القادر فعليًا على تشغيل LLM محلي بـ 70B؟',
           content: [
             '**يتطلب نموذج 70B بتكميم Q4_K_M نحو 40-43 GB من الذاكرة المتاحة لمحرك الاستدلال.** يمكن أن تأتي هذه من VRAM الخاصة بكرت الرسوميات، أو الذاكرة الموحدة للنظام (Apple Silicon)، أو ذاكرة النظام، أو مزيج عبر layer offloading.',
@@ -714,6 +733,7 @@ schema: {
           columns: ['العتاد', 'هل يشغّل 70B؟', 'السرعة (70B Q4)', 'ملاحظات'],
         },
         ramByQuant: {
+          id: 'ram-requirements',
           title: 'كم تحتاج ذاكرة لنموذج 70B في كل مستوى تكميم؟',
           image: '/images/70b-models-consumer-hardware-quantization-tradeoff-hero-ar.webp',
           imageCaption: 'منحنى مفاضلة التكميم: يتطلب Q4_K_M (موصى به) من 40 إلى 43 GB من الذاكرة بفقدان جودة لا يتجاوز 1-3% مقابل FP16، موازنًا بين العملية والأداء لعتاد المستهلك.',
@@ -728,6 +748,7 @@ schema: {
           columns: ['التكميم', 'الذاكرة المطلوبة', 'الجودة', 'عملي؟'],
         },
         appleSilicon: {
+          id: 'apple-silicon',
           title: 'لماذا يُعد Apple Silicon أفضل خيار للمستهلك لنماذج 70B؟',
           content: [
             '**يستخدم Apple Silicon ذاكرة موحدة -- يتشارك المعالج وكرت الرسوميات المجموعة نفسها من الذاكرة الفيزيائية.** يمكن لـ MacBook Pro M5 Max بذاكرة موحدة 64 GB تشغيل نموذج 70B بتكميم Q4_K_M بالكامل على GPU، محققًا 20-30 token/ثانية دون عبء layer offloading.',
@@ -737,6 +758,7 @@ schema: {
           ],
         },
         dgxSpark: {
+          id: 'dgx-spark',
           title: 'NVIDIA DGX Spark: 128 GB من الذاكرة الموحدة لنماذج 70B',
           content: [
             '**NVIDIA DGX Spark (4,699 دولار) هو حاسوب مكتبي مدمج للذكاء الاصطناعي صدر في أكتوبر 2025، مبني على GB10 Grace Blackwell Superchip بذاكرة موحدة 128 GB من نوع LPDDR5x.** تعني بنية الذاكرة الموحدة أن GPU والمعالج يتشاركان مجموعة 128 GB نفسها -- بشكل مماثل لـ Apple Silicon لكن مع تسريع CUDA.',
@@ -754,6 +776,7 @@ schema: {
           columns: ['المواصفة', 'القيمة'],
         },
         nvidiaOffload: {
+          id: 'nvidia-layer-offloading',
           title: 'كيف يعمل GPU من NVIDIA + layer offloading لنماذج 70B؟',
           content: 'يتيح Ollama وllama.cpp تقسيم نموذج بين VRAM الخاصة بكرت الرسوميات وذاكرة النظام. تُشغَّل الطبقات المحمَّلة في VRAM بسرعة GPU؛ بينما تُشغَّل الطبقات في ذاكرة النظام بسرعة المعالج:',
           image: '/images/70b-layer-offloading.svg',
@@ -762,6 +785,7 @@ schema: {
           codeLanguage: 'bash',
         },
         cpuOnly: {
+          id: 'cpu-only',
           title: 'هل الاستدلال بـ 70B على المعالج فقط عملي؟',
           content: [
             '**نموذج 70B بتكميم Q4_K_M على معالج بعدد أنوية عالٍ (AMD Threadripper، Intel Xeon) مع 64 GB من الذاكرة ينتج 1-3 token/ثانية.** عند 2 token/ثانية، تستغرق إجابة من 200 كلمة نحو 75 ثانية.',
@@ -769,6 +793,7 @@ schema: {
           ],
         },
         which70b: {
+          id: 'which-model',
           title: 'أي نموذج 70B يجب أن تشغّله محليًا؟',
           rows: [
             { 'النموذج': 'Llama 3.3 70B', 'MMLU': '82%', 'HumanEval': '88%', 'الأنسب لـ': 'المهام العامة بالإنجليزية، اتباع التعليمات' },
@@ -778,6 +803,7 @@ schema: {
           columns: ['النموذج', 'MMLU', 'HumanEval', 'الأنسب لـ'],
         },
         regionalContext: {
+          id: 'regional-context',
           title: 'تشغيل نماذج 70B محليًا: السياق الإقليمي',
           content: [
             '**الاتحاد الأوروبي / GDPR**: يمثّل نموذج 70B محلي الحد العملي لجودة الذكاء الاصطناعي القابلة للتشغيل بخصوصية. للشركات الأوروبية التي تعالج بيانات حساسة -- مستندات قانونية، سجلات طبية، تحليلات مالية -- يقدّم نموذج 70B محلي جودة GPT-4 لعام 2023 مع امتثال كامل لـ GDPR. لا يغادر أي مُدخل أو سياق أو مُخرج بنية المؤسسة التحتية.',
@@ -788,6 +814,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'ما الأخطاء الشائعة عند تشغيل نماذج 70B على عتاد المستهلك؟',
           faqs: [
             {
@@ -1014,6 +1041,7 @@ schema: {
           ],
         },
         whatHardware: {
+          id: 'what-hardware',
           title: 'Qual hardware pode rodar um LLM local de 70B?',
           content: [
             '**Um modelo 70B com quantização Q4_K_M requer aproximadamente 40-43 GB de memória acessível ao mecanismo de inferência.** Isso pode vir de VRAM da GPU, memória unificada do sistema (Apple Silicon), RAM do sistema, ou uma combinação via layer offloading.',
@@ -1035,6 +1063,7 @@ schema: {
           columns: ['Hardware', 'Pode rodar 70B?', 'Velocidade (70B Q4)', 'Notas'],
         },
         ramByQuant: {
+          id: 'ram-requirements',
           title: 'Quanta RAM um modelo 70B precisa em cada nível de quantização?',
           image: '/images/70b-models-consumer-hardware-quantization-tradeoff-hero-pt.webp',
           imageCaption: 'Curva de compromisso de quantização: Q4_K_M (recomendado) requer 40-43 GB de RAM com apenas 1-3% de perda de qualidade em relação ao FP16, equilibrando praticidade e desempenho para hardware de consumo.',
@@ -1049,6 +1078,7 @@ schema: {
           columns: ['Quantização', 'RAM necessária', 'Qualidade', 'Prático?'],
         },
         appleSilicon: {
+          id: 'apple-silicon',
           title: 'Por que o Apple Silicon é a melhor opção de consumo para modelos 70B?',
           content: [
             '**O Apple Silicon usa memória unificada -- a CPU e a GPU compartilham o mesmo pool de memória física.** Um MacBook Pro M5 Max com 64 GB de memória unificada pode rodar um modelo 70B em Q4_K_M inteiramente na GPU, atingindo 20-30 tok/s sem o overhead do layer offloading.',
@@ -1058,6 +1088,7 @@ schema: {
           ],
         },
         dgxSpark: {
+          id: 'dgx-spark',
           title: 'NVIDIA DGX Spark: 128 GB de memória unificada para modelos 70B',
           content: [
             '**O NVIDIA DGX Spark (US$ 4.699) é um computador de IA compacto lançado em outubro de 2025, baseado no GB10 Grace Blackwell Superchip com 128 GB de memória unificada LPDDR5x.** Sua arquitetura de memória unificada significa que GPU e CPU compartilham o mesmo pool de 128 GB -- semelhante ao Apple Silicon, mas com aceleração CUDA.',
@@ -1075,6 +1106,7 @@ schema: {
           columns: ['Especificação', 'Valor'],
         },
         nvidiaOffload: {
+          id: 'nvidia-layer-offloading',
           title: 'Como funciona GPU NVIDIA + layer offloading para modelos 70B?',
           content: 'Ollama e llama.cpp suportam dividir um modelo entre a VRAM da GPU e a RAM do sistema. Camadas carregadas na VRAM rodam em velocidade GPU; camadas na RAM do sistema rodam em velocidade CPU:',
           image: '/images/70b-layer-offloading.svg',
@@ -1083,6 +1115,7 @@ schema: {
           codeLanguage: 'bash',
         },
         cpuOnly: {
+          id: 'cpu-only',
           title: 'A inferência 70B somente com CPU é prática?',
           content: [
             '**Um modelo 70B em Q4_K_M em uma CPU de muitos núcleos (AMD Threadripper, Intel Xeon) com 64 GB de RAM produz 1-3 tokens/s.** A 2 tok/s, uma resposta de 200 palavras leva aproximadamente 75 segundos.',
@@ -1090,6 +1123,7 @@ schema: {
           ],
         },
         which70b: {
+          id: 'which-model',
           title: 'Qual modelo 70B você deve rodar localmente?',
           rows: [
             { 'Modelo': 'Llama 3.3 70B', 'MMLU': '82%', 'HumanEval': '88%', 'Ideal para': 'Tarefas gerais em inglês, seguimento de instruções' },
@@ -1099,6 +1133,7 @@ schema: {
           columns: ['Modelo', 'MMLU', 'HumanEval', 'Ideal para'],
         },
         regionalContext: {
+          id: 'regional-context',
           title: 'Rodar modelos 70B localmente: contexto regional',
           content: [
             '**Brasil / LGPD**: Um modelo local de 70B representa o teto prático de qualidade de IA executável de forma privada. Para empresas brasileiras que processam dados sensíveis -- documentos jurídicos, prontuários médicos, análises financeiras -- um modelo 70B rodando localmente entrega qualidade GPT-4 2023 com conformidade total com a LGPD (Lei Geral de Proteção de Dados, Lei nº 13.709/2018). Nenhum prompt, contexto ou saída sai da infraestrutura da organização. A ANPD (Autoridade Nacional de Proteção de Dados) recomenda minimização de transferências internacionais de dados.',
@@ -1107,6 +1142,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Quais são os erros comuns ao rodar modelos 70B em hardware de consumo?',
           faqs: [
             {
@@ -1297,8 +1333,6 @@ schema: {
   primaryTerm: '70B lokales LLM Consumer Hardware',
   toc: [
     { label: 'Zusammenfassung', anchor: '#key-takeaways' },
-    { label: 'Welche Hardware kann ein 70B Modell ausführen?', anchor: '#what-hardware-can-run-70b' },
-    { label: 'RAM-Anforderungen nach Quantisierung', anchor: '#ram-requirements-by-quantization' },
     { label: 'Apple Silicon: beste Consumer Option für 70B', anchor: '#apple-silicon' },
     { label: 'NVIDIA DGX Spark: 128GB Unified-Option', anchor: '#dgx-spark' },
     { label: 'NVIDIA GPU + Layer Offloading', anchor: '#nvidia-gpu-layer-offloading' },
@@ -1306,7 +1340,6 @@ schema: {
     { label: 'Welches 70B Modell solltest du ausführen?', anchor: '#which-70b-model' },
     { label: 'Regionaler Kontext', anchor: '#regional-context' },
     { label: 'Häufige Fehler beim Ausführen von 70B Modellen', anchor: '#common-mistakes' },
-    { label: 'Häufig gestellte Fragen', anchor: '#common-questions' },
   ],
   schema: {
     '@context': 'https://schema.org',
@@ -1511,6 +1544,7 @@ schema: {
       columns: ['Quantisierung', 'RAM erforderlich', 'Qualität', 'Praktisch?'],
     },
     appleSilicon: {
+      id: 'apple-silicon',
       title: 'Warum ist Apple Silicon die beste Consumer Option für 70B Modelle?',
       content: [
         '**Apple Silicon nutzt unified memory -- die CPU und GPU teilen denselben physikalischen Speicherpool.** Ein M5 Max MacBook Pro mit 64 GB unified memory kann ein 70B Modell bei Q4_K_M vollständig auf der GPU ausführen, erreicht 20-30 tok/sec ohne Layer Offloading Overhead.',
@@ -1520,6 +1554,7 @@ schema: {
       ],
     },
     dgxSpark: {
+      id: 'dgx-spark',
       title: 'NVIDIA DGX Spark: 128GB Unified Memory für 70B Modelle',
       content: [
         '**Der NVIDIA DGX Spark (4.699 $) ist ein kompakter Desktop-KI-Computer, der im Oktober 2025 auf den Markt kam und auf dem GB10 Grace Blackwell Superchip mit 128 GB unified LPDDR5x-Speicher basiert.** Die Unified-Memory-Architektur bedeutet, dass sich GPU und CPU denselben 128-GB-Pool teilen -- ähnlich wie bei Apple Silicon, aber mit CUDA-Beschleunigung.',
@@ -1537,6 +1572,7 @@ schema: {
       columns: ['Spec', 'Wert'],
     },
     nvidiaOffload: {
+      id: 'nvidia-gpu-layer-offloading',
       title: 'Wie funktioniert NVIDIA GPU + Layer Offloading für 70B Modelle?',
       content: 'Ollama und llama.cpp unterstützen das Aufteilen eines Modells über GPU VRAM und System RAM. Layers geladen in VRAM laufen mit GPU-Geschwindigkeit; Layers in System RAM laufen mit CPU-Geschwindigkeit:',
       image: '/images/70b-layer-offloading.svg',
@@ -1545,6 +1581,7 @@ schema: {
       codeLanguage: 'bash',
     },
     cpuOnly: {
+      id: 'cpu-only-70b',
       title: 'Ist CPU-Only 70B Inferenz praktisch?',
       content: [
         '**Ein 70B Modell bei Q4_K_M auf einer hochkern-CPU (AMD Threadripper, Intel Xeon) mit 64 GB RAM erzeugt 1-3 tokens/sec.** Bei 2 tok/sec dauert eine 200-Wort-Antwort etwa 75 Sekunden.',
@@ -1552,6 +1589,7 @@ schema: {
       ],
     },
     which70b: {
+      id: 'which-70b-model',
       title: 'Welches 70B Modell solltest du lokal ausführen?',
       rows: [
         { 'Modell': 'Llama 3.3 70B', 'MMLU': '82%', 'HumanEval': '88%', 'Beste für': 'Allgemeine Englisch Aufgaben, Anweisung-Befolgung' },
@@ -1570,6 +1608,7 @@ schema: {
       ],
     },
     commonMistakes: {
+      id: 'common-mistakes',
       title: 'Was sind die häufigen Fehler beim Ausführen von 70B Modellen auf Consumer Hardware?',
       items: [
         '**Unterschätzung des VRAM-Bedarfs**: Eine GPU mit weniger als 24 GB VRAM ist zu klein. Eine RTX 4070 Ti (12 GB VRAM) kann nur etwa 30% eines Q4_K_M 70B Modells in VRAM halten. Der Rest lauft auf der CPU, was zu 3-5 tok/sec führt -- kaum schneller als reine CPU-Inferenz.',
@@ -1653,16 +1692,10 @@ schema: {
   primaryTerm: 'LLM 70B matériel grand public',
   toc: [
     { label: 'Points clés', anchor: '#key-takeaways' },
-    { label: 'Quel matériel peut exécuter un modèle 70B ?', anchor: '#what-hardware-can-run-70b' },
-    { label: 'Exigences RAM par quantification', anchor: '#ram-requirements-by-quantization' },
     { label: 'Apple Silicon : la meilleure option grand public pour 70B', anchor: '#apple-silicon' },
     { label: 'NVIDIA DGX Spark : option 128 Go unifiés', anchor: '#dgx-spark' },
-    { label: 'GPU NVIDIA + déchargement de couches', anchor: '#nvidia-gpu-layer-offloading' },
-    { label: 'Inférence 70B sur CPU uniquement : est-ce pratique ?', anchor: '#cpu-only-70b' },
-    { label: 'Quel modèle 70B devriez-vous exécuter ?', anchor: '#which-70b-model' },
     { label: 'Contexte régional', anchor: '#regional-context' },
     { label: 'Erreurs courantes avec les modèles 70B', anchor: '#common-mistakes' },
-    { label: 'Questions fréquentes', anchor: '#common-questions' },
   ],
   sections: {
     tldr: {
@@ -1718,6 +1751,7 @@ schema: {
       columns: ['Quantification', 'RAM requise', 'Qualité', 'Pratique ?'],
     },
     appleSilicon: {
+      id: 'apple-silicon',
       title: 'Pourquoi Apple Silicon est-il la meilleure option grand public pour les modèles 70B ?',
       content: [
         '**Apple Silicon utilise la mémoire unifiée -- le CPU et le GPU partagent le même pool mémoire physique.** Un MacBook Pro M5 Max avec 64 Go de mémoire unifiée peut exécuter un modèle 70B en Q4_K_M entièrement sur GPU, atteignant 20-30 tok/sec sans surcharge de déchargement de couches.',
@@ -1727,6 +1761,7 @@ schema: {
       ],
     },
     dgxSpark: {
+      id: 'dgx-spark',
       title: 'NVIDIA DGX Spark : option 128 Go de mémoire unifiée pour les modèles 70B',
       content: [
         '**Le NVIDIA DGX Spark (4 699 $) est un ordinateur IA de bureau compact lancé en octobre 2025, construit sur le superpuce GB10 Grace Blackwell avec 128 Go de mémoire unifiée LPDDR5x.** Son architecture à mémoire unifiée signifie que le GPU et le CPU partagent le même pool de 128 Go -- similaire à Apple Silicon mais avec accélération CUDA.',
@@ -1777,6 +1812,7 @@ schema: {
       ],
     },
     commonMistakes: {
+      id: 'common-mistakes',
       title: 'Quelles sont les erreurs courantes lors de l\'exécution de modèles 70B sur matériel grand public ?',
       faqs: [
         {
@@ -1918,16 +1954,9 @@ schema: {
   primaryTerm: '70B ローカルLLM コンシューマーハードウェア',
   toc: [
     { label: '主要ポイント', anchor: '#key-takeaways' },
-    { label: '70Bモデルを実際に実行できるハードウェアとは', anchor: '#what-hardware-can-run-70b' },
-    { label: '量化ごとのRAM要件', anchor: '#ram-requirements-by-quantization' },
     { label: 'Apple Silicon：70Bの最高のコンシューマーオプション', anchor: '#apple-silicon' },
     { label: 'NVIDIA DGX Spark：128GB統合メモリオプション', anchor: '#dgx-spark' },
-    { label: 'NVIDIA GPU + レイヤーオフロード', anchor: '#nvidia-gpu-layer-offloading' },
-    { label: 'CPU専用70B推論：現実的か', anchor: '#cpu-only-70b' },
-    { label: '実行する70Bモデルはどれか', anchor: '#which-70b-model' },
     { label: '70Bモデル実行の注意点と一般的な過ち', anchor: '#common-mistakes' },
-    { label: '実践Tips：ハードウェア選定ガイド', anchor: '#practical-tips' },
-    { label: 'よくある質問', anchor: '#common-questions' },
   ],
   schema: {
     '@context': 'https://schema.org',
@@ -2051,6 +2080,7 @@ schema: {
       columns: ['量化', 'RAM 必要量', '品質', '実用的？'],
     },
     appleSilicon: {
+      id: 'apple-silicon',
       title: 'Apple Silicon が70Bモデルのための最高のコンシューマーオプションである理由',
       content: [
         '**Apple Silicon は統合メモリを使用します -- CPU と GPU は同じ物理メモリプールを共有します。** 64GB の統合メモリを持つ M5 Max MacBook Pro は、70Bモデルを Q4_K_M で完全にGPU上で実行し、20～30 tok/sec を達成でき、レイヤーオフロードのオーバーヘッドがありません。',
@@ -2068,6 +2098,7 @@ schema: {
       ],
     },
     dgxSpark: {
+      id: 'dgx-spark',
       title: 'NVIDIA DGX Spark：70Bモデル向けの128GB統合メモリ',
       content: [
         '**NVIDIA DGX Spark（$4,699）は2025年10月に発売されたコンパクトなデスクトップAIコンピューターで、128GBのLPDDR5x統合メモリを備えたGB10 Grace Blackwell Superchipをベースにしています。** 統合メモリアーキテクチャにより、GPUとCPUは同じ128GBプールを共有します -- Apple Siliconに似ていますが、CUDAアクセラレーションを備えています。',
@@ -2127,6 +2158,7 @@ schema: {
       columns: ['モデル', 'MMLU', 'HumanEval', '最適用途'],
     },
     commonMistakes: {
+      id: 'common-mistakes',
       title: 'コンシューマーハードウェアで70Bモデルを実行する場合の一般的な過ちは何ですか？',
       faqs: [
         {
@@ -2220,15 +2252,9 @@ schema: {
   primaryTerm: '70B 本地大模型消费级硬件',
   toc: [
     { label: '关键要点', anchor: '#key-takeaways' },
-    { label: '哪些硬件可以运行 70B 模型？', anchor: '#what-hardware-can-run-70b' },
-    { label: '按量化等级划分的内存需求', anchor: '#ram-requirements-by-quantization' },
     { label: 'Apple Silicon：70B 模型的最佳消费级方案', anchor: '#apple-silicon' },
     { label: 'NVIDIA DGX Spark：128GB 统一内存方案', anchor: '#dgx-spark' },
-    { label: 'NVIDIA GPU + 层卸载技术', anchor: '#nvidia-gpu-layer-offloading' },
-    { label: '纯 CPU 运行 70B 模型：是否实用？', anchor: '#cpu-only-70b' },
-    { label: '应该运行哪个 70B 模型？', anchor: '#which-70b-model' },
     { label: '运行 70B 模型的常见误区', anchor: '#common-mistakes' },
-    { label: '常见问题', anchor: '#common-questions' },
   ],
   sections: {
     tldr: {
@@ -2284,6 +2310,7 @@ schema: {
       columns: ['量化等级', '需要内存', '质量', '实用性'],
     },
     appleSilicon: {
+      id: 'apple-silicon',
       title: '为什么 Apple Silicon 是 70B 模型的最佳消费级选择？',
       content: [
         '**Apple Silicon 采用统一内存架构 -- CPU 和 GPU 共享同一物理内存池。** 配置 64 GB 统一内存的 M5 Max MacBook Pro 可以完整在 GPU 上运行 Q4_K_M 的 70B 模型，实现 20-30 tok/秒，无需层卸载开销。',
@@ -2293,6 +2320,7 @@ schema: {
       ],
     },
     dgxSpark: {
+      id: 'dgx-spark',
       title: 'NVIDIA DGX Spark：为 70B 模型提供 128GB 统一内存',
       content: [
         '**NVIDIA DGX Spark ($4,699) 是一款于 2025 年 10 月推出的紧凑型桌面 AI 计算机，基于配备 128GB LPDDR5x 统一内存的 GB10 Grace Blackwell 超级芯片。** 其统一内存架构意味着 GPU 和 CPU 共享同一个 128GB 内存池 -- 与 Apple Silicon 类似，但具备 CUDA 加速能力。',
@@ -2334,6 +2362,7 @@ schema: {
       columns: ['模型', 'MMLU', 'HumanEval', '最适用于'],
     },
     commonMistakes: {
+      id: 'common-mistakes',
       title: '运行 70B 模型时的常见误区有哪些？',
       faqs: [
         {
@@ -2648,6 +2677,7 @@ schema: {
         ],
       },
       whatHardware: {
+        id: 'what-hardware',
         title: '실제로 70B 로컬 LLM을 실행할 수 있는 하드웨어는?',
         content: [
           '**Q4_K_M 양자화에서 70B 모델은 추론 엔진이 접근할 수 있는 약 40~43GB의 메모리가 필요합니다.** 이는 GPU VRAM, 통합 시스템 메모리 (Apple Silicon), 시스템 RAM, 또는 레이어 오프로딩을 통한 조합으로 제공될 수 있습니다.',
@@ -2669,6 +2699,7 @@ schema: {
         columns: ['하드웨어', '70B 실행 가능?', '속도 (70B Q4)', '비고'],
       },
       ramByQuant: {
+        id: 'ram-requirements',
         title: '각 양자화 수준에서 70B 모델에 필요한 RAM은 얼마나 되나?',
         image: '/images/70b-models-consumer-hardware-quantization-tradeoff-hero-ko.webp',
         imageCaption: '양자화 트레이드오프 곡선: Q4_K_M (권장)은 40~43GB RAM이 필요하며 FP16 대비 1~3%의 품질 손실만 발생하여 소비자 하드웨어에서 실용성과 성능의 균형을 이룹니다.',
@@ -2683,6 +2714,7 @@ schema: {
         columns: ['양자화', '필요 RAM', '품질', '실용성'],
       },
       appleSilicon: {
+        id: 'apple-silicon',
         title: 'Apple Silicon이 70B 모델의 최고 소비자 옵션인 이유는?',
         content: [
           '**Apple Silicon은 통합 메모리를 사용합니다 — CPU와 GPU가 동일한 물리 메모리 풀을 공유합니다.** 64GB 통합 메모리를 갖춘 M5 Max MacBook Pro는 Q4_K_M에서 70B 모델을 GPU에서 완전히 실행하여 레이어 오프로딩 오버헤드 없이 20~30 tok/sec를 달성할 수 있습니다.',
@@ -2692,6 +2724,7 @@ schema: {
         ],
       },
       dgxSpark: {
+        id: 'dgx-spark',
         title: 'NVIDIA DGX Spark: 70B 모델을 위한 128GB 통합 메모리',
         content: [
           '**NVIDIA DGX Spark ($4,699)는 2025년 10월에 출시된 소형 데스크톱 AI 컴퓨터로, 128GB LPDDR5x 통합 메모리를 갖춘 GB10 Grace Blackwell Superchip 기반입니다.** 통합 메모리 아키텍처는 GPU와 CPU가 동일한 128GB 풀을 공유함을 의미하며, Apple Silicon과 유사하지만 CUDA 가속이 지원됩니다.',
@@ -2709,6 +2742,7 @@ schema: {
         columns: ['사양', '값'],
       },
       nvidiaOffload: {
+        id: 'nvidia-layer-offloading',
         title: 'NVIDIA GPU + 레이어 오프로딩은 70B 모델에서 어떻게 작동하나?',
         content: 'Ollama와 llama.cpp는 모델을 GPU VRAM과 시스템 RAM에 분할하는 것을 지원합니다. VRAM에 로드된 레이어는 GPU 속도로 실행되고, 시스템 RAM의 레이어는 CPU 속도로 실행됩니다:',
         image: '/images/70b-layer-offloading.svg',
@@ -2717,6 +2751,7 @@ schema: {
         codeLanguage: 'bash',
       },
       cpuOnly: {
+        id: 'cpu-only',
         title: 'CPU 전용 70B 추론은 실용적인가?',
         content: [
           '**고코어 CPU (AMD Threadripper, Intel Xeon)와 64GB RAM에서 Q4_K_M의 70B 모델은 1~3 토큰/초를 생성합니다.** 2 tok/sec에서 200단어 응답은 약 75초가 소요됩니다.',
@@ -2724,6 +2759,7 @@ schema: {
         ],
       },
       which70b: {
+        id: 'which-model',
         title: '어떤 70B 모델을 로컬에서 실행해야 하나?',
         rows: [
           { '모델': 'Llama 3.3 70B', 'MMLU': '82%', 'HumanEval': '88%', '적합한 용도': '일반 영어 작업, 지시 따르기' },
@@ -2733,6 +2769,7 @@ schema: {
         columns: ['모델', 'MMLU', 'HumanEval', '적합한 용도'],
       },
       regionalContext: {
+        id: 'regional-context',
         title: '70B 모델 로컬 실행: 지역별 맥락',
         content: [
           '**EU / GDPR**: 70B 로컬 모델은 개인 정보 보호 환경에서 실행 가능한 AI 품질의 실질적인 상한선을 나타냅니다. 법률 문서, 의료 기록, 재무 분석 등 민감한 데이터를 처리하는 EU 기업의 경우, 온프레미스에서 실행되는 70B 모델은 완전한 GDPR 준수를 통해 GPT-4 2023 수준의 품질을 제공합니다. 프롬프트 내용, 컨텍스트, 출력 어느 것도 조직의 인프라를 벗어나지 않습니다.',
@@ -2744,6 +2781,7 @@ schema: {
         ],
       },
       commonMistakes: {
+        id: 'common-mistakes',
         title: '소비자 하드웨어에서 70B 모델 실행 시 일반적인 실수는?',
         faqs: [
           {

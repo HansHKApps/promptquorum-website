@@ -1005,15 +1005,7 @@ LOCAL_LLM_MODEL=qwen3.6:27b
     },
     toc: [
       { label: 'Principais conclusões', anchor: '#key-takeaways' },
-      { label: 'Por que executar o Qwen localmente em 2026', anchor: '#why-local' },
-      { label: 'Escolha seu modelo Qwen', anchor: '#choose-model' },
-      { label: 'Requisitos de hardware', anchor: '#hardware' },
       { label: 'Configuração com Ollama', anchor: '#ollama-setup' },
-      { label: 'Configuração com LM Studio', anchor: '#lm-studio-setup' },
-      { label: 'Conexão ao PromptQuorum', anchor: '#promptquorum' },
-      { label: 'Solução de problemas', anchor: '#troubleshooting' },
-      { label: 'Consumo de energia e TCO', anchor: '#power-tco' },
-      { label: 'Leitura relacionada', anchor: '#related-reading' },
       { label: 'Perguntas frequentes', anchor: '#faq' },
     ],
     sections: {

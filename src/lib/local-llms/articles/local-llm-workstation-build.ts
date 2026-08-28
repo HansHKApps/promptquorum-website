@@ -26,7 +26,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       educationalLevel: 'Advanced',
       primaryTerm: 'AI Workstation',
       toc: [
-        { label: 'TLDR', anchor: '#tldr' },
+        { label: 'TLDR', anchor: '#key-takeaways' },
         { label: 'Who Needs a $4K-6K Workstation?', anchor: '#who-needs' },
         { label: 'What\'s the Workstation Parts List?', anchor: '#parts-list' },
         { label: 'How Do You Configure Dual GPUs for Maximum Performance?', anchor: '#dual-gpu' },
@@ -395,7 +395,7 @@ schema: {
       educationalLevel: 'Advanced',
       primaryTerm: 'AI Workstation',
       toc: [
-        { label: 'Zusammenfassung', anchor: '#tldr' },
+        { label: 'Zusammenfassung', anchor: '#key-takeaways' },
         { label: 'Wer benötigt eine €4K-6K Workstation?', anchor: '#who-needs' },
         { label: 'Wie ist die Teile-Liste für die Workstation?', anchor: '#parts-list' },
         { label: 'Wie konfigurieren Sie Dual GPUs für maximale Leistung?', anchor: '#dual-gpu' },
@@ -780,7 +780,7 @@ schema: {
       educationalLevel: 'Advanced',
       primaryTerm: 'AI Workstation',
       toc: [
-        { label: 'Points clés', anchor: '#tldr' },
+        { label: 'Points clés', anchor: '#key-takeaways' },
         { label: 'Qui a besoin d\'une station de €4K–6K ?', anchor: '#who-needs' },
         { label: 'Quelle est la liste complète des composants ?', anchor: '#parts-list' },
         { label: 'Comment configurer les GPU duaux pour des performances maximales ?', anchor: '#dual-gpu' },
@@ -1148,7 +1148,7 @@ schema: {
       educationalLevel: 'Advanced',
       primaryTerm: 'AI Workstation',
       toc: [
-        { label: '重要ポイント', anchor: '#tldr' },
+        { label: '重要ポイント', anchor: '#key-takeaways' },
         { label: '誰が$4K–6Kワークステーションを必要とするか？', anchor: '#who-needs' },
         { label: 'ワークステーションのパーツリストは何か？', anchor: '#parts-list' },
         { label: 'デュアルGPUを最大パフォーマンスに設定するには？', anchor: '#dual-gpu' },
@@ -1513,7 +1513,7 @@ schema: {
       educationalLevel: 'Advanced',
       primaryTerm: 'AI Workstation',
       toc: [
-        { label: '核心要点', anchor: '#tldr' },
+        { label: '核心要点', anchor: '#key-takeaways' },
         { label: '谁需要$4K–6K工作站？', anchor: '#who-needs' },
         { label: '工作站零件清单是什么？', anchor: '#parts-list' },
         { label: '如何配置双GPU以获得最大性能？', anchor: '#dual-gpu' },
@@ -1881,7 +1881,7 @@ schema: {
       educationalLevel: 'Advanced',
       primaryTerm: 'AI Workstation',
       toc: [
-        { label: 'Puntos clave', anchor: '#tldr' },
+        { label: 'Puntos clave', anchor: '#key-takeaways' },
         { label: '¿Quién necesita una estación de trabajo de $4K–6K?', anchor: '#who-needs' },
         { label: '¿Cuál es la lista de componentes de la estación de trabajo?', anchor: '#parts-list' },
         { label: '¿Cómo configurar GPUs duales para máximo rendimiento?', anchor: '#dual-gpu' },
@@ -2249,7 +2249,7 @@ schema: {
       educationalLevel: 'Advanced',
       primaryTerm: 'AI Workstation',
       toc: [
-        { label: 'النقاط الرئيسية', anchor: '#tldr' },
+        { label: 'النقاط الرئيسية', anchor: '#key-takeaways' },
         { label: 'من يحتاج إلى محطة عمل بقيمة 4–6 آلاف $؟', anchor: '#who-needs' },
         { label: 'ما هي قائمة مكونات محطة العمل؟', anchor: '#parts-list' },
         { label: 'كيف تُعِدّ GPU مزدوجة لأقصى أداء؟', anchor: '#dual-gpu' },
@@ -2618,11 +2618,6 @@ schema: {
       primaryTerm: 'estação de trabalho LLM local',
       toc: [
         { label: 'Pontos principais', anchor: '#tldr' },
-        { label: 'Configurações recomendadas', anchor: '#builds' },
-        { label: 'Comparativo de GPU', anchor: '#gpu-comparison' },
-        { label: 'CPU e RAM', anchor: '#cpu-ram' },
-        { label: 'Refrigeração', anchor: '#cooling' },
-        { label: 'FAQ', anchor: '#faq' },
       ],
       schema: {
         '@context': 'https://schema.org',
@@ -2709,7 +2704,7 @@ schema: {
       educationalLevel: 'Advanced',
       primaryTerm: 'AI 워크스테이션',
       toc: [
-        { label: 'TLDR', anchor: '#tldr' },
+        { label: 'TLDR', anchor: '#key-takeaways' },
         { label: '$4K~6K 워크스테이션이 필요한 사람은?', anchor: '#who-needs' },
         { label: '워크스테이션 부품 목록은?', anchor: '#parts-list' },
         { label: '최대 성능을 위한 듀얼 GPU 구성 방법은?', anchor: '#dual-gpu' },

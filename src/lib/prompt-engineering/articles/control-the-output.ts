@@ -41,7 +41,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: 'What\'s the Trade-off Between Reasoning and Format?', anchor: 'reasoning-tradeoff' },
         { label: 'How Do the Top Models Compare on Output Format Control?', anchor: 'model-comparison' },
         { label: 'How Do Stop Sequences and Negative Constraints Differ?', anchor: 'stop-sequences' },
-        { label: 'Which Output Format Should You Use for Production?', anchor: 'production-format' },
         { label: 'What Are the Global and Regional Considerations?', anchor: 'global-regional' },
         { label: 'Key Takeaways', anchor: 'key-takeaways' },
         { label: 'How to Control AI Output Format (Step by Step)', anchor: 'how-to' },
@@ -116,6 +115,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
 
         definition: {
+          id: 'three-levels',
           title: 'What Are the Three Levels of Output Control?',
           content: [
             'Output control operates at three distinct levels — prompt-based, schema-based, and constrained decoding — each offering progressively stronger format guarantees at progressively higher trade-offs against reasoning quality.',
@@ -134,6 +134,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         promptStructure: {
+          id: 'prompt-engineering',
           title: 'How Do You Control Output Format via Prompt Engineering?',
           content: [
             'Explicit output schema instructions — placed at the start of the system prompt for Claude Opus 4.8 and immediately before user content for GPT-5.5 — produce structured output compliance rates of 85–95% without the reasoning quality penalty of native constrained decoding.',
@@ -147,6 +148,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         goodPrompt: {
+          id: 'good-prompt',
           title: 'What Does a Good Structured Output Prompt Look Like (Claude Opus 4.8)?',
           content: ['**Good Prompt — Claude Opus 4.8**'],
           blockquote: '<output_format>\nReturn only this JSON object, no prose:\n{\n  "sentiment": "positive" | "neutral" | "negative",\n  "key_issues": ["string"],  // max 3 items\n  "urgency": "low" | "medium" | "high",\n  "confidence": 0.0–1.0\n}\n</output_format>\n\n<task>Analyse the following customer review.</task>\n\n<review>[REVIEW TEXT HERE]</review>',
@@ -165,6 +167,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         modelRules: {
+          id: 'model-rules',
           title: 'Which Output Format Rules Apply to Each Model?',
           content: ['Each major LLM has distinct structural preferences for output format compliance:'],
           items: [
@@ -176,6 +179,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         parameters: {
+          id: 'sampling-parameters',
           title: 'Which Sampling Parameters Control Output Generation?',
           content: [
             'Temperature (T), Top-P, Top-K, max_tokens, frequency_penalty, and presence_penalty are six independent parameters that jointly determine output length, randomness, and repetition — and must be set consistently, not in conflict.',
@@ -202,6 +206,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         reasoningTradeoff: {
+          id: 'reasoning-tradeoff',
           title: 'What\'s the Trade-off Between Reasoning Quality and Output Format Guarantees?',
           content: [
             'Forcing JSON via constrained decoding reduces model accuracy by 2.26 percentage points on function-calling benchmarks — BAML\'s schema-aligned parsing achieved 93.63% accuracy on BFCL vs. 91.37% for OpenAI\'s strict constrained decoding on the same benchmark.',
@@ -212,6 +217,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         promptquorumTest: {
+          id: 'model-comparison',
           title: 'How Do the Top Models Compare on Output Format Control?',
           content: [
             'Tested in [PromptQuorum](https://www.promptquorum.com/) — 30 output control prompts dispatched across three models: Claude Opus 4.8 achieved 93% JSON compliance using XML-tagged format instructions without constrained decoding. GPT-5.5 achieved 89% compliance using numbered format rules. Gemini 3.1 Pro achieved 91% compliance with schema stated at both start and end. All three models produced shorter, less complete reasoning when `strict: true` constrained decoding was enabled — consistent with the 2.26-point accuracy drop observed on the BFCL benchmark.',
@@ -219,6 +225,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         stopSequences: {
+          id: 'stop-sequences',
           title: 'How Do Stop Sequences and Negative Constraints Differ?',
           content: [
             'Stop sequences — tokens that immediately terminate model output upon generation — are the most deterministic output control mechanism: the model halts the instant the specified string appears, regardless of remaining context.',
@@ -257,6 +264,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         globalContext: {
+          id: 'global-regional',
           title: 'What Are the Global and Regional Considerations for Output Control?',
           content: [
             'European enterprises building LLM pipelines that process personal data must apply GDPR Article 25 (privacy by design) to output schema design — outputs that expose personal data fields in JSON payloads require a legal basis under Article 6 GDPR. The CNIL (France\'s data protection authority) issued guidance in January 2026 that automated decision-making outputs — including structured LLM outputs used in scoring or eligibility workflows — may trigger Article 22 GDPR rights to human review.',
@@ -280,6 +288,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Common Mistakes With Output Control',
           mistakes: [
             {
@@ -323,6 +332,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         howToStart: {
+          id: 'how-to',
           title: 'How to Control AI Output Format',
           numberedItems: [
             '**Always specify your desired output format explicitly in the prompt.** Instead of \'summarize this\', say: \'Summarize as a bulleted list of 5–7 items, each 1–2 sentences. Use active voice. Do not include opinions.\' Be specific about structure: bullets, tables, JSON, markdown, plain text.',
@@ -361,6 +371,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         sources: {
+          id: 'sources',
           title: 'Sources & Further Reading',
           items: [
             '[OpenAI, 2025. "Structured Outputs Guide"](https://platform.openai.com/docs/guides/structured-outputs) — official documentation on constrained decoding, strict JSON mode, and schema compliance guarantees',
@@ -401,7 +412,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: 'Was ist der Trade-off zwischen Reasoning-Qualität und Formatgarantie?', anchor: 'reasoning-tradeoff' },
         { label: 'Wie schneiden die Top-Modelle bei Ausgabe-Kontrolle ab?', anchor: 'model-comparison' },
         { label: 'Wie unterscheiden sich Stop Sequences und negative Constraints?', anchor: 'stop-sequences' },
-        { label: 'Welches Ausgabeformat eignet sich für Produktion?', anchor: 'production-format' },
         { label: 'Globale und regionale Aspekte der Ausgabekontrolle', anchor: 'global-regional' },
         { label: 'Zusammenfassung', anchor: 'key-takeaways' },
         { label: 'KI-Ausgabeformat kontrollieren (Schritt für Schritt)', anchor: 'how-to' },
@@ -496,6 +506,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
 
         definition: {
+          id: 'three-levels',
           title: 'Was sind die drei Ebenen der Ausgabekontrolle?',
           content: [
             'Ausgabekontrolle funktioniert auf drei unterschiedlichen Ebenen — prompt-basiert, schema-basiert und Constrained Decoding — wobei jede Ebene progressiv stärkere Formatgarantien bei progressiv höheren Trade-offs gegenüber der Reasoning-Qualität bietet.',
@@ -514,6 +525,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         promptStructure: {
+          id: 'prompt-engineering',
           title: 'Wie steuert man das Ausgabeformat per Prompt Engineering?',
           content: [
             'Explizite Ausgabeschema-Anweisungen — am Anfang des System-Prompts für Claude Opus 4.8 und unmittelbar vor dem User-Content für GPT-5.5 platziert — erzielen Compliance-Raten für strukturierten Output von 85–95 % ohne den Reasoning-Qualitätsverlust von nativem Constrained Decoding.',
@@ -527,6 +539,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         goodPrompt: {
+          id: 'good-prompt',
           title: 'Wie sieht ein guter Structured-Output-Prompt aus (Claude Opus 4.8)?',
           content: ['**Guter Prompt — Claude Opus 4.8**'],
           blockquote: '<output_format>\nReturn only this JSON object, no prose:\n{\n  "sentiment": "positive" | "neutral" | "negative",\n  "key_issues": ["string"],  // max 3 items\n  "urgency": "low" | "medium" | "high",\n  "confidence": 0.0–1.0\n}\n</output_format>\n\n<task>Analyse the following customer review.</task>\n\n<review>[REVIEW TEXT HERE]</review>',
@@ -545,6 +558,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         modelRules: {
+          id: 'model-rules',
           title: 'Welche Ausgabeformat-Regeln gelten für jedes Modell?',
           content: ['Jedes große LLM hat unterschiedliche strukturelle Präferenzen für die Ausgabeformat-Compliance:'],
           items: [
@@ -556,6 +570,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         parameters: {
+          id: 'sampling-parameters',
           title: 'Welche Sampling-Parameter steuern die Ausgabegenerierung?',
           content: [
             'Temperature (T), Top-P, Top-K, max_tokens, frequency_penalty und presence_penalty sind sechs unabhängige Parameter, die gemeinsam Ausgabelänge, Zufälligkeit und Wiederholung bestimmen — und konsistent, nicht im Widerspruch, gesetzt werden müssen.',
@@ -582,6 +597,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         reasoningTradeoff: {
+          id: 'reasoning-tradeoff',
           title: 'Was ist der Trade-off zwischen Reasoning-Qualität und Ausgabe-Formatgarantien?',
           content: [
             'Das Erzwingen von JSON via Constrained Decoding reduziert die Modellgenauigkeit um 2,26 Prozentpunkte auf Function-Calling-Benchmarks — BAMLs schema-ausgerichtetes Parsing erreichte 93,63 % Genauigkeit auf BFCL gegenüber 91,37 % für OpenAIs striktes Constrained Decoding auf dem gleichen Benchmark.',
@@ -592,6 +608,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         promptquorumTest: {
+          id: 'model-comparison',
           title: 'Wie schneiden die Top-Modelle bei der Ausgabe-Kontrolle ab?',
           content: [
             'Getestet in [PromptQuorum](https://www.promptquorum.com/) — 30 Ausgabekontroll-Prompts über drei Modelle verteilt: Claude Opus 4.8 erreichte 93 % JSON-Compliance mit XML-getaggten Format-Anweisungen ohne Constrained Decoding. GPT-5.5 erreichte 89 % Compliance mit nummerierten Format-Regeln. Gemini 3.1 Pro erreichte 91 % Compliance, wenn das Schema sowohl am Anfang als auch am Ende angegeben wurde. Alle drei Modelle produzierten kürzere, weniger vollständige Reasoning-Antworten, wenn `strict: true` Constrained Decoding aktiviert war — konsistent mit dem auf dem BFCL-Benchmark beobachteten 2,26-Punkte-Genauigkeitsverlust.',
@@ -599,6 +616,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         stopSequences: {
+          id: 'stop-sequences',
           title: 'Wie unterscheiden sich Stop Sequences und negative Constraints?',
           content: [
             'Stop Sequences — Tokens, die die Modellausgabe bei Generierung sofort beenden — sind der deterministischste Ausgabekontrollmechanismus: Das Modell stoppt in dem Moment, in dem die angegebene Zeichenkette erscheint, unabhängig vom verbleibenden Kontext.',
@@ -637,6 +655,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         globalContext: {
+          id: 'global-regional',
           title: 'Globale und regionale Aspekte der Ausgabekontrolle',
           content: [
             'Europäische Unternehmen, die LLM-Pipelines zur Verarbeitung personenbezogener Daten aufbauen, müssen DSGVO Artikel 25 (Privacy by Design) auf das Ausgabeschema-Design anwenden — Ausgaben, die personenbezogene Datenfelder in JSON-Payloads offenlegen, erfordern eine Rechtsgrundlage nach Artikel 6 DSGVO. Die CNIL (Frankreichs Datenschutzbehörde) hat im Januar 2026 Leitlinien herausgegeben, nach denen automatisierte Entscheidungsausgaben — einschließlich strukturierter LLM-Ausgaben, die in Scoring- oder Berechtigungs-Workflows verwendet werden — möglicherweise Rechte auf menschliche Überprüfung nach Artikel 22 DSGVO auslösen.',
@@ -660,6 +679,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Häufige Fehler bei der Ausgabekontrolle',
           mistakes: [
             {
@@ -704,6 +724,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         howToStart: {
+          id: 'how-to',
           title: 'KI-Ausgabeformat kontrollieren',
           numberedItems: [
             '**Geben Sie das gewünschte Ausgabeformat immer explizit im Prompt an.** Statt "Fassen Sie dies zusammen" sagen Sie: "Fassen Sie als Aufzählungsliste mit 5–7 Punkten zusammen, je 1–2 Sätze. Verwenden Sie Aktivsätze. Keine Meinungen." Seien Sie spezifisch über die Struktur: Aufzählungen, Tabellen, JSON, Markdown, Klartext.',
@@ -750,6 +771,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         sources: {
+          id: 'sources',
           title: 'Quellen & Weiterführende Literatur',
           items: [
             '[OpenAI, 2025. "Structured Outputs Guide"](https://platform.openai.com/docs/guides/structured-outputs) — offizielle Dokumentation zu Constrained Decoding, striktem JSON-Mode und Schema-Compliance-Garantien',
@@ -786,7 +808,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: '¿Cuál es la compensación entre razonamiento y formato?', anchor: 'reasoning-tradeoff' },
         { label: '¿Cómo comparan los principales modelos en control de formato?', anchor: 'model-comparison' },
         { label: '¿En qué se diferencian las stop sequences y las constraints negativas?', anchor: 'stop-sequences' },
-        { label: '¿Qué formato de salida usar en producción?', anchor: 'production-format' },
         { label: '¿Cuáles son las consideraciones globales y regionales?', anchor: 'global-regional' },
         { label: 'Puntos clave', anchor: 'key-takeaways' },
         { label: 'Cómo controlar el formato de salida de la IA (paso a paso)', anchor: 'how-to' },
@@ -863,6 +884,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       sections: {
         definition: {
+          id: 'three-levels',
           title: '¿Cuáles son los tres niveles de control de salida?',
           content: [
             'El control de salida opera en tres niveles distintos — basado en prompt, basado en schema y constrained decoding — cada uno ofreciendo garantías de formato progresivamente más fuertes con compensaciones progresivamente mayores frente a la calidad de razonamiento.',
@@ -880,6 +902,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           tableFormat: true,
         },
         promptStructure: {
+          id: 'prompt-engineering',
           title: '¿Cómo controlas el formato de salida mediante prompt engineering?',
           content: [
             'Las instrucciones explícitas de esquema de salida — colocadas al inicio del prompt del sistema para Claude Opus 4.8 e inmediatamente antes del contenido del usuario para GPT-5.5 — producen tasas de cumplimiento de salida estructurada del 85–95 % sin la penalización de calidad de razonamiento del constrained decoding nativo.',
@@ -891,6 +914,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           blockquote: 'Analyse this customer review and tell me the sentiment, key issues, and urgency.',
         },
         goodPrompt: {
+          id: 'good-prompt',
           title: '¿Cómo es un buen prompt de salida estructurada (Claude Opus 4.8)?',
           content: ['**Buen prompt — Claude Opus 4.8**'],
           blockquote: '<output_format>\nReturn only this JSON object, no prose:\n{\n  "sentiment": "positive" | "neutral" | "negative",\n  "key_issues": ["string"],  // max 3 items\n  "urgency": "low" | "medium" | "high",\n  "confidence": 0.0–1.0\n}\n</output_format>\n\n<task>Analyse the following customer review.</task>\n\n<review>[REVIEW TEXT HERE]</review>',
@@ -906,6 +930,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           blockquote: 'Analyse the following customer review.\n\nFormat rules:\n1. Return valid JSON only. No markdown fences. No explanation.\n2. Fields: "sentiment" (string: "positive"|"neutral"|"negative"), "key_issues" (array of strings, max 3), "urgency" (string: "low"|"medium"|"high"), "confidence" (float: 0.0–1.0)\n3. If no issues found, return empty array for key_issues.\n\n<REVIEW TEXT HERE>',
         },
         modelRules: {
+          id: 'model-rules',
           title: '¿Qué reglas de formato de salida aplican a cada modelo?',
           content: ['Cada LLM principal tiene preferencias estructurales distintas para el cumplimiento del formato de salida:'],
           items: [
@@ -916,6 +941,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         parameters: {
+          id: 'sampling-parameters',
           title: '¿Qué parámetros de muestreo controlan la generación de salida?',
           content: [
             'Temperature (T), Top-P, Top-K, max_tokens, frequency_penalty y presence_penalty son seis parámetros independientes que determinan conjuntamente la longitud, la aleatoriedad y la repetición de la salida — y deben configurarse de forma consistente, no en conflicto.',
@@ -940,6 +966,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         reasoningTradeoff: {
+          id: 'reasoning-tradeoff',
           title: '¿Cuál es la compensación entre calidad de razonamiento y garantías de formato de salida?',
           content: [
             'Forzar JSON mediante constrained decoding reduce la precisión del modelo en 2,26 puntos porcentuales en benchmarks de function calling — el parsing alineado con schema de BAML logró el 93,63 % de precisión en BFCL vs. 91,37 % para el constrained decoding estricto de OpenAI en el mismo benchmark.',
@@ -949,12 +976,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         promptquorumTest: {
+          id: 'model-comparison',
           title: '¿Cómo comparan los principales modelos en control de formato de salida?',
           content: [
             'Probado en [PromptQuorum](https://www.promptquorum.com/) — 30 prompts de control de salida despachados a tres modelos: Claude Opus 4.8 alcanzó el 93 % de cumplimiento JSON usando instrucciones de formato con etiquetas XML sin constrained decoding. GPT-5.5 alcanzó el 89 % de cumplimiento usando reglas de formato numeradas. Gemini 3.1 Pro alcanzó el 91 % de cumplimiento con el schema indicado tanto al inicio como al final. Los tres modelos produjeron razonamiento más corto y menos completo cuando se habilitó el constrained decoding con `strict: true` — consistente con la caída de precisión de 2,26 puntos observada en el benchmark BFCL.',
           ],
         },
         stopSequences: {
+          id: 'stop-sequences',
           title: '¿En qué se diferencian las stop sequences y las constraints negativas?',
           content: [
             'Las stop sequences — tokens que terminan inmediatamente la salida del modelo al generarse — son el mecanismo de control de salida más determinista: el modelo se detiene en el instante en que aparece la cadena especificada, independientemente del contexto restante.',
@@ -990,6 +1019,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           tableFormat: true,
         },
         globalContext: {
+          id: 'global-regional',
           title: '¿Cuáles son las consideraciones globales y regionales para el control de salida?',
           content: [
             'Las empresas europeas que construyen pipelines LLM que procesan datos personales deben aplicar el Artículo 25 del RGPD (privacidad por diseño) al diseño del esquema de salida — las salidas que exponen campos de datos personales en payloads JSON requieren una base legal bajo el Artículo 6 del RGPD. La CNIL (autoridad francesa de protección de datos) emitió directrices en enero de 2026 indicando que las salidas de toma de decisiones automatizadas — incluidas las salidas LLM estructuradas usadas en workflows de puntuación o elegibilidad — pueden activar los derechos de revisión humana del Artículo 22 del RGPD.',
@@ -1011,6 +1041,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Errores comunes con el control de salida',
           mistakes: [
             {
@@ -1053,6 +1084,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         howToStart: {
+          id: 'how-to',
           title: 'Cómo controlar el formato de salida de la IA',
           numberedItems: [
             '**Especifica siempre el formato de salida deseado explícitamente en el prompt.** En lugar de "resume esto", di: "Resume como una lista de 5–7 puntos, cada uno de 1–2 oraciones. Usa voz activa. No incluyas opiniones." Sé específico sobre la estructura: puntos, tablas, JSON, markdown, texto plano.',
@@ -1089,6 +1121,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Fuentes y lecturas adicionales',
           items: [
             '[OpenAI, 2025. "Structured Outputs Guide"](https://platform.openai.com/docs/guides/structured-outputs) — documentación oficial sobre constrained decoding, modo JSON estricto y garantías de cumplimiento de schema',
@@ -1124,7 +1157,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: 'ما المقايضة بين الاستدلال والتنسيق؟', anchor: 'reasoning-tradeoff' },
         { label: 'كيف تقارن النماذج الرئيسية في التحكم في التنسيق؟', anchor: 'model-comparison' },
         { label: 'كيف تختلف تسلسلات التوقف عن القيود السلبية؟', anchor: 'stop-sequences' },
-        { label: 'ما تنسيق المخرجات الذي تستخدمه في الإنتاج؟', anchor: 'production-format' },
         { label: 'ما الاعتبارات العالمية والإقليمية؟', anchor: 'global-regional' },
         { label: 'النقاط الرئيسية', anchor: 'key-takeaways' },
         { label: 'كيفية التحكم في تنسيق مخرجات الذكاء الاصطناعي (خطوة بخطوة)', anchor: 'how-to' },
@@ -1201,6 +1233,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       sections: {
         definition: {
+          id: 'three-levels',
           title: 'ما هي المستويات الثلاثة للتحكم في المخرجات؟',
           content: [
             'يعمل التحكم في المخرجات على ثلاثة مستويات متمايزة — القائم على الموجّه والقائم على المخطط والفك المقيّد — حيث يقدّم كل منها ضمانات تنسيق أقوى تدريجيًّا مع مقايضات أكبر تدريجيًّا في مقابل جودة الاستدلال.',
@@ -1218,6 +1251,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           tableFormat: true,
         },
         promptStructure: {
+          id: 'prompt-engineering',
           title: 'كيف تتحكم في تنسيق المخرجات عبر هندسة الموجّهات؟',
           content: [
             'تعليمات مخطط المخرجات الصريحة — الموضوعة في بداية موجّه النظام لـClaude Opus 4.8 وفورًا قبل محتوى المستخدم لـGPT-5.5 — تنتج معدلات توافق مخرجات منظّمة تبلغ ٨٥-٩٥٪ دون عقوبة جودة الاستدلال من الفك المقيّد الأصلي.',
@@ -1229,6 +1263,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           blockquote: 'Analyse this customer review and tell me the sentiment, key issues, and urgency.',
         },
         goodPrompt: {
+          id: 'good-prompt',
           title: 'كيف يبدو موجّه مخرجات منظّمة جيد (Claude Opus 4.8)؟',
           content: ['**موجّه جيد — Claude Opus 4.8**'],
           blockquote: '<output_format>\nReturn only this JSON object, no prose:\n{\n  "sentiment": "positive" | "neutral" | "negative",\n  "key_issues": ["string"],  // max 3 items\n  "urgency": "low" | "medium" | "high",\n  "confidence": 0.0–1.0\n}\n</output_format>\n\n<task>Analyse the following customer review.</task>\n\n<review>[REVIEW TEXT HERE]</review>',
@@ -1244,6 +1279,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           blockquote: 'Analyse the following customer review.\n\nFormat rules:\n1. Return valid JSON only. No markdown fences. No explanation.\n2. Fields: "sentiment" (string: "positive"|"neutral"|"negative"), "key_issues" (array of strings, max 3), "urgency" (string: "low"|"medium"|"high"), "confidence" (float: 0.0–1.0)\n3. If no issues found, return empty array for key_issues.\n\n<REVIEW TEXT HERE>',
         },
         modelRules: {
+          id: 'model-rules',
           title: 'ما قواعد تنسيق المخرجات التي تنطبق على كل نموذج؟',
           content: ['لكل نموذج لغة كبير رئيسي تفضيلات بنيوية متمايزة للتوافق مع تنسيق المخرجات:'],
           items: [
@@ -1254,6 +1290,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         parameters: {
+          id: 'sampling-parameters',
           title: 'ما معاملات أخذ العينات التي تتحكم في توليد المخرجات؟',
           content: [
             'درجة الحرارة (T) وTop-P وTop-K وmax_tokens وfrequency_penalty وpresence_penalty ستة معاملات مستقلة تُحدد معًا طول المخرجات وعشوائيتها وتكرارها — ويجب ضبطها بشكل متسق لا متعارض.',
@@ -1278,6 +1315,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         reasoningTradeoff: {
+          id: 'reasoning-tradeoff',
           title: 'ما المقايضة بين جودة الاستدلال وضمانات تنسيق المخرجات؟',
           content: [
             'إجبار JSON عبر الفك المقيّد يُقلّل دقة النموذج بمقدار ٢.٢٦ نقطة مئوية في معايير استدعاء الوظائف — حقّق تحليل النص الحر المتوافق مع مخطط BAML دقة ٩٣.٦٣٪ في BFCL مقابل ٩١.٣٧٪ للفك المقيّد الصارم في نفس المعيار.',
@@ -1286,12 +1324,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         promptquorumTest: {
+          id: 'model-comparison',
           title: 'كيف تقارن النماذج الرئيسية في التحكم في تنسيق المخرجات؟',
           content: [
             'اختُبر في [PromptQuorum](https://www.promptquorum.com/) — ٣٠ موجّه تحكم في المخرجات أُرسلت لثلاثة نماذج: حقق Claude Opus 4.8 توافق JSON بنسبة ٩٣٪ باستخدام تعليمات تنسيق بعلامات XML بدون الفك المقيّد. حقق GPT-5.5 توافق ٨٩٪ باستخدام قواعد تنسيق مُرقَّمة. حقق Gemini 3.1 Pro توافق ٩١٪ مع المخطط المُشار إليه في البداية والنهاية. أنتجت النماذج الثلاثة استدلالًا أقصر وأقل اكتمالًا حين فُعّل الفك المقيّد بـ`strict: true`.',
           ],
         },
         stopSequences: {
+          id: 'stop-sequences',
           title: 'كيف تختلف تسلسلات التوقف عن القيود السلبية؟',
           content: [
             'تسلسلات التوقف — الرموز التي تُنهي مخرجات النموذج فورًا عند توليدها — هي آلية التحكم في المخرجات الأكثر حتمية: يتوقف النموذج في اللحظة التي تظهر فيها السلسلة المحددة، بصرف النظر عن السياق المتبقي.',
@@ -1327,6 +1367,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           tableFormat: true,
         },
         globalContext: {
+          id: 'global-regional',
           title: 'ما الاعتبارات العالمية والإقليمية للتحكم في المخرجات؟',
           content: [
             'الشركات الأوروبية التي تبني مسارات نماذج لغة تعالج بيانات شخصية يجب تطبيق المادة ٢٥ من GDPR (الخصوصية بالتصميم) على تصميم مخطط المخرجات — المخرجات التي تكشف حقول بيانات شخصية في حمولات JSON تتطلب أساسًا قانونيًّا بموجب المادة ٦ من GDPR.',
@@ -1348,6 +1389,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'الأخطاء الشائعة في التحكم في المخرجات',
           mistakes: [
             {
@@ -1389,6 +1431,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         howToStart: {
+          id: 'how-to',
           title: 'كيفية التحكم في تنسيق مخرجات الذكاء الاصطناعي',
           numberedItems: [
             '**حدّد دائمًا تنسيق المخرجات المطلوب بشكل صريح في الموجّه.** بدلًا من "لخّص هذا"، قل: "لخّص كقائمة من ٥-٧ نقاط، كل منها من ١-٢ جملة. استخدم الصوت الفاعل. لا تُضمّن آراءً." كن محددًا بشأن البنية: نقاط أو جداول أو JSON أو markdown أو نص عادي.',
@@ -1425,6 +1468,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         sources: {
+          id: 'sources',
           title: 'المصادر والقراءات الإضافية',
           items: [
             '[OpenAI, 2025. "Structured Outputs Guide"](https://platform.openai.com/docs/guides/structured-outputs) — التوثيق الرسمي حول الفك المقيّد ووضع JSON الصارم وضمانات توافق المخطط',
@@ -1460,7 +1504,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: 'Qual é a compensação entre raciocínio e formato?', anchor: 'reasoning-tradeoff' },
         { label: 'Como os principais modelos se comparam no controle de formato?', anchor: 'model-comparison' },
         { label: 'Em que as stop sequences diferem das restrições negativas?', anchor: 'stop-sequences' },
-        { label: 'Que formato de saída usar em produção?', anchor: 'production-format' },
         { label: 'Quais são as considerações globais e regionais?', anchor: 'global-regional' },
         { label: 'Pontos-chave', anchor: 'key-takeaways' },
         { label: 'Como controlar o formato de saída da IA (passo a passo)', anchor: 'how-to' },
@@ -1537,6 +1580,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       sections: {
         definition: {
+          id: 'three-levels',
           title: 'Quais são os três níveis de controle de saída?',
           content: [
             'O controle de saída opera em três níveis distintos — baseado em prompt, baseado em schema e constrained decoding — cada um oferecendo garantias de formato progressivamente mais fortes com compensações progressivamente maiores em relação à qualidade de raciocínio.',
@@ -1553,6 +1597,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           tableFormat: true,
         },
         promptStructure: {
+          id: 'prompt-engineering',
           title: 'Como você controla o formato de saída por prompt engineering?',
           content: [
             'Instruções explícitas de schema de saída — colocadas no início do prompt do sistema para Claude Opus 4.8 e imediatamente antes do conteúdo do usuário para GPT-5.5 — produzem taxas de conformidade de saída estruturada de 85–95% sem a penalidade de qualidade de raciocínio do constrained decoding nativo.',
@@ -1564,6 +1609,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           blockquote: 'Analyse this customer review and tell me the sentiment, key issues, and urgency.',
         },
         goodPrompt: {
+          id: 'good-prompt',
           title: 'Como é um bom prompt de saída estruturada (Claude Opus 4.8)?',
           content: ['**Bom prompt — Claude Opus 4.8**'],
           blockquote: '<output_format>\nReturn only this JSON object, no prose:\n{\n  "sentiment": "positive" | "neutral" | "negative",\n  "key_issues": ["string"],  // max 3 items\n  "urgency": "low" | "medium" | "high",\n  "confidence": 0.0–1.0\n}\n</output_format>\n\n<task>Analyse the following customer review.</task>\n\n<review>[REVIEW TEXT HERE]</review>',
@@ -1579,6 +1625,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           blockquote: 'Analyse the following customer review.\n\nFormat rules:\n1. Return valid JSON only. No markdown fences. No explanation.\n2. Fields: "sentiment" (string: "positive"|"neutral"|"negative"), "key_issues" (array of strings, max 3), "urgency" (string: "low"|"medium"|"high"), "confidence" (float: 0.0–1.0)\n3. If no issues found, return empty array for key_issues.\n\n<REVIEW TEXT HERE>',
         },
         modelRules: {
+          id: 'model-rules',
           title: 'Quais regras de formato de saída se aplicam a cada modelo?',
           content: ['Cada LLM principal tem preferências estruturais distintas para a conformidade do formato de saída:'],
           items: [
@@ -1589,6 +1636,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         parameters: {
+          id: 'sampling-parameters',
           title: 'Quais parâmetros de amostragem controlam a geração de saída?',
           content: [
             'Temperature (T), Top-P, Top-K, max_tokens, frequency_penalty e presence_penalty são seis parâmetros independentes que determinam conjuntamente o comprimento, a aleatoriedade e a repetição da saída.',
@@ -1611,6 +1659,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         reasoningTradeoff: {
+          id: 'reasoning-tradeoff',
           title: 'Qual é a compensação entre qualidade de raciocínio e garantias de formato de saída?',
           content: [
             'Forçar JSON por constrained decoding reduz a precisão do modelo em 2,26 pontos percentuais em benchmarks de function calling — o parsing alinhado com schema do BAML alcançou 93,63% de precisão no BFCL vs. 91,37% para o constrained decoding estrito da OpenAI no mesmo benchmark.',
@@ -1618,12 +1667,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         promptquorumTest: {
+          id: 'model-comparison',
           title: 'Como os principais modelos se comparam no controle de formato de saída?',
           content: [
             'Testado no [PromptQuorum](https://www.promptquorum.com/) — 30 prompts de controle de saída despachados a três modelos: Claude Opus 4.8 alcançou 93% de conformidade JSON usando instruções de formato com tags XML sem constrained decoding. GPT-5.5 alcançou 89% de conformidade usando regras de formato numeradas. Gemini 3.1 Pro alcançou 91% de conformidade com o schema indicado tanto no início quanto no final.',
           ],
         },
         stopSequences: {
+          id: 'stop-sequences',
           title: 'Em que as stop sequences diferem das restrições negativas?',
           content: [
             'As stop sequences — tokens que encerram imediatamente a saída do modelo ao serem gerados — são o mecanismo de controle de saída mais determinístico.',
@@ -1658,6 +1709,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           tableFormat: true,
         },
         globalContext: {
+          id: 'global-regional',
           title: 'Quais são as considerações globais e regionais para o controle de saída?',
           content: [
             'Empresas europeias que constroem pipelines LLM que processam dados pessoais devem aplicar o Artigo 25 do RGPD (privacidade por design) ao design do schema de saída.',
@@ -1679,6 +1731,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Erros comuns com controle de saída',
           mistakes: [
             {
@@ -1721,6 +1774,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         howToStart: {
+          id: 'how-to',
           title: 'Como controlar o formato de saída da IA',
           numberedItems: [
             '**Sempre especifique o formato de saída desejado explicitamente no prompt.** Em vez de "resuma isso", diga: "Resuma como uma lista de 5–7 marcadores, cada um de 1–2 frases. Use voz ativa. Não inclua opiniões." Seja específico sobre a estrutura.',
@@ -1757,6 +1811,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         sources: {
+          id: 'sources',
           title: 'Fontes e leituras adicionais',
           items: [
             '[OpenAI, 2025. "Structured Outputs Guide"](https://platform.openai.com/docs/guides/structured-outputs) — documentação oficial sobre constrained decoding, modo JSON estrito e garantias de conformidade de schema',
@@ -1795,7 +1850,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: 'Quel est le compromis entre raisonnement et format ?', anchor: 'reasoning-tradeoff' },
         { label: 'Comment les meilleurs modèles se comparent-ils ?', anchor: 'model-comparison' },
         { label: 'Comment stop sequences et contraintes négatives diffèrent-ils ?', anchor: 'stop-sequences' },
-        { label: 'Quel format de sortie utiliser en production ?', anchor: 'production-format' },
         { label: 'Considérations mondiales et régionales', anchor: 'global-regional' },
         { label: 'Points clés', anchor: 'key-takeaways' },
         { label: 'Contrôler le format des sorties IA (étape par étape)', anchor: 'how-to' },
@@ -1880,6 +1934,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
 
         definition: {
+          id: 'three-levels',
           title: 'Quels sont les trois niveaux de contrôle des sorties ?',
           content: [
             'Le contrôle des sorties opère à trois niveaux distincts — par prompt, par schéma et decoding contraint — chacun offrant des garanties de format progressivement plus fortes, au prix de compromis progressivement plus élevés sur la qualité du raisonnement.',
@@ -1898,6 +1953,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         promptStructure: {
+          id: 'prompt-engineering',
           title: 'Comment contrôler le format des sorties via le prompt engineering ?',
           content: [
             'Des instructions de schéma de sortie explicites — placées au début du prompt système pour Claude Opus 4.8 et immédiatement avant le contenu utilisateur pour GPT-5.5 — produisent des taux de conformité de 85–95 % sans la pénalité de qualité du decoding contraint natif.',
@@ -1911,6 +1967,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         goodPrompt: {
+          id: 'good-prompt',
           title: 'À quoi ressemble un bon prompt de sortie structurée (Claude Opus 4.8) ?',
           content: ['**Bon prompt — Claude Opus 4.8**'],
           blockquote: '<output_format>\nReturn only this JSON object, no prose:\n{\n  "sentiment": "positive" | "neutral" | "negative",\n  "key_issues": ["string"],  // max 3 items\n  "urgency": "low" | "medium" | "high",\n  "confidence": 0.0–1.0\n}\n</output_format>\n\n<task>Analyse the following customer review.</task>\n\n<review>[REVIEW TEXT HERE]</review>',
@@ -1929,6 +1986,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         modelRules: {
+          id: 'model-rules',
           title: 'Quelles règles de format de sortie s\'appliquent à chaque modèle ?',
           content: ['Chaque grand LLM a des préférences structurelles distinctes pour la conformité au format de sortie :'],
           items: [
@@ -1940,6 +1998,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         parameters: {
+          id: 'sampling-parameters',
           title: 'Quels paramètres d\'échantillonnage contrôlent la génération de sorties ?',
           content: [
             'Temperature (T), Top-P, Top-K, max_tokens, frequency_penalty et presence_penalty sont six paramètres indépendants qui déterminent conjointement la longueur, l\'aléatoire et la répétition des sorties — et doivent être définis de façon cohérente, sans contradiction.',
@@ -1966,6 +2025,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         reasoningTradeoff: {
+          id: 'reasoning-tradeoff',
           title: 'Quel est le compromis entre qualité de raisonnement et garanties de format ?',
           content: [
             'Forcer JSON via le decoding contraint réduit la précision du modèle de 2,26 points de pourcentage sur les benchmarks de function calling — le parsing libre aligné sur le schéma de BAML a atteint 93,63 % de précision sur BFCL contre 91,37 % pour le decoding contraint strict d\'OpenAI sur le même benchmark.',
@@ -1976,6 +2036,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         promptquorumTest: {
+          id: 'model-comparison',
           title: 'Comment les meilleurs modèles se comparent-ils sur le contrôle des sorties ?',
           content: [
             'Testé dans [PromptQuorum](https://www.promptquorum.com/) — 30 prompts de contrôle des sorties répartis sur trois modèles : Claude Opus 4.8 a atteint 93 % de conformité JSON avec des instructions de format balisées XML sans decoding contraint. GPT-5.5 a atteint 89 % de conformité avec des règles de format numérotées. Gemini 3.1 Pro a atteint 91 % de conformité avec le schéma précisé en début et fin. Les trois modèles ont produit des raisonnements plus courts et moins complets quand `strict: true` était activé — cohérent avec la perte de 2,26 points observée sur le benchmark BFCL.',
@@ -1983,6 +2044,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         stopSequences: {
+          id: 'stop-sequences',
           title: 'Comment stop sequences et contraintes négatives diffèrent-ils ?',
           content: [
             'Les stop sequences — tokens qui arrêtent immédiatement la génération du modèle — sont le mécanisme de contrôle le plus déterministe : le modèle s\'arrête dès que la chaîne spécifiée apparaît, quel que soit le contexte restant.',
@@ -2021,6 +2083,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         globalContext: {
+          id: 'global-regional',
           title: 'Considérations mondiales et régionales pour le contrôle des sorties',
           content: [
             'Les entreprises européennes construisant des pipelines LLM traitant des données personnelles doivent appliquer l\'article 25 du RGPD (protection des données dès la conception) à la conception du schéma de sortie — les sorties exposant des champs de données personnelles dans des charges JSON nécessitent une base légale au titre de l\'article 6 du RGPD. La CNIL a publié en janvier 2026 des orientations selon lesquelles les sorties de décision automatisée — y compris les sorties LLM structurées utilisées dans des workflows de scoring ou d\'éligibilité — peuvent déclencher des droits à l\'examen humain au titre de l\'article 22 du RGPD.',
@@ -2044,6 +2107,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Erreurs courantes avec le contrôle des sorties',
           mistakes: [
             {
@@ -2088,6 +2152,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         howToStart: {
+          id: 'how-to',
           title: 'Contrôler le format des sorties IA',
           numberedItems: [
             '**Toujours spécifier explicitement le format de sortie souhaité dans le prompt.** Au lieu de "résumez ceci", dites : "Résumez sous forme de liste à puces de 5–7 éléments, 1–2 phrases chacun. Voix active. Pas d\'opinions." Soyez précis sur la structure : puces, tableaux, JSON, markdown, texte brut.',
@@ -2126,6 +2191,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         sources: {
+          id: 'sources',
           title: 'Sources et lectures complémentaires',
           items: [
             '[OpenAI, 2025. "Structured Outputs Guide"](https://platform.openai.com/docs/guides/structured-outputs) — documentation officielle sur le decoding contraint, le mode JSON strict et les garanties de conformité au schéma',
@@ -2165,7 +2231,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: '推論品質とフォーマット保証のトレードオフとは？', anchor: 'reasoning-tradeoff' },
         { label: 'トップモデルの出力制御比較', anchor: 'model-comparison' },
         { label: 'ストップシーケンスとネガティブ制約の違いとは？', anchor: 'stop-sequences' },
-        { label: '本番環境に適した出力形式とは？', anchor: 'production-format' },
         { label: 'グローバル・地域別の考慮事項', anchor: 'global-regional' },
         { label: '重要ポイント', anchor: 'key-takeaways' },
         { label: 'AI出力形式の制御方法（ステップバイステップ）', anchor: 'how-to' },
@@ -2250,6 +2315,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
 
         definition: {
+          id: 'three-levels',
           title: '出力制御の3つのレベルとは？',
           content: [
             '出力制御はプロンプトベース、スキーマベース、制約デコードの3つの異なるレベルで機能します。各レベルは推論品質とのトレードオフを高めながら、段階的に強固なフォーマット保証を提供します。',
@@ -2268,6 +2334,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         promptStructure: {
+          id: 'prompt-engineering',
           title: 'プロンプトエンジニアリングで出力形式を制御するには？',
           content: [
             '明示的な出力スキーマ指示 — Claude Opus 4.8ではシステムプロンプトの冒頭、GPT-5.5ではユーザーコンテンツの直前に配置 — を使用すると、ネイティブ制約デコードの推論品質ペナルティなしに85〜95%の構造化出力コンプライアンス率を達成できます。',
@@ -2281,6 +2348,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         goodPrompt: {
+          id: 'good-prompt',
           title: '優れた構造化出力プロンプトとは（Claude Opus 4.8）？',
           content: ['**良いプロンプト — Claude Opus 4.8**'],
           blockquote: '<output_format>\nReturn only this JSON object, no prose:\n{\n  "sentiment": "positive" | "neutral" | "negative",\n  "key_issues": ["string"],  // max 3 items\n  "urgency": "low" | "medium" | "high",\n  "confidence": 0.0–1.0\n}\n</output_format>\n\n<task>Analyse the following customer review.</task>\n\n<review>[REVIEW TEXT HERE]</review>',
@@ -2299,6 +2367,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         modelRules: {
+          id: 'model-rules',
           title: '各モデルに適用される出力形式ルールとは？',
           content: ['主要LLMはそれぞれ、出力フォーマット準拠に固有の構造的優先事項があります：'],
           items: [
@@ -2310,6 +2379,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         parameters: {
+          id: 'sampling-parameters',
           title: '出力生成を制御するサンプリングパラメータとは？',
           content: [
             'Temperature (T)、Top-P、Top-K、max_tokens、frequency_penalty、presence_penaltyの6つの独立したパラメータが、出力の長さ、ランダム性、繰り返しを共同で決定します。矛盾なく一貫して設定する必要があります。',
@@ -2336,6 +2406,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         reasoningTradeoff: {
+          id: 'reasoning-tradeoff',
           title: '推論品質とフォーマット保証のトレードオフとは？',
           content: [
             '制約デコードによるJSONの強制は、Function Callingベンチマークでモデルの精度を2.26ポイント低下させます — BAMLのスキーマ整合解析はBFCLで93.63%の精度を達成した一方、OpenAIの厳密な制約デコードは同じベンチマークで91.37%にとどまりました。',
@@ -2346,6 +2417,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         promptquorumTest: {
+          id: 'model-comparison',
           title: 'トップモデルの出力制御比較',
           content: [
             '[PromptQuorum](https://www.promptquorum.com/)でテスト済み — 30件の出力制御プロンプトを3モデルに分散：Claude Opus 4.8は制約デコードなしのXMLタグ付きフォーマット指示で93%のJSON準拠を達成。GPT-5.5は番号付きフォーマットルールで89%の準拠を達成。Gemini 3.1 Proはスキーマを冒頭と末尾の両方に指定すると91%の準拠を達成。`strict: true`の制約デコードが有効な場合、3モデルすべてがより短く完全性の低い推論を生成しました — BFCLベンチマークで観察された2.26ポイントの精度低下と一致します。',
@@ -2353,6 +2425,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         stopSequences: {
+          id: 'stop-sequences',
           title: 'ストップシーケンスとネガティブ制約の違いとは？',
           content: [
             'ストップシーケンス — 生成時にモデル出力を即座に終了させるトークン — は最も決定論的な出力制御メカニズムです：モデルは指定された文字列が出現した瞬間に停止し、残りのコンテキストに関係なく機能します。',
@@ -2391,6 +2464,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         globalContext: {
+          id: 'global-regional',
           title: 'グローバル・地域別の考慮事項',
           content: [
             '日本企業がLLMパイプラインを構築する際、経済産業省（METI）の「AI原則実践のためのガバナンス・ガイドライン（2024年版）」に準拠することが推奨されます。個人情報を処理するLLMパイプラインには、JSONスキーマ設計に個人情報保護法（APPI）のデータ最小化原則を適用する必要があります。on-premise推論とvLLMベースの制約デコード（Mistral Largeなど）は、データがローカルインフラ内に留まるため、APPI準拠に適しています。METIガイドラインは特に、医療・金融・法律分野での高リスクAI出力に対してStep-by-Stepの透明性確保を推奨しています。',
@@ -2414,6 +2488,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'よくあるミス',
           mistakes: [
             {
@@ -2458,6 +2533,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         howToStart: {
+          id: 'how-to',
           title: 'AI出力形式の制御方法',
           numberedItems: [
             '**出力形式を常にプロンプトで明示的に指定してください。**「これを要約してください」の代わりに「5〜7項目の箇条書きリストで要約してください。各項目は1〜2文。能動態を使用。意見を含めないこと。」構造を具体的に記述してください：箇条書き、表、JSON、Markdown、プレーンテキストなど。',
@@ -2496,6 +2572,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         sources: {
+          id: 'sources',
           title: 'ソースと参考資料',
           items: [
             '[OpenAI, 2025. "Structured Outputs Guide"](https://platform.openai.com/docs/guides/structured-outputs) — 制約デコード、厳密JSONモード、スキーマ準拠保証に関する公式ドキュメント',
@@ -2535,7 +2612,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: '推理质量与格式保证之间的权衡是什么？', anchor: 'reasoning-tradeoff' },
         { label: '顶级模型在输出控制上的表现如何？', anchor: 'model-comparison' },
         { label: '停止序列与负向约束有何区别？', anchor: 'stop-sequences' },
-        { label: '生产流水线应使用哪种输出格式？', anchor: 'production-format' },
         { label: '全球与区域性考量', anchor: 'global-regional' },
         { label: '核心要点', anchor: 'key-takeaways' },
         { label: '如何控制AI输出格式（分步指南）', anchor: 'how-to' },
@@ -2620,6 +2696,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
 
         definition: {
+          id: 'three-levels',
           title: '输出控制的三个级别是什么？',
           content: [
             '输出控制在三个不同级别上运作——基于Prompt、基于Schema和受限解码——每个级别在对推理质量的权衡逐步增加的同时，提供逐步更强的格式保证。',
@@ -2638,6 +2715,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         promptStructure: {
+          id: 'prompt-engineering',
           title: '如何通过Prompt Engineering控制输出格式？',
           content: [
             '明确的输出Schema指令——对Claude Opus 4.8放在系统Prompt开头，对GPT-5.5放在用户内容之前——在不产生原生受限解码推理质量损失的情况下，可实现85%至95%的结构化输出合规率。',
@@ -2651,6 +2729,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         goodPrompt: {
+          id: 'good-prompt',
           title: '好的结构化输出Prompt是什么样的（Claude Opus 4.8）？',
           content: ['**良好Prompt——Claude Opus 4.8**'],
           blockquote: '<output_format>\nReturn only this JSON object, no prose:\n{\n  "sentiment": "positive" | "neutral" | "negative",\n  "key_issues": ["string"],  // max 3 items\n  "urgency": "low" | "medium" | "high",\n  "confidence": 0.0–1.0\n}\n</output_format>\n\n<task>Analyse the following customer review.</task>\n\n<review>[REVIEW TEXT HERE]</review>',
@@ -2669,6 +2748,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         modelRules: {
+          id: 'model-rules',
           title: '各模型适用哪些输出格式规则？',
           content: ['各主要LLM对输出格式合规有不同的结构偏好：'],
           items: [
@@ -2680,6 +2760,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         parameters: {
+          id: 'sampling-parameters',
           title: '哪些采样参数控制输出生成？',
           content: [
             'Temperature（T）、Top-P、Top-K、max_tokens、frequency_penalty和presence_penalty是六个独立参数，共同决定输出长度、随机性和重复性——必须一致设置，不能相互冲突。',
@@ -2706,6 +2787,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         reasoningTradeoff: {
+          id: 'reasoning-tradeoff',
           title: '推理质量与输出格式保证之间的权衡是什么？',
           content: [
             '通过受限解码强制JSON输出会在函数调用基准测试上降低2.26个百分点的模型准确率——BAML的Schema对齐解析在BFCL上达到93.63%准确率，而OpenAI的严格受限解码在同一基准上仅为91.37%。',
@@ -2716,6 +2798,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         promptquorumTest: {
+          id: 'model-comparison',
           title: '顶级模型在输出控制上的表现如何？',
           content: [
             '在[PromptQuorum](https://www.promptquorum.com/)中测试——30个输出控制Prompt分发到三个模型：Claude Opus 4.8使用XML标签格式指令（不启用受限解码）达到93% JSON合规率。GPT-5.5使用编号格式规则达到89%合规率。Gemini 3.1 Pro在开头和结尾均说明Schema的情况下达到91%合规率。启用`strict: true`受限解码后，三个模型的推理更短、更不完整——与BFCL基准上观察到的2.26百分点准确率下降一致。',
@@ -2723,6 +2806,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         stopSequences: {
+          id: 'stop-sequences',
           title: '停止序列与负向约束有何区别？',
           content: [
             '停止序列——在生成时立即终止模型输出的词元——是最确定性的输出控制机制：模型在指定字符串出现的瞬间停止，无论剩余上下文如何。',
@@ -2761,6 +2845,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         globalContext: {
+          id: 'global-regional',
           title: '中国与亚太地区的部署考量',
           content: [
             '**中国（数据安全法与PIPL）：** 依据2021年《数据安全法》和《个人信息保护法》（PIPL），处理中国境内用户数据的LLM流水线必须将数据保留在境内——所有含个人信息的JSON输出均受PIPL第三章约束，不得未经明确同意跨境传输。Qwen 3（阿里巴巴）和DeepSeek V3（DeepSeek AI）支持JSON模式，可在阿里云、腾讯云或华为云上本地部署，完全满足数据驻留要求。金融和医疗领域的企业应将受限解码与本地推理结合，确保结构化输出不经过境外API端点。',
@@ -2784,6 +2869,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         commonMistakes: {
+          id: 'common-mistakes',
           title: '常见错误',
           mistakes: [
             {
@@ -2828,6 +2914,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         howToStart: {
+          id: 'how-to',
           title: '如何控制AI输出格式（分步指南）',
           numberedItems: [
             '**在Prompt中始终明确说明所需输出格式。** 不要说"总结这个"，而要说："以5–7条项目的列表总结，每条1–2句话，使用主动语态，不包含个人观点。"明确说明结构：项目符号、表格、JSON、Markdown还是纯文本。',
@@ -2866,6 +2953,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         sources: {
+          id: 'sources',
           title: '参考资料',
           items: [
             '[OpenAI, 2025. "Structured Outputs Guide"](https://platform.openai.com/docs/guides/structured-outputs) — 受限解码、严格JSON模式和Schema合规保证的官方文档',
@@ -2905,7 +2993,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: '추론과 형식 간의 트레이드오프는?', anchor: 'reasoning-tradeoff' },
         { label: '주요 모델들의 출력 형식 제어 비교', anchor: 'model-comparison' },
         { label: '중지 시퀀스와 부정 제약의 차이점은?', anchor: 'stop-sequences' },
-        { label: '프로덕션에 사용할 출력 형식은?', anchor: 'production-format' },
         { label: '글로벌 및 지역별 고려 사항은?', anchor: 'global-regional' },
         { label: '핵심 요점', anchor: 'key-takeaways' },
         { label: 'AI 출력 형식 제어 방법 (단계별)', anchor: 'how-to' },
@@ -2983,6 +3070,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       sections: {
 
         definition: {
+          id: 'three-levels',
           title: '출력 제어의 세 가지 수준이란?',
           content: [
             '출력 제어는 프롬프트 기반, 스키마 기반, 제약 디코딩의 세 가지 서로 다른 수준에서 작동합니다. 각 수준은 추론 품질에 대한 트레이드오프가 점진적으로 높아지는 대신 점진적으로 강력한 형식 보장을 제공합니다.',
@@ -3001,6 +3089,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         promptStructure: {
+          id: 'prompt-engineering',
           title: '프롬프트 엔지니어링으로 출력 형식을 제어하는 방법은?',
           content: [
             '명시적인 출력 스키마 지시 — Claude Opus 4.8의 경우 시스템 프롬프트 시작 부분에, GPT-5.5의 경우 사용자 콘텐츠 바로 앞에 배치 — 를 사용하면 네이티브 제약 디코딩의 추론 품질 패널티 없이 85~95%의 구조화 출력 준수율을 달성할 수 있습니다.',
@@ -3014,6 +3103,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         goodPrompt: {
+          id: 'good-prompt',
           title: '우수한 구조화 출력 프롬프트란 (Claude Opus 4.8)?',
           content: ['**좋은 프롬프트 — Claude Opus 4.8**'],
           blockquote: '<output_format>\nReturn only this JSON object, no prose:\n{\n  "sentiment": "positive" | "neutral" | "negative",\n  "key_issues": ["string"],  // max 3 items\n  "urgency": "low" | "medium" | "high",\n  "confidence": 0.0–1.0\n}\n</output_format>\n\n<task>Analyse the following customer review.</task>\n\n<review>[REVIEW TEXT HERE]</review>',
@@ -3032,6 +3122,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         modelRules: {
+          id: 'model-rules',
           title: '각 모델에 적용되는 출력 형식 규칙은?',
           content: ['주요 LLM은 각각 출력 형식 준수에 대해 서로 다른 구조적 선호도를 갖고 있습니다:'],
           items: [
@@ -3043,6 +3134,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         parameters: {
+          id: 'sampling-parameters',
           title: '출력 생성을 제어하는 샘플링 파라미터는?',
           content: [
             'Temperature(T), Top-P, Top-K, max_tokens, frequency_penalty, presence_penalty는 출력 길이, 무작위성, 반복을 공동으로 결정하는 6개의 독립적인 파라미터이며, 충돌 없이 일관되게 설정해야 합니다.',
@@ -3069,6 +3161,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         reasoningTradeoff: {
+          id: 'reasoning-tradeoff',
           title: '추론 품질과 출력 형식 보장 간의 트레이드오프는?',
           content: [
             '제약 디코딩으로 JSON을 강제하면 함수 호출 벤치마크에서 모델 정확도가 2.26포인트 감소합니다. BAML의 스키마 정렬 파싱은 BFCL에서 93.63%의 정확도를 달성한 반면, 동일한 벤치마크에서 OpenAI의 엄격한 제약 디코딩은 91.37%에 그쳤습니다.',
@@ -3079,6 +3172,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         promptquorumTest: {
+          id: 'model-comparison',
           title: '주요 모델들의 출력 형식 제어 비교',
           content: [
             '[PromptQuorum](https://www.promptquorum.com/)에서 테스트되었습니다. 3개 모델에 30개의 출력 제어 프롬프트를 전송하였습니다. Claude Opus 4.8은 제약 디코딩 없이 XML 태그 형식 지시를 사용하여 93%의 JSON 준수율을 달성하였습니다. GPT-5.5는 번호가 매겨진 형식 규칙으로 89% 준수율을 달성하였습니다. Gemini 3.1 Pro는 스키마를 시작과 끝 모두에 명시했을 때 91% 준수율을 달성하였습니다. `strict: true` 제약 디코딩이 활성화되었을 때 세 모델 모두 더 짧고 덜 완성된 추론을 생성하였습니다. 이는 BFCL 벤치마크에서 관찰된 2.26포인트 정확도 저하와 일치합니다.',
@@ -3086,6 +3180,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         stopSequences: {
+          id: 'stop-sequences',
           title: '중지 시퀀스와 부정 제약은 어떻게 다릅니까?',
           content: [
             '중지 시퀀스 — 생성 시 즉시 모델 출력을 종료하는 토큰 — 는 가장 결정론적인 출력 제어 메커니즘입니다. 모델은 지정된 문자열이 나타나는 순간 나머지 컨텍스트에 관계없이 중단합니다.',
@@ -3124,6 +3219,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         globalContext: {
+          id: 'global-regional',
           title: '출력 제어에 대한 글로벌 및 지역별 고려 사항은?',
           content: [
             '개인 데이터를 처리하는 LLM 파이프라인을 구축하는 유럽 기업들은 출력 스키마 설계에 GDPR 제25조(프라이버시 바이 디자인)를 적용해야 합니다. JSON 페이로드에서 개인 데이터 필드를 노출하는 출력은 GDPR 제6조에 따른 법적 근거가 필요합니다. 프랑스의 데이터 보호 기관인 CNIL은 2026년 1월, 점수 산정 또는 자격 워크플로우에 사용되는 구조화된 LLM 출력을 포함한 자동화된 의사 결정 출력이 GDPR 제22조에 따른 사람의 검토 권리를 촉발할 수 있다는 지침을 발표하였습니다.',
@@ -3147,6 +3243,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         commonMistakes: {
+          id: 'common-mistakes',
           title: '출력 제어의 흔한 실수',
           mistakes: [
             {
@@ -3191,6 +3288,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         howToStart: {
+          id: 'how-to',
           title: 'AI 출력 형식 제어 방법',
           numberedItems: [
             '**항상 프롬프트에서 원하는 출력 형식을 명시적으로 지정하십시오.** "이것을 요약하십시오" 대신 "5~7개 항목의 글머리 기호 목록으로 요약하십시오. 각 항목은 1~2문장으로 작성하고, 능동태를 사용하며, 의견을 포함하지 마십시오."라고 말하십시오. 글머리 기호, 표, JSON, 마크다운, 일반 텍스트 등 구조를 구체적으로 기술하십시오.',
@@ -3229,6 +3327,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         sources: {
+          id: 'sources',
           title: '출처 및 추가 자료',
           items: [
             '[OpenAI, 2025. "Structured Outputs Guide"](https://platform.openai.com/docs/guides/structured-outputs) — 제약 디코딩, 엄격한 JSON 모드, 스키마 준수 보장에 관한 공식 문서',

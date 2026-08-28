@@ -168,7 +168,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Brasil: sin marco dedicado', anchor: '#brazil' },
       { label: 'Comparación lado a lado', anchor: '#comparison' },
       { label: 'Preguntas frecuentes', anchor: '#faq' },
-      { label: 'Lecturas relacionadas', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -280,7 +279,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Brasil: sem marco dedicado', anchor: '#brazil' },
       { label: 'Comparação lado a lado', anchor: '#comparison' },
       { label: 'Perguntas frequentes', anchor: '#faq' },
-      { label: 'Leituras relacionadas', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -392,7 +390,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'البرازيل: لا يوجد إطار مخصص', anchor: '#brazil' },
       { label: 'مقارنة جنبًا إلى جنب', anchor: '#comparison' },
       { label: 'الأسئلة الشائعة', anchor: '#faq' },
-      { label: 'قراءات ذات صلة', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -504,7 +501,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'ブラジル：専用の枠組みなし', anchor: '#brazil' },
       { label: '比較表', anchor: '#comparison' },
       { label: 'よくある質問', anchor: '#faq' },
-      { label: '関連記事', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -616,7 +612,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '巴西：没有专门框架', anchor: '#brazil' },
       { label: '对比一览', anchor: '#comparison' },
       { label: '常见问题', anchor: '#faq' },
-      { label: '相关阅读', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -728,7 +723,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Brésil : aucun cadre dédié', anchor: '#brazil' },
       { label: 'Comparaison côte à côte', anchor: '#comparison' },
       { label: 'Foire aux questions', anchor: '#faq' },
-      { label: 'Lectures complémentaires', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -840,7 +834,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Brasilien: kein dedizierter Rahmen', anchor: '#brazil' },
       { label: 'Direkter Vergleich', anchor: '#comparison' },
       { label: 'Häufige Fragen', anchor: '#faq' },
-      { label: 'Weiterführende Artikel', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {
@@ -952,7 +945,6 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '브라질: 전용 체계 없음', anchor: '#brazil' },
       { label: '나란히 비교', anchor: '#comparison' },
       { label: '자주 묻는 질문', anchor: '#faq' },
-      { label: '관련 읽을거리', anchor: '#related-reading' },
     ],
     sections: {
       tldr: {

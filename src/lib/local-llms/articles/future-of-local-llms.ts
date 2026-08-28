@@ -886,9 +886,7 @@ schema: {
         { label: 'Tendências em resumo', anchor: '#trends-summary' },
         { label: 'Os modelos 1–3B alcançam a qualidade dos 7B?', anchor: '#smaller-models' },
         { label: 'Os smartphones executam LLMs locais hoje?', anchor: '#on-device' },
-        { label: 'Como as ferramentas de fine-tuning estão melhorando?', anchor: '#finetuning-tools' },
         { label: 'Previsões de adoção empresarial', anchor: '#enterprise-adoption' },
-        { label: 'Erros comuns ao planejar para 2027', anchor: '#common-mistakes' },
         { label: 'Perguntas frequentes', anchor: '#faq' },
       ],
       sections: {

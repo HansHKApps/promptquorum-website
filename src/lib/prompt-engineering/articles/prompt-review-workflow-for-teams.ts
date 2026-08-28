@@ -486,6 +486,7 @@ require_code_owner_reviews: true`,
     ],
     sections: {
       tldr: {
+        id: 'tldr',
         title: 'Zusammenfassung',
         isTldr: true,
         content: [
@@ -797,6 +798,7 @@ require_code_owner_reviews: true`,
       },
 
       sources: {
+        id: 'sources',
         title: 'Quellen',
         items: [
           '[GitHub Best Practices for Code Review](https://github.blog/developer-skills/code-review/code-review-best-practices/) — Peer-Review-Prinzipien, anwendbar auf Prompt-Review-Workflows',
@@ -893,6 +895,7 @@ require_code_owner_reviews: true`,
     ],
     sections: {
       tldr: {
+        id: 'tldr',
         title: 'Puntos clave',
         isTldr: true,
         content: [
@@ -1194,6 +1197,7 @@ require_code_owner_reviews: true`,
       },
 
       sources: {
+        id: 'sources',
         title: 'Fuentes',
         items: [
           '[GitHub Best Practices for Code Review](https://github.blog/developer-skills/code-review/code-review-best-practices/) — Principios de revisión por pares aplicables a flujos de revisión de prompts',
@@ -1290,6 +1294,7 @@ require_code_owner_reviews: true`,
     ],
     sections: {
       tldr: {
+        id: 'tldr',
         title: 'النقاط الرئيسية',
         isTldr: true,
         content: [
@@ -1591,6 +1596,7 @@ require_code_owner_reviews: true`,
       },
 
       sources: {
+        id: 'sources',
         title: 'المصادر',
         items: [
           '[GitHub Best Practices for Code Review](https://github.blog/developer-skills/code-review/code-review-best-practices/) — مبادئ المراجعة بين الأقران قابلة للتطبيق على سير عمل مراجعة التعليمات',
@@ -1685,6 +1691,7 @@ require_code_owner_reviews: true`,
     ],
     sections: {
       tldr: {
+        id: 'tldr',
         title: 'Pontos-chave',
         isTldr: true,
         content: [
@@ -1986,6 +1993,7 @@ require_code_owner_reviews: true`,
       },
 
       sources: {
+        id: 'sources',
         title: 'Fontes',
         items: [
           '[GitHub Best Practices for Code Review](https://github.blog/developer-skills/code-review/code-review-best-practices/) — Princípios de revisão por pares aplicáveis a fluxos de revisão de prompts',
@@ -2082,6 +2090,7 @@ require_code_owner_reviews: true`,
     ],
     sections: {
       tldr: {
+        id: 'tldr',
         title: 'Points clés',
         isTldr: true,
         content: [
@@ -2479,6 +2488,7 @@ require_code_owner_reviews: true`,
     ],
     sections: {
       tldr: {
+        id: 'tldr',
         title: '重要ポイント',
         isTldr: true,
         content: [
@@ -2779,6 +2789,7 @@ require_code_owner_reviews: true`,
       },
 
       sources: {
+        id: 'sources',
         title: 'ソース',
         items: [
           '[GitHub Best Practices for Code Review](https://github.blog/developer-skills/code-review/code-review-best-practices/) — プロンプトレビューワークフローに適用可能なピアレビューの原則',
@@ -2875,6 +2886,7 @@ require_code_owner_reviews: true`,
     ],
     sections: {
       tldr: {
+        id: 'tldr',
         title: '核心要点',
         isTldr: true,
         content: [
@@ -3185,6 +3197,7 @@ require_code_owner_reviews: true`,
     ],
     sections: {
       tldr: {
+        id: 'tldr',
         title: '핵심 요점',
         isTldr: true,
         content: [

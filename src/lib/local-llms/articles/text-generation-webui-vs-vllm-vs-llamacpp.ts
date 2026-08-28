@@ -537,6 +537,7 @@ schema: {
           imageCaption: 'Guía de decisión para motores de inferencia: llama.cpp para Mac/CPU o Ollama, vLLM para producción con GPU NVIDIA y 50+ usuarios concurrentes, Text-Generation-WebUI para ajuste fino LoRA e investigación.',
         },
         regionalContext: {
+          id: 'inference-engine-choice-by-region',
           title: 'Elección del motor de inferencia por región',
           content: [
             '**La elección del motor de inferencia tiene implicaciones directas para el cumplimiento normativo regional y los despliegues empresariales en distintas jurisdicciones regulatorias.**',
@@ -903,6 +904,7 @@ schema: {
           imageCaption: 'دليل قرار لمحركات الاستدلال: llama.cpp لـ Mac/CPU أو Ollama، وvLLM للإنتاج بـ GPU من NVIDIA و50+ مستخدمًا متزامنًا، وText-Generation-WebUI للضبط الدقيق LoRA والبحث.',
         },
         regionalContext: {
+          id: 'inference-engine-choice-by-region',
           title: 'اختيار محرك الاستدلال حسب المنطقة',
           content: [
             '**لاختيار محرك الاستدلال آثار مباشرة على الامتثال التنظيمي الإقليمي وعمليات النشر المؤسسية عبر ولايات قضائية تنظيمية مختلفة.**',
@@ -1127,13 +1129,6 @@ schema: {
       primaryTerm: 'motor de inferência',
       toc: [
         { label: 'Principais conclusões', anchor: '#key-takeaways' },
-        { label: 'O que é um motor de inferência?', anchor: '#what-is-inference-engine' },
-        { label: 'Tabela de comparação de recursos', anchor: '#feature-comparison' },
-        { label: 'vLLM em detalhes', anchor: '#vllm' },
-        { label: 'llama.cpp em detalhes', anchor: '#llamacpp' },
-        { label: 'Text-Generation-WebUI em detalhes', anchor: '#text-gen-webui' },
-        { label: 'Benchmarks de desempenho', anchor: '#performance' },
-        { label: 'Qual escolher', anchor: '#which-to-choose' },
         { label: 'Perguntas frequentes', anchor: '#faq' },
       ],
       sections: {
@@ -1487,7 +1482,7 @@ schema: {
         { label: 'Quand choisir chaque moteur ?', anchor: '#when-to-use-each' },
         { label: 'Choix du moteur d\'inférence par région', anchor: '#inference-engine-choice-by-region' },
         { label: 'Erreurs courantes', anchor: '#common-mistakes' },
-        { label: 'Questions fréquentes', anchor: '#common-questions' },
+        { label: 'Questions fréquentes', anchor: '#faq' },
         { label: 'Lectures connexes', anchor: '#related-reading' },
         { label: 'Sources', anchor: '#sources' },
       ],
@@ -1509,6 +1504,7 @@ schema: {
           ],
         },
         whatIsInferenceEngine: {
+          id: 'what-is-inference-engine',
           title: 'Qu\'est-ce qu\'un moteur d\'inférence ?',
           content: [
             '**Un moteur d\'inférence est le composant logiciel qui charge un fichier modèle pré-entraîné et exécute les opérations mathématiques nécessaires pour générer du texte.** Il diffère d\'une interface de chat (comme Open WebUI ou Enchanted UI) ou d\'une couche API (comme l\'API REST d\'Ollama).',
@@ -1520,6 +1516,7 @@ schema: {
           ],
         },
         featureComparison: {
+          id: 'feature-comparison',
           title: 'Comparaison des fonctionnalités : llama.cpp vs vLLM vs Text-Generation-WebUI',
           rows: [
             { 'Fonctionnalité': 'Type', 'llama.cpp': 'Bibliothèque C++ (léger)', 'vLLM': 'Framework Python (production)', 'Text-Gen-WebUI': 'App Python (expérimentation)' },
@@ -1538,6 +1535,7 @@ schema: {
           imageCaption: 'Comparaison des fonctionnalités : llama.cpp (bibliothèque C++, GGUF, CUDA + Metal) vs vLLM (framework Python, 100-1000+ tok/s GPU, NVIDIA uniquement) vs Text-Generation-WebUI (app Python, GGUF + safetensors, LoRA intégré).',
         },
         llamacpp: {
+          id: 'understanding-llama-cpp',
           title: 'Comprendre llama.cpp : La fondation',
           content: [
             '**llama.cpp est une implémentation C++ de l\'inférence LLM, écrite à l\'origine pour exécuter le modèle Llama de Meta sur du matériel grand public sans accélération GPU.** En août 2026, c\'est le moteur d\'inférence le plus léger et portable.',
@@ -1550,6 +1548,7 @@ schema: {
           ],
         },
         vllm: {
+          id: 'understanding-vllm',
           title: 'Comprendre vLLM : Le standard de production',
           content: [
             '**vLLM est un framework Python conçu pour l\'inférence haute capacité sur clusters GPU.** Il optimise le service de modèles via API, avec support du batching, de l\'inférence distribuée et de la planification avancée.',
@@ -1564,6 +1563,7 @@ schema: {
           codeLanguage: 'bash',
         },
         textGenerationWebUI: {
+          id: 'understanding-text-generation-webui',
           title: 'Comprendre Text-Generation-WebUI : L\'outil du chercheur',
           content: [
             '**Text-Generation-WebUI (aussi appelé oobabooga) est une application Python complète avec une interface web pour expérimenter avec les modèles.** Elle combine l\'inférence avec des outils intégrés pour l\'ajustement fin, l\'entraînement LoRA, la génération d\'embeddings et les tests d\'invites avancés.',
@@ -1577,6 +1577,7 @@ schema: {
           ],
         },
         performance: {
+          id: 'performance-tokens-per-second',
           title: 'Quelle est la vitesse de chaque moteur ? Comparaison des débits',
           content: [
             '**Le débit (tokens par seconde) dépend de la taille du modèle, du matériel et de l\'optimisation du moteur.** En août 2026, voici les benchmarks du monde réel sur du matériel grand public :',
@@ -1592,6 +1593,7 @@ schema: {
           imageCaption: 'Graphique de performance : llama.cpp et Text-Gen-WebUI atteignent ~150 tok/s sur RTX 4090. vLLM atteint 300 tok/s avec le batching, mais ~0.5 tok/s sur CPU -- non recommandé pour l\'inférence CPU uniquement.',
         },
         productionDeployments: {
+          id: 'production-deployments',
           title: 'Quel moteur pour les déploiements de production ?',
           content: [
             '**vLLM est le standard de production en août 2026.** La plupart des entreprises exécutant des APIs LLM locales en production utilisent vLLM en raison de son optimisation de débit et de son support du batching. Une seule instance vLLM peut servir 50+ utilisateurs simultanés sur un GPU, contre 1-2 pour llama.cpp.',
@@ -1603,6 +1605,7 @@ schema: {
           ],
         },
         whenToUse: {
+          id: 'when-to-use-each',
           title: 'Quand choisir chaque moteur ?',
           content: 'Utilisez ce cadre de décision :',
           items: [
@@ -1612,6 +1615,7 @@ schema: {
           ],
         },
         regionalContext: {
+          id: 'inference-engine-choice-by-region',
           title: 'Choix du moteur d\'inférence par région',
           content: [
             '**Le choix du moteur d\'inférence a des implications directes pour la conformité régionale et les déploiements en entreprise dans différentes juridictions réglementaires.**',
@@ -1623,6 +1627,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Erreurs courantes avec les moteurs d\'inférence',
           items: [
             '**Penser que vous devez choisir entre Ollama et ces moteurs.** Ollama utilise llama.cpp en interne. Vous ne choisissez pas Ollama vs vLLM ; vLLM est un *backend* alternatif à Ollama, pas une app de chat. Les deux ont leur utilité.',
@@ -1671,6 +1676,7 @@ schema: {
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: 'Lectures connexes',
           items: [
             '[Comment installer Ollama](/fr/local-llms/how-to-install-ollama) -- Configurez le wrapper llama.cpp le plus populaire.',
@@ -1839,7 +1845,7 @@ schema: {
         { label: '各エンジンを選ぶべき時', anchor: '#when-to-use-each' },
         { label: '地域別推論エンジンの選択', anchor: '#inference-engine-choice-by-region' },
         { label: 'よくある間違い', anchor: '#common-mistakes' },
-        { label: 'よくある質問', anchor: '#common-questions' },
+        { label: 'よくある質問', anchor: '#faq' },
         { label: '関連リソース', anchor: '#related-reading' },
         { label: 'ソース', anchor: '#sources' },
       ],
@@ -1861,6 +1867,7 @@ schema: {
           ],
         },
         whatIsInferenceEngine: {
+          id: 'what-is-inference-engine',
           title: '推論エンジンとは何か？',
           content: [
             '**推論エンジンは、事前学習済みモデルファイルをロードし、テキスト生成に必要な数学演算を実行するソフトウェアコンポーネントです。** チャットインターフェース（Open WebUI など）や API レイヤー（Ollama の REST API など）とは異なります。',
@@ -1872,6 +1879,7 @@ schema: {
           ],
         },
         featureComparison: {
+          id: 'feature-comparison',
           title: '機能比較：llama.cpp vs vLLM vs Text-Generation-WebUI',
           rows: [
             { '機能': 'タイプ', 'llama.cpp': 'C++ ライブラリ（軽量）', 'vLLM': 'Python フレームワーク（本番環境）', 'Text-Gen-WebUI': 'Python アプリ（実験）' },
@@ -1888,6 +1896,7 @@ schema: {
           columns: ['機能', 'llama.cpp', 'vLLM', 'Text-Gen-WebUI'],
         },
         llamacpp: {
+          id: 'understanding-llama-cpp',
           title: 'llama.cpp を理解する：基盤',
           content: [
             '**llama.cpp は LLM 推論の C++ 実装で、Meta の Llama モデルを GPU アクセラレーションなしでコンシューマーハードウェアで実行するために元々記述されました。**2026 年 8 月時点で、最も軽量でポータブルな推論エンジンです。',
@@ -1900,6 +1909,7 @@ schema: {
           ],
         },
         vllm: {
+          id: 'understanding-vllm',
           title: 'vLLM を理解する：本番環境標準',
           content: [
             '**vLLM は GPU クラスター上の高スループット推論用に設計された Python フレームワーク。** バッチ処理、分散推論、高度なスケジューリングのサポートで API 経由のモデル提供を最適化。',
@@ -1914,6 +1924,7 @@ schema: {
           codeLanguage: 'bash',
         },
         textGenerationWebUI: {
+          id: 'understanding-text-generation-webui',
           title: 'Text-Generation-WebUI を理解する：研究者のツール',
           content: [
             '**Text-Generation-WebUI（oobabooga とも呼ばれる）は、モデル実験用の Web インターフェース付き完全機能の Python アプリケーション。** ファインチューニング、LoRA トレーニング、埋め込み生成、高度なプロンプトテストの組込ツールと推論を組み合わせ。',
@@ -1927,6 +1938,7 @@ schema: {
           ],
         },
         performance: {
+          id: 'performance-tokens-per-second',
           title: 'パフォーマンス：各エンジンはどの程度高速か？',
           content: [
             '**スループット（1秒あたりのトークン）はモデルサイズ、ハードウェア、エンジン最適化に依存。** 2026 年 8 月時点で、コンシューマーハードウェア上の実世界ベンチマーク：',
@@ -1940,6 +1952,7 @@ schema: {
           columns: ['シナリオ', 'llama.cpp', 'vLLM', 'Text-Gen-WebUI'],
         },
         productionDeployments: {
+          id: 'production-deployments',
           title: '本番環境デプロイメント用のエンジン',
           content: [
             '**vLLM は 2026 年 8 月時点の本番環境標準。** ローカル LLM API を本番環境で実行する企業のほとんどが、スループット最適化とバッチ処理サポートのため vLLM を使用。単一 vLLM インスタンスは GPU 1 個あたり 50+ 同時ユーザーにサービス可能、llama.cpp の 1-2 に対し。',
@@ -1951,6 +1964,7 @@ schema: {
           ],
         },
         whenToUse: {
+          id: 'when-to-use-each',
           title: '各エンジンを選ぶべき時',
           content: 'この決定フレームワークを使用：',
           items: [
@@ -1960,6 +1974,7 @@ schema: {
           ],
         },
         regionalContext: {
+          id: 'inference-engine-choice-by-region',
           title: '地域別推論エンジン選択',
           content: [
             '**推論エンジンの選択は地域的コンプライアンスと異なる規制管轄区域全体の企業デプロイメントに直接的な含意。**',
@@ -1971,6 +1986,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'よくある間違い',
           items: [
             '**Ollama とこれらエンジン間の選択が必要と思う**。Ollama は内部的に llama.cpp を使用。Ollama vs vLLM を選択ではなく；vLLM は Ollama への代替*バックエンド*、チャットアプリではない。両者は異なる目的あり。',
@@ -2019,6 +2035,7 @@ schema: {
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: '関連リソース',
           items: [
             '[Ollama をインストール方法](/ja/local-llms/how-to-install-ollama) -- 最も人気のある llama.cpp ラッパーをセットアップ。',
@@ -2187,7 +2204,7 @@ schema: {
         { label: '何时选择各引擎', anchor: '#when-to-use-each' },
         { label: '按地区选择推理引擎', anchor: '#inference-engine-choice-by-region' },
         { label: '常见错误', anchor: '#common-mistakes' },
-        { label: '常见问题', anchor: '#common-questions' },
+        { label: '常见问题', anchor: '#faq' },
         { label: '相关阅读', anchor: '#related-reading' },
         { label: '来源', anchor: '#sources' },
       ],
@@ -2209,6 +2226,7 @@ schema: {
           ],
         },
         whatIsInferenceEngine: {
+          id: 'what-is-inference-engine',
           title: '什么是推理引擎？',
           content: [
             '**推理引擎是加载预训练模型文件并执行生成文本所需数学运算的软件组件。** 不同于聊天界面（如 Open WebUI）或 API 层（如 Ollama 的 REST API）。',
@@ -2220,6 +2238,7 @@ schema: {
           ],
         },
         featureComparison: {
+          id: 'feature-comparison',
           title: '功能对比：llama.cpp vs vLLM vs Text-Generation-WebUI',
           rows: [
             { '功能': '类型', 'llama.cpp': 'C++ 库（轻量级）', 'vLLM': 'Python 框架（生产）', 'Text-Gen-WebUI': 'Python 应用（实验）' },
@@ -2236,6 +2255,7 @@ schema: {
           columns: ['功能', 'llama.cpp', 'vLLM', 'Text-Gen-WebUI'],
         },
         llamacpp: {
+          id: 'understanding-llama-cpp',
           title: '了解 llama.cpp：基础',
           content: [
             '**llama.cpp 是 LLM 推理的 C++ 实现，最初用于在不需要 GPU 加速的消费硬件上运行 Meta 的 Llama 模型。**截至 2026 年 8 月，它仍然是最轻量级和可移植的推理引擎。',
@@ -2248,6 +2268,7 @@ schema: {
           ],
         },
         vllm: {
+          id: 'understanding-vllm',
           title: '了解 vLLM：生产标准',
           content: [
             '**vLLM 是为 GPU 集群上的高吞吐量推理设计的 Python 框架。** 它优化了通过 API 提供模型的方式，支持批处理、分布式推理和高级调度。',
@@ -2262,6 +2283,7 @@ schema: {
           codeLanguage: 'bash',
         },
         textGenerationWebUI: {
+          id: 'understanding-text-generation-webui',
           title: '了解 Text-Generation-WebUI：研究者工具',
           content: [
             '**Text-Generation-WebUI（也称 oobabooga）是具有用于实验模型的 Web 界面的全功能 Python 应用。** 它将推理与微调、LoRA 训练、嵌入生成和高级提示测试的内置工具相结合。',
@@ -2275,6 +2297,7 @@ schema: {
           ],
         },
         performance: {
+          id: 'performance-tokens-per-second',
           title: '性能：各引擎速度如何？',
           content: [
             '**吞吐量（每秒令牌数）取决于模型大小、硬件和引擎优化。** 截至 2026 年 8 月，消费硬件上的实际基准：',
@@ -2288,6 +2311,7 @@ schema: {
           columns: ['场景', 'llama.cpp', 'vLLM', 'Text-Gen-WebUI'],
         },
         productionDeployments: {
+          id: 'production-deployments',
           title: '生产部署选择哪个引擎？',
           content: [
             '**vLLM 是 2026 年 8 月的生产标准。** 大多数在生产中运行本地 LLM API 的公司使用 vLLM，因为其吞吐量优化和批处理支持。单个 vLLM 实例可在一个 GPU 上为 50+ 并发用户提供服务，而 llama.cpp 仅为 1-2 用户。',
@@ -2299,6 +2323,7 @@ schema: {
           ],
         },
         whenToUse: {
+          id: 'when-to-use-each',
           title: '何时选择各引擎？',
           content: '使用此决策框架：',
           items: [
@@ -2308,6 +2333,7 @@ schema: {
           ],
         },
         regionalContext: {
+          id: 'inference-engine-choice-by-region',
           title: '按地区选择推理引擎',
           content: [
             '**推理引擎的选择对不同地区和监管框架的合规性和企业部署有直接影响。**',
@@ -2319,6 +2345,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: '常见错误',
           items: [
             '**以为需要在 Ollama 和这些引擎之间选择**。Ollama 在内部使用 llama.cpp。您不是在选择 Ollama vs vLLM；vLLM 是 Ollama 的替代*后端*，不是聊天应用。两者有不同用途。',
@@ -2367,6 +2394,7 @@ schema: {
           ],
         },
         relatedReading: {
+          id: 'related-reading',
           title: '相关阅读',
           items: [
             '[如何安装 Ollama](/zh/local-llms/how-to-install-ollama) -- 设置最流行的 llama.cpp 包装器。',
@@ -2672,6 +2700,7 @@ schema: {
           imageCaption: '추론 엔진 의사결정 가이드: Mac/CPU 또는 Ollama에는 llama.cpp, NVIDIA GPU와 50명 이상의 동시 사용자가 있는 프로덕션에는 vLLM, LoRA 파인튜닝 및 연구에는 Text-Generation-WebUI를 선택하십시오.',
         },
         regionalContext: {
+          id: 'inference-engine-choice-by-region',
           title: '지역별 추론 엔진 선택',
           content: [
             '**추론 엔진의 선택은 서로 다른 규제 관할 구역에 걸쳐 지역 컴플라이언스 및 기업 배포에 직접적인 영향을 미칩니다.**',

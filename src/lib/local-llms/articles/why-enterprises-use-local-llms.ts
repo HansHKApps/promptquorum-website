@@ -55,6 +55,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         costSavings: {
+          id: 'cost-savings',
           title: 'How Much Do Enterprises Save With Local LLMs?',
           content: [
             '**Per-token pricing for cloud APIs accumulates quickly.** Local LLMs have one-time hardware investment and ongoing operational costs.',
@@ -68,6 +69,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           columns: ['Annual Token Volume', 'Cloud API Cost', 'Local AI (amortized)', 'Annual Savings'],
         },
         compliance: {
+          id: 'compliance',
           title: 'What Compliance Requirements Drive Local AI?',
           image: '/images/why-enterprises-use-local-llms-adoption-motivations-en.svg',
           imageCaption: 'Three enterprise drivers for local LLM adoption: cost control, compliance with GDPR, HIPAA, and SOC2, and full data sovereignty over infrastructure.',
@@ -80,6 +82,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         dataSovereignty: {
+          id: 'data-sovereignty',
           title: 'Why Do Enterprises Need Data Sovereignty?',
           image: '/images/why-enterprises-use-local-llms-deployment-architecture-en.svg',
           imageCaption: 'Enterprise local LLM deployment architecture: employees and internal apps route through an internal API gateway to on-premises LLM servers behind a firewall/VPN boundary, with external cloud APIs blocked.',
@@ -91,6 +94,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         vendorIndependence: {
+          id: 'vendor-independence',
           title: 'How Do Local LLMs Avoid Vendor Lock-In?',
           content: [
             '**Cloud APIs lock you into vendor pricing and availability.** If OpenAI increases prices 10×, you cannot switch without rewriting integrations.',
@@ -105,6 +109,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         useCases: {
+          id: 'use-cases',
           title: 'What Are Real Enterprise Use Cases?',
           content: 'How enterprises use local LLMs:',
           rows: [
@@ -117,6 +122,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           columns: ['Industry', 'Use Case', 'Annual Volume', 'Annual Savings'],
         },
         objections: {
+          id: 'objections',
           title: 'What Are Common Objections to Local LLMs?',
           content: 'Objection 1: "Local models are less capable than GPT-4"',
           items: [
@@ -132,6 +138,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'What Are Common Enterprise Deployment Mistakes?',
           items: [
             '**Underestimating infrastructure costs.** Hardware is $20k-100k, but cooling, networking, and maintenance cost 3-5× that over 5 years.',
@@ -325,6 +332,7 @@ schema: {
           ],
         },
         costSavings: {
+          id: 'cost-savings',
           title: '¿Cuánto ahorran las empresas con LLMs locales?',
           content: [
             '**Los precios por token de las APIs en la nube se acumulan rápidamente.** Los LLMs locales tienen una inversión inicial en hardware y costos operativos continuos.',
@@ -338,6 +346,7 @@ schema: {
           columns: ['Volumen anual de tokens', 'Costo de API en la nube', 'IA local (amortizado)', 'Ahorro anual'],
         },
         compliance: {
+          id: 'compliance',
           title: '¿Qué requisitos de cumplimiento impulsan la IA local?',
           image: '/images/why-enterprises-use-local-llms-adoption-motivations-es.svg',
           imageCaption: 'Tres motores empresariales para adoptar LLMs locales: control de costos, cumplimiento de GDPR, HIPAA y SOC2, y soberanía total de datos sobre la infraestructura.',
@@ -350,6 +359,7 @@ schema: {
           ],
         },
         dataSovereignty: {
+          id: 'data-sovereignty',
           title: '¿Por qué las empresas necesitan soberanía de datos?',
           image: '/images/why-enterprises-use-local-llms-deployment-architecture-es.svg',
           imageCaption: 'Arquitectura de despliegue empresarial de LLM local: los empleados y las apps internas pasan por una puerta de enlace de API interna hacia los servidores LLM en local, protegidos por un perímetro de firewall/VPN, con las APIs en la nube externas bloqueadas.',
@@ -361,6 +371,7 @@ schema: {
           ],
         },
         vendorIndependence: {
+          id: 'vendor-independence',
           title: '¿Cómo evitan los LLMs locales la dependencia de proveedores?',
           content: [
             '**Las APIs en la nube te atan a los precios y la disponibilidad del proveedor.** Si OpenAI sube los precios 10×, no puedes cambiar sin reescribir las integraciones.',
@@ -375,6 +386,7 @@ schema: {
           ],
         },
         useCases: {
+          id: 'use-cases',
           title: '¿Cuáles son los casos de uso empresariales reales?',
           content: 'Cómo las empresas usan los LLMs locales:',
           rows: [
@@ -387,6 +399,7 @@ schema: {
           columns: ['Industria', 'Caso de uso', 'Volumen anual', 'Ahorro anual'],
         },
         objections: {
+          id: 'objections',
           title: '¿Cuáles son las objeciones comunes a los LLMs locales?',
           content: 'Objeción 1: "Los modelos locales son menos capaces que GPT-4"',
           items: [
@@ -402,6 +415,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: '¿Cuáles son los errores comunes en el despliegue empresarial?',
           items: [
             '**Subestimar los costos de infraestructura.** El hardware cuesta entre $20k y $100k, pero la refrigeración, la red y el mantenimiento cuestan entre 3 y 5 veces más a lo largo de 5 años.',
@@ -595,6 +609,7 @@ schema: {
           ],
         },
         costSavings: {
+          id: 'cost-savings',
           title: 'كم توفّر المؤسسات بنماذج LLM المحلية؟',
           content: [
             '**تتراكم أسعار token في واجهات API السحابية بسرعة.** لنماذج LLM المحلية استثمار أولي في العتاد وتكاليف تشغيلية مستمرة.',
@@ -608,6 +623,7 @@ schema: {
           columns: ['الحجم السنوي من token', 'تكلفة API السحابية', 'الذكاء الاصطناعي المحلي (مُستهلَك)', 'التوفير السنوي'],
         },
         compliance: {
+          id: 'compliance',
           title: 'أي متطلبات امتثال تدفع نحو الذكاء الاصطناعي المحلي؟',
           image: '/images/why-enterprises-use-local-llms-adoption-motivations-ar.svg',
           imageCaption: 'ثلاثة دوافع مؤسسية لتبني نماذج LLM المحلية: التحكم بالتكلفة، والامتثال لـ GDPR وHIPAA وSOC2، وسيادة كاملة على البيانات والبنية التحتية.',
@@ -621,6 +637,7 @@ schema: {
           ],
         },
         dataSovereignty: {
+          id: 'data-sovereignty',
           title: 'لماذا تحتاج المؤسسات إلى سيادة البيانات؟',
           image: '/images/why-enterprises-use-local-llms-deployment-architecture-ar.svg',
           imageCaption: 'بنية نشر نماذج LLM المحلية في المؤسسات: يمر الموظفون والتطبيقات الداخلية عبر بوابة API داخلية إلى خوادم LLM محلية خلف حدود جدار حماية/VPN، مع حظر واجهات API السحابية الخارجية.',
@@ -632,6 +649,7 @@ schema: {
           ],
         },
         vendorIndependence: {
+          id: 'vendor-independence',
           title: 'كيف تتجنّب نماذج LLM المحلية الاعتماد على المزوّد؟',
           content: [
             '**تربطك واجهات API السحابية بأسعار المزوّد وتوفره.** إذا رفعت OpenAI الأسعار 10×، فلا يمكنك التبديل دون إعادة كتابة التكاملات.',
@@ -646,6 +664,7 @@ schema: {
           ],
         },
         useCases: {
+          id: 'use-cases',
           title: 'ما هي حالات الاستخدام المؤسسية الحقيقية؟',
           content: 'كيف تستخدم المؤسسات نماذج LLM المحلية:',
           rows: [
@@ -658,6 +677,7 @@ schema: {
           columns: ['القطاع', 'حالة الاستخدام', 'الحجم السنوي', 'التوفير السنوي'],
         },
         objections: {
+          id: 'objections',
           title: 'ما هي الاعتراضات الشائعة على نماذج LLM المحلية؟',
           content: 'الاعتراض 1: "النماذج المحلية أقل قدرة من GPT-4"',
           items: [
@@ -673,6 +693,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'ما هي الأخطاء الشائعة في النشر المؤسسي؟',
           items: [
             '**التقليل من تكاليف البنية التحتية.** يكلّف العتاد بين $20k و$100k، لكن التبريد والشبكة والصيانة تكلّف 3 إلى 5 أضعاف على مدى 5 سنوات.',
@@ -841,8 +862,6 @@ schema: {
         { label: 'Análise de custo: local vs. API na nuvem', anchor: '#cost-analysis' },
         { label: 'Requisitos de conformidade: LGPD, GDPR, HIPAA', anchor: '#compliance' },
         { label: 'Controle e soberania de dados', anchor: '#data-sovereignty' },
-        { label: 'Casos de uso empresariais', anchor: '#use-cases' },
-        { label: 'Como começar', anchor: '#getting-started' },
         { label: 'Perguntas frequentes', anchor: '#faq' },
       ],
       sections: {
@@ -997,6 +1016,7 @@ schema: {
           ],
         },
         costSavings: {
+          id: 'cost-savings',
           title: 'Wie viel sparen Unternehmen mit lokalen LLMs?',
           content: [
             '**Preise pro Token für Cloud-APIs sammeln sich schnell an.** Lokale LLMs haben einmalige Hardwareinvestition und laufende Betriebskosten.',
@@ -1010,6 +1030,7 @@ schema: {
           columns: ['Jährliches Token-Volumen', 'Cloud-API-Kosten', 'Lokale KI (amortisiert)', 'Jährliche Einsparungen'],
         },
         compliance: {
+          id: 'compliance',
           title: 'Welche Compliance-Anforderungen treiben lokale KI an?',
           image: '/images/why-enterprises-use-local-llms-adoption-motivations-de.svg',
           imageCaption: 'Drei Unternehmensgründe für lokale LLMs: Kostenkontrolle, Compliance mit DSGVO, HIPAA und SOC2, sowie vollständige Datenhoheit über die Infrastruktur.',
@@ -1022,6 +1043,7 @@ schema: {
           ],
         },
         dataSovereignty: {
+          id: 'data-sovereignty',
           title: 'Warum brauchen Unternehmen Datenschutz?',
           image: '/images/why-enterprises-use-local-llms-deployment-architecture-de.svg',
           imageCaption: 'Architektur für die lokale Unternehmens-LLM-Bereitstellung: Mitarbeiter und interne Apps laufen über ein internes API-Gateway zu On-Premises-LLM-Servern hinter einer Firewall-/VPN-Grenze, externe Cloud-APIs sind blockiert.',
@@ -1033,6 +1055,7 @@ schema: {
           ],
         },
         vendorIndependence: {
+          id: 'vendor-independence',
           title: 'Wie vermeiden lokale LLMs Herstellerbindung?',
           content: [
             '**Cloud-APIs sperren Sie in Herstellerpreise und -verfügbarkeit.** Wenn OpenAI die Preise 10× erhöht, können Sie nicht wechseln, ohne Integrationen umzuschreiben.',
@@ -1047,6 +1070,7 @@ schema: {
           ],
         },
         useCases: {
+          id: 'use-cases',
           title: 'Was sind echte Enterprise-Anwendungsfälle?',
           content: 'Wie Unternehmen lokale LLMs einsetzen:',
           rows: [
@@ -1059,6 +1083,7 @@ schema: {
           columns: ['Branche', 'Anwendungsfall', 'Jährliches Volumen', 'Jährliche Einsparungen'],
         },
         objections: {
+          id: 'objections',
           title: 'Was sind häufige Einwände gegen lokale LLMs?',
           content: 'Einwand 1: "Lokale Modelle sind weniger leistungsfähig als GPT-4"',
           items: [
@@ -1074,6 +1099,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Was sind häufige Enterprise-Deployment-Fehler?',
           items: [
             '**Infrastrukturkosten unterschätzen.** Hardware kostet €18k-90k, aber Kühlung, Netzwerk und Wartung kosten 3-5× mehr über 5 Jahre.',
@@ -1245,6 +1271,7 @@ schema: {
           ],
         },
         costSavings: {
+          id: 'cost-savings',
           title: 'Combien d\'économies les entreprises réalisent-elles avec les LLM locaux ?',
           content: [
             '**Les tarifs par jeton pour les API cloud s\'accumulent rapidement.** Les LLM locaux ont un investissement matériel unique et des coûts opérationnels continus.',
@@ -1258,6 +1285,7 @@ schema: {
           columns: ['Volume de jetons annuel', 'Coût API cloud', 'IA local (amorti)', 'Économies annuelles'],
         },
         compliance: {
+          id: 'compliance',
           title: 'Quelles exigences de conformité conduisent l\'IA locale ?',
           image: '/images/why-enterprises-use-local-llms-adoption-motivations-fr.svg',
           imageCaption: 'Trois moteurs d\'adoption des LLM locaux en entreprise : maîtrise des coûts, conformité au RGPD, à HIPAA et à SOC2, et souveraineté totale sur les données et l\'infrastructure.',
@@ -1270,6 +1298,7 @@ schema: {
           ],
         },
         dataSovereignty: {
+          id: 'data-sovereignty',
           title: 'Pourquoi les entreprises ont-elles besoin de souveraineté des données ?',
           image: '/images/why-enterprises-use-local-llms-deployment-architecture-fr.svg',
           imageCaption: 'Architecture de déploiement de LLM local en entreprise : les employés et applications internes passent par une passerelle API interne vers des serveurs LLM sur site, protégés par un périmètre pare-feu/VPN, avec les API cloud externes bloquées.',
@@ -1281,6 +1310,7 @@ schema: {
           ],
         },
         vendorIndependence: {
+          id: 'vendor-independence',
           title: 'Comment les LLM locaux évitent-ils le verrouillage fournisseur ?',
           content: [
             '**Les API cloud vous enferment dans les tarifs et la disponibilité du fournisseur.** Si OpenAI augmente les prix 10×, vous ne pouvez pas basculer sans réécrire les intégrations.',
@@ -1295,6 +1325,7 @@ schema: {
           ],
         },
         useCases: {
+          id: 'use-cases',
           title: 'Quels sont les cas d\'usage réels d\'entreprise ?',
           content: 'Comment les entreprises utilisent les LLM locaux :',
           rows: [
@@ -1307,6 +1338,7 @@ schema: {
           columns: ['Industrie', 'Cas d\'usage', 'Volume annuel', 'Économies annuelles'],
         },
         objections: {
+          id: 'objections',
           title: 'Quelles sont les objections courantes aux LLM locaux ?',
           content: 'Objection 1 : "Les modèles locaux sont moins capables que GPT-4"',
           items: [
@@ -1322,6 +1354,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Quelles sont les erreurs courantes de déploiement d\'entreprise ?',
           items: [
             '**Sous-estimer les coûts d\'infrastructure.** Le matériel coûte €18k-90k, mais le refroidissement, la mise en réseau et la maintenance coûtent 3-5× plus sur 5 ans.',
@@ -1493,6 +1526,7 @@ schema: {
           ],
         },
         costSavings: {
+          id: 'cost-savings',
           title: 'エンタープライズはローカルLLMで儲けますか？',
           content: [
             '**クラウドAPIのトークンあたりの価格は急速に蓄積します。** ローカルLLMは1回限りのハードウェア投資と継続的な運用コストを持っています。',
@@ -1506,6 +1540,7 @@ schema: {
           columns: ['年間トークンボリューム', 'クラウドAPI費用', 'ローカルAI（償却）', '年間節約'],
         },
         compliance: {
+          id: 'compliance',
           title: 'どのコンプライアンス要件がローカルAIを駆動しますか？',
           image: '/images/why-enterprises-use-local-llms-adoption-motivations-ja.svg',
           imageCaption: '企業がローカルLLMを採用する3つの理由:コスト管理、GDPR・HIPAA・SOC2への準拠、インフラとデータの完全な主権。',
@@ -1518,6 +1553,7 @@ schema: {
           ],
         },
         dataSovereignty: {
+          id: 'data-sovereignty',
           title: 'エンタープライズがなぜデータ主権を必要とするのですか？',
           image: '/images/why-enterprises-use-local-llms-deployment-architecture-ja.svg',
           imageCaption: '企業向けローカルLLM導入アーキテクチャ:従業員と社内アプリは社内APIゲートウェイを経由してオンプレミスLLMサーバーに接続し、ファイアウォール/VPN境界で保護され、外部クラウドAPIへのアクセスは遮断される。',
@@ -1529,6 +1565,7 @@ schema: {
           ],
         },
         vendorIndependence: {
+          id: 'vendor-independence',
           title: 'ローカルLLMはどのようにベンダーロックインを回避しますか？',
           content: [
             '**クラウドAPIはベンダー価格と可用性にロックします。** OpenAIが価格を10倍にすると、統合を書き直さずに切り替えることはできません。',
@@ -1543,6 +1580,7 @@ schema: {
           ],
         },
         useCases: {
+          id: 'use-cases',
           title: '実エンタープライズユースケースとは何ですか？',
           content: 'エンタープライズはローカルLLMを使用する方法：',
           rows: [
@@ -1555,6 +1593,7 @@ schema: {
           columns: ['業界', 'ユースケース', '年間ボリューム', '年間節約'],
         },
         objections: {
+          id: 'objections',
           title: 'ローカルLLMに対する一般的な異議は何ですか？',
           content: '異議1：「ローカルモデルはGPT-4より機能が低い」',
           items: [
@@ -1570,6 +1609,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'よくあるエンタープライズデプロイメント間違いとは何ですか？',
           items: [
             '**インフラストラクチャコストを過小評価。** ハードウェアは¥1.8M-9M、しかし冷却、ネットワーキング、メンテナンスは5年間で3-5倍のコスト。',
@@ -1741,6 +1781,7 @@ schema: {
           ],
         },
         costSavings: {
+          id: 'cost-savings',
           title: '企业使用本地LLM节省多少钱？',
           content: [
             '**云API的按令牌定价迅速累积。** 本地LLM具有一次性硬件投资和持续的运营成本。',
@@ -1754,6 +1795,7 @@ schema: {
           columns: ['年度令牌量', '云API成本', '本地AI（摊销）', '年度节省'],
         },
         compliance: {
+          id: 'compliance',
           title: '哪些合规性要求促进本地AI？',
           image: '/images/why-enterprises-use-local-llms-adoption-motivations-zh.svg',
           imageCaption: '企业采用本地LLM的三大驱动因素:成本控制、符合GDPR、HIPAA和SOC2合规要求,以及对数据和基础设施的完全主权。',
@@ -1766,6 +1808,7 @@ schema: {
           ],
         },
         dataSovereignty: {
+          id: 'data-sovereignty',
           title: '企业为什么需要数据主权？',
           image: '/images/why-enterprises-use-local-llms-deployment-architecture-zh.svg',
           imageCaption: '企业本地LLM部署架构:员工与内部应用通过内部API网关连接到本地部署的LLM服务器,由防火墙/VPN边界保护,外部云API被阻断。',
@@ -1777,6 +1820,7 @@ schema: {
           ],
         },
         vendorIndependence: {
+          id: 'vendor-independence',
           title: '本地LLM如何避免供应商锁定？',
           content: [
             '**云API将您锁定到供应商定价和可用性。** 如果OpenAI将价格提高10倍，您无法在不重写集成的情况下切换。',
@@ -1791,6 +1835,7 @@ schema: {
           ],
         },
         useCases: {
+          id: 'use-cases',
           title: '真实企业用例是什么？',
           content: '企业如何使用本地LLM：',
           rows: [
@@ -1803,6 +1848,7 @@ schema: {
           columns: ['行业', '用例', '年度量', '年度节省'],
         },
         objections: {
+          id: 'objections',
           title: '本地LLM的常见反对意见是什么？',
           content: '异议1："本地模型的能力不如GPT-4"',
           items: [
@@ -1818,6 +1864,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: '常见的企业部署错误是什么？',
           items: [
             '**低估基础设施成本。** 硬件成本$20k-100k，但冷却、网络和维护在5年内成本3-5倍。',
@@ -1989,6 +2036,7 @@ schema: {
           ],
         },
         costSavings: {
+          id: 'cost-savings',
           title: '로컬 LLM으로 기업이 얼마나 절약할 수 있습니까?',
           content: [
             '**클라우드 API의 토큰당 요금은 빠르게 누적됩니다.** 로컬 LLM은 초기 하드웨어 투자와 지속적인 운영 비용만 발생합니다.',
@@ -2002,6 +2050,7 @@ schema: {
           columns: ['연간 토큰 사용량', '클라우드 API 비용', '로컬 AI (상각)', '연간 절감액'],
         },
         compliance: {
+          id: 'compliance',
           title: '로컬 AI를 요구하는 컴플라이언스 요건은 무엇입니까?',
           image: '/images/why-enterprises-use-local-llms-adoption-motivations-ko.svg',
           imageCaption: '로컬 LLM 도입을 이끄는 세 가지 기업 동인: 비용 통제, GDPR·HIPAA·SOC2 컴플라이언스 준수, 인프라와 데이터에 대한 완전한 주권.',
@@ -2014,6 +2063,7 @@ schema: {
           ],
         },
         dataSovereignty: {
+          id: 'data-sovereignty',
           title: '기업에 데이터 주권이 필요한 이유는 무엇입니까?',
           image: '/images/why-enterprises-use-local-llms-deployment-architecture-ko.svg',
           imageCaption: '기업용 로컬 LLM 배포 아키텍처: 직원과 내부 앱은 내부 API 게이트웨이를 거쳐 온프레미스 LLM 서버에 연결되며, 방화벽/VPN 경계로 보호되고 외부 클라우드 API 접근은 차단된다.',
@@ -2025,6 +2075,7 @@ schema: {
           ],
         },
         vendorIndependence: {
+          id: 'vendor-independence',
           title: '로컬 LLM은 어떻게 벤더 종속성을 방지합니까?',
           content: [
             '**클라우드 API는 벤더의 가격 정책 및 가용성에 종속됩니다.** OpenAI가 가격을 10배 인상하더라도 통합을 재작성하지 않으면 전환할 수 없습니다.',
@@ -2039,6 +2090,7 @@ schema: {
           ],
         },
         useCases: {
+          id: 'use-cases',
           title: '실제 엔터프라이즈 활용 사례는 무엇입니까?',
           content: '기업의 로컬 LLM 활용 현황:',
           rows: [
@@ -2051,6 +2103,7 @@ schema: {
           columns: ['업종', '활용 사례', '연간 사용량', '연간 절감액'],
         },
         objections: {
+          id: 'objections',
           title: '로컬 LLM에 대한 일반적인 반론은 무엇입니까?',
           content: '반론 1: "로컬 모델은 GPT-4보다 성능이 낮다"',
           items: [
@@ -2066,6 +2119,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: '일반적인 엔터프라이즈 배포 실수는 무엇입니까?',
           items: [
             '**인프라 비용 과소평가.** 하드웨어는 2만~10만 달러지만, 냉각, 네트워킹, 유지보수는 5년에 걸쳐 그 3~5배가 소요됩니다.',

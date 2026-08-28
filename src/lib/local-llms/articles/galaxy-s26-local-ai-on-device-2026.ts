@@ -707,6 +707,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ]
       },
       relatedReading: {
+        id: 'related-reading',
         title: '관련 자료',
         items: [
           'Samsung Galaxy S26 Unpacked 공지(2026년 2월 25일) — 공식 기능 개요',
@@ -1025,6 +1026,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ]
       },
       relatedReading: {
+        id: 'related-reading',
         title: 'Weiterführende Ressourcen',
         items: [
           'Samsung Galaxy S26 Unpacked Ankündigung (25. Februar 2026) — Offizielle Feature-Übersicht',
@@ -1328,6 +1330,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ]
       },
       relatedReading: {
+        id: 'related-reading',
         title: 'Lectures Connexes',
         items: [
           'Annonce Samsung Galaxy S26 Unpacked (25 février 2026) — vue d\'ensemble features officielle',

@@ -484,6 +484,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         sources: {
+          id: 'sources',
           items: [
             'Schulhoff, L., et al. (2024). Prompt Engineering Guide. [https://www.promptingguide.ai](https://www.promptingguide.ai)',
             'Brown, T. B., et al. (2020). "Language Models are Few-Shot Learners." OpenAI. arXiv:2005.14165',
@@ -977,8 +978,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: 'Cinco ejemplos reales de RTF', anchor: 'five-examples' },
         { label: 'Combinar RTF con otros frameworks', anchor: 'combining-rtf' },
         { label: 'Errores comunes de RTF', anchor: 'common-mistakes' },
-        { label: 'Cómo PromptQuorum implementa RTF', anchor: 'promptquorum-implementation' },
-        { label: 'Preguntas frecuentes', anchor: 'faq' },
         { label: 'Fuentes', anchor: 'sources' },
       ],
       educationalLevel: 'Intermediate',
@@ -1273,6 +1272,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         sources: {
+          id: 'sources',
           items: [
             'Schulhoff, L., et al. (2024). Prompt Engineering Guide. [https://www.promptingguide.ai](https://www.promptingguide.ai)',
             'Brown, T. B., et al. (2020). "Language Models are Few-Shot Learners." OpenAI. arXiv:2005.14165',
@@ -1316,8 +1316,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: 'خمسة أمثلة حقيقية على RTF', anchor: 'five-examples' },
         { label: 'دمج RTF مع أطر أخرى', anchor: 'combining-rtf' },
         { label: 'الأخطاء الشائعة في RTF', anchor: 'common-mistakes' },
-        { label: 'كيف ينفّذ PromptQuorum إطار RTF', anchor: 'promptquorum-implementation' },
-        { label: 'الأسئلة الشائعة', anchor: 'faq' },
         { label: 'المصادر', anchor: 'sources' },
       ],
       educationalLevel: 'متوسط',
@@ -1613,6 +1611,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         sources: {
+          id: 'sources',
           items: [
             'Schulhoff, L., et al. (2024). Prompt Engineering Guide. [https://www.promptingguide.ai](https://www.promptingguide.ai)',
             'Brown, T. B., et al. (2020). "Language Models are Few-Shot Learners." OpenAI. arXiv:2005.14165',
@@ -1972,6 +1971,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         sources: {
+          id: 'sources',
           items: [
             'Schulhoff, L., et al. (2024). Prompt Engineering Guide. [https://www.promptingguide.ai](https://www.promptingguide.ai)',
             'Brown, T. B., et al. (2020). "Language Models are Few-Shot Learners." OpenAI. arXiv:2005.14165',
@@ -3356,6 +3356,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         sources: {
+          id: 'sources',
           items: [
             'Schulhoff, L., et al. (2024). Prompt Engineering Guide. [https://www.promptingguide.ai](https://www.promptingguide.ai)',
             'Brown, T. B., et al. (2020). "Language Models are Few-Shot Learners." OpenAI. arXiv:2005.14165',
@@ -3842,6 +3843,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         sources: {
+          id: 'sources',
           items: [
             'Schulhoff, L., et al. (2024). Prompt Engineering Guide. [https://www.promptingguide.ai](https://www.promptingguide.ai)',
             'Brown, T. B., et al. (2020). "Language Models are Few-Shot Learners." OpenAI. arXiv:2005.14165',

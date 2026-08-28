@@ -1617,11 +1617,6 @@ schema: {
       toc: [
         { label: 'Pontos principais', anchor: '#tldr' },
         { label: 'Arquitetura do servidor', anchor: '#server-architecture' },
-        { label: 'Configuração de acesso multiusuário', anchor: '#multi-user' },
-        { label: 'Controle de acesso por papel', anchor: '#rbac' },
-        { label: 'Rastreamento de uso e custos', anchor: '#usage-tracking' },
-        { label: 'Conformidade LGPD e empresarial', anchor: '#compliance' },
-        { label: 'FAQ', anchor: '#faq' },
       ],
       schema: {
         '@context': 'https://schema.org',
@@ -1710,6 +1705,7 @@ schema: {
           ],
         },
         lgpdCompliance: {
+          id: 'server-architecture',
           title: 'Conformidade LGPD e empresarial no Brasil',
           content: [
             '**A LGPD (Lei nº 13.709/2018) e as diretrizes da ANPD** exigem que dados pessoais sensíveis sejam processados com controles adequados. Um servidor LLM local compartilhado satisfaz os requisitos de residência de dados por padrão.',

@@ -43,7 +43,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: 'RAG in Multi-Model Workflows', anchor: '#multi-model' },
         { label: 'RAG in Regulated Environments', anchor: '#regional-context' },
         { label: 'Common Mistakes', anchor: '#common-mistakes' },
-        { label: 'How to Implement RAG', anchor: '#how-to-use' },
       ],
       schema: {
         '@context': 'https://schema.org',
@@ -167,6 +166,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         howItWorks: {
+          id: 'how-a-rag-system-works',
           title: 'How a RAG System Works Step by Step',
           content: [
             '**A typical RAG system runs through four main stages: ingestion, indexing, retrieval, and generation.** Each stage can be tuned independently.',
@@ -188,6 +188,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         vsFineTuning: {
+          id: 'rag-vs-fine-tuning',
           title: 'RAG vs Fine-Tuning: When to Use Each',
           content: [
             '**RAG and [fine-tuning](/prompt-engineering/prompt-engineering-vs-fine-tuning) solve different problems and work best when combined, not treated as alternatives.** Use RAG first. Add fine-tuning only when you need consistent behavioral changes that RAG cannot provide through prompting.',
@@ -208,6 +209,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         vectorDbTable: {
+          id: 'comparison-table',
           title: 'Vector Database Comparison',
           content: ['**Choosing the right vector database depends on your scale, data residency requirements, and operational model.** The table below covers the six most widely deployed options as of 2026.'],
           columns: ['Database', 'Type', 'Best for', 'EU data residency', 'Self-hosted', 'Approx. cost'],
@@ -221,6 +223,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         example: {
+          id: 'example',
           title: 'Example: Without vs With RAG',
           content: [
             '**The benefit of RAG becomes clear when you compare answering from memory only with answering using retrieved documents.** Here is a conceptual example for an internal policy question.',
@@ -233,6 +236,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         multiModel: {
+          id: 'multi-model',
           title: 'RAG in Multi-Model Workflows',
           content: [
             '**RAG becomes even more powerful when combined with multiple models and structured prompting.** You can:',
@@ -252,6 +256,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         regionalContext: {
+          id: 'regional-context',
           title: 'RAG in Regulated Environments: EU, Japan, and China',
           content: [
             '**RAG is the preferred architecture for organizations operating under data protection regulations, because sensitive data never enters model parameters.**',
@@ -394,7 +399,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: 'RAG in Multi-Model-Workflows', anchor: '#multi-model' },
         { label: 'RAG in regulierten Umgebungen', anchor: '#regional-context' },
         { label: 'Häufige Fehler', anchor: '#common-mistakes' },
-        { label: 'RAG implementieren', anchor: '#how-to-use' },
       ],
       schema: {
         '@context': 'https://schema.org',
@@ -495,6 +499,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         whatIsRAG: {
+          id: 'what-rag-is',
           title: 'Was ist RAG',
           content: [
             '**RAG kombiniert einen Retriever, der relevante Informationen findet, mit einem Generator, der die endgültige Antwort schreibt.** Der Retriever durchsucht eine Wissensdatenbank (wie indizierte PDFs, Webseiten oder interne Dokumente) anhand der Benutzerabfrage. Der Generator liest dann die abgerufenen Passagen und erstellt eine Antwort, die diese Inhalte zitiert oder widerspiegelt.',
@@ -506,6 +511,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         whyItMatters: {
+          id: 'why-rag-matters',
           title: 'Warum RAG wichtig ist',
           content: [
             '**RAG ist wichtig, weil es [Halluzinationen](/de/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) reduziert und Antworten aktuell hält.** Ein reines Sprachmodell kann vertrauensvoll Details erfinden, besonders bei Spezialthemen oder aktuellen Inhalten. Mit RAG sind Antworten in abgerufenen Dokumenten verankert, die Sie kontrollieren.',
@@ -514,6 +520,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         howItWorks: {
+          id: 'how-a-rag-system-works',
           title: 'Wie ein RAG-System funktioniert: Schritt für Schritt',
           content: [
             '**Ein typisches RAG-System durchläuft vier Hauptstufen: Aufnahme, Indexierung, Abruf und Generierung.** Jede Stufe kann unabhängig abgestimmt werden.',
@@ -541,6 +548,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         vsFineTuning: {
+          id: 'rag-vs-fine-tuning',
           title: 'RAG vs Fine-Tuning: Wann man was einsetzt',
           content: [
             '**RAG und [Fine-Tuning](/de/prompt-engineering/prompt-engineering-vs-fine-tuning) lösen unterschiedliche Probleme und funktionieren am besten kombiniert, nicht als Alternativen.** Verwenden Sie zuerst RAG. Fügen Sie Fine-Tuning nur hinzu, wenn Sie konsistente Verhaltensänderungen benötigen, die RAG durch Prompting nicht bieten kann.',
@@ -561,6 +569,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         vectorDbTable: {
+          id: 'comparison-table',
           title: 'Vektor-Datenbank-Vergleich',
           content: ['**Die Wahl der richtigen Vektor-Datenbank hängt von Ihrem Umfang, Datenlokalisierungsanforderungen und operativen Modell ab.** Die Tabelle unten deckt die sechs am weitesten verbreiteten Optionen ab (Stand 2026).'],
           columns: ['Datenbank', 'Typ', 'Am besten für', 'EU-Datenlokalisierung', 'Selbstgehostet', 'Ungefähre Kosten'],
@@ -574,6 +583,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         example: {
+          id: 'example',
           title: 'Beispiel: Ohne vs Mit RAG',
           content: [
             '**Der Vorteil von RAG wird deutlich, wenn Sie Antworten aus dem Gedächtnis allein mit Antworten anhand abgerufener Dokumente vergleichen.** Hier ist ein konzeptionelles Beispiel für eine interne Richtlinienfrage.',
@@ -586,6 +596,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         multiModel: {
+          id: 'multi-model',
           title: 'RAG in Multi-Model-Workflows',
           content: [
             '**RAG wird noch leistungsfähiger, wenn es mit mehreren Modellen und strukturiertem Prompting kombiniert wird.** Sie können:',
@@ -605,6 +616,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         regionalContext: {
+          id: 'regional-context',
           title: 'RAG in regulierten Umgebungen: EU, Japan und China',
           content: [
             '**RAG ist die bevorzugte Architektur für Organisationen, die unter Datenschutzbestimmungen arbeiten, da sensible Daten niemals in Modellparameter gelangen.**',
@@ -614,6 +626,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Häufige Fehler',
           mistakes: [
             {
@@ -749,7 +762,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: 'RAG en flujos de trabajo multi-modelo', anchor: '#multi-model' },
         { label: 'RAG en entornos regulados', anchor: '#regional-context' },
         { label: 'Errores comunes', anchor: '#common-mistakes' },
-        { label: 'Cómo implementar RAG', anchor: '#how-to-use' },
       ],
       schema: {
         '@context': 'https://schema.org',
@@ -835,6 +847,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         whatIsRAG: {
+          id: 'what-rag-is',
           title: 'Qué es RAG',
           content: [
             '**RAG combina un recuperador que encuentra información relevante con un generador que escribe la respuesta final usando esa información.** El recuperador busca en una base de conocimientos (como PDFs indexados, páginas web o documentos internos) en función de la consulta del usuario. El generador luego lee los pasajes recuperados y produce una respuesta que cita o refleja ese contenido.',
@@ -846,6 +859,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         whyItMatters: {
+          id: 'why-rag-matters',
           title: 'Por qué importa RAG',
           content: [
             '**RAG importa porque reduce las alucinaciones y mantiene las respuestas actualizadas.** Un modelo de lenguaje puro puede inventar detalles con confianza, especialmente en temas especializados o recientes. Con RAG, las respuestas se anclan en documentos recuperados que tú controlas.',
@@ -854,6 +868,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         howItWorks: {
+          id: 'how-a-rag-system-works',
           title: 'Cómo funciona un sistema RAG paso a paso',
           content: [
             '**Un sistema RAG típico pasa por cuatro etapas principales: ingestión, indexación, recuperación y generación.** Cada etapa puede ajustarse de forma independiente.',
@@ -871,6 +886,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         vsFineTuning: {
+          id: 'rag-vs-fine-tuning',
           title: 'RAG vs Fine-Tuning: cuándo usar cada uno',
           content: [
             '**RAG y el fine-tuning resuelven problemas diferentes y funcionan mejor cuando se combinan, no cuando se tratan como alternativas.** Usa RAG primero. Añade fine-tuning solo cuando necesites cambios de comportamiento consistentes que RAG no puede proporcionar a través del prompting.',
@@ -888,6 +904,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         vectorDbTable: {
+          id: 'comparison-table',
           title: 'Comparación de bases de datos vectoriales',
           content: ['**La elección de la base de datos vectorial adecuada depende de tu escala, requisitos de residencia de datos y modelo operativo.** La tabla a continuación cubre las seis opciones más ampliamente desplegadas a partir de 2026.'],
           columns: ['Base de datos', 'Tipo', 'Mejor para', 'Residencia de datos en UE', 'Autoalojada', 'Costo aproximado'],
@@ -901,6 +918,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         example: {
+          id: 'example',
           title: 'Ejemplo: Sin RAG vs con RAG',
           content: [
             '**El beneficio de RAG queda claro al comparar responder solo desde la memoria con responder usando documentos recuperados.** Aquí hay un ejemplo conceptual para una pregunta sobre políticas internas.',
@@ -913,6 +931,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         multiModel: {
+          id: 'multi-model',
           title: 'RAG en flujos de trabajo multi-modelo',
           content: [
             '**RAG se vuelve aún más potente cuando se combina con múltiples modelos y prompting estructurado.** Puedes:',
@@ -929,6 +948,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         regionalContext: {
+          id: 'regional-context',
           title: 'RAG en entornos regulados: UE, Japón y China',
           content: [
             '**RAG es la arquitectura preferida para organizaciones que operan bajo regulaciones de protección de datos, porque los datos sensibles nunca entran en los parámetros del modelo.**',
@@ -938,6 +958,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Errores comunes',
           mistakes: [
             { mistake: 'Fragmentos demasiado largos', problem: 'Fragmentos de más de 1.000 palabras reducen la precisión de recuperación y desperdician tokens de contexto con contenido irrelevante.', fix: 'Usa fragmentos de 200–500 palabras con solapamiento del 10–20%. Prueba con 3 tamaños de fragmento antes de decidir.' },
@@ -1016,7 +1037,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: 'RAG في سير العمل متعدد النماذج', anchor: '#multi-model' },
         { label: 'RAG في البيئات المنظَّمة', anchor: '#regional-context' },
         { label: 'الأخطاء الشائعة', anchor: '#common-mistakes' },
-        { label: 'كيفية تنفيذ RAG', anchor: '#how-to-use' },
       ],
       schema: {
         '@context': 'https://schema.org',
@@ -1102,6 +1122,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         whatIsRAG: {
+          id: 'what-rag-is',
           title: 'ما هو RAG',
           content: [
             '**يجمع RAG بين مُسترجع يجد المعلومات ذات الصلة ومُولِّد يكتب الاستجابة النهائية باستخدام تلك المعلومات.** يبحث المُسترجع في قاعدة معرفة (مثل ملفات PDF المُفهرسة أو صفحات الويب أو المستندات الداخلية) بناءً على استعلام المستخدم. ثم يقرأ المُولِّد المقاطع المُسترجعة وينتج استجابة تستشهد بذلك المحتوى أو تعكسه.',
@@ -1113,6 +1134,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         whyItMatters: {
+          id: 'why-rag-matters',
           title: 'لماذا يهم RAG',
           content: [
             '**يهم RAG لأنه يُقلل الهلوسة ويُبقي الاستجابات محدَّثة.** يمكن لنموذج اللغة النقي أن يخترع تفاصيل بثقة، خاصةً في الموضوعات المتخصصة أو الحديثة. مع RAG، تُرسى الاستجابات في المستندات المُسترجعة التي تتحكم فيها.',
@@ -1121,6 +1143,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         howItWorks: {
+          id: 'how-a-rag-system-works',
           title: 'كيف يعمل نظام RAG خطوة بخطوة',
           content: [
             '**يمر نظام RAG النموذجي بأربع مراحل رئيسية: الاستيعاب والفهرسة والاسترجاع والتوليد.** يمكن ضبط كل مرحلة بشكل مستقل.',
@@ -1138,6 +1161,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         vsFineTuning: {
+          id: 'rag-vs-fine-tuning',
           title: 'RAG مقابل الضبط الدقيق: متى تستخدم كلاً منهما',
           content: [
             '**يحل RAG والضبط الدقيق مشكلتين مختلفتين ويعملان بشكل أفضل عند دمجهما وليس عند معاملتهما كبديلين.** استخدم RAG أولاً. أضف الضبط الدقيق فقط عندما تحتاج إلى تغييرات سلوكية ثابتة لا يستطيع RAG توفيرها من خلال البرومبت.',
@@ -1155,6 +1179,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         vectorDbTable: {
+          id: 'comparison-table',
           title: 'مقارنة قواعد البيانات المتجهية',
           content: ['**يعتمد اختيار قاعدة البيانات المتجهية المناسبة على مستوى التوسع ومتطلبات الإقامة للبيانات ونموذج التشغيل.** يغطي الجدول التالي الخيارات الست الأكثر انتشاراً اعتباراً من 2026.'],
           columns: ['قاعدة البيانات', 'النوع', 'الأفضل لـ', 'إقامة البيانات في الاتحاد الأوروبي', 'ذاتية الاستضافة', 'التكلفة التقريبية'],
@@ -1168,6 +1193,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         example: {
+          id: 'example',
           title: 'مثال: بدون RAG مقابل مع RAG',
           content: [
             '**تتضح فائدة RAG عند المقارنة بين الإجابة من الذاكرة والإجابة باستخدام المستندات المُسترجعة.** فيما يلي مثال مفاهيمي لسؤال حول السياسات الداخلية.',
@@ -1180,6 +1206,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         multiModel: {
+          id: 'multi-model',
           title: 'RAG في سير العمل متعدد النماذج',
           content: [
             '**يصبح RAG أكثر قوةً عند دمجه مع نماذج متعددة وبرومبت مهيكل.** يمكنك:',
@@ -1196,6 +1223,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         regionalContext: {
+          id: 'regional-context',
           title: 'RAG في البيئات المنظَّمة: الاتحاد الأوروبي، اليابان، والصين',
           content: [
             '**RAG هو البنية المفضلة للمؤسسات التي تعمل في ظل لوائح حماية البيانات، لأن البيانات الحساسة لا تدخل معاملات النموذج أبداً.**',
@@ -1205,6 +1233,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'الأخطاء الشائعة',
           mistakes: [
             { mistake: 'شظايا طويلة جداً', problem: 'الشظايا التي تتجاوز 1000 كلمة تُقلل دقة الاسترجاع وتُضيّع رموز السياق بمحتوى غير ذي صلة.', fix: 'استخدم شظايا من 200-500 كلمة مع تداخل 10-20٪. اختبر 3 أحجام للشظايا قبل اتخاذ قرار.' },
@@ -1282,7 +1311,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: 'RAG em fluxos de trabalho multimodelo', anchor: '#multi-model' },
         { label: 'RAG em ambientes regulados', anchor: '#regional-context' },
         { label: 'Erros comuns', anchor: '#common-mistakes' },
-        { label: 'Como implementar RAG', anchor: '#how-to-use' },
       ],
       schema: {
         '@context': 'https://schema.org',
@@ -1367,6 +1395,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         whatIsRAG: {
+          id: 'what-rag-is',
           title: 'O que é RAG',
           content: [
             '**RAG combina um recuperador que encontra informações relevantes com um gerador que escreve a resposta final usando essas informações.** O recuperador pesquisa uma base de conhecimento (como PDFs indexados, páginas da web ou documentos internos) com base na consulta do usuário. O gerador então lê os trechos recuperados e produz uma resposta que cita ou reflete esse conteúdo.',
@@ -1378,6 +1407,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         whyItMatters: {
+          id: 'why-rag-matters',
           title: 'Por que RAG importa',
           content: [
             '**RAG importa porque reduz alucinações e mantém as respostas atualizadas.** Um modelo de linguagem puro pode inventar detalhes com confiança, especialmente em tópicos especializados ou recentes. Com RAG, as respostas são ancoradas em documentos recuperados que você controla.',
@@ -1386,6 +1416,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         howItWorks: {
+          id: 'how-a-rag-system-works',
           title: 'Como funciona um sistema RAG passo a passo',
           content: [
             '**Um sistema RAG típico passa por quatro etapas principais: ingestão, indexação, recuperação e geração.** Cada etapa pode ser ajustada de forma independente.',
@@ -1403,6 +1434,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         vsFineTuning: {
+          id: 'rag-vs-fine-tuning',
           title: 'RAG vs Fine-Tuning: quando usar cada um',
           content: [
             '**RAG e fine-tuning resolvem problemas diferentes e funcionam melhor quando combinados, não tratados como alternativas.** Use RAG primeiro. Adicione fine-tuning apenas quando precisar de mudanças de comportamento consistentes que o RAG não consegue fornecer via prompting.',
@@ -1420,6 +1452,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         vectorDbTable: {
+          id: 'comparison-table',
           title: 'Comparação de bancos de dados vetoriais',
           content: ['**A escolha do banco de dados vetorial certo depende da sua escala, requisitos de residência de dados e modelo operacional.** A tabela abaixo cobre as seis opções mais amplamente implantadas em 2026.'],
           columns: ['Banco de dados', 'Tipo', 'Melhor para', 'Residência de dados na UE', 'Auto-hospedado', 'Custo aproximado'],
@@ -1433,6 +1466,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         example: {
+          id: 'example',
           title: 'Exemplo: Sem RAG vs com RAG',
           content: [
             '**O benefício do RAG fica claro ao comparar responder apenas de memória com responder usando documentos recuperados.** Aqui está um exemplo conceitual para uma pergunta sobre políticas internas.',
@@ -1445,6 +1479,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         multiModel: {
+          id: 'multi-model',
           title: 'RAG em fluxos de trabalho multimodelo',
           content: [
             '**RAG se torna ainda mais poderoso quando combinado com múltiplos modelos e prompting estruturado.** Você pode:',
@@ -1461,6 +1496,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         regionalContext: {
+          id: 'regional-context',
           title: 'RAG em ambientes regulados: Brasil, UE, Japão e China',
           content: [
             '**RAG é a arquitetura preferida para organizações que operam sob regulamentações de proteção de dados, pois dados sensíveis nunca entram nos parâmetros do modelo.**',
@@ -1471,6 +1507,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Erros comuns',
           mistakes: [
             { mistake: 'Fragmentos muito longos', problem: 'Fragmentos com mais de 1.000 palavras reduzem a precisão da recuperação e desperdiçam tokens de contexto com conteúdo irrelevante.', fix: 'Use fragmentos de 200–500 palavras com sobreposição de 10–20%. Teste com 3 tamanhos de fragmento antes de decidir.' },
@@ -1547,7 +1584,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: 'RAG dans les workflows multi-modèles', anchor: '#multi-model' },
         { label: 'RAG dans les environnements régulés', anchor: '#regional-context' },
         { label: 'Erreurs courantes', anchor: '#common-mistakes' },
-        { label: 'Implémenter RAG', anchor: '#how-to-use' },
       ],
       schema: {
         '@context': 'https://schema.org',
@@ -1646,6 +1682,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         whatIsRAG: {
+          id: 'what-rag-is',
           title: 'Qu\'est-ce que RAG',
           content: [
             '**RAG combine un retriever qui trouve les informations pertinentes avec un générateur qui rédige la réponse finale.** Le retriever interroge une base de connaissances (PDFs indexés, pages web, documents internes) selon la requête. Le générateur lit les passages et produit une réponse qui cite ou reflète ce contenu.',
@@ -1657,6 +1694,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         whyItMatters: {
+          id: 'why-rag-matters',
           title: 'Pourquoi RAG est important',
           content: [
             '**RAG réduit les [hallucinations](/fr/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) et maintient les réponses à jour.** Un modèle seul invente volontiers sur des sujets spécialisés ou récents. Avec RAG, les réponses reposent sur des documents que vous contrôlez.',
@@ -1665,6 +1703,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         howItWorks: {
+          id: 'how-a-rag-system-works',
           title: 'Comment fonctionne un système RAG',
           content: [
             '**Quatre étapes principales : ingestion, indexation, récupération, génération.** Chacune peut être affinée indépendamment.',
@@ -1681,6 +1720,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         vsFineTuning: {
+          id: 'rag-vs-fine-tuning',
           title: 'RAG vs Fine-Tuning : quand utiliser quoi',
           content: [
             '**RAG et [Fine-Tuning](/fr/prompt-engineering/prompt-engineering-vs-fine-tuning) résolvent des problèmes différents et marchent mieux combinés.** Commencez par RAG. Ajoutez Fine-Tuning seulement si vous besoin de changements comportementaux stables que le prompting ne peut pas fournir.',
@@ -1701,6 +1741,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         vectorDbTable: {
+          id: 'comparison-table',
           title: 'Comparaison des bases de données vectorielles',
           tableFormat: true,
           content: ['**Choisir la bonne base vectorielle dépend de votre infrastructure, vos contraintes de latence, et vos exigences de conformité.** Voici les six options principales.'],
@@ -1715,6 +1756,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         example: {
+          id: 'example',
           title: 'Exemple : sans vs avec RAG',
           content: [
             '**L\'avantage devient clair en comparant une réponse de mémoire avec une réponse basée sur des documents récupérés.**',
@@ -1727,6 +1769,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         multiModel: {
+          id: 'multi-model',
           title: 'RAG dans les workflows multi-modèles',
           content: [
             '**RAG devient plus puissant combiné avec plusieurs modèles et prompting structuré.**',
@@ -1746,6 +1789,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         regionalContext: {
+          id: 'regional-context',
           title: 'RAG dans les environnements régulés',
           content: [
             '**RAG est préféré quand données sensibles sont en jeu — elles ne touchent jamais les paramètres du modèle.**',
@@ -1755,6 +1799,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Erreurs courantes',
           mistakes: [
             { mistake: 'Utiliser RAG pour ce que le modèle sait déjà', problem: 'Contexte redondant gaspille tokens et ralentit réponses sans bénéfice', fix: 'Réservez RAG aux données domaine-spécifiques, propriétaires, ou très récentes que le modèle ne peut pas connaître.' },
@@ -1861,12 +1906,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: 'なぜRAGが重要か', anchor: '#why-rag-matters' },
         { label: 'RAGシステムの仕組み：ステップバイステップ', anchor: '#how-a-rag-system-works' },
         { label: 'RAG vs ファインチューニング', anchor: '#rag-vs-fine-tuning' },
-        { label: '比較表', anchor: '#comparison-table' },
         { label: '悪い例 vs 良い例', anchor: '#example' },
         { label: 'マルチモデルワークフローにおけるRAG', anchor: '#multi-model' },
         { label: '規制環境におけるRAG', anchor: '#regional-context' },
         { label: 'よくある間違い', anchor: '#common-mistakes' },
-        { label: 'RAGの実装方法', anchor: '#how-to-use' },
       ],
       schema: {
         '@context': 'https://schema.org',
@@ -1965,6 +2008,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         whatIsRAG: {
+          id: 'what-rag-is',
           title: 'RAGとは何か',
           content: [
             '**RAG は関連情報を見つけるレトリバーと、その情報を使って最終回答を執筆するジェネレータを組み合わせます。** レトリバーはユーザークエリに基づいて知識ベース（インデックス付き PDF、ウェブページ、内部ドキュメント）を検索します。ジェネレータはそれから取得された通路を読み、そのコンテンツを引用または反映した回答を生成します。',
@@ -1975,6 +2019,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         whyItMatters: {
+          id: 'why-rag-matters',
           title: 'なぜRAGが重要か',
           content: [
             '**RAG は [ハルシネーション](/ja/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) を削減し、回答を最新に保つため重要です。** 純粋な言語モデルは専門的または最新の話題で自信満々に詳細を作り出すことができます。RAG を使えば、回答はあなたが管理するドキュメントに固定されます。',
@@ -1983,6 +2028,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         howItWorks: {
+          id: 'how-a-rag-system-works',
           title: 'RAGシステムの仕組み',
           content: [
             '**典型的な RAG システムは 4 つの主段階を実行：取得、索引化、検索、生成。** 各段階は独立して調整可能です。',
@@ -1999,6 +2045,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         vsFineTuning: {
+          id: 'rag-vs-fine-tuning',
           title: 'RAG vs ファインチューニング',
           content: [
             '**RAG と [ファインチューニング](/ja/prompt-engineering/prompt-engineering-vs-fine-tuning) は異なる問題を解決し、組み合わせが最適です。** 最初に RAG から始めます。プロンプトでは実現できない一貫した動作変更が必要な場合のみファインチューニングを追加してください。',
@@ -2019,6 +2066,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         example: {
+          id: 'example',
           title: '例：RAG なし vs RAG あり',
           content: [
             '**RAG の利点は記憶だけの回答と取得ドキュメントベースの回答を比較すると明確になります。** 以下は内部ポリシー質問の概念的な例です。',
@@ -2045,6 +2093,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         multiModel: {
+          id: 'multi-model',
           title: 'マルチモデルワークフローでのRAG',
           content: [
             '**RAG は複数モデルと構造化プロンプティングと組み合わせるとさらに強力になります。**',
@@ -2064,6 +2113,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         regionalContext: {
+          id: 'regional-context',
           title: '規制環境におけるRAG',
           content: [
             '**RAG は機密データが扱われる場面で推奨される。モデルパラメータに決して入らないため。**',
@@ -2073,6 +2123,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'よくある間違い',
           mistakes: [
             { mistake: 'モデルが既に知っている知識に RAG を使用', problem: 'モデルが正確に知っているコンテンツ（例：Python 標準ライブラリ）取得は、トークン消費と遅延が増すだけで価値がない', fix: 'RAG をドメイン固有・独占的・最新データに制限してください。一般知識は LLM パラメータに十分。' },
@@ -2179,12 +2230,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: '为什么RAG很重要', anchor: '#why-rag-matters' },
         { label: 'RAG系统如何运作：分步指南', anchor: '#how-a-rag-system-works' },
         { label: 'RAG vs 微调', anchor: '#rag-vs-fine-tuning' },
-        { label: '对比表', anchor: '#comparison-table' },
         { label: '糟糕的提示 vs 优秀的提示', anchor: '#example' },
         { label: '多模型工作流中的RAG', anchor: '#multi-model' },
         { label: '受管制环境中的RAG', anchor: '#regional-context' },
         { label: '常见错误', anchor: '#common-mistakes' },
-        { label: '实施RAG', anchor: '#how-to-use' },
       ],
       schema: {
         '@context': 'https://schema.org',
@@ -2283,6 +2332,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         whatIsRAG: {
+          id: 'what-rag-is',
           title: 'RAG是什么',
           content: [
             '**RAG结合一个查找相关信息的检索器和一个使用该信息撰写最终答案的生成器。** 检索器根据用户查询搜索知识库（索引PDF、网页、内部文档）。生成器随后阅读检索的段落并生成引用或反映该内容的答案。',
@@ -2294,6 +2344,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         whyItMatters: {
+          id: 'why-rag-matters',
           title: '为什么RAG很重要',
           content: [
             '**RAG很重要，因为它减少[幻觉](/zh/prompt-engineering/ai-hallucinations-why-ai-makes-things-up)并保持答案最新。** 纯LLM能够自信地在专业或最新主题上虚构细节。通过RAG，答案固定在你管理的文档中。',
@@ -2302,6 +2353,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         howItWorks: {
+          id: 'how-a-rag-system-works',
           title: 'RAG系统如何运作',
           content: [
             '**典型RAG系统执行4个主要阶段：取入、索引、检索、生成。** 每个阶段都可独立调优。',
@@ -2318,6 +2370,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         vsFineTuning: {
+          id: 'rag-vs-fine-tuning',
           title: 'RAG vs 微调',
           content: [
             '**RAG和[微调](/zh/prompt-engineering/prompt-engineering-vs-fine-tuning)解决不同问题，最适合组合使用。** 从RAG开始。仅当需要提示无法提供的一致行为变化时才添加微调。',
@@ -2338,6 +2391,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         example: {
+          id: 'example',
           title: '示例：无RAG vs 有RAG',
           content: [
             '**RAG的优势在比较仅凭记忆的答案与基于检索文档的答案时变得明显。** 这是内部政策问题的概念示例。',
@@ -2364,6 +2418,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         multiModel: {
+          id: 'multi-model',
           title: '多模型工作流中的RAG',
           content: [
             '**当与多模型和结构化提示结合时，RAG变得更强大。** 你可以：',
@@ -2395,6 +2450,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         regionalContext: {
+          id: 'regional-context',
           title: '受管制环境中的RAG',
           content: [
             '**RAG是管理敏感数据的首选—它永不进入模型参数。**',
@@ -2404,6 +2460,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: '常见错误',
           mistakes: [
             { mistake: '为模型已知的信息使用RAG', problem: '检索模型已准确掌握的内容（如Python标准库）只是浪费令牌和增加延迟，没有价值', fix: '将RAG保留给特定领域、专有或最新信息。一般知识已在模型参数中。' },
@@ -2520,7 +2577,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: '멀티모델 워크플로에서의 RAG', anchor: '#multi-model' },
         { label: '규제 환경에서의 RAG', anchor: '#regional-context' },
         { label: '일반적인 실수', anchor: '#common-mistakes' },
-        { label: 'RAG 구현 방법', anchor: '#how-to-use' },
       ],
       schema: {
         '@context': 'https://schema.org',
@@ -2625,6 +2681,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         whatIsRAG: {
+          id: 'what-rag-is',
           title: 'RAG란 무엇인가',
           content: [
             '**RAG는 관련 정보를 찾는 검색기와 해당 정보를 사용하여 최종 답변을 작성하는 생성기를 결합합니다.** 검색기는 사용자의 쿼리를 기반으로 지식 베이스(인덱싱된 PDF, 웹 페이지, 내부 문서 등)를 검색합니다. 생성기는 검색된 단락을 읽고 해당 콘텐츠를 인용하거나 반영하는 응답을 생성합니다.',
@@ -2636,6 +2693,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         whyItMatters: {
+          id: 'why-rag-matters',
           title: 'RAG가 중요한 이유',
           content: [
             '**RAG가 중요한 이유는 [환각](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up)을 줄이고 답변을 최신 상태로 유지하기 때문입니다.** 순수 언어 모델은 특히 전문적이거나 최신 주제에서 자신 있게 세부 사항을 꾸며낼 수 있습니다. RAG를 사용하면 답변이 사용자가 제어하는 검색된 문서에 고정됩니다.',
@@ -2644,6 +2702,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         howItWorks: {
+          id: 'how-a-rag-system-works',
           title: 'RAG 시스템 단계별 작동 원리',
           content: [
             '**일반적인 RAG 시스템은 수집, 인덱싱, 검색, 생성의 네 가지 주요 단계를 거칩니다.** 각 단계는 독립적으로 조정할 수 있습니다.',
@@ -2665,6 +2724,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         vsFineTuning: {
+          id: 'rag-vs-fine-tuning',
           title: 'RAG 대 파인튜닝: 각각을 언제 사용해야 하는가',
           content: [
             '**RAG와 [파인튜닝](/prompt-engineering/prompt-engineering-vs-fine-tuning)은 서로 다른 문제를 해결하며, 대안으로 취급하기보다 결합했을 때 가장 잘 작동합니다.** RAG를 먼저 사용하십시오. 파인튜닝은 RAG가 프롬프팅을 통해 제공할 수 없는 일관된 행동 변화가 필요한 경우에만 추가하십시오.',
@@ -2685,6 +2745,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         vectorDbTable: {
+          id: 'comparison-table',
           title: '벡터 데이터베이스 비교',
           content: ['**적합한 벡터 데이터베이스 선택은 규모, 데이터 거주 요구사항, 운영 모델에 따라 달라집니다.** 아래 표는 2026년 기준으로 가장 널리 배포된 6가지 옵션을 다룹니다.'],
           columns: ['데이터베이스', '유형', '최적 사용처', 'EU 데이터 거주', '자체 호스팅', '대략적 비용'],
@@ -2698,6 +2759,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         example: {
+          id: 'example',
           title: '예시: RAG 없음 대 RAG 있음',
           content: [
             '**RAG의 이점은 기억만으로 답변하는 것과 검색된 문서를 사용하여 답변하는 것을 비교했을 때 명확해집니다.** 다음은 내부 정책 질문에 대한 개념적 예시입니다.',
@@ -2710,6 +2772,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         multiModel: {
+          id: 'multi-model',
           title: '멀티모델 워크플로에서의 RAG',
           content: [
             '**RAG는 여러 모델과 구조화된 프롬프팅과 결합할 때 더욱 강력해집니다.** 다음과 같이 활용할 수 있습니다:',
@@ -2729,6 +2792,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         regionalContext: {
+          id: 'regional-context',
           title: '규제 환경에서의 RAG: EU, 일본, 중국',
           content: [
             '**RAG는 민감한 데이터가 모델 파라미터에 절대 들어가지 않기 때문에 데이터 보호 규정 하에서 운영되는 조직에 선호되는 아키텍처입니다.**',
@@ -2738,6 +2802,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: '일반적인 실수',
           mistakes: [
             {

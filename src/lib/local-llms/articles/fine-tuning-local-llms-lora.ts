@@ -34,7 +34,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         { label: 'Hyperparameter Tuning', anchor: '#hyperparameters' },
         { label: 'Evaluation and Testing', anchor: '#evaluation' },
         { label: 'Common Mistakes', anchor: '#common-mistakes' },
-        { label: 'Common Questions', anchor: '#common-questions' },
+        { label: 'Common Questions', anchor: '#faq' },
         { label: 'Related Reading', anchor: '#related-reading' },
         { label: 'Sources', anchor: '#sources' },
       ],
@@ -56,6 +56,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         whatIsLora: {
+          id: 'what-is-lora',
           title: 'How Does LoRA Work?',
           content: [
             '**LoRA adds small "adapter" matrices alongside the original model weights.** During training, only the adapters are updated. Original weights freeze.',
@@ -87,6 +88,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           imageCaption: 'VRAM requirements by fine-tuning method across 7B, 13B, and 70B models. Full fine-tuning requires 28+ GB for 7B; QLoRA reduces this to 8 GB. For enterprises, QLoRA enables fine-tuning 70B models on dual RTX 4090s (~40 GB total).',
         },
         finetuningVsRag: {
+          id: 'finetuning-vs-rag',
           title: 'Should You Fine-Tune or Use RAG?',
           content: [
             'Decision matrix:',
@@ -104,6 +106,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           columns: ['Criteria', 'Fine-Tuning', 'RAG'],
         },
         trainingData: {
+          id: 'training-data',
           title: 'How Do You Prepare Training Data?',
           content: [
             '**Quality training data determines fine-tuning success.** Poor data = poor model.',
@@ -117,12 +120,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           imageCaption: 'Training data preparation workflow: collect 500+ domain-specific instruction/output pairs, format as JSONL (one per line), and load into SFTTrainer. Quality matters more than quantity—100 high-quality examples outperform 1000 low-quality ones.',
         },
         trainingSetup: {
+          id: 'training-setup',
           title: 'Fine-Tuning Setup With Unsloth',
           content: 'Unsloth is the fastest LoRA framework (up to 2× speed vs standard training, [per official benchmarks](https://github.com/unslothai/unsloth)):',
           codeBlock: '# Install unsloth\npip install unsloth[colab-new] xformers bitsandbytes\n\nfrom unsloth import FastLanguageModel\nfrom datasets import load_dataset\n\n# Load base model with LoRA\nmodel, tokenizer = FastLanguageModel.from_pretrained(\n  model_name="unsloth/llama-3.1-8b-bnb-4bit",\n  max_seq_length=2048,\n  load_in_4bit=True,\n  lora_r=16, lora_alpha=32,\n  lora_dropout=0.05\n)\n\n# Load training data\ndataset = load_dataset("json", data_files="training.jsonl")\n\n# Configure trainer\nfrom trl import SFTTrainer\ntrainer = SFTTrainer(\n  model=model,\n  tokenizer=tokenizer,\n  train_dataset=dataset["train"],\n  dataset_text_field="text",\n  max_seq_length=2048,\n  args=TrainingArguments(\n    per_device_train_batch_size=4,\n    num_train_epochs=3,\n    learning_rate=2e-4,\n    output_dir="output"\n  )\n)\n\n# Train\ntrainer.train()',
           codeLanguage: 'python',
         },
         hyperparameters: {
+          id: 'hyperparameters',
           title: 'Key Hyperparameters for LoRA Fine-Tuning',
           rows: [
             { 'Hyperparameter': 'learning_rate', 'Recommended Value': '2e-4', 'Typical Range': '1e-5 to 1e-3', 'Effect': 'Lower = stable, slower convergence' },
@@ -135,6 +140,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           columns: ['Hyperparameter', 'Recommended Value', 'Typical Range', 'Effect'],
         },
         evaluation: {
+          id: 'evaluation',
           title: 'How Do You Evaluate Fine-Tuned Models?',
           content: [
             '**Training loss:** Should decrease over epochs. If flat, learning rate may be too low.',
@@ -144,6 +150,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'What Are the Most Common Fine-Tuning Mistakes?',
           items: [
             '**Too few training examples.** <200 examples often leads to overfitting. Collect at least 500.',
@@ -400,7 +407,7 @@ schema: {
         { label: 'Ajuste de hiperparámetros', anchor: '#hyperparameters' },
         { label: 'Evaluación y pruebas', anchor: '#evaluation' },
         { label: 'Errores comunes', anchor: '#common-mistakes' },
-        { label: 'Preguntas frecuentes', anchor: '#common-questions' },
+        { label: 'Preguntas frecuentes', anchor: '#faq' },
         { label: 'Lecturas relacionadas', anchor: '#related-reading' },
         { label: 'Fuentes', anchor: '#sources' },
       ],
@@ -421,6 +428,7 @@ schema: {
           ],
         },
         whatIsLora: {
+          id: 'what-is-lora',
           title: '¿Cómo funciona LoRA?',
           content: [
             '**LoRA agrega pequeñas matrices "adaptadoras" junto a los pesos originales del modelo.** Durante el entrenamiento, solo se actualizan los adaptadores. Los pesos originales permanecen congelados.',
@@ -452,6 +460,7 @@ schema: {
           imageCaption: 'Requisitos de VRAM por método de fine-tuning en modelos de 7B, 13B y 70B. El fine-tuning completo requiere 28+ GB para 7B; QLoRA lo reduce a 8 GB. Para empresas, QLoRA permite el fine-tuning de modelos de 70B en dual RTX 4090s (~40 GB en total).',
         },
         finetuningVsRag: {
+          id: 'finetuning-vs-rag',
           title: '¿Deberías hacer fine-tuning o usar RAG?',
           content: [
             'Matriz de decisión:',
@@ -469,6 +478,7 @@ schema: {
           columns: ['Criterio', 'Fine-Tuning', 'RAG'],
         },
         trainingData: {
+          id: 'training-data',
           title: '¿Cómo preparas los datos de entrenamiento?',
           content: [
             '**La calidad de los datos de entrenamiento determina el éxito del fine-tuning.** Datos malos = modelo malo.',
@@ -482,12 +492,14 @@ schema: {
           imageCaption: 'Flujo de trabajo de preparación de datos de entrenamiento: recopila 500+ pares instrucción/salida específicos del dominio, formatea en JSONL (uno por línea) y cárgalos en SFTTrainer. La calidad importa más que la cantidad — 100 ejemplos de alta calidad superan a 1000 de baja calidad.',
         },
         trainingSetup: {
+          id: 'training-setup',
           title: 'Configuración de fine-tuning con Unsloth',
           content: 'Unsloth es el framework LoRA más rápido (hasta 2× de velocidad respecto al entrenamiento estándar, [según unsloth.ai](https://github.com/unslothai/unsloth)):',
           codeBlock: '# Install unsloth\npip install unsloth[colab-new] xformers bitsandbytes\n\nfrom unsloth import FastLanguageModel\nfrom datasets import load_dataset\n\n# Load base model with LoRA\nmodel, tokenizer = FastLanguageModel.from_pretrained(\n  model_name="unsloth/llama-3.1-8b-bnb-4bit",\n  max_seq_length=2048,\n  load_in_4bit=True,\n  lora_r=16, lora_alpha=32,\n  lora_dropout=0.05\n)\n\n# Load training data\ndataset = load_dataset("json", data_files="training.jsonl")\n\n# Configure trainer\nfrom trl import SFTTrainer\ntrainer = SFTTrainer(\n  model=model,\n  tokenizer=tokenizer,\n  train_dataset=dataset["train"],\n  dataset_text_field="text",\n  max_seq_length=2048,\n  args=TrainingArguments(\n    per_device_train_batch_size=4,\n    num_train_epochs=3,\n    learning_rate=2e-4,\n    output_dir="output"\n  )\n)\n\n# Train\ntrainer.train()',
           codeLanguage: 'python',
         },
         hyperparameters: {
+          id: 'hyperparameters',
           title: 'Hiperparámetros clave para el fine-tuning con LoRA',
           rows: [
             { 'Hiperparámetro': 'learning_rate', 'Valor recomendado': '2e-4', 'Rango típico': '1e-5 a 1e-3', 'Efecto': 'Más bajo = estable, convergencia más lenta' },
@@ -500,6 +512,7 @@ schema: {
           columns: ['Hiperparámetro', 'Valor recomendado', 'Rango típico', 'Efecto'],
         },
         evaluation: {
+          id: 'evaluation',
           title: '¿Cómo evalúas los modelos con fine-tuning?',
           content: [
             '**Pérdida de entrenamiento:** debe disminuir a lo largo de las épocas. Si se mantiene plana, la tasa de aprendizaje puede ser demasiado baja.',
@@ -509,6 +522,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: '¿Cuáles son los errores más comunes en el fine-tuning?',
           items: [
             '**Demasiado pocos ejemplos de entrenamiento.** Menos de 200 ejemplos suele provocar sobreajuste. Recopila al menos 500.',
@@ -765,7 +779,7 @@ schema: {
         { label: 'ضبط المعاملات الفائقة', anchor: '#hyperparameters' },
         { label: 'التقييم والاختبار', anchor: '#evaluation' },
         { label: 'أخطاء شائعة', anchor: '#common-mistakes' },
-        { label: 'الأسئلة الشائعة', anchor: '#common-questions' },
+        { label: 'الأسئلة الشائعة', anchor: '#faq' },
         { label: 'قراءات ذات صلة', anchor: '#related-reading' },
         { label: 'المصادر', anchor: '#sources' },
       ],
@@ -786,6 +800,7 @@ schema: {
           ],
         },
         whatIsLora: {
+          id: 'what-is-lora',
           title: 'كيف يعمل LoRA؟',
           content: [
             '**يضيف LoRA مصفوفات "مُكيِّفة" صغيرة بجانب أوزان النموذج الأصلية.** أثناء التدريب، تُحدَّث المُكيِّفات فقط. تبقى الأوزان الأصلية مجمّدة.',
@@ -817,6 +832,7 @@ schema: {
           imageCaption: 'متطلبات VRAM حسب طريقة الضبط الدقيق على نماذج 7B و13B و70B. يتطلب الضبط الدقيق الكامل 28+ GB لـ 7B؛ يقلّصه QLoRA إلى 8 GB. للمؤسسات، يتيح QLoRA الضبط الدقيق لنماذج 70B على بطاقتي RTX 4090 (~40 GB إجمالاً).',
         },
         finetuningVsRag: {
+          id: 'finetuning-vs-rag',
           title: 'هل يجب أن تجري الضبط الدقيق أم تستخدم RAG؟',
           content: [
             'مصفوفة القرار:',
@@ -834,6 +850,7 @@ schema: {
           columns: ['المعيار', 'الضبط الدقيق', 'RAG'],
         },
         trainingData: {
+          id: 'training-data',
           title: 'كيف تُعِدّ بيانات التدريب؟',
           content: [
             '**تحدّد جودة بيانات التدريب نجاح الضبط الدقيق.** بيانات سيئة = نموذج سيئ.',
@@ -847,12 +864,14 @@ schema: {
           imageCaption: 'سير عمل إعداد بيانات التدريب: اجمع 500+ زوج تعليمة/مخرج خاص بالمجال، نسّقها بصيغة JSONL (واحد لكل سطر) وحمّلها في SFTTrainer. الجودة أهم من الكمية — 100 مثال عالي الجودة يتفوق على 1000 منخفض الجودة.',
         },
         trainingSetup: {
+          id: 'training-setup',
           title: 'إعداد الضبط الدقيق بـ Unsloth',
           content: 'Unsloth هو إطار LoRA الأسرع (سرعة تصل إلى 2× مقارنة بالتدريب القياسي، [وفق unsloth.ai](https://github.com/unslothai/unsloth)):',
           codeBlock: '# Install unsloth\npip install unsloth[colab-new] xformers bitsandbytes\n\nfrom unsloth import FastLanguageModel\nfrom datasets import load_dataset\n\n# Load base model with LoRA\nmodel, tokenizer = FastLanguageModel.from_pretrained(\n  model_name="unsloth/llama-3.1-8b-bnb-4bit",\n  max_seq_length=2048,\n  load_in_4bit=True,\n  lora_r=16, lora_alpha=32,\n  lora_dropout=0.05\n)\n\n# Load training data\ndataset = load_dataset("json", data_files="training.jsonl")\n\n# Configure trainer\nfrom trl import SFTTrainer\ntrainer = SFTTrainer(\n  model=model,\n  tokenizer=tokenizer,\n  train_dataset=dataset["train"],\n  dataset_text_field="text",\n  max_seq_length=2048,\n  args=TrainingArguments(\n    per_device_train_batch_size=4,\n    num_train_epochs=3,\n    learning_rate=2e-4,\n    output_dir="output"\n  )\n)\n\n# Train\ntrainer.train()',
           codeLanguage: 'python',
         },
         hyperparameters: {
+          id: 'hyperparameters',
           title: 'المعاملات الفائقة الرئيسية للضبط الدقيق بـ LoRA',
           rows: [
             { 'المعامل الفائق': 'learning_rate', 'القيمة الموصى بها': '2e-4', 'النطاق النموذجي': '1e-5 إلى 1e-3', 'التأثير': 'أقل = مستقر، تقارب أبطأ' },
@@ -865,6 +884,7 @@ schema: {
           columns: ['المعامل الفائق', 'القيمة الموصى بها', 'النطاق النموذجي', 'التأثير'],
         },
         evaluation: {
+          id: 'evaluation',
           title: 'كيف تقيّم النماذج المضبوطة بدقة؟',
           content: [
             '**خسارة التدريب:** يجب أن تنخفض عبر الحقب. إذا بقيت مسطّحة، فقد يكون معدل التعلّم منخفضاً جداً.',
@@ -874,6 +894,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'ما الأخطاء الأكثر شيوعاً في الضبط الدقيق؟',
           items: [
             '**أمثلة تدريب قليلة جداً.** أقل من 200 مثال يسبب غالباً فرط التخصيص. اجمع 500 على الأقل.',
@@ -1124,8 +1145,6 @@ schema: {
         { label: 'O que é QLoRA?', anchor: '#qlora' },
         { label: 'Quando fazer fine-tuning vs RAG', anchor: '#finetuning-vs-rag' },
         { label: 'Configuração do Unsloth (6 passos)', anchor: '#unsloth-setup' },
-        { label: 'Hiperparâmetros LoRA', anchor: '#lora-hyperparameters' },
-        { label: 'Erros comuns', anchor: '#common-mistakes' },
         { label: 'Perguntas frequentes', anchor: '#faq' },
         { label: 'Leituras relacionadas', anchor: '#related-reading' },
       ],
@@ -1271,7 +1290,7 @@ schema: {
         { label: 'Wichtige Hyperparameter', anchor: '#hyperparameters' },
         { label: 'Evaluation und Tests', anchor: '#evaluation' },
         { label: 'Häufige Fehler', anchor: '#common-mistakes' },
-        { label: 'Häufig gestellte Fragen', anchor: '#common-questions' },
+        { label: 'Häufig gestellte Fragen', anchor: '#faq' },
         { label: 'Weiterführende Ressourcen', anchor: '#related-reading' },
         { label: 'Quellen', anchor: '#sources' },
       ],
@@ -1292,6 +1311,7 @@ schema: {
           ],
         },
         whatIsLora: {
+          id: 'what-is-lora',
           title: 'Wie funktioniert LoRA?',
           content: [
             '**LoRA fügt kleine „Adapter"-Matrizen neben den ursprünglichen Modellgewichten hinzu.** Während des Trainings werden nur die Adapter aktualisiert. Ursprüngliche Gewichte bleiben eingefroren.',
@@ -1323,6 +1343,7 @@ schema: {
           imageCaption: 'VRAM-Anforderungen nach Fine-Tuning-Methode über 7B-, 13B- und 70B-Modelle. Vollständiges Fine-Tuning benötigt 28+ GB für 7B; QLoRA reduziert dies auf 8 GB. Für Unternehmen ermöglicht QLoRA Fine-Tuning von 70B-Modellen auf Dual RTX 4090s (~40 GB gesamt).',
         },
         finetuningVsRag: {
+          id: 'finetuning-vs-rag',
           title: 'Fine-Tuning oder RAG?',
           content: [
             'Entscheidungsmatrix:',
@@ -1340,6 +1361,7 @@ schema: {
           columns: ['Kriterium', 'Fine-Tuning', 'RAG'],
         },
         trainingData: {
+          id: 'training-data',
           title: 'Wie bereiten Sie Trainingsdaten vor?',
           content: [
             '**Qualität der Trainingsdaten bestimmt Fine-Tuning-Erfolg.** Schlechte Daten = schlechtes Modell.',
@@ -1353,12 +1375,14 @@ schema: {
           imageCaption: 'Trainingsdaten-Vorbereitungs-Arbeitsablauf: Sammeln Sie 500+ domänenspezifische Anleisungs-/Ausgabepaare, formatieren Sie als JSONL (eine pro Zeile) und laden Sie sie in SFTTrainer. Qualität ist wichtiger als Quantität – 100 hochwertige Beispiele schlagen 1000 minderwertige.',
         },
         trainingSetup: {
+          id: 'training-setup',
           title: 'Fine-Tuning-Setup mit Unsloth',
           content: 'Unsloth ist das schnellste LoRA-Framework (bis zu 2× Geschwindigkeit ggü. Standard-Training, [laut unsloth.ai](https://github.com/unslothai/unsloth)):',
           codeBlock: '# Unsloth installieren\\npip install unsloth[colab-new] xformers bitsandbytes\\n\\nfrom unsloth import FastLanguageModel\\nfrom datasets import load_dataset\\n\\n# Basismodell mit LoRA laden\\nmodel, tokenizer = FastLanguageModel.from_pretrained(\\n  model_name="unsloth/llama-3.1-8b-bnb-4bit",\\n  max_seq_length=2048,\\n  load_in_4bit=True,\\n  lora_r=16, lora_alpha=32,\\n  lora_dropout=0.05\\n)\\n\\n# Trainingsdaten laden\\ndataset = load_dataset("json", data_files="training.jsonl")\\n\\n# Trainer konfigurieren\\nfrom trl import SFTTrainer\\ntrainer = SFTTrainer(\\n  model=model,\\n  tokenizer=tokenizer,\\n  train_dataset=dataset["train"],\\n  dataset_text_field="text",\\n  max_seq_length=2048,\\n  args=TrainingArguments(\\n    per_device_train_batch_size=4,\\n    num_train_epochs=3,\\n    learning_rate=2e-4,\\n    output_dir="output"\\n  )\\n)\\n\\n# Trainieren\\ntrainer.train()',
           codeLanguage: 'python',
         },
         hyperparameters: {
+          id: 'hyperparameters',
           title: 'Wichtige Hyperparameter für LoRA Fine-Tuning',
           rows: [
             { 'Hyperparameter': 'learning_rate', 'Empfohlener Wert': '2e-4', 'Typischer Bereich': '1e-5 bis 1e-3', 'Effekt': 'Niedriger = stabil, langsamere Konvergenz' },
@@ -1371,6 +1395,7 @@ schema: {
           columns: ['Hyperparameter', 'Empfohlener Wert', 'Typischer Bereich', 'Effekt'],
         },
         evaluation: {
+          id: 'evaluation',
           title: 'Wie bewerten Sie fine-getunete Modelle?',
           content: [
             '**Trainingsverlust:** Sollte über Epochen abnehmen. Wenn flach, kann die Learning Rate zu niedrig sein.',
@@ -1380,6 +1405,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Welche sind die häufigsten Fine-Tuning-Fehler?',
           items: [
             '**Zu wenige Trainingsbeispiele.** <200 Beispiele führen oft zu Überanpassung. Sammeln Sie mindestens 500.',
@@ -1658,7 +1684,7 @@ schema: {
         { label: 'Hyperparamètres clés', anchor: '#hyperparameters' },
         { label: 'Évaluation et tests', anchor: '#evaluation' },
         { label: 'Erreurs courantes', anchor: '#common-mistakes' },
-        { label: 'Questions fréquentes', anchor: '#common-questions' },
+        { label: 'Questions fréquentes', anchor: '#faq' },
         { label: 'Lectures supplémentaires', anchor: '#related-reading' },
         { label: 'Sources', anchor: '#sources' },
       ],
@@ -1679,6 +1705,7 @@ schema: {
           ],
         },
         whatIsLora: {
+          id: 'what-is-lora',
           title: 'Comment fonctionne LoRA ?',
           content: [
             '**LoRA ajoute de petites matrices « adaptateur » aux côtés des poids du modèle original.** Pendant l\'entraînement, seuls les adaptateurs sont mis à jour. Les poids d\'origine restent figés.',
@@ -1710,6 +1737,7 @@ schema: {
           imageCaption: 'Besoins en VRAM par méthode de fine-tuning sur modèles 7B, 13B et 70B. Le fine-tuning complet nécessite 28+ Go pour 7B ; QLoRA réduit cela à 8 Go. Pour les entreprises, QLoRA permet le fine-tuning de modèles 70B sur dual RTX 4090s (~40 Go total).',
         },
         finetuningVsRag: {
+          id: 'finetuning-vs-rag',
           title: 'Fine-tuning ou RAG ?',
           content: [
             'Matrice de décision :',
@@ -1727,6 +1755,7 @@ schema: {
           columns: ['Critère', 'Fine-tuning', 'RAG'],
         },
         trainingData: {
+          id: 'training-data',
           title: 'Comment préparez-vous les données d\'entraînement ?',
           content: [
             '**La qualité des données d\'entraînement détermine le succès du fine-tuning.** Mauvaises données = mauvais modèle.',
@@ -1740,12 +1769,14 @@ schema: {
           imageCaption: 'Flux de préparation des données d\'entraînement : collectez 500+ paires instruction/sortie spécifiques au domaine, formatez en JSONL (une par ligne) et chargez dans SFTTrainer. La qualité prime sur la quantité—100 bons exemples surpassent 1000 mauvais.',
         },
         trainingSetup: {
+          id: 'training-setup',
           title: 'Configuration du fine-tuning avec Unsloth',
           content: 'Unsloth est le framework LoRA le plus rapide (jusqu\'à 2× de vitesse vs entraînement standard, [selon unsloth.ai](https://github.com/unslothai/unsloth)) :',
           codeBlock: '# Installer unsloth\\npip install unsloth[colab-new] xformers bitsandbytes\\n\\nfrom unsloth import FastLanguageModel\\nfrom datasets import load_dataset\\n\\n# Charger le modèle de base avec LoRA\\nmodel, tokenizer = FastLanguageModel.from_pretrained(\\n  model_name="unsloth/llama-3.1-8b-bnb-4bit",\\n  max_seq_length=2048,\\n  load_in_4bit=True,\\n  lora_r=16, lora_alpha=32,\\n  lora_dropout=0.05\\n)\\n\\n# Charger les données d\'entraînement\\ndataset = load_dataset("json", data_files="training.jsonl")\\n\\n# Configurer le trainer\\nfrom trl import SFTTrainer\\ntrainer = SFTTrainer(\\n  model=model,\\n  tokenizer=tokenizer,\\n  train_dataset=dataset["train"],\\n  dataset_text_field="text",\\n  max_seq_length=2048,\\n  args=TrainingArguments(\\n    per_device_train_batch_size=4,\\n    num_train_epochs=3,\\n    learning_rate=2e-4,\\n    output_dir="output"\\n  )\\n)\\n\\n# Entraîner\\ntrainer.train()',
           codeLanguage: 'python',
         },
         hyperparameters: {
+          id: 'hyperparameters',
           title: 'Hyperparamètres clés pour le fine-tuning LoRA',
           rows: [
             { 'Hyperparamètre': 'learning_rate', 'Valeur recommandée': '2e-4', 'Plage typique': '1e-5 à 1e-3', 'Effet': 'Plus bas = stable, convergence lente' },
@@ -1758,6 +1789,7 @@ schema: {
           columns: ['Hyperparamètre', 'Valeur recommandée', 'Plage typique', 'Effet'],
         },
         evaluation: {
+          id: 'evaluation',
           title: 'Comment évaluez-vous les modèles fine-tunés ?',
           content: [
             '**Perte d\'entraînement :** Doit diminuer au cours des epochs. Si elle stagne, le learning rate peut être trop bas.',
@@ -1767,6 +1799,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Quelles sont les erreurs courantes du fine-tuning ?',
           items: [
             '**Trop peu d\'exemples d\'entraînement.** <200 exemples mènent souvent au surapprentissage. Collectez au moins 500.',
@@ -2005,7 +2038,7 @@ schema: {
         { label: '主要ハイパーパラメータ', anchor: '#hyperparameters' },
         { label: '評価とテスト', anchor: '#evaluation' },
         { label: 'よくある間違い', anchor: '#common-mistakes' },
-        { label: 'よくある質問', anchor: '#common-questions' },
+        { label: 'よくある質問', anchor: '#faq' },
         { label: '関連資料', anchor: '#related-reading' },
         { label: '出典', anchor: '#sources' },
       ],
@@ -2026,6 +2059,7 @@ schema: {
           ],
         },
         whatIsLora: {
+          id: 'what-is-lora',
           title: 'LoRA の仕組み',
           content: [
             '**LoRA は、元のモデルの重みの横に小さな「アダプター」マトリックスを追加します。** トレーニング中、アダプターのみが更新されます。元の重みは凍結されたままです。',
@@ -2057,6 +2091,7 @@ schema: {
           imageCaption: '7B、13B、70Bモデル間のファインチューニング方法別のVRAM要件。完全なファインチューニングには7B用28GB以上が必要。QLoRAはこれを8GBに削減。企業向けにはQLoRAでデュアルRTX 4090（~40GB）上で70Bファインチューニング可能。',
         },
         finetuningVsRag: {
+          id: 'finetuning-vs-rag',
           title: 'ファインチューニング vs RAG',
           content: [
             '決定マトリックス：',
@@ -2074,6 +2109,7 @@ schema: {
           columns: ['基準', 'ファインチューニング', 'RAG'],
         },
         trainingData: {
+          id: 'training-data',
           title: 'トレーニングデータの準備方法',
           content: [
             '**トレーニングデータの品質がファインチューニング成功を決定します。** 悪いデータ＝悪いモデル。',
@@ -2087,12 +2123,14 @@ schema: {
           imageCaption: 'トレーニングデータ準備ワークフロー：500+のドメイン固有の指示/出力ペアを収集し、JSONL（1行1例）としてフォーマットしてSFTTrainerに読み込みます。質量より質が重要—100個の高品質例は1000個の低品質例を上回ります。',
         },
         trainingSetup: {
+          id: 'training-setup',
           title: 'Unsloth でのファインチューニング設定',
           content: 'Unsloth は最速の LoRA フレームワークです（標準トレーニングより最大2倍高速、[unsloth.ai 公式ベンチマーク](https://github.com/unslothai/unsloth)）：',
           codeBlock: '# unsloth をインストール\\npip install unsloth[colab-new] xformers bitsandbytes\\n\\nfrom unsloth import FastLanguageModel\\nfrom datasets import load_dataset\\n\\n# LoRA でベースモデルをロード\\nmodel, tokenizer = FastLanguageModel.from_pretrained(\\n  model_name="unsloth/llama-3.1-8b-bnb-4bit",\\n  max_seq_length=2048,\\n  load_in_4bit=True,\\n  lora_r=16, lora_alpha=32,\\n  lora_dropout=0.05\\n)\\n\\n# トレーニングデータをロード\\ndataset = load_dataset("json", data_files="training.jsonl")\\n\\n# トレーナーを設定\\nfrom trl import SFTTrainer\\ntrainer = SFTTrainer(\\n  model=model,\\n  tokenizer=tokenizer,\\n  train_dataset=dataset["train"],\\n  dataset_text_field="text",\\n  max_seq_length=2048,\\n  args=TrainingArguments(\\n    per_device_train_batch_size=4,\\n    num_train_epochs=3,\\n    learning_rate=2e-4,\\n    output_dir="output"\\n  )\\n)\\n\\n# トレーニング\\ntrainer.train()',
           codeLanguage: 'python',
         },
         hyperparameters: {
+          id: 'hyperparameters',
           title: 'LoRA ファインチューニングの主要ハイパーパラメータ',
           rows: [
             { 'ハイパーパラメータ': 'learning_rate', '推奨値': '2e-4', '典型的な範囲': '1e-5 から 1e-3', '効果': '低い＝安定、遅い収束' },
@@ -2105,6 +2143,7 @@ schema: {
           columns: ['ハイパーパラメータ', '推奨値', '典型的な範囲', '効果'],
         },
         evaluation: {
+          id: 'evaluation',
           title: 'ファインチューニングされたモデルの評価方法',
           content: [
             '**トレーニングロス：** エポック全体で減少する必要があります。フラットな場合、学習率が低すぎる可能性があります。',
@@ -2114,6 +2153,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'よくあるファインチューニング間違い',
           items: [
             '**トレーニング例が少なすぎる。** <200例は過学習につながることが多い。少なくとも500を収集してください。',
@@ -2352,7 +2392,7 @@ schema: {
         { label: 'LoRA 微调的关键超参数', anchor: '#hyperparameters' },
         { label: '如何评估微调模型？', anchor: '#evaluation' },
         { label: '最常见的微调错误', anchor: '#common-mistakes' },
-        { label: '常见问题', anchor: '#common-questions' },
+        { label: '常见问题', anchor: '#faq' },
         { label: '相关阅读', anchor: '#related-reading' },
         { label: '来源', anchor: '#sources' },
       ],
@@ -2373,6 +2413,7 @@ schema: {
           ],
         },
         whatIsLora: {
+          id: 'what-is-lora',
           title: 'LoRA 如何工作？',
           content: [
             '**LoRA 在原始模型权重旁边添加小型"适配器"矩阵。** 在训练期间，仅更新适配器。原始权重冻结。',
@@ -2404,6 +2445,7 @@ schema: {
           imageCaption: '7B、13B 和 70B 模型微调方法的 VRAM 需求。完全微调需要 7B 的 28GB+；QLoRA 将其减少到 8GB。对于企业级，QLoRA 支持在双 RTX 4090（~40GB）上微调 70B 模型。',
         },
         finetuningVsRag: {
+          id: 'finetuning-vs-rag',
           title: '微调还是 RAG？',
           content: [
             '决策矩阵：',
@@ -2421,6 +2463,7 @@ schema: {
           columns: ['标准', '微调', 'RAG'],
         },
         trainingData: {
+          id: 'training-data',
           title: '如何准备训练数据？',
           content: [
             '**训练数据质量决定微调成功。** 差数据 = 差模型。',
@@ -2434,12 +2477,14 @@ schema: {
           imageCaption: '训练数据准备工作流：收集 500+ 特定领域的指令/输出对，格式化为 JSONL（每行一个示例），加载到 SFTTrainer。质量比数量更重要——100 个高质量示例优于 1000 个低质量示例。',
         },
         trainingSetup: {
+          id: 'training-setup',
           title: 'Unsloth 微调设置',
           content: 'Unsloth 是最快的 LoRA 框架（相比标准训练最快快 2 倍，[据 unsloth.ai 官方基准](https://github.com/unslothai/unsloth)）：',
           codeBlock: '# 安装 unsloth\\npip install unsloth[colab-new] xformers bitsandbytes\\n\\nfrom unsloth import FastLanguageModel\\nfrom datasets import load_dataset\\n\\n# 用 LoRA 加载基础模型\\nmodel, tokenizer = FastLanguageModel.from_pretrained(\\n  model_name="unsloth/llama-3.1-8b-bnb-4bit",\\n  max_seq_length=2048,\\n  load_in_4bit=True,\\n  lora_r=16, lora_alpha=32,\\n  lora_dropout=0.05\\n)\\n\\n# 加载训练数据\\ndataset = load_dataset("json", data_files="training.jsonl")\\n\\n# 配置训练器\\nfrom trl import SFTTrainer\\ntrainer = SFTTrainer(\\n  model=model,\\n  tokenizer=tokenizer,\\n  train_dataset=dataset["train"],\\n  dataset_text_field="text",\\n  max_seq_length=2048,\\n  args=TrainingArguments(\\n    per_device_train_batch_size=4,\\n    num_train_epochs=3,\\n    learning_rate=2e-4,\\n    output_dir="output"\\n  )\\n)\\n\\n# 训练\\ntrainer.train()',
           codeLanguage: 'python',
         },
         hyperparameters: {
+          id: 'hyperparameters',
           title: 'LoRA 微调的关键超参数',
           rows: [
             { '超参数': 'learning_rate', '推荐值': '2e-4', '典型范围': '1e-5 至 1e-3', '效果': '更低 = 稳定，收敛更慢' },
@@ -2452,6 +2497,7 @@ schema: {
           columns: ['超参数', '推荐值', '典型范围', '效果'],
         },
         evaluation: {
+          id: 'evaluation',
           title: '如何评估微调模型？',
           content: [
             '**训练损失：** 应该随着 epochs 下降。如果平坦，学习率可能太低。',
@@ -2461,6 +2507,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: '最常见的微调错误有哪些？',
           items: [
             '**训练示例太少。** <200 个示例通常导致过拟合。至少收集 500 个。',
@@ -2723,7 +2770,7 @@ schema: {
         { label: '하이퍼파라미터 조정', anchor: '#hyperparameters' },
         { label: '평가 및 테스트', anchor: '#evaluation' },
         { label: '일반적인 실수', anchor: '#common-mistakes' },
-        { label: '자주 묻는 질문', anchor: '#common-questions' },
+        { label: '자주 묻는 질문', anchor: '#faq' },
         { label: '관련 자료', anchor: '#related-reading' },
         { label: '출처', anchor: '#sources' },
       ],
@@ -2744,6 +2791,7 @@ schema: {
           ],
         },
         whatIsLora: {
+          id: 'what-is-lora',
           title: 'LoRA는 어떻게 작동합니까?',
           content: [
             '**LoRA는 원래 모델 가중치 옆에 소형 "어댑터" 행렬을 추가합니다.** 학습 중에는 어댑터만 업데이트되고 원래 가중치는 동결됩니다.',
@@ -2775,6 +2823,7 @@ schema: {
           imageCaption: '7B, 13B, 70B 모델 크기별 파인튜닝 방법에 따른 VRAM 요구 사항. 완전 파인튜닝은 7B에 28 GB 이상이 필요하고, QLoRA는 8 GB로 줄입니다. 기업 사용자의 경우 QLoRA를 통해 듀얼 RTX 4090(총 ~40 GB)에서 70B 모델 파인튜닝이 가능합니다.',
         },
         finetuningVsRag: {
+          id: 'finetuning-vs-rag',
           title: '파인튜닝을 해야 합니까, RAG를 사용해야 합니까?',
           content: [
             '의사결정 매트릭스:',
@@ -2792,6 +2841,7 @@ schema: {
           columns: ['Criteria', 'Fine-Tuning', 'RAG'],
         },
         trainingData: {
+          id: 'training-data',
           title: '훈련 데이터를 어떻게 준비합니까?',
           content: [
             '**고품질 훈련 데이터가 파인튜닝 성공을 결정합니다.** 나쁜 데이터 = 나쁜 모델.',
@@ -2805,12 +2855,14 @@ schema: {
           imageCaption: '훈련 데이터 준비 워크플로: 도메인 특화 명령/출력 쌍 500개 이상 수집, JSONL 형식으로 저장(줄당 하나), SFTTrainer에 로드. 품질이 수량보다 중요합니다 — 고품질 예제 100개가 저품질 예제 1000개보다 우수합니다.',
         },
         trainingSetup: {
+          id: 'training-setup',
           title: 'Unsloth를 사용한 파인튜닝 설정',
           content: 'Unsloth는 가장 빠른 LoRA 프레임워크입니다(표준 학습 대비 최대 2배 빠름, [unsloth.ai 공식 벤치마크](https://github.com/unslothai/unsloth)):',
           codeBlock: '# Install unsloth\npip install unsloth[colab-new] xformers bitsandbytes\n\nfrom unsloth import FastLanguageModel\nfrom datasets import load_dataset\n\n# Load base model with LoRA\nmodel, tokenizer = FastLanguageModel.from_pretrained(\n  model_name="unsloth/llama-3.1-8b-bnb-4bit",\n  max_seq_length=2048,\n  load_in_4bit=True,\n  lora_r=16, lora_alpha=32,\n  lora_dropout=0.05\n)\n\n# Load training data\ndataset = load_dataset("json", data_files="training.jsonl")\n\n# Configure trainer\nfrom trl import SFTTrainer\ntrainer = SFTTrainer(\n  model=model,\n  tokenizer=tokenizer,\n  train_dataset=dataset["train"],\n  dataset_text_field="text",\n  max_seq_length=2048,\n  args=TrainingArguments(\n    per_device_train_batch_size=4,\n    num_train_epochs=3,\n    learning_rate=2e-4,\n    output_dir="output"\n  )\n)\n\n# Train\ntrainer.train()',
           codeLanguage: 'python',
         },
         hyperparameters: {
+          id: 'hyperparameters',
           title: 'LoRA 파인튜닝의 주요 하이퍼파라미터',
           rows: [
             { 'Hyperparameter': 'learning_rate', 'Recommended Value': '2e-4', 'Typical Range': '1e-5 ~ 1e-3', 'Effect': '낮을수록 안정적이나 수렴이 느림' },
@@ -2823,6 +2875,7 @@ schema: {
           columns: ['Hyperparameter', 'Recommended Value', 'Typical Range', 'Effect'],
         },
         evaluation: {
+          id: 'evaluation',
           title: '파인튜닝된 모델을 어떻게 평가합니까?',
           content: [
             '**학습 손실:** 에포크가 진행될수록 감소해야 합니다. 평탄하면 학습률이 너무 낮을 수 있습니다.',
@@ -2832,6 +2885,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: '가장 일반적인 파인튜닝 실수는 무엇입니까?',
           items: [
             '**훈련 예제 부족.** 200개 미만의 예제는 과적합으로 이어지는 경우가 많습니다. 최소 500개를 수집하십시오.',

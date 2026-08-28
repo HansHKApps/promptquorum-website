@@ -26,10 +26,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       aboutTopics: ['AI research tools', 'Perplexity AI', 'Hallucination detection'],
       howToName: 'How to Use AI for Research With Verified Outputs',
       toc: [
-        { label: 'What AI-Powered Research Actually Does', anchor: '#what-it-does' },
         { label: 'The Right Tool for Each Research Stage', anchor: '#right-tool' },
         { label: 'The Hallucination Problem in Research AI', anchor: '#hallucination' },
-        { label: 'How to Verify AI Research Outputs', anchor: '#verification' },
         { label: 'Prompt Engineering for Research Tasks', anchor: '#prompt-engineering' },
         { label: 'The Research Prompt Framework', anchor: '#prompt-framework' },
         { label: 'Temperature Settings for Research', anchor: '#temperature' },
@@ -250,6 +248,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         toolComparison: {
+          id: 'right-tool',
           title: 'The Right Tool for Each Research Stage',
           content: [
             '**As of April 2026, no single AI research tool handles every research stage well — the highest-quality workflows route each task to the tool best designed for it.**',
@@ -302,6 +301,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         hallucinationRisk: {
+          id: 'hallucination',
           title: 'The Hallucination Problem in Research AI',
           content: [
             '**As of April 2026, AI systems hallucinate citations and fabricate statistics — and these errors survive peer review.** GPTZero analyzed 4,841 papers accepted by NeurIPS 2025 (the top machine learning conference, acceptance rate 24.52%) and found 100+ confirmed hallucinated citations across 53 papers, all of which had passed multi-reviewer peer review.',
@@ -345,6 +345,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         promptStructure: {
+          id: 'prompt-engineering',
           title: 'Prompt Engineering for Research Tasks',
           content: [
             '**Structured prompts produce more accurate and verifiable research outputs than open-ended questions — the difference is in specificity of scope, output format, and explicit instructions to cite sources.**',
@@ -353,6 +354,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         promptFramework: {
+          id: 'prompt-framework',
           title: 'The Research Prompt Framework',
           content: [
             'Use this structure for any AI research task:',
@@ -379,6 +381,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           blockquote: 'You are a systematic review researcher. Summarize the current scientific consensus on AI hallucination rates across domains (medical, legal, general knowledge). Cite only peer-reviewed papers or official model evaluation reports published 2023—2026. Format results as: Domain | Hallucination Rate | Study | Year. If a specific rate is not verified, label it \'estimated\' and flag it.',
         },
         parameters: {
+          id: 'temperature',
           title: 'Temperature Settings for Research',
           content: [
             '**Set Temperature (T) to 0.0—0.2 for all research tasks that require factual accuracy.** Temperature (T) is the hyperparameter applied to the softmax output distribution: at T = 0.0, the model selects the highest-probability token at every step, producing deterministic output. At T = 1.0, output becomes more varied — desirable for creative tasks, dangerous for citation generation where a single wrong token changes an author name or DOI.',
@@ -414,6 +417,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         contextWindow: {
+          id: 'context-window',
           title: 'AI Research Tools by Model: Context Window Limits',
           content: [
             '**The context window size determines how many research papers an LLM can process in a single session — this is the primary technical constraint for large-scale literature synthesis.**',
@@ -449,6 +453,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         globalContext: {
+          id: 'regional',
           title: 'Global and Regional Research AI Context',
           content: [
             'European research institutions increasingly require that AI-assisted research comply with the EU AI Act, which mandates transparency, traceability, and human oversight for high-risk AI applications including academic publishing. Mistral AI (France) is widely used in EU academic settings because its models are deployable on-premise, satisfying GDPR data residency requirements for sensitive research data.',
@@ -457,6 +462,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Common Mistakes in AI-Assisted Research',
           content: [
             '**Avoid these frequent errors when using AI tools for research:**',

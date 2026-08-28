@@ -628,7 +628,6 @@ export const article: Partial<Record<Language, PEArticle>> = {
         { label: 'Extraktiv vs. Abstraktiv: Was ist besser geeignet?', anchor: '#two-summarisation-types' },
         { label: 'Welches Modell hat die niedrigste Halluzinationsrate?', anchor: '#which-model-for-summarisation' },
         { label: 'Tool-Vergleich Zusammenfassung', anchor: '#tool-comparison' },
-        { label: 'Modellvergleich: Genauigkeit & Kosten', anchor: '#model-comparison' },
         { label: 'Wie Sie Extraktionsprompts schreiben', anchor: '#extraction-prompt-structure' },
         { label: 'Der 5-Komponenten-Extraktionsprompt', anchor: '#five-component-prompt' },
         { label: 'Chunking langer Dokumente', anchor: '#chunking-long-documents' },

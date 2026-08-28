@@ -1843,6 +1843,7 @@ schema: {
           ],
         },
         sources: {
+          id: 'sources',
           title: '参考文献',
           items: [
             '[llama.cpp GitHub — 官方仓库与基准测试](https://github.com/ggerganov/llama.cpp)',

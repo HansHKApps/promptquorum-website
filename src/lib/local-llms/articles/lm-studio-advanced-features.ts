@@ -125,7 +125,7 @@ schema: {
         { label: 'Batch Inference', anchor: '#batch-inference' },
         { label: 'Performance Benchmarking', anchor: '#benchmarking' },
         { label: 'Common Mistakes', anchor: '#common-mistakes' },
-        { label: 'Common Questions', anchor: '#common-questions' },
+        { label: 'Common Questions', anchor: '#faq' },
         { label: 'Related Reading', anchor: '#related-reading' },
         { label: 'Sources', anchor: '#sources' },
       ],
@@ -147,6 +147,7 @@ schema: {
           ],
         },
         gpuMemory: {
+          id: 'gpu-memory',
           title: 'How Do You Configure GPU Memory in LM Studio?',
           content: 'LM Studio lets you control how much GPU VRAM the model uses:',
           items: [
@@ -160,6 +161,7 @@ schema: {
           imageCaption: 'LM Studio GPU allocation tradeoff: 100% and 80% run at near-baseline speed, 50% is 2-5x slower, and 10% is 5-10x slower -- 80% is the recommended starting point.',
         },
         contextWindow: {
+          id: 'context-window',
           title: 'How Do You Extend Context Window?',
           content: 'Context window is the maximum number of tokens (text) the model can read. Extending it allows longer conversations but uses more VRAM.',
           items: [
@@ -173,6 +175,7 @@ schema: {
           imageCaption: 'Context window VRAM scaling in LM Studio: 4K tokens uses ~2 GB KV cache, 8K ~4 GB, 16K ~8 GB, and 32K ~16 GB, so context past 16K typically needs a 24 GB+ GPU.',
         },
         localAPI: {
+          id: 'local-api',
           title: 'How Do You Enable LM Studio\'s Local API (Beta)?',
           content: 'LM Studio\'s local API (beta as of April 2026) mimics OpenAI\'s API:',
           codeBlock: '# 1. Open LM Studio Settings → Server\n# 2. Turn on "Enable local API server"\n# 3. API runs at http://localhost:1234/v1\n\n# 4. Use it like Ollama:\nfrom openai import OpenAI\nclient = OpenAI(\n  base_url="http://localhost:1234/v1",\n  api_key="not-needed"\n)\nresponse = client.chat.completions.create(\n  model="llama-3.2-3b-gguf",\n  messages=[{"role": "user", "content": "Hello"}]\n)\nprint(response.choices[0].message.content)',
@@ -185,6 +188,7 @@ schema: {
           youtubeUrl: 'https://www.youtube.com/watch?v=3zSANOIBHYw',
         },
         lora: {
+          id: 'lora-finetuning',
           title: 'Can You Fine-Tune Models With LM Studio?',
           content: [
             '**As of April 2026, LM Studio does not have built-in LoRA fine-tuning.** For fine-tuning, use:',
@@ -195,6 +199,7 @@ schema: {
           ],
         },
         batch: {
+          id: 'batch-inference',
           title: 'How Do You Run Batch Inference in LM Studio?',
           content: [
             '**Batch inference means processing multiple prompts without waiting for responses between them.** LM Studio does not have a built-in batch mode, but you can simulate it via the API or Python loop:',
@@ -203,6 +208,7 @@ schema: {
           codeLanguage: 'python',
         },
         benchmarking: {
+          id: 'benchmarking',
           title: 'How Do You Benchmark Model Speed in LM Studio?',
           content: 'LM Studio includes a built-in benchmark tool:',
           items: [
@@ -214,6 +220,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Common Mistakes With LM Studio Advanced Features',
           items: [
             '**Lowering GPU allocation too much and blaming slowness on the model.** If you set GPU to 10%, inference will be 5-10× slower because it is running mostly on CPU. Test with 80%+ GPU allocation first.',
@@ -275,8 +282,6 @@ schema: {
       primaryTerm: 'LM Studio erweiterte Funktionen',
       toc: [
         { label: 'Zusammenfassung', anchor: '#zusammenfassung' },
-        { label: 'Was sind erweiterte Funktionen?', anchor: '#was-sind-erweitert' },
-        { label: 'Was können Sie tun?', anchor: '#was-koennen-sie' },
         { label: 'Schnelle Übersicht', anchor: '#schnelle-uebersicht' },
         { label: 'Schnelle Entscheidungen', anchor: '#schnelle-entscheidungen' },
         { label: 'Welche Funktionen sind wichtig?', anchor: '#wichtige-funktionen' },
@@ -289,11 +294,12 @@ schema: {
         { label: 'Performance-Benchmarking', anchor: '#benchmarking' },
         { label: 'Häufige Fehler', anchor: '#haeufige-fehler' },
         { label: 'Häufig gestellte Fragen', anchor: '#faq' },
-        { label: 'Weiterführende Ressourcen', anchor: '#ressourcen' },
+        { label: 'Weiterführende Ressourcen', anchor: '#related-reading' },
         { label: 'Quellen', anchor: '#quellen' },
       ],
       sections: {
         zusammenfassung: {
+          id: 'zusammenfassung',
           isTldr: true,
           snippetBlocks: [
             { type: 'one-sentence', text: 'Las funciones avanzadas de LM Studio para desarrolladores incluyen configuración de memoria GPU, ajuste de la ventana de contexto, un servidor API local compatible con OpenAI, y la capacidad de cargar adaptadores LoRA ya entrenados -- aunque el entrenamiento LoRA en sí no está integrado.' },
@@ -333,6 +339,7 @@ schema: {
           ],
         },
         schnelleUebersicht: {
+          id: 'schnelle-uebersicht',
           title: 'Schnelle Übersicht',
           content: 'Erweiterte Funktionen verbessern Leistung und Kontrolle:',
           items: [
@@ -348,6 +355,7 @@ schema: {
           ],
         },
         schnelleEntscheidungen: {
+          id: 'schnelle-entscheidungen',
           title: 'Schnelle Entscheidungen: Welche Funktionen sollten Sie nutzen?',
           items: [
             '✅ **Nutzen Sie GPU-Speicher-Konfiguration wenn:**\n- Sie VRAM für andere Apps freigeben möchten\n- Verschiedene Einstellungen benchmarken\n→ Empfohlen: Beginnen Sie bei 80%, reduzieren Sie nur bei Bedarf',
@@ -357,6 +365,7 @@ schema: {
           ],
         },
         wichtigeFunktionen: {
+          id: 'wichtige-funktionen',
           itemHeadings: true,
           title: 'Welche LM Studio Funktionen sind am wichtigsten?',
           content: 'Nicht alle erweiterten Funktionen sind für jeden Benutzer relevant. Ihre Kompetenzstufe und Ihr Anwendungsfall bestimmen, welche Funktionen Sie tatsächlich anpassen sollten.',
@@ -386,6 +395,7 @@ schema: {
           columns: ['Kompetenzstufe', 'Worauf Sie sich konzentrieren sollten', 'Was Sie ignorieren sollten', 'Empfehlung', 'Grund'],
         },
         wannNichtNutzen: {
+          id: 'wann-nicht-nutzen',
           title: 'Wann sollten Sie erweiterte Funktionen NICHT nutzen?',
           content: 'Erweiterte Funktionen können zu Instabilität, Abstürzen oder unerwartetem Verhalten führen, wenn sie falsch angewendet werden. Wissen Sie, wann Sie sie vermeiden sollten.',
           items: [
@@ -397,6 +407,7 @@ schema: {
           ],
         },
         gpuSpeicher: {
+          id: 'gpu-speicher',
           title: 'Wie konfigurieren Sie GPU-Speicher in LM Studio?',
           content: 'LM Studio lässt Sie kontrollieren, wie viel GPU VRAM das Modell verwendet. Informationen zu VRAM-Anforderungen nach Modell finden Sie unter [How Much VRAM for Local LLMs](/de/local-llms/how-much-vram-local-llm):',
           items: [
@@ -410,6 +421,7 @@ schema: {
           imageCaption: 'LM Studio GPU-Zuweisung im Vergleich: 100 % und 80 % laufen nahe der Basisgeschwindigkeit, 50 % ist 2-5× langsamer, 10 % ist 5-10× langsamer -- 80 % ist der empfohlene Startwert.',
         },
         kontextFenster: {
+          id: 'kontext-fenster',
           title: 'Wie erweitern Sie das Kontextfenster?',
           content: 'Das Kontextfenster ist die maximale Anzahl der Token (Text), die das Modell lesen kann. Das Erweitern ermöglicht längere Konversationen, verbraucht aber mehr VRAM. Hinweise zu modellspezifischen Kontextgrenzen finden Sie in der [Qwen vs Llama vs Mistral](/de/local-llms/qwen-vs-llama-vs-mistral) Vergleich.',
           items: [
@@ -423,12 +435,14 @@ schema: {
           imageCaption: 'VRAM-Skalierung des Kontextfensters in LM Studio: 4k Token benötigen ca. 2 GB KV-Cache, 8k ca. 4 GB, 16k ca. 8 GB und 32k ca. 16 GB -- ab 16k Token wird meist eine GPU mit 24 GB+ benötigt.',
         },
         lokaleAPI: {
+          id: 'lokale-api',
           title: 'Wie aktivieren Sie die lokale API von LM Studio (Beta)?',
           content: 'Die lokale API von LM Studio (Beta seit April 2026) ahmt die API von OpenAI nach. Weitere Informationen zu lokalem API-Setup und Alternativen finden Sie unter [Local LLM OpenAI-Compatible API](/de/local-llms/local-llm-openai-compatible-api):',
           codeBlock: '# 1. Öffnen Sie LM Studio Einstellungen → Server\n# 2. Schalten Sie "Enable local API server" ein\n# 3. API läuft unter http://localhost:1234/v1\n\n# 4. Verwenden Sie es wie Ollama:\nfrom openai import OpenAI\nclient = OpenAI(\n  base_url="http://localhost:1234/v1",\n  api_key="nicht-erforderlich"\n)\nresponse = client.chat.completions.create(\n  model="llama-3.2-3b-gguf",\n  messages=[{"role": "user", "content": "Hallo"}]\n)\nprint(response.choices[0].message.content)',
           codeLanguage: 'python',
         },
         lora: {
+          id: 'lora-finetuning',
           title: 'Können Sie Modelle mit LM Studio fine-tunen?',
           content: [
             '**Seit April 2026 ist LoRA Fine-Tuning nicht in LM Studio integriert.** Für Fine-Tuning verwenden Sie:',
@@ -439,6 +453,7 @@ schema: {
           ],
         },
         batchInferenz: {
+          id: 'batch-inferenz',
           title: 'Wie führen Sie Batch-Inferenz in LM Studio durch?',
           content: [
             '**Batch-Inferenz bedeutet die Verarbeitung mehrerer Aufforderungen, ohne auf Antworten zu warten.** LM Studio hat keinen integrierten Batch-Modus, aber Sie können ihn über die API oder Python-Schleife simulieren:',
@@ -447,6 +462,7 @@ schema: {
           codeLanguage: 'python',
         },
         benchmarking: {
+          id: 'benchmarking',
           title: 'Wie benchmarken Sie die Modellgeschwindigkeit in LM Studio?',
           content: 'LM Studio hat ein integriertes Benchmark-Tool:',
           items: [
@@ -458,6 +474,7 @@ schema: {
           ],
         },
         haeufigeFehler: {
+          id: 'haeufige-fehler',
           title: 'Häufige Fehler mit LM Studio erweiterten Funktionen',
           items: [
             '**GPU-Zuweisung zu stark reduzieren und Langsamkeit dem Modell zuschreiben.** Wenn Sie GPU auf 10 % stellen, wird die Inferenz 5-10× langsamer, weil sie hauptsächlich auf der CPU läuft. Testen Sie zuerst mit 80%+ GPU-Zuweisung.',
@@ -678,6 +695,7 @@ schema: {
       ],
       sections: {
         pointsCles: {
+          id: 'points-cles',
           isTldr: true,
           snippetBlocks: [
             { type: 'one-sentence', text: 'تشمل الميزات المتقدمة لـ LM Studio للمطورين إعداد ذاكرة GPU، وضبط نافذة السياق، وخادم API محلي متوافق مع OpenAI، والقدرة على تحميل محوّلات LoRA مدرّبة مسبقاً -- رغم أن تدريب LoRA نفسه غير مدمج.' },
@@ -703,10 +721,12 @@ schema: {
           ],
         },
         queSontFonctionnalites: {
+          id: 'que-sont',
           title: 'Que sont les fonctionnalités avancées LM Studio ?',
           content: 'Les fonctionnalités avancées LM Studio sont des options de configuration et outils pour optimiser la performance modèle, gérer les ressources et personnaliser les workflows LLM au-delà de l\'interface chat. Ces fonctionnalités offrent capacités niveau développeur : gestion mémoire GPU, optimisation fenêtre contexte, APIs compatibles OpenAI et intégration pipelines fine-tuning.',
         },
         quePouvezVousFaire: {
+          id: 'que-faire',
           title: 'Que pouvez-vous vraiment faire avec les fonctionnalités avancées LM Studio ?',
           items: [
             '**Améliorer vitesse inférence** - Ajustez allocation GPU, paramètres quantification, traitement batch pour obtenir génération tokens plus rapide et latence réduite.',
@@ -717,6 +737,7 @@ schema: {
           ],
         },
         resumeRapide: {
+          id: 'resume-rapide',
           title: 'Résumé rapide',
           content: 'Les fonctionnalités avancées améliorent performance et contrôle :',
           items: [
@@ -732,6 +753,7 @@ schema: {
           ],
                 },
         decisionsRapides: {
+          id: 'decisions-rapides',
           title: 'Décisions rapides : Quelles fonctionnalités devrais-je utiliser ?',
           items: [
             '✅ **Utilisez Configuration mémoire GPU si :**\n- Voulez libérer VRAM pour autres apps\n- Effectuez des benchmarks de différents paramétrages\n→ Recommandé : Commencez à 80%, baissez seulement si nécessaire',
@@ -741,6 +763,7 @@ schema: {
           ],
         },
         fonctionnalitesImportantes: {
+          id: 'fonctionnalites-importantes',
           itemHeadings: true,
           title: 'Quelles fonctionnalités LM Studio comptent vraiment ?',
           content: 'Toutes les fonctionnalités avancées ne sont pas pertinentes pour chaque utilisateur. Votre niveau compétence et cas usage déterminent quelles fonctionnalités ajuster.',
@@ -770,6 +793,7 @@ schema: {
           columns: ['Niveau', 'Concentrez-vous sur', 'Ignorez', 'Recommandation', 'Pourquoi'],
         },
         quandNePas: {
+          id: 'quand-ne-pas',
           title: 'Quand NE PAS utiliser les fonctionnalités avancées',
           content: 'Les fonctionnalités avancées peuvent causer instabilité, crashes ou comportements inattendus. Sachez quand les éviter.',
           items: [
@@ -781,6 +805,7 @@ schema: {
           ],
         },
         gpuMemoire: {
+          id: 'gpu-memoire',
           title: 'Comment configurer mémoire GPU dans LM Studio ?',
           content: 'LM Studio contrôle combien VRAM le modèle utilise. Pour besoins VRAM par modèle, voir [How Much VRAM for Local LLMs](/fr/local-llms/how-much-vram-local-llm):',
           items: [
@@ -794,6 +819,7 @@ schema: {
           imageCaption: 'Compromis d\'allocation GPU dans LM Studio : 100 % et 80 % tournent près de la vitesse de base, 50 % est 2 à 5× plus lent, 10 % est 5 à 10× plus lent -- 80 % est le point de départ recommandé.',
         },
         fenetrContexte: {
+          id: 'fenetre-contexte',
           title: 'Comment étendre la fenêtre de contexte ?',
           content: 'La fenêtre contexte est nombre maximum de tokens (texte) que le modèle lit. L\'étendre permet conversations plus longues mais utilise plus VRAM. Pour limites contexte par modèle, voir comparaison [Qwen vs Llama vs Mistral](/fr/local-llms/qwen-vs-llama-vs-mistral).',
           items: [
@@ -807,12 +833,14 @@ schema: {
           imageCaption: 'Mise à l\'échelle VRAM de la fenêtre de contexte dans LM Studio : 4K tokens utilise ~2 Go de cache KV, 8K ~4 Go, 16K ~8 Go, 32K ~16 Go -- au-delà de 16K, un GPU de 24 Go+ est généralement nécessaire.',
         },
         apiLocale: {
+          id: 'api-locale',
           title: 'Comment activer l\'API locale LM Studio (Beta) ?',
           content: 'L\'API locale LM Studio (Beta depuis avril 2026) imite l\'API OpenAI. Pour plus sur setup API locale et alternatives, voir [Local LLM OpenAI-Compatible API](/fr/local-llms/local-llm-openai-compatible-api):',
           codeBlock: '# 1. Ouvrez LM Studio Paramètres → Serveur\n# 2. Activez "Enable local API server"\n# 3. API tourne sur http://localhost:1234/v1\n\n# 4. Utilisez comme Ollama:\nfrom openai import OpenAI\nclient = OpenAI(\n  base_url="http://localhost:1234/v1",\n  api_key="pas-requis"\n)\nresponse = client.chat.completions.create(\n  model="llama-3.2-3b-gguf",\n  messages=[{"role": "user", "content": "Bonjour"}]\n)\nprint(response.choices[0].message.content)',
           codeLanguage: 'python',
         },
         lora: {
+          id: 'lora-finetuning',
           title: 'Pouvez-vous fine-tuner des modèles avec LM Studio ?',
           content: [
             '**Depuis avril 2026, le fine-tuning LoRA n\'est pas intégré.** Pour fine-tuning, utilisez :',
@@ -823,6 +851,7 @@ schema: {
           ],
         },
         inferenceBatch: {
+          id: 'inference-batch',
           title: 'Comment exécuter l\'inférence batch dans LM Studio ?',
           content: [
             '**L\'inférence batch traite plusieurs prompts sans attendre réponses.** LM Studio n\'a pas mode batch intégré, mais vous pouvez le simuler via API ou boucle Python :',
@@ -831,6 +860,7 @@ schema: {
           codeLanguage: 'python',
         },
         benchmarking: {
+          id: 'benchmarking',
           title: 'Comment benchmarker vitesse modèle dans LM Studio ?',
           content: 'LM Studio inclut un outil benchmark intégré :',
           items: [
@@ -842,6 +872,7 @@ schema: {
           ],
         },
         erreursCourantes: {
+          id: 'erreurs-courantes',
           title: 'Erreurs courantes avec les fonctionnalités avancées LM Studio',
           items: [
             '**Réduire allocation GPU trop et blâmer modèle.** Allocation 10 % rend inférence 5-10× lente (CPU fallback). Testez d\'abord 80%+ GPU.',
@@ -885,6 +916,7 @@ schema: {
           ],
         },
         relatedReading: {
+          id: 'ressources',
           title: 'Ressources connexes',
           items: [
             '[Comment installer LM Studio](/fr/local-llms/how-to-install-lm-studio) - Guide complet pour macOS, Windows et Linux.',
@@ -1472,7 +1504,7 @@ schema: {
         { label: 'Inferencia por lotes', anchor: '#batch-inference' },
         { label: 'Benchmarking de rendimiento', anchor: '#benchmarking' },
         { label: 'Errores comunes', anchor: '#common-mistakes' },
-        { label: 'Preguntas frecuentes', anchor: '#common-questions' },
+        { label: 'Preguntas frecuentes', anchor: '#faq' },
         { label: 'Lecturas relacionadas', anchor: '#related-reading' },
         { label: 'Fuentes', anchor: '#sources' },
       ],
@@ -1493,6 +1525,7 @@ schema: {
           ],
         },
         gpuMemory: {
+          id: 'gpu-memory',
           title: '¿Cómo configuras la memoria GPU en LM Studio?',
           content: 'LM Studio te permite controlar cuánta VRAM de GPU usa el modelo:',
           items: [
@@ -1506,6 +1539,7 @@ schema: {
           imageCaption: 'Compensación de asignación de GPU en LM Studio: 100% y 80% funcionan casi a velocidad base, 50% es 2-5x más lento, 10% es 5-10x más lento -- 80% es el punto de partida recomendado.',
         },
         contextWindow: {
+          id: 'context-window',
           title: '¿Cómo extiendes la ventana de contexto?',
           content: 'La ventana de contexto es el número máximo de tokens (texto) que el modelo puede leer. Extenderla permite conversaciones más largas, pero consume más VRAM.',
           items: [
@@ -1519,6 +1553,7 @@ schema: {
           imageCaption: 'Escalado de VRAM de la ventana de contexto en LM Studio: 4K tokens usa ~2 GB de caché KV, 8K ~4 GB, 16K ~8 GB, y 32K ~16 GB -- superar 16K normalmente requiere una GPU de 24 GB+.',
         },
         localAPI: {
+          id: 'local-api',
           title: '¿Cómo activas la API local de LM Studio (Beta)?',
           content: 'La API local de LM Studio (beta a partir de abril de 2026) imita la API de OpenAI:',
           codeBlock: '# 1. Open LM Studio Settings → Server\n# 2. Turn on "Enable local API server"\n# 3. API runs at http://localhost:1234/v1\n\n# 4. Use it like Ollama:\nfrom openai import OpenAI\nclient = OpenAI(\n  base_url="http://localhost:1234/v1",\n  api_key="not-needed"\n)\nresponse = client.chat.completions.create(\n  model="llama-3.2-3b-gguf",\n  messages=[{"role": "user", "content": "Hello"}]\n)\nprint(response.choices[0].message.content)',
@@ -1531,6 +1566,7 @@ schema: {
           youtubeUrl: 'https://www.youtube.com/watch?v=3zSANOIBHYw',
         },
         lora: {
+          id: 'lora-finetuning',
           title: '¿Puedes ajustar fino modelos con LM Studio?',
           content: [
             '**A partir de abril de 2026, LM Studio no tiene ajuste fino con LoRA integrado.** Para ajuste fino, usa:',
@@ -1541,6 +1577,7 @@ schema: {
           ],
         },
         batch: {
+          id: 'batch-inference',
           title: '¿Cómo ejecutas inferencia por lotes en LM Studio?',
           content: [
             '**La inferencia por lotes significa procesar múltiples prompts sin esperar las respuestas entre ellos.** LM Studio no tiene un modo por lotes integrado, pero puedes simularlo mediante la API o un bucle en Python:',
@@ -1549,6 +1586,7 @@ schema: {
           codeLanguage: 'python',
         },
         benchmarking: {
+          id: 'benchmarking',
           title: '¿Cómo mides el rendimiento del modelo en LM Studio?',
           content: 'LM Studio incluye una herramienta de benchmark integrada:',
           items: [
@@ -1560,6 +1598,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Errores comunes con las funciones avanzadas de LM Studio',
           items: [
             '**Reducir demasiado la asignación de GPU y culpar al modelo por la lentitud.** Si estableces la GPU al 10 %, la inferencia será 5-10× más lenta porque se ejecuta principalmente en la CPU. Primero prueba con una asignación de GPU del 80 % o más.',
@@ -1732,7 +1771,7 @@ schema: {
         { label: 'الاستدلال على دفعات', anchor: '#batch-inference' },
         { label: 'قياس الأداء', anchor: '#benchmarking' },
         { label: 'الأخطاء الشائعة', anchor: '#common-mistakes' },
-        { label: 'الأسئلة الشائعة', anchor: '#common-questions' },
+        { label: 'الأسئلة الشائعة', anchor: '#faq' },
         { label: 'قراءات ذات صلة', anchor: '#related-reading' },
         { label: 'المصادر', anchor: '#sources' },
       ],
@@ -1753,6 +1792,7 @@ schema: {
           ],
         },
         gpuMemory: {
+          id: 'gpu-memory',
           title: 'كيف تُعِد ذاكرة GPU في LM Studio؟',
           content: 'يتيح لك LM Studio التحكم في مقدار VRAM الخاص بـ GPU الذي يستخدمه النموذج:',
           items: [
@@ -1766,6 +1806,7 @@ schema: {
           imageCaption: 'مفاضلة تخصيص GPU في LM Studio: تعمل نسبتا 100% و80% بسرعة قريبة من الأساس، بينما 50% أبطأ بـ 2-5 مرات، و10% أبطأ بـ 5-10 مرات -- 80% هي نقطة البداية الموصى بها.',
         },
         contextWindow: {
+          id: 'context-window',
           title: 'كيف تُمدِّد نافذة السياق؟',
           content: 'نافذة السياق هي الحد الأقصى لعدد الـ token (النص) التي يمكن للنموذج قراءتها. يتيح تمديدها محادثات أطول، لكنه يستهلك مزيدًا من VRAM.',
           items: [
@@ -1779,6 +1820,7 @@ schema: {
           imageCaption: 'توسّع استخدام VRAM لنافذة السياق في LM Studio: تستهلك 4K توكن حوالي 2 جيجابايت من ذاكرة KV المؤقتة، و8K حوالي 4 جيجابايت، و16K حوالي 8 جيجابايت، و32K حوالي 16 جيجابايت -- تجاوز 16K يتطلب عادةً بطاقة GPU بسعة 24 جيجابايت أو أكثر.',
         },
         localAPI: {
+          id: 'local-api',
           title: 'كيف تُفعِّل واجهة API المحلية لـ LM Studio (تجريبية)؟',
           content: 'تحاكي واجهة API المحلية لـ LM Studio (تجريبية اعتبارًا من أبريل 2026) واجهة OpenAI:',
           codeBlock: '# 1. Open LM Studio Settings → Server\n# 2. Turn on "Enable local API server"\n# 3. API runs at http://localhost:1234/v1\n\n# 4. Use it like Ollama:\nfrom openai import OpenAI\nclient = OpenAI(\n  base_url="http://localhost:1234/v1",\n  api_key="not-needed"\n)\nresponse = client.chat.completions.create(\n  model="llama-3.2-3b-gguf",\n  messages=[{"role": "user", "content": "Hello"}]\n)\nprint(response.choices[0].message.content)',
@@ -1791,6 +1833,7 @@ schema: {
           youtubeUrl: 'https://www.youtube.com/watch?v=3zSANOIBHYw',
         },
         lora: {
+          id: 'lora-finetuning',
           title: 'هل يمكنك إجراء الضبط الدقيق للنماذج باستخدام LM Studio؟',
           content: [
             '**اعتبارًا من أبريل 2026، لا يحتوي LM Studio على ضبط دقيق مدمج باستخدام LoRA.** للضبط الدقيق، استخدم:',
@@ -1801,6 +1844,7 @@ schema: {
           ],
         },
         batch: {
+          id: 'batch-inference',
           title: 'كيف تُشغِّل الاستدلال على دفعات في LM Studio؟',
           content: [
             '**يعني الاستدلال على دفعات معالجة عدة مطالبات دون انتظار الردود فيما بينها.** لا يحتوي LM Studio على وضع دفعات مدمج، لكن يمكنك محاكاته عبر واجهة API أو حلقة في Python:',
@@ -1809,6 +1853,7 @@ schema: {
           codeLanguage: 'python',
         },
         benchmarking: {
+          id: 'benchmarking',
           title: 'كيف تقيس أداء النموذج في LM Studio؟',
           content: 'يتضمن LM Studio أداة قياس أداء مدمجة:',
           items: [
@@ -1820,6 +1865,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'الأخطاء الشائعة مع الميزات المتقدمة في LM Studio',
           items: [
             '**خفض تخصيص GPU كثيرًا ولوم النموذج على البطء.** إذا ضبطت GPU على 10%، فسيكون الاستدلال أبطأ بمقدار 5-10× لأنه يعمل بشكل رئيسي على CPU. جرِّب أولًا تخصيص GPU بنسبة 80% أو أكثر.',
@@ -1891,7 +1937,7 @@ schema: {
         { label: 'Inferência em batch', anchor: '#batch-inference' },
         { label: 'Benchmarking de desempenho', anchor: '#benchmarking' },
         { label: 'Erros comuns', anchor: '#common-mistakes' },
-        { label: 'Perguntas comuns', anchor: '#common-questions' },
+        { label: 'Perguntas comuns', anchor: '#faq' },
         { label: 'Leitura relacionada', anchor: '#related-reading' },
         { label: 'Fontes', anchor: '#sources' },
       ],
@@ -1946,6 +1992,7 @@ schema: {
           ],
         },
         gpuMemory: {
+          id: 'gpu-memory',
           title: 'Como configurar a memória GPU no LM Studio?',
           content: 'O LM Studio permite controlar quanta VRAM da GPU o modelo usa:',
           items: [
@@ -1959,6 +2006,7 @@ schema: {
           imageCaption: 'Tradeoff de alocação de GPU no LM Studio: 100% e 80% rodam perto da velocidade base, 50% é 2-5x mais lento, 10% é 5-10x mais lento -- 80% é o ponto de partida recomendado.',
         },
         contextWindow: {
+          id: 'context-window',
           title: 'Como estender a janela de contexto?',
           content: 'A janela de contexto é o número máximo de tokens (texto) que o modelo pode ler. Estendê-la permite conversas mais longas, mas usa mais VRAM.',
           items: [
@@ -1972,12 +2020,14 @@ schema: {
           imageCaption: 'Escalonamento de VRAM da janela de contexto no LM Studio: 4K tokens usa ~2 GB de cache KV, 8K ~4 GB, 16K ~8 GB, e 32K ~16 GB -- ultrapassar 16K geralmente exige uma GPU de 24 GB+.',
         },
         localAPI: {
+          id: 'local-api',
           title: 'Como habilitar a API local do LM Studio (Beta)?',
           content: 'A API local do LM Studio (beta em abril de 2026) imita a API da OpenAI:',
           codeBlock: '# 1. Abra LM Studio Configurações → Servidor\n# 2. Ative "Enable local API server"\n# 3. A API roda em http://localhost:1234/v1\n\n# 4. Use como o Ollama:\nfrom openai import OpenAI\nclient = OpenAI(\n  base_url="http://localhost:1234/v1",\n  api_key="nao-necessario"\n)\nresponse = client.chat.completions.create(\n  model="llama-3.2-3b-gguf",\n  messages=[{"role": "user", "content": "Olá"}]\n)\nprint(response.choices[0].message.content)',
           codeLanguage: 'python',
         },
         lora: {
+          id: 'lora-finetuning',
           title: 'Você pode fazer fine-tuning de modelos com o LM Studio?',
           content: [
             '**A partir de abril de 2026, o LM Studio não tem fine-tuning com LoRA integrado.** Para fine-tuning, use:',
@@ -1988,6 +2038,7 @@ schema: {
           ],
         },
         batch: {
+          id: 'batch-inference',
           title: 'Como executar inferência em batch no LM Studio?',
           content: [
             '**Inferência em batch significa processar múltiplos prompts sem esperar por respostas entre eles.** O LM Studio não tem modo batch integrado, mas você pode simulá-lo via API ou loop Python:',
@@ -1996,6 +2047,7 @@ schema: {
           codeLanguage: 'python',
         },
         benchmarking: {
+          id: 'benchmarking',
           title: 'Como fazer benchmark da velocidade do modelo no LM Studio?',
           content: 'O LM Studio inclui uma ferramenta de benchmark integrada:',
           items: [
@@ -2007,6 +2059,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'Erros comuns com os recursos avançados do LM Studio',
           items: [
             '**Reduzir a alocação de GPU demais e culpar o modelo pela lentidão.** Se você definir a GPU para 10%, a inferência será 5–10× mais lenta porque está rodando principalmente na CPU. Teste primeiro com alocação de GPU de 80%+.',
@@ -2161,7 +2214,7 @@ schema: {
         { label: '배치 추론', anchor: '#batch-inference' },
         { label: '성능 벤치마킹', anchor: '#benchmarking' },
         { label: '자주 하는 실수', anchor: '#common-mistakes' },
-        { label: '자주 묻는 질문', anchor: '#common-questions' },
+        { label: '자주 묻는 질문', anchor: '#faq' },
         { label: '관련 읽기', anchor: '#related-reading' },
         { label: '출처', anchor: '#sources' },
       ],
@@ -2182,6 +2235,7 @@ schema: {
           ],
         },
         gpuMemory: {
+          id: 'gpu-memory',
           title: 'LM Studio에서 GPU 메모리를 어떻게 구성합니까?',
           content: 'LM Studio에서는 모델이 사용하는 GPU VRAM 양을 제어할 수 있습니다:',
           items: [
@@ -2193,6 +2247,7 @@ schema: {
           ],
         },
         contextWindow: {
+          id: 'context-window',
           title: '컨텍스트 창을 어떻게 확장합니까?',
           content: '컨텍스트 창은 모델이 읽을 수 있는 최대 토큰(텍스트) 수입니다. 확장하면 더 긴 대화가 가능하지만 VRAM을 더 많이 사용합니다.',
           items: [
@@ -2204,6 +2259,7 @@ schema: {
           ],
         },
         localAPI: {
+          id: 'local-api',
           title: 'LM Studio의 로컬 API(베타)를 어떻게 활성화합니까?',
           content: 'LM Studio의 로컬 API(2026년 4월 기준 베타)는 OpenAI API를 모방합니다:',
           codeBlock: '# 1. LM Studio 설정 → 서버를 엽니다\n# 2. "로컬 API 서버 활성화"를 켭니다\n# 3. API는 http://localhost:1234/v1에서 실행됩니다\n\n# 4. Ollama와 동일하게 사용합니다:\nfrom openai import OpenAI\nclient = OpenAI(\n  base_url="http://localhost:1234/v1",\n  api_key="not-needed"\n)\nresponse = client.chat.completions.create(\n  model="llama-3.2-3b-gguf",\n  messages=[{"role": "user", "content": "Hello"}]\n)\nprint(response.choices[0].message.content)',
@@ -2216,6 +2272,7 @@ schema: {
           youtubeUrl: 'https://www.youtube.com/watch?v=3zSANOIBHYw',
         },
         lora: {
+          id: 'lora-finetuning',
           title: 'LM Studio로 모델을 파인튜닝할 수 있습니까?',
           content: [
             '**2026년 4월 기준으로 LM Studio에는 LoRA 파인튜닝 기능이 내장되어 있지 않습니다.** 파인튜닝에는 다음을 사용하십시오:',
@@ -2226,6 +2283,7 @@ schema: {
           ],
         },
         batch: {
+          id: 'batch-inference',
           title: 'LM Studio에서 배치 추론을 어떻게 실행합니까?',
           content: [
             '**배치 추론은 응답을 기다리지 않고 여러 프롬프트를 처리하는 것을 의미합니다.** LM Studio에는 내장된 배치 모드가 없지만, API나 Python 루프를 통해 시뮬레이션할 수 있습니다:',
@@ -2234,6 +2292,7 @@ schema: {
           codeLanguage: 'python',
         },
         benchmarking: {
+          id: 'benchmarking',
           title: 'LM Studio에서 모델 속도를 어떻게 벤치마킹합니까?',
           content: 'LM Studio에는 내장 벤치마크 도구가 포함되어 있습니다:',
           items: [
@@ -2245,6 +2304,7 @@ schema: {
           ],
         },
         commonMistakes: {
+          id: 'common-mistakes',
           title: 'LM Studio 고급 기능에서 자주 하는 실수',
           items: [
             '**GPU 할당을 너무 낮게 설정하고 느린 속도를 모델 탓으로 돌리는 것.** GPU를 10%로 설정하면 대부분 CPU에서 실행되어 추론 속도가 5~10배 느려집니다. 먼저 GPU 할당을 80% 이상으로 테스트하십시오.',
