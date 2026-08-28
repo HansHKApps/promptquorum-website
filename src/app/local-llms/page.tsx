@@ -29,7 +29,7 @@ export async function generateMetadata(): Promise<Metadata> {
       card: 'summary_large_image',
       title: t.localLlmsHubTitle,
       description: selectedLang === 'en'
-        ? 'Run AI locally in 5 min with Ollama. $0/token, offline, private. Hardware guides, model rankings, LM Studio — June 2026.'
+        ? 'Run AI locally in 5 min with Ollama. $0/token, offline, private. Hardware guides, model rankings, LM Studio.'
         : t.localLlmsHubDescription,
     },
   }

@@ -353,5 +353,24 @@
     ],
     "reason": "Removed month label from title; month was a hand-maintained freshness claim that drifted across locales. Year retained. See branch content/remove-month-labels.",
     "baseline": null
+  },
+  {
+    "id": "436e78b6-03be-4e31-b065-d8c4ae76f126",
+    "slug": "/local-llms",
+    "date": "2026-08-28T18:13:42.801Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Best local LLM models ranked by VRAM tier (4GB–48GB): RTX 3060 12GB, RTX 4090, Apple Silicon guides. Ollama setup, hardware tier comparison, beginner tutorials — June 2026.",
+        "new": "Best local LLM models ranked by VRAM tier (4GB–48GB): RTX 3060 12GB, RTX 4090, Apple Silicon guides. Ollama setup, hardware tier comparison, beginner tutorials."
+      }
+    ],
+    "reason": "geo-meta-optimizer + seo-cannibalization: ran cannibalization scan first (no conflict found — how-much-vram-local-llm answers 'how much VRAM do I need', hub's queries are 'best model for my VRAM' — different intent, not competing). Title already matched intent well; real fix was (1) stale '— June/Juni/junio/mayo 2026' trailing date-stamp removed from meta desc, twitter desc, and H1 across all 9 locales (H1 also had a separate drift bug: LocalLLMsHub.tsx's own hardcoded H1 didn't match the metadata title), and (2) added a genuine text-based 'Best Local LLM by VRAM Tier' section (7-row table, 4-48GB) sourced from the existing how-much-vram-local-llm article for fact consistency, since the title promised VRAM-tier content the body never delivered — Diagnosis B3. Also discovered and fixed: the ENTIRE hub component (LocalLLMsHub.tsx) had zero Arabic translations across every single data constant (title, description, comparison table, model table, CTAs — everything), silently falling back to English via '?? [...]['en']' for the whole /ar/local-llms page. Added Arabic for the new VRAM section only (in scope); the pre-existing site-wide AR gap on this page is flagged separately as a much larger finding, not fixed in this pass.",
+    "baseline": {
+      "impressions": 46602,
+      "clicks": 466,
+      "ctr": 0.00999957083386979,
+      "period": "2026-07-31 to 2026-08-27"
+    }
   }
 ]

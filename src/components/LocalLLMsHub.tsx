@@ -44,25 +44,26 @@ function renderDescription(text: string, lang: Language): React.ReactNode {
 }
 
 const HUB_HERO_TITLE: Record<string, string> = {
-  en: 'Best Local LLMs June 2026: Ollama, LM Studio, Hardware & VRAM Guide',
-  de: 'Beste Lokale LLMs Juni 2026: Ollama, LM Studio, Hardware & VRAM Guide',
-  fr: 'Meilleurs LLMs Locaux Juin 2026 : Ollama, LM Studio & Guide VRAM',
-  ja: '2026年6月最高のローカルLLM：Ollama・LM Studio・VRAMガイド',
-  zh: '2026年6月最佳本地LLM：Ollama、LM Studio与VRAM硬件指南',
-  es: 'Mejores LLMs Locales Junio 2026: Ollama, LM Studio, Hardware y Guía de VRAM',
-  pt: 'Melhores LLMs Locais Junho 2026: Ollama, LM Studio, Hardware e Guia de VRAM',
-  ko: '2026년 6월 최고의 로컬 LLM: Ollama, LM Studio, 하드웨어 및 VRAM 가이드',
+  en: 'Best Local LLMs by VRAM Tier 2026: Ollama, LM Studio & Hardware Guide',
+  de: 'Beste Lokale LLMs nach VRAM-Tier 2026: Ollama, LM Studio & Hardware-Guide',
+  fr: 'Meilleurs LLMs Locaux par Palier VRAM 2026 : Ollama, LM Studio & Guide Matériel',
+  ja: 'VRAM別ベストローカルLLM 2026：Ollama・LM Studio・ハードウェアガイド',
+  zh: '按VRAM档位划分的最佳本地LLM 2026：Ollama、LM Studio与硬件指南',
+  es: 'Mejores LLMs Locales por Nivel de VRAM 2026: Ollama, LM Studio y Guía de Hardware',
+  pt: 'Melhores LLMs Locais por Nível de VRAM 2026: Ollama, LM Studio e Guia de Hardware',
+  ko: 'VRAM 등급별 최고의 로컬 LLM 2026: Ollama, LM Studio 및 하드웨어 가이드',
+  ar: 'أفضل ⁨LLM⁩ محلي حسب مستوى ⁨VRAM⁩ ⁨2026⁩: ⁨Ollama⁩ وLM Studio ودليل الأجهزة',
 }
 
 const HUB_HERO_DESC: Record<string, string> = {
-  en: 'Local LLMs are large language models that run entirely on your own computer — no internet connection, no API fees, and no data leaving your machine. If you are just starting, install Ollama and run Llama 3.2 3B or Qwen3 4B on 8 GB of RAM in under 10 minutes; the guides below rank the best models, GPUs, and tools for every budget as of June 2026.',
-  de: 'Lokale LLMs sind große Sprachmodelle, die vollständig auf Ihrem eigenen Computer laufen — ohne Internetverbindung, ohne API-Gebühren und ohne dass Daten Ihr Gerät verlassen. Für den Einstieg installieren Sie Ollama und führen Llama 3.2 3B oder Qwen3 4B mit 8 GB RAM in unter 10 Minuten aus; die folgenden Leitfäden bewerten die besten Modelle, GPUs und Tools für jedes Budget (Stand Juni 2026).',
-  fr: 'Les LLMs locaux sont de grands modèles de langage qui s\'exécutent entièrement sur votre propre ordinateur — sans connexion Internet, sans frais d\'API et sans qu\'aucune donnée ne quitte votre machine. Pour débuter, installez Ollama et exécutez Llama 3.2 3B ou Qwen3 4B avec 8 Go de RAM en moins de 10 minutes ; les guides ci-dessous classent les meilleurs modèles, GPU et outils pour chaque budget (juin 2026).',
-  ja: 'ローカルLLMとは、インターネット接続・API料金・データ送信なしで、自分のパソコン上だけで動作する大規模言語モデルです。初めての方は、Ollamaをインストールして8GBのRAMでLlama 3.2 3BまたはQwen3 4Bを10分以内に実行できます。以下のガイドでは、2026年6月時点であらゆる予算に最適なモデル・GPU・ツールをランク付けしています。',
-  zh: '本地LLM是完全在你自己的电脑上运行的大语言模型——无需联网、没有API费用，数据也不会离开你的设备。新手只需安装Ollama，用8GB内存即可在10分钟内运行Llama 3.2 3B或Qwen3 4B；以下指南按2026年6月的情况，为各种预算评选最佳模型、GPU和工具。',
-  es: 'Los LLMs locales son grandes modelos de lenguaje que se ejecutan por completo en tu propio ordenador, sin conexión a Internet, sin tarifas de API y sin que ningún dato salga de tu máquina. Si empiezas, instala Ollama y ejecuta Llama 3.2 3B o Qwen3 4B con 8 GB de RAM en menos de 10 minutos; las guías siguientes clasifican los mejores modelos, GPUs y herramientas para cada presupuesto a junio de 2026.',
-  pt: 'Os LLMs locais são grandes modelos de linguagem que rodam inteiramente no seu próprio computador — sem conexão à Internet, sem taxas de API e sem que nenhum dado saia da sua máquina. Se está a começar, instale o Ollama e rode o Llama 3.2 3B ou o Qwen3 4B com 8 GB de RAM em menos de 10 minutos; os guias abaixo classificam os melhores modelos, GPUs e ferramentas para cada orçamento em junho de 2026.',
-  ko: '로컬 LLM은 인터넷 연결, API 요금, 데이터 전송 없이 전적으로 자신의 컴퓨터에서 실행되는 대규모 언어 모델입니다. 처음이라면 Ollama를 설치하고 8GB RAM으로 Llama 3.2 3B 또는 Qwen3 4B를 10분 이내에 실행할 수 있습니다. 아래 가이드는 2026년 6월 기준으로 모든 예산에 맞는 최고의 모델, GPU, 도구를 정리합니다.',
+  en: 'Local LLMs are large language models that run entirely on your own computer — no internet connection, no API fees, and no data leaving your machine. If you are just starting, install Ollama and run Llama 3.2 3B or Qwen3 4B on 8 GB of RAM in under 10 minutes; the guides below rank the best models, GPUs, and tools for every budget.',
+  de: 'Lokale LLMs sind große Sprachmodelle, die vollständig auf Ihrem eigenen Computer laufen — ohne Internetverbindung, ohne API-Gebühren und ohne dass Daten Ihr Gerät verlassen. Für den Einstieg installieren Sie Ollama und führen Llama 3.2 3B oder Qwen3 4B mit 8 GB RAM in unter 10 Minuten aus; die folgenden Leitfäden bewerten die besten Modelle, GPUs und Tools für jedes Budget.',
+  fr: 'Les LLMs locaux sont de grands modèles de langage qui s\'exécutent entièrement sur votre propre ordinateur — sans connexion Internet, sans frais d\'API et sans qu\'aucune donnée ne quitte votre machine. Pour débuter, installez Ollama et exécutez Llama 3.2 3B ou Qwen3 4B avec 8 Go de RAM en moins de 10 minutes ; les guides ci-dessous classent les meilleurs modèles, GPU et outils pour chaque budget.',
+  ja: 'ローカルLLMとは、インターネット接続・API料金・データ送信なしで、自分のパソコン上だけで動作する大規模言語モデルです。初めての方は、Ollamaをインストールして8GBのRAMでLlama 3.2 3BまたはQwen3 4Bを10分以内に実行できます。以下のガイドでは、あらゆる予算に最適なモデル・GPU・ツールをランク付けしています。',
+  zh: '本地LLM是完全在你自己的电脑上运行的大语言模型——无需联网、没有API费用，数据也不会离开你的设备。新手只需安装Ollama，用8GB内存即可在10分钟内运行Llama 3.2 3B或Qwen3 4B；以下指南为各种预算评选最佳模型、GPU和工具。',
+  es: 'Los LLMs locales son grandes modelos de lenguaje que se ejecutan por completo en tu propio ordenador, sin conexión a Internet, sin tarifas de API y sin que ningún dato salga de tu máquina. Si empiezas, instala Ollama y ejecuta Llama 3.2 3B o Qwen3 4B con 8 GB de RAM en menos de 10 minutos; las guías siguientes clasifican los mejores modelos, GPUs y herramientas para cada presupuesto.',
+  pt: 'Os LLMs locais são grandes modelos de linguagem que rodam inteiramente no seu próprio computador — sem conexão à Internet, sem taxas de API e sem que nenhum dado saia da sua máquina. Se está a começar, instale o Ollama e rode o Llama 3.2 3B ou o Qwen3 4B com 8 GB de RAM em menos de 10 minutos; os guias abaixo classificam os melhores modelos, GPUs e ferramentas para cada orçamento.',
+  ko: '로컬 LLM은 인터넷 연결, API 요금, 데이터 전송 없이 전적으로 자신의 컴퓨터에서 실행되는 대규모 언어 모델입니다. 처음이라면 Ollama를 설치하고 8GB RAM으로 Llama 3.2 3B 또는 Qwen3 4B를 10분 이내에 실행할 수 있습니다. 아래 가이드는 모든 예산에 맞는 최고의 모델, GPU, 도구를 정리합니다.',
 }
 
 const HUB_START_HERE_TITLE: Record<string, string> = {
@@ -287,6 +288,125 @@ const HUB_COMPARISON_COLS: Record<string, string[]> = {
   es: ['Característica', 'Ollama', 'LM Studio', 'Jan.ai'],
   pt: ['Recurso', 'Ollama', 'LM Studio', 'Jan.ai'],
   ko: ['기능', 'Ollama', 'LM Studio', 'Jan.ai'],
+}
+
+const HUB_VRAM_TIER_HEADING: Record<string, string> = {
+  en: 'Best Local LLM by VRAM Tier',
+  de: 'Beste lokale LLMs nach VRAM-Tier',
+  fr: 'Meilleur LLM local par palier de VRAM',
+  ja: 'VRAM別ベストローカルLLM',
+  zh: '按VRAM档位划分的最佳本地LLM',
+  es: 'Mejor LLM local por nivel de VRAM',
+  pt: 'Melhor LLM local por nível de VRAM',
+  ko: 'VRAM 등급별 최고의 로컬 LLM',
+}
+
+const HUB_VRAM_TIER_INTRO: Record<string, string> = {
+  en: 'Already know your GPU\'s VRAM? Find your tier below for the best-fit model — for the full formula, quantization math, and MoE exceptions, see the [complete VRAM guide](/local-llms/how-much-vram-local-llm#by-vram-tier).',
+  de: 'Kennen Sie den VRAM Ihrer GPU bereits? Finden Sie unten Ihr Tier und das passende Modell — die vollständige Formel, Quantisierungs-Rechnung und MoE-Ausnahmen finden Sie im [vollständigen VRAM-Guide](/local-llms/how-much-vram-local-llm#by-vram-tier).',
+  fr: 'Vous connaissez déjà la VRAM de votre GPU ? Trouvez votre palier ci-dessous pour le modèle le mieux adapté — pour la formule complète, le calcul de quantification et les exceptions MoE, consultez le [guide VRAM complet](/local-llms/how-much-vram-local-llm#by-vram-tier).',
+  ja: 'GPUのVRAM容量が分かっている方は、下の表からご自身のティアと最適なモデルを確認してください。計算式や量子化の詳細、MoEモデルの例外については[VRAM完全ガイド](/local-llms/how-much-vram-local-llm#by-vram-tier)をご覧ください。',
+  zh: '已经知道你的GPU显存大小？在下表中找到对应档位和最合适的模型——完整公式、量化换算和MoE模型的例外情况，请查看[完整VRAM指南](/local-llms/how-much-vram-local-llm#by-vram-tier)。',
+  es: '¿Ya sabes cuánta VRAM tiene tu GPU? Busca tu nivel abajo para ver el modelo que mejor encaja — para la fórmula completa, el cálculo de cuantización y las excepciones MoE, consulta la [guía completa de VRAM](/local-llms/how-much-vram-local-llm#by-vram-tier).',
+  pt: 'Já sabe quanta VRAM sua GPU tem? Encontre seu nível abaixo para o modelo mais adequado — para a fórmula completa, o cálculo de quantização e as exceções MoE, veja o [guia completo de VRAM](/local-llms/how-much-vram-local-llm#by-vram-tier).',
+  ko: 'GPU의 VRAM 용량을 이미 알고 계신가요? 아래에서 등급을 찾아 가장 적합한 모델을 확인하세요 — 전체 공식과 양자화 계산, MoE 모델의 예외 사항은 [전체 VRAM 가이드](/local-llms/how-much-vram-local-llm#by-vram-tier)를 참고하세요.',
+  ar: 'هل تعرف بالفعل سعة ⁨VRAM⁩ في ⁨GPU⁩؟ ابحث عن مستواك أدناه لأفضل نموذج مناسب — للمعادلة الكاملة وحساب التكميم واستثناءات نماذج ⁨MoE⁩، راجع [دليل ⁨VRAM⁩ الكامل](/local-llms/how-much-vram-local-llm#by-vram-tier).',
+}
+
+const HUB_VRAM_TIER_COLS: Record<string, string[]> = {
+  en: ['VRAM', 'Best-Fit Model (Q4)', 'Example GPUs'],
+  de: ['VRAM', 'Passendes Modell (Q4)', 'Beispiel-GPUs'],
+  fr: ['VRAM', 'Modèle adapté (Q4)', 'GPU exemples'],
+  ja: ['VRAM', '最適モデル（Q4）', '対応GPU例'],
+  zh: ['VRAM', '最合适的模型（Q4）', '示例GPU'],
+  es: ['VRAM', 'Modelo ideal (Q4)', 'GPUs de ejemplo'],
+  pt: ['VRAM', 'Modelo ideal (Q4)', 'GPUs de exemplo'],
+  ko: ['VRAM', '최적 모델 (Q4)', '예시 GPU'],
+  ar: ['⁨VRAM⁩', 'أفضل نموذج (⁨Q4⁩)', 'أمثلة ⁨GPU⁩'],
+}
+
+const HUB_VRAM_TIER_ROWS: Record<string, { vram: string; model: string; gpu: string }[]> = {
+  en: [
+    { vram: '4 GB', model: 'Llama 3.2 3B or Phi-3.5-mini (~2 GB)', gpu: 'RTX 3050 4 GB, GTX 1650' },
+    { vram: '8 GB', model: 'Llama 3.1 8B or Qwen3 8B (~4-5 GB)', gpu: 'RTX 4060 Ti 8 GB, RTX 3070' },
+    { vram: '12 GB', model: 'Qwen3 14B (~6.5 GB), or 7-8B at Q5/Q8 for higher quality', gpu: 'RTX 3060 12 GB, RTX 4070' },
+    { vram: '16 GB', model: 'Qwen3 14B at Q5/Q8, or 22B-class (~11 GB)', gpu: 'RTX 4060 Ti 16 GB, RTX 4080' },
+    { vram: '24 GB', model: 'Qwen3.8-27B (~22 GB, best overall on consumer hardware)', gpu: 'RTX 4090, RTX 3090' },
+    { vram: '32 GB', model: '22-32B at full precision, or one card in a dual-GPU 70B rig', gpu: 'RTX 5090' },
+    { vram: '48 GB', model: '70B models at Q4 (~35 GB), tightly at Q5', gpu: '2x RTX 4090, RTX 6000 Ada' },
+  ],
+  de: [
+    { vram: '4 GB', model: 'Llama 3.2 3B oder Phi-3.5-mini (~2 GB)', gpu: 'RTX 3050 4 GB, GTX 1650' },
+    { vram: '8 GB', model: 'Llama 3.1 8B oder Qwen3 8B (~4-5 GB)', gpu: 'RTX 4060 Ti 8 GB, RTX 3070' },
+    { vram: '12 GB', model: 'Qwen3 14B (~6,5 GB), oder 7-8B bei Q5/Q8 für höhere Qualität', gpu: 'RTX 3060 12 GB, RTX 4070' },
+    { vram: '16 GB', model: 'Qwen3 14B bei Q5/Q8, oder 22B-Klasse (~11 GB)', gpu: 'RTX 4060 Ti 16 GB, RTX 4080' },
+    { vram: '24 GB', model: 'Qwen3.8-27B (~22 GB, beste Gesamtqualität)', gpu: 'RTX 4090, RTX 3090' },
+    { vram: '32 GB', model: '22-32B in voller Präzision, oder 1 Karte im Dual-GPU-70B-Rig', gpu: 'RTX 5090' },
+    { vram: '48 GB', model: '70B-Modelle bei Q4 (~35 GB), knapp bei Q5', gpu: '2x RTX 4090, RTX 6000 Ada' },
+  ],
+  fr: [
+    { vram: '4 Go', model: 'Llama 3.2 3B ou Phi-3.5-mini (~2 Go)', gpu: 'RTX 3050 4 Go, GTX 1650' },
+    { vram: '8 Go', model: 'Llama 3.1 8B ou Qwen3 8B (~4-5 Go)', gpu: 'RTX 4060 Ti 8 Go, RTX 3070' },
+    { vram: '12 Go', model: 'Qwen3 14B (~6,5 Go), ou 7-8B en Q5/Q8 pour + de qualité', gpu: 'RTX 3060 12 Go, RTX 4070' },
+    { vram: '16 Go', model: 'Qwen3 14B en Q5/Q8, ou classe 22B (~11 Go)', gpu: 'RTX 4060 Ti 16 Go, RTX 4080' },
+    { vram: '24 Go', model: 'Qwen3.8-27B (~22 Go, meilleur global grand public)', gpu: 'RTX 4090, RTX 3090' },
+    { vram: '32 Go', model: '22-32B pleine précision, ou 1 carte d\'un rig double-GPU 70B', gpu: 'RTX 5090' },
+    { vram: '48 Go', model: 'Modèles 70B en Q4 (~35 Go), tout juste en Q5', gpu: '2x RTX 4090, RTX 6000 Ada' },
+  ],
+  ja: [
+    { vram: '4 GB', model: 'Llama 3.2 3B または Phi-3.5-mini（約2 GB）', gpu: 'RTX 3050 4GB、GTX 1650' },
+    { vram: '8 GB', model: 'Llama 3.1 8B または Qwen3 8B（約4〜5 GB）', gpu: 'RTX 4060 Ti 8GB、RTX 3070' },
+    { vram: '12 GB', model: 'Qwen3 14B（約6.5 GB）、または高品質重視なら7〜8BをQ5/Q8で', gpu: 'RTX 3060 12GB、RTX 4070' },
+    { vram: '16 GB', model: 'Qwen3 14BをQ5/Q8で、または22Bクラス（約11 GB）', gpu: 'RTX 4060 Ti 16GB、RTX 4080' },
+    { vram: '24 GB', model: 'Qwen3.8-27B（約22 GB、コンシューマー向け総合最高）', gpu: 'RTX 4090、RTX 3090' },
+    { vram: '32 GB', model: '22〜32Bをフル精度で、または70B用デュアルGPU構成の1枚として', gpu: 'RTX 5090' },
+    { vram: '48 GB', model: '70BモデルをQ4で（約35 GB）、Q5ではぎりぎり', gpu: '2枚のRTX 4090、RTX 6000 Ada' },
+  ],
+  zh: [
+    { vram: '4 GB', model: 'Llama 3.2 3B 或 Phi-3.5-mini（约2 GB）', gpu: 'RTX 3050 4GB、GTX 1650' },
+    { vram: '8 GB', model: 'Llama 3.1 8B 或 Qwen3 8B（约4-5 GB）', gpu: 'RTX 4060 Ti 8GB、RTX 3070' },
+    { vram: '12 GB', model: 'Qwen3 14B（约6.5 GB），或追求更高质量选7-8B的Q5/Q8', gpu: 'RTX 3060 12GB、RTX 4070' },
+    { vram: '16 GB', model: 'Qwen3 14B用Q5/Q8，或22B级别（约11 GB）', gpu: 'RTX 4060 Ti 16GB、RTX 4080' },
+    { vram: '24 GB', model: 'Qwen3.8-27B（约22 GB，消费级硬件综合最佳）', gpu: 'RTX 4090、RTX 3090' },
+    { vram: '32 GB', model: '22-32B全精度运行，或作为双卡70B方案中的一张显卡', gpu: 'RTX 5090' },
+    { vram: '48 GB', model: '70B模型用Q4（约35 GB），Q5则较为紧张', gpu: '2张RTX 4090、RTX 6000 Ada' },
+  ],
+  es: [
+    { vram: '4 GB', model: 'Llama 3.2 3B o Phi-3.5-mini (~2 GB)', gpu: 'RTX 3050 4 GB, GTX 1650' },
+    { vram: '8 GB', model: 'Llama 3.1 8B o Qwen3 8B (~4-5 GB)', gpu: 'RTX 4060 Ti 8 GB, RTX 3070' },
+    { vram: '12 GB', model: 'Qwen3 14B (~6.5 GB), o 7-8B en Q5/Q8 para mayor calidad', gpu: 'RTX 3060 12 GB, RTX 4070' },
+    { vram: '16 GB', model: 'Qwen3 14B en Q5/Q8, o clase 22B (~11 GB)', gpu: 'RTX 4060 Ti 16 GB, RTX 4080' },
+    { vram: '24 GB', model: 'Qwen3.8-27B (~22 GB, mejor opción en hardware de consumo)', gpu: 'RTX 4090, RTX 3090' },
+    { vram: '32 GB', model: '22-32B a máx. precisión, o 1 tarjeta de equipo doble-GPU 70B', gpu: 'RTX 5090' },
+    { vram: '48 GB', model: 'Modelos 70B en Q4 (~35 GB), justo en Q5', gpu: '2x RTX 4090, RTX 6000 Ada' },
+  ],
+  pt: [
+    { vram: '4 GB', model: 'Llama 3.2 3B ou Phi-3.5-mini (~2 GB)', gpu: 'RTX 3050 4 GB, GTX 1650' },
+    { vram: '8 GB', model: 'Llama 3.1 8B ou Qwen3 8B (~4-5 GB)', gpu: 'RTX 4060 Ti 8 GB, RTX 3070' },
+    { vram: '12 GB', model: 'Qwen3 14B (~6,5 GB), ou 7-8B em Q5/Q8 para mais qualidade', gpu: 'RTX 3060 12 GB, RTX 4070' },
+    { vram: '16 GB', model: 'Qwen3 14B em Q5/Q8, ou classe 22B (~11 GB)', gpu: 'RTX 4060 Ti 16 GB, RTX 4080' },
+    { vram: '24 GB', model: 'Qwen3.8-27B (~22 GB, melhor opção em hardware de consumo)', gpu: 'RTX 4090, RTX 3090' },
+    { vram: '32 GB', model: '22-32B em precisão total, ou 1 placa de setup dual-GPU 70B', gpu: 'RTX 5090' },
+    { vram: '48 GB', model: 'Modelos 70B em Q4 (~35 GB), no limite em Q5', gpu: '2x RTX 4090, RTX 6000 Ada' },
+  ],
+  ko: [
+    { vram: '4 GB', model: 'Llama 3.2 3B 또는 Phi-3.5-mini (~2 GB)', gpu: 'RTX 3050 4GB, GTX 1650' },
+    { vram: '8 GB', model: 'Llama 3.1 8B 또는 Qwen3 8B (~4-5 GB)', gpu: 'RTX 4060 Ti 8GB, RTX 3070' },
+    { vram: '12 GB', model: 'Qwen3 14B (~6.5 GB), 또는 고품질을 원하면 7-8B를 Q5/Q8로', gpu: 'RTX 3060 12GB, RTX 4070' },
+    { vram: '16 GB', model: 'Qwen3 14B를 Q5/Q8로, 또는 22B급 (~11 GB)', gpu: 'RTX 4060 Ti 16GB, RTX 4080' },
+    { vram: '24 GB', model: 'Qwen3.8-27B (~22 GB, 소비자 하드웨어 종합 최고)', gpu: 'RTX 4090, RTX 3090' },
+    { vram: '32 GB', model: '22-32B를 완전한 정밀도로, 또는 듀얼 GPU 70B 구성의 카드 한 장으로', gpu: 'RTX 5090' },
+    { vram: '48 GB', model: 'Q4에서 70B 모델 (~35 GB), Q5에서는 빠듯함', gpu: '2x RTX 4090, RTX 6000 Ada' },
+  ],
+  ar: [
+    { vram: '⁨4 GB⁩', model: 'Llama 3.2 3B أو Phi-3.5-mini (⁨~2 GB⁩)', gpu: '⁨RTX 3050 4GB, GTX 1650⁩' },
+    { vram: '⁨8 GB⁩', model: 'Llama 3.1 8B أو Qwen3 8B (⁨~4-5 GB⁩)', gpu: '⁨RTX 4060 Ti 8GB, RTX 3070⁩' },
+    { vram: '⁨12 GB⁩', model: 'Qwen3 14B (⁨~6.5 GB⁩)، أو 7-8B بجودة ⁨Q5/Q8⁩ لأداء أعلى', gpu: '⁨RTX 3060 12GB, RTX 4070⁩' },
+    { vram: '⁨16 GB⁩', model: 'Qwen3 14B بجودة ⁨Q5/Q8⁩، أو فئة 22B (⁨~11 GB⁩)', gpu: '⁨RTX 4060 Ti 16GB, RTX 4080⁩' },
+    { vram: '⁨24 GB⁩', model: 'Qwen3.8-27B (⁨~22 GB⁩، الأفضل عمومًا على أجهزة المستهلكين)', gpu: '⁨RTX 4090, RTX 3090⁩' },
+    { vram: '⁨32 GB⁩', model: '22-32B بدقة كاملة، أو بطاقة واحدة في نظام مزدوج ⁨GPU⁩ لـ70B', gpu: '⁨RTX 5090⁩' },
+    { vram: '⁨48 GB⁩', model: 'نماذج 70B بجودة ⁨Q4⁩ (⁨~35 GB⁩)، بالكاد عند ⁨Q5⁩', gpu: '⁨2x RTX 4090, RTX 6000 Ada⁩' },
+  ],
 }
 
 const HUB_CTA_TEXT: Record<string, string> = {
@@ -1750,6 +1870,8 @@ function LocalLLMsHubContent({ initialLang, titlesMap, datesMap, liveSlugs }: {
   const [newModelsTableIsScrollable, setNewModelsTableIsScrollable] = useState(false)
   const comparisonTableRef = useRef<HTMLDivElement>(null)
   const [comparisonTableIsScrollable, setComparisonTableIsScrollable] = useState(false)
+  const vramTierTableRef = useRef<HTMLDivElement>(null)
+  const [vramTierTableIsScrollable, setVramTierTableIsScrollable] = useState(false)
 
   useEffect(() => {
     const el = newModelsTableRef.current
@@ -1765,6 +1887,16 @@ function LocalLLMsHubContent({ initialLang, titlesMap, datesMap, liveSlugs }: {
     const el = comparisonTableRef.current
     if (!el) return
     const checkOverflow = () => setComparisonTableIsScrollable(el.scrollWidth > el.clientWidth + 1)
+    checkOverflow()
+    const observer = new ResizeObserver(checkOverflow)
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [lang])
+
+  useEffect(() => {
+    const el = vramTierTableRef.current
+    if (!el) return
+    const checkOverflow = () => setVramTierTableIsScrollable(el.scrollWidth > el.clientWidth + 1)
     checkOverflow()
     const observer = new ResizeObserver(checkOverflow)
     observer.observe(el)
@@ -1949,6 +2081,39 @@ function LocalLLMsHubContent({ initialLang, titlesMap, datesMap, liveSlugs }: {
               </tbody>
             </table>
             {newModelsTableIsScrollable && (
+              <div className="pointer-events-none absolute right-0 top-0 h-full w-8 bg-gradient-to-l from-white/80 to-transparent sm:hidden" />
+            )}
+          </div>
+        </section>
+
+        {/* Best Local LLM by VRAM Tier */}
+        <section className="mb-16">
+          <h2 className="text-2xl font-bold text-text-primary mb-3">
+            {HUB_VRAM_TIER_HEADING[lang] ?? HUB_VRAM_TIER_HEADING['en']}
+          </h2>
+          <p className="text-sm text-text-secondary mb-6 max-w-2xl leading-relaxed">
+            {renderDescription(HUB_VRAM_TIER_INTRO[lang] ?? HUB_VRAM_TIER_INTRO['en'], lang)}
+          </p>
+          <div className="relative overflow-x-auto" ref={vramTierTableRef}>
+            <table className="w-full text-sm border-collapse">
+              <thead>
+                <tr className="border-b border-primary/20">
+                  {(HUB_VRAM_TIER_COLS[lang] ?? HUB_VRAM_TIER_COLS['en']).map((col, colIdx) => (
+                    <th key={col} className={`text-left py-1.5 sm:py-2 pr-4 text-xs font-bold text-text-secondary uppercase tracking-wide${colIdx === 0 ? ' sticky left-0 z-10 bg-white' : ''}`}>{col}</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                {(HUB_VRAM_TIER_ROWS[lang] ?? HUB_VRAM_TIER_ROWS['en']).map((row, i) => (
+                  <tr key={i} className="border-b border-primary/10 hover:bg-primary/3 group">
+                    <td className={`py-1.5 sm:py-2.5 pr-4 font-medium text-text-primary${i % 2 === 0 ? ' bg-white' : ''} sticky left-0 z-10 group-hover:bg-primary/3 transition-colors`}>{row.vram}</td>
+                    <td className="py-1.5 sm:py-2.5 pr-4 text-text-secondary">{row.model}</td>
+                    <td className="py-1.5 sm:py-2.5 text-text-secondary">{row.gpu}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+            {vramTierTableIsScrollable && (
               <div className="pointer-events-none absolute right-0 top-0 h-full w-8 bg-gradient-to-l from-white/80 to-transparent sm:hidden" />
             )}
           </div>
