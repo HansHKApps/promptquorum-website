@@ -14,10 +14,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       title: 'What Are Local LLMs? How Running AI Models on Your Own Hardware Works',
       heroImage: '/images/what-are-local-llms-overview-hero-en.webp',
       seoTitle: 'What Are Local LLMs? How AI Models Run on Your Hardware',
-      intro: 'A local LLM is an AI language model that runs entirely on your own hardware -- no internet connection, no API calls, no data leaving your machine. You download the model weights as a file, run an inference engine like Ollama or LM Studio, and the model responds from your CPU or GPU alone. As of August 2026, the most practical models for beginners are Llama 3.2 3B and Phi-4 Mini.',
+      intro: 'A local LLM is an AI language model that runs entirely on your own hardware -- no internet connection, no API calls, no data leaving your machine. You download the model weights as a file, run an inference engine like Ollama or LM Studio, and the model responds from your CPU or GPU alone. Practical models for beginners include Llama 3.2 3B and Phi-4 Mini.',
       metaDescription: 'Local LLMs run AI models on your own hardware -- no internet required. Learn what they are, how they work, and when to use them. Guide for 2026.',
       leadAnswerBlock: '**Local LLMs run all inference on your own hardware at zero token cost with full data privacy.** Cloud APIs (GPT-5.6, Claude Opus 4.8, Gemini 3.1 Pro) deliver higher quality with minimal setup.',
-      dateModified: '2026-08-26',
+      dateModified: '2026-08-28',
       publishDate: '2026-04-04',
       audience: 'Beginners running their first local LLM on consumer hardware',
       readTime: '7 min read',
@@ -38,6 +38,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'A local LLM is an AI language model that runs entirely on your own CPU or GPU using a downloaded model file and an inference engine like Ollama or LM Studio, so no prompt or response data ever leaves your machine.' },
+            { type: 'plain-terms', text: 'Instead of sending your questions to a company\'s servers over the internet like ChatGPT does, a local LLM runs the whole AI model on your own computer. You download the model as a file, run a small program that loads it, and chat with it -- all offline, all private, with no per-message cost.' },
+          ],
           items: [
             'A local LLM runs on your own CPU or GPU -- no internet, no API costs, no data sent to third-party servers.',
             'Three components are required: the model file (GGUF or safetensors format), an inference engine (Ollama, LM Studio, or llama.cpp), and optionally a chat interface.',
@@ -246,7 +250,7 @@ schema: {
           {
             '@type': 'Question',
             'name': 'Do local LLMs match GPT-5.6 or Claude Sonnet 5 on complex reasoning tasks?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Not yet for the most demanding tasks. As of August 2026, the best consumer-grade local model (Llama 3.3 70B at Q4) approaches GPT-5.6 on benchmarks but requires a workstation GPU with 48GB+ VRAM. 7B models run on laptops but are significantly weaker than GPT-5.6.' }
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Not yet for the most demanding tasks. The best consumer-grade local model (Llama 3.3 70B at Q4) approaches top-tier cloud models on benchmarks but requires a workstation GPU with 48GB+ VRAM. 7B models run on laptops but are significantly weaker than large cloud models.' }
           },
           {
             '@type': 'Question',
@@ -273,10 +277,10 @@ schema: {
       title: '¿Qué son los LLM locales? Cómo ejecutar modelos de IA en tu propio hardware',
       heroImage: '/images/what-are-local-llms-overview-hero-es.webp',
       seoTitle: '¿Qué son los LLM locales? IA que corre en tu hardware',
-      intro: 'Un LLM local es un modelo de lenguaje de IA que se ejecuta completamente en tu propio hardware: sin conexión a internet, sin llamadas a API, sin datos que abandonen tu máquina. Descarga los pesos del modelo como un archivo, ejecuta un motor de inferencia como Ollama o LM Studio, y el modelo responde desde tu CPU o GPU. A partir de agosto de 2026, los modelos más prácticos para principiantes son Llama 3.2 3B y Phi-4 Mini.',
+      intro: 'Un LLM local es un modelo de lenguaje de IA que se ejecuta completamente en tu propio hardware: sin conexión a internet, sin llamadas a API, sin datos que abandonen tu máquina. Descarga los pesos del modelo como un archivo, ejecuta un motor de inferencia como Ollama o LM Studio, y el modelo responde desde tu CPU o GPU. Entre los modelos más prácticos para principiantes están Llama 3.2 3B y Phi-4 Mini.',
       metaDescription: 'Los LLM locales ejecutan modelos de IA en tu propio hardware, sin necesidad de internet. Aprende qué son, cómo funcionan y cuándo usarlos. Guía para 2026.',
       leadAnswerBlock: '**Los LLM locales ejecutan toda la inferencia en tu propio hardware con coste cero por token y privacidad total.** Las API en la nube (GPT-5.6, Claude Opus 4.8, Gemini 3.1 Pro) ofrecen mayor calidad con una configuración mínima.',
-      dateModified: '2026-08-26',
+      dateModified: '2026-08-28',
       publishDate: '2026-04-04',
       audience: 'Principiantes que ejecutan su primer LLM local en hardware de consumo',
       readTime: '7 min de lectura',
@@ -296,6 +300,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Un LLM local es un modelo de lenguaje de IA que se ejecuta completamente en tu propia CPU o GPU usando un archivo de modelo descargado y un motor de inferencia como Ollama o LM Studio, de modo que ningún dato de tus consultas o respuestas sale de tu máquina.' },
+            { type: 'plain-terms', text: 'En lugar de enviar tus preguntas a los servidores de una empresa por internet como hace ChatGPT, un LLM local ejecuta todo el modelo de IA en tu propio ordenador. Descargas el modelo como un archivo, ejecutas un pequeño programa que lo carga, y conversas con él -- todo sin conexión, con privacidad total y sin coste por mensaje.' },
+          ],
           items: [
             'Un LLM local se ejecuta en tu propia CPU o GPU: sin internet, sin costes de API, sin datos enviados a servidores de terceros.',
             'Se necesitan tres componentes: el archivo del modelo (formato GGUF o safetensors), un motor de inferencia (Ollama, LM Studio o llama.cpp) y, opcionalmente, una interfaz de chat.',
@@ -503,7 +511,7 @@ schema: {
           {
             '@type': 'Question',
             'name': '¿Los LLM locales igualan a GPT-5.6 o Claude Sonnet 5 en razonamiento complejo?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Todavía no para las tareas más exigentes. A partir de agosto de 2026, el mejor modelo local para consumidores (Llama 3.3 70B en Q4) se acerca a GPT-5.6 en benchmarks, pero requiere una GPU de estación de trabajo con 48 GB+ de VRAM. Los modelos de 7B funcionan en portátiles, pero son significativamente más débiles que GPT-5.6.' }
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Todavía no para las tareas más exigentes. El mejor modelo local para consumidores (Llama 3.3 70B en Q4) se acerca a los modelos en la nube de gama alta en benchmarks, pero requiere una GPU de estación de trabajo con 48 GB+ de VRAM. Los modelos de 7B funcionan en portátiles, pero son significativamente más débiles que los grandes modelos en la nube.' }
           },
           {
             '@type': 'Question',
@@ -530,10 +538,10 @@ schema: {
       title: 'ما هي نماذج ⁨LLM⁩ المحلية؟ كيف تشغّل نماذج الذكاء الاصطناعي على عتادك الخاص',
       heroImage: '/images/what-are-local-llms-overview-hero-ar.webp',
       seoTitle: 'ما هي نماذج ⁨LLM⁩ المحلية؟ ذكاء اصطناعي يعمل على عتادك',
-      intro: 'نموذج LLM المحلي هو نموذج لغة ذكاء اصطناعي يعمل بالكامل على عتادك الخاص: بلا اتصال بالإنترنت، وبلا استدعاءات API، وبلا بيانات تغادر جهازك. نزّل أوزان النموذج كملف، شغّل محرك استدلال مثل Ollama أو LM Studio، فيستجيب النموذج من CPU أو GPU لديك. اعتبارًا من أغسطس 2026، أكثر النماذج عملية للمبتدئين هي Llama 3.2 3B وPhi-4 Mini.',
+      intro: 'نموذج LLM المحلي هو نموذج لغة ذكاء اصطناعي يعمل بالكامل على عتادك الخاص: بلا اتصال بالإنترنت، وبلا استدعاءات API، وبلا بيانات تغادر جهازك. نزّل أوزان النموذج كملف، شغّل محرك استدلال مثل Ollama أو LM Studio، فيستجيب النموذج من CPU أو GPU لديك. من بين أكثر النماذج عملية للمبتدئين Llama 3.2 3B وPhi-4 Mini.',
       metaDescription: 'تعمل نماذج ⁨LLM⁩ المحلية بالكامل على عتادك بلا إنترنت. نموذج ⁨7B⁩ بـ ⁨Q4⁩ يحتاج ⁨8 GB RAM⁩ فقط. دليل ⁨Ollama⁩ و⁨LM Studio⁩ وصيغة ⁨GGUF⁩ لعام ⁨2026⁩.',
       leadAnswerBlock: '**تشغّل نماذج LLM المحلية كل الاستدلال على عتادك الخاص بتكلفة صفرية لكل token وخصوصية تامة.** تقدّم واجهات API السحابية (GPT-5.6، Claude Opus 4.8، Gemini 3.1 Pro) جودة أعلى بإعداد أدنى.',
-      dateModified: '2026-08-26',
+      dateModified: '2026-08-28',
       publishDate: '2026-04-04',
       audience: 'المبتدئون الذين يشغّلون أول نموذج LLM محلي على عتاد استهلاكي',
       readTime: '7 دقائق قراءة',
@@ -553,6 +561,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'نموذج LLM المحلي هو نموذج لغة ذكاء اصطناعي يعمل بالكامل على CPU أو GPU الخاص بك باستخدام ملف نموذج تم تنزيله ومحرك استدلال مثل Ollama أو LM Studio، بحيث لا تغادر أي بيانات من استفساراتك أو ردوده جهازك.' },
+            { type: 'plain-terms', text: 'بدلاً من إرسال أسئلتك إلى خوادم شركة عبر الإنترنت كما يفعل ChatGPT، يشغّل نموذج LLM المحلي نموذج الذكاء الاصطناعي بالكامل على جهازك الخاص. تنزّل النموذج كملف، وتشغّل برنامجاً صغيراً يحمّله، وتتحدث معه -- كل ذلك دون اتصال بالإنترنت، مع خصوصية تامة ودون أي تكلفة لكل رسالة.' },
+          ],
           items: [
             'يعمل نموذج LLM المحلي على CPU أو GPU الخاص بك: بلا إنترنت، وبلا تكاليف API، وبلا بيانات تُرسل إلى خوادم طرف ثالث.',
             'تلزم ثلاثة مكونات: ملف النموذج (صيغة GGUF أو safetensors)، ومحرك استدلال (Ollama، أو LM Studio، أو llama.cpp)، واختياريًا واجهة دردشة.',
@@ -762,7 +774,7 @@ schema: {
           {
             '@type': 'Question',
             'name': 'هل تضاهي نماذج LLM المحلية جودة GPT-5.6 أو Claude Sonnet 5 في الاستدلال المعقد؟',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'ليس بعد للمهام الأكثر تطلبًا. اعتبارًا من أغسطس 2026، يقترب أفضل نموذج محلي للمستهلكين (Llama 3.3 70B بـ Q4) من GPT-5.6 في المعايير، لكنه يتطلب GPU محطة عمل بذاكرة VRAM سعة 48 GB+. تعمل نماذج 7B على الحواسيب المحمولة، لكنها أضعف بكثير من GPT-5.6.' }
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'ليس بعد للمهام الأكثر تطلبًا. يقترب أفضل نموذج محلي للمستهلكين (Llama 3.3 70B بـ Q4) من نماذج السحابة الكبرى في المعايير، لكنه يتطلب GPU محطة عمل بذاكرة VRAM سعة 48 GB+. تعمل نماذج 7B على الحواسيب المحمولة، لكنها أضعف بكثير من نماذج السحابة الكبرى.' }
           },
           {
             '@type': 'Question',
@@ -789,10 +801,10 @@ schema: {
       title: 'O que são LLMs locais? Como rodar modelos de IA no seu próprio hardware',
       heroImage: '/images/what-are-local-llms-overview-hero-pt.webp',
       seoTitle: 'O que são LLMs locais? IA que roda no seu hardware',
-      intro: 'Um LLM local é um modelo de linguagem de IA que roda inteiramente no seu próprio hardware: sem conexão à internet, sem chamadas de API, sem dados saindo da sua máquina. Você baixa os pesos do modelo como um arquivo, roda um motor de inferência como o Ollama ou o LM Studio, e o modelo responde a partir da sua CPU ou GPU. A partir de agosto de 2026, os modelos mais práticos para iniciantes são Llama 3.2 3B e Phi-4 Mini.',
+      intro: 'Um LLM local é um modelo de linguagem de IA que roda inteiramente no seu próprio hardware: sem conexão à internet, sem chamadas de API, sem dados saindo da sua máquina. Você baixa os pesos do modelo como um arquivo, roda um motor de inferência como o Ollama ou o LM Studio, e o modelo responde a partir da sua CPU ou GPU. Entre os modelos mais práticos para iniciantes estão o Llama 3.2 3B e o Phi-4 Mini.',
       metaDescription: 'Os LLMs locais rodam modelos de IA no seu próprio hardware, sem precisar de internet. Aprenda o que são, como funcionam e quando usá-los. Guia para 2026.',
       leadAnswerBlock: '**Os LLMs locais rodam toda a inferência no seu próprio hardware com custo zero por token e privacidade total.** As APIs em nuvem (GPT-5.6, Claude Opus 4.8, Gemini 3.1 Pro) oferecem maior qualidade com uma configuração mínima.',
-      dateModified: '2026-08-26',
+      dateModified: '2026-08-28',
       publishDate: '2026-04-04',
       audience: 'Iniciantes rodando seu primeiro LLM local em hardware de consumo',
       readTime: '7 min de leitura',
@@ -812,6 +824,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Um LLM local é um modelo de linguagem de IA que roda inteiramente na sua própria CPU ou GPU usando um arquivo de modelo baixado e um motor de inferência como Ollama ou LM Studio, de forma que nenhum dado das suas perguntas ou respostas sai da sua máquina.' },
+            { type: 'plain-terms', text: 'Em vez de enviar suas perguntas para os servidores de uma empresa pela internet como o ChatGPT faz, um LLM local roda todo o modelo de IA no seu próprio computador. Você baixa o modelo como um arquivo, roda um pequeno programa que o carrega, e conversa com ele -- tudo offline, com privacidade total e sem custo por mensagem.' },
+          ],
           items: [
             'Um LLM local roda na sua própria CPU ou GPU: sem internet, sem custos de API, sem dados enviados a servidores de terceiros.',
             'São necessários três componentes: o arquivo do modelo (formato GGUF ou safetensors), um motor de inferência (Ollama, LM Studio ou llama.cpp) e, opcionalmente, uma interface de chat.',
@@ -1019,7 +1035,7 @@ schema: {
           {
             '@type': 'Question',
             'name': 'Os LLMs locais igualam o GPT-5.6 ou o Claude Sonnet 5 em raciocínio complexo?',
-            'acceptedAnswer': { '@type': 'Answer', 'text': 'Ainda não para as tarefas mais exigentes. A partir de agosto de 2026, o melhor modelo local para consumidores (Llama 3.3 70B em Q4) se aproxima do GPT-5.6 em benchmarks, mas exige uma GPU de estação de trabalho com 48 GB+ de VRAM. Os modelos de 7B funcionam em notebooks, mas são significativamente mais fracos que o GPT-5.6.' }
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Ainda não para as tarefas mais exigentes. O melhor modelo local para consumidores (Llama 3.3 70B em Q4) se aproxima dos maiores modelos em nuvem em benchmarks, mas exige uma GPU de estação de trabalho com 48 GB+ de VRAM. Os modelos de 7B funcionam em notebooks, mas são significativamente mais fracos que os maiores modelos em nuvem.' }
           },
           {
             '@type': 'Question',
@@ -1044,10 +1060,10 @@ schema: {
       title: 'Qu\'est-ce que les LLMs locaux ? Comment exécuter des modèles IA sur votre propre matériel',
       heroImage: '/images/what-are-local-llms-overview-hero-fr.webp',
       seoTitle: 'LLMs locaux 2026 : avantages, risques et guide de démarrage',
-      intro: 'Un LLM local est un modèle de langage IA exécuté entièrement sur votre propre matériel -- sans connexion internet, sans appels API, sans données quittant votre machine. Téléchargez les poids du modèle, lancez un moteur d\'inférence comme Ollama ou LM Studio, et obtenez des réponses depuis votre CPU ou GPU. En août 2026, les modèles les plus pratiques pour débuter sont Llama 3.2 3B et Phi-4 Mini.',
+      intro: 'Un LLM local est un modèle de langage IA exécuté entièrement sur votre propre matériel -- sans connexion internet, sans appels API, sans données quittant votre machine. Téléchargez les poids du modèle, lancez un moteur d\'inférence comme Ollama ou LM Studio, et obtenez des réponses depuis votre CPU ou GPU. Parmi les modèles les plus pratiques pour débuter figurent Llama 3.2 3B et Phi-4 Mini.',
       metaDescription: 'LLMs locaux : confidentialité totale, coût zéro, utilisation hors ligne. Comparez les avantages et inconvénients, commencez avec Ollama et LM Studio.',
       leadAnswerBlock: '**Les LLMs locaux exécutent toute l\'inférence sur votre propre matériel à coût zéro par token et avec une confidentialité totale.** Les API cloud (GPT-5.6, Claude Opus 4.8, Gemini 3.1 Pro) offrent une meilleure qualité avec une configuration minimale.',
-      dateModified: '2026-08-26',
+      dateModified: '2026-08-28',
       publishDate: '2026-04-04',
       readTime: '7 min',
       educationalLevel: 'Beginner',
@@ -1090,6 +1106,10 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: "Un LLM local est un modèle de langage IA qui s'exécute entièrement sur votre propre CPU ou GPU à l'aide d'un fichier de modèle téléchargé et d'un moteur d'inférence comme Ollama ou LM Studio, de sorte qu'aucune donnée de vos requêtes ou réponses ne quitte votre machine." },
+            { type: 'plain-terms', text: "Au lieu d'envoyer vos questions aux serveurs d'une entreprise via internet comme le fait ChatGPT, un LLM local exécute tout le modèle d'IA sur votre propre ordinateur. Vous téléchargez le modèle sous forme de fichier, lancez un petit programme qui le charge, et discutez avec lui -- entièrement hors ligne, en toute confidentialité et sans coût par message." },
+          ],
           items: [
             'LLM local = exécution sur votre CPU/GPU, zéro coût API, zéro partage de données.',
             'Trois composants : le fichier modèle (GGUF ou safetensors), un moteur d\'inférence (Ollama, LM Studio, llama.cpp), optionnellement une interface.',
@@ -1225,10 +1245,10 @@ schema: {
       title: 'ローカルLLMとは？自分のハードウェアでAIモデルを実行する方法',
       heroImage: '/images/what-are-local-llms-overview-hero-ja.webp',
       seoTitle: 'ローカルLLM 2026：メリット・デメリット・入門ガイド',
-      intro: 'ローカルLLM（大規模言語モデル）とは、あなたのハードウェア上で完全に実行されるAIモデルです。インターネット接続不要、API呼び出しなし、データは一切外に出ません。モデルの重みをダウンロードしてOllamaやLM Studioなどの推論エンジンを実行すれば、あなたのCPUまたはGPUから直接応答が得られます。2026年8月現在、初心者向けの実用的なモデルはLlama 3.2 3BおよびPhi-4 Miniです。',
+      intro: 'ローカルLLM（大規模言語モデル）とは、あなたのハードウェア上で完全に実行されるAIモデルです。インターネット接続不要、API呼び出しなし、データは一切外に出ません。モデルの重みをダウンロードしてOllamaやLM Studioなどの推論エンジンを実行すれば、あなたのCPUまたはGPUから直接応答が得られます。初心者向けの実用的なモデルにはLlama 3.2 3BやPhi-4 Miniなどがあります。',
       metaDescription: 'ローカルLLM：完全なプライバシー、コストゼロ、オフライン利用。メリット・デメリットを比較、OllamaとLM Studioで今すぐ始める。',
       leadAnswerBlock: '**ローカルLLMはすべての推論を自分のハードウェア上で実行し、トークンあたりのコストはゼロで、完全なデータプライバシーを実現します。** クラウドAPI（GPT-5.6、Claude Opus 4.8、Gemini 3.1 Pro）は最小限のセットアップでより高い品質を提供します。',
-      dateModified: '2026-08-26',
+      dateModified: '2026-08-28',
       publishDate: '2026-04-04',
       readTime: '8分読了',
       educationalLevel: 'Beginner',
@@ -1258,6 +1278,10 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'ローカルLLMとは、ダウンロードしたモデルファイルとOllamaやLM Studioのような推論エンジンを使い、自分のCPUまたはGPU上で完全に実行されるAI言語モデルであり、質問や応答のデータが一切外部に出ません。' },
+            { type: 'plain-terms', text: 'ChatGPTのようにインターネット経由で企業のサーバーに質問を送るのではなく、ローカルLLMはAIモデル全体を自分のコンピューター上で実行します。モデルをファイルとしてダウンロードし、それを読み込む小さなプログラムを実行して会話します -- すべてオフラインで、完全なプライバシーを保ちながら、メッセージごとの費用もかかりません。' },
+          ],
           items: [
             'ローカルLLM＝自分のCPU/GPUで実行、API費用ゼロ、データ外部送信なし。',
             '3つの要素：モデルファイル（GGUFまたはsafetensors形式）、推論エンジン（Ollama、LM Studio、llama.cpp）、オプションでチャットUI。',
@@ -1396,7 +1420,7 @@ schema: {
       intro: '本地LLM（大型语言模型）是在您自己的硬件上完全运行的AI模型。无需互联网连接，无需API调用，数据永远不会离开您的机器。下载模型权重，运行推理引擎如Ollama或LM Studio，从您的CPU或GPU获取直接响应。2026年8月，初学者最实用的模型是Llama 3.2 3B和Phi-4 Mini。',
       metaDescription: '本地LLM：完全隐私、零成本、离线使用。比较优劣，用Ollama和LM Studio立即开始。',
       leadAnswerBlock: '**本地LLM完全在您自己的硬件上运行推理，每个token零成本，数据隐私完全可控。** 云API（GPT-5.6、Claude Opus 4.8、Gemini 3.1 Pro）以最少的设置提供更高的质量。',
-      dateModified: '2026-08-26',
+      dateModified: '2026-08-28',
       publishDate: '2026-04-04',
       readTime: '7分钟',
       educationalLevel: 'Beginner',
@@ -1426,6 +1450,10 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: '本地LLM是完全在您自己的CPU或GPU上运行的AI语言模型，使用下载的模型文件和Ollama或LM Studio等推理引擎，因此您的提问或回答数据不会离开您的设备。' },
+            { type: 'plain-terms', text: '本地LLM不像ChatGPT那样通过互联网将问题发送到公司服务器，而是在您自己的电脑上运行整个AI模型。您将模型下载为文件，运行一个加载它的小程序，然后与它对话——全程离线、完全私密，且每条消息都不产生费用。' },
+          ],
           items: [
             '1. 本地LLM = 在您的CPU/GPU上运行，无API成本，无数据分享。',
             '2. 三个要素：模型文件（GGUF或safetensors格式）、推理引擎（Ollama、LM Studio、llama.cpp）、可选聊天界面。',
@@ -1564,7 +1592,7 @@ schema: {
       intro: 'Ein lokales LLM ist ein KI-Sprachmodell, das vollständig auf Ihrer eigenen Hardware ausgeführt wird -- keine Internetverbindung, keine API-Aufrufe, keine Daten, die Ihren Computer verlassen. Sie laden die Modellgewichte als Datei herunter, führen eine Inferenz-Engine wie Ollama oder LM Studio aus, und das Modell antwortet ausschließlich von Ihrer CPU oder GPU. Ab August 2026 sind die praktischsten Modelle für Anfänger Llama 3.2 3B und Phi-4 Mini.',
       metaDescription: 'Was sind lokale LLMs? KI-Modelle, die offline auf Ihrer Hardware laufen. Vorteile, Funktionsweise und Einstieg in lokale Sprachmodelle ohne Cloud.',
       leadAnswerBlock: '**Lokale LLMs führen die gesamte Inferenz auf Ihrer eigenen Hardware bei null Kosten pro Token und mit vollständigem Datenschutz aus.** Cloud-APIs (GPT-5.6, Claude Opus 4.8, Gemini 3.1 Pro) bieten höhere Qualität bei minimaler Einrichtung.',
-      dateModified: '2026-08-26',
+      dateModified: '2026-08-28',
       publishDate: '2026-04-04',
       readTime: '8 Min. Lesezeit',
       educationalLevel: 'Beginner',
@@ -1594,6 +1622,10 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Ein lokales LLM ist ein KI-Sprachmodell, das vollständig auf Ihrer eigenen CPU oder GPU läuft und dabei eine heruntergeladene Modelldatei sowie eine Inferenz-Engine wie Ollama oder LM Studio nutzt, sodass keine Daten Ihrer Anfragen oder Antworten Ihr Gerät verlassen.' },
+            { type: 'plain-terms', text: 'Statt Ihre Fragen wie bei ChatGPT über das Internet an die Server eines Unternehmens zu senden, führt ein lokales LLM das gesamte KI-Modell auf Ihrem eigenen Computer aus. Sie laden das Modell als Datei herunter, starten ein kleines Programm, das es lädt, und unterhalten sich damit -- komplett offline, mit voller Privatsphäre und ohne Kosten pro Nachricht.' },
+          ],
           items: [
             'Ein lokales LLM wird auf Ihrer eigenen CPU oder GPU ausgeführt -- keine Internetverbindung, keine API-Kosten, keine Daten an Dritte.',
             'Drei Komponenten sind erforderlich: die Modelldatei (GGUF- oder safetensors-Format), eine Inferenz-Engine (Ollama, LM Studio oder llama.cpp) und optional eine Chat-Schnittstelle.',
@@ -1735,7 +1767,7 @@ schema: {
       intro: '로컬 LLM은 인터넷 연결 없이, API 호출 없이, 데이터 외부 전송 없이 완전히 자체 하드웨어에서 실행되는 AI 언어 모델입니다. 모델 가중치를 파일로 다운로드하고 Ollama 또는 LM Studio와 같은 추론 엔진을 실행하면, 모델이 CPU 또는 GPU만으로 응답합니다. 2026년 8월 기준, 초보자에게 가장 실용적인 모델은 Llama 3.2 3B와 Phi-4 Mini입니다.',
       metaDescription: '로컬 LLM은 인터넷 없이 자체 하드웨어에서 AI 모델을 실행합니다. 로컬 LLM이 무엇인지, 어떻게 작동하는지, 언제 사용해야 하는지 알아보세요. 2026년 가이드.',
       leadAnswerBlock: '**로컬 LLM은 모든 추론을 자체 하드웨어에서 실행하며 토큰 비용이 없고 완전한 데이터 프라이버시를 제공합니다.** 클라우드 API(GPT-5.6, Claude Opus 4.8, Gemini 3.1 Pro)는 최소한의 설정으로 더 높은 품질을 제공합니다.',
-      dateModified: '2026-08-26',
+      dateModified: '2026-08-28',
       publishDate: '2026-04-04',
       audience: '소비자용 하드웨어에서 처음으로 로컬 LLM을 실행하는 초보자',
       readTime: '7분 읽기',
@@ -1765,6 +1797,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: '로컬 LLM은 다운로드한 모델 파일과 Ollama나 LM Studio 같은 추론 엔진을 사용해 자체 CPU 또는 GPU에서 완전히 실행되는 AI 언어 모델로, 질문이나 응답 데이터가 기기 밖으로 전송되지 않습니다.' },
+            { type: 'plain-terms', text: 'ChatGPT처럼 인터넷을 통해 회사 서버로 질문을 보내는 대신, 로컬 LLM은 전체 AI 모델을 자신의 컴퓨터에서 실행합니다. 모델을 파일로 다운로드하고, 그것을 불러오는 작은 프로그램을 실행한 뒤, 대화를 나눕니다 -- 완전히 오프라인 상태에서, 완전한 프라이버시를 유지하며, 메시지당 비용도 들지 않습니다.' },
+          ],
           items: [
             '로컬 LLM은 자체 CPU 또는 GPU에서 실행됩니다 — 인터넷 불필요, API 비용 없음, 제3자 서버로 데이터 전송 없음.',
             '세 가지 구성 요소가 필요합니다: 모델 파일(GGUF 또는 safetensors 형식), 추론 엔진(Ollama, LM Studio, 또는 llama.cpp), 그리고 선택적으로 채팅 인터페이스.',
