@@ -14,7 +14,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       heroImage: '/images/local-llms-with-vscode-cursor-overview-hero-en.webp',
       dateModified: '2026-08-28',
       seoTitle: 'Local LLMs in VS Code and Cursor: 2026 Setup Guide',
-      intro: 'VS Code and Cursor (an AI-first code editor) can both use local LLMs for code completions and suggestions, via Continue.dev extension (VS Code) or direct integration (Cursor). As of April 2026, local code completions are practical for 7B-13B models and require 8-16 GB RAM. This guide covers setup, best models, and performance tuning.',
+      intro: 'VS Code and Cursor (an AI-first code editor) can both use local LLMs for code completions and suggestions, via Continue.dev extension (VS Code) or direct integration (Cursor). Local code completions are practical for 7B-13B models and require 8-16 GB RAM. This guide covers setup, best models, and performance tuning.',
       metaDescription: 'Use Ollama with VS Code via Continue.dev for local code completions -- no API key needed. Best models, VRAM requirements, and Cursor integration for 2026.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**VS Code and Cursor (an AI-first code editor) can both use local LLMs for code completions and suggestions, via Continue.dev extension (VS Code) or direct integration (Cursor).**',
@@ -39,12 +39,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'VS Code (via the Continue.dev extension) and Cursor can both use local LLMs like Qwen3-Coder 7B or Code Llama 13B for private code completions, running entirely on your own GPU with no API key or cloud connection.' },
+            { type: 'plain-terms', text: "Instead of sending your code to a cloud AI service, you can run the AI model on your own computer and connect it to your code editor. VS Code needs the free Continue.dev extension; Cursor supports this natively. You get autocomplete-style suggestions with your code never leaving your machine, though it's a bit slower than cloud tools like GitHub Copilot." },
+          ],
           items: [
             'VS Code uses Continue.dev extension to connect to local models (Ollama, LM Studio, vLLM).',
             'Cursor is a VS Code fork with built-in local model support. No extension needed.',
             '**Best local models for code**: Qwen3-Coder 7B, Code Llama 13B, or Mistral Small.',
             'Expect 2-5 second completion latency on consumer GPUs with 7B models.',
-            'As of April 2026, local code completions are practical for personal use, not yet production-grade for teams.',
+            'Local code completions are practical for personal use today, though not yet production-grade for teams.',
           ],
         },
         vscodeContinue: {
@@ -283,6 +287,10 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: "VS Code (über die Continue.dev-Erweiterung) und Cursor können beide lokale LLMs wie Qwen3-Coder 7B oder Code Llama 13B für private Code-Vervollständigungen nutzen -- läuft vollständig auf Ihrer eigenen GPU, ohne API-Schlüssel oder Cloud-Verbindung." },
+            { type: 'plain-terms', text: "Statt Ihren Code an einen Cloud-KI-Dienst zu senden, können Sie das KI-Modell auf Ihrem eigenen Computer ausführen und mit Ihrem Code-Editor verbinden. VS Code benötigt die kostenlose Continue.dev-Erweiterung; Cursor unterstützt dies nativ. Sie erhalten Autocomplete-ähnliche Vorschläge, ohne dass Ihr Code Ihren Rechner verlässt -- allerdings etwas langsamer als Cloud-Tools wie GitHub Copilot." },
+          ],
           items: [
             'VS Code nutzt die Continue.dev-Erweiterung, um sich mit lokalen Modellen zu verbinden (Ollama, LM Studio, vLLM).',
             'Cursor ist ein VS Code-Fork mit eingebauter lokaler Modellunterstützung. Keine Erweiterung erforderlich.',
@@ -471,7 +479,7 @@ schema: {
       title: 'LLM Locaux avec VS Code et Cursor : Configuration et Bonnes Pratiques',
       heroImage: '/images/local-llms-with-vscode-cursor-overview-hero-fr.webp',
       seoTitle: 'LLM Locaux dans VS Code & Cursor : Configuration 2026',
-      intro: 'VS Code et Cursor (un éditeur de code axé sur l\'IA) peuvent tous deux utiliser des LLM locaux pour les complétions et suggestions de code, via l\'extension Continue.dev (VS Code) ou l\'intégration directe (Cursor). Depuis avril 2026, les complétions de code locales sont pratiques pour les modèles 7B-13B et nécessitent 8-16 Go de RAM. Ce guide couvre la configuration, les meilleurs modèles et l\'optimisation des performances.',
+      intro: 'VS Code et Cursor (un éditeur de code axé sur l\'IA) peuvent tous deux utiliser des LLM locaux pour les complétions et suggestions de code, via l\'extension Continue.dev (VS Code) ou l\'intégration directe (Cursor). Les complétions de code locales sont pratiques pour les modèles 7B-13B et nécessitent 8-16 Go de RAM. Ce guide couvre la configuration, les meilleurs modèles et l\'optimisation des performances.',
       metaDescription: 'Configurez les LLM locaux dans VS Code avec Continue.dev et Cursor. Meilleurs modèles : Qwen-Coder 7B, Code Llama 13B. Performance, latence, RAM.',
       publishDate: '2026-04-04',
       readTime: '9 min de lecture',
@@ -491,12 +499,16 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: "VS Code (via l'extension Continue.dev) et Cursor peuvent tous deux utiliser des LLM locaux comme Qwen3-Coder 7B ou Code Llama 13B pour des complétions de code privées, s'exécutant entièrement sur votre propre GPU sans clé API ni connexion cloud." },
+            { type: 'plain-terms', text: "Au lieu d'envoyer votre code à un service d'IA cloud, vous pouvez exécuter le modèle d'IA sur votre propre ordinateur et le connecter à votre éditeur de code. VS Code nécessite l'extension gratuite Continue.dev ; Cursor le prend en charge nativement. Vous obtenez des suggestions type autocomplétion sans que votre code ne quitte votre machine, bien que ce soit un peu plus lent que des outils cloud comme GitHub Copilot." },
+          ],
           items: [
             'VS Code utilise l\'extension Continue.dev pour se connecter aux modèles locaux (Ollama, LM Studio, vLLM).',
             'Cursor est un fork VS Code avec support de modèle local intégré. Aucune extension requise.',
             '**Meilleurs modèles locaux pour le code** : Qwen3-Coder 7B, Code Llama 13B ou Mistral Small.',
             'Attendez-vous à 2-5 secondes de latence de complétude sur les GPU grand public avec des modèles 7B.',
-            'Depuis avril 2026, les complétions de code locales sont pratiques pour usage personnel, pas encore prêtes pour la production d\'équipe.',
+            'Les complétions de code locales sont pratiques aujourd\'hui pour un usage personnel, mais pas encore prêtes pour la production en équipe.',
           ],
         },
         vscodeContinue: {
@@ -654,7 +666,7 @@ schema: {
           { '@type': 'ListItem', position: 2, name: 'Cursor est un fork VS Code avec support de modèle local intégré. Aucune extension requise.' },
           { '@type': 'ListItem', position: 3, name: '**Meilleurs modèles locaux pour le code** : Qwen3-Coder 7B, Code Llama 13B ou Mistral Small.' },
           { '@type': 'ListItem', position: 4, name: 'Attendez-vous à 2-5 secondes de latence de complétude sur les GPU grand public avec des modèles 7B.' },
-          { '@type': 'ListItem', position: 5, name: 'Depuis avril 2026, les complétions de code locales sont pratiques pour usage personnel, pas encore prêtes pour la production d\'équipe.' },
+          { '@type': 'ListItem', position: 5, name: 'Les complétions de code locales sont pratiques aujourd\'hui pour un usage personnel, mais pas encore prêtes pour la production en équipe.' },
         ],
       },
     },
@@ -683,6 +695,10 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'VS Code（Continue.dev拡張機能経由）とCursorはどちらも、Qwen3-Coder 7BやCode Llama 13Bのようなローカルで動作するLLMをプライベートなコード補完に利用できます。APIキーもクラウド接続も不要で、すべて自分のGPU上で実行されます。' },
+            { type: 'plain-terms', text: 'コードをクラウドAIサービスに送信する代わりに、AIモデルを自分のコンピューター上で実行し、コードエディタに接続できます。VS Codeには無料のContinue.dev拡張機能が必要で、Cursorはネイティブに対応しています。コードが自分のマシンから外に出ることなく、オートコンプリート形式の候補が得られますが、GitHub Copilotのようなクラウドツールより多少遅くなります。' },
+          ],
           items: [
             'VS CodeはContinue.dev拡張機能を使用してローカルモデル（Ollama、LM Studio、vLLM）に接続します。',
             'Cursorはビルトインのローカルモデルサポート付きのVS Codeフォークです。拡張機能は不要です。',
@@ -870,7 +886,7 @@ schema: {
       title: 'VS Code和Cursor中的本地LLM：设置和最佳实践',
       heroImage: '/images/local-llms-with-vscode-cursor-overview-hero-zh.webp',
       seoTitle: 'VS Code和Cursor中使用本地大模型实现代码补全的完整教程 2026',
-      intro: 'VS Code和Cursor（AI优先的代码编辑器）都可以通过Continue.dev扩展（VS Code）或直接集成（Cursor）使用本地LLM进行代码补全和建议。截至2026年4月，本地代码补全对于7B-13B模型很实用，需要8-16 GB RAM。本指南涵盖设置、最佳模型和性能调整。',
+      intro: 'VS Code和Cursor（AI优先的代码编辑器）都可以通过Continue.dev扩展（VS Code）或直接集成（Cursor）使用本地LLM进行代码补全和建议。本地代码补全对于7B-13B模型很实用，需要8-16 GB RAM。本指南涵盖设置、最佳模型和性能调整。',
       metaDescription: '在VS Code和Cursor代码编辑器中使用本地运行的大语言模型实现私密代码补全的完整教程与最佳实践指南。详细讲解Continue.dev扩展的安装配置、Cursor集成方法、最优编码模型推荐、性能优化技巧、显存需求分析、隐私保护措施和完整的零成本高效AI编程助手解决方案步骤。',
       publishDate: '2026-04-04',
       readTime: '阅读约10分钟',
@@ -890,12 +906,16 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'VS Code（通过Continue.dev扩展）和Cursor都可以使用Qwen3-Coder 7B或Code Llama 13B等本地LLM进行私密代码补全，完全在您自己的GPU上运行，无需API密钥或云连接。' },
+            { type: 'plain-terms', text: '您可以在自己的电脑上运行AI模型并连接到代码编辑器，而不是将代码发送给云端AI服务。VS Code需要免费的Continue.dev扩展；Cursor原生支持此功能。您将获得类似自动补全的建议，代码始终不离开您的机器，不过速度会比GitHub Copilot等云端工具稍慢。' },
+          ],
           items: [
             'VS Code使用Continue.dev扩展连接到本地模型（Ollama、LM Studio、vLLM）。',
             'Cursor是一个VS Code分支，具有内置的本地模型支持。无需扩展。',
             '**最佳代码本地模型**：Qwen3-Coder 7B、Code Llama 13B或Mistral Small。',
             '使用7B模型在消费者GPU上预期2-5秒补全延迟。',
-            '截至2026年4月，本地代码补全对个人使用很实用，但对团队还不是生产级。',
+            '如今本地代码补全对个人使用很实用，但对团队协作还未达到生产级别。',
           ],
         },
         vscodeContinue: {
@@ -1053,7 +1073,7 @@ schema: {
           { '@type': 'ListItem', position: 2, name: 'Cursor是一个VS Code分支，具有内置的本地模型支持。无需扩展。' },
           { '@type': 'ListItem', position: 3, name: '**最佳代码本地模型**：Qwen3-Coder 7B、Code Llama 13B或Mistral Small。' },
           { '@type': 'ListItem', position: 4, name: '在消费者GPU上使用7B模型时，预期2-5秒补全延迟。' },
-          { '@type': 'ListItem', position: 5, name: '截至2026年4月，本地代码补全对个人使用很实用，但对团队还不是生产级。' },
+          { '@type': 'ListItem', position: 5, name: '如今本地代码补全对个人使用很实用，但对团队协作还未达到生产级别。' },
         ],
       },
     },
@@ -1062,7 +1082,7 @@ schema: {
       title: 'LLMs Locales con VS Code y Cursor: Configuración y Mejores Prácticas',
       heroImage: '/images/local-llms-with-vscode-cursor-overview-hero-es.webp',
       seoTitle: 'LLMs Locales en VS Code y Cursor: Guía de Configuración 2026',
-      intro: 'VS Code y Cursor (un editor de código orientado a la IA) pueden usar LLMs locales para completar y sugerir código, mediante la extensión Continue.dev (VS Code) o la integración directa (Cursor). A partir de abril de 2026, las completaciones de código locales son prácticas para modelos 7B-13B y requieren 8-16 GB de RAM. Esta guía cubre la configuración, los mejores modelos y el ajuste del rendimiento.',
+      intro: 'VS Code y Cursor (un editor de código orientado a la IA) pueden usar LLMs locales para completar y sugerir código, mediante la extensión Continue.dev (VS Code) o la integración directa (Cursor). Las completaciones de código locales son prácticas para modelos 7B-13B y requieren 8-16 GB de RAM. Esta guía cubre la configuración, los mejores modelos y el ajuste del rendimiento.',
       metaDescription: 'Usa Ollama en VS Code con Continue.dev para completados de código locales sin clave API. Mejores modelos, requisitos de VRAM e integración con Cursor 2026.',
       publishDate: '2026-04-04',
       readTime: '10 min de lectura',
@@ -1084,12 +1104,16 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'VS Code (mediante la extensión Continue.dev) y Cursor pueden usar LLM locales como Qwen3-Coder 7B o Code Llama 13B para completaciones de código privadas, ejecutándose por completo en tu propia GPU sin clave de API ni conexión a la nube.' },
+            { type: 'plain-terms', text: 'En lugar de enviar tu código a un servicio de IA en la nube, puedes ejecutar el modelo de IA en tu propio ordenador y conectarlo a tu editor de código. VS Code necesita la extensión gratuita Continue.dev; Cursor lo admite de forma nativa. Obtienes sugerencias de tipo autocompletado sin que tu código salga de tu máquina, aunque es algo más lento que herramientas en la nube como GitHub Copilot.' },
+          ],
           items: [
             'VS Code usa la extensión Continue.dev para conectarse a modelos locales (Ollama, LM Studio, vLLM).',
             'Cursor es un fork de VS Code con soporte nativo para modelos locales. No necesitas ninguna extensión.',
             '**Mejores modelos locales para código**: Qwen3-Coder 7B, Code Llama 13B o Mistral Small.',
             'Espera una latencia de completación de 2-5 segundos en GPUs de consumo con modelos 7B.',
-            'A partir de abril de 2026, las completaciones de código locales son prácticas para uso personal, pero aún no están listas para producción en equipos.',
+            'Las completaciones de código locales son prácticas hoy para uso personal, pero aún no están listas para producción en equipos.',
           ],
         },
         vscodeContinue: {
@@ -1247,7 +1271,7 @@ schema: {
           { '@type': 'ListItem', position: 2, name: 'Cursor es un fork de VS Code con soporte nativo para modelos locales. No necesitas ninguna extensión.' },
           { '@type': 'ListItem', position: 3, name: '**Mejores modelos locales para código**: Qwen3-Coder 7B, Code Llama 13B o Mistral Small.' },
           { '@type': 'ListItem', position: 4, name: 'Espera una latencia de completación de 2-5 segundos en GPUs de consumo con modelos 7B.' },
-          { '@type': 'ListItem', position: 5, name: 'A partir de abril de 2026, las completaciones de código locales son prácticas para uso personal, pero aún no están listas para producción en equipos.' },
+          { '@type': 'ListItem', position: 5, name: 'Las completaciones de código locales son prácticas hoy para uso personal, pero aún no están listas para producción en equipos.' },
         ],
       },
     },
@@ -1256,7 +1280,7 @@ schema: {
       title: 'نماذج ⁨LLM⁩ المحلية مع ⁨VS Code⁩ و⁨Cursor⁩: الإعداد وأفضل الممارسات',
       heroImage: '/images/local-llms-with-vscode-cursor-overview-hero-ar.webp',
       seoTitle: '⁨LLM⁩ محلي في ⁨VS Code⁩ و⁨Cursor⁩: إعداد ⁨Ollama 2026⁩',
-      intro: 'يستطيع VS Code وCursor (محرر شيفرة موجّه نحو الذكاء الاصطناعي) استخدام نماذج LLM المحلية لإكمال الشيفرة واقتراحها، عبر إضافة Continue.dev (VS Code) أو التكامل المباشر (Cursor). اعتبارًا من أبريل 2026، إكمالات الشيفرة المحلية عملية لنماذج 7B-13B وتتطلب 8-16 GB من RAM. يغطي هذا الدليل الإعداد وأفضل النماذج وضبط الأداء.',
+      intro: 'يستطيع VS Code وCursor (محرر شيفرة موجّه نحو الذكاء الاصطناعي) استخدام نماذج LLM المحلية لإكمال الشيفرة واقتراحها، عبر إضافة Continue.dev (VS Code) أو التكامل المباشر (Cursor). إكمالات الشيفرة المحلية عملية لنماذج 7B-13B وتتطلب 8-16 GB من RAM. يغطي هذا الدليل الإعداد وأفضل النماذج وضبط الأداء.',
       metaDescription: '⁨Ollama⁩ مع ⁨Continue.dev⁩ في ⁨VS Code⁩ يتيح إكمال الشيفرة محليًا بلا مفتاح ⁨API⁩. أفضل النماذج ⁨2026⁩، متطلبات ⁨VRAM⁩ التفصيلية، وإعداد ⁨Cursor⁩ بخطوات واضحة.',
       publishDate: '2026-04-04',
       readTime: '10 دقائق للقراءة',
@@ -1278,12 +1302,16 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'يمكن لكل من VS Code (عبر إضافة Continue.dev) وCursor استخدام نماذج LLM محلية مثل Qwen3-Coder 7B أو Code Llama 13B لإكمال الشيفرة بخصوصية تامة، تعمل بالكامل على بطاقة الرسومات الخاصة بك دون مفتاح API أو اتصال سحابي.' },
+            { type: 'plain-terms', text: 'بدلاً من إرسال شيفرتك إلى خدمة ذكاء اصطناعي سحابية، يمكنك تشغيل نموذج الذكاء الاصطناعي على حاسوبك الخاص وربطه بمحرر الشيفرة. يحتاج VS Code إلى إضافة Continue.dev المجانية؛ بينما يدعم Cursor ذلك بشكل أصلي. تحصل على اقتراحات على غرار الإكمال التلقائي دون أن تغادر شيفرتك جهازك، وإن كان ذلك أبطأ قليلاً من أدوات سحابية مثل GitHub Copilot.' },
+          ],
           items: [
             'يستخدم VS Code إضافة Continue.dev للاتصال بالنماذج المحلية (Ollama، LM Studio، vLLM).',
             'Cursor هو نسخة معدّلة (fork) من VS Code بدعم أصلي للنماذج المحلية. لا تحتاج أي إضافة.',
             '**أفضل النماذج المحلية للشيفرة**: Qwen3-Coder 7B، Code Llama 13B أو Mistral Small.',
             'توقّع زمن استجابة إكمال 2-5 ثوانٍ على بطاقات GPU استهلاكية مع نماذج 7B.',
-            'اعتبارًا من أبريل 2026، إكمالات الشيفرة المحلية عملية للاستخدام الشخصي، لكنها ليست جاهزة بعد للإنتاج في الفرق.',
+            'إكمالات الشيفرة المحلية عملية اليوم للاستخدام الشخصي، لكنها ليست جاهزة بعد للإنتاج في الفرق.',
           ],
         },
         vscodeContinue: {
@@ -1441,7 +1469,7 @@ schema: {
           { '@type': 'ListItem', position: 2, name: 'Cursor نسخة معدّلة من VS Code بدعم أصلي للنماذج المحلية. لا تحتاج أي إضافة.' },
           { '@type': 'ListItem', position: 3, name: '**أفضل النماذج المحلية للشيفرة**: Qwen3-Coder 7B، Code Llama 13B أو Mistral Small.' },
           { '@type': 'ListItem', position: 4, name: 'توقّع زمن استجابة إكمال 2-5 ثوانٍ على بطاقات GPU استهلاكية مع نماذج 7B.' },
-          { '@type': 'ListItem', position: 5, name: 'اعتبارًا من أبريل 2026، إكمالات الشيفرة المحلية عملية للاستخدام الشخصي، لكنها ليست جاهزة بعد للإنتاج في الفرق.' },
+          { '@type': 'ListItem', position: 5, name: 'إكمالات الشيفرة المحلية عملية اليوم للاستخدام الشخصي، لكنها ليست جاهزة بعد للإنتاج في الفرق.' },
         ],
       },
     },
@@ -1450,7 +1478,7 @@ schema: {
       title: 'LLMs Locais com VS Code e Cursor: Configuração e Boas Práticas',
       heroImage: '/images/local-llms-with-vscode-cursor-overview-hero-pt.webp',
       seoTitle: 'LLMs Locais no VS Code e Cursor: Guia de Configuração 2026',
-      intro: 'O VS Code e o Cursor (um editor de código voltado para IA) podem usar LLMs locais para completar e sugerir código, via extensão Continue.dev (VS Code) ou integração direta (Cursor). A partir de abril de 2026, os completamentos de código locais são práticos para modelos 7B-13B e exigem 8-16 GB de RAM. Este guia cobre a configuração, os melhores modelos e o ajuste de desempenho.',
+      intro: 'O VS Code e o Cursor (um editor de código voltado para IA) podem usar LLMs locais para completar e sugerir código, via extensão Continue.dev (VS Code) ou integração direta (Cursor). Os completamentos de código locais são práticos para modelos 7B-13B e exigem 8-16 GB de RAM. Este guia cobre a configuração, os melhores modelos e o ajuste de desempenho.',
       metaDescription: 'Use o Ollama no VS Code com o Continue.dev para completamentos de código locais sem chave de API. Melhores modelos, requisitos de VRAM e integração com o Cursor 2026.',
       publishDate: '2026-04-04',
       readTime: '10 min de leitura',
@@ -1472,12 +1500,16 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'O VS Code (via extensão Continue.dev) e o Cursor podem usar LLMs locais como Qwen3-Coder 7B ou Code Llama 13B para completar código com privacidade, rodando inteiramente na sua própria GPU, sem chave de API nem conexão com a nuvem.' },
+            { type: 'plain-terms', text: 'Em vez de enviar seu código para um serviço de IA na nuvem, você pode rodar o modelo de IA no seu próprio computador e conectá-lo ao seu editor de código. O VS Code precisa da extensão gratuita Continue.dev; o Cursor já oferece suporte nativo. Você recebe sugestões no estilo autocompletar sem que seu código saia da sua máquina, embora seja um pouco mais lento que ferramentas na nuvem como o GitHub Copilot.' },
+          ],
           items: [
             'O VS Code usa a extensão Continue.dev para se conectar a modelos locais (Ollama, LM Studio, vLLM).',
             'O Cursor é um fork do VS Code com suporte nativo a modelos locais. Você não precisa de nenhuma extensão.',
             '**Melhores modelos locais para código**: Qwen3-Coder 7B, Code Llama 13B ou Mistral Small.',
             'Espere uma latência de completamento de 2-5 segundos em GPUs de consumo com modelos 7B.',
-            'A partir de abril de 2026, os completamentos de código locais são práticos para uso pessoal, mas ainda não estão prontos para produção em equipes.',
+            'Os completamentos de código locais são práticos hoje para uso pessoal, mas ainda não estão prontos para produção em equipes.',
           ],
         },
         vscodeContinue: {
@@ -1635,7 +1667,7 @@ schema: {
           { '@type': 'ListItem', position: 2, name: 'O Cursor é um fork do VS Code com suporte nativo a modelos locais. Você não precisa de nenhuma extensão.' },
           { '@type': 'ListItem', position: 3, name: '**Melhores modelos locais para código**: Qwen3-Coder 7B, Code Llama 13B ou Mistral Small.' },
           { '@type': 'ListItem', position: 4, name: 'Espere uma latência de completamento de 2-5 segundos em GPUs de consumo com modelos 7B.' },
-          { '@type': 'ListItem', position: 5, name: 'A partir de abril de 2026, os completamentos de código locais são práticos para uso pessoal, mas ainda não estão prontos para produção em equipes.' },
+          { '@type': 'ListItem', position: 5, name: 'Os completamentos de código locais são práticos hoje para uso pessoal, mas ainda não estão prontos para produção em equipes.' },
         ],
       },
     },
@@ -1645,7 +1677,7 @@ schema: {
       title: 'VS Code와 Cursor에서 로컬 LLM 사용하기: 설정 및 모범 사례',
     heroImage: '/images/local-llms-with-vscode-cursor-overview-hero-ko.webp',
       seoTitle: 'VS Code와 Cursor에서 로컬 LLM 사용하기: 2026 설정 가이드',
-      intro: 'VS Code와 Cursor(AI 중심 코드 편집기)는 모두 Continue.dev 확장(VS Code) 또는 직접 통합(Cursor)을 통해 로컬 LLM을 코드 자동 완성 및 제안에 활용할 수 있습니다. 2026년 4월 기준, 7B~13B 모델에서 로컬 코드 자동 완성이 실용적이며 8~16GB RAM이 필요합니다. 이 가이드는 설정 방법, 최적 모델, 성능 튜닝을 다룹니다.',
+      intro: 'VS Code와 Cursor(AI 중심 코드 편집기)는 모두 Continue.dev 확장(VS Code) 또는 직접 통합(Cursor)을 통해 로컬 LLM을 코드 자동 완성 및 제안에 활용할 수 있습니다. 7B~13B 모델에서 로컬 코드 자동 완성이 실용적이며 8~16GB RAM이 필요합니다. 이 가이드는 설정 방법, 최적 모델, 성능 튜닝을 다룹니다.',
       metaDescription: 'Continue.dev를 통해 Ollama를 VS Code에 연결하여 로컬 코드 자동 완성을 사용하십시오 — API 키 불필요. 2026년 최적 모델, VRAM 요구 사항, Cursor 통합 안내.',
       publishDate: '2026-04-04',
       leadAnswerBlock: 'VS Code와 Cursor(AI 중심 코드 편집기)는 모두 Continue.dev 확장(VS Code) 또는 직접 통합(Cursor)을 통해 로컬 LLM을 코드 자동 완성 및 제안에 활용할 수 있습니다.',
@@ -1669,12 +1701,16 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'VS Code(Continue.dev 확장 프로그램을 통해)와 Cursor는 모두 Qwen3-Coder 7B나 Code Llama 13B 같은 로컬 LLM을 사용해 비공개 코드 완성을 제공하며, API 키나 클라우드 연결 없이 자신의 GPU에서 전부 실행됩니다.' },
+            { type: 'plain-terms', text: '코드를 클라우드 AI 서비스로 보내는 대신, AI 모델을 자신의 컴퓨터에서 실행하고 코드 편집기에 연결할 수 있습니다. VS Code에는 무료 Continue.dev 확장 프로그램이 필요하며, Cursor는 이를 기본적으로 지원합니다. 코드가 내 컴퓨터를 벗어나지 않으면서 자동 완성 방식의 제안을 받을 수 있지만, GitHub Copilot 같은 클라우드 도구보다는 다소 느립니다.' },
+          ],
           items: [
             'VS Code는 Continue.dev 확장을 사용하여 로컬 모델(Ollama, LM Studio, vLLM)에 연결합니다.',
             'Cursor는 VS Code 포크로 로컬 모델 지원이 내장되어 있습니다. 별도 확장이 필요하지 않습니다.',
             '**코드용 최적 로컬 모델**: Qwen3-Coder 7B, Code Llama 13B 또는 Mistral Small.',
             '7B 모델 기준 소비자 GPU에서 2~5초의 자동 완성 지연을 예상하십시오.',
-            '2026년 4월 기준, 로컬 코드 자동 완성은 개인 사용에는 실용적이나 팀 프로덕션 환경에는 아직 적합하지 않습니다.',
+            '로컬 코드 자동 완성은 현재 개인 사용에는 실용적이나 팀 프로덕션 환경에는 아직 적합하지 않습니다.',
           ],
         },
         vscodeContinue: {
