@@ -22,7 +22,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       title: 'Local LLM Hardware in 2026: GPU vs Mini PC vs Mac Compared',
       seoTitle: 'Local LLM Hardware Requirements 2026: 8GB to 70B by VRAM',
       intro: 'Running a local LLM means matching the model to your GPU\'s VRAM. As of July 2026, a 7B model needs about 4-5 GB VRAM at Q4_K_M (the standard rule of thumb: roughly 0.6 GB per billion parameters at 4-bit) or 8-9 GB at Q8, a 14B model needs ~9 GB at Q4_K_M, and most 70B models need ~40 GB -- more than a single RTX 4090 (24 GB) holds. This guide gives the exact hardware requirement per model size, then the best model for 8 GB, 12 GB, 16 GB, and 24 GB VRAM tiers, what it really takes to run 70B (and the far larger GLM-5.3) locally, CPU-only inference on 16 GB system RAM, MacBook 8 GB options, and current July 2026 GPU prices after this year\'s memory shortage.',
-      metaDescription: 'Local LLM hardware requirements by VRAM: best models for 8, 16 & 24 GB GPUs plus exact 70B and GLM-5.3 needs. RTX 50-series, Apple M5, July 2026 prices.',
+      metaDescription: 'Local LLM hardware requirements by VRAM: best models for 8, 16 & 24 GB GPUs plus exact 70B and GLM-5.3 needs. RTX 50-series, Apple M5.',
       heroImage: '/images/local-llm-hardware-guide-2026-gpu-tiers-hero-en.webp',
       publishDate: '2026-04-04',
       readTime: '13 min read',
@@ -226,7 +226,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         vramTiers: {
           id: 'vram-tiers',
-          title: 'Best Local LLMs by VRAM Tier (July 2026)',
+          title: 'Best Local LLMs by VRAM Tier',
           content: [
             '**Use this as a quick lookup by your GPU\'s VRAM tier:**',
             'All models listed below are open-weights — downloadable, fine-tunable, and free to run locally. If you\'re choosing between open-weights and proprietary APIs, see our [open-source vs proprietary LLMs comparison](/prompt-engineering/open-source-vs-proprietary-llms) for cost and performance trade-offs at different token volumes.',
@@ -711,7 +711,7 @@ schema: {
       title: 'Hardware para LLM locales en 2026: GPU vs Mini PC vs Mac comparados',
       seoTitle: 'Requisitos de hardware para LLM locales 2026: de 8GB a 70B por VRAM',
       intro: 'Ejecutar un LLM local significa ajustar el modelo a la VRAM de tu GPU. A fecha de julio de 2026, un modelo de 7B necesita unos 4-5 GB de VRAM en Q4_K_M (la regla general habitual: aproximadamente 0,6 GB por cada mil millones de parámetros en 4 bits) u 8-9 GB en Q8, un modelo de 14B necesita ~9 GB en Q4_K_M, y la mayoría de los modelos de 70B necesitan ~40 GB -- más de lo que contiene una sola RTX 4090 (24 GB). Esta guía ofrece el requisito de hardware exacto por tamaño de modelo, luego el mejor modelo para los niveles de VRAM de 8 GB, 12 GB, 16 GB y 24 GB, qué hace falta realmente para ejecutar un 70B (y el mucho más grande GLM-5.3) en local, inferencia solo en CPU con 16 GB de RAM del sistema, opciones de MacBook de 8 GB, y los precios actuales de GPU de julio de 2026 tras la escasez de memoria de este año.',
-      metaDescription: 'Requisitos de hardware para LLM locales por VRAM: mejores modelos para GPU de 8, 16 y 24 GB, además de las necesidades exactas para 70B y GLM-5.3. RTX serie 50, Apple M5, precios de julio de 2026.',
+      metaDescription: 'Requisitos de hardware para LLM locales por VRAM: mejores modelos para GPU de 8, 16 y 24 GB, además de las necesidades exactas para 70B y GLM-5.3. RTX serie 50, Apple M5.',
       heroImage: '/images/local-llm-hardware-guide-2026-gpu-tiers-hero-es.webp',
       publishDate: '2026-04-04',
       readTime: '13 min de lectura',
@@ -915,7 +915,7 @@ schema: {
         },
         vramTiers: {
           id: 'vram-tiers',
-          title: 'Mejores LLM locales por nivel de VRAM (julio de 2026)',
+          title: 'Mejores LLM locales por nivel de VRAM',
           content: [
             '**Usa esto como búsqueda rápida según el nivel de VRAM de tu GPU:**',
             'Todos los modelos listados a continuación son de pesos abiertos — descargables, ajustables y gratuitos para ejecutar en local. Si estás eligiendo entre pesos abiertos y APIs propietarias, consulta nuestra [comparación de LLM de código abierto vs propietarios](/es/prompt-engineering/open-source-vs-proprietary-llms) para los compromisos de coste y rendimiento a diferentes volúmenes de tokens.',
@@ -1604,7 +1604,7 @@ schema: {
         },
         vramTiers: {
           id: 'vram-tiers',
-          title: 'أفضل نماذج LLM المحلية حسب مستوى VRAM (يوليو 2026)',
+          title: 'أفضل نماذج LLM المحلية حسب مستوى VRAM',
           content: [
             '**استخدم هذا كبحث سريع حسب مستوى VRAM الخاص بـ GPU لديك:**',
             'جميع النماذج المدرجة أدناه مفتوحة الأوزان — قابلة للتنزيل والضبط الدقيق ومجانية للتشغيل محليًا. إذا كنت تختار بين الأوزان المفتوحة وواجهات API الخاصة، راجع [مقارنة LLM مفتوحة المصدر مقابل الخاصة](/ar/prompt-engineering/open-source-vs-proprietary-llms) للمفاضلات في التكلفة والأداء عند أحجام رموز مختلفة.',
@@ -2089,7 +2089,7 @@ schema: {
       title: 'Hardware para LLM Local em 2026: GPU vs Mini PC vs Mac Comparados',
       seoTitle: 'Requisitos de Hardware para LLM Local 2026: 8GB a 70B por VRAM',
       intro: 'Rodar um LLM local significa combinar o modelo com a VRAM da sua GPU. Em julho de 2026, um modelo 7B precisa de cerca de 4-5 GB de VRAM em Q4_K_M (regra prática padrão: aproximadamente 0,6 GB por bilhão de parâmetros em 4 bits) ou 8-9 GB em Q8, um modelo 14B precisa de ~9 GB em Q4_K_M, e a maioria dos modelos 70B precisa de ~40 GB -- mais do que uma única RTX 4090 (24 GB) comporta. Este guia traz o requisito exato de hardware por tamanho de modelo, depois o melhor modelo para as faixas de 8 GB, 12 GB, 16 GB e 24 GB de VRAM, o que realmente é preciso para rodar 70B (e o muito maior GLM-5.3) localmente, inferência apenas em CPU com 16 GB de RAM do sistema, opções de MacBook com 8 GB, e os preços atuais de GPU de julho de 2026 após a escassez de memória deste ano.',
-      metaDescription: 'Requisitos de hardware para LLM local por VRAM: melhores modelos para GPUs de 8, 16 e 24 GB e o que 70B e GLM-5.3 precisam. RTX série 50, Apple M5, preços de julho de 2026.',
+      metaDescription: 'Requisitos de hardware para LLM local por VRAM: melhores modelos para GPUs de 8, 16 e 24 GB e o que 70B e GLM-5.3 precisam. RTX série 50, Apple M5.',
       heroImage: '/images/local-llm-hardware-guide-2026-gpu-tiers-hero-pt.webp',
       publishDate: '2026-04-04',
       readTime: '13 min de leitura',
@@ -2293,7 +2293,7 @@ schema: {
         },
         vramTiers: {
           id: 'vram-tiers',
-          title: 'Melhores LLMs Locais por Faixa de VRAM (julho de 2026)',
+          title: 'Melhores LLMs Locais por Faixa de VRAM',
           content: [
             '**Use isto como uma consulta rápida pela faixa de VRAM da sua GPU:**',
             'Todos os modelos listados abaixo são de pesos abertos — baixáveis, ajustáveis (fine-tuning) e gratuitos para rodar localmente. Se você está escolhendo entre pesos abertos e APIs proprietárias, veja nossa [comparação de LLMs open-source vs proprietários](/pt/prompt-engineering/open-source-vs-proprietary-llms) para os trade-offs de custo e desempenho em diferentes volumes de tokens.',
@@ -2778,7 +2778,7 @@ schema: {
       title: 'Lokale-LLM-Hardware 2026: GPU vs. Mini-PC vs. Mac im Vergleich',
       seoTitle: 'Lokale LLM Hardware-Anforderungen 2026: 8GB bis 70B nach VRAM',
       intro: 'Ein lokales LLM zu betreiben bedeutet, das Modell auf den VRAM deiner GPU abzustimmen. Stand Juli 2026 braucht ein 7B-Modell bei Q4_K_M etwa 4-5 GB VRAM (Faustregel: rund 0,6 GB pro Milliarde Parameter bei 4-Bit) oder 8-9 GB bei Q8, ein 14B-Modell ~9 GB bei Q4_K_M und die meisten 70B-Modelle benoetigen ~40 GB -- mehr, als eine einzelne RTX 4090 (24 GB) fasst. Dieser Leitfaden nennt die exakte Hardware-Anforderung pro Modellgroesse, dann das beste Modell fuer die VRAM-Stufen 8 GB, 12 GB, 16 GB und 24 GB, was es wirklich braucht, um 70B (und das weit groessere GLM-5.3) lokal zu betreiben, CPU-only-Inferenz auf 16 GB Arbeitsspeicher, MacBook-8-GB-Optionen und die aktuellen GPU-Preise von Juli 2026 nach der diesjaehrigen Speicherknappheit.',
-      metaDescription: 'Lokale LLM Hardware-Anforderungen nach VRAM: beste Modelle fuer 8-, 16- und 24-GB-GPUs plus exakter Bedarf fuer 70B und GLM-5.3. RTX-50-Serie, Apple M5, Preise Juli 2026.',
+      metaDescription: 'Lokale LLM Hardware-Anforderungen nach VRAM: beste Modelle fuer 8-, 16- und 24-GB-GPUs plus exakter Bedarf fuer 70B und GLM-5.3. RTX-50-Serie, Apple M5.',
       heroImage: '/images/local-llm-hardware-guide-2026-gpu-tiers-hero-de.webp',
       publishDate: '2026-04-04',
       readTime: '13 Min. Lesezeit',
@@ -2982,7 +2982,7 @@ schema: {
         },
         vramTiers: {
           id: 'vram-tiers',
-          title: 'Beste lokale LLMs nach VRAM-Stufe (Juli 2026)',
+          title: 'Beste lokale LLMs nach VRAM-Stufe',
           content: [
             '**Nutze dies als schnelles Nachschlagen nach der VRAM-Stufe deiner GPU:**',
             'Alle unten aufgefuehrten Modelle sind Open-Weights — herunterladbar, feinabstimmbar und kostenlos lokal ausfuehrbar. Wenn du zwischen Open-Weights und proprietaeren APIs waehlst, siehe unseren [Vergleich Open-Source- vs. proprietaere LLMs](/de/prompt-engineering/open-source-vs-proprietary-llms) fuer Kosten- und Leistungsabwaegungen bei unterschiedlichen Token-Volumina.',
@@ -3467,7 +3467,7 @@ schema: {
       title: 'Materiel pour LLM local en 2026 : GPU, mini PC et Mac compares',
       seoTitle: 'Configuration materielle LLM local 2026 : de 8 Go a 70B par VRAM',
       intro: 'Faire tourner un LLM local consiste a adapter le modele a la VRAM de votre GPU. Regle empirique pour un 7B en Q4 : comptez 4-5 Go de VRAM, soit environ 0,6 Go par milliard de parametres en 4 bits. En juillet 2026, un modele 7B necessite 8-9 Go de VRAM en Q8, un modele 14B environ 9 Go en Q4_K_M, et la plupart des modeles 70B ont besoin d\'environ 40 Go -- soit plus que ce que contient une seule RTX 4090 (24 Go). Ce guide donne le besoin materiel exact par taille de modele, puis le meilleur modele pour les paliers de VRAM de 8 Go, 12 Go, 16 Go et 24 Go, ce qu\'il faut vraiment pour faire tourner du 70B (et le bien plus grand GLM-5.3) en local, l\'inference CPU seul sur 16 Go de RAM systeme, les options MacBook 8 Go, et les prix GPU actuels de juillet 2026 apres la penurie de memoire de cette annee.',
-      metaDescription: 'Besoins materiels LLM local par VRAM : meilleurs modeles pour GPU 8, 16 et 24 Go plus ce qu\'exigent exactement le 70B et GLM-5.3. RTX serie 50, Apple M5, prix juillet 2026.',
+      metaDescription: 'Besoins materiels LLM local par VRAM : meilleurs modeles pour GPU 8, 16 et 24 Go plus ce qu\'exigent exactement le 70B et GLM-5.3. RTX serie 50, Apple M5.',
       heroImage: '/images/local-llm-hardware-guide-2026-gpu-tiers-hero-fr.webp',
       publishDate: '2026-04-04',
       readTime: '13 min de lecture',
@@ -3671,7 +3671,7 @@ schema: {
         },
         vramTiers: {
           id: 'vram-tiers',
-          title: 'Meilleurs LLM locaux par palier de VRAM (juillet 2026)',
+          title: 'Meilleurs LLM locaux par palier de VRAM',
           content: [
             '**Utilisez ceci comme reference rapide selon le palier de VRAM de votre GPU :**',
             'Tous les modeles listes ci-dessous sont a poids ouverts — telechargeables, ajustables et gratuits a executer en local. Si vous hesitez entre poids ouverts et API proprietaires, voir notre [comparaison LLM open source vs proprietaires](/fr/prompt-engineering/open-source-vs-proprietary-llms) pour les compromis cout et performance a differents volumes de tokens.',
@@ -4361,7 +4361,7 @@ schema: {
         },
         vramTiers: {
           id: 'vram-tiers',
-          title: 'VRAMティア別ベストローカルLLM（2026年7月）',
+          title: 'VRAMティア別ベストローカルLLM',
           content: [
             '**これをあなたのGPUのVRAMティア別のクイックルックアップとして使ってください：**',
             '以下に挙げるすべてのモデルはオープンウェイトです — ダウンロード可能で、ファインチューニング可能で、ローカルで無料で実行できます。オープンウェイトとプロプライエタリAPIのどちらを選ぶか迷っている場合は、異なるトークン量でのコストと性能のトレードオフについて[オープンソース vs プロプライエタリLLM比較](/ja/prompt-engineering/open-source-vs-proprietary-llms)を参照してください。',
@@ -5050,7 +5050,7 @@ schema: {
         },
         vramTiers: {
           id: 'vram-tiers',
-          title: '按显存档位划分的最佳本地LLM（2026年7月）',
+          title: '按显存档位划分的最佳本地LLM',
           content: [
             '**将此作为按你的 GPU 显存档位的快速查找：**',
             '下面列出的所有模型都是开放权重的——可下载、可微调，且免费在本地运行。如果你在开放权重和专有 API 之间抉择，请参见我们的[开源 vs 专有 LLM 对比](/zh/prompt-engineering/open-source-vs-proprietary-llms)，了解不同 token 量下的成本和性能权衡。',
@@ -5710,7 +5710,7 @@ schema: {
         },
         vramTiers: {
           id: 'vram-tiers',
-          title: 'VRAM 티어별 최적 로컬 LLM(2026년 7월)',
+          title: 'VRAM 티어별 최적 로컬 LLM',
           content: [
             '**GPU의 VRAM 티어별 빠른 참조 목록입니다:**',
             '아래에 나열된 모든 모델은 오픈 가중치로 — 다운로드하고, 파인튜닝하고, 로컬에서 무료로 실행할 수 있습니다. 오픈 가중치와 독점 API 중 선택을 고려하신다면 다양한 토큰 볼륨에서의 비용 및 성능 트레이드오프에 대해 [오픈소스 vs 독점 LLM 비교](/prompt-engineering/open-source-vs-proprietary-llms)를 참조하십시오.',

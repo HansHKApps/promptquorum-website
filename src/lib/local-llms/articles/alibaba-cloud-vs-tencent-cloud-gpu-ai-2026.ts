@@ -173,7 +173,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       autodlPricing: {
         id: 'autodl-pricing',
-        title: 'AutoDL Pricing Table — Per-Hour GPU Rates (August 2026)',
+        title: 'AutoDL Pricing Table — Per-Hour GPU Rates',
         content:
           '**AutoDL bills per second with no minimum contract; the headline rates below are on-demand list prices from the AutoDL price page. An A100 80 GB is ¥5.98/hr (~$0.82), an RTX 4090 24 GB is from ¥2.68/hr (~$0.37), and an RTX 3090 24 GB is from ¥1.68/hr (~$0.23).** Prices vary by data-center region and availability; spot ("按量" idle) instances can run 30–50% below on-demand during off-peak hours (midnight–6am Beijing time). Students who complete verification get an additional 15% discount. All prices in CNY (¥); USD approximate at ¥7.25/USD.',
         columns: ['GPU', 'VRAM', 'AutoDL per-hour (¥)', 'USD approx.', 'Typical use'],
@@ -196,7 +196,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       pricing: {
         id: 'pricing',
-        title: 'GPU Pricing Comparison — August 2026',
+        title: 'GPU Pricing Comparison',
         content:
           '**AutoDL is consistently cheapest; Alibaba Cloud PAI runs 40–80% higher but includes optimized software stack; Tencent Cloud TI is mid-range.** All prices in CNY (¥). USD approximate at ¥7.25/USD.',
         columns: ['GPU', 'AutoDL (spot)', 'AutoDL (on-demand)', 'Alibaba PAI', 'Tencent Cloud TI', 'USD equiv. (AutoDL)', 'Best option'],
@@ -616,7 +616,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       autodlPricing: {
         id: 'autodl-pricing',
-        title: 'Tabla de precios de AutoDL — tarifas de GPU por hora (julio 2026)',
+        title: 'Tabla de precios de AutoDL — tarifas de GPU por hora',
         content:
           '**AutoDL factura por segundo sin contrato mínimo; las tarifas destacadas a continuación son precios de lista bajo demanda de la página de precios de AutoDL. Un A100 80 GB cuesta ¥5,98/h (~$0,82), un RTX 4090 24 GB desde ¥2,68/h (~$0,37) y un RTX 3090 24 GB desde ¥1,68/h (~$0,23).** Los precios varían según la región del centro de datos y la disponibilidad; las instancias spot ("按量" inactivas) pueden costar un 30–50 % menos que el precio bajo demanda en horas de baja actividad (medianoche–6am hora de Pekín). Los estudiantes que completan la verificación obtienen un 15 % adicional de descuento. Todos los precios en CNY (¥); USD aproximado a ¥7,25/USD.',
         columns: ['GPU', 'VRAM', 'AutoDL por hora (¥)', 'USD aprox.', 'Uso típico'],
@@ -639,7 +639,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       pricing: {
         id: 'pricing',
-        title: 'Comparativa de precios GPU — julio 2026',
+        title: 'Comparativa de precios GPU',
         content:
           '**AutoDL es consistentemente el más barato; Alibaba Cloud PAI cuesta un 40–80 % más pero incluye una pila de software optimizada; Tencent Cloud TI está en rango medio.** Todos los precios en CNY (¥). USD aproximado a ¥7,25/USD.',
         columns: ['GPU', 'AutoDL (spot)', 'AutoDL (bajo demanda)', 'Alibaba PAI', 'Tencent Cloud TI', 'Equiv. USD (AutoDL)', 'Mejor opción'],
@@ -1055,7 +1055,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       autodlPricing: {
         id: 'autodl-pricing',
-        title: 'جدول أسعار AutoDL — أسعار GPU بالساعة (يوليو 2026)',
+        title: 'جدول أسعار AutoDL — أسعار GPU بالساعة',
         content:
           '**يفوتر AutoDL بالثانية دون حد أدنى للعقد؛ والأسعار الرئيسية أدناه هي أسعار قائمة عند الطلب من صفحة أسعار AutoDL. A100 80 GB بـ ¥5.98/ساعة (نحو 0.82 دولار)، وRTX 4090 24 GB ابتداءً من ¥2.68/ساعة (نحو 0.37 دولار)، وRTX 3090 24 GB ابتداءً من ¥1.68/ساعة (نحو 0.23 دولار).** تتفاوت الأسعار حسب منطقة مركز البيانات والتوفر؛ وقد تكون نسخ spot ("按量" الخاملة) أقل بنسبة 30–50% من سعر عند الطلب في ساعات انخفاض الطلب (منتصف الليل–6 صباحًا بتوقيت بكين). ويحصل الطلاب الذين يكملون التحقق على خصم إضافي بنسبة 15%. جميع الأسعار باليوان (¥)؛ الدولار تقريبي عند ¥7.25/دولار.',
         columns: ['GPU', 'VRAM', 'سعر AutoDL بالساعة (¥)', 'الدولار تقريبًا', 'الاستخدام النموذجي'],
@@ -1078,7 +1078,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       pricing: {
         id: 'pricing',
-        title: 'مقارنة أسعار GPU — يوليو 2026',
+        title: 'مقارنة أسعار GPU',
         content:
           '**AutoDL هو الأرخص باستمرار؛ ويكلف Alibaba Cloud PAI أكثر بنسبة 40–80% لكنه يتضمن حزمة برمجيات محسَّنة؛ وتقع Tencent Cloud TI في النطاق المتوسط.** جميع الأسعار باليوان (¥). الدولار تقريبي عند ¥7.25/دولار.',
         columns: ['GPU', 'AutoDL (spot)', 'AutoDL (عند الطلب)', 'Alibaba PAI', 'Tencent Cloud TI', 'معادل الدولار', 'أفضل خيار'],
@@ -1498,7 +1498,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       autodlPricing: {
         id: 'autodl-pricing',
-        title: 'Tabela de preços do AutoDL — tarifas de GPU por hora (julho 2026)',
+        title: 'Tabela de preços do AutoDL — tarifas de GPU por hora',
         content:
           '**O AutoDL cobra por segundo, sem contrato mínimo; as tarifas em destaque abaixo são preços de tabela sob demanda da página de preços do AutoDL. Um A100 80 GB custa ¥5,98/h (~US$ 0,82), um RTX 4090 24 GB a partir de ¥2,68/h (~US$ 0,37) e um RTX 3090 24 GB a partir de ¥1,68/h (~US$ 0,23).** Os preços variam conforme a região do data center e a disponibilidade; instâncias spot ("按量" ociosas) podem custar 30–50% abaixo do preço sob demanda em horários de baixa demanda (meia-noite–6h, horário de Pequim). Estudantes que concluem a verificação recebem 15% de desconto adicional. Todos os preços em CNY (¥); USD aproximado a ¥7,25/USD.',
         columns: ['GPU', 'VRAM', 'AutoDL por hora (¥)', 'USD aprox.', 'Uso típico'],
@@ -1521,7 +1521,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       pricing: {
         id: 'pricing',
-        title: 'Comparativo de preços de GPU — julho 2026',
+        title: 'Comparativo de preços de GPU',
         content:
           '**O AutoDL é consistentemente o mais barato; o Alibaba Cloud PAI custa 40–80% mais, mas inclui uma pilha de software otimizada; o Tencent Cloud TI fica na faixa intermediária.** Todos os preços em CNY (¥). USD aproximado a ¥7,25/USD.',
         columns: ['GPU', 'AutoDL (spot)', 'AutoDL (sob demanda)', 'Alibaba PAI', 'Tencent Cloud TI', 'Equiv. USD', 'Melhor opção'],
@@ -1901,7 +1901,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       autodlPricing: {
         id: 'autodl-pricing',
-        title: 'AutoDL-Preistabelle — GPU-Stundensätze (Juli 2026)',
+        title: 'AutoDL-Preistabelle — GPU-Stundensätze',
         content:
           '**AutoDL rechnet sekundengenau ohne Mindestvertrag ab; die untenstehenden Richtsätze sind On-Demand-Listenpreise von der AutoDL-Preisseite. Eine A100 80 GB kostet ¥5,98/Std. (~0,82 $), eine RTX 4090 24 GB ab ¥2,68/Std. (~0,37 $) und eine RTX 3090 24 GB ab ¥1,68/Std. (~0,23 $).** Die Preise variieren je nach Rechenzentrumsregion und Verfügbarkeit; Spot-Instanzen ("按量", im Leerlauf) können in Nebenzeiten (Mitternacht–6 Uhr Pekinger Zeit) 30–50 % unter dem On-Demand-Preis liegen. Studierende mit abgeschlossener Verifizierung erhalten 15 % zusätzlichen Rabatt. Alle Preise in CNY (¥); USD ungefähr bei ¥7,25/USD.',
         columns: ['GPU', 'VRAM', 'AutoDL pro Stunde (¥)', 'USD ca.', 'Typische Nutzung'],
@@ -1924,7 +1924,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       pricing: {
         id: 'pricing',
-        title: 'GPU-Preisvergleich — Juli 2026',
+        title: 'GPU-Preisvergleich',
         content: '**AutoDL ist durchgehend am günstigsten; Alibaba Cloud PAI kostet 40–80 % mehr, bietet aber einen optimierten Software-Stack; Tencent Cloud TI liegt dazwischen.** Alle Preise in CNY (¥).',
         columns: ['GPU', 'AutoDL (Spot)', 'AutoDL (On-Demand)', 'Alibaba PAI', 'Tencent Cloud TI', 'USD ca.', 'Beste Option'],
         rows: [
@@ -2165,7 +2165,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       autodlPricing: {
         id: 'autodl-pricing',
-        title: 'Grille tarifaire AutoDL — tarifs GPU à l\'heure (juillet 2026)',
+        title: 'Grille tarifaire AutoDL — tarifs GPU à l\'heure',
         content:
           '**AutoDL facture à la seconde sans contrat minimum ; les tarifs indiqués ci-dessous sont les prix catalogue à la demande de la page tarifaire AutoDL. Une A100 80 Go coûte ¥5,98/h (~0,82 $), une RTX 4090 24 Go dès ¥2,68/h (~0,37 $) et une RTX 3090 24 Go dès ¥1,68/h (~0,23 $).** Les prix varient selon la région du centre de données et la disponibilité ; les instances spot ("按量", inactives) peuvent être 30–50 % en dessous du tarif à la demande en heures creuses (minuit–6 h, heure de Pékin). Les étudiants ayant validé leur vérification bénéficient de 15 % de remise supplémentaire. Tous les prix en CNY (¥) ; USD approximatif à ¥7,25/USD.',
         columns: ['GPU', 'VRAM', 'AutoDL à l\'heure (¥)', 'USD approx.', 'Usage typique'],
@@ -2188,7 +2188,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       pricing: {
         id: 'pricing',
-        title: 'Comparatif des prix GPU — juillet 2026',
+        title: 'Comparatif des prix GPU',
         content: '**AutoDL est systématiquement le moins cher ; Alibaba Cloud PAI coûte 40–80 % de plus mais inclut une pile logicielle optimisée ; Tencent Cloud TI est dans la moyenne.** Tous les prix en CNY (¥).',
         columns: ['GPU', 'AutoDL (spot)', 'AutoDL (à la demande)', 'Alibaba PAI', 'Tencent Cloud TI', 'Équiv. USD', 'Meilleure option'],
         rows: [
@@ -2429,7 +2429,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       autodlPricing: {
         id: 'autodl-pricing',
-        title: 'AutoDL料金表——GPU時間単価（2026年7月）',
+        title: 'AutoDL料金表——GPU時間単価',
         content:
           '**AutoDLは最低契約なしの秒単位課金です。以下の基準額はAutoDL料金ページのオンデマンド定価です。A100 80GBは¥5.98/時間（約0.82ドル）、RTX 4090 24GBは¥2.68/時間から（約0.37ドル）、RTX 3090 24GBは¥1.68/時間から（約0.23ドル）。** 価格はデータセンターのリージョンと在庫状況で変動します。スポット（「按量」＝アイドル）インスタンスはオフピーク時間帯（北京時間0〜6時）にオンデマンド比30〜50%安くなることがあります。認証を完了した学生はさらに15%割引が適用されます。全価格は人民元（¥）；USDは¥7.25/USDで概算。',
         columns: ['GPU', 'VRAM', 'AutoDL時間単価（¥）', 'USD概算', '主な用途'],
@@ -2452,7 +2452,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       pricing: {
         id: 'pricing',
-        title: 'GPU価格比較——2026年7月',
+        title: 'GPU価格比較',
         content: '**AutoDLは一貫して最安。Alibaba Cloud PAIは40〜80%高いですが最適化ソフトウェアスタックを含みます。テンセントクラウドTIは中間帯です。** 全価格は人民元（¥）。',
         columns: ['GPU', 'AutoDL（スポット）', 'AutoDL（オンデマンド）', 'Alibaba PAI', 'テンセントクラウドTI', 'USD概算', '最適な選択'],
         rows: [
@@ -2695,7 +2695,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       autodlPricing: {
         id: 'autodl-pricing',
-        title: 'AutoDL价格表——GPU每小时费率（2026年7月）',
+        title: 'AutoDL价格表——GPU每小时费率',
         content:
           '**AutoDL按秒计费，无最低合同；下表标示的费率为AutoDL价格页的按需标价。A100 80GB为¥5.98/时（约0.82美元），RTX 4090 24GB ¥2.68/时起（约0.37美元），RTX 3090 24GB ¥1.68/时起（约0.23美元）。** 价格因数据中心区域和库存而异；现货（"按量"闲置）实例在非高峰时段（北京时间0-6点）可比按需价低30-50%。完成认证的学生可再享15%折扣。所有价格均为人民币（¥）；美元按¥7.25/美元约算。',
         columns: ['GPU', '显存', 'AutoDL每小时（¥）', '美元约算', '典型用途'],
@@ -2718,7 +2718,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       pricing: {
         id: 'pricing',
-        title: 'GPU价格对比——2026年7月',
+        title: 'GPU价格对比',
         content: '**AutoDL始终是最便宜的；阿里云PAI贵40-80%但包含优化软件栈；腾讯云TI居中。** 所有价格均为人民币（¥）。',
         columns: ['GPU型号', 'AutoDL（现货）', 'AutoDL（按需）', '阿里云PAI', '腾讯云TI', 'USD约算', '最优选择'],
         rows: [
@@ -3012,7 +3012,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       autodlPricing: {
         id: 'autodl-pricing',
-        title: 'AutoDL 가격표 — 시간당 GPU 요금 (2026년 7월)',
+        title: 'AutoDL 가격표 — 시간당 GPU 요금',
         content:
           '**AutoDL은 최소 계약 없이 초 단위로 과금합니다. 아래 대표 요금은 AutoDL 가격 페이지의 온디맨드 정가입니다. A100 80 GB는 ¥5.98/시간(~$0.82), RTX 4090 24 GB는 ¥2.68/시간부터(~$0.37), RTX 3090 24 GB는 ¥1.68/시간부터(~$0.23)입니다.** 가격은 데이터센터 리전과 재고에 따라 달라집니다. 스팟("按量" 유휴) 인스턴스는 비수기 시간대(베이징 시간 자정~오전 6시)에 온디맨드 대비 30–50% 저렴할 수 있습니다. 인증을 완료한 학생은 추가로 15% 할인을 받습니다. 모든 가격은 CNY(¥) 기준이며, USD는 ¥7.25/USD로 환산한 근사값입니다.',
         columns: ['GPU', 'VRAM', 'AutoDL 시간당 (¥)', 'USD 근사', '주요 용도'],
@@ -3035,7 +3035,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       pricing: {
         id: 'pricing',
-        title: 'GPU 가격 비교 — 2026년 7월',
+        title: 'GPU 가격 비교',
         content:
           '**AutoDL이 일관되게 가장 저렴합니다. Alibaba Cloud PAI는 40–80% 높지만 최적화 소프트웨어 스택을 포함합니다. Tencent Cloud TI는 중간 수준입니다.** 모든 가격은 CNY(¥) 기준입니다. USD는 ¥7.25/USD로 환산한 근사값입니다.',
         columns: ['GPU', 'AutoDL (스팟)', 'AutoDL (온디맨드)', 'Alibaba PAI', 'Tencent Cloud TI', 'USD 환산', '최적 선택'],

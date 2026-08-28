@@ -3,7 +3,7 @@ import type { Language } from '@/lib/blog/blogContent'
 
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
-    title: 'EU GDPR Cloud GPU 2026: Hetzner vs Scaleway vs OVHcloud (Tested July 2026)',
+    title: 'EU GDPR Cloud GPU 2026: Hetzner vs Scaleway vs OVHcloud',
     dateModified: '2026-07-30',
     seoTitle: 'EU GDPR Cloud GPU 2026: Hetzner, Scaleway, OVHcloud',
     metaDescription: 'Compare EU GDPR-compliant cloud GPU providers in 2026: Hetzner, Scaleway, OVHcloud. Pricing, data residency, AI Act compliance verified.',
@@ -102,7 +102,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       verdictBox: {
         id: 'verdict-picks',
-        title: '🏆 Our Picks — May 2026',
+        title: '🏆 Our Picks',
         content: 'Three winners for three buyer profiles. All GDPR-compliant by default.',
         callouts: [
           {
@@ -125,7 +125,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       comparisonTable: {
         id: 'comparison-table',
-        title: 'Provider Comparison Table (May 2026)',
+        title: 'Provider Comparison Table',
         content: 'All seven providers offer GDPR compliance. Pricing verified May 2026 and updated monthly.',
         columns: ['Provider', 'HQ', 'DataCenters', 'DPA', 'SchremsII', 'RTX4090', 'A10080GB', 'H100', 'BestFor'],
         rows: [
@@ -373,7 +373,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       sourceVerification: {
         id: 'source-verification',
-        title: 'Source Verification (May 2026)',
+        title: 'Source Verification',
         content: 'Pricing verified from official sources. Regulatory references checked against primary EU law.',
         items: [
           '**Pricing verified from official sources:**',
@@ -419,7 +419,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   es: {
-    title: 'GPU Cloud RGPD UE 2026: Hetzner vs Scaleway vs OVHcloud (Probado Julio 2026)',
+    title: 'GPU Cloud RGPD UE 2026: Hetzner vs Scaleway vs OVHcloud',
     seoTitle: 'GPU Cloud RGPD UE 2026: Hetzner, Scaleway, OVHcloud',
     metaDescription: 'Proveedores de GPU cloud conformes con el RGPD en 2026: Hetzner, Scaleway, OVHcloud. Precios, residencia de datos y cumplimiento del Acta de IA de la UE.',
     intro: 'Las organizaciones de la UE que procesan datos personales deben usar proveedores de GPU cloud conformes con el RGPD. Esta guía compara siete opciones nativas de RGPD (Hetzner, Scaleway, OVHcloud, Nebius, Mistral, STACKIT, IONOS) probadas en mayo de 2026 por precio, postura de cumplimiento y riesgo Schrems II. Todos los proveedores destacados garantizan residencia de datos en la UE y ofrecen DPA adecuados. Para equipos en Latinoamérica que deben cumplir leyes como la LFPDPPP (México), Ley 25.326 (Argentina) o Ley 1581 (Colombia), los proveedores EU-nativos ofrecen contratos de protección de datos equivalentes.',
@@ -465,7 +465,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       verdictBox: {
         id: 'verdict-picks',
-        title: '🏆 Nuestras recomendaciones — Mayo 2026',
+        title: '🏆 Nuestras recomendaciones',
         content: 'Tres ganadores para tres perfiles de comprador. Todos conformes con el RGPD por defecto.',
         callouts: [
           {
@@ -488,7 +488,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       comparisonTable: {
         id: 'comparison-table',
-        title: 'Tabla comparativa de proveedores (Mayo 2026)',
+        title: 'Tabla comparativa de proveedores',
         content: 'Los siete proveedores ofrecen cumplimiento del RGPD. Precios verificados en mayo de 2026 y actualizados mensualmente.',
         columns: ['Proveedor', 'Sede', 'CentrosDeDatos', 'DPA', 'SchremsII', 'RTX4090', 'A10080GB', 'H100', 'MejorPara'],
         rows: [
@@ -725,7 +725,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       sourceVerification: {
         id: 'source-verification',
-        title: 'Verificación de Fuentes (Mayo 2026)',
+        title: 'Verificación de Fuentes',
         content: 'Precios verificados desde fuentes oficiales. Referencias regulatorias comprobadas contra el derecho primario de la UE.',
         items: [
           '**Precios verificados desde fuentes oficiales:**',
@@ -784,7 +784,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ar: {
-    title: '⁨GPU⁩ سحابية ممتثلة لـ ⁨GDPR⁩ في الاتحاد الأوروبي ⁨2026⁩: ⁨Hetzner⁩ مقابل ⁨Scaleway⁩ مقابل ⁨OVHcloud⁩ (مختبَر يوليو ⁨2026⁩)',
+    title: '⁨GPU⁩ سحابية ممتثلة لـ ⁨GDPR⁩ في الاتحاد الأوروبي ⁨2026⁩: ⁨Hetzner⁩ مقابل ⁨Scaleway⁩ مقابل ⁨OVHcloud⁩',
     seoTitle: '⁨GPU⁩ سحابي ممتثل لـ ⁨GDPR 2026⁩: ⁨Hetzner⁩ مقابل ⁨Scaleway⁩',
     metaDescription: '⁨Hetzner GPU⁩ بـ ⁨184⁩ يورو/شهر، ⁨Scaleway H100⁩ بـ ⁨0.50⁩–⁨2.50⁩ يورو/ساعة، ⁨OVHcloud⁩: مقارنة مزودين أوروبيين بمخاطر ⁨Schrems-II⁩ منخفضة للاتحاد الأوروبي.',
     intro: 'على مؤسسات الاتحاد الأوروبي التي تعالج بيانات شخصية استخدام مزودي GPU سحابية ممتثلين لـ GDPR. يقارن هذا الدليل سبعة خيارات أصلية لـ GDPR (Hetzner، Scaleway، OVHcloud، Nebius، Mistral، STACKIT، IONOS) مختبَرة في مايو 2026 من حيث السعر وموقف الامتثال وخطر Schrems II. يضمن جميع المزودين المميزين إقامة البيانات في الاتحاد الأوروبي ويقدّمون اتفاقيات DPA مناسبة. لفرق الخليج التي عليها الامتثال لقوانين مثل PDPL (السعودية) وقانون حماية البيانات الشخصية (الإمارات)، يقدّم المزودون الأصليون في الاتحاد الأوروبي عقود حماية بيانات مكافئة، فضلاً عن خيارات سيادة البيانات الداعمة للنماذج العربية السيادية.',
@@ -828,7 +828,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       verdictBox: {
         id: 'verdict-picks',
-        title: '🏆 توصياتنا — مايو 2026',
+        title: '🏆 توصياتنا',
         content: 'ثلاثة فائزين لثلاثة ملفات مشترين. الجميع ممتثل لـ GDPR افتراضياً.',
         callouts: [
           {
@@ -851,7 +851,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       comparisonTable: {
         id: 'comparison-table',
-        title: 'جدول مقارنة المزودين (مايو 2026)',
+        title: 'جدول مقارنة المزودين',
         content: 'يقدّم المزودون السبعة امتثالاً لـ GDPR. أسعار مُتحقَّق منها في مايو 2026 ومحدَّثة شهرياً.',
         columns: ['المزود', 'المقر', 'مراكز البيانات', 'DPA', 'SchremsII', 'RTX4090', 'A10080GB', 'H100', 'الأفضل لـ'],
         rows: [
@@ -1088,7 +1088,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       sourceVerification: {
         id: 'source-verification',
-        title: 'التحقق من المصادر (مايو 2026)',
+        title: 'التحقق من المصادر',
         content: 'أسعار مُتحقَّق منها من مصادر رسمية. مراجع تنظيمية مفحوصة مقابل القانون الأولي للاتحاد الأوروبي.',
         items: [
           '**أسعار مُتحقَّق منها من مصادر رسمية:**',
@@ -1148,7 +1148,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   pt: {
-    title: 'GPU Cloud com Conformidade 2026: Hetzner vs Scaleway vs OVHcloud (Testado Julho 2026)',
+    title: 'GPU Cloud com Conformidade 2026: Hetzner vs Scaleway vs OVHcloud',
     seoTitle: 'GPU Cloud conformidade 2026: Hetzner, Scaleway, OVHcloud',
     metaDescription: 'Provedores de GPU cloud conformes com LGPD/GDPR em 2026: Hetzner, Scaleway, OVHcloud. Preços, residência de dados e conformidade com a Lei de IA da UE.',
     intro: 'Organizações que processam dados pessoais devem usar provedores de GPU cloud conformes com regulamentações de proteção de dados. Este guia compara sete opções nativas (Hetzner, Scaleway, OVHcloud, Nebius, Mistral, STACKIT, IONOS) testadas em maio de 2026 por preço, postura de conformidade e risco de transferência de dados. Todos os provedores destacados garantem residência de dados na UE e ofrecen DPAs adequados — relevante também para equipes brasileiras que devem atender à LGPD ao processar dados de cidadãos europeus.',
@@ -1177,7 +1177,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     sections: {
       verdictBox: {
         id: 'verdict-picks',
-        title: 'Nossas Recomendações — Maio 2026',
+        title: 'Nossas Recomendações',
         callouts: [
           { type: 'MELHOR CUSTO PREVISÍVEL: Hetzner', text: '€184/mês fixo para RTX 4000 SFF Ada (20GB VRAM). Data centers alemães. Lei alemã. Faturamento mensal apenas — sem opção por hora.' },
           { type: 'MELHOR PARA IA FLEXÍVEL: Scaleway', text: '€0,50–€2,50/h para H100. Francês. Focado em IA. DPA maduro. Melhor para cargas de trabalho variáveis.' },
@@ -1240,7 +1240,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   de: {
-    title: 'EU-Cloud-GPU mit DSGVO 2026: Hetzner vs Scaleway vs OVHcloud (Getestet Juli 2026)',
+    title: 'EU-Cloud-GPU mit DSGVO 2026: Hetzner vs Scaleway vs OVHcloud',
     seoTitle: 'EU Cloud-GPU DSGVO 2026: Hetzner, Scaleway, OVHcloud',
     metaDescription: 'EU-Cloud-GPU-Anbieter mit DSGVO-Konformität 2026: souveräne KI-Infrastruktur in Europa. Scaleway, OVHcloud und Hetzner im Vergleich.',
     intro: 'EU-Unternehmen, die personenbezogene Daten verarbeiten, müssen DSGVO-konforme Cloud-GPU-Anbieter nutzen. Dieser Leitfaden vergleicht sieben DSGVO-native Optionen (Hetzner, Scaleway, OVHcloud, Nebius, Mistral, STACKIT, IONOS) getestet im Mai 2026 nach Preisgestaltung, Konformitätsposition und Schrems-II-Risiko.',
@@ -1285,7 +1285,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       verdictBox: {
         id: 'verdict-picks',
-        title: '🏆 Unsere Favoriten — Mai 2026',
+        title: '🏆 Unsere Favoriten',
         content: 'Drei Gewinner für drei Käuferprofilen. Alle DSGVO-konform.',
         callouts: [
           {
@@ -1308,7 +1308,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       comparisonTable: {
         id: 'comparison-table',
-        title: 'Anbietervergleich (Mai 2026)',
+        title: 'Anbietervergleich',
         content: 'Alle sieben Anbieter bieten DSGVO-Konformität. Preisgestaltung im Mai 2026 überprüft und monatlich aktualisiert.',
         columns: ['Anbieter', 'Sitz', 'Rechenzentren', 'AVV', 'SchremsII', 'RTX4090', 'A10080GB', 'H100', 'AmBestenFür'],
         rows: [
@@ -1626,7 +1626,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   fr: {
-    title: 'GPU Cloud RGPD UE 2026 : Hetzner vs Scaleway vs OVHcloud (Testé juillet 2026)',
+    title: 'GPU Cloud RGPD UE 2026 : Hetzner vs Scaleway vs OVHcloud',
     seoTitle: 'GPU Cloud RGPD 2026 : Hetzner, Scaleway, OVHcloud Comparés',
     metaDescription: 'Fournisseurs GPU cloud conformes RGPD pour UE : Hetzner (€184/mois forfaitaire, RTX 4000 SFF Ada), Scaleway, OVHcloud, Nebius, Mistral. Résidence UE, DPA, Schrems II.',
     intro: 'Les organisations de l\'UE traitant des données personnelles doivent utiliser des fournisseurs GPU cloud conformes au RGPD. Ce guide compare sept options natives du RGPD (Hetzner, Scaleway, OVHcloud, Nebius, Mistral, STACKIT, IONOS) testées en mai 2026 par tarification, posture de conformité et risque Schrems II. Tous les fournisseurs proposent la résidence des données au sein de l\'UE et des contrats de traitement des données (DPA) appropriés.',
@@ -1672,7 +1672,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       verdictBox: {
         id: 'verdict-picks',
-        title: '🏆 Nos Favoris — mai 2026',
+        title: '🏆 Nos Favoris',
         content: 'Trois gagnants pour trois profils d\'acheteurs. Tous conformes au RGPD par défaut.',
         callouts: [
           {
@@ -1695,7 +1695,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       comparisonTable: {
         id: 'comparison-table',
-        title: 'Tableau de comparaison des fournisseurs (mai 2026)',
+        title: 'Tableau de comparaison des fournisseurs',
         content: 'Tous les sept fournisseurs proposent la conformité RGPD. Tarification vérifiée mai 2026 et mise à jour mensuellement.',
         columns: ['Fournisseur', 'Siège', 'DataCenters', 'DPA', 'SchremsII', 'RTX4090', 'A10080GB', 'H100', 'PourQui'],
         rows: [
@@ -1992,9 +1992,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ja: {
-    title: 'EU GDPR準拠クラウドGPU 2026：Hetzner・Scaleway・OVHcloud比較（2026年7月テスト）',
+    title: 'EU GDPR準拠クラウドGPU 2026：Hetzner・Scaleway・OVHcloud比較',
     seoTitle: 'EU GDPR準拠クラウドGPU比較 2026 | Hetzner vs Scaleway vs OVHcloud',
-    metaDescription: 'EU顧客向けGDPR準拠クラウドGPUプロバイダー：Hetzner（月額¥26,700定額、RTX 4000 SFF Ada）、Scaleway、OVHcloud、Nebius、Mistral。データレジデンス、DPA、Schrems II準拠。2026年5月検証。',
+    metaDescription: 'EU顧客向けGDPR準拠クラウドGPUプロバイダー：Hetzner（月額¥26,700定額、RTX 4000 SFF Ada）、Scaleway、OVHcloud、Nebius、Mistral。データレジデンス、DPA、Schrems II準拠。',
     intro: 'EU圏内で個人データを処理する組織は、GDPR準拠のクラウドGPUプロバイダーを使用する必要があります。本ガイドは、2026年5月にテスト済みの7つのGDPRネイティブオプション（Hetzner、Scaleway、OVHcloud、Nebius、Mistral、STACKIT、IONOS）を価格、コンプライアンス体勢、Schrems IIリスクで比較しています。すべてのフィーチャー提供者がEUデータレジデンスと適切なDPA（データ処理契約）を提供しています。',
     publishDate: 'May 17, 2026',
     theme: 'cost-comparison',
@@ -2038,7 +2038,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       verdictBox: {
         id: 'verdict-picks',
-        title: '🏆 当社のお勧め——2026年5月',
+        title: '🏆 当社のお勧め',
         content: '3つの買い手プロファイル向けの3つの勝者。すべてデフォルトでGDPR準拠です。',
         callouts: [
           {
@@ -2061,7 +2061,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       comparisonTable: {
         id: 'comparison-table',
-        title: 'プロバイダー比較表（2026年5月）',
+        title: 'プロバイダー比較表',
         content: 'すべての7つのプロバイダーがGDPR準拠を提供しています。2026年5月に価格を検証し、毎月更新されます。',
         columns: ['プロバイダー', '本社', 'データセンター', 'DPA', 'SchremsII', 'RTX4090', 'A10080GB', 'H100', '最適'],
         rows: [
@@ -2358,9 +2358,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   zh: {
-    title: '2026欧盟GDPR合规云GPU指南：Hetzner、Scaleway、OVHcloud对比（2026年7月测试）',
+    title: '2026欧盟GDPR合规云GPU指南：Hetzner、Scaleway、OVHcloud对比',
     seoTitle: '欧盟GDPR合规云GPU对比 2026 | Hetzner vs Scaleway vs OVHcloud',
-    metaDescription: '欧盟GDPR合规云GPU提供商对比：Hetzner（$200/月固定价格、RTX 4000 SFF Ada）、Scaleway、OVHcloud、Nebius、Mistral。数据驻留、DPA、Schrems II合规。2026年5月验证。',
+    metaDescription: '欧盟GDPR合规云GPU提供商对比：Hetzner（$200/月固定价格、RTX 4000 SFF Ada）、Scaleway、OVHcloud、Nebius、Mistral。数据驻留、DPA、Schrems II合规。',
     intro: '在欧盟处理个人数据的企业必须使用GDPR合规的云GPU提供商。本指南对2026年5月测试的7个GDPR原生选项（Hetzner、Scaleway、OVHcloud、Nebius、Mistral、STACKIT、IONOS）按价格、合规态势和Schrems II风险进行了综合对比。所有特色提供商均提供欧盟数据驻留和适当的数据处理协议（DPA）。',
     publishDate: 'May 17, 2026',
     theme: 'cost-comparison',
@@ -2404,7 +2404,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       verdictBox: {
         id: 'verdict-picks',
-        title: '🏆 我们的推荐——2026年5月',
+        title: '🏆 我们的推荐',
         content: '三个购买者类别的三个赢家。所有都默认符合GDPR。',
         callouts: [
           {
@@ -2427,7 +2427,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       comparisonTable: {
         id: 'comparison-table',
-        title: '提供商对比表（2026年5月）',
+        title: '提供商对比表',
         content: '所有七个提供商都提供GDPR合规性。价格已在2026年5月验证，每月更新。',
         columns: ['提供商', '总部', '数据中心', 'DPA', 'SchremsII', 'RTX4090', 'A10080GB', 'H100', '最适合'],
         rows: [
@@ -2724,7 +2724,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ko: {
-    title: 'EU GDPR 클라우드 GPU 2026: Hetzner vs Scaleway vs OVHcloud (2026년 7월 테스트)',
+    title: 'EU GDPR 클라우드 GPU 2026: Hetzner vs Scaleway vs OVHcloud',
     seoTitle: 'EU GDPR 클라우드 GPU 2026: Hetzner, Scaleway, OVHcloud',
     metaDescription: '2026년 EU GDPR 준수 클라우드 GPU 공급업체 비교: Hetzner, Scaleway, OVHcloud. 가격, 데이터 상주, EU AI 법 준수 여부 검증.',
     intro: 'EU에서 개인 데이터를 처리하는 고객은 GDPR 준수 클라우드 GPU 공급업체를 사용해야 합니다. 이 가이드는 2026년 5월에 테스트한 7개의 GDPR 네이티브 옵션(Hetzner, Scaleway, OVHcloud, Nebius, Mistral, STACKIT, IONOS)을 가격, 준수 자세, Schrems II 위험 측면에서 비교합니다. 모든 주요 공급업체는 EU 데이터 상주를 보장하고 적절한 DPA를 제공합니다.',
@@ -2770,7 +2770,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       verdictBox: {
         id: 'verdict-picks',
-        title: '🏆 저희 추천 — 2026년 5월',
+        title: '🏆 저희 추천',
         content: '세 가지 구매자 프로필에 맞는 세 가지 우승자. 모두 기본적으로 GDPR 준수.',
         callouts: [
           {
@@ -2793,7 +2793,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       comparisonTable: {
         id: 'comparison-table',
-        title: '공급업체 비교표 (2026년 5월)',
+        title: '공급업체 비교표',
         content: '7개 공급업체 모두 GDPR 준수를 제공합니다. 가격은 2026년 5월 검증되었으며 매월 업데이트됩니다.',
         columns: ['Provider', 'HQ', 'DataCenters', 'DPA', 'SchremsII', 'RTX4090', 'A10080GB', 'H100', 'BestFor'],
         rows: [
@@ -3041,7 +3041,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       sourceVerification: {
         id: 'source-verification',
-        title: '출처 검증 (2026년 5월)',
+        title: '출처 검증',
         content: '공식 출처에서 가격을 검증했습니다. 규제 참조는 EU 주요 법률에 대해 확인되었습니다.',
         items: [
           '**공식 출처에서 가격 검증:**',

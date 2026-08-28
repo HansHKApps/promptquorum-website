@@ -100,7 +100,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'mram-status-2026': {
         id: 'mram-status-2026',
-        title: 'Where MRAM Stands Today (August 2026)',
+        title: 'Where MRAM Stands Today',
         content: [
           '**Samsung SAIT Nature Paper (January 2022):**',
         ],
@@ -293,7 +293,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   de: {
-    freshness_tier: 'semi_annual', next_refresh_due: '2027-02-28', theme: 'Hardware & Performance', title: 'MRAM und In-Memory-Computing: Der nächste Sprung für On-Device-KI?', seoTitle: 'MRAM vs HBM In-Memory-Computing 2026: On-Device-KI', intro: 'MRAM und In-Memory-Computing-Architekturen könnten On-Device-KI durch Berechnung im Speicher selbst umgestalten und den energieintensiven Datentransport-Engpass beseitigen. Samsungs Forschung zeigt Konzeptbeweis; SemiFive und ICYTech erreichten Silicon Tape-Out im Mai 2026 für 2B-Parameter-Edge-AI-Chips. Allerdings befindet sich MRAM noch in der F&E-Phase — nicht in Consumer-Geräten.', metaDescription: 'MRAM In-Memory-Computing vs HBM und DRAM für On-Device-KI: Ersetzt MRAM DRAM, ist es die Zukunft und wie unterscheidet es sich von Qualcomm HBC. Status 2026 + Zeitplan.', publishDate: '2026-06-15', dateModified: '2026-08-28', readTime: '12 min', educationalLevel: 'Intermediate', audience: 'Hardware-Enthusiasten, KI-Ingenieure und Edge-KI-Builder', primaryTerm: 'MRAM In-Memory-Computing', affiliateDisclosure: false, toc: [{ label: 'Was ist MRAM?', anchor: '#what-is-mram' }, { label: 'Der Speicher-Engpass in On-Device-KI', anchor: '#memory-bottleneck' }, { label: 'Wie In-Memory-Computing das Problem angreift', anchor: '#in-memory-computing' }, { label: 'Wo MRAM heute steht (August 2026)', anchor: '#mram-status-2026' }, { label: 'MRAM vs HBM vs DRAM vs LPDDR5', anchor: '#comparison-table' }, { label: 'Die Software-Alternative: TurboQuant', anchor: '#software-alternative' }, { label: 'Wenn MRAM Consumer-Geräte erreicht', anchor: '#consumer-impact' }, { label: 'Zeitplan', anchor: '#timeline' }, { label: 'FAQ', anchor: '#faq' }], leadAnswerBlock: 'MRAM ist nicht-flüchtiger Magnetspeicher mit Null-Standby-Power und Byte-Adressierbarkeit; In-Memory-Computing führt die neuronale Netzwerk-Mathematik im Speicher-Array selbst aus und eliminiert den energieintensiven Datentransport. Ist es die Zukunft der On-Device-KI? Vielversprechend, aber unbewiesen — Samsung demonstrierte einen Proof-of-Concept in Nature 2022, und SemiFive/ICYTech brachten im Mai 2026 einen 8nm-eMRAM-Edge-SoC (bis zu 2B Parameter) zum Tape-Out, aber es wurde noch kein Silizium ausgeliefert. Ersetzt MRAM DRAM? Nein — es ergänzt DRAM als stromsparende, nicht-flüchtige Kachel, nicht als Bandbreiten-Ersatz (HBM4 und LPDDR6 dominieren weiterhin die Bandbreite). Es unterscheidet sich zudem von Qualcomm HBC, das near-memory, auf Rechenzentren ausgerichtet und für 2027 vorgesehen ist. Der Consumer-Einsatz (Smartphones, PCs) ist realistisch 3–5+ Jahre entfernt.', 
+    freshness_tier: 'semi_annual', next_refresh_due: '2027-02-28', theme: 'Hardware & Performance', title: 'MRAM und In-Memory-Computing: Der nächste Sprung für On-Device-KI?', seoTitle: 'MRAM vs HBM In-Memory-Computing 2026: On-Device-KI', intro: 'MRAM und In-Memory-Computing-Architekturen könnten On-Device-KI durch Berechnung im Speicher selbst umgestalten und den energieintensiven Datentransport-Engpass beseitigen. Samsungs Forschung zeigt Konzeptbeweis; SemiFive und ICYTech erreichten Silicon Tape-Out im Mai 2026 für 2B-Parameter-Edge-AI-Chips. Allerdings befindet sich MRAM noch in der F&E-Phase — nicht in Consumer-Geräten.', metaDescription: 'MRAM In-Memory-Computing vs HBM und DRAM für On-Device-KI: Ersetzt MRAM DRAM, ist es die Zukunft und wie unterscheidet es sich von Qualcomm HBC. Status 2026 + Zeitplan.', publishDate: '2026-06-15', dateModified: '2026-08-28', readTime: '12 min', educationalLevel: 'Intermediate', audience: 'Hardware-Enthusiasten, KI-Ingenieure und Edge-KI-Builder', primaryTerm: 'MRAM In-Memory-Computing', affiliateDisclosure: false, toc: [{ label: 'Was ist MRAM?', anchor: '#what-is-mram' }, { label: 'Der Speicher-Engpass in On-Device-KI', anchor: '#memory-bottleneck' }, { label: 'Wie In-Memory-Computing das Problem angreift', anchor: '#in-memory-computing' }, { label: 'Wo MRAM heute steht', anchor: '#mram-status-2026' }, { label: 'MRAM vs HBM vs DRAM vs LPDDR5', anchor: '#comparison-table' }, { label: 'Die Software-Alternative: TurboQuant', anchor: '#software-alternative' }, { label: 'Wenn MRAM Consumer-Geräte erreicht', anchor: '#consumer-impact' }, { label: 'Zeitplan', anchor: '#timeline' }, { label: 'FAQ', anchor: '#faq' }], leadAnswerBlock: 'MRAM ist nicht-flüchtiger Magnetspeicher mit Null-Standby-Power und Byte-Adressierbarkeit; In-Memory-Computing führt die neuronale Netzwerk-Mathematik im Speicher-Array selbst aus und eliminiert den energieintensiven Datentransport. Ist es die Zukunft der On-Device-KI? Vielversprechend, aber unbewiesen — Samsung demonstrierte einen Proof-of-Concept in Nature 2022, und SemiFive/ICYTech brachten im Mai 2026 einen 8nm-eMRAM-Edge-SoC (bis zu 2B Parameter) zum Tape-Out, aber es wurde noch kein Silizium ausgeliefert. Ersetzt MRAM DRAM? Nein — es ergänzt DRAM als stromsparende, nicht-flüchtige Kachel, nicht als Bandbreiten-Ersatz (HBM4 und LPDDR6 dominieren weiterhin die Bandbreite). Es unterscheidet sich zudem von Qualcomm HBC, das near-memory, auf Rechenzentren ausgerichtet und für 2027 vorgesehen ist. Der Consumer-Einsatz (Smartphones, PCs) ist realistisch 3–5+ Jahre entfernt.', 
     heroImage: '/images/mram-in-memory-computing-local-ai-2026-overview-hero-de.webp',
     sections: {
     'intro-tldr': {
@@ -361,7 +361,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     'mram-status-2026': {
       id: 'mram-status-2026',
-      title: 'Wo MRAM heute steht (August 2026)',
+      title: 'Wo MRAM heute steht',
       content: [
         '**Samsung SAIT Nature-Paper (Januar 2022):**',
       ],
@@ -621,7 +621,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'mram-status-2026': {
         id: 'mram-status-2026',
-        title: 'Où en est MRAM aujourd\'hui (août 2026)',
+        title: 'Où en est MRAM aujourd\'hui',
         content: [
           '**Article Nature de Samsung SAIT (janvier 2022):**',
         ],
@@ -882,7 +882,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'mram-status-2026': {
         id: 'mram-status-2026',
-        title: 'MRAMの現在位置(2026年8月)',
+        title: 'MRAMの現在位置',
         content: [
           '**Samsung SAIT Nature論文(2022年1月):**',
         ],
@@ -1158,7 +1158,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'mram-status-2026': {
         id: 'mram-status-2026',
-        title: 'MRAM的现状(2026年8月)',
+        title: 'MRAM的现状',
         content: [
           '**Samsung SAIT Nature论文(2022年1月)：**',
         ],
@@ -1434,7 +1434,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'mram-status-2026': {
         id: 'mram-status-2026',
-        title: 'Dónde está MRAM hoy (agosto 2026)',
+        title: 'Dónde está MRAM hoy',
         content: [
           '**Artículo de Samsung SAIT en Nature (enero de 2022):**',
         ],
@@ -1710,7 +1710,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'mram-status-2026': {
         id: 'mram-status-2026',
-        title: 'Onde MRAM está hoje (agosto de 2026)',
+        title: 'Onde MRAM está hoje',
         content: [
           '**Artigo da Samsung SAIT na Nature (janeiro de 2022):**',
         ],
@@ -1971,7 +1971,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'mram-status-2026': {
         id: 'mram-status-2026',
-        title: 'حيث تقف MRAM اليوم (أغسطس 2026)',
+        title: 'حيث تقف MRAM اليوم',
         content: [
           '**ورقة Samsung SAIT في Nature (يناير 2022):**',
         ],
@@ -2232,7 +2232,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'mram-status-2026': {
         id: 'mram-status-2026',
-        title: 'MRAM의 현재 상태 (2026년 8월)',
+        title: 'MRAM의 현재 상태',
         content: [
           '**Samsung SAIT Nature 논문 (2022년 1월):**',
         ],

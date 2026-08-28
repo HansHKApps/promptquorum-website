@@ -291,7 +291,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         'benchmarks': {
           id: 'benchmarks',
-          title: 'How Fast Are These Models? Real Benchmarks (July 2026)',
+          title: 'How Fast Are These Models? Real Benchmarks',
           content: '**Real measurements by hardware tier, July 2026. All running Ollama with default settings, no tuning. All CPU-only or iGPU — no discrete GPU:**',
           items: [
             '4 GB RAM, CPU only (Intel N100 mini PC) + Qwen3 1.7B Q4_K_M: 25–35 tok/s. `ollama run qwen3:1.7b`',
@@ -666,7 +666,7 @@ schema: {
         },
         'benchmarks': {
           id: 'benchmarks',
-          title: '¿Qué tan rápidos son estos modelos? Benchmarks reales (julio 2026)',
+          title: '¿Qué tan rápidos son estos modelos? Benchmarks reales',
           content: '**Mediciones reales por nivel de hardware, julio de 2026. Todos ejecutando Ollama con configuración predeterminada, sin ajuste. Todos solo CPU o iGPU — sin GPU discreta:**',
           items: [
             '4 GB RAM, solo CPU (mini PC Intel N100) + Qwen3 1.7B Q4_K_M: 25–35 tok/s. `ollama run qwen3:1.7b`',
@@ -1041,7 +1041,7 @@ schema: {
         },
         'benchmarks': {
           id: 'benchmarks',
-          title: 'ما مدى سرعة هذه النماذج؟ معايير حقيقية (يوليو 2026)',
+          title: 'ما مدى سرعة هذه النماذج؟ معايير حقيقية',
           content: '**قياسات حقيقية حسب مستوى العتاد، يوليو 2026. الجميع يشغّل Ollama بالإعداد الافتراضي، دون ضبط. جميعها CPU فقط أو iGPU — دون GPU منفصلة:**',
           items: [
             '4 جيجابايت رام، CPU فقط (مini PC من Intel N100) + Qwen3 1.7B Q4_K_M: 25–35 tok/s. `ollama run qwen3:1.7b`',
@@ -1419,7 +1419,7 @@ schema: {
         },
         'benchmarks': {
           id: 'benchmarks',
-          title: 'Qual a velocidade real desses modelos? Benchmarks (julho de 2026)',
+          title: 'Qual a velocidade real desses modelos? Benchmarks',
           content: '**Medições reais por nível de hardware, julho de 2026. Todos rodando Ollama com configuração padrão, sem ajustes. Todos somente CPU ou iGPU — sem GPU dedicada:**',
           items: [
             '4 GB de RAM, somente CPU (mini PC Intel N100) + Qwen3 1.7B Q4_K_M: 25–35 tok/s. `ollama run qwen3:1.7b`',
@@ -1736,7 +1736,7 @@ schema: {
         },
         'benchmarks': {
           id: 'benchmarks',
-          title: 'Wie schnell sind diese Modelle? Echte Benchmarks (Juli 2026)',
+          title: 'Wie schnell sind diese Modelle? Echte Benchmarks',
           content: '**Echte Messungen nach Hardware-Stufe, Juli 2026. Alle mit Ollama und Standardeinstellungen, ohne Tuning. Alle CPU-only oder iGPU — keine dedizierte GPU:**',
           items: [
             '4 GB RAM, nur CPU (Intel-N100-Mini-PC) + Qwen3 1.7B Q4_K_M: 25–35 Tok/s. `ollama run qwen3:1.7b`',
@@ -2113,7 +2113,7 @@ schema: {
         },
         'benchmarks': {
           id: 'benchmarks',
-          title: 'À quelle vitesse tournent ces modèles ? Benchmarks réels (juillet 2026)',
+          title: 'À quelle vitesse tournent ces modèles ? Benchmarks réels',
           content: '**Mesures réelles par niveau matériel, juillet 2026. Toutes avec Ollama et paramètres par défaut, sans tuning. Toutes en CPU seul ou iGPU — sans GPU dédié :**',
           items: [
             '4 Go RAM, CPU seul (mini PC Intel N100) + Qwen3 1.7B Q4_K_M : 25–35 tok/s. `ollama run qwen3:1.7b`',
@@ -2488,7 +2488,7 @@ schema: {
         },
         'benchmarks': {
           id: 'benchmarks',
-          title: '実際のベンチマーク（2026年7月）',
+          title: '実際のベンチマーク',
           content: '**ハードウェア階層別の実測値、2026年7月。すべてOllamaのデフォルト設定使用、チューニングなし。すべてCPU専用またはiGPU — 専用GPUなし：**',
           items: [
             'RAM 4 GB、CPU専用（Intel N100ミニPC）+ Qwen3 1.7B Q4_K_M：25〜35トークン/秒。`ollama run qwen3:1.7b`',
@@ -2863,7 +2863,7 @@ schema: {
         },
         'benchmarks': {
           id: 'benchmarks',
-          title: '这些模型有多快？真实基准（2026年7月）',
+          title: '这些模型有多快？真实基准',
           content: '**按硬件层级的真实测量，2026年7月。均使用Ollama默认设置，无调优。均为纯CPU或核显——无独立显卡：**',
           items: [
             '4GB内存，纯CPU（Intel N100迷你主机）+ Qwen3 1.7B Q4_K_M：25–35 tok/s。`ollama run qwen3:1.7b`',
@@ -3238,7 +3238,7 @@ schema: {
         },
         'benchmarks': {
           id: 'benchmarks',
-          title: '이 모델들은 얼마나 빠릅니까? 실제 벤치마크 (2026년 7월)',
+          title: '이 모델들은 얼마나 빠릅니까? 실제 벤치마크',
           content: '**하드웨어 티어별 실제 측정값, 2026년 7월. 기본 설정의 Ollama로 실행, 튜닝 없음. 모두 CPU 전용 또는 iGPU — 독립 GPU 없음:**',
           items: [
             'RAM 4 GB, CPU 전용 (Intel N100 미니 PC) + Qwen3 1.7B Q4_K_M: 초당 25–35 토큰. `ollama run qwen3:1.7b`',

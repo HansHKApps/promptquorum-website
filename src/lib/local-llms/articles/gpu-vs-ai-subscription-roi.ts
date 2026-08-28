@@ -90,7 +90,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         'gpuOptions': {
           id: 'gpu-options',
-          title: 'GPU Purchase Options (April 2026)',
+          title: 'GPU Purchase Options',
           content: [
             '**RTX 4070 used (12 GB): $300–350, runs 7B–13B models**',
             '**RTX 5060 Ti 16 GB new: $450, runs 13B comfortably, first-time buyer recommended**',
@@ -403,7 +403,7 @@ schema: {
         },
         'gpuOptions': {
           id: 'gpu-options',
-          title: 'Opciones de compra de GPU (abril 2026)',
+          title: 'Opciones de compra de GPU',
           content: [
             '**RTX 4070 usada (12 GB): $300–350, ejecuta modelos 7B–13B**',
             '**RTX 5060 Ti 16 GB nueva: $450, ejecuta 13B cómodamente, recomendada para principiantes**',
@@ -716,7 +716,7 @@ schema: {
         },
         'gpuOptions': {
           id: 'gpu-options',
-          title: 'خيارات شراء GPU (أبريل 2026)',
+          title: 'خيارات شراء GPU',
           content: [
             '**RTX 4070 مستعملة (12 GB): 300$–350$، تشغّل نماذج 7B–13B**',
             '**RTX 5060 Ti 16 GB جديدة: 450$، تشغّل 13B بأريحية، موصى بها للمبتدئين**',
@@ -1135,7 +1135,7 @@ schema: {
       },
       'gpuOptions': {
         id: 'gpu-options',
-        title: 'GPU-Kaufoptionen (April 2026)',
+        title: 'GPU-Kaufoptionen',
         content: [
           '**RTX 4070 gebraucht (12 GB): 299–349 €, führt 7B–13B Modelle aus**',
           '**RTX 5060 Ti 16 GB neu: 449 €, führt 13B komfortabel aus, für Anfänger empfohlen**',
@@ -1496,7 +1496,7 @@ schema: {
         },
         'gpuOptions': {
           id: 'gpu-options',
-          title: 'GPU購入オプション (2026年4月)',
+          title: 'GPU購入オプション',
           content: [
             '**RTX 4070中古 (12 GB): ¥44,000–50,000、7B–13Bモデルを実行**',
             '**RTX 5060 Ti新品 16 GB: ¥56,000、13Bモデルを快適に実行、初心者向け推奨**',
@@ -1816,7 +1816,7 @@ schema: {
         },
         'gpuOptions': {
           id: 'gpu-options',
-          title: 'GPU购买选项 (2026年4月)',
+          title: 'GPU购买选项',
           content: [
             '**RTX 4070二手 (12 GB): $300–350，运行7B–13B模型**',
             '**RTX 5060 Ti新品16 GB: $450，舒适地运行13B，首次购买者推荐**',
@@ -2133,7 +2133,7 @@ schema: {
         },
         'gpuOptions': {
           id: 'gpu-options',
-          title: 'GPU 구매 옵션 (2026년 4월)',
+          title: 'GPU 구매 옵션',
           content: [
             '**RTX 4070 중고 (12 GB): $300~350, 7B~13B 모델 실행 가능**',
             '**RTX 5060 Ti 16 GB 신품: $450, 13B 편안하게 실행, 첫 구매자에게 추천**',

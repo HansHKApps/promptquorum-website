@@ -165,7 +165,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         'hardware': {
           id: 'hardware',
-          title: 'Quick Decision: Stack by Hardware Tier (June 2026)',
+          title: 'Quick Decision: Stack by Hardware Tier',
           content: 'Match your GPU/VRAM to the optimal stack. Each combination is tested against real benchmarks. Coding and agent workflows benefit more from larger models than writing; RAG benefits more from embedding quality than LLM size.',
           columns: ['Your Hardware', 'Writing', 'Coding', 'RAG', 'Agents'],
           rows: [
@@ -447,7 +447,7 @@ schema: {
         },
         'hardware': {
           id: 'hardware',
-          title: 'Decisión rápida: stack por nivel de hardware (abril 2026)',
+          title: 'Decisión rápida: stack por nivel de hardware',
           content: 'Elige el stack según tu GPU/VRAM. Cada combinación está probada con benchmarks reales. Los flujos de código y agentes se benefician más de modelos grandes que la escritura; el RAG depende más de la calidad del embedding que del tamaño del LLM.',
           columns: ['Tu hardware', 'Escritura', 'Código', 'RAG', 'Agentes'],
           rows: [
@@ -738,7 +738,7 @@ for filename, review in reviews:
         },
         'hardware': {
           id: 'hardware',
-          title: 'قرار سريع: المنظومة حسب فئة العتاد (يونيو 2026)',
+          title: 'قرار سريع: المنظومة حسب فئة العتاد',
           content: 'اختر المنظومة وفقاً لـ GPU/VRAM لديك. كل تركيبة مختبرة بقياسات حقيقية. تستفيد مسارات البرمجة والوكلاء من النماذج الكبيرة أكثر من الكتابة؛ ويعتمد RAG على جودة embedding أكثر من حجم LLM.',
           columns: ['عتادك', 'الكتابة', 'البرمجة', 'RAG', 'الوكلاء'],
           rows: [
@@ -1026,7 +1026,7 @@ for filename, review in reviews:
         },
         hardware: {
           id: 'hardware',
-          title: 'Decisão rápida: stack por nível de hardware (abril 2026)',
+          title: 'Decisão rápida: stack por nível de hardware',
           content: 'Escolha o stack de acordo com sua GPU/VRAM. Cada combinação foi testada com benchmarks reais.',
           columns: ['Seu hardware', 'Escrita', 'Código', 'RAG', 'Agentes'],
           rows: [
@@ -1169,7 +1169,7 @@ for filename, review in reviews:
         },
         'hardware': {
           id: 'hardware',
-          title: 'Schnellentscheidung: Stack nach Hardware-Stufe (Juni 2026)',
+          title: 'Schnellentscheidung: Stack nach Hardware-Stufe',
           content: 'Passen Sie Ihre GPU/VRAM der optimalen Stack-Konfiguration an. Jede Kombination wurde anhand realer Benchmarks getestet. Coding- und Agenten-Workflows profitieren mehr von größeren Modellen als das Schreiben; RAG profitiert mehr von Embedding-Qualität als von LLM-Größe.',
           columns: ['Ihre Hardware', 'Schreiben', 'Coding', 'RAG', 'Agenten'],
           rows: [
@@ -1455,7 +1455,7 @@ schema: {
         },
         'hardware': {
           id: 'hardware',
-          title: 'Décision rapide : stack par niveau matériel (juin 2026)',
+          title: 'Décision rapide : stack par niveau matériel',
           content: 'Associez votre GPU/VRAM au stack optimal. Chaque combinaison est testée sur des benchmarks réels. Les workflows de coding et d\'agents bénéficient davantage de modèles plus grands que la rédaction ; le RAG dépend plus de la qualité des embeddings que de la taille du LLM.',
           columns: ['Votre matériel', 'Rédaction', 'Coding', 'RAG', 'Agents'],
           rows: [
@@ -1737,7 +1737,7 @@ schema: {
         },
         'hardware': {
           id: 'hardware',
-          title: 'ハードウェア別判断テーブル（2026年6月）',
+          title: 'ハードウェア別判断テーブル',
           content: 'GPU/VRAMに合わせた最適スタックを選択。実ベンチマークで検証済みの組み合わせ。コーディング・エージェントは大型モデルの恩恵が大きい。RAGはLLMサイズより埋め込み品質が重要。',
           columns: ['お使いのハード', 'ライティング', 'コーディング', 'RAG', 'エージェント'],
           rows: [
@@ -2019,7 +2019,7 @@ schema: {
         },
         'hardware': {
           id: 'hardware',
-          title: '硬件分级决策表（2026年6月）',
+          title: '硬件分级决策表',
           content: '根据GPU/显存选择最佳堆栈。每种组合均有真实基准测试。编程和智能体工作流比写作更需要大模型；RAG质量更取决于嵌入模型而非LLM大小。',
           columns: ['您的硬件', '写作', '编程', 'RAG', '智能体'],
           rows: [
@@ -2331,7 +2331,7 @@ schema: {
     },
     'hardware': {
       id: 'hardware',
-      title: '빠른 결정: 하드웨어 등급별 스택 (2026년 6월)',
+      title: '빠른 결정: 하드웨어 등급별 스택',
       content: 'GPU/VRAM에 맞는 최적 스택을 선택하십시오. 각 조합은 실제 벤치마크를 기준으로 테스트되었습니다. 코딩 및 에이전트 워크플로는 글쓰기보다 대형 모델의 혜택을 더 크게 받으며, RAG는 LLM 크기보다 임베딩 품질이 더 중요합니다.',
       columns: ['하드웨어', '글쓰기', '코딩', 'RAG', '에이전트'],
       rows: [

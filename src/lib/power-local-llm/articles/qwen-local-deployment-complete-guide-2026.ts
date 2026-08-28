@@ -109,7 +109,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       benchmarks: {
         id: 'benchmark-table',
-        title: 'Qwen Model Performance by Hardware — August 2026',
+        title: 'Qwen Model Performance by Hardware',
         content:
           '**Choose your hardware based on model size, not GPU brand.** VRAM is the hard constraint: if the model does not fit, it will not run at GPU speed. The table below shows measured inference speeds at Q4_K_M quantization (the best quality-to-size ratio for Ollama deployments). Note: the RTX 4090 is EOL (NVIDIA discontinued it in 2026) — every card below is now used-market only, at ~$2,000–2,600.',
         columns: ['Model', 'VRAM (Q4_K_M)', 'Min GPU', 'Speed (tok/s)', 'CPU fallback', 'Production-ready?'],
@@ -628,7 +628,7 @@ docker run --gpus all \\
       },
       benchmarks: {
         id: 'benchmark-table',
-        title: 'Qwen-Modell-Performance nach Hardware — Mai 2026',
+        title: 'Qwen-Modell-Performance nach Hardware',
         content:
           '**Hardware nach Modellgröße wählen, nicht nach GPU-Marke.** VRAM ist die harte Grenze: Passt das Modell nicht, läuft es nicht mit GPU-Geschwindigkeit. Die Tabelle zeigt gemessene Inferenzgeschwindigkeiten bei Q4_K_M-Quantisierung.',
         columns: ['Modell', 'VRAM (Q4_K_M)', 'Min. GPU', 'Geschwindigkeit (tok/s)', 'CPU-Fallback', 'Produktionstauglich?'],
@@ -1050,7 +1050,7 @@ docker run --gpus all \\
       },
       benchmarks: {
         id: 'benchmark-table',
-        title: 'Qwen模型性能对比（按硬件分类）—— 2026年5月',
+        title: 'Qwen模型性能对比（按硬件分类）',
         content:
           '**根据模型大小选择硬件，而非GPU品牌。** 显存是硬性约束：模型放不进去就无法以GPU速度运行。下表展示Q4_K_M量化（Ollama部署的最佳质量-体积比）的实测推理速度。',
         columns: ['模型', '显存（Q4_K_M）', '最低GPU', '速度（tok/s）', 'CPU备选', '是否适合生产？'],
@@ -1245,7 +1245,7 @@ docker run --gpus all \\
       },
       benchmarks: {
         id: 'benchmark-table',
-        title: 'Rendimiento de modelos Qwen por hardware — Mayo 2026',
+        title: 'Rendimiento de modelos Qwen por hardware',
         content:
           '**Elige el hardware según el tamaño del modelo, no por la marca de GPU.** La VRAM es la restricción principal: si el modelo no cabe, no se ejecutará a velocidad de GPU. La tabla muestra velocidades de inferencia medidas con cuantización Q4_K_M (la mejor relación calidad-tamaño para despliegues con Ollama).',
         columns: ['Modelo', 'VRAM (Q4_K_M)', 'GPU mínima', 'Velocidad (tok/s)', 'Fallback CPU', '¿Listo para producción?'],
@@ -1787,7 +1787,7 @@ docker run --gpus all \\
       },
       benchmarks: {
         id: 'benchmark-table',
-        title: 'Desempenho dos modelos Qwen por hardware — Maio de 2026',
+        title: 'Desempenho dos modelos Qwen por hardware',
         content:
           '**Escolha o hardware pelo tamanho do modelo, não pela marca da GPU.** A VRAM é a restrição principal: se o modelo não couber, ele não rodará na velocidade da GPU. A tabela abaixo mostra velocidades de inferência medidas com quantização Q4_K_M (a melhor relação qualidade-tamanho para implantações com Ollama).',
         columns: ['Modelo', 'VRAM (Q4_K_M)', 'GPU mínima', 'Velocidade (tok/s)', 'Fallback de CPU', 'Pronto para produção?'],
@@ -2330,7 +2330,7 @@ docker run --gpus all \\
       },
       benchmarks: {
         id: 'benchmark-table',
-        title: 'أداء نماذج Qwen حسب الجهاز — مايو 2026',
+        title: 'أداء نماذج Qwen حسب الجهاز',
         content:
           '**اختر الجهاز بحسب حجم النموذج لا بحسب ماركة GPU.** VRAM هو القيد الرئيسي: إذا لم يتسع النموذج، لن يعمل بسرعة GPU. يُظهر الجدول سرعات الاستدلال المقاسة مع تكميم Q4_K_M (أفضل نسبة جودة إلى حجم لنشر Ollama).',
         columns: ['النموذج', 'VRAM المطلوبة', 'الجهاز الموصى به', 'السرعة (Q4_K_M)', 'تكلفة GPU (USD)'],
@@ -2700,7 +2700,7 @@ docker exec -e CUDA_VISIBLE_DEVICES=0,1 ollama ollama run qwen2.5:72b`,
       },
       benchmarks: {
         id: 'benchmark-table',
-        title: 'Qwen 모델별 하드웨어 성능 — 2026년 5월',
+        title: 'Qwen 모델별 하드웨어 성능',
         content:
           '**GPU 브랜드가 아니라 모델 크기에 맞는 하드웨어를 선택하십시오.** VRAM이 주요 제약입니다. 모델이 맞지 않으면 GPU 속도로 실행되지 않습니다. 아래 표는 Ollama 배포에 최적 품질-크기 비율인 Q4_K_M 양자화로 측정한 추론 속도를 나타냅니다.',
         columns: ['모델', 'VRAM (Q4_K_M)', '최소 GPU', '속도 (tok/s)', 'CPU 대체', '프로덕션 준비'],

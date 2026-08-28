@@ -485,7 +485,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '@type': 'ListItem',
           position: 2,
           name: 'Langfuse',
-          description: 'MIT-licensed, free-to-self-host LLM observability and evaluation platform with no feature gate. Cloud Hobby free tier; Core $29/month. Acquired by ClickHouse, Inc. in January 2026.',
+          description: 'MIT-licensed, free-to-self-host LLM observability and evaluation platform with no feature gate. Cloud Hobby free tier; Core $29/month. Acquired by ClickHouse, Inc.',
         },
         {
           '@type': 'ListItem',
@@ -1539,7 +1539,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '@type': 'ListItem',
           position: 2,
           name: 'Langfuse',
-          description: 'Plateforme d’observabilité et d’évaluation LLM sous licence MIT, gratuite en auto-hébergement, sans barrière de fonctionnalités. Niveau Cloud Hobby gratuit ; Core 29 $/mois. Rachetée par ClickHouse, Inc. en janvier 2026.',
+          description: 'Plateforme d’observabilité et d’évaluation LLM sous licence MIT, gratuite en auto-hébergement, sans barrière de fonctionnalités. Niveau Cloud Hobby gratuit ; Core 29 $/mois. Rachetée par ClickHouse, Inc.',
         },
         {
           '@type': 'ListItem',
@@ -3120,7 +3120,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '@type': 'ListItem',
           position: 2,
           name: 'Langfuse',
-          description: 'Plataforma de observabilidad y evaluación de LLM con licencia MIT, gratuita para autoalojar, sin muro de funciones. Nivel Cloud Hobby gratuito; Core $29/mes. Adquirida por ClickHouse, Inc. en enero de 2026.',
+          description: 'Plataforma de observabilidad y evaluación de LLM con licencia MIT, gratuita para autoalojar, sin muro de funciones. Nivel Cloud Hobby gratuito; Core $29/mes. Adquirida por ClickHouse, Inc.',
         },
         {
           '@type': 'ListItem',
@@ -3647,7 +3647,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '@type': 'ListItem',
           position: 2,
           name: 'Langfuse',
-          description: 'Plataforma de observabilidade e avaliação de LLM com licença MIT, gratuita para self-host, sem barreira de recursos. Nível Cloud Hobby gratuito; Core $29/mês. Adquirida pela ClickHouse, Inc. em janeiro de 2026.',
+          description: 'Plataforma de observabilidade e avaliação de LLM com licença MIT, gratuita para self-host, sem barreira de recursos. Nível Cloud Hobby gratuito; Core $29/mês. Adquirida pela ClickHouse, Inc.',
         },
         {
           '@type': 'ListItem',
@@ -4174,7 +4174,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '@type': 'ListItem',
           position: 2,
           name: 'Langfuse',
-          description: 'منصة مراقبة وتقييم LLM مرخّصة بموجب MIT، مجانية للاستضافة الذاتية، بلا حواجز على الميزات. مستوى Cloud Hobby مجاني؛ Core بسعر 29 دولارًا/شهر. استحوذت عليها ClickHouse, Inc. في يناير 2026.',
+          description: 'منصة مراقبة وتقييم LLM مرخّصة بموجب MIT، مجانية للاستضافة الذاتية، بلا حواجز على الميزات. مستوى Cloud Hobby مجاني؛ Core بسعر 29 دولارًا/شهر. استحوذت عليها ClickHouse, Inc.',
         },
         {
           '@type': 'ListItem',

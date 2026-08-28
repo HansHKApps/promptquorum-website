@@ -9,8 +9,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
-    dateModified: '2026-06-15',
-    lastFactChecked: '2026-06-15',
+    dateModified: '2026-08-28',
+    lastFactChecked: '2026-08-28',
     next_refresh_due: '2026-12-15',
     theme: 'Voice, Speech & Multimodal',
     title: 'Whisper.cpp vs faster-whisper 2026: Local STT Benchmarks, Setup & GPU Acceleration',
@@ -235,10 +235,12 @@ make -j4 WHISPER_COREML=1
       },
       whatsNew: {
         id: 'whats-new',
-        title: 'whisper.cpp Latest Version & Updates (June 2026)',
+        title: 'whisper.cpp Latest Version & Updates',
         content:
-          '**The latest whisper.cpp release is v1.8.6, published June 2, 2026.** It continues the v1.8.x maintenance line (v1.8.4 and v1.8.5) focused on streaming VAD, server stability, and performance — not new model support. faster-whisper\'s current release is v1.2.1 (October 31, 2025). Both runtimes still load the same OpenAI Whisper weights; nothing about transcription accuracy changed in 2026.',
+          '**The latest whisper.cpp release is v1.9.3, published August 20, 2026.** It syncs the underlying ggml library to v0.20.2, with Metal TQ2_0 quantization support, fused CUDA/SYCL kernels, and ARM/WASI fixes. whisper.cpp is now packaged officially for Debian (sid) as `whisper.cpp` / `libwhisper-dev` / `libwhisper1`, alongside the long-standing unofficial Snap. faster-whisper\'s current release is v1.2.1 (October 31, 2025). Both runtimes still load the same OpenAI Whisper weights; nothing about transcription accuracy changed in 2026.',
         items: [
+          '**whisper.cpp v1.9.3 (August 20, 2026):** Syncs ggml to v0.20.2 with backend-wide performance improvements, Metal TQ2_0 quantization support, fused CUDA/SYCL kernels, and ARM/WASI fixes.',
+          '**whisper.cpp v1.9.0–v1.9.2 (June–August 2026):** Point releases continuing the same ggml-sync and cross-backend performance line ahead of v1.9.3.',
           '**whisper.cpp v1.8.6 (June 2, 2026):** Reimplemented `ffmpeg-transcode` for clearer optional FFmpeg decoding of compressed audio (MP3, M4A) plus a CI examples-path fix.',
           '**whisper.cpp v1.8.5 (May 2026):** Streaming VAD (voice activity detection) improvements, server parameter-leak and token-timestamp fixes, and memory-leak fixes in the Ruby and VAD bindings.',
           '**whisper.cpp v1.8.4 (March 19, 2026):** Latest `ggml` sync with broad performance gains, a new `-g` / `--gpu-device` flag (and `GGML_CUDA` device selection) to pick a GPU, and UTF-8 segment-wrapping fixes.',
@@ -560,6 +562,14 @@ curl -L -o ggml-base.bin \\
         title: 'Frequently Asked Questions',
         faqs: [
           {
+            q: 'Is there a Debian or apt package for whisper.cpp?',
+            a: 'Yes — whisper.cpp is now packaged officially for Debian (currently in sid), providing the `whisper.cpp` binary plus `libwhisper-dev` and `libwhisper1` for linking against it as a shared library. It hasn\'t reached stable Debian releases or Ubuntu\'s default repos yet, so on most systems you\'ll still need to add sid or build from source. An unofficial Snap (`sudo snap install whisper-cpp`) is also available for Debian 9+ and Ubuntu if you don\'t want to build from source or pull from sid.',
+          },
+          {
+            q: 'How do I check which version of whisper.cpp I have installed?',
+            a: 'Run the compiled binary with no arguments or `--help` — the version is printed in the banner line. You can also check the exact commit with `git describe --tags` inside the cloned repository, or compare your build date against the release notes at github.com/ggml-org/whisper.cpp/releases to see if you\'re behind the current v1.9.3.',
+          },
+          {
             q: 'Is the transcription accuracy the same between whisper.cpp and faster-whisper?',
             a: 'Yes. Both tools use the same OpenAI Whisper model weights — the model itself is identical. The difference is only in the inference runtime (C/C++ vs CTranslate2 Python). WER on the same audio file will be within 0.1% absolute of each other, which is within normal variation from beam search randomness.',
           },
@@ -624,8 +634,8 @@ curl -L -o ggml-base.bin \\
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
-    dateModified: '2026-06-15',
-    lastFactChecked: '2026-06-15',
+    dateModified: '2026-08-28',
+    lastFactChecked: '2026-08-28',
     next_refresh_due: '2026-12-15',
     theme: 'Voice, Speech & Multimodal',
     title: 'Whisper.cpp vs faster-whisper 2026: Lokale STT-Benchmarks, Setup & GPU-Beschleunigung',
@@ -756,49 +766,49 @@ curl -L -o ggml-base.bin \\
           'Sowohl whisper.cpp als auch faster-whisper verwenden dieselben Whisper-Modellgewichte, konvertiert in das jeweilige Format (GGML für whisper.cpp, CTranslate2 für faster-whisper). Wählen Sie die Modellgröße anhand Ihres VRAM/RAM-Budgets und Ihrer Genauigkeitsanforderungen.',
           image: '/images/local-whisper-stt-comparison-2026-model-sizes-hero-de.webp',
           imageCaption: 'Whisper-Modellgrößen von tiny bis large-v3: WER sinkt von 7,6% auf 2,5%, während die Geschwindigkeit von 32x auf 1x fällt.',
-        columns: ['Modell', 'Parameter', 'VRAM / RAM', 'Englisch WER', 'Geschwindigkeitsfaktor (ggü. Echtzeit, RTX 4070)'],
+        columns: ['Modell', 'Parameter', 'VRAM / RAM', 'Englisch WER', 'Faktor vs. Echtzeit (RTX 4070)'],
         rows: [
           {
             'Modell': 'tiny',
             'Parameter': '39M',
             'VRAM / RAM': '~1 GB',
             'Englisch WER': '7,6 %',
-            'Geschwindigkeitsfaktor (ggü. Echtzeit, RTX 4070)': '~32×',
+            'Faktor vs. Echtzeit (RTX 4070)': '~32×',
           },
           {
             'Modell': 'base',
             'Parameter': '74M',
             'VRAM / RAM': '~1 GB',
             'Englisch WER': '5,0 %',
-            'Geschwindigkeitsfaktor (ggü. Echtzeit, RTX 4070)': '~16×',
+            'Faktor vs. Echtzeit (RTX 4070)': '~16×',
           },
           {
             'Modell': 'small',
             'Parameter': '244M',
             'VRAM / RAM': '~2 GB',
             'Englisch WER': '3,4 %',
-            'Geschwindigkeitsfaktor (ggü. Echtzeit, RTX 4070)': '~6×',
+            'Faktor vs. Echtzeit (RTX 4070)': '~6×',
           },
           {
             'Modell': 'medium',
             'Parameter': '769M',
             'VRAM / RAM': '~5 GB',
             'Englisch WER': '2,9 %',
-            'Geschwindigkeitsfaktor (ggü. Echtzeit, RTX 4070)': '~2×',
+            'Faktor vs. Echtzeit (RTX 4070)': '~2×',
           },
           {
             'Modell': 'large-v3',
             'Parameter': '1,55B',
             'VRAM / RAM': '~10 GB',
             'Englisch WER': '2,5 %',
-            'Geschwindigkeitsfaktor (ggü. Echtzeit, RTX 4070)': '1× (Referenz)',
+            'Faktor vs. Echtzeit (RTX 4070)': '1× (Referenz)',
           },
           {
             'Modell': 'distil-large-v3',
             'Parameter': '~756M',
             'VRAM / RAM': '~4 GB',
             'Englisch WER': '~2,6 %',
-            'Geschwindigkeitsfaktor (ggü. Echtzeit, RTX 4070)': '~6×',
+            'Faktor vs. Echtzeit (RTX 4070)': '~6×',
           },
         ],
         note: 'WER-Werte (Wortfehlerrate) aus dem Whisper-Paper auf dem LibriSpeech Clean Test Set. Niedrigerer Wert ist besser. Geschwindigkeitsfaktoren für faster-whisper int8 auf RTX 4070. distil-large-v3-Werte aus dem Distil-Whisper-Paper.',
@@ -850,10 +860,12 @@ make -j4 WHISPER_COREML=1
       },
       whatsNew: {
         id: 'whats-new',
-        title: 'whisper.cpp – Aktuelle Version & Updates (Juni 2026)',
+        title: 'whisper.cpp – Aktuelle Version & Updates',
         content:
-          '**Die neueste whisper.cpp-Version ist v1.8.6, veröffentlicht am 2. Juni 2026.** Sie setzt die Wartungslinie v1.8.x (v1.8.4 und v1.8.5) fort, fokussiert auf Streaming-VAD, Server-Stabilität und Performance – kein neuer Modell-Support. Die aktuelle Version von faster-whisper ist v1.2.1 (31. Oktober 2025). Beide Runtimes laden weiterhin dieselben OpenAI-Whisper-Gewichte; an der Transkriptionsgenauigkeit hat sich 2026 nichts geändert.',
+          '**Die neueste whisper.cpp-Version ist v1.9.3, veröffentlicht am 20. August 2026.** Sie synchronisiert ggml auf v0.20.2 mit Metal-TQ2_0-Quantisierung, fusionierten CUDA/SYCL-Kernels und ARM/WASI-Korrekturen. whisper.cpp ist jetzt offiziell als Debian-Paket (sid) verfügbar (`whisper.cpp`, `libwhisper-dev`, `libwhisper1`) – zusätzlich zum inoffiziellen Snap. Die frühere Wartungslinie v1.8.x (v1.8.4–v1.8.6) fokussierte auf Streaming-VAD, Server-Stabilität und Performance – kein neuer Modell-Support. Die aktuelle Version von faster-whisper ist v1.2.1 (31. Oktober 2025). Beide Runtimes laden weiterhin dieselben OpenAI-Whisper-Gewichte; an der Transkriptionsgenauigkeit hat sich 2026 nichts geändert.',
         items: [
+          '**whisper.cpp v1.9.3 (20. August 2026):** ggml-Sync auf v0.20.2 mit durchgängigen Performance-Verbesserungen, Metal-TQ2_0-Quantisierung, fusionierten CUDA/SYCL-Kernels und ARM/WASI-Korrekturen.',
+          '**whisper.cpp v1.9.0–v1.9.2 (Juni–August 2026):** Punktreleases in derselben ggml-Sync- und Performance-Linie vor v1.9.3.',
           '**whisper.cpp v1.8.6 (2. Juni 2026):** Neu implementiertes `ffmpeg-transcode` für klarere optionale FFmpeg-Dekodierung komprimierter Audiodateien (MP3, M4A) plus eine Korrektur des CI-Beispielpfads.',
           '**whisper.cpp v1.8.5 (Mai 2026):** Verbesserungen beim Streaming-VAD (Sprachaktivitätserkennung), Korrekturen für Server-Parameter-Leaks und Token-Zeitstempel sowie Behebung von Speicherlecks in den Ruby- und VAD-Bindings.',
           '**whisper.cpp v1.8.4 (19. März 2026):** Neueste `ggml`-Synchronisierung mit breiten Performance-Gewinnen, ein neuer `-g` / `--gpu-device`-Flag (und `GGML_CUDA`-Geräteauswahl) zur GPU-Wahl sowie Korrekturen beim UTF-8-Segmentumbruch.',
@@ -1175,6 +1187,14 @@ curl -L -o ggml-base.bin \\
         title: 'Häufig gestellte Fragen',
         faqs: [
           {
+            q: 'Gibt es ein Debian- oder apt-Paket für whisper.cpp?',
+            a: 'Ja – whisper.cpp ist jetzt offiziell für Debian paketiert (derzeit in sid) und liefert die `whisper.cpp`-Binary sowie `libwhisper-dev` und `libwhisper1` zum Linken als Shared Library. Es hat die stabilen Debian-Releases oder die Standard-Repos von Ubuntu noch nicht erreicht, daher braucht man auf den meisten Systemen weiterhin sid oder muss aus dem Quellcode bauen. Alternativ gibt es einen inoffiziellen Snap (`sudo snap install whisper-cpp`) für Debian 9+ und Ubuntu.',
+          },
+          {
+            q: 'Wie prüfe ich, welche whisper.cpp-Version installiert ist?',
+            a: 'Starten Sie die kompilierte Binary ohne Argumente oder mit `--help` – die Version steht in der Banner-Zeile. Alternativ prüfen Sie den genauen Commit mit `git describe --tags` im geklonten Repository, oder vergleichen Sie Ihr Build-Datum mit den Release Notes unter github.com/ollama/ollama/releases, um zu sehen, ob Sie hinter der aktuellen v1.9.3 liegen.',
+          },
+          {
             q: 'Ist die Transkriptionsgenauigkeit bei whisper.cpp und faster-whisper gleich?',
             a: 'Ja. Beide Tools verwenden dieselben OpenAI-Whisper-Modellgewichte – das Modell selbst ist identisch. Der Unterschied liegt ausschließlich in der Inferenz-Laufzeit (C/C++ vs. CTranslate2 Python). Der WER auf derselben Audiodatei liegt innerhalb von 0,1 % absolut voneinander – das liegt im Rahmen der normalen Variation durch Beam-Search-Zufälligkeit.',
           },
@@ -1247,8 +1267,8 @@ curl -L -o ggml-base.bin \\
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
-    dateModified: '2026-06-15',
-    lastFactChecked: '2026-06-15',
+    dateModified: '2026-08-28',
+    lastFactChecked: '2026-08-28',
     next_refresh_due: '2026-12-15',
     theme: 'Voice, Speech & Multimodal',
     title: 'Whisper.cpp vs faster-whisper 2026 : Benchmarks STT local, configuration & accélération GPU',
@@ -1379,49 +1399,49 @@ curl -L -o ggml-base.bin \\
           'whisper.cpp et faster-whisper utilisent les mêmes poids de modèle Whisper, convertis dans leur format respectif (GGML pour whisper.cpp, CTranslate2 pour faster-whisper). Choisissez la taille de modèle en fonction de votre budget VRAM/RAM et de vos exigences de précision.',
           image: '/images/local-whisper-stt-comparison-2026-model-sizes-hero-fr.webp',
           imageCaption: 'Tailles de modèles Whisper de tiny à large-v3 : le WER passe de 7,6% à 2,5% tandis que la vitesse chute de 32x à 1x.',
-        columns: ['Modèle', 'Paramètres', 'VRAM / RAM', 'WER anglais', 'Facteur de vitesse (vs temps réel, RTX 4070)'],
+        columns: ['Modèle', 'Paramètres', 'VRAM / RAM', 'WER anglais', 'Facteur vs temps réel (RTX 4070)'],
         rows: [
           {
             'Modèle': 'tiny',
             'Paramètres': '39M',
             'VRAM / RAM': '~1 GB',
             'WER anglais': '7.6 %',
-            'Facteur de vitesse (vs temps réel, RTX 4070)': '~32×',
+            'Facteur vs temps réel (RTX 4070)': '~32×',
           },
           {
             'Modèle': 'base',
             'Paramètres': '74M',
             'VRAM / RAM': '~1 GB',
             'WER anglais': '5.0 %',
-            'Facteur de vitesse (vs temps réel, RTX 4070)': '~16×',
+            'Facteur vs temps réel (RTX 4070)': '~16×',
           },
           {
             'Modèle': 'small',
             'Paramètres': '244M',
             'VRAM / RAM': '~2 GB',
             'WER anglais': '3.4 %',
-            'Facteur de vitesse (vs temps réel, RTX 4070)': '~6×',
+            'Facteur vs temps réel (RTX 4070)': '~6×',
           },
           {
             'Modèle': 'medium',
             'Paramètres': '769M',
             'VRAM / RAM': '~5 GB',
             'WER anglais': '2.9 %',
-            'Facteur de vitesse (vs temps réel, RTX 4070)': '~2×',
+            'Facteur vs temps réel (RTX 4070)': '~2×',
           },
           {
             'Modèle': 'large-v3',
             'Paramètres': '1.55B',
             'VRAM / RAM': '~10 GB',
             'WER anglais': '2.5 %',
-            'Facteur de vitesse (vs temps réel, RTX 4070)': '1× (référence)',
+            'Facteur vs temps réel (RTX 4070)': '1× (référence)',
           },
           {
             'Modèle': 'distil-large-v3',
             'Paramètres': '~756M',
             'VRAM / RAM': '~4 GB',
             'WER anglais': '~2.6 %',
-            'Facteur de vitesse (vs temps réel, RTX 4070)': '~6×',
+            'Facteur vs temps réel (RTX 4070)': '~6×',
           },
         ],
         note: 'Valeurs WER (taux d\'erreur de mots) issues de l\'article Whisper sur le jeu de test LibriSpeech clean. Plus la valeur est basse, meilleure est la précision. Facteurs de vitesse pour faster-whisper int8 sur RTX 4070. Valeurs distil-large-v3 issues de l\'article Distil-Whisper.',
@@ -1473,10 +1493,12 @@ make -j4 WHISPER_COREML=1
       },
       whatsNew: {
         id: 'whats-new',
-        title: 'whisper.cpp : dernière version & mises à jour (juin 2026)',
+        title: 'whisper.cpp : dernière version & mises à jour',
         content:
-          '**La dernière version de whisper.cpp est la v1.8.6, publiée le 2 juin 2026.** Elle poursuit la ligne de maintenance v1.8.x (v1.8.4 et v1.8.5) axée sur le VAD en streaming, la stabilité serveur et les performances — pas de support de nouveau modèle. La version actuelle de faster-whisper est la v1.2.1 (31 octobre 2025). Les deux runtimes chargent toujours les mêmes poids OpenAI Whisper ; rien n\'a changé concernant la précision de transcription en 2026.',
+          '**La dernière version de whisper.cpp est la v1.9.3, publiée le 20 août 2026.** Elle synchronise ggml avec v0.20.2, avec la quantification Metal TQ2_0, des kernels CUDA/SYCL fusionnés et des correctifs ARM/WASI. whisper.cpp dispose désormais d\'un paquet Debian officiel (sid) (`whisper.cpp`, `libwhisper-dev`, `libwhisper1`), en plus du Snap non officiel. La précédente ligne de maintenance v1.8.x (v1.8.4–v1.8.6) était axée sur le VAD en streaming, la stabilité serveur et les performances — pas de support de nouveau modèle. La version actuelle de faster-whisper est la v1.2.1 (31 octobre 2025). Les deux runtimes chargent toujours les mêmes poids OpenAI Whisper ; rien n\'a changé concernant la précision de transcription en 2026.',
         items: [
+          '**whisper.cpp v1.9.3 (20 août 2026) :** synchronisation ggml avec v0.20.2, améliorations de performance sur tous les backends, quantification Metal TQ2_0, kernels CUDA/SYCL fusionnés, correctifs ARM/WASI.',
+          '**whisper.cpp v1.9.0–v1.9.2 (juin–août 2026) :** versions intermédiaires dans la même ligne de synchronisation ggml avant la v1.9.3.',
           '**whisper.cpp v1.8.6 (2 juin 2026) :** réimplémentation de `ffmpeg-transcode` pour un décodage FFmpeg optionnel plus clair des fichiers audio compressés (MP3, M4A), plus une correction du chemin des exemples CI.',
           '**whisper.cpp v1.8.5 (mai 2026) :** améliorations du VAD en streaming (détection d\'activité vocale), corrections de fuites de paramètres serveur et d\'horodatages de tokens, ainsi que des corrections de fuites mémoire dans les bindings Ruby et VAD.',
           '**whisper.cpp v1.8.4 (19 mars 2026) :** dernière synchronisation `ggml` avec de larges gains de performance, un nouveau flag `-g` / `--gpu-device` (et sélection de périphérique `GGML_CUDA`) pour choisir un GPU, et des corrections de retour à la ligne des segments UTF-8.',
@@ -1798,6 +1820,14 @@ curl -L -o ggml-base.bin \\
         title: 'Foire aux questions',
         faqs: [
           {
+            q: 'Existe-t-il un paquet Debian ou apt pour whisper.cpp ?',
+            a: 'Oui — whisper.cpp dispose désormais d\'un paquet Debian officiel (actuellement dans sid), fournissant le binaire `whisper.cpp` ainsi que `libwhisper-dev` et `libwhisper1` pour l\'utiliser comme bibliothèque partagée. Il n\'a pas encore atteint les versions stables de Debian ni les dépôts par défaut d\'Ubuntu, donc sur la plupart des systèmes il faut encore utiliser sid ou compiler depuis les sources. Un Snap non officiel (`sudo snap install whisper-cpp`) est aussi disponible pour Debian 9+ et Ubuntu.',
+          },
+          {
+            q: 'Comment vérifier quelle version de whisper.cpp est installée ?',
+            a: 'Lancez le binaire compilé sans argument ou avec `--help` — la version s\'affiche sur la ligne d\'en-tête. Vous pouvez aussi vérifier le commit exact avec `git describe --tags` dans le dépôt cloné, ou comparer votre date de build aux notes de version sur github.com/ggml-org/whisper.cpp/releases pour voir si vous êtes en retard sur la v1.9.3 actuelle.',
+          },
+          {
             q: 'La précision de transcription est-elle identique entre whisper.cpp et faster-whisper ?',
             a: 'Oui. Les deux outils utilisent les mêmes poids de modèle OpenAI Whisper — le modèle lui-même est identique. La différence réside uniquement dans le runtime d\'inférence (C/C++ vs CTranslate2 Python). Le WER sur le même fichier audio sera dans un écart de 0.1 % absolu — dans la variation normale due à la recherche en faisceau.',
           },
@@ -1862,8 +1892,8 @@ curl -L -o ggml-base.bin \\
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
-    dateModified: '2026-06-15',
-    lastFactChecked: '2026-06-15',
+    dateModified: '2026-08-28',
+    lastFactChecked: '2026-08-28',
     next_refresh_due: '2026-12-15',
     theme: 'Voice, Speech & Multimodal',
     title: 'ローカル音声認識2026：Whisper.cpp vs faster-whisper — ベンチマーク・セットアップ・GPU高速化',
@@ -2088,10 +2118,14 @@ make -j4 WHISPER_COREML=1
       },
       whatsNew: {
         id: 'whats-new',
-        title: 'whisper.cpp 最新バージョンとアップデート（2026年6月）',
+        title: 'whisper.cpp 最新バージョンとアップデート',
         content:
-          '**whisper.cppの最新リリースは2026年6月2日に公開されたv1.8.6です。** これはストリーミングVAD、サーバーの安定性、パフォーマンスに焦点を当てたv1.8.x保守ライン（v1.8.4およびv1.8.5）を引き継ぐもので、新しいモデルのサポートではありません。faster-whisperの現行リリースはv1.2.1（2025年10月31日）です。両ランタイムとも同じOpenAI Whisperのウェイトを読み込んでおり、文字起こし精度に関して2026年に変わったことはありません。',
+          '**whisper.cppの最新リリースは2026年8月20日公開のv1.9.3です。** ggmlをv0.20.2に同期し、Metal TQ2_0量子化、CUDA/SYCLカーネルの統合、ARM/WASI修正を含みます。whisper.cppは非公式Snapに加え、Debian公式パッケージ（sid、`whisper.cpp`／`libwhisper-dev`／`libwhisper1`）でも利用可能になりました。以前の保守ラインv1.8.x（v1.8.4〜v1.8.6）はストリーミングVAD、サーバーの安定性、パフォーマンスに焦点を当てていました。新しいモデルのサポートではありません。faster-whisperの現行リリースはv1.2.1（2025年10月31日）です。両ランタイムとも同じOpenAI Whisperのウェイトを読み込んでおり、文字起こし精度に関して2026年に変わったことはありません。',
         items: [
+          '**whisper.cpp v1.9.3（2026年8月20日）：** ggmlをv0.20.2に同期し、全バックエンドで性能向上、Metal TQ2_0量子化対応、CUDA/SYCLカーネル統合、ARM/WASI修正。',
+          '**whisper.cpp v1.9.0〜v1.9.2（2026年6月〜8月）：** v1.9.3に至るまでの同系統のggml同期・性能改善リリース。',
+          '**whisper.cpp v1.9.3（2026年8月20日）：** 将ggml同步至v0.20.2，带来全后端性能提升、Metal TQ2_0量化支持、融合CUDA/SYCL内核及ARM/WASI修复。',
+          '**whisper.cpp v1.9.0至v1.9.2（2026年6月至8月）：** v1.9.3之前同一系列的ggml同步与性能改进版本。',
           '**whisper.cpp v1.8.6（2026年6月2日）：** 圧縮音声（MP3、M4A）のオプションのFFmpegデコードをより明確にするため`ffmpeg-transcode`を再実装し、CIのexamplesパスを修正。',
           '**whisper.cpp v1.8.5（2026年5月）：** ストリーミングVAD（音声アクティビティ検出）の改善、サーバーのパラメータリークおよびトークンタイムスタンプの修正、RubyとVADのバインディングにおけるメモリリークの修正。',
           '**whisper.cpp v1.8.4（2026年3月19日）：** 幅広いパフォーマンス向上を伴う最新の`ggml`同期、GPUを選択するための新しい`-g` / `--gpu-device`フラグ（および`GGML_CUDA`デバイス選択）、UTF-8セグメント折り返しの修正。',
@@ -2413,6 +2447,14 @@ curl -L -o ggml-base.bin \\
         title: 'よくある質問',
         faqs: [
           {
+            q: 'whisper.cppにDebian（apt）パッケージはありますか？',
+            a: 'はい — whisper.cppは現在Debian（現時点ではsid）向けに公式パッケージ化されており、`whisper.cpp`バイナリに加え、共有ライブラリとしてリンクするための`libwhisper-dev`と`libwhisper1`が提供されています。まだDebianの安定版やUbuntuの標準リポジトリには到達していないため、多くの環境ではsidの利用またはソースからのビルドが必要です。ソースビルドを避けたい場合は、Debian 9以降とUbuntu向けの非公式Snap（`sudo snap install whisper-cpp`）も利用できます。',
+          },
+          {
+            q: 'インストール済みのwhisper.cppのバージョンを確認するには？',
+            a: 'コンパイルしたバイナリを引数なしまたは`--help`付きで実行すると、バナー行にバージョンが表示されます。クローンしたリポジトリ内で`git describe --tags`を実行して正確なコミットを確認することもできます。またビルド日をgithub.com/ggml-org/whisper.cpp/releasesのリリースノートと比較し、現行のv1.9.3より古いかどうかを確認できます。',
+          },
+          {
             q: 'whisper.cppとfaster-whisperで文字起こし精度は同じですか？',
             a: 'はい。両ツールとも同じOpenAI Whisperモデルウェイトを使用しています — モデル自体は同一です。違いは推論ランタイム（C/C++対CTranslate2 Python）のみです。同じ音声ファイルでのWERは絶対値で0.1%以内 — これはビームサーチのランダム性による通常の変動範囲内です。',
           },
@@ -2477,8 +2519,8 @@ curl -L -o ggml-base.bin \\
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
-    dateModified: '2026-06-15',
-    lastFactChecked: '2026-06-15',
+    dateModified: '2026-08-28',
+    lastFactChecked: '2026-08-28',
     next_refresh_due: '2026-12-15',
     theme: 'Voice, Speech & Multimodal',
     title: '本地语音识别2026：Whisper.cpp vs faster-whisper — 基准测试、安装配置、GPU加速',
@@ -2703,9 +2745,9 @@ make -j4 WHISPER_COREML=1
       },
       whatsNew: {
         id: 'whats-new',
-        title: 'whisper.cpp 最新版本与更新（2026年6月）',
+        title: 'whisper.cpp 最新版本与更新',
         content:
-          '**whisper.cpp的最新版本是v1.8.6，于2026年6月2日发布。** 它延续了v1.8.x维护线（v1.8.4和v1.8.5），聚焦于流式VAD、服务器稳定性和性能 — 而非新模型支持。faster-whisper的当前版本是v1.2.1（2025年10月31日）。两个运行时仍加载相同的OpenAI Whisper权重；2026年转录精度方面没有任何变化。',
+          '**whisper.cpp的最新版本是v1.9.3，于2026年8月20日发布。** 该版本将ggml同步至v0.20.2，新增Metal TQ2_0量化支持、融合的CUDA/SYCL内核，以及ARM/WASI修复。whisper.cpp现已提供官方Debian软件包（sid，`whisper.cpp`／`libwhisper-dev`／`libwhisper1`），在非官方Snap之外多了一个选择。此前的v1.8.x维护线（v1.8.4-v1.8.6）聚焦于流式VAD、服务器稳定性和性能 — 而非新模型支持。faster-whisper的当前版本是v1.2.1（2025年10月31日）。两个运行时仍加载相同的OpenAI Whisper权重；2026年转录精度方面没有任何变化。',
         items: [
           '**whisper.cpp v1.8.6（2026年6月2日）：** 重新实现了`ffmpeg-transcode`，以便更清晰地对压缩音频（MP3、M4A）进行可选的FFmpeg解码，并修复了CI示例路径问题。',
           '**whisper.cpp v1.8.5（2026年5月）：** 改进了流式VAD（语音活动检测），修复了服务器参数泄漏和token时间戳问题，并修复了Ruby和VAD绑定中的内存泄漏。',
@@ -3028,6 +3070,14 @@ curl -L -o ggml-base.bin \\
         title: '常见问题解答',
         faqs: [
           {
+            q: 'whisper.cpp有Debian或apt软件包吗？',
+            a: '有——whisper.cpp现已正式打包进入Debian（目前在sid中），提供`whisper.cpp`可执行文件，以及用于作为共享库链接的`libwhisper-dev`和`libwhisper1`。它尚未进入Debian稳定版或Ubuntu默认软件源，因此大多数系统仍需使用sid或从源码构建。另外，Debian 9+和Ubuntu也有一个非官方Snap包（`sudo snap install whisper-cpp`）可用。',
+          },
+          {
+            q: '如何检查已安装的whisper.cpp版本？',
+            a: '不带参数或加上`--help`运行编译好的可执行文件，版本号会显示在横幅行中。也可以在克隆的仓库中运行`git describe --tags`查看确切的提交，或将构建日期与github.com/ggml-org/whisper.cpp/releases上的发布说明对比，确认是否落后于当前的v1.9.3。',
+          },
+          {
             q: 'whisper.cpp和faster-whisper的转录精度相同吗？',
             a: '是的。两款工具均使用相同的OpenAI Whisper模型权重 — 模型本身完全相同。区别仅在于推理运行时（C/C++与CTranslate2 Python）。同一音频文件的WER绝对差值在0.1%以内 — 这在束搜索随机性的正常变动范围内。',
           },
@@ -3092,8 +3142,8 @@ curl -L -o ggml-base.bin \\
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
-    dateModified: '2026-06-15',
-    lastFactChecked: '2026-06-15',
+    dateModified: '2026-08-28',
+    lastFactChecked: '2026-08-28',
     next_refresh_due: '2026-12-15',
     theme: 'Voice, Speech & Multimodal',
     title: 'Whisper.cpp vs faster-whisper 2026: Benchmarks STT local, configuración y aceleración GPU',
@@ -3224,49 +3274,49 @@ curl -L -o ggml-base.bin \\
           'Tanto whisper.cpp como faster-whisper usan los mismos pesos del modelo Whisper, convertidos a sus formatos respectivos (GGML para whisper.cpp, CTranslate2 para faster-whisper). Elige el tamaño del modelo según tu presupuesto de VRAM/RAM y tus requisitos de precisión.',
           image: '/images/local-whisper-stt-comparison-2026-model-sizes-hero-es.webp',
           imageCaption: 'Tamaños de modelo Whisper de tiny a large-v3: el WER baja de 7.6% a 2.5% mientras la velocidad baja de 32x a 1x.',
-        columns: ['Modelo', 'Parámetros', 'VRAM / RAM', 'WER inglés', 'Factor de velocidad (vs tiempo real en RTX 4070)'],
+        columns: ['Modelo', 'Parámetros', 'VRAM / RAM', 'WER inglés', 'Factor vs tiempo real (RTX 4070)'],
         rows: [
           {
             'Modelo': 'tiny',
             'Parámetros': '39M',
             'VRAM / RAM': '~1 GB',
             'WER inglés': '7,6%',
-            'Factor de velocidad (vs tiempo real en RTX 4070)': '~32×',
+            'Factor vs tiempo real (RTX 4070)': '~32×',
           },
           {
             'Modelo': 'base',
             'Parámetros': '74M',
             'VRAM / RAM': '~1 GB',
             'WER inglés': '5,0%',
-            'Factor de velocidad (vs tiempo real en RTX 4070)': '~16×',
+            'Factor vs tiempo real (RTX 4070)': '~16×',
           },
           {
             'Modelo': 'small',
             'Parámetros': '244M',
             'VRAM / RAM': '~2 GB',
             'WER inglés': '3,4%',
-            'Factor de velocidad (vs tiempo real en RTX 4070)': '~6×',
+            'Factor vs tiempo real (RTX 4070)': '~6×',
           },
           {
             'Modelo': 'medium',
             'Parámetros': '769M',
             'VRAM / RAM': '~5 GB',
             'WER inglés': '2,9%',
-            'Factor de velocidad (vs tiempo real en RTX 4070)': '~2×',
+            'Factor vs tiempo real (RTX 4070)': '~2×',
           },
           {
             'Modelo': 'large-v3',
             'Parámetros': '1,55B',
             'VRAM / RAM': '~10 GB',
             'WER inglés': '2,5%',
-            'Factor de velocidad (vs tiempo real en RTX 4070)': '1× (referencia)',
+            'Factor vs tiempo real (RTX 4070)': '1× (referencia)',
           },
           {
             'Modelo': 'distil-large-v3',
             'Parámetros': '~756M',
             'VRAM / RAM': '~4 GB',
             'WER inglés': '~2,6%',
-            'Factor de velocidad (vs tiempo real en RTX 4070)': '~6×',
+            'Factor vs tiempo real (RTX 4070)': '~6×',
           },
         ],
         note: 'Valores WER (tasa de error de palabras) del paper de Whisper en el conjunto de prueba limpio de LibriSpeech. Menor es mejor. Factores de velocidad para faster-whisper int8 en RTX 4070. Valores de distil-large-v3 del paper de Distil-Whisper.',
@@ -3318,10 +3368,12 @@ make -j4 WHISPER_COREML=1
       },
       whatsNew: {
         id: 'whats-new',
-        title: 'whisper.cpp: última versión y novedades (junio de 2026)',
+        title: 'whisper.cpp: última versión y novedades',
         content:
-          '**La última versión de whisper.cpp es la v1.8.6, publicada el 2 de junio de 2026.** Continúa la línea de mantenimiento v1.8.x (v1.8.4 y v1.8.5) centrada en VAD por streaming, estabilidad del servidor y rendimiento — no en soporte de nuevos modelos. La versión actual de faster-whisper es la v1.2.1 (31 de octubre de 2025). Ambos runtimes siguen cargando los mismos pesos de OpenAI Whisper; nada relativo a la precisión de transcripción cambió en 2026.',
+          '**La última versión de whisper.cpp es la v1.9.3, publicada el 20 de agosto de 2026.** Sincroniza ggml con v0.20.2, con soporte de cuantización Metal TQ2_0, kernels CUDA/SYCL fusionados y correcciones ARM/WASI. whisper.cpp ahora cuenta con paquete oficial de Debian (sid) (`whisper.cpp`, `libwhisper-dev`, `libwhisper1`), además del Snap no oficial. La anterior línea de mantenimiento v1.8.x (v1.8.4-v1.8.6) se centraba en VAD por streaming, estabilidad del servidor y rendimiento — no en soporte de nuevos modelos. La versión actual de faster-whisper es la v1.2.1 (31 de octubre de 2025). Ambos runtimes siguen cargando los mismos pesos de OpenAI Whisper; nada relativo a la precisión de transcripción cambió en 2026.',
         items: [
+          '**whisper.cpp v1.9.3 (20 de agosto de 2026):** sincronización de ggml con v0.20.2, mejoras de rendimiento en todos los backends, cuantización Metal TQ2_0, kernels CUDA/SYCL fusionados y correcciones ARM/WASI.',
+          '**whisper.cpp v1.9.0-v1.9.2 (junio-agosto de 2026):** versiones intermedias de la misma línea de sincronización de ggml antes de la v1.9.3.',
           '**whisper.cpp v1.8.6 (2 de junio de 2026):** reimplementación de `ffmpeg-transcode` para una decodificación opcional con FFmpeg más clara de audio comprimido (MP3, M4A), además de una corrección de la ruta de ejemplos en CI.',
           '**whisper.cpp v1.8.5 (mayo de 2026):** mejoras en el VAD por streaming (detección de actividad de voz), correcciones de fugas de parámetros del servidor y de marcas de tiempo de tokens, y correcciones de fugas de memoria en los bindings de Ruby y VAD.',
           '**whisper.cpp v1.8.4 (19 de marzo de 2026):** última sincronización de `ggml` con amplias mejoras de rendimiento, un nuevo flag `-g` / `--gpu-device` (y selección de dispositivo `GGML_CUDA`) para elegir una GPU, y correcciones del ajuste de segmentos UTF-8.',
@@ -3643,6 +3695,14 @@ curl -L -o ggml-base.bin \\
         title: 'Preguntas frecuentes',
         faqs: [
           {
+            q: '¿Existe un paquete Debian o apt para whisper.cpp?',
+            a: 'Sí — whisper.cpp ahora tiene un paquete oficial de Debian (actualmente en sid), que proporciona el binario `whisper.cpp` además de `libwhisper-dev` y `libwhisper1` para enlazarlo como biblioteca compartida. Todavía no ha llegado a las versiones estables de Debian ni a los repositorios predeterminados de Ubuntu, así que en la mayoría de sistemas hay que usar sid o compilar desde el código fuente. También existe un Snap no oficial (`sudo snap install whisper-cpp`) para Debian 9+ y Ubuntu.',
+          },
+          {
+            q: '¿Cómo compruebo qué versión de whisper.cpp tengo instalada?',
+            a: 'Ejecuta el binario compilado sin argumentos o con `--help` — la versión aparece en la línea de cabecera. También puedes comprobar el commit exacto con `git describe --tags` dentro del repositorio clonado, o comparar tu fecha de compilación con las notas de versión en github.com/ggml-org/whisper.cpp/releases para ver si estás por detrás de la v1.9.3 actual.',
+          },
+          {
             q: '¿La precisión de transcripción es la misma entre whisper.cpp y faster-whisper?',
             a: 'Sí. Ambas herramientas usan los mismos pesos del modelo OpenAI Whisper — el modelo en sí es idéntico. La diferencia está únicamente en el runtime de inferencia (C/C++ vs CTranslate2 Python). El WER en el mismo archivo de audio estará dentro de un 0,1% absoluto el uno del otro, lo cual está dentro de la variación normal por la aleatoriedad de beam search.',
           },
@@ -3710,7 +3770,7 @@ curl -L -o ggml-base.bin \\
        url: 'https://www.promptquorum.com/es/power-local-llm/local-whisper-stt-comparison-2026',
        inLanguage: 'es',
        datePublished: '2026-05-24',
-       dateModified: '2026-06-15',
+       dateModified: '2026-08-28',
        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
        'proficiencyLevel': 'Intermediate',
@@ -3720,8 +3780,8 @@ curl -L -o ggml-base.bin \\
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
-    dateModified: '2026-06-15',
-    lastFactChecked: '2026-06-15',
+    dateModified: '2026-08-28',
+    lastFactChecked: '2026-08-28',
     next_refresh_due: '2026-12-15',
     theme: 'Voice, Speech & Multimodal',
     title: 'Whisper.cpp vs faster-whisper 2026: Benchmarks de STT local, configuração e aceleração de GPU',
@@ -3852,49 +3912,49 @@ curl -L -o ggml-base.bin \\
           'Tanto whisper.cpp quanto faster-whisper usam os mesmos pesos do modelo Whisper, convertidos para seus respectivos formatos (GGML para whisper.cpp, CTranslate2 para faster-whisper). Escolha o tamanho do modelo conforme seu orçamento de VRAM/RAM e seus requisitos de precisão.',
           image: '/images/local-whisper-stt-comparison-2026-model-sizes-hero-pt.webp',
           imageCaption: 'Tamanhos de modelo Whisper de tiny a large-v3: o WER cai de 7,6% para 2,5% enquanto a velocidade cai de 32x para 1x.',
-        columns: ['Modelo', 'Parâmetros', 'VRAM / RAM', 'WER inglês', 'Fator de velocidade (vs tempo real em RTX 4070)'],
+        columns: ['Modelo', 'Parâmetros', 'VRAM / RAM', 'WER inglês', 'Fator vs tempo real (RTX 4070)'],
         rows: [
           {
             'Modelo': 'tiny',
             'Parâmetros': '39M',
             'VRAM / RAM': '~1 GB',
             'WER inglês': '7,6%',
-            'Fator de velocidade (vs tempo real em RTX 4070)': '~32×',
+            'Fator vs tempo real (RTX 4070)': '~32×',
           },
           {
             'Modelo': 'base',
             'Parâmetros': '74M',
             'VRAM / RAM': '~1 GB',
             'WER inglês': '5,0%',
-            'Fator de velocidade (vs tempo real em RTX 4070)': '~16×',
+            'Fator vs tempo real (RTX 4070)': '~16×',
           },
           {
             'Modelo': 'small',
             'Parâmetros': '244M',
             'VRAM / RAM': '~2 GB',
             'WER inglês': '3,4%',
-            'Fator de velocidade (vs tempo real em RTX 4070)': '~6×',
+            'Fator vs tempo real (RTX 4070)': '~6×',
           },
           {
             'Modelo': 'medium',
             'Parâmetros': '769M',
             'VRAM / RAM': '~5 GB',
             'WER inglês': '2,9%',
-            'Fator de velocidade (vs tempo real em RTX 4070)': '~2×',
+            'Fator vs tempo real (RTX 4070)': '~2×',
           },
           {
             'Modelo': 'large-v3',
             'Parâmetros': '1,55B',
             'VRAM / RAM': '~10 GB',
             'WER inglês': '2,5%',
-            'Fator de velocidade (vs tempo real em RTX 4070)': '1× (referência)',
+            'Fator vs tempo real (RTX 4070)': '1× (referência)',
           },
           {
             'Modelo': 'distil-large-v3',
             'Parâmetros': '~756M',
             'VRAM / RAM': '~4 GB',
             'WER inglês': '~2,6%',
-            'Fator de velocidade (vs tempo real em RTX 4070)': '~6×',
+            'Fator vs tempo real (RTX 4070)': '~6×',
           },
         ],
         note: 'Valores de WER (taxa de erro de palavras) do paper do Whisper no conjunto de teste limpo do LibriSpeech. Menor é melhor. Fatores de velocidade para faster-whisper int8 em RTX 4070. Valores de distil-large-v3 do paper do Distil-Whisper.',
@@ -3946,10 +4006,12 @@ make -j4 WHISPER_COREML=1
       },
       whatsNew: {
         id: 'whats-new',
-        title: 'whisper.cpp: versão mais recente e novidades (junho de 2026)',
+        title: 'whisper.cpp: versão mais recente e novidades',
         content:
-          '**A versão mais recente do whisper.cpp é a v1.8.6, publicada em 2 de junho de 2026.** Ela continua a linha de manutenção v1.8.x (v1.8.4 e v1.8.5) focada em VAD por streaming, estabilidade do servidor e desempenho — não em suporte a novos modelos. A versão atual do faster-whisper é a v1.2.1 (31 de outubro de 2025). Ambos os runtimes ainda carregam os mesmos pesos do OpenAI Whisper; nada relativo à precisão de transcrição mudou em 2026.',
+          '**A versão mais recente do whisper.cpp é a v1.9.3, publicada em 20 de agosto de 2026.** Ela sincroniza o ggml com a v0.20.2, com suporte à quantização Metal TQ2_0, kernels CUDA/SYCL combinados e correções para ARM/WASI. O whisper.cpp agora conta com pacote oficial para Debian (sid) (`whisper.cpp`, `libwhisper-dev`, `libwhisper1`), além do Snap não oficial. A linha de manutenção anterior v1.8.x (v1.8.4-v1.8.6) era focada em VAD por streaming, estabilidade do servidor e desempenho — não em suporte a novos modelos. A versão atual do faster-whisper é a v1.2.1 (31 de outubro de 2025). Ambos os runtimes ainda carregam os mesmos pesos do OpenAI Whisper; nada relativo à precisão de transcrição mudou em 2026.',
         items: [
+          '**whisper.cpp v1.9.3 (20 de agosto de 2026):** sincronização do ggml com a v0.20.2, melhorias de desempenho em todos os backends, quantização Metal TQ2_0, kernels CUDA/SYCL combinados e correções para ARM/WASI.',
+          '**whisper.cpp v1.9.0 a v1.9.2 (junho a agosto de 2026):** versões intermediárias da mesma linha de sincronização do ggml antes da v1.9.3.',
           '**whisper.cpp v1.8.6 (2 de junho de 2026):** reimplementação do `ffmpeg-transcode` para uma decodificação opcional com FFmpeg mais clara de áudio comprimido (MP3, M4A), além de uma correção do caminho de exemplos no CI.',
           '**whisper.cpp v1.8.5 (maio de 2026):** melhorias no VAD por streaming (detecção de atividade de voz), correções de vazamento de parâmetros do servidor e de carimbos de tempo de tokens, e correções de vazamentos de memória nos bindings de Ruby e VAD.',
           '**whisper.cpp v1.8.4 (19 de março de 2026):** sincronização mais recente do `ggml` com amplos ganhos de desempenho, uma nova flag `-g` / `--gpu-device` (e seleção de dispositivo `GGML_CUDA`) para escolher uma GPU, e correções de quebra de segmentos UTF-8.',
@@ -4271,6 +4333,14 @@ curl -L -o ggml-base.bin \\
         title: 'Perguntas frequentes',
         faqs: [
           {
+            q: 'Existe um pacote Debian ou apt para o whisper.cpp?',
+            a: 'Sim — o whisper.cpp agora tem um pacote oficial para Debian (atualmente em sid), disponibilizando o binário `whisper.cpp` além de `libwhisper-dev` e `libwhisper1` para vinculação como biblioteca compartilhada. Ainda não chegou às versões estáveis do Debian nem aos repositórios padrão do Ubuntu, então na maioria dos sistemas ainda é preciso usar sid ou compilar a partir do código-fonte. Também existe um Snap não oficial (`sudo snap install whisper-cpp`) para Debian 9+ e Ubuntu.',
+          },
+          {
+            q: 'Como verifico qual versão do whisper.cpp está instalada?',
+            a: 'Execute o binário compilado sem argumentos ou com `--help` — a versão aparece na linha de banner. Você também pode conferir o commit exato com `git describe --tags` dentro do repositório clonado, ou comparar a data do build com as notas de versão em github.com/ggml-org/whisper.cpp/releases para ver se está atrás da v1.9.3 atual.',
+          },
+          {
             q: 'A precisão de transcrição é a mesma entre whisper.cpp e faster-whisper?',
             a: 'Sim. Ambas as ferramentas usam os mesmos pesos do modelo OpenAI Whisper — o modelo em si é idêntico. A diferença está unicamente no runtime de inferência (C/C++ vs CTranslate2 Python). O WER no mesmo arquivo de áudio ficará dentro de 0,1% absoluto um do outro, o que está dentro da variação normal causada pela aleatoriedade do beam search.',
           },
@@ -4338,7 +4408,7 @@ curl -L -o ggml-base.bin \\
        url: 'https://www.promptquorum.com/pt/power-local-llm/local-whisper-stt-comparison-2026',
        inLanguage: 'pt-BR',
        datePublished: '2026-05-24',
-       dateModified: '2026-06-15',
+       dateModified: '2026-08-28',
        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
        'proficiencyLevel': 'Intermediate',
@@ -4348,8 +4418,8 @@ curl -L -o ggml-base.bin \\
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
-    dateModified: '2026-06-15',
-    lastFactChecked: '2026-06-15',
+    dateModified: '2026-08-28',
+    lastFactChecked: '2026-08-28',
     next_refresh_due: '2026-12-15',
     theme: 'Voice, Speech & Multimodal',
     title: '⁨Whisper.cpp⁩ مقابل ⁨faster-whisper 2026⁩: معايير ⁨STT⁩ المحلية والإعداد وتسريع ⁨GPU⁩',
@@ -4480,49 +4550,49 @@ curl -L -o ggml-base.bin \\
           'تستخدم كلٌّ من whisper.cpp وfaster-whisper أوزان نموذج Whisper ذاتها، المحوَّلة إلى تنسيقاتها المعنية (GGML لـwhisper.cpp، وCTranslate2 لـfaster-whisper). اختر حجم النموذج بناءً على ميزانية VRAM/RAM ومتطلبات الدقة لديك.',
           image: '/images/local-whisper-stt-comparison-2026-model-sizes-hero-ar.webp',
           imageCaption: 'أحجام نماذج Whisper من tiny إلى large-v3: ينخفض WER من 7.6% إلى 2.5% بينما تنخفض السرعة من 32 ضعفًا إلى ضعف واحد.',
-        columns: ['النموذج', 'المعاملات', 'VRAM / RAM', 'WER إنجليزي', 'معامل السرعة (مقابل الزمن الفعلي على RTX 4070)'],
+        columns: ['النموذج', 'المعاملات', 'VRAM / RAM', 'WER إنجليزي', 'معامل السرعة (RTX 4070)'],
         rows: [
           {
             'النموذج': 'tiny',
             'المعاملات': '39M',
             'VRAM / RAM': '~1 GB',
             'WER إنجليزي': '7.6%',
-            'معامل السرعة (مقابل الزمن الفعلي على RTX 4070)': '~32×',
+            'معامل السرعة (RTX 4070)': '~32×',
           },
           {
             'النموذج': 'base',
             'المعاملات': '74M',
             'VRAM / RAM': '~1 GB',
             'WER إنجليزي': '5.0%',
-            'معامل السرعة (مقابل الزمن الفعلي على RTX 4070)': '~16×',
+            'معامل السرعة (RTX 4070)': '~16×',
           },
           {
             'النموذج': 'small',
             'المعاملات': '244M',
             'VRAM / RAM': '~2 GB',
             'WER إنجليزي': '3.4%',
-            'معامل السرعة (مقابل الزمن الفعلي على RTX 4070)': '~6×',
+            'معامل السرعة (RTX 4070)': '~6×',
           },
           {
             'النموذج': 'medium',
             'المعاملات': '769M',
             'VRAM / RAM': '~5 GB',
             'WER إنجليزي': '2.9%',
-            'معامل السرعة (مقابل الزمن الفعلي على RTX 4070)': '~2×',
+            'معامل السرعة (RTX 4070)': '~2×',
           },
           {
             'النموذج': 'large-v3',
             'المعاملات': '1.55B',
             'VRAM / RAM': '~10 GB',
             'WER إنجليزي': '2.5%',
-            'معامل السرعة (مقابل الزمن الفعلي على RTX 4070)': '1× (مرجع)',
+            'معامل السرعة (RTX 4070)': '1× (مرجع)',
           },
           {
             'النموذج': 'distil-large-v3',
             'المعاملات': '~756M',
             'VRAM / RAM': '~4 GB',
             'WER إنجليزي': '~2.6%',
-            'معامل السرعة (مقابل الزمن الفعلي على RTX 4070)': '~6×',
+            'معامل السرعة (RTX 4070)': '~6×',
           },
         ],
         note: 'قيم WER (معدل خطأ الكلمات) من ورقة Whisper البحثية على مجموعة اختبار LibriSpeech النظيفة. أقل أفضل. معاملات السرعة لـfaster-whisper int8 على RTX 4070. قيم distil-large-v3 من ورقة Distil-Whisper البحثية.',
@@ -4574,10 +4644,12 @@ make -j4 WHISPER_COREML=1
       },
       whatsNew: {
         id: 'whats-new',
-        title: 'whisper.cpp — أحدث إصدار وتحديثات (يونيو 2026)',
+        title: 'whisper.cpp — أحدث إصدار وتحديثات',
         content:
-          '**أحدث إصدار من whisper.cpp هو v1.8.6، الصادر في 2 يونيو 2026.** يواصل خط الصيانة v1.8.x (الإصداران v1.8.4 وv1.8.5) مركّزًا على VAD المتدفق واستقرار الخادم والأداء — لا دعم لنماذج جديدة. الإصدار الحالي من faster-whisper هو v1.2.1 (31 أكتوبر 2025). لا تزال كلتا أداتَي التشغيل تحمّلان أوزان OpenAI Whisper ذاتها؛ ولم يتغير أي شيء يخص دقة النسخ في 2026.',
+          '**أحدث إصدار من whisper.cpp هو v1.9.3، الصادر في 20 أغسطس 2026.** يُزامن ggml مع v0.20.2، ويضيف دعم التكميم Metal TQ2_0، ونوى CUDA/SYCL مدمجة، وإصلاحات لـARM/WASI. أصبح لدى whisper.cpp الآن حزمة Debian رسمية (sid) (`whisper.cpp`، `libwhisper-dev`، `libwhisper1`)، إلى جانب حزمة Snap غير الرسمية. خط الصيانة السابق v1.8.x (من v1.8.4 إلى v1.8.6) كان مركّزًا على VAD المتدفق واستقرار الخادم والأداء — لا دعم لنماذج جديدة. الإصدار الحالي من faster-whisper هو v1.2.1 (31 أكتوبر 2025). لا تزال كلتا أداتَي التشغيل تحمّلان أوزان OpenAI Whisper ذاتها؛ ولم يتغير أي شيء يخص دقة النسخ في 2026.',
         items: [
+          '**whisper.cpp v1.9.3 (20 أغسطس 2026):** مزامنة ggml مع v0.20.2، وتحسينات أداء عبر جميع الواجهات الخلفية، ودعم تكميم Metal TQ2_0، ونوى CUDA/SYCL مدمجة، وإصلاحات لـARM/WASI.',
+          '**whisper.cpp من v1.9.0 إلى v1.9.2 (يونيو-أغسطس 2026):** إصدارات وسيطة ضمن سلسلة مزامنة ggml نفسها قبل v1.9.3.',
           '**whisper.cpp v1.8.6 (2 يونيو 2026):** إعادة تنفيذ `ffmpeg-transcode` لفك تشفير FFmpeg الاختياري بوضوح أكبر للصوت المضغوط (MP3، M4A) إضافةً إلى إصلاح لمسار أمثلة CI.',
           '**whisper.cpp v1.8.5 (مايو 2026):** تحسينات على VAD المتدفق (الكشف عن نشاط الصوت)، وإصلاحات لتسريب معاملات الخادم وطوابع توقيت الرموز، وإصلاحات لتسرب الذاكرة في ارتباطات Ruby وVAD.',
           '**whisper.cpp v1.8.4 (19 مارس 2026):** أحدث مزامنة لـ`ggml` مع مكاسب أداء واسعة، وراية جديدة `-g` / `--gpu-device` (واختيار جهاز `GGML_CUDA`) لاختيار GPU، وإصلاحات لالتفاف مقاطع UTF-8.',
@@ -4899,6 +4971,14 @@ curl -L -o ggml-base.bin \\
         title: 'الأسئلة الشائعة',
         faqs: [
           {
+            q: 'هل توجد حزمة Debian أو apt لـ whisper.cpp؟',
+            a: 'نعم — أصبح لدى whisper.cpp حزمة Debian رسمية الآن (حاليًا في sid)، توفّر الملف التنفيذي `whisper.cpp` بالإضافة إلى `libwhisper-dev` و`libwhisper1` للربط كمكتبة مشتركة. لم تصل بعد إلى إصدارات Debian المستقرة أو مستودعات Ubuntu الافتراضية، لذا على معظم الأنظمة ستحتاج إلى استخدام sid أو البناء من المصدر. تتوفر أيضًا حزمة Snap غير رسمية (`sudo snap install whisper-cpp`) لـ Debian 9 فما فوق وUbuntu.',
+          },
+          {
+            q: 'كيف أتحقق من إصدار whisper.cpp المثبّت لديّ؟',
+            a: 'شغّل الملف التنفيذي المُجمَّع بدون أي وسائط أو مع `--help` — سيُطبع الإصدار في سطر العنوان. يمكنك أيضًا التحقق من الالتزام (commit) الدقيق عبر `git describe --tags` داخل المستودع المستنسخ، أو مقارنة تاريخ البناء لديك بملاحظات الإصدارات على github.com/ggml-org/whisper.cpp/releases لمعرفة ما إذا كنت متأخرًا عن الإصدار الحالي v1.9.3.',
+          },
+          {
             q: 'هل دقة النسخ متطابقة بين whisper.cpp وfaster-whisper؟',
             a: 'نعم. تستخدم كلتا الأداتين أوزان نموذج OpenAI Whisper ذاتها — النموذج نفسه متطابق. الفرق فقط في وقت تشغيل الاستدلال (C/C++ مقابل CTranslate2 Python). سيكون WER على ملف الصوت ذاته ضمن 0.1% مطلق بينهما، وهو ضمن التباين الطبيعي من عشوائية beam search.',
           },
@@ -4966,7 +5046,7 @@ curl -L -o ggml-base.bin \\
        url: 'https://www.promptquorum.com/ar/power-local-llm/local-whisper-stt-comparison-2026',
        inLanguage: 'ar',
        datePublished: '2026-05-24',
-       dateModified: '2026-06-15',
+       dateModified: '2026-08-28',
        author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
        publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
        'proficiencyLevel': 'Intermediate',
@@ -4975,8 +5055,8 @@ curl -L -o ggml-base.bin \\
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
-    dateModified: '2026-06-15',
-    lastFactChecked: '2026-06-15',
+    dateModified: '2026-08-28',
+    lastFactChecked: '2026-08-28',
     next_refresh_due: '2026-12-15',
     theme: 'Voice, Speech & Multimodal',
     title: 'Whisper.cpp vs faster-whisper 2026: 로컬 STT 벤치마크, 설정 및 GPU 가속',
@@ -5444,6 +5524,14 @@ for segment in segments:
         title: '자주 묻는 질문',
         faqs: [
           {
+            q: 'whisper.cpp용 Debian 또는 apt 패키지가 있습니까?',
+            a: '예 — whisper.cpp는 이제 Debian(현재 sid)에 공식 패키지로 제공되며, `whisper.cpp` 바이너리와 함께 공유 라이브러리로 링크할 수 있는 `libwhisper-dev`, `libwhisper1`도 제공합니다. 아직 Debian 안정 버전이나 Ubuntu 기본 저장소에는 도달하지 않았으므로, 대부분의 시스템에서는 여전히 sid를 사용하거나 소스에서 빌드해야 합니다. 소스 빌드를 원하지 않는다면 Debian 9 이상과 Ubuntu용 비공식 Snap(`sudo snap install whisper-cpp`)도 사용할 수 있습니다.',
+          },
+          {
+            q: '설치된 whisper.cpp 버전은 어떻게 확인합니까?',
+            a: '컴파일된 바이너리를 인자 없이 또는 `--help`와 함께 실행하면 배너 줄에 버전이 출력됩니다. 클론한 저장소 안에서 `git describe --tags`로 정확한 커밋을 확인하거나, 빌드 날짜를 github.com/ggml-org/whisper.cpp/releases의 릴리스 노트와 비교해 현재 버전인 v1.9.3보다 뒤처졌는지 확인할 수도 있습니다.',
+          },
+          {
             q: 'whisper.cpp와 faster-whisper의 전사 정확도는 동일합니까?',
             a: '그렇습니다. 두 도구 모두 동일한 OpenAI Whisper 모델 가중치를 사용합니다 — 모델 자체는 동일합니다. 차이는 추론 런타임(C/C++ vs CTranslate2 Python)에만 있습니다. 동일한 오디오 파일에 대한 WER은 서로 절대값 0.1% 이내로, 이는 beam search 무작위성으로 인한 정상적인 변동 범위 내입니다.',
           },
@@ -5511,7 +5599,7 @@ for segment in segments:
       url: 'https://www.promptquorum.com/ko/power-local-llm/local-whisper-stt-comparison-2026',
       inLanguage: 'ko',
       datePublished: '2026-05-14',
-      dateModified: '2026-05-14',
+      dateModified: '2026-08-28',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',

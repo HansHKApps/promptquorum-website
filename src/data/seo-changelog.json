@@ -238,5 +238,120 @@
       "ctr": 0,
       "period": "2026-04-17 to 2026-05-15"
     }
+  },
+  {
+    "id": "630b07ed-0cf9-4e5c-8851-742af5d02c7f",
+    "slug": "/local-llms/top-open-source-models-ollama",
+    "date": "2026-08-28T17:09:06.364Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Ollama July 2026: v0.32.0 Update + Best Models by Use Case",
+        "new": "Ollama Latest Version 2026: v0.33.1 + 10 Best Models"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Ollama v0.32.0 (July 11 2026): current version, newest models, and the best Ollama model for chat, coding, RAG, vision, and reasoning. Benchmarks + pull commands.",
+        "new": "Ollama's latest version is v0.33.1. See the full v0.32-v0.33 changelog, new models added in 2026, and which model is best for chat, coding and vision."
+      }
+    ],
+    "reason": "geo-meta-optimizer coherence-C-fix: page claimed v0.32.0 (Jul 11) was current; actual latest stable is v0.33.1 (Aug 26). Title now carries literal 'latest version' phrase (960+810 imps at ~0% CTR) and drops the month to stop monthly staleness. Body version facts + 3 version FAQs added across all 9 locales. NOTE: prior seoTitle was changed in a July refresh without being logged — 'old' here is the actual file value, not changelog entry #1's 'new'.",
+    "baseline": {
+      "position": 7.4,
+      "impressions": 6889,
+      "clicks": 10,
+      "ctr": 0.0014515894904920889,
+      "period": "2026-07-31 to 2026-08-27"
+    }
+  },
+  {
+    "id": "6031bea4-9922-4b13-a08c-a166129df954",
+    "slug": "/power-local-llm/local-whisper-stt-comparison-2026",
+    "date": "2026-08-28T17:25:39.080Z",
+    "fields": [
+      {
+        "field": "bodyFact:whisperCppVersion",
+        "old": "v1.8.6 (June 2, 2026)",
+        "new": "v1.9.3 (August 20, 2026)"
+      }
+    ],
+    "reason": "geo-meta-optimizer coherence-C fix (body-only, title/meta untouched — comparison-cluster CTR already strong, pos 2-3, 7-20%): body claimed whisper.cpp v1.8.6 was latest; actual latest is v1.9.3. Version/changelog section corrected across 9 locales, plus 2 new FAQs per locale (official Debian/apt package — new info, previously zero coverage; how to check installed version). KO got the 2 FAQs but still lacks the whatsNew/changelog section entirely vs EN — pre-existing structural gap, flagged separately, not fixed in this pass.",
+    "baseline": {
+      "position": 6.9,
+      "impressions": 500,
+      "clicks": 24,
+      "ctr": 0.048,
+      "period": "2026-07-31 to 2026-08-27"
+    }
+  },
+  {
+    "id": "ae94a6e5-5644-4fe8-8268-44d8fdba4bc8",
+    "slug": "/local-llms/best-local-llms-2026",
+    "date": "2026-08-28T17:30:03.297Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Best Local LLMs August 2026: Qwen3.8-27B, Gemma 4, Phi-4-mini",
+        "new": "Best Local LLMs 2026: Qwen3.8-27B, Gemma 4, Phi-4-mini"
+      }
+    ],
+    "reason": "Removed month label from title; month was a hand-maintained freshness claim that drifted across locales. Year retained. See branch content/remove-month-labels.",
+    "baseline": null
+  },
+  {
+    "id": "4104b285-81e8-449c-baaa-06d2d2941be3",
+    "slug": "/local-llms/eu-cloud-gpu-gdpr-2026",
+    "date": "2026-08-28T17:30:03.331Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "EU GDPR Cloud GPU 2026: Hetzner vs Scaleway vs OVHcloud (Tested July 2026)",
+        "new": "EU GDPR Cloud GPU 2026: Hetzner vs Scaleway vs OVHcloud"
+      }
+    ],
+    "reason": "Removed month label from title; month was a hand-maintained freshness claim that drifted across locales. Year retained. See branch content/remove-month-labels.",
+    "baseline": null
+  },
+  {
+    "id": "45343a99-5430-40e3-b008-66cd08b773f7",
+    "slug": "/local-llms/cloud-gpu-rental-comparison-2026",
+    "date": "2026-08-28T17:30:03.355Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "RunPod vs Vast.ai vs Lambda Labs for LLM Inference (July 2026)",
+        "new": "RunPod vs Vast.ai vs Lambda Labs for LLM Inference 2026"
+      }
+    ],
+    "reason": "Removed month label from title; month was a hand-maintained freshness claim that drifted across locales. Year retained. See branch content/remove-month-labels.",
+    "baseline": null
+  },
+  {
+    "id": "9677a284-6e52-4213-a145-fd5b68da8804",
+    "slug": "/local-llms/local-llm-developer-stack",
+    "date": "2026-08-28T17:30:03.378Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "Best Local LLM Stack for Developers (July 2026)",
+        "new": "Best Local LLM Stack for Developers (2026)"
+      }
+    ],
+    "reason": "Removed month label from title; month was a hand-maintained freshness claim that drifted across locales. Year retained. See branch content/remove-month-labels.",
+    "baseline": null
+  },
+  {
+    "id": "80f05914-0ef6-494e-87b6-595230cab03f",
+    "slug": "/local-llms/glm-5-2-open-weights-frontier-2026",
+    "date": "2026-08-28T17:30:03.400Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "GLM-5.2: Open-Weights LLM Standing (Aug 2026)",
+        "new": "GLM-5.2: Open-Weights LLM Standing 2026"
+      }
+    ],
+    "reason": "Removed month label from title; month was a hand-maintained freshness claim that drifted across locales. Year retained. See branch content/remove-month-labels.",
+    "baseline": null
   }
 ]

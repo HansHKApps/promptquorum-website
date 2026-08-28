@@ -1622,7 +1622,8 @@ schema: {
         { label: 'Quellen', anchor: '#sources' },
       ],
       sections: {
-        tldr: { id: 'key-takeaways',
+        tldr: {
+          id: 'key-takeaways',
  isTldr: true, title: 'Zusammenfassung', items: ['7B-Modelle: Minimum 8 GB (Q4), komfortabel 10 GB (Q5), vollständig 14 GB.', '13B-Modelle: Minimum 12 GB (Q4), komfortabel 16 GB (Q5).', '70B-Modelle: Minimum 35-40 GB (Q4) -- erfordert 2× RTX 4090 oder A100.', 'Q4-Quantisierung: Reduziert VRAM um 87% gegenüber vollständiger Präzision, unter 1% Qualitätsverlust.', 'Apple Silicon: Einheitlicher Speicher ist vollständig für LLM-Inferenz verfügbar -- MacBook Pro M3 18 GB kann Llama3 13B Q4 ausführen.', 'RTX 4060 Ti 8 GB: 7B Q4 ist machbar, aber der Cache ist eng. RTX 4070 12 GB ist sicherer.', 'CPU-Inferenz: Möglich, aber GPU ist 20-40× schneller -- praktisch wird ein GPU mit mindestens 8 GB empfohlen.'] },
         formula: {
           id: 'formula', title: 'VRAM-Berechnungsformel für lokale LLMs', content: ['VRAM erforderlich = (Modellparameter in Milliarden × Bits pro Gewicht) ÷ 8 + (KV-Cache + Laufzeit-Overhead)', 'Beispiel: Llama3 7B Q4 = (7 × 4) ÷ 8 + 1,5 GB = 3,5 + 1,5 = 5 GB', 'Q4: 32-Bit-Werte werden auf 4 Bits komprimiert (8× Reduktion).', 'Q8: 32-Bit → 8-Bit (4× Reduktion), nahezu vollständige Präzision.', 'FP32: Keine Kompression, vollständige Präzision, VRAM-intensiv.', 'KV-Cache: Proportional zur Sequenzlänge -- 128-Token-Ausgabe +1-2 GB, 2048-Token +5 GB.'] },
@@ -1682,7 +1683,8 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: 'W
         { label: '参考資料', anchor: '#sources' },
       ],
       sections: {
-        tldr: { id: 'key-takeaways',
+        tldr: {
+          id: 'key-takeaways',
  isTldr: true, title: 'ポイント', items: ['7Bモデル: 最小8 GB (Q4)、快適な10 GB (Q5)。', '13Bモデル: 最小12 GB (Q4)、快適な16 GB (Q5)。', '70Bモデル: 最小35-40 GB (Q4)。', 'Q4量子化: 完全精度比87%削減。'] },
         formula: {
           id: 'formula', title: 'VRAM計算式', content: ['VRAM = (十億パラメータ × 重みあたりビット) ÷ 8 + KVキャッシュ + オーバーヘッド', 'Q4: 32ビット→4ビット (8倍削減)。', 'Q8: 32ビット→8ビット (4倍削減)、ほぼ完全精度。'] },
@@ -1779,7 +1781,8 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '2
         { label: '参考资源', anchor: '#sources' },
       ],
       sections: {
-        tldr: { id: 'key-takeaways',
+        tldr: {
+          id: 'key-takeaways',
  isTldr: true, title: '关键要点', items: ['7B模型: 最少8 GB (Q4)、舒适10 GB (Q5)。', '13B模型: 最少12 GB (Q4)、舒适16 GB (Q5)。', '70B模型: 最少35-40 GB (Q4)。', 'Q4量子化: 减少显存需求87%。'] },
         formula: {
           id: 'formula', title: '显存计算公式', content: ['显存 = (十亿参数 × 每权重位数) ÷ 8 + KV缓存 + 开销', 'Q4: 32位→4位 (8倍减少)。', 'Q8: 32位→8位 (4倍减少),几乎完全精度。'] },
