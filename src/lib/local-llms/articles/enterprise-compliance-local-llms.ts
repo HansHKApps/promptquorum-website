@@ -13,7 +13,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       title: 'Enterprise Compliance: GDPR, HIPAA, SOC2, and AI Regulations',
       heroImage: '/images/enterprise-compliance-local-llms-overview-hero-en.webp',
       seoTitle: 'Enterprise Compliance Local LLMs',
-      intro: 'Compliance frameworks (GDPR, HIPAA, SOC2, AI Act) impose specific requirements on AI systems: data residency, audit trails, transparency, and model documentation. Local LLMs help meet these requirements by keeping data on-premises and providing full control. As of August 2026, regulatory compliance is the primary driver of enterprise local AI adoption.',
+      intro: 'Compliance frameworks (GDPR, HIPAA, SOC2, AI Act) impose specific requirements on AI systems: data residency, audit trails, transparency, and model documentation. Local LLMs help meet these requirements by keeping data on-premises and providing full control. Regulatory compliance is the primary driver of enterprise local AI adoption.',
       metaDescription: 'Enterprise AI compliance: GDPR, HIPAA, SOC2, EU AI Act requirements. Local LLM regulatory guide.',
       publishDate: '2026-04-04',
       dateModified: '2026-08-28',
@@ -38,6 +38,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Compliance frameworks like GDPR, HIPAA, SOC2, and the EU AI Act require data residency, audit trails, transparency, and model documentation, and local LLMs help meet these requirements by keeping all data on-premises with full control instead of sending it to a cloud API.' },
+            { type: 'plain-terms', text: "Regulations like GDPR and HIPAA impose real requirements on how AI handles data -- where it lives, who can access it, and how changes are tracked. Running the model on your own servers sidesteps a lot of the hardest questions, since data never crosses into a third party's systems in the first place, which simplifies audits and certification." },
+          ],
           items: [
             '**GDPR (Article 44):** Personal data must stay in EU, data subjects have rights (access, deletion, portability). Transfers to US-based cloud APIs require adequate safeguards (SCCs or adequacy decisions) under Article 44.',
             '**HIPAA (164.306):** Patient data requires encryption, access logs, audit trails, and incident reporting.',
@@ -45,7 +49,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**EU AI Act (2024):** AI systems must be documented, transparent, and audited. Violations: €20M or 4% revenue.',
             'Local LLMs satisfy the data-residency technical requirement (no cross-border data transfer at inference time), which significantly simplifies compliance with GDPR Article 44, HIPAA, and SOC 2. Full regulatory compliance still requires your organisation\'s DPA, access controls, audit logging, and lawful basis.',
             '**Penalties:** GDPR fines up to €20M (4% revenue), HIPAA up to $1.5M per violation.',
-            'As of August 2026, local deployment significantly simplifies compliance certification by keeping data and controls in-house.',
+            'Local deployment significantly simplifies compliance certification by keeping data and controls in-house.',
           ],
         },
         gdpr: {
@@ -278,7 +282,7 @@ schema: {
       title: 'Cumplimiento Empresarial: GDPR, HIPAA, SOC2 y Regulaciones de IA',
       heroImage: '/images/enterprise-compliance-local-llms-overview-hero-es.webp',
       seoTitle: 'Cumplimiento Empresarial con LLMs Locales',
-      intro: 'Los marcos de cumplimiento (GDPR/RGPD, HIPAA, SOC2, Ley de IA de la UE) imponen requisitos específicos a los sistemas de IA: residencia de datos, registros de auditoría, transparencia y documentación del modelo. Los LLMs locales satisfacen estos requisitos manteniendo los datos en las instalaciones propias y proporcionando control total. A partir de agosto de 2026, el cumplimiento normativo es el principal motor de la adopción empresarial de IA local. En Latinoamérica, leyes como la LFPDPPP (México), la Ley 25.326 (Argentina) y la Ley 1581 (Colombia) imponen obligaciones similares de protección de datos personales.',
+      intro: 'Los marcos de cumplimiento (GDPR/RGPD, HIPAA, SOC2, Ley de IA de la UE) imponen requisitos específicos a los sistemas de IA: residencia de datos, registros de auditoría, transparencia y documentación del modelo. Los LLMs locales satisfacen estos requisitos manteniendo los datos en las instalaciones propias y proporcionando control total. El cumplimiento normativo es el principal motor de la adopción empresarial de IA local. En Latinoamérica, leyes como la LFPDPPP (México), la Ley 25.326 (Argentina) y la Ley 1581 (Colombia) imponen obligaciones similares de protección de datos personales.',
       metaDescription: 'Cumplimiento de IA empresarial: GDPR, HIPAA, SOC2, requisitos de la Ley de IA de la UE. Guía regulatoria para LLMs locales.',
       publishDate: '2026-04-04',
       dateModified: '2026-08-28',
@@ -302,6 +306,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Marcos de cumplimiento como GDPR, HIPAA, SOC2 y la Ley de IA de la UE exigen residencia de datos, registros de auditoría, transparencia y documentación del modelo, y los LLM locales ayudan a cumplir estos requisitos manteniendo todos los datos en las instalaciones propias con control total en lugar de enviarlos a una API en la nube.' },
+            { type: 'plain-terms', text: 'Regulaciones como GDPR e HIPAA imponen requisitos reales sobre cómo la IA maneja los datos: dónde residen, quién puede acceder a ellos y cómo se registran los cambios. Ejecutar el modelo en tus propios servidores evita muchas de las preguntas más difíciles, ya que los datos nunca pasan a los sistemas de un tercero, lo que simplifica las auditorías y la certificación.' },
+          ],
           items: [
             '**GDPR (Artículo 44):** Los datos personales deben permanecer en la UE; los titulares tienen derechos (acceso, supresión, portabilidad). Las transferencias a APIs en la nube de EE. UU. requieren garantías adecuadas (CCT o decisiones de adecuación). En LatAm aplican la LFPDPPP (México), Ley 25.326 (Argentina) y Ley 1581 (Colombia).',
             '**HIPAA (164.306):** Los datos de pacientes requieren cifrado, registros de acceso, registros de auditoría e informes de incidentes.',
@@ -309,7 +317,7 @@ schema: {
             '**Ley de IA de la UE (2024):** Los sistemas de IA deben estar documentados, ser transparentes y auditables. Sanciones: €20M o 4% de los ingresos.',
             'Los LLMs locales satisfacen TODOS los requisitos de cumplimiento porque los datos nunca salen de tu infraestructura.',
             '**Sanciones:** GDPR hasta €20M (4% de ingresos), HIPAA hasta $1,5M por infracción.',
-            'A partir de agosto de 2026, el despliegue local simplifica significativamente la certificación de cumplimiento al mantener los datos y controles en las instalaciones propias.',
+            'El despliegue local simplifica significativamente la certificación de cumplimiento al mantener los datos y controles en las instalaciones propias.',
           ],
         },
         gdpr: {
@@ -542,7 +550,7 @@ schema: {
       title: 'الامتثال المؤسسي: ⁨GDPR⁩ و⁨HIPAA⁩ و⁨SOC2⁩ ولوائح الذكاء الاصطناعي',
       heroImage: '/images/enterprise-compliance-local-llms-overview-hero-ar.webp',
       seoTitle: 'امتثال ⁨LLMs⁩ المحلية: ⁨GDPR⁩ و⁨HIPAA⁩ و⁨SOC2⁩ للمؤسسات',
-      intro: 'تفرض أطر الامتثال (GDPR، HIPAA، SOC2، قانون الذكاء الاصطناعي للاتحاد الأوروبي) متطلبات محددة على أنظمة الذكاء الاصطناعي: إقامة البيانات، سجلات التدقيق، الشفافية وتوثيق النموذج. تستوفي نماذج LLM المحلية هذه المتطلبات بإبقاء البيانات داخل المنشأة الخاصة وتوفير تحكم كامل. اعتباراً من أغسطس 2026، يُعد الامتثال التنظيمي المحرّك الرئيسي لتبني الذكاء الاصطناعي المحلي في المؤسسات. في الخليج، تفرض قوانين مثل PDPL (السعودية) وقانون حماية البيانات الشخصية (الإمارات) التزامات مماثلة لحماية البيانات الشخصية وسيادة البيانات، مما يدفع نحو نماذج عربية سيادية مثل Jais وALLaM وFalcon.',
+      intro: 'تفرض أطر الامتثال (GDPR، HIPAA، SOC2، قانون الذكاء الاصطناعي للاتحاد الأوروبي) متطلبات محددة على أنظمة الذكاء الاصطناعي: إقامة البيانات، سجلات التدقيق، الشفافية وتوثيق النموذج. تستوفي نماذج LLM المحلية هذه المتطلبات بإبقاء البيانات داخل المنشأة الخاصة وتوفير تحكم كامل. يُعد الامتثال التنظيمي المحرّك الرئيسي لتبني الذكاء الاصطناعي المحلي في المؤسسات. في الخليج، تفرض قوانين مثل PDPL (السعودية) وقانون حماية البيانات الشخصية (الإمارات) التزامات مماثلة لحماية البيانات الشخصية وسيادة البيانات، مما يدفع نحو نماذج عربية سيادية مثل Jais وALLaM وFalcon.',
       metaDescription: 'غرامات ⁨GDPR⁩ تبلغ ⁨20⁩ مليون يورو و⁨HIPAA⁩ مليون و⁨500⁩ ألف دولار: نماذج ⁨LLM⁩ المحلية تستوفي متطلبات الامتثال بإبقاء البيانات داخل بنيتك التحتية.',
       publishDate: '2026-04-04',
       dateModified: '2026-08-28',
@@ -566,6 +574,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'تتطلب أطر الامتثال مثل GDPR وHIPAA وSOC2 وقانون الذكاء الاصطناعي للاتحاد الأوروبي إقامة البيانات وسجلات التدقيق والشفافية وتوثيق النموذج، وتساعد نماذج LLM المحلية على تلبية هذه المتطلبات بإبقاء جميع البيانات داخل المنشأة بتحكم كامل بدلاً من إرسالها إلى واجهة API سحابية.' },
+            { type: 'plain-terms', text: 'تفرض لوائح مثل GDPR وHIPAA متطلبات حقيقية على كيفية تعامل الذكاء الاصطناعي مع البيانات -- أين تُخزَّن، ومن يمكنه الوصول إليها، وكيف تُتبَّع التغييرات. يتجنب تشغيل النموذج على خوادمك الخاصة الكثير من الأسئلة الأصعب، لأن البيانات لا تنتقل أبداً إلى أنظمة طرف ثالث، مما يبسّط عمليات التدقيق والحصول على الشهادات.' },
+          ],
           items: [
             '**GDPR (المادة 44):** يجب أن تبقى البيانات الشخصية في الاتحاد الأوروبي؛ لأصحاب البيانات حقوق (الوصول، المحو، النقل). تتطلب عمليات النقل إلى واجهات API السحابية الأمريكية ضمانات كافية (بنود تعاقدية قياسية أو قرارات ملاءمة). في الخليج ينطبق PDPL (السعودية) وقانون حماية البيانات الشخصية (الإمارات).',
             '**HIPAA (164.306):** تتطلب بيانات المرضى تشفيراً وسجلات وصول وسجلات تدقيق وتقارير حوادث.',
@@ -573,7 +585,7 @@ schema: {
             '**قانون الذكاء الاصطناعي للاتحاد الأوروبي (2024):** يجب أن تكون أنظمة الذكاء الاصطناعي موثقة وشفافة وقابلة للتدقيق. العقوبات: 20 مليون يورو أو 4% من الإيرادات.',
             'تستوفي نماذج LLM المحلية جميع متطلبات الامتثال لأن البيانات لا تغادر بنيتك التحتية أبداً.',
             '**العقوبات:** GDPR حتى 20 مليون يورو (4% من الإيرادات)، HIPAA حتى 1.5 مليون دولار لكل مخالفة.',
-            'اعتباراً من أغسطس 2026، يُبسّط النشر المحلي بشكل كبير مسار شهادة الامتثال بإبقاء البيانات والضوابط داخل المنشأة.',
+            'يُبسّط النشر المحلي بشكل كبير مسار شهادة الامتثال بإبقاء البيانات والضوابط داخل المنشأة.',
           ],
         },
         gdpr: {
@@ -809,7 +821,7 @@ schema: {
       title: 'Conformidade Empresarial: LGPD, GDPR, HIPAA, SOC2 e Regulamentações de IA',
       heroImage: '/images/enterprise-compliance-local-llms-overview-hero-pt.webp',
       seoTitle: 'Conformidade Empresarial com LLMs Locais',
-      intro: 'Frameworks de conformidade (LGPD, GDPR, HIPAA, SOC2, Lei de IA da UE) impõem requisitos específicos a sistemas de IA: residência de dados, registros de auditoria, transparência e documentação do modelo. LLMs locais atendem a esses requisitos mantendo os dados no local e fornecendo controle total. A partir de agosto de 2026, a conformidade regulatória é o principal motor da adoção empresarial de IA local no Brasil.',
+      intro: 'Frameworks de conformidade (LGPD, GDPR, HIPAA, SOC2, Lei de IA da UE) impõem requisitos específicos a sistemas de IA: residência de dados, registros de auditoria, transparência e documentação do modelo. LLMs locais atendem a esses requisitos mantendo os dados no local e fornecendo controle total. A conformidade regulatória é o principal motor da adoção empresarial de IA local no Brasil.',
       metaDescription: 'Conformidade de IA empresarial: LGPD, GDPR, HIPAA, SOC2, requisitos da Lei de IA da UE. Guia regulatório para LLMs locais.',
       publishDate: '2026-04-04',
       dateModified: '2026-08-28',
@@ -834,6 +846,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Frameworks de conformidade como GDPR, HIPAA, SOC2 e a Lei de IA da UE exigem residência de dados, registros de auditoria, transparência e documentação do modelo, e os LLMs locais ajudam a atender a esses requisitos mantendo todos os dados on-premises com controle total em vez de enviá-los a uma API na nuvem.' },
+            { type: 'plain-terms', text: 'Regulamentações como GDPR e HIPAA impõem requisitos reais sobre como a IA lida com dados -- onde eles residem, quem pode acessá-los e como as mudanças são rastreadas. Rodar o modelo nos próprios servidores evita muitas das perguntas mais difíceis, já que os dados nunca passam para os sistemas de terceiros, o que simplifica auditorias e certificações.' },
+          ],
           items: [
             '**LGPD (Brasil):** A Lei Geral de Proteção de Dados exige residência de dados, consentimento e registros de auditoria. LLMs locais atendem ao requisito de residência de dados por padrão.',
             '**GDPR (UE):** Residência de dados na UE, direito de exclusão, avaliações de impacto. LLMs locais eliminam o Artigo 28 (acordos de processamento de dados com terceiros).',
@@ -979,7 +995,7 @@ schema: {
       title: 'Enterprise Compliance: DSGVO, HIPAA, SOC2 und KI-Regulierung',
       heroImage: '/images/enterprise-compliance-local-llms-overview-hero-de.webp',
       seoTitle: 'DSGVO und Enterprise Compliance für Local LLMs',
-      intro: 'Compliance-Rahmenwerke (DSGVO, HIPAA, SOC2, EU-KI-Verordnung) stellen spezifische Anforderungen an KI-Systeme: Datenschutz, Audit-Trails, Transparenz und Modellendokumentation. Local LLMs erfüllen diese Anforderungen, indem sie Daten lokal speichern und vollständige Kontrolle bieten. Ab August 2026 ist regulatorische Compliance der Haupttreiber für die Einführung von Enterprise Local AI in Deutschland.',
+      intro: 'Compliance-Rahmenwerke (DSGVO, HIPAA, SOC2, EU-KI-Verordnung) stellen spezifische Anforderungen an KI-Systeme: Datenschutz, Audit-Trails, Transparenz und Modellendokumentation. Local LLMs erfüllen diese Anforderungen, indem sie Daten lokal speichern und vollständige Kontrolle bieten. Regulatorische Compliance ist der Haupttreiber für die Einführung von Enterprise Local AI in Deutschland.',
       metaDescription: 'DSGVO, HIPAA, SOC2 Compliance mit Local LLMs: Regulatorischer Leitfaden für Unternehmensdeployments. Datenschutz und Audit-Anforderungen.',
       publishDate: '2026-04-04',
       dateModified: '2026-08-28',
@@ -1003,6 +1019,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Compliance-Rahmenwerke wie DSGVO, HIPAA, SOC2 und der EU-KI-Verordnung verlangen Datenresidenz, Audit-Trails, Transparenz und Modelldokumentation, und lokale LLMs helfen dabei, diese Anforderungen zu erfüllen, indem alle Daten vor Ort mit voller Kontrolle bleiben, statt sie an eine Cloud-API zu senden.' },
+            { type: 'plain-terms', text: 'Vorschriften wie die DSGVO und HIPAA stellen echte Anforderungen daran, wie KI mit Daten umgeht -- wo sie liegen, wer darauf zugreifen kann und wie Änderungen nachverfolgt werden. Das Modell auf den eigenen Servern zu betreiben umgeht viele der schwierigsten Fragen, da Daten nie in die Systeme eines Dritten gelangen, was Audits und Zertifizierungen vereinfacht.' },
+          ],
           items: [
             '**DSGVO (Artikel 44):** Personenbezogene Daten müssen in der EU bleiben. Betroffenenrechte (Zugang, Löschung, Portabilität) sind gesetzlich verankert (Art. 15–20 DSGVO) — ihre Umsetzung erfordert aktive organisatorische Maßnahmen Ihrerseits. Übermittlungen an US-amerikanische Cloud-APIs erfordern geeignete Garantien (Standardvertragsklauseln oder Angemessenheitsbeschlüsse).',
             '**HIPAA (164.306):** Patientendaten erfordern Verschlüsselung, Zugriffsprotokolle, Audit-Trails und Meldepflicht bei Verstößen.',
@@ -1010,7 +1030,7 @@ schema: {
             '**EU-KI-Verordnung (2024):** KI-Systeme müssen dokumentiert, transparent und auditiert sein. Verstöße: €20 Mio. oder 4% Umsatz.',
             'Local LLMs erfüllen ALLE Compliance-Anforderungen, da Daten Ihre Infrastruktur nie verlassen.',
             '**Bußgelder:** DSGVO bis €20 Mio. (4% Umsatz), HIPAA bis $1,5 Mio. pro Verstoß.',
-            'Ab August 2026 vereinfacht lokales Deployment die Compliance-Zertifizierung erheblich, da Daten und Kontrollen im eigenen Unternehmen bleiben.',
+            'Lokales Deployment vereinfacht die Compliance-Zertifizierung erheblich, da Daten und Kontrollen im eigenen Unternehmen bleiben.',
           ],
         },
         gdpr: {
@@ -1194,7 +1214,7 @@ schema: {
       title: 'Conformité Entreprise: RGPD, HIPAA, SOC2 et Réglementations IA',
       heroImage: '/images/enterprise-compliance-local-llms-overview-hero-fr.webp',
       seoTitle: 'Conformité Entreprise Local LLMs',
-      intro: 'Les cadres de conformité (RGPD, HIPAA, SOC2, Loi IA UE) imposent des exigences spécifiques aux systèmes IA: résidence des données, pistes d\'audit, transparence et documentation des modèles. Les LLMs locaux satisfont ces exigences en conservant les données localement et en fournissant un contrôle complet. Depuis août 2026, la conformité réglementaire est le principal moteur de l\'adoption locale de l\'IA en entreprise.',
+      intro: 'Les cadres de conformité (RGPD, HIPAA, SOC2, Loi IA UE) imposent des exigences spécifiques aux systèmes IA: résidence des données, pistes d\'audit, transparence et documentation des modèles. Les LLMs locaux satisfont ces exigences en conservant les données localement et en fournissant un contrôle complet. La conformité réglementaire est le principal moteur de l\'adoption locale de l\'IA en entreprise.',
       metaDescription: 'Conformité IA entreprise: RGPD, HIPAA, SOC2, exigences Loi IA UE. Guide réglementaire Local LLM.',
       publishDate: '2026-04-04',
       dateModified: '2026-08-28',
@@ -1218,6 +1238,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: "Des cadres de conformité comme le RGPD, HIPAA, SOC2 et la Loi IA de l'UE exigent résidence des données, pistes d'audit, transparence et documentation des modèles, et les LLM locaux aident à répondre à ces exigences en conservant toutes les données sur site avec un contrôle total plutôt qu'en les envoyant vers une API cloud." },
+            { type: 'plain-terms', text: "Des réglementations comme le RGPD et HIPAA imposent des exigences réelles sur la façon dont l'IA traite les données : où elles résident, qui peut y accéder et comment les modifications sont suivies. Faire tourner le modèle sur ses propres serveurs évite beaucoup des questions les plus difficiles, puisque les données ne passent jamais dans les systèmes d'un tiers, ce qui simplifie les audits et la certification." },
+          ],
           items: [
             '**RGPD (Article 44):** Les données personnelles doivent rester dans l\'UE. Les droits des personnes concernées (accès, effacement, portabilité) sont consacrés par la loi (art. 15–20 RGPD) — leur mise en œuvre nécessite des procédures organisationnelles actives de votre part. Les transferts vers des APIs cloud américaines nécessitent des garanties adéquates (clauses contractuelles types ou décisions d\'adéquation).',
             '**HIPAA (164.306):** Les données patients nécessitent chiffrement, journaux d\'accès, pistes d\'audit et déclaration d\'incidents.',
@@ -1225,7 +1249,7 @@ schema: {
             '**Loi IA UE (2024):** Les systèmes IA doivent être documentés, transparents et auditables. Violations: €20M ou 4% de chiffre d\'affaires.',
             'Les LLMs locaux satisfont TOUS les exigences de conformité car les données ne quittent jamais votre infrastructure.',
             '**Amendes:** RGPD jusqu\'à €20M (4% chiffre d\'affaires), HIPAA jusqu\'à $1,5M par violation.',
-            'Depuis août 2026, le déploiement local simplifie significativement la certification de conformité en maintenant les données et les contrôles en interne.',
+            'Le déploiement local simplifie significativement la certification de conformité en maintenant les données et les contrôles en interne.',
           ],
         },
         gdpr: {
@@ -1398,7 +1422,7 @@ schema: {
       title: 'エンタープライズコンプライアンス: GDPR、HIPAA、SOC2、AI規制',
       heroImage: '/images/enterprise-compliance-local-llms-overview-hero-ja.webp',
       seoTitle: 'エンタープライズコンプライアンス Local LLMs',
-      intro: 'コンプライアンスフレームワーク（GDPR、HIPAA、SOC2、AI Act）はAIシステムに対して具体的な要件を課します。データレジデンシー、監査ログ、透明性、モデルドキュメンテーション。Local LLMsはデータをオンプレミスに保持し、完全な制御を提供することでこれらの要件を満たします。2026年8月時点で、規制コンプライアンスはエンタープライズLocal AI導入の主要ドライバーです。',
+      intro: 'コンプライアンスフレームワーク（GDPR、HIPAA、SOC2、AI Act）はAIシステムに対して具体的な要件を課します。データレジデンシー、監査ログ、透明性、モデルドキュメンテーション。Local LLMsはデータをオンプレミスに保持し、完全な制御を提供することでこれらの要件を満たします。規制コンプライアンスはエンタープライズLocal AI導入の主要ドライバーです。',
       metaDescription: 'エンタープライズAIコンプライアンス: GDPR、HIPAA、SOC2、EU AI Act要件。Local LLM規制ガイド。',
       publishDate: '2026-04-04',
       dateModified: '2026-08-28',
@@ -1422,6 +1446,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'GDPR、HIPAA、SOC2、EU AI Actなどのコンプライアンスフレームワークは、データレジデンシー、監査証跡、透明性、モデルドキュメンテーションを要求します。ローカルLLMは、すべてのデータをクラウドAPIに送信する代わりにオンプレミスで完全に制御することで、これらの要件を満たすのに役立ちます。' },
+            { type: 'plain-terms', text: 'GDPRやHIPAAのような規制は、AIがデータをどう扱うかについて実際の要件を課しています -- データがどこにあるか、誰がアクセスできるか、変更がどう追跡されるか。モデルを自社サーバーで実行すれば、データがサードパーティのシステムに渡ることが一切ないため、最も難しい問題の多くを回避でき、監査や認証取得が簡素化されます。' },
+          ],
           items: [
             '**GDPR（第44条）:** EU内に個人データを留める必要がある。データサブジェクトには権利がある（アクセス、削除、ポータビリティ）。米国のCloud APIへのデータ転送には適切な保護措置（標準契約条項または十分性認定決定）が必要。',
             '**HIPAA（164.306）:** 患者データは暗号化、アクセスログ、監査ログ、インシデント報告が必要。',
@@ -1429,7 +1457,7 @@ schema: {
             '**EU AI Act（2024）:** AIシステムはドキュメント化、透明性、監査が必要。違反: €20M or 4% revenue.',
             'Local LLMsはすべてのコンプライアンス要件を満たします。データはあなたのインフラを離れない。',
             '**罰金:** GDPR最大€20M（4% 売上）、HIPAA最大$1.5M per violation.',
-            '2026年8月時点で、ローカル展開はデータとコントロールを自社内に保つことでコンプライアンス認証を大幅に簡素化する。',
+            'ローカル展開はデータとコントロールを自社内に保つことでコンプライアンス認証を大幅に簡素化する。',
           ],
         },
         gdpr: {
@@ -1624,6 +1652,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'GDPR、HIPAA、SOC2和欧盟AI法案等合规框架要求数据驻留、审计追踪、透明度和模型文档，本地LLM通过将所有数据保留在本地并完全掌控，而不是发送到云API，来帮助满足这些要求。' },
+            { type: 'plain-terms', text: 'GDPR和HIPAA等法规对AI如何处理数据提出了实际要求——数据存放在哪里、谁可以访问、变更如何被追踪。在自己的服务器上运行模型可以避开许多最棘手的问题，因为数据从一开始就不会进入第三方系统，这简化了审计和认证流程。' },
+          ],
           items: [
             '**GDPR（第 44 条）：** 个人数据必须留在 EU。数据主体有权利（访问、删除、可移植性）。向美国云 API 传输数据需要充分的保护措施（标准合同条款或充分性决定）。',
             '**HIPAA（164.306）：** 患者数据需要加密、访问日志、审计跟踪和事件报告。',
@@ -1802,7 +1834,7 @@ schema: {
       title: '기업 컴플라이언스: GDPR, HIPAA, SOC2 및 AI 규정',
     heroImage: '/images/enterprise-compliance-local-llms-overview-hero-ko.webp',
       seoTitle: '기업 컴플라이언스 로컬 LLM',
-      intro: 'GDPR, HIPAA, SOC2, AI Act 등 컴플라이언스 프레임워크는 AI 시스템에 데이터 거주지, 감사 추적, 투명성, 모델 문서화 등 구체적인 요구 사항을 부과합니다. 로컬 LLM은 데이터를 온프레미스에 유지하고 완전한 제어권을 제공함으로써 이러한 요구 사항을 충족하는 데 도움이 됩니다. 2026년 8월 기준으로 규제 준수는 기업의 로컬 AI 도입을 주도하는 가장 주요한 요인입니다.',
+      intro: 'GDPR, HIPAA, SOC2, AI Act 등 컴플라이언스 프레임워크는 AI 시스템에 데이터 거주지, 감사 추적, 투명성, 모델 문서화 등 구체적인 요구 사항을 부과합니다. 로컬 LLM은 데이터를 온프레미스에 유지하고 완전한 제어권을 제공함으로써 이러한 요구 사항을 충족하는 데 도움이 됩니다. 규제 준수는 기업의 로컬 AI 도입을 주도하는 가장 주요한 요인입니다.',
       metaDescription: '기업 AI 컴플라이언스: GDPR, HIPAA, SOC2, EU AI Act 요구 사항. 로컬 LLM 규제 가이드.',
       publishDate: '2026-04-04',
       dateModified: '2026-08-28',
@@ -1826,6 +1858,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'GDPR, HIPAA, SOC2, EU AI Act 같은 컴플라이언스 프레임워크는 데이터 거주지, 감사 추적, 투명성, 모델 문서화를 요구하며, 로컬 LLM은 모든 데이터를 클라우드 API로 보내는 대신 온프레미스에 완전한 제어권을 가지고 유지함으로써 이러한 요구 사항을 충족하는 데 도움이 됩니다.' },
+            { type: 'plain-terms', text: 'GDPR과 HIPAA 같은 규제는 AI가 데이터를 다루는 방식에 실질적인 요구 사항을 부과합니다 -- 데이터가 어디에 있는지, 누가 접근할 수 있는지, 변경 사항이 어떻게 추적되는지. 자체 서버에서 모델을 운영하면 데이터가 제3자 시스템으로 넘어가는 일이 애초에 없기 때문에 가장 어려운 문제들을 상당수 피할 수 있고, 감사와 인증이 간소화됩니다.' },
+          ],
           items: [
             '**GDPR (제44조):** 개인 데이터는 EU 내에 보관되어야 하며, 정보 주체는 접근, 삭제, 이동 권리를 가집니다. 클라우드 API는 이를 위반합니다.',
             '**HIPAA (164.306):** 환자 데이터에는 암호화, 접근 로그, 감사 추적, 사고 보고가 필요합니다.',
@@ -1833,7 +1869,7 @@ schema: {
             '**EU AI Act (2024):** AI 시스템은 문서화, 투명성, 감사를 갖추어야 합니다. 위반 시: €2,000만 또는 매출의 4%.',
             '로컬 LLM은 데이터가 인프라를 벗어나지 않으므로 모든 컴플라이언스 요구 사항을 충족합니다.',
             '**과징금:** GDPR 최대 €2,000만(매출의 4%), HIPAA 위반당 최대 $150만.',
-            '2026년 8월 기준으로 로컬 배포는 컴플라이언스 인증 취득의 가장 빠른 경로입니다.',
+            '로컬 배포는 컴플라이언스 인증 취득의 가장 빠른 경로입니다.',
           ],
         },
         gdpr: {
