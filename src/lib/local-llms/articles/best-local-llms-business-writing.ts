@@ -14,10 +14,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       title: 'Best Local LLMs for Business Writing in 2026: Email, Proposals, and Brand Voice',
       dateModified: '2026-08-28',
       seoTitle: 'Best Local LLMs for Business Writing 2026: Email & Memos',
-      intro: '**As of April 2026, the best local LLMs for business writing are Mistral Small 3.1 24B (most concise, best tone control), Qwen3 8B (best non-English business writing), and Llama 3.1 8B (most adaptable to brand voice examples). For business writing, smaller 7B-24B models outperform 70B -- they produce cleaner, more concise output without over-explaining.**',
+      intro: '**The best local LLMs for business writing are Mistral Small 3.1 24B (most concise, best tone control), Qwen3 8B (best non-English business writing), and Llama 3.1 8B (most adaptable to brand voice examples). For business writing, smaller 7B-24B models outperform 70B -- they produce cleaner, more concise output without over-explaining.**',
       metaDescription: 'Mistral Small 3.1 24B leads for emails and memos. Qwen3 8B excels at non-English writing. 7B-24B models outperform 70B. Ollama setup in 10 minutes.',
       publishDate: '2026-04-05',
-      leadAnswerBlock: '**As of April 2026, the best local LLMs for business writing are Mistral Small 3.1 24B (most concise, best tone control), Qwen3 8B (best non-English business writing), and Llama 3.1 8B (most adaptable to brand voice examples). For business writing, smaller 7B-24B models outperform 70B -- they produce cleaner, more concise output without over-explaining.**',
+      next_refresh_due: '2026-10-05',
+      leadAnswerBlock: '**The best local LLMs for business writing are Mistral Small 3.1 24B (most concise, best tone control), Qwen3 8B (best non-English business writing), and Llama 3.1 8B (most adaptable to brand voice examples). For business writing, smaller 7B-24B models outperform 70B -- they produce cleaner, more concise output without over-explaining.**',
       audience: 'Beginners running their first local LLM on consumer hardware',
       readTime: '7 min',
       educationalLevel: 'Beginner',
@@ -88,6 +89,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Mistral Small 3.1 24B is the most concise local LLM for business writing with the best tone control, Qwen3 8B is the strongest choice for non-English business writing, and Llama 3.1 8B adapts best to brand-voice examples -- 7B-24B models consistently outperform 70B models for short-form business writing.' },
+            { type: 'plain-terms', text: "For emails, memos, and proposals, smaller AI models actually beat bigger ones: a 70B model tends to over-explain and ramble, while a 7B-24B model gives you tighter, cleaner text. Mistral Small 3.1 24B is the best all-around pick for polished, concise business writing. If you write in a language other than English, Qwen3 8B handles it best. If you want the AI to match your company's specific tone and style from a few example emails, Llama 3.1 8B adapts to that fastest." },
+          ],
           items: [
             '**Best overall: Mistral Small 3.1 24B** (most concise, tone-appropriate). Best multilingual: Qwen3 8B (French/German/Spanish/Japanese). Best for tone adaptation: Llama 3.1 8B.',
             '**70B models are too verbose for short-form writing.** For long documents over 2 pages, Llama 3.3 70B with 128K context handles multi-section proposals reliably.',
@@ -170,7 +175,7 @@ schema: {
             '**Japan (METI)**',
             'Japanese business writing has strict formality registers (keigo levels: teineigo, sonkeigo, kenjōgo). Standard LLMs default to teineigo (polite) but cannot reliably produce sonkeigo (respectful) or kenjōgo (humble) without explicit prompt instructions. For Japanese business correspondence: use Qwen3 8B with explicit keigo instructions: "メールは丁寧な敬語（尊敬語と謙譲語）を使用してください". Qwen3\'s Japanese tokenizer handles kanji/kana business vocabulary noticeably better than Llama at the same size tier.',
             '**Germany (specific)**',
-            'German business writing follows formal conventions: Sie-form (formal you), full company names, structured paragraph format. Add these to your system prompt: "Schreiben Sie auf Deutsch mit Sie-Anrede, sachlichem Ton, ohne Anglizismen." Mistral Small 3.1 produces the strongest formal German business output of any locally-runnable model as of April 2026 -- its training data includes significant German business corpus content from its EU-based development.',
+            'German business writing follows formal conventions: Sie-form (formal you), full company names, structured paragraph format. Add these to your system prompt: "Schreiben Sie auf Deutsch mit Sie-Anrede, sachlichem Ton, ohne Anglizismen." Mistral Small 3.1 produces the strongest formal German business output of any locally-runnable model -- its training data includes significant German business corpus content from its EU-based development.',
           ],
         },
         'faqSection': {
@@ -218,10 +223,10 @@ schema: {
       heroImage: '/images/best-local-llms-business-writing-overview-hero-es.webp',
       title: 'Mejores LLMs locales para redacción profesional en 2026: correos, propuestas y voz de marca',
       seoTitle: 'Mejores LLMs locales para redacción profesional 2026',
-      intro: '**A partir de abril de 2026, los mejores LLMs locales para redacción profesional son Mistral Small 3.1 24B (la salida más concisa, el mejor control de tono), Qwen3 8B (el mejor para redacción empresarial en idiomas distintos al inglés) y Llama 3.1 8B (el más adaptable a ejemplos de voz de marca). Para redacción profesional, los modelos más pequeños de 7B a 24B superan a los de 70B: producen textos más limpios y concisos sin sobre-explicar.**',
+      intro: '**Los mejores LLMs locales para redacción profesional son Mistral Small 3.1 24B (la salida más concisa, el mejor control de tono), Qwen3 8B (el mejor para redacción empresarial en idiomas distintos al inglés) y Llama 3.1 8B (el más adaptable a ejemplos de voz de marca). Para redacción profesional, los modelos más pequeños de 7B a 24B superan a los de 70B: producen textos más limpios y concisos sin sobre-explicar.**',
       metaDescription: 'Mistral Small 3.1 24B lidera para correos y memos; Qwen3 8B destaca en redacción multilingüe. Los modelos 7B–24B superan a los 70B. Ollama en 10 min.',
       publishDate: '2026-04-05',
-      leadAnswerBlock: '**A partir de abril de 2026, los mejores LLMs locales para redacción profesional son Mistral Small 3.1 24B (la salida más concisa, el mejor control de tono), Qwen3 8B (el mejor para redacción empresarial en idiomas distintos al inglés) y Llama 3.1 8B (el más adaptable a ejemplos de voz de marca). Para redacción profesional, los modelos más pequeños de 7B a 24B superan a los de 70B: producen textos más limpios y concisos sin sobre-explicar.**',
+      leadAnswerBlock: '**Los mejores LLMs locales para redacción profesional son Mistral Small 3.1 24B (la salida más concisa, el mejor control de tono), Qwen3 8B (el mejor para redacción empresarial en idiomas distintos al inglés) y Llama 3.1 8B (el más adaptable a ejemplos de voz de marca). Para redacción profesional, los modelos más pequeños de 7B a 24B superan a los de 70B: producen textos más limpios y concisos sin sobre-explicar.**',
       audience: 'Principiantes que ejecutan su primer LLM local en hardware de consumo',
       readTime: '7 min de lectura',
       educationalLevel: 'Beginner',
@@ -293,6 +298,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Mistral Small 3.1 24B es el LLM local más conciso para redacción profesional con el mejor control de tono, Qwen3 8B es la mejor opción para redacción empresarial en idiomas distintos al inglés y Llama 3.1 8B se adapta mejor a ejemplos de voz de marca -- los modelos de 7B a 24B superan de forma consistente a los de 70B en textos cortos.' },
+            { type: 'plain-terms', text: 'Para correos, memos y propuestas, los modelos de IA más pequeños superan a los grandes: un modelo de 70B tiende a explicar de más, mientras que uno de 7B a 24B da un texto más ajustado y limpio. Mistral Small 3.1 24B es la mejor opción general para una redacción profesional pulida y concisa. Si escribes en un idioma distinto al inglés, Qwen3 8B lo maneja mejor. Si quieres que la IA imite el tono de tu empresa a partir de ejemplos, Llama 3.1 8B se adapta más rápido.' },
+          ],
           items: [
             '**El mejor en general: Mistral Small 3.1 24B** (salida más concisa, tono adecuado). El mejor multilingüe: Qwen3 8B (francés/alemán/español/japonés). El mejor para adaptación de tono: Llama 3.1 8B.',
             '**Los modelos 70B son demasiado verbosos para textos cortos.** Para documentos de más de 2 páginas, Llama 3.3 70B con 128K de contexto maneja propuestas de múltiples secciones de forma fiable.',
@@ -422,10 +431,10 @@ schema: {
       heroImage: '/images/best-local-llms-business-writing-overview-hero-ar.webp',
       title: 'أفضل نماذج ⁨LLM⁩ المحلية للكتابة المهنية في ⁨2026⁩: رسائل البريد والمقترحات وصوت العلامة التجارية',
       seoTitle: '⁨LLM⁩ محلي للكتابة المهنية ⁨2026⁩: ⁨Mistral⁩ و⁨Qwen⁩ مقارنة',
-      intro: '**اعتباراً من أبريل 2026، أفضل نماذج LLM المحلية للكتابة المهنية هي Mistral Small 3.1 24B (المخرجات الأكثر إيجازاً، أفضل تحكم في النبرة)، وQwen3 8B (الأفضل للكتابة التجارية بلغات غير الإنجليزية)، وLlama 3.1 8B (الأكثر قابلية للتكيف مع أمثلة صوت العلامة التجارية). للكتابة المهنية، تتفوق النماذج الأصغر من 7B إلى 24B على نماذج 70B: تنتج نصوصاً أنظف وأكثر إيجازاً دون إفراط في الشرح.**',
+      intro: '**أفضل نماذج LLM المحلية للكتابة المهنية هي Mistral Small 3.1 24B (المخرجات الأكثر إيجازاً، أفضل تحكم في النبرة)، وQwen3 8B (الأفضل للكتابة التجارية بلغات غير الإنجليزية)، وLlama 3.1 8B (الأكثر قابلية للتكيف مع أمثلة صوت العلامة التجارية). للكتابة المهنية، تتفوق النماذج الأصغر من 7B إلى 24B على نماذج 70B: تنتج نصوصاً أنظف وأكثر إيجازاً دون إفراط في الشرح.**',
       metaDescription: '⁨Mistral Small 3.1 24B⁩ يتصدّر رسائل البريد والمذكرات. ⁨Qwen3 8B⁩ الأفضل للكتابة متعددة اللغات. نماذج ⁨7B⁩–⁨24B⁩ تتفوق على ⁨70B. Ollama⁩ يُعدّ في ⁨10⁩ دقائق.',
       publishDate: '2026-04-05',
-      leadAnswerBlock: '**اعتباراً من أبريل 2026، أفضل نماذج LLM المحلية للكتابة المهنية هي Mistral Small 3.1 24B (المخرجات الأكثر إيجازاً، أفضل تحكم في النبرة)، وQwen3 8B (الأفضل للكتابة التجارية بلغات غير الإنجليزية)، وLlama 3.1 8B (الأكثر قابلية للتكيف مع أمثلة صوت العلامة التجارية). للكتابة المهنية، تتفوق النماذج الأصغر من 7B إلى 24B على نماذج 70B: تنتج نصوصاً أنظف وأكثر إيجازاً دون إفراط في الشرح.**',
+      leadAnswerBlock: '**أفضل نماذج LLM المحلية للكتابة المهنية هي Mistral Small 3.1 24B (المخرجات الأكثر إيجازاً، أفضل تحكم في النبرة)، وQwen3 8B (الأفضل للكتابة التجارية بلغات غير الإنجليزية)، وLlama 3.1 8B (الأكثر قابلية للتكيف مع أمثلة صوت العلامة التجارية). للكتابة المهنية، تتفوق النماذج الأصغر من 7B إلى 24B على نماذج 70B: تنتج نصوصاً أنظف وأكثر إيجازاً دون إفراط في الشرح.**',
       audience: 'المبتدئون الذين يشغّلون أول نموذج LLM محلي لهم على عتاد استهلاكي',
       readTime: '7 دقائق للقراءة',
       educationalLevel: 'Beginner',
@@ -497,6 +506,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'يُعد Mistral Small 3.1 24B نموذج LLM المحلي الأكثر إيجازاً للكتابة المهنية مع أفضل تحكم في النبرة، ويُعد Qwen3 8B الخيار الأقوى للكتابة التجارية بلغات غير الإنجليزية، بينما يتكيف Llama 3.1 8B بشكل أفضل مع أمثلة صوت العلامة التجارية -- تتفوق النماذج من 7B إلى 24B باستمرار على نماذج 70B في الكتابة القصيرة.' },
+            { type: 'plain-terms', text: 'بالنسبة للرسائل الإلكترونية والمذكرات والعروض، تتفوق نماذج الذكاء الاصطناعي الأصغر على الأكبر: يميل نموذج 70B إلى الإطناب، بينما يعطي نموذج من 7B إلى 24B نصاً أكثر إحكاماً ووضوحاً. يُعد Mistral Small 3.1 24B الخيار الأفضل بشكل عام للكتابة المهنية الأنيقة والموجزة. إذا كنت تكتب بلغة غير الإنجليزية، فإن Qwen3 8B يتعامل معها بشكل أفضل. وإذا أردت أن يحاكي الذكاء الاصطناعي نبرة شركتك من أمثلة، فإن Llama 3.1 8B يتكيف بشكل أسرع.' },
+          ],
           items: [
             '**الأفضل عموماً: Mistral Small 3.1 24B** (المخرجات الأكثر إيجازاً، نبرة مناسبة). الأفضل متعدد اللغات: Qwen3 8B (الفرنسية/الألمانية/الإسبانية/اليابانية). الأفضل لتكييف النبرة: Llama 3.1 8B.',
             '**نماذج 70B مطنبة أكثر من اللازم للنصوص القصيرة.** للمستندات التي تتجاوز صفحتين، يتعامل Llama 3.3 70B بسياق 128K مع المقترحات متعددة الأقسام بموثوقية.',
@@ -626,10 +639,10 @@ schema: {
       heroImage: '/images/best-local-llms-business-writing-overview-hero-pt.webp',
       title: 'Melhores LLMs locais para escrita profissional em 2026: e-mails, propostas e voz da marca',
       seoTitle: 'Melhores LLMs locais para escrita profissional 2026',
-      intro: '**A partir de abril de 2026, os melhores LLMs locais para escrita profissional são Mistral Small 3.1 24B (a saída mais concisa, o melhor controle de tom), Qwen3 8B (o melhor para escrita empresarial em idiomas diferentes do inglês) e Llama 3.1 8B (o mais adaptável a exemplos de voz da marca). Para escrita profissional, os modelos menores de 7B a 24B superam os de 70B: produzem textos mais limpos e concisos, sem explicar demais.**',
+      intro: '**Os melhores LLMs locais para escrita profissional são Mistral Small 3.1 24B (a saída mais concisa, o melhor controle de tom), Qwen3 8B (o melhor para escrita empresarial em idiomas diferentes do inglês) e Llama 3.1 8B (o mais adaptável a exemplos de voz da marca). Para escrita profissional, os modelos menores de 7B a 24B superam os de 70B: produzem textos mais limpos e concisos, sem explicar demais.**',
       metaDescription: 'O Mistral Small 3.1 24B lidera para e-mails e memos; o Qwen3 8B se destaca na escrita multilíngue. Os modelos 7B–24B superam os 70B. Ollama em 10 min.',
       publishDate: '2026-04-05',
-      leadAnswerBlock: '**A partir de abril de 2026, os melhores LLMs locais para escrita profissional são Mistral Small 3.1 24B (a saída mais concisa, o melhor controle de tom), Qwen3 8B (o melhor para escrita empresarial em idiomas diferentes do inglês) e Llama 3.1 8B (o mais adaptável a exemplos de voz da marca). Para escrita profissional, os modelos menores de 7B a 24B superam os de 70B: produzem textos mais limpos e concisos, sem explicar demais.**',
+      leadAnswerBlock: '**Os melhores LLMs locais para escrita profissional são Mistral Small 3.1 24B (a saída mais concisa, o melhor controle de tom), Qwen3 8B (o melhor para escrita empresarial em idiomas diferentes do inglês) e Llama 3.1 8B (o mais adaptável a exemplos de voz da marca). Para escrita profissional, os modelos menores de 7B a 24B superam os de 70B: produzem textos mais limpos e concisos, sem explicar demais.**',
       audience: 'Iniciantes rodando seu primeiro LLM local em hardware de consumo',
       readTime: '7 min de leitura',
       educationalLevel: 'Beginner',
@@ -701,6 +714,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'O Mistral Small 3.1 24B é o LLM local mais conciso para escrita profissional com o melhor controle de tom, o Qwen3 8B é a opção mais forte para escrita empresarial em idiomas diferentes do inglês, e o Llama 3.1 8B se adapta melhor a exemplos de voz de marca -- modelos de 7B a 24B superam consistentemente os de 70B em textos curtos.' },
+            { type: 'plain-terms', text: 'Para e-mails, memorandos e propostas, modelos de IA menores superam os maiores: um modelo de 70B tende a explicar demais, enquanto um de 7B a 24B produz um texto mais enxuto e limpo. O Mistral Small 3.1 24B é a melhor escolha geral para uma escrita profissional polida e concisa. Se você escreve em um idioma diferente do inglês, o Qwen3 8B lida melhor com isso. Se quiser que a IA imite o tom da sua empresa a partir de exemplos, o Llama 3.1 8B se adapta mais rápido.' },
+          ],
           items: [
             '**O melhor no geral: Mistral Small 3.1 24B** (saída mais concisa, tom adequado). O melhor multilíngue: Qwen3 8B (francês/alemão/espanhol/japonês). O melhor para adaptação de tom: Llama 3.1 8B.',
             '**Os modelos 70B são verbosos demais para textos curtos.** Para documentos de mais de 2 páginas, o Llama 3.3 70B com 128K de contexto dá conta de propostas de várias seções de forma confiável.',
@@ -829,9 +846,10 @@ schema: {
       heroImage: '/images/best-local-llms-business-writing-overview-hero-de.webp',
       title: 'Die besten lokalen LLMs für Geschäftskorrespondenz 2026: E-Mail, Angebote und Markenstimme',
       seoTitle: 'Beste lokale LLMs für Geschäftskorrespondenz 2026: E-Mail',
-      intro: '**Stand April 2026 sind die besten lokalen LLMs für Geschäftskorrespondenz Mistral Small 3.1 24B (präzisester Output, beste Tonkontrolle), Qwen3 8B (beste nicht-englische Geschäftskorrespondenz) und Llama 3.1 8B (am besten anpassbar an Markenstimmen-Beispiele). Für Geschäftskorrespondenz übertreffen kleinere 7B-24B-Modelle 70B-Modelle -- sie erzeugen klareren, präziseren Output ohne Weitschweifigkeit.**',
+      intro: '**Die besten lokalen LLMs für Geschäftskorrespondenz sind Mistral Small 3.1 24B (präzisester Output, beste Tonkontrolle), Qwen3 8B (beste nicht-englische Geschäftskorrespondenz) und Llama 3.1 8B (am besten anpassbar an Markenstimmen-Beispiele). Für Geschäftskorrespondenz übertreffen kleinere 7B-24B-Modelle 70B-Modelle -- sie erzeugen klareren, präziseren Output ohne Weitschweifigkeit.**',
       metaDescription: 'Mistral Small 3.1 24B führt bei E-Mails und Memos. Qwen3 8B bei mehrsprachiger Korrespondenz. 7B-24B-Modelle übertreffen 70B. Ollama-Setup in 10 Minuten.',
       publishDate: '2026-04-05',
+      leadAnswerBlock: '**Die besten lokalen LLMs für Geschäftskorrespondenz sind Mistral Small 3.1 24B (präzisester Output, beste Tonkontrolle), Qwen3 8B (beste nicht-englische Geschäftskorrespondenz) und Llama 3.1 8B (am besten anpassbar an Markenstimmen-Beispiele). Für Geschäftskorrespondenz übertreffen kleinere 7B-24B-Modelle 70B-Modelle -- sie erzeugen klareren, präziseren Output ohne Weitschweifigkeit.**',
       readTime: '7 Min. Lesezeit',
       educationalLevel: 'Beginner',
       primaryTerm: 'Business Writing LLM',
@@ -904,6 +922,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Mistral Small 3.1 24B ist das prägnanteste lokale LLM für Geschäftskorrespondenz mit der besten Tonkontrolle, Qwen3 8B ist die stärkste Wahl für nicht-englische Geschäftskorrespondenz, und Llama 3.1 8B passt sich Markenstimmen-Beispielen am besten an -- 7B-24B-Modelle übertreffen 70B-Modelle bei kurzen Texten durchgehend.' },
+            { type: 'plain-terms', text: 'Bei E-Mails, Memos und Angeboten schlagen kleinere KI-Modelle größere: Ein 70B-Modell neigt zu Weitschweifigkeit, während ein 7B-24B-Modell einen prägnanteren, saubereren Text liefert. Mistral Small 3.1 24B ist insgesamt die beste Wahl für gepflegte, prägnante Geschäftskorrespondenz. Wer nicht auf Englisch schreibt, ist mit Qwen3 8B am besten bedient. Wer möchte, dass die KI den Ton des eigenen Unternehmens anhand von Beispielen nachahmt, erhält mit Llama 3.1 8B die schnellste Anpassung.' },
+          ],
           items: [
             '**Gesamtbeste: Mistral Small 3.1 24B** (präzisester Output, tongerecht). Mehrsprachig: Qwen3 8B (Französisch/Deutsch/Spanisch/Japanisch). Beste Tonanpassung: Llama 3.1 8B.',
             '**70B-Modelle sind für Kurzform-Texte zu weitschweifig.** Für Dokumente über 2 Seiten verarbeitet Llama 3.3 70B mit 128K Kontext mehrteilige Angebote zuverlässig.',
@@ -1036,9 +1058,10 @@ schema: {
       heroImage: '/images/best-local-llms-business-writing-overview-hero-fr.webp',
       title: 'Meilleurs LLMs locaux pour rédaction professionnelle en 2026 : emails, propositions et voix de marque',
       seoTitle: 'Meilleurs LLMs locaux pour rédaction métier 2026',
-      intro: '**En avril 2026, les meilleurs LLMs locaux pour rédaction professionnelle sont Mistral Small 3.1 24B (sortie la plus précise, meilleur contrôle du ton), Qwen3 8B (meilleur pour rédaction multilingue) et Llama 3.1 8B (le plus adaptable aux exemples de voix de marque). Pour la rédaction professionnelle, les modèles 7B-24B surpassent les 70B -- ils produisent une sortie plus claire et concise sans surexplication.**',
+      intro: '**Les meilleurs LLMs locaux pour rédaction professionnelle sont Mistral Small 3.1 24B (sortie la plus précise, meilleur contrôle du ton), Qwen3 8B (meilleur pour rédaction multilingue) et Llama 3.1 8B (le plus adaptable aux exemples de voix de marque). Pour la rédaction professionnelle, les modèles 7B-24B surpassent les 70B -- ils produisent une sortie plus claire et concise sans surexplication.**',
       metaDescription: 'Mistral Small 3.1 24B excellent emails/mémos. Qwen3 8B multilingue. Modèles 7B-24B surpassent 70B. Configuration Ollama 10 min. Guide complet.',
       publishDate: '2026-04-05',
+      leadAnswerBlock: '**Les meilleurs LLMs locaux pour rédaction professionnelle sont Mistral Small 3.1 24B (sortie la plus précise, meilleur contrôle du ton), Qwen3 8B (meilleur pour rédaction multilingue) et Llama 3.1 8B (le plus adaptable aux exemples de voix de marque). Pour la rédaction professionnelle, les modèles 7B-24B surpassent les 70B -- ils produisent une sortie plus claire et concise sans surexplication.**',
       readTime: '7 min de lecture',
       educationalLevel: 'Beginner',
       primaryTerm: 'Business Writing LLM',
@@ -1109,6 +1132,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: "Mistral Small 3.1 24B est le LLM local le plus concis pour la rédaction professionnelle avec le meilleur contrôle du ton, Qwen3 8B est le choix le plus solide pour la rédaction professionnelle dans une langue autre que l'anglais, et Llama 3.1 8B s'adapte le mieux aux exemples de voix de marque -- les modèles 7B-24B surpassent systématiquement les modèles 70B pour les textes courts." },
+            { type: 'plain-terms', text: "Pour les emails, notes de service et propositions, les petits modèles d'IA battent les gros : un modèle 70B a tendance à trop expliquer, tandis qu'un modèle 7B-24B donne un texte plus resserré et plus propre. Mistral Small 3.1 24B est le meilleur choix global pour une rédaction professionnelle soignée et concise. Si vous écrivez dans une langue autre que l'anglais, Qwen3 8B s'en sort le mieux. Si vous voulez que l'IA imite le ton de votre entreprise à partir d'exemples, Llama 3.1 8B s'adapte le plus rapidement." },
+          ],
           items: [
             '**Meilleur global: Mistral Small 3.1 24B** (sortie plus concise, tonalité appropriée). Meilleur multilingue: Qwen3 8B (français/allemand/espagnol/japonais). Meilleur pour adaptation tonale: Llama 3.1 8B.',
             '**Les modèles 70B sont trop verbeux pour textes courts.** Pour documents longs plus de 2 pages, Llama 3.3 70B avec 128K contexte gère propositions multi-sections de manière fiable.',
@@ -1237,9 +1264,10 @@ schema: {
       heroImage: '/images/best-local-llms-business-writing-overview-hero-ja.webp',
       title: '2026年ビジネスライティング向けベストなローカルLLM: メール、提案、ブランドボイス',
       seoTitle: '2026年ビジネスライティング向けベストLLM：Mistral・Qwen・Llama完全比較ガイド',
-      intro: '**2026年4月時点で、ビジネスライティング向けベストなローカルLLMはMistral Small 3.1 24B（最も正確な出力、最良のトーン制御）、Qwen3 8B（最良の非英語ビジネスライティング）、Llama 3.1 8B（ブランドボイス例に最も適応可能）です。ビジネスライティングでは小さな7B-24Bモデルが70Bモデルを上回ります。より明確で正確な出力を冗長性なく生成します。**',
-      metaDescription: 'Mistral Small 3.1 24B最適（メール・メモ）。Qwen3 8B多言語卓越。7B-24Bが70B超越。プロンプトエンジニアリング実例・Ollama完全セットアップガイド・敬語対応。2026年4月最新版。',
+      intro: '**ビジネスライティング向けベストなローカルLLMはMistral Small 3.1 24B（最も正確な出力、最良のトーン制御）、Qwen3 8B（最良の非英語ビジネスライティング）、Llama 3.1 8B（ブランドボイス例に最も適応可能）です。ビジネスライティングでは小さな7B-24Bモデルが70Bモデルを上回ります。より明確で正確な出力を冗長性なく生成します。**',
+      metaDescription: 'Mistral Small 3.1 24B最適（メール・メモ）。Qwen3 8B多言語卓越。7B-24Bが70B超越。プロンプトエンジニアリング実例・Ollama完全セットアップガイド・敬語対応。',
       publishDate: '2026-04-05',
+      leadAnswerBlock: '**ビジネスライティング向けベストなローカルLLMはMistral Small 3.1 24B（最も正確な出力、最良のトーン制御）、Qwen3 8B（最良の非英語ビジネスライティング）、Llama 3.1 8B（ブランドボイス例に最も適応可能）です。ビジネスライティングでは小さな7B-24Bモデルが70Bモデルを上回ります。より明確で正確な出力を冗長性なく生成します。**',
       readTime: '7分で読める',
       educationalLevel: 'Beginner',
       primaryTerm: 'Business Writing LLM',
@@ -1310,6 +1338,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Mistral Small 3.1 24Bはビジネスライティング向けの最も簡潔なローカルLLMで最良のトーン制御を持ち、Qwen3 8Bは非英語のビジネスライティングに最も適した選択肢であり、Llama 3.1 8Bはブランドボイスの例に最も適応します -- 7B-24Bモデルは短文ビジネスライティングにおいて一貫して70Bモデルを上回ります。' },
+            { type: 'plain-terms', text: 'メール、メモ、提案書では、小型のAIモデルの方が大型モデルより優れています。70Bモデルは説明過多になりがちですが、7B-24Bモデルはより引き締まった簡潔な文章を生成します。Mistral Small 3.1 24Bは、洗練された簡潔なビジネスライティングに最適な総合的な選択肢です。英語以外の言語で書く場合はQwen3 8Bが最も適しています。会社独自のトーンをいくつかの例からAIに学習させたい場合は、Llama 3.1 8Bが最も速く適応します。' },
+          ],
           items: [
             '**全体ベスト: Mistral Small 3.1 24B**（最も簡潔、トーン適切）。ベスト多言語: Qwen3 8B（フランス語/ドイツ語/スペイン語/日本語）。ベスト トーン適応: Llama 3.1 8B。',
             '**70Bモデルは短形式ライティング向けに冗長。** 2ページ超えの長文書向けに、Llama 3.3 70B（128Kコンテキスト）が多部分提案を確実に処理。',
@@ -1438,9 +1470,10 @@ schema: {
       heroImage: '/images/best-local-llms-business-writing-overview-hero-zh.webp',
       title: '2026年商业写作最佳本地LLM：电子邮件、提案和品牌声音',
       seoTitle: '2026年商业写作最佳本地LLM：Mistral·Qwen·Llama深度对比评测指南',
-      intro: '**2026年4月，商业写作最佳本地LLM是Mistral Small 3.1 24B（最精确的输出、最佳音调控制）、Qwen3 8B（最佳非英文商业写作）和Llama 3.1 8B（最易适应品牌语音示例）。对于商业写作，7B-24B的小模型超越70B模型----它们生成更清晰、更精确的输出，不会冗长。**',
+      intro: '**商业写作最佳本地LLM是Mistral Small 3.1 24B（最精确的输出、最佳音调控制）、Qwen3 8B（最佳非英文商业写作）和Llama 3.1 8B（最易适应品牌语音示例）。对于商业写作，7B-24B的小模型超越70B模型----它们生成更清晰、更精确的输出，不会冗长。**',
       metaDescription: 'Mistral Small 3.1 24B商务邮件最优。Qwen3 8B多语言卓越。7B-24B模型超越70B。Ollama部署10分钟。完整提示工程实例·品牌声音配置·部署最佳实践。',
       publishDate: '2026-04-05',
+      leadAnswerBlock: '**商业写作最佳本地LLM是Mistral Small 3.1 24B（最精确的输出、最佳音调控制）、Qwen3 8B（最佳非英文商业写作）和Llama 3.1 8B（最易适应品牌语音示例）。对于商业写作，7B-24B的小模型超越70B模型----它们生成更清晰、更精确的输出，不会冗长。**',
       readTime: '阅读约7分钟',
       educationalLevel: 'Beginner',
       primaryTerm: 'Business Writing LLM',
@@ -1511,6 +1544,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Mistral Small 3.1 24B是商业写作中最精确、音调控制最佳的本地LLM，Qwen3 8B是非英文商业写作的最强选择，而Llama 3.1 8B最能适应品牌语音示例——7B-24B模型在短文写作中始终优于70B模型。' },
+            { type: 'plain-terms', text: '对于电子邮件、备忘录和提案，较小的AI模型反而优于较大的模型：70B模型往往解释过多，而7B-24B模型生成的文本更紧凑、更清晰。Mistral Small 3.1 24B是精炼简洁商业写作的最佳整体选择。如果你用英文以外的语言写作，Qwen3 8B处理得最好。如果你希望AI通过示例学习公司特有的语气，Llama 3.1 8B适应得最快。' },
+          ],
           items: [
             '**总体最佳：Mistral Small 3.1 24B**（最精确的输出，音调适当）。多语言最佳：Qwen3 8B（法语/德语/西班牙语/日语）。最佳音调适应：Llama 3.1 8B。',
             '**70B模型对短文本过于冗长。**对于超过2页的长文档，Llama 3.3 70B配128K上下文可靠地处理多部分提案。',
@@ -1641,10 +1678,10 @@ schema: {
     heroImage: '/images/best-local-llms-business-writing-overview-hero-ko.webp',
       title: '2026년 비즈니스 문서 작성을 위한 최고의 로컬 LLM: 이메일, 제안서, 브랜드 보이스',
       seoTitle: '2026년 비즈니스 문서 작성 최고의 로컬 LLM: 이메일 & 메모',
-      intro: '**2026년 4월 기준, 비즈니스 문서 작성에 가장 적합한 로컬 LLM은 Mistral Small 3.1 24B(가장 간결하고 톤 제어에 탁월), Qwen3 8B(비영어권 비즈니스 문서 작성에 최적), Llama 3.1 8B(브랜드 보이스 예시 적응력 최고)입니다. 비즈니스 문서 작성에서는 7B~24B 규모의 소형 모델이 70B 모델보다 우수한 성능을 발휘합니다. 불필요한 설명 없이 더 깔끔하고 간결한 결과물을 생성하기 때문입니다.**',
+      intro: '**비즈니스 문서 작성에 가장 적합한 로컬 LLM은 Mistral Small 3.1 24B(가장 간결하고 톤 제어에 탁월), Qwen3 8B(비영어권 비즈니스 문서 작성에 최적), Llama 3.1 8B(브랜드 보이스 예시 적응력 최고)입니다. 비즈니스 문서 작성에서는 7B~24B 규모의 소형 모델이 70B 모델보다 우수한 성능을 발휘합니다. 불필요한 설명 없이 더 깔끔하고 간결한 결과물을 생성하기 때문입니다.**',
       metaDescription: '이메일과 메모에는 Mistral Small 3.1 24B가 최적입니다. 비영어권 문서 작성에는 Qwen3 8B가 탁월합니다. 7B~24B 모델이 70B보다 우수합니다. Ollama 설정은 10분이면 충분합니다.',
       publishDate: '2026-04-05',
-      leadAnswerBlock: '2026년 4월 기준, 비즈니스 문서 작성에 가장 적합한 로컬 LLM은 Mistral Small 3.1 24B(가장 간결하고 톤 제어에 탁월), Qwen3 8B(비영어권 비즈니스 문서 작성에 최적), Llama 3.1 8B(브랜드 보이스 예시 적응력 최고)입니다. 비즈니스 문서 작성에서는 7B~24B 규모의 소형 모델이 70B 모델보다 우수한 성능을 발휘합니다.',
+      leadAnswerBlock: '비즈니스 문서 작성에 가장 적합한 로컬 LLM은 Mistral Small 3.1 24B(가장 간결하고 톤 제어에 탁월), Qwen3 8B(비영어권 비즈니스 문서 작성에 최적), Llama 3.1 8B(브랜드 보이스 예시 적응력 최고)입니다. 비즈니스 문서 작성에서는 7B~24B 규모의 소형 모델이 70B 모델보다 우수한 성능을 발휘합니다.',
       audience: '일반 소비자용 하드웨어에서 처음으로 로컬 LLM을 실행하는 입문자',
       readTime: '7분 분량',
       educationalLevel: 'Beginner',
@@ -1665,6 +1702,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Mistral Small 3.1 24B는 비즈니스 문서 작성에 가장 간결하고 톤 제어가 뛰어난 로컬 LLM이며, Qwen3 8B는 비영어권 비즈니스 문서 작성에 가장 강력한 선택지이고, Llama 3.1 8B는 브랜드 보이스 예시에 가장 잘 적응합니다 -- 7B~24B 모델은 짧은 비즈니스 문서 작성에서 항상 70B 모델을 능가합니다.' },
+            { type: 'plain-terms', text: '이메일, 메모, 제안서 작성에서는 작은 AI 모델이 큰 모델보다 낫습니다. 70B 모델은 설명이 과도해지는 경향이 있지만, 7B~24B 모델은 더 간결하고 깔끔한 텍스트를 생성합니다. Mistral Small 3.1 24B는 세련되고 간결한 비즈니스 문서 작성을 위한 전반적으로 최선의 선택입니다. 영어가 아닌 언어로 작성한다면 Qwen3 8B가 가장 잘 처리합니다. 회사만의 톤을 예시로부터 AI가 학습하길 원한다면 Llama 3.1 8B가 가장 빠르게 적응합니다.' },
+          ],
           items: [
             '**전반적 최고: Mistral Small 3.1 24B**(가장 간결하고 톤에 적합). 다국어 최고: Qwen3 8B(프랑스어/독일어/스페인어/일본어). 톤 적응 최고: Llama 3.1 8B.',
             '**70B 모델은 단문 형식 문서 작성에 지나치게 장황합니다.** 2페이지 이상의 장문 문서에는 128K 컨텍스트를 갖춘 Llama 3.3 70B가 다중 섹션 제안서를 안정적으로 처리합니다.',
@@ -1747,7 +1788,7 @@ schema: {
             '**일본(METI)**',
             '일본어 비즈니스 문서 작성에는 엄격한 경어 체계가 있습니다(경어 수준: 정중어, 존경어, 겸양어). 일반 LLM은 기본적으로 정중어(ていねいご)를 사용하지만, 명시적인 프롬프트 지시 없이는 존경어(そんけいご)나 겸양어(けんじょうご)를 안정적으로 생성하지 못합니다. 일본어 비즈니스 서신에는 명시적인 경어 지시가 포함된 Qwen3 8B를 사용하십시오: "メールは丁寧な敬語（尊敬語と謙譲語）を使用してください". Qwen3의 일본어 토크나이저는 동급 모델 중 Llama보다 한자/가나 비즈니스 어휘를 훨씬 더 잘 처리합니다.',
             '**독일(특수 사항)**',
-            '독일어 비즈니스 문서 작성은 공식적인 관례를 따릅니다. Sie 형식(격식체 2인칭), 회사 전체 이름, 구조화된 단락 형식이 그것입니다. 시스템 프롬프트에 다음을 추가하십시오: "Schreiben Sie auf Deutsch mit Sie-Anrede, sachlichem Ton, ohne Anglizismen." Mistral Small 3.1은 2026년 4월 기준 로컬에서 실행 가능한 모델 중 가장 강력한 독일어 격식체 비즈니스 결과물을 생성합니다. EU 기반 개발에서 비롯된 훈련 데이터에 상당한 독일어 비즈니스 코퍼스가 포함되어 있기 때문입니다.',
+            '독일어 비즈니스 문서 작성은 공식적인 관례를 따릅니다. Sie 형식(격식체 2인칭), 회사 전체 이름, 구조화된 단락 형식이 그것입니다. 시스템 프롬프트에 다음을 추가하십시오: "Schreiben Sie auf Deutsch mit Sie-Anrede, sachlichem Ton, ohne Anglizismen." Mistral Small 3.1은 로컬에서 실행 가능한 모델 중 가장 강력한 독일어 격식체 비즈니스 결과물을 생성합니다. EU 기반 개발에서 비롯된 훈련 데이터에 상당한 독일어 비즈니스 코퍼스가 포함되어 있기 때문입니다.',
           ],
         },
         'faqSection': {
