@@ -51,7 +51,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         models: {
           id: 'models',
-          title: 'Multimodal Models Available (April 2026)',
+          title: 'Multimodal Models Available',
           rows: [
             { 'Model': 'Llama 3.2 Vision 11B', 'Image Support': 'Yes', 'VRAM': '8 GB', 'Speed': '3-5 sec/image', 'Best For': 'General vision' },
             { 'Model': 'Qwen2-VL 7B', 'Image Support': 'Yes', 'VRAM': '5 GB', 'Speed': '2-3 sec/image', 'Best For': 'Fast vision' },
@@ -171,7 +171,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         models: {
           id: 'models',
-          title: 'Modelos multimodales disponibles (abril de 2026)',
+          title: 'Modelos multimodales disponibles',
           rows: [
             { 'Modelo': 'Llama 3.2 Vision 11B', 'Soporte de imagen': 'Sí', 'VRAM': '8 GB', 'Velocidad': '3-5 seg/imagen', 'Mejor para': 'Visión general' },
             { 'Modelo': 'Qwen2-VL 7B', 'Soporte de imagen': 'Sí', 'VRAM': '5 GB', 'Velocidad': '2-3 seg/imagen', 'Mejor para': 'Visión rápida' },
@@ -305,7 +305,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         models: {
           id: 'models',
-          title: 'النماذج متعددة الوسائط المتاحة (أبريل 2026)',
+          title: 'النماذج متعددة الوسائط المتاحة',
           rows: [
             { 'Modelo': 'Llama 3.2 Vision 11B', 'Soporte de imagen': 'نعم', 'VRAM': '8 GB', 'Velocidad': '3-5 ث/صورة', 'Mejor para': 'رؤية عامة' },
             { 'Modelo': 'Qwen2-VL 7B', 'Soporte de imagen': 'نعم', 'VRAM': '5 GB', 'Velocidad': '2-3 ث/صورة', 'Mejor para': 'رؤية سريعة' },
@@ -440,7 +440,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         models: {
           id: 'models',
-          title: 'Verfügbare multimodale Modelle (April 2026)',
+          title: 'Verfügbare multimodale Modelle',
           rows: [
             { 'Modell': 'Llama 3.2 Vision 11B', 'Bildunterstützung': 'Ja', 'VRAM': '8 GB', 'Geschwindigkeit': '3-5 Sek./Bild', 'Am besten für': 'Allgemeine Vision' },
             { 'Modell': 'Qwen2-VL 7B', 'Bildunterstützung': 'Ja', 'VRAM': '5 GB', 'Geschwindigkeit': '2-3 Sek./Bild', 'Am besten für': 'Schnelle Vision' },
@@ -562,7 +562,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         models: {
           id: 'models',
-          title: 'Modèles multimodaux disponibles (avril 2026)',
+          title: 'Modèles multimodaux disponibles',
           rows: [
             { 'Modèle': 'Llama 3.2 Vision 11B', 'Support d\'image': 'Oui', 'VRAM': '8 GB', 'Vitesse': '3-5 sec/image', 'Idéal pour': 'Vision générale' },
             { 'Modèle': 'Qwen2-VL 7B', 'Support d\'image': 'Oui', 'VRAM': '5 GB', 'Vitesse': '2-3 sec/image', 'Idéal pour': 'Vision rapide' },
@@ -684,7 +684,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         models: {
           id: 'models',
-          title: '利用可能なマルチモーダルモデル (2026年4月)',
+          title: '利用可能なマルチモーダルモデル',
           rows: [
             { 'モデル': 'Llama 3.2 Vision 11B', '画像サポート': 'はい', 'VRAM': '8 GB', '速度': '3-5秒/画像', '最適用途': '汎用ビジョン' },
             { 'モデル': 'Qwen2-VL 7B', '画像サポート': 'はい', 'VRAM': '5 GB', '速度': '2-3秒/画像', '最適用途': '高速ビジョン' },
@@ -806,7 +806,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         models: {
           id: 'models',
-          title: '可用的多模态模型 (2026年4月)',
+          title: '可用的多模态模型',
           rows: [
             { '模型': 'Llama 3.2 Vision 11B', '图像支持': '是', 'VRAM': '8 GB', '速度': '3-5秒/图像', '最适用': '通用视觉' },
             { '模型': 'Qwen2-VL 7B', '图像支持': '是', 'VRAM': '5 GB', '速度': '2-3秒/图像', '最适用': '快速视觉' },
@@ -927,7 +927,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         models: {
           id: 'models',
-          title: 'Modelos multimodais disponíveis (abril de 2026)',
+          title: 'Modelos multimodais disponíveis',
           rows: [
             { 'Modelo': 'Llama 3.2 Vision 11B', 'Suporte a imagem': 'Sim', 'VRAM': '8 GB', 'Velocidade': '3-5 seg/imagem', 'Melhor para': 'Visão geral' },
             { 'Modelo': 'Qwen2-VL 7B', 'Suporte a imagem': 'Sim', 'VRAM': '5 GB', 'Velocidade': '2-3 seg/imagem', 'Melhor para': 'Visão rápida' },
@@ -1061,7 +1061,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         models: {
           id: 'models',
-          title: '사용 가능한 멀티모달 모델 (2026년 4월)',
+          title: '사용 가능한 멀티모달 모델',
           rows: [
             { 'Model': 'Llama 3.2 Vision 11B', 'Image Support': '지원', 'VRAM': '8 GB', 'Speed': '이미지당 3~5초', 'Best For': '일반 비전' },
             { 'Model': 'Qwen2-VL 7B', 'Image Support': '지원', 'VRAM': '5 GB', 'Speed': '이미지당 2~3초', 'Best For': '고속 비전' },

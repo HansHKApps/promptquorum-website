@@ -135,7 +135,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         quickFacts: {
           id: 'quick-facts',
-          title: 'Quick Facts — Local Coding LLMs at a Glance (July 2026)',
+          title: 'Quick Facts — Local Coding LLMs at a Glance',
           items: [
             '**Best overall (max quality):** Kimi K2.6 — 58.6 SWE-Bench Pro, MoE (32B active), Modified MIT license. Needs quantization for consumer hardware.',
             '**Newest agentic challenger:** Laguna XS 2.1 (Poolside) — SWE-bench Verified 70.9%, SWE-bench Multilingual 63.1%, 256K context, 33B total / 3B active MoE, OpenMDW-1.1 license.',
@@ -151,7 +151,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         bestModelsQuickPicks: {
           id: 'best-models-quick-picks',
-          title: '🏆 Best Local LLMs for Coding (July 2026 Quick Picks)',
+          title: '🏆 Best Local LLMs for Coding (Quick Picks)',
           items: [
             '**Best overall:** Kimi K2.6 (quantized) — 58.6 SWE-Bench Pro, MoE architecture, Modified MIT license. `ollama run kimi-k2.6`',
             '**Newest agentic challenger:** Laguna XS 2.1 — SWE-bench Verified 70.9%, long-horizon agentic coding, 256K context. `ollama run laguna-xs-2.1`',
@@ -279,7 +279,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         humanEvalTable: {
           id: 'humaneval-table',
-          title: 'How Do Coding Models Compare? HumanEval + SWE-bench (July 2026)',
+          title: 'How Do Coding Models Compare? HumanEval + SWE-bench',
           rows: [
             { 'Model': 'Kimi K2.6 (MoE)', 'HumanEval': '—', 'SWE-bench': '58.6 (SWE-Bench Pro)', 'RAM': 'varies (quantized)', 'FIM': '—' },
             { 'Model': 'Kimi K2.7 Code (MoE)', 'HumanEval': '—', 'SWE-bench': '— (built on K2.6)', 'RAM': 'varies (quantized)', 'FIM': '—' },
@@ -697,7 +697,7 @@ schema: {
         },
         quickFacts: {
           id: 'quick-facts',
-          title: 'Datos rápidos — LLMs locales de programación de un vistazo (julio 2026)',
+          title: 'Datos rápidos — LLMs locales de programación de un vistazo',
           items: [
             '**Mejor en general (máxima calidad):** Kimi K2.6 — 58.6 en SWE-Bench Pro, MoE (32B activos), licencia MIT modificada. Necesita cuantización para hardware de consumo.',
             '**Mejor modelo denso:** Qwen 3.6 27B — 77,2% SWE-bench, 22 GB de VRAM, sin sobrecarga MoE.',
@@ -712,7 +712,7 @@ schema: {
         },
         bestModelsQuickPicks: {
           id: 'best-models-quick-picks',
-          title: '🏆 Mejores LLMs locales para programación (selección rápida de julio 2026)',
+          title: '🏆 Mejores LLMs locales para programación (selección rápida de)',
           items: [
             '**Mejor en general:** Kimi K2.6 (cuantizado) — 58.6 en SWE-Bench Pro, arquitectura MoE, licencia MIT modificada. `ollama run kimi-k2.6`',
             '**Mejor modelo denso:** Qwen 3.6 27B — 77,2% SWE-bench, mejor opción no MoE. `ollama run qwen3.6:27b`',
@@ -836,7 +836,7 @@ schema: {
         },
         humanEvalTable: {
           id: 'humaneval-table',
-          title: '¿Cómo se comparan los modelos de programación? HumanEval + SWE-bench (junio 2026)',
+          title: '¿Cómo se comparan los modelos de programación? HumanEval + SWE-bench',
           rows: [
             { 'Modelo': 'Kimi K2.6 (MoE)', 'HumanEval': '—', 'SWE-bench': '58.6 (SWE-Bench Pro)', 'RAM': 'variable (cuantizado)', 'FIM': '—' },
             { 'Modelo': 'Qwen 3.6 27B', 'HumanEval': '—', 'SWE-bench': '77,2%', 'RAM': '22 GB', 'FIM': 'Sí' },
@@ -1181,7 +1181,7 @@ schema: {
         },
         quickFacts: {
           id: 'quick-facts',
-          title: 'حقائق سريعة — نماذج LLM المحلية للبرمجة في لمحة (يوليو 2026)',
+          title: 'حقائق سريعة — نماذج LLM المحلية للبرمجة في لمحة',
           items: [
             '**الأفضل عموماً (أقصى جودة):** Kimi K2.6 — 58.6 في SWE-Bench Pro، MoE (32B نشطة)، رخصة MIT معدّلة. يحتاج تكميماً للعتاد الاستهلاكي.',
             '**أفضل نموذج كثيف:** Qwen 3.6 27B — 77.2% SWE-bench، 22 GB من VRAM، دون عبء MoE.',
@@ -1319,7 +1319,7 @@ schema: {
         },
         humanEvalTable: {
           id: 'humaneval-table',
-          title: 'كيف تُقارَن نماذج البرمجة؟ HumanEval + SWE-bench (يوليو 2026)',
+          title: 'كيف تُقارَن نماذج البرمجة؟ HumanEval + SWE-bench',
           rows: [
             { 'النموذج': 'Kimi K2.6 (MoE)', 'HumanEval': '—', 'SWE-bench': '58.6 (SWE-Bench Pro)', 'RAM': 'متغير (مكمَّم)', 'FIM': '—' },
             { 'النموذج': 'Qwen 3.6 27B', 'HumanEval': '—', 'SWE-bench': '77.2%', 'RAM': '22 GB', 'FIM': 'نعم' },
@@ -1684,7 +1684,7 @@ schema: {
         },
         quickFacts: {
           id: 'quick-facts',
-          title: 'Fatos Rápidos — LLMs Locais para Código em Resumo (Junho de 2026)',
+          title: 'Fatos Rápidos — LLMs Locais para Código em Resumo',
           items: [
             '**Melhor no geral (qualidade máxima):** Kimi K2.6 — 58,6 SWE-Bench Pro, MoE (32B ativo), licença MIT modificada. Requer quantização para hardware de consumo.',
             '**Melhor modelo denso:** Qwen 3.6 27B — 77,2% SWE-bench, 22 GB VRAM, sem overhead de MoE.',
@@ -1698,7 +1698,7 @@ schema: {
         },
         bestModelsQuickPicks: {
           id: 'best-models-quick-picks',
-          title: '🏆 Melhores LLMs Locais para Código (Escolhas Rápidas de Junho de 2026)',
+          title: '🏆 Melhores LLMs Locais para Código (Escolhas Rápidas de)',
           items: [
             '**Melhor no geral:** Kimi K2.6 (quantizado) — 58,6 SWE-Bench Pro, arquitetura MoE, licença MIT modificada. `ollama run kimi-k2.6`',
             '**Melhor modelo denso:** Qwen 3.6 27B — 77,2% SWE-bench, melhor opção sem MoE. `ollama run qwen3.6:27b`',
@@ -1738,7 +1738,7 @@ schema: {
         },
         kimi: {
           id: 'kimi-k2-6',
-          title: '#1 Kimi K2.6 -- Melhor modelo de código local no geral (julho 2026)',
+          title: '#1 Kimi K2.6 -- Melhor modelo de código local no geral',
           content: [
             '**Kimi K2.6 da Moonshot AI lidera com 58,6 no SWE-Bench Pro** -- o benchmark de resolução de issues reais do GitHub. É um modelo MoE com 32B parâmetros ativos de 1T totais, o que significa que roda na velocidade de um modelo 32B mas com qualidade de modelo maior.',
             'Licença MIT modificada: uso comercial permitido com restrições. Verifique a licença antes do uso em produção.',
@@ -1817,7 +1817,7 @@ schema: {
         },
         humanEvalTable: {
           id: 'full-comparison',
-          title: 'Como os Modelos de Código se Comparam? HumanEval + SWE-bench (Junho de 2026)',
+          title: 'Como os Modelos de Código se Comparam? HumanEval + SWE-bench',
           rows: [
             { 'Modelo': 'Kimi K2.6 (MoE)', 'HumanEval': '—', 'SWE-bench': '58,6 (SWE-Bench Pro)', 'RAM': 'varia (quantizado)', 'FIM': '—' },
             { 'Modelo': 'Qwen 3.6 27B', 'HumanEval': '—', 'SWE-bench': '77,2%', 'RAM': '22 GB', 'FIM': 'Sim' },
@@ -2089,7 +2089,7 @@ schema: {
         },
         quickFacts: {
           id: 'quick-facts',
-          title: 'Schnelle Fakten — Lokale Programmier-LLMs auf einen Blick (Juli 2026)',
+          title: 'Schnelle Fakten — Lokale Programmier-LLMs auf einen Blick',
           items: [
             '**Best insgesamt (maximale Qualität):** Kimi K2.6 — 58.6 SWE-Bench Pro, MoE (32B aktiv / 1T total), Modified MIT-Lizenz, quantisiert für Consumer-Hardware.',
             '**Neuester Agenten-Herausforderer:** Laguna XS 2.1 (Poolside) — SWE-bench Verified 70,9%, 256K Kontext, OpenMDW-1.1-Lizenz. Auch neu: Kimi K2.7 Code (Moonshot AI), eine Coding-fokussierte Weiterentwicklung von K2.6.',
@@ -2103,7 +2103,7 @@ schema: {
         },
         bestModelsQuickPicks: {
           id: 'best-models-quick-picks',
-          title: '🏆 Beste lokale LLMs für Programmierung (Schnellauswahl Juli 2026)',
+          title: '🏆 Beste lokale LLMs für Programmierung (Schnellauswahl)',
           items: [
             '**Best insgesamt:** Kimi K2.6 (quantisiert) — 58.6 SWE-Bench Pro, MoE-Architektur, Modified MIT-Lizenz. `ollama run kimi-k2.6`',
             '**Neuester Agenten-Herausforderer:** Laguna XS 2.1 — SWE-bench Verified 70,9%, langfristiges agentisches Coding, 256K Kontext. `ollama run laguna-xs-2.1`',
@@ -2225,7 +2225,7 @@ schema: {
         },
         humanEvalTable: {
           id: 'humaneval-table',
-          title: 'Wie vergleichen sich Codierungsmodelle? HumanEval + SWE-bench (Juli 2026)',
+          title: 'Wie vergleichen sich Codierungsmodelle? HumanEval + SWE-bench',
           rows: [
             { 'Modell': 'Kimi K2.6 (MoE)', 'HumanEval': '—', 'SWE-bench': '58,6 (SWE-Bench Pro)', 'RAM': 'variiert (quantisiert)', 'FIM': '—' },
             { 'Modell': 'Qwen 3.6 27B', 'HumanEval': '—', 'SWE-bench': '77,2%', 'RAM': '22 GB', 'FIM': 'Ja' },
@@ -2536,7 +2536,7 @@ schema: {
         },
         quickFacts: {
           id: 'quick-facts',
-          title: 'Faits rapides — LLMs locaux de programmation en un coup d\'œil (juillet 2026)',
+          title: 'Faits rapides — LLMs locaux de programmation en un coup d\'œil',
           items: [
             '**Meilleur global (qualité maximale)** : Kimi K2.6 — 58.6 SWE-Bench Pro, MoE (32B actif / 1T total), licence MIT modifiée, quantifié pour le matériel grand public.',
             '**Nouveau challenger agentique** : Laguna XS 2.1 (Poolside) — SWE-bench Verified 70,9%, contexte 256K, licence OpenMDW-1.1. Aussi nouveau : Kimi K2.7 Code (Moonshot AI), une évolution de K2.6 axée code.',
@@ -2550,7 +2550,7 @@ schema: {
         },
         bestModelsQuickPicks: {
           id: 'best-models-quick-picks',
-          title: '🏆 Meilleurs LLMs locaux pour la programmation (sélection rapide juillet 2026)',
+          title: '🏆 Meilleurs LLMs locaux pour la programmation (sélection rapide)',
           items: [
             '**Meilleur global** : Kimi K2.6 (quantifié) — 58.6 SWE-Bench Pro, architecture MoE, licence MIT modifiée. `ollama run kimi-k2.6`',
             '**Nouveau challenger agentique** : Laguna XS 2.1 — SWE-bench Verified 70,9%, codage agentique de longue durée, contexte 256K. `ollama run laguna-xs-2.1`',
@@ -2672,7 +2672,7 @@ schema: {
         },
         humanEvalTable: {
           id: 'humaneval-table',
-          title: 'Comment les modèles de codage se comparent-ils ? HumanEval + SWE-bench (juillet 2026)',
+          title: 'Comment les modèles de codage se comparent-ils ? HumanEval + SWE-bench',
           rows: [
             { 'Modèle': 'Kimi K2.6 (MoE)', 'HumanEval': '—', 'SWE-bench': '58.6 (SWE-Bench Pro)', 'RAM': 'variable (quantifié)', 'FIM': '—' },
             { 'Modèle': 'Qwen 3.6 27B', 'HumanEval': '—', 'SWE-bench': '77.2%', 'RAM': '22 Go', 'FIM': 'Oui' },
@@ -3027,7 +3027,7 @@ schema: {
         },
         humanEvalTable: {
           id: 'humaneval-table',
-          title: 'コーディングモデル比較:HumanEval + SWE-bench(2026年7月)',
+          title: 'コーディングモデル比較:HumanEval + SWE-bench',
           columns: ['モデル', 'HumanEval', 'SWE-bench', 'RAM', 'FIM'],
           rows: [
             { 'モデル': 'Kimi K2.6 (MoE)', 'HumanEval': '—', 'SWE-bench': '58.6(SWE-Bench Pro)', 'RAM': '量子化により変動', 'FIM': '—' },
@@ -3047,7 +3047,7 @@ schema: {
         },
         quickFacts: {
           id: 'quick-facts',
-          title: 'クイック事実――コーディング用ローカルLLMを一目で（2026年7月）',
+          title: 'クイック事実――コーディング用ローカルLLMを一目で',
           items: [
             '**最高の全体（最大品質）：** Kimi K2.6――58.6 SWE-Bench Pro、MoE（32B active / 1T total）、Modified MITライセンス、Consumer向けに量子化',
             '**最新のエージェント型対抗モデル：** Laguna XS 2.1（Poolside）――SWE-bench Verified 70.9%、256Kコンテキスト、OpenMDW-1.1ライセンス。Kimi K2.7 Code（Moonshot AI）も新登場、K2.6のコーディング特化進化版。',
@@ -3061,7 +3061,7 @@ schema: {
         },
         bestModelsQuickPicks: {
           id: 'best-models-quick-picks',
-          title: '🏆 コーディング用最高のローカルLLM（2026年7月クイックピック）',
+          title: '🏆 コーディング用最高のローカルLLM （クイックピック）',
           items: [
             '**最高の全体：** Kimi K2.6（量子化）――58.6 SWE-Bench Pro、MoEアーキテクチャ、Modified MITライセンス。`ollama run kimi-k2.6`',
             '**最新のエージェント型対抗モデル：** Laguna XS 2.1――SWE-bench Verified 70.9%、長時間エージェントコーディング、256Kコンテキスト。`ollama run laguna-xs-2.1`',
@@ -3393,7 +3393,7 @@ schema: {
         },
         humanEvalTable: {
           id: 'humaneval-table',
-          title: '编码模型对比:HumanEval + SWE-bench(2026年7月)',
+          title: '编码模型对比:HumanEval + SWE-bench',
           columns: ['模型', 'HumanEval', 'SWE-bench', 'RAM', 'FIM'],
           rows: [
             { '模型': 'Kimi K2.6 (MoE)', 'HumanEval': '—', 'SWE-bench': '58.6(SWE-Bench Pro)', 'RAM': '视量化而定', 'FIM': '—' },
@@ -3413,7 +3413,7 @@ schema: {
         },
         quickFacts: {
           id: 'quick-facts',
-          title: '快速事实——一览本地编码LLM（2026年7月）',
+          title: '快速事实——一览本地编码LLM',
           items: [
             '**最佳整体（最大质量）：** Kimi K2.6——58.6 SWE-Bench Pro、MoE（32B active / 1T total）、修改版MIT许可证、为消费级硬件量化',
             '**最新代理编码挑战者：** Laguna XS 2.1（Poolside）——SWE-bench Verified 70.9%，256K上下文，OpenMDW-1.1许可证。同时新增Kimi K2.7 Code（Moonshot AI），是K2.6的编程专用进化版。',
@@ -3427,7 +3427,7 @@ schema: {
         },
         bestModelsQuickPicks: {
           id: 'best-models-quick-picks',
-          title: '🏆 最佳本地编码LLM（2026年7月快速推荐）',
+          title: '🏆 最佳本地编码LLM （快速推荐）',
           items: [
             '**最佳整体：** Kimi K2.6（量化版）——58.6 SWE-Bench Pro、MoE架构、修改版MIT许可证。`ollama run kimi-k2.6`',
             '**最新代理编码挑战者：** Laguna XS 2.1——SWE-bench Verified 70.9%，长时程代理编码，256K上下文。`ollama run laguna-xs-2.1`',
@@ -3721,7 +3721,7 @@ schema: {
         },
         quickFacts: {
           id: 'quick-facts',
-          title: '빠른 사실 — 로컬 코딩 LLM 한눈에 보기 (2026년 7월)',
+          title: '빠른 사실 — 로컬 코딩 LLM 한눈에 보기',
           items: [
             '**전체 최고 (최대 품질):** Kimi K2.6 — SWE-Bench Pro 58.6점, MoE (32B 활성), Modified MIT 라이선스. 일반 소비자 하드웨어에서 사용하려면 양자화 필요.',
             '**최고의 밀집형 모델:** Qwen 3.6 27B — SWE-bench 77.2%, 22 GB VRAM, MoE 오버헤드 없음.',
@@ -3735,7 +3735,7 @@ schema: {
         },
         bestModelsQuickPicks: {
           id: 'best-models-quick-picks',
-          title: '🏆 코딩용 최고 로컬 LLM (2026년 7월 빠른 선택)',
+          title: '🏆 코딩용 최고 로컬 LLM (빠른 선택)',
           items: [
             '**전체 최고:** Kimi K2.6 (양자화) — SWE-Bench Pro 58.6점, MoE 아키텍처, Modified MIT 라이선스. `ollama run kimi-k2.6`',
             '**최고의 밀집형 모델:** Qwen 3.6 27B — SWE-bench 77.2%, 최고의 비MoE 옵션. `ollama run qwen3.6:27b`',
@@ -3859,7 +3859,7 @@ schema: {
         },
         humanEvalTable: {
           id: 'humaneval-table',
-          title: '코딩 모델 비교: HumanEval + SWE-bench (2026년 7월)',
+          title: '코딩 모델 비교: HumanEval + SWE-bench',
           rows: [
             { 'Model': 'Kimi K2.6 (MoE)', 'HumanEval': '—', 'SWE-bench': '58.6 (SWE-Bench Pro)', 'RAM': '다양 (양자화)', 'FIM': '—' },
             { 'Model': 'Qwen 3.6 27B', 'HumanEval': '—', 'SWE-bench': '77.2%', 'RAM': '22 GB', 'FIM': '지원' },
