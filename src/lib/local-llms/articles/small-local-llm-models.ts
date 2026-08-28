@@ -47,7 +47,7 @@ schema: {
         headline: 'Small Local LLM Models: Best Sub-4B Models for Low RAM Machines in 2026',
         description: 'Small local LLMs (1B-4B parameters) run on machines with 4-8 GB RAM and produce 30-70 tokens/sec on CPU -- fast enough for real-time chat.',
         datePublished: '2026-04-04',
-        dateModified: '2026-08-27',
+        dateModified: '2026-08-28',
         'url': 'https://www.promptquorum.com/local-llms/small-local-llm-models',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -94,6 +94,10 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Small local LLMs (1B-4B parameters) run on 4-8 GB RAM machines at 30-70 tokens/sec, with Phi-4 Mini 3.8B leading reasoning, Gemma 4 E2B best for small/edge devices with 128K context, Qwen3 3B best for coding, and Llama 3.2 3B best for general use.' },
+            { type: 'plain-terms', text: "If your laptop only has 4-8 GB of RAM, you can still run AI models -- just smaller ones. These sub-4B models are fast enough for real-time chat and handle simple tasks like summarizing, basic Q&A, and translating short text well, but they struggle with multi-step reasoning or writing long, coherent documents. For most tasks, though, they're a solid fit for entry-level hardware." },
+          ],
           items: [
             '**Best reasoning at small scale**: Phi-4 Mini 3.8B -- 68% MMLU, 70% HumanEval, runs on 4 GB RAM.',
             '**Best small/edge model**: Gemma 4 E2B -- MMLU Pro 60%, 128K context, ~2 GB RAM, Apache 2.0.',
@@ -325,7 +329,7 @@ schema: {
         headline: 'Modelos LLM locales pequeños: los mejores sub-4B para máquinas con poca RAM en 2026',
         description: 'Los LLMs locales pequeños (1B-4B parámetros) funcionan en máquinas con 4-8 GB de RAM y producen 30-70 tokens/seg en CPU -- suficientemente rápido para chat en tiempo real.',
         datePublished: '2026-04-04',
-        dateModified: '2026-08-27',
+        dateModified: '2026-08-28',
         'url': 'https://www.promptquorum.com/es/local-llms/small-local-llm-models',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
@@ -372,6 +376,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Los LLM locales pequeños (1B-4B de parámetros) funcionan en equipos con 4-8 GB de RAM a 30-70 tokens/seg, con Phi-4 Mini 3.8B a la cabeza en razonamiento, Gemma 4 E2B ideal para dispositivos pequeños/edge con contexto de 128K, Qwen3 3B mejor para programación y Llama 3.2 3B mejor para uso general.' },
+            { type: 'plain-terms', text: 'Si tu portátil solo tiene 4-8 GB de RAM, aún puedes ejecutar modelos de IA, solo que más pequeños. Estos modelos sub-4B son lo suficientemente rápidos para chat en tiempo real y manejan bien tareas simples como resumir, preguntas y respuestas básicas y traducir textos cortos, pero les cuesta el razonamiento en varios pasos o escribir documentos largos y coherentes. Aun así, para la mayoría de las tareas son una buena opción para hardware de gama de entrada.' },
+          ],
           items: [
             '**Mejor razonamiento a pequeña escala**: Phi-4 Mini 3.8B -- 68% MMLU, 70% HumanEval, funciona con 4 GB de RAM.',
             '**Mejor modelo pequeño/edge**: Gemma 4 E2B -- MMLU Pro 60%, contexto 128K, ~2 GB de RAM, Apache 2.0. Genera 8-48 tok/seg en CPU según hardware y cuantización, y sustituye al antiguo Gemma 2 2B.',
@@ -602,7 +610,7 @@ schema: {
         headline: 'نماذج LLM المحلية الصغيرة: أفضل نماذج أقل من 4B للأجهزة منخفضة الذاكرة في 2026',
         description: 'تعمل نماذج LLM المحلية الصغيرة (1B-4B معاملات) على أجهزة بذاكرة RAM سعة 4-8 GB وتنتج 30-70 token/ثانية على CPU -- سريعة بما يكفي للدردشة الفورية.',
         datePublished: '2026-04-04',
-        dateModified: '2026-08-27',
+        dateModified: '2026-08-28',
         'url': 'https://www.promptquorum.com/ar/local-llms/small-local-llm-models',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
@@ -651,6 +659,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'تعمل نماذج LLM المحلية الصغيرة (1B-4B معلمة) على أجهزة بذاكرة 4-8 GB بسرعة 30-70 token/ثانية، مع تصدّر Phi-4 Mini 3.8B للاستدلال، وGemma 4 E2B الأفضل للأجهزة الصغيرة/الطرفية بسياق 128K، وQwen3 3B الأفضل للبرمجة، وLlama 3.2 3B الأفضل للاستخدام العام.' },
+            { type: 'plain-terms', text: 'إذا كان حاسوبك المحمول يمتلك فقط 4-8 GB من الذاكرة، لا يزال بإمكانك تشغيل نماذج الذكاء الاصطناعي -- لكن الأصغر منها فقط. هذه النماذج دون 4B سريعة بما يكفي للدردشة الفورية وتتعامل جيداً مع المهام البسيطة مثل التلخيص، والأسئلة والأجوبة الأساسية، وترجمة النصوص القصيرة، لكنها تواجه صعوبة في الاستدلال متعدد الخطوات أو كتابة مستندات طويلة ومتماسكة. مع ذلك، فهي مناسبة تماماً لمعظم المهام على الأجهزة منخفضة المواصفات.' },
+          ],
           items: [
             '**أفضل استدلال على نطاق صغير**: Phi-4 Mini 3.8B -- 68% MMLU، 70% HumanEval، يعمل بذاكرة 4 GB.',
             '**أفضل نموذج صغير/للأجهزة الطرفية**: Gemma 4 E2B -- MMLU Pro 60%، سياق 128K، ~2 GB RAM، ترخيص Apache 2.0. يحل محل Gemma 2 2B القديم.',
@@ -881,7 +893,7 @@ schema: {
         headline: 'Modelos LLM locais pequenos: os melhores sub-4B para máquinas com pouca RAM em 2026',
         description: 'Os LLMs locais pequenos (1B-4B parâmetros) funcionam em máquinas com 4-8 GB de RAM e produzem 30-70 tokens/seg na CPU -- rápido o suficiente para chat em tempo real.',
         datePublished: '2026-04-04',
-        dateModified: '2026-08-27',
+        dateModified: '2026-08-28',
         'url': 'https://www.promptquorum.com/pt/local-llms/small-local-llm-models',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
@@ -928,6 +940,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'LLMs locais pequenos (1B-4B parâmetros) rodam em máquinas com 4-8 GB de RAM a 30-70 tokens/seg, com o Phi-4 Mini 3.8B liderando em raciocínio, o Gemma 4 E2B ideal para dispositivos pequenos/edge com contexto de 128K, o Qwen3 3B melhor para programação, e o Llama 3.2 3B melhor para uso geral.' },
+            { type: 'plain-terms', text: 'Se o seu notebook tem apenas 4-8 GB de RAM, ainda dá para rodar modelos de IA -- só que menores. Esses modelos sub-4B são rápidos o suficiente para chat em tempo real e lidam bem com tarefas simples como resumir, perguntas e respostas básicas e traduzir textos curtos, mas têm dificuldade com raciocínio em várias etapas ou escrever documentos longos e coerentes. Ainda assim, para a maioria das tarefas, são uma boa opção para hardware de entrada.' },
+          ],
           items: [
             '**Melhor raciocínio em pequena escala**: Phi-4 Mini 3.8B -- 68% MMLU, 70% HumanEval, funciona com 4 GB de RAM.',
             '**Melhor modelo pequeno/edge**: Gemma 4 E2B -- MMLU Pro 60%, contexto 128K, ~2 GB de RAM, Apache 2.0. Substitui o antigo Gemma 2 2B.',
@@ -1137,7 +1153,7 @@ schema: {
         headline: 'Beste kleine lokale LLMs 2026 : Sub-4B-Modelle für RAM-arme Maschinen',
         description: 'Beste kleine lokale LLMs 2026 : Phi-4 Mini (Reasoning), Gemma 4 E2B (128K Kontext, Edge), Qwen3 (Codierung), Llama 3.2 (allgemeine Verwendung). Vollständiger Vergleich für RAM-arme Hardware.',
         datePublished: '2026-04-04',
-        dateModified: '2026-08-27',
+        dateModified: '2026-08-28',
         'url': 'https://www.promptquorum.com/de/local-llms/small-local-llm-models',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -1177,7 +1193,12 @@ schema: {
       },
       sections: {
         tldr: { id: 'key-takeaways',
- isTldr: true, items: ['**Bestes Reasoning im kleinen Format**: Phi-4 Mini 3.8B -- 68% MMLU, 70% HumanEval, läuft auf 4 GB RAM.', '**Bestes kleines/Edge-Modell**: Gemma 4 E2B -- MMLU Pro 60%, 128K Kontext, ~2 GB RAM, Apache 2.0. Ersetzt das ältere Gemma 2 2B.', '**Bestes kleines Codierungsmodell**: Qwen3 3B -- 65% HumanEval bei ~2 GB RAM.', '**Beste Universal-3B**: Llama 3.2 3B -- beste Community-Unterstützung, 128K Kontext, 2,5 GB RAM.', 'Seit April 2026 produziert kein Sub-2B-Modell Ausgabequalität, die für professionelle Aufgaben geeignet ist. Verwenden Sie 3B+ für echte Arbeit.'] },
+ isTldr: true,
+ snippetBlocks: [
+    { type: 'one-sentence', text: 'Kleine lokale LLMs (1B-4B Parameter) laufen auf Geräten mit 4-8 GB RAM bei 30-70 Tokens/Sekunde, wobei Phi-4 Mini 3.8B beim Reasoning führt, Gemma 4 E2B mit 128K Kontext am besten für kleine/Edge-Geräte geeignet ist, Qwen3 3B am besten fürs Programmieren und Llama 3.2 3B am besten für allgemeine Nutzung ist.' },
+    { type: 'plain-terms', text: 'Auch mit nur 4-8 GB RAM im Laptop lassen sich KI-Modelle ausführen -- nur eben kleinere. Diese Sub-4B-Modelle sind schnell genug für Echtzeit-Chat und meistern einfache Aufgaben wie Zusammenfassungen, einfache Fragen und Antworten sowie die Übersetzung kurzer Texte gut, tun sich aber schwer mit mehrstufigem Reasoning oder dem Verfassen langer, zusammenhängender Dokumente. Für die meisten Aufgaben sind sie dennoch eine solide Wahl für Einstiegshardware.' },
+  ],
+ items: ['**Bestes Reasoning im kleinen Format**: Phi-4 Mini 3.8B -- 68% MMLU, 70% HumanEval, läuft auf 4 GB RAM.', '**Bestes kleines/Edge-Modell**: Gemma 4 E2B -- MMLU Pro 60%, 128K Kontext, ~2 GB RAM, Apache 2.0. Ersetzt das ältere Gemma 2 2B.', '**Bestes kleines Codierungsmodell**: Qwen3 3B -- 65% HumanEval bei ~2 GB RAM.', '**Beste Universal-3B**: Llama 3.2 3B -- beste Community-Unterstützung, 128K Kontext, 2,5 GB RAM.', 'Seit April 2026 produziert kein Sub-2B-Modell Ausgabequalität, die für professionelle Aufgaben geeignet ist. Verwenden Sie 3B+ für echte Arbeit.'] },
         whatIsSmall: { title: 'Was ist ein „kleines" lokales LLM und wann sollten Sie eines verwenden?', content: ['Ein kleines lokales LLM ist typischerweise definiert als ein Modell mit weniger als 4 Milliarden Parametern. Bei Q4_K_M-Quantisierung benötigen diese Modelle 1,5-3 GB RAM -- gut innerhalb der Einschränkungen von Einstiegs-Laptops mit 4-8 GB Gesamtspeicher.', 'Seit April 2026 sind kleine Modelle geeignet für: schnelle Zusammenfassung, einfache F&A, Erklärung von Code-Snippets, Übersetzung kurzer Texte und Klassifizierungsaufgaben. Sie sind nicht geeignet für mehrstufiges Reasoning, komplexe Code-Generierung oder das Verfassen langer kohärenter Dokumente.', 'Die Qualitätslücke zwischen einem 3B- und 7B-Modell ist erheblich -- ungefähr der Lücke zwischen GPT-4o mini und GPT-5.5 entsprechend. Für Benutzer mit 8 GB RAM ist ein 7B-Modell bei Q4_K_M fast immer die bessere Wahl. Siehe [Beste Anfänger-Lokale-LLM-Modelle](/local-llms/best-beginner-local-llm-models) für 7B-Empfehlungen.'] },
         phi4mini: { title: 'Phi-4 Mini 3.8B -- Beste Reasoning-Leistung in der Sub-4B-Klasse', content: ['Microsoft Phi-4 Mini erreicht 68% bei MMLU und 70% bei HumanEval -- Werte, die viele vor 2025 veröffentlichte 7B-Modelle übertreffen. Dies ist möglich, weil Phi-4 Mini auf einem kuratierten synthetischen Datensatz trainiert wurde, der auf Reasoning und Problemlösung fokussiert ist.', 'Seit April 2026 ist Phi-4 Mini die empfohlene Wahl für Benutzer, die hauptsächlich Reasoning oder Code-Unterstützung auf Hardware mit 4-6 GB RAM benötigen.'], rows: [{ 'Spec': 'MMLU', 'Value': '68%' }, { 'Spec': 'HumanEval', 'Value': '70%' }, { 'Spec': 'RAM (Q4_K_M)', 'Value': '~2,5 GB' }, { 'Spec': 'Kontext', 'Value': '128K Token' }, { 'Spec': 'CPU-Geschwindigkeit', 'Value': '30-50 tok/sek' }, { 'Spec': 'Ollama-Befehl', 'Value': 'ollama run phi4-mini' }], columns: ['Spec', 'Value'] },
         gemma2: { title: 'Gemma 4 E2B -- Bestes kleines Modell/Edge-Modell', content: ['Google Gemma 4 E2B ist die aktuelle Generation kleiner Modelle und ersetzt das ältere Gemma 2 2B. Es erreicht 60% auf MMLU Pro (ein anspruchsvollerer Benchmark als das ursprüngliche MMLU), 44% auf LiveCodeBench v6 und 43,4% auf GPQA Diamond, laut Googles eigener Modellkarte. Es hat 2,3B effektive Parameter (5,1B inklusive Embeddings) und passt in ~2 GB RAM.', 'Das 128K-Kontextfenster ist eine deutliche Verbesserung gegenüber den 8K des alten Gemma 2 2B -- es entspricht nun Phi-4 Mini und Llama 3.2 3B. Die CPU-Geschwindigkeit variiert je nach Hardware und Quantisierung (Google berichtet ~7,6 Token/Sek Decode auf einem Raspberry Pi 5; unabhängige x86-Berichte reichen von 8-48 Token/Sek) -- aktuelle Werte für Ihr Gerät prüfen. Apache-2.0-Lizenz.'], rows: [{ 'Spec': 'MMLU Pro', 'Value': '60%' }, { 'Spec': 'LiveCodeBench v6', 'Value': '44%' }, { 'Spec': 'GPQA Diamond', 'Value': '43,4%' }, { 'Spec': 'RAM (Q4_K_M)', 'Value': '~2 GB' }, { 'Spec': 'Kontext', 'Value': '128K Token' }, { 'Spec': 'Ollama-Befehl', 'Value': 'ollama pull gemma4:e2b' }], columns: ['Spec', 'Value'] },
@@ -1208,7 +1229,7 @@ schema: {
         headline: 'Meilleurs petits LLMs locaux 2026 : modèles sub-4B pour machines à faible RAM',
         description: 'Meilleurs petits LLMs locaux 2026 : Phi-4 Mini (reasoning), Gemma 4 E2B (contexte 128K, edge), Qwen3 (codage), Llama 3.2 (utilisation générale). Comparaison complète pour RAM faible.',
         datePublished: '2026-04-04',
-        dateModified: '2026-08-27',
+        dateModified: '2026-08-28',
         'url': 'https://www.promptquorum.com/fr/local-llms/small-local-llm-models',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -1248,7 +1269,12 @@ schema: {
         ],
       },
       sections: {
-        tldr: { id: 'key-takeaways', isTldr: true, items: ['**Meilleur raisonnement à petite échelle** : Phi-4 Mini 3.8B -- 68% MMLU, 70% HumanEval, fonctionne sur 4 Go de RAM.', '**Meilleur petit modèle/edge** : Gemma 4 E2B -- MMLU Pro 60 %, contexte 128K, ~2 Go RAM, Apache 2.0. Remplace l\'ancien Gemma 2 2B.', '**Meilleur petit modèle de codage** : Qwen3 3B -- 65% HumanEval avec environ 2 Go de RAM.', '**Meilleur usage général 3B** : Llama 3.2 3B -- meilleur support communautaire, contexte 128K, 2,5 Go de RAM.', "Depuis avril 2026, aucun modèle sub-2B ne produit une qualité de sortie adaptée aux tâches professionnelles. Utilisez 3B ou plus pour un vrai travail."] },
+        tldr: { id: 'key-takeaways', isTldr: true,
+ snippetBlocks: [
+    { type: 'one-sentence', text: "Les petits LLM locaux (1B-4B paramètres) tournent sur des machines avec 4-8 Go de RAM à 30-70 tokens/sec, Phi-4 Mini 3.8B en tête pour le raisonnement, Gemma 4 E2B idéal pour les petits appareils/edge avec un contexte de 128K, Qwen3 3B meilleur pour le code, et Llama 3.2 3B meilleur pour l'usage général." },
+    { type: 'plain-terms', text: "Même avec seulement 4-8 Go de RAM sur votre portable, vous pouvez faire tourner des modèles d'IA -- juste plus petits. Ces modèles sub-4B sont assez rapides pour du chat en temps réel et gèrent bien les tâches simples comme le résumé, les questions-réponses basiques et la traduction de textes courts, mais ont du mal avec le raisonnement multi-étapes ou la rédaction de longs documents cohérents. Pour la plupart des tâches, ils restent néanmoins un bon choix pour du matériel d'entrée de gamme." },
+  ],
+ items: ['**Meilleur raisonnement à petite échelle** : Phi-4 Mini 3.8B -- 68% MMLU, 70% HumanEval, fonctionne sur 4 Go de RAM.', '**Meilleur petit modèle/edge** : Gemma 4 E2B -- MMLU Pro 60 %, contexte 128K, ~2 Go RAM, Apache 2.0. Remplace l\'ancien Gemma 2 2B.', '**Meilleur petit modèle de codage** : Qwen3 3B -- 65% HumanEval avec environ 2 Go de RAM.', '**Meilleur usage général 3B** : Llama 3.2 3B -- meilleur support communautaire, contexte 128K, 2,5 Go de RAM.', "Depuis avril 2026, aucun modèle sub-2B ne produit une qualité de sortie adaptée aux tâches professionnelles. Utilisez 3B ou plus pour un vrai travail."] },
         whatIsSmall: { title: 'Qu\'est-ce qu\'un "petit" LLM local et quand devriez-vous en utiliser un ?', content: ['**Un petit LLM local est généralement défini comme un modèle avec moins de 4 milliards de paramètres.** Avec la quantification Q4_K_M, ces modèles nécessitent 1,5-3 Go de RAM -- bien dans les contraintes des ordinateurs portables d\'entrée de gamme avec 4-8 Go de mémoire totale.', "Depuis avril 2026, les petits modèles conviennent pour : la synthèse rapide, le Q&R simple, l'explication de fragments de code, la traduction de textes courts et les tâches de classification. Ils ne conviennent pas au raisonnement multi-étapes, à la génération de code complexe ou à la rédaction de documents longs et cohérents.", "L'écart de qualité entre un modèle 3B et 7B est significatif -- environ l'équivalent de l'écart entre GPT-4o mini et GPT-5.5. Pour les utilisateurs avec 8 Go de RAM, un modèle 7B en Q4_K_M est presque toujours le meilleur choix si la machine en a les capacités. Voir [Meilleurs modèles LLM locaux pour débutants](/local-llms/best-beginner-local-llm-models) pour les recommandations 7B."] },
         modelSelectionGuide: { title: 'Quel modèle devriez-vous utiliser ? Guide de décision rapide', image: '/images/small-llm-decision-tree-mockup.svg', imageCaption: "Arbre de décision : choisir par priorité (raisonnement, vitesse ou codage). Par défaut Llama 3.2 3B si vous n'êtes pas sûr." },
         phi4mini: { title: 'Phi-4 Mini 3.8B -- Meilleures performances de raisonnement dans la classe sub-4B', content: ["**Microsoft Phi-4 Mini atteint 68% sur MMLU et 70% sur HumanEval -- des scores qui dépassent beaucoup de modèles 7B publiés avant 2025.** C'est possible parce que Phi-4 Mini a été entraîné sur un ensemble de données synthétiques sélectionné, axé sur le raisonnement et la résolution de problèmes, plutôt que sur du texte web généraliste.", "Depuis avril 2026, Phi-4 Mini est le choix recommandé pour les utilisateurs qui ont principalement besoin de raisonnement (mathématiques, logique, explications pas à pas) ou d'assistance au codage sur du matériel avec 4-6 Go de RAM."], rows: [{ 'Spec': 'MMLU', 'Value': '68%' }, { 'Spec': 'HumanEval', 'Value': '70%' }, { 'Spec': 'RAM (Q4_K_M)', 'Value': '~2,5 Go' }, { 'Spec': 'Contexte', 'Value': '128K tokens' }, { 'Spec': 'Vitesse CPU', 'Value': '30-50 tok/sec' }, { 'Spec': 'Commande Ollama', 'Value': 'ollama run phi4-mini' }], columns: ['Spec', 'Value'] },
@@ -1281,7 +1307,7 @@ schema: {
         headline: '最高の小規模ローカルLLM 2026：低RAM向けSub-4Bモデル',
         description: '最高の小規模ローカルLLM 2026：Phi-4 Mini（推論）、Gemma 4 E2B（128Kコンテキスト、エッジ）、Qwen3（コーディング）、Llama 3.2（一般用途）。RAM制限されたマシン向けの完全な比較。',
         datePublished: '2026-04-04',
-        dateModified: '2026-08-27',
+        dateModified: '2026-08-28',
         'url': 'https://www.promptquorum.com/ja/local-llms/small-local-llm-models',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -1324,6 +1350,10 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: '小型ローカルLLM（1B〜4Bパラメータ）は4〜8GBのRAMを搭載したマシンで秒間30〜70トークンで動作し、推論ではPhi-4 Mini 3.8Bが優れ、128Kコンテキストを持つ小型・エッジ用途にはGemma 4 E2B、コーディングにはQwen3 3B、汎用にはLlama 3.2 3Bが最適です。' },
+            { type: 'plain-terms', text: 'ノートパソコンのRAMが4〜8GBしかなくても、小型のAIモデルなら動かせます。これらの4B未満のモデルはリアルタイムチャットに十分な速度があり、要約、簡単な質疑応答、短い文章の翻訳などのシンプルなタスクをうまくこなしますが、複数ステップの推論や長く一貫した文章を書くのは苦手です。それでも、ほとんどのタスクではエントリーレベルのハードウェアに適した選択肢です。' },
+          ],
           items: [
             '**小規模スケールでの最高の推論**: Phi-4 Mini 3.8B -- 68% MMLU、70% HumanEval、4 GB RAMで動作。',
             '**最良の小型/エッジモデル**: Gemma 4 E2B -- MMLU Pro 60%、128Kコンテキスト、約2 GB RAM、Apache 2.0。旧Gemma 2 2Bを置き換え。',
@@ -1519,7 +1549,7 @@ schema: {
         headline: '2026年最佳小型本地LLM：低RAM机器的Sub-4B模型',
         description: '2026年最佳小型本地LLM：Phi-4 Mini（推理）、Gemma 4 E2B（128K上下文，边缘设备）、Qwen3（编码）、Llama 3.2（通用）。RAM受限机器的完整比较。',
         datePublished: '2026-04-04',
-        dateModified: '2026-08-27',
+        dateModified: '2026-08-28',
         'url': 'https://www.promptquorum.com/zh/local-llms/small-local-llm-models',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -1562,6 +1592,10 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: '小型本地LLM（1B-4B参数）可在4-8 GB内存的设备上以每秒30-70个令牌的速度运行，Phi-4 Mini 3.8B在推理方面领先，Gemma 4 E2B最适合支持128K上下文的小型/边缘设备，Qwen3 3B最适合编程，Llama 3.2 3B最适合通用用途。' },
+            { type: 'plain-terms', text: '如果你的笔记本电脑只有4-8 GB内存，仍然可以运行AI模型——只是需要更小的模型。这些4B以下的模型速度足以支持实时聊天，并能很好地处理摘要、简单问答和短文本翻译等简单任务，但在多步推理或撰写长篇连贯文档方面表现较弱。不过，对于大多数任务来说，它们仍是入门级硬件的不错选择。' },
+          ],
           items: [
             '**小规模规模的最佳推理**: Phi-4 Mini 3.8B -- 68% MMLU，70% HumanEval，运行于4 GB RAM。',
             '**最佳小型/边缘模型**: Gemma 4 E2B -- MMLU Pro 60%，128K上下文，约2GB RAM，Apache 2.0许可证。取代旧款Gemma 2 2B。',
@@ -1778,7 +1812,7 @@ schema: {
         headline: '소형 로컬 LLM 모델: 2026년 저용량 RAM 기기를 위한 최고의 4B 미만 모델',
         description: '소형 로컬 LLM(1B~4B 파라미터)은 RAM 4~8GB 기기에서 실행되며 CPU에서 초당 30~70 토큰을 생성합니다 -- 실시간 채팅에 충분한 속도입니다.',
         datePublished: '2026-04-04',
-        dateModified: '2026-08-27',
+        dateModified: '2026-08-28',
         'url': 'https://www.promptquorum.com/local-llms/small-local-llm-models',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -1824,6 +1858,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: '소형 로컬 LLM(1B-4B 파라미터)은 4-8GB RAM 기기에서 초당 30-70토큰으로 동작하며, 추론에서는 Phi-4 Mini 3.8B가 앞서고, 128K 컨텍스트를 지원하는 소형/엣지 기기에는 Gemma 4 E2B, 코딩에는 Qwen3 3B, 범용에는 Llama 3.2 3B가 가장 적합합니다.' },
+            { type: 'plain-terms', text: '노트북에 RAM이 4-8GB밖에 없어도 AI 모델을 실행할 수 있습니다 -- 다만 더 작은 모델이어야 합니다. 이 4B 미만 모델들은 실시간 채팅에 충분히 빠르며, 요약, 간단한 질의응답, 짧은 텍스트 번역 같은 간단한 작업은 잘 처리하지만, 여러 단계에 걸친 추론이나 길고 일관된 문서 작성에는 약합니다. 그래도 대부분의 작업에는 입문용 하드웨어에 잘 맞는 선택입니다.' },
+          ],
           items: [
             '**소형 규모에서 최고 추론 성능**: Phi-4 Mini 3.8B -- MMLU 68%, HumanEval 70%, RAM 4 GB에서 실행 가능.',
             '**최고의 소형/엣지 모델**: Gemma 4 E2B -- MMLU Pro 60%, 컨텍스트 128K, RAM 약 2 GB, Apache 2.0. 이전 Gemma 2 2B를 대체합니다.',
