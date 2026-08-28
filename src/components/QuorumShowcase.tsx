@@ -375,18 +375,21 @@ TARGET AUDIENCE FIT:
 
       {/* Action Links */}
       <div className="text-center space-y-3">
-        <div className="flex justify-center items-center gap-3 text-sm">
-          <a href="#" className="text-purple-600 font-semibold hover:text-purple-700 transition-colors">
+        {/* This is a static mock-up of the app's action row, not navigation. They were
+            `href="#"` anchors, which scroll to the top of the page and otherwise do nothing;
+            rendering them as spans stops them advertising themselves as clickable. */}
+        <div className="flex justify-center items-center gap-3 text-sm" aria-hidden="true">
+          <span className="text-purple-600 font-semibold">
             {t.saveToHistory}
-          </a>
+          </span>
           <span className="text-gray-300">•</span>
-          <a href="#" className="text-purple-600 font-semibold hover:text-purple-700 transition-colors">
+          <span className="text-purple-600 font-semibold">
             {t.startNewAnalysis}
-          </a>
+          </span>
           <span className="text-gray-300">•</span>
-          <a href="#" className="text-red-600 font-semibold hover:text-red-700 transition-colors">
+          <span className="text-red-600 font-semibold">
             {t.clearSession}
-          </a>
+          </span>
         </div>
       </div>
     </div>

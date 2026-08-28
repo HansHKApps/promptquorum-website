@@ -41,6 +41,11 @@ export function OneSignalInit() {
       script.id = 'onesignal-sdk'
       script.src = 'https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js'
       script.defer = true
+      // This is the only genuinely cross-origin script on the site (the analytics tags are
+      // same-origin via the rewrites in next.config.ts). Without crossorigin its failures
+      // reach window.onerror as an opaque "Script error." with no stack — which is what the
+      // dominant error bucket in Clarity looks like.
+      script.crossOrigin = 'anonymous'
       document.head.appendChild(script)
     }
 

@@ -244,7 +244,7 @@ function BlogPostClientContent({ post, slug, initialLang, availableLangs }: Blog
 
                 {/* Image with caption */}
                 {section.image && (
-                  <figure className="my-8 cursor-zoom-in" onClick={() => setLightboxImage({
+                  <figure role="button" tabIndex={0} onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); e.currentTarget.click() } }} className="my-8 cursor-zoom-in" onClick={() => setLightboxImage({
                     src: section.image!,
                     alt: section.imageCaption || 'Article illustration',
                     caption: section.imageCaption,
@@ -329,9 +329,12 @@ function BlogPostClientContent({ post, slug, initialLang, availableLangs }: Blog
                 {/* FAQ Section */}
                 {section.faqs && section.faqs.length > 0 && (
                   <div className="my-8 space-y-4">
+                    {/* cursor-pointer and the hover tint belong on the <summary>, not the
+                        <details> — on the wrapper they advertise the answer body and the card
+                        padding as clickable when only the question row toggles. */}
                     {section.faqs.map((faq, idx) => (
-                      <details key={idx} className="p-4 border border-text-tertiary rounded-lg cursor-pointer hover:bg-primary/5 transition-colors group [&_summary::-webkit-details-marker]:hidden">
-                        <summary className="font-bold text-text-primary flex justify-between items-center list-none">
+                      <details key={idx} className="p-4 border border-text-tertiary rounded-lg transition-colors group [&_summary::-webkit-details-marker]:hidden">
+                        <summary className="font-bold text-text-primary flex justify-between items-center list-none cursor-pointer hover:text-primary transition-colors">
                           <span>{faq.q}</span>
                           <span className="text-primary text-lg flex-shrink-0 group-open:rotate-45 transition-transform">+</span>
                         </summary>

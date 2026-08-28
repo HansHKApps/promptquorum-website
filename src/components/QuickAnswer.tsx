@@ -36,7 +36,10 @@ export function QuickAnswer({
   return (
     <>
 
+      {/* Several articles list "#quick-answer" in their table of contents; without an id
+          here those entries were dead clicks. */}
       <div
+        id="quick-answer"
         className="bg-slate-900 border border-teal-700/30 border-l-4 border-l-teal-600 rounded-lg p-6 mb-8 max-w-full"
         role="complementary"
         aria-label={label.title}

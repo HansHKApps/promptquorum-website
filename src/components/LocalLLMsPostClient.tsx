@@ -15,6 +15,7 @@ import { CostCalculator } from '@/components/CostCalculator'
 import { QuickAnswer } from '@/components/QuickAnswer'
 import { ImageLightbox } from '@/components/ImageLightbox'
 import { parseContentBlocks } from '@/lib/parseContentBlocks'
+import { slugifySectionId } from '@/lib/sectionAnchor'
 import { FactsDisclaimer } from '@/components/FactsDisclaimer'
 import { AFFILIATE_DISCLOSURE } from '@/lib/tracking/affiliate'
 import { AffiliateLink } from '@/components/AffiliateLink'
@@ -631,7 +632,7 @@ function SectionBlock({ section, colors, id, lang, renderLinks }: { section: LLM
 
       {/* Image with caption */}
       {section.image && (
-        <figure className="my-8 flex flex-col items-center cursor-zoom-in" onClick={() => setLightboxImage({
+        <figure role="button" tabIndex={0} onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); e.currentTarget.click() } }} className="my-8 flex flex-col items-center cursor-zoom-in" onClick={() => setLightboxImage({
           src: section.image!,
           alt: section.imageCaption || (section.title ? `${section.title} diagram` : 'PromptQuorum article diagram'),
           caption: section.imageCaption,
@@ -1010,7 +1011,7 @@ function LocalLLMsPostContent({ slug, initialLang, articleData }: Props) {
         {/* Sections */}
         <article className="key-takeaways-container">
           {Object.entries(article.sections).map(([key, section]) => {
-            const sectionId = section.isTldr ? (section.id ?? 'key-takeaways') : (section.id ?? (section.title ? section.title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') : undefined))
+            const sectionId = slugifySectionId(section, key)
             return (
               <SectionBlock key={key} section={section} colors={colors} id={sectionId} lang={lang} renderLinks={renderLinks} />
             )

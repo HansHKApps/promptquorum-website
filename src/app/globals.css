@@ -33,6 +33,14 @@
     @apply border-border;
   }
 
+  /* The site header is `fixed` and 4rem tall (HeaderClient.tsx, `h-16`), so without
+     this every in-page anchor — table-of-contents links, FAQ deep links — scrolls its
+     target heading underneath the header. It reads as "the link did nothing", which is
+     what drove the re-clicks Clarity logged as rage clicks. 5rem = header + breathing room. */
+  html {
+    scroll-padding-top: 5rem;
+  }
+
   body {
     @apply bg-background text-foreground font-sans;
     font-feature-settings: "rlig" 1, "calt" 1;
