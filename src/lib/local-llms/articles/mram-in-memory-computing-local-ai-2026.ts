@@ -4,8 +4,8 @@ import type { LLMArticle } from "@/lib/local-llms/types";
 export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-12-15',
-    last_full_refresh: '2026-06-15',
+    next_refresh_due: '2027-02-28',
+    last_full_refresh: '2026-08-28',
     next_seo_review_due: '2026-09-15',
     theme: 'Hardware & Performance',
     heroImage: '/images/mram-in-memory-computing-local-ai-2026-overview-hero-en.webp',
@@ -15,7 +15,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription: 'MRAM in-memory computing vs HBM and DRAM for on-device AI: will MRAM replace DRAM, is it the future, and how it differs from Qualcomm HBC. 2026 status + timeline.',
     twitterDescription: 'MRAM & in-memory computing could cut AI inference energy by eliminating data-movement bottleneck. Samsung proved it works; SemiFive tape-out May 2026. Current status: R&D, not consumer yet.',
     publishDate: '2026-06-15',
-    dateModified: '2026-07-01',
+    dateModified: '2026-08-28',
     readTime: '12 min',
     educationalLevel: 'Intermediate',
     audience: 'Hardware enthusiasts, AI engineers, and edge AI builders tracking emerging memory technologies',
@@ -27,7 +27,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'What Is MRAM?', anchor: '#what-is-mram' },
       { label: 'The Memory Bottleneck in On-Device AI', anchor: '#memory-bottleneck' },
       { label: 'How In-Memory Computing Attacks the Problem', anchor: '#in-memory-computing' },
-      { label: 'Where MRAM Stands Today (June 2026)', anchor: '#mram-status-2026' },
+      { label: 'Where MRAM Stands Today (August 2026)', anchor: '#mram-status-2026' },
       { label: 'MRAM vs HBM vs DRAM vs LPDDR5', anchor: '#comparison-table' },
       { label: 'The Software Alternative: TurboQuant KV-Cache Compression', anchor: '#software-alternative' },
       { label: 'If MRAM Reaches Consumer Devices', anchor: '#consumer-impact' },
@@ -41,7 +41,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**MRAM (Magnetoresistive RAM):** Non-volatile memory using magnetic tunnel junctions (MTJ). No refresh required, no standby power drain. Byte-addressable like DRAM.',
           '**In-memory computing:** Perform multiply-accumulate (MAC) operations directly inside the memory array. Eliminates data movement between CPU/GPU and memory — the #1 energy cost in inference.',
           '**Current status:** Samsung SAIT demonstrated on Nature paper (2022) with 98% accuracy on image tasks. SemiFive + ICYTech achieved 8nm eMRAM tape-out (May 2026). No consumer products yet.',
-          '**The catch:** Tape-out ≠ silicon returned ≠ shipped product. Real power efficiency numbers TBD. Consumer phones/PCs unlikely before 2029–2031.',
+          '**The catch:** Tape-out ≠ silicon returned ≠ shipped product — the SemiFive/ICYTech chip has not shipped as of August 2026. New academic test chips (IEEE JSSC, 2026) have since published the first real MRAM compute-in-memory efficiency numbers — up to 492.8 TOPS/W — but these are lab silicon, not the SemiFive product. Consumer phones/PCs unlikely before 2029–2031.',
           '**Alternative:** Google TurboQuant (ICLR 2026) compresses KV cache to 3 bits with zero accuracy loss — a software-only approach to the same problem, available now.',
         ],
       },
@@ -59,7 +59,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**High endurance:** Commercial MRAM achieves 10^10 to 10^14 write cycles. DRAM/SRAM are ~10^16 (effectively unlimited). NAND Flash is 10^3–10^5. MRAM is vastly better than Flash, comparable to DRAM.',
           '**Process integration:** Samsung, TSMC, and others can embed MRAM directly into logic dies at 28nm, 14nm, and smaller nodes.',
         ],
-        note: 'Everspin Technologies is the world\'s leading standalone MRAM supplier. Samsung has mass-produced eMRAM (embedded MRAM) since 2019. TSMC, Renesas, Avalanche Technology, and GlobalFoundries also produce MRAM in various nodes. As of June 2026, STMicroelectronics focuses on other emerging NVMs (e.g., PCRAM) rather than MRAM.',
+        note: 'Everspin Technologies is the world\'s leading standalone MRAM supplier — it reported Q2 2026 revenue of $18.7 million (up from $13.2 million a year earlier) and a $40 million U.S. Defense Industrial Base contract, though this growth is driven by industrial, automotive, and defense customers, not AI specifically. Samsung has mass-produced eMRAM (embedded MRAM) since 2019. TSMC, Renesas, Avalanche Technology, and GlobalFoundries also produce MRAM in various nodes. Ainekko, formed from a January 2026 merger with Veevx, is a newer entrant building an MRAM-based embedded memory called iRAM aimed at edge AI accelerators. As of August 2026, STMicroelectronics focuses on other emerging NVMs (e.g., PCRAM) rather than MRAM.',
       },
       'memory-bottleneck': {
         id: 'memory-bottleneck',
@@ -96,7 +96,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'mram-status-2026': {
         id: 'mram-status-2026',
-        title: 'Where MRAM Stands Today (June 2026)',
+        title: 'Where MRAM Stands Today (August 2026)',
         content: [
           '**Samsung SAIT Nature Paper (January 2022):**',
         ],
@@ -111,8 +111,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Claimed capability: On-device inference for models up to 2 billion parameters without network connectivity.',
           'Target: Text summarization, translation, conversational reasoning on edge AI, humanoid robots, automotive.',
           'First commercialization targeted for Asia; no North American timeline announced.',
+          '**New since June 2026 — academic compute-in-memory silicon:** The IEEE Journal of Solid-State Circuits published two MRAM-based compute-in-memory test chips in 2026: a 64Mb STT-MRAM near-memory-compute macro built in 28nm CMOS reaching 316 TOPS/W at 1-bit precision, and a separate STT-MRAM sparsity-adaptive compute-in-memory macro reaching 492.8 TOPS/W.',
+          'These are university/lab research chips, not commercial products, and are not directly comparable to the SemiFive/ICYTech edge SoC (different node, different scope) — but they are the first publicly quantified power-efficiency numbers for MRAM in-memory compute, filling the gap this article previously flagged as undisclosed.',
         ],
-        note: 'Status as of mid-June 2026: R&D and early silicon only. No consumer PCs or phones have announced MRAM integration. The SemiFive/ICYTech tape-out is a milestone but not a product launch.',
+        note: 'Status as of late August 2026: R&D and early silicon only. No consumer PCs or phones have announced MRAM integration. The SemiFive/ICYTech tape-out is a milestone but not a product launch — silicon has still not been reported back or benchmarked as of this update.',
       },
       'comparison-table': {
         id: 'comparison-table',
@@ -201,7 +203,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Battery longevity:** No standby refresh drain on the memory subsystem. For always-on AI features (background listening, privacy-preserving analytics), energy savings are multiplicative.',
           '**Larger models on fixed power budget:** If in-memory computing achieves 2–10× energy efficiency over LPDDR5 + compute separation, phones could run 5B–10B models with the same battery impact as today\'s 1B–2B models.',
         ],
-        note: 'However, these benefits are conditional on MRAM reaching consumer density and cost targets. Current eMRAM is suitable for small caches (1–100 MB embedded in microcontrollers and edge AI SoCs). Phone-scale deployment (8–16 GB unified memory equivalent) would require foundries to solve density and yield challenges that remain unsolved as of June 2026.',
+        note: 'However, these benefits are conditional on MRAM reaching consumer density and cost targets. Current eMRAM is suitable for small caches (1–100 MB embedded in microcontrollers and edge AI SoCs). Phone-scale deployment (8–16 GB unified memory equivalent) would require foundries to solve density and yield challenges that remain unsolved as of August 2026.',
       },
       'timeline': {
         id: 'timeline',
@@ -238,7 +240,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'Is MRAM available to buy now for my PC or phone?',
-            a: 'No. MRAM is in production for industrial microcontrollers, automotive chips, and enterprise storage. For consumer AI, it is R&D only as of June 2026. The SemiFive/ICYTech chip is tape-out stage — silicon not yet returned. Consumer deployment realistically 3–5+ years away.',
+            a: 'No. MRAM is in production for industrial microcontrollers, automotive chips, and enterprise storage. For consumer AI, it is R&D only as of August 2026. The SemiFive/ICYTech chip is still at tape-out stage — silicon not yet returned or benchmarked. Consumer deployment realistically 3–5+ years away.',
           },
           {
             q: 'Will MRAM replace my GPU\'s VRAM?',
@@ -262,7 +264,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'How much power does MRAM save compared to DRAM?',
-            a: 'For standby (no refresh): MRAM saves ~0.5–1 mW per gigabyte. For active inference with in-memory compute: Samsung\'s press release claims "substantial" reduction due to eliminating data movement, but specific quantified savings are not publicly disclosed. Real numbers will come when silicon ships and is benchmarked independently.',
+            a: 'For standby (no refresh): MRAM saves ~0.5–1 mW per gigabyte. For active inference with in-memory compute: Samsung\'s press release claims "substantial" reduction due to eliminating data movement, but Samsung has not disclosed specific quantified savings. The first real quantified numbers come from academic test chips published in 2026 (IEEE JSSC): a 64Mb STT-MRAM near-memory-compute macro reaching 316 TOPS/W and a separate sparsity-adaptive compute-in-memory macro reaching 492.8 TOPS/W. These are lab silicon, not the SemiFive/ICYTech product — commercial silicon numbers will come when that chip ships and is benchmarked independently.',
           },
           {
             q: 'Will MRAM replace DRAM?',
@@ -270,7 +272,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Did Qualcomm solve the memory bottleneck in 2026?',
-            a: 'Qualcomm announced HBC (High-Bandwidth Compute) under its Dragonfly brand at its 2026 Investors Day — a near-memory architecture that stacks a compute accelerator beneath the LPDDR memory using through-silicon vias (TSV), claiming roughly 6x bandwidth-per-watt versus HBM and 200x capacity-per-watt versus SRAM. Three distinctions matter: HBC is near-memory (compute beside memory), not MRAM in-memory computing (compute inside the memory array); it targets data-center AI accelerators (AI250/AI300), not phones; and first-generation HBC is scheduled for mid-2027, so nothing shipped in 2026. It is a different approach to the same memory-wall problem, not an MRAM breakthrough.',
+            a: 'Qualcomm announced HBC (High-Bandwidth Compute) under its Dragonfly brand at its 2026 Investors Day — a near-memory architecture that stacks a compute accelerator beneath the LPDDR memory using through-silicon vias (TSV), claiming roughly 6x bandwidth-per-watt versus HBM and 200x capacity-per-watt versus SRAM. Microsoft has since confirmed it will deploy HBC on Azure, and Qualcomm has booked orders from Meta and Microsoft for the Dragonfly AI250/AI300 accelerators — real commercial traction for the roadmap, not a shipped product yet. Three distinctions still matter: HBC is near-memory (compute beside memory), not MRAM in-memory computing (compute inside the memory array); it targets data-center AI accelerators, not phones; and first-generation HBC (AI250) commercial sampling is scheduled for mid-2027, with HBC Gen 2 (AI300) targeted for 2028 — so nothing has shipped as of August 2026. It is a different approach to the same memory-wall problem, not an MRAM breakthrough.',
           },
         ],
       },
@@ -287,7 +289,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   de: {
-    freshness_tier: 'semi_annual', next_refresh_due: '2026-12-15', theme: 'Hardware & Performance', title: 'MRAM und In-Memory-Computing: Der nächste Sprung für On-Device-KI?', seoTitle: 'MRAM vs HBM In-Memory-Computing 2026: On-Device-KI', intro: 'MRAM und In-Memory-Computing-Architekturen könnten On-Device-KI durch Berechnung im Speicher selbst umgestalten und den energieintensiven Datentransport-Engpass beseitigen. Samsungs Forschung zeigt Konzeptbeweis; SemiFive und ICYTech erreichten Silicon Tape-Out im Mai 2026 für 2B-Parameter-Edge-AI-Chips. Allerdings befindet sich MRAM noch in der F&E-Phase — nicht in Consumer-Geräten.', metaDescription: 'MRAM In-Memory-Computing vs HBM und DRAM für On-Device-KI: Ersetzt MRAM DRAM, ist es die Zukunft und wie unterscheidet es sich von Qualcomm HBC. Status 2026 + Zeitplan.', publishDate: '2026-06-15', dateModified: '2026-07-01', readTime: '12 min', educationalLevel: 'Intermediate', audience: 'Hardware-Enthusiasten, KI-Ingenieure und Edge-KI-Builder', primaryTerm: 'MRAM In-Memory-Computing', affiliateDisclosure: false, toc: [{ label: 'Was ist MRAM?', anchor: '#what-is-mram' }, { label: 'Der Speicher-Engpass in On-Device-KI', anchor: '#memory-bottleneck' }, { label: 'Wie In-Memory-Computing das Problem angreift', anchor: '#in-memory-computing' }, { label: 'Wo MRAM heute steht (Juni 2026)', anchor: '#mram-status-2026' }, { label: 'MRAM vs HBM vs DRAM vs LPDDR5', anchor: '#comparison-table' }, { label: 'Die Software-Alternative: TurboQuant', anchor: '#software-alternative' }, { label: 'Wenn MRAM Consumer-Geräte erreicht', anchor: '#consumer-impact' }, { label: 'Zeitplan', anchor: '#timeline' }, { label: 'FAQ', anchor: '#faq' }], leadAnswerBlock: 'MRAM ist nicht-flüchtiger Magnetspeicher mit Null-Standby-Power und Byte-Adressierbarkeit; In-Memory-Computing führt die neuronale Netzwerk-Mathematik im Speicher-Array selbst aus und eliminiert den energieintensiven Datentransport. Ist es die Zukunft der On-Device-KI? Vielversprechend, aber unbewiesen — Samsung demonstrierte einen Proof-of-Concept in Nature 2022, und SemiFive/ICYTech brachten im Mai 2026 einen 8nm-eMRAM-Edge-SoC (bis zu 2B Parameter) zum Tape-Out, aber es wurde noch kein Silizium ausgeliefert. Ersetzt MRAM DRAM? Nein — es ergänzt DRAM als stromsparende, nicht-flüchtige Kachel, nicht als Bandbreiten-Ersatz (HBM4 und LPDDR6 dominieren weiterhin die Bandbreite). Es unterscheidet sich zudem von Qualcomm HBC, das near-memory, auf Rechenzentren ausgerichtet und für 2027 vorgesehen ist. Der Consumer-Einsatz (Smartphones, PCs) ist realistisch 3–5+ Jahre entfernt.', 
+    freshness_tier: 'semi_annual', next_refresh_due: '2027-02-28', theme: 'Hardware & Performance', title: 'MRAM und In-Memory-Computing: Der nächste Sprung für On-Device-KI?', seoTitle: 'MRAM vs HBM In-Memory-Computing 2026: On-Device-KI', intro: 'MRAM und In-Memory-Computing-Architekturen könnten On-Device-KI durch Berechnung im Speicher selbst umgestalten und den energieintensiven Datentransport-Engpass beseitigen. Samsungs Forschung zeigt Konzeptbeweis; SemiFive und ICYTech erreichten Silicon Tape-Out im Mai 2026 für 2B-Parameter-Edge-AI-Chips. Allerdings befindet sich MRAM noch in der F&E-Phase — nicht in Consumer-Geräten.', metaDescription: 'MRAM In-Memory-Computing vs HBM und DRAM für On-Device-KI: Ersetzt MRAM DRAM, ist es die Zukunft und wie unterscheidet es sich von Qualcomm HBC. Status 2026 + Zeitplan.', publishDate: '2026-06-15', dateModified: '2026-08-28', readTime: '12 min', educationalLevel: 'Intermediate', audience: 'Hardware-Enthusiasten, KI-Ingenieure und Edge-KI-Builder', primaryTerm: 'MRAM In-Memory-Computing', affiliateDisclosure: false, toc: [{ label: 'Was ist MRAM?', anchor: '#what-is-mram' }, { label: 'Der Speicher-Engpass in On-Device-KI', anchor: '#memory-bottleneck' }, { label: 'Wie In-Memory-Computing das Problem angreift', anchor: '#in-memory-computing' }, { label: 'Wo MRAM heute steht (August 2026)', anchor: '#mram-status-2026' }, { label: 'MRAM vs HBM vs DRAM vs LPDDR5', anchor: '#comparison-table' }, { label: 'Die Software-Alternative: TurboQuant', anchor: '#software-alternative' }, { label: 'Wenn MRAM Consumer-Geräte erreicht', anchor: '#consumer-impact' }, { label: 'Zeitplan', anchor: '#timeline' }, { label: 'FAQ', anchor: '#faq' }], leadAnswerBlock: 'MRAM ist nicht-flüchtiger Magnetspeicher mit Null-Standby-Power und Byte-Adressierbarkeit; In-Memory-Computing führt die neuronale Netzwerk-Mathematik im Speicher-Array selbst aus und eliminiert den energieintensiven Datentransport. Ist es die Zukunft der On-Device-KI? Vielversprechend, aber unbewiesen — Samsung demonstrierte einen Proof-of-Concept in Nature 2022, und SemiFive/ICYTech brachten im Mai 2026 einen 8nm-eMRAM-Edge-SoC (bis zu 2B Parameter) zum Tape-Out, aber es wurde noch kein Silizium ausgeliefert. Ersetzt MRAM DRAM? Nein — es ergänzt DRAM als stromsparende, nicht-flüchtige Kachel, nicht als Bandbreiten-Ersatz (HBM4 und LPDDR6 dominieren weiterhin die Bandbreite). Es unterscheidet sich zudem von Qualcomm HBC, das near-memory, auf Rechenzentren ausgerichtet und für 2027 vorgesehen ist. Der Consumer-Einsatz (Smartphones, PCs) ist realistisch 3–5+ Jahre entfernt.', 
     heroImage: '/images/mram-in-memory-computing-local-ai-2026-overview-hero-de.webp',
     sections: {
     'intro-tldr': {
@@ -296,7 +298,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '**MRAM (Magnetoresistive RAM):** Nicht-flüchtiger Speicher auf Basis magnetischer Tunnelübergänge (MTJ). Kein Refresh erforderlich, kein Standby-Stromverbrauch. Byte-adressierbar wie DRAM.',
         '**In-Memory-Computing:** Multiply-Accumulate-Operationen (MAC) werden direkt im Speicher-Array ausgeführt. Eliminiert den Datentransport zwischen CPU/GPU und Speicher — der größte Energiekostenfaktor bei der Inferenz.',
         '**Aktueller Status:** Samsung SAIT demonstrierte es im Nature-Paper (2022) mit 98 % Genauigkeit bei Bildaufgaben. SemiFive + ICYTech erreichten den 8nm-eMRAM-Tape-Out (Mai 2026). Noch keine Consumer-Produkte.',
-        '**Der Haken:** Tape-Out ≠ zurückgeliefertes Silizium ≠ ausgeliefertes Produkt. Reale Zahlen zur Energieeffizienz stehen noch aus. Consumer-Smartphones/PCs sind vor 2029–2031 unwahrscheinlich.',
+        '**Der Haken:** Tape-Out ≠ zurückgeliefertes Silizium ≠ ausgeliefertes Produkt — der SemiFive/ICYTech-Chip ist Stand August 2026 noch nicht ausgeliefert. Neue akademische Testchips (IEEE JSSC, 2026) haben inzwischen die ersten realen Energieeffizienzzahlen für MRAM-In-Memory-Compute veröffentlicht — bis zu 492,8 TOPS/W — dabei handelt es sich aber um Laborsilizium, nicht um das SemiFive-Produkt. Consumer-Smartphones/PCs sind vor 2029–2031 unwahrscheinlich.',
         '**Alternative:** Google TurboQuant (ICLR 2026) komprimiert den KV-Cache auf 3 Bit ohne Genauigkeitsverlust — ein rein softwarebasierter Ansatz für dasselbe Problem, bereits heute verfügbar.',
       ],
     },
@@ -314,7 +316,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '**Hohe Ausdauer:** Kommerzielles MRAM erreicht 10^10 bis 10^14 Schreibzyklen. DRAM/SRAM liegen bei ~10^16 (praktisch unbegrenzt). NAND-Flash liegt bei 10^3–10^5. MRAM ist Flash weit überlegen und vergleichbar mit DRAM.',
         '**Prozessintegration:** Samsung, TSMC und andere können MRAM direkt in Logik-Dies bei 28nm, 14nm und kleineren Nodes einbetten.',
       ],
-      note: 'Everspin Technologies ist der weltweit führende Anbieter von eigenständigem MRAM. Samsung produziert eMRAM (embedded MRAM) seit 2019 in Serie. TSMC, Renesas, Avalanche Technology und GlobalFoundries fertigen MRAM ebenfalls in verschiedenen Nodes. Stand Juni 2026 konzentriert sich STMicroelectronics auf andere aufkommende NVMs (z. B. PCRAM) statt auf MRAM.',
+      note: 'Everspin Technologies ist der weltweit führende Anbieter von eigenständigem MRAM — im zweiten Quartal 2026 meldete das Unternehmen einen Umsatz von 18,7 Millionen US-Dollar (gegenüber 13,2 Millionen im Vorjahr) sowie einen 40-Millionen-Dollar-Auftrag mit der US-Verteidigungsindustrie, wobei dieses Wachstum von Industrie-, Automobil- und Verteidigungskunden getrieben wird, nicht speziell von KI. Samsung produziert eMRAM (embedded MRAM) seit 2019 in Serie. TSMC, Renesas, Avalanche Technology und GlobalFoundries fertigen MRAM ebenfalls in verschiedenen Nodes. Ainekko, entstanden aus einer Fusion mit Veevx im Januar 2026, ist ein neuerer Anbieter, der einen MRAM-basierten eingebetteten Speicher namens iRAM für Edge-KI-Beschleuniger entwickelt. Stand August 2026 konzentriert sich STMicroelectronics auf andere aufkommende NVMs (z. B. PCRAM) statt auf MRAM.',
     },
     'memory-bottleneck': {
       id: 'memory-bottleneck',
@@ -351,7 +353,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     'mram-status-2026': {
       id: 'mram-status-2026',
-      title: 'Wo MRAM heute steht (Juni 2026)',
+      title: 'Wo MRAM heute steht (August 2026)',
       content: [
         '**Samsung SAIT Nature-Paper (Januar 2022):**',
       ],
@@ -366,8 +368,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'Beanspruchte Leistungsfähigkeit: On-Device-Inferenz für Modelle mit bis zu 2 Milliarden Parametern ohne Netzwerkverbindung.',
         'Ziel: Textzusammenfassung, Übersetzung, dialogorientiertes Reasoning auf Edge-KI, humanoiden Robotern, im Automobilbereich.',
         'Erste Kommerzialisierung für Asien angepeilt; kein nordamerikanischer Zeitplan angekündigt.',
+        '**Neu seit Juni 2026 — akademisches Compute-in-Memory-Silizium:** Das IEEE Journal of Solid-State Circuits veröffentlichte 2026 zwei MRAM-basierte Compute-in-Memory-Testchips: ein 64-Mbit-STT-MRAM-Near-Memory-Compute-Makro in 28-nm-CMOS mit 316 TOPS/W bei 1-Bit-Präzision sowie ein separates STT-MRAM-Sparsity-Adaptive-Compute-in-Memory-Makro mit 492,8 TOPS/W.',
+        'Dabei handelt es sich um universitäre Forschungschips, keine kommerziellen Produkte, und sie sind nicht direkt mit dem SemiFive/ICYTech-Edge-SoC vergleichbar (anderer Node, anderer Umfang) — aber es sind die ersten öffentlich quantifizierten Energieeffizienzzahlen für MRAM-In-Memory-Compute und schließen damit die Lücke, die dieser Artikel zuvor als nicht offengelegt kennzeichnete.',
       ],
-      note: 'Status Mitte Juni 2026: Nur F&E und frühes Silizium. Keine Consumer-PCs oder -Smartphones haben eine MRAM-Integration angekündigt. Der SemiFive/ICYTech-Tape-Out ist ein Meilenstein, aber kein Produktstart.',
+      note: 'Status Ende August 2026: Nur F&E und frühes Silizium. Keine Consumer-PCs oder -Smartphones haben eine MRAM-Integration angekündigt. Der SemiFive/ICYTech-Tape-Out ist ein Meilenstein, aber kein Produktstart — das Silizium wurde Stand dieses Updates weiterhin nicht zurückgemeldet oder gebenchmarkt.',
     },
     'comparison-table': {
       id: 'comparison-table',
@@ -456,7 +460,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         '**Akkulaufzeit:** Kein Standby-Refresh-Verbrauch im Speicher-Subsystem. Bei Always-on-KI-Funktionen (Hintergrund-Zuhören, datenschutzwahrende Analytik) sind die Energieeinsparungen multiplikativ.',
         '**Größere Modelle bei festem Energiebudget:** Wenn In-Memory-Computing eine 2–10× bessere Energieeffizienz gegenüber der Trennung von LPDDR5 + Rechenwerk erreicht, könnten Smartphones 5B–10B-Modelle mit demselben Akku-Einfluss wie heutige 1B–2B-Modelle ausführen.',
       ],
-      note: 'Diese Vorteile sind jedoch davon abhängig, dass MRAM die Dichte- und Kostenziele für Consumer erreicht. Aktuelles eMRAM eignet sich für kleine Caches (1–100 MB, eingebettet in Mikrocontroller und Edge-KI-SoCs). Ein Einsatz im Smartphone-Maßstab (Äquivalent von 8–16 GB Unified Memory) würde erfordern, dass Foundries Dichte- und Yield-Herausforderungen lösen, die Stand Juni 2026 ungelöst bleiben.',
+      note: 'Diese Vorteile sind jedoch davon abhängig, dass MRAM die Dichte- und Kostenziele für Consumer erreicht. Aktuelles eMRAM eignet sich für kleine Caches (1–100 MB, eingebettet in Mikrocontroller und Edge-KI-SoCs). Ein Einsatz im Smartphone-Maßstab (Äquivalent von 8–16 GB Unified Memory) würde erfordern, dass Foundries Dichte- und Yield-Herausforderungen lösen, die Stand August 2026 ungelöst bleiben.',
     },
     'timeline': {
       id: 'timeline',
@@ -493,7 +497,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       faqs: [
         {
           q: 'Kann ich MRAM jetzt für meinen PC oder mein Smartphone kaufen?',
-          a: 'Nein. MRAM ist in Produktion für industrielle Mikrocontroller, Automobil-Chips und Enterprise-Storage. Für Consumer-KI ist es Stand Juni 2026 nur F&E. Der SemiFive/ICYTech-Chip befindet sich im Tape-Out-Stadium — das Silizium ist noch nicht zurückgeliefert. Der Consumer-Einsatz ist realistisch 3–5+ Jahre entfernt.',
+          a: 'Nein. MRAM ist in Produktion für industrielle Mikrocontroller, Automobil-Chips und Enterprise-Storage. Für Consumer-KI ist es Stand August 2026 nur F&E. Der SemiFive/ICYTech-Chip befindet sich weiterhin im Tape-Out-Stadium — das Silizium ist noch nicht zurückgeliefert oder gebenchmarkt. Der Consumer-Einsatz ist realistisch 3–5+ Jahre entfernt.',
         },
         {
           q: 'Wird MRAM den VRAM meiner GPU ersetzen?',
@@ -517,7 +521,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         {
           q: 'Wie viel Strom spart MRAM im Vergleich zu DRAM?',
-          a: 'Im Standby (kein Refresh): MRAM spart ~0,5–1 mW pro Gigabyte. Bei aktiver Inferenz mit In-Memory-Compute: Samsungs Pressemitteilung beansprucht eine „erhebliche" Reduktion durch die Eliminierung des Datentransports, aber konkret quantifizierte Einsparungen sind nicht öffentlich offengelegt. Reale Zahlen werden kommen, wenn Silizium ausgeliefert und unabhängig gebenchmarkt wird.',
+          a: 'Im Standby (kein Refresh): MRAM spart ~0,5–1 mW pro Gigabyte. Bei aktiver Inferenz mit In-Memory-Compute: Samsungs Pressemitteilung beansprucht eine „erhebliche" Reduktion durch die Eliminierung des Datentransports, aber Samsung hat keine konkret quantifizierten Einsparungen offengelegt. Die ersten realen quantifizierten Zahlen stammen aus 2026 veröffentlichten akademischen Testchips (IEEE JSSC): ein 64-Mbit-STT-MRAM-Near-Memory-Compute-Makro mit 316 TOPS/W sowie ein separates Sparsity-Adaptive-Compute-in-Memory-Makro mit 492,8 TOPS/W. Das ist Laborsilizium, nicht das SemiFive/ICYTech-Produkt — kommerzielle Silizium-Zahlen kommen, wenn dieser Chip ausgeliefert und unabhängig gebenchmarkt wird.',
         },
         {
           q: 'Wird MRAM DRAM ersetzen?',
@@ -525,7 +529,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         {
           q: 'Hat Qualcomm 2026 den Speicher-Engpass gelöst?',
-          a: 'Qualcomm kündigte HBC (High-Bandwidth Compute) unter seiner Marke Dragonfly auf seinem Investors Day 2026 an — eine Near-Memory-Architektur, die einen Rechenbeschleuniger unter dem LPDDR-Speicher über Through-Silicon-Vias (TSV) stapelt und dabei rund 6-fache Bandbreite-pro-Watt gegenüber HBM sowie 200-fache Kapazität-pro-Watt gegenüber SRAM beansprucht. Drei Unterschiede sind relevant: HBC ist near-memory (Rechenwerk neben dem Speicher), nicht MRAM-In-Memory-Computing (Rechenwerk im Speicher-Array); es zielt auf KI-Beschleuniger in Rechenzentren (AI250/AI300), nicht auf Smartphones; und die erste HBC-Generation ist für Mitte 2027 geplant, es wurde also 2026 nichts ausgeliefert. Es ist ein anderer Ansatz für dasselbe Memory-Wall-Problem, kein MRAM-Durchbruch.',
+          a: 'Qualcomm kündigte HBC (High-Bandwidth Compute) unter seiner Marke Dragonfly auf seinem Investors Day 2026 an — eine Near-Memory-Architektur, die einen Rechenbeschleuniger unter dem LPDDR-Speicher über Through-Silicon-Vias (TSV) stapelt und dabei rund 6-fache Bandbreite-pro-Watt gegenüber HBM sowie 200-fache Kapazität-pro-Watt gegenüber SRAM beansprucht. Microsoft hat inzwischen bestätigt, HBC auf Azure einzusetzen, und Qualcomm hat Aufträge von Meta und Microsoft für die Dragonfly-AI250/AI300-Beschleuniger erhalten — echte kommerzielle Zugkraft für die Roadmap, aber noch kein ausgeliefertes Produkt. Drei Unterschiede bleiben relevant: HBC ist near-memory (Rechenwerk neben dem Speicher), nicht MRAM-In-Memory-Computing (Rechenwerk im Speicher-Array); es zielt auf KI-Beschleuniger in Rechenzentren, nicht auf Smartphones; und das kommerzielle Sampling der ersten HBC-Generation (AI250) ist für Mitte 2027 geplant, HBC Gen 2 (AI300) für 2028 — Stand August 2026 wurde also nichts ausgeliefert. Es ist ein anderer Ansatz für dasselbe Memory-Wall-Problem, kein MRAM-Durchbruch.',
         },
       ],
     },
@@ -541,7 +545,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   } },
   fr: {
-    freshness_tier: 'semi_annual', next_refresh_due: '2026-12-15', theme: 'Hardware & Performance', title: 'MRAM et informatique en mémoire: le prochain bond pour l\'IA sur appareil?', seoTitle: 'MRAM vs HBM en Mémoire 2026: IA sur appareil', intro: 'MRAM et les architectures informatiques en mémoire pourraient transformer l\'IA sur appareil en effectuant les calculs dans la mémoire elle-même, éliminant le goulot d\'étranglement du transport de données. La recherche de Samsung démontre la preuve de concept; SemiFive et ICYTech ont réalisé la tape-out du silicium en mai 2026 pour les puces IA d\'edge à 2B paramètres. Cependant, MRAM est encore en phase R&D — pas encore dans les appareils grand public.', metaDescription: 'MRAM informatique en mémoire vs HBM et DRAM pour l\'IA sur appareil: MRAM va-t-elle remplacer la DRAM, est-ce l\'avenir, et en quoi diffère-t-elle de Qualcomm HBC. État 2026 + calendrier.', publishDate: '2026-06-15', dateModified: '2026-07-01', readTime: '12 min de lecture', educationalLevel: 'Intermediate', audience: 'Passionnés de matériel, ingénieurs IA et créateurs d\'IA d\'edge', primaryTerm: 'MRAM Informatique en Mémoire', affiliateDisclosure: false, toc: [{ label: 'Qu\'est-ce que MRAM?', anchor: '#what-is-mram' }, { label: 'Le goulot d\'étranglement mémoire en IA sur appareil', anchor: '#memory-bottleneck' }, { label: 'Comment l\'informatique en mémoire s\'attaque au problème', anchor: '#in-memory-computing' }, { label: 'Où en est MRAM aujourd\'hui (juin 2026)', anchor: '#mram-status-2026' }, { label: 'MRAM vs HBM vs DRAM vs LPDDR5', anchor: '#comparison-table' }, { label: 'L\'alternative logicielle: TurboQuant', anchor: '#software-alternative' }, { label: 'Si MRAM atteint les appareils grand public', anchor: '#consumer-impact' }, { label: 'Calendrier', anchor: '#timeline' }, { label: 'FAQ', anchor: '#faq' }], leadAnswerBlock: 'MRAM est une mémoire magnétique non-volatile avec puissance d\'attente zéro et adressabilité au niveau des octets; l\'informatique en mémoire exécute les calculs du réseau de neurones à l\'intérieur du tableau de mémoire lui-même, éliminant le transport de données coûteux en énergie. Est-ce l\'avenir de l\'IA sur appareil? Prometteur mais non prouvé — Samsung a démontré une preuve de concept dans Nature 2022, et SemiFive/ICYTech ont réalisé la tape-out d\'un SoC edge eMRAM 8nm (jusqu\'à 2B paramètres) en mai 2026, mais aucun silicium n\'a été livré. MRAM va-t-elle remplacer la DRAM? Non — elle complète la DRAM comme tuile non-volatile à faible consommation, pas comme remplacement de bande passante (HBM4 et LPDDR6 dominent toujours la bande passante). Elle se distingue également de Qualcomm HBC, qui est near-memory, axé sur les centres de données et prévu pour 2027. Le déploiement grand public (smartphones, PC) est réalistiquement à 3–5+ années.',
+    freshness_tier: 'semi_annual', next_refresh_due: '2027-02-28', theme: 'Hardware & Performance', title: 'MRAM et informatique en mémoire: le prochain bond pour l\'IA sur appareil?', seoTitle: 'MRAM vs HBM en Mémoire 2026: IA sur appareil', intro: 'MRAM et les architectures informatiques en mémoire pourraient transformer l\'IA sur appareil en effectuant les calculs dans la mémoire elle-même, éliminant le goulot d\'étranglement du transport de données. La recherche de Samsung démontre la preuve de concept; SemiFive et ICYTech ont réalisé la tape-out du silicium en mai 2026 pour les puces IA d\'edge à 2B paramètres. Cependant, MRAM est encore en phase R&D — pas encore dans les appareils grand public.', metaDescription: 'MRAM informatique en mémoire vs HBM et DRAM pour l\'IA sur appareil: MRAM va-t-elle remplacer la DRAM, est-ce l\'avenir, et en quoi diffère-t-elle de Qualcomm HBC. État 2026 + calendrier.', publishDate: '2026-06-15', dateModified: '2026-08-28', readTime: '12 min de lecture', educationalLevel: 'Intermediate', audience: 'Passionnés de matériel, ingénieurs IA et créateurs d\'IA d\'edge', primaryTerm: 'MRAM Informatique en Mémoire', affiliateDisclosure: false, toc: [{ label: 'Qu\'est-ce que MRAM?', anchor: '#what-is-mram' }, { label: 'Le goulot d\'étranglement mémoire en IA sur appareil', anchor: '#memory-bottleneck' }, { label: 'Comment l\'informatique en mémoire s\'attaque au problème', anchor: '#in-memory-computing' }, { label: 'Où en est MRAM aujourd\'hui (août 2026)', anchor: '#mram-status-2026' }, { label: 'MRAM vs HBM vs DRAM vs LPDDR5', anchor: '#comparison-table' }, { label: 'L\'alternative logicielle: TurboQuant', anchor: '#software-alternative' }, { label: 'Si MRAM atteint les appareils grand public', anchor: '#consumer-impact' }, { label: 'Calendrier', anchor: '#timeline' }, { label: 'FAQ', anchor: '#faq' }], leadAnswerBlock: 'MRAM est une mémoire magnétique non-volatile avec puissance d\'attente zéro et adressabilité au niveau des octets; l\'informatique en mémoire exécute les calculs du réseau de neurones à l\'intérieur du tableau de mémoire lui-même, éliminant le transport de données coûteux en énergie. Est-ce l\'avenir de l\'IA sur appareil? Prometteur mais non prouvé — Samsung a démontré une preuve de concept dans Nature 2022, et SemiFive/ICYTech ont réalisé la tape-out d\'un SoC edge eMRAM 8nm (jusqu\'à 2B paramètres) en mai 2026, mais aucun silicium n\'a été livré. MRAM va-t-elle remplacer la DRAM? Non — elle complète la DRAM comme tuile non-volatile à faible consommation, pas comme remplacement de bande passante (HBM4 et LPDDR6 dominent toujours la bande passante). Elle se distingue également de Qualcomm HBC, qui est near-memory, axé sur les centres de données et prévu pour 2027. Le déploiement grand public (smartphones, PC) est réalistiquement à 3–5+ années.',
     heroImage: '/images/mram-in-memory-computing-local-ai-2026-overview-hero-fr.webp',
     sections: {
       'intro-tldr': {
@@ -550,7 +554,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**MRAM (RAM magnétorésistive):** Mémoire non-volatile utilisant des jonctions tunnel magnétiques (MTJ). Aucun rafraîchissement requis, aucune consommation en veille. Adressable à l\'octet comme la DRAM.',
           '**Informatique en mémoire:** Effectue les opérations de multiplication-accumulation (MAC) directement dans le tableau de mémoire. Élimine le transport de données entre CPU/GPU et mémoire — le premier poste de consommation énergétique en inférence.',
           '**État actuel:** Samsung SAIT l\'a démontré dans un article Nature (2022) avec 98% de précision sur des tâches d\'images. SemiFive + ICYTech ont réalisé la tape-out d\'un eMRAM 8nm (mai 2026). Pas encore de produits grand public.',
-          '**Le hic:** Tape-out ≠ silicium retourné ≠ produit commercialisé. Les vrais chiffres d\'efficacité énergétique restent à confirmer. Les smartphones/PC grand public sont improbables avant 2029–2031.',
+          '**Le hic:** Tape-out ≠ silicium retourné ≠ produit commercialisé — la puce SemiFive/ICYTech n\'a toujours pas été livrée en août 2026. De nouvelles puces de test académiques (IEEE JSSC, 2026) ont depuis publié les premiers chiffres réels d\'efficacité énergétique pour le calcul en mémoire MRAM — jusqu\'à 492,8 TOPS/W — mais il s\'agit de silicium de laboratoire, pas du produit SemiFive. Les smartphones/PC grand public sont improbables avant 2029–2031.',
           '**Alternative:** Google TurboQuant (ICLR 2026) compresse le cache KV à 3 bits sans perte de précision — une approche purement logicielle au même problème, disponible dès maintenant.',
         ],
       },
@@ -568,7 +572,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Endurance élevée:** La MRAM commerciale atteint 10^10 à 10^14 cycles d\'écriture. La DRAM/SRAM tourne autour de 10^16 (quasi illimité). La NAND Flash est à 10^3–10^5. MRAM est nettement supérieure à la Flash, comparable à la DRAM.',
           '**Intégration au procédé:** Samsung, TSMC et d\'autres peuvent intégrer la MRAM directement dans les puces logiques en 28nm, 14nm et nœuds inférieurs.',
         ],
-        note: 'Everspin Technologies est le premier fournisseur mondial de MRAM autonome. Samsung produit en masse de l\'eMRAM (MRAM embarquée) depuis 2019. TSMC, Renesas, Avalanche Technology et GlobalFoundries produisent également de la MRAM sur divers nœuds. En juin 2026, STMicroelectronics se concentre sur d\'autres NVM émergentes (par exemple la PCRAM) plutôt que sur la MRAM.',
+        note: 'Everspin Technologies est le premier fournisseur mondial de MRAM autonome — au deuxième trimestre 2026, l\'entreprise a déclaré un chiffre d\'affaires de 18,7 millions de dollars (contre 13,2 millions un an plus tôt) et un contrat de 40 millions de dollars avec la base industrielle de défense américaine, une croissance portée par des clients industriels, automobiles et de défense, pas spécifiquement par l\'IA. Samsung produit en masse de l\'eMRAM (MRAM embarquée) depuis 2019. TSMC, Renesas, Avalanche Technology et GlobalFoundries produisent également de la MRAM sur divers nœuds. Ainekko, issue d\'une fusion avec Veevx en janvier 2026, est un nouvel acteur qui développe une mémoire embarquée à base de MRAM appelée iRAM destinée aux accélérateurs IA d\'edge. En août 2026, STMicroelectronics se concentre sur d\'autres NVM émergentes (par exemple la PCRAM) plutôt que sur la MRAM.',
       },
       'memory-bottleneck': {
         id: 'memory-bottleneck',
@@ -605,7 +609,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'mram-status-2026': {
         id: 'mram-status-2026',
-        title: 'Où en est MRAM aujourd\'hui (juin 2026)',
+        title: 'Où en est MRAM aujourd\'hui (août 2026)',
         content: [
           '**Article Nature de Samsung SAIT (janvier 2022):**',
         ],
@@ -620,8 +624,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Capacité annoncée: Inférence sur appareil pour des modèles jusqu\'à 2 milliards de paramètres sans connexion réseau.',
           'Cible: Résumé de texte, traduction, raisonnement conversationnel sur IA d\'edge, robots humanoïdes, automobile.',
           'Première commercialisation visée pour l\'Asie; aucun calendrier nord-américain annoncé.',
+          '**Nouveau depuis juin 2026 — silicium académique de calcul en mémoire:** L\'IEEE Journal of Solid-State Circuits a publié en 2026 deux puces de test de calcul en mémoire à base de MRAM: un macro de calcul near-memory STT-MRAM de 64 Mbit en CMOS 28nm atteignant 316 TOPS/W en précision 1 bit, ainsi qu\'un macro de calcul en mémoire adaptatif à la parcimonie STT-MRAM distinct atteignant 492,8 TOPS/W.',
+          'Il s\'agit de puces de recherche universitaire, pas de produits commerciaux, et elles ne sont pas directement comparables au SoC edge SemiFive/ICYTech (nœud différent, portée différente) — mais ce sont les premiers chiffres d\'efficacité énergétique publiquement quantifiés pour le calcul en mémoire MRAM, comblant la lacune que cet article signalait auparavant comme non divulguée.',
         ],
-        note: 'État à la mi-juin 2026: R&D et premier silicium seulement. Aucun PC ou téléphone grand public n\'a annoncé l\'intégration de MRAM. La tape-out de SemiFive/ICYTech est un jalon, pas un lancement de produit.',
+        note: 'État fin août 2026: R&D et premier silicium seulement. Aucun PC ou téléphone grand public n\'a annoncé l\'intégration de MRAM. La tape-out de SemiFive/ICYTech est un jalon, pas un lancement de produit — le silicium n\'a toujours pas été retourné ni évalué au moment de cette mise à jour.',
       },
       'comparison-table': {
         id: 'comparison-table',
@@ -710,7 +716,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Longévité de batterie:** Aucune décharge de rafraîchissement en veille sur le sous-système mémoire. Pour les fonctionnalités IA always-on (écoute en arrière-plan, analyses respectueuses de la vie privée), les économies d\'énergie sont multiplicatives.',
           '**Modèles plus grands à budget énergétique fixe:** Si le calcul en mémoire atteint une efficacité énergétique 2–10× supérieure à la LPDDR5 + séparation du calcul, les téléphones pourraient faire tourner des modèles 5B–10B avec le même impact batterie que les modèles 1B–2B d\'aujourd\'hui.',
         ],
-        note: 'Cependant, ces bénéfices sont conditionnés à ce que MRAM atteigne les cibles de densité et de coût grand public. L\'eMRAM actuelle convient aux petits caches (1–100 Mo embarqués dans les microcontrôleurs et SoC d\'IA d\'edge). Un déploiement à l\'échelle du téléphone (équivalent de 8–16 Go de mémoire unifiée) exigerait des fonderies qu\'elles résolvent des défis de densité et de rendement encore non résolus en juin 2026.',
+        note: 'Cependant, ces bénéfices sont conditionnés à ce que MRAM atteigne les cibles de densité et de coût grand public. L\'eMRAM actuelle convient aux petits caches (1–100 Mo embarqués dans les microcontrôleurs et SoC d\'IA d\'edge). Un déploiement à l\'échelle du téléphone (équivalent de 8–16 Go de mémoire unifiée) exigerait des fonderies qu\'elles résolvent des défis de densité et de rendement encore non résolus en août 2026.',
       },
       'timeline': {
         id: 'timeline',
@@ -747,7 +753,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'MRAM est-elle disponible à l\'achat maintenant pour mon PC ou téléphone?',
-            a: 'Non. MRAM est en production pour les microcontrôleurs industriels, les puces automobiles et le stockage d\'entreprise. Pour l\'IA grand public, elle reste en R&D en juin 2026. La puce SemiFive/ICYTech est au stade tape-out — le silicium n\'est pas encore retourné. Le déploiement grand public est réalistiquement à 3–5+ ans.',
+            a: 'Non. MRAM est en production pour les microcontrôleurs industriels, les puces automobiles et le stockage d\'entreprise. Pour l\'IA grand public, elle reste en R&D en août 2026. La puce SemiFive/ICYTech est toujours au stade tape-out — le silicium n\'est pas encore retourné ni évalué. Le déploiement grand public est réalistiquement à 3–5+ ans.',
           },
           {
             q: 'MRAM va-t-elle remplacer la VRAM de mon GPU?',
@@ -771,7 +777,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Combien d\'énergie MRAM économise-t-elle par rapport à la DRAM?',
-            a: 'En veille (sans rafraîchissement): MRAM économise ~0.5–1 mW par gigaoctet. En inférence active avec calcul en mémoire: le communiqué de Samsung revendique une réduction « substantielle » grâce à l\'élimination du transport de données, mais les économies quantifiées précises ne sont pas divulguées publiquement. Les vrais chiffres viendront quand le silicium sera commercialisé et évalué indépendamment.',
+            a: 'En veille (sans rafraîchissement): MRAM économise ~0.5–1 mW par gigaoctet. En inférence active avec calcul en mémoire: le communiqué de Samsung revendique une réduction « substantielle » grâce à l\'élimination du transport de données, mais Samsung n\'a pas divulgué d\'économies quantifiées précises. Les premiers chiffres réels quantifiés proviennent de puces de test académiques publiées en 2026 (IEEE JSSC): un macro de calcul near-memory STT-MRAM de 64 Mbit atteignant 316 TOPS/W et un macro de calcul en mémoire adaptatif à la parcimonie distinct atteignant 492,8 TOPS/W. Il s\'agit de silicium de laboratoire, pas du produit SemiFive/ICYTech — les chiffres de silicium commercial viendront quand cette puce sera commercialisée et évaluée indépendamment.',
           },
           {
             q: 'MRAM va-t-elle remplacer la DRAM?',
@@ -779,7 +785,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Qualcomm a-t-il résolu le goulot d\'étranglement mémoire en 2026?',
-            a: 'Qualcomm a annoncé HBC (High-Bandwidth Compute) sous sa marque Dragonfly lors de sa Journée Investisseurs 2026 — une architecture near-memory qui empile un accélérateur de calcul sous la mémoire LPDDR via des vias traversants (TSV), revendiquant environ 6× de bande passante par watt face à HBM et 200× de capacité par watt face à SRAM. Trois distinctions comptent: HBC est near-memory (calcul à côté de la mémoire), pas du calcul en mémoire MRAM (calcul à l\'intérieur du tableau de mémoire); il cible les accélérateurs IA de centre de données (AI250/AI300), pas les téléphones; et la première génération de HBC est prévue pour mi-2027, donc rien n\'a été livré en 2026. C\'est une approche différente au même problème du mur mémoire, pas une percée MRAM.',
+            a: 'Qualcomm a annoncé HBC (High-Bandwidth Compute) sous sa marque Dragonfly lors de sa Journée Investisseurs 2026 — une architecture near-memory qui empile un accélérateur de calcul sous la mémoire LPDDR via des vias traversants (TSV), revendiquant environ 6× de bande passante par watt face à HBM et 200× de capacité par watt face à SRAM. Microsoft a depuis confirmé qu\'il déploierait HBC sur Azure, et Qualcomm a obtenu des commandes de Meta et Microsoft pour les accélérateurs Dragonfly AI250/AI300 — une réelle traction commerciale pour la feuille de route, mais pas encore un produit livré. Trois distinctions restent importantes: HBC est near-memory (calcul à côté de la mémoire), pas du calcul en mémoire MRAM (calcul à l\'intérieur du tableau de mémoire); il cible les accélérateurs IA de centre de données, pas les téléphones; et l\'échantillonnage commercial de la première génération de HBC (AI250) est prévu pour mi-2027, HBC Gen 2 (AI300) visant 2028 — donc rien n\'a été livré en août 2026. C\'est une approche différente au même problème du mur mémoire, pas une percée MRAM.',
           },
         ],
       },
@@ -796,7 +802,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ja: {
-    freshness_tier: 'semi_annual', next_refresh_due: '2026-12-15', theme: 'Hardware & Performance', title: 'MRAMとメモリ内コンピューティング：オンデバイスAIの次のステップ?', seoTitle: 'MRAM vs HBM メモリ内コンピューティング 2026：オンデバイスAI', intro: 'MRAM(磁気抵抗性RAM)とメモリ内コンピューティングアーキテクチャは、メモリ内部で計算を実行することで、ローカルLLM推論を制約するエネルギー集約的なデータシャトリングボトルネックを排除し、オンデバイスAIを再形成する可能性があります。Samsungの研究は概念実証を実証し、SemiFiveとICYTechは2026年5月に2Bパラメータエッジ AIチップ向けシリコンテープアウトを達成しました。ただし、MRAMはまだR&D段階 — 消費者向けデバイスではまだ利用できません。', metaDescription: 'オンデバイスAI向けMRAMメモリ内コンピューティング vs HBM・DRAM：MRAMはDRAMを置き換えるか、未来か、Qualcomm HBCとの違い。2026年状況+タイムライン。', publishDate: '2026-06-15', dateModified: '2026-07-01', readTime: '12 min', educationalLevel: 'Intermediate', audience: 'ハードウェア愛好家、AIエンジニア、エッジAIビルダー', primaryTerm: 'MRAMメモリ内コンピューティング', affiliateDisclosure: false, toc: [{ label: 'MRAMとは?', anchor: '#what-is-mram' }, { label: 'オンデバイスAIのメモリボトルネック', anchor: '#memory-bottleneck' }, { label: 'メモリ内コンピューティングが問題に対応する方法', anchor: '#in-memory-computing' }, { label: 'MRAMの現在位置(2026年6月)', anchor: '#mram-status-2026' }, { label: 'MRAM vs HBM vs DRAM vs LPDDR5', anchor: '#comparison-table' }, { label: 'ソフトウェア代替案: TurboQuant', anchor: '#software-alternative' }, { label: 'MRAMが消費者デバイスに到達した場合', anchor: '#consumer-impact' }, { label: 'タイムライン', anchor: '#timeline' }, { label: 'FAQ', anchor: '#faq' }], leadAnswerBlock: 'MRAMはゼロスタンバイパワーとバイト単位のアドレス指定を備えた不揮発性磁気メモリです。メモリ内コンピューティングは、ニューラルネットワークの計算をメモリアレイ自体の内部で実行し、エネルギー集約的なデータシャトリングを排除します。オンデバイスAIの未来か？有望ですが未実証です — Samsungは2022年Nature論文で概念実証を示し、SemiFive/ICYTechは2026年5月に8nm eMRAMエッジSoC(最大2Bパラメータ)をテープアウトしましたが、シリコンはまだ出荷されていません。MRAMはDRAMを置き換えるか？いいえ — 低電力の不揮発性タイルとしてDRAMを補完するもので、帯域幅の置き換えではありません(HBM4とLPDDR6が引き続き帯域幅を担います)。またQualcomm HBCとも異なり、HBCはnear-memoryでデータセンター向け、2027年予定です。消費者への展開(スマートフォン、PC)は現実的に3～5年以上先です。',
+    freshness_tier: 'semi_annual', next_refresh_due: '2027-02-28', theme: 'Hardware & Performance', title: 'MRAMとメモリ内コンピューティング：オンデバイスAIの次のステップ?', seoTitle: 'MRAM vs HBM メモリ内コンピューティング 2026：オンデバイスAI', intro: 'MRAM(磁気抵抗性RAM)とメモリ内コンピューティングアーキテクチャは、メモリ内部で計算を実行することで、ローカルLLM推論を制約するエネルギー集約的なデータシャトリングボトルネックを排除し、オンデバイスAIを再形成する可能性があります。Samsungの研究は概念実証を実証し、SemiFiveとICYTechは2026年5月に2Bパラメータエッジ AIチップ向けシリコンテープアウトを達成しました。ただし、MRAMはまだR&D段階 — 消費者向けデバイスではまだ利用できません。', metaDescription: 'オンデバイスAI向けMRAMメモリ内コンピューティング vs HBM・DRAM：MRAMはDRAMを置き換えるか、未来か、Qualcomm HBCとの違い。2026年状況+タイムライン。', publishDate: '2026-06-15', dateModified: '2026-08-28', readTime: '12 min', educationalLevel: 'Intermediate', audience: 'ハードウェア愛好家、AIエンジニア、エッジAIビルダー', primaryTerm: 'MRAMメモリ内コンピューティング', affiliateDisclosure: false, toc: [{ label: 'MRAMとは?', anchor: '#what-is-mram' }, { label: 'オンデバイスAIのメモリボトルネック', anchor: '#memory-bottleneck' }, { label: 'メモリ内コンピューティングが問題に対応する方法', anchor: '#in-memory-computing' }, { label: 'MRAMの現在位置(2026年8月)', anchor: '#mram-status-2026' }, { label: 'MRAM vs HBM vs DRAM vs LPDDR5', anchor: '#comparison-table' }, { label: 'ソフトウェア代替案: TurboQuant', anchor: '#software-alternative' }, { label: 'MRAMが消費者デバイスに到達した場合', anchor: '#consumer-impact' }, { label: 'タイムライン', anchor: '#timeline' }, { label: 'FAQ', anchor: '#faq' }], leadAnswerBlock: 'MRAMはゼロスタンバイパワーとバイト単位のアドレス指定を備えた不揮発性磁気メモリです。メモリ内コンピューティングは、ニューラルネットワークの計算をメモリアレイ自体の内部で実行し、エネルギー集約的なデータシャトリングを排除します。オンデバイスAIの未来か？有望ですが未実証です — Samsungは2022年Nature論文で概念実証を示し、SemiFive/ICYTechは2026年5月に8nm eMRAMエッジSoC(最大2Bパラメータ)をテープアウトしましたが、シリコンはまだ出荷されていません。MRAMはDRAMを置き換えるか？いいえ — 低電力の不揮発性タイルとしてDRAMを補完するもので、帯域幅の置き換えではありません(HBM4とLPDDR6が引き続き帯域幅を担います)。またQualcomm HBCとも異なり、HBCはnear-memoryでデータセンター向け、2027年予定です。消費者への展開(スマートフォン、PC)は現実的に3～5年以上先です。',
     heroImage: '/images/mram-in-memory-computing-local-ai-2026-overview-hero-ja.webp',
     sections: {
       'intro-tldr': {
@@ -805,7 +811,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**MRAM(磁気抵抗性RAM):** 磁気トンネル接合(MTJ)を使用する不揮発性メモリ。リフレッシュ不要、スタンバイ電力の消耗なし。DRAMと同様にバイト単位でアドレス指定可能。',
           '**メモリ内コンピューティング:** 積和(MAC)演算をメモリアレイ内部で直接実行。CPU/GPUとメモリ間のデータ移動 — 推論における最大のエネルギーコスト — を排除します。',
           '**現在の状況:** Samsung SAITはNature論文(2022年)で画像タスクにおいて98%の精度を実証しました。SemiFive + ICYTechは8nm eMRAMテープアウト(2026年5月)を達成。消費者向け製品はまだありません。',
-          '**注意点:** テープアウト ≠ シリコン返却 ≠ 出荷済み製品。実際の電力効率の数値は未確定。消費者向けスマホ/PCは2029～2031年より前は考えにくい状況です。',
+          '**注意点:** テープアウト ≠ シリコン返却 ≠ 出荷済み製品 — SemiFive/ICYTechのチップは2026年8月時点でまだ出荷されていません。新しい学術系テストチップ(IEEE JSSC、2026年)が、MRAMメモリ内演算の初の実測電力効率数値を発表しました — 最大492.8 TOPS/Wですが、これはラボ試作シリコンであり、SemiFive製品ではありません。消費者向けスマホ/PCは2029～2031年より前は考えにくい状況です。',
           '**代替案:** Google TurboQuant(ICLR 2026)はKVキャッシュを精度損失ゼロで3ビットに圧縮 — 同じ問題に対するソフトウェアのみのアプローチで、今すぐ利用可能です。',
         ],
       },
@@ -823,7 +829,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**高い耐久性:** 商用MRAMは10^10～10^14の書き込みサイクルを達成します。DRAM/SRAMは約10^16(事実上無制限)。NAND Flashは10^3～10^5。MRAMはFlashより格段に優れ、DRAMに匹敵します。',
           '**プロセス統合:** Samsung、TSMCなどは、28nm、14nm、さらに小さなノードでロジックダイに直接MRAMを組み込めます。',
         ],
-        note: 'Everspin Technologiesは世界をリードするスタンドアロンMRAMサプライヤーです。Samsungは2019年以来eMRAM(組み込みMRAM)を量産しています。TSMC、Renesas、Avalanche Technology、GlobalFoundriesもさまざまなノードでMRAMを製造しています。2026年6月時点で、STMicroelectronicsはMRAMではなく他の新興NVM(例:PCRAM)に注力しています。',
+        note: 'Everspin Technologiesは世界をリードするスタンドアロンMRAMサプライヤーです — 2026年第2四半期の売上高は1,870万ドル(前年同期の1,320万ドルから増加)を計上し、米国防産業基盤向けの4,000万ドル契約も獲得しましたが、この成長は産業・自動車・防衛分野の顧客によるものでAI特化ではありません。Samsungは2019年以来eMRAM(組み込みMRAM)を量産しています。TSMC、Renesas、Avalanche Technology、GlobalFoundriesもさまざまなノードでMRAMを製造しています。2026年1月にVeevxとの合併で誕生したAinekkoは、エッジAIアクセラレータ向けにiRAMと呼ばれるMRAMベースの組み込みメモリを開発する新興企業です。2026年8月時点で、STMicroelectronicsはMRAMではなく他の新興NVM(例:PCRAM)に注力しています。',
       },
       'memory-bottleneck': {
         id: 'memory-bottleneck',
@@ -860,7 +866,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'mram-status-2026': {
         id: 'mram-status-2026',
-        title: 'MRAMの現在位置(2026年6月)',
+        title: 'MRAMの現在位置(2026年8月)',
         content: [
           '**Samsung SAIT Nature論文(2022年1月):**',
         ],
@@ -875,8 +881,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '主張された能力：ネットワーク接続なしで最大20億パラメータのモデルのオンデバイス推論。',
           'ターゲット：エッジAI、ヒューマノイドロボット、自動車におけるテキスト要約、翻訳、対話型推論。',
           '最初の商用化はアジア向け。北米のタイムラインは発表されていません。',
+          '**2026年6月以降の新展開 — 学術系メモリ内演算シリコン:** IEEE Journal of Solid-State Circuitsは2026年に、MRAMベースのメモリ内演算テストチップを2件発表しました。28nm CMOSで構築された64Mbit STT-MRAM近傍メモリ演算マクロ(1ビット精度で316 TOPS/W)と、別のSTT-MRAMスパース性適応型メモリ内演算マクロ(492.8 TOPS/W)です。',
+          'これらは大学・研究機関のテストチップであり商用製品ではなく、SemiFive/ICYTechのエッジSoC(異なるノード、異なる用途)と直接比較できるものではありません — しかし、これまでこの記事が「非開示」と指摘していたギャップを埋める、MRAMメモリ内演算の初の公開された定量的電力効率数値です。',
         ],
-        note: '2026年6月中旬時点の状況：R&Dおよび初期シリコンのみ。MRAM統合を発表した消費者向けPCやスマートフォンはありません。SemiFive/ICYTechのテープアウトはマイルストーンですが、製品発売ではありません。',
+        note: '2026年8月末時点の状況：R&Dおよび初期シリコンのみ。MRAM統合を発表した消費者向けPCやスマートフォンはありません。SemiFive/ICYTechのテープアウトはマイルストーンですが、製品発売ではありません — この更新時点でもシリコンはまだ返却・ベンチマークされていません。',
       },
       'comparison-table': {
         id: 'comparison-table',
@@ -965,7 +973,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**バッテリー寿命:** メモリサブシステムでのスタンバイリフレッシュ消耗がありません。常時オンのAI機能(バックグラウンドリスニング、プライバシー保護型分析)では、省エネ効果が乗算的に効いてきます。',
           '**固定電力予算でより大きなモデル:** メモリ内コンピューティングがLPDDR5 + 演算分離に対して2～10倍のエネルギー効率を達成すれば、スマホは今日の1B～2Bモデルと同じバッテリー影響で5B～10Bモデルを実行できる可能性があります。',
         ],
-        note: 'ただし、これらの利点はMRAMが消費者向けの密度とコスト目標に到達することが前提です。現行のeMRAMは小容量キャッシュ(マイクロコントローラやエッジAI SoCに組み込まれた1～100 MB)に適しています。スマホ規模の展開(8～16 GBの統合メモリ相当)には、2026年6月時点で未解決のままである密度と歩留まりの課題をファウンドリが解決する必要があります。',
+        note: 'ただし、これらの利点はMRAMが消費者向けの密度とコスト目標に到達することが前提です。現行のeMRAMは小容量キャッシュ(マイクロコントローラやエッジAI SoCに組み込まれた1～100 MB)に適しています。スマホ規模の展開(8～16 GBの統合メモリ相当)には、2026年8月時点で未解決のままである密度と歩留まりの課題をファウンドリが解決する必要があります。',
       },
       'timeline': {
         id: 'timeline',
@@ -1002,7 +1010,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'MRAMは今すぐ自分のPCやスマホ用に購入できますか?',
-            a: 'いいえ。MRAMは産業用マイクロコントローラ、車載チップ、エンタープライズストレージ向けに量産されています。消費者向けAIについては、2026年6月時点でR&Dのみです。SemiFive/ICYTechのチップはテープアウト段階 — シリコンはまだ返却されていません。消費者への展開は現実的に3～5年以上先です。',
+            a: 'いいえ。MRAMは産業用マイクロコントローラ、車載チップ、エンタープライズストレージ向けに量産されています。消費者向けAIについては、2026年8月時点でR&Dのみです。SemiFive/ICYTechのチップは依然としてテープアウト段階 — シリコンはまだ返却もベンチマークもされていません。消費者への展開は現実的に3～5年以上先です。',
           },
           {
             q: 'MRAMは私のGPUのVRAMを置き換えますか?',
@@ -1026,7 +1034,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'MRAMはDRAMと比べてどれくらい電力を節約しますか?',
-            a: 'スタンバイ時(リフレッシュなし):MRAMは1ギガバイトあたり約0.5～1 mWを節約します。メモリ内演算を伴うアクティブ推論時:Samsungのプレスリリースはデータ移動の排除による「大幅な」削減を主張していますが、具体的に定量化された節約は公開されていません。実際の数値はシリコンが出荷され、独立してベンチマークされたときに得られます。',
+            a: 'スタンバイ時(リフレッシュなし):MRAMは1ギガバイトあたり約0.5～1 mWを節約します。メモリ内演算を伴うアクティブ推論時:Samsungのプレスリリースはデータ移動の排除による「大幅な」削減を主張していますが、Samsungは具体的に定量化された節約を開示していません。初の実測定量数値は、2026年に発表された学術系テストチップ(IEEE JSSC)から得られています。316 TOPS/Wの64Mbit STT-MRAM近傍メモリ演算マクロと、492.8 TOPS/Wの別のスパース性適応型メモリ内演算マクロです。これらはラボ試作シリコンであり、SemiFive/ICYTech製品ではありません — 商用シリコンの数値は、そのチップが出荷され独立してベンチマークされたときに得られます。',
           },
           {
             q: 'MRAMはDRAMを置き換えますか?',
@@ -1034,7 +1042,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Qualcommは2026年にメモリボトルネックを解決しましたか?',
-            a: 'Qualcommは2026年の投資家向け説明会でDragonflyブランドの下、HBC(High-Bandwidth Compute)を発表しました — スルーシリコンビア(TSV)を使用してLPDDRメモリの下に演算アクセラレータを積層するnear-memoryアーキテクチャで、HBMに対しておよそ6倍のワットあたり帯域幅、SRAMに対して200倍のワットあたり容量を主張しています。3つの区別が重要です。HBCはnear-memory(メモリの隣で演算)であり、MRAMメモリ内コンピューティング(メモリアレイ内部で演算)ではありません。データセンターAIアクセラレータ(AI250/AI300)を対象とし、スマホではありません。そして第1世代HBCは2027年半ば予定であり、2026年には何も出荷されていません。同じメモリの壁の問題に対する別のアプローチであり、MRAMのブレークスルーではありません。',
+            a: 'Qualcommは2026年の投資家向け説明会でDragonflyブランドの下、HBC(High-Bandwidth Compute)を発表しました — スルーシリコンビア(TSV)を使用してLPDDRメモリの下に演算アクセラレータを積層するnear-memoryアーキテクチャで、HBMに対しておよそ6倍のワットあたり帯域幅、SRAMに対して200倍のワットあたり容量を主張しています。Microsoftはその後、AzureへのHBC導入を確認し、QualcommはDragonfly AI250/AI300アクセラレータについてMetaとMicrosoftから受注しました — ロードマップに対する実際の商業的な牽引力ですが、まだ出荷された製品ではありません。3つの区別が依然として重要です。HBCはnear-memory(メモリの隣で演算)であり、MRAMメモリ内コンピューティング(メモリアレイ内部で演算)ではありません。データセンターAIアクセラレータを対象とし、スマホではありません。そして第1世代HBC(AI250)の商用サンプル出荷は2027年半ば予定、HBC Gen 2(AI300)は2028年を目標としており、2026年8月時点では何も出荷されていません。同じメモリの壁の問題に対する別のアプローチであり、MRAMのブレークスルーではありません。',
           },
         ],
       },
@@ -1052,7 +1060,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   zh: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-12-15',
+    next_refresh_due: '2027-02-28',
     theme: 'Hardware & Performance',
     heroImage: '/images/mram-in-memory-computing-local-ai-2026-overview-hero-zh.webp',
     title: 'MRAM与内存计算：片上AI的下一个飞跃？',
@@ -1060,13 +1068,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'MRAM(磁阻性RAM)和内存计算架构可以通过在内存本身内执行计算来重塑片上AI，消除目前制约本地LLM推理的能源密集型数据往返瓶颈。Samsung的研究展示了概念验证；SemiFive和ICYTech在2026年5月实现了针对2B参数边缘AI芯片的硅流片。但是，MRAM仍处于研发阶段 — 尚未进入消费级设备。',
     metaDescription: '片上AI的MRAM内存计算 vs HBM与DRAM：MRAM会取代DRAM吗、是否是未来、与Qualcomm HBC有何区别。2026年状况+时间表。',
     publishDate: '2026-06-15',
-    dateModified: '2026-07-01',
+    dateModified: '2026-08-28',
     readTime: '阅读约12分钟',
     educationalLevel: 'Intermediate',
     audience: '硬件爱好者、AI工程师、边缘AI开发者',
     primaryTerm: 'MRAM内存计算',
     affiliateDisclosure: false,
-    toc: [{ label: '什么是MRAM?', anchor: '#what-is-mram' }, { label: '片上AI的内存瓶颈', anchor: '#memory-bottleneck' }, { label: '内存计算如何解决问题', anchor: '#in-memory-computing' }, { label: 'MRAM的现状(2026年6月)', anchor: '#mram-status-2026' }, { label: 'MRAM vs HBM vs DRAM vs LPDDR5', anchor: '#comparison-table' }, { label: '软件替代方案: TurboQuant', anchor: '#software-alternative' }, { label: '如果MRAM进入消费设备', anchor: '#consumer-impact' }, { label: '时间表', anchor: '#timeline' }, { label: '常见问题', anchor: '#faq' }],
+    toc: [{ label: '什么是MRAM?', anchor: '#what-is-mram' }, { label: '片上AI的内存瓶颈', anchor: '#memory-bottleneck' }, { label: '内存计算如何解决问题', anchor: '#in-memory-computing' }, { label: 'MRAM的现状(2026年8月)', anchor: '#mram-status-2026' }, { label: 'MRAM vs HBM vs DRAM vs LPDDR5', anchor: '#comparison-table' }, { label: '软件替代方案: TurboQuant', anchor: '#software-alternative' }, { label: '如果MRAM进入消费设备', anchor: '#consumer-impact' }, { label: '时间表', anchor: '#timeline' }, { label: '常见问题', anchor: '#faq' }],
     leadAnswerBlock: 'MRAM是具有零待机功耗和字节级寻址的非易失性磁性存储；内存计算在存储阵列本身内部执行神经网络运算，消除能耗密集的数据传输。它是片上AI的未来吗？前景可观但尚未验证 — Samsung在2022年Nature论文中展示了概念验证，SemiFive/ICYTech在2026年5月实现8nm eMRAM边缘SoC(最高2B参数)流片，但尚无芯片出货。MRAM会取代DRAM吗？不会 — 它作为低功耗、非易失性的存储单元补充DRAM，而非带宽替代品(HBM4和LPDDR6仍主导带宽)。它也不同于Qualcomm HBC，后者是近内存架构、面向数据中心、预计2027年推出。消费级部署(手机、PC)现实上还需3-5年以上。',
     sections: {
       'intro-tldr': {
@@ -1075,7 +1083,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**MRAM(磁阻性RAM)：** 使用磁隧道结(MTJ)的非易失性存储。无需刷新，无待机功耗。像DRAM一样支持字节寻址。',
           '**内存计算：** 直接在存储阵列内部执行乘累加(MAC)运算。消除CPU/GPU与内存之间的数据移动 — 这是推理中的头号能耗来源。',
           '**当前状态：** Samsung SAIT在Nature论文(2022年)中展示，图像任务准确率达98%。SemiFive + ICYTech实现8nm eMRAM流片(2026年5月)。尚无消费级产品。',
-          '**关键限制：** 流片 ≠ 硅返回 ≠ 出货产品。真实的能效数据仍待确定。消费级手机/PC在2029–2031年之前不太可能出现。',
+          '**关键限制：** 流片 ≠ 硅返回 ≠ 出货产品 — 截至2026年8月，SemiFive/ICYTech芯片仍未出货。新的学术测试芯片(IEEE JSSC，2026年)已发布首批真实的MRAM内存计算能效数据 — 最高达492.8 TOPS/W，但这些是实验室硅片，并非SemiFive产品。消费级手机/PC在2029–2031年之前不太可能出现。',
           '**替代方案：** Google TurboQuant(ICLR 2026)将KV缓存压缩至3比特且零精度损失 — 这是针对同一问题的纯软件方法，现已可用。',
         ],
       },
@@ -1093,7 +1101,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**高耐久性：** 商用MRAM可实现10^10至10^14次写入循环。DRAM/SRAM约为10^16(实际上无限)。NAND Flash为10^3–10^5。MRAM远优于Flash，与DRAM相当。',
           '**工艺集成：** Samsung、TSMC等厂商可在28nm、14nm及更小节点上将MRAM直接嵌入逻辑晶圆。',
         ],
-        note: 'Everspin Technologies是全球领先的独立MRAM供应商。Samsung自2019年起量产eMRAM(嵌入式MRAM)。TSMC、Renesas、Avalanche Technology和GlobalFoundries也在不同节点生产MRAM。截至2026年6月，STMicroelectronics专注于其他新兴NVM(如PCRAM)而非MRAM。',
+        note: 'Everspin Technologies是全球领先的独立MRAM供应商 — 该公司2026年第二季度营收为1,870万美元(上年同期为1,320万美元)，并获得一份价值4,000万美元的美国国防工业基地合同，不过这一增长主要来自工业、汽车和国防客户，而非专门面向AI。Samsung自2019年起量产eMRAM(嵌入式MRAM)。TSMC、Renesas、Avalanche Technology和GlobalFoundries也在不同节点生产MRAM。Ainekko(由2026年1月与Veevx合并成立)是一家较新的厂商，正在开发面向边缘AI加速器的MRAM嵌入式内存iRAM。截至2026年8月，STMicroelectronics专注于其他新兴NVM(如PCRAM)而非MRAM。',
       },
       'memory-bottleneck': {
         id: 'memory-bottleneck',
@@ -1130,7 +1138,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'mram-status-2026': {
         id: 'mram-status-2026',
-        title: 'MRAM的现状(2026年6月)',
+        title: 'MRAM的现状(2026年8月)',
         content: [
           '**Samsung SAIT Nature论文(2022年1月)：**',
         ],
@@ -1145,8 +1153,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '宣称能力：无需网络连接即可在设备上对最高20亿参数的模型进行推理。',
           '目标：边缘AI、人形机器人、汽车领域的文本摘要、翻译、对话式推理。',
           '首批商业化面向亚洲；未公布北美时间表。',
+          '**2026年6月以来的新进展 — 学术界内存计算硅片：** IEEE《固态电路杂志》(JSSC)在2026年发布了两款基于MRAM的内存计算测试芯片：一款采用28nm CMOS工艺的64Mb STT-MRAM近内存计算宏，在1比特精度下达到316 TOPS/W；另一款独立的STT-MRAM稀疏自适应内存计算宏则达到492.8 TOPS/W。',
+          '这些是大学/实验室研究芯片，并非商业产品，也无法直接与SemiFive/ICYTech的边缘SoC(不同工艺节点、不同应用范围)相比较 — 但它们是首批公开量化的MRAM内存计算能效数据，填补了本文此前指出的"未披露"空白。',
         ],
-        note: '截至2026年6月中旬的状态：仅处于研发和早期硅片阶段。尚无消费级PC或手机宣布集成MRAM。SemiFive/ICYTech的流片是一个里程碑，但并非产品发布。',
+        note: '截至2026年8月末的状态：仅处于研发和早期硅片阶段。尚无消费级PC或手机宣布集成MRAM。SemiFive/ICYTech的流片是一个里程碑，但并非产品发布 — 截至本次更新，硅片仍未返回或经过基准测试。',
       },
       'comparison-table': {
         id: 'comparison-table',
@@ -1235,7 +1245,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**电池续航：** 内存子系统无待机刷新损耗。对于常开AI功能(后台监听、隐私保护分析)，节能效果呈倍增。',
           '**在固定功耗预算下运行更大的模型：** 如果内存计算相比LPDDR5加计算分离实现2–10倍能效，手机就能以与当今1B–2B模型相同的电池影响运行5B–10B模型。',
         ],
-        note: '然而，这些优势取决于MRAM是否达到消费级密度和成本目标。当前的eMRAM适合小型缓存(嵌入微控制器和边缘AI SoC中的1–100 MB)。手机级部署(相当于8–16 GB统一内存)将要求晶圆厂解决密度和良率难题，而这些难题截至2026年6月仍未解决。',
+        note: '然而，这些优势取决于MRAM是否达到消费级密度和成本目标。当前的eMRAM适合小型缓存(嵌入微控制器和边缘AI SoC中的1–100 MB)。手机级部署(相当于8–16 GB统一内存)将要求晶圆厂解决密度和良率难题，而这些难题截至2026年8月仍未解决。',
       },
       'timeline': {
         id: 'timeline',
@@ -1272,7 +1282,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '现在能为我的PC或手机购买MRAM吗？',
-            a: '不能。MRAM已在工业微控制器、汽车芯片和企业级存储中量产。而在消费级AI方面，截至2026年6月仅处于研发阶段。SemiFive/ICYTech芯片处于流片阶段 — 硅片尚未返回。消费级部署现实上还需3–5年以上。',
+            a: '不能。MRAM已在工业微控制器、汽车芯片和企业级存储中量产。而在消费级AI方面，截至2026年8月仍仅处于研发阶段。SemiFive/ICYTech芯片仍处于流片阶段 — 硅片尚未返回或经过基准测试。消费级部署现实上还需3–5年以上。',
           },
           {
             q: 'MRAM会取代我GPU的VRAM吗？',
@@ -1296,7 +1306,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '与DRAM相比，MRAM能节省多少功耗？',
-            a: '在待机方面(无需刷新)：MRAM每GB可节省约0.5–1 mW。在采用内存计算的主动推理方面：Samsung新闻稿称，由于消除了数据移动，可实现"显著"降低，但具体量化的节省幅度未公开披露。真实数据将在硅片出货并被独立基准测试后揭晓。',
+            a: '在待机方面(无需刷新)：MRAM每GB可节省约0.5–1 mW。在采用内存计算的主动推理方面：Samsung新闻稿称，由于消除了数据移动，可实现"显著"降低，但Samsung并未披露具体量化的节省幅度。首批真实的量化数据来自2026年发布的学术测试芯片(IEEE JSSC)：一款64Mb STT-MRAM近内存计算宏达到316 TOPS/W，另一款独立的稀疏自适应内存计算宏达到492.8 TOPS/W。这些是实验室硅片，并非SemiFive/ICYTech产品 — 商用硅片数据将在该芯片出货并被独立基准测试后揭晓。',
           },
           {
             q: 'MRAM会取代DRAM吗？',
@@ -1304,7 +1314,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Qualcomm在2026年解决了内存瓶颈吗？',
-            a: 'Qualcomm在其2026年投资者日发布了Dragonfly品牌下的HBC(高带宽计算) — 一种近内存架构，通过硅通孔(TSV)将计算加速器堆叠在LPDDR内存下方，宣称每瓦带宽约为HBM的6倍、每瓦容量约为SRAM的200倍。有三点区别很重要：HBC是近内存(计算位于内存旁)，而非MRAM内存计算(计算位于存储阵列内部)；它面向数据中心AI加速器(AI250/AI300)，而非手机；第一代HBC定于2027年年中，因此2026年没有任何产品出货。它是应对同一内存墙问题的不同方法，而非MRAM突破。',
+            a: 'Qualcomm在其2026年投资者日发布了Dragonfly品牌下的HBC(高带宽计算) — 一种近内存架构，通过硅通孔(TSV)将计算加速器堆叠在LPDDR内存下方，宣称每瓦带宽约为HBM的6倍、每瓦容量约为SRAM的200倍。此后Microsoft已确认将在Azure上部署HBC，Qualcomm也获得了Meta和Microsoft对Dragonfly AI250/AI300加速器的订单 — 这为该路线图带来了真实的商业进展，但尚未有产品出货。有三点区别依然重要：HBC是近内存(计算位于内存旁)，而非MRAM内存计算(计算位于存储阵列内部)；它面向数据中心AI加速器，而非手机；第一代HBC(AI250)的商用样片计划于2027年年中提供，第二代HBC(AI300)则定于2028年，因此截至2026年8月尚无任何产品出货。它是应对同一内存墙问题的不同方法，而非MRAM突破。',
           },
         ],
       },
@@ -1322,7 +1332,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   es: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-12-15',
+    next_refresh_due: '2027-02-28',
     theme: 'Hardware & Performance',
     heroImage: '/images/mram-in-memory-computing-local-ai-2026-overview-hero-es.webp',
     title: 'MRAM e Informática en Memoria: ¿El próximo salto para IA en dispositivo?',
@@ -1330,13 +1340,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'MRAM (RAM magnetorresistiva) y las arquitecturas de informática en memoria podrían remodelar la IA en dispositivo ejecutando computaciones dentro de la memoria misma, eliminando el cuello de botella costoso en energía del transporte de datos. La investigación de Samsung demuestra prueba de concepto; SemiFive e ICYTech lograron tape-out de silicio en mayo de 2026 para chips de IA de borde de 2B parámetros. Sin embargo, MRAM sigue en fase de R&D — aún no en dispositivos de consumo.',
     metaDescription: 'MRAM informática en memoria vs HBM y DRAM para IA en dispositivo: si MRAM reemplazará a DRAM, si es el futuro y en qué difiere de Qualcomm HBC. Estado 2026 + cronograma.',
     publishDate: '2026-06-15',
-    dateModified: '2026-07-01',
+    dateModified: '2026-08-28',
     readTime: '12 min de lectura',
     educationalLevel: 'Intermediate',
     audience: 'Entusiastas de hardware, ingenieros de IA y constructores de IA de borde',
     primaryTerm: 'MRAM Informática en Memoria',
     affiliateDisclosure: false,
-    toc: [{ label: '¿Qué es MRAM?', anchor: '#what-is-mram' }, { label: 'El cuello de botella de memoria en IA en dispositivo', anchor: '#memory-bottleneck' }, { label: 'Cómo la informática en memoria ataca el problema', anchor: '#in-memory-computing' }, { label: 'Dónde está MRAM hoy (junio 2026)', anchor: '#mram-status-2026' }, { label: 'MRAM vs HBM vs DRAM vs LPDDR5', anchor: '#comparison-table' }, { label: 'La alternativa de software: TurboQuant', anchor: '#software-alternative' }, { label: 'Si MRAM llega a dispositivos de consumo', anchor: '#consumer-impact' }, { label: 'Cronograma', anchor: '#timeline' }, { label: 'FAQ', anchor: '#faq' }],
+    toc: [{ label: '¿Qué es MRAM?', anchor: '#what-is-mram' }, { label: 'El cuello de botella de memoria en IA en dispositivo', anchor: '#memory-bottleneck' }, { label: 'Cómo la informática en memoria ataca el problema', anchor: '#in-memory-computing' }, { label: 'Dónde está MRAM hoy (agosto 2026)', anchor: '#mram-status-2026' }, { label: 'MRAM vs HBM vs DRAM vs LPDDR5', anchor: '#comparison-table' }, { label: 'La alternativa de software: TurboQuant', anchor: '#software-alternative' }, { label: 'Si MRAM llega a dispositivos de consumo', anchor: '#consumer-impact' }, { label: 'Cronograma', anchor: '#timeline' }, { label: 'FAQ', anchor: '#faq' }],
     leadAnswerBlock: 'MRAM es memoria magnética no volátil con potencia de espera cero y direccionabilidad a nivel de byte; la informática en memoria ejecuta las operaciones matemáticas de la red neuronal dentro del propio arreglo de memoria, eliminando el transporte de datos costoso en energía. ¿Es el futuro de la IA en dispositivo? Prometedor pero no probado — Samsung demostró una prueba de concepto en Nature 2022, y SemiFive/ICYTech lograron el tape-out de un SoC de borde eMRAM de 8nm (hasta 2B parámetros) en mayo de 2026, pero no se ha enviado ningún silicio. ¿MRAM reemplazará a DRAM? No — complementa a DRAM como un mosaico no volátil de bajo consumo, no como un reemplazo de ancho de banda (HBM4 y LPDDR6 siguen dominando el ancho de banda). También es distinta de Qualcomm HBC, que es near-memory, enfocada en centros de datos y prevista para 2027. El despliegue de consumo (teléfonos, PC) está realistamente a 3-5+ años.',
     sections: {
       'intro-tldr': {
@@ -1345,7 +1355,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**MRAM (RAM magnetorresistiva):** Memoria no volátil que usa uniones de túnel magnético (MTJ). No requiere refresco ni consumo en espera. Direccionable a nivel de byte, como la DRAM.',
           '**Informática en memoria:** Ejecuta operaciones de multiplicación-acumulación (MAC) directamente dentro del arreglo de memoria. Elimina el movimiento de datos entre la CPU/GPU y la memoria — el costo energético número 1 en la inferencia.',
           '**Estado actual:** Samsung SAIT lo demostró en un artículo de Nature (2022) con un 98% de precisión en tareas de imagen. SemiFive + ICYTech lograron el tape-out de eMRAM de 8nm (mayo de 2026). Todavía no hay productos de consumo.',
-          '**El detalle:** Tape-out ≠ silicio devuelto ≠ producto enviado. Las cifras reales de eficiencia energética están por determinar. Es improbable ver teléfonos/PC de consumo antes de 2029–2031.',
+          '**El detalle:** Tape-out ≠ silicio devuelto ≠ producto enviado — el chip de SemiFive/ICYTech aún no se ha enviado a agosto de 2026. Nuevos chips de prueba académicos (IEEE JSSC, 2026) han publicado las primeras cifras reales de eficiencia energética para el cómputo en memoria MRAM — hasta 492,8 TOPS/W — pero son silicio de laboratorio, no el producto de SemiFive. Es improbable ver teléfonos/PC de consumo antes de 2029–2031.',
           '**Alternativa:** Google TurboQuant (ICLR 2026) comprime la caché KV a 3 bits sin pérdida de precisión — un enfoque puramente por software para el mismo problema, disponible ya.',
         ],
       },
@@ -1363,7 +1373,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Alta resistencia:** La MRAM comercial alcanza de 10^10 a 10^14 ciclos de escritura. DRAM/SRAM rondan los ~10^16 (efectivamente ilimitados). La NAND Flash está entre 10^3 y 10^5. MRAM es muchísimo mejor que la Flash y comparable a la DRAM.',
           '**Integración de proceso:** Samsung, TSMC y otros pueden integrar MRAM directamente en dies lógicos a nodos de 28nm, 14nm y menores.',
         ],
-        note: 'Everspin Technologies es el principal proveedor independiente de MRAM del mundo. Samsung fabrica en serie eMRAM (MRAM integrada) desde 2019. TSMC, Renesas, Avalanche Technology y GlobalFoundries también producen MRAM en varios nodos. A junio de 2026, STMicroelectronics se centra en otras NVM emergentes (por ejemplo, PCRAM) en lugar de MRAM.',
+        note: 'Everspin Technologies es el principal proveedor independiente de MRAM del mundo — en el segundo trimestre de 2026 reportó ingresos de 18,7 millones de dólares (frente a 13,2 millones un año antes) y un contrato de 40 millones de dólares con la base industrial de defensa de EE. UU., aunque este crecimiento lo impulsan clientes industriales, de automoción y de defensa, no la IA específicamente. Samsung fabrica en serie eMRAM (MRAM integrada) desde 2019. TSMC, Renesas, Avalanche Technology y GlobalFoundries también producen MRAM en varios nodos. Ainekko, surgida de una fusión con Veevx en enero de 2026, es un nuevo actor que desarrolla una memoria integrada basada en MRAM llamada iRAM para aceleradores de IA de borde. A agosto de 2026, STMicroelectronics se centra en otras NVM emergentes (por ejemplo, PCRAM) en lugar de MRAM.',
       },
       'memory-bottleneck': {
         id: 'memory-bottleneck',
@@ -1400,7 +1410,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'mram-status-2026': {
         id: 'mram-status-2026',
-        title: 'Dónde está MRAM hoy (junio 2026)',
+        title: 'Dónde está MRAM hoy (agosto 2026)',
         content: [
           '**Artículo de Samsung SAIT en Nature (enero de 2022):**',
         ],
@@ -1415,8 +1425,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Capacidad afirmada: Inferencia en dispositivo para modelos de hasta 2 mil millones de parámetros sin conectividad de red.',
           'Objetivo: Resumen de texto, traducción y razonamiento conversacional en IA de borde, robots humanoides y automoción.',
           'La primera comercialización se dirige a Asia; no se anunció cronograma para Norteamérica.',
+          '**Novedad desde junio de 2026 — silicio académico de cómputo en memoria:** El IEEE Journal of Solid-State Circuits publicó en 2026 dos chips de prueba de cómputo en memoria basados en MRAM: un macro de cómputo near-memory STT-MRAM de 64 Mb en CMOS de 28nm que alcanza 316 TOPS/W a precisión de 1 bit, y un macro independiente de cómputo en memoria adaptativo a la dispersión STT-MRAM que alcanza 492,8 TOPS/W.',
+          'Son chips de investigación universitaria/laboratorio, no productos comerciales, y no son directamente comparables al SoC de borde de SemiFive/ICYTech (nodo distinto, alcance distinto) — pero son las primeras cifras de eficiencia energética cuantificadas públicamente para el cómputo en memoria MRAM, cerrando la brecha que este artículo señalaba antes como no divulgada.',
         ],
-        note: 'Estado a mediados de junio de 2026: solo R&D y silicio temprano. Ningún PC ni teléfono de consumo ha anunciado integración de MRAM. El tape-out de SemiFive/ICYTech es un hito, pero no un lanzamiento de producto.',
+        note: 'Estado a finales de agosto de 2026: solo R&D y silicio temprano. Ningún PC ni teléfono de consumo ha anunciado integración de MRAM. El tape-out de SemiFive/ICYTech es un hito, pero no un lanzamiento de producto — el silicio sigue sin haber regresado ni evaluado a fecha de esta actualización.',
       },
       'comparison-table': {
         id: 'comparison-table',
@@ -1505,7 +1517,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Mayor duración de la batería:** Sin drenaje por refresco en espera en el subsistema de memoria. Para funciones de IA siempre activas (escucha en segundo plano, análisis que preservan la privacidad), el ahorro energético es multiplicativo.',
           '**Modelos más grandes con el mismo presupuesto de energía:** Si la informática en memoria logra una eficiencia energética 2–10× superior a la de LPDDR5 + cómputo separado, los teléfonos podrían ejecutar modelos de 5B–10B con el mismo impacto en la batería que los modelos de 1B–2B de hoy.',
         ],
-        note: 'Sin embargo, estos beneficios están condicionados a que MRAM alcance los objetivos de densidad y costo de consumo. La eMRAM actual es adecuada para cachés pequeñas (1–100 MB integradas en microcontroladores y SoC de IA de borde). El despliegue a escala de teléfono (equivalente a 8–16 GB de memoria unificada) requeriría que las fundiciones resolvieran desafíos de densidad y rendimiento que siguen sin resolverse a junio de 2026.',
+        note: 'Sin embargo, estos beneficios están condicionados a que MRAM alcance los objetivos de densidad y costo de consumo. La eMRAM actual es adecuada para cachés pequeñas (1–100 MB integradas en microcontroladores y SoC de IA de borde). El despliegue a escala de teléfono (equivalente a 8–16 GB de memoria unificada) requeriría que las fundiciones resolvieran desafíos de densidad y rendimiento que siguen sin resolverse a agosto de 2026.',
       },
       'timeline': {
         id: 'timeline',
@@ -1542,7 +1554,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '¿Está MRAM disponible para comprar ya para mi PC o teléfono?',
-            a: 'No. MRAM está en producción para microcontroladores industriales, chips de automoción y almacenamiento empresarial. Para la IA de consumo, a junio de 2026 solo es R&D. El chip de SemiFive/ICYTech está en fase de tape-out — el silicio aún no ha regresado. El despliegue de consumo está realistamente a 3-5+ años.',
+            a: 'No. MRAM está en producción para microcontroladores industriales, chips de automoción y almacenamiento empresarial. Para la IA de consumo, a agosto de 2026 sigue siendo solo R&D. El chip de SemiFive/ICYTech sigue en fase de tape-out — el silicio aún no ha regresado ni se ha evaluado. El despliegue de consumo está realistamente a 3-5+ años.',
           },
           {
             q: '¿MRAM reemplazará la VRAM de mi GPU?',
@@ -1566,7 +1578,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Cuánta energía ahorra MRAM comparada con DRAM?',
-            a: 'En espera (sin refresco): MRAM ahorra ~0.5–1 mW por gigabyte. En inferencia activa con cómputo en memoria: el comunicado de prensa de Samsung afirma una reducción "sustancial" por eliminar el movimiento de datos, pero los ahorros cuantificados específicos no se divulgan públicamente. Las cifras reales llegarán cuando el silicio se envíe y se evalúe de forma independiente.',
+            a: 'En espera (sin refresco): MRAM ahorra ~0.5–1 mW por gigabyte. En inferencia activa con cómputo en memoria: el comunicado de prensa de Samsung afirma una reducción "sustancial" por eliminar el movimiento de datos, pero Samsung no ha divulgado ahorros cuantificados específicos. Las primeras cifras reales cuantificadas provienen de chips de prueba académicos publicados en 2026 (IEEE JSSC): un macro de cómputo near-memory STT-MRAM de 64 Mb que alcanza 316 TOPS/W y un macro independiente de cómputo en memoria adaptativo a la dispersión que alcanza 492,8 TOPS/W. Son silicio de laboratorio, no el producto de SemiFive/ICYTech — las cifras de silicio comercial llegarán cuando ese chip se envíe y se evalúe de forma independiente.',
           },
           {
             q: '¿MRAM reemplazará a DRAM?',
@@ -1574,7 +1586,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Resolvió Qualcomm el cuello de botella de memoria en 2026?',
-            a: 'Qualcomm anunció HBC (High-Bandwidth Compute) bajo su marca Dragonfly en su Investors Day de 2026 — una arquitectura near-memory que apila un acelerador de cómputo debajo de la memoria LPDDR usando vías a través del silicio (TSV), afirmando aproximadamente 6× de ancho de banda por vatio frente a HBM y 200× de capacidad por vatio frente a SRAM. Importan tres distinciones: HBC es near-memory (cómputo junto a la memoria), no informática en memoria MRAM (cómputo dentro del arreglo de memoria); apunta a aceleradores de IA de centro de datos (AI250/AI300), no a teléfonos; y la primera generación de HBC está programada para mediados de 2027, así que nada se envió en 2026. Es un enfoque diferente para el mismo problema del muro de memoria, no un avance de MRAM.',
+            a: 'Qualcomm anunció HBC (High-Bandwidth Compute) bajo su marca Dragonfly en su Investors Day de 2026 — una arquitectura near-memory que apila un acelerador de cómputo debajo de la memoria LPDDR usando vías a través del silicio (TSV), afirmando aproximadamente 6× de ancho de banda por vatio frente a HBM y 200× de capacidad por vatio frente a SRAM. Microsoft ha confirmado desde entonces que desplegará HBC en Azure, y Qualcomm ha conseguido pedidos de Meta y Microsoft para los aceleradores Dragonfly AI250/AI300 — una tracción comercial real para la hoja de ruta, pero aún no un producto enviado. Importan tres distinciones: HBC es near-memory (cómputo junto a la memoria), no informática en memoria MRAM (cómputo dentro del arreglo de memoria); apunta a aceleradores de IA de centro de datos, no a teléfonos; y las muestras comerciales de la primera generación de HBC (AI250) están programadas para mediados de 2027, con HBC Gen 2 (AI300) previsto para 2028 — así que nada se ha enviado a agosto de 2026. Es un enfoque diferente para el mismo problema del muro de memoria, no un avance de MRAM.',
           },
         ],
       },
@@ -1592,7 +1604,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   },
   pt: {
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-12-15',
+    next_refresh_due: '2027-02-28',
     theme: 'Hardware & Performance',
     heroImage: '/images/mram-in-memory-computing-local-ai-2026-overview-hero-pt.webp',
     title: 'MRAM e Computação em Memória: O próximo salto para IA em dispositivo?',
@@ -1600,13 +1612,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'MRAM (RAM magnetorresistivo) e arquiteturas de computação em memória podem remodelar a IA em dispositivo executando computações dentro da própria memória, eliminando o gargalo custoso em energia de transferência de dados. A pesquisa da Samsung demonstra prova de conceito; SemiFive e ICYTech alcançaram tape-out de silício em maio de 2026 para chips de IA de borda de 2B parâmetros. No entanto, MRAM ainda está em fase de P&D — ainda não em dispositivos de consumo.',
     metaDescription: 'MRAM computação em memória vs HBM e DRAM para IA em dispositivo: se MRAM vai substituir a DRAM, se é o futuro e como difere do Qualcomm HBC. Status 2026 + cronograma.',
     publishDate: '2026-06-15',
-    dateModified: '2026-07-01',
+    dateModified: '2026-08-28',
     readTime: '12 min de leitura',
     educationalLevel: 'Intermediate',
     audience: 'Entusiastas de hardware, engenheiros de IA e construtores de IA de borda',
     primaryTerm: 'MRAM Computação em Memória',
     affiliateDisclosure: false,
-    toc: [{ label: 'O que é MRAM?', anchor: '#what-is-mram' }, { label: 'O gargalo de memória em IA em dispositivo', anchor: '#memory-bottleneck' }, { label: 'Como a computação em memória ataca o problema', anchor: '#in-memory-computing' }, { label: 'Onde MRAM está hoje (junho de 2026)', anchor: '#mram-status-2026' }, { label: 'MRAM vs HBM vs DRAM vs LPDDR5', anchor: '#comparison-table' }, { label: 'A alternativa de software: TurboQuant', anchor: '#software-alternative' }, { label: 'Se MRAM chegar aos dispositivos de consumo', anchor: '#consumer-impact' }, { label: 'Cronograma', anchor: '#timeline' }, { label: 'FAQ', anchor: '#faq' }],
+    toc: [{ label: 'O que é MRAM?', anchor: '#what-is-mram' }, { label: 'O gargalo de memória em IA em dispositivo', anchor: '#memory-bottleneck' }, { label: 'Como a computação em memória ataca o problema', anchor: '#in-memory-computing' }, { label: 'Onde MRAM está hoje (agosto de 2026)', anchor: '#mram-status-2026' }, { label: 'MRAM vs HBM vs DRAM vs LPDDR5', anchor: '#comparison-table' }, { label: 'A alternativa de software: TurboQuant', anchor: '#software-alternative' }, { label: 'Se MRAM chegar aos dispositivos de consumo', anchor: '#consumer-impact' }, { label: 'Cronograma', anchor: '#timeline' }, { label: 'FAQ', anchor: '#faq' }],
     leadAnswerBlock: 'MRAM é memória magnética não-volátil com potência de espera zero e endereçamento em nível de byte; a computação em memória executa a matemática da rede neural dentro do próprio array de memória, eliminando a transferência de dados cara em energia. É o futuro da IA em dispositivo? Promissor, mas não comprovado — a Samsung demonstrou uma prova de conceito na Nature 2022, e a SemiFive/ICYTech fizeram o tape-out de um SoC de borda eMRAM de 8nm (até 2B parâmetros) em maio de 2026, mas nenhum silício foi enviado. MRAM vai substituir a DRAM? Não — ela complementa a DRAM como um bloco não-volátil de baixo consumo, não como substituto de largura de banda (HBM4 e LPDDR6 continuam dominando a largura de banda). Ela também é distinta do Qualcomm HBC, que é near-memory, focado em data centers e previsto para 2027. A implantação de consumo (celulares, PCs) está realistamente a 3-5+ anos.',
     sections: {
       'intro-tldr': {
@@ -1615,7 +1627,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**MRAM (RAM magnetorresistivo):** Memória não-volátil que usa junções de túnel magnético (MTJ). Não requer refresh, sem consumo de energia em espera. Endereçável por byte como a DRAM.',
           '**Computação em memória:** Realiza operações de multiplicação-acumulação (MAC) diretamente dentro do array de memória. Elimina a movimentação de dados entre CPU/GPU e memória — o custo energético número 1 na inferência.',
           '**Status atual:** A Samsung SAIT demonstrou em um artigo da Nature (2022) com 98% de acurácia em tarefas de imagem. SemiFive + ICYTech alcançaram o tape-out de eMRAM em 8nm (maio de 2026). Ainda não há produtos de consumo.',
-          '**A ressalva:** Tape-out ≠ silício retornado ≠ produto enviado. Os números reais de eficiência energética ainda estão por vir. Celulares/PCs de consumo são improváveis antes de 2029–2031.',
+          '**A ressalva:** Tape-out ≠ silício retornado ≠ produto enviado — o chip da SemiFive/ICYTech ainda não foi enviado até agosto de 2026. Novos chips de teste acadêmicos (IEEE JSSC, 2026) já publicaram os primeiros números reais de eficiência energética para computação em memória MRAM — até 492,8 TOPS/W — mas são silício de laboratório, não o produto da SemiFive. Celulares/PCs de consumo são improváveis antes de 2029–2031.',
           '**Alternativa:** O TurboQuant do Google (ICLR 2026) comprime o cache KV para 3 bits sem perda de acurácia — uma abordagem apenas por software para o mesmo problema, disponível agora.',
         ],
       },
@@ -1633,7 +1645,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Alta durabilidade:** A MRAM comercial atinge de 10^10 a 10^14 ciclos de escrita. DRAM/SRAM ficam em ~10^16 (praticamente ilimitados). A NAND Flash fica em 10^3–10^5. A MRAM é muito superior à Flash, comparável à DRAM.',
           '**Integração de processo:** Samsung, TSMC e outras conseguem incorporar a MRAM diretamente nos dies de lógica em 28nm, 14nm e nós menores.',
         ],
-        note: 'A Everspin Technologies é a principal fornecedora mundial de MRAM standalone. A Samsung produz eMRAM (MRAM embarcada) em massa desde 2019. TSMC, Renesas, Avalanche Technology e GlobalFoundries também produzem MRAM em vários nós. Em junho de 2026, a STMicroelectronics foca em outras NVMs emergentes (por exemplo, PCRAM) em vez de MRAM.',
+        note: 'A Everspin Technologies é a principal fornecedora mundial de MRAM standalone — no segundo trimestre de 2026, a empresa registrou receita de US$ 18,7 milhões (ante US$ 13,2 milhões um ano antes) e um contrato de US$ 40 milhões com a base industrial de defesa dos EUA, embora esse crescimento seja impulsionado por clientes industriais, automotivos e de defesa, não por IA especificamente. A Samsung produz eMRAM (MRAM embarcada) em massa desde 2019. TSMC, Renesas, Avalanche Technology e GlobalFoundries também produzem MRAM em vários nós. A Ainekko, formada a partir de uma fusão com a Veevx em janeiro de 2026, é uma nova entrante que desenvolve uma memória embarcada baseada em MRAM chamada iRAM voltada para aceleradores de IA de borda. Em agosto de 2026, a STMicroelectronics foca em outras NVMs emergentes (por exemplo, PCRAM) em vez de MRAM.',
       },
       'memory-bottleneck': {
         id: 'memory-bottleneck',
@@ -1670,7 +1682,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'mram-status-2026': {
         id: 'mram-status-2026',
-        title: 'Onde MRAM está hoje (junho de 2026)',
+        title: 'Onde MRAM está hoje (agosto de 2026)',
         content: [
           '**Artigo da Samsung SAIT na Nature (janeiro de 2022):**',
         ],
@@ -1685,8 +1697,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Capacidade alegada: Inferência em dispositivo para modelos de até 2 bilhões de parâmetros sem conectividade de rede.',
           'Alvo: Sumarização de texto, tradução, raciocínio conversacional em IA de borda, robôs humanoides, automotivo.',
           'A primeira comercialização é voltada para a Ásia; nenhum cronograma norte-americano foi anunciado.',
+          '**Novidade desde junho de 2026 — silício acadêmico de computação em memória:** O IEEE Journal of Solid-State Circuits publicou em 2026 dois chips de teste de computação em memória baseados em MRAM: um macro de computação near-memory STT-MRAM de 64 Mb em CMOS de 28nm atingindo 316 TOPS/W em precisão de 1 bit, e um macro separado de computação em memória adaptativo à esparsidade STT-MRAM atingindo 492,8 TOPS/W.',
+          'São chips de pesquisa universitária/laboratorial, não produtos comerciais, e não são diretamente comparáveis ao SoC de borda da SemiFive/ICYTech (nó diferente, escopo diferente) — mas são os primeiros números de eficiência energética quantificados publicamente para computação em memória MRAM, preenchendo a lacuna que este artigo antes apontava como não divulgada.',
         ],
-        note: 'Status em meados de junho de 2026: apenas P&D e silício inicial. Nenhum PC ou celular de consumo anunciou integração de MRAM. O tape-out da SemiFive/ICYTech é um marco, mas não um lançamento de produto.',
+        note: 'Status no final de agosto de 2026: apenas P&D e silício inicial. Nenhum PC ou celular de consumo anunciou integração de MRAM. O tape-out da SemiFive/ICYTech é um marco, mas não um lançamento de produto — o silício ainda não foi retornado nem avaliado até esta atualização.',
       },
       'comparison-table': {
         id: 'comparison-table',
@@ -1775,7 +1789,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Maior autonomia de bateria:** Sem consumo de refresh em espera no subsistema de memória. Para recursos de IA always-on (escuta em segundo plano, análises que preservam a privacidade), a economia de energia é multiplicativa.',
           '**Modelos maiores no mesmo orçamento de energia:** Se a computação em memória alcançar de 2 a 10× de eficiência energética frente à separação LPDDR5 + computação, os celulares poderiam rodar modelos de 5B–10B com o mesmo impacto na bateria dos modelos de 1B–2B de hoje.',
         ],
-        note: 'No entanto, esses benefícios dependem de a MRAM atingir metas de densidade e custo de consumo. A eMRAM atual é adequada para caches pequenos (1–100 MB embarcados em microcontroladores e SoCs de IA de borda). A implantação em escala de celular (equivalente a 8–16 GB de memória unificada) exigiria que as foundries resolvessem desafios de densidade e rendimento que permanecem sem solução em junho de 2026.',
+        note: 'No entanto, esses benefícios dependem de a MRAM atingir metas de densidade e custo de consumo. A eMRAM atual é adequada para caches pequenos (1–100 MB embarcados em microcontroladores e SoCs de IA de borda). A implantação em escala de celular (equivalente a 8–16 GB de memória unificada) exigiria que as foundries resolvessem desafios de densidade e rendimento que permanecem sem solução em agosto de 2026.',
       },
       'timeline': {
         id: 'timeline',
@@ -1812,7 +1826,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'A MRAM está disponível para comprar agora para meu PC ou celular?',
-            a: 'Não. A MRAM está em produção para microcontroladores industriais, chips automotivos e armazenamento empresarial. Para IA de consumo, está apenas em P&D em junho de 2026. O chip da SemiFive/ICYTech está em estágio de tape-out — o silício ainda não retornou. A implantação de consumo está realistamente a 3–5+ anos.',
+            a: 'Não. A MRAM está em produção para microcontroladores industriais, chips automotivos e armazenamento empresarial. Para IA de consumo, ainda está apenas em P&D em agosto de 2026. O chip da SemiFive/ICYTech continua em estágio de tape-out — o silício ainda não retornou nem foi avaliado. A implantação de consumo está realistamente a 3–5+ anos.',
           },
           {
             q: 'A MRAM vai substituir a VRAM da minha GPU?',
@@ -1836,7 +1850,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Quanta energia a MRAM economiza em comparação com a DRAM?',
-            a: 'Em espera (sem refresh): a MRAM economiza ~0,5–1 mW por gigabyte. Para inferência ativa com computação em memória: o comunicado da Samsung alega redução "substancial" devido à eliminação da movimentação de dados, mas economias específicas quantificadas não são divulgadas publicamente. Números reais virão quando o silício for enviado e avaliado de forma independente.',
+            a: 'Em espera (sem refresh): a MRAM economiza ~0,5–1 mW por gigabyte. Para inferência ativa com computação em memória: o comunicado da Samsung alega redução "substancial" devido à eliminação da movimentação de dados, mas a Samsung não divulgou economias específicas quantificadas. Os primeiros números reais quantificados vêm de chips de teste acadêmicos publicados em 2026 (IEEE JSSC): um macro de computação near-memory STT-MRAM de 64 Mb atingindo 316 TOPS/W e um macro separado de computação em memória adaptativo à esparsidade atingindo 492,8 TOPS/W. São silício de laboratório, não o produto da SemiFive/ICYTech — números de silício comercial virão quando esse chip for enviado e avaliado de forma independente.',
           },
           {
             q: 'A MRAM vai substituir a DRAM?',
@@ -1844,7 +1858,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'A Qualcomm resolveu o gargalo de memória em 2026?',
-            a: 'A Qualcomm anunciou o HBC (High-Bandwidth Compute) sob sua marca Dragonfly no seu Investors Day de 2026 — uma arquitetura near-memory que empilha um acelerador de computação abaixo da memória LPDDR usando vias de silício (TSV), alegando cerca de 6x de largura de banda por watt frente à HBM e 200x de capacidade por watt frente à SRAM. Três distinções importam: o HBC é near-memory (computação ao lado da memória), não computação em memória MRAM (computação dentro do array de memória); ele mira aceleradores de IA de data center (AI250/AI300), não celulares; e a primeira geração de HBC está prevista para meados de 2027, então nada foi enviado em 2026. É uma abordagem diferente para o mesmo problema da parede de memória, não um avanço da MRAM.',
+            a: 'A Qualcomm anunciou o HBC (High-Bandwidth Compute) sob sua marca Dragonfly no seu Investors Day de 2026 — uma arquitetura near-memory que empilha um acelerador de computação abaixo da memória LPDDR usando vias de silício (TSV), alegando cerca de 6x de largura de banda por watt frente à HBM e 200x de capacidade por watt frente à SRAM. A Microsoft já confirmou que vai implantar o HBC no Azure, e a Qualcomm garantiu pedidos da Meta e da Microsoft para os aceleradores Dragonfly AI250/AI300 — tração comercial real para o roadmap, mas ainda não um produto enviado. Três distinções continuam importando: o HBC é near-memory (computação ao lado da memória), não computação em memória MRAM (computação dentro do array de memória); ele mira aceleradores de IA de data center, não celulares; e a amostragem comercial da primeira geração de HBC (AI250) está prevista para meados de 2027, com o HBC Gen 2 (AI300) planejado para 2028 — então nada foi enviado até agosto de 2026. É uma abordagem diferente para o mesmo problema da parede de memória, não um avanço da MRAM.',
           },
         ],
       },
@@ -1861,7 +1875,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ar: {
-    freshness_tier: 'semi_annual', next_refresh_due: '2026-12-15', theme: 'Hardware & Performance', title: 'MRAM والحوسبة داخل الذاكرة: الخطوة التالية لذكاء اصطناعي على الجهاز؟', seoTitle: 'MRAM مقابل HBM حوسبة في الذاكرة 2026: AI على الجهاز', intro: 'يمكن لـ MRAM (RAM مغناطيسي المقاومة) والحوسبة داخل الذاكرة أن تعيد تشكيل الذكاء الاصطناعي على الجهاز من خلال تنفيذ العمليات الحسابية داخل الذاكرة نفسها، مما يزيل اختناق نقل البيانات الذي يكلف الكثير من الطاقة. تُظهِر أبحاث Samsung إثبات المفهوم؛ حققت SemiFive و ICYTech نسخة سيليكون في مايو 2026 موجهة لرقاقات ذكاء اصطناعي الحافة بـ 2B معاملات. لكن MRAM لا تزال في مرحلة البحث والتطوير — لم تصل بعد إلى أجهزة المستهلك.', metaDescription: 'حوسبة MRAM في الذاكرة مقابل HBM و DRAM لذكاء اصطناعي على الجهاز: هل ستحل MRAM محل DRAM، هل هي المستقبل، وكيف تختلف عن Qualcomm HBC. حالة 2026 + جدول زمني.', publishDate: '2026-06-15', dateModified: '2026-07-01', readTime: '12 min', educationalLevel: 'Intermediate', audience: 'عشاق الأجهزة ومهندسو الذكاء الاصطناعي وبناؤو ذكاء اصطناعي الحافة', primaryTerm: 'حوسبة MRAM في الذاكرة', affiliateDisclosure: false, toc: [{ label: 'ما هي MRAM؟', anchor: '#what-is-mram' }, { label: 'اختناق الذاكرة في ذكاء اصطناعي على الجهاز', anchor: '#memory-bottleneck' }, { label: 'كيف تهاجم الحوسبة داخل الذاكرة المشكلة', anchor: '#in-memory-computing' }, { label: 'حيث تقف MRAM اليوم (يونيو 2026)', anchor: '#mram-status-2026' }, { label: 'MRAM مقابل HBM مقابل DRAM مقابل LPDDR5', anchor: '#comparison-table' }, { label: 'البديل البرمجي: TurboQuant', anchor: '#software-alternative' }, { label: 'إذا وصلت MRAM إلى أجهزة المستهلك', anchor: '#consumer-impact' }, { label: 'الجدول الزمني', anchor: '#timeline' }, { label: 'الأسئلة الشائعة', anchor: '#faq' }], leadAnswerBlock: 'MRAM هي ذاكرة مغناطيسية غير متطايرة مع استهلاك طاقة الوضع الجاهز صفر وعنونة على مستوى البايت؛ تنفذ الحوسبة داخل الذاكرة حسابات الشبكة العصبية داخل مصفوفة الذاكرة نفسها، مما يزيل نقل البيانات الباهظ من حيث الطاقة. هل هي مستقبل الذكاء الاصطناعي على الجهاز؟ واعدة لكنها غير مُثبتة — أظهرت Samsung إثبات المفهوم في Nature 2022، وأنجزت SemiFive/ICYTech نسخة SoC حافة من eMRAM بتقنية 8nm (حتى 2B معامل) في مايو 2026، لكن لم يُشحَن أي سيليكون بعد. هل ستحل MRAM محل DRAM؟ لا — فهي تكمّل DRAM كوحدة غير متطايرة منخفضة الطاقة، وليست بديلاً لعرض النطاق الترددي (لا يزال HBM4 و LPDDR6 يهيمنان على عرض النطاق الترددي). كما أنها تختلف عن Qualcomm HBC الذي يعمل near-memory ويستهدف مراكز البيانات ومقرر لعام 2027. نشر المستهلك (الهواتف وأجهزة الكمبيوتر) واقعي على بعد 3-5 سنوات أو أكثر.',
+    freshness_tier: 'semi_annual', next_refresh_due: '2027-02-28', theme: 'Hardware & Performance', title: 'MRAM والحوسبة داخل الذاكرة: الخطوة التالية لذكاء اصطناعي على الجهاز؟', seoTitle: 'MRAM مقابل HBM حوسبة في الذاكرة 2026: AI على الجهاز', intro: 'يمكن لـ MRAM (RAM مغناطيسي المقاومة) والحوسبة داخل الذاكرة أن تعيد تشكيل الذكاء الاصطناعي على الجهاز من خلال تنفيذ العمليات الحسابية داخل الذاكرة نفسها، مما يزيل اختناق نقل البيانات الذي يكلف الكثير من الطاقة. تُظهِر أبحاث Samsung إثبات المفهوم؛ حققت SemiFive و ICYTech نسخة سيليكون في مايو 2026 موجهة لرقاقات ذكاء اصطناعي الحافة بـ 2B معاملات. لكن MRAM لا تزال في مرحلة البحث والتطوير — لم تصل بعد إلى أجهزة المستهلك.', metaDescription: 'حوسبة MRAM في الذاكرة مقابل HBM و DRAM لذكاء اصطناعي على الجهاز: هل ستحل MRAM محل DRAM، هل هي المستقبل، وكيف تختلف عن Qualcomm HBC. حالة 2026 + جدول زمني.', publishDate: '2026-06-15', dateModified: '2026-08-28', readTime: '12 min', educationalLevel: 'Intermediate', audience: 'عشاق الأجهزة ومهندسو الذكاء الاصطناعي وبناؤو ذكاء اصطناعي الحافة', primaryTerm: 'حوسبة MRAM في الذاكرة', affiliateDisclosure: false, toc: [{ label: 'ما هي MRAM؟', anchor: '#what-is-mram' }, { label: 'اختناق الذاكرة في ذكاء اصطناعي على الجهاز', anchor: '#memory-bottleneck' }, { label: 'كيف تهاجم الحوسبة داخل الذاكرة المشكلة', anchor: '#in-memory-computing' }, { label: 'حيث تقف MRAM اليوم (أغسطس 2026)', anchor: '#mram-status-2026' }, { label: 'MRAM مقابل HBM مقابل DRAM مقابل LPDDR5', anchor: '#comparison-table' }, { label: 'البديل البرمجي: TurboQuant', anchor: '#software-alternative' }, { label: 'إذا وصلت MRAM إلى أجهزة المستهلك', anchor: '#consumer-impact' }, { label: 'الجدول الزمني', anchor: '#timeline' }, { label: 'الأسئلة الشائعة', anchor: '#faq' }], leadAnswerBlock: 'MRAM هي ذاكرة مغناطيسية غير متطايرة مع استهلاك طاقة الوضع الجاهز صفر وعنونة على مستوى البايت؛ تنفذ الحوسبة داخل الذاكرة حسابات الشبكة العصبية داخل مصفوفة الذاكرة نفسها، مما يزيل نقل البيانات الباهظ من حيث الطاقة. هل هي مستقبل الذكاء الاصطناعي على الجهاز؟ واعدة لكنها غير مُثبتة — أظهرت Samsung إثبات المفهوم في Nature 2022، وأنجزت SemiFive/ICYTech نسخة SoC حافة من eMRAM بتقنية 8nm (حتى 2B معامل) في مايو 2026، لكن لم يُشحَن أي سيليكون بعد. هل ستحل MRAM محل DRAM؟ لا — فهي تكمّل DRAM كوحدة غير متطايرة منخفضة الطاقة، وليست بديلاً لعرض النطاق الترددي (لا يزال HBM4 و LPDDR6 يهيمنان على عرض النطاق الترددي). كما أنها تختلف عن Qualcomm HBC الذي يعمل near-memory ويستهدف مراكز البيانات ومقرر لعام 2027. نشر المستهلك (الهواتف وأجهزة الكمبيوتر) واقعي على بعد 3-5 سنوات أو أكثر.',
     heroImage: '/images/mram-in-memory-computing-local-ai-2026-overview-hero-ar.webp',
     sections: {
       'intro-tldr': {
@@ -1870,7 +1884,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**MRAM (Magnetoresistive RAM):** ذاكرة غير متطايرة تستخدم وصلات نفقية مغناطيسية (MTJ). لا تتطلب تحديثاً، ولا استهلاك طاقة في وضع الاستعداد. قابلة للعنونة على مستوى البايت مثل DRAM.',
           '**In-memory computing:** تنفيذ عمليات الضرب-والتجميع (MAC) مباشرةً داخل مصفوفة الذاكرة. يزيل حركة البيانات بين CPU/GPU والذاكرة — التكلفة الأولى للطاقة في الاستدلال.',
           '**الحالة الراهنة:** أظهرت Samsung SAIT في ورقة Nature (2022) دقة 98% في مهام الصور. حققت SemiFive + ICYTech نسخة 8nm eMRAM tape-out (مايو 2026). لا توجد منتجات استهلاكية بعد.',
-          '**المحاذير:** tape-out ≠ عودة السيليكون ≠ منتج مُشحَن. أرقام كفاءة الطاقة الفعلية لم تُحدَّد بعد. من غير المرجح وصول الهواتف/أجهزة الكمبيوتر الاستهلاكية قبل 2029–2031.',
+          '**المحاذير:** tape-out ≠ عودة السيليكون ≠ منتج مُشحَن — لم تُشحَن رقاقة SemiFive/ICYTech بعد حتى أغسطس 2026. نشرت رقاقات اختبار أكاديمية جديدة (IEEE JSSC، 2026) أول أرقام حقيقية لكفاءة الطاقة لحوسبة MRAM داخل الذاكرة — تصل إلى 492.8 TOPS/W — لكنها سيليكون مختبري، وليست منتج SemiFive. من غير المرجح وصول الهواتف/أجهزة الكمبيوتر الاستهلاكية قبل 2029–2031.',
           '**البديل:** يضغط Google TurboQuant (ICLR 2026) ذاكرة KV cache إلى 3 bits دون أي فقدان في الدقة — نهج برمجي بحت للمشكلة نفسها، متاح الآن.',
         ],
       },
@@ -1888,7 +1902,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**تحمّل عالٍ:** تحقق MRAM التجارية من 10^10 إلى 10^14 دورة كتابة. DRAM/SRAM نحو 10^16 (غير محدودة فعلياً). NAND Flash هي 10^3–10^5. MRAM أفضل بكثير من Flash، ومقاربة لـ DRAM.',
           '**تكامل العملية:** يمكن لـ Samsung و TSMC وغيرهما تضمين MRAM مباشرةً في شرائح المنطق عند عقد 28nm و 14nm وأصغر.',
         ],
-        note: 'Everspin Technologies هي المورّد المستقل الرائد عالمياً لـ MRAM. أنتجت Samsung eMRAM (MRAM المضمّنة) على نطاق واسع منذ 2019. كما تنتج TSMC و Renesas و Avalanche Technology و GlobalFoundries كذلك MRAM بعقد مختلفة. اعتباراً من يونيو 2026، تركّز STMicroelectronics على ذواكر NVM ناشئة أخرى (مثل PCRAM) بدلاً من MRAM.',
+        note: 'Everspin Technologies هي المورّد المستقل الرائد عالمياً لـ MRAM — سجّلت الشركة في الربع الثاني من 2026 إيرادات بلغت 18.7 مليون دولار (مقابل 13.2 مليون دولار قبل عام)، إضافة إلى عقد بقيمة 40 مليون دولار مع القاعدة الصناعية الدفاعية الأمريكية، لكن هذا النمو مدفوع بعملاء من القطاعات الصناعية والسيارات والدفاع، وليس بالذكاء الاصطناعي تحديداً. أنتجت Samsung eMRAM (MRAM المضمّنة) على نطاق واسع منذ 2019. كما تنتج TSMC و Renesas و Avalanche Technology و GlobalFoundries كذلك MRAM بعقد مختلفة. وتُعدّ Ainekko، التي تشكّلت عبر اندماج مع Veevx في يناير 2026، وافداً أحدث يطوّر ذاكرة مضمّنة قائمة على MRAM تُدعى iRAM موجّهة لمسرّعات ذكاء اصطناعي الحافة. اعتباراً من أغسطس 2026، تركّز STMicroelectronics على ذواكر NVM ناشئة أخرى (مثل PCRAM) بدلاً من MRAM.',
       },
       'memory-bottleneck': {
         id: 'memory-bottleneck',
@@ -1925,7 +1939,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'mram-status-2026': {
         id: 'mram-status-2026',
-        title: 'حيث تقف MRAM اليوم (يونيو 2026)',
+        title: 'حيث تقف MRAM اليوم (أغسطس 2026)',
         content: [
           '**ورقة Samsung SAIT في Nature (يناير 2022):**',
         ],
@@ -1940,8 +1954,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'القدرة المزعومة: استدلال على الجهاز لنماذج تصل إلى 2 مليار معامل دون اتصال بالشبكة.',
           'المستهدف: تلخيص النصوص والترجمة والاستدلال الحواري على ذكاء اصطناعي الحافة والروبوتات البشرية والسيارات.',
           'يُستهدف أول تسويق تجاري في آسيا؛ لم يُعلَن عن جدول زمني لأمريكا الشمالية.',
+          '**جديد منذ يونيو 2026 — سيليكون أكاديمي للحوسبة داخل الذاكرة:** نشرت مجلة IEEE Journal of Solid-State Circuits في 2026 رقاقتي اختبار قائمتين على MRAM للحوسبة داخل الذاكرة: وحدة حوسبة قريبة من الذاكرة (near-memory) من نوع STT-MRAM سعة 64 ميغابت مبنية بتقنية 28nm CMOS تحقق 316 TOPS/W بدقة 1 بت، ووحدة منفصلة للحوسبة داخل الذاكرة متكيّفة مع التخلخل (sparsity-adaptive) من نوع STT-MRAM تحقق 492.8 TOPS/W.',
+          'هذه رقاقات بحثية جامعية/مختبرية، وليست منتجات تجارية، ولا يمكن مقارنتها مباشرةً برقاقة SemiFive/ICYTech للحافة (عقدة مختلفة، نطاق مختلف) — لكنها أول أرقام كفاءة طاقة مقنّنة علناً لحوسبة MRAM داخل الذاكرة، وتسدّ الفجوة التي أشار إليها هذا المقال سابقاً باعتبارها غير مُفصَح عنها.',
         ],
-        note: 'الحالة اعتباراً من منتصف يونيو 2026: بحث وتطوير وسيليكون مبكر فقط. لم تُعلن أي أجهزة كمبيوتر أو هواتف استهلاكية عن دمج MRAM. يُعدّ tape-out الخاص بـ SemiFive/ICYTech محطة بارزة لكنه ليس إطلاق منتج.',
+        note: 'الحالة اعتباراً من نهاية أغسطس 2026: بحث وتطوير وسيليكون مبكر فقط. لم تُعلن أي أجهزة كمبيوتر أو هواتف استهلاكية عن دمج MRAM. يُعدّ tape-out الخاص بـ SemiFive/ICYTech محطة بارزة لكنه ليس إطلاق منتج — ولا يزال السيليكون، حتى وقت هذا التحديث، لم يعُد أو يُقَس أداؤه.',
       },
       'comparison-table': {
         id: 'comparison-table',
@@ -2030,7 +2046,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**عمر بطارية أطول:** لا استنزاف بتحديث وضع الاستعداد على نظام الذاكرة الفرعي. بالنسبة لميزات الذكاء الاصطناعي الدائمة التشغيل (الاستماع في الخلفية، التحليلات الحافظة للخصوصية)، تكون وفورات الطاقة تراكمية مضاعفة.',
           '**نماذج أكبر ضمن ميزانية طاقة ثابتة:** إذا حققت الحوسبة داخل الذاكرة كفاءة طاقة أعلى بمقدار 2–10× مقارنةً بفصل LPDDR5 + الحوسبة، فيمكن للهواتف تشغيل نماذج 5B–10B بالتأثير نفسه على البطارية الذي تحدثه اليوم نماذج 1B–2B.',
         ],
-        note: 'لكن هذه الفوائد مشروطة بوصول MRAM إلى أهداف الكثافة والتكلفة الاستهلاكية. eMRAM الحالية مناسبة للذواكر المؤقتة الصغيرة (1–100 MB مضمّنة في المتحكمات الدقيقة ورقاقات SoC لذكاء اصطناعي الحافة). سيتطلب النشر على مستوى الهاتف (ما يعادل 8–16 GB ذاكرة موحدة) من مصانع الرقاقات حل تحديات الكثافة والإنتاجية التي لا تزال دون حل اعتباراً من يونيو 2026.',
+        note: 'لكن هذه الفوائد مشروطة بوصول MRAM إلى أهداف الكثافة والتكلفة الاستهلاكية. eMRAM الحالية مناسبة للذواكر المؤقتة الصغيرة (1–100 MB مضمّنة في المتحكمات الدقيقة ورقاقات SoC لذكاء اصطناعي الحافة). سيتطلب النشر على مستوى الهاتف (ما يعادل 8–16 GB ذاكرة موحدة) من مصانع الرقاقات حل تحديات الكثافة والإنتاجية التي لا تزال دون حل اعتباراً من أغسطس 2026.',
       },
       'timeline': {
         id: 'timeline',
@@ -2067,7 +2083,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: 'هل MRAM متاحة للشراء الآن لجهاز الكمبيوتر أو الهاتف؟',
-            a: 'لا. MRAM في مرحلة الإنتاج للمتحكمات الدقيقة الصناعية ورقائق السيارات وتخزين المؤسسات. أما للذكاء الاصطناعي الاستهلاكي، فهي في مرحلة البحث والتطوير فقط اعتباراً من يونيو 2026. رقاقة SemiFive/ICYTech في مرحلة tape-out — لم يعُد السيليكون بعد. النشر الاستهلاكي واقعياً على بُعد 3–5 سنوات أو أكثر.',
+            a: 'لا. MRAM في مرحلة الإنتاج للمتحكمات الدقيقة الصناعية ورقائق السيارات وتخزين المؤسسات. أما للذكاء الاصطناعي الاستهلاكي، فهي لا تزال في مرحلة البحث والتطوير فقط اعتباراً من أغسطس 2026. رقاقة SemiFive/ICYTech لا تزال في مرحلة tape-out — لم يعُد السيليكون بعد ولم يُقَس أداؤه. النشر الاستهلاكي واقعياً على بُعد 3–5 سنوات أو أكثر.',
           },
           {
             q: 'هل ستحل MRAM محل VRAM في وحدة GPU لديّ؟',
@@ -2091,7 +2107,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'كم من الطاقة توفر MRAM مقارنةً بـ DRAM؟',
-            a: 'في وضع الاستعداد (دون تحديث): توفر MRAM نحو 0.5–1 mW لكل جيجابايت. أما في الاستدلال النشط بالحوسبة داخل الذاكرة: يدّعي بيان Samsung الصحفي خفضاً "كبيراً" بسبب إزالة حركة البيانات، لكن لم يُكشَف علناً عن وفورات محددة ومقنّنة. ستأتي الأرقام الحقيقية عندما يُشحَن السيليكون ويُقاس أداؤه بشكل مستقل.',
+            a: 'في وضع الاستعداد (دون تحديث): توفر MRAM نحو 0.5–1 mW لكل جيجابايت. أما في الاستدلال النشط بالحوسبة داخل الذاكرة: يدّعي بيان Samsung الصحفي خفضاً "كبيراً" بسبب إزالة حركة البيانات، لكن Samsung لم تكشف عن وفورات محددة ومقنّنة. جاءت أول أرقام حقيقية مقنّنة من رقاقات اختبار أكاديمية نُشرت في 2026 (IEEE JSSC): وحدة حوسبة قريبة من الذاكرة من نوع STT-MRAM سعة 64 ميغابت تحقق 316 TOPS/W، ووحدة منفصلة للحوسبة داخل الذاكرة متكيّفة مع التخلخل تحقق 492.8 TOPS/W. هذه سيليكون مختبري، وليست منتج SemiFive/ICYTech — ستأتي أرقام السيليكون التجاري عندما تُشحَن تلك الرقاقة ويُقاس أداؤها بشكل مستقل.',
           },
           {
             q: 'هل ستحل MRAM محل DRAM؟',
@@ -2099,7 +2115,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل حلّت Qualcomm اختناق الذاكرة في 2026؟',
-            a: 'أعلنت Qualcomm عن HBC (High-Bandwidth Compute) تحت علامتها Dragonfly في يوم المستثمرين 2026 — بنية near-memory تكدّس مسرّع حوسبة أسفل ذاكرة LPDDR باستخدام فتحات عبر السيليكون (TSV)، مدّعيةً نحو 6x من عرض النطاق الترددي لكل واط مقابل HBM و200x من السعة لكل واط مقابل SRAM. ثلاثة فروق مهمة: HBC هي near-memory (الحوسبة بجوار الذاكرة)، وليست حوسبة MRAM داخل الذاكرة (الحوسبة داخل مصفوفة الذاكرة)؛ وتستهدف مسرّعات الذكاء الاصطناعي لمراكز البيانات (AI250/AI300)، وليس الهواتف؛ والجيل الأول من HBC مقرر لمنتصف 2027، لذا لم يُشحَن شيء في 2026. إنها مقاربة مختلفة لمشكلة جدار الذاكرة نفسها، وليست اختراقاً في MRAM.',
+            a: 'أعلنت Qualcomm عن HBC (High-Bandwidth Compute) تحت علامتها Dragonfly في يوم المستثمرين 2026 — بنية near-memory تكدّس مسرّع حوسبة أسفل ذاكرة LPDDR باستخدام فتحات عبر السيليكون (TSV)، مدّعيةً نحو 6x من عرض النطاق الترددي لكل واط مقابل HBM و200x من السعة لكل واط مقابل SRAM. أكدت Microsoft منذ ذلك الحين أنها ستنشر HBC على Azure، وحصلت Qualcomm على طلبات من Meta وMicrosoft لمسرّعات Dragonfly AI250/AI300 — زخم تجاري حقيقي لخارطة الطريق، لكن دون شحن منتج بعد. ثلاثة فروق لا تزال مهمة: HBC هي near-memory (الحوسبة بجوار الذاكرة)، وليست حوسبة MRAM داخل الذاكرة (الحوسبة داخل مصفوفة الذاكرة)؛ وتستهدف مسرّعات الذكاء الاصطناعي لمراكز البيانات، وليس الهواتف؛ ومن المقرر توفير عينات تجارية من الجيل الأول من HBC (AI250) في منتصف 2027، فيما يُستهدف الجيل الثاني HBC Gen 2 (AI300) في 2028 — لذا لم يُشحَن شيء حتى أغسطس 2026. إنها مقاربة مختلفة لمشكلة جدار الذاكرة نفسها، وليست اختراقاً في MRAM.',
           },
         ],
       },
@@ -2116,7 +2132,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
   },
   ko: {
-    freshness_tier: 'semi_annual', next_refresh_due: '2026-12-15', last_full_refresh: '2026-06-15', theme: 'Hardware & Performance', title: 'MRAM과 인메모리 컴퓨팅: 온디바이스 AI의 다음 도약?', seoTitle: 'MRAM vs HBM 인메모리 컴퓨팅 2026: 온디바이스 AI', intro: 'MRAM(자성메모리)과 인메모리 컴퓨팅 아키텍처는 메모리 내부에서 연산을 수행함으로써 온디바이스 AI를 재편할 수 있으며, 현재 로컬 LLM 추론을 제약하는 에너지 집약적인 데이터 이동 병목을 제거할 수 있습니다. Samsung의 연구는 신경망에서 개념 증명 정확도를 보여주었고, SemiFive와 ICYTech는 2026년 5월 2B 파라미터 엣지 AI 칩을 목표로 하는 실리콘 테이프아웃을 달성했습니다. 하지만 MRAM은 여전히 R&D 및 초기 제품 단계에 있으며 아직 소비자 PC나 폰에는 없습니다.', metaDescription: '온디바이스 AI를 위한 MRAM 인메모리 컴퓨팅 vs HBM 및 DRAM: MRAM이 DRAM을 대체할지, 미래인지, Qualcomm HBC와 어떻게 다른지. 2026년 현황 + 타임라인.', publishDate: '2026-06-15', dateModified: '2026-07-01', readTime: '12 min', educationalLevel: 'Intermediate', audience: '신흥 메모리 기술을 추적하는 하드웨어 열성가, AI 엔지니어, 엣지 AI 개발자', primaryTerm: 'MRAM 인메모리 컴퓨팅', affiliateDisclosure: false, toc: [{ label: 'MRAM이란 무엇인가?', anchor: '#what-is-mram' }, { label: '온디바이스 AI의 메모리 병목', anchor: '#memory-bottleneck' }, { label: '인메모리 컴퓨팅이 문제를 해결하는 방식', anchor: '#in-memory-computing' }, { label: 'MRAM의 현재 상태 (2026년 6월)', anchor: '#mram-status-2026' }, { label: 'MRAM vs HBM vs DRAM vs LPDDR5', anchor: '#comparison-table' }, { label: '소프트웨어 대안: TurboQuant', anchor: '#software-alternative' }, { label: 'MRAM이 소비자 기기에 도달한다면', anchor: '#consumer-impact' }, { label: '타임라인 & 솔직한 전망', anchor: '#timeline' }, { label: '자주 묻는 질문', anchor: '#faq' }], leadAnswerBlock: 'MRAM은 0 대기전력과 바이트 단위 주소 지정이 가능한 비휘발성 자성메모리이며, 인메모리 컴퓨팅은 신경망 연산을 메모리 어레이 내부에서 직접 수행하여 에너지 집약적인 데이터 이동을 제거합니다. 온디바이스 AI의 미래일까요? 유망하지만 아직 입증되지 않았습니다 — Samsung은 2022년 Nature에서 개념 증명을 입증했고, SemiFive/ICYTech는 2026년 5월 8nm eMRAM 엣지 SoC(최대 2B 파라미터)를 테이프아웃했으나 아직 출하된 실리콘은 없습니다. MRAM이 DRAM을 대체할까요? 아닙니다 — 대역폭 대체가 아니라 저전력 비휘발성 타일로서 DRAM을 보완합니다(HBM4와 LPDDR6가 여전히 대역폭을 담당합니다). 또한 Qualcomm HBC와도 구별되는데, HBC는 near-memory 방식이고 데이터센터 중심이며 2027년 예정입니다. 소비자 배포(폰, PC)는 현실적으로 3~5년 이상 멀어 있습니다.',
+    freshness_tier: 'semi_annual', next_refresh_due: '2027-02-28', last_full_refresh: '2026-08-28', theme: 'Hardware & Performance', title: 'MRAM과 인메모리 컴퓨팅: 온디바이스 AI의 다음 도약?', seoTitle: 'MRAM vs HBM 인메모리 컴퓨팅 2026: 온디바이스 AI', intro: 'MRAM(자성메모리)과 인메모리 컴퓨팅 아키텍처는 메모리 내부에서 연산을 수행함으로써 온디바이스 AI를 재편할 수 있으며, 현재 로컬 LLM 추론을 제약하는 에너지 집약적인 데이터 이동 병목을 제거할 수 있습니다. Samsung의 연구는 신경망에서 개념 증명 정확도를 보여주었고, SemiFive와 ICYTech는 2026년 5월 2B 파라미터 엣지 AI 칩을 목표로 하는 실리콘 테이프아웃을 달성했습니다. 하지만 MRAM은 여전히 R&D 및 초기 제품 단계에 있으며 아직 소비자 PC나 폰에는 없습니다.', metaDescription: '온디바이스 AI를 위한 MRAM 인메모리 컴퓨팅 vs HBM 및 DRAM: MRAM이 DRAM을 대체할지, 미래인지, Qualcomm HBC와 어떻게 다른지. 2026년 현황 + 타임라인.', publishDate: '2026-06-15', dateModified: '2026-08-28', readTime: '12 min', educationalLevel: 'Intermediate', audience: '신흥 메모리 기술을 추적하는 하드웨어 열성가, AI 엔지니어, 엣지 AI 개발자', primaryTerm: 'MRAM 인메모리 컴퓨팅', affiliateDisclosure: false, toc: [{ label: 'MRAM이란 무엇인가?', anchor: '#what-is-mram' }, { label: '온디바이스 AI의 메모리 병목', anchor: '#memory-bottleneck' }, { label: '인메모리 컴퓨팅이 문제를 해결하는 방식', anchor: '#in-memory-computing' }, { label: 'MRAM의 현재 상태 (2026년 8월)', anchor: '#mram-status-2026' }, { label: 'MRAM vs HBM vs DRAM vs LPDDR5', anchor: '#comparison-table' }, { label: '소프트웨어 대안: TurboQuant', anchor: '#software-alternative' }, { label: 'MRAM이 소비자 기기에 도달한다면', anchor: '#consumer-impact' }, { label: '타임라인 & 솔직한 전망', anchor: '#timeline' }, { label: '자주 묻는 질문', anchor: '#faq' }], leadAnswerBlock: 'MRAM은 0 대기전력과 바이트 단위 주소 지정이 가능한 비휘발성 자성메모리이며, 인메모리 컴퓨팅은 신경망 연산을 메모리 어레이 내부에서 직접 수행하여 에너지 집약적인 데이터 이동을 제거합니다. 온디바이스 AI의 미래일까요? 유망하지만 아직 입증되지 않았습니다 — Samsung은 2022년 Nature에서 개념 증명을 입증했고, SemiFive/ICYTech는 2026년 5월 8nm eMRAM 엣지 SoC(최대 2B 파라미터)를 테이프아웃했으나 아직 출하된 실리콘은 없습니다. MRAM이 DRAM을 대체할까요? 아닙니다 — 대역폭 대체가 아니라 저전력 비휘발성 타일로서 DRAM을 보완합니다(HBM4와 LPDDR6가 여전히 대역폭을 담당합니다). 또한 Qualcomm HBC와도 구별되는데, HBC는 near-memory 방식이고 데이터센터 중심이며 2027년 예정입니다. 소비자 배포(폰, PC)는 현실적으로 3~5년 이상 멀어 있습니다.',
     heroImage: '/images/mram-in-memory-computing-local-ai-2026-overview-hero-ko.webp',
     sections: {
       'intro-tldr': {
@@ -2125,7 +2141,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**MRAM(자성메모리):** 자기 터널 접합(MTJ)을 사용하는 비휘발성 메모리입니다. 리프레시가 필요 없고 대기 전력 소모도 없습니다. DRAM처럼 바이트 단위 주소 지정이 가능합니다.',
           '**인메모리 컴퓨팅:** 곱셈-누산(MAC) 연산을 메모리 어레이 내부에서 직접 수행합니다. CPU/GPU와 메모리 간 데이터 이동을 제거하는데, 이는 추론에서 가장 큰 에너지 비용입니다.',
           '**현재 상태:** Samsung SAIT는 Nature 논문(2022)에서 이미지 작업 98% 정확도로 이를 입증했습니다. SemiFive + ICYTech는 8nm eMRAM 테이프아웃(2026년 5월)을 달성했습니다. 아직 소비자 제품은 없습니다.',
-          '**함정:** 테이프아웃 ≠ 실리콘 반환 ≠ 출하된 제품입니다. 실제 전력 효율 수치는 미정입니다. 소비자용 폰/PC는 2029~2031년 이전에는 나오기 어렵습니다.',
+          '**함정:** 테이프아웃 ≠ 실리콘 반환 ≠ 출하된 제품입니다 — SemiFive/ICYTech 칩은 2026년 8월 기준 아직 출하되지 않았습니다. 새로운 학술 테스트 칩(IEEE JSSC, 2026)이 MRAM 인메모리 연산의 첫 실측 전력 효율 수치를 발표했으나 — 최대 492.8 TOPS/W — 이는 실험실 실리콘일 뿐 SemiFive 제품은 아닙니다. 소비자용 폰/PC는 2029~2031년 이전에는 나오기 어렵습니다.',
           '**대안:** Google TurboQuant(ICLR 2026)는 KV 캐시를 정확도 손실 없이 3비트로 압축하며 — 동일한 문제에 대한 소프트웨어 전용 접근법으로 지금 바로 사용할 수 있습니다.',
         ],
       },
@@ -2143,7 +2159,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**높은 내구성:** 상용 MRAM은 10^10에서 10^14 쓰기 사이클을 달성합니다. DRAM/SRAM은 약 10^16(사실상 무제한)입니다. NAND Flash는 10^3~10^5입니다. MRAM은 Flash보다 월등히 뛰어나며 DRAM에 견줄 만합니다.',
           '**공정 통합:** Samsung, TSMC 등은 MRAM을 28nm, 14nm 및 그 이하 노드의 로직 다이에 직접 임베드할 수 있습니다.',
         ],
-        note: 'Everspin Technologies는 세계 최고의 독립형 MRAM 공급업체입니다. Samsung은 2019년부터 eMRAM(임베디드 MRAM)을 양산해 왔습니다. TSMC, Renesas, Avalanche Technology, GlobalFoundries도 다양한 노드에서 MRAM을 생산합니다. 2026년 6월 기준, STMicroelectronics는 MRAM보다 다른 신흥 NVM(예: PCRAM)에 집중하고 있습니다.',
+        note: 'Everspin Technologies는 세계 최고의 독립형 MRAM 공급업체입니다 — 2026년 2분기 매출은 1,870만 달러(전년 동기 1,320만 달러 대비 증가)를 기록했고 미국 방위산업기반과 4,000만 달러 규모 계약도 체결했지만, 이 성장은 AI가 아니라 산업, 자동차, 방위 분야 고객이 이끌고 있습니다. Samsung은 2019년부터 eMRAM(임베디드 MRAM)을 양산해 왔습니다. TSMC, Renesas, Avalanche Technology, GlobalFoundries도 다양한 노드에서 MRAM을 생산합니다. 2026년 1월 Veevx와의 합병으로 탄생한 Ainekko는 엣지 AI 가속기용 MRAM 기반 임베디드 메모리 iRAM을 개발하는 신흥 업체입니다. 2026년 8월 기준, STMicroelectronics는 MRAM보다 다른 신흥 NVM(예: PCRAM)에 집중하고 있습니다.',
       },
       'memory-bottleneck': {
         id: 'memory-bottleneck',
@@ -2180,7 +2196,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'mram-status-2026': {
         id: 'mram-status-2026',
-        title: 'MRAM의 현재 상태 (2026년 6월)',
+        title: 'MRAM의 현재 상태 (2026년 8월)',
         content: [
           '**Samsung SAIT Nature 논문 (2022년 1월):**',
         ],
@@ -2195,8 +2211,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '주장된 성능: 네트워크 연결 없이 최대 20억 파라미터 모델까지 온디바이스 추론.',
           '목표: 엣지 AI, 휴머노이드 로봇, 자동차에서의 텍스트 요약, 번역, 대화형 추론.',
           '첫 상용화는 아시아를 목표로 하며, 북미 일정은 발표되지 않았습니다.',
+          '**2026년 6월 이후 새로운 소식 — 학술 인메모리 연산 실리콘:** IEEE Journal of Solid-State Circuits는 2026년 MRAM 기반 인메모리 연산 테스트 칩 두 종을 발표했습니다. 28nm CMOS로 제작된 64Mb STT-MRAM 니어메모리 연산 매크로는 1비트 정밀도에서 316 TOPS/W를 달성했고, 별도의 STT-MRAM 희소성 적응형 인메모리 연산 매크로는 492.8 TOPS/W를 달성했습니다.',
+          '이들은 대학/연구실 실험용 칩이며 상용 제품이 아니고, 노드와 범위가 다른 SemiFive/ICYTech 엣지 SoC와 직접 비교할 수는 없습니다 — 하지만 이는 이 글이 이전에 "미공개"라고 지적했던 공백을 메우는, MRAM 인메모리 연산에 대해 공개적으로 정량화된 최초의 전력 효율 수치입니다.',
         ],
-        note: '2026년 6월 중순 기준 상태: R&D 및 초기 실리콘 단계에 불과합니다. MRAM 통합을 발표한 소비자 PC나 폰은 없습니다. SemiFive/ICYTech 테이프아웃은 이정표이지만 제품 출시는 아닙니다.',
+        note: '2026년 8월 말 기준 상태: R&D 및 초기 실리콘 단계에 불과합니다. MRAM 통합을 발표한 소비자 PC나 폰은 없습니다. SemiFive/ICYTech 테이프아웃은 이정표이지만 제품 출시는 아닙니다 — 이번 업데이트 시점까지도 실리콘은 여전히 반환되거나 벤치마크되지 않았습니다.',
       },
       'comparison-table': {
         id: 'comparison-table',
@@ -2285,7 +2303,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**배터리 수명:** 메모리 서브시스템에 대기 리프레시 소모가 없습니다. 상시 구동 AI 기능(백그라운드 청취, 프라이버시 보호 분석)에서 에너지 절감이 배가됩니다.',
           '**고정된 전력 예산에서 더 큰 모델:** 인메모리 컴퓨팅이 LPDDR5 + 연산 분리 대비 2~10배 에너지 효율을 달성한다면, 폰은 오늘날의 1B~2B 모델과 동일한 배터리 영향으로 5B~10B 모델을 구동할 수 있습니다.',
         ],
-        note: '하지만 이러한 이점은 MRAM이 소비자용 밀도와 비용 목표에 도달하는 것을 전제로 합니다. 현재 eMRAM은 소형 캐시(마이크로컨트롤러와 엣지 AI SoC에 임베드된 1~100 MB)에 적합합니다. 폰 규모의 배포(8~16 GB 통합 메모리에 상당)를 위해서는 파운드리가 2026년 6월 기준 미해결 상태인 밀도와 수율 문제를 해결해야 합니다.',
+        note: '하지만 이러한 이점은 MRAM이 소비자용 밀도와 비용 목표에 도달하는 것을 전제로 합니다. 현재 eMRAM은 소형 캐시(마이크로컨트롤러와 엣지 AI SoC에 임베드된 1~100 MB)에 적합합니다. 폰 규모의 배포(8~16 GB 통합 메모리에 상당)를 위해서는 파운드리가 2026년 8월 기준 미해결 상태인 밀도와 수율 문제를 해결해야 합니다.',
       },
       'timeline': {
         id: 'timeline',
@@ -2322,7 +2340,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         faqs: [
           {
             q: '지금 제 PC나 폰에 쓸 MRAM을 구매할 수 있나요?',
-            a: '아닙니다. MRAM은 산업용 마이크로컨트롤러, 자동차 칩, 엔터프라이즈 스토리지용으로는 양산 중입니다. 소비자 AI의 경우 2026년 6월 기준 R&D 단계에 불과합니다. SemiFive/ICYTech 칩은 테이프아웃 단계로 실리콘이 아직 반환되지 않았습니다. 소비자 배포는 현실적으로 3~5년 이상 남았습니다.',
+            a: '아닙니다. MRAM은 산업용 마이크로컨트롤러, 자동차 칩, 엔터프라이즈 스토리지용으로는 양산 중입니다. 소비자 AI의 경우 2026년 8월 기준에도 여전히 R&D 단계에 불과합니다. SemiFive/ICYTech 칩은 여전히 테이프아웃 단계로 실리콘이 아직 반환되거나 벤치마크되지 않았습니다. 소비자 배포는 현실적으로 3~5년 이상 남았습니다.',
           },
           {
             q: 'MRAM이 제 GPU의 VRAM을 대체할까요?',
@@ -2346,7 +2364,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'MRAM은 DRAM 대비 전력을 얼마나 절약하나요?',
-            a: '대기 상태(리프레시 없음)의 경우: MRAM은 기가바이트당 약 0.5~1 mW를 절약합니다. 인메모리 연산을 사용한 활성 추론의 경우: Samsung의 보도자료는 데이터 이동 제거로 인한 "상당한" 절감을 주장하지만, 구체적으로 정량화된 절감치는 공개되지 않았습니다. 실제 수치는 실리콘이 출하되어 독립적으로 벤치마크될 때 나올 것입니다.',
+            a: '대기 상태(리프레시 없음)의 경우: MRAM은 기가바이트당 약 0.5~1 mW를 절약합니다. 인메모리 연산을 사용한 활성 추론의 경우: Samsung의 보도자료는 데이터 이동 제거로 인한 "상당한" 절감을 주장하지만, Samsung은 구체적으로 정량화된 절감치를 공개하지 않았습니다. 최초의 실측 정량 수치는 2026년 발표된 학술 테스트 칩(IEEE JSSC)에서 나왔습니다: 316 TOPS/W를 달성한 64Mb STT-MRAM 니어메모리 연산 매크로와 492.8 TOPS/W를 달성한 별도의 희소성 적응형 인메모리 연산 매크로입니다. 이는 실험실 실리콘이며 SemiFive/ICYTech 제품은 아닙니다 — 상용 실리콘 수치는 해당 칩이 출하되어 독립적으로 벤치마크될 때 나올 것입니다.',
           },
           {
             q: 'MRAM이 DRAM을 대체할까요?',
@@ -2354,7 +2372,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Qualcomm이 2026년에 메모리 병목을 해결했나요?',
-            a: 'Qualcomm은 2026년 Investors Day에서 Dragonfly 브랜드로 HBC(High-Bandwidth Compute)를 발표했습니다 — 실리콘 관통 비아(TSV)를 사용해 LPDDR 메모리 아래에 연산 가속기를 적층하는 near-memory 아키텍처로, HBM 대비 약 6배의 와트당 대역폭과 SRAM 대비 200배의 와트당 용량을 주장합니다. 세 가지 구별점이 중요합니다: HBC는 near-memory(메모리 옆의 연산)이지 MRAM 인메모리 컴퓨팅(메모리 어레이 내부의 연산)이 아니고; 폰이 아니라 데이터센터 AI 가속기(AI250/AI300)를 겨냥하며; 1세대 HBC는 2027년 중반으로 예정되어 있어 2026년에는 아무것도 출하되지 않았습니다. 이는 동일한 메모리 월 문제에 대한 다른 접근법일 뿐 MRAM 돌파구는 아닙니다.',
+            a: 'Qualcomm은 2026년 Investors Day에서 Dragonfly 브랜드로 HBC(High-Bandwidth Compute)를 발표했습니다 — 실리콘 관통 비아(TSV)를 사용해 LPDDR 메모리 아래에 연산 가속기를 적층하는 near-memory 아키텍처로, HBM 대비 약 6배의 와트당 대역폭과 SRAM 대비 200배의 와트당 용량을 주장합니다. 이후 Microsoft는 Azure에 HBC를 배포하겠다고 확인했고, Qualcomm은 Dragonfly AI250/AI300 가속기에 대해 Meta와 Microsoft의 주문을 확보했습니다 — 로드맵에 대한 실질적인 상업적 견인력이지만 아직 출하된 제품은 아닙니다. 세 가지 구별점이 여전히 중요합니다: HBC는 near-memory(메모리 옆의 연산)이지 MRAM 인메모리 컴퓨팅(메모리 어레이 내부의 연산)이 아니고; 폰이 아니라 데이터센터 AI 가속기를 겨냥하며; 1세대 HBC(AI250)의 상용 샘플링은 2027년 중반, HBC Gen 2(AI300)는 2028년으로 예정되어 있어 2026년 8월 기준 아무것도 출하되지 않았습니다. 이는 동일한 메모리 월 문제에 대한 다른 접근법일 뿐 MRAM 돌파구는 아닙니다.',
           },
         ],
       },
