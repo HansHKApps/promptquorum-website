@@ -11,7 +11,7 @@
  *  - hasLiveSearch: whether the model searches the live web BY DEFAULT for end users.
  *    Tool-use integrations that must be explicitly wired are NOT counted as "default on".
  *
- * Last fact-checked: 2026-08-27
+ * Last fact-checked: 2026-08-29
  */
 
 export type SearchLayer =
@@ -60,18 +60,18 @@ export const CLOUD_MODELS: ModelCutoffEntry[] = [
     sourceNote: 'Reliable knowledge cutoff May 2026 per Anthropic model overview; supersedes Claude Opus 4.8 (Jan 2026 cutoff), now a legacy model.',
   },
   {
-    modelName: 'GPT-5.5 (ChatGPT)',
+    modelName: 'GPT-5.6 (ChatGPT)',
     vendor: 'OpenAI',
-    cutoffDate: '2025-08',
+    cutoffDate: '2026-02',
     cutoffVerified: true,
     hasLiveSearchDefault: true,
     searchLayer: 'Bing',
     searchNote:
-      'GPT-4o legacy model cuts off Oct 2023. Live web via Bing, triggered by model or user. GPT-5.5 (GPT-5 series) training cutoff Aug 2025.',
+      'GPT-4o legacy model cuts off Oct 2023. Live web via Bing, triggered by model or user. GPT-5.6 family (Sol, Terra, Luna) shares a Feb 2026 training cutoff and supersedes GPT-5.5, which OpenAI no longer lists on its current models page.',
     license: 'Proprietary',
     deployment: 'Cloud only',
-    sourceUrl: 'https://platform.openai.com/docs/models',
-    sourceNote: 'GPT-5 series cutoff Aug 2025 per OpenAI model documentation (April 2026 release).',
+    sourceUrl: 'https://developers.openai.com/api/docs/models',
+    sourceNote: 'Feb 16, 2026 cutoff per OpenAI model documentation for the GPT-5.6 family (Sol/Terra/Luna, released July 2026).',
   },
   {
     modelName: 'GPT-4o (legacy)',
@@ -102,18 +102,18 @@ export const CLOUD_MODELS: ModelCutoffEntry[] = [
     sourceNote: 'Jan 2025 cutoff for Gemini 3.x generation per Google documentation (released Feb 2026).',
   },
   {
-    modelName: 'Grok 4.3',
+    modelName: 'Grok 4.6',
     vendor: 'xAI',
-    cutoffDate: '2024-11',
+    cutoffDate: '2026-02',
     cutoffVerified: true,
     hasLiveSearchDefault: true,
     searchLayer: 'X (Twitter)',
     searchNote:
-      'Real-time access to X (Twitter) and web search supplements the Nov 2024 training cutoff. DeepSearch is an opt-in broader web mode.',
+      'The consumer grok.com app searches the web and X live by default. The API is opt-in: Web Search and X Search must be enabled as explicit server-side tools, and without them the model is limited to its Feb 2026 training cutoff.',
     license: 'Proprietary',
     deployment: 'Cloud only',
     sourceUrl: 'https://docs.x.ai/developers/models',
-    sourceNote: 'Nov 2024 base cutoff for Grok 4 generation per xAI documentation (released April 2026).',
+    sourceNote: 'Feb 1, 2026 cutoff for Grok 4.6 per xAI developer documentation, superseding Grok 4.3.',
   },
   {
     modelName: 'Mistral Large 3',
@@ -148,7 +148,7 @@ export const CLOUD_MODELS: ModelCutoffEntry[] = [
 
 export const LOCAL_MODELS: ModelCutoffEntry[] = [
   {
-    modelName: 'Llama 4 Scout / Llama 3.3 70B',
+    modelName: 'Llama 4 Scout / Llama 4 Maverick',
     vendor: 'Meta',
     cutoffDate: 'Not publicly disclosed',
     cutoffVerified: false,
@@ -238,4 +238,4 @@ export const LOCAL_MODELS: ModelCutoffEntry[] = [
 export const ALL_MODELS: ModelCutoffEntry[] = [...CLOUD_MODELS, ...LOCAL_MODELS];
 
 /** Last date all entries above were fact-checked against primary sources. */
-export const CUTOFF_DATA_LAST_VERIFIED = '2026-08-27';
+export const CUTOFF_DATA_LAST_VERIFIED = '2026-08-29';
