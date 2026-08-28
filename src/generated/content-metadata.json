@@ -19,7 +19,7 @@
       "images": []
     },
     "best-local-llms-portuguese-language-2026": {
-      "dateModified": "2026-06-14",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-06-14",
       "hasSections": true,
@@ -1340,7 +1340,7 @@
       ]
     },
     "local-llm-power-consumption": {
-      "dateModified": "2026-04-25",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -1358,19 +1358,19 @@
       "images": [
         {
           "url": "/images/local-llm-power-consumption-gpu-power-draw-en.svg",
-          "title": "GPU power draw for local LLM inference: RTX 5090/4090 at 575W (1200W+ PSU), RTX 4080/4070 Ti at 200–360W, Apple M5 Max/Pro at 25–35W (10× more efficient per token). Min PSU requirements included."
+          "title": "GPU power draw for local LLM inference: RTX 5090 at 575W (1200W+ PSU), RTX 4090 at 450W (850W+ PSU), RTX 4080/4070 Ti at 200-360W, Apple M5 Max/Pro at 25-35W (~10x more efficient per token). Min PSU requirements included."
         },
         {
           "url": "/images/local-llm-power-consumption-apple-vs-nvidia-en.svg",
-          "title": "RTX 4090 vs Apple M5 Max power efficiency: 575W and $52/month vs 25–35W and $2.60/month at $0.12/kWh. M5 Max is 10× more energy-efficient per token for 7B model inference."
+          "title": "RTX 4090 vs Apple M5 Max power efficiency: 450W and ~$39/month vs 25-35W and $2.60/month at $0.12/kWh. M5 Max is roughly 10x more energy-efficient per token for 7B model inference."
         },
         {
           "url": "/images/local-llm-power-consumption-electricity-cost-en.svg",
-          "title": "24/7 local LLM electricity cost at $0.12/kWh: RTX 4090 $52/month ($625/year), RTX 4080 $30/month, RTX 4070 Ti $26/month, Apple M5 Max $2.60/month ($32/year)."
+          "title": "24/7 local LLM electricity cost at $0.12/kWh: RTX 4090 ~$39/month (~$467/year), RTX 4080 $30/month, RTX 4070 Ti $26/month, Apple M5 Max $2.60/month ($32/year)."
         },
         {
           "url": "/images/local-llm-power-consumption-regional-costs-en.svg",
-          "title": "Monthly local LLM inference cost by region: US $52 (RTX 4090) vs $2.60 (M5 Max), Germany €152 vs €7.60, France €130 vs €6.50, Japan ¥12,960 vs ¥648, China ¥504 vs ¥25. Rates are 2026 estimates."
+          "title": "Monthly local LLM inference cost by region (RTX 4090 at its 450W rated TBP, 24/7): US ~$39 vs $2.60 (M5 Max), Germany/France ~€113 vs ~€6.50, Japan ~¥9,200 vs ¥580, China ~¥211 vs ¥21. Rates are 2026 estimates."
         }
       ]
     },
@@ -1581,7 +1581,7 @@
       ]
     },
     "prompt-engineering-for-local-models": {
-      "dateModified": "2026-04-24",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -1599,7 +1599,7 @@
       "images": []
     },
     "private-local-ai-for-business": {
-      "dateModified": "2026-04-20",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -1730,7 +1730,7 @@
       ]
     },
     "create-custom-local-models": {
-      "dateModified": "2026-06-14",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -1841,7 +1841,7 @@
       "images": []
     },
     "enterprise-compliance-local-llms": {
-      "dateModified": "2026-06-14",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -1994,7 +1994,7 @@
       ]
     },
     "best-amd-gpus-local-llm": {
-      "dateModified": "2026-07-14",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-05",
       "hasSections": true,
@@ -2157,7 +2157,7 @@
       ]
     },
     "best-local-llm-stack-use-case": {
-      "dateModified": "2026-06-21",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-05",
       "hasSections": true,
@@ -2305,7 +2305,7 @@
       "images": [
         {
           "url": "/images/best-ai-coding-assistant-local-llm-comparison-hero-en.webp",
-          "title": "AI coding assistants comparison: Continue.dev (best overall, free), Cursor ($20/mo, best UX), Sourcegraph Cody ($9/user/mo, best teams), Tabnine ($12/mo, best privacy), Windsurf (free/$15/mo, rising alternative). All support local LLMs with varying setup complexity. June 2026."
+          "title": "AI coding assistants comparison: Continue.dev (best overall, free), Cursor ($20/mo, best UX), Sourcegraph Cody ($59/user/mo, best teams), Tabnine ($39/mo, best privacy), Windsurf (free/$15/mo, rising alternative). All support local LLMs with varying setup complexity. June 2026."
         },
         {
           "url": "/images/best-ai-coding-assistant-local-llm-integration-en.svg",
@@ -2625,7 +2625,7 @@
       ]
     },
     "local-llms-vs-claude-pro": {
-      "dateModified": "2026-07-13",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-05",
       "hasSections": true,
@@ -2647,7 +2647,7 @@
         },
         {
           "url": "/images/local-llms-vs-claude-pro-5-year-cost-en.svg",
-          "title": "5-year total cost: Claude Pro $1,200, local Llama 3.3 70B on a used GPU $1,300 (breaks even around month 50), local Llama 3.3 70B on a new GPU $1,900."
+          "title": "5-year total cost: Claude Pro $1,200, local Llama 3.3 70B on dual RTX 4070s $850 (breaks even around month 37), local Llama 3.3 70B on a used RTX 4090 $2,300-2,900 (discontinued by NVIDIA in 2026, no longer cost-competitive within 5 years)."
         }
       ]
     },
@@ -2884,7 +2884,7 @@
       ]
     },
     "mlx-vs-ollama-vs-llama-cpp-mac": {
-      "dateModified": "2026-06-21",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-05-15",
       "hasSections": true,
@@ -2911,7 +2911,7 @@
       ]
     },
     "ollama-on-mac-apple-silicon-setup-2026": {
-      "dateModified": "2026-05-15",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-05-15",
       "hasSections": true,
@@ -2929,7 +2929,7 @@
       "images": [
         {
           "url": "/images/ollama-mac-quick-setup-flow-en.svg",
-          "title": "Ollama quick setup flow on Apple Silicon: brew install ollama, then ollama pull llama2 (Llama 3.3 7B, ~4 GB), then ollama run llama2 — Metal GPU acceleration is automatic, no configuration needed."
+          "title": "Ollama quick setup flow on Apple Silicon: brew install ollama, then ollama pull llama3.1 (Llama 3.1 8B, ~4.9 GB), then ollama run llama3.1 — Metal GPU acceleration is automatic, no configuration needed."
         },
         {
           "url": "/images/ollama-mac-multi-model-memory-budget-en.svg",
@@ -3334,7 +3334,7 @@
       "images": []
     },
     "apple-on-device-ai-vs-local-llms": {
-      "dateModified": "2026-06-13",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-06-13",
       "hasSections": true,
@@ -3388,7 +3388,7 @@
       ]
     },
     "best-saudi-arabic-local-llms-allam-2026": {
-      "dateModified": "2026-06-14",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-06-14",
       "hasSections": true,
@@ -3442,7 +3442,7 @@
       ]
     },
     "best-arabic-local-llms-2026": {
-      "dateModified": "2026-06-14",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-06-14",
       "hasSections": true,
@@ -3460,16 +3460,16 @@
       "images": [
         {
           "url": "/images/best-arabic-local-llms-2026-decision-tree-en.svg",
-          "title": "Decision tree for choosing an Arabic local LLM: Jais 30B for best Arabic quality (~19-20 GB VRAM), Falcon Arabic 7B for consumer GPUs (~5 GB), Qwen3-8B for multilingual use (~5-6 GB), or Llama 3.1-8B as a broad multilingual baseline."
+          "title": "Decision tree for choosing an Arabic local LLM: Jais 30B for best Arabic quality (~19-20 GB VRAM), Falcon-H1-Arabic 7B for consumer GPUs (~5 GB), Qwen3-8B for multilingual use (~5-6 GB), or Llama 3.1-8B as a broad multilingual baseline."
         },
         {
           "url": "/images/best-arabic-local-llms-2026-vram-by-model-en.svg",
-          "title": "VRAM requirements for Arabic local LLMs at Q4_K_M quantization: Gemma 3 4B needs ~3 GB, Falcon Arabic 7B and ALLaM 7B need ~5 GB, Qwen3-8B needs 5-6 GB, Jais 13B needs 8-10 GB, and Jais 30B needs 19-20 GB VRAM."
+          "title": "VRAM requirements for Arabic local LLMs at Q4_K_M quantization: Gemma 3 4B needs ~3 GB, Falcon-H1-Arabic 7B and ALLaM 7B need ~5 GB, Qwen3-8B needs 5-6 GB, Jais 13B needs 8-10 GB, and Jais 30B needs 19-20 GB VRAM."
         }
       ]
     },
     "mram-in-memory-computing-local-ai-2026": {
-      "dateModified": "2026-07-01",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-06-15",
       "hasSections": true,
@@ -3550,7 +3550,7 @@
       ]
     },
     "hbm-memory-on-device-ai-samsung-sk-hynix-2026": {
-      "dateModified": "2026-06-15",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-06-15",
       "hasSections": true,
@@ -3568,7 +3568,7 @@
       "images": [
         {
           "url": "/images/hbm-bandwidth-comparison-en.svg",
-          "title": "Memory bandwidth by type: LPDDR5X 85.6 GB/s (phones) vs HBM2E 460 GB/s, HBM3 819 GB/s, HBM3E 1.229 TB/s (Nvidia H100/H200/B200), and HBM4 above 2 TB/s. SK Hynix supplies 62% of HBM."
+          "title": "Memory bandwidth by type: LPDDR5X 85.6 GB/s (phones), LPDDR5X-PIM (validated Aug 2026, 3.01x tokens/sec vs standard LPDDR5X) vs HBM2E 460 GB/s, HBM3 819 GB/s, HBM3E 1.229 TB/s (Nvidia H100/H200/B200), and HBM4/HBM4E now shipping at 2–3.6 TB/s per stack. SK Hynix leads HBM shipments (~50–62% share across 2026 quarters)."
         },
         {
           "url": "/images/hbm-datacenter-vs-phone-gap-en.svg",
@@ -3577,7 +3577,7 @@
       ]
     },
     "best-local-reasoning-model-deepseek-r1-2026": {
-      "dateModified": "2026-07-13",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-06-19",
       "hasSections": true,
@@ -3604,7 +3604,7 @@
       ]
     },
     "deepseek-local-china-data-privacy-2026": {
-      "dateModified": "2026-06-19",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-06-19",
       "hasSections": true,
