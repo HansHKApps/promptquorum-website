@@ -37,6 +37,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Ollama installs in under 2 minutes on macOS, Windows, and Linux via a downloadable installer or one curl command, and one `ollama run <model>` command afterward downloads and runs any model from its library with no Python environment or GPU required.' },
+            { type: 'plain-terms', text: "Ollama is the easiest way to run AI models on your own computer. Download it (or run one install command on Linux), then type a single command like `ollama run llama3.2` and it downloads the model and starts a chat -- no coding, no configuration files, and it works fine on a laptop without a graphics card." },
+          ],
           items: [
             'macOS: download the .dmg from ollama.com or run `brew install ollama` -- then `ollama run llama3.2` to start chatting.',
             'Windows: download the installer from ollama.com/download. Ollama runs as a background service in the system tray.',
@@ -304,7 +308,7 @@ schema: {
       metaDescription: 'Instala Ollama en 2 minutos en cualquier sistema: descarga, ejecuta `ollama run llama3.2` y empieza a chatear. Guía completa con solución de problemas.',
       heroImage: '/images/how-to-install-ollama-linux-systemd-flow-hero-es.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-26',
+      dateModified: '2026-08-28',
       leadAnswerBlock: '**Ollama se instala en menos de 2 minutos en macOS, Windows y Linux. Tras la instalación, un solo comando descarga y ejecuta cualquier modelo de la biblioteca de Ollama -- sin entorno Python, sin archivos de configuración y sin necesidad de GPU para empezar.**',
       audience: 'Principiantes que ejecutan su primer LLM local en hardware de consumo',
       readTime: '8 min de lectura',
@@ -324,6 +328,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Ollama se instala en menos de 2 minutos en macOS, Windows y Linux mediante un instalador descargable o un único comando curl, y después un comando `ollama run <modelo>` descarga y ejecuta cualquier modelo de su biblioteca sin necesidad de entorno Python ni GPU.' },
+            { type: 'plain-terms', text: 'Ollama es la forma más sencilla de ejecutar modelos de IA en tu propio ordenador. Descárgalo (o ejecuta un solo comando de instalación en Linux), luego escribe un comando como `ollama run llama3.2` y descargará el modelo e iniciará un chat -- sin programar, sin archivos de configuración, y funciona bien en un portátil sin tarjeta gráfica.' },
+          ],
           items: [
             'macOS: descarga el .dmg desde ollama.com o ejecuta `brew install ollama` -- luego `ollama run llama3.2` para empezar a chatear.',
             'Windows: descarga el instalador desde ollama.com/download. Ollama se ejecuta como servicio en segundo plano en la bandeja del sistema.',
@@ -592,7 +600,7 @@ schema: {
       metaDescription: '⁨Ollama⁩ يدعم أكثر من ⁨200⁩ نموذج بأمر واحد. ثبّته على ⁨macOS⁩ أو ⁨Windows⁩ أو ⁨Linux⁩، شغّل ⁨Llama⁩ أو ⁨Qwen⁩ أو ⁨Mistral⁩ دون إعداد ⁨Python⁩ أو ملفات تهيئة.',
       heroImage: '/images/how-to-install-ollama-linux-systemd-flow-hero-ar.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-26',
+      dateModified: '2026-08-28',
       leadAnswerBlock: '**يُثبَّت Ollama في أقل من دقيقتين على macOS و Windows و Linux. وبعد التثبيت، يقوم أمر واحد بتنزيل وتشغيل أي نموذج من مكتبة Ollama -- دون بيئة Python ودون ملفات تهيئة ودون حاجة إلى GPU للبدء.**',
       audience: 'المبتدئون الذين يشغّلون أول نموذج LLM محلي على أجهزة استهلاكية',
       readTime: '8 دقائق للقراءة',
@@ -612,6 +620,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'يتم تثبيت Ollama في أقل من دقيقتين على macOS وWindows وLinux عبر برنامج تثبيت قابل للتنزيل أو أمر curl واحد، ثم يقوم أمر `ollama run <model>` بتنزيل وتشغيل أي نموذج من مكتبته دون الحاجة إلى بيئة Python أو GPU.' },
+            { type: 'plain-terms', text: 'يُعد Ollama أسهل طريقة لتشغيل نماذج الذكاء الاصطناعي على جهازك الخاص. نزّله (أو شغّل أمر تثبيت واحد على Linux)، ثم اكتب أمراً واحداً مثل `ollama run llama3.2` وسيقوم بتنزيل النموذج وبدء محادثة -- بلا برمجة، وبلا ملفات إعداد، ويعمل جيداً على حاسوب محمول بلا بطاقة رسومات.' },
+          ],
           items: [
             'macOS: نزّل ملف .dmg من ollama.com أو شغّل `brew install ollama` -- ثم `ollama run llama3.2` لبدء المحادثة.',
             'Windows: نزّل المثبّت من ollama.com/download. يعمل Ollama كخدمة في الخلفية في علبة النظام.',
@@ -880,7 +892,7 @@ schema: {
       metaDescription: 'Instale o Ollama em 2 minutos em qualquer sistema: baixe, execute `ollama run llama3.2` e comece a conversar. Guia completo com solução de problemas.',
       heroImage: '/images/how-to-install-ollama-linux-systemd-flow-hero-pt.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-26',
+      dateModified: '2026-08-28',
       leadAnswerBlock: '**O Ollama se instala em menos de 2 minutos no macOS, Windows e Linux. Após a instalação, um único comando baixa e executa qualquer modelo da biblioteca do Ollama — sem ambiente Python, sem arquivos de configuração e sem necessidade de GPU para começar.**',
       audience: 'Iniciantes executando o primeiro LLM local em hardware de consumo',
       readTime: '8 min de leitura',
@@ -907,6 +919,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'O Ollama é instalado em menos de 2 minutos no macOS, Windows e Linux por meio de um instalador para download ou um único comando curl, e depois um comando `ollama run <modelo>` baixa e executa qualquer modelo da sua biblioteca sem exigir ambiente Python ou GPU.' },
+            { type: 'plain-terms', text: 'O Ollama é a forma mais fácil de rodar modelos de IA no seu próprio computador. Baixe-o (ou rode um único comando de instalação no Linux), depois digite um comando como `ollama run llama3.2` e ele baixará o modelo e iniciará um chat -- sem programação, sem arquivos de configuração, e funciona bem em um notebook sem placa de vídeo.' },
+          ],
           items: [
             'Ollama se instala em menos de 2 minutos — um único instalador para macOS, Windows e Linux.',
             'Após a instalação: `ollama run llama3.2` baixa e executa o modelo automaticamente.',
@@ -1093,7 +1109,7 @@ schema: {
         url: 'https://www.promptquorum.com/pt/local-llms/how-to-install-ollama',
         inLanguage: 'pt-BR',
         datePublished: '2026-04-04',
-        dateModified: '2026-08-26',
+        dateModified: '2026-08-28',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         proficiencyLevel: 'Beginner',
@@ -1131,7 +1147,7 @@ schema: {
       metaDescription: 'Ollama in unter 2 Minuten auf macOS, Windows oder Linux installieren. Ein Befehl startet Ihr erstes Modell. Zugriff auf 200+ Open-Source-Modelle lokal.',
       heroImage: '/images/how-to-install-ollama-linux-systemd-flow-hero-de.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-26',
+      dateModified: '2026-08-28',
       readTime: '8 min Lesezeit',
       educationalLevel: 'Beginner',
       primaryTerm: 'Ollama',
@@ -1157,6 +1173,10 @@ schema: {
           id: 'key-takeaways',
           title: 'Zusammenfassung',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Ollama installiert sich in unter 2 Minuten auf macOS, Windows und Linux über einen herunterladbaren Installer oder einen einzigen curl-Befehl, und danach lädt ein `ollama run <Modell>`-Befehl jedes Modell aus der Bibliothek herunter und startet es -- ohne Python-Umgebung oder GPU.' },
+            { type: 'plain-terms', text: 'Ollama ist der einfachste Weg, KI-Modelle auf dem eigenen Computer auszuführen. Herunterladen (oder unter Linux einen einzigen Installationsbefehl ausführen), dann einen Befehl wie `ollama run llama3.2` eingeben -- das Modell wird heruntergeladen und ein Chat gestartet, ganz ohne Programmierung oder Konfigurationsdateien, und es funktioniert auch auf einem Laptop ohne Grafikkarte.' },
+          ],
           items: [
             'macOS: Laden Sie die .dmg-Datei von ollama.com herunter, oder führen Sie `brew install ollama` aus -- dann `ollama run llama3.2` zum Chatten.',
             'Windows: Laden Sie das Installationsprogramm von ollama.com/download herunter. Ollama wird als Hintergrunddienst im Systembereich ausgeführt.',
@@ -1462,7 +1482,7 @@ schema: {
       metaDescription: 'Installer Ollama en moins de 2 minutes sur macOS, Windows ou Linux. Exécutez votre premier modèle avec un seul commande -- guide complet étape par étape.',
       heroImage: '/images/how-to-install-ollama-linux-systemd-flow-hero-fr.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-26',
+      dateModified: '2026-08-28',
       readTime: '8 min de lecture',
       educationalLevel: 'Beginner',
       primaryTerm: 'Ollama',
@@ -1488,6 +1508,10 @@ schema: {
           id: 'key-takeaways',
           title: 'Résumé',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: "Ollama s'installe en moins de 2 minutes sur macOS, Windows et Linux via un installateur téléchargeable ou une seule commande curl, puis une commande `ollama run <modèle>` télécharge et exécute n'importe quel modèle de sa bibliothèque sans environnement Python ni GPU." },
+            { type: 'plain-terms', text: "Ollama est le moyen le plus simple d'exécuter des modèles d'IA sur son propre ordinateur. Téléchargez-le (ou exécutez une seule commande d'installation sous Linux), puis tapez une commande comme `ollama run llama3.2` : le modèle est téléchargé et un chat démarre -- sans programmation, sans fichier de configuration, et cela fonctionne même sur un portable sans carte graphique." },
+          ],
           items: [
             'macOS : téléchargez le .dmg depuis ollama.com, ou exécutez `brew install ollama` -- puis `ollama run llama3.2` pour discuter.',
             'Windows : téléchargez le programme d\'installation depuis ollama.com/download. Ollama s\'exécute comme service en arrière-plan dans la barre des tâches système.',
@@ -1793,7 +1817,7 @@ schema: {
       metaDescription: '2 分以内に Ollama をインストール。1 つのコマンドで最初のモデルを実行----完全なステップバイステップガイド。',
       heroImage: '/images/how-to-install-ollama-linux-systemd-flow-hero-ja.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-26',
+      dateModified: '2026-08-28',
       readTime: '読了約8分',
       educationalLevel: 'Beginner',
       primaryTerm: 'Ollama',
@@ -1819,6 +1843,10 @@ schema: {
           id: 'key-takeaways',
           title: '重要ポイント',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Ollamaは、macOS、Windows、Linuxでダウンロード可能なインストーラーまたは1つのcurlコマンドを使って2分以内にインストールでき、その後は`ollama run <モデル>`コマンド1つでライブラリの任意のモデルをダウンロードして実行でき、Python環境もGPUも不要です。' },
+            { type: 'plain-terms', text: 'Ollamaは自分のコンピューターでAIモデルを実行する最も簡単な方法です。ダウンロードするか（Linuxでは1つのインストールコマンドを実行）、`ollama run llama3.2`のようなコマンドを入力するだけで、モデルがダウンロードされチャットが始まります -- プログラミング不要、設定ファイル不要で、グラフィックカードのないノートパソコンでも問題なく動作します。' },
+          ],
           items: [
             'macOS : ollama.com から .dmg をダウンロードするか、`brew install ollama` を実行 - その後 `ollama run llama3.2` でチャット開始。',
             'Windows : ollama.com/download からインストーラーをダウンロード。Ollama はシステム トレイでバックグラウンド サービスとして実行。',
@@ -2124,7 +2152,7 @@ schema: {
       metaDescription: '在 2 分钟内安装 Ollama。一条命令运行第一个模型----完整分步指南。',
       heroImage: '/images/how-to-install-ollama-linux-systemd-flow-hero-zh.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-26',
+      dateModified: '2026-08-28',
       readTime: '阅读约8分钟',
       educationalLevel: 'Beginner',
       primaryTerm: 'Ollama',
@@ -2150,6 +2178,10 @@ schema: {
           id: 'key-takeaways',
           title: '核心要点',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Ollama可在macOS、Windows和Linux上通过可下载安装程序或一条curl命令在2分钟内完成安装，之后一条`ollama run <模型>`命令即可下载并运行库中的任何模型，无需Python环境或GPU。' },
+            { type: 'plain-terms', text: 'Ollama是在自己电脑上运行AI模型最简单的方式。下载它（在Linux上只需运行一条安装命令），然后输入类似`ollama run llama3.2`的命令，它就会下载模型并开始对话——无需编程、无需配置文件，即使笔记本电脑没有独立显卡也能正常运行。' },
+          ],
           items: [
             'macOS：从 ollama.com 下载 .dmg，或运行 `brew install ollama` -- 然后 `ollama run llama3.2` 开始聊天。',
             'Windows：从 ollama.com/download 下载安装程序。Ollama 作为系统托盘的后台服务运行。',
@@ -2456,7 +2488,7 @@ schema: {
       metaDescription: '모든 OS에서 2분 만에 Ollama를 설치하세요: 다운로드 후 `ollama run llama3.2`를 실행하면 바로 대화를 시작할 수 있습니다. 초보자를 위한 문제 해결 포함 완전 설치 가이드 2026.',
       heroImage: '/images/how-to-install-ollama-linux-systemd-flow-hero-ko.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-26',
+      dateModified: '2026-08-28',
       leadAnswerBlock: '**Ollama는 macOS, Windows, Linux에서 2분 이내에 설치할 수 있습니다. 설치 후 명령어 하나로 Ollama 라이브러리의 모든 모델을 다운로드하고 실행할 수 있습니다 -- Python 환경, 설정 파일, 시작을 위한 GPU가 필요하지 않습니다.**',
       audience: '소비자용 하드웨어에서 처음으로 로컬 LLM을 실행하는 초보자',
       readTime: '8분 읽기',
@@ -2476,6 +2508,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Ollama는 다운로드 가능한 설치 프로그램이나 하나의 curl 명령어를 통해 macOS, Windows, Linux에서 2분 이내에 설치되며, 이후 `ollama run <모델>` 명령어 하나로 라이브러리의 어떤 모델이든 다운로드하고 실행할 수 있어 Python 환경이나 GPU가 필요 없습니다.' },
+            { type: 'plain-terms', text: 'Ollama는 자신의 컴퓨터에서 AI 모델을 실행하는 가장 쉬운 방법입니다. 다운로드하거나(Linux에서는 설치 명령어 하나만 실행) `ollama run llama3.2`와 같은 명령어를 입력하면 모델을 다운로드하고 채팅을 시작합니다 -- 코딩도, 설정 파일도 필요 없으며, 그래픽 카드가 없는 노트북에서도 잘 작동합니다.' },
+          ],
           items: [
             'macOS: ollama.com에서 .dmg를 다운로드하거나 `brew install ollama`를 실행한 후 -- `ollama run llama3.2`로 대화를 시작하십시오.',
             'Windows: ollama.com/download에서 설치 프로그램을 다운로드하십시오. Ollama는 시스템 트레이에서 백그라운드 서비스로 실행됩니다.',
