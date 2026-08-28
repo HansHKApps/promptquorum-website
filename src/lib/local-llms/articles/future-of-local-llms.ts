@@ -17,7 +17,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       intro: 'By late 2026: small-model quality per parameter keeps improving, on-device inference works on iPhones (A18) and Snapdragon X Elite phones, reasoning models improve step-by-step accuracy by 15–30%, and enterprise on-premises adoption is expected to grow, led by regulated industries. This guide covers the 5 key trends reshaping local AI in 2026–2027 with timelines, benchmarks, and adoption predictions.',
       metaDescription: 'Small-model quality keeps improving in 2026. Smartphones run local LLMs at 15–30 tok/sec. Enterprise on-prem adoption is growing, led by regulated industries.',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-27',
+      dateModified: '2026-08-28',
       last_full_refresh: '2026-08-27',
       next_seo_review_due: '2026-10-01',
       last_seo_review: '2026-08-27',
@@ -43,6 +43,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'By late 2026, small-model quality per parameter keeps improving, on-device inference works on flagship phones like iPhones with A18 chips and Snapdragon X Elite Android devices, reasoning models improve step-by-step accuracy by 15-30%, and enterprise on-premises adoption is expected to grow, led by regulated industries.' },
+            { type: 'plain-terms', text: "The direction local AI is heading: smaller models keep getting smarter for their size, phones are becoming capable of running real models on-device, reasoning-focused models are getting noticeably better at multi-step problems, and more companies -- especially in regulated fields like healthcare and finance -- are choosing to run AI on their own infrastructure instead of the cloud." },
+          ],
           items: [
             '**Trend 1:** 1–3B models in 2026 rival 7B models from 2023 — quality per parameter is rising.',
             '**Trend 2:** On-device inference on iPhones (A18) and Snapdragon X phones is practical today for 1–3B models.',
@@ -206,7 +210,7 @@ schema: {
         description: 'Small-model quality keeps improving in 2026. Smartphones run local LLMs at 15–30 tok/sec. Enterprise on-prem adoption is growing, led by regulated industries.',
         url: 'https://www.promptquorum.com/local-llms/future-of-local-llms',
         datePublished: '2026-04-04',
-        dateModified: '2026-08-27',
+        dateModified: '2026-08-28',
         inLanguage: 'en',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -297,7 +301,7 @@ schema: {
       intro: 'Para finales de 2026: la calidad por parámetro de los modelos pequeños sigue mejorando, la inferencia en dispositivo funciona en iPhones (A18) y teléfonos Snapdragon X Elite, los modelos de razonamiento mejoran la precisión en un 15–30%, y se espera que la adopción empresarial de inferencia local crezca, liderada por sectores regulados. Esta guía cubre las 5 tendencias clave que están redefiniendo la IA local en 2026–2027 con cronogramas, benchmarks y predicciones de adopción.',
       metaDescription: 'La calidad de los modelos pequeños por parámetro sigue mejorando en 2026 y los smartphones ejecutan LLMs a 15–30 tok/s.',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-27',
+      dateModified: '2026-08-28',
       leadAnswerBlock: '**Para finales de 2026: la calidad por parámetro de los modelos pequeños sigue mejorando, la inferencia en dispositivo funciona en iPhones (A18) y teléfonos Snapdragon X Elite, los modelos de razonamiento mejoran la precisión en un 15–30%, y se espera que la adopción empresarial de inferencia local crezca, liderada por sectores regulados.**',
       audience: 'Desarrolladores y arquitectos empresariales que evalúan los cronogramas de adopción de LLMs locales',
       readTime: '10 min de lectura',
@@ -320,6 +324,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Para finales de 2026, la calidad de los modelos pequeños por parámetro sigue mejorando, la inferencia en dispositivo funciona en teléfonos insignia como iPhones con chip A18 y dispositivos Android Snapdragon X Elite, los modelos de razonamiento mejoran la precisión paso a paso en un 15-30%, y se espera que crezca la adopción empresarial on-premises, liderada por sectores regulados.' },
+            { type: 'plain-terms', text: 'La dirección hacia la que va la IA local: los modelos pequeños siguen siendo más inteligentes para su tamaño, los teléfonos se están volviendo capaces de ejecutar modelos reales en el propio dispositivo, los modelos centrados en razonamiento mejoran notablemente en problemas de varios pasos, y más empresas -- especialmente en sectores regulados como salud y finanzas -- optan por ejecutar IA en su propia infraestructura en lugar de la nube.' },
+          ],
           items: [
             '**Tendencia 1:** Los modelos 1–3B en 2026 rivalizan con los modelos 7B de 2023 — la calidad por parámetro está aumentando.',
             '**Tendencia 2:** La inferencia en dispositivo en iPhones (A18) y teléfonos Snapdragon X es práctica hoy para modelos 1–3B.',
@@ -483,7 +491,7 @@ schema: {
         description: 'Los modelos pequeños por parámetro siguen mejorando en calidad en 2026. Los smartphones ejecutan LLMs locales a 15–30 tok/seg. Los modelos de razonamiento mejoran la precisión un 15–30%. La adopción empresarial de inferencia local está creciendo.',
         url: 'https://www.promptquorum.com/es/local-llms/future-of-local-llms',
         datePublished: '2026-04-04',
-        dateModified: '2026-08-27',
+        dateModified: '2026-08-28',
         inLanguage: 'es',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -580,7 +588,7 @@ schema: {
       intro: 'بحلول نهاية 2026: تستمر جودة النماذج الصغيرة لكل معامل في التحسن، ويعمل الاستدلال على الجهاز على هواتف iPhone (A18) وهواتف Snapdragon X Elite، وتحسّن نماذج الاستدلال الدقة بنسبة 15–30%، ومن المتوقع أن ينمو تبني الاستدلال المحلي في المؤسسات، بقيادة القطاعات الخاضعة للتنظيم. يغطي هذا الدليل الاتجاهات الخمسة الرئيسية التي تعيد تشكيل الذكاء الاصطناعي المحلي في 2026–2027 مع الجداول الزمنية والمعايير وتنبؤات التبني.',
       metaDescription: 'جودة النماذج الصغيرة لكل معامل تستمر في التحسن في ⁨2026⁩؛ الهواتف تشغّل ⁨LLMs⁩ محلياً بسرعة ⁨15⁩–⁨30⁩ رمز/ثانية. تبني الاستدلال المحلي يتزايد.',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-27',
+      dateModified: '2026-08-28',
       leadAnswerBlock: '**بحلول نهاية 2026: تستمر جودة النماذج الصغيرة لكل معامل في التحسن، ويعمل الاستدلال على الجهاز على هواتف iPhone (A18) وهواتف Snapdragon X Elite، وتحسّن نماذج الاستدلال الدقة بنسبة 15–30%، ومن المتوقع أن ينمو تبني الاستدلال المحلي في المؤسسات، بقيادة القطاعات الخاضعة للتنظيم.**',
       audience: 'المطورون ومهندسو المؤسسات الذين يقيّمون الجداول الزمنية لتبني نماذج LLM المحلية',
       readTime: '10 دقائق للقراءة',
@@ -603,6 +611,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'بحلول أواخر 2026، تستمر جودة النماذج الصغيرة لكل معلمة في التحسن، ويعمل الاستدلال على الجهاز على الهواتف الرائدة مثل iPhone بشريحة A18 وأجهزة Android بمعالج Snapdragon X Elite، وتحسّن نماذج الاستدلال دقة الخطوة بخطوة بنسبة 15-30%، ويُتوقع أن ينمو تبني الشركات للحلول داخل المنشأة بقيادة القطاعات المنظّمة.' },
+            { type: 'plain-terms', text: 'الاتجاه الذي يسير فيه الذكاء الاصطناعي المحلي: تستمر النماذج الصغيرة في الذكاء أكثر بالنسبة لحجمها، وتصبح الهواتف قادرة على تشغيل نماذج حقيقية على الجهاز، وتتحسن النماذج التي تركز على الاستدلال بشكل ملحوظ في المسائل متعددة الخطوات، وتختار المزيد من الشركات -- خاصة في القطاعات المنظّمة مثل الرعاية الصحية والمالية -- تشغيل الذكاء الاصطناعي على بنيتها التحتية الخاصة بدلاً من السحابة.' },
+          ],
           items: [
             '**الاتجاه 1:** تنافس النماذج 1–3B في 2026 نماذج 7B لعام 2023 — الجودة لكل معامل في ازدياد.',
             '**الاتجاه 2:** الاستدلال على الجهاز في هواتف iPhone (A18) وهواتف Snapdragon X عملي اليوم للنماذج 1–3B.',
@@ -766,7 +778,7 @@ schema: {
         description: 'تستمر جودة النماذج الصغيرة لكل معامل في التحسن في 2026. تشغّل الهواتف الذكية نماذج LLM محلية بسرعة 15–30 tok/sec. تحسّن نماذج الاستدلال الدقة بنسبة 15–30%. يتزايد تبني الشركات للاستدلال المحلي.',
         url: 'https://www.promptquorum.com/ar/local-llms/future-of-local-llms',
         datePublished: '2026-04-04',
-        dateModified: '2026-08-27',
+        dateModified: '2026-08-28',
         inLanguage: 'ar',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -863,7 +875,7 @@ schema: {
       intro: 'Para o final de 2026: a qualidade por parâmetro dos modelos pequenos continua melhorando, a inferência em dispositivo funciona em iPhones (A18) e telefones Snapdragon X Elite, os modelos de raciocínio melhoram a precisão em 15–30%, e espera-se que a adoção empresarial de inferência local cresça, liderada por setores regulados. Este guia cobre as 5 tendências principais que estão redefinindo a IA local em 2026–2027 com cronogramas, benchmarks e previsões de adoção.',
       metaDescription: 'A qualidade dos modelos pequenos por parâmetro continua melhorando em 2026 e smartphones executam LLMs a 15–30 tok/s.',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-27',
+      dateModified: '2026-08-28',
       leadAnswerBlock: '**Para o final de 2026: a qualidade por parâmetro dos modelos pequenos continua melhorando, a inferência em dispositivo funciona em iPhones (A18) e telefones Snapdragon X Elite, os modelos de raciocínio melhoram a precisão em 15–30%, e espera-se que a adoção empresarial de inferência local cresça, liderada por setores regulados.**',
       audience: 'Desenvolvedores e arquitetos empresariais avaliando cronogramas de adoção de LLMs locais',
       readTime: '10 min de leitura',
@@ -883,6 +895,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Até o final de 2026, a qualidade dos modelos pequenos por parâmetro continua melhorando, a inferência no dispositivo funciona em celulares topo de linha como iPhones com chip A18 e dispositivos Android Snapdragon X Elite, os modelos de raciocínio melhoram a precisão passo a passo em 15-30%, e espera-se que a adoção empresarial on-premises cresça, liderada por setores regulados.' },
+            { type: 'plain-terms', text: 'A direção que a IA local está tomando: os modelos pequenos continuam ficando mais inteligentes para o seu tamanho, os celulares estão se tornando capazes de rodar modelos reais no próprio dispositivo, os modelos focados em raciocínio melhoram visivelmente em problemas de várias etapas, e mais empresas -- especialmente em setores regulados como saúde e finanças -- optam por rodar IA na própria infraestrutura em vez da nuvem.' },
+          ],
           items: [
             'Os modelos de 1–3B com fine-tuning rivalizam com os 7B genéricos para tarefas específicas de domínio em 2026.',
             'Smartphones (iPhone A18, Snapdragon X Elite) executam Llama 3.2 3B a 15–30 tok/s em 2026.',
@@ -994,7 +1010,7 @@ schema: {
       intro: 'Bis Ende 2026: Die Modellqualität pro Parameter bei kleinen Modellen steigt weiter, On-Device-Inferenz funktioniert auf iPhones (A18) und Snapdragon X Elite Telefonen, Reasoning-Modelle verbessern Genauigkeit um 15–30%, und die Enterprise-Adoption von On-Premises-Inferenz wird voraussichtlich wachsen, angeführt von regulierten Branchen. Dieser Leitfaden behandelt die 5 Schlüsseltrends, die lokale KI 2026–2027 mit Zeitplänen, Benchmarks und Adoptionsprognosen umgestalten.',
       metaDescription: 'Die Zukunft lokaler LLMs: Modellqualität pro Parameter bei kleinen Modellen steigt weiter, Smartphones laufen mit 15–30 Token/Sek. Adoption wächst.',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-27',
+      dateModified: '2026-08-28',
       leadAnswerBlock: '**Bis Ende 2026: Die Modellqualität pro Parameter bei kleinen Modellen steigt weiter, On-Device-Inferenz funktioniert auf iPhones (A18) und Snapdragon X Elite Telefonen, Reasoning-Modelle verbessern Genauigkeit um 15–30%, und die Enterprise-Adoption von On-Premises-Inferenz wird voraussichtlich wachsen, angeführt von regulierten Branchen.**',
       audience: 'Entwickler und Enterprise-Architekten, die Zeitpläne für lokale LLM-Adoption evaluieren',
       readTime: '10 Min. Lesezeit',
@@ -1017,6 +1033,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Bis Ende 2026 verbessert sich die Qualität kleiner Modelle pro Parameter weiter, funktioniert On-Device-Inferenz auf Spitzentelefonen wie iPhones mit A18-Chip und Snapdragon-X-Elite-Android-Geräten, verbessern Reasoning-Modelle die Schritt-für-Schritt-Genauigkeit um 15-30 %, und wird eine wachsende Unternehmensakzeptanz von On-Premises-Lösungen erwartet, angeführt von regulierten Branchen.' },
+            { type: 'plain-terms', text: 'Die Richtung, in die sich lokale KI entwickelt: kleine Modelle werden für ihre Größe weiter intelligenter, Smartphones werden zunehmend in der Lage, echte Modelle direkt auf dem Gerät auszuführen, auf Reasoning fokussierte Modelle verbessern sich spürbar bei mehrstufigen Problemen, und mehr Unternehmen -- besonders in regulierten Branchen wie Gesundheitswesen und Finanzen -- entscheiden sich dafür, KI auf eigener Infrastruktur statt in der Cloud zu betreiben.' },
+          ],
           items: [
             '**Trend 1:** 1–3B-Modelle 2026 konkurrieren mit 7B-Modellen von 2023 — Qualität pro Parameter steigt.',
             '**Trend 2:** On-Device-Inferenz auf iPhones (A18) und Snapdragon X Telefonen ist praktisch für 1–3B-Modelle.',
@@ -1188,7 +1208,7 @@ schema: {
         description: 'Die Modellqualität pro Parameter bei kleinen Modellen steigt 2026 weiter. Smartphones führen lokale LLMs mit 15–30 Token/Sek. aus. Reasoning-Modelle verbessern Genauigkeit um 15–30%. Die Enterprise-Adoption von On-Premises-Inferenz wächst.',
         url: 'https://www.promptquorum.com/de/local-llms/future-of-local-llms',
         datePublished: '2026-04-04',
-        dateModified: '2026-08-27',
+        dateModified: '2026-08-28',
         inLanguage: 'de',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -1295,7 +1315,7 @@ schema: {
       intro: 'D\'ici fin 2026 : la qualité par paramètre des petits modèles continue de s\'améliorer, l\'inférence sur appareil fonctionne sur les iPhones (A18) et les téléphones Snapdragon X Elite, les modèles de raisonnement améliorent la précision de 15–30%, et l\'adoption de l\'inférence sur site par les entreprises devrait croître, menée par les secteurs réglementés. Ce guide couvre les 5 tendances clés qui remodelent l\'IA locale en 2026–2027 avec les calendriers, les benchmarks et les prédictions d\'adoption.',
       metaDescription: 'La qualité par paramètre des petits modèles s\'améliore en 2026. Les smartphones exécutent des LLM locaux à 15–30 tok/s. L\'adoption sur site croît.',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-27',
+      dateModified: '2026-08-28',
       leadAnswerBlock: '**D\'ici fin 2026 : la qualité par paramètre des petits modèles continue de s\'améliorer, l\'inférence sur appareil fonctionne sur les iPhones (A18) et les téléphones Snapdragon X Elite, les modèles de raisonnement améliorent la précision de 15–30%, et l\'adoption de l\'inférence sur site par les entreprises devrait croître, menée par les secteurs réglementés.**',
       audience: 'Développeurs et architectes d\'entreprise évaluant les calendriers d\'adoption des LLM locaux',
       readTime: '10 min de lecture',
@@ -1318,6 +1338,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: "D'ici fin 2026, la qualité des petits modèles par paramètre continue de s'améliorer, l'inférence sur appareil fonctionne sur des téléphones haut de gamme comme les iPhones avec puce A18 et les appareils Android Snapdragon X Elite, les modèles de raisonnement améliorent la précision étape par étape de 15-30 %, et l'adoption on-premises en entreprise devrait croître, portée par les secteurs réglementés." },
+            { type: 'plain-terms', text: "La direction que prend l'IA locale : les petits modèles deviennent toujours plus intelligents pour leur taille, les téléphones deviennent capables de faire tourner de vrais modèles directement sur l'appareil, les modèles axés sur le raisonnement s'améliorent nettement sur les problèmes à plusieurs étapes, et de plus en plus d'entreprises -- notamment dans les secteurs réglementés comme la santé et la finance -- choisissent de faire tourner l'IA sur leur propre infrastructure plutôt que dans le cloud." },
+          ],
           items: [
             '**Tendance 1 :** Les modèles 1–3B en 2026 rivalisent avec les modèles 7B de 2023 — la qualité par paramètre augmente.',
             '**Tendance 2 :** L\'inférence sur appareil sur les iPhones (A18) et les téléphones Snapdragon X est pratique aujourd\'hui pour les modèles 1–3B.',
@@ -1481,7 +1505,7 @@ schema: {
         description: 'La qualité par paramètre des petits modèles s\'améliore en 2026. Les smartphones exécutent des LLM locaux à 15–30 tok/s. L\'adoption sur site croît.',
         url: 'https://www.promptquorum.com/fr/local-llms/future-of-local-llms',
         datePublished: '2026-04-04',
-        dateModified: '2026-08-27',
+        dateModified: '2026-08-28',
         inLanguage: 'fr',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -1578,7 +1602,7 @@ schema: {
       intro: '2026年末までに：小型モデルのパラメータ当たり品質が向上を続け、iPhone（A18）とSnapdragon X Eliteで端末推論が実用的、推論モデルが精度15–30%向上、そしてエンタープライズのオンプレミス推論導入は規制業界を中心に拡大が見込まれます。このガイドは2026–2027年にローカルAIを変える5つのトレンドをタイムライン、ベンチマーク、導入予測とともに解説します。',
       metaDescription: '小型モデルのパラメータ当たり品質は2026年も向上を続けています。スマートフォンは15–30トークン/秒でローカルLLMを実行。企業のオンプレミス推論導入は規制業界を中心に拡大しています。',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-27',
+      dateModified: '2026-08-28',
       leadAnswerBlock: '**2026年末までに：小型モデルのパラメータ当たり品質が向上を続け、iPhone（A18）とSnapdragon X Eliteで端末推論が実用的、推論モデルが精度15–30%向上、そしてエンタープライズのオンプレミス推論導入は規制業界を中心に拡大が見込まれます。**',
       audience: 'ローカルLLM導入タイムラインを評価する開発者およびエンタープライズアーキテクト',
       readTime: '10分で読める',
@@ -1601,6 +1625,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: '2026年後半までに、パラメータあたりの小型モデルの品質は向上し続け、A18チップ搭載iPhoneやSnapdragon X Elite搭載Androidなどのフラッグシップ端末でオンデバイス推論が動作し、推論モデルは段階的な精度を15〜30%改善し、規制業界を中心に企業のオンプレミス導入が拡大すると見込まれています。' },
+            { type: 'plain-terms', text: 'ローカルAIが向かっている方向：小型モデルはそのサイズに対してますます賢くなり続け、スマートフォンは実際のモデルをデバイス上で実行できるようになりつつあり、推論に特化したモデルは複数ステップの問題で目に見えて向上し、より多くの企業 -- 特に医療や金融などの規制業界 -- がクラウドではなく自社インフラでAIを実行することを選ぶようになっています。' },
+          ],
           items: [
             '**トレンド1：** 2026年の1–3Bモデル、2023年7Bモデル品質に匹敵。パラメータ当たり品質向上中。',
             '**トレンド2：** iPhone（A18）、Snapdragon Xスマートフォンの端末推論が今実用的。1–3Bモデル対応。',
@@ -1764,7 +1792,7 @@ schema: {
         description: '小型モデルのパラメータ当たり品質は2026年も向上を続けています。スマートフォンは15–30トークン/秒でローカルLLMを実行。企業のオンプレミス推論導入は規制業界を中心に拡大しています。',
         url: 'https://www.promptquorum.com/ja/local-llms/future-of-local-llms',
         datePublished: '2026-04-04',
-        dateModified: '2026-08-27',
+        dateModified: '2026-08-28',
         inLanguage: 'ja',
         author: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -1861,7 +1889,7 @@ schema: {
       intro: '到2026年底：小型模型的参数效率持续提升，iPhone（A18）和Snapdragon X Elite上的端设备推理已经实用，推理模型将精度提高15–30%，企业本地推理的采用预计将持续增长，由受监管行业带头。本指南涵盖2026–2027年重塑本地AI的5大趋势，包括时间表、基准和采用预测。',
       metaDescription: '小型模型的参数效率在2026年持续提升。智能手机以15–30令牌/秒运行本地LLM。企业本地推理的采用正在增长，由受监管行业带头。',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-27',
+      dateModified: '2026-08-28',
       leadAnswerBlock: '**到2026年底：小型模型的参数效率持续提升，iPhone（A18）和Snapdragon X Elite上的端设备推理已经实用，推理模型将精度提高15–30%，企业本地推理的采用预计将持续增长，由受监管行业带头。**',
       audience: '评估本地LLM采用时间表的开发者和企业架构师',
       readTime: '阅读约10分钟',
@@ -1884,6 +1912,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: '到2026年末，小型模型在单位参数上的质量持续提升，端侧推理已能在A18芯片iPhone和骁龙X Elite安卓旗舰机等设备上运行，推理模型的逐步准确率提升15-30%，企业本地部署采用率预计将增长，由受监管行业带头。' },
+            { type: 'plain-terms', text: '本地AI正在发展的方向：小型模型相对于其规模持续变得更智能，手机正逐渐具备在设备本地运行真实模型的能力，专注推理的模型在多步骤问题上明显进步，越来越多的企业——尤其是医疗和金融等受监管行业——选择在自有基础设施上运行AI，而非依赖云端。' },
+          ],
           items: [
             '**趋势1：** 2026年的1–3B模型，品质匹敌2023年的7B模型—每参数品质上升。',
             '**趋势2：** iPhone（A18）和Snapdragon X手机的端设备推理今日实用，1–3B模型适配。',
@@ -2047,7 +2079,7 @@ schema: {
         description: '小型模型的参数效率在2026年持续提升。智能手机以15–30令牌/秒运行本地LLM。企业本地推理的采用正在增长，由受监管行业带头。',
         url: 'https://www.promptquorum.com/zh/local-llms/future-of-local-llms',
         datePublished: '2026-04-04',
-        dateModified: '2026-08-27',
+        dateModified: '2026-08-28',
         inLanguage: 'zh',
         author: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -2144,7 +2176,7 @@ schema: {
       intro: '2026년 말까지: 소형 모델의 파라미터당 품질이 계속 향상되고 있고, 온디바이스 추론이 iPhone(A18) 및 Snapdragon X Elite 스마트폰에서 실용적으로 작동하며, 추론 모델이 단계별 정확도를 15–30% 향상시키고, 기업의 온프레미스 추론 도입은 규제 산업을 중심으로 성장할 것으로 예상됩니다. 이 가이드는 타임라인, 벤치마크, 도입 예측과 함께 2026–2027년 로컬 AI를 재편하는 5가지 핵심 트렌드를 다룹니다.',
       metaDescription: '소형 모델의 파라미터당 품질은 2026년에도 계속 향상되고 있습니다. 스마트폰이 15–30 tok/sec으로 로컬 LLM을 실행합니다. 기업의 온프레미스 추론 도입이 규제 산업을 중심으로 증가하고 있습니다.',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-27',
+      dateModified: '2026-08-28',
       leadAnswerBlock: '**2026년 말까지: 소형 모델의 파라미터당 품질이 계속 향상되고 있고, 온디바이스 추론이 iPhone(A18) 및 Snapdragon X Elite 스마트폰에서 실용적으로 작동하며, 추론 모델이 단계별 정확도를 15–30% 향상시키고, 기업의 온프레미스 추론 도입은 규제 산업을 중심으로 성장할 것으로 예상됩니다.**',
       audience: '로컬 LLM 도입 일정을 평가하는 개발자 및 기업 아키텍트',
       readTime: '10분 읽기',
@@ -2194,6 +2226,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: '2026년 말까지 파라미터당 소형 모델 품질은 계속 향상되고, A18 칩 탑재 iPhone과 Snapdragon X Elite 탑재 Android 같은 플래그십 기기에서 온디바이스 추론이 작동하며, 추론 모델은 단계별 정확도를 15~30% 개선하고, 규제 산업이 주도하는 기업의 온프레미스 도입이 성장할 것으로 예상됩니다.' },
+            { type: 'plain-terms', text: '로컬 AI가 향하고 있는 방향: 소형 모델은 크기 대비 계속 더 똑똑해지고, 스마트폰은 기기 자체에서 실제 모델을 실행할 수 있게 되어가며, 추론에 특화된 모델은 여러 단계의 문제에서 눈에 띄게 향상되고, 더 많은 기업 -- 특히 의료와 금융 같은 규제 산업 -- 이 클라우드 대신 자체 인프라에서 AI를 운영하기로 선택하고 있습니다.' },
+          ],
           items: [
             '**트렌드 1:** 2026년의 1–3B 모델은 2023년의 7B 모델에 필적합니다 — 파라미터당 품질이 향상되고 있습니다.',
             '**트렌드 2:** iPhone(A18) 및 Snapdragon X 스마트폰에서의 온디바이스 추론은 1–3B 모델에 대해 오늘날 실용적입니다.',
