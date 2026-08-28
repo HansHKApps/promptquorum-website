@@ -60,6 +60,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'The crossover point between Apple Silicon and NVIDIA for local LLMs is about 24GB of model size: below that, an RTX 4090 is faster thanks to its 1,008 GB/s memory bandwidth, but above it, Apple Silicon (like the M5 Max with 128GB unified memory) is the only practical consumer option without dual-GPU complexity.' },
+          { type: 'plain-terms', text: "Which hardware wins depends on the model size you want to run. NVIDIA GPUs like the RTX 4090 are faster for smaller models because their VRAM is built for speed, but they're capped at 24GB, so anything bigger requires multiple expensive GPUs. Apple Silicon Macs share one large pool of unified memory between CPU and GPU, so a Mac with 128GB+ RAM can run much larger models a single consumer NVIDIA setup simply can't." },
+        ],
         items: [
           'RTX 4090 wins decisively on models that fit in 24GB VRAM. M5 Max wins decisively when the model does not fit. Crossover threshold: ~24GB model size.',
           'Benchmarks: RTX 4090 delivers 120–140 tok/s on Llama 3.1 8B Q4. M5 Max delivers 100–120 tok/s. On Llama 3.3 70B Q4: M5 Max runs at 15–20 tok/s. RTX 4090 cannot run it at all (OOM).',
@@ -367,6 +371,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'El punto de cruce entre Apple Silicon y NVIDIA para LLMs locales está en torno a los 24 GB de tamaño de modelo: por debajo, una RTX 4090 es más rápida gracias a su ancho de banda de 1.008 GB/s, pero por encima, Apple Silicon (como el M5 Max con 128 GB de memoria unificada) es la única opción de consumo práctica sin la complejidad de usar varias GPU.' },
+          { type: 'plain-terms', text: 'Qué hardware gana depende del tamaño del modelo que quieras ejecutar. Las GPU NVIDIA como la RTX 4090 son más rápidas para modelos más pequeños porque su VRAM está diseñada para velocidad, pero están limitadas a 24 GB, así que cualquier cosa más grande requiere varias GPU costosas. Los Mac con Apple Silicon comparten un gran fondo de memoria unificada entre CPU y GPU, por lo que un Mac con 128 GB+ de RAM puede ejecutar modelos mucho más grandes de lo que una sola GPU NVIDIA de consumo puede manejar.' },
+        ],
         items: [
           'RTX 4090 gana claramente en modelos que caben en 24 GB de VRAM. M5 Max gana claramente cuando el modelo no cabe. Punto de cruce: ~24 GB de tamaño de modelo.',
           'Benchmarks: RTX 4090 entrega 120–140 tok/s en Llama 3.1 8B Q4. M5 Max entrega 100–120 tok/s. En Llama 3.3 70B Q4: M5 Max corre a 15–20 tok/s. RTX 4090 no puede ejecutarlo (OOM).',
@@ -671,6 +679,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'تقع نقطة التقاطع بين Apple Silicon وNVIDIA لنماذج LLM المحلية عند حوالي 24 GB من حجم النموذج: أقل من ذلك، تكون RTX 4090 أسرع بفضل عرض نطاقها الترددي البالغ 1,008 GB/ثانية، لكن فوق ذلك، يُعد Apple Silicon (مثل M5 Max بذاكرة موحدة 128 GB) الخيار الاستهلاكي العملي الوحيد دون تعقيد استخدام عدة وحدات GPU.' },
+          { type: 'plain-terms', text: 'يعتمد الفوز في الأداء على حجم النموذج الذي تريد تشغيله. وحدات GPU من NVIDIA مثل RTX 4090 أسرع للنماذج الأصغر لأن ذاكرة VRAM مصممة للسرعة، لكنها محدودة بـ 24 GB، لذا أي شيء أكبر يتطلب عدة وحدات GPU مكلفة. تشارك أجهزة Mac بمعالج Apple Silicon تجمعاً كبيراً من الذاكرة الموحدة بين CPU وGPU، لذا يمكن لجهاز Mac بذاكرة 128 GB+ تشغيل نماذج أكبر بكثير مما يمكن لإعداد NVIDIA استهلاكي واحد التعامل معه.' },
+        ],
         items: [
           'تفوز RTX 4090 بوضوح في النماذج التي تتسع في 24 GB من VRAM. ويفوز M5 Max بوضوح عندما لا يتسع النموذج. نقطة التقاطع: نحو 24 GB من حجم النموذج.',
           'اختبارات مرجعية: تقدّم RTX 4090 سرعة 120–140 tok/s على Llama 3.1 8B Q4. ويقدّم M5 Max سرعة 100–120 tok/s. على Llama 3.3 70B Q4: يعمل M5 Max بسرعة 15–20 tok/s. وRTX 4090 لا يستطيع تشغيله (OOM).',
@@ -985,6 +997,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'O ponto de equilíbrio entre Apple Silicon e NVIDIA para LLMs locais fica em torno de 24 GB de tamanho de modelo: abaixo disso, uma RTX 4090 é mais rápida graças à sua largura de banda de 1.008 GB/s, mas acima disso, o Apple Silicon (como o M5 Max com 128 GB de memória unificada) é a única opção de consumo prática sem a complexidade de usar várias GPUs.' },
+          { type: 'plain-terms', text: 'Qual hardware vence depende do tamanho do modelo que você quer rodar. GPUs NVIDIA como a RTX 4090 são mais rápidas para modelos menores porque sua VRAM é feita para velocidade, mas são limitadas a 24 GB, então qualquer coisa maior exige várias GPUs caras. Os Macs com Apple Silicon compartilham um grande pool de memória unificada entre CPU e GPU, então um Mac com 128 GB+ de RAM pode rodar modelos muito maiores do que uma única GPU NVIDIA de consumo consegue lidar.' },
+        ],
         items: [
           'RTX 4090 vence claramente em modelos que cabem em 24 GB de VRAM. M5 Max vence claramente quando o modelo não cabe. Ponto de cruzamento: ~24 GB de tamanho de modelo.',
           'Benchmarks: RTX 4090 entrega 120-140 tok/s em Llama 3.1 8B Q4. M5 Max entrega 100-120 tok/s. Em Llama 3.3 70B Q4: M5 Max roda a 15-20 tok/s. RTX 4090 não consegue executá-lo (OOM).',
@@ -1185,6 +1201,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Der Wendepunkt zwischen Apple Silicon und NVIDIA für lokale LLMs liegt bei etwa 24 GB Modellgröße: darunter ist eine RTX 4090 dank ihrer Bandbreite von 1.008 GB/s schneller, darüber ist Apple Silicon (wie der M5 Max mit 128 GB Unified Memory) die einzige praktikable Consumer-Option ohne die Komplexität mehrerer GPUs.' },
+          { type: 'plain-terms', text: 'Welche Hardware gewinnt, hängt von der Modellgröße ab, die Sie ausführen möchten. NVIDIA-GPUs wie die RTX 4090 sind bei kleineren Modellen schneller, da ihr VRAM auf Geschwindigkeit ausgelegt ist, aber auf 24 GB begrenzt -- alles Größere erfordert mehrere teure GPUs. Macs mit Apple Silicon teilen sich einen großen Pool aus Unified Memory zwischen CPU und GPU, sodass ein Mac mit 128 GB+ RAM deutlich größere Modelle ausführen kann, als eine einzelne Consumer-NVIDIA-Karte bewältigen könnte.' },
+        ],
         items: [
           'RTX 4090 gewinnt deutlich bei Modellen, die in 24 GB VRAM passen. M5 Max gewinnt deutlich, wenn das Modell nicht passt. Wendepunkt: ~24 GB Modellgröße.',
           'Benchmarks: RTX 4090 liefert 120–140 tok/s auf Llama 3.1 8B Q4. M5 Max liefert 100–120 tok/s. Auf Llama 3.3 70B Q4: M5 Max läuft bei 15–20 tok/s. RTX 4090 kann es überhaupt nicht ausführen (OOM).',
@@ -1501,6 +1521,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: "Le point de bascule entre Apple Silicon et NVIDIA pour les LLM locaux se situe autour de 24 Go de taille de modèle : en dessous, une RTX 4090 est plus rapide grâce à sa bande passante de 1 008 Go/s, mais au-dessus, Apple Silicon (comme le M5 Max avec 128 Go de mémoire unifiée) est la seule option grand public viable sans la complexité de plusieurs GPU." },
+          { type: 'plain-terms', text: "Le matériel qui l'emporte dépend de la taille du modèle que vous voulez faire tourner. Les GPU NVIDIA comme la RTX 4090 sont plus rapides pour les petits modèles car leur VRAM est conçue pour la vitesse, mais plafonnent à 24 Go, donc tout ce qui est plus gros nécessite plusieurs GPU coûteux. Les Mac Apple Silicon partagent un grand pool de mémoire unifiée entre CPU et GPU, donc un Mac avec 128 Go+ de RAM peut faire tourner des modèles bien plus gros qu'une seule carte NVIDIA grand public ne le pourrait." },
+        ],
         items: [
           'RTX 4090 gagne nettement sur les modèles qui tiennent en 24 GB VRAM. M5 Max gagne nettement quand le modèle ne tient pas. Point de basculement : ~24 GB de taille de modèle.',
           'Benchmarks : RTX 4090 fournit 120–140 tok/s sur Llama 3.1 8B Q4. M5 Max fournit 100–120 tok/s. Sur Llama 3.3 70B Q4 : M5 Max s\'exécute à 15–20 tok/s. RTX 4090 ne peut pas l\'exécuter (OOM).',
@@ -1828,6 +1852,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Apple SiliconとNVIDIAのローカルLLMにおける分岐点はモデルサイズ約24GBです。それ未満ではRTX 4090が1,008 GB/秒の帯域幅により高速ですが、それを超えるとApple Silicon（128GB統合メモリを持つM5 Maxなど）が、複数GPUの複雑さなしで使える唯一の実用的なコンシューマー向けの選択肢になります。' },
+          { type: 'plain-terms', text: 'どちらのハードウェアが勝るかは、実行したいモデルのサイズによります。RTX 4090のようなNVIDIA GPUは、そのVRAMが速度重視で設計されているため小型モデルでは高速ですが、24GBに制限されているため、それより大きなモデルには複数の高価なGPUが必要になります。Apple SiliconのMacはCPUとGPUで大きな統合メモリプールを共有するため、128GB以上のRAMを搭載したMacは、単一のコンシューマー向けNVIDIA構成では扱えないほど大きなモデルを実行できます。' },
+        ],
         items: [
           'RTX 4090は24GB VRAMに適合するモデルで明確に勝ります。M5 Maxはモデルが適合しないときに明確に勝ります。分岐点：約24GB モデルサイズ。',
           'ベンチマーク：RTX 4090はLlama 3.1 8B Q4で120–140 tok/sを提供。M5 Maxは100–120 tok/sを提供。Llama 3.3 70B Q4：M5 Maxは15–20 tok/sで実行。RTX 4090はそれを実行できません（OOM）。',
@@ -2166,6 +2194,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Apple Silicon与NVIDIA在本地LLM上的分界点大约是24GB的模型大小：低于此值，RTX 4090凭借1,008 GB/秒的带宽更快；高于此值，Apple Silicon（如配备128GB统一内存的M5 Max）是唯一无需多GPU复杂配置的实用消费级选择。' },
+          { type: 'plain-terms', text: '哪种硬件更好取决于你想运行的模型大小。像RTX 4090这样的NVIDIA GPU在较小模型上更快，因为其显存专为速度设计，但上限为24GB，超出这个范围就需要多块昂贵的GPU。搭载Apple Silicon的Mac在CPU和GPU之间共享一大块统一内存池，因此配备128GB以上内存的Mac能运行远超单块消费级NVIDIA显卡能力的大模型。' },
+        ],
         items: [
           'RTX 4090在模型适合24GB VRAM时明确胜出。M5 Max在模型不适合时明确胜出。转折点：约24GB模型大小。',
           '基准：RTX 4090在Llama 3.1 8B Q4上提供120–140 tok/s。M5 Max提供100–120 tok/s。Llama 3.3 70B Q4：M5 Max运行15–20 tok/s。RTX 4090根本无法运行（OOM）。',
@@ -2472,6 +2504,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Apple Silicon과 NVIDIA의 로컬 LLM 교차점은 모델 크기 약 24GB입니다: 그 미만에서는 RTX 4090이 1,008GB/s의 대역폭 덕분에 더 빠르지만, 그 이상에서는 Apple Silicon(128GB 통합 메모리를 갖춘 M5 Max 등)이 다중 GPU의 복잡함 없이 사용할 수 있는 유일한 실용적 소비자용 옵션입니다.' },
+          { type: 'plain-terms', text: '어떤 하드웨어가 더 나은지는 실행하려는 모델 크기에 따라 다릅니다. RTX 4090 같은 NVIDIA GPU는 VRAM이 속도에 최적화되어 있어 소형 모델에서 더 빠르지만 24GB로 제한되어 있어, 그보다 큰 모델은 여러 개의 고가 GPU가 필요합니다. Apple Silicon Mac은 CPU와 GPU가 큰 통합 메모리 풀을 공유하므로, 128GB 이상의 RAM을 갖춘 Mac은 단일 소비자용 NVIDIA 구성으로는 다룰 수 없는 훨씬 더 큰 모델을 실행할 수 있습니다.' },
+        ],
         items: [
           'RTX 4090은 24GB VRAM에 맞는 모델에서 명확히 승리합니다. M5 Max는 모델이 맞지 않을 때 명확히 승리합니다. 분기점: 모델 크기 약 24GB.',
           '벤치마크: RTX 4090은 Llama 3.1 8B Q4에서 120–140 tok/s를 제공합니다. M5 Max는 100–120 tok/s를 제공합니다. Llama 3.3 70B Q4에서: M5 Max는 15–20 tok/s로 실행됩니다. RTX 4090은 이를 전혀 실행할 수 없습니다(OOM).',
