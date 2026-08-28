@@ -128,7 +128,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'Status check, August 2026: Continue.dev still works and is still the fastest Copilot replacement to set up, but it is no longer actively developed. Cursor acquired the Continue team on 18 June 2026; the final release was v2.0.0 on 19 June 2026 and the repository is read-only. Apache 2.0 means it stays downloadable and it will keep working against Ollama for the foreseeable future, but there will be no fixes, and a future provider or VS Code API change will eventually break it. If you want a maintained VS Code agent instead, Cline is the active alternative — the Ollama and Qwen3-Coder half of this stack is unaffected either way.',
+            text: 'Status check, August 2026: Continue.dev still works and is still the fastest Copilot replacement to set up, but it is no longer actively developed. Cursor acquired the Continue team on 18 June 2026; the final release was v2.0.0 on 19 June 2026 and the repository is read-only. Apache 2.0 means it stays downloadable and it will keep working against Ollama for the foreseeable future, but there will be no fixes, and a future provider or VS Code API change will eventually break it. There is no drop-in maintained replacement that does what it does. Cline and Aider are agents, not autocomplete providers, so they do not cover Copilot\'s core inline-completion job; Twinny, the other Ollama-native FIM extension, was archived in November 2025. The nearest maintained option is Tabby, which is actively developed and open-source but runs its own self-hosted completion server rather than talking to Ollama directly. The Ollama and Qwen3-Coder half of this stack is unaffected either way.',
           },
           {
             type: 'note',
@@ -437,7 +437,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'Statuspruefung, August 2026: Continue.dev funktioniert weiterhin und bleibt der am schnellsten eingerichtete Copilot-Ersatz, wird aber nicht mehr aktiv entwickelt. Cursor hat das Continue-Team am 18. Juni 2026 uebernommen; die letzte Version war v2.0.0 vom 19. Juni 2026, das Repository ist schreibgeschuetzt. Dank Apache 2.0 bleibt es verfuegbar und laeuft auf absehbare Zeit weiter mit Ollama, aber es wird keine Fehlerbehebungen mehr geben, und eine kuenftige Aenderung an Provider- oder VS-Code-APIs wird es irgendwann unbrauchbar machen. Wenn Sie stattdessen einen gepflegten VS-Code-Agenten wollen, ist Cline die aktive Alternative — der Ollama- und Qwen3-Coder-Teil dieses Stacks ist davon nicht betroffen.',
+            text: 'Statuspruefung, August 2026: Continue.dev funktioniert weiterhin und bleibt der am schnellsten eingerichtete Copilot-Ersatz, wird aber nicht mehr aktiv entwickelt. Cursor hat das Continue-Team am 18. Juni 2026 uebernommen; die letzte Version war v2.0.0 vom 19. Juni 2026, das Repository ist schreibgeschuetzt. Dank Apache 2.0 bleibt es verfuegbar und laeuft auf absehbare Zeit weiter mit Ollama, aber es wird keine Fehlerbehebungen mehr geben, und eine kuenftige Aenderung an Provider- oder VS-Code-APIs wird es irgendwann unbrauchbar machen. Es gibt keinen gepflegten Direktersatz, der dasselbe leistet. Cline und Aider sind Agenten und keine Autocomplete-Anbieter, decken also Copilots eigentliche Inline-Vervollstaendigung nicht ab; Twinny, die andere Ollama-native FIM-Erweiterung, wurde im November 2025 archiviert. Die naechstgelegene gepflegte Option ist Tabby - aktiv entwickelt und quelloffen, betreibt aber einen eigenen selbst gehosteten Completion-Server statt direkt mit Ollama zu sprechen. Der Ollama- und Qwen3-Coder-Teil dieses Stacks ist davon in jedem Fall nicht betroffen.',
           },
           {
             type: 'note',
@@ -753,7 +753,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'Point de situation, aout 2026 : Continue.dev fonctionne toujours et reste le remplacement de Copilot le plus rapide a mettre en place, mais il n\'est plus developpe activement. Cursor a acquis l\'equipe Continue le 18 juin 2026 ; la derniere version est la v2.0.0 du 19 juin 2026 et le depot est en lecture seule. La licence Apache 2.0 le garde telechargeable et il continuera de fonctionner avec Ollama dans un avenir proche, mais il n\'y aura plus de correctifs, et une future evolution des API fournisseur ou VS Code finira par le casser. Si vous voulez un agent VS Code maintenu, Cline est l\'alternative active — la partie Ollama et Qwen3-Coder de cette pile n\'est pas concernee.',
+            text: 'Point de situation, aout 2026 : Continue.dev fonctionne toujours et reste le remplacement de Copilot le plus rapide a mettre en place, mais il n\'est plus developpe activement. Cursor a acquis l\'equipe Continue le 18 juin 2026 ; la derniere version est la v2.0.0 du 19 juin 2026 et le depot est en lecture seule. La licence Apache 2.0 le garde telechargeable et il continuera de fonctionner avec Ollama dans un avenir proche, mais il n\'y aura plus de correctifs, et une future evolution des API fournisseur ou VS Code finira par le casser. Il n\'existe pas de remplacant maintenu equivalent. Cline et Aider sont des agents, pas des fournisseurs d\'autocompletion : ils ne couvrent pas la completion en ligne qui fait le coeur de Copilot ; Twinny, l\'autre extension FIM native Ollama, a ete archivee en novembre 2025. L\'option maintenue la plus proche est Tabby, activement developpee et open source, mais qui fait tourner son propre serveur de completion auto-heberge au lieu de dialoguer directement avec Ollama. La partie Ollama et Qwen3-Coder de cette pile n\'est concernee dans aucun cas.',
           },
           {
             type: 'note',
@@ -1061,7 +1061,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'ステータス確認（2026年8月）：Continue.devは今も動作し、最も早く導入できるCopilotの代替であることに変わりはありませんが、活発な開発は終了しています。Cursorが2026年6月18日にContinueチームを買収し、最終リリースは2026年6月19日のv2.0.0、リポジトリは読み取り専用です。Apache 2.0のため入手は可能で当面はOllamaと動作しますが、修正は行われず、将来のプロバイダーやVS Code APIの変更でいずれ動かなくなります。メンテナンスされたVS Codeエージェントが必要なら、Clineが現行の代替です。このスタックのOllamaとQwen3-Coderの部分には影響ありません。',
+            text: 'ステータス確認（2026年8月）：Continue.devは今も動作し、最も早く導入できるCopilotの代替であることに変わりはありませんが、活発な開発は終了しています。Cursorが2026年6月18日にContinueチームを買収し、最終リリースは2026年6月19日のv2.0.0、リポジトリは読み取り専用です。Apache 2.0のため入手は可能で当面はOllamaと動作しますが、修正は行われず、将来のプロバイダーやVS Code APIの変更でいずれ動かなくなります。同等の機能を持つメンテナンス済みの代替は存在しません。ClineやAiderはエージェントであり補完プロバイダーではないため、Copilotの中核であるインライン補完は代替できません。もう一つのOllamaネイティブなFIM拡張であったTwinnyは2025年11月にアーカイブされました。最も近いメンテナンス済みの選択肢はTabbyですが、活発に開発されているオープンソースである一方、Ollamaと直接やり取りせず独自の自己ホスト型補完サーバーを動かします。いずれにせよ、このスタックのOllamaとQwen3-Coderの部分は影響を受けません。',
           },
           {
             type: 'note',
@@ -1369,7 +1369,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: '状态说明（2026年8月）：Continue.dev 仍可使用，也依然是最快上手的 Copilot 替代方案，但已不再积极开发。Cursor 于2026年6月18日收购了 Continue 团队，最终版本为2026年6月19日的 v2.0.0，仓库已设为只读。Apache 2.0 许可证保证它仍可下载，并在可预见的时间内继续配合 Ollama 工作，但不会再有修复，未来供应商或 VS Code API 的变化最终会使其失效。如果你需要持续维护的 VS Code 智能体，Cline 是当前的替代选择——本方案中 Ollama 与 Qwen3-Coder 部分不受影响。',
+            text: '状态说明（2026年8月）：Continue.dev 仍可使用，也依然是最快上手的 Copilot 替代方案，但已不再积极开发。Cursor 于2026年6月18日收购了 Continue 团队，最终版本为2026年6月19日的 v2.0.0，仓库已设为只读。Apache 2.0 许可证保证它仍可下载，并在可预见的时间内继续配合 Ollama 工作，但不会再有修复，未来供应商或 VS Code API 的变化最终会使其失效。目前没有功能对等且仍在维护的直接替代品。Cline 和 Aider 是智能体而非补全提供方，无法承担 Copilot 最核心的行内补全；另一个 Ollama 原生 FIM 扩展 Twinny 已于2025年11月归档。最接近的仍在维护的选择是 Tabby，它开源且开发活跃，但运行自己的自托管补全服务器，而不是直接对接 Ollama。无论如何，本方案中 Ollama 与 Qwen3-Coder 部分不受影响。',
           },
           {
             type: 'note',
@@ -1677,7 +1677,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'Comprobacion de estado, agosto de 2026: Continue.dev sigue funcionando y sigue siendo el reemplazo de Copilot mas rapido de configurar, pero ya no se desarrolla activamente. Cursor adquirio el equipo de Continue el 18 de junio de 2026; la ultima version fue la v2.0.0 del 19 de junio de 2026 y el repositorio es de solo lectura. La licencia Apache 2.0 lo mantiene descargable y seguira funcionando con Ollama en el futuro previsible, pero no habra correcciones y un cambio futuro en las API del proveedor o de VS Code acabara rompiendolo. Si prefieres un agente de VS Code mantenido, Cline es la alternativa activa; la parte de Ollama y Qwen3-Coder de esta pila no se ve afectada.',
+            text: 'Comprobacion de estado, agosto de 2026: Continue.dev sigue funcionando y sigue siendo el reemplazo de Copilot mas rapido de configurar, pero ya no se desarrolla activamente. Cursor adquirio el equipo de Continue el 18 de junio de 2026; la ultima version fue la v2.0.0 del 19 de junio de 2026 y el repositorio es de solo lectura. La licencia Apache 2.0 lo mantiene descargable y seguira funcionando con Ollama en el futuro previsible, pero no habra correcciones y un cambio futuro en las API del proveedor o de VS Code acabara rompiendolo. No existe un reemplazo mantenido equivalente. Cline y Aider son agentes, no proveedores de autocompletado, asi que no cubren la completacion en linea que es el nucleo de Copilot; Twinny, la otra extension FIM nativa de Ollama, fue archivada en noviembre de 2025. La opcion mantenida mas cercana es Tabby, de desarrollo activo y codigo abierto, pero que ejecuta su propio servidor de completado autoalojado en lugar de hablar directamente con Ollama. La parte de Ollama y Qwen3-Coder de esta pila no se ve afectada en ningun caso.',
           },
           {
             type: 'note',
@@ -1998,7 +1998,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'Verificacao de status, agosto de 2026: o Continue.dev ainda funciona e continua sendo o substituto do Copilot mais rapido de configurar, mas nao esta mais em desenvolvimento ativo. A Cursor adquiriu a equipe do Continue em 18 de junho de 2026; a versao final foi a v2.0.0, de 19 de junho de 2026, e o repositorio e somente leitura. A licenca Apache 2.0 o mantem disponivel e ele seguira funcionando com o Ollama no futuro previsivel, mas nao havera correcoes, e uma futura mudanca nas APIs do provedor ou do VS Code acabara quebrando-o. Se voce prefere um agente de VS Code mantido, o Cline e a alternativa ativa — a parte de Ollama e Qwen3-Coder desta stack nao e afetada.',
+            text: 'Verificacao de status, agosto de 2026: o Continue.dev ainda funciona e continua sendo o substituto do Copilot mais rapido de configurar, mas nao esta mais em desenvolvimento ativo. A Cursor adquiriu a equipe do Continue em 18 de junho de 2026; a versao final foi a v2.0.0, de 19 de junho de 2026, e o repositorio e somente leitura. A licenca Apache 2.0 o mantem disponivel e ele seguira funcionando com o Ollama no futuro previsivel, mas nao havera correcoes, e uma futura mudanca nas APIs do provedor ou do VS Code acabara quebrando-o. Nao existe um substituto mantido equivalente. Cline e Aider sao agentes, nao provedores de autocompletar, portanto nao cobrem a completacao inline que e o nucleo do Copilot; o Twinny, a outra extensao FIM nativa do Ollama, foi arquivado em novembro de 2025. A opcao mantida mais proxima e o Tabby, de desenvolvimento ativo e codigo aberto, mas que roda seu proprio servidor de completacao auto-hospedado em vez de falar diretamente com o Ollama. A parte de Ollama e Qwen3-Coder desta stack nao e afetada em nenhum caso.',
           },
           {
             type: 'note',
@@ -2323,7 +2323,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'تحقّق من الحالة، أغسطس 2026: لا يزال Continue.dev يعمل ويظل أسرع بديل لـCopilot من حيث الإعداد، لكنه لم يعد قيد التطوير النشط. استحوذت Cursor على فريق Continue في 18 يونيو 2026، وكان الإصدار الأخير v2.0.0 بتاريخ 19 يونيو 2026، والمستودع للقراءة فقط. رخصة Apache 2.0 تُبقيه متاحاً للتنزيل وسيظل يعمل مع Ollama في المدى المنظور، لكن لن تصدر إصلاحات، وأي تغيير مستقبلي في واجهات المزوّدين أو VS Code سيُعطّله في النهاية. وإن أردت وكيل VS Code مُصانًا، فإن Cline هو البديل النشط — أما جزءا Ollama وQwen3-Coder من هذه الحزمة فلا يتأثران.',
+            text: 'تحقّق من الحالة، أغسطس 2026: لا يزال Continue.dev يعمل ويظل أسرع بديل لـCopilot من حيث الإعداد، لكنه لم يعد قيد التطوير النشط. استحوذت Cursor على فريق Continue في 18 يونيو 2026، وكان الإصدار الأخير v2.0.0 بتاريخ 19 يونيو 2026، والمستودع للقراءة فقط. رخصة Apache 2.0 تُبقيه متاحاً للتنزيل وسيظل يعمل مع Ollama في المدى المنظور، لكن لن تصدر إصلاحات، وأي تغيير مستقبلي في واجهات المزوّدين أو VS Code سيُعطّله في النهاية. لا يوجد بديل مُصان يؤدي الدور نفسه مباشرةً. فـCline وAider وكيلان لا مزودا إكمال تلقائي، ومن ثم لا يغطيان الإكمال السطري الذي يمثل جوهر Copilot؛ أما Twinny، الإضافة الأخرى الداعمة لـFIM أصلاً مع Ollama، فقد أُرشِفت في نوفمبر 2025. وأقرب خيار مُصان هو Tabby، وهو مفتوح المصدر وقيد التطوير النشط، لكنه يشغّل خادم إكمال ذاتي الاستضافة خاصاً به بدل التخاطب مباشرة مع Ollama. وعلى أي حال، لا يتأثر جزءا Ollama وQwen3-Coder من هذه الحزمة.',
           },
           { type: 'tip', text: 'إذا كنت تستخدم JetBrains (IntelliJ IDEA وWebStorm وما إلى ذلك)، تعمل Continue.dev بنفس الطريقة تمامًا — نفس الإعداد، نفس الملف `config.json`.' },
         ],
@@ -2651,7 +2651,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: '상태 확인(2026년 8월): Continue.dev는 지금도 작동하며 가장 빠르게 구성할 수 있는 Copilot 대체재라는 점도 그대로지만, 더 이상 활발히 개발되지 않습니다. Cursor가 2026년 6월 18일 Continue 팀을 인수했고, 마지막 릴리스는 2026년 6월 19일의 v2.0.0이며 저장소는 읽기 전용입니다. Apache 2.0 라이선스 덕분에 계속 내려받을 수 있고 당분간 Ollama와도 함께 작동하지만, 수정은 제공되지 않으며 향후 공급자나 VS Code API 변경으로 언젠가는 동작하지 않게 됩니다. 유지 관리되는 VS Code 에이전트를 원한다면 Cline이 현재의 대안입니다. 이 스택의 Ollama와 Qwen3-Coder 부분은 영향을 받지 않습니다.',
+            text: '상태 확인(2026년 8월): Continue.dev는 지금도 작동하며 가장 빠르게 구성할 수 있는 Copilot 대체재라는 점도 그대로지만, 더 이상 활발히 개발되지 않습니다. Cursor가 2026년 6월 18일 Continue 팀을 인수했고, 마지막 릴리스는 2026년 6월 19일의 v2.0.0이며 저장소는 읽기 전용입니다. Apache 2.0 라이선스 덕분에 계속 내려받을 수 있고 당분간 Ollama와도 함께 작동하지만, 수정은 제공되지 않으며 향후 공급자나 VS Code API 변경으로 언젠가는 동작하지 않게 됩니다. 동일한 역할을 하는 유지 관리되는 대체재는 없습니다. Cline과 Aider는 에이전트이지 자동완성 제공자가 아니므로 Copilot의 핵심인 인라인 자동완성을 대신하지 못합니다. Ollama 네이티브 FIM 확장이던 Twinny는 2025년 11월에 아카이브되었습니다. 가장 가까운 유지 관리 대안은 Tabby로, 오픈소스이며 활발히 개발되지만 Ollama와 직접 통신하는 대신 자체 자체호스팅 완성 서버를 실행합니다. 어느 쪽이든 이 스택의 Ollama와 Qwen3-Coder 부분은 영향을 받지 않습니다.',
           },
           {
             type: 'note',
