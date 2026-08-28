@@ -78,7 +78,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'How Do Privacy Models Differ Between Claude Pro and Local LLMs?',
           content: [
             '**Claude Pro (Anthropic): Your conversations are not used to train future Claude models (Anthropic explicit privacy policy as of 2026).** However, queries are logged on Anthropic servers for safety monitoring and debugging. Anthropic is US-based, subject to US law.',
-            'Local LLMs: All data remains on your machine. Zero cloud logging, zero third-party visibility. Suitable for healthcare (HIPAA), finance (PCI-DSS), and legal (attorney-client privilege) workflows. As of April 2026, Llama 3.3 is fully open-source (no Anthropic data collection).',
+            'Local LLMs: All data remains on your machine. Zero cloud logging, zero third-party visibility. Suitable for healthcare (HIPAA), finance (PCI-DSS), and legal (attorney-client privilege) workflows. Llama 3.3 is fully open-source (no Anthropic data collection).',
           ],
           callouts: [
             { type: '📌 Key Point', text: 'Anthropic does not train on chat history, but conversations are logged on US servers for safety monitoring.' },
@@ -111,7 +111,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           content: [
             '**Claude Pro 200K tokens: ~150,000 words (equivalent to 3 books).** Can process an entire codebase, legal contracts, or research papers in one query.',
             'Llama 3.3 70B 128K tokens: ~96,000 words. Still excellent for most documents; some very large codebases or 500+ page contracts exceed this limit.',
-            'As of April 2026: For document processing workflows (RAG, bulk summarization, contract review), Claude Pro\'s 200K window is a tangible advantage. Llama 3.3 128K is adequate for ~95% of business documents.',
+            'For document processing workflows (RAG, bulk summarization, contract review), Claude Pro\'s 200K window is a tangible advantage. Llama 3.3 128K is adequate for ~95% of business documents.',
           ],
           callouts: [
             { type: '📌 Key Point', text: 'Both context windows are massive. Only very large codebases or 500+ page contracts hit Llama\'s 128K limit.' },
