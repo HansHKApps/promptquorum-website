@@ -20,7 +20,7 @@
   },
   {
     "id": "5ae9366f-8b16-4595-99a8-3cc87cced4c2",
-    "slug": "fundamentals-of-prompt-optimization",
+    "slug": "/prompt-engineering/fundamentals-of-prompt-optimization",
     "date": "2026-05-01T09:58:19.158Z",
     "fields": [
       {
@@ -34,7 +34,7 @@
   },
   {
     "id": "0abc2606-a1d2-4252-954e-3f25ade3e787",
-    "slug": "ai-limitations-what-llms-cant-do",
+    "slug": "/prompt-engineering/ai-limitations-what-llms-cant-do",
     "date": "2026-05-01T10:21:21.050Z",
     "fields": [
       {
@@ -48,7 +48,7 @@
   },
   {
     "id": "87fbd1cd-6060-4f5f-b3b8-696181589fcd",
-    "slug": "ai-limitations-what-llms-cant-do",
+    "slug": "/prompt-engineering/ai-limitations-what-llms-cant-do",
     "date": "2026-05-01T10:51:04.384Z",
     "fields": [
       {
@@ -62,7 +62,7 @@
   },
   {
     "id": "d645c9a8-8722-4156-a0df-65fc3f797fe9",
-    "slug": "ai-limitations-what-llms-cant-do",
+    "slug": "/prompt-engineering/ai-limitations-what-llms-cant-do",
     "date": "2026-05-01T10:51:09.522Z",
     "fields": [
       {
