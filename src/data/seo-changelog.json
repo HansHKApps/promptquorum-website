@@ -283,5 +283,75 @@
       "ctr": 0.048,
       "period": "2026-07-31 to 2026-08-27"
     }
+  },
+  {
+    "id": "ae94a6e5-5644-4fe8-8268-44d8fdba4bc8",
+    "slug": "/local-llms/best-local-llms-2026",
+    "date": "2026-08-28T17:30:03.297Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Best Local LLMs August 2026: Qwen3.8-27B, Gemma 4, Phi-4-mini",
+        "new": "Best Local LLMs 2026: Qwen3.8-27B, Gemma 4, Phi-4-mini"
+      }
+    ],
+    "reason": "Removed month label from title; month was a hand-maintained freshness claim that drifted across locales. Year retained. See branch content/remove-month-labels.",
+    "baseline": null
+  },
+  {
+    "id": "4104b285-81e8-449c-baaa-06d2d2941be3",
+    "slug": "/local-llms/eu-cloud-gpu-gdpr-2026",
+    "date": "2026-08-28T17:30:03.331Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "EU GDPR Cloud GPU 2026: Hetzner vs Scaleway vs OVHcloud (Tested July 2026)",
+        "new": "EU GDPR Cloud GPU 2026: Hetzner vs Scaleway vs OVHcloud"
+      }
+    ],
+    "reason": "Removed month label from title; month was a hand-maintained freshness claim that drifted across locales. Year retained. See branch content/remove-month-labels.",
+    "baseline": null
+  },
+  {
+    "id": "45343a99-5430-40e3-b008-66cd08b773f7",
+    "slug": "/local-llms/cloud-gpu-rental-comparison-2026",
+    "date": "2026-08-28T17:30:03.355Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "RunPod vs Vast.ai vs Lambda Labs for LLM Inference (July 2026)",
+        "new": "RunPod vs Vast.ai vs Lambda Labs for LLM Inference 2026"
+      }
+    ],
+    "reason": "Removed month label from title; month was a hand-maintained freshness claim that drifted across locales. Year retained. See branch content/remove-month-labels.",
+    "baseline": null
+  },
+  {
+    "id": "9677a284-6e52-4213-a145-fd5b68da8804",
+    "slug": "/local-llms/local-llm-developer-stack",
+    "date": "2026-08-28T17:30:03.378Z",
+    "fields": [
+      {
+        "field": "title",
+        "old": "Best Local LLM Stack for Developers (July 2026)",
+        "new": "Best Local LLM Stack for Developers (2026)"
+      }
+    ],
+    "reason": "Removed month label from title; month was a hand-maintained freshness claim that drifted across locales. Year retained. See branch content/remove-month-labels.",
+    "baseline": null
+  },
+  {
+    "id": "80f05914-0ef6-494e-87b6-595230cab03f",
+    "slug": "/local-llms/glm-5-2-open-weights-frontier-2026",
+    "date": "2026-08-28T17:30:03.400Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "GLM-5.2: Open-Weights LLM Standing (Aug 2026)",
+        "new": "GLM-5.2: Open-Weights LLM Standing 2026"
+      }
+    ],
+    "reason": "Removed month label from title; month was a hand-maintained freshness claim that drifted across locales. Year retained. See branch content/remove-month-labels.",
+    "baseline": null
   }
 ]
