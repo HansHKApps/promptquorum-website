@@ -37,6 +37,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     sections: {
       'intro-tldr': {
         isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'MRAM and in-memory computing could reshape on-device AI by running neural-network calculations directly inside memory instead of shuttling data back and forth, but the technology is still in the R&D and early-prototype phase, with realistic consumer deployment 3-5+ years away.' },
+            { type: 'plain-terms', text: "Today's chips waste a lot of energy just moving data between memory and the processor. MRAM tries to fix that by doing some of the computation right where the data is stored. It's a promising idea with real lab demonstrations behind it, but it's not in any phone or laptop yet -- think of it as an early-stage technology to watch, not something you can buy." },
+          ],
         items: [
           '**MRAM (Magnetoresistive RAM):** Non-volatile memory using magnetic tunnel junctions (MTJ). No refresh required, no standby power drain. Byte-addressable like DRAM.',
           '**In-memory computing:** Perform multiply-accumulate (MAC) operations directly inside the memory array. Eliminates data movement between CPU/GPU and memory — the #1 energy cost in inference.',
@@ -294,6 +298,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     sections: {
     'intro-tldr': {
       isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'MRAM und In-Memory-Computing könnten On-Device-KI verändern, indem neuronale Netzwerkberechnungen direkt im Speicher ausgeführt werden statt Daten hin- und herzuschieben, aber die Technologie steckt noch in der Forschungs- und Frühprototyp-Phase, mit realistischem Consumer-Einsatz in 3-5+ Jahren.' },
+          { type: 'plain-terms', text: 'Heutige Chips verschwenden viel Energie allein dadurch, dass Daten zwischen Speicher und Prozessor hin- und herbewegt werden. MRAM versucht das zu lösen, indem ein Teil der Berechnung direkt dort stattfindet, wo die Daten liegen. Eine vielversprechende Idee mit echten Labordemonstrationen dahinter, aber noch in keinem Telefon oder Laptop verbaut -- eher eine Frühphasen-Technologie zum Beobachten als etwas Kaufbares.' },
+        ],
       items: [
         '**MRAM (Magnetoresistive RAM):** Nicht-flüchtiger Speicher auf Basis magnetischer Tunnelübergänge (MTJ). Kein Refresh erforderlich, kein Standby-Stromverbrauch. Byte-adressierbar wie DRAM.',
         '**In-Memory-Computing:** Multiply-Accumulate-Operationen (MAC) werden direkt im Speicher-Array ausgeführt. Eliminiert den Datentransport zwischen CPU/GPU und Speicher — der größte Energiekostenfaktor bei der Inferenz.',
@@ -550,6 +558,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     sections: {
       'intro-tldr': {
         isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: "La MRAM et l'informatique en mémoire pourraient transformer l'IA embarquée en exécutant les calculs de réseaux de neurones directement dans la mémoire au lieu de faire naviguer les données, mais la technologie en est encore au stade R&D et prototype précoce, avec un déploiement grand public réaliste dans 3 à 5+ ans." },
+            { type: 'plain-terms', text: "Les puces actuelles gaspillent beaucoup d'énergie rien qu'en déplaçant des données entre la mémoire et le processeur. La MRAM tente d'y remédier en effectuant une partie du calcul directement là où les données sont stockées. C'est une idée prometteuse avec de vraies démonstrations en laboratoire, mais elle n'équipe encore aucun téléphone ni ordinateur portable -- une technologie à surveiller à un stade précoce, pas encore achetable." },
+          ],
         items: [
           '**MRAM (RAM magnétorésistive):** Mémoire non-volatile utilisant des jonctions tunnel magnétiques (MTJ). Aucun rafraîchissement requis, aucune consommation en veille. Adressable à l\'octet comme la DRAM.',
           '**Informatique en mémoire:** Effectue les opérations de multiplication-accumulation (MAC) directement dans le tableau de mémoire. Élimine le transport de données entre CPU/GPU et mémoire — le premier poste de consommation énergétique en inférence.',
@@ -807,6 +819,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     sections: {
       'intro-tldr': {
         isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'MRAMとインメモリコンピューティングは、データを行き来させる代わりにメモリ内部でニューラルネットワークの計算を直接実行することで、オンデバイスAIを変える可能性がありますが、この技術はまだ研究開発と初期プロトタイプの段階にあり、現実的な一般向け展開には3〜5年以上かかります。' },
+            { type: 'plain-terms', text: '現在のチップは、メモリとプロセッサ間でデータをやり取りするだけで多くのエネルギーを浪費しています。MRAMは、データが保存されている場所で直接一部の計算を行うことでこれを解決しようとしています。実際の実験室での実証を伴う有望なアイデアですが、まだどのスマートフォンやノートパソコンにも搭載されていません -- 購入できるものではなく、注目すべき初期段階の技術と考えてください。' },
+          ],
         items: [
           '**MRAM(磁気抵抗性RAM):** 磁気トンネル接合(MTJ)を使用する不揮発性メモリ。リフレッシュ不要、スタンバイ電力の消耗なし。DRAMと同様にバイト単位でアドレス指定可能。',
           '**メモリ内コンピューティング:** 積和(MAC)演算をメモリアレイ内部で直接実行。CPU/GPUとメモリ間のデータ移動 — 推論における最大のエネルギーコスト — を排除します。',
@@ -1079,6 +1095,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     sections: {
       'intro-tldr': {
         isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'MRAM和存内计算可能通过在内存内部直接执行神经网络计算而非来回搬运数据，重塑端侧AI，但该技术仍处于研发和早期原型阶段，实际消费级应用还需3-5年以上。' },
+            { type: 'plain-terms', text: '当今的芯片仅在内存和处理器之间来回搬运数据就浪费了大量能量。MRAM试图通过在数据存储的位置直接进行部分计算来解决这个问题。这是一个有真实实验室验证支持的有前景的想法，但目前还没有出现在任何手机或笔记本电脑中——可以将其视为一项值得关注的早期技术，而不是可以购买的产品。' },
+          ],
         items: [
           '**MRAM(磁阻性RAM)：** 使用磁隧道结(MTJ)的非易失性存储。无需刷新，无待机功耗。像DRAM一样支持字节寻址。',
           '**内存计算：** 直接在存储阵列内部执行乘累加(MAC)运算。消除CPU/GPU与内存之间的数据移动 — 这是推理中的头号能耗来源。',
@@ -1351,6 +1371,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     sections: {
       'intro-tldr': {
         isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'La MRAM y la computación en memoria podrían transformar la IA en dispositivo al ejecutar cálculos de redes neuronales directamente dentro de la memoria en lugar de mover datos de un lado a otro, pero la tecnología sigue en fase de I+D y prototipos tempranos, con un despliegue realista para consumidores a 3-5+ años vista.' },
+            { type: 'plain-terms', text: 'Los chips actuales desperdician mucha energía solo moviendo datos entre la memoria y el procesador. La MRAM intenta solucionarlo haciendo parte del cálculo justo donde se almacenan los datos. Es una idea prometedora con demostraciones reales de laboratorio detrás, pero todavía no está en ningún teléfono ni portátil -- considérala una tecnología en fase temprana a seguir, no algo que se pueda comprar.' },
+          ],
         items: [
           '**MRAM (RAM magnetorresistiva):** Memoria no volátil que usa uniones de túnel magnético (MTJ). No requiere refresco ni consumo en espera. Direccionable a nivel de byte, como la DRAM.',
           '**Informática en memoria:** Ejecuta operaciones de multiplicación-acumulación (MAC) directamente dentro del arreglo de memoria. Elimina el movimiento de datos entre la CPU/GPU y la memoria — el costo energético número 1 en la inferencia.',
@@ -1623,6 +1647,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     sections: {
       'intro-tldr': {
         isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'A MRAM e a computação em memória podem transformar a IA no dispositivo ao executar cálculos de redes neurais diretamente dentro da memória em vez de mover dados de um lado para outro, mas a tecnologia ainda está em fase de P&D e protótipos iniciais, com implantação realista para consumidores daqui a 3-5+ anos.' },
+            { type: 'plain-terms', text: 'Os chips atuais desperdiçam muita energia só movendo dados entre a memória e o processador. A MRAM tenta resolver isso fazendo parte do cálculo bem onde os dados são armazenados. É uma ideia promissora com demonstrações reais em laboratório por trás, mas ainda não está em nenhum celular ou notebook -- pense nela como uma tecnologia em estágio inicial a ser observada, não algo que se possa comprar.' },
+          ],
         items: [
           '**MRAM (RAM magnetorresistivo):** Memória não-volátil que usa junções de túnel magnético (MTJ). Não requer refresh, sem consumo de energia em espera. Endereçável por byte como a DRAM.',
           '**Computação em memória:** Realiza operações de multiplicação-acumulação (MAC) diretamente dentro do array de memória. Elimina a movimentação de dados entre CPU/GPU e memória — o custo energético número 1 na inferência.',
@@ -1880,6 +1908,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     sections: {
       'intro-tldr': {
         isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'يمكن أن تُعيد MRAM والحوسبة داخل الذاكرة تشكيل الذكاء الاصطناعي على الجهاز عبر تنفيذ حسابات الشبكات العصبية مباشرة داخل الذاكرة بدلاً من نقل البيانات ذهاباً وإياباً، لكن التقنية لا تزال في مرحلة البحث والتطوير والنماذج الأولية المبكرة، مع نشر واقعي للمستهلكين بعد 3-5 سنوات أو أكثر.' },
+            { type: 'plain-terms', text: 'تهدر الرقائق الحالية الكثير من الطاقة لمجرد نقل البيانات بين الذاكرة والمعالج. تحاول MRAM حل ذلك بإجراء جزء من الحساب مباشرة حيث تُخزَّن البيانات. إنها فكرة واعدة مدعومة بعروض حقيقية في المختبر، لكنها لم تُدمج بعد في أي هاتف أو حاسوب محمول -- اعتبرها تقنية في مرحلة مبكرة تستحق المتابعة، وليست شيئاً يمكن شراؤه.' },
+          ],
         items: [
           '**MRAM (Magnetoresistive RAM):** ذاكرة غير متطايرة تستخدم وصلات نفقية مغناطيسية (MTJ). لا تتطلب تحديثاً، ولا استهلاك طاقة في وضع الاستعداد. قابلة للعنونة على مستوى البايت مثل DRAM.',
           '**In-memory computing:** تنفيذ عمليات الضرب-والتجميع (MAC) مباشرةً داخل مصفوفة الذاكرة. يزيل حركة البيانات بين CPU/GPU والذاكرة — التكلفة الأولى للطاقة في الاستدلال.',
@@ -2137,6 +2169,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     sections: {
       'intro-tldr': {
         isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'MRAM과 인메모리 컴퓨팅은 데이터를 오가며 옮기는 대신 메모리 내부에서 신경망 연산을 직접 수행함으로써 온디바이스 AI를 바꿀 수 있지만, 이 기술은 아직 연구개발 및 초기 프로토타입 단계에 있으며 실질적인 소비자용 배포까지는 3~5년 이상 남았습니다.' },
+            { type: 'plain-terms', text: '오늘날의 칩은 메모리와 프로세서 사이에서 데이터를 옮기는 것만으로도 많은 에너지를 낭비합니다. MRAM은 데이터가 저장된 바로 그 위치에서 일부 연산을 수행함으로써 이를 해결하려 합니다. 실제 실험실 시연을 뒷받침하는 유망한 아이디어이지만, 아직 어떤 스마트폰이나 노트북에도 탑재되지 않았습니다 -- 구매할 수 있는 것이 아니라 지켜봐야 할 초기 단계 기술로 생각하면 됩니다.' },
+          ],
         items: [
           '**MRAM(자성메모리):** 자기 터널 접합(MTJ)을 사용하는 비휘발성 메모리입니다. 리프레시가 필요 없고 대기 전력 소모도 없습니다. DRAM처럼 바이트 단위 주소 지정이 가능합니다.',
           '**인메모리 컴퓨팅:** 곱셈-누산(MAC) 연산을 메모리 어레이 내부에서 직접 수행합니다. CPU/GPU와 메모리 간 데이터 이동을 제거하는데, 이는 추론에서 가장 큰 에너지 비용입니다.',
