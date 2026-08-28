@@ -12,9 +12,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       theme: 'Advanced Techniques',
       title: 'LoRA Fine-Tuning for Local LLMs 2026: Unsloth Tutorial on 8 GB VRAM with Llama 3.3',
       heroImage: '/images/fine-tuning-local-llms-lora-overview-hero-en.webp',
-      dateModified: '2026-06-20',
+      dateModified: '2026-08-28',
       seoTitle: 'LoRA Fine-Tuning Local LLMs 2026: Unsloth on 8 GB VRAM',
-      intro: 'Fine-tuning adapts a pre-trained model to your domain using LoRA (Low-Rank Adaptation) — add small adapter layers (0.4% of total weights) instead of retraining the entire model. A Llama 3.1 8B fine-tune requires 8 GB VRAM and 1–2 hours on consumer hardware using Unsloth (2× faster than standard training ([per unsloth.ai](https://github.com/unslothai/unsloth))). As of April 2026, LoRA and QLoRA (4-bit quantized LoRA) are production-ready across Ollama, LM Studio, and vLLM.',
+      intro: 'Fine-tuning adapts a pre-trained model to your domain using LoRA (Low-Rank Adaptation) — add small adapter layers (0.4% of total weights) instead of retraining the entire model. A Llama 3.1 8B fine-tune requires 8 GB VRAM and 1–2 hours on consumer hardware using Unsloth (2× faster than standard training ([per unsloth.ai](https://github.com/unslothai/unsloth))). LoRA and QLoRA (4-bit quantized LoRA) are production-ready across Ollama, LM Studio, and vLLM.',
       metaDescription: 'Fine-tune Llama 3.1 8B on 8 GB VRAM in 1–2 hours using Unsloth (up to 2× faster than standard training, QLoRA). 500 training examples minimum. Full code + LoRA vs RAG decision guide.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**Fine-tuning adapts a pre-trained model to your domain using LoRA (Low-Rank Adaptation) — add small adapter layers (0.4% of total weights) instead of retraining the entire model. A Llama 3.1 8B fine-tune requires 8 GB VRAM and 1–2 hours on consumer hardware using Unsloth (up to 2× faster than standard training).**',
@@ -43,12 +43,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'LoRA fine-tuning adapts a pre-trained model to your domain by training small adapter layers (about 0.4% of total weights) instead of retraining the whole model, letting a Llama 3.1 8B fine-tune run on just 8 GB of VRAM in 1-2 hours using Unsloth.' },
+            { type: 'plain-terms', text: "Fine-tuning normally means retraining a huge model from scratch, which needs serious hardware. LoRA is a shortcut: instead of touching all the model's weights, it trains a small set of add-on layers that steer the model toward your specific domain or writing style. That's why it fits on consumer GPUs and finishes in a couple of hours instead of days." },
+          ],
           items: [
             'LoRA = add small trainable layers to a pre-trained model. Only 1-5% of model weights are trainable, dramatically reducing VRAM and time.',
             'Fine-tuning requirements: 500-1000 high-quality examples, 8-16 GB VRAM, 1-4 hours training time.',
             'Best tools: unsloth (fastest), Hugging Face TRL, Axolotl (most flexible).',
             '**LoRA rank (r):** Lower (r=8) is smaller, faster; higher (r=64) is more expressive. Default: r=16-32.',
-            'As of April 2026, LoRA is production-ready and widely supported across inference engines.',
+            'LoRA is production-ready and widely supported across inference engines.',
           ],
         },
         whatIsLora: {
@@ -67,7 +71,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'What Is QLoRA (4-Bit Quantized LoRA)?',
           content: [
             '**QLoRA combines LoRA with 4-bit quantization — the base model loads in 4-bit (QLoRA) while only the adapter trains in 16-bit.** This halves VRAM requirements:',
-            '**As of April 2026, QLoRA is the default for consumer hardware.** Unsloth\'s `load_in_4bit=True` flag in the code example above enables QLoRA automatically. The 2% quality difference vs full LoRA is negligible for most domain-adaptation tasks.',
+            '**QLoRA is the default for consumer hardware.** Unsloth\'s `load_in_4bit=True` flag in the code example above enables QLoRA automatically. The 2% quality difference vs full LoRA is negligible for most domain-adaptation tasks.',
             '**When to use LoRA (16-bit) over QLoRA (4-bit):**',
             '• Tasks requiring maximum precision (medical, legal contract analysis)',
             '• You have 16+ GB VRAM available',
@@ -219,7 +223,7 @@ schema: {
         'description': 'Fine-tune Llama 3.1 8B with LoRA on 8 GB VRAM in 1–2 hours using Unsloth (up to 2× faster). Only 500 examples needed. Full code, hyperparameters, and LoRA vs RAG decision matrix.',
         'url': 'https://www.promptquorum.com/local-llms/fine-tuning-local-llms-lora',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-06-14',
+        'dateModified': '2026-08-28',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -376,7 +380,7 @@ schema: {
       title: 'Fine-Tuning LoRA para LLMs Locales 2026: Tutorial de Unsloth en 8 GB de VRAM con Llama 3.3',
       heroImage: '/images/fine-tuning-local-llms-lora-overview-hero-es.webp',
       seoTitle: 'Fine-tuning LoRA para LLMs locales 2026: Unsloth en 8 GB',
-      intro: 'El fine-tuning adapta un modelo preentrenado a tu dominio usando LoRA (Low-Rank Adaptation) — agrega capas adaptadoras pequeñas (0,4 % del total de pesos) en lugar de reentrenar el modelo completo. Un fine-tune de Llama 3.1 8B requiere 8 GB de VRAM y 1–2 horas en hardware de consumo con Unsloth (2× más rápido que el entrenamiento estándar ([según unsloth.ai](https://github.com/unslothai/unsloth))). En abril de 2026, LoRA y QLoRA (LoRA cuantizado en 4 bits) están listos para producción en Ollama, LM Studio y vLLM.',
+      intro: 'El fine-tuning adapta un modelo preentrenado a tu dominio usando LoRA (Low-Rank Adaptation) — agrega capas adaptadoras pequeñas (0,4 % del total de pesos) en lugar de reentrenar el modelo completo. Un fine-tune de Llama 3.1 8B requiere 8 GB de VRAM y 1–2 horas en hardware de consumo con Unsloth (2× más rápido que el entrenamiento estándar ([según unsloth.ai](https://github.com/unslothai/unsloth))). LoRA y QLoRA (LoRA cuantizado en 4 bits) están listos para producción en Ollama, LM Studio y vLLM.',
       metaDescription: 'Haz fine-tuning de Llama 3.1 8B con LoRA en 8 GB de VRAM en 1–2 horas con Unsloth (hasta 2× más rápido que el entrenamiento estándar, QLoRA). Mínimo 500 ejemplos. Código y guía LoRA vs RAG.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**El fine-tuning adapta un modelo preentrenado a tu dominio usando LoRA (Low-Rank Adaptation) — agrega capas adaptadoras pequeñas (0,4 % del total de pesos) en lugar de reentrenar el modelo completo. Un fine-tune de Llama 3.1 8B requiere 8 GB de VRAM y 1–2 horas en hardware de consumo con Unsloth (hasta 2× más rápido que el entrenamiento estándar).**',
@@ -404,12 +408,16 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'El fine-tuning con LoRA adapta un modelo preentrenado a tu dominio entrenando pequeñas capas adaptadoras (alrededor del 0,4% del total de pesos) en lugar de reentrenar todo el modelo, permitiendo que un fine-tune de Llama 3.1 8B se ejecute en solo 8 GB de VRAM en 1-2 horas usando Unsloth.' },
+            { type: 'plain-terms', text: 'El fine-tuning normalmente significa reentrenar un modelo enorme desde cero, lo que requiere hardware serio. LoRA es un atajo: en lugar de tocar todos los pesos del modelo, entrena un pequeño conjunto de capas adicionales que orientan al modelo hacia tu dominio o estilo de escritura específico. Por eso cabe en GPUs de consumo y se completa en un par de horas en lugar de días.' },
+          ],
           items: [
             'LoRA = agregar capas entrenables pequeñas a un modelo preentrenado. Solo el 1–5 % de los pesos del modelo son entrenables, lo que reduce drásticamente el VRAM y el tiempo.',
             'Requisitos del fine-tuning: 500–1000 ejemplos de alta calidad, 8–16 GB de VRAM, 1–4 horas de entrenamiento.',
             'Mejores herramientas: unsloth (la más rápida), Hugging Face TRL, Axolotl (la más flexible).',
             '**Rank de LoRA (r):** Más bajo (r=8) es más pequeño y rápido; más alto (r=64) es más expresivo. Por defecto: r=16–32.',
-            'En abril de 2026, LoRA está listo para producción y cuenta con amplio soporte en motores de inferencia.',
+            'LoRA está listo para producción y cuenta con amplio soporte en motores de inferencia.',
           ],
         },
         whatIsLora: {
@@ -428,7 +436,7 @@ schema: {
           title: '¿Qué es QLoRA (LoRA cuantizado en 4 bits)?',
           content: [
             '**QLoRA combina LoRA con cuantización de 4 bits — el modelo base se carga en 4 bits (QLoRA) mientras que solo el adaptador se entrena en 16 bits.** Esto reduce a la mitad los requisitos de VRAM:',
-            '**En abril de 2026, QLoRA es el estándar para hardware de consumo.** El flag `load_in_4bit=True` de Unsloth en el ejemplo de código anterior activa QLoRA automáticamente. La diferencia de calidad del 2 % respecto a LoRA completo es insignificante para la mayoría de las tareas de adaptación de dominio.',
+            '**QLoRA es el estándar para hardware de consumo.** El flag `load_in_4bit=True` de Unsloth en el ejemplo de código anterior activa QLoRA automáticamente. La diferencia de calidad del 2 % respecto a LoRA completo es insignificante para la mayoría de las tareas de adaptación de dominio.',
             '**Cuándo usar LoRA (16 bits) en lugar de QLoRA (4 bits):**',
             '• Tareas que requieren máxima precisión (análisis médico, análisis de contratos legales)',
             '• Tienes 16+ GB de VRAM disponibles',
@@ -580,7 +588,7 @@ schema: {
         'description': 'Haz fine-tuning de Llama 3.1 8B con LoRA en 8 GB de VRAM en 1–2 horas usando Unsloth (hasta 2× más rápido). Solo 500 ejemplos necesarios. Código completo, hiperparámetros y matriz de decisión LoRA vs RAG.',
         'url': 'https://www.promptquorum.com/es/local-llms/fine-tuning-local-llms-lora',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-06-14',
+        'dateModified': '2026-08-28',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -737,7 +745,7 @@ schema: {
       title: 'الضبط الدقيق بـ ⁨LoRA⁩ لنماذج ⁨LLM⁩ المحلية ⁨2026⁩: درس ⁨Unsloth⁩ على ⁨8 GB⁩ من ⁨VRAM⁩ مع ⁨Llama 3.3⁩',
       heroImage: '/images/fine-tuning-local-llms-lora-overview-hero-ar.webp',
       seoTitle: '⁨LoRA⁩ لضبط ⁨LLMs⁩ المحلية ⁨2026⁩: ⁨Unsloth⁩ على ⁨8 GB VRAM⁩',
-      intro: 'يكيّف الضبط الدقيق نموذجاً مُدرَّباً مسبقاً مع مجالك باستخدام LoRA (التكيّف منخفض الرتبة) — يضيف طبقات مُكيِّفة صغيرة (0.4% من إجمالي الأوزان) بدلاً من إعادة تدريب النموذج بالكامل. يتطلب الضبط الدقيق لـ Llama 3.1 8B 8 GB من VRAM و1–2 ساعة على عتاد استهلاكي مع Unsloth (أسرع بـ 2× من التدريب القياسي ([وفق unsloth.ai](https://github.com/unslothai/unsloth))). في أبريل 2026، LoRA وQLoRA (LoRA مُكمَّم بـ 4 بت) جاهزان للإنتاج في Ollama وLM Studio وvLLM.',
+      intro: 'يكيّف الضبط الدقيق نموذجاً مُدرَّباً مسبقاً مع مجالك باستخدام LoRA (التكيّف منخفض الرتبة) — يضيف طبقات مُكيِّفة صغيرة (0.4% من إجمالي الأوزان) بدلاً من إعادة تدريب النموذج بالكامل. يتطلب الضبط الدقيق لـ Llama 3.1 8B 8 GB من VRAM و1–2 ساعة على عتاد استهلاكي مع Unsloth (أسرع بـ 2× من التدريب القياسي ([وفق unsloth.ai](https://github.com/unslothai/unsloth))). LoRA وQLoRA (LoRA مُكمَّم بـ 4 بت) جاهزان للإنتاج في Ollama وLM Studio وvLLM.',
       metaDescription: 'اضبط ⁨Llama 3.1 8B⁩ على ⁨8 GB VRAM⁩ خلال ⁨1⁩–⁨2⁩ ساعة باستخدام ⁨Unsloth⁩ عبر ⁨QLoRA⁩. يكفي ⁨500⁩ مثال تدريبي. كود كامل ومقارنة ⁨LoRA⁩ مقابل ⁨RAG⁩.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**يكيّف الضبط الدقيق نموذجاً مُدرَّباً مسبقاً مع مجالك باستخدام LoRA (التكيّف منخفض الرتبة) — يضيف طبقات مُكيِّفة صغيرة (0.4% من إجمالي الأوزان) بدلاً من إعادة تدريب النموذج بالكامل. يتطلب الضبط الدقيق لـ Llama 3.1 8B 8 GB من VRAM و1–2 ساعة على عتاد استهلاكي مع Unsloth (أسرع بـ 2× من التدريب القياسي ([وفق unsloth.ai](https://github.com/unslothai/unsloth))).**',
@@ -765,12 +773,16 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'يكيّف الضبط الدقيق باستخدام LoRA نموذجاً مُدرَّباً مسبقاً مع مجالك عن طريق تدريب طبقات مُكيِّفة صغيرة (نحو 0.4% من إجمالي الأوزان) بدلاً من إعادة تدريب النموذج بالكامل، مما يتيح تشغيل ضبط دقيق لـ Llama 3.1 8B على 8 GB فقط من VRAM في 1-2 ساعة باستخدام Unsloth.' },
+            { type: 'plain-terms', text: 'الضبط الدقيق يعني عادة إعادة تدريب نموذج ضخم من الصفر، وهو ما يتطلب عتاداً قوياً. أما LoRA فهو اختصار: بدلاً من لمس كل أوزان النموذج، يدرّب مجموعة صغيرة من الطبقات الإضافية التي توجّه النموذج نحو مجالك أو أسلوب كتابتك المحدد. لهذا السبب يعمل على بطاقات GPU الاستهلاكية ويكتمل خلال ساعتين بدلاً من أيام.' },
+          ],
           items: [
             'LoRA = إضافة طبقات قابلة للتدريب صغيرة إلى نموذج مُدرَّب مسبقاً. 1–5% فقط من أوزان النموذج قابلة للتدريب، مما يقلّص VRAM والوقت بشكل كبير.',
             'متطلبات الضبط الدقيق: 500–1000 مثال عالي الجودة، 8–16 GB من VRAM، 1–4 ساعات تدريب.',
             'أفضل الأدوات: unsloth (الأسرع)، Hugging Face TRL، Axolotl (الأكثر مرونة).',
             '**رتبة LoRA (r):** أقل (r=8) أصغر وأسرع؛ أعلى (r=64) أكثر تعبيراً. الافتراضي: r=16–32.',
-            'في أبريل 2026، LoRA جاهز للإنتاج ومدعوم على نطاق واسع في محركات الاستدلال.',
+            'LoRA جاهز للإنتاج ومدعوم على نطاق واسع في محركات الاستدلال.',
           ],
         },
         whatIsLora: {
@@ -789,7 +801,7 @@ schema: {
           title: 'ما هو QLoRA (LoRA مُكمَّم بـ 4 بت)؟',
           content: [
             '**يجمع QLoRA بين LoRA والتكميم بـ 4 بت — يُحمَّل النموذج الأساسي بـ 4 بت (QLoRA) بينما يُدرَّب المُكيِّف وحده بـ 16 بت.** يقلّص هذا متطلبات VRAM إلى النصف:',
-            '**في أبريل 2026، QLoRA هو المعيار للعتاد الاستهلاكي.** يفعّل علم `load_in_4bit=True` في Unsloth في مثال الكود أعلاه QLoRA تلقائياً. فرق الجودة البالغ 2% مقارنة بـ LoRA الكامل ضئيل لمعظم مهام تكييف المجال.',
+            '**QLoRA هو المعيار للعتاد الاستهلاكي.** يفعّل علم `load_in_4bit=True` في Unsloth في مثال الكود أعلاه QLoRA تلقائياً. فرق الجودة البالغ 2% مقارنة بـ LoRA الكامل ضئيل لمعظم مهام تكييف المجال.',
             '**متى تستخدم LoRA (16 بت) بدلاً من QLoRA (4 بت):**',
             '• المهام التي تتطلب أقصى دقة (التحليل الطبي، تحليل العقود القانونية)',
             '• لديك 16+ GB من VRAM متاحة',
@@ -941,7 +953,7 @@ schema: {
         'description': 'اضبط Llama 3.1 8B بدقة بـ LoRA على 8 GB من VRAM في 1–2 ساعة باستخدام Unsloth (أسرع بـ 2× وفق المعايير الرسمية). 500 مثال فقط مطلوبة. كود كامل ومعاملات فائقة ومصفوفة قرار LoRA مقابل RAG.',
         'url': 'https://www.promptquorum.com/ar/local-llms/fine-tuning-local-llms-lora',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-06-14',
+        'dateModified': '2026-08-28',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -1098,7 +1110,7 @@ schema: {
       title: 'Fine-Tuning LoRA para LLMs Locais 2026: Tutorial do Unsloth em 8 GB de VRAM com Llama 3.3',
       heroImage: '/images/fine-tuning-local-llms-lora-overview-hero-pt.webp',
       seoTitle: 'Fine-tuning LoRA para LLMs locais 2026: Unsloth em 8 GB',
-      intro: 'O fine-tuning adapta um modelo pré-treinado ao seu domínio usando LoRA (Low-Rank Adaptation) — adiciona camadas adaptadoras pequenas (0,4% do total de pesos) em vez de retreinar o modelo completo. Um fine-tune do Llama 3.1 8B requer 8 GB de VRAM e 1–2 horas em hardware de consumo com Unsloth (2× mais rápido que o treinamento padrão ([segundo unsloth.ai](https://github.com/unslothai/unsloth))). Em abril de 2026, LoRA e QLoRA (LoRA quantizado em 4 bits) estão prontos para produção no Ollama, LM Studio e vLLM.',
+      intro: 'O fine-tuning adapta um modelo pré-treinado ao seu domínio usando LoRA (Low-Rank Adaptation) — adiciona camadas adaptadoras pequenas (0,4% do total de pesos) em vez de retreinar o modelo completo. Um fine-tune do Llama 3.1 8B requer 8 GB de VRAM e 1–2 horas em hardware de consumo com Unsloth (2× mais rápido que o treinamento padrão ([segundo unsloth.ai](https://github.com/unslothai/unsloth))). LoRA e QLoRA (LoRA quantizado em 4 bits) estão prontos para produção no Ollama, LM Studio e vLLM.',
       metaDescription: 'Faça fine-tuning do Llama 3.1 8B com LoRA em 8 GB de VRAM em 1–2 horas com Unsloth (até 2× mais rápido que o treinamento padrão, QLoRA). Mínimo 500 exemplos. Código e guia LoRA vs RAG.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**O fine-tuning adapta um modelo pré-treinado ao seu domínio usando LoRA (Low-Rank Adaptation) — adiciona camadas adaptadoras pequenas (0,4% do total de pesos) em vez de retreinar o modelo completo. Um fine-tune do Llama 3.1 8B requer 8 GB de VRAM e 1–2 horas em hardware de consumo com Unsloth (até 2× mais rápido que o treinamento padrão).**',
@@ -1121,6 +1133,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'O fine-tuning com LoRA adapta um modelo pré-treinado ao seu domínio treinando pequenas camadas adaptadoras (cerca de 0,4% do total de pesos) em vez de retreinar o modelo inteiro, permitindo que um fine-tune do Llama 3.1 8B rode em apenas 8 GB de VRAM em 1-2 horas usando o Unsloth.' },
+            { type: 'plain-terms', text: 'Fine-tuning normalmente significa retreinar um modelo enorme do zero, o que exige hardware pesado. O LoRA é um atalho: em vez de mexer em todos os pesos do modelo, ele treina um pequeno conjunto de camadas extras que direcionam o modelo para o seu domínio ou estilo de escrita específico. É por isso que cabe em GPUs de consumo e termina em algumas horas em vez de dias.' },
+          ],
           items: [
             'LoRA adiciona camadas adaptadoras pequenas (0,4% dos pesos) em vez de retreinar o modelo completo.',
             'QLoRA = LoRA quantizado em 4 bits. Fine-tuning do Llama 3.1 8B em 8 GB VRAM, 1–2 horas com Unsloth.',
@@ -1235,7 +1251,7 @@ schema: {
       title: 'LoRA Fine-Tuning für lokale LLMs 2026: Unsloth-Anleitung mit Llama 3.3 auf 8 GB VRAM',
       heroImage: '/images/fine-tuning-local-llms-lora-overview-hero-de.webp',
       seoTitle: 'LoRA Fine-Tuning lokale LLMs 2026: Unsloth auf 8 GB VRAM',
-      intro: 'Fine-Tuning passt ein vorgefertigtes Modell an Ihre Domain an, indem Sie LoRA (Low-Rank Adaptation) verwenden — fügen Sie kleine Adapter-Schichten (0,4 % der Gesamtgewichte) hinzu, anstatt das gesamte Modell neu zu trainieren. Ein Llama 3.1 8B Fine-Tune erfordert 8 GB VRAM und 1–2 Stunden auf Consumer-Hardware mit Unsloth (2× schneller als Standard-Training ([laut unsloth.ai](https://github.com/unslothai/unsloth))). Ab April 2026 sind LoRA und QLoRA (4-Bit quantisiertes LoRA) produktionsreif über Ollama, LM Studio und vLLM.',
+      intro: 'Fine-Tuning passt ein vorgefertigtes Modell an Ihre Domain an, indem Sie LoRA (Low-Rank Adaptation) verwenden — fügen Sie kleine Adapter-Schichten (0,4 % der Gesamtgewichte) hinzu, anstatt das gesamte Modell neu zu trainieren. Ein Llama 3.1 8B Fine-Tune erfordert 8 GB VRAM und 1–2 Stunden auf Consumer-Hardware mit Unsloth (2× schneller als Standard-Training ([laut unsloth.ai](https://github.com/unslothai/unsloth))). LoRA und QLoRA (4-Bit quantisiertes LoRA) sind produktionsreif über Ollama, LM Studio und vLLM.',
       metaDescription: 'Lokale LLMs mit LoRA und QLoRA feinabstimmen 2026: Anleitung mit Hardware-Anforderungen, Datensatzvorbereitung und Training auf Consumer-GPUs.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**Fine-Tuning passt ein vorgefertigtes Modell an Ihre Domain an, indem Sie LoRA (Low-Rank Adaptation) verwenden — fügen Sie kleine Adapter-Schichten (0,4 % der Gesamtgewichte) hinzu, anstatt das gesamte Modell neu zu trainieren. Ein Llama 3.1 8B Fine-Tune erfordert 8 GB VRAM und 1–2 Stunden auf Consumer-Hardware mit Unsloth (bis zu 2× schneller als Standard-Training).**',
@@ -1263,12 +1279,16 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'LoRA-Fine-Tuning passt ein vortrainiertes Modell an Ihre Domäne an, indem kleine Adapter-Schichten (etwa 0,4 % der Gesamtgewichte) statt des gesamten Modells trainiert werden, sodass ein Llama 3.1 8B Fine-Tune mit nur 8 GB VRAM in 1-2 Stunden mit Unsloth möglich ist.' },
+            { type: 'plain-terms', text: 'Fine-Tuning bedeutet normalerweise, ein riesiges Modell von Grund auf neu zu trainieren, was ernsthafte Hardware erfordert. LoRA ist eine Abkürzung: Statt alle Gewichte des Modells anzufassen, trainiert es einen kleinen Satz zusätzlicher Schichten, die das Modell auf Ihre spezifische Domäne oder Ihren Schreibstil lenken. Deshalb passt es auf Consumer-GPUs und ist in wenigen Stunden statt Tagen fertig.' },
+          ],
           items: [
             'LoRA = Kleine trainierbare Schichten zu einem vorgefertigten Modell hinzufügen. Nur 1–5 % der Modellgewichte sind trainierbar, wodurch VRAM und Zeit drastisch sinken.',
             'Fine-Tuning-Anforderungen: 500–1000 hochwertige Beispiele, 8–16 GB VRAM, 1–4 Stunden Trainingszeit.',
             'Beste Tools: Unsloth (schnellstes), Hugging Face TRL, Axolotl (am flexibelsten).',
             '**LoRA-Rang (r):** Niedriger (r=8) ist kleiner, schneller; höher (r=64) ist ausdrucksvoller. Standard: r=16–32.',
-            'Ab April 2026 ist LoRA produktionsreif und weitgehend über Inference Engines unterstützt.',
+            'LoRA ist produktionsreif und weitgehend über Inference Engines unterstützt.',
           ],
         },
         whatIsLora: {
@@ -1287,7 +1307,7 @@ schema: {
           title: 'Was ist QLoRA (4-Bit quantisiertes LoRA)?',
           content: [
             '**QLoRA verbindet LoRA mit 4-Bit-Quantisierung — das Basismodell lädt in 4-Bit (QLoRA), während nur der Adapter in 16-Bit trainiert wird.** Dies halbiert die VRAM-Anforderungen:',
-            '**Ab April 2026 ist QLoRA der Standard für Consumer-Hardware.** Unsloth\'s `load_in_4bit=True` Flag im Code-Beispiel oben aktiviert QLoRA automatisch. Der 2 %ige Qualitätsunterschied zu vollständigem LoRA ist für die meisten Domänenanpassungsaufgaben vernachlässigbar.',
+            '**QLoRA ist der Standard für Consumer-Hardware.** Unsloth\'s `load_in_4bit=True` Flag im Code-Beispiel oben aktiviert QLoRA automatisch. Der 2 %ige Qualitätsunterschied zu vollständigem LoRA ist für die meisten Domänenanpassungsaufgaben vernachlässigbar.',
             '**Wann LoRA (16-Bit) statt QLoRA (4-Bit) verwenden:**',
             '• Aufgaben, die maximale Präzision erfordern (medizinisch, Rechtsdokument-Analyse)',
             '• Sie haben 16+ GB VRAM verfügbar',
@@ -1445,7 +1465,7 @@ schema: {
         'description': 'Fine-Tunen Sie Llama 3.1 8B mit LoRA auf 8 GB VRAM in 1–2 Stunden mit Unsloth (bis zu 2× schneller). Benötigt nur 500 Beispiele. Vollständiger Code, Hyperparameter und LoRA vs RAG Entscheidungsmatrix.',
         'url': 'https://www.promptquorum.com/de/local-llms/fine-tuning-local-llms-lora',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-06-14',
+        'dateModified': '2026-08-28',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -1618,7 +1638,7 @@ schema: {
       title: 'Fine-Tuning LoRA pour LLMs locaux 2026 : Tutoriel Unsloth sur 8 Go de VRAM avec Llama 3.3',
       heroImage: '/images/fine-tuning-local-llms-lora-overview-hero-fr.webp',
       seoTitle: 'Fine-Tuning LoRA pour LLMs locaux 2026 : Unsloth sur 8 Go',
-      intro: 'Le fine-tuning adapte un modèle pré-entraîné à votre domaine en utilisant LoRA (Low-Rank Adaptation) — ajoutez de petites couches adaptateur (0,4 % des poids totaux) au lieu de réentraîner le modèle entier. Un fine-tune Llama 3.1 8B nécessite 8 Go de VRAM et 1–2 heures sur du matériel grand public avec Unsloth (2× plus rapide que l\'entraînement standard ([selon unsloth.ai](https://github.com/unslothai/unsloth))). En avril 2026, LoRA et QLoRA (LoRA quantisé en 4 bits) sont prêts pour la production sur Ollama, LM Studio et vLLM.',
+      intro: 'Le fine-tuning adapte un modèle pré-entraîné à votre domaine en utilisant LoRA (Low-Rank Adaptation) — ajoutez de petites couches adaptateur (0,4 % des poids totaux) au lieu de réentraîner le modèle entier. Un fine-tune Llama 3.1 8B nécessite 8 Go de VRAM et 1–2 heures sur du matériel grand public avec Unsloth (2× plus rapide que l\'entraînement standard ([selon unsloth.ai](https://github.com/unslothai/unsloth))). LoRA et QLoRA (LoRA quantisé en 4 bits) sont prêts pour la production sur Ollama, LM Studio et vLLM.',
       metaDescription: 'Fine-tuner Llama 3.1 8B avec LoRA sur 8 Go de VRAM en 1–2 heures avec Unsloth (jusqu\'à 2× plus rapide). Nécessite seulement 500 exemples. Code complet, hyperparamètres et matrice de décision LoRA vs RAG.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**Le fine-tuning adapte un modèle pré-entraîné à votre domaine en utilisant LoRA (Low-Rank Adaptation) — ajoutez de petites couches adaptateur (0,4 % des poids totaux) au lieu de réentraîner le modèle entier. Un fine-tune Llama 3.1 8B nécessite 8 Go de VRAM et 1–2 heures sur du matériel grand public avec Unsloth (jusqu\'à 2× plus rapide que l\'entraînement standard).**',
@@ -1646,12 +1666,16 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: "Le fine-tuning LoRA adapte un modèle pré-entraîné à votre domaine en entraînant de petites couches adaptateur (environ 0,4 % du total des poids) plutôt que tout le modèle, permettant à un fine-tune Llama 3.1 8B de tourner sur seulement 8 Go de VRAM en 1-2 heures avec Unsloth." },
+            { type: 'plain-terms', text: "Le fine-tuning signifie normalement réentraîner un modèle énorme depuis zéro, ce qui exige du matériel sérieux. LoRA est un raccourci : au lieu de toucher tous les poids du modèle, il entraîne un petit ensemble de couches supplémentaires qui orientent le modèle vers votre domaine ou style d'écriture spécifique. C'est pourquoi ça tient sur des GPU grand public et se termine en quelques heures au lieu de plusieurs jours." },
+          ],
           items: [
             'LoRA = Ajouter des couches entraînables à un modèle pré-entraîné. Seuls 1–5 % des poids du modèle sont entraînables, réduisant drastiquement VRAM et temps.',
             'Besoins du fine-tuning : 500–1000 exemples de haute qualité, 8–16 Go de VRAM, 1–4 heures d\'entraînement.',
             'Meilleurs outils : Unsloth (le plus rapide), Hugging Face TRL, Axolotl (le plus flexible).',
             '**Rang LoRA (r) :** Inférieur (r=8) est plus petit, plus rapide ; supérieur (r=64) est plus expressif. Par défaut : r=16–32.',
-            'En avril 2026, LoRA est prêt pour la production et largement soutenu par les moteurs d\'inférence.',
+            'LoRA est prêt pour la production et largement soutenu par les moteurs d\'inférence.',
           ],
         },
         whatIsLora: {
@@ -1670,7 +1694,7 @@ schema: {
           title: 'Qu\'est-ce que QLoRA (LoRA quantisé en 4 bits) ?',
           content: [
             '**QLoRA combine LoRA et la quantisation 4 bits — le modèle de base se charge en 4 bits (QLoRA) tandis que seul l\'adaptateur s\'entraîne en 16 bits.** Cela réduit de moitié les besoins en VRAM :',
-            '**En avril 2026, QLoRA est le standard sur matériel grand public.** L\'indicateur `load_in_4bit=True` d\'Unsloth dans l\'exemple de code ci-dessus active QLoRA automatiquement. La différence de qualité de 2 % par rapport au LoRA complet est négligeable pour la plupart des tâches d\'adaptation de domaine.',
+            '**QLoRA est le standard sur matériel grand public.** L\'indicateur `load_in_4bit=True` d\'Unsloth dans l\'exemple de code ci-dessus active QLoRA automatiquement. La différence de qualité de 2 % par rapport au LoRA complet est négligeable pour la plupart des tâches d\'adaptation de domaine.',
             '**Quand utiliser LoRA (16 bits) plutôt que QLoRA (4 bits) ?**',
             '• Tâches nécessitant une précision maximale (médical, analyse de contrats juridiques)',
             '• Vous avez 16+ Go de VRAM disponibles',
@@ -1828,7 +1852,7 @@ schema: {
         'description': 'Fine-tuner Llama 3.1 8B avec LoRA sur 8 Go de VRAM en 1–2 heures avec Unsloth (jusqu\'à 2× plus rapide). Nécessite seulement 500 exemples. Code complet, hyperparamètres et matrice de décision LoRA vs RAG.',
         'url': 'https://www.promptquorum.com/fr/local-llms/fine-tuning-local-llms-lora',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-06-14',
+        'dateModified': '2026-08-28',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -1961,7 +1985,7 @@ schema: {
       title: 'LoRA ファインチューニング入門 2026年 : Unsloth で Llama 3.3 を 8GB VRAM で実行',
       heroImage: '/images/fine-tuning-local-llms-lora-overview-hero-ja.webp',
       seoTitle: 'LoRA ファインチューニング 2026年 : Unsloth 8GB VRAM',
-      intro: 'ファインチューニングは、LoRA（Low-Rank Adaptation）を使用して事前学習済みモデルをドメインに適応させます。— 全体をリトレーニングする代わりに、小さなアダプター層（総重量の0.4%）を追加します。Llama 3.1 8B のファインチューニングには、Unsloth（標準トレーニングより最大2倍高速、[unsloth.ai 公式情報](https://github.com/unslothai/unsloth)）を使用して、コンシューマーハードウェアで 8GB VRAM と1～2時間が必要です。2026年4月現在、LoRA と QLoRA（4ビット量子化 LoRA）は Ollama、LM Studio、vLLM で本番対応です。',
+      intro: 'ファインチューニングは、LoRA（Low-Rank Adaptation）を使用して事前学習済みモデルをドメインに適応させます。— 全体をリトレーニングする代わりに、小さなアダプター層（総重量の0.4%）を追加します。Llama 3.1 8B のファインチューニングには、Unsloth（標準トレーニングより最大2倍高速、[unsloth.ai 公式情報](https://github.com/unslothai/unsloth)）を使用して、コンシューマーハードウェアで 8GB VRAM と1～2時間が必要です。LoRA と QLoRA（4ビット量子化 LoRA）は Ollama、LM Studio、vLLM で本番対応です。',
       metaDescription: 'Unsloth（最大2倍高速）を使用して、Llama 3.1 8B を 8GB VRAM で 1～2時間でファインチューニングします。500例のみ必要。完全なコード、ハイパーパラメータ、および LoRA vs RAG 決定マトリックス。',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**ファインチューニングは、LoRA（Low-Rank Adaptation）を使用して事前学習済みモデルをドメインに適応させます。— 全体をリトレーニングする代わりに、小さなアダプター層（総重量の0.4%）を追加します。Llama 3.1 8B のファインチューニングには、Unsloth（標準トレーニングより最大2倍高速）を使用して、コンシューマーハードウェアで 8GB VRAM と1～2時間が必要です。**',
@@ -1989,12 +2013,16 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'LoRAファインチューニングは、モデル全体を再学習する代わりに小さなアダプター層（全重みの約0.4%）を学習させることで、事前学習済みモデルをあなたのドメインに適応させ、Llama 3.1 8Bのファインチューニングをわずか8GBのVRAMでUnslothを使い1〜2時間で実行できるようにします。' },
+            { type: 'plain-terms', text: 'ファインチューニングは通常、巨大なモデルをゼロから再学習することを意味し、本格的なハードウェアが必要です。LoRAはその近道です。モデルのすべての重みを触る代わりに、モデルを特定のドメインや文体に導く少数の追加層だけを学習します。だからこそコンシューマー向けGPUに収まり、数日ではなく数時間で完了します。' },
+          ],
           items: [
             'LoRA = 事前学習済みモデルに小さなトレーニング可能な層を追加。モデルの重量の1～5%のみがトレーニング可能で、VRAM と時間を大幅に削減。',
             'ファインチューニング要件：500～1000の高品質な例、8～16GB VRAM、1～4時間のトレーニング時間。',
             '最高のツール：Unsloth（最速）、Hugging Face TRL、Axolotl（最も柔軟）。',
             '**LoRA ランク (r)：** 低い (r=8) はより小さく、より高速。高い (r=64) はより表現力がある。デフォルト: r=16～32。',
-            '2026年4月現在、LoRA は本番対応で、推論エンジン全体で広くサポートされています。',
+            'LoRA は本番対応で、推論エンジン全体で広くサポートされています。',
           ],
         },
         whatIsLora: {
@@ -2013,7 +2041,7 @@ schema: {
           title: 'QLoRA（4ビット量子化 LoRA）とは',
           content: [
             '**QLoRA は LoRA と 4 ビット量子化を組み合わせます — ベースモデルは 4 ビット（QLoRA）でロードされ、アダプターのみ 16 ビットでトレーニングされます。** これにより VRAM 要件が半分になります：',
-            '**2026年4月現在、QLoRA はコンシューマーハードウェアの標準です。** 上記のコード例の Unsloth の `load_in_4bit=True` フラグは QLoRA を自動的に有効にします。完全な LoRA と比較した 2% の品質差は、ほとんどのドメイン適応タスクでは無視できます。',
+            '**QLoRA はコンシューマーハードウェアの標準です。** 上記のコード例の Unsloth の `load_in_4bit=True` フラグは QLoRA を自動的に有効にします。完全な LoRA と比較した 2% の品質差は、ほとんどのドメイン適応タスクでは無視できます。',
             '**LoRA (16 ビット) vs QLoRA (4 ビット) をいつ使用するか:**',
             '• 最大精度が必要なタスク（医療、法的契約分析）',
             '• 16GB 以上の VRAM が利用可能',
@@ -2171,7 +2199,7 @@ schema: {
         'description': 'Unsloth（最大2倍高速）を使用して、Llama 3.1 8B を 8GB VRAM で 1～2時間でファインチューニングします。500例のみ必要。完全なコード、ハイパーパラメータ、および LoRA vs RAG 決定マトリックス。',
         'url': 'https://www.promptquorum.com/ja/local-llms/fine-tuning-local-llms-lora',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-06-14',
+        'dateModified': '2026-08-28',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -2304,7 +2332,7 @@ schema: {
       title: 'LoRA 微调本地 LLM 2026：Unsloth 8GB VRAM Llama 3.3 教程',
       heroImage: '/images/fine-tuning-local-llms-lora-overview-hero-zh.webp',
       seoTitle: 'LoRA 微调本地 LLM 2026：Unsloth 8GB VRAM',
-      intro: '微调通过 LoRA（低秩适应）将预训练模型适应到你的领域——只需添加小型适配器层（占总权重的 0.4%）而不是重新训练整个模型。使用 Unsloth（最快快 2 倍，[据 unsloth.ai 官方数据](https://github.com/unslothai/unsloth)）在 8GB VRAM 的消费级硬件上微调 Llama 3.1 8B 需要 1-2 小时。截至 2026 年 4 月，LoRA 和 QLoRA（4 位量化 LoRA）在 Ollama、LM Studio 和 vLLM 中已经生产就绪。',
+      intro: '微调通过 LoRA（低秩适应）将预训练模型适应到你的领域——只需添加小型适配器层（占总权重的 0.4%）而不是重新训练整个模型。使用 Unsloth（最快快 2 倍，[据 unsloth.ai 官方数据](https://github.com/unslothai/unsloth)）在 8GB VRAM 的消费级硬件上微调 Llama 3.1 8B 需要 1-2 小时。LoRA 和 QLoRA（4 位量化 LoRA）在 Ollama、LM Studio 和 vLLM 中已经生产就绪。',
       metaDescription: '使用 Unsloth（最快快 2 倍）在 8GB VRAM 上 1-2 小时内微调 Llama 3.1 8B。只需 500 个示例。完整代码、超参数和 LoRA vs RAG 决策矩阵。',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**微调通过 LoRA（低秩适应）将预训练模型适应到你的领域——只需添加小型适配器层（占总权重的 0.4%）而不是重新训练整个模型。使用 Unsloth（最快快 2 倍）在 8GB VRAM 的消费级硬件上微调 Llama 3.1 8B 需要 1-2 小时。**',
@@ -2332,12 +2360,16 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'LoRA微调通过训练少量适配器层（约占总权重的0.4%）而非重新训练整个模型，使预训练模型适应你的领域，从而让Llama 3.1 8B的微调仅需8GB显存，使用Unsloth在1-2小时内即可完成。' },
+            { type: 'plain-terms', text: '微调通常意味着从零开始重新训练一个庞大的模型，这需要强大的硬件。LoRA是一种捷径：它不触碰模型的所有权重，而是训练一小组额外的层，引导模型适应你的特定领域或写作风格。这就是为什么它能在消费级GPU上运行，并在几小时内（而非几天）完成。' },
+          ],
           items: [
             'LoRA = 向预训练模型添加小型可训练层。仅 1-5% 的模型权重可训练，大幅降低 VRAM 和时间。',
             '微调需求：500-1000 个高质量示例，8-16GB VRAM，1-4 小时训练时间。',
             '最佳工具：unsloth（最快），Hugging Face TRL，Axolotl（最灵活）。',
             '**LoRA 秩（r）：** 较低（r=8）更小更快；较高（r=64）表现力更强。默认：r=16-32。',
-            '截至 2026 年 4 月，LoRA 已生产就绪，在推理引擎中广泛支持。',
+            'LoRA 已生产就绪，在推理引擎中广泛支持。',
           ],
         },
         whatIsLora: {
@@ -2514,7 +2546,7 @@ schema: {
         'description': '使用 Unsloth（最快快 2 倍）在 8GB VRAM 上 1-2 小时内微调 Llama 3.1 8B。只需 500 个示例。完整代码、超参数和 LoRA vs RAG 决策矩阵。',
         'url': 'https://www.promptquorum.com/zh/local-llms/fine-tuning-local-llms-lora',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-06-14',
+        'dateModified': '2026-08-28',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -2671,7 +2703,7 @@ schema: {
       title: 'LoRA 파인튜닝 로컬 LLM 2026: Llama 3.3으로 8 GB VRAM에서 Unsloth 튜토리얼',
     heroImage: '/images/fine-tuning-local-llms-lora-overview-hero-ko.webp',
       seoTitle: 'LoRA 파인튜닝 로컬 LLM 2026: 8 GB VRAM에서 Unsloth 사용',
-      intro: '파인튜닝은 LoRA(Low-Rank Adaptation)를 사용하여 사전 학습된 모델을 특정 도메인에 맞게 조정합니다 — 전체 모델을 재학습하는 대신, 소형 어댑터 레이어(전체 가중치의 0.4%)를 추가합니다. Llama 3.1 8B 파인튜닝은 Unsloth를 사용하면 8 GB VRAM과 1~2시간으로 소비자 하드웨어에서 가능합니다(표준 학습 대비 최대 2배 빠름, [unsloth.ai 공식 기준](https://github.com/unslothai/unsloth)). 2026년 4월 기준, LoRA와 QLoRA(4비트 양자화 LoRA)는 Ollama, LM Studio, vLLM에서 프로덕션 수준으로 지원됩니다.',
+      intro: '파인튜닝은 LoRA(Low-Rank Adaptation)를 사용하여 사전 학습된 모델을 특정 도메인에 맞게 조정합니다 — 전체 모델을 재학습하는 대신, 소형 어댑터 레이어(전체 가중치의 0.4%)를 추가합니다. Llama 3.1 8B 파인튜닝은 Unsloth를 사용하면 8 GB VRAM과 1~2시간으로 소비자 하드웨어에서 가능합니다(표준 학습 대비 최대 2배 빠름, [unsloth.ai 공식 기준](https://github.com/unslothai/unsloth)). LoRA와 QLoRA(4비트 양자화 LoRA)는 Ollama, LM Studio, vLLM에서 프로덕션 수준으로 지원됩니다.',
       metaDescription: 'Unsloth(최대 2배 빠른 QLoRA)를 사용하여 1~2시간 만에 8 GB VRAM으로 Llama 3.1 8B를 파인튜닝하십시오. 최소 500개 훈련 예제. 전체 코드 + LoRA vs RAG 의사결정 가이드.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**파인튜닝은 LoRA(Low-Rank Adaptation)를 사용하여 사전 학습된 모델을 특정 도메인에 맞게 조정합니다 — 전체 모델을 재학습하는 대신, 소형 어댑터 레이어(전체 가중치의 0.4%)를 추가합니다. Llama 3.1 8B 파인튜닝은 Unsloth를 사용하면 8 GB VRAM과 1~2시간으로 소비자 하드웨어에서 가능합니다(표준 학습 대비 최대 2배 빠름).**',
@@ -2699,12 +2731,16 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'LoRA 파인튜닝은 전체 모델을 재학습하는 대신 소형 어댑터 레이어(전체 가중치의 약 0.4%)만 학습시켜 사전 학습된 모델을 여러분의 도메인에 맞게 조정하며, 이를 통해 Llama 3.1 8B 파인튜닝을 Unsloth로 단 8GB VRAM에서 1~2시간 만에 실행할 수 있습니다.' },
+            { type: 'plain-terms', text: '파인튜닝은 보통 거대한 모델을 처음부터 다시 학습시키는 것을 의미하며, 이는 강력한 하드웨어를 필요로 합니다. LoRA는 지름길입니다: 모델의 모든 가중치를 건드리는 대신, 모델을 특정 도메인이나 글쓰기 스타일로 이끄는 작은 추가 레이어 세트만 학습시킵니다. 그래서 소비자용 GPU에서도 돌아가고 며칠이 아니라 몇 시간 만에 끝납니다.' },
+          ],
           items: [
             'LoRA = 사전 학습된 모델에 소형 학습 가능 레이어를 추가합니다. 모델 가중치의 1~5%만 학습 가능하여 VRAM과 시간을 크게 줄입니다.',
             '파인튜닝 요구 사항: 고품질 예제 500~1000개, VRAM 8~16 GB, 학습 시간 1~4시간.',
             '최적 도구: unsloth(가장 빠름), Hugging Face TRL, Axolotl(가장 유연함).',
             '**LoRA rank(r):** 낮을수록(r=8) 소형이고 빠르며, 높을수록(r=64) 표현력이 강합니다. 기본값: r=16~32.',
-            '2026년 4월 기준, LoRA는 추론 엔진 전반에서 프로덕션 수준으로 광범위하게 지원됩니다.',
+            'LoRA는 추론 엔진 전반에서 프로덕션 수준으로 광범위하게 지원됩니다.',
           ],
         },
         whatIsLora: {
@@ -2723,7 +2759,7 @@ schema: {
           title: 'QLoRA(4비트 양자화 LoRA)란 무엇입니까?',
           content: [
             '**QLoRA는 LoRA와 4비트 양자화를 결합합니다 — 베이스 모델은 4비트(QLoRA)로 로드하고 어댑터만 16비트로 학습합니다.** 이로써 VRAM 요구 사항이 절반으로 줄어듭니다.',
-            '**2026년 4월 기준, QLoRA는 소비자 하드웨어의 기본 방식입니다.** 위 코드 예제에서 Unsloth의 `load_in_4bit=True` 플래그를 사용하면 QLoRA가 자동으로 활성화됩니다. 완전한 LoRA 대비 2% 품질 차이는 대부분의 도메인 적응 작업에서 무시할 수 있는 수준입니다.',
+            '**QLoRA는 소비자 하드웨어의 기본 방식입니다.** 위 코드 예제에서 Unsloth의 `load_in_4bit=True` 플래그를 사용하면 QLoRA가 자동으로 활성화됩니다. 완전한 LoRA 대비 2% 품질 차이는 대부분의 도메인 적응 작업에서 무시할 수 있는 수준입니다.',
             '**QLoRA(4비트) 대신 LoRA(16비트)를 사용해야 할 때:**',
             '• 최대 정밀도가 필요한 작업(의료, 법률 계약 분석)',
             '• VRAM이 16 GB 이상 사용 가능한 경우',
