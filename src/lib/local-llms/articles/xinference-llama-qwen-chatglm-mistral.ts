@@ -30,7 +30,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_models_mentioned: [
       'Llama 3.1 8B Instruct',
       'Llama 3.3 70B Instruct',
-      'Qwen 3 8B Instruct',
+      'Qwen3 8B',
       'Qwen 3 72B Instruct',
       'ChatGLM4 9B',
       'Mistral Small Instruct v0.3',
@@ -153,7 +153,7 @@ xinference launch \\
   --model-size-in-billions 8 \\
   --quantization q4_k_m
 
-# Qwen 3 8B Instruct (GPU)
+# Qwen3 8B (GPU)
 xinference launch \\
   --model-name qwen2.5-instruct \\
   --model-engine transformers \\
@@ -300,7 +300,7 @@ print(embedding.data[0].embedding[:5])`,
       'itemListElement': [
         { '@type': 'ListItem', 'position': 1, 'name': 'Llama 3.1 8B Instruct', 'description': 'Meta — ~6 GB VRAM (Q4), best for English general-purpose tasks' },
         { '@type': 'ListItem', 'position': 2, 'name': 'Llama 3.3 70B Instruct', 'description': 'Meta — ~40 GB VRAM, high-quality English output via vLLM backend' },
-        { '@type': 'ListItem', 'position': 3, 'name': 'Qwen 3 8B Instruct', 'description': 'Alibaba — ~6 GB VRAM (Q4), multilingual, CJK, coding' },
+        { '@type': 'ListItem', 'position': 3, 'name': 'Qwen3 8B', 'description': 'Alibaba — ~6 GB VRAM (Q4), multilingual, CJK, coding' },
         { '@type': 'ListItem', 'position': 4, 'name': 'Qwen 3 72B Instruct', 'description': 'Alibaba — ~40 GB VRAM, large-scale CJK tasks via vLLM' },
         { '@type': 'ListItem', 'position': 5, 'name': 'ChatGLM4 9B', 'description': 'Zhipu AI — ~7 GB VRAM, Chinese enterprise tasks' },
         { '@type': 'ListItem', 'position': 6, 'name': 'Mistral Small Instruct v0.3', 'description': 'Mistral AI — ~5 GB VRAM (Q4), European languages and function calling' },
@@ -334,7 +334,7 @@ print(embedding.data[0].embedding[:5])`,
     current_models_mentioned: [
       'Llama 3.1 8B Instruct',
       'Llama 3.3 70B Instruct',
-      'Qwen 3 8B Instruct',
+      'Qwen3 8B',
       'Qwen 3 72B Instruct',
       'ChatGLM4 9B',
       'Mistral Small Instruct v0.3',
@@ -451,7 +451,7 @@ xinference launch \\
   --model-size-in-billions 8 \\
   --quantization q4_k_m
 
-# Qwen 3 8B Instruct (GPU)
+# Qwen3 8B (GPU)
 xinference launch \\
   --model-name qwen2.5-instruct \\
   --model-engine transformers \\
@@ -599,7 +599,7 @@ print(embedding.data[0].embedding[:5])`,
       'itemListElement': [
         { '@type': 'ListItem', 'position': 1, 'name': 'Llama 3.1 8B Instruct', 'description': 'Meta — ~6 GB VRAM (Q4), uso general en inglés' },
         { '@type': 'ListItem', 'position': 2, 'name': 'Llama 3.3 70B Instruct', 'description': 'Meta — ~40 GB VRAM, salida en inglés de alta calidad via vLLM' },
-        { '@type': 'ListItem', 'position': 3, 'name': 'Qwen 3 8B Instruct', 'description': 'Alibaba — ~6 GB VRAM (Q4), multilingüe, CJK, programación' },
+        { '@type': 'ListItem', 'position': 3, 'name': 'Qwen3 8B', 'description': 'Alibaba — ~6 GB VRAM (Q4), multilingüe, CJK, programación' },
         { '@type': 'ListItem', 'position': 4, 'name': 'Qwen 3 72B Instruct', 'description': 'Alibaba — ~40 GB VRAM, tareas CJK a gran escala via vLLM' },
         { '@type': 'ListItem', 'position': 5, 'name': 'ChatGLM4 9B', 'description': 'Zhipu AI — ~7 GB VRAM, tareas empresariales en chino' },
         { '@type': 'ListItem', 'position': 6, 'name': 'Mistral Small Instruct v0.3', 'description': 'Mistral AI — ~5 GB VRAM (Q4), idiomas europeos y llamadas a funciones' },
@@ -633,7 +633,7 @@ print(embedding.data[0].embedding[:5])`,
     current_models_mentioned: [
       'Llama 3.1 8B Instruct',
       'Llama 3.3 70B Instruct',
-      'Qwen 3 8B Instruct',
+      'Qwen3 8B',
       'Qwen 3 72B Instruct',
       'ChatGLM4 9B',
       'Mistral Small Instruct v0.3',
@@ -750,7 +750,7 @@ xinference launch \\
   --model-size-in-billions 8 \\
   --quantization q4_k_m
 
-# Qwen 3 8B Instruct (GPU)
+# Qwen3 8B (GPU)
 xinference launch \\
   --model-name qwen2.5-instruct \\
   --model-engine transformers \\
@@ -900,7 +900,7 @@ print(embedding.data[0].embedding[:5])`,
       'itemListElement': [
         { '@type': 'ListItem', 'position': 1, 'name': 'Llama 3.1 8B Instruct', 'description': 'Meta — ~6 GB VRAM (Q4)، استخدام عام بالإنجليزية' },
         { '@type': 'ListItem', 'position': 2, 'name': 'Llama 3.3 70B Instruct', 'description': 'Meta — ~40 GB VRAM، مخرجات إنجليزية عالية الجودة عبر vLLM' },
-        { '@type': 'ListItem', 'position': 3, 'name': 'Qwen 3 8B Instruct', 'description': 'Alibaba — ~6 GB VRAM (Q4)، متعدد اللغات، CJK، البرمجة' },
+        { '@type': 'ListItem', 'position': 3, 'name': 'Qwen3 8B', 'description': 'Alibaba — ~6 GB VRAM (Q4)، متعدد اللغات، CJK، البرمجة' },
         { '@type': 'ListItem', 'position': 4, 'name': 'Qwen 3 72B Instruct', 'description': 'Alibaba — ~40 GB VRAM، مهام CJK واسعة النطاق عبر vLLM' },
         { '@type': 'ListItem', 'position': 5, 'name': 'ChatGLM4 9B', 'description': 'Zhipu AI — ~7 GB VRAM، مهام مؤسسية بالصينية' },
         { '@type': 'ListItem', 'position': 6, 'name': 'Mistral Small Instruct v0.3', 'description': 'Mistral AI — ~5 GB VRAM (Q4)، اللغات الأوروبية واستدعاء الدوال' },
@@ -1018,7 +1018,7 @@ print(embedding.data[0].embedding[:5])`,
       'itemListElement': [
         { '@type': 'ListItem', 'position': 1, 'name': 'Llama 3.1 8B Instruct', 'description': 'Meta — ~6 GB VRAM (Q4), uso geral em inglês' },
         { '@type': 'ListItem', 'position': 2, 'name': 'Llama 3.3 70B Instruct', 'description': 'Meta — ~40 GB VRAM, saída em inglês de alta qualidade via vLLM' },
-        { '@type': 'ListItem', 'position': 3, 'name': 'Qwen 3 8B Instruct', 'description': 'Alibaba — ~6 GB VRAM (Q4), multilíngue, CJK, programação' },
+        { '@type': 'ListItem', 'position': 3, 'name': 'Qwen3 8B', 'description': 'Alibaba — ~6 GB VRAM (Q4), multilíngue, CJK, programação' },
         { '@type': 'ListItem', 'position': 4, 'name': 'Qwen 3 72B Instruct', 'description': 'Alibaba — ~40 GB VRAM, tarefas CJK em grande escala via vLLM' },
         { '@type': 'ListItem', 'position': 5, 'name': 'ChatGLM4 9B', 'description': 'Zhipu AI — ~7 GB VRAM, tarefas empresariais em chinês' },
         { '@type': 'ListItem', 'position': 6, 'name': 'Mistral Small Instruct v0.3', 'description': 'Mistral AI — ~5 GB VRAM (Q4), idiomas europeus e chamadas de função' },
@@ -1052,7 +1052,7 @@ print(embedding.data[0].embedding[:5])`,
     current_models_mentioned: [
       'Llama 3.1 8B Instruct',
       'Llama 3.3 70B Instruct',
-      'Qwen 3 8B Instruct',
+      'Qwen3 8B',
       'Qwen 3 72B Instruct',
       'ChatGLM4 9B',
       'Mistral Small Instruct v0.3',
@@ -1169,7 +1169,7 @@ xinference launch \\
   --model-size-in-billions 8 \\
   --quantization q4_k_m
 
-# Qwen 3 8B Instruct (GPU)
+# Qwen3 8B (GPU)
 xinference launch \\
   --model-name qwen2.5-instruct \\
   --model-engine transformers \\
@@ -1320,7 +1320,7 @@ print(embedding.data[0].embedding[:5])`,
       'itemListElement': [
         { '@type': 'ListItem', 'position': 1, 'name': 'Llama 3.1 8B Instruct', 'description': 'Meta — ~6 GB VRAM (Q4), allgemeiner Englisch-Einsatz' },
         { '@type': 'ListItem', 'position': 2, 'name': 'Llama 3.3 70B Instruct', 'description': 'Meta — ~40 GB VRAM, hochwertige englische Ausgabe via vLLM' },
-        { '@type': 'ListItem', 'position': 3, 'name': 'Qwen 3 8B Instruct', 'description': 'Alibaba — ~6 GB VRAM (Q4), mehrsprachig, CJK, Programmierung' },
+        { '@type': 'ListItem', 'position': 3, 'name': 'Qwen3 8B', 'description': 'Alibaba — ~6 GB VRAM (Q4), mehrsprachig, CJK, Programmierung' },
         { '@type': 'ListItem', 'position': 4, 'name': 'Qwen 3 72B Instruct', 'description': 'Alibaba — ~40 GB VRAM, großmaßstäbliche CJK-Aufgaben via vLLM' },
         { '@type': 'ListItem', 'position': 5, 'name': 'ChatGLM4 9B', 'description': 'Zhipu AI — ~7 GB VRAM, chinesische Unternehmensaufgaben' },
         { '@type': 'ListItem', 'position': 6, 'name': 'Mistral Small Instruct v0.3', 'description': 'Mistral AI — ~5 GB VRAM (Q4), europäische Sprachen und Funktionsaufruf' },
@@ -1354,7 +1354,7 @@ print(embedding.data[0].embedding[:5])`,
     current_models_mentioned: [
       'Llama 3.1 8B Instruct',
       'Llama 3.3 70B Instruct',
-      'Qwen 3 8B Instruct',
+      'Qwen3 8B',
       'Qwen 3 72B Instruct',
       'ChatGLM4 9B',
       'Mistral Small Instruct v0.3',
@@ -1471,7 +1471,7 @@ xinference launch \\
   --model-size-in-billions 8 \\
   --quantization q4_k_m
 
-# Qwen 3 8B Instruct (GPU)
+# Qwen3 8B (GPU)
 xinference launch \\
   --model-name qwen2.5-instruct \\
   --model-engine transformers \\
@@ -1618,7 +1618,7 @@ print(embedding.data[0].embedding[:5])`,
       'itemListElement': [
         { '@type': 'ListItem', 'position': 1, 'name': 'Llama 3.1 8B Instruct', 'description': 'Meta — ~6 Go VRAM (Q4), usage général en anglais' },
         { '@type': 'ListItem', 'position': 2, 'name': 'Llama 3.3 70B Instruct', 'description': 'Meta — ~40 Go VRAM, sortie anglaise haute qualité via vLLM' },
-        { '@type': 'ListItem', 'position': 3, 'name': 'Qwen 3 8B Instruct', 'description': 'Alibaba — ~6 Go VRAM (Q4), multilingue, CJK, code' },
+        { '@type': 'ListItem', 'position': 3, 'name': 'Qwen3 8B', 'description': 'Alibaba — ~6 Go VRAM (Q4), multilingue, CJK, code' },
         { '@type': 'ListItem', 'position': 4, 'name': 'Qwen 3 72B Instruct', 'description': 'Alibaba — ~40 Go VRAM, tâches CJK à grande échelle via vLLM' },
         { '@type': 'ListItem', 'position': 5, 'name': 'ChatGLM4 9B', 'description': 'Zhipu AI — ~7 Go VRAM, tâches entreprise en chinois' },
         { '@type': 'ListItem', 'position': 6, 'name': 'Mistral Small Instruct v0.3', 'description': 'Mistral AI — ~5 Go VRAM (Q4), langues européennes et appels de fonctions' },
@@ -1652,7 +1652,7 @@ print(embedding.data[0].embedding[:5])`,
     current_models_mentioned: [
       'Llama 3.1 8B Instruct',
       'Llama 3.3 70B Instruct',
-      'Qwen 3 8B Instruct',
+      'Qwen3 8B',
       'Qwen 3 72B Instruct',
       'ChatGLM4 9B',
       'Mistral Small Instruct v0.3',
@@ -1769,7 +1769,7 @@ xinference launch \\
   --model-size-in-billions 8 \\
   --quantization q4_k_m
 
-# Qwen 3 8B Instruct (GPU)
+# Qwen3 8B (GPU)
 xinference launch \\
   --model-name qwen2.5-instruct \\
   --model-engine transformers \\
@@ -1917,7 +1917,7 @@ print(embedding.data[0].embedding[:5])`,
       'itemListElement': [
         { '@type': 'ListItem', 'position': 1, 'name': 'Llama 3.1 8B Instruct', 'description': 'Meta — 約6 GB VRAM（Q4）、英語汎用タスク' },
         { '@type': 'ListItem', 'position': 2, 'name': 'Llama 3.3 70B Instruct', 'description': 'Meta — 約40 GB VRAM、vLLMバックエンドで高品質英語出力' },
-        { '@type': 'ListItem', 'position': 3, 'name': 'Qwen 3 8B Instruct', 'description': 'Alibaba — 約6 GB VRAM（Q4）、多言語・CJK・コーディング' },
+        { '@type': 'ListItem', 'position': 3, 'name': 'Qwen3 8B', 'description': 'Alibaba — 約6 GB VRAM（Q4）、多言語・CJK・コーディング' },
         { '@type': 'ListItem', 'position': 4, 'name': 'Qwen 3 72B Instruct', 'description': 'Alibaba — 約40 GB VRAM、vLLMで大規模CJKタスク' },
         { '@type': 'ListItem', 'position': 5, 'name': 'ChatGLM4 9B', 'description': 'Zhipu AI — 約7 GB VRAM、中国語エンタープライズタスク' },
         { '@type': 'ListItem', 'position': 6, 'name': 'Mistral Small Instruct v0.3', 'description': 'Mistral AI — 約5 GB VRAM（Q4）、ヨーロッパ言語とファンクションコール' },
@@ -1951,7 +1951,7 @@ print(embedding.data[0].embedding[:5])`,
     current_models_mentioned: [
       'Llama 3.1 8B Instruct',
       'Llama 3.3 70B Instruct',
-      'Qwen 3 8B Instruct',
+      'Qwen3 8B',
       'Qwen 3 72B Instruct',
       'ChatGLM4 9B',
       'Mistral Small Instruct v0.3',
@@ -2068,7 +2068,7 @@ xinference launch \\
   --model-size-in-billions 8 \\
   --quantization q4_k_m
 
-# Qwen 3 8B Instruct (GPU)
+# Qwen3 8B (GPU)
 xinference launch \\
   --model-name qwen2.5-instruct \\
   --model-engine transformers \\
@@ -2216,7 +2216,7 @@ print(embedding.data[0].embedding[:5])`,
       'itemListElement': [
         { '@type': 'ListItem', 'position': 1, 'name': 'Llama 3.1 8B Instruct', 'description': 'Meta — 约6 GB VRAM（Q4），英语通用任务' },
         { '@type': 'ListItem', 'position': 2, 'name': 'Llama 3.3 70B Instruct', 'description': 'Meta — 约40 GB VRAM，通过vLLM实现高质量英语输出' },
-        { '@type': 'ListItem', 'position': 3, 'name': 'Qwen 3 8B Instruct', 'description': 'Alibaba — 约6 GB VRAM（Q4），多语言、CJK、代码' },
+        { '@type': 'ListItem', 'position': 3, 'name': 'Qwen3 8B', 'description': 'Alibaba — 约6 GB VRAM（Q4），多语言、CJK、代码' },
         { '@type': 'ListItem', 'position': 4, 'name': 'Qwen 3 72B Instruct', 'description': 'Alibaba — 约40 GB VRAM，通过vLLM处理大规模CJK任务' },
         { '@type': 'ListItem', 'position': 5, 'name': 'ChatGLM4 9B', 'description': 'Zhipu AI — 约7 GB VRAM，中文企业任务' },
         { '@type': 'ListItem', 'position': 6, 'name': 'Mistral Small Instruct v0.3', 'description': 'Mistral AI — 约5 GB VRAM（Q4），欧洲语言和函数调用' },
@@ -2250,7 +2250,7 @@ print(embedding.data[0].embedding[:5])`,
     current_models_mentioned: [
       'Llama 3.1 8B Instruct',
       'Llama 3.3 70B Instruct',
-      'Qwen 3 8B Instruct',
+      'Qwen3 8B',
       'Qwen 3 72B Instruct',
       'ChatGLM4 9B',
       'Mistral Small Instruct v0.3',
@@ -2373,7 +2373,7 @@ xinference launch \\
   --model-size-in-billions 8 \\
   --quantization q4_k_m
 
-# Qwen 3 8B Instruct (GPU)
+# Qwen3 8B (GPU)
 xinference launch \\
   --model-name qwen2.5-instruct \\
   --model-engine transformers \\
@@ -2495,7 +2495,7 @@ print(embedding.data[0].embedding[:5])`,
       'itemListElement': [
         { '@type': 'ListItem', 'position': 1, 'name': 'Llama 3.1 8B Instruct', 'description': 'Meta — ~6 GB VRAM(Q4), 영어 범용 작업에 최적' },
         { '@type': 'ListItem', 'position': 2, 'name': 'Llama 3.3 70B Instruct', 'description': 'Meta — ~40 GB VRAM, vLLM 백엔드를 통한 고품질 영어 출력' },
-        { '@type': 'ListItem', 'position': 3, 'name': 'Qwen 3 8B Instruct', 'description': 'Alibaba — ~6 GB VRAM(Q4), 다국어, 한중일(CJK), 코딩' },
+        { '@type': 'ListItem', 'position': 3, 'name': 'Qwen3 8B', 'description': 'Alibaba — ~6 GB VRAM(Q4), 다국어, 한중일(CJK), 코딩' },
         { '@type': 'ListItem', 'position': 4, 'name': 'Qwen 3 72B Instruct', 'description': 'Alibaba — ~40 GB VRAM, vLLM을 통한 대규모 한중일(CJK) 작업' },
         { '@type': 'ListItem', 'position': 5, 'name': 'ChatGLM4 9B', 'description': 'Zhipu AI — ~7 GB VRAM, 중국어 엔터프라이즈 작업' },
         { '@type': 'ListItem', 'position': 6, 'name': 'Mistral Small Instruct v0.3', 'description': 'Mistral AI — ~5 GB VRAM(Q4), 유럽 언어 및 함수 호출' },

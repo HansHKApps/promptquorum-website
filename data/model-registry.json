@@ -592,6 +592,18 @@
     {
       "company": "Alibaba / Qwen",
       "family": "Qwen",
+      "model": "Qwen3 14B",
+      "type": "open-weight",
+      "release_date": "2025-04",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://ollama.com/library/qwen3/tags",
+      "verified_date": "2026-08-28",
+      "notes": "Mid-size dense variant, live as qwen3:14b on Ollama and Qwen/Qwen3-14B on Hugging Face (published 2025-04-27). Qwen3.6 has shipped only 27B and 35B-A3B sizes, so no 14B-class successor exists and this size is not actually superseded. Added 2026-08-28 as an exact-name entry for the same reason as the Qwen3 8B entry: to stop the validator flagging it via the generic family-level 'Qwen3' superseded record, which only applies to sizes Qwen3.6 has actually replaced."
+    },
+    {
+      "company": "Alibaba / Qwen",
+      "family": "Qwen",
       "model": "Qwen3 4B",
       "type": "open-weight",
       "release_date": "2025-04",
