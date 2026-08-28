@@ -26,7 +26,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       'Local RAG showdown: AnythingLLM vs PrivateGPT vs Open WebUI on 5,047 pages. Different winners for accuracy, latency, scaling. Full benchmarks inside.',
     current_models_mentioned: [
-      'Llama 3.2 3B',
+      'Llama 3.1 8B',
       'Qwen3 14B',
       'nomic-embed-text v1.5',
       'BAAI/bge-m3',
@@ -107,7 +107,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'How Do AnythingLLM, PrivateGPT, and Open WebUI Compare in 2026?',
         content:
-          'Tested on a 5,047-page corpus (research papers, contracts, a technical manual, internal wiki exports) using Llama 3.2 3B Q4_K_M as the chat model and each platform\'s default embedder. Hardware: NVIDIA RTX 4070 (12 GB VRAM, 32 GB system RAM) on Windows 11; cross-checked on an M5 MacBook Pro (16 GB unified). Numbers are medians of three runs.',
+          'Tested on a 5,047-page corpus (research papers, contracts, a technical manual, internal wiki exports) using Llama 3.1 8B Q4_K_M as the chat model and each platform\'s default embedder. Hardware: NVIDIA RTX 4070 (12 GB VRAM, 32 GB system RAM) on Windows 11; cross-checked on an M5 MacBook Pro (16 GB unified). Numbers are medians of three runs.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -195,11 +195,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-we-tested',
         title: 'How We Tested All 3 on a 5,047-Page Corpus',
         content:
-          '**The same documents, the same chat model (Llama 3.2 3B Q4_K_M), the same 50 graded queries.** RAG quality, not chat quality, is what we isolated.',
+          '**The same documents, the same chat model (Llama 3.1 8B Q4_K_M), the same 50 graded queries.** RAG quality, not chat quality, is what we isolated.',
         items: [
           '**Hardware:** NVIDIA RTX 4070 (12 GB VRAM, 32 GB system RAM) on Windows 11 as the primary; Apple M5 MacBook Pro (16 GB unified memory) as cross-check. Latency numbers come from the RTX 4070 run.',
           '**Corpus:** 5,047 pages spanning four content types — 1,047-page industrial control manual (figures, tables, equations), 38-page commercial real-estate lease (dense legalese), 412-page transformer research paper, and a 3,550-page export of an internal engineering wiki (markdown, code, mixed prose).',
-          '**Chat model:** Llama 3.2 3B Q4_K_M (≈ 4.9 GB) loaded fully into VRAM in all three apps, served via Ollama for AnythingLLM and Open WebUI, via the bundled llama.cpp runtime for PrivateGPT.',
+          '**Chat model:** Llama 3.1 8B Q4_K_M (≈ 4.9 GB) loaded fully into VRAM in all three apps, served via Ollama for AnythingLLM and Open WebUI, via the bundled llama.cpp runtime for PrivateGPT.',
           '**Embedders tested:** each platform\'s default plus nomic-embed-text v1.5 (768-dim) and BAAI/bge-m3 (1,024-dim) where supported. Default was used for the headline numbers.',
           '**Query set:** 50 queries split evenly across 5 types — factual lookup (10), multi-hop reasoning (10), summarization (10), citation accuracy (10), and contradiction detection (10). Graded blind by the same human against a known answer key.',
           '**What we measured:** retrieval latency (p50 / p95 in ms over 50 queries), hallucination rate (% of answers with at least one factual error), citation correctness (filename + page where applicable), GPU memory peak during indexing, and on-disk vector DB size.',
@@ -290,7 +290,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'For Open WebUI specifically, switch the default chat model to one that cites well even without explicit citation prompting. Qwen3 14B and Llama 3.3 70B mention sources unprompted; Llama 3.2 3B and Phi-4 Mini frequently drop citations under pressure.',
+            text: 'For Open WebUI specifically, switch the default chat model to one that cites well even without explicit citation prompting. Qwen3 14B and Llama 3.3 70B mention sources unprompted; Llama 3.1 8B and Phi-4 Mini frequently drop citations under pressure.',
           },
         ],
       },
@@ -334,7 +334,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Multi-hop reasoning is where all three platforms suffer. The fix is not the platform — it is your chat model. Swapping Llama 3.2 3B for Qwen3 14B dropped multi-hop hallucination by ~10 percentage points in each platform. RAG quality is necessary but not sufficient; the chat model has to actually reason over retrieved chunks.',
+            text: 'Multi-hop reasoning is where all three platforms suffer. The fix is not the platform — it is your chat model. Swapping Llama 3.1 8B for Qwen3 14B dropped multi-hop hallucination by ~10 percentage points in each platform. RAG quality is necessary but not sufficient; the chat model has to actually reason over retrieved chunks.',
           },
         ],
         image: '/images/rag-vs-platforms-hallucination-rate-en.svg',
@@ -510,7 +510,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       'Lokales RAG-Duell: AnythingLLM vs PrivateGPT vs Open WebUI auf 5.047 Seiten. Unterschiedliche Gewinner bei Genauigkeit, Latenz, Skalierung. Vollständige Benchmarks eingebunden.',
     current_models_mentioned: [
-      'Llama 3.2 3B',
+      'Llama 3.1 8B',
       'Qwen3 14B',
       'nomic-embed-text v1.5',
       'BAAI/bge-m3',
@@ -592,7 +592,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Wie vergleichen sich AnythingLLM, PrivateGPT und Open WebUI 2026?',
         content:
-          'Getestet auf einem Korpus von 5.047 Seiten (Forschungsartikel, Verträge, eine technische Anleitung, Exporte interner Wikis) mit Llama 3.2 3B Q4_K_M als Chat-Modell und dem Standard-Embedder jeder Plattform. Hardware: NVIDIA RTX 4070 (12 GB VRAM, 32 GB Systemspeicher) auf Windows 11; Gegenprüfung auf MacBook Pro M5 (16 GB unified). Die Zahlen sind Mediane aus drei Durchläufen.',
+          'Getestet auf einem Korpus von 5.047 Seiten (Forschungsartikel, Verträge, eine technische Anleitung, Exporte interner Wikis) mit Llama 3.1 8B Q4_K_M als Chat-Modell und dem Standard-Embedder jeder Plattform. Hardware: NVIDIA RTX 4070 (12 GB VRAM, 32 GB Systemspeicher) auf Windows 11; Gegenprüfung auf MacBook Pro M5 (16 GB unified). Die Zahlen sind Mediane aus drei Durchläufen.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -680,11 +680,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-we-tested',
         title: 'Wie wir alle 3 auf einem Korpus mit 5.047 Seiten getestet haben',
         content:
-          '**Dieselben Dokumente, dasselbe Chat-Modell (Llama 3.2 3B Q4_K_M), dieselben 50 bewerteten Abfragen.** RAG-Qualität, nicht Chat-Qualität, ist das, was wir isoliert haben.',
+          '**Dieselben Dokumente, dasselbe Chat-Modell (Llama 3.1 8B Q4_K_M), dieselben 50 bewerteten Abfragen.** RAG-Qualität, nicht Chat-Qualität, ist das, was wir isoliert haben.',
         items: [
           '**Hardware:** NVIDIA RTX 4070 (12 GB VRAM, 32 GB Systemspeicher) auf Windows 11 als Primär; MacBook Pro M5 (16 GB Unified Memory) als Gegenprüfung. Die Latenzzahlen stammen aus dem RTX 4070-Lauf.',
           '**Korpus:** 5.047 Seiten über vier Inhaltstypen — 1.047-Seiten-Handbuch für Industriesteuerung (Abbildungen, Tabellen, Gleichungen), 38-Seiten-gewerblicher Mietvertrag (dichter juristischer Text), 412-Seiten-Transformator-Forschungsartikel und ein Export mit 3.550 Seiten eines internen Engineering-Wikis (Markdown, Code, gemischte Prosa).',
-          '**Chat-Modell:** Llama 3.2 3B Q4_K_M (≈ 4,9 GB) in allen drei Apps vollständig in VRAM geladen, bedient über Ollama für AnythingLLM und Open WebUI, über die gebündelte llama.cpp-Laufzeit für PrivateGPT.',
+          '**Chat-Modell:** Llama 3.1 8B Q4_K_M (≈ 4,9 GB) in allen drei Apps vollständig in VRAM geladen, bedient über Ollama für AnythingLLM und Open WebUI, über die gebündelte llama.cpp-Laufzeit für PrivateGPT.',
           '**Getestete Embedder:** jedes Standard-Embedder der Plattform plus nomic-embed-text v1.5 (768-dim) und BAAI/bge-m3 (1.024-dim) falls unterstützt. Der Standard wurde für die Headline-Zahlen verwendet.',
           '**Abfrage-Set:** 50 Abfragen gleichmäßig über 5 Typen verteilt — faktenhafte Lookup (10), Multi-Hop-Reasoning (10), Zusammenfassung (10), Zitiergenauigkeit (10) und Widerspruchserkennung (10). Blind bewertet gegen einen bekannten Antwortschlüssel.',
           '**Was wir gemessen haben:** Abruflatenz (p50 / p95 in ms über 50 Abfragen), Halluzinationsrate (% der Antworten mit mindestens einem faktischen Fehler), Zitiergenauigkeit (Dateiname + Seite falls zutreffend), GPU-Speicherspitzen während der Indexierung und Größe der On-Disk-Vektor-DB.',
@@ -775,7 +775,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Speziell für Open WebUI wechseln Sie das Standard-Chat-Modell zu einem, das auch ohne explizite Zitier-Eingabe gut zitiert. Qwen3 14B und Llama 3.3 70B erwähnen Quellen ungegeben; Llama 3.2 3B und Phi-4 Mini lassen unter Druck oft Zitierungen fallen.',
+            text: 'Speziell für Open WebUI wechseln Sie das Standard-Chat-Modell zu einem, das auch ohne explizite Zitier-Eingabe gut zitiert. Qwen3 14B und Llama 3.3 70B erwähnen Quellen ungegeben; Llama 3.1 8B und Phi-4 Mini lassen unter Druck oft Zitierungen fallen.',
           },
         ],
       },
@@ -819,7 +819,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Multi-Hop Reasoning ist, wo alle drei Plattformen leiden. Die Korrektur ist nicht die Plattform — sie ist Ihr Chat-Modell. Das Wechseln von Llama 3.2 3B zu Qwen3 14B senkte Multi-Hop-Halluzination in jeder Plattform um ~10 Prozentpunkte. RAG-Qualität ist notwendig, aber nicht ausreichend; das Chat-Modell muss über abgerufene Chunks tatsächlich Schlüsse ziehen.',
+            text: 'Multi-Hop Reasoning ist, wo alle drei Plattformen leiden. Die Korrektur ist nicht die Plattform — sie ist Ihr Chat-Modell. Das Wechseln von Llama 3.1 8B zu Qwen3 14B senkte Multi-Hop-Halluzination in jeder Plattform um ~10 Prozentpunkte. RAG-Qualität ist notwendig, aber nicht ausreichend; das Chat-Modell muss über abgerufene Chunks tatsächlich Schlüsse ziehen.',
           },
         ],
         image: '/images/rag-vs-platforms-hallucination-rate-de.svg',
@@ -951,7 +951,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       'Duel RAG local : AnythingLLM vs PrivateGPT vs Open WebUI sur 5 047 pages. Gagnants différents en précision, latence, scalabilité. Benchmarks complets.',
     current_models_mentioned: [
-      'Llama 3.2 3B',
+      'Llama 3.1 8B',
       'Qwen3 14B',
       'nomic-embed-text v1.5',
       'BAAI/bge-m3',
@@ -1033,7 +1033,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Comment AnythingLLM, PrivateGPT et Open WebUI se comparent-ils en 2026 ?',
         content:
-          'Testé sur un corpus de 5 047 pages (articles de recherche, contrats, manuel technique, exports wiki interne) avec Llama 3.2 3B Q4_K_M comme modèle de chat et l\'embedder par défaut de chaque plateforme. Matériel : NVIDIA RTX 4070 (12 GB VRAM, 32 GB système) sur Windows 11 ; contre-vérification sur M5 MacBook Pro (16 GB unified). Les nombres sont les médianes de trois exécutions.',
+          'Testé sur un corpus de 5 047 pages (articles de recherche, contrats, manuel technique, exports wiki interne) avec Llama 3.1 8B Q4_K_M comme modèle de chat et l\'embedder par défaut de chaque plateforme. Matériel : NVIDIA RTX 4070 (12 GB VRAM, 32 GB système) sur Windows 11 ; contre-vérification sur M5 MacBook Pro (16 GB unified). Les nombres sont les médianes de trois exécutions.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1121,11 +1121,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-we-tested',
         title: 'Comment nous avons testé les 3 sur un corpus de 5 047 pages',
         content:
-          '**Mêmes documents, même modèle de chat (Llama 3.2 3B Q4_K_M), mêmes 50 requêtes notées.** Qualité RAG, pas qualité de chat, est ce que nous avons isolé.',
+          '**Mêmes documents, même modèle de chat (Llama 3.1 8B Q4_K_M), mêmes 50 requêtes notées.** Qualité RAG, pas qualité de chat, est ce que nous avons isolé.',
         items: [
           '**Matériel :** NVIDIA RTX 4070 (12 GB VRAM, 32 GB système) sur Windows 11 comme système primaire ; MacBook Pro M5 (16 GB mémoire unified) comme contre-vérification. Les chiffres de latence proviennent de l\'exécution RTX 4070.',
           '**Corpus :** 5 047 pages couvrant quatre types de contenu — manuel de contrôle industriel de 1 047 pages (figures, tableaux, équations), contrat immobilier commercial de 38 pages (texte juridique dense), article de recherche sur transformateurs de 412 pages, export de 3 550 pages d\'un wiki d\'ingénierie interne (markdown, code, prose mixte).',
-          '**Modèle de chat :** Llama 3.2 3B Q4_K_M (≈ 4,9 GB) entièrement chargé en VRAM dans les trois apps, servi via Ollama pour AnythingLLM et Open WebUI, via le runtime llama.cpp groupé pour PrivateGPT.',
+          '**Modèle de chat :** Llama 3.1 8B Q4_K_M (≈ 4,9 GB) entièrement chargé en VRAM dans les trois apps, servi via Ollama pour AnythingLLM et Open WebUI, via le runtime llama.cpp groupé pour PrivateGPT.',
           '**Embedders testés :** chaque embedder par défaut de plateforme plus nomic-embed-text v1.5 (768-dim) et BAAI/bge-m3 (1 024-dim) où supportés. Le défaut a été utilisé pour les chiffres de headline.',
           '**Ensemble de requêtes :** 50 requêtes divisées également sur 5 types — lookup factuelle (10), raisonnement multi-sauts (10), résumé (10), exactitude de citation (10), détection de contradiction (10). Notées aveuglément contre une clé de réponse connue.',
           '**Ce que nous avons mesuré :** latence d\'extraction (p50 / p95 en ms sur 50 requêtes), taux d\'hallucination (% des réponses avec au moins une erreur factuelle), exactitude des citations (nom de fichier + page le cas échéant), pic de mémoire GPU pendant l\'indexation, taille DB vectorielle sur disque.',
@@ -1216,7 +1216,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Pour Open WebUI spécifiquement, changeez le modèle de chat par défaut vers un qui cite bien même sans incitation d\'citation explicite. Qwen3 14B et Llama 3.3 70B mentionnent les sources non-sollicité ; Llama 3.2 3B et Phi-4 Mini lâchent souvent les citations sous pression.',
+            text: 'Pour Open WebUI spécifiquement, changeez le modèle de chat par défaut vers un qui cite bien même sans incitation d\'citation explicite. Qwen3 14B et Llama 3.3 70B mentionnent les sources non-sollicité ; Llama 3.1 8B et Phi-4 Mini lâchent souvent les citations sous pression.',
           },
         ],
       },
@@ -1260,7 +1260,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Le raisonnement multi-sauts est où les trois plateformes souffrent. La correction n\'est pas la plateforme — c\'est votre modèle de chat. Changer Llama 3.2 3B pour Qwen3 14B a réduit les hallucinations multi-sauts d\'~10 points de pourcentage dans chaque plateforme. La qualité RAG est nécessaire mais pas suffisante ; le modèle de chat doit vraiment raisonner sur les chunks extraits.',
+            text: 'Le raisonnement multi-sauts est où les trois plateformes souffrent. La correction n\'est pas la plateforme — c\'est votre modèle de chat. Changer Llama 3.1 8B pour Qwen3 14B a réduit les hallucinations multi-sauts d\'~10 points de pourcentage dans chaque plateforme. La qualité RAG est nécessaire mais pas suffisante ; le modèle de chat doit vraiment raisonner sur les chunks extraits.',
           },
         ],
         image: '/images/rag-vs-platforms-hallucination-rate-fr.svg',
@@ -1383,7 +1383,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       'ローカルRAG対決：AnythingLLM vs PrivateGPT vs Open WebUI（5,047ページ）。精度、レイテンシ、スケーリングで異なる優勝者。完全ベンチマーク内蔵。',
     current_models_mentioned: [
-      'Llama 3.2 3B',
+      'Llama 3.1 8B',
       'Qwen3 14B',
       'nomic-embed-text v1.5',
       'BAAI/bge-m3',
@@ -1464,7 +1464,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: '2026年のAnythingLLM、PrivateGPT、Open WebUIはどのように比較されますか？',
         content:
-          '5,047ページのコーパス（研究論文、契約、技術マニュアル、内部wiki エクスポート）でテスト。チャットモデルとしてLlama 3.2 3B Q4_K_Mを使用し、各プラットフォームのデフォルトエンベッダー。ハードウェア：Windows 11上のNVIDIA RTX 4070（12GB VRAM、32GBシステムRAM）。Apple M5 MacBook Pro（16GB統合）で相互チェック。数値は3回の実行の中央値。',
+          '5,047ページのコーパス（研究論文、契約、技術マニュアル、内部wiki エクスポート）でテスト。チャットモデルとしてLlama 3.1 8B Q4_K_Mを使用し、各プラットフォームのデフォルトエンベッダー。ハードウェア：Windows 11上のNVIDIA RTX 4070（12GB VRAM、32GBシステムRAM）。Apple M5 MacBook Pro（16GB統合）で相互チェック。数値は3回の実行の中央値。',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1552,11 +1552,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-we-tested',
         title: '3つすべてを5,047ページのコーパスでテストする方法',
         content:
-          '**同じドキュメント、同じチャットモデル（Llama 3.2 3B Q4_K_M）、同じ50採点クエリ。** RAG品質（チャット品質ではなく）が分離されたもの。',
+          '**同じドキュメント、同じチャットモデル（Llama 3.1 8B Q4_K_M）、同じ50採点クエリ。** RAG品質（チャット品質ではなく）が分離されたもの。',
         items: [
           '**ハードウェア：** Windows 11上のNVIDIA RTX 4070（12GB VRAM、32GBシステムRAM）をメイン。Apple M5 MacBook Pro（16GB統合メモリ）をクロスチェック。レイテンシ数字はRTX 4070実行から来ています。',
           '**コーパス：** 4つのコンテンツタイプ（図、表、方程式を含む1,047ページの産業制御マニュアル、密集した法律用語の38ページの商業不動産リース、412ページの変圧器研究論文、マークダウン、コード、混合散文の3,550ページの内部エンジニアリングwikiエクスポート）にまたがる5,047ページ。',
-          '**チャットモデル：** Llama 3.2 3B Q4_K_M（≈4.9GB）は3つのアプリすべてでVRAMに完全に読み込まれ、AnythingLLMおよびOpen WebUIの場合はOllama経由、PrivateGPTの場合は束ねられたllama.cppランタイム経由で提供。',
+          '**チャットモデル：** Llama 3.1 8B Q4_K_M（≈4.9GB）は3つのアプリすべてでVRAMに完全に読み込まれ、AnythingLLMおよびOpen WebUIの場合はOllama経由、PrivateGPTの場合は束ねられたllama.cppランタイム経由で提供。',
           '**テスト済みエンベッダー：** 各プラットフォームのデフォルト + nomic-embed-text v1.5（768次元）およびBAAI/bge-m3（1,024次元）サポートされている場合。ヘッドライン数字にはデフォルトが使用されました。',
           '**クエリセット：** 5つのタイプ（ファクト検索10、多ホップ推論10、要約10、引用精度10、矛盾検出10）に均等に分割された50クエリ。既知の回答キーに対してヒトが盲検で採点。',
           '**測定内容：** 検索レイテンシ（50クエリ上のp50 / p95（ ms））、ハルシネーション率（少なくとも1つの事実誤り率（%））、引用正確性（該当する場合はファイル名+ページ）、インデックス作成中のGPUメモリピーク、ディスク上ベクトルDBサイズ。',
@@ -1647,7 +1647,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Open WebUI特に、デフォルトチャットモデルを明確な引用プロンプトなしでも引用が上手いものに切り替えます。Qwen3 14BおよびLlama 3.3 70Bメンション源、入力なし。Llama 3.2 3BおよびPhi-4 Miniは圧力下で引用を頻繁にドロップします。',
+            text: 'Open WebUI特に、デフォルトチャットモデルを明確な引用プロンプトなしでも引用が上手いものに切り替えます。Qwen3 14BおよびLlama 3.3 70Bメンション源、入力なし。Llama 3.1 8BおよびPhi-4 Miniは圧力下で引用を頻繁にドロップします。',
           },
         ],
       },
@@ -1691,7 +1691,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'マルチホップ推論は3つのプラットフォームすべてが苦しむ場所です。修正はプラットフォームではなく、チャットモデルです。Llama 3.2 3BをQwen3 14Bに交換すると、各プラットフォームでマルチホップハルシネーションが約10パーセント ポイント低下しました。RAG品質は必要だが十分ではない。チャットモデルは実際に検索したチャンクについて推論する必要があります。',
+            text: 'マルチホップ推論は3つのプラットフォームすべてが苦しむ場所です。修正はプラットフォームではなく、チャットモデルです。Llama 3.1 8BをQwen3 14Bに交換すると、各プラットフォームでマルチホップハルシネーションが約10パーセント ポイント低下しました。RAG品質は必要だが十分ではない。チャットモデルは実際に検索したチャンクについて推論する必要があります。',
           },
         ],
         image: '/images/rag-vs-platforms-hallucination-rate-ja.svg',
@@ -1833,7 +1833,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '何個のトークンが典型的なRAGクエリに使用されますか？',
-            a: '5,047ページコーパスでテストしたときの典型的なクエリ。チャットモデル（Llama 3.2 3B Q4_K_M）が既に読み込まれている場合：クエリの埋め込みと検索は約500〜700トークンに相当する計算（エンベッディングトークンではなくLLMトークン）。プロンプトアセンブリと回答生成は、検索されたチャンク（約1,500トークン）とモデルのコンテキストウィンドウのサイズによって異なります。4K コンテキストウィンドウで、予想される回答は400〜800トークンです。',
+            a: '5,047ページコーパスでテストしたときの典型的なクエリ。チャットモデル（Llama 3.1 8B Q4_K_M）が既に読み込まれている場合：クエリの埋め込みと検索は約500〜700トークンに相当する計算（エンベッディングトークンではなくLLMトークン）。プロンプトアセンブリと回答生成は、検索されたチャンク（約1,500トークン）とモデルのコンテキストウィンドウのサイズによって異なります。4K コンテキストウィンドウで、予想される回答は400〜800トークンです。',
           },
           {
             q: 'これらのプラットフォーム以外のRAGの選択肢はありますか？',
@@ -1954,7 +1954,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             name: '何個のトークンが典型的なRAGクエリに使用されますか？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: '5,047ページコーパスでテストしたときの典型的なクエリ。チャットモデル（Llama 3.2 3B Q4_K_M）が既に読み込まれている場合：クエリの埋め込みと検索は約500〜700トークンに相当する計算（エンベッディングトークンではなくLLMトークン）。プロンプトアセンブリと回答生成は、検索されたチャンク（約1,500トークン）とモデルのコンテキストウィンドウのサイズによって異なります。4K コンテキストウィンドウで、予想される回答は400〜800トークンです。',
+              text: '5,047ページコーパスでテストしたときの典型的なクエリ。チャットモデル（Llama 3.1 8B Q4_K_M）が既に読み込まれている場合：クエリの埋め込みと検索は約500〜700トークンに相当する計算（エンベッディングトークンではなくLLMトークン）。プロンプトアセンブリと回答生成は、検索されたチャンク（約1,500トークン）とモデルのコンテキストウィンドウのサイズによって異なります。4K コンテキストウィンドウで、予想される回答は400〜800トークンです。',
             },
           },
           {
@@ -1983,7 +1983,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     metaDescription: '在5,047页语料库上测试AnythingLLM、PrivateGPT和Open WebUI。比较准确性、延迟、引用和扩展性能。2026年8月的测试结果。',
     heroImage: '/images/anythingllm-vs-privategpt-vs-openwebui-rag-comparison-table-hero-zh.webp',
     twitterDescription: '本地RAG对决：AnythingLLM vs PrivateGPT vs Open WebUI（5,047页）。在准确性、延迟和扩展方面有不同的获胜者。完整基准。',
-    current_models_mentioned: ['Llama 3.2 3B', 'Qwen3 14B', 'nomic-embed-text v1.5', 'BAAI/bge-m3', 'BAAI/bge-small-en-v1.5', 'mxbai-embed-large'],
+    current_models_mentioned: ['Llama 3.1 8B', 'Qwen3 14B', 'nomic-embed-text v1.5', 'BAAI/bge-m3', 'BAAI/bge-small-en-v1.5', 'mxbai-embed-large'],
     current_hardware_mentioned: ['NVIDIA RTX 4070 12 GB', 'NVIDIA RTX 4090 24 GB', 'Apple M5 MacBook Pro 16 GB', 'Apple M5 Max 64 GB'],
     audience: '技术型读者（工程师、研究人员、IT团队）为拥有1,000份以上文档的库选择自托管RAG平台，并愿意阅读基准而不是营销文案。',
     readTime: '阅读约16分钟',
@@ -2058,7 +2058,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       'Duelo RAG local: AnythingLLM vs PrivateGPT vs Open WebUI en 5.047 páginas. Distintos ganadores en precisión, latencia y escalabilidad. Benchmarks completos.',
     current_models_mentioned: [
-      'Llama 3.2 3B',
+      'Llama 3.1 8B',
       'Qwen3 14B',
       'nomic-embed-text v1.5',
       'BAAI/bge-m3',
@@ -2139,7 +2139,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: '¿Cómo se comparan AnythingLLM, PrivateGPT y Open WebUI en 2026?',
         content:
-          'Probado en un corpus de 5.047 páginas (artículos de investigación, contratos, un manual técnico y exportaciones de wikis internos) usando Llama 3.2 3B Q4_K_M como modelo de chat y el embedder por defecto de cada plataforma. Hardware: NVIDIA RTX 4070 (12 GB VRAM, 32 GB de RAM del sistema) en Windows 11; verificación cruzada en un MacBook Pro M5 (16 GB unificado). Los números son medianas de tres ejecuciones.',
+          'Probado en un corpus de 5.047 páginas (artículos de investigación, contratos, un manual técnico y exportaciones de wikis internos) usando Llama 3.1 8B Q4_K_M como modelo de chat y el embedder por defecto de cada plataforma. Hardware: NVIDIA RTX 4070 (12 GB VRAM, 32 GB de RAM del sistema) en Windows 11; verificación cruzada en un MacBook Pro M5 (16 GB unificado). Los números son medianas de tres ejecuciones.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2227,11 +2227,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-we-tested',
         title: 'Cómo probamos las 3 plataformas en un corpus de 5.047 páginas',
         content:
-          '**Los mismos documentos, el mismo modelo de chat (Llama 3.2 3B Q4_K_M), las mismas 50 consultas valoradas.** Lo que aislamos fue la calidad del RAG, no la calidad del chat.',
+          '**Los mismos documentos, el mismo modelo de chat (Llama 3.1 8B Q4_K_M), las mismas 50 consultas valoradas.** Lo que aislamos fue la calidad del RAG, no la calidad del chat.',
         items: [
           '**Hardware:** NVIDIA RTX 4070 (12 GB VRAM, 32 GB de RAM del sistema) en Windows 11 como sistema principal; MacBook Pro M5 (16 GB de memoria unificada) como verificación cruzada. Los números de latencia provienen de la ejecución en RTX 4070.',
           '**Corpus:** 5.047 páginas abarcando cuatro tipos de contenido — un manual de control industrial de 1.047 páginas (figuras, tablas, ecuaciones), un contrato de arrendamiento comercial de 38 páginas (texto legal denso), un artículo de investigación sobre transformadores de 412 páginas y una exportación de 3.550 páginas de un wiki de ingeniería interno (markdown, código, prosa mixta).',
-          '**Modelo de chat:** Llama 3.2 3B Q4_K_M (≈ 4,9 GB) cargado completamente en VRAM en las tres aplicaciones, servido a través de Ollama para AnythingLLM y Open WebUI, y a través del runtime llama.cpp integrado para PrivateGPT.',
+          '**Modelo de chat:** Llama 3.1 8B Q4_K_M (≈ 4,9 GB) cargado completamente en VRAM en las tres aplicaciones, servido a través de Ollama para AnythingLLM y Open WebUI, y a través del runtime llama.cpp integrado para PrivateGPT.',
           '**Embedders probados:** el embedder por defecto de cada plataforma más nomic-embed-text v1.5 (768 dim) y BAAI/bge-m3 (1.024 dim) donde fue compatible. Se usó el por defecto para los números principales.',
           '**Conjunto de consultas:** 50 consultas distribuidas en 5 tipos — búsqueda factual (10), razonamiento multi-salto (10), resumen (10), precisión de citas (10) y detección de contradicciones (10). Valoradas a ciegas por la misma persona contra una clave de respuestas conocida.',
           '**Qué medimos:** latencia de recuperación (p50 / p95 en ms sobre 50 consultas), tasa de alucinaciones (% de respuestas con al menos un error factual), corrección de citas (nombre de archivo + página donde corresponda), pico de memoria GPU durante la indexación y tamaño de la base de datos vectorial en disco.',
@@ -2322,7 +2322,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Específicamente para Open WebUI, cambia el modelo de chat por defecto a uno que cite bien incluso sin prompting explícito de citas. Qwen3 14B y Llama 3.3 70B mencionan fuentes sin que se les pida; Llama 3.2 3B y Phi-4 Mini suelen omitir las citas bajo presión.',
+            text: 'Específicamente para Open WebUI, cambia el modelo de chat por defecto a uno que cite bien incluso sin prompting explícito de citas. Qwen3 14B y Llama 3.3 70B mencionan fuentes sin que se les pida; Llama 3.1 8B y Phi-4 Mini suelen omitir las citas bajo presión.',
           },
         ],
       },
@@ -2366,7 +2366,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'El razonamiento multi-salto es donde sufren las tres plataformas. La solución no es la plataforma — es tu modelo de chat. Cambiar Llama 3.2 3B por Qwen3 14B redujo las alucinaciones multi-salto en ~10 puntos porcentuales en cada plataforma. La calidad del RAG es necesaria pero no suficiente; el modelo de chat tiene que razonar realmente sobre los chunks recuperados.',
+            text: 'El razonamiento multi-salto es donde sufren las tres plataformas. La solución no es la plataforma — es tu modelo de chat. Cambiar Llama 3.1 8B por Qwen3 14B redujo las alucinaciones multi-salto en ~10 puntos porcentuales en cada plataforma. La calidad del RAG es necesaria pero no suficiente; el modelo de chat tiene que razonar realmente sobre los chunks recuperados.',
           },
         ],
         image: '/images/rag-vs-platforms-hallucination-rate-es.svg',
@@ -2661,7 +2661,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       'Duelo RAG local: AnythingLLM vs PrivateGPT vs Open WebUI em 5.047 páginas. Vencedores diferentes em precisão, latência e escalabilidade. Benchmarks completos.',
     current_models_mentioned: [
-      'Llama 3.2 3B',
+      'Llama 3.1 8B',
       'Qwen3 14B',
       'nomic-embed-text v1.5',
       'BAAI/bge-m3',
@@ -2742,7 +2742,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Como AnythingLLM, PrivateGPT e Open WebUI se comparam em 2026?',
         content:
-          'Testado em um corpus de 5.047 páginas (artigos de pesquisa, contratos, um manual técnico e exportações de wikis internos) usando Llama 3.2 3B Q4_K_M como modelo de chat e o embedder padrão de cada plataforma. Hardware: NVIDIA RTX 4070 (12 GB VRAM, 32 GB de RAM do sistema) no Windows 11; verificação cruzada em um MacBook Pro M5 (16 GB unificado). Os números são medianas de três execuções.',
+          'Testado em um corpus de 5.047 páginas (artigos de pesquisa, contratos, um manual técnico e exportações de wikis internos) usando Llama 3.1 8B Q4_K_M como modelo de chat e o embedder padrão de cada plataforma. Hardware: NVIDIA RTX 4070 (12 GB VRAM, 32 GB de RAM do sistema) no Windows 11; verificação cruzada em um MacBook Pro M5 (16 GB unificado). Os números são medianas de três execuções.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2830,11 +2830,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-we-tested',
         title: 'Como testamos as 3 plataformas em um corpus de 5.047 páginas',
         content:
-          '**Os mesmos documentos, o mesmo modelo de chat (Llama 3.2 3B Q4_K_M), as mesmas 50 consultas avaliadas.** O que isolamos foi a qualidade do RAG, não a qualidade do chat.',
+          '**Os mesmos documentos, o mesmo modelo de chat (Llama 3.1 8B Q4_K_M), as mesmas 50 consultas avaliadas.** O que isolamos foi a qualidade do RAG, não a qualidade do chat.',
         items: [
           '**Hardware:** NVIDIA RTX 4070 (12 GB VRAM, 32 GB de RAM do sistema) no Windows 11 como sistema principal; MacBook Pro M5 (16 GB de memória unificada) como verificação cruzada. Os números de latência vêm da execução na RTX 4070.',
           '**Corpus:** 5.047 páginas abrangendo quatro tipos de conteúdo — um manual de controle industrial de 1.047 páginas (figuras, tabelas, equações), um contrato de locação comercial de 38 páginas (texto jurídico denso), um artigo de pesquisa sobre transformers de 412 páginas e uma exportação de 3.550 páginas de um wiki de engenharia interno (markdown, código, prosa mista).',
-          '**Modelo de chat:** Llama 3.2 3B Q4_K_M (≈ 4,9 GB) carregado completamente na VRAM nas três aplicações, servido através do Ollama para AnythingLLM e Open WebUI, e através do runtime llama.cpp integrado para o PrivateGPT.',
+          '**Modelo de chat:** Llama 3.1 8B Q4_K_M (≈ 4,9 GB) carregado completamente na VRAM nas três aplicações, servido através do Ollama para AnythingLLM e Open WebUI, e através do runtime llama.cpp integrado para o PrivateGPT.',
           '**Embedders testados:** o embedder padrão de cada plataforma mais nomic-embed-text v1.5 (768 dim) e BAAI/bge-m3 (1.024 dim) onde houve suporte. O padrão foi usado para os números principais.',
           '**Conjunto de consultas:** 50 consultas distribuídas em 5 tipos — busca factual (10), raciocínio multi-salto (10), resumo (10), precisão de citações (10) e detecção de contradições (10). Avaliadas às cegas pela mesma pessoa contra um gabarito de respostas conhecido.',
           '**O que medimos:** latência de recuperação (p50 / p95 em ms sobre 50 consultas), taxa de alucinações (% de respostas com pelo menos um erro factual), correção de citações (nome de arquivo + página onde aplicável), pico de memória GPU durante a indexação e tamanho do banco de dados vetorial em disco.',
@@ -2925,7 +2925,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Especificamente para o Open WebUI, troque o modelo de chat padrão por um que cite bem mesmo sem prompting explícito de citações. Qwen3 14B e Llama 3.3 70B mencionam fontes sem que se peça; Llama 3.2 3B e Phi-4 Mini costumam omitir as citações sob pressão.',
+            text: 'Especificamente para o Open WebUI, troque o modelo de chat padrão por um que cite bem mesmo sem prompting explícito de citações. Qwen3 14B e Llama 3.3 70B mencionam fontes sem que se peça; Llama 3.1 8B e Phi-4 Mini costumam omitir as citações sob pressão.',
           },
         ],
       },
@@ -2969,7 +2969,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'O raciocínio multi-salto é onde as três plataformas sofrem. A solução não é a plataforma — é o seu modelo de chat. Trocar Llama 3.2 3B por Qwen3 14B reduziu as alucinações multi-salto em ~10 pontos percentuais em cada plataforma. A qualidade do RAG é necessária mas não suficiente; o modelo de chat precisa realmente raciocinar sobre os chunks recuperados.',
+            text: 'O raciocínio multi-salto é onde as três plataformas sofrem. A solução não é a plataforma — é o seu modelo de chat. Trocar Llama 3.1 8B por Qwen3 14B reduziu as alucinações multi-salto em ~10 pontos percentuais em cada plataforma. A qualidade do RAG é necessária mas não suficiente; o modelo de chat precisa realmente raciocinar sobre os chunks recuperados.',
           },
         ],
         image: '/images/rag-vs-platforms-hallucination-rate-en.svg',
@@ -3264,7 +3264,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       'مقارنة RAG المحلي: AnythingLLM مقابل PrivateGPT مقابل Open WebUI على 5.047 صفحة. فائزون مختلفون في الدقة والاستجابة وقابلية التوسع. معايير أداء كاملة.',
     current_models_mentioned: [
-      'Llama 3.2 3B',
+      'Llama 3.1 8B',
       'Qwen3 14B',
       'nomic-embed-text v1.5',
       'BAAI/bge-m3',
@@ -3345,7 +3345,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'كيف تتقاطع AnythingLLM وPrivateGPT وOpen WebUI في 2026؟',
         content:
-          'اختُبرت على مجموعة نصوص من 5.047 صفحة (مقالات بحثية، وعقود، ودليل تقني، وصادرات من ويكيات داخلية) باستخدام Llama 3.2 3B Q4_K_M كنموذج محادثة ونموذج التضمين الافتراضي لكل منصة. الجهاز: NVIDIA RTX 4070 (12 GB VRAM، 32 GB ذاكرة عشوائية) على Windows 11؛ تحقق متقاطع على MacBook Pro M5 (16 GB موحّد). الأرقام هي متوسطات ثلاث عمليات تشغيل.',
+          'اختُبرت على مجموعة نصوص من 5.047 صفحة (مقالات بحثية، وعقود، ودليل تقني، وصادرات من ويكيات داخلية) باستخدام Llama 3.1 8B Q4_K_M كنموذج محادثة ونموذج التضمين الافتراضي لكل منصة. الجهاز: NVIDIA RTX 4070 (12 GB VRAM، 32 GB ذاكرة عشوائية) على Windows 11؛ تحقق متقاطع على MacBook Pro M5 (16 GB موحّد). الأرقام هي متوسطات ثلاث عمليات تشغيل.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -3433,11 +3433,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-we-tested',
         title: 'كيف اختبرنا المنصات الثلاث على مجموعة نصوص من 5.047 صفحة',
         content:
-          '**نفس الوثائق، ونفس نموذج المحادثة (Llama 3.2 3B Q4_K_M)، ونفس الـ50 استعلامًا المُقيَّمة.** ما عزلناه هو جودة RAG، لا جودة المحادثة.',
+          '**نفس الوثائق، ونفس نموذج المحادثة (Llama 3.1 8B Q4_K_M)، ونفس الـ50 استعلامًا المُقيَّمة.** ما عزلناه هو جودة RAG، لا جودة المحادثة.',
         items: [
           '**الجهاز:** NVIDIA RTX 4070 (12 GB VRAM، 32 GB ذاكرة عشوائية للنظام) على Windows 11 كنظام أساسي؛ MacBook Pro M5 (16 GB ذاكرة موحّدة) كتحقق متقاطع. أرقام الزمن مصدرها تشغيل RTX 4070.',
           '**مجموعة النصوص:** 5.047 صفحة تضم أربعة أنواع محتوى — دليل تحكم صناعي من 1.047 صفحة (أشكال، وجداول، ومعادلات)، وعقد إيجار تجاري من 38 صفحة (نص قانوني كثيف)، ومقالة بحثية في المحوّلات من 412 صفحة، وتصدير من 3.550 صفحة لويكي هندسي داخلي (markdown، وكود، وكتابة مختلطة).',
-          '**نموذج المحادثة:** Llama 3.2 3B Q4_K_M (≈ 4.9 GB) مُحمَّل كليًا في VRAM في التطبيقات الثلاثة، مُقدَّم عبر Ollama لـAnythingLLM وOpen WebUI، وعبر وقت تشغيل llama.cpp المدمج لـPrivateGPT.',
+          '**نموذج المحادثة:** Llama 3.1 8B Q4_K_M (≈ 4.9 GB) مُحمَّل كليًا في VRAM في التطبيقات الثلاثة، مُقدَّم عبر Ollama لـAnythingLLM وOpen WebUI، وعبر وقت تشغيل llama.cpp المدمج لـPrivateGPT.',
           '**نماذج التضمين المختبَرة:** النموذج الافتراضي لكل منصة إضافةً إلى nomic-embed-text v1.5 (768 بُعدًا) وBAA/bge-m3 (1.024 بُعدًا) حيث كان مدعومًا. استُخدم الافتراضي للأرقام الرئيسية.',
           '**مجموعة الاستعلامات:** 50 استعلامًا موزعة على 5 أنواع — بحث واقعي (10)، واستدلال متعدد الخطوات (10)، وتلخيص (10)، ودقة الاستشهادات (10)، وكشف التناقضات (10). قُيِّمت بشكل أعمى من الشخص ذاته مقابل مفتاح إجابات معروف.',
           '**ما قسناه:** زمن الاسترجاع (p50 / p95 بالمللي ثانية على 50 استعلامًا)، ومعدل الهلوسة (% الردود التي تحتوي خطأً واقعيًا واحدًا على الأقل)، وصحة الاستشهادات (اسم الملف + الصفحة حيثما ينطبق)، وذروة ذاكرة GPU أثناء الفهرسة، وحجم قاعدة البيانات المتجهية على القرص.',
@@ -3528,7 +3528,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'تحديدًا لـOpen WebUI، غيّر نموذج المحادثة الافتراضي إلى نموذج يستشهد جيدًا حتى دون توجيه صريح للاستشهادات. يُذكر Qwen3 14B وLlama 3.3 70B المصادر دون طلب؛ أما Llama 3.2 3B وPhi-4 Mini فغالبًا ما يُهملان الاستشهادات تحت الضغط.',
+            text: 'تحديدًا لـOpen WebUI، غيّر نموذج المحادثة الافتراضي إلى نموذج يستشهد جيدًا حتى دون توجيه صريح للاستشهادات. يُذكر Qwen3 14B وLlama 3.3 70B المصادر دون طلب؛ أما Llama 3.1 8B وPhi-4 Mini فغالبًا ما يُهملان الاستشهادات تحت الضغط.',
           },
         ],
       },
@@ -3572,7 +3572,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'الاستدلال متعدد الخطوات هو حيث تعاني المنصات الثلاث. الحل ليس المنصة — بل نموذج المحادثة. خفّض تبديل Llama 3.2 3B بـQwen3 14B معدل الهلوسة متعددة الخطوات بـ~10 نقاط مئوية في كل منصة. جودة RAG ضرورية لكنها غير كافية؛ نموذج المحادثة يجب أن يستدل فعليًا على الأجزاء المسترجعة.',
+            text: 'الاستدلال متعدد الخطوات هو حيث تعاني المنصات الثلاث. الحل ليس المنصة — بل نموذج المحادثة. خفّض تبديل Llama 3.1 8B بـQwen3 14B معدل الهلوسة متعددة الخطوات بـ~10 نقاط مئوية في كل منصة. جودة RAG ضرورية لكنها غير كافية؛ نموذج المحادثة يجب أن يستدل فعليًا على الأجزاء المسترجعة.',
           },
         ],
         image: '/images/rag-vs-platforms-hallucination-rate-en.svg',
@@ -3867,7 +3867,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     twitterDescription:
       '로컬 RAG 대결: 5,047페이지에서 AnythingLLM vs PrivateGPT vs Open WebUI. 정확도, 지연 시간, 확장성에서 각기 다른 승자. 전체 벤치마크 결과 공개.',
     current_models_mentioned: [
-      'Llama 3.2 3B',
+      'Llama 3.1 8B',
       'Qwen3 14B',
       'nomic-embed-text v1.5',
       'BAAI/bge-m3',
@@ -3948,7 +3948,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: '2026년 AnythingLLM, PrivateGPT, Open WebUI 비교',
         content:
-          '5,047페이지 코퍼스(연구 논문, 계약서, 기술 매뉴얼, 내부 위키 내보내기)에서 채팅 모델로 Llama 3.2 3B Q4_K_M, 각 플랫폼의 기본 임베더를 사용하여 테스트했습니다. 하드웨어: Windows 11의 NVIDIA RTX 4070(12GB VRAM, 32GB 시스템 RAM) 기본 시스템; MacBook Pro M5(16GB 통합)로 교차 검증. 수치는 3회 실행의 중앙값입니다.',
+          '5,047페이지 코퍼스(연구 논문, 계약서, 기술 매뉴얼, 내부 위키 내보내기)에서 채팅 모델로 Llama 3.1 8B Q4_K_M, 각 플랫폼의 기본 임베더를 사용하여 테스트했습니다. 하드웨어: Windows 11의 NVIDIA RTX 4070(12GB VRAM, 32GB 시스템 RAM) 기본 시스템; MacBook Pro M5(16GB 통합)로 교차 검증. 수치는 3회 실행의 중앙값입니다.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -4036,11 +4036,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-we-tested',
         title: '5,047페이지 코퍼스에서 3개 플랫폼을 테스트한 방법',
         content:
-          '**동일한 문서, 동일한 채팅 모델(Llama 3.2 3B Q4_K_M), 동일한 50개의 평가된 쿼리.** 우리가 격리한 것은 채팅 품질이 아닌 RAG 품질이었습니다.',
+          '**동일한 문서, 동일한 채팅 모델(Llama 3.1 8B Q4_K_M), 동일한 50개의 평가된 쿼리.** 우리가 격리한 것은 채팅 품질이 아닌 RAG 품질이었습니다.',
         items: [
           '**하드웨어:** 기본 시스템으로 Windows 11의 NVIDIA RTX 4070(12GB VRAM, 32GB 시스템 RAM); 교차 검증으로 MacBook Pro M5(16GB 통합 메모리). 지연 시간 수치는 RTX 4070 실행에서 도출했습니다.',
           '**코퍼스:** 네 가지 콘텐츠 유형에 걸친 5,047페이지 — 1,047페이지 분량의 산업 제어 매뉴얼(그림, 표, 방정식), 38페이지 분량의 상업용 임대 계약(밀집된 법률 텍스트), 412페이지 분량의 트랜스포머 연구 논문, 3,550페이지 분량의 내부 엔지니어링 위키 내보내기(마크다운, 코드, 혼합 산문).',
-          '**채팅 모델:** Llama 3.2 3B Q4_K_M(≈4.9GB)을 세 애플리케이션 모두에서 VRAM에 완전히 로드했습니다. AnythingLLM과 Open WebUI는 Ollama를 통해, PrivateGPT는 내장 llama.cpp 런타임을 통해 서빙했습니다.',
+          '**채팅 모델:** Llama 3.1 8B Q4_K_M(≈4.9GB)을 세 애플리케이션 모두에서 VRAM에 완전히 로드했습니다. AnythingLLM과 Open WebUI는 Ollama를 통해, PrivateGPT는 내장 llama.cpp 런타임을 통해 서빙했습니다.',
           '**테스트된 임베더:** 각 플랫폼의 기본 임베더 + nomic-embed-text v1.5(768차원)와 BAAI/bge-m3(1,024차원)(호환되는 경우). 기본 임베더를 주요 수치에 사용했습니다.',
           '**쿼리 세트:** 5가지 유형에 걸친 50개 쿼리 — 사실 검색(10개), 다단계 추론(10개), 요약(10개), 인용 정확도(10개), 모순 감지(10개). 알려진 답변 키와 대조하여 동일한 사람이 블라인드 평가했습니다.',
           '**측정 항목:** 검색 지연 시간(50개 쿼리에서 p50/p95 ms), 환각 발생률(최소 한 가지 사실 오류가 있는 응답 비율), 인용 정확도(해당 시 파일명 + 페이지), 인덱싱 중 GPU 메모리 피크, 디스크의 벡터 데이터베이스 크기.',
@@ -4131,7 +4131,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: 'Open WebUI 한정으로, 명시적인 인용 프롬프트 없이도 인용을 잘 하는 모델로 기본 채팅 모델을 변경하십시오. Qwen3 14B와 Llama 3.3 70B는 요청하지 않아도 출처를 언급하지만, Llama 3.2 3B와 Phi-4 Mini는 압박 하에 인용을 종종 생략합니다.',
+            text: 'Open WebUI 한정으로, 명시적인 인용 프롬프트 없이도 인용을 잘 하는 모델로 기본 채팅 모델을 변경하십시오. Qwen3 14B와 Llama 3.3 70B는 요청하지 않아도 출처를 언급하지만, Llama 3.1 8B와 Phi-4 Mini는 압박 하에 인용을 종종 생략합니다.',
           },
         ],
       },
@@ -4175,7 +4175,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'tip',
-            text: '다단계 추론은 세 플랫폼 모두 고전하는 영역입니다. 해결책은 플랫폼이 아닌 채팅 모델입니다. Llama 3.2 3B를 Qwen3 14B로 교체하면 각 플랫폼에서 다단계 환각이 ~10%포인트 감소했습니다. RAG 품질은 필요하지만 충분하지 않습니다; 채팅 모델이 검색된 청크에 대해 실제로 추론해야 합니다.',
+            text: '다단계 추론은 세 플랫폼 모두 고전하는 영역입니다. 해결책은 플랫폼이 아닌 채팅 모델입니다. Llama 3.1 8B를 Qwen3 14B로 교체하면 각 플랫폼에서 다단계 환각이 ~10%포인트 감소했습니다. RAG 품질은 필요하지만 충분하지 않습니다; 채팅 모델이 검색된 청크에 대해 실제로 추론해야 합니다.',
           },
         ],
         image: '/images/rag-vs-platforms-hallucination-rate-ko.svg',

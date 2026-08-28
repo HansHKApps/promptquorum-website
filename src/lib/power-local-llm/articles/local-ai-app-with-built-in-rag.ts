@@ -27,7 +27,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'nomic-embed-text v1.5',
       'BAAI/bge-small-en-v1.5',
       'all-MiniLM-L6-v2',
-      'Llama 3.2 3B',
+      'Llama 3.1 8B',
       'Phi-4 Mini',
     ],
     current_hardware_mentioned: ['Apple M5 MacBook Pro 16GB', 'NVIDIA RTX 4070 12GB'],
@@ -94,7 +94,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'How Do AnythingLLM, LM Studio, and Jan + Documents Compare in 2026?',
         content:
-          'Tested on Apple M5 MacBook Pro (16 GB unified memory) and a Windows 11 desktop with NVIDIA RTX 4070 (12 GB VRAM, 32 GB system RAM). Identical document set: a 412-page research paper PDF, a 38-page contract DOCX, a 1,047-page technical manual PDF, plus 25 markdown notes (≈ 600 KB total). Each app paired with Llama 3.2 3B Q4_K_M as the chat model.',
+          'Tested on Apple M5 MacBook Pro (16 GB unified memory) and a Windows 11 desktop with NVIDIA RTX 4070 (12 GB VRAM, 32 GB system RAM). Identical document set: a 412-page research paper PDF, a 38-page contract DOCX, a 1,047-page technical manual PDF, plus 25 markdown notes (≈ 600 KB total). Each app paired with Llama 3.1 8B Q4_K_M as the chat model.',
         columns: ['App', 'File formats', 'Max practical size', 'Embedding model', 'Citations', 'Verdict'],
         rows: [
           {
@@ -175,7 +175,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-we-tested',
         title: 'How We Tested These 3 Apps',
         content:
-          '**Each app was installed fresh, fed the same document set, and asked the same 12 queries.** The same chat model (Llama 3.2 3B Q4_K_M, ≈ 4.9 GB) was used in each app to isolate RAG quality from chat quality.',
+          '**Each app was installed fresh, fed the same document set, and asked the same 12 queries.** The same chat model (Llama 3.1 8B Q4_K_M, ≈ 4.9 GB) was used in each app to isolate RAG quality from chat quality.',
         items: [
           '**Hardware:** Apple M5 MacBook Pro (16 GB unified memory) for macOS path; Windows 11 desktop with RTX 4070 (12 GB VRAM, 32 GB system RAM) for Windows path. Tests run on both.',
           '**Document set:** 412-page research paper PDF (transformer architecture paper with figures, tables, equations), 38-page contract DOCX (commercial real-estate lease, dense legal text), 1,047-page technical manual PDF (industrial control system reference), 25 markdown notes (≈ 600 KB of meeting notes and project specs).',
@@ -221,7 +221,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**File formats:** PDF, DOCX, TXT, MD. No EPUB, no HTML, no audio.',
           '**Embedding model:** nomic-embed-text v1.5 (768 dimensions) ships bundled. Not swappable from the UI in August 2026 — for embedding model choice, pick AnythingLLM instead.',
           '**Chunk control:** hidden from the UI. Chunk size, overlap, and top-K are auto-tuned based on the document size.',
-          '**Citations:** the model receives chunks as context and is instructed to cite the source filename. Citation quality depends on the chat model — Llama 3.2 3B and larger reliably mention the source; smaller models sometimes drop citations.',
+          '**Citations:** the model receives chunks as context and is instructed to cite the source filename. Citation quality depends on the chat model — Llama 3.1 8B and larger reliably mention the source; smaller models sometimes drop citations.',
           '**Performance:** indexed a single 412-page paper in 38 sec on M5, 24 sec on RTX 4070. First query reply: 2–3 sec. Practical limit before slowness: ~30 documents or ~3,000 pages per chat.',
           '**LLM backend:** uses the same chat model selected for the conversation — no separate setup. RAG happens transparently when documents are attached.',
         ],
@@ -257,7 +257,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sample-queries',
         title: 'Sample Queries and What Each App Returned',
         content:
-          '**Same documents, same chat model (Llama 3.2 3B Q4_K_M), same prompts.** Verbatim answers shortened where indicated. Each row shows whether the app retrieved the right chunk(s) and what it said.',
+          '**Same documents, same chat model (Llama 3.1 8B Q4_K_M), same prompts.** Verbatim answers shortened where indicated. Each row shows whether the app retrieved the right chunk(s) and what it said.',
         columns: ['Query', 'AnythingLLM', 'LM Studio', 'Jan + Documents'],
         rows: [
           {
@@ -299,7 +299,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         image: '/images/local-ai-app-with-built-in-rag-query-accuracy-en.svg',
         imageCaption:
-          'Query accuracy across 5 test questions on a 1,047-page manual and 412-page paper: AnythingLLM answered 5 of 5 correctly, LM Studio 4 of 5, Jan + Documents 2 of 5, using Llama 3.2 3B as the chat model.',
+          'Query accuracy across 5 test questions on a 1,047-page manual and 412-page paper: AnythingLLM answered 5 of 5 correctly, LM Studio 4 of 5, Jan + Documents 2 of 5, using Llama 3.1 8B as the chat model.',
       },
       citations: {
         id: 'citations',
@@ -308,7 +308,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Citation quality is the single biggest differentiator between the three apps.** AnythingLLM is the only one that gives you per-chunk citations with filename + page in August 2026. The other two cite by filename only, which is useful but not sufficient for academic or legal work.',
         items: [
           '**AnythingLLM:** every answer footnotes the chunks used. Format is `[filename, page X]` for PDFs, `[filename, section]` for markdown. Click to open the chunk in a side panel and verify.',
-          '**LM Studio:** citations are inline mentions in the chat reply ("According to research.pdf..."). No page numbers, no clickable verification panel. Reliability depends on the chat model — Llama 3.2 3B reliably cites; Phi-4 Mini sometimes drops citations.',
+          '**LM Studio:** citations are inline mentions in the chat reply ("According to research.pdf..."). No page numbers, no clickable verification panel. Reliability depends on the chat model — Llama 3.1 8B reliably cites; Phi-4 Mini sometimes drops citations.',
           '**Jan + Documents:** per-chunk citations by filename. No page numbers. The cited chunks are visible in the extension panel.',
           '**Verification cost:** AnythingLLM lets you verify a citation in 2 clicks; LM Studio and Jan require you to open the source PDF and search. For a 1,000-page manual, this matters.',
           '**Hallucinated citations:** all three apps occasionally cite a filename when the relevant chunk did not actually retrieve. Frequency in our 12-query test: AnythingLLM 0/12, LM Studio 1/12 (Phi-4 Mini), Jan 1/12. Always verify high-stakes claims.',
@@ -407,7 +407,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'How accurate are the citations?',
-            a: 'AnythingLLM provides per-chunk citations with filename and page (PDFs) — accurate enough for academic write-ups when verified. LM Studio cites by filename only; reliability depends on the chat model used (Llama 3.2 3B and larger reliably cite; Phi-4 Mini sometimes drops citations). Jan cites by filename per chunk, no page numbers. In a 12-query test, hallucinated citations were rare (0/12 AnythingLLM, 1/12 LM Studio, 1/12 Jan) but always verify high-stakes claims by opening the source.',
+            a: 'AnythingLLM provides per-chunk citations with filename and page (PDFs) — accurate enough for academic write-ups when verified. LM Studio cites by filename only; reliability depends on the chat model used (Llama 3.1 8B and larger reliably cite; Phi-4 Mini sometimes drops citations). Jan cites by filename per chunk, no page numbers. In a 12-query test, hallucinated citations were rare (0/12 AnythingLLM, 1/12 LM Studio, 1/12 Jan) but always verify high-stakes claims by opening the source.',
           },
           {
             q: 'Does built-in RAG work offline?',
@@ -600,7 +600,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Wie vergleichen sich AnythingLLM, LM Studio und Jan + Dokumente 2026?',
         content:
-          'Getestet auf Apple M5 MacBook Pro (16 GB unified memory) und einem Windows-11-Desktop mit NVIDIA RTX 4070 (12 GB VRAM, 32 GB Systemram). Identischer Dokumentsatz: ein 412-Seiten-Research-Paper PDF, ein 38-Seiten-Vertrag DOCX, ein 1.047-Seiten-technisches Handbuch PDF, plus 25 Markdown-Notizen (≈ 600 KB Gesamt). Jede App mit Llama 3.2 3B Q4_K_M als Chat-Modell gepaart.',
+          'Getestet auf Apple M5 MacBook Pro (16 GB unified memory) und einem Windows-11-Desktop mit NVIDIA RTX 4070 (12 GB VRAM, 32 GB Systemram). Identischer Dokumentsatz: ein 412-Seiten-Research-Paper PDF, ein 38-Seiten-Vertrag DOCX, ein 1.047-Seiten-technisches Handbuch PDF, plus 25 Markdown-Notizen (≈ 600 KB Gesamt). Jede App mit Llama 3.1 8B Q4_K_M als Chat-Modell gepaart.',
         columns: ['App', 'Dateiformate', 'Max. praktische Größe', 'Embedding-Modell', 'Zitate', 'Verdict'],
         rows: [
           {
@@ -681,7 +681,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-we-tested',
         title: 'Wie wir diese 3 Apps getestet haben',
         content:
-          '**Jede App wurde frisch installiert, mit dem gleichen Dokumentsatz versorgt und mit den gleichen 12 Abfragen befragt.** Das gleiche Chat-Modell (Llama 3.2 3B Q4_K_M, ≈ 4,9 GB) wurde in jeder App verwendet, um die RAG-Qualität von der Chat-Qualität zu isolieren.',
+          '**Jede App wurde frisch installiert, mit dem gleichen Dokumentsatz versorgt und mit den gleichen 12 Abfragen befragt.** Das gleiche Chat-Modell (Llama 3.1 8B Q4_K_M, ≈ 4,9 GB) wurde in jeder App verwendet, um die RAG-Qualität von der Chat-Qualität zu isolieren.',
         items: [
           '**Hardware:** Apple M5 MacBook Pro (16 GB unified memory) für macOS-Pfad; Windows-11-Desktop mit RTX 4070 (12 GB VRAM, 32 GB Systemram) für Windows-Pfad. Tests laufen auf beiden.',
           '**Dokumentsatz:** 412-Seiten-Research-Paper PDF (Transformer-Architektur-Paper mit Abbildungen, Tabellen, Gleichungen), 38-Seiten-Vertrags-DOCX (gewerblicher Immobilienleasing, dichter juristischer Text), 1.047-Seiten-technisches Handbuch PDF (Industriekontrollsystem-Referenz), 25 Markdown-Notizen (≈ 600 KB Besprechungsnotizen und Projektspezifikationen).',
@@ -727,7 +727,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Dateiformate:** PDF, DOCX, TXT, MD. Kein EPUB, kein HTML, kein Audio.',
           '**Embedding-Modell:** nomic-embed-text v1.5 (768 Dimensionen) ist gebündelt. Nicht austauschbar aus der UI im August 2026 — wählen Sie für die Embedding-Modell-Wahl stattdessen AnythingLLM.',
           '**Chunk-Kontrolle:** vor der UI verborgen. Chunk-Größe, Überlappung und Top-K werden basierend auf der Dokumentgröße automatisch abgestimmt.',
-          '**Zitate:** Das Modell empfängt Chunks als Kontext und wird angewiesen, die Quelle zu zitieren. Die Zitierqualität hängt vom Chat-Modell ab — Llama 3.2 3B und größer erwähnen zuverlässig die Quelle; kleinere Modelle lassen manchmal Zitate fallen.',
+          '**Zitate:** Das Modell empfängt Chunks als Kontext und wird angewiesen, die Quelle zu zitieren. Die Zitierqualität hängt vom Chat-Modell ab — Llama 3.1 8B und größer erwähnen zuverlässig die Quelle; kleinere Modelle lassen manchmal Zitate fallen.',
           '**Leistung:** Indiziert ein einzelnes 412-Seiten-Paper in 38 Sek auf M5, 24 Sek auf RTX 4070. Erste Abfrageantwort: 2–3 Sek. Praktisches Limit vor Langsamkeit: ~30 Dokumente oder ~3.000 Seiten pro Chat.',
           '**LLM-Backend:** verwendet das gleiche Chat-Modell, das für die Konversation ausgewählt ist — kein separates Setup. RAG geschieht transparent, wenn Dokumente angehängt sind.',
         ],
@@ -763,7 +763,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sample-queries',
         title: 'Beispielabfragen und was jede App zurückgegeben hat',
         content:
-          '**Gleiche Dokumente, gleches Chat-Modell (Llama 3.2 3B Q4_K_M), gleche Prompts.** Wörtliche Antworten gekürzt, wo angegeben. Jede Zeile zeigt, ob die App den richtigen Chunk(s) abgerufen hat und was sie sagte.',
+          '**Gleiche Dokumente, gleches Chat-Modell (Llama 3.1 8B Q4_K_M), gleche Prompts.** Wörtliche Antworten gekürzt, wo angegeben. Jede Zeile zeigt, ob die App den richtigen Chunk(s) abgerufen hat und was sie sagte.',
         columns: ['Abfrage', 'AnythingLLM', 'LM Studio', 'Jan + Dokumente'],
         rows: [
           {
@@ -805,7 +805,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         image: '/images/local-ai-app-with-built-in-rag-query-accuracy-en.svg',
         imageCaption:
-          'Antwortgenauigkeit bei 5 Testfragen zu einem 1.047-seitigen Handbuch und einem 412-seitigen Paper: AnythingLLM beantwortete 5 von 5 korrekt, LM Studio 4 von 5, Jan + Documents 2 von 5, mit Llama 3.2 3B als Chat-Modell.',
+          'Antwortgenauigkeit bei 5 Testfragen zu einem 1.047-seitigen Handbuch und einem 412-seitigen Paper: AnythingLLM beantwortete 5 von 5 korrekt, LM Studio 4 von 5, Jan + Documents 2 von 5, mit Llama 3.1 8B als Chat-Modell.',
       },
       citations: {
         id: 'citations',
@@ -814,7 +814,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Zitierqualität ist der einzige größte Differentiator zwischen den drei Apps.** AnythingLLM ist die einzige, die Ihnen im August 2026 Pro-Chunk-Zitate mit Dateiname + Seite gibt. Die anderen zwei zitieren nur nach Dateiname, was nützlich aber für akademische oder rechtliche Arbeiten nicht ausreichend ist.',
         items: [
           '**AnythingLLM:** Jede Antwort beziffert die verwendeten Chunks. Format ist `[Dateiname, Seite X]` für PDFs, `[Dateiname, Abschnitt]` für Markdown. Klicken Sie, um den Chunk in einem Seitenpanel zu öffnen und zu überprüfen.',
-          '**LM Studio:** Zitate sind Inline-Erwähnungen in der Chat-Antwort („Laut Research.pdf..."). Keine Seitenzahlen, kein klickbares Überprüfungspanel. Die Zuverlässigkeit hängt vom Chat-Modell ab — Llama 3.2 3B zitiert zuverlässig; Phi-4 Mini lässt manchmal Zitate fallen.',
+          '**LM Studio:** Zitate sind Inline-Erwähnungen in der Chat-Antwort („Laut Research.pdf..."). Keine Seitenzahlen, kein klickbares Überprüfungspanel. Die Zuverlässigkeit hängt vom Chat-Modell ab — Llama 3.1 8B zitiert zuverlässig; Phi-4 Mini lässt manchmal Zitate fallen.',
           '**Jan + Dokumente:** Pro-Chunk-Zitate nach Dateiname. Keine Seitenzahlen. Die zitierten Chunks sind im Erweiterungs-Panel sichtbar.',
           '**Verifizierungskosten:** AnythingLLM lässt Sie ein Zitat in 2 Klicks überprüfen; LM Studio und Jan erfordern, dass Sie die Quell-PDF öffnen und suchen. Für ein 1.000-Seiten-Handbuch ist dies wichtig.',
           '**Halluzinierte Zitate:** Alle drei Apps zitieren gelegentlich einen Dateinamen, wenn der relevante Chunk nicht tatsächlich abgerufen wurde. Häufigkeit in unserem 12-Abfrage-Test: AnythingLLM 0/12, LM Studio 1/12 (Phi-4 Mini), Jan 1/12. Überprüfen Sie immer hocheinsatzige Ansprüche.',
@@ -913,7 +913,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Wie genau sind die Zitate?',
-            a: 'AnythingLLM liefert Pro-Chunk-Zitate mit Dateiname und Seite (PDFs) — genau genug für akademische Arbeiten, wenn überprüft. LM Studio zitiert nur nach Dateiname; die Zuverlässigkeit hängt vom Chat-Modell ab (Llama 3.2 3B und größer zitieren zuverlässig; Phi-4 Mini lässt manchmal Zitate fallen). Jan zitiert Pro-Chunk nach Dateiname, keine Seitenzahlen. In einem 12-Abfrage-Test waren halluzinierte Zitate selten (0/12 AnythingLLM, 1/12 LM Studio, 1/12 Jan), überprüfen Sie aber immer hocheinsatzige Ansprüche, indem Sie die Quelle öffnen.',
+            a: 'AnythingLLM liefert Pro-Chunk-Zitate mit Dateiname und Seite (PDFs) — genau genug für akademische Arbeiten, wenn überprüft. LM Studio zitiert nur nach Dateiname; die Zuverlässigkeit hängt vom Chat-Modell ab (Llama 3.1 8B und größer zitieren zuverlässig; Phi-4 Mini lässt manchmal Zitate fallen). Jan zitiert Pro-Chunk nach Dateiname, keine Seitenzahlen. In einem 12-Abfrage-Test waren halluzinierte Zitate selten (0/12 AnythingLLM, 1/12 LM Studio, 1/12 Jan), überprüfen Sie aber immer hocheinsatzige Ansprüche, indem Sie die Quelle öffnen.',
           },
           {
             q: 'Funktioniert integriertes RAG offline?',
@@ -1114,7 +1114,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Comparaison : AnythingLLM, LM Studio et Jan + Documents 2026',
         content:
-          'Testé sur MacBook Pro M5 (16 GB mémoire) et Windows 11 avec RTX 4070. Ensemble de documents identique : PDF recherche (412 pages), contrat DOCX (38 pages), manuel technique PDF (1 047 pages), 25 notes markdown. Chaque app avec Llama 3.2 3B Q4_K_M.',
+          'Testé sur MacBook Pro M5 (16 GB mémoire) et Windows 11 avec RTX 4070. Ensemble de documents identique : PDF recherche (412 pages), contrat DOCX (38 pages), manuel technique PDF (1 047 pages), 25 notes markdown. Chaque app avec Llama 3.1 8B Q4_K_M.',
         columns: ['App', 'Formats', 'Taille max', 'Embedding', 'Citations', 'Verdict'],
         rows: [
           {
@@ -1195,7 +1195,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-we-tested',
         title: 'Méthodologie de test',
         content:
-          '**Chaque app testée fraîchement, même ensemble de documents, mêmes requêtes.** Même modèle de chat (Llama 3.2 3B Q4_K_M, ≈ 4.9 GB) pour isoler la qualité RAG.',
+          '**Chaque app testée fraîchement, même ensemble de documents, mêmes requêtes.** Même modèle de chat (Llama 3.1 8B Q4_K_M, ≈ 4.9 GB) pour isoler la qualité RAG.',
         items: [
           '**Hardware :** MacBook Pro M5 (16 GB mémoire) pour macOS ; Windows 11 + RTX 4070 (12 GB VRAM, 32 GB RAM système).',
           '**Documents :** Paper recherche PDF (412 pages), contrat DOCX (38 pages), manuel technique PDF (1 047 pages), 25 notes markdown.',
@@ -1241,7 +1241,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Formats :** PDF, DOCX, TXT, MD. Pas EPUB, HTML, audio.',
           '**Embedding :** nomic-embed-text v1.5 (768-dim) bundlé. Non-interchangeable via UI août 2026 — utilisez AnythingLLM pour choix.',
           '**Chunking :** Caché. Taille/overlap/top-K auto-optimisés par taille du document.',
-          '**Citations :** Modèle reçoit chunks et reçoit instruction de citer. Qualité dépend du modèle — Llama 3.2 3B fiable, Phi-4 Mini parfois omet.',
+          '**Citations :** Modèle reçoit chunks et reçoit instruction de citer. Qualité dépend du modèle — Llama 3.1 8B fiable, Phi-4 Mini parfois omet.',
           '**Perf :** Paper unique indexé 38s (M5), 24s (RTX 4070). Requête ~2–3s. Plafond ~30 docs avant ralentissement.',
           '**Backend LLM :** Même modèle que chat — RAG transparent si documents attachés.',
         ],
@@ -1277,7 +1277,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sample-queries',
         title: 'Exemples de requêtes et résultats',
         content:
-          '**Documents identiques, modèle identique (Llama 3.2 3B Q4_K_M), prompts identiques.** Chaque ligne montre si l\'app a retrieval le bon chunk et ce qu\'elle a répondu.',
+          '**Documents identiques, modèle identique (Llama 3.1 8B Q4_K_M), prompts identiques.** Chaque ligne montre si l\'app a retrieval le bon chunk et ce qu\'elle a répondu.',
         columns: ['Requête', 'AnythingLLM', 'LM Studio', 'Jan + Documents'],
         rows: [
           {
@@ -1319,7 +1319,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         image: '/images/local-ai-app-with-built-in-rag-query-accuracy-en.svg',
         imageCaption:
-          'Précision des réponses sur 5 questions de test portant sur un manuel de 1 047 pages et un article de 412 pages : AnythingLLM a répondu correctement à 5 questions sur 5, LM Studio à 4 sur 5, Jan + Documents à 2 sur 5, avec Llama 3.2 3B comme modèle de conversation.',
+          'Précision des réponses sur 5 questions de test portant sur un manuel de 1 047 pages et un article de 412 pages : AnythingLLM a répondu correctement à 5 questions sur 5, LM Studio à 4 sur 5, Jan + Documents à 2 sur 5, avec Llama 3.1 8B comme modèle de conversation.',
       },
       citations: {
         id: 'citations',
@@ -1328,7 +1328,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Citation quality est le plus gros différentiateur.** AnythingLLM seul offre par-chunk avec filename + page août 2026. Les autres citent par filename seulement.',
         items: [
           '**AnythingLLM :** footnotes par chunk. Format `[filename, page X]` PDFs, `[filename, section]` markdown. Cliquez pour vérifier en side panel.',
-          '**LM Studio :** mentions inline (« Selon research.pdf... »). Pas pages, pas panel vérif. Fiabilité dépend modèle — Llama 3.2 3B fiable, Phi-4 Mini omet parfois.',
+          '**LM Studio :** mentions inline (« Selon research.pdf... »). Pas pages, pas panel vérif. Fiabilité dépend modèle — Llama 3.1 8B fiable, Phi-4 Mini omet parfois.',
           '**Jan + Documents :** citations par chunk + filename. Pas pages. Chunks visibles dans extension panel.',
           '**Coût vérif :** AnythingLLM 2 clics ; LM Studio/Jan demandent ouvrir PDF source. Pour manuels 1 000 pages, cela importe.',
           '**Citations hallucin :** Tous trois citent parfois faux. Fréquence 12-query test : AnythingLLM 0/12, LM Studio 1/12, Jan 1/12. Vérifiez toujours stakes élevés.',
@@ -1427,7 +1427,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Précision citations ?',
-            a: 'AnythingLLM par-chunk filename+page — assez académique si vérifiées. LM Studio filename seul ; fiabilité modèle-dépendante (Llama 3.2 3B fiable, Phi-4 Mini parfois omet). Jan par-chunk filename, pas pages. 12-query test : hallucinations rares (0/12 AnythingLLM, 1/12 autre) — vérifiez stakes élevés.',
+            a: 'AnythingLLM par-chunk filename+page — assez académique si vérifiées. LM Studio filename seul ; fiabilité modèle-dépendante (Llama 3.1 8B fiable, Phi-4 Mini parfois omet). Jan par-chunk filename, pas pages. 12-query test : hallucinations rares (0/12 AnythingLLM, 1/12 autre) — vérifiez stakes élevés.',
           },
           {
             q: 'RAG hors ligne ?',
@@ -1620,7 +1620,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'AnythingLLM、LM Studio、Jan + ドキュメント 2026年比較',
         content:
-          'Apple M5 MacBook Pro（16GB統合メモリ）および NVIDIA RTX 4070（12GB VRAM、32GB システムRAM）Windows 11デスクトップでテスト。ドキュメント同一セット：412ページリサーチPDF、38ページ契約DOCX、1,047ページ技術マニュアルPDF、25 markdown ノート（計600KB）。各アプリは Llama 3.2 3B Q4_K_M チャットモデル。',
+          'Apple M5 MacBook Pro（16GB統合メモリ）および NVIDIA RTX 4070（12GB VRAM、32GB システムRAM）Windows 11デスクトップでテスト。ドキュメント同一セット：412ページリサーチPDF、38ページ契約DOCX、1,047ページ技術マニュアルPDF、25 markdown ノート（計600KB）。各アプリは Llama 3.1 8B Q4_K_M チャットモデル。',
         columns: ['アプリ', 'ファイル形式', '実用的な最大サイズ', '埋め込みモデル', '引用', '判定'],
         rows: [
           {
@@ -1701,7 +1701,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-we-tested',
         title: 'テスト方法',
         content:
-          '**各アプリをクリーンインストール、同じドキュメント セット、同じ12クエリで評価。** RAG 品質をチャット品質から分離するため同じチャットモデル（Llama 3.2 3B Q4_K_M、≈ 4.9 GB）を使用。',
+          '**各アプリをクリーンインストール、同じドキュメント セット、同じ12クエリで評価。** RAG 品質をチャット品質から分離するため同じチャットモデル（Llama 3.1 8B Q4_K_M、≈ 4.9 GB）を使用。',
         items: [
           '**ハードウェア：** MacBook Pro M5（16GB 統合メモリ）macOS パス用；Windows 11 + RTX 4070（12GB VRAM、32GB システム RAM）。両方でテスト実行。',
           '**ドキュメント セット：** 412ページリサーチペーパーPDF（図表数式付き）、38ページ契約DOCX（企業不動産賃貸、密集法的テキスト）、1,047ページ技術マニュアルPDF（産業制御システム）、25 markdown ノート（～600 KB 会議ノート、プロジェクト仕様）。',
@@ -1747,7 +1747,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**ファイル形式：** PDF、DOCX、TXT、MD。EPUB、HTML、音声なし。',
           '**埋め込みモデル：** nomic-embed-text v1.5（768次元）バンドル。2026年8月時点で UI から交換不可 — 埋め込みモデル選択は AnythingLLM 使用。',
           '**チャンク制御：** UI から隠蔽。チャンクサイズ、オーバーラップ、top-K はドキュメントサイズに基づき自動最適化。',
-          '**引用：** モデルはチャンクをコンテキストとして受け取り、引用指示受け取り。引用品質はチャットモデル依存 — Llama 3.2 3B 以上は確実に引用、Phi-4 Mini は時折落とす。',
+          '**引用：** モデルはチャンクをコンテキストとして受け取り、引用指示受け取り。引用品質はチャットモデル依存 — Llama 3.1 8B 以上は確実に引用、Phi-4 Mini は時折落とす。',
           '**パフォーマンス：** シングルペーパー M5 で 38秒、RTX 4070 で 24秒でインデックス。初回クエリ：2～3秒。実用上限：ドキュメント ~30 件またはチャット ~3,000ページ。',
           '**LLM バックエンド：** 会話選択と同じチャットモデル使用 — ドキュメント添付時に RAG 透過化。',
         ],
@@ -1783,7 +1783,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sample-queries',
         title: 'サンプルクエリと各アプリの回答',
         content:
-          '**ドキュメント同一、チャットモデル同一（Llama 3.2 3B Q4_K_M）、プロンプト同一。** 回答は必要に応じて短縮。各行は、アプリが正しいチャンク検索できたか、何を言ったかを表示。',
+          '**ドキュメント同一、チャットモデル同一（Llama 3.1 8B Q4_K_M）、プロンプト同一。** 回答は必要に応じて短縮。各行は、アプリが正しいチャンク検索できたか、何を言ったかを表示。',
         columns: ['クエリ', 'AnythingLLM', 'LM Studio', 'Jan + ドキュメント'],
         rows: [
           {
@@ -1825,7 +1825,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         image: '/images/local-ai-app-with-built-in-rag-query-accuracy-en.svg',
         imageCaption:
-          '1,047ページのマニュアルと412ページの論文を使った5つのテスト質問での正答率：AnythingLLMは5問中5問正解、LM Studioは5問中4問、Jan + Documentsは5問中2問正解（チャットモデルはLlama 3.2 3B）。',
+          '1,047ページのマニュアルと412ページの論文を使った5つのテスト質問での正答率：AnythingLLMは5問中5問正解、LM Studioは5問中4問、Jan + Documentsは5問中2問正解（チャットモデルはLlama 3.1 8B）。',
       },
       citations: {
         id: 'citations',
@@ -1834,7 +1834,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**引用品質は 3つのアプリの単一最大の差別化要因。** AnythingLLM だけが 2026年8月にチャンク単位のファイル名 + ページ。他は ファイル名のみ。',
         items: [
           '**AnythingLLM：** 各回答はチャンク使用をフットノート。形式は `[filename、page X]` PDF、`[filename、section]` markdown。パネルで開いてソース段落検証。',
-          '**LM Studio：** チャット回答内インラインメンション（「research.pdf による...」）。ページなし、検証パネルなし。引用信頼性はモデル依存 — Llama 3.2 3B 確実、Phi-4 Mini 時折落とす。',
+          '**LM Studio：** チャット回答内インラインメンション（「research.pdf による...」）。ページなし、検証パネルなし。引用信頼性はモデル依存 — Llama 3.1 8B 確実、Phi-4 Mini 時折落とす。',
           '**Jan + ドキュメント：** チャンク単位の引用、ファイル名付き。ページなし。拡張パネルで引用チャンク可視。',
           '**検証コスト：** AnythingLLM 2クリック；LM Studio/Jan はソース PDF 開いて検索。1,000ページマニュアル対象、これ重要。',
           '**幻想引用：** 3つ全部たまに非検索チャンク で ファイル名引用。12クエリテスト頻度：AnythingLLM 0/12、LM Studio 1/12、Jan 1/12。ハイステークス主張は常に検証。',
@@ -1933,7 +1933,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '引用精度はどのくらい？',
-            a: 'AnythingLLM はチャンク単位の引用、ファイル名 + ページ（PDF）— アカデミック執筆に適切（検証時）。LM Studio はファイル名のみ；信頼性はモデル依存（Llama 3.2 3B 確実、Phi-4 Mini 時折落とす）。Jan はチャンク単位ファイル名、ページなし。12クエリテスト：幻想引用稀少（AnythingLLM 0/12、LM Studio 1/12、Jan 1/12）— ハイステークス主張は常に検証。',
+            a: 'AnythingLLM はチャンク単位の引用、ファイル名 + ページ（PDF）— アカデミック執筆に適切（検証時）。LM Studio はファイル名のみ；信頼性はモデル依存（Llama 3.1 8B 確実、Phi-4 Mini 時折落とす）。Jan はチャンク単位ファイル名、ページなし。12クエリテスト：幻想引用稀少（AnythingLLM 0/12、LM Studio 1/12、Jan 1/12）— ハイステークス主張は常に検証。',
           },
           {
             q: '内蔵 RAG はオフライン動作？',
@@ -2130,7 +2130,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'AnythingLLM、LM Studio和Jan + 文档 2026年对比',
         content:
-          '在Apple M5 MacBook Pro（16GB统一内存）和Windows 11配NVIDIA RTX 4070（12GB VRAM、32GB系统RAM）上测试。相同文档集：412页研究论文PDF、38页合同DOCX、1,047页技术手册PDF、25个markdown笔记（总共600KB）。每个应用配Llama 3.2 3B Q4_K_M聊天模型。',
+          '在Apple M5 MacBook Pro（16GB统一内存）和Windows 11配NVIDIA RTX 4070（12GB VRAM、32GB系统RAM）上测试。相同文档集：412页研究论文PDF、38页合同DOCX、1,047页技术手册PDF、25个markdown笔记（总共600KB）。每个应用配Llama 3.1 8B Q4_K_M聊天模型。',
         columns: ['应用', '文件格式', '最大实际大小', '嵌入模型', '引用', '结论'],
         rows: [
           {
@@ -2211,7 +2211,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-we-tested',
         title: '测试方法',
         content:
-          '**每个应用都被新鲜安装、用相同文档集、用相同12个查询进行测试。** 使用相同的聊天模型（Llama 3.2 3B Q4_K_M，≈ 4.9 GB）将RAG质量与聊天质量分离。',
+          '**每个应用都被新鲜安装、用相同文档集、用相同12个查询进行测试。** 使用相同的聊天模型（Llama 3.1 8B Q4_K_M，≈ 4.9 GB）将RAG质量与聊天质量分离。',
         items: [
           '**硬件：** MacBook Pro M5（16GB统一内存）用于macOS路径；Windows 11 + RTX 4070（12GB VRAM、32GB系统RAM）。在两者上运行测试。',
           '**文档集：** 412页研究论文PDF（图表、表格、公式）、38页合同DOCX（商业房地产租赁、密集法律文本）、1,047页技术手册PDF（工业控制系统）、25个markdown笔记（～600 KB会议记录、项目规范）。',
@@ -2257,7 +2257,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**文件格式：** PDF、DOCX、TXT、MD。无EPUB、HTML、音频。',
           '**嵌入模型：** nomic-embed-text v1.5（768维）捆绑。2026年8月不可从UI交换 — 对于嵌入模型选择，改用AnythingLLM。',
           '**块控制：** 从UI中隐藏。块大小、重叠和top-K根据文档大小自动调整。',
-          '**引用：** 模型接收块作为上下文并获得引用指令。引用质量取决于聊天模型 — Llama 3.2 3B及以上可靠地提及来源；更小的模型有时会丢弃引用。',
+          '**引用：** 模型接收块作为上下文并获得引用指令。引用质量取决于聊天模型 — Llama 3.1 8B及以上可靠地提及来源；更小的模型有时会丢弃引用。',
           '**性能：** 在M5上用38秒、RTX 4070上用24秒索引一份412页的论文。首次查询回复：2～3秒。实际极限在减速前：~30文档或~3,000页/聊天。',
           '**LLM后端：** 使用为对话选择的相同聊天模型 — 当文档附加时RAG发生透明。',
         ],
@@ -2293,7 +2293,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sample-queries',
         title: '示例查询和每个应用返回的内容',
         content:
-          '**相同的文档、相同的聊天模型（Llama 3.2 3B Q4_K_M）、相同的提示。** 逐字答案在适当处缩短。每行显示应用是否检索了正确的块以及它说了什么。',
+          '**相同的文档、相同的聊天模型（Llama 3.1 8B Q4_K_M）、相同的提示。** 逐字答案在适当处缩短。每行显示应用是否检索了正确的块以及它说了什么。',
         columns: ['查询', 'AnythingLLM', 'LM Studio', 'Jan + 文档'],
         rows: [
           {
@@ -2335,7 +2335,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         image: '/images/local-ai-app-with-built-in-rag-query-accuracy-en.svg',
         imageCaption:
-          '在一份 1,047 页手册和一篇 412 页论文上进行的 5 道测试题准确率：AnythingLLM 答对 5/5，LM Studio 答对 4/5，Jan + Documents 答对 2/5，聊天模型为 Llama 3.2 3B。',
+          '在一份 1,047 页手册和一篇 412 页论文上进行的 5 道测试题准确率：AnythingLLM 答对 5/5，LM Studio 答对 4/5，Jan + Documents 答对 2/5，聊天模型为 Llama 3.1 8B。',
       },
       citations: {
         id: 'citations',
@@ -2344,7 +2344,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**引用质量是三个应用中最大的单一区分因素。** AnythingLLM是2026年8月唯一提供按块加文件名 + 页码的应用。其他两个只按文件名引用，这对学术或法律工作不足。',
         items: [
           '**AnythingLLM：** 每个答案都用所用块加脚注。格式为`[filename，page X]` PDFs、`[filename，section]` markdown。点击在侧面板中打开块以验证。',
-          '**LM Studio：** 聊天回复中的内联提及（「根据research.pdf...」）。无页码，无可点击的验证面板。可靠性取决于聊天模型 — Llama 3.2 3B可靠地引用；Phi-4 Mini有时丢弃引用。',
+          '**LM Studio：** 聊天回复中的内联提及（「根据research.pdf...」）。无页码，无可点击的验证面板。可靠性取决于聊天模型 — Llama 3.1 8B可靠地引用；Phi-4 Mini有时丢弃引用。',
           '**Jan + 文档：** 按块引用加文件名。无页码。引用的块在扩展面板中可见。',
           '**验证成本：** AnythingLLM用2次点击验证引用；LM Studio和Jan要求您打开源PDF并搜索。对于1,000页手册，这很重要。',
           '**幻想引用：** 三个应用都偶尔在不实际检索相关块的情况下引用文件名。在我们的12查询测试中频率：AnythingLLM 0/12、LM Studio 1/12、Jan 1/12。始终验证高风险声明。',
@@ -2443,7 +2443,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '引用的准确性如何？',
-            a: 'AnythingLLM提供按块的引用，文件名和页码（PDF）— 经过验证后足以用于学术文章。LM Studio按文件名引用；可靠性取决于聊天模型（Llama 3.2 3B及以上可靠地引用；Phi-4 Mini有时会丢弃）。Jan按块引用，文件名，无页码。在12查询测试中，虚假引用很少（AnythingLLM 0/12、LM Studio 1/12、Jan 1/12）— 始终验证高风险声明。',
+            a: 'AnythingLLM提供按块的引用，文件名和页码（PDF）— 经过验证后足以用于学术文章。LM Studio按文件名引用；可靠性取决于聊天模型（Llama 3.1 8B及以上可靠地引用；Phi-4 Mini有时会丢弃）。Jan按块引用，文件名，无页码。在12查询测试中，虚假引用很少（AnythingLLM 0/12、LM Studio 1/12、Jan 1/12）— 始终验证高风险声明。',
           },
           {
             q: '内置RAG可以离线工作吗？',
@@ -2591,7 +2591,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'nomic-embed-text v1.5',
       'BAAI/bge-small-en-v1.5',
       'all-MiniLM-L6-v2',
-      'Llama 3.2 3B',
+      'Llama 3.1 8B',
       'Phi-4 Mini',
     ],
     current_hardware_mentioned: ['Apple M5 MacBook Pro 16GB', 'NVIDIA RTX 4070 12GB'],
@@ -2658,7 +2658,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: '¿Cómo se comparan AnythingLLM, LM Studio y Jan + Documentos en 2026?',
         content:
-          'Probado en Apple M5 MacBook Pro (16 GB de memoria unificada) y un equipo de escritorio Windows 11 con NVIDIA RTX 4070 (12 GB VRAM, 32 GB de RAM del sistema). Conjunto de documentos idéntico: un PDF de investigación de 412 páginas, un contrato DOCX de 38 páginas, un manual técnico PDF de 1.047 páginas y 25 notas markdown (≈ 600 KB en total). Cada app emparejada con Llama 3.2 3B Q4_K_M como modelo de chat.',
+          'Probado en Apple M5 MacBook Pro (16 GB de memoria unificada) y un equipo de escritorio Windows 11 con NVIDIA RTX 4070 (12 GB VRAM, 32 GB de RAM del sistema). Conjunto de documentos idéntico: un PDF de investigación de 412 páginas, un contrato DOCX de 38 páginas, un manual técnico PDF de 1.047 páginas y 25 notas markdown (≈ 600 KB en total). Cada app emparejada con Llama 3.1 8B Q4_K_M como modelo de chat.',
         columns: ['App', 'Formatos', 'Tamaño máx. práctico', 'Modelo de embedding', 'Citas', 'Veredicto'],
         rows: [
           {
@@ -2739,7 +2739,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-we-tested',
         title: 'Cómo probamos estas 3 apps',
         content:
-          '**Cada app fue instalada desde cero, alimentada con el mismo conjunto de documentos y evaluada con las mismas 12 consultas.** Se utilizó el mismo modelo de chat (Llama 3.2 3B Q4_K_M, ≈ 4,9 GB) en cada app para aislar la calidad RAG de la calidad del chat.',
+          '**Cada app fue instalada desde cero, alimentada con el mismo conjunto de documentos y evaluada con las mismas 12 consultas.** Se utilizó el mismo modelo de chat (Llama 3.1 8B Q4_K_M, ≈ 4,9 GB) en cada app para aislar la calidad RAG de la calidad del chat.',
         items: [
           '**Hardware:** Apple M5 MacBook Pro (16 GB de memoria unificada) para el recorrido macOS; escritorio Windows 11 con RTX 4070 (12 GB VRAM, 32 GB de RAM del sistema) para el recorrido Windows. Las pruebas se ejecutaron en ambos.',
           '**Conjunto de documentos:** PDF de artículo de investigación de 412 páginas (arquitectura transformer con figuras, tablas y ecuaciones), DOCX de contrato de 38 páginas (arrendamiento inmobiliario comercial, texto legal denso), PDF de manual técnico de 1.047 páginas (referencia de sistema de control industrial), 25 notas markdown (≈ 600 KB de actas de reuniones y especificaciones de proyectos).',
@@ -2785,7 +2785,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Formatos de archivo:** PDF, DOCX, TXT, MD. Sin EPUB, HTML ni audio.',
           '**Modelo de embedding:** nomic-embed-text v1.5 (768 dimensiones) incluido. No es intercambiable desde la interfaz en mayo 2026 — para elegir el modelo de embedding, usa AnythingLLM.',
           '**Control de fragmentos:** oculto en la interfaz. El tamaño del fragmento, el solapamiento y el top-K se ajustan automáticamente según el tamaño del documento.',
-          '**Citas:** el modelo recibe los fragmentos como contexto y recibe instrucciones de citar el nombre del archivo fuente. La calidad de las citas depende del modelo de chat — Llama 3.2 3B y superiores citan de forma fiable; los modelos más pequeños a veces omiten las citas.',
+          '**Citas:** el modelo recibe los fragmentos como contexto y recibe instrucciones de citar el nombre del archivo fuente. La calidad de las citas depende del modelo de chat — Llama 3.1 8B y superiores citan de forma fiable; los modelos más pequeños a veces omiten las citas.',
           '**Rendimiento:** indexó un único artículo de 412 páginas en 38 s en M5, 24 s en RTX 4070. Primera respuesta: 2–3 s. Límite práctico antes de lentitud: ~30 documentos o ~3.000 páginas por chat.',
           '**Backend LLM:** usa el mismo modelo de chat seleccionado para la conversación — el RAG ocurre de forma transparente cuando se adjuntan documentos.',
         ],
@@ -2821,7 +2821,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sample-queries',
         title: 'Consultas de ejemplo y qué devolvió cada app',
         content:
-          '**Mismos documentos, mismo modelo de chat (Llama 3.2 3B Q4_K_M), mismos prompts.** Las respuestas literales se acortan donde se indica. Cada fila muestra si la app recuperó los fragmentos correctos y qué respondió.',
+          '**Mismos documentos, mismo modelo de chat (Llama 3.1 8B Q4_K_M), mismos prompts.** Las respuestas literales se acortan donde se indica. Cada fila muestra si la app recuperó los fragmentos correctos y qué respondió.',
         columns: ['Consulta', 'AnythingLLM', 'LM Studio', 'Jan + Documentos'],
         rows: [
           {
@@ -2863,7 +2863,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         image: '/images/local-ai-app-with-built-in-rag-query-accuracy-en.svg',
         imageCaption:
-          'Precisión de respuestas en 5 preguntas de prueba sobre un manual de 1.047 páginas y un artículo de 412 páginas: AnythingLLM acertó 5 de 5, LM Studio 4 de 5, Jan + Documents 2 de 5, usando Llama 3.2 3B como modelo de chat.',
+          'Precisión de respuestas en 5 preguntas de prueba sobre un manual de 1.047 páginas y un artículo de 412 páginas: AnythingLLM acertó 5 de 5, LM Studio 4 de 5, Jan + Documents 2 de 5, usando Llama 3.1 8B como modelo de chat.',
       },
       citations: {
         id: 'citations',
@@ -2872,7 +2872,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**La calidad de las citas es el mayor diferenciador entre las tres apps.** AnythingLLM es la única que ofrece citas por fragmento con nombre de archivo + página en mayo 2026. Las otras dos citan solo por nombre de archivo, lo que es útil pero insuficiente para trabajos académicos o legales.',
         items: [
           '**AnythingLLM:** cada respuesta referencia los fragmentos usados. El formato es `[nombre de archivo, página X]` para PDFs, `[nombre de archivo, sección]` para markdown. Haz clic para abrir el fragmento en un panel lateral y verificarlo.',
-          '**LM Studio:** las citas son menciones en línea en la respuesta del chat («Según research.pdf...»). Sin números de página, sin panel de verificación interactivo. La fiabilidad depende del modelo de chat — Llama 3.2 3B cita de forma fiable; Phi-4 Mini a veces omite citas.',
+          '**LM Studio:** las citas son menciones en línea en la respuesta del chat («Según research.pdf...»). Sin números de página, sin panel de verificación interactivo. La fiabilidad depende del modelo de chat — Llama 3.1 8B cita de forma fiable; Phi-4 Mini a veces omite citas.',
           '**Jan + Documentos:** citas por fragmento con nombre de archivo. Sin números de página. Los fragmentos citados son visibles en el panel de la extensión.',
           '**Coste de verificación:** AnythingLLM permite verificar una cita en 2 clics; LM Studio y Jan requieren abrir el PDF fuente y buscar. Para un manual de 1.000 páginas, esto importa.',
           '**Citas alucinadas:** las tres apps citan ocasionalmente un nombre de archivo cuando el fragmento relevante no se recuperó realmente. Frecuencia en nuestra prueba de 12 consultas: AnythingLLM 0/12, LM Studio 1/12 (Phi-4 Mini), Jan 1/12. Verifica siempre las afirmaciones de alto riesgo.',
@@ -2971,7 +2971,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Qué tan precisas son las citas?',
-            a: 'AnythingLLM ofrece citas por fragmento con nombre de archivo y página (PDFs) — suficientemente precisas para trabajos académicos si se verifican. LM Studio cita solo por nombre de archivo; la fiabilidad depende del modelo de chat utilizado (Llama 3.2 3B y superiores citan de forma fiable; Phi-4 Mini a veces omite citas). Jan cita por fragmento con nombre de archivo, sin números de página. En una prueba de 12 consultas, las citas alucinadas fueron raras (0/12 AnythingLLM, 1/12 LM Studio, 1/12 Jan) — verifica siempre las afirmaciones de alto riesgo abriendo la fuente.',
+            a: 'AnythingLLM ofrece citas por fragmento con nombre de archivo y página (PDFs) — suficientemente precisas para trabajos académicos si se verifican. LM Studio cita solo por nombre de archivo; la fiabilidad depende del modelo de chat utilizado (Llama 3.1 8B y superiores citan de forma fiable; Phi-4 Mini a veces omite citas). Jan cita por fragmento con nombre de archivo, sin números de página. En una prueba de 12 consultas, las citas alucinadas fueron raras (0/12 AnythingLLM, 1/12 LM Studio, 1/12 Jan) — verifica siempre las afirmaciones de alto riesgo abriendo la fuente.',
           },
           {
             q: '¿El RAG integrado funciona sin conexión?',
@@ -3115,7 +3115,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'nomic-embed-text v1.5',
       'BAAI/bge-small-en-v1.5',
       'all-MiniLM-L6-v2',
-      'Llama 3.2 3B',
+      'Llama 3.1 8B',
       'Phi-4 Mini',
     ],
     current_hardware_mentioned: ['Apple M5 MacBook Pro 16GB', 'NVIDIA RTX 4070 12GB'],
@@ -3182,7 +3182,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Como AnythingLLM, LM Studio e Jan + Documentos se comparam em 2026?',
         content:
-          'Testado em Apple M5 MacBook Pro (16 GB de memória unificada) e um desktop Windows 11 com NVIDIA RTX 4070 (12 GB VRAM, 32 GB de RAM do sistema). Conjunto de documentos idêntico: um PDF de pesquisa de 412 páginas, um contrato DOCX de 38 páginas, um manual técnico PDF de 1.047 páginas e 25 notas markdown (≈ 600 KB no total). Cada app combinado com Llama 3.2 3B Q4_K_M como modelo de chat.',
+          'Testado em Apple M5 MacBook Pro (16 GB de memória unificada) e um desktop Windows 11 com NVIDIA RTX 4070 (12 GB VRAM, 32 GB de RAM do sistema). Conjunto de documentos idêntico: um PDF de pesquisa de 412 páginas, um contrato DOCX de 38 páginas, um manual técnico PDF de 1.047 páginas e 25 notas markdown (≈ 600 KB no total). Cada app combinado com Llama 3.1 8B Q4_K_M como modelo de chat.',
         columns: ['App', 'Formatos', 'Tamanho máx. prático', 'Modelo de embedding', 'Citações', 'Veredicto'],
         rows: [
           {
@@ -3263,7 +3263,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-we-tested',
         title: 'Como testamos esses 3 apps',
         content:
-          '**Cada app foi instalado do zero, alimentado com o mesmo conjunto de documentos e avaliado com as mesmas 12 consultas.** Usou-se o mesmo modelo de chat (Llama 3.2 3B Q4_K_M, ≈ 4,9 GB) em cada app para isolar a qualidade RAG da qualidade do chat.',
+          '**Cada app foi instalado do zero, alimentado com o mesmo conjunto de documentos e avaliado com as mesmas 12 consultas.** Usou-se o mesmo modelo de chat (Llama 3.1 8B Q4_K_M, ≈ 4,9 GB) em cada app para isolar a qualidade RAG da qualidade do chat.',
         items: [
           '**Hardware:** Apple M5 MacBook Pro (16 GB de memória unificada) para o percurso macOS; desktop Windows 11 com RTX 4070 (12 GB VRAM, 32 GB de RAM do sistema) para o percurso Windows. Os testes foram executados em ambos.',
           '**Conjunto de documentos:** PDF de artigo de pesquisa de 412 páginas (arquitetura transformer com figuras, tabelas e equações), DOCX de contrato de 38 páginas (locação imobiliária comercial, texto jurídico denso), PDF de manual técnico de 1.047 páginas (referência de sistema de controle industrial), 25 notas markdown (≈ 600 KB de atas de reuniões e especificações de projetos).',
@@ -3309,7 +3309,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Formatos de arquivo:** PDF, DOCX, TXT, MD. Sem EPUB, HTML nem áudio.',
           '**Modelo de embedding:** nomic-embed-text v1.5 (768 dimensões) incluído. Não é intercambiável pela interface em agosto de 2026 — para escolher o modelo de embedding, use o AnythingLLM.',
           '**Controle de fragmentos:** oculto na interface. O tamanho do fragmento, a sobreposição e o top-K são ajustados automaticamente conforme o tamanho do documento.',
-          '**Citações:** o modelo recebe os fragmentos como contexto e é instruído a citar o nome do arquivo de origem. A qualidade das citações depende do modelo de chat — Llama 3.2 3B e superiores citam de forma confiável; os modelos menores às vezes omitem as citações.',
+          '**Citações:** o modelo recebe os fragmentos como contexto e é instruído a citar o nome do arquivo de origem. A qualidade das citações depende do modelo de chat — Llama 3.1 8B e superiores citam de forma confiável; os modelos menores às vezes omitem as citações.',
           '**Desempenho:** indexou um único artigo de 412 páginas em 38 s no M5, 24 s na RTX 4070. Primeira resposta: 2–3 s. Limite prático antes de ficar lento: ~30 documentos ou ~3.000 páginas por chat.',
           '**Backend LLM:** usa o mesmo modelo de chat selecionado para a conversa — o RAG acontece de forma transparente quando os documentos são anexados.',
         ],
@@ -3345,7 +3345,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sample-queries',
         title: 'Consultas de exemplo e o que cada app retornou',
         content:
-          '**Mesmos documentos, mesmo modelo de chat (Llama 3.2 3B Q4_K_M), mesmos prompts.** As respostas literais são encurtadas onde indicado. Cada linha mostra se o app recuperou os fragmentos corretos e o que respondeu.',
+          '**Mesmos documentos, mesmo modelo de chat (Llama 3.1 8B Q4_K_M), mesmos prompts.** As respostas literais são encurtadas onde indicado. Cada linha mostra se o app recuperou os fragmentos corretos e o que respondeu.',
         columns: ['Consulta', 'AnythingLLM', 'LM Studio', 'Jan + Documentos'],
         rows: [
           {
@@ -3387,7 +3387,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         image: '/images/local-ai-app-with-built-in-rag-query-accuracy-en.svg',
         imageCaption:
-          'Precisão de respostas em 5 perguntas de teste sobre um manual de 1.047 páginas e um artigo de 412 páginas: o AnythingLLM acertou 5 de 5, o LM Studio 4 de 5, o Jan + Documents 2 de 5, usando o Llama 3.2 3B como modelo de chat.',
+          'Precisão de respostas em 5 perguntas de teste sobre um manual de 1.047 páginas e um artigo de 412 páginas: o AnythingLLM acertou 5 de 5, o LM Studio 4 de 5, o Jan + Documents 2 de 5, usando o Llama 3.1 8B como modelo de chat.',
       },
       citations: {
         id: 'citations',
@@ -3396,7 +3396,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**A qualidade das citações é o maior diferenciador entre os três apps.** O AnythingLLM é o único que oferece citações por fragmento com nome de arquivo + página em agosto de 2026. Os outros dois citam apenas por nome de arquivo, o que é útil mas insuficiente para trabalhos acadêmicos ou jurídicos.',
         items: [
           '**AnythingLLM:** cada resposta referencia os fragmentos usados. O formato é `[nome de arquivo, página X]` para PDFs, `[nome de arquivo, seção]` para markdown. Clique para abrir o fragmento em um painel lateral e verificá-lo.',
-          '**LM Studio:** as citações são menções em linha na resposta do chat ("Segundo research.pdf..."). Sem números de página, sem painel de verificação interativo. A confiabilidade depende do modelo de chat — Llama 3.2 3B cita de forma confiável; o Phi-4 Mini às vezes omite citações.',
+          '**LM Studio:** as citações são menções em linha na resposta do chat ("Segundo research.pdf..."). Sem números de página, sem painel de verificação interativo. A confiabilidade depende do modelo de chat — Llama 3.1 8B cita de forma confiável; o Phi-4 Mini às vezes omite citações.',
           '**Jan + Documentos:** citações por fragmento com nome de arquivo. Sem números de página. Os fragmentos citados ficam visíveis no painel da extensão.',
           '**Custo de verificação:** o AnythingLLM permite verificar uma citação em 2 cliques; o LM Studio e o Jan exigem abrir o PDF de origem e buscar. Para um manual de 1.000 páginas, isso importa.',
           '**Citações alucinadas:** os três apps citam ocasionalmente um nome de arquivo quando o fragmento relevante não foi realmente recuperado. Frequência no nosso teste de 12 consultas: AnythingLLM 0/12, LM Studio 1/12 (Phi-4 Mini), Jan 1/12. Verifique sempre as afirmações de alto risco.',
@@ -3495,7 +3495,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Quão precisas são as citações?',
-            a: 'O AnythingLLM oferece citações por fragmento com nome de arquivo e página (PDFs) — precisas o suficiente para trabalhos acadêmicos se verificadas. O LM Studio cita apenas por nome de arquivo; a confiabilidade depende do modelo de chat usado (Llama 3.2 3B e superiores citam de forma confiável; o Phi-4 Mini às vezes omite citações). O Jan cita por fragmento com nome de arquivo, sem números de página. Em um teste de 12 consultas, as citações alucinadas foram raras (0/12 AnythingLLM, 1/12 LM Studio, 1/12 Jan) — verifique sempre as afirmações de alto risco abrindo a fonte.',
+            a: 'O AnythingLLM oferece citações por fragmento com nome de arquivo e página (PDFs) — precisas o suficiente para trabalhos acadêmicos se verificadas. O LM Studio cita apenas por nome de arquivo; a confiabilidade depende do modelo de chat usado (Llama 3.1 8B e superiores citam de forma confiável; o Phi-4 Mini às vezes omite citações). O Jan cita por fragmento com nome de arquivo, sem números de página. Em um teste de 12 consultas, as citações alucinadas foram raras (0/12 AnythingLLM, 1/12 LM Studio, 1/12 Jan) — verifique sempre as afirmações de alto risco abrindo a fonte.',
           },
           {
             q: 'O RAG integrado funciona offline?',
@@ -3640,7 +3640,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'nomic-embed-text v1.5',
       'BAAI/bge-small-en-v1.5',
       'all-MiniLM-L6-v2',
-      'Llama 3.2 3B',
+      'Llama 3.1 8B',
       'Phi-4 Mini',
     ],
     current_hardware_mentioned: ['Apple M5 MacBook Pro 16GB', 'NVIDIA RTX 4070 12GB'],
@@ -3707,7 +3707,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'كيف تتقاطع AnythingLLM وLM Studio وJan + المستندات في 2026؟',
         content:
-          'مُختبَر على Apple M5 MacBook Pro (16 جيجابايت ذاكرة موحدة) وحاسوب Windows 11 مع NVIDIA RTX 4070 (12 جيجابايت VRAM، 32 جيجابايت RAM). مجموعة مستندات متطابقة: PDF بحثي 412 صفحة، DOCX عقد 38 صفحة، دليل تقني PDF 1047 صفحة، و25 ملاحظة markdown. كل تطبيق مُقرَن مع Llama 3.2 3B Q4_K_M كنموذج دردشة.',
+          'مُختبَر على Apple M5 MacBook Pro (16 جيجابايت ذاكرة موحدة) وحاسوب Windows 11 مع NVIDIA RTX 4070 (12 جيجابايت VRAM، 32 جيجابايت RAM). مجموعة مستندات متطابقة: PDF بحثي 412 صفحة، DOCX عقد 38 صفحة، دليل تقني PDF 1047 صفحة، و25 ملاحظة markdown. كل تطبيق مُقرَن مع Llama 3.1 8B Q4_K_M كنموذج دردشة.',
         columns: ['التطبيق', 'الصيغ', 'الحجم الأقصى العملي', 'نموذج التضمين', 'الاستشهادات', 'الحكم'],
         rows: [
           {
@@ -3761,7 +3761,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-we-tested',
         title: 'كيف اختبرنا هذه التطبيقات الثلاثة',
         content:
-          '**كل تطبيق ثُبّت من الصفر وأُطعم بنفس مجموعة المستندات وقُيّم بنفس 12 استعلاماً.** استُخدم نفس نموذج الدردشة (Llama 3.2 3B Q4_K_M، ~4.9 جيجابايت) في كل تطبيق لعزل جودة RAG عن جودة الدردشة.',
+          '**كل تطبيق ثُبّت من الصفر وأُطعم بنفس مجموعة المستندات وقُيّم بنفس 12 استعلاماً.** استُخدم نفس نموذج الدردشة (Llama 3.1 8B Q4_K_M، ~4.9 جيجابايت) في كل تطبيق لعزل جودة RAG عن جودة الدردشة.',
         items: [
           '**الأجهزة:** Apple M5 MacBook Pro (16 جيجابايت ذاكرة موحدة) للمسار على macOS؛ حاسوب Windows 11 مع RTX 4070 (12 جيجابايت VRAM، 32 جيجابايت RAM) للمسار على Windows. أُجريت الاختبارات على كليهما.',
           '**مجموعة المستندات:** PDF مقالة بحثية 412 صفحة (بنية transformer مع أشكال وجداول ومعادلات)، DOCX عقد 38 صفحة (إيجار تجاري، نص قانوني كثيف)، PDF دليل تقني 1047 صفحة (مرجع نظام تحكم صناعي)، 25 ملاحظة markdown (~600 كيلوبايت من محاضر اجتماعات ومواصفات مشاريع).',
@@ -3807,7 +3807,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**صيغ الملفات:** PDF وDOCX وTXT وMD. بدون EPUB أو HTML أو صوت.',
           '**نموذج التضمين:** nomic-embed-text v1.5 (768 بُعداً) مُضمَّن. غير قابل للتبديل من الواجهة في أغسطس 2026 — لاختيار نموذج التضمين، استخدم AnythingLLM.',
           '**التحكم في التقطيع:** مخفي في الواجهة. يُضبَط حجم المقطع والتداخل وtop-K تلقائياً حسب حجم المستند.',
-          '**الاستشهادات:** يتلقى النموذج المقاطع كسياق ويُوجَّه لاستشهاد اسم الملف المصدر. تعتمد جودة الاستشهادات على نموذج الدردشة — Llama 3.2 3B وما فوق يستشهد بشكل موثوق؛ النماذج الأصغر تحذف الاستشهادات أحياناً.',
+          '**الاستشهادات:** يتلقى النموذج المقاطع كسياق ويُوجَّه لاستشهاد اسم الملف المصدر. تعتمد جودة الاستشهادات على نموذج الدردشة — Llama 3.1 8B وما فوق يستشهد بشكل موثوق؛ النماذج الأصغر تحذف الاستشهادات أحياناً.',
           '**الأداء:** فهرس مقالة 412 صفحة في 38 ثانية على M5 و24 ثانية على RTX 4070. أول إجابة: 2–3 ثوانٍ. الحد العملي قبل التباطؤ: ~30 مستند أو ~3000 صفحة لكل محادثة.',
           '**backend النموذج:** يستخدم نفس نموذج الدردشة المُحدَّد للمحادثة — يحدث RAG بشكل شفاف عند إرفاق المستندات.',
         ],
@@ -3843,7 +3843,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sample-queries',
         title: 'استعلامات نموذجية وما أعادته كل تطبيق',
         content:
-          '**نفس المستندات ونفس نموذج الدردشة (Llama 3.2 3B Q4_K_M) ونفس المطالبات.** الإجابات الحرفية مُختصَرة حيث يُشار. كل صف يُظهر ما إذا كان التطبيق استرجع المقاطع الصحيحة وما أجاب به.',
+          '**نفس المستندات ونفس نموذج الدردشة (Llama 3.1 8B Q4_K_M) ونفس المطالبات.** الإجابات الحرفية مُختصَرة حيث يُشار. كل صف يُظهر ما إذا كان التطبيق استرجع المقاطع الصحيحة وما أجاب به.',
         columns: ['الاستعلام', 'AnythingLLM', 'LM Studio', 'Jan + المستندات'],
         rows: [
           {
@@ -3885,7 +3885,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         image: '/images/local-ai-app-with-built-in-rag-query-accuracy-en.svg',
         imageCaption:
-          'دقة الإجابة عبر 5 أسئلة اختبار على دليل من 1,047 صفحة وورقة بحثية من 412 صفحة: أجاب AnythingLLM بشكل صحيح على 5 من 5، وLM Studio على 4 من 5، وJan + Documents على 2 من 5، باستخدام Llama 3.2 3B كنموذج للمحادثة.',
+          'دقة الإجابة عبر 5 أسئلة اختبار على دليل من 1,047 صفحة وورقة بحثية من 412 صفحة: أجاب AnythingLLM بشكل صحيح على 5 من 5، وLM Studio على 4 من 5، وJan + Documents على 2 من 5، باستخدام Llama 3.1 8B كنموذج للمحادثة.',
       },
       citations: {
         id: 'citations',
@@ -3894,7 +3894,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**جودة الاستشهادات هي أكبر عامل تمييز بين التطبيقات الثلاثة.** AnythingLLM هو الوحيد الذي يُوفّر استشهادات لكل مقطع باسم الملف + الصفحة في أغسطس 2026. الآخران يستشهدان باسم الملف فقط، وهو مفيد لكن غير كافٍ للأعمال الأكاديمية أو القانونية.',
         items: [
           '**AnythingLLM:** كل إجابة تُشير إلى المقاطع المُستخدَمة. الصيغة `[اسم الملف، صفحة X]` للـPDFs و`[اسم الملف، القسم]` للـmarkdown. انقر لفتح المقطع في لوحة جانبية والتحقق منه.',
-          '**LM Studio:** الاستشهادات تُذكر داخل إجابة الدردشة ("وفقاً لـresearch.pdf..."). بدون أرقام صفحات ولا لوحة تحقق تفاعلية. الموثوقية تعتمد على نموذج الدردشة — Llama 3.2 3B يستشهد بشكل موثوق؛ Phi-4 Mini يحذف الاستشهادات أحياناً.',
+          '**LM Studio:** الاستشهادات تُذكر داخل إجابة الدردشة ("وفقاً لـresearch.pdf..."). بدون أرقام صفحات ولا لوحة تحقق تفاعلية. الموثوقية تعتمد على نموذج الدردشة — Llama 3.1 8B يستشهد بشكل موثوق؛ Phi-4 Mini يحذف الاستشهادات أحياناً.',
           '**Jan + المستندات:** استشهادات لكل مقطع باسم الملف. بدون أرقام صفحات. المقاطع المُستشهَد بها مرئية في لوحة الإضافة.',
           '**تكلفة التحقق:** AnythingLLM يُتيح التحقق من استشهاد بنقرتين؛ LM Studio وJan يتطلبان فتح PDF المصدر والبحث. لدليل 1000 صفحة، هذا فارق مهم.',
           '**استشهادات هلوسة:** التطبيقات الثلاثة تستشهد أحياناً باسم ملف عندما لا يُسترجع المقطع المعني فعلياً. التكرار في اختبار 12 استعلاماً: AnythingLLM 0/12، LM Studio 1/12 (Phi-4 Mini)، Jan 1/12. تحقق دائماً من الادعاءات عالية المخاطر.',
@@ -3993,7 +3993,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'ما دقة الاستشهادات؟',
-            a: 'AnythingLLM يُوفّر استشهادات لكل مقطع باسم الملف والصفحة (PDFs) — دقيقة بما يكفي للأعمال الأكاديمية إذا جرى التحقق منها. LM Studio يستشهد باسم الملف فقط؛ الموثوقية تعتمد على نموذج الدردشة (Llama 3.2 3B وما فوق يستشهد بشكل موثوق؛ Phi-4 Mini يحذف أحياناً). Jan يستشهد لكل مقطع باسم الملف بدون أرقام صفحات. في اختبار 12 استعلاماً، الاستشهادات الهلوسة نادرة (0/12 AnythingLLM، 1/12 LM Studio، 1/12 Jan) — تحقق دائماً من الادعاءات عالية المخاطر.',
+            a: 'AnythingLLM يُوفّر استشهادات لكل مقطع باسم الملف والصفحة (PDFs) — دقيقة بما يكفي للأعمال الأكاديمية إذا جرى التحقق منها. LM Studio يستشهد باسم الملف فقط؛ الموثوقية تعتمد على نموذج الدردشة (Llama 3.1 8B وما فوق يستشهد بشكل موثوق؛ Phi-4 Mini يحذف أحياناً). Jan يستشهد لكل مقطع باسم الملف بدون أرقام صفحات. في اختبار 12 استعلاماً، الاستشهادات الهلوسة نادرة (0/12 AnythingLLM، 1/12 LM Studio، 1/12 Jan) — تحقق دائماً من الادعاءات عالية المخاطر.',
           },
           {
             q: 'هل يعمل RAG المدمج بدون اتصال؟',
@@ -4138,7 +4138,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'nomic-embed-text v1.5',
       'BAAI/bge-small-en-v1.5',
       'all-MiniLM-L6-v2',
-      'Llama 3.2 3B',
+      'Llama 3.1 8B',
       'Phi-4 Mini',
     ],
     current_hardware_mentioned: ['Apple M5 MacBook Pro 16GB', 'NVIDIA RTX 4070 12GB'],
@@ -4205,7 +4205,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'AnythingLLM, LM Studio, Jan + 문서는 2026년에 어떻게 비교됩니까?',
         content:
-          'Apple M5 MacBook Pro(16GB 통합 메모리)와 NVIDIA RTX 4070(12GB VRAM, 32GB 시스템 RAM)이 탑재된 Windows 11 데스크톱에서 테스트했습니다. 동일한 문서 세트: 412페이지 연구 PDF, 38페이지 계약 DOCX, 1,047페이지 기술 매뉴얼 PDF, 25개의 마크다운 메모(총 약 600KB). 각 앱은 채팅 모델로 Llama 3.2 3B Q4_K_M과 쌍을 이루었습니다.',
+          'Apple M5 MacBook Pro(16GB 통합 메모리)와 NVIDIA RTX 4070(12GB VRAM, 32GB 시스템 RAM)이 탑재된 Windows 11 데스크톱에서 테스트했습니다. 동일한 문서 세트: 412페이지 연구 PDF, 38페이지 계약 DOCX, 1,047페이지 기술 매뉴얼 PDF, 25개의 마크다운 메모(총 약 600KB). 각 앱은 채팅 모델로 Llama 3.1 8B Q4_K_M과 쌍을 이루었습니다.',
         columns: ['앱', '형식', '실용적 최대 크기', '임베딩 모델', '인용', '평가'],
         rows: [
           {
@@ -4286,7 +4286,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'how-we-tested',
         title: '이 3가지 앱을 테스트한 방법',
         content:
-          '**각 앱을 처음부터 설치하고, 동일한 문서 세트를 제공하고, 동일한 12개 쿼리로 평가했습니다.** RAG 품질을 채팅 품질과 분리하기 위해 각 앱에서 동일한 채팅 모델(Llama 3.2 3B Q4_K_M, 약 4.9GB)을 사용했습니다.',
+          '**각 앱을 처음부터 설치하고, 동일한 문서 세트를 제공하고, 동일한 12개 쿼리로 평가했습니다.** RAG 품질을 채팅 품질과 분리하기 위해 각 앱에서 동일한 채팅 모델(Llama 3.1 8B Q4_K_M, 약 4.9GB)을 사용했습니다.',
         items: [
           '**하드웨어:** macOS 워크스루를 위한 Apple M5 MacBook Pro(16GB 통합 메모리), Windows 워크스루를 위한 RTX 4070이 탑재된 Windows 11 데스크톱(12GB VRAM, 32GB 시스템 RAM). 테스트는 두 곳 모두에서 실행했습니다.',
           '**문서 세트:** 412페이지 연구 논문 PDF(그림, 표, 방정식이 있는 트랜스포머 아키텍처), 38페이지 계약 DOCX(상업용 부동산 임대, 밀도 높은 법률 텍스트), 1,047페이지 기술 매뉴얼 PDF(산업 제어 시스템 참조), 25개의 마크다운 메모(약 600KB의 회의 메모 및 프로젝트 사양).',
@@ -4342,7 +4342,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**파일 형식:** PDF, DOCX, TXT, MD. EPUB, HTML, 오디오 없음.',
           '**임베딩 모델:** nomic-embed-text v1.5(768차원) 내장. 2026년 8월 기준으로 인터페이스에서 교체 불가 — 임베딩 모델을 선택하려면 AnythingLLM을 사용하십시오.',
           '**청크 제어:** 인터페이스에서 숨겨져 있습니다. 청크 크기, 오버랩, top-K는 문서 크기에 따라 자동으로 조정됩니다.',
-          '**인용:** 모델은 청크를 컨텍스트로 받고 소스 파일명을 인용하도록 지시받습니다. 인용 품질은 채팅 모델에 따라 다릅니다 — Llama 3.2 3B 이상은 안정적으로 인용하고, 더 작은 모델은 때때로 인용을 생략합니다.',
+          '**인용:** 모델은 청크를 컨텍스트로 받고 소스 파일명을 인용하도록 지시받습니다. 인용 품질은 채팅 모델에 따라 다릅니다 — Llama 3.1 8B 이상은 안정적으로 인용하고, 더 작은 모델은 때때로 인용을 생략합니다.',
           '**성능:** M5에서 38초, RTX 4070에서 24초 내에 단일 412페이지 논문을 인덱싱했습니다. 첫 번째 응답: 2~3초. 속도 저하 전 실용적 한계: 채팅당 약 30개 문서 또는 약 3,000페이지.',
           '**LLM 백엔드:** 대화에 선택된 동일한 채팅 모델을 사용합니다 — 문서가 첨부되면 RAG가 투명하게 발생합니다.',
         ],
@@ -4378,7 +4378,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'sample-queries',
         title: '샘플 쿼리 및 각 앱이 반환한 결과',
         content:
-          '**동일한 문서, 동일한 채팅 모델(Llama 3.2 3B Q4_K_M), 동일한 프롬프트.** 실제 응답은 표시된 곳에서 단축했습니다. 각 행은 앱이 올바른 청크를 검색했는지와 응답 내용을 보여줍니다.',
+          '**동일한 문서, 동일한 채팅 모델(Llama 3.1 8B Q4_K_M), 동일한 프롬프트.** 실제 응답은 표시된 곳에서 단축했습니다. 각 행은 앱이 올바른 청크를 검색했는지와 응답 내용을 보여줍니다.',
         columns: ['쿼리', 'AnythingLLM', 'LM Studio', 'Jan + 문서'],
         rows: [
           {
@@ -4420,7 +4420,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         image: '/images/local-ai-app-with-built-in-rag-query-accuracy-en.svg',
         imageCaption:
-          '1,047페이지 매뉴얼과 412페이지 논문을 대상으로 한 5개 테스트 질문의 정확도: AnythingLLM은 5개 중 5개 정답, LM Studio는 5개 중 4개, Jan + Documents는 5개 중 2개 정답이며, 채팅 모델은 Llama 3.2 3B입니다.',
+          '1,047페이지 매뉴얼과 412페이지 논문을 대상으로 한 5개 테스트 질문의 정확도: AnythingLLM은 5개 중 5개 정답, LM Studio는 5개 중 4개, Jan + Documents는 5개 중 2개 정답이며, 채팅 모델은 Llama 3.1 8B입니다.',
       },
       citations: {
         id: 'citations',
@@ -4429,7 +4429,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**인용 품질은 세 앱 간의 가장 큰 차별화 요소입니다.** AnythingLLM만이 2026년 8월 기준으로 파일명 + 페이지가 있는 청크별 인용을 제공합니다. 다른 두 앱은 파일명만으로 인용하며, 이는 유용하지만 학술 또는 법률 작업에는 불충분합니다.',
         items: [
           '**AnythingLLM:** 각 응답은 사용된 청크를 참조합니다. PDF에는 `[파일명, X페이지]`, 마크다운에는 `[파일명, 섹션]` 형식입니다. 클릭하면 사이드 패널에서 청크가 열려 확인할 수 있습니다.',
-          '**LM Studio:** 인용은 채팅 응답의 인라인 언급입니다("research.pdf에 따르면..."). 페이지 번호 없음, 인터랙티브 확인 패널 없음. 신뢰성은 채팅 모델에 따라 다릅니다 — Llama 3.2 3B는 안정적으로 인용하고, Phi-4 Mini는 때때로 인용을 생략합니다.',
+          '**LM Studio:** 인용은 채팅 응답의 인라인 언급입니다("research.pdf에 따르면..."). 페이지 번호 없음, 인터랙티브 확인 패널 없음. 신뢰성은 채팅 모델에 따라 다릅니다 — Llama 3.1 8B는 안정적으로 인용하고, Phi-4 Mini는 때때로 인용을 생략합니다.',
           '**Jan + 문서:** 파일명이 있는 청크별 인용. 페이지 번호 없음. 인용된 청크는 확장 패널에서 볼 수 있습니다.',
           '**확인 비용:** AnythingLLM은 2번의 클릭으로 인용을 확인할 수 있습니다. LM Studio와 Jan은 소스 PDF를 열고 검색해야 합니다. 1,000페이지 매뉴얼의 경우 이것은 중요합니다.',
           '**환각된 인용:** 세 앱 모두 관련 청크가 실제로 검색되지 않았을 때 때때로 파일명을 인용합니다. 12개 쿼리 테스트에서의 빈도: AnythingLLM 0/12, LM Studio 1/12(Phi-4 Mini), Jan 1/12. 항상 위험성이 높은 주장을 확인하십시오.',
@@ -4528,7 +4528,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '인용은 얼마나 정확합니까?',
-            a: 'AnythingLLM은 파일명과 페이지(PDF)가 있는 청크별 인용을 제공합니다 — 확인하면 학술 논문에 충분히 정확합니다. LM Studio는 파일명만으로 인용합니다. 신뢰성은 사용한 채팅 모델에 따라 다릅니다(Llama 3.2 3B 이상은 안정적으로 인용하고, Phi-4 Mini는 때때로 인용을 생략합니다). Jan은 파일명이 있는 청크별로 인용하며 페이지 번호는 없습니다. 12개 쿼리 테스트에서 환각된 인용은 드물었습니다(AnythingLLM 0/12, LM Studio 1/12, Jan 1/12) — 항상 소스를 열어 위험성이 높은 주장을 확인하십시오.',
+            a: 'AnythingLLM은 파일명과 페이지(PDF)가 있는 청크별 인용을 제공합니다 — 확인하면 학술 논문에 충분히 정확합니다. LM Studio는 파일명만으로 인용합니다. 신뢰성은 사용한 채팅 모델에 따라 다릅니다(Llama 3.1 8B 이상은 안정적으로 인용하고, Phi-4 Mini는 때때로 인용을 생략합니다). Jan은 파일명이 있는 청크별로 인용하며 페이지 번호는 없습니다. 12개 쿼리 테스트에서 환각된 인용은 드물었습니다(AnythingLLM 0/12, LM Studio 1/12, Jan 1/12) — 항상 소스를 열어 위험성이 높은 주장을 확인하십시오.',
           },
           {
             q: '내장 RAG는 오프라인으로 작동합니까?',

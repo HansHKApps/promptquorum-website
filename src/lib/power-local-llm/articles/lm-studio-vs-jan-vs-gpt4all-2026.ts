@@ -19,7 +19,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'LM Studio, Jan, and GPT4All are the three most popular beginner-friendly desktop apps for running local LLMs in 2026. Tested side-by-side on identical M5 MacBook and RTX 4070 hardware, each wins in a different scenario. LM Studio leads on speed and model library, Jan on UX and privacy posture, and GPT4All on cross-platform install simplicity.',
     metaDescription: '3 desktop AI apps tested on M5 MacBook and RTX 4070. LM Studio wins on speed, Jan on UX, GPT4All on simplicity. Full breakdown with benchmarks.',
     twitterDescription: 'LM Studio vs Jan vs GPT4All — three winners, three scenarios. Tested on real hardware in August 2026.',
-    current_models_mentioned: ['Llama 3.2 3B', 'Phi-4 Mini', 'Qwen3 8B', 'Gemma 4 E2B'],
+    current_models_mentioned: ['Llama 3.1 8B', 'Phi-4 Mini', 'Qwen3 8B', 'Gemma 4 E2B'],
     current_hardware_mentioned: ['Apple M5', 'NVIDIA RTX 4070', 'Apple M5 MacBook Pro 16GB'],
     audience: 'Beginners and intermediate users choosing their first local LLM desktop app.',
     readTime: '11 min read',
@@ -74,7 +74,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparisonTable: {
         id: 'comparison-table',
         title: 'How Do LM Studio, Jan, and GPT4All Compare in 2026?',
-        content: 'Tested on Apple M5 MacBook Pro (16 GB unified memory) and a desktop with NVIDIA RTX 4070 (12 GB VRAM, 32 GB system RAM) running Windows 11. All three apps tested with the same 8B-class model (Llama 3.2 3B Q4_K_M) for direct comparison.',
+        content: 'Tested on Apple M5 MacBook Pro (16 GB unified memory) and a desktop with NVIDIA RTX 4070 (12 GB VRAM, 32 GB system RAM) running Windows 11. All three apps tested with the same 8B-class model (Llama 3.1 8B Q4_K_M) for direct comparison.',
         image: '/images/lm-studio-jan-gpt4all-comparison-table-en.svg',
         imageCaption: 'LM Studio vs Jan vs GPT4All feature comparison (2026, tested on M5 MacBook + RTX 4070): LM Studio leads on speed (38 tok/s M5, 74 tok/s RTX 4070) and model library; Jan wins on privacy (zero telemetry, Apache 2.0 open-source); GPT4All has the smallest install (290 MB) and lowest RAM requirement (4 GB).',
         rows: [
@@ -109,9 +109,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       speedBenchmarks: {
         id: 'speed-benchmarks',
         title: 'How Fast Is Each App on Real Hardware?',
-        content: 'Tokens-per-second measured during a 200-token generation with Llama 3.2 3B Q4_K_M loaded fully into memory. Values rounded to the nearest whole token.',
+        content: 'Tokens-per-second measured during a 200-token generation with Llama 3.1 8B Q4_K_M loaded fully into memory. Values rounded to the nearest whole token.',
         image: '/images/lm-studio-jan-gpt4all-speed-benchmarks-en.svg',
-        imageCaption: 'Speed benchmarks on real hardware (Llama 3.2 3B Q4_K_M): LM Studio leads at 38/74/52 tok/s on M5/RTX4070/RTX3060; Jan at 32/65/48 tok/s; GPT4All at 24/52/40 tok/s. CPU-only (Intel Core Ultra 7): LM Studio 11, Jan 10, GPT4All 9 tok/s.',
+        imageCaption: 'Speed benchmarks on real hardware (Llama 3.1 8B Q4_K_M): LM Studio leads at 38/74/52 tok/s on M5/RTX4070/RTX3060; Jan at 32/65/48 tok/s; GPT4All at 24/52/40 tok/s. CPU-only (Intel Core Ultra 7): LM Studio 11, Jan 10, GPT4All 9 tok/s.',
         rows: [
           { 'Hardware': 'Apple M5 MacBook Pro (16 GB)', 'LM Studio': '38 tok/s', 'Jan': '32 tok/s', 'GPT4All': '24 tok/s' },
           { 'Hardware': 'RTX 4070 (Win 11, CUDA)', 'LM Studio': '74 tok/s', 'Jan': '65 tok/s', 'GPT4All': '52 tok/s' },
@@ -294,7 +294,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'LM Studio, Jan und GPT4All sind die drei beliebtesten anfängerfreundlichen Desktop-Apps für lokale LLMs im Jahr 2026. Im direkten Vergleich auf identischer Apple M5 MacBook- und NVIDIA RTX 4070-Hardware getestet, gewinnt jede App in einem anderen Szenario. LM Studio führt bei Geschwindigkeit und Modellbibliothek, Jan bei UX und Datenschutz-Haltung, und GPT4All bei plattformübergreifender Installations-Einfachheit.',
     metaDescription: 'LM Studio vs Jan vs GPT4All 2026: drei lokale LLM-Apps im Vergleich. Benutzerfreundlichkeit, Modell-Support, Geschwindigkeit und Datenschutz im Test.',
     twitterDescription: 'LM Studio vs Jan vs GPT4All — drei Sieger, drei Szenarien. Auf realer Hardware im August 2026 getestet.',
-    current_models_mentioned: ['Llama 3.2 3B', 'Phi-4 Mini', 'Qwen3 8B', 'Gemma 4 E2B'],
+    current_models_mentioned: ['Llama 3.1 8B', 'Phi-4 Mini', 'Qwen3 8B', 'Gemma 4 E2B'],
     current_hardware_mentioned: ['Apple M5', 'NVIDIA RTX 4070', 'Apple M5 MacBook Pro 16GB'],
     audience: 'Anfänger und fortgeschrittene Nutzer, die ihre erste lokale LLM-Desktop-App auswählen.',
     readTime: '11 Min. Lesezeit',
@@ -350,7 +350,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparisonTable: {
         id: 'comparison-table',
         title: 'Wie schneiden LM Studio, Jan und GPT4All 2026 im Vergleich ab?',
-        content: 'Getestet auf einem Apple M5 MacBook Pro (16 GB Unified Memory) sowie einem Desktop mit NVIDIA RTX 4070 (12 GB VRAM, 32 GB System-RAM) unter Windows 11. Alle drei Apps wurden für einen direkten Vergleich mit demselben 8B-Modell (Llama 3.2 3B Q4_K_M) getestet.',
+        content: 'Getestet auf einem Apple M5 MacBook Pro (16 GB Unified Memory) sowie einem Desktop mit NVIDIA RTX 4070 (12 GB VRAM, 32 GB System-RAM) unter Windows 11. Alle drei Apps wurden für einen direkten Vergleich mit demselben 8B-Modell (Llama 3.1 8B Q4_K_M) getestet.',
         image: '/images/lm-studio-jan-gpt4all-comparison-table-de.svg',
         imageCaption: 'LM Studio vs Jan vs GPT4All Merkmalsvergleich (2026, getestet auf M5 MacBook + RTX 4070): LM Studio führt bei Geschwindigkeit (38 Tok/Sek. M5, 74 Tok/Sek. RTX 4070) und Modellbibliothek; Jan gewinnt beim Datenschutz (null Telemetrie, Apache 2.0 Open Source); GPT4All hat die kleinste Installation (290 MB) und den niedrigsten RAM-Bedarf (4 GB).',
         rows: [
@@ -385,9 +385,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       speedBenchmarks: {
         id: 'speed-benchmarks',
         title: 'Wie schnell ist jede App auf realer Hardware?',
-        content: 'Tokens pro Sekunde gemessen während einer 200-Token-Generierung mit Llama 3.2 3B Q4_K_M, vollständig in den Speicher geladen. Werte auf den nächsten ganzen Token gerundet.',
+        content: 'Tokens pro Sekunde gemessen während einer 200-Token-Generierung mit Llama 3.1 8B Q4_K_M, vollständig in den Speicher geladen. Werte auf den nächsten ganzen Token gerundet.',
         image: '/images/lm-studio-jan-gpt4all-speed-benchmarks-de.svg',
-        imageCaption: 'Geschwindigkeits-Benchmarks auf echter Hardware (Llama 3.2 3B Q4_K_M): LM Studio führt mit 38/74/52 Tok/Sek. auf M5/RTX4070/RTX3060; Jan mit 32/65/48 Tok/Sek.; GPT4All mit 24/52/40 Tok/Sek. Nur-CPU (Intel Core Ultra 7): LM Studio 11, Jan 10, GPT4All 9 Tok/Sek.',
+        imageCaption: 'Geschwindigkeits-Benchmarks auf echter Hardware (Llama 3.1 8B Q4_K_M): LM Studio führt mit 38/74/52 Tok/Sek. auf M5/RTX4070/RTX3060; Jan mit 32/65/48 Tok/Sek.; GPT4All mit 24/52/40 Tok/Sek. Nur-CPU (Intel Core Ultra 7): LM Studio 11, Jan 10, GPT4All 9 Tok/Sek.',
         rows: [
           { 'Hardware': 'Apple M5 MacBook Pro (16 GB)', 'LM Studio': '38 tok/s', 'Jan': '32 tok/s', 'GPT4All': '24 tok/s' },
           { 'Hardware': 'RTX 4070 (Win 11, CUDA)', 'LM Studio': '74 tok/s', 'Jan': '65 tok/s', 'GPT4All': '52 tok/s' },
@@ -588,7 +588,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'LM Studio, Jan et GPT4All sont les trois apps de bureau les plus populaires pour exécuter un LLM local en 2026. Testées en parallèle sur du matériel identique (Apple M5 MacBook et NVIDIA RTX 4070), chacune l\'emporte dans un scénario différent : LM Studio sur la vitesse et la bibliothèque de modèles, Jan sur l\'UX et la posture vie privée, GPT4All sur la simplicité d\'installation multi-plateforme.',
     metaDescription: 'LM Studio vs Jan vs GPT4All 2026 : trois applications LLM locales comparées. Facilité d\'utilisation, support de modèles, vitesse et confidentialité testés.',
     twitterDescription: 'LM Studio vs Jan vs GPT4All — trois gagnants, trois scénarios. Testées sur matériel réel en août 2026.',
-    current_models_mentioned: ['Llama 3.2 3B', 'Phi-4 Mini', 'Qwen3 8B', 'Gemma 4 E2B'],
+    current_models_mentioned: ['Llama 3.1 8B', 'Phi-4 Mini', 'Qwen3 8B', 'Gemma 4 E2B'],
     current_hardware_mentioned: ['Apple M5', 'NVIDIA RTX 4070', 'Apple M5 MacBook Pro 16GB'],
     audience: 'Débutants et utilisateurs intermédiaires choisissant leur première app de bureau pour LLM local.',
     readTime: '11 min de lecture',
@@ -644,7 +644,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparisonTable: {
         id: 'comparison-table',
         title: 'Comment LM Studio, Jan et GPT4All se comparent en 2026 ?',
-        content: 'Test sur Apple M5 MacBook Pro (16 Go de mémoire unifiée) et un desktop NVIDIA RTX 4070 (12 Go VRAM, 32 Go RAM système) sous Windows 11. Les trois apps ont été testées avec le même modèle 8B (Llama 3.2 3B Q4_K_M) pour comparaison directe.',
+        content: 'Test sur Apple M5 MacBook Pro (16 Go de mémoire unifiée) et un desktop NVIDIA RTX 4070 (12 Go VRAM, 32 Go RAM système) sous Windows 11. Les trois apps ont été testées avec le même modèle 8B (Llama 3.1 8B Q4_K_M) pour comparaison directe.',
         image: '/images/lm-studio-jan-gpt4all-comparison-table-fr.svg',
         imageCaption: 'Comparatif LM Studio vs Jan vs GPT4All (2026, testé sur M5 MacBook + RTX 4070) : LM Studio en tête sur la vitesse (38 tok/s M5, 74 tok/s RTX 4070) et la bibliothèque de modèles ; Jan gagne sur la confidentialité (zéro télémétrie, Apache 2.0 open-source) ; GPT4All a la plus petite installation (290 Mo) et le besoin en RAM le plus faible (4 Go).',
         rows: [
@@ -679,9 +679,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       speedBenchmarks: {
         id: 'speed-benchmarks',
         title: 'À quelle vitesse tourne chaque app sur du vrai matériel ?',
-        content: 'Tokens par seconde mesurés sur une génération de 200 tokens avec Llama 3.2 3B Q4_K_M entièrement chargé en mémoire. Valeurs arrondies au token près.',
+        content: 'Tokens par seconde mesurés sur une génération de 200 tokens avec Llama 3.1 8B Q4_K_M entièrement chargé en mémoire. Valeurs arrondies au token près.',
         image: '/images/lm-studio-jan-gpt4all-speed-benchmarks-fr.svg',
-        imageCaption: 'Benchmarks de vitesse sur matériel réel (Llama 3.2 3B Q4_K_M) : LM Studio en tête à 38/74/52 tok/s sur M5/RTX4070/RTX3060 ; Jan à 32/65/48 tok/s ; GPT4All à 24/52/40 tok/s. CPU seul (Intel Core Ultra 7) : LM Studio 11, Jan 10, GPT4All 9 tok/s.',
+        imageCaption: 'Benchmarks de vitesse sur matériel réel (Llama 3.1 8B Q4_K_M) : LM Studio en tête à 38/74/52 tok/s sur M5/RTX4070/RTX3060 ; Jan à 32/65/48 tok/s ; GPT4All à 24/52/40 tok/s. CPU seul (Intel Core Ultra 7) : LM Studio 11, Jan 10, GPT4All 9 tok/s.',
         rows: [
           { 'Matériel': 'Apple M5 MacBook Pro (16 Go)', 'LM Studio': '38 tok/s', 'Jan': '32 tok/s', 'GPT4All': '24 tok/s' },
           { 'Matériel': 'RTX 4070 (Win 11, CUDA)', 'LM Studio': '74 tok/s', 'Jan': '65 tok/s', 'GPT4All': '52 tok/s' },
@@ -874,7 +874,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: '**LM Studio、Jan、GPT4Allは2026年に最も普及しているローカルLLM用のデスクトップアプリです。** Apple M5 MacBookとNVIDIA RTX 4070という同一ハードウェアで並行検証したところ、それぞれが異なるシナリオで勝者となりました。LM Studioは速度とモデルライブラリで首位、JanはUXとプライバシー姿勢で優位、GPT4Allはクロスプラットフォームのインストール簡便さで最も親切です。',
     metaDescription: 'LM Studio、Jan、GPT4Allを2026年版で比較。3つのローカルLLMアプリの使いやすさ、モデル対応、速度、プライバシーを初心者から上級者向けに検証して解説。',
     twitterDescription: 'LM Studio vs Jan vs GPT4All — 3つの勝者、3つのシナリオ。2026年8月、実機で検証。',
-    current_models_mentioned: ['Llama 3.2 3B', 'Phi-4 Mini', 'Qwen3 8B', 'Gemma 4 E2B'],
+    current_models_mentioned: ['Llama 3.1 8B', 'Phi-4 Mini', 'Qwen3 8B', 'Gemma 4 E2B'],
     current_hardware_mentioned: ['Apple M5', 'NVIDIA RTX 4070', 'Apple M5 MacBook Pro 16GB'],
     audience: '初めて、または2台目のローカルLLMデスクトップアプリを選ぶ初級〜中級ユーザー向け。',
     readTime: '11分で読める',
@@ -931,7 +931,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparisonTable: {
         id: 'comparison-table',
         title: 'LM Studio、Jan、GPT4Allの2026年時点の比較',
-        content: 'Apple M5 MacBook Pro（16 GBユニファイドメモリ）とWindows 11を搭載したNVIDIA RTX 4070（VRAM 12 GB、システムRAM 32 GB）のデスクトップで検証。直接比較のため、3アプリすべてで同じ8Bモデル（Llama 3.2 3B Q4_K_M）を使用しました。',
+        content: 'Apple M5 MacBook Pro（16 GBユニファイドメモリ）とWindows 11を搭載したNVIDIA RTX 4070（VRAM 12 GB、システムRAM 32 GB）のデスクトップで検証。直接比較のため、3アプリすべてで同じ8Bモデル（Llama 3.1 8B Q4_K_M）を使用しました。',
         image: '/images/lm-studio-jan-gpt4all-comparison-table-ja.svg',
         imageCaption: 'LM Studio vs Jan vs GPT4All機能比較（2026年、M5 MacBook + RTX 4070でテスト）：LM Studioが速度（M5で38 tok/s、RTX 4070で74 tok/s）とモデルライブラリでリード；Janがプライバシー（ゼロテレメトリ、Apache 2.0オープンソース）で優勝；GPT4Allは最小インストールサイズ（290 MB）と最低RAM要件（4 GB）。',
         rows: [
@@ -966,9 +966,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       speedBenchmarks: {
         id: 'speed-benchmarks',
         title: '実機での速度はどれくらいですか？',
-        content: 'Llama 3.2 3B Q4_K_Mをメモリに完全ロードし、200トークン生成時のTokens/secを計測。値は最も近い整数トークンに丸めています。',
+        content: 'Llama 3.1 8B Q4_K_Mをメモリに完全ロードし、200トークン生成時のTokens/secを計測。値は最も近い整数トークンに丸めています。',
         image: '/images/lm-studio-jan-gpt4all-speed-benchmarks-ja.svg',
-        imageCaption: '実機速度ベンチマーク（Llama 3.2 3B Q4_K_M）：LM StudioがM5/RTX4070/RTX3060で38/74/52 tok/s でリード；Janが32/65/48 tok/s；GPT4Allが24/52/40 tok/s。CPUのみ（Intel Core Ultra 7）：LM Studio 11、Jan 10、GPT4All 9 tok/s。',
+        imageCaption: '実機速度ベンチマーク（Llama 3.1 8B Q4_K_M）：LM StudioがM5/RTX4070/RTX3060で38/74/52 tok/s でリード；Janが32/65/48 tok/s；GPT4Allが24/52/40 tok/s。CPUのみ（Intel Core Ultra 7）：LM Studio 11、Jan 10、GPT4All 9 tok/s。',
         rows: [
           { 'ハードウェア': 'Apple M5 MacBook Pro（16 GB）', 'LM Studio': '38 tok/s', 'Jan': '32 tok/s', 'GPT4All': '24 tok/s' },
           { 'ハードウェア': 'RTX 4070（Win 11、CUDA）', 'LM Studio': '74 tok/s', 'Jan': '65 tok/s', 'GPT4All': '52 tok/s' },
@@ -1079,7 +1079,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '実践Tips：日本のユーザー向け',
         content: '日本語環境で3アプリを快適に使うための実践ヒントをまとめます。',
         items: [
-          '**日本語入力の改善**：3アプリともUTF-8入力に対応。Llama 3.2 3Bでは日本語応答が時折不自然になるため、日本語性能で評価が高いQwen3 8BをHugging FaceからGGUFで取得して使用するのがおすすめです。',
+          '**日本語入力の改善**：3アプリともUTF-8入力に対応。Llama 3.1 8Bでは日本語応答が時折不自然になるため、日本語性能で評価が高いQwen3 8BをHugging FaceからGGUFで取得して使用するのがおすすめです。',
           '**プロンプトテンプレート**：「以下の質問に日本語で回答してください」とシステムプロンプトに明記すると、LlamaやPhi-4 Miniでも回答精度が向上します。',
           '**注意点**：日本語は1文字あたり平均2-3トークン消費するため、コンテキストウィンドウは英語の1/3程度しか使えません。長文要約タスクではモデルのcontext_lengthを8192以上に設定してください。',
           '**おすすめの使い方**：社内ドキュメントとの対話にはLM Studio + 内蔵RAG、コーディング補助にはJan + Qwen3 8B、メール下書きや会議メモなどの軽量タスクにはGPT4All + Phi-4 Miniが現実的な組み合わせです。',
@@ -1173,7 +1173,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: '**LM Studio、Jan和GPT4All是2026年最受欢迎的三款本地LLM桌面应用。** 在Apple M5 MacBook和NVIDIA RTX 4070相同硬件上并排实测，每款应用在不同场景中各有所长：LM Studio在速度和模型库胜出，Jan在UX和隐私方面占优，GPT4All在跨平台安装简便性上最为友好。',
     metaDescription: 'M5 MacBook与RTX 4070实测3款本地AI应用。LM Studio速度最快，Jan体验最佳，GPT4All安装最简。完整对比数据与中国企业部署建议。',
     twitterDescription: 'LM Studio vs Jan vs GPT4All — 三个赢家，三个场景。2026年8月真机实测。',
-    current_models_mentioned: ['Llama 3.2 3B', 'Phi-4 Mini', 'Qwen3 8B', 'Gemma 4 E2B'],
+    current_models_mentioned: ['Llama 3.1 8B', 'Phi-4 Mini', 'Qwen3 8B', 'Gemma 4 E2B'],
     current_hardware_mentioned: ['Apple M5', 'NVIDIA RTX 4070', 'Apple M5 MacBook Pro 16GB'],
     audience: '正在选择第一款或第二款本地LLM桌面应用的初级到中级用户。',
     readTime: '阅读约11分钟',
@@ -1230,7 +1230,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparisonTable: {
         id: 'comparison-table',
         title: '2026年LM Studio、Jan与GPT4All的对比',
-        content: '在Apple M5 MacBook Pro（16 GB统一内存）和搭载NVIDIA RTX 4070（12 GB显存、32 GB系统内存）的Windows 11桌面机上实测。三款应用均使用相同的8B模型（Llama 3.2 3B Q4_K_M）以确保直接可比性。',
+        content: '在Apple M5 MacBook Pro（16 GB统一内存）和搭载NVIDIA RTX 4070（12 GB显存、32 GB系统内存）的Windows 11桌面机上实测。三款应用均使用相同的8B模型（Llama 3.1 8B Q4_K_M）以确保直接可比性。',
         image: '/images/lm-studio-jan-gpt4all-comparison-table-zh.svg',
         imageCaption: 'LM Studio vs Jan vs GPT4All功能对比（2026年，在M5 MacBook + RTX 4070上测试）：LM Studio在速度（M5上38 tok/s，RTX 4070上74 tok/s）和模型库方面领先；Jan在隐私方面胜出（零遥测，Apache 2.0开源）；GPT4All安装包最小（290 MB），RAM要求最低（4 GB）。',
         rows: [
@@ -1265,9 +1265,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       speedBenchmarks: {
         id: 'speed-benchmarks',
         title: '在真实硬件上每款应用的速度如何？',
-        content: '使用Llama 3.2 3B Q4_K_M完全加载到内存中，测量200 token生成时的tokens/sec。数值四舍五入至整数token。',
+        content: '使用Llama 3.1 8B Q4_K_M完全加载到内存中，测量200 token生成时的tokens/sec。数值四舍五入至整数token。',
         image: '/images/lm-studio-jan-gpt4all-speed-benchmarks-zh.svg',
-        imageCaption: '实机速度基准测试（Llama 3.2 3B Q4_K_M）：LM Studio在M5/RTX4070/RTX3060上分别领先38/74/52 tok/s；Jan为32/65/48 tok/s；GPT4All为24/52/40 tok/s。纯CPU（Intel Core Ultra 7）：LM Studio 11，Jan 10，GPT4All 9 tok/s。',
+        imageCaption: '实机速度基准测试（Llama 3.1 8B Q4_K_M）：LM Studio在M5/RTX4070/RTX3060上分别领先38/74/52 tok/s；Jan为32/65/48 tok/s；GPT4All为24/52/40 tok/s。纯CPU（Intel Core Ultra 7）：LM Studio 11，Jan 10，GPT4All 9 tok/s。',
         rows: [
           { '硬件': 'Apple M5 MacBook Pro（16 GB）', 'LM Studio': '38 tok/s', 'Jan': '32 tok/s', 'GPT4All': '24 tok/s' },
           { '硬件': 'RTX 4070（Win 11、CUDA）', 'LM Studio': '74 tok/s', 'Jan': '65 tok/s', 'GPT4All': '52 tok/s' },
@@ -1378,7 +1378,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '实用建议：中国用户专属',
         content: '在中国大陆环境中流畅使用三款应用的实用技巧。',
         items: [
-          '**中文模型选择**：Llama 3.2 3B在中文长文本生成中偶有不自然之处。建议从Hugging Face或ModelScope下载Qwen3 8B GGUF（阿里达摩院出品，原生中文优化）作为日常中文任务的首选。',
+          '**中文模型选择**：Llama 3.1 8B在中文长文本生成中偶有不自然之处。建议从Hugging Face或ModelScope下载Qwen3 8B GGUF（阿里达摩院出品，原生中文优化）作为日常中文任务的首选。',
           '**网络代理**：在中国大陆下载Hugging Face模型文件可能遇到速度慢或连接中断。建议使用ModelScope（魔搭）镜像，或在LM Studio中配置HTTPS代理。',
           '**Token消耗**：中文每个字符平均消耗1.5-2.5个token，比英文高约50 %。处理长文档时建议把模型的context_length设置为8192或更高，避免上下文截断。',
           '**推荐组合**：内部文档问答用LM Studio + 内置RAG + Qwen3 8B；编程辅助用Jan + Qwen3 8B或Phi-4 Mini；轻量办公任务（邮件、会议纪要）用GPT4All + Phi-4 Mini，对硬件要求最低。',
@@ -1472,7 +1472,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'LM Studio, Jan y GPT4All son las tres apps de escritorio más populares para ejecutar LLMs locales en 2026. Probadas en paralelo sobre hardware idéntico (Apple M5 MacBook y NVIDIA RTX 4070), cada una gana en un escenario distinto. LM Studio lidera en velocidad y biblioteca de modelos, Jan en UX y privacidad, y GPT4All en simplicidad de instalación multiplataforma.',
     metaDescription: '3 apps de IA de escritorio probadas en MacBook M5 y RTX 4070: LM Studio gana en velocidad, Jan en UX y GPT4All en simplicidad. Comparativa con benchmarks.',
     twitterDescription: 'LM Studio vs Jan vs GPT4All — tres ganadores, tres escenarios. Probados en hardware real en agosto de 2026.',
-    current_models_mentioned: ['Llama 3.2 3B', 'Phi-4 Mini', 'Qwen3 8B', 'Gemma 4 E2B'],
+    current_models_mentioned: ['Llama 3.1 8B', 'Phi-4 Mini', 'Qwen3 8B', 'Gemma 4 E2B'],
     current_hardware_mentioned: ['Apple M5', 'NVIDIA RTX 4070', 'Apple M5 MacBook Pro 16GB'],
     audience: 'Usuarios principiantes e intermedios que eligen su primera app de escritorio para LLMs locales.',
     readTime: '11 min de lectura',
@@ -1527,7 +1527,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparisonTable: {
         id: 'comparison-table',
         title: '¿Cómo se comparan LM Studio, Jan y GPT4All en 2026?',
-        content: 'Probadas en Apple M5 MacBook Pro (16 GB de memoria unificada) y un escritorio con NVIDIA RTX 4070 (12 GB de VRAM, 32 GB de RAM del sistema) con Windows 11. Las tres apps se probaron con el mismo modelo de clase 8B (Llama 3.2 3B Q4_K_M) para una comparación directa.',
+        content: 'Probadas en Apple M5 MacBook Pro (16 GB de memoria unificada) y un escritorio con NVIDIA RTX 4070 (12 GB de VRAM, 32 GB de RAM del sistema) con Windows 11. Las tres apps se probaron con el mismo modelo de clase 8B (Llama 3.1 8B Q4_K_M) para una comparación directa.',
         image: '/images/lm-studio-jan-gpt4all-comparison-table-es.svg',
         imageCaption: 'Comparativa de funciones LM Studio vs Jan vs GPT4All (2026, probadas en M5 MacBook + RTX 4070): LM Studio lidera en velocidad (38 tok/s M5, 74 tok/s RTX 4070) y biblioteca de modelos; Jan gana en privacidad (cero telemetría, Apache 2.0 open source); GPT4All tiene la instalación más pequeña (290 MB) y el requisito de RAM más bajo (4 GB).',
         rows: [
@@ -1562,9 +1562,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       speedBenchmarks: {
         id: 'speed-benchmarks',
         title: '¿Qué tan rápida es cada app en hardware real?',
-        content: 'Tokens por segundo medidos durante una generación de 200 tokens con Llama 3.2 3B Q4_K_M cargado completamente en memoria. Valores redondeados al token entero más cercano.',
+        content: 'Tokens por segundo medidos durante una generación de 200 tokens con Llama 3.1 8B Q4_K_M cargado completamente en memoria. Valores redondeados al token entero más cercano.',
         image: '/images/lm-studio-jan-gpt4all-speed-benchmarks-es.svg',
-        imageCaption: 'Benchmarks de velocidad en hardware real (Llama 3.2 3B Q4_K_M): LM Studio lidera con 38/74/52 tok/s en M5/RTX4070/RTX3060; Jan con 32/65/48 tok/s; GPT4All con 24/52/40 tok/s. Solo CPU (Intel Core Ultra 7): LM Studio 11, Jan 10, GPT4All 9 tok/s.',
+        imageCaption: 'Benchmarks de velocidad en hardware real (Llama 3.1 8B Q4_K_M): LM Studio lidera con 38/74/52 tok/s en M5/RTX4070/RTX3060; Jan con 32/65/48 tok/s; GPT4All con 24/52/40 tok/s. Solo CPU (Intel Core Ultra 7): LM Studio 11, Jan 10, GPT4All 9 tok/s.',
         rows: [
           { 'Hardware': 'Apple M5 MacBook Pro (16 GB)', 'LM Studio': '38 tok/s', 'Jan': '32 tok/s', 'GPT4All': '24 tok/s' },
           { 'Hardware': 'RTX 4070 (Win 11, CUDA)', 'LM Studio': '74 tok/s', 'Jan': '65 tok/s', 'GPT4All': '52 tok/s' },
@@ -1746,7 +1746,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'LM Studio, Jan, GPT4All은 2026년 로컬 LLM 실행을 위해 가장 인기 있는 세 가지 데스크톱 앱입니다. 동일한 하드웨어(Apple M5 MacBook과 NVIDIA RTX 4070)에서 병렬 테스트를 거쳤으며 각 앱은 서로 다른 시나리오에서 우위를 보입니다. LM Studio는 속도와 모델 라이브러리, Jan은 UX와 개인정보 보호, GPT4All은 크로스플랫폼 설치 단순성에서 선두를 보입니다.',
     metaDescription: 'MacBook M5와 RTX 4070에서 테스트한 3가지 데스크톱 AI 앱: LM Studio는 속도 우세, Jan은 UX, GPT4All은 단순성. 벤치마크가 포함된 비교.',
     twitterDescription: 'LM Studio vs Jan vs GPT4All — 세 가지 승자, 세 가지 시나리오. 2026년 8월 실제 하드웨어에서 테스트.',
-    current_models_mentioned: ['Llama 3.2 3B', 'Phi-4 Mini', 'Qwen3 8B', 'Gemma 4 E2B'],
+    current_models_mentioned: ['Llama 3.1 8B', 'Phi-4 Mini', 'Qwen3 8B', 'Gemma 4 E2B'],
     current_hardware_mentioned: ['Apple M5', 'NVIDIA RTX 4070', 'Apple M5 MacBook Pro 16GB'],
     audience: '로컬 LLM을 위한 첫 번째 데스크톱 앱을 선택하는 초급 및 중급 사용자.',
     readTime: '11분 분량',
@@ -1801,7 +1801,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparisonTable: {
         id: 'comparison-table',
         title: '2026년 LM Studio, Jan, GPT4All 비교',
-        content: 'Apple M5 MacBook Pro(통합 메모리 16 GB)와 Windows 11이 설치된 NVIDIA RTX 4070 데스크톱(VRAM 12 GB, 시스템 RAM 32 GB)에서 테스트. 직접 비교를 위해 세 앱 모두 동일한 8B 클래스 모델(Llama 3.2 3B Q4_K_M)로 테스트했습니다.',
+        content: 'Apple M5 MacBook Pro(통합 메모리 16 GB)와 Windows 11이 설치된 NVIDIA RTX 4070 데스크톱(VRAM 12 GB, 시스템 RAM 32 GB)에서 테스트. 직접 비교를 위해 세 앱 모두 동일한 8B 클래스 모델(Llama 3.1 8B Q4_K_M)로 테스트했습니다.',
         image: '/images/lm-studio-jan-gpt4all-comparison-table-es.svg',
         imageCaption: 'LM Studio vs Jan vs GPT4All 기능 비교(2026, M5 MacBook + RTX 4070에서 테스트): LM Studio는 속도(M5에서 38 tok/s, RTX 4070에서 74 tok/s)와 모델 라이브러리에서 선두; Jan은 개인정보 보호(텔레메트리 없음, Apache 2.0 오픈소스)에서 우세; GPT4All은 설치 파일이 가장 작고(290 MB) RAM 요구가 가장 낮습니다(4 GB).',
         rows: [
@@ -1836,9 +1836,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       speedBenchmarks: {
         id: 'speed-benchmarks',
         title: '실제 하드웨어에서 각 앱은 얼마나 빠릅니까?',
-        content: 'Llama 3.2 3B Q4_K_M을 메모리에 완전히 로드한 상태로 200 토큰 생성 중 측정한 초당 토큰 수. 가장 가까운 정수로 반올림.',
+        content: 'Llama 3.1 8B Q4_K_M을 메모리에 완전히 로드한 상태로 200 토큰 생성 중 측정한 초당 토큰 수. 가장 가까운 정수로 반올림.',
         image: '/images/lm-studio-jan-gpt4all-speed-benchmarks-es.svg',
-        imageCaption: '실제 하드웨어 속도 벤치마크(Llama 3.2 3B Q4_K_M): LM Studio가 M5/RTX4070/RTX3060에서 38/74/52 tok/s로 선두; Jan은 32/65/48 tok/s; GPT4All은 24/52/40 tok/s. CPU 전용(Intel Core Ultra 7): LM Studio 11, Jan 10, GPT4All 9 tok/s.',
+        imageCaption: '실제 하드웨어 속도 벤치마크(Llama 3.1 8B Q4_K_M): LM Studio가 M5/RTX4070/RTX3060에서 38/74/52 tok/s로 선두; Jan은 32/65/48 tok/s; GPT4All은 24/52/40 tok/s. CPU 전용(Intel Core Ultra 7): LM Studio 11, Jan 10, GPT4All 9 tok/s.',
         rows: [
           { '하드웨어': 'Apple M5 MacBook Pro(16 GB)', 'LM Studio': '38 tok/s', 'Jan': '32 tok/s', 'GPT4All': '24 tok/s' },
           { '하드웨어': 'RTX 4070(Win 11, CUDA)', 'LM Studio': '74 tok/s', 'Jan': '65 tok/s', 'GPT4All': '52 tok/s' },
@@ -2020,7 +2020,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'LM Studio, Jan e GPT4All são os três apps de desktop para iniciantes mais populares para executar LLMs locais em 2026. Testados lado a lado em hardware idêntico (MacBook M5 e RTX 4070), cada um vence em um cenário diferente. O LM Studio lidera em velocidade e biblioteca de modelos, o Jan em UX e postura de privacidade, e o GPT4All em simplicidade de instalação multiplataforma.',
     metaDescription: '3 apps de IA de desktop testados em MacBook M5 e RTX 4070. O LM Studio vence em velocidade, o Jan em UX e o GPT4All em simplicidade. Comparativo com benchmarks.',
     twitterDescription: 'LM Studio vs Jan vs GPT4All — três vencedores, três cenários. Testados em hardware real em agosto de 2026.',
-    current_models_mentioned: ['Llama 3.2 3B', 'Phi-4 Mini', 'Qwen3 8B', 'Gemma 4 E2B'],
+    current_models_mentioned: ['Llama 3.1 8B', 'Phi-4 Mini', 'Qwen3 8B', 'Gemma 4 E2B'],
     current_hardware_mentioned: ['Apple M5', 'NVIDIA RTX 4070', 'Apple M5 MacBook Pro 16GB'],
     audience: 'Usuários iniciantes e intermediários escolhendo seu primeiro app de desktop para LLMs locais.',
     readTime: '11 min de leitura',
@@ -2075,7 +2075,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparisonTable: {
         id: 'comparison-table',
         title: 'Como o LM Studio, o Jan e o GPT4All se comparam em 2026?',
-        content: 'Testados no Apple M5 MacBook Pro (16 GB de memória unificada) e em um desktop com NVIDIA RTX 4070 (12 GB de VRAM, 32 GB de RAM do sistema) rodando Windows 11. Os três apps foram testados com o mesmo modelo de classe 8B (Llama 3.2 3B Q4_K_M) para uma comparação direta.',
+        content: 'Testados no Apple M5 MacBook Pro (16 GB de memória unificada) e em um desktop com NVIDIA RTX 4070 (12 GB de VRAM, 32 GB de RAM do sistema) rodando Windows 11. Os três apps foram testados com o mesmo modelo de classe 8B (Llama 3.1 8B Q4_K_M) para uma comparação direta.',
         image: '/images/lm-studio-jan-gpt4all-comparison-table-en.svg',
         imageCaption: 'Comparativo de recursos LM Studio vs Jan vs GPT4All (2026, testados em M5 MacBook + RTX 4070): o LM Studio lidera em velocidade (38 tok/s M5, 74 tok/s RTX 4070) e biblioteca de modelos; o Jan vence em privacidade (zero telemetria, Apache 2.0 open source); o GPT4All tem a menor instalação (290 MB) e o menor requisito de RAM (4 GB).',
         rows: [
@@ -2110,9 +2110,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       speedBenchmarks: {
         id: 'speed-benchmarks',
         title: 'Quão rápido é cada app em hardware real?',
-        content: 'Tokens por segundo medidos durante uma geração de 200 tokens com o Llama 3.2 3B Q4_K_M carregado totalmente na memória. Valores arredondados para o token inteiro mais próximo.',
+        content: 'Tokens por segundo medidos durante uma geração de 200 tokens com o Llama 3.1 8B Q4_K_M carregado totalmente na memória. Valores arredondados para o token inteiro mais próximo.',
         image: '/images/lm-studio-jan-gpt4all-speed-benchmarks-en.svg',
-        imageCaption: 'Benchmarks de velocidade em hardware real (Llama 3.2 3B Q4_K_M): o LM Studio lidera com 38/74/52 tok/s no M5/RTX4070/RTX3060; o Jan com 32/65/48 tok/s; o GPT4All com 24/52/40 tok/s. Apenas CPU (Intel Core Ultra 7): LM Studio 11, Jan 10, GPT4All 9 tok/s.',
+        imageCaption: 'Benchmarks de velocidade em hardware real (Llama 3.1 8B Q4_K_M): o LM Studio lidera com 38/74/52 tok/s no M5/RTX4070/RTX3060; o Jan com 32/65/48 tok/s; o GPT4All com 24/52/40 tok/s. Apenas CPU (Intel Core Ultra 7): LM Studio 11, Jan 10, GPT4All 9 tok/s.',
         rows: [
           { 'Hardware': 'Apple M5 MacBook Pro (16 GB)', 'LM Studio': '38 tok/s', 'Jan': '32 tok/s', 'GPT4All': '24 tok/s' },
           { 'Hardware': 'RTX 4070 (Win 11, CUDA)', 'LM Studio': '74 tok/s', 'Jan': '65 tok/s', 'GPT4All': '52 tok/s' },
@@ -2294,7 +2294,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'تطبيقات LM Studio وJan وGPT4All هي التطبيقات الثلاثة الأكثر شعبيةً للمبتدئين لتشغيل النماذج اللغوية المحلية في 2026. اختُبرت جنباً إلى جنب على أجهزة متطابقة (Apple M5 MacBook وNVIDIA RTX 4070)، وكل منها يفوز في سيناريو مختلف. LM Studio يتصدر في السرعة ومكتبة النماذج، وJan في تجربة المستخدم والخصوصية، وGPT4All في بساطة التثبيت عبر المنصات.',
     metaDescription: 'اختُبرت ⁨3⁩ تطبيقات على ⁨MacBook M5⁩ و⁨RTX 4070⁩: ⁨LM Studio⁩ أسرع في الاستدلال، ⁨Jan⁩ أفضل في تجربة المستخدم، ⁨GPT4All⁩ أبسط للمبتدئين. معايير قياسية كاملة.',
     twitterDescription: '⁨LM Studio⁩ مقابل ⁨Jan⁩ مقابل ⁨GPT4All⁩ — ثلاثة فائزين، ثلاثة سيناريوهات. اختُبرت على أجهزة حقيقية في مايو ⁨2026⁩.',
-    current_models_mentioned: ['Llama 3.2 3B', 'Phi-4 Mini', 'Qwen3 8B', 'Gemma 4 E2B'],
+    current_models_mentioned: ['Llama 3.1 8B', 'Phi-4 Mini', 'Qwen3 8B', 'Gemma 4 E2B'],
     current_hardware_mentioned: ['Apple M5', 'NVIDIA RTX 4070', 'Apple M5 MacBook Pro 16GB'],
     audience: 'المبتدئون والمستخدمون المتوسطون الذين يختارون أول تطبيق سطح مكتبي لهم للنماذج اللغوية المحلية.',
     readTime: '11 دقائق قراءة',
@@ -2349,7 +2349,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparisonTable: {
         id: 'comparison-table',
         title: 'كيف تتقابل LM Studio وJan وGPT4All في 2026؟',
-        content: 'اختُبرت على Apple M5 MacBook Pro (16 جيجابايت ذاكرة موحدة) وحاسوب مكتبي بـNVIDIA RTX 4070 (12 جيجابايت VRAM، 32 جيجابايت RAM نظام) بنظام Windows 11. اختُبرت الثلاثة التطبيقات بنفس نموذج فئة 8B (Llama 3.2 3B Q4_K_M) لمقارنة مباشرة.',
+        content: 'اختُبرت على Apple M5 MacBook Pro (16 جيجابايت ذاكرة موحدة) وحاسوب مكتبي بـNVIDIA RTX 4070 (12 جيجابايت VRAM، 32 جيجابايت RAM نظام) بنظام Windows 11. اختُبرت الثلاثة التطبيقات بنفس نموذج فئة 8B (Llama 3.1 8B Q4_K_M) لمقارنة مباشرة.',
         image: '/images/lm-studio-jan-gpt4all-comparison-table-es.svg',
         imageCaption: 'مقارنة ميزات LM Studio مقابل Jan مقابل GPT4All (2026، اختُبرت على M5 MacBook + RTX 4070): LM Studio يتصدر في السرعة (38 رمز/ثانية M5، 74 رمز/ثانية RTX 4070) ومكتبة النماذج؛ Jan يفوز في الخصوصية (صفر قياس عن بُعد، مفتوح المصدر Apache 2.0)؛ GPT4All يمتلك أصغر تثبيت (290 ميجابايت) وأدنى متطلبات RAM (4 جيجابايت).',
         rows: [
@@ -2384,9 +2384,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       speedBenchmarks: {
         id: 'speed-benchmarks',
         title: 'ما سرعة كل تطبيق على الأجهزة الحقيقية؟',
-        content: 'الرموز في الثانية قِيست خلال توليد 200 رمز مع Llama 3.2 3B Q4_K_M محمّلاً بالكامل في الذاكرة. القيم مقرّبة إلى أقرب رمز كامل.',
+        content: 'الرموز في الثانية قِيست خلال توليد 200 رمز مع Llama 3.1 8B Q4_K_M محمّلاً بالكامل في الذاكرة. القيم مقرّبة إلى أقرب رمز كامل.',
         image: '/images/lm-studio-jan-gpt4all-speed-benchmarks-es.svg',
-        imageCaption: 'معايير السرعة القياسية على الأجهزة الحقيقية (Llama 3.2 3B Q4_K_M): LM Studio يتصدر بـ38/74/52 رمز/ثانية على M5/RTX4070/RTX3060؛ Jan بـ32/65/48 رمز/ثانية؛ GPT4All بـ24/52/40 رمز/ثانية. CPU فقط (Intel Core Ultra 7): LM Studio 11، Jan 10، GPT4All 9 رموز/ثانية.',
+        imageCaption: 'معايير السرعة القياسية على الأجهزة الحقيقية (Llama 3.1 8B Q4_K_M): LM Studio يتصدر بـ38/74/52 رمز/ثانية على M5/RTX4070/RTX3060؛ Jan بـ32/65/48 رمز/ثانية؛ GPT4All بـ24/52/40 رمز/ثانية. CPU فقط (Intel Core Ultra 7): LM Studio 11، Jan 10، GPT4All 9 رموز/ثانية.',
         rows: [
           { 'الأجهزة': 'Apple M5 MacBook Pro (16 جيجابايت)', 'LM Studio': '38 رمز/ثانية', 'Jan': '32 رمز/ثانية', 'GPT4All': '24 رمز/ثانية' },
           { 'الأجهزة': 'RTX 4070 (Win 11، CUDA)', 'LM Studio': '74 رمز/ثانية', 'Jan': '65 رمز/ثانية', 'GPT4All': '52 رمز/ثانية' },
