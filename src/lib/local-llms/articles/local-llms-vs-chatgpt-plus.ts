@@ -16,7 +16,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       intro: '**ChatGPT now has 7 pricing tiers as of April 2026 — Free ($0), Go ($8), Plus ($20), Pro $100 (new April 9), Pro $200, Business ($25/user), and Enterprise.** ChatGPT Plus costs $720 over 3 years with access to GPT-5.2 and GPT-5.2 Thinking. A local Llama 3.3 70B setup on an RTX 5060 Ti (16 GB, $400) costs $430–490 total over 3 years. For heavy users (10+ hrs/week), local is 30–50% cheaper over 3 years and 80% cheaper over 5 years. As of August 2026, local Llama 3.3 70B still hits ~82% of GPT-5.2 quality on MMLU — the closest parity between local and cloud models in MMLU benchmarks to date (April 2026; EvalPlus leaderboard).',
       metaDescription: 'ChatGPT Plus: $20/mo = $720 over 3 years. Local Llama 3.3 70B on RTX 5060 Ti: $400 GPU + $90 power = $490 total. Breakeven 11 months. 7 ChatGPT tiers compared.',
       publishDate: '2026-04-05',
-      dateModified: '2026-08-27',
+      dateModified: '2026-08-28',
       last_full_refresh: '2026-08-27',
       next_seo_review_due: '2026-10-01',
       last_seo_review: '2026-08-27',
@@ -40,6 +40,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'tldr': {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'ChatGPT Plus costs $720 over three years, while a local Llama 3.3 70B setup on an RTX 5060 Ti costs about $490 total over the same period, breaking even in roughly 11 months for someone using it 10+ hours per week.' },
+            { type: 'plain-terms', text: 'If you use ChatGPT heavily, the monthly subscription adds up fast -- $720 over three years for Plus alone. Building a local setup costs more upfront but pays for itself within about a year for a heavy user, after which every query is free. The trade-off is quality: a local model gets close to but not quite ChatGPT-level performance.' },
+          ],
           items: [
             'ChatGPT now has 7 tiers: Free ($0, ads), Go ($8, ads), Plus ($20), Pro $100 (new Apr 9 2026), Pro $200, Business ($25/user), Enterprise',
             'ChatGPT Plus: $20/month = $720 over 3 years — includes GPT-5.2 (160 msg/3hr) and GPT-5.2 Thinking (3,000/week)',
@@ -302,7 +306,7 @@ schema: {
       intro: '**ChatGPT bietet seit April 2026 sieben Preisstufen — Free (0€), Go (8€), Plus (20€), Pro €100 (neu am 9. April), Pro €200, Business (25€/Nutzer) und Enterprise.** ChatGPT Plus kostet über 3 Jahre 720€ mit Zugriff auf GPT-5.2 und GPT-5.2 Thinking. Ein lokales Llama 3.3 70B Setup auf einer RTX 5060 Ti (16 GB, ~400€) kostet insgesamt 430–490€ über 3 Jahre. Für intensivnutzer (10+ Std./Woche) ist lokal 30–50 % billiger über 3 Jahre und 80 % billiger über 5 Jahre. Seit April 2026 und weiterhin im August 2026 erreicht lokales Llama 3.3 70B ~82 % der GPT-5.2-Qualität bei MMLU — die bisher größte Annäherung zwischen lokalen und Cloud-Modellen in MMLU-Benchmarks (Stand: April 2026; EvalPlus-Leaderboard).',
       metaDescription: 'Lokale LLMs vs. ChatGPT Plus 2026: Kostenvergleich über 3 Jahre, Datenschutz und Performance. Wann sich lokale Hardware gegen das $20-Abo lohnt. (Aktualisiert August 2026.)',
       publishDate: '2026-04-05',
-      dateModified: '2026-08-27',
+      dateModified: '2026-08-28',
       leadAnswerBlock: '**ChatGPT Plus kostet über 3 Jahre 720€ (20€/Monat für GPT-5.2 und Thinking). Ein lokales Llama 3.3 70B auf RTX 5060 Ti kostet über 3 Jahre insgesamt 490€. Amortisationspunkt: 11 Monate bei 10 Std./Woche.**',
       audience: 'Kostenorientierte Nutzer, die zwischen ChatGPT Plus und lokalem LLM Setup wählen',
       readTime: '8 Min. Lesezeit',
@@ -323,6 +327,10 @@ schema: {
         'tldr': {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'ChatGPT Plus kostet über drei Jahre 720 $, während ein lokales Llama-3.3-70B-Setup auf einer RTX 5060 Ti im gleichen Zeitraum etwa 490 $ insgesamt kostet und sich bei 10+ Stunden Nutzung pro Woche nach etwa 11 Monaten amortisiert.' },
+            { type: 'plain-terms', text: 'Wer ChatGPT intensiv nutzt, für den summiert sich das Abo schnell -- allein für Plus 720 $ über drei Jahre. Ein lokales Setup kostet anfangs mehr, amortisiert sich aber bei intensiver Nutzung innerhalb eines Jahres, danach ist jede Anfrage kostenlos. Der Kompromiss liegt bei der Qualität: Ein lokales Modell kommt nah an ChatGPT heran, erreicht dessen Niveau aber nicht ganz.' },
+          ],
           items: [
             'ChatGPT hat jetzt 7 Stufen: Free (0€, Werbung), Go (8€, Werbung), Plus (20€), Pro €100 (neu 9. April 2026), Pro €200, Business (25€/Nutzer), Enterprise',
             'ChatGPT Plus: 20€/Monat = 720€ über 3 Jahre — beinhaltet GPT-5.2 (160 Nachrichten/3h) und GPT-5.2 Thinking (3.000/Woche)',
@@ -593,7 +601,7 @@ schema: {
       intro: '**ChatGPT propose depuis avril 2026 sept niveaux tarifaires — Free (0€), Go (8€), Plus (20€), Pro 100€ (nouveau 9 avril), Pro 200€, Business (25€/utilisateur) et Enterprise.** ChatGPT Plus coûte 720€ sur 3 ans avec accès à GPT-5.2 et GPT-5.2 Thinking. Une configuration locale Llama 3.3 70B sur RTX 5060 Ti (16 GB, 400€) coûte 430–490€ au total sur 3 ans. Pour les utilisateurs intensifs (10+ heures/semaine), le local est 30–50 % moins cher sur 3 ans et 80 % moins cher sur 5 ans. Depuis avril 2026, et toujours en août 2026, Llama 3.3 70B local atteint ~82 % de la qualité GPT-5.2 sur MMLU — la plus grande convergence à ce jour entre modèles locaux et cloud sur les benchmarks MMLU (avril 2026 ; EvalPlus leaderboard).',
       metaDescription: 'ChatGPT Plus : 20€/mois = 720€ sur 3 ans. LLM Llama 3.3 70B local sur RTX 5060 Ti : 400€ GPU + 90€ électricité = 490€ total. Rentabilité 11 mois. 7 niveaux ChatGPT comparés.',
       publishDate: '2026-04-05',
-      dateModified: '2026-08-27',
+      dateModified: '2026-08-28',
       leadAnswerBlock: '**ChatGPT Plus coûte 720€ sur 3 ans (20€/mois pour GPT-5.2 et Thinking). Un Llama 3.3 70B local sur RTX 5060 Ti coûte 490€ au total sur 3 ans. Point de rentabilité : 11 mois à 10 heures/semaine.**',
       audience: 'Utilisateurs soucieux du coût décidant entre ChatGPT Plus et une configuration LLM locale',
       readTime: '8 min de lecture',
@@ -614,6 +622,10 @@ schema: {
         'tldr': {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: "ChatGPT Plus coûte 720 $ sur trois ans, tandis qu'une configuration locale avec Llama 3.3 70B sur une RTX 5060 Ti coûte environ 490 $ au total sur la même période, avec un seuil de rentabilité atteint en environ 11 mois pour une utilisation de 10+ heures par semaine." },
+            { type: 'plain-terms', text: "Pour un usage intensif de ChatGPT, l'abonnement s'accumule vite -- 720 $ sur trois ans rien que pour Plus. Une configuration locale coûte plus cher au départ, mais s'amortit en environ un an pour un utilisateur intensif, après quoi chaque requête est gratuite. Le compromis se situe au niveau de la qualité : un modèle local se rapproche de ChatGPT sans tout à fait l'atteindre." },
+          ],
           items: [
             'ChatGPT propose maintenant 7 niveaux : Free (0€, publicités), Go (8€, publicités), Plus (20€), Pro 100€ (nouveau 9 avril 2026), Pro 200€, Business (25€/utilisateur), Enterprise',
             'ChatGPT Plus : 20€/mois = 720€ sur 3 ans — inclut GPT-5.2 (160 messages/3h) et GPT-5.2 Thinking (3 000/semaine)',
@@ -874,7 +886,7 @@ schema: {
       intro: '**ChatGPT は2026年4月から7つの価格レベルを提供しています — Free（0円）、Go（月額800円程度）、Plus（20€/月）、Pro 100€（4月9日新規）、Pro 200€、Business（ユーザー/月25€）、Enterprise。** ChatGPT Plus は3年間で約144,000円（20€/月）で、GPT-5.2 と GPT-5.2 Thinking にアクセスできます。RTX 5060 Ti（16 GB、約75,800円）上でのローカル Llama 3.3 70B セットアップは、3年間で合計約98,300円です。ヘビーユーザー（週10時間以上）の場合、ローカルは3年間で30～50％安く、5年間で80％安くなります。2026年4月時点で、そして2026年8月現在も引き続き、ローカル Llama 3.3 70B は MMLU で GPT-5.2 の約82％の品質に達しています — MMLUベンチマークにおけるローカルとクラウドモデルのこれまでで最も近いパリティ（2026年4月時点；EvalPlus leaderboard）です。',
       metaDescription: 'ChatGPT Plus：20€/月 = 3年間で約144,000円。RTX 5060 Ti 上のローカル Llama 3.3 70B：約75,800円 GPU + 22,500円電気代 = 約98,300円。損益分岐点11ヶ月。7つの ChatGPT レベルを比較。',
       publishDate: '2026-04-05',
-      dateModified: '2026-08-27',
+      dateModified: '2026-08-28',
       leadAnswerBlock: '**ChatGPT Plus は3年間で約144,000円（20€/月、GPT-5.2 と Thinking）です。RTX 5060 Ti 上のローカル Llama 3.3 70B は3年間で約98,300円です。損益分岐点：週10時間利用で11ヶ月。**',
       audience: 'ChatGPT Plus とローカル LLM セットアップのどちらかを選択する、コスト意識の高いユーザー',
       readTime: '8分で読める',
@@ -895,6 +907,10 @@ schema: {
         'tldr': {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'ChatGPT Plusは3年間で720ドルかかりますが、RTX 5060 Ti上のローカルLlama 3.3 70B構成は同期間で合計約490ドルで済み、週10時間以上使うユーザーなら約11ヶ月で元が取れます。' },
+            { type: 'plain-terms', text: 'ChatGPTをよく使う人なら、月額料金はすぐに積み重なります -- Plusだけで3年間720ドルです。ローカル構成は最初のコストが高くなりますが、ヘビーユーザーなら約1年で元が取れ、その後はすべてのクエリが無料になります。トレードオフは品質です。ローカルモデルはChatGPTに近づきますが、完全には届きません。' },
+          ],
           items: [
             'ChatGPT は現在7つのレベルを提供：Free（無料、広告）、Go（月額800円程度、広告）、Plus（20€）、Pro 100€（4月9日新規）、Pro 200€、Business（ユーザーあたり25€）、Enterprise',
             'ChatGPT Plus：20€/月 = 3年で約144,000円 — GPT-5.2（160メッセージ/3時間）と GPT-5.2 Thinking（3,000/週）を含む',
@@ -1155,7 +1171,7 @@ schema: {
       intro: '**自2026年4月起，ChatGPT提供7个价格级别——Free（免费）、Go（$8）、Plus（$20）、Pro 100€（新推出4月9日）、Pro 200€、Business（每用户$25）和Enterprise。** ChatGPT Plus在3年内花费$720，提供GPT-5.2和GPT-5.2 Thinking访问权限。RTX 5060 Ti（16GB，约$400）上的本地Llama 3.3 70B设置在3年内总成本为$430-490。对于重度用户（每周10小时以上），本地设置在3年内便宜30-50%，在5年内便宜80%。截至2026年4月，且在2026年8月依然成立，本地Llama 3.3 70B在MMLU上达到GPT-5.2质量的约82%——迄今为止本地和云端模型在MMLU基准测试中最接近的差距（截至2026年4月；EvalPlus排行榜）。',
       metaDescription: 'ChatGPT Plus：$20/月 = 3年$720。RTX 5060 Ti本地Llama 3.3 70B：约$400 GPU + $90电费 = $490总计。平衡点11个月。7个ChatGPT级别对比。',
       publishDate: '2026-04-05',
-      dateModified: '2026-08-27',
+      dateModified: '2026-08-28',
       leadAnswerBlock: '**ChatGPT Plus在3年内花费$720（每月$20，用于GPT-5.2和Thinking）。RTX 5060 Ti上的本地Llama 3.3 70B在3年内花费约$490。平衡点：每周10小时使用11个月。**',
       audience: '决定在ChatGPT Plus和本地LLM设置之间选择的成本意识用户',
       readTime: '阅读约8分钟',
@@ -1176,6 +1192,10 @@ schema: {
         'tldr': {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'ChatGPT Plus三年花费720美元，而在RTX 5060 Ti上运行的本地Llama 3.3 70B同期总花费约为490美元，对于每周使用10小时以上的用户来说，大约11个月即可回本。' },
+            { type: 'plain-terms', text: '如果你重度使用ChatGPT，订阅费用会很快累积——仅Plus三年就要720美元。本地方案前期花费更高，但对重度用户来说大约一年就能回本，之后每次查询都是免费的。代价在于质量：本地模型接近但达不到ChatGPT的水平。' },
+          ],
           items: [
             'ChatGPT现提供7个级别：Free（免费，有广告）、Go（$8，有广告）、Plus（$20）、Pro 100€（4月9日新增）、Pro 200€、Business（每用户$25）、Enterprise',
             'ChatGPT Plus：$20/月 = 3年$720——包括GPT-5.2（160条消息/3小时）和GPT-5.2 Thinking（3,000/周）',
@@ -1435,7 +1455,7 @@ schema: {
       intro: '**ChatGPT tiene 7 niveles de precios desde abril de 2026 — Free ($0), Go ($8), Plus ($20), Pro $100 (nuevo el 9 de abril), Pro $200, Business ($25/usuario) y Enterprise.** ChatGPT Plus cuesta $720 en 3 años con acceso a GPT-5.2 y GPT-5.2 Thinking. Una configuración local de Llama 3.3 70B en una RTX 5060 Ti (16 GB, $400) cuesta entre $430 y $490 en total en 3 años. Para usuarios intensivos (más de 10 hrs/semana), lo local es 30–50% más barato en 3 años y 80% más barato en 5 años. En abril de 2026, y aún vigente en agosto de 2026, Llama 3.3 70B local alcanza ~82% de la calidad de GPT-5.2 en MMLU — la mayor convergencia hasta la fecha entre modelos locales y en la nube en benchmarks MMLU (abril 2026; EvalPlus leaderboard).',
       metaDescription: 'ChatGPT Plus: $20/mes = $720 en 3 años. Llama 3.3 70B local en RTX 5060 Ti: $400 GPU + $90 luz = $490. Punto de equilibrio: 11 meses. 7 niveles comparados.',
       publishDate: '2026-04-05',
-      dateModified: '2026-08-27',
+      dateModified: '2026-08-28',
       leadAnswerBlock: '**ChatGPT Plus cuesta $720 en 3 años ($20/mes por GPT-5.2 y Thinking). Un Llama 3.3 70B local en RTX 5060 Ti cuesta $490 en total en 3 años. Punto de equilibrio: 11 meses a 10 hrs/semana.**',
       audience: 'Usuarios conscientes del costo que deciden entre ChatGPT Plus y una configuración de LLM local',
       readTime: '8 min de lectura',
@@ -1456,6 +1476,10 @@ schema: {
         'tldr': {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'ChatGPT Plus cuesta $720 en tres años, mientras que una configuración local de Llama 3.3 70B en una RTX 5060 Ti cuesta unos $490 en total en el mismo periodo, alcanzando el punto de equilibrio en unos 11 meses para quien lo use 10+ horas semanales.' },
+            { type: 'plain-terms', text: 'Si usas ChatGPT intensamente, la suscripción se acumula rápido: solo Plus son $720 en tres años. Montar una configuración local cuesta más al principio, pero se amortiza en aproximadamente un año para un usuario intensivo, y después cada consulta es gratis. La contrapartida es la calidad: un modelo local se acerca a ChatGPT pero no llega del todo a su nivel.' },
+          ],
           items: [
             'ChatGPT ahora tiene 7 niveles: Free ($0, anuncios), Go ($8, anuncios), Plus ($20), Pro $100 (nuevo el 9 de abril de 2026), Pro $200, Business ($25/usuario), Enterprise',
             'ChatGPT Plus: $20/mes = $720 en 3 años — incluye GPT-5.2 (160 mensajes/3h) y GPT-5.2 Thinking (3,000/semana)',
@@ -1717,7 +1741,7 @@ schema: {
       intro: '**يمتلك ChatGPT 7 مستويات تسعير اعتبارًا من أبريل 2026 — Free (0$)، Go (8$)، Plus (20$)، Pro 100$ (جديد في 9 أبريل)، Pro 200$، Business (25$/مستخدم) وEnterprise.** يكلّف ChatGPT Plus 720$ في 3 سنوات مع الوصول إلى GPT-5.2 وGPT-5.2 Thinking. يكلّف إعداد Llama 3.3 70B محلي على RTX 5060 Ti (16 GB، 400$) بين 430 و490$ إجمالًا في 3 سنوات. للمستخدمين المكثّفين (أكثر من 10 ساعات/أسبوع)، المحلي أرخص بنسبة 30–50% في 3 سنوات و80% في 5 سنوات. في أبريل 2026، ولا يزال الأمر كذلك في أغسطس 2026، يحقّق Llama 3.3 70B المحلي ~82% من جودة GPT-5.2 في MMLU — أقرب تكافؤ حتى الآن بين النماذج المحلية والسحابية في معايير MMLU (أبريل 2026؛ EvalPlus leaderboard).',
       metaDescription: '⁨ChatGPT Plus⁩ يكلّف ⁨720⁩$ في ⁨3⁩ سنوات. ⁨Llama 3.3 70B⁩ محلي على ⁨RTX 5060 Ti⁩: ⁨400⁩$ ⁨GPU + 90⁩$ كهرباء = ⁨490⁩$. التعادل بعد ⁨11⁩ شهرًا. مقارنة ⁨7⁩ مستويات.',
       publishDate: '2026-04-05',
-      dateModified: '2026-08-27',
+      dateModified: '2026-08-28',
       leadAnswerBlock: '**يكلّف ChatGPT Plus 720$ في 3 سنوات (20$/شهر لـGPT-5.2 وThinking). يكلّف Llama 3.3 70B محلي على RTX 5060 Ti 490$ إجمالًا في 3 سنوات. نقطة التعادل: 11 شهرًا بمعدل 10 ساعات/أسبوع.**',
       audience: 'المستخدمون المهتمون بالتكلفة الذين يقرّرون بين ChatGPT Plus وإعداد LLM محلي',
       readTime: '8 دقائق للقراءة',
@@ -1738,6 +1762,10 @@ schema: {
         'tldr': {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'يكلّف ChatGPT Plus 720$ على مدى ثلاث سنوات، بينما يكلّف إعداد Llama 3.3 70B المحلي على RTX 5060 Ti نحو 490$ إجمالاً في الفترة نفسها، ويسترد تكلفته خلال نحو 11 شهراً لمن يستخدمه 10+ ساعات أسبوعياً.' },
+            { type: 'plain-terms', text: 'إذا كنت تستخدم ChatGPT بكثافة، فإن الاشتراك يتراكم بسرعة -- Plus وحده يكلّف 720$ على مدى ثلاث سنوات. يكلّف الإعداد المحلي أكثر في البداية، لكنه يسترد تكلفته خلال نحو عام للمستخدم الكثيف، وبعدها يصبح كل استعلام مجانياً. المقايضة تكمن في الجودة: يقترب النموذج المحلي من ChatGPT لكنه لا يصل إلى مستواه تماماً.' },
+          ],
           items: [
             'يمتلك ChatGPT الآن 7 مستويات: Free (0$، إعلانات)، Go (8$، إعلانات)، Plus (20$)، Pro 100$ (جديد في 9 أبريل 2026)، Pro 200$، Business (25$/مستخدم)، Enterprise',
             'ChatGPT Plus: 20$/شهر = 720$ في 3 سنوات — يشمل GPT-5.2 (160 رسالة/3 ساعات) وGPT-5.2 Thinking (3,000/أسبوع)',
@@ -1999,7 +2027,7 @@ schema: {
       intro: '**O ChatGPT tem 7 níveis de preço desde abril de 2026 — Free ($0), Go ($8), Plus ($20), Pro $100 (novo em 9 de abril), Pro $200, Business ($25/usuário) e Enterprise.** O ChatGPT Plus custa $720 em 3 anos com acesso ao GPT-5.2 e GPT-5.2 Thinking. Uma configuração local de Llama 3.3 70B em uma RTX 5060 Ti (16 GB, $400) custa entre $430 e $490 no total em 3 anos. Para usuários intensivos (mais de 10 h/semana), o local é 30–50% mais barato em 3 anos e 80% mais barato em 5 anos. Em abril de 2026, e ainda válido em agosto de 2026, o Llama 3.3 70B local atinge ~82% da qualidade do GPT-5.2 no MMLU — a maior convergência até à data entre modelos locais e cloud em benchmarks MMLU (abril 2026; EvalPlus leaderboard).',
       metaDescription: 'ChatGPT Plus: $20/mês = $720 em 3 anos. Llama 3.3 70B local em RTX 5060 Ti: $400 GPU + $90 energia = $490. Ponto de equilíbrio: 11 meses. 7 níveis comparados.',
       publishDate: '2026-04-05',
-      dateModified: '2026-08-27',
+      dateModified: '2026-08-28',
       leadAnswerBlock: '**O ChatGPT Plus custa $720 em 3 anos ($20/mês pelo GPT-5.2 e Thinking). Um Llama 3.3 70B local em RTX 5060 Ti custa $490 no total em 3 anos. Ponto de equilíbrio: 11 meses a 10 h/semana.**',
       audience: 'Usuários conscientes de custos decidindo entre ChatGPT Plus e uma configuração de LLM local',
       readTime: '8 min de leitura',
@@ -2020,6 +2048,10 @@ schema: {
         'tldr': {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'O ChatGPT Plus custa $720 ao longo de três anos, enquanto uma configuração local com Llama 3.3 70B em uma RTX 5060 Ti custa cerca de $490 no total no mesmo período, com ponto de equilíbrio em cerca de 11 meses para quem usa 10+ horas por semana.' },
+            { type: 'plain-terms', text: 'Se você usa o ChatGPT intensamente, a assinatura se acumula rápido -- só o Plus custa $720 em três anos. Uma configuração local custa mais no início, mas se paga em cerca de um ano para um usuário intenso, e depois disso cada consulta é gratuita. A contrapartida é a qualidade: um modelo local se aproxima do ChatGPT, mas não chega totalmente ao seu nível.' },
+          ],
           items: [
             'O ChatGPT tem 7 níveis: Free ($0, anúncios), Go ($8, anúncios), Plus ($20), Pro $100 (novo em 9 de abril de 2026), Pro $200, Business ($25/usuário), Enterprise',
             'ChatGPT Plus: $20/mês = $720 em 3 anos — inclui GPT-5.2 (160 mensagens/3h) e GPT-5.2 Thinking (3.000/semana)',
@@ -2282,7 +2314,7 @@ schema: {
       intro: '**2026년 4월 기준 ChatGPT는 7가지 요금제를 제공합니다 — Free($0), Go($8), Plus($20), Pro $100(2026년 4월 9일 신규 출시), Pro $200, Business($25/사용자), Enterprise입니다.** ChatGPT Plus는 3년간 $720이며 GPT-5.2 및 GPT-5.2 Thinking을 이용할 수 있습니다. RTX 5060 Ti(16 GB, $400)에서 실행하는 로컬 Llama 3.3 70B 구성의 3년 총비용은 $430~490입니다. 주 10시간 이상 사용하는 헤비 유저의 경우 3년 기준 로컬이 30~50% 저렴하고, 5년 기준으로는 80% 저렴합니다. 2026년 4월 기준, 그리고 2026년 8월 현재도 여전히, 로컬 Llama 3.3 70B는 MMLU에서 GPT-5.2 품질의 약 82%에 도달했으며, 이는 역대 최소 로컬/클라우드 격차입니다.',
       metaDescription: 'ChatGPT Plus: $20/월 = 3년간 $720. RTX 5060 Ti의 로컬 Llama 3.3 70B: GPU $400 + 전기료 $90 = 총 $490. 손익분기점 11개월. 7가지 ChatGPT 요금제 비교.',
       publishDate: '2026-04-05',
-      dateModified: '2026-08-27',
+      dateModified: '2026-08-28',
       leadAnswerBlock: '**ChatGPT Plus는 3년간 $720($20/월, GPT-5.2 및 Thinking 포함)입니다. RTX 5060 Ti에서 실행하는 로컬 Llama 3.3 70B는 3년 총비용이 $490입니다. 손익분기점: 주 10시간 사용 기준 11개월.**',
       audience: 'ChatGPT Plus와 로컬 LLM 구성 중 선택을 고려하는 비용 의식적 사용자',
       readTime: '8 min',
@@ -2303,6 +2335,10 @@ schema: {
         'tldr': {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'ChatGPT Plus는 3년간 $720의 비용이 드는 반면, RTX 5060 Ti에서 로컬 Llama 3.3 70B를 운영하면 같은 기간 총 약 $490가 들며, 주당 10시간 이상 사용하는 경우 약 11개월 만에 손익분기점에 도달합니다.' },
+            { type: 'plain-terms', text: 'ChatGPT를 많이 사용한다면 구독료는 빠르게 쌓입니다 -- Plus만 해도 3년에 $720입니다. 로컬 구성은 초기 비용이 더 들지만, 헤비 유저라면 약 1년 안에 본전을 뽑고 그 이후로는 모든 요청이 무료입니다. 대신 품질 면에서는 절충이 필요합니다: 로컬 모델은 ChatGPT에 가깝지만 완전히 그 수준에는 도달하지 못합니다.' },
+          ],
           items: [
             'ChatGPT는 현재 7가지 요금제를 제공합니다: Free($0, 광고 있음), Go($8, 광고 있음), Plus($20), Pro $100(2026년 4월 9일 신규 출시), Pro $200, Business($25/사용자), Enterprise',
             'ChatGPT Plus: $20/월 = 3년간 $720 — GPT-5.2(3시간당 160회 메시지) 및 GPT-5.2 Thinking(주 3,000회) 포함',
