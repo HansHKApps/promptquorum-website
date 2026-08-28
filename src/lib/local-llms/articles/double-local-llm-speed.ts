@@ -13,7 +13,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       title: 'How to Double Local LLM Speed: Optimization Techniques',
       heroImage: '/images/double-local-llm-speed-overview-hero-en.webp',
       seoTitle: 'How to Double Local LLM Speed: Optimization Guide 2026',
-      intro: 'Local LLMs can be 2-3× faster with proper optimization. Techniques include: disabling logging, reducing batch size, optimizing quantization, using faster inference engines, and GPU memory tuning. As of August 2026, combining these techniques can achieve 2× speed improvement with no quality loss.',
+      intro: 'Local LLMs can be 2-3× faster with proper optimization. Techniques include: disabling logging, reducing batch size, optimizing quantization, using faster inference engines, and GPU memory tuning. Combining these techniques can achieve 2× speed improvement with no quality loss.',
       metaDescription: 'Speed up local LLM inference by 2-3× in 2026: GPU tuning, batch size, quantization. Production optimization techniques with benchmarks included.',
       publishDate: '2026-04-04',
       dateModified: '2026-08-28',
@@ -37,6 +37,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Local LLMs can run 2-3x faster with no quality loss by combining GPU memory tuning, disabling verbose logging, reducing batch size for single-user chat, choosing a faster inference engine, and matching quantization to your hardware.' },
+            { type: 'plain-terms', text: "If your local model feels slow, it's usually a settings problem, not a hardware limit. Turning off debug logging, adjusting how many requests get batched together, picking a leaner inference engine like llama.cpp over a heavier one, and making sure the GPU is actually being used fully can often double your tokens-per-second without changing anything about the model itself." },
+          ],
           items: [
             '**Disable logging/debugging** (easy): ~10% speed gain.',
             '**Use Q4 quantization** (easy): Same speed, smaller VRAM.',
@@ -327,6 +331,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Los LLM locales pueden ejecutarse 2-3 veces más rápido sin pérdida de calidad combinando el ajuste de memoria de GPU, desactivando el registro detallado, reduciendo el tamaño de lote para chat de un solo usuario, eligiendo un motor de inferencia más rápido y ajustando la cuantización a tu hardware.' },
+            { type: 'plain-terms', text: 'Si tu modelo local se siente lento, normalmente es un problema de configuración, no un límite del hardware. Desactivar el registro detallado, ajustar cuántas solicitudes se agrupan, elegir un motor de inferencia más ligero como llama.cpp en lugar de uno más pesado, y asegurarte de que la GPU se esté usando al máximo suele poder duplicar tus tokens por segundo sin cambiar nada del modelo en sí.' },
+          ],
           title: 'Puntos clave',
           items: [
             '**Deshabilitar logging/debugging** (fácil): ~10% de mejora de velocidad.',
@@ -619,6 +627,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'يمكن لنماذج LLM المحلية أن تعمل بسرعة أكبر بمقدار 2-3 أضعاف دون فقدان الجودة من خلال ضبط ذاكرة GPU، وتعطيل التسجيل المفصّل، وتقليل حجم الدفعة للدردشة أحادية المستخدم، واختيار محرك استدلال أسرع، ومطابقة التكميم مع عتادك.' },
+            { type: 'plain-terms', text: 'إذا شعرت أن نموذجك المحلي بطيء، فالسبب غالباً مشكلة في الإعدادات وليس حداً في العتاد. إيقاف تسجيل التصحيح المفصّل، وضبط عدد الطلبات المجمّعة معاً، واختيار محرك استدلال أخف مثل llama.cpp بدلاً من محرك أثقل، والتأكد من استخدام GPU بكامل طاقته، غالباً ما يضاعف عدد التوكنات في الثانية دون تغيير أي شيء في النموذج نفسه.' },
+          ],
           title: 'النقاط الرئيسية',
           items: [
             '**تعطيل التسجيل/التصحيح** (سهل): ~10% تحسّن سرعة.',
@@ -910,6 +922,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Os LLMs locais podem rodar de 2 a 3 vezes mais rápido sem perda de qualidade combinando o ajuste de memória da GPU, desativando o log detalhado, reduzindo o tamanho do lote para chat de usuário único, escolhendo um motor de inferência mais rápido e ajustando a quantização ao seu hardware.' },
+            { type: 'plain-terms', text: 'Se o seu modelo local parece lento, geralmente é um problema de configuração, não um limite de hardware. Desativar o log detalhado, ajustar quantas solicitações são agrupadas, escolher um motor de inferência mais leve como o llama.cpp em vez de um mais pesado, e garantir que a GPU esteja sendo totalmente usada costuma dobrar seus tokens por segundo sem mudar nada no modelo em si.' },
+          ],
           title: 'Pontos principais',
           items: [
             'Trocar para um motor de inferência mais rápido (vLLM, llama.cpp com Metal/CUDA) dá a maior melhoria: 1,5–2× de aumento de velocidade.',
@@ -1082,6 +1098,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Lokale LLMs können 2-3x schneller laufen ohne Qualitätsverlust, indem man GPU-Speicher optimiert, ausführliches Logging deaktiviert, die Batch-Größe für Single-User-Chat reduziert, eine schnellere Inference-Engine wählt und die Quantisierung an die eigene Hardware anpasst.' },
+            { type: 'plain-terms', text: 'Wenn das lokale Modell langsam wirkt, liegt das meist an den Einstellungen, nicht an der Hardware. Ausführliches Debug-Logging abzuschalten, die Anzahl gebündelter Anfragen anzupassen, eine schlankere Inference-Engine wie llama.cpp statt einer schwereren zu wählen und sicherzustellen, dass die GPU tatsächlich voll genutzt wird, verdoppelt oft die Tokens pro Sekunde, ohne am Modell selbst etwas zu ändern.' },
+          ],
           title: 'Zusammenfassung',
           items: [
             '**Logging/Debugging deaktivieren** (einfach): ~10% Geschwindigkeitsgewinn.',
@@ -1304,6 +1324,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: "Les LLM locaux peuvent tourner 2 à 3 fois plus vite sans perte de qualité en combinant l'optimisation de la mémoire GPU, la désactivation des logs détaillés, la réduction de la taille de lot pour un chat mono-utilisateur, le choix d'un moteur d'inférence plus rapide, et l'adaptation de la quantification à votre matériel." },
+            { type: 'plain-terms', text: "Si votre modèle local semble lent, c'est généralement un problème de configuration, pas une limite matérielle. Désactiver les logs détaillés, ajuster le nombre de requêtes regroupées, choisir un moteur d'inférence plus léger comme llama.cpp plutôt qu'un plus lourd, et s'assurer que le GPU est pleinement utilisé peut souvent doubler vos tokens par seconde sans rien changer au modèle lui-même." },
+          ],
           title: 'Points clés',
           items: [
             '**Désactiver la journalisation/débogage** (facile) : ~10% de gain de vitesse.',
@@ -1523,6 +1547,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'ローカルLLMは、GPUメモリの調整、詳細なログの無効化、シングルユーザーチャット向けのバッチサイズ縮小、より高速な推論エンジンの選択、ハードウェアに合わせた量子化により、品質を落とさずに2〜3倍高速化できます。' },
+            { type: 'plain-terms', text: 'ローカルモデルが遅く感じる場合、それは通常ハードウェアの限界ではなく設定の問題です。詳細なデバッグログを無効にし、まとめて処理するリクエスト数を調整し、より重いエンジンではなくllama.cppのような軽量な推論エンジンを選び、GPUが実際にフル活用されているか確認するだけで、モデル自体を変えることなくトークン数を毎秒2倍にできることがよくあります。' },
+          ],
           title: '重要ポイント',
           items: [
             '**ログ/デバッグ無効化**（簡単）：~10%の速度向上。',
@@ -1742,6 +1770,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: '本地LLM可以通过调整GPU内存、禁用详细日志、减小单用户聊天的批处理大小、选择更快的推理引擎，以及根据硬件匹配量化，在不损失质量的情况下实现2-3倍提速。' },
+            { type: 'plain-terms', text: '如果你的本地模型感觉很慢，通常是设置问题，而不是硬件限制。关闭详细调试日志、调整批处理请求数量、选择像llama.cpp这样更轻量的推理引擎而不是更重的引擎，并确保GPU被充分利用，往往能在不改变模型本身的情况下让每秒令牌数翻倍。' },
+          ],
           items: [
             '**禁用日志/调试**（简单）：约10%速度提升。',
             '**使用Q4量化**（简单）：相同速度，更少显存占用。',
@@ -1990,6 +2022,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: '로컬 LLM은 GPU 메모리 조정, 상세 로깅 비활성화, 단일 사용자 채팅용 배치 크기 축소, 더 빠른 추론 엔진 선택, 하드웨어에 맞는 양자화를 결합하면 품질 저하 없이 2~3배 빨라질 수 있습니다.' },
+            { type: 'plain-terms', text: '로컬 모델이 느리게 느껴진다면 보통 하드웨어의 한계가 아니라 설정 문제입니다. 상세 디버그 로깅을 끄고, 요청을 얼마나 묶어서 처리할지 조정하고, 더 무거운 엔진 대신 llama.cpp 같은 가벼운 추론 엔진을 선택하고, GPU가 실제로 완전히 활용되고 있는지 확인하는 것만으로도 모델 자체를 바꾸지 않고 초당 토큰 수를 두 배로 늘릴 수 있는 경우가 많습니다.' },
+          ],
           items: [
             '**로깅/디버깅 비활성화** (쉬움): 약 10% 속도 향상.',
             '**Q4 양자화 사용** (쉬움): 동일한 속도, 더 적은 VRAM.',
