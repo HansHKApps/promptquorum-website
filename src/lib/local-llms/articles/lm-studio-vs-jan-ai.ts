@@ -300,7 +300,7 @@ schema: {
       heroImage: '/images/lm-studio-vs-jan-ai-overview-hero-de.webp',
       seoTitle: 'Jan AI vs LM Studio 2026: Welche App ist besser?',
       intro: '**LM Studio und Jan AI sind beide Desktop-Anwendungen zum Ausführen lokaler LLMs ohne CLI-Overhead.** Im April 2026 zeichnet sich LM Studio durch Einfachheit und Modellverwaltung aus; Jan AI ist neuer und legt Wert auf Datenschutz und Erweiterbarkeit. Für gelegentliche Benutzer: LM Studio. Für Entwickler, die Kontrolle mögen: Jan AI. Keine davon ist drastisch schneller als Ollama + OpenWebUI.',
-      metaDescription: 'Jan AI: Open-Source, datenschutzorientiert, Plugins. LM Studio: einfaches Setup, HuggingFace-Suche, stabil. Welches passt für Sie? April 2026.',
+      metaDescription: 'Jan AI: Open-Source, datenschutzorientiert, Plugins. LM Studio: einfaches Setup, HuggingFace-Suche, stabil. Welches passt für Sie?',
       publishDate: '2026-04-05',
       dateModified: '2026-08-28',
       readTime: '7 Min. Lesezeit',

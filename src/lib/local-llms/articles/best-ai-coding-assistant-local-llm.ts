@@ -6,7 +6,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Best AI Coding Assistant for Local LLM 2026: Cursor vs Continue.dev vs Cody Compared',
     dateModified: '2026-07-13',
     seoTitle: 'Best AI Coding Assistant for Local LLM 2026',
-    metaDescription: 'Compare 5 AI coding assistants with native local LLM support: Ollama, LM Studio, pricing, privacy. Cursor vs Continue.dev vs Cody—verified June 2026.',
+    metaDescription: 'Compare 5 AI coding assistants with native local LLM support: Ollama, LM Studio, pricing, privacy. Cursor vs Continue.dev vs Cody.',
     heroImage: '/images/best-ai-coding-assistant-local-llm-comparison-hero-en.webp',
     intro: 'AI coding assistants like Cursor, Continue.dev, and Sourcegraph Cody have become essential developer tools. But most comparisons miss the crucial angle: which tools actually support local LLMs? This guide compares five leading AI coding assistants specifically for developers who want Ollama, LM Studio, or llama.cpp integration—not just cloud APIs. We cover pricing, local LLM setup depth, IDE support, and real privacy implications.',
     publishDate: '2026-05-17',
@@ -449,7 +449,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     title: 'Mejor asistente de código IA para LLM local 2026: Cursor vs Continue.dev vs Cody comparados',
     seoTitle: 'Mejor asistente de código IA para LLM local 2026',
-    metaDescription: 'Compara 5 asistentes de código IA con soporte LLM local nativo: Ollama, LM Studio, privacidad, precios. Cursor vs Continue.dev vs Cody—verificado junio 2026.',
+    metaDescription: 'Compara 5 asistentes de código IA con soporte LLM local nativo: Ollama, LM Studio, privacidad, precios. Cursor vs Continue.dev vs Cody.',
     heroImage: '/images/best-ai-coding-assistant-local-llm-comparison-hero-es.webp',
     intro: 'Los asistentes de código IA como Cursor, Continue.dev y Sourcegraph Cody se han convertido en herramientas esenciales para desarrolladores. Sin embargo, la mayoría de comparativas omiten un aspecto clave: ¿qué herramientas realmente soportan LLMs locales? Esta guía compara cinco asistentes de código IA líderes específicamente para desarrolladores que quieren integración con Ollama, LM Studio o llama.cpp—no solo APIs en la nube. Cubrimos precios, profundidad de configuración de LLM local, soporte de IDE e implicaciones reales de privacidad.',
     publishDate: '2026-05-17',
@@ -874,7 +874,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     title: 'أفضل مساعد كود بالذكاء الاصطناعي لـ ⁨LLM⁩ المحلي ⁨2026⁩: ⁨Cursor⁩ مقابل ⁨Continue.dev⁩ مقابل ⁨Cody⁩',
     seoTitle: '⁨Continue.dev⁩ مقابل ⁨Cursor⁩ لـ ⁨LLM⁩ المحلي ⁨2026⁩',
-    metaDescription: '⁨Continue.dev⁩ مجاني مع أفضل تكامل ⁨Ollama. Cursor⁩ (⁨20⁩ دولارًا/شهر) للتدفق الهجين سحابة+محلي. ⁨Cody⁩ لسياق المستودع. مقارنة ⁨5⁩ مساعدي كود، مايو ⁨2026⁩.',
+    metaDescription: '⁨Continue.dev⁩ مجاني مع أفضل تكامل ⁨Ollama. Cursor⁩ (⁨20⁩ دولارًا/شهر) للتدفق الهجين سحابة+محلي. ⁨Cody⁩ لسياق المستودع. مقارنة ⁨5⁩ مساعدي كود.',
     heroImage: '/images/best-ai-coding-assistant-local-llm-comparison-hero-ar.webp',
     intro: 'أصبح مساعدو الكود بالذكاء الاصطناعي مثل Cursor وContinue.dev وSourcegraph Cody أدوات أساسية للمطورين. ومع ذلك، تغفل معظم المقارنات جانبًا رئيسيًا: أي الأدوات تدعم فعلًا نماذج LLM المحلية؟ يقارن هذا الدليل خمسة من مساعدي الكود الرائدين بالذكاء الاصطناعي خصيصًا للمطورين الذين يريدون تكاملًا مع Ollama أو LM Studio أو llama.cpp — لا مجرد واجهات سحابية. نغطّي الأسعار، وعمق إعداد LLM المحلي، ودعم IDE، وآثار الخصوصية الواقعية.',
     publishDate: '2026-05-17',
@@ -1298,7 +1298,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     title: 'Melhor assistente de código IA para LLM local 2026: Cursor vs Continue.dev vs Cody comparados',
     seoTitle: 'Melhor assistente de código IA para LLM local 2026',
-    metaDescription: 'Compare 5 assistentes de código IA com suporte LLM local nativo: Ollama, LM Studio, privacidade, preços. Cursor vs Continue.dev vs Cody—verificado junho 2026.',
+    metaDescription: 'Compare 5 assistentes de código IA com suporte LLM local nativo: Ollama, LM Studio, privacidade, preços. Cursor vs Continue.dev vs Cody.',
     heroImage: '/images/best-ai-coding-assistant-local-llm-comparison-hero-pt.webp',
     intro: 'Assistentes de código IA como Cursor, Continue.dev e Sourcegraph Cody tornaram-se ferramentas essenciais para desenvolvedores. No entanto, a maioria dos comparativos omite um aspecto-chave: quais ferramentas realmente suportam LLMs locais? Este guia compara cinco assistentes de código IA líderes especificamente para desenvolvedores que querem integração com Ollama, LM Studio ou llama.cpp -- não apenas APIs na nuvem. Cobrimos preços, profundidade de configuração de LLM local, suporte de IDE e implicações reais de privacidade.',
     publishDate: '2026-05-17',
@@ -1428,7 +1428,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     title: 'Bester KI-Coding-Assistent für Local LLM 2026: Cursor, Continue.dev und Cody im Vergleich',
     seoTitle: 'Beste KI-Coding-Assistenten für Local LLM 2026',
-    metaDescription: 'Vergleichen Sie 5 KI-Assistenten mit lokalem LLM-Support: Ollama, LM Studio, Datenschutz, Preise. Cursor vs Continue.dev vs Cody—verifiziert Juni 2026.',
+    metaDescription: 'Vergleichen Sie 5 KI-Assistenten mit lokalem LLM-Support: Ollama, LM Studio, Datenschutz, Preise. Cursor vs Continue.dev vs Cody.',
     heroImage: '/images/best-ai-coding-assistant-local-llm-comparison-hero-de.webp',
     intro: 'KI-Coding-Assistenten wie Cursor, Continue.dev und Sourcegraph Cody sind unverzichtbare Entwicklungstools geworden. Die meisten Vergleiche übersehen jedoch den entscheidenden Punkt: Welche Tools unterstützen tatsächlich lokale LLMs? Dieser Leitfaden vergleicht fünf führende KI-Coding-Assistenten speziell für Entwickler, die Ollama, LM Studio oder llama.cpp-Integration wünschen—nicht nur Cloud-APIs. Wir behandeln Preise, Tiefe der lokalen LLM-Unterstützung, IDE-Unterstützung und echte Datenschutzfolgen.',
     publishDate: '2026-05-17',
@@ -1877,7 +1877,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     title: 'Meilleur assistant IA de code pour Local LLM 2026 : Cursor vs Continue.dev vs Cody comparés',
     seoTitle: 'Meilleur assistant IA de code pour Local LLM 2026',
-    metaDescription: 'Comparez 5 assistants IA de code avec support LLM local : Ollama, LM Studio, confidentialité, tarifs. Cursor vs Continue.dev vs Cody — vérifié juin 2026.',
+    metaDescription: 'Comparez 5 assistants IA de code avec support LLM local : Ollama, LM Studio, confidentialité, tarifs. Cursor vs Continue.dev vs Cody.',
     heroImage: '/images/best-ai-coding-assistant-local-llm-comparison-hero-fr.webp',
     intro: 'Les assistants IA de code comme Cursor, Continue.dev et Sourcegraph Cody sont devenus des outils essentiels pour les développeurs. Mais la plupart des comparaisons manquent l\'angle crucial : quels outils supportent réellement les LLM locaux ? Ce guide compare cinq assistants IA de code leaders spécifiquement pour les développeurs qui veulent l\'intégration Ollama, LM Studio ou llama.cpp—pas seulement les APIs cloud. Nous couvrons les tarifs, la profondeur du support LLM local, le support IDE et les véritables implications en matière de confidentialité.',
     publishDate: '2026-05-17',

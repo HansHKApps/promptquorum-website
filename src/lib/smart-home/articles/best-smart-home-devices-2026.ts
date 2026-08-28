@@ -1298,7 +1298,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Beste Smart-Home-Geräte 2026: Der Local-First-Kaufratgeber',
-      description: 'Beste Smart-Home-Geräte 2026 nach Kategorie — Hub, Zigbee/Thread, Beleuchtung, Schlösser, Sensoren, Kameras, Steckdosen — eine Empfehlung pro Kategorie mit echten Preisen, geprüft am 25. August 2026.',
+      description: 'Beste Smart-Home-Geräte 2026 nach Kategorie — Hub, Zigbee/Thread, Beleuchtung, Schlösser, Sensoren, Kameras, Steckdosen — eine Empfehlung pro Kategorie mit echten Preisen, geprüft am 25.',
       url: 'https://www.promptquorum.com/de/smart-home/best-smart-home-devices-2026',
       inLanguage: 'de',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },

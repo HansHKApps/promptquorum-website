@@ -1994,7 +1994,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     title: 'EU GDPR準拠クラウドGPU 2026：Hetzner・Scaleway・OVHcloud比較',
     seoTitle: 'EU GDPR準拠クラウドGPU比較 2026 | Hetzner vs Scaleway vs OVHcloud',
-    metaDescription: 'EU顧客向けGDPR準拠クラウドGPUプロバイダー：Hetzner（月額¥26,700定額、RTX 4000 SFF Ada）、Scaleway、OVHcloud、Nebius、Mistral。データレジデンス、DPA、Schrems II準拠。2026年5月検証。',
+    metaDescription: 'EU顧客向けGDPR準拠クラウドGPUプロバイダー：Hetzner（月額¥26,700定額、RTX 4000 SFF Ada）、Scaleway、OVHcloud、Nebius、Mistral。データレジデンス、DPA、Schrems II準拠。',
     intro: 'EU圏内で個人データを処理する組織は、GDPR準拠のクラウドGPUプロバイダーを使用する必要があります。本ガイドは、2026年5月にテスト済みの7つのGDPRネイティブオプション（Hetzner、Scaleway、OVHcloud、Nebius、Mistral、STACKIT、IONOS）を価格、コンプライアンス体勢、Schrems IIリスクで比較しています。すべてのフィーチャー提供者がEUデータレジデンスと適切なDPA（データ処理契約）を提供しています。',
     publishDate: 'May 17, 2026',
     theme: 'cost-comparison',

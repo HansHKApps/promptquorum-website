@@ -4007,7 +4007,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: '로컬 LLM 소프트웨어 완전 디렉토리: 직접 소유한 하드웨어에서 AI를 실행하는 88개 도구 (2026)',
-      description: '로컬 LLM 실행 도구 88개를 정리한 2026년 업데이트판 디렉토리: Ollama, LM Studio, GPT4All, Jan.ai, 모바일, RAG, 음성, 에이전트 프레임워크. 라이선스, 링크, 최신 버전 포함. 2026년 7월 업데이트.',
+      description: '로컬 LLM 실행 도구 88개를 정리한 2026년 업데이트판 디렉토리: Ollama, LM Studio, GPT4All, Jan.ai, 모바일, RAG, 음성, 에이전트 프레임워크. 라이선스, 링크, 최신 버전 포함.',
       url: 'https://www.promptquorum.com/ko/power-local-llm/local-llm-software-directory-2026',
       inLanguage: 'ko',
       datePublished: '2026-05-07',

@@ -452,7 +452,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@type': 'TechArticle',
       headline: 'Best LLM Fine-Tuning Framework 2026: Unsloth vs Axolotl vs Cloud',
-      description: 'Compares Unsloth, Axolotl and MLX-LM for local fine-tuning against Together.ai and Fireworks.ai cloud APIs, with verified pricing, licences and capability claims. Verified August 2026.',
+      description: 'Compares Unsloth, Axolotl and MLX-LM for local fine-tuning against Together.ai and Fireworks.ai cloud APIs, with verified pricing, licences and capability claims.',
       datePublished: '2026-08-28',
       dateModified: '2026-08-28',
       url: 'https://www.promptquorum.com/local-llms/best-llm-fine-tuning-framework-2026',
@@ -4732,7 +4732,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@type': 'TechArticle',
       headline: '2026년 최고의 LLM 파인튜닝 프레임워크: Unsloth, Axolotl, 클라우드',
-      description: '로컬 파인튜닝용 Unsloth, Axolotl, MLX-LM을 Together.ai와 Fireworks.ai의 클라우드 API와 비교합니다. 검증된 가격, 라이선스, 기능 포함. 2026년 8월 확인.',
+      description: '로컬 파인튜닝용 Unsloth, Axolotl, MLX-LM을 Together.ai와 Fireworks.ai의 클라우드 API와 비교합니다. 검증된 가격, 라이선스, 기능 포함.',
       datePublished: '2026-08-28',
       dateModified: '2026-08-28',
       url: 'https://www.promptquorum.com/ko/local-llms/best-llm-fine-tuning-framework-2026',

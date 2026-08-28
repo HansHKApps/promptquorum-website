@@ -1724,7 +1724,7 @@ schema: {
     title: '로컬 LLM을 위한 최고의 AMD GPU',
     seoTitle: '로컬 LLM용 AMD GPU 2026: RX 7900 XTX vs RTX 비교 가이드',
     intro: '**AMD RX 6800 XT와 RX 7900 XTX는 NVIDIA의 견실한 대안으로, 달러당 연산 성능이 15-20% 우수합니다. 다만 ONNX Runtime 및 vLLM 드라이버 지원이 상대적으로 취약합니다.** 2026년 4월 현재 AMD ROCm(HIP)은 성숙 단계에 접어들었으나, 호환성 레이어로 인한 설정 부담이 여전히 존재합니다. NVIDIA CUDA는 로컬 LLM 구동에 있어 여전히 가장 수월한 경로입니다. AMD는 중고 제품을 저렴하게 구입하거나 이미 AMD 하드웨어를 보유한 경우에만 사용을 권장합니다.',
-    metaDescription: 'AMD RX 6800 XT, RX 7900 XTX vs NVIDIA RTX 비교: ROCm 설치, vLLM 성능, TFLOP당 비용 분석, AMD 선택 시기. 2026년 4월 업데이트.',
+    metaDescription: 'AMD RX 6800 XT, RX 7900 XTX vs NVIDIA RTX 비교: ROCm 설치, vLLM 성능, TFLOP당 비용 분석, AMD 선택 시기.',
     heroImage: '/images/best-amd-gpus-local-llm-price-performance-hero-ko.webp',
     publishDate: '2026-04-05',
     dateModified: '2026-08-28',

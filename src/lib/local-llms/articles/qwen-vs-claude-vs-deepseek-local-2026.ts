@@ -2005,7 +2005,7 @@ dispatchers:
       '@type': 'TechArticle',
       '@id': 'https://www.promptquorum.com/ja/local-llms/qwen-vs-claude-vs-deepseek-local-2026',
       headline: 'Qwen 3 vs Claude Sonnet 5 vs DeepSeek R2：ローカルLLM vs クラウド比較 2026',
-      description: 'Qwen 3 vs Claude Sonnet 5 vs DeepSeek R2：HumanEval、SWE-bench、1Mトークンあたりコスト、METI AI戦略対応、ハードウェア要件を徹底比較。2026年5月更新。',
+      description: 'Qwen 3 vs Claude Sonnet 5 vs DeepSeek R2：HumanEval、SWE-bench、1Mトークンあたりコスト、METI AI戦略対応、ハードウェア要件を徹底比較。',
       inLanguage: 'ja',
       image: 'https://www.promptquorum.com/images/og-qwen-vs-claude-vs-deepseek.webp',
       datePublished: '2026-05-16',

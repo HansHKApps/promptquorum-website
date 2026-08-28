@@ -4110,7 +4110,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'أفضل نماذج التضمين لـ RAG المحلي في 2026 (اختبار بوثائق حقيقية)',
-      description: 'Nomic وBGE وGTE وMixedbread وSnowflake وJina مختبرة على عقود قانونية وأوراق بحثية وكود وويكي متعدد اللغات. retrieval@10 والسرعة والذاكرة. مايو 2026.',
+      description: 'Nomic وBGE وGTE وMixedbread وSnowflake وJina مختبرة على عقود قانونية وأوراق بحثية وكود وويكي متعدد اللغات. retrieval@10 والسرعة والذاكرة.',
       url: 'https://www.promptquorum.com/ar/power-local-llm/best-embedding-models-local-rag-2026',
       inLanguage: 'ar',
       datePublished: '2026-05-07',

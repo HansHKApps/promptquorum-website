@@ -1685,7 +1685,7 @@ schema: {
       title: 'Meilleurs LLMs locaux pour écriture créative 2026: fiction, poésie et contenu long format',
       seoTitle: 'Meilleurs LLMs locaux pour écriture créative',
       intro: 'Les meilleurs LLMs locaux pour l\'écriture créative en 2026 sont Meta Llama 3.3 70B (meilleure qualité de prose), Mistral Small 3.1 24B (meilleure qualité sous 16 GB RAM) et des fine-tunes communautaires comme Fimbulvetr et Midnight-Rose (spécialisés pour la fiction et le roleplay). La qualité de l\'écriture créative n\'est pas bien mesurée par les benchmarks standard -- elle nécessite d\'évaluer la cohérence narrative, la variété stylistique et le suivi d\'instructions sur des prompts ouverts.',
-      metaDescription: 'Top 5 LLMs locaux fiction, poésie, long format 2026. Llama 3.3 70B prose, Mistral 24B 16GB, fine-tunes roleplay. Évalués cohérence narrative. Gratuit, avril 2026.',
+      metaDescription: 'Top 5 LLMs locaux fiction, poésie, long format 2026. Llama 3.3 70B prose, Mistral 24B 16GB, fine-tunes roleplay. Évalués cohérence narrative. Gratuit.',
       heroImage: '/images/best-local-llms-for-creative-writing-model-comparison-hero-fr.webp',
       publishDate: '2026-04-04',
       dateModified: '2026-08-28',
