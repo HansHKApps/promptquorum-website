@@ -12,10 +12,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       theme: 'Getting Started',
       title: 'Run Your First Local LLM in 10 Minutes: Install to First Response',
       heroImage: '/images/run-first-local-llm-overview-hero-en.webp',
-      dateModified: '2026-08-26',
+      dateModified: '2026-08-28',
       next_refresh_due: '2027-02-26',
       seoTitle: 'Run Your First Local LLM in 10 Minutes (Step-by-Step)',
-      intro: 'Running your first local LLM takes under 10 minutes with Ollama. Install Ollama, run one command to pull a model, and start chatting in your terminal -- no API key, no account, and no internet connection after the initial download. As of August 2026, the fastest beginner model is Llama 3.2 3B at 25-45 tokens/sec on a modern laptop CPU.',
+      intro: 'Running your first local LLM takes under 10 minutes with Ollama. Install Ollama, run one command to pull a model, and start chatting in your terminal -- no API key, no account, and no internet connection after the initial download. A fast beginner model is Llama 3.2 3B, which runs at 25-45 tokens/sec on a modern laptop CPU.',
       metaDescription: 'Run your first local LLM in under 10 minutes with Ollama: install, pull a 3B model, and get a response -- no API key or internet needed after download.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**Running your first local LLM takes under 10 minutes with Ollama. Install Ollama, run one command to pull a model, and start chatting in your terminal -- no API key, no account, and no internet connection after the initial download.**',
@@ -43,6 +43,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Running your first local LLM takes under 10 minutes: install Ollama, run one command like `ollama run llama3.2` to pull a small model, and start chatting in your terminal with no API key, account, or internet connection required after the initial download.' },
+            { type: 'plain-terms', text: "You don't need any special setup to try a local AI model. Install one free program (Ollama), type a single command, and it downloads a small model and opens a chat right in your terminal. After that first download, it works completely offline -- no account, no API key, no monthly bill." },
+          ],
           items: [
             'The fastest path: install Ollama → run `ollama run llama3.2` → chat in your terminal. Total time: under 5 minutes on a fast connection.',
             'For 8 GB RAM machines: start with `llama3.2:3b` (2 GB download) or `phi4-mini` (2.3 GB). Both run on any modern laptop.',
@@ -357,9 +361,9 @@ schema: {
       theme: 'Getting Started',
       title: 'Ejecuta tu primer LLM local en 10 minutos: De la instalación a la primera respuesta',
       heroImage: '/images/run-first-local-llm-overview-hero-es.webp',
-      dateModified: '2026-08-26',
+      dateModified: '2026-08-28',
       seoTitle: 'Ejecuta tu primer LLM local en 10 minutos (paso a paso)',
-      intro: 'Ejecutar tu primer LLM local con Ollama tarda menos de 10 minutos. Instala Ollama, ejecuta un comando para descargar un modelo y empieza a chatear en tu terminal — sin API key, sin cuenta y sin conexión a internet después de la descarga inicial. A partir de agosto de 2026, el modelo más rápido para principiantes es Llama 3.2 3B con 25-45 tokens/seg en una CPU moderna de laptop.',
+      intro: 'Ejecutar tu primer LLM local con Ollama tarda menos de 10 minutos. Instala Ollama, ejecuta un comando para descargar un modelo y empieza a chatear en tu terminal — sin API key, sin cuenta y sin conexión a internet después de la descarga inicial. Un modelo rápido para principiantes es Llama 3.2 3B, que alcanza 25-45 tokens/seg en una CPU moderna de laptop.',
       metaDescription: 'Ejecuta tu primer LLM local en 10 minutos con Ollama: instala, descarga un modelo 3B y obtén respuesta. Sin API key ni internet tras la descarga.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**Ejecutar tu primer LLM local tarda menos de 10 minutos con Ollama. Instala Ollama, ejecuta un comando para descargar un modelo y empieza a chatear en tu terminal — sin API key, sin cuenta y sin conexión a internet después de la descarga inicial.**',
@@ -386,6 +390,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Ejecutar tu primer LLM local lleva menos de 10 minutos: instala Ollama, ejecuta un comando como `ollama run llama3.2` para descargar un modelo pequeño, y empieza a chatear en tu terminal sin necesidad de API key, cuenta ni conexión a internet después de la descarga inicial.' },
+            { type: 'plain-terms', text: 'No necesitas ninguna configuración especial para probar un modelo de IA local. Instala un programa gratuito (Ollama), escribe un solo comando, y descargará un modelo pequeño y abrirá un chat directamente en tu terminal. Después de esa primera descarga, funciona completamente sin conexión: sin cuenta, sin API key, sin factura mensual.' },
+          ],
           items: [
             'El camino más rápido: instala Ollama → ejecuta `ollama run llama3.2` → chatea en tu terminal. Tiempo total: menos de 5 minutos con una conexión rápida.',
             'Para máquinas con 8 GB de RAM: empieza con `llama3.2:3b` (descarga de 2 GB) o `phi4-mini` (2,3 GB). Ambos funcionan en cualquier laptop moderno.',
@@ -700,9 +708,9 @@ schema: {
       theme: 'Getting Started',
       title: 'شغّل أول نموذج ⁨LLM⁩ محلي في ⁨10⁩ دقائق: من التثبيت إلى أول استجابة',
       heroImage: '/images/run-first-local-llm-overview-hero-ar.webp',
-      dateModified: '2026-08-26',
+      dateModified: '2026-08-28',
       seoTitle: 'تشغيل أول ⁨LLM⁩ محلي مع ⁨Ollama⁩ في ⁨10⁩ دقائق خطوة بخطوة',
-      intro: 'تشغيل أول نموذج LLM محلي مع Ollama يستغرق أقل من 10 دقائق. ثبّت Ollama، ونفّذ أمرًا لتنزيل نموذج، وابدأ الدردشة في طرفيتك — بلا مفتاح API، وبلا حساب، وبلا اتصال بالإنترنت بعد التنزيل الأولي. اعتبارًا من أغسطس 2026، أسرع نموذج للمبتدئين هو Llama 3.2 3B بـ 25-45 token/ثانية على CPU حديث لحاسوب محمول.',
+      intro: 'تشغيل أول نموذج LLM محلي مع Ollama يستغرق أقل من 10 دقائق. ثبّت Ollama، ونفّذ أمرًا لتنزيل نموذج، وابدأ الدردشة في طرفيتك — بلا مفتاح API، وبلا حساب، وبلا اتصال بالإنترنت بعد التنزيل الأولي. من النماذج السريعة للمبتدئين Llama 3.2 3B الذي يصل إلى 25-45 token/ثانية على CPU حديث لحاسوب محمول.',
       metaDescription: '⁨Llama 3.2 3B⁩ ينتج ⁨25⁩–⁨45 token⁩/ثانية على ⁨CPU⁩ بدون ⁨GPU⁩. ثبّت ⁨Ollama⁩، حمّل النموذج بأمر واحد، وابدأ الدردشة دون مفتاح ⁨API⁩ أو اتصال إنترنت دائم.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**تشغيل أول نموذج LLM محلي يستغرق أقل من 10 دقائق مع Ollama. ثبّت Ollama، ونفّذ أمرًا لتنزيل نموذج، وابدأ الدردشة في طرفيتك — بلا مفتاح API، وبلا حساب، وبلا اتصال بالإنترنت بعد التنزيل الأولي.**',
@@ -729,6 +737,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'يستغرق تشغيل أول نموذج LLM محلي أقل من 10 دقائق: ثبّت Ollama، ونفّذ أمراً مثل `ollama run llama3.2` لتنزيل نموذج صغير، وابدأ الدردشة في طرفيتك دون الحاجة إلى مفتاح API أو حساب أو اتصال بالإنترنت بعد التنزيل الأولي.' },
+            { type: 'plain-terms', text: 'لا تحتاج إلى أي إعداد خاص لتجربة نموذج ذكاء اصطناعي محلي. ثبّت برنامجاً مجانياً (Ollama)، اكتب أمراً واحداً، وسيقوم بتنزيل نموذج صغير وفتح محادثة مباشرة في طرفيتك. بعد ذلك التنزيل الأول، يعمل بلا اتصال بالإنترنت تماماً -- بلا حساب، وبلا مفتاح API، وبلا فاتورة شهرية.' },
+          ],
           items: [
             'أسرع مسار: ثبّت Ollama ← نفّذ `ollama run llama3.2` ← دردش في طرفيتك. الوقت الإجمالي: أقل من 5 دقائق باتصال سريع.',
             'للأجهزة بسعة 8 GB من RAM: ابدأ بـ `llama3.2:3b` (تنزيل 2 GB) أو `phi4-mini` (2.3 GB). كلاهما يعمل على أي حاسوب محمول حديث.',
@@ -1043,9 +1055,9 @@ schema: {
       theme: 'Erste Schritte',
       title: 'Führe dein erstes lokales LLM aus: Von Installation bis erste Antwort in 10 Minuten',
       heroImage: '/images/run-first-local-llm-overview-hero-de.webp',
-      dateModified: '2026-08-26',
+      dateModified: '2026-08-28',
       seoTitle: 'Erstes lokales LLM ausführen 2026: Ollama für Einsteiger',
-      intro: 'Dein erstes lokales LLM mit Ollama auszuführen dauert weniger als 10 Minuten. Installiere Ollama, führe einen Befehl aus, um ein Modell zu laden, und beginne, in deinem Terminal zu chatten -- kein API-Schlüssel, kein Konto und keine Internetverbindung nach dem initialen Download erforderlich. Ab August 2026 ist das schnellste Anfängermodell Llama 3.2 3B mit 25-45 Tokens/Sekunde auf einer modernen Laptop-CPU.',
+      intro: 'Dein erstes lokales LLM mit Ollama auszuführen dauert weniger als 10 Minuten. Installiere Ollama, führe einen Befehl aus, um ein Modell zu laden, und beginne, in deinem Terminal zu chatten -- kein API-Schlüssel, kein Konto und keine Internetverbindung nach dem initialen Download erforderlich. Ein schnelles Anfängermodell ist Llama 3.2 3B mit 25-45 Tokens/Sekunde auf einer modernen Laptop-CPU.',
       metaDescription: 'Erstes lokales LLM mit Ollama in 10 Minuten: Installation, Modell laden, erste Abfrage. Funktioniert auf Mac, Windows und Linux ohne Cloud.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**Dein erstes lokales LLM mit Ollama auszuführen dauert weniger als 10 Minuten. Installiere Ollama, führe einen Befehl aus, um ein Modell zu laden, und beginne, in deinem Terminal zu chatten -- kein API-Schlüssel, kein Konto und keine Internetverbindung nach dem initialen Download erforderlich.**',
@@ -1123,6 +1135,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Ihr erstes lokales LLM auszuführen dauert unter 10 Minuten: Ollama installieren, mit einem Befehl wie `ollama run llama3.2` ein kleines Modell laden und im Terminal chatten -- ohne API-Schlüssel, Konto oder Internetverbindung nach dem ersten Download.' },
+            { type: 'plain-terms', text: 'Sie brauchen keine besondere Einrichtung, um ein lokales KI-Modell auszuprobieren. Installieren Sie ein kostenloses Programm (Ollama), geben Sie einen einzigen Befehl ein, und es lädt ein kleines Modell herunter und öffnet einen Chat direkt im Terminal. Nach diesem ersten Download läuft alles komplett offline -- kein Konto, kein API-Schlüssel, keine monatliche Rechnung.' },
+          ],
           items: [
             'Der schnellste Weg: Ollama installieren → `ollama run llama3.2` ausführen → im Terminal chatten. Gesamtzeit: unter 5 Minuten bei schneller Verbindung.',
             'Für Rechner mit 8 GB RAM: starten Sie mit `llama3.2:3b` (2 GB Download) oder `phi4-mini` (2,3 GB). Beide laufen auf jedem modernen Laptop.',
@@ -1303,9 +1319,9 @@ schema: {
       theme: 'Premiers pas',
       title: 'Exécutez votre premier LLM local: de l\'installation à la première réponse en 10 minutes',
       heroImage: '/images/run-first-local-llm-overview-hero-fr.webp',
-      dateModified: '2026-08-26',
+      dateModified: '2026-08-28',
       seoTitle: 'Lancer votre premier LLM local en 10 minutes avec Ollama',
-      intro: 'Exécuter votre premier LLM local avec Ollama prend moins de 10 minutes. Installez Ollama, exécutez une commande pour charger un modèle, et commencez à discuter dans votre terminal -- pas de clé API, pas de compte, et pas de connexion Internet après le téléchargement initial. En août 2026, le modèle débutant le plus rapide est Llama 3.2 3B à 25-45 tokens/sec sur une CPU portable moderne.',
+      intro: 'Exécuter votre premier LLM local avec Ollama prend moins de 10 minutes. Installez Ollama, exécutez une commande pour charger un modèle, et commencez à discuter dans votre terminal -- pas de clé API, pas de compte, et pas de connexion Internet après le téléchargement initial. Un modèle débutant rapide est Llama 3.2 3B, à 25-45 tokens/sec sur une CPU portable moderne.',
       metaDescription: 'Premier LLM local avec Ollama en 10 minutes : installation, téléchargement du modèle, première requête. Fonctionne sur Mac, Windows et Linux.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**Exécuter votre premier LLM local prend moins de 10 minutes avec Ollama. Installez Ollama, exécutez une commande pour charger un modèle, et commencez à discuter dans votre terminal -- pas de clé API, pas de compte, et pas de connexion Internet après le téléchargement initial.**',
@@ -1380,7 +1396,10 @@ schema: {
         ]
       },
       sections: {
-        tldr: { id: 'key-takeaways', isTldr: true, items: ['Le chemin le plus rapide : installez Ollama → exécutez `ollama run llama3.2` → discutez dans votre terminal. Durée totale : moins de 5 minutes avec une connexion rapide.', 'Pour les machines avec 8 Go de RAM : commencez avec `llama3.2:3b` (2 Go de téléchargement) ou `phi4-mini` (2,3 Go). Les deux fonctionnent sur n\'importe quel laptop moderne.', 'Attendez 15-40 tokens/sec sur CPU, 60-120 tokens/sec sur un GPU milieu de gamme ou Apple Silicon.', 'Les premières réponses peuvent sembler plus lentes que les APIs cloud -- les modèles locaux échangent vitesse contre confidentialité et coût zéro.', 'Après le téléchargement initial du modèle, tout fonctionne hors ligne. Aucune connexion Internet requise pour les sessions suivantes.'] },
+        tldr: { id: 'key-takeaways', isTldr: true, snippetBlocks: [
+            { type: 'one-sentence', text: "Exécuter votre premier LLM local prend moins de 10 minutes : installez Ollama, lancez une commande comme `ollama run llama3.2` pour télécharger un petit modèle, et discutez dans votre terminal sans clé API, compte ni connexion Internet après le téléchargement initial." },
+            { type: 'plain-terms', text: "Aucune configuration particulière n'est nécessaire pour essayer un modèle d'IA local. Installez un programme gratuit (Ollama), tapez une seule commande, et il télécharge un petit modèle et ouvre un chat directement dans votre terminal. Après ce premier téléchargement, tout fonctionne entièrement hors ligne -- pas de compte, pas de clé API, pas de facture mensuelle." },
+          ], items: ['Le chemin le plus rapide : installez Ollama → exécutez `ollama run llama3.2` → discutez dans votre terminal. Durée totale : moins de 5 minutes avec une connexion rapide.', 'Pour les machines avec 8 Go de RAM : commencez avec `llama3.2:3b` (2 Go de téléchargement) ou `phi4-mini` (2,3 Go). Les deux fonctionnent sur n\'importe quel laptop moderne.', 'Attendez 15-40 tokens/sec sur CPU, 60-120 tokens/sec sur un GPU milieu de gamme ou Apple Silicon.', 'Les premières réponses peuvent sembler plus lentes que les APIs cloud -- les modèles locaux échangent vitesse contre confidentialité et coût zéro.', 'Après le téléchargement initial du modèle, tout fonctionne hors ligne. Aucune connexion Internet requise pour les sessions suivantes.'] },
         step1: { title: 'Étape 1 : Installer Ollama', content: 'Ollama est le moyen le plus rapide d\'exécuter un LLM local. Installez-le avec une commande ou un téléchargement de 2 minutes :', codeBlock: '# macOS (Homebrew)\nbrew install ollama\n\n# Linux\ncurl -fsSL https://ollama.com/install.sh | sh\n\n# Windows: download installer from ollama.com/download', codeLanguage: 'bash' },
         step1Detail: { title: 'Vérifier qu\'Ollama fonctionne', content: 'Après l\'installation, confirmez qu\'Ollama est actif :', codeBlock: 'curl http://localhost:11434\n# Expected output: Ollama is running', codeLanguage: 'bash' },
         step2: { title: 'Étape 2 : Choisir votre premier modèle', content: 'Choisissez un modèle en fonction de votre RAM disponible. En cas de doute, commencez avec `llama3.2:3b` -- il fonctionne sur toute machine avec 4 Go de RAM et produit des résultats utiles :', rows: [{ 'Votre RAM': '4 Go', 'Modèle recommandé': 'llama3.2:1b', 'Taille du téléchargement': '~1,3 Go', 'Pourquoi': 'Plus petit modèle Llama utilisable' }, { 'Votre RAM': '8 Go', 'Modèle recommandé': 'Llama 3.2 3B', 'Taille du téléchargement': '~2 Go', 'Pourquoi': 'Meilleur rapport qualité/taille pour débutants' }, { 'Votre RAM': '8-16 Go', 'Modèle recommandé': 'Llama 3.1 8B', 'Taille du téléchargement': '~4,7 Go', 'Pourquoi': 'Modèle polyvalent performant' }, { 'Votre RAM': '16+ Go', 'Modèle recommandé': 'mistral:7b ou qwen2.5:7b', 'Taille du téléchargement': '~4-5 Go', 'Pourquoi': 'Qualité compétitive, inférence rapide' }], columns: ['Votre RAM', 'Modèle recommandé', 'Taille du téléchargement', 'Pourquoi'] },
@@ -1403,9 +1422,9 @@ schema: {
       theme: '入門',
       title: '初めてのローカルLLM：インストールから最初の回答まで10分',
       heroImage: '/images/run-first-local-llm-overview-hero-ja.webp',
-      dateModified: '2026-08-26',
+      dateModified: '2026-08-28',
       seoTitle: 'Ollamaで初めてのローカルLLMを10分で起動するステップバイステップガイド2026',
-      intro: 'Ollamaを使用して初めてのローカルLLMを実行するには10分以下かかります。Ollamaをインストールし、1つのコマンドを実行してモデルをロードし、ターミナルでチャットを開始します。APIキー、アカウント、初期ダウンロード後のインターネット接続は不要です。2026年8月時点で、最速の初心者向けモデルはLlama 3.2 3Bで、モダンノートパソコンのCPUで25～45トークン/秒です。',
+      intro: 'Ollamaを使用して初めてのローカルLLMを実行するには10分以下かかります。Ollamaをインストールし、1つのコマンドを実行してモデルをロードし、ターミナルでチャットを開始します。APIキー、アカウント、初期ダウンロード後のインターネット接続は不要です。初心者向けの高速なモデルとしてLlama 3.2 3Bがあり、モダンノートパソコンのCPUで25～45トークン/秒です。',
       metaDescription: 'Ollamaを使って初めてのローカルLLMを10分以内で実行。インストール、モデルダウンロード、初回プロンプト実行まで完全解説。Mac・Windows・Linux対応、クラウド不要。',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**Ollamaを使用すれば、初めてのローカルLLMを10分以内で実行できます。Ollamaをインストールし、1つのコマンドを実行してモデルをロードし、ターミナルでチャットを開始します。APIキー、アカウント、初期ダウンロード後のインターネット接続は不要です。**',
@@ -1480,7 +1499,10 @@ schema: {
         ]
       },
       sections: {
-        tldr: { id: 'key-takeaways', isTldr: true, items: ['最速の手順：Ollamaをインストール → `ollama run llama3.2`を実行 → ターミナルでチャット。高速接続なら合計5分以内。', '8 GBのRAMマシン：`llama3.2:3b`（2 GBのダウンロード）または`phi4-mini`（2.3 GB）から始めてください。どちらも最新のノートパソコンで動作します。', 'CPUで15-40トークン/秒、ミッドレンジGPUまたはApple Siliconで60-120トークン/秒が期待できます。', '最初のレスポンスはクラウドAPIより遅く感じる場合があります。ローカルモデルは速度をプライバシーとゼロコストと交換します。', '初期モデルのダウンロード後は、すべてオフラインで動作します。次回以降のセッションにインターネット接続は不要です。'] },
+        tldr: { id: 'key-takeaways', isTldr: true, snippetBlocks: [
+            { type: 'one-sentence', text: '初めてのローカルLLM実行は10分もかかりません。Ollamaをインストールし、`ollama run llama3.2`のようなコマンドで小さなモデルをダウンロードし、ターミナルでチャットを始めるだけで、初回ダウンロード後はAPIキー、アカウント、インターネット接続が不要です。' },
+            { type: 'plain-terms', text: 'ローカルAIモデルを試すのに特別な設定は必要ありません。無料プログラム（Ollama）をインストールし、コマンドを1つ入力するだけで、小さなモデルがダウンロードされ、ターミナルで直接チャットが開始されます。この最初のダウンロードの後は、アカウントもAPIキーも月額料金も不要で、完全にオフラインで動作します。' },
+          ], items: ['最速の手順：Ollamaをインストール → `ollama run llama3.2`を実行 → ターミナルでチャット。高速接続なら合計5分以内。', '8 GBのRAMマシン：`llama3.2:3b`（2 GBのダウンロード）または`phi4-mini`（2.3 GB）から始めてください。どちらも最新のノートパソコンで動作します。', 'CPUで15-40トークン/秒、ミッドレンジGPUまたはApple Siliconで60-120トークン/秒が期待できます。', '最初のレスポンスはクラウドAPIより遅く感じる場合があります。ローカルモデルは速度をプライバシーとゼロコストと交換します。', '初期モデルのダウンロード後は、すべてオフラインで動作します。次回以降のセッションにインターネット接続は不要です。'] },
         step1: { title: 'ステップ1：Ollamaをインストール', content: 'Ollamaはローカルで動作するLLMを実行する最速の方法です。1つのコマンドまたは2分のダウンロードでインストールできます：', codeBlock: '# macOS (Homebrew)\nbrew install ollama\n\n# Linux\ncurl -fsSL https://ollama.com/install.sh | sh\n\n# Windows: download installer from ollama.com/download', codeLanguage: 'bash', image: '/images/run-first-local-llm-setup-flow-en.svg', imageCaption: 'インストールから最初の応答まで4ステップ：Ollamaをインストール（約2分）、llama3.2:3bをダウンロード（約2 GB、2〜5分）、実行してチャット、モデル読み込み5〜30秒後に最初の応答。合計10分未満、ダウンロード後は完全オフラインで動作。' },
         step1Detail: { title: 'Ollamaが動作していることを確認', content: 'インストール後、Ollamaがアクティブであることを確認します：', codeBlock: 'curl http://localhost:11434\n# Expected output: Ollama is running', codeLanguage: 'bash' },
         step2: { title: 'ステップ2：最初のモデルを選択', content: '利用可能なRAMに基づいてモデルを選択します。迷った場合は`llama3.2:3b`から始めてください。4 GBのRAMを搭載したあらゆるマシンで動作し、有用な出力を生成します：', rows: [{ 'お使いのRAM': '4 GB', '推奨モデル': 'llama3.2:1b', 'ダウンロードサイズ': '約1.3 GB', '理由': '最小限の使えるLlamaモデル' }, { 'お使いのRAM': '8 GB', '推奨モデル': 'Llama 3.2 3B', 'ダウンロードサイズ': '約2 GB', '理由': '初心者向けの最高の品質/サイズ比' }, { 'お使いのRAM': '8-16 GB', '推奨モデル': 'Llama 3.1 8B', 'ダウンロードサイズ': '約4.7 GB', '理由': '強力な汎用モデル' }, { 'お使いのRAM': '16 GB以上', '推奨モデル': 'mistral:7b または qwen2.5:7b', 'ダウンロードサイズ': '約4-5 GB', '理由': '競争力のある品質、高速な推論' }], columns: ['お使いのRAM', '推奨モデル', 'ダウンロードサイズ', '理由'], image: '/images/run-first-local-llm-ram-model-picker-en.svg', imageCaption: 'RAM別の最初のモデル選び：4 GBはllama3.2:1b（1.3 GB）、8 GBはLlama 3.2 3B（2 GB、推奨の出発点）、8-16 GBはLlama 3.1 8B（4.7 GB）、16 GB以上はmistral:7bまたはqwen2.5:7b（4-5 GB）。' },
@@ -1503,9 +1525,9 @@ schema: {
       theme: '入门',
       title: '运行您的第一个本地LLM：从安装到首个响应仅需10分钟',
       heroImage: '/images/run-first-local-llm-overview-hero-zh.webp',
-      dateModified: '2026-08-26',
+      dateModified: '2026-08-28',
       seoTitle: '10分钟内用Ollama运行第一个本地LLM：分步安装指南2026',
-      intro: '使用Ollama运行您的第一个本地LLM只需不到10分钟。安装Ollama，运行一个命令加载模型，然后在您的终端中开始聊天----无需API密钥、账户，初始下载后也无需互联网连接。截至2026年8月，最快的初学者模型是Llama 3.2 3B，在现代笔记本电脑CPU上可达25-45个令牌/秒。',
+      intro: '使用Ollama运行您的第一个本地LLM只需不到10分钟。安装Ollama，运行一个命令加载模型，然后在您的终端中开始聊天----无需API密钥、账户，初始下载后也无需互联网连接。适合初学者的快速模型是Llama 3.2 3B，在现代笔记本电脑CPU上可达25-45个令牌/秒。',
       metaDescription: '用Ollama在10分钟内运行第一个本地LLM：安装、模型下载、首次推理完整指南。支持Mac、Windows、Linux，无需云端或GPU。',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**使用Ollama运行您的第一个本地LLM只需不到10分钟。安装Ollama，运行一个命令加载模型，然后在您的终端中开始聊天——无需API密钥、账户，初始下载后也无需互联网连接。**',
@@ -1580,7 +1602,10 @@ schema: {
         ]
       },
       sections: {
-        tldr: { id: 'key-takeaways', isTldr: true, items: ['最快路径：安装Ollama → 运行`ollama run llama3.2` → 在终端开始聊天。网速较快时全程不超过5分钟。', '8 GB RAM机器：从`llama3.2:3b`（2 GB下载）或`phi4-mini`（2.3 GB）开始。两者均可在任何现代笔记本电脑上运行。', 'CPU上预计15-40个令牌/秒，中端GPU或Apple Silicon上预计60-120个令牌/秒。', '首次响应可能比云API慢——本地模型以速度换取隐私和零成本。', '初始模型下载后，一切都在离线状态运行。后续会话无需互联网连接。'] },
+        tldr: { id: 'key-takeaways', isTldr: true, snippetBlocks: [
+            { type: 'one-sentence', text: '运行你的第一个本地LLM不到10分钟：安装Ollama，运行像`ollama run llama3.2`这样的命令下载一个小模型，然后在终端中开始聊天，初始下载后无需API密钥、账户或互联网连接。' },
+            { type: 'plain-terms', text: '试用本地AI模型不需要任何特殊设置。安装一个免费程序（Ollama），输入一条命令，它就会下载一个小模型并直接在终端打开聊天。首次下载完成后，一切完全离线运行——无需账户、无需API密钥、无需月费。' },
+          ], items: ['最快路径：安装Ollama → 运行`ollama run llama3.2` → 在终端开始聊天。网速较快时全程不超过5分钟。', '8 GB RAM机器：从`llama3.2:3b`（2 GB下载）或`phi4-mini`（2.3 GB）开始。两者均可在任何现代笔记本电脑上运行。', 'CPU上预计15-40个令牌/秒，中端GPU或Apple Silicon上预计60-120个令牌/秒。', '首次响应可能比云API慢——本地模型以速度换取隐私和零成本。', '初始模型下载后，一切都在离线状态运行。后续会话无需互联网连接。'] },
         step1: { title: '第一步：安装Ollama', content: 'Ollama是运行本地LLM的最快方式。用一条命令或2分钟下载完成安装：', codeBlock: '# macOS (Homebrew)\nbrew install ollama\n\n# Linux\ncurl -fsSL https://ollama.com/install.sh | sh\n\n# Windows: download installer from ollama.com/download', codeLanguage: 'bash', image: '/images/run-first-local-llm-setup-flow-en.svg', imageCaption: '从安装到首个响应共4步：安装Ollama（约2分钟）、下载llama3.2:3b（约2 GB，2-5分钟）、运行并聊天，模型加载5-30秒后获得首个响应——总计不到10分钟，下载完成后完全离线运行。' },
         step1Detail: { title: '验证Ollama正在运行', content: '安装后，确认Ollama处于活动状态：', codeBlock: 'curl http://localhost:11434\n# Expected output: Ollama is running', codeLanguage: 'bash' },
         step2: { title: '第二步：选择您的第一个模型', content: '根据可用RAM选择模型。拿不准时，从`llama3.2:3b`开始——它可在4 GB RAM的任何机器上运行并产生有用输出：', rows: [{ '您的RAM': '4 GB', '推荐模型': 'llama3.2:1b', '下载大小': '约1.3 GB', '原因': '最小可用的Llama模型' }, { '您的RAM': '8 GB', '推荐模型': 'Llama 3.2 3B', '下载大小': '约2 GB', '原因': '初学者最佳质量/大小比' }, { '您的RAM': '8-16 GB', '推荐模型': 'Llama 3.1 8B', '下载大小': '约4.7 GB', '原因': '强大的通用模型' }, { '您的RAM': '16 GB以上', '推荐模型': 'mistral:7b 或 qwen2.5:7b', '下载大小': '约4-5 GB', '原因': '有竞争力的质量，推理速度快' }], columns: ['您的RAM', '推荐模型', '下载大小', '原因'], image: '/images/run-first-local-llm-ram-model-picker-en.svg', imageCaption: '按RAM选择首个模型：4 GB选llama3.2:1b（1.3 GB）、8 GB选Llama 3.2 3B（2 GB，推荐起点）、8-16 GB选Llama 3.1 8B（4.7 GB）、16 GB以上选mistral:7b或qwen2.5:7b（4-5 GB）。' },
@@ -1603,9 +1628,9 @@ schema: {
       theme: 'Getting Started',
       title: 'Rode seu primeiro LLM local em 10 minutos: da instalação à primeira resposta',
       heroImage: '/images/run-first-local-llm-overview-hero-pt.webp',
-      dateModified: '2026-08-26',
+      dateModified: '2026-08-28',
       seoTitle: 'Rode seu primeiro LLM local em 10 minutos (passo a passo)',
-      intro: 'Rodar seu primeiro LLM local com o Ollama leva menos de 10 minutos. Instale o Ollama, execute um comando para baixar um modelo e comece a conversar no seu terminal — sem chave de API, sem conta e sem conexão à internet após o download inicial. A partir de agosto de 2026, o modelo mais rápido para iniciantes é o Llama 3.2 3B, com 25-45 tokens/seg em uma CPU moderna de notebook.',
+      intro: 'Rodar seu primeiro LLM local com o Ollama leva menos de 10 minutos. Instale o Ollama, execute um comando para baixar um modelo e comece a conversar no seu terminal — sem chave de API, sem conta e sem conexão à internet após o download inicial. Um modelo rápido para iniciantes é o Llama 3.2 3B, com 25-45 tokens/seg em uma CPU moderna de notebook.',
       metaDescription: 'Rode seu primeiro LLM local em 10 minutos com o Ollama: instale, baixe um modelo 3B e obtenha a resposta. Sem chave de API nem internet após o download.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**Rodar seu primeiro LLM local leva menos de 10 minutos com o Ollama. Instale o Ollama, execute um comando para baixar um modelo e comece a conversar no seu terminal — sem chave de API, sem conta e sem conexão à internet após o download inicial.**',
@@ -1632,6 +1657,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Rodar seu primeiro LLM local leva menos de 10 minutos: instale o Ollama, execute um comando como `ollama run llama3.2` para baixar um modelo pequeno e comece a conversar no seu terminal, sem exigir chave de API, conta ou conexão à internet após o download inicial.' },
+            { type: 'plain-terms', text: 'Você não precisa de nenhuma configuração especial para experimentar um modelo de IA local. Instale um programa gratuito (Ollama), digite um único comando, e ele baixará um modelo pequeno e abrirá um chat direto no terminal. Depois desse primeiro download, tudo funciona totalmente offline -- sem conta, sem chave de API, sem fatura mensal.' },
+          ],
           items: [
             'O caminho mais rápido: instale o Ollama → execute `ollama run llama3.2` → converse no seu terminal. Tempo total: menos de 5 minutos com uma conexão rápida.',
             'Para máquinas com 8 GB de RAM: comece com `llama3.2:3b` (download de 2 GB) ou `phi4-mini` (2,3 GB). Ambos funcionam em qualquer notebook moderno.',
@@ -1946,9 +1975,9 @@ schema: {
       theme: 'Getting Started',
       title: '로컬 LLM 처음 실행하기: 설치부터 첫 응답까지 10분 완성',
     heroImage: '/images/run-first-local-llm-overview-hero-ko.webp',
-      dateModified: '2026-08-26',
+      dateModified: '2026-08-28',
       seoTitle: '로컬 LLM 처음 실행하기 10분 완성 (단계별 안내)',
-      intro: 'Ollama를 사용하면 로컬 LLM을 10분 이내에 실행할 수 있습니다. Ollama를 설치하고 명령어 하나로 모델을 다운로드한 후, 터미널에서 바로 대화를 시작하십시오. API 키, 계정, 최초 다운로드 이후의 인터넷 연결이 전혀 필요하지 않습니다. 2026년 8월 기준, 초보자에게 가장 빠른 모델은 최신 노트북 CPU에서 초당 25~45 토큰을 처리하는 Llama 3.2 3B입니다.',
+      intro: 'Ollama를 사용하면 로컬 LLM을 10분 이내에 실행할 수 있습니다. Ollama를 설치하고 명령어 하나로 모델을 다운로드한 후, 터미널에서 바로 대화를 시작하십시오. API 키, 계정, 최초 다운로드 이후의 인터넷 연결이 전혀 필요하지 않습니다. 초보자에게 적합한 빠른 모델로 최신 노트북 CPU에서 초당 25~45 토큰을 처리하는 Llama 3.2 3B가 있습니다.',
       metaDescription: 'Ollama로 로컬 LLM을 10분 이내에 실행하십시오: 설치, 3B 모델 다운로드, 첫 응답 확인까지 — 다운로드 후에는 API 키나 인터넷이 필요 없습니다.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**Ollama를 사용하면 로컬 LLM을 10분 이내에 실행할 수 있습니다. Ollama를 설치하고 명령어 하나로 모델을 다운로드한 후, 터미널에서 바로 대화를 시작하십시오. API 키, 계정, 최초 다운로드 이후의 인터넷 연결이 전혀 필요하지 않습니다.**',
@@ -2039,6 +2068,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: '첫 로컬 LLM 실행은 10분도 걸리지 않습니다. Ollama를 설치하고 `ollama run llama3.2`와 같은 명령어 하나로 작은 모델을 다운로드한 뒤 터미널에서 바로 대화를 시작할 수 있으며, 최초 다운로드 이후에는 API 키, 계정, 인터넷 연결이 필요 없습니다.' },
+            { type: 'plain-terms', text: '로컬 AI 모델을 사용해보는 데 특별한 설정은 필요 없습니다. 무료 프로그램(Ollama)을 설치하고 명령어 하나만 입력하면 작은 모델을 다운로드하고 터미널에서 바로 채팅이 시작됩니다. 첫 다운로드 이후에는 계정도, API 키도, 월 요금도 없이 완전히 오프라인으로 작동합니다.' },
+          ],
           items: [
             '가장 빠른 방법: Ollama 설치 → `ollama run llama3.2` 실행 → 터미널에서 대화 시작. 빠른 인터넷 환경에서 총 소요 시간은 5분 이내입니다.',
             'RAM 8 GB 기기: `llama3.2:3b` (다운로드 2 GB) 또는 `phi4-mini` (2.3 GB)로 시작하십시오. 두 모델 모두 최신 노트북에서 실행됩니다.',
