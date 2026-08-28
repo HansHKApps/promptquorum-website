@@ -13,7 +13,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       theme: 'Tools & Interfaces',
       title: 'LM Studio & Ollama OpenAI-Compatible API Documentation: Python, Node.js, Aider, Cline & Roo Code (2026)',
       seoTitle: 'LM Studio & Ollama OpenAI API Docs: Setup Guide (2026)',
-      intro: 'LM Studio (localhost:1234), Ollama (localhost:11434), and vLLM (localhost:8000) all expose REST APIs in the OpenAI format -- this page documents every endpoint, request format, and code example. Use the official OpenAI Python or Node.js SDK with any local model by changing two lines: set base_url to your local endpoint and api_key to any string. The same base_url setting connects AI coding tools like Aider, Cline, and Roo Code to local models. As of May 2026, this is the standard way to run local LLMs in production Python and Node.js applications without cloud costs or vendor lock-in.',
+      intro: 'LM Studio (localhost:1234), Ollama (localhost:11434), and vLLM (localhost:8000) all expose REST APIs in the OpenAI format -- this page documents every endpoint, request format, and code example. Use the official OpenAI Python or Node.js SDK with any local model by changing two lines: set base_url to your local endpoint and api_key to any string. The same base_url setting connects AI coding tools like Aider, Cline, and Roo Code to local models. This is the standard way to run local LLMs in production Python and Node.js applications without cloud costs or vendor lock-in.',
       metaDescription: 'LM Studio (localhost:1234) & Ollama (localhost:11434) OpenAI-compatible API docs: Python, Node.js, streaming, plus Aider, Cline & Roo Code setup.',
       heroImage: '/images/local-llm-openai-compatible-api-one-line-change-hero-en.webp',
       publishDate: '2026-04-04',
@@ -45,12 +45,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Ollama, LM Studio, and vLLM all expose an OpenAI-compatible REST API on localhost, so any code written for the OpenAI Python or Node.js SDK works with local models by changing just two lines: base_url and api_key.' },
+            { type: 'plain-terms', text: "If you've ever written code that calls OpenAI's ChatGPT API, you already know how to use local models -- Ollama, LM Studio, and vLLM all speak the exact same API format. You don't need to learn a new library; just point your existing OpenAI code at localhost instead of openai.com, and it works." },
+          ],
           items: [
             'Ollama exposes a REST API at `http://localhost:11434/v1` that mirrors OpenAI\'s API exactly.',
             'Use the OpenAI Python library: change `api_key="openai"` to `api_key="ollama"` and `base_url="http://localhost:11434/v1"`.',
             'Same approach in Node.js: OpenAI SDK, point to localhost:11434.',
             'The OpenAI-compatible API share the same base format across Ollama, vLLM, and LM Studio -- no code changes needed to switch providers.',
-            'As of May 2026, streaming (streaming responses token-by-token) and function calling both work with local models via this API.',
+            'Streaming (token-by-token responses) and function calling both work with local models via this API.',
             'Aider, Cline, and Roo Code all connect to local models through this same base_url setting -- no separate integration required.',
           ],
         },
@@ -144,7 +148,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         streaming: {
           id: 'streaming-responses',
           title: 'How Do You Stream Responses Token-by-Token?',
-          content: '**Streaming lets you display responses as they are generated, token by token, instead of waiting for the entire response.** As of May 2026, streaming works with all local models via the OpenAI-compatible API.',
+          content: '**Streaming lets you display responses as they are generated, token by token, instead of waiting for the entire response.** Streaming works with all local models via the OpenAI-compatible API.',
           codeBlock: '# Python: streaming example\nfrom openai import OpenAI\n\nclient = OpenAI(\n  base_url="http://localhost:11434/v1",\n  api_key="ollama"\n)\n\nstream = client.chat.completions.create(\n  model="llama4:scout",\n  messages=[{"role": "user", "content": "Count to 10"}],\n  stream=True\n)\n\nfor chunk in stream:\n  if chunk.choices[0].delta.content:\n    print(chunk.choices[0].delta.content, end="", flush=True)',
           codeLanguage: 'python',
           image: '/images/openai-compatible-streaming-vs-batch-en.svg',
@@ -511,7 +515,7 @@ schema: {
       theme: 'Tools & Interfaces',
       title: 'LM Studio & Ollama OpenAI-kompatible API-Dokumentation: Python, Node.js, Aider, Cline & Roo Code (2026)',
       seoTitle: 'LM Studio & Ollama OpenAI API-Dokumentation (2026)',
-      intro: 'LM Studio (localhost:1234), Ollama (localhost:11434) und vLLM (localhost:8000) stellen REST-APIs bereit, die OpenAI-Format nachahmen -- diese Seite dokumentiert jeden Endpoint, jedes Request-Format und jedes Code-Beispiel. Nutzen Sie die offizielle OpenAI Python oder Node.js SDK mit jedem lokalen Modell, indem Sie nur zwei Zeilen ändern: Setzen Sie base_url auf Ihren lokalen Endpoint und api_key auf beliebige Zeichenfolge. Dieselbe base_url-Einstellung verbindet auch KI-Coding-Tools wie Aider, Cline und Roo Code mit lokalen Modellen. Ab May 2026 ist dies der Standard für lokale LLMs in Produktions-Python und Node.js Anwendungen ohne Cloud-Kosten oder Vendor Lock-in.',
+      intro: 'LM Studio (localhost:1234), Ollama (localhost:11434) und vLLM (localhost:8000) stellen REST-APIs bereit, die OpenAI-Format nachahmen -- diese Seite dokumentiert jeden Endpoint, jedes Request-Format und jedes Code-Beispiel. Nutzen Sie die offizielle OpenAI Python oder Node.js SDK mit jedem lokalen Modell, indem Sie nur zwei Zeilen ändern: Setzen Sie base_url auf Ihren lokalen Endpoint und api_key auf beliebige Zeichenfolge. Dieselbe base_url-Einstellung verbindet auch KI-Coding-Tools wie Aider, Cline und Roo Code mit lokalen Modellen. Dies ist der Standard für lokale LLMs in Produktions-Python und Node.js Anwendungen ohne Cloud-Kosten oder Vendor Lock-in.',
       metaDescription: 'LM Studio (localhost:1234) & Ollama (localhost:11434) OpenAI-kompatible API-Dokumentation: Python, Node.js, Streaming, plus Aider, Cline & Roo Code Setup.',
       heroImage: '/images/local-llm-openai-compatible-api-one-line-change-hero-de.webp',
       publishDate: '2026-04-04',
@@ -543,6 +547,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Ollama, LM Studio und vLLM stellen alle eine OpenAI-kompatible REST-API auf localhost bereit, sodass jeder Code, der für das OpenAI Python- oder Node.js-SDK geschrieben wurde, mit lokalen Modellen funktioniert -- Sie müssen nur zwei Zeilen ändern: base_url und api_key.' },
+            { type: 'plain-terms', text: 'Wenn Sie schon einmal Code geschrieben haben, der OpenAIs ChatGPT-API aufruft, wissen Sie bereits, wie man lokale Modelle nutzt -- Ollama, LM Studio und vLLM sprechen exakt dasselbe API-Format. Sie müssen keine neue Bibliothek lernen; richten Sie Ihren bestehenden OpenAI-Code einfach auf localhost statt openai.com aus, und er funktioniert.' },
+          ],
           items: [
             'Ollama stellt eine REST API unter `http://localhost:11434/v1` bereit, die OpenAI-API exakt abbildet.',
             'Nutzen Sie die OpenAI Python Bibliothek: ändern Sie `api_key="openai"` zu `api_key="ollama"` und setzen Sie `base_url="http://localhost:11434/v1"`.',
@@ -875,7 +883,7 @@ schema: {
       theme: 'Outils & Interfaces',
       title: 'LM Studio & Ollama : documentation API compatible OpenAI — Python, Node.js, Aider, Cline & Roo Code (2026)',
       seoTitle: 'LM Studio & Ollama : documentation API OpenAI (2026)',
-      intro: 'LM Studio (localhost:1234), Ollama (localhost:11434) et vLLM (localhost:8000) exposent tous des API REST au format OpenAI -- cette page documente chaque endpoint, chaque format de requête et chaque exemple de code. Utilisez le SDK Python ou Node.js officiel d\'OpenAI avec n\'importe quel modèle local en modifiant deux lignes : définissez base_url sur votre endpoint local et api_key sur n\'importe quelle chaîne. Le même réglage base_url connecte aussi des outils de codage IA comme Aider, Cline et Roo Code à vos modèles locaux. Depuis avril 2026, c\'est le moyen standard d\'exécuter des LLM locaux en production sans coûts cloud ni dépendance fournisseur.',
+      intro: 'LM Studio (localhost:1234), Ollama (localhost:11434) et vLLM (localhost:8000) exposent tous des API REST au format OpenAI -- cette page documente chaque endpoint, chaque format de requête et chaque exemple de code. Utilisez le SDK Python ou Node.js officiel d\'OpenAI avec n\'importe quel modèle local en modifiant deux lignes : définissez base_url sur votre endpoint local et api_key sur n\'importe quelle chaîne. Le même réglage base_url connecte aussi des outils de codage IA comme Aider, Cline et Roo Code à vos modèles locaux. C\'est le moyen standard d\'exécuter des LLM locaux en production sans coûts cloud ni dépendance fournisseur.',
       metaDescription: 'LM Studio (localhost:1234) et Ollama (localhost:11434) : API compatible OpenAI. Python, Node.js, streaming, plus configuration Aider, Cline et Roo Code.',
       heroImage: '/images/local-llm-openai-compatible-api-one-line-change-hero-fr.webp',
       publishDate: '2026-04-04',
@@ -904,12 +912,16 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: "Ollama, LM Studio et vLLM exposent tous une API REST compatible OpenAI sur localhost, ainsi tout code écrit pour le SDK Python ou Node.js d'OpenAI fonctionne avec des modèles locaux en changeant seulement deux lignes : base_url et api_key." },
+            { type: 'plain-terms', text: "Si vous avez déjà écrit du code appelant l'API ChatGPT d'OpenAI, vous savez déjà utiliser des modèles locaux -- Ollama, LM Studio et vLLM parlent exactement le même format d'API. Pas besoin d'apprendre une nouvelle bibliothèque ; il suffit de pointer votre code OpenAI existant vers localhost au lieu d'openai.com, et ça fonctionne." },
+          ],
           items: [
             'Ollama expose une API REST sur `http://localhost:11434/v1` qui reproduit exactement l\'API OpenAI.',
             'Bibliothèque Python OpenAI : remplacez `api_key="openai"` par `api_key="ollama"` et définissez `base_url="http://localhost:11434/v1"`.',
             'Même approche en Node.js : SDK OpenAI pointé vers localhost:11434.',
             'L\'API compatible OpenAI partage le même format de base sur Ollama, vLLM et LM Studio -- aucun changement de code pour changer de fournisseur.',
-            'Depuis avril 2026, le streaming (token par token) et les appels de fonctions fonctionnent avec les modèles locaux via cette API.',
+            'Le streaming (token par token) et les appels de fonctions fonctionnent avec les modèles locaux via cette API.',
             'Aider, Cline et Roo Code se connectent tous aux modèles locaux via ce même réglage base_url -- aucune intégration séparée nécessaire.',
           ],
         },
@@ -984,7 +996,7 @@ schema: {
         streaming: {
           id: 'streaming-responses',
           title: 'Comment diffuser les réponses token par token ?',
-          content: '**Le streaming permet d\'afficher les réponses au fur et à mesure de leur génération, token par token, sans attendre la réponse complète.** Depuis avril 2026, le streaming fonctionne avec tous les modèles locaux via l\'API compatible OpenAI.',
+          content: '**Le streaming permet d\'afficher les réponses au fur et à mesure de leur génération, token par token, sans attendre la réponse complète.** Le streaming fonctionne avec tous les modèles locaux via l\'API compatible OpenAI.',
           codeBlock: '# Python: streaming example\nfrom openai import OpenAI\n\nclient = OpenAI(\n  base_url="http://localhost:11434/v1",\n  api_key="ollama"\n)\n\nstream = client.chat.completions.create(\n  model="llama3.2:3b",\n  messages=[{"role": "user", "content": "Count to 10"}],\n  stream=True\n)\n\nfor chunk in stream:\n  if chunk.choices[0].delta.content:\n    print(chunk.choices[0].delta.content, end="", flush=True)',
           codeLanguage: 'python',
           image: '/images/openai-compatible-streaming-vs-batch-en.svg',
@@ -1204,7 +1216,7 @@ schema: {
       theme: 'ツール＆インターフェース',
       title: 'LM Studio & Ollama OpenAI互換APIドキュメント：Python・Node.js・Aider・Cline・Roo Code対応 (2026)',
       seoTitle: 'LM Studio & Ollama OpenAI APIドキュメント (2026)',
-      intro: 'LM Studio（localhost:1234）、Ollama（localhost:11434）、vLLM（localhost:8000）はすべてOpenAI形式のREST APIを公開しています -- 本ページは各エンドポイント、リクエスト形式、コード例をすべて解説するドキュメントです。公式OpenAI PythonまたはNode.js SDKをどのローカルモデルとでも使用できます。変更するのはbase_urlとapi_keyの2行のみ。同じbase_url設定でAider・Cline・Roo CodeなどのAIコーディングツールもローカルモデルに接続できます。2026年4月現在、これがクラウドコストやベンダーロックインなしにローカルLLMを本番アプリで動かす標準的な方法です。',
+      intro: 'LM Studio（localhost:1234）、Ollama（localhost:11434）、vLLM（localhost:8000）はすべてOpenAI形式のREST APIを公開しています -- 本ページは各エンドポイント、リクエスト形式、コード例をすべて解説するドキュメントです。公式OpenAI PythonまたはNode.js SDKをどのローカルモデルとでも使用できます。変更するのはbase_urlとapi_keyの2行のみ。同じbase_url設定でAider・Cline・Roo CodeなどのAIコーディングツールもローカルモデルに接続できます。これがクラウドコストやベンダーロックインなしにローカルLLMを本番アプリで動かす標準的な方法です。',
       metaDescription: 'LM Studio（localhost:1234）とOllama（localhost:11434）のOpenAI互換APIドキュメント。Python・Node.js・ストリーミングに加え、Aider・Cline・Roo Codeの設定方法も解説。',
       heroImage: '/images/local-llm-openai-compatible-api-one-line-change-hero-ja.webp',
       publishDate: '2026-04-04',
@@ -1233,12 +1245,16 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Ollama、LM Studio、vLLMはすべてlocalhost上でOpenAI互換のREST APIを公開しているため、OpenAIのPythonまたはNode.js SDK用に書かれたコードは、base_urlとapi_keyの2行を変更するだけでローカルモデルでも動作します。' },
+            { type: 'plain-terms', text: 'OpenAIのChatGPT APIを呼び出すコードを書いたことがあるなら、ローカルモデルの使い方はすでに知っています -- Ollama、LM Studio、vLLMはすべて全く同じAPI形式を話します。新しいライブラリを学ぶ必要はありません。既存のOpenAIコードをopenai.comの代わりにlocalhostに向けるだけで動作します。' },
+          ],
           items: [
             'Ollamaは`http://localhost:11434/v1`にOpenAI APIと完全互換のREST APIを公開します。',
             'Python OpenAIライブラリ：`api_key="openai"`を`api_key="ollama"`に、`base_url="http://localhost:11434/v1"`を設定するだけ。',
             'Node.jsも同様：OpenAI SDKをlocalhost:11434に向けるだけ。',
             'OpenAI互換APIはOllama・vLLM・LM Studioで同じ基本形式を共有します -- プロバイダーを切り替えてもコード変更不要。',
-            '2026年4月現在、ストリーミング（token単位）とFunction CallingがすべてのローカルモデルでこのAPIを通じて動作します。',
+            'ストリーミング（token単位）とFunction CallingがすべてのローカルモデルでこのAPIを通じて動作します。',
             'Aider・Cline・Roo Codeはいずれも同じbase_url設定でローカルモデルに接続できます -- 別途の統合作業は不要です。',
           ],
         },
@@ -1313,7 +1329,7 @@ schema: {
         streaming: {
           id: 'streaming-responses',
           title: 'レスポンスをtoken単位でストリーミングする方法',
-          content: '**ストリーミングを使うと、レスポンス全体を待つことなく、生成されるにつれてtoken単位で表示できます。** 2026年4月現在、OpenAI互換APIを通じてすべてのローカルモデルでストリーミングが動作します。',
+          content: '**ストリーミングを使うと、レスポンス全体を待つことなく、生成されるにつれてtoken単位で表示できます。** OpenAI互換APIを通じてすべてのローカルモデルでストリーミングが動作します。',
           codeBlock: '# Python: streaming example\nfrom openai import OpenAI\n\nclient = OpenAI(\n  base_url="http://localhost:11434/v1",\n  api_key="ollama"\n)\n\nstream = client.chat.completions.create(\n  model="llama3.2:3b",\n  messages=[{"role": "user", "content": "Count to 10"}],\n  stream=True\n)\n\nfor chunk in stream:\n  if chunk.choices[0].delta.content:\n    print(chunk.choices[0].delta.content, end="", flush=True)',
           codeLanguage: 'python',
           image: '/images/openai-compatible-streaming-vs-batch-en.svg',
@@ -1323,7 +1339,7 @@ schema: {
           id: 'function-calling',
           title: 'ローカルモデルはFunction Callingに対応していますか？',
           content: [
-            '**はい、2026年4月現在、Function CallingがOpenAI APIを通じてローカルモデルで動作します。** 関数スキーマを定義すると、モデルはその関数に渡す引数でレスポンスを返せます。これにより[コーディング向けベストローカルLLM](/ja/local-llms/best-local-llms-for-coding)をツールエコシステムと統合できます。',
+            '**はい、Function CallingはOpenAI APIを通じてローカルモデルで動作します。** 関数スキーマを定義すると、モデルはその関数に渡す引数でレスポンスを返せます。これにより[コーディング向けベストローカルLLM](/ja/local-llms/best-local-llms-for-coding)をツールエコシステムと統合できます。',
             'Function Callingのサポートはモデルによります。Llama 3.1 8B、Qwen3 8B、最新の多くのモデルがサポートしています。小さいモデル（3B）は信頼性が低い場合があります。',
             'ローカルでOpenAI互換APIを使用する場合、構造化出力とJSONモードはクラウドAPIと同じように機能します。ローカルおよびクラウドモデル全体のスキーマ準拠とフォーマット制御については、[構造化出力とJSONモード](https://www.promptquorum.com/ja/prompt-engineering/structured-output-and-json-mode)をご覧ください。',
             'OpenAI互換APIはクラウド版と同じプロンプト形式を受け入れます — システムメッセージ、ユーザーメッセージ、構造化出力。[プロンプトエンジニアリング技法](https://www.promptquorum.com/prompt-engineering)の完全なライブラリがローカルAPI呼び出しに直接適用されます。',
@@ -1491,7 +1507,7 @@ schema: {
       theme: '工具与接口',
       title: 'LM Studio和Ollama OpenAI兼容API文档：Python、Node.js、Aider、Cline与Roo Code (2026)',
       seoTitle: 'LM Studio & Ollama OpenAI API文档 (2026)',
-      intro: 'LM Studio（localhost:1234）、Ollama（localhost:11434）和vLLM（localhost:8000）均提供OpenAI格式的REST API——本文档详细说明每个端点、请求格式和代码示例。使用官方OpenAI Python或Node.js SDK连接任意本地模型，只需修改两行代码：将base_url设为本地端点，api_key设为任意字符串。同一个base_url设置也可将Aider、Cline、Roo Code等AI编程工具连接到本地模型。截至2026年4月，这是在Python和Node.js生产应用中运行本地LLM的标准方式，无需云端费用或供应商绑定。',
+      intro: 'LM Studio（localhost:1234）、Ollama（localhost:11434）和vLLM（localhost:8000）均提供OpenAI格式的REST API——本文档详细说明每个端点、请求格式和代码示例。使用官方OpenAI Python或Node.js SDK连接任意本地模型，只需修改两行代码：将base_url设为本地端点，api_key设为任意字符串。同一个base_url设置也可将Aider、Cline、Roo Code等AI编程工具连接到本地模型。这是在Python和Node.js生产应用中运行本地LLM的标准方式，无需云端费用或供应商绑定。',
       metaDescription: 'LM Studio（localhost:1234）和Ollama（localhost:11434）OpenAI兼容API文档：Python、Node.js、流式输出，以及Aider、Cline、Roo Code配置方法。',
       heroImage: '/images/local-llm-openai-compatible-api-one-line-change-hero-zh.webp',
       publishDate: '2026-04-04',
@@ -1520,12 +1536,16 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Ollama、LM Studio和vLLM都在localhost上提供兼容OpenAI的REST API，因此任何为OpenAI Python或Node.js SDK编写的代码，只需修改base_url和api_key这两行，即可用于本地模型。' },
+            { type: 'plain-terms', text: '如果您曾编写过调用OpenAI ChatGPT API的代码，那么您已经知道如何使用本地模型了——Ollama、LM Studio和vLLM使用的API格式完全相同。您无需学习新的库；只需将现有的OpenAI代码指向localhost而不是openai.com，即可正常工作。' },
+          ],
           items: [
             'Ollama在`http://localhost:11434/v1`公开与OpenAI API完全兼容的REST API。',
             '使用OpenAI Python库：将`api_key="openai"`改为`api_key="ollama"`，设置`base_url="http://localhost:11434/v1"`即可。',
             'Node.js同理：OpenAI SDK指向localhost:11434。',
             'OpenAI兼容API在Ollama、vLLM和LM Studio上共享相同的基础格式——切换提供商无需修改代码。',
-            '截至2026年4月，流式输出（逐token）和函数调用均可通过此API与本地模型配合使用。',
+            '流式输出（逐token）和函数调用均可通过此API与本地模型配合使用。',
             'Aider、Cline和Roo Code均通过同一个base_url设置连接本地模型——无需单独集成。',
           ],
         },
@@ -1600,7 +1620,7 @@ schema: {
         streaming: {
           id: 'streaming-responses',
           title: '如何逐token流式传输响应？',
-          content: '**流式传输让您可以在响应生成时逐token显示，而无需等待完整响应。** 截至2026年4月，流式传输可通过OpenAI兼容API与所有本地模型配合使用。',
+          content: '**流式传输让您可以在响应生成时逐token显示，而无需等待完整响应。** 流式传输可通过OpenAI兼容API与所有本地模型配合使用。',
           codeBlock: '# Python: streaming example\nfrom openai import OpenAI\n\nclient = OpenAI(\n  base_url="http://localhost:11434/v1",\n  api_key="ollama"\n)\n\nstream = client.chat.completions.create(\n  model="llama3.2:3b",\n  messages=[{"role": "user", "content": "Count to 10"}],\n  stream=True\n)\n\nfor chunk in stream:\n  if chunk.choices[0].delta.content:\n    print(chunk.choices[0].delta.content, end="", flush=True)',
           codeLanguage: 'python',
           image: '/images/openai-compatible-streaming-vs-batch-en.svg',
@@ -1610,7 +1630,7 @@ schema: {
           id: 'function-calling',
           title: '本地模型可以调用函数吗？',
           content: [
-            '**是的，截至2026年4月，函数调用通过OpenAI API在本地模型上可用。** 您定义函数schema，模型可以返回传递给函数的参数。这使[最佳本地LLM编程助手](/zh/local-llms/best-local-llms-for-coding)能够集成到您的工具生态系统中。',
+            '**是的，函数调用通过OpenAI API在本地模型上可用。** 您定义函数schema，模型可以返回传递给函数的参数。这使[最佳本地LLM编程助手](/zh/local-llms/best-local-llms-for-coding)能够集成到您的工具生态系统中。',
             '函数调用支持取决于模型。Llama 3.1 8B、Qwen3 8B和大多数近期模型支持它。较小的模型（3B）可能不可靠。',
             '在本地使用OpenAI兼容API时，结构化输出和JSON模式的工作方式与云端API相同。关于在本地和云模型中强制执行schema合规性和格式控制，请参阅[结构化输出和JSON模式](https://www.promptquorum.com/zh/prompt-engineering/structured-output-and-json-mode)。',
             '与OpenAI兼容的API接受与云版本相同的提示词格式——系统消息、用户消息和结构化输出。完整的[提示词工程技术](https://www.promptquorum.com/prompt-engineering)库直接适用于本地API调用。',
@@ -1778,7 +1798,7 @@ schema: {
       theme: 'Tools & Interfaces',
       title: 'LM Studio y Ollama: documentación de la API compatible con OpenAI — Python, Node.js, Aider, Cline y Roo Code (2026)',
       seoTitle: 'LM Studio y Ollama: documentación de la API OpenAI (2026)',
-      intro: 'LM Studio (localhost:1234), Ollama (localhost:11434) y vLLM (localhost:8000) exponen APIs REST en formato OpenAI -- esta página documenta cada endpoint, formato de petición y ejemplo de código. Usa el SDK oficial de Python o Node.js de OpenAI con cualquier modelo local cambiando solo dos líneas: establece base_url en tu endpoint local y api_key en cualquier cadena de texto. El mismo ajuste de base_url conecta herramientas de código con IA como Aider, Cline y Roo Code a tus modelos locales. A partir de mayo de 2026, esta es la forma estándar de ejecutar LLMs locales en aplicaciones Python y Node.js de producción sin costes en la nube ni dependencia de un proveedor.',
+      intro: 'LM Studio (localhost:1234), Ollama (localhost:11434) y vLLM (localhost:8000) exponen APIs REST en formato OpenAI -- esta página documenta cada endpoint, formato de petición y ejemplo de código. Usa el SDK oficial de Python o Node.js de OpenAI con cualquier modelo local cambiando solo dos líneas: establece base_url en tu endpoint local y api_key en cualquier cadena de texto. El mismo ajuste de base_url conecta herramientas de código con IA como Aider, Cline y Roo Code a tus modelos locales. Esta es la forma estándar de ejecutar LLMs locales en aplicaciones Python y Node.js de producción sin costes en la nube ni dependencia de un proveedor.',
       metaDescription: 'LM Studio (localhost:1234) y Ollama (localhost:11434): documentación de la API compatible con OpenAI. Python, Node.js, streaming, y configuración de Aider, Cline y Roo Code.',
       heroImage: '/images/local-llm-openai-compatible-api-one-line-change-hero-es.webp',
       publishDate: '2026-04-04',
@@ -1810,12 +1830,16 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Ollama, LM Studio y vLLM exponen una API REST compatible con OpenAI en localhost, por lo que cualquier código escrito para el SDK de Python o Node.js de OpenAI funciona con modelos locales cambiando solo dos líneas: base_url y api_key.' },
+            { type: 'plain-terms', text: 'Si alguna vez has escrito código que llama a la API de ChatGPT de OpenAI, ya sabes cómo usar modelos locales: Ollama, LM Studio y vLLM hablan exactamente el mismo formato de API. No necesitas aprender una librería nueva; simplemente apunta tu código de OpenAI existente a localhost en lugar de openai.com, y funcionará.' },
+          ],
           items: [
             'Ollama expone una API REST en `http://localhost:11434/v1` que replica exactamente la API de OpenAI.',
             'Usa la biblioteca Python de OpenAI: cambia `api_key="openai"` por `api_key="ollama"` y establece `base_url="http://localhost:11434/v1"`.',
             'El mismo enfoque en Node.js: SDK de OpenAI apuntando a localhost:11434.',
             'La API compatible con OpenAI comparte el mismo formato base en Ollama, vLLM y LM Studio -- no se necesitan cambios de código para cambiar de proveedor.',
-            'A partir de mayo de 2026, el streaming (respuestas token a token) y el function calling funcionan con modelos locales a través de esta API.',
+            'El streaming (respuestas token a token) y el function calling funcionan con modelos locales a través de esta API.',
             'Aider, Cline y Roo Code se conectan a modelos locales mediante el mismo ajuste de base_url -- no requiere integración por separado.',
           ],
         },
@@ -1909,7 +1933,7 @@ schema: {
         streaming: {
           id: 'streaming-responses',
           title: '¿Cómo hacer streaming de respuestas token a token?',
-          content: '**El streaming te permite mostrar las respuestas a medida que se generan, token a token, en lugar de esperar a la respuesta completa.** A partir de mayo de 2026, el streaming funciona con todos los modelos locales a través de la API compatible con OpenAI.',
+          content: '**El streaming te permite mostrar las respuestas a medida que se generan, token a token, en lugar de esperar a la respuesta completa.** El streaming funciona con todos los modelos locales a través de la API compatible con OpenAI.',
           codeBlock: '# Python: streaming example\nfrom openai import OpenAI\n\nclient = OpenAI(\n  base_url="http://localhost:11434/v1",\n  api_key="ollama"\n)\n\nstream = client.chat.completions.create(\n  model="llama4:scout",\n  messages=[{"role": "user", "content": "Count to 10"}],\n  stream=True\n)\n\nfor chunk in stream:\n  if chunk.choices[0].delta.content:\n    print(chunk.choices[0].delta.content, end="", flush=True)',
           codeLanguage: 'python',
           image: '/images/openai-compatible-streaming-vs-batch-es.svg',
@@ -2276,7 +2300,7 @@ schema: {
       theme: 'Tools & Interfaces',
       title: 'توثيق واجهة ⁨OpenAI⁩ المتوافقة لـ ⁨LM Studio⁩ و⁨Ollama⁩: ⁨Python⁩ و⁨Node.js⁩ و⁨Aider⁩ و⁨Cline⁩ و⁨Roo Code⁩ (⁨2026⁩)',
       seoTitle: 'توثيق واجهة ⁨OpenAI⁩ لـ ⁨LM Studio⁩ و⁨Ollama⁩ (⁨2026⁩)',
-      intro: 'يكشف كل من LM Studio (localhost:1234) و Ollama (localhost:11434) و vLLM (localhost:8000) عن واجهات REST API بتنسيق OpenAI -- وهذه الصفحة توثّق كل endpoint وكل تنسيق طلب وكل مثال برمجي. استخدم SDK الرسمي لـ OpenAI الخاص بـ Python أو Node.js مع أي نموذج محلي عبر تغيير سطرين فقط: عيّن base_url إلى endpoint المحلي و api_key إلى أي سلسلة نصية. يربط إعداد base_url نفسه أدوات البرمجة بالذكاء الاصطناعي مثل Aider و Cline و Roo Code بالنماذج المحلية أيضاً. اعتباراً من مايو 2026، هذه هي الطريقة القياسية لتشغيل نماذج LLM المحلية في تطبيقات Python و Node.js الإنتاجية دون تكاليف سحابية أو الاعتماد على مزوّد معيّن.',
+      intro: 'يكشف كل من LM Studio (localhost:1234) و Ollama (localhost:11434) و vLLM (localhost:8000) عن واجهات REST API بتنسيق OpenAI -- وهذه الصفحة توثّق كل endpoint وكل تنسيق طلب وكل مثال برمجي. استخدم SDK الرسمي لـ OpenAI الخاص بـ Python أو Node.js مع أي نموذج محلي عبر تغيير سطرين فقط: عيّن base_url إلى endpoint المحلي و api_key إلى أي سلسلة نصية. يربط إعداد base_url نفسه أدوات البرمجة بالذكاء الاصطناعي مثل Aider و Cline و Roo Code بالنماذج المحلية أيضاً. هذه هي الطريقة القياسية لتشغيل نماذج LLM المحلية في تطبيقات Python و Node.js الإنتاجية دون تكاليف سحابية أو الاعتماد على مزوّد معيّن.',
       metaDescription: 'توثيق واجهة OpenAI المتوافقة لـ LM Studio (localhost:1234) و Ollama (localhost:11434): Python و Node.js والبث المتدفق، بالإضافة إلى إعداد Aider و Cline و Roo Code.',
       heroImage: '/images/local-llm-openai-compatible-api-one-line-change-hero-ar.webp',
       publishDate: '2026-04-04',
@@ -2308,12 +2332,16 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'تكشف Ollama وLM Studio وvLLM جميعها عن واجهة REST API متوافقة مع OpenAI على localhost، لذا فإن أي شيفرة مكتوبة لـ SDK الخاص بـ OpenAI في Python أو Node.js تعمل مع النماذج المحلية بتغيير سطرين فقط: base_url وapi_key.' },
+            { type: 'plain-terms', text: 'إذا سبق لك كتابة شيفرة تستدعي واجهة ChatGPT API الخاصة بـ OpenAI، فأنت تعرف بالفعل كيفية استخدام النماذج المحلية -- تتحدث Ollama وLM Studio وvLLM تنسيق الواجهة نفسه تمامًا. لست بحاجة لتعلم مكتبة جديدة؛ فقط وجّه شيفرة OpenAI الحالية لديك نحو localhost بدلاً من openai.com، وستعمل.' },
+          ],
           items: [
             'يكشف Ollama عن واجهة REST API على `http://localhost:11434/v1` تطابق واجهة OpenAI تماماً.',
             'استخدم مكتبة Python الخاصة بـ OpenAI: غيّر `api_key="openai"` إلى `api_key="ollama"` وعيّن `base_url="http://localhost:11434/v1"`.',
             'النهج نفسه في Node.js: SDK الخاص بـ OpenAI موجَّه إلى localhost:11434.',
             'تشترك الواجهة المتوافقة مع OpenAI في التنسيق الأساسي نفسه عبر Ollama و vLLM و LM Studio -- لا حاجة لأي تغييرات برمجية عند تبديل المزوّد.',
-            'اعتباراً من مايو 2026، يعمل البث المتدفق (الاستجابات token بـ token) واستدعاء الدوال مع النماذج المحلية عبر هذه الواجهة.',
+            'يعمل البث المتدفق (الاستجابات token بـ token) واستدعاء الدوال مع النماذج المحلية عبر هذه الواجهة.',
             'تتصل Aider و Cline و Roo Code جميعها بالنماذج المحلية عبر إعداد base_url نفسه -- دون الحاجة إلى تكامل منفصل.',
           ],
         },
@@ -2407,7 +2435,7 @@ schema: {
         streaming: {
           id: 'streaming-responses',
           title: 'كيف تبث الاستجابات token بـ token؟',
-          content: '**يتيح لك البث المتدفق عرض الاستجابات أثناء توليدها، token بـ token، بدلاً من انتظار الاستجابة الكاملة.** اعتباراً من مايو 2026، يعمل البث المتدفق مع جميع النماذج المحلية عبر الواجهة المتوافقة مع OpenAI.',
+          content: '**يتيح لك البث المتدفق عرض الاستجابات أثناء توليدها، token بـ token، بدلاً من انتظار الاستجابة الكاملة.** يعمل البث المتدفق مع جميع النماذج المحلية عبر الواجهة المتوافقة مع OpenAI.',
           codeBlock: '# Python: streaming example\nfrom openai import OpenAI\n\nclient = OpenAI(\n  base_url="http://localhost:11434/v1",\n  api_key="ollama"\n)\n\nstream = client.chat.completions.create(\n  model="llama4:scout",\n  messages=[{"role": "user", "content": "Count to 10"}],\n  stream=True\n)\n\nfor chunk in stream:\n  if chunk.choices[0].delta.content:\n    print(chunk.choices[0].delta.content, end="", flush=True)',
           codeLanguage: 'python',
           image: '/images/openai-compatible-streaming-vs-batch-es.svg',
@@ -2417,7 +2445,7 @@ schema: {
           id: 'function-calling',
           title: 'هل يستطيع نموذجك المحلي استدعاء الدوال؟',
           content: [
-            '**نعم، اعتباراً من مايو 2026، يعمل استدعاء الدوال مع النماذج المحلية عبر واجهة OpenAI.** تُعرّف مخطط دالة، ويستطيع النموذج الرد بوسائط لتمريرها إلى دالتك. يتيح ذلك لـ [أفضل نماذج LLM المحلية للبرمجة](/ar/local-llms/best-local-llms-for-coding) أن تتكامل مع منظومة أدواتك.',
+            '**نعم، يعمل استدعاء الدوال مع النماذج المحلية عبر واجهة OpenAI.** تُعرّف مخطط دالة، ويستطيع النموذج الرد بوسائط لتمريرها إلى دالتك. يتيح ذلك لـ [أفضل نماذج LLM المحلية للبرمجة](/ar/local-llms/best-local-llms-for-coding) أن تتكامل مع منظومة أدواتك.',
             'يعتمد دعم استدعاء الدوال على النموذج. تدعم Llama 4 Scout و Qwen3 8B و Gemma 4 26B-A4B و Mistral Small 3.1 استدعاء الأدوات بشكل موثوق. كما تدعمه Llama 3.1 8B أيضاً (إصدارات أقدم). قد لا تنتج النماذج الأصغر (3B) JSON منظَّماً لاستدعاء الأدوات بشكل موثوق.',
             'في عام 2026، يوسّع Model Context Protocol (MCP) استدعاء الدوال إلى طبقة موحَّدة لربط الأدوات. يتيح MCP لأي عميل (Claude Code و Cursor والتطبيقات المخصصة) الاتصال بأي خادم أدوات عبر بروتوكول واحد — متجاوزاً تعريفات الأدوات لكل طلب الموضحة أعلاه. يدعم Ollama استدعاء الأدوات بأسلوب MCP عبر واجهة استدعاء الدوال القياسية المتوافقة مع OpenAI. لتكاملات الأدوات الإنتاجية، يتحول MCP إلى المعيار؛ وتبقى أمثلة استدعاء الدوال هنا هي الأساس.',
             'عند استخدام الواجهات المتوافقة مع OpenAI محلياً، يعمل الإخراج المنظَّم ووضع JSON تماماً كما هو الحال مع الواجهات السحابية. لفرض مطابقة المخطط والتحكم في التنسيق على النماذج المحلية والسحابية، اطّلع على [الإخراج المنظَّم ووضع JSON](https://www.promptquorum.com/prompt-engineering/structured-output-and-json-mode).',
@@ -2778,7 +2806,7 @@ schema: {
       theme: 'Tools & Interfaces',
       title: 'Documentação da API compatível com OpenAI: LM Studio, Ollama, Aider, Cline e Roo Code (2026)',
       seoTitle: 'Documentação da API OpenAI: LM Studio e Ollama (2026)',
-      intro: 'LM Studio (localhost:1234), Ollama (localhost:11434) e vLLM (localhost:8000) expõem APIs REST no formato OpenAI -- esta página documenta cada endpoint, formato de requisição e exemplo de código. Use o SDK oficial de Python ou Node.js da OpenAI com qualquer modelo local alterando apenas duas linhas: defina base_url para seu endpoint local e api_key para qualquer string. O mesmo ajuste de base_url conecta ferramentas de codificação com IA como Aider, Cline e Roo Code aos seus modelos locais. A partir de maio de 2026, esta é a forma padrão de executar LLMs locais em aplicações Python e Node.js de produção sem custos na nuvem ou dependência de fornecedor.',
+      intro: 'LM Studio (localhost:1234), Ollama (localhost:11434) e vLLM (localhost:8000) expõem APIs REST no formato OpenAI -- esta página documenta cada endpoint, formato de requisição e exemplo de código. Use o SDK oficial de Python ou Node.js da OpenAI com qualquer modelo local alterando apenas duas linhas: defina base_url para seu endpoint local e api_key para qualquer string. O mesmo ajuste de base_url conecta ferramentas de codificação com IA como Aider, Cline e Roo Code aos seus modelos locais. Esta é a forma padrão de executar LLMs locais em aplicações Python e Node.js de produção sem custos na nuvem ou dependência de fornecedor.',
       metaDescription: 'Documentação da API compatível com OpenAI do LM Studio (localhost:1234) e Ollama (localhost:11434): Python, Node.js, streaming e configuração de Aider, Cline e Roo Code.',
       heroImage: '/images/local-llm-openai-compatible-api-one-line-change-hero-pt.webp',
       publishDate: '2026-04-04',
@@ -2990,6 +3018,10 @@ schema: {
         tldr: {
           id: 'tldr',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'O Ollama, o LM Studio e o vLLM expõem uma API REST compatível com a OpenAI no localhost, então qualquer código escrito para o SDK Python ou Node.js da OpenAI funciona com modelos locais alterando apenas duas linhas: base_url e api_key.' },
+            { type: 'plain-terms', text: 'Se você já escreveu código que chama a API do ChatGPT da OpenAI, você já sabe como usar modelos locais -- o Ollama, o LM Studio e o vLLM falam exatamente o mesmo formato de API. Você não precisa aprender uma biblioteca nova; basta apontar seu código OpenAI existente para localhost em vez de openai.com, e ele funciona.' },
+          ],
           items: [
             'LM Studio: localhost:1234/v1 — Ative na aba Local Server; sem GPU necessária; compatível com OpenAI.',
             'Ollama: localhost:11434/v1 — Inicie com `ollama serve`; ideal para scripts e automação.',
@@ -3019,7 +3051,7 @@ schema: {
       theme: '도구 및 인터페이스',
       title: 'LM Studio 및 Ollama OpenAI 호환 API 문서: Python, Node.js, Aider, Cline, Roo Code (2026)',
       seoTitle: 'LM Studio & Ollama OpenAI API 문서 (2026)',
-      intro: 'LM Studio(localhost:1234), Ollama(localhost:11434), vLLM(localhost:8000)은 모두 OpenAI 형식의 REST API를 제공합니다. 이 페이지는 모든 엔드포인트, 요청 형식, 코드 예제를 문서화합니다. 두 줄만 변경하면 공식 OpenAI Python 또는 Node.js SDK로 로컬 모델을 사용할 수 있습니다. base_url을 로컬 엔드포인트로, api_key를 임의의 문자열로 설정하면 됩니다. 동일한 base_url 설정으로 Aider, Cline, Roo Code와 같은 AI 코딩 도구도 로컬 모델에 연결할 수 있습니다. 2026년 5월 기준, 이 방식은 클라우드 비용이나 벤더 종속 없이 로컬 LLM을 Python 및 Node.js 프로덕션 애플리케이션에서 실행하는 표준 방법입니다.',
+      intro: 'LM Studio(localhost:1234), Ollama(localhost:11434), vLLM(localhost:8000)은 모두 OpenAI 형식의 REST API를 제공합니다. 이 페이지는 모든 엔드포인트, 요청 형식, 코드 예제를 문서화합니다. 두 줄만 변경하면 공식 OpenAI Python 또는 Node.js SDK로 로컬 모델을 사용할 수 있습니다. base_url을 로컬 엔드포인트로, api_key를 임의의 문자열로 설정하면 됩니다. 동일한 base_url 설정으로 Aider, Cline, Roo Code와 같은 AI 코딩 도구도 로컬 모델에 연결할 수 있습니다. 이 방식은 클라우드 비용이나 벤더 종속 없이 로컬 LLM을 Python 및 Node.js 프로덕션 애플리케이션에서 실행하는 표준 방법입니다.',
       metaDescription: 'LM Studio(localhost:1234) 및 Ollama(localhost:11434) OpenAI 호환 API 문서: Python, Node.js, 스트리밍, Aider·Cline·Roo Code 설정 방법.',
       heroImage: '/images/local-llm-openai-compatible-api-one-line-change-hero-ko.webp',
       publishDate: '2026-04-04',
@@ -3051,12 +3083,16 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Ollama, LM Studio, vLLM은 모두 localhost에서 OpenAI 호환 REST API를 제공하므로, OpenAI Python 또는 Node.js SDK용으로 작성된 코드는 base_url과 api_key 단 두 줄만 변경하면 로컬 모델에서도 작동합니다.' },
+            { type: 'plain-terms', text: 'OpenAI의 ChatGPT API를 호출하는 코드를 작성해 본 적이 있다면, 이미 로컬 모델 사용법을 알고 있는 것입니다 -- Ollama, LM Studio, vLLM은 모두 정확히 동일한 API 형식을 사용합니다. 새로운 라이브러리를 배울 필요 없이, 기존 OpenAI 코드를 openai.com 대신 localhost로 지정하기만 하면 바로 작동합니다.' },
+          ],
           items: [
             'Ollama는 OpenAI API와 동일한 형식의 REST API를 `http://localhost:11434/v1`에서 제공합니다.',
             'OpenAI Python 라이브러리 사용 시: `api_key="openai"`를 `api_key="ollama"`로, `base_url="http://localhost:11434/v1"`로 변경하면 됩니다.',
             'Node.js도 동일한 방식으로 사용 가능합니다. OpenAI SDK를 사용하여 localhost:11434로 연결하면 됩니다.',
             'OpenAI 호환 API는 Ollama, vLLM, LM Studio 모두 동일한 기본 형식을 공유합니다. 코드 변경 없이 제공자를 전환할 수 있습니다.',
-            '2026년 5월 기준, 스트리밍(토큰별 응답)과 함수 호출 모두 이 API를 통해 로컬 모델에서 작동합니다.',
+            '스트리밍(토큰별 응답)과 함수 호출 모두 이 API를 통해 로컬 모델에서 작동합니다.',
             'Aider, Cline, Roo Code는 모두 동일한 base_url 설정으로 로컬 모델에 연결됩니다. 별도의 통합 작업이 필요하지 않습니다.',
           ],
         },
@@ -3150,7 +3186,7 @@ schema: {
         streaming: {
           id: 'streaming-responses',
           title: '토큰별 응답 스트리밍 방법은?',
-          content: '**스트리밍을 사용하면 전체 응답을 기다리지 않고 생성되는 대로 토큰 단위로 응답을 표시할 수 있습니다.** 2026년 5월 기준, 스트리밍은 OpenAI 호환 API를 통한 모든 로컬 모델에서 작동합니다.',
+          content: '**스트리밍을 사용하면 전체 응답을 기다리지 않고 생성되는 대로 토큰 단위로 응답을 표시할 수 있습니다.** 스트리밍은 OpenAI 호환 API를 통한 모든 로컬 모델에서 작동합니다.',
           codeBlock: '# Python: streaming example\nfrom openai import OpenAI\n\nclient = OpenAI(\n  base_url="http://localhost:11434/v1",\n  api_key="ollama"\n)\n\nstream = client.chat.completions.create(\n  model="llama4:scout",\n  messages=[{"role": "user", "content": "Count to 10"}],\n  stream=True\n)\n\nfor chunk in stream:\n  if chunk.choices[0].delta.content:\n    print(chunk.choices[0].delta.content, end="", flush=True)',
           codeLanguage: 'python',
           image: '/images/openai-compatible-streaming-vs-batch-en.svg',
@@ -3160,7 +3196,7 @@ schema: {
           id: 'function-calling',
           title: '로컬 모델에서 함수를 호출할 수 있습니까?',
           content: [
-            '**네, 2026년 5월 기준으로 OpenAI API를 통해 로컬 모델에서 함수 호출이 가능합니다.** 함수 스키마를 정의하면 모델이 함수에 전달할 인수로 응답할 수 있습니다. 이를 통해 [코딩을 위한 최고의 로컬 LLM](/local-llms/best-local-llms-for-coding)이 도구 생태계와 통합될 수 있습니다.',
+            '**네, OpenAI API를 통해 로컬 모델에서 함수 호출이 가능합니다.** 함수 스키마를 정의하면 모델이 함수에 전달할 인수로 응답할 수 있습니다. 이를 통해 [코딩을 위한 최고의 로컬 LLM](/local-llms/best-local-llms-for-coding)이 도구 생태계와 통합될 수 있습니다.',
             '함수 호출 지원 여부는 모델에 따라 다릅니다. Llama 4 Scout, Qwen3 8B, Gemma 4 26B-A4B, Mistral Small 3.1 모두 도구 호출을 안정적으로 지원합니다. Llama 3.1 8B도 지원됩니다(레거시). 더 작은 모델(3B)은 구조화된 도구 호출 JSON을 안정적으로 생성하지 못할 수 있습니다.',
             '2026년에는 Model Context Protocol(MCP)이 함수 호출을 표준화된 도구 연결 레이어로 확장합니다. MCP는 모든 클라이언트(Claude Code, Cursor, 커스텀 앱)가 단일 프로토콜을 통해 모든 도구 서버에 연결할 수 있게 합니다. 위에 표시된 요청별 도구 정의를 넘어섭니다. Ollama는 표준 OpenAI 호환 함수 호출 API를 통해 MCP 스타일의 도구 호출을 지원합니다. 프로덕션 도구 통합의 경우 MCP가 표준이 되고 있으며, 여기의 함수 호출 예제는 그 기반입니다.',
             'OpenAI 호환 API를 로컬에서 사용할 때 구조화된 출력과 JSON 모드는 클라우드 API와 동일한 방식으로 작동합니다. 로컬 및 클라우드 모델에서 스키마 준수 및 형식 제어를 위해 [구조화된 출력 및 JSON 모드](https://www.promptquorum.com/prompt-engineering/structured-output-and-json-mode)를 참조하세요.',
