@@ -16,7 +16,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       metaDescription: 'RTX 5090 vs RTX 4090 for local LLMs: the RTX 4090 is now discontinued (used-only). Speed, VRAM, cost-per-token, and upgrade guidance for August 2026.',
       heroImage: '/images/rtx-5090-vs-rtx-4090-local-llm-speed-comparison-hero-en.webp',
       publishDate: '2026-04-05',
-      dateModified: '2026-08-27',
+      dateModified: '2026-08-28',
       next_refresh_due: '2027-02-27',
       current_hardware_mentioned: ['RTX 5090', 'RTX 4090 (EOL/used)', 'RTX 5080'],
       leadAnswerBlock: '**The RTX 4090 is discontinued (EOL) as of 2026 — used-market only, now priced around $2,000-2,600. The RTX 5090 is still in production but its street price has climbed to $4,300-$5,000+ under the 2026 GDDR7 shortage. RTX 5090 remains 30-50% faster on large models and has 32GB GDDR7 (vs 4090\'s 24GB GDDR6X), but the used 4090 is still the cheaper card per token generated.**',
@@ -38,6 +38,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'The RTX 4090 is discontinued and used-market only, while the RTX 5090 remains in production but costs more than double its MSRP due to a GDDR7 memory shortage; the 5090 is 30-50% faster on large models with 32GB VRAM versus the 4090\'s 24GB, but the used 4090 still generates tokens more cheaply per dollar.' },
+            { type: 'plain-terms', text: "If you already have an RTX 4090, there's little reason to upgrade right now -- the 5090's price premium doesn't match its speed gain for most local LLM use. If you're buying fresh and need a 70B-capable card, a used 4090 remains the better value despite carrying a discontinued-card premium, since the 5090's own price has been pushed up by a memory shortage." },
+          ],
           items: [
             'The RTX 4090 is discontinued (EOL) as of 2026 — every card on the market is used, at ~$2,000-2,600, up sharply from ~$999-1,299 earlier in the year.',
             'The RTX 5090 is still in production, but the 2026 GDDR7 memory shortage has pushed street pricing to $4,300-$5,000+, more than double its $1,999 MSRP.',
@@ -144,7 +148,7 @@ schema: {
         'description': 'RTX 5090 vs RTX 4090 for local LLMs: the RTX 4090 is now discontinued (used-only). Speed, VRAM, cost-per-token, and upgrade guidance for August 2026.',
         'url': 'https://www.promptquorum.com/local-llms/rtx-5090-vs-rtx-4090-local-llm',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-08-27',
+        'dateModified': '2026-08-28',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Intermediate',
@@ -187,7 +191,7 @@ schema: {
       metaDescription: 'RTX 5090 vs RTX 4090 para LLMs locales: la RTX 4090 ya está descontinuada (solo usada). Velocidad, VRAM, coste por token y guía de actualización agosto 2026.',
       heroImage: '/images/rtx-5090-vs-rtx-4090-local-llm-speed-comparison-hero-es.webp',
       publishDate: '2026-04-05',
-      dateModified: '2026-08-27',
+      dateModified: '2026-08-28',
       next_refresh_due: '2027-02-27',
       leadAnswerBlock: '**La RTX 4090 está descontinuada (EOL) desde 2026 — solo en el mercado de usados, ahora en torno a $2.000-2.600. La RTX 5090 sigue en producción, pero su precio de calle ha subido a $4.300-$5.000+ por la escasez de GDDR7 de 2026. La RTX 5090 sigue siendo un 30-50% más rápida en modelos grandes y tiene 32 GB GDDR7 (frente a los 24 GB GDDR6X de la 4090), pero la 4090 usada sigue siendo la tarjeta más barata por token generado.**',
       audience: 'Desarrolladores familiarizados con Ollama o LM Studio que optimizan flujos de trabajo con LLMs locales',
@@ -207,6 +211,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'La RTX 4090 está descontinuada y solo se consigue en el mercado de segunda mano, mientras que la RTX 5090 sigue en producción pero cuesta más del doble de su PVP debido a la escasez de memoria GDDR7; la 5090 es un 30-50% más rápida en modelos grandes con 32GB de VRAM frente a los 24GB de la 4090, pero la 4090 usada sigue generando tokens más barato por dólar.' },
+            { type: 'plain-terms', text: 'Si ya tienes una RTX 4090, hay poca razón para actualizar ahora mismo: la prima de precio de la 5090 no compensa su ganancia de velocidad para la mayoría de usos de LLM local. Si compras desde cero y necesitas una tarjeta capaz de 70B, una RTX 4090 usada sigue siendo mejor relación calidad-precio, a pesar de llevar una prima por ser descontinuada, ya que el precio de la propia 5090 se ha disparado por la escasez de memoria.' },
+          ],
           items: [
             'La RTX 4090 está descontinuada (EOL) desde 2026 — toda unidad en el mercado es usada, a ~$2.000-2.600, muy por encima de los ~$999-1.299 de principios de año.',
             'La RTX 5090 sigue en producción, pero la escasez de memoria GDDR7 de 2026 ha elevado el precio de calle a $4.300-$5.000+, más del doble de su PVP de $1.999.',
@@ -313,7 +321,7 @@ schema: {
         'description': 'RTX 5090 vs RTX 4090 para LLMs locales: la RTX 4090 ya está descontinuada (solo usada). Velocidad, VRAM, coste por token y guía de actualización agosto 2026.',
         'url': 'https://www.promptquorum.com/es/local-llms/rtx-5090-vs-rtx-4090-local-llm',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-08-27',
+        'dateModified': '2026-08-28',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Intermediate',
@@ -366,7 +374,7 @@ schema: {
       metaDescription: '⁨RTX 5090⁩ مقابل ⁨RTX 4090⁩: ⁨RTX 4090⁩ متوقفة الآن (مستعملة فقط). السرعة، VRAM، التكلفة لكل ⁨token⁩، ودليل الترقية لأغسطس 2026.',
       heroImage: '/images/rtx-5090-vs-rtx-4090-local-llm-speed-comparison-hero-ar.webp',
       publishDate: '2026-04-05',
-      dateModified: '2026-08-27',
+      dateModified: '2026-08-28',
       next_refresh_due: '2027-02-27',
       leadAnswerBlock: '**RTX 4090 متوقفة (EOL) منذ 2026 — تُباع مستعملة فقط، بسعر يقارب $2,000-2,600 الآن. RTX 5090 ما زالت قيد الإنتاج لكن سعرها في السوق ارتفع إلى $4,300-$5,000+ بسبب نقص GDDR7 في 2026. تبقى RTX 5090 أسرع بـ 30-50% على النماذج الكبيرة ولديها 32GB GDDR7 (مقابل 24GB GDDR6X لـ 4090)، لكن 4090 المستعملة تبقى الأرخص لكل token مولَّد.**',
       audience: 'المطورون المعتادون على Ollama أو LM Studio الذين يحسّنون سير العمل مع نماذج LLM المحلية',
@@ -386,6 +394,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'تم إيقاف إنتاج RTX 4090 ولا تتوفر إلا في السوق المستعمل، بينما لا تزال RTX 5090 قيد الإنتاج لكن سعرها أكثر من ضعف السعر الرسمي بسبب نقص ذاكرة GDDR7؛ RTX 5090 أسرع بنسبة 30-50% على النماذج الكبيرة بذاكرة 32GB مقابل 24GB لـ4090، لكن RTX 4090 المستعملة لا تزال تولّد التوكنات بتكلفة أقل لكل دولار.' },
+            { type: 'plain-terms', text: 'إذا كنت تملك بالفعل RTX 4090، فلا يوجد سبب كبير للترقية الآن -- فارق سعر RTX 5090 لا يوازي مكسب السرعة لمعظم استخدامات LLM المحلية. إذا كنت تشتري من الصفر وتحتاج بطاقة قادرة على تشغيل نماذج 70B، تبقى RTX 4090 المستعملة القيمة الأفضل رغم علاوة سعرها بسبب توقف إنتاجها، لأن سعر RTX 5090 نفسه ارتفع بسبب نقص الذاكرة.' },
+          ],
           items: [
             'RTX 4090 متوقفة (EOL) منذ 2026 — كل بطاقة في السوق مستعملة، بسعر ~$2,000-2,600، ارتفاعًا حادًا من ~$999-1,299 في بداية العام.',
             'RTX 5090 ما زالت قيد الإنتاج، لكن نقص ذاكرة GDDR7 في 2026 رفع سعرها في السوق إلى $4,300-$5,000+، أكثر من ضعف سعرها الرسمي البالغ $1,999.',
@@ -492,7 +504,7 @@ schema: {
         'description': 'RTX 5090 مقابل RTX 4090: RTX 4090 متوقفة الآن (مستعملة فقط). السرعة، VRAM، التكلفة لكل token، ودليل الترقية لأغسطس 2026.',
         'url': 'https://www.promptquorum.com/ar/local-llms/rtx-5090-vs-rtx-4090-local-llm',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-08-27',
+        'dateModified': '2026-08-28',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Intermediate',
@@ -545,7 +557,7 @@ schema: {
       metaDescription: 'RTX 5090 vs RTX 4090 für lokale LLMs: die RTX 4090 ist jetzt eingestellt (nur gebraucht). Geschwindigkeit, VRAM, Kosten pro Token, Upgrade-Leitfaden August 2026.',
       heroImage: '/images/rtx-5090-vs-rtx-4090-local-llm-speed-comparison-hero-de.webp',
       publishDate: '2026-04-05',
-      dateModified: '2026-08-27',
+      dateModified: '2026-08-28',
       next_refresh_due: '2027-02-27',
       leadAnswerBlock: '**Die RTX 4090 ist seit 2026 eingestellt (EOL) — nur noch gebraucht erhältlich, derzeit für rund $2.000-2.600. Die RTX 5090 wird weiterhin produziert, aber ihr Straßenpreis ist wegen der GDDR7-Knappheit 2026 auf $4.300-$5.000+ gestiegen. Die RTX 5090 bleibt bei großen Modellen 30-50% schneller und hat 32GB GDDR7 (vs. 24GB GDDR6X bei der 4090), aber die gebrauchte 4090 bleibt die günstigere Karte pro erzeugtem Token.**',
       audience: 'Entwickler, die mit Ollama oder LM Studio vertraut sind und lokale LLM-Workflows optimieren',
@@ -565,6 +577,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Die RTX 4090 ist eingestellt und nur noch gebraucht erhältlich, während die RTX 5090 weiterhin produziert wird, aber aufgrund eines GDDR7-Speichermangels mehr als das Doppelte ihrer UVP kostet; die 5090 ist bei großen Modellen 30-50 % schneller mit 32 GB VRAM gegenüber den 24 GB der 4090, aber die gebrauchte 4090 erzeugt Tokens pro Dollar immer noch günstiger.' },
+            { type: 'plain-terms', text: 'Wer bereits eine RTX 4090 besitzt, hat aktuell wenig Grund zum Upgrade -- der Preisaufschlag der 5090 rechtfertigt den Geschwindigkeitsgewinn für die meisten lokalen LLM-Anwendungen nicht. Wer neu kauft und eine 70B-fähige Karte braucht, fährt mit einer gebrauchten 4090 trotz Aufpreis für die Produktionseinstellung besser, da der Preis der 5090 selbst durch den Speichermangel nach oben getrieben wurde.' },
+          ],
           items: [
             'Die RTX 4090 ist seit 2026 eingestellt (EOL) — jede Karte im Handel ist gebraucht, zu ~$2.000-2.600, deutlich über den ~$999-1.299 von Anfang des Jahres.',
             'Die RTX 5090 wird weiterhin produziert, aber die GDDR7-Speicherknappheit 2026 hat den Straßenpreis auf $4.300-$5.000+ getrieben — mehr als das Doppelte der UVP von $1.999.',
@@ -671,7 +687,7 @@ schema: {
         'description': 'RTX 5090 vs RTX 4090 für lokale LLMs: die RTX 4090 ist jetzt eingestellt (nur gebraucht). Geschwindigkeit, VRAM, Kosten pro Token, Upgrade-Leitfaden August 2026.',
         'url': 'https://www.promptquorum.com/de/local-llms/rtx-5090-vs-rtx-4090-local-llm',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-08-27',
+        'dateModified': '2026-08-28',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Intermediate',
@@ -714,7 +730,7 @@ schema: {
       metaDescription: 'RTX 5090 vs RTX 4090 pour LLMs locaux : la RTX 4090 est désormais arrêtée (occasion uniquement). Vitesse, VRAM, coût par token, guide de mise à niveau août 2026.',
       heroImage: '/images/rtx-5090-vs-rtx-4090-local-llm-speed-comparison-hero-fr.webp',
       publishDate: '2026-04-05',
-      dateModified: '2026-08-27',
+      dateModified: '2026-08-28',
       next_refresh_due: '2027-02-27',
       leadAnswerBlock: '**La RTX 4090 est arrêtée (EOL) depuis 2026 — uniquement disponible d\'occasion, désormais autour de 2 000-2 600 $. La RTX 5090 reste en production, mais son prix de rue a grimpé à 4 300-5 000 $+ à cause de la pénurie de GDDR7 de 2026. La RTX 5090 reste 30-50% plus rapide sur les gros modèles et dispose de 32 Go GDDR7 (contre 24 Go GDDR6X pour la 4090), mais la 4090 d\'occasion reste la carte la moins chère par token généré.**',
       audience: 'Développeurs familiers avec Ollama ou LM Studio qui optimisent leurs workflows LLM locaux',
@@ -734,6 +750,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: "La RTX 4090 est arrêtée et n'est plus disponible que d'occasion, tandis que la RTX 5090 reste en production mais coûte plus du double de son prix conseillé à cause d'une pénurie de mémoire GDDR7 ; la 5090 est 30 à 50 % plus rapide sur les gros modèles avec 32 Go de VRAM contre 24 Go pour la 4090, mais la 4090 d'occasion génère toujours des tokens moins cher par dollar." },
+            { type: 'plain-terms', text: "Si vous possédez déjà une RTX 4090, il y a peu de raisons de faire une mise à niveau maintenant -- la prime de prix de la 5090 ne compense pas le gain de vitesse pour la plupart des usages de LLM local. Si vous achetez à zéro et avez besoin d'une carte capable de faire tourner du 70B, une RTX 4090 d'occasion reste le meilleur rapport qualité-prix malgré sa prime liée à l'arrêt de production, car le prix de la 5090 elle-même a été poussé vers le haut par la pénurie de mémoire." },
+          ],
           items: [
             'La RTX 4090 est arrêtée (EOL) depuis 2026 — chaque carte sur le marché est d\'occasion, à ~2 000-2 600 $, très au-dessus des ~999-1 299 $ de début d\'année.',
             'La RTX 5090 reste en production, mais la pénurie de mémoire GDDR7 de 2026 a fait grimper le prix de rue à 4 300-5 000 $+, plus du double du prix public de 1 999 $.',
@@ -840,7 +860,7 @@ schema: {
         'description': 'RTX 5090 vs RTX 4090 pour LLMs locaux : la RTX 4090 est désormais arrêtée (occasion uniquement). Vitesse, VRAM, coût par token, guide de mise à niveau août 2026.',
         'url': 'https://www.promptquorum.com/fr/local-llms/rtx-5090-vs-rtx-4090-local-llm',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-08-27',
+        'dateModified': '2026-08-28',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Intermediate',
@@ -893,7 +913,7 @@ schema: {
       metaDescription: 'RTX 5090 vs RTX 4090 ローカルLLM比較: RTX 4090は現在生産終了(中古のみ)。速度、VRAM、トークンあたりコスト、2026年8月のアップグレードガイド。',
       heroImage: '/images/rtx-5090-vs-rtx-4090-local-llm-speed-comparison-hero-ja.webp',
       publishDate: '2026-04-05',
-      dateModified: '2026-08-27',
+      dateModified: '2026-08-28',
       next_refresh_due: '2027-02-27',
       leadAnswerBlock: '**RTX 4090は2026年に生産終了(EOL)となり、中古市場のみで入手可能で、現在は約$2,000-2,600です。RTX 5090は生産が続いていますが、2026年のGDDR7不足により実売価格は$4,300-$5,000以上まで上昇しました。RTX 5090は大型モデルで依然30-50%高速で32GB GDDR7を搭載(4090の24GB GDDR6Xに対して)していますが、中古4090はトークンあたりのコストで依然最も安価なカードです。**',
       audience: 'OllamaやLM Studioに慣れ、ローカルLLMワークフローを最適化する開発者',
@@ -913,6 +933,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'RTX 4090は生産終了となり中古市場でのみ入手可能で、RTX 5090はまだ生産中ですがGDDR7メモリ不足によりMSRPの2倍以上の価格になっています。RTX 5090は大型モデルで30〜50%高速で32GBのVRAM（4090の24GBに対して）を持ちますが、中古の4090はトークンあたりの生成コストが依然として安価です。' },
+            { type: 'plain-terms', text: 'すでにRTX 4090を持っているなら、今アップグレードする理由はあまりありません -- 5090の価格プレミアムは、ほとんどのローカルLLM用途において速度の向上に見合いません。新規購入で70B対応のカードが必要な場合、中古の4090は生産終了によるプレミアム価格でも依然として最良の価値です。なぜなら5090自体の価格もメモリ不足によって押し上げられているからです。' },
+          ],
           items: [
             'RTX 4090は2026年に生産終了(EOL)となり、市場に出回るのはすべて中古で約$2,000-2,600 — 年初の約$999-1,299から大幅に上昇しています。',
             'RTX 5090は生産が続いていますが、2026年のGDDR7メモリ不足により実売価格は希望小売価格$1,999の2倍以上の$4,300-$5,000以上まで上昇しています。',
@@ -1019,7 +1043,7 @@ schema: {
         'description': 'RTX 5090 vs RTX 4090 ローカルLLM比較: RTX 4090は現在生産終了(中古のみ)。速度、VRAM、トークンあたりコスト、2026年8月のアップグレードガイド。',
         'url': 'https://www.promptquorum.com/ja/local-llms/rtx-5090-vs-rtx-4090-local-llm',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-08-27',
+        'dateModified': '2026-08-28',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Intermediate',
@@ -1072,7 +1096,7 @@ schema: {
       metaDescription: 'RTX 5090对比RTX 4090本地LLM比较：RTX 4090现已停产(仅二手)。速度、VRAM、每token成本，2026年8月升级指南。',
       heroImage: '/images/rtx-5090-vs-rtx-4090-local-llm-speed-comparison-hero-zh.webp',
       publishDate: '2026-04-05',
-      dateModified: '2026-08-27',
+      dateModified: '2026-08-28',
       next_refresh_due: '2027-02-27',
       leadAnswerBlock: '**RTX 4090自2026年起已停产(EOL)——仅在二手市场可购得，目前价格约为$2,000-2,600。RTX 5090仍在生产，但由于2026年GDDR7短缺，其市场价已升至$4,300-$5,000以上。RTX 5090在大型模型上仍快30-50%，配备32GB GDDR7(相比4090的24GB GDDR6X)，但二手4090每生成token的成本依然最低。**',
       audience: '熟悉Ollama或LM Studio、优化本地LLM工作流程的开发者',
@@ -1092,6 +1116,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'RTX 4090已停产，仅能在二手市场购得，而RTX 5090仍在生产中，但由于GDDR7内存短缺，其价格已超过官方指导价的两倍；RTX 5090在大型模型上快30-50%，拥有32GB显存（相比4090的24GB），但二手4090每美元生成的token数仍然更划算。' },
+            { type: 'plain-terms', text: '如果你已经拥有RTX 4090，现在几乎没有理由升级——5090的溢价对大多数本地LLM用途来说并不划算。如果你是全新购买且需要能运行70B模型的显卡，二手4090尽管因停产带来溢价，仍是更好的性价比选择，因为5090本身的价格也因内存短缺被推高了。' },
+          ],
           items: [
             'RTX 4090自2026年起已停产(EOL)——市场上所有的卡都是二手的，价格约为$2,000-2,600，远高于年初的约$999-1,299。',
             'RTX 5090仍在生产，但2026年的GDDR7内存短缺已将市场价推高至$4,300-$5,000以上，超过其$1,999建议零售价的两倍。',
@@ -1198,7 +1226,7 @@ schema: {
         'description': 'RTX 5090对比RTX 4090本地LLM比较：RTX 4090现已停产(仅二手)。速度、VRAM、每token成本，2026年8月升级指南。',
         'url': 'https://www.promptquorum.com/zh/local-llms/rtx-5090-vs-rtx-4090-local-llm',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-08-27',
+        'dateModified': '2026-08-28',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Intermediate',
@@ -1251,7 +1279,7 @@ schema: {
       metaDescription: 'RTX 5090 vs RTX 4090 para LLMs locais: a RTX 4090 agora está descontinuada (só usada). Velocidade, VRAM, custo por token e guia de upgrade de agosto de 2026.',
       heroImage: '/images/rtx-5090-vs-rtx-4090-local-llm-speed-comparison-hero-pt.webp',
       publishDate: '2026-04-05',
-      dateModified: '2026-08-27',
+      dateModified: '2026-08-28',
       next_refresh_due: '2027-02-27',
       leadAnswerBlock: '**A RTX 4090 está descontinuada (EOL) desde 2026 — disponível só no mercado usado, atualmente por volta de $2.000-2.600. A RTX 5090 continua em produção, mas seu preço de mercado subiu para $4.300-$5.000+ por causa da escassez de GDDR7 de 2026. A RTX 5090 continua 30-50% mais rápida nos modelos grandes e tem 32GB GDDR7 (contra 24GB GDDR6X da 4090), mas a 4090 usada continua sendo a placa mais barata por token gerado.**',
       audience: 'Desenvolvedores familiarizados com Ollama ou LM Studio que otimizam fluxos de trabalho com LLMs locais',
@@ -1271,6 +1299,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'A RTX 4090 foi descontinuada e só está disponível no mercado usado, enquanto a RTX 5090 continua em produção, mas custa mais que o dobro do preço sugerido devido à escassez de memória GDDR7; a 5090 é 30-50% mais rápida em modelos grandes com 32GB de VRAM contra os 24GB da 4090, mas a 4090 usada ainda gera tokens mais barato por dólar.' },
+            { type: 'plain-terms', text: 'Se você já tem uma RTX 4090, há pouco motivo para fazer upgrade agora -- o ágio de preço da 5090 não compensa o ganho de velocidade para a maioria dos usos de LLM local. Se você está comprando do zero e precisa de uma placa capaz de rodar 70B, uma RTX 4090 usada continua sendo o melhor custo-benefício, apesar do ágio por ser descontinuada, já que o preço da própria 5090 foi puxado para cima pela escassez de memória.' },
+          ],
           items: [
             'A RTX 4090 está descontinuada (EOL) desde 2026 — toda unidade no mercado é usada, a ~$2.000-2.600, bem acima dos ~$999-1.299 do início do ano.',
             'A RTX 5090 continua em produção, mas a escassez de memória GDDR7 de 2026 elevou o preço de mercado para $4.300-$5.000+, mais que o dobro do preço sugerido de $1.999.',
@@ -1377,7 +1409,7 @@ schema: {
         'description': 'RTX 5090 vs RTX 4090 para LLMs locais: a RTX 4090 agora está descontinuada (só usada). Velocidade, VRAM, custo por token e guia de upgrade de agosto de 2026.',
         'url': 'https://www.promptquorum.com/pt/local-llms/rtx-5090-vs-rtx-4090-local-llm',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-08-27',
+        'dateModified': '2026-08-28',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Intermediate',
@@ -1430,7 +1462,7 @@ schema: {
       metaDescription: 'RTX 5090 vs RTX 4090 로컬 LLM 비교: RTX 4090은 이제 단종(중고만 가능). 속도, VRAM, 토큰당 비용, 2026년 8월 업그레이드 가이드.',
       heroImage: '/images/rtx-5090-vs-rtx-4090-local-llm-speed-comparison-hero-ko.webp',
       publishDate: '2026-04-05',
-      dateModified: '2026-08-27',
+      dateModified: '2026-08-28',
       next_refresh_due: '2027-02-27',
       leadAnswerBlock: '**RTX 4090은 2026년에 단종(EOL)되어 중고 시장에서만 구할 수 있으며, 현재 가격은 약 $2,000~2,600입니다. RTX 5090은 여전히 생산 중이지만 2026년 GDDR7 부족으로 실거래가가 $4,300~$5,000+까지 올랐습니다. RTX 5090은 대형 모델에서 여전히 30~50% 빠르고 32GB GDDR7을 탑재(4090의 24GB GDDR6X 대비)했지만, 중고 4090이 토큰당 비용에서 여전히 가장 저렴한 카드입니다.**',
       audience: 'Ollama 또는 LM Studio에 익숙하며 로컬 LLM 워크플로를 최적화하려는 개발자',
@@ -1450,6 +1482,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'RTX 4090는 단종되어 중고 시장에서만 구할 수 있고, RTX 5090은 여전히 생산 중이지만 GDDR7 메모리 부족으로 정가의 두 배 이상으로 가격이 올랐습니다. RTX 5090은 대형 모델에서 30~50% 더 빠르며 32GB VRAM(4090의 24GB 대비)을 갖췄지만, 중고 4090이 여전히 달러당 토큰 생성 비용이 더 저렴합니다.' },
+            { type: 'plain-terms', text: '이미 RTX 4090을 가지고 있다면 지금 업그레이드할 이유가 거의 없습니다 -- 5090의 가격 프리미엄은 대부분의 로컬 LLM 용도에서 속도 향상을 정당화하지 못합니다. 새로 구매하며 70B급 카드가 필요하다면, 단종 프리미엄에도 불구하고 중고 4090이 여전히 더 나은 가성비를 제공합니다. 5090 자체의 가격도 메모리 부족으로 인해 상승했기 때문입니다.' },
+          ],
           items: [
             'RTX 4090은 2026년에 단종(EOL)되어 시장에 나온 모든 카드는 중고이며, 가격은 약 $2,000~2,600으로 연초의 약 $999~1,299에서 크게 상승했습니다.',
             'RTX 5090은 여전히 생산 중이지만, 2026년 GDDR7 메모리 부족으로 실거래가가 정가 $1,999의 두 배가 넘는 $4,300~$5,000+까지 올랐습니다.',
@@ -1556,7 +1592,7 @@ schema: {
         'description': 'RTX 5090 vs RTX 4090 로컬 LLM 비교: RTX 4090은 이제 단종(중고만 가능). 속도, VRAM, 토큰당 비용, 2026년 8월 업그레이드 가이드.',
         'url': 'https://www.promptquorum.com/ko/local-llms/rtx-5090-vs-rtx-4090-local-llm',
         'datePublished': '2026-04-05',
-        'dateModified': '2026-08-27',
+        'dateModified': '2026-08-28',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Intermediate',
