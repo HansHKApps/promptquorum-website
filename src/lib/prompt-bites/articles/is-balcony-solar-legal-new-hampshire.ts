@@ -18,12 +18,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-new-hampshire-overview-hero-en.webp',
     title: 'Is Balcony Solar Legal in New Hampshire?',
-    dateModified: '2026-07-16',
+    dateModified: '2026-08-29',
     seoTitle: 'Is Balcony Solar Legal in New Hampshire? | Prompt Bites | PromptQuorum',
-    metaDescription: 'Signed, taking effect July 27, 2026. SB 540 makes New Hampshire the first Northeast state, with a 1,200W cap. Quick answer from PromptQuorum.',
+    metaDescription: 'Signed July 2, 2026, taking effect January 1, 2027. SB 540 makes New Hampshire the eighth state with a balcony solar law, with a 1,200W cap. Quick answer from PromptQuorum.',
     publishDate: '2026-07-16',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-07-27',
+    next_refresh_due: '2027-01-05',
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: 'US renters and homeowners checking whether balcony solar is legal in New Hampshire',
@@ -42,13 +42,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'Is balcony solar legal in New Hampshire?',
-        answer: 'Signed, but not yet in effect as of write-time. New Hampshire SB 540 was signed May 28, 2026 and takes effect July 27, 2026 — making New Hampshire the first Northeast state to enact a balcony solar law, with a standard 1,200W cap.',
+        answer: 'Signed, but not yet in effect. New Hampshire SB 540 was signed July 2, 2026 and takes effect January 1, 2027 — making New Hampshire the eighth state to enact a balcony solar law (after Utah, Maine, Virginia, Maryland, Colorado, Vermont, and Connecticut), with a standard 1,200W cap.',
         bullets: [
-          'SB 540 signed May 28, 2026 — takes effect July 27, 2026',
-          'First Northeast state to enact a balcony solar law',
+          'SB 540 signed July 2, 2026 — takes effect January 1, 2027',
+          'Eighth state to enact a balcony solar law, after Maine, Vermont, and Connecticut in New England',
           'New Hampshire has the highest electricity rate of the 8 enacted states, at 28.1¢/kWh',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-08',
       },
     },
     sections: {
@@ -56,8 +56,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'New Hampshire SB 540 is signed but takes effect July 27, 2026 — check the date before assuming it applies today.',
-          'New Hampshire is the first Northeast state to enact a dedicated balcony solar law.',
+          'New Hampshire SB 540 is signed but doesn\'t take effect until January 1, 2027 — check the date before assuming it applies today.',
+          'New Hampshire is the eighth state to enact a dedicated balcony solar law, joining Maine, Vermont, and Connecticut in New England.',
           'At 28.1¢/kWh, New Hampshire has the highest average residential electricity rate of the 8 enacted states — a strong economics story once hardware is available.',
           'No complete system has confirmed full UL 3700 certification yet, same as every other enacted state.',
         ],
@@ -65,12 +65,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'What Will SB 540 Require in New Hampshire?',
         content: [
-          '<strong>New Hampshire SB 540 follows the standard 1,200W cap used by most enacted states, and makes New Hampshire the first Northeast state to pass dedicated balcony solar legislation.</strong> It was signed May 28, 2026 and takes effect July 27, 2026 — check today\'s date against that effective date before assuming the law already applies to you. Once in effect, it will follow the standard exemption template: no utility interconnection agreement or fee, with net metering excluded for exported power.',
+          '<strong>New Hampshire SB 540 follows the standard 1,200W cap used by most enacted states, and makes New Hampshire the eighth state to pass dedicated balcony solar legislation, after Maine, Vermont, and Connecticut in New England.</strong> It was signed July 2, 2026 and takes effect January 1, 2027 — check today\'s date against that effective date before assuming the law already applies to you. Once in effect, it will follow the standard exemption template: no utility interconnection agreement or fee, with net metering excluded for exported power.',
           'No HOA or landlord preemption language for New Hampshire was confirmed in this pass — check your lease or HOA covenant separately once the law is in effect.',
         ],
         columns: ['Field', 'New Hampshire SB 540'],
         rows: [
-          { Field: 'Signed / Effective', 'New Hampshire SB 540': 'May 28, 2026 / Jul 27, 2026' },
+          { Field: 'Signed / Effective', 'New Hampshire SB 540': 'Jul 2, 2026 / Jan 1, 2027' },
           { Field: 'Wattage cap', 'New Hampshire SB 540': '1,200W' },
           { Field: 'Net metering', 'New Hampshire SB 540': 'Not available' },
         ],
@@ -99,11 +99,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Is balcony solar legal in New Hampshire right now?',
-            a: 'SB 540 is signed but doesn\'t take effect until July 27, 2026. Check today\'s date against that before assuming the law already covers you.',
+            a: 'SB 540 is signed but doesn\'t take effect until January 1, 2027. Check today\'s date against that before assuming the law already covers you.',
           },
           {
             q: 'Why does New Hampshire matter for balcony solar?',
-            a: 'It\'s the first Northeast state to pass dedicated legislation, and it has the highest electricity rate (28.1¢/kWh) of the 8 enacted states — a strong potential return once compliant hardware ships.',
+            a: 'It\'s the eighth state to pass dedicated legislation (after Maine, Vermont, and Connecticut in New England), and it has the highest electricity rate (28.1¢/kWh) of the 8 enacted states — a strong potential return once compliant hardware ships.',
           },
           {
             q: 'Can my HOA in New Hampshire ban balcony solar?',
@@ -121,12 +121,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-new-hampshire-overview-hero-de.webp',
     title: 'Ist Balkonsolar in New Hampshire legal?',
-    dateModified: '2026-07-16',
+    dateModified: '2026-08-29',
     seoTitle: 'Ist Balkonsolar in New Hampshire legal? | Prompt Bites | PromptQuorum',
-    metaDescription: 'Unterzeichnet, tritt am 27. Juli 2026 in Kraft. SB 540 macht New Hampshire zum ersten Bundesstaat im Nordosten mit einer 1.200-W-Obergrenze. Schnelle Antwort von PromptQuorum.',
+    metaDescription: 'Unterzeichnet am 2. Juli 2026, tritt am 1. Januar 2027 in Kraft. SB 540 macht New Hampshire zum achten Bundesstaat mit Balkonsolar-Gesetz, mit einer 1.200-W-Obergrenze. Schnelle Antwort von PromptQuorum.',
     publishDate: '2026-07-16',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-07-27',
+    next_refresh_due: '2027-01-05',
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: 'US-Mieter und Hausbesitzer, die prüfen, ob Balkonsolar in New Hampshire legal ist',
@@ -145,13 +145,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       de: {
         question: 'Ist Balkonsolar in New Hampshire legal?',
-        answer: 'Unterzeichnet, aber noch nicht in Kraft (Stand: Redaktionsschluss). New Hampshires SB 540 wurde am 28. Mai 2026 unterzeichnet und tritt am 27. Juli 2026 in Kraft – damit ist New Hampshire der erste Bundesstaat im Nordosten, der ein Balkonsolar-Gesetz erlässt, mit einer üblichen Obergrenze von 1.200 W.',
+        answer: 'Unterzeichnet, aber noch nicht in Kraft. New Hampshires SB 540 wurde am 2. Juli 2026 unterzeichnet und tritt am 1. Januar 2027 in Kraft – damit ist New Hampshire der achte Bundesstaat mit einem Balkonsolar-Gesetz (nach Utah, Maine, Virginia, Maryland, Colorado, Vermont und Connecticut), mit einer üblichen Obergrenze von 1.200 W.',
         bullets: [
-          'SB 540 unterzeichnet am 28. Mai 2026 – tritt am 27. Juli 2026 in Kraft',
-          'Erster Bundesstaat im Nordosten mit einem Balkonsolar-Gesetz',
+          'SB 540 unterzeichnet am 2. Juli 2026 – tritt am 1. Januar 2027 in Kraft',
+          'Achter Bundesstaat mit einem Balkonsolar-Gesetz, nach Maine, Vermont und Connecticut im Nordosten',
           'New Hampshire hat mit 28,1 Cent/kWh den höchsten Strompreis der 8 Bundesstaaten mit verabschiedetem Gesetz',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-08',
       },
     },
     sections: {
@@ -159,8 +159,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'New Hampshires SB 540 ist unterzeichnet, tritt aber erst am 27. Juli 2026 in Kraft – prüfen Sie das Datum, bevor Sie annehmen, dass es bereits gilt.',
-          'New Hampshire ist der erste Bundesstaat im Nordosten mit einem eigenen Balkonsolar-Gesetz.',
+          'New Hampshires SB 540 ist unterzeichnet, tritt aber erst am 1. Januar 2027 in Kraft – prüfen Sie das Datum, bevor Sie annehmen, dass es bereits gilt.',
+          'New Hampshire ist der achte Bundesstaat mit einem eigenen Balkonsolar-Gesetz und schließt sich Maine, Vermont und Connecticut im Nordosten an.',
           'Mit 28,1 Cent/kWh hat New Hampshire den höchsten durchschnittlichen Strompreis der 8 Bundesstaaten mit verabschiedetem Gesetz – eine starke Wirtschaftlichkeits-Story, sobald Hardware verfügbar ist.',
           'Bisher hat kein Komplettsystem eine vollständige UL-3700-Zertifizierung bestätigt – wie in jedem anderen Bundesstaat mit verabschiedetem Gesetz.',
         ],
@@ -168,12 +168,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Was wird SB 540 in New Hampshire vorschreiben?',
         content: [
-          '<strong>New Hampshires SB 540 folgt der üblichen 1.200-W-Obergrenze, die in den meisten Bundesstaaten mit verabschiedetem Gesetz gilt, und macht New Hampshire zum ersten Bundesstaat im Nordosten mit einem eigenen Balkonsolar-Gesetz.</strong> Es wurde am 28. Mai 2026 unterzeichnet und tritt am 27. Juli 2026 in Kraft – vergleichen Sie das heutige Datum mit diesem Stichtag, bevor Sie annehmen, dass das Gesetz bereits für Sie gilt. Sobald es in Kraft ist, folgt es der üblichen Ausnahmeregelung: keine Netzanschlussvereinbarung oder -gebühr der Energieversorger, wobei Net Metering für eingespeisten Strom ausgeschlossen bleibt.',
+          '<strong>New Hampshires SB 540 folgt der üblichen 1.200-W-Obergrenze, die in den meisten Bundesstaaten mit verabschiedetem Gesetz gilt, und macht New Hampshire zum achten Bundesstaat mit einem eigenen Balkonsolar-Gesetz, nach Maine, Vermont und Connecticut im Nordosten.</strong> Es wurde am 2. Juli 2026 unterzeichnet und tritt am 1. Januar 2027 in Kraft – vergleichen Sie das heutige Datum mit diesem Stichtag, bevor Sie annehmen, dass das Gesetz bereits für Sie gilt. Sobald es in Kraft ist, folgt es der üblichen Ausnahmeregelung: keine Netzanschlussvereinbarung oder -gebühr der Energieversorger, wobei Net Metering für eingespeisten Strom ausgeschlossen bleibt.',
           'Für New Hampshire wurde in dieser Prüfung keine Regelung zur Verhinderung von HOA- oder Vermieterverboten bestätigt – prüfen Sie Ihren Mietvertrag oder Ihre HOA-Satzung separat, sobald das Gesetz in Kraft ist.',
         ],
         columns: ['Feld', 'New Hampshire SB 540'],
         rows: [
-          { 'Feld': 'Unterzeichnet / In Kraft', 'New Hampshire SB 540': '28. Mai 2026 / 27. Juli 2026' },
+          { 'Feld': 'Unterzeichnet / In Kraft', 'New Hampshire SB 540': '2. Juli 2026 / 1. Januar 2027' },
           { 'Feld': 'Leistungsobergrenze', 'New Hampshire SB 540': '1.200 W' },
           { 'Feld': 'Net Metering', 'New Hampshire SB 540': 'Nicht verfügbar' },
         ],
@@ -202,11 +202,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Ist Balkonsolar in New Hampshire aktuell legal?',
-            a: 'SB 540 ist unterzeichnet, tritt aber erst am 27. Juli 2026 in Kraft. Vergleichen Sie das heutige Datum damit, bevor Sie annehmen, dass das Gesetz bereits für Sie gilt.',
+            a: 'SB 540 ist unterzeichnet, tritt aber erst am 1. Januar 2027 in Kraft. Vergleichen Sie das heutige Datum damit, bevor Sie annehmen, dass das Gesetz bereits für Sie gilt.',
           },
           {
             q: 'Warum ist New Hampshire für Balkonsolar wichtig?',
-            a: 'Es ist der erste Bundesstaat im Nordosten mit einem eigenen Gesetz und hat mit 28,1 Cent/kWh den höchsten Strompreis der 8 Bundesstaaten mit verabschiedetem Gesetz – eine starke potenzielle Rendite, sobald konforme Hardware verfügbar ist.',
+            a: 'Es ist der achte Bundesstaat mit einem eigenen Gesetz (nach Maine, Vermont und Connecticut im Nordosten) und hat mit 28,1 Cent/kWh den höchsten Strompreis der 8 Bundesstaaten mit verabschiedetem Gesetz – eine starke potenzielle Rendite, sobald konforme Hardware verfügbar ist.',
           },
           {
             q: 'Kann meine HOA in New Hampshire Balkonsolar verbieten?',
@@ -224,12 +224,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-new-hampshire-overview-hero-fr.webp',
     title: 'Le solaire de balcon est-il légal au New Hampshire ?',
-    dateModified: '2026-07-16',
+    dateModified: '2026-08-29',
     seoTitle: 'Le solaire de balcon est-il légal au New Hampshire ? | Prompt Bites | PromptQuorum',
-    metaDescription: 'Signée, entrée en vigueur le 27 juillet 2026. La SB 540 fait du New Hampshire le premier État du Nord-Est, avec un plafond de 1 200 W. Réponse rapide de PromptQuorum.',
+    metaDescription: 'Signée le 2 juillet 2026, entrée en vigueur le 1er janvier 2027. La SB 540 fait du New Hampshire le huitième État à adopter une loi sur le solaire de balcon, avec un plafond de 1 200 W. Réponse rapide de PromptQuorum.',
     publishDate: '2026-07-16',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-07-27',
+    next_refresh_due: '2027-01-05',
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: 'Locataires et propriétaires américains vérifiant si le solaire de balcon est légal au New Hampshire',
@@ -248,13 +248,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       fr: {
         question: 'Le solaire de balcon est-il légal au New Hampshire ?',
-        answer: 'Signée, mais pas encore en vigueur à la date de rédaction. La SB 540 du New Hampshire a été signée le 28 mai 2026 et entre en vigueur le 27 juillet 2026 — faisant du New Hampshire le premier État du Nord-Est à adopter une loi sur le solaire de balcon, avec un plafond standard de 1 200 W.',
+        answer: 'Signée, mais pas encore en vigueur. La SB 540 du New Hampshire a été signée le 2 juillet 2026 et entre en vigueur le 1er janvier 2027 — faisant du New Hampshire le huitième État à adopter une loi sur le solaire de balcon (après l\'Utah, le Maine, la Virginie, le Maryland, le Colorado, le Vermont et le Connecticut), avec un plafond standard de 1 200 W.',
         bullets: [
-          'SB 540 signée le 28 mai 2026 — entrée en vigueur le 27 juillet 2026',
-          'Premier État du Nord-Est à adopter une loi sur le solaire de balcon',
+          'SB 540 signée le 2 juillet 2026 — entrée en vigueur le 1er janvier 2027',
+          'Huitième État à adopter une loi sur le solaire de balcon, après le Maine, le Vermont et le Connecticut dans le Nord-Est',
           'Le New Hampshire a le tarif d\'électricité le plus élevé des 8 États ayant adopté une loi, à 28,1 ¢/kWh',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-08',
       },
     },
     sections: {
@@ -262,8 +262,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'La SB 540 du New Hampshire est signée mais n\'entre en vigueur que le 27 juillet 2026 — vérifiez la date avant de supposer qu\'elle s\'applique déjà.',
-          'Le New Hampshire est le premier État du Nord-Est à adopter une loi dédiée au solaire de balcon.',
+          'La SB 540 du New Hampshire est signée mais n\'entre en vigueur que le 1er janvier 2027 — vérifiez la date avant de supposer qu\'elle s\'applique déjà.',
+          'Le New Hampshire est le huitième État à adopter une loi dédiée au solaire de balcon, rejoignant le Maine, le Vermont et le Connecticut dans le Nord-Est.',
           'À 28,1 ¢/kWh, le New Hampshire a le tarif d\'électricité résidentiel moyen le plus élevé des 8 États ayant adopté une loi — un bon argument économique une fois le matériel disponible.',
           'Aucun système complet n\'a confirmé de certification UL 3700 intégrale, comme dans tous les autres États concernés.',
         ],
@@ -271,12 +271,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'Que va exiger la SB 540 au New Hampshire ?',
         content: [
-          '<strong>La SB 540 du New Hampshire suit le plafond standard de 1 200 W utilisé par la plupart des États ayant adopté une loi, et fait du New Hampshire le premier État du Nord-Est à voter une législation dédiée au solaire de balcon.</strong> Signée le 28 mai 2026, elle entre en vigueur le 27 juillet 2026 — comparez la date du jour à cette échéance avant de supposer que la loi s\'applique déjà. Une fois en vigueur, elle suivra le modèle d\'exemption standard : aucun contrat de raccordement ni frais auprès du fournisseur d\'électricité, le net metering étant exclu pour l\'électricité exportée.',
+          '<strong>La SB 540 du New Hampshire suit le plafond standard de 1 200 W utilisé par la plupart des États ayant adopté une loi, et fait du New Hampshire le huitième État à voter une législation dédiée au solaire de balcon, après le Maine, le Vermont et le Connecticut dans le Nord-Est.</strong> Signée le 2 juillet 2026, elle entre en vigueur le 1er janvier 2027 — comparez la date du jour à cette échéance avant de supposer que la loi s\'applique déjà. Une fois en vigueur, elle suivra le modèle d\'exemption standard : aucun contrat de raccordement ni frais auprès du fournisseur d\'électricité, le net metering étant exclu pour l\'électricité exportée.',
           'Aucune disposition empêchant les syndics de copropriété ou les propriétaires bailleurs d\'interdire le solaire de balcon n\'a été confirmée pour le New Hampshire dans cette analyse — vérifiez séparément votre bail ou règlement de copropriété une fois la loi en vigueur.',
         ],
         columns: ['Champ', 'New Hampshire SB 540'],
         rows: [
-          { 'Champ': 'Signature / Entrée en vigueur', 'New Hampshire SB 540': '28 mai 2026 / 27 juillet 2026' },
+          { 'Champ': 'Signature / Entrée en vigueur', 'New Hampshire SB 540': '2 juillet 2026 / 1er janvier 2027' },
           { 'Champ': 'Plafond de puissance', 'New Hampshire SB 540': '1 200 W' },
           { 'Champ': 'Net metering', 'New Hampshire SB 540': 'Non disponible' },
         ],
@@ -305,11 +305,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Le solaire de balcon est-il légal au New Hampshire actuellement ?',
-            a: 'La SB 540 est signée mais n\'entre en vigueur que le 27 juillet 2026. Comparez la date du jour à cette échéance avant de supposer que la loi s\'applique déjà.',
+            a: 'La SB 540 est signée mais n\'entre en vigueur que le 1er janvier 2027. Comparez la date du jour à cette échéance avant de supposer que la loi s\'applique déjà.',
           },
           {
             q: 'Pourquoi le New Hampshire est-il important pour le solaire de balcon ?',
-            a: 'C\'est le premier État du Nord-Est à voter une législation dédiée, et il a le tarif d\'électricité le plus élevé (28,1 ¢/kWh) des 8 États concernés — un retour sur investissement potentiellement élevé une fois le matériel conforme disponible.',
+            a: 'C\'est le huitième État à voter une législation dédiée (après le Maine, le Vermont et le Connecticut dans le Nord-Est), et il a le tarif d\'électricité le plus élevé (28,1 ¢/kWh) des 8 États concernés — un retour sur investissement potentiellement élevé une fois le matériel conforme disponible.',
           },
           {
             q: 'Ma copropriété au New Hampshire peut-elle interdire le solaire de balcon ?',
@@ -327,12 +327,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-new-hampshire-overview-hero-ja.webp',
     title: 'ニューハンプシャー州でベランダソーラーは合法ですか？',
-    dateModified: '2026-07-16',
+    dateModified: '2026-08-29',
     seoTitle: 'ニューハンプシャー州でベランダソーラーは合法ですか？ | Prompt Bites | PromptQuorum',
-    metaDescription: '署名済みで、2026年7月27日に施行されます。SB 540によりニューハンプシャー州は東北部で初めての州となり、上限は1,200Wです。PromptQuorumからの簡潔な回答。',
+    metaDescription: '2026年7月2日に署名され、2027年1月1日に施行されます。SB 540によりニューハンプシャー州は法制化した8番目の州となり、上限は1,200Wです。PromptQuorumからの簡潔な回答。',
     publishDate: '2026-07-16',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-07-27',
+    next_refresh_due: '2027-01-05',
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: 'ニューハンプシャー州でベランダソーラーが合法かどうかを確認する米国の賃借人および住宅所有者',
@@ -351,13 +351,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       ja: {
         question: 'ニューハンプシャー州でベランダソーラーは合法ですか？',
-        answer: '署名済みですが、執筆時点ではまだ施行されていません。ニューハンプシャー州のSB 540は2026年5月28日に署名され、2026年7月27日に施行されます。これによりニューハンプシャー州はベランダソーラー法を制定した最初の東北部の州となり、上限は標準の1,200Wです。',
+        answer: '署名済みですが、まだ施行されていません。ニューハンプシャー州のSB 540は2026年7月2日に署名され、2027年1月1日に施行されます。これによりニューハンプシャー州はベランダソーラー法を制定した8番目の州となり(ユタ、メイン、バージニア、メリーランド、コロラド、バーモント、コネチカットに続く)、上限は標準の1,200Wです。',
         bullets: [
-          'SB 540は2026年5月28日に署名 — 2026年7月27日に施行',
-          'ベランダソーラー法を制定した最初の東北部の州',
+          'SB 540は2026年7月2日に署名 — 2027年1月1日に施行',
+          'ベランダソーラー法を制定した8番目の州(東北部ではメイン州、バーモント州、コネチカット州に続く)',
           'ニューハンプシャー州は法制化済みの8州の中で最も高い電気料金（28.1¢/kWh）',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-08',
       },
     },
     sections: {
@@ -365,8 +365,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'ニューハンプシャー州のSB 540は署名済みですが、施行は2026年7月27日です。すでに適用されていると思い込む前に日付を確認してください。',
-          'ニューハンプシャー州は、ベランダソーラー専用法を制定した最初の東北部の州です。',
+          'ニューハンプシャー州のSB 540は署名済みですが、施行は2027年1月1日です。すでに適用されていると思い込む前に日付を確認してください。',
+          'ニューハンプシャー州は、ベランダソーラー専用法を制定した8番目の州で、東北部ではメイン州、バーモント州、コネチカット州に続きます。',
           '28.1¢/kWhというニューハンプシャー州の電気料金は、法制化済みの8州の中で最も高く、機器が入手可能になれば経済的なメリットが大きくなります。',
           '他のすべての法制化州と同様、UL 3700の完全認証を確認済みの製品はまだありません。',
         ],
@@ -374,12 +374,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'ニューハンプシャー州のSB 540が求める内容は？',
         content: [
-          '<strong>ニューハンプシャー州のSB 540は、多くの法制化州で採用されている標準の1,200W上限に従っており、ニューハンプシャー州はベランダソーラー専用法を可決した最初の東北部の州となります。</strong> 2026年5月28日に署名され、2026年7月27日に施行されます。この法律がすでに自分に適用されると思い込む前に、今日の日付とこの施行日を比較してください。施行後は標準的な適用除外の枠組みに従い、電力会社との系統連系契約や料金は不要で、輸出された電力に対するネットメータリングは対象外となります。',
+          '<strong>ニューハンプシャー州のSB 540は、多くの法制化州で採用されている標準の1,200W上限に従っており、ニューハンプシャー州はベランダソーラー専用法を可決した8番目の州となります(東北部ではメイン州、バーモント州、コネチカット州に続く)。</strong> 2026年7月2日に署名され、2027年1月1日に施行されます。この法律がすでに自分に適用されると思い込む前に、今日の日付とこの施行日を比較してください。施行後は標準的な適用除外の枠組みに従い、電力会社との系統連系契約や料金は不要で、輸出された電力に対するネットメータリングは対象外となります。',
           'ニューハンプシャー州について、HOA（住宅所有者組合）または家主による設置禁止を防ぐ規定は今回の調査では確認されていません。法律が施行された後、賃貸契約またはHOA規約を別途ご確認ください。',
         ],
         columns: ['項目', 'ニューハンプシャー州 SB 540'],
         rows: [
-          { '項目': '署名日／施行日', 'ニューハンプシャー州 SB 540': '2026年5月28日／2026年7月27日' },
+          { '項目': '署名日／施行日', 'ニューハンプシャー州 SB 540': '2026年7月2日／2027年1月1日' },
           { '項目': 'ワット数上限', 'ニューハンプシャー州 SB 540': '1,200W' },
           { '項目': 'ネットメータリング', 'ニューハンプシャー州 SB 540': '利用不可' },
         ],
@@ -408,11 +408,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: '現時点でニューハンプシャー州でベランダソーラーは合法ですか？',
-            a: 'SB 540は署名済みですが、施行は2026年7月27日です。すでに適用されると思い込む前に、今日の日付とこの日付を比較してください。',
+            a: 'SB 540は署名済みですが、施行は2027年1月1日です。すでに適用されると思い込む前に、今日の日付とこの日付を比較してください。',
           },
           {
             q: 'なぜニューハンプシャー州がベランダソーラーにとって重要なのですか？',
-            a: 'ベランダソーラー専用法を可決した最初の東北部の州であり、法制化済みの8州の中で最も高い電気料金（28.1¢/kWh）を記録しています。適合機器が発売されれば、高いリターンが期待できます。',
+            a: 'ベランダソーラー専用法を可決した8番目の州であり(東北部ではメイン州、バーモント州、コネチカット州に続く)、法制化済みの8州の中で最も高い電気料金（28.1¢/kWh）を記録しています。適合機器が発売されれば、高いリターンが期待できます。',
           },
           {
             q: 'ニューハンプシャー州のHOAはベランダソーラーを禁止できますか？',
@@ -430,12 +430,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-new-hampshire-overview-hero-zh.webp',
     title: '新罕布什尔州的阳台太阳能合法吗？',
-    dateModified: '2026-07-16',
+    dateModified: '2026-08-29',
     seoTitle: '新罕布什尔州的阳台太阳能合法吗？| Prompt Bites | PromptQuorum',
-    metaDescription: '已签署，将于2026年7月27日生效。SB 540使新罕布什尔州成为东北部第一个立法的州，功率上限为1,200瓦。PromptQuorum快速解答。',
+    metaDescription: '已于2026年7月2日签署，将于2027年1月1日生效。SB 540使新罕布什尔州成为第八个立法的州，功率上限为1,200瓦。PromptQuorum快速解答。',
     publishDate: '2026-07-16',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-07-27',
+    next_refresh_due: '2027-01-05',
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: '想确认新罕布什尔州阳台太阳能是否合法的美国租户和房主',
@@ -454,13 +454,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       zh: {
         question: '新罕布什尔州的阳台太阳能合法吗？',
-        answer: '已签署，但截至撰写时尚未生效。新罕布什尔州SB 540于2026年5月28日签署，将于2026年7月27日生效——这使新罕布什尔州成为东北部第一个颁布阳台太阳能法律的州，标准功率上限为1,200瓦。',
+        answer: '已签署，但尚未生效。新罕布什尔州SB 540于2026年7月2日签署，将于2027年1月1日生效——这使新罕布什尔州成为第八个颁布阳台太阳能法律的州(继犹他州、缅因州、弗吉尼亚州、马里兰州、科罗拉多州、佛蒙特州和康涅狄格州之后)，标准功率上限为1,200瓦。',
         bullets: [
-          'SB 540于2026年5月28日签署——2026年7月27日生效',
-          '东北部第一个颁布阳台太阳能法律的州',
+          'SB 540于2026年7月2日签署——2027年1月1日生效',
+          '第八个颁布阳台太阳能法律的州，东北部继缅因州、佛蒙特州和康涅狄格州之后',
           '新罕布什尔州是已立法的8个州中电价最高的，达28.1美分/千瓦时',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-08',
       },
     },
     sections: {
@@ -468,8 +468,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '新罕布什尔州SB 540已签署，但要到2026年7月27日才生效——先核对日期，再判断法律是否已适用。',
-          '新罕布什尔州是东北部第一个颁布专门阳台太阳能法律的州。',
+          '新罕布什尔州SB 540已签署，但要到2027年1月1日才生效——先核对日期，再判断法律是否已适用。',
+          '新罕布什尔州是第八个颁布专门阳台太阳能法律的州，加入东北部的缅因州、佛蒙特州和康涅狄格州行列。',
           '新罕布什尔州平均住宅电价为28.1美分/千瓦时，是已立法8个州中最高的——一旦硬件上市，经济性优势明显。',
           '和其他所有已立法的州一样，目前尚无完整系统确认通过UL 3700全项认证。',
         ],
@@ -477,12 +477,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: '新罕布什尔州SB 540将有哪些要求？',
         content: [
-          '<strong>新罕布什尔州SB 540采用大多数已立法州通用的1,200瓦功率上限，使新罕布什尔州成为东北部第一个通过专门阳台太阳能立法的州。</strong> 该法案于2026年5月28日签署，2026年7月27日生效——在假设法律已适用之前，请先将当前日期与生效日期对比。生效后，将遵循标准豁免模式：无需与电力公司签订并网协议或支付费用，但输出电力不适用净计量。',
+          '<strong>新罕布什尔州SB 540采用大多数已立法州通用的1,200瓦功率上限，使新罕布什尔州成为第八个通过专门阳台太阳能立法的州，东北部继缅因州、佛蒙特州和康涅狄格州之后。</strong> 该法案于2026年7月2日签署，2027年1月1日生效——在假设法律已适用之前，请先将当前日期与生效日期对比。生效后，将遵循标准豁免模式：无需与电力公司签订并网协议或支付费用，但输出电力不适用净计量。',
           '本次梳理未确认新罕布什尔州有阻止业主协会（HOA）或房东禁止阳台太阳能的相关条款——法律生效后请另行核实您的租约或HOA规约。',
         ],
         columns: ['项目', '新罕布什尔州SB 540'],
         rows: [
-          { '项目': '签署／生效', '新罕布什尔州SB 540': '2026年5月28日／2026年7月27日' },
+          { '项目': '签署／生效', '新罕布什尔州SB 540': '2026年7月2日／2027年1月1日' },
           { '项目': '功率上限', '新罕布什尔州SB 540': '1,200瓦' },
           { '项目': '净计量', '新罕布什尔州SB 540': '不适用' },
         ],
@@ -511,11 +511,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: '新罕布什尔州现在允许阳台太阳能吗？',
-            a: 'SB 540已签署，但要到2026年7月27日才生效。请先核对当前日期，再判断法律是否已适用于您。',
+            a: 'SB 540已签署，但要到2027年1月1日才生效。请先核对当前日期，再判断法律是否已适用于您。',
           },
           {
             q: '为什么新罕布什尔州对阳台太阳能很重要？',
-            a: '它是东北部第一个通过专门立法的州，电价（28.1美分/千瓦时）也是已立法8个州中最高的——一旦合规硬件上市，潜在回报可观。',
+            a: '它是第八个通过专门立法的州(东北部继缅因州、佛蒙特州和康涅狄格州之后)，电价（28.1美分/千瓦时）也是已立法8个州中最高的——一旦合规硬件上市，潜在回报可观。',
           },
           {
             q: '新罕布什尔州的业主协会（HOA）能禁止阳台太阳能吗？',
@@ -533,12 +533,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-new-hampshire-overview-hero-es.webp',
     title: '¿Es legal la energía solar de balcón en New Hampshire?',
-    dateModified: '2026-07-16',
+    dateModified: '2026-08-29',
     seoTitle: '¿Es legal la energía solar de balcón en New Hampshire? | Prompt Bites | PromptQuorum',
-    metaDescription: 'Firmada, entra en vigor el 27 de julio de 2026. La SB 540 convierte a New Hampshire en el primer estado del noreste, con un límite de 1,200 W. Respuesta rápida de PromptQuorum.',
+    metaDescription: 'Firmada el 2 de julio de 2026, entra en vigor el 1 de enero de 2027. La SB 540 convierte a New Hampshire en el octavo estado con una ley de energía solar de balcón, con un límite de 1,200 W. Respuesta rápida de PromptQuorum.',
     publishDate: '2026-07-16',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-07-27',
+    next_refresh_due: '2027-01-05',
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: 'Inquilinos y propietarios en EE. UU. que quieren saber si la energía solar de balcón es legal en New Hampshire',
@@ -557,13 +557,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       es: {
         question: '¿Es legal la energía solar de balcón en New Hampshire?',
-        answer: 'Firmada, pero aún no está en vigor al momento de escribir esto. La SB 540 de New Hampshire se firmó el 28 de mayo de 2026 y entra en vigor el 27 de julio de 2026, lo que convierte a New Hampshire en el primer estado del noreste en aprobar una ley de energía solar de balcón, con un límite estándar de 1,200 W.',
+        answer: 'Firmada, pero aún no está en vigor. La SB 540 de New Hampshire se firmó el 2 de julio de 2026 y entra en vigor el 1 de enero de 2027, lo que convierte a New Hampshire en el octavo estado en aprobar una ley de energía solar de balcón (después de Utah, Maine, Virginia, Maryland, Colorado, Vermont y Connecticut), con un límite estándar de 1,200 W.',
         bullets: [
-          'SB 540 firmada el 28 de mayo de 2026 — entra en vigor el 27 de julio de 2026',
-          'Primer estado del noreste en aprobar una ley de energía solar de balcón',
+          'SB 540 firmada el 2 de julio de 2026 — entra en vigor el 1 de enero de 2027',
+          'Octavo estado en aprobar una ley de energía solar de balcón, tras Maine, Vermont y Connecticut en el noreste',
           'New Hampshire tiene la tarifa eléctrica más alta de los 8 estados con ley aprobada, a 28.1 ¢/kWh',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-08',
       },
     },
     sections: {
@@ -571,8 +571,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'La SB 540 de New Hampshire está firmada, pero no entra en vigor hasta el 27 de julio de 2026: verifica la fecha antes de asumir que ya aplica.',
-          'New Hampshire es el primer estado del noreste en aprobar una ley dedicada a la energía solar de balcón.',
+          'La SB 540 de New Hampshire está firmada, pero no entra en vigor hasta el 1 de enero de 2027: verifica la fecha antes de asumir que ya aplica.',
+          'New Hampshire es el octavo estado en aprobar una ley dedicada a la energía solar de balcón, sumándose a Maine, Vermont y Connecticut en el noreste.',
           'Con 28.1 ¢/kWh, New Hampshire tiene la tarifa eléctrica residencial promedio más alta de los 8 estados con ley aprobada, lo que le da una gran ventaja económica una vez que haya hardware disponible.',
           'Ningún sistema completo ha confirmado certificación UL 3700 completa todavía, igual que en el resto de los estados con ley aprobada.',
         ],
@@ -580,12 +580,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: '¿Qué exigirá la SB 540 en New Hampshire?',
         content: [
-          '<strong>La SB 540 de New Hampshire sigue el límite estándar de 1,200 W que usan la mayoría de los estados con ley aprobada, y convierte a New Hampshire en el primer estado del noreste en aprobar legislación dedicada a la energía solar de balcón.</strong> Se firmó el 28 de mayo de 2026 y entra en vigor el 27 de julio de 2026; compara la fecha de hoy con esa fecha de entrada en vigor antes de asumir que la ley ya te aplica. Una vez en vigor, seguirá el modelo estándar de exención: sin acuerdo de interconexión ni tarifa con la compañía eléctrica, y sin net metering para la energía exportada.',
+          '<strong>La SB 540 de New Hampshire sigue el límite estándar de 1,200 W que usan la mayoría de los estados con ley aprobada, y convierte a New Hampshire en el octavo estado en aprobar legislación dedicada a la energía solar de balcón, tras Maine, Vermont y Connecticut en el noreste.</strong> Se firmó el 2 de julio de 2026 y entra en vigor el 1 de enero de 2027; compara la fecha de hoy con esa fecha de entrada en vigor antes de asumir que la ley ya te aplica. Una vez en vigor, seguirá el modelo estándar de exención: sin acuerdo de interconexión ni tarifa con la compañía eléctrica, y sin net metering para la energía exportada.',
           'En esta revisión no se confirmó ninguna disposición que impida a las HOA o a los propietarios prohibir la energía solar de balcón en New Hampshire: revisa tu contrato de arrendamiento o el reglamento de tu HOA por separado una vez que la ley esté en vigor.',
         ],
         columns: ['Campo', 'New Hampshire SB 540'],
         rows: [
-          { 'Campo': 'Firmada / En vigor', 'New Hampshire SB 540': '28 de mayo de 2026 / 27 de julio de 2026' },
+          { 'Campo': 'Firmada / En vigor', 'New Hampshire SB 540': '2 de julio de 2026 / 1 de enero de 2027' },
           { 'Campo': 'Límite de potencia', 'New Hampshire SB 540': '1,200 W' },
           { 'Campo': 'Net metering', 'New Hampshire SB 540': 'No disponible' },
         ],
@@ -614,11 +614,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: '¿Es legal la energía solar de balcón en New Hampshire ahora mismo?',
-            a: 'La SB 540 está firmada, pero no entra en vigor hasta el 27 de julio de 2026. Compara la fecha de hoy con esa fecha antes de asumir que la ley ya te aplica.',
+            a: 'La SB 540 está firmada, pero no entra en vigor hasta el 1 de enero de 2027. Compara la fecha de hoy con esa fecha antes de asumir que la ley ya te aplica.',
           },
           {
             q: '¿Por qué es importante New Hampshire para la energía solar de balcón?',
-            a: 'Es el primer estado del noreste en aprobar legislación dedicada, y tiene la tarifa eléctrica más alta (28.1 ¢/kWh) de los 8 estados con ley aprobada: un retorno potencialmente alto una vez que salga hardware compatible al mercado.',
+            a: 'Es el octavo estado en aprobar legislación dedicada (tras Maine, Vermont y Connecticut en el noreste), y tiene la tarifa eléctrica más alta (28.1 ¢/kWh) de los 8 estados con ley aprobada: un retorno potencialmente alto una vez que salga hardware compatible al mercado.',
           },
           {
             q: '¿Puede mi HOA en New Hampshire prohibir la energía solar de balcón?',
@@ -636,12 +636,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-new-hampshire-overview-hero-pt.webp',
     title: 'A energia solar de varanda é legal em New Hampshire?',
-    dateModified: '2026-07-16',
+    dateModified: '2026-08-29',
     seoTitle: 'A energia solar de varanda é legal em New Hampshire? | Prompt Bites | PromptQuorum',
-    metaDescription: 'Sancionada, entra em vigor em 27 de julho de 2026. A SB 540 torna New Hampshire o primeiro estado do Nordeste dos EUA, com limite de 1.200 W. Resposta rápida da PromptQuorum.',
+    metaDescription: 'Sancionada em 2 de julho de 2026, entra em vigor em 1º de janeiro de 2027. A SB 540 torna New Hampshire o oitavo estado com lei de energia solar de varanda, com limite de 1.200 W. Resposta rápida da PromptQuorum.',
     publishDate: '2026-07-16',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-07-27',
+    next_refresh_due: '2027-01-05',
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: 'Locatários e proprietários nos EUA que querem saber se a energia solar de varanda é legal em New Hampshire',
@@ -660,13 +660,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       pt: {
         question: 'A energia solar de varanda é legal em New Hampshire?',
-        answer: 'Sancionada, mas ainda não está em vigor no momento em que este texto foi escrito. A SB 540 de New Hampshire foi sancionada em 28 de maio de 2026 e entra em vigor em 27 de julho de 2026 — tornando New Hampshire o primeiro estado do Nordeste dos EUA a aprovar uma lei de energia solar de varanda, com limite padrão de 1.200 W.',
+        answer: 'Sancionada, mas ainda não está em vigor. A SB 540 de New Hampshire foi sancionada em 2 de julho de 2026 e entra em vigor em 1º de janeiro de 2027 — tornando New Hampshire o oitavo estado a aprovar uma lei de energia solar de varanda (depois de Utah, Maine, Virgínia, Maryland, Colorado, Vermont e Connecticut), com limite padrão de 1.200 W.',
         bullets: [
-          'SB 540 sancionada em 28 de maio de 2026 — entra em vigor em 27 de julho de 2026',
-          'Primeiro estado do Nordeste dos EUA a aprovar uma lei de energia solar de varanda',
+          'SB 540 sancionada em 2 de julho de 2026 — entra em vigor em 1º de janeiro de 2027',
+          'Oitavo estado a aprovar uma lei de energia solar de varanda, depois de Maine, Vermont e Connecticut no Nordeste',
           'New Hampshire tem a tarifa de energia elétrica mais alta entre os 8 estados com lei aprovada, a 28,1 ¢/kWh',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-08',
       },
     },
     sections: {
@@ -674,8 +674,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'A SB 540 de New Hampshire está sancionada, mas só entra em vigor em 27 de julho de 2026 — verifique a data antes de presumir que ela já se aplica.',
-          'New Hampshire é o primeiro estado do Nordeste dos EUA a aprovar uma lei dedicada à energia solar de varanda.',
+          'A SB 540 de New Hampshire está sancionada, mas só entra em vigor em 1º de janeiro de 2027 — verifique a data antes de presumir que ela já se aplica.',
+          'New Hampshire é o oitavo estado a aprovar uma lei dedicada à energia solar de varanda, juntando-se a Maine, Vermont e Connecticut no Nordeste.',
           'Com 28,1 ¢/kWh, New Hampshire tem a tarifa residencial média de eletricidade mais alta entre os 8 estados com lei aprovada — uma boa vantagem econômica assim que o hardware estiver disponível.',
           'Nenhum sistema completo confirmou certificação UL 3700 total ainda, assim como em todos os outros estados com lei aprovada.',
         ],
@@ -683,12 +683,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'O que a SB 540 vai exigir em New Hampshire?',
         content: [
-          '<strong>A SB 540 de New Hampshire segue o limite padrão de 1.200 W usado pela maioria dos estados com lei aprovada, e torna New Hampshire o primeiro estado do Nordeste dos EUA a aprovar legislação dedicada à energia solar de varanda.</strong> Foi sancionada em 28 de maio de 2026 e entra em vigor em 27 de julho de 2026 — compare a data de hoje com essa data de vigência antes de presumir que a lei já se aplica a você. Uma vez em vigor, ela seguirá o modelo padrão de isenção: sem acordo de interconexão ou taxa da concessionária de energia, com net metering excluído para energia exportada.',
+          '<strong>A SB 540 de New Hampshire segue o limite padrão de 1.200 W usado pela maioria dos estados com lei aprovada, e torna New Hampshire o oitavo estado a aprovar legislação dedicada à energia solar de varanda, depois de Maine, Vermont e Connecticut no Nordeste.</strong> Foi sancionada em 2 de julho de 2026 e entra em vigor em 1º de janeiro de 2027 — compare a data de hoje com essa data de vigência antes de presumir que a lei já se aplica a você. Uma vez em vigor, ela seguirá o modelo padrão de isenção: sem acordo de interconexão ou taxa da concessionária de energia, com net metering excluído para energia exportada.',
           'Nenhuma disposição que impeça associações de moradores (HOA) ou proprietários de proibir a energia solar de varanda foi confirmada para New Hampshire nesta análise — verifique seu contrato de aluguel ou regulamento da HOA separadamente assim que a lei entrar em vigor.',
         ],
         columns: ['Campo', 'New Hampshire SB 540'],
         rows: [
-          { 'Campo': 'Sancionada / Em vigor', 'New Hampshire SB 540': '28 de maio de 2026 / 27 de julho de 2026' },
+          { 'Campo': 'Sancionada / Em vigor', 'New Hampshire SB 540': '2 de julho de 2026 / 1º de janeiro de 2027' },
           { 'Campo': 'Limite de potência', 'New Hampshire SB 540': '1.200 W' },
           { 'Campo': 'Net metering', 'New Hampshire SB 540': 'Não disponível' },
         ],
@@ -717,11 +717,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'A energia solar de varanda é legal em New Hampshire agora?',
-            a: 'A SB 540 está sancionada, mas só entra em vigor em 27 de julho de 2026. Compare a data de hoje com essa data antes de presumir que a lei já se aplica a você.',
+            a: 'A SB 540 está sancionada, mas só entra em vigor em 1º de janeiro de 2027. Compare a data de hoje com essa data antes de presumir que a lei já se aplica a você.',
           },
           {
             q: 'Por que New Hampshire é importante para a energia solar de varanda?',
-            a: 'É o primeiro estado do Nordeste dos EUA a aprovar legislação dedicada, e tem a tarifa de eletricidade mais alta (28,1 ¢/kWh) entre os 8 estados com lei aprovada — um retorno potencialmente alto assim que o hardware compatível for lançado.',
+            a: 'É o oitavo estado a aprovar legislação dedicada (depois de Maine, Vermont e Connecticut no Nordeste), e tem a tarifa de eletricidade mais alta (28,1 ¢/kWh) entre os 8 estados com lei aprovada — um retorno potencialmente alto assim que o hardware compatível for lançado.',
           },
           {
             q: 'Minha HOA em New Hampshire pode proibir a energia solar de varanda?',
@@ -739,12 +739,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-new-hampshire-overview-hero-ar.webp',
     title: 'هل الطاقة الشمسية للشرفات قانونية في نيو هامبشاير؟',
-    dateModified: '2026-07-16',
+    dateModified: '2026-08-29',
     seoTitle: 'هل الطاقة الشمسية للشرفات قانونية في نيو هامبشاير؟ | Prompt Bites | PromptQuorum',
-    metaDescription: 'تم التوقيع عليه، ويدخل حيز التنفيذ في 27 يوليو 2026. يجعل قانون SB 540 ولاية نيو هامبشاير أول ولاية في الشمال الشرقي، بحد أقصى 1,200 واط. إجابة سريعة من PromptQuorum.',
+    metaDescription: 'تم التوقيع عليه في 2 يوليو 2026، ويدخل حيز التنفيذ في 1 يناير 2027. يجعل قانون SB 540 ولاية نيو هامبشاير الولاية الثامنة التي تسن قانونًا للطاقة الشمسية للشرفات، بحد أقصى 1,200 واط. إجابة سريعة من PromptQuorum.',
     publishDate: '2026-07-16',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-07-27',
+    next_refresh_due: '2027-01-05',
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: 'المستأجرون وأصحاب المنازل في الولايات المتحدة الذين يتحققون مما إذا كانت الطاقة الشمسية للشرفات قانونية في نيو هامبشاير',
@@ -763,13 +763,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       ar: {
         question: 'هل الطاقة الشمسية للشرفات قانونية في نيو هامبشاير؟',
-        answer: 'تم التوقيع عليه، لكنه لم يدخل حيز التنفيذ بعد حتى وقت كتابة هذا المحتوى. تم التوقيع على قانون SB 540 في نيو هامبشاير بتاريخ 28 مايو 2026 ويدخل حيز التنفيذ في 27 يوليو 2026 — ما يجعل نيو هامبشاير أول ولاية في الشمال الشرقي تسن قانونًا للطاقة الشمسية للشرفات، بحد أقصى قياسي يبلغ 1,200 واط.',
+        answer: 'تم التوقيع عليه، لكنه لم يدخل حيز التنفيذ بعد. تم التوقيع على قانون SB 540 في نيو هامبشاير بتاريخ 2 يوليو 2026 ويدخل حيز التنفيذ في 1 يناير 2027 — ما يجعل نيو هامبشاير الولاية الثامنة التي تسن قانونًا للطاقة الشمسية للشرفات (بعد يوتا وماين وفيرجينيا وماريلاند وكولورادو وفيرمونت وكونيتيكت)، بحد أقصى قياسي يبلغ 1,200 واط.',
         bullets: [
-          'تم التوقيع على SB 540 بتاريخ 28 مايو 2026 — ويدخل حيز التنفيذ في 27 يوليو 2026',
-          'أول ولاية في الشمال الشرقي تسن قانونًا للطاقة الشمسية للشرفات',
+          'تم التوقيع على SB 540 بتاريخ 2 يوليو 2026 — ويدخل حيز التنفيذ في 1 يناير 2027',
+          'الولاية الثامنة التي تسن قانونًا للطاقة الشمسية للشرفات، بعد ماين وفيرمونت وكونيتيكت في الشمال الشرقي',
           'تمتلك نيو هامبشاير أعلى سعر للكهرباء بين الولايات الثماني التي سنّت القانون، عند 28.1 سنت/kWh',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-08',
       },
     },
     sections: {
@@ -777,8 +777,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          'تم التوقيع على قانون SB 540 في نيو هامبشاير، لكنه لا يدخل حيز التنفيذ إلا في 27 يوليو 2026 — تحقق من التاريخ قبل افتراض أنه ساري المفعول بالفعل.',
-          'نيو هامبشاير هي أول ولاية في الشمال الشرقي تسن قانونًا مخصصًا للطاقة الشمسية للشرفات.',
+          'تم التوقيع على قانون SB 540 في نيو هامبشاير، لكنه لا يدخل حيز التنفيذ إلا في 1 يناير 2027 — تحقق من التاريخ قبل افتراض أنه ساري المفعول بالفعل.',
+          'نيو هامبشاير هي الولاية الثامنة التي تسن قانونًا مخصصًا للطاقة الشمسية للشرفات، لتنضم إلى ماين وفيرمونت وكونيتيكت في الشمال الشرقي.',
           'بسعر 28.1 سنت/kWh، تمتلك نيو هامبشاير أعلى متوسط سعر كهرباء سكني بين الولايات الثماني التي سنّت القانون — وهي قصة اقتصادية قوية بمجرد توفر الأجهزة.',
           'لم يؤكد أي نظام كامل بعد حصوله على شهادة UL 3700 الكاملة، تمامًا كما هو الحال في جميع الولايات الأخرى التي سنّت القانون.',
         ],
@@ -786,12 +786,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: 'ماذا سيتطلب قانون SB 540 في نيو هامبشاير؟',
         content: [
-          '<strong>يتبع قانون SB 540 في نيو هامبشاير الحد الأقصى القياسي البالغ 1,200 واط المعتمد في معظم الولايات التي سنّت القانون، ويجعل نيو هامبشاير أول ولاية في الشمال الشرقي تُقر تشريعًا مخصصًا للطاقة الشمسية للشرفات.</strong> تم التوقيع عليه في 28 مايو 2026 ويدخل حيز التنفيذ في 27 يوليو 2026 — قارن تاريخ اليوم بتاريخ السريان هذا قبل افتراض أن القانون ينطبق عليك بالفعل. بمجرد سريانه، سيتبع نموذج الإعفاء القياسي: لا حاجة إلى اتفاقية ربط بالشبكة أو رسوم مع شركة الكهرباء، مع استبعاد نظام صافي القياس (net metering) للطاقة المُصدَّرة.',
+          '<strong>يتبع قانون SB 540 في نيو هامبشاير الحد الأقصى القياسي البالغ 1,200 واط المعتمد في معظم الولايات التي سنّت القانون، ويجعل نيو هامبشاير الولاية الثامنة التي تُقر تشريعًا مخصصًا للطاقة الشمسية للشرفات، بعد ماين وفيرمونت وكونيتيكت في الشمال الشرقي.</strong> تم التوقيع عليه في 2 يوليو 2026 ويدخل حيز التنفيذ في 1 يناير 2027 — قارن تاريخ اليوم بتاريخ السريان هذا قبل افتراض أن القانون ينطبق عليك بالفعل. بمجرد سريانه، سيتبع نموذج الإعفاء القياسي: لا حاجة إلى اتفاقية ربط بالشبكة أو رسوم مع شركة الكهرباء، مع استبعاد نظام صافي القياس (net metering) للطاقة المُصدَّرة.',
           'لم يتم تأكيد أي نص يمنع جمعيات الملاك (HOA) أو الملاك من حظر الطاقة الشمسية للشرفات في نيو هامبشاير ضمن هذه المراجعة — تحقق من عقد الإيجار أو لائحة جمعية الملاك بشكل منفصل بمجرد سريان القانون.',
         ],
         columns: ['الحقل', 'New Hampshire SB 540'],
         rows: [
-          { 'الحقل': 'التوقيع / السريان', 'New Hampshire SB 540': '28 مايو 2026 / 27 يوليو 2026' },
+          { 'الحقل': 'التوقيع / السريان', 'New Hampshire SB 540': '2 يوليو 2026 / 1 يناير 2027' },
           { 'الحقل': 'الحد الأقصى للطاقة', 'New Hampshire SB 540': '1,200 واط' },
           { 'الحقل': 'صافي القياس (Net metering)', 'New Hampshire SB 540': 'غير متاح' },
         ],
@@ -820,11 +820,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'هل الطاقة الشمسية للشرفات قانونية في نيو هامبشاير الآن؟',
-            a: 'تم التوقيع على SB 540، لكنه لا يدخل حيز التنفيذ إلا في 27 يوليو 2026. قارن تاريخ اليوم بهذا التاريخ قبل افتراض أن القانون يشملك بالفعل.',
+            a: 'تم التوقيع على SB 540، لكنه لا يدخل حيز التنفيذ إلا في 1 يناير 2027. قارن تاريخ اليوم بهذا التاريخ قبل افتراض أن القانون يشملك بالفعل.',
           },
           {
             q: 'لماذا تُعد نيو هامبشاير مهمة بالنسبة للطاقة الشمسية للشرفات؟',
-            a: 'إنها أول ولاية في الشمال الشرقي تُقر تشريعًا مخصصًا، ولديها أعلى سعر للكهرباء (28.1 سنت/kWh) بين الولايات الثماني التي سنّت القانون — ما يعني عائدًا محتملًا قويًا بمجرد طرح أجهزة متوافقة.',
+            a: 'إنها الولاية الثامنة التي تُقر تشريعًا مخصصًا (بعد ماين وفيرمونت وكونيتيكت في الشمال الشرقي)، ولديها أعلى سعر للكهرباء (28.1 سنت/kWh) بين الولايات الثماني التي سنّت القانون — ما يعني عائدًا محتملًا قويًا بمجرد طرح أجهزة متوافقة.',
           },
           {
             q: 'هل يمكن لجمعية الملاك في نيو هامبشاير حظر الطاقة الشمسية للشرفات؟',
@@ -842,12 +842,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'US Balcony Solar Regulation',
     heroImage: '/images/is-balcony-solar-legal-new-hampshire-overview-hero-ko.webp',
     title: '뉴햄프셔주에서 발코니 태양광은 합법입니까?',
-    dateModified: '2026-07-16',
+    dateModified: '2026-08-29',
     seoTitle: '뉴햄프셔주에서 발코니 태양광은 합법입니까? | Prompt Bites | PromptQuorum',
-    metaDescription: '서명되었으며 2026년 7월 27일부터 시행됩니다. SB 540 법안으로 뉴햄프셔주는 동북부 최초의 주가 되며, 상한선은 1,200W입니다. PromptQuorum의 빠른 답변입니다.',
+    metaDescription: '2026년 7월 2일에 서명되었으며 2027년 1월 1일부터 시행됩니다. SB 540 법안으로 뉴햄프셔주는 법제화된 8번째 주가 되며, 상한선은 1,200W입니다. PromptQuorum의 빠른 답변입니다.',
     publishDate: '2026-07-16',
     freshness_tier: 'semi_annual',
-    next_refresh_due: '2026-07-27',
+    next_refresh_due: '2027-01-05',
     current_hardware_mentioned: ['EcoFlow STREAM Ultra'],
     educationalLevel: 'Intermediate',
     audience: '뉴햄프셔주에서 발코니 태양광이 합법인지 확인하는 미국 세입자 및 주택 소유자',
@@ -866,13 +866,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     quickAnswerTop: {
       ko: {
         question: '뉴햄프셔주에서 발코니 태양광은 합법입니까?',
-        answer: '서명되었지만, 작성 시점 기준으로 아직 시행되지 않았습니다. 뉴햄프셔주 SB 540 법안은 2026년 5월 28일에 서명되었으며 2026년 7월 27일부터 시행됩니다. 이로써 뉴햄프셔주는 발코니 태양광 법을 제정한 최초의 동북부 주가 되며, 표준 상한선은 1,200W입니다.',
+        answer: '서명되었지만, 아직 시행되지 않았습니다. 뉴햄프셔주 SB 540 법안은 2026년 7월 2일에 서명되었으며 2027년 1월 1일부터 시행됩니다. 이로써 뉴햄프셔주는 발코니 태양광 법을 제정한 8번째 주가 되며(유타, 메인, 버지니아, 메릴랜드, 콜로라도, 버몬트, 코네티컷에 이어), 표준 상한선은 1,200W입니다.',
         bullets: [
-          'SB 540 법안은 2026년 5월 28일 서명 — 2026년 7월 27일부터 시행',
-          '발코니 태양광 법을 제정한 최초의 동북부 주',
+          'SB 540 법안은 2026년 7월 2일 서명 — 2027년 1월 1일부터 시행',
+          '발코니 태양광 법을 제정한 8번째 주(동북부에서는 메인, 버몬트, 코네티컷에 이어)',
           '뉴햄프셔주는 법제화된 8개 주 중 전기 요금이 가장 높으며, kWh당 28.1센트입니다',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-08',
       },
     },
     sections: {
@@ -880,8 +880,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'key-takeaways',
         isTldr: true,
         items: [
-          '뉴햄프셔주 SB 540 법안은 서명되었지만 2026년 7월 27일부터 시행됩니다. 이미 적용된다고 가정하기 전에 날짜를 반드시 확인하십시오.',
-          '뉴햄프셔주는 발코니 태양광 전용 법을 제정한 최초의 동북부 주입니다.',
+          '뉴햄프셔주 SB 540 법안은 서명되었지만 2027년 1월 1일부터 시행됩니다. 이미 적용된다고 가정하기 전에 날짜를 반드시 확인하십시오.',
+          '뉴햄프셔주는 발코니 태양광 전용 법을 제정한 8번째 주로, 동북부의 메인, 버몬트, 코네티컷에 합류합니다.',
           'kWh당 28.1센트로, 뉴햄프셔주는 법제화된 8개 주 중 평균 주거용 전기 요금이 가장 높습니다. 장비가 출시되면 강력한 경제성을 기대할 수 있습니다.',
           '다른 모든 법제화 주와 마찬가지로, 아직 UL 3700 전체 인증을 확인받은 완제품 시스템은 없습니다.',
         ],
@@ -889,12 +889,12 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       body1: {
         title: '뉴햄프셔주 SB 540 법안은 무엇을 요구합니까?',
         content: [
-          '<strong>뉴햄프셔주 SB 540 법안은 대부분의 법제화 주에서 사용되는 표준 1,200W 상한선을 따르며, 뉴햄프셔주는 발코니 태양광 전용 법안을 통과시킨 최초의 동북부 주가 됩니다.</strong> 이 법안은 2026년 5월 28일에 서명되었으며 2026년 7월 27일부터 시행됩니다. 법이 이미 자신에게 적용된다고 가정하기 전에 오늘 날짜와 시행일을 비교해 보십시오. 시행되면 표준 면제 조항을 따르게 됩니다. 즉, 전력회사와의 계통연계 계약이나 수수료가 필요 없으며, 송전된 전력에 대한 net metering은 제외됩니다.',
+          '<strong>뉴햄프셔주 SB 540 법안은 대부분의 법제화 주에서 사용되는 표준 1,200W 상한선을 따르며, 뉴햄프셔주는 발코니 태양광 전용 법안을 통과시킨 8번째 주가 됩니다(동북부에서는 메인, 버몬트, 코네티컷에 이어).</strong> 이 법안은 2026년 7월 2일에 서명되었으며 2027년 1월 1일부터 시행됩니다. 법이 이미 자신에게 적용된다고 가정하기 전에 오늘 날짜와 시행일을 비교해 보십시오. 시행되면 표준 면제 조항을 따르게 됩니다. 즉, 전력회사와의 계통연계 계약이나 수수료가 필요 없으며, 송전된 전력에 대한 net metering은 제외됩니다.',
           '이번 조사에서는 뉴햄프셔주와 관련해 HOA(주택소유자협회)나 임대인의 금지를 막는 규정이 확인되지 않았습니다. 법이 시행된 이후 임대 계약서 또는 HOA 규약을 별도로 확인하십시오.',
         ],
         columns: ['항목', '뉴햄프셔주 SB 540'],
         rows: [
-          { '항목': '서명 / 시행', '뉴햄프셔주 SB 540': '2026년 5월 28일 / 2026년 7월 27일' },
+          { '항목': '서명 / 시행', '뉴햄프셔주 SB 540': '2026년 7월 2일 / 2027년 1월 1일' },
           { '항목': '와트 상한선', '뉴햄프셔주 SB 540': '1,200W' },
           { '항목': 'Net metering', '뉴햄프셔주 SB 540': '이용 불가' },
         ],
@@ -923,11 +923,11 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: '지금 뉴햄프셔주에서 발코니 태양광은 합법입니까?',
-            a: 'SB 540 법안은 서명되었지만 2026년 7월 27일부터 시행됩니다. 법이 이미 적용된다고 가정하기 전에 오늘 날짜와 이 날짜를 비교해 보십시오.',
+            a: 'SB 540 법안은 서명되었지만 2027년 1월 1일부터 시행됩니다. 법이 이미 적용된다고 가정하기 전에 오늘 날짜와 이 날짜를 비교해 보십시오.',
           },
           {
             q: '왜 뉴햄프셔주가 발코니 태양광에 중요합니까?',
-            a: '발코니 태양광 전용 법안을 통과시킨 최초의 동북부 주이며, 법제화된 8개 주 중 전기 요금(kWh당 28.1센트)이 가장 높습니다. 적합한 장비가 출시되면 강력한 잠재적 수익을 기대할 수 있습니다.',
+            a: '발코니 태양광 전용 법안을 통과시킨 8번째 주이며(동북부에서는 메인, 버몬트, 코네티컷에 이어), 법제화된 8개 주 중 전기 요금(kWh당 28.1센트)이 가장 높습니다. 적합한 장비가 출시되면 강력한 잠재적 수익을 기대할 수 있습니다.',
           },
           {
             q: '뉴햄프셔주의 HOA가 발코니 태양광을 금지할 수 있습니까?',
