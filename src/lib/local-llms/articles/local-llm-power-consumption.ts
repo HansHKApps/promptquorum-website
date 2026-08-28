@@ -13,12 +13,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       theme: 'Hardware & Performance',
       heroImage: '/images/local-llm-power-consumption-overview-hero-en.webp',
       title: 'Local LLM Power Consumption and Cooling 2026: RTX 4090, RTX 5090, M5 Max Compared',
-      seoTitle: 'Local LLM Power Consumption 2026: RTX 4090 575W = $52/mo',
-      intro: 'Running local LLMs uses significant power. RTX 4090 draws 575W under load (1200W PSU required, $52/month at $0.12/kWh). RTX 5090 draws 575W with 32 GB GDDR7 VRAM. Apple M5 Max Mac runs 7B models at just 30W total — 10× more energy-efficient per token than NVIDIA. As of April 2026, understanding power requirements prevents hardware damage and helps plan electricity costs across US, EU, Japan, and China markets.',
-      metaDescription: 'RTX 4090: 575W, $52/month. RTX 5090: 575W, 32GB GDDR7. M5 Max: 30W (10× more efficient per token). 1200W PSU required. Cooling and regional costs inside.',
+      seoTitle: 'Local LLM Power Consumption 2026: RTX 4090 450W = $39/mo',
+      intro: 'Running local LLMs uses significant power. RTX 4090 draws 450W under load (NVIDIA\'s own rated TBP; 850W minimum PSU recommended, ~$39/month at $0.12/kWh). RTX 5090 draws 575W with 32 GB GDDR7 VRAM (1200W PSU). Apple M5 Max Mac runs 7B models at just 30W total — roughly 10x more energy-efficient per token than NVIDIA GPUs. As of August 2026, understanding power requirements prevents hardware damage and helps plan electricity costs across US, EU, Japan, and China markets.',
+      metaDescription: 'RTX 4090: 450W, ~$39/month. RTX 5090: 575W, 32GB GDDR7. M5 Max: 30W (~10x more efficient per token). PSU sizing, cooling, and regional costs inside.',
       publishDate: '2026-04-04',
-      dateModified: '2026-04-25',
-      leadAnswerBlock: '**Running local LLMs uses significant power. RTX 4090 draws 575W under load (1200W PSU required, $52/month at $0.12/kWh). RTX 5090 draws 575W with 32 GB GDDR7 VRAM. Apple M5 Max Mac runs 7B models at just 30W total — 10× more energy-efficient per token than NVIDIA. As of April 2026, understanding power requirements prevents hardware damage and helps plan electricity costs across US, EU, Japan, and China markets.**',
+      dateModified: '2026-08-28',
+      leadAnswerBlock: '**Running local LLMs uses significant power. RTX 4090 draws 450W under load (NVIDIA\'s own rated TBP; 850W minimum PSU recommended, ~$39/month at $0.12/kWh). RTX 5090 draws 575W with 32 GB GDDR7 VRAM (1200W PSU). Apple M5 Max Mac runs 7B models at just 30W total — roughly 10x more energy-efficient per token than NVIDIA GPUs. As of August 2026, understanding power requirements prevents hardware damage and helps plan electricity costs across US, EU, Japan, and China markets.**',
       audience: 'Beginners running their first local LLM on consumer hardware',
       readTime: '9 min read',
       educationalLevel: 'Beginner to Intermediate',
@@ -41,23 +41,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
 
           isTldr: true,
           items: [
-            'RTX 4090: 575W. Needs 1200W PSU, excellent case airflow.',
+            'RTX 4090: 450W (NVIDIA-rated TBP). Needs 850W+ PSU, excellent case airflow.',
             'RTX 4080: 320W. Needs 850W PSU, good airflow.',
             'RTX 4070 Ti: 290W. Needs 750W PSU, adequate airflow.',
             'M5 Max Mac: 25-35W for inference (extremely efficient).',
-            'Running 24/7 costs: RTX 4090 = $50-70/month, RTX 4070 Ti = $20-25/month.',
-            'As of April 2026, cooling is critical. Poor airflow reduces lifespan and throttles performance.',
+            'Running 24/7 costs: RTX 4090 = ~$39/month, RTX 4070 Ti = $20-25/month.',
+            'As of August 2026, cooling is critical. Poor airflow reduces lifespan and throttles performance.',
           ],
         },
         gpuPower: {
           id: 'gpu-power',
           title: 'How Much Power Does Each GPU Draw for LLM Inference?',
           image: '/images/local-llm-power-consumption-gpu-power-draw-en.svg',
-          imageCaption: 'GPU power draw for local LLM inference: RTX 5090/4090 at 575W (1200W+ PSU), RTX 4080/4070 Ti at 200–360W, Apple M5 Max/Pro at 25–35W (10× more efficient per token). Min PSU requirements included.',
-          content: ['**The RTX 4090 and RTX 5090 both draw 575W at full load — the highest tier available for local LLMs.** GPU power draw is the dominant factor in your PSU choice and electricity bill.', '**Note:** NVIDIA RTX 4090 has 450W base TDP but real-world inference can hit 575W under sustained load. RTX 5090 ships with 575W native TDP. AMD RX 7900 XTX is the strongest non-NVIDIA discrete GPU for local LLMs at 355W with 24 GB VRAM. Apple M5 Max draws 10× less power per token than RTX 4090 — the most efficient choice for sustained 24/7 inference.'],
+          imageCaption: 'GPU power draw for local LLM inference: RTX 5090 at 575W (1200W+ PSU), RTX 4090 at 450W (850W+ PSU), RTX 4080/4070 Ti at 200-360W, Apple M5 Max/Pro at 25-35W (~10x more efficient per token). Min PSU requirements included.',
+          content: ['**RTX 5090 draws 575W at full load, the highest tier available for local LLMs; RTX 4090 is rated at 450W (NVIDIA\'s own TBP spec).** GPU power draw is the dominant factor in your PSU choice and electricity bill.', '**Note:** Both cards are power-limited by their BIOS to their rated TBP under normal sustained inference load -- brief transient spikes above rated TBP can occur but are not the sustained draw to plan a PSU around. AMD RX 7900 XTX is the strongest non-NVIDIA discrete GPU for local LLMs at 355W with 24 GB VRAM. Apple M5 Max draws roughly 10x less power per token than RTX 4090 -- the most efficient choice for sustained 24/7 inference.'],
           rows: [
             { 'GPU': 'RTX 5090', 'Power': '575W', 'Idle': '20W', 'PSU': '1200W+' },
-            { 'GPU': 'RTX 4090', 'Power': '450W (575W max)', 'Idle': '10W', 'PSU': '1200W+' },
+            { 'GPU': 'RTX 4090', 'Power': '450W', 'Idle': '10W', 'PSU': '850W+' },
             { 'GPU': 'RTX 5080', 'Power': '360W', 'Idle': '15W', 'PSU': '1000W' },
             { 'GPU': 'RTX 4080', 'Power': '320W', 'Idle': '8W', 'PSU': '850W+' },
             { 'GPU': 'RTX 5070', 'Power': '250W', 'Idle': '12W', 'PSU': '800W' },
@@ -69,49 +69,49 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           columns: ['GPU', 'Power', 'Idle', 'PSU'],
           callouts: [
-            { type: 'warning', text: 'RTX 5090 TDP: NVIDIA rates it at 575W but real-world peaks can hit 600W+ depending on power limit settings.' },
+            { type: 'warning', text: 'RTX 5090 TDP: NVIDIA rates it at 575W but real-world peaks can hit 600W+ depending on power limit settings. RTX 4090 is rated at 450W and does not need 1200W-class headroom -- an 850W (minimum) to 1000W (comfortable) PSU is the correct target.' },
           ],
         },
         systemPower: {
           id: 'system-power',
           title: 'How Much Total Power Does a Local LLM PC Use?',
           image: '/images/local-llm-power-consumption-apple-vs-nvidia-en.svg',
-          imageCaption: 'RTX 4090 vs Apple M5 Max power efficiency: 575W and $52/month vs 25–35W and $2.60/month at $0.12/kWh. M5 Max is 10× more energy-efficient per token for 7B model inference.',
+          imageCaption: 'RTX 4090 vs Apple M5 Max power efficiency: 450W and ~$39/month vs 25-35W and $2.60/month at $0.12/kWh. M5 Max is roughly 10x more energy-efficient per token for 7B model inference.',
           content: [
             '**The GPU is not the only power consumer.** Factor in CPU, RAM, storage, and motherboard:',
           ],
           rows: [
-            { 'Component': 'GPU (RTX 4090)', 'Power': '575W', 'Notes': 'Peaks at 100% utilization' },
+            { 'Component': 'GPU (RTX 4090)', 'Power': '450W', 'Notes': 'Peaks at 100% utilization' },
             { 'Component': 'CPU (Ryzen 9 7950X)', 'Power': '170W', 'Notes': 'Under load' },
             { 'Component': 'Motherboard + RAM + SSD', 'Power': '100W', 'Notes': 'Typical' },
             { 'Component': 'Cooling fans, PSU overhead', 'Power': '50-100W', 'Notes': 'Safety margin' },
-            { 'Component': '**Total system load**', 'Power': '**~895–945W**', 'Notes': '**Needs 1200W PSU minimum**' },
+            { 'Component': '**Total system load**', 'Power': '**~770-820W**', 'Notes': '**Needs 850W PSU minimum, 1000W comfortable**' },
           ],
           columns: ['Component', 'Power', 'Notes'],
           callouts: [
-            { type: 'keypoint', text: 'GPU is 60–65% of total system power. CPU, cooling, and overhead are the remaining 35–40%.' },
+            { type: 'keypoint', text: 'GPU is 55-58% of total system power. CPU, cooling, and overhead are the remaining 42-45%.' },
           ],
         },
         electricityCost: {
           id: 'electricity-cost',
           title: 'What Does It Cost to Run a Local LLM 24/7?',
           image: '/images/local-llm-power-consumption-electricity-cost-en.svg',
-          imageCaption: '24/7 local LLM electricity cost at $0.12/kWh: RTX 4090 $52/month ($625/year), RTX 4080 $30/month, RTX 4070 Ti $26/month, Apple M5 Max $2.60/month ($32/year).',
+          imageCaption: '24/7 local LLM electricity cost at $0.12/kWh: RTX 4090 ~$39/month (~$467/year), RTX 4080 $30/month, RTX 4070 Ti $26/month, Apple M5 Max $2.60/month ($32/year).',
           content: [
             '**Assuming $0.12/kWh (US average):**',
           ],
           rows: [
-            { 'GPU': 'RTX 4090 (600W avg)', 'Daily Cost': '$1.73', 'Monthly': '$52', 'Annual': '$625' },
+            { 'GPU': 'RTX 4090 (450W avg)', 'Daily Cost': '$1.30', 'Monthly': '$39', 'Annual': '$467' },
             { 'GPU': 'RTX 4080 (350W avg)', 'Daily Cost': '$1.01', 'Monthly': '$30', 'Annual': '$360' },
             { 'GPU': 'RTX 4070 Ti (300W avg)', 'Daily Cost': '$0.86', 'Monthly': '$26', 'Annual': '$315' },
             { 'GPU': 'M5 Max Mac (30W avg)', 'Daily Cost': '$0.09', 'Monthly': '$2.60', 'Annual': '$32' },
           ],
           columns: ['GPU', 'Daily Cost', 'Monthly', 'Annual'],
           callouts: [
-            { type: 'tip', text: 'Power limiting RTX 4090 to 350W saves 40% electricity with only ~10% speed loss — the sweet spot for efficient inference at scale.' },
+            { type: 'tip', text: 'Power limiting RTX 4090 to 350W saves about 22% electricity (from its 450W rated TBP) with only ~5-10% speed loss -- a reasonable efficiency setting for sustained inference at scale.' },
           ],
           snippetBlocks: [
-            { type: 'plain-terms', text: '**kWh (kilowatt-hour):** One thousand watts of power used for one hour. At $0.12/kWh, running a 600W RTX 4090 for 24 hours uses 14.4 kWh, costing $1.73/day.' },
+            { type: 'plain-terms', text: '**kWh (kilowatt-hour):** One thousand watts of power used for one hour. At $0.12/kWh, running a 450W RTX 4090 for 24 hours uses 10.8 kWh, costing $1.30/day.' },
           ],
         },
         cooling: {
@@ -136,64 +136,64 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'quick-facts',
           title: 'Quick Facts',
           items: [
-            '**RTX 4090 peak draw:** 575W (GPU alone)',
-            '**Required PSU:** 1200W for RTX 4090 system',
-            '**24/7 cost at $0.12/kWh:** ~$52/month (RTX 4090)',
+            '**RTX 4090 peak draw:** 450W (GPU alone, NVIDIA-rated TBP)',
+            '**Required PSU:** 850W minimum for RTX 4090 system, 1000W comfortable',
+            '**24/7 cost at $0.12/kWh:** ~$39/month (RTX 4090)',
             '**Apple M5 Max total draw:** 25–35W',
-            '**Efficiency ratio:** M5 Max uses ~10× less power per token than RTX 4090',
+            '**Efficiency ratio:** M5 Max uses roughly 10x less power per token than RTX 4090',
             '**Safe GPU temp:** Keep below 83°C for sustained inference',
           ],
           callouts: [
-            { type: 'tip', text: 'Apple Silicon vs NVIDIA: efficiency winner. M5 Max achieves 65–85 tok/sec — 4× faster than M4 generation while using the same power on just 25–35W, while RTX 4090 requires 600W for 150 tok/sec on the same model.' },
+            { type: 'tip', text: 'Apple Silicon vs NVIDIA: efficiency winner. M5 Max achieves 65–85 tok/sec — 4× faster than M4 generation while using the same power on just 25–35W, while RTX 4090 requires 450W for 150 tok/sec on the same model.' },
           ],
         },
         commonMistakes: {
           id: 'common-mistakes',
           title: 'Common Power and Cooling Mistakes',
           items: [
-            '**Undersizing the PSU.** RTX 4090 with 750W PSU will trigger shutdowns under load. Always budget 2× the GPU power draw.',
+            '**Undersizing the PSU.** RTX 4090 with a PSU under 850W risks instability under sustained load, especially with a high-end CPU in the same system. Budget for the GPU\'s rated TBP plus your full system load and headroom.',
             '**Ignoring case airflow.** Poor airflow causes thermal throttling (~10% performance loss) and shortens GPU lifespan.',
-            '**Running 24/7 without considering costs.** RTX 4090 costs $50/month electricity. Not practical for personal use unless you run inference constantly.',
+            '**Running 24/7 without considering costs.** RTX 4090 costs roughly $39/month in electricity at US average rates. Not practical for personal use unless you run inference constantly.',
             '**Not monitoring GPU temperature.** Cards can silently throttle due to thermal stress. Monitor with nvidia-smi.',
             '**Forgetting cooling overhead in TCO calculations.** Cooling is the second-largest cost after the GPU itself. Running a dual-GPU rig in a hot climate (30°C+ ambient) requires ~$200–400/year in additional A/C costs to maintain 22°C room temperature. Apple Silicon eliminates this: M5 Max draws 30W and produces minimal heat, no extra cooling needed.',
           ],
           callouts: [
-            { type: 'warning', text: '750W PSU + RTX 4090 = random shutdowns under sustained inference. Real-world power spikes exceed PSU capacity, triggering automatic shutdown to protect components.' },
+            { type: 'warning', text: 'An undersized PSU paired with a RTX 4090 can trigger random shutdowns under sustained inference. Real-world transient power spikes can exceed a marginal PSU\'s capacity, tripping automatic shutdown to protect components -- stay above the 850W minimum.' },
           ],
         },
         regionalContext: {
           id: 'regional-context',
           title: 'Power Costs by Region',
           image: '/images/local-llm-power-consumption-regional-costs-en.svg',
-          imageCaption: 'Monthly local LLM inference cost by region: US $52 (RTX 4090) vs $2.60 (M5 Max), Germany €152 vs €7.60, France €130 vs €6.50, Japan ¥12,960 vs ¥648, China ¥504 vs ¥25. Rates are 2026 estimates.',
+          imageCaption: 'Monthly local LLM inference cost by region (RTX 4090 at its 450W rated TBP, 24/7): US ~$39 vs $2.60 (M5 Max), Germany/France ~€113 vs ~€6.50, Japan ~¥9,200 vs ¥580, China ~¥211 vs ¥21. Rates are 2026 estimates.',
           content: [
-            '**EU (Germany/France): €0.30–0.40/kWh — 3× the US average.** Running an RTX 4090 24/7 costs €120–160/month in Germany. GDPR encourages on-premise deployment but energy costs make Apple Silicon or power-limited GPU inference essential for EU users.',
-            '**Japan: ¥27–30/kWh (~$0.18–0.20/kWh).** Energy costs are 50–70% higher than the US average. METI\'s 2024 AI efficiency guidelines favor energy-efficient hardware for corporate deployments.',
-            '**China: ¥0.5–0.8/kWh ($0.07–0.11/kWh) in eastern cities.** Lower electricity costs favor NVIDIA GPU deployments. China Data Security Law requirements make on-premise inference common for enterprises.',
+            '**EU (Germany/France): €0.30–0.40/kWh — 3× the US average.** Running an RTX 4090 24/7 at its 450W rated draw costs roughly €95–125/month (~€113/month at the midpoint rate). GDPR encourages on-premise deployment but energy costs make Apple Silicon or power-limited GPU inference essential for EU users.',
+            '**Japan: ¥27–30/kWh (~$0.18–0.20/kWh).** An RTX 4090 at its 450W rated draw costs roughly ¥8,700–9,700/month (~¥9,200/month at the midpoint rate) — 50–70% higher than the US average. METI\'s 2024 AI efficiency guidelines favor energy-efficient hardware for corporate deployments.',
+            '**China: ¥0.5–0.8/kWh ($0.07–0.11/kWh) in eastern cities.** An RTX 4090 at its 450W rated draw costs roughly ¥162–260/month (~¥211/month at the midpoint rate). Lower electricity costs favor NVIDIA GPU deployments. China Data Security Law requirements make on-premise inference common for enterprises.',
           ],
         },
         faqSection: {
           id: 'faq',
           title: 'Power & Cooling FAQ',
           callouts: [
-            { type: 'insight', text: 'Power-limited inference at 60% TDP is a common data center practice. RTX 4090 at 350W (60% of 575W) delivers 90% of peak performance with 40% lower electricity costs and less cooling load.' },
+            { type: 'insight', text: 'Power-limited inference is a common data center practice. RTX 4090 at 350W (78% of its 450W rated TBP) delivers most of peak performance with roughly 22% lower electricity costs and less cooling load.' },
           ],
           faqs: [
             {
               q: 'How much power does running a local LLM use?',
-              a: 'Power draw depends on GPU tier. RTX 4090: 575W peak (600W average with system). RTX 4080: 320W GPU (450W system). RTX 4070 Ti: 290W GPU (400W system). Apple M5 Max Mac: 25–35W total — the most energy-efficient option by far. Inference loads the GPU to 90–100% utilization continuously.',
+              a: 'Power draw depends on GPU tier. RTX 4090: 450W rated TBP (~770-820W system total). RTX 4080: 320W GPU (450W system). RTX 4070 Ti: 290W GPU (400W system). Apple M5 Max Mac: 25–35W total — the most energy-efficient option by far. Inference loads the GPU to 90–100% utilization continuously.',
             },
             {
               q: 'How much does it cost to run a local LLM 24/7?',
-              a: 'At $0.12/kWh (US average): RTX 4090 system costs ~$52/month. RTX 4080 system: ~$30/month. RTX 4070 Ti system: ~$26/month. Apple M5 Max Mac: ~$2.60/month. Electricity rates vary — in Germany (~$0.40/kWh), multiply by 3×. Running inference only during work hours (8h/day) reduces costs by ~67%.',
+              a: 'At $0.12/kWh (US average): RTX 4090 costs ~$39/month at its rated 450W draw. RTX 4080 system: ~$30/month. RTX 4070 Ti system: ~$26/month. Apple M5 Max Mac: ~$2.60/month. Electricity rates vary — in Germany (~$0.35/kWh), roughly 3× the US rate. Running inference only during work hours (8h/day) reduces costs by ~67%.',
             },
             {
               q: 'What PSU wattage do I need for an RTX 4090?',
-              a: 'Minimum 1000W PSU; 1200W recommended. The RTX 4090 draws 575W at peak. Add CPU (150–170W), motherboard/RAM/storage (100W), and a 20% safety margin — total system load reaches ~900W. A 750W PSU will trigger shutdowns under sustained LLM inference load. Always buy from reputable PSU brands (Seasonic, Corsair, EVGA).',
+              a: 'NVIDIA\'s own minimum recommendation is 850W; 1000W gives comfortable headroom for a full high-end system. The RTX 4090 draws 450W at its rated TBP. Add CPU (150–170W), motherboard/RAM/storage (100W), and a safety margin — total system load reaches ~770-820W. A PSU under 850W risks instability under sustained LLM inference load. Always buy from reputable PSU brands (Seasonic, Corsair, EVGA).',
             },
             {
               q: 'Is Apple Silicon more efficient than NVIDIA for local LLMs?',
-              a: 'Yes — by a large margin. M5 Max (128 GB unified, Mar 2026) runs 7B models at 65–85 tok/sec on 25–35W total system power. An RTX 4090 runs the same model at 150 tok/sec on 600W. M5 Max uses ~10× less power per token than RTX 4090, plus offers 4× larger memory pool (128 GB vs 32 GB) for 70B models.',
+              a: 'Yes — by a large margin. M5 Max (128 GB unified, Mar 2026) runs 7B models at 65–85 tok/sec on 25–35W total system power. An RTX 4090 runs the same model at 150 tok/sec on 450W (its rated TBP). M5 Max uses roughly 10x less power per token than RTX 4090, plus offers 4× larger memory pool (128 GB vs 32 GB) for 70B models.',
             },
             {
               q: 'What GPU temperature is safe for sustained LLM inference?',
@@ -201,11 +201,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'How do I reduce power consumption without losing inference speed?',
-              a: 'Power limit the GPU (NVIDIA) without reducing clock speeds. RTX 4090: setting power limit to 350W (from 575W) reduces power by 40% with only ~10% speed loss — the sweet spot for efficient inference. Use `nvidia-smi -pl 350` to set power limit. Apple Silicon users: no tuning needed, the hardware is already optimized.',
+              a: 'Power limit the GPU (NVIDIA) without reducing clock speeds. RTX 4090: setting power limit to 350W (from its 450W rated TBP) reduces power by roughly 22% with only a small speed loss — a reasonable efficiency setting. Use `nvidia-smi -pl 350` to set power limit. Apple Silicon users: no tuning needed, the hardware is already optimized.',
             },
             {
               q: 'What is TDP and why does it matter for local LLMs?',
-              a: 'TDP (Thermal Design Power) is the maximum heat a GPU generates at peak load, measured in watts. NVIDIA rates RTX 4090 TDP at 575W, but real-world inference can peak at 600W+ depending on power limits and clock speeds. TDP matters because it determines your minimum PSU size and cooling requirements. Higher TDP = larger PSU, more electricity cost, more cooling needed.',
+              a: 'TDP (Thermal Design Power) is the maximum heat a GPU generates at peak load, measured in watts. NVIDIA rates RTX 4090 at 450W TBP (RTX 5090 is rated at 575W). TDP matters because it determines your minimum PSU size and cooling requirements. Higher TDP = larger PSU, more electricity cost, more cooling needed.',
             },
             {
               q: 'Does running a local LLM damage my GPU?',
@@ -243,9 +243,9 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         headline: 'Local LLM Power Consumption and Cooling 2026: RTX 4090, RTX 5090, M5 Max Compared',
-        description: 'RTX 4090: 575W, $52/month at $0.12/kWh. RTX 5090: 575W, 32GB VRAM. M5 Max Mac: 30W (10× more efficient). 1200W PSU required. Cooling, EU/Japan costs included.',
+        description: 'RTX 4090: 450W, ~$39/month at $0.12/kWh. RTX 5090: 575W, 32GB VRAM. M5 Max Mac: 30W (~10x more efficient). PSU sizing, cooling, EU/Japan costs included.',
         datePublished: '2026-04-04',
-        dateModified: '2026-04-25',
+        dateModified: '2026-08-28',
         url: 'https://www.promptquorum.com/local-llms/local-llm-power-consumption',
         inLanguage: 'en',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -270,7 +270,7 @@ schema: {
           {
             '@type': 'Question',
             name: 'How much power does running a local LLM use?',
-            acceptedAnswer: { '@type': 'Answer', text: 'RTX 4090: 575W peak (600W average with system). RTX 4080: 320W GPU (450W system). RTX 4070 Ti: 290W GPU (400W system). Apple M5 Max Mac: 25–35W total. Inference loads the GPU to 90–100% utilization continuously.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'RTX 4090: 450W rated TBP (~770-820W system total). RTX 4080: 320W GPU (450W system). RTX 4070 Ti: 290W GPU (400W system). Apple M5 Max Mac: 25–35W total. Inference loads the GPU to 90–100% utilization continuously.' },
           },
           {
             '@type': 'Question',
@@ -280,12 +280,12 @@ schema: {
           {
             '@type': 'Question',
             name: 'What PSU wattage do I need for an RTX 4090?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Minimum 1000W PSU; 1200W recommended. The RTX 4090 draws 575W at peak. Add CPU (150–170W), motherboard/RAM/storage (100W), and a 20% safety margin — total system load reaches ~900W. A 750W PSU will trigger shutdowns under sustained LLM inference load.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'NVIDIA\'s own minimum recommendation is 850W; 1000W gives comfortable headroom. The RTX 4090 draws 450W at its rated TBP. Add CPU (150–170W), motherboard/RAM/storage (100W), and a safety margin — total system load reaches ~770-820W. A PSU under 850W risks instability under sustained LLM inference load.' },
           },
           {
             '@type': 'Question',
             name: 'Is Apple Silicon more efficient than NVIDIA for local LLMs?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Yes — by a large margin. M5 Max (128 GB unified, Mar 2026) runs 7B models at 65–85 tok/sec on 25–35W total system power. An RTX 4090 runs the same model at 150 tok/sec on 600W. M5 Max uses ~10× less power per token than RTX 4090, plus offers 4× larger memory pool (128 GB vs 32 GB) for 70B models.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Yes — by a large margin. M5 Max (128 GB unified, Mar 2026) runs 7B models at 65–85 tok/sec on 25–35W total system power. An RTX 4090 runs the same model at 150 tok/sec on 450W (its rated TBP). M5 Max uses roughly 10x less power per token than RTX 4090, plus offers 4× larger memory pool (128 GB vs 32 GB) for 70B models.' },
           },
           {
             '@type': 'Question',
@@ -295,12 +295,12 @@ schema: {
           {
             '@type': 'Question',
             name: 'How do I reduce power consumption without losing inference speed?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Power limit the GPU without reducing clock speeds. RTX 4090: setting power limit to 350W (from 575W) reduces power by 40% with only ~10% speed loss. Use `nvidia-smi -pl 350` to set power limit. Apple Silicon users need no tuning.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Power limit the GPU without reducing clock speeds. RTX 4090: setting power limit to 350W (from its 450W rated TBP) reduces power by roughly 22% with only a small speed loss. Use `nvidia-smi -pl 350` to set power limit. Apple Silicon users need no tuning.' },
           },
           {
             '@type': 'Question',
             name: 'What is TDP and why does it matter for local LLMs?',
-            acceptedAnswer: { '@type': 'Answer', text: 'TDP (Thermal Design Power) is the maximum heat a GPU generates at peak load, measured in watts. NVIDIA rates RTX 4090 TDP at 575W, but real-world inference can peak at 600W+ depending on power limits and clock speeds. TDP determines your minimum PSU size and cooling requirements.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'TDP (Thermal Design Power) is the maximum heat a GPU generates at peak load, measured in watts. NVIDIA rates RTX 4090 at 450W TBP (RTX 5090 is rated at 575W). TDP determines your minimum PSU size and cooling requirements.' },
           },
           {
             '@type': 'Question',
@@ -323,12 +323,12 @@ schema: {
           { '@type': 'ListItem', position: 6, name: 'RTX 4080', description: '320W TDP. 16 GB VRAM. 850W PSU.' },
           { '@type': 'ListItem', position: 7, name: 'AMD RX 7900 XTX', description: '355W TDP. 24 GB VRAM. 850W PSU. Best non-NVIDIA option.' },
           { '@type': 'ListItem', position: 8, name: 'RTX 5080', description: '360W TDP. 16 GB VRAM. 1000W PSU.' },
-          { '@type': 'ListItem', position: 9, name: 'RTX 4090', description: '450W base TDP, 575W max. 24 GB VRAM. 1200W PSU. $52/month at $0.12/kWh.' },
+          { '@type': 'ListItem', position: 9, name: 'RTX 4090', description: '450W rated TBP. 24 GB VRAM. 850W minimum PSU. ~$39/month at $0.12/kWh.' },
           { '@type': 'ListItem', position: 10, name: 'RTX 5090', description: '575W TDP. 32 GB GDDR7. 1200W+ PSU. Highest power for highest performance.' },
         ],
       },
       gammaEmbedUrl: '/presentations/local-llm-power-consumption-static.html',
-      gammaDescription: 'Interactive 14-slide deck covering: GPU power draw by tier (RTX 5090 575W to M5 Max 25–35W), electricity cost tables ($52/month vs $2.60/month), total system PSU requirements, cooling setup for 83°C limit, power-limiting to save 40%, and regional costs (US/EU/Japan/China). Download the PDF as a local LLM power consumption reference card.',
+      gammaDescription: 'Interactive 14-slide deck covering: GPU power draw by tier (RTX 5090 575W to M5 Max 25–35W), electricity cost tables (~$39/month vs $2.60/month), total system PSU requirements, cooling setup for 83°C limit, power-limiting to save ~22%, and regional costs (US/EU/Japan/China). Download the PDF as a local LLM power consumption reference card.',
     },
     es: {
       freshness_tier: 'semi_annual',
@@ -336,12 +336,12 @@ schema: {
       theme: 'Hardware & Performance',
       heroImage: '/images/local-llm-power-consumption-overview-hero-es.webp',
       title: 'Consumo de Energía de LLMs Locales 2026: RTX 4090, RTX 5090 y M5 Max Comparados',
-      seoTitle: 'Consumo energético LLM local 2026: RTX 4090 575W = $52/mes',
-      intro: 'Ejecutar LLMs locales consume una cantidad significativa de energía. La RTX 4090 consume 575W bajo carga (se requiere fuente de 1200W, $52/mes a $0.12/kWh). La RTX 5090 consume 575W con 32 GB de VRAM GDDR7. Apple M5 Max ejecuta modelos 7B con solo 30W en total — 10× más eficiente energéticamente por token que NVIDIA. A partir de abril de 2026, comprender los requisitos de energía previene daños en el hardware y ayuda a planificar los costos de electricidad en mercados de EE.UU., UE, Japón y China.',
-      metaDescription: 'RTX 4090: 575 W, $52/mes. RTX 5090: 575 W, 32 GB GDDR7. M5 Max: 30 W (10× más eficiente por token). Fuente 1200 W. Refrigeración y costos regionales.',
+      seoTitle: 'Consumo energético LLM local 2026: RTX 4090 450W = $52/mes',
+      intro: 'Ejecutar LLMs locales consume una cantidad significativa de energía. La RTX 4090 consume 450W bajo carga (se requiere fuente de 850W, $52/mes a $0.12/kWh). La RTX 5090 consume 575W con 32 GB de VRAM GDDR7. Apple M5 Max ejecuta modelos 7B con solo 30W en total — 10× más eficiente energéticamente por token que NVIDIA. A partir de abril de 2026, comprender los requisitos de energía previene daños en el hardware y ayuda a planificar los costos de electricidad en mercados de EE.UU., UE, Japón y China.',
+      metaDescription: 'RTX 4090: 450 W, ~$39/mes. RTX 5090: 575 W, 32 GB GDDR7. M5 Max: 30 W (10× más eficiente por token). Fuente 850 W. Refrigeración y costos regionales.',
       publishDate: '2026-04-04',
-      dateModified: '2026-04-25',
-      leadAnswerBlock: '**Ejecutar LLMs locales consume una cantidad significativa de energía. La RTX 4090 consume 575W bajo carga (se requiere fuente de 1200W, $52/mes a $0.12/kWh). La RTX 5090 consume 575W con 32 GB de VRAM GDDR7. Apple M5 Max ejecuta modelos 7B con solo 30W en total — 10× más eficiente energéticamente por token que NVIDIA. A partir de abril de 2026, comprender los requisitos de energía previene daños en el hardware y ayuda a planificar los costos de electricidad.**',
+      dateModified: '2026-08-28',
+      leadAnswerBlock: '**Ejecutar LLMs locales consume una cantidad significativa de energía. La RTX 4090 consume 450W bajo carga (se requiere fuente de 850W, $52/mes a $0.12/kWh). La RTX 5090 consume 575W con 32 GB de VRAM GDDR7. Apple M5 Max ejecuta modelos 7B con solo 30W en total — 10× más eficiente energéticamente por token que NVIDIA. A partir de abril de 2026, comprender los requisitos de energía previene daños en el hardware y ayuda a planificar los costos de electricidad.**',
       audience: 'Principiantes que ejecutan su primer LLM local en hardware de consumo',
       readTime: '9 min de lectura',
       educationalLevel: 'Beginner to Intermediate',
@@ -363,7 +363,7 @@ schema: {
           id: 'key-takeaways',
           isTldr: true,
           items: [
-            'RTX 4090: 575W. Requiere fuente de 1200W y excelente flujo de aire en el chasis.',
+            'RTX 4090: 450W. Requiere fuente de 850W y excelente flujo de aire en el chasis.',
             'RTX 4080: 320W. Requiere fuente de 850W y buen flujo de aire.',
             'RTX 4070 Ti: 290W. Requiere fuente de 750W y flujo de aire adecuado.',
             'M5 Max Mac: 25–35W para inferencia (extremadamente eficiente).',
@@ -377,12 +377,12 @@ schema: {
           image: '/images/local-llm-power-consumption-gpu-power-draw-es.svg',
           imageCaption: 'Consumo de energía de GPU para inferencia LLM local: RTX 5090/4090 a 575W (fuente 1200W+), RTX 4080/4070 Ti a 200–360W, Apple M5 Max/Pro a 25–35W (10× más eficiente por token). Requisitos mínimos de fuente incluidos.',
           content: [
-            '**La RTX 4090 y la RTX 5090 consumen 575W a plena carga — el nivel más alto disponible para LLMs locales.** El consumo de energía de la GPU es el factor dominante en la elección de la fuente y en la factura eléctrica.',
+            '**La RTX 4090 y la RTX 5090 consumen 450W a plena carga — el nivel más alto disponible para LLMs locales.** El consumo de energía de la GPU es el factor dominante en la elección de la fuente y en la factura eléctrica.',
             '**Nota:** La RTX 4090 de NVIDIA tiene un TDP base de 450W, pero la inferencia en el mundo real puede alcanzar 575W bajo carga sostenida. La RTX 5090 viene con TDP nativo de 575W. La AMD RX 7900 XTX es la GPU discreta no NVIDIA más potente para LLMs locales con 355W y 24 GB de VRAM. Apple M5 Max consume 10× menos energía por token que la RTX 4090 — la opción más eficiente para inferencia sostenida 24/7.',
           ],
           rows: [
             { 'GPU': 'RTX 5090', 'Consumo': '575W', 'Reposo': '20W', 'Fuente': '1200W+' },
-            { 'GPU': 'RTX 4090', 'Consumo': '450W (575W máx)', 'Reposo': '10W', 'Fuente': '1200W+' },
+            { 'GPU': 'RTX 4090', 'Consumo': '450W (450W máx)', 'Reposo': '10W', 'Fuente': '850W+' },
             { 'GPU': 'RTX 5080', 'Consumo': '360W', 'Reposo': '15W', 'Fuente': '1000W' },
             { 'GPU': 'RTX 4080', 'Consumo': '320W', 'Reposo': '8W', 'Fuente': '850W+' },
             { 'GPU': 'RTX 5070', 'Consumo': '250W', 'Reposo': '12W', 'Fuente': '800W' },
@@ -401,12 +401,12 @@ schema: {
           id: 'system-power',
           title: '¿Cuánta energía consume en total un PC LLM local?',
           image: '/images/local-llm-power-consumption-apple-vs-nvidia-es.svg',
-          imageCaption: 'RTX 4090 vs Apple M5 Max eficiencia energética: 575W y $52/mes vs 25–35W y $2.60/mes a $0.12/kWh. El M5 Max es 10× más eficiente por token en inferencia de modelos 7B.',
+          imageCaption: 'RTX 4090 vs Apple M5 Max eficiencia energética: 450W y $52/mes vs 25–35W y $2.60/mes a $0.12/kWh. El M5 Max es 10× más eficiente por token en inferencia de modelos 7B.',
           content: [
             '**La GPU no es el único consumidor de energía.** Ten en cuenta también la CPU, la RAM, el almacenamiento y la placa base:',
           ],
           rows: [
-            { 'Componente': 'GPU (RTX 4090)', 'Consumo': '575W', 'Notas': 'Picos al 100% de utilización' },
+            { 'Componente': 'GPU (RTX 4090)', 'Consumo': '450W', 'Notas': 'Picos al 100% de utilización' },
             { 'Componente': 'CPU (Ryzen 9 7950X)', 'Consumo': '170W', 'Notas': 'Bajo carga' },
             { 'Componente': 'Placa base + RAM + SSD', 'Consumo': '100W', 'Notas': 'Típico' },
             { 'Componente': 'Ventiladores de refrigeración, margen fuente', 'Consumo': '50–100W', 'Notas': 'Margen de seguridad' },
@@ -461,8 +461,8 @@ schema: {
           id: 'quick-facts',
           title: 'Datos rápidos',
           items: [
-            '**Consumo pico de la RTX 4090:** 575W (solo GPU)',
-            '**Fuente requerida:** 1200W para sistema con RTX 4090',
+            '**Consumo pico de la RTX 4090:** 450W (solo GPU)',
+            '**Fuente requerida:** 850W para sistema con RTX 4090',
             '**Costo 24/7 a $0.12/kWh:** ~$52/mes (RTX 4090)',
             '**Consumo total del Apple M5 Max:** 25–35W',
             '**Ratio de eficiencia:** M5 Max usa ~10× menos energía por token que la RTX 4090',
@@ -501,12 +501,12 @@ schema: {
           id: 'faq',
           title: 'Preguntas frecuentes sobre energía y refrigeración',
           callouts: [
-            { type: 'insight', text: 'La inferencia con límite de potencia al 60% del TDP es una práctica habitual en centros de datos. La RTX 4090 a 350W (60% de 575W) ofrece el 90% del rendimiento máximo con un 40% menos de costos de electricidad y menor carga de refrigeración.' },
+            { type: 'insight', text: 'La inferencia con límite de potencia al 60% del TDP es una práctica habitual en centros de datos. La RTX 4090 a 350W (60% de 450W) ofrece el 90% del rendimiento máximo con un 40% menos de costos de electricidad y menor carga de refrigeración.' },
           ],
           faqs: [
             {
               q: '¿Cuánta energía consume ejecutar un LLM local?',
-              a: 'El consumo de energía depende del nivel de GPU. RTX 4090: 575W pico (600W promedio con el sistema). RTX 4080: 320W GPU (450W sistema). RTX 4070 Ti: 290W GPU (400W sistema). Apple M5 Max Mac: 25–35W en total — la opción más eficiente energéticamente con diferencia. Las cargas de inferencia utilizan la GPU al 90–100% de uso de forma continua.',
+              a: 'El consumo de energía depende del nivel de GPU. RTX 4090: 450W pico (600W promedio con el sistema). RTX 4080: 320W GPU (450W sistema). RTX 4070 Ti: 290W GPU (400W sistema). Apple M5 Max Mac: 25–35W en total — la opción más eficiente energéticamente con diferencia. Las cargas de inferencia utilizan la GPU al 90–100% de uso de forma continua.',
             },
             {
               q: '¿Cuánto cuesta ejecutar un LLM local 24/7?',
@@ -514,7 +514,7 @@ schema: {
             },
             {
               q: '¿Qué potencia de fuente necesito para una RTX 4090?',
-              a: 'Mínimo 1000W; 1200W recomendado. La RTX 4090 consume 575W en el pico. Suma CPU (150–170W), placa base/RAM/almacenamiento (100W) y un margen de seguridad del 20% — la carga total del sistema alcanza ~900W. Una fuente de 750W provocará apagados bajo carga de inferencia LLM sostenida. Compra siempre de marcas de fuente reconocidas (Seasonic, Corsair, EVGA).',
+              a: 'Mínimo 1000W; 850W recomendado. La RTX 4090 consume 450W en el pico. Suma CPU (150–170W), placa base/RAM/almacenamiento (100W) y un margen de seguridad del 20% — la carga total del sistema alcanza ~900W. Una fuente de 750W provocará apagados bajo carga de inferencia LLM sostenida. Compra siempre de marcas de fuente reconocidas (Seasonic, Corsair, EVGA).',
             },
             {
               q: '¿Es Apple Silicon más eficiente que NVIDIA para LLMs locales?',
@@ -526,11 +526,11 @@ schema: {
             },
             {
               q: '¿Cómo reduzco el consumo de energía sin perder velocidad de inferencia?',
-              a: 'Limita la potencia de la GPU (NVIDIA) sin reducir las velocidades de reloj. RTX 4090: establecer el límite de potencia en 350W (desde 575W) reduce la potencia un 40% con solo ~10% de pérdida de velocidad — el punto óptimo para inferencia eficiente. Usa `nvidia-smi -pl 350` para establecer el límite de potencia. Los usuarios de Apple Silicon no necesitan ajuste, el hardware ya está optimizado.',
+              a: 'Limita la potencia de la GPU (NVIDIA) sin reducir las velocidades de reloj. RTX 4090: establecer el límite de potencia en 350W (desde 450W) reduce la potencia un 40% con solo ~10% de pérdida de velocidad — el punto óptimo para inferencia eficiente. Usa `nvidia-smi -pl 350` para establecer el límite de potencia. Los usuarios de Apple Silicon no necesitan ajuste, el hardware ya está optimizado.',
             },
             {
               q: '¿Qué es el TDP y por qué importa para LLMs locales?',
-              a: 'TDP (Thermal Design Power) es el calor máximo que genera una GPU a carga máxima, medido en vatios. NVIDIA califica el TDP de la RTX 4090 en 575W, pero la inferencia real puede alcanzar 600W+ dependiendo de los límites de potencia y las velocidades de reloj. El TDP importa porque determina el tamaño mínimo de tu fuente y los requisitos de refrigeración. Mayor TDP = fuente más grande, mayor costo de electricidad, más refrigeración necesaria.',
+              a: 'TDP (Thermal Design Power) es el calor máximo que genera una GPU a carga máxima, medido en vatios. NVIDIA califica el TDP de la RTX 4090 en 450W, pero la inferencia real puede alcanzar 600W+ dependiendo de los límites de potencia y las velocidades de reloj. El TDP importa porque determina el tamaño mínimo de tu fuente y los requisitos de refrigeración. Mayor TDP = fuente más grande, mayor costo de electricidad, más refrigeración necesaria.',
             },
             {
               q: '¿Ejecutar un LLM local daña mi GPU?',
@@ -568,9 +568,9 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         headline: 'Consumo de Energía de LLMs Locales 2026: RTX 4090, RTX 5090 y M5 Max Comparados',
-        description: 'RTX 4090: 575W, $52/mes a $0.12/kWh. RTX 5090: 575W, 32GB VRAM. M5 Max: 30W (10× más eficiente). Se requiere fuente 1200W. Refrigeración y costos regionales incluidos.',
+        description: 'RTX 4090: 450W, ~$39/mes a $0.12/kWh. RTX 5090: 575W, 32GB VRAM. M5 Max: 30W (10× más eficiente). Se requiere fuente 850W. Refrigeración y costos regionales incluidos.',
         datePublished: '2026-04-04',
-        dateModified: '2026-04-25',
+        dateModified: '2026-08-28',
         url: 'https://www.promptquorum.com/es/local-llms/local-llm-power-consumption',
         inLanguage: 'es',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -596,7 +596,7 @@ schema: {
           {
             '@type': 'Question',
             name: '¿Cuánta energía consume ejecutar un LLM local?',
-            acceptedAnswer: { '@type': 'Answer', text: 'RTX 4090: 575W pico (600W promedio con sistema). RTX 4080: 320W GPU (450W sistema). RTX 4070 Ti: 290W GPU (400W sistema). Apple M5 Max Mac: 25–35W en total. Las cargas de inferencia utilizan la GPU al 90–100% de uso de forma continua.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'RTX 4090: 450W pico (600W promedio con sistema). RTX 4080: 320W GPU (450W sistema). RTX 4070 Ti: 290W GPU (400W sistema). Apple M5 Max Mac: 25–35W en total. Las cargas de inferencia utilizan la GPU al 90–100% de uso de forma continua.' },
           },
           {
             '@type': 'Question',
@@ -606,7 +606,7 @@ schema: {
           {
             '@type': 'Question',
             name: '¿Qué potencia de fuente necesito para una RTX 4090?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Mínimo 1000W; 1200W recomendado. La RTX 4090 consume 575W en el pico. Suma CPU (150–170W), placa base/RAM/almacenamiento (100W) y un margen de seguridad del 20% — la carga total del sistema alcanza ~900W. Una fuente de 750W provocará apagados bajo carga de inferencia LLM sostenida.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Mínimo 1000W; 850W recomendado. La RTX 4090 consume 450W en el pico. Suma CPU (150–170W), placa base/RAM/almacenamiento (100W) y un margen de seguridad del 20% — la carga total del sistema alcanza ~900W. Una fuente de 750W provocará apagados bajo carga de inferencia LLM sostenida.' },
           },
           {
             '@type': 'Question',
@@ -621,12 +621,12 @@ schema: {
           {
             '@type': 'Question',
             name: '¿Cómo reduzco el consumo de energía sin perder velocidad de inferencia?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Limita la potencia de la GPU (NVIDIA) sin reducir las velocidades de reloj. RTX 4090: límite de potencia en 350W (desde 575W) reduce la potencia un 40% con solo ~10% de pérdida de velocidad. Usa `nvidia-smi -pl 350`. Los usuarios de Apple Silicon no necesitan ajuste.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Limita la potencia de la GPU (NVIDIA) sin reducir las velocidades de reloj. RTX 4090: límite de potencia en 350W (desde 450W) reduce la potencia un 40% con solo ~10% de pérdida de velocidad. Usa `nvidia-smi -pl 350`. Los usuarios de Apple Silicon no necesitan ajuste.' },
           },
           {
             '@type': 'Question',
             name: '¿Qué es el TDP y por qué importa para LLMs locales?',
-            acceptedAnswer: { '@type': 'Answer', text: 'TDP (Thermal Design Power) es el calor máximo que genera una GPU a carga máxima, en vatios. NVIDIA califica el TDP de la RTX 4090 en 575W, pero la inferencia real puede alcanzar 600W+. El TDP determina el tamaño mínimo de la fuente y los requisitos de refrigeración. Mayor TDP = fuente más grande, mayor costo, más refrigeración.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'TDP (Thermal Design Power) es el calor máximo que genera una GPU a carga máxima, en vatios. NVIDIA califica el TDP de la RTX 4090 en 450W, pero la inferencia real puede alcanzar 600W+. El TDP determina el tamaño mínimo de la fuente y los requisitos de refrigeración. Mayor TDP = fuente más grande, mayor costo, más refrigeración.' },
           },
           {
             '@type': 'Question',
@@ -650,7 +650,7 @@ schema: {
           { '@type': 'ListItem', position: 6, name: 'RTX 4080', description: '320W TDP. 16 GB VRAM. Fuente 850W.' },
           { '@type': 'ListItem', position: 7, name: 'AMD RX 7900 XTX', description: '355W TDP. 24 GB VRAM. Fuente 850W. Mejor opción no NVIDIA.' },
           { '@type': 'ListItem', position: 8, name: 'RTX 5080', description: '360W TDP. 16 GB VRAM. Fuente 1000W.' },
-          { '@type': 'ListItem', position: 9, name: 'RTX 4090', description: '450W TDP base, 575W máx. 24 GB VRAM. Fuente 1200W. $52/mes a $0.12/kWh.' },
+          { '@type': 'ListItem', position: 9, name: 'RTX 4090', description: '450W TDP base. 24 GB VRAM. Fuente 850W. ~$39/mes a $0.12/kWh.' },
           { '@type': 'ListItem', position: 10, name: 'RTX 5090', description: '575W TDP. 32 GB GDDR7. Fuente 1200W+. Máxima potencia para máximo rendimiento.' },
         ],
       },
@@ -664,11 +664,11 @@ schema: {
       heroImage: '/images/local-llm-power-consumption-overview-hero-ar.webp',
       title: 'استهلاك الطاقة لنماذج ⁨LLM⁩ المحلية ⁨2026⁩: مقارنة ⁨RTX 4090⁩ و⁨RTX 5090⁩ و⁨M5 Max⁩',
       seoTitle: 'استهلاك طاقة ⁨LLM⁩ المحلي ⁨2026⁩: ⁨RTX 4090⁩ بـ ⁨52⁩$ شهريًا',
-      intro: 'يستهلك تشغيل نماذج LLM المحلية قدرًا كبيرًا من الطاقة. تستهلك RTX 4090 قدرة 575W تحت الحمل (يلزم مزود طاقة 1200W، 52$ شهريًا بسعر 0.12$/kWh). تستهلك RTX 5090 قدرة 575W مع 32 GB من ذاكرة VRAM من نوع GDDR7. يُشغّل Apple M5 Max النماذج بحجم 7B بقدرة 30W فقط إجمالاً — أكثر كفاءة في استهلاك الطاقة لكل token بـ10 مرات من NVIDIA. اعتبارًا من أبريل 2026، يساعد فهم متطلبات الطاقة على منع تلف العتاد وتخطيط تكاليف الكهرباء في أسواق الولايات المتحدة والاتحاد الأوروبي واليابان والصين.',
-      metaDescription: '⁨RTX 4090⁩: ⁨575W⁩ مع مزود ⁨1200W⁩ بتكلفة ⁨52⁩$/شهر. ⁨M5 Max⁩: ⁨30W⁩ — أكفأ ⁨10⁩ مرات لكل ⁨token. RTX 5090⁩: ⁨575W⁩ مع ⁨32 GB GDDR7⁩. تكاليف الكهرباء الإقليمية.',
+      intro: 'يستهلك تشغيل نماذج LLM المحلية قدرًا كبيرًا من الطاقة. تستهلك RTX 4090 قدرة 450W تحت الحمل (يلزم مزود طاقة 850W، 52$ شهريًا بسعر 0.12$/kWh). تستهلك RTX 5090 قدرة 575W مع 32 GB من ذاكرة VRAM من نوع GDDR7. يُشغّل Apple M5 Max النماذج بحجم 7B بقدرة 30W فقط إجمالاً — أكثر كفاءة في استهلاك الطاقة لكل token بـ10 مرات من NVIDIA. اعتبارًا من أبريل 2026، يساعد فهم متطلبات الطاقة على منع تلف العتاد وتخطيط تكاليف الكهرباء في أسواق الولايات المتحدة والاتحاد الأوروبي واليابان والصين.',
+      metaDescription: '⁨RTX 4090⁩: ⁨450W⁩ مع مزود ⁨850W⁩ بتكلفة ⁨39⁩$/شهر تقريباً. ⁨M5 Max⁩: ⁨30W⁩ — أكفأ ⁨10⁩ مرات لكل ⁨token. RTX 5090⁩: ⁨575W⁩ مع ⁨32 GB GDDR7⁩. تكاليف الكهرباء الإقليمية.',
       publishDate: '2026-04-04',
-      dateModified: '2026-04-25',
-      leadAnswerBlock: '**يستهلك تشغيل نماذج LLM المحلية قدرًا كبيرًا من الطاقة. تستهلك RTX 4090 قدرة 575W تحت الحمل (يلزم مزود طاقة 1200W، 52$ شهريًا بسعر 0.12$/kWh). تستهلك RTX 5090 قدرة 575W مع 32 GB من ذاكرة VRAM من نوع GDDR7. يُشغّل Apple M5 Max النماذج بحجم 7B بقدرة 30W فقط إجمالاً — أكثر كفاءة في استهلاك الطاقة لكل token بـ10 مرات من NVIDIA. اعتبارًا من أبريل 2026، يساعد فهم متطلبات الطاقة على منع تلف العتاد وتخطيط تكاليف الكهرباء.**',
+      dateModified: '2026-08-28',
+      leadAnswerBlock: '**يستهلك تشغيل نماذج LLM المحلية قدرًا كبيرًا من الطاقة. تستهلك RTX 4090 قدرة 450W تحت الحمل (يلزم مزود طاقة 850W، 52$ شهريًا بسعر 0.12$/kWh). تستهلك RTX 5090 قدرة 575W مع 32 GB من ذاكرة VRAM من نوع GDDR7. يُشغّل Apple M5 Max النماذج بحجم 7B بقدرة 30W فقط إجمالاً — أكثر كفاءة في استهلاك الطاقة لكل token بـ10 مرات من NVIDIA. اعتبارًا من أبريل 2026، يساعد فهم متطلبات الطاقة على منع تلف العتاد وتخطيط تكاليف الكهرباء.**',
       audience: 'المبتدئون الذين يُشغّلون أول نموذج LLM محلي على عتاد استهلاكي',
       readTime: '9 دقائق للقراءة',
       educationalLevel: 'Beginner to Intermediate',
@@ -690,7 +690,7 @@ schema: {
           id: 'key-takeaways',
           isTldr: true,
           items: [
-            'RTX 4090: 575W. تتطلب مزود طاقة 1200W وتدفق هواء ممتاز في الصندوق.',
+            'RTX 4090: 450W. تتطلب مزود طاقة 850W وتدفق هواء ممتاز في الصندوق.',
             'RTX 4080: 320W. تتطلب مزود طاقة 850W وتدفق هواء جيد.',
             'RTX 4070 Ti: 290W. تتطلب مزود طاقة 750W وتدفق هواء كافٍ.',
             'M5 Max Mac: 25–35W للاستدلال (كفاءة عالية للغاية).',
@@ -704,12 +704,12 @@ schema: {
           image: '/images/local-llm-power-consumption-gpu-power-draw-es.svg',
           imageCaption: 'استهلاك طاقة GPU لاستدلال LLM المحلي: RTX 5090/4090 بقدرة 575W (مزود طاقة 1200W+)، RTX 4080/4070 Ti بقدرة 200–360W، Apple M5 Max/Pro بقدرة 25–35W (أكثر كفاءة بـ10 مرات لكل token). متطلبات الحد الأدنى لمزود الطاقة مُدرجة.',
           content: [
-            '**تستهلك RTX 4090 وRTX 5090 قدرة 575W عند الحمل الكامل — أعلى مستوى متاح لنماذج LLM المحلية.** استهلاك طاقة GPU هو العامل المهيمن في اختيار مزود الطاقة وفي فاتورة الكهرباء.',
+            '**تستهلك RTX 4090 وRTX 5090 قدرة 450W عند الحمل الكامل — أعلى مستوى متاح لنماذج LLM المحلية.** استهلاك طاقة GPU هو العامل المهيمن في اختيار مزود الطاقة وفي فاتورة الكهرباء.',
             '**ملاحظة:** تمتلك RTX 4090 من NVIDIA قدرة TDP أساسية تبلغ 450W، لكن الاستدلال في الواقع قد يصل إلى 575W تحت الحمل المستمر. تأتي RTX 5090 بقدرة TDP أصلية تبلغ 575W. تُعد AMD RX 7900 XTX أقوى GPU منفصلة من غير NVIDIA لنماذج LLM المحلية بقدرة 355W و24 GB من ذاكرة VRAM. يستهلك Apple M5 Max طاقة أقل بـ10 مرات لكل token من RTX 4090 — الخيار الأكثر كفاءة للاستدلال المستمر على مدار الساعة.',
           ],
           rows: [
             { 'GPU': 'RTX 5090', 'Consumo': '575W', 'Reposo': '20W', 'Fuente': '1200W+' },
-            { 'GPU': 'RTX 4090', 'Consumo': '450W (575W حد أقصى)', 'Reposo': '10W', 'Fuente': '1200W+' },
+            { 'GPU': 'RTX 4090', 'Consumo': '450W (450W حد أقصى)', 'Reposo': '10W', 'Fuente': '850W+' },
             { 'GPU': 'RTX 5080', 'Consumo': '360W', 'Reposo': '15W', 'Fuente': '1000W' },
             { 'GPU': 'RTX 4080', 'Consumo': '320W', 'Reposo': '8W', 'Fuente': '850W+' },
             { 'GPU': 'RTX 5070', 'Consumo': '250W', 'Reposo': '12W', 'Fuente': '800W' },
@@ -728,12 +728,12 @@ schema: {
           id: 'system-power',
           title: 'كم يستهلك حاسوب LLM محلي من الطاقة إجمالاً؟',
           image: '/images/local-llm-power-consumption-apple-vs-nvidia-es.svg',
-          imageCaption: 'كفاءة الطاقة RTX 4090 مقابل Apple M5 Max: 575W و52$ شهريًا مقابل 25–35W و2.60$ شهريًا بسعر 0.12$/kWh. M5 Max أكثر كفاءة بـ10 مرات لكل token في استدلال النماذج بحجم 7B.',
+          imageCaption: 'كفاءة الطاقة RTX 4090 مقابل Apple M5 Max: 450W و52$ شهريًا مقابل 25–35W و2.60$ شهريًا بسعر 0.12$/kWh. M5 Max أكثر كفاءة بـ10 مرات لكل token في استدلال النماذج بحجم 7B.',
           content: [
             '**ليست GPU المستهلك الوحيد للطاقة.** ضع في اعتبارك أيضًا المعالج CPU وذاكرة RAM والتخزين واللوحة الأم:',
           ],
           rows: [
-            { 'Componente': 'GPU (RTX 4090)', 'Consumo': '575W', 'Notas': 'ذروات عند استخدام 100%' },
+            { 'Componente': 'GPU (RTX 4090)', 'Consumo': '450W', 'Notas': 'ذروات عند استخدام 100%' },
             { 'Componente': 'CPU (Ryzen 9 7950X)', 'Consumo': '170W', 'Notas': 'تحت الحمل' },
             { 'Componente': 'اللوحة الأم + RAM + SSD', 'Consumo': '100W', 'Notas': 'نموذجي' },
             { 'Componente': 'مراوح التبريد، هامش مزود الطاقة', 'Consumo': '50–100W', 'Notas': 'هامش أمان' },
@@ -788,8 +788,8 @@ schema: {
           id: 'quick-facts',
           title: 'حقائق سريعة',
           items: [
-            '**ذروة استهلاك RTX 4090:** 575W (GPU فقط)',
-            '**مزود الطاقة المطلوب:** 1200W لنظام بـRTX 4090',
+            '**ذروة استهلاك RTX 4090:** 450W (GPU فقط)',
+            '**مزود الطاقة المطلوب:** 850W لنظام بـRTX 4090',
             '**تكلفة التشغيل على مدار الساعة بسعر 0.12$/kWh:** ~52$ شهريًا (RTX 4090)',
             '**إجمالي استهلاك Apple M5 Max:** 25–35W',
             '**نسبة الكفاءة:** يستخدم M5 Max طاقة أقل بـ~10 مرات لكل token من RTX 4090',
@@ -828,12 +828,12 @@ schema: {
           id: 'faq',
           title: 'أسئلة شائعة حول الطاقة والتبريد',
           callouts: [
-            { type: 'insight', text: 'الاستدلال بحد طاقة عند 60% من TDP ممارسة معتادة في مراكز البيانات. تقدّم RTX 4090 عند 350W (60% من 575W) 90% من الأداء الأقصى مع تكاليف كهرباء أقل بنسبة 40% وحمل تبريد أقل.' },
+            { type: 'insight', text: 'الاستدلال بحد طاقة عند 60% من TDP ممارسة معتادة في مراكز البيانات. تقدّم RTX 4090 عند 350W (60% من 450W) 90% من الأداء الأقصى مع تكاليف كهرباء أقل بنسبة 40% وحمل تبريد أقل.' },
           ],
           faqs: [
             {
               q: 'كم تستهلك من الطاقة لتشغيل LLM محلي؟',
-              a: 'يعتمد استهلاك الطاقة على فئة GPU. RTX 4090: 575W ذروة (600W متوسط مع النظام). RTX 4080: 320W GPU (450W نظام). RTX 4070 Ti: 290W GPU (400W نظام). Apple M5 Max Mac: 25–35W إجمالاً — الخيار الأكثر كفاءة في استهلاك الطاقة بفارق كبير. تستخدم أحمال الاستدلال GPU بنسبة 90–100% بشكل مستمر.',
+              a: 'يعتمد استهلاك الطاقة على فئة GPU. RTX 4090: 450W ذروة (600W متوسط مع النظام). RTX 4080: 320W GPU (450W نظام). RTX 4070 Ti: 290W GPU (400W نظام). Apple M5 Max Mac: 25–35W إجمالاً — الخيار الأكثر كفاءة في استهلاك الطاقة بفارق كبير. تستخدم أحمال الاستدلال GPU بنسبة 90–100% بشكل مستمر.',
             },
             {
               q: 'كم تبلغ تكلفة تشغيل LLM محلي على مدار الساعة؟',
@@ -841,7 +841,7 @@ schema: {
             },
             {
               q: 'ما قدرة مزود الطاقة التي أحتاجها لـRTX 4090؟',
-              a: 'الحد الأدنى 1000W؛ يُوصى بـ1200W. تستهلك RTX 4090 قدرة 575W عند الذروة. أضف المعالج CPU (150–170W) واللوحة الأم/RAM/التخزين (100W) وهامش أمان 20% — يصل إجمالي حمل النظام إلى ~900W. سيسبب مزود طاقة 750W إيقاف تشغيل تحت حمل استدلال LLM المستمر. اشترِ دائمًا من علامات مزودات طاقة معروفة (Seasonic، Corsair، EVGA).',
+              a: 'الحد الأدنى 1000W؛ يُوصى بـ850W. تستهلك RTX 4090 قدرة 450W عند الذروة. أضف المعالج CPU (150–170W) واللوحة الأم/RAM/التخزين (100W) وهامش أمان 20% — يصل إجمالي حمل النظام إلى ~900W. سيسبب مزود طاقة 750W إيقاف تشغيل تحت حمل استدلال LLM المستمر. اشترِ دائمًا من علامات مزودات طاقة معروفة (Seasonic، Corsair، EVGA).',
             },
             {
               q: 'هل Apple Silicon أكثر كفاءة من NVIDIA لنماذج LLM المحلية؟',
@@ -853,11 +853,11 @@ schema: {
             },
             {
               q: 'كيف أقلّل استهلاك الطاقة دون فقدان سرعة الاستدلال؟',
-              a: 'حدّد طاقة GPU (NVIDIA) دون خفض سرعات الساعة. RTX 4090: ضبط حد الطاقة عند 350W (من 575W) يقلّل الطاقة بنسبة 40% بخسارة سرعة لا تتجاوز ~10% — النقطة المثلى للاستدلال الكفء. استخدم `nvidia-smi -pl 350` لضبط حد الطاقة. لا يحتاج مستخدمو Apple Silicon إلى ضبط، فالعتاد محسّن بالفعل.',
+              a: 'حدّد طاقة GPU (NVIDIA) دون خفض سرعات الساعة. RTX 4090: ضبط حد الطاقة عند 350W (من 450W) يقلّل الطاقة بنسبة 40% بخسارة سرعة لا تتجاوز ~10% — النقطة المثلى للاستدلال الكفء. استخدم `nvidia-smi -pl 350` لضبط حد الطاقة. لا يحتاج مستخدمو Apple Silicon إلى ضبط، فالعتاد محسّن بالفعل.',
             },
             {
               q: 'ما هو TDP ولماذا يهم لنماذج LLM المحلية؟',
-              a: 'TDP (الطاقة الحرارية التصميمية) هو أقصى حرارة تولّدها GPU عند الحمل الأقصى، مقيسة بالواط. تُقيّم NVIDIA قدرة TDP لـRTX 4090 بـ575W، لكن الاستدلال الحقيقي قد يصل إلى 600W+ حسب حدود الطاقة وسرعات الساعة. يهم TDP لأنه يحدّد الحجم الأدنى لمزود طاقتك ومتطلبات التبريد. TDP أعلى = مزود طاقة أكبر، تكلفة كهرباء أعلى، تبريد أكثر مطلوب.',
+              a: 'TDP (الطاقة الحرارية التصميمية) هو أقصى حرارة تولّدها GPU عند الحمل الأقصى، مقيسة بالواط. تُقيّم NVIDIA قدرة TDP لـRTX 4090 بـ450W، لكن الاستدلال الحقيقي قد يصل إلى 600W+ حسب حدود الطاقة وسرعات الساعة. يهم TDP لأنه يحدّد الحجم الأدنى لمزود طاقتك ومتطلبات التبريد. TDP أعلى = مزود طاقة أكبر، تكلفة كهرباء أعلى، تبريد أكثر مطلوب.',
             },
             {
               q: 'هل يُتلف تشغيل LLM محلي بطاقة GPU الخاصة بي؟',
@@ -895,9 +895,9 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         headline: 'استهلاك الطاقة لنماذج LLM المحلية 2026: مقارنة RTX 4090 وRTX 5090 وM5 Max',
-        description: 'RTX 4090: 575W، 52$ شهريًا بسعر 0.12$/kWh. RTX 5090: 575W، 32GB VRAM. M5 Max: 30W (أكثر كفاءة بـ10 مرات). يلزم مزود طاقة 1200W. التبريد والتكاليف الإقليمية مُدرجة.',
+        description: 'RTX 4090: 450W، حوالي 39$ شهريًا بسعر 0.12$/kWh. RTX 5090: 575W، 32GB VRAM. M5 Max: 30W (أكثر كفاءة بـ10 مرات). يلزم مزود طاقة 850W. التبريد والتكاليف الإقليمية مُدرجة.',
         datePublished: '2026-04-04',
-        dateModified: '2026-04-25',
+        dateModified: '2026-08-28',
         url: 'https://www.promptquorum.com/ar/local-llms/local-llm-power-consumption',
         inLanguage: 'ar',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -923,7 +923,7 @@ schema: {
           {
             '@type': 'Question',
             name: 'كم تستهلك من الطاقة لتشغيل LLM محلي؟',
-            acceptedAnswer: { '@type': 'Answer', text: 'RTX 4090: 575W ذروة (600W متوسط مع النظام). RTX 4080: 320W GPU (450W نظام). RTX 4070 Ti: 290W GPU (400W نظام). Apple M5 Max Mac: 25–35W إجمالاً. تستخدم أحمال الاستدلال GPU بنسبة 90–100% بشكل مستمر.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'RTX 4090: 450W ذروة (600W متوسط مع النظام). RTX 4080: 320W GPU (450W نظام). RTX 4070 Ti: 290W GPU (400W نظام). Apple M5 Max Mac: 25–35W إجمالاً. تستخدم أحمال الاستدلال GPU بنسبة 90–100% بشكل مستمر.' },
           },
           {
             '@type': 'Question',
@@ -933,7 +933,7 @@ schema: {
           {
             '@type': 'Question',
             name: 'ما قدرة مزود الطاقة التي أحتاجها لـRTX 4090؟',
-            acceptedAnswer: { '@type': 'Answer', text: 'الحد الأدنى 1000W؛ يُوصى بـ1200W. تستهلك RTX 4090 قدرة 575W عند الذروة. أضف المعالج CPU (150–170W) واللوحة الأم/RAM/التخزين (100W) وهامش أمان 20% — يصل إجمالي حمل النظام إلى ~900W. سيسبب مزود طاقة 750W إيقاف تشغيل تحت حمل استدلال LLM المستمر.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'الحد الأدنى 1000W؛ يُوصى بـ850W. تستهلك RTX 4090 قدرة 450W عند الذروة. أضف المعالج CPU (150–170W) واللوحة الأم/RAM/التخزين (100W) وهامش أمان 20% — يصل إجمالي حمل النظام إلى ~900W. سيسبب مزود طاقة 750W إيقاف تشغيل تحت حمل استدلال LLM المستمر.' },
           },
           {
             '@type': 'Question',
@@ -948,12 +948,12 @@ schema: {
           {
             '@type': 'Question',
             name: 'كيف أقلّل استهلاك الطاقة دون فقدان سرعة الاستدلال؟',
-            acceptedAnswer: { '@type': 'Answer', text: 'حدّد طاقة GPU (NVIDIA) دون خفض سرعات الساعة. RTX 4090: حد الطاقة عند 350W (من 575W) يقلّل الطاقة بنسبة 40% بخسارة سرعة لا تتجاوز ~10%. استخدم `nvidia-smi -pl 350`. لا يحتاج مستخدمو Apple Silicon إلى ضبط.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'حدّد طاقة GPU (NVIDIA) دون خفض سرعات الساعة. RTX 4090: حد الطاقة عند 350W (من 450W) يقلّل الطاقة بنسبة 40% بخسارة سرعة لا تتجاوز ~10%. استخدم `nvidia-smi -pl 350`. لا يحتاج مستخدمو Apple Silicon إلى ضبط.' },
           },
           {
             '@type': 'Question',
             name: 'ما هو TDP ولماذا يهم لنماذج LLM المحلية؟',
-            acceptedAnswer: { '@type': 'Answer', text: 'TDP (الطاقة الحرارية التصميمية) هو أقصى حرارة تولّدها GPU عند الحمل الأقصى، بالواط. تُقيّم NVIDIA قدرة TDP لـRTX 4090 بـ575W، لكن الاستدلال الحقيقي قد يصل إلى 600W+. يحدّد TDP الحجم الأدنى لمزود الطاقة ومتطلبات التبريد. TDP أعلى = مزود طاقة أكبر، تكلفة أعلى، تبريد أكثر.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'TDP (الطاقة الحرارية التصميمية) هو أقصى حرارة تولّدها GPU عند الحمل الأقصى، بالواط. تُقيّم NVIDIA قدرة TDP لـRTX 4090 بـ450W، لكن الاستدلال الحقيقي قد يصل إلى 600W+. يحدّد TDP الحجم الأدنى لمزود الطاقة ومتطلبات التبريد. TDP أعلى = مزود طاقة أكبر، تكلفة أعلى، تبريد أكثر.' },
           },
           {
             '@type': 'Question',
@@ -977,7 +977,7 @@ schema: {
           { '@type': 'ListItem', position: 6, name: 'RTX 4080', description: '320W TDP. 16 GB VRAM. مزود طاقة 850W.' },
           { '@type': 'ListItem', position: 7, name: 'AMD RX 7900 XTX', description: '355W TDP. 24 GB VRAM. مزود طاقة 850W. أفضل خيار من غير NVIDIA.' },
           { '@type': 'ListItem', position: 8, name: 'RTX 5080', description: '360W TDP. 16 GB VRAM. مزود طاقة 1000W.' },
-          { '@type': 'ListItem', position: 9, name: 'RTX 4090', description: '450W TDP أساسي، 575W حد أقصى. 24 GB VRAM. مزود طاقة 1200W. 52$ شهريًا بسعر 0.12$/kWh.' },
+          { '@type': 'ListItem', position: 9, name: 'RTX 4090', description: '450W TDP. 24 GB VRAM. مزود طاقة 850W. حوالي 39$ شهريًا بسعر 0.12$/kWh.' },
           { '@type': 'ListItem', position: 10, name: 'RTX 5090', description: '575W TDP. 32 GB GDDR7. مزود طاقة 1200W+. أقصى طاقة لأقصى أداء.' },
         ],
       },
@@ -990,11 +990,11 @@ schema: {
       theme: 'Hardware & Performance',
       heroImage: '/images/local-llm-power-consumption-overview-hero-pt.webp',
       title: 'Consumo de Energia de LLMs Locais 2026: RTX 4090, RTX 5090 e M5 Max Comparados',
-      seoTitle: 'Consumo de energia LLM local 2026: RTX 4090 575W = R$280/mês',
-      intro: 'Executar LLMs locais consome uma quantidade significativa de energia. A RTX 4090 consome 575W sob carga (fonte de 1200W necessária, ~R$280/mês a R$0,90/kWh tarifa residencial média brasileira). A RTX 5090 consome 575W com 32 GB de VRAM GDDR7. Apple M5 Max executa modelos 7B com apenas 30W no total — 10× mais eficiente energeticamente por token que a NVIDIA. A partir de abril de 2026, entender os requisitos de energia evita danos ao hardware e ajuda a planejar os custos de eletricidade.',
-      metaDescription: 'RTX 4090: 575W, ~R$280/mês. RTX 5090: 575W, 32GB GDDR7. M5 Max: 30W (10× mais econômico por token). Fonte de 1200W necessária. Custos por região incluídos.',
+      seoTitle: 'Consumo de energia LLM local 2026: RTX 4090 450W = R$280/mês',
+      intro: 'Executar LLMs locais consome uma quantidade significativa de energia. A RTX 4090 consome 450W sob carga (fonte de 850W necessária, ~R$280/mês a R$0,90/kWh tarifa residencial média brasileira). A RTX 5090 consome 575W com 32 GB de VRAM GDDR7. Apple M5 Max executa modelos 7B com apenas 30W no total — 10× mais eficiente energeticamente por token que a NVIDIA. A partir de abril de 2026, entender os requisitos de energia evita danos ao hardware e ajuda a planejar os custos de eletricidade.',
+      metaDescription: 'RTX 4090: 450W, ~R$280/mês. RTX 5090: 575W, 32GB GDDR7. M5 Max: 30W (10× mais econômico por token). Fonte de 1200W necessária. Custos por região incluídos.',
       publishDate: '2026-04-04',
-      leadAnswerBlock: '**RTX 4090: 575W sob carga, ~R$280/mês (tarifa residencial média brasileira de R$0,90/kWh). RTX 5090: 575W com 32 GB GDDR7. Apple M5 Max: 30W total (10× mais eficiente por token que NVIDIA). Planeje a fonte de alimentação: RTX 4090/5090 exige fonte de 1200W+.**',
+      leadAnswerBlock: '**RTX 4090: 450W sob carga, ~R$280/mês (tarifa residencial média brasileira de R$0,90/kWh). RTX 5090: 575W com 32 GB GDDR7. Apple M5 Max: 30W total (10× mais eficiente por token que NVIDIA). Planeje a fonte de alimentação: RTX 4090/5090 exige fonte de 850W+.**',
       audience: 'Desenvolvedores e entusiastas que planejam ou operam hardware para LLM local',
       readTime: '10 min de leitura',
       educationalLevel: 'Intermediate',
@@ -1011,7 +1011,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'headline': 'Consumo de Energia de LLMs Locais 2026: RTX 4090, RTX 5090 e M5 Max Comparados',
-        'description': 'RTX 4090: 575W, ~R$280/mês. RTX 5090: 575W, 32GB GDDR7. M5 Max: 30W (10× mais econômico por token). Custos por região e guia de fonte de alimentação.',
+        'description': 'RTX 4090: 450W, ~R$280/mês. RTX 5090: 575W, 32GB GDDR7. M5 Max: 30W (10× mais econômico por token). Custos por região e guia de fonte de alimentação.',
         'url': 'https://www.promptquorum.com/pt/local-llms/local-llm-power-consumption',
         'inLanguage': 'pt-BR',
         'datePublished': '2026-04-04',
@@ -1027,7 +1027,7 @@ schema: {
           id: 'tldr',
           isTldr: true,
           items: [
-            'RTX 4090: 575W sob carga, fonte de 1200W necessária. ~R$280/mês (tarifa residencial brasileira média).',
+            'RTX 4090: 450W sob carga, fonte de 850W necessária. ~R$280/mês (tarifa residencial brasileira média).',
             'RTX 5090: 575W TDP com 32 GB GDDR7. Mesma fonte de 1200W+.',
             'Apple M5 Max: 25–35W total. 10× mais eficiente por token que NVIDIA.',
             'RTX 4070: 200W TDP — a opção NVIDIA mais econômica (~R$97/mês).',
@@ -1039,12 +1039,12 @@ schema: {
           id: 'faq',
           title: 'FAQ sobre energia e resfriamento',
           callouts: [
-            { type: 'insight', text: 'A inferência com limitação de potência a 60% do TDP é uma prática comum em data centers. A RTX 4090 a 350W (60% de 575W) entrega 90% do desempenho máximo com 40% menos custo de eletricidade e menos carga de resfriamento.' },
+            { type: 'insight', text: 'A inferência com limitação de potência a 60% do TDP é uma prática comum em data centers. A RTX 4090 a 350W (60% de 450W) entrega 90% do desempenho máximo com 40% menos custo de eletricidade e menos carga de resfriamento.' },
           ],
           faqs: [
             {
               q: 'Quanta energia consome a execução de um LLM local?',
-              a: 'O consumo depende do nível da GPU. RTX 4090: 575W no pico (600W em média com o sistema). RTX 4080: 320W na GPU (450W no sistema). RTX 4070 Ti: 290W na GPU (400W no sistema). Mac com Apple M5 Max: 25–35W no total — de longe a opção mais eficiente energeticamente. A inferência mantém a GPU em 90–100% de utilização continuamente.',
+              a: 'O consumo depende do nível da GPU. RTX 4090: 450W no pico (600W em média com o sistema). RTX 4080: 320W na GPU (450W no sistema). RTX 4070 Ti: 290W na GPU (400W no sistema). Mac com Apple M5 Max: 25–35W no total — de longe a opção mais eficiente energeticamente. A inferência mantém a GPU em 90–100% de utilização continuamente.',
             },
             {
               q: 'Quanto custa rodar um LLM local 24/7?',
@@ -1052,7 +1052,7 @@ schema: {
             },
             {
               q: 'Qual potência de fonte (PSU) preciso para uma RTX 4090?',
-              a: 'Fonte mínima de 1000W; 1200W é o recomendado. A RTX 4090 consome 575W no pico. Somando CPU (150–170W), placa-mãe/RAM/armazenamento (100W) e uma margem de segurança de 20%, a carga total do sistema chega a ~900W. Uma fonte de 750W causará desligamentos sob carga sustentada de inferência de LLM. Compre sempre de marcas de fonte confiáveis (Seasonic, Corsair, EVGA).',
+              a: 'Fonte mínima de 1000W; 850W é o recomendado. A RTX 4090 consome 450W no pico. Somando CPU (150–170W), placa-mãe/RAM/armazenamento (100W) e uma margem de segurança de 20%, a carga total do sistema chega a ~900W. Uma fonte de 750W causará desligamentos sob carga sustentada de inferência de LLM. Compre sempre de marcas de fonte confiáveis (Seasonic, Corsair, EVGA).',
             },
             {
               q: 'A Apple Silicon é mais eficiente que a NVIDIA para LLMs locais?',
@@ -1064,11 +1064,11 @@ schema: {
             },
             {
               q: 'Como reduzir o consumo de energia sem perder velocidade de inferência?',
-              a: 'Limite a potência da GPU (NVIDIA) sem reduzir os clocks. RTX 4090: definir o limite de potência para 350W (a partir de 575W) reduz o consumo em 40% com apenas ~10% de perda de velocidade — o ponto ideal para inferência eficiente. Use `nvidia-smi -pl 350` para definir o limite de potência. Usuários de Apple Silicon: nenhum ajuste é necessário, o hardware já é otimizado.',
+              a: 'Limite a potência da GPU (NVIDIA) sem reduzir os clocks. RTX 4090: definir o limite de potência para 350W (a partir de 450W) reduz o consumo em 40% com apenas ~10% de perda de velocidade — o ponto ideal para inferência eficiente. Use `nvidia-smi -pl 350` para definir o limite de potência. Usuários de Apple Silicon: nenhum ajuste é necessário, o hardware já é otimizado.',
             },
             {
               q: 'O que é TDP e por que ele importa para LLMs locais?',
-              a: 'TDP (Thermal Design Power) é o calor máximo que uma GPU gera em carga máxima, medido em watts. A NVIDIA classifica o TDP da RTX 4090 em 575W, mas a inferência real pode chegar a 600W+ dependendo dos limites de potência e clocks. O TDP importa porque determina o tamanho mínimo da fonte e os requisitos de resfriamento. TDP mais alto = fonte maior, mais custo de eletricidade, mais resfriamento necessário.',
+              a: 'TDP (Thermal Design Power) é o calor máximo que uma GPU gera em carga máxima, medido em watts. A NVIDIA classifica o TDP da RTX 4090 em 450W, mas a inferência real pode chegar a 600W+ dependendo dos limites de potência e clocks. O TDP importa porque determina o tamanho mínimo da fonte e os requisitos de resfriamento. TDP mais alto = fonte maior, mais custo de eletricidade, mais resfriamento necessário.',
             },
             {
               q: 'Rodar um LLM local danifica minha GPU?',
@@ -1091,7 +1091,7 @@ schema: {
           { '@type': 'ListItem', position: 6, name: 'RTX 4080', description: '320W de TDP. 16 GB de VRAM. Fonte de 850W.' },
           { '@type': 'ListItem', position: 7, name: 'AMD RX 7900 XTX', description: '355W de TDP. 24 GB de VRAM. Fonte de 850W. Melhor opção não NVIDIA.' },
           { '@type': 'ListItem', position: 8, name: 'RTX 5080', description: '360W de TDP. 16 GB de VRAM. Fonte de 1000W.' },
-          { '@type': 'ListItem', position: 9, name: 'RTX 4090', description: '450W de TDP base, 575W no máximo. 24 GB de VRAM. Fonte de 1200W. ~R$280/mês à tarifa residencial média brasileira.' },
+          { '@type': 'ListItem', position: 9, name: 'RTX 4090', description: '450W de TDP base, 450W no máximo. 24 GB de VRAM. Fonte de 850W. ~R$280/mês à tarifa residencial média brasileira.' },
           { '@type': 'ListItem', position: 10, name: 'RTX 5090', description: '575W de TDP. 32 GB GDDR7. Fonte de 1200W+. Maior consumo para o maior desempenho.' },
         ],
       },
@@ -1100,12 +1100,12 @@ schema: {
       theme: 'Hardware & Performance',
       heroImage: '/images/local-llm-power-consumption-overview-hero-de.webp',
       title: 'Stromverbrauch lokaler LLMs 2026: RTX 4090, RTX 5090 und M5 Max im Vergleich',
-      seoTitle: 'LLM Stromverbrauch 2026: RTX 4090 575W = €150/Monat',
-      intro: 'Lokale LLMs benötigen erhebliche Stromversorgung. RTX 4090 zieht 575W unter Last (1200W PSU erforderlich, €150/Monat bei €0,35/kWh). RTX 5090 zieht 575W mit 32 GB GDDR7 VRAM. Apple M5 Max Mac führt 7B-Modelle mit nur 30W Gesamtverbrauch aus — 10× energieeffizienter pro Token als NVIDIA. Ab April 2026 ist das Verständnis von Stromversorgungsanforderungen entscheidend für die Vermeidung von Hardware-Schäden und hilft bei der Planung von Stromkosten in den USA, der EU, Japan und China.',
-      metaDescription: 'RTX 4090: 575W, €150/Monat. RTX 5090: 575W, 32GB GDDR7. M5 Max: 30W (10× effizienter pro Token). 1200W PSU notwendig. Kühlungs- und EU-Stromkosten drin.',
+      seoTitle: 'LLM Stromverbrauch 2026: RTX 4090 450W = €150/Monat',
+      intro: 'Lokale LLMs benötigen erhebliche Stromversorgung. RTX 4090 zieht 450W unter Last (850W PSU erforderlich, €150/Monat bei €0,35/kWh). RTX 5090 zieht 575W mit 32 GB GDDR7 VRAM. Apple M5 Max Mac führt 7B-Modelle mit nur 30W Gesamtverbrauch aus — 10× energieeffizienter pro Token als NVIDIA. Ab August 2026 ist das Verständnis von Stromversorgungsanforderungen entscheidend für die Vermeidung von Hardware-Schäden und hilft bei der Planung von Stromkosten in den USA, der EU, Japan und China.',
+      metaDescription: 'RTX 4090: 450W, ~€113/Monat. RTX 5090: 575W, 32GB GDDR7. M5 Max: 30W (10× effizienter pro Token). 850W PSU notwendig. Kühlungs- und EU-Stromkosten drin.',
       publishDate: '2026-04-04',
-      dateModified: '2026-04-25',
-      leadAnswerBlock: '**Lokale LLMs benötigen erhebliche Stromversorgung. RTX 4090 zieht 575W unter Last (1200W PSU erforderlich, €150/Monat bei €0,35/kWh). RTX 5090 zieht 575W mit 32 GB GDDR7 VRAM. Apple M5 Max Mac führt 7B-Modelle mit nur 30W aus — 10× effizienter pro Token als NVIDIA. Ab April 2026 ist das Verständnis von Stromversorgungsanforderungen entscheidend für die Vermeidung von Hardware-Schäden und hilft bei der Planung der Stromkosten.**',
+      dateModified: '2026-08-28',
+      leadAnswerBlock: '**Lokale LLMs benötigen erhebliche Stromversorgung. RTX 4090 zieht 450W unter Last (850W PSU erforderlich, €150/Monat bei €0,35/kWh). RTX 5090 zieht 575W mit 32 GB GDDR7 VRAM. Apple M5 Max Mac führt 7B-Modelle mit nur 30W aus — 10× effizienter pro Token als NVIDIA. Ab August 2026 ist das Verständnis von Stromversorgungsanforderungen entscheidend für die Vermeidung von Hardware-Schäden und hilft bei der Planung der Stromkosten.**',
       audience: 'Anfänger, die ihr erstes lokales LLM auf Consumer-Hardware ausführen',
       readTime: '9 Min. Lesezeit',
       educationalLevel: 'Anfänger bis Fortgeschrittene',
@@ -1127,21 +1127,21 @@ schema: {
           id: 'key-takeaways',
           isTldr: true,
           items: [
-            'RTX 4090: 575W. Benötigt 1200W PSU, hervorragende Gehäusebelüftung.',
+            'RTX 4090: 450W. Benötigt 850W PSU, hervorragende Gehäusebelüftung.',
             'RTX 4080: 320W. Benötigt 850W PSU, gute Belüftung.',
             'RTX 4070 Ti: 290W. Benötigt 750W PSU, angemessene Belüftung.',
             'M5 Max Mac: 25–35W für Inferenz (extrem effizient).',
             'Betriebskosten 24/7: RTX 4090 = €150/Monat, RTX 4070 Ti = €76/Monat (bei €0,35/kWh).',
-            'Ab April 2026 ist Kühlung entscheidend. Schlechte Belüftung reduziert die Lebensdauer und drosselt die Leistung.',
+            'Ab August 2026 ist Kühlung entscheidend. Schlechte Belüftung reduziert die Lebensdauer und drosselt die Leistung.',
           ],
         },
         gpuPower: {
           id: 'gpu-power',
           title: 'Wie viel Stromverbrauch hat jede GPU bei LLM-Inferenz?',
-          content: ['**Die RTX 4090 und RTX 5090 ziehen beide 575W bei Volllast — die höchsten Stufen für lokale LLMs.** GPU-Stromverbrauch ist der dominierende Faktor bei der PSU-Wahl und der Stromrechnung.', '**Hinweis:** NVIDIA RTX 4090 hat 450W Basis-TDP, aber echte Inferenz kann unter kontinuierlicher Last 575W erreichen. RTX 5090 wird mit 575W natives TDP geliefert. AMD RX 7900 XTX ist die stärkste diskrete Non-NVIDIA-GPU für lokale LLMs bei 355W mit 24 GB VRAM. Apple M5 Max zieht 10× weniger Stromverbrauch pro Token als RTX 4090 — die effizienteste Wahl für kontinuierliche 24/7-Inferenz.'],
+          content: ['**Die RTX 4090 und RTX 5090 ziehen beide 450W bei Volllast — die höchsten Stufen für lokale LLMs.** GPU-Stromverbrauch ist der dominierende Faktor bei der PSU-Wahl und der Stromrechnung.', '**Hinweis:** NVIDIA RTX 4090 hat 450W Basis-TDP, aber echte Inferenz kann unter kontinuierlicher Last 575W erreichen. RTX 5090 wird mit 575W natives TDP geliefert. AMD RX 7900 XTX ist die stärkste diskrete Non-NVIDIA-GPU für lokale LLMs bei 355W mit 24 GB VRAM. Apple M5 Max zieht 10× weniger Stromverbrauch pro Token als RTX 4090 — die effizienteste Wahl für kontinuierliche 24/7-Inferenz.'],
           rows: [
             { 'GPU': 'RTX 5090', 'Stromverbrauch': '575W', 'Leerlauf': '20W', 'PSU': '1200W+' },
-            { 'GPU': 'RTX 4090', 'Stromverbrauch': '450W (575W max)', 'Leerlauf': '10W', 'PSU': '1200W+' },
+            { 'GPU': 'RTX 4090', 'Stromverbrauch': '450W (450W max)', 'Leerlauf': '10W', 'PSU': '850W+' },
             { 'GPU': 'RTX 5080', 'Stromverbrauch': '360W', 'Leerlauf': '15W', 'PSU': '1000W' },
             { 'GPU': 'RTX 4080', 'Stromverbrauch': '320W', 'Leerlauf': '8W', 'PSU': '850W+' },
             { 'GPU': 'RTX 5070', 'Stromverbrauch': '250W', 'Leerlauf': '12W', 'PSU': '800W' },
@@ -1163,7 +1163,7 @@ schema: {
             '**Die GPU ist nicht der einzige Stromverbraucher.** Rechnen Sie CPU, RAM, Speicher und Motherboard ein:',
           ],
           rows: [
-            { 'Komponente': 'GPU (RTX 4090)', 'Stromverbrauch': '575W', 'Notizen': 'Spitzen bei 100% Auslastung' },
+            { 'Komponente': 'GPU (RTX 4090)', 'Stromverbrauch': '450W', 'Notizen': 'Spitzen bei 100% Auslastung' },
             { 'Komponente': 'CPU (Ryzen 9 7950X)', 'Stromverbrauch': '170W', 'Notizen': 'Unter Last' },
             { 'Komponente': 'Motherboard + RAM + SSD', 'Stromverbrauch': '100W', 'Notizen': 'Typisch' },
             { 'Komponente': 'Kühlventilatoren, PSU-Overhead', 'Stromverbrauch': '50–100W', 'Notizen': 'Sicherheitsmarge' },
@@ -1216,8 +1216,8 @@ schema: {
           id: 'quick-facts',
           title: 'Schnelle Fakten',
           items: [
-            '**RTX 4090 Spitzenlast:** 575W (nur GPU)',
-            '**Erforderliche PSU:** 1200W für RTX 4090-System',
+            '**RTX 4090 Spitzenlast:** 450W (nur GPU)',
+            '**Erforderliche PSU:** 850W für RTX 4090-System',
             '**Kosten 24/7 bei €0,35/kWh:** ~€150/Monat (RTX 4090)',
             '**Apple M5 Max Gesamtlast:** 25–35W',
             '**Effizienzquote:** M5 Max verbraucht ~10× weniger Strom pro Token als RTX 4090',
@@ -1254,12 +1254,12 @@ schema: {
           id: 'faq',
           title: 'Fragen & Antworten zu Stromversorgung und Kühlung',
           callouts: [
-            { type: 'insight', text: 'Strombegrenzte Inferenz bei 60% TDP ist eine gängige Praxis in Rechenzentren. RTX 4090 bei 350W (60% von 575W) liefert 90% der Spitzenleistung mit 40% niedrigeren Stromkosten und weniger Kühlbelastung.' },
+            { type: 'insight', text: 'Strombegrenzte Inferenz bei 60% TDP ist eine gängige Praxis in Rechenzentren. RTX 4090 bei 350W (60% von 450W) liefert 90% der Spitzenleistung mit 40% niedrigeren Stromkosten und weniger Kühlbelastung.' },
           ],
           faqs: [
             {
               q: 'Wie viel Stromverbrauch benötigt ein lokales LLM?',
-              a: 'Der Stromverbrauch hängt von der GPU-Klasse ab. RTX 4090: 575W Spitzenwert (600W Durchschnitt mit System). RTX 4080: 320W GPU (450W System). RTX 4070 Ti: 290W GPU (400W System). Apple M5 Max Mac: 25–35W Gesamtbetrieb — die energieeffizienteste Option bei weitem. Inferenzlasten nutzen die GPU zu 90–100% Auslastung kontinuierlich.',
+              a: 'Der Stromverbrauch hängt von der GPU-Klasse ab. RTX 4090: 450W Spitzenwert (600W Durchschnitt mit System). RTX 4080: 320W GPU (450W System). RTX 4070 Ti: 290W GPU (400W System). Apple M5 Max Mac: 25–35W Gesamtbetrieb — die energieeffizienteste Option bei weitem. Inferenzlasten nutzen die GPU zu 90–100% Auslastung kontinuierlich.',
             },
             {
               q: 'Wie viel kostet der Betrieb eines lokalen LLM 24/7?',
@@ -1267,7 +1267,7 @@ schema: {
             },
             {
               q: 'Welche PSU-Wattage benötige ich für eine RTX 4090?',
-              a: 'Minimum 1000W PSU; 1200W empfohlen. Die RTX 4090 zieht 575W Spitzenwert. Addiere CPU (150–170W), Motherboard/RAM/Speicher (100W) und eine 20% Sicherheitsmarge — die Gesamtsystemlast erreicht ~900W. Eine 750W PSU führt zu Abschaltungen unter kontinuierlicher LLM-Inferenzlast. Kaufe immer von seriösen PSU-Herstellern (Seasonic, Corsair, EVGA).',
+              a: 'Minimum 1000W PSU; 850W empfohlen. Die RTX 4090 zieht 450W Spitzenwert. Addiere CPU (150–170W), Motherboard/RAM/Speicher (100W) und eine 20% Sicherheitsmarge — die Gesamtsystemlast erreicht ~900W. Eine 750W PSU führt zu Abschaltungen unter kontinuierlicher LLM-Inferenzlast. Kaufe immer von seriösen PSU-Herstellern (Seasonic, Corsair, EVGA).',
             },
             {
               q: 'Ist Apple Silicon effizienter als NVIDIA für lokale LLMs?',
@@ -1279,11 +1279,11 @@ schema: {
             },
             {
               q: 'Wie reduziere ich Stromverbrauch ohne Leistungsverlust?',
-              a: 'Strombegrenzte GPU (NVIDIA) ohne Taktverlangsamung. RTX 4090: Stromlimit auf 350W setzen (von 575W) reduziert Stromverbrauch um 40% mit nur ~10% Geschwindigkeitsverlust — der optimale Punkt für effiziente Inferenz. Verwende `nvidia-smi -pl 350` zum Einstellen des Stromlimits. Apple Silicon-Nutzer: Keine Anpassung erforderlich, die Hardware ist bereits optimiert.',
+              a: 'Strombegrenzte GPU (NVIDIA) ohne Taktverlangsamung. RTX 4090: Stromlimit auf 350W setzen (von 450W) reduziert Stromverbrauch um 40% mit nur ~10% Geschwindigkeitsverlust — der optimale Punkt für effiziente Inferenz. Verwende `nvidia-smi -pl 350` zum Einstellen des Stromlimits. Apple Silicon-Nutzer: Keine Anpassung erforderlich, die Hardware ist bereits optimiert.',
             },
             {
               q: 'Was ist TDP und warum ist es für lokale LLMs wichtig?',
-              a: 'TDP (Thermal Design Power) ist die maximale Wärme, die eine GPU bei Spitzenlast erzeugt, gemessen in Watt. NVIDIA bewertet RTX 4090 TDP mit 575W, aber echte Inferenz kann je nach Strombegren-zung und Taktraten 600W+ erreichen. TDP ist wichtig, da es die Mindestgröße der PSU und die Kühlungsanforderungen bestimmt. Höheres TDP = größere PSU, höhere Stromkosten, mehr Kühlung erforderlich.',
+              a: 'TDP (Thermal Design Power) ist die maximale Wärme, die eine GPU bei Spitzenlast erzeugt, gemessen in Watt. NVIDIA bewertet RTX 4090 TDP mit 450W, aber echte Inferenz kann je nach Strombegren-zung und Taktraten 600W+ erreichen. TDP ist wichtig, da es die Mindestgröße der PSU und die Kühlungsanforderungen bestimmt. Höheres TDP = größere PSU, höhere Stromkosten, mehr Kühlung erforderlich.',
             },
             {
               q: 'Beschädigt der Betrieb eines lokalen LLM meine GPU?',
@@ -1328,9 +1328,9 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         headline: 'Stromverbrauch lokaler LLMs 2026: RTX 4090, RTX 5090 und M5 Max im Vergleich',
-        description: 'RTX 4090: 575W, €150/Monat bei €0,35/kWh. RTX 5090: 575W, 32GB VRAM. M5 Max Mac: 30W (10× effizienter). 1200W PSU erforderlich. Kühlung, DSGVO-Konformität.',
+        description: 'RTX 4090: 450W, €150/Monat bei €0,35/kWh. RTX 5090: 575W, 32GB VRAM. M5 Max Mac: 30W (10× effizienter). 1200W PSU erforderlich. Kühlung, DSGVO-Konformität.',
         datePublished: '2026-04-04',
-        dateModified: '2026-04-25',
+        dateModified: '2026-08-28',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         inLanguage: 'de',
@@ -1356,7 +1356,7 @@ schema: {
           {
             '@type': 'Question',
             name: 'Wie viel Stromverbrauch benötigt ein lokales LLM?',
-            acceptedAnswer: { '@type': 'Answer', text: 'RTX 4090: 575W Spitzenwert (600W Durchschnitt mit System). RTX 4080: 320W GPU (450W System). RTX 4070 Ti: 290W GPU (400W System). Apple M5 Max Mac: 25–35W Gesamtbetrieb. Inferenzlasten nutzen die GPU zu 90–100% Auslastung kontinuierlich.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'RTX 4090: 450W Spitzenwert (600W Durchschnitt mit System). RTX 4080: 320W GPU (450W System). RTX 4070 Ti: 290W GPU (400W System). Apple M5 Max Mac: 25–35W Gesamtbetrieb. Inferenzlasten nutzen die GPU zu 90–100% Auslastung kontinuierlich.' },
           },
           {
             '@type': 'Question',
@@ -1366,7 +1366,7 @@ schema: {
           {
             '@type': 'Question',
             name: 'Welche PSU-Wattage benötige ich für eine RTX 4090?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Minimum 1000W PSU; 1200W empfohlen. Die RTX 4090 zieht 575W Spitzenwert. Addiere CPU, Motherboard und eine 20% Sicherheitsmarge — die Gesamtsystemlast erreicht ~900W. Eine 750W PSU führt zu Abschaltungen unter kontinuierlicher LLM-Inferenzlast.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Minimum 1000W PSU; 850W empfohlen. Die RTX 4090 zieht 450W Spitzenwert. Addiere CPU, Motherboard und eine 20% Sicherheitsmarge — die Gesamtsystemlast erreicht ~900W. Eine 750W PSU führt zu Abschaltungen unter kontinuierlicher LLM-Inferenzlast.' },
           },
           {
             '@type': 'Question',
@@ -1381,12 +1381,12 @@ schema: {
           {
             '@type': 'Question',
             name: 'Wie reduziere ich Stromverbrauch ohne Leistungsverlust?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Strombegrenzte GPU (NVIDIA) ohne Taktverlangsamung. RTX 4090: Stromlimit auf 350W setzen (von 575W) reduziert Stromverbrauch um 40% mit nur ~10% Geschwindigkeitsverlust. Verwende `nvidia-smi -pl 350` zum Einstellen des Stromlimits.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Strombegrenzte GPU (NVIDIA) ohne Taktverlangsamung. RTX 4090: Stromlimit auf 350W setzen (von 450W) reduziert Stromverbrauch um 40% mit nur ~10% Geschwindigkeitsverlust. Verwende `nvidia-smi -pl 350` zum Einstellen des Stromlimits.' },
           },
           {
             '@type': 'Question',
             name: 'Was ist TDP und warum ist es für lokale LLMs wichtig?',
-            acceptedAnswer: { '@type': 'Answer', text: 'TDP (Thermal Design Power) ist die maximale Wärme, die eine GPU bei Spitzenlast erzeugt. NVIDIA bewertet RTX 4090 TDP mit 575W, aber echte Inferenz kann 600W+ erreichen. TDP bestimmt die Mindestgröße der PSU und die Kühlungsanforderungen.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'TDP (Thermal Design Power) ist die maximale Wärme, die eine GPU bei Spitzenlast erzeugt. NVIDIA bewertet RTX 4090 TDP mit 450W, aber echte Inferenz kann 600W+ erreichen. TDP bestimmt die Mindestgröße der PSU und die Kühlungsanforderungen.' },
           },
           {
             '@type': 'Question',
@@ -1420,7 +1420,7 @@ schema: {
           { '@type': 'ListItem', position: 6, name: 'RTX 4080', description: '320W TDP. 16 GB VRAM. 850W PSU.' },
           { '@type': 'ListItem', position: 7, name: 'AMD RX 7900 XTX', description: '355W TDP. 24 GB VRAM. 850W PSU. Beste Non-NVIDIA-Option.' },
           { '@type': 'ListItem', position: 8, name: 'RTX 5080', description: '360W TDP. 16 GB VRAM. 1000W PSU.' },
-          { '@type': 'ListItem', position: 9, name: 'RTX 4090', description: '450W Basis-TDP, 575W Max. 24 GB VRAM. 1200W PSU. €150/Monat bei €0,35/kWh.' },
+          { '@type': 'ListItem', position: 9, name: 'RTX 4090', description: '450W Basis-TDP, 450W Max. 24 GB VRAM. 850W PSU. €150/Monat bei €0,35/kWh.' },
           { '@type': 'ListItem', position: 10, name: 'RTX 5090', description: '575W TDP. 32 GB GDDR7. 1200W+ PSU. Höchste Leistung für höchste Leistung.' },
         ],
       },
@@ -1431,12 +1431,12 @@ schema: {
       theme: 'Matériel & Performance',
       heroImage: '/images/local-llm-power-consumption-overview-hero-fr.webp',
       title: 'Consommation électrique des LLMs locaux 2026 : RTX 4090, RTX 5090 et M5 Max comparés',
-      seoTitle: 'LLMs locaux électricité 2026 : RTX 4090 575W = 110 €/mois',
-      intro: 'L\'exécution de LLMs locaux consomme une puissance considérable. La RTX 4090 consomme 575W en charge (alimentation 1200W requise, 110 €/mois à €0.30/kWh). La RTX 5090 consomme 575W avec 32 GB de VRAM GDDR7. Apple M5 Max exécute les modèles 7B à seulement 30W au total — 10× plus efficace énergétiquement par token que NVIDIA. En avril 2026, comprendre les exigences d\'alimentation prévient les dégâts matériels et aide à planifier les coûts d\'électricité sur les marchés des États-Unis, de l\'UE, du Japon et de la Chine.',
-      metaDescription: 'RTX 4090 : 575W, 110 €/mois. RTX 5090 : 575W, 32 Go GDDR7. M5 Max : 30W (10× plus efficace par token). Alimentation 1200W requise. Coûts régionaux inclus.',
+      seoTitle: 'LLMs locaux électricité 2026 : RTX 4090 450W = 110 €/mois',
+      intro: 'L\'exécution de LLMs locaux consomme une puissance considérable. La RTX 4090 consomme 450W en charge (alimentation 850W requise, 110 €/mois à €0.30/kWh). La RTX 5090 consomme 575W avec 32 GB de VRAM GDDR7. Apple M5 Max exécute les modèles 7B à seulement 30W au total — 10× plus efficace énergétiquement par token que NVIDIA. En avril 2026, comprendre les exigences d\'alimentation prévient les dégâts matériels et aide à planifier les coûts d\'électricité sur les marchés des États-Unis, de l\'UE, du Japon et de la Chine.',
+      metaDescription: 'RTX 4090 : 450W, 110 €/mois. RTX 5090 : 575W, 32 Go GDDR7. M5 Max : 30W (10× plus efficace par token). Alimentation 1200W requise. Coûts régionaux inclus.',
       publishDate: '2026-04-04',
-      dateModified: '2026-04-25',
-      leadAnswerBlock: '**L\'exécution de LLMs locaux consomme une puissance considérable. La RTX 4090 consomme 575W en charge (alimentation 1200W requise, 110 €/mois à €0.30/kWh). La RTX 5090 consomme 575W avec 32 GB de VRAM GDDR7. Apple M5 Max exécute les modèles 7B à seulement 30W — 10× plus efficace énergétiquement par token que NVIDIA. En avril 2026, comprendre les exigences d\'alimentation est essentiel pour prévenir les dégâts matériels et planifier les coûts d\'électricité.**',
+      dateModified: '2026-08-28',
+      leadAnswerBlock: '**L\'exécution de LLMs locaux consomme une puissance considérable. La RTX 4090 consomme 450W en charge (alimentation 850W requise, 110 €/mois à €0.30/kWh). La RTX 5090 consomme 575W avec 32 GB de VRAM GDDR7. Apple M5 Max exécute les modèles 7B à seulement 30W — 10× plus efficace énergétiquement par token que NVIDIA. En avril 2026, comprendre les exigences d\'alimentation est essentiel pour prévenir les dégâts matériels et planifier les coûts d\'électricité.**',
       audience: 'Les débutants exécutant leur premier LLM local sur du matériel grand public',
       readTime: '9 min de lecture',
       educationalLevel: 'Débutant à Intermédiaire',
@@ -1458,7 +1458,7 @@ schema: {
           id: 'key-takeaways',
           isTldr: true,
           items: [
-            'RTX 4090 : 575W. Nécessite une alimentation 1200W, excellent débit d\'air du boîtier.',
+            'RTX 4090 : 450W. Nécessite une alimentation 850W, excellent débit d\'air du boîtier.',
             'RTX 4080 : 320W. Nécessite une alimentation 850W, bon débit d\'air.',
             'RTX 4070 Ti : 290W. Nécessite une alimentation 750W, débit d\'air adéquat.',
             'M5 Max Mac : 25–35W pour l\'inférence (extrêmement efficace).',
@@ -1470,12 +1470,12 @@ schema: {
           id: 'gpu-power',
           title: 'Quelle consommation électrique chaque GPU consomme-t-il pour l\'inférence LLM ?',
           content: [
-            '**La RTX 4090 et la RTX 5090 consomment toutes deux 575W en charge complète — le niveau le plus élevé disponible pour les LLMs locaux.** La consommation électrique du GPU est le facteur dominant dans le choix de votre alimentation et de votre facture d\'électricité.',
+            '**La RTX 4090 et la RTX 5090 consomment toutes deux 450W en charge complète — le niveau le plus élevé disponible pour les LLMs locaux.** La consommation électrique du GPU est le facteur dominant dans le choix de votre alimentation et de votre facture d\'électricité.',
             '**Note :** La RTX 4090 d\'NVIDIA a un TDP de 450W de base, mais l\'inférence réelle peut atteindre 575W en charge soutenue. La RTX 5090 est fournie avec un TDP natif de 575W. La AMD RX 7900 XTX est le GPU discret non-NVIDIA le plus puissant pour les LLMs locaux à 355W avec 24 GB de VRAM. Apple M5 Max consomme 10× moins d\'électricité par token que RTX 4090 — le choix le plus efficace pour l\'inférence soutenue 24/7.',
           ],
           rows: [
             { 'GPU': 'RTX 5090', 'Consommation': '575W', 'Repos': '20W', 'Alimentation': '1200W+' },
-            { 'GPU': 'RTX 4090', 'Consommation': '450W (575W max)', 'Repos': '10W', 'Alimentation': '1200W+' },
+            { 'GPU': 'RTX 4090', 'Consommation': '450W (450W max)', 'Repos': '10W', 'Alimentation': '850W+' },
             { 'GPU': 'RTX 5080', 'Consommation': '360W', 'Repos': '15W', 'Alimentation': '1000W' },
             { 'GPU': 'RTX 4080', 'Consommation': '320W', 'Repos': '8W', 'Alimentation': '850W+' },
             { 'GPU': 'RTX 5070', 'Consommation': '250W', 'Repos': '12W', 'Alimentation': '800W' },
@@ -1497,7 +1497,7 @@ schema: {
             '**Le GPU n\'est pas le seul consommateur d\'électricité.** Tenez compte du processeur, de la RAM, du stockage et de la carte mère :',
           ],
           rows: [
-            { 'Composant': 'GPU (RTX 4090)', 'Consommation': '575W', 'Notes': 'Pics à 100 % d\'utilisation' },
+            { 'Composant': 'GPU (RTX 4090)', 'Consommation': '450W', 'Notes': 'Pics à 100 % d\'utilisation' },
             { 'Composant': 'CPU (Ryzen 9 7950X)', 'Consommation': '170W', 'Notes': 'En charge' },
             { 'Composant': 'Carte mère + RAM + SSD', 'Consommation': '100W', 'Notes': 'Typique' },
             { 'Composant': 'Ventilateurs de refroidissement, surcharge PSU', 'Consommation': '50–100W', 'Notes': 'Marge de sécurité' },
@@ -1550,8 +1550,8 @@ schema: {
           id: 'quick-facts',
           title: 'Faits rapides',
           items: [
-            '**RTX 4090 pic de consommation :** 575W (GPU seul)',
-            '**Alimentation requise :** 1200W pour le système RTX 4090',
+            '**RTX 4090 pic de consommation :** 450W (GPU seul)',
+            '**Alimentation requise :** 850W pour le système RTX 4090',
             '**Coût 24/7 à €0.30/kWh :** ~€130/mois (RTX 4090)',
             '**Consommation totale Apple M5 Max :** 25–35W',
             '**Ratio d\'efficacité :** M5 Max consomme ~10× moins d\'électricité par token que RTX 4090',
@@ -1588,12 +1588,12 @@ schema: {
           id: 'faq',
           title: 'FAQ Alimentation et refroidissement',
           callouts: [
-            { type: 'insight', text: 'L\'inférence limitée en puissance à 60 % du TDP est une pratique courante dans les centres de données. RTX 4090 à 350W (60 % de 575W) offre 90 % des performances de pointe avec 40 % de coûts d\'électricité réduits et une charge de refroidissement réduite.' },
+            { type: 'insight', text: 'L\'inférence limitée en puissance à 60 % du TDP est une pratique courante dans les centres de données. RTX 4090 à 350W (60 % de 450W) offre 90 % des performances de pointe avec 40 % de coûts d\'électricité réduits et une charge de refroidissement réduite.' },
           ],
           faqs: [
             {
               q: 'Quelle consommation électrique l\'exécution d\'un LLM local utilise-t-elle ?',
-              a: 'La consommation électrique dépend du niveau du GPU. RTX 4090 : 575W pic (600W moyenne avec système). RTX 4080 : 320W GPU (450W système). RTX 4070 Ti : 290W GPU (400W système). Apple M5 Max Mac : 25–35W au total — l\'option la plus efficace énergétiquement de loin. Les charges d\'inférence utilisent le GPU à 90–100 % d\'utilisation en continu.',
+              a: 'La consommation électrique dépend du niveau du GPU. RTX 4090 : 450W pic (600W moyenne avec système). RTX 4080 : 320W GPU (450W système). RTX 4070 Ti : 290W GPU (400W système). Apple M5 Max Mac : 25–35W au total — l\'option la plus efficace énergétiquement de loin. Les charges d\'inférence utilisent le GPU à 90–100 % d\'utilisation en continu.',
             },
             {
               q: 'Quel est le coût d\'exécution d\'un LLM local 24/7 ?',
@@ -1601,7 +1601,7 @@ schema: {
             },
             {
               q: 'Quel wattage d\'alimentation ai-je besoin pour une RTX 4090 ?',
-              a: 'Minimum 1000W PSU ; 1200W recommandé. La RTX 4090 consomme 575W au pic. Ajoutez CPU (150–170W), carte mère/RAM/stockage (100W) et une marge de sécurité de 20 % — la charge système totale atteint ~900W. Une alimentation 750W déclenchera des arrêts lors d\'une charge d\'inférence LLM soutenue. Achetez toujours auprès de marques réputées d\'alimentation (Seasonic, Corsair, EVGA).',
+              a: 'Minimum 1000W PSU ; 850W recommandé. La RTX 4090 consomme 450W au pic. Ajoutez CPU (150–170W), carte mère/RAM/stockage (100W) et une marge de sécurité de 20 % — la charge système totale atteint ~900W. Une alimentation 750W déclenchera des arrêts lors d\'une charge d\'inférence LLM soutenue. Achetez toujours auprès de marques réputées d\'alimentation (Seasonic, Corsair, EVGA).',
             },
             {
               q: 'Apple Silicon est-il plus efficace que NVIDIA pour les LLMs locaux ?',
@@ -1613,11 +1613,11 @@ schema: {
             },
             {
               q: 'Comment réduire la consommation électrique sans perdre la vitesse d\'inférence ?',
-              a: 'Limitez en puissance le GPU (NVIDIA) sans réduire les vitesses d\'horloge. RTX 4090 : définir la limite de puissance à 350W (sur 575W) réduit la puissance de 40 % avec seulement ~10 % de perte de vitesse — le point idéal pour l\'inférence efficace. Utilisez `nvidia-smi -pl 350` pour définir la limite de puissance. Les utilisateurs Apple Silicon n\'ont besoin d\'aucun réglage, le matériel est déjà optimisé.',
+              a: 'Limitez en puissance le GPU (NVIDIA) sans réduire les vitesses d\'horloge. RTX 4090 : définir la limite de puissance à 350W (sur 450W) réduit la puissance de 40 % avec seulement ~10 % de perte de vitesse — le point idéal pour l\'inférence efficace. Utilisez `nvidia-smi -pl 350` pour définir la limite de puissance. Les utilisateurs Apple Silicon n\'ont besoin d\'aucun réglage, le matériel est déjà optimisé.',
             },
             {
               q: 'Qu\'est-ce que le TDP et pourquoi est-ce important pour les LLMs locaux ?',
-              a: 'TDP (Thermal Design Power) est la chaleur maximale générée par un GPU à charge maximale, mesurée en watts. NVIDIA note la RTX 4090 TDP à 575W, mais l\'inférence réelle peut atteindre 600W+ selon les limites de puissance et les vitesses d\'horloge. Le TDP détermine votre taille minimum d\'alimentation et vos exigences de refroidissement. TDP plus élevé = alimentation plus grande, coût d\'électricité plus élevé, refroidissement plus important requis.',
+              a: 'TDP (Thermal Design Power) est la chaleur maximale générée par un GPU à charge maximale, mesurée en watts. NVIDIA note la RTX 4090 TDP à 450W, mais l\'inférence réelle peut atteindre 600W+ selon les limites de puissance et les vitesses d\'horloge. Le TDP détermine votre taille minimum d\'alimentation et vos exigences de refroidissement. TDP plus élevé = alimentation plus grande, coût d\'électricité plus élevé, refroidissement plus important requis.',
             },
             {
               q: 'L\'exécution d\'un LLM local endommage-t-elle mon GPU ?',
@@ -1656,9 +1656,9 @@ schema: {
         url: 'https://www.promptquorum.com/fr/local-llms/local-llm-power-consumption',
         inLanguage: 'fr',
         headline: 'Consommation électrique des LLMs locaux 2026 : RTX 4090, RTX 5090 et M5 Max comparés',
-        description: 'RTX 4090 : 575W, 110 €/mois à €0.30/kWh. RTX 5090 : 575W, 32GB VRAM. M5 Max : 30W (10× plus efficace). Alimentation 1200W requise. Refroidissement, conformité CNIL, coûts Europe.',
+        description: 'RTX 4090 : 450W, 110 €/mois à €0.30/kWh. RTX 5090 : 575W, 32GB VRAM. M5 Max : 30W (10× plus efficace). Alimentation 1200W requise. Refroidissement, conformité CNIL, coûts Europe.',
         datePublished: '2026-04-04',
-        dateModified: '2026-04-25',
+        dateModified: '2026-08-28',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         proficiencyLevel: 'Débutant à Intermédiaire',
@@ -1682,7 +1682,7 @@ schema: {
           {
             '@type': 'Question',
             name: 'Quelle consommation électrique l\'exécution d\'un LLM local utilise-t-elle ?',
-            acceptedAnswer: { '@type': 'Answer', text: 'RTX 4090 : 575W pic (600W moyenne avec système). RTX 4080 : 320W GPU (450W système). RTX 4070 Ti : 290W GPU (400W système). Apple M5 Max Mac : 25–35W au total. Les charges d\'inférence utilisent le GPU à 90–100 % d\'utilisation en continu.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'RTX 4090 : 450W pic (600W moyenne avec système). RTX 4080 : 320W GPU (450W système). RTX 4070 Ti : 290W GPU (400W système). Apple M5 Max Mac : 25–35W au total. Les charges d\'inférence utilisent le GPU à 90–100 % d\'utilisation en continu.' },
           },
           {
             '@type': 'Question',
@@ -1692,7 +1692,7 @@ schema: {
           {
             '@type': 'Question',
             name: 'Quel wattage d\'alimentation ai-je besoin pour une RTX 4090 ?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Minimum 1000W PSU ; 1200W recommandé. La RTX 4090 consomme 575W au pic. Ajoutez CPU (150–170W), carte mère/RAM/stockage (100W) et une marge de sécurité de 20 % — la charge système totale atteint ~900W. Une alimentation 750W déclenchera des arrêts lors d\'une charge d\'inférence LLM soutenue.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Minimum 1000W PSU ; 850W recommandé. La RTX 4090 consomme 450W au pic. Ajoutez CPU (150–170W), carte mère/RAM/stockage (100W) et une marge de sécurité de 20 % — la charge système totale atteint ~900W. Une alimentation 750W déclenchera des arrêts lors d\'une charge d\'inférence LLM soutenue.' },
           },
           {
             '@type': 'Question',
@@ -1707,12 +1707,12 @@ schema: {
           {
             '@type': 'Question',
             name: 'Comment réduire la consommation électrique sans perdre la vitesse d\'inférence ?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Limitez en puissance le GPU (NVIDIA) sans réduire les vitesses d\'horloge. RTX 4090 : définir la limite de puissance à 350W (sur 575W) réduit la puissance de 40 % avec seulement ~10 % de perte de vitesse. Utilisez `nvidia-smi -pl 350` pour définir. Les utilisateurs Apple Silicon n\'ont besoin d\'aucun réglage.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Limitez en puissance le GPU (NVIDIA) sans réduire les vitesses d\'horloge. RTX 4090 : définir la limite de puissance à 350W (sur 450W) réduit la puissance de 40 % avec seulement ~10 % de perte de vitesse. Utilisez `nvidia-smi -pl 350` pour définir. Les utilisateurs Apple Silicon n\'ont besoin d\'aucun réglage.' },
           },
           {
             '@type': 'Question',
             name: 'Qu\'est-ce que le TDP et pourquoi est-ce important pour les LLMs locaux ?',
-            acceptedAnswer: { '@type': 'Answer', text: 'TDP (Thermal Design Power) est la chaleur maximale générée par un GPU à charge maximale, mesurée en watts. NVIDIA note la RTX 4090 TDP à 575W, mais l\'inférence réelle peut atteindre 600W+ selon les limites de puissance et les vitesses d\'horloge. Le TDP détermine votre taille minimum d\'alimentation et vos exigences de refroidissement.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'TDP (Thermal Design Power) est la chaleur maximale générée par un GPU à charge maximale, mesurée en watts. NVIDIA note la RTX 4090 TDP à 450W, mais l\'inférence réelle peut atteindre 600W+ selon les limites de puissance et les vitesses d\'horloge. Le TDP détermine votre taille minimum d\'alimentation et vos exigences de refroidissement.' },
           },
           {
             '@type': 'Question',
@@ -1736,7 +1736,7 @@ schema: {
           { '@type': 'ListItem', position: 6, name: 'RTX 4080', description: '320W TDP. 16 GB VRAM. Alimentation 850W.' },
           { '@type': 'ListItem', position: 7, name: 'AMD RX 7900 XTX', description: '355W TDP. 24 GB VRAM. Alimentation 850W. Meilleure option non-NVIDIA.' },
           { '@type': 'ListItem', position: 8, name: 'RTX 5080', description: '360W TDP. 16 GB VRAM. Alimentation 1000W.' },
-          { '@type': 'ListItem', position: 9, name: 'RTX 4090', description: '450W TDP de base, 575W max. 24 GB VRAM. Alimentation 1200W. €130/mois à €0.30/kWh.' },
+          { '@type': 'ListItem', position: 9, name: 'RTX 4090', description: '450W TDP de base, 450W max. 24 GB VRAM. Alimentation 850W. €130/mois à €0.30/kWh.' },
           { '@type': 'ListItem', position: 10, name: 'RTX 5090', description: '575W TDP. 32 GB GDDR7. Alimentation 1200W+. Puissance maximale pour performance maximale.' },
         ],
       },
@@ -1748,12 +1748,12 @@ schema: {
       theme: '硬件 & 性能',
       heroImage: '/images/local-llm-power-consumption-overview-hero-zh.webp',
       title: '本地LLM功耗与冷却指南2026：RTX 4090、RTX 5090、M5 Max对比',
-      seoTitle: '本地LLM功耗2026：RTX 4090 575W = $52/月成本',
-      intro: '运行本地LLM耗电量巨大。RTX 4090满载575W（需1200W电源，¥30/kWh时月成本约¥5,200或$52）、RTX 5090 575W搭32GB GDDR7 VRAM。Apple M5 Max仅用30W运行7B模型——能效是NVIDIA的10倍。2026年4月，理解功耗需求对防止硬件损伤、规划电力成本至关重要，涉及中国、亚太、美国等市场。',
-      metaDescription: 'RTX 4090：575W、$52/月（$0.12/kWh）。RTX 5090：575W、32GB VRAM。M5 Max：30W（10倍效率）。需1200W电源。功耗、冷却、电源、亚太合规。',
+      seoTitle: '本地LLM功耗2026：RTX 4090 450W = $52/月成本',
+      intro: '运行本地LLM耗电量巨大。RTX 4090满载450W（需850W电源，¥30/kWh时月成本约¥5,200或$52）、RTX 5090 575W搭32GB GDDR7 VRAM。Apple M5 Max仅用30W运行7B模型——能效是NVIDIA的10倍。2026年4月，理解功耗需求对防止硬件损伤、规划电力成本至关重要，涉及中国、亚太、美国等市场。',
+      metaDescription: 'RTX 4090：450W、约$39/月（$0.12/kWh）。RTX 5090：575W、32GB VRAM。M5 Max：30W（10倍效率）。需850W电源。功耗、冷却、电源、亚太合规。',
       publishDate: '2026-04-04',
-      dateModified: '2026-04-25',
-      leadAnswerBlock: '**运行本地LLM耗电量巨大。RTX 4090满载575W（需1200W电源，月成本$52）、RTX 5090 575W搭32GB VRAM。Apple M5 Max仅30W运行相同模型——能效是NVIDIA的10倍。2026年4月，理解功耗需求对防止硬件损伤、规划电力成本至关重要。**',
+      dateModified: '2026-08-28',
+      leadAnswerBlock: '**运行本地LLM耗电量巨大。RTX 4090满载450W（需850W电源，月成本$52）、RTX 5090 575W搭32GB VRAM。Apple M5 Max仅30W运行相同模型——能效是NVIDIA的10倍。2026年4月，理解功耗需求对防止硬件损伤、规划电力成本至关重要。**',
       audience: '首次运行本地LLM的用户、消费级硬件部署',
       readTime: '阅读约9分钟',
       educationalLevel: 'Beginner to Intermediate',
@@ -1773,8 +1773,8 @@ schema: {
           id: 'key-takeaways',
           isTldr: true,
           items: [
-            '**RTX 4090峰值功耗：575W（GPU单独）**',
-            '**所需电源：RTX 4090系统1200W**',
+            '**RTX 4090峰值功耗：450W（GPU单独）**',
+            '**所需电源：RTX 4090系统850W**',
             '**24/7成本：$52/月（$0.12/kWh时，RTX 4090）**',
             '**Apple M5 Max总功耗：25～35W**',
             '**效率比：M5 Max每token能效是RTX 4090的10倍**',
@@ -1784,7 +1784,7 @@ schema: {
         gpuPower: {
           id: 'gpu-power',
           title: 'LLM推理中各GPU的功耗是多少？',
-          content: ['**RTX 4090和RTX 5090都是575W，是本地LLM最高阶级。** GPU功耗是电源选择和电费的支配因素。'],
+          content: ['**RTX 4090和RTX 5090都是450W，是本地LLM最高阶级。** GPU功耗是电源选择和电费的支配因素。'],
           columns: ['GPU', '功耗', '闲置', '电源'],
           rows: [
             { 'GPU': 'Apple M5 Pro（GPU）', '功耗': '20～28W', '闲置': '2～5W', '电源': 'Macbook Pro内置' },
@@ -1795,7 +1795,7 @@ schema: {
             { 'GPU': 'RTX 4080', '功耗': '320W', '闲置': '20～25W', '电源': '850W' },
             { 'GPU': 'AMD RX 7900 XTX', '功耗': '355W', '闲置': '25～30W', '电源': '850W' },
             { 'GPU': 'RTX 5080', '功耗': '360W', '闲置': '28～35W', '电源': '1000W' },
-            { 'GPU': 'RTX 4090', '功耗': '575W', '闲置': '40～50W', '电源': '1200W' },
+            { 'GPU': 'RTX 4090', '功耗': '450W', '闲置': '40～50W', '电源': '850W' },
             { 'GPU': 'RTX 5090', '功耗': '575W', '闲置': '45～55W', '电源': '1200W以上' },
           ],
         },
@@ -1804,11 +1804,11 @@ schema: {
           title: '本地LLM电脑的总功耗是多少？',
           content: [
             '**RTX 4090系统总功耗：约895～945W。** GPU占总功耗60～65%，剩余35～40%来自CPU、主板、RAM、存储、冷却风扇。',
-            '从GPU单独功耗估算，加上20～30%的系统开销。RTX 4090单独575W，但整个系统可达600～650W。',
+            '从GPU单独功耗估算，加上20～30%的系统开销。RTX 4090单独450W，但整个系统可达600～650W。',
           ],
           columns: ['部件', '功耗', 'GPU占比'],
           rows: [
-            { '部件': 'RTX 4090 GPU', '功耗': '575W', 'GPU占比': '63%' },
+            { '部件': 'RTX 4090 GPU', '功耗': '450W', 'GPU占比': '63%' },
             { '部件': 'CPU（Ryzen 5950X）', '功耗': '105W', 'GPU占比': '11%' },
             { '部件': '主板 + RAM + 存储', '功耗': '60W', 'GPU占比': '7%' },
             { '部件': 'PCIe 风扇 + 冷却', '功耗': '40W', 'GPU占比': '4%' },
@@ -1842,7 +1842,7 @@ schema: {
           id: 'quick-facts',
           title: '快速事实',
           items: [
-            '**RTX 4090峰值：575W**',
+            '**RTX 4090峰值：450W**',
             '**所需电源：1200W**',
             '**24/7月成本：$52～$80（因电价而异）**',
             '**Apple M5 Max总功耗：25～35W**',
@@ -1854,9 +1854,9 @@ schema: {
           id: 'common-mistakes',
           title: '常见功耗与冷却错误',
           items: [
-            '**电源容量不足。** RTX 4090配750W电源危险。峰值脉冲可达900W以上，最少1000W，建议1200W。',
+            '**电源容量不足。** RTX 4090配750W电源危险。峰值脉冲可达900W以上，最少1000W，建议850W。',
             '**无冷却24小时运行。** 无风扇或气流不足时，温度达83°C以上，导致GPU降速。加2个PCIe风扇可降低温度10～15°C。',
-            '**全功率无限制运行。** RTX 4090限制350W（575W的40%削减）时，推理速度仅下降约10%，月成本削减40%。',
+            '**全功率无限制运行。** RTX 4090限制350W（450W的40%削减）时，推理速度仅下降约10%，月成本削减40%。',
             '**误解空闲功耗。** 本地LLM空闲功耗40～50W，但推理时飙升至575W，系统整体冷却设计至关重要。',
             '**使用老旧电源。** 2015～2018年电源效率80～85%。2024年Platinum/Titanium电源90%以上，同功耗下热量少15～20%。',
           ],
@@ -1876,7 +1876,7 @@ schema: {
           faqs: [
             {
               q: 'RTX 4090的实际功耗是多少？',
-              a: 'RTX 4090 TDP为575W，实际推理时可达600W。基础时钟2.23GHz，加速时钟2.5GHz，推理负载使GPU运行在90～100%。电源设计建议1200W PSU。',
+              a: 'RTX 4090 TDP为450W，实际推理时可达600W。基础时钟2.23GHz，加速时钟2.5GHz，推理负载使GPU运行在90～100%。电源设计建议850W PSU。',
             },
             {
               q: '功率限制如何影响推理速度？',
@@ -1892,7 +1892,7 @@ schema: {
             },
             {
               q: 'RTX 4090需要多少瓦电源？',
-              a: '最少1000W，建议1200W。RTX 4090（575W）+ CPU（150～170W）+ 主板/RAM/存储（100W）+ 冷却（50W）+ 效率损失（20%） = 约900W峰值。750W + RTX 4090组合在持续推理中断电风险高。',
+              a: '最少1000W，建议850W。RTX 4090（450W）+ CPU（150～170W）+ 主板/RAM/存储（100W）+ 冷却（50W）+ 效率损失（20%） = 约900W峰值。750W + RTX 4090组合在持续推理中断电风险高。',
             },
             {
               q: 'GPU温度监控怎么做？',
@@ -1908,7 +1908,7 @@ schema: {
             },
             {
               q: 'TDP和实测功耗的区别？',
-              a: 'TDP（热设计功耗）=最大散热=峰值功耗。NVIDIA RTX 4090 TDP为575W，但实际时钟和负载下550～600W浮动。推理运行90～100% GPU，实测接近TDP。',
+              a: 'TDP（热设计功耗）=最大散热=峰值功耗。NVIDIA RTX 4090 TDP为450W，但实际时钟和负载下550～600W浮动。推理运行90～100% GPU，实测接近TDP。',
             },
             {
               q: '怎样削减电力成本？',
@@ -1946,11 +1946,11 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         headline: '本地LLM功耗与冷却指南2026：RTX 4090、RTX 5090、M5 Max对比',
-        description: 'RTX 4090功耗575W月成本$52。M5 Max仅30W效率10倍高。GPU功耗、PSU选择、冷却策略、成本表、亚太合规指南。',
+        description: 'RTX 4090功耗450W月成本约$39。M5 Max仅30W效率10倍高。GPU功耗、PSU选择、冷却策略、成本表、亚太合规指南。',
         url: 'https://www.promptquorum.com/zh/local-llms/local-llm-power-consumption',
         inLanguage: 'zh',
         datePublished: '2026-04-04',
-        dateModified: '2026-04-25',
+        dateModified: '2026-08-28',
         author: { '@type': 'Organization', name: 'PromptQuorum' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         proficiencyLevel: 'Beginner to Intermediate',
@@ -1974,15 +1974,15 @@ schema: {
         '@type': 'FAQPage',
         inLanguage: 'zh',
         mainEntity: [
-          { '@type': 'Question', name: 'RTX 4090的实际功耗是多少？', acceptedAnswer: { '@type': 'Answer', text: 'RTX 4090 TDP为575W，实际推理时可达600W。基础时钟2.23GHz，加速时钟2.5GHz，推理负载使GPU运行在90～100%。' } },
+          { '@type': 'Question', name: 'RTX 4090的实际功耗是多少？', acceptedAnswer: { '@type': 'Answer', text: 'RTX 4090 TDP为450W，实际推理时可达600W。基础时钟2.23GHz，加速时钟2.5GHz，推理负载使GPU运行在90～100%。' } },
           { '@type': 'Question', name: '功率限制如何影响推理速度？', acceptedAnswer: { '@type': 'Answer', text: 'RTX 4090限制350W（削减40%）时，推理速度下降约10%。月电成本可削减40%。24小时连续推理时是功耗成本的权衡。' } },
           { '@type': 'Question', name: 'Apple Silicon M5 Max真的比NVIDIA效率高？', acceptedAnswer: { '@type': 'Answer', text: '是的。M5 Max在25～35W下运行7B模型达65～85 tok/sec。RTX 4090在600W下达150 tok/sec。M5 Max每token能效约高10倍。' } },
           { '@type': 'Question', name: '24小时GPU推理会损伤显卡吗？', acceptedAnswer: { '@type': 'Answer', text: '不会。GPU设计可承受100%负载24/7。风险来自冷却不足、低瓦电源、风扇故障。适当冷却条件下，GPU寿命5年以上。' } },
-          { '@type': 'Question', name: 'RTX 4090需要多少瓦电源？', acceptedAnswer: { '@type': 'Answer', text: '最少1000W，建议1200W。总峰值约900W。750W + RTX 4090组合持续推理时断电风险高。' } },
+          { '@type': 'Question', name: 'RTX 4090需要多少瓦电源？', acceptedAnswer: { '@type': 'Answer', text: '最少1000W，建议850W。总峰值约900W。750W + RTX 4090组合持续推理时断电风险高。' } },
           { '@type': 'Question', name: 'GPU温度监控怎么做？', acceptedAnswer: { '@type': 'Answer', text: '用`nvidia-smi -q -d TEMPERATURE`持续监控。本地LLM推理90～100% GPU。83°C触发热节流。理想：65～75°C。' } },
           { '@type': 'Question', name: '空冷 vs 液冷：选哪个？', acceptedAnswer: { '@type': 'Answer', text: '空冷：$200～700、简易、30～40dB。液冷：$1000～2000、低10～15°C、35～45dB。24/7运行时液冷可靠性更优。' } },
           { '@type': 'Question', name: '添加冷却风扇会增加功耗吗？', acceptedAnswer: { '@type': 'Answer', text: '略增。1～2个PCIe风扇额外15～30W。但GPU温度低10～15°C，推理速度提升5～10%，整体效率改善。' } },
-          { '@type': 'Question', name: 'TDP和实测功耗的区别？', acceptedAnswer: { '@type': 'Answer', text: 'TDP=最大散热=峰值功耗。RTX 4090 TDP 575W，实际550～600W浮动。推理运行90～100%，实测接近TDP。' } },
+          { '@type': 'Question', name: 'TDP和实测功耗的区别？', acceptedAnswer: { '@type': 'Answer', text: 'TDP=最大散热=峰值功耗。RTX 4090 TDP 450W，实际550～600W浮动。推理运行90～100%，实测接近TDP。' } },
           { '@type': 'Question', name: '怎样削减电力成本？', acceptedAnswer: { '@type': 'Answer', text: 'RTX 4090月$52可通过：(1) 350W限制削减40%、(2) 定时运行削减67%、(3) 迁移M5 Max削减90%、(4) 低峰电价时段运行。' } },
         ],
       },
@@ -2001,7 +2001,7 @@ schema: {
           { '@type': 'ListItem', position: 6, name: 'RTX 4080', description: '320W TDP。16GB VRAM。850W电源。' },
           { '@type': 'ListItem', position: 7, name: 'AMD RX 7900 XTX', description: '355W TDP。24GB VRAM。850W电源。最佳AMD选项。' },
           { '@type': 'ListItem', position: 8, name: 'RTX 5080', description: '360W TDP。16GB VRAM。1000W电源。' },
-          { '@type': 'ListItem', position: 9, name: 'RTX 4090', description: '575W TDP。24GB VRAM。1200W电源。$52/月（$0.12/kWh）。' },
+          { '@type': 'ListItem', position: 9, name: 'RTX 4090', description: '450W TDP。24GB VRAM。850W电源。约$39/月（$0.12/kWh）。' },
           { '@type': 'ListItem', position: 10, name: 'RTX 5090', description: '575W TDP。32GB GDDR7。1200W以上电源。最高性能。' },
         ],
       },
@@ -2014,12 +2014,12 @@ schema: {
       theme: 'Hardware & Performance',
       heroImage: '/images/local-llm-power-consumption-overview-hero-ja.webp',
       title: 'ローカルLLM電力消費と冷却2026: RTX 4090、RTX 5090、M5 Max比較',
-      seoTitle: 'ローカルLLM電力消費2026: RTX 4090 575W = ¥5,200/月',
-      intro: 'ローカルLLM実行は重大な電力を消費します。RTX 4090は負荷下575W消費(1200W PSU必要、¥25/kWh時¥5,200/月)。RTX 5090は32GB GDDR7 VRAMで575W消費。Apple M5 Max Macは7Bモデルを総電力わずか30Wで実行―NVIDIAあたり10倍以上エネルギー効率。2026年4月時点、電力要件理解はハードウェア損傷防止と米国、EU、日本、中国市場の電気コスト計画に助力。',
-      metaDescription: 'RTX 4090: 575W、¥5,200/月(@¥25/kWh)。RTX 5090: 575W、32GB VRAM。M5 Max: 30W(10倍効率)。1200W PSU必要。冷却、日本電力コスト含む。',
+      seoTitle: 'ローカルLLM電力消費2026: RTX 4090 450W = ¥5,200/月',
+      intro: 'ローカルLLM実行は重大な電力を消費します。RTX 4090は負荷下450W消費(850W PSU必要、¥25/kWh時¥5,200/月)。RTX 5090は32GB GDDR7 VRAMで575W消費。Apple M5 Max Macは7Bモデルを総電力わずか30Wで実行―NVIDIAあたり10倍以上エネルギー効率。2026年4月時点、電力要件理解はハードウェア損傷防止と米国、EU、日本、中国市場の電気コスト計画に助力。',
+      metaDescription: 'RTX 4090: 450W、¥5,200/月(@¥25/kWh)。RTX 5090: 575W、32GB VRAM。M5 Max: 30W(10倍効率)。1200W PSU必要。冷却、日本電力コスト含む。',
       publishDate: '2026-04-04',
-      dateModified: '2026-04-25',
-      leadAnswerBlock: '**ローカルLLM実行は重大な電力を消費します。RTX 4090は負荷下575W消費(1200W PSU必要、¥25/kWh時¥5,200/月)。RTX 5090は32GB GDDR7 VRAMで575W消費。Apple M5 Max Macは7Bモデルを総電力わずか30Wで実行―NVIDIAあたり10倍以上エネルギー効率。**',
+      dateModified: '2026-08-28',
+      leadAnswerBlock: '**ローカルLLM実行は重大な電力を消費します。RTX 4090は負荷下450W消費(850W PSU必要、¥25/kWh時¥5,200/月)。RTX 5090は32GB GDDR7 VRAMで575W消費。Apple M5 Max Macは7Bモデルを総電力わずか30Wで実行―NVIDIAあたり10倍以上エネルギー効率。**',
       audience: 'コンシューマーハードウェアで初めてローカルLLMを実行する初心者',
       readTime: '9分',
       educationalLevel: 'Beginner to Intermediate',
@@ -2041,7 +2041,7 @@ schema: {
           id: 'key-takeaways',
           isTldr: true,
           items: [
-            'RTX 4090: 575W。1200W PSU、優秀なケース気流が必要。',
+            'RTX 4090: 450W。850W PSU、優秀なケース気流が必要。',
             'RTX 4080: 320W。850W PSU、良好な気流。',
             'RTX 4070 Ti: 290W。750W PSU、適切な気流。',
             'M5 Max Mac: 推論時25～35W(極めて効率的)。',
@@ -2055,7 +2055,7 @@ schema: {
           content: 'GPUの電力消費は仕様の「TDP」によってリスト。実際の推論負荷はしばしばピークTDP下(通常50～80%)。',
           items: [
             '**RTX 5090 (575W TDP):** 最高性能GPU。32GB GDDR7。負荷下575W。1200W+ PSU推奨。¥5,200～7,000/月(@¥25/kWh、24/7)。',
-            '**RTX 4090 (575W TDP):** 2024-2025モデルの頂点。24GB VRAM。負荷下575W。1200W PSU必須。¥5,200～7,000/月。',
+            '**RTX 4090 (450W TDP):** 2024-2025モデルの頂点。24GB VRAM。負荷下450W。850W PSU必須。¥5,200～7,000/月。',
             '**RTX 4080 (320W TDP):** 中高性能。12-16GB VRAM。負荷下320W。850W PSU十分。¥2,800～3,600/月。',
             '**RTX 4070 Ti (290W TDP):** 均衡型。12GB VRAM。負荷下290W。750W PSU十分。¥2,400～2,800/月。',
             '**M5 Max Mac (30W total):** MacBook Pro/Studio。推論時25～35W。標準AC電源。¥150～200/月(極めて効率的)。',
@@ -2066,7 +2066,7 @@ schema: {
           title: 'ローカルLLM PC総電力消費量は?',
           content: 'システム総電力 = GPU + CPU + ストレージ + クーラー + マザーボード。GPU負荷下、システム総電力はGPU TDP比120～140%。',
           items: [
-            '**RTX 4090構成:** GPU 575W + システム 100～150W = **675～725W 総計**。1200W PSU。実効率 ~85%。',
+            '**RTX 4090構成:** GPU 450W + システム 100～150W = **675～725W 総計**。850W PSU。実効率 ~85%。',
             '**RTX 4080構成:** GPU 320W + システム 80～100W = **400～420W 総計**。850W PSU。',
             '**RTX 4070 Ti構成:** GPU 290W + システム 70～90W = **360～380W 総計**。750W PSU。',
             '**M5 Max MacBook Pro:** 全システム 25～35W(GPU + CPU + 画面)。標準USB-C電源。',
@@ -2102,9 +2102,9 @@ schema: {
           title: 'クイック事実',
           items: [
             '**RTX 5090:** 575W TDP、32GB GDDR7。¥5,200～7,000/月(¥25/kWh)。最高性能。',
-            '**RTX 4090:** 575W TDP、24GB VRAM。同月コスト。2024～2025頂点。',
+            '**RTX 4090:** 450W TDP、24GB VRAM。同月コスト。2024～2025頂点。',
             '**M5 Max Mac:** 30W 推論。¥150～200/月。10倍効率。',
-            '**PSU:** RTX 4090 1200W、RTX 4080 850W、RTX 4070 Ti 750W、M5 Mac 96W。',
+            '**PSU:** RTX 4090 850W、RTX 4080 850W、RTX 4070 Ti 750W、M5 Mac 96W。',
             '**冷却:** RTX 4090 <80℃維持。M5 Mac不要(一体冷却)。',
             '**コスト対比:** RTX 4090年¥60K vs M5 Mac年¥2K。30倍差。',
           ],
@@ -2113,7 +2113,7 @@ schema: {
           id: 'common-mistakes',
           title: '一般的ミス',
           items: [
-            'RTX 4090を650W PSUで接続。PSU容量不足、クラッシュリスク。1200W最小。',
+            'RTX 4090を650W PSUで接続。PSU容量不足、クラッシュリスク。850W最小。',
             'ケース気流対策なし。GPU >90℃スロットル、性能半減。',
             '冷却ファン逆向き設定。熱籠り。前吸後出確認必須。',
             '予算モニタリング忘れ。電力スパイク、火災リスク。スマートメーター推奨。',
@@ -2134,9 +2134,9 @@ schema: {
           id: 'faq',
           title: '電力・冷却FAQ',
           faqs: [
-            { q: 'RTX 4090を通常650W PSUで動作可?', a: 'いいえ、危険。RTX 4090 575W + システム 150W = 725W。650W PSU電圧ドロップ、クラッシュ。1200W推奨。' },
+            { q: 'RTX 4090を通常650W PSUで動作可?', a: 'いいえ、危険。RTX 4090 450W + システム 150W = 725W。650W PSU電圧ドロップ、クラッシュ。850W推奨。' },
             { q: 'RTX 4090実際月額電力コストは?', a: '¥25/kWh で ¥5,040/月(24/7)。実際利用10h/日なら ¥1,680/月。米国$0.12/kWh: $60～70/月。' },
-            { q: 'M5 Max Macは本当に30W?', a: 'はい。推論時25～35W総消費。RTX 4090 575W比 約20倍効率。ただし処理速度はNVIDIA比低め。' },
+            { q: 'M5 Max Macは本当に30W?', a: 'はい。推論時25～35W総消費。RTX 4090 450W比 約20倍効率。ただし処理速度はNVIDIA比低め。' },
             { q: 'GPU温度80℃超は危険?', a: 'はい。80～85℃でスロットル開始。85℃以上は性能低下。寿命も短縮。液冷で5～15℃改善可。' },
             { q: 'RTX 4090ケース購入時気をつけることは?', a: 'ケースCFM ≥300(前吸)推奨。RTX 4090専用ケースモデル確認。マザーボードレイアウト確認(GPU広い空間)。' },
             { q: 'パワーリミット(power limit)で電力削減可?', a: 'はい。-20% リミット設定で 460W に削減、40%電力削減。性能 ~10% 低下のみ。' },
@@ -2168,11 +2168,11 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         headline: 'ローカルLLM電力消費と冷却2026: RTX 4090、RTX 5090、M5 Max比較',
-        description: 'RTX 4090: 575W、¥5,200/月(@¥25/kWh)。RTX 5090: 575W、32GB VRAM。M5 Max: 30W(10倍効率)。1200W PSU必要。冷却、日本電力コスト含む。',
+        description: 'RTX 4090: 450W、¥5,200/月(@¥25/kWh)。RTX 5090: 575W、32GB VRAM。M5 Max: 30W(10倍効率)。1200W PSU必要。冷却、日本電力コスト含む。',
         url: 'https://www.promptquorum.com/ja/local-llms/local-llm-power-consumption',
         inLanguage: 'ja',
         datePublished: '2026-04-04',
-        dateModified: '2026-04-25',
+        dateModified: '2026-08-28',
         author: { '@type': 'Organization', name: 'PromptQuorum' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         about: [
@@ -2193,9 +2193,9 @@ schema: {
         inLanguage: 'ja',
         url: 'https://www.promptquorum.com/ja/local-llms/local-llm-power-consumption',
         mainEntity: [
-          { '@type': 'Question', name: 'RTX 4090を通常650W PSUで動作可?', acceptedAnswer: { '@type': 'Answer', text: 'いいえ、危険。RTX 4090 575W + システム 150W = 725W。650W PSU電圧ドロップ、クラッシュ。1200W推奨。' }},
+          { '@type': 'Question', name: 'RTX 4090を通常650W PSUで動作可?', acceptedAnswer: { '@type': 'Answer', text: 'いいえ、危険。RTX 4090 450W + システム 150W = 725W。650W PSU電圧ドロップ、クラッシュ。850W推奨。' }},
           { '@type': 'Question', name: 'RTX 4090実際月額電力コストは?', acceptedAnswer: { '@type': 'Answer', text: '¥25/kWh で ¥5,040/月(24/7)。実際利用10h/日なら ¥1,680/月。米国$0.12/kWh: $60～70/月。' }},
-          { '@type': 'Question', name: 'M5 Max Macは本当に30W?', acceptedAnswer: { '@type': 'Answer', text: 'はい。推論時25～35W総消費。RTX 4090 575W比 約20倍効率。ただし処理速度はNVIDIA比低め。' }},
+          { '@type': 'Question', name: 'M5 Max Macは本当に30W?', acceptedAnswer: { '@type': 'Answer', text: 'はい。推論時25～35W総消費。RTX 4090 450W比 約20倍効率。ただし処理速度はNVIDIA比低め。' }},
           { '@type': 'Question', name: 'GPU温度80℃超は危険?', acceptedAnswer: { '@type': 'Answer', text: 'はい。80～85℃でスロットル開始。85℃以上は性能低下。寿命も短縮。液冷で5～15℃改善可。' }},
           { '@type': 'Question', name: 'RTX 4090ケース購入時気をつけることは?', acceptedAnswer: { '@type': 'Answer', text: 'ケースCFM ≥300(前吸)推奨。RTX 4090専用ケースモデル確認。マザーボードレイアウト確認(GPU広い空間)。' }},
           { '@type': 'Question', name: 'パワーリミット(power limit)で電力削減可?', acceptedAnswer: { '@type': 'Answer', text: 'はい。-20% リミット設定で 460W に削減、40%電力削減。性能 ~10% 低下のみ。' }},
@@ -2213,7 +2213,7 @@ schema: {
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'M5 Max Mac', description: '30W(推論)。¥150～200/月。最効率。ただしNVIDIA比処理速度低。' },
           { '@type': 'ListItem', position: 2, name: 'RTX 4070 Ti', description: '290W TDP。¥2,400～2,800/月。バランス型。多数ユースケースに対応。' },
-          { '@type': 'ListItem', position: 3, name: 'RTX 4090 / 5090', description: '575W TDP。¥5,200～7,000/月。最高性能。70B+ モデル対応。' },
+          { '@type': 'ListItem', position: 3, name: 'RTX 4090 / 5090', description: '450W TDP。¥5,200～7,000/月。最高性能。70B+ モデル対応。' },
         ],
       },
       gammaEmbedUrl: '/presentations/local-llm-power-consumption-static.html',
@@ -2225,12 +2225,12 @@ schema: {
       theme: '하드웨어 및 성능',
     heroImage: '/images/local-llm-power-consumption-overview-hero-ko.webp',
       title: '로컬 LLM 전력 소비 및 냉각 2026: RTX 4090, RTX 5090, M5 Max 비교',
-      seoTitle: '로컬 LLM 전력 소비 2026: RTX 4090 575W = 월 $52',
-      intro: '로컬 LLM을 실행하면 상당한 전력을 소비합니다. RTX 4090은 부하 시 575W를 소비하며 (1200W PSU 필요, $0.12/kWh 기준 월 $52), RTX 5090은 32GB GDDR7 VRAM으로 575W를 소비합니다. Apple M5 Max Mac은 7B 모델을 단 30W 전체 전력으로 실행하여 NVIDIA 대비 토큰당 10배 더 에너지 효율적입니다. 2026년 4월 기준, 전력 요구 사항을 이해하면 하드웨어 손상을 방지하고 미국, EU, 일본, 중국 시장의 전기 비용을 계획하는 데 도움이 됩니다.',
-      metaDescription: 'RTX 4090: 575W, 월 $52. RTX 5090: 575W, 32GB GDDR7. M5 Max: 30W (토큰당 10배 효율). 1200W PSU 필요. 냉각 및 지역별 비용 포함.',
+      seoTitle: '로컬 LLM 전력 소비 2026: RTX 4090 450W = 월 $52',
+      intro: '로컬 LLM을 실행하면 상당한 전력을 소비합니다. RTX 4090은 부하 시 450W를 소비하며 (850W PSU 필요, $0.12/kWh 기준 월 $52), RTX 5090은 32GB GDDR7 VRAM으로 575W를 소비합니다. Apple M5 Max Mac은 7B 모델을 단 30W 전체 전력으로 실행하여 NVIDIA 대비 토큰당 10배 더 에너지 효율적입니다. 2026년 4월 기준, 전력 요구 사항을 이해하면 하드웨어 손상을 방지하고 미국, EU, 일본, 중국 시장의 전기 비용을 계획하는 데 도움이 됩니다.',
+      metaDescription: 'RTX 4090: 450W, 월 약 $39. RTX 5090: 575W, 32GB GDDR7. M5 Max: 30W (토큰당 10배 효율). 850W PSU 필요. 냉각 및 지역별 비용 포함.',
       publishDate: '2026-04-04',
-      dateModified: '2026-04-25',
-      leadAnswerBlock: '**로컬 LLM을 실행하면 상당한 전력을 소비합니다. RTX 4090은 부하 시 575W를 소비하며 (1200W PSU 필요, $0.12/kWh 기준 월 $52), RTX 5090은 32GB GDDR7 VRAM으로 575W를 소비합니다. Apple M5 Max Mac은 7B 모델을 단 30W 전체 전력으로 실행하여 NVIDIA 대비 토큰당 10배 더 에너지 효율적입니다. 2026년 4월 기준, 전력 요구 사항을 이해하면 하드웨어 손상을 방지하고 미국, EU, 일본, 중국 시장의 전기 비용을 계획하는 데 도움이 됩니다.**',
+      dateModified: '2026-08-28',
+      leadAnswerBlock: '**로컬 LLM을 실행하면 상당한 전력을 소비합니다. RTX 4090은 부하 시 450W를 소비하며 (850W PSU 필요, $0.12/kWh 기준 월 $52), RTX 5090은 32GB GDDR7 VRAM으로 575W를 소비합니다. Apple M5 Max Mac은 7B 모델을 단 30W 전체 전력으로 실행하여 NVIDIA 대비 토큰당 10배 더 에너지 효율적입니다. 2026년 4월 기준, 전력 요구 사항을 이해하면 하드웨어 손상을 방지하고 미국, EU, 일본, 중국 시장의 전기 비용을 계획하는 데 도움이 됩니다.**',
       audience: '소비자용 하드웨어에서 처음으로 로컬 LLM을 실행하는 초보자',
       readTime: '9분 읽기',
       educationalLevel: 'Beginner to Intermediate',
@@ -2252,7 +2252,7 @@ schema: {
           id: 'key-takeaways',
           isTldr: true,
           items: [
-            'RTX 4090: 575W. 1200W PSU와 우수한 케이스 환기 필요.',
+            'RTX 4090: 450W. 850W PSU와 우수한 케이스 환기 필요.',
             'RTX 4080: 320W. 850W PSU와 충분한 환기 필요.',
             'RTX 4070 Ti: 290W. 750W PSU와 적절한 환기 필요.',
             'M5 Max Mac: 추론 시 25~35W (매우 효율적).',
@@ -2265,10 +2265,10 @@ schema: {
           title: 'LLM 추론 시 GPU별 전력 소비량은?',
           image: '/images/local-llm-power-consumption-gpu-power-draw-en.svg',
           imageCaption: '로컬 LLM 추론을 위한 GPU 전력 소비: RTX 5090/4090이 575W (1200W+ PSU), RTX 4080/4070 Ti가 200~360W, Apple M5 Max/Pro가 25~35W (토큰당 10배 더 효율적). 최소 PSU 요구 사항 포함.',
-          content: ['**RTX 4090과 RTX 5090은 모두 최대 부하 시 575W를 소비하며, 이는 로컬 LLM에서 사용 가능한 최고 등급입니다.** GPU 전력 소비량은 PSU 선택 및 전기 요금에서 가장 중요한 요소입니다.', '**참고:** NVIDIA RTX 4090의 기본 TDP는 450W이지만 실제 추론 환경에서는 지속 부하 시 575W에 달할 수 있습니다. RTX 5090은 575W 기본 TDP로 출시됩니다. AMD RX 7900 XTX는 24GB VRAM과 355W로 로컬 LLM에서 NVIDIA 외 최강의 독립 GPU입니다. Apple M5 Max는 RTX 4090 대비 토큰당 10배 적은 전력을 소비하여 24/7 지속 추론에 가장 효율적인 선택입니다.'],
+          content: ['**RTX 4090과 RTX 5090은 모두 최대 부하 시 450W를 소비하며, 이는 로컬 LLM에서 사용 가능한 최고 등급입니다.** GPU 전력 소비량은 PSU 선택 및 전기 요금에서 가장 중요한 요소입니다.', '**참고:** NVIDIA RTX 4090의 기본 TDP는 450W이지만 실제 추론 환경에서는 지속 부하 시 450W에 달할 수 있습니다. RTX 5090은 575W 기본 TDP로 출시됩니다. AMD RX 7900 XTX는 24GB VRAM과 355W로 로컬 LLM에서 NVIDIA 외 최강의 독립 GPU입니다. Apple M5 Max는 RTX 4090 대비 토큰당 10배 적은 전력을 소비하여 24/7 지속 추론에 가장 효율적인 선택입니다.'],
           rows: [
             { 'GPU': 'RTX 5090', 'Power': '575W', 'Idle': '20W', 'PSU': '1200W+' },
-            { 'GPU': 'RTX 4090', 'Power': '450W (최대 575W)', 'Idle': '10W', 'PSU': '1200W+' },
+            { 'GPU': 'RTX 4090', 'Power': '450W (최대 450W)', 'Idle': '10W', 'PSU': '850W+' },
             { 'GPU': 'RTX 5080', 'Power': '360W', 'Idle': '15W', 'PSU': '1000W' },
             { 'GPU': 'RTX 4080', 'Power': '320W', 'Idle': '8W', 'PSU': '850W+' },
             { 'GPU': 'RTX 5070', 'Power': '250W', 'Idle': '12W', 'PSU': '800W' },
@@ -2287,12 +2287,12 @@ schema: {
           id: 'system-power',
           title: '로컬 LLM PC의 총 전력 소비량은?',
           image: '/images/local-llm-power-consumption-apple-vs-nvidia-en.svg',
-          imageCaption: 'RTX 4090 vs Apple M5 Max 전력 효율 비교: $0.12/kWh 기준 575W 및 월 $52 vs 25~35W 및 월 $2.60. M5 Max는 7B 모델 추론에서 토큰당 10배 더 에너지 효율적입니다.',
+          imageCaption: 'RTX 4090 vs Apple M5 Max 전력 효율 비교: $0.12/kWh 기준 450W 및 월 $52 vs 25~35W 및 월 $2.60. M5 Max는 7B 모델 추론에서 토큰당 10배 더 에너지 효율적입니다.',
           content: [
             '**GPU만이 전력을 소비하는 것이 아닙니다.** CPU, RAM, 스토리지, 마더보드도 고려해야 합니다:',
           ],
           rows: [
-            { 'Component': 'GPU (RTX 4090)', 'Power': '575W', 'Notes': '100% 사용률 시 최대치' },
+            { 'Component': 'GPU (RTX 4090)', 'Power': '450W', 'Notes': '100% 사용률 시 최대치' },
             { 'Component': 'CPU (Ryzen 9 7950X)', 'Power': '170W', 'Notes': '부하 시' },
             { 'Component': '마더보드 + RAM + SSD', 'Power': '100W', 'Notes': '일반적' },
             { 'Component': '냉각 팬, PSU 오버헤드', 'Power': '50~100W', 'Notes': '안전 마진' },
@@ -2347,8 +2347,8 @@ schema: {
           id: 'quick-facts',
           title: '빠른 팩트',
           items: [
-            '**RTX 4090 최대 소비 전력:** 575W (GPU 단독)',
-            '**필요한 PSU:** RTX 4090 시스템에는 1200W',
+            '**RTX 4090 최대 소비 전력:** 450W (GPU 단독)',
+            '**필요한 PSU:** RTX 4090 시스템에는 850W',
             '**$0.12/kWh 기준 24/7 비용:** 월 ~$52 (RTX 4090)',
             '**Apple M5 Max 전체 소비 전력:** 25~35W',
             '**효율 비율:** M5 Max는 RTX 4090 대비 토큰당 ~10배 적은 전력 사용',
@@ -2387,12 +2387,12 @@ schema: {
           id: 'faq',
           title: '전력 및 냉각 FAQ',
           callouts: [
-            { type: 'insight', text: '60% TDP에서의 전력 제한 추론은 일반적인 데이터 센터 관행입니다. RTX 4090을 350W (575W의 60%)로 설정하면 최대 성능의 90%를 달성하면서 전기 비용을 40% 절감하고 냉각 부하를 줄일 수 있습니다.' },
+            { type: 'insight', text: '60% TDP에서의 전력 제한 추론은 일반적인 데이터 센터 관행입니다. RTX 4090을 350W (450W의 60%)로 설정하면 최대 성능의 90%를 달성하면서 전기 비용을 40% 절감하고 냉각 부하를 줄일 수 있습니다.' },
           ],
           faqs: [
             {
               q: '로컬 LLM 실행 시 전력은 얼마나 소비됩니까?',
-              a: '전력 소비량은 GPU 등급에 따라 다릅니다. RTX 4090: 최대 575W (시스템 포함 평균 600W). RTX 4080: GPU 320W (시스템 450W). RTX 4070 Ti: GPU 290W (시스템 400W). Apple M5 Max Mac: 전체 25~35W — 단연코 가장 에너지 효율적인 옵션입니다. 추론은 GPU를 지속적으로 90~100% 사용률로 작동시킵니다.',
+              a: '전력 소비량은 GPU 등급에 따라 다릅니다. RTX 4090: 최대 450W (시스템 포함 평균 600W). RTX 4080: GPU 320W (시스템 450W). RTX 4070 Ti: GPU 290W (시스템 400W). Apple M5 Max Mac: 전체 25~35W — 단연코 가장 에너지 효율적인 옵션입니다. 추론은 GPU를 지속적으로 90~100% 사용률로 작동시킵니다.',
             },
             {
               q: '로컬 LLM을 24/7 실행하는 데 비용이 얼마나 듭니까?',
@@ -2400,7 +2400,7 @@ schema: {
             },
             {
               q: 'RTX 4090에는 몇 와트의 PSU가 필요합니까?',
-              a: '최소 1000W PSU; 1200W 권장. RTX 4090은 최대 575W를 소비합니다. CPU (150~170W), 마더보드/RAM/스토리지 (100W), 20% 안전 마진을 추가하면 — 총 시스템 부하가 ~900W에 달합니다. 750W PSU는 지속적인 LLM 추론 부하 시 시스템 종료를 유발합니다. 신뢰할 수 있는 PSU 브랜드 (Seasonic, Corsair, EVGA)를 선택하십시오.',
+              a: '최소 1000W PSU; 850W 권장. RTX 4090은 최대 450W를 소비합니다. CPU (150~170W), 마더보드/RAM/스토리지 (100W), 20% 안전 마진을 추가하면 — 총 시스템 부하가 ~900W에 달합니다. 750W PSU는 지속적인 LLM 추론 부하 시 시스템 종료를 유발합니다. 신뢰할 수 있는 PSU 브랜드 (Seasonic, Corsair, EVGA)를 선택하십시오.',
             },
             {
               q: 'Apple Silicon이 로컬 LLM에서 NVIDIA보다 더 효율적입니까?',
@@ -2412,11 +2412,11 @@ schema: {
             },
             {
               q: '추론 속도 손실 없이 전력 소비를 줄이는 방법은 무엇입니까?',
-              a: '클럭 속도를 줄이지 않고 GPU (NVIDIA) 전력을 제한하십시오. RTX 4090: 전력 제한을 350W (575W에서)로 설정하면 속도 손실 ~10%로 전력을 40% 절감할 수 있습니다 — 효율적인 추론의 최적 지점입니다. `nvidia-smi -pl 350`으로 전력 제한을 설정하십시오. Apple Silicon 사용자는 튜닝이 필요 없으며, 하드웨어가 이미 최적화되어 있습니다.',
+              a: '클럭 속도를 줄이지 않고 GPU (NVIDIA) 전력을 제한하십시오. RTX 4090: 전력 제한을 350W (450W에서)로 설정하면 속도 손실 ~10%로 전력을 40% 절감할 수 있습니다 — 효율적인 추론의 최적 지점입니다. `nvidia-smi -pl 350`으로 전력 제한을 설정하십시오. Apple Silicon 사용자는 튜닝이 필요 없으며, 하드웨어가 이미 최적화되어 있습니다.',
             },
             {
               q: 'TDP란 무엇이며 로컬 LLM에서 왜 중요합니까?',
-              a: 'TDP (Thermal Design Power)는 최대 부하 시 GPU가 생성하는 최대 열로, 와트 단위로 측정됩니다. NVIDIA는 RTX 4090의 TDP를 575W로 규정하지만 실제 추론 환경에서는 전원 제한 및 클럭 속도에 따라 600W+에 달할 수 있습니다. TDP는 최소 PSU 크기와 냉각 요구 사항을 결정하기 때문에 중요합니다. TDP가 높을수록 = 더 큰 PSU, 더 많은 전기 비용, 더 많은 냉각이 필요합니다.',
+              a: 'TDP (Thermal Design Power)는 최대 부하 시 GPU가 생성하는 최대 열로, 와트 단위로 측정됩니다. NVIDIA는 RTX 4090의 TDP를 450W로 규정하지만 실제 추론 환경에서는 전원 제한 및 클럭 속도에 따라 600W+에 달할 수 있습니다. TDP는 최소 PSU 크기와 냉각 요구 사항을 결정하기 때문에 중요합니다. TDP가 높을수록 = 더 큰 PSU, 더 많은 전기 비용, 더 많은 냉각이 필요합니다.',
             },
             {
               q: '로컬 LLM 실행이 GPU를 손상시킵니까?',
@@ -2454,9 +2454,9 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         headline: '로컬 LLM 전력 소비 및 냉각 2026: RTX 4090, RTX 5090, M5 Max 비교',
-        description: 'RTX 4090: 575W, $0.12/kWh 기준 월 $52. RTX 5090: 575W, 32GB VRAM. M5 Max Mac: 30W (10배 더 효율적). 1200W PSU 필요. 냉각, EU/일본 비용 포함.',
+        description: 'RTX 4090: 450W, $0.12/kWh 기준 월 약 $39. RTX 5090: 575W, 32GB VRAM. M5 Max Mac: 30W (10배 더 효율적). 850W PSU 필요. 냉각, EU/일본 비용 포함.',
         datePublished: '2026-04-04',
-        dateModified: '2026-04-25',
+        dateModified: '2026-08-28',
         url: 'https://www.promptquorum.com/local-llms/local-llm-power-consumption',
         inLanguage: 'ko',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -2481,7 +2481,7 @@ schema: {
           {
             '@type': 'Question',
             name: '로컬 LLM 실행 시 전력은 얼마나 소비됩니까?',
-            acceptedAnswer: { '@type': 'Answer', text: 'RTX 4090: 최대 575W (시스템 포함 평균 600W). RTX 4080: GPU 320W (시스템 450W). RTX 4070 Ti: GPU 290W (시스템 400W). Apple M5 Max Mac: 전체 25~35W. 추론은 GPU를 지속적으로 90~100% 사용률로 작동시킵니다.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'RTX 4090: 최대 450W (시스템 포함 평균 600W). RTX 4080: GPU 320W (시스템 450W). RTX 4070 Ti: GPU 290W (시스템 400W). Apple M5 Max Mac: 전체 25~35W. 추론은 GPU를 지속적으로 90~100% 사용률로 작동시킵니다.' },
           },
           {
             '@type': 'Question',
@@ -2491,7 +2491,7 @@ schema: {
           {
             '@type': 'Question',
             name: 'RTX 4090에는 몇 와트의 PSU가 필요합니까?',
-            acceptedAnswer: { '@type': 'Answer', text: '최소 1000W PSU; 1200W 권장. RTX 4090은 최대 575W를 소비합니다. CPU (150~170W), 마더보드/RAM/스토리지 (100W), 20% 안전 마진을 추가하면 총 시스템 부하가 ~900W에 달합니다. 750W PSU는 지속적인 LLM 추론 부하 시 시스템 종료를 유발합니다.' },
+            acceptedAnswer: { '@type': 'Answer', text: '최소 1000W PSU; 850W 권장. RTX 4090은 최대 450W를 소비합니다. CPU (150~170W), 마더보드/RAM/스토리지 (100W), 20% 안전 마진을 추가하면 총 시스템 부하가 ~900W에 달합니다. 750W PSU는 지속적인 LLM 추론 부하 시 시스템 종료를 유발합니다.' },
           },
           {
             '@type': 'Question',
@@ -2506,12 +2506,12 @@ schema: {
           {
             '@type': 'Question',
             name: '추론 속도 손실 없이 전력 소비를 줄이는 방법은 무엇입니까?',
-            acceptedAnswer: { '@type': 'Answer', text: 'RTX 4090: 전력 제한을 350W (575W에서)로 설정하면 속도 손실 ~10%로 전력을 40% 절감할 수 있습니다. `nvidia-smi -pl 350`으로 전력 제한을 설정하십시오. Apple Silicon 사용자는 튜닝이 필요 없습니다.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'RTX 4090: 전력 제한을 350W (450W에서)로 설정하면 속도 손실 ~10%로 전력을 40% 절감할 수 있습니다. `nvidia-smi -pl 350`으로 전력 제한을 설정하십시오. Apple Silicon 사용자는 튜닝이 필요 없습니다.' },
           },
           {
             '@type': 'Question',
             name: 'TDP란 무엇이며 로컬 LLM에서 왜 중요합니까?',
-            acceptedAnswer: { '@type': 'Answer', text: 'TDP (Thermal Design Power)는 최대 부하 시 GPU가 생성하는 최대 열로, 와트 단위로 측정됩니다. NVIDIA는 RTX 4090의 TDP를 575W로 규정하지만 실제 추론 환경에서는 600W+에 달할 수 있습니다. TDP는 최소 PSU 크기와 냉각 요구 사항을 결정합니다.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'TDP (Thermal Design Power)는 최대 부하 시 GPU가 생성하는 최대 열로, 와트 단위로 측정됩니다. NVIDIA는 RTX 4090의 TDP를 450W로 규정하지만 실제 추론 환경에서는 600W+에 달할 수 있습니다. TDP는 최소 PSU 크기와 냉각 요구 사항을 결정합니다.' },
           },
           {
             '@type': 'Question',
@@ -2534,7 +2534,7 @@ schema: {
           { '@type': 'ListItem', position: 6, name: 'RTX 4080', description: '320W TDP. 16GB VRAM. 850W PSU.' },
           { '@type': 'ListItem', position: 7, name: 'AMD RX 7900 XTX', description: '355W TDP. 24GB VRAM. 850W PSU. NVIDIA 외 최고의 옵션.' },
           { '@type': 'ListItem', position: 8, name: 'RTX 5080', description: '360W TDP. 16GB VRAM. 1000W PSU.' },
-          { '@type': 'ListItem', position: 9, name: 'RTX 4090', description: '기본 TDP 450W, 최대 575W. 24GB VRAM. 1200W PSU. $0.12/kWh 기준 월 $52.' },
+          { '@type': 'ListItem', position: 9, name: 'RTX 4090', description: '기본 TDP 450W. 24GB VRAM. 850W PSU. $0.12/kWh 기준 월 약 $39.' },
           { '@type': 'ListItem', position: 10, name: 'RTX 5090', description: '575W TDP. 32GB GDDR7. 1200W+ PSU. 최고 성능을 위한 최대 전력.' },
         ],
       },
