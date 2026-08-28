@@ -13,7 +13,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       title: 'Local vs Cloud AI Agents 2026: Cost, Speed, Privacy Comparison',
       heroImage: '/images/local-vs-cloud-agents-overview-hero-en.webp',
       seoTitle: 'Local vs Cloud AI Agents 2026: Which Is Better for Your Use Case?',
-      intro: '**Cloud agents (GPT-5.6, Claude Sonnet 5) respond in 100–300ms per step but cost $10 per 1M tokens. Local agents (Llama 13B+, Qwen 32B) take 2–5 seconds per step but cost $0 after hardware.** Break-even is ~50M tokens/month. As of April 2026, most businesses use a hybrid approach: cloud for complex reasoning, local for routine automation and sensitive data. This guide covers exact speed, cost, and capability comparisons to help you decide.',
+      intro: '**Cloud agents (GPT-5.6, Claude Sonnet 5) respond in 100–300ms per step but cost $10 per 1M tokens. Local agents (Llama 13B+, Qwen 32B) take 2–5 seconds per step but cost $0 after hardware.** Break-even is ~50M tokens/month. Most businesses use a hybrid approach: cloud for complex reasoning, local for routine automation and sensitive data. This guide covers exact speed, cost, and capability comparisons to help you decide.',
       metaDescription: 'Cloud agents respond in 100–300ms but cost $10/1M tokens. Local agents take 2–5 sec but cost $0. Break-even at 50M tokens/month. Full 2026 comparison with decision framework.',
       publishDate: '2026-04-04',
       dateModified: '2026-08-28',
@@ -41,12 +41,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Cloud agents (GPT-5.6, Claude Sonnet 5) respond in 100-300ms per step but cost $10 per 1M tokens; local agents (Llama 13B+, Qwen 32B) take 2-5 seconds per step but cost $0 after hardware, with the break-even around 50M tokens/month.' },
+            { type: 'plain-terms', text: 'An AI agent is a program that uses an AI model in a loop to complete multi-step tasks. Running that model in the cloud (like GPT or Claude) is fast and pay-per-use; running it locally on your own GPU is slower per step but free once you own the hardware. Most businesses end up using both: cloud for hard reasoning tasks, local for routine, high-volume, or sensitive work.' },
+          ],
           items: [
             '**Cloud agents (GPT-5.6, Claude Sonnet 5):** Fastest (50-200ms/step), most capable, most expensive, no privacy.',
             '**Local agents (Llama 13B+):** Slower (2-5 sec/step), less capable, cheap at scale, fully private.',
             'Break-even: ~50M tokens/month. Beyond that, local is cheaper.',
             '**Best:** Hybrid. Use cloud for complex reasoning, local for routine automation.',
-            'As of April 2026, most businesses use hybrid approach.',
+            'Most businesses today use a hybrid approach.',
           ],
         },
         performance: {
@@ -274,7 +278,7 @@ schema: {
       title: 'Agentes de IA Local vs Cloud 2026: Comparativa de Coste, Velocidad y Privacidad',
       heroImage: '/images/local-vs-cloud-agents-overview-hero-es.webp',
       seoTitle: 'Agentes de IA local vs cloud 2026: cuál elegir',
-      intro: '**Los agentes Cloud (GPT-5.6, Claude Sonnet 5) responden en 100–300ms por paso pero cuestan $10 por 1M de tokens. Los agentes locales (Llama 13B+, Qwen 32B) tardan 2–5 segundos por paso pero cuestan $0 después del hardware.** El punto de equilibrio está en ~50M tokens/mes. A partir de abril de 2026, la mayoría de las empresas utilizan un enfoque híbrido: Cloud para razonamiento complejo, local para automatización rutinaria y datos sensibles. Esta guía cubre comparativas exactas de velocidad, coste y capacidad para ayudarte a decidir.',
+      intro: '**Los agentes Cloud (GPT-5.6, Claude Sonnet 5) responden en 100–300ms por paso pero cuestan $10 por 1M de tokens. Los agentes locales (Llama 13B+, Qwen 32B) tardan 2–5 segundos por paso pero cuestan $0 después del hardware.** El punto de equilibrio está en ~50M tokens/mes. La mayoría de las empresas utilizan un enfoque híbrido: Cloud para razonamiento complejo, local para automatización rutinaria y datos sensibles. Esta guía cubre comparativas exactas de velocidad, coste y capacidad para ayudarte a decidir.',
       metaDescription: 'Los agentes cloud responden en 100–300 ms pero cuestan $10/1M tokens; los locales tardan 2–5 s pero cuestan $0. Punto de equilibrio: 50M tokens/mes. 2026.',
       publishDate: '2026-04-04',
       dateModified: '2026-08-28',
@@ -301,12 +305,16 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Los agentes en la nube (GPT-5.6, Claude Sonnet 5) responden en 100-300ms por paso pero cuestan $10 por 1M de tokens; los agentes locales (Llama 13B+, Qwen 32B) tardan 2-5 segundos por paso pero cuestan $0 tras el hardware, con un punto de equilibrio en torno a 50M tokens/mes.' },
+            { type: 'plain-terms', text: 'Un agente de IA es un programa que usa un modelo de IA en bucle para completar tareas de varios pasos. Ejecutar ese modelo en la nube (como GPT o Claude) es rápido y se paga por uso; ejecutarlo localmente en tu propia GPU es más lento por paso pero gratuito una vez que tienes el hardware. La mayoría de las empresas terminan usando ambos: la nube para tareas de razonamiento complejo, lo local para trabajo rutinario, de alto volumen o sensible.' },
+          ],
           items: [
             '**Agentes Cloud (GPT-5.6, Claude Sonnet 5):** Los más rápidos (50–200ms/paso), mayor capacidad, mayor coste, sin privacidad.',
             '**Agentes locales (Llama 13B+):** Más lentos (2–5 s/paso), menor capacidad, baratos a escala, completamente privados.',
             'Punto de equilibrio: ~50M tokens/mes. A partir de ahí, el local es más barato.',
             '**Lo mejor:** Híbrido. Cloud para razonamiento complejo, local para automatización rutinaria.',
-            'A partir de abril de 2026, la mayoría de las empresas usa el enfoque híbrido.',
+            'La mayoría de las empresas usa hoy el enfoque híbrido.',
           ],
         },
         performance: {
@@ -542,7 +550,7 @@ schema: {
       title: 'وكلاء الذكاء الاصطناعي المحليون مقابل السحابيين ⁨2026⁩: مقارنة التكلفة والسرعة والخصوصية',
       heroImage: '/images/local-vs-cloud-agents-overview-hero-ar.webp',
       seoTitle: 'وكلاء ⁨AI⁩ محليون مقابل سحابيون ⁨2026⁩: مقارنة التكلفة',
-      intro: '**يستجيب الوكلاء السحابيون (GPT-5.6، Claude Sonnet 5) خلال 100–300 مللي ثانية لكل خطوة لكنهم يكلّفون 10$ لكل مليون رمز. يستغرق الوكلاء المحليون (Llama 13B+، Qwen 32B) 2–5 ثوانٍ لكل خطوة لكنهم يكلّفون 0$ بعد العتاد.** نقطة التعادل عند ~50 مليون رمز/شهر. اعتبارًا من أبريل 2026، تستخدم معظم الشركات نهجًا هجينًا: السحابة للاستدلال المعقّد، المحلي للأتمتة الروتينية والبيانات الحساسة. يغطي هذا الدليل مقارنات دقيقة للسرعة والتكلفة والقدرة لمساعدتك على القرار.',
+      intro: '**يستجيب الوكلاء السحابيون (GPT-5.6، Claude Sonnet 5) خلال 100–300 مللي ثانية لكل خطوة لكنهم يكلّفون 10$ لكل مليون رمز. يستغرق الوكلاء المحليون (Llama 13B+، Qwen 32B) 2–5 ثوانٍ لكل خطوة لكنهم يكلّفون 0$ بعد العتاد.** نقطة التعادل عند ~50 مليون رمز/شهر. تستخدم معظم الشركات نهجًا هجينًا: السحابة للاستدلال المعقّد، المحلي للأتمتة الروتينية والبيانات الحساسة. يغطي هذا الدليل مقارنات دقيقة للسرعة والتكلفة والقدرة لمساعدتك على القرار.',
       metaDescription: 'الوكلاء السحابيون يستجيبون خلال ⁨100⁩–⁨300⁩ مللي ثانية بتكلفة ⁨20⁩$/مليون رمز. الوكلاء المحليون يستغرقون ⁨2⁩–⁨5⁩ ثوانٍ بتكلفة ⁨0⁩$. التعادل ⁨50⁩ مليون رمز/شهر.',
       publishDate: '2026-04-04',
       dateModified: '2026-08-28',
@@ -569,12 +577,16 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'تستجيب الوكلاء السحابيون (GPT-5.6، Claude Sonnet 5) خلال 100-300 مللي ثانية لكل خطوة لكنهم يكلّفون 10$ لكل مليون رمز؛ بينما يستغرق الوكلاء المحليون (Llama 13B+، Qwen 32B) 2-5 ثوانٍ لكل خطوة لكن بتكلفة 0$ بعد العتاد، مع نقطة تعادل عند نحو 50 مليون رمز شهريًا.' },
+            { type: 'plain-terms', text: 'الوكيل الذكي هو برنامج يستخدم نموذج ذكاء اصطناعي ضمن حلقة لإنجاز مهام متعددة الخطوات. تشغيل هذا النموذج في السحابة (مثل GPT أو Claude) سريع ويُدفع بحسب الاستخدام؛ أما تشغيله محليًا على بطاقة رسومات خاصة بك فأبطأ لكل خطوة لكنه مجاني بمجرد امتلاك العتاد. تنتهي معظم الشركات باستخدام الاثنين معًا: السحابة للمهام الاستدلالية الصعبة، والمحلي للعمل الروتيني وعالي الحجم أو الحساس.' },
+          ],
           items: [
             '**الوكلاء السحابيون (GPT-5.6، Claude Sonnet 5):** الأسرع (50–200 مللي ثانية/خطوة)، أعلى قدرة، أعلى تكلفة، بلا خصوصية.',
             '**الوكلاء المحليون (Llama 13B+):** أبطأ (2–5 ثوانٍ/خطوة)، قدرة أقل، رخيصون على نطاق واسع، خصوصية كاملة.',
             'نقطة التعادل: ~50 مليون رمز/شهر. بعد ذلك، المحلي أرخص.',
             '**الأفضل:** هجين. السحابة للاستدلال المعقّد، المحلي للأتمتة الروتينية.',
-            'اعتبارًا من أبريل 2026، تستخدم معظم الشركات النهج الهجين.',
+            'تستخدم معظم الشركات اليوم النهج الهجين.',
           ],
         },
         performance: {
@@ -810,7 +822,7 @@ schema: {
       title: 'Agentes de IA Local vs Nuvem 2026: Comparação de Custo, Velocidade e Privacidade',
       heroImage: '/images/local-vs-cloud-agents-overview-hero-pt.webp',
       seoTitle: 'Agentes de IA local vs nuvem 2026: qual escolher',
-      intro: '**Os agentes na Nuvem (GPT-5.6, Claude Sonnet 5) respondem em 100–300ms por etapa mas custam $10 por 1M tokens. Os agentes locais (Llama 13B+, Qwen 32B) demoram 2–5 segundos por etapa mas custam $0 após o hardware.** O ponto de equilíbrio está em ~50M tokens/mês. Em abril de 2026, a maioria das empresas usa uma abordagem híbrida: Nuvem para raciocínio complexo, local para automação rotineira e dados sensíveis. Este guia cobre comparações exatas de velocidade, custo e capacidade para ajudá-lo a decidir.',
+      intro: '**Os agentes na Nuvem (GPT-5.6, Claude Sonnet 5) respondem em 100–300ms por etapa mas custam $10 por 1M tokens. Os agentes locais (Llama 13B+, Qwen 32B) demoram 2–5 segundos por etapa mas custam $0 após o hardware.** O ponto de equilíbrio está em ~50M tokens/mês. A maioria das empresas usa uma abordagem híbrida: Nuvem para raciocínio complexo, local para automação rotineira e dados sensíveis. Este guia cobre comparações exatas de velocidade, custo e capacidade para ajudá-lo a decidir.',
       metaDescription: 'Agentes na nuvem respondem em 100–300 ms mas custam $10/1M tokens; os locais demoram 2–5 s mas custam $0. Ponto de equilíbrio: 50M tokens/mês. 2026.',
       publishDate: '2026-04-04',
       dateModified: '2026-08-28',
@@ -837,12 +849,16 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Os agentes na nuvem (GPT-5.6, Claude Sonnet 5) respondem em 100-300ms por etapa, mas custam $10 por 1M de tokens; os agentes locais (Llama 13B+, Qwen 32B) levam de 2 a 5 segundos por etapa, mas custam $0 após o hardware, com o ponto de equilíbrio em torno de 50M tokens/mês.' },
+            { type: 'plain-terms', text: 'Um agente de IA é um programa que usa um modelo de IA em loop para concluir tarefas de várias etapas. Rodar esse modelo na nuvem (como GPT ou Claude) é rápido e cobrado por uso; rodá-lo localmente na sua própria GPU é mais lento por etapa, mas gratuito depois que você tem o hardware. A maioria das empresas acaba usando os dois: nuvem para tarefas de raciocínio complexo, local para trabalho rotineiro, de alto volume ou sensível.' },
+          ],
           items: [
             '**Agentes na Nuvem (GPT-5.6, Claude Sonnet 5):** Os mais rápidos (50–200ms/etapa), maior capacidade, maior custo, sem privacidade.',
             '**Agentes locais (Llama 13B+):** Mais lentos (2–5 s/etapa), menor capacidade, baratos em escala, completamente privados.',
             'Ponto de equilíbrio: ~50M tokens/mês. A partir daí, o local é mais barato.',
             '**O melhor:** Híbrido. Nuvem para raciocínio complexo, local para automação rotineira.',
-            'Em abril de 2026, a maioria das empresas usa a abordagem híbrida.',
+            'A maioria das empresas usa hoje a abordagem híbrida.',
           ],
         },
         performance: {
@@ -1037,7 +1053,7 @@ schema: {
       title: 'Local vs Cloud AI Agenten 2026: Kosten-, Geschwindigkeit- und Datenschutzvergleich',
       heroImage: '/images/local-vs-cloud-agents-overview-hero-de.webp',
       seoTitle: 'Local vs Cloud AI Agenten 2026: Welcher Ansatz für Sie?',
-      intro: '**Cloud-Agenten (GPT-5.6, Claude Sonnet 5) antworten in 100–300ms pro Schritt, kosten aber 18 € pro 1M Token. Local-Agenten (Llama 13B+, Qwen 32B) brauchen 2–5 Sekunden pro Schritt, kosten aber nach der Hardware-Anschaffung 0 €.** Break-even liegt bei ca. 50M Token pro Monat. Ab April 2026 nutzen die meisten Unternehmen einen Hybrid-Ansatz: Cloud für komplexes Reasoning, Local für Routineaufgaben und sensible Daten. Dieser Leitfaden bietet exakte Vergleiche von Geschwindigkeit, Kosten und Fähigkeiten, um Ihre Entscheidung zu treffen.',
+      intro: '**Cloud-Agenten (GPT-5.6, Claude Sonnet 5) antworten in 100–300ms pro Schritt, kosten aber 18 € pro 1M Token. Local-Agenten (Llama 13B+, Qwen 32B) brauchen 2–5 Sekunden pro Schritt, kosten aber nach der Hardware-Anschaffung 0 €.** Break-even liegt bei ca. 50M Token pro Monat. Die meisten Unternehmen nutzen einen Hybrid-Ansatz: Cloud für komplexes Reasoning, Local für Routineaufgaben und sensible Daten. Dieser Leitfaden bietet exakte Vergleiche von Geschwindigkeit, Kosten und Fähigkeiten, um Ihre Entscheidung zu treffen.',
       metaDescription: 'Lokale vs. Cloud-KI-Agenten 2026: Datenschutz, Kosten und Fähigkeiten im Vergleich. Wann lokale Agenten reichen und wann Cloud-APIs nötig sind.',
       publishDate: '2026-04-04',
       dateModified: '2026-08-28',
@@ -1064,12 +1080,16 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Cloud-Agenten (GPT-5.6, Claude Sonnet 5) antworten in 100-300ms pro Schritt, kosten aber $10 pro 1 Mio. Token; lokale Agenten (Llama 13B+, Qwen 32B) brauchen 2-5 Sekunden pro Schritt, kosten aber nach der Hardware-Anschaffung $0 -- der Break-even liegt bei rund 50 Mio. Token pro Monat.' },
+            { type: 'plain-terms', text: 'Ein KI-Agent ist ein Programm, das ein KI-Modell in einer Schleife nutzt, um mehrstufige Aufgaben zu erledigen. Dieses Modell in der Cloud auszuführen (wie GPT oder Claude) ist schnell und nutzungsabhängig abgerechnet; es lokal auf der eigenen GPU auszuführen ist pro Schritt langsamer, aber nach dem Hardwarekauf kostenlos. Die meisten Unternehmen nutzen am Ende beides: Cloud für anspruchsvolle Reasoning-Aufgaben, lokal für Routine-, Hochvolumen- oder sensible Arbeiten.' },
+          ],
           items: [
             '**Cloud-Agenten (GPT-5.6, Claude Sonnet 5):** Schnellste (50–200ms/Schritt), fähigste, teuerste, kein Datenschutz.',
             '**Local-Agenten (Llama 13B+):** Langsamer (2–5 sec/Schritt), weniger fähig, günstig im großen Maßstab, vollständig privat.',
             'Break-even: ~50M Token/Monat. Darüber hinaus ist Local günstiger.',
             '**Best Practice:** Hybrid. Cloud für komplexes Reasoning, Local für Routine-Automatisierung.',
-            'Ab April 2026 nutzen die meisten Unternehmen einen Hybrid-Ansatz.',
+            'Die meisten Unternehmen nutzen heute einen Hybrid-Ansatz.',
           ],
         },
         performance: {
@@ -1309,7 +1329,7 @@ schema: {
       title: 'Agents IA Cloud vs Locaux 2026 : Comparaison des coûts, vitesse et confidentialité',
       heroImage: '/images/local-vs-cloud-agents-overview-hero-fr.webp',
       seoTitle: 'Agents IA Cloud vs Locaux 2026 : Quel approche pour vous?',
-      intro: '**Les agents Cloud (GPT-5.6, Claude Sonnet 5) répondent en 100–300ms par étape, mais coûtent 18 € par 1M tokens. Les agents locaux (Llama 13B+, Qwen 32B) prennent 2–5 secondes par étape, mais coûtent 0 € après l\'acquisition du matériel.** Le point d\'équilibre se situe environ à 50M tokens par mois. À partir d\'avril 2026, la plupart des entreprises adoptent une approche hybride : Cloud pour le raisonnement complexe, Local pour les tâches routinières et les données sensibles. Ce guide offre des comparaisons exactes de vitesse, coûts et capacités pour vous aider à décider.',
+      intro: '**Les agents Cloud (GPT-5.6, Claude Sonnet 5) répondent en 100–300ms par étape, mais coûtent 18 € par 1M tokens. Les agents locaux (Llama 13B+, Qwen 32B) prennent 2–5 secondes par étape, mais coûtent 0 € après l\'acquisition du matériel.** Le point d\'équilibre se situe environ à 50M tokens par mois. La plupart des entreprises adoptent une approche hybride : Cloud pour le raisonnement complexe, Local pour les tâches routinières et les données sensibles. Ce guide offre des comparaisons exactes de vitesse, coûts et capacités pour vous aider à décider.',
       metaDescription: 'Agents Cloud répondent en 100–300ms, coûtent 18€/1M tokens. Agents locaux prennent 2–5 sec, coûtent 0€. Point d\'équilibre 50M tokens/mois. Comparaison 2026 complet avec cadre décisionnel.',
       publishDate: '2026-04-04',
       dateModified: '2026-08-28',
@@ -1336,12 +1356,16 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: "Les agents cloud (GPT-5.6, Claude Sonnet 5) répondent en 100-300ms par étape mais coûtent 10 $ par million de jetons ; les agents locaux (Llama 13B+, Qwen 32B) prennent 2-5 secondes par étape mais coûtent 0 $ après le matériel, avec un seuil de rentabilité autour de 50 millions de jetons par mois." },
+            { type: 'plain-terms', text: "Un agent IA est un programme qui utilise un modèle d'IA en boucle pour accomplir des tâches à plusieurs étapes. Exécuter ce modèle dans le cloud (comme GPT ou Claude) est rapide et facturé à l'usage ; l'exécuter localement sur votre propre GPU est plus lent par étape mais gratuit une fois le matériel acquis. La plupart des entreprises finissent par utiliser les deux : le cloud pour le raisonnement complexe, le local pour les tâches routinières, à fort volume ou sensibles." },
+          ],
           items: [
             '**Agents Cloud (GPT-5.6, Claude Sonnet 5) :** Les plus rapides (50–200ms/étape), les plus capables, les plus chers, pas de confidentialité.',
             '**Agents locaux (Llama 13B+) :** Plus lents (2–5 sec/étape), moins capables, bon marché à grande échelle, entièrement privés.',
             'Point d\'équilibre : ~50M tokens/mois. Au-delà, Local est moins cher.',
             '**Meilleure pratique :** Hybride. Cloud pour le raisonnement complexe, Local pour l\'automatisation routinière.',
-            'À partir d\'avril 2026, la plupart des entreprises utilisent l\'approche hybride.',
+            'La plupart des entreprises utilisent aujourd\'hui l\'approche hybride.',
           ],
         },
         performance: {
@@ -1580,7 +1604,7 @@ schema: {
       title: 'Local vs Cloud AIエージェント2026: コスト・速度・プライバシー比較',
       heroImage: '/images/local-vs-cloud-agents-overview-hero-ja.webp',
       seoTitle: 'Local vs Cloud AIエージェント2026: どちらを選ぶ?',
-      intro: '**クラウドエージェント(GPT-5.6, Claude Sonnet 5)は100–300msで応答しますが、1M tokenあたり¥3,300かかります。ローカルエージェント(Llama 13B+, Qwen 32B)は2–5秒かかりますが、ハードウェア購入後は¥0です。** 損益分岐点は約50M tokens/月です。2026年4月時点、ほとんどの企業はハイブリッドアプローチを採用: 複雑なreasoning用にクラウド、定型作業と機密データ用にローカル。このガイドは速度・コスト・機能の正確な比較を提供し、意思決定をサポートします。',
+      intro: '**クラウドエージェント(GPT-5.6, Claude Sonnet 5)は100–300msで応答しますが、1M tokenあたり¥3,300かかります。ローカルエージェント(Llama 13B+, Qwen 32B)は2–5秒かかりますが、ハードウェア購入後は¥0です。** 損益分岐点は約50M tokens/月です。ほとんどの企業はハイブリッドアプローチを採用しています: 複雑なreasoning用にクラウド、定型作業と機密データ用にローカル。このガイドは速度・コスト・機能の正確な比較を提供し、意思決定をサポートします。',
       metaDescription: 'クラウドエージェント100–300ms応答、¥3,300/1M tokens。ローカルエージェント2–5秒、¥0。損益分岐点50M tokens/月。2026年完全比較ガイド。',
       publishDate: '2026-04-04',
       dateModified: '2026-08-28',
@@ -1607,12 +1631,16 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'クラウドエージェント（GPT-5.6、Claude Sonnet 5）はステップあたり100〜300msで応答しますが、100万トークンあたり$10かかります。ローカルエージェント（Llama 13B+、Qwen 32B）はステップあたり2〜5秒かかりますが、ハードウェア購入後は$0で、損益分岐点は月間約5,000万トークンです。' },
+            { type: 'plain-terms', text: 'AIエージェントとは、AIモデルをループ内で使用して複数ステップのタスクを完了するプログラムです。そのモデルをクラウド上（GPTやClaudeなど）で実行すると高速で従量課金制ですが、自分のGPUでローカル実行するとステップごとの速度は遅くなるものの、ハードウェアを一度購入すれば無料になります。多くの企業は結局両方を使い分けます：複雑な推論タスクにはクラウド、日常的で大量、または機密性の高い作業にはローカルを使います。' },
+          ],
           items: [
             '**Cloudエージェント(GPT-5.6, Claude Sonnet 5):** 最速(50–200ms/ステップ), 最高性能, 最高コスト, プライバシーなし。',
             '**Localエージェント(Llama 13B+):** より遅い(2–5秒/ステップ), 性能は劣る, 大規模運用で安価, 完全プライベート。',
             '損益分岐点: ~50M tokens/月。超えるとLocalが安い。',
             '**ベストプラクティス:** ハイブリッド。複雑reasoning用Cloud, 定型タスク用Local。',
-            '2026年4月時点、ほとんどの企業がハイブリッドアプローチを採用。',
+            'ほとんどの企業が現在ハイブリッドアプローチを採用しています。',
           ],
         },
         performance: {
@@ -1851,7 +1879,7 @@ schema: {
       title: '本地 vs 云端AI代理2026: 成本、速度和隐私对比',
       heroImage: '/images/local-vs-cloud-agents-overview-hero-zh.webp',
       seoTitle: '本地 vs 云端AI代理2026: 如何选择?',
-      intro: '**云端代理(GPT-5.6、Claude Sonnet 5)响应时间100–300ms，但成本高达每百万令牌$10。本地代理(Llama 13B+、Qwen 32B)需要2–5秒，但硬件购置后成本为零。** 损益分界点约为每月50M令牌。截至2026年4月，大多数企业采用混合方案：复杂推理用云端，常规任务和敏感数据用本地。本指南提供精确的速度、成本和能力对比，帮助您做出决策。',
+      intro: '**云端代理(GPT-5.6、Claude Sonnet 5)响应时间100–300ms，但成本高达每百万令牌$10。本地代理(Llama 13B+、Qwen 32B)需要2–5秒，但硬件购置后成本为零。** 损益分界点约为每月50M令牌。大多数企业采用混合方案：复杂推理用云端，常规任务和敏感数据用本地。本指南提供精确的速度、成本和能力对比，帮助您做出决策。',
       metaDescription: '云端代理100–300ms响应，$10/1M令牌。本地代理2–5秒，$0。损益分界点50M令牌/月。2026完整比较指南。',
       publishDate: '2026-04-04',
       dateModified: '2026-08-28',
@@ -1878,12 +1906,16 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: '云端代理（GPT-5.6、Claude Sonnet 5）每步响应时间为100-300毫秒，但每百万token费用为$10；本地代理（Llama 13B+、Qwen 32B）每步需要2-5秒，但硬件购置后成本为$0，损益平衡点约为每月5000万token。' },
+            { type: 'plain-terms', text: 'AI代理是一个在循环中使用AI模型来完成多步骤任务的程序。在云端运行该模型（如GPT或Claude）速度快且按使用量付费；在自己的GPU上本地运行则每步较慢，但一旦拥有硬件即可免费使用。大多数企业最终会两者兼用：云端用于复杂推理任务，本地用于日常、高频或敏感工作。' },
+          ],
           items: [
             '**云端代理(GPT-5.6、Claude Sonnet 5):** 最快(50–200ms/步)、功能最强、成本最高、无隐私保护。',
             '**本地代理(Llama 13B+):** 较慢(2–5秒/步)、功能较弱、大规模运行成本低、完全隐私。',
             '损益分界点: ~50M令牌/月。超过此点，本地更便宜。',
             '**最佳实践:** 混合。复杂推理用云端，常规任务用本地。',
-            '截至2026年4月，大多数企业采用混合方案。',
+            '如今大多数企业采用混合方案。',
           ],
         },
         performance: {
@@ -2122,7 +2154,7 @@ schema: {
       title: '로컬 vs 클라우드 AI 에이전트 2026: 비용, 속도, 개인정보 보호 비교',
     heroImage: '/images/local-vs-cloud-agents-overview-hero-ko.webp',
       seoTitle: '로컬 vs 클라우드 AI 에이전트 2026: 어느 쪽이 적합한가?',
-      intro: '**클라우드 에이전트(GPT-5.6, Claude Sonnet 5)는 단계당 100–300ms로 응답하지만 100만 토큰당 $10의 비용이 발생합니다. 로컬 에이전트(Llama 13B+, Qwen 32B)는 단계당 2–5초가 소요되지만 하드웨어 구입 후에는 비용이 $0입니다.** 손익분기점은 월 약 5,000만 토큰입니다. 2026년 4월 기준으로 대부분의 기업은 하이브리드 방식을 사용합니다. 복잡한 추론에는 클라우드를, 일상적인 자동화 및 민감한 데이터 처리에는 로컬을 활용합니다. 이 가이드에서는 정확한 속도, 비용, 기능 비교를 통해 올바른 선택을 내리실 수 있도록 돕습니다.',
+      intro: '**클라우드 에이전트(GPT-5.6, Claude Sonnet 5)는 단계당 100–300ms로 응답하지만 100만 토큰당 $10의 비용이 발생합니다. 로컬 에이전트(Llama 13B+, Qwen 32B)는 단계당 2–5초가 소요되지만 하드웨어 구입 후에는 비용이 $0입니다.** 손익분기점은 월 약 5,000만 토큰입니다. 대부분의 기업은 하이브리드 방식을 사용합니다. 복잡한 추론에는 클라우드를, 일상적인 자동화 및 민감한 데이터 처리에는 로컬을 활용합니다. 이 가이드에서는 정확한 속도, 비용, 기능 비교를 통해 올바른 선택을 내리실 수 있도록 돕습니다.',
       metaDescription: '클라우드 에이전트는 100–300ms로 응답하지만 100만 토큰당 $10의 비용이 발생합니다. 로컬 에이전트는 2–5초가 소요되지만 비용은 $0입니다. 손익분기점은 월 5,000만 토큰입니다. 의사결정 프레임워크를 포함한 2026년 전체 비교.',
       publishDate: '2026-04-04',
       dateModified: '2026-08-28',
@@ -2149,12 +2181,16 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: '클라우드 에이전트(GPT-5.6, Claude Sonnet 5)는 단계당 100-300ms로 응답하지만 100만 토큰당 $10의 비용이 들며, 로컬 에이전트(Llama 13B+, Qwen 32B)는 단계당 2-5초가 걸리지만 하드웨어 구입 후에는 $0이고, 손익분기점은 월 약 5,000만 토큰입니다.' },
+            { type: 'plain-terms', text: 'AI 에이전트란 AI 모델을 반복 실행하여 여러 단계의 작업을 완료하는 프로그램입니다. 이 모델을 클라우드(GPT나 Claude 등)에서 실행하면 빠르고 사용량만큼 비용이 발생하며, 자신의 GPU에서 로컬로 실행하면 단계당 속도는 느리지만 하드웨어를 구입한 후에는 무료입니다. 대부분의 기업은 결국 두 가지를 함께 사용합니다: 복잡한 추론 작업에는 클라우드를, 일상적이고 대량이거나 민감한 작업에는 로컬을 사용합니다.' },
+          ],
           items: [
             '**클라우드 에이전트(GPT-5.6, Claude Sonnet 5):** 가장 빠름(단계당 50–200ms), 가장 유능하지만 비용이 가장 높고 개인정보 보호가 되지 않습니다.',
             '**로컬 에이전트(Llama 13B+):** 느림(단계당 2–5초), 기능이 다소 부족하지만 대규모 사용 시 저렴하고 완전히 비공개입니다.',
             '손익분기점: 월 약 5,000만 토큰. 이를 초과하면 로컬이 더 저렴합니다.',
             '**최선의 선택:** 하이브리드. 복잡한 추론에는 클라우드를, 일상적인 자동화에는 로컬을 사용하십시오.',
-            '2026년 4월 기준으로 대부분의 기업이 하이브리드 방식을 사용하고 있습니다.',
+            '현재 대부분의 기업이 하이브리드 방식을 사용하고 있습니다.',
           ],
         },
         performance: {

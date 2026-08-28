@@ -14,10 +14,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       heroImage: '/images/why-enterprises-use-local-llms-overview-hero-en.webp',
       dateModified: '2026-08-28',
       seoTitle: 'Why Enterprises Choose Local LLMs',
-      intro: 'Enterprises deploy local LLMs for three reasons: cost savings (eliminate per-token API fees), compliance (GDPR, HIPAA require data residency), and control (customize models, audit everything, no vendor lock-in). As of April 2026, 40% of enterprises with 500+ employees are evaluating or deploying on-premises AI.',
+      intro: 'Enterprises deploy local LLMs for three reasons: cost savings (eliminate per-token API fees), compliance (GDPR, HIPAA require data residency), and control (customize models, audit everything, no vendor lock-in). A significant share of large enterprises are evaluating or deploying on-premises AI.',
       metaDescription: 'Why enterprises use local LLMs: cost analysis, GDPR/HIPAA compliance, data sovereignty, vendor lock-in avoidance.',
       publishDate: '2026-04-04',
-      leadAnswerBlock: '**Enterprises deploy local LLMs for three reasons: cost savings (eliminate per-token API fees), compliance (GDPR, HIPAA require data residency), and control (customize models, audit everything, no vendo.**',
+      leadAnswerBlock: '**Enterprises deploy local LLMs for three reasons: cost savings (eliminate per-token API fees), compliance (GDPR, HIPAA require data residency), and control (customize models, audit everything, no vendor lock-in).**',
       audience: 'Engineers deploying local LLMs in production or enterprise environments',
       readTime: '11 min read',
       educationalLevel: 'Advanced',
@@ -39,6 +39,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Enterprises deploy local LLMs for three reasons -- cost savings on high-volume token usage, regulatory compliance (GDPR, HIPAA, SOC2) that requires data residency, and control over customization, audit trails, and vendor independence.' },
+            { type: 'plain-terms', text: 'Instead of paying a cloud AI company per request, a company can run the AI model on its own servers. This saves money once usage is high enough, keeps sensitive data from ever leaving company infrastructure (important for healthcare, finance, and government), and lets the company customize the model and audit exactly how it is used -- without depending on an outside vendor.' },
+          ],
           items: [
             '**Cost:** Enterprises processing 1B+ tokens/month save $100k-500k annually by eliminating per-token API fees.',
             '**Compliance:** GDPR (data residency), HIPAA (patient privacy), and SOC2 (audit trails) require on-premises AI.',
@@ -46,7 +50,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**Vendor lock-in:** Open-source local LLMs avoid dependence on OpenAI/Anthropic pricing and availability.',
             '**Security:** Keep proprietary data and algorithms completely on-premises, reducing breach risk and regulatory exposure.',
             '**Scalability:** Deploy across multiple GPUs and Kubernetes clusters for millions of concurrent tokens/month.',
-            'As of April 2026, break-even point is 200M-500M tokens/month depending on data residency costs.',
+            'Break-even point is typically 200M-500M tokens/month, depending on data residency costs.',
             'Major industries adopting: finance, healthcare, government, legal, energy, and manufacturing.',
           ],
         },
@@ -281,7 +285,7 @@ schema: {
       title: 'Por qué las empresas usan LLMs locales: Costo, Cumplimiento y Control',
       heroImage: '/images/why-enterprises-use-local-llms-overview-hero-es.webp',
       seoTitle: 'Por qué las empresas eligen LLMs locales',
-      intro: 'Las empresas implementan LLMs locales por tres razones: ahorro de costos (eliminan las tarifas de API por token), cumplimiento normativo (GDPR, HIPAA exigen residencia de datos) y control (personalizar modelos, auditar todo, sin dependencia de proveedores). En abril de 2026, el 40% de las empresas con 500 o más empleados están evaluando o implementando IA local.',
+      intro: 'Las empresas implementan LLMs locales por tres razones: ahorro de costos (eliminan las tarifas de API por token), cumplimiento normativo (GDPR, HIPAA exigen residencia de datos) y control (personalizar modelos, auditar todo, sin dependencia de proveedores). Una parte significativa de las grandes empresas está evaluando o implementando IA local.',
       metaDescription: 'Por qué las empresas usan LLMs locales: análisis de costos, cumplimiento GDPR/HIPAA, soberanía de datos, evitar la dependencia de proveedores.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**Las empresas implementan LLMs locales por tres razones: ahorro de costos (eliminan las tarifas de API por token), cumplimiento normativo (GDPR, HIPAA exigen residencia de datos) y control (personalizar modelos, auditar todo, sin dependencia de proveedores).**',
@@ -305,6 +309,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Las empresas implementan LLMs locales por tres razones: ahorro de costos en uso de alto volumen, cumplimiento normativo (GDPR, HIPAA, SOC2) que exige residencia de datos, y control sobre la personalización, auditoría y la independencia de proveedores.' },
+            { type: 'plain-terms', text: 'En lugar de pagar por cada solicitud a una empresa de IA en la nube, una empresa puede ejecutar el modelo de IA en sus propios servidores. Esto ahorra dinero cuando el uso es suficientemente alto, evita que los datos sensibles salgan de la infraestructura de la empresa (importante en salud, finanzas y gobierno), y permite personalizar el modelo y auditar exactamente cómo se usa, sin depender de un proveedor externo.' },
+          ],
           items: [
             '**Costo:** Las empresas que procesan más de 1.000 M de tokens/mes ahorran entre $100k y $500k al año al eliminar las tarifas de API por token.',
             '**Cumplimiento:** GDPR (residencia de datos), HIPAA (privacidad de pacientes) y SOC2 (registros de auditoría) requieren IA local.',
@@ -312,7 +320,7 @@ schema: {
             '**Dependencia de proveedores:** Los LLMs locales de código abierto evitan la dependencia de precios y disponibilidad de OpenAI/Anthropic.',
             '**Seguridad:** Mantén los datos y algoritmos propietarios completamente en local, reduciendo el riesgo de brechas y la exposición regulatoria.',
             '**Escalabilidad:** Despliega en múltiples GPUs y clústeres de Kubernetes para millones de tokens concurrentes/mes.',
-            'En abril de 2026, el punto de equilibrio es de 200 M–500 M tokens/mes según los costos de residencia de datos.',
+            'El punto de equilibrio suele ser de 200 M-500 M tokens/mes, según los costos de residencia de datos.',
             'Principales industrias que adoptan: finanzas, sanidad, gobierno, legal, energía y manufactura.',
           ],
         },
@@ -547,7 +555,7 @@ schema: {
       title: 'لماذا تستخدم المؤسسات نماذج ⁨LLM⁩ المحلية: التكلفة، والامتثال، والتحكم',
       heroImage: '/images/why-enterprises-use-local-llms-overview-hero-ar.webp',
       seoTitle: 'لماذا تختار المؤسسات نماذج ⁨LLM⁩ المحلية ⁨2026⁩؟',
-      intro: 'تنشر المؤسسات نماذج LLM المحلية لثلاثة أسباب: توفير التكلفة (إلغاء رسوم API لكل token)، والامتثال التنظيمي (يفرض GDPR وHIPAA إقامة البيانات)، والتحكم (تخصيص النماذج، وتدقيق كل شيء، وبلا اعتماد على المزوّد). في أبريل 2026، 40% من المؤسسات التي لديها 500 موظف أو أكثر تقيّم أو تنشر ذكاءً اصطناعيًا محليًا.',
+      intro: 'تنشر المؤسسات نماذج LLM المحلية لثلاثة أسباب: توفير التكلفة (إلغاء رسوم API لكل token)، والامتثال التنظيمي (يفرض GDPR وHIPAA إقامة البيانات)، والتحكم (تخصيص النماذج، وتدقيق كل شيء، وبلا اعتماد على المزوّد). تقيّم أو تنشر نسبة كبيرة من المؤسسات الكبرى ذكاءً اصطناعيًا محليًا.',
       metaDescription: 'توفّر المؤسسات بين $⁨100k⁩ و$⁨500k⁩ سنويًا بتجنّب رسوم ⁨API⁩ لكل ⁨token⁩. دليل التكلفة والامتثال لـ ⁨GDPR⁩ و⁨HIPAA⁩ وسيادة البيانات.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**تنشر المؤسسات نماذج LLM المحلية لثلاثة أسباب: توفير التكلفة (إلغاء رسوم API لكل token)، والامتثال التنظيمي (يفرض GDPR وHIPAA إقامة البيانات)، والتحكم (تخصيص النماذج، وتدقيق كل شيء، وبلا اعتماد على المزوّد).**',
@@ -571,6 +579,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'تنشر المؤسسات نماذج LLM المحلية لثلاثة أسباب: توفير التكلفة عند الاستخدام بحجم كبير، والامتثال التنظيمي (GDPR وHIPAA وSOC2) الذي يفرض إقامة البيانات، والتحكم في التخصيص وسجلات التدقيق والاستقلال عن المزوّدين.' },
+            { type: 'plain-terms', text: 'بدلاً من الدفع مقابل كل طلب لشركة ذكاء اصطناعي سحابية، يمكن للمؤسسة تشغيل نموذج الذكاء الاصطناعي على خوادمها الخاصة. هذا يوفر المال عندما يكون الاستخدام كبيرًا بما يكفي، ويمنع البيانات الحساسة من مغادرة بنية المؤسسة التحتية إطلاقًا (مهم في الرعاية الصحية والمالية والحكومة)، ويتيح للمؤسسة تخصيص النموذج وتدقيق كيفية استخدامه بدقة -- دون الاعتماد على مزوّد خارجي.' },
+          ],
           items: [
             '**التكلفة:** المؤسسات التي تعالج أكثر من 1000 مليون token/شهر توفّر بين $100k و$500k سنويًا بإلغاء رسوم API لكل token.',
             '**الامتثال:** GDPR (إقامة البيانات)، وHIPAA (خصوصية المرضى)، وSOC2 (سجلات التدقيق) تتطلب ذكاءً اصطناعيًا محليًا.',
@@ -578,7 +590,7 @@ schema: {
             '**الاعتماد على المزوّد:** نماذج LLM المحلية مفتوحة المصدر تتجنّب الاعتماد على أسعار وتوفر OpenAI/Anthropic.',
             '**الأمان:** أبقِ البيانات والخوارزميات المملوكة محليًا بالكامل، مما يقلّل خطر الاختراق والتعرّض التنظيمي.',
             '**القابلية للتوسع:** انشر عبر عدة وحدات GPU وعناقيد Kubernetes لملايين token المتزامنة/شهر.',
-            'في أبريل 2026، نقطة التعادل هي 200–500 مليون token/شهر حسب تكاليف إقامة البيانات.',
+            'نقطة التعادل عادةً هي 200-500 مليون رمز شهريًا حسب تكاليف إقامة البيانات.',
             'أبرز القطاعات المتبنّية: المالية، والرعاية الصحية، والحكومة، والقانون، والطاقة، والتصنيع.',
           ],
         },
@@ -816,7 +828,7 @@ schema: {
       title: 'Por que as empresas usam LLMs locais: Custo, Conformidade e Controle',
       heroImage: '/images/why-enterprises-use-local-llms-overview-hero-pt.webp',
       seoTitle: 'Por que as empresas escolhem LLMs locais',
-      intro: 'As empresas implantam LLMs locais por três razões: economia de custos (eliminam as tarifas de API por token), conformidade regulatória (LGPD, GDPR, HIPAA exigem residência de dados) e controle (personalizar modelos, auditar tudo, sem dependência de fornecedores). Em abril de 2026, 40% das empresas com 500 ou mais funcionários estão avaliando ou implantando IA local.',
+      intro: 'As empresas implantam LLMs locais por três razões: economia de custos (eliminam as tarifas de API por token), conformidade regulatória (LGPD, GDPR, HIPAA exigem residência de dados) e controle (personalizar modelos, auditar tudo, sem dependência de fornecedores). Uma parcela significativa das grandes empresas está avaliando ou implantando IA local.',
       metaDescription: 'Por que as empresas usam LLMs locais: análise de custos, conformidade LGPD/GDPR/HIPAA, soberania de dados, evitar dependência de fornecedores.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**As empresas implantam LLMs locais por três razões: economia de custos (eliminam as tarifas de API por token), conformidade regulatória (LGPD, GDPR, HIPAA exigem residência de dados) e controle (personalizar modelos, auditar tudo, sem dependência de fornecedores).**',
@@ -837,6 +849,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Empresas brasileiras implantam LLMs locais por três motivos principais: economia de custo em alto volume de uso, conformidade com a LGPD/ANPD (que exige proteção adequada para dados pessoais), e controle total sobre modelos e auditoria, sem depender de fornecedores externos.' },
+            { type: 'plain-terms', text: 'Em vez de pagar por uso a uma empresa de IA na nuvem, uma empresa pode rodar o modelo de IA em seus próprios servidores. Isso economiza dinheiro quando o volume de uso é alto, mantém os dados pessoais de clientes brasileiros dentro da infraestrutura da empresa (essencial para conformidade com a LGPD) e permite personalizar o modelo e auditar exatamente como ele é usado.' },
+          ],
           items: [
             '**Economia de custo**: empresas que processam mais de 1 bilhão de tokens/mês economizam R$ 500K-2,5M/ano eliminando tarifas de API por token.',
             '**LGPD/ANPD**: a LGPD brasileira e as diretrizes da ANPD exigem que dados pessoais de brasileiros sejam tratados com proteções adequadas — a implantação local elimina transferências internacionais.',
@@ -849,11 +865,11 @@ schema: {
           id: 'cost-analysis',
           title: 'Análise de custo: local vs. API na nuvem',
           content: [
-            '**O custo de APIs de LLM na nuvem em escala é proibitivo para a maioria das empresas.** Claude Sonnet 5 custa $3/1M tokens de entrada + $15/1M de saída. Uma equipe de 100 desenvolvedores gerando 10M tokens/dia = $30/dia em prompts + $150/dia em saídas = ~$54.000/mês.',
+            '**O custo de APIs de LLM na nuvem em escala é proibitivo para a maioria das empresas.** Claude Sonnet 5 custa $2/1M tokens de entrada + $10/1M de saída. Uma equipe de 100 desenvolvedores gerando 10M tokens/dia = $20/dia em prompts + $100/dia em saídas = ~$3.600/mês.',
             'Hardware local de produção (8× RTX 4090, ~$40.000) executando Llama 3.3 70B ou Qwen3.8-27B cobre a mesma carga de trabalho a ~$3.000/mês em eletricidade e manutenção. Ponto de equilíbrio: ~10 meses.',
           ],
           rows: [
-            { 'Serviço': 'Claude Sonnet 5', 'Custo por 1M tokens (entrada)': '$3,00', 'Custo por 1M tokens (saída)': '$15,00', 'Custo mensal (10B tokens)': '$180.000' },
+            { 'Serviço': 'Claude Sonnet 5', 'Custo por 1M tokens (entrada)': '$2,00', 'Custo por 1M tokens (saída)': '$10,00', 'Custo mensal (10B tokens)': '$60.000' },
             { 'Serviço': 'GPT-5.6', 'Custo por 1M tokens (entrada)': '$2,50', 'Custo por 1M tokens (saída)': '$10,00', 'Custo mensal (10B tokens)': '$125.000' },
             { 'Serviço': 'LLM local (hardware próprio)', 'Custo por 1M tokens (entrada)': '~$0,01 (eletricidade)', 'Custo por 1M tokens (saída)': '~$0,01', 'Custo mensal (10B tokens)': '~$1.000-3.000' },
           ],
@@ -889,7 +905,7 @@ schema: {
           faqs: [
             { q: 'Por que as empresas preferem LLMs locais em vez de APIs na nuvem?', a: 'As três razões principais são: (1) custo — empresas com 1B+ tokens/mês economizam $100K-500K/ano; (2) conformidade — LGPD, GDPR e HIPAA exigem residência de dados; (3) controle — modelos customizados, log de auditoria, sem dependência de fornecedor.' },
             { q: 'LLMs locais são compatíveis com a LGPD?', a: 'Sim. Executar LLMs localmente é a arquitetura de menor risco para conformidade com LGPD. Os dados pessoais de clientes brasileiros nunca saem do hardware da organização, eliminando transferências internacionais e o requisito de mecanismos de transferência adicional.' },
-            { q: 'Qual é o ROI típico de LLMs locais para empresas?', a: 'Para cargas de trabalho de 1B+ tokens/mês, o hardware de $50K-200K geralmente se paga em 6-18 meses vs. APIs na nuvem como Claude Sonnet 5 ($3/1M tokens). A eletricidade adiciona $2.000-5.000/mês para clusters de 4-8 GPUs.' },
+            { q: 'Qual é o ROI típico de LLMs locais para empresas?', a: 'Para cargas de trabalho de 1B+ tokens/mês, o hardware de $50K-200K geralmente se paga em 6-18 meses vs. APIs na nuvem como Claude Sonnet 5 ($2/1M tokens de entrada). A eletricidade adiciona $2.000-5.000/mês para clusters de 4-8 GPUs.' },
             { q: 'Como as empresas começam com LLMs locais?', a: 'O caminho mais comum: (1) piloto com Ollama em hardware de desenvolvedor existente; (2) avaliar modelos (Qwen3.8-27B, Llama 3.3 70B) em tarefas reais; (3) implantar servidor de produção com vLLM; (4) integrar com sistemas existentes via API compatível com OpenAI.' },
           ],
         },
@@ -941,7 +957,7 @@ schema: {
       title: 'Warum Unternehmen lokale LLMs einsetzen: Kosten, Compliance und Kontrolle',
       heroImage: '/images/why-enterprises-use-local-llms-overview-hero-de.webp',
       seoTitle: 'Warum Unternehmen lokale LLMs wählen',
-      intro: 'Unternehmen setzen lokale LLMs aus drei Gründen ein: Kosteneinsparungen (API-Gebühren pro Token eliminieren), Compliance (DSGVO, BSI-Grundschutz erfordern Datenspeicherung), und Kontrolle (Modelle anpassen, alles überwachen, keine Herstellerbindung). Im April 2026 evaluieren oder setzen 40% der Unternehmen mit 500+ Mitarbeitern On-Premises-KI ein.',
+      intro: 'Unternehmen setzen lokale LLMs aus drei Gründen ein: Kosteneinsparungen (API-Gebühren pro Token eliminieren), Compliance (DSGVO, BSI-Grundschutz erfordern Datenspeicherung), und Kontrolle (Modelle anpassen, alles überwachen, keine Herstellerbindung). Ein erheblicher Anteil großer Unternehmen evaluiert oder setzt bereits On-Premises-KI ein.',
       metaDescription: 'Warum Unternehmen lokale LLMs einsetzen: Kostenanalyse, DSGVO/BSI-Compliance, Datenschutz, Vermeidung von Herstellerbindung.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**Unternehmen setzen lokale LLMs aus drei Gründen ein: Kosteneinsparungen (API-Gebühren pro Token eliminieren), Compliance (DSGVO, BSI-Grundschutz erfordern Datenspeicherung), und Kontrolle (Modelle anpassen, alles überwachen, keine Herstellerbindung).**',
@@ -965,6 +981,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Unternehmen setzen lokale LLMs aus drei Gründen ein: Kosteneinsparungen bei hohem Nutzungsvolumen, regulatorische Compliance (DSGVO, HIPAA, SOC2), die Datenresidenz erfordert, und Kontrolle über Anpassung, Audit-Trails und Herstellerunabhängigkeit.' },
+            { type: 'plain-terms', text: 'Statt pro Anfrage an ein Cloud-KI-Unternehmen zu zahlen, kann ein Unternehmen das KI-Modell auf eigenen Servern betreiben. Das spart Geld, sobald die Nutzung hoch genug ist, hält sensible Daten davon ab, die Unternehmensinfrastruktur jemals zu verlassen (wichtig für Gesundheitswesen, Finanzen und Behörden), und ermöglicht es, das Modell anzupassen und genau zu prüfen, wie es genutzt wird -- ohne Abhängigkeit von einem externen Anbieter.' },
+          ],
           items: [
             '**Kosten:** Unternehmen, die 1Mrd+ Token/Monat verarbeiten, sparen jährlich €90k-450k durch Eliminierung von API-Gebühren pro Token.',
             '**Compliance:** DSGVO (Datenspeicherung), BSI-Grundschutz (Sicherheit) und ISO 27001 (Audit-Protokolle) erfordern On-Premises-KI.',
@@ -972,7 +992,7 @@ schema: {
             '**Herstellerbindung vermeiden:** Open-Source-lokale LLMs vermeiden Abhängigkeit von OpenAI/Anthropic-Preisen und -Verfügbarkeit.',
             '**Sicherheit:** Halten Sie proprietäre Daten und Algorithmen vollständig vor Ort, reduzieren Sie Brechen-Risiko und regulatorische Exposition.',
             '**Skalierbarkeit:** Bereitstellung über mehrere GPUs und Kubernetes-Cluster für Millionen gleichzeitiger Token/Monat.',
-            'Im April 2026 liegt der Break-Even-Punkt bei 200-500Mio. Token/Monat, abhängig von Datenspeicherungskosten.',
+            'Der Break-Even-Punkt liegt typischerweise bei 200-500 Mio. Token/Monat, abhängig von Datenspeicherungskosten.',
             'Hauptbranchen mit Einführung: Finanzwesen, Gesundheitswesen, Regierung, Recht, Energie und Fertigung.',
           ],
         },
@@ -1185,7 +1205,7 @@ schema: {
       title: 'Pourquoi les entreprises choisissent les LLM locaux : Coût, Conformité et Contrôle',
       heroImage: '/images/why-enterprises-use-local-llms-overview-hero-fr.webp',
       seoTitle: 'Pourquoi les entreprises choisissent les LLM locaux',
-      intro: 'Les entreprises déploient les LLM locaux pour trois raisons : économies de coûts (éliminer les frais API par jeton), conformité (RGPD, CNIL exigent la résidence des données), et contrôle (personnaliser les modèles, auditer tout, pas de verrouillage fournisseur). En avril 2026, 40% des entreprises de 500+ employés évaluent ou déploient l\'IA sur site.',
+      intro: 'Les entreprises déploient les LLM locaux pour trois raisons : économies de coûts (éliminer les frais API par jeton), conformité (RGPD, CNIL exigent la résidence des données), et contrôle (personnaliser les modèles, auditer tout, pas de verrouillage fournisseur). Une part importante des grandes entreprises évaluent ou déploient l\'IA sur site.',
       metaDescription: 'Pourquoi les entreprises utilisent les LLM locaux : analyse des coûts, conformité RGPD/CNIL, souveraineté des données, évitement du verrouillage fournisseur.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**Les entreprises déploient les LLM locaux pour trois raisons : économies de coûts (éliminer les frais API par jeton), conformité (RGPD, CNIL exigent la résidence des données), et contrôle (personnaliser les modèles, auditer tout, pas de verrouillage fournisseur).**',
@@ -1209,6 +1229,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: "Les entreprises déploient des LLM locaux pour trois raisons : des économies de coûts sur un usage à fort volume, la conformité réglementaire (RGPD, HIPAA, SOC2) qui exige la résidence des données, et le contrôle sur la personnalisation, les pistes d'audit et l'indépendance vis-à-vis des fournisseurs." },
+            { type: 'plain-terms', text: "Plutôt que de payer une entreprise d'IA cloud à chaque requête, une entreprise peut exécuter le modèle d'IA sur ses propres serveurs. Cela permet d'économiser de l'argent dès que l'usage est suffisamment élevé, empêche les données sensibles de quitter l'infrastructure de l'entreprise (important pour la santé, la finance et le secteur public), et permet de personnaliser le modèle et d'auditer précisément son utilisation -- sans dépendre d'un fournisseur externe." },
+          ],
           items: [
             '**Coût :** Les entreprises traitant 1Md+ jetons/mois économisent €85k-425k annuellement en éliminant les frais API par jeton.',
             '**Conformité :** RGPD (résidence des données), CNIL (protection des données) et ISO 27001 (audit-pistes) exigent l\'IA sur site.',
@@ -1216,7 +1240,7 @@ schema: {
             '**Éviter le verrouillage fournisseur :** Les LLM locaux open-source évitent la dépendance à la tarification et disponibilité OpenAI/Anthropic.',
             '**Sécurité :** Gardez les données et algorithmes propriétaires entièrement sur site, réduisez le risque de violation et l\'exposition réglementaire.',
             '**Évolutivité :** Déployez sur plusieurs GPU et clusters Kubernetes pour des millions de jetons concurrents/mois.',
-            'En avril 2026, le point d\'équilibre se situe à 200-500M jetons/mois selon les coûts de résidence des données.',
+            'Le seuil de rentabilité se situe généralement à 200-500M jetons/mois, selon les coûts de résidence des données.',
             'Industries majeures adoptant : finance, santé, gouvernement, droit, énergie et fabrication.',
           ],
         },
@@ -1429,7 +1453,7 @@ schema: {
       title: 'エンタープライズがローカルLLMを使用する理由：コスト、コンプライアンス、制御',
       heroImage: '/images/why-enterprises-use-local-llms-overview-hero-ja.webp',
       seoTitle: 'エンタープライズがローカルLLMを選ぶ理由',
-      intro: 'エンタープライズはローカルLLMを3つの理由で導入しています：コスト削減（トークンあたりのAPI料金を排除）、コンプライアンス（METI指針がデータ内での処理を必要とする）、制御（モデルをカスタマイズ、すべて監査、ベンダーロックインなし）。2026年4月現在、500人以上の従業員を持つエンタープライズの40%がオンプレミスAIを評価または導入しています。',
+      intro: 'エンタープライズはローカルLLMを3つの理由で導入しています：コスト削減（トークンあたりのAPI料金を排除）、コンプライアンス（METI指針がデータ内での処理を必要とする）、制御（モデルをカスタマイズ、すべて監査、ベンダーロックインなし）。多くの大企業がオンプレミスAIを評価または導入しています。',
       metaDescription: 'エンタープライズがローカルLLMを使う理由：コスト分析、METI/データセキュリティ法コンプライアンス、データ主権、ベンダーロックイン回避。',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**エンタープライズはローカルLLMを3つの理由で導入しています：コスト削減（トークンあたりのAPI料金を排除）、コンプライアンス（METI指針がデータ内での処理を必要とする）、制御（モデルをカスタマイズ、すべて監査、ベンダーロックインなし）。**',
@@ -1453,6 +1477,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: '企業がローカルLLMを導入する理由は3つあります：大量利用時のコスト削減、データの現地保存を求める規制コンプライアンス（GDPR、HIPAA、SOC2）、そしてカスタマイズ・監査証跡・ベンダー非依存に関する制御です。' },
+            { type: 'plain-terms', text: 'クラウドAI企業にリクエストごとに料金を払う代わりに、企業は自社サーバーでAIモデルを実行できます。利用量が十分に多ければコスト削減になり、機密データが企業インフラの外に出ることを防ぎ（医療、金融、政府機関にとって重要）、モデルをカスタマイズし、その使われ方を正確に監査できます -- 外部ベンダーに依存することなく。' },
+          ],
           items: [
             '**コスト：** 1Md+ トークン/月を処理しているエンタープライズはトークンあたりのAPI料金を排除することで年間¥10M-55M節約します。',
             '**コンプライアンス：** METI AI統治2024（日本）、データセキュリティ法（中国）、およびASEAN地域規制はオンプレミスAIを要求します。',
@@ -1460,7 +1488,7 @@ schema: {
             '**ベンダーロックインを回避：** オープンソースローカルLLM（Meta Llama、Qwen、Mistral）はOpenAI/Anthropicの価格と可用性への依存を回避します。',
             '**セキュリティ：** 専有データとアルゴリズムを完全にオンプレミスに保つ、侵害リスクと規制上の露出を削減。',
             '**スケーラビリティ：** 複数のGPUおよびKubernetesクラスター全体にデプロイして、毎月数百万の同時トークン。',
-            '2026年4月現在、損益分岐点は200-500M トークン/月（データ保存コストに依存）です。',
+            '損益分岐点は通常、月間200-500Mトークン（データ保存コストに依存）です。',
             '主要業界の採用：金融、医療、政府、法務、エネルギー、および製造。',
           ],
         },
@@ -1673,7 +1701,7 @@ schema: {
       title: '企业使用本地LLM的原因：成本、合规性和控制',
       heroImage: '/images/why-enterprises-use-local-llms-overview-hero-zh.webp',
       seoTitle: '企业为什么选择本地LLM',
-      intro: '企业部署本地LLM的三个原因：成本节省（消除每个令牌API费用）、合规性（数据安全法要求数据内居住）、和控制（定制模型、审计一切、无供应商锁定）。截至2026年4月，拥有500多名员工的40%企业正在评估或部署本地AI。',
+      intro: '企业部署本地LLM的三个原因：成本节省（消除每个令牌API费用）、合规性（数据安全法要求数据内居住）、和控制（定制模型、审计一切、无供应商锁定）。相当一部分大型企业正在评估或部署本地AI。',
       metaDescription: '企业使用本地LLM的原因：成本分析、数据安全法合规性、数据主权、避免供应商锁定。',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**企业部署本地LLM的三个原因：成本节省（消除每个令牌API费用）、合规性（数据安全法要求数据内居住）、和控制（定制模型、审计一切、无供应商锁定）。**',
@@ -1697,6 +1725,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: '企业出于三个原因部署本地LLM：大量使用时节省成本、需要数据本地化的合规要求（GDPR、HIPAA、SOC2），以及对定制化、审计追踪和供应商独立性的掌控。' },
+            { type: 'plain-terms', text: '企业无需为每次请求向云端AI公司付费，而是可以在自己的服务器上运行AI模型。这在使用量足够大时可以省钱，能确保敏感数据永远不离开企业基础设施（对医疗、金融和政府部门至关重要），并让企业能够定制模型并精确审计其使用方式——无需依赖外部供应商。' },
+          ],
           items: [
             '**成本：** 处理1Md+令牌/月的企业通过消除每个令牌API费用年度节省$100k-500k。',
             '**合规性：** 数据安全法（数据居住地）、行业标准和ISO 27001（审计线索）需要本地AI。',
@@ -1704,7 +1736,7 @@ schema: {
             '**避免供应商锁定：** 开源本地LLM（Meta Llama、Qwen、Mistral）避免对OpenAI/Anthropic定价和可用性的依赖。',
             '**安全性：** 让专有数据和算法完全保持本地，降低违规风险和监管风险。',
             '**可扩展性：** 跨多个GPU和Kubernetes集群部署以支持每月数百万个并发令牌。',
-            '截至2026年4月，损益平衡点约为每月200M-500M令牌（取决于基础设施、地区工资）。',
+            '损益平衡点通常约为每月200M-500M令牌（取决于基础设施、地区工资）。',
             '主要采用行业：金融、医疗、政府、法律、能源和制造。',
           ],
         },
@@ -1917,7 +1949,7 @@ schema: {
       title: '기업이 로컬 LLM을 선택하는 이유: 비용, 컴플라이언스, 그리고 통제권',
     heroImage: '/images/why-enterprises-use-local-llms-overview-hero-ko.webp',
       seoTitle: '기업이 로컬 LLM을 선택하는 이유',
-      intro: '기업은 세 가지 이유로 로컬 LLM을 배포합니다. 비용 절감(토큰당 API 요금 제거), 컴플라이언스(GDPR, HIPAA는 데이터 거주지 요건 준수 필요), 통제권(모델 커스터마이징, 전체 감사, 벤더 종속성 없음)이 그것입니다. 2026년 4월 기준, 직원 500명 이상 기업의 40%가 온프레미스 AI를 검토하거나 배포하고 있습니다.',
+      intro: '기업은 세 가지 이유로 로컬 LLM을 배포합니다. 비용 절감(토큰당 API 요금 제거), 컴플라이언스(GDPR, HIPAA는 데이터 거주지 요건 준수 필요), 통제권(모델 커스터마이징, 전체 감사, 벤더 종속성 없음)이 그것입니다. 많은 대기업이 온프레미스 AI를 검토하거나 배포하고 있습니다.',
       metaDescription: '기업이 로컬 LLM을 사용하는 이유: 비용 분석, GDPR/HIPAA 컴플라이언스, 데이터 주권, 벤더 종속성 회피.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '기업은 세 가지 이유로 로컬 LLM을 배포합니다. 비용 절감(토큰당 API 요금 제거), 컴플라이언스(GDPR, HIPAA는 데이터 거주지 요건 준수 필요), 그리고 통제권(모델 커스터마이징, 전체 감사, 벤더 종속성 없음)이 그것입니다.',
@@ -1941,6 +1973,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: '기업이 로컬 LLM을 도입하는 이유는 세 가지입니다: 대량 사용 시 비용 절감, 데이터 거주지를 요구하는 규제 준수(GDPR, HIPAA, SOC2), 그리고 커스터마이징·감사 추적·벤더 독립성에 대한 통제권입니다.' },
+            { type: 'plain-terms', text: '클라우드 AI 기업에 요청마다 비용을 지불하는 대신, 기업은 자체 서버에서 AI 모델을 실행할 수 있습니다. 이는 사용량이 충분히 많을 때 비용을 절감하고, 민감한 데이터가 기업 인프라를 벗어나지 않도록 하며(의료, 금융, 정부 기관에 중요), 외부 벤더에 의존하지 않고 모델을 커스터마이징하고 사용 방식을 정확히 감사할 수 있게 해줍니다.' },
+          ],
           items: [
             '**비용:** 월 10억 토큰 이상을 처리하는 기업은 토큰당 API 요금을 없애 연간 10만~50만 달러를 절약합니다.',
             '**컴플라이언스:** GDPR(데이터 거주지), HIPAA(환자 개인정보), SOC2(감사 추적)는 온프레미스 AI를 요구합니다.',
@@ -1948,7 +1984,7 @@ schema: {
             '**벤더 종속성:** 오픈소스 로컬 LLM은 OpenAI/Anthropic의 가격 정책 및 가용성 의존도를 없앱니다.',
             '**보안:** 독점 데이터와 알고리즘을 완전히 온프레미스에 보관하여 침해 위험 및 규제 노출을 줄입니다.',
             '**확장성:** 여러 GPU 및 Kubernetes 클러스터에 배포하여 월 수백만 건의 동시 토큰을 처리합니다.',
-            '2026년 4월 기준 손익분기점은 데이터 거주지 비용에 따라 월 2억~5억 토큰입니다.',
+            '손익분기점은 일반적으로 데이터 거주지 비용에 따라 월 2억~5억 토큰입니다.',
             '주요 도입 업종: 금융, 의료, 정부, 법무, 에너지, 제조업.',
           ],
         },
