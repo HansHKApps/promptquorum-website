@@ -38,6 +38,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Qwen3 is the strongest multilingual local LLM family, with native support for 29 languages including Chinese, Japanese, Korean, and Arabic; Mistral and Llama 3.x are competitive specifically for European languages, but Qwen3 outperforms all alternatives for Asian languages at every comparable model size.' },
+            { type: 'plain-terms', text: "If you need an AI model that works well in a language other than English, Qwen3 is the safest default choice -- it was trained on 29 languages natively, not just translated from English data. For European languages specifically, Mistral (a French company) and Llama also do a solid job, but for Chinese, Japanese, Korean, or Arabic, Qwen3 is consistently the strongest local option." },
+          ],
           items: [
             '**Best multilingual family**: Qwen3 -- 29 native languages, highest non-English benchmark scores at every model size.',
             '**European languages (German, French, Spanish, Italian)**: Mistral and Llama 3.x are competitive with Qwen3 for EU languages; Qwen3 still leads on code-mixed and formal register tasks.',
@@ -79,7 +83,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           content: [
             '**Qwen3 dominates Asian language performance.** The model family was developed by Alibaba with massive Chinese-language training data and explicit multilingual fine-tuning for Japanese and Korean.',
             'For Japanese: Qwen3 8B scores 15-20% higher than Llama 3.1 8B on JMT-bench (Japanese instruction-following benchmark). For Korean: Qwen3 outperforms alternatives by similar margins. For Chinese (Simplified): Qwen3 is in a class of its own among locally-runnable models.',
-            'As of April 2026, Japan\'s METI (Ministry of Economy, Trade and Industry) has been promoting domestic AI development, and some Japanese enterprises prefer locally-deployed models for data sovereignty. Qwen3 is the practical choice for Japanese-language local inference.',
+            'Japan\'s METI (Ministry of Economy, Trade and Industry) has been promoting domestic AI development, and some Japanese enterprises prefer locally-deployed models for data sovereignty. Qwen3 is the practical choice for Japanese-language local inference.',
           ],
           rows: [
             { 'Language': 'Chinese (Simplified)', 'Best Model': 'Qwen3 (any size)', 'Second Best': 'Gemma 4', 'Notes': 'Qwen3 dominates -- largest Chinese training corpus' },
@@ -92,7 +96,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         arabic: {
           title: 'Which Local LLMs Perform Best for Arabic?',
           content: [
-            '**Arabic presents a unique challenge due to its right-to-left script, morphological complexity, and the large number of dialects (Modern Standard Arabic vs.** Egyptian, Gulf, Levantine). As of April 2026, Qwen3 and Gemma 4 are the strongest locally-runnable Arabic models.',
+            '**Arabic presents a unique challenge due to its right-to-left script, morphological complexity, and the large number of dialects (Modern Standard Arabic vs.** Egyptian, Gulf, Levantine). Qwen3 and Gemma 4 are the strongest locally-runnable Arabic models.',
             'For MSA (Modern Standard Arabic) instruction-following, Qwen3 14B and larger produce acceptable quality. For dialect Arabic, all local models perform significantly worse than cloud models like GPT-5.5, which has broader Arabic dialect coverage.',
           ],
         },
@@ -191,6 +195,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       intro: 'Qwen3 es la familia de LLM locales multilingues más potente de 2026, con soporte nativo para 29 idiomas, incluidos chino, japonés, coreano, árabe y todos los principales idiomas europeos. Para idiomas europeos, Mistral y Llama 3.x son competitivos. Para idiomas asiáticos (japonés, coreano, chino), Qwen3 supera a todas las alternativas en cada tamaño de modelo comparable.',
       metaDescription: 'Qwen3 domina los idiomas asiáticos (15-25% mejor que Llama en JMT-bench). Mistral competitivo en idiomas europeos. Comparativa de benchmarks -- abril 2026.',
       publishDate: '2026-04-04',
+      dateModified: '2026-08-28',
       readTime: '9 min de lectura',
       educationalLevel: 'Beginner',
       primaryTerm: 'LLM local multilingue',
@@ -209,19 +214,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Qwen3 es la familia de LLM local multilingüe más potente, con soporte nativo para 29 idiomas incluyendo chino, japonés, coreano y árabe; Mistral y Llama 3.x son competitivos específicamente para idiomas europeos, pero Qwen3 supera a todas las alternativas en idiomas asiáticos en cualquier tamaño de modelo comparable.' },
+            { type: 'plain-terms', text: 'Si necesitas un modelo de IA que funcione bien en un idioma distinto al inglés, Qwen3 es la opción más segura por defecto: fue entrenado nativamente en 29 idiomas, no solo traducido de datos en inglés. Para idiomas europeos en concreto, Mistral (una empresa francesa) y Llama también hacen un buen trabajo, pero para chino, japonés, coreano o árabe, Qwen3 es sistemáticamente la opción local más fuerte.' },
+          ],
           items: [
             '**Mejor familia multilingue**: Qwen3 -- 29 idiomas nativos, las puntuaciones de benchmark más altas en idiomas no ingleses en cada tamaño de modelo.',
             '**Idiomas europeos (alemán, francés, español, italiano)**: Mistral y Llama 3.x son competitivos con Qwen3 para idiomas de la UE; Qwen3 sigue liderando en tareas de registro formal y código mixto.',
             '**Japonés y coreano**: Qwen3 es significativamente más fuerte -- 15-25% mejor en benchmarks específicos de idioma que Llama 3.x en el mismo tamaño.',
             '**Chino (simplificado y tradicional)**: Qwen3 es el modelo dominante -- entrenado con el mayor corpus chino de cualquier modelo de pesos abiertos.',
-            'A partir de abril de 2026, ningún modelo ejecutable localmente iguala la calidad de GPT-5.5 o Claude Opus 4.8 en japonés o coreano para tareas complejas. Qwen3 es la mejor opción disponible localmente.',
+            'Ningún modelo ejecutable localmente iguala la calidad de GPT-5.5 o Claude Opus 4.8 en japonés o coreano para tareas complejas. Qwen3 es la mejor opción disponible localmente.',
           ],
         },
         whichSupport: {
           title: '¿Qué LLM locales admiten realmente varios idiomas?',
           content: [
             '**"Admitir" un idioma significa más que generar texto en ese idioma.** El soporte multilingue real requiere: datos de entrenamiento en el idioma (no solo traducción), tokenización optimizada para el script del idioma, y ajuste fino en el seguimiento de instrucciones en ese idioma.',
-            'Los modelos que afirman soporte multilingue pero fueron entrenados principalmente en inglés producen salidas de menor calidad en otros idiomas -- errores gramaticales, inconsistencias culturales y menor precisión en el seguimiento de instrucciones. A partir de abril de 2026, solo Qwen3 ofrece soporte de calidad nativa genuina para idiomas asiáticos de forma local.',
+            'Los modelos que afirman soporte multilingue pero fueron entrenados principalmente en inglés producen salidas de menor calidad en otros idiomas -- errores gramaticales, inconsistencias culturales y menor precisión en el seguimiento de instrucciones. Solo Qwen3 ofrece soporte de calidad nativa genuina para idiomas asiáticos de forma local.',
           ],
           rows: [
             { 'Familia de modelo': 'Qwen3', 'Idiomas nativos': '29', 'Soporte asiático fuerte': 'Sí', 'Soporte europeo fuerte': 'Sí', 'Soporte árabe': 'Sí' },
@@ -235,7 +244,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         european: {
           title: '¿Qué LLM locales funcionan mejor para idiomas europeos?',
           content: [
-            '**Para alemán, francés, español, italiano, portugués, neerlandés y polaco -- Qwen3, Mistral y Llama 3.x producen resultados aceptables.** Mistral tiene una fortaleza particular en francés porque Mistral AI es una empresa francesa con énfasis en datos de entrenamiento en francés. A partir de abril de 2026, los benchmarks en alemán muestran que Qwen3 8B supera a Mistral Small en un 8-12% en tareas de seguimiento de instrucciones en alemán.',
+            '**Para alemán, francés, español, italiano, portugués, neerlandés y polaco -- Qwen3, Mistral y Llama 3.x producen resultados aceptables.** Mistral tiene una fortaleza particular en francés porque Mistral AI es una empresa francesa con énfasis en datos de entrenamiento en francés. Los benchmarks en alemán muestran que Qwen3 8B supera a Mistral Small en un 8-12% en tareas de seguimiento de instrucciones en alemán.',
             'Para casos de uso sensibles al GDPR en la UE, ejecutar un modelo local (de cualquier familia) es preferible a las APIs en la nube por razones de residencia de datos. Las empresas alemanas que usan IA bajo el Reglamento de IA de la UE (vigente desde febrero de 2025) se benefician de la inferencia local para aplicaciones de IA de alto riesgo. Mistral AI, al ser una empresa de la UE, es preferida por algunas organizaciones europeas por razones de gobernanza independientemente del benchmark.',
           ],
           items: [
@@ -250,7 +259,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           content: [
             '**Qwen3 domina el rendimiento en idiomas asiáticos.** La familia de modelos fue desarrollada por Alibaba con datos masivos de entrenamiento en chino y ajuste fino multilingue explícito para japonés y coreano.',
             'Para japonés: Qwen3 8B puntúa 15-20% más alto que Llama 3.1 8B en JMT-bench (benchmark de seguimiento de instrucciones en japonés). Para coreano: Qwen3 supera a las alternativas por márgenes similares. Para chino (simplificado): Qwen3 está en una clase propia entre los modelos ejecutables localmente.',
-            'A partir de abril de 2026, el METI de Japón (Ministerio de Economía, Comercio e Industria) ha estado promoviendo el desarrollo doméstico de IA, y algunas empresas japonesas prefieren modelos desplegados localmente por soberanía de datos. Qwen3 es la opción práctica para la inferencia local en japonés.',
+            'El METI de Japón (Ministerio de Economía, Comercio e Industria) ha estado promoviendo el desarrollo doméstico de IA, y algunas empresas japonesas prefieren modelos desplegados localmente por soberanía de datos. Qwen3 es la opción práctica para la inferencia local en japonés.',
           ],
           rows: [
             { 'Idioma': 'Chino (simplificado)', 'Mejor modelo': 'Qwen3 (cualquier tamaño)', 'Segundo mejor': 'Gemma 4', 'Notas': 'Qwen3 domina -- mayor corpus de entrenamiento en chino' },
@@ -263,7 +272,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         arabic: {
           title: '¿Qué LLM locales funcionan mejor para el árabe?',
           content: [
-            '**El árabe presenta un desafío único por su escritura de derecha a izquierda, su complejidad morfológica y la gran cantidad de dialectos (árabe estándar moderno vs.** egipcio, del Golfo, levantino). A partir de abril de 2026, Qwen3 y Gemma 4 son los modelos árabes ejecutables localmente más potentes.',
+            '**El árabe presenta un desafío único por su escritura de derecha a izquierda, su complejidad morfológica y la gran cantidad de dialectos (árabe estándar moderno vs.** egipcio, del Golfo, levantino). Qwen3 y Gemma 4 son los modelos árabes ejecutables localmente más potentes.',
             'Para el seguimiento de instrucciones en MSA (árabe estándar moderno), Qwen3 14B y versiones más grandes producen calidad aceptable. Para el árabe dialectal, todos los modelos locales rinden significativamente peor que los modelos en la nube como GPT-5.5, que tiene mayor cobertura de dialectos árabes.',
           ],
         },
@@ -523,6 +532,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       intro: 'Qwen3 هو أقوى عائلة نماذج LLM محلية متعددة اللغات في 2026، بدعم أصلي لـ 29 لغة، بما في ذلك الصينية واليابانية والكورية والعربية وجميع اللغات الأوروبية الرئيسية. للغات الأوروبية، Mistral وLlama 3.x تنافسيان. للغات الآسيوية (اليابانية، الكورية، الصينية)، يتفوق Qwen3 على جميع البدائل في كل حجم نموذج مماثل.',
       metaDescription: '⁨Qwen3⁩ يتفوق في اللغات الآسيوية بـ ⁨15⁩–⁨25%⁩ عن ⁨Llama⁩ في ⁨JMT-bench. Mistral⁩ تنافسي أوروبياً. مقارنة اختبارات الأداء لـ ⁨29⁩ لغة — أبريل ⁨2026⁩.',
       publishDate: '2026-04-04',
+      dateModified: '2026-08-28',
       readTime: '9 دقائق قراءة',
       educationalLevel: 'Beginner',
       primaryTerm: 'LLM محلي متعدد اللغات',
@@ -541,19 +551,23 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'يُعد Qwen3 أقوى عائلة نماذج LLM محلية متعددة اللغات، بدعم أصلي لـ 29 لغة تشمل الصينية واليابانية والكورية والعربية؛ وMistral وLlama 3.x تنافسيان تحديداً للغات الأوروبية، لكن Qwen3 يتفوق على جميع البدائل في اللغات الآسيوية عند أي حجم نموذج مماثل.' },
+            { type: 'plain-terms', text: 'إذا كنت بحاجة إلى نموذج ذكاء اصطناعي يعمل جيداً بلغة غير الإنجليزية، فإن Qwen3 هو الخيار الأكثر أماناً افتراضياً -- فقد تم تدريبه أصلياً على 29 لغة، وليس مجرد ترجمة من بيانات إنجليزية. بالنسبة للغات الأوروبية تحديداً، يقوم Mistral (شركة فرنسية) وLlama أيضاً بعمل جيد، لكن للصينية أو اليابانية أو الكورية أو العربية، يظل Qwen3 الخيار المحلي الأقوى باستمرار.' },
+          ],
           items: [
             '**أفضل عائلة متعددة اللغات**: Qwen3 -- 29 لغة أصلية، وأعلى درجات في اختبارات الأداء للغات غير الإنجليزية في كل حجم نموذج.',
             '**اللغات الأوروبية (الألمانية، الفرنسية، الإسبانية، الإيطالية)**: Mistral وLlama 3.x تنافسان Qwen3 للغات الاتحاد الأوروبي؛ يبقى Qwen3 متصدرًا في مهام التسجيل الرسمي والشيفرة المختلطة.',
             '**اليابانية والكورية**: Qwen3 أقوى بشكل ملحوظ -- أفضل بنسبة 15-25% في اختبارات الأداء الخاصة باللغة من Llama 3.x في نفس الحجم.',
             '**الصينية (المبسطة والتقليدية)**: Qwen3 هو النموذج المهيمن -- مدرَّب على أكبر مدوّنة صينية لأي نموذج مفتوح الأوزان.',
-            'اعتبارًا من أبريل 2026، لا يضاهي أي نموذج قابل للتشغيل محليًا جودة GPT-5.5 أو Claude Opus 4.8 في اليابانية أو الكورية للمهام المعقدة. Qwen3 هو أفضل خيار متاح محليًا.',
+            'لا يضاهي أي نموذج قابل للتشغيل محليًا جودة GPT-5.5 أو Claude Opus 4.8 في اليابانية أو الكورية للمهام المعقدة. Qwen3 هو أفضل خيار متاح محليًا.',
           ],
         },
         whichSupport: {
           title: 'أي نماذج LLM المحلية تدعم فعلًا عدة لغات؟',
           content: [
             '**"دعم" لغة يعني أكثر من توليد نص بتلك اللغة.** الدعم الحقيقي متعدد اللغات يتطلب: بيانات تدريب باللغة (لا مجرد ترجمة)، وترميزًا محسّنًا لنص اللغة، وضبطًا دقيقًا على اتباع التعليمات بتلك اللغة.',
-            'النماذج التي تدّعي دعمًا متعدد اللغات لكنها دُرّبت أساسًا بالإنجليزية تنتج مخرجات أقل جودة في اللغات الأخرى -- أخطاء نحوية وعدم اتساق ثقافي ودقة أقل في اتباع التعليمات. اعتبارًا من أبريل 2026، يقدّم Qwen3 وحده دعمًا حقيقيًا بجودة أصلية للغات الآسيوية محليًا.',
+            'النماذج التي تدّعي دعمًا متعدد اللغات لكنها دُرّبت أساسًا بالإنجليزية تنتج مخرجات أقل جودة في اللغات الأخرى -- أخطاء نحوية وعدم اتساق ثقافي ودقة أقل في اتباع التعليمات. يقدّم Qwen3 وحده دعمًا حقيقيًا بجودة أصلية للغات الآسيوية محليًا.',
           ],
           rows: [
             { 'Familia de modelo': 'Qwen3', 'Idiomas nativos': '29', 'Soporte asiático fuerte': 'نعم', 'Soporte europeo fuerte': 'نعم', 'Soporte árabe': 'نعم' },
@@ -567,7 +581,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         european: {
           title: 'أي نماذج LLM المحلية تعمل بشكل أفضل للغات الأوروبية؟',
           content: [
-            '**للألمانية والفرنسية والإسبانية والإيطالية والبرتغالية والهولندية والبولندية -- Qwen3 وMistral وLlama 3.x تنتج نتائج مقبولة.** يتميز Mistral بقوة خاصة في الفرنسية لأن Mistral AI شركة فرنسية مع تركيز على بيانات التدريب الفرنسية. اعتبارًا من أبريل 2026، تُظهر اختبارات الأداء بالألمانية أن Qwen3 8B يتفوق على Mistral Small بنسبة 8-12% في مهام اتباع التعليمات بالألمانية.',
+            '**للألمانية والفرنسية والإسبانية والإيطالية والبرتغالية والهولندية والبولندية -- Qwen3 وMistral وLlama 3.x تنتج نتائج مقبولة.** يتميز Mistral بقوة خاصة في الفرنسية لأن Mistral AI شركة فرنسية مع تركيز على بيانات التدريب الفرنسية. تُظهر اختبارات الأداء بالألمانية أن Qwen3 8B يتفوق على Mistral Small بنسبة 8-12% في مهام اتباع التعليمات بالألمانية.',
             'لحالات الاستخدام الحساسة لحماية البيانات في أوروبا، يُفضَّل تشغيل نموذج محلي (من أي عائلة) على واجهات API السحابية لأسباب إقامة البيانات. تستفيد الشركات التي تستخدم الذكاء الاصطناعي بموجب لوائح الذكاء الاصطناعي الإقليمية من الاستدلال المحلي لتطبيقات الذكاء الاصطناعي عالية المخاطر. Mistral AI، كونها شركة أوروبية، تُفضَّل لدى بعض المؤسسات الأوروبية لأسباب الحوكمة بغض النظر عن اختبار الأداء.',
           ],
           items: [
@@ -582,7 +596,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           content: [
             '**يهيمن Qwen3 على الأداء في اللغات الآسيوية.** طُوِّرت عائلة النماذج من Alibaba ببيانات تدريب صينية ضخمة وضبط دقيق صريح متعدد اللغات لليابانية والكورية.',
             'لليابانية: يسجّل Qwen3 8B أعلى بنسبة 15-20% من Llama 3.1 8B في JMT-bench (اختبار أداء اتباع التعليمات باليابانية). للكورية: يتفوق Qwen3 على البدائل بهوامش مماثلة. للصينية (المبسطة): Qwen3 في فئة خاصة به بين النماذج القابلة للتشغيل محليًا.',
-            'اعتبارًا من أبريل 2026، ظلت وزارة الاقتصاد والتجارة والصناعة اليابانية (METI) تروّج للتطوير المحلي للذكاء الاصطناعي، وتفضّل بعض الشركات اليابانية النماذج المنشورة محليًا لسيادة البيانات. Qwen3 هو الخيار العملي للاستدلال المحلي باليابانية.',
+            'ظلت وزارة الاقتصاد والتجارة والصناعة اليابانية (METI) تروّج للتطوير المحلي للذكاء الاصطناعي، وتفضّل بعض الشركات اليابانية النماذج المنشورة محليًا لسيادة البيانات. Qwen3 هو الخيار العملي للاستدلال المحلي باليابانية.',
           ],
           rows: [
             { 'Idioma': 'الصينية (المبسطة)', 'Mejor modelo': 'Qwen3 (أي حجم)', 'Segundo mejor': 'Gemma 4', 'Notas': 'Qwen3 يهيمن -- أكبر مدوّنة تدريب صينية' },
@@ -595,7 +609,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         arabic: {
           title: 'أي نماذج LLM المحلية تعمل بشكل أفضل للعربية؟',
           content: [
-            '**تطرح العربية تحديًا فريدًا بسبب كتابتها من اليمين إلى اليسار وتعقيدها الصرفي وكثرة لهجاتها (العربية الفصحى الحديثة مقابل** المصرية والخليجية والشامية). اعتبارًا من أبريل 2026، Qwen3 وGemma 4 هما أقوى النماذج العربية القابلة للتشغيل محليًا. كما تقدّم نماذج عربية سيادية مثل Jais وALLaM وFalcon دعمًا محليًا قويًا للعربية.',
+            '**تطرح العربية تحديًا فريدًا بسبب كتابتها من اليمين إلى اليسار وتعقيدها الصرفي وكثرة لهجاتها (العربية الفصحى الحديثة مقابل** المصرية والخليجية والشامية). Qwen3 وGemma 4 هما أقوى النماذج العربية القابلة للتشغيل محليًا. كما تقدّم نماذج عربية سيادية مثل Jais وALLaM وFalcon دعمًا محليًا قويًا للعربية.',
             'لاتباع التعليمات بالفصحى (العربية الفصحى الحديثة)، ينتج Qwen3 14B والإصدارات الأكبر جودة مقبولة. للعربية العامية، تؤدي جميع النماذج المحلية أسوأ بشكل ملحوظ من النماذج السحابية مثل GPT-5.5، التي لها تغطية أكبر للهجات العربية.',
           ],
         },
@@ -855,6 +869,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       intro: 'O Qwen3 é a família de LLMs locais multilíngues mais poderosa de 2026, com suporte nativo a 29 idiomas, incluindo chinês, japonês, coreano, árabe e todos os principais idiomas europeus. Para idiomas europeus, Mistral e Llama 3.x são competitivos. Para idiomas asiáticos (japonês, coreano, chinês), o Qwen3 supera todas as alternativas em cada tamanho de modelo comparável.',
       metaDescription: 'Qwen3 domina idiomas asiáticos (15–25% melhor que Llama no JMT-bench). Mistral competitivo em idiomas europeus. Comparativo de benchmarks — abril 2026.',
       publishDate: '2026-04-04',
+      dateModified: '2026-08-28',
       readTime: '9 min de leitura',
       educationalLevel: 'Beginner',
       primaryTerm: 'LLM local multilíngue',
@@ -873,20 +888,24 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'O Qwen3 é a família de LLM local multilíngue mais forte, com suporte nativo para 29 idiomas incluindo chinês, japonês, coreano e árabe; o Mistral e o Llama 3.x são competitivos especificamente para idiomas europeus, mas o Qwen3 supera todas as alternativas em idiomas asiáticos em qualquer tamanho de modelo comparável.' },
+            { type: 'plain-terms', text: 'Se você precisa de um modelo de IA que funcione bem em um idioma diferente do inglês, o Qwen3 é a escolha padrão mais segura -- ele foi treinado nativamente em 29 idiomas, não apenas traduzido de dados em inglês. Para idiomas europeus especificamente, o Mistral (uma empresa francesa) e o Llama também fazem um bom trabalho, mas para chinês, japonês, coreano ou árabe, o Qwen3 é consistentemente a opção local mais forte.' },
+          ],
           items: [
             '**Melhor família multilíngue**: Qwen3 — 29 idiomas nativos, as maiores pontuações de benchmark em idiomas não-ingleses em cada tamanho de modelo.',
             '**Idiomas europeus (alemão, francês, espanhol, italiano)**: Mistral e Llama 3.x são competitivos com o Qwen3 para idiomas da UE; Qwen3 ainda lidera em tarefas de registro formal e código misto.',
             '**Japonês e coreano**: Qwen3 é significativamente mais forte — 15–25% melhor em benchmarks específicos de idioma que o Llama 3.x no mesmo tamanho.',
             '**Chinês (simplificado e tradicional)**: Qwen3 é o modelo dominante — treinado com o maior corpus chinês de qualquer modelo de pesos abertos.',
             '**Português (Brasil e Portugal)**: Qwen3 e Mistral oferecem bom suporte; Qwen3 8B lidera em seguimento de instruções formais em português.',
-            'Em abril de 2026, nenhum modelo executável localmente iguala a qualidade do GPT-5.5 ou Claude Opus 4.8 em japonês ou coreano para tarefas complexas. Qwen3 é a melhor opção disponível localmente.',
+            'Nenhum modelo executável localmente iguala a qualidade do GPT-5.5 ou Claude Opus 4.8 em japonês ou coreano para tarefas complexas. Qwen3 é a melhor opção disponível localmente.',
           ],
         },
         whichSupport: {
           title: 'Quais LLMs locais realmente suportam vários idiomas?',
           content: [
             '**"Suportar" um idioma significa mais do que gerar texto nesse idioma.** O suporte multilíngue real requer: dados de treinamento no idioma (não apenas tradução), tokenização otimizada para o script do idioma, e ajuste fino no seguimento de instruções nesse idioma.',
-            'Modelos que afirmam suporte multilíngue mas foram treinados principalmente em inglês produzem saídas de menor qualidade em outros idiomas — erros gramaticais, inconsistências culturais e menor precisão no seguimento de instruções. Em abril de 2026, apenas o Qwen3 oferece suporte de qualidade nativa genuína para idiomas asiáticos de forma local.',
+            'Modelos que afirmam suporte multilíngue mas foram treinados principalmente em inglês produzem saídas de menor qualidade em outros idiomas — erros gramaticais, inconsistências culturais e menor precisão no seguimento de instruções. Apenas o Qwen3 oferece suporte de qualidade nativa genuína para idiomas asiáticos de forma local.',
           ],
           rows: [
             { 'Família de modelo': 'Qwen3', 'Idiomas nativos': '29', 'Suporte asiático forte': 'Sim', 'Suporte europeu forte': 'Sim', 'Suporte árabe': 'Sim' },
@@ -900,7 +919,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         european: {
           title: 'Quais LLMs locais funcionam melhor para idiomas europeus?',
           content: [
-            '**Para alemão, francês, espanhol, italiano, português, holandês e polonês — Qwen3, Mistral e Llama 3.x produzem resultados aceitáveis.** O Mistral tem força particular no francês porque a Mistral AI é uma empresa francesa com ênfase em dados de treinamento em francês. Em abril de 2026, os benchmarks em alemão mostram que o Qwen3 8B supera o Mistral Small em 8–12% em tarefas de seguimento de instruções em alemão.',
+            '**Para alemão, francês, espanhol, italiano, português, holandês e polonês — Qwen3, Mistral e Llama 3.x produzem resultados aceitáveis.** O Mistral tem força particular no francês porque a Mistral AI é uma empresa francesa com ênfase em dados de treinamento em francês. Os benchmarks em alemão mostram que o Qwen3 8B supera o Mistral Small em 8–12% em tarefas de seguimento de instruções em alemão.',
             '**Para o português especificamente:** Qwen3 8B lidera em seguimento de instruções formais em pt-BR e pt-PT. Mistral Small é competitivo em texto formal. Llama 3.1 8B é adequado para tarefas gerais. Para casos de uso sensíveis à LGPD no Brasil, executar um modelo local (de qualquer família) é preferível às APIs na nuvem por razões de residência de dados.',
           ],
           items: [
@@ -928,7 +947,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'Quais LLMs locais funcionam melhor para árabe e línguas do Oriente Médio?',
           content: [
             '**O árabe é o idioma mais desafiador para modelos locais** por causa da escrita da direita para a esquerda (RTL), morfologia complexa e a distinção entre árabe moderno padrão (MSA) e dialetos.',
-            'Em abril de 2026: Qwen3 e Gemma 4 oferecem o melhor suporte ao árabe em modelos executáveis localmente. O Llama 3.x tem suporte ao árabe limitado. Para árabe de qualidade profissional, nenhum modelo local atinge a qualidade do GPT-5.5.',
+            'Qwen3 e Gemma 4 oferecem o melhor suporte ao árabe em modelos executáveis localmente. O Llama 3.x tem suporte ao árabe limitado. Para árabe de qualidade profissional, nenhum modelo local atinge a qualidade do GPT-5.5.',
           ],
           rows: [
             { 'Modelo': 'Qwen3 8B', 'Pontuação MSA (1–5)': '★★★', 'Pontuação dialeto': '★★', 'Velocidade de geração': '30–50 tok/s' },
@@ -1052,6 +1071,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Qwen3 ist die stärkste mehrsprachige lokale LLM-Familie, mit nativer Unterstützung für 29 Sprachen einschließlich Chinesisch, Japanisch, Koreanisch und Arabisch; Mistral und Llama 3.x sind speziell für europäische Sprachen wettbewerbsfähig, aber Qwen3 übertrifft alle Alternativen bei asiatischen Sprachen in jeder vergleichbaren Modellgröße.' },
+            { type: 'plain-terms', text: 'Wer ein KI-Modell braucht, das gut in einer anderen Sprache als Englisch funktioniert, ist mit Qwen3 als Standardwahl am sichersten unterwegs -- es wurde nativ auf 29 Sprachen trainiert, nicht nur aus englischen Daten übersetzt. Für europäische Sprachen speziell leisten auch Mistral (ein französisches Unternehmen) und Llama gute Arbeit, aber bei Chinesisch, Japanisch, Koreanisch oder Arabisch bleibt Qwen3 durchgehend die stärkste lokale Option.' },
+          ],
           items: [
             '**Qwen3 8B** ist das beste lokale Modell für Chinesisch, Japanisch und Koreanisch (5 Sterne für Chinesisch, 4 Sterne für Japanisch/Koreanisch).',
             '**Mistral Small** und **Qwen3 8B** konkurrieren bei europäischen Sprachen (Französisch, Deutsch, Spanisch, Italienisch) mit jeweils 4 Sternen.',
@@ -1576,6 +1599,10 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: "Qwen3 est la famille de LLM locaux multilingues la plus puissante, avec un support natif de 29 langues dont le chinois, le japonais, le coréen et l'arabe ; Mistral et Llama 3.x sont compétitifs spécifiquement pour les langues européennes, mais Qwen3 surpasse toutes les alternatives pour les langues asiatiques à toute taille de modèle comparable." },
+            { type: 'plain-terms', text: "Si vous avez besoin d'un modèle d'IA qui fonctionne bien dans une langue autre que l'anglais, Qwen3 est le choix par défaut le plus sûr -- il a été entraîné nativement sur 29 langues, pas simplement traduit à partir de données anglaises. Pour les langues européennes en particulier, Mistral (une entreprise française) et Llama font aussi du bon travail, mais pour le chinois, le japonais, le coréen ou l'arabe, Qwen3 reste systématiquement l'option locale la plus solide." },
+          ],
           items: [
             '**Qwen3 8B** est le meilleur modèle local pour le chinois, le japonais et le coréen (5 étoiles pour le chinois, 4 étoiles pour le japonais/coréen).',
             '**Mistral Small** et **Qwen3 8B** rivalisent sur les langues européennes (français, allemand, espagnol, italien) avec chacun 4 étoiles.',
@@ -2075,6 +2102,10 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Qwen3は最も強力な多言語対応ローカルLLMファミリーであり、中国語、日本語、韓国語、アラビア語を含む29言語にネイティブ対応しています。MistralやLlama 3.xはヨーロッパ言語に特化して競争力がありますが、アジア言語ではどの比較可能なモデルサイズでもQwen3が他のすべての選択肢を上回ります。' },
+            { type: 'plain-terms', text: '英語以外の言語でうまく機能するAIモデルが必要な場合、Qwen3が最も安全なデフォルトの選択肢です。英語データからの翻訳ではなく、29言語でネイティブに訓練されているためです。ヨーロッパ言語に関しては、Mistral（フランスの企業）やLlamaも優れた仕事をしますが、中国語、日本語、韓国語、アラビア語については、Qwen3が一貫して最も強力なローカルの選択肢です。' },
+          ],
           items: [
             '**Qwen3 8B** は中国語、日本語、韓国語の最適なローカルモデル（中国語5つ星、日本語/韓国語4つ星）。',
             '**Mistral Small** と **Qwen3 8B** はヨーロッパ言語で同等（フランス語、ドイツ語、スペイン語、イタリア語それぞれ4つ星）。',
@@ -2559,6 +2590,7 @@ schema: {
       intro: 'Qwen3是2026年最强大的多语言本地LLM系列，支持29种语言，包括中文、日文、韩文、阿拉伯文和所有主要欧洲语言。对于欧洲语言，Mistral和Llama 3.x与Qwen3具有竞争力。对于亚洲语言（日语、韩语、中文），Qwen3在每个可比较的模型大小上都优于所有替代方案。',
       metaDescription: 'Qwen3在中文/日文/韩文上领先（JMT基准高15-25%）。支持29种语言本地运行。Mistral在欧洲语言具竞争力。基准对比与推荐 -- 2026年4月。',
       publishDate: '2026-04-04',
+      dateModified: '2026-08-28',
       readTime: '阅读约9分钟',
       educationalLevel: 'Beginner',
       primaryTerm: '多语言本地LLM',
@@ -2577,6 +2609,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Qwen3是最强大的多语言本地LLM系列，原生支持包括中文、日文、韩文和阿拉伯文在内的29种语言；Mistral和Llama 3.x在欧洲语言方面具有竞争力，但在任何可比模型规模下，Qwen3在亚洲语言方面都优于所有替代方案。' },
+            { type: 'plain-terms', text: '如果你需要一个能很好处理英文以外语言的AI模型，Qwen3是最安全的默认选择——它是原生用29种语言训练的，而不仅仅是从英文数据翻译而来。对于欧洲语言，Mistral（一家法国公司）和Llama也表现不错，但对于中文、日文、韩文或阿拉伯文，Qwen3始终是最强的本地选择。' },
+          ],
           items: [
             '**Qwen3 8B** 是中文、日语、韩语的最佳本地模型（中文5星，日语/韩语4星）。',
             '**Mistral Small** 与 **Qwen3 8B** 在欧洲语言上同等竞争（法语、德语、西班牙语、意大利语各4星）。',
@@ -2764,10 +2800,11 @@ schema: {
       title: '다국어 로컬 LLM: 2026년 비영어권 언어에 최적화된 모델',
     heroImage: '/images/multilingual-local-llms-overview-hero-ko.webp',
       seoTitle: '2026년 최고의 다국어 로컬 LLM: Qwen3 vs Mistral',
-      intro: 'Qwen3는 2026년 현재 가장 강력한 다국어 로컬 LLM 패밀리로, 중국어, 일본어, 한국어, 아랍어, 주요 유럽 언어를 포함한 29개 언어를 기본 지원합니다. 유럽 언어에 한해서는 Mistral과 Llama 3.x 모델도 Qwen3에 근접한 성능을 보입니다. 아시아 언어(일본어, 한국어, 중국어)에서는 Qwen3가 동급 모델 크기 기준으로 모든 대안을 능가합니다.',
+      intro: 'Qwen3는 가장 강력한 다국어 로컬 LLM 패밀리로, 중국어, 일본어, 한국어, 아랍어, 주요 유럽 언어를 포함한 29개 언어를 기본 지원합니다. 유럽 언어에 한해서는 Mistral과 Llama 3.x 모델도 Qwen3에 근접한 성능을 보입니다. 아시아 언어(일본어, 한국어, 중국어)에서는 Qwen3가 동급 모델 크기 기준으로 모든 대안을 능가합니다.',
       metaDescription: 'Qwen3는 아시아 언어에서 Llama 대비 15~25% 높은 성능을 기록합니다. Mistral은 유럽 언어에서 경쟁력이 있습니다. 2026년 4월 벤치마크 비교.',
       publishDate: '2026-04-04',
-      leadAnswerBlock: 'Qwen3는 2026년 현재 가장 강력한 다국어 로컬 LLM 패밀리로, 중국어, 일본어, 한국어, 아랍어, 주요 유럽 언어를 포함한 29개 언어를 기본 지원합니다.',
+      dateModified: '2026-08-28',
+      leadAnswerBlock: 'Qwen3는 가장 강력한 다국어 로컬 LLM 패밀리로, 중국어, 일본어, 한국어, 아랍어, 주요 유럽 언어를 포함한 29개 언어를 기본 지원합니다.',
       audience: '일반 소비자용 하드웨어에서 처음으로 로컬 LLM을 실행하는 입문자',
       readTime: '9분 읽기',
       educationalLevel: 'Beginner',
@@ -2787,19 +2824,23 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Qwen3는 중국어, 일본어, 한국어, 아랍어를 포함한 29개 언어를 기본 지원하는 가장 강력한 다국어 로컬 LLM 계열이며, Mistral과 Llama 3.x는 유럽 언어에서 경쟁력이 있지만 아시아 언어에서는 비슷한 모델 크기에서 Qwen3가 모든 대안을 능가합니다.' },
+            { type: 'plain-terms', text: '영어가 아닌 언어에서 잘 작동하는 AI 모델이 필요하다면 Qwen3가 가장 안전한 기본 선택입니다 -- 영어 데이터를 번역한 것이 아니라 29개 언어로 네이티브 학습되었기 때문입니다. 유럽 언어의 경우 Mistral(프랑스 기업)과 Llama도 훌륭한 성능을 보이지만, 중국어, 일본어, 한국어, 아랍어의 경우 Qwen3가 꾸준히 가장 강력한 로컬 옵션입니다.' },
+          ],
           items: [
             '**최고의 다국어 패밀리**: Qwen3 -- 29개 언어 기본 지원, 모든 모델 크기에서 최고의 비영어권 벤치마크 점수.',
             '**유럽 언어(독일어, 프랑스어, 스페인어, 이탈리아어)**: Mistral과 Llama 3.x는 유럽 언어에서 Qwen3와 경쟁력이 있습니다. 코드 혼합 및 공식 문체 작업에서는 Qwen3가 여전히 앞섭니다.',
             '**일본어 및 한국어**: Qwen3가 동급 크기의 Llama 3.x 대비 언어별 벤치마크에서 15~25% 높은 성능을 보입니다.',
             '**중국어(간체 및 번체)**: Qwen3가 지배적인 모델입니다 -- 오픈 웨이트 모델 중 가장 방대한 중국어 코퍼스로 학습되었습니다.',
-            '2026년 4월 기준, 복잡한 작업에서 로컬 실행 가능한 어떤 모델도 일본어나 한국어에서 GPT-5.5 또는 Claude Opus 4.8 수준의 품질에 도달하지 못합니다. Qwen3가 로컬에서 최선의 선택입니다.',
+            '복잡한 작업에서 로컬 실행 가능한 어떤 모델도 일본어나 한국어에서 GPT-5.5 또는 Claude Opus 4.8 수준의 품질에 도달하지 못합니다. Qwen3가 로컬에서 최선의 선택입니다.',
           ],
         },
         whichSupport: {
           title: '실제로 다국어를 지원하는 로컬 LLM은 무엇입니까?',
           content: [
             '**언어를 "지원"한다는 것은 단순히 해당 언어로 텍스트를 생성하는 것 이상을 의미합니다.** 진정한 다국어 지원을 위해서는 해당 언어의 학습 데이터(번역이 아닌 원문), 해당 언어의 문자 체계에 최적화된 토크나이저, 해당 언어에서의 명령 수행에 대한 파인튜닝이 필요합니다.',
-            '다국어 지원을 주장하지만 주로 영어로 학습된 모델은 다른 언어에서 품질이 낮은 결과물을 생성합니다 -- 문법 오류, 문화적 불일치, 명령 수행 정확도 저하가 발생합니다. 2026년 4월 기준, 로컬에서 아시아 언어에 대해 진정한 네이티브 품질 지원을 제공하는 모델은 Qwen3뿐입니다.',
+            '다국어 지원을 주장하지만 주로 영어로 학습된 모델은 다른 언어에서 품질이 낮은 결과물을 생성합니다 -- 문법 오류, 문화적 불일치, 명령 수행 정확도 저하가 발생합니다. 로컬에서 아시아 언어에 대해 진정한 네이티브 품질 지원을 제공하는 모델은 Qwen3뿐입니다.',
           ],
           rows: [
             { 'Model Family': 'Qwen3', 'Native Languages': '29', 'Strong Asian Support': '예', 'Strong EU Support': '예', 'Arabic Support': '예' },
@@ -2813,7 +2854,7 @@ schema: {
         european: {
           title: '유럽 언어에서 가장 뛰어난 로컬 LLM은 무엇입니까?',
           content: [
-            '**독일어, 프랑스어, 스페인어, 이탈리아어, 포르투갈어, 네덜란드어, 폴란드어에서는 Qwen3, Mistral, Llama 3.x 모두 수용 가능한 품질을 제공합니다.** Mistral은 Mistral AI가 프랑스 기업이고 프랑스어 학습 데이터를 중시하기 때문에 프랑스어에서 특히 강점을 보입니다. 2026년 4월 기준, 독일어 벤치마크에서 Qwen3 8B는 독일어 명령 수행 작업에서 Mistral Small을 8~12% 앞서고 있습니다.',
+            '**독일어, 프랑스어, 스페인어, 이탈리아어, 포르투갈어, 네덜란드어, 폴란드어에서는 Qwen3, Mistral, Llama 3.x 모두 수용 가능한 품질을 제공합니다.** Mistral은 Mistral AI가 프랑스 기업이고 프랑스어 학습 데이터를 중시하기 때문에 프랑스어에서 특히 강점을 보입니다. 독일어 벤치마크에서 Qwen3 8B는 독일어 명령 수행 작업에서 Mistral Small을 8~12% 앞서고 있습니다.',
             'EU 내 GDPR 민감 사례에서는 데이터 거주 요건을 위해 클라우드 API보다 로컬 모델(어떤 패밀리든) 실행이 권장됩니다. EU AI Act(2025년 2월 시행) 하에서 AI를 사용하는 독일 기업들은 고위험 AI 애플리케이션에 로컬 추론을 활용하는 방식에서 이점을 얻습니다. Mistral AI는 EU 기업이기 때문에 일부 유럽 조직에서는 벤치마크 점수와 무관하게 거버넌스 측면에서 선호합니다.',
           ],
           items: [
@@ -2828,7 +2869,7 @@ schema: {
           content: [
             '**Qwen3가 아시아 언어 성능에서 지배적입니다.** 이 모델 패밀리는 Alibaba에서 방대한 중국어 학습 데이터와 일본어 및 한국어에 대한 명시적인 다국어 파인튜닝을 통해 개발하였습니다.',
             '일본어의 경우: Qwen3 8B는 JMT-bench(일본어 명령 수행 벤치마크)에서 Llama 3.1 8B보다 15~20% 높은 점수를 기록합니다. 한국어의 경우: Qwen3는 유사한 격차로 대안 모델들을 능가합니다. 중국어(간체)의 경우: Qwen3는 로컬 실행 가능한 모델 중에서 독보적입니다.',
-            '2026년 4월 기준, 일본 경제산업성(METI)은 국내 AI 개발을 촉진하고 있으며, 일부 일본 기업들은 데이터 주권을 위해 로컬 배포 모델을 선호합니다. Qwen3는 일본어 로컬 추론의 실질적인 선택지입니다.',
+            '일본 경제산업성(METI)은 국내 AI 개발을 촉진하고 있으며, 일부 일본 기업들은 데이터 주권을 위해 로컬 배포 모델을 선호합니다. Qwen3는 일본어 로컬 추론의 실질적인 선택지입니다.',
           ],
           rows: [
             { 'Language': '중국어(간체)', 'Best Model': 'Qwen3 (모든 크기)', 'Second Best': 'Gemma 4', 'Notes': 'Qwen3 지배적 -- 가장 방대한 중국어 학습 코퍼스' },
@@ -2841,7 +2882,7 @@ schema: {
         arabic: {
           title: '아랍어에서 가장 뛰어난 로컬 LLM은 무엇입니까?',
           content: [
-            '**아랍어는 오른쪽에서 왼쪽으로 쓰는 문자 체계, 형태론적 복잡성, 다양한 방언(현대 표준 아랍어 vs. 이집트어, 걸프어, 레반트어)으로 인해 독특한 도전을 제시합니다.** 2026년 4월 기준, Qwen3와 Gemma 3가 로컬 실행 가능한 아랍어 모델 중 가장 강력합니다.',
+            '**아랍어는 오른쪽에서 왼쪽으로 쓰는 문자 체계, 형태론적 복잡성, 다양한 방언(현대 표준 아랍어 vs. 이집트어, 걸프어, 레반트어)으로 인해 독특한 도전을 제시합니다.** Qwen3와 Gemma 3가 로컬 실행 가능한 아랍어 모델 중 가장 강력합니다.',
             '현대 표준 아랍어(MSA) 명령 수행의 경우, Qwen3 14B 이상의 모델이 수용 가능한 품질을 생성합니다. 방언 아랍어의 경우, 모든 로컬 모델은 더 광범위한 아랍어 방언 지원을 갖춘 GPT-5.5와 같은 클라우드 모델보다 현저히 낮은 성능을 보입니다.',
           ],
         },
