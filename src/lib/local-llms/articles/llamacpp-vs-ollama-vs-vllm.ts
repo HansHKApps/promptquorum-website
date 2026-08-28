@@ -14,11 +14,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       title: 'llama.cpp vs Ollama vs vLLM 2026: Speed, Batching & GPU Benchmarks',
       heroImage: '/images/llamacpp-vs-ollama-vs-vllm-overview-hero-en.webp',
       seoTitle: 'llama.cpp vs Ollama vs vLLM 2026: Speed, Batching & GPU Benchmarks',
-      intro: '**llama.cpp is fastest per-token for small models; Ollama is simplest; vLLM is best for throughput/batching.** As of April 2026, choose based on use case: casual chat → Ollama; single-user speed → llama.cpp; multi-user/batching → vLLM. All three run the same models and produce identical output--speed/throughput differ.',
+      intro: '**llama.cpp is fastest per-token for small models; Ollama is simplest; vLLM is best for throughput/batching.** Choose based on use case: casual chat → Ollama; single-user speed → llama.cpp; multi-user/batching → vLLM. All three run the same models and produce identical output--speed/throughput differ.',
       metaDescription: 'llama.cpp delivers 38 tok/s speed. Ollama offers 5-min simplicity. vLLM provides 250+ throughput. Complete RTX 4090 benchmark matrix and comparison.',
       publishDate: '2026-04-05',
       dateModified: '2026-08-28',
-      leadAnswerBlock: '**llama.cpp is fastest per-token for small models; Ollama is simplest; vLLM is best for throughput/batching. As of April 2026, choose based on use case: casual chat → Ollama; single-user speed → llama.cpp; multi-user/batching → vLLM.**',
+      leadAnswerBlock: '**llama.cpp is fastest per-token for small models; Ollama is simplest; vLLM is best for throughput/batching. Choose based on use case: casual chat → Ollama; single-user speed → llama.cpp; multi-user/batching → vLLM.**',
       audience: 'Developers familiar with Ollama or LM Studio optimizing local LLM workflows',
       readTime: '9 min',
       educationalLevel: 'Intermediate',
@@ -86,6 +86,10 @@ schema: {
         tldr: {
           id: 'tldr',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'llama.cpp is the fastest single-token backend, Ollama is the easiest to set up, and vLLM delivers the highest throughput for concurrent users -- all three run identical models and produce identical output, differing only in speed and setup complexity.' },
+            { type: 'plain-terms', text: 'These are three different programs for running AI models on your own hardware. llama.cpp is the raw, fastest engine but needs manual setup. Ollama wraps it in a one-command install that\'s slightly slower but much easier. vLLM is built for serving many users at once (like a company chatbot) and is dramatically faster when handling multiple requests simultaneously, though it has a steeper learning curve.' },
+          ],
           items: [
             '**llama.cpp:** Fastest single-token latency (lowest ms/token). Best for interactive chat. Minimal dependencies.',
             '**Ollama:** Easiest to use. One command, auto-download models. Trade-off: 5-10% slower throughput than llama.cpp.',
@@ -246,11 +250,11 @@ schema: {
       title: 'llama.cpp vs Ollama vs vLLM 2026: Velocidad, Batching y Benchmarks GPU',
       heroImage: '/images/llamacpp-vs-ollama-vs-vllm-overview-hero-es.webp',
       seoTitle: 'llama.cpp vs Ollama vs vLLM 2026: velocidad y benchmarks',
-      intro: '**llama.cpp es el más rápido por token en modelos pequeños; Ollama es el más simple; vLLM es el mejor para throughput y batching.** A partir de abril de 2026, elige según tu caso de uso: chat casual → Ollama; velocidad para un solo usuario → llama.cpp; multi-usuario/batching → vLLM. Los tres ejecutan los mismos modelos y producen salidas idénticas — solo difieren en velocidad y throughput.',
+      intro: '**llama.cpp es el más rápido por token en modelos pequeños; Ollama es el más simple; vLLM es el mejor para throughput y batching.** Elige según tu caso de uso: chat casual → Ollama; velocidad para un solo usuario → llama.cpp; multi-usuario/batching → vLLM. Los tres ejecutan los mismos modelos y producen salidas idénticas — solo difieren en velocidad y throughput.',
       metaDescription: 'llama.cpp: 38 tok/s (más rápido). Ollama: setup en 5 min (más simple). vLLM: 250+ tok/s en batch (mayor throughput). Benchmarks RTX 4090. 2026.',
       publishDate: '2026-04-05',
       dateModified: '2026-08-28',
-      leadAnswerBlock: '**llama.cpp es el más rápido por token en modelos pequeños; Ollama es el más simple; vLLM es el mejor para throughput y batching. A partir de abril de 2026, elige según tu caso de uso: chat casual → Ollama; velocidad para un solo usuario → llama.cpp; multi-usuario/batching → vLLM.**',
+      leadAnswerBlock: '**llama.cpp es el más rápido por token en modelos pequeños; Ollama es el más simple; vLLM es el mejor para throughput y batching. Elige según tu caso de uso: chat casual → Ollama; velocidad para un solo usuario → llama.cpp; multi-usuario/batching → vLLM.**',
       audience: 'Desarrolladores familiarizados con Ollama o LM Studio que optimizan flujos de trabajo con LLM locales',
       readTime: '9 min de lectura',
       educationalLevel: 'Intermediate',
@@ -323,6 +327,10 @@ schema: {
         tldr: {
           id: 'tldr',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'llama.cpp es el backend más rápido por token, Ollama es el más fácil de configurar y vLLM ofrece el mayor throughput con múltiples usuarios -- los tres ejecutan los mismos modelos y producen la misma salida, y solo difieren en velocidad y complejidad de configuración.' },
+            { type: 'plain-terms', text: 'Estos son tres programas distintos para ejecutar modelos de IA en tu propio hardware. llama.cpp es el motor puro y más rápido, pero requiere configuración manual. Ollama lo envuelve en una instalación de un solo comando, algo más lenta pero mucho más sencilla. vLLM está diseñado para atender a muchos usuarios a la vez (como un chatbot corporativo) y es mucho más rápido al manejar varias solicitudes simultáneamente, aunque tiene una curva de aprendizaje más pronunciada.' },
+          ],
           items: [
             '**llama.cpp:** Latencia por token más baja (menor ms/token). Ideal para chat interactivo. Dependencias mínimas.',
             '**Ollama:** El más fácil de usar. Un comando, descarga automática de modelos. Compromiso: 5–10% menos throughput que llama.cpp.',
@@ -483,11 +491,11 @@ schema: {
       title: '⁨llama.cpp⁩ مقابل ⁨Ollama⁩ مقابل ⁨vLLM 2026⁩: السرعة والـ ⁨Batching⁩ ومعايير ⁨GPU⁩',
       heroImage: '/images/llamacpp-vs-ollama-vs-vllm-overview-hero-ar.webp',
       seoTitle: '⁨llama.cpp⁩ مقابل ⁨Ollama⁩ مقابل ⁨vLLM⁩: المقارنة ⁨2026⁩',
-      intro: '**llama.cpp هو الأسرع لكل token على النماذج الصغيرة؛ و Ollama هو الأبسط؛ و vLLM هو الأفضل للإنتاجية والـ batching.** اعتبارًا من أبريل 2026، اختر حسب حالة استخدامك: محادثة عادية ← Ollama؛ سرعة لمستخدم واحد ← llama.cpp؛ متعدد المستخدمين/batching ← vLLM. تشغّل الثلاثة النماذج نفسها وتنتج مخرجات متطابقة — وتختلف فقط في السرعة والإنتاجية.',
+      intro: '**llama.cpp هو الأسرع لكل token على النماذج الصغيرة؛ و Ollama هو الأبسط؛ و vLLM هو الأفضل للإنتاجية والـ batching.** اختر حسب حالة استخدامك: محادثة عادية ← Ollama؛ سرعة لمستخدم واحد ← llama.cpp؛ متعدد المستخدمين/batching ← vLLM. تشغّل الثلاثة النماذج نفسها وتنتج مخرجات متطابقة — وتختلف فقط في السرعة والإنتاجية.',
       metaDescription: '⁨llama.cpp⁩ يُنجز ⁨38 tok/s⁩ (الأسرع لمستخدم واحد)؛ ⁨vLLM⁩ يصل إلى ⁨250+ tok/s⁩ في الدُّفعة؛ ⁨Ollama⁩ إعداد في ⁨5⁩ دقائق. معايير ⁨RTX 4090 2026⁩.',
       publishDate: '2026-04-05',
       dateModified: '2026-08-28',
-      leadAnswerBlock: '**llama.cpp هو الأسرع لكل token على النماذج الصغيرة؛ و Ollama هو الأبسط؛ و vLLM هو الأفضل للإنتاجية والـ batching. اعتبارًا من أبريل 2026، اختر حسب حالة استخدامك: محادثة عادية ← Ollama؛ سرعة لمستخدم واحد ← llama.cpp؛ متعدد المستخدمين/batching ← vLLM.**',
+      leadAnswerBlock: '**llama.cpp هو الأسرع لكل token على النماذج الصغيرة؛ و Ollama هو الأبسط؛ و vLLM هو الأفضل للإنتاجية والـ batching. اختر حسب حالة استخدامك: محادثة عادية ← Ollama؛ سرعة لمستخدم واحد ← llama.cpp؛ متعدد المستخدمين/batching ← vLLM.**',
       audience: 'المطورون الملمّون بـ Ollama أو LM Studio الذين يحسّنون مسارات عمل نماذج LLM المحلية',
       readTime: '9 دقائق للقراءة',
       educationalLevel: 'Intermediate',
@@ -560,6 +568,10 @@ schema: {
         tldr: {
           id: 'tldr',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'يُعد llama.cpp أسرع خلفية من حيث سرعة الرمز الواحد، وOllama الأسهل في الإعداد، بينما يقدّم vLLM أعلى إنتاجية للمستخدمين المتزامنين -- تُشغّل الثلاثة نفس النماذج وتنتج المخرجات نفسها، ويختلف فقط السرعة وتعقيد الإعداد.' },
+            { type: 'plain-terms', text: 'هذه ثلاثة برامج مختلفة لتشغيل نماذج الذكاء الاصطناعي على عتادك الخاص. llama.cpp هو المحرك الخام الأسرع لكنه يحتاج إعدادًا يدويًا. يُغلّفه Ollama في تثبيت بأمر واحد أبطأ قليلاً لكنه أسهل بكثير. صُمم vLLM لخدمة عدد كبير من المستخدمين في آنٍ واحد (مثل روبوت محادثة لشركة) وهو أسرع بكثير عند التعامل مع طلبات متعددة في وقت واحد، رغم أن منحنى تعلّمه أكثر حدة.' },
+          ],
           items: [
             '**llama.cpp:** أدنى زمن استجابة لكل token (أقل ms/token). مثالي للمحادثة التفاعلية. اعتماديات قليلة.',
             '**Ollama:** الأسهل استخدامًا. أمر واحد، تنزيل تلقائي للنماذج. المقايضة: إنتاجية أقل بـ 5–10% من llama.cpp.',
@@ -720,11 +732,11 @@ schema: {
       title: 'llama.cpp vs Ollama vs vLLM 2026: Velocidade, Batching e Benchmarks GPU',
       heroImage: '/images/llamacpp-vs-ollama-vs-vllm-overview-hero-pt.webp',
       seoTitle: 'llama.cpp vs Ollama vs vLLM 2026: velocidade e benchmarks',
-      intro: '**llama.cpp é o mais rápido por token em modelos pequenos; Ollama é o mais simples; vLLM é o melhor para throughput e batching.** A partir de abril de 2026, escolha de acordo com seu caso de uso: chat casual → Ollama; velocidade para um único usuário → llama.cpp; multiusuário/batching → vLLM. Os três executam os mesmos modelos e produzem saídas idênticas — velocidade e throughput diferem.',
+      intro: '**llama.cpp é o mais rápido por token em modelos pequenos; Ollama é o mais simples; vLLM é o melhor para throughput e batching.** Escolha de acordo com seu caso de uso: chat casual → Ollama; velocidade para um único usuário → llama.cpp; multiusuário/batching → vLLM. Os três executam os mesmos modelos e produzem saídas idênticas — velocidade e throughput diferem.',
       metaDescription: 'llama.cpp: 38 tok/s (mais rápido). Ollama: setup em 5 min (mais simples). vLLM: 250+ tok/s em batch (maior throughput). Benchmarks RTX 4090. 2026.',
       publishDate: '2026-04-05',
       dateModified: '2026-08-26',
-      leadAnswerBlock: '**llama.cpp é o mais rápido por token em modelos pequenos; Ollama é o mais simples; vLLM é o melhor para throughput e batching. A partir de abril de 2026, escolha de acordo com seu caso de uso: chat casual → Ollama; velocidade para um único usuário → llama.cpp; multiusuário/batching → vLLM.**',
+      leadAnswerBlock: '**llama.cpp é o mais rápido por token em modelos pequenos; Ollama é o mais simples; vLLM é o melhor para throughput e batching. Escolha de acordo com seu caso de uso: chat casual → Ollama; velocidade para um único usuário → llama.cpp; multiusuário/batching → vLLM.**',
       audience: 'Desenvolvedores familiarizados com Ollama ou LM Studio que otimizam fluxos de trabalho com LLMs locais',
       readTime: '9 min de leitura',
       educationalLevel: 'Intermediate',
@@ -793,6 +805,10 @@ schema: {
         tldr: {
           id: 'tldr',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'O llama.cpp é o backend mais rápido por token, o Ollama é o mais fácil de configurar, e o vLLM oferece o maior throughput para usuários simultâneos -- os três rodam modelos idênticos e produzem a mesma saída, diferindo apenas na velocidade e na complexidade de configuração.' },
+            { type: 'plain-terms', text: 'Esses são três programas diferentes para rodar modelos de IA no seu próprio hardware. O llama.cpp é o motor bruto e mais rápido, mas exige configuração manual. O Ollama o envolve em uma instalação de um único comando, um pouco mais lenta, mas muito mais fácil. O vLLM foi feito para atender muitos usuários ao mesmo tempo (como um chatbot corporativo) e é muito mais rápido ao lidar com várias solicitações simultâneas, embora tenha uma curva de aprendizado mais acentuada.' },
+          ],
           items: [
             '**llama.cpp:** Menor latência por token (menor ms/token). Ideal para chat interativo. Dependências mínimas.',
             '**Ollama:** O mais fácil de usar. Um comando, download automático de modelos. Trade-off: 5–10% menos throughput que o llama.cpp.',
@@ -948,11 +964,11 @@ schema: {
       title: 'llama.cpp vs Ollama vs vLLM 2026: Geschwindigkeit & GPU-Benchmarks',
       heroImage: '/images/llamacpp-vs-ollama-vs-vllm-overview-hero-de.webp',
       seoTitle: 'llama.cpp vs. Ollama vs. vLLM 2026: Welche Engine?',
-      intro: '**llama.cpp ist am schnellsten pro Token bei kleinen Modellen; Ollama ist am einfachsten; vLLM ist am besten für Durchsatz und Batching.** Stand April 2026: Wählen Sie nach Anwendungsfall – gelegentlicher Chat → Ollama; Einzelnutzer-Geschwindigkeit → llama.cpp; Multi-User/Batching → vLLM. Alle drei führen dieselben Modelle aus und erzeugen identische Ausgaben – Geschwindigkeit und Durchsatz unterscheiden sich.',
+      intro: '**llama.cpp ist am schnellsten pro Token bei kleinen Modellen; Ollama ist am einfachsten; vLLM ist am besten für Durchsatz und Batching.** Wählen Sie nach Anwendungsfall – gelegentlicher Chat → Ollama; Einzelnutzer-Geschwindigkeit → llama.cpp; Multi-User/Batching → vLLM. Alle drei führen dieselben Modelle aus und erzeugen identische Ausgaben – Geschwindigkeit und Durchsatz unterscheiden sich.',
       metaDescription: 'llama.cpp: 38 Tok/s Single-Token (schnellstes). Ollama: 5-Min-Setup (einfachstes). vLLM: 250+ Tok/s Batch (höchster Durchsatz). RTX 4090 Benchmarks. April 2026.',
       publishDate: '2026-04-05',
       dateModified: '2026-08-28',
-      leadAnswerBlock: '**llama.cpp ist am schnellsten pro Token bei kleinen Modellen; Ollama ist am einfachsten; vLLM ist am besten für Durchsatz und Batching. Stand April 2026: Wählen Sie nach Anwendungsfall – gelegentlicher Chat → Ollama; Einzelnutzer-Geschwindigkeit → llama.cpp; Multi-User/Batching → vLLM.**',
+      leadAnswerBlock: '**llama.cpp ist am schnellsten pro Token bei kleinen Modellen; Ollama ist am einfachsten; vLLM ist am besten für Durchsatz und Batching. Wählen Sie nach Anwendungsfall – gelegentlicher Chat → Ollama; Einzelnutzer-Geschwindigkeit → llama.cpp; Multi-User/Batching → vLLM.**',
       audience: 'Entwickler, die mit Ollama oder LM Studio vertraut sind und ihren lokalen LLM-Workflow optimieren möchten',
       readTime: '9 Min. Lesezeit',
       educationalLevel: 'Intermediate',
@@ -1020,6 +1036,10 @@ schema: {
         tldr: {
           id: 'tldr',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'llama.cpp ist das schnellste Backend pro Token, Ollama am einfachsten einzurichten, und vLLM liefert den höchsten Durchsatz bei gleichzeitigen Nutzern -- alle drei führen identische Modelle aus und erzeugen identische Ausgaben, sie unterscheiden sich nur in Geschwindigkeit und Einrichtungsaufwand.' },
+            { type: 'plain-terms', text: 'Dies sind drei verschiedene Programme, um KI-Modelle auf Ihrer eigenen Hardware auszuführen. llama.cpp ist die rohe, schnellste Engine, benötigt aber manuelle Einrichtung. Ollama verpackt es in eine Ein-Befehl-Installation, die etwas langsamer, aber deutlich einfacher ist. vLLM ist für die Bedienung vieler Nutzer gleichzeitig gebaut (wie ein Firmen-Chatbot) und deutlich schneller bei mehreren gleichzeitigen Anfragen, hat aber eine steilere Lernkurve.' },
+          ],
           items: [
             '**llama.cpp:** Schnellste Einzel-Token-Latenz (niedrigstes ms/Token). Ideal für interaktiven Chat. Minimale Abhängigkeiten.',
             '**Ollama:** Einfachste Nutzung. Ein Befehl, automatische Modell-Downloads. Trade-off: 5–10 % geringerer Durchsatz als llama.cpp.',
@@ -1178,11 +1198,11 @@ schema: {
       title: 'llama.cpp vs Ollama vs vLLM 2026 : Vitesse & Benchmarks GPU',
       heroImage: '/images/llamacpp-vs-ollama-vs-vllm-overview-hero-fr.webp',
       seoTitle: 'llama.cpp vs Ollama vs vLLM 2026 : Vitesse & Benchmarks GPU',
-      intro: '**llama.cpp est le plus rapide par token ; Ollama est le plus simple ; vLLM offre le meilleur débit en mode batch.** En avril 2026, choisissez selon votre cas d\'usage : chat occasionnel → Ollama ; vitesse monoposte → llama.cpp ; multi-utilisateurs/batch → vLLM. Les trois exécutent les mêmes modèles et produisent des sorties identiques — seuls la vitesse et le débit diffèrent.',
+      intro: '**llama.cpp est le plus rapide par token ; Ollama est le plus simple ; vLLM offre le meilleur débit en mode batch.** Choisissez selon votre cas d\'usage : chat occasionnel → Ollama ; vitesse monoposte → llama.cpp ; multi-utilisateurs/batch → vLLM. Les trois exécutent les mêmes modèles et produisent des sorties identiques — seuls la vitesse et le débit diffèrent.',
       metaDescription: 'llama.cpp : 38 tok/s par token (plus rapide). Ollama : 5 min (plus simple). vLLM : 250+ tok/s batch (meilleur débit). Benchmarks RTX 4090. Avril 2026.',
       publishDate: '2026-04-05',
       dateModified: '2026-08-26',
-      leadAnswerBlock: '**llama.cpp est le plus rapide par token ; Ollama est le plus simple ; vLLM offre le meilleur débit en mode batch. En avril 2026, choisissez selon votre cas d\'usage : chat occasionnel → Ollama ; vitesse monoposte → llama.cpp ; multi-utilisateurs/batch → vLLM.**',
+      leadAnswerBlock: '**llama.cpp est le plus rapide par token ; Ollama est le plus simple ; vLLM offre le meilleur débit en mode batch. Choisissez selon votre cas d\'usage : chat occasionnel → Ollama ; vitesse monoposte → llama.cpp ; multi-utilisateurs/batch → vLLM.**',
       audience: 'Développeurs familiers avec Ollama ou LM Studio souhaitant optimiser leurs workflows LLM locaux',
       readTime: '9 min de lecture',
       educationalLevel: 'Intermediate',
@@ -1250,6 +1270,10 @@ schema: {
         tldr: {
           id: 'tldr',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: "llama.cpp est le backend le plus rapide par token, Ollama le plus simple à configurer, et vLLM offre le meilleur débit pour les utilisateurs simultanés -- les trois exécutent des modèles identiques et produisent une sortie identique, ne différant que par la vitesse et la complexité de configuration." },
+            { type: 'plain-terms', text: "Ce sont trois programmes différents pour exécuter des modèles d'IA sur votre propre matériel. llama.cpp est le moteur brut, le plus rapide, mais nécessite une configuration manuelle. Ollama l'enveloppe dans une installation en une commande, un peu plus lente mais bien plus simple. vLLM est conçu pour servir de nombreux utilisateurs à la fois (comme un chatbot d'entreprise) et est nettement plus rapide pour traiter plusieurs requêtes simultanément, bien qu'il ait une courbe d'apprentissage plus raide." },
+          ],
           items: [
             '**llama.cpp :** Latence par token la plus faible. Idéal pour le chat interactif. Dépendances minimales.',
             '**Ollama :** Le plus simple. Une commande, téléchargement auto des modèles. Légèrement plus lent que llama.cpp (5–10 %).',
@@ -1400,11 +1424,11 @@ schema: {
       title: 'llama.cpp vs Ollama vs vLLM 2026：速度・バッチ処理・GPU性能比較',
       heroImage: '/images/llamacpp-vs-ollama-vs-vllm-overview-hero-ja.webp',
       seoTitle: 'llama.cpp vs Ollama vs vLLM 2026：速度・バッチ処理・GPU性能比較',
-      intro: '**llama.cppはトークンあたりの速度が最速、Ollamaは最もシンプル、vLLMはスループット/バッチ処理が最高です。** 2026年4月時点での選択基準：カジュアルなチャット → Ollama；シングルユーザーの速度重視 → llama.cpp；マルチユーザー/バッチ処理 → vLLM。3つとも同じモデルを実行し、同一の出力を生成します — 速度とスループットのみ異なります。',
+      intro: '**llama.cppはトークンあたりの速度が最速、Ollamaは最もシンプル、vLLMはスループット/バッチ処理が最高です。** 選択基準：カジュアルなチャット → Ollama；シングルユーザーの速度重視 → llama.cpp；マルチユーザー/バッチ処理 → vLLM。3つとも同じモデルを実行し、同一の出力を生成します — 速度とスループットのみ異なります。',
       metaDescription: 'llama.cpp：シングルトークン最速（38 tok/s）。Ollama：最も簡単（5分）。vLLM：最大スループット（250+ tok/s）。RTX 4090ベンチマーク。2026年4月。',
       publishDate: '2026-04-05',
       dateModified: '2026-08-26',
-      leadAnswerBlock: '**llama.cppはトークンあたりの速度が最速、Ollamaは最もシンプル、vLLMはスループット/バッチ処理が最高です。2026年4月時点での選択基準：カジュアルなチャット → Ollama；シングルユーザーの速度重視 → llama.cpp；マルチユーザー/バッチ処理 → vLLM。**',
+      leadAnswerBlock: '**llama.cppはトークンあたりの速度が最速、Ollamaは最もシンプル、vLLMはスループット/バッチ処理が最高です。選択基準：カジュアルなチャット → Ollama；シングルユーザーの速度重視 → llama.cpp；マルチユーザー/バッチ処理 → vLLM。**',
       audience: 'ローカルLLMワークフローを最適化したい、OllamaやLM Studioに慣れた開発者',
       readTime: '9分で読める',
       educationalLevel: 'Intermediate',
@@ -1472,6 +1496,10 @@ schema: {
         tldr: {
           id: 'tldr',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'llama.cppは単一トークンの速度が最速のバックエンドで、Ollamaは最も簡単にセットアップでき、vLLMは同時ユーザー向けに最高のスループットを提供します -- 3つとも同一のモデルを実行し、同一の出力を生成しますが、速度とセットアップの複雑さのみが異なります。' },
+            { type: 'plain-terms', text: 'これらは、自分のハードウェア上でAIモデルを実行するための3つの異なるプログラムです。llama.cppは生の最速エンジンですが、手動セットアップが必要です。Ollamaはそれを1コマンドインストールでラップし、やや遅いですがはるかに簡単です。vLLMは多数のユーザーに同時対応するために構築されており（企業のチャットボットのように）、複数のリクエストを同時に処理する際に劇的に高速ですが、学習曲線はより急です。' },
+          ],
           items: [
             '**llama.cpp：** シングルトークンレイテンシが最低。インタラクティブなチャットに最適。依存関係が最少。',
             '**Ollama：** 最も簡単な操作性。で1コマンド、モデルは自動ダウンロード。トレードオフ：llama.cppよりスループットが5−10%低下。',
@@ -1654,6 +1682,10 @@ schema: {
         tldr: {
           id: 'tldr',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'llama.cpp是单token速度最快的后端，Ollama是最容易配置的，而vLLM为并发用户提供最高的吞吐量——三者运行相同的模型并产生相同的输出，仅在速度和配置复杂度上有所差异。' },
+            { type: 'plain-terms', text: '这是三个用于在您自己的硬件上运行AI模型的不同程序。llama.cpp是最原始、最快的引擎，但需要手动配置。Ollama将其封装成一条命令即可安装，速度略慢但简单得多。vLLM专为同时服务大量用户而设计（如企业聊天机器人），在处理多个并发请求时速度显著更快，但学习曲线更陡峭。' },
+          ],
           title: '核心要点',
           items: [
             '**llama.cpp：** 单请求最快（38 tok/s，26ms）。依赖最少。最适合自定义推理引擎。',
@@ -2026,11 +2058,11 @@ schema: {
       title: 'llama.cpp vs Ollama vs vLLM 2026: 속도, 배칭 및 GPU 벤치마크',
     heroImage: '/images/llamacpp-vs-ollama-vs-vllm-overview-hero-ko.webp',
       seoTitle: 'llama.cpp vs Ollama vs vLLM 2026: 속도, 배칭 및 GPU 벤치마크',
-      intro: '**llama.cpp는 소규모 모델에서 토큰당 속도가 가장 빠르고, Ollama는 가장 사용이 간편하며, vLLM은 처리량과 배칭에 가장 적합합니다.** 2026년 4월 기준, 사용 사례에 따라 선택하십시오: 일반 채팅 → Ollama, 단일 사용자 속도 → llama.cpp, 다중 사용자/배칭 → vLLM. 세 가지 모두 동일한 모델을 실행하며 동일한 출력 결과를 생성합니다. 속도와 처리량만 차이가 납니다.',
+      intro: '**llama.cpp는 소규모 모델에서 토큰당 속도가 가장 빠르고, Ollama는 가장 사용이 간편하며, vLLM은 처리량과 배칭에 가장 적합합니다.** 사용 사례에 따라 선택하십시오: 일반 채팅 → Ollama, 단일 사용자 속도 → llama.cpp, 다중 사용자/배칭 → vLLM. 세 가지 모두 동일한 모델을 실행하며 동일한 출력 결과를 생성합니다. 속도와 처리량만 차이가 납니다.',
       metaDescription: 'llama.cpp는 38 tok/s 속도를 제공합니다. Ollama는 5분 설치의 간편함을 제공합니다. vLLM은 250+ tok/s 처리량을 제공합니다. RTX 4090 완전 벤치마크 매트릭스 및 비교.',
       publishDate: '2026-04-05',
       dateModified: '2026-08-26',
-      leadAnswerBlock: '**llama.cpp는 소규모 모델에서 토큰당 속도가 가장 빠르고, Ollama는 가장 사용이 간편하며, vLLM은 처리량과 배칭에 가장 적합합니다. 2026년 4월 기준, 사용 사례에 따라 선택하십시오: 일반 채팅 → Ollama, 단일 사용자 속도 → llama.cpp, 다중 사용자/배칭 → vLLM.**',
+      leadAnswerBlock: '**llama.cpp는 소규모 모델에서 토큰당 속도가 가장 빠르고, Ollama는 가장 사용이 간편하며, vLLM은 처리량과 배칭에 가장 적합합니다. 사용 사례에 따라 선택하십시오: 일반 채팅 → Ollama, 단일 사용자 속도 → llama.cpp, 다중 사용자/배칭 → vLLM.**',
       audience: 'Ollama 또는 LM Studio에 익숙하고 로컬 LLM 워크플로를 최적화하려는 개발자',
       readTime: '9분',
       educationalLevel: 'Intermediate',
@@ -2098,6 +2130,10 @@ schema: {
         tldr: {
           id: 'tldr',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'llama.cpp는 단일 토큰 속도가 가장 빠른 백엔드이고, Ollama는 설정이 가장 쉬우며, vLLM은 동시 사용자 처리량이 가장 높습니다 -- 세 가지 모두 동일한 모델을 실행하고 동일한 출력을 생성하며, 속도와 설정 복잡도만 다릅니다.' },
+            { type: 'plain-terms', text: '이 세 가지는 자신의 하드웨어에서 AI 모델을 실행하기 위한 서로 다른 프로그램입니다. llama.cpp는 가장 빠른 원시 엔진이지만 수동 설정이 필요합니다. Ollama는 이를 명령어 하나로 설치할 수 있게 감싸며, 약간 느리지만 훨씬 쉽습니다. vLLM은 (기업용 챗봇처럼) 많은 사용자를 동시에 처리하도록 설계되어 여러 요청을 동시에 처리할 때 훨씬 빠르지만, 학습 곡선이 더 가파릅니다.' },
+          ],
           items: [
             '**llama.cpp:** 가장 빠른 단일 토큰 레이턴시(최저 ms/token). 대화형 채팅에 최적. 최소한의 의존성.',
             '**Ollama:** 가장 사용하기 쉬움. 명령 하나로 자동 모델 다운로드. 단점: llama.cpp보다 처리량이 5~10% 낮음.',
