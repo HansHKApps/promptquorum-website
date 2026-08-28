@@ -6,16 +6,16 @@
     "fields": [
       {
         "field": "metaDescription",
-        "old": "Prompt Engineering 2026: die Technik, die Qualität Ihrer KI-Ausgaben bestimmt. Lernen Sie Rollenanweisung, Chain-of-Thought und Few-Shot für ChatGPT, Claude und Ollama.",
-        "new": "Prompt Engineering 2026: die Technik, die KI-Ausgaben zuverlässig macht. Rollenanweisung, Chain-of-Thought und Few-Shot für ChatGPT, Claude und Ollama."
+        "old": "Prompt Engineering 2026: die Technik, die Qualit\u00e4t Ihrer KI-Ausgaben bestimmt. Lernen Sie Rollenanweisung, Chain-of-Thought und Few-Shot f\u00fcr ChatGPT, Claude und Ollama.",
+        "new": "Prompt Engineering 2026: die Technik, die KI-Ausgaben zuverl\u00e4ssig macht. Rollenanweisung, Chain-of-Thought und Few-Shot f\u00fcr ChatGPT, Claude und Ollama."
       },
       {
         "field": "metaDescription",
-        "old": "プロンプトエンジニアリングはAI出力の品質を決める技術です。ChatGPT・Claude・Ollamaで実践する入門ガイド。基礎を10分で学べます。",
-        "new": "プロンプトエンジニアリングはAI出力の品質を決める技術です。ChatGPT・Claude・Ollamaで実践する入門ガイド。ロール指示・Chain-of-Thought含む。10分で習得。"
+        "old": "\u30d7\u30ed\u30f3\u30d7\u30c8\u30a8\u30f3\u30b8\u30cb\u30a2\u30ea\u30f3\u30b0\u306fAI\u51fa\u529b\u306e\u54c1\u8cea\u3092\u6c7a\u3081\u308b\u6280\u8853\u3067\u3059\u3002ChatGPT\u30fbClaude\u30fbOllama\u3067\u5b9f\u8df5\u3059\u308b\u5165\u9580\u30ac\u30a4\u30c9\u3002\u57fa\u790e\u309210\u5206\u3067\u5b66\u3079\u307e\u3059\u3002",
+        "new": "\u30d7\u30ed\u30f3\u30d7\u30c8\u30a8\u30f3\u30b8\u30cb\u30a2\u30ea\u30f3\u30b0\u306fAI\u51fa\u529b\u306e\u54c1\u8cea\u3092\u6c7a\u3081\u308b\u6280\u8853\u3067\u3059\u3002ChatGPT\u30fbClaude\u30fbOllama\u3067\u5b9f\u8df5\u3059\u308b\u5165\u9580\u30ac\u30a4\u30c9\u3002\u30ed\u30fc\u30eb\u6307\u793a\u30fbChain-of-Thought\u542b\u3080\u300210\u5206\u3067\u7fd2\u5f97\u3002"
       }
     ],
-    "reason": "geo-meta-optimizer: fix DE metaDescription (168→150 chars), fix JA metaDescription (74→94 chars, below 80-char min)",
+    "reason": "geo-meta-optimizer: fix DE metaDescription (168\u2192150 chars), fix JA metaDescription (74\u219294 chars, below 80-char min)",
     "baseline": null
   },
   {
@@ -57,7 +57,7 @@
         "new": "What LLMs Still Can't Do in 2026: 8 Structural Limits"
       }
     ],
-    "reason": "GSC 'still/current' keyword signal — 74% impressions from 'current limitations' queries; 'Still' retains that signal while adding CTR-boosting numbered format",
+    "reason": "GSC 'still/current' keyword signal \u2014 74% impressions from 'current limitations' queries; 'Still' retains that signal while adding CTR-boosting numbered format",
     "baseline": null
   },
   {
@@ -67,11 +67,11 @@
     "fields": [
       {
         "field": "metaDescription",
-        "old": "Current LLM limitations: no real-time data, hallucination, weak reasoning. 8 hard limits for GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro — with workarounds.",
-        "new": "LLMs can't access real-time data, verify outputs, or reason reliably. 8 structural limits for GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro — with workarounds."
+        "old": "Current LLM limitations: no real-time data, hallucination, weak reasoning. 8 hard limits for GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro \u2014 with workarounds.",
+        "new": "LLMs can't access real-time data, verify outputs, or reason reliably. 8 structural limits for GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro \u2014 with workarounds."
       }
     ],
-    "reason": "Front-load 3 concrete failure modes as statement (not topic list) — stronger snippet hook and matches 'can LLMs verify' long-tail queries",
+    "reason": "Front-load 3 concrete failure modes as statement (not topic list) \u2014 stronger snippet hook and matches 'can LLMs verify' long-tail queries",
     "baseline": null
   },
   {
@@ -110,7 +110,7 @@
       },
       {
         "field": "metaDescription",
-        "old": "AI code review tools detect 42-85% of runtime bugs vs sub-20% for SAST. CodeRabbit, Greptile, and Snyk compared. Includes 5-part prompt framework to cut noise by 3×.",
+        "old": "AI code review tools detect 42-85% of runtime bugs vs sub-20% for SAST. CodeRabbit, Greptile, and Snyk compared. Includes 5-part prompt framework to cut noise by 3\u00d7.",
         "new": "Snyk vs Greptile vs CodeRabbit: AI code review tools compared. Detect 42-85% of runtime bugs vs SAST's 20%. Benchmarks, pricing, and when to use each."
       }
     ],
@@ -201,7 +201,7 @@
       },
       {
         "field": "metaDescription",
-        "old": "Choose quantization by VRAM: 6GB VRAM → Q4_K_M (run 7B), 8GB → Q4_K_M (7B-13B), 16GB → Q5_K_M, 24GB+ → Q8_0. Decision matrix + models for each tier.",
+        "old": "Choose quantization by VRAM: 6GB VRAM \u2192 Q4_K_M (run 7B), 8GB \u2192 Q4_K_M (7B-13B), 16GB \u2192 Q5_K_M, 24GB+ \u2192 Q8_0. Decision matrix + models for each tier.",
         "new": "Choose the right LLM quantization for your hardware. Q4_K_M for 6-8GB VRAM, Q5_K_M for 16GB, Q8_0 for 24GB+. 2026 guide with RAM tables."
       }
     ],
@@ -255,7 +255,7 @@
         "new": "Ollama's latest version is v0.33.1. See the full v0.32-v0.33 changelog, new models added in 2026, and which model is best for chat, coding and vision."
       }
     ],
-    "reason": "geo-meta-optimizer coherence-C-fix: page claimed v0.32.0 (Jul 11) was current; actual latest stable is v0.33.1 (Aug 26). Title now carries literal 'latest version' phrase (960+810 imps at ~0% CTR) and drops the month to stop monthly staleness. Body version facts + 3 version FAQs added across all 9 locales. NOTE: prior seoTitle was changed in a July refresh without being logged — 'old' here is the actual file value, not changelog entry #1's 'new'.",
+    "reason": "geo-meta-optimizer coherence-C-fix: page claimed v0.32.0 (Jul 11) was current; actual latest stable is v0.33.1 (Aug 26). Title now carries literal 'latest version' phrase (960+810 imps at ~0% CTR) and drops the month to stop monthly staleness. Body version facts + 3 version FAQs added across all 9 locales. NOTE: prior seoTitle was changed in a July refresh without being logged \u2014 'old' here is the actual file value, not changelog entry #1's 'new'.",
     "baseline": {
       "position": 7.4,
       "impressions": 6889,
@@ -275,7 +275,7 @@
         "new": "v1.9.3 (August 20, 2026)"
       }
     ],
-    "reason": "geo-meta-optimizer coherence-C fix (body-only, title/meta untouched — comparison-cluster CTR already strong, pos 2-3, 7-20%): body claimed whisper.cpp v1.8.6 was latest; actual latest is v1.9.3. Version/changelog section corrected across 9 locales, plus 2 new FAQs per locale (official Debian/apt package — new info, previously zero coverage; how to check installed version). KO got the 2 FAQs but still lacks the whatsNew/changelog section entirely vs EN — pre-existing structural gap, flagged separately, not fixed in this pass.",
+    "reason": "geo-meta-optimizer coherence-C fix (body-only, title/meta untouched \u2014 comparison-cluster CTR already strong, pos 2-3, 7-20%): body claimed whisper.cpp v1.8.6 was latest; actual latest is v1.9.3. Version/changelog section corrected across 9 locales, plus 2 new FAQs per locale (official Debian/apt package \u2014 new info, previously zero coverage; how to check installed version). KO got the 2 FAQs but still lacks the whatsNew/changelog section entirely vs EN \u2014 pre-existing structural gap, flagged separately, not fixed in this pass.",
     "baseline": {
       "position": 6.9,
       "impressions": 500,
@@ -361,11 +361,11 @@
     "fields": [
       {
         "field": "metaDescription",
-        "old": "Best local LLM models ranked by VRAM tier (4GB–48GB): RTX 3060 12GB, RTX 4090, Apple Silicon guides. Ollama setup, hardware tier comparison, beginner tutorials — June 2026.",
-        "new": "Best local LLM models ranked by VRAM tier (4GB–48GB): RTX 3060 12GB, RTX 4090, Apple Silicon guides. Ollama setup, hardware tier comparison, beginner tutorials."
+        "old": "Best local LLM models ranked by VRAM tier (4GB\u201348GB): RTX 3060 12GB, RTX 4090, Apple Silicon guides. Ollama setup, hardware tier comparison, beginner tutorials \u2014 June 2026.",
+        "new": "Best local LLM models ranked by VRAM tier (4GB\u201348GB): RTX 3060 12GB, RTX 4090, Apple Silicon guides. Ollama setup, hardware tier comparison, beginner tutorials."
       }
     ],
-    "reason": "geo-meta-optimizer + seo-cannibalization: ran cannibalization scan first (no conflict found — how-much-vram-local-llm answers 'how much VRAM do I need', hub's queries are 'best model for my VRAM' — different intent, not competing). Title already matched intent well; real fix was (1) stale '— June/Juni/junio/mayo 2026' trailing date-stamp removed from meta desc, twitter desc, and H1 across all 9 locales (H1 also had a separate drift bug: LocalLLMsHub.tsx's own hardcoded H1 didn't match the metadata title), and (2) added a genuine text-based 'Best Local LLM by VRAM Tier' section (7-row table, 4-48GB) sourced from the existing how-much-vram-local-llm article for fact consistency, since the title promised VRAM-tier content the body never delivered — Diagnosis B3. Also discovered and fixed: the ENTIRE hub component (LocalLLMsHub.tsx) had zero Arabic translations across every single data constant (title, description, comparison table, model table, CTAs — everything), silently falling back to English via '?? [...]['en']' for the whole /ar/local-llms page. Added Arabic for the new VRAM section only (in scope); the pre-existing site-wide AR gap on this page is flagged separately as a much larger finding, not fixed in this pass.",
+    "reason": "geo-meta-optimizer + seo-cannibalization: ran cannibalization scan first (no conflict found \u2014 how-much-vram-local-llm answers 'how much VRAM do I need', hub's queries are 'best model for my VRAM' \u2014 different intent, not competing). Title already matched intent well; real fix was (1) stale '\u2014 June/Juni/junio/mayo 2026' trailing date-stamp removed from meta desc, twitter desc, and H1 across all 9 locales (H1 also had a separate drift bug: LocalLLMsHub.tsx's own hardcoded H1 didn't match the metadata title), and (2) added a genuine text-based 'Best Local LLM by VRAM Tier' section (7-row table, 4-48GB) sourced from the existing how-much-vram-local-llm article for fact consistency, since the title promised VRAM-tier content the body never delivered \u2014 Diagnosis B3. Also discovered and fixed: the ENTIRE hub component (LocalLLMsHub.tsx) had zero Arabic translations across every single data constant (title, description, comparison table, model table, CTAs \u2014 everything), silently falling back to English via '?? [...]['en']' for the whole /ar/local-llms page. Added Arabic for the new VRAM section only (in scope); the pre-existing site-wide AR gap on this page is flagged separately as a much larger finding, not fixed in this pass.",
     "baseline": {
       "impressions": 46602,
       "clicks": 466,
@@ -389,12 +389,51 @@
         "new": "M5 Pro vs M5 Max bandwidth (307-614 GB/s), tokens/sec benchmarks, and how to speed up Ollama on Apple Silicon M5. Mac mini, Studio, MacBook Pro compared."
       }
     ],
-    "reason": "geo-meta-optimizer coherence-B2 fix: single largest query on the page ('ollama macbook pro m5 speed optimization', 273 impr, pos 7.7, 0% CTR — more than the next 3 queries combined) had no matching content anywhere on the page. Added a new 'How to Speed Up Ollama on Apple Silicon M5' section (concrete tuning: ollama ps GPU-offload check, freeing unified memory, num_ctx, quantization choice, MacBook Pro thermal/power management, OLLAMA_MAX_LOADED_MODELS) plus a matching FAQ entry, in all 9 locales (FR required syncing both faqs[] and the separate faqSchema.mainEntity[] it maintains). Bandwidth cluster (~242 impr across 10 query variants, ~0% CTR) was already well-covered in the body (307/460/614 GB/s, up to 1.2 TB/s) — Diagnosis A, fixed via title/meta wording only, no body change needed there. Comparison-cluster queries left untouched (already converting 11-20% in places).",
+    "reason": "geo-meta-optimizer coherence-B2 fix: single largest query on the page ('ollama macbook pro m5 speed optimization', 273 impr, pos 7.7, 0% CTR \u2014 more than the next 3 queries combined) had no matching content anywhere on the page. Added a new 'How to Speed Up Ollama on Apple Silicon M5' section (concrete tuning: ollama ps GPU-offload check, freeing unified memory, num_ctx, quantization choice, MacBook Pro thermal/power management, OLLAMA_MAX_LOADED_MODELS) plus a matching FAQ entry, in all 9 locales (FR required syncing both faqs[] and the separate faqSchema.mainEntity[] it maintains). Bandwidth cluster (~242 impr across 10 query variants, ~0% CTR) was already well-covered in the body (307/460/614 GB/s, up to 1.2 TB/s) \u2014 Diagnosis A, fixed via title/meta wording only, no body change needed there. Comparison-cluster queries left untouched (already converting 11-20% in places).",
     "baseline": {
       "impressions": 34797,
       "clicks": 257,
       "ctr": 0.007385694169037561,
       "period": "2026-07-31 to 2026-08-27"
+    }
+  },
+  {
+    "id": "769ea0ca-cbc2-4df5-ab3d-b89a1bf78b7c",
+    "slug": "/local-llms/how-much-vram-local-llm",
+    "date": "2026-08-28T20:10:38.935Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Local LLM VRAM: 7B=8GB, 13B=13GB, 70B=40-48GB (2026)",
+        "new": "Local LLM VRAM: 7B=4GB, 13B=8GB, 70B=42GB (2026)"
+      },
+      {
+        "field": "quantization-formula",
+        "old": "wrong /8-per-billion and theoretical-only bits/8 formulas across locales, understating/overstating real GGUF file sizes",
+        "new": "verified ~0.6-1.05 GB/param by quant level, cross-checked against 5 real HuggingFace GGUF file sizes"
+      },
+      {
+        "field": "by-model-size-table",
+        "old": "Q4/Q5/Q8 VRAM figures computed from wrong formula",
+        "new": "recomputed for all dense + MoE rows using verified per-parameter ratios"
+      },
+      {
+        "field": "by-vram-tier-table",
+        "old": "stale 70B figures ~35GB/~44GB inconsistent with corrected 42GB weight figure",
+        "new": "corrected to ~42GB (Q4) / ~50GB (Q5), consistent across the page"
+      },
+      {
+        "field": "faq",
+        "old": "Mistral Small on 6GB GPU: barely, buy 8GB (wrong, Mistral Small is 22-24B needing ~13-14GB)",
+        "new": "No \u2014 needs ~13-14GB, budget 16GB, or use a 7B-8B model instead"
+      }
+    ],
+    "reason": "Query 'small 7b model q4 memory 4-5gb rule of thumb' (1,185 impr, pos 2.1, 0% CTR) and 'how to choose quantization level llm vram requirements 6gb' (442 impr, pos 7.3, 0% CTR) exposed that the page's own VRAM-per-quantization math was factually wrong; corrected across all 9 locales and every table/FAQ/schema instance after cross-validating against real GGUF file sizes",
+    "baseline": {
+      "impressions": 1627,
+      "clicks": 0,
+      "ctr": 0,
+      "period": "last 90 days"
     }
   }
 ]
