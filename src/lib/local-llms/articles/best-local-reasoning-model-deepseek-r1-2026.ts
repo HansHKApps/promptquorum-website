@@ -24,7 +24,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4060 Ti 16GB', 'NVIDIA RTX 4090 24GB', 'Minisforum mini-PC'],
     current_benchmarks_used: ['AIME 2024', 'MATH-500', 'GPQA Diamond'],
     targetKeywords: ['best local reasoning model', 'deepseek r1 distill', 'deepseek r1 local', 'local reasoning model gpu', 'r1-0528-qwen3-8b'],
-    ctaText: 'Running a DeepSeek-R1 distill locally? Dispatch the same reasoning prompt to your local model and to GPT-4o, Claude, and Gemini in one shot with PromptQuorum — see exactly where the distill matches frontier reasoning and where it falls short.',
+    ctaText: 'Running a DeepSeek-R1 distill locally? Dispatch the same reasoning prompt to your local model and to GPT-5.6, Claude, and Gemini in one shot with PromptQuorum — see exactly where the distill matches frontier reasoning and where it falls short.',
     leadAnswerBlock: '**The best local reasoning model for most people in 2026 is DeepSeek-R1-Distill-Qwen-14B on a 16 GB GPU, with DeepSeek-R1-Distill-Qwen-32B the top pick if you have 24 GB.** The 14B distill runs at Q4_K_M in ~9 GB, handles AIME-style multi-step math, and fits an RTX 4060 Ti 16GB. The 32B distill beats OpenAI o1-mini on several reasoning benchmarks and is the best single-consumer-GPU reasoning model. If you only have 8 GB, run the 7B distill or the newer DeepSeek-R1-0528-Qwen3-8B — the strongest small reasoning distill available.',
     quickAnswerTop: {
       en: {
@@ -243,7 +243,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Dual-GPU / 48 GB → DeepSeek-R1-Distill-Llama-70B (maximum accuracy)',
           ],
           cloudIf: [
-            'You need frontier reasoning beyond any distill → compare against GPT-4o / Claude / Gemini via PromptQuorum',
+            'You need frontier reasoning beyond any distill → compare against GPT-5.6 / Claude / Gemini via PromptQuorum',
             'You cannot dedicate a GPU → a hosted reasoning API may be cheaper than buying hardware',
           ],
           quick: [
@@ -317,7 +317,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4060 Ti 16GB', 'NVIDIA RTX 4090 24GB', 'Minisforum mini-PC'],
     current_benchmarks_used: ['AIME 2024', 'MATH-500', 'GPQA Diamond'],
     targetKeywords: ['bestes lokales reasoning-modell', 'deepseek r1 distill', 'deepseek r1 lokal', 'lokales reasoning-modell gpu', 'r1-0528-qwen3-8b'],
-    ctaText: 'Sie betreiben einen DeepSeek-R1-Distill lokal? Schicken Sie denselben Reasoning-Prompt mit PromptQuorum in einem Zug an Ihr lokales Modell und an GPT-4o, Claude und Gemini – und sehen Sie genau, wo der Distill an das Reasoning der Spitzenmodelle heranreicht und wo er zurückfällt.',
+    ctaText: 'Sie betreiben einen DeepSeek-R1-Distill lokal? Schicken Sie denselben Reasoning-Prompt mit PromptQuorum in einem Zug an Ihr lokales Modell und an GPT-5.6, Claude und Gemini – und sehen Sie genau, wo der Distill an das Reasoning der Spitzenmodelle heranreicht und wo er zurückfällt.',
     leadAnswerBlock: '**Das beste lokale Reasoning-Modell für die meisten Menschen im Jahr 2026 ist DeepSeek-R1-Distill-Qwen-14B auf einer 16-GB-GPU, wobei DeepSeek-R1-Distill-Qwen-32B die Top-Wahl ist, wenn Sie 24 GB haben.** Der 14B-Distill läuft bei Q4_K_M in ~9 GB, bewältigt mehrstufige Mathematik im AIME-Stil und passt auf eine RTX 4060 Ti 16GB. Der 32B-Distill schlägt OpenAI o1-mini in mehreren Reasoning-Benchmarks und ist das beste Reasoning-Modell für eine einzelne Consumer-GPU. Wenn Sie nur 8 GB haben, betreiben Sie den 7B-Distill oder das neuere DeepSeek-R1-0528-Qwen3-8B – den stärksten verfügbaren kleinen Reasoning-Distill.',
     quickAnswerTop: {
       de: {
@@ -536,7 +536,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Dual-GPU / 48 GB → DeepSeek-R1-Distill-Llama-70B (maximale Genauigkeit)',
           ],
           cloudIf: [
-            'Sie benötigen Spitzen-Reasoning jenseits jedes Distills → vergleichen Sie über PromptQuorum gegen GPT-4o / Claude / Gemini',
+            'Sie benötigen Spitzen-Reasoning jenseits jedes Distills → vergleichen Sie über PromptQuorum gegen GPT-5.6 / Claude / Gemini',
             'Sie können keine GPU bereitstellen → eine gehostete Reasoning-API kann günstiger sein als Hardware zu kaufen',
           ],
           quick: [
@@ -610,7 +610,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4060 Ti 16GB', 'NVIDIA RTX 4090 24GB', 'Minisforum mini-PC'],
     current_benchmarks_used: ['AIME 2024', 'MATH-500', 'GPQA Diamond'],
     targetKeywords: ['meilleur modèle de raisonnement local', 'deepseek r1 distill', 'deepseek r1 local', 'modèle raisonnement local gpu', 'r1-0528-qwen3-8b'],
-    ctaText: "Vous exécutez un distillé DeepSeek-R1 en local ? Envoyez le même prompt de raisonnement à votre modèle local et à GPT-4o, Claude et Gemini en une seule fois avec PromptQuorum — voyez précisément où le distillé égale le raisonnement de pointe et où il échoue.",
+    ctaText: "Vous exécutez un distillé DeepSeek-R1 en local ? Envoyez le même prompt de raisonnement à votre modèle local et à GPT-5.6, Claude et Gemini en une seule fois avec PromptQuorum — voyez précisément où le distillé égale le raisonnement de pointe et où il échoue.",
     leadAnswerBlock: "**Le meilleur modèle de raisonnement local pour la plupart des gens en 2026 est DeepSeek-R1-Distill-Qwen-14B sur un GPU de 16 Go, DeepSeek-R1-Distill-Qwen-32B étant le premier choix si vous disposez de 24 Go.** Le distillé 14B tourne en Q4_K_M dans ~9 Go, gère les maths multi-étapes de type AIME et tient sur une RTX 4060 Ti 16GB. Le distillé 32B dépasse OpenAI o1-mini sur plusieurs benchmarks de raisonnement et reste le meilleur modèle de raisonnement sur un seul GPU grand public. Si vous n'avez que 8 Go, exécutez le distillé 7B ou le plus récent DeepSeek-R1-0528-Qwen3-8B — le meilleur petit distillé de raisonnement disponible.",
     quickAnswerTop: {
       fr: {
@@ -829,7 +829,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Bi-GPU / 48 Go → DeepSeek-R1-Distill-Llama-70B (précision maximale)',
           ],
           cloudIf: [
-            "Vous avez besoin d'un raisonnement de pointe au-delà de tout distillé → comparez à GPT-4o / Claude / Gemini via PromptQuorum",
+            "Vous avez besoin d'un raisonnement de pointe au-delà de tout distillé → comparez à GPT-5.6 / Claude / Gemini via PromptQuorum",
             "Vous ne pouvez pas dédier un GPU → une API de raisonnement hébergée peut revenir moins cher que l'achat de matériel",
           ],
           quick: [
@@ -903,7 +903,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4060 Ti 16GB', 'NVIDIA RTX 4090 24GB', 'Minisforum mini-PC'],
     current_benchmarks_used: ['AIME 2024', 'MATH-500', 'GPQA Diamond'],
     targetKeywords: ['ローカル推論モデル おすすめ', 'deepseek r1 ディスティル', 'deepseek r1 ローカル', 'ローカル推論モデル gpu', 'r1-0528-qwen3-8b'],
-    ctaText: 'DeepSeek-R1ディスティルをローカルで動かしていますか? PromptQuorumを使えば、同じ推論プロンプトをローカルモデルとGPT-4o・Claude・Geminiに一度に送信できます — ディスティルがフロンティアの推論にどこまで匹敵し、どこで及ばないかを正確に確認できます。',
+    ctaText: 'DeepSeek-R1ディスティルをローカルで動かしていますか? PromptQuorumを使えば、同じ推論プロンプトをローカルモデルとGPT-5.6・Claude・Geminiに一度に送信できます — ディスティルがフロンティアの推論にどこまで匹敵し、どこで及ばないかを正確に確認できます。',
     leadAnswerBlock: '**2026年に多くの人にとって最良のローカル推論モデルは、16 GB GPU上で動かすDeepSeek-R1-Distill-Qwen-14Bであり、24 GBがあるならDeepSeek-R1-Distill-Qwen-32Bが第一候補です。** 14BディスティルはQ4_K_Mで約9 GBに収まり、AIME型の多段階数学を処理でき、RTX 4060 Ti 16GBに適合します。32Bディスティルは複数の推論ベンチマークでOpenAI o1-miniを上回り、コンシューマー向けシングルGPUで最良の推論モデルです。8 GBしかない場合は、7Bディスティルか、より新しいDeepSeek-R1-0528-Qwen3-8B — 利用可能な最強の小型推論ディスティル — を動かしてください。',
     quickAnswerTop: {
       ja: {
@@ -1122,7 +1122,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'デュアルGPU / 48 GB → DeepSeek-R1-Distill-Llama-70B(最高精度)',
           ],
           cloudIf: [
-            'どのディスティルも超えるフロンティアの推論が必要 → PromptQuorum経由でGPT-4o / Claude / Geminiと比較',
+            'どのディスティルも超えるフロンティアの推論が必要 → PromptQuorum経由でGPT-5.6 / Claude / Geminiと比較',
             'GPUを専用にできない → ホスト型推論APIの方がハードウェア購入より安いかもしれません',
           ],
           quick: [
@@ -1196,7 +1196,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4060 Ti 16GB', 'NVIDIA RTX 4090 24GB', 'Minisforum mini-PC'],
     current_benchmarks_used: ['AIME 2024', 'MATH-500', 'GPQA Diamond'],
     targetKeywords: ['最佳本地推理模型', 'deepseek r1 蒸馏版', 'deepseek r1 本地运行', '本地推理模型 gpu', 'r1-0528-qwen3-8b'],
-    ctaText: '正在本地运行 DeepSeek-R1 蒸馏版？用 PromptQuorum 一次性把同一个推理提示词发送给你的本地模型以及 GPT-4o、Claude 和 Gemini——直观看到蒸馏版在哪里能比肩前沿推理，又在哪里力不从心。',
+    ctaText: '正在本地运行 DeepSeek-R1 蒸馏版？用 PromptQuorum 一次性把同一个推理提示词发送给你的本地模型以及 GPT-5.6、Claude 和 Gemini——直观看到蒸馏版在哪里能比肩前沿推理，又在哪里力不从心。',
     leadAnswerBlock: '**2026 年对大多数人来说，最佳本地推理模型是在 16 GB GPU 上运行的 DeepSeek-R1-Distill-Qwen-14B；如果你有 24 GB，则首选 DeepSeek-R1-Distill-Qwen-32B。** 14B 蒸馏版在 Q4_K_M 下约占 9 GB，能处理 AIME 风格的多步数学题，并能装进 RTX 4060 Ti 16GB。32B 蒸馏版在多项推理基准上击败 OpenAI o1-mini，是最佳的单消费级 GPU 推理模型。如果你只有 8 GB，就运行 7B 蒸馏版或更新的 DeepSeek-R1-0528-Qwen3-8B——目前可用的最强小型推理蒸馏模型。',
     quickAnswerTop: {
       zh: {
@@ -1415,7 +1415,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '双 GPU / 48 GB → DeepSeek-R1-Distill-Llama-70B（最高精度）',
           ],
           cloudIf: [
-            '你需要超越任何蒸馏版的前沿推理 → 通过 PromptQuorum 与 GPT-4o / Claude / Gemini 对比',
+            '你需要超越任何蒸馏版的前沿推理 → 通过 PromptQuorum 与 GPT-5.6 / Claude / Gemini 对比',
             '你无法专门腾出一张 GPU → 托管推理 API 可能比购买硬件更便宜',
           ],
           quick: [
@@ -1489,7 +1489,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4060 Ti 16GB', 'NVIDIA RTX 4090 24GB', 'Minisforum mini-PC'],
     current_benchmarks_used: ['AIME 2024', 'MATH-500', 'GPQA Diamond'],
     targetKeywords: ['mejor modelo de razonamiento local', 'deepseek r1 distill', 'deepseek r1 local', 'modelo de razonamiento local gpu', 'r1-0528-qwen3-8b'],
-    ctaText: '¿Ejecutas un destilado de DeepSeek-R1 en local? Envía el mismo prompt de razonamiento a tu modelo local y a GPT-4o, Claude y Gemini de una sola vez con PromptQuorum: descubre exactamente dónde el destilado iguala al razonamiento de frontera y dónde se queda corto.',
+    ctaText: '¿Ejecutas un destilado de DeepSeek-R1 en local? Envía el mismo prompt de razonamiento a tu modelo local y a GPT-5.6, Claude y Gemini de una sola vez con PromptQuorum: descubre exactamente dónde el destilado iguala al razonamiento de frontera y dónde se queda corto.',
     leadAnswerBlock: '**El mejor modelo de razonamiento local para la mayoría de la gente en 2026 es DeepSeek-R1-Distill-Qwen-14B en una GPU de 16 GB, con DeepSeek-R1-Distill-Qwen-32B como la mejor opción si tienes 24 GB.** El destilado de 14B corre en Q4_K_M con ~9 GB, maneja matemáticas multipaso al estilo AIME y encaja en una RTX 4060 Ti 16GB. El destilado de 32B supera a OpenAI o1-mini en varios benchmarks de razonamiento y es el mejor modelo de razonamiento para una sola GPU de consumo. Si solo tienes 8 GB, ejecuta el destilado de 7B o el más nuevo DeepSeek-R1-0528-Qwen3-8B, el destilado de razonamiento pequeño más potente disponible.',
     quickAnswerTop: {
       es: {
@@ -1708,7 +1708,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'GPU dual / 48 GB → DeepSeek-R1-Distill-Llama-70B (máxima precisión)',
           ],
           cloudIf: [
-            'Necesitas razonamiento de frontera más allá de cualquier destilado → compáralo con GPT-4o / Claude / Gemini vía PromptQuorum',
+            'Necesitas razonamiento de frontera más allá de cualquier destilado → compáralo con GPT-5.6 / Claude / Gemini vía PromptQuorum',
             'No puedes dedicar una GPU → una API de razonamiento alojada puede salir más barata que comprar hardware',
           ],
           quick: [
@@ -1782,7 +1782,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4060 Ti 16GB', 'NVIDIA RTX 4090 24GB', 'Minisforum mini-PC'],
     current_benchmarks_used: ['AIME 2024', 'MATH-500', 'GPQA Diamond'],
     targetKeywords: ['melhor modelo de raciocínio local', 'deepseek r1 distill', 'deepseek r1 local', 'modelo de raciocínio local gpu', 'r1-0528-qwen3-8b'],
-    ctaText: 'Rodando um destilado do DeepSeek-R1 localmente? Envie o mesmo prompt de raciocínio para o seu modelo local e para o GPT-4o, Claude e Gemini de uma só vez com o PromptQuorum — veja exatamente onde o destilado se equipara ao raciocínio de fronteira e onde fica para trás.',
+    ctaText: 'Rodando um destilado do DeepSeek-R1 localmente? Envie o mesmo prompt de raciocínio para o seu modelo local e para o GPT-5.6, Claude e Gemini de uma só vez com o PromptQuorum — veja exatamente onde o destilado se equipara ao raciocínio de fronteira e onde fica para trás.',
     leadAnswerBlock: '**O melhor modelo de raciocínio local para a maioria das pessoas em 2026 é o DeepSeek-R1-Distill-Qwen-14B em uma GPU de 16 GB, com o DeepSeek-R1-Distill-Qwen-32B como a melhor escolha se você tiver 24 GB.** O destilado 14B roda em Q4_K_M em ~9 GB, lida com matemática de múltiplas etapas no estilo AIME e serve uma RTX 4060 Ti 16GB. O destilado 32B supera o OpenAI o1-mini em vários benchmarks de raciocínio e é o melhor modelo de raciocínio para uma única GPU de consumo. Se você só tem 8 GB, rode o destilado 7B ou o mais novo DeepSeek-R1-0528-Qwen3-8B — o destilado de raciocínio pequeno mais forte disponível.',
     quickAnswerTop: {
       pt: {
@@ -2001,7 +2001,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Dual-GPU / 48 GB → DeepSeek-R1-Distill-Llama-70B (precisão máxima)',
           ],
           cloudIf: [
-            'Você precisa de raciocínio de fronteira além de qualquer destilado → compare com o GPT-4o / Claude / Gemini via PromptQuorum',
+            'Você precisa de raciocínio de fronteira além de qualquer destilado → compare com o GPT-5.6 / Claude / Gemini via PromptQuorum',
             'Você não pode dedicar uma GPU → uma API de raciocínio hospedada pode ser mais barata do que comprar hardware',
           ],
           quick: [
@@ -2075,7 +2075,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4060 Ti 16GB', 'NVIDIA RTX 4090 24GB', 'Minisforum mini-PC'],
     current_benchmarks_used: ['AIME 2024', 'MATH-500', 'GPQA Diamond'],
     targetKeywords: ['أفضل نموذج استدلال محلي', 'deepseek r1 distill', 'deepseek r1 محلي', 'نموذج استدلال محلي gpu', 'r1-0528-qwen3-8b'],
-    ctaText: 'هل تشغّل أحد نماذج DeepSeek-R1 المُقطّرة محليًا؟ أرسل نفس مُوجّه الاستدلال إلى نموذجك المحلي وإلى GPT-4o وClaude وGemini دفعةً واحدة باستخدام PromptQuorum — وشاهد بالضبط أين يجاري النموذج المُقطّر استدلال النماذج الرائدة وأين يقصّر.',
+    ctaText: 'هل تشغّل أحد نماذج DeepSeek-R1 المُقطّرة محليًا؟ أرسل نفس مُوجّه الاستدلال إلى نموذجك المحلي وإلى GPT-5.6 وClaude وGemini دفعةً واحدة باستخدام PromptQuorum — وشاهد بالضبط أين يجاري النموذج المُقطّر استدلال النماذج الرائدة وأين يقصّر.',
     leadAnswerBlock: '**أفضل نموذج استدلال محلي لمعظم الناس في عام 2026 هو DeepSeek-R1-Distill-Qwen-14B على GPU بسعة 16 GB، مع كون DeepSeek-R1-Distill-Qwen-32B الخيار الأول إن كان لديك 24 GB.** يعمل النموذج المُقطّر 14B عند Q4_K_M في نحو 9 GB، ويتعامل مع الرياضيات متعددة الخطوات بنمط AIME، ويناسب RTX 4060 Ti 16GB. يتفوّق النموذج المُقطّر 32B على OpenAI o1-mini في عدة معايير استدلال وهو أفضل نموذج استدلال على GPU استهلاكية واحدة. إن كان لديك 8 GB فقط، فشغّل النموذج المُقطّر 7B أو النموذج الأحدث DeepSeek-R1-0528-Qwen3-8B — أقوى نموذج استدلال صغير مُقطّر متاح.',
     quickAnswerTop: {
       ar: {
@@ -2294,7 +2294,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'GPU مزدوجة / 48 GB → DeepSeek-R1-Distill-Llama-70B (أقصى دقة)',
           ],
           cloudIf: [
-            'تحتاج استدلالًا رائدًا يتجاوز أي نموذج مُقطّر → قارن مع GPT-4o / Claude / Gemini عبر PromptQuorum',
+            'تحتاج استدلالًا رائدًا يتجاوز أي نموذج مُقطّر → قارن مع GPT-5.6 / Claude / Gemini عبر PromptQuorum',
             'لا يمكنك تخصيص GPU → قد تكون واجهة استدلال مُستضافة أرخص من شراء العتاد',
           ],
           quick: [
@@ -2368,7 +2368,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_hardware_mentioned: ['NVIDIA RTX 3060 12GB', 'NVIDIA RTX 4060 Ti 16GB', 'NVIDIA RTX 4090 24GB', 'Minisforum mini-PC'],
     current_benchmarks_used: ['AIME 2024', 'MATH-500', 'GPQA Diamond'],
     targetKeywords: ['최고의 로컬 추론 모델', 'deepseek r1 distill', 'deepseek r1 로컬', '로컬 추론 모델 gpu', 'r1-0528-qwen3-8b'],
-    ctaText: 'DeepSeek-R1 증류 모델을 로컬에서 실행하고 계신가요? PromptQuorum으로 동일한 추론 프롬프트를 로컬 모델과 GPT-4o, Claude, Gemini에 한 번에 보내, 증류 모델이 프런티어 추론을 어디에서 따라잡고 어디에서 부족한지 정확히 확인해 보십시오.',
+    ctaText: 'DeepSeek-R1 증류 모델을 로컬에서 실행하고 계신가요? PromptQuorum으로 동일한 추론 프롬프트를 로컬 모델과 GPT-5.6, Claude, Gemini에 한 번에 보내, 증류 모델이 프런티어 추론을 어디에서 따라잡고 어디에서 부족한지 정확히 확인해 보십시오.',
     leadAnswerBlock: '**2026년 대부분의 사용자에게 최고의 로컬 추론 모델은 16 GB GPU의 DeepSeek-R1-Distill-Qwen-14B이며, 24 GB가 있다면 DeepSeek-R1-Distill-Qwen-32B가 최상의 선택입니다.** 14B 증류 모델은 Q4_K_M에서 약 9 GB로 실행되어 AIME 스타일의 다단계 수학을 처리하고 RTX 4060 Ti 16GB에 들어맞습니다. 32B 증류 모델은 여러 추론 벤치마크에서 OpenAI o1-mini를 능가하며 단일 소비자 GPU에서 최고의 추론 모델입니다. 8 GB만 있다면 7B 증류 모델 또는 더 새로운 DeepSeek-R1-0528-Qwen3-8B를 실행하십시오 — 사용 가능한 가장 강력한 소형 추론 증류 모델입니다.',
     quickAnswerTop: {
       ko: {
@@ -2587,7 +2587,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '듀얼 GPU / 48 GB → DeepSeek-R1-Distill-Llama-70B (최대 정확도)',
           ],
           cloudIf: [
-            '어떤 증류 모델도 넘어서는 프런티어 추론이 필요하다면 → PromptQuorum을 통해 GPT-4o / Claude / Gemini와 비교하십시오',
+            '어떤 증류 모델도 넘어서는 프런티어 추론이 필요하다면 → PromptQuorum을 통해 GPT-5.6 / Claude / Gemini와 비교하십시오',
             'GPU를 전용으로 둘 수 없다면 → 호스팅 추론 API가 하드웨어 구매보다 저렴할 수 있습니다',
           ],
           quick: [
