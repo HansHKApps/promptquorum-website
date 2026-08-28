@@ -263,5 +263,25 @@
       "ctr": 0.0014515894904920889,
       "period": "2026-07-31 to 2026-08-27"
     }
+  },
+  {
+    "id": "6031bea4-9922-4b13-a08c-a166129df954",
+    "slug": "/power-local-llm/local-whisper-stt-comparison-2026",
+    "date": "2026-08-28T17:25:39.080Z",
+    "fields": [
+      {
+        "field": "bodyFact:whisperCppVersion",
+        "old": "v1.8.6 (June 2, 2026)",
+        "new": "v1.9.3 (August 20, 2026)"
+      }
+    ],
+    "reason": "geo-meta-optimizer coherence-C fix (body-only, title/meta untouched — comparison-cluster CTR already strong, pos 2-3, 7-20%): body claimed whisper.cpp v1.8.6 was latest; actual latest is v1.9.3. Version/changelog section corrected across 9 locales, plus 2 new FAQs per locale (official Debian/apt package — new info, previously zero coverage; how to check installed version). KO got the 2 FAQs but still lacks the whatsNew/changelog section entirely vs EN — pre-existing structural gap, flagged separately, not fixed in this pass.",
+    "baseline": {
+      "position": 6.9,
+      "impressions": 500,
+      "clicks": 24,
+      "ctr": 0.048,
+      "period": "2026-07-31 to 2026-08-27"
+    }
   }
 ]
