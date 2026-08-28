@@ -142,7 +142,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           rows: [
             { 'VRAM Tier': '4 GB', 'Best-Fit Model (Q4)': 'Llama 3.2 3B or Phi-3.5-mini (~1.5-2 GB)', 'Example GPUs': 'RTX 3050 4 GB, GTX 1650', 'What Fits': '3B-class only — 7B models will OOM' },
             { 'VRAM Tier': '6 GB', 'Best-Fit Model (Q4)': 'Qwen3 4B, or Llama 3.1 8B at aggressive Q4 (~3-4 GB)', 'Example GPUs': 'RTX 2060 6 GB, RTX 3050 Ti', 'What Fits': '4B comfortably; 8B is tight' },
-            { 'VRAM Tier': '8 GB', 'Best-Fit Model (Q4)': 'Llama 3.3 8B or Qwen3 8B (~3.5-5 GB) with real headroom', 'Example GPUs': 'RTX 4060 Ti 8 GB, RTX 3070', 'What Fits': 'The most common sweet spot for 7-8B models' },
+            { 'VRAM Tier': '8 GB', 'Best-Fit Model (Q4)': 'Llama 3.1 8B or Qwen3 8B (~3.5-5 GB) with real headroom', 'Example GPUs': 'RTX 4060 Ti 8 GB, RTX 3070', 'What Fits': 'The most common sweet spot for 7-8B models' },
             { 'VRAM Tier': '12 GB', 'Best-Fit Model (Q4)': 'Qwen3 14B (~6.5 GB), or 7-8B at Q5/Q8 for higher quality', 'Example GPUs': 'RTX 3060 12 GB, RTX 4070', 'What Fits': '14B comfortably, room for larger context' },
             { 'VRAM Tier': '16 GB', 'Best-Fit Model (Q4)': 'Qwen3 14B at Q5/Q8, or 22B-class (Gemma, Qwen) at Q4 (~11 GB)', 'Example GPUs': 'RTX 4060 Ti 16 GB, RTX 4080', 'What Fits': '22B is the practical ceiling at this tier' },
             { 'VRAM Tier': '24 GB', 'Best-Fit Model (Q4)': '22-32B comfortably at full Q8; 70B only at sub-4-bit with quality loss', 'Example GPUs': 'RTX 4090, RTX 3090', 'What Fits': '70B genuinely needs ~35 GB — this tier is not quite enough' },
@@ -472,7 +472,7 @@ schema: {
           rows: [
             { 'Nivel de VRAM': '4 GB', 'Mejor modelo (Q4)': 'Llama 3.2 3B o Phi-3.5-mini (~1,5-2 GB)', 'GPUs de ejemplo': 'RTX 3050 4 GB, GTX 1650', 'Qué cabe': 'Solo clase 3B — los modelos 7B darán OOM' },
             { 'Nivel de VRAM': '6 GB', 'Mejor modelo (Q4)': 'Qwen3 4B, o Llama 3.1 8B en Q4 agresivo (~3-4 GB)', 'GPUs de ejemplo': 'RTX 2060 6 GB, RTX 3050 Ti', 'Qué cabe': '4B con holgura; 8B es justo' },
-            { 'Nivel de VRAM': '8 GB', 'Mejor modelo (Q4)': 'Llama 3.3 8B o Qwen3 8B (~3,5-5 GB) con margen real', 'GPUs de ejemplo': 'RTX 4060 Ti 8 GB, RTX 3070', 'Qué cabe': 'El punto óptimo más común para 7-8B' },
+            { 'Nivel de VRAM': '8 GB', 'Mejor modelo (Q4)': 'Llama 3.1 8B o Qwen3 8B (~3,5-5 GB) con margen real', 'GPUs de ejemplo': 'RTX 4060 Ti 8 GB, RTX 3070', 'Qué cabe': 'El punto óptimo más común para 7-8B' },
             { 'Nivel de VRAM': '12 GB', 'Mejor modelo (Q4)': 'Qwen3 14B (~6,5 GB), o 7-8B en Q5/Q8 para más calidad', 'GPUs de ejemplo': 'RTX 3060 12 GB, RTX 4070', 'Qué cabe': '14B con holgura, margen para más contexto' },
             { 'Nivel de VRAM': '16 GB', 'Mejor modelo (Q4)': 'Qwen3 14B en Q5/Q8, o clase 22B (Gemma, Qwen) en Q4 (~11 GB)', 'GPUs de ejemplo': 'RTX 4060 Ti 16 GB, RTX 4080', 'Qué cabe': '22B es el techo práctico en este nivel' },
             { 'Nivel de VRAM': '24 GB', 'Mejor modelo (Q4)': '22-32B con holgura en Q8 completo; 70B solo por debajo de 4 bits con pérdida', 'GPUs de ejemplo': 'RTX 4090, RTX 3090', 'Qué cabe': '70B necesita ~35 GB reales — este nivel no llega' },
@@ -802,7 +802,7 @@ schema: {
           rows: [
             { 'فئة VRAM': '4 GB', 'أفضل نموذج (Q4)': 'Llama 3.2 3B أو Phi-3.5-mini (~1.5-2 GB)', 'أمثلة GPU': 'RTX 3050 4 GB, GTX 1650', 'ما يناسبها': 'فئة 3B فقط — نماذج 7B ستفشل بـ OOM' },
             { 'فئة VRAM': '6 GB', 'أفضل نموذج (Q4)': 'Qwen3 4B، أو Llama 3.1 8B بتكميم Q4 عدواني (~3-4 GB)', 'أمثلة GPU': 'RTX 2060 6 GB, RTX 3050 Ti', 'ما يناسبها': '4B براحة؛ 8B ضيّق' },
-            { 'فئة VRAM': '8 GB', 'أفضل نموذج (Q4)': 'Llama 3.3 8B أو Qwen3 8B (~3.5-5 GB) بهامش حقيقي', 'أمثلة GPU': 'RTX 4060 Ti 8 GB, RTX 3070', 'ما يناسبها': 'النقطة المثالية الأكثر شيوعًا لنماذج 7-8B' },
+            { 'فئة VRAM': '8 GB', 'أفضل نموذج (Q4)': 'Llama 3.1 8B أو Qwen3 8B (~3.5-5 GB) بهامش حقيقي', 'أمثلة GPU': 'RTX 4060 Ti 8 GB, RTX 3070', 'ما يناسبها': 'النقطة المثالية الأكثر شيوعًا لنماذج 7-8B' },
             { 'فئة VRAM': '12 GB', 'أفضل نموذج (Q4)': 'Qwen3 14B (~6.5 GB)، أو 7-8B بـ Q5/Q8 لجودة أعلى', 'أمثلة GPU': 'RTX 3060 12 GB, RTX 4070', 'ما يناسبها': '14B براحة، مع هامش لسياق أكبر' },
             { 'فئة VRAM': '16 GB', 'أفضل نموذج (Q4)': 'Qwen3 14B بـ Q5/Q8، أو فئة 22B (Gemma, Qwen) بـ Q4 (~11 GB)', 'أمثلة GPU': 'RTX 4060 Ti 16 GB, RTX 4080', 'ما يناسبها': '22B هو السقف العملي عند هذه الفئة' },
             { 'فئة VRAM': '24 GB', 'أفضل نموذج (Q4)': '22-32B براحة بـ Q8 كامل؛ 70B فقط دون 4 بت مع فقدان جودة', 'أمثلة GPU': 'RTX 4090, RTX 3090', 'ما يناسبها': '70B يحتاج فعليًا ~35 GB — هذه الفئة غير كافية تمامًا' },
@@ -1132,7 +1132,7 @@ schema: {
           rows: [
             { 'Nível de VRAM': '4 GB', 'Melhor modelo (Q4)': 'Llama 3.2 3B ou Phi-3.5-mini (~1,5-2 GB)', 'GPUs de exemplo': 'RTX 3050 4 GB, GTX 1650', 'O que cabe': 'Só classe 3B — modelos 7B vão dar OOM' },
             { 'Nível de VRAM': '6 GB', 'Melhor modelo (Q4)': 'Qwen3 4B, ou Llama 3.1 8B em Q4 agressivo (~3-4 GB)', 'GPUs de exemplo': 'RTX 2060 6 GB, RTX 3050 Ti', 'O que cabe': '4B com folga; 8B é apertado' },
-            { 'Nível de VRAM': '8 GB', 'Melhor modelo (Q4)': 'Llama 3.3 8B ou Qwen3 8B (~3,5-5 GB) com margem real', 'GPUs de exemplo': 'RTX 4060 Ti 8 GB, RTX 3070', 'O que cabe': 'O ponto ideal mais comum para 7-8B' },
+            { 'Nível de VRAM': '8 GB', 'Melhor modelo (Q4)': 'Llama 3.1 8B ou Qwen3 8B (~3,5-5 GB) com margem real', 'GPUs de exemplo': 'RTX 4060 Ti 8 GB, RTX 3070', 'O que cabe': 'O ponto ideal mais comum para 7-8B' },
             { 'Nível de VRAM': '12 GB', 'Melhor modelo (Q4)': 'Qwen3 14B (~6,5 GB), ou 7-8B em Q5/Q8 para mais qualidade', 'GPUs de exemplo': 'RTX 3060 12 GB, RTX 4070', 'O que cabe': '14B com folga, espaço para mais contexto' },
             { 'Nível de VRAM': '16 GB', 'Melhor modelo (Q4)': 'Qwen3 14B em Q5/Q8, ou classe 22B (Gemma, Qwen) em Q4 (~11 GB)', 'GPUs de exemplo': 'RTX 4060 Ti 16 GB, RTX 4080', 'O que cabe': '22B é o teto prático neste nível' },
             { 'Nível de VRAM': '24 GB', 'Melhor modelo (Q4)': '22-32B com folga em Q8 completo; 70B só abaixo de 4 bits com perda', 'GPUs de exemplo': 'RTX 4090, RTX 3090', 'O que cabe': '70B precisa de ~35 GB reais — este nível não é suficiente' },
@@ -1975,7 +1975,7 @@ schema: { '@context': 'https://schema.org', '@type': 'TechArticle', headline: '2
           rows: [
             { 'VRAM 등급': '4GB', '최적 모델 (Q4)': 'Llama 3.2 3B 또는 Phi-3.5-mini(~1.5~2GB)', 'GPU 예시': 'RTX 3050 4GB, GTX 1650', '실행 가능 범위': '3B급만 가능 — 7B 모델은 OOM 발생' },
             { 'VRAM 등급': '6GB', '최적 모델 (Q4)': 'Qwen3 4B, 또는 공격적 Q4의 Llama 3.1 8B(~3~4GB)', 'GPU 예시': 'RTX 2060 6GB, RTX 3050 Ti', '실행 가능 범위': '4B는 여유롭고, 8B는 빠듯함' },
-            { 'VRAM 등급': '8GB', '최적 모델 (Q4)': 'Llama 3.3 8B 또는 Qwen3 8B(~3.5~5GB), 여유 있음', 'GPU 예시': 'RTX 4060 Ti 8GB, RTX 3070', '실행 가능 범위': '7~8B 모델에 가장 흔한 최적점' },
+            { 'VRAM 등급': '8GB', '최적 모델 (Q4)': 'Llama 3.1 8B 또는 Qwen3 8B(~3.5~5GB), 여유 있음', 'GPU 예시': 'RTX 4060 Ti 8GB, RTX 3070', '실행 가능 범위': '7~8B 모델에 가장 흔한 최적점' },
             { 'VRAM 등급': '12GB', '최적 모델 (Q4)': 'Qwen3 14B(~6.5GB), 또는 더 높은 품질의 Q5/Q8 7~8B', 'GPU 예시': 'RTX 3060 12GB, RTX 4070', '실행 가능 범위': '14B가 여유롭고, 더 큰 컨텍스트 공간 확보' },
             { 'VRAM 등급': '16GB', '최적 모델 (Q4)': 'Q5/Q8의 Qwen3 14B, 또는 Q4의 22B급(Gemma, Qwen)(~11GB)', 'GPU 예시': 'RTX 4060 Ti 16GB, RTX 4080', '실행 가능 범위': '이 등급에서는 22B가 실질적인 한계' },
             { 'VRAM 등급': '24GB', '최적 모델 (Q4)': '22~32B는 완전한 Q8로 여유롭게; 70B는 품질 저하를 감수한 4비트 미만에서만', 'GPU 예시': 'RTX 4090, RTX 3090', '실행 가능 범위': '70B는 실제로 ~35GB가 필요 — 이 등급으로는 부족' },

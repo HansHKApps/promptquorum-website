@@ -35,7 +35,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mac Mini M6 vs M5 Pro vs MacBook Pro vs Mac Studio M5 Max/M5 Ultra for local AI — one decision rule: buy for unified memory, then bandwidth. Aug 2026 Apple refresh.',
     affiliateDisclosure: true,
     current_models_mentioned: [
-      'Llama 3.3 8B',
+      'Llama 3.1 8B',
       'Llama 3.3 34B',
       'Llama 3.3 70B',
       'Mistral Small',
@@ -541,7 +541,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mac Mini M6 vs M5 Pro vs MacBook Pro vs Mac Studio M5 Max/M5 Ultra para IA local — una regla: compra por memoria unificada, luego optimiza el ancho de banda. Renovación de Apple de agosto 2026.',
     affiliateDisclosure: true,
     current_models_mentioned: [
-      'Llama 3.3 8B',
+      'Llama 3.1 8B',
       'Llama 3.3 34B',
       'Llama 3.3 70B',
       'Mistral Small',
@@ -1059,7 +1059,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mac Mini M6 vs. M5 Pro vs. MacBook Pro vs. Mac Studio M5 Max/M5 Ultra für lokale KI — eine Regel: zuerst nach Unified Memory kaufen, dann nach Bandbreite. Apple-Auffrischung Aug. 2026.',
     affiliateDisclosure: true,
     current_models_mentioned: [
-      'Llama 3.3 8B',
+      'Llama 3.1 8B',
       'Llama 3.3 34B',
       'Llama 3.3 70B',
       'Mistral Small',
@@ -1572,7 +1572,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mac mini M6 vs M5 Pro vs MacBook Pro vs Mac Studio M5 Max/M5 Ultra pour l\'IA locale — une règle : acheter selon la mémoire unifiée, puis la bande passante. Rafraîchissement Apple août 2026.',
     affiliateDisclosure: true,
     current_models_mentioned: [
-      'Llama 3.3 8B',
+      'Llama 3.1 8B',
       'Llama 3.3 34B',
       'Llama 3.3 70B',
       'Mistral Small',
@@ -2077,7 +2077,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'ローカルAI向けMac mini M6 vs M5 Pro vs MacBook Pro vs Mac Studio M5 Max/M5 Ultra——判断ルールは一つ：まずunified memoryで選び、次に帯域幅。2026年8月のApple刷新。',
     affiliateDisclosure: true,
     current_models_mentioned: [
-      'Llama 3.3 8B',
+      'Llama 3.1 8B',
       'Llama 3.3 34B',
       'Llama 3.3 70B',
       'Mistral Small',
@@ -2582,7 +2582,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mac mini M6 vs M5 Pro vs MacBook Pro vs Mac Studio M5 Max/M5 Ultra 跑本地 AI——一条规则：先按统一内存买，再优化带宽。2026 年 8 月 Apple 更新。',
     affiliateDisclosure: true,
     current_models_mentioned: [
-      'Llama 3.3 8B',
+      'Llama 3.1 8B',
       'Llama 3.3 34B',
       'Llama 3.3 70B',
       'Mistral Small',
@@ -3087,7 +3087,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mac Mini M6 vs M5 Pro vs MacBook Pro vs Mac Studio M5 Max/M5 Ultra para IA local — uma regra: compre pela memória unificada, depois otimize a largura de banda. Atualização Apple de agosto de 2026.',
     affiliateDisclosure: true,
     current_models_mentioned: [
-      'Llama 3.3 8B',
+      'Llama 3.1 8B',
       'Llama 3.3 34B',
       'Llama 3.3 70B',
       'Mistral Small',
@@ -3606,7 +3606,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mac Mini M6 مقابل M5 Pro مقابل MacBook Pro مقابل Mac Studio M5 Max/M5 Ultra للذكاء الاصطناعي المحلي — قاعدة واحدة: اشترِ بالذاكرة الموحّدة أولاً، ثم حسّن عرض النطاق. تحديث Apple أغسطس 2026.',
     affiliateDisclosure: true,
     current_models_mentioned: [
-      'Llama 3.3 8B',
+      'Llama 3.1 8B',
       'Llama 3.3 34B',
       'Llama 3.3 70B',
       'Mistral Small',
@@ -4124,7 +4124,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Mac Mini M6 vs M5 Pro vs MacBook Pro vs Mac Studio M5 Max/M5 Ultra 로컬 AI 비교 — 하나의 원칙: 통합 메모리를 먼저 보고, 그다음 대역폭을 최적화하세요. 2026년 8월 Apple 업데이트.',
     affiliateDisclosure: true,
     current_models_mentioned: [
-      'Llama 3.3 8B',
+      'Llama 3.1 8B',
       'Llama 3.3 34B',
       'Llama 3.3 70B',
       'Mistral Small',

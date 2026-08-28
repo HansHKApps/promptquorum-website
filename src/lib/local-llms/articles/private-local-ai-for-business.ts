@@ -154,7 +154,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'What hardware do I need for an on-premises AI deployment?',
-              a: 'Small teams (5–20 users): 1× RTX 5090 (32 GB, $2,000) for Llama 3.3 8B or Mistral Small. Production (20–100 users): 2× RTX 5090 (64 GB, $4,000) for Llama 3.3 70B via tensor parallelism. Enterprise (100+ users): 4× RTX 5090 or 2× A100 80GB ($8K–$30K) for high concurrency + RAG. Budget for networking, cooling, and redundant power supplies as well.',
+              a: 'Small teams (5–20 users): 1× RTX 5090 (32 GB, $2,000) for Llama 3.1 8B or Mistral Small. Production (20–100 users): 2× RTX 5090 (64 GB, $4,000) for Llama 3.3 70B via tensor parallelism. Enterprise (100+ users): 4× RTX 5090 or 2× A100 80GB ($8K–$30K) for high concurrency + RAG. Budget for networking, cooling, and redundant power supplies as well.',
             },
             {
               q: 'How do I comply with HIPAA using a local LLM?',
@@ -162,7 +162,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'Which open-source models are best for business use?',
-              a: 'For business deployments as of April 2026: Llama 3.3 70B (Meta, Llama Community License — free for commercial use under 700M users), Qwen3 72B (Alibaba, Apache 2.0), Mistral Small 3.1 24B (Mistral AI, Apache 2.0). For smaller deployments: Llama 3.3 8B, Qwen3 7B, Phi-4 Mini 3.8B. All commercially licensable at no cost. Always verify license before production deployment.',
+              a: 'For business deployments as of April 2026: Llama 3.3 70B (Meta, Llama Community License — free for commercial use under 700M users), Qwen3 72B (Alibaba, Apache 2.0), Mistral Small 3.1 24B (Mistral AI, Apache 2.0). For smaller deployments: Llama 3.1 8B, Qwen3 7B, Phi-4 Mini 3.8B. All commercially licensable at no cost. Always verify license before production deployment.',
             },
             {
               q: 'What is the latency of on-premises AI vs cloud APIs?',
@@ -422,9 +422,9 @@ de: {
           faqs: [
             { q: 'Wann wird Private lokale KI günstiger als Cloud-APIs?', a: 'Break-Even etwa bei 200 Mio. Token/Monat. Bei 0,005 €/1K-Token (GPT-5.2) kosten 200 Mio. Token 1.000 €/Monat. RTX-5090-Workstation (2.000 €) amortisiert über 36 Monate = ca. 55 €/Monat plus Strom (~50 €/Monat) plus Kühlung (~25 €/Monat) = ~130 €/Monat Gesamtbudget. Bei 200 Mio.+ Token/Monat amortisiert sich lokale Hardware in 1–2 Monaten.' },
             { q: 'Verlangt die DSGVO Private lokale KI für deutsche Unternehmen?', a: 'DSGVO verlangt nicht explizit Private lokale KI. Sie verlangt angemessene Datenschutzmaßnahmen (Artikel 28). Hochregulierte Sektoren (Gesundheitswesen, Finanzen, Regierung) in Deutschland und Österreich mandatieren zunehmend Private lokale KI als den sichersten DSGVO-Konformitätsweg.' },
-            { q: 'Welche Hardware für Private-lokale-KI-Bereitstellung?', a: 'Kleine Teams (5–20 Benutzer): 1× RTX 5090 (32 GB, 2.000 €) für Llama 3.3 8B oder Mistral Small. Produktion (20–100 Benutzer): 2× RTX 5090 (64 GB, 4.000 €) für Llama 3.3 70B mit Tensor-Parallelismus. Enterprise (100+ Benutzer): 4× RTX 5090 oder 2× A100 80 GB (8.000–30.000 €) für hohe Parallelität + RAG. Budget auch für Netzwerk, Kühlung und redundante Stromversorgung.' },
+            { q: 'Welche Hardware für Private-lokale-KI-Bereitstellung?', a: 'Kleine Teams (5–20 Benutzer): 1× RTX 5090 (32 GB, 2.000 €) für Llama 3.1 8B oder Mistral Small. Produktion (20–100 Benutzer): 2× RTX 5090 (64 GB, 4.000 €) für Llama 3.3 70B mit Tensor-Parallelismus. Enterprise (100+ Benutzer): 4× RTX 5090 oder 2× A100 80 GB (8.000–30.000 €) für hohe Parallelität + RAG. Budget auch für Netzwerk, Kühlung und redundante Stromversorgung.' },
             { q: 'Wie stelle ich HIPAA-Konformität mit lokal gehostem LLM sicher?', a: 'HIPAA-Konformität für lokale LLMs erfordert: (1) Verschlüsselung im Ruhezustand (AES-256) und in Übertragung (TLS 1.3), (2) Vollständiges Audit-Logging von Anfragen/Antworten, (3) Zugriffskontrolle (rollenbasiert, MFA), (4) Business-Associate-Vereinbarung (BAA), wenn Services von Drittanbietern beteiligt sind, (5) Physische Serversicherheit.' },
-            { q: 'Welche Open-Source-Modelle sind am besten für geschäftliche Nutzung?', a: 'Für April-2026-Geschäftsbereitstellungen: Llama 3.3 70B (Meta, Llama-Community-Lizenz — kostenlos für kommerzielle Nutzung <700 Mio. Benutzer), Qwen3 72B (Alibaba, Apache 2.0), Mistral Small 3.1 24B (Mistral AI, Apache 2.0). Kleine Bereitstellungen: Llama 3.3 8B, Qwen3 7B, Phi-4 Mini 3.8B. Alle sind kommerziell kostenfrei lizenziert. Lizenz vor Produktionsbereitstellung überprüfen.' },
+            { q: 'Welche Open-Source-Modelle sind am besten für geschäftliche Nutzung?', a: 'Für April-2026-Geschäftsbereitstellungen: Llama 3.3 70B (Meta, Llama-Community-Lizenz — kostenlos für kommerzielle Nutzung <700 Mio. Benutzer), Qwen3 72B (Alibaba, Apache 2.0), Mistral Small 3.1 24B (Mistral AI, Apache 2.0). Kleine Bereitstellungen: Llama 3.1 8B, Qwen3 7B, Phi-4 Mini 3.8B. Alle sind kommerziell kostenfrei lizenziert. Lizenz vor Produktionsbereitstellung überprüfen.' },
             { q: 'Welche Latenz Private lokale KI vs. Cloud-APIs?', a: 'Cloud-APIs (OpenAI GPT-5.2): 200–500 ms erstes-Token-Latenz Netzwerk-RTT. vLLM On-Premises (RTX 5090): 50–150 ms erstes-Token-Latenz lokales Netzwerk. Batch-Verarbeitungs-Workloads profitieren am meisten On-Premises durch Beseitigung von API-Rate-Limits.' },
             { q: 'Kann ich Apple Silicon M5 für geschäftliche Private lokale KI nutzen?', a: 'Ja — MacBook Pro M5 Max (128 GB, 3.200+ €) führt Llama 3.3 70B mit 25–35 Token/Sekunde aus. Geräuschlos, keine GPU-Kühlung erforderlich, macOS-verwaltet. Eignet sich für kleine Teams (5–10 Benutzer) mit leichten Workloads. Für Produktion (20+ Benutzer) bieten NVIDIA RTX 5090 oder A100 höheren Durchsatz und Verwaltung gleichzeitiger Anfragen über vLLM.' },
             { q: 'Wie stelle ich Audit-Logs für Private lokale KI sicher?', a: 'Erfasse jede Anfrage/Antwort in strukturierter DB (PostgreSQL oder Elasticsearch). Einzuschließen: Zeitstempel, Benutzer-ID, Modellname, Token Ein-/Ausgabe, Antwortzeit. vLLM unterstützt nativ Request-Logging. HIPAA: Aktiviere AES-256-Verschlüsselung der Log-DB. SOC2: Implementiere rollenbasierte Zugriffskontrolle für Logs. Log-Aufbewahrung: Mindestens 7 Jahre (Finanzdienstleistungen) oder wie vom Konformitäts-Framework verlangt.' },
@@ -486,7 +486,7 @@ schema: {
         mainEntity: [
           { '@type': 'Question', name: 'Wann wird Private lokale KI günstiger als Cloud-APIs?', acceptedAnswer: { '@type': 'Answer', text: 'Break-Even etwa bei 200 Mio. Token/Monat. Bei 0,005 €/1K-Token kosten 200 Mio. Token 1.000 €/Monat. RTX 5090 (2.000 €) über 36 Monate = ca. 55 €/Monat Hardware plus Strom (~50 €/Monat) = ~130 €/Monat Gesamtbudget.' } },
           { '@type': 'Question', name: 'Welche Hardware für On-Premises-Bereitstellung?', acceptedAnswer: { '@type': 'Answer', text: 'Kleine Teams: 1× RTX 5090 (32 GB, 2.000 €) für 13B-Modelle. Produktion: 2× RTX 5090 (4.000 €) für 70B-Modelle. Enterprise: 4× RTX 5090 oder A100 80 GB (8.000–30.000 €) für 100+ gleichzeitige Benutzer.' } },
-          { '@type': 'Question', name: 'Welche Open-Source-Modelle für geschäftliche Nutzung?', acceptedAnswer: { '@type': 'Answer', text: 'April 2026: Llama 3.3 8B (Apache 2.0, kommerziell kostenlos), Qwen 3 7B (Apache 2.0), Mistral Small v0.3 (Apache 2.0). Alle sind kommerziell kostenlos lizenziert.' } },
+          { '@type': 'Question', name: 'Welche Open-Source-Modelle für geschäftliche Nutzung?', acceptedAnswer: { '@type': 'Answer', text: 'April 2026: Llama 3.1 8B (Apache 2.0, kommerziell kostenlos), Qwen 3 7B (Apache 2.0), Mistral Small v0.3 (Apache 2.0). Alle sind kommerziell kostenlos lizenziert.' } },
           { '@type': 'Question', name: 'Verlangt die DSGVO Private lokale KI für deutsche Unternehmen?', acceptedAnswer: { '@type': 'Answer', text: 'DSGVO verlangt nicht explizit Private lokale KI, aber erfordert angemessene Datenschutzmaßnahmen. Hochregulierte deutsche Branchen mandatieren zunehmend On-Premises-KI als den sichersten Konformitätsweg.' } },
           { '@type': 'Question', name: 'Ist Private lokale KI für den Mittelstand geeignet?', acceptedAnswer: { '@type': 'Answer', text: 'Ja, besonders für Mittelstands-KMU mit sensiblen Daten. Das BSI empfiehlt On-Premises-Inferenz für Mittelstand, der DSGVO- und IT-Sicherheitsstandards einhalten muss. Vorhersehbare Kosten ab 200 Mio. Token/Monat.' } },
           { '@type': 'Question', name: 'Muss ich DSGVO bei Private lokaler KI beachten?', acceptedAnswer: { '@type': 'Answer', text: 'Ja, sogar noch mehr als mit Cloud-APIs. Sie haben vollständige Kontrolle, aber müssen sicherstellen: Verarbeitungsverträge (Art. 28), Verschlüsselung/Zugriffskontrolle, Datenschutzfolgenabschätzung, Mitarbeiterschulung. Sie bleiben Datenverantwortlicher.' } },
@@ -743,7 +743,7 @@ schema: {
             },
             {
               q: 'Quel matériel pour déploiement IA on-premises ?',
-              a: 'Petites équipes (5–20 utilisateurs) : 1× RTX 5090 (32 GB, 1 800 €) pour Llama 3.3 8B ou Mistral Small. Production (20–100 utilisateurs) : 2× RTX 5090 (64 GB, 3 600 €) pour Llama 3.3 70B via parallélisme tenseur. Entreprise (100+ utilisateurs) : 4× RTX 5090 ou 2× A100 80GB (7 200–27 000 €) pour concurrence élevée + RAG. Budget réseau, refroidissement et alimentations redondantes.'
+              a: 'Petites équipes (5–20 utilisateurs) : 1× RTX 5090 (32 GB, 1 800 €) pour Llama 3.1 8B ou Mistral Small. Production (20–100 utilisateurs) : 2× RTX 5090 (64 GB, 3 600 €) pour Llama 3.3 70B via parallélisme tenseur. Entreprise (100+ utilisateurs) : 4× RTX 5090 ou 2× A100 80GB (7 200–27 000 €) pour concurrence élevée + RAG. Budget réseau, refroidissement et alimentations redondantes.'
             },
             {
               q: 'Comment assurer conformité HIPAA avec LLM local ?',
@@ -751,7 +751,7 @@ schema: {
             },
             {
               q: 'Quels modèles open-source meilleurs usage métier ?',
-              a: 'Pour déploiements métier avril 2026 : Llama 3.3 70B (Meta, Llama Community License — gratuit usage commercial <700 M utilisateurs), Qwen3 72B (Alibaba, Apache 2.0), Mistral Small 3.1 24B (Mistral AI, Apache 2.0). Petits déploiements : Llama 3.3 8B, Qwen3 7B, Phi-4 Mini 3.8B. Tous commercialement licenciables gratuitement. Vérifier licence avant déploiement production.'
+              a: 'Pour déploiements métier avril 2026 : Llama 3.3 70B (Meta, Llama Community License — gratuit usage commercial <700 M utilisateurs), Qwen3 72B (Alibaba, Apache 2.0), Mistral Small 3.1 24B (Mistral AI, Apache 2.0). Petits déploiements : Llama 3.1 8B, Qwen3 7B, Phi-4 Mini 3.8B. Tous commercialement licenciables gratuitement. Vérifier licence avant déploiement production.'
             },
             {
               q: 'Quelle latence IA on-premises vs APIs cloud ?',
@@ -870,7 +870,7 @@ schema: {
             name: 'Quels modèles open-source meilleurs usage métier ?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Avril 2026 : Llama 3.3 8B (Apache 2.0, gratuit usage commercial), Qwen 3 7B (Apache 2.0), Mistral Small v0.3 (Apache 2.0). Tous trois commercialement licenciables gratuitement.'
+              text: 'Avril 2026 : Llama 3.1 8B (Apache 2.0, gratuit usage commercial), Qwen 3 7B (Apache 2.0), Mistral Small v0.3 (Apache 2.0). Tous trois commercialement licenciables gratuitement.'
             }
           },
           {
@@ -1151,7 +1151,7 @@ schema: {
             },
             {
               q: 'オンプレミスAI展開用のハードウェア',
-              a: '小規模チーム（5–20ユーザー）： 1× RTX 5090（32 GB、¥235,000）Llama 3.3 8B または Mistral Small 用。本番環境（20–100ユーザー）： 2× RTX 5090（64 GB、¥470,000）テンソル並列処理経由で Llama 3.3 70B 用。エンタープライズ（100+ ユーザー）： 4× RTX 5090 または 2× A100 80GB（¥940,000–¥3,555,000）高同時実行 + RAG 用。ネットワーク、冷却、冗長電源を予算化します。'
+              a: '小規模チーム（5–20ユーザー）： 1× RTX 5090（32 GB、¥235,000）Llama 3.1 8B または Mistral Small 用。本番環境（20–100ユーザー）： 2× RTX 5090（64 GB、¥470,000）テンソル並列処理経由で Llama 3.3 70B 用。エンタープライズ（100+ ユーザー）： 4× RTX 5090 または 2× A100 80GB（¥940,000–¥3,555,000）高同時実行 + RAG 用。ネットワーク、冷却、冗長電源を予算化します。'
             },
             {
               q: 'ローカルLLMで金融庁サイバーセキュリティ要件に準拠する方法',
@@ -1159,7 +1159,7 @@ schema: {
             },
             {
               q: 'ビジネス使用に最適なオープンソースモデルはどれか',
-              a: '2026年4月のビジネスデプロイメント ： Llama 3.3 70B（Meta、Llama Community License — 7億ユーザー未満の商用利用無料）、Qwen3 72B（Alibaba、Apache 2.0）、Mistral Small 3.1 24B（Mistral AI、Apache 2.0）。小規模デプロイメント ： Llama 3.3 8B、Qwen3 7B、Phi-4 Mini 3.8B。すべて商用ライセンス無料。本番デプロイ前にライセンスを確認します。'
+              a: '2026年4月のビジネスデプロイメント ： Llama 3.3 70B（Meta、Llama Community License — 7億ユーザー未満の商用利用無料）、Qwen3 72B（Alibaba、Apache 2.0）、Mistral Small 3.1 24B（Mistral AI、Apache 2.0）。小規模デプロイメント ： Llama 3.1 8B、Qwen3 7B、Phi-4 Mini 3.8B。すべて商用ライセンス無料。本番デプロイ前にライセンスを確認します。'
             },
             {
               q: 'ローカルAI vs クラウドAPIのレイテンシ',
@@ -1278,7 +1278,7 @@ schema: {
             name: 'ビジネス使用に最適なオープンソースモデルはどれか',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: '2026年4月 ： Llama 3.3 8B（Apache 2.0、商用無料）、Qwen 3 7B（Apache 2.0）、Mistral Small v0.3（Apache 2.0）。すべて3つとも商用ライセンス無料です。'
+              text: '2026年4月 ： Llama 3.1 8B（Apache 2.0、商用無料）、Qwen 3 7B（Apache 2.0）、Mistral Small v0.3（Apache 2.0）。すべて3つとも商用ライセンス無料です。'
             }
           },
           {
@@ -1600,7 +1600,7 @@ schema: {
             },
             {
               q: '本地AI部署需要什么硬件？',
-              a: '小型团队（5–20用户）：1× RTX 5090（32 GB，$2,000）用于Llama 3.3 8B或Mistral Small。生产（20–100用户）：2× RTX 5090（64 GB，$4,000）通过张量并行处理Llama 3.3 70B。企业（100+用户）：4× RTX 5090或2× A100 80GB（$8K–$30K）用于高并发 + RAG。预算网络、冷却和冗余电源。'
+              a: '小型团队（5–20用户）：1× RTX 5090（32 GB，$2,000）用于Llama 3.1 8B或Mistral Small。生产（20–100用户）：2× RTX 5090（64 GB，$4,000）通过张量并行处理Llama 3.3 70B。企业（100+用户）：4× RTX 5090或2× A100 80GB（$8K–$30K）用于高并发 + RAG。预算网络、冷却和冗余电源。'
             },
             {
               q: '如何使用本地LLM满足金融合规要求？',
@@ -1608,7 +1608,7 @@ schema: {
             },
             {
               q: '哪些开源模型最适合业务使用？',
-              a: '2026年4月业务部署：Llama 3.3 70B（Meta、Llama Community License——商业使用免费），Qwen3 72B（Alibaba、Apache 2.0），Mistral Small 3.1 24B（Mistral AI、Apache 2.0）。小型部署：Llama 3.3 8B、Qwen3 7B、Phi-4 Mini 3.8B。全部商业许可免费。生产部署前验证许可。'
+              a: '2026年4月业务部署：Llama 3.3 70B（Meta、Llama Community License——商业使用免费），Qwen3 72B（Alibaba、Apache 2.0），Mistral Small 3.1 24B（Mistral AI、Apache 2.0）。小型部署：Llama 3.1 8B、Qwen3 7B、Phi-4 Mini 3.8B。全部商业许可免费。生产部署前验证许可。'
             },
             {
               q: '本地AI vs 云API的延迟？',
@@ -1727,7 +1727,7 @@ schema: {
             name: '哪些开源模型最适合业务使用？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: '2026年4月：Llama 3.3 8B（Apache 2.0、商用免费）、Qwen 3 7B（Apache 2.0）、Mistral Small v0.3（Apache 2.0）。全部三个商用许可免费。'
+              text: '2026年4月：Llama 3.1 8B（Apache 2.0、商用免费）、Qwen 3 7B（Apache 2.0）、Mistral Small v0.3（Apache 2.0）。全部三个商用许可免费。'
             }
           },
           {
@@ -1950,7 +1950,7 @@ schema: {
             },
             {
               q: '¿Qué hardware necesito para un despliegue de IA on-premises?',
-              a: 'Equipos pequeños (5–20 usuarios): 1× RTX 5090 (32 GB, $2.000) para Llama 3.3 8B o Mistral Small. Producción (20–100 usuarios): 2× RTX 5090 (64 GB, $4.000) para Llama 3.3 70B mediante paralelismo tensorial. Empresa (100+ usuarios): 4× RTX 5090 o 2× A100 80GB ($8k–$30k) para alta concurrencia + RAG. Presupuesta también red, refrigeración y fuentes de alimentación redundantes.',
+              a: 'Equipos pequeños (5–20 usuarios): 1× RTX 5090 (32 GB, $2.000) para Llama 3.1 8B o Mistral Small. Producción (20–100 usuarios): 2× RTX 5090 (64 GB, $4.000) para Llama 3.3 70B mediante paralelismo tensorial. Empresa (100+ usuarios): 4× RTX 5090 o 2× A100 80GB ($8k–$30k) para alta concurrencia + RAG. Presupuesta también red, refrigeración y fuentes de alimentación redundantes.',
             },
             {
               q: '¿Cómo cumplo con HIPAA usando un LLM local?',
@@ -1958,7 +1958,7 @@ schema: {
             },
             {
               q: '¿Qué modelos open-source son mejores para uso empresarial?',
-              a: 'Para despliegues empresariales en abril de 2026: Llama 3.3 70B (Meta, Llama Community License — uso comercial gratuito con menos de 700M usuarios), Qwen3 72B (Alibaba, Apache 2.0), Mistral Small 3.1 24B (Mistral AI, Apache 2.0). Para despliegues más pequeños: Llama 3.3 8B, Qwen3 7B, Phi-4 Mini 3.8B. Todos con licencia comercial sin coste. Verifica siempre la licencia antes del despliegue en producción.',
+              a: 'Para despliegues empresariales en abril de 2026: Llama 3.3 70B (Meta, Llama Community License — uso comercial gratuito con menos de 700M usuarios), Qwen3 72B (Alibaba, Apache 2.0), Mistral Small 3.1 24B (Mistral AI, Apache 2.0). Para despliegues más pequeños: Llama 3.1 8B, Qwen3 7B, Phi-4 Mini 3.8B. Todos con licencia comercial sin coste. Verifica siempre la licencia antes del despliegue en producción.',
             },
             {
               q: '¿Cuál es la latencia de la IA on-premises frente a las APIs en la nube?',
@@ -2224,7 +2224,7 @@ schema: {
             },
             {
               q: 'ما العتاد الذي أحتاجه لنشر ذكاء اصطناعي في الموقع؟',
-              a: 'الفِرق الصغيرة (5–20 مستخدمًا): 1× RTX 5090 (32 GB، 2,000 دولار) لـ Llama 3.3 8B أو Mistral Small. الإنتاج (20–100 مستخدم): 2× RTX 5090 (64 GB، 4,000 دولار) لـ Llama 3.3 70B عبر التوازي التنسوري. المؤسسة (100+ مستخدم): 4× RTX 5090 أو 2× A100 80GB (8 آلاف-30 ألف دولار) للتزامن العالي + RAG. خصّص ميزانية أيضًا للشبكة والتبريد ومصادر طاقة مكرّرة.',
+              a: 'الفِرق الصغيرة (5–20 مستخدمًا): 1× RTX 5090 (32 GB، 2,000 دولار) لـ Llama 3.1 8B أو Mistral Small. الإنتاج (20–100 مستخدم): 2× RTX 5090 (64 GB، 4,000 دولار) لـ Llama 3.3 70B عبر التوازي التنسوري. المؤسسة (100+ مستخدم): 4× RTX 5090 أو 2× A100 80GB (8 آلاف-30 ألف دولار) للتزامن العالي + RAG. خصّص ميزانية أيضًا للشبكة والتبريد ومصادر طاقة مكرّرة.',
             },
             {
               q: 'كيف أمتثل لحماية بيانات القطاع الصحي باستخدام نموذج LLM محلي؟',
@@ -2232,7 +2232,7 @@ schema: {
             },
             {
               q: 'أي نماذج مفتوحة المصدر أفضل للاستخدام المؤسسي؟',
-              a: 'لعمليات النشر المؤسسية في أبريل 2026: Llama 3.3 70B (Meta، ترخيص مجتمع Llama — استخدام تجاري مجاني بأقل من 700 مليون مستخدم)، Qwen3 72B (Alibaba، Apache 2.0)، Mistral Small 3.1 24B (Mistral AI، Apache 2.0). لعمليات نشر أصغر: Llama 3.3 8B، Qwen3 7B، Phi-4 Mini 3.8B. جميعها بترخيص تجاري بلا تكلفة. تحقق دائمًا من الترخيص قبل النشر الإنتاجي.',
+              a: 'لعمليات النشر المؤسسية في أبريل 2026: Llama 3.3 70B (Meta، ترخيص مجتمع Llama — استخدام تجاري مجاني بأقل من 700 مليون مستخدم)، Qwen3 72B (Alibaba، Apache 2.0)، Mistral Small 3.1 24B (Mistral AI، Apache 2.0). لعمليات نشر أصغر: Llama 3.1 8B، Qwen3 7B، Phi-4 Mini 3.8B. جميعها بترخيص تجاري بلا تكلفة. تحقق دائمًا من الترخيص قبل النشر الإنتاجي.',
             },
             {
               q: 'ما زمن استجابة الذكاء الاصطناعي في الموقع مقابل واجهات API السحابية؟',
@@ -2676,7 +2676,7 @@ schema: {
             },
             {
               q: '온프레미스 AI 배포에 필요한 하드웨어는 무엇입니까?',
-              a: '소규모 팀(5~20명): Llama 3.3 8B 또는 Mistral Small용 RTX 5090 1대(32GB, $2,000). 프로덕션(20~100명): 텐서 병렬 처리로 Llama 3.3 70B 구동을 위한 RTX 5090 2대(64GB, $4,000). 엔터프라이즈(100명 이상): 고동시성 + RAG용 RTX 5090 4대 또는 A100 80GB 2대($8,000~$30,000). 네트워킹, 냉각, 이중 전원 공급 장치도 예산에 포함하십시오.',
+              a: '소규모 팀(5~20명): Llama 3.1 8B 또는 Mistral Small용 RTX 5090 1대(32GB, $2,000). 프로덕션(20~100명): 텐서 병렬 처리로 Llama 3.3 70B 구동을 위한 RTX 5090 2대(64GB, $4,000). 엔터프라이즈(100명 이상): 고동시성 + RAG용 RTX 5090 4대 또는 A100 80GB 2대($8,000~$30,000). 네트워킹, 냉각, 이중 전원 공급 장치도 예산에 포함하십시오.',
             },
             {
               q: '로컬 LLM으로 HIPAA를 준수하려면 어떻게 해야 합니까?',
@@ -2684,7 +2684,7 @@ schema: {
             },
             {
               q: '비즈니스 사용에 가장 적합한 오픈소스 모델은 무엇입니까?',
-              a: '2026년 4월 기준 비즈니스 배포용: Llama 3.3 70B(Meta, Llama Community License — 7억 명 미만 사용자에게 상업적 무료 사용), Qwen3 72B(Alibaba, Apache 2.0), Mistral Small 3.1 24B(Mistral AI, Apache 2.0). 소규모 배포용: Llama 3.3 8B, Qwen3 7B, Phi-4 Mini 3.8B. 모두 무료로 상업적으로 라이선스 가능합니다. 프로덕션 배포 전 반드시 라이선스를 확인하십시오.',
+              a: '2026년 4월 기준 비즈니스 배포용: Llama 3.3 70B(Meta, Llama Community License — 7억 명 미만 사용자에게 상업적 무료 사용), Qwen3 72B(Alibaba, Apache 2.0), Mistral Small 3.1 24B(Mistral AI, Apache 2.0). 소규모 배포용: Llama 3.1 8B, Qwen3 7B, Phi-4 Mini 3.8B. 모두 무료로 상업적으로 라이선스 가능합니다. 프로덕션 배포 전 반드시 라이선스를 확인하십시오.',
             },
             {
               q: '온프레미스 AI와 클라우드 API의 지연 시간 차이는 얼마입니까?',

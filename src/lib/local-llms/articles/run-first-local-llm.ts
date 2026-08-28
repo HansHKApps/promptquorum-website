@@ -71,12 +71,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           rows: [
             { 'Your RAM': '4 GB', 'Recommended Model': 'llama3.2:1b', 'Download Size': '~1.3 GB', 'Why': 'Smallest usable Llama model' },
             { 'Your RAM': '8 GB', 'Recommended Model': 'Llama 3.2 3B', 'Download Size': '~2 GB', 'Why': 'Best quality/size ratio for beginners' },
-            { 'Your RAM': '8-16 GB', 'Recommended Model': 'Llama 3.3 8B', 'Download Size': '~4.7 GB', 'Why': 'Strong general-purpose model' },
+            { 'Your RAM': '8-16 GB', 'Recommended Model': 'Llama 3.1 8B', 'Download Size': '~4.7 GB', 'Why': 'Strong general-purpose model' },
             { 'Your RAM': '16+ GB', 'Recommended Model': 'mistral:7b or qwen2.5:7b', 'Download Size': '~4-5 GB', 'Why': 'Competitive quality, fast inference' },
           ],
           columns: ['Your RAM', 'Recommended Model', 'Download Size', 'Why'],
           image: '/images/run-first-local-llm-ram-model-picker-en.svg',
-          imageCaption: 'First model picker by RAM: 4 GB fits llama3.2:1b (1.3 GB), 8 GB fits Llama 3.2 3B (2 GB, recommended start), 8-16 GB fits Llama 3.3 8B (4.7 GB), 16+ GB fits mistral:7b or qwen2.5:7b (4-5 GB).',
+          imageCaption: 'First model picker by RAM: 4 GB fits llama3.2:1b (1.3 GB), 8 GB fits Llama 3.2 3B (2 GB, recommended start), 8-16 GB fits Llama 3.1 8B (4.7 GB), 16+ GB fits mistral:7b or qwen2.5:7b (4-5 GB).',
         },
         step3: {
           title: 'Step 3: Pull the Model',
@@ -347,7 +347,7 @@ schema: {
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'llama3.2:1b', 'description': '4 GB RAM. 1.3 GB download. Smallest usable Llama model.' },
           { '@type': 'ListItem', 'position': 2, 'name': 'Llama 3.2 3B', 'description': '8 GB RAM. 2 GB download. Best quality-to-size for beginners.' },
-          { '@type': 'ListItem', 'position': 3, 'name': 'Llama 3.3 8B', 'description': '8-16 GB RAM. 4.7 GB download. Strong general-purpose.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Llama 3.1 8B', 'description': '8-16 GB RAM. 4.7 GB download. Strong general-purpose.' },
           { '@type': 'ListItem', 'position': 4, 'name': 'mistral:7b or qwen2.5:7b', 'description': '16+ GB RAM. 4-5 GB download. Competitive quality.' },
         ]
       },
@@ -414,12 +414,12 @@ schema: {
           rows: [
             { 'Tu RAM': '4 GB', 'Modelo recomendado': 'llama3.2:1b', 'Tamaño de descarga': '~1,3 GB', 'Por qué': 'El modelo Llama más pequeño que resulta útil' },
             { 'Tu RAM': '8 GB', 'Modelo recomendado': 'Llama 3.2 3B', 'Tamaño de descarga': '~2 GB', 'Por qué': 'Mejor relación calidad/tamaño para principiantes' },
-            { 'Tu RAM': '8-16 GB', 'Modelo recomendado': 'Llama 3.3 8B', 'Tamaño de descarga': '~4,7 GB', 'Por qué': 'Modelo de propósito general de alto rendimiento' },
+            { 'Tu RAM': '8-16 GB', 'Modelo recomendado': 'Llama 3.1 8B', 'Tamaño de descarga': '~4,7 GB', 'Por qué': 'Modelo de propósito general de alto rendimiento' },
             { 'Tu RAM': '16+ GB', 'Modelo recomendado': 'mistral:7b o qwen2.5:7b', 'Tamaño de descarga': '~4-5 GB', 'Por qué': 'Calidad competitiva, inferencia rápida' },
           ],
           columns: ['Tu RAM', 'Modelo recomendado', 'Tamaño de descarga', 'Por qué'],
           image: '/images/run-first-local-llm-ram-model-picker-en.svg',
-          imageCaption: 'Selector del primer modelo por RAM: 4 GB para llama3.2:1b (1,3 GB), 8 GB para Llama 3.2 3B (2 GB, inicio recomendado), 8-16 GB para Llama 3.3 8B (4,7 GB), 16+ GB para mistral:7b o qwen2.5:7b (4-5 GB).',
+          imageCaption: 'Selector del primer modelo por RAM: 4 GB para llama3.2:1b (1,3 GB), 8 GB para Llama 3.2 3B (2 GB, inicio recomendado), 8-16 GB para Llama 3.1 8B (4,7 GB), 16+ GB para mistral:7b o qwen2.5:7b (4-5 GB).',
         },
         step3: {
           title: 'Paso 3: Descargar el modelo',
@@ -690,7 +690,7 @@ schema: {
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'llama3.2:1b', 'description': '4 GB de RAM. Descarga de 1,3 GB. El modelo Llama más pequeño que resulta útil.' },
           { '@type': 'ListItem', 'position': 2, 'name': 'Llama 3.2 3B', 'description': '8 GB de RAM. Descarga de 2 GB. Mejor relación calidad-tamaño para principiantes.' },
-          { '@type': 'ListItem', 'position': 3, 'name': 'Llama 3.3 8B', 'description': '8-16 GB de RAM. Descarga de 4,7 GB. Alto rendimiento de propósito general.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Llama 3.1 8B', 'description': '8-16 GB de RAM. Descarga de 4,7 GB. Alto rendimiento de propósito general.' },
           { '@type': 'ListItem', 'position': 4, 'name': 'mistral:7b o qwen2.5:7b', 'description': '16+ GB de RAM. Descarga de 4-5 GB. Calidad competitiva.' },
         ]
       },
@@ -757,12 +757,12 @@ schema: {
           rows: [
             { 'ذاكرة RAM لديك': '4 GB', 'النموذج الموصى به': 'llama3.2:1b', 'حجم التنزيل': '~1.3 GB', 'السبب': 'أصغر نموذج Llama مفيد' },
             { 'ذاكرة RAM لديك': '8 GB', 'النموذج الموصى به': 'Llama 3.2 3B', 'حجم التنزيل': '~2 GB', 'السبب': 'أفضل نسبة جودة/حجم للمبتدئين' },
-            { 'ذاكرة RAM لديك': '8-16 GB', 'النموذج الموصى به': 'Llama 3.3 8B', 'حجم التنزيل': '~4.7 GB', 'السبب': 'نموذج عام عالي الأداء' },
+            { 'ذاكرة RAM لديك': '8-16 GB', 'النموذج الموصى به': 'Llama 3.1 8B', 'حجم التنزيل': '~4.7 GB', 'السبب': 'نموذج عام عالي الأداء' },
             { 'ذاكرة RAM لديك': '16+ GB', 'النموذج الموصى به': 'mistral:7b أو qwen2.5:7b', 'حجم التنزيل': '~4-5 GB', 'السبب': 'جودة تنافسية، استدلال سريع' },
           ],
           columns: ['ذاكرة RAM لديك', 'النموذج الموصى به', 'حجم التنزيل', 'السبب'],
           image: '/images/run-first-local-llm-ram-model-picker-en.svg',
-          imageCaption: 'اختيار أول نموذج حسب RAM: 4 GB لـ llama3.2:1b (1.3 GB)، 8 GB لـ Llama 3.2 3B (2 GB، البداية الموصى بها)، 8-16 GB لـ Llama 3.3 8B (4.7 GB)، 16+ GB لـ mistral:7b أو qwen2.5:7b (4-5 GB).',
+          imageCaption: 'اختيار أول نموذج حسب RAM: 4 GB لـ llama3.2:1b (1.3 GB)، 8 GB لـ Llama 3.2 3B (2 GB، البداية الموصى بها)، 8-16 GB لـ Llama 3.1 8B (4.7 GB)، 16+ GB لـ mistral:7b أو qwen2.5:7b (4-5 GB).',
         },
         step3: {
           title: 'الخطوة 3: تنزيل النموذج',
@@ -1033,7 +1033,7 @@ schema: {
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'llama3.2:1b', 'description': '4 GB من RAM. تنزيل 1.3 GB. أصغر نموذج Llama مفيد.' },
           { '@type': 'ListItem', 'position': 2, 'name': 'Llama 3.2 3B', 'description': '8 GB من RAM. تنزيل 2 GB. أفضل نسبة جودة-حجم للمبتدئين.' },
-          { '@type': 'ListItem', 'position': 3, 'name': 'Llama 3.3 8B', 'description': '8-16 GB من RAM. تنزيل 4.7 GB. أداء عام عالٍ.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Llama 3.1 8B', 'description': '8-16 GB من RAM. تنزيل 4.7 GB. أداء عام عالٍ.' },
           { '@type': 'ListItem', 'position': 4, 'name': 'mistral:7b أو qwen2.5:7b', 'description': '16+ GB من RAM. تنزيل 4-5 GB. جودة تنافسية.' },
         ]
       },
@@ -1115,7 +1115,7 @@ schema: {
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'llama3.2:1b', 'description': '4 GB RAM. 1,3 GB Download. Kleinstes brauchbares Llama-Modell.' },
           { '@type': 'ListItem', 'position': 2, 'name': 'Llama 3.2 3B', 'description': '8 GB RAM. 2 GB Download. Bestes Verhältnis von Qualität zu Größe für Einsteiger.' },
-          { '@type': 'ListItem', 'position': 3, 'name': 'Llama 3.3 8B', 'description': '8-16 GB RAM. 4,7 GB Download. Starkes Allzweckmodell.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Llama 3.1 8B', 'description': '8-16 GB RAM. 4,7 GB Download. Starkes Allzweckmodell.' },
           { '@type': 'ListItem', 'position': 4, 'name': 'mistral:7b oder qwen2.5:7b', 'description': '16+ GB RAM. 4-5 GB Download. Wettbewerbsfähige Qualität.' },
         ]
       },
@@ -1151,12 +1151,12 @@ schema: {
           rows: [
             { 'Ihr RAM': '4 GB', 'Empfohlenes Modell': 'llama3.2:1b', 'Downloadgröße': '~1,3 GB', 'Warum': 'Kleinstes brauchbares Llama-Modell' },
             { 'Ihr RAM': '8 GB', 'Empfohlenes Modell': 'Llama 3.2 3B', 'Downloadgröße': '~2 GB', 'Warum': 'Bestes Verhältnis Qualität/Größe für Einsteiger' },
-            { 'Ihr RAM': '8-16 GB', 'Empfohlenes Modell': 'Llama 3.3 8B', 'Downloadgröße': '~4,7 GB', 'Warum': 'Starkes Allzweckmodell' },
+            { 'Ihr RAM': '8-16 GB', 'Empfohlenes Modell': 'Llama 3.1 8B', 'Downloadgröße': '~4,7 GB', 'Warum': 'Starkes Allzweckmodell' },
             { 'Ihr RAM': '16+ GB', 'Empfohlenes Modell': 'mistral:7b oder qwen2.5:7b', 'Downloadgröße': '~4-5 GB', 'Warum': 'Wettbewerbsfähige Qualität, schnelle Inferenz' },
           ],
           columns: ['Ihr RAM', 'Empfohlenes Modell', 'Downloadgröße', 'Warum'],
           image: '/images/run-first-local-llm-ram-model-picker-en.svg',
-          imageCaption: 'Erste Modellwahl nach RAM: 4 GB passt zu llama3.2:1b (1,3 GB), 8 GB passt zu Llama 3.2 3B (2 GB, empfohlener Start), 8-16 GB passt zu Llama 3.3 8B (4,7 GB), 16+ GB passt zu mistral:7b oder qwen2.5:7b (4-5 GB).',
+          imageCaption: 'Erste Modellwahl nach RAM: 4 GB passt zu llama3.2:1b (1,3 GB), 8 GB passt zu Llama 3.2 3B (2 GB, empfohlener Start), 8-16 GB passt zu Llama 3.1 8B (4,7 GB), 16+ GB passt zu mistral:7b oder qwen2.5:7b (4-5 GB).',
         },
         step3: {
           title: 'Schritt 3: Modell herunterladen',
@@ -1375,7 +1375,7 @@ schema: {
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'llama3.2:1b', 'description': '4 Go de RAM. Téléchargement de 1,3 Go. Plus petit modèle Llama utilisable.' },
           { '@type': 'ListItem', 'position': 2, 'name': 'Llama 3.2 3B', 'description': '8 Go de RAM. Téléchargement de 2 Go. Meilleur rapport qualité/taille pour débutants.' },
-          { '@type': 'ListItem', 'position': 3, 'name': 'Llama 3.3 8B', 'description': '8-16 Go de RAM. Téléchargement de 4,7 Go. Modèle polyvalent performant.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Llama 3.1 8B', 'description': '8-16 Go de RAM. Téléchargement de 4,7 Go. Modèle polyvalent performant.' },
           { '@type': 'ListItem', 'position': 4, 'name': 'mistral:7b ou qwen2.5:7b', 'description': '16+ Go de RAM. Téléchargement de 4-5 Go. Qualité compétitive.' },
         ]
       },
@@ -1383,7 +1383,7 @@ schema: {
         tldr: { id: 'key-takeaways', isTldr: true, items: ['Le chemin le plus rapide : installez Ollama → exécutez `ollama run llama3.2` → discutez dans votre terminal. Durée totale : moins de 5 minutes avec une connexion rapide.', 'Pour les machines avec 8 Go de RAM : commencez avec `llama3.2:3b` (2 Go de téléchargement) ou `phi4-mini` (2,3 Go). Les deux fonctionnent sur n\'importe quel laptop moderne.', 'Attendez 15-40 tokens/sec sur CPU, 60-120 tokens/sec sur un GPU milieu de gamme ou Apple Silicon.', 'Les premières réponses peuvent sembler plus lentes que les APIs cloud -- les modèles locaux échangent vitesse contre confidentialité et coût zéro.', 'Après le téléchargement initial du modèle, tout fonctionne hors ligne. Aucune connexion Internet requise pour les sessions suivantes.'] },
         step1: { title: 'Étape 1 : Installer Ollama', content: 'Ollama est le moyen le plus rapide d\'exécuter un LLM local. Installez-le avec une commande ou un téléchargement de 2 minutes :', codeBlock: '# macOS (Homebrew)\nbrew install ollama\n\n# Linux\ncurl -fsSL https://ollama.com/install.sh | sh\n\n# Windows: download installer from ollama.com/download', codeLanguage: 'bash' },
         step1Detail: { title: 'Vérifier qu\'Ollama fonctionne', content: 'Après l\'installation, confirmez qu\'Ollama est actif :', codeBlock: 'curl http://localhost:11434\n# Expected output: Ollama is running', codeLanguage: 'bash' },
-        step2: { title: 'Étape 2 : Choisir votre premier modèle', content: 'Choisissez un modèle en fonction de votre RAM disponible. En cas de doute, commencez avec `llama3.2:3b` -- il fonctionne sur toute machine avec 4 Go de RAM et produit des résultats utiles :', rows: [{ 'Votre RAM': '4 Go', 'Modèle recommandé': 'llama3.2:1b', 'Taille du téléchargement': '~1,3 Go', 'Pourquoi': 'Plus petit modèle Llama utilisable' }, { 'Votre RAM': '8 Go', 'Modèle recommandé': 'Llama 3.2 3B', 'Taille du téléchargement': '~2 Go', 'Pourquoi': 'Meilleur rapport qualité/taille pour débutants' }, { 'Votre RAM': '8-16 Go', 'Modèle recommandé': 'Llama 3.3 8B', 'Taille du téléchargement': '~4,7 Go', 'Pourquoi': 'Modèle polyvalent performant' }, { 'Votre RAM': '16+ Go', 'Modèle recommandé': 'mistral:7b ou qwen2.5:7b', 'Taille du téléchargement': '~4-5 Go', 'Pourquoi': 'Qualité compétitive, inférence rapide' }], columns: ['Votre RAM', 'Modèle recommandé', 'Taille du téléchargement', 'Pourquoi'] },
+        step2: { title: 'Étape 2 : Choisir votre premier modèle', content: 'Choisissez un modèle en fonction de votre RAM disponible. En cas de doute, commencez avec `llama3.2:3b` -- il fonctionne sur toute machine avec 4 Go de RAM et produit des résultats utiles :', rows: [{ 'Votre RAM': '4 Go', 'Modèle recommandé': 'llama3.2:1b', 'Taille du téléchargement': '~1,3 Go', 'Pourquoi': 'Plus petit modèle Llama utilisable' }, { 'Votre RAM': '8 Go', 'Modèle recommandé': 'Llama 3.2 3B', 'Taille du téléchargement': '~2 Go', 'Pourquoi': 'Meilleur rapport qualité/taille pour débutants' }, { 'Votre RAM': '8-16 Go', 'Modèle recommandé': 'Llama 3.1 8B', 'Taille du téléchargement': '~4,7 Go', 'Pourquoi': 'Modèle polyvalent performant' }, { 'Votre RAM': '16+ Go', 'Modèle recommandé': 'mistral:7b ou qwen2.5:7b', 'Taille du téléchargement': '~4-5 Go', 'Pourquoi': 'Qualité compétitive, inférence rapide' }], columns: ['Votre RAM', 'Modèle recommandé', 'Taille du téléchargement', 'Pourquoi'] },
         step3: { title: 'Étape 3 : Télécharger le modèle', content: 'Téléchargez le modèle avec `ollama pull`. Le modèle est enregistré dans `~/.ollama/models` et ne doit être téléchargé qu\'une seule fois :', codeBlock: 'ollama pull llama3.2\n\n# Or pull a specific size variant\nollama pull llama3.2:3b\nollama pull llama3.1:8b', codeLanguage: 'bash' },
         step3Progress: { title: 'À quoi ressemble le téléchargement ?', content: 'Ollama affiche la progression du téléchargement dans le terminal. Un modèle `llama3.2:3b` prend 2-5 minutes sur une connexion haut débit classique. Le modèle est stocké compressé -- les 2 Go téléchargés s\'expandent à environ 2,3 Go sur disque.', codeBlock: 'pulling manifest\npulling 966de95ca8dc... 100% ▕████████████████▏ 1.9 GB\npulling 9f436a92eb8b... 100% ▕████████████████▏   42 B\nverifying sha256 digest\nwriting manifest\nsuccess', codeLanguage: 'text' },
         step4: { id: 'step-4-run-and-chat', title: 'Étape 4 : Lancer le modèle et envoyer votre premier prompt', content: 'Démarrez une session de chat interactive :', codeBlock: 'ollama run llama3.2\n\n# Ollama loads the model and shows a prompt:\n>>> Send a message (/? for help)', codeLanguage: 'bash' },
@@ -1475,7 +1475,7 @@ schema: {
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'llama3.2:1b', 'description': '4 GB RAM。1.3 GBダウンロード。使用可能な最小のLlamaモデル。' },
           { '@type': 'ListItem', 'position': 2, 'name': 'Llama 3.2 3B', 'description': '8 GB RAM。2 GBダウンロード。初心者に最適な品質とサイズのバランス。' },
-          { '@type': 'ListItem', 'position': 3, 'name': 'Llama 3.3 8B', 'description': '8-16 GB RAM。4.7 GBダウンロード。強力な汎用モデル。' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Llama 3.1 8B', 'description': '8-16 GB RAM。4.7 GBダウンロード。強力な汎用モデル。' },
           { '@type': 'ListItem', 'position': 4, 'name': 'mistral:7b または qwen2.5:7b', 'description': '16 GB以上のRAM。4-5 GBダウンロード。競争力のある品質。' },
         ]
       },
@@ -1483,7 +1483,7 @@ schema: {
         tldr: { id: 'key-takeaways', isTldr: true, items: ['最速の手順：Ollamaをインストール → `ollama run llama3.2`を実行 → ターミナルでチャット。高速接続なら合計5分以内。', '8 GBのRAMマシン：`llama3.2:3b`（2 GBのダウンロード）または`phi4-mini`（2.3 GB）から始めてください。どちらも最新のノートパソコンで動作します。', 'CPUで15-40トークン/秒、ミッドレンジGPUまたはApple Siliconで60-120トークン/秒が期待できます。', '最初のレスポンスはクラウドAPIより遅く感じる場合があります。ローカルモデルは速度をプライバシーとゼロコストと交換します。', '初期モデルのダウンロード後は、すべてオフラインで動作します。次回以降のセッションにインターネット接続は不要です。'] },
         step1: { title: 'ステップ1：Ollamaをインストール', content: 'Ollamaはローカルで動作するLLMを実行する最速の方法です。1つのコマンドまたは2分のダウンロードでインストールできます：', codeBlock: '# macOS (Homebrew)\nbrew install ollama\n\n# Linux\ncurl -fsSL https://ollama.com/install.sh | sh\n\n# Windows: download installer from ollama.com/download', codeLanguage: 'bash', image: '/images/run-first-local-llm-setup-flow-en.svg', imageCaption: 'インストールから最初の応答まで4ステップ：Ollamaをインストール（約2分）、llama3.2:3bをダウンロード（約2 GB、2〜5分）、実行してチャット、モデル読み込み5〜30秒後に最初の応答。合計10分未満、ダウンロード後は完全オフラインで動作。' },
         step1Detail: { title: 'Ollamaが動作していることを確認', content: 'インストール後、Ollamaがアクティブであることを確認します：', codeBlock: 'curl http://localhost:11434\n# Expected output: Ollama is running', codeLanguage: 'bash' },
-        step2: { title: 'ステップ2：最初のモデルを選択', content: '利用可能なRAMに基づいてモデルを選択します。迷った場合は`llama3.2:3b`から始めてください。4 GBのRAMを搭載したあらゆるマシンで動作し、有用な出力を生成します：', rows: [{ 'お使いのRAM': '4 GB', '推奨モデル': 'llama3.2:1b', 'ダウンロードサイズ': '約1.3 GB', '理由': '最小限の使えるLlamaモデル' }, { 'お使いのRAM': '8 GB', '推奨モデル': 'Llama 3.2 3B', 'ダウンロードサイズ': '約2 GB', '理由': '初心者向けの最高の品質/サイズ比' }, { 'お使いのRAM': '8-16 GB', '推奨モデル': 'Llama 3.3 8B', 'ダウンロードサイズ': '約4.7 GB', '理由': '強力な汎用モデル' }, { 'お使いのRAM': '16 GB以上', '推奨モデル': 'mistral:7b または qwen2.5:7b', 'ダウンロードサイズ': '約4-5 GB', '理由': '競争力のある品質、高速な推論' }], columns: ['お使いのRAM', '推奨モデル', 'ダウンロードサイズ', '理由'], image: '/images/run-first-local-llm-ram-model-picker-en.svg', imageCaption: 'RAM別の最初のモデル選び：4 GBはllama3.2:1b（1.3 GB）、8 GBはLlama 3.2 3B（2 GB、推奨の出発点）、8-16 GBはLlama 3.3 8B（4.7 GB）、16 GB以上はmistral:7bまたはqwen2.5:7b（4-5 GB）。' },
+        step2: { title: 'ステップ2：最初のモデルを選択', content: '利用可能なRAMに基づいてモデルを選択します。迷った場合は`llama3.2:3b`から始めてください。4 GBのRAMを搭載したあらゆるマシンで動作し、有用な出力を生成します：', rows: [{ 'お使いのRAM': '4 GB', '推奨モデル': 'llama3.2:1b', 'ダウンロードサイズ': '約1.3 GB', '理由': '最小限の使えるLlamaモデル' }, { 'お使いのRAM': '8 GB', '推奨モデル': 'Llama 3.2 3B', 'ダウンロードサイズ': '約2 GB', '理由': '初心者向けの最高の品質/サイズ比' }, { 'お使いのRAM': '8-16 GB', '推奨モデル': 'Llama 3.1 8B', 'ダウンロードサイズ': '約4.7 GB', '理由': '強力な汎用モデル' }, { 'お使いのRAM': '16 GB以上', '推奨モデル': 'mistral:7b または qwen2.5:7b', 'ダウンロードサイズ': '約4-5 GB', '理由': '競争力のある品質、高速な推論' }], columns: ['お使いのRAM', '推奨モデル', 'ダウンロードサイズ', '理由'], image: '/images/run-first-local-llm-ram-model-picker-en.svg', imageCaption: 'RAM別の最初のモデル選び：4 GBはllama3.2:1b（1.3 GB）、8 GBはLlama 3.2 3B（2 GB、推奨の出発点）、8-16 GBはLlama 3.1 8B（4.7 GB）、16 GB以上はmistral:7bまたはqwen2.5:7b（4-5 GB）。' },
         step3: { title: 'ステップ3：モデルをダウンロード', content: '`ollama pull`でモデルをダウンロードします。モデルは`~/.ollama/models`に保存され、一度だけダウンロードすれば使えます：', codeBlock: 'ollama pull llama3.2\n\n# Or pull a specific size variant\nollama pull llama3.2:3b\nollama pull llama3.1:8b', codeLanguage: 'bash' },
         step3Progress: { title: 'ダウンロードの様子', content: 'Ollamaはターミナルにダウンロードの進行状況を表示します。`llama3.2:3b`モデルは一般的なブロードバンド接続で2-5分かかります。モデルは圧縮状態で保存されます。2 GBのダウンロードがディスク上で約2.3 GBに展開されます。', codeBlock: 'pulling manifest\npulling 966de95ca8dc... 100% ▕████████████████▏ 1.9 GB\npulling 9f436a92eb8b... 100% ▕████████████████▏   42 B\nverifying sha256 digest\nwriting manifest\nsuccess', codeLanguage: 'text' },
         step4: { id: 'step-4-run-and-chat', title: 'ステップ4：モデルを起動して最初のプロンプトを送信', content: 'インタラクティブなチャットセッションを開始します：', codeBlock: 'ollama run llama3.2\n\n# Ollama loads the model and shows a prompt:\n>>> Send a message (/? for help)', codeLanguage: 'bash' },
@@ -1575,7 +1575,7 @@ schema: {
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'llama3.2:1b', 'description': '4 GB RAM。1.3 GB下载。最小的可用Llama模型。' },
           { '@type': 'ListItem', 'position': 2, 'name': 'Llama 3.2 3B', 'description': '8 GB RAM。2 GB下载。初学者最佳质量与体积比。' },
-          { '@type': 'ListItem', 'position': 3, 'name': 'Llama 3.3 8B', 'description': '8-16 GB RAM。4.7 GB下载。强大的通用模型。' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Llama 3.1 8B', 'description': '8-16 GB RAM。4.7 GB下载。强大的通用模型。' },
           { '@type': 'ListItem', 'position': 4, 'name': 'mistral:7b 或 qwen2.5:7b', 'description': '16+ GB RAM。4-5 GB下载。有竞争力的质量。' },
         ]
       },
@@ -1583,7 +1583,7 @@ schema: {
         tldr: { id: 'key-takeaways', isTldr: true, items: ['最快路径：安装Ollama → 运行`ollama run llama3.2` → 在终端开始聊天。网速较快时全程不超过5分钟。', '8 GB RAM机器：从`llama3.2:3b`（2 GB下载）或`phi4-mini`（2.3 GB）开始。两者均可在任何现代笔记本电脑上运行。', 'CPU上预计15-40个令牌/秒，中端GPU或Apple Silicon上预计60-120个令牌/秒。', '首次响应可能比云API慢——本地模型以速度换取隐私和零成本。', '初始模型下载后，一切都在离线状态运行。后续会话无需互联网连接。'] },
         step1: { title: '第一步：安装Ollama', content: 'Ollama是运行本地LLM的最快方式。用一条命令或2分钟下载完成安装：', codeBlock: '# macOS (Homebrew)\nbrew install ollama\n\n# Linux\ncurl -fsSL https://ollama.com/install.sh | sh\n\n# Windows: download installer from ollama.com/download', codeLanguage: 'bash', image: '/images/run-first-local-llm-setup-flow-en.svg', imageCaption: '从安装到首个响应共4步：安装Ollama（约2分钟）、下载llama3.2:3b（约2 GB，2-5分钟）、运行并聊天，模型加载5-30秒后获得首个响应——总计不到10分钟，下载完成后完全离线运行。' },
         step1Detail: { title: '验证Ollama正在运行', content: '安装后，确认Ollama处于活动状态：', codeBlock: 'curl http://localhost:11434\n# Expected output: Ollama is running', codeLanguage: 'bash' },
-        step2: { title: '第二步：选择您的第一个模型', content: '根据可用RAM选择模型。拿不准时，从`llama3.2:3b`开始——它可在4 GB RAM的任何机器上运行并产生有用输出：', rows: [{ '您的RAM': '4 GB', '推荐模型': 'llama3.2:1b', '下载大小': '约1.3 GB', '原因': '最小可用的Llama模型' }, { '您的RAM': '8 GB', '推荐模型': 'Llama 3.2 3B', '下载大小': '约2 GB', '原因': '初学者最佳质量/大小比' }, { '您的RAM': '8-16 GB', '推荐模型': 'Llama 3.3 8B', '下载大小': '约4.7 GB', '原因': '强大的通用模型' }, { '您的RAM': '16 GB以上', '推荐模型': 'mistral:7b 或 qwen2.5:7b', '下载大小': '约4-5 GB', '原因': '有竞争力的质量，推理速度快' }], columns: ['您的RAM', '推荐模型', '下载大小', '原因'], image: '/images/run-first-local-llm-ram-model-picker-en.svg', imageCaption: '按RAM选择首个模型：4 GB选llama3.2:1b（1.3 GB）、8 GB选Llama 3.2 3B（2 GB，推荐起点）、8-16 GB选Llama 3.3 8B（4.7 GB）、16 GB以上选mistral:7b或qwen2.5:7b（4-5 GB）。' },
+        step2: { title: '第二步：选择您的第一个模型', content: '根据可用RAM选择模型。拿不准时，从`llama3.2:3b`开始——它可在4 GB RAM的任何机器上运行并产生有用输出：', rows: [{ '您的RAM': '4 GB', '推荐模型': 'llama3.2:1b', '下载大小': '约1.3 GB', '原因': '最小可用的Llama模型' }, { '您的RAM': '8 GB', '推荐模型': 'Llama 3.2 3B', '下载大小': '约2 GB', '原因': '初学者最佳质量/大小比' }, { '您的RAM': '8-16 GB', '推荐模型': 'Llama 3.1 8B', '下载大小': '约4.7 GB', '原因': '强大的通用模型' }, { '您的RAM': '16 GB以上', '推荐模型': 'mistral:7b 或 qwen2.5:7b', '下载大小': '约4-5 GB', '原因': '有竞争力的质量，推理速度快' }], columns: ['您的RAM', '推荐模型', '下载大小', '原因'], image: '/images/run-first-local-llm-ram-model-picker-en.svg', imageCaption: '按RAM选择首个模型：4 GB选llama3.2:1b（1.3 GB）、8 GB选Llama 3.2 3B（2 GB，推荐起点）、8-16 GB选Llama 3.1 8B（4.7 GB）、16 GB以上选mistral:7b或qwen2.5:7b（4-5 GB）。' },
         step3: { title: '第三步：下载模型', content: '使用`ollama pull`下载模型。模型保存到`~/.ollama/models`，只需下载一次：', codeBlock: 'ollama pull llama3.2\n\n# Or pull a specific size variant\nollama pull llama3.2:3b\nollama pull llama3.1:8b', codeLanguage: 'bash' },
         step3Progress: { title: '下载过程展示', content: 'Ollama在终端显示下载进度。`llama3.2:3b`模型在典型宽带连接上需要2-5分钟。模型以压缩形式存储——2 GB的下载在磁盘上展开为约2.3 GB。', codeBlock: 'pulling manifest\npulling 966de95ca8dc... 100% ▕████████████████▏ 1.9 GB\npulling 9f436a92eb8b... 100% ▕████████████████▏   42 B\nverifying sha256 digest\nwriting manifest\nsuccess', codeLanguage: 'text' },
         step4: { id: 'step-4-run-and-chat', title: '第四步：运行模型并发送第一个提示词', content: '启动交互式聊天会话：', codeBlock: 'ollama run llama3.2\n\n# Ollama loads the model and shows a prompt:\n>>> Send a message (/? for help)', codeLanguage: 'bash' },
@@ -1660,12 +1660,12 @@ schema: {
           rows: [
             { 'Sua RAM': '4 GB', 'Modelo recomendado': 'llama3.2:1b', 'Tamanho do download': '~1,3 GB', 'Por quê': 'O menor modelo Llama que ainda é útil' },
             { 'Sua RAM': '8 GB', 'Modelo recomendado': 'Llama 3.2 3B', 'Tamanho do download': '~2 GB', 'Por quê': 'Melhor relação qualidade/tamanho para iniciantes' },
-            { 'Sua RAM': '8-16 GB', 'Modelo recomendado': 'Llama 3.3 8B', 'Tamanho do download': '~4,7 GB', 'Por quê': 'Modelo de propósito geral de alto desempenho' },
+            { 'Sua RAM': '8-16 GB', 'Modelo recomendado': 'Llama 3.1 8B', 'Tamanho do download': '~4,7 GB', 'Por quê': 'Modelo de propósito geral de alto desempenho' },
             { 'Sua RAM': '16+ GB', 'Modelo recomendado': 'mistral:7b ou qwen2.5:7b', 'Tamanho do download': '~4-5 GB', 'Por quê': 'Qualidade competitiva, inferência rápida' },
           ],
           columns: ['Sua RAM', 'Modelo recomendado', 'Tamanho do download', 'Por quê'],
           image: '/images/run-first-local-llm-ram-model-picker-en.svg',
-          imageCaption: 'Escolha do primeiro modelo por RAM: 4 GB para llama3.2:1b (1,3 GB), 8 GB para Llama 3.2 3B (2 GB, ponto de partida recomendado), 8-16 GB para Llama 3.3 8B (4,7 GB), 16+ GB para mistral:7b ou qwen2.5:7b (4-5 GB).',
+          imageCaption: 'Escolha do primeiro modelo por RAM: 4 GB para llama3.2:1b (1,3 GB), 8 GB para Llama 3.2 3B (2 GB, ponto de partida recomendado), 8-16 GB para Llama 3.1 8B (4,7 GB), 16+ GB para mistral:7b ou qwen2.5:7b (4-5 GB).',
         },
         step3: {
           title: 'Passo 3: Baixar o modelo',
@@ -1936,7 +1936,7 @@ schema: {
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'llama3.2:1b', 'description': '4 GB de RAM. Download de 1,3 GB. O menor modelo Llama que ainda é útil.' },
           { '@type': 'ListItem', 'position': 2, 'name': 'Llama 3.2 3B', 'description': '8 GB de RAM. Download de 2 GB. Melhor relação qualidade-tamanho para iniciantes.' },
-          { '@type': 'ListItem', 'position': 3, 'name': 'Llama 3.3 8B', 'description': '8-16 GB de RAM. Download de 4,7 GB. Alto desempenho de propósito geral.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Llama 3.1 8B', 'description': '8-16 GB de RAM. Download de 4,7 GB. Alto desempenho de propósito geral.' },
           { '@type': 'ListItem', 'position': 4, 'name': 'mistral:7b ou qwen2.5:7b', 'description': '16+ GB de RAM. Download de 4-5 GB. Qualidade competitiva.' },
         ]
       },
@@ -2031,7 +2031,7 @@ schema: {
         'itemListElement': [
           { '@type': 'ListItem', 'position': 1, 'name': 'llama3.2:1b', 'description': 'RAM 4GB. 다운로드 1.3GB. 사용 가능한 가장 작은 Llama 모델.' },
           { '@type': 'ListItem', 'position': 2, 'name': 'Llama 3.2 3B', 'description': 'RAM 8GB. 다운로드 2GB. 초보자를 위한 최적의 품질 대비 크기 비율.' },
-          { '@type': 'ListItem', 'position': 3, 'name': 'Llama 3.3 8B', 'description': 'RAM 8~16GB. 다운로드 4.7GB. 강력한 범용 모델.' },
+          { '@type': 'ListItem', 'position': 3, 'name': 'Llama 3.1 8B', 'description': 'RAM 8~16GB. 다운로드 4.7GB. 강력한 범용 모델.' },
           { '@type': 'ListItem', 'position': 4, 'name': 'mistral:7b 또는 qwen2.5:7b', 'description': 'RAM 16GB 이상. 다운로드 4~5GB. 경쟁력 있는 품질.' },
         ]
       },
@@ -2067,12 +2067,12 @@ schema: {
           rows: [
             { '보유 RAM': '4 GB', '권장 모델': 'llama3.2:1b', '다운로드 크기': '약 1.3 GB', '이유': '가장 작은 사용 가능한 Llama 모델' },
             { '보유 RAM': '8 GB', '권장 모델': 'Llama 3.2 3B', '다운로드 크기': '약 2 GB', '이유': '초보자를 위한 최적의 품질/크기 비율' },
-            { '보유 RAM': '8~16 GB', '권장 모델': 'Llama 3.3 8B', '다운로드 크기': '약 4.7 GB', '이유': '강력한 범용 모델' },
+            { '보유 RAM': '8~16 GB', '권장 모델': 'Llama 3.1 8B', '다운로드 크기': '약 4.7 GB', '이유': '강력한 범용 모델' },
             { '보유 RAM': '16 GB 이상', '권장 모델': 'mistral:7b 또는 qwen2.5:7b', '다운로드 크기': '약 4~5 GB', '이유': '우수한 품질, 빠른 추론 속도' },
           ],
           columns: ['보유 RAM', '권장 모델', '다운로드 크기', '이유'],
           image: '/images/run-first-local-llm-ram-model-picker-en.svg',
-          imageCaption: 'RAM별 첫 모델 선택: 4GB는 llama3.2:1b(1.3GB), 8GB는 Llama 3.2 3B(2GB, 추천 시작점), 8~16GB는 Llama 3.3 8B(4.7GB), 16GB 이상은 mistral:7b 또는 qwen2.5:7b(4~5GB).',
+          imageCaption: 'RAM별 첫 모델 선택: 4GB는 llama3.2:1b(1.3GB), 8GB는 Llama 3.2 3B(2GB, 추천 시작점), 8~16GB는 Llama 3.1 8B(4.7GB), 16GB 이상은 mistral:7b 또는 qwen2.5:7b(4~5GB).',
         },
         step3: {
           title: '3단계: 모델 다운로드',

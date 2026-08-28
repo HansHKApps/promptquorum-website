@@ -366,8 +366,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         callout7: {
-          blockquote: 'Quantized models (4-bit, 8-bit) show 15–25% higher sensitivity to ambiguous prompts compared to full-precision versions of the same model. A prompt that works reliably on GPT-5.5 (full precision, 100+ billion parameters) may fail 30–40% of the time on Llama 3.3 8B quantized. The optimization strategy differs: full-precision models tolerate implicit instructions; quantized models require explicit, unambiguous directions. Prompt optimization for local LLMs must account for this reduced instruction-following capacity.',
-          blockquoteSource: 'Internal evaluation across Ollama (Llama 3.3 8B) and LM Studio (Mistral Small) quantized models vs full-precision cloud APIs.',
+          blockquote: 'Quantized models (4-bit, 8-bit) show 15–25% higher sensitivity to ambiguous prompts compared to full-precision versions of the same model. A prompt that works reliably on GPT-5.5 (full precision, 100+ billion parameters) may fail 30–40% of the time on Llama 3.1 8B quantized. The optimization strategy differs: full-precision models tolerate implicit instructions; quantized models require explicit, unambiguous directions. Prompt optimization for local LLMs must account for this reduced instruction-following capacity.',
+          blockquoteSource: 'Internal evaluation across Ollama (Llama 3.1 8B) and LM Studio (Mistral Small) quantized models vs full-precision cloud APIs.',
         },
 
         callout8: {
@@ -861,8 +861,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         callout7: {
-          blockquote: 'Quantisierte Modelle (4-Bit, 8-Bit) zeigen eine 15–25 % höhere Empfindlichkeit gegenüber mehrdeutigen Prompts im Vergleich zu Vollpräzisionsversionen desselben Modells. Ein Prompt, der zuverlässig auf GPT-5.5 (Vollpräzision, über 100 Milliarden Parameter) funktioniert, kann bei einem quantisierten Llama 3.3 8B in 30–40 % der Fälle scheitern. Die Optimierungsstrategie unterscheidet sich: Vollpräzisionsmodelle tolerieren implizite Anweisungen; quantisierte Modelle benötigen explizite, unmissverständliche Vorgaben. Prompt-Optimierung für lokale LLMs muss diese reduzierte Anweisungsfolgefähigkeit berücksichtigen.',
-          blockquoteSource: 'Interne Auswertung über Ollama (Llama 3.3 8B) und LM Studio (Mistral Small) quantisierte Modelle im Vergleich zu Vollpräzisions-Cloud-APIs.',
+          blockquote: 'Quantisierte Modelle (4-Bit, 8-Bit) zeigen eine 15–25 % höhere Empfindlichkeit gegenüber mehrdeutigen Prompts im Vergleich zu Vollpräzisionsversionen desselben Modells. Ein Prompt, der zuverlässig auf GPT-5.5 (Vollpräzision, über 100 Milliarden Parameter) funktioniert, kann bei einem quantisierten Llama 3.1 8B in 30–40 % der Fälle scheitern. Die Optimierungsstrategie unterscheidet sich: Vollpräzisionsmodelle tolerieren implizite Anweisungen; quantisierte Modelle benötigen explizite, unmissverständliche Vorgaben. Prompt-Optimierung für lokale LLMs muss diese reduzierte Anweisungsfolgefähigkeit berücksichtigen.',
+          blockquoteSource: 'Interne Auswertung über Ollama (Llama 3.1 8B) und LM Studio (Mistral Small) quantisierte Modelle im Vergleich zu Vollpräzisions-Cloud-APIs.',
         },
 
         callout8: {
@@ -1400,8 +1400,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         callout7: {
-          blockquote: 'Los modelos cuantizados (4-bit, 8-bit) muestran una sensibilidad del 15–25% mayor a los prompts ambiguos en comparación con las versiones de precisión completa del mismo modelo. Un prompt que funciona de forma fiable en GPT-5.5 puede fallar el 30–40% de las veces en Llama 3.3 8B cuantizado. La estrategia de optimización difiere: los modelos de precisión completa toleran instrucciones implícitas; los modelos cuantizados requieren instrucciones explícitas e inequívocas.',
-          blockquoteSource: 'Evaluación interna en Ollama (Llama 3.3 8B) y LM Studio (Mistral Small) modelos cuantizados vs APIs de nube de precisión completa.',
+          blockquote: 'Los modelos cuantizados (4-bit, 8-bit) muestran una sensibilidad del 15–25% mayor a los prompts ambiguos en comparación con las versiones de precisión completa del mismo modelo. Un prompt que funciona de forma fiable en GPT-5.5 puede fallar el 30–40% de las veces en Llama 3.1 8B cuantizado. La estrategia de optimización difiere: los modelos de precisión completa toleran instrucciones implícitas; los modelos cuantizados requieren instrucciones explícitas e inequívocas.',
+          blockquoteSource: 'Evaluación interna en Ollama (Llama 3.1 8B) y LM Studio (Mistral Small) modelos cuantizados vs APIs de nube de precisión completa.',
         },
 
         callout8: {
@@ -1880,8 +1880,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         callout7: {
-          blockquote: 'تُظهر النماذج المكمَّمة (4-bit، 8-bit) حساسية أعلى بنسبة 15–25٪ للموجّهات الغامضة مقارنةً بإصدارات الدقة الكاملة من نفس النموذج. موجّه يعمل بشكل موثوق على GPT-5.5 قد يفشل بنسبة 30–40٪ على Llama 3.3 8B المكمَّم. استراتيجية التحسين تختلف: نماذج الدقة الكاملة تتحمل التعليمات الضمنية؛ النماذج المكمَّمة تتطلب تعليمات صريحة وغير ملتبسة.',
-          blockquoteSource: 'تقييم داخلي على نماذج Ollama (Llama 3.3 8B) وLM Studio (Mistral Small) المكمَّمة مقابل واجهات APIs السحابية ذات الدقة الكاملة.',
+          blockquote: 'تُظهر النماذج المكمَّمة (4-bit، 8-bit) حساسية أعلى بنسبة 15–25٪ للموجّهات الغامضة مقارنةً بإصدارات الدقة الكاملة من نفس النموذج. موجّه يعمل بشكل موثوق على GPT-5.5 قد يفشل بنسبة 30–40٪ على Llama 3.1 8B المكمَّم. استراتيجية التحسين تختلف: نماذج الدقة الكاملة تتحمل التعليمات الضمنية؛ النماذج المكمَّمة تتطلب تعليمات صريحة وغير ملتبسة.',
+          blockquoteSource: 'تقييم داخلي على نماذج Ollama (Llama 3.1 8B) وLM Studio (Mistral Small) المكمَّمة مقابل واجهات APIs السحابية ذات الدقة الكاملة.',
         },
 
         callout8: {
@@ -2330,8 +2330,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         callout7: {
-          blockquote: 'Les modèles quantifiés (4-bit, 8-bit) montrent une sensibilité 15–25 % plus élevée aux prompts ambigus par rapport aux versions pleine précision du même modèle. Un prompt qui fonctionne de manière fiable sur GPT-5.5 (pleine précision, plus de 100 milliards de paramètres) peut échouer 30–40 % du temps sur un Llama 3.3 8B quantifié. La stratégie d\'optimisation diffère : les modèles pleine précision tolèrent les instructions implicites ; les modèles quantifiés nécessitent des directives explicites et non ambiguës.',
-          blockquoteSource: 'Évaluation interne sur des modèles quantifiés Ollama (Llama 3.3 8B) et LM Studio (Mistral Small) par rapport aux API cloud pleine précision.',
+          blockquote: 'Les modèles quantifiés (4-bit, 8-bit) montrent une sensibilité 15–25 % plus élevée aux prompts ambigus par rapport aux versions pleine précision du même modèle. Un prompt qui fonctionne de manière fiable sur GPT-5.5 (pleine précision, plus de 100 milliards de paramètres) peut échouer 30–40 % du temps sur un Llama 3.1 8B quantifié. La stratégie d\'optimisation diffère : les modèles pleine précision tolèrent les instructions implicites ; les modèles quantifiés nécessitent des directives explicites et non ambiguës.',
+          blockquoteSource: 'Évaluation interne sur des modèles quantifiés Ollama (Llama 3.1 8B) et LM Studio (Mistral Small) par rapport aux API cloud pleine précision.',
         },
 
         callout8: {
@@ -2839,8 +2839,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         callout7: {
-          blockquote: '量子化モデル（4-bit、8-bit）は、同一モデルのフル精度版と比較して、曖昧なプロンプトへの感度が15～25％高くなります。GPT-5.5（フル精度、1,000億パラメータ以上）で確実に動作するプロンプトは、量子化されたLlama 3.3 8Bでは30～40％の頻度で失敗する可能性があります。最適化戦略は異なります：フル精度モデルは暗黙的な指示を許容しますが、量子化モデルは明示的で曖昧さのない指示を必要とします。',
-          blockquoteSource: 'Ollama（Llama 3.3 8B）とLM Studio（Mistral Small）の量子化モデルと、フル精度クラウドAPIとの社内評価比較。',
+          blockquote: '量子化モデル（4-bit、8-bit）は、同一モデルのフル精度版と比較して、曖昧なプロンプトへの感度が15～25％高くなります。GPT-5.5（フル精度、1,000億パラメータ以上）で確実に動作するプロンプトは、量子化されたLlama 3.1 8Bでは30～40％の頻度で失敗する可能性があります。最適化戦略は異なります：フル精度モデルは暗黙的な指示を許容しますが、量子化モデルは明示的で曖昧さのない指示を必要とします。',
+          blockquoteSource: 'Ollama（Llama 3.1 8B）とLM Studio（Mistral Small）の量子化モデルと、フル精度クラウドAPIとの社内評価比較。',
         },
 
         callout8: {
@@ -3276,8 +3276,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         callout7: {
-          blockquote: '量化模型（4位、8位）对模糊提示词的敏感度比同一模型的全精度版本高15–25%。在GPT-5.5（全精度，超过1000亿参数）上可靠运行的提示词，在量化的Llama 3.3 8B上可能有30–40%的概率失败。优化策略因此不同：全精度模型可以容忍隐式指示；量化模型需要明确、无歧义的指令。',
-          blockquoteSource: '对Ollama（Llama 3.3 8B）和LM Studio（Mistral Small）量化模型与全精度云API的内部评估比较。',
+          blockquote: '量化模型（4位、8位）对模糊提示词的敏感度比同一模型的全精度版本高15–25%。在GPT-5.5（全精度，超过1000亿参数）上可靠运行的提示词，在量化的Llama 3.1 8B上可能有30–40%的概率失败。优化策略因此不同：全精度模型可以容忍隐式指示；量化模型需要明确、无歧义的指令。',
+          blockquoteSource: '对Ollama（Llama 3.1 8B）和LM Studio（Mistral Small）量化模型与全精度云API的内部评估比较。',
         },
 
         callout8: {
@@ -3804,8 +3804,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         callout7: {
-          blockquote: 'Modelos quantizados (4-bit, 8-bit) mostram 15–25% maior sensibilidade a prompts ambíguos em comparação com versões de precisão total do mesmo modelo. Um prompt que funciona de forma confiável no GPT-5.5 (precisão total, 100+ bilhões de parâmetros) pode falhar 30–40% das vezes no Llama 3.3 8B quantizado. A estratégia de otimização difere: modelos de precisão total toleram instruções implícitas; modelos quantizados requerem direções explícitas e inequívocas. A otimização de prompts para LLMs locais deve levar em conta essa capacidade reduzida de seguimento de instruções.',
-          blockquoteSource: 'Avaliação interna em modelos quantizados Ollama (Llama 3.3 8B) e LM Studio (Mistral Small) vs APIs de nuvem de precisão total.',
+          blockquote: 'Modelos quantizados (4-bit, 8-bit) mostram 15–25% maior sensibilidade a prompts ambíguos em comparação com versões de precisão total do mesmo modelo. Um prompt que funciona de forma confiável no GPT-5.5 (precisão total, 100+ bilhões de parâmetros) pode falhar 30–40% das vezes no Llama 3.1 8B quantizado. A estratégia de otimização difere: modelos de precisão total toleram instruções implícitas; modelos quantizados requerem direções explícitas e inequívocas. A otimização de prompts para LLMs locais deve levar em conta essa capacidade reduzida de seguimento de instruções.',
+          blockquoteSource: 'Avaliação interna em modelos quantizados Ollama (Llama 3.1 8B) e LM Studio (Mistral Small) vs APIs de nuvem de precisão total.',
         },
 
         callout8: {
@@ -4333,8 +4333,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       callout7: {
-        blockquote: '양자화된 모델(4-bit, 8-bit)은 동일한 모델의 전체 정밀도 버전과 비교하여 모호한 프롬프트에 15–25% 더 높은 민감도를 보입니다. GPT-5.5에서 안정적으로 작동하는 프롬프트는 양자화된 Llama 3.3 8B에서 30–40%의 시간 동안 실패할 수 있습니다. 전체 정밀도 모델은 암묵적 지시를 허용하고; 양자화된 모델은 명시적이고 명확한 지시가 필요합니다.',
-        blockquoteSource: 'Ollama(Llama 3.3 8B)와 LM Studio(Mistral Small) 양자화된 모델 vs 전체 정밀도 클라우드 API에 대한 내부 평가.',
+        blockquote: '양자화된 모델(4-bit, 8-bit)은 동일한 모델의 전체 정밀도 버전과 비교하여 모호한 프롬프트에 15–25% 더 높은 민감도를 보입니다. GPT-5.5에서 안정적으로 작동하는 프롬프트는 양자화된 Llama 3.1 8B에서 30–40%의 시간 동안 실패할 수 있습니다. 전체 정밀도 모델은 암묵적 지시를 허용하고; 양자화된 모델은 명시적이고 명확한 지시가 필요합니다.',
+        blockquoteSource: 'Ollama(Llama 3.1 8B)와 LM Studio(Mistral Small) 양자화된 모델 vs 전체 정밀도 클라우드 API에 대한 내부 평가.',
       },
 
       callout8: {

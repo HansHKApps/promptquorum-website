@@ -102,7 +102,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tier1: {
         title: 'Tier 1: ~$2,700 Budget AI Workstation',
         id: 'tier1',
-        content: 'The budget build uses a used RTX 3090 (24 GB VRAM) as the core. It runs Llama 3.3 8B Q8 at 45–60 tok/s, Qwen3 14B Q8 at 20–28 tok/s, and Qwen3 32B Q4 at 12–18 tok/s entirely on GPU. The RTX 3090 draws 350 W — pair with a quality 850 W PSU. **Buy this build if:** your budget is under $3,000, you mainly run 7B–32B models, and you are comfortable buying a used GPU. **Skip it if:** 70B is your primary workload — CPU-offloaded 70B on this tier runs 5–8 tok/s, which is functional but slow.',
+        content: 'The budget build uses a used RTX 3090 (24 GB VRAM) as the core. It runs Llama 3.1 8B Q8 at 45–60 tok/s, Qwen3 14B Q8 at 20–28 tok/s, and Qwen3 32B Q4 at 12–18 tok/s entirely on GPU. The RTX 3090 draws 350 W — pair with a quality 850 W PSU. **Buy this build if:** your budget is under $3,000, you mainly run 7B–32B models, and you are comfortable buying a used GPU. **Skip it if:** 70B is your primary workload — CPU-offloaded 70B on this tier runs 5–8 tok/s, which is functional but slow.',
         columns: ['Component', 'Model', 'Price (Aug 2026)'],
         rows: [
           { 'Component': 'GPU', 'Model': 'NVIDIA RTX 3090 (used, 24 GB)', 'Price (Aug 2026)': '~$850' },
@@ -255,7 +255,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Hardware performance is unchanged from earlier 2026 measurements — only the prices moved. Use this table to see what each tier actually does, independent of the cost table above.',
         columns: ['Model + Quant', 'Budget (~$2,700)', 'Recommended (~$5,300)', 'Professional (~$8,800)'],
         rows: [
-          { 'Model + Quant': 'Llama 3.3 8B Q4', 'Budget (~$2,700)': '55–70 tok/s', 'Recommended (~$5,300)': '105–125 tok/s', 'Professional (~$8,800)': '120–140 tok/s' },
+          { 'Model + Quant': 'Llama 3.1 8B Q4', 'Budget (~$2,700)': '55–70 tok/s', 'Recommended (~$5,300)': '105–125 tok/s', 'Professional (~$8,800)': '120–140 tok/s' },
           { 'Model + Quant': 'Qwen3 14B Q8', 'Budget (~$2,700)': '20–28 tok/s', 'Recommended (~$5,300)': '48–60 tok/s', 'Professional (~$8,800)': '55–70 tok/s' },
           { 'Model + Quant': 'Qwen3 32B Q4', 'Budget (~$2,700)': '12–18 tok/s', 'Recommended (~$5,300)': '28–38 tok/s', 'Professional (~$8,800)': '40–55 tok/s' },
           { 'Model + Quant': 'Llama 3.3 70B Q4', 'Budget (~$2,700)': '5–8 tok/s (CPU)', 'Recommended (~$5,300)': '10–15 tok/s (CPU)', 'Professional (~$8,800)': '25–40 tok/s (GPU)' },
@@ -519,7 +519,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tier1: {
         title: 'Stufe 1: ~2.500 € Budget-KI-Workstation',
         id: 'tier1',
-        content: 'Der Budget-Build nutzt eine gebrauchte RTX 3090 (24 GB VRAM) als Kern. Er läuft Llama 3.3 8B Q8 mit 45–60 Tok/s, Qwen3 14B Q8 mit 20–28 Tok/s und Qwen3 32B Q4 mit 12–18 Tok/s vollständig auf GPU. **Kaufe diesen Build, wenn:** dein Budget unter 3.000 € liegt, du hauptsächlich 7B–32B-Modelle nutzt und eine gebrauchte GPU kein Problem ist. **Überspringen, wenn:** 70B dein Hauptworkload ist — CPU-Offloading auf dieser Stufe läuft mit 5–8 Tok/s, funktional aber langsam.',
+        content: 'Der Budget-Build nutzt eine gebrauchte RTX 3090 (24 GB VRAM) als Kern. Er läuft Llama 3.1 8B Q8 mit 45–60 Tok/s, Qwen3 14B Q8 mit 20–28 Tok/s und Qwen3 32B Q4 mit 12–18 Tok/s vollständig auf GPU. **Kaufe diesen Build, wenn:** dein Budget unter 3.000 € liegt, du hauptsächlich 7B–32B-Modelle nutzt und eine gebrauchte GPU kein Problem ist. **Überspringen, wenn:** 70B dein Hauptworkload ist — CPU-Offloading auf dieser Stufe läuft mit 5–8 Tok/s, funktional aber langsam.',
         columns: ['Komponente', 'Modell', 'Preis (Aug 2026)'],
         rows: [
           { 'Komponente': 'GPU', 'Modell': 'NVIDIA RTX 3090 (gebraucht, 24 GB)', 'Preis (Aug 2026)': '~800 €' },
@@ -663,7 +663,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Die Hardware-Leistung ist unverändert gegenüber früheren 2026-Messungen — nur die Preise haben sich geändert.',
         columns: ['Modell + Quant', 'Budget (~2.500 €)', 'Empfohlen (~4.950 €)', 'Profi (~8.200 €)'],
         rows: [
-          { 'Modell + Quant': 'Llama 3.3 8B Q4', 'Budget (~2.500 €)': '55–70 Tok/s', 'Empfohlen (~4.950 €)': '105–125 Tok/s', 'Profi (~8.200 €)': '120–140 Tok/s' },
+          { 'Modell + Quant': 'Llama 3.1 8B Q4', 'Budget (~2.500 €)': '55–70 Tok/s', 'Empfohlen (~4.950 €)': '105–125 Tok/s', 'Profi (~8.200 €)': '120–140 Tok/s' },
           { 'Modell + Quant': 'Qwen3 14B Q8', 'Budget (~2.500 €)': '20–28 Tok/s', 'Empfohlen (~4.950 €)': '48–60 Tok/s', 'Profi (~8.200 €)': '55–70 Tok/s' },
           { 'Modell + Quant': 'Qwen3 32B Q4', 'Budget (~2.500 €)': '12–18 Tok/s', 'Empfohlen (~4.950 €)': '28–38 Tok/s', 'Profi (~8.200 €)': '40–55 Tok/s' },
           { 'Modell + Quant': 'Llama 3.3 70B Q4', 'Budget (~2.500 €)': '5–8 Tok/s (CPU)', 'Empfohlen (~4.950 €)': '10–15 Tok/s (CPU)', 'Profi (~8.200 €)': '25–40 Tok/s (GPU)' },
@@ -877,7 +877,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tier1: {
         title: 'Niveau 1 : ~2 500 € Workstation IA budget',
         id: 'tier1',
-        content: 'Le build budget utilise une RTX 3090 occasion (24 Go VRAM). Il fait tourner Llama 3.3 8B Q8 à 45–60 tok/s, Qwen3 14B Q8 à 20–28 tok/s et Qwen3 32B Q4 à 12–18 tok/s entièrement sur GPU. **Prenez ce build si :** votre budget est sous 3 000 €, vous utilisez surtout du 7B–32B, et l\'achat d\'occasion ne vous gêne pas. **Évitez si :** le 70B est votre usage principal — le déchargement CPU sur ce niveau tourne à 5–8 tok/s, fonctionnel mais lent.',
+        content: 'Le build budget utilise une RTX 3090 occasion (24 Go VRAM). Il fait tourner Llama 3.1 8B Q8 à 45–60 tok/s, Qwen3 14B Q8 à 20–28 tok/s et Qwen3 32B Q4 à 12–18 tok/s entièrement sur GPU. **Prenez ce build si :** votre budget est sous 3 000 €, vous utilisez surtout du 7B–32B, et l\'achat d\'occasion ne vous gêne pas. **Évitez si :** le 70B est votre usage principal — le déchargement CPU sur ce niveau tourne à 5–8 tok/s, fonctionnel mais lent.',
         columns: ['Composant', 'Modèle', 'Prix (août 2026)'],
         rows: [
           { 'Composant': 'GPU', 'Modèle': 'NVIDIA RTX 3090 (occasion, 24 Go)', 'Prix (août 2026)': '~790 €' },
@@ -1020,7 +1020,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'La performance matérielle est inchangée depuis les mesures 2026 précédentes — seuls les prix ont bougé.',
         columns: ['Modèle + Quant', 'Budget (~2 500 €)', 'Recommandé (~4 950 €)', 'Professionnel (~8 200 €)'],
         rows: [
-          { 'Modèle + Quant': 'Llama 3.3 8B Q4', 'Budget (~2 500 €)': '55–70 tok/s', 'Recommandé (~4 950 €)': '105–125 tok/s', 'Professionnel (~8 200 €)': '120–140 tok/s' },
+          { 'Modèle + Quant': 'Llama 3.1 8B Q4', 'Budget (~2 500 €)': '55–70 tok/s', 'Recommandé (~4 950 €)': '105–125 tok/s', 'Professionnel (~8 200 €)': '120–140 tok/s' },
           { 'Modèle + Quant': 'Qwen3 14B Q8', 'Budget (~2 500 €)': '20–28 tok/s', 'Recommandé (~4 950 €)': '48–60 tok/s', 'Professionnel (~8 200 €)': '55–70 tok/s' },
           { 'Modèle + Quant': 'Qwen3 32B Q4', 'Budget (~2 500 €)': '12–18 tok/s', 'Recommandé (~4 950 €)': '28–38 tok/s', 'Professionnel (~8 200 €)': '40–55 tok/s' },
           { 'Modèle + Quant': 'Llama 3.3 70B Q4', 'Budget (~2 500 €)': '5–8 tok/s (CPU)', 'Recommandé (~4 950 €)': '10–15 tok/s (CPU)', 'Professionnel (~8 200 €)': '25–40 tok/s (GPU)' },
@@ -1230,7 +1230,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tier1: {
         title: '第1段階：約43万円バジェットAIワークステーション',
         id: 'tier1',
-        content: 'バジェットビルドは中古RTX 3090（24GB VRAM）を中心に構成。Llama 3.3 8B Q8を45〜60 tok/s、Qwen3 14B Q8を20〜28 tok/s、Qwen3 32B Q4を12〜18 tok/sでGPUのみで動作。**この構成を選ぶべき場合：** 予算が45万円未満、主に7B〜32Bモデルを使う、中古GPUに抵抗がない。**避けるべき場合：** 70Bが主用途——このクラスのCPUオフロードは5〜8 tok/sで機能はするが遅い。',
+        content: 'バジェットビルドは中古RTX 3090（24GB VRAM）を中心に構成。Llama 3.1 8B Q8を45〜60 tok/s、Qwen3 14B Q8を20〜28 tok/s、Qwen3 32B Q4を12〜18 tok/sでGPUのみで動作。**この構成を選ぶべき場合：** 予算が45万円未満、主に7B〜32Bモデルを使う、中古GPUに抵抗がない。**避けるべき場合：** 70Bが主用途——このクラスのCPUオフロードは5〜8 tok/sで機能はするが遅い。',
         columns: ['コンポーネント', 'モデル', '価格（2026年8月）'],
         rows: [
           { 'コンポーネント': 'GPU', 'モデル': 'NVIDIA RTX 3090（中古、24GB）', '価格（2026年8月）': '約13万4000円' },
@@ -1373,7 +1373,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'ハードウェア性能は2026年初頭の測定値と変わりません——変わったのは価格だけです。',
         columns: ['モデル + 量子化', 'バジェット(約43万円)', '推奨(約84万円)', 'プロ(約139万円)'],
         rows: [
-          { 'モデル + 量子化': 'Llama 3.3 8B Q4', 'バジェット(約43万円)': '55–70 tok/s', '推奨(約84万円)': '105–125 tok/s', 'プロ(約139万円)': '120–140 tok/s' },
+          { 'モデル + 量子化': 'Llama 3.1 8B Q4', 'バジェット(約43万円)': '55–70 tok/s', '推奨(約84万円)': '105–125 tok/s', 'プロ(約139万円)': '120–140 tok/s' },
           { 'モデル + 量子化': 'Qwen3 14B Q8', 'バジェット(約43万円)': '20–28 tok/s', '推奨(約84万円)': '48–60 tok/s', 'プロ(約139万円)': '55–70 tok/s' },
           { 'モデル + 量子化': 'Qwen3 32B Q4', 'バジェット(約43万円)': '12–18 tok/s', '推奨(約84万円)': '28–38 tok/s', 'プロ(約139万円)': '40–55 tok/s' },
           { 'モデル + 量子化': 'Llama 3.3 70B Q4', 'バジェット(約43万円)': '5–8 tok/s (CPU)', '推奨(約84万円)': '10–15 tok/s (CPU)', 'プロ(約139万円)': '25–40 tok/s (GPU)' },
@@ -1587,7 +1587,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tier1: {
         title: '第一档：约19300元预算AI工作站',
         id: 'tier1',
-        content: '预算方案以二手RTX 3090（24GB显存）为核心。Llama 3.3 8B Q8达45–60 tok/s，Qwen3 14B Q8达20–28 tok/s，Qwen3 32B Q4达12–18 tok/s，全部纯GPU运行。**适合购买的情况：** 预算低于23000元、主要运行7B–32B模型、可接受二手GPU。**应跳过的情况：** 70B是主要负载——本档CPU卸载70B仅5–8 tok/s，可用但较慢。',
+        content: '预算方案以二手RTX 3090（24GB显存）为核心。Llama 3.1 8B Q8达45–60 tok/s，Qwen3 14B Q8达20–28 tok/s，Qwen3 32B Q4达12–18 tok/s，全部纯GPU运行。**适合购买的情况：** 预算低于23000元、主要运行7B–32B模型、可接受二手GPU。**应跳过的情况：** 70B是主要负载——本档CPU卸载70B仅5–8 tok/s，可用但较慢。',
         columns: ['组件', '型号', '价格（2026年8月）'],
         rows: [
           { '组件': 'GPU', '型号': 'NVIDIA RTX 3090（二手，24GB）', '价格（2026年8月）': '约6000元' },
@@ -1730,7 +1730,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '硬件性能与2026年早期测量结果一致——只有价格发生了变化。',
         columns: ['模型 + 量化', '入门档（约19300元）', '推荐档（约38000元）', '专业档（约62600元）'],
         rows: [
-          { '模型 + 量化': 'Llama 3.3 8B Q4', '入门档（约19300元）': '55–70 tok/s', '推荐档（约38000元）': '105–125 tok/s', '专业档（约62600元）': '120–140 tok/s' },
+          { '模型 + 量化': 'Llama 3.1 8B Q4', '入门档（约19300元）': '55–70 tok/s', '推荐档（约38000元）': '105–125 tok/s', '专业档（约62600元）': '120–140 tok/s' },
           { '模型 + 量化': 'Qwen3 14B Q8', '入门档（约19300元）': '20–28 tok/s', '推荐档（约38000元）': '48–60 tok/s', '专业档（约62600元）': '55–70 tok/s' },
           { '模型 + 量化': 'Qwen3 32B Q4', '入门档（约19300元）': '12–18 tok/s', '推荐档（约38000元）': '28–38 tok/s', '专业档（约62600元）': '40–55 tok/s' },
           { '模型 + 量化': 'Llama 3.3 70B Q4', '入门档（约19300元）': '5–8 tok/s（CPU）', '推荐档（约38000元）': '10–15 tok/s（CPU）', '专业档（约62600元）': '25–40 tok/s（GPU）' },
@@ -1953,7 +1953,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tier1: {
         title: 'Nivel 1: ~2.500 € workstation de IA económica',
         id: 'tier1',
-        content: 'El build económico utiliza una RTX 3090 usada (24 GB VRAM) como núcleo. Ejecuta Llama 3.3 8B Q8 a 45–60 tok/s, Qwen3 14B Q8 a 20–28 tok/s y Qwen3 32B Q4 a 12–18 tok/s completamente en GPU. **Elige este build si:** tu presupuesto está por debajo de 3.000 €, usas sobre todo modelos 7B–32B, y no te importa comprar una GPU usada. **Sáltatelo si:** el 70B es tu carga principal — el offloading a CPU en este nivel corre a 5–8 tok/s, funcional pero lento.',
+        content: 'El build económico utiliza una RTX 3090 usada (24 GB VRAM) como núcleo. Ejecuta Llama 3.1 8B Q8 a 45–60 tok/s, Qwen3 14B Q8 a 20–28 tok/s y Qwen3 32B Q4 a 12–18 tok/s completamente en GPU. **Elige este build si:** tu presupuesto está por debajo de 3.000 €, usas sobre todo modelos 7B–32B, y no te importa comprar una GPU usada. **Sáltatelo si:** el 70B es tu carga principal — el offloading a CPU en este nivel corre a 5–8 tok/s, funcional pero lento.',
         columns: ['Componente', 'Modelo', 'Precio (ago 2026)'],
         rows: [
           { 'Componente': 'GPU', 'Modelo': 'NVIDIA RTX 3090 (usada, 24 GB)', 'Precio (ago 2026)': '~790 €' },
@@ -2097,7 +2097,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'El rendimiento del hardware es el mismo que en mediciones anteriores de 2026 — solo cambiaron los precios.',
         columns: ['Modelo + cuantización', 'Económico (~2.500 €)', 'Recomendado (~4.950 €)', 'Profesional (~8.200 €)'],
         rows: [
-          { 'Modelo + cuantización': 'Llama 3.3 8B Q4', 'Económico (~2.500 €)': '55–70 tok/s', 'Recomendado (~4.950 €)': '105–125 tok/s', 'Profesional (~8.200 €)': '120–140 tok/s' },
+          { 'Modelo + cuantización': 'Llama 3.1 8B Q4', 'Económico (~2.500 €)': '55–70 tok/s', 'Recomendado (~4.950 €)': '105–125 tok/s', 'Profesional (~8.200 €)': '120–140 tok/s' },
           { 'Modelo + cuantización': 'Qwen3 14B Q8', 'Económico (~2.500 €)': '20–28 tok/s', 'Recomendado (~4.950 €)': '48–60 tok/s', 'Profesional (~8.200 €)': '55–70 tok/s' },
           { 'Modelo + cuantización': 'Qwen3 32B Q4', 'Económico (~2.500 €)': '12–18 tok/s', 'Recomendado (~4.950 €)': '28–38 tok/s', 'Profesional (~8.200 €)': '40–55 tok/s' },
           { 'Modelo + cuantización': 'Llama 3.3 70B Q4', 'Económico (~2.500 €)': '5–8 tok/s (CPU)', 'Recomendado (~4.950 €)': '10–15 tok/s (CPU)', 'Profesional (~8.200 €)': '25–40 tok/s (GPU)' },
@@ -2327,7 +2327,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tier1: {
         title: '1단계: 약 419만원 경제형 AI 워크스테이션',
         id: 'tier1',
-        content: '경제형 빌드는 중고 RTX 3090(24 GB VRAM)을 핵심으로 사용합니다. Llama 3.3 8B Q8을 45–60 tok/s, Qwen3 14B Q8을 20–28 tok/s, Qwen3 32B Q4를 12–18 tok/s로 완전히 GPU에서 실행합니다. **이 구성을 선택할 경우:** 예산이 470만원 미만이고 주로 7B–32B 모델을 사용하며 중고 GPU 구매에 거부감이 없는 경우. **건너뛰어야 할 경우:** 70B가 주 용도라면 — 이 단계의 CPU 오프로딩은 5–8 tok/s로 작동은 하지만 느립니다.',
+        content: '경제형 빌드는 중고 RTX 3090(24 GB VRAM)을 핵심으로 사용합니다. Llama 3.1 8B Q8을 45–60 tok/s, Qwen3 14B Q8을 20–28 tok/s, Qwen3 32B Q4를 12–18 tok/s로 완전히 GPU에서 실행합니다. **이 구성을 선택할 경우:** 예산이 470만원 미만이고 주로 7B–32B 모델을 사용하며 중고 GPU 구매에 거부감이 없는 경우. **건너뛰어야 할 경우:** 70B가 주 용도라면 — 이 단계의 CPU 오프로딩은 5–8 tok/s로 작동은 하지만 느립니다.',
         columns: ['부품', '모델', '가격(2026년 8월)'],
         rows: [
           { '부품': 'GPU', '모델': 'NVIDIA RTX 3090 (중고, 24 GB)', '가격(2026년 8월)': '약 131만원' },
@@ -2470,7 +2470,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '하드웨어 성능은 2026년 초기 측정치와 동일합니다 — 변한 것은 가격뿐입니다.',
         columns: ['모델 + 양자화', '경제형(약 419만원)', '추천형(약 823만원)', '전문가형(약 1,559만원)'],
         rows: [
-          { '모델 + 양자화': 'Llama 3.3 8B Q4', '경제형(약 419만원)': '55–70 tok/s', '추천형(약 823만원)': '105–125 tok/s', '전문가형(약 1,559만원)': '120–140 tok/s' },
+          { '모델 + 양자화': 'Llama 3.1 8B Q4', '경제형(약 419만원)': '55–70 tok/s', '추천형(약 823만원)': '105–125 tok/s', '전문가형(약 1,559만원)': '120–140 tok/s' },
           { '모델 + 양자화': 'Qwen3 14B Q8', '경제형(약 419만원)': '20–28 tok/s', '추천형(약 823만원)': '48–60 tok/s', '전문가형(약 1,559만원)': '55–70 tok/s' },
           { '모델 + 양자화': 'Qwen3 32B Q4', '경제형(약 419만원)': '12–18 tok/s', '추천형(약 823만원)': '28–38 tok/s', '전문가형(약 1,559만원)': '40–55 tok/s' },
           { '모델 + 양자화': 'Llama 3.3 70B Q4', '경제형(약 419만원)': '5–8 tok/s (CPU)', '추천형(약 823만원)': '10–15 tok/s (CPU)', '전문가형(약 1,559만원)': '25–40 tok/s (GPU)' },
@@ -2700,7 +2700,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tier1: {
         title: 'Nível 1: ~R$ 25.000 workstation de IA econômica',
         id: 'tier1',
-        content: 'O build econômico usa uma RTX 3090 usada (24 GB VRAM) como núcleo. Roda Llama 3.3 8B Q8 a 45–60 tok/s, Qwen3 14B Q8 a 20–28 tok/s e Qwen3 32B Q4 a 12–18 tok/s totalmente na GPU. **Escolha este build se:** seu orçamento está abaixo de R$ 30.000, você usa principalmente modelos 7B–32B, e não se importa em comprar uma GPU usada. **Pule se:** o 70B é sua carga principal — o offloading para CPU neste nível roda a 5–8 tok/s, funcional mas lento.',
+        content: 'O build econômico usa uma RTX 3090 usada (24 GB VRAM) como núcleo. Roda Llama 3.1 8B Q8 a 45–60 tok/s, Qwen3 14B Q8 a 20–28 tok/s e Qwen3 32B Q4 a 12–18 tok/s totalmente na GPU. **Escolha este build se:** seu orçamento está abaixo de R$ 30.000, você usa principalmente modelos 7B–32B, e não se importa em comprar uma GPU usada. **Pule se:** o 70B é sua carga principal — o offloading para CPU neste nível roda a 5–8 tok/s, funcional mas lento.',
         columns: ['Componente', 'Modelo', 'Preço (ago 2026)'],
         rows: [
           { 'Componente': 'GPU', 'Modelo': 'NVIDIA RTX 3090 (usada, 24 GB)', 'Preço (ago 2026)': '~R$ 8.500' },
@@ -2843,7 +2843,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'O desempenho do hardware é o mesmo das medições anteriores de 2026 — só os preços mudaram.',
         columns: ['Modelo + quantização', 'Econômico (~R$ 25.000)', 'Recomendado (~R$ 49.000)', 'Profissional (~R$ 81.000)'],
         rows: [
-          { 'Modelo + quantização': 'Llama 3.3 8B Q4', 'Econômico (~R$ 25.000)': '55–70 tok/s', 'Recomendado (~R$ 49.000)': '105–125 tok/s', 'Profissional (~R$ 81.000)': '120–140 tok/s' },
+          { 'Modelo + quantização': 'Llama 3.1 8B Q4', 'Econômico (~R$ 25.000)': '55–70 tok/s', 'Recomendado (~R$ 49.000)': '105–125 tok/s', 'Profissional (~R$ 81.000)': '120–140 tok/s' },
           { 'Modelo + quantização': 'Qwen3 14B Q8', 'Econômico (~R$ 25.000)': '20–28 tok/s', 'Recomendado (~R$ 49.000)': '48–60 tok/s', 'Profissional (~R$ 81.000)': '55–70 tok/s' },
           { 'Modelo + quantização': 'Qwen3 32B Q4', 'Econômico (~R$ 25.000)': '12–18 tok/s', 'Recomendado (~R$ 49.000)': '28–38 tok/s', 'Profissional (~R$ 81.000)': '40–55 tok/s' },
           { 'Modelo + quantização': 'Llama 3.3 70B Q4', 'Econômico (~R$ 25.000)': '5–8 tok/s (CPU)', 'Recomendado (~R$ 49.000)': '10–15 tok/s (CPU)', 'Profissional (~R$ 81.000)': '25–40 tok/s (GPU)' },
@@ -3074,7 +3074,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       tier1: {
         title: 'المستوى 1: محطة عمل ذكاء اصطناعي اقتصادية بنحو 10,500 درهم',
         id: 'tier1',
-        content: 'يستخدم الإعداد الاقتصادي RTX 3090 مستعملة (24 GB VRAM) كنواة. يُشغّل Llama 3.3 8B Q8 بسرعة 45–60 رمز/ثانية، وQwen3 14B Q8 بسرعة 20–28 رمز/ثانية، وQwen3 32B Q4 بسرعة 12–18 رمز/ثانية بالكامل على GPU. **اختر هذا الإعداد إذا:** ميزانيتك أقل من 11,500 درهم، وتستخدم أساساً نماذج 7B–32B، ولا تمانع شراء GPU مستعملة. **تخطَّه إذا:** كان 70B هو عبء العمل الرئيسي — التفريغ إلى CPU في هذا المستوى يعمل بسرعة 5–8 رمز/ثانية، عملي لكنه بطيء.',
+        content: 'يستخدم الإعداد الاقتصادي RTX 3090 مستعملة (24 GB VRAM) كنواة. يُشغّل Llama 3.1 8B Q8 بسرعة 45–60 رمز/ثانية، وQwen3 14B Q8 بسرعة 20–28 رمز/ثانية، وQwen3 32B Q4 بسرعة 12–18 رمز/ثانية بالكامل على GPU. **اختر هذا الإعداد إذا:** ميزانيتك أقل من 11,500 درهم، وتستخدم أساساً نماذج 7B–32B، ولا تمانع شراء GPU مستعملة. **تخطَّه إذا:** كان 70B هو عبء العمل الرئيسي — التفريغ إلى CPU في هذا المستوى يعمل بسرعة 5–8 رمز/ثانية، عملي لكنه بطيء.',
         columns: ['المكوّن', 'الطراز', 'السعر (أغسطس 2026)'],
         rows: [
           { 'المكوّن': 'GPU', 'الطراز': 'NVIDIA RTX 3090 (مستعملة، 24 GB)', 'السعر (أغسطس 2026)': '~3,300 درهم' },
@@ -3217,7 +3217,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'أداء العتاد لم يتغيّر منذ قياسات أوائل 2026 — الأسعار فقط هي التي تغيّرت.',
         columns: ['النموذج + التكميم', 'اقتصادي (~10,500 درهم)', 'موصى به (~20,600 درهم)', 'احترافي (~34,000 درهم)'],
         rows: [
-          { 'النموذج + التكميم': 'Llama 3.3 8B Q4', 'اقتصادي (~10,500 درهم)': '55–70 رمز/ثانية', 'موصى به (~20,600 درهم)': '105–125 رمز/ثانية', 'احترافي (~34,000 درهم)': '120–140 رمز/ثانية' },
+          { 'النموذج + التكميم': 'Llama 3.1 8B Q4', 'اقتصادي (~10,500 درهم)': '55–70 رمز/ثانية', 'موصى به (~20,600 درهم)': '105–125 رمز/ثانية', 'احترافي (~34,000 درهم)': '120–140 رمز/ثانية' },
           { 'النموذج + التكميم': 'Qwen3 14B Q8', 'اقتصادي (~10,500 درهم)': '20–28 رمز/ثانية', 'موصى به (~20,600 درهم)': '48–60 رمز/ثانية', 'احترافي (~34,000 درهم)': '55–70 رمز/ثانية' },
           { 'النموذج + التكميم': 'Qwen3 32B Q4', 'اقتصادي (~10,500 درهم)': '12–18 رمز/ثانية', 'موصى به (~20,600 درهم)': '28–38 رمز/ثانية', 'احترافي (~34,000 درهم)': '40–55 رمز/ثانية' },
           { 'النموذج + التكميم': 'Llama 3.3 70B Q4', 'اقتصادي (~10,500 درهم)': '5–8 رمز/ثانية (CPU)', 'موصى به (~20,600 درهم)': '10–15 رمز/ثانية (CPU)', 'احترافي (~34,000 درهم)': '25–40 رمز/ثانية (GPU)' },

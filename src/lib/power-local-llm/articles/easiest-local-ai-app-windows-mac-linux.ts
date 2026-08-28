@@ -969,8 +969,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**Matériel bas de gamme (8 GB RAM, pas de GPU) :** Phi-4 Mini (3B, ~3 GB). Le plus rapide sur appareils faibles. Comprend bien le code et les questions techniques. Légèrement moins bon pour la conversation créative.',
           '**Matériel moyen (16 GB RAM, GPU optionnel) :** Llama 3.2 3B ou Llama 3.2 8B. Plus polyvalent que Phi-4. Bon équilibre entre vitesse et qualité. Recommandé pour la plupart des utilisateurs.',
-          '**Apple Silicon (M3, M4, M5) :** Qwen3 8B ou Llama 3.3 8B. Apple Silicon excelle avec modèles 8B grâce au contrôle de la mémoire unifiée. Qualité et vitesse supérieures.',
-          '**NVIDIA RTX 3060 ou meilleur :** Llama 3.3 8B, Mistral Small ou Qwen3 8B. Le GPU accélère ces modèles 5–10x. Bonne qualité et vitesse combinées.',
+          '**Apple Silicon (M3, M4, M5) :** Qwen3 8B ou Llama 3.1 8B. Apple Silicon excelle avec modèles 8B grâce au contrôle de la mémoire unifiée. Qualité et vitesse supérieures.',
+          '**NVIDIA RTX 3060 ou meilleur :** Llama 3.1 8B, Mistral Small ou Qwen3 8B. Le GPU accélère ces modèles 5–10x. Bonne qualité et vitesse combinées.',
           '**RTX 4090 ou A100 :** Llama 3.3 70B ou Mixtral 8x22B. Les plus grands modèles disponibles pour local. Qualité proche du cloud. Mais lent (5–10 tokens/sec).',
         ],
         image: '/images/easiest-local-ai-app-first-model-guide-fr.svg',
@@ -1377,8 +1377,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**低スペックハードウェア（8 GB RAM、GPU無し）：** Phi-4 Mini（3B、約3 GB）。弱いデバイスで最速。コードと技術的質問をよく理解。やや創作的会話に劣る。',
           '**ミッドレンジハードウェア（16 GB RAM、オプションGPU）：** Llama 3.2 3BまたはLlama 3.2 8B。Phi-4よりも多目的。速度と品質の良いバランス。大多数のユーザーで推奨。',
-          '**Apple Silicon（M3、M4、M5）：** Qwen3 8BまたはLlama 3.3 8B。Apple Siliconは統一メモリ制御で8Bモデルに優秀。優れた品質と速度。',
-          '**NVIDIA RTX 3060またはそれ以上：** Llama 3.3 8B、Mistral Small、またはQwen3 8B。GPUはこれら8Bモデルを5–10倍高速化。良い品質と速度の組み合わせ。',
+          '**Apple Silicon（M3、M4、M5）：** Qwen3 8BまたはLlama 3.1 8B。Apple Siliconは統一メモリ制御で8Bモデルに優秀。優れた品質と速度。',
+          '**NVIDIA RTX 3060またはそれ以上：** Llama 3.1 8B、Mistral Small、またはQwen3 8B。GPUはこれら8Bモデルを5–10倍高速化。良い品質と速度の組み合わせ。',
           '**RTX 4090またはA100：** Llama 3.3 70BまたはMixtral 8x22B。最大利用可能モデル。クラウドに近い品質。しかし遅い（5–10 tokens/sec）。',
         ],
         image: '/images/easiest-local-ai-app-first-model-guide-ja.svg',
@@ -1789,8 +1789,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**低端硬件（8 GB RAM、无GPU）：** Phi-4 Mini（3B、约3 GB）。在弱设备上最快。很好地理解代码和技术问题。略少创意会话。',
           '**中端硬件（16 GB RAM、可选GPU）：** Llama 3.2 3B或Llama 3.2 8B。比Phi-4更多功能。速度和质量的良好平衡。为大多数用户推荐。',
-          '**Apple Silicon（M3、M4、M5）：** Qwen3 8B或Llama 3.3 8B。Apple Silicon在统一内存控制中对8B模型表现出色。优质和速度结合。',
-          '**NVIDIA RTX 3060或更高版本：** Llama 3.3 8B、Mistral Small或Qwen3 8B。GPU将这些8B模型加速5–10倍。速度和质量的良好组合。',
+          '**Apple Silicon（M3、M4、M5）：** Qwen3 8B或Llama 3.1 8B。Apple Silicon在统一内存控制中对8B模型表现出色。优质和速度结合。',
+          '**NVIDIA RTX 3060或更高版本：** Llama 3.1 8B、Mistral Small或Qwen3 8B。GPU将这些8B模型加速5–10倍。速度和质量的良好组合。',
           '**RTX 4090或A100：** Llama 3.3 70B或Mixtral 8x22B。最大可用模型。接近云端质量。但速度慢（5–10 tokens/sec）。',
         ],
         image: '/images/easiest-local-ai-app-first-model-guide-zh.svg',

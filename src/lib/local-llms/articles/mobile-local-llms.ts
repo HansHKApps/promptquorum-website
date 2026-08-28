@@ -73,8 +73,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'What Actually Works on Mobile (2026)',
           content: [
             '**iPhone (A18/A18 Pro):** Runs 1–3B models only. Llama 3.2 1B and Phi-4 Mini 3.8B are the practical choices. Speed: 3–4 tok/sec. Good for quick Q&A, short summaries, offline dictionary-style lookups. Not usable for long conversations or code generation.',
-            '**Android (Snapdragon X Elite):** Runs 3–7B models. Llama 3.2 7B and Mistral Small work at 5 tok/sec. Galaxy S25 Ultra and flagship Snapdragon devices are the best Android options. Practical for chat, summarization, and offline assistants.',
-            '**iPad Pro (M4):** The only mobile device where local LLMs feel usable. Runs 7–13B models at 15 tok/sec with 16 GB unified memory. Handles Llama 3.2 7B comfortably and can run 13B models for quality close to GPT-4o mini level.',
+            '**Android (Snapdragon X Elite):** Runs 3–7B models. Llama 3.2 3B and Mistral Small work at 5 tok/sec. Galaxy S25 Ultra and flagship Snapdragon devices are the best Android options. Practical for chat, summarization, and offline assistants.',
+            '**iPad Pro (M4):** The only mobile device where local LLMs feel usable. Runs 7–13B models at 15 tok/sec with 16 GB unified memory. Handles Llama 3.2 3B comfortably and can run 13B models for quality close to GPT-4o mini level.',
             '**What does NOT work:** 70B models on any mobile device. 7B models on iPhone (crashes). Any model on phones with under 8 GB RAM. Real-time voice assistants (latency too high).',
           ],
         },
@@ -129,7 +129,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'MLC LLM vs Ollama: Android On-Device Inference Compared',
           content: [
             '**MLC LLM wins for Android on-device inference. Ollama is not a native Android solution.** Ollama runs as a server on desktop/macOS/Linux — you access it from Android via a client app over Wi-Fi. MLC LLM (via MLC Chat app) compiles models to native device code using TVM, making it the only major framework with true on-device Android inference where the model runs entirely on your phone without any network connection.',
-            '**Why MLC LLM outperforms Ollama on Android:** MLC Chat uses TVM (Tensor Virtual Machine) to compile models into Vulkan or OpenCL shaders optimized for each Android GPU chipset. Ollama uses llama.cpp, designed for CPU/GPU inference on desktop — no Vulkan optimization, no Android app packaging. The result: MLC Chat delivers 5 tok/sec on Llama 3.2 7B on Snapdragon X Elite, while Ollama performance on Android depends entirely on the desktop server it connects to over your local network.',
+            '**Why MLC LLM outperforms Ollama on Android:** MLC Chat uses TVM (Tensor Virtual Machine) to compile models into Vulkan or OpenCL shaders optimized for each Android GPU chipset. Ollama uses llama.cpp, designed for CPU/GPU inference on desktop — no Vulkan optimization, no Android app packaging. The result: MLC Chat delivers 5 tok/sec on Llama 3.2 3B on Snapdragon X Elite, while Ollama performance on Android depends entirely on the desktop server it connects to over your local network.',
           ],
           columns: ['Factor', 'MLC LLM (MLC Chat)', 'Ollama on Android'],
           rows: [
@@ -247,7 +247,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'How does iPad compare to iPhone for local LLMs?',
-              a: 'iPad Pro M4 significantly outperforms iPhone for local LLMs: 15 tokens/sec on Llama 3.2 7B vs 3–4 tokens/sec on iPhone 16 Pro. The iPad M4 chip also handles 13B models comfortably (16 GB unified memory), which iPhone cannot run at all. For mobile AI work, iPad is the recommended Apple device.',
+              a: 'iPad Pro M4 significantly outperforms iPhone for local LLMs: 15 tokens/sec on Llama 3.2 3B vs 3–4 tokens/sec on iPhone 16 Pro. The iPad M4 chip also handles 13B models comfortably (16 GB unified memory), which iPhone cannot run at all. For mobile AI work, iPad is the recommended Apple device.',
             },
             {
               q: 'What is the best app for running LLMs on mobile?',
@@ -526,8 +526,8 @@ schema: {
           title: 'Was auf Mobilgeräten wirklich funktioniert (2026)',
           content: [
             '**iPhone (A18/A18 Pro):** Führt nur 1–3B-Modelle aus. Llama 3.2 1B und Phi-4 Mini 3.8B sind die praktischen Optionen. Geschwindigkeit: 3–4 Tok/Sek. Gut für schnelle Frage-Antwort, kurze Zusammenfassungen, Offline-Nachschlagewerke. Nicht nutzbar für lange Gespräche oder Codegenerierung.',
-            '**Android (Snapdragon X Elite):** Führt 3–7B-Modelle aus. Llama 3.2 7B und Mistral Small funktionieren mit 5 Tok/Sek. Galaxy S25 Ultra und Flaggschiff-Snapdragon-Geräte sind die besten Android-Optionen. Praktisch für Chat, Zusammenfassung und Offline-Assistenten.',
-            '**iPad Pro (M4):** Das einzige Mobilgerät, auf dem lokale LLMs sich nutzbar anfühlen. Führt 7–13B-Modelle mit 15 Tok/Sek bei 16 GB Unified Memory aus. Bewältigt Llama 3.2 7B komfortabel und kann 13B-Modelle für Qualität nahe GPT-4o mini-Niveau ausführen.',
+            '**Android (Snapdragon X Elite):** Führt 3–7B-Modelle aus. Llama 3.2 3B und Mistral Small funktionieren mit 5 Tok/Sek. Galaxy S25 Ultra und Flaggschiff-Snapdragon-Geräte sind die besten Android-Optionen. Praktisch für Chat, Zusammenfassung und Offline-Assistenten.',
+            '**iPad Pro (M4):** Das einzige Mobilgerät, auf dem lokale LLMs sich nutzbar anfühlen. Führt 7–13B-Modelle mit 15 Tok/Sek bei 16 GB Unified Memory aus. Bewältigt Llama 3.2 3B komfortabel und kann 13B-Modelle für Qualität nahe GPT-4o mini-Niveau ausführen.',
             '**Was NICHT funktioniert:** 70B-Modelle auf jedem Mobilgerät. 7B-Modelle auf iPhone (Abstürze). Jedes Modell auf Telefonen mit unter 8 GB RAM. Echtzeit-Sprachassistenten (Latenz zu hoch).',
           ],
         },
@@ -582,7 +582,7 @@ schema: {
           title: 'MLC LLM vs. Ollama: Android On-Device-Inferenz im Vergleich',
           content: [
             '**MLC LLM gewinnt bei Android On-Device-Inferenz. Ollama ist keine native Android-Lösung.** Ollama läuft als Server auf Desktop/macOS/Linux — auf Android verbindet man sich über WLAN mit einem Client-App. MLC LLM (via MLC Chat) kompiliert Modelle mit TVM zu nativem Gerätecode und ist damit das einzige große Framework mit echter On-Device-Inferenz auf Android — das Modell läuft vollständig auf Ihrem Telefon ohne Netzwerkverbindung.',
-            '**Warum MLC LLM Ollama auf Android übertrifft:** MLC Chat nutzt TVM (Tensor Virtual Machine), um Modelle zu Vulkan- oder OpenCL-Shadern zu kompilieren, die für jeden Android-GPU-Chipsatz optimiert sind. Ollama verwendet llama.cpp, das für CPU/GPU-Inferenz auf dem Desktop konzipiert ist — ohne Vulkan-Optimierung, ohne Android-App-Paketierung. Ergebnis: MLC Chat liefert 5 Tok/Sek bei Llama 3.2 7B auf Snapdragon X Elite, während Ollamasleistung auf Android vom Desktop-Server abhängt.',
+            '**Warum MLC LLM Ollama auf Android übertrifft:** MLC Chat nutzt TVM (Tensor Virtual Machine), um Modelle zu Vulkan- oder OpenCL-Shadern zu kompilieren, die für jeden Android-GPU-Chipsatz optimiert sind. Ollama verwendet llama.cpp, das für CPU/GPU-Inferenz auf dem Desktop konzipiert ist — ohne Vulkan-Optimierung, ohne Android-App-Paketierung. Ergebnis: MLC Chat liefert 5 Tok/Sek bei Llama 3.2 3B auf Snapdragon X Elite, während Ollamasleistung auf Android vom Desktop-Server abhängt.',
           ],
           columns: ['Faktor', 'MLC LLM (MLC Chat)', 'Ollama auf Android'],
           rows: [
@@ -920,7 +920,7 @@ schema: {
           title: 'Ce qui fonctionne vraiment sur mobile (2026)',
           content: [
             '**iPhone (A18/A18 Pro) :** Exécute uniquement les modèles 1–3B. Llama 3.2 1B et Phi-4 Mini 3.8B sont les choix pratiques. Vitesse : 3–4 tok/sec. Bon pour les Q&R rapides, résumés courts, consultations hors ligne. Pas utilisable pour les longues conversations ou la génération de code.',
-            '**Android (Snapdragon X Elite) :** Exécute les modèles 3–7B. Llama 3.2 7B et Mistral Small fonctionnent à 5 tok/sec. Galaxy S25 Ultra et les appareils Snapdragon haut de gamme sont les meilleures options Android.',
+            '**Android (Snapdragon X Elite) :** Exécute les modèles 3–7B. Llama 3.2 3B et Mistral Small fonctionnent à 5 tok/sec. Galaxy S25 Ultra et les appareils Snapdragon haut de gamme sont les meilleures options Android.',
             '**iPad Pro (M4) :** Le seul appareil mobile où les LLM locaux sont vraiment utilisables. Exécute les modèles 7–13B à 15 tok/sec avec 16 Go de mémoire unifiée.',
             '**Ce qui NE fonctionne PAS :** Les modèles 70B sur aucun mobile. Les 7B sur iPhone (crashs). Tout modèle sur les téléphones avec moins de 8 Go de RAM.',
           ],
@@ -976,7 +976,7 @@ schema: {
           title: 'MLC LLM vs Ollama : comparaison de l\'inférence Android sur l\'appareil',
           content: [
             '**MLC LLM l\'emporte pour l\'inférence Android sur l\'appareil. Ollama n\'est pas une solution Android native.** Ollama fonctionne comme un serveur sur desktop/macOS/Linux — depuis Android, vous y accédez via une app cliente en Wi-Fi. MLC LLM (via l\'app MLC Chat) compile les modèles en code natif avec TVM, en faisant le seul grand framework offrant une vraie inférence Android sur l\'appareil — le modèle tourne entièrement sur votre téléphone sans connexion réseau.',
-            '**Pourquoi MLC LLM surpasse Ollama sur Android :** MLC Chat utilise TVM (Tensor Virtual Machine) pour compiler les modèles en shaders Vulkan ou OpenCL optimisés pour chaque chipset GPU Android. Ollama utilise llama.cpp, conçu pour l\'inférence CPU/GPU sur desktop — sans optimisation Vulkan, sans packaging Android. Résultat : MLC Chat atteint 5 tok/sec sur Llama 3.2 7B sur Snapdragon X Elite, tandis que les performances d\'Ollama sur Android dépendent du serveur desktop.',
+            '**Pourquoi MLC LLM surpasse Ollama sur Android :** MLC Chat utilise TVM (Tensor Virtual Machine) pour compiler les modèles en shaders Vulkan ou OpenCL optimisés pour chaque chipset GPU Android. Ollama utilise llama.cpp, conçu pour l\'inférence CPU/GPU sur desktop — sans optimisation Vulkan, sans packaging Android. Résultat : MLC Chat atteint 5 tok/sec sur Llama 3.2 3B sur Snapdragon X Elite, tandis que les performances d\'Ollama sur Android dépendent du serveur desktop.',
           ],
           columns: ['Critère', 'MLC LLM (MLC Chat)', 'Ollama sur Android'],
           rows: [
@@ -1304,7 +1304,7 @@ schema: {
           title: 'モバイルで本当に使えるもの（2026年）',
           content: [
             '**iPhone (A18/A18 Pro)：** 1–3Bモデルのみ実行可能。Llama 3.2 1BとPhi-4 Mini 3.8Bが実用的な選択肢です。速度：3–4トークン/秒。簡単なQ&A、短い要約に適しています。長い会話やコード生成には不向き。',
-            '**Android (Snapdragon X Elite)：** 3–7Bモデルを実行。Llama 3.2 7BとMistral Smallが5トークン/秒で動作。Galaxy S25 Ultraが最良のAndroid選択肢。',
+            '**Android (Snapdragon X Elite)：** 3–7Bモデルを実行。Llama 3.2 3BとMistral Smallが5トークン/秒で動作。Galaxy S25 Ultraが最良のAndroid選択肢。',
             '**iPad Pro (M4)：** ローカルLLMが実用的に感じられる唯一のモバイルデバイス。16 GBユニファイドメモリで7–13Bモデルを15トークン/秒で実行。',
             '**動作しないもの：** あらゆるモバイルデバイスでの70Bモデル。iPhoneでの7Bモデル（クラッシュ）。8 GB RAM未満の端末。',
           ],
@@ -1360,7 +1360,7 @@ schema: {
           title: 'MLC LLM vs Ollama：Android オンデバイス推論の比較',
           content: [
             '**Android オンデバイス推論では MLC LLM が優位です。Ollama はネイティブ Android ソリューションではありません。** Ollama はデスクトップ/macOS/Linux 上でサーバーとして動作し、Android からは Wi-Fi 経由でクライアントアプリを通じてアクセスします。MLC LLM（MLC Chat アプリ経由）は TVM を使用してモデルをネイティブデバイスコードにコンパイルします。ネットワーク接続なしでモデルが完全にスマートフォン上で動作する、唯一の主要フレームワークです。',
-            '**Android で MLC LLM が Ollama を上回る理由：** MLC Chat は TVM（Tensor Virtual Machine）を使用して、各 Android GPU チップセット向けに最適化された Vulkan または OpenCL シェーダーにモデルをコンパイルします。Ollama は llama.cpp を使用し、デスクトップの CPU/GPU 推論向けに設計されています。Vulkan 最適化も Android パッケージングもありません。結果：MLC Chat は Snapdragon X Elite で Llama 3.2 7B を 5 トークン/秒で実行できますが、Android での Ollama のパフォーマンスはデスクトップサーバーに依存します。',
+            '**Android で MLC LLM が Ollama を上回る理由：** MLC Chat は TVM（Tensor Virtual Machine）を使用して、各 Android GPU チップセット向けに最適化された Vulkan または OpenCL シェーダーにモデルをコンパイルします。Ollama は llama.cpp を使用し、デスクトップの CPU/GPU 推論向けに設計されています。Vulkan 最適化も Android パッケージングもありません。結果：MLC Chat は Snapdragon X Elite で Llama 3.2 3B を 5 トークン/秒で実行できますが、Android での Ollama のパフォーマンスはデスクトップサーバーに依存します。',
           ],
           columns: ['比較項目', 'MLC LLM (MLC Chat)', 'Ollama（Android）'],
           rows: [
@@ -1688,7 +1688,7 @@ schema: {
           title: '移动端真正可用的方案（2026年）',
           content: [
             '**iPhone (A18/A18 Pro)：** 仅能运行1–3B模型。Llama 3.2 1B和Phi-4 Mini 3.8B是实用选择。速度：3–4令牌/秒。适合快速问答、短摘要、离线查询。不适合长对话或代码生成。',
-            '**Android (Snapdragon X Elite)：** 运行3–7B模型。Llama 3.2 7B和Mistral Small以5令牌/秒运行。Galaxy S25 Ultra和旗舰Snapdragon设备是最佳Android选择。',
+            '**Android (Snapdragon X Elite)：** 运行3–7B模型。Llama 3.2 3B和Mistral Small以5令牌/秒运行。Galaxy S25 Ultra和旗舰Snapdragon设备是最佳Android选择。',
             '**iPad Pro (M4)：** 唯一让本地LLM感觉可用的移动设备。16 GB统一内存以15令牌/秒运行7–13B模型。',
             '**不可用的方案：** 任何移动设备上的70B模型。iPhone上的7B模型（会崩溃）。8 GB RAM以下的手机。实时语音助手（延迟太高）。',
           ],
@@ -1744,7 +1744,7 @@ schema: {
           title: 'MLC LLM vs Ollama：Android 本地推理对比',
           content: [
             '**Android 本地推理方面，MLC LLM 更胜一筹。Ollama 并非原生 Android 解决方案。** Ollama 作为服务器运行在桌面端/macOS/Linux 上，Android 通过 Wi-Fi 连接客户端应用访问。MLC LLM（通过 MLC Chat 应用）使用 TVM 将模型编译为原生设备代码，是唯一一个在 Android 上实现真正本地推理的主流框架——模型完全在您的手机上运行，无需网络连接。',
-            '**MLC LLM 在 Android 上优于 Ollama 的原因：** MLC Chat 使用 TVM（张量虚拟机）将模型编译为针对各 Android GPU 芯片组优化的 Vulkan 或 OpenCL 着色器。Ollama 使用 llama.cpp，专为桌面 CPU/GPU 推理设计——没有 Vulkan 优化，也没有 Android 打包。结果：MLC Chat 在 Snapdragon X Elite 上以 5 词元/秒运行 Llama 3.2 7B，而 Ollama 在 Android 上的性能完全取决于所连接的桌面服务器。',
+            '**MLC LLM 在 Android 上优于 Ollama 的原因：** MLC Chat 使用 TVM（张量虚拟机）将模型编译为针对各 Android GPU 芯片组优化的 Vulkan 或 OpenCL 着色器。Ollama 使用 llama.cpp，专为桌面 CPU/GPU 推理设计——没有 Vulkan 优化，也没有 Android 打包。结果：MLC Chat 在 Snapdragon X Elite 上以 5 词元/秒运行 Llama 3.2 3B，而 Ollama 在 Android 上的性能完全取决于所连接的桌面服务器。',
           ],
           columns: ['比较项目', 'MLC LLM (MLC Chat)', 'Ollama（Android）'],
           rows: [
@@ -2072,8 +2072,8 @@ schema: {
           title: 'Qué funciona realmente en móvil (2026)',
           content: [
             '**iPhone (A18/A18 Pro):** Solo ejecuta modelos 1–3B. Llama 3.2 1B y Phi-4 Mini 3.8B son las opciones prácticas. Velocidad: 3–4 tok/seg. Útil para preguntas rápidas, resúmenes cortos y consultas sin conexión. No es adecuado para conversaciones largas ni generación de código.',
-            '**Android (Snapdragon X Elite):** Ejecuta modelos 3–7B. Llama 3.2 7B y Mistral Small funcionan a 5 tok/seg. Galaxy S25 Ultra y los dispositivos Snapdragon de gama alta son las mejores opciones Android. Práctico para chat, resúmenes y asistentes sin conexión.',
-            '**iPad Pro (M4):** El único dispositivo móvil donde los LLMs locales se sienten realmente utilizables. Ejecuta modelos 7–13B a 15 tok/seg con 16 GB de memoria unificada. Maneja Llama 3.2 7B con comodidad y puede ejecutar modelos 13B con calidad cercana a GPT-4o mini.',
+            '**Android (Snapdragon X Elite):** Ejecuta modelos 3–7B. Llama 3.2 3B y Mistral Small funcionan a 5 tok/seg. Galaxy S25 Ultra y los dispositivos Snapdragon de gama alta son las mejores opciones Android. Práctico para chat, resúmenes y asistentes sin conexión.',
+            '**iPad Pro (M4):** El único dispositivo móvil donde los LLMs locales se sienten realmente utilizables. Ejecuta modelos 7–13B a 15 tok/seg con 16 GB de memoria unificada. Maneja Llama 3.2 3B con comodidad y puede ejecutar modelos 13B con calidad cercana a GPT-4o mini.',
             '**Lo que NO funciona:** Modelos 70B en ningún dispositivo móvil. Modelos 7B en iPhone (causa cierres inesperados). Cualquier modelo en teléfonos con menos de 8 GB de RAM. Asistentes de voz en tiempo real (latencia demasiado alta).',
           ],
         },
@@ -2128,7 +2128,7 @@ schema: {
           title: 'MLC LLM vs Ollama: inferencia local en Android comparada',
           content: [
             '**MLC LLM gana en inferencia local en Android. Ollama no es una solución Android nativa.** Ollama funciona como servidor en desktop/macOS/Linux — desde Android accedes mediante una app cliente por Wi-Fi. MLC LLM (a través de MLC Chat) compila modelos a código nativo del dispositivo usando TVM, siendo el único framework importante con inferencia genuina en Android donde el modelo corre completamente en tu teléfono sin conexión de red.',
-            '**Por qué MLC LLM supera a Ollama en Android:** MLC Chat usa TVM (Tensor Virtual Machine) para compilar modelos a shaders Vulkan u OpenCL optimizados para cada chipset GPU Android. Ollama usa llama.cpp, diseñado para inferencia CPU/GPU en desktop — sin optimización Vulkan, sin empaquetado Android. Resultado: MLC Chat alcanza 5 tok/seg en Llama 3.2 7B en Snapdragon X Elite, mientras que el rendimiento de Ollama en Android depende del servidor desktop al que se conecta.',
+            '**Por qué MLC LLM supera a Ollama en Android:** MLC Chat usa TVM (Tensor Virtual Machine) para compilar modelos a shaders Vulkan u OpenCL optimizados para cada chipset GPU Android. Ollama usa llama.cpp, diseñado para inferencia CPU/GPU en desktop — sin optimización Vulkan, sin empaquetado Android. Resultado: MLC Chat alcanza 5 tok/seg en Llama 3.2 3B en Snapdragon X Elite, mientras que el rendimiento de Ollama en Android depende del servidor desktop al que se conecta.',
           ],
           columns: ['Factor', 'MLC LLM (MLC Chat)', 'Ollama en Android'],
           rows: [
@@ -2241,7 +2241,7 @@ schema: {
             },
             {
               q: '¿Cómo se compara el iPad con el iPhone para LLMs locales?',
-              a: 'iPad Pro M4 supera significativamente al iPhone para LLMs locales: 15 tokens/seg en Llama 3.2 7B vs 3–4 tokens/seg en iPhone 16 Pro. El chip M4 del iPad también maneja modelos 13B con comodidad (16 GB de memoria unificada), algo que el iPhone no puede ejecutar en absoluto. Para trabajo de IA móvil, el iPad es el dispositivo Apple recomendado.',
+              a: 'iPad Pro M4 supera significativamente al iPhone para LLMs locales: 15 tokens/seg en Llama 3.2 3B vs 3–4 tokens/seg en iPhone 16 Pro. El chip M4 del iPad también maneja modelos 13B con comodidad (16 GB de memoria unificada), algo que el iPhone no puede ejecutar en absoluto. Para trabajo de IA móvil, el iPad es el dispositivo Apple recomendado.',
             },
             {
               q: '¿Cuál es la mejor app para ejecutar LLMs en móvil?',
@@ -2458,8 +2458,8 @@ schema: {
           title: 'ما الذي يعمل فعلًا على الهاتف (2026)',
           content: [
             '**iPhone (A18/A18 Pro):** يشغّل نماذج 1–3B فقط. Llama 3.2 1B وPhi-4 Mini 3.8B هما الخياران العمليان. السرعة: 3–4 tok/ث. مفيد للأسئلة السريعة والملخصات القصيرة والاستعلامات دون اتصال. غير مناسب للمحادثات الطويلة أو توليد الشيفرة.',
-            '**Android (Snapdragon X Elite):** يشغّل نماذج 3–7B. Llama 3.2 7B وMistral Small يعملان بسرعة 5 tok/ث. Galaxy S25 Ultra وأجهزة Snapdragon المتطورة هي أفضل خيارات Android. عملي للمحادثة والملخصات والمساعدين دون اتصال.',
-            '**iPad Pro (M4):** الجهاز المحمول الوحيد حيث تبدو نماذج LLM المحلية قابلة للاستخدام فعلًا. يشغّل نماذج 7–13B بسرعة 15 tok/ث مع 16 GB ذاكرة موحدة. يتعامل مع Llama 3.2 7B بأريحية ويمكنه تشغيل نماذج 13B بجودة قريبة من GPT-4o mini.',
+            '**Android (Snapdragon X Elite):** يشغّل نماذج 3–7B. Llama 3.2 3B وMistral Small يعملان بسرعة 5 tok/ث. Galaxy S25 Ultra وأجهزة Snapdragon المتطورة هي أفضل خيارات Android. عملي للمحادثة والملخصات والمساعدين دون اتصال.',
+            '**iPad Pro (M4):** الجهاز المحمول الوحيد حيث تبدو نماذج LLM المحلية قابلة للاستخدام فعلًا. يشغّل نماذج 7–13B بسرعة 15 tok/ث مع 16 GB ذاكرة موحدة. يتعامل مع Llama 3.2 3B بأريحية ويمكنه تشغيل نماذج 13B بجودة قريبة من GPT-4o mini.',
             '**ما الذي لا يعمل:** نماذج 70B على أي جهاز محمول. نماذج 7B على iPhone (تسبب إغلاقات غير متوقعة). أي نموذج على هواتف بأقل من 8 GB RAM. مساعدون صوتيون فوريون (زمن الاستجابة عالٍ جدًا).',
           ],
         },
@@ -2514,7 +2514,7 @@ schema: {
           title: 'MLC LLM مقابل Ollama: مقارنة الاستدلال المحلي على أندرويد',
           content: [
             '**يتفوق MLC LLM في الاستدلال المحلي على أندرويد. Ollama ليس حلاً أصلياً لأندرويد.** يعمل Ollama كخادم على سطح المكتب/macOS/Linux — تصل إليه من أندرويد عبر تطبيق عميل بشبكة Wi-Fi. يقوم MLC LLM (عبر تطبيق MLC Chat) بتجميع النماذج إلى كود أصلي للجهاز باستخدام TVM، مما يجعله الإطار الرئيسي الوحيد الذي يوفر استدلالاً حقيقياً على جهاز أندرويد — يعمل النموذج بالكامل على هاتفك دون أي اتصال بالشبكة.',
-            '**لماذا يتفوق MLC LLM على Ollama في أندرويد:** يستخدم MLC Chat نظام TVM (الآلة الافتراضية الموترية) لتجميع النماذج إلى شيدرات Vulkan أو OpenCL محسّنة لكل شريحة GPU أندرويد. يستخدم Ollama مكتبة llama.cpp المصممة للاستدلال بالمعالج/وحدة الرسومات على سطح المكتب — دون تحسين Vulkan أو حزم أندرويد. النتيجة: يحقق MLC Chat سرعة 5 رمز/ثانية على نموذج Llama 3.2 7B في Snapdragon X Elite، بينما يعتمد أداء Ollama على أندرويد على خادم سطح المكتب المتصل به.',
+            '**لماذا يتفوق MLC LLM على Ollama في أندرويد:** يستخدم MLC Chat نظام TVM (الآلة الافتراضية الموترية) لتجميع النماذج إلى شيدرات Vulkan أو OpenCL محسّنة لكل شريحة GPU أندرويد. يستخدم Ollama مكتبة llama.cpp المصممة للاستدلال بالمعالج/وحدة الرسومات على سطح المكتب — دون تحسين Vulkan أو حزم أندرويد. النتيجة: يحقق MLC Chat سرعة 5 رمز/ثانية على نموذج Llama 3.2 3B في Snapdragon X Elite، بينما يعتمد أداء Ollama على أندرويد على خادم سطح المكتب المتصل به.',
           ],
           columns: ['العامل', 'MLC LLM (MLC Chat)', 'Ollama على أندرويد'],
           rows: [
@@ -2627,7 +2627,7 @@ schema: {
             },
             {
               q: 'كيف يُقارَن iPad بـ iPhone لنماذج LLM المحلية؟',
-              a: 'iPad Pro M4 يتفوق بشكل ملحوظ على iPhone لنماذج LLM المحلية: 15 tokens/ث على Llama 3.2 7B مقابل 3–4 tokens/ث على iPhone 16 Pro. شريحة M4 في iPad تتعامل أيضًا مع نماذج 13B بأريحية (16 GB ذاكرة موحدة)، وهو ما لا يمكن لـ iPhone تشغيله إطلاقًا. لعمل الذكاء الاصطناعي المحمول، iPad هو جهاز Apple الموصى به.',
+              a: 'iPad Pro M4 يتفوق بشكل ملحوظ على iPhone لنماذج LLM المحلية: 15 tokens/ث على Llama 3.2 3B مقابل 3–4 tokens/ث على iPhone 16 Pro. شريحة M4 في iPad تتعامل أيضًا مع نماذج 13B بأريحية (16 GB ذاكرة موحدة)، وهو ما لا يمكن لـ iPhone تشغيله إطلاقًا. لعمل الذكاء الاصطناعي المحمول، iPad هو جهاز Apple الموصى به.',
             },
             {
               q: 'ما أفضل تطبيق لتشغيل نماذج LLM على الهاتف؟',
@@ -2844,7 +2844,7 @@ schema: {
           title: 'O que realmente funciona no celular (2026)',
           content: [
             '**iPhone (A18/A18 Pro):** Apenas executa modelos 1–3B. Llama 3.2 1B e Phi-4 Mini 3.8B são as opções práticas. Velocidade: 3–4 tok/s. Útil para perguntas rápidas, resumos curtos e consultas offline. Não é adequado para conversas longas nem geração de código.',
-            '**Android (Snapdragon X Elite):** Executa modelos 3–7B. Llama 3.2 7B e Mistral Small funcionam a 5 tok/s. Galaxy S25 Ultra e dispositivos Snapdragon topo de linha são as melhores opções Android. Prático para chat, resumos e assistentes offline.',
+            '**Android (Snapdragon X Elite):** Executa modelos 3–7B. Llama 3.2 3B e Mistral Small funcionam a 5 tok/s. Galaxy S25 Ultra e dispositivos Snapdragon topo de linha são as melhores opções Android. Prático para chat, resumos e assistentes offline.',
             '**iPad Pro M4 (16 GB RAM unificada):** O melhor dispositivo móvel para LLMs. Executa modelos 13B a 15 tok/s — velocidade utilizável para conversas reais. Modelos 7B rodam confortavelmente.',
           ],
         },
@@ -2877,7 +2877,7 @@ schema: {
           title: 'MLC LLM vs Ollama: comparação de inferência local no Android',
           content: [
             '**O MLC LLM vence na inferência local no Android. O Ollama não é uma solução Android nativa.** O Ollama funciona como servidor no desktop/macOS/Linux — você o acessa pelo Android via app cliente por Wi-Fi. O MLC LLM (via MLC Chat) compila modelos para código nativo do dispositivo usando TVM, sendo o único framework importante com inferência genuína no Android — o modelo roda completamente no seu celular sem conexão de rede.',
-            '**Por que o MLC LLM supera o Ollama no Android:** O MLC Chat usa TVM (Tensor Virtual Machine) para compilar modelos em shaders Vulkan ou OpenCL otimizados para cada chipset GPU Android. O Ollama usa llama.cpp, projetado para inferência CPU/GPU no desktop — sem otimização Vulkan, sem empacotamento Android. Resultado: o MLC Chat atinge 5 tok/s no Llama 3.2 7B no Snapdragon X Elite, enquanto o desempenho do Ollama no Android depende do servidor desktop ao qual se conecta.',
+            '**Por que o MLC LLM supera o Ollama no Android:** O MLC Chat usa TVM (Tensor Virtual Machine) para compilar modelos em shaders Vulkan ou OpenCL otimizados para cada chipset GPU Android. O Ollama usa llama.cpp, projetado para inferência CPU/GPU no desktop — sem otimização Vulkan, sem empacotamento Android. Resultado: o MLC Chat atinge 5 tok/s no Llama 3.2 3B no Snapdragon X Elite, enquanto o desempenho do Ollama no Android depende do servidor desktop ao qual se conecta.',
           ],
           columns: ['Fator', 'MLC LLM (MLC Chat)', 'Ollama no Android'],
           rows: [
@@ -3124,8 +3124,8 @@ schema: {
           title: '2026년 모바일에서 실제로 작동하는 것',
           content: [
             '**iPhone (A18/A18 Pro):** 1–3B 모델만 실행 가능합니다. Llama 3.2 1B와 Phi-4 Mini 3.8B가 실용적인 선택입니다. 속도: 3–4 tok/sec. 빠른 Q&A, 짧은 요약, 오프라인 사전식 조회에 적합합니다. 긴 대화나 코드 생성에는 적합하지 않습니다.',
-            '**Android (Snapdragon X Elite):** 3–7B 모델 실행 가능합니다. Llama 3.2 7B와 Mistral Small이 5 tok/sec로 작동합니다. Galaxy S25 Ultra와 플래그십 Snapdragon 기기가 최고의 Android 옵션입니다. 채팅, 요약, 오프라인 어시스턴트에 실용적입니다.',
-            '**iPad Pro (M4):** 로컬 LLM이 실용적으로 느껴지는 유일한 모바일 기기입니다. 16 GB 통합 메모리로 7–13B 모델을 15 tok/sec로 실행합니다. Llama 3.2 7B를 편안하게 처리하고, GPT-4o mini 수준에 근접하는 품질의 13B 모델도 실행 가능합니다.',
+            '**Android (Snapdragon X Elite):** 3–7B 모델 실행 가능합니다. Llama 3.2 3B와 Mistral Small이 5 tok/sec로 작동합니다. Galaxy S25 Ultra와 플래그십 Snapdragon 기기가 최고의 Android 옵션입니다. 채팅, 요약, 오프라인 어시스턴트에 실용적입니다.',
+            '**iPad Pro (M4):** 로컬 LLM이 실용적으로 느껴지는 유일한 모바일 기기입니다. 16 GB 통합 메모리로 7–13B 모델을 15 tok/sec로 실행합니다. Llama 3.2 3B를 편안하게 처리하고, GPT-4o mini 수준에 근접하는 품질의 13B 모델도 실행 가능합니다.',
             '**작동하지 않는 것:** 어떤 모바일 기기에서도 70B 모델은 불가합니다. iPhone에서 7B 모델(충돌 발생). RAM이 8 GB 미만인 스마트폰의 모든 모델. 실시간 음성 어시스턴트(응답 지연이 너무 큼).',
           ],
         },
@@ -3180,7 +3180,7 @@ schema: {
           title: 'MLC LLM vs Ollama: 안드로이드 온디바이스 추론 비교',
           content: [
             '**안드로이드 온디바이스 추론에서는 MLC LLM이 우위입니다. Ollama는 네이티브 안드로이드 솔루션이 아닙니다.** Ollama는 데스크톱/macOS/Linux에서 서버로 실행되며, 안드로이드에서는 Wi-Fi를 통한 클라이언트 앱으로 접근합니다. MLC LLM(MLC Chat 앱 경유)은 TVM을 사용하여 모델을 네이티브 디바이스 코드로 컴파일하며, 네트워크 연결 없이 스마트폰에서 완전히 실행되는 진정한 안드로이드 온디바이스 추론을 제공하는 유일한 주요 프레임워크입니다.',
-            '**MLC LLM이 안드로이드에서 Ollama를 능가하는 이유:** MLC Chat은 TVM(텐서 가상 머신)을 사용하여 각 안드로이드 GPU 칩셋에 최적화된 Vulkan 또는 OpenCL 셰이더로 모델을 컴파일합니다. Ollama는 데스크톱 CPU/GPU 추론을 위해 설계된 llama.cpp를 사용하며 Vulkan 최적화나 안드로이드 앱 패키징이 없습니다. 결과: MLC Chat은 Snapdragon X Elite에서 Llama 3.2 7B를 5 토큰/초로 실행하는 반면, 안드로이드에서 Ollama 성능은 연결된 데스크톱 서버에 의존합니다.',
+            '**MLC LLM이 안드로이드에서 Ollama를 능가하는 이유:** MLC Chat은 TVM(텐서 가상 머신)을 사용하여 각 안드로이드 GPU 칩셋에 최적화된 Vulkan 또는 OpenCL 셰이더로 모델을 컴파일합니다. Ollama는 데스크톱 CPU/GPU 추론을 위해 설계된 llama.cpp를 사용하며 Vulkan 최적화나 안드로이드 앱 패키징이 없습니다. 결과: MLC Chat은 Snapdragon X Elite에서 Llama 3.2 3B를 5 토큰/초로 실행하는 반면, 안드로이드에서 Ollama 성능은 연결된 데스크톱 서버에 의존합니다.',
           ],
           columns: ['항목', 'MLC LLM (MLC Chat)', 'Ollama (안드로이드)'],
           rows: [
@@ -3298,7 +3298,7 @@ schema: {
             },
             {
               q: '로컬 LLM에 있어서 iPad와 iPhone을 비교하면 어떻습니까?',
-              a: 'iPad Pro M4는 로컬 LLM에서 iPhone을 크게 능가합니다: Llama 3.2 7B에서 15 토큰/초 대 iPhone 16 Pro에서 3–4 토큰/초. iPad M4 칩은 또한 13B 모델도 편안하게 처리합니다(16 GB 통합 메모리). 이는 iPhone이 전혀 실행할 수 없는 수준입니다. 모바일 AI 작업에는 iPad가 권장되는 Apple 기기입니다.',
+              a: 'iPad Pro M4는 로컬 LLM에서 iPhone을 크게 능가합니다: Llama 3.2 3B에서 15 토큰/초 대 iPhone 16 Pro에서 3–4 토큰/초. iPad M4 칩은 또한 13B 모델도 편안하게 처리합니다(16 GB 통합 메모리). 이는 iPhone이 전혀 실행할 수 없는 수준입니다. 모바일 AI 작업에는 iPad가 권장되는 Apple 기기입니다.',
             },
             {
               q: '모바일에서 LLM을 실행하기에 가장 좋은 앱은 무엇입니까?',

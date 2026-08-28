@@ -72,7 +72,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           content: 'The hardware requirement depends entirely on which model you want to run and how fast you need responses.',
           rows: [
             { 'Model Size': '1B-3B parameters', 'RAM Required': '4-6 GB', 'Speed (CPU)': '20-60 tok/sec', 'Example Models': 'Llama 3.2 1B, Phi-4 Mini 3.8B' },
-            { 'Model Size': '7B-8B parameters', 'RAM Required': '6-8 GB', 'Speed (CPU)': '10-30 tok/sec', 'Example Models': 'Llama 3.3 8B, Qwen3 8B' },
+            { 'Model Size': '7B-8B parameters', 'RAM Required': '6-8 GB', 'Speed (CPU)': '10-30 tok/sec', 'Example Models': 'Llama 3.1 8B, Qwen3 8B' },
             { 'Model Size': '13B-14B parameters', 'RAM Required': '10-12 GB', 'Speed (CPU)': '5-15 tok/sec', 'Example Models': 'Phi-4 14B, Qwen3 14B' },
             { 'Model Size': '32B-34B parameters', 'RAM Required': '20-24 GB', 'Speed (CPU)': '2-6 tok/sec', 'Example Models': 'Qwen3 32B, DeepSeek-R1 32B' },
             { 'Model Size': '70B+ parameters', 'RAM Required': '40-48 GB', 'Speed (CPU)': '1-3 tok/sec', 'Example Models': 'Llama 3.3 70B, Qwen3 72B' },
@@ -330,7 +330,7 @@ schema: {
           content: 'El requisito de hardware depende completamente del modelo que quieras ejecutar y de la velocidad de respuesta que necesites.',
           rows: [
             { 'Tamaño del modelo': '1B-3B parámetros', 'RAM necesaria': '4-6 GB', 'Velocidad (CPU)': '20-60 tok/seg', 'Modelos de ejemplo': 'Llama 3.2 1B, Phi-4 Mini 3.8B' },
-            { 'Tamaño del modelo': '7B-8B parámetros', 'RAM necesaria': '6-8 GB', 'Velocidad (CPU)': '10-30 tok/seg', 'Modelos de ejemplo': 'Llama 3.3 8B, Qwen3 8B' },
+            { 'Tamaño del modelo': '7B-8B parámetros', 'RAM necesaria': '6-8 GB', 'Velocidad (CPU)': '10-30 tok/seg', 'Modelos de ejemplo': 'Llama 3.1 8B, Qwen3 8B' },
             { 'Tamaño del modelo': '13B-14B parámetros', 'RAM necesaria': '10-12 GB', 'Velocidad (CPU)': '5-15 tok/seg', 'Modelos de ejemplo': 'Phi-4 14B, Qwen3 14B' },
             { 'Tamaño del modelo': '32B-34B parámetros', 'RAM necesaria': '20-24 GB', 'Velocidad (CPU)': '2-6 tok/seg', 'Modelos de ejemplo': 'Qwen3 32B, DeepSeek-R1 32B' },
             { 'Tamaño del modelo': '70B+ parámetros', 'RAM necesaria': '40-48 GB', 'Velocidad (CPU)': '1-3 tok/seg', 'Modelos de ejemplo': 'Llama 3.3 70B, Qwen3 72B' },
@@ -587,7 +587,7 @@ schema: {
           content: 'يعتمد متطلب العتاد كليًا على النموذج الذي تريد تشغيله وسرعة الاستجابة التي تحتاجها.',
           rows: [
             { 'حجم النموذج': '1B-3B معاملات', 'RAM المطلوبة': '4-6 GB', 'السرعة (CPU)': '20-60 tok/ثانية', 'نماذج مثال': 'Llama 3.2 1B، Phi-4 Mini 3.8B' },
-            { 'حجم النموذج': '7B-8B معاملات', 'RAM المطلوبة': '6-8 GB', 'السرعة (CPU)': '10-30 tok/ثانية', 'نماذج مثال': 'Llama 3.3 8B، Qwen3 8B' },
+            { 'حجم النموذج': '7B-8B معاملات', 'RAM المطلوبة': '6-8 GB', 'السرعة (CPU)': '10-30 tok/ثانية', 'نماذج مثال': 'Llama 3.1 8B، Qwen3 8B' },
             { 'حجم النموذج': '13B-14B معاملات', 'RAM المطلوبة': '10-12 GB', 'السرعة (CPU)': '5-15 tok/ثانية', 'نماذج مثال': 'Phi-4 14B، Qwen3 14B' },
             { 'حجم النموذج': '32B-34B معاملات', 'RAM المطلوبة': '20-24 GB', 'السرعة (CPU)': '2-6 tok/ثانية', 'نماذج مثال': 'Qwen3 32B، DeepSeek-R1 32B' },
             { 'حجم النموذج': '70B+ معاملات', 'RAM المطلوبة': '40-48 GB', 'السرعة (CPU)': '1-3 tok/ثانية', 'نماذج مثال': 'Llama 3.3 70B، Qwen3 72B' },
@@ -846,7 +846,7 @@ schema: {
           content: 'O requisito de hardware depende inteiramente do modelo que você quer rodar e da velocidade de resposta que precisa.',
           rows: [
             { 'Tamanho do modelo': '1B-3B parâmetros', 'RAM necessária': '4-6 GB', 'Velocidade (CPU)': '20-60 tok/seg', 'Modelos de exemplo': 'Llama 3.2 1B, Phi-4 Mini 3.8B' },
-            { 'Tamanho do modelo': '7B-8B parâmetros', 'RAM necessária': '6-8 GB', 'Velocidade (CPU)': '10-30 tok/seg', 'Modelos de exemplo': 'Llama 3.3 8B, Qwen3 8B' },
+            { 'Tamanho do modelo': '7B-8B parâmetros', 'RAM necessária': '6-8 GB', 'Velocidade (CPU)': '10-30 tok/seg', 'Modelos de exemplo': 'Llama 3.1 8B, Qwen3 8B' },
             { 'Tamanho do modelo': '13B-14B parâmetros', 'RAM necessária': '10-12 GB', 'Velocidade (CPU)': '5-15 tok/seg', 'Modelos de exemplo': 'Phi-4 14B, Qwen3 14B' },
             { 'Tamanho do modelo': '32B-34B parâmetros', 'RAM necessária': '20-24 GB', 'Velocidade (CPU)': '2-6 tok/seg', 'Modelos de exemplo': 'Qwen3 32B, DeepSeek-R1 32B' },
             { 'Tamanho do modelo': '70B+ parâmetros', 'RAM necessária': '40-48 GB', 'Velocidade (CPU)': '1-3 tok/seg', 'Modelos de exemplo': 'Llama 3.3 70B, Qwen3 72B' },
@@ -1122,7 +1122,7 @@ schema: {
           content: 'Les besoins dépendent du modèle et de la rapidité désirée.',
           rows: [
             { 'Taille modèle': '1B-3B param.', 'RAM': '4-6 GB', 'Vitesse (CPU)': '20-60 tok/sec', 'Exemples': 'Llama 3.2 1B, Phi-4 Mini' },
-            { 'Taille modèle': '7B-8B param.', 'RAM': '6-8 GB', 'Vitesse (CPU)': '10-30 tok/sec', 'Exemples': 'Llama 3.3 8B, Qwen3 8B' },
+            { 'Taille modèle': '7B-8B param.', 'RAM': '6-8 GB', 'Vitesse (CPU)': '10-30 tok/sec', 'Exemples': 'Llama 3.1 8B, Qwen3 8B' },
             { 'Taille modèle': '13B-14B param.', 'RAM': '10-12 GB', 'Vitesse (CPU)': '5-15 tok/sec', 'Exemples': 'Phi-4 14B, Qwen3 14B' },
             { 'Taille modèle': '32B-34B param.', 'RAM': '20-24 GB', 'Vitesse (CPU)': '2-6 tok/sec', 'Exemples': 'Qwen3 32B, DeepSeek-R1 32B' },
             { 'Taille modèle': '70B+ param.', 'RAM': '40-48 GB', 'Vitesse (CPU)': '1-3 tok/sec', 'Exemples': 'Llama 3.3 70B, Qwen3 72B' },
@@ -1290,7 +1290,7 @@ schema: {
           content: '必要なハードウェアは、どのモデルを実行したいか、どのくらいの速度が必要かで決まります。',
           rows: [
             { 'モデルサイズ': '1B～3B パラメータ', 'RAM': '4～6GB', '速度 (CPU)': '20～60 tok/sec', '例': 'Llama 3.2 1B, Phi-4 Mini' },
-            { 'モデルサイズ': '7B～8B パラメータ', 'RAM': '6～8GB', '速度 (CPU)': '10～30 tok/sec', '例': 'Llama 3.3 8B, Qwen3 8B' },
+            { 'モデルサイズ': '7B～8B パラメータ', 'RAM': '6～8GB', '速度 (CPU)': '10～30 tok/sec', '例': 'Llama 3.1 8B, Qwen3 8B' },
             { 'モデルサイズ': '13B～14B パラメータ', 'RAM': '10～12GB', '速度 (CPU)': '5～15 tok/sec', '例': 'Phi-4 14B, Qwen3 14B' },
             { 'モデルサイズ': '32B～34B パラメータ', 'RAM': '20～24GB', '速度 (CPU)': '2～6 tok/sec', '例': 'Qwen3 32B, DeepSeek-R1' },
             { 'モデルサイズ': '70B以上', 'RAM': '40～48GB', '速度 (CPU)': '1～3 tok/sec', '例': 'Llama 3.3 70B, Qwen3 72B' },
@@ -1458,7 +1458,7 @@ schema: {
           content: '硬件要求取决于您要运行哪个模型以及需要的速度。',
           rows: [
             { '模型大小': '1B-3B参数', 'RAM需求': '4-6 GB', '速度(CPU)': '20-60 tokens/秒', '示例模型': 'Llama 3.2 1B, Phi-4 Mini' },
-            { '模型大小': '7B-8B参数', 'RAM需求': '6-8 GB', '速度(CPU)': '10-30 tokens/秒', '示例模型': 'Llama 3.3 8B, Qwen3 8B' },
+            { '模型大小': '7B-8B参数', 'RAM需求': '6-8 GB', '速度(CPU)': '10-30 tokens/秒', '示例模型': 'Llama 3.1 8B, Qwen3 8B' },
             { '模型大小': '13B-14B参数', 'RAM需求': '10-12 GB', '速度(CPU)': '5-15 tokens/秒', '示例模型': 'Phi-4 14B, Qwen3 14B' },
             { '模型大小': '32B-34B参数', 'RAM需求': '20-24 GB', '速度(CPU)': '2-6 tokens/秒', '示例模型': 'Qwen3 32B, DeepSeek-R1 32B' },
             { '模型大小': '70B+参数', 'RAM需求': '40-48 GB', '速度(CPU)': '1-3 tokens/秒', '示例模型': 'Llama 3.3 70B, Qwen3 72B' },
@@ -1626,7 +1626,7 @@ schema: {
           content: 'Die Hardware-Anforderungen hängen vollständig davon ab, welches Modell Sie ausführen möchten und wie schnell Sie Antworten benötigen.',
           rows: [
             { 'Modellgröße': '1B-3B Parameter', 'RAM erforderlich': '4-6 GB', 'Geschwindigkeit (CPU)': '20-60 Tokens/Sek.', 'Beispielmodelle': 'Llama 3.2 1B, Phi-4 Mini 3.8B' },
-            { 'Modellgröße': '7B-8B Parameter', 'RAM erforderlich': '6-8 GB', 'Geschwindigkeit (CPU)': '10-30 Tokens/Sek.', 'Beispielmodelle': 'Llama 3.3 8B, Qwen3 8B' },
+            { 'Modellgröße': '7B-8B Parameter', 'RAM erforderlich': '6-8 GB', 'Geschwindigkeit (CPU)': '10-30 Tokens/Sek.', 'Beispielmodelle': 'Llama 3.1 8B, Qwen3 8B' },
             { 'Modellgröße': '13B-14B Parameter', 'RAM erforderlich': '10-12 GB', 'Geschwindigkeit (CPU)': '5-15 Tokens/Sek.', 'Beispielmodelle': 'Phi-4 14B, Qwen3 14B' },
             { 'Modellgröße': '32B-34B Parameter', 'RAM erforderlich': '20-24 GB', 'Geschwindigkeit (CPU)': '2-6 Tokens/Sek.', 'Beispielmodelle': 'Qwen3 32B, DeepSeek-R1 32B' },
             { 'Modellgröße': '70B+ Parameter', 'RAM erforderlich': '40-48 GB', 'Geschwindigkeit (CPU)': '1-3 Tokens/Sek.', 'Beispielmodelle': 'Llama 3.3 70B, Qwen3 72B' },
@@ -1799,7 +1799,7 @@ schema: {
           content: '하드웨어 요구 사항은 실행하려는 모델과 필요한 응답 속도에 따라 완전히 달라집니다.',
           rows: [
             { 'Model Size': '1B~3B 파라미터', 'RAM Required': '4~6 GB', 'Speed (CPU)': '20~60 tok/sec', 'Example Models': 'Llama 3.2 1B, Phi-4 Mini 3.8B' },
-            { 'Model Size': '7B~8B 파라미터', 'RAM Required': '6~8 GB', 'Speed (CPU)': '10~30 tok/sec', 'Example Models': 'Llama 3.3 8B, Qwen3 8B' },
+            { 'Model Size': '7B~8B 파라미터', 'RAM Required': '6~8 GB', 'Speed (CPU)': '10~30 tok/sec', 'Example Models': 'Llama 3.1 8B, Qwen3 8B' },
             { 'Model Size': '13B~14B 파라미터', 'RAM Required': '10~12 GB', 'Speed (CPU)': '5~15 tok/sec', 'Example Models': 'Phi-4 14B, Qwen3 14B' },
             { 'Model Size': '32B~34B 파라미터', 'RAM Required': '20~24 GB', 'Speed (CPU)': '2~6 tok/sec', 'Example Models': 'Qwen3 32B, DeepSeek-R1 32B' },
             { 'Model Size': '70B+ 파라미터', 'RAM Required': '40~48 GB', 'Speed (CPU)': '1~3 tok/sec', 'Example Models': 'Llama 3.3 70B, Qwen3 72B' },

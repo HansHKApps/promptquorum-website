@@ -117,7 +117,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Do Llama and Mistral support Japanese?',
-            a: 'Basic support only. Llama 3.3 8B includes some Japanese training data but performs 30–40% worse than Japanese-specific models on Japanese-language benchmarks. Mistral Small has minimal Japanese training data and is not recommended for Japanese tasks. Use ELYZA-7B (Llama fine-tune) or Rinna 3.6B for reliable Japanese output.',
+            a: 'Basic support only. Llama 3.1 8B includes some Japanese training data but performs 30–40% worse than Japanese-specific models on Japanese-language benchmarks. Mistral Small has minimal Japanese training data and is not recommended for Japanese tasks. Use ELYZA-7B (Llama fine-tune) or Rinna 3.6B for reliable Japanese output.',
           },
           {
             q: 'Does quantization hurt Japanese quality?',
@@ -203,7 +203,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Unterstützen Llama und Mistral Japanisch?',
-            a: 'Nur grundlegende Unterstützung. Llama 3.3 8B enthält einige japanische Trainingsdaten, liefert aber 30–40% schlechtere Ergebnisse als japanisch-spezifische Modelle auf japanischen Benchmarks. Mistral Small hat minimale japanische Trainingsdaten und wird für japanische Aufgaben nicht empfohlen. ELYZA-7B (Llama Fine-Tune) oder Rinna 3.6B für zuverlässige japanische Ausgabe verwenden.',
+            a: 'Nur grundlegende Unterstützung. Llama 3.1 8B enthält einige japanische Trainingsdaten, liefert aber 30–40% schlechtere Ergebnisse als japanisch-spezifische Modelle auf japanischen Benchmarks. Mistral Small hat minimale japanische Trainingsdaten und wird für japanische Aufgaben nicht empfohlen. ELYZA-7B (Llama Fine-Tune) oder Rinna 3.6B für zuverlässige japanische Ausgabe verwenden.',
           },
           {
             q: 'Schadet Quantisierung der japanischen Qualität?',
@@ -289,7 +289,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Llama et Mistral supportent-ils le japonais ?',
-            a: 'Support basique uniquement. Llama 3.3 8B inclut quelques données d\'entraînement en japonais mais performe 30–40% moins bien que les modèles spécifiques au japonais sur les benchmarks japonais. Mistral Small a des données d\'entraînement japonaises minimales et n\'est pas recommandé pour les tâches japonaises. Utilisez ELYZA-7B (fine-tune Llama) ou Rinna 3.6B pour une sortie japonaise fiable.',
+            a: 'Support basique uniquement. Llama 3.1 8B inclut quelques données d\'entraînement en japonais mais performe 30–40% moins bien que les modèles spécifiques au japonais sur les benchmarks japonais. Mistral Small a des données d\'entraînement japonaises minimales et n\'est pas recommandé pour les tâches japonaises. Utilisez ELYZA-7B (fine-tune Llama) ou Rinna 3.6B pour une sortie japonaise fiable.',
           },
           {
             q: 'La quantisation nuit-elle à la qualité en japonais ?',
@@ -375,7 +375,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'LlamaやMistralは日本語に対応していますか？',
-            a: '基本的なサポートのみです。Llama 3.3 8Bには一部の日本語訓練データが含まれていますが、日本語ベンチマークでは日本語特化モデルより30–40%性能が低下します。Mistral Smallは日本語訓練データが最小限であり、日本語タスクには推奨されません。信頼性の高い日本語出力にはELYZA-7B（Llamaファインチューン）またはRinna 3.6Bを使用してください。',
+            a: '基本的なサポートのみです。Llama 3.1 8Bには一部の日本語訓練データが含まれていますが、日本語ベンチマークでは日本語特化モデルより30–40%性能が低下します。Mistral Smallは日本語訓練データが最小限であり、日本語タスクには推奨されません。信頼性の高い日本語出力にはELYZA-7B（Llamaファインチューン）またはRinna 3.6Bを使用してください。',
           },
           {
             q: '量子化は日本語品質に影響しますか？',
@@ -461,7 +461,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Llama和Mistral支持日语吗？',
-            a: '仅基础支持。Llama 3.3 8B包含一些日语训练数据，但在日语基准测试中比日语特化模型差30–40%。Mistral Small的日语训练数据极少，不推荐用于日语任务。可靠的日语输出请使用ELYZA-7B（Llama微调版）或Rinna 3.6B。',
+            a: '仅基础支持。Llama 3.1 8B包含一些日语训练数据，但在日语基准测试中比日语特化模型差30–40%。Mistral Small的日语训练数据极少，不推荐用于日语任务。可靠的日语输出请使用ELYZA-7B（Llama微调版）或Rinna 3.6B。',
           },
           {
             q: '量化会损害日语质量吗？',
@@ -560,7 +560,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: '¿Admiten japonés Llama y Mistral?',
-            a: 'Solo soporte básico. Llama 3.3 8B incluye algunos datos de entrenamiento en japonés pero rinde un 30–40% peor que los modelos específicos de japonés en benchmarks de japonés. Mistral Small tiene datos de entrenamiento en japonés mínimos y no se recomienda para tareas en japonés. Usa ELYZA-7B (fine-tune de Llama) o Rinna 3.6B para salida fiable en japonés.',
+            a: 'Solo soporte básico. Llama 3.1 8B incluye algunos datos de entrenamiento en japonés pero rinde un 30–40% peor que los modelos específicos de japonés en benchmarks de japonés. Mistral Small tiene datos de entrenamiento en japonés mínimos y no se recomienda para tareas en japonés. Usa ELYZA-7B (fine-tune de Llama) o Rinna 3.6B para salida fiable en japonés.',
           },
           {
             q: '¿Daña la cuantización la calidad en japonés?',
@@ -653,7 +653,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'هل تدعم Llama وMistral اللغة اليابانية؟',
-            a: 'دعم محدود فقط. تتضمن Llama 3.3 8B بعض بيانات التدريب باليابانية لكن أداؤها أضعف بـ30–40% من النماذج المتخصصة في اليابانية في الاختبارات المعيارية. Mistral Small لديها بيانات تدريب يابانية ضئيلة وغير موصى بها للمهام اليابانية. استخدم ELYZA-7B (ضبط دقيق لـ Llama) أو Rinna 3.6B للإخراج الموثوق باليابانية.',
+            a: 'دعم محدود فقط. تتضمن Llama 3.1 8B بعض بيانات التدريب باليابانية لكن أداؤها أضعف بـ30–40% من النماذج المتخصصة في اليابانية في الاختبارات المعيارية. Mistral Small لديها بيانات تدريب يابانية ضئيلة وغير موصى بها للمهام اليابانية. استخدم ELYZA-7B (ضبط دقيق لـ Llama) أو Rinna 3.6B للإخراج الموثوق باليابانية.',
           },
           {
             q: 'هل يُضرّ التكميم بالجودة في اليابانية؟',
@@ -761,7 +761,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Llama e Mistral suportam japonês?',
-            a: 'Apenas suporte básico. Llama 3.3 8B inclui alguns dados de treinamento em japonês, mas tem desempenho 30–40% pior do que modelos específicos de japonês em benchmarks de japonês. Mistral Small tem dados de treinamento mínimos em japonês e não é recomendado para tarefas em japonês. Use ELYZA-7B (fine-tune do Llama) ou Rinna 3.6B para saída confiável em japonês.',
+            a: 'Apenas suporte básico. Llama 3.1 8B inclui alguns dados de treinamento em japonês, mas tem desempenho 30–40% pior do que modelos específicos de japonês em benchmarks de japonês. Mistral Small tem dados de treinamento mínimos em japonês e não é recomendado para tarefas em japonês. Use ELYZA-7B (fine-tune do Llama) ou Rinna 3.6B para saída confiável em japonês.',
           },
           {
             q: 'A quantização prejudica a qualidade em japonês?',
@@ -864,7 +864,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         faqs: [
           {
             q: 'Llama와 Mistral은 일본어를 지원합니까?',
-            a: '기본적인 지원만 가능합니다. Llama 3.3 8B는 일부 일본어 학습 데이터를 포함하지만, 일본어 벤치마크에서 일본어 특화 모델보다 30–40% 낮은 성능을 보입니다. Mistral Small은 일본어 학습 데이터가 매우 적으며 일본어 작업에는 권장하지 않습니다. 안정적인 일본어 출력을 위해서는 ELYZA-7B(Llama 파인튜닝) 또는 Rinna 3.6B를 사용하십시오.',
+            a: '기본적인 지원만 가능합니다. Llama 3.1 8B는 일부 일본어 학습 데이터를 포함하지만, 일본어 벤치마크에서 일본어 특화 모델보다 30–40% 낮은 성능을 보입니다. Mistral Small은 일본어 학습 데이터가 매우 적으며 일본어 작업에는 권장하지 않습니다. 안정적인 일본어 출력을 위해서는 ELYZA-7B(Llama 파인튜닝) 또는 Rinna 3.6B를 사용하십시오.',
           },
           {
             q: '양자화가 일본어 품질에 영향을 미칩니까?',
@@ -897,7 +897,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         {
           '@type': 'Question',
           name: 'Llama와 Mistral은 일본어를 지원합니까?',
-          acceptedAnswer: { '@type': 'Answer', text: '기본적인 지원만 가능합니다. Llama 3.3 8B는 일본어 벤치마크에서 일본어 특화 모델보다 30–40% 낮은 성능을 보입니다. ELYZA-7B 또는 Rinna 3.6B를 사용하십시오.' },
+          acceptedAnswer: { '@type': 'Answer', text: '기본적인 지원만 가능합니다. Llama 3.1 8B는 일본어 벤치마크에서 일본어 특화 모델보다 30–40% 낮은 성능을 보입니다. ELYZA-7B 또는 Rinna 3.6B를 사용하십시오.' },
         },
         {
           '@type': 'Question',

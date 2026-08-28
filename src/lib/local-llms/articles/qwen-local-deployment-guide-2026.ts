@@ -301,7 +301,7 @@ curl http://localhost:11434/v1/chat/completions \\
         ],
         rows: [
           { 'VRAM Tier': '6 GB', 'Best Qwen': 'Qwen3 8B', 'Best Competitor': 'Llama 3.2 3B (fits, but 3B)', 'Verdict': 'Qwen3 8B wins — same VRAM, much larger model' },
-          { 'VRAM Tier': '12 GB', 'Best Qwen': 'Qwen3-Coder 14B', 'Best Competitor': 'Llama 3.3 8B Instruct', 'Verdict': 'Qwen3-Coder 14B for coding; Llama 3.3 8B for general chat' },
+          { 'VRAM Tier': '12 GB', 'Best Qwen': 'Qwen3-Coder 14B', 'Best Competitor': 'Llama 3.1 8B Instruct', 'Verdict': 'Qwen3-Coder 14B for coding; Llama 3.1 8B for general chat' },
           { 'VRAM Tier': '24 GB', 'Best Qwen': 'Qwen3-Coder 32B', 'Best Competitor': 'Llama 3.3 70B (offloaded)', 'Verdict': 'Qwen3-Coder 32B for code; Llama 3.3 70B if quality > speed' },
           { 'VRAM Tier': '48 GB+', 'Best Qwen': 'Qwen2.5-72B', 'Best Competitor': 'DeepSeek-V2.5 236B MoE', 'Verdict': 'DeepSeek needs ~130 GB RAM; Qwen2.5-72B is the practical 48 GB choice' },
         ],
@@ -692,7 +692,7 @@ curl http://localhost:11434/v1/chat/completions \\
         ],
         rows: [
           { 'Nivel de VRAM': '6 GB', 'Mejor Qwen': 'Qwen3 8B', 'Mejor competidor': 'Llama 3.2 3B (cabe, pero solo 3B)', 'Veredicto': 'Qwen3 8B gana — misma VRAM, modelo mucho mayor' },
-          { 'Nivel de VRAM': '12 GB', 'Mejor Qwen': 'Qwen3-Coder 14B', 'Mejor competidor': 'Llama 3.3 8B Instruct', 'Veredicto': 'Qwen3-Coder 14B para código; Llama 3.3 8B para chat general' },
+          { 'Nivel de VRAM': '12 GB', 'Mejor Qwen': 'Qwen3-Coder 14B', 'Mejor competidor': 'Llama 3.1 8B Instruct', 'Veredicto': 'Qwen3-Coder 14B para código; Llama 3.1 8B para chat general' },
           { 'Nivel de VRAM': '24 GB', 'Mejor Qwen': 'Qwen3-Coder 32B', 'Mejor competidor': 'Llama 3.3 70B (con descarga)', 'Veredicto': 'Qwen3-Coder 32B para código; Llama 3.3 70B si calidad > velocidad' },
           { 'Nivel de VRAM': '48 GB+', 'Mejor Qwen': 'Qwen2.5-72B', 'Mejor competidor': 'DeepSeek-V2.5 236B MoE', 'Veredicto': 'DeepSeek necesita ~130 GB de RAM; Qwen2.5-72B es la opción práctica para 48 GB' },
         ],
@@ -1083,7 +1083,7 @@ curl http://localhost:11434/v1/chat/completions \\
         ],
         rows: [
           { 'Nivel de VRAM': '6 GB', 'Mejor Qwen': 'Qwen3 8B', 'Mejor competidor': 'Llama 3.2 3B (يتسع، لكنه 3B فقط)', 'Veredicto': 'يفوز Qwen3 8B — نفس VRAM، نموذج أكبر بكثير' },
-          { 'Nivel de VRAM': '12 GB', 'Mejor Qwen': 'Qwen3-Coder 14B', 'Mejor competidor': 'Llama 3.3 8B Instruct', 'Veredicto': 'Qwen3-Coder 14B للكود؛ Llama 3.3 8B للدردشة العامة' },
+          { 'Nivel de VRAM': '12 GB', 'Mejor Qwen': 'Qwen3-Coder 14B', 'Mejor competidor': 'Llama 3.1 8B Instruct', 'Veredicto': 'Qwen3-Coder 14B للكود؛ Llama 3.1 8B للدردشة العامة' },
           { 'Nivel de VRAM': '24 GB', 'Mejor Qwen': 'Qwen3-Coder 32B', 'Mejor competidor': 'Llama 3.3 70B (مع تفريغ)', 'Veredicto': 'Qwen3-Coder 32B للكود؛ Llama 3.3 70B إذا كانت الجودة > السرعة' },
           { 'Nivel de VRAM': '48 GB+', 'Mejor Qwen': 'Qwen2.5-72B', 'Mejor competidor': 'DeepSeek-V2.5 236B MoE', 'Veredicto': 'يحتاج DeepSeek إلى ~130 GB من RAM؛ Qwen2.5-72B هو الخيار العملي لـ 48 GB' },
         ],
@@ -1474,7 +1474,7 @@ curl http://localhost:11434/v1/chat/completions \\
         ],
         rows: [
           { 'Nível de VRAM': '6 GB', 'Melhor Qwen': 'Qwen3 8B', 'Melhor concorrente': 'Llama 3.2 3B (cabe, mas apenas 3B)', 'Veredicto': 'Qwen3 8B vence — mesma VRAM, modelo muito maior' },
-          { 'Nível de VRAM': '12 GB', 'Melhor Qwen': 'Qwen3-Coder 14B', 'Melhor concorrente': 'Llama 3.3 8B Instruct', 'Veredicto': 'Qwen3-Coder 14B para código; Llama 3.3 8B para chat geral' },
+          { 'Nível de VRAM': '12 GB', 'Melhor Qwen': 'Qwen3-Coder 14B', 'Melhor concorrente': 'Llama 3.1 8B Instruct', 'Veredicto': 'Qwen3-Coder 14B para código; Llama 3.1 8B para chat geral' },
           { 'Nível de VRAM': '24 GB', 'Melhor Qwen': 'Qwen3-Coder 32B', 'Melhor concorrente': 'Llama 3.3 70B (com descarregamento)', 'Veredicto': 'Qwen3-Coder 32B para código; Llama 3.3 70B se qualidade > velocidade' },
           { 'Nível de VRAM': '48 GB+', 'Melhor Qwen': 'Qwen2.5-72B', 'Melhor concorrente': 'DeepSeek-V2.5 236B MoE', 'Veredicto': 'DeepSeek precisa de ~130 GB de RAM; Qwen2.5-72B é a opção prática para 48 GB' },
         ],
@@ -1863,7 +1863,7 @@ curl http://localhost:11434/v1/chat/completions \\
         ],
         rows: [
           { 'Niveau VRAM': '6 Go', 'Meilleur Qwen': 'Qwen3 8B', 'Meilleur concurrent': 'Llama 3.2 3B', 'Recommandation': 'Qwen3 8B — même VRAM, modèle beaucoup plus grand' },
-          { 'Niveau VRAM': '12 Go', 'Meilleur Qwen': 'Qwen3-Coder 14B', 'Meilleur concurrent': 'Llama 3.3 8B Instruct', 'Recommandation': 'Qwen3-Coder 14B pour le code ; Llama 3.3 8B pour le chat' },
+          { 'Niveau VRAM': '12 Go', 'Meilleur Qwen': 'Qwen3-Coder 14B', 'Meilleur concurrent': 'Llama 3.1 8B Instruct', 'Recommandation': 'Qwen3-Coder 14B pour le code ; Llama 3.1 8B pour le chat' },
           { 'Niveau VRAM': '24 Go', 'Meilleur Qwen': 'Qwen3-Coder 32B', 'Meilleur concurrent': 'Llama 3.3 70B (déchargé)', 'Recommandation': 'Qwen3-Coder 32B pour le code ; Llama 3.3 70B si qualité > vitesse' },
           { 'Niveau VRAM': '48 Go+', 'Meilleur Qwen': 'Qwen2.5-72B', 'Meilleur concurrent': 'DeepSeek-V2.5 236B MoE', 'Recommandation': 'DeepSeek nécessite ~130 Go RAM ; Qwen2.5-72B est le choix pratique' },
         ],
@@ -2257,7 +2257,7 @@ curl http://localhost:11434/v1/chat/completions \\
         ],
         rows: [
           { 'VRAM-Stufe': '6 GB', 'Bestes Qwen': 'Qwen3 8B', 'Bester Konkurrent': 'Llama 3.2 3B (passt, aber nur 3B)', 'Empfehlung': 'Qwen3 8B gewinnt — gleiches VRAM, viel größeres Modell' },
-          { 'VRAM-Stufe': '12 GB', 'Bestes Qwen': 'Qwen3-Coder 14B', 'Bester Konkurrent': 'Llama 3.3 8B Instruct', 'Empfehlung': 'Qwen3-Coder 14B für Coding; Llama 3.3 8B für allgemeinen Chat' },
+          { 'VRAM-Stufe': '12 GB', 'Bestes Qwen': 'Qwen3-Coder 14B', 'Bester Konkurrent': 'Llama 3.1 8B Instruct', 'Empfehlung': 'Qwen3-Coder 14B für Coding; Llama 3.1 8B für allgemeinen Chat' },
           { 'VRAM-Stufe': '24 GB', 'Bestes Qwen': 'Qwen3-Coder 32B', 'Bester Konkurrent': 'Llama 3.3 70B (ausgelagert)', 'Empfehlung': 'Qwen3-Coder 32B für Code; Llama 3.3 70B wenn Qualität > Geschwindigkeit' },
           { 'VRAM-Stufe': '48 GB+', 'Bestes Qwen': 'Qwen2.5-72B', 'Bester Konkurrent': 'DeepSeek-V2.5 236B MoE', 'Empfehlung': 'DeepSeek benötigt ~130 GB RAM; Qwen2.5-72B ist die praktische 48-GB-Wahl' },
         ],
@@ -2652,7 +2652,7 @@ curl http://localhost:11434/v1/chat/completions \\
         ],
         rows: [
           { 'VRAM階層': '6GB', '最良Qwen': 'Qwen3 8B', '最良競合': 'Llama 3.2 3B（収まるが3Bのみ）', '判定': 'Qwen3 8Bが優位 — 同VRAM、より大きなモデル' },
-          { 'VRAM階層': '12GB', '最良Qwen': 'Qwen3-Coder 14B', '最良競合': 'Llama 3.3 8B Instruct', '判定': 'コーディングにはQwen3-Coder 14B；汎用チャットにはLlama 3.3 8B' },
+          { 'VRAM階層': '12GB', '最良Qwen': 'Qwen3-Coder 14B', '最良競合': 'Llama 3.1 8B Instruct', '判定': 'コーディングにはQwen3-Coder 14B；汎用チャットにはLlama 3.1 8B' },
           { 'VRAM階層': '24GB', '最良Qwen': 'Qwen3-Coder 32B', '最良競合': 'Llama 3.3 70B（オフロード）', '判定': 'コードにはQwen3-Coder 32B；品質>速度ならLlama 3.3 70B' },
           { 'VRAM階層': '48GB+', '最良Qwen': 'Qwen2.5-72B', '最良競合': 'DeepSeek-V2.5 236B MoE', '判定': 'DeepSeekは約130GB RAM必要；Qwen2.5-72Bが48GBの現実的な選択' },
         ],
@@ -3047,7 +3047,7 @@ curl http://localhost:11434/v1/chat/completions \\
         ],
         rows: [
           { '显存档位': '6GB', '最佳Qwen': 'Qwen3 8B', '最佳竞品': 'Llama 3.2 3B（可装入但仅3B）', '建议': 'Qwen3 8B胜出——相同显存，更大模型' },
-          { '显存档位': '12GB', '最佳Qwen': 'Qwen3-Coder 14B', '最佳竞品': 'Llama 3.3 8B Instruct', '建议': '代码用Qwen3-Coder 14B；通用对话用Llama 3.3 8B' },
+          { '显存档位': '12GB', '最佳Qwen': 'Qwen3-Coder 14B', '最佳竞品': 'Llama 3.1 8B Instruct', '建议': '代码用Qwen3-Coder 14B；通用对话用Llama 3.1 8B' },
           { '显存档位': '24GB', '最佳Qwen': 'Qwen3-Coder 32B', '最佳竞品': 'Llama 3.3 70B（卸载）', '建议': '代码用Qwen3-Coder 32B；质量优先于速度则选Llama 3.3 70B' },
           { '显存档位': '48GB+', '最佳Qwen': 'Qwen2.5-72B', '最佳竞品': 'DeepSeek-V2.5 236B MoE', '建议': 'DeepSeek需约130GB内存；Qwen2.5-72B是48GB的实际可行选择' },
         ],
@@ -3505,7 +3505,7 @@ curl http://localhost:11434/v1/chat/completions \\
         ],
         rows: [
           { 'VRAM 티어': '6 GB', '최고 Qwen': 'Qwen3 8B', '최고 경쟁자': 'Llama 3.2 3B (맞지만 3B)', '결론': 'Qwen3 8B 우위 — 같은 VRAM, 훨씬 큰 모델' },
-          { 'VRAM 티어': '12 GB', '최고 Qwen': 'Qwen3-Coder 14B', '최고 경쟁자': 'Llama 3.3 8B Instruct', '결론': '코딩은 Qwen3-Coder 14B; 일반 채팅은 Llama 3.3 8B' },
+          { 'VRAM 티어': '12 GB', '최고 Qwen': 'Qwen3-Coder 14B', '최고 경쟁자': 'Llama 3.1 8B Instruct', '결론': '코딩은 Qwen3-Coder 14B; 일반 채팅은 Llama 3.1 8B' },
           { 'VRAM 티어': '24 GB', '최고 Qwen': 'Qwen3-Coder 32B', '최고 경쟁자': 'Llama 3.3 70B (오프로드)', '결론': '코드는 Qwen3-Coder 32B; 품질 > 속도면 Llama 3.3 70B' },
           { 'VRAM 티어': '48 GB+', '최고 Qwen': 'Qwen2.5-72B', '최고 경쟁자': 'DeepSeek-V2.5 236B MoE', '결론': 'DeepSeek는 ~130 GB RAM 필요; Qwen2.5-72B가 48 GB에서 실용적 선택' },
         ],

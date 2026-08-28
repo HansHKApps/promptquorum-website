@@ -103,7 +103,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           columns: ['Model', 'tok/s'],
           rows: [
-            { 'Model': 'Llama 3.3 8B Q4', 'tok/s': '45–60' },
+            { 'Model': 'Llama 3.1 8B Q4', 'tok/s': '45–60' },
             { 'Model': 'Llama 3.3 70B Q4', 'tok/s': '20–25' },
             { 'Model': 'DeepSeek-R1 70B Q4', 'tok/s': '18–22' },
             { 'Model': 'Qwen3 72B Q4', 'tok/s': '22–26' },
@@ -384,7 +384,7 @@ schema: {
           ],
           columns: ['Modell', 'tok/s'],
           rows: [
-            { 'Modell': 'Llama 3.3 8B Q4', 'tok/s': '45–60' },
+            { 'Modell': 'Llama 3.1 8B Q4', 'tok/s': '45–60' },
             { 'Modell': 'Llama 3.3 70B Q4', 'tok/s': '20–25' },
             { 'Modell': 'DeepSeek-R1 70B Q4', 'tok/s': '18–22' },
             { 'Modell': 'Qwen3 72B Q4', 'tok/s': '22–26' },
@@ -668,7 +668,7 @@ schema: {
           ],
           columns: ['Modèle', 'tok/s'],
           rows: [
-            { 'Modèle': 'Llama 3.3 8B Q4', 'tok/s': '45–60' },
+            { 'Modèle': 'Llama 3.1 8B Q4', 'tok/s': '45–60' },
             { 'Modèle': 'Llama 3.3 70B Q4', 'tok/s': '20–25' },
             { 'Modèle': 'DeepSeek-R1 70B Q4', 'tok/s': '18–22' },
             { 'Modèle': 'Qwen3 72B Q4', 'tok/s': '22–26' },
@@ -941,7 +941,7 @@ schema: {
           ],
           columns: ['モデル', 'tok/s'],
           rows: [
-            { 'モデル': 'Llama 3.3 8B Q4', 'tok/s': '45〜60' },
+            { 'モデル': 'Llama 3.1 8B Q4', 'tok/s': '45〜60' },
             { 'モデル': 'Llama 3.3 70B Q4', 'tok/s': '20〜25' },
             { 'モデル': 'DeepSeek-R1 70B Q4', 'tok/s': '18〜22' },
             { 'モデル': 'Qwen3 72B Q4', 'tok/s': '22〜26' },
@@ -1212,7 +1212,7 @@ schema: {
           ],
           columns: ['型号', 'tok/s'],
           rows: [
-            { '型号': 'Llama 3.3 8B Q4', 'tok/s': '45〜60' },
+            { '型号': 'Llama 3.1 8B Q4', 'tok/s': '45〜60' },
             { '型号': 'Llama 3.3 70B Q4', 'tok/s': '20〜25' },
             { '型号': 'DeepSeek-R1 70B Q4', 'tok/s': '18〜22' },
             { '型号': 'Qwen3 72B Q4', 'tok/s': '22〜26' },
@@ -1487,7 +1487,7 @@ schema: {
           ],
           columns: ['Modelo', 'tok/s'],
           rows: [
-            { 'Modelo': 'Llama 3.3 8B Q4', 'tok/s': '45–60' },
+            { 'Modelo': 'Llama 3.1 8B Q4', 'tok/s': '45–60' },
             { 'Modelo': 'Llama 3.3 70B Q4', 'tok/s': '20–25' },
             { 'Modelo': 'DeepSeek-R1 70B Q4', 'tok/s': '18–22' },
             { 'Modelo': 'Qwen3 72B Q4', 'tok/s': '22–26' },
@@ -1767,7 +1767,7 @@ schema: {
           ],
           columns: ['النموذج', 'tok/s'],
           rows: [
-            { 'النموذج': 'Llama 3.3 8B Q4', 'tok/s': '45–60' },
+            { 'النموذج': 'Llama 3.1 8B Q4', 'tok/s': '45–60' },
             { 'النموذج': 'Llama 3.3 70B Q4', 'tok/s': '20–25' },
             { 'النموذج': 'DeepSeek-R1 70B Q4', 'tok/s': '18–22' },
             { 'النموذج': 'Qwen3 72B Q4', 'tok/s': '22–26' },
@@ -2047,7 +2047,7 @@ schema: {
           ],
           columns: ['Modelo', 'tok/s'],
           rows: [
-            { 'Modelo': 'Llama 3.3 8B Q4', 'tok/s': '45–60' },
+            { 'Modelo': 'Llama 3.1 8B Q4', 'tok/s': '45–60' },
             { 'Modelo': 'Llama 3.3 70B Q4', 'tok/s': '20–25' },
             { 'Modelo': 'DeepSeek-R1 70B Q4', 'tok/s': '18–22' },
             { 'Modelo': 'Qwen3 72B Q4', 'tok/s': '22–26' },
@@ -2321,7 +2321,7 @@ schema: {
       ],
       columns: ['모델', 'tok/s'],
       rows: [
-        { '모델': 'Llama 3.3 8B Q4', 'tok/s': '45–60' },
+        { '모델': 'Llama 3.1 8B Q4', 'tok/s': '45–60' },
         { '모델': 'Llama 3.3 70B Q4', 'tok/s': '20–25' },
         { '모델': 'DeepSeek-R1 70B Q4', 'tok/s': '18–22' },
         { '모델': 'Qwen3 72B Q4', 'tok/s': '22–26' },

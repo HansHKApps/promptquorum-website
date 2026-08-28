@@ -230,7 +230,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Built-in document chat:** Yes (introduced in 2025), with a clean drag-and-drop interface.',
           '**Telemetry:** Anonymous usage events are sent by default. They are easy to disable in Settings → Privacy. Conversations and model files never leave the device.',
           '**License:** Proprietary (free for personal and commercial use). If open-source code is non-negotiable, pick Jan instead.',
-          '**Recommended starter model:** Phi-4 Mini on 8 GB Macs; Llama 3.3 8B Q4_K_M on 16 GB+ Macs.',
+          '**Recommended starter model:** Phi-4 Mini on 8 GB Macs; Llama 3.1 8B Q4_K_M on 16 GB+ Macs.',
         ],
         callouts: [
           {
@@ -239,7 +239,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/local-ai-nontechnical-lmstudio-mac-speed-en.svg',
-        imageCaption: 'LM Studio model speed on Apple Silicon: Phi-4 Mini achieves 55–70 tok/s on M3 8 GB; Llama 3.3 8B Q4_K_M reaches 35–42 tok/s on M3 Pro 16 GB with custom Metal kernels.',
+        imageCaption: 'LM Studio model speed on Apple Silicon: Phi-4 Mini achieves 55–70 tok/s on M3 8 GB; Llama 3.1 8B Q4_K_M reaches 35–42 tok/s on M3 Pro 16 GB with custom Metal kernels.',
       },
       stumblingBlocks: {
         id: 'stumbling-blocks',
@@ -624,7 +624,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Eingebauter Dokument-Chat:** Ja (eingeführt 2025), mit einem sauberen Drag-and-Drop-Interface.',
           '**Telemetrie:** Anonyme Nutzungsereignisse werden standardmäßig versendet. Sie sind leicht in Einstellungen → Datenschutz zu deaktivieren. Unterhaltungen und Modelldateien verlassen das Gerät nie.',
           '**Lizenz:** Proprietär (kostenlos für persönliche und kommerzielle Nutzung). Wenn Open-Source-Code nicht verhandelbar ist, wählen Sie stattdessen Jan.',
-          '**Empfohlenes Starter-Modell:** Phi-4 Mini auf 8 GB Macs; Llama 3.3 8B Q4_K_M auf 16 GB+ Macs.',
+          '**Empfohlenes Starter-Modell:** Phi-4 Mini auf 8 GB Macs; Llama 3.1 8B Q4_K_M auf 16 GB+ Macs.',
         ],
         callouts: [
           {
@@ -633,7 +633,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/local-ai-nontechnical-lmstudio-mac-speed-de.svg',
-        imageCaption: 'LM Studio Modellgeschwindigkeit auf Apple Silicon: Phi-4 Mini erreicht 55–70 Tok/s auf M3 8 GB; Llama 3.3 8B Q4_K_M erreicht 35–42 Tok/s auf M3 Pro 16 GB mit Metal-Kerneln.',
+        imageCaption: 'LM Studio Modellgeschwindigkeit auf Apple Silicon: Phi-4 Mini erreicht 55–70 Tok/s auf M3 8 GB; Llama 3.1 8B Q4_K_M erreicht 35–42 Tok/s auf M3 Pro 16 GB mit Metal-Kerneln.',
       },
       stumblingBlocks: {
         id: 'stumbling-blocks',
@@ -1026,7 +1026,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Chat intégré avec documents :** Oui (introduit en 2025), avec une interface drag-and-drop épurée.',
           '**Télémétrie :** Les événements d\'usage anonymes sont envoyés par défaut. Ils sont faciles à désactiver dans Paramètres → Confidentialité. Les conversations et fichiers modèles ne quittent jamais l\'appareil.',
           '**Licence :** Propriétaire (gratuite pour usage personnel et commercial). Si le code open source est non-négociable, choisissez Jan.',
-          '**Modèle de démarrage recommandé :** Phi-4 Mini sur Macs 8 GB ; Llama 3.3 8B Q4_K_M sur Macs 16 GB+.',
+          '**Modèle de démarrage recommandé :** Phi-4 Mini sur Macs 8 GB ; Llama 3.1 8B Q4_K_M sur Macs 16 GB+.',
         ],
         callouts: [
           {
@@ -1035,7 +1035,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/local-ai-nontechnical-lmstudio-mac-speed-fr.svg',
-        imageCaption: 'Vitesse des modèles LM Studio sur Apple Silicon : Phi-4 Mini atteint 55–70 tok/s sur M3 8 GB ; Llama 3.3 8B Q4_K_M atteint 35–42 tok/s sur M3 Pro 16 GB avec kernels Metal personnalisés.',
+        imageCaption: 'Vitesse des modèles LM Studio sur Apple Silicon : Phi-4 Mini atteint 55–70 tok/s sur M3 8 GB ; Llama 3.1 8B Q4_K_M atteint 35–42 tok/s sur M3 Pro 16 GB avec kernels Metal personnalisés.',
       },
       stumblingBlocks: {
         id: 'stumbling-blocks',
@@ -1420,7 +1420,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**組み込みドキュメントチャット：** あり（2025年導入）。きれいなドラッグ・アンド・ドロップインターフェース。',
           '**テレメトリー：** 匿名使用イベントはデフォルトで送信。設定 → プライバシーで簡単に無効化可。会話・モデルファイルはデバイスを離れることなし。',
           '**ライセンス：** 独占（個人・商用利用無料）。オープンソースコードが必須なら、Janを選んでください。',
-          '**推奨スターターモデル：** 8GB Macで Phi-4 Mini; 16GB+ Macで Llama 3.3 8B Q4_K_M。',
+          '**推奨スターターモデル：** 8GB Macで Phi-4 Mini; 16GB+ Macで Llama 3.1 8B Q4_K_M。',
         ],
         callouts: [
           {
@@ -1429,7 +1429,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/local-ai-nontechnical-lmstudio-mac-speed-ja.svg',
-        imageCaption: 'LM StudioのApple Silicon速度：Phi-4 MiniはM3 8 GBで55〜70 tok/s達成；Llama 3.3 8B Q4_K_MはM3 Pro 16 GBでMetalカーネルにより35〜42 tok/s。',
+        imageCaption: 'LM StudioのApple Silicon速度：Phi-4 MiniはM3 8 GBで55〜70 tok/s達成；Llama 3.1 8B Q4_K_MはM3 Pro 16 GBでMetalカーネルにより35〜42 tok/s。',
       },
       stumblingBlocks: {
         id: 'stumbling-blocks',
@@ -1814,7 +1814,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**内置文档聊天：** 是的（2025年推出），具有清晰的拖放界面。',
           '**遥测：** 默认发送匿名使用事件。在设置 → 隐私中易于禁用。对话和模型文件永远不会离开设备。',
           '**许可证：** 专有（个人和商业使用免费）。如果开源代码不可协商，请选择Jan。',
-          '**推荐起始模型：** 8GB Mac上的Phi-4 Mini；16GB+Mac上的Llama 3.3 8B Q4_K_M。',
+          '**推荐起始模型：** 8GB Mac上的Phi-4 Mini；16GB+Mac上的Llama 3.1 8B Q4_K_M。',
         ],
         callouts: [
           {
@@ -1823,7 +1823,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/local-ai-nontechnical-lmstudio-mac-speed-zh.svg',
-        imageCaption: 'LM Studio在Apple Silicon上的模型速度：Phi-4 Mini在M3 8 GB上达到55-70 tok/s；Llama 3.3 8B Q4_K_M在M3 Pro 16 GB上使用Metal内核达到35-42 tok/s。',
+        imageCaption: 'LM Studio在Apple Silicon上的模型速度：Phi-4 Mini在M3 8 GB上达到55-70 tok/s；Llama 3.1 8B Q4_K_M在M3 Pro 16 GB上使用Metal内核达到35-42 tok/s。',
       },
       stumblingBlocks: {
         id: 'stumbling-blocks',
@@ -2208,7 +2208,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Chat con documentos integrado:** Sí (introducido en 2025), con una interfaz de arrastrar y soltar limpia.',
           '**Telemetría:** Los eventos de uso anónimo se envían por defecto. Se desactivan fácilmente en Ajustes → Privacidad. Las conversaciones y los archivos de modelos nunca abandonan el dispositivo.',
           '**Licencia:** Propietaria (gratuita para uso personal y comercial). Si el código de código abierto es innegociable, elige Jan.',
-          '**Modelo inicial recomendado:** Phi-4 Mini en Macs con 8 GB; Llama 3.3 8B Q4_K_M en Macs con 16 GB o más.',
+          '**Modelo inicial recomendado:** Phi-4 Mini en Macs con 8 GB; Llama 3.1 8B Q4_K_M en Macs con 16 GB o más.',
         ],
         callouts: [
           {
@@ -2217,7 +2217,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/local-ai-nontechnical-lmstudio-mac-speed-es.svg',
-        imageCaption: 'Velocidad de modelos de LM Studio en Apple Silicon: Phi-4 Mini alcanza 55–70 tok/s en un M3 con 8 GB; Llama 3.3 8B Q4_K_M alcanza 35–42 tok/s en un M3 Pro con 16 GB con kernels Metal personalizados.',
+        imageCaption: 'Velocidad de modelos de LM Studio en Apple Silicon: Phi-4 Mini alcanza 55–70 tok/s en un M3 con 8 GB; Llama 3.1 8B Q4_K_M alcanza 35–42 tok/s en un M3 Pro con 16 GB con kernels Metal personalizados.',
       },
       stumblingBlocks: {
         id: 'stumbling-blocks',
@@ -2603,7 +2603,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Chat com documentos integrado:** Sim (introduzido em 2025), com uma interface limpa de arrastar e soltar.',
           '**Telemetria:** Eventos de uso anônimo são enviados por padrão. São fáceis de desativar em Configurações → Privacidade. As conversas e os arquivos de modelo nunca saem do dispositivo.',
           '**Licença:** Proprietária (gratuita para uso pessoal e comercial). Se código open source é inegociável, escolha o Jan.',
-          '**Modelo inicial recomendado:** Phi-4 Mini em Macs de 8 GB; Llama 3.3 8B Q4_K_M em Macs de 16 GB+.',
+          '**Modelo inicial recomendado:** Phi-4 Mini em Macs de 8 GB; Llama 3.1 8B Q4_K_M em Macs de 16 GB+.',
         ],
         callouts: [
           {
@@ -2612,7 +2612,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/local-ai-nontechnical-lmstudio-mac-speed-pt.svg',
-        imageCaption: 'Velocidade de modelos do LM Studio em Apple Silicon: Phi-4 Mini atinge 55–70 tok/s em M3 8 GB; Llama 3.3 8B Q4_K_M alcança 35–42 tok/s em M3 Pro 16 GB com kernels Metal personalizados.',
+        imageCaption: 'Velocidade de modelos do LM Studio em Apple Silicon: Phi-4 Mini atinge 55–70 tok/s em M3 8 GB; Llama 3.1 8B Q4_K_M alcança 35–42 tok/s em M3 Pro 16 GB com kernels Metal personalizados.',
       },
       stumblingBlocks: {
         id: 'stumbling-blocks',
@@ -3014,7 +3014,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**دردشة مع المستندات مدمجة:** نعم (أُضيفت في 2025)، مع واجهة سحب وإسقاط نظيفة.',
           '**البيانات المُرسَلة:** أحداث الاستخدام المجهولة تُرسَل افتراضياً. يمكن تعطيلها بسهولة من الإعدادات ← الخصوصية. المحادثات وملفات النماذج لا تغادر الجهاز أبداً.',
           '**الرخصة:** خاصة (مجانية للاستخدام الشخصي والتجاري). إن كان الكود المفتوح المصدر غير قابل للتفاوض، اختر Jan.',
-          '**النموذج الأولي المُوصى به:** Phi-4 Mini لأجهزة Mac بـ8 جيجابايت؛ Llama 3.3 8B Q4_K_M لأجهزة Mac بـ16 جيجابايت+.',
+          '**النموذج الأولي المُوصى به:** Phi-4 Mini لأجهزة Mac بـ8 جيجابايت؛ Llama 3.1 8B Q4_K_M لأجهزة Mac بـ16 جيجابايت+.',
         ],
         callouts: [
           {
@@ -3023,7 +3023,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/local-ai-nontechnical-lmstudio-mac-speed-es.svg',
-        imageCaption: 'سرعة نماذج LM Studio على Apple Silicon: Phi-4 Mini يصل إلى 55–70 توكن/ث على M3 8 جيجابايت؛ Llama 3.3 8B Q4_K_M يصل إلى 35–42 توكن/ث على M3 Pro 16 جيجابايت مع نوى Metal مخصصة.',
+        imageCaption: 'سرعة نماذج LM Studio على Apple Silicon: Phi-4 Mini يصل إلى 55–70 توكن/ث على M3 8 جيجابايت؛ Llama 3.1 8B Q4_K_M يصل إلى 35–42 توكن/ث على M3 Pro 16 جيجابايت مع نوى Metal مخصصة.',
       },
       stumblingBlocks: {
         id: 'stumbling-blocks',
@@ -3419,7 +3419,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**내장 문서 채팅:** 예(2025년 도입), 깔끔한 드래그 앤 드롭 인터페이스.',
           '**텔레메트리:** 기본적으로 익명 사용 이벤트가 전송됩니다. 설정 → 개인 정보 보호에서 쉽게 비활성화할 수 있습니다. 대화와 모델 파일은 절대 기기를 떠나지 않습니다.',
           '**라이선스:** 독점 소프트웨어(개인 및 상업용 무료). 오픈소스 코드가 필수라면 Jan을 선택하십시오.',
-          '**추천 초기 모델:** 8 GB Mac에는 Phi-4 Mini; 16 GB 이상 Mac에는 Llama 3.3 8B Q4_K_M.',
+          '**추천 초기 모델:** 8 GB Mac에는 Phi-4 Mini; 16 GB 이상 Mac에는 Llama 3.1 8B Q4_K_M.',
         ],
         callouts: [
           {
@@ -3428,7 +3428,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/local-ai-nontechnical-lmstudio-mac-speed-ko.svg',
-        imageCaption: 'Apple Silicon에서 LM Studio 모델 속도: Phi-4 Mini는 M3 8 GB에서 55–70 tok/s; Llama 3.3 8B Q4_K_M은 맞춤형 Metal 커널로 M3 Pro 16 GB에서 35–42 tok/s.',
+        imageCaption: 'Apple Silicon에서 LM Studio 모델 속도: Phi-4 Mini는 M3 8 GB에서 55–70 tok/s; Llama 3.1 8B Q4_K_M은 맞춤형 Metal 커널로 M3 Pro 16 GB에서 35–42 tok/s.',
       },
       stumblingBlocks: {
         id: 'stumbling-blocks',

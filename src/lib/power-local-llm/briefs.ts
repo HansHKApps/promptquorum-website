@@ -171,7 +171,7 @@ export const POWER_LLM_BRIEFS: Record<string, ArticleBrief> = {
     ctrRule:
       'Specific time payoff (30 minutes) + specific stack (Ollama + AnythingLLM) + hardware proof (16GB RAM laptop)',
     writingBrief:
-      'Tutorial-style decision page that\'s also actionable. Walk through the fastest path to a working personal RAG system. Specific stack: Ollama + Llama 3.3 8B + AnythingLLM + nomic-embed-text. Hardware target: 16GB RAM laptop (covers the largest user segment). Include screenshots of every step. Cover what to do when things go wrong (model download fails, embeddings hang, retrieval returns garbage). End with troubleshooting FAQ. Position as "the article you wish you had when starting." Each step has a time estimate. Total elapsed time visible throughout. Final section shows sample queries and expected answers.',
+      'Tutorial-style decision page that\'s also actionable. Walk through the fastest path to a working personal RAG system. Specific stack: Ollama + Llama 3.1 8B + AnythingLLM + nomic-embed-text. Hardware target: 16GB RAM laptop (covers the largest user segment). Include screenshots of every step. Cover what to do when things go wrong (model download fails, embeddings hang, retrieval returns garbage). End with troubleshooting FAQ. Position as "the article you wish you had when starting." Each step has a time estimate. Total elapsed time visible throughout. Final section shows sample queries and expected answers.',
     internalLinks: [
       { ref: 'anythingllm-vs-privategpt-vs-openwebui-rag', reasoning: 'for readers who want to evaluate alternatives' },
       { ref: 'best-embedding-models-local-rag-2026', reasoning: 'for readers wanting better retrieval' },
@@ -184,7 +184,7 @@ export const POWER_LLM_BRIEFS: Record<string, ArticleBrief> = {
     structure: {
       label: 'Step-by-step format (no comparison table)',
       notes:
-        'Step 1: Install Ollama (3 min)\nStep 2: Pull Llama 3.3 8B (8 min — depends on connection)\nStep 3: Install AnythingLLM (4 min)\nStep 4: Configure embedding model (3 min)\nStep 5: Upload first PDFs (5 min)\nStep 6: Test queries (5 min)\nStep 7: Tune chunk size (2 min)\nTotal: 30 minutes',
+        'Step 1: Install Ollama (3 min)\nStep 2: Pull Llama 3.1 8B (8 min — depends on connection)\nStep 3: Install AnythingLLM (4 min)\nStep 4: Configure embedding model (3 min)\nStep 5: Upload first PDFs (5 min)\nStep 6: Test queries (5 min)\nStep 7: Tune chunk size (2 min)\nTotal: 30 minutes',
     },
     faqSeeds: [
       'What if Ollama fails to install?',
@@ -382,7 +382,7 @@ export const POWER_LLM_BRIEFS: Record<string, ArticleBrief> = {
     serpIntent: 'Comparison-dominant — readers expect benchmarks',
     ctrRule: 'Conflict (vs vs vs) + freshness (2026) + specificity (3 languages) + tension (One model crushes all three)',
     writingBrief:
-      'Model decision page focused on coding specifically. Benchmark Qwen3-Coder 30B/7B, DeepSeek Coder V3, Codestral 22B, Llama 3.3 Code, Granite Code, StarCoder 2. Run HumanEval+, MBPP+, plus real-world test (build CRUD app, debug existing repo, refactor old code). Score by language: Python, TypeScript, Rust, Go. Include VRAM requirements per quantization (Q4_K_M, Q5_K_M, Q8_0). Link to /local-llms/llm-quantization-explained for details — don\'t duplicate that explanation here. Show clear winner per scenario. Tables-heavy. Include sample code outputs side-by-side. Lead with the verdict in the first 100 words.',
+      'Model decision page focused on coding specifically. Benchmark Qwen3-Coder 30B/7B, DeepSeek Coder V3, Codestral 22B, Kimi K2.7 Code, Granite Code, StarCoder 2. Run HumanEval+, MBPP+, plus real-world test (build CRUD app, debug existing repo, refactor old code). Score by language: Python, TypeScript, Rust, Go. Include VRAM requirements per quantization (Q4_K_M, Q5_K_M, Q8_0). Link to /local-llms/llm-quantization-explained for details — don\'t duplicate that explanation here. Show clear winner per scenario. Tables-heavy. Include sample code outputs side-by-side. Lead with the verdict in the first 100 words.',
     internalLinks: [
       { ref: 'replace-github-copilot-with-local-llm', reasoning: 'practical application context' },
       { ref: 'continue-dev-vs-cline-vs-aider-local', reasoning: 'pairs with model choice' },
@@ -400,7 +400,7 @@ export const POWER_LLM_BRIEFS: Record<string, ArticleBrief> = {
         ['Qwen3-Coder 7B', '', '', '', '', '', '', '', ''],
         ['DeepSeek Coder V3', '', '', '', '', '', '', '', ''],
         ['Codestral 22B', '', '', '', '', '', '', '', ''],
-        ['Llama 3.3 Code', '', '', '', '', '', '', '', ''],
+        ['Kimi K2.7 Code', '', '', '', '', '', '', '', ''],
         ['Granite Code', '', '', '', '', '', '', '', ''],
         ['StarCoder 2', '', '', '', '', '', '', '', ''],
       ],

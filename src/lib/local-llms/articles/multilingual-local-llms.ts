@@ -69,8 +69,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           items: [
             '**German**: Qwen3 7B leads on instruction-following; Mistral Small competitive for formal text.',
-            '**French**: Mistral Small is competitive with Qwen3 7B; both well above Llama 3.3 8B.',
-            '**Spanish, Italian, Portuguese**: Qwen3 7B slightly ahead; Llama 3.3 8B competitive.',
+            '**French**: Mistral Small is competitive with Qwen3 7B; both well above Llama 3.1 8B.',
+            '**Spanish, Italian, Portuguese**: Qwen3 7B slightly ahead; Llama 3.1 8B competitive.',
             '**Polish, Czech, Romanian**: Qwen3 7B leads; significant quality drop for Mistral Small.',
           ],
         },
@@ -78,14 +78,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'Which Local LLMs Perform Best for Japanese, Korean, and Chinese?',
           content: [
             '**Qwen3 dominates Asian language performance.** The model family was developed by Alibaba with massive Chinese-language training data and explicit multilingual fine-tuning for Japanese and Korean.',
-            'For Japanese: Qwen3 7B scores 15-20% higher than Llama 3.3 8B on JMT-bench (Japanese instruction-following benchmark). For Korean: Qwen3 outperforms alternatives by similar margins. For Chinese (Simplified): Qwen3 is in a class of its own among locally-runnable models.',
+            'For Japanese: Qwen3 7B scores 15-20% higher than Llama 3.1 8B on JMT-bench (Japanese instruction-following benchmark). For Korean: Qwen3 outperforms alternatives by similar margins. For Chinese (Simplified): Qwen3 is in a class of its own among locally-runnable models.',
             'As of April 2026, Japan\'s METI (Ministry of Economy, Trade and Industry) has been promoting domestic AI development, and some Japanese enterprises prefer locally-deployed models for data sovereignty. Qwen3 is the practical choice for Japanese-language local inference.',
           ],
           rows: [
             { 'Language': 'Chinese (Simplified)', 'Best Model': 'Qwen3 (any size)', 'Second Best': 'Gemma 3', 'Notes': 'Qwen3 dominates -- largest Chinese training corpus' },
             { 'Language': 'Japanese', 'Best Model': 'Qwen3 7B+', 'Second Best': 'Gemma 3 9B', 'Notes': '15-20% gap over Llama on JMT-bench' },
             { 'Language': 'Korean', 'Best Model': 'Qwen3 7B+', 'Second Best': 'Gemma 3 9B', 'Notes': 'Qwen3 significantly stronger' },
-            { 'Language': 'Traditional Chinese', 'Best Model': 'Qwen3', 'Second Best': 'Llama 3.3 8B', 'Notes': 'Qwen3 trained on both Simplified and Traditional' },
+            { 'Language': 'Traditional Chinese', 'Best Model': 'Qwen3', 'Second Best': 'Llama 3.1 8B', 'Notes': 'Qwen3 trained on both Simplified and Traditional' },
           ],
           columns: ['Language', 'Best Model', 'Second Best', 'Notes'],
         },
@@ -110,14 +110,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         comparisonTable: {
           title: 'Multilingual Local LLM Comparison: Qwen3 vs Llama 3.x vs Mistral vs Gemma 3',
           rows: [
-            { 'Language Group': 'Chinese (any dialect)', 'Qwen3 7B': '★★★★★', 'Llama 3.3 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
-            { 'Language Group': 'Japanese', 'Qwen3 7B': '★★★★', 'Llama 3.3 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
-            { 'Language Group': 'Korean', 'Qwen3 7B': '★★★★', 'Llama 3.3 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
-            { 'Language Group': 'French / German', 'Qwen3 7B': '★★★★', 'Llama 3.3 8B': '★★★', 'Mistral Small': '★★★★', 'Gemma 3 9B': '★★★' },
-            { 'Language Group': 'Spanish / Italian', 'Qwen3 7B': '★★★★', 'Llama 3.3 8B': '★★★', 'Mistral Small': '★★★', 'Gemma 3 9B': '★★★' },
-            { 'Language Group': 'Arabic (MSA)', 'Qwen3 7B': '★★★', 'Llama 3.3 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
+            { 'Language Group': 'Chinese (any dialect)', 'Qwen3 7B': '★★★★★', 'Llama 3.1 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
+            { 'Language Group': 'Japanese', 'Qwen3 7B': '★★★★', 'Llama 3.1 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
+            { 'Language Group': 'Korean', 'Qwen3 7B': '★★★★', 'Llama 3.1 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
+            { 'Language Group': 'French / German', 'Qwen3 7B': '★★★★', 'Llama 3.1 8B': '★★★', 'Mistral Small': '★★★★', 'Gemma 3 9B': '★★★' },
+            { 'Language Group': 'Spanish / Italian', 'Qwen3 7B': '★★★★', 'Llama 3.1 8B': '★★★', 'Mistral Small': '★★★', 'Gemma 3 9B': '★★★' },
+            { 'Language Group': 'Arabic (MSA)', 'Qwen3 7B': '★★★', 'Llama 3.1 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
           ],
-          columns: ['Language Group', 'Qwen3 7B', 'Llama 3.3 8B', 'Mistral Small', 'Gemma 3 9B'],
+          columns: ['Language Group', 'Qwen3 7B', 'Llama 3.1 8B', 'Mistral Small', 'Gemma 3 9B'],
           image: 'multilingual-llm-comparison-en.svg',
           imageCaption: 'Multilingual LLM comparison 2026: Qwen3 7B leads across all Asian languages (Chinese, Japanese, Korean with ★★★★-★★★★★ ratings). Mistral Small matches Qwen3 on European languages (French/German). Star ratings (1-5) reflect 2026 benchmarks.',
         },
@@ -126,7 +126,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           faqs: [
             {
               q: 'Using an English-primary model for Japanese or Chinese tasks',
-              a: 'Llama 3.3 8B and Mistral Small produce grammatically plausible but semantically inconsistent Japanese and Chinese output. The errors are not obvious without native language knowledge. For Japanese or Chinese tasks, always use Qwen3 -- the quality difference is significant and measurable.',
+              a: 'Llama 3.1 8B and Mistral Small produce grammatically plausible but semantically inconsistent Japanese and Chinese output. The errors are not obvious without native language knowledge. For Japanese or Chinese tasks, always use Qwen3 -- the quality difference is significant and measurable.',
             },
             {
               q: 'Prompting in English when the task is in another language',
@@ -148,7 +148,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'Does multilingual capability reduce English quality?',
-              a: 'Not significantly for Qwen3. Benchmarks show Qwen3 7B scores 74% on English MMLU -- comparable to Llama 3.3 8B at 73%. The multilingual training does not meaningfully degrade English performance at this model size.',
+              a: 'Not significantly for Qwen3. Benchmarks show Qwen3 7B scores 74% on English MMLU -- comparable to Llama 3.1 8B at 73%. The multilingual training does not meaningfully degrade English performance at this model size.',
             },
             {
               q: 'Which model is best for translation tasks locally?',
@@ -240,8 +240,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           items: [
             '**Alemán**: Qwen3 7B lidera en seguimiento de instrucciones; Mistral Small competitivo en texto formal.',
-            '**Francés**: Mistral Small es competitivo con Qwen3 7B; ambos muy por encima de Llama 3.3 8B.',
-            '**Español, italiano, portugués**: Qwen3 7B ligeramente adelante; Llama 3.3 8B competitivo.',
+            '**Francés**: Mistral Small es competitivo con Qwen3 7B; ambos muy por encima de Llama 3.1 8B.',
+            '**Español, italiano, portugués**: Qwen3 7B ligeramente adelante; Llama 3.1 8B competitivo.',
             '**Polaco, checo, rumano**: Qwen3 7B lidera; caída de calidad significativa para Mistral Small.',
           ],
         },
@@ -249,14 +249,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: '¿Qué LLM locales funcionan mejor para japonés, coreano y chino?',
           content: [
             '**Qwen3 domina el rendimiento en idiomas asiáticos.** La familia de modelos fue desarrollada por Alibaba con datos masivos de entrenamiento en chino y ajuste fino multilingue explícito para japonés y coreano.',
-            'Para japonés: Qwen3 7B puntúa 15-20% más alto que Llama 3.3 8B en JMT-bench (benchmark de seguimiento de instrucciones en japonés). Para coreano: Qwen3 supera a las alternativas por márgenes similares. Para chino (simplificado): Qwen3 está en una clase propia entre los modelos ejecutables localmente.',
+            'Para japonés: Qwen3 7B puntúa 15-20% más alto que Llama 3.1 8B en JMT-bench (benchmark de seguimiento de instrucciones en japonés). Para coreano: Qwen3 supera a las alternativas por márgenes similares. Para chino (simplificado): Qwen3 está en una clase propia entre los modelos ejecutables localmente.',
             'A partir de abril de 2026, el METI de Japón (Ministerio de Economía, Comercio e Industria) ha estado promoviendo el desarrollo doméstico de IA, y algunas empresas japonesas prefieren modelos desplegados localmente por soberanía de datos. Qwen3 es la opción práctica para la inferencia local en japonés.',
           ],
           rows: [
             { 'Idioma': 'Chino (simplificado)', 'Mejor modelo': 'Qwen3 (cualquier tamaño)', 'Segundo mejor': 'Gemma 3', 'Notas': 'Qwen3 domina -- mayor corpus de entrenamiento en chino' },
             { 'Idioma': 'Japonés', 'Mejor modelo': 'Qwen3 7B+', 'Segundo mejor': 'Gemma 3 9B', 'Notas': 'Diferencia del 15-20% sobre Llama en JMT-bench' },
             { 'Idioma': 'Coreano', 'Mejor modelo': 'Qwen3 7B+', 'Segundo mejor': 'Gemma 3 9B', 'Notas': 'Qwen3 significativamente más fuerte' },
-            { 'Idioma': 'Chino tradicional', 'Mejor modelo': 'Qwen3', 'Segundo mejor': 'Llama 3.3 8B', 'Notas': 'Qwen3 entrenado en simplificado y tradicional' },
+            { 'Idioma': 'Chino tradicional', 'Mejor modelo': 'Qwen3', 'Segundo mejor': 'Llama 3.1 8B', 'Notas': 'Qwen3 entrenado en simplificado y tradicional' },
           ],
           columns: ['Idioma', 'Mejor modelo', 'Segundo mejor', 'Notas'],
         },
@@ -281,14 +281,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         comparisonTable: {
           title: 'Comparativa de LLM locales multilingues: Qwen3 vs Llama 3.x vs Mistral vs Gemma 3',
           rows: [
-            { 'Grupo de idioma': 'Chino (cualquier dialecto)', 'Qwen3 7B': '★★★★★', 'Llama 3.3 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
-            { 'Grupo de idioma': 'Japonés', 'Qwen3 7B': '★★★★', 'Llama 3.3 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
-            { 'Grupo de idioma': 'Coreano', 'Qwen3 7B': '★★★★', 'Llama 3.3 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
-            { 'Grupo de idioma': 'Francés / Alemán', 'Qwen3 7B': '★★★★', 'Llama 3.3 8B': '★★★', 'Mistral Small': '★★★★', 'Gemma 3 9B': '★★★' },
-            { 'Grupo de idioma': 'Español / Italiano', 'Qwen3 7B': '★★★★', 'Llama 3.3 8B': '★★★', 'Mistral Small': '★★★', 'Gemma 3 9B': '★★★' },
-            { 'Grupo de idioma': 'Árabe (MSA)', 'Qwen3 7B': '★★★', 'Llama 3.3 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
+            { 'Grupo de idioma': 'Chino (cualquier dialecto)', 'Qwen3 7B': '★★★★★', 'Llama 3.1 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
+            { 'Grupo de idioma': 'Japonés', 'Qwen3 7B': '★★★★', 'Llama 3.1 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
+            { 'Grupo de idioma': 'Coreano', 'Qwen3 7B': '★★★★', 'Llama 3.1 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
+            { 'Grupo de idioma': 'Francés / Alemán', 'Qwen3 7B': '★★★★', 'Llama 3.1 8B': '★★★', 'Mistral Small': '★★★★', 'Gemma 3 9B': '★★★' },
+            { 'Grupo de idioma': 'Español / Italiano', 'Qwen3 7B': '★★★★', 'Llama 3.1 8B': '★★★', 'Mistral Small': '★★★', 'Gemma 3 9B': '★★★' },
+            { 'Grupo de idioma': 'Árabe (MSA)', 'Qwen3 7B': '★★★', 'Llama 3.1 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
           ],
-          columns: ['Grupo de idioma', 'Qwen3 7B', 'Llama 3.3 8B', 'Mistral Small', 'Gemma 3 9B'],
+          columns: ['Grupo de idioma', 'Qwen3 7B', 'Llama 3.1 8B', 'Mistral Small', 'Gemma 3 9B'],
           image: 'multilingual-llm-comparison-en.svg',
           imageCaption: 'Comparativa de LLM multilingues 2026: Qwen3 7B lidera en todos los idiomas asiáticos (chino, japonés, coreano con valoraciones ★★★★-★★★★★). Mistral Small iguala a Qwen3 en idiomas europeos (francés/alemán). Valoraciones en estrellas (1-5) reflejan benchmarks 2026.',
         },
@@ -297,7 +297,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           faqs: [
             {
               q: 'Usar un modelo con primacía en inglés para tareas en japonés o chino',
-              a: 'Llama 3.3 8B y Mistral Small producen salidas en japonés y chino gramaticalmente plausibles pero semánticamente inconsistentes. Los errores no son evidentes sin conocimiento nativo del idioma. Para tareas en japonés o chino, usa siempre Qwen3 -- la diferencia de calidad es significativa y medible.',
+              a: 'Llama 3.1 8B y Mistral Small producen salidas en japonés y chino gramaticalmente plausibles pero semánticamente inconsistentes. Los errores no son evidentes sin conocimiento nativo del idioma. Para tareas en japonés o chino, usa siempre Qwen3 -- la diferencia de calidad es significativa y medible.',
             },
             {
               q: 'Escribir los prompts en inglés cuando la tarea es en otro idioma',
@@ -319,7 +319,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: '¿La capacidad multilingue reduce la calidad en inglés?',
-              a: 'No de manera significativa para Qwen3. Los benchmarks muestran que Qwen3 7B puntúa 74% en MMLU en inglés -- comparable a Llama 3.3 8B con 73%. El entrenamiento multilingue no degrada de forma significativa el rendimiento en inglés en este tamaño de modelo.',
+              a: 'No de manera significativa para Qwen3. Los benchmarks muestran que Qwen3 7B puntúa 74% en MMLU en inglés -- comparable a Llama 3.1 8B con 73%. El entrenamiento multilingue no degrada de forma significativa el rendimiento en inglés en este tamaño de modelo.',
             },
             {
               q: '¿Qué modelo es mejor para tareas de traducción de forma local?',
@@ -439,7 +439,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': '¿La capacidad multilingue reduce la calidad en inglés?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'No de manera significativa para Qwen3. Los benchmarks muestran que Qwen3 7B puntúa 74% en MMLU en inglés -- comparable a Llama 3.3 8B con 73%. El entrenamiento multilingue no degrada de forma significativa el rendimiento en inglés en este tamaño de modelo.'
+              'text': 'No de manera significativa para Qwen3. Los benchmarks muestran que Qwen3 7B puntúa 74% en MMLU en inglés -- comparable a Llama 3.1 8B con 73%. El entrenamiento multilingue no degrada de forma significativa el rendimiento en inglés en este tamaño de modelo.'
             }
           },
           {
@@ -572,8 +572,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           items: [
             '**الألمانية**: Qwen3 7B يتصدر في اتباع التعليمات؛ Mistral Small تنافسي في النص الرسمي.',
-            '**الفرنسية**: Mistral Small تنافسي مع Qwen3 7B؛ كلاهما أعلى بكثير من Llama 3.3 8B.',
-            '**الإسبانية، الإيطالية، البرتغالية**: Qwen3 7B متقدم قليلًا؛ Llama 3.3 8B تنافسي.',
+            '**الفرنسية**: Mistral Small تنافسي مع Qwen3 7B؛ كلاهما أعلى بكثير من Llama 3.1 8B.',
+            '**الإسبانية، الإيطالية، البرتغالية**: Qwen3 7B متقدم قليلًا؛ Llama 3.1 8B تنافسي.',
             '**البولندية، التشيكية، الرومانية**: Qwen3 7B يتصدر؛ انخفاض جودة ملحوظ لـ Mistral Small.',
           ],
         },
@@ -581,14 +581,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'أي نماذج LLM المحلية تعمل بشكل أفضل لليابانية والكورية والصينية؟',
           content: [
             '**يهيمن Qwen3 على الأداء في اللغات الآسيوية.** طُوِّرت عائلة النماذج من Alibaba ببيانات تدريب صينية ضخمة وضبط دقيق صريح متعدد اللغات لليابانية والكورية.',
-            'لليابانية: يسجّل Qwen3 7B أعلى بنسبة 15-20% من Llama 3.3 8B في JMT-bench (اختبار أداء اتباع التعليمات باليابانية). للكورية: يتفوق Qwen3 على البدائل بهوامش مماثلة. للصينية (المبسطة): Qwen3 في فئة خاصة به بين النماذج القابلة للتشغيل محليًا.',
+            'لليابانية: يسجّل Qwen3 7B أعلى بنسبة 15-20% من Llama 3.1 8B في JMT-bench (اختبار أداء اتباع التعليمات باليابانية). للكورية: يتفوق Qwen3 على البدائل بهوامش مماثلة. للصينية (المبسطة): Qwen3 في فئة خاصة به بين النماذج القابلة للتشغيل محليًا.',
             'اعتبارًا من أبريل 2026، ظلت وزارة الاقتصاد والتجارة والصناعة اليابانية (METI) تروّج للتطوير المحلي للذكاء الاصطناعي، وتفضّل بعض الشركات اليابانية النماذج المنشورة محليًا لسيادة البيانات. Qwen3 هو الخيار العملي للاستدلال المحلي باليابانية.',
           ],
           rows: [
             { 'Idioma': 'الصينية (المبسطة)', 'Mejor modelo': 'Qwen3 (أي حجم)', 'Segundo mejor': 'Gemma 3', 'Notas': 'Qwen3 يهيمن -- أكبر مدوّنة تدريب صينية' },
             { 'Idioma': 'اليابانية', 'Mejor modelo': 'Qwen3 7B+', 'Segundo mejor': 'Gemma 3 9B', 'Notas': 'فرق 15-20% عن Llama في JMT-bench' },
             { 'Idioma': 'الكورية', 'Mejor modelo': 'Qwen3 7B+', 'Segundo mejor': 'Gemma 3 9B', 'Notas': 'Qwen3 أقوى بشكل ملحوظ' },
-            { 'Idioma': 'الصينية التقليدية', 'Mejor modelo': 'Qwen3', 'Segundo mejor': 'Llama 3.3 8B', 'Notas': 'Qwen3 مدرَّب على المبسطة والتقليدية' },
+            { 'Idioma': 'الصينية التقليدية', 'Mejor modelo': 'Qwen3', 'Segundo mejor': 'Llama 3.1 8B', 'Notas': 'Qwen3 مدرَّب على المبسطة والتقليدية' },
           ],
           columns: ['Idioma', 'Mejor modelo', 'Segundo mejor', 'Notas'],
         },
@@ -613,14 +613,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         comparisonTable: {
           title: 'مقارنة نماذج LLM المحلية متعددة اللغات: Qwen3 مقابل Llama 3.x مقابل Mistral مقابل Gemma 3',
           rows: [
-            { 'Grupo de idioma': 'الصينية (أي لهجة)', 'Qwen3 7B': '★★★★★', 'Llama 3.3 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
-            { 'Grupo de idioma': 'اليابانية', 'Qwen3 7B': '★★★★', 'Llama 3.3 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
-            { 'Grupo de idioma': 'الكورية', 'Qwen3 7B': '★★★★', 'Llama 3.3 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
-            { 'Grupo de idioma': 'الفرنسية / الألمانية', 'Qwen3 7B': '★★★★', 'Llama 3.3 8B': '★★★', 'Mistral Small': '★★★★', 'Gemma 3 9B': '★★★' },
-            { 'Grupo de idioma': 'الإسبانية / الإيطالية', 'Qwen3 7B': '★★★★', 'Llama 3.3 8B': '★★★', 'Mistral Small': '★★★', 'Gemma 3 9B': '★★★' },
-            { 'Grupo de idioma': 'العربية (الفصحى)', 'Qwen3 7B': '★★★', 'Llama 3.3 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
+            { 'Grupo de idioma': 'الصينية (أي لهجة)', 'Qwen3 7B': '★★★★★', 'Llama 3.1 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
+            { 'Grupo de idioma': 'اليابانية', 'Qwen3 7B': '★★★★', 'Llama 3.1 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
+            { 'Grupo de idioma': 'الكورية', 'Qwen3 7B': '★★★★', 'Llama 3.1 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
+            { 'Grupo de idioma': 'الفرنسية / الألمانية', 'Qwen3 7B': '★★★★', 'Llama 3.1 8B': '★★★', 'Mistral Small': '★★★★', 'Gemma 3 9B': '★★★' },
+            { 'Grupo de idioma': 'الإسبانية / الإيطالية', 'Qwen3 7B': '★★★★', 'Llama 3.1 8B': '★★★', 'Mistral Small': '★★★', 'Gemma 3 9B': '★★★' },
+            { 'Grupo de idioma': 'العربية (الفصحى)', 'Qwen3 7B': '★★★', 'Llama 3.1 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
           ],
-          columns: ['Grupo de idioma', 'Qwen3 7B', 'Llama 3.3 8B', 'Mistral Small', 'Gemma 3 9B'],
+          columns: ['Grupo de idioma', 'Qwen3 7B', 'Llama 3.1 8B', 'Mistral Small', 'Gemma 3 9B'],
           image: 'multilingual-llm-comparison-en.svg',
           imageCaption: 'مقارنة نماذج LLM متعددة اللغات 2026: Qwen3 7B يتصدر في جميع اللغات الآسيوية (الصينية، اليابانية، الكورية بتقييمات ★★★★-★★★★★). Mistral Small يضاهي Qwen3 في اللغات الأوروبية (الفرنسية/الألمانية). تقييمات النجوم (1-5) تعكس اختبارات أداء 2026.',
         },
@@ -629,7 +629,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           faqs: [
             {
               q: 'استخدام نموذج ذي أولوية للإنجليزية لمهام باليابانية أو الصينية',
-              a: 'ينتج Llama 3.3 8B وMistral Small مخرجات يابانية وصينية معقولة نحويًا لكنها غير متسقة دلاليًا. الأخطاء غير واضحة دون معرفة أصلية باللغة. لمهام اليابانية أو الصينية، استخدم دائمًا Qwen3 -- فرق الجودة ملحوظ وقابل للقياس.',
+              a: 'ينتج Llama 3.1 8B وMistral Small مخرجات يابانية وصينية معقولة نحويًا لكنها غير متسقة دلاليًا. الأخطاء غير واضحة دون معرفة أصلية باللغة. لمهام اليابانية أو الصينية، استخدم دائمًا Qwen3 -- فرق الجودة ملحوظ وقابل للقياس.',
             },
             {
               q: 'كتابة المحفّزات بالإنجليزية بينما المهمة بلغة أخرى',
@@ -651,7 +651,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'هل تقلّل القدرة متعددة اللغات من الجودة بالإنجليزية؟',
-              a: 'لا بشكل ملحوظ لـ Qwen3. تُظهر اختبارات الأداء أن Qwen3 7B يسجّل 74% في MMLU بالإنجليزية -- مماثل لـ Llama 3.3 8B بـ 73%. التدريب متعدد اللغات لا يضعف الأداء بالإنجليزية بشكل ملحوظ في هذا الحجم.',
+              a: 'لا بشكل ملحوظ لـ Qwen3. تُظهر اختبارات الأداء أن Qwen3 7B يسجّل 74% في MMLU بالإنجليزية -- مماثل لـ Llama 3.1 8B بـ 73%. التدريب متعدد اللغات لا يضعف الأداء بالإنجليزية بشكل ملحوظ في هذا الحجم.',
             },
             {
               q: 'أي نموذج أفضل لمهام الترجمة محليًا؟',
@@ -771,7 +771,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'name': 'هل تقلّل القدرة متعددة اللغات من الجودة بالإنجليزية؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'لا بشكل ملحوظ لـ Qwen3. تُظهر اختبارات الأداء أن Qwen3 7B يسجّل 74% في MMLU بالإنجليزية -- مماثل لـ Llama 3.3 8B بـ 73%. التدريب متعدد اللغات لا يضعف الأداء بالإنجليزية بشكل ملحوظ في هذا الحجم.'
+              'text': 'لا بشكل ملحوظ لـ Qwen3. تُظهر اختبارات الأداء أن Qwen3 7B يسجّل 74% في MMLU بالإنجليزية -- مماثل لـ Llama 3.1 8B بـ 73%. التدريب متعدد اللغات لا يضعف الأداء بالإنجليزية بشكل ملحوظ في هذا الحجم.'
             }
           },
           {
@@ -901,13 +901,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'Quais LLMs locais funcionam melhor para idiomas europeus?',
           content: [
             '**Para alemão, francês, espanhol, italiano, português, holandês e polonês — Qwen3, Mistral e Llama 3.x produzem resultados aceitáveis.** O Mistral tem força particular no francês porque a Mistral AI é uma empresa francesa com ênfase em dados de treinamento em francês. Em abril de 2026, os benchmarks em alemão mostram que o Qwen3 7B supera o Mistral Small em 8–12% em tarefas de seguimento de instruções em alemão.',
-            '**Para o português especificamente:** Qwen3 7B lidera em seguimento de instruções formais em pt-BR e pt-PT. Mistral Small é competitivo em texto formal. Llama 3.3 8B é adequado para tarefas gerais. Para casos de uso sensíveis à LGPD no Brasil, executar um modelo local (de qualquer família) é preferível às APIs na nuvem por razões de residência de dados.',
+            '**Para o português especificamente:** Qwen3 7B lidera em seguimento de instruções formais em pt-BR e pt-PT. Mistral Small é competitivo em texto formal. Llama 3.1 8B é adequado para tarefas gerais. Para casos de uso sensíveis à LGPD no Brasil, executar um modelo local (de qualquer família) é preferível às APIs na nuvem por razões de residência de dados.',
           ],
           items: [
             '**Alemão**: Qwen3 7B lidera no seguimento de instruções; Mistral Small competitivo em texto formal.',
-            '**Francês**: Mistral Small é competitivo com Qwen3 7B; ambos muito acima do Llama 3.3 8B.',
-            '**Português (Brasil/Portugal)**: Qwen3 7B ligeiramente à frente; Llama 3.3 8B competitivo.',
-            '**Espanhol, italiano**: Qwen3 7B ligeiramente à frente; Llama 3.3 8B competitivo.',
+            '**Francês**: Mistral Small é competitivo com Qwen3 7B; ambos muito acima do Llama 3.1 8B.',
+            '**Português (Brasil/Portugal)**: Qwen3 7B ligeiramente à frente; Llama 3.1 8B competitivo.',
+            '**Espanhol, italiano**: Qwen3 7B ligeiramente à frente; Llama 3.1 8B competitivo.',
             '**Polonês, tcheco, romeno**: Qwen3 7B lidera; queda significativa de qualidade para Mistral Small.',
           ],
         },
@@ -933,7 +933,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           rows: [
             { 'Modelo': 'Qwen3 7B', 'Pontuação MSA (1–5)': '★★★', 'Pontuação dialeto': '★★', 'Velocidade de geração': '30–50 tok/s' },
             { 'Modelo': 'Gemma 3 9B', 'Pontuação MSA (1–5)': '★★★', 'Pontuação dialeto': '★★', 'Velocidade de geração': '30–50 tok/s' },
-            { 'Modelo': 'Llama 3.3 8B', 'Pontuação MSA (1–5)': '★★', 'Pontuação dialeto': '★', 'Velocidade de geração': '40–60 tok/s' },
+            { 'Modelo': 'Llama 3.1 8B', 'Pontuação MSA (1–5)': '★★', 'Pontuação dialeto': '★', 'Velocidade de geração': '40–60 tok/s' },
             { 'Modelo': 'Mistral Small', 'Pontuação MSA (1–5)': '★', 'Pontuação dialeto': '★', 'Velocidade de geração': '35–55 tok/s' },
           ],
           columns: ['Modelo', 'Pontuação MSA (1–5)', 'Pontuação dialeto', 'Velocidade de geração'],
@@ -954,21 +954,21 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         comparisonTable: {
           title: 'Tabela comparativa multilíngue',
           rows: [
-            { 'Idioma': 'Inglês', 'Qwen3 7B': '★★★★★', 'Llama 3.3 8B': '★★★★★', 'Mistral Small': '★★★★★', 'Gemma 3 9B': '★★★★★' },
-            { 'Idioma': 'Chinês', 'Qwen3 7B': '★★★★★', 'Llama 3.3 8B': '★★★', 'Mistral Small': '★★', 'Gemma 3 9B': '★★★' },
-            { 'Idioma': 'Japonês', 'Qwen3 7B': '★★★★', 'Llama 3.3 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
-            { 'Idioma': 'Coreano', 'Qwen3 7B': '★★★★', 'Llama 3.3 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
-            { 'Idioma': 'Alemão', 'Qwen3 7B': '★★★★', 'Llama 3.3 8B': '★★★★', 'Mistral Small': '★★★★', 'Gemma 3 9B': '★★★★' },
-            { 'Idioma': 'Francês', 'Qwen3 7B': '★★★★', 'Llama 3.3 8B': '★★★★', 'Mistral Small': '★★★★★', 'Gemma 3 9B': '★★★★' },
-            { 'Idioma': 'Português', 'Qwen3 7B': '★★★★', 'Llama 3.3 8B': '★★★★', 'Mistral Small': '★★★★', 'Gemma 3 9B': '★★★★' },
-            { 'Idioma': 'Árabe (MSA)', 'Qwen3 7B': '★★★', 'Llama 3.3 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
+            { 'Idioma': 'Inglês', 'Qwen3 7B': '★★★★★', 'Llama 3.1 8B': '★★★★★', 'Mistral Small': '★★★★★', 'Gemma 3 9B': '★★★★★' },
+            { 'Idioma': 'Chinês', 'Qwen3 7B': '★★★★★', 'Llama 3.1 8B': '★★★', 'Mistral Small': '★★', 'Gemma 3 9B': '★★★' },
+            { 'Idioma': 'Japonês', 'Qwen3 7B': '★★★★', 'Llama 3.1 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
+            { 'Idioma': 'Coreano', 'Qwen3 7B': '★★★★', 'Llama 3.1 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
+            { 'Idioma': 'Alemão', 'Qwen3 7B': '★★★★', 'Llama 3.1 8B': '★★★★', 'Mistral Small': '★★★★', 'Gemma 3 9B': '★★★★' },
+            { 'Idioma': 'Francês', 'Qwen3 7B': '★★★★', 'Llama 3.1 8B': '★★★★', 'Mistral Small': '★★★★★', 'Gemma 3 9B': '★★★★' },
+            { 'Idioma': 'Português', 'Qwen3 7B': '★★★★', 'Llama 3.1 8B': '★★★★', 'Mistral Small': '★★★★', 'Gemma 3 9B': '★★★★' },
+            { 'Idioma': 'Árabe (MSA)', 'Qwen3 7B': '★★★', 'Llama 3.1 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
           ],
-          columns: ['Idioma', 'Qwen3 7B', 'Llama 3.3 8B', 'Mistral Small', 'Gemma 3 9B'],
+          columns: ['Idioma', 'Qwen3 7B', 'Llama 3.1 8B', 'Mistral Small', 'Gemma 3 9B'],
         },
         commonMistakes: {
           title: 'Erros comuns com modelos multilíngues',
           items: [
-            '**Assumir que qualquer LLM suporta bem todos os idiomas.** O Llama 3.3 8B tem suporte limitado ao japonês, coreano e árabe — para esses idiomas, use Qwen3 ou Gemma 3.',
+            '**Assumir que qualquer LLM suporta bem todos os idiomas.** O Llama 3.1 8B tem suporte limitado ao japonês, coreano e árabe — para esses idiomas, use Qwen3 ou Gemma 3.',
             '**Usar o modelo de embedding errado.** Para RAG multilíngue, o bge-m3 (suporte a 100+ idiomas) supera o nomic-embed-text em idiomas não-ingleses.',
             '**Ignorar diferenças de tokenização.** Modelos com tokenização nativa do idioma (Qwen3 para chinês/japonês/coreano) processam texto 30–40% mais eficientemente, reduzindo o custo de inferência.',
             '**Esperar qualidade de nível GPT-5.5 em modelos locais para idiomas asiáticos.** A lacuna é maior do que em inglês. Para uso profissional crítico em japonês/coreano, os modelos locais ainda ficam atrás.',
@@ -980,7 +980,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           faqs: [
             {
               q: 'O Qwen3 é bom para português brasileiro?',
-              a: 'Sim. Qwen3 7B oferece bom suporte ao português, com treinamento em dados pt-BR e pt-PT. É ligeiramente melhor que o Llama 3.3 8B em seguimento de instruções formais em português. Mistral Small também é competitivo. Para uso profissional crítico, teste ambos em sua tarefa específica.',
+              a: 'Sim. Qwen3 7B oferece bom suporte ao português, com treinamento em dados pt-BR e pt-PT. É ligeiramente melhor que o Llama 3.1 8B em seguimento de instruções formais em português. Mistral Small também é competitivo. Para uso profissional crítico, teste ambos em sua tarefa específica.',
             },
             {
               q: 'Qual LLM local é melhor para tradução inglês-português?',
@@ -1063,47 +1063,47 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         whichSupport: {
           title: 'Welche Sprachen unterstützen lokale LLMs?',
           content: 'Alle modernen lokalen Sprachmodelle (Qwen3, Llama 3.3, Mistral, Gemma) unterstützen mindestens die Top-10-Sprachen nach Sprecherinnen- und Sprecherzahl. Die Unterstützungsqualität variiert jedoch stark: Qwen3 dominiert asiatische Sprachen, während Mistral und Llama bei europäischen Sprachen konkurrieren.',
-          columns: ['Sprachfamilie', 'Qwen3 7B', 'Llama 3.3 8B', 'Mistral Small', 'Gemma 3 9B'],
+          columns: ['Sprachfamilie', 'Qwen3 7B', 'Llama 3.1 8B', 'Mistral Small', 'Gemma 3 9B'],
           rows: [
             {
               'Sprachfamilie': 'Chinesisch (alle Dialekte)',
               'Qwen3 7B': '★★★★★ (5,0)',
-              'Llama 3.3 8B': '★★ (2,0)',
+              'Llama 3.1 8B': '★★ (2,0)',
               'Mistral Small': '★ (1,0)',
               'Gemma 3 9B': '★★★ (3,0)'
             },
             {
               'Sprachfamilie': 'Japanisch',
               'Qwen3 7B': '★★★★ (4,0)',
-              'Llama 3.3 8B': '★★ (2,0)',
+              'Llama 3.1 8B': '★★ (2,0)',
               'Mistral Small': '★ (1,0)',
               'Gemma 3 9B': '★★★ (3,0)'
             },
             {
               'Sprachfamilie': 'Koreanisch',
               'Qwen3 7B': '★★★★ (4,0)',
-              'Llama 3.3 8B': '★★ (2,0)',
+              'Llama 3.1 8B': '★★ (2,0)',
               'Mistral Small': '★ (1,0)',
               'Gemma 3 9B': '★★★ (3,0)'
             },
             {
               'Sprachfamilie': 'Französisch / Deutsch',
               'Qwen3 7B': '★★★★ (4,0)',
-              'Llama 3.3 8B': '★★★ (3,0)',
+              'Llama 3.1 8B': '★★★ (3,0)',
               'Mistral Small': '★★★★ (4,0)',
               'Gemma 3 9B': '★★★ (3,0)'
             },
             {
               'Sprachfamilie': 'Spanisch / Italienisch',
               'Qwen3 7B': '★★★★ (4,0)',
-              'Llama 3.3 8B': '★★★ (3,0)',
+              'Llama 3.1 8B': '★★★ (3,0)',
               'Mistral Small': '★★★ (3,0)',
               'Gemma 3 9B': '★★★ (3,0)'
             },
             {
               'Sprachfamilie': 'Arabisch (MSA)',
               'Qwen3 7B': '★★★ (3,0)',
-              'Llama 3.3 8B': '★★ (2,0)',
+              'Llama 3.1 8B': '★★ (2,0)',
               'Mistral Small': '★ (1,0)',
               'Gemma 3 9B': '★★★ (3,0)'
             }
@@ -1115,7 +1115,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           items: [
             '**Mistral Small für Französisch und Deutsch**: Mistral wurde mit französischen und deutschen Trainingsdaten trainiert und liefert native Präzision. Ideal für DSGVO-Compliance und französische Datenschutzauflagen (CNIL-konform bei lokaler Verarbeitung).',
             '**Qwen3 7B für Spanisch und Italienisch**: Qwen3 bietet überlegene Qualität bei romanischen Sprachen. Mit Q4_K_M-Quantisierung läuft es auf einem MacBook Pro M2 oder Standard-Linux-GPU ohne Speicherprobleme.',
-            '**Llama 3.3 8B als Fallback**: Llama 3.3 8B ist ausreichend für europäische Sprachen (3-Stern-Bewertung), aber nicht optimal. Verwenden Sie es nur, wenn Qwen3 oder Mistral nicht verfügbar sind.',
+            '**Llama 3.1 8B als Fallback**: Llama 3.1 8B ist ausreichend für europäische Sprachen (3-Stern-Bewertung), aber nicht optimal. Verwenden Sie es nur, wenn Qwen3 oder Mistral nicht verfügbar sind.',
             '**DACH-Spezialisten (Deutsch/Österreich/Schweiz)**: Für deutschsprachige Unternehmen: Mistral Small erfüllt BSI-Grundschutz-Anforderungen bei lokaler Verarbeitung. Keine Datentransfers zu US-Servern erforderlich.',
             '**Quantisierung: Q4_K_M ist Standard**: Verwenden Sie immer **Q4_K_M** für 7B-Modelle bei europäischen Sprachen. VRAM-Anforderung: 8 GB. Genauigkeitsverlust: <0,5 % gegenüber fp16.',
             '**Benchmarks: JMT-bench + MMLU**: Qwen3 und Mistral schneiden bei MMLU (Multiple-Choice-Wissenstests) mit 72-75 % Genauigkeit ab. Bei domänenspezifischen Tests (Recht, Medizin, Finanzen) sinken die Scores auf 55-70 %.'
@@ -1124,24 +1124,24 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         asian: {
           title: 'Beste lokale LLMs für asiatische Sprachen',
           content: 'Qwen3 7B dominiert asiatische Sprachen deutlich. Bei Chinesisch, Japanisch und Koreanisch erreicht es 4-5 Sterne, während Llama und Mistral 1-2 Sterne erhalten. Für Unternehmen in Japan, Südkorea oder China ist Qwen3 die einzige praktische Wahl.',
-          columns: ['Sprache', 'Qwen3 7B', 'Llama 3.3 8B', 'Mistral Small'],
+          columns: ['Sprache', 'Qwen3 7B', 'Llama 3.1 8B', 'Mistral Small'],
           rows: [
             {
               'Sprache': 'Chinesisch (vereinfacht & traditionell)',
               'Qwen3 7B': '★★★★★ (5,0)',
-              'Llama 3.3 8B': '★★ (2,0)',
+              'Llama 3.1 8B': '★★ (2,0)',
               'Mistral Small': '★ (1,0)'
             },
             {
               'Sprache': 'Japanisch (Hiragana, Kanji, Katakana)',
               'Qwen3 7B': '★★★★ (4,0)',
-              'Llama 3.3 8B': '★★ (2,0)',
+              'Llama 3.1 8B': '★★ (2,0)',
               'Mistral Small': '★ (1,0)'
             },
             {
               'Sprache': 'Koreanisch (Hangul)',
               'Qwen3 7B': '★★★★ (4,0)',
-              'Llama 3.3 8B': '★★ (2,0)',
+              'Llama 3.1 8B': '★★ (2,0)',
               'Mistral Small': '★ (1,0)'
             }
           ]
@@ -1163,47 +1163,47 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         comparisonTable: {
           title: 'Vergleichstabelle: Qwen3 vs. Llama vs. Mistral vs. Gemma',
           content: 'Diese Tabelle fasst die Sprachunterstützung zusammen. Bewertungen basieren auf JMT-bench (Japanisch), MMLU (allgemein) und sprachspezifischen Evaluierungen (2026).',
-          columns: ['Sprachgruppe', 'Qwen3 7B', 'Llama 3.3 8B', 'Mistral Small', 'Gemma 3 9B'],
+          columns: ['Sprachgruppe', 'Qwen3 7B', 'Llama 3.1 8B', 'Mistral Small', 'Gemma 3 9B'],
           rows: [
             {
               'Sprachgruppe': 'Chinesisch (alle Dialekte)',
               'Qwen3 7B': '★★★★★',
-              'Llama 3.3 8B': '★★',
+              'Llama 3.1 8B': '★★',
               'Mistral Small': '★',
               'Gemma 3 9B': '★★★'
             },
             {
               'Sprachgruppe': 'Japanisch',
               'Qwen3 7B': '★★★★',
-              'Llama 3.3 8B': '★★',
+              'Llama 3.1 8B': '★★',
               'Mistral Small': '★',
               'Gemma 3 9B': '★★★'
             },
             {
               'Sprachgruppe': 'Koreanisch',
               'Qwen3 7B': '★★★★',
-              'Llama 3.3 8B': '★★',
+              'Llama 3.1 8B': '★★',
               'Mistral Small': '★',
               'Gemma 3 9B': '★★★'
             },
             {
               'Sprachgruppe': 'Französisch / Deutsch',
               'Qwen3 7B': '★★★★',
-              'Llama 3.3 8B': '★★★',
+              'Llama 3.1 8B': '★★★',
               'Mistral Small': '★★★★',
               'Gemma 3 9B': '★★★'
             },
             {
               'Sprachgruppe': 'Spanisch / Italienisch',
               'Qwen3 7B': '★★★★',
-              'Llama 3.3 8B': '★★★',
+              'Llama 3.1 8B': '★★★',
               'Mistral Small': '★★★',
               'Gemma 3 9B': '★★★'
             },
             {
               'Sprachgruppe': 'Arabisch (MSA)',
               'Qwen3 7B': '★★★',
-              'Llama 3.3 8B': '★★',
+              'Llama 3.1 8B': '★★',
               'Mistral Small': '★',
               'Gemma 3 9B': '★★★'
             }
@@ -1587,47 +1587,47 @@ schema: {
         whichSupport: {
           title: 'Quelles langues supportent les LLMs locaux ?',
           content: 'Tous les modèles locaux modernes (Qwen3, Llama 3.3, Mistral, Gemma) prennent en charge au moins les 10 principales langues par nombre de locuteurs. Cependant, la qualité du support varie considérablement : Qwen3 domine les langues asiatiques, tandis que Mistral et Llama rivalisent sur les langues européennes.',
-          columns: ['Groupe linguistique', 'Qwen3 7B', 'Llama 3.3 8B', 'Mistral Small', 'Gemma 3 9B'],
+          columns: ['Groupe linguistique', 'Qwen3 7B', 'Llama 3.1 8B', 'Mistral Small', 'Gemma 3 9B'],
           rows: [
             {
               'Groupe linguistique': 'Chinois (tous les dialectes)',
               'Qwen3 7B': '★★★★★ (5.0)',
-              'Llama 3.3 8B': '★★ (2.0)',
+              'Llama 3.1 8B': '★★ (2.0)',
               'Mistral Small': '★ (1.0)',
               'Gemma 3 9B': '★★★ (3.0)'
             },
             {
               'Groupe linguistique': 'Japonais',
               'Qwen3 7B': '★★★★ (4.0)',
-              'Llama 3.3 8B': '★★ (2.0)',
+              'Llama 3.1 8B': '★★ (2.0)',
               'Mistral Small': '★ (1.0)',
               'Gemma 3 9B': '★★★ (3.0)'
             },
             {
               'Groupe linguistique': 'Coréen',
               'Qwen3 7B': '★★★★ (4.0)',
-              'Llama 3.3 8B': '★★ (2.0)',
+              'Llama 3.1 8B': '★★ (2.0)',
               'Mistral Small': '★ (1.0)',
               'Gemma 3 9B': '★★★ (3.0)'
             },
             {
               'Groupe linguistique': 'Français / Allemand',
               'Qwen3 7B': '★★★★ (4.0)',
-              'Llama 3.3 8B': '★★★ (3.0)',
+              'Llama 3.1 8B': '★★★ (3.0)',
               'Mistral Small': '★★★★ (4.0)',
               'Gemma 3 9B': '★★★ (3.0)'
             },
             {
               'Groupe linguistique': 'Espagnol / Italien',
               'Qwen3 7B': '★★★★ (4.0)',
-              'Llama 3.3 8B': '★★★ (3.0)',
+              'Llama 3.1 8B': '★★★ (3.0)',
               'Mistral Small': '★★★ (3.0)',
               'Gemma 3 9B': '★★★ (3.0)'
             },
             {
               'Groupe linguistique': 'Arabe (MSA)',
               'Qwen3 7B': '★★★ (3.0)',
-              'Llama 3.3 8B': '★★ (2.0)',
+              'Llama 3.1 8B': '★★ (2.0)',
               'Mistral Small': '★ (1.0)',
               'Gemma 3 9B': '★★★ (3.0)'
             }
@@ -1639,7 +1639,7 @@ schema: {
           items: [
             '**Mistral Small pour le français et l\'allemand** : Mistral a été entraîné sur des données de texte français et allemand et fournit une précision native. Idéal pour la conformité RGPD et les obligations de protection des données françaises (conforme à la CNIL lors du traitement local).',
             '**Qwen3 7B pour l\'espagnol et l\'italien** : Qwen3 offre une qualité supérieure sur les langues romanes. Avec la quantification Q4_K_M, il fonctionne sur un MacBook Pro M2 ou un GPU Linux standard sans problèmes de mémoire.',
-            '**Llama 3.3 8B en secours** : Llama 3.3 8B est suffisant pour les langues européennes (évaluation 3 étoiles), mais pas optimal. Utilisez-le uniquement si Qwen3 ou Mistral ne sont pas disponibles.',
+            '**Llama 3.1 8B en secours** : Llama 3.1 8B est suffisant pour les langues européennes (évaluation 3 étoiles), mais pas optimal. Utilisez-le uniquement si Qwen3 ou Mistral ne sont pas disponibles.',
             '**Spécialistes DACH (Allemagne/Autriche/Suisse)** : Pour les organisations de langue allemande : Mistral Small satisfait les exigences BSI-Grundschutz en traitement local. Aucun transfert de données vers des serveurs américains requis.',
             '**Quantification : Q4_K_M est la norme** : Utilisez toujours **Q4_K_M** pour les modèles 7B sur les langues européennes. Exigence VRAM : 8 GB. Perte de précision : <0.5 % par rapport à fp16.',
             '**Benchmarks : JMT-bench + MMLU** : Qwen3 et Mistral obtiennent respectivement 72-75 % de précision sur MMLU (tests de connaissances à choix multiples). Sur des tests spécifiques au domaine (droit, médecine, finance), les scores baissent à 55-70 %.'
@@ -1648,24 +1648,24 @@ schema: {
         asian: {
           title: 'Meilleurs LLMs locaux pour les langues asiatiques',
           content: 'Qwen3 7B domine clairement les langues asiatiques. Pour le chinois, le japonais et le coréen, il obtient 4-5 étoiles, tandis que Llama et Mistral reçoivent 1-2 étoiles. Pour les organisations au Japon, en Corée du Sud ou en Chine, Qwen3 est le seul choix pratique.',
-          columns: ['Langue', 'Qwen3 7B', 'Llama 3.3 8B', 'Mistral Small'],
+          columns: ['Langue', 'Qwen3 7B', 'Llama 3.1 8B', 'Mistral Small'],
           rows: [
             {
               'Langue': 'Chinois (simplifié et traditionnel)',
               'Qwen3 7B': '★★★★★ (5.0)',
-              'Llama 3.3 8B': '★★ (2.0)',
+              'Llama 3.1 8B': '★★ (2.0)',
               'Mistral Small': '★ (1.0)'
             },
             {
               'Langue': 'Japonais (Hiragana, Kanji, Katakana)',
               'Qwen3 7B': '★★★★ (4.0)',
-              'Llama 3.3 8B': '★★ (2.0)',
+              'Llama 3.1 8B': '★★ (2.0)',
               'Mistral Small': '★ (1.0)'
             },
             {
               'Langue': 'Coréen (Hangul)',
               'Qwen3 7B': '★★★★ (4.0)',
-              'Llama 3.3 8B': '★★ (2.0)',
+              'Llama 3.1 8B': '★★ (2.0)',
               'Mistral Small': '★ (1.0)'
             }
           ]
@@ -1687,47 +1687,47 @@ schema: {
         comparisonTable: {
           title: 'Tableau comparatif : Qwen3 vs Llama vs Mistral vs Gemma',
           content: 'Ce tableau résume le support linguistique. Les évaluations sont basées sur JMT-bench (japonais), MMLU (général) et les évaluations spécifiques aux langues (2026).',
-          columns: ['Groupe linguistique', 'Qwen3 7B', 'Llama 3.3 8B', 'Mistral Small', 'Gemma 3 9B'],
+          columns: ['Groupe linguistique', 'Qwen3 7B', 'Llama 3.1 8B', 'Mistral Small', 'Gemma 3 9B'],
           rows: [
             {
               'Groupe linguistique': 'Chinois (tous les dialectes)',
               'Qwen3 7B': '★★★★★',
-              'Llama 3.3 8B': '★★',
+              'Llama 3.1 8B': '★★',
               'Mistral Small': '★',
               'Gemma 3 9B': '★★★'
             },
             {
               'Groupe linguistique': 'Japonais',
               'Qwen3 7B': '★★★★',
-              'Llama 3.3 8B': '★★',
+              'Llama 3.1 8B': '★★',
               'Mistral Small': '★',
               'Gemma 3 9B': '★★★'
             },
             {
               'Groupe linguistique': 'Coréen',
               'Qwen3 7B': '★★★★',
-              'Llama 3.3 8B': '★★',
+              'Llama 3.1 8B': '★★',
               'Mistral Small': '★',
               'Gemma 3 9B': '★★★'
             },
             {
               'Groupe linguistique': 'Français / Allemand',
               'Qwen3 7B': '★★★★',
-              'Llama 3.3 8B': '★★★',
+              'Llama 3.1 8B': '★★★',
               'Mistral Small': '★★★★',
               'Gemma 3 9B': '★★★'
             },
             {
               'Groupe linguistique': 'Espagnol / Italien',
               'Qwen3 7B': '★★★★',
-              'Llama 3.3 8B': '★★★',
+              'Llama 3.1 8B': '★★★',
               'Mistral Small': '★★★',
               'Gemma 3 9B': '★★★'
             },
             {
               'Groupe linguistique': 'Arabe (MSA)',
               'Qwen3 7B': '★★★',
-              'Llama 3.3 8B': '★★',
+              'Llama 3.1 8B': '★★',
               'Mistral Small': '★',
               'Gemma 3 9B': '★★★'
             }
@@ -2086,47 +2086,47 @@ schema: {
         whichSupport: {
           title: 'ローカルLLMはどの言語をサポートしていますか？',
           content: '全ての最新ローカルモデル（Qwen3、Llama 3.3、Mistral、Gemma）は最低限、話者数トップ10言語をサポート。ただしサポート品質は大きく異なる：Qwen3はアジア言語を支配、Mistral と Llama はヨーロッパ言語で競争。',
-          columns: ['言語グループ', 'Qwen3 7B', 'Llama 3.3 8B', 'Mistral Small', 'Gemma 3 9B'],
+          columns: ['言語グループ', 'Qwen3 7B', 'Llama 3.1 8B', 'Mistral Small', 'Gemma 3 9B'],
           rows: [
             {
               '言語グループ': '中国語（全言語変種）',
               'Qwen3 7B': '★★★★★ (5.0)',
-              'Llama 3.3 8B': '★★ (2.0)',
+              'Llama 3.1 8B': '★★ (2.0)',
               'Mistral Small': '★ (1.0)',
               'Gemma 3 9B': '★★★ (3.0)'
             },
             {
               '言語グループ': '日本語',
               'Qwen3 7B': '★★★★ (4.0)',
-              'Llama 3.3 8B': '★★ (2.0)',
+              'Llama 3.1 8B': '★★ (2.0)',
               'Mistral Small': '★ (1.0)',
               'Gemma 3 9B': '★★★ (3.0)'
             },
             {
               '言語グループ': '韓国語',
               'Qwen3 7B': '★★★★ (4.0)',
-              'Llama 3.3 8B': '★★ (2.0)',
+              'Llama 3.1 8B': '★★ (2.0)',
               'Mistral Small': '★ (1.0)',
               'Gemma 3 9B': '★★★ (3.0)'
             },
             {
               '言語グループ': 'フランス語 / ドイツ語',
               'Qwen3 7B': '★★★★ (4.0)',
-              'Llama 3.3 8B': '★★★ (3.0)',
+              'Llama 3.1 8B': '★★★ (3.0)',
               'Mistral Small': '★★★★ (4.0)',
               'Gemma 3 9B': '★★★ (3.0)'
             },
             {
               '言語グループ': 'スペイン語 / イタリア語',
               'Qwen3 7B': '★★★★ (4.0)',
-              'Llama 3.3 8B': '★★★ (3.0)',
+              'Llama 3.1 8B': '★★★ (3.0)',
               'Mistral Small': '★★★ (3.0)',
               'Gemma 3 9B': '★★★ (3.0)'
             },
             {
               '言語グループ': 'アラビア語（MSA）',
               'Qwen3 7B': '★★★ (3.0)',
-              'Llama 3.3 8B': '★★ (2.0)',
+              'Llama 3.1 8B': '★★ (2.0)',
               'Mistral Small': '★ (1.0)',
               'Gemma 3 9B': '★★★ (3.0)'
             }
@@ -2138,7 +2138,7 @@ schema: {
           items: [
             '**Mistral Small for フランス語とドイツ語**：Mistral はフランス語とドイツ語の訓練データで学習、ネイティブ精度を提供。GDPR互換アーキテクチャ（推論データをサードパーティに送信しない）と地域データ保護義務に理想的。',
             '**Qwen3 7B for スペイン語とイタリア語**：Qwen3 はロマンス言語で優れた品質。Q4_K_M 量子化で MacBook Pro M2 または標準Linux GPU でメモリ問題なし。',
-            '**Llama 3.3 8B as フォールバック**：Llama 3.3 8B はヨーロッパ言語で十分（3つ星評価）だが最適でない。Qwen3 または Mistral が利用不可の場合のみ使用。',
+            '**Llama 3.1 8B as フォールバック**：Llama 3.1 8B はヨーロッパ言語で十分（3つ星評価）だが最適でない。Qwen3 または Mistral が利用不可の場合のみ使用。',
             '**DACH専門家（ドイツ/オーストリア/スイス）**：ドイツ語圏企業向け：Mistral Small はローカル処理で BSI-Grundschutz 要件を満たす。米国サーバーへのデータ転送不要。',
             '**量子化：Q4_K_M は標準**：ヨーロッパ言語の 7B モデル で常に **Q4_K_M** を使用。VRAM 要件：8GB。精度低下：fp16 比 <0.5%。',
             '**ベンチマーク：JMT-bench + MMLU**：Qwen3 と Mistral は MMLU（多択知識テスト）で 72-75% 精度。ドメイン固有テスト（法律、医療、金融）では 55-70% に低下。'
@@ -2147,24 +2147,24 @@ schema: {
         asian: {
           title: 'アジア言語向けベストローカルLLM',
           content: 'Qwen3 7B はアジア言語を圧倒的に支配。中国語、日本語、韓国語で 4-5つ星達成一方、Llama と Mistral は 1-2つ星。日本、韓国、中国の企業にとって Qwen3 が唯一の実用的選択肢。',
-          columns: ['言語', 'Qwen3 7B', 'Llama 3.3 8B', 'Mistral Small'],
+          columns: ['言語', 'Qwen3 7B', 'Llama 3.1 8B', 'Mistral Small'],
           rows: [
             {
               '言語': '中国語（簡体字・繁体字）',
               'Qwen3 7B': '★★★★★ (5.0)',
-              'Llama 3.3 8B': '★★ (2.0)',
+              'Llama 3.1 8B': '★★ (2.0)',
               'Mistral Small': '★ (1.0)'
             },
             {
               '言語': '日本語（ひらがな・漢字・カタカナ）',
               'Qwen3 7B': '★★★★ (4.0)',
-              'Llama 3.3 8B': '★★ (2.0)',
+              'Llama 3.1 8B': '★★ (2.0)',
               'Mistral Small': '★ (1.0)'
             },
             {
               '言語': '韓国語（ハングル）',
               'Qwen3 7B': '★★★★ (4.0)',
-              'Llama 3.3 8B': '★★ (2.0)',
+              'Llama 3.1 8B': '★★ (2.0)',
               'Mistral Small': '★ (1.0)'
             }
           ]
@@ -2186,47 +2186,47 @@ schema: {
         comparisonTable: {
           title: '比較表：Qwen3 vs Llama vs Mistral vs Gemma',
           content: '本表は言語サポートをまとめ。評価は JMT-bench（日本語）、MMLU（一般）、言語固有評価（2026）に基づく。',
-          columns: ['言語グループ', 'Qwen3 7B', 'Llama 3.3 8B', 'Mistral Small', 'Gemma 3 9B'],
+          columns: ['言語グループ', 'Qwen3 7B', 'Llama 3.1 8B', 'Mistral Small', 'Gemma 3 9B'],
           rows: [
             {
               '言語グループ': '中国語（全言語変種）',
               'Qwen3 7B': '★★★★★',
-              'Llama 3.3 8B': '★★',
+              'Llama 3.1 8B': '★★',
               'Mistral Small': '★',
               'Gemma 3 9B': '★★★'
             },
             {
               '言語グループ': '日本語',
               'Qwen3 7B': '★★★★',
-              'Llama 3.3 8B': '★★',
+              'Llama 3.1 8B': '★★',
               'Mistral Small': '★',
               'Gemma 3 9B': '★★★'
             },
             {
               '言語グループ': '韓国語',
               'Qwen3 7B': '★★★★',
-              'Llama 3.3 8B': '★★',
+              'Llama 3.1 8B': '★★',
               'Mistral Small': '★',
               'Gemma 3 9B': '★★★'
             },
             {
               '言語グループ': 'フランス語 / ドイツ語',
               'Qwen3 7B': '★★★★',
-              'Llama 3.3 8B': '★★★',
+              'Llama 3.1 8B': '★★★',
               'Mistral Small': '★★★★',
               'Gemma 3 9B': '★★★'
             },
             {
               '言語グループ': 'スペイン語 / イタリア語',
               'Qwen3 7B': '★★★★',
-              'Llama 3.3 8B': '★★★',
+              'Llama 3.1 8B': '★★★',
               'Mistral Small': '★★★',
               'Gemma 3 9B': '★★★'
             },
             {
               '言語グループ': 'アラビア語（MSA）',
               'Qwen3 7B': '★★★',
-              'Llama 3.3 8B': '★★',
+              'Llama 3.1 8B': '★★',
               'Mistral Small': '★',
               'Gemma 3 9B': '★★★'
             }
@@ -2588,14 +2588,14 @@ schema: {
         whichSupport: {
           title: '哪些本地LLM实际支持多种语言？',
           content: '所有主流本地模型（Qwen3、Llama 3.3、Mistral、Gemma）至少支持前10大语言。但支持质量差异很大：Qwen3主导亚洲语言，Mistral和Llama在欧洲语言上具有竞争力。',
-          columns: ['语言组', 'Qwen3 7B', 'Llama 3.3 8B', 'Mistral Small', 'Gemma 3 9B'],
+          columns: ['语言组', 'Qwen3 7B', 'Llama 3.1 8B', 'Mistral Small', 'Gemma 3 9B'],
           rows: [
-            { '语言组': '中文（所有方言）', 'Qwen3 7B': '★★★★★ (5.0)', 'Llama 3.3 8B': '★★ (2.0)', 'Mistral Small': '★ (1.0)', 'Gemma 3 9B': '★★★ (3.0)' },
-            { '语言组': '日语', 'Qwen3 7B': '★★★★ (4.0)', 'Llama 3.3 8B': '★★ (2.0)', 'Mistral Small': '★ (1.0)', 'Gemma 3 9B': '★★★ (3.0)' },
-            { '语言组': '韩语', 'Qwen3 7B': '★★★★ (4.0)', 'Llama 3.3 8B': '★★ (2.0)', 'Mistral Small': '★ (1.0)', 'Gemma 3 9B': '★★★ (3.0)' },
-            { '语言组': '法语 / 德语', 'Qwen3 7B': '★★★★ (4.0)', 'Llama 3.3 8B': '★★★ (3.0)', 'Mistral Small': '★★★★ (4.0)', 'Gemma 3 9B': '★★★ (3.0)' },
-            { '语言组': '西班牙语 / 意大利语', 'Qwen3 7B': '★★★★ (4.0)', 'Llama 3.3 8B': '★★★ (3.0)', 'Mistral Small': '★★★ (3.0)', 'Gemma 3 9B': '★★★ (3.0)' },
-            { '语言组': '阿拉伯语（MSA）', 'Qwen3 7B': '★★★ (3.0)', 'Llama 3.3 8B': '★★ (2.0)', 'Mistral Small': '★ (1.0)', 'Gemma 3 9B': '★★★ (3.0)' }
+            { '语言组': '中文（所有方言）', 'Qwen3 7B': '★★★★★ (5.0)', 'Llama 3.1 8B': '★★ (2.0)', 'Mistral Small': '★ (1.0)', 'Gemma 3 9B': '★★★ (3.0)' },
+            { '语言组': '日语', 'Qwen3 7B': '★★★★ (4.0)', 'Llama 3.1 8B': '★★ (2.0)', 'Mistral Small': '★ (1.0)', 'Gemma 3 9B': '★★★ (3.0)' },
+            { '语言组': '韩语', 'Qwen3 7B': '★★★★ (4.0)', 'Llama 3.1 8B': '★★ (2.0)', 'Mistral Small': '★ (1.0)', 'Gemma 3 9B': '★★★ (3.0)' },
+            { '语言组': '法语 / 德语', 'Qwen3 7B': '★★★★ (4.0)', 'Llama 3.1 8B': '★★★ (3.0)', 'Mistral Small': '★★★★ (4.0)', 'Gemma 3 9B': '★★★ (3.0)' },
+            { '语言组': '西班牙语 / 意大利语', 'Qwen3 7B': '★★★★ (4.0)', 'Llama 3.1 8B': '★★★ (3.0)', 'Mistral Small': '★★★ (3.0)', 'Gemma 3 9B': '★★★ (3.0)' },
+            { '语言组': '阿拉伯语（MSA）', 'Qwen3 7B': '★★★ (3.0)', 'Llama 3.1 8B': '★★ (2.0)', 'Mistral Small': '★ (1.0)', 'Gemma 3 9B': '★★★ (3.0)' }
           ]
         },
         european: {
@@ -2604,7 +2604,7 @@ schema: {
           items: [
             '**Mistral Small 适合法语和德语**：Mistral使用大量法语和德语训练数据，提供接近母语的质量。对GDPR合规和区域数据保护要求非常理想。',
             '**Qwen3 7B 适合西班牙语和意大利语**：Qwen3在罗曼语系语言上质量优秀。Q4_K_M量化在MacBook Pro M2或标准Linux GPU上运行无内存问题。',
-            '**Llama 3.3 8B 作为备选**：Llama 3.3 8B在欧洲语言上表现尚可（3星评级），但非最优。仅在Qwen3或Mistral不可用时使用。',
+            '**Llama 3.1 8B 作为备选**：Llama 3.1 8B在欧洲语言上表现尚可（3星评级），但非最优。仅在Qwen3或Mistral不可用时使用。',
             '**DACH专业用户（德国/奥地利/瑞士）**：德语企业：Mistral Small本地运行满足BSI-Grundschutz要求，无需向美国服务器传输数据。',
             '**量化标准：Q4_K_M**：7B欧洲语言模型始终使用Q4_K_M。VRAM需求：8GB。精度下降：相比fp16 <0.5%。',
             '**基准测试：JMT-bench + MMLU**：Qwen3与Mistral在MMLU（多选知识测试）上达到72-75%精度。领域特定测试（法律、医疗、金融）降至55-70%。'
@@ -2613,11 +2613,11 @@ schema: {
         asian: {
           title: '日语、韩语和中文的最佳本地LLM',
           content: 'Qwen3 7B在亚洲语言上占据压倒性优势。中文、日语、韩语均达4-5星，而Llama和Mistral仅1-2星。对于日本、韩国、中国企业，Qwen3是唯一实用选择。',
-          columns: ['语言', 'Qwen3 7B', 'Llama 3.3 8B', 'Mistral Small'],
+          columns: ['语言', 'Qwen3 7B', 'Llama 3.1 8B', 'Mistral Small'],
           rows: [
-            { '语言': '中文（简体和繁体）', 'Qwen3 7B': '★★★★★ (5.0)', 'Llama 3.3 8B': '★★ (2.0)', 'Mistral Small': '★ (1.0)' },
-            { '语言': '日语（平假名、汉字、片假名）', 'Qwen3 7B': '★★★★ (4.0)', 'Llama 3.3 8B': '★★ (2.0)', 'Mistral Small': '★ (1.0)' },
-            { '语言': '韩语（韩文字母）', 'Qwen3 7B': '★★★★ (4.0)', 'Llama 3.3 8B': '★★ (2.0)', 'Mistral Small': '★ (1.0)' }
+            { '语言': '中文（简体和繁体）', 'Qwen3 7B': '★★★★★ (5.0)', 'Llama 3.1 8B': '★★ (2.0)', 'Mistral Small': '★ (1.0)' },
+            { '语言': '日语（平假名、汉字、片假名）', 'Qwen3 7B': '★★★★ (4.0)', 'Llama 3.1 8B': '★★ (2.0)', 'Mistral Small': '★ (1.0)' },
+            { '语言': '韩语（韩文字母）', 'Qwen3 7B': '★★★★ (4.0)', 'Llama 3.1 8B': '★★ (2.0)', 'Mistral Small': '★ (1.0)' }
           ]
         },
         arabic: {
@@ -2637,14 +2637,14 @@ schema: {
         comparisonTable: {
           title: '多语言本地LLM对比：Qwen3 vs Llama vs Mistral vs Gemma',
           content: '本表汇总语言支持情况。评级基于JMT-bench（日语）、MMLU（通用）和语言特定评估（2026年）。',
-          columns: ['语言组', 'Qwen3 7B', 'Llama 3.3 8B', 'Mistral Small', 'Gemma 3 9B'],
+          columns: ['语言组', 'Qwen3 7B', 'Llama 3.1 8B', 'Mistral Small', 'Gemma 3 9B'],
           rows: [
-            { '语言组': '中文（所有方言）', 'Qwen3 7B': '★★★★★', 'Llama 3.3 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
-            { '语言组': '日语', 'Qwen3 7B': '★★★★', 'Llama 3.3 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
-            { '语言组': '韩语', 'Qwen3 7B': '★★★★', 'Llama 3.3 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
-            { '语言组': '法语 / 德语', 'Qwen3 7B': '★★★★', 'Llama 3.3 8B': '★★★', 'Mistral Small': '★★★★', 'Gemma 3 9B': '★★★' },
-            { '语言组': '西班牙语 / 意大利语', 'Qwen3 7B': '★★★★', 'Llama 3.3 8B': '★★★', 'Mistral Small': '★★★', 'Gemma 3 9B': '★★★' },
-            { '语言组': '阿拉伯语（MSA）', 'Qwen3 7B': '★★★', 'Llama 3.3 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' }
+            { '语言组': '中文（所有方言）', 'Qwen3 7B': '★★★★★', 'Llama 3.1 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
+            { '语言组': '日语', 'Qwen3 7B': '★★★★', 'Llama 3.1 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
+            { '语言组': '韩语', 'Qwen3 7B': '★★★★', 'Llama 3.1 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
+            { '语言组': '法语 / 德语', 'Qwen3 7B': '★★★★', 'Llama 3.1 8B': '★★★', 'Mistral Small': '★★★★', 'Gemma 3 9B': '★★★' },
+            { '语言组': '西班牙语 / 意大利语', 'Qwen3 7B': '★★★★', 'Llama 3.1 8B': '★★★', 'Mistral Small': '★★★', 'Gemma 3 9B': '★★★' },
+            { '语言组': '阿拉伯语（MSA）', 'Qwen3 7B': '★★★', 'Llama 3.1 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' }
           ],
           image: 'multilingual-llm-comparison-zh.svg',
           imageCaption: '多语言LLM对比2026：Qwen3 7B主导所有亚洲语言（中文5星，日语/韩语4星）；Mistral Small在法语/德语上竞争（4星）。评级基于JMT-bench、MMLU及语言专项评估。'
@@ -2818,8 +2818,8 @@ schema: {
           ],
           items: [
             '**독일어**: Qwen3 7B가 명령 수행에서 선두; Mistral Small은 공식 텍스트에서 경쟁력 있음.',
-            '**프랑스어**: Mistral Small은 Qwen3 7B와 경쟁력이 있으며, 두 모델 모두 Llama 3.3 8B를 크게 앞섭니다.',
-            '**스페인어, 이탈리아어, 포르투갈어**: Qwen3 7B가 약간 앞서며; Llama 3.3 8B도 경쟁력 있음.',
+            '**프랑스어**: Mistral Small은 Qwen3 7B와 경쟁력이 있으며, 두 모델 모두 Llama 3.1 8B를 크게 앞섭니다.',
+            '**스페인어, 이탈리아어, 포르투갈어**: Qwen3 7B가 약간 앞서며; Llama 3.1 8B도 경쟁력 있음.',
             '**폴란드어, 체코어, 루마니아어**: Qwen3 7B가 선두; Mistral Small은 상당한 품질 저하가 발생합니다.',
           ],
         },
@@ -2827,14 +2827,14 @@ schema: {
           title: '일본어, 한국어, 중국어에서 가장 뛰어난 로컬 LLM은 무엇입니까?',
           content: [
             '**Qwen3가 아시아 언어 성능에서 지배적입니다.** 이 모델 패밀리는 Alibaba에서 방대한 중국어 학습 데이터와 일본어 및 한국어에 대한 명시적인 다국어 파인튜닝을 통해 개발하였습니다.',
-            '일본어의 경우: Qwen3 7B는 JMT-bench(일본어 명령 수행 벤치마크)에서 Llama 3.3 8B보다 15~20% 높은 점수를 기록합니다. 한국어의 경우: Qwen3는 유사한 격차로 대안 모델들을 능가합니다. 중국어(간체)의 경우: Qwen3는 로컬 실행 가능한 모델 중에서 독보적입니다.',
+            '일본어의 경우: Qwen3 7B는 JMT-bench(일본어 명령 수행 벤치마크)에서 Llama 3.1 8B보다 15~20% 높은 점수를 기록합니다. 한국어의 경우: Qwen3는 유사한 격차로 대안 모델들을 능가합니다. 중국어(간체)의 경우: Qwen3는 로컬 실행 가능한 모델 중에서 독보적입니다.',
             '2026년 4월 기준, 일본 경제산업성(METI)은 국내 AI 개발을 촉진하고 있으며, 일부 일본 기업들은 데이터 주권을 위해 로컬 배포 모델을 선호합니다. Qwen3는 일본어 로컬 추론의 실질적인 선택지입니다.',
           ],
           rows: [
             { 'Language': '중국어(간체)', 'Best Model': 'Qwen3 (모든 크기)', 'Second Best': 'Gemma 3', 'Notes': 'Qwen3 지배적 -- 가장 방대한 중국어 학습 코퍼스' },
             { 'Language': '일본어', 'Best Model': 'Qwen3 7B 이상', 'Second Best': 'Gemma 3 9B', 'Notes': 'JMT-bench에서 Llama 대비 15~20% 격차' },
             { 'Language': '한국어', 'Best Model': 'Qwen3 7B 이상', 'Second Best': 'Gemma 3 9B', 'Notes': 'Qwen3가 현저히 강함' },
-            { 'Language': '중국어(번체)', 'Best Model': 'Qwen3', 'Second Best': 'Llama 3.3 8B', 'Notes': 'Qwen3는 간체와 번체 모두로 학습됨' },
+            { 'Language': '중국어(번체)', 'Best Model': 'Qwen3', 'Second Best': 'Llama 3.1 8B', 'Notes': 'Qwen3는 간체와 번체 모두로 학습됨' },
           ],
           columns: ['Language', 'Best Model', 'Second Best', 'Notes'],
         },
@@ -2859,14 +2859,14 @@ schema: {
         comparisonTable: {
           title: '다국어 로컬 LLM 비교: Qwen3 vs Llama 3.x vs Mistral vs Gemma 3',
           rows: [
-            { 'Language Group': '중국어(모든 방언)', 'Qwen3 7B': '★★★★★', 'Llama 3.3 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
-            { 'Language Group': '일본어', 'Qwen3 7B': '★★★★', 'Llama 3.3 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
-            { 'Language Group': '한국어', 'Qwen3 7B': '★★★★', 'Llama 3.3 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
-            { 'Language Group': '프랑스어 / 독일어', 'Qwen3 7B': '★★★★', 'Llama 3.3 8B': '★★★', 'Mistral Small': '★★★★', 'Gemma 3 9B': '★★★' },
-            { 'Language Group': '스페인어 / 이탈리아어', 'Qwen3 7B': '★★★★', 'Llama 3.3 8B': '★★★', 'Mistral Small': '★★★', 'Gemma 3 9B': '★★★' },
-            { 'Language Group': '아랍어(MSA)', 'Qwen3 7B': '★★★', 'Llama 3.3 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
+            { 'Language Group': '중국어(모든 방언)', 'Qwen3 7B': '★★★★★', 'Llama 3.1 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
+            { 'Language Group': '일본어', 'Qwen3 7B': '★★★★', 'Llama 3.1 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
+            { 'Language Group': '한국어', 'Qwen3 7B': '★★★★', 'Llama 3.1 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
+            { 'Language Group': '프랑스어 / 독일어', 'Qwen3 7B': '★★★★', 'Llama 3.1 8B': '★★★', 'Mistral Small': '★★★★', 'Gemma 3 9B': '★★★' },
+            { 'Language Group': '스페인어 / 이탈리아어', 'Qwen3 7B': '★★★★', 'Llama 3.1 8B': '★★★', 'Mistral Small': '★★★', 'Gemma 3 9B': '★★★' },
+            { 'Language Group': '아랍어(MSA)', 'Qwen3 7B': '★★★', 'Llama 3.1 8B': '★★', 'Mistral Small': '★', 'Gemma 3 9B': '★★★' },
           ],
-          columns: ['Language Group', 'Qwen3 7B', 'Llama 3.3 8B', 'Mistral Small', 'Gemma 3 9B'],
+          columns: ['Language Group', 'Qwen3 7B', 'Llama 3.1 8B', 'Mistral Small', 'Gemma 3 9B'],
           image: 'multilingual-llm-comparison-en.svg',
           imageCaption: '2026년 다국어 LLM 비교: Qwen3 7B는 모든 아시아 언어(중국어, 일본어, 한국어에서 ★★★★~★★★★★)에서 선두를 차지합니다. Mistral Small은 유럽 언어(프랑스어/독일어)에서 Qwen3에 필적합니다. 별점(1~5)은 2026년 벤치마크를 기반으로 합니다.',
         },
@@ -2875,7 +2875,7 @@ schema: {
           faqs: [
             {
               q: '일본어 또는 중국어 작업에 영어 중심 모델을 사용하는 경우',
-              a: 'Llama 3.3 8B와 Mistral Small은 문법적으로는 그럴듯하지만 의미적으로 일관성이 없는 일본어 및 중국어 결과물을 생성합니다. 원어민 지식 없이는 오류를 발견하기 어렵습니다. 일본어 또는 중국어 작업에는 항상 Qwen3를 사용하십시오 -- 품질 차이는 상당하며 측정 가능합니다.',
+              a: 'Llama 3.1 8B와 Mistral Small은 문법적으로는 그럴듯하지만 의미적으로 일관성이 없는 일본어 및 중국어 결과물을 생성합니다. 원어민 지식 없이는 오류를 발견하기 어렵습니다. 일본어 또는 중국어 작업에는 항상 Qwen3를 사용하십시오 -- 품질 차이는 상당하며 측정 가능합니다.',
             },
             {
               q: '작업이 다른 언어인데 영어로 프롬프트를 작성하는 경우',
@@ -2897,7 +2897,7 @@ schema: {
             },
             {
               q: '다국어 기능이 영어 품질을 저하시킵니까?',
-              a: 'Qwen3의 경우 크게 저하되지 않습니다. 벤치마크에 따르면 Qwen3 7B는 영어 MMLU에서 74%를 기록하며 -- Llama 3.3 8B의 73%와 비슷한 수준입니다. 다국어 학습이 이 모델 크기에서 영어 성능을 의미 있게 저하시키지 않습니다.',
+              a: 'Qwen3의 경우 크게 저하되지 않습니다. 벤치마크에 따르면 Qwen3 7B는 영어 MMLU에서 74%를 기록하며 -- Llama 3.1 8B의 73%와 비슷한 수준입니다. 다국어 학습이 이 모델 크기에서 영어 성능을 의미 있게 저하시키지 않습니다.',
             },
             {
               q: '로컬에서 번역 작업에 가장 적합한 모델은 무엇입니까?',

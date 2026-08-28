@@ -122,7 +122,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           content: 'For a first run, these three models cover different hardware profiles:',
           rows: [
             { 'Model': 'Llama 3.2 3B', 'Download Size': '~2 GB', 'RAM Required': '4 GB', 'Best For': 'First test -- any machine' },
-            { 'Model': 'Llama 3.3 8B', 'Download Size': '~4.7 GB', 'RAM Required': '8 GB', 'Best For': 'General use on most laptops' },
+            { 'Model': 'Llama 3.1 8B', 'Download Size': '~4.7 GB', 'RAM Required': '8 GB', 'Best For': 'General use on most laptops' },
             { 'Model': 'phi4-mini', 'Download Size': '~2.3 GB', 'RAM Required': '4 GB', 'Best For': 'Fast responses, low RAM' },
           ],
           columns: ['Model', 'Download Size', 'RAM Required', 'Best For'],
@@ -409,7 +409,7 @@ schema: {
           content: 'Para una primera ejecución, estos tres modelos cubren diferentes perfiles de hardware:',
           rows: [
             { 'Modelo': 'Llama 3.2 3B', 'Tamaño de descarga': '~2 GB', 'RAM necesaria': '4 GB', 'Mejor para': 'Primera prueba -- cualquier máquina' },
-            { 'Modelo': 'Llama 3.3 8B', 'Tamaño de descarga': '~4.7 GB', 'RAM necesaria': '8 GB', 'Mejor para': 'Uso general en la mayoría de portátiles' },
+            { 'Modelo': 'Llama 3.1 8B', 'Tamaño de descarga': '~4.7 GB', 'RAM necesaria': '8 GB', 'Mejor para': 'Uso general en la mayoría de portátiles' },
             { 'Modelo': 'phi4-mini', 'Tamaño de descarga': '~2.3 GB', 'RAM necesaria': '4 GB', 'Mejor para': 'Respuestas rápidas, poca RAM' },
           ],
           columns: ['Modelo', 'Tamaño de descarga', 'RAM necesaria', 'Mejor para'],
@@ -697,7 +697,7 @@ schema: {
           content: 'لأول تشغيل، تغطي هذه النماذج الثلاثة ملفات أجهزة مختلفة:',
           rows: [
             { 'النموذج': 'Llama 3.2 3B', 'حجم التنزيل': '~2 GB', 'RAM المطلوبة': '4 GB', 'الأفضل لـ': 'أول تجربة -- أي جهاز' },
-            { 'النموذج': 'Llama 3.3 8B', 'حجم التنزيل': '~4.7 GB', 'RAM المطلوبة': '8 GB', 'الأفضل لـ': 'استخدام عام على معظم الحواسيب المحمولة' },
+            { 'النموذج': 'Llama 3.1 8B', 'حجم التنزيل': '~4.7 GB', 'RAM المطلوبة': '8 GB', 'الأفضل لـ': 'استخدام عام على معظم الحواسيب المحمولة' },
             { 'النموذج': 'phi4-mini', 'حجم التنزيل': '~2.3 GB', 'RAM المطلوبة': '4 GB', 'الأفضل لـ': 'استجابات سريعة، RAM قليلة' },
           ],
           columns: ['النموذج', 'حجم التنزيل', 'RAM المطلوبة', 'الأفضل لـ'],
@@ -983,7 +983,7 @@ schema: {
           content: 'Para a primeira execução, estes três modelos cobrem perfis de hardware diferentes:',
           rows: [
             { 'Modelo': 'Llama 3.2 3B', 'Tamanho do download': '~2 GB', 'RAM necessária': '4 GB', 'Melhor para': 'Primeiro teste -- qualquer máquina' },
-            { 'Modelo': 'Llama 3.3 8B', 'Tamanho do download': '~4,7 GB', 'RAM necessária': '8 GB', 'Melhor para': 'Uso geral na maioria dos notebooks' },
+            { 'Modelo': 'Llama 3.1 8B', 'Tamanho do download': '~4,7 GB', 'RAM necessária': '8 GB', 'Melhor para': 'Uso geral na maioria dos notebooks' },
             { 'Modelo': 'phi4-mini', 'Tamanho do download': '~2,3 GB', 'RAM necessária': '4 GB', 'Melhor para': 'Respostas rápidas, pouca RAM' },
           ],
           columns: ['Modelo', 'Tamanho do download', 'RAM necessária', 'Melhor para'],
@@ -1245,7 +1245,7 @@ schema: {
           content: 'Für einen ersten Durchlauf decken diese drei Modelle verschiedene Hardware-Profile ab:',
           rows: [
             { 'Modell': 'Llama 3.2 3B', 'Download-Größe': '~2 GB', 'Benötigter RAM': '4 GB', 'Am besten für': 'Erster Test -- auf jeder Maschine' },
-            { 'Modell': 'Llama 3.3 8B', 'Download-Größe': '~4,7 GB', 'Benötigter RAM': '8 GB', 'Am besten für': 'Allgemeine Nutzung auf den meisten Laptops' },
+            { 'Modell': 'Llama 3.1 8B', 'Download-Größe': '~4,7 GB', 'Benötigter RAM': '8 GB', 'Am besten für': 'Allgemeine Nutzung auf den meisten Laptops' },
             { 'Modell': 'phi4-mini', 'Download-Größe': '~2,3 GB', 'Benötigter RAM': '4 GB', 'Am besten für': 'Schnelle Antworten, niedriger RAM' },
           ],
           columns: ['Modell', 'Download-Größe', 'Benötigter RAM', 'Am besten für'],
@@ -1576,7 +1576,7 @@ schema: {
           content: 'Pour un premier passage, ces trois modèles couvrent différents profils matériels :',
           rows: [
             { 'Modèle': 'Llama 3.2 3B', 'Taille du téléchargement': '~2 Go', 'RAM requise': '4 Go', 'Meilleur pour': 'Premier test -- toute machine' },
-            { 'Modèle': 'Llama 3.3 8B', 'Taille du téléchargement': '~4,7 Go', 'RAM requise': '8 Go', 'Meilleur pour': 'Utilisation générale sur la plupart des ordinateurs portables' },
+            { 'Modèle': 'Llama 3.1 8B', 'Taille du téléchargement': '~4,7 Go', 'RAM requise': '8 Go', 'Meilleur pour': 'Utilisation générale sur la plupart des ordinateurs portables' },
             { 'Modèle': 'phi4-mini', 'Taille du téléchargement': '~2,3 Go', 'RAM requise': '4 Go', 'Meilleur pour': 'Réponses rapides, faible RAM' },
           ],
           columns: ['Modèle', 'Taille du téléchargement', 'RAM requise', 'Meilleur pour'],
@@ -1907,7 +1907,7 @@ schema: {
           content: '初回実行では、これらの 3 つのモデルはさまざまなハードウェア プロファイルに対応:',
           rows: [
             { 'モデル': 'Llama 3.2 3B', 'ダウンロード サイズ': '~2 GB', '必要な RAM': '4 GB', '用途': '初回テスト - すべてのマシン' },
-            { 'モデル': 'Llama 3.3 8B', 'ダウンロード サイズ': '~4.7 GB', '必要な RAM': '8 GB', '用途': 'ほとんどのノートパソコンで一般的に使用' },
+            { 'モデル': 'Llama 3.1 8B', 'ダウンロード サイズ': '~4.7 GB', '必要な RAM': '8 GB', '用途': 'ほとんどのノートパソコンで一般的に使用' },
             { 'モデル': 'phi4-mini', 'ダウンロード サイズ': '~2.3 GB', '必要な RAM': '4 GB', '用途': '高速応答、低 RAM' },
           ],
           columns: ['モデル', 'ダウンロード サイズ', '必要な RAM', '用途'],
@@ -2238,7 +2238,7 @@ schema: {
           content: '对于初次运行，这三个模型涵盖不同的硬件配置：',
           rows: [
             { '模型': 'Llama 3.2 3B', '下载大小': '~2 GB', '所需 RAM': '4 GB', '最适合': '初次测试 -- 任何机器' },
-            { '模型': 'Llama 3.3 8B', '下载大小': '~4.7 GB', '所需 RAM': '8 GB', '最适合': '大多数笔记本电脑的一般使用' },
+            { '模型': 'Llama 3.1 8B', '下载大小': '~4.7 GB', '所需 RAM': '8 GB', '最适合': '大多数笔记本电脑的一般使用' },
             { '模型': 'phi4-mini', '下载大小': '~2.3 GB', '所需 RAM': '4 GB', '最适合': '快速响应，低 RAM' },
           ],
           columns: ['模型', '下载大小', '所需 RAM', '最适合'],
@@ -2561,7 +2561,7 @@ schema: {
           content: '첫 번째 실행을 위해 다양한 하드웨어 프로필을 다루는 세 가지 모델을 권장합니다:',
           rows: [
             { '모델': 'Llama 3.2 3B', '다운로드 크기': '약 2 GB', '필요 RAM': '4 GB', '적합 용도': '첫 테스트 -- 모든 기기' },
-            { '모델': 'Llama 3.3 8B', '다운로드 크기': '약 4.7 GB', '필요 RAM': '8 GB', '적합 용도': '대부분의 노트북에서 일반 사용' },
+            { '모델': 'Llama 3.1 8B', '다운로드 크기': '약 4.7 GB', '필요 RAM': '8 GB', '적합 용도': '대부분의 노트북에서 일반 사용' },
             { '모델': 'phi4-mini', '다운로드 크기': '약 2.3 GB', '필요 RAM': '4 GB', '적합 용도': '빠른 응답, 낮은 RAM' },
           ],
           columns: ['모델', '다운로드 크기', '필요 RAM', '적합 용도'],

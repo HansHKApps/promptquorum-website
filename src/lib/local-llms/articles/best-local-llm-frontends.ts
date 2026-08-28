@@ -2484,7 +2484,7 @@ schema: {
           title: 'Perguntas frequentes',
           faqs: [
             { q: 'Qual frontend para LLM local é mais fácil de configurar?', a: 'Enchanted UI não requer instalação -- apenas abra a URL no navegador e aponte para seu servidor Ollama local. Jan AI é o mais fácil de instalar (aplicativo desktop). Open WebUI requer Docker mas é o mais poderoso.' },
-            { q: 'O Open WebUI funciona em português?', a: 'Sim. Open WebUI tem localização em português. A qualidade das respostas em português depende do modelo -- Qwen3 7B ou Llama 3.3 8B têm bom suporte em português.' },
+            { q: 'O Open WebUI funciona em português?', a: 'Sim. Open WebUI tem localização em português. A qualidade das respostas em português depende do modelo -- Qwen3 7B ou Llama 3.1 8B têm bom suporte em português.' },
             { q: 'Qual frontend é melhor para conformidade com LGPD?', a: 'Open WebUI auto-hospedado + Ollama garante que nenhum dado saia da sua infraestrutura. Combine com um modelo local (Llama 3.3, Qwen3) para conformidade total com a LGPD.' },
             { q: 'Continue.dev funciona com modelos em português?', a: 'Sim. Continue.dev funciona com qualquer modelo Ollama, incluindo modelos com suporte em português. As sugestões de código podem ser geradas em português se você escrever seus comentários e prompts em português.' },
           ],

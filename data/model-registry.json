@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-08-27",
+  "last_updated": "2026-08-28",
   "models": [
     {
       "company": "Anthropic",
@@ -252,6 +252,18 @@
       "source_url": "https://docs.aws.amazon.com/bedrock/latest/userguide/model-cards.html",
       "verified_date": "2026-07-13",
       "notes": "Still the standard small/CPU-class pick as of 2026-07: Llama 4 Scout (17B active / 109B total MoE, ~55 GB VRAM at Q4) is not a substitute in this footprint — different size class entirely. Meta has not shipped a small (<=3B) Llama 4 variant. Re-flagged 2026-07-29 after the site's monthly refresh cycle surfaced this as a false STALE_MODEL positive."
+    },
+    {
+      "company": "Meta",
+      "family": "Llama",
+      "model": "Llama 3.1 8B",
+      "type": "open-weight",
+      "release_date": "2024-07",
+      "status": "current",
+      "superseded_by": null,
+      "source_url": "https://ollama.com/library/llama3.1",
+      "verified_date": "2026-08-28",
+      "notes": "Meta's 8B-class dense model, live as llama3.1:8b (4.9 GB, 128K context) on Ollama. No later Llama release has shipped an 8B successor: Llama 3.2 shipped 1B/3B (plus 11B/90B vision), Llama 3.3 shipped 70B only, and Llama 4 is MoE (Scout/Maverick) — so 3.1 8B remains the current 8B-class Llama. Added 2026-08-28 as an exact-name entry while correcting a site-wide fabricated \"Llama 3.3 8B\" (3,173 occurrences across 72 files); Llama 3.3 has no 8B variant, and the 4.9 GB size those pages quoted matches llama3.1:8b exactly, confirming that is the model the content described."
     },
     {
       "company": "Mistral AI",

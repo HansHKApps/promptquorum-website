@@ -392,7 +392,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Performance Benchmarks (June 2026)',
         content: 'Benchmark results from Ollama on Ubuntu 24.04 with ROCm 6.2+ and HSA_OVERRIDE_GFX_VERSION=11.0.0. Actual performance varies by cooling and model quantization.',
         items: [
-          'Llama 3.3 8B (Q4_K_M): Minisforum/Beelink/AOOSTAR ~45–55 tok/s. GMKtec EVO-X2 ~40 tok/s.',
+          'Llama 3.1 8B (Q4_K_M): Minisforum/Beelink/AOOSTAR ~45–55 tok/s. GMKtec EVO-X2 ~40 tok/s.',
           'Llama 3.3 70B (Q4_K_M): Minisforum/Beelink/AOOSTAR ~18–22 tok/s (estimated). GMKtec EVO-X2 ~14–16 tok/s.',
           'Qwen 3 32B (Q5_K_M): Minisforum/Beelink/AOOSTAR ~35–40 tok/s. GMKtec ~30 tok/s.',
           'Note: These estimates are based on iGPU plus NPU acceleration. CPU-only inference would be 3–5x slower.',
@@ -897,7 +897,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Benchmarks de Rendimiento (Estimados, Mayo 2026)',
         content: 'Los datos de benchmarks reales aún son escasos para estos mini PCs nuevos. A continuación, estimaciones basadas en los benchmarks de referencia del Ryzen AI Max+ 395. El rendimiento real varía según la refrigeración, el sistema operativo y la precisión del modelo.',
         items: [
-          'Llama 3.3 8B (Q4_K_M): Minisforum/Beelink/AOOSTAR ~45–55 tok/s. GMKtec EVO-X2 ~40 tok/s.',
+          'Llama 3.1 8B (Q4_K_M): Minisforum/Beelink/AOOSTAR ~45–55 tok/s. GMKtec EVO-X2 ~40 tok/s.',
           'Llama 3.3 70B (Q4_K_M): Minisforum/Beelink/AOOSTAR ~18–22 tok/s (estimado). GMKtec EVO-X2 ~14–16 tok/s.',
           'Qwen 3 32B (Q5_K_M): Minisforum/Beelink/AOOSTAR ~35–40 tok/s. GMKtec ~30 tok/s.',
           'Nota: estas estimaciones se basan en aceleración iGPU más NPU. La inferencia solo con CPU sería 3–5 veces más lenta.',
@@ -1432,7 +1432,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'اختبارات الأداء (تقديرية، مايو 2026)',
         content: 'بيانات الأداء الحقيقية لا تزال شحيحة لهذه الأجهزة المصغرة الجديدة. فيما يلي تقديرات مبنية على الاختبارات المرجعية لـ Ryzen AI Max+ 395. يختلف الأداء الفعلي حسب التبريد ونظام التشغيل ودقة النموذج.',
         items: [
-          'Llama 3.3 8B (Q4_K_M): Minisforum/Beelink/AOOSTAR نحو 45–55 tok/s. GMKtec EVO-X2 نحو 40 tok/s.',
+          'Llama 3.1 8B (Q4_K_M): Minisforum/Beelink/AOOSTAR نحو 45–55 tok/s. GMKtec EVO-X2 نحو 40 tok/s.',
           'Llama 3.3 70B (Q4_K_M): Minisforum/Beelink/AOOSTAR نحو 18–22 tok/s (تقديري). GMKtec EVO-X2 نحو 14–16 tok/s.',
           'Qwen 3 32B (Q5_K_M): Minisforum/Beelink/AOOSTAR نحو 35–40 tok/s. GMKtec نحو 30 tok/s.',
           'ملاحظة: تستند هذه التقديرات إلى تسريع iGPU إضافةً إلى NPU. الاستدلال بـ CPU وحده سيكون أبطأ بـ 3–5 مرات.',
@@ -1830,7 +1830,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Modelo': 'Llama 3.3 70B', 'Quantização': 'Q4_K_M', 'RAM usada': '~40 GB', 'Velocidade est.': '20-30 tok/s', 'Dispositivo': 'Minisforum/Beelink/AOOSTAR' },
           { 'Modelo': 'Qwen3 72B', 'Quantização': 'Q4_K_M', 'RAM usada': '~43 GB', 'Velocidade est.': '18-28 tok/s', 'Dispositivo': 'Beelink 128 GB' },
           { 'Modelo': 'Qwen 3.6 27B', 'Quantização': 'Q4_K_M', 'RAM usada': '~22 GB', 'Velocidade est.': '30-45 tok/s', 'Dispositivo': 'Todos' },
-          { 'Modelo': 'Llama 3.3 8B', 'Quantização': 'Q4_K_M', 'RAM usada': '~5 GB', 'Velocidade est.': '60-80 tok/s', 'Dispositivo': 'Todos' },
+          { 'Modelo': 'Llama 3.1 8B', 'Quantização': 'Q4_K_M', 'RAM usada': '~5 GB', 'Velocidade est.': '60-80 tok/s', 'Dispositivo': 'Todos' },
         ],
         note: 'Benchmarks são estimativas baseadas em dados de referência publicados para Ryzen AI Max+ 395. Dados reais serão adicionados em junho de 2026.',
       },
@@ -2107,7 +2107,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Performance-Benchmarks (Geschätzt Mai 2026)',
         content: 'Echtdaten sind noch selten für diese neuen Mini-PCs. Unten sind Schätzungen basierend auf Ryzen AI Max+ 395 Referenz-Benchmarks. Leistung variiert nach Kühlung, OS und Modellpräzision.',
         items: [
-          'Llama 3.3 8B (Q4_K_M): Minisforum/Beelink/AOOSTAR ~45–55 tok/s. GMKtec EVO-X2 ~40 tok/s.',
+          'Llama 3.1 8B (Q4_K_M): Minisforum/Beelink/AOOSTAR ~45–55 tok/s. GMKtec EVO-X2 ~40 tok/s.',
           'Llama 3.3 70B (Q4_K_M): Minisforum/Beelink/AOOSTAR ~18–22 tok/s (geschätzt). GMKtec EVO-X2 ~14–16 tok/s.',
           'Qwen 3 32B (Q5_K_M): Minisforum/Beelink/AOOSTAR ~35–40 tok/s. GMKtec ~30 tok/s.',
           'Hinweis: Diese Schätzungen basieren auf iGPU plus NPU-Beschleunigung. Reine CPU-Inferenz wäre 3–5x langsamer.',
@@ -2585,7 +2585,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Benchmarks de Performance (Estimé Mai 2026)',
         content: 'Les données réelles sont encore rares pour ces nouveaux mini PC. Voici des estimations basées sur les benchmarks de référence Ryzen AI Max+ 395. La performance varie selon refroidissement, OS et précision du modèle.',
         items: [
-          'Llama 3.3 8B (Q4_K_M): Minisforum/Beelink/AOOSTAR ~45–55 tok/s. GMKtec EVO-X2 ~40 tok/s.',
+          'Llama 3.1 8B (Q4_K_M): Minisforum/Beelink/AOOSTAR ~45–55 tok/s. GMKtec EVO-X2 ~40 tok/s.',
           'Llama 3.3 70B (Q4_K_M): Minisforum/Beelink/AOOSTAR ~18–22 tok/s (estimé). GMKtec EVO-X2 ~14–16 tok/s.',
           'Qwen 3 32B (Q5_K_M): Minisforum/Beelink/AOOSTAR ~35–40 tok/s. GMKtec ~30 tok/s.',
           'Note: Ces estimations basées sur iGPU plus accélération NPU. Inférence CPU-only serait 3–5x plus lent.',
@@ -3043,7 +3043,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'パフォーマンスベンチマーク(推定2026年5月)',
         content: '新型ミニPCの実測ベンチマークはまだ少数。以下はRyzen AI Max+ 395リファレンスベンチマークに基づく推定値。実際のパフォーマンスは冷却、OS、モデル精度で異なります。',
         items: [
-          'Llama 3.3 8B (Q4_K_M):Minisforum/Beelink/AOOSTAR ~45–55 tok/s。GMKtec EVO-X2 ~40 tok/s。',
+          'Llama 3.1 8B (Q4_K_M):Minisforum/Beelink/AOOSTAR ~45–55 tok/s。GMKtec EVO-X2 ~40 tok/s。',
           'Llama 3.3 70B (Q4_K_M):Minisforum/Beelink/AOOSTAR ~18–22 tok/s(推定)。GMKtec EVO-X2 ~14–16 tok/s。',
           'Qwen 3 32B (Q5_K_M):Minisforum/Beelink/AOOSTAR ~35–40 tok/s。GMKtec ~30 tok/s。',
           '注:これら推定値はiGPU + NPU加速に基づく。CPU単独推論は3–5倍遅くなります。',
@@ -3496,7 +3496,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '性能基准测试(估计值2026年5月)',
         content: '这些新型迷你PC的实测数据仍然很少。以下是基于Ryzen AI Max+ 395参考基准的估计。实际性能因散热、操作系统和模型精度而异。',
         items: [
-          'Llama 3.3 8B (Q4_K_M):Minisforum/Beelink/AOOSTAR ~45–55 tok/s。GMKtec EVO-X2 ~40 tok/s。',
+          'Llama 3.1 8B (Q4_K_M):Minisforum/Beelink/AOOSTAR ~45–55 tok/s。GMKtec EVO-X2 ~40 tok/s。',
           'Llama 3.3 70B (Q4_K_M):Minisforum/Beelink/AOOSTAR ~18–22 tok/s(估计)。GMKtec EVO-X2 ~14–16 tok/s。',
           'Qwen 3 32B (Q5_K_M):Minisforum/Beelink/AOOSTAR ~35–40 tok/s。GMKtec ~30 tok/s。',
           '注:这些估计基于iGPU + NPU加速。纯CPU推理速度会慢3~5倍。',
@@ -3968,7 +3968,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '성능 벤치마크 (2026년 5월 추정)',
         content: '이 새로운 미니 PC들의 실측 벤치마크 데이터는 아직 부족합니다. 아래는 Ryzen AI Max+ 395 참조 벤치마크 기반 추정치입니다. 실제 성능은 쿨링, OS, 모델 정밀도에 따라 다릅니다.',
         items: [
-          'Llama 3.3 8B (Q4_K_M): Minisforum/Beelink/AOOSTAR 약 45~55 tok/s. GMKtec EVO-X2 약 40 tok/s.',
+          'Llama 3.1 8B (Q4_K_M): Minisforum/Beelink/AOOSTAR 약 45~55 tok/s. GMKtec EVO-X2 약 40 tok/s.',
           'Llama 3.3 70B (Q4_K_M): Minisforum/Beelink/AOOSTAR 약 18~22 tok/s(추정). GMKtec EVO-X2 약 14~16 tok/s.',
           'Qwen 3 32B (Q5_K_M): Minisforum/Beelink/AOOSTAR 약 35~40 tok/s. GMKtec 약 30 tok/s.',
           '참고: 이 추정치는 iGPU + NPU 가속 기반입니다. CPU 단독 추론은 3~5배 느립니다.',

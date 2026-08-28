@@ -32,7 +32,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Llama 3.2 3B',
       'Mistral Small v0.3',
       'Qwen3 7B',
-      'Llama 3.3 8B',
+      'Llama 3.1 8B',
       'Llama 3.3 13B',
     ],
     current_hardware_mentioned: [
@@ -532,7 +532,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Llama 3.2 3B',
       'Mistral Small v0.3',
       'Qwen3 7B',
-      'Llama 3.3 8B',
+      'Llama 3.1 8B',
       'Llama 3.3 13B',
     ],
     current_hardware_mentioned: [
@@ -1031,7 +1031,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Llama 3.2 3B',
       'Mistral Small v0.3',
       'Qwen3 7B',
-      'Llama 3.3 8B',
+      'Llama 3.1 8B',
       'Llama 3.3 13B',
     ],
     current_hardware_mentioned: [
@@ -1522,7 +1522,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Llama 3.2 3B',
       'Mistral Small v0.3',
       'Qwen3 7B',
-      'Llama 3.3 8B',
+      'Llama 3.1 8B',
       'Llama 3.3 13B',
     ],
     current_hardware_mentioned: [
@@ -2013,7 +2013,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Llama 3.2 3B',
       'Mistral Small v0.3',
       'Qwen3 7B',
-      'Llama 3.3 8B',
+      'Llama 3.1 8B',
       'Llama 3.3 13B',
     ],
     current_hardware_mentioned: [
@@ -2504,7 +2504,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Llama 3.2 3B',
       'Mistral Small v0.3',
       'Qwen3 7B',
-      'Llama 3.3 8B',
+      'Llama 3.1 8B',
       'Llama 3.3 13B',
     ],
     current_hardware_mentioned: [
@@ -3009,7 +3009,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Llama 3.2 3B',
       'Mistral Small v0.3',
       'Qwen3 7B',
-      'Llama 3.3 8B',
+      'Llama 3.1 8B',
       'Llama 3.3 13B',
     ],
     current_hardware_mentioned: [
@@ -3513,7 +3513,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Llama 3.2 3B',
       'Mistral Small v0.3',
       'Qwen3 7B',
-      'Llama 3.3 8B',
+      'Llama 3.1 8B',
       'Llama 3.3 13B',
     ],
     current_hardware_mentioned: [
@@ -4017,7 +4017,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'Llama 3.2 3B',
       'Mistral Small v0.3',
       'Qwen3 7B',
-      'Llama 3.3 8B',
+      'Llama 3.1 8B',
       'Llama 3.3 13B',
     ],
     current_hardware_mentioned: [

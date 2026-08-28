@@ -115,7 +115,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 3,
             title: 'Continue — Still Functional, No Longer Maintained [Acquired by Cursor, June 2026 — Final v2.0.0-vscode]',
-            content: 'Continue was the leading open-source AI coding assistant for local LLMs before its June 2026 acquisition by Cursor. It connects to Ollama, LM Studio, llama.cpp, and any OpenAI-compatible API. Features: inline chat (Cmd+L), autocomplete (Tab), model context protocol (MCP) tools, codebase indexing, and custom slash commands. VS Code extension has 2M+ installs. JetBrains plugin works in IntelliJ IDEA, PyCharm, GoLand, WebStorm, and Rider — it does not cover CLion or RustRover. Best local models: Qwen3-Coder 14B (coding), Llama 3.3 8B (chat). Setup: install extension, set provider to Ollama, choose model — done in 2 minutes. Note (June 2026): Continue was acquired by Cursor. Version 2.0.0-vscode, released June 19, 2026, is the final release; the GitHub repo is now read-only, and Continue-hosted cloud data was deleted after July 15, 2026. The extension still installs and runs fully offline with Ollama and BYO-LLM — but no further development from the original team. Community forks are active.',
+            content: 'Continue was the leading open-source AI coding assistant for local LLMs before its June 2026 acquisition by Cursor. It connects to Ollama, LM Studio, llama.cpp, and any OpenAI-compatible API. Features: inline chat (Cmd+L), autocomplete (Tab), model context protocol (MCP) tools, codebase indexing, and custom slash commands. VS Code extension has 2M+ installs. JetBrains plugin works in IntelliJ IDEA, PyCharm, GoLand, WebStorm, and Rider — it does not cover CLion or RustRover. Best local models: Qwen3-Coder 14B (coding), Llama 3.1 8B (chat). Setup: install extension, set provider to Ollama, choose model — done in 2 minutes. Note (June 2026): Continue was acquired by Cursor. Version 2.0.0-vscode, released June 19, 2026, is the final release; the GitHub repo is now read-only, and Continue-hosted cloud data was deleted after July 15, 2026. The extension still installs and runs fully offline with Ollama and BYO-LLM — but no further development from the original team. Community forks are active.',
             affiliateLinks: [
               { label: 'Continue on VS Code Marketplace (free)', url: 'https://continue.dev' },
             ],
@@ -188,7 +188,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Plugin': 'Cline', 'Best Coding Model (Local)': 'Qwen3-Coder 32B Q4', 'Best Chat Model (Local)': 'Qwen3 32B Q4', 'Min VRAM': '24 GB' },
           { 'Plugin': 'Bodega One Code', 'Best Coding Model (Local)': 'Any local model (BYOL)', 'Best Chat Model (Local)': 'Any local model (BYOL)', 'Min VRAM': 'Depends on chosen model' },
-          { 'Plugin': 'Continue (legacy)', 'Best Coding Model (Local)': 'Qwen3-Coder 14B Q8', 'Best Chat Model (Local)': 'Llama 3.3 8B Q4', 'Min VRAM': '16 GB' },
+          { 'Plugin': 'Continue (legacy)', 'Best Coding Model (Local)': 'Qwen3-Coder 14B Q8', 'Best Chat Model (Local)': 'Llama 3.1 8B Q4', 'Min VRAM': '16 GB' },
           { 'Plugin': 'Tabby', 'Best Coding Model (Local)': 'StarCoder2-7B (built-in)', 'Best Chat Model (Local)': 'N/A (code only)', 'Min VRAM': '8 GB' },
           { 'Plugin': 'Aider', 'Best Coding Model (Local)': 'Qwen3-Coder 14B (editor)', 'Best Chat Model (Local)': 'Qwen3-Coder 32B (architect)', 'Min VRAM': '16–24 GB' },
           { 'Plugin': 'Cursor', 'Best Coding Model (Local)': 'DeepSeek-Coder-V2 (via Ollama)', 'Best Chat Model (Local)': 'Qwen3 14B', 'Min VRAM': '16 GB' },
@@ -453,7 +453,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 3,
             title: 'Continue — Noch funktionsfähig, aber nicht mehr gepflegt [Von Cursor übernommen, Juni 2026 — Finale Version v2.0.0-vscode]',
-            content: 'Continue war der führende Open-Source-KI-Coding-Assistent für lokale LLMs vor seiner Übernahme durch Cursor im Juni 2026. Er verbindet sich mit Ollama, LM Studio, llama.cpp und jeder OpenAI-kompatiblen API. Features: Inline-Chat (Cmd+L), Autocomplete (Tab), Model-Context-Protocol(MCP)-Tools, Codebase-Indexierung und benutzerdefinierte Slash-Befehle. VS-Code-Extension hat 2M+ Installs. JetBrains-Plugin läuft in IntelliJ IDEA, PyCharm, GoLand, WebStorm und Rider — CLion und RustRover werden nicht abgedeckt. Beste lokale Modelle: Qwen3-Coder 14B (Coding), Llama 3.3 8B (Chat). Setup: Extension installieren, Provider auf Ollama setzen, Modell wählen — in 2 Minuten erledigt. Hinweis (Juni 2026): Continue wurde von Cursor übernommen. Version 2.0.0-vscode, veröffentlicht am 19. Juni 2026, ist die letzte Version; das GitHub-Repository ist nun schreibgeschützt, und die von Continue gehosteten Cloud-Daten wurden nach dem 15. Juli 2026 gelöscht. Die Extension läuft weiterhin vollständig offline mit Ollama und BYO-LLM — jedoch ohne weitere Entwicklung durch das ursprüngliche Team. Community-Forks sind aktiv.',
+            content: 'Continue war der führende Open-Source-KI-Coding-Assistent für lokale LLMs vor seiner Übernahme durch Cursor im Juni 2026. Er verbindet sich mit Ollama, LM Studio, llama.cpp und jeder OpenAI-kompatiblen API. Features: Inline-Chat (Cmd+L), Autocomplete (Tab), Model-Context-Protocol(MCP)-Tools, Codebase-Indexierung und benutzerdefinierte Slash-Befehle. VS-Code-Extension hat 2M+ Installs. JetBrains-Plugin läuft in IntelliJ IDEA, PyCharm, GoLand, WebStorm und Rider — CLion und RustRover werden nicht abgedeckt. Beste lokale Modelle: Qwen3-Coder 14B (Coding), Llama 3.1 8B (Chat). Setup: Extension installieren, Provider auf Ollama setzen, Modell wählen — in 2 Minuten erledigt. Hinweis (Juni 2026): Continue wurde von Cursor übernommen. Version 2.0.0-vscode, veröffentlicht am 19. Juni 2026, ist die letzte Version; das GitHub-Repository ist nun schreibgeschützt, und die von Continue gehosteten Cloud-Daten wurden nach dem 15. Juli 2026 gelöscht. Die Extension läuft weiterhin vollständig offline mit Ollama und BYO-LLM — jedoch ohne weitere Entwicklung durch das ursprüngliche Team. Community-Forks sind aktiv.',
             affiliateLinks: [
               { label: 'Continue im VS Code Marketplace (kostenlos)', url: 'https://continue.dev' },
             ],
@@ -526,7 +526,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Plugin': 'Cline', 'Bestes Coding-Modell (lokal)': 'Qwen3-Coder 32B Q4', 'Bestes Chat-Modell (lokal)': 'Qwen3 32B Q4', 'Min. VRAM': '24 GB' },
           { 'Plugin': 'Bodega One Code', 'Bestes Coding-Modell (lokal)': 'Beliebiges lokales Modell (BYOL)', 'Bestes Chat-Modell (lokal)': 'Beliebiges lokales Modell (BYOL)', 'Min. VRAM': 'Abhängig vom gewählten Modell' },
-          { 'Plugin': 'Continue (Legacy)', 'Bestes Coding-Modell (lokal)': 'Qwen3-Coder 14B Q8', 'Bestes Chat-Modell (lokal)': 'Llama 3.3 8B Q4', 'Min. VRAM': '16 GB' },
+          { 'Plugin': 'Continue (Legacy)', 'Bestes Coding-Modell (lokal)': 'Qwen3-Coder 14B Q8', 'Bestes Chat-Modell (lokal)': 'Llama 3.1 8B Q4', 'Min. VRAM': '16 GB' },
           { 'Plugin': 'Tabby', 'Bestes Coding-Modell (lokal)': 'StarCoder2-7B (integriert)', 'Bestes Chat-Modell (lokal)': 'N/A (nur Code)', 'Min. VRAM': '8 GB' },
           { 'Plugin': 'Aider', 'Bestes Coding-Modell (lokal)': 'Qwen3-Coder 14B (Editor)', 'Bestes Chat-Modell (lokal)': 'Qwen3-Coder 32B (Architekt)', 'Min. VRAM': '16–24 GB' },
           { 'Plugin': 'Cursor', 'Bestes Coding-Modell (lokal)': 'DeepSeek-Coder-V2 (via Ollama)', 'Bestes Chat-Modell (lokal)': 'Qwen3 14B', 'Min. VRAM': '16 GB' },
@@ -761,7 +761,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 3,
             title: 'Continue — Toujours fonctionnel, plus maintenu [Racheté par Cursor, juin 2026 — Version finale v2.0.0-vscode]',
-            content: 'Continue était le principal assistant de codage IA open-source pour les LLMs locaux avant son rachat par Cursor en juin 2026. Il se connecte à Ollama, LM Studio, llama.cpp et toute API OpenAI-compatible. Fonctionnalités : chat inline (Cmd+L), autocomplétion (Tab), outils du protocole de contexte de modèle (MCP), indexation de codebase et commandes slash personnalisées. L\'extension VS Code compte 2M+ installations. Le plugin JetBrains fonctionne dans IntelliJ IDEA, PyCharm, GoLand, WebStorm et Rider — il ne couvre pas CLion ni RustRover. Meilleurs modèles locaux : Qwen3-Coder 14B (codage), Llama 3.3 8B (chat). Installation : installer l\'extension, définir le provider sur Ollama, choisir un modèle — terminé en 2 minutes. Note (juin 2026) : Continue a été racheté par Cursor. La version 2.0.0-vscode, sortie le 19 juin 2026, est la dernière ; le dépôt GitHub est désormais en lecture seule, et les données cloud hébergées par Continue ont été supprimées après le 15 juillet 2026. L\'extension continue de s\'installer et de fonctionner pleinement hors ligne avec Ollama et le BYO-LLM — mais sans développement ultérieur de la part de l\'équipe d\'origine. Des forks communautaires restent actifs.',
+            content: 'Continue était le principal assistant de codage IA open-source pour les LLMs locaux avant son rachat par Cursor en juin 2026. Il se connecte à Ollama, LM Studio, llama.cpp et toute API OpenAI-compatible. Fonctionnalités : chat inline (Cmd+L), autocomplétion (Tab), outils du protocole de contexte de modèle (MCP), indexation de codebase et commandes slash personnalisées. L\'extension VS Code compte 2M+ installations. Le plugin JetBrains fonctionne dans IntelliJ IDEA, PyCharm, GoLand, WebStorm et Rider — il ne couvre pas CLion ni RustRover. Meilleurs modèles locaux : Qwen3-Coder 14B (codage), Llama 3.1 8B (chat). Installation : installer l\'extension, définir le provider sur Ollama, choisir un modèle — terminé en 2 minutes. Note (juin 2026) : Continue a été racheté par Cursor. La version 2.0.0-vscode, sortie le 19 juin 2026, est la dernière ; le dépôt GitHub est désormais en lecture seule, et les données cloud hébergées par Continue ont été supprimées après le 15 juillet 2026. L\'extension continue de s\'installer et de fonctionner pleinement hors ligne avec Ollama et le BYO-LLM — mais sans développement ultérieur de la part de l\'équipe d\'origine. Des forks communautaires restent actifs.',
             affiliateLinks: [
               { label: 'Continue sur VS Code Marketplace (gratuit)', url: 'https://continue.dev' },
             ],
@@ -834,7 +834,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Plugin': 'Cline', 'Meilleur modèle de codage (local)': 'Qwen3-Coder 32B Q4', 'Meilleur modèle de chat (local)': 'Qwen3 32B Q4', 'VRAM min.': '24 Go' },
           { 'Plugin': 'Bodega One Code', 'Meilleur modèle de codage (local)': 'Tout modèle local (BYOL)', 'Meilleur modèle de chat (local)': 'Tout modèle local (BYOL)', 'VRAM min.': 'Selon le modèle choisi' },
-          { 'Plugin': 'Continue (héritage)', 'Meilleur modèle de codage (local)': 'Qwen3-Coder 14B Q8', 'Meilleur modèle de chat (local)': 'Llama 3.3 8B Q4', 'VRAM min.': '16 Go' },
+          { 'Plugin': 'Continue (héritage)', 'Meilleur modèle de codage (local)': 'Qwen3-Coder 14B Q8', 'Meilleur modèle de chat (local)': 'Llama 3.1 8B Q4', 'VRAM min.': '16 Go' },
           { 'Plugin': 'Tabby', 'Meilleur modèle de codage (local)': 'StarCoder2-7B (intégré)', 'Meilleur modèle de chat (local)': 'N/A (code uniquement)', 'VRAM min.': '8 Go' },
           { 'Plugin': 'Aider', 'Meilleur modèle de codage (local)': 'Qwen3-Coder 14B (éditeur)', 'Meilleur modèle de chat (local)': 'Qwen3-Coder 32B (architecte)', 'VRAM min.': '16–24 Go' },
           { 'Plugin': 'Cursor', 'Meilleur modèle de codage (local)': 'DeepSeek-Coder-V2 (via Ollama)', 'Meilleur modèle de chat (local)': 'Qwen3 14B', 'VRAM min.': '16 Go' },
@@ -1069,7 +1069,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 3,
             title: 'Continue — まだ動作するがメンテナンス終了[2026年6月にCursorが買収 — 最終バージョンv2.0.0-vscode]',
-            content: '2026年6月にCursorに買収される前、ContinueはローカルLLM向けの主要オープンソースAIコーディングアシスタントでした。Ollama、LM Studio、llama.cpp、すべてのOpenAI互換APIに接続。機能：インラインチャット（Cmd+L）、オートコンプリート（Tab）、MCPツール、コードベースインデックス化、カスタムスラッシュコマンド。VS Code拡張は200万以上のインストール実績。JetBrainsプラグインはIntelliJ IDEA、PyCharm、GoLand、WebStorm、Riderで動作——CLionとRustRoverは非対応。推奨ローカルモデル：Qwen3-Coder 14B（コーディング）、Llama 3.3 8B（チャット）。セットアップ：拡張機能をインストールし、プロバイダーをOllamaに設定、モデルを選択——2分で完了。注記（2026年6月）：ContinueはCursorに買収されました。2026年6月19日リリースのv2.0.0-vscodeが最終版で、GitHubリポジトリは読み取り専用、Continueがホストしていたクラウドデータは2026年7月15日以降削除されました。Ollama・BYO-LLMとの連携は引き続き完全にオフラインで機能しますが、オリジナルチームによる開発は終了しています。コミュニティフォークは活発です。',
+            content: '2026年6月にCursorに買収される前、ContinueはローカルLLM向けの主要オープンソースAIコーディングアシスタントでした。Ollama、LM Studio、llama.cpp、すべてのOpenAI互換APIに接続。機能：インラインチャット（Cmd+L）、オートコンプリート（Tab）、MCPツール、コードベースインデックス化、カスタムスラッシュコマンド。VS Code拡張は200万以上のインストール実績。JetBrainsプラグインはIntelliJ IDEA、PyCharm、GoLand、WebStorm、Riderで動作——CLionとRustRoverは非対応。推奨ローカルモデル：Qwen3-Coder 14B（コーディング）、Llama 3.1 8B（チャット）。セットアップ：拡張機能をインストールし、プロバイダーをOllamaに設定、モデルを選択——2分で完了。注記（2026年6月）：ContinueはCursorに買収されました。2026年6月19日リリースのv2.0.0-vscodeが最終版で、GitHubリポジトリは読み取り専用、Continueがホストしていたクラウドデータは2026年7月15日以降削除されました。Ollama・BYO-LLMとの連携は引き続き完全にオフラインで機能しますが、オリジナルチームによる開発は終了しています。コミュニティフォークは活発です。',
             affiliateLinks: [
               { label: 'Continue をVS Code Marketplaceでダウンロード（無料）', url: 'https://continue.dev' },
             ],
@@ -1142,7 +1142,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'プラグイン': 'Cline', '最良コーディングモデル（ローカル）': 'Qwen3-Coder 32B Q4', '最良チャットモデル（ローカル）': 'Qwen3 32B Q4', '最小VRAM': '24 GB' },
           { 'プラグイン': 'Bodega One Code', '最良コーディングモデル（ローカル）': '任意のローカルモデル（BYOL）', '最良チャットモデル（ローカル）': '任意のローカルモデル（BYOL）', '最小VRAM': '選択したモデルに依存' },
-          { 'プラグイン': 'Continue（レガシー）', '最良コーディングモデル（ローカル）': 'Qwen3-Coder 14B Q8', '最良チャットモデル（ローカル）': 'Llama 3.3 8B Q4', '最小VRAM': '16 GB' },
+          { 'プラグイン': 'Continue（レガシー）', '最良コーディングモデル（ローカル）': 'Qwen3-Coder 14B Q8', '最良チャットモデル（ローカル）': 'Llama 3.1 8B Q4', '最小VRAM': '16 GB' },
           { 'プラグイン': 'Tabby', '最良コーディングモデル（ローカル）': 'StarCoder2-7B（内蔵）', '最良チャットモデル（ローカル）': 'N/A（コードのみ）', '最小VRAM': '8 GB' },
           { 'プラグイン': 'Aider', '最良コーディングモデル（ローカル）': 'Qwen3-Coder 14B（エディター）', '最良チャットモデル（ローカル）': 'Qwen3-Coder 32B（アーキテクト）', '最小VRAM': '16–24 GB' },
           { 'プラグイン': 'Cursor', '最良コーディングモデル（ローカル）': 'DeepSeek-Coder-V2（Ollama経由）', '最良チャットモデル（ローカル）': 'Qwen3 14B', '最小VRAM': '16 GB' },
@@ -1373,7 +1373,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 3,
             title: 'Continue — 仍可使用但已停止维护 [已于2026年6月被Cursor收购 — 最终版本v2.0.0-vscode]',
-            content: '在2026年6月被Cursor收购之前，Continue是本地LLM领先的开源AI编程助手。连接Ollama、LM Studio、llama.cpp和所有OpenAI兼容API。功能：内联对话（Cmd+L）、代码补全（Tab）、MCP工具、代码库索引、自定义斜杠命令。VS Code扩展已有200万以上安装量。JetBrains插件支持IntelliJ IDEA、PyCharm、GoLand、WebStorm和Rider——不包括CLion和RustRover。推荐本地模型：Qwen3-Coder 14B（编程）、Llama 3.3 8B（对话）。设置：安装扩展，将提供商设为Ollama，选择模型——2分钟内完成。注意（2026年6月）：Continue已被Cursor收购。2026年6月19日发布的v2.0.0-vscode为最终版本，GitHub仓库现为只读状态，Continue托管的云端数据已于2026年7月15日后删除。插件仍可与Ollama及自带模型完全离线正常运行，但原团队已停止开发。社区分支仍然活跃。',
+            content: '在2026年6月被Cursor收购之前，Continue是本地LLM领先的开源AI编程助手。连接Ollama、LM Studio、llama.cpp和所有OpenAI兼容API。功能：内联对话（Cmd+L）、代码补全（Tab）、MCP工具、代码库索引、自定义斜杠命令。VS Code扩展已有200万以上安装量。JetBrains插件支持IntelliJ IDEA、PyCharm、GoLand、WebStorm和Rider——不包括CLion和RustRover。推荐本地模型：Qwen3-Coder 14B（编程）、Llama 3.1 8B（对话）。设置：安装扩展，将提供商设为Ollama，选择模型——2分钟内完成。注意（2026年6月）：Continue已被Cursor收购。2026年6月19日发布的v2.0.0-vscode为最终版本，GitHub仓库现为只读状态，Continue托管的云端数据已于2026年7月15日后删除。插件仍可与Ollama及自带模型完全离线正常运行，但原团队已停止开发。社区分支仍然活跃。',
             affiliateLinks: [
               { label: '在VS Code Marketplace下载Continue（免费）', url: 'https://continue.dev' },
             ],
@@ -1446,7 +1446,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { '插件': 'Cline', '最佳编程模型（本地）': 'Qwen3-Coder 32B Q4', '最佳对话模型（本地）': 'Qwen3 32B Q4', '最低显存': '24 GB' },
           { '插件': 'Bodega One Code', '最佳编程模型（本地）': '任意本地模型（BYOL）', '最佳对话模型（本地）': '任意本地模型（BYOL）', '最低显存': '取决于所选模型' },
-          { '插件': 'Continue（旧版）', '最佳编程模型（本地）': 'Qwen3-Coder 14B Q8', '最佳对话模型（本地）': 'Llama 3.3 8B Q4', '最低显存': '16 GB' },
+          { '插件': 'Continue（旧版）', '最佳编程模型（本地）': 'Qwen3-Coder 14B Q8', '最佳对话模型（本地）': 'Llama 3.1 8B Q4', '最低显存': '16 GB' },
           { '插件': 'Tabby', '最佳编程模型（本地）': 'StarCoder2-7B（内置）', '最佳对话模型（本地）': 'N/A（仅代码）', '最低显存': '8 GB' },
           { '插件': 'Aider', '最佳编程模型（本地）': 'Qwen3-Coder 14B（编辑模式）', '最佳对话模型（本地）': 'Qwen3-Coder 32B（架构模式）', '最低显存': '16–24 GB' },
           { '插件': 'Cursor', '最佳编程模型（本地）': 'DeepSeek-Coder-V2（通过Ollama）', '最佳对话模型（本地）': 'Qwen3 14B', '最低显存': '16 GB' },
@@ -1686,7 +1686,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 3,
             title: 'Continue — Todavía funcional, sin mantenimiento [Adquirido por Cursor, junio de 2026 — versión final v2.0.0-vscode]',
-            content: 'Continue fue el asistente de codificación de IA open-source líder para LLMs locales antes de su adquisición por Cursor en junio de 2026. Se conecta a Ollama, LM Studio, llama.cpp y cualquier API compatible con OpenAI. Funciones: chat en línea (Cmd+L), autocompletado (Tab), herramientas del protocolo de contexto de modelo (MCP), indexación de codebase y comandos slash personalizados. La extensión de VS Code tiene más de 2M de instalaciones. El plugin de JetBrains funciona en IntelliJ IDEA, PyCharm, GoLand, WebStorm y Rider — no cubre CLion ni RustRover. Mejores modelos locales: Qwen3-Coder 14B (codificación), Llama 3.3 8B (chat). Configuración: instala la extensión, define el proveedor como Ollama, elige el modelo — listo en 2 minutos. Nota (junio de 2026): Continue fue adquirido por Cursor. La versión 2.0.0-vscode, publicada el 19 de junio de 2026, es la última; el repositorio de GitHub ahora es de solo lectura, y los datos en la nube alojados por Continue se eliminaron después del 15 de julio de 2026. La extensión sigue instalándose y funcionando completamente offline con Ollama y BYO-LLM — pero sin más desarrollo por parte del equipo original. Hay forks de la comunidad activos.',
+            content: 'Continue fue el asistente de codificación de IA open-source líder para LLMs locales antes de su adquisición por Cursor en junio de 2026. Se conecta a Ollama, LM Studio, llama.cpp y cualquier API compatible con OpenAI. Funciones: chat en línea (Cmd+L), autocompletado (Tab), herramientas del protocolo de contexto de modelo (MCP), indexación de codebase y comandos slash personalizados. La extensión de VS Code tiene más de 2M de instalaciones. El plugin de JetBrains funciona en IntelliJ IDEA, PyCharm, GoLand, WebStorm y Rider — no cubre CLion ni RustRover. Mejores modelos locales: Qwen3-Coder 14B (codificación), Llama 3.1 8B (chat). Configuración: instala la extensión, define el proveedor como Ollama, elige el modelo — listo en 2 minutos. Nota (junio de 2026): Continue fue adquirido por Cursor. La versión 2.0.0-vscode, publicada el 19 de junio de 2026, es la última; el repositorio de GitHub ahora es de solo lectura, y los datos en la nube alojados por Continue se eliminaron después del 15 de julio de 2026. La extensión sigue instalándose y funcionando completamente offline con Ollama y BYO-LLM — pero sin más desarrollo por parte del equipo original. Hay forks de la comunidad activos.',
             affiliateLinks: [
               { label: 'Continue en VS Code Marketplace (gratuito)', url: 'https://continue.dev' },
             ],
@@ -1759,7 +1759,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Plugin': 'Cline', 'Mejor modelo de codificación (local)': 'Qwen3-Coder 32B Q4', 'Mejor modelo de chat (local)': 'Qwen3 32B Q4', 'VRAM mínima': '24 GB' },
           { 'Plugin': 'Bodega One Code', 'Mejor modelo de codificación (local)': 'Cualquier modelo local (BYOL)', 'Mejor modelo de chat (local)': 'Cualquier modelo local (BYOL)', 'VRAM mínima': 'Depende del modelo elegido' },
-          { 'Plugin': 'Continue (heredado)', 'Mejor modelo de codificación (local)': 'Qwen3-Coder 14B Q8', 'Mejor modelo de chat (local)': 'Llama 3.3 8B Q4', 'VRAM mínima': '16 GB' },
+          { 'Plugin': 'Continue (heredado)', 'Mejor modelo de codificación (local)': 'Qwen3-Coder 14B Q8', 'Mejor modelo de chat (local)': 'Llama 3.1 8B Q4', 'VRAM mínima': '16 GB' },
           { 'Plugin': 'Tabby', 'Mejor modelo de codificación (local)': 'StarCoder2-7B (integrado)', 'Mejor modelo de chat (local)': 'N/A (solo código)', 'VRAM mínima': '8 GB' },
           { 'Plugin': 'Aider', 'Mejor modelo de codificación (local)': 'Qwen3-Coder 14B (editor)', 'Mejor modelo de chat (local)': 'Qwen3-Coder 32B (arquitecto)', 'VRAM mínima': '16–24 GB' },
           { 'Plugin': 'Cursor', 'Mejor modelo de codificación (local)': 'DeepSeek-Coder-V2 (via Ollama)', 'Mejor modelo de chat (local)': 'Qwen3 14B', 'VRAM mínima': '16 GB' },
@@ -2026,7 +2026,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 3,
             title: 'Continue — 여전히 작동하지만 더 이상 유지보수되지 않음 [2026년 6월 Cursor에 인수됨 — 최종 버전 v2.0.0-vscode]',
-            content: '2026년 6월 Cursor에 인수되기 전까지 Continue는 로컬 LLM을 위한 대표적인 오픈소스 AI 코딩 어시스턴트였습니다. Ollama, LM Studio, llama.cpp, 그리고 모든 OpenAI 호환 API에 연결됩니다. 기능: 인라인 채팅(Cmd+L), 자동완성(Tab), MCP(모델 컨텍스트 프로토콜) 도구, 코드베이스 인덱싱, 사용자 지정 슬래시 명령. VS Code 확장은 200만 건 이상 설치되었습니다. JetBrains 플러그인은 IntelliJ IDEA, PyCharm, GoLand, WebStorm, Rider에서 작동합니다 — CLion과 RustRover는 지원하지 않습니다. 추천 로컬 모델: Qwen3-Coder 14B(코딩), Llama 3.3 8B(채팅). 설정: 확장 설치, 제공업체를 Ollama로 설정, 모델 선택 — 2분이면 끝납니다. 참고(2026년 6월): Continue는 Cursor에 인수되었습니다. 2026년 6월 19일 출시된 v2.0.0-vscode가 최종 버전이며, GitHub 저장소는 이제 읽기 전용이고, Continue가 호스팅하던 클라우드 데이터는 2026년 7월 15일 이후 삭제되었습니다. 확장은 여전히 Ollama와 BYO-LLM으로 완전히 오프라인 작동하지만 원래 팀의 추가 개발은 없습니다. 커뮤니티 포크는 활발히 활동 중입니다.',
+            content: '2026년 6월 Cursor에 인수되기 전까지 Continue는 로컬 LLM을 위한 대표적인 오픈소스 AI 코딩 어시스턴트였습니다. Ollama, LM Studio, llama.cpp, 그리고 모든 OpenAI 호환 API에 연결됩니다. 기능: 인라인 채팅(Cmd+L), 자동완성(Tab), MCP(모델 컨텍스트 프로토콜) 도구, 코드베이스 인덱싱, 사용자 지정 슬래시 명령. VS Code 확장은 200만 건 이상 설치되었습니다. JetBrains 플러그인은 IntelliJ IDEA, PyCharm, GoLand, WebStorm, Rider에서 작동합니다 — CLion과 RustRover는 지원하지 않습니다. 추천 로컬 모델: Qwen3-Coder 14B(코딩), Llama 3.1 8B(채팅). 설정: 확장 설치, 제공업체를 Ollama로 설정, 모델 선택 — 2분이면 끝납니다. 참고(2026년 6월): Continue는 Cursor에 인수되었습니다. 2026년 6월 19일 출시된 v2.0.0-vscode가 최종 버전이며, GitHub 저장소는 이제 읽기 전용이고, Continue가 호스팅하던 클라우드 데이터는 2026년 7월 15일 이후 삭제되었습니다. 확장은 여전히 Ollama와 BYO-LLM으로 완전히 오프라인 작동하지만 원래 팀의 추가 개발은 없습니다. 커뮤니티 포크는 활발히 활동 중입니다.',
             affiliateLinks: [
               { label: 'VS Code Marketplace에서 Continue 받기(무료)', url: 'https://continue.dev' },
             ],
@@ -2099,7 +2099,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { '플러그인': 'Cline', '최고의 코딩 모델 (로컬)': 'Qwen3-Coder 32B Q4', '최고의 채팅 모델 (로컬)': 'Qwen3 32B Q4', '최소 VRAM': '24 GB' },
           { '플러그인': 'Bodega One Code', '최고의 코딩 모델 (로컬)': '임의의 로컬 모델 (BYOL)', '최고의 채팅 모델 (로컬)': '임의의 로컬 모델 (BYOL)', '최소 VRAM': '선택한 모델에 따라 다름' },
-          { '플러그인': 'Continue (레거시)', '최고의 코딩 모델 (로컬)': 'Qwen3-Coder 14B Q8', '최고의 채팅 모델 (로컬)': 'Llama 3.3 8B Q4', '최소 VRAM': '16 GB' },
+          { '플러그인': 'Continue (레거시)', '최고의 코딩 모델 (로컬)': 'Qwen3-Coder 14B Q8', '최고의 채팅 모델 (로컬)': 'Llama 3.1 8B Q4', '최소 VRAM': '16 GB' },
           { '플러그인': 'Tabby', '최고의 코딩 모델 (로컬)': 'StarCoder2-7B (내장)', '최고의 채팅 모델 (로컬)': 'N/A (코드 전용)', '최소 VRAM': '8 GB' },
           { '플러그인': 'Aider', '최고의 코딩 모델 (로컬)': 'Qwen3-Coder 14B (에디터)', '최고의 채팅 모델 (로컬)': 'Qwen3-Coder 32B (아키텍트)', '최소 VRAM': '16–24 GB' },
           { '플러그인': 'Cursor', '최고의 코딩 모델 (로컬)': 'DeepSeek-Coder-V2 (Ollama 경유)', '최고의 채팅 모델 (로컬)': 'Qwen3 14B', '최소 VRAM': '16 GB' },
@@ -2368,7 +2368,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 3,
             title: 'Continue — Ainda funcional, sem manutenção [Adquirido pela Cursor em junho de 2026 — versão final v2.0.0-vscode]',
-            content: 'O Continue era o principal assistente de codificação de IA open-source para LLMs locais antes de sua aquisição pela Cursor em junho de 2026. Conecta-se ao Ollama, LM Studio, llama.cpp e a qualquer API compatível com OpenAI. Recursos: chat inline (Cmd+L), autocompletar (Tab), ferramentas de protocolo de contexto de modelo (MCP), indexação de codebase e comandos slash personalizados. A extensão do VS Code tem mais de 2M de instalações. O plugin do JetBrains funciona no IntelliJ IDEA, PyCharm, GoLand, WebStorm e Rider — não cobre CLion nem RustRover. Melhores modelos locais: Qwen3-Coder 14B (codificação), Llama 3.3 8B (chat). Configuração: instale a extensão, defina o provedor como Ollama, escolha o modelo — pronto em 2 minutos. Nota (junho de 2026): o Continue foi adquirido pela Cursor. A versão 2.0.0-vscode, lançada em 19 de junho de 2026, é a última; o repositório do GitHub agora é somente leitura, e os dados na nuvem hospedados pelo Continue foram excluídos após 15 de julho de 2026. A extensão continua instalando e funcionando totalmente offline com Ollama e BYO-LLM — mas sem mais desenvolvimento da equipe original. Forks da comunidade estão ativos.',
+            content: 'O Continue era o principal assistente de codificação de IA open-source para LLMs locais antes de sua aquisição pela Cursor em junho de 2026. Conecta-se ao Ollama, LM Studio, llama.cpp e a qualquer API compatível com OpenAI. Recursos: chat inline (Cmd+L), autocompletar (Tab), ferramentas de protocolo de contexto de modelo (MCP), indexação de codebase e comandos slash personalizados. A extensão do VS Code tem mais de 2M de instalações. O plugin do JetBrains funciona no IntelliJ IDEA, PyCharm, GoLand, WebStorm e Rider — não cobre CLion nem RustRover. Melhores modelos locais: Qwen3-Coder 14B (codificação), Llama 3.1 8B (chat). Configuração: instale a extensão, defina o provedor como Ollama, escolha o modelo — pronto em 2 minutos. Nota (junho de 2026): o Continue foi adquirido pela Cursor. A versão 2.0.0-vscode, lançada em 19 de junho de 2026, é a última; o repositório do GitHub agora é somente leitura, e os dados na nuvem hospedados pelo Continue foram excluídos após 15 de julho de 2026. A extensão continua instalando e funcionando totalmente offline com Ollama e BYO-LLM — mas sem mais desenvolvimento da equipe original. Forks da comunidade estão ativos.',
             affiliateLinks: [
               { label: 'Continue no VS Code Marketplace (gratuito)', url: 'https://continue.dev' },
             ],
@@ -2441,7 +2441,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'Plugin': 'Cline', 'Melhor modelo de codificação (local)': 'Qwen3-Coder 32B Q4', 'Melhor modelo de chat (local)': 'Qwen3 32B Q4', 'VRAM mínima': '24 GB' },
           { 'Plugin': 'Bodega One Code', 'Melhor modelo de codificação (local)': 'Qualquer modelo local (BYOL)', 'Melhor modelo de chat (local)': 'Qualquer modelo local (BYOL)', 'VRAM mínima': 'Depende do modelo escolhido' },
-          { 'Plugin': 'Continue (legado)', 'Melhor modelo de codificação (local)': 'Qwen3-Coder 14B Q8', 'Melhor modelo de chat (local)': 'Llama 3.3 8B Q4', 'VRAM mínima': '16 GB' },
+          { 'Plugin': 'Continue (legado)', 'Melhor modelo de codificação (local)': 'Qwen3-Coder 14B Q8', 'Melhor modelo de chat (local)': 'Llama 3.1 8B Q4', 'VRAM mínima': '16 GB' },
           { 'Plugin': 'Tabby', 'Melhor modelo de codificação (local)': 'StarCoder2-7B (integrado)', 'Melhor modelo de chat (local)': 'N/A (apenas código)', 'VRAM mínima': '8 GB' },
           { 'Plugin': 'Aider', 'Melhor modelo de codificação (local)': 'Qwen3-Coder 14B (editor)', 'Melhor modelo de chat (local)': 'Qwen3-Coder 32B (arquiteto)', 'VRAM mínima': '16–24 GB' },
           { 'Plugin': 'Cursor', 'Melhor modelo de codificação (local)': 'DeepSeek-Coder-V2 (via Ollama)', 'Melhor modelo de chat (local)': 'Qwen3 14B', 'VRAM mínima': '16 GB' },
@@ -2708,7 +2708,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             rank: 3,
             title: 'Continue — لا تزال تعمل لكن لم يعد يتم صيانتها [استحوذت عليها Cursor في يونيو 2026 — الإصدار النهائي v2.0.0-vscode]',
-            content: 'كانت Continue المساعد البرمجي الرائد مفتوح المصدر لنماذج LLM المحلية قبل استحواذ Cursor عليها في يونيو 2026. تتصل بـOllama وLM Studio وllama.cpp وأي API متوافقة مع OpenAI. الميزات: دردشة داخل المحرر (Cmd+L)، إكمال تلقائي (Tab)، أدوات بروتوكول سياق النموذج (MCP)، فهرسة قاعدة الكود وأوامر slash مخصصة. تجاوزت تثبيتات إضافة VS Code مليونَي تثبيت. إضافة JetBrains تعمل في IntelliJ IDEA وPyCharm وGoLand وWebStorm وRider — ولا تغطي CLion أو RustRover. أفضل النماذج المحلية: Qwen3-Coder 14B (للبرمجة)، Llama 3.3 8B (للدردشة). الإعداد: ثبّت الإضافة، عيّن المزوّد على Ollama، اختر النموذج — ينتهي الأمر خلال دقيقتين. ملاحظة (يونيو 2026): استحوذت Cursor على Continue. الإصدار v2.0.0-vscode، الصادر في 19 يونيو 2026، هو الإصدار النهائي؛ مستودع GitHub أصبح للقراءة فقط، وحُذفت بيانات السحابة المستضافة لدى Continue بعد 15 يوليو 2026. لا تزال الإضافة تُثبَّت وتعمل بالكامل بلا اتصال مع Ollama وBYO-LLM — لكن دون أي تطوير إضافي من الفريق الأصلي. تظل النسخ المتفرعة (forks) من المجتمع نشطة.',
+            content: 'كانت Continue المساعد البرمجي الرائد مفتوح المصدر لنماذج LLM المحلية قبل استحواذ Cursor عليها في يونيو 2026. تتصل بـOllama وLM Studio وllama.cpp وأي API متوافقة مع OpenAI. الميزات: دردشة داخل المحرر (Cmd+L)، إكمال تلقائي (Tab)، أدوات بروتوكول سياق النموذج (MCP)، فهرسة قاعدة الكود وأوامر slash مخصصة. تجاوزت تثبيتات إضافة VS Code مليونَي تثبيت. إضافة JetBrains تعمل في IntelliJ IDEA وPyCharm وGoLand وWebStorm وRider — ولا تغطي CLion أو RustRover. أفضل النماذج المحلية: Qwen3-Coder 14B (للبرمجة)، Llama 3.1 8B (للدردشة). الإعداد: ثبّت الإضافة، عيّن المزوّد على Ollama، اختر النموذج — ينتهي الأمر خلال دقيقتين. ملاحظة (يونيو 2026): استحوذت Cursor على Continue. الإصدار v2.0.0-vscode، الصادر في 19 يونيو 2026، هو الإصدار النهائي؛ مستودع GitHub أصبح للقراءة فقط، وحُذفت بيانات السحابة المستضافة لدى Continue بعد 15 يوليو 2026. لا تزال الإضافة تُثبَّت وتعمل بالكامل بلا اتصال مع Ollama وBYO-LLM — لكن دون أي تطوير إضافي من الفريق الأصلي. تظل النسخ المتفرعة (forks) من المجتمع نشطة.',
             affiliateLinks: [
               { label: 'Continue في VS Code Marketplace (مجاني)', url: 'https://continue.dev' },
             ],
@@ -2781,7 +2781,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         rows: [
           { 'الإضافة': 'Cline', 'أفضل نموذج برمجة (محلي)': 'Qwen3-Coder 32B Q4', 'أفضل نموذج دردشة (محلي)': 'Qwen3 32B Q4', 'الحد الأدنى من VRAM': '24 GB' },
           { 'الإضافة': 'Bodega One Code', 'أفضل نموذج برمجة (محلي)': 'أي نموذج محلي (BYOL)', 'أفضل نموذج دردشة (محلي)': 'أي نموذج محلي (BYOL)', 'الحد الأدنى من VRAM': 'يعتمد على النموذج المختار' },
-          { 'الإضافة': 'Continue (قديم)', 'أفضل نموذج برمجة (محلي)': 'Qwen3-Coder 14B Q8', 'أفضل نموذج دردشة (محلي)': 'Llama 3.3 8B Q4', 'الحد الأدنى من VRAM': '16 GB' },
+          { 'الإضافة': 'Continue (قديم)', 'أفضل نموذج برمجة (محلي)': 'Qwen3-Coder 14B Q8', 'أفضل نموذج دردشة (محلي)': 'Llama 3.1 8B Q4', 'الحد الأدنى من VRAM': '16 GB' },
           { 'الإضافة': 'Tabby', 'أفضل نموذج برمجة (محلي)': 'StarCoder2-7B (مدمج)', 'أفضل نموذج دردشة (محلي)': 'غير متاح (الكود فقط)', 'الحد الأدنى من VRAM': '8 GB' },
           { 'الإضافة': 'Aider', 'أفضل نموذج برمجة (محلي)': 'Qwen3-Coder 14B (محرر)', 'أفضل نموذج دردشة (محلي)': 'Qwen3-Coder 32B (مهندس معماري)', 'الحد الأدنى من VRAM': '16–24 GB' },
           { 'الإضافة': 'Cursor', 'أفضل نموذج برمجة (محلي)': 'DeepSeek-Coder-V2 (عبر Ollama)', 'أفضل نموذج دردشة (محلي)': 'Qwen3 14B', 'الحد الأدنى من VRAM': '16 GB' },

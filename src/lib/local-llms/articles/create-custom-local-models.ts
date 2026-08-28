@@ -14,7 +14,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       title: 'Create Custom Local LLMs 2026: Fine-Tuning vs Pre-Training with Unsloth and Ollama',
       seoTitle: 'Create Custom Local LLMs 2026: Fine-Tune for $500 vs $50K Pre-Train',
       intro: 'Creating custom local LLMs means fine-tuning an existing model or pre-training from scratch. As of April 2026, fine-tuning with LoRA is practical on consumer hardware: 500 examples, 8 GB VRAM, 1–2 hours, $100–500. Pre-training costs $50K–500K and requires 10B+ tokens — justified only for rare proprietary needs. This guide covers both approaches: the 7-step fine-tuning path with Unsloth, the decision matrix for fine-tuning vs pre-training vs RAG, and deployment to [Ollama](https://ollama.com/).',
-      metaDescription: 'Fine-tune Llama 3.3 8B with LoRA: 500 examples, 8 GB VRAM, 1–2 hours, $100–500. Pre-training: 10B+ tokens, weeks, $50K–500K. Decision matrix and Ollama deployment guide.',
+      metaDescription: 'Fine-tune Llama 3.1 8B with LoRA: 500 examples, 8 GB VRAM, 1–2 hours, $100–500. Pre-training: 10B+ tokens, weeks, $50K–500K. Decision matrix and Ollama deployment guide.',
       publishDate: '2026-04-04',
       dateModified: '2026-06-14',
       leadAnswerBlock: 'Creating custom local LLMs means fine-tuning an existing model or pre-training from scratch. As of April 2026, fine-tuning with LoRA is practical on consumer hardware: 500 examples, 8 GB VRAM, 1–2 hours, $100–500. Pre-training costs $50K–500K and requires 10B+ tokens — justified only for rare proprietary needs. This guide covers both approaches: the 7-step fine-tuning path with Unsloth, the decision matrix for fine-tuning vs pre-training vs RAG, and deployment to Ollama.',
@@ -61,7 +61,7 @@ schema: {
             name: 'Can fine-tuning match pre-trained model quality?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Fine-tuned models can exceed base model performance on your specific domain, but they won\'t match the breadth of knowledge in a larger pre-trained model. Llama 3.3 8B fine-tuned on legal documents will outperform Llama 3.3 70B on legal tasks, but underperform on general knowledge. Fine-tune when domain-specific accuracy matters more than breadth.',
+              text: 'Fine-tuned models can exceed base model performance on your specific domain, but they won\'t match the breadth of knowledge in a larger pre-trained model. Llama 3.1 8B fine-tuned on legal documents will outperform Llama 3.3 70B on legal tasks, but underperform on general knowledge. Fine-tune when domain-specific accuracy matters more than breadth.',
             },
           },
           {
@@ -129,7 +129,7 @@ schema: {
         totalTime: 'PT3H',
         step: [
           { '@type': 'HowToStep', 'position': 1, 'name': 'Collect 500–5,000 domain-specific examples', 'text': 'Each example = input + expected output in JSON/JSONL format' },
-          { '@type': 'HowToStep', 'position': 2, 'name': 'Choose base model (Llama 3.3 8B or Qwen3 7B)', 'text': 'Use instruction-tuned variant for best results' },
+          { '@type': 'HowToStep', 'position': 2, 'name': 'Choose base model (Llama 3.1 8B or Qwen3 7B)', 'text': 'Use instruction-tuned variant for best results' },
           { '@type': 'HowToStep', 'position': 3, 'name': 'Train with LoRA using Unsloth (4× faster)', 'text': 'lora_r=16, learning_rate=2e-4, 3 epochs, 8 GB VRAM' },
           { '@type': 'HowToStep', 'position': 4, 'name': 'Evaluate on held-out test set', 'text': 'Measure accuracy, F1, or task-specific metrics on unseen data' },
           { '@type': 'HowToStep', 'position': 5, 'name': 'Merge LoRA adapter into base model', 'text': 'model.merge_and_unload() creates single model file' },
@@ -213,7 +213,7 @@ schema: {
           title: 'Fine-Tuning Path (Recommended)',
           numberedItems: [
             'Collect 500-5000 domain-specific examples (high quality matters).',
-            'Choose base model (Llama 3.3 8B, Qwen 7B, etc.).',
+            'Choose base model (Llama 3.1 8B, Qwen 7B, etc.).',
             'Use LoRA for efficient training (4× faster, same quality).',
             'Train for 3-5 epochs on GPU.',
             'Evaluate on test set (precision, recall, custom metrics).',
@@ -318,7 +318,7 @@ schema: {
           faqs: [
             {
               q: 'Can fine-tuning match pre-trained model quality?',
-              a: 'Fine-tuned models can exceed base model performance on your specific domain, but they won\'t match the breadth of knowledge in a larger pre-trained model. Llama 3.3 8B fine-tuned on legal documents will outperform Llama 3.3 70B on legal tasks, but underperform on general knowledge. Fine-tune when domain-specific accuracy matters more than breadth.',
+              a: 'Fine-tuned models can exceed base model performance on your specific domain, but they won\'t match the breadth of knowledge in a larger pre-trained model. Llama 3.1 8B fine-tuned on legal documents will outperform Llama 3.3 70B on legal tasks, but underperform on general knowledge. Fine-tune when domain-specific accuracy matters more than breadth.',
             },
             {
               q: 'How much data do I need to fine-tune effectively?',
@@ -394,7 +394,7 @@ schema: {
       title: 'Crear LLMs Locales Personalizados 2026: Fine-Tuning vs Pre-Training con Unsloth y Ollama',
       seoTitle: 'Crear LLMs locales personalizados: fine-tune vs pre-training',
       intro: 'Crear LLMs locales personalizados significa hacer fine-tuning de un modelo existente o pre-entrenar desde cero. A partir de abril de 2026, el fine-tuning con LoRA es práctico en hardware de consumo: 500 ejemplos, 8 GB VRAM, 1–2 horas, $100–500. El pre-training cuesta $50K–500K y requiere más de 10B tokens — justificado solo para necesidades propietarias excepcionales. Esta guía cubre ambos enfoques: el camino de fine-tuning en 7 pasos con Unsloth, la matriz de decisión entre fine-tuning vs pre-training vs RAG, y el despliegue en [Ollama](https://ollama.com/).',
-      metaDescription: 'Fine-tune Llama 3.3 8B con LoRA: 500 ejemplos, 8 GB VRAM, 1–2 h, $100–500. Pre-training: 10B+ tokens, semanas, $50K–500K. Con matriz de decisión.',
+      metaDescription: 'Fine-tune Llama 3.1 8B con LoRA: 500 ejemplos, 8 GB VRAM, 1–2 h, $100–500. Pre-training: 10B+ tokens, semanas, $50K–500K. Con matriz de decisión.',
       publishDate: '2026-04-04',
       dateModified: '2026-06-14',
       leadAnswerBlock: 'Crear LLMs locales personalizados significa hacer fine-tuning de un modelo existente o pre-entrenar desde cero. A partir de abril de 2026, el fine-tuning con LoRA es práctico en hardware de consumo: 500 ejemplos, 8 GB VRAM, 1–2 horas, $100–500. El pre-training cuesta $50K–500K y requiere más de 10B tokens — justificado solo para necesidades propietarias excepcionales. Esta guía cubre ambos enfoques: el camino de fine-tuning en 7 pasos con Unsloth, la matriz de decisión entre fine-tuning vs pre-training vs RAG, y el despliegue en Ollama.',
@@ -443,7 +443,7 @@ schema: {
             name: '¿Puede el fine-tuning igualar la calidad de un modelo pre-entrenado?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Los modelos con fine-tuning pueden superar el rendimiento del modelo base en tu dominio específico, pero no alcanzarán la amplitud de conocimiento de un modelo pre-entrenado más grande. Llama 3.3 8B con fine-tuning en documentos legales superará a Llama 3.3 70B en tareas legales, pero tendrá peor desempeño en conocimiento general. Haz fine-tuning cuando la precisión específica del dominio importa más que la amplitud.',
+              text: 'Los modelos con fine-tuning pueden superar el rendimiento del modelo base en tu dominio específico, pero no alcanzarán la amplitud de conocimiento de un modelo pre-entrenado más grande. Llama 3.1 8B con fine-tuning en documentos legales superará a Llama 3.3 70B en tareas legales, pero tendrá peor desempeño en conocimiento general. Haz fine-tuning cuando la precisión específica del dominio importa más que la amplitud.',
             },
           },
           {
@@ -512,7 +512,7 @@ schema: {
         totalTime: 'PT3H',
         step: [
           { '@type': 'HowToStep', 'position': 1, 'name': 'Recolecta 500–5,000 ejemplos específicos del dominio', 'text': 'Cada ejemplo = entrada + salida esperada en formato JSON/JSONL' },
-          { '@type': 'HowToStep', 'position': 2, 'name': 'Elige el modelo base (Llama 3.3 8B o Qwen3 7B)', 'text': 'Usa la variante instruction-tuned para mejores resultados' },
+          { '@type': 'HowToStep', 'position': 2, 'name': 'Elige el modelo base (Llama 3.1 8B o Qwen3 7B)', 'text': 'Usa la variante instruction-tuned para mejores resultados' },
           { '@type': 'HowToStep', 'position': 3, 'name': 'Entrena con LoRA usando Unsloth (4× más rápido)', 'text': 'lora_r=16, learning_rate=2e-4, 3 epochs, 8 GB VRAM' },
           { '@type': 'HowToStep', 'position': 4, 'name': 'Evalúa en el conjunto de prueba reservado', 'text': 'Mide precisión, F1 o métricas específicas de la tarea en datos no vistos' },
           { '@type': 'HowToStep', 'position': 5, 'name': 'Fusiona el adaptador LoRA en el modelo base', 'text': 'model.merge_and_unload() crea un único archivo de modelo' },
@@ -597,7 +597,7 @@ schema: {
           title: 'Camino de Fine-Tuning (Recomendado)',
           numberedItems: [
             'Recolecta 500–5,000 ejemplos específicos del dominio (la calidad importa).',
-            'Elige el modelo base (Llama 3.3 8B, Qwen 7B, etc.).',
+            'Elige el modelo base (Llama 3.1 8B, Qwen 7B, etc.).',
             'Usa LoRA para entrenamiento eficiente (4× más rápido, misma calidad).',
             'Entrena durante 3–5 epochs en GPU.',
             'Evalúa en el conjunto de prueba (precisión, recall, métricas personalizadas).',
@@ -702,7 +702,7 @@ schema: {
           faqs: [
             {
               q: '¿Puede el fine-tuning igualar la calidad de un modelo pre-entrenado?',
-              a: 'Los modelos con fine-tuning pueden superar el rendimiento del modelo base en tu dominio específico, pero no alcanzarán la amplitud de conocimiento de un modelo pre-entrenado más grande. Llama 3.3 8B con fine-tuning en documentos legales superará a Llama 3.3 70B en tareas legales, pero tendrá peor desempeño en conocimiento general. Haz fine-tuning cuando la precisión específica del dominio importa más que la amplitud.',
+              a: 'Los modelos con fine-tuning pueden superar el rendimiento del modelo base en tu dominio específico, pero no alcanzarán la amplitud de conocimiento de un modelo pre-entrenado más grande. Llama 3.1 8B con fine-tuning en documentos legales superará a Llama 3.3 70B en tareas legales, pero tendrá peor desempeño en conocimiento general. Haz fine-tuning cuando la precisión específica del dominio importa más que la amplitud.',
             },
             {
               q: '¿Cuántos datos necesito para hacer fine-tuning de manera efectiva?',
@@ -778,7 +778,7 @@ schema: {
       title: 'إنشاء نماذج ⁨LLM⁩ محلية مخصصة ⁨2026⁩: الضبط الدقيق مقابل التدريب المسبق بـ ⁨Unsloth⁩ و⁨Ollama⁩',
       seoTitle: 'ضبط ⁨LLM⁩ المحلية بـ ⁨LoRA⁩: ⁨500⁩ مثال و⁨VRAM⁩ بـ ⁨8 GB⁩',
       intro: 'إنشاء نماذج LLM محلية مخصصة يعني الضبط الدقيق لنموذج موجود أو التدريب المسبق من الصفر. اعتباراً من أبريل 2026، الضبط الدقيق بـ LoRA عملي على العتاد الاستهلاكي: 500 مثال، 8 GB VRAM، 1–2 ساعة، 100–500 دولار. يكلّف التدريب المسبق 50 ألف–500 ألف دولار ويتطلب أكثر من 10 مليارات رمز — مبرَّر فقط للاحتياجات المملوكة الاستثنائية. يغطي هذا الدليل النهجين: مسار الضبط الدقيق بـ 7 خطوات مع Unsloth، ومصفوفة القرار بين الضبط الدقيق والتدريب المسبق وRAG، والنشر على [Ollama](https://ollama.com/).',
-      metaDescription: 'الضبط بـ ⁨LoRA⁩ على ⁨Llama 3.3 8B⁩: ⁨500⁩ مثال، ⁨8 GB VRAM⁩، ⁨1⁩–⁨2⁩ ساعة، ⁨100⁩–⁨500⁩$. التدريب المسبق: ⁨10B⁩+ رمز وأسابيع ويكلّف ⁨50⁩,⁨000⁩–⁨500⁩,⁨000⁩$.',
+      metaDescription: 'الضبط بـ ⁨LoRA⁩ على ⁨Llama 3.1 8B⁩: ⁨500⁩ مثال، ⁨8 GB VRAM⁩، ⁨1⁩–⁨2⁩ ساعة، ⁨100⁩–⁨500⁩$. التدريب المسبق: ⁨10B⁩+ رمز وأسابيع ويكلّف ⁨50⁩,⁨000⁩–⁨500⁩,⁨000⁩$.',
       publishDate: '2026-04-04',
       dateModified: '2026-06-14',
       leadAnswerBlock: 'إنشاء نماذج LLM محلية مخصصة يعني الضبط الدقيق لنموذج موجود أو التدريب المسبق من الصفر. اعتباراً من أبريل 2026، الضبط الدقيق بـ LoRA عملي على العتاد الاستهلاكي: 500 مثال، 8 GB VRAM، 1–2 ساعة، 100–500 دولار. يكلّف التدريب المسبق 50 ألف–500 ألف دولار ويتطلب أكثر من 10 مليارات رمز — مبرَّر فقط للاحتياجات المملوكة الاستثنائية. يغطي هذا الدليل النهجين: مسار الضبط الدقيق بـ 7 خطوات مع Unsloth، ومصفوفة القرار بين الضبط الدقيق والتدريب المسبق وRAG، والنشر على Ollama.',
@@ -827,7 +827,7 @@ schema: {
             name: 'هل يمكن للضبط الدقيق مضاهاة جودة نموذج مدرَّب مسبقاً؟',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'يمكن للنماذج المضبوطة دقيقاً تجاوز أداء النموذج الأساسي في مجالك المحدد، لكنها لن تبلغ اتساع معرفة نموذج مدرَّب مسبقاً أكبر. Llama 3.3 8B المضبوط دقيقاً على مستندات قانونية سيتفوق على Llama 3.3 70B في المهام القانونية، لكن أداؤه سيكون أسوأ في المعرفة العامة. اضبط دقيقاً عندما تكون الدقة الخاصة بالمجال أهم من الاتساع.',
+              text: 'يمكن للنماذج المضبوطة دقيقاً تجاوز أداء النموذج الأساسي في مجالك المحدد، لكنها لن تبلغ اتساع معرفة نموذج مدرَّب مسبقاً أكبر. Llama 3.1 8B المضبوط دقيقاً على مستندات قانونية سيتفوق على Llama 3.3 70B في المهام القانونية، لكن أداؤه سيكون أسوأ في المعرفة العامة. اضبط دقيقاً عندما تكون الدقة الخاصة بالمجال أهم من الاتساع.',
             },
           },
           {
@@ -896,7 +896,7 @@ schema: {
         totalTime: 'PT3H',
         step: [
           { '@type': 'HowToStep', 'position': 1, 'name': 'اجمع 500–5,000 مثال خاص بالمجال', 'text': 'كل مثال = مدخل + المخرج المتوقَّع بصيغة JSON/JSONL' },
-          { '@type': 'HowToStep', 'position': 2, 'name': 'اختر النموذج الأساسي (Llama 3.3 8B أو Qwen3 7B)', 'text': 'استخدم إصدار instruction-tuned لنتائج أفضل' },
+          { '@type': 'HowToStep', 'position': 2, 'name': 'اختر النموذج الأساسي (Llama 3.1 8B أو Qwen3 7B)', 'text': 'استخدم إصدار instruction-tuned لنتائج أفضل' },
           { '@type': 'HowToStep', 'position': 3, 'name': 'درّب بـ LoRA باستخدام Unsloth (أسرع بـ 4×)', 'text': 'lora_r=16, learning_rate=2e-4, 3 epochs, 8 GB VRAM' },
           { '@type': 'HowToStep', 'position': 4, 'name': 'قيّم على مجموعة الاختبار المحجوزة', 'text': 'قِس الدقة أو F1 أو مقاييس خاصة بالمهمة على بيانات غير مرئية' },
           { '@type': 'HowToStep', 'position': 5, 'name': 'ادمج محوّل LoRA في النموذج الأساسي', 'text': 'model.merge_and_unload() ينشئ ملف نموذج واحداً' },
@@ -981,7 +981,7 @@ schema: {
           title: 'مسار الضبط الدقيق (موصى به)',
           numberedItems: [
             'اجمع 500–5,000 مثال خاص بالمجال (الجودة مهمة).',
-            'اختر النموذج الأساسي (Llama 3.3 8B، Qwen 7B، إلخ).',
+            'اختر النموذج الأساسي (Llama 3.1 8B، Qwen 7B، إلخ).',
             'استخدم LoRA للتدريب الفعّال (أسرع بـ 4×، الجودة نفسها).',
             'درّب لمدة 3–5 epochs على GPU.',
             'قيّم على مجموعة الاختبار (الدقة، الاستدعاء، مقاييس مخصصة).',
@@ -1086,7 +1086,7 @@ schema: {
           faqs: [
             {
               q: 'هل يمكن للضبط الدقيق مضاهاة جودة نموذج مدرَّب مسبقاً؟',
-              a: 'يمكن للنماذج المضبوطة دقيقاً تجاوز أداء النموذج الأساسي في مجالك المحدد، لكنها لن تبلغ اتساع معرفة نموذج مدرَّب مسبقاً أكبر. Llama 3.3 8B المضبوط دقيقاً على مستندات قانونية سيتفوق على Llama 3.3 70B في المهام القانونية، لكن أداؤه سيكون أسوأ في المعرفة العامة. اضبط دقيقاً عندما تكون الدقة الخاصة بالمجال أهم من الاتساع.',
+              a: 'يمكن للنماذج المضبوطة دقيقاً تجاوز أداء النموذج الأساسي في مجالك المحدد، لكنها لن تبلغ اتساع معرفة نموذج مدرَّب مسبقاً أكبر. Llama 3.1 8B المضبوط دقيقاً على مستندات قانونية سيتفوق على Llama 3.3 70B في المهام القانونية، لكن أداؤه سيكون أسوأ في المعرفة العامة. اضبط دقيقاً عندما تكون الدقة الخاصة بالمجال أهم من الاتساع.',
             },
             {
               q: 'كم بياناً أحتاج للضبط الدقيق بفعالية؟',
@@ -1162,7 +1162,7 @@ schema: {
       title: 'Criar LLMs Locais Personalizados 2026: Fine-Tuning vs Pré-Treinamento com Unsloth e Ollama',
       seoTitle: 'Criar LLMs locais personalizados: fine-tune vs pré-treinamento',
       intro: 'Criar LLMs locais personalizados significa fazer fine-tuning de um modelo existente ou pré-treinar do zero. A partir de abril de 2026, o fine-tuning com LoRA é prático em hardware de consumo: 500 exemplos, 8 GB VRAM, 1–2 horas, $100–500. O pré-treinamento custa $50K–500K e requer mais de 10B de tokens — justificado apenas para necessidades proprietárias excepcionais. Este guia cobre ambas as abordagens: o caminho de fine-tuning em 7 passos com Unsloth, a matriz de decisão entre fine-tuning vs pré-treinamento vs RAG, e o deploy no Ollama.',
-      metaDescription: 'Fine-tune Llama 3.3 8B com LoRA: 500 exemplos, 8 GB VRAM, 1–2 h, $100–500. Pré-treinamento: 10B+ tokens, semanas, $50K–500K. Com matriz de decisão.',
+      metaDescription: 'Fine-tune Llama 3.1 8B com LoRA: 500 exemplos, 8 GB VRAM, 1–2 h, $100–500. Pré-treinamento: 10B+ tokens, semanas, $50K–500K. Com matriz de decisão.',
       publishDate: '2026-04-04',
       leadAnswerBlock: 'Criar LLMs locais personalizados significa fazer fine-tuning de um modelo existente ou pré-treinar do zero. A partir de abril de 2026, o fine-tuning com LoRA é prático em hardware de consumo: 500 exemplos, 8 GB VRAM, 1–2 horas, $100–500. O pré-treinamento custa $50K–500K e requer mais de 10B de tokens — justificado apenas para necessidades proprietárias excepcionais.',
       audience: 'Engenheiros implantando LLMs locais em ambientes de produção ou empresa',
@@ -1333,7 +1333,7 @@ schema: {
             name: 'Kann Fine-Tuning die Qualität eines vortrainierten Modells erreichen?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Fine-Tuned-Modelle können die Leistung des Basismodells in Ihrer spezifischen Domäne übertreffen, entsprechen aber nicht der Breite des Wissensinhalts eines größeren vortrainierten Modells. Llama 3.3 8B, das auf juristische Dokumente fine-tuned ist, wird Llama 3.3 70B bei juristischen Aufgaben übertreffen, aber bei allgemeinem Wissen unterlegen sein. Fine-Tune, wenn domänenspezifische Genauigkeit wichtiger ist als Breite.',
+              text: 'Fine-Tuned-Modelle können die Leistung des Basismodells in Ihrer spezifischen Domäne übertreffen, entsprechen aber nicht der Breite des Wissensinhalts eines größeren vortrainierten Modells. Llama 3.1 8B, das auf juristische Dokumente fine-tuned ist, wird Llama 3.3 70B bei juristischen Aufgaben übertreffen, aber bei allgemeinem Wissen unterlegen sein. Fine-Tune, wenn domänenspezifische Genauigkeit wichtiger ist als Breite.',
             },
           },
           {
@@ -1418,7 +1418,7 @@ schema: {
         totalTime: 'PT3H',
         step: [
           { '@type': 'HowToStep', 'position': 1, 'name': 'Sammeln Sie 500–5.000 domänenspezifische Beispiele', 'text': 'Jedes Beispiel = Eingabe + erwartete Ausgabe in JSON/JSONL-Format' },
-          { '@type': 'HowToStep', 'position': 2, 'name': 'Wählen Sie Basismodell (Llama 3.3 8B oder Qwen 7B)', 'text': 'Verwenden Sie Instruction-Tuned-Variante für beste Ergebnisse' },
+          { '@type': 'HowToStep', 'position': 2, 'name': 'Wählen Sie Basismodell (Llama 3.1 8B oder Qwen 7B)', 'text': 'Verwenden Sie Instruction-Tuned-Variante für beste Ergebnisse' },
           { '@type': 'HowToStep', 'position': 3, 'name': 'Trainieren Sie mit LoRA mit Unsloth (4× schneller)', 'text': 'lora_r=16, learning_rate=2e-4, 3 Epochen, 8 GB VRAM' },
           { '@type': 'HowToStep', 'position': 4, 'name': 'Evaluieren Sie auf Hold-Out Test-Set', 'text': 'Genauigkeit, F1 oder aufgabenspezifische Metriken auf unsichtbaren Daten messen' },
           { '@type': 'HowToStep', 'position': 5, 'name': 'Zusammenführen von LoRA-Adapter mit Basismodell', 'text': 'model.merge_and_unload() erstellt einzelne Modelldatei' },
@@ -1505,7 +1505,7 @@ schema: {
           title: 'Fine-Tuning-Pfad (Empfohlen)',
           numberedItems: [
             'Sammeln Sie 500–5.000 domänenspezifische Beispiele (Qualität ist wichtig).',
-            'Wählen Sie Basismodell (Llama 3.3 8B, Qwen 7B, etc.).',
+            'Wählen Sie Basismodell (Llama 3.1 8B, Qwen 7B, etc.).',
             'Verwenden Sie LoRA für effizientes Training (4× schneller, gleiche Qualität).',
             'Trainieren Sie 3–5 Epochen auf GPU.',
             'Evaluieren Sie auf Test-Set (Genauigkeit, Recall, benutzerdefinierte Metriken).',
@@ -1610,7 +1610,7 @@ schema: {
           faqs: [
             {
               q: 'Kann Fine-Tuning die Qualität eines vortrainierten Modells erreichen?',
-              a: 'Fine-Tuned-Modelle können die Leistung des Basismodells in Ihrer spezifischen Domäne übertreffen, entsprechen aber nicht der Breite des Wissensinhalts eines größeren vortrainierten Modells. Llama 3.3 8B, das auf juristische Dokumente fine-tuned ist, wird Llama 3.3 70B bei juristischen Aufgaben übertreffen, aber bei allgemeinem Wissen unterlegen sein. Fine-Tune, wenn domänenspezifische Genauigkeit wichtiger ist als Breite.',
+              a: 'Fine-Tuned-Modelle können die Leistung des Basismodells in Ihrer spezifischen Domäne übertreffen, entsprechen aber nicht der Breite des Wissensinhalts eines größeren vortrainierten Modells. Llama 3.1 8B, das auf juristische Dokumente fine-tuned ist, wird Llama 3.3 70B bei juristischen Aufgaben übertreffen, aber bei allgemeinem Wissen unterlegen sein. Fine-Tune, wenn domänenspezifische Genauigkeit wichtiger ist als Breite.',
             },
             {
               q: 'Wie viele Daten brauche ich für effektives Fine-Tuning?',
@@ -1693,7 +1693,7 @@ schema: {
       title: 'Créer des LLMs locaux personnalisés en 2026 : Fine-tuning vs. Pre-training avec Unsloth et Ollama',
       seoTitle: 'Créer des LLMs locaux 2026 : Fine-Tuning 500 $ vs Pré-entraînement 50K $',
       intro: 'Créer des LLMs locaux personnalisés signifie affiner un modèle existant ou pré-entraîner à partir de zéro. En avril 2026, le fine-tuning avec LoRA est pratique sur du matériel grand public : 500 exemples, 8 GB VRAM, 1–2 heures, 100–500 €. Le pré-entraînement coûte 50 000–500 000 € et nécessite 10 milliards+ tokens — justifié uniquement pour les besoins propriétaires rares. Ce guide couvre les deux approches : le chemin de fine-tuning en 7 étapes avec Unsloth, la matrice de décision fine-tuning vs. pré-entraînement vs. RAG, et le déploiement sur Ollama.',
-      metaDescription: 'Fine-tuner Llama 3.3 8B avec LoRA : 500 exemples, 8 Go VRAM, 1–2h, 100–500 $. Pré-entraînement : 10B+ tokens, semaines, 50K–500K $. Matrice de décision + Ollama.',
+      metaDescription: 'Fine-tuner Llama 3.1 8B avec LoRA : 500 exemples, 8 Go VRAM, 1–2h, 100–500 $. Pré-entraînement : 10B+ tokens, semaines, 50K–500K $. Matrice de décision + Ollama.',
       publishDate: '2026-04-04',
       dateModified: '2026-06-14',
       leadAnswerBlock: 'Créer des LLMs locaux personnalisés signifie affiner un modèle existant ou pré-entraîner à partir de zéro. En avril 2026, le fine-tuning avec LoRA est pratique sur du matériel grand public : 500 exemples, 8 GB VRAM, 1–2 heures, 100–500 €.',
@@ -1743,7 +1743,7 @@ schema: {
             name: 'Le fine-tuning peut-il égaler la qualité d\'un modèle pré-entraîné ?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Les modèles fine-tunés peuvent dépasser les performances du modèle de base sur votre domaine spécifique, mais ne correspondent pas à la largeur de connaissance d\'un modèle pré-entraîné plus grand. Llama 3.3 8B fine-tuné sur des documents juridiques surpassera Llama 3.3 70B sur les tâches juridiques, mais sous-performera sur les connaissances générales. Fine-tuner quand la précision spécifique au domaine compte plus que l\'étendue.',
+              text: 'Les modèles fine-tunés peuvent dépasser les performances du modèle de base sur votre domaine spécifique, mais ne correspondent pas à la largeur de connaissance d\'un modèle pré-entraîné plus grand. Llama 3.1 8B fine-tuné sur des documents juridiques surpassera Llama 3.3 70B sur les tâches juridiques, mais sous-performera sur les connaissances générales. Fine-tuner quand la précision spécifique au domaine compte plus que l\'étendue.',
             },
           },
           {
@@ -1812,7 +1812,7 @@ schema: {
         totalTime: 'PT3H',
         step: [
           { '@type': 'HowToStep', 'position': 1, 'name': 'Collectez 500–5 000 exemples spécifiques au domaine', 'text': 'Chaque exemple = entrée + sortie attendue au format JSON/JSONL' },
-          { '@type': 'HowToStep', 'position': 2, 'name': 'Choisissez modèle base (Llama 3.3 8B ou Qwen3 7B)', 'text': 'Utilisez variante instruction-tuned meilleurs résultats' },
+          { '@type': 'HowToStep', 'position': 2, 'name': 'Choisissez modèle base (Llama 3.1 8B ou Qwen3 7B)', 'text': 'Utilisez variante instruction-tuned meilleurs résultats' },
           { '@type': 'HowToStep', 'position': 3, 'name': 'Entraînez avec LoRA via Unsloth (4× plus rapide)', 'text': 'lora_r=16, learning_rate=2e-4, 3 epochs, 8 GB VRAM' },
           { '@type': 'HowToStep', 'position': 4, 'name': 'Évaluez sur ensemble test détenu', 'text': 'Mesurez précision, F1, ou métriques spécifiques tâche sur données non vues' },
           { '@type': 'HowToStep', 'position': 5, 'name': 'Fusionnez adaptateur LoRA dans modèle base', 'text': 'model.merge_and_unload() crée fichier modèle unique' },
@@ -1897,7 +1897,7 @@ schema: {
           title: 'Chemin Fine-Tuning (Recommandé)',
           numberedItems: [
             'Collectez 500-5 000 exemples spécifiques domaine (qualité importe).',
-            'Choisissez modèle base (Llama 3.3 8B, Qwen 7B, etc.).',
+            'Choisissez modèle base (Llama 3.1 8B, Qwen 7B, etc.).',
             'Utilisez LoRA entraînement efficace (4× plus rapide, même qualité).',
             'Entraînez 3-5 epochs sur GPU.',
             'Évaluez sur ensemble test (précision, rappel, métriques personnalisées).',
@@ -2002,7 +2002,7 @@ schema: {
           faqs: [
             {
               q: 'Le fine-tuning peut-il égaler la qualité d\'un modèle pré-entraîné ?',
-              a: 'Les modèles fine-tunés peuvent surpasser modèle base votre domaine spécifique, mais ne correspondent pas largeur connaissance modèle pré-entraîné plus grand. Llama 3.3 8B fine-tuné sur documents juridiques surpassera Llama 3.3 70B sur tâches juridiques, mais sous-performera sur connaissances générales. Fine-tuner quand précision domaine compte plus que largeur.',
+              a: 'Les modèles fine-tunés peuvent surpasser modèle base votre domaine spécifique, mais ne correspondent pas largeur connaissance modèle pré-entraîné plus grand. Llama 3.1 8B fine-tuné sur documents juridiques surpassera Llama 3.3 70B sur tâches juridiques, mais sous-performera sur connaissances générales. Fine-tuner quand précision domaine compte plus que largeur.',
             },
             {
               q: 'Combien de données me dois-je utiliser pour fine-tuner efficacement ?',
@@ -2078,7 +2078,7 @@ schema: {
       title: 'カスタム ローカル LLM を構築する 2026 年版：Unsloth と Ollama による Fine-tuning vs. Pre-training',
       seoTitle: 'カスタムローカルLLM作成2026：Fine-Tuning $500 vs 事前訓練 $50K',
       intro: 'カスタム ローカル LLM を構築するとは、既存モデルを fine-tune するか、ゼロから pre-train することを意味します。2026 年 4 月現在、LoRA による fine-tuning はコンシューマー ハードウェアで実用的です：500 サンプル、8 GB VRAM、1～2 時間、¥15,000～30,000。Pre-training には ¥6,000,000～60,000,000 かかり、100 億+ トークンが必要です—稀な独自ニーズのみ正当化されます。このガイドは両方のアプローチをカバーしています：Unsloth を使用した 7 ステップ fine-tuning パス、fine-tuning vs. pre-training vs. RAG の決定マトリックス、および Ollama への デプロイメント。',
-      metaDescription: 'Llama 3.3 8BをLoRAで微調整：500例、8GB VRAM、1–2時間、$100–500。事前訓練：10B+トークン、数週間、$50K–500K。判断マトリクスとOllamaデプロイ手順付き。',
+      metaDescription: 'Llama 3.1 8BをLoRAで微調整：500例、8GB VRAM、1–2時間、$100–500。事前訓練：10B+トークン、数週間、$50K–500K。判断マトリクスとOllamaデプロイ手順付き。',
       publishDate: '2026-04-04',
       dateModified: '2026-06-14',
       leadAnswerBlock: 'カスタム ローカル LLM を構築するとは、既存モデルを fine-tune するか、ゼロから pre-train することを意味します。2026 年 4 月現在、LoRA による fine-tuning はコンシューマー ハードウェアで実用的です：500 サンプル、8 GB VRAM、1～2 時間、¥15,000～30,000。',
@@ -2127,7 +2127,7 @@ schema: {
             name: 'Fine-tuning はプレトレーニングモデルの品質に匹敵できますか？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Fine-tune モデルは特定ドメインでベースモデルパフォーマンスを上回ることができますが、より大きいプレトレーニングモデルの知識幅には及びません。法律ドキュメント上で fine-tune した Llama 3.3 8B は法律タスクで Llama 3.3 70B を上回りますが、一般知識では下回ります。ドメイン固有の精度が幅より重要な場合、fine-tune してください。',
+              text: 'Fine-tune モデルは特定ドメインでベースモデルパフォーマンスを上回ることができますが、より大きいプレトレーニングモデルの知識幅には及びません。法律ドキュメント上で fine-tune した Llama 3.1 8B は法律タスクで Llama 3.3 70B を上回りますが、一般知識では下回ります。ドメイン固有の精度が幅より重要な場合、fine-tune してください。',
             },
           },
           {
@@ -2196,7 +2196,7 @@ schema: {
         totalTime: 'PT3H',
         step: [
           { '@type': 'HowToStep', 'position': 1, 'name': '500～5,000 ドメイン固有例を収集', 'text': '各例 = JSON/JSONL 形式の入力 + 期待される出力' },
-          { '@type': 'HowToStep', 'position': 2, 'name': 'ベースモデルを選択（Llama 3.3 8B または Qwen3 7B）', 'text': '最良の結果には命令チューン版を使用' },
+          { '@type': 'HowToStep', 'position': 2, 'name': 'ベースモデルを選択（Llama 3.1 8B または Qwen3 7B）', 'text': '最良の結果には命令チューン版を使用' },
           { '@type': 'HowToStep', 'position': 3, 'name': 'Unsloth を使用した LoRA でトレーニング（4 倍高速）', 'text': 'lora_r=16、learning_rate=2e-4、3 epochs、8 GB VRAM' },
           { '@type': 'HowToStep', 'position': 4, 'name': 'ホールドアウトテストセットで評価', 'text': '見ていないデータで精度、F1、またはタスク固有メトリクスを測定' },
           { '@type': 'HowToStep', 'position': 5, 'name': 'LoRA アダプターをベースモデルにマージ', 'text': 'model.merge_and_unload() は単一モデルファイルを作成' },
@@ -2281,7 +2281,7 @@ schema: {
           title: 'Fine-Tuning パス（推奨）',
           numberedItems: [
             '500-5000 ドメイン固有サンプルを収集（高品質が重要）。',
-            'ベースモデルを選択（Llama 3.3 8B、Qwen 7B など）。',
+            'ベースモデルを選択（Llama 3.1 8B、Qwen 7B など）。',
             '効率的なトレーニングに LoRA を使用（4 倍高速、同じ品質）。',
             'GPU で 3-5 epoch トレーニング。',
             'テストセットで評価（精度、再現率、カスタムメトリクス）。',
@@ -2386,7 +2386,7 @@ schema: {
           faqs: [
             {
               q: 'Fine-tuning はプレトレーニングモデルの品質に匹敵できますか？',
-              a: 'Fine-tune モデルは特定ドメインでベースモデル機能を上回ることができますが、より大きいプレトレーニングモデルの知識幅には及びません。法律ドキュメント上で fine-tune した Llama 3.3 8B は法律タスクで Llama 3.3 70B を上回りますが、一般知識では下回ります。ドメイン固有精度が幅より重要な場合、fine-tune してください。',
+              a: 'Fine-tune モデルは特定ドメインでベースモデル機能を上回ることができますが、より大きいプレトレーニングモデルの知識幅には及びません。法律ドキュメント上で fine-tune した Llama 3.1 8B は法律タスクで Llama 3.3 70B を上回りますが、一般知識では下回ります。ドメイン固有精度が幅より重要な場合、fine-tune してください。',
             },
             {
               q: '効果的に fine-tune するにはどのくらいデータが必要ですか？',
@@ -2462,7 +2462,7 @@ schema: {
       title: '创建自定义本地 LLM 2026：使用 Unsloth 和 Ollama 进行微调与预训练',
       seoTitle: '创建自定义本地LLM 2026：微调$500对比预训练$50K',
       intro: '创建自定义本地 LLM 意味着微调现有模型或从零开始预训练。截至 2026 年 4 月，使用 LoRA 的微调在消费级硬件上可行：500 个样本、8GB VRAM、1-2 小时、$100-500。预训练成本为 $50,000-500,000，需要 100 亿+ tokens——仅对罕见的专有需求合理。本指南涵盖两种方法：使用 Unsloth 的 7 步微调路径、微调 vs. 预训练 vs. RAG 决策矩阵以及 Ollama 部署。',
-      metaDescription: '用LoRA微调Llama 3.3 8B：500个样本，8GB显存，1–2小时，$100–500。预训练：10B+令牌，数周，$50K–500K。含决策矩阵与Ollama部署指南。',
+      metaDescription: '用LoRA微调Llama 3.1 8B：500个样本，8GB显存，1–2小时，$100–500。预训练：10B+令牌，数周，$50K–500K。含决策矩阵与Ollama部署指南。',
       publishDate: '2026-04-04',
       dateModified: '2026-06-14',
       leadAnswerBlock: '创建自定义本地 LLM 意味着微调现有模型或从零开始预训练。截至 2026 年 4 月，使用 LoRA 的微调在消费级硬件上可行：500 个样本、8GB VRAM、1-2 小时、$100-500。',
@@ -2512,7 +2512,7 @@ schema: {
             name: '微调能否匹配预训练模型的质量？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: '经过微调的模型在您的特定领域可能超过基础模型的性能，但不会达到更大预训练模型的知识广度。在法律文件上微调的 Llama 3.3 8B 会在法律任务上优于 Llama 3.3 70B，但在一般知识上表现不佳。当领域特定的准确性比广度更重要时，选择微调。',
+              text: '经过微调的模型在您的特定领域可能超过基础模型的性能，但不会达到更大预训练模型的知识广度。在法律文件上微调的 Llama 3.1 8B 会在法律任务上优于 Llama 3.3 70B，但在一般知识上表现不佳。当领域特定的准确性比广度更重要时，选择微调。',
             },
           },
           {
@@ -2581,7 +2581,7 @@ schema: {
         totalTime: 'PT3H',
         step: [
           { '@type': 'HowToStep', 'position': 1, 'name': '收集 500-5,000 个领域特定样本', 'text': '每个样本 = JSON/JSONL 格式的输入 + 预期输出' },
-          { '@type': 'HowToStep', 'position': 2, 'name': '选择基础模型（Llama 3.3 8B 或 Qwen3 7B）', 'text': '使用指令调优变体以获得最佳结果' },
+          { '@type': 'HowToStep', 'position': 2, 'name': '选择基础模型（Llama 3.1 8B 或 Qwen3 7B）', 'text': '使用指令调优变体以获得最佳结果' },
           { '@type': 'HowToStep', 'position': 3, 'name': '使用 Unsloth 通过 LoRA 训练（快 4 倍）', 'text': 'lora_r=16, learning_rate=2e-4, 3 个 epoch, 8GB VRAM' },
           { '@type': 'HowToStep', 'position': 4, 'name': '在保留的测试集上评估', 'text': '在未见过的数据上测量准确性、F1 或特定任务指标' },
           { '@type': 'HowToStep', 'position': 5, 'name': '将 LoRA 适配器合并到基础模型中', 'text': 'model.merge_and_unload() 创建单个模型文件' },
@@ -2666,7 +2666,7 @@ schema: {
           title: '微调路径（推荐）',
           numberedItems: [
             '收集 500-5,000 个高质量领域特定样本。',
-            '选择基础模型（Llama 3.3 8B、Qwen 7B 等）。',
+            '选择基础模型（Llama 3.1 8B、Qwen 7B 等）。',
             '使用 LoRA 进行高效训练（快 4 倍，质量相同）。',
             '在 GPU 上训练 3-5 个 epoch。',
             '在测试集上评估（精确率、召回率、自定义指标）。',
@@ -2771,7 +2771,7 @@ schema: {
           faqs: [
             {
               q: '微调能否匹配预训练模型的质量？',
-              a: '经过微调的模型在您的特定领域可能超过基础模型的性能，但不会达到更大预训练模型的知识广度。在法律文件上微调的 Llama 3.3 8B 会在法律任务上优于 Llama 3.3 70B，但在一般知识上表现不佳。当领域特定的准确性比广度更重要时，选择微调。',
+              a: '经过微调的模型在您的特定领域可能超过基础模型的性能，但不会达到更大预训练模型的知识广度。在法律文件上微调的 Llama 3.1 8B 会在法律任务上优于 Llama 3.3 70B，但在一般知识上表现不佳。当领域特定的准确性比广度更重要时，选择微调。',
             },
             {
               q: '有效微调需要多少数据？',
@@ -2846,7 +2846,7 @@ schema: {
       title: '커스텀 로컬 LLM 만들기 2026: Unsloth와 Ollama를 활용한 파인튜닝 vs 사전학습',
       seoTitle: '커스텀 로컬 LLM 만들기 2026: $500 파인튜닝 vs $5만 사전학습 비교',
       intro: '커스텀 로컬 LLM을 만드는 방법은 기존 모델을 파인튜닝하거나 처음부터 사전학습하는 두 가지가 있습니다. 2026년 4월 기준, LoRA를 활용한 파인튜닝은 소비자용 하드웨어에서도 실용적입니다: 예시 500개, VRAM 8 GB, 1~2시간, $100~500. 사전학습은 $5만~50만이 소요되며 100억 개 이상의 토큰이 필요합니다 — 특수한 독점 목적에만 정당화됩니다. 이 가이드에서는 두 가지 접근 방식을 모두 다룹니다: Unsloth를 활용한 7단계 파인튜닝 경로, 파인튜닝 vs 사전학습 vs RAG 의사결정 매트릭스, 그리고 [Ollama](https://ollama.com/) 배포 방법.',
-      metaDescription: 'LoRA로 Llama 3.3 8B 파인튜닝: 예시 500개, VRAM 8 GB, 1~2시간, $100~500. 사전학습: 토큰 100억 개 이상, 수 주, $5만~50만. 의사결정 매트릭스 및 Ollama 배포 가이드.',
+      metaDescription: 'LoRA로 Llama 3.1 8B 파인튜닝: 예시 500개, VRAM 8 GB, 1~2시간, $100~500. 사전학습: 토큰 100억 개 이상, 수 주, $5만~50만. 의사결정 매트릭스 및 Ollama 배포 가이드.',
       publishDate: '2026-04-04',
       dateModified: '2026-06-14',
       leadAnswerBlock: '커스텀 로컬 LLM을 만드는 방법은 기존 모델을 파인튜닝하거나 처음부터 사전학습하는 두 가지가 있습니다. 2026년 4월 기준, LoRA를 활용한 파인튜닝은 소비자용 하드웨어에서도 실용적입니다: 예시 500개, VRAM 8 GB, 1~2시간, $100~500. 사전학습은 $5만~50만이 소요되며 100억 개 이상의 토큰이 필요합니다 — 특수한 독점 목적에만 정당화됩니다. 이 가이드에서는 Unsloth를 활용한 7단계 파인튜닝 경로, 파인튜닝 vs 사전학습 vs RAG 의사결정 매트릭스, 그리고 Ollama 배포 방법을 다룹니다.',
@@ -2893,7 +2893,7 @@ schema: {
             name: '파인튜닝이 사전학습 모델의 품질에 필적할 수 있습니까?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: '파인튜닝된 모델은 특정 도메인에서 기본 모델의 성능을 능가할 수 있지만, 더 큰 사전학습 모델의 광범위한 지식에는 미치지 못합니다. 법률 문서로 파인튜닝된 Llama 3.3 8B는 법률 과제에서 Llama 3.3 70B를 능가하지만, 일반 지식에서는 성능이 낮습니다. 도메인 특화 정확도가 폭넓은 지식보다 중요할 때 파인튜닝을 선택하십시오.',
+              text: '파인튜닝된 모델은 특정 도메인에서 기본 모델의 성능을 능가할 수 있지만, 더 큰 사전학습 모델의 광범위한 지식에는 미치지 못합니다. 법률 문서로 파인튜닝된 Llama 3.1 8B는 법률 과제에서 Llama 3.3 70B를 능가하지만, 일반 지식에서는 성능이 낮습니다. 도메인 특화 정확도가 폭넓은 지식보다 중요할 때 파인튜닝을 선택하십시오.',
             },
           },
           {
@@ -2961,7 +2961,7 @@ schema: {
         totalTime: 'PT3H',
         step: [
           { '@type': 'HowToStep', 'position': 1, 'name': '도메인 특화 예시 500~5,000개 수집', 'text': '각 예시 = JSON/JSONL 형식의 입력 + 예상 출력' },
-          { '@type': 'HowToStep', 'position': 2, 'name': '기본 모델 선택 (Llama 3.3 8B 또는 Qwen3 7B)', 'text': '최상의 결과를 위해 instruction-tuned 변형 사용' },
+          { '@type': 'HowToStep', 'position': 2, 'name': '기본 모델 선택 (Llama 3.1 8B 또는 Qwen3 7B)', 'text': '최상의 결과를 위해 instruction-tuned 변형 사용' },
           { '@type': 'HowToStep', 'position': 3, 'name': 'Unsloth를 사용하여 LoRA로 학습 (4배 빠름)', 'text': 'lora_r=16, learning_rate=2e-4, 3 에포크, VRAM 8 GB' },
           { '@type': 'HowToStep', 'position': 4, 'name': '홀드아웃 테스트 세트에서 평가', 'text': '미공개 데이터에서 정확도, F1 또는 과제별 지표 측정' },
           { '@type': 'HowToStep', 'position': 5, 'name': 'LoRA 어댑터를 기본 모델에 병합', 'text': 'model.merge_and_unload()로 단일 모델 파일 생성' },
@@ -3044,7 +3044,7 @@ schema: {
           title: '파인튜닝 경로 (권장)',
           numberedItems: [
             '도메인 특화 예시 500~5,000개 수집 (품질이 중요합니다).',
-            '기본 모델 선택 (Llama 3.3 8B, Qwen 7B 등).',
+            '기본 모델 선택 (Llama 3.1 8B, Qwen 7B 등).',
             '효율적인 학습을 위해 LoRA 사용 (4배 빠름, 동일한 품질).',
             'GPU에서 3~5 에포크 학습.',
             '테스트 세트에서 평가 (정밀도, 재현율, 커스텀 지표).',
@@ -3149,7 +3149,7 @@ schema: {
           faqs: [
             {
               q: '파인튜닝이 사전학습 모델의 품질에 필적할 수 있습니까?',
-              a: '파인튜닝된 모델은 특정 도메인에서 기본 모델의 성능을 능가할 수 있지만, 더 큰 사전학습 모델의 광범위한 지식에는 미치지 못합니다. 법률 문서로 파인튜닝된 Llama 3.3 8B는 법률 과제에서 Llama 3.3 70B를 능가하지만, 일반 지식에서는 성능이 낮습니다. 도메인 특화 정확도가 폭넓은 지식보다 중요할 때 파인튜닝을 선택하십시오.',
+              a: '파인튜닝된 모델은 특정 도메인에서 기본 모델의 성능을 능가할 수 있지만, 더 큰 사전학습 모델의 광범위한 지식에는 미치지 못합니다. 법률 문서로 파인튜닝된 Llama 3.1 8B는 법률 과제에서 Llama 3.3 70B를 능가하지만, 일반 지식에서는 성능이 낮습니다. 도메인 특화 정확도가 폭넓은 지식보다 중요할 때 파인튜닝을 선택하십시오.',
             },
             {
               q: '효과적으로 파인튜닝하려면 얼마나 많은 데이터가 필요합니까?',

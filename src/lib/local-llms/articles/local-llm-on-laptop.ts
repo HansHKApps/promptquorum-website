@@ -282,11 +282,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Model': 'Phi-4-mini 3.8B', 'RAM': '3 GB', 'Speed (CPU)': '20-35 tok/s', 'Quality': 'Medium-High', 'Best For': '8 GB laptops, reasoning/coding' },
             { 'Model': 'Mistral Small v0.3', 'RAM': '4.5 GB', 'Speed (CPU)': '10-20 tok/s', 'Quality': 'High', 'Best For': '8-16 GB, general use' },
             { 'Model': 'Qwen3 7B', 'RAM': '4.7 GB', 'Speed (CPU)': '10-18 tok/s', 'Quality': 'High', 'Best For': '8-16 GB, multilingual, coding' },
-            { 'Model': 'Llama 3.3 8B', 'RAM': '5.5 GB', 'Speed (CPU)': '8-15 tok/s', 'Quality': 'High+', 'Best For': '16 GB laptops, best quality at size' },
+            { 'Model': 'Llama 3.1 8B', 'RAM': '5.5 GB', 'Speed (CPU)': '8-15 tok/s', 'Quality': 'High+', 'Best For': '16 GB laptops, best quality at size' },
           ],
           columns: ['Model', 'RAM', 'Speed (CPU)', 'Quality', 'Best For'],
           image: '/images/local-llm-on-laptop-model-picks-hero-en.webp',
-          imageCaption: 'Llama 3.2 3B fits 8 GB laptops at 25-45 tok/s; Llama 3.3 8B needs 16 GB but gives the best quality at this size.',
+          imageCaption: 'Llama 3.2 3B fits 8 GB laptops at 25-45 tok/s; Llama 3.1 8B needs 16 GB but gives the best quality at this size.',
         },
         bestSetup: {
           id: 'best-setup',
@@ -522,7 +522,7 @@ schema: {
           { '@type': 'ListItem', 'position': 2, 'name': 'Phi-4-mini 3.8B', 'description': '3.8B model. 3 GB RAM. 20-35 tok/sec on CPU. Best reasoning and coding for under 4 GB RAM.' },
           { '@type': 'ListItem', 'position': 3, 'name': 'Mistral Small v0.3', 'description': '7B model. 4.5 GB RAM. 10-20 tok/sec on CPU. Best general-purpose model for 8-16 GB laptops.' },
           { '@type': 'ListItem', 'position': 4, 'name': 'Qwen3 7B', 'description': '7B model. 4.7 GB RAM. 10-18 tok/sec on CPU. Best for multilingual tasks and coding on 8-16 GB laptops.' },
-          { '@type': 'ListItem', 'position': 5, 'name': 'Llama 3.3 8B', 'description': '8B model. 5.5 GB RAM. 8-15 tok/sec on CPU. Best quality at size for 16 GB laptops.' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Llama 3.1 8B', 'description': '8B model. 5.5 GB RAM. 8-15 tok/sec on CPU. Best quality at size for 16 GB laptops.' },
         ],
       },
       faqSchema: {
@@ -653,7 +653,7 @@ schema: {
       title: 'Ejecutar LLMs Locales en un Portátil: RAM, Velocidad y Temperatura 2026',
       seoTitle: 'Llama y Phi en portátiles de 8–16 GB: velocidad y térmica',
       intro: 'Ejecutar un LLM local en un portátil es posible — incluso con 8 GB de RAM — pero el rendimiento depende en gran medida del tamaño del modelo, la RAM y la temperatura. Un modelo 7B funciona a 10–25 tokens/seg en CPU o 50–80 tok/seg en Apple Silicon, lo que hace que los portátiles sean viables para desarrollo, pruebas y flujos de trabajo de IA ligeros.',
-      metaDescription: 'Ejecuta Llama 3.2 7B, Phi-4 Mini y Gemma 2B en portátiles de 8–16 GB. El throttling térmico baja la velocidad un 20–40%. Apple Silicon vs Intel Iris Xe.',
+      metaDescription: 'Ejecuta Llama 3.2 3B, Phi-4 Mini y Gemma 2B en portátiles de 8–16 GB. El throttling térmico baja la velocidad un 20–40%. Apple Silicon vs Intel Iris Xe.',
       heroImage: '/images/local-llm-on-laptop-ram-tiers-hero-es.webp',
       twitterDescription: 'Los modelos 7B se ejecutan en portátiles de 8 GB a 10–25 tok/seg. Apple Silicon M3: 50–80 tok/seg. Solución al throttling térmico: usa un soporte y desactiva Turbo Boost. Guía Q4_K_M.',
       publishDate: '2026-04-04',
@@ -809,12 +809,12 @@ schema: {
             { 'Modelo': 'Phi-4-mini 3.8B', 'RAM': '3 GB', 'Velocidad (CPU)': '20–35 tok/s', 'Calidad': 'Media-Alta', 'Mejor para': 'Portátiles de 8 GB, razonamiento/código' },
             { 'Modelo': 'Mistral Small v0.3', 'RAM': '4,5 GB', 'Velocidad (CPU)': '10–20 tok/s', 'Calidad': 'Alta', 'Mejor para': '8–16 GB, uso general' },
             { 'Modelo': 'Qwen3 7B', 'RAM': '4,7 GB', 'Velocidad (CPU)': '10–18 tok/s', 'Calidad': 'Alta', 'Mejor para': '8–16 GB, multilingüe, código' },
-            { 'Modelo': 'Llama 3.3 8B', 'RAM': '5,5 GB', 'Velocidad (CPU)': '8–15 tok/s', 'Calidad': 'Alta+', 'Mejor para': 'Portátiles de 16 GB, mejor calidad en ese tamaño' },
+            { 'Modelo': 'Llama 3.1 8B', 'RAM': '5,5 GB', 'Velocidad (CPU)': '8–15 tok/s', 'Calidad': 'Alta+', 'Mejor para': 'Portátiles de 16 GB, mejor calidad en ese tamaño' },
           ],
           columns: ['Modelo', 'RAM', 'Velocidad (CPU)', 'Calidad', 'Mejor para'],
         
           image: '/images/local-llm-on-laptop-model-picks-hero-es.webp',
-          imageCaption: 'Llama 3.2 3B cabe en portátiles de 8 GB a 25–45 tok/s; Llama 3.3 8B necesita 16 GB pero ofrece la mejor calidad en este tamaño.',
+          imageCaption: 'Llama 3.2 3B cabe en portátiles de 8 GB a 25–45 tok/s; Llama 3.1 8B necesita 16 GB pero ofrece la mejor calidad en este tamaño.',
         },
         bestSetup: {
           id: 'best-setup',
@@ -1055,7 +1055,7 @@ schema: {
           { '@type': 'ListItem', 'position': 2, 'name': 'Phi-4-mini 3.8B', 'description': 'Modelo 3.8B. 3 GB de RAM. 20–35 tok/seg en CPU. Mejor razonamiento y código con menos de 4 GB de RAM.' },
           { '@type': 'ListItem', 'position': 3, 'name': 'Mistral Small v0.3', 'description': 'Modelo 7B. 4,5 GB de RAM. 10–20 tok/seg en CPU. Mejor modelo de propósito general para portátiles de 8–16 GB.' },
           { '@type': 'ListItem', 'position': 4, 'name': 'Qwen3 7B', 'description': 'Modelo 7B. 4,7 GB de RAM. 10–18 tok/seg en CPU. Mejor para tareas multilingüe y código en portátiles de 8–16 GB.' },
-          { '@type': 'ListItem', 'position': 5, 'name': 'Llama 3.3 8B', 'description': 'Modelo 8B. 5,5 GB de RAM. 8–15 tok/seg en CPU. Mejor calidad en ese tamaño para portátiles de 16 GB.' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Llama 3.1 8B', 'description': 'Modelo 8B. 5,5 GB de RAM. 8–15 tok/seg en CPU. Mejor calidad en ese tamaño para portátiles de 16 GB.' },
         ],
       },
       faqSchema: {
@@ -1342,12 +1342,12 @@ schema: {
             { 'النموذج': 'Phi-4-mini 3.8B', 'RAM': '3 GB', 'السرعة (CPU)': '20–35 tok/ث', 'الجودة': 'متوسطة-عالية', 'الأفضل لـ': 'أجهزة لابتوب بسعة 8 GB، استدلال/كود' },
             { 'النموذج': 'Mistral Small v0.3', 'RAM': '4.5 GB', 'السرعة (CPU)': '10–20 tok/ث', 'الجودة': 'عالية', 'الأفضل لـ': '8–16 GB، استخدام عام' },
             { 'النموذج': 'Qwen3 7B', 'RAM': '4.7 GB', 'السرعة (CPU)': '10–18 tok/ث', 'الجودة': 'عالية', 'الأفضل لـ': '8–16 GB، متعدد اللغات، كود' },
-            { 'النموذج': 'Llama 3.3 8B', 'RAM': '5.5 GB', 'السرعة (CPU)': '8–15 tok/ث', 'الجودة': 'عالية+', 'الأفضل لـ': 'أجهزة لابتوب بسعة 16 GB، أفضل جودة في ذلك الحجم' },
+            { 'النموذج': 'Llama 3.1 8B', 'RAM': '5.5 GB', 'السرعة (CPU)': '8–15 tok/ث', 'الجودة': 'عالية+', 'الأفضل لـ': 'أجهزة لابتوب بسعة 16 GB، أفضل جودة في ذلك الحجم' },
           ],
           columns: ['النموذج', 'RAM', 'السرعة (CPU)', 'الجودة', 'الأفضل لـ'],
         
           image: '/images/local-llm-on-laptop-model-picks-hero-ar.webp',
-          imageCaption: 'يعمل Llama 3.2 3B على أجهزة محمولة بذاكرة 8 جيجابايت بسرعة 25–45 رمزاً/ثانية؛ بينما يحتاج Llama 3.3 8B إلى 16 جيجابايت لكنه يقدم أفضل جودة بهذا الحجم.',
+          imageCaption: 'يعمل Llama 3.2 3B على أجهزة محمولة بذاكرة 8 جيجابايت بسرعة 25–45 رمزاً/ثانية؛ بينما يحتاج Llama 3.1 8B إلى 16 جيجابايت لكنه يقدم أفضل جودة بهذا الحجم.',
         },
         bestSetup: {
           id: 'best-setup',
@@ -1588,7 +1588,7 @@ schema: {
           { '@type': 'ListItem', 'position': 2, 'name': 'Phi-4-mini 3.8B', 'description': 'نموذج 3.8B. 3 GB من RAM. 20–35 tok/ث على CPU. أفضل استدلال وكود بأقل من 4 GB من RAM.' },
           { '@type': 'ListItem', 'position': 3, 'name': 'Mistral Small v0.3', 'description': 'نموذج 7B. 4.5 GB من RAM. 10–20 tok/ث على CPU. أفضل نموذج عام الأغراض لأجهزة لابتوب بسعة 8–16 GB.' },
           { '@type': 'ListItem', 'position': 4, 'name': 'Qwen3 7B', 'description': 'نموذج 7B. 4.7 GB من RAM. 10–18 tok/ث على CPU. الأفضل لمهام متعددة اللغات والكود على أجهزة لابتوب بسعة 8–16 GB.' },
-          { '@type': 'ListItem', 'position': 5, 'name': 'Llama 3.3 8B', 'description': 'نموذج 8B. 5.5 GB من RAM. 8–15 tok/ث على CPU. أفضل جودة في ذلك الحجم لأجهزة لابتوب بسعة 16 GB.' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Llama 3.1 8B', 'description': 'نموذج 8B. 5.5 GB من RAM. 8–15 tok/ث على CPU. أفضل جودة في ذلك الحجم لأجهزة لابتوب بسعة 16 GB.' },
         ],
       },
       faqSchema: {
@@ -1865,12 +1865,12 @@ schema: {
             { 'Modell': 'Phi-4-mini 3.8B', 'RAM': '3 GB', 'Geschwindigkeit (CPU)': '20-35 Token/s', 'Qualität': 'Mittel-Hoch', 'Beste für': '8 GB Laptops, Reasoning/Coding' },
             { 'Modell': 'Mistral Small v0.3', 'RAM': '4,5 GB', 'Geschwindigkeit (CPU)': '10-20 Token/s', 'Qualität': 'Hoch', 'Beste für': '8-16 GB, allgemeine Nutzung' },
             { 'Modell': 'Qwen3 7B', 'RAM': '4,7 GB', 'Geschwindigkeit (CPU)': '10-18 Token/s', 'Qualität': 'Hoch', 'Beste für': '8-16 GB, mehrsprachig, Coding' },
-            { 'Modell': 'Llama 3.3 8B', 'RAM': '5,5 GB', 'Geschwindigkeit (CPU)': '8-15 Token/s', 'Qualität': 'Hoch+', 'Beste für': '16 GB Laptops, beste Qualität bei dieser Größe' },
+            { 'Modell': 'Llama 3.1 8B', 'RAM': '5,5 GB', 'Geschwindigkeit (CPU)': '8-15 Token/s', 'Qualität': 'Hoch+', 'Beste für': '16 GB Laptops, beste Qualität bei dieser Größe' },
           ],
           columns: ['Modell', 'RAM', 'Geschwindigkeit (CPU)', 'Qualität', 'Beste für'],
         
           image: '/images/local-llm-on-laptop-model-picks-hero-de.webp',
-          imageCaption: 'Llama 3.2 3B passt auf 8-GB-Laptops mit 25–45 Tok/s; Llama 3.3 8B benötigt 16 GB, liefert dafür die beste Qualität dieser Größe.',
+          imageCaption: 'Llama 3.2 3B passt auf 8-GB-Laptops mit 25–45 Tok/s; Llama 3.1 8B benötigt 16 GB, liefert dafür die beste Qualität dieser Größe.',
         },
         bestSetup: {
           id: 'beste-einrichtung',
@@ -2126,7 +2126,7 @@ schema: {
           { '@type': 'ListItem', 'position': 2, 'name': 'Phi-4-mini 3.8B', 'description': '3 GB RAM. 20-35 Token/s CPU. Beste für 8 GB Laptops, Reasoning und Coding.' },
           { '@type': 'ListItem', 'position': 3, 'name': 'Mistral Small v0.3', 'description': '4,5 GB RAM. 10-20 Token/s CPU. Beste für 8-16 GB allgemeine Nutzung.' },
           { '@type': 'ListItem', 'position': 4, 'name': 'Qwen3 7B', 'description': '4,7 GB RAM. 10-18 Token/s CPU. Beste für mehrsprachig und Coding auf 8-16 GB.' },
-          { '@type': 'ListItem', 'position': 5, 'name': 'Llama 3.3 8B', 'description': '5,5 GB RAM. 8-15 Token/s CPU. Beste Qualität bei dieser Größe für 16 GB Laptops.' }
+          { '@type': 'ListItem', 'position': 5, 'name': 'Llama 3.1 8B', 'description': '5,5 GB RAM. 8-15 Token/s CPU. Beste Qualität bei dieser Größe für 16 GB Laptops.' }
         ]
       },
     },
@@ -2166,7 +2166,7 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
         'headline': 'LLM Local em um Notebook: O Que Roda em 8GB, 16GB e Apple Silicon (2026)',
-        'description': 'Execute Llama 3.2 7B, Phi-4 Mini em notebooks de 8–16 GB. Throttling térmico, Apple Silicon vs CPU Intel, seleção de modelos Q4_K_M. 2026.',
+        'description': 'Execute Llama 3.2 3B, Phi-4 Mini em notebooks de 8–16 GB. Throttling térmico, Apple Silicon vs CPU Intel, seleção de modelos Q4_K_M. 2026.',
         'url': 'https://www.promptquorum.com/pt/local-llms/local-llm-on-laptop',
         'inLanguage': 'pt-BR',
         'datePublished': '2026-04-04',
@@ -2185,7 +2185,7 @@ schema: {
           { '@type': 'ListItem', 'position': 2, 'name': 'Phi-4-mini 3.8B', 'description': 'Modelo 3,8B. 3 GB de RAM. 20-35 tok/s na CPU. Melhor raciocínio e código para menos de 4 GB de RAM.' },
           { '@type': 'ListItem', 'position': 3, 'name': 'Mistral Small v0.3', 'description': 'Modelo 7B. 4,5 GB de RAM. 10-20 tok/s na CPU. Melhor modelo de uso geral para notebooks de 8-16 GB.' },
           { '@type': 'ListItem', 'position': 4, 'name': 'Qwen3 7B', 'description': 'Modelo 7B. 4,7 GB de RAM. 10-18 tok/s na CPU. Melhor para tarefas multilíngues e código em notebooks de 8-16 GB.' },
-          { '@type': 'ListItem', 'position': 5, 'name': 'Llama 3.3 8B', 'description': 'Modelo 8B. 5,5 GB de RAM. 8-15 tok/s na CPU. Melhor qualidade no tamanho para notebooks de 16 GB.' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Llama 3.1 8B', 'description': 'Modelo 8B. 5,5 GB de RAM. 8-15 tok/s na CPU. Melhor qualidade no tamanho para notebooks de 16 GB.' },
         ],
       },
       howToSchema: {
@@ -2317,11 +2317,11 @@ schema: {
             { 'Modelo': 'Phi-4-mini 3.8B', 'RAM': '3 GB', 'Velocidade (CPU)': '20-35 tok/s', 'Qualidade': 'Média-Alta', 'Melhor Para': 'Notebooks de 8 GB, raciocínio/código' },
             { 'Modelo': 'Mistral Small v0.3', 'RAM': '4,5 GB', 'Velocidade (CPU)': '10-20 tok/s', 'Qualidade': 'Alta', 'Melhor Para': '8-16 GB, uso geral' },
             { 'Modelo': 'Qwen3 7B', 'RAM': '4,7 GB', 'Velocidade (CPU)': '10-18 tok/s', 'Qualidade': 'Alta', 'Melhor Para': '8-16 GB, multilíngue, código' },
-            { 'Modelo': 'Llama 3.3 8B', 'RAM': '5,5 GB', 'Velocidade (CPU)': '8-15 tok/s', 'Qualidade': 'Alta+', 'Melhor Para': 'Notebooks de 16 GB, melhor qualidade no tamanho' },
+            { 'Modelo': 'Llama 3.1 8B', 'RAM': '5,5 GB', 'Velocidade (CPU)': '8-15 tok/s', 'Qualidade': 'Alta+', 'Melhor Para': 'Notebooks de 16 GB, melhor qualidade no tamanho' },
           ],
           columns: ['Modelo', 'RAM', 'Velocidade (CPU)', 'Qualidade', 'Melhor Para'],
           image: '/images/local-llm-on-laptop-model-picks-hero-pt.webp',
-          imageCaption: 'O Llama 3.2 3B cabe em notebooks de 8 GB a 25-45 tok/s; o Llama 3.3 8B precisa de 16 GB, mas oferece a melhor qualidade nesse tamanho.',
+          imageCaption: 'O Llama 3.2 3B cabe em notebooks de 8 GB a 25-45 tok/s; o Llama 3.1 8B precisa de 16 GB, mas oferece a melhor qualidade nesse tamanho.',
         },
         bestSetup: {
           id: 'best-setup',
@@ -2623,12 +2623,12 @@ schema: {
             { 'Modèle': 'Phi-4-mini 3.8B', 'RAM': '3 GB', 'Vitesse (CPU)': '20-35 token/s', 'Qualité': 'Moyenne-Haute', 'Meilleur pour': 'Ordinateurs portables 8 GB, reasoning/coding' },
             { 'Modèle': 'Mistral Small v0.3', 'RAM': '4,5 GB', 'Vitesse (CPU)': '10-20 token/s', 'Qualité': 'Haute', 'Meilleur pour': '8-16 GB, utilisation générale' },
             { 'Modèle': 'Qwen3 7B', 'RAM': '4,7 GB', 'Vitesse (CPU)': '10-18 token/s', 'Qualité': 'Haute', 'Meilleur pour': '8-16 GB, multilingue, coding' },
-            { 'Modèle': 'Llama 3.3 8B', 'RAM': '5,5 GB', 'Vitesse (CPU)': '8-15 token/s', 'Qualité': 'Haute+', 'Meilleur pour': 'Ordinateurs portables 16 GB, meilleure qualité à cette taille' },
+            { 'Modèle': 'Llama 3.1 8B', 'RAM': '5,5 GB', 'Vitesse (CPU)': '8-15 token/s', 'Qualité': 'Haute+', 'Meilleur pour': 'Ordinateurs portables 16 GB, meilleure qualité à cette taille' },
           ],
           columns: ['Modèle', 'RAM', 'Vitesse (CPU)', 'Qualité', 'Meilleur pour'],
         
           image: '/images/local-llm-on-laptop-model-picks-hero-fr.webp',
-          imageCaption: 'Llama 3.2 3B convient aux portables de 8 Go à 25–45 tok/s ; Llama 3.3 8B nécessite 16 Go mais offre la meilleure qualité à cette taille.',
+          imageCaption: 'Llama 3.2 3B convient aux portables de 8 Go à 25–45 tok/s ; Llama 3.1 8B nécessite 16 Go mais offre la meilleure qualité à cette taille.',
         },
         bestSetup: {
           id: 'meilleure-configuration',
@@ -2882,7 +2882,7 @@ schema: {
           { '@type': 'ListItem', 'position': 2, 'name': 'Phi-4-mini 3.8B', 'description': '3 GB RAM. 20-35 token/s CPU. Meilleur pour ordinateurs portables 8 GB, reasoning et coding.' },
           { '@type': 'ListItem', 'position': 3, 'name': 'Mistral Small v0.3', 'description': '4,5 GB RAM. 10-20 token/s CPU. Meilleur pour utilisation générale 8-16 GB.' },
           { '@type': 'ListItem', 'position': 4, 'name': 'Qwen3 7B', 'description': '4,7 GB RAM. 10-18 token/s CPU. Meilleur pour multilingue et coding sur 8-16 GB.' },
-          { '@type': 'ListItem', 'position': 5, 'name': 'Llama 3.3 8B', 'description': '5,5 GB RAM. 8-15 token/s CPU. Meilleure qualité à cette taille pour ordinateurs portables 16 GB.' }
+          { '@type': 'ListItem', 'position': 5, 'name': 'Llama 3.1 8B', 'description': '5,5 GB RAM. 8-15 token/s CPU. Meilleure qualité à cette taille pour ordinateurs portables 16 GB.' }
         ]
       },
     },
@@ -3035,12 +3035,12 @@ schema: {
             { 'モデル': 'Phi-4-mini 3.8B', 'RAM': '3GB', 'Speed (CPU)': '20-35トークン/秒', '品質': '中〜高', '最適な用途': '8GBノートパソコン、推論/コーディング' },
             { 'モデル': 'Mistral Small v0.3', 'RAM': '4.5GB', 'Speed (CPU)': '10-20トークン/秒', '品質': '高', '最適な用途': '8-16GB、一般的な用途' },
             { 'モデル': 'Qwen3 7B', 'RAM': '4.7GB', 'Speed (CPU)': '10-18トークン/秒', '品質': '高', '最適な用途': '8-16GB、多言語、コーディング' },
-            { 'モデル': 'Llama 3.3 8B', 'RAM': '5.5GB', 'Speed (CPU)': '8-15トークン/秒', '品質': '高+', '最適な用途': '16GBノートパソコン、最高の品質' },
+            { 'モデル': 'Llama 3.1 8B', 'RAM': '5.5GB', 'Speed (CPU)': '8-15トークン/秒', '品質': '高+', '最適な用途': '16GBノートパソコン、最高の品質' },
           ],
           columns: ['モデル', 'RAM', 'Speed (CPU)', '品質', '最適な用途'],
         
           image: '/images/local-llm-on-laptop-model-picks-hero-ja.webp',
-          imageCaption: 'Llama 3.2 3Bは8GBノートPCで25〜45 tok/s動作します。Llama 3.3 8Bは16GB必要ですが、このサイズで最高品質を提供します。',
+          imageCaption: 'Llama 3.2 3Bは8GBノートPCで25〜45 tok/s動作します。Llama 3.1 8Bは16GB必要ですが、このサイズで最高品質を提供します。',
         },
         bestSetup: {
           id: 'saiko-setup',
@@ -3294,7 +3294,7 @@ schema: {
           { '@type': 'ListItem', 'position': 2, 'name': 'Phi-4-mini 3.8B', 'description': '3GB RAM。20-35トークン/秒CPU。8GBノートパソコン、推論/コーディング向けベスト。' },
           { '@type': 'ListItem', 'position': 3, 'name': 'Mistral Small v0.3', 'description': '4.5GB RAM。10-20トークン/秒CPU。8-16GB一般使用向けベスト。' },
           { '@type': 'ListItem', 'position': 4, 'name': 'Qwen3 7B', 'description': '4.7GB RAM。10-18トークン/秒CPU。8-16GB多言語コーディング向けベスト。' },
-          { '@type': 'ListItem', 'position': 5, 'name': 'Llama 3.3 8B', 'description': '5.5GB RAM。8-15トークン/秒CPU。16GBノートパソコンこのサイズでベスト品質。' }
+          { '@type': 'ListItem', 'position': 5, 'name': 'Llama 3.1 8B', 'description': '5.5GB RAM。8-15トークン/秒CPU。16GBノートパソコンこのサイズでベスト品質。' }
         ]
       },
     },
@@ -3447,12 +3447,12 @@ schema: {
             { '模型': 'Phi-4-mini 3.8B', 'RAM': '3GB', '速度（CPU）': '20-35令牌/秒', '质量': '中高', '最佳适配': '8GB笔记本电脑，推理/编码' },
             { '模型': 'Mistral Small v0.3', 'RAM': '4.5GB', '速度（CPU）': '10-20令牌/秒', '质量': '高', '最佳适配': '8-16GB，通用用途' },
             { '模型': 'Qwen3 7B', 'RAM': '4.7GB', '速度（CPU）': '10-18令牌/秒', '质量': '高', '最佳适配': '8-16GB，多语言、编码' },
-            { '模型': 'Llama 3.3 8B', 'RAM': '5.5GB', '速度（CPU）': '8-15令牌/秒', '质量': '高+', '最佳适配': '16GB笔记本电脑，这个大小最好的品质' },
+            { '模型': 'Llama 3.1 8B', 'RAM': '5.5GB', '速度（CPU）': '8-15令牌/秒', '质量': '高+', '最佳适配': '16GB笔记本电脑，这个大小最好的品质' },
           ],
           columns: ['模型', 'RAM', '速度（CPU）', '质量', '最佳适配'],
         
           image: '/images/local-llm-on-laptop-model-picks-hero-zh.webp',
-          imageCaption: 'Llama 3.2 3B适合8GB笔记本，速度25–45 tok/s；Llama 3.3 8B需要16GB，但在此规模下质量最佳。',
+          imageCaption: 'Llama 3.2 3B适合8GB笔记本，速度25–45 tok/s；Llama 3.1 8B需要16GB，但在此规模下质量最佳。',
         },
         bestSetup: {
           id: 'zuijia-setup',
@@ -3706,7 +3706,7 @@ schema: {
           { '@type': 'ListItem', 'position': 2, 'name': 'Phi-4-mini 3.8B', 'description': '3GB RAM。20-35令牌/秒CPU。8GB笔记本电脑、推理/编码最佳。' },
           { '@type': 'ListItem', 'position': 3, 'name': 'Mistral Small v0.3', 'description': '4.5GB RAM。10-20令牌/秒CPU。8-16GB通用用途最佳。' },
           { '@type': 'ListItem', 'position': 4, 'name': 'Qwen3 7B', 'description': '4.7GB RAM。10-18令牌/秒CPU。8-16GB多语言编码最佳。' },
-          { '@type': 'ListItem', 'position': 5, 'name': 'Llama 3.3 8B', 'description': '5.5GB RAM。8-15令牌/秒CPU。16GB笔记本电脑这个大小最好的品质。' }
+          { '@type': 'ListItem', 'position': 5, 'name': 'Llama 3.1 8B', 'description': '5.5GB RAM。8-15令牌/秒CPU。16GB笔记本电脑这个大小最好的品质。' }
         ]
       },
     },
@@ -3763,7 +3763,7 @@ schema: {
           { '@type': 'ListItem', 'position': 2, 'name': 'Phi-4-mini 3.8B', 'description': '3.8B 모델. 3GB RAM. CPU에서 20~35토큰/초. 4GB 미만 RAM에서 최고의 추론 및 코딩 성능.' },
           { '@type': 'ListItem', 'position': 3, 'name': 'Mistral Small v0.3', 'description': '7B 모델. 4.5GB RAM. CPU에서 10~20토큰/초. 8~16GB 노트북을 위한 최고의 범용 모델.' },
           { '@type': 'ListItem', 'position': 4, 'name': 'Qwen3 7B', 'description': '7B 모델. 4.7GB RAM. CPU에서 10~18토큰/초. 8~16GB 노트북에서 다국어 작업 및 코딩에 최적.' },
-          { '@type': 'ListItem', 'position': 5, 'name': 'Llama 3.3 8B', 'description': '8B 모델. 5.5GB RAM. CPU에서 8~15토큰/초. 16GB 노트북에서 해당 크기 최고 품질.' },
+          { '@type': 'ListItem', 'position': 5, 'name': 'Llama 3.1 8B', 'description': '8B 모델. 5.5GB RAM. CPU에서 8~15토큰/초. 16GB 노트북에서 해당 크기 최고 품질.' },
         ],
       },
       howToSchema: {
@@ -3896,12 +3896,12 @@ schema: {
             { 'Model': 'Phi-4-mini 3.8B', 'RAM': '3GB', 'Speed (CPU)': '20~35토큰/초', 'Quality': '보통~높음', 'Best For': '8GB 노트북, 추론/코딩' },
             { 'Model': 'Mistral Small v0.3', 'RAM': '4.5GB', 'Speed (CPU)': '10~20토큰/초', 'Quality': '높음', 'Best For': '8~16GB, 일반 용도' },
             { 'Model': 'Qwen3 7B', 'RAM': '4.7GB', 'Speed (CPU)': '10~18토큰/초', 'Quality': '높음', 'Best For': '8~16GB, 다국어, 코딩' },
-            { 'Model': 'Llama 3.3 8B', 'RAM': '5.5GB', 'Speed (CPU)': '8~15토큰/초', 'Quality': '높음+', 'Best For': '16GB 노트북, 해당 크기에서 최고 품질' },
+            { 'Model': 'Llama 3.1 8B', 'RAM': '5.5GB', 'Speed (CPU)': '8~15토큰/초', 'Quality': '높음+', 'Best For': '16GB 노트북, 해당 크기에서 최고 품질' },
           ],
           columns: ['Model', 'RAM', 'Speed (CPU)', 'Quality', 'Best For'],
         
           image: '/images/local-llm-on-laptop-model-picks-hero-ko.webp',
-          imageCaption: 'Llama 3.2 3B는 8GB 노트북에서 25–45 tok/s로 실행되며, Llama 3.3 8B는 16GB가 필요하지만 이 크기에서 최고 품질을 제공합니다.',
+          imageCaption: 'Llama 3.2 3B는 8GB 노트북에서 25–45 tok/s로 실행되며, Llama 3.1 8B는 16GB가 필요하지만 이 크기에서 최고 품질을 제공합니다.',
         },
         bestSetup: {
           id: 'best-setup',

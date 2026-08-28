@@ -29,7 +29,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'RunPod vs Lambda Labs vs Vast.ai for cloud GPU AI inference — three providers, one rule: pick by reliability need first, then price. July 2026 rates.',
     affiliateDisclosure: true,
     current_models_mentioned: [
-      'Llama 3.3 8B',
+      'Llama 3.1 8B',
       'Llama 3.3 70B',
       'Mistral Small',
       'Qwen 3 32B',
@@ -462,7 +462,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'RunPod vs. Lambda Labs vs. Vast.ai für Cloud-GPU-KI-Inferenz — drei Anbieter, eine Regel: erst den Zuverlässigkeitsbedarf wählen, dann den Preis. Sätze von Juli 2026.',
     affiliateDisclosure: true,
     current_models_mentioned: [
-      'Llama 3.3 8B',
+      'Llama 3.1 8B',
       'Llama 3.3 70B',
       'Mistral Small',
       'Qwen 3 32B',
@@ -903,7 +903,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       "RunPod vs Lambda Labs vs Vast.ai pour l'inférence IA sur GPU cloud — trois fournisseurs, une règle : choisir d'abord selon le besoin de fiabilité, puis le prix. Tarifs de juillet 2026.",
     affiliateDisclosure: true,
     current_models_mentioned: [
-      'Llama 3.3 8B',
+      'Llama 3.1 8B',
       'Llama 3.3 70B',
       'Mistral Small',
       'Qwen 3 32B',
@@ -1336,7 +1336,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'クラウドGPU AI推論向けのRunPod vs Lambda Labs vs Vast.ai — 3つのプロバイダー、1つのルール：まず信頼性のニーズで選び、次に価格。2026年7月時点の料金。',
     affiliateDisclosure: true,
     current_models_mentioned: [
-      'Llama 3.3 8B',
+      'Llama 3.1 8B',
       'Llama 3.3 70B',
       'Mistral Small',
       'Qwen 3 32B',
@@ -1769,7 +1769,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'RunPod vs Lambda Labs vs Vast.ai用于云GPU AI推理——三家提供商，一条规则：先按可靠性需求选，再看价格。2026年7月费率。',
     affiliateDisclosure: true,
     current_models_mentioned: [
-      'Llama 3.3 8B',
+      'Llama 3.1 8B',
       'Llama 3.3 70B',
       'Mistral Small',
       'Qwen 3 32B',
@@ -2202,7 +2202,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'RunPod vs Lambda Labs vs Vast.ai para inferencia de IA en GPU cloud — tres proveedores, una regla: elige primero por necesidad de fiabilidad, luego por precio. Tarifas de julio 2026.',
     affiliateDisclosure: true,
     current_models_mentioned: [
-      'Llama 3.3 8B',
+      'Llama 3.1 8B',
       'Llama 3.3 70B',
       'Mistral Small',
       'Qwen 3 32B',
@@ -2648,7 +2648,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'RunPod vs Lambda Labs vs Vast.ai para inferência de IA em GPU cloud — três provedores, uma regra: escolha primeiro pela necessidade de confiabilidade, depois pelo preço. Tarifas de julho de 2026.',
     affiliateDisclosure: true,
     current_models_mentioned: [
-      'Llama 3.3 8B',
+      'Llama 3.1 8B',
       'Llama 3.3 70B',
       'Mistral Small',
       'Qwen 3 32B',
@@ -3095,7 +3095,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'RunPod مقابل Lambda Labs مقابل Vast.ai لاستدلال الذكاء الاصطناعي على GPU سحابي — ثلاثة مزودين وقاعدة واحدة: اختر أولاً حسب حاجة الموثوقية ثم حسب السعر. تعرفات يوليو 2026.',
     affiliateDisclosure: true,
     current_models_mentioned: [
-      'Llama 3.3 8B',
+      'Llama 3.1 8B',
       'Llama 3.3 70B',
       'Mistral Small',
       'Qwen 3 32B',
@@ -3541,7 +3541,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'RunPod vs Lambda Labs vs Vast.ai 클라우드 GPU AI 추론 비교 — 세 제공업체, 한 가지 원칙: 신뢰성 요구 사항을 먼저 선택하고, 그다음 가격을 선택하십시오. 2026년 7월 기준 요금.',
     affiliateDisclosure: true,
     current_models_mentioned: [
-      'Llama 3.3 8B',
+      'Llama 3.1 8B',
       'Llama 3.3 70B',
       'Mistral Small',
       'Qwen 3 32B',

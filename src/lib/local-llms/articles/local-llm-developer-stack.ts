@@ -187,8 +187,8 @@ schema: {
             'Sending requests with no timeout. If vLLM hangs, client hangs forever. Always set `timeout=60` in requests.',
             'Assuming vLLM auto-scales across multiple GPUs. Requires explicit `--tensor-parallel-size` flag.',
             'Forgetting to set CUDA_VISIBLE_DEVICES if multi-GPU. vLLM uses all GPUs by default.',
-            'Using Llama 3.3 models in 2026. Meta deprecated Llama 3.3 for commercial use in January 2026. Use Llama 3.3 8B Instruct (Apache 2.0 license, no restrictions).',
-            '**Using Llama 3.3 when Llama 3.3 is available.** Llama 3.3 8B Instruct has better instruction-following and is the recommended default as of July 2026. Use `ollama run llama3.3:8b-instruct`.',
+            'Using Llama 3.3 models in 2026. Meta deprecated Llama 3.3 for commercial use in January 2026. Use Llama 3.1 8B Instruct (Apache 2.0 license, no restrictions).',
+            '**Using Llama 3.3 when Llama 3.3 is available.** Llama 3.1 8B Instruct has better instruction-following and is the recommended default as of July 2026. Use `ollama run llama3.1:8b-instruct`.',
           ],
         },
         'faqSection': {
@@ -222,7 +222,7 @@ schema: {
           items: [
             '[vLLM OpenAI-Compatible Server Documentation](https://docs.vllm.ai/en/latest/serving/openai_compatible_server.html) -- Official vLLM API server setup guide',
             '[Continue.dev Configuration Documentation](https://docs.continue.dev/reference/Model%20Providers/openai) -- IDE extension config for custom OpenAI endpoints',
-            '[Meta Llama 3.3 Model Card](https://ai.meta.com/llama/) -- Meta. Updated instruct model, Apache 2.0. Recommended replacement for Llama 3.3 8B.',
+            '[Meta Llama 3.3 Model Card](https://ai.meta.com/llama/) -- Meta. Updated instruct model, Apache 2.0. Recommended replacement for Llama 3.1 8B.',
             '[Qwen3-Coder Model Card](https://huggingface.co/Qwen/Qwen3-Coder-7B-Instruct) -- Alibaba. 82% HumanEval, Apache 2.0 license. Top-performing coding model under 8 GB VRAM in our testing.',
           ],
         },
@@ -427,8 +427,8 @@ schema: {
             'Enviar solicitudes sin tiempo de espera. Si vLLM se cuelga, el cliente espera indefinidamente. Establece siempre `timeout=60` en las solicitudes.',
             'Asumir que vLLM escala automáticamente en múltiples GPUs. Requiere el flag explícito `--tensor-parallel-size`.',
             'Olvidar establecer CUDA_VISIBLE_DEVICES en configuraciones multi-GPU. vLLM usa todas las GPUs por defecto.',
-            'Usar modelos Llama 3.3 en 2026. Meta desaprobó Llama 3.3 para uso comercial en enero de 2026. Usa Llama 3.3 8B Instruct (licencia Apache 2.0, sin restricciones).',
-            '**Usar Llama 3.3 cuando Llama 3.3 está disponible.** Llama 3.3 8B Instruct tiene mejor seguimiento de instrucciones y es el predeterminado recomendado a partir de julio de 2026. Usa `ollama run llama3.3:8b-instruct`.',
+            'Usar modelos Llama 3.3 en 2026. Meta desaprobó Llama 3.3 para uso comercial en enero de 2026. Usa Llama 3.1 8B Instruct (licencia Apache 2.0, sin restricciones).',
+            '**Usar Llama 3.3 cuando Llama 3.3 está disponible.** Llama 3.1 8B Instruct tiene mejor seguimiento de instrucciones y es el predeterminado recomendado a partir de julio de 2026. Usa `ollama run llama3.1:8b-instruct`.',
           ],
         },
         'faqSection': {
@@ -462,7 +462,7 @@ schema: {
           items: [
             '[vLLM OpenAI-Compatible Server Documentation](https://docs.vllm.ai/en/latest/serving/openai_compatible_server.html) -- Guía oficial de configuración del servidor API de vLLM',
             '[Continue.dev Configuration Documentation](https://docs.continue.dev/reference/Model%20Providers/openai) -- Configuración de la extensión IDE para endpoints OpenAI personalizados',
-            '[Meta Llama 3.3 Model Card](https://ai.meta.com/llama/) -- Meta. Modelo instruct actualizado, Apache 2.0. Reemplazo recomendado de Llama 3.3 8B.',
+            '[Meta Llama 3.3 Model Card](https://ai.meta.com/llama/) -- Meta. Modelo instruct actualizado, Apache 2.0. Reemplazo recomendado de Llama 3.1 8B.',
             '[Qwen3-Coder Model Card](https://huggingface.co/Qwen/Qwen3-Coder-7B-Instruct) -- Alibaba. 82% HumanEval, licencia Apache 2.0. Modelo de programación con mejor rendimiento por debajo de 8 GB de VRAM en nuestras pruebas.',
           ],
         },
@@ -670,8 +670,8 @@ schema: {
             'إرسال الطلبات دون مهلة. إذا تعطل vLLM، ينتظر العميل إلى ما لا نهاية. اضبط دائمًا `timeout=60` في الطلبات.',
             'افتراض أن vLLM يتوسع تلقائيًا على عدة وحدات GPU. يتطلب علامة `--tensor-parallel-size` الصريحة.',
             'نسيان ضبط CUDA_VISIBLE_DEVICES في إعدادات متعددة GPU. يستخدم vLLM جميع وحدات GPU افتراضيًا.',
-            'استخدام نماذج Llama 3.3 في 2026. أوقفت Meta دعم Llama 3.3 للاستخدام التجاري في يناير 2026. استخدم Llama 3.3 8B Instruct (رخصة Apache 2.0، بلا قيود).',
-            '**استخدام Llama 3.3 عندما يتوفر Llama 3.3.** يتمتع Llama 3.3 8B Instruct باتباع أفضل للتعليمات وهو الافتراضي الموصى به اعتبارًا من يوليو 2026. استخدم `ollama run llama3.3:8b-instruct`.',
+            'استخدام نماذج Llama 3.3 في 2026. أوقفت Meta دعم Llama 3.3 للاستخدام التجاري في يناير 2026. استخدم Llama 3.1 8B Instruct (رخصة Apache 2.0، بلا قيود).',
+            '**استخدام Llama 3.3 عندما يتوفر Llama 3.3.** يتمتع Llama 3.1 8B Instruct باتباع أفضل للتعليمات وهو الافتراضي الموصى به اعتبارًا من يوليو 2026. استخدم `ollama run llama3.1:8b-instruct`.',
           ],
         },
         'faqSection': {
@@ -705,7 +705,7 @@ schema: {
           items: [
             '[vLLM OpenAI-Compatible Server Documentation](https://docs.vllm.ai/en/latest/serving/openai_compatible_server.html) -- الدليل الرسمي لإعداد خادم API الخاص بـ vLLM',
             '[Continue.dev Configuration Documentation](https://docs.continue.dev/reference/Model%20Providers/openai) -- إعداد امتداد IDE لنقاط نهاية OpenAI المخصصة',
-            '[Meta Llama 3.3 Model Card](https://ai.meta.com/llama/) -- Meta. نموذج instruct محدَّث، Apache 2.0. بديل موصى به لـ Llama 3.3 8B.',
+            '[Meta Llama 3.3 Model Card](https://ai.meta.com/llama/) -- Meta. نموذج instruct محدَّث، Apache 2.0. بديل موصى به لـ Llama 3.1 8B.',
             '[Qwen3-Coder Model Card](https://huggingface.co/Qwen/Qwen3-Coder-7B-Instruct) -- Alibaba. 82% HumanEval، رخصة Apache 2.0. النموذج الأعلى أداءً للبرمجة بأقل من 8 GB من VRAM وفق اختباراتنا.',
           ],
         },
@@ -986,7 +986,7 @@ schema: {
             'Anfragen ohne Timeout senden. Wenn vLLM hängt, wartet der Client endlos. Immer `timeout=60` in Anfragen setzen.',
             'Davon ausgehen, dass vLLM automatisch über mehrere GPUs skaliert. Erfordert explizites Flag `--tensor-parallel-size`.',
             'CUDA_VISIBLE_DEVICES bei Multi-GPU vergessen. vLLM verwendet standardmäßig alle GPUs.',
-            'Llama-2-Modelle im Jahr 2026 verwenden. Meta hat Llama 3.3 für kommerzielle Nutzung im Januar 2026 eingestellt. Verwenden Sie Llama 3.3 8B Instruct (Apache-2.0-Lizenz, keine Einschränkungen).',
+            'Llama-2-Modelle im Jahr 2026 verwenden. Meta hat Llama 3.3 für kommerzielle Nutzung im Januar 2026 eingestellt. Verwenden Sie Llama 3.1 8B Instruct (Apache-2.0-Lizenz, keine Einschränkungen).',
           ],
         },
         'faqSection': {
@@ -1209,7 +1209,7 @@ schema: {
             'Envoyer des requêtes sans timeout. Si vLLM se bloque, le client attend indéfiniment. Toujours définir `timeout=60` dans les requêtes.',
             'Supposer que vLLM s\'adapte automatiquement à plusieurs GPU. Nécessite le flag explicite `--tensor-parallel-size`.',
             'Oublier de définir CUDA_VISIBLE_DEVICES en multi-GPU. vLLM utilise tous les GPU par défaut.',
-            'Utiliser des modèles Llama 3.3 en 2026. Meta a déprécié Llama 3.3 pour usage commercial en janvier 2026. Utiliser Llama 3.3 8B Instruct (licence Apache 2.0, aucune restriction).',
+            'Utiliser des modèles Llama 3.3 en 2026. Meta a déprécié Llama 3.3 pour usage commercial en janvier 2026. Utiliser Llama 3.1 8B Instruct (licence Apache 2.0, aucune restriction).',
           ],
         },
         'faqSection': {
@@ -1429,7 +1429,7 @@ schema: {
             'タイムアウトなしでリクエストを送信する。vLLMが停止するとクライアントが永遠に待機します。リクエストには常に`timeout=60`を設定してください。',
             'vLLMが複数GPUに自動スケールすると思い込む。明示的な`--tensor-parallel-size`フラグが必要です。',
             'マルチGPU時にCUDA_VISIBLE_DEVICESを忘れる。vLLMはデフォルトですべてのGPUを使用します。',
-            '2026年にLlama 3.3モデルを使用する。MetaはLlama 3.3の商用利用を2026年1月に廃止しました。Apache 2.0ライセンス（制限なし）のLlama 3.3 8B Instructを使用してください。',
+            '2026年にLlama 3.3モデルを使用する。MetaはLlama 3.3の商用利用を2026年1月に廃止しました。Apache 2.0ライセンス（制限なし）のLlama 3.1 8B Instructを使用してください。',
           ],
         },
         'faqSection': {
@@ -1649,7 +1649,7 @@ schema: {
             '发送请求时不设置超时。如果vLLM挂起，客户端将永远等待。请始终在请求中设置`timeout=60`。',
             '假设vLLM能自动跨多个GPU扩展。需要明确设置`--tensor-parallel-size`标志。',
             '多GPU时忘记设置CUDA_VISIBLE_DEVICES。vLLM默认使用所有GPU。',
-            '在2026年使用Llama 3.3模型。Meta于2026年1月废弃了Llama 3.3的商业使用。请使用Llama 3.3 8B Instruct（Apache 2.0许可证，无限制）。',
+            '在2026年使用Llama 3.3模型。Meta于2026年1月废弃了Llama 3.3的商业使用。请使用Llama 3.1 8B Instruct（Apache 2.0许可证，无限制）。',
           ],
         },
         'faqSection': {
@@ -1880,8 +1880,8 @@ schema: {
             '타임아웃 없이 요청 전송. vLLM이 중단되면 클라이언트도 영원히 중단됩니다. 항상 요청에 `timeout=60`을 설정하십시오.',
             'vLLM이 여러 GPU에서 자동으로 확장된다고 가정. 명시적인 `--tensor-parallel-size` 플래그 필요.',
             '멀티 GPU에서 CUDA_VISIBLE_DEVICES 설정 누락. vLLM은 기본적으로 모든 GPU를 사용합니다.',
-            '2026년에 Llama 3.3 모델 사용. Meta는 2026년 1월 상업적 사용에서 Llama 3.3을 폐기했습니다. Apache 2.0 라이선스로 제한 없는 Llama 3.3 8B Instruct를 사용하십시오.',
-            '**Llama 3.3를 사용할 수 있을 때 Llama 3.3을 사용하는 경우.** Llama 3.3 8B Instruct는 더 나은 명령어 따르기 기능을 제공하며, 2026년 7월 기준 권장 기본값입니다. `ollama run llama3.3:8b-instruct`를 사용하십시오.',
+            '2026년에 Llama 3.3 모델 사용. Meta는 2026년 1월 상업적 사용에서 Llama 3.3을 폐기했습니다. Apache 2.0 라이선스로 제한 없는 Llama 3.1 8B Instruct를 사용하십시오.',
+            '**Llama 3.3를 사용할 수 있을 때 Llama 3.3을 사용하는 경우.** Llama 3.1 8B Instruct는 더 나은 명령어 따르기 기능을 제공하며, 2026년 7월 기준 권장 기본값입니다. `ollama run llama3.1:8b-instruct`를 사용하십시오.',
           ],
         },
         'faqSection': {
@@ -1915,7 +1915,7 @@ schema: {
           items: [
             '[vLLM OpenAI 호환 서버 문서](https://docs.vllm.ai/en/latest/serving/openai_compatible_server.html) -- 공식 vLLM API 서버 설정 가이드',
             '[Continue.dev 구성 문서](https://docs.continue.dev/reference/Model%20Providers/openai) -- 커스텀 OpenAI 엔드포인트를 위한 IDE 확장 구성',
-            '[Meta Llama 3.3 모델 카드](https://ai.meta.com/llama/) -- Meta. 업데이트된 instruct 모델, Apache 2.0. Llama 3.3 8B 권장 대체 모델.',
+            '[Meta Llama 3.3 모델 카드](https://ai.meta.com/llama/) -- Meta. 업데이트된 instruct 모델, Apache 2.0. Llama 3.1 8B 권장 대체 모델.',
             '[Qwen3-Coder 모델 카드](https://huggingface.co/Qwen/Qwen3-Coder-7B-Instruct) -- Alibaba. 82% HumanEval, Apache 2.0 라이선스. 테스트 기준 8 GB VRAM 미만에서 가장 뛰어난 성능의 코딩 모델.',
           ],
         },

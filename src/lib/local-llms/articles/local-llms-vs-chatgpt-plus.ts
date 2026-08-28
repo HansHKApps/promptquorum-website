@@ -95,7 +95,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**As of August 2026, three hardware tiers cover the range from casual 7B use to GPT-5.2-class 70B inference — 70B-tier GPU prices have climbed since spring due to a 2026 GDDR7 memory shortage.** All software is free: [Ollama](/local-llms/how-to-install-ollama) (inference engine), Open WebUI (chat interface), and all open-source models (Llama, Qwen, Mistral, Gemma, Phi) are $0 to download and run.',
           ],
           items: [
-            '**Entry-level — 7B models — RTX 4060 Ti 8 GB (used, $220–260):** Runs Llama 3.3 8B, Mistral Small, Gemma 4 9B at 25–60 tok/s. Total build including PC: $700–900.',
+            '**Entry-level — 7B models — RTX 4060 Ti 8 GB (used, $220–260):** Runs Llama 3.1 8B, Mistral Small, Gemma 4 9B at 25–60 tok/s. Total build including PC: $700–900.',
             '**Sweet spot — 13B–24B models — [RTX 5060 Ti 16 GB (new, $390–400)](/local-llms/best-budget-gpus-local-llm):** Runs Mistral Small 3.1 24B and Qwen3 14B at 20–40 tok/s. Total build: $900–1,200. Covers 85% of ChatGPT Plus use cases.',
             '**70B tier — GPT-5.2 class — three hardware options:**',
             '   Option A: RTX 4090 used (24 GB, ~$1,999 — discontinued, prices up due to the 2026 GDDR7 shortage) — runs Llama 3.3 70B at ~25 tok/s via CUDA',
@@ -378,7 +378,7 @@ schema: {
             '**Seit April 2026 — und weiterhin im August 2026 — decken drei Hardware-Ebenen die Spanne von gelegentlichem 7B-Einsatz bis zu GPT-5.2-Klasse 70B-Inferenz ab. Die Preise der 70B-Oberklasse sind seit dem Frühjahr wegen eines GDDR7-Speicherengpasses 2026 gestiegen.** Alle Software ist kostenlos: [Ollama](/de/local-llms/how-to-install-ollama) (Inferenz-Engine), Open WebUI (Chat-Interface) und alle Open-Source-Modelle (Llama, Qwen, Mistral, Gemma, Phi) kosten 0€ zum Herunterladen und Ausführen.',
           ],
           items: [
-            '**Einsteiger-Level — 7B Modelle — RTX 4060 Ti 8 GB (gebraucht, 250–280€):** Führt Llama 3.3 8B, Mistral Small, Gemma 4 9B mit 25–60 Tokens/s aus. Gesamtkomplettrechner: 700–900€.',
+            '**Einsteiger-Level — 7B Modelle — RTX 4060 Ti 8 GB (gebraucht, 250–280€):** Führt Llama 3.1 8B, Mistral Small, Gemma 4 9B mit 25–60 Tokens/s aus. Gesamtkomplettrechner: 700–900€.',
             '**Sweet Spot — 13B–24B Modelle — [RTX 5060 Ti 16 GB (neu, 390–400€)](/de/local-llms/best-budget-gpus-local-llm):** Führt Mistral Small 3.1 24B und Qwen3 14B mit 20–40 Tokens/s aus. Gesamtrechner: 900–1.200€. Deckt 85 % der ChatGPT Plus-Anwendungsfälle ab.',
             '**70B-Tier — GPT-5.2-Klasse — drei Hardware-Optionen:**',
             '   Option A: RTX 4090 gebraucht (24 GB, ~1.999€) — führt Llama 3.3 70B mit ~25 Tokens/s über CUDA aus',
@@ -669,7 +669,7 @@ schema: {
             '**Depuis avril 2026, et toujours en août 2026, trois niveaux matériels couvrent l\'étendue de l\'utilisation occasionnelle 7B à l\'inférence 70B de classe GPT-5.2 — les prix du palier 70B ont grimpé depuis le printemps en raison d\'une pénurie de mémoire GDDR7 en 2026.** Tous les logiciels sont gratuits : [Ollama](/fr/local-llms/how-to-install-ollama) (moteur d\'inférence), Open WebUI (interface de chat) et tous les modèles open-source (Llama, Qwen, Mistral, Gemma, Phi) coûtent 0€ à télécharger et exécuter.',
           ],
           items: [
-            '**Niveau d\'entrée — modèles 7B — RTX 4060 Ti 8 GB (occasion, 250–280€) :** Exécute Llama 3.3 8B, Mistral Small, Gemma 4 9B à 25–60 tokens/s. Construction complète : 700–900€.',
+            '**Niveau d\'entrée — modèles 7B — RTX 4060 Ti 8 GB (occasion, 250–280€) :** Exécute Llama 3.1 8B, Mistral Small, Gemma 4 9B à 25–60 tokens/s. Construction complète : 700–900€.',
             '**Point optimal — modèles 13B–24B — [RTX 5060 Ti 16 GB (neuf, 390–400€)](/fr/local-llms/best-budget-gpus-local-llm) :** Exécute Mistral Small 3.1 24B et Qwen3 14B à 20–40 tokens/s. Construction complète : 900–1 200€. Couvre 85 % des cas d\'usage ChatGPT Plus.',
             '**Niveau 70B — classe GPT-5.2 — trois options matérielles :**',
             '   Option A : RTX 4090 occasion (24 GB, ~1 999€) — exécute Llama 3.3 70B à ~25 tokens/s via CUDA',
@@ -950,7 +950,7 @@ schema: {
             '**2026年4月現在、そして2026年8月時点でも同様に、3つのハードウェアティアがカジュアルな 7B 使用から GPT-5.2 クラスの 70B 推論まで、幅広くカバーしています — 2026年の GDDR7 メモリ不足により、70B ティアの GPU 価格は春以降上昇しています。** すべてのソフトウェアは無料です：[Ollama](/ja/local-llms/how-to-install-ollama)（推論エンジン）、Open WebUI（チャットインターフェース）、すべてのオープンソースモデル（Llama、Qwen、Mistral、Gemma、Phi）はダウンロードして実行するのに 0 円です。',
           ],
           items: [
-            '**エントリーレベル — 7B モデル — RTX 4060 Ti 8 GB（中古、約31,000～35,000円）：** Llama 3.3 8B、Mistral Small、Gemma 4 9B を 25～60 tokens/s で実行。完全なビルド：約87,000～112,000円。',
+            '**エントリーレベル — 7B モデル — RTX 4060 Ti 8 GB（中古、約31,000～35,000円）：** Llama 3.1 8B、Mistral Small、Gemma 4 9B を 25～60 tokens/s で実行。完全なビルド：約87,000～112,000円。',
             '**スイートスポット — 13B～24B モデル — [RTX 5060 Ti 16 GB（新品、約75,800円）](/ja/local-llms/best-budget-gpus-local-llm)：** Mistral Small 3.1 24B および Qwen3 14B を 20～40 tokens/s で実行。完全なビルド：約112,000～150,000円。ChatGPT Plus ユースケースの 85％ をカバー。',
             '**70B ティア — GPT-5.2 クラス — 3つのハードウェアオプション：**',
             '   オプション A：RTX 4090 中古（24 GB、約357,000円 — 2026年の GDDR7 不足で製造終了、価格上昇）— CUDA 経由で Llama 3.3 70B を ~25 tokens/s で実行',
@@ -1231,7 +1231,7 @@ schema: {
             '**截至2026年4月，且在2026年8月依然适用，三个硬件层涵盖从休闲7B使用到GPT-5.2级别70B推理的范围——由于2026年GDDR7内存短缺，70B级别的GPU价格自春季以来已经上涨。** 所有软件均免费：[Ollama](/zh/local-llms/how-to-install-ollama)（推理引擎）、Open WebUI（聊天界面）和所有开源模型（Llama、Qwen、Mistral、Gemma、Phi）可免费下载和运行。',
           ],
           items: [
-            '**入门级——7B模型——RTX 4060 Ti 8GB（二手，$220-260）：** 运行Llama 3.3 8B、Mistral Small、Gemma 4 9B，速度为25-60 tokens/秒。完整构建：$700-900。',
+            '**入门级——7B模型——RTX 4060 Ti 8GB（二手，$220-260）：** 运行Llama 3.1 8B、Mistral Small、Gemma 4 9B，速度为25-60 tokens/秒。完整构建：$700-900。',
             '**黄金点——13B-24B模型——[RTX 5060 Ti 16GB（新，$390-400）](/zh/local-llms/best-budget-gpus-local-llm)：** 运行Mistral Small 3.1 24B和Qwen3 14B，速度为20-40 tokens/秒。完整构建：$900-1,200。覆盖85%的ChatGPT Plus用例。',
             '**70B层——GPT-5.2级别——三个硬件选项：**',
             '   选项A：RTX 4090二手（24GB，约$1,999——因2026年GDDR7短缺已停产，价格上涨）——通过CUDA以~25 tokens/秒运行Llama 3.3 70B',
@@ -1511,7 +1511,7 @@ schema: {
             '**En abril de 2026, y aún vigente en agosto de 2026, tres niveles de hardware cubren el rango desde el uso casual de modelos 7B hasta la inferencia 70B de clase GPT-5.2 — los precios del nivel 70B subieron desde la primavera por la escasez de memoria GDDR7 de 2026.** Todo el software es gratuito: [Ollama](/es/local-llms/how-to-install-ollama) (motor de inferencia), Open WebUI (interfaz de chat) y todos los modelos de código abierto (Llama, Qwen, Mistral, Gemma, Phi) cuestan $0 para descargar y ejecutar.',
           ],
           items: [
-            '**Nivel de entrada — modelos 7B — RTX 4060 Ti 8 GB (usado, $220–260):** Ejecuta Llama 3.3 8B, Mistral Small, Gemma 4 9B a 25–60 tokens/s. Equipo completo incluyendo PC: $700–900.',
+            '**Nivel de entrada — modelos 7B — RTX 4060 Ti 8 GB (usado, $220–260):** Ejecuta Llama 3.1 8B, Mistral Small, Gemma 4 9B a 25–60 tokens/s. Equipo completo incluyendo PC: $700–900.',
             '**Punto óptimo — modelos 13B–24B — [RTX 5060 Ti 16 GB (nuevo, $390–400)](/es/local-llms/best-budget-gpus-local-llm):** Ejecuta Mistral Small 3.1 24B y Qwen3 14B a 20–40 tokens/s. Equipo completo: $900–1,200. Cubre el 85% de los casos de uso de ChatGPT Plus.',
             '**Nivel 70B — clase GPT-5.2 — tres opciones de hardware:**',
             '   Opción A: RTX 4090 usada (24 GB, ~$1,999 — discontinuada, precios al alza por la escasez de GDDR7 de 2026) — ejecuta Llama 3.3 70B a ~25 tokens/s vía CUDA',
@@ -1793,7 +1793,7 @@ schema: {
             '**في أبريل 2026، ولا يزال الأمر ساريًا في أغسطس 2026، تغطّي ثلاثة مستويات عتاد النطاق من الاستخدام العَرَضي لنماذج 7B إلى استدلال 70B من فئة GPT-5.2 — ارتفعت أسعار فئة 70B منذ الربيع بسبب نقص ذاكرة GDDR7 لعام 2026.** جميع البرمجيات مجانية: [Ollama](/ar/local-llms/how-to-install-ollama) (محرك الاستدلال)، Open WebUI (واجهة الدردشة) وجميع النماذج مفتوحة المصدر (Llama، Qwen، Mistral، Gemma، Phi) تكلّف 0$ للتنزيل والتشغيل.',
           ],
           items: [
-            '**مستوى الدخول — نماذج 7B — RTX 4060 Ti 8 GB (مستعملة، 220–260$):** تُشغّل Llama 3.3 8B وMistral Small وGemma 4 9B بسرعة 25–60 رمز/ث. جهاز كامل شامل الحاسوب: 700–900$.',
+            '**مستوى الدخول — نماذج 7B — RTX 4060 Ti 8 GB (مستعملة، 220–260$):** تُشغّل Llama 3.1 8B وMistral Small وGemma 4 9B بسرعة 25–60 رمز/ث. جهاز كامل شامل الحاسوب: 700–900$.',
             '**النقطة المثلى — نماذج 13B–24B — [RTX 5060 Ti 16 GB (جديدة، 390–400$)](/ar/local-llms/best-budget-gpus-local-llm):** تُشغّل Mistral Small 3.1 24B وQwen3 14B بسرعة 20–40 رمز/ث. جهاز كامل: 900–1,200$. يغطّي 85% من حالات استخدام ChatGPT Plus.',
             '**مستوى 70B — فئة GPT-5.2 — ثلاثة خيارات عتاد:**',
             '   الخيار A: RTX 4090 مستعملة (24 GB، ~1,999$ — توقّف إنتاجها وارتفع سعرها بسبب نقص GDDR7 لعام 2026) — تُشغّل Llama 3.3 70B بسرعة ~25 رمز/ث عبر CUDA',
@@ -2075,7 +2075,7 @@ schema: {
             '**Em abril de 2026, e ainda válido em agosto de 2026, três níveis de hardware cobrem desde o uso casual de modelos 7B até a inferência 70B de classe GPT-5.2 — os preços do nível 70B subiram desde a primavera devido à escassez de memória GDDR7 de 2026.** Todo o software é gratuito: [Ollama](/pt/local-llms/how-to-install-ollama) (motor de inferência), Open WebUI (interface de chat) e todos os modelos open-source (Llama, Qwen, Mistral, Gemma, Phi) custam $0 para baixar e executar.',
           ],
           items: [
-            '**Nível iniciante — modelos 7B — RTX 4060 Ti 8 GB (usado, $220–260):** Executa Llama 3.3 8B, Mistral Small, Gemma 4 9B a 25–60 tokens/s. Configuração completa incluindo PC: $700–900.',
+            '**Nível iniciante — modelos 7B — RTX 4060 Ti 8 GB (usado, $220–260):** Executa Llama 3.1 8B, Mistral Small, Gemma 4 9B a 25–60 tokens/s. Configuração completa incluindo PC: $700–900.',
             '**Ponto ideal — modelos 13B–24B — [RTX 5060 Ti 16 GB (novo, $390–400)](/pt/local-llms/best-budget-gpus-local-llm):** Executa Mistral Small 3.1 24B e Qwen3 14B a 20–40 tokens/s. Configuração completa: $900–1.200. Cobre 85% dos casos de uso do ChatGPT Plus.',
             '**Nível 70B — classe GPT-5.2 — três opções de hardware:**',
             '   Opção A: RTX 4090 usado (24 GB, ~$1.999 — descontinuada, preço em alta devido à escassez de GDDR7 de 2026) — executa Llama 3.3 70B a ~25 tokens/s via CUDA',
@@ -2358,7 +2358,7 @@ schema: {
             '**2026년 4월 기준, 그리고 2026년 8월 현재도 마찬가지로, 세 가지 하드웨어 티어가 캐주얼 7B 사용부터 GPT-5.2급 70B 추론까지 범위를 커버합니다 — 2026년 GDDR7 메모리 부족으로 인해 70B 티어의 GPU 가격은 봄 이후 상승했습니다.** 소프트웨어는 모두 무료입니다: [Ollama](/ko/local-llms/how-to-install-ollama)(추론 엔진), Open WebUI(채팅 인터페이스), 그리고 모든 오픈 소스 모델(Llama, Qwen, Mistral, Gemma, Phi)은 다운로드 및 실행이 $0입니다.',
           ],
           items: [
-            '**엔트리급 — 7B 모델 — RTX 4060 Ti 8 GB (중고, $220~260):** Llama 3.3 8B, Mistral Small, Gemma 4 9B를 25~60 tok/s로 실행합니다. PC 포함 총 구성 비용: $700~900.',
+            '**엔트리급 — 7B 모델 — RTX 4060 Ti 8 GB (중고, $220~260):** Llama 3.1 8B, Mistral Small, Gemma 4 9B를 25~60 tok/s로 실행합니다. PC 포함 총 구성 비용: $700~900.',
             '**스위트 스팟 — 13B~24B 모델 — [RTX 5060 Ti 16 GB (신품, $390~400)](/ko/local-llms/best-budget-gpus-local-llm):** Mistral Small 3.1 24B와 Qwen3 14B를 20~40 tok/s로 실행합니다. 총 구성 비용: $900~1,200. ChatGPT Plus 사용 사례의 85%를 커버합니다.',
             '**70B 티어 — GPT-5.2급 — 세 가지 하드웨어 옵션:**',
             '   옵션 A: RTX 4090 중고(24 GB, 약 $1,999 — 2026년 GDDR7 부족으로 단종, 가격 상승) — CUDA로 Llama 3.3 70B를 약 25 tok/s로 실행',
