@@ -13,12 +13,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       title: 'Text-Generation-WebUI vs vLLM vs llama.cpp in 2026: Inference Engine Comparison',
       heroImage: '/images/text-generation-webui-vs-vllm-vs-llamacpp-overview-hero-en.webp',
       seoTitle: 'Text-Generation-WebUI vs vLLM vs llama.cpp',
-      intro: 'Text-Generation-WebUI, vLLM, and llama.cpp are three popular inference engines for running local LLMs, each optimized for different use cases. llama.cpp is the lightest and powers Ollama; vLLM is the fastest for high-throughput production APIs; Text-Generation-WebUI is the most feature-rich for experimentation. As of August 2026, vLLM (and increasingly SGLang for the largest production clusters) dominates production deployments, llama.cpp dominates consumer devices, and Text-Generation-WebUI dominates research and fine-tuning workflows.',
+      intro: 'Text-Generation-WebUI, vLLM, and llama.cpp are three popular inference engines for running local LLMs, each optimized for different use cases. llama.cpp is the lightest and powers Ollama; vLLM is the fastest for high-throughput production APIs; Text-Generation-WebUI is the most feature-rich for experimentation. vLLM (and increasingly SGLang for the largest production clusters) dominates production deployments, llama.cpp dominates consumer devices, and Text-Generation-WebUI dominates research and fine-tuning workflows.',
       metaDescription: 'vLLM dominates production (highest throughput). llama.cpp powers Ollama. Text-Generation-WebUI best for research and LoRA fine-tuning. 2026 comparison.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**Text-Generation-WebUI, vLLM, and llama.cpp are three popular inference engines for running local LLMs, each optimized for different use cases. llama.cpp is the lightest and powers Ollama; vLLM is the fastest for high-throughput production APIs; Text-Generation-WebUI is the most feature-rich for experimentation.**',
       audience: 'Engineers deploying local LLMs in production or enterprise environments',
-      dateModified: '2026-08-27',
+      dateModified: '2026-08-28',
       readTime: '13 min read',
       gammaEmbedUrl: '/presentations/text-generation-webui-vs-vllm-vs-llamacpp-static.html',
       gammaDescription: 'The slide deck below covers: vLLM vs llama.cpp vs Text-Generation-WebUI feature comparison, performance benchmarks (up to 1000+ tok/s), production decision framework, LoRA fine-tuning use cases, and regional compliance (EU/Japan/China). Download the PDF as an inference engine reference card.',
@@ -45,12 +45,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'llama.cpp is the lightest inference engine and powers Ollama, vLLM is the fastest for high-throughput production APIs, and Text-Generation-WebUI is the most feature-rich for research and experimentation -- pick based on whether you need portability, throughput, or flexibility.' },
+            { type: 'plain-terms', text: "These three tools all run AI models locally, but for different jobs. llama.cpp is the lean engine that quietly powers Ollama under the hood -- great for personal use. vLLM is built for serving many users at once as fast as possible, which is why companies use it in production. Text-Generation-WebUI is the tinkerer's tool, with the most knobs to turn for research and fine-tuning experiments." },
+          ],
           items: [
             'An inference engine is the C/C++/Python software that loads a model file and generates tokens. It is separate from the UI or API layer.',
             '**llama.cpp** = lightweight, CPU-efficient, powers Ollama. Best for: Consumer laptops, single-user, zero dependencies.',
             '**vLLM** = production-grade, maximum GPU throughput, supports batching and distributed inference. Best for: API servers, multi-user, high throughput.',
             '**Text-Generation-WebUI** = feature-rich experimentation tool with a web UI built-in. Best for: Fine-tuning, LoRA testing, advanced settings tweaking.',
-            'As of August 2026, vLLM leads production use (with SGLang gaining share for the largest deployments), llama.cpp leads consumer use, and Text-Generation-WebUI leads research/fine-tuning.',
+            'vLLM leads production use (with SGLang gaining share for the largest deployments), llama.cpp leads consumer use, and Text-Generation-WebUI leads research/fine-tuning.',
           ],
         },
         whatIsInferenceEngine: {
@@ -376,12 +380,12 @@ schema: {
       title: 'Text-Generation-WebUI vs vLLM vs llama.cpp en 2026: Comparación de Motores de Inferencia',
       heroImage: '/images/text-generation-webui-vs-vllm-vs-llamacpp-overview-hero-es.webp',
       seoTitle: 'Text-Generation-WebUI vs vLLM vs llama.cpp',
-      intro: 'Text-Generation-WebUI, vLLM y llama.cpp son tres motores de inferencia populares para ejecutar LLMs locales, cada uno optimizado para diferentes casos de uso. llama.cpp es el más ligero e impulsa Ollama; vLLM es el más rápido para APIs de producción de alto rendimiento; Text-Generation-WebUI es el más rico en funciones para la experimentación. A partir de agosto de 2026, vLLM domina los despliegues de producción, llama.cpp domina los dispositivos de consumo, y Text-Generation-WebUI domina los flujos de trabajo de investigación y ajuste fino.',
+      intro: 'Text-Generation-WebUI, vLLM y llama.cpp son tres motores de inferencia populares para ejecutar LLMs locales, cada uno optimizado para diferentes casos de uso. llama.cpp es el más ligero e impulsa Ollama; vLLM es el más rápido para APIs de producción de alto rendimiento; Text-Generation-WebUI es el más rico en funciones para la experimentación. vLLM domina los despliegues de producción, llama.cpp domina los dispositivos de consumo, y Text-Generation-WebUI domina los flujos de trabajo de investigación y ajuste fino.',
       metaDescription: 'vLLM domina la producción (mayor rendimiento), llama.cpp impulsa Ollama (el más ligero) y Text-Generation-WebUI es ideal para investigación y LoRA. 2026.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**Text-Generation-WebUI, vLLM y llama.cpp son tres motores de inferencia populares para ejecutar LLMs locales, cada uno optimizado para diferentes casos de uso. llama.cpp es el más ligero e impulsa Ollama; vLLM es el más rápido para APIs de producción de alto rendimiento; Text-Generation-WebUI es el más rico en funciones para la experimentación.**',
       audience: 'Ingenieros que despliegan LLMs locales en entornos de producción o empresariales',
-      dateModified: '2026-08-27',
+      dateModified: '2026-08-28',
       readTime: '13 min de lectura',
       gammaEmbedUrl: '/presentations/text-generation-webui-vs-vllm-vs-llamacpp-static.html',
       gammaDescription: 'La presentación de diapositivas a continuación cubre: comparación de funciones de vLLM vs llama.cpp vs Text-Generation-WebUI, benchmarks de rendimiento (hasta 1.000+ tok/s), marco de decisión para producción, casos de uso de LoRA y cumplimiento normativo regional. Descarga el PDF como tarjeta de referencia de motores de inferencia.',
@@ -407,12 +411,16 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'llama.cpp es el motor de inferencia más ligero e impulsa Ollama, vLLM es el más rápido para APIs de producción de alto rendimiento, y Text-Generation-WebUI es el más rico en funciones para investigación y experimentación -- elige según necesites portabilidad, rendimiento o flexibilidad.' },
+            { type: 'plain-terms', text: 'Estas tres herramientas ejecutan modelos de IA localmente, pero para trabajos distintos. llama.cpp es el motor ligero que impulsa Ollama por dentro, ideal para uso personal. vLLM está construido para atender a muchos usuarios a la vez lo más rápido posible, por eso las empresas lo usan en producción. Text-Generation-WebUI es la herramienta para experimentar, con más opciones para investigación y ajuste fino.' },
+          ],
           items: [
             'Un motor de inferencia es el software C/C++/Python que carga un archivo de modelo y genera tokens. Es independiente de la capa de UI o API.',
             '**llama.cpp** = ligero, eficiente en CPU, impulsa Ollama. Ideal para: portátiles de consumo, usuario único, sin dependencias.',
             '**vLLM** = nivel producción, máximo rendimiento de GPU, compatible con procesamiento por lotes e inferencia distribuida. Ideal para: servidores API, multiusuario, alto rendimiento.',
             '**Text-Generation-WebUI** = herramienta de experimentación rica en funciones con UI web integrada. Ideal para: ajuste fino, pruebas LoRA, ajuste de configuraciones avanzadas.',
-            'A partir de agosto de 2026, vLLM lidera el uso en producción, llama.cpp lidera el uso de consumo, y Text-Generation-WebUI lidera los flujos de trabajo de investigación y ajuste fino.',
+            'vLLM lidera el uso en producción, llama.cpp lidera el uso de consumo, y Text-Generation-WebUI lidera los flujos de trabajo de investigación y ajuste fino.',
           ],
         },
         whatIsInferenceEngine: {
@@ -738,12 +746,12 @@ schema: {
       title: '⁨Text-Generation-WebUI⁩ مقابل ⁨vLLM⁩ مقابل ⁨llama.cpp⁩ في ⁨2026⁩: مقارنة محركات الاستدلال',
       heroImage: '/images/text-generation-webui-vs-vllm-vs-llamacpp-overview-hero-ar.webp',
       seoTitle: '⁨Text-Generation-WebUI⁩ مقابل ⁨vLLM⁩ و⁨llama.cpp 2026⁩',
-      intro: 'Text-Generation-WebUI وvLLM وllama.cpp ثلاثة محركات استدلال شائعة لتشغيل نماذج LLM المحلية، كلٌّ منها محسّن لحالات استخدام مختلفة. llama.cpp هو الأخف ويشغّل Ollama؛ وvLLM هو الأسرع لواجهات API الإنتاجية عالية الإنتاجية؛ وText-Generation-WebUI هو الأغنى بالميزات للتجريب. اعتبارًا من أغسطس 2026، يهيمن vLLM على عمليات النشر الإنتاجية، ويهيمن llama.cpp على الأجهزة الاستهلاكية، ويهيمن Text-Generation-WebUI على سير عمل البحث والضبط الدقيق.',
+      intro: 'Text-Generation-WebUI وvLLM وllama.cpp ثلاثة محركات استدلال شائعة لتشغيل نماذج LLM المحلية، كلٌّ منها محسّن لحالات استخدام مختلفة. llama.cpp هو الأخف ويشغّل Ollama؛ وvLLM هو الأسرع لواجهات API الإنتاجية عالية الإنتاجية؛ وText-Generation-WebUI هو الأغنى بالميزات للتجريب. يهيمن vLLM على عمليات النشر الإنتاجية، ويهيمن llama.cpp على الأجهزة الاستهلاكية، ويهيمن Text-Generation-WebUI على سير عمل البحث والضبط الدقيق.',
       metaDescription: '⁨vLLM⁩ يُنتج ⁨300⁩+ رمز/ثانية في الإنتاج؛ ⁨llama.cpp⁩ يشغّل ⁨Ollama⁩ (الأخف)؛ ⁨Text-Generation-WebUI⁩ الأمثل للبحث و⁨LoRA⁩. مقارنة محركات الاستدلال ⁨2026⁩.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**Text-Generation-WebUI وvLLM وllama.cpp ثلاثة محركات استدلال شائعة لتشغيل نماذج LLM المحلية، كلٌّ منها محسّن لحالات استخدام مختلفة. llama.cpp هو الأخف ويشغّل Ollama؛ وvLLM هو الأسرع لواجهات API الإنتاجية عالية الإنتاجية؛ وText-Generation-WebUI هو الأغنى بالميزات للتجريب.**',
       audience: 'المهندسون الذين ينشرون نماذج LLM المحلية في بيئات الإنتاج أو المؤسسات',
-      dateModified: '2026-08-27',
+      dateModified: '2026-08-28',
       readTime: '13 دقيقة قراءة',
       gammaEmbedUrl: '/presentations/text-generation-webui-vs-vllm-vs-llamacpp-static.html',
       gammaDescription: 'يغطي العرض التقديمي أدناه: مقارنة ميزات vLLM مقابل llama.cpp مقابل Text-Generation-WebUI، ومعايير الأداء (حتى 1000+ tok/ثانية)، وإطار قرار الإنتاج، وحالات استخدام LoRA، والامتثال التنظيمي الإقليمي. نزّل ملف PDF كبطاقة مرجعية لمحركات الاستدلال.',
@@ -769,12 +777,16 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'يُعد llama.cpp أخف محرك استدلال ويشغّل Ollama، بينما vLLM هو الأسرع لواجهات API الإنتاجية عالية الإنتاجية، وText-Generation-WebUI هو الأغنى بالميزات للبحث والتجريب -- اختر بناءً على حاجتك للقابلية للنقل أو الإنتاجية أو المرونة.' },
+            { type: 'plain-terms', text: 'تشغّل هذه الأدوات الثلاث نماذج الذكاء الاصطناعي محلياً، لكن لأغراض مختلفة. llama.cpp هو المحرك الخفيف الذي يشغّل Ollama من الداخل -- ممتاز للاستخدام الشخصي. صُمم vLLM لخدمة عدد كبير من المستخدمين في وقت واحد بأسرع ما يمكن، ولهذا تستخدمه الشركات في الإنتاج. أما Text-Generation-WebUI فهو أداة التجريب، بأكبر عدد من الخيارات للبحث والضبط الدقيق.' },
+          ],
           items: [
             'محرك الاستدلال هو برمجية C/C++/Python التي تحمّل ملف نموذج وتولّد token. وهو مستقل عن طبقة واجهة المستخدم أو API.',
             '**llama.cpp** = خفيف، فعّال على CPU، يشغّل Ollama. مثالي لـ: الحواسيب المحمولة الاستهلاكية، مستخدم واحد، بلا اعتماديات.',
             '**vLLM** = بمستوى إنتاجي، أقصى إنتاجية GPU، يدعم المعالجة بالدُفعات والاستدلال الموزّع. مثالي لـ: خوادم API، متعدد المستخدمين، إنتاجية عالية.',
             '**Text-Generation-WebUI** = أداة تجريب غنية بالميزات بواجهة ويب مدمجة. مثالية لـ: الضبط الدقيق، واختبار LoRA، وضبط التكوينات المتقدمة.',
-            'اعتبارًا من أغسطس 2026، يتصدّر vLLM الاستخدام الإنتاجي، ويتصدّر llama.cpp الاستخدام الاستهلاكي، ويتصدّر Text-Generation-WebUI سير عمل البحث والضبط الدقيق.',
+            'يتصدّر vLLM الاستخدام الإنتاجي، ويتصدّر llama.cpp الاستخدام الاستهلاكي، ويتصدّر Text-Generation-WebUI سير عمل البحث والضبط الدقيق.',
           ],
         },
         whatIsInferenceEngine: {
@@ -1102,9 +1114,10 @@ schema: {
       title: 'Text-Generation-WebUI vs vLLM vs llama.cpp em 2026: Comparação de Motores de Inferência',
       heroImage: '/images/text-generation-webui-vs-vllm-vs-llamacpp-overview-hero-pt.webp',
       seoTitle: 'Text-Generation-WebUI vs vLLM vs llama.cpp',
-      intro: 'Text-Generation-WebUI, vLLM e llama.cpp são três motores de inferência populares para executar LLMs locais, cada um otimizado para diferentes casos de uso. O llama.cpp é o mais leve e alimenta o Ollama; o vLLM é o mais rápido para APIs de produção de alto rendimento; o Text-Generation-WebUI é o mais rico em recursos para experimentação. A partir de agosto de 2026, o vLLM domina as implantações de produção, o llama.cpp domina os dispositivos de consumo, e o Text-Generation-WebUI domina os fluxos de trabalho de pesquisa e fine-tuning.',
+      intro: 'Text-Generation-WebUI, vLLM e llama.cpp são três motores de inferência populares para executar LLMs locais, cada um otimizado para diferentes casos de uso. O llama.cpp é o mais leve e alimenta o Ollama; o vLLM é o mais rápido para APIs de produção de alto rendimento; o Text-Generation-WebUI é o mais rico em recursos para experimentação. O vLLM domina as implantações de produção, o llama.cpp domina os dispositivos de consumo, e o Text-Generation-WebUI domina os fluxos de trabalho de pesquisa e fine-tuning.',
       metaDescription: 'vLLM domina produção (maior rendimento), llama.cpp alimenta Ollama (mais leve) e Text-Generation-WebUI é ideal para pesquisa e LoRA. 2026.',
       publishDate: '2026-04-04',
+      dateModified: '2026-08-28',
       leadAnswerBlock: '**Text-Generation-WebUI, vLLM e llama.cpp são três motores de inferência populares para executar LLMs locais, cada um otimizado para diferentes casos de uso. O llama.cpp é o mais leve e alimenta o Ollama; o vLLM é o mais rápido para APIs de produção de alto rendimento; o Text-Generation-WebUI é o mais rico em recursos para experimentação.**',
       audience: 'Engenheiros implantando LLMs locais em ambientes de produção ou empresariais',
       readTime: '13 min de leitura',
@@ -1127,6 +1140,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'O llama.cpp é o motor de inferência mais leve e alimenta o Ollama, o vLLM é o mais rápido para APIs de produção de alto rendimento, e o Text-Generation-WebUI é o mais rico em recursos para pesquisa e experimentação -- escolha de acordo com sua necessidade de portabilidade, throughput ou flexibilidade.' },
+            { type: 'plain-terms', text: 'Essas três ferramentas rodam modelos de IA localmente, mas para tarefas diferentes. O llama.cpp é o motor leve que alimenta o Ollama por baixo dos panos -- ótimo para uso pessoal. O vLLM foi feito para atender muitos usuários ao mesmo tempo o mais rápido possível, por isso as empresas o usam em produção. O Text-Generation-WebUI é a ferramenta para quem gosta de mexer, com mais opções para pesquisa e ajuste fino.' },
+          ],
           items: [
             '**vLLM**: melhor para produção de alta carga — processa 1.000+ tok/s com otimizações PagedAttention e batching contínuo.',
             '**llama.cpp (via Ollama)**: melhor para hardware de consumo — leve, suporta CPU+GPU, configuração simples.',
@@ -1191,9 +1208,10 @@ schema: {
       title: 'Text-Generation-WebUI vs vLLM vs llama.cpp 2026: Vergleich von Inference-Engines',
       heroImage: '/images/text-generation-webui-vs-vllm-vs-llamacpp-overview-hero-de.webp',
       seoTitle: 'Text Generation WebUI vs. vLLM vs. llama.cpp 2026',
-      intro: 'Text-Generation-WebUI, vLLM und llama.cpp sind drei beliebte Inference-Engines zum Ausführen lokaler LLMs, jede optimiert für unterschiedliche Anwendungsfälle. llama.cpp ist die leichteste und unterstützt Ollama; vLLM ist die schnellste für High-Throughput-Production-APIs; Text-Generation-WebUI ist die funktionsreichste für Experimente. Im August 2026 dominiert vLLM Production-Deployments, llama.cpp dominiert Consumer-Geräte, und Text-Generation-WebUI dominiert Forschungs- und Fine-Tuning-Workflows.',
+      intro: 'Text-Generation-WebUI, vLLM und llama.cpp sind drei beliebte Inference-Engines zum Ausführen lokaler LLMs, jede optimiert für unterschiedliche Anwendungsfälle. llama.cpp ist die leichteste und unterstützt Ollama; vLLM ist die schnellste für High-Throughput-Production-APIs; Text-Generation-WebUI ist die funktionsreichste für Experimente. vLLM dominiert Production-Deployments, llama.cpp dominiert Consumer-Geräte, und Text-Generation-WebUI dominiert Forschungs- und Fine-Tuning-Workflows.',
       metaDescription: 'vLLM dominiert Production (höchster Durchsatz). llama.cpp treibt Ollama an. Text-Generation-WebUI für Forschung und LoRA. Inference-Engine-Vergleich 2026.',
       publishDate: '2026-04-04',
+      dateModified: '2026-08-28',
       readTime: '13 Min. Lesezeit',
       gammaEmbedUrl: '/presentations/text-generation-webui-vs-vllm-vs-llamacpp-static.html',
       gammaDescription: 'Das Slide-Deck unten behandelt: vLLM vs. llama.cpp vs. Text-Generation-WebUI Funktionsvergleich, Performance-Benchmarks (bis 1.000+ Tokens/Sek.), Production-Entscheidungsrahmen, LoRA Fine-Tuning und DSGVO-Compliance. PDF als Inference-Engine Referenzkarte herunterladen.',
@@ -1220,6 +1238,10 @@ schema: {
         id: 'key-takeaways',
 
         isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'llama.cpp ist die leichteste Inference-Engine und treibt Ollama an, vLLM ist die schnellste für High-Throughput-Production-APIs, und Text-Generation-WebUI ist die funktionsreichste für Forschung und Experimente -- die Wahl hängt davon ab, ob Portabilität, Durchsatz oder Flexibilität wichtiger ist.' },
+          { type: 'plain-terms', text: 'Diese drei Werkzeuge führen alle KI-Modelle lokal aus, aber für unterschiedliche Zwecke. llama.cpp ist die schlanke Engine, die im Hintergrund Ollama antreibt -- ideal für den persönlichen Gebrauch. vLLM ist darauf ausgelegt, möglichst viele Nutzer gleichzeitig so schnell wie möglich zu bedienen, weshalb Unternehmen es in der Produktion einsetzen. Text-Generation-WebUI ist das Werkzeug für Tüftler, mit den meisten Einstellmöglichkeiten für Forschung und Fine-Tuning-Experimente.' },
+        ],
         items: [
           'Eine Inference-Engine ist die C/C++/Python-Software, die eine Modelldatei lädt und Tokens generiert. Sie ist vom UI oder API-Layer getrennt.',
           '**llama.cpp** = leichtgewichtig, CPU-effizient, unterstützt Ollama. Beste für: Consumer-Laptops, einzelne Benutzer, keine Abhängigkeiten.',
@@ -1444,9 +1466,10 @@ schema: {
       title: 'Text-Generation-WebUI vs vLLM vs llama.cpp en 2026 : Comparaison des moteurs d\'inférence',
       heroImage: '/images/text-generation-webui-vs-vllm-vs-llamacpp-overview-hero-fr.webp',
       seoTitle: 'Text-Generation-WebUI vs vLLM vs llama.cpp',
-      intro: 'Text-Generation-WebUI, vLLM et llama.cpp sont trois moteurs d\'inférence populaires pour exécuter des LLM locaux, chacun optimisé pour différents cas d\'usage. llama.cpp est le plus léger et alimente Ollama ; vLLM est le plus rapide pour les APIs de production haute capacité ; Text-Generation-WebUI est le plus riche en fonctionnalités pour l\'expérimentation. En août 2026, vLLM domine les déploiements de production, llama.cpp domine les appareils consommateurs, et Text-Generation-WebUI domine les workflows de recherche et d\'ajustement fin.',
+      intro: 'Text-Generation-WebUI, vLLM et llama.cpp sont trois moteurs d\'inférence populaires pour exécuter des LLM locaux, chacun optimisé pour différents cas d\'usage. llama.cpp est le plus léger et alimente Ollama ; vLLM est le plus rapide pour les APIs de production haute capacité ; Text-Generation-WebUI est le plus riche en fonctionnalités pour l\'expérimentation. vLLM domine les déploiements de production, llama.cpp domine les appareils consommateurs, et Text-Generation-WebUI domine les workflows de recherche et d\'ajustement fin.',
       metaDescription: 'vLLM domine la production (débit maximal). llama.cpp alimente Ollama (le plus léger). Text-Generation-WebUI meilleur pour la recherche. Comparaison 2026 des moteurs d\'inférence.',
       publishDate: '2026-04-04',
+      dateModified: '2026-08-28',
       readTime: '13 min de lecture',
       gammaEmbedUrl: '/presentations/text-generation-webui-vs-vllm-vs-llamacpp-static.html',
       gammaDescription: 'Le deck de slides ci-dessous couvre : comparaison des fonctionnalités vLLM vs llama.cpp vs Text-Generation-WebUI, benchmarks de performance (jusqu\'à 1 000+ tokens/s), guide de décision pour la production, cas d\'usage LoRA, et conformité RGPD. Téléchargez le PDF comme carte de référence des moteurs d\'inférence.',
@@ -1473,12 +1496,16 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: "llama.cpp est le moteur d'inférence le plus léger et alimente Ollama, vLLM est le plus rapide pour les APIs de production à haut débit, et Text-Generation-WebUI est le plus riche en fonctionnalités pour la recherche et l'expérimentation -- le choix dépend de la portabilité, du débit ou de la flexibilité recherchés." },
+            { type: 'plain-terms', text: "Ces trois outils exécutent tous des modèles d'IA en local, mais pour des usages différents. llama.cpp est le moteur léger qui alimente Ollama en coulisses -- parfait pour un usage personnel. vLLM est conçu pour servir un maximum d'utilisateurs à la fois aussi vite que possible, c'est pourquoi les entreprises l'utilisent en production. Text-Generation-WebUI est l'outil des bricoleurs, avec le plus de réglages pour la recherche et l'ajustement fin." },
+          ],
           items: [
             'Un moteur d\'inférence est le logiciel C/C++/Python qui charge un fichier modèle et génère des tokens. Il est séparé de la couche UI ou API.',
             '**llama.cpp** = léger, efficace en CPU, alimente Ollama. Meilleur pour : portables consommateurs, mono-utilisateur, zéro dépendance.',
             '**vLLM** = production-grade, débit GPU maximal, supporte le batching et l\'inférence distribuée. Meilleur pour : serveurs API, multi-utilisateur, haut débit.',
             '**Text-Generation-WebUI** = outil d\'expérimentation riche en fonctionnalités avec UI web intégrée. Meilleur pour : ajustement fin, test LoRA, réglages avancés.',
-            'En août 2026, vLLM mène l\'utilisation en production, llama.cpp mène l\'utilisation consommateur, et Text-Generation-WebUI mène les workflows de recherche/ajustement fin.',
+            'vLLM mène l\'utilisation en production, llama.cpp mène l\'utilisation consommateur, et Text-Generation-WebUI mène les workflows de recherche/ajustement fin.',
           ],
         },
         whatIsInferenceEngine: {
@@ -1791,9 +1818,10 @@ schema: {
       title: 'Text-Generation-WebUI vs vLLM vs llama.cpp 2026：推論エンジン比較',
       heroImage: '/images/text-generation-webui-vs-vllm-vs-llamacpp-overview-hero-ja.webp',
       seoTitle: 'Text-Generation-WebUI vs vLLM vs llama.cpp',
-      intro: 'Text-Generation-WebUI、vLLM、llama.cpp は、ローカル LLM を実行するための 3 つの人気のある推論エンジンです。各エンジンは異なるユースケースに最適化されています。llama.cpp は最軽量で Ollama を駆動；vLLM は高スループット本番環境 API に最速；Text-Generation-WebUI は実験用に最も機能豊富です。2026 年 8 月時点で、vLLM は本番デプロイメントを主導し、llama.cpp はコンシューマーデバイスを主導し、Text-Generation-WebUI は研究・ファインチューニングワークフローを主導しています。',
+      intro: 'Text-Generation-WebUI、vLLM、llama.cpp は、ローカル LLM を実行するための 3 つの人気のある推論エンジンです。各エンジンは異なるユースケースに最適化されています。llama.cpp は最軽量で Ollama を駆動；vLLM は高スループット本番環境 API に最速；Text-Generation-WebUI は実験用に最も機能豊富です。vLLMは本番デプロイメントを主導し、llama.cppはコンシューマーデバイスを主導し、Text-Generation-WebUIは研究・ファインチューニングワークフローを主導しています。',
       metaDescription: 'vLLM が本番環境を主導（最高スループット）。llama.cpp が Ollama を駆動（最軽量）。Text-Generation-WebUI は研究に最適。2026年推論エンジン比較。',
       publishDate: '2026-04-04',
+      dateModified: '2026-08-28',
       readTime: '13分で読める',
       gammaEmbedUrl: '/presentations/text-generation-webui-vs-vllm-vs-llamacpp-static.html',
       gammaDescription: '下記のスライドデッキは、vLLM vs llama.cpp vs Text-Generation-WebUI の機能比較、パフォーマンスベンチマーク（最大1,000+ tokens/秒）、本番環境の意思決定フレームワーク、LoRAファインチューニング、日本のMETI AIガバナンス対応を網羅。PDFを推論エンジン参照カードとしてダウンロードできます。',
@@ -1820,6 +1848,10 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'llama.cppは最も軽量な推論エンジンでOllamaを動かしており、vLLMは高スループットの本番APIに最も高速で、Text-Generation-WebUIは研究・実験用に最も機能豊富です -- 移植性、スループット、柔軟性のどれを重視するかで選びましょう。' },
+            { type: 'plain-terms', text: 'これら3つのツールはすべてローカルでAIモデルを実行しますが、目的が異なります。llama.cppは内部でOllamaを支える軽量なエンジンで、個人利用に最適です。vLLMは大勢のユーザーを同時にできるだけ高速に処理するために作られており、そのため企業は本番環境で採用します。Text-Generation-WebUIはいじり倒すためのツールで、研究やファインチューニングの実験用に最も多くの調整項目を備えています。' },
+          ],
           items: [
             '推論エンジンは、モデルファイルをロードしてトークンを生成する C/C++/Python ソフトウェアです。UI または API レイヤーとは別です。',
             '**llama.cpp** = 軽量、CPU 効率、Ollama を駆動。最適な場合：コンシューマーノートパソコン、シングルユーザー、ゼロ依存。',
@@ -2134,9 +2166,10 @@ schema: {
       title: 'Text-Generation-WebUI vs vLLM vs llama.cpp 2026：推理引擎对比',
       heroImage: '/images/text-generation-webui-vs-vllm-vs-llamacpp-overview-hero-zh.webp',
       seoTitle: 'Text-Generation-WebUI vs vLLM vs llama.cpp',
-      intro: 'Text-Generation-WebUI、vLLM 和 llama.cpp 是运行本地 LLM 的三种流行推理引擎，每种针对不同用例进行优化。llama.cpp 最轻量且驱动 Ollama；vLLM 对高吞吐量生产 API 最快；Text-Generation-WebUI 对实验最功能丰富。截至 2026 年 8 月，vLLM 主导生产部署，llama.cpp 主导消费设备，Text-Generation-WebUI 主导研究和微调工作流。',
+      intro: 'Text-Generation-WebUI、vLLM 和 llama.cpp 是运行本地 LLM 的三种流行推理引擎，每种针对不同用例进行优化。llama.cpp 最轻量且驱动 Ollama；vLLM 对高吞吐量生产 API 最快；Text-Generation-WebUI 对实验最功能丰富。vLLM 主导生产部署，llama.cpp 主导消费设备，Text-Generation-WebUI 主导研究和微调工作流。',
       metaDescription: 'vLLM 主导生产环境（最高吞吐量）。llama.cpp 驱动 Ollama（最轻量）。Text-Generation-WebUI 最适合研究。2026年推理引擎对比。',
       publishDate: '2026-04-04',
+      dateModified: '2026-08-28',
       readTime: '阅读约13分钟',
       gammaEmbedUrl: '/presentations/text-generation-webui-vs-vllm-vs-llamacpp-static.html',
       gammaDescription: '下方幻灯片涵盖：vLLM vs llama.cpp vs Text-Generation-WebUI 功能对比、性能基准测试（最高 1,000+ tokens/秒）、生产环境决策框架、LoRA 微调用例，以及中国《数据安全法》合规要点。下载 PDF 作为推理引擎参考卡。',
@@ -2163,6 +2196,10 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'llama.cpp是最轻量的推理引擎且驱动着Ollama，vLLM在高吞吐量生产API方面最快，Text-Generation-WebUI在研究和实验方面功能最丰富——根据你需要可移植性、吞吐量还是灵活性来选择。' },
+            { type: 'plain-terms', text: '这三种工具都能在本地运行AI模型，但用途不同。llama.cpp是驱动Ollama的轻量级引擎，非常适合个人使用。vLLM专为同时为大量用户提供尽可能快的服务而设计，这也是企业在生产环境中使用它的原因。Text-Generation-WebUI是折腾党的工具，拥有最多可调选项，适合研究和微调实验。' },
+          ],
           items: [
             '推理引擎是加载模型文件并生成令牌的 C/C++/Python 软件。与 UI 或 API 层分离。',
             '**llama.cpp** = 轻量级、CPU 高效、驱动 Ollama。最适合：消费类笔记本、单用户、零依赖。',
@@ -2478,12 +2515,12 @@ schema: {
       title: 'Text-Generation-WebUI vs vLLM vs llama.cpp 2026년 비교: 추론 엔진 완벽 가이드',
     heroImage: '/images/text-generation-webui-vs-vllm-vs-llamacpp-overview-hero-ko.webp',
       seoTitle: 'Text-Generation-WebUI vs vLLM vs llama.cpp 비교 2026',
-      intro: 'Text-Generation-WebUI, vLLM, llama.cpp는 로컬 LLM 실행을 위한 세 가지 대표적인 추론 엔진으로, 각각 서로 다른 사용 목적에 최적화되어 있습니다. llama.cpp는 가장 가볍고 Ollama의 기반이 됩니다. vLLM은 고처리량 프로덕션 API에서 가장 빠릅니다. Text-Generation-WebUI는 실험 및 연구에 가장 풍부한 기능을 제공합니다. 2026년 8월 기준으로 vLLM은 프로덕션 배포 분야를, llama.cpp는 소비자 기기 분야를, Text-Generation-WebUI는 연구 및 파인튜닝 워크플로 분야를 주도하고 있습니다.',
+      intro: 'Text-Generation-WebUI, vLLM, llama.cpp는 로컬 LLM 실행을 위한 세 가지 대표적인 추론 엔진으로, 각각 서로 다른 사용 목적에 최적화되어 있습니다. llama.cpp는 가장 가볍고 Ollama의 기반이 됩니다. vLLM은 고처리량 프로덕션 API에서 가장 빠릅니다. Text-Generation-WebUI는 실험 및 연구에 가장 풍부한 기능을 제공합니다. vLLM은 프로덕션 배포 분야를, llama.cpp는 소비자 기기 분야를, Text-Generation-WebUI는 연구 및 파인튜닝 워크플로 분야를 주도하고 있습니다.',
       metaDescription: 'vLLM은 프로덕션에 최적(최고 처리량). llama.cpp는 Ollama의 기반. Text-Generation-WebUI는 연구 및 LoRA 파인튜닝에 최적. 2026년 비교.',
       publishDate: '2026-04-04',
       leadAnswerBlock: 'Text-Generation-WebUI, vLLM, llama.cpp는 로컬 LLM 실행을 위한 세 가지 대표적인 추론 엔진으로, 각각 서로 다른 사용 목적에 최적화되어 있습니다. llama.cpp는 가장 가볍고 Ollama의 기반이 됩니다. vLLM은 고처리량 프로덕션 API에서 가장 빠릅니다. Text-Generation-WebUI는 실험 및 연구에 가장 풍부한 기능을 제공합니다.',
       audience: '프로덕션 또는 기업 환경에서 로컬 LLM을 배포하는 엔지니어',
-      dateModified: '2026-08-27',
+      dateModified: '2026-08-28',
       readTime: '13분 읽기',
       gammaEmbedUrl: '/presentations/text-generation-webui-vs-vllm-vs-llamacpp-static.html',
       gammaDescription: '아래 슬라이드 덱은 다음 내용을 다룹니다: vLLM vs llama.cpp vs Text-Generation-WebUI 기능 비교, 성능 벤치마크(최대 1000+ tok/s), 프로덕션 의사결정 프레임워크, LoRA 파인튜닝 사용 사례, 지역별 컴플라이언스(EU/일본/중국). PDF를 추론 엔진 참조 카드로 다운로드하십시오.',
@@ -2509,12 +2546,16 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'llama.cpp는 가장 가벼운 추론 엔진이며 Ollama의 기반이 되고, vLLM은 고처리량 프로덕션 API에서 가장 빠르며, Text-Generation-WebUI는 연구와 실험에 가장 기능이 풍부합니다 -- 이식성, 처리량, 유연성 중 무엇이 필요한지에 따라 선택하세요.' },
+            { type: 'plain-terms', text: '이 세 도구는 모두 로컬에서 AI 모델을 실행하지만 용도가 다릅니다. llama.cpp는 Ollama를 뒤에서 움직이는 가벼운 엔진으로 개인 사용에 적합합니다. vLLM은 최대한 빠르게 많은 사용자를 동시에 처리하도록 설계되어 있어 기업들이 프로덕션에서 사용합니다. Text-Generation-WebUI는 만지작거리기 좋아하는 사람을 위한 도구로, 연구와 파인튜닝 실험을 위한 조정 옵션이 가장 많습니다.' },
+          ],
           items: [
             '추론 엔진은 모델 파일을 불러와 토큰을 생성하는 C/C++/Python 소프트웨어입니다. UI 또는 API 계층과는 별개입니다.',
             '**llama.cpp** = 경량, CPU 효율적, Ollama의 기반. 최적 사용 환경: 소비자용 노트북, 단일 사용자, 의존성 없음.',
             '**vLLM** = 프로덕션급, 최대 GPU 처리량, 배칭 및 분산 추론 지원. 최적 사용 환경: API 서버, 다중 사용자, 고처리량.',
             '**Text-Generation-WebUI** = 내장 웹 UI가 있는 기능 풍부한 실험 도구. 최적 사용 환경: 파인튜닝, LoRA 테스트, 고급 설정 조정.',
-            '2026년 8월 기준으로 vLLM은 프로덕션 사용을, llama.cpp는 소비자 사용을, Text-Generation-WebUI는 연구/파인튜닝 분야를 주도하고 있습니다.',
+            'vLLM은 프로덕션 사용을, llama.cpp는 소비자 사용을, Text-Generation-WebUI는 연구/파인튜닝 분야를 주도하고 있습니다.',
           ],
         },
         whatIsInferenceEngine: {
