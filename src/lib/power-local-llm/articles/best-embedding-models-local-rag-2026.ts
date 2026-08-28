@@ -225,7 +225,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Vector store:** Qdrant 1.x in local mode, cosine similarity, top-K=10. Identical configuration for all six models. Re-indexing was performed cleanly between runs.',
           '**Query set:** 100 queries — 25 per document type — written by domain readers and graded blind against a known answer key. retrieval@10 = % of queries where the gold-standard chunk appears in top-10 results.',
           '**Speed measurement:** chunks/sec at batch size 32 over a warm-up of 1,000 chunks plus 10,000 measured chunks. Memory measured at peak resident-set size during embedding.',
-          '**What we did *not* test:** end-to-end answer quality. The chat model is identical (Llama 3.3 8B Q4_K_M) across runs, but answer quality depends on prompt template and chunk count. We isolate retrieval here so the embedder is the only variable.',
+          '**What we did *not* test:** end-to-end answer quality. The chat model is identical (Llama 3.1 8B Q4_K_M) across runs, but answer quality depends on prompt template and chunk count. We isolate retrieval here so the embedder is the only variable.',
         ],
         callouts: [
           {
@@ -297,7 +297,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'These numbers assume the embedding model owns the GPU. If a chat model (Llama 3.3 8B Q4_K_M occupies ~5 GB) is already loaded, the embedder competes for VRAM and throughput drops 30–50% from contention. On a 12 GB card you can either index or chat — not both at full speed simultaneously.',
+            text: 'These numbers assume the embedding model owns the GPU. If a chat model (Llama 3.1 8B Q4_K_M occupies ~5 GB) is already loaded, the embedder competes for VRAM and throughput drops 30–50% from contention. On a 12 GB card you can either index or chat — not both at full speed simultaneously.',
           },
         ],
       },
@@ -369,6 +369,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       codeEmbeddings: {
+        itemHeadings: true,
         id: 'code-embeddings',
         title: 'Best Embedding Model for Code Search and RAG',
         content:
@@ -744,7 +745,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Vector store:** Qdrant 1.x en modo local, similitud coseno, top-K=10. Configuración idéntica para los seis modelos. La reindexación se realizó de forma limpia entre ejecuciones.',
           '**Conjunto de consultas:** 100 consultas — 25 por tipo de documento — escritas por lectores del dominio y evaluadas a ciegas contra un conjunto de respuestas conocidas. retrieval@10 = % de consultas donde el chunk de referencia aparece en los 10 primeros resultados.',
           '**Medición de velocidad:** chunks/seg con tamaño de lote 32 sobre un calentamiento de 1.000 chunks más 10.000 chunks medidos. La memoria se midió al tamaño máximo del conjunto residente durante el embedding.',
-          '**Lo que *no* probamos:** calidad de respuesta de extremo a extremo. El modelo de chat es idéntico (Llama 3.3 8B Q4_K_M) en todas las ejecuciones, pero la calidad de respuesta depende de la plantilla de prompt y el conteo de chunks. Aislamos la recuperación aquí para que el embedder sea la única variable.',
+          '**Lo que *no* probamos:** calidad de respuesta de extremo a extremo. El modelo de chat es idéntico (Llama 3.1 8B Q4_K_M) en todas las ejecuciones, pero la calidad de respuesta depende de la plantilla de prompt y el conteo de chunks. Aislamos la recuperación aquí para que el embedder sea la única variable.',
         ],
         callouts: [
           {
@@ -816,7 +817,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'Estos números asumen que el modelo de embedding es el único que usa la GPU. Si ya está cargado un modelo de chat (Llama 3.3 8B Q4_K_M ocupa ~5 GB), el embedder compite por VRAM y el rendimiento cae entre un 30 y un 50% por la contención. En una tarjeta de 12 GB, puedes indexar o chatear, pero no ambas cosas a plena velocidad simultáneamente.',
+            text: 'Estos números asumen que el modelo de embedding es el único que usa la GPU. Si ya está cargado un modelo de chat (Llama 3.1 8B Q4_K_M ocupa ~5 GB), el embedder compite por VRAM y el rendimiento cae entre un 30 y un 50% por la contención. En una tarjeta de 12 GB, puedes indexar o chatear, pero no ambas cosas a plena velocidad simultáneamente.',
           },
         ],
       },
@@ -888,6 +889,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       codeEmbeddings: {
+        itemHeadings: true,
         id: 'code-embeddings',
         title: 'Mejor modelo de embedding para búsqueda de código y RAG',
         content:
@@ -1276,7 +1278,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Vector store:** Qdrant 1.x em modo local, similaridade de cosseno, top-K=10. Configuração idêntica para os seis modelos. A reindexação foi realizada de forma limpa entre execuções.',
           '**Conjunto de consultas:** 100 consultas — 25 por tipo de documento — escritas por leitores do domínio e avaliadas às cegas contra um conjunto de respostas conhecidas. retrieval@10 = % de consultas onde o chunk de referência aparece nos 10 primeiros resultados.',
           '**Medição de velocidade:** chunks/seg com tamanho de lote 32 sobre um aquecimento de 1.000 chunks mais 10.000 chunks medidos. A memória foi medida no tamanho máximo do conjunto residente durante o embedding.',
-          '**O que *não* testamos:** qualidade de resposta de ponta a ponta. O modelo de chat é idêntico (Llama 3.3 8B Q4_K_M) em todas as execuções, mas a qualidade de resposta depende do template de prompt e da contagem de chunks. Isolamos a recuperação aqui para que o embedder seja a única variável.',
+          '**O que *não* testamos:** qualidade de resposta de ponta a ponta. O modelo de chat é idêntico (Llama 3.1 8B Q4_K_M) em todas as execuções, mas a qualidade de resposta depende do template de prompt e da contagem de chunks. Isolamos a recuperação aqui para que o embedder seja a única variável.',
         ],
         callouts: [
           {
@@ -1348,7 +1350,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'Esses números assumem que o modelo de embedding é o único a usar a GPU. Se já estiver carregado um modelo de chat (Llama 3.3 8B Q4_K_M ocupa ~5 GB), o embedder compete por VRAM e o desempenho cai entre 30 e 50% pela contenção. Em uma placa de 12 GB, você pode indexar ou conversar, mas não as duas coisas a plena velocidade simultaneamente.',
+            text: 'Esses números assumem que o modelo de embedding é o único a usar a GPU. Se já estiver carregado um modelo de chat (Llama 3.1 8B Q4_K_M ocupa ~5 GB), o embedder compete por VRAM e o desempenho cai entre 30 e 50% pela contenção. Em uma placa de 12 GB, você pode indexar ou conversar, mas não as duas coisas a plena velocidade simultaneamente.',
           },
         ],
       },
@@ -1420,6 +1422,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       codeEmbeddings: {
+        itemHeadings: true,
         id: 'code-embeddings',
         title: 'Melhor modelo de embedding para busca de código e RAG',
         content:
@@ -1806,7 +1809,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Vektorspeicher:** Qdrant 1.x im lokalen Modus, Cosine-Ähnlichkeit, top-K=10. Identische Konfiguration für alle sechs Modelle. Neuindexierung wurde zwischen Läufen sauber durchgeführt.',
           '**Abfragesatz:** 100 Abfragen — 25 pro Dokumenttyp — geschrieben von Domain-Lesern und blind gegen einen bekannten Antwortschlüssel bewertet. retrieval@10 = % der Abfragen, bei denen der Gold-Standard-Chunk in den Top-10-Ergebnissen erscheint.',
           '**Geschwindigkeitsmessung:** Chunks/Sekunde bei Batch-Größe 32 über eine Aufwärmung von 1.000 Chunks plus 10.000 gemessene Chunks. Der Speicher wurde bei der Peak-Resident-Set-Größe während der Einbettung gemessen.',
-          '**Was wir *nicht* getestet haben:** End-to-End-Antwortqualität. Das Chat-Modell ist identisch (Llama 3.3 8B Q4_K_M) über alle Läufe, aber die Antwortqualität hängt von der Prompt-Vorlage und der Chunk-Anzahl ab. Wir isolieren den Abruf hier, damit der Embedder die einzige Variable ist.',
+          '**Was wir *nicht* getestet haben:** End-to-End-Antwortqualität. Das Chat-Modell ist identisch (Llama 3.1 8B Q4_K_M) über alle Läufe, aber die Antwortqualität hängt von der Prompt-Vorlage und der Chunk-Anzahl ab. Wir isolieren den Abruf hier, damit der Embedder die einzige Variable ist.',
         ],
         callouts: [
           {
@@ -1874,7 +1877,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'Diese Zahlen gehen davon aus, dass das Embedding-Modell die GPU besitzt. Wenn ein Chat-Modell (Llama 3.3 8B Q4_K_M nimmt etwa 5 GB in Anspruch) bereits geladen ist, konkurriert der Embedder um VRAM und der Durchsatz sinkt um 30–50% durch Contention. Auf einer 12-GB-Karte können Sie entweder indizieren oder chatten — nicht beides gleichzeitig mit voller Geschwindigkeit.',
+            text: 'Diese Zahlen gehen davon aus, dass das Embedding-Modell die GPU besitzt. Wenn ein Chat-Modell (Llama 3.1 8B Q4_K_M nimmt etwa 5 GB in Anspruch) bereits geladen ist, konkurriert der Embedder um VRAM und der Durchsatz sinkt um 30–50% durch Contention. Auf einer 12-GB-Karte können Sie entweder indizieren oder chatten — nicht beides gleichzeitig mit voller Geschwindigkeit.',
           },
         ],
       },
@@ -1944,6 +1947,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
       },
       codeEmbeddings: {
+        itemHeadings: true,
         id: 'code-embeddings',
         title: 'Bestes Embedding-Modell für Code-Suche und RAG',
         content:
@@ -2306,7 +2310,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "**Vecteur store :** Qdrant 1.x local, cosine similarity, top-K=10. Configuration identique tous modèles.",
           "**Requêtes :** 100 — 25 par type — écrites experts, notées contre clé réponse. retrieval@10 = % requêtes où chunk gold dans top-10.",
           "**Vitesse :** chunks/sec batch 32, chauffage 1 000 chunks + 10 000 chunks mesurés. Mémoire : peak RSS durant embedding.",
-          "**Non testé :** qualité réponse end-to-end. Modèle chat identique (Llama 3.3 8B Q4_K_M) tous tests, mais qualité dépend template et chunk count.",
+          "**Non testé :** qualité réponse end-to-end. Modèle chat identique (Llama 3.1 8B Q4_K_M) tous tests, mais qualité dépend template et chunk count.",
         ],
         callouts: [
           {
@@ -2371,7 +2375,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: "Chiffres supposent embedder propriétaire GPU. Modèle chat (Llama 3.3 8B Q4_K_M ~5 GB) déjà chargé : embedder en contention, débit baisse 30–50%. Carte 12 GB : indexer OU chatter — pas les deux pleine vitesse.",
+            text: "Chiffres supposent embedder propriétaire GPU. Modèle chat (Llama 3.1 8B Q4_K_M ~5 GB) déjà chargé : embedder en contention, débit baisse 30–50%. Carte 12 GB : indexer OU chatter — pas les deux pleine vitesse.",
           },
         ],
       },
@@ -2807,7 +2811,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**ベクトルストア：** ローカルモードのQdrant 1.x、コサイン類似度、top-K=10。すべての6つのモデルで同じ構成。再インデックス化はランの間でクリーンに実行されました。',
           '**クエリセット：** 100クエリ—ドキュメントタイプあたり25—ドメイン読者によって作成され、既知の回答キーに対して目隠しで採点。retrieval@10 =上位10の結果に金標準チャンクが表示されるクエリのパーセンテージ。',
           '**速度測定：** 1,000チャンクのウォームアップと10,000の測定チャンク上のバッチサイズ32でのチャンク/秒。埋め込みの最中にピークの常駐セットサイズで測定されたメモリ。',
-          '**テストしなかったもの：** エンドツーエンドの回答品質。チャットモデルはすべてのランで同じです（Llama 3.3 8B Q4_K_M）ですが、回答品質はプロンプトテンプレートとチャンク数に依存します。エンベッダーが唯一の変数となるように、ここで取得を分離します。',
+          '**テストしなかったもの：** エンドツーエンドの回答品質。チャットモデルはすべてのランで同じです（Llama 3.1 8B Q4_K_M）ですが、回答品質はプロンプトテンプレートとチャンク数に依存します。エンベッダーが唯一の変数となるように、ここで取得を分離します。',
         ],
         callouts: [
           {
@@ -2875,7 +2879,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: 'これらの番号は、埋め込みモデルがGPUを所有することを前提としています。チャットモデル（Llama 3.3 8B Q4_K_M約5GB占有）が既に読み込まれている場合、エンベッダーはVRAMと競合し、スループットは競合による30〜50%低下します。12GBカードでは、インデックス化またはチャット—同時にその両方をできません。',
+            text: 'これらの番号は、埋め込みモデルがGPUを所有することを前提としています。チャットモデル（Llama 3.1 8B Q4_K_M約5GB占有）が既に読み込まれている場合、エンベッダーはVRAMと競合し、スループットは競合による30〜50%低下します。12GBカードでは、インデックス化またはチャット—同時にその両方をできません。',
           },
         ],
       },
@@ -3316,7 +3320,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           "**向量存储：** 本地模式下的Qdrant 1.x、余弦相似度、top-K=10。所有六个模型的配置相同。在运行之间进行了干净的重新索引。",
           "**查询集：** 100个查询——每种文档类型25个——由领域读者编写并对照已知答案关键字盲目评分。retrieval@10 =正确块出现在前10个结果中的查询百分比。",
           "**速度测试：** 在1,000个块的预热加10,000个测试块上，批大小32时的块/秒。在嵌入期间峰值驻留集大小处测量的内存。",
-          "**我们*没有*测试的内容：** 端到端答案质量。聊天模型在所有运行中相同（Llama 3.3 8B Q4_K_M），但答案质量取决于提示模板和块数。我们在这里隔离检索，使嵌入器是唯一的变量。",
+          "**我们*没有*测试的内容：** 端到端答案质量。聊天模型在所有运行中相同（Llama 3.1 8B Q4_K_M），但答案质量取决于提示模板和块数。我们在这里隔离检索，使嵌入器是唯一的变量。",
         ],
         callouts: [
           {
@@ -3384,7 +3388,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: "note",
-            text: "这些数字假设嵌入模型拥有GPU。如果聊天模型（Llama 3.3 8B Q4_K_M占约5 GB）已经加载，嵌入器与VRAM竞争，吞吐量从竞争降低30–50%。在12 GB卡上，您可以索引或聊天——不能同时两者以全速进行。",
+            text: "这些数字假设嵌入模型拥有GPU。如果聊天模型（Llama 3.1 8B Q4_K_M占约5 GB）已经加载，嵌入器与VRAM竞争，吞吐量从竞争降低30–50%。在12 GB卡上，您可以索引或聊天——不能同时两者以全速进行。",
           },
         ],
       },
@@ -4334,7 +4338,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**벡터 스토어:** 로컬 모드의 Qdrant 1.x, 코사인 유사도, top-K=10. 6개 모델 모두 동일한 구성. 실행 간에 깨끗하게 재인덱싱하였습니다.',
           '**쿼리 세트:** 100개 쿼리 — 문서 유형당 25개 — 도메인 독자가 작성하고 정답 세트를 기준으로 블라인드 평가하였습니다. retrieval@10 = 참조 청크가 상위 10개 결과에 나타난 쿼리의 비율.',
           '**속도 측정:** 배치 크기 32, 1,000 청크 워밍업 후 10,000 청크 측정에서 chunks/초. 메모리는 임베딩 중 최대 상주 세트 크기로 측정하였습니다.',
-          '**테스트하지 않은 항목:** 종단간 응답 품질. 채팅 모델은 모든 실행에서 동일합니다(Llama 3.3 8B Q4_K_M). 여기서는 임베더가 유일한 변수가 되도록 검색을 격리하였습니다.',
+          '**테스트하지 않은 항목:** 종단간 응답 품질. 채팅 모델은 모든 실행에서 동일합니다(Llama 3.1 8B Q4_K_M). 여기서는 임베더가 유일한 변수가 되도록 검색을 격리하였습니다.',
         ],
         callouts: [
           {
@@ -4406,7 +4410,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'note',
-            text: '이 수치는 임베딩 모델이 GPU를 단독으로 사용한다고 가정합니다. 채팅 모델이 이미 로드되어 있다면(Llama 3.3 8B Q4_K_M은 약 5 GB 점유), 임베더가 VRAM을 두고 경쟁하며 경합으로 인해 성능이 30–50% 하락합니다. 12 GB 카드에서는 인덱싱이나 채팅 중 하나만 전속력으로 할 수 있으며, 동시에 둘 다는 불가능합니다.',
+            text: '이 수치는 임베딩 모델이 GPU를 단독으로 사용한다고 가정합니다. 채팅 모델이 이미 로드되어 있다면(Llama 3.1 8B Q4_K_M은 약 5 GB 점유), 임베더가 VRAM을 두고 경쟁하며 경합으로 인해 성능이 30–50% 하락합니다. 12 GB 카드에서는 인덱싱이나 채팅 중 하나만 전속력으로 할 수 있으며, 동시에 둘 다는 불가능합니다.',
           },
         ],
       },
