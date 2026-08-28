@@ -19,7 +19,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       publishDate: '2026-04-04',
       leadAnswerBlock: '**LM Studio (localhost:1234), Ollama (localhost:11434), and vLLM (localhost:8000) all expose REST APIs in the OpenAI format -- this is the documentation for every endpoint, request format, and code example. Use the official OpenAI Python or Node.js SDK with any local model by changing two lines: set base_url to your local endpoint and api_key to any string.**',
       audience: 'Beginners running their first local LLM on consumer hardware',
-      dateModified: '2026-07-14',
+      dateModified: '2026-08-28',
       readTime: '11 min read',
       educationalLevel: 'Beginner to Advanced',
       primaryTerm: 'OpenAI-compatible API',
@@ -155,7 +155,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'Can Your Local Model Call Functions?',
           content: [
             '**Yes, as of May 2026, function calling works with local models via the OpenAI API.** You define a function schema, and the model can respond with arguments to pass to your function. This enables [Best Local LLMs for Coding](/local-llms/best-local-llms-for-coding) to integrate with your tool ecosystem.',
-            'Function calling support depends on the model. Llama 4 Scout, Qwen3 8B, Gemma 4 9B, and Mistral Small 3.1 all support tool calling reliably. Llama 3.1 8B and Qwen3 7B also support it (legacy). Smaller models (3B) may not reliably produce structured tool call JSON.',
+            'Function calling support depends on the model. Llama 4 Scout, Qwen3 8B, Gemma 4 26B-A4B, and Mistral Small 3.1 all support tool calling reliably. Llama 3.1 8B also supports it (legacy). Smaller models (3B) may not reliably produce structured tool call JSON.',
             'In 2026, the Model Context Protocol (MCP) extends function calling into a standardized tool connection layer. MCP lets any client (Claude Code, Cursor, custom apps) connect to any tool server via a single protocol — going beyond the per-request tool definitions shown above. Ollama supports MCP-style tool calling through the standard OpenAI-compatible function calling API. For production tool integrations, MCP is becoming the standard; the function calling examples here remain the foundation.',
             'When using OpenAI-compatible APIs locally, structured output and JSON mode work the same way as with cloud APIs. For enforcing schema compliance and format control across local and cloud models, see [structured output and JSON mode](https://www.promptquorum.com/prompt-engineering/structured-output-and-json-mode).',
             'OpenAI-compatible APIs accept the same prompt formats as the cloud versions — system messages, user messages, and structured output. The full library of [prompt engineering techniques](https://www.promptquorum.com/prompt-engineering) applies directly to local API calls.',
@@ -163,7 +163,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           codeBlock: '# Example: local model calls a weather function\ntools = [{\n  "type": "function",\n  "function": {\n    "name": "get_weather",\n    "description": "Get current weather",\n    "parameters": {\n      "type": "object",\n      "properties": {\n        "location": {"type": "string"}\n      }\n    }\n  }\n}]\n\nresponse = client.chat.completions.create(\n  model="llama4:scout",\n  messages=[{"role": "user", "content": "What is the weather in SF?"}],\n  tools=tools\n)\n\n# Check if model returned a function call\nif response.choices[0].message.tool_calls:\n  call = response.choices[0].message.tool_calls[0]\n  print(f"Call function: {call.function.name} with {call.function.arguments}")',
           codeLanguage: 'python',
           image: '/images/openai-compatible-function-calling-en.svg',
-          imageCaption: 'Function calling flow with Ollama: the local model returns tool_call JSON, and your app executes the function -- supported by Llama 4 Scout, Qwen3 8B, Gemma 4 9B, and Mistral.',
+          imageCaption: 'Function calling flow with Ollama: the local model returns tool_call JSON, and your app executes the function -- supported by Llama 4 Scout, Qwen3 8B, Gemma 4 26B-A4B, and Mistral.',
         },
         aiCodingTools: {
           id: 'ai-coding-tools',
@@ -237,7 +237,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'Does Ollama support function calling / tool use via the API?',
-              a: 'Yes, for models that support it (Llama 4 Scout, Qwen3 8B, Gemma 4 9B, Mistral Small 3.1). Legacy models (Llama 3.1 8B, Qwen3 7B) also supported. Pass tools=[] in the API call as you would with OpenAI. Ollama parses tool calls and returns structured JSON. Not all models support this -- check model documentation.',
+              a: 'Yes, for models that support it (Llama 4 Scout, Qwen3 8B, Gemma 4 26B-A4B, Mistral Small 3.1). Legacy models (Llama 3.1 8B) also supported. Pass tools=[] in the API call as you would with OpenAI. Ollama parses tool calls and returns structured JSON. Not all models support this -- check model documentation.',
             },
             {
               q: 'What is MCP and how does it relate to the OpenAI-compatible API?',
@@ -308,7 +308,7 @@ schema: {
         'description': 'LM Studio (localhost:1234) & Ollama (localhost:11434) OpenAI-compatible API docs: Python, Node.js, streaming, plus Aider, Cline & Roo Code setup.',
         'url': 'https://www.promptquorum.com/local-llms/local-llm-openai-compatible-api',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-07-14',
+        'dateModified': '2026-08-28',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'audience': { '@type': 'Audience', 'audienceType': 'Developers integrating local LLMs into Python, Node.js, or JavaScript applications' },
@@ -386,7 +386,7 @@ schema: {
             'name': 'Does Ollama support function calling / tool use via the API?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Yes, for models that support it (Llama 3.1 8B, Qwen3 7B, Mistral). Pass tools=[] in the API call as you would with OpenAI. Ollama parses tool calls and returns structured JSON. Not all models support this -- check model documentation.'
+              'text': 'Yes, for models that support it (Llama 3.1 8B, Qwen3 8B, Mistral). Pass tools=[] in the API call as you would with OpenAI. Ollama parses tool calls and returns structured JSON. Not all models support this -- check model documentation.'
             }
           },
           {
@@ -517,7 +517,7 @@ schema: {
       publishDate: '2026-04-04',
       leadAnswerBlock: '**LM Studio (localhost:1234), Ollama (localhost:11434) und vLLM (localhost:8000) stellen REST-APIs in OpenAI-Format bereit -- dies ist die Dokumentation für jeden Endpoint, jedes Request-Format und jedes Code-Beispiel. Nutzen Sie die offizielle OpenAI Python oder Node.js SDK mit beliebigem lokalem Modell, indem Sie nur zwei Zeilen ändern: base_url auf localhost setzen und api_key auf beliebige Zeichenfolge.**',
       audience: 'Anfänger, die ihr erstes lokales LLM auf Consumer-Hardware laufen lassen',
-      dateModified: '2026-07-14',
+      dateModified: '2026-08-28',
       readTime: '11 Min. Lesezeit',
       educationalLevel: 'Beginner to Advanced',
       primaryTerm: 'OpenAI-compatible API',
@@ -653,7 +653,7 @@ schema: {
           title: 'Kann mein lokales Modell Funktionen aufrufen?',
           content: [
             '**Ja, seit May 2026 funktioniert Function Calling mit lokalen Modellen via OpenAI API.** Sie definieren Funktions-Schema und Modell kann mit Argumenten zum Aufrufen antworten. Dies ermöglicht [beste lokale LLMs zum Codieren](/local-llms/best-local-llms-for-coding) sich in Ihr Tool-Ökosystem zu integrieren.',
-            'Function Calling Support hängt vom Modell ab. Llama 4 Scout, Qwen3 8B, Gemma 4 9B, und Mistral Small 3.1 unterstützen Tool Calling zuverlässig. Llama 3.1 8B und Qwen3 7B unterstützen es auch (legacy). Kleinere Modelle (3B) erzeugen möglicherweise nicht zuverlässig strukturiertes Tool Call JSON.',
+            'Function Calling Support hängt vom Modell ab. Llama 4 Scout, Qwen3 8B, Gemma 4 26B-A4B, und Mistral Small 3.1 unterstützen Tool Calling zuverlässig. Llama 3.1 8B und Qwen3 8B unterstützen es auch (legacy). Kleinere Modelle (3B) erzeugen möglicherweise nicht zuverlässig strukturiertes Tool Call JSON.',
             'In 2026 erweitert Model Context Protocol (MCP) Function Calling zu standardisiertem Tool Connection Layer. MCP ermöglicht jedem Client (Claude Code, Cursor, custom Apps) sich über einheitliches Protokoll mit jedem Tool Server zu verbinden — über diese pro-Request Tool Definitionen hinaus. Ollama unterstützt MCP-style Tool Calling durch standard OpenAI-kompatibles Function Calling API. Für Produktion Tool Integrationen wird MCP Standard; die Function Calling Beispiele hier bleiben Grundlage.',
             'Wenn Sie OpenAI-kompatible APIs lokal nutzen, funktionieren structured Output und JSON Mode gleich wie bei Cloud APIs. Für Schema Compliance und Format Kontrolle über lokale und Cloud Modelle, siehe [strukturierte Output und JSON Mode](https://www.promptquorum.com/prompt-engineering/structured-output-and-json-mode).',
             'OpenAI-kompatible APIs akzeptieren gleiche Prompt Formate wie Cloud Versionen — System Messages, User Messages, und Structured Output. Ganze Bibliothek von [Prompt Engineering Techniken](https://www.promptquorum.com/prompt-engineering) wendet sich direkt auf lokale API Aufrufe an.',
@@ -661,7 +661,7 @@ schema: {
           codeBlock: '# Beispiel: lokales Modell ruft Wetter-Funktion auf\ntools = [{\n  "type": "function",\n  "function": {\n    "name": "get_weather",\n    "description": "Get current weather",\n    "parameters": {\n      "type": "object",\n      "properties": {\n        "location": {"type": "string"}\n      }\n    }\n  }\n}]\n\nresponse = client.chat.completions.create(\n  model="llama4:scout",\n  messages=[{"role": "user", "content": "What is the weather in SF?"}],\n  tools=tools\n)\n\n# Prüfen, ob Modell Function Call zurückgab\nif response.choices[0].message.tool_calls:\n  call = response.choices[0].message.tool_calls[0]\n  print(f"Call function: {call.function.name} with {call.function.arguments}")',
           codeLanguage: 'python',
           image: '/images/openai-compatible-function-calling-en.svg',
-          imageCaption: 'Function Calling Flow mit Ollama: lokales Modell gibt tool_call JSON zurück, und Ihre App führt Funktion aus -- unterstützt von Llama 4 Scout, Qwen3 8B, Gemma 4 9B, und Mistral.',
+          imageCaption: 'Function Calling Flow mit Ollama: lokales Modell gibt tool_call JSON zurück, und Ihre App führt Funktion aus -- unterstützt von Llama 4 Scout, Qwen3 8B, Gemma 4 26B-A4B, und Mistral.',
         },
         aiCodingTools: {
           id: 'ai-coding-tools',
@@ -735,7 +735,7 @@ schema: {
             },
             {
               q: 'Unterstützt Ollama Function Calling / Tool Use via API?',
-              a: 'Ja, für Modelle die es unterstützen (Llama 4 Scout, Qwen3 8B, Gemma 4 9B, Mistral Small 3.1). Legacy Modelle (Llama 3.1 8B, Qwen3 7B) auch unterstützt. Übergeben Sie tools=[] im API Aufruf wie Sie es mit OpenAI täten. Ollama parst Tool Calls und gibt strukturiertes JSON zurück. Nicht alle Modelle unterstützen das -- schau Modell Dokumentation.',
+              a: 'Ja, für Modelle die es unterstützen (Llama 4 Scout, Qwen3 8B, Gemma 4 26B-A4B, Mistral Small 3.1). Legacy Modelle (Llama 3.1 8B) auch unterstützt. Übergeben Sie tools=[] im API Aufruf wie Sie es mit OpenAI täten. Ollama parst Tool Calls und gibt strukturiertes JSON zurück. Nicht alle Modelle unterstützen das -- schau Modell Dokumentation.',
             },
             {
               q: 'Was ist MCP und wie bezieht sich das auf OpenAI-kompatible API?',
@@ -806,7 +806,7 @@ schema: {
         'description': 'LM Studio (localhost:1234) & Ollama (localhost:11434) OpenAI-kompatible API-Dokumentation: Python, Node.js, Streaming, plus Aider, Cline & Roo Code Setup.',
         'url': 'https://www.promptquorum.com/de/local-llms/local-llm-openai-compatible-api',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-07-14',
+        'dateModified': '2026-08-28',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'audience': { '@type': 'Audience', 'audienceType': 'Entwickler, die lokale LLMs in Python, Node.js, oder JavaScript Anwendungen integrieren' },
@@ -879,7 +879,7 @@ schema: {
       metaDescription: 'LM Studio (localhost:1234) et Ollama (localhost:11434) : API compatible OpenAI. Python, Node.js, streaming, plus configuration Aider, Cline et Roo Code.',
       heroImage: '/images/local-llm-openai-compatible-api-one-line-change-hero-fr.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-07-14',
+      dateModified: '2026-08-28',
       readTime: '11 min de lecture',
       educationalLevel: 'Beginner to Advanced',
       primaryTerm: 'API compatible OpenAI',
@@ -995,7 +995,7 @@ schema: {
           title: 'Votre modèle local peut-il appeler des fonctions ?',
           content: [
             '**Oui, depuis avril 2026, les appels de fonctions fonctionnent avec les modèles locaux via l\'API OpenAI.** Vous définissez un schéma de fonction et le modèle peut répondre avec des arguments. Cela permet aux [Meilleurs LLM locaux pour le code](/fr/local-llms/best-local-llms-for-coding) de s\'intégrer à votre écosystème d\'outils.',
-            'La prise en charge des appels de fonctions dépend du modèle. Llama 3.1 8B, Qwen3 7B et la plupart des modèles récents la supportent. Les modèles plus petits (3B) peuvent ne pas l\'utiliser de manière fiable.',
+            'La prise en charge des appels de fonctions dépend du modèle. Llama 3.1 8B, Qwen3 8B et la plupart des modèles récents la supportent. Les modèles plus petits (3B) peuvent ne pas l\'utiliser de manière fiable.',
             'Lors de l\'utilisation d\'API compatibles OpenAI localement, les sorties structurées et le mode JSON fonctionnent de la même manière qu\'avec les API cloud. Pour contrôler la conformité des schémas et le format sur les modèles locaux et cloud, consultez [sorties structurées et mode JSON](https://www.promptquorum.com/fr/prompt-engineering/structured-output-and-json-mode).',
             'Les APIs compatibles avec OpenAI acceptent les mêmes formats de prompt que les versions cloud — messages système, messages utilisateur et sortie structurée. La bibliothèque complète des [techniques de prompt engineering](https://www.promptquorum.com/prompt-engineering) s\'applique directement aux appels d\'API locaux.',
           ],
@@ -1025,7 +1025,7 @@ schema: {
           title: 'API LLM locaux par région',
           content: [
             '**UE / RGPD :** Pour les développeurs européens, exécuter Ollama en local garantit la conformité à l\'article 5 du RGPD (minimisation des données) -- toute inférence reste sur l\'appareil sans transfert de données vers des API cloud. La CNIL recommande l\'inférence locale pour les applications professionnelles traitant des données sensibles (financières, médicales, juridiques), ce qui fait d\'Ollama et LM Studio des choix privilégiés pour les entreprises soumises au droit français. Pour les entreprises, cela élimine la dépendance fournisseur -- les données d\'entrée ne quittent pas votre propre réseau (aucun risque de transfert transfrontalier art. 44 RGPD pour les données d\'inférence).',
-            '**Japon / APPI :** En vertu de la loi japonaise sur la protection des informations personnelles (APPI), l\'inférence sur site contourne les exigences de transfert de données cloud. Ollama + Qwen3 7B fonctionne sur des ordinateurs portables d\'entreprise standard (8 Go de RAM) avec une latence de 30 à 50 tok/sec.',
+            '**Japon / APPI :** En vertu de la loi japonaise sur la protection des informations personnelles (APPI), l\'inférence sur site contourne les exigences de transfert de données cloud. Ollama + Qwen3 8B fonctionne sur des ordinateurs portables d\'entreprise standard (8 Go de RAM) avec une latence de 30 à 50 tok/sec.',
             '**Chine / CAC :** Pour un déploiement sous la loi sur la cybersécurité (article 37 du CAC), l\'inférence locale satisfait les mandats de localisation des données. Ollama + Qwen3 fonctionne sur n\'importe quel appareil Linux sans appels API externes.',
           ],
         },
@@ -1075,7 +1075,7 @@ schema: {
             },
             {
               q: 'Ollama prend-il en charge les appels de fonctions via l\'API ?',
-              a: 'Oui, pour les modèles qui le supportent (Llama 3.1 8B, Qwen3 7B, Mistral). Passez tools=[] dans l\'appel API comme vous le feriez avec OpenAI. Ollama analyse les appels d\'outils et retourne du JSON structuré.',
+              a: 'Oui, pour les modèles qui le supportent (Llama 3.1 8B, Qwen3 8B, Mistral). Passez tools=[] dans l\'appel API comme vous le feriez avec OpenAI. Ollama analyse les appels d\'outils et retourne du JSON structuré.',
             },
             {
               q: 'Quelle est la différence entre Ollama /api/generate et /v1/chat/completions ?',
@@ -1139,7 +1139,7 @@ schema: {
         'description': 'LM Studio (localhost:1234) et Ollama (localhost:11434) : API compatible OpenAI. Python, Node.js, streaming, plus configuration Aider, Cline et Roo Code.',
         'url': 'https://www.promptquorum.com/fr/local-llms/local-llm-openai-compatible-api',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-07-14',
+        'dateModified': '2026-08-28',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -1163,7 +1163,7 @@ schema: {
           { '@type': 'Question', 'name': 'LM Studio dispose-t-il d\'une API compatible OpenAI ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui, sur http://localhost:1234/v1. Activez sous l\'onglet Local Server. Même code qu\'Ollama, seul le port change.' } },
           { '@type': 'Question', 'name': 'L\'API est-elle authentifiée ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Non. Par défaut, aucune authentification. Pour la production exposée sur le réseau, ajoutez une authentification via un reverse proxy.' } },
           { '@type': 'Question', 'name': 'Comment utiliser le streaming avec l\'API Ollama ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Définissez stream=True dans votre appel. Ollama retourne des server-sent events (SSE) avec chaque token.' } },
-          { '@type': 'Question', 'name': 'Ollama supporte-t-il les appels de fonctions ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui, pour Llama 3.1 8B, Qwen3 7B, Mistral. Passez tools=[] comme avec OpenAI.' } },
+          { '@type': 'Question', 'name': 'Ollama supporte-t-il les appels de fonctions ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui, pour Llama 3.1 8B, Qwen3 8B, Mistral. Passez tools=[] comme avec OpenAI.' } },
           { '@type': 'Question', 'name': 'Quelle différence entre /api/generate et /v1/chat/completions ?', 'acceptedAnswer': { '@type': 'Answer', 'text': '/api/generate est natif Ollama (un tour). /v1/chat/completions est compatible OpenAI (multi-tours). Utilisez /v1/chat/completions pour les nouveaux projets.' } },
           { '@type': 'Question', 'name': 'Puis-je utiliser vLLM comme API compatible OpenAI ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. vLLM expose une API sur http://localhost:8000/v1. Même code client qu\'Ollama.' } },
           { '@type': 'Question', 'name': 'Comment utiliser l\'API Ollama avec Node.js ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Définissez baseURL: "http://localhost:11434/v1" et apiKey: "ollama" dans le constructeur OpenAI. Appelez client.chat.completions.create() normalement.' } },
@@ -1208,7 +1208,7 @@ schema: {
       metaDescription: 'LM Studio（localhost:1234）とOllama（localhost:11434）のOpenAI互換APIドキュメント。Python・Node.js・ストリーミングに加え、Aider・Cline・Roo Codeの設定方法も解説。',
       heroImage: '/images/local-llm-openai-compatible-api-one-line-change-hero-ja.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-07-14',
+      dateModified: '2026-08-28',
       readTime: '11分で読める',
       educationalLevel: 'Beginner to Advanced',
       primaryTerm: 'OpenAI互換API',
@@ -1324,14 +1324,14 @@ schema: {
           title: 'ローカルモデルはFunction Callingに対応していますか？',
           content: [
             '**はい、2026年4月現在、Function CallingがOpenAI APIを通じてローカルモデルで動作します。** 関数スキーマを定義すると、モデルはその関数に渡す引数でレスポンスを返せます。これにより[コーディング向けベストローカルLLM](/ja/local-llms/best-local-llms-for-coding)をツールエコシステムと統合できます。',
-            'Function Callingのサポートはモデルによります。Llama 3.1 8B、Qwen3 7B、最新の多くのモデルがサポートしています。小さいモデル（3B）は信頼性が低い場合があります。',
+            'Function Callingのサポートはモデルによります。Llama 3.1 8B、Qwen3 8B、最新の多くのモデルがサポートしています。小さいモデル（3B）は信頼性が低い場合があります。',
             'ローカルでOpenAI互換APIを使用する場合、構造化出力とJSONモードはクラウドAPIと同じように機能します。ローカルおよびクラウドモデル全体のスキーマ準拠とフォーマット制御については、[構造化出力とJSONモード](https://www.promptquorum.com/ja/prompt-engineering/structured-output-and-json-mode)をご覧ください。',
             'OpenAI互換APIはクラウド版と同じプロンプト形式を受け入れます — システムメッセージ、ユーザーメッセージ、構造化出力。[プロンプトエンジニアリング技法](https://www.promptquorum.com/prompt-engineering)の完全なライブラリがローカルAPI呼び出しに直接適用されます。',
           ],
           codeBlock: '# Example: local model calls a weather function\ntools = [{\n  "type": "function",\n  "function": {\n    "name": "get_weather",\n    "description": "Get current weather",\n    "parameters": {\n      "type": "object",\n      "properties": {\n        "location": {"type": "string"}\n      }\n    }\n  }\n}]\n\nresponse = client.chat.completions.create(\n  model="llama3.2:8b",\n  messages=[{"role": "user", "content": "What is the weather in SF?"}],\n  tools=tools\n)\n\n# Check if model returned a function call\nif response.choices[0].message.tool_calls:\n  call = response.choices[0].message.tool_calls[0]\n  print(f"Call function: {call.function.name} with {call.function.arguments}")',
           codeLanguage: 'python',
           image: '/images/openai-compatible-function-calling-en.svg',
-          imageCaption: 'OllamaでのFunction Callingフロー：ローカルモデルがtool_call JSONを返し、アプリが関数を実行 -- Llama 3.1 8B・Qwen3 7B・Mistralで対応。',
+          imageCaption: 'OllamaでのFunction Callingフロー：ローカルモデルがtool_call JSONを返し、アプリが関数を実行 -- Llama 3.1 8B・Qwen3 8B・Mistralで対応。',
         },
         aiCodingTools: {
           id: 'ai-coding-tools',
@@ -1353,7 +1353,7 @@ schema: {
           id: 'regional-context',
           title: 'ローカルLLM OpenAI APIの地域別状況',
           content: [
-            '**日本（METI・APPI）：** 経済産業省（METI）は国産AIソブリンティを推進しています。個人情報保護法（APPI）に基づき、オンプレミスモデル推論はクラウドデータ転送要件を回避します。OllamaとLM StudioはMETI AI Governance 2024フレームワークに準拠した企業展開に適しています。Ollama + Qwen3 7Bは標準的な企業ノートPC（8GB RAM）で30〜50 tok/secで動作し、日本語処理のリアルタイム要件を満たします。',
+            '**日本（METI・APPI）：** 経済産業省（METI）は国産AIソブリンティを推進しています。個人情報保護法（APPI）に基づき、オンプレミスモデル推論はクラウドデータ転送要件を回避します。OllamaとLM StudioはMETI AI Governance 2024フレームワークに準拠した企業展開に適しています。Ollama + Qwen3 8Bは標準的な企業ノートPC（8GB RAM）で30〜50 tok/secで動作し、日本語処理のリアルタイム要件を満たします。',
             '**アジア太平洋地域（データ主権）：** 韓国・台湾・東南アジア各国はデータ居住フレームワークを強化しています。ローカル推論はこれらの規制要件を満たし、Q4_K_M量子化により国内サーバー上でのコスト効率の高い展開が可能です。',
             '**グローバル（コスト最適化）：** クラウドコストとベンダー依存なしで本番アプリを運用したい開発者にとって、OllamaのOpenAI互換APIは直接的な代替手段です。既存のOpenAIコードベースを2行の変更でローカル推論に移行できます。',
           ],
@@ -1384,7 +1384,7 @@ schema: {
             { q: '複数のモデルを同時に呼び出せますか？', a: 'Ollamaに読み込まれていれば可能です。ただし2つのモデルを同時に実行するとVRAM使用量が約2倍になります。' },
             { q: 'APIは認証されていますか？', a: 'デフォルトでは認証なし。localhost:11434にアクセスできれば誰でも使用できます。ネットワーク公開する本番環境では、リバースプロキシで認証を追加してください。' },
             { q: 'OllamaのOpenAI APIでストリーミングを使う方法は？', a: 'OpenAIライブラリの呼び出しでstream=Trueを設定します。Ollamaは各tokenのSSEを返します。Python: for chunk in client.chat.completions.create(stream=True, ...): print(chunk.choices[0].delta.content)。' },
-            { q: 'OllamaはAPIを通じたFunction Callingに対応していますか？', a: 'はい、対応モデル（Llama 3.1 8B・Qwen3 7B・Mistral）で動作します。OpenAIと同様にtools=[]を渡すだけです。' },
+            { q: 'OllamaはAPIを通じたFunction Callingに対応していますか？', a: 'はい、対応モデル（Llama 3.1 8B・Qwen3 8B・Mistral）で動作します。OpenAIと同様にtools=[]を渡すだけです。' },
             { q: 'Ollamaの/api/generateと/v1/chat/completionsの違いは？', a: '/api/generateはOllama独自の1ターンエンドポイント。/v1/chat/completionsはOpenAI互換のマルチターンエンドポイント。新しいプロジェクトでは/v1/chat/completionsを使用してください。' },
             { q: 'vLLMをOpenAI互換APIとして使えますか？', a: 'はい。vLLMはデフォルトでhttp://localhost:8000/v1にOpenAI互換サーバーを起動します。Ollamaと同じクライアントコードが使えます。' },
             { q: 'Node.jsのopenaiパッケージでOllama APIを使う方法は？', a: 'コンストラクタでbaseURL: "http://localhost:11434/v1"とapiKey: "ollama"を設定します。あとはreal OpenAI APIと同様にclient.chat.completions.create()を呼ぶだけです。' },
@@ -1426,7 +1426,7 @@ schema: {
         'description': 'LM Studio（localhost:1234）とOllama（localhost:11434）のOpenAI互換APIドキュメント。Python・Node.js・ストリーミングに加え、Aider・Cline・Roo Codeの設定方法も解説。',
         'url': 'https://www.promptquorum.com/ja/local-llms/local-llm-openai-compatible-api',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-07-14',
+        'dateModified': '2026-08-28',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -1449,7 +1449,7 @@ schema: {
           { '@type': 'Question', 'name': 'LM StudioにはOpenAI互換APIがありますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。http://localhost:1234/v1に公開。Local ServerタブでStart Serverをクリック。Ollamaと同じコードでポートを1234に変更するだけです。' } },
           { '@type': 'Question', 'name': 'OllamaのAPIは認証されていますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'デフォルトでは認証なし。ネットワーク公開する場合はリバースプロキシで認証を追加してください。' } },
           { '@type': 'Question', 'name': 'ストリーミングはどのように使いますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'stream=TrueをOpenAIライブラリの呼び出しに設定します。OllamaはSSEで各tokenを返します。' } },
-          { '@type': 'Question', 'name': 'Function Callingに対応していますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい、Llama 3.1 8B・Qwen3 7B・MistralでOpenAI APIと同様にtools=[]を渡すだけです。' } },
+          { '@type': 'Question', 'name': 'Function Callingに対応していますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい、Llama 3.1 8B・Qwen3 8B・MistralでOpenAI APIと同様にtools=[]を渡すだけです。' } },
           { '@type': 'Question', 'name': '/api/generateと/v1/chat/completionsの違いは？', 'acceptedAnswer': { '@type': 'Answer', 'text': '/api/generateはOllama独自の1ターンエンドポイント。/v1/chat/completionsはOpenAI互換のマルチターン。新規プロジェクトでは後者を使用してください。' } },
           { '@type': 'Question', 'name': 'vLLMをOpenAI互換APIとして使えますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい。localhost:8000/v1でOpenAI互換サーバーを起動します。Ollamaと同じクライアントコードで動作します。' } },
           { '@type': 'Question', 'name': 'Node.jsでOllama APIを使う方法は？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'baseURL: "http://localhost:11434/v1"とapiKey: "ollama"をコンストラクタに設定し、client.chat.completions.create()を呼ぶだけです。' } },
@@ -1495,7 +1495,7 @@ schema: {
       metaDescription: 'LM Studio（localhost:1234）和Ollama（localhost:11434）OpenAI兼容API文档：Python、Node.js、流式输出，以及Aider、Cline、Roo Code配置方法。',
       heroImage: '/images/local-llm-openai-compatible-api-one-line-change-hero-zh.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-07-14',
+      dateModified: '2026-08-28',
       readTime: '阅读约11分钟',
       educationalLevel: 'Beginner to Advanced',
       primaryTerm: 'OpenAI兼容API',
@@ -1611,14 +1611,14 @@ schema: {
           title: '本地模型可以调用函数吗？',
           content: [
             '**是的，截至2026年4月，函数调用通过OpenAI API在本地模型上可用。** 您定义函数schema，模型可以返回传递给函数的参数。这使[最佳本地LLM编程助手](/zh/local-llms/best-local-llms-for-coding)能够集成到您的工具生态系统中。',
-            '函数调用支持取决于模型。Llama 3.1 8B、Qwen3 7B和大多数近期模型支持它。较小的模型（3B）可能不可靠。',
+            '函数调用支持取决于模型。Llama 3.1 8B、Qwen3 8B和大多数近期模型支持它。较小的模型（3B）可能不可靠。',
             '在本地使用OpenAI兼容API时，结构化输出和JSON模式的工作方式与云端API相同。关于在本地和云模型中强制执行schema合规性和格式控制，请参阅[结构化输出和JSON模式](https://www.promptquorum.com/zh/prompt-engineering/structured-output-and-json-mode)。',
             '与OpenAI兼容的API接受与云版本相同的提示词格式——系统消息、用户消息和结构化输出。完整的[提示词工程技术](https://www.promptquorum.com/prompt-engineering)库直接适用于本地API调用。',
           ],
           codeBlock: '# Example: local model calls a weather function\ntools = [{\n  "type": "function",\n  "function": {\n    "name": "get_weather",\n    "description": "Get current weather",\n    "parameters": {\n      "type": "object",\n      "properties": {\n        "location": {"type": "string"}\n      }\n    }\n  }\n}]\n\nresponse = client.chat.completions.create(\n  model="llama3.2:8b",\n  messages=[{"role": "user", "content": "What is the weather in SF?"}],\n  tools=tools\n)\n\n# Check if model returned a function call\nif response.choices[0].message.tool_calls:\n  call = response.choices[0].message.tool_calls[0]\n  print(f"Call function: {call.function.name} with {call.function.arguments}")',
           codeLanguage: 'python',
           image: '/images/openai-compatible-function-calling-en.svg',
-          imageCaption: 'Ollama函数调用流程：本地模型返回tool_call JSON，应用执行函数——Llama 3.1 8B、Qwen3 7B和Mistral支持此功能。',
+          imageCaption: 'Ollama函数调用流程：本地模型返回tool_call JSON，应用执行函数——Llama 3.1 8B、Qwen3 8B和Mistral支持此功能。',
         },
         aiCodingTools: {
           id: 'ai-coding-tools',
@@ -1671,7 +1671,7 @@ schema: {
             { q: '可以同时调用多个模型吗？', a: '如果模型已加载到Ollama，可以。同时运行两个模型会使VRAM使用量翻倍，需要足够的GPU内存。' },
             { q: 'API需要认证吗？', a: '默认不需要。能访问localhost:11434的任何人都可以使用。生产环境网络访问时，通过反向代理添加认证。' },
             { q: '如何使用Ollama OpenAI API进行流式传输？', a: '在OpenAI库调用中设置stream=True。Ollama为每个token返回server-sent events（SSE）。Python示例：for chunk in client.chat.completions.create(stream=True, ...): print(chunk.choices[0].delta.content)。' },
-            { q: 'Ollama是否通过API支持函数调用？', a: '是的，支持的模型（Llama 3.1 8B、Qwen3 7B、Mistral）可用。与OpenAI一样传递tools=[]，Ollama解析工具调用并返回结构化JSON。' },
+            { q: 'Ollama是否通过API支持函数调用？', a: '是的，支持的模型（Llama 3.1 8B、Qwen3 8B、Mistral）可用。与OpenAI一样传递tools=[]，Ollama解析工具调用并返回结构化JSON。' },
             { q: 'Ollama /api/generate与/v1/chat/completions有什么区别？', a: '/api/generate是Ollama原生的单轮端点。/v1/chat/completions是OpenAI兼容的多轮端点。所有新项目请使用/v1/chat/completions。' },
             { q: '可以将vLLM用作OpenAI兼容API吗？', a: '可以。vLLM默认在http://localhost:8000/v1运行OpenAI兼容服务器。使用与Ollama相同的客户端代码。' },
             { q: '如何使用Node.js openai包调用Ollama API？', a: '在构造函数中设置baseURL: "http://localhost:11434/v1"和apiKey: "ollama"，然后正常调用client.chat.completions.create()。' },
@@ -1713,7 +1713,7 @@ schema: {
         'description': 'LM Studio（localhost:1234）和Ollama（localhost:11434）OpenAI兼容API文档：Python、Node.js、流式输出，以及Aider、Cline、Roo Code配置方法。',
         'url': 'https://www.promptquorum.com/zh/local-llms/local-llm-openai-compatible-api',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-07-14',
+        'dateModified': '2026-08-28',
         'author': { '@type': 'Organization', 'name': 'PromptQuorum' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -1736,7 +1736,7 @@ schema: {
           { '@type': 'Question', 'name': 'LM Studio有OpenAI兼容API吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '有，在http://localhost:1234/v1。在Local Server选项卡下启用。与Ollama代码相同，端口改为1234。' } },
           { '@type': 'Question', 'name': 'API需要认证吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '默认不需要。生产环境通过反向代理添加认证。' } },
           { '@type': 'Question', 'name': '如何使用流式传输？', 'acceptedAnswer': { '@type': 'Answer', 'text': '在OpenAI库调用中设置stream=True。Ollama为每个token返回SSE。' } },
-          { '@type': 'Question', 'name': 'Ollama支持函数调用吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '是的，Llama 3.1 8B、Qwen3 7B、Mistral支持。与OpenAI一样传递tools=[]即可。' } },
+          { '@type': 'Question', 'name': 'Ollama支持函数调用吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '是的，Llama 3.1 8B、Qwen3 8B、Mistral支持。与OpenAI一样传递tools=[]即可。' } },
           { '@type': 'Question', 'name': '/api/generate与/v1/chat/completions有什么区别？', 'acceptedAnswer': { '@type': 'Answer', 'text': '/api/generate是Ollama原生单轮端点。/v1/chat/completions是OpenAI兼容多轮端点。新项目请使用后者。' } },
           { '@type': 'Question', 'name': '可以将vLLM用作OpenAI兼容API吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '可以。vLLM在localhost:8000/v1提供OpenAI兼容服务器，使用与Ollama相同的客户端代码。' } },
           { '@type': 'Question', 'name': '如何在Node.js中使用Ollama API？', 'acceptedAnswer': { '@type': 'Answer', 'text': '设置baseURL: "http://localhost:11434/v1"和apiKey: "ollama"，正常调用client.chat.completions.create()。' } },
@@ -1784,7 +1784,7 @@ schema: {
       publishDate: '2026-04-04',
       leadAnswerBlock: '**LM Studio (localhost:1234), Ollama (localhost:11434) y vLLM (localhost:8000) exponen APIs REST en formato OpenAI -- esta es la documentación de cada endpoint, formato de petición y ejemplo de código. Usa el SDK oficial de Python o Node.js de OpenAI con cualquier modelo local cambiando solo dos líneas: establece base_url en tu endpoint local y api_key en cualquier cadena de texto.**',
       audience: 'Principiantes que ejecutan su primer LLM local en hardware de consumo',
-      dateModified: '2026-07-14',
+      dateModified: '2026-08-28',
       readTime: '11 min de lectura',
       educationalLevel: 'Beginner to Advanced',
       primaryTerm: 'OpenAI-compatible API',
@@ -1920,7 +1920,7 @@ schema: {
           title: '¿Tu modelo local puede llamar funciones?',
           content: [
             '**Sí, a partir de mayo de 2026, el function calling funciona con modelos locales a través de la API de OpenAI.** Defines un esquema de función y el modelo puede responder con argumentos para pasarle a tu función. Esto permite que los [mejores LLMs locales para programación](/es/local-llms/best-local-llms-for-coding) se integren con tu ecosistema de herramientas.',
-            'El soporte de function calling depende del modelo. Llama 4 Scout, Qwen3 8B, Gemma 4 9B y Mistral Small 3.1 soportan tool calling de forma fiable. Llama 3.1 8B y Qwen3 7B también lo soportan (versiones anteriores). Los modelos más pequeños (3B) pueden no producir JSON de tool call estructurado de forma fiable.',
+            'El soporte de function calling depende del modelo. Llama 4 Scout, Qwen3 8B, Gemma 4 26B-A4B y Mistral Small 3.1 soportan tool calling de forma fiable. Llama 3.1 8B también lo soporta (versiones anteriores). Los modelos más pequeños (3B) pueden no producir JSON de tool call estructurado de forma fiable.',
             'En 2026, el Model Context Protocol (MCP) extiende el function calling hacia una capa de conexión de herramientas estandarizada. MCP permite que cualquier cliente (Claude Code, Cursor, apps personalizadas) se conecte a cualquier servidor de herramientas a través de un único protocolo — yendo más allá de las definiciones de herramientas por petición mostradas arriba. Ollama soporta tool calling estilo MCP a través de la API estándar de function calling compatible con OpenAI. Para integraciones de herramientas en producción, MCP se está convirtiendo en el estándar; los ejemplos de function calling aquí siguen siendo la base.',
             'Al usar APIs compatibles con OpenAI localmente, la salida estructurada y el modo JSON funcionan igual que con las APIs en la nube. Para aplicar conformidad de esquemas y control de formato en modelos locales y en la nube, consulta [salida estructurada y modo JSON](https://www.promptquorum.com/prompt-engineering/structured-output-and-json-mode).',
             'Las APIs compatibles con OpenAI aceptan los mismos formatos de prompt que las versiones en la nube — mensajes de sistema, mensajes de usuario y salida estructurada. La biblioteca completa de [técnicas de prompt engineering](https://www.promptquorum.com/prompt-engineering) se aplica directamente a las llamadas de API locales.',
@@ -1928,7 +1928,7 @@ schema: {
           codeBlock: '# Example: local model calls a weather function\ntools = [{\n  "type": "function",\n  "function": {\n    "name": "get_weather",\n    "description": "Get current weather",\n    "parameters": {\n      "type": "object",\n      "properties": {\n        "location": {"type": "string"}\n      }\n    }\n  }\n}]\n\nresponse = client.chat.completions.create(\n  model="llama4:scout",\n  messages=[{"role": "user", "content": "What is the weather in SF?"}],\n  tools=tools\n)\n\n# Check if model returned a function call\nif response.choices[0].message.tool_calls:\n  call = response.choices[0].message.tool_calls[0]\n  print(f"Call function: {call.function.name} with {call.function.arguments}")',
           codeLanguage: 'python',
           image: '/images/openai-compatible-function-calling-es.svg',
-          imageCaption: 'Flujo de function calling con Ollama: el modelo local devuelve JSON tool_call y tu app ejecuta la función -- soportado por Llama 4 Scout, Qwen3 8B, Gemma 4 9B y Mistral.',
+          imageCaption: 'Flujo de function calling con Ollama: el modelo local devuelve JSON tool_call y tu app ejecuta la función -- soportado por Llama 4 Scout, Qwen3 8B, Gemma 4 26B-A4B y Mistral.',
         },
         aiCodingTools: {
           id: 'ai-coding-tools',
@@ -2002,7 +2002,7 @@ schema: {
             },
             {
               q: '¿Ollama soporta function calling / uso de herramientas a través de la API?',
-              a: 'Sí, para los modelos que lo soportan (Llama 4 Scout, Qwen3 8B, Gemma 4 9B, Mistral Small 3.1). Los modelos anteriores (Llama 3.1 8B, Qwen3 7B) también lo soportan. Pasa tools=[] en la llamada de API como lo harías con OpenAI. Ollama analiza las llamadas de herramientas y devuelve JSON estructurado. No todos los modelos lo soportan -- consulta la documentación del modelo.',
+              a: 'Sí, para los modelos que lo soportan (Llama 4 Scout, Qwen3 8B, Gemma 4 26B-A4B, Mistral Small 3.1). Los modelos anteriores (Llama 3.1 8B) también lo soportan. Pasa tools=[] en la llamada de API como lo harías con OpenAI. Ollama analiza las llamadas de herramientas y devuelve JSON estructurado. No todos los modelos lo soportan -- consulta la documentación del modelo.',
             },
             {
               q: '¿Qué es MCP y cómo se relaciona con la API compatible con OpenAI?',
@@ -2073,7 +2073,7 @@ schema: {
         'description': 'LM Studio (localhost:1234) y Ollama (localhost:11434): documentación de la API compatible con OpenAI. Python, Node.js, streaming, y configuración de Aider, Cline y Roo Code.',
         'url': 'https://www.promptquorum.com/es/local-llms/local-llm-openai-compatible-api',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-07-14',
+        'dateModified': '2026-08-28',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'audience': { '@type': 'Audience', 'audienceType': 'Desarrolladores que integran LLMs locales en aplicaciones Python, Node.js o JavaScript' },
@@ -2151,7 +2151,7 @@ schema: {
             'name': '¿Ollama soporta function calling / uso de herramientas a través de la API?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Sí, para los modelos que lo soportan (Llama 4 Scout, Qwen3 8B, Gemma 4 9B, Mistral Small 3.1). Pasa tools=[] en la llamada de API como lo harías con OpenAI. Ollama analiza las llamadas de herramientas y devuelve JSON estructurado. No todos los modelos lo soportan -- consulta la documentación del modelo.'
+              'text': 'Sí, para los modelos que lo soportan (Llama 4 Scout, Qwen3 8B, Gemma 4 26B-A4B, Mistral Small 3.1). Pasa tools=[] en la llamada de API como lo harías con OpenAI. Ollama analiza las llamadas de herramientas y devuelve JSON estructurado. No todos los modelos lo soportan -- consulta la documentación del modelo.'
             }
           },
           {
@@ -2282,7 +2282,7 @@ schema: {
       publishDate: '2026-04-04',
       leadAnswerBlock: '**يكشف كل من LM Studio (localhost:1234) و Ollama (localhost:11434) و vLLM (localhost:8000) عن واجهات REST API بتنسيق OpenAI -- وهذا هو التوثيق الكامل لكل endpoint وتنسيق طلب ومثال برمجي. استخدم SDK الرسمي لـ OpenAI الخاص بـ Python أو Node.js مع أي نموذج محلي عبر تغيير سطرين فقط: عيّن base_url إلى endpoint المحلي و api_key إلى أي سلسلة نصية.**',
       audience: 'المبتدئون الذين يشغّلون أول نموذج LLM محلي لهم على عتاد استهلاكي',
-      dateModified: '2026-07-14',
+      dateModified: '2026-08-28',
       readTime: '11 دقائق للقراءة',
       educationalLevel: 'Beginner to Advanced',
       primaryTerm: 'OpenAI-compatible API',
@@ -2418,7 +2418,7 @@ schema: {
           title: 'هل يستطيع نموذجك المحلي استدعاء الدوال؟',
           content: [
             '**نعم، اعتباراً من مايو 2026، يعمل استدعاء الدوال مع النماذج المحلية عبر واجهة OpenAI.** تُعرّف مخطط دالة، ويستطيع النموذج الرد بوسائط لتمريرها إلى دالتك. يتيح ذلك لـ [أفضل نماذج LLM المحلية للبرمجة](/ar/local-llms/best-local-llms-for-coding) أن تتكامل مع منظومة أدواتك.',
-            'يعتمد دعم استدعاء الدوال على النموذج. تدعم Llama 4 Scout و Qwen3 8B و Gemma 4 9B و Mistral Small 3.1 استدعاء الأدوات بشكل موثوق. كما تدعمه Llama 3.1 8B و Qwen3 7B أيضاً (إصدارات أقدم). قد لا تنتج النماذج الأصغر (3B) JSON منظَّماً لاستدعاء الأدوات بشكل موثوق.',
+            'يعتمد دعم استدعاء الدوال على النموذج. تدعم Llama 4 Scout و Qwen3 8B و Gemma 4 26B-A4B و Mistral Small 3.1 استدعاء الأدوات بشكل موثوق. كما تدعمه Llama 3.1 8B أيضاً (إصدارات أقدم). قد لا تنتج النماذج الأصغر (3B) JSON منظَّماً لاستدعاء الأدوات بشكل موثوق.',
             'في عام 2026، يوسّع Model Context Protocol (MCP) استدعاء الدوال إلى طبقة موحَّدة لربط الأدوات. يتيح MCP لأي عميل (Claude Code و Cursor والتطبيقات المخصصة) الاتصال بأي خادم أدوات عبر بروتوكول واحد — متجاوزاً تعريفات الأدوات لكل طلب الموضحة أعلاه. يدعم Ollama استدعاء الأدوات بأسلوب MCP عبر واجهة استدعاء الدوال القياسية المتوافقة مع OpenAI. لتكاملات الأدوات الإنتاجية، يتحول MCP إلى المعيار؛ وتبقى أمثلة استدعاء الدوال هنا هي الأساس.',
             'عند استخدام الواجهات المتوافقة مع OpenAI محلياً، يعمل الإخراج المنظَّم ووضع JSON تماماً كما هو الحال مع الواجهات السحابية. لفرض مطابقة المخطط والتحكم في التنسيق على النماذج المحلية والسحابية، اطّلع على [الإخراج المنظَّم ووضع JSON](https://www.promptquorum.com/prompt-engineering/structured-output-and-json-mode).',
             'تقبل الواجهات المتوافقة مع OpenAI تنسيقات الـ prompt نفسها التي تقبلها الإصدارات السحابية — رسائل النظام ورسائل المستخدم والإخراج المنظَّم. تنطبق المكتبة الكاملة لـ [تقنيات هندسة الـ prompt](https://www.promptquorum.com/prompt-engineering) مباشرة على استدعاءات الواجهة المحلية.',
@@ -2426,7 +2426,7 @@ schema: {
           codeBlock: '# Example: local model calls a weather function\ntools = [{\n  "type": "function",\n  "function": {\n    "name": "get_weather",\n    "description": "Get current weather",\n    "parameters": {\n      "type": "object",\n      "properties": {\n        "location": {"type": "string"}\n      }\n    }\n  }\n}]\n\nresponse = client.chat.completions.create(\n  model="llama4:scout",\n  messages=[{"role": "user", "content": "What is the weather in SF?"}],\n  tools=tools\n)\n\n# Check if model returned a function call\nif response.choices[0].message.tool_calls:\n  call = response.choices[0].message.tool_calls[0]\n  print(f"Call function: {call.function.name} with {call.function.arguments}")',
           codeLanguage: 'python',
           image: '/images/openai-compatible-function-calling-es.svg',
-          imageCaption: 'تدفق استدعاء الدوال مع Ollama: يعيد النموذج المحلي JSON من نوع tool_call ويشغّل تطبيقك الدالة -- مدعوم من Llama 4 Scout و Qwen3 8B و Gemma 4 9B و Mistral.',
+          imageCaption: 'تدفق استدعاء الدوال مع Ollama: يعيد النموذج المحلي JSON من نوع tool_call ويشغّل تطبيقك الدالة -- مدعوم من Llama 4 Scout و Qwen3 8B و Gemma 4 26B-A4B و Mistral.',
         },
         aiCodingTools: {
           id: 'ai-coding-tools',
@@ -2500,7 +2500,7 @@ schema: {
             },
             {
               q: 'هل يدعم Ollama استدعاء الدوال / استخدام الأدوات عبر الواجهة؟',
-              a: 'نعم، للنماذج التي تدعمه (Llama 4 Scout و Qwen3 8B و Gemma 4 9B و Mistral Small 3.1). كما تدعمه النماذج الأقدم (Llama 3.1 8B و Qwen3 7B) أيضاً. مرّر tools=[] في استدعاء الواجهة كما تفعل مع OpenAI. يحلّل Ollama استدعاءات الأدوات ويعيد JSON منظَّماً. لا تدعمه كل النماذج -- اطّلع على توثيق النموذج.',
+              a: 'نعم، للنماذج التي تدعمه (Llama 4 Scout و Qwen3 8B و Gemma 4 26B-A4B و Mistral Small 3.1). كما تدعمه النماذج الأقدم (Llama 3.1 8B) أيضاً. مرّر tools=[] في استدعاء الواجهة كما تفعل مع OpenAI. يحلّل Ollama استدعاءات الأدوات ويعيد JSON منظَّماً. لا تدعمه كل النماذج -- اطّلع على توثيق النموذج.',
             },
             {
               q: 'ما هو MCP وكيف يرتبط بالواجهة المتوافقة مع OpenAI؟',
@@ -2571,7 +2571,7 @@ schema: {
         'description': 'توثيق واجهة OpenAI المتوافقة لـ LM Studio (localhost:1234) و Ollama (localhost:11434): Python و Node.js والبث المتدفق، بالإضافة إلى إعداد Aider و Cline و Roo Code.',
         'url': 'https://www.promptquorum.com/ar/local-llms/local-llm-openai-compatible-api',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-07-14',
+        'dateModified': '2026-08-28',
         'inLanguage': 'ar',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
@@ -2651,7 +2651,7 @@ schema: {
             'name': 'هل يدعم Ollama استدعاء الدوال / استخدام الأدوات عبر الواجهة؟',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'نعم، للنماذج التي تدعمه (Llama 4 Scout و Qwen3 8B و Gemma 4 9B و Mistral Small 3.1). مرّر tools=[] في استدعاء الواجهة كما تفعل مع OpenAI. يحلّل Ollama استدعاءات الأدوات ويعيد JSON منظَّماً. لا تدعمه كل النماذج -- اطّلع على توثيق النموذج.'
+              'text': 'نعم، للنماذج التي تدعمه (Llama 4 Scout و Qwen3 8B و Gemma 4 26B-A4B و Mistral Small 3.1). مرّر tools=[] في استدعاء الواجهة كما تفعل مع OpenAI. يحلّل Ollama استدعاءات الأدوات ويعيد JSON منظَّماً. لا تدعمه كل النماذج -- اطّلع على توثيق النموذج.'
             }
           },
           {
@@ -2784,7 +2784,7 @@ schema: {
       publishDate: '2026-04-04',
       leadAnswerBlock: '**LM Studio (localhost:1234), Ollama (localhost:11434) e vLLM (localhost:8000) expõem APIs REST no formato OpenAI -- esta é a documentação de cada endpoint, formato de requisição e exemplo de código. Use o SDK oficial de Python ou Node.js da OpenAI com qualquer modelo local alterando apenas duas linhas: defina base_url para seu endpoint local e api_key para qualquer string.**',
       audience: 'Desenvolvedores que querem integrar LLMs locais em aplicações Python ou Node.js',
-      dateModified: '2026-07-14',
+      dateModified: '2026-08-28',
       readTime: '11 min de leitura',
       educationalLevel: 'Intermediate',
       primaryTerm: 'API compatível com OpenAI para LLM local',
@@ -2805,7 +2805,7 @@ schema: {
         'url': 'https://www.promptquorum.com/pt/local-llms/local-llm-openai-compatible-api',
         'inLanguage': 'pt-BR',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-07-14',
+        'dateModified': '2026-08-28',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Intermediate',
@@ -2868,7 +2868,7 @@ schema: {
             'name': 'O Ollama suporta function calling / uso de ferramentas via API?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Sim, para modelos que suportam isso (Llama 3.1 8B, Qwen3 7B, Mistral). Passe tools=[] na chamada da API como faria com a OpenAI. O Ollama analisa as chamadas de ferramentas e retorna JSON estruturado. Nem todos os modelos suportam isso -- verifique a documentação do modelo.'
+              'text': 'Sim, para modelos que suportam isso (Llama 3.1 8B, Qwen3 8B, Mistral). Passe tools=[] na chamada da API como faria com a OpenAI. O Ollama analisa as chamadas de ferramentas e retorna JSON estruturado. Nem todos os modelos suportam isso -- verifique a documentação do modelo.'
             }
           },
           {
@@ -3025,7 +3025,7 @@ schema: {
       publishDate: '2026-04-04',
       leadAnswerBlock: '**LM Studio(localhost:1234), Ollama(localhost:11434), vLLM(localhost:8000)은 모두 OpenAI 형식의 REST API를 제공합니다. 이는 모든 엔드포인트, 요청 형식, 코드 예제에 대한 문서입니다. 두 줄만 변경하면 공식 OpenAI Python 또는 Node.js SDK로 로컬 모델을 사용할 수 있습니다. base_url을 로컬 엔드포인트로, api_key를 임의의 문자열로 설정하면 됩니다.**',
       audience: '소비자용 하드웨어에서 첫 번째 로컬 LLM을 실행하는 입문자',
-      dateModified: '2026-07-14',
+      dateModified: '2026-08-28',
       readTime: '11분 읽기',
       educationalLevel: '초급에서 고급까지',
       primaryTerm: 'OpenAI 호환 API',
@@ -3161,7 +3161,7 @@ schema: {
           title: '로컬 모델에서 함수를 호출할 수 있습니까?',
           content: [
             '**네, 2026년 5월 기준으로 OpenAI API를 통해 로컬 모델에서 함수 호출이 가능합니다.** 함수 스키마를 정의하면 모델이 함수에 전달할 인수로 응답할 수 있습니다. 이를 통해 [코딩을 위한 최고의 로컬 LLM](/local-llms/best-local-llms-for-coding)이 도구 생태계와 통합될 수 있습니다.',
-            '함수 호출 지원 여부는 모델에 따라 다릅니다. Llama 4 Scout, Qwen3 8B, Gemma 4 9B, Mistral Small 3.1 모두 도구 호출을 안정적으로 지원합니다. Llama 3.1 8B와 Qwen3 7B도 지원됩니다(레거시). 더 작은 모델(3B)은 구조화된 도구 호출 JSON을 안정적으로 생성하지 못할 수 있습니다.',
+            '함수 호출 지원 여부는 모델에 따라 다릅니다. Llama 4 Scout, Qwen3 8B, Gemma 4 26B-A4B, Mistral Small 3.1 모두 도구 호출을 안정적으로 지원합니다. Llama 3.1 8B도 지원됩니다(레거시). 더 작은 모델(3B)은 구조화된 도구 호출 JSON을 안정적으로 생성하지 못할 수 있습니다.',
             '2026년에는 Model Context Protocol(MCP)이 함수 호출을 표준화된 도구 연결 레이어로 확장합니다. MCP는 모든 클라이언트(Claude Code, Cursor, 커스텀 앱)가 단일 프로토콜을 통해 모든 도구 서버에 연결할 수 있게 합니다. 위에 표시된 요청별 도구 정의를 넘어섭니다. Ollama는 표준 OpenAI 호환 함수 호출 API를 통해 MCP 스타일의 도구 호출을 지원합니다. 프로덕션 도구 통합의 경우 MCP가 표준이 되고 있으며, 여기의 함수 호출 예제는 그 기반입니다.',
             'OpenAI 호환 API를 로컬에서 사용할 때 구조화된 출력과 JSON 모드는 클라우드 API와 동일한 방식으로 작동합니다. 로컬 및 클라우드 모델에서 스키마 준수 및 형식 제어를 위해 [구조화된 출력 및 JSON 모드](https://www.promptquorum.com/prompt-engineering/structured-output-and-json-mode)를 참조하세요.',
             'OpenAI 호환 API는 클라우드 버전과 동일한 프롬프트 형식을 수용합니다. 시스템 메시지, 사용자 메시지, 구조화된 출력이 모두 포함됩니다. [프롬프트 엔지니어링 기법](https://www.promptquorum.com/prompt-engineering)의 전체 라이브러리가 로컬 API 호출에 직접 적용됩니다.',
@@ -3169,7 +3169,7 @@ schema: {
           codeBlock: '# Example: local model calls a weather function\ntools = [{\n  "type": "function",\n  "function": {\n    "name": "get_weather",\n    "description": "Get current weather",\n    "parameters": {\n      "type": "object",\n      "properties": {\n        "location": {"type": "string"}\n      }\n    }\n  }\n}]\n\nresponse = client.chat.completions.create(\n  model="llama4:scout",\n  messages=[{"role": "user", "content": "What is the weather in SF?"}],\n  tools=tools\n)\n\n# Check if model returned a function call\nif response.choices[0].message.tool_calls:\n  call = response.choices[0].message.tool_calls[0]\n  print(f"Call function: {call.function.name} with {call.function.arguments}")',
           codeLanguage: 'python',
           image: '/images/openai-compatible-function-calling-en.svg',
-          imageCaption: 'Ollama를 사용한 함수 호출 흐름: 로컬 모델이 tool_call JSON을 반환하면 앱이 함수를 실행합니다. Llama 4 Scout, Qwen3 8B, Gemma 4 9B, Mistral에서 지원됩니다.',
+          imageCaption: 'Ollama를 사용한 함수 호출 흐름: 로컬 모델이 tool_call JSON을 반환하면 앱이 함수를 실행합니다. Llama 4 Scout, Qwen3 8B, Gemma 4 26B-A4B, Mistral에서 지원됩니다.',
         },
         aiCodingTools: {
           id: 'ai-coding-tools',
@@ -3243,7 +3243,7 @@ schema: {
             },
             {
               q: 'Ollama가 API를 통한 함수 호출/도구 사용을 지원합니까?',
-              a: '네, 지원하는 모델에서 가능합니다(Llama 4 Scout, Qwen3 8B, Gemma 4 9B, Mistral Small 3.1). 레거시 모델(Llama 3.1 8B, Qwen3 7B)도 지원됩니다. OpenAI와 동일하게 API 호출에 tools=[]를 전달하면 됩니다. Ollama는 도구 호출을 파싱하고 구조화된 JSON을 반환합니다. 모든 모델이 이를 지원하는 것은 아니므로 모델 문서를 확인하세요.',
+              a: '네, 지원하는 모델에서 가능합니다(Llama 4 Scout, Qwen3 8B, Gemma 4 26B-A4B, Mistral Small 3.1). 레거시 모델(Llama 3.1 8B)도 지원됩니다. OpenAI와 동일하게 API 호출에 tools=[]를 전달하면 됩니다. Ollama는 도구 호출을 파싱하고 구조화된 JSON을 반환합니다. 모든 모델이 이를 지원하는 것은 아니므로 모델 문서를 확인하세요.',
             },
             {
               q: 'MCP란 무엇이며 OpenAI 호환 API와 어떤 관계가 있습니까?',
