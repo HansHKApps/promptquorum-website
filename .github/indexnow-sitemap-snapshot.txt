@@ -94,6 +94,7 @@ https://www.promptquorum.com/local-llms/apple-silicon-m5-local-llm
 https://www.promptquorum.com/local-llms/apple-silicon-vs-nvidia-gpu-local-llm
 https://www.promptquorum.com/local-llms/apple-silicon-whisper-metal-benchmark
 https://www.promptquorum.com/local-llms/best-7b-models-consumer-hardware
+https://www.promptquorum.com/local-llms/best-ai-code-review-tools-2026
 https://www.promptquorum.com/local-llms/best-ai-coding-assistant-local-llm
 https://www.promptquorum.com/local-llms/best-amd-gpus-local-llm
 https://www.promptquorum.com/local-llms/best-amd-mini-pc-local-llm-2026
@@ -105,6 +106,7 @@ https://www.promptquorum.com/local-llms/best-gpu-for-llm-inference-under-500-202
 https://www.promptquorum.com/local-llms/best-gpus-for-local-llms
 https://www.promptquorum.com/local-llms/best-laptops-local-llm
 https://www.promptquorum.com/local-llms/best-llm-api-gateway-2026
+https://www.promptquorum.com/local-llms/best-llm-fine-tuning-framework-2026
 https://www.promptquorum.com/local-llms/best-local-llm-frontends
 https://www.promptquorum.com/local-llms/best-local-llm-stack-use-case
 https://www.promptquorum.com/local-llms/best-local-llms-2026
