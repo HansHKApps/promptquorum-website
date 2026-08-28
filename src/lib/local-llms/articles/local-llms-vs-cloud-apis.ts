@@ -42,6 +42,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: "Local LLMs run for $0 per token on your own hardware with full data privacy; cloud APIs (GPT-5.6, Claude Opus 5, Gemini 3.1 Pro) cost $0.15-$60 per 1M tokens but deliver higher output quality with zero setup." },
+            { type: 'plain-terms', text: "A local LLM is an AI model that runs entirely on your own computer -- no internet needed, no monthly bill, but you need a capable GPU to run it well. A cloud API (like ChatGPT or Claude) runs on someone else's servers -- you pay per use and get the smartest available models instantly, with no hardware required." },
+          ],
           items: [
             'Local LLMs cost $0 per token after hardware. Cloud APIs cost $0.15-$60 per 1M tokens depending on the model.',
             'Cloud APIs (GPT-5.6, Claude Opus 5, Gemini 3.1 Pro) outperform all locally-runnable models on complex reasoning and code tasks.',
@@ -273,6 +277,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Los LLM locales cuestan $0 por token y mantienen todos los datos en tu propio hardware; las API en la nube (GPT-5.6, Claude Opus 5, Gemini 3.1 Pro) cuestan entre $0,15 y $60 por 1M de tokens pero ofrecen mayor calidad sin necesidad de configuración.' },
+            { type: 'plain-terms', text: 'Un LLM local es un modelo de IA que se ejecuta por completo en tu propio ordenador: sin conexión a internet, sin factura mensual, pero necesitas una GPU capaz. Una API en la nube (como ChatGPT o Claude) se ejecuta en los servidores de otra empresa: pagas por uso, pero obtienes al instante los modelos más inteligentes disponibles, sin necesitar hardware propio.' },
+          ],
           items: [
             'Los LLMs locales cuestan $0 por token tras el hardware. Las APIs en la nube cuestan $0.15-$60 por 1M tokens según el modelo.',
             'Las APIs en la nube (GPT-5.6, Claude Opus 5, Gemini 3.1 Pro) superan a todos los modelos ejecutables localmente en tareas complejas de razonamiento y código.',
@@ -509,6 +517,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'تعمل نماذج LLM المحلية بتكلفة 0$ لكل رمز وتُبقي جميع البيانات على عتادك الخاص؛ بينما تكلّف واجهات API السحابية (GPT-5.6، Claude Opus 5، Gemini 3.1 Pro) بين 0.15$ و60$ لكل مليون رمز لكنها تقدّم جودة إخراج أعلى دون أي إعداد.' },
+            { type: 'plain-terms', text: 'نموذج LLM محلي هو نموذج ذكاء اصطناعي يعمل بالكامل على حاسوبك الخاص -- لا حاجة لاتصال إنترنت، ولا فاتورة شهرية، لكنك تحتاج إلى بطاقة رسومات قوية بما يكفي. أما واجهة API السحابية (مثل ChatGPT أو Claude) فتعمل على خوادم شركة أخرى -- تدفع مقابل كل استخدام، لكنك تحصل فورًا على أذكى النماذج المتاحة دون الحاجة إلى عتاد خاص بك.' },
+          ],
           items: [
             'تكلّف نماذج LLM المحلية 0$ لكل رمز بعد العتاد. تكلّف واجهات API السحابية 0.15$-60$ لكل مليون رمز حسب النموذج.',
             'تتفوّق واجهات API السحابية (GPT-5.6، Claude Opus 5، Gemini 3.1 Pro) على جميع النماذج القابلة للتشغيل محليًا في مهام الاستدلال والشيفرة المعقّدة.',
@@ -745,6 +757,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Os LLMs locais custam $0 por token e mantêm todos os dados no seu próprio hardware; as APIs na nuvem (GPT-5.6, Claude Opus 5, Gemini 3.1 Pro) custam entre $0,15 e $60 por 1M de tokens, mas oferecem maior qualidade sem nenhuma configuração.' },
+            { type: 'plain-terms', text: 'Um LLM local é um modelo de IA que roda inteiramente no seu próprio computador -- sem precisar de internet, sem mensalidade, mas você precisa de uma GPU capaz. Uma API na nuvem (como ChatGPT ou Claude) roda nos servidores de outra empresa -- você paga por uso, mas tem acesso instantâneo aos modelos mais inteligentes disponíveis, sem precisar de hardware próprio.' },
+          ],
           items: [
             'LLMs locais custam $0 por token após o hardware. APIs na nuvem custam $0,15–$60 por 1M tokens dependendo do modelo.',
             'As APIs na nuvem (GPT-5.6, Claude Opus 5, Gemini 3.1 Pro) superam todos os modelos executáveis localmente em tarefas complexas de raciocínio e código.',
@@ -960,6 +976,10 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Lokale LLMs kosten $0 pro Token und behalten alle Daten auf Ihrer eigenen Hardware; Cloud-APIs (GPT-5.6, Claude Opus 5, Gemini 3.1 Pro) kosten $0,15-$60 pro 1 Mio. Token, liefern aber eine höhere Ausgabequalität ohne jede Einrichtung.' },
+            { type: 'plain-terms', text: 'Ein lokales LLM ist ein KI-Modell, das vollständig auf Ihrem eigenen Computer läuft -- keine Internetverbindung nötig, keine monatliche Rechnung, aber Sie benötigen eine leistungsfähige GPU. Eine Cloud-API (wie ChatGPT oder Claude) läuft auf den Servern eines anderen Unternehmens -- Sie zahlen pro Nutzung, erhalten dafür aber sofort die intelligentesten verfügbaren Modelle, ohne eigene Hardware zu benötigen.' },
+          ],
           items: [
             'Lokale LLMs kosten $0 pro Token nach der Hardware-Investition. Cloud-APIs kosten $0,15\u2013$60 pro 1\u00a0Mio. Tokens je nach Modell.',
             'Cloud-APIs (GPT-5.6, Claude Opus 5, Gemini 3.1 Pro) übertreffen alle lokal ausführbaren Modelle bei komplexen Denkaufgaben und Code-Aufgaben.',
@@ -1214,6 +1234,10 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: "Les LLM locaux coûtent 0 $ par jeton et conservent toutes les données sur votre propre matériel ; les API cloud (GPT-5.6, Claude Opus 5, Gemini 3.1 Pro) coûtent entre 0,15 $ et 60 $ par million de jetons mais offrent une meilleure qualité de sortie sans aucune configuration." },
+            { type: 'plain-terms', text: "Un LLM local est un modèle d'IA qui s'exécute entièrement sur votre propre ordinateur -- aucune connexion Internet requise, aucune facture mensuelle, mais vous avez besoin d'un GPU suffisamment puissant. Une API cloud (comme ChatGPT ou Claude) s'exécute sur les serveurs d'une autre entreprise -- vous payez à l'usage, mais obtenez instantanément les modèles les plus performants disponibles, sans avoir besoin de matériel." },
+          ],
           title: 'Points clés',
           items: [
             'Les LLMs locaux coûtent $0 par token après l\'investissement matériel. Les APIs cloud coûtent $0,15-$60 par million de tokens selon le modèle.',
@@ -1462,6 +1486,10 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'ローカルLLMはトークンあたり$0で、すべてのデータを自分のハードウェア上に保持します。クラウドAPI（GPT-5.6、Claude Opus 5、Gemini 3.1 Pro）は100万トークンあたり$0.15〜$60かかりますが、設定不要でより高い出力品質を提供します。' },
+            { type: 'plain-terms', text: 'ローカルLLMとは、自分のコンピューター上で完全に動作するAIモデルです。インターネット接続も月額料金も不要ですが、十分な性能のGPUが必要です。クラウドAPI（ChatGPTやClaudeなど）は他社のサーバー上で動作します。使用量に応じて料金を支払いますが、自分でハードウェアを用意しなくても、すぐに最も賢いモデルを利用できます。' },
+          ],
           title: '重要ポイント',
           items: [
             'ローカルLLMはハードウェア投資後$0/トークン。クラウドAPIはモデルによって$0.15〜$60/100万トークン。',
@@ -1710,6 +1738,10 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: '本地LLM每个token费用为$0，所有数据保留在您自己的硬件上；云端API（GPT-5.6、Claude Opus 5、Gemini 3.1 Pro）每百万token费用为$0.15-$60，但无需任何配置即可提供更高的输出质量。' },
+            { type: 'plain-terms', text: '本地LLM是完全在您自己电脑上运行的AI模型——无需互联网连接，无需月费，但需要一块性能足够的GPU。云端API（如ChatGPT或Claude）运行在别人的服务器上——您按使用量付费，但无需自备硬件即可立即使用现有最智能的模型。' },
+          ],
           title: '核心要点',
           items: [
             '本地LLM硬件投资后每token费用为$0。云端API根据模型每百万token费用为$0.15-$60。',
@@ -1984,6 +2016,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: '로컬 LLM은 토큰당 $0의 비용으로 모든 데이터를 자신의 하드웨어에 보관합니다. 클라우드 API(GPT-5.6, Claude Opus 5, Gemini 3.1 Pro)는 100만 토큰당 $0.15~$60의 비용이 들지만 별도 설정 없이 더 높은 출력 품질을 제공합니다.' },
+            { type: 'plain-terms', text: '로컬 LLM은 자신의 컴퓨터에서 완전히 실행되는 AI 모델입니다. 인터넷 연결도, 월 요금도 필요 없지만 충분한 성능의 GPU가 필요합니다. 클라우드 API(ChatGPT나 Claude 등)는 다른 회사의 서버에서 실행됩니다. 사용한 만큼 비용을 지불하지만, 자체 하드웨어 없이도 현재 이용 가능한 가장 똑똑한 모델을 즉시 사용할 수 있습니다.' },
+          ],
           items: [
             '로컬 LLM은 하드웨어 투자 후 토큰당 $0입니다. 클라우드 API는 모델에 따라 1M 토큰당 $0.15~$60입니다.',
             '클라우드 API(GPT-5.6, Claude Opus 5, Gemini 3.1 Pro)는 복잡한 추론 및 코딩 작업에서 로컬에서 실행 가능한 모든 모델을 능가합니다.',
