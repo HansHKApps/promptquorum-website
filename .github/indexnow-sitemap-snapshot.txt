@@ -109,6 +109,7 @@ https://www.promptquorum.com/local-llms/best-laptops-local-llm
 https://www.promptquorum.com/local-llms/best-llm-api-gateway-2026
 https://www.promptquorum.com/local-llms/best-llm-evaluation-tools-2026
 https://www.promptquorum.com/local-llms/best-llm-fine-tuning-framework-2026
+https://www.promptquorum.com/local-llms/best-llm-observability-tools-2026
 https://www.promptquorum.com/local-llms/best-local-llm-frontends
 https://www.promptquorum.com/local-llms/best-local-llm-stack-use-case
 https://www.promptquorum.com/local-llms/best-local-llms-2026
@@ -123,6 +124,7 @@ https://www.promptquorum.com/local-llms/best-mini-pcs-local-llm
 https://www.promptquorum.com/local-llms/best-models-apple-silicon-2026
 https://www.promptquorum.com/local-llms/best-nas-storage-local-llm
 https://www.promptquorum.com/local-llms/best-saudi-arabic-local-llms-allam-2026
+https://www.promptquorum.com/local-llms/best-vector-database-2026
 https://www.promptquorum.com/local-llms/cloud-gpu-rental-comparison-2026
 https://www.promptquorum.com/local-llms/corporate-rag-local-llms
 https://www.promptquorum.com/local-llms/create-custom-local-models
