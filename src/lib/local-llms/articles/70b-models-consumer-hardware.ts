@@ -11,10 +11,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       freshness_tier: 'semi_annual',
       theme: 'Best Models',
       title: 'Run 70B LLMs on Consumer Hardware 2026: RAM & GPU Setup',
-      dateModified: '2026-08-26',
+      dateModified: '2026-08-28',
       next_refresh_due: '2027-02-26',
       seoTitle: '70B on Consumer Hardware 2026: RAM, GPU Setup Guide',
-      intro: 'Running a 70B parameter model locally requires 40-48 GB of RAM at Q4_K_M quantization. This is achievable on: Apple Silicon Macs with 64 GB unified memory, workstations with 64 GB DDR5, or machines combining a 24 GB NVIDIA GPU with 32 GB system RAM using layer offloading. As of August 2026, Llama 3.3 70B and Qwen3 72B remain the two primary 70B models available.',
+      intro: 'Running a 70B parameter model locally requires 40-48 GB of RAM at Q4_K_M quantization. This is achievable on: Apple Silicon Macs with 64 GB unified memory, workstations with 64 GB DDR5, or machines combining a 24 GB NVIDIA GPU with 32 GB system RAM using layer offloading. Llama 3.3 70B and Qwen3 72B remain the two primary 70B models available.',
       metaDescription: 'Run Llama 3.3 and Qwen3 70B models locally: RAM requirements, NVIDIA vs Apple Silicon, layer offloading, benchmarks. Complete hardware guide -- August 2026.',
       heroImage: '/images/70b-models-consumer-hardware-hardware-comparison-hero-en.webp',
       publishDate: '2026-04-04',
@@ -43,6 +43,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Running a 70B parameter model locally requires 40-48 GB of RAM at Q4_K_M quantization, achievable on Apple Silicon Macs with 64 GB unified memory, workstations with 64 GB DDR5, or a 24 GB NVIDIA GPU combined with 32 GB system RAM using layer offloading.' },
+            { type: 'plain-terms', text: "A 70B model is one of the largest sizes you can realistically run at home, and it needs serious memory -- roughly 40-48 GB. The easiest path is a Mac with enough unified memory, since it shares RAM between CPU and GPU. On a PC, you'll usually need a large graphics card plus extra system RAM to offload the parts that don't fit on the card." },
+          ],
           items: [
             'Q4_K_M quantization: Llama 3.3 70B requires ~40 GB RAM; Qwen3 72B requires ~43 GB RAM.',
             '**Cheapest new hardware**: Apple Mac mini M5 Pro (64 GB, $1,699, ships Sept 22, 2026) is the cheapest new full-GPU Apple Silicon path to 70B. The base Mac mini M6 ($899) tops out at 32 GB and cannot run 70B at all.',
@@ -328,10 +332,11 @@ schema: {
       theme: 'Best Models',
       title: 'Cómo ejecutar modelos 70B en hardware de consumo 2026: RAM y GPU',
       seoTitle: 'Llama 70B en PC 2026: 40 GB RAM, RTX 4090 o M5 Max',
-      intro: 'Ejecutar un modelo de 70B parámetros localmente requiere 40-48 GB de RAM con cuantización Q4_K_M. Esto es posible en: Macs Apple Silicon con 64 GB de memoria unificada, estaciones de trabajo con 64 GB DDR5, o máquinas que combinan una GPU NVIDIA de 24 GB con 32 GB de RAM del sistema usando layer offloading. En agosto de 2026, Llama 3.3 70B y Qwen3 72B siguen siendo los dos modelos 70B principales disponibles.',
+      intro: 'Ejecutar un modelo de 70B parámetros localmente requiere 40-48 GB de RAM con cuantización Q4_K_M. Esto es posible en: Macs Apple Silicon con 64 GB de memoria unificada, estaciones de trabajo con 64 GB DDR5, o máquinas que combinan una GPU NVIDIA de 24 GB con 32 GB de RAM del sistema usando layer offloading. Llama 3.3 70B y Qwen3 72B siguen siendo los dos modelos 70B principales disponibles.',
       metaDescription: 'Llama 3.3 70B necesita 40 GB RAM (Q4_K_M). M5 Max logra 30 tok/s; RTX 4090 llega a 18 tok/s. Guía NVIDIA vs Apple Silicon para modelos 70B en PC 2026.',
       heroImage: '/images/70b-models-consumer-hardware-hardware-comparison-hero-es.webp',
       publishDate: '2026-04-04',
+      dateModified: '2026-08-28',
       leadAnswerBlock: '**Ejecutar un modelo de 70B parámetros localmente requiere 40-48 GB de RAM con cuantización Q4_K_M. Esto es posible en: Macs Apple Silicon con 64 GB de memoria unificada, estaciones de trabajo con 64 GB DDR5, o máquinas que combinan una GPU NVIDIA de 24 GB con 32 GB de RAM del sistema usando layer offloading.**',
       audience: 'Desarrolladores familiarizados con Ollama o LM Studio que optimizan flujos de trabajo con LLMs locales',
       readTime: '9 min de lectura',
@@ -356,6 +361,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Ejecutar un modelo de 70B parámetros localmente requiere 40-48 GB de RAM con cuantización Q4_K_M, algo alcanzable en Macs Apple Silicon con 64 GB de memoria unificada, estaciones de trabajo con 64 GB DDR5, o una GPU NVIDIA de 24 GB combinada con 32 GB de RAM del sistema mediante layer offloading.' },
+            { type: 'plain-terms', text: 'Un modelo de 70B es uno de los tamaños más grandes que puedes ejecutar realmente en casa, y necesita mucha memoria: unos 40-48 GB. El camino más sencillo es un Mac con suficiente memoria unificada, ya que comparte RAM entre CPU y GPU. En un PC, normalmente necesitarás una tarjeta gráfica grande más RAM adicional del sistema para descargar las partes que no caben en la tarjeta.' },
+          ],
           items: [
             'Cuantización Q4_K_M: Llama 3.3 70B requiere ~40 GB de RAM; Qwen3 72B requiere ~43 GB de RAM.',
             '**Hardware nuevo más barato**: Apple Mac mini M5 Pro (64 GB, $1,699, disponible el 22 de sept. de 2026) es la opción nueva con GPU completa más barata para 70B. El Mac mini M6 base ($899) llega solo a 32 GB y no puede ejecutar un modelo 70B.',
@@ -641,10 +650,11 @@ schema: {
       theme: 'Best Models',
       title: 'كيفية تشغيل نماذج ⁨70B⁩ على عتاد المستهلك ⁨2026⁩: الذاكرة وكرت الرسوميات',
       seoTitle: 'نماذج ⁨70B⁩ محليًا: متطلبات ⁨RAM⁩ وإعداد ⁨GPU 2026⁩',
-      intro: 'يتطلب تشغيل نموذج بـ 70B معامل محليًا من 40 إلى 48 GB من الذاكرة مع تكميم Q4_K_M. هذا ممكن على: أجهزة Mac بمعالج Apple Silicon مع 64 GB من الذاكرة الموحدة، أو محطات عمل بذاكرة 64 GB DDR5، أو أجهزة تجمع بين GPU من NVIDIA بسعة 24 GB و32 GB من ذاكرة النظام باستخدام layer offloading. في أغسطس 2026، لا يزال Llama 3.3 70B وQwen3 72B النموذجين الرئيسيين من فئة 70B المتاحين.',
+      intro: 'يتطلب تشغيل نموذج بـ 70B معامل محليًا من 40 إلى 48 GB من الذاكرة مع تكميم Q4_K_M. هذا ممكن على: أجهزة Mac بمعالج Apple Silicon مع 64 GB من الذاكرة الموحدة، أو محطات عمل بذاكرة 64 GB DDR5، أو أجهزة تجمع بين GPU من NVIDIA بسعة 24 GB و32 GB من ذاكرة النظام باستخدام layer offloading. لا يزال Llama 3.3 70B وQwen3 72B النموذجين الرئيسيين من فئة 70B المتاحين.',
       metaDescription: '⁨Llama 3.3 70B⁩ يحتاج ⁨40 GB RAM⁩ عند ⁨Q4⁩_⁨K⁩_⁨M. M5 Max⁩ يبلغ ⁨20⁩–⁨30 tok/s⁩؛ ⁨RTX 4090⁩ مع ⁨layer offloading⁩ يبلغ ⁨10⁩–⁨18 tok/s⁩. دليل عتاد المستهلك ⁨2026⁩.',
       heroImage: '/images/70b-models-consumer-hardware-hardware-comparison-hero-ar.webp',
       publishDate: '2026-04-04',
+      dateModified: '2026-08-28',
       leadAnswerBlock: '**يتطلب تشغيل نموذج بـ 70B معامل محليًا من 40 إلى 48 GB من الذاكرة مع تكميم Q4_K_M. هذا ممكن على: أجهزة Mac بمعالج Apple Silicon مع 64 GB من الذاكرة الموحدة، أو محطات عمل بذاكرة 64 GB DDR5، أو أجهزة تجمع بين GPU من NVIDIA بسعة 24 GB و32 GB من ذاكرة النظام باستخدام layer offloading.**',
       audience: 'المطورون المعتادون على Ollama أو LM Studio الذين يحسّنون تدفقات العمل مع نماذج LLM المحلية',
       readTime: '9 دقائق للقراءة',
@@ -669,6 +679,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'يتطلب تشغيل نموذج بـ 70B معامل محلياً 40-48 GB من الذاكرة مع تكميم Q4_K_M، وهو أمر ممكن على أجهزة Mac بمعالج Apple Silicon مع 64 GB من الذاكرة الموحدة، أو محطات عمل بذاكرة 64 GB DDR5، أو GPU من NVIDIA بسعة 24 GB مع 32 GB من ذاكرة النظام باستخدام layer offloading.' },
+            { type: 'plain-terms', text: 'نموذج 70B هو من أكبر الأحجام التي يمكنك تشغيلها فعلياً في المنزل، ويحتاج إلى ذاكرة كبيرة -- نحو 40-48 GB. أسهل طريقة هي استخدام جهاز Mac بذاكرة موحدة كافية، لأنه يشارك الذاكرة بين المعالج وGPU. على حاسوب شخصي، ستحتاج عادةً إلى بطاقة رسومات كبيرة بالإضافة إلى ذاكرة نظام إضافية لتفريغ الأجزاء التي لا تتسع على البطاقة.' },
+          ],
           items: [
             'تكميم Q4_K_M: يتطلب Llama 3.3 70B نحو 40 GB من الذاكرة؛ ويتطلب Qwen3 72B نحو 43 GB من الذاكرة.',
             '**أرخص عتاد جديد**: Apple Mac mini M5 Pro (64 GB، 1,699 دولار، متوفر في 22 سبتمبر 2026) هو أرخص خيار جديد بـ GPU كاملة لـ 70B. أما Mac mini M6 الأساسي (899 دولار) فيصل فقط إلى 32 GB ولا يمكنه تشغيل نموذج 70B.',
@@ -957,10 +971,11 @@ schema: {
       theme: 'Best Models',
       title: 'Como rodar LLMs de 70B em hardware de consumo 2026: RAM e GPU',
       seoTitle: '70B em hardware de consumo 2026: guia de RAM e GPU',
-      intro: 'Rodar um modelo de 70B parâmetros localmente requer 40-48 GB de RAM com quantização Q4_K_M. Isso é possível em: Macs Apple Silicon com 64 GB de memória unificada, estações de trabalho com 64 GB DDR5, ou máquinas que combinam uma GPU NVIDIA de 24 GB com 32 GB de RAM do sistema usando layer offloading. Em agosto de 2026, Llama 3.3 70B e Qwen3 72B continuam sendo os dois principais modelos 70B disponíveis.',
+      intro: 'Rodar um modelo de 70B parâmetros localmente requer 40-48 GB de RAM com quantização Q4_K_M. Isso é possível em: Macs Apple Silicon com 64 GB de memória unificada, estações de trabalho com 64 GB DDR5, ou máquinas que combinam uma GPU NVIDIA de 24 GB com 32 GB de RAM do sistema usando layer offloading. Llama 3.3 70B e Qwen3 72B continuam sendo os dois principais modelos 70B disponíveis.',
       metaDescription: 'Rode Llama 3.3 e Qwen3 70B localmente: requisitos de RAM, NVIDIA vs Apple Silicon, layer offloading e benchmarks. Guia de hardware completo — agosto 2026.',
       heroImage: '/images/70b-models-consumer-hardware-hardware-comparison-hero-pt.webp',
       publishDate: '2026-04-04',
+      dateModified: '2026-08-28',
       leadAnswerBlock: '**Rodar um modelo de 70B parâmetros localmente requer 40-48 GB de RAM com quantização Q4_K_M. Isso é possível em: Macs Apple Silicon com 64 GB de memória unificada, estações de trabalho com 64 GB DDR5, ou máquinas que combinam uma GPU NVIDIA de 24 GB com 32 GB de RAM do sistema usando layer offloading.**',
       audience: 'Desenvolvedores familiarizados com Ollama ou LM Studio que otimizam fluxos de trabalho com LLMs locais',
       readTime: '9 min de leitura',
@@ -985,6 +1000,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Rodar um modelo de 70B parâmetros localmente requer 40-48 GB de RAM com quantização Q4_K_M, algo possível em Macs Apple Silicon com 64 GB de memória unificada, estações de trabalho com 64 GB DDR5, ou uma GPU NVIDIA de 24 GB combinada com 32 GB de RAM do sistema usando layer offloading.' },
+            { type: 'plain-terms', text: 'Um modelo de 70B é um dos maiores tamanhos que você pode realmente rodar em casa, e ele exige bastante memória -- cerca de 40-48 GB. O caminho mais simples é um Mac com memória unificada suficiente, já que ela é compartilhada entre CPU e GPU. Em um PC, você geralmente vai precisar de uma placa de vídeo grande mais RAM extra do sistema para descarregar as partes que não cabem na placa.' },
+          ],
           items: [
             'Quantização Q4_K_M: Llama 3.3 70B requer ~40 GB de RAM; Qwen3 72B requer ~43 GB de RAM.',
             '**Hardware novo mais barato**: Apple Mac mini M5 Pro (64 GB, US$ 1.699, disponível em 22 de setembro de 2026) é a opção nova com GPU completa mais barata para 70B. O Mac mini M6 base (US$ 899) chega apenas a 32 GB e não roda um modelo 70B.',
@@ -1269,7 +1288,7 @@ schema: {
   theme: 'Beste Modelle',
   title: 'So führst du 70B Local LLM Modelle auf Consumer Hardware 2026 aus',
   seoTitle: '70B Modelle auf Consumer-Hardware 2026: RAM & GPU',
-  intro: 'Ein 70B Parameter Modell lokal auszuführen benötigt 40-48 GB RAM bei Q4_K_M Quantisierung. Dies ist erreichbar auf: Apple Silicon Macs mit 64 GB unified memory, Workstations mit 64 GB DDR5, oder Maschinen, die eine 24 GB NVIDIA GPU mit 32 GB System RAM kombinieren, unter Verwendung von Layer Offloading. Stand August 2026 sind Llama 3.3 70B und Qwen3 72B weiterhin die beiden primären 70B Modelle verfügbar.',
+  intro: 'Ein 70B Parameter Modell lokal auszuführen benötigt 40-48 GB RAM bei Q4_K_M Quantisierung. Dies ist erreichbar auf: Apple Silicon Macs mit 64 GB unified memory, Workstations mit 64 GB DDR5, oder Maschinen, die eine 24 GB NVIDIA GPU mit 32 GB System RAM kombinieren, unter Verwendung von Layer Offloading. Llama 3.3 70B und Qwen3 72B sind weiterhin die beiden primären verfügbaren 70B Modelle.',
   metaDescription: 'Betreibe Llama 3.3 und Qwen3 70B lokal: RAM-Anforderungen, NVIDIA vs Apple Silicon, Layer-Offloading, Benchmarks. Kompletter Hardware-Leitfaden -- August 2026.',
   heroImage: '/images/70b-models-consumer-hardware-hardware-comparison-hero-de.webp',
   publishDate: '2026-04-04',
@@ -1443,6 +1462,10 @@ schema: {
       id: 'key-takeaways',
 
       isTldr: true,
+      snippetBlocks: [
+        { type: 'one-sentence', text: 'Ein 70B-Parameter-Modell lokal auszuführen benötigt 40-48 GB RAM bei Q4_K_M-Quantisierung -- erreichbar auf Apple-Silicon-Macs mit 64 GB unified memory, Workstations mit 64 GB DDR5, oder einer 24 GB NVIDIA-GPU kombiniert mit 32 GB System-RAM per Layer Offloading.' },
+        { type: 'plain-terms', text: 'Ein 70B-Modell gehört zu den größten Größen, die man realistisch zu Hause ausführen kann, und braucht viel Speicher -- etwa 40-48 GB. Der einfachste Weg ist ein Mac mit ausreichend unified memory, da dieser RAM zwischen CPU und GPU teilt. Bei einem PC braucht man meist eine große Grafikkarte plus zusätzlichen System-RAM, um die Teile auszulagern, die nicht auf die Karte passen.' },
+      ],
       items: [
         'Q4_K_M Quantisierung: Llama 3.3 70B benötigt etwa 40 GB RAM; Qwen3 72B benötigt etwa 43 GB RAM.',
         '**Günstigste neue Hardware**: Apple Mac mini M5 Pro (64 GB, 1.699 $, ab 22. Sept. 2026) ist die günstigste neue Apple-Silicon-Option mit vollständiger GPU für 70B. Der Basis-Mac mini M6 (899 $) hat maximal 32 GB und kann kein 70B Modell ausführen.',
@@ -1621,7 +1644,7 @@ schema: {
   theme: 'Meilleurs modèles',
   title: 'Comment exécuter un modèle LLM 70B local sur du matériel grand public en 2026',
   seoTitle: 'Modèles 70B sur Matériel Grand Public 2026: Guide',
-  intro: 'Exécuter un modèle 70B localement nécessite 40-48 Go de RAM en quantification Q4_K_M. C\'est réalisable sur : les Mac Apple Silicon avec 64 Go de mémoire unifiée, les stations de travail avec 64 Go DDR5, ou les machines combinant un GPU NVIDIA 24 Go avec 32 Go de RAM système via déchargement de couches. En août 2026, Llama 3.3 70B et Qwen3 72B restent les deux principaux modèles 70B disponibles.',
+  intro: 'Exécuter un modèle 70B localement nécessite 40-48 Go de RAM en quantification Q4_K_M. C\'est réalisable sur : les Mac Apple Silicon avec 64 Go de mémoire unifiée, les stations de travail avec 64 Go DDR5, ou les machines combinant un GPU NVIDIA 24 Go avec 32 Go de RAM système via déchargement de couches. Llama 3.3 70B et Qwen3 72B restent les deux principaux modèles 70B disponibles.',
   metaDescription: 'Exécutez Llama 3.3 et Qwen3 70B localement : exigences RAM, NVIDIA vs Apple Silicon, déchargement de couches, benchmarks. Guide matériel complet -- août 2026.',
   heroImage: '/images/70b-models-consumer-hardware-hardware-comparison-hero-fr.webp',
   publishDate: '2026-04-04',
@@ -1646,6 +1669,10 @@ schema: {
       id: 'key-takeaways',
 
       isTldr: true,
+      snippetBlocks: [
+        { type: 'one-sentence', text: "Exécuter un modèle 70B localement nécessite 40-48 Go de RAM en quantification Q4_K_M, réalisable sur des Mac Apple Silicon avec 64 Go de mémoire unifiée, des stations de travail avec 64 Go DDR5, ou un GPU NVIDIA 24 Go combiné à 32 Go de RAM système via déchargement de couches." },
+        { type: 'plain-terms', text: "Un modèle 70B est l'une des plus grandes tailles qu'on puisse réellement faire tourner chez soi, et il exige beaucoup de mémoire -- environ 40-48 Go. Le chemin le plus simple est un Mac avec assez de mémoire unifiée, puisqu'elle est partagée entre le CPU et le GPU. Sur un PC, il faut généralement une grosse carte graphique plus de la RAM système supplémentaire pour décharger les parties qui ne tiennent pas sur la carte." },
+      ],
       items: [
         'Quantification Q4_K_M : Llama 3.3 70B nécessite ~40 Go RAM ; Qwen3 72B nécessite ~43 Go RAM.',
         '**Matériel neuf le moins cher** : Mac mini M5 Pro (64 Go, 1 699 $, disponible le 22 sept. 2026) est l\'option neuve la moins chère avec GPU complet pour 70B. Le Mac mini M6 de base (899 $) plafonne à 32 Go et ne peut pas exécuter un modèle 70B.',
@@ -1830,7 +1857,7 @@ schema: {
       url: 'https://www.promptquorum.com/fr/local-llms/70b-models-consumer-hardware',
       inLanguage: 'fr',
       datePublished: '2026-04-04',
-      dateModified: '2026-08-26',
+      dateModified: '2026-08-28',
       'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
       about: [
@@ -1882,7 +1909,7 @@ schema: {
   theme: 'Best Models',
   title: '2026年：コンシューマーハードウェアで70Bローカルモデルを実行する方法',
   seoTitle: '2026年：コンシューマーハードで70B実行ガイド',
-  intro: 'ローカルで70Bパラメータモデルを実行するには、Q4_K_M量化で40～48GBのRAMが必要です。これは以下のハードウェアで実現可能です：64GB統合メモリを持つApple Silicon Mac、64GB DDR5を搭載したワークステーション、またはレイヤーオフロードを使用して24GB NVIDIA GPUと32GB システムRAMを組み合わせたマシン。2026年8月時点でも、Llama 3.3 70BとQwen3 72Bは引き続き利用可能な主要な70Bモデルです。',
+  intro: 'ローカルで70Bパラメータモデルを実行するには、Q4_K_M量化で40～48GBのRAMが必要です。これは以下のハードウェアで実現可能です：64GB統合メモリを持つApple Silicon Mac、64GB DDR5を搭載したワークステーション、またはレイヤーオフロードを使用して24GB NVIDIA GPUと32GB システムRAMを組み合わせたマシン。Llama 3.3 70BとQwen3 72Bは引き続き利用可能な主要な70Bモデルです。',
   metaDescription: 'Llama 3.3とQwen3 70Bモデルをローカルで実行：RAM要件、NVIDIAとApple Siliconの比較、レイヤーオフロード、ベンチマーク。完全なハードウェアガイド -- 2026年8月。',
   heroImage: '/images/70b-models-consumer-hardware-hardware-comparison-hero-ja.webp',
   publishDate: '2026-04-04',
@@ -1908,7 +1935,7 @@ schema: {
     headline: '2026年：コンシューマーハードウェアで70Bローカルモデルを実行する方法',
     description: '70B ローカルLLMをコンシューマーハードウェアで実行：RAM要件、GPUオプション、レイヤーオフロード、量化 -- 2026年8月。',
     datePublished: '2026-04-04',
-    dateModified: '2026-08-26',
+    dateModified: '2026-08-28',
     url: 'https://www.promptquorum.com/ja/local-llms/70b-models-consumer-hardware',
     inLanguage: 'ja',
     author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
@@ -1973,6 +2000,10 @@ schema: {
       id: 'key-takeaways',
 
       isTldr: true,
+      snippetBlocks: [
+        { type: 'one-sentence', text: 'ローカルで70Bパラメータモデルを実行するには、Q4_K_M量子化で40〜48GBのRAMが必要で、64GB統合メモリを持つApple Silicon Mac、64GB DDR5を搭載したワークステーション、またはレイヤーオフロードを使用した24GB NVIDIA GPUと32GBシステムRAMの組み合わせで実現可能です。' },
+        { type: 'plain-terms', text: '70Bモデルは自宅で現実的に動かせる中でも最大級のサイズで、大量のメモリ（約40〜48GB）が必要です。最も簡単な方法は、CPUとGPUでメモリを共有できる十分な統合メモリを持つMacを使うことです。PCの場合、通常は大きなグラフィックカードに加えて、カードに収まらない部分をオフロードするための追加のシステムRAMが必要になります。' },
+      ],
       items: [
         'Q4_K_M 量化：Llama 3.3 70B は ~40GB RAM が必要。Qwen3 72B は ~43GB RAM が必要です。',
         '**最も安価な新品ハードウェア**：Apple Mac mini M5 Pro（64GB、$1,699、2026年9月22日発売）は70B向けの最も安価な新品フルGPUオプションです。基本モデルのMac mini M6（$899）は最大32GBまでで、70Bモデルは実行できません。',
@@ -2179,11 +2210,11 @@ schema: {
   theme: '最佳模型',
   title: '如何在消费级硬件上运行 70B 本地大模型 (2026)',
   seoTitle: '2026消费级硬件运行70B完整指南',
-  intro: '在 Q4_K_M 量化下，运行 70B 参数模型需要 40-48 GB 内存。这可以通过以下方式实现：1) 配置 64 GB 统一内存的 Apple Silicon Mac；2) 配置 64 GB DDR5 的工作站；3) 通过层卸载技术结合 24 GB NVIDIA GPU 与 32 GB 系统内存的机器。截至 2026 年 8 月，Llama 3.3 70B 和 Qwen3 72B 仍是两款主要可用的 70B 模型。',
+  intro: '在 Q4_K_M 量化下，运行 70B 参数模型需要 40-48 GB 内存。这可以通过以下方式实现：1) 配置 64 GB 统一内存的 Apple Silicon Mac；2) 配置 64 GB DDR5 的工作站；3) 通过层卸载技术结合 24 GB NVIDIA GPU 与 32 GB 系统内存的机器。Llama 3.3 70B 和 Qwen3 72B 仍是两款主要可用的 70B 模型。',
   metaDescription: '本地运行Llama 3.3和Qwen3 70B模型：RAM需求、NVIDIA与Apple Silicon对比、层卸载技术、基准测试。完整硬件部署指南 -- 2026年8月。',
   heroImage: '/images/70b-models-consumer-hardware-hardware-comparison-hero-zh.webp',
   publishDate: '2026-04-04',
-  dateModified: '2026-08-26',
+  dateModified: '2026-08-28',
   readTime: '9 分钟阅读',
   educationalLevel: 'Intermediate',
   primaryTerm: '70B 本地大模型消费级硬件',
@@ -2204,6 +2235,10 @@ schema: {
       id: 'key-takeaways',
 
       isTldr: true,
+      snippetBlocks: [
+        { type: 'one-sentence', text: '在Q4_K_M量化下本地运行70B参数模型需要40-48 GB内存，可在配备64 GB统一内存的Apple Silicon Mac、配备64 GB DDR5的工作站，或搭配层卸载技术的24 GB NVIDIA GPU加32 GB系统内存的设备上实现。' },
+        { type: 'plain-terms', text: '70B模型是在家中实际可运行的最大规格之一，需要大量内存——大约40-48 GB。最简单的方式是使用统一内存足够大的Mac，因为它在CPU和GPU之间共享内存。在PC上，通常需要一块大显卡再加上额外的系统内存，用于卸载显卡装不下的部分。' },
+      ],
       numberedItems: [
         'Q4_K_M 量化：Llama 3.3 70B 需要约 40 GB 内存；Qwen3 72B 需要约 43 GB 内存。',
         '最便宜的全新硬件：Apple Mac mini M5 Pro (64 GB，$1,699，2026 年 9 月 22 日发售) 是运行 70B 模型最便宜的全新完整 GPU 选项。基础款 Mac mini M6 ($899) 最高仅支持 32 GB，无法运行 70B 模型。',
@@ -2410,7 +2445,7 @@ schema: {
       name: 'PromptQuorum',
     },
     datePublished: '2026-04-04',
-    dateModified: '2026-08-26',
+    dateModified: '2026-08-28',
     inLanguage: 'zh',
     wordCount: 2800,
     educationalLevel: 'Intermediate',
@@ -2568,11 +2603,11 @@ schema: {
     theme: '최고 모델',
     title: '2026년 소비자 하드웨어에서 70B LLM 실행하기: RAM 및 GPU 설정',
     seoTitle: '2026년 소비자 하드웨어 70B 실행 가이드: RAM, GPU 설정',
-    intro: '70B 파라미터 모델을 로컬에서 실행하려면 Q4_K_M 양자화 기준으로 40~48GB의 RAM이 필요합니다. 이는 다음 환경에서 가능합니다: 64GB 통합 메모리를 갖춘 Apple Silicon Mac, 64GB DDR5가 장착된 워크스테이션, 또는 레이어 오프로딩을 사용하여 24GB NVIDIA GPU와 32GB 시스템 RAM을 결합한 시스템. 2026년 8월 기준으로도 Llama 3.3 70B와 Qwen3 72B는 여전히 사용 가능한 주요 70B 모델입니다.',
+    intro: '70B 파라미터 모델을 로컬에서 실행하려면 Q4_K_M 양자화 기준으로 40~48GB의 RAM이 필요합니다. 이는 다음 환경에서 가능합니다: 64GB 통합 메모리를 갖춘 Apple Silicon Mac, 64GB DDR5가 장착된 워크스테이션, 또는 레이어 오프로딩을 사용하여 24GB NVIDIA GPU와 32GB 시스템 RAM을 결합한 시스템. Llama 3.3 70B와 Qwen3 72B는 여전히 사용 가능한 주요 70B 모델입니다.',
     metaDescription: 'Llama 3.3 및 Qwen3 70B 모델 로컬 실행: RAM 요구사항, NVIDIA vs Apple Silicon, 레이어 오프로딩, 벤치마크. 완전한 하드웨어 가이드 — 2026년 8월.',
     heroImage: '/images/70b-models-consumer-hardware-hardware-comparison-hero-ko.webp',
     publishDate: '2026-04-04',
-    dateModified: '2026-08-26',
+    dateModified: '2026-08-28',
     lastFactChecked: '2026-08-26',
     leadAnswerBlock: '70B 파라미터 모델을 로컬에서 실행하려면 Q4_K_M 양자화 기준으로 40~48GB의 RAM이 필요합니다. 이는 64GB 통합 메모리를 갖춘 Apple Silicon Mac, 64GB DDR5 워크스테이션, 또는 레이어 오프로딩을 통해 24GB NVIDIA GPU와 32GB 시스템 RAM을 결합한 시스템에서 가능합니다.',
     audience: 'Ollama 또는 LM Studio에 익숙하며 로컬 LLM 워크플로우를 최적화하는 개발자',
@@ -2599,6 +2634,10 @@ schema: {
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: '70B 파라미터 모델을 로컬에서 실행하려면 Q4_K_M 양자화 기준으로 40~48GB의 RAM이 필요하며, 이는 64GB 통합 메모리를 갖춘 Apple Silicon Mac, 64GB DDR5가 장착된 워크스테이션, 또는 레이어 오프로딩을 사용하는 24GB NVIDIA GPU와 32GB 시스템 RAM 조합에서 가능합니다.' },
+          { type: 'plain-terms', text: '70B 모델은 집에서 현실적으로 실행할 수 있는 가장 큰 규모 중 하나이며, 약 40~48GB의 상당한 메모리가 필요합니다. 가장 쉬운 방법은 CPU와 GPU 간에 메모리를 공유하는 통합 메모리가 충분한 Mac을 사용하는 것입니다. PC에서는 보통 큰 그래픽 카드에 더해 카드에 다 들어가지 않는 부분을 오프로드할 추가 시스템 RAM이 필요합니다.' },
+        ],
         items: [
           'Q4_K_M 양자화: Llama 3.3 70B는 약 40GB RAM이 필요하고, Qwen3 72B는 약 43GB RAM이 필요합니다.',
           '**가장 저렴한 신품 하드웨어**: Apple Mac mini M5 Pro (64GB, $1,699, 2026년 9월 22일 출시)는 70B를 위한 가장 저렴한 신품 완전 GPU 옵션입니다. 기본형 Mac mini M6 ($899)는 최대 32GB로 70B 모델을 실행할 수 없습니다.',
