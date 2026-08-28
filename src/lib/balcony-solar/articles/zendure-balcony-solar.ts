@@ -136,7 +136,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'Die SolarFlow-Produktpalette umfasst mehrere Hardware-Generationen, darunter Hub 1200, Hub 2000, Hyper 2000, Ace 1500 sowie das neuere SolarFlow 800 Pro. Die Akkukapazität pro Einheit wird offiziell von Zendure angegeben; mehrere Modelle lassen sich koppeln, um eine höhere Gesamtkapazität zu erreichen, statt nur als feste Einzelsysteme verkauft zu werden. Leser, die konkrete Kapazitäts- oder Leistungswerte im Vergleich zu Anker oder EcoFlow suchen, finden im Vergleich EcoFlow vs. Anker vs. Zendure eine Gegenüberstellung.',
       },
       markets: {
-        title: 'Bestätigte Märkte (Mix-Serie, April 2026)',
+        id: 'bestätigte-märkte-mix-serie-april-2026',
+        title: 'Bestätigte Märkte (Mix-Serie)',
         image: '/images/zendure-balcony-solar-markets-en.svg',
         imageCaption: 'Märkte direkt aus Zendures eigener Launch-Pressemitteilung bestätigt.',
         content: 'Zendures Märkte der Mix-Serie wurden im April 2026 direkt in der eigenen Launch-Pressemitteilung des Unternehmens bestätigt. Anders als Anker SOLIX, dessen Abwesenheit vom US-Markt bestätigt ist, gilt Zendure nicht als bestätigt abwesend vom US-Markt – seine SolarFlow-Linie wird in den Markenvergleichen dieser Seite neben EcoFlow als eine von zwei US-tauglichen Balkonkraftwerk-Marken behandelt. Wie bei allen in Shenzhen fertigenden Balkonkraftwerk-Marken unterliegen Zendures Komponentenkosten derselben im April 2026 erfolgten Abschaffung der chinesischen Exportsteuerrückerstattung für Photovoltaik-Komponenten, die unabhängig vom Ort der Endmontage auch für Anker und EcoFlow gilt.',
@@ -218,7 +219,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'La gamme SolarFlow couvre plusieurs générations matérielles, dont les Hub 1200, Hub 2000, Hyper 2000, Ace 1500 et le plus récent SolarFlow 800 Pro. La capacité de batterie par unité est indiquée officiellement par Zendure, et plusieurs modèles peuvent être empilés pour atteindre une capacité totale plus élevée plutôt que d\'être vendus uniquement comme systèmes à unité fixe unique. Les lecteurs recherchant des chiffres précis de capacité ou de puissance face à Anker ou EcoFlow peuvent consulter la comparaison EcoFlow vs. Anker vs. Zendure pour un comparatif détaillé.',
       },
       markets: {
-        title: 'Marchés confirmés (série Mix, avril 2026)',
+        id: 'marchés-confirmés-série-mix-avril-2026',
+        title: 'Marchés confirmés (série Mix)',
         image: '/images/zendure-balcony-solar-markets-en.svg',
         imageCaption: 'Marchés confirmés directement dans le communiqué de lancement de Zendure.',
         content: 'Les marchés de la série Mix de Zendure ont été confirmés directement dans le communiqué de lancement de l\'entreprise en avril 2026. Contrairement à Anker SOLIX, dont l\'absence du marché américain est confirmée, l\'absence de Zendure du marché américain n\'est pas confirmée — sa gamme SolarFlow est traitée, aux côtés d\'EcoFlow, comme l\'une des deux marques de batteries de balcon viables aux États-Unis dans les comparaisons de marques de ce site. Comme pour toutes les marques de solaire de balcon fabriquant à Shenzhen, les coûts des composants de Zendure sont soumis à la même suppression, en avril 2026, du remboursement de taxe à l\'exportation sur les composants photovoltaïques chinois, qui s\'applique aussi à Anker et EcoFlow quel que soit le lieu de l\'assemblage final.',
@@ -300,7 +302,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'SolarFlowラインナップは、Hub 1200、Hub 2000、Hyper 2000、Ace 1500、そして新しいSolarFlow 800 Proを含む複数のハードウェア世代にわたります。ユニットごとのバッテリー容量はZendureが公式に発表しており、複数のモデルを連結することで、固定の単一ユニットシステムとしてのみ販売されるのではなく、より高い合計容量に到達できます。AnkerやEcoFlowとの具体的な容量・出力数値の比較を求める読者は、EcoFlow対Anker対Zendureの比較記事を参照してください。',
       },
       markets: {
-        title: '確認済み市場(Mixシリーズ、2026年4月)',
+        id: '確認済み市場-mixシリーズ-2026年4月',
+        title: '確認済み市場(Mixシリーズ)',
         image: '/images/zendure-balcony-solar-markets-en.svg',
         imageCaption: 'Zendure自身の発売プレスリリースで直接確認された市場。',
         content: 'ZendureのMixシリーズの市場は、2026年4月の同社自身の発売プレスリリースで直接確認されています。米国市場からの不在が確認されているAnker SOLIXとは異なり、Zendureは米国市場からの不在が確認されているわけではなく、本サイトのブランド比較ではSolarFlowラインはEcoFlowと並んで米国で成立し得る2つのベランダバッテリーブランドの一つとして扱われています。深セン製造の他のベランダ太陽光発電ブランドと同様、Zendureの部品コストも、最終組立の場所にかかわらずAnkerやEcoFlowにも適用される、2026年4月に実施された中国の太陽光発電部品向け輸出税還付の廃止の影響を受けます。',
@@ -382,7 +385,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'SolarFlow产品线涵盖多个硬件世代,包括Hub 1200、Hub 2000、Hyper 2000、Ace 1500以及较新的SolarFlow 800 Pro。单机电池容量由Zendure官方列出;多款机型可以堆叠以达到更高的总容量,而非仅作为固定的单机系统销售。希望比较Zendure与Anker或EcoFlow具体容量或输出数值的读者,可参阅EcoFlow对比Anker对比Zendure一文中的详细对比。',
       },
       markets: {
-        title: '已确认市场(Mix系列,2026年4月)',
+        id: '已确认市场-mix系列-2026年4月',
+        title: '已确认市场(Mix系列)',
         image: '/images/zendure-balcony-solar-markets-en.svg',
         imageCaption: '市场信息直接来自Zendure官方发布新闻稿的确认。',
         content: 'Zendure Mix系列的市场信息已于2026年4月在公司官方发布新闻稿中直接确认。与已确认缺席美国市场的Anker SOLIX不同,Zendure并未被确认缺席美国市场——在本站的品牌对比中,其SolarFlow产品线与EcoFlow一同被视为两个可在美国销售的阳台电池品牌之一。与所有在深圳生产的阳台光伏品牌一样,Zendure的部件成本也受到2026年4月中国光伏部件出口退税取消的影响,无论最终组装地点或品牌为何,这一影响同样适用于Anker和EcoFlow。',
@@ -464,7 +468,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'La gama SolarFlow abarca varias generaciones de hardware, incluidos el Hub 1200, el Hub 2000, el Hyper 2000, el Ace 1500 y el más reciente SolarFlow 800 Pro. La capacidad de batería por unidad se indica oficialmente por Zendure, y varios modelos se pueden apilar para alcanzar una capacidad total mayor, en lugar de venderse únicamente como sistemas de unidad fija. Los lectores que busquen cifras concretas de capacidad o potencia frente a Anker o EcoFlow pueden consultar la comparación EcoFlow vs. Anker vs. Zendure para un desglose detallado.',
       },
       markets: {
-        title: 'Mercados confirmados (serie Mix, abril de 2026)',
+        id: 'mercados-confirmados-serie-mix-abril-de-2026',
+        title: 'Mercados confirmados (serie Mix)',
         image: '/images/zendure-balcony-solar-markets-en.svg',
         imageCaption: 'Mercados confirmados directamente en el comunicado de lanzamiento de Zendure.',
         content: 'Los mercados de la serie Mix de Zendure se confirmaron directamente en el comunicado de lanzamiento de la propia empresa en abril de 2026. A diferencia de Anker SOLIX, cuya ausencia del mercado estadounidense está confirmada, no se ha confirmado que Zendure esté ausente de EE. UU. — su línea SolarFlow se trata, junto con EcoFlow, como una de las dos marcas de baterías de balcón viables en Estados Unidos en las comparaciones de marcas de este sitio. Al igual que todas las marcas de solar de balcón que fabrican en Shenzhen, los costos de componentes de Zendure están sujetos a la misma eliminación, en abril de 2026, del reembolso de impuestos de exportación de componentes fotovoltaicos chinos, que también se aplica a Anker y EcoFlow sin importar dónde ocurra el ensamblaje final.',
@@ -546,7 +551,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'A linha SolarFlow abrange várias gerações de hardware, incluindo o Hub 1200, o Hub 2000, o Hyper 2000, o Ace 1500 e o mais recente SolarFlow 800 Pro. A capacidade de bateria por unidade é listada oficialmente pela Zendure, e vários modelos podem ser empilhados para alcançar uma capacidade total maior, em vez de serem vendidos apenas como sistemas de unidade fixa única. Leitores que buscam números concretos de capacidade ou potência frente à Anker ou à EcoFlow podem consultar a comparação EcoFlow vs. Anker vs. Zendure para um comparativo detalhado.',
       },
       markets: {
-        title: 'Mercados confirmados (série Mix, abril de 2026)',
+        id: 'mercados-confirmados-série-mix-abril-de-2026',
+        title: 'Mercados confirmados (série Mix)',
         image: '/images/zendure-balcony-solar-markets-en.svg',
         imageCaption: 'Mercados confirmados diretamente no comunicado de lançamento da própria Zendure.',
         content: 'Os mercados da série Mix da Zendure foram confirmados diretamente no comunicado de lançamento da própria empresa em abril de 2026. Diferente da Anker SOLIX, cuja ausência do mercado americano é confirmada, não há confirmação de que a Zendure esteja ausente dos EUA — sua linha SolarFlow é tratada, junto com a EcoFlow, como uma das duas marcas de baterias de varanda viáveis nos Estados Unidos nas comparações de marcas deste site. Assim como todas as marcas de energia solar de varanda que fabricam em Shenzhen, os custos de componentes da Zendure também estão sujeitos à mesma remoção, em abril de 2026, do reembolso de imposto de exportação sobre componentes fotovoltaicos chineses, que se aplica igualmente à Anker e à EcoFlow, independentemente de onde ocorre a montagem final.',
@@ -710,7 +716,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: 'SolarFlow 라인업은 Hub 1200, Hub 2000, Hyper 2000, Ace 1500, 그리고 최신 모델인 SolarFlow 800 Pro를 포함한 여러 하드웨어 세대에 걸쳐 있습니다. 유닛별 배터리 용량은 Zendure가 공식적으로 표기하며, 여러 모델을 연결하면 고정된 단일 유닛 시스템으로만 판매되는 것이 아니라 더 높은 총 용량에 도달할 수 있습니다. Anker나 EcoFlow와의 구체적인 용량 또는 출력 수치 비교를 원하는 독자는 EcoFlow vs. Anker vs. Zendure 비교 글에서 상세 비교를 확인할 수 있습니다.',
       },
       markets: {
-        title: '확인된 시장(Mix 시리즈, 2026년 4월)',
+        id: '확인된-시장-mix-시리즈-2026년-4월',
+        title: '확인된 시장(Mix 시리즈)',
         image: '/images/zendure-balcony-solar-markets-en.svg',
         imageCaption: 'Zendure 자체 출시 보도자료에서 직접 확인된 시장입니다.',
         content: 'Zendure의 Mix 시리즈 시장은 2026년 4월 회사 자체 출시 보도자료에서 직접 확인되었습니다. 미국 시장 부재가 확인된 Anker SOLIX와 달리 Zendure는 미국 시장 부재가 확인되지 않았으며, 이 사이트의 브랜드 비교에서 SolarFlow 라인은 EcoFlow와 함께 미국에서 성립 가능한 두 발코니 배터리 브랜드 중 하나로 다뤄집니다. 선전에서 제조하는 다른 모든 발코니 태양광 브랜드와 마찬가지로, Zendure의 부품 비용 역시 2026년 4월 시행된 중국 태양광 부품 수출세 환급 폐지의 영향을 받으며, 이는 최종 조립 위치와 무관하게 Anker와 EcoFlow에도 동일하게 적용됩니다.',

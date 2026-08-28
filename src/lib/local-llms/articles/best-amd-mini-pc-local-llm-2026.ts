@@ -200,7 +200,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       verdictBox: {
         id: 'verdict-picks',
-        title: 'Our Picks — June 2026',
+        title: 'Our Picks',
         content: 'Four distinct winners for four buyer profiles.',
         callouts: [
           { type: '🥇 BEST OVERALL: Minisforum MS-A2', text: '$1,599 · 96GB · Best balance of RAM, build quality, and price. Runs Llama 3.3 70B comfortably. [View on Minisforum →](https://store.minisforum.com)' },
@@ -240,7 +240,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'comparison-table': {
         id: 'comparison-table',
-        title: 'Best AMD Mini PC for Local LLM — Comparison Table (June 2026)',
+        title: 'Best AMD Mini PC for Local LLM — Comparison Table',
         note: 'Pricing verified from official brand stores May 2026. Current rates may differ.',
         columns: ['Mini PC', 'CPU', 'iGPU', 'RAM', 'NPU', 'Price', 'Status'],
         rows: [
@@ -389,7 +389,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       benchmarks: {
         id: 'benchmarks',
-        title: 'Performance Benchmarks (June 2026)',
+        title: 'Performance Benchmarks',
         content: 'Benchmark results from Ollama on Ubuntu 24.04 with ROCm 6.2+ and HSA_OVERRIDE_GFX_VERSION=11.0.0. Actual performance varies by cooling and model quantization.',
         items: [
           'Llama 3.1 8B (Q4_K_M): Minisforum/Beelink/AOOSTAR ~45–55 tok/s. GMKtec EVO-X2 ~40 tok/s.',
@@ -705,7 +705,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       verdictBox: {
         id: 'verdict-picks',
-        title: 'Nuestras Recomendaciones — Mayo 2026',
+        title: 'Nuestras Recomendaciones',
         content: 'Cuatro ganadores para cuatro perfiles de comprador.',
         callouts: [
           { type: '🥇 MEJOR GENERAL: Minisforum MS-A2', text: '$1.599 · 96 GB · Mejor balance de RAM, calidad de construcción y precio. Ejecuta Llama 3.3 70B sin problemas. [Ver en Minisforum →](https://store.minisforum.com)' },
@@ -745,7 +745,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'comparison-table': {
         id: 'comparison-table',
-        title: 'Tabla Comparativa de Mini PCs AMD (Mayo 2026)',
+        title: 'Tabla Comparativa de Mini PCs AMD',
         note: 'Precios verificados en tiendas oficiales de las marcas en mayo 2026. Los precios pueden variar según tu país.',
         columns: ['Mini PC', 'CPU', 'iGPU', 'RAM', 'NPU', 'Precio', 'Estado'],
         rows: [
@@ -894,7 +894,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       benchmarks: {
         id: 'benchmarks',
-        title: 'Benchmarks de Rendimiento (Estimados, Mayo 2026)',
+        title: 'Benchmarks de Rendimiento (Estimados)',
         content: 'Los datos de benchmarks reales aún son escasos para estos mini PCs nuevos. A continuación, estimaciones basadas en los benchmarks de referencia del Ryzen AI Max+ 395. El rendimiento real varía según la refrigeración, el sistema operativo y la precisión del modelo.',
         items: [
           'Llama 3.1 8B (Q4_K_M): Minisforum/Beelink/AOOSTAR ~45–55 tok/s. GMKtec EVO-X2 ~40 tok/s.',
@@ -1240,7 +1240,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       verdictBox: {
         id: 'verdict-picks',
-        title: 'توصياتنا — مايو 2026',
+        title: 'توصياتنا',
         content: 'أربعة فائزين لأربعة أنماط من المشترين.',
         callouts: [
           { type: '🥇 الأفضل عموماً: Minisforum MS-A2', text: '1,599 دولار · 96 GB · أفضل توازن بين الذاكرة وجودة التصنيع والسعر. يشغّل Llama 3.3 70B دون مشاكل. [اعرضه على Minisforum →](https://store.minisforum.com)' },
@@ -1280,7 +1280,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'comparison-table': {
         id: 'comparison-table',
-        title: 'جدول مقارنة أجهزة الحاسوب المصغرة AMD (مايو 2026)',
+        title: 'جدول مقارنة أجهزة الحاسوب المصغرة AMD',
         note: 'تم التحقق من الأسعار في المتاجر الرسمية للعلامات التجارية في مايو 2026. قد تختلف الأسعار حسب بلدك.',
         columns: ['الحاسوب المصغر', 'CPU', 'iGPU', 'RAM', 'NPU', 'السعر', 'الحالة'],
         rows: [
@@ -1768,7 +1768,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       verdictBox: {
         id: 'verdict-picks',
-        title: 'Nossas Recomendações -- Maio 2026',
+        title: 'Nossas Recomendações',
         content: 'Quatro vencedores para quatro perfis de comprador.',
         callouts: [
           { type: '🥇 MELHOR GERAL: Minisforum MS-A2', text: 'US$ 1.599 · 96 GB · Melhor equilíbrio de RAM, qualidade de construção e preço. Roda Llama 3.3 70B sem problemas.' },
@@ -1806,7 +1806,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'comparison-table': {
         id: 'comparison-table',
-        title: 'Tabela Comparativa de Mini PCs AMD (Maio 2026)',
+        title: 'Tabela Comparativa de Mini PCs AMD',
         note: 'Preços verificados nas lojas oficiais das marcas em maio de 2026. No varejo brasileiro, preços ficam mais altos devido a impostos de importação.',
         columns: ['Mini PC', 'CPU', 'iGPU', 'RAM', 'NPU', 'Preço', 'Status'],
         rows: [
@@ -1909,7 +1909,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       verdictBox: {
         id: 'verdict-picks',
-        title: 'Unsere Top-Picks – Mai 2026',
+        title: 'Unsere Top-Picks',
         content: 'Vier Gewinner für vier Käufer-Profile.',
         callouts: [
           { type: '🥇 BESTER ALLROUNDER: Minisforum MS-A2', text: '€1.599 · 96GB · Beste Balance aus RAM, Verarbeitung und Preis. Läuft Llama 3.3 70B komfortabel. [Bei Minisforum ansehen →](https://store.minisforum.com)' },
@@ -1935,7 +1935,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'comparison-table': {
         id: 'comparison-table',
-        title: 'AMD Mini-PC Vergleichstabelle (Mai 2026)',
+        title: 'AMD Mini-PC Vergleichstabelle',
         note: 'Preise von offiziellen Brand-Shops Mai 2026 verifiziert. Aktuelle Preise können abweichen.',
         columns: ['Mini PC', 'CPU', 'iGPU', 'RAM', 'NPU', 'Preis', 'Status'],
         rows: [
@@ -2098,7 +2098,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       benchmarks: {
         id: 'benchmarks',
-        title: 'Performance-Benchmarks (Geschätzt Mai 2026)',
+        title: 'Performance-Benchmarks',
         content: 'Echtdaten sind noch selten für diese neuen Mini-PCs. Unten sind Schätzungen basierend auf Ryzen AI Max+ 395 Referenz-Benchmarks. Leistung variiert nach Kühlung, OS und Modellpräzision.',
         items: [
           'Llama 3.1 8B (Q4_K_M): Minisforum/Beelink/AOOSTAR ~45–55 tok/s. GMKtec EVO-X2 ~40 tok/s.',
@@ -2387,7 +2387,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       verdictBox: {
         id: 'verdict-picks',
-        title: 'Nos Choix – Mai 2026',
+        title: 'Nos Choix',
         content: 'Quatre gagnants pour quatre profils d\'acheteurs.',
         callouts: [
           { type: '🥇 MEILLEUR GLOBAL: Minisforum MS-A2', text: '€1.599 · 96 Go · Meilleur équilibre RAM, qualité et prix. Exécute Llama 3.3 70B confortablement. [Voir chez Minisforum →](https://store.minisforum.com)' },
@@ -2413,7 +2413,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'comparison-table': {
         id: 'comparison-table',
-        title: 'Tableau de Comparaison AMD Mini PC (Mai 2026)',
+        title: 'Tableau de Comparaison AMD Mini PC',
         note: 'Prix vérifiés auprès des magasins officiels Mai 2026. Les tarifs actuels peuvent différer.',
         columns: ['Mini PC', 'CPU', 'iGPU', 'RAM', 'NPU', 'Prix', 'Statut'],
         rows: [
@@ -2576,7 +2576,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       benchmarks: {
         id: 'benchmarks',
-        title: 'Benchmarks de Performance (Estimé Mai 2026)',
+        title: 'Benchmarks de Performance',
         content: 'Les données réelles sont encore rares pour ces nouveaux mini PC. Voici des estimations basées sur les benchmarks de référence Ryzen AI Max+ 395. La performance varie selon refroidissement, OS et précision du modèle.',
         items: [
           'Llama 3.1 8B (Q4_K_M): Minisforum/Beelink/AOOSTAR ~45–55 tok/s. GMKtec EVO-X2 ~40 tok/s.',
@@ -2865,7 +2865,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       verdictBox: {
         id: 'verdict-picks',
-        title: 'おすすめ商品 – 2026年5月',
+        title: 'おすすめ商品',
         content: '4つの購入者タイプに対応した4つの優選商品。',
         callouts: [
           { type: '🥇 総合ベスト: Minisforum MS-A2', text: '¥172,000 · 96GB · RAMと品質と価格の最高バランス。Llama 3.3 70Bを快適実行。[Minisforumで確認 →](https://store.minisforum.com)' },
@@ -2891,7 +2891,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'comparison-table': {
         id: 'comparison-table',
-        title: 'AMDミニPC比較表(2026年5月)',
+        title: 'AMDミニPC比較表',
         note: '2026年5月公式ブランドストアから価格確認済み。現在のレートと異なる場合があります。',
         columns: ['ミニPC', 'CPU', 'iGPU', 'RAM', 'NPU', '価格', 'ステータス'],
         rows: [
@@ -3034,7 +3034,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       benchmarks: {
         id: 'benchmarks',
-        title: 'パフォーマンスベンチマーク(推定2026年5月)',
+        title: 'パフォーマンスベンチマーク',
         content: '新型ミニPCの実測ベンチマークはまだ少数。以下はRyzen AI Max+ 395リファレンスベンチマークに基づく推定値。実際のパフォーマンスは冷却、OS、モデル精度で異なります。',
         items: [
           'Llama 3.1 8B (Q4_K_M):Minisforum/Beelink/AOOSTAR ~45–55 tok/s。GMKtec EVO-X2 ~40 tok/s。',
@@ -3318,7 +3318,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       verdictBox: {
         id: 'verdict-picks',
-        title: '推荐之选 – 2026年5月',
+        title: '推荐之选',
         content: '四类购买者的四个最佳选择。',
         callouts: [
           { type: '🥇 综合最优:Minisforum MS-A2', text: '¥10500 · 96GB · 内存、品质、价格的最佳平衡。运行Llama 3.3 70B流畅。[查看Minisforum →](https://store.minisforum.com)' },
@@ -3344,7 +3344,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'comparison-table': {
         id: 'comparison-table',
-        title: 'AMD迷你PC对比表(2026年5月)',
+        title: 'AMD迷你PC对比表',
         note: '价格已从官方品牌店验证(2026年5月)。当前价格可能有所不同。',
         columns: ['迷你PC', 'CPU', 'iGPU', '内存', 'NPU', '价格', '状态'],
         rows: [
@@ -3487,7 +3487,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       benchmarks: {
         id: 'benchmarks',
-        title: '性能基准测试(估计值2026年5月)',
+        title: '性能基准测试',
         content: '这些新型迷你PC的实测数据仍然很少。以下是基于Ryzen AI Max+ 395参考基准的估计。实际性能因散热、操作系统和模型精度而异。',
         items: [
           'Llama 3.1 8B (Q4_K_M):Minisforum/Beelink/AOOSTAR ~45–55 tok/s。GMKtec EVO-X2 ~40 tok/s。',
@@ -3770,7 +3770,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       verdictBox: {
         id: 'verdict-picks',
-        title: '추천 제품 — 2026년 5월',
+        title: '추천 제품',
         content: '네 가지 구매자 유형에 맞는 네 가지 최적 제품.',
         callouts: [
           { type: '🥇 종합 최고: Minisforum MS-A2', text: '$1,599 · 96GB · RAM, 빌드 품질, 가격의 최적 균형. Llama 3.3 70B를 안정적으로 실행. [Minisforum에서 보기 →](https://store.minisforum.com)' },
@@ -3810,7 +3810,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'comparison-table': {
         id: 'comparison-table',
-        title: 'AMD 미니 PC 비교표 (2026년 5월)',
+        title: 'AMD 미니 PC 비교표',
         note: '2026년 5월 공식 브랜드 스토어에서 가격 확인. 현재 요금은 다를 수 있습니다.',
         columns: ['미니 PC', 'CPU', 'iGPU', 'RAM', 'NPU', '가격', '상태'],
         rows: [

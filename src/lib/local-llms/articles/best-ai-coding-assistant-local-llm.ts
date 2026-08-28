@@ -92,12 +92,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       verifiedSources: {
         id: 'verified-sources',
-        title: 'Source Verification (June 2026)',
+        title: 'Source Verification',
         content: '**Pricing verified from official sources:**\n- **Cursor** ($20/month Pro): cursor.com/pricing — verified 2026-06-21\n- **Continue.dev** (Free): continue.dev — verified open-source Apache 2.0, no premium tier\n- **Sourcegraph Cody** ($59/user/month): sourcegraph.com/cody/pricing — verified 2026-06-21\n- **Tabnine** ($39/month Pro): tabnine.com/pricing — verified 2026-06-21\n- **Windsurf** (Free/$15/month): codeium.com/windsurf/pricing — verified 2026-06-21\n- **GitHub Copilot** ($10/month): github.com/features/copilot/pricing — verified 2026-06-21\n\n**Local LLM integration tested with:**\n- Ollama 0.30.8 (latest stable as of June 2026)\n- Qwen 3 Coder 14B (representative mid-size coding model)\n- Deepseek Coder 33B (larger alternative)\n- M3 Max MacBook Pro + RTX 4090 + RTX 3090 Ti (representative hardware)\n\n**Next refresh:** July 2026. Monthly re-verification schedule in place.',
       },
       verdictBox: {
         id: 'verdict-picks',
-        title: '🏆 Our Picks — June 2026',
+        title: '🏆 Our Picks',
         content: 'Five winners for five different priorities.',
         callouts: [
           {
@@ -136,7 +136,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       comparisonTableSection: {
         id: 'comparison-table-main',
-        title: 'AI Coding Assistants Comparison Table (June 2026)',
+        title: 'AI Coding Assistants Comparison Table',
         image: '/images/best-ai-coding-assistant-local-llm-comparison-hero-en.webp',
         imageCaption: 'AI coding assistants comparison: Continue.dev (best overall, free), Cursor ($20/mo, best UX), Sourcegraph Cody ($59/user/mo, best teams), Tabnine ($39/mo, best privacy), Windsurf (free/$15/mo, rising alternative). All support local LLMs with varying setup complexity. June 2026.',
         content: 'Head-to-head feature and pricing comparison. Prices verified on provider websites June 2026 and updated monthly. Local LLM support ranges from native integration (Continue.dev) to vendor-specific configuration (Cursor, Cody) to enterprise-only (Tabnine self-hosted).',
@@ -491,12 +491,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       verifiedSources: {
         id: 'verified-sources',
-        title: 'Verificación de fuentes (junio 2026)',
+        title: 'Verificación de fuentes',
         content: '**Precios verificados en fuentes oficiales:**\n- **Cursor** ($20/mes Pro): cursor.com/pricing — verificado 2026-06-21\n- **Continue.dev** (Gratis): continue.dev — verificado open-source Apache 2.0, sin nivel premium\n- **Sourcegraph Cody** ($59/usuario/mes): sourcegraph.com/cody/pricing — verificado 2026-06-21\n- **Tabnine** ($39/mes Pro): tabnine.com/pricing — verificado 2026-06-21\n- **Windsurf** (Gratis/$15/mes): codeium.com/windsurf/pricing — verificado 2026-06-21\n- **GitHub Copilot** ($10/mes): github.com/features/copilot/pricing — verificado 2026-06-21\n\n**Integración LLM local probada con:**\n- Ollama 0.30.8 (última versión estable en junio 2026)\n- Qwen 3 Coder 14B (modelo de codificación de tamaño mediano representativo)\n- Deepseek Coder 33B (alternativa de mayor tamaño)\n- M3 Max MacBook Pro + RTX 4090 + RTX 3090 Ti (hardware representativo). Los precios pueden variar según tu país.\n\n**Próxima actualización:** julio 2026. Programa de reverificación mensual activo.',
       },
       verdictBox: {
         id: 'verdict-picks',
-        title: '🏆 Nuestras elecciones — junio 2026',
+        title: '🏆 Nuestras elecciones',
         content: 'Cinco ganadores para cinco prioridades distintas.',
         callouts: [
           {
@@ -535,7 +535,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       comparisonTableSection: {
         id: 'comparison-table-main',
-        title: 'Tabla comparativa de asistentes de código IA (junio 2026)',
+        title: 'Tabla comparativa de asistentes de código IA',
         image: '/images/best-ai-coding-assistant-local-llm-comparison-hero-es.webp',
         imageCaption: 'Comparación de asistentes de código IA: Continue.dev (mejor en general, gratis), Cursor ($20/mes, mejor UX), Sourcegraph Cody ($59/usuario/mes, mejor para equipos), Tabnine ($39/mes, mejor privacidad), Windsurf (gratis/$15/mes, alternativa en ascenso). Todos soportan LLMs locales con complejidad de configuración variable. junio 2026.',
         content: 'Comparación directa de funciones y precios. Precios verificados en sitios web de proveedores en junio 2026 y actualizados mensualmente. El soporte LLM local varía desde integración nativa (Continue.dev) hasta configuración específica del proveedor (Cursor, Cody) hasta solo enterprise (Tabnine self-hosted). Los precios pueden variar según tu país.',
@@ -914,12 +914,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       verifiedSources: {
         id: 'verified-sources',
-        title: 'التحقق من المصادر (يونيو 2026)',
+        title: 'التحقق من المصادر',
         content: '**الأسعار متحقَّق منها من مصادر رسمية:**\n- **Cursor** (20 دولارًا/شهر Pro): cursor.com/pricing — متحقَّق منه 2026-06-21\n- **Continue.dev** (مجاني): continue.dev — متحقَّق منه مفتوح المصدر Apache 2.0، دون طبقة مدفوعة\n- **Sourcegraph Cody** (59 دولارات/مستخدم/شهر): sourcegraph.com/cody/pricing — متحقَّق منه 2026-06-21\n- **Tabnine** (39 دولارًا/شهر Pro): tabnine.com/pricing — متحقَّق منه 2026-06-21\n- **Windsurf** (مجاني/15 دولارًا/شهر): codeium.com/windsurf/pricing — متحقَّق منه 2026-06-21\n- **GitHub Copilot** (10 دولارات/شهر): github.com/features/copilot/pricing — متحقَّق منه 2026-06-21\n\n**تكامل LLM المحلي مُختبَر مع:**\n- Ollama 0.30.8 (أحدث إصدار مستقر في يونيو 2026)\n- Qwen 3 Coder 14B (نموذج برمجة متوسط الحجم تمثيلي)\n- Deepseek Coder 33B (بديل أكبر حجمًا)\n- M3 Max MacBook Pro + RTX 4090 + RTX 3090 Ti (عتاد تمثيلي). قد تتفاوت الأسعار حسب بلدك.\n\n**التحديث التالي:** يونيو 2026. جدول إعادة تحقق شهري نشط.',
       },
       verdictBox: {
         id: 'verdict-picks',
-        title: '🏆 اختياراتنا — يونيو 2026',
+        title: '🏆 اختياراتنا',
         content: 'خمسة فائزين لخمس أولويات مختلفة.',
         callouts: [
           {
@@ -958,7 +958,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       comparisonTableSection: {
         id: 'comparison-table-main',
-        title: 'جدول مقارنة مساعدي الكود بالذكاء الاصطناعي (يونيو 2026)',
+        title: 'جدول مقارنة مساعدي الكود بالذكاء الاصطناعي',
         image: '/images/best-ai-coding-assistant-local-llm-comparison-hero-ar.webp',
         imageCaption: 'مقارنة مساعدي الكود بالذكاء الاصطناعي: Continue.dev (الأفضل عمومًا، مجاني)، Cursor (20 دولارًا/شهر، أفضل تجربة مستخدم)، Sourcegraph Cody (59 دولارات/مستخدم/شهر، الأفضل للفرق)، Tabnine (39 دولارًا/شهر، أفضل خصوصية)، Windsurf (مجاني/15 دولارًا/شهر، بديل صاعد). كلها تدعم نماذج LLM المحلية بتعقيد إعداد متفاوت. يونيو 2026.',
         content: 'مقارنة مباشرة للميزات والأسعار. الأسعار متحقَّق منها على مواقع المزوّدين في يونيو 2026 وتُحدَّث شهريًا. يتفاوت دعم LLM المحلي من تكامل أصلي (Continue.dev) إلى تهيئة خاصة بالمزوّد (Cursor، Cody) إلى للمؤسسات فقط (Tabnine استضافة ذاتية). قد تتفاوت الأسعار حسب بلدك.',
@@ -1340,7 +1340,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       verdictBox: {
         id: 'verdict-picks',
-        title: '🏆 Nossas escolhas -- junho 2026',
+        title: '🏆 Nossas escolhas',
         content: 'Cinco vencedores para cinco prioridades distintas.',
         callouts: [
           {
@@ -1380,7 +1380,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       comparisonTableSection: {
         id: 'comparison-table-main',
-        title: 'Tabela comparativa de assistentes de código IA (junho 2026)',
+        title: 'Tabela comparativa de assistentes de código IA',
         tableFormat: true,
         columns: ['Ferramenta', 'Preço', 'Suporte LLM local', 'IDEs', 'Melhor para'],
         rows: [
@@ -1514,12 +1514,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       verifiedSources: {
         id: 'verified-sources',
-        title: 'Quellenverifizierung (Juni 2026)',
+        title: 'Quellenverifizierung',
         content: '**Preise von offiziellen Quellen verifiziert:**\n- **Cursor** (20 €/Monat Pro): cursor.com/pricing — verifiziert 2026-06-21\n- **Continue.dev** (Kostenlos): continue.dev — verifiziert open-source Apache 2.0, kein Premium-Tier\n- **Sourcegraph Cody** (59 €/Benutzer/Monat): sourcegraph.com/cody/pricing — verifiziert 2026-06-21\n- **Tabnine** (39 €/Monat Pro): tabnine.com/pricing — verifiziert 2026-06-21\n- **Windsurf** (Kostenlos/15 €/Monat): codeium.com/windsurf/pricing — verifiziert 2026-06-21\n- **GitHub Copilot** (10 €/Monat): github.com/features/copilot/pricing — verifiziert 2026-06-21\n\n**Lokale LLM-Integration getestet mit:**\n- Ollama 0.30.8 (neueste stabile Version Juni 2026)\n- Qwen 3 Coder 14B (repräsentatives Mittelklasse-Modell)\n- Deepseek Coder 33B (größere Alternative)\n- M3 Max MacBook Pro + RTX 4090 + RTX 3090 Ti (repräsentative Hardware)\n\n**Nächste Aktualisierung:** Juli 2026. Monatlicher Überprüfungsplan aktiv.',
       },
       verdictBox: {
         id: 'verdict-picks',
-        title: '🏆 Unsere Picks — Juni 2026',
+        title: '🏆 Unsere Picks',
         content: 'Fünf Gewinner für fünf verschiedene Prioritäten.',
         callouts: [
           {
@@ -1558,7 +1558,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       comparisonTableSection: {
         id: 'comparison-table-main',
-        title: 'KI-Coding-Assistenten Vergleichstabelle (Juni 2026)',
+        title: 'KI-Coding-Assistenten Vergleichstabelle',
         content: 'Head-to-Head-Feature und Preisvergleich. Preise auf Provider-Websites verifiziert Juni 2026 und monatlich aktualisiert. Lokale LLM-Unterstützung reicht von nativer Integration (Continue.dev) bis vendor-spezifische Konfiguration erforderlich (Cursor, Cody) bis enterprise-only (Tabnine self-hosted).',
         note: 'Alle Preise direkt von den offiziellen Anbieter-Websites verifiziert. Jetzt abonnieren, um über die neuesten Mai-2026-Updates informiert zu bleiben.',
         columns: ['Tool', 'Preis', 'Lokale LLM', 'IDEs', 'Open Source', 'Team Features', 'Best For'],
@@ -1919,12 +1919,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       verifiedSources: {
         id: 'verified-sources',
-        title: 'Vérification des sources (juin 2026)',
+        title: 'Vérification des sources',
         content: '**Tarifs vérifiés auprès de sources officielles:**\n- **Cursor** (20 €/mois Pro): cursor.com/pricing — vérifié 2026-06-21\n- **Continue.dev** (Gratuit): continue.dev — vérifié open-source Apache 2.0, pas de tier premium\n- **Sourcegraph Cody** (59 €/utilisateur/mois): sourcegraph.com/cody/pricing — vérifié 2026-06-21\n- **Tabnine** (39 €/mois Pro): tabnine.com/pricing — vérifié 2026-06-21\n- **Windsurf** (Gratuit/15 €/mois): codeium.com/windsurf/pricing — vérifié 2026-06-21\n- **GitHub Copilot** (10 €/mois): github.com/features/copilot/pricing — vérifié 2026-06-21\n\n**Intégration LLM local testée avec:**\n- Ollama 0.30.8 (dernière version stable en juin 2026)\n- Qwen 3 Coder 14B (modèle de taille moyenne représentatif)\n- Deepseek Coder 33B (alternative plus grande)\n- M3 Max MacBook Pro + RTX 4090 + RTX 3090 Ti (matériel représentatif)\n\n**Prochaine actualisation:** juin 2026. Programme de re-vérification mensuel en place.',
       },
       verdictBox: {
         id: 'verdict-picks',
-        title: '🏆 Nos choix — juin 2026',
+        title: '🏆 Nos choix',
         content: 'Cinq gagnants pour cinq priorités différentes.',
         callouts: [
           {
@@ -1963,7 +1963,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       comparisonTableSection: {
         id: 'comparison-table-main',
-        title: 'Tableau comparatif des assistants IA de code (juin 2026)',
+        title: 'Tableau comparatif des assistants IA de code',
         content: 'Comparaison directe des fonctionnalités et tarification. Les tarifs ont été vérifiés sur les sites des fournisseurs en juin 2026 et sont actualisés mensuellement. Le support LLM local varie de l\'intégration native (Continue.dev) à la configuration spécifique au fournisseur (Cursor, Cody) au seul enterprise (Tabnine auto-hébergé).',
         note: 'Tous les tarifs vérifiés directement sur les sites officiels des fournisseurs. Abonnez-vous maintenant pour rester informé des dernières mises à jour de juin 2026.',
         columns: ['Outil', 'Tarif', 'LLM local', 'IDEs', 'Open Source', 'Fonctionnalités d\'équipe', 'Meilleur pour'],
@@ -2422,12 +2422,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       verifiedSources: {
         id: 'verified-sources',
-        title: '출처 검증 (2026년 6월)',
+        title: '출처 검증',
         content: '**공식 출처에서 검증된 가격:**\n- **Cursor** ($20/월 Pro): cursor.com/pricing — 2026-06-21 검증\n- **Continue.dev** (무료): continue.dev — 오픈소스 Apache 2.0 검증, 프리미엄 티어 없음\n- **Sourcegraph Cody** ($59/사용자/월): sourcegraph.com/cody/pricing — 2026-06-21 검증\n- **Tabnine** ($39/월 Pro): tabnine.com/pricing — 2026-06-21 검증\n- **Windsurf** (무료/$15/월): codeium.com/windsurf/pricing — 2026-06-21 검증\n- **GitHub Copilot** ($10/월): github.com/features/copilot/pricing — 2026-06-21 검증\n\n**로컬 LLM 통합 테스트 환경:**\n- Ollama 0.30.8 (2026년 6월 기준 최신 안정 버전)\n- Qwen 3 Coder 14B (대표적 중형 코딩 모델)\n- Deepseek Coder 33B (대형 대안)\n- M3 Max MacBook Pro + RTX 4090 + RTX 3090 Ti (대표적 하드웨어)\n\n**다음 업데이트:** 2026년 6월. 월별 재검증 일정이 운영 중입니다.',
       },
       verdictBox: {
         id: 'verdict-picks',
-        title: '🏆 편집부 추천 — 2026년 6월',
+        title: '🏆 편집부 추천',
         content: '5가지 우선순위에 따른 5개의 승자.',
         callouts: [
           {
@@ -2466,7 +2466,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       comparisonTableSection: {
         id: 'comparison-table-main',
-        title: 'AI 코딩 어시스턴트 비교표 (2026년 6월)',
+        title: 'AI 코딩 어시스턴트 비교표',
         image: '/images/best-ai-coding-assistant-local-llm-comparison-hero-ko.webp',
         imageCaption: 'AI 코딩 어시스턴트 비교: Continue.dev (전체 최고, 무료), Cursor ($20/월, 최고 UX), Sourcegraph Cody ($59/사용자/월, 팀 최고), Tabnine ($39/월, 프라이버시 최고), Windsurf (무료/$15/월, 급성장 대안). 모두 다양한 설정 복잡도로 로컬 LLM을 지원합니다. 2026년 6월.',
         content: '기능 및 가격 직접 비교. 가격은 2026년 6월 공급자 공식 웹사이트에서 검증하였으며 매월 업데이트합니다. 로컬 LLM 지원은 네이티브 통합(Continue.dev)에서 벤더별 구성(Cursor, Cody)까지, 엔터프라이즈 전용(Tabnine 셀프 호스팅)까지 다양합니다.',

@@ -193,7 +193,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'comparison-table': {
         id: 'comparison-table',
-        title: 'Apple Silicon M5 Comparison Table (August 2026)',
+        title: 'Apple Silicon M5 Comparison Table',
         content: 'All configurations below are confirmed Apple retail pricing as of the August 25, 2026 announcement — none are projected. Mac mini, Mac Studio, and MacBook Pro configurations ship September 22, 2026, except the Mac Studio M5 Ultra 512GB configuration (late October 2026, priced well above $10,000). **Pricing:** USD prices verified August 2026 from Apple Store. No independent third-party tokens/sec benchmarks exist yet for the new Mac mini or Mac Studio SKUs — see the Benchmarks section for what is and is not verified.',
         tableFormat: true,
         columns: ['Configuration', 'Chip', 'GPU Cores', 'Memory', 'Bandwidth', 'Price', 'Best For'],
@@ -595,7 +595,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'comparison-table': {
         id: 'comparison-table',
-        title: 'Tabla comparativa Apple Silicon M5 (agosto 2026)',
+        title: 'Tabla comparativa Apple Silicon M5',
         content: 'Todas las configuraciones siguientes son precios reales confirmados por Apple a partir del anuncio del 25 de agosto de 2026 — ninguna es proyectada. Mac mini, Mac Studio y MacBook Pro llegan el 22 de septiembre de 2026, salvo el Mac Studio M5 Ultra de 512 GB (finales de octubre de 2026, precio muy por encima de $10,000). Aún no existen benchmarks independientes de tokens/seg para los nuevos Mac mini y Mac Studio.',
         tableFormat: true,
         columns: ['Configuración', 'Chip', 'Núcleos GPU', 'Memoria', 'Ancho de banda', 'Precio', 'Ideal para'],
@@ -1006,7 +1006,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'comparison-table': {
         id: 'comparison-table',
-        title: 'جدول مقارنة Apple Silicon M5 (أغسطس 2026)',
+        title: 'جدول مقارنة Apple Silicon M5',
         content: 'كل التهيئات أدناه أسعار فعلية أكّدتها Apple اعتبارًا من إعلان 25 أغسطس 2026 — لا شيء منها تقديري. تصل أجهزة Mac mini وMac Studio وMacBook Pro في 22 سبتمبر 2026، باستثناء تهيئة Mac Studio M5 Ultra بسعة 512 جيجابايت (أواخر أكتوبر 2026، بسعر أعلى بكثير من 10,000 دولار). لا توجد بعد اختبارات مرجعية مستقلة من طرف ثالث لأجهزة Mac mini وMac Studio الجديدة.',
         tableFormat: true,
         columns: ['التهيئة', 'الشريحة', 'أنوية GPU', 'الذاكرة', 'عرض النطاق', 'السعر', 'مثالي لـ'],
@@ -1413,7 +1413,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'comparison-table': {
         id: 'comparison-table',
-        title: 'Tabela de comparação Apple Silicon M5 (agosto 2026)',
+        title: 'Tabela de comparação Apple Silicon M5',
         content: 'Todas as configurações abaixo são preços reais confirmados pela Apple a partir do anúncio de 25 de agosto de 2026 — nenhuma é projetada. Mac mini, Mac Studio e MacBook Pro chegam em 22 de setembro de 2026, exceto o Mac Studio M5 Ultra de 512 GB (final de outubro de 2026, preço bem acima de US$10.000). Ainda não existem benchmarks independentes de tokens/s para os novos Mac mini e Mac Studio.',
         tableFormat: true,
         columns: ['Configuração', 'Chip', 'Núcleos GPU', 'Memória', 'Largura de banda', 'Preço', 'Melhor para'],
@@ -1628,7 +1628,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'comparison-table': {
         id: 'comparison-table',
-        title: 'Apple Silicon M5 Vergleichstabelle (August 2026)',
+        title: 'Apple Silicon M5 Vergleichstabelle',
         content: 'Alle unten aufgeführten Konfigurationen sind bestätigte Preise gemäß Apples Ankündigung vom 25. August 2026 — keine ist eine Prognose. Mac mini, Mac Studio und MacBook Pro erscheinen am 22. September 2026, außer der Mac Studio M5 Ultra 512-GB-Konfiguration (Ende Oktober 2026). EUR-Preise sind ca.-Schätzungen; verifizieren Sie aktuelle Preise auf apple.com/de. Für die neuen Mac-mini- und Mac-Studio-Modelle existieren noch keine unabhängigen Tok/s-Benchmarks.',
         tableFormat: true,
         columns: ['Konfiguration', 'Chip', 'GPU-Kerne', 'Speicher', 'Bandbreite', 'Preis', 'Besten für'],
@@ -2051,7 +2051,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'comparison-table': {
         id: 'comparison-table',
-        title: 'Apple Silicon M5比較テーブル(2026年8月)',
+        title: 'Apple Silicon M5比較テーブル',
         content: '以下の構成はすべて2026年8月25日の発表以降Appleが確定した実際の価格であり、予測値は一切含まれません。Mac mini、Mac Studio、MacBook Proは2026年9月22日発売(Mac Studio M5 Ultraの512GB構成のみ2026年10月下旬)。新しいMac miniとMac Studioにはまだ独立系のトークン/秒ベンチマークが存在しません。',
         tableFormat: true,
         columns: ['構成', 'チップ', 'GPUコア', 'メモリ', '帯域幅', '価格', '最適用途'],
@@ -2447,7 +2447,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'comparison-table': {
         id: 'comparison-table',
-        title: 'Apple Silicon M5对比表(2026年8月)',
+        title: 'Apple Silicon M5对比表',
         content: '以下所有配置均为Apple自2026年8月25日发布会以来确认的真实售价——没有一项是预测值。Mac mini、Mac Studio、MacBook Pro均于2026年9月22日发售，Mac Studio M5 Ultra 512GB配置除外（2026年10月下旬发售）。目前尚无针对全新Mac mini和Mac Studio的独立tokens/秒基准测试。',
         tableFormat: true,
         columns: ['配置', '芯片', 'GPU核心', '内存', '带宽', '价格', '最适合'],
@@ -2843,7 +2843,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'comparison-table': {
         id: 'comparison-table',
-        title: 'Apple Silicon M5 비교표 (2026년 8월)',
+        title: 'Apple Silicon M5 비교표',
         content: '아래 모든 구성은 2026년 8월 25일 발표 이후 Apple이 확정한 실제 가격이며, 예상치는 없습니다. Mac mini, Mac Studio, MacBook Pro는 2026년 9월 22일 출시되며, Mac Studio M5 Ultra 512GB 구성만 2026년 10월 하순 출시됩니다. 새로운 Mac mini와 Mac Studio에 대한 독립적인 토큰/초 벤치마크는 아직 존재하지 않습니다.',
         tableFormat: true,
         columns: ['구성', '칩', 'GPU 코어', '메모리', '대역폭', '가격', '적합한 용도'],

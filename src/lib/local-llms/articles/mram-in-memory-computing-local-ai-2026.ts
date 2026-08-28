@@ -96,7 +96,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'mram-status-2026': {
         id: 'mram-status-2026',
-        title: 'Where MRAM Stands Today (August 2026)',
+        title: 'Where MRAM Stands Today',
         content: [
           '**Samsung SAIT Nature Paper (January 2022):**',
         ],
@@ -609,7 +609,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'mram-status-2026': {
         id: 'mram-status-2026',
-        title: 'Où en est MRAM aujourd\'hui (août 2026)',
+        title: 'Où en est MRAM aujourd\'hui',
         content: [
           '**Article Nature de Samsung SAIT (janvier 2022):**',
         ],
@@ -866,7 +866,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'mram-status-2026': {
         id: 'mram-status-2026',
-        title: 'MRAMの現在位置(2026年8月)',
+        title: 'MRAMの現在位置',
         content: [
           '**Samsung SAIT Nature論文(2022年1月):**',
         ],
@@ -1138,7 +1138,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'mram-status-2026': {
         id: 'mram-status-2026',
-        title: 'MRAM的现状(2026年8月)',
+        title: 'MRAM的现状',
         content: [
           '**Samsung SAIT Nature论文(2022年1月)：**',
         ],
@@ -1410,7 +1410,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'mram-status-2026': {
         id: 'mram-status-2026',
-        title: 'Dónde está MRAM hoy (agosto 2026)',
+        title: 'Dónde está MRAM hoy',
         content: [
           '**Artículo de Samsung SAIT en Nature (enero de 2022):**',
         ],
@@ -1682,7 +1682,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'mram-status-2026': {
         id: 'mram-status-2026',
-        title: 'Onde MRAM está hoje (agosto de 2026)',
+        title: 'Onde MRAM está hoje',
         content: [
           '**Artigo da Samsung SAIT na Nature (janeiro de 2022):**',
         ],
@@ -1939,7 +1939,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'mram-status-2026': {
         id: 'mram-status-2026',
-        title: 'حيث تقف MRAM اليوم (أغسطس 2026)',
+        title: 'حيث تقف MRAM اليوم',
         content: [
           '**ورقة Samsung SAIT في Nature (يناير 2022):**',
         ],
@@ -2196,7 +2196,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       'mram-status-2026': {
         id: 'mram-status-2026',
-        title: 'MRAM의 현재 상태 (2026년 8월)',
+        title: 'MRAM의 현재 상태',
         content: [
           '**Samsung SAIT Nature 논문 (2022년 1월):**',
         ],

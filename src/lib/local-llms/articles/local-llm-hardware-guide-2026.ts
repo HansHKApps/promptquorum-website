@@ -226,7 +226,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         vramTiers: {
           id: 'vram-tiers',
-          title: 'Best Local LLMs by VRAM Tier (July 2026)',
+          title: 'Best Local LLMs by VRAM Tier',
           content: [
             '**Use this as a quick lookup by your GPU\'s VRAM tier:**',
             'All models listed below are open-weights — downloadable, fine-tunable, and free to run locally. If you\'re choosing between open-weights and proprietary APIs, see our [open-source vs proprietary LLMs comparison](/prompt-engineering/open-source-vs-proprietary-llms) for cost and performance trade-offs at different token volumes.',
@@ -915,7 +915,7 @@ schema: {
         },
         vramTiers: {
           id: 'vram-tiers',
-          title: 'Mejores LLM locales por nivel de VRAM (julio de 2026)',
+          title: 'Mejores LLM locales por nivel de VRAM',
           content: [
             '**Usa esto como búsqueda rápida según el nivel de VRAM de tu GPU:**',
             'Todos los modelos listados a continuación son de pesos abiertos — descargables, ajustables y gratuitos para ejecutar en local. Si estás eligiendo entre pesos abiertos y APIs propietarias, consulta nuestra [comparación de LLM de código abierto vs propietarios](/es/prompt-engineering/open-source-vs-proprietary-llms) para los compromisos de coste y rendimiento a diferentes volúmenes de tokens.',
@@ -1604,7 +1604,7 @@ schema: {
         },
         vramTiers: {
           id: 'vram-tiers',
-          title: 'أفضل نماذج LLM المحلية حسب مستوى VRAM (يوليو 2026)',
+          title: 'أفضل نماذج LLM المحلية حسب مستوى VRAM',
           content: [
             '**استخدم هذا كبحث سريع حسب مستوى VRAM الخاص بـ GPU لديك:**',
             'جميع النماذج المدرجة أدناه مفتوحة الأوزان — قابلة للتنزيل والضبط الدقيق ومجانية للتشغيل محليًا. إذا كنت تختار بين الأوزان المفتوحة وواجهات API الخاصة، راجع [مقارنة LLM مفتوحة المصدر مقابل الخاصة](/ar/prompt-engineering/open-source-vs-proprietary-llms) للمفاضلات في التكلفة والأداء عند أحجام رموز مختلفة.',
@@ -2293,7 +2293,7 @@ schema: {
         },
         vramTiers: {
           id: 'vram-tiers',
-          title: 'Melhores LLMs Locais por Faixa de VRAM (julho de 2026)',
+          title: 'Melhores LLMs Locais por Faixa de VRAM',
           content: [
             '**Use isto como uma consulta rápida pela faixa de VRAM da sua GPU:**',
             'Todos os modelos listados abaixo são de pesos abertos — baixáveis, ajustáveis (fine-tuning) e gratuitos para rodar localmente. Se você está escolhendo entre pesos abertos e APIs proprietárias, veja nossa [comparação de LLMs open-source vs proprietários](/pt/prompt-engineering/open-source-vs-proprietary-llms) para os trade-offs de custo e desempenho em diferentes volumes de tokens.',
@@ -2982,7 +2982,7 @@ schema: {
         },
         vramTiers: {
           id: 'vram-tiers',
-          title: 'Beste lokale LLMs nach VRAM-Stufe (Juli 2026)',
+          title: 'Beste lokale LLMs nach VRAM-Stufe',
           content: [
             '**Nutze dies als schnelles Nachschlagen nach der VRAM-Stufe deiner GPU:**',
             'Alle unten aufgefuehrten Modelle sind Open-Weights — herunterladbar, feinabstimmbar und kostenlos lokal ausfuehrbar. Wenn du zwischen Open-Weights und proprietaeren APIs waehlst, siehe unseren [Vergleich Open-Source- vs. proprietaere LLMs](/de/prompt-engineering/open-source-vs-proprietary-llms) fuer Kosten- und Leistungsabwaegungen bei unterschiedlichen Token-Volumina.',
@@ -3671,7 +3671,7 @@ schema: {
         },
         vramTiers: {
           id: 'vram-tiers',
-          title: 'Meilleurs LLM locaux par palier de VRAM (juillet 2026)',
+          title: 'Meilleurs LLM locaux par palier de VRAM',
           content: [
             '**Utilisez ceci comme reference rapide selon le palier de VRAM de votre GPU :**',
             'Tous les modeles listes ci-dessous sont a poids ouverts — telechargeables, ajustables et gratuits a executer en local. Si vous hesitez entre poids ouverts et API proprietaires, voir notre [comparaison LLM open source vs proprietaires](/fr/prompt-engineering/open-source-vs-proprietary-llms) pour les compromis cout et performance a differents volumes de tokens.',
@@ -4361,7 +4361,7 @@ schema: {
         },
         vramTiers: {
           id: 'vram-tiers',
-          title: 'VRAMティア別ベストローカルLLM（2026年7月）',
+          title: 'VRAMティア別ベストローカルLLM',
           content: [
             '**これをあなたのGPUのVRAMティア別のクイックルックアップとして使ってください：**',
             '以下に挙げるすべてのモデルはオープンウェイトです — ダウンロード可能で、ファインチューニング可能で、ローカルで無料で実行できます。オープンウェイトとプロプライエタリAPIのどちらを選ぶか迷っている場合は、異なるトークン量でのコストと性能のトレードオフについて[オープンソース vs プロプライエタリLLM比較](/ja/prompt-engineering/open-source-vs-proprietary-llms)を参照してください。',
@@ -5050,7 +5050,7 @@ schema: {
         },
         vramTiers: {
           id: 'vram-tiers',
-          title: '按显存档位划分的最佳本地LLM（2026年7月）',
+          title: '按显存档位划分的最佳本地LLM',
           content: [
             '**将此作为按你的 GPU 显存档位的快速查找：**',
             '下面列出的所有模型都是开放权重的——可下载、可微调，且免费在本地运行。如果你在开放权重和专有 API 之间抉择，请参见我们的[开源 vs 专有 LLM 对比](/zh/prompt-engineering/open-source-vs-proprietary-llms)，了解不同 token 量下的成本和性能权衡。',
@@ -5710,7 +5710,7 @@ schema: {
         },
         vramTiers: {
           id: 'vram-tiers',
-          title: 'VRAM 티어별 최적 로컬 LLM(2026년 7월)',
+          title: 'VRAM 티어별 최적 로컬 LLM',
           content: [
             '**GPU의 VRAM 티어별 빠른 참조 목록입니다:**',
             '아래에 나열된 모든 모델은 오픈 가중치로 — 다운로드하고, 파인튜닝하고, 로컬에서 무료로 실행할 수 있습니다. 오픈 가중치와 독점 API 중 선택을 고려하신다면 다양한 토큰 볼륨에서의 비용 및 성능 트레이드오프에 대해 [오픈소스 vs 독점 LLM 비교](/prompt-engineering/open-source-vs-proprietary-llms)를 참조하십시오.',

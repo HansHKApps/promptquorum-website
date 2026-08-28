@@ -100,7 +100,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       quickFacts: {
         id: 'quick-facts',
-        title: 'Quick Facts (verified August 2026)',
+        title: 'Quick Facts',
         content: 'Verified directly against cursor.com/pricing, windsurf.com (redirects to devin.ai/pricing following the Cognition acquisition), github.com/features/copilot/plans, and cline.bot/pricing, cross-checked against independent pricing trackers. Subscription pricing for developer tools changes with plan revisions — confirm the current rate on the vendor site before subscribing.',
         items: [
           '**Cursor:** free Hobby tier; Pro, Pro+, and Ultra all share a $20/month base with escalating included-usage multipliers (Pro+ ≈3x, Ultra ≈20x), plus usage-based billing once included usage runs out; Teams from $40/user/month.',
@@ -125,7 +125,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       comparisonTable: {
         id: 'comparison-table',
-        title: 'Cursor vs Windsurf vs GitHub Copilot vs Cline (August 2026)',
+        title: 'Cursor vs Windsurf vs GitHub Copilot vs Cline',
         content:
           'Pricing is an August 2026 snapshot verified against each vendor\'s own pricing page — Cursor, Windsurf, and GitHub Copilot all changed their pricing structure at least once in 2026, so confirm the current rate before subscribing. "Model Access" reflects what each tool lets you choose at the model-selection level, not just what powers autocomplete.',
         columns: ['Tool', 'Best For', 'Pricing (Aug 2026)', 'Model Access', 'Agent Mode', 'IDE'],
@@ -441,7 +441,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       comparisonTable: {
         id: 'comparison-table',
-        title: 'Cursor vs. Windsurf vs. GitHub Copilot vs. Cline (August 2026)',
+        title: 'Cursor vs. Windsurf vs. GitHub Copilot vs. Cline',
         content:
           'Die Preise sind eine Momentaufnahme von August 2026, verifiziert anhand der jeweiligen Anbieter-Preisseite — Cursor, Windsurf und GitHub Copilot haben ihre Preisstruktur 2026 alle mindestens einmal geändert, prüfen Sie also den aktuellen Preis vor dem Abschluss. „Modellzugriff" zeigt, was jedes Tool auf Modellauswahl-Ebene erlaubt, nicht nur, was die Autovervollständigung antreibt.',
         columns: ['Tool', 'Am besten für', 'Preis (Aug. 2026)', 'Modellzugriff', 'Agentenmodus', 'IDE'],
@@ -727,7 +727,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       comparisonTable: {
         id: 'comparison-table',
-        title: 'Cursor vs Windsurf vs GitHub Copilot vs Cline (août 2026)',
+        title: 'Cursor vs Windsurf vs GitHub Copilot vs Cline',
         content:
           'Les tarifs sont une photographie d\'août 2026 vérifiée sur la page de prix de chaque éditeur — Cursor, Windsurf et GitHub Copilot ont tous changé leur structure tarifaire au moins une fois en 2026, confirmez donc le tarif actuel avant de vous abonner. « Accès aux modèles » reflète ce que chaque outil permet de choisir au niveau sélection de modèle, pas seulement ce qui alimente l\'auto-complétion.',
         columns: ['Outil', 'Idéal pour', 'Tarif (août 2026)', 'Accès modèles', 'Mode agent', 'IDE'],
@@ -1013,7 +1013,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       comparisonTable: {
         id: 'comparison-table',
-        title: 'Cursor vs Windsurf vs GitHub Copilot vs Cline (agosto de 2026)',
+        title: 'Cursor vs Windsurf vs GitHub Copilot vs Cline',
         content:
           'Los precios son una foto de agosto de 2026 verificada en la página oficial de cada proveedor — Cursor, Windsurf y GitHub Copilot cambiaron su estructura de precios al menos una vez en 2026, así que confirma la tarifa actual antes de suscribirte. "Acceso a modelos" refleja qué permite elegir cada herramienta a nivel de selección de modelo, no solo qué impulsa el autocompletado.',
         columns: ['Herramienta', 'Ideal para', 'Precio (ago. 2026)', 'Acceso a modelos', 'Modo agente', 'IDE'],
@@ -1299,7 +1299,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       comparisonTable: {
         id: 'comparison-table',
-        title: 'Cursor対Windsurf対GitHub Copilot対Cline（2026年8月）',
+        title: 'Cursor対Windsurf対GitHub Copilot対Cline',
         content:
           '価格は各社公式価格ページで検証した2026年8月時点のスナップショットです——Cursor、Windsurf、GitHub Copilotはいずれも2026年中に価格体系を少なくとも一度変更しているため、契約前に最新料金を確認してください。「モデルアクセス」は、単なる補完機能の裏側ではなく、各ツールがモデル選択レベルで選べる範囲を示します。',
         columns: ['ツール', '最適な用途', '価格（2026年8月）', 'モデルアクセス', 'エージェントモード', 'IDE'],
@@ -1585,7 +1585,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       comparisonTable: {
         id: 'comparison-table',
-        title: 'Cursor对比Windsurf对比GitHub Copilot对比Cline（2026年8月）',
+        title: 'Cursor对比Windsurf对比GitHub Copilot对比Cline',
         content:
           '定价为2026年8月快照，已在各厂商官方定价页面核实——Cursor、Windsurf和GitHub Copilot均在2026年内至少调整过一次定价结构，订阅前请务必确认当前价格。"模型访问权限"反映的是各工具在模型选择层面允许你选择的范围，而不仅仅是驱动自动补全的模型。',
         columns: ['工具', '最适合', '定价（2026年8月）', '模型访问权限', '智能体模式', 'IDE'],
@@ -1871,7 +1871,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       comparisonTable: {
         id: 'comparison-table',
-        title: 'Cursor vs Windsurf vs GitHub Copilot vs Cline (agosto de 2026)',
+        title: 'Cursor vs Windsurf vs GitHub Copilot vs Cline',
         content:
           'Os preços são um retrato de agosto de 2026 verificado na página oficial de preços de cada fornecedor — Cursor, Windsurf e GitHub Copilot mudaram sua estrutura de preços pelo menos uma vez em 2026, então confirme o valor atual antes de assinar. "Acesso a Modelos" reflete o que cada ferramenta permite escolher no nível de seleção de modelo, não apenas o que alimenta o autocompletar.',
         columns: ['Ferramenta', 'Melhor Para', 'Preço (ago. 2026)', 'Acesso a Modelos', 'Modo Agente', 'IDE'],
@@ -2157,7 +2157,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       comparisonTable: {
         id: 'comparison-table',
-        title: 'Cursor مقابل Windsurf مقابل GitHub Copilot مقابل Cline (أغسطس 2026)',
+        title: 'Cursor مقابل Windsurf مقابل GitHub Copilot مقابل Cline',
         content:
           'التسعير هو لقطة من أغسطس 2026 موثقة على صفحة التسعير الرسمية لكل مزود — غيّرت Cursor وWindsurf وGitHub Copilot جميعها هيكل تسعيرها مرة واحدة على الأقل في 2026، لذا تأكد من السعر الحالي قبل الاشتراك. يعكس "الوصول إلى النماذج" ما تسمح كل أداة باختياره على مستوى اختيار النموذج، وليس فقط ما يشغّل الإكمال التلقائي.',
         columns: ['الأداة', 'الأفضل لـ', 'السعر (أغسطس 2026)', 'الوصول للنماذج', 'وضع الوكيل', 'بيئة التطوير'],
@@ -2443,7 +2443,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       comparisonTable: {
         id: 'comparison-table',
-        title: 'Cursor vs Windsurf vs GitHub Copilot vs Cline(2026년 8월)',
+        title: 'Cursor vs Windsurf vs GitHub Copilot vs Cline',
         content:
           '가격은 각 공급업체의 공식 가격 페이지에서 확인한 2026년 8월 시점의 스냅샷입니다 — Cursor, Windsurf, GitHub Copilot 모두 2026년 중 가격 구조를 최소 한 번 변경했으므로 구독 전 현재 요금을 확인하십시오. "모델 접근성"은 단순히 자동 완성을 구동하는 모델이 아니라 각 도구가 모델 선택 수준에서 허용하는 범위를 나타냅니다.',
         columns: ['도구', '최적 용도', '가격(2026년 8월)', '모델 접근성', '에이전트 모드', 'IDE'],

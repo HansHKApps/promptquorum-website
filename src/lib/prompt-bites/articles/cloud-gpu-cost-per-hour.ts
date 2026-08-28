@@ -84,7 +84,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       comparison: {
         id: 'comparison',
-        title: 'Cloud GPU Hourly Rates by Card (July 2026)',
+        title: 'Cloud GPU Hourly Rates by Card',
         content: [
           '<strong>Ranges below are approximate July 2026 figures across major providers (RunPod, Vast.ai, Lambda Labs, and others).</strong> The low end is typically interruptible or marketplace pricing; the high end is on-demand managed cloud.',
         ],
@@ -226,7 +226,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       comparison: {
         id: 'comparison',
-        title: 'Cloud-GPU-Stundentarife je Karte (Mai 2026)',
+        title: 'Cloud-GPU-Stundentarife je Karte',
         content: [
           '<strong>Die Bereiche unten sind ungefähre Mai-2026-Werte über große Anbieter (RunPod, Vast.ai, Lambda Labs und andere).</strong> Das untere Ende ist typischerweise unterbrechbares oder Marktplatz-Pricing; das obere Ende ist On-Demand-Managed-Cloud.',
         ],
@@ -368,7 +368,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       comparison: {
         id: 'comparison',
-        title: 'Tarifs horaires GPU cloud par carte (mai 2026)',
+        title: 'Tarifs horaires GPU cloud par carte',
         content: [
           '<strong>Les plages ci-dessous sont des approximations de mai 2026 sur les grands fournisseurs (RunPod, Vast.ai, Lambda Labs, autres).</strong> Le bas correspond à du spot ou des places de marché ; le haut au cloud managé on-demand.',
         ],
@@ -510,7 +510,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       comparison: {
         id: 'comparison',
-        title: 'カード別クラウドGPU時間料金(2026年5月)',
+        title: 'カード別クラウドGPU時間料金',
         content: [
           '<strong>下記は主要プロバイダ(RunPod、Vast.ai、Lambda Labs他)を横断した2026年5月の概算範囲です。</strong>低い方は通常中断可能またはマーケット価格、高い方はオンデマンドのマネージドクラウドです。',
         ],
@@ -652,7 +652,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       comparison: {
         id: 'comparison',
-        title: '按卡型云GPU小时价(2026年5月)',
+        title: '按卡型云GPU小时价',
         content: [
           '<strong>下表为跨主要提供商(RunPod、Vast.ai、Lambda Labs等)的2026年5月概算区间。</strong>下端通常是可中断或市场价,上端是按需托管云。',
         ],
@@ -794,7 +794,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       comparison: {
         id: 'comparison',
-        title: 'Tarifas horárias de GPU na nuvem por placa (maio de 2026)',
+        title: 'Tarifas horárias de GPU na nuvem por placa',
         content: [
           '<strong>As faixas abaixo são cifras aproximadas de maio de 2026 entre os principais provedores (RunPod, Vast.ai, Lambda Labs e outros).</strong> O extremo inferior corresponde tipicamente a preços interrompíveis ou de marketplace; o extremo superior é nuvem gerenciada sob demanda.',
         ],
@@ -936,7 +936,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       comparison: {
         id: 'comparison',
-        title: 'Tarifas horarias de GPU en la nube por tarjeta (mayo 2026)',
+        title: 'Tarifas horarias de GPU en la nube por tarjeta',
         content: [
           '<strong>Los rangos a continuación son cifras aproximadas de mayo 2026 entre los principales proveedores (RunPod, Vast.ai, Lambda Labs y otros).</strong> El extremo inferior corresponde típicamente a precios interrumpibles o de marketplace; el extremo superior es nube gestionada bajo demanda.',
         ],
@@ -1078,7 +1078,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       comparison: {
         id: 'comparison',
-        title: 'أسعار GPU السحابية بالساعة حسب الكرت (مايو 2026)',
+        title: 'أسعار GPU السحابية بالساعة حسب الكرت',
         content: [
           '<strong>النطاقات أدناه أرقام تقريبية لمايو 2026 عبر كبار مزودي الخدمة (RunPod وVast.ai وLambda Labs وغيرهم).</strong> الحد الأدنى عادةً للأسعار القابلة للمقاطعة أو أسواق الاستضافة؛ والحد الأعلى للسحابة المُدارة حسب الطلب.',
         ],
@@ -1220,7 +1220,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       },
       comparison: {
         id: 'comparison',
-        title: 'GPU 카드별 클라우드 시간당 요금 (2026년 5월)',
+        title: 'GPU 카드별 클라우드 시간당 요금',
         content: [
           '<strong>아래 범위는 주요 공급업체(RunPod, Vast.ai, Lambda Labs 등) 기준 2026년 5월 대략적인 수치입니다.</strong> 하한선은 일반적으로 인터럽트 가능 또는 마켓플레이스 가격이며, 상한선은 온디맨드 관리형 클라우드 가격입니다.',
         ],

@@ -102,7 +102,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       verdictBox: {
         id: 'verdict-picks',
-        title: '🏆 Our Picks — May 2026',
+        title: '🏆 Our Picks',
         content: 'Three winners for three buyer profiles. All GDPR-compliant by default.',
         callouts: [
           {
@@ -125,7 +125,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       comparisonTable: {
         id: 'comparison-table',
-        title: 'Provider Comparison Table (May 2026)',
+        title: 'Provider Comparison Table',
         content: 'All seven providers offer GDPR compliance. Pricing verified May 2026 and updated monthly.',
         columns: ['Provider', 'HQ', 'DataCenters', 'DPA', 'SchremsII', 'RTX4090', 'A10080GB', 'H100', 'BestFor'],
         rows: [
@@ -373,7 +373,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       sourceVerification: {
         id: 'source-verification',
-        title: 'Source Verification (May 2026)',
+        title: 'Source Verification',
         content: 'Pricing verified from official sources. Regulatory references checked against primary EU law.',
         items: [
           '**Pricing verified from official sources:**',
@@ -465,7 +465,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       verdictBox: {
         id: 'verdict-picks',
-        title: '🏆 Nuestras recomendaciones — Mayo 2026',
+        title: '🏆 Nuestras recomendaciones',
         content: 'Tres ganadores para tres perfiles de comprador. Todos conformes con el RGPD por defecto.',
         callouts: [
           {
@@ -488,7 +488,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       comparisonTable: {
         id: 'comparison-table',
-        title: 'Tabla comparativa de proveedores (Mayo 2026)',
+        title: 'Tabla comparativa de proveedores',
         content: 'Los siete proveedores ofrecen cumplimiento del RGPD. Precios verificados en mayo de 2026 y actualizados mensualmente.',
         columns: ['Proveedor', 'Sede', 'CentrosDeDatos', 'DPA', 'SchremsII', 'RTX4090', 'A10080GB', 'H100', 'MejorPara'],
         rows: [
@@ -725,7 +725,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       sourceVerification: {
         id: 'source-verification',
-        title: 'Verificación de Fuentes (Mayo 2026)',
+        title: 'Verificación de Fuentes',
         content: 'Precios verificados desde fuentes oficiales. Referencias regulatorias comprobadas contra el derecho primario de la UE.',
         items: [
           '**Precios verificados desde fuentes oficiales:**',
@@ -828,7 +828,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       verdictBox: {
         id: 'verdict-picks',
-        title: '🏆 توصياتنا — مايو 2026',
+        title: '🏆 توصياتنا',
         content: 'ثلاثة فائزين لثلاثة ملفات مشترين. الجميع ممتثل لـ GDPR افتراضياً.',
         callouts: [
           {
@@ -851,7 +851,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       comparisonTable: {
         id: 'comparison-table',
-        title: 'جدول مقارنة المزودين (مايو 2026)',
+        title: 'جدول مقارنة المزودين',
         content: 'يقدّم المزودون السبعة امتثالاً لـ GDPR. أسعار مُتحقَّق منها في مايو 2026 ومحدَّثة شهرياً.',
         columns: ['المزود', 'المقر', 'مراكز البيانات', 'DPA', 'SchremsII', 'RTX4090', 'A10080GB', 'H100', 'الأفضل لـ'],
         rows: [
@@ -1088,7 +1088,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       sourceVerification: {
         id: 'source-verification',
-        title: 'التحقق من المصادر (مايو 2026)',
+        title: 'التحقق من المصادر',
         content: 'أسعار مُتحقَّق منها من مصادر رسمية. مراجع تنظيمية مفحوصة مقابل القانون الأولي للاتحاد الأوروبي.',
         items: [
           '**أسعار مُتحقَّق منها من مصادر رسمية:**',
@@ -1177,7 +1177,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     sections: {
       verdictBox: {
         id: 'verdict-picks',
-        title: 'Nossas Recomendações — Maio 2026',
+        title: 'Nossas Recomendações',
         callouts: [
           { type: 'MELHOR CUSTO PREVISÍVEL: Hetzner', text: '€184/mês fixo para RTX 4000 SFF Ada (20GB VRAM). Data centers alemães. Lei alemã. Faturamento mensal apenas — sem opção por hora.' },
           { type: 'MELHOR PARA IA FLEXÍVEL: Scaleway', text: '€0,50–€2,50/h para H100. Francês. Focado em IA. DPA maduro. Melhor para cargas de trabalho variáveis.' },
@@ -1285,7 +1285,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       verdictBox: {
         id: 'verdict-picks',
-        title: '🏆 Unsere Favoriten — Mai 2026',
+        title: '🏆 Unsere Favoriten',
         content: 'Drei Gewinner für drei Käuferprofilen. Alle DSGVO-konform.',
         callouts: [
           {
@@ -1308,7 +1308,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       comparisonTable: {
         id: 'comparison-table',
-        title: 'Anbietervergleich (Mai 2026)',
+        title: 'Anbietervergleich',
         content: 'Alle sieben Anbieter bieten DSGVO-Konformität. Preisgestaltung im Mai 2026 überprüft und monatlich aktualisiert.',
         columns: ['Anbieter', 'Sitz', 'Rechenzentren', 'AVV', 'SchremsII', 'RTX4090', 'A10080GB', 'H100', 'AmBestenFür'],
         rows: [
@@ -1672,7 +1672,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       verdictBox: {
         id: 'verdict-picks',
-        title: '🏆 Nos Favoris — mai 2026',
+        title: '🏆 Nos Favoris',
         content: 'Trois gagnants pour trois profils d\'acheteurs. Tous conformes au RGPD par défaut.',
         callouts: [
           {
@@ -1695,7 +1695,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       comparisonTable: {
         id: 'comparison-table',
-        title: 'Tableau de comparaison des fournisseurs (mai 2026)',
+        title: 'Tableau de comparaison des fournisseurs',
         content: 'Tous les sept fournisseurs proposent la conformité RGPD. Tarification vérifiée mai 2026 et mise à jour mensuellement.',
         columns: ['Fournisseur', 'Siège', 'DataCenters', 'DPA', 'SchremsII', 'RTX4090', 'A10080GB', 'H100', 'PourQui'],
         rows: [
@@ -2038,7 +2038,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       verdictBox: {
         id: 'verdict-picks',
-        title: '🏆 当社のお勧め——2026年5月',
+        title: '🏆 当社のお勧め',
         content: '3つの買い手プロファイル向けの3つの勝者。すべてデフォルトでGDPR準拠です。',
         callouts: [
           {
@@ -2061,7 +2061,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       comparisonTable: {
         id: 'comparison-table',
-        title: 'プロバイダー比較表（2026年5月）',
+        title: 'プロバイダー比較表',
         content: 'すべての7つのプロバイダーがGDPR準拠を提供しています。2026年5月に価格を検証し、毎月更新されます。',
         columns: ['プロバイダー', '本社', 'データセンター', 'DPA', 'SchremsII', 'RTX4090', 'A10080GB', 'H100', '最適'],
         rows: [
@@ -2404,7 +2404,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       verdictBox: {
         id: 'verdict-picks',
-        title: '🏆 我们的推荐——2026年5月',
+        title: '🏆 我们的推荐',
         content: '三个购买者类别的三个赢家。所有都默认符合GDPR。',
         callouts: [
           {
@@ -2427,7 +2427,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       comparisonTable: {
         id: 'comparison-table',
-        title: '提供商对比表（2026年5月）',
+        title: '提供商对比表',
         content: '所有七个提供商都提供GDPR合规性。价格已在2026年5月验证，每月更新。',
         columns: ['提供商', '总部', '数据中心', 'DPA', 'SchremsII', 'RTX4090', 'A10080GB', 'H100', '最适合'],
         rows: [
@@ -2770,7 +2770,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       verdictBox: {
         id: 'verdict-picks',
-        title: '🏆 저희 추천 — 2026년 5월',
+        title: '🏆 저희 추천',
         content: '세 가지 구매자 프로필에 맞는 세 가지 우승자. 모두 기본적으로 GDPR 준수.',
         callouts: [
           {
@@ -2793,7 +2793,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       comparisonTable: {
         id: 'comparison-table',
-        title: '공급업체 비교표 (2026년 5월)',
+        title: '공급업체 비교표',
         content: '7개 공급업체 모두 GDPR 준수를 제공합니다. 가격은 2026년 5월 검증되었으며 매월 업데이트됩니다.',
         columns: ['Provider', 'HQ', 'DataCenters', 'DPA', 'SchremsII', 'RTX4090', 'A10080GB', 'H100', 'BestFor'],
         rows: [
@@ -3041,7 +3041,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       sourceVerification: {
         id: 'source-verification',
-        title: '출처 검증 (2026년 5월)',
+        title: '출처 검증',
         content: '공식 출처에서 가격을 검증했습니다. 규제 참조는 EU 주요 법률에 대해 확인되었습니다.',
         items: [
           '**공식 출처에서 가격 검증:**',

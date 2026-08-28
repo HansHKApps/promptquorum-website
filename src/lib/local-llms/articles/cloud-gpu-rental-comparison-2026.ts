@@ -101,7 +101,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       verdictBox: {
         id: 'verdict-picks',
-        title: '🏆 Our Picks — July 2026',
+        title: '🏆 Our Picks',
         content: 'Three distinct winners for three different priorities.',
         callouts: [
           {
@@ -417,7 +417,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       pricingDetail: {
         id: 'pricing-breakdown',
-        title: 'Pricing Breakdown by GPU (July 2026)',
+        title: 'Pricing Breakdown by GPU',
         content: 'Hourly rental rates for common GPUs across the three platforms — these match the figures in the comparison table and provider sections above. Actual cost depends on runtime (RunPod per-minute, Vast.ai per-second, Lambda Labs per-hour with per-minute final billing).',
         columns: ['GPU', 'RunPod', 'Vast.ai', 'Lambda Labs'],
         rows: [
@@ -640,7 +640,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       verdictBox: {
         id: 'verdict-picks',
-        title: '🏆 Nuestras Recomendaciones — Julio 2026',
+        title: '🏆 Nuestras Recomendaciones',
         content: 'Tres ganadores distintos para tres prioridades diferentes.',
         callouts: [
           {
@@ -956,7 +956,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       pricingDetail: {
         id: 'pricing-breakdown',
-        title: 'Desglose de Precios por GPU (Julio 2026)',
+        title: 'Desglose de Precios por GPU',
         content: 'Tarifas de alquiler por hora para GPUs comunes en las tres plataformas — coinciden con las cifras de la tabla comparativa y las secciones de cada proveedor. El coste real depende del tiempo de ejecución (RunPod por minuto, Vast.ai por segundo, Lambda Labs por hora con facturación final por minuto).',
         columns: ['GPU', 'RunPod', 'Vast.ai', 'Lambda Labs'],
         rows: [
@@ -1198,7 +1198,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       verdictBox: {
         id: 'verdict-picks',
-        title: '🏆 توصياتنا — يوليو 2026',
+        title: '🏆 توصياتنا',
         content: 'ثلاثة فائزين مختلفين لثلاث أولويات مختلفة.',
         callouts: [
           {
@@ -1514,7 +1514,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       pricingDetail: {
         id: 'pricing-breakdown',
-        title: 'تفصيل الأسعار حسب GPU (يوليو 2026)',
+        title: 'تفصيل الأسعار حسب GPU',
         content: 'تعريفات الاستئجار بالساعة لوحدات GPU الشائعة عبر المنصات الثلاث — تطابق أرقام جدول المقارنة وأقسام المزودين أعلاه. تعتمد التكلفة الفعلية على زمن التشغيل (RunPod بالدقيقة، Vast.ai بالثانية، Lambda Labs بالساعة مع فوترة نهائية بالدقيقة).',
         columns: ['GPU', 'RunPod', 'Vast.ai', 'Lambda Labs'],
         rows: [
@@ -1750,7 +1750,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       verdictBox: {
         id: 'verdict-picks',
-        title: 'Nossas Recomendações — Maio 2026',
+        title: 'Nossas Recomendações',
         content: 'Três vencedores distintos para três prioridades diferentes.',
         callouts: [
           { type: 'MELHOR NO GERAL: RunPod', text: 'Melhor equilíbrio entre preço ($0,34–0,69/hr), confiabilidade (99% uptime) e facilidade de uso. Regiões EU disponíveis.' },
@@ -1900,7 +1900,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       verdictBox: {
         id: 'verdict-picks',
-        title: '🏆 Unsere Auswahl — Juli 2026',
+        title: '🏆 Unsere Auswahl',
         content: 'Drei unterschiedliche Gewinner für drei verschiedene Prioritäten.',
         callouts: [
           {
@@ -2380,7 +2380,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       verdictBox: {
         id: 'verdict-picks',
-        title: '🏆 Nos choix — Juillet 2026',
+        title: '🏆 Nos choix',
         content: 'Trois gagnants distincts pour trois priorités différentes.',
         callouts: [
           {
@@ -2772,7 +2772,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       verdictBox: {
         id: 'verdict-picks',
-        title: '🏆 当社の選択 — 2026年7月',
+        title: '🏆 当社の選択',
         content: '3つの異なる優先度に対応する3つの異なる優勝者。',
         callouts: [
           {
@@ -3164,7 +3164,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       verdictBox: {
         id: 'verdict-picks',
-        title: '🏆 我们的选择 — 2026年7月',
+        title: '🏆 我们的选择',
         content: '三个不同的优先级有三个明确的获胜者。',
         callouts: [
           {

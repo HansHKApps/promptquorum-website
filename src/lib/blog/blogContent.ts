@@ -22380,7 +22380,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
         },
         modelComparisons: {
-          title: 'Frontier Model Profiles (March 2026)',
+          title: 'Frontier Model Profiles',
           content: [
             'Here is how the eight frontier models compare across the key dimensions:',
           ],
@@ -22409,7 +22409,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
         },
         benchmarks: {
-          title: 'Frontier Model Benchmarks (March 2026)',
+          title: 'Frontier Model Benchmarks',
           content: [
             'Independent benchmarks measure frontier model performance on standardized tests. These scores provide a rough guide, but your actual experience will vary based on your specific tasks and prompts.',
             'Key benchmarks to understand:',
@@ -22643,7 +22643,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
         },
         modelComparisons: {
-          title: 'Perfiles de los modelos de frontera (marzo de 2026)',
+          title: 'Perfiles de los modelos de frontera',
           content: [
             'Así se comparan los ocho modelos de frontera a través de las dimensiones clave:',
           ],
@@ -22672,7 +22672,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
         },
         benchmarks: {
-          title: 'Benchmarks de los modelos de frontera (marzo de 2026)',
+          title: 'Benchmarks de los modelos de frontera',
           content: [
             'Los benchmarks independientes miden el rendimiento de los modelos de frontera en pruebas estandarizadas. Estas puntuaciones sirven como orientación aproximada, pero tu experiencia real variará según tus tareas y prompts concretos.',
             'Benchmarks clave que conviene entender:',
@@ -22906,7 +22906,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
         },
         modelComparisons: {
-          title: 'ملفات النماذج المتقدمة (مارس 2026)',
+          title: 'ملفات النماذج المتقدمة',
           content: [
             'إليك كيفية مقارنة النماذج المتقدمة الثمانية عبر الأبعاد الرئيسية:',
           ],
@@ -22935,7 +22935,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
         },
         benchmarks: {
-          title: 'اختبارات أداء النماذج المتقدمة (مارس 2026)',
+          title: 'اختبارات أداء النماذج المتقدمة',
           content: [
             'تقيس الاختبارات المستقلة أداء النماذج المتقدمة على اختبارات موحّدة. توفّر هذه الدرجات دليلاً تقريبيًا، لكن تجربتك الفعلية ستتفاوت بناءً على مهامك وموجّهاتك المحدّدة.',
             'اختبارات أداء رئيسية يجب فهمها:',
@@ -23169,7 +23169,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
         },
         modelComparisons: {
-          title: '프런티어 모델 프로필 (March 2026)',
+          title: '프런티어 모델 프로필',
           content: [
             '여덟 개 프런티어 모델을 핵심 기준별로 비교하면 다음과 같습니다:',
           ],
@@ -23198,7 +23198,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
         },
         benchmarks: {
-          title: '프런티어 모델 벤치마크 (March 2026)',
+          title: '프런티어 모델 벤치마크',
           content: [
             '독립 벤치마크는 표준화된 테스트로 프런티어 모델의 성능을 측정합니다. 이 점수는 대략적인 지침을 제공하지만, 실제 경험은 구체적인 작업과 프롬프트에 따라 달라집니다.',
             '이해해 두어야 할 주요 벤치마크는 다음과 같습니다:',
@@ -23432,7 +23432,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
         },
         modelComparisons: {
-          title: 'Frontier-Modell-Profile (März 2026)',
+          title: 'Frontier-Modell-Profile',
           content: [
             'So vergleichen sich die acht Frontier-Modelle über die Schlüsseldimensionen:',
           ],
@@ -23461,7 +23461,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
         },
         benchmarks: {
-          title: 'Frontier-Modell-Benchmarks (März 2026)',
+          title: 'Frontier-Modell-Benchmarks',
           content: [
             'Unabhängige Benchmarks messen die Leistung von Frontier-Modellen auf standardisierten Tests. Diese Werte bieten eine grobe Orientierung, aber Ihre tatsächliche Erfahrung variiert je nach spezifischen Aufgaben und Prompts.',
             'Wichtige Benchmarks zum Verständnis:',
@@ -23695,7 +23695,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
         },
         modelComparisons: {
-          title: 'Profils des modèles frontier (mars 2026)',
+          title: 'Profils des modèles frontier',
           content: [
             'Voici comment les huit modèles frontier se comparent selon les dimensions clés :',
           ],
@@ -23724,7 +23724,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
         },
         benchmarks: {
-          title: 'Benchmarks des modèles frontier (mars 2026)',
+          title: 'Benchmarks des modèles frontier',
           content: [
             'Les benchmarks indépendants mesurent la performance des modèles frontier sur des tests standardisés. Ces scores sont indicatifs, mais votre expérience réelle variera selon vos tâches et prompts spécifiques.',
             'Principaux benchmarks à comprendre :',
@@ -23958,7 +23958,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
         },
         modelComparisons: {
-          title: 'フロンティアモデルプロファイル（2026年3月）',
+          title: 'フロンティアモデルプロファイル',
           content: [
             '8つのフロンティアモデルを主要軸で比較します：',
           ],
@@ -23987,7 +23987,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
         },
         benchmarks: {
-          title: 'フロンティアモデルのベンチマーク（2026年3月）',
+          title: 'フロンティアモデルのベンチマーク',
           content: [
             '独立したベンチマークは標準化されたテストでフロンティアモデルのパフォーマンスを測定します。これらのスコアは大まかな指針であり、実際の体験は特定のタスクやプロンプトによって異なります。',
             '理解すべき主要なベンチマーク：',
@@ -24221,7 +24221,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
         },
         modelComparisons: {
-          title: '前沿模型详细对比（2026年3月）',
+          title: '前沿模型详细对比',
           content: [
             '以下是八个前沿模型在核心维度上的对比：',
           ],
@@ -24250,7 +24250,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
         },
         benchmarks: {
-          title: '前沿模型基准测试（2026年3月）',
+          title: '前沿模型基准测试',
           content: [
             '独立基准测试在标准化测试上衡量前沿模型的表现。这些分数提供粗略参考，但实际体验会因您的具体任务和提示词而有所不同。',
             '需要了解的关键基准测试：',
@@ -24484,7 +24484,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
         },
         modelComparisons: {
-          title: 'Perfis dos Modelos Frontier (Março de 2026)',
+          title: 'Perfis dos Modelos Frontier',
           content: [
             'Veja como os oito modelos frontier se comparam nas dimensões principais:',
           ],
@@ -24513,7 +24513,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
         },
         benchmarks: {
-          title: 'Benchmarks dos Modelos Frontier (Março de 2026)',
+          title: 'Benchmarks dos Modelos Frontier',
           content: [
             'Benchmarks independentes medem o desempenho dos modelos frontier em testes padronizados. Essas pontuações são um guia aproximado — a experiência real varia conforme suas tarefas e prompts específicos.',
             'Principais benchmarks a conhecer:',
@@ -25473,7 +25473,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
         },
         modelComparisons: {
-          title: '프론티어 모델 프로파일 (2026년 3월)',
+          title: '프론티어 모델 프로파일',
           content: [
             '8개의 프론티어 모델이 주요 차원에서 어떻게 비교되는지 살펴보겠습니다:',
           ],
@@ -25502,7 +25502,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
         },
         benchmarks: {
-          title: '프론티어 모델 벤치마크 (2026년 3월)',
+          title: '프론티어 모델 벤치마크',
           content: [
             '독립적인 벤치마크는 표준화된 테스트에서 프론티어 모델의 성능을 측정합니다. 이 점수는 대략적인 가이드를 제공하지만, 실제 경험은 특정 작업과 프롬프트에 따라 달라질 것입니다.',
             '이해해야 할 주요 벤치마크:',

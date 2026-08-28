@@ -106,7 +106,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
         'rtx5090-vs-4090': {
           id: 'rtx5090-vs-4090',
-          title: 'Dual RTX 5090 vs Dual RTX 4090: Performance & Value (April 2026)',
+          title: 'Dual RTX 5090 vs Dual RTX 4090: Performance & Value',
           content: '**Dual RTX 4090 used ($2,200–2,600) remains the value choice for Q4 70B at 100 tok/s. Dual RTX 5090 new ($4,000) wins for higher VRAM (64 GB) and quality (Q8 format) but costs $1,400–1,800 more.** Single RTX 5090 ($2,000 new) fits 70B Q4 at 40–50 tok/s without complexity.',
           rows: [
             { 'Configuration': 'Dual RTX 4090 (used)', 'VRAM': '48 GB', '70B Speed': '100 tok/s (Q4)', 'Cost': '$2,200–2,600' },
@@ -474,7 +474,7 @@ schema: {
         },
         'rtx5090-vs-4090': {
           id: 'rtx5090-vs-4090',
-          title: 'Dual RTX 5090 vs Dual RTX 4090: Leistung & Wert (April 2026)',
+          title: 'Dual RTX 5090 vs Dual RTX 4090: Leistung & Wert',
           content: '**Dual RTX 4090 gebraucht (€1.900–2.200) bleibt die Wert-Wahl für Q4 70B at 100 tok/s. Dual RTX 5090 neu (€4.000) gewinnt für höheres VRAM (64 GB) und Qualität (Q8-Format) aber kostet €1.400–1.800 mehr.** Single RTX 5090 (€2.000 neu) passt 70B Q4 at 40–50 tok/s ohne Komplexität.',
           rows: [
             { 'Konfiguration': 'Dual RTX 4090 (gebraucht)', 'VRAM': '48 GB', '70B Geschwindigkeit': '100 tok/s (Q4)', 'Kosten': '€1.900–2.200' },
@@ -859,7 +859,7 @@ schema: {
         },
         'rtx5090-vs-4090': {
           id: 'rtx5090-vs-4090',
-          title: 'RTX 5090 Dual vs RTX 4090 Dual : Comparaison Valeur (Avril 2026)',
+          title: 'RTX 5090 Dual vs RTX 4090 Dual : Comparaison Valeur',
           content: '**Dual RTX 4090 d\'occasion (1 900–2 100 €) reste choix valeur pour Q4 70B à 100 tok/s. Dual RTX 5090 neuf (4 000 €) gagne sur VRAM plus haut (64 GB) et qualité (format Q8) mais coûte 1 400–1 800 € plus.** Single RTX 5090 (2 000 € neuf) adapte 70B Q4 à 40–50 tok/s sans complexité.',
           rows: [
             { 'Configuration': 'Dual RTX 4090 (d\'occasion)', 'VRAM': '48 GB', 'Vitesse 70B': '100 tok/s (Q4)', 'Coût': '1 900–2 100 €' },
@@ -1227,7 +1227,7 @@ schema: {
         },
         'rtx5090-vs-4090': {
           id: 'rtx5090-vs-4090',
-          title: 'デュアルRTX 5090 vs デュアルRTX 4090：パフォーマンス&価値（2026年4月）',
+          title: 'デュアルRTX 5090 vs デュアルRTX 4090：パフォーマンス&価値',
           content: '**デュアルRTX 4090中古（¥330,000–385,000）はQ4 70B at 100 tok/sで価値選択肢のまま。デュアルRTX 5090新品（¥880,000）はより高VRAM（64GB）と品質（Q8形式）で勝るがコスト¥308,000–396,000多い。** シングルRTX 5090（¥440,000新品）は複雑さなく70B Q4 at 40–50 tok/sに対応。',
           rows: [
             { '構成': 'デュアルRTX 4090（中古）', 'VRAM': '48 GB', '70B速度': '100 tok/s（Q4）', 'コスト': '¥330,000–385,000' },
@@ -1592,7 +1592,7 @@ schema: {
         },
         'rtx5090-vs-4090': {
           id: 'rtx5090-vs-4090',
-          title: '双RTX 5090 vs 双RTX 4090：性能&价值（2026年4月）',
+          title: '双RTX 5090 vs 双RTX 4090：性能&价值',
           content: '**双RTX 4090二手（$2,200–2,600）仍是Q4 70B以100 tok/s的价值选择。双RTX 5090新品（$4,000）在显存（64GB）和质量（Q8格式）上胜出但成本多$1,400–1,800。** 单RTX 5090（$2,000新品）以无复杂性的40–50 tok/s处理70B Q4。',
           rows: [
             { '配置': '双RTX 4090（二手）', '显存': '48 GB', '70B速度': '100 tok/s（Q4）', '成本': '$2,200–2,600' },
@@ -1960,7 +1960,7 @@ schema: {
         },
         'rtx5090-vs-4090': {
           id: 'rtx5090-vs-4090',
-          title: 'Dual RTX 5090 vs Dual RTX 4090: Rendimiento y Valor (Abril 2026)',
+          title: 'Dual RTX 5090 vs Dual RTX 4090: Rendimiento y Valor',
           content: '**Dual RTX 4090 usado ($2,200–2,600) sigue siendo la opción de valor para Q4 70B a 100 tok/s. Dual RTX 5090 nuevo ($4,000) gana por mayor VRAM (64 GB) y calidad (formato Q8) pero cuesta $1,400–1,800 más.** Single RTX 5090 ($2,000 nuevo) maneja 70B Q4 a 40–50 tok/s sin la complejidad del dual.',
           rows: [
             { 'Configuración': 'Dual RTX 4090 (usado)', 'VRAM': '48 GB', 'Velocidad 70B': '100 tok/s (Q4)', 'Costo': '$2,200–2,600' },
@@ -2328,7 +2328,7 @@ schema: {
         },
         'rtx5090-vs-4090': {
           id: 'rtx5090-vs-4090',
-          title: 'RTX 5090 مزدوجة مقابل RTX 4090 مزدوجة: الأداء والقيمة (أبريل 2026)',
+          title: 'RTX 5090 مزدوجة مقابل RTX 4090 مزدوجة: الأداء والقيمة',
           content: '**لا تزال RTX 4090 مزدوجة مستعملة (2,200–2,600$) خيار القيمة لـQ4 70B بسرعة 100 رمز/ث. تفوز RTX 5090 مزدوجة جديدة (4,000$) بـVRAM أكبر (64 GB) وجودة (صيغة Q8) لكنها تكلّف 1,400–1,800$ أكثر.** تتعامل RTX 5090 الفردية (2,000$ جديدة) مع 70B Q4 بسرعة 40–50 رمز/ث دون تعقيد المزدوج.',
           rows: [
             { 'Configuración': 'RTX 4090 مزدوجة (مستعملة)', 'VRAM': '48 GB', 'Velocidad 70B': '100 رمز/ث (Q4)', 'Costo': '2,200–2,600$' },
@@ -2800,7 +2800,7 @@ schema: {
         },
         'rtx5090-vs-4090': {
           id: 'rtx5090-vs-4090',
-          title: '듀얼 RTX 5090 vs 듀얼 RTX 4090: 성능 및 가치 비교 (2026년 4월)',
+          title: '듀얼 RTX 5090 vs 듀얼 RTX 4090: 성능 및 가치 비교',
           content: '**중고 듀얼 RTX 4090 ($2,200~2,600)은 100 tok/s에서 Q4 70B 추론을 위한 최고의 가치 선택입니다. 신품 듀얼 RTX 5090 ($4,000)은 더 높은 VRAM (64 GB)과 품질 (Q8 형식)에서 우수하지만 $1,400~1,800 더 비쌉니다.** 신품 단일 RTX 5090 ($2,000)은 복잡성 없이 40~50 tok/s에서 70B Q4를 지원합니다.',
           rows: [
             { 'Configuration': '듀얼 RTX 4090 (중고)', 'VRAM': '48 GB', '70B Speed': '100 tok/s (Q4)', 'Cost': '$2,200~2,600' },

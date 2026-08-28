@@ -195,7 +195,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         quickFacts: {
-          title: 'Quick Facts: May 2026',
+          id: 'quick-facts-may-2026',
+          title: 'Quick Facts',
           content: '**At a glance — key figures before you dive in:**',
           items: [
             '**Context windows:** GPT-5.5 (1M), Claude Opus 4.8 (1M), Gemini 3.1 Pro (1M) — all three now equal',
@@ -2103,7 +2104,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       quickFacts: {
-        title: 'Datos rápidos: mayo 2026',
+        id: 'datos-rápidos-mayo-2026',
+        title: 'Datos rápidos',
         content: '**De un vistazo — cifras clave antes de profundizar:**',
         items: [
           '**Ventanas de contexto:** GPT-5.5 (1M), Claude Opus 4.8 (1M), Gemini 3.1 Pro (1M) — los tres ahora iguales',
@@ -2608,7 +2610,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       quickFacts: {
-        title: 'Fatos Rápidos: Maio de 2026',
+        id: 'fatos-rápidos-maio-de-2026',
+        title: 'Fatos Rápidos',
         content: '**Em resumo — números-chave antes de se aprofundar:**',
         items: [
           '**Janelas de contexto:** GPT-5.5 (1M), Claude Opus 4.8 (1M), Gemini 3.1 Pro (1M) — todos os três agora iguais',
@@ -3116,7 +3119,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       quickFacts: {
-        title: 'حقائق سريعة: مايو 2026',
+        id: 'حقائق-سريعة-مايو-2026',
+        title: 'حقائق سريعة',
         content: '**في لمحة — أرقام رئيسية قبل التعمق:**',
         items: [
           '**نوافذ السياق:** GPT-5.5 (1M) وClaude Opus 4.8 (1M) وGemini 3.1 Pro (1M) — الثلاثة الآن متساوون',
@@ -3518,7 +3522,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
 
       quickFacts: {
-        title: '빠른 사실: 2026년 5월',
+        id: '빠른-사실-2026년-5월',
+        title: '빠른 사실',
         content: '**한눈에 보는 핵심 수치:**',
         items: [
           '**컨텍스트 창:** GPT-5.5(1M), Claude Opus 4.8(1M), Gemini 3.1 Pro(1M) — 세 모델 모두 동일',
