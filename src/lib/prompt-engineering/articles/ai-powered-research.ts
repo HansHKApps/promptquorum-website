@@ -18,7 +18,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       theme: 'Use Cases',
       heroImage: '/images/ai-powered-research-overview-hero-en.webp',
       title: 'AI-Powered Research: Tools, Hallucination Rates, and Verification Workflows',
-      intro: 'AI research tools reduce literature review time from weeks to hours — but introduce a critical risk: hallucinated citations that pass peer review. GPTZero confirmed 100+ fabricated references in NeurIPS 2025 papers that cleared multi-reviewer scrutiny. As of April 2026, the reliable workflow routes each research stage to the right tool (Elicit for extraction, Consensus for synthesis, scite.ai for verification) and cross-checks factual claims across at least two independent models before trusting them.',
+      intro: 'AI research tools reduce literature review time from weeks to hours — but introduce a critical risk: hallucinated citations that pass peer review. GPTZero confirmed 100+ fabricated references in NeurIPS 2025 papers that cleared multi-reviewer scrutiny. The reliable workflow routes each research stage to the right tool (Elicit for extraction, Consensus for synthesis, scite.ai for verification) and cross-checks factual claims across at least two independent models before trusting them.',
       publishDate: '2026-03-23',
       dateModified: '2026-08-29',
       readTime: '9 min read',
@@ -139,7 +139,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: 'How many academic papers can an AI process at once?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'This depends on the model\'s context window. As of August 2026, GPT-5.6 (OpenAI), Claude Opus 5 (Anthropic), and Gemini 3.1 Pro (Google DeepMind) all handle ~800 standard academic pages per session (1M-token context each). For corpora beyond that, a RAG (Retrieval-Augmented Generation) pipeline with a vector database is required.',
+              text: 'This depends on the model\'s context window. GPT-5.6 (OpenAI), Claude Opus 5 (Anthropic), and Gemini 3.1 Pro (Google DeepMind) currently all handle ~800 standard academic pages per session (1M-token context each). For corpora beyond that, a RAG (Retrieval-Augmented Generation) pipeline with a vector database is required.',
             },
           },
           {
@@ -155,7 +155,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: 'Does AI research assistance work differently outside the US?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Yes. European researchers must comply with EU AI Act transparency requirements for AI-assisted work. Chinese institutions primarily use Qwen 3 (Alibaba) and DeepSeek V3, which have faster token processing for CJK-language literature. Japanese researchers under METI data governance guidelines often use Ollama-based local models — LLaMA 3.1 7B runs locally with 8GB RAM, with no data leaving the institution\'s infrastructure.',
+              text: 'Yes. European researchers must comply with EU AI Act transparency requirements for AI-assisted work. Chinese institutions primarily use Qwen3 (Alibaba) and DeepSeek, which have faster token processing for CJK-language literature. Japanese researchers under METI data governance guidelines often use Ollama-based local models — Llama 4 8B runs locally with 8GB RAM, with no data leaving the institution\'s infrastructure.',
             },
           },
           {
@@ -253,7 +253,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'right-tool',
           title: 'The Right Tool for Each Research Stage',
           content: [
-            '**As of April 2026, no single AI research tool handles every research stage well — the highest-quality workflows route each task to the tool best designed for it.**',
+            '**No single AI research tool handles every research stage well — the highest-quality workflows route each task to the tool best designed for it.**',
             'Elicit (elicit.com) uses semantic search across 138M+ academic papers and 545,000 clinical trials to extract structured data directly from PDFs — methodologies, sample sizes, outcomes — without requiring keyword matches. Consensus (consensus.app) searches ~200 million papers and returns a "Consensus Meter" summarizing scientific agreement (Yes / No / Possibly) on a specific question. Perplexity AI provides the fastest general-purpose cited answers across both the open web and academic literature, making it optimal for exploratory phases.',
           ],
           columns: ['Tool', 'Database', 'Primary Function', 'Free Tier'],
@@ -306,7 +306,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'hallucination',
           title: 'The Hallucination Problem in Research AI',
           content: [
-            '**As of April 2026, AI systems hallucinate citations and fabricate statistics — and these errors survive peer review.** GPTZero analyzed 4,841 papers accepted by NeurIPS 2025 (the top machine learning conference, acceptance rate 24.52%) and found 100+ confirmed hallucinated citations across 53 papers, all of which had passed multi-reviewer peer review.',
+            '**AI systems hallucinate citations and fabricate statistics — and these errors survive peer review.** GPTZero analyzed 4,841 papers accepted by NeurIPS 2025 (the top machine learning conference, acceptance rate 24.52%) and found 100+ confirmed hallucinated citations across 53 papers, all of which had passed multi-reviewer peer review.',
             'Hallucination rates vary sharply by domain and task complexity:',
           ],
           columns: ['Domain', 'Hallucination Rate'],
@@ -443,7 +443,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
           ],
           items: [
-            'As of August 2026, GPT-5.6, Claude Opus 5, and Gemini 3.1 Pro all share a 1-million-token context window. For research tasks involving fewer than 20 papers, all three models handle the full context easily. For systematic reviews covering 50—200 papers, all three can now process the full corpus in a single session — though the "lost in the middle" effect still degrades retrieval accuracy for material buried mid-context, regardless of window size.',
+            'GPT-5.6, Claude Opus 5, and Gemini 3.1 Pro currently all share a 1-million-token context window. For research tasks involving fewer than 20 papers, all three models handle the full context easily. For systematic reviews covering 50—200 papers, all three can now process the full corpus in a single session — though the "lost in the middle" effect still degrades retrieval accuracy for material buried mid-context, regardless of window size.',
             'For truly large corpora (500+ papers), a RAG pipeline — where papers are chunked, embedded in a vector database, and retrieved by semantic similarity — is the correct architecture, not direct context injection.',
             'For a deeper explanation of context windows and why models lose information mid-context, see [context windows explained](/prompt-engineering/context-windows-explained-why-ai-forgets).',
           ],
@@ -459,8 +459,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Global and Regional Research AI Context',
           content: [
             'European research institutions increasingly require that AI-assisted research comply with the EU AI Act, which mandates transparency, traceability, and human oversight for high-risk AI applications including academic publishing. Mistral AI (France) is widely used in EU academic settings because its models are deployable on-premise, satisfying GDPR data residency requirements for sensitive research data.',
-            'Chinese research institutions use **Qwen 3** (Alibaba) and **DeepSeek V3** as primary research AI tools — both are open-source, locally deployable, and handle CJK-language academic literature with faster token processing than Western-trained models. China\'s Interim Measures for Generative AI (2023) requires AI-generated research content to be labelled as such, a policy now influencing academic publishing standards globally.',
-            'Japanese universities operating under METI data governance guidelines frequently deploy **Ollama** with LLaMA 3.1 models locally — LLaMA 3.1 7B requires 8GB RAM for local inference, producing zero external API calls and meeting strict data residency standards for sensitive research.',
+            'Chinese research institutions use **Qwen3** (Alibaba) and **DeepSeek** as primary research AI tools — both are open-source, locally deployable, and handle CJK-language academic literature with faster token processing than Western-trained models. China\'s Interim Measures for Generative AI (2023) requires AI-generated research content to be labelled as such, a policy now influencing academic publishing standards globally.',
+            'Japanese universities operating under METI data governance guidelines frequently deploy **Ollama** with Llama 4 8B locally — the model requires 8GB RAM for local inference, producing zero external API calls and meeting strict data residency standards for sensitive research.',
           ],
         },
         commonMistakes: {
@@ -473,7 +473,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Choosing based on benchmark leaderboards (not actual task)** — **Fix:** Choose models by task fit, not leaderboard rank. Benchmark winners (GPT-5.6) are overkill for summarization; Gemini 3.1 Pro\'s cost advantage dominates when you only need context processing.',
             '**Assuming context window = quality (all three frontier models now at 1M; LLaMA 4 Scout offers 10M locally)** — **Fix:** Context window is one dimension, not a quality proxy. A 1M-token window matters only once a corpus exceeds ~50 papers. For small literature reviews, price and task fit — not window size — should drive model choice, since GPT-5.6, Claude Opus 5, and Gemini 3.1 Pro are now equal on context.',
             '**Using frontier model for every task (60× cost difference Gemini Flash vs GPT)** — **Fix:** Route tasks by cost-efficiency: Gemini Flash for classification, Claude Opus 5 for writing, GPT-5.6 for code. Multi-model dispatch via PromptQuorum enables per-task model selection.',
-            '**Ignoring geography and data residency (EU GDPR, China)** — **Fix:** EU research must use GDPR-compliant tools (Mistral on-premise, Ollama local). China-based institutions use Qwen 3 or DeepSeek. Japan under METI guidelines uses Ollama with LLaMA 3.1 locally.',
+            '**Ignoring geography and data residency (EU GDPR, China)** — **Fix:** EU research must use GDPR-compliant tools (Mistral on-premise, Ollama local). China-based institutions use Qwen3 or DeepSeek. Japan under METI guidelines uses Ollama with Llama 4 Scout locally.',
             '**Locking into one provider SDK without abstraction layer** — **Fix:** Use multi-model dispatch tools (PromptQuorum) to avoid vendor lock-in. A single API call routes to the best model per task; switching providers requires no code changes.',
           ],
         },
@@ -515,7 +515,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'How many academic papers can an AI process at once?',
-              a: 'This depends on the model\'s context window. As of August 2026, GPT-5.6 (OpenAI), Claude Opus 5 (Anthropic), and Gemini 3.1 Pro (Google DeepMind) all handle ~800 standard academic pages per session (1M-token context each). For corpora beyond that, a RAG (Retrieval-Augmented Generation) pipeline with a vector database is required.',
+              a: 'This depends on the model\'s context window. GPT-5.6 (OpenAI), Claude Opus 5 (Anthropic), and Gemini 3.1 Pro (Google DeepMind) currently all handle ~800 standard academic pages per session (1M-token context each). For corpora beyond that, a RAG (Retrieval-Augmented Generation) pipeline with a vector database is required.',
             },
             {
               q: 'Is it safe to cite AI-generated references in academic papers?',
@@ -523,7 +523,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Does AI research assistance work differently outside the US?',
-              a: 'Yes. European researchers must comply with EU AI Act transparency requirements for AI-assisted work. Chinese institutions primarily use Qwen 3 (Alibaba) and DeepSeek V3, which have faster token processing for CJK-language literature. Japanese researchers under METI data governance guidelines often use Ollama-based local models — LLaMA 3.1 7B runs locally with 8GB RAM, with no data leaving the institution\'s infrastructure.',
+              a: 'Yes. European researchers must comply with EU AI Act transparency requirements for AI-assisted work. Chinese institutions primarily use Qwen3 (Alibaba) and DeepSeek, which have faster token processing for CJK-language literature. Japanese researchers under METI data governance guidelines often use Ollama-based local models — Llama 4 8B runs locally with 8GB RAM, with no data leaving the institution\'s infrastructure.',
             },
             {
               q: 'What temperature should I use for AI research tasks?',
@@ -563,7 +563,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       theme: 'Use Cases',
       heroImage: '/images/ai-powered-research-overview-hero-de.webp',
       title: 'KI-gestützte Forschung: Tools, Halluzinations-Quoten und Verifikations-Workflows',
-      intro: 'KI-Forschungstools verkürzen Literaturrecherchen von Wochen auf Stunden – führen aber ein kritisches Risiko ein: halluzinierte Zitate, die Peer Reviews passieren. GPTZero bestätigte 100+ fabrizierte Referenzen in NeurIPS-2025-Papieren, die eine Multi-Reviewer-Prüfung bestanden haben. Ab Mai 2026 leitet der zuverlässige Workflow jede Forschungsphase an das richtige Tool (Elicit für Datenextraktion, Consensus für Synthese, scite.ai für Verifizierung) und prüft faktische Ansprüche zwischen mindestens zwei unabhängigen Modellen, bevor man ihnen vertraut.',
+      intro: 'KI-Forschungstools verkürzen Literaturrecherchen von Wochen auf Stunden – führen aber ein kritisches Risiko ein: halluzinierte Zitate, die Peer Reviews passieren. GPTZero bestätigte 100+ fabrizierte Referenzen in NeurIPS-2025-Papieren, die eine Multi-Reviewer-Prüfung bestanden haben. Der zuverlässige Workflow leitet jede Forschungsphase an das richtige Tool (Elicit für Datenextraktion, Consensus für Synthese, scite.ai für Verifizierung) und prüft faktische Ansprüche zwischen mindestens zwei unabhängigen Modellen, bevor man ihnen vertraut.',
       publishDate: '2026-03-23',
       dateModified: '2026-08-29',
       readTime: '9 Min. Lesezeit',
@@ -672,7 +672,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: 'Wie viele akademische Papiere kann eine KI auf einmal verarbeiten?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Das hängt vom Context-Window des Modells ab. Stand August 2026 verarbeiten GPT-5.6 (OpenAI), Claude Opus 5 (Anthropic) und Gemini 3.1 Pro (Google DeepMind) alle ~800 Standard-Akademie-Seiten pro Sitzung (je 1M Token Context). Für größere Korpora ist eine RAG (Retrieval-Augmented Generation) Pipeline mit Vektor-Datenbank erforderlich.',
+              text: 'Das hängt vom Context-Window des Modells ab. GPT-5.6 (OpenAI), Claude Opus 5 (Anthropic) und Gemini 3.1 Pro (Google DeepMind) verarbeiten aktuell alle ~800 Standard-Akademie-Seiten pro Sitzung (je 1M Token Context). Für größere Korpora ist eine RAG (Retrieval-Augmented Generation) Pipeline mit Vektor-Datenbank erforderlich.',
             },
           },
           {
@@ -688,7 +688,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: 'Funktioniert KI-Forschungsassistenz außerhalb der USA anders?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Ja. Europäische Forscher müssen die EU AI Act Transparenzanforderungen für KI-gestützte Arbeit erfüllen. Chinesische Institutionen verwenden hauptsächlich Qwen 3 (Alibaba) und DeepSeek V3, die eine schnellere Token-Verarbeitung für CJK-Sprachenliteratur bieten. Japanische Forscher unter METI-Datenschutz-Richtlinien verwenden häufig Ollama-basierte lokale Modelle – LLaMA 3.1 7B läuft lokal mit 8GB RAM, mit Daten, die die institutionelle Infrastruktur nicht verlassen.',
+              text: 'Ja. Europäische Forscher müssen die EU AI Act Transparenzanforderungen für KI-gestützte Arbeit erfüllen. Chinesische Institutionen verwenden hauptsächlich Qwen3 (Alibaba) und DeepSeek, die eine schnellere Token-Verarbeitung für CJK-Sprachenliteratur bieten. Japanische Forscher unter METI-Datenschutz-Richtlinien verwenden häufig Ollama-basierte lokale Modelle – Llama 4 8B läuft lokal mit 8GB RAM, mit Daten, die die institutionelle Infrastruktur nicht verlassen.',
             },
           },
           {
@@ -791,7 +791,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         toolComparison: {
           title: 'Das richtige Tool für jede Forschungsphase',
           content: [
-            '**Ab April 2026 gibt es kein einzelnes KI-Forschungs-Tool, das alle Forschungsphasen gut verarbeitet – die hochwertigsten Workflows leiten jede Aufgabe an das Tool, das dafür am besten ausgelegt ist.**',
+            '**Kein einzelnes KI-Forschungs-Tool verarbeitet alle Forschungsphasen gut – die hochwertigsten Workflows leiten jede Aufgabe an das Tool, das dafür am besten ausgelegt ist.**',
             'Elicit (elicit.com) nutzt semantische Suche über 138M+ akademische Papiere und 545.000 klinische Versuche, um strukturierte Daten direkt aus PDFs zu extrahieren – Methodologien, Stichprobengrößen, Ergebnisse – ohne Keyword-Übereinstimmung zu erfordern. Consensus (consensus.app) durchsucht ~200 Millionen Papiere und gibt einen "Consensus Meter" zurück, der die wissenschaftliche Übereinstimmung (Ja / Nein / Möglich) zu einer bestimmten Frage zusammenfasst. Perplexity AI liefert die schnellsten allgemeinen zitierten Antworten über Web und akademische Literatur hinweg, was es für explorative Phasen optimal macht.',
           ],
           columns: ['Tool', 'Datenbank', 'Primäre Funktion', 'Kostenlos'],
@@ -843,7 +843,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         hallucinationRisk: {
           title: 'Das Halluzinations-Problem in Forschungs-KI',
           content: [
-            '**Ab April 2026 halluzinieren KI-Systeme Zitate und fabrizieren Statistiken – und diese Fehler überstehen Peer Review.** GPTZero analysierte 4.841 bei NeurIPS 2025 akzeptierte Papiere (die Top-Machine-Learning-Konferenz, Akzeptanzrate 24,52%) und fand 100+ bestätigte halluzinierte Zitate über 53 Papiere hinweg, alle bestanden Multi-Reviewer Peer Review.',
+            '**KI-Systeme halluzinieren Zitate und fabrizieren Statistiken – und diese Fehler überstehen Peer Review.** GPTZero analysierte 4.841 bei NeurIPS 2025 akzeptierte Papiere (die Top-Machine-Learning-Konferenz, Akzeptanzrate 24,52%) und fand 100+ bestätigte halluzinierte Zitate über 53 Papiere hinweg, alle bestanden Multi-Reviewer Peer Review.',
             'Halluzinations-Quoten variieren stark je nach Domäne und Aufgabenkomplexität:',
           ],
           columns: ['Domäne', 'Halluzinations-Quote'],
@@ -969,7 +969,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
           ],
           items: [
-            'Stand August 2026 teilen sich GPT-5.6, Claude Opus 5 und Gemini 3.1 Pro alle ein 1-Million-Token Context Window. Für Forschungsaufgaben mit weniger als 20 Papieren verarbeiten alle drei Modelle den vollständigen Context problemlos. Für Systematic Reviews, die 50–200 Papiere abdecken, können jetzt alle drei die vollständige Kopie in einer Sitzung verarbeiten — der "Lost in the Middle"-Effekt beeinträchtigt jedoch weiterhin die Abrufgenauigkeit für Material in der Mitte des Contexts, unabhängig von der Fenstergröße.',
+            'GPT-5.6, Claude Opus 5 und Gemini 3.1 Pro teilen sich aktuell alle ein 1-Million-Token Context Window. Für Forschungsaufgaben mit weniger als 20 Papieren verarbeiten alle drei Modelle den vollständigen Context problemlos. Für Systematic Reviews, die 50–200 Papiere abdecken, können jetzt alle drei die vollständige Kopie in einer Sitzung verarbeiten — der "Lost in the Middle"-Effekt beeinträchtigt jedoch weiterhin die Abrufgenauigkeit für Material in der Mitte des Contexts, unabhängig von der Fenstergröße.',
             'Für wirklich große Korpora (500+ Papiere) ist eine RAG-Pipeline – wo Papiere geckt, in einer Vektor-Datenbank eingebettet und durch semantische Ähnlichkeit abgerufen werden – die korrekte Architektur, nicht direkter Context-Injection.',
             'Für eine tiefere Erklärung von Context Windows und warum Modelle Informationen in der Mitte des Kontexts verlieren, siehe [Context Windows erklärt](/de/prompt-engineering/context-windows-explained-why-ai-forgets).',
           ],
@@ -984,8 +984,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Globaler und regionaler Forschungs-KI-Kontext',
           content: [
             'Europäische Forschungsinstitutionen erfordern zunehmend, dass KI-gestützte Forschung mit dem EU AI Act konform ist, der Transparenz, Rückverfolgbarkeit und menschliche Aufsicht für hochriskante KI-Anwendungen einschließlich akademischer Veröffentlichung verpflichtet. Mistral AI (Frankreich) wird häufig in EU-akademischen Umgebungen verwendet, weil ihre Modelle On-Premise deploybar sind und GDPR-Daten-Residenzanforderungen für sensible Forschungsdaten erfüllen.',
-            'Chinesische Forschungsinstitutionen verwenden **Qwen 3** (Alibaba) und **DeepSeek V3** als primäre Forschungs-KI-Tools – beide sind Open-Source, lokal deploybar und verarbeiten CJK-Sprachenliteratur schneller als Western-trainierte Modelle. Chinas Interim Measures for Generative AI (2023) erfordern, dass KI-generierte Forschungs-Inhalte als solche gekennzeichnet werden – eine Richtlinie, die jetzt akademische Veröffentlichungs-Standards global beeinflusst.',
-            'Japanische Universitäten, die unter METI-Datenschutz-Richtlinien operieren, deployen häufig **Ollama** mit LLaMA 3.1 Modellen lokal – LLaMA 3.1 7B erfordert 8GB RAM für lokale Inferenz, produziert Null externe API-Aufrufe und erfüllt strikte Daten-Residenzstandards für sensible Forschung.',
+            'Chinesische Forschungsinstitutionen verwenden **Qwen3** (Alibaba) und **DeepSeek** als primäre Forschungs-KI-Tools – beide sind Open-Source, lokal deploybar und verarbeiten CJK-Sprachenliteratur schneller als Western-trainierte Modelle. Chinas Interim Measures for Generative AI (2023) erfordern, dass KI-generierte Forschungs-Inhalte als solche gekennzeichnet werden – eine Richtlinie, die jetzt akademische Veröffentlichungs-Standards global beeinflusst.',
+            'Japanische Universitäten, die unter METI-Datenschutz-Richtlinien operieren, deployen häufig **Ollama** mit Llama 4 8B lokal – das Modell erfordert 8GB RAM für lokale Inferenz, produziert Null externe API-Aufrufe und erfüllt strikte Daten-Residenzstandards für sensible Forschung.',
           ],
         },
         commonMistakes: {
@@ -997,7 +997,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Auswahl basierend auf Benchmark-Leaderboards (nicht tatsächliche Aufgabe)** – **Korrektur:** Wählen Sie Modelle nach Aufgaben-Passung, nicht Leaderboard-Rang. Benchmark-Sieger (GPT-5.6) sind übertrieben für Zusammenfassung; Gemini 3.1 Pros Kosten-Vorteil dominiert, wenn Sie nur Context-Verarbeitung benötigen.',
             '**Annahme, Context Window = Qualität (alle drei Frontier-Modelle jetzt bei 1M; LLaMA 4 Scout bietet lokal 10M)** – **Korrektur:** Context Window ist eine Dimension, kein Qualitätsmaßstab. 1M Tokens ist wichtig nur für 50+ Papiere. Für kleine Literatur-Reviews sollten Preis und Aufgaben-Fit die Modellwahl bestimmen, nicht die Fenstergröße — GPT-5.6, Claude Opus 5 und Gemini 3.1 Pro sind jetzt beim Context gleichauf.',
             '**Frontier-Modell für jede Aufgabe verwenden (60× Kosten-Unterschied Gemini Flash vs GPT)** – **Korrektur:** Leiten Sie Aufgaben nach Kosten-Effizienz: Gemini Flash für Klassifizierung, Claude Opus 5 für Schreiben, GPT-5.6 für Code. Multi-Modell-Dispatch über PromptQuorum ermöglicht Pro-Aufgaben-Modell-Auswahl.',
-            '**Geografie und Daten-Residenz ignorieren (EU GDPR, China)** – **Korrektur:** EU-Forschung muss GDPR-konforme Tools verwenden (Mistral On-Premise, Ollama lokal). China-basierte Institutionen verwenden Qwen 3 oder DeepSeek. Japan unter METI-Richtlinien nutzt Ollama mit LLaMA 3.1 lokal.',
+            '**Geografie und Daten-Residenz ignorieren (EU GDPR, China)** – **Korrektur:** EU-Forschung muss GDPR-konforme Tools verwenden (Mistral On-Premise, Ollama lokal). China-basierte Institutionen verwenden Qwen3 oder DeepSeek. Japan unter METI-Richtlinien nutzt Ollama mit Llama 4 Scout lokal.',
             '**Vendor Lock-in ohne Abstraktions-Layer:** In einen Provider SDK sperren** – **Korrektur:** Nutzen Sie Multi-Modell-Dispatch-Tools (PromptQuorum), um Vendor Lock-in zu vermeiden. Ein einzelner API-Aufruf leitet zum besten Modell pro Aufgabe; Anbieter-Wechsel erfordert keine Code-Änderungen.',
           ],
         },
@@ -1039,7 +1039,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Wie viele akademische Papiere kann eine KI auf einmal verarbeiten?',
-              a: 'Das hängt vom Context-Window des Modells ab. Stand August 2026 verarbeiten GPT-5.6 (OpenAI), Claude Opus 5 (Anthropic) und Gemini 3.1 Pro (Google DeepMind) alle ~800 Standard-Akademie-Seiten pro Sitzung (je 1M Token Context). Für größere Korpora ist eine RAG (Retrieval-Augmented Generation) Pipeline mit Vektor-Datenbank erforderlich.',
+              a: 'Das hängt vom Context-Window des Modells ab. GPT-5.6 (OpenAI), Claude Opus 5 (Anthropic) und Gemini 3.1 Pro (Google DeepMind) verarbeiten aktuell alle ~800 Standard-Akademie-Seiten pro Sitzung (je 1M Token Context). Für größere Korpora ist eine RAG (Retrieval-Augmented Generation) Pipeline mit Vektor-Datenbank erforderlich.',
             },
             {
               q: 'Ist es sicher, KI-generierte Referenzen in akademischen Papieren zu zitieren?',
@@ -1047,7 +1047,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Funktioniert KI-Forschungsassistenz außerhalb der USA anders?',
-              a: 'Ja. Europäische Forscher müssen die EU AI Act Transparenzanforderungen für KI-gestützte Arbeit erfüllen. Chinesische Institutionen verwenden hauptsächlich Qwen 3 (Alibaba) und DeepSeek V3, die eine schnellere Token-Verarbeitung für CJK-Sprachenliteratur bieten. Japanische Forscher unter METI-Datenschutz-Richtlinien verwenden häufig Ollama-basierte lokale Modelle – LLaMA 3.1 7B läuft lokal mit 8GB RAM, mit Daten, die die institutionelle Infrastruktur nicht verlassen.',
+              a: 'Ja. Europäische Forscher müssen die EU AI Act Transparenzanforderungen für KI-gestützte Arbeit erfüllen. Chinesische Institutionen verwenden hauptsächlich Qwen3 (Alibaba) und DeepSeek, die eine schnellere Token-Verarbeitung für CJK-Sprachenliteratur bieten. Japanische Forscher unter METI-Datenschutz-Richtlinien verwenden häufig Ollama-basierte lokale Modelle – Llama 4 8B läuft lokal mit 8GB RAM, mit Daten, die die institutionelle Infrastruktur nicht verlassen.',
             },
             {
               q: 'Welche Temperature sollte ich für KI-Forschungsaufgaben verwenden?',
@@ -1087,7 +1087,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       theme: 'Use Cases',
       heroImage: '/images/ai-powered-research-overview-hero-es.webp',
       title: 'Investigación con IA: Herramientas, Tasas de Alucinaciones y Flujos de Verificación',
-      intro: 'Las herramientas de investigación con IA reducen el tiempo de revisión bibliográfica de semanas a horas — pero introducen un riesgo crítico: citas alucinadas que superan la revisión por pares. GPTZero confirmó más de 100 referencias fabricadas en artículos de NeurIPS 2025 que superaron el escrutinio de múltiples revisores. A partir de abril de 2026, el flujo de trabajo fiable enruta cada fase de investigación a la herramienta correcta (Elicit para extracción, Consensus para síntesis, scite.ai para verificación) y verifica las afirmaciones factuales en al menos dos modelos independientes antes de confiar en ellas.',
+      intro: 'Las herramientas de investigación con IA reducen el tiempo de revisión bibliográfica de semanas a horas — pero introducen un riesgo crítico: citas alucinadas que superan la revisión por pares. GPTZero confirmó más de 100 referencias fabricadas en artículos de NeurIPS 2025 que superaron el escrutinio de múltiples revisores. El flujo de trabajo fiable enruta cada fase de investigación a la herramienta correcta (Elicit para extracción, Consensus para síntesis, scite.ai para verificación) y verifica las afirmaciones factuales en al menos dos modelos independientes antes de confiar en ellas.',
       publishDate: '2026-03-23',
       dateModified: '2026-08-29',
       readTime: '9 min de lectura',
@@ -1196,7 +1196,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: '¿Cuántos artículos académicos puede procesar una IA a la vez?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Depende de la ventana de contexto del modelo. A partir de agosto de 2026, GPT-5.6 (OpenAI), Claude Opus 5 (Anthropic) y Gemini 3.1 Pro (Google DeepMind) manejan todos ~800 páginas académicas estándar por sesión (1M tokens de contexto cada uno). Para corpus más grandes, se requiere un pipeline RAG con base de datos vectorial.',
+              text: 'Depende de la ventana de contexto del modelo. GPT-5.6 (OpenAI), Claude Opus 5 (Anthropic) y Gemini 3.1 Pro (Google DeepMind) manejan actualmente ~800 páginas académicas estándar por sesión (1M tokens de contexto cada uno). Para corpus más grandes, se requiere un pipeline RAG con base de datos vectorial.',
             },
           },
           {
@@ -1212,7 +1212,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: '¿Funciona de manera diferente la asistencia de investigación con IA fuera de los EE. UU.?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Sí. Los investigadores europeos deben cumplir los requisitos de transparencia de la Ley de IA de la UE para trabajos asistidos por IA. Las instituciones chinas usan principalmente Qwen 3 (Alibaba) y DeepSeek V3. Los investigadores japoneses bajo las directrices de gobernanza de datos de METI suelen usar modelos locales basados en Ollama — LLaMA 3.1 7B se ejecuta localmente con 8 GB de RAM, sin que los datos salgan de la infraestructura de la institución.',
+              text: 'Sí. Los investigadores europeos deben cumplir los requisitos de transparencia de la Ley de IA de la UE para trabajos asistidos por IA. Las instituciones chinas usan principalmente Qwen3 (Alibaba) y DeepSeek. Los investigadores japoneses bajo las directrices de gobernanza de datos de METI suelen usar modelos locales basados en Ollama — Llama 4 8B se ejecuta localmente con 8 GB de RAM, sin que los datos salgan de la infraestructura de la institución.',
             },
           },
           {
@@ -1315,7 +1315,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         toolComparison: {
           title: 'La herramienta correcta para cada fase de investigación',
           content: [
-            '**A partir de abril de 2026, ninguna herramienta de investigación con IA maneja bien todas las fases de investigación — los flujos de trabajo de mayor calidad enrutan cada tarea a la herramienta mejor diseñada para ello.**',
+            '**Ninguna herramienta de investigación con IA maneja bien todas las fases de investigación — los flujos de trabajo de mayor calidad enrutan cada tarea a la herramienta mejor diseñada para ello.**',
             'Elicit (elicit.com) usa búsqueda semántica en más de 138M de artículos académicos y 545.000 ensayos clínicos para extraer datos estructurados directamente de PDFs — metodologías, tamaños de muestra, resultados — sin requerir coincidencias de palabras clave. Consensus (consensus.app) busca en ~200 millones de artículos y devuelve un "Consensus Meter" que resume el acuerdo científico (Sí / No / Posiblemente) sobre una pregunta específica. Perplexity AI proporciona las respuestas citadas de propósito general más rápidas tanto en la web abierta como en la literatura académica, haciéndola óptima para fases exploratorias.',
           ],
           columns: ['Herramienta', 'Base de Datos', 'Función Principal', 'Nivel Gratuito'],
@@ -1367,7 +1367,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         hallucinationRisk: {
           title: 'El problema de las alucinaciones en la IA de investigación',
           content: [
-            '**A partir de abril de 2026, los sistemas de IA alucinan citas y fabrican estadísticas — y estos errores superan la revisión por pares.** GPTZero analizó 4.841 artículos aceptados por NeurIPS 2025 (la conferencia de aprendizaje automático de élite, tasa de aceptación del 24,52 %) y encontró más de 100 citas alucinadas confirmadas en 53 artículos, todos los cuales habían superado la revisión por pares de múltiples revisores.',
+            '**Los sistemas de IA alucinan citas y fabrican estadísticas — y estos errores superan la revisión por pares.** GPTZero analizó 4.841 artículos aceptados por NeurIPS 2025 (la conferencia de aprendizaje automático de élite, tasa de aceptación del 24,52 %) y encontró más de 100 citas alucinadas confirmadas en 53 artículos, todos los cuales habían superado la revisión por pares de múltiples revisores.',
             'Las tasas de alucinación varían considerablemente según el dominio y la complejidad de la tarea:',
           ],
           columns: ['Dominio', 'Tasa de Alucinación'],
@@ -1493,7 +1493,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
           ],
           items: [
-            'A partir de agosto de 2026, GPT-5.6, Claude Opus 5 y Gemini 3.1 Pro comparten todos una ventana de contexto de 1 millón de tokens. Para tareas de investigación con menos de 20 artículos, los tres modelos procesan el contexto completo sin problemas. Para revisiones sistemáticas que cubren 50–200 artículos, los tres pueden ahora procesar la copia completa en una sesión — aunque el efecto "lost in the middle" sigue degradando la precisión de recuperación del material situado en medio del contexto, sin importar el tamaño de la ventana.',
+            'GPT-5.6, Claude Opus 5 y Gemini 3.1 Pro comparten actualmente una ventana de contexto de 1 millón de tokens. Para tareas de investigación con menos de 20 artículos, los tres modelos procesan el contexto completo sin problemas. Para revisiones sistemáticas que cubren 50–200 artículos, los tres pueden ahora procesar la copia completa en una sesión — aunque el efecto "lost in the middle" sigue degradando la precisión de recuperación del material situado en medio del contexto, sin importar el tamaño de la ventana.',
             'Para corpus realmente grandes (más de 500 artículos), un pipeline RAG — donde los artículos se fragmentan, se embeben en una base de datos vectorial y se recuperan por similitud semántica — es la arquitectura correcta, no la inyección directa de contexto.',
             'Para una explicación más profunda de las ventanas de contexto y por qué los modelos pierden información en el medio del contexto, consulta [Ventanas de contexto explicadas](/es/prompt-engineering/context-windows-explained-why-ai-forgets).',
           ],
@@ -1508,8 +1508,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Contexto global y regional para IA de investigación',
           content: [
             'Las instituciones de investigación europeas requieren cada vez más que la investigación asistida por IA cumpla con la Ley de IA de la UE, que obliga a transparencia, trazabilidad y supervisión humana para aplicaciones de IA de alto riesgo, incluida la publicación académica. Mistral AI (Francia) se usa frecuentemente en entornos académicos de la UE porque sus modelos son desplegables on-premise y cumplen los requisitos de residencia de datos del RGPD para datos de investigación sensibles.',
-            'Las instituciones de investigación chinas usan **Qwen 3** (Alibaba) y **DeepSeek V3** como herramientas principales de IA de investigación — ambos son de código abierto, desplegables localmente y procesan literatura en idioma CJK más rápido que los modelos entrenados en Occidente. Las Medidas Interinas para la IA Generativa de China (2023) requieren que el contenido de investigación generado por IA se etiquete como tal.',
-            'Las universidades japonesas que operan bajo las directrices de protección de datos de METI suelen desplegar **Ollama** con modelos LLaMA 3.1 localmente — LLaMA 3.1 7B requiere 8 GB de RAM para inferencia local, produce cero llamadas API externas y cumple estrictos estándares de residencia de datos para investigación sensible.',
+            'Las instituciones de investigación chinas usan **Qwen3** (Alibaba) y **DeepSeek** como herramientas principales de IA de investigación — ambos son de código abierto, desplegables localmente y procesan literatura en idioma CJK más rápido que los modelos entrenados en Occidente. Las Medidas Interinas para la IA Generativa de China (2023) requieren que el contenido de investigación generado por IA se etiquete como tal.',
+            'Las universidades japonesas que operan bajo las directrices de protección de datos de METI suelen desplegar **Ollama** con Llama 4 8B localmente — el modelo requiere 8 GB de RAM para inferencia local, produce cero llamadas API externas y cumple estrictos estándares de residencia de datos para investigación sensible.',
           ],
         },
         commonMistakes: {
@@ -1521,7 +1521,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Seleccionar basándose en tablas de clasificación de benchmarks (no en la tarea real)** — **Corrección:** Elige modelos por adecuación a la tarea, no por posición en la tabla de clasificación. Los campeones de benchmark (GPT-5.6) están sobredimensionados para resúmenes; la ventaja de costo de Gemini 3.1 Pro domina cuando solo necesitas procesamiento de contexto.',
             '**Asumir que ventana de contexto = calidad (los tres modelos frontera ahora en 1M; LLaMA 4 Scout ofrece 10M en local)** — **Corrección:** La ventana de contexto es una dimensión, no una medida de calidad. 1M de tokens importa solo para más de 50 artículos. Para revisiones bibliográficas pequeñas, el precio y la idoneidad para la tarea — no el tamaño de la ventana — deben guiar la elección del modelo, ya que GPT-5.6, Claude Opus 5 y Gemini 3.1 Pro están ahora igualados en contexto.',
             '**Usar modelo frontier para cada tarea** — **Corrección:** Enruta tareas por eficiencia de costo: Gemini Flash para clasificación, Claude Opus 5 para redacción, GPT-5.6 para código. El despacho multi-modelo mediante PromptQuorum permite la selección de modelo por tarea.',
-            '**Ignorar geografía y residencia de datos (RGPD de la UE, China)** — **Corrección:** La investigación en la UE debe usar herramientas conformes con el RGPD (Mistral on-premise, Ollama local). Las instituciones en China usan Qwen 3 o DeepSeek. Japón bajo directrices de METI usa Ollama con LLaMA 3.1 localmente.',
+            '**Ignorar geografía y residencia de datos (RGPD de la UE, China)** — **Corrección:** La investigación en la UE debe usar herramientas conformes con el RGPD (Mistral on-premise, Ollama local). Las instituciones en China usan Qwen3 o DeepSeek. Japón bajo directrices de METI usa Ollama con Llama 4 Scout localmente.',
             '**Bloqueo de proveedor sin capa de abstracción** — **Corrección:** Usa herramientas de despacho multi-modelo (PromptQuorum) para evitar el bloqueo de proveedor. Una sola llamada API enruta al mejor modelo por tarea; cambiar de proveedor no requiere cambios de código.',
           ],
         },
@@ -1563,7 +1563,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: '¿Cuántos artículos académicos puede procesar una IA a la vez?',
-              a: 'Depende de la ventana de contexto del modelo. A partir de agosto de 2026, GPT-5.6 (OpenAI), Claude Opus 5 (Anthropic) y Gemini 3.1 Pro (Google DeepMind) manejan todos ~800 páginas académicas estándar por sesión (1M tokens de contexto cada uno). Para corpus más grandes, se requiere un pipeline RAG con base de datos vectorial.',
+              a: 'Depende de la ventana de contexto del modelo. GPT-5.6 (OpenAI), Claude Opus 5 (Anthropic) y Gemini 3.1 Pro (Google DeepMind) manejan actualmente ~800 páginas académicas estándar por sesión (1M tokens de contexto cada uno). Para corpus más grandes, se requiere un pipeline RAG con base de datos vectorial.',
             },
             {
               q: '¿Es seguro citar referencias generadas por IA en artículos académicos?',
@@ -1571,7 +1571,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: '¿Funciona de manera diferente la asistencia de investigación con IA fuera de los EE. UU.?',
-              a: 'Sí. Los investigadores europeos deben cumplir los requisitos de transparencia de la Ley de IA de la UE para trabajos asistidos por IA. Las instituciones chinas usan principalmente Qwen 3 (Alibaba) y DeepSeek V3, que tienen un procesamiento de tokens más rápido para literatura en idioma CJK. Los investigadores japoneses bajo las directrices de gobernanza de datos de METI suelen usar modelos locales basados en Ollama — LLaMA 3.1 7B se ejecuta localmente con 8 GB de RAM, sin que los datos salgan de la infraestructura de la institución.',
+              a: 'Sí. Los investigadores europeos deben cumplir los requisitos de transparencia de la Ley de IA de la UE para trabajos asistidos por IA. Las instituciones chinas usan principalmente Qwen3 (Alibaba) y DeepSeek, que tienen un procesamiento de tokens más rápido para literatura en idioma CJK. Los investigadores japoneses bajo las directrices de gobernanza de datos de METI suelen usar modelos locales basados en Ollama — Llama 4 8B se ejecuta localmente con 8 GB de RAM, sin que los datos salgan de la infraestructura de la institución.',
             },
             {
               q: '¿Qué temperatura debo usar para tareas de investigación con IA?',
@@ -1612,7 +1612,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       theme: 'Use Cases',
       heroImage: '/images/ai-powered-research-overview-hero-ar.webp',
       title: 'البحث بالذكاء الاصطناعي: الأدوات ومعدلات الهلوسة وسير عمل التحقق',
-      intro: 'تُقلِّل أدوات البحث بالذكاء الاصطناعي وقت مراجعة الأدبيات من أسابيع إلى ساعات — لكنها تُقدِّم خطرًا حرجًا: اقتباسات مُهلوَسة تجتاز مراجعة الأقران. أكّد GPTZero أكثر من 100 مرجع مُختلَق في أوراق NeurIPS 2025 اجتازت تدقيق مراجعين متعددين. اعتبارًا من أبريل 2026، سير العمل الموثوق يُوجِّه كل مرحلة بحثية إلى الأداة الصحيحة (Elicit للاستخراج، Consensus للتوليف، scite.ai للتحقق) ويتحقق من الادعاءات الواقعية في نموذجين مستقلين على الأقل قبل الثقة بها.',
+      intro: 'تُقلِّل أدوات البحث بالذكاء الاصطناعي وقت مراجعة الأدبيات من أسابيع إلى ساعات — لكنها تُقدِّم خطرًا حرجًا: اقتباسات مُهلوَسة تجتاز مراجعة الأقران. أكّد GPTZero أكثر من 100 مرجع مُختلَق في أوراق NeurIPS 2025 اجتازت تدقيق مراجعين متعددين. سير العمل الموثوق يُوجِّه كل مرحلة بحثية إلى الأداة الصحيحة (Elicit للاستخراج، Consensus للتوليف، scite.ai للتحقق) ويتحقق من الادعاءات الواقعية في نموذجين مستقلين على الأقل قبل الثقة بها.',
       publishDate: '2026-03-23',
       dateModified: '2026-08-29',
       readTime: '٩ دقائق للقراءة',
@@ -1721,7 +1721,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: 'كم عدد الأوراق الأكاديمية التي يستطيع الذكاء الاصطناعي معالجتها في وقت واحد؟',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'يعتمد على نافذة سياق النموذج. اعتبارًا من أغسطس 2026، تعالج GPT-5.6 (OpenAI) وClaude Opus 5 (Anthropic) وGemini 3.1 Pro (Google DeepMind) جميعها ~800 صفحة أكاديمية قياسية في جلسة (نافذة سياق بحجم مليون رمز لكل منها). للمجموعات الأكبر من ذلك، يُلزَم بخط أنابيب RAG مع قاعدة بيانات متجهية.',
+              text: 'يعتمد على نافذة سياق النموذج. تعالج GPT-5.6 (OpenAI) وClaude Opus 5 (Anthropic) وGemini 3.1 Pro (Google DeepMind) حاليًا جميعها ~800 صفحة أكاديمية قياسية في جلسة (نافذة سياق بحجم مليون رمز لكل منها). للمجموعات الأكبر من ذلك، يُلزَم بخط أنابيب RAG مع قاعدة بيانات متجهية.',
             },
           },
           {
@@ -1737,7 +1737,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: 'هل تعمل مساعدة البحث بالذكاء الاصطناعي بشكل مختلف خارج الولايات المتحدة؟',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'نعم. يجب على الباحثين الأوروبيين الامتثال لمتطلبات الشفافية في قانون الذكاء الاصطناعي الأوروبي للأعمال المدعومة بالذكاء الاصطناعي. المؤسسات الصينية تستخدم أساسًا Qwen 3 (Alibaba) وDeepSeek V3. الباحثون اليابانيون تحت توجيهات حوكمة بيانات METI يستخدمون عادةً نماذج محلية قائمة على Ollama — LLaMA 3.1 7B يعمل محليًا بـ 8 GB RAM، دون خروج بيانات من البنية التحتية للمؤسسة.',
+              text: 'نعم. يجب على الباحثين الأوروبيين الامتثال لمتطلبات الشفافية في قانون الذكاء الاصطناعي الأوروبي للأعمال المدعومة بالذكاء الاصطناعي. المؤسسات الصينية تستخدم أساسًا Qwen3 (Alibaba) وDeepSeek. الباحثون اليابانيون تحت توجيهات حوكمة بيانات METI يستخدمون عادةً نماذج محلية قائمة على Ollama — Llama 4 8B يعمل محليًا بـ 8 GB RAM، دون خروج بيانات من البنية التحتية للمؤسسة.',
             },
           },
           {
@@ -1840,7 +1840,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         toolComparison: {
           title: 'الأداة الصحيحة لكل مرحلة بحثية',
           content: [
-            '**اعتبارًا من أبريل 2026، لا توجد أداة بحث بالذكاء الاصطناعي تتعامل بشكل جيد مع جميع مراحل البحث — سير العمل الأعلى جودة تُوجِّه كل مهمة إلى الأداة الأفضل تصميمًا لها.**',
+            '**لا توجد أداة بحث واحدة بالذكاء الاصطناعي تتعامل بشكل جيد مع جميع مراحل البحث — سير العمل الأعلى جودة تُوجِّه كل مهمة إلى الأداة الأفضل تصميمًا لها.**',
             'Elicit (elicit.com) يستخدم البحث الدلالي في أكثر من 138 مليون ورقة أكاديمية و545 ألف تجربة سريرية لاستخراج بيانات منظمة مباشرةً من ملفات PDF — منهجيات وأحجام عينات ونتائج — دون الحاجة إلى مطابقة كلمات مفتاحية. Consensus (consensus.app) يبحث في ~200 مليون ورقة ويعيد "مؤشر Consensus" الذي يلخص الاتفاق العلمي (نعم/لا/ربما) حول سؤال محدد. Perplexity AI يوفر أسرع الإجابات المستشهد بها للأغراض العامة عبر الويب المفتوح والأدبيات الأكاديمية، مما يجعله الأمثل للمراحل الاستكشافية.',
           ],
           columns: ['الأداة', 'قاعدة البيانات', 'الوظيفة الرئيسية', 'الطبقة المجانية'],
@@ -1892,7 +1892,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         hallucinationRisk: {
           title: 'مشكلة الهلوسة في الذكاء الاصطناعي للبحث',
           content: [
-            '**اعتبارًا من أبريل 2026، تُهلوِس أنظمة الذكاء الاصطناعي اقتباسات وتختلق إحصاءات — وهذه الأخطاء تجتاز مراجعة الأقران.** حلَّل GPTZero 4841 ورقة مقبولة في NeurIPS 2025 (مؤتمر التعلم الآلي النخبوي، معدل قبول 24.52٪) ووجد أكثر من 100 اقتباس مُهلوَس مؤكَّد في 53 ورقة، كلها اجتازت مراجعة أقران متعددين.',
+            '**تُهلوِس أنظمة الذكاء الاصطناعي اقتباسات وتختلق إحصاءات — وهذه الأخطاء تجتاز مراجعة الأقران.** حلَّل GPTZero 4841 ورقة مقبولة في NeurIPS 2025 (مؤتمر التعلم الآلي النخبوي، معدل قبول 24.52٪) ووجد أكثر من 100 اقتباس مُهلوَس مؤكَّد في 53 ورقة، كلها اجتازت مراجعة أقران متعددين.',
             'تتفاوت معدلات الهلوسة تفاوتًا كبيرًا حسب المجال وتعقيد المهمة:',
           ],
           columns: ['المجال', 'معدل الهلوسة'],
@@ -2018,7 +2018,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
           ],
           items: [
-            'اعتبارًا من أغسطس 2026، تشترك GPT-5.6 وClaude Opus 5 وGemini 3.1 Pro جميعها في نافذة سياق بحجم مليون رمز. لمهام البحث التي تضم أقل من 20 ورقة، تعالج النماذج الثلاثة السياق الكامل دون مشاكل. لمراجعات منهجية تغطي 50 إلى 200 ورقة، يمكن للنماذج الثلاثة الآن معالجة النص الكامل في جلسة واحدة — رغم أن تأثير "الضياع في المنتصف" لا يزال يقلل من دقة الاسترجاع للمواد الموجودة في منتصف السياق، بغض النظر عن حجم النافذة.',
+            'تشترك GPT-5.6 وClaude Opus 5 وGemini 3.1 Pro حاليًا جميعها في نافذة سياق بحجم مليون رمز. لمهام البحث التي تضم أقل من 20 ورقة، تعالج النماذج الثلاثة السياق الكامل دون مشاكل. لمراجعات منهجية تغطي 50 إلى 200 ورقة، يمكن للنماذج الثلاثة الآن معالجة النص الكامل في جلسة واحدة — رغم أن تأثير "الضياع في المنتصف" لا يزال يقلل من دقة الاسترجاع للمواد الموجودة في منتصف السياق، بغض النظر عن حجم النافذة.',
             'للمجموعات الكبيرة حقًا (أكثر من 500 ورقة)، خط أنابيب RAG — حيث تُجزَّأ الأوراق وتُضمَّن في قاعدة بيانات متجهية وتُسترجَع بالتشابه الدلالي — هو البنية المعمارية الصحيحة، لا الحقن المباشر للسياق.',
             'لشرح أعمق لنوافذ السياق ولماذا تفقد النماذج المعلومات في منتصف السياق، راجع [نوافذ السياق موضَّحة](/ar/prompt-engineering/context-windows-explained-why-ai-forgets).',
           ],
@@ -2033,8 +2033,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'السياق العالمي والإقليمي لذكاء البحث الاصطناعي',
           content: [
             'تشترط مؤسسات البحث الأوروبية بشكل متزايد أن يمتثل البحث المدعوم بالذكاء الاصطناعي لقانون الذكاء الاصطناعي الأوروبي، الذي يُلزِم بالشفافية وقابلية التتبع والإشراف البشري للتطبيقات عالية المخاطر بما فيها النشر الأكاديمي. Mistral AI (فرنسا) يُستخدَم كثيرًا في البيئات الأكاديمية الأوروبية لأن نماذجه قابلة للنشر على الخوادم الداخلية وتمتثل لمتطلبات إقامة بيانات GDPR للبيانات البحثية الحساسة.',
-            'تستخدم مؤسسات البحث الصينية **Qwen 3** (Alibaba) و**DeepSeek V3** كأدوات بحث ذكاء اصطناعي رئيسية — كلاهما مفتوح المصدر وقابل للنشر محليًا ويعالج الأدبيات بلغة CJK بشكل أسرع من النماذج المدرَّبة في الغرب. تشترط اللوائح المؤقتة للذكاء الاصطناعي التوليدي الصينية (2023) تسمية محتوى البحث المولَّد بالذكاء الاصطناعي كذلك.',
-            'الجامعات اليابانية العاملة تحت توجيهات حماية بيانات METI تنشر عادةً **Ollama** مع نماذج LLaMA 3.1 محليًا — LLaMA 3.1 7B يتطلب 8 GB RAM للاستدلال المحلي ولا يُنتِج أي استدعاءات API خارجية ويمتثل لمعايير صارمة لإقامة البيانات للبحث الحساس.',
+            'تستخدم مؤسسات البحث الصينية **Qwen3** (Alibaba) و**DeepSeek** كأدوات بحث ذكاء اصطناعي رئيسية — كلاهما مفتوح المصدر وقابل للنشر محليًا ويعالج الأدبيات بلغة CJK بشكل أسرع من النماذج المدرَّبة في الغرب. تشترط اللوائح المؤقتة للذكاء الاصطناعي التوليدي الصينية (2023) تسمية محتوى البحث المولَّد بالذكاء الاصطناعي كذلك.',
+            'الجامعات اليابانية العاملة تحت توجيهات حماية بيانات METI تنشر عادةً **Ollama** مع Llama 4 8B محليًا — يتطلب النموذج 8 GB RAM للاستدلال المحلي ولا يُنتِج أي استدعاءات API خارجية ويمتثل لمعايير صارمة لإقامة البيانات للبحث الحساس.',
           ],
         },
         commonMistakes: {
@@ -2046,7 +2046,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**الاختيار بناءً على جداول الترتيب في المعايير (لا المهمة الفعلية)** — **الإصلاح:** اختَر النماذج حسب ملاءمة المهمة، لا موقعها في جدول الترتيب. أبطال المعايير (GPT-5.6) مبالَغ في مواصفاتهم للملخصات؛ ميزة تكلفة Gemini 3.1 Pro تتفوق حين تحتاج فقط معالجة السياق.',
             '**افتراض أن نافذة السياق = الجودة (النماذج الثلاثة الرائدة الآن بمليون رمز؛ LLaMA 4 Scout يقدم 10 ملايين محليًا)** — **الإصلاح:** نافذة السياق بُعد واحد وليست مقياسًا للجودة. مليون رمز مهم فقط لأكثر من 50 ورقة. لمراجعات أدبيات صغيرة، يجب أن يحدد السعر وملاءمة المهمة — لا حجم النافذة — اختيار النموذج، لأن GPT-5.6 وClaude Opus 5 وGemini 3.1 Pro متساوون الآن في السياق.',
             '**استخدام نموذج الحدود لكل مهمة** — **الإصلاح:** وجِّه المهام حسب كفاءة التكلفة: Gemini Flash للتصنيف، وClaude Opus 5 للصياغة، وGPT-5.6 للكود. الإرسال متعدد النماذج عبر PromptQuorum يُتيح اختيار النموذج حسب المهمة.',
-            '**تجاهل الجغرافيا وإقامة البيانات (GDPR الأوروبي، الصين)** — **الإصلاح:** البحث في الاتحاد الأوروبي يجب أن يستخدم أدوات متوافقة مع GDPR (Mistral داخلي، Ollama محلي). المؤسسات في الصين تستخدم Qwen 3 أو DeepSeek. اليابان تحت توجيهات METI تستخدم Ollama مع LLaMA 3.1 محليًا.',
+            '**تجاهل الجغرافيا وإقامة البيانات (GDPR الأوروبي، الصين)** — **الإصلاح:** البحث في الاتحاد الأوروبي يجب أن يستخدم أدوات متوافقة مع GDPR (Mistral داخلي، Ollama محلي). المؤسسات في الصين تستخدم Qwen3 أو DeepSeek. اليابان تحت توجيهات METI تستخدم Ollama مع Llama 4 Scout محليًا.',
             '**الاعتماد الحصري على مزوِّد واحد بدون طبقة تجريد** — **الإصلاح:** استخدم أدوات الإرسال متعددة النماذج (PromptQuorum) لتجنب الاعتماد الحصري. استدعاء API واحد يُوجِّه إلى أفضل نموذج حسب المهمة؛ تغيير المزوِّد لا يتطلب تغييرات الكود.',
           ],
         },
@@ -2088,7 +2088,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'كم عدد الأوراق الأكاديمية التي يستطيع الذكاء الاصطناعي معالجتها في وقت واحد؟',
-              a: 'يعتمد على نافذة سياق النموذج. اعتبارًا من أغسطس 2026، تعالج GPT-5.6 (OpenAI) وClaude Opus 5 (Anthropic) وGemini 3.1 Pro (Google DeepMind) جميعها ~800 صفحة أكاديمية قياسية في جلسة (نافذة سياق بحجم مليون رمز لكل منها). للمجموعات الأكبر من ذلك، يُلزَم بخط أنابيب RAG مع قاعدة بيانات متجهية.',
+              a: 'يعتمد على نافذة سياق النموذج. تعالج GPT-5.6 (OpenAI) وClaude Opus 5 (Anthropic) وGemini 3.1 Pro (Google DeepMind) حاليًا جميعها ~800 صفحة أكاديمية قياسية في جلسة (نافذة سياق بحجم مليون رمز لكل منها). للمجموعات الأكبر من ذلك، يُلزَم بخط أنابيب RAG مع قاعدة بيانات متجهية.',
             },
             {
               q: 'هل من الآمن الاستشهاد بمراجع يولِّدها الذكاء الاصطناعي في الأوراق الأكاديمية؟',
@@ -2096,7 +2096,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'هل تعمل مساعدة البحث بالذكاء الاصطناعي بشكل مختلف خارج الولايات المتحدة؟',
-              a: 'نعم. يجب على الباحثين الأوروبيين الامتثال لمتطلبات الشفافية في قانون الذكاء الاصطناعي الأوروبي للأعمال المدعومة بالذكاء الاصطناعي. المؤسسات الصينية تستخدم أساسًا Qwen 3 (Alibaba) وDeepSeek V3، اللذان يعالجان الرموز بشكل أسرع للأدبيات بلغة CJK. الباحثون اليابانيون تحت توجيهات حوكمة بيانات METI يستخدمون عادةً نماذج محلية قائمة على Ollama — LLaMA 3.1 7B يعمل محليًا بـ 8 GB RAM، دون خروج بيانات من البنية التحتية للمؤسسة.',
+              a: 'نعم. يجب على الباحثين الأوروبيين الامتثال لمتطلبات الشفافية في قانون الذكاء الاصطناعي الأوروبي للأعمال المدعومة بالذكاء الاصطناعي. المؤسسات الصينية تستخدم أساسًا Qwen3 (Alibaba) وDeepSeek، اللذان يعالجان الرموز بشكل أسرع للأدبيات بلغة CJK. الباحثون اليابانيون تحت توجيهات حوكمة بيانات METI يستخدمون عادةً نماذج محلية قائمة على Ollama — Llama 4 8B يعمل محليًا بـ 8 GB RAM، دون خروج بيانات من البنية التحتية للمؤسسة.',
             },
             {
               q: 'ما درجة الحرارة (Temperature) التي يجب استخدامها لمهام البحث بالذكاء الاصطناعي؟',
@@ -2137,7 +2137,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       theme: 'Use Cases',
       heroImage: '/images/ai-powered-research-overview-hero-pt.webp',
       title: 'Pesquisa com IA: Ferramentas, Taxas de Alucinação e Fluxos de Verificação',
-      intro: 'As ferramentas de pesquisa com IA reduzem o tempo de revisão bibliográfica de semanas para horas — mas introduzem um risco crítico: citações alucinadas que passam pela revisão por pares. O GPTZero confirmou mais de 100 referências fabricadas em artigos do NeurIPS 2025 que passaram pelo escrutínio de múltiplos revisores. A partir de abril de 2026, o fluxo de trabalho confiável encaminha cada fase de pesquisa para a ferramenta correta (Elicit para extração, Consensus para síntese, scite.ai para verificação) e verifica as afirmações factuais em pelo menos dois modelos independentes antes de confiar nelas.',
+      intro: 'As ferramentas de pesquisa com IA reduzem o tempo de revisão bibliográfica de semanas para horas — mas introduzem um risco crítico: citações alucinadas que passam pela revisão por pares. O GPTZero confirmou mais de 100 referências fabricadas em artigos do NeurIPS 2025 que passaram pelo escrutínio de múltiplos revisores. O fluxo de trabalho confiável encaminha cada fase de pesquisa para a ferramenta correta (Elicit para extração, Consensus para síntese, scite.ai para verificação) e verifica as afirmações factuais em pelo menos dois modelos independentes antes de confiar nelas.',
       publishDate: '2026-03-23',
       readTime: '9 min de leitura',
       seoTitle: 'Pesquisa com IA: Verifique Citações e Evite Alucinações',
@@ -2245,7 +2245,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: 'Quantos artigos acadêmicos uma IA pode processar de uma vez?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Depende da janela de contexto do modelo. A partir de agosto de 2026, GPT-5.6 (OpenAI), Claude Opus 5 (Anthropic) e Gemini 3.1 Pro (Google DeepMind) processam todos ~800 páginas acadêmicas padrão por sessão (1M tokens de contexto cada). Para corpus maiores que isso, é necessário um pipeline RAG com banco de dados vetorial.',
+              text: 'Depende da janela de contexto do modelo. GPT-5.6 (OpenAI), Claude Opus 5 (Anthropic) e Gemini 3.1 Pro (Google DeepMind) processam atualmente ~800 páginas acadêmicas padrão por sessão (1M tokens de contexto cada). Para corpus maiores que isso, é necessário um pipeline RAG com banco de dados vetorial.',
             },
           },
           {
@@ -2364,7 +2364,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         toolComparison: {
           title: 'A ferramenta certa para cada fase de pesquisa',
           content: [
-            '**A partir de abril de 2026, nenhuma ferramenta de pesquisa com IA lida bem com todas as fases de pesquisa — os fluxos de trabalho de maior qualidade encaminham cada tarefa para a ferramenta melhor projetada para isso.**',
+            '**Nenhuma ferramenta de pesquisa com IA lida bem com todas as fases de pesquisa — os fluxos de trabalho de maior qualidade encaminham cada tarefa para a ferramenta melhor projetada para isso.**',
             'Elicit (elicit.com) usa busca semântica em mais de 138M de artigos acadêmicos e 545.000 ensaios clínicos para extrair dados estruturados diretamente de PDFs — metodologias, tamanhos de amostra, resultados — sem exigir correspondências de palavras-chave. Consensus (consensus.app) busca em ~200 milhões de artigos e retorna um "Consensus Meter" que resume o acordo científico (Sim / Não / Possivelmente) sobre uma pergunta específica. Perplexity AI fornece as respostas citadas de propósito geral mais rápidas tanto na web aberta quanto na literatura acadêmica, tornando-a ideal para fases exploratórias.',
           ],
           columns: ['Ferramenta', 'Banco de Dados', 'Função Principal', 'Nível Gratuito'],
@@ -2416,7 +2416,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         hallucinationRisk: {
           title: 'O problema das alucinações na IA de pesquisa',
           content: [
-            '**A partir de abril de 2026, os sistemas de IA alucinam citações e fabricam estatísticas — e esses erros passam pela revisão por pares.** O GPTZero analisou 4.841 artigos aceitos pelo NeurIPS 2025 (a conferência de aprendizado de máquina de elite, taxa de aceitação de 24,52%) e encontrou mais de 100 citações alucinadas confirmadas em 53 artigos, todos os quais haviam passado pela revisão por pares de múltiplos revisores.',
+            '**Os sistemas de IA alucinam citações e fabricam estatísticas — e esses erros passam pela revisão por pares.** O GPTZero analisou 4.841 artigos aceitos pelo NeurIPS 2025 (a conferência de aprendizado de máquina de elite, taxa de aceitação de 24,52%) e encontrou mais de 100 citações alucinadas confirmadas em 53 artigos, todos os quais haviam passado pela revisão por pares de múltiplos revisores.',
             'As taxas de alucinação variam consideravelmente conforme o domínio e a complexidade da tarefa:',
           ],
           columns: ['Domínio', 'Taxa de Alucinação'],
@@ -2542,7 +2542,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
           ],
           items: [
-            'A partir de agosto de 2026, GPT-5.6, Claude Opus 5 e Gemini 3.1 Pro compartilham uma janela de contexto de 1 milhão de tokens. Para tarefas de pesquisa com menos de 20 artigos, os três modelos processam o contexto completo sem problemas. Para revisões sistemáticas cobrindo 50–200 artigos, os três agora conseguem processar a cópia completa em uma sessão — embora o efeito "lost in the middle" continue reduzindo a precisão de recuperação para material no meio do contexto, independentemente do tamanho da janela.',
+            'GPT-5.6, Claude Opus 5 e Gemini 3.1 Pro compartilham atualmente uma janela de contexto de 1 milhão de tokens. Para tarefas de pesquisa com menos de 20 artigos, os três modelos processam o contexto completo sem problemas. Para revisões sistemáticas cobrindo 50–200 artigos, os três agora conseguem processar a cópia completa em uma sessão — embora o efeito "lost in the middle" continue reduzindo a precisão de recuperação para material no meio do contexto, independentemente do tamanho da janela.',
             'Para corpus realmente grandes (mais de 500 artigos), um pipeline RAG — onde os artigos são fragmentados, incorporados em um banco de dados vetorial e recuperados por similaridade semântica — é a arquitetura correta, não a injeção direta de contexto.',
             'Para uma explicação mais profunda das janelas de contexto e por que os modelos perdem informações no meio do contexto, consulte [Janelas de contexto explicadas](/pt/prompt-engineering/context-windows-explained-why-ai-forgets).',
           ],
@@ -2557,8 +2557,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Contexto global e regional para IA de pesquisa',
           content: [
             'As instituições de pesquisa europeias exigem cada vez mais que a pesquisa assistida por IA cumpra a Lei de IA da UE, que obriga transparência, rastreabilidade e supervisão humana para aplicações de IA de alto risco, incluindo publicação acadêmica. Mistral AI (França) é frequentemente usada em ambientes acadêmicos da UE porque seus modelos são implantáveis on-premise e cumprem os requisitos de residência de dados do GDPR para dados de pesquisa sensíveis.',
-            'As instituições de pesquisa chinesas usam **Qwen 3** (Alibaba) e **DeepSeek V3** como principais ferramentas de IA de pesquisa — ambos são de código aberto, implantáveis localmente e processam literatura em idioma CJK mais rápido do que modelos treinados no Ocidente. As Medidas Provisórias da China para IA Generativa (2023) exigem que o conteúdo de pesquisa gerado por IA seja rotulado como tal.',
-            'No Brasil, pesquisadores que trabalham com dados pessoais de participantes devem seguir a LGPD e as resoluções do CEP. O uso de ferramentas de IA na nuvem para processar dados sensíveis de pesquisa exige consentimento adequado e Avaliação de Impacto à Proteção de Dados (AIPD). Ferramentas locais como Ollama com LLaMA 3.1 oferecem inferência on-premise sem transmissão de dados para servidores externos.',
+            'As instituições de pesquisa chinesas usam **Qwen3** (Alibaba) e **DeepSeek** como principais ferramentas de IA de pesquisa — ambos são de código aberto, implantáveis localmente e processam literatura em idioma CJK mais rápido do que modelos treinados no Ocidente. As Medidas Provisórias da China para IA Generativa (2023) exigem que o conteúdo de pesquisa gerado por IA seja rotulado como tal.',
+            'No Brasil, pesquisadores que trabalham com dados pessoais de participantes devem seguir a LGPD e as resoluções do CEP. O uso de ferramentas de IA na nuvem para processar dados sensíveis de pesquisa exige consentimento adequado e Avaliação de Impacto à Proteção de Dados (AIPD). Ferramentas locais como Ollama com Llama 4 Scout oferecem inferência on-premise sem transmissão de dados para servidores externos.',
           ],
         },
         commonMistakes: {
@@ -2612,7 +2612,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Quantos artigos acadêmicos uma IA pode processar de uma vez?',
-              a: 'Depende da janela de contexto do modelo. A partir de agosto de 2026, GPT-5.6 (OpenAI), Claude Opus 5 (Anthropic) e Gemini 3.1 Pro (Google DeepMind) processam todos ~800 páginas acadêmicas padrão por sessão (1M tokens de contexto cada). Para corpus maiores que isso, é necessário um pipeline RAG com banco de dados vetorial.',
+              a: 'Depende da janela de contexto do modelo. GPT-5.6 (OpenAI), Claude Opus 5 (Anthropic) e Gemini 3.1 Pro (Google DeepMind) processam atualmente ~800 páginas acadêmicas padrão por sessão (1M tokens de contexto cada). Para corpus maiores que isso, é necessário um pipeline RAG com banco de dados vetorial.',
             },
             {
               q: 'É seguro citar referências geradas por IA em artigos acadêmicos?',
@@ -2661,7 +2661,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       theme: 'Use Cases',
       heroImage: '/images/ai-powered-research-overview-hero-fr.webp',
       title: 'Recherche Assistée par IA : Outils, Taux d\'Hallucination et Workflows de Vérification',
-      intro: 'Les outils de recherche IA réduisent le temps de revue de littérature de plusieurs semaines à quelques heures — mais introduisent un risque critique : des citations hallucinées qui passent la révision par les pairs. GPTZero a confirmé plus de 100 références fabriquées dans des articles NeurIPS 2025 ayant passé un examen multi-réviseurs. En avril 2026, le workflow fiable achemine chaque étape de recherche vers le bon outil (Elicit pour l\'extraction, Consensus pour la synthèse, scite.ai pour la vérification) et vérifie les affirmations factuelles entre au moins deux modèles indépendants avant de leur faire confiance.',
+      intro: 'Les outils de recherche IA réduisent le temps de revue de littérature de plusieurs semaines à quelques heures — mais introduisent un risque critique : des citations hallucinées qui passent la révision par les pairs. GPTZero a confirmé plus de 100 références fabriquées dans des articles NeurIPS 2025 ayant passé un examen multi-réviseurs. Le workflow fiable achemine chaque étape de recherche vers le bon outil (Elicit pour l\'extraction, Consensus pour la synthèse, scite.ai pour la vérification) et vérifie les affirmations factuelles entre au moins deux modèles indépendants avant de leur faire confiance.',
       publishDate: '2026-03-23',
       dateModified: '2026-08-29',
       readTime: '9 min de lecture',
@@ -2770,7 +2770,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: 'Combien d\'articles académiques une IA peut-elle traiter à la fois ?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Cela dépend de la fenêtre de contexte du modèle. Depuis août 2026, GPT-5.6 (OpenAI), Claude Opus 5 (Anthropic) et Gemini 3.1 Pro (Google DeepMind) traitent tous ~800 pages académiques standard par session (fenêtre de 1M tokens chacun). Au-delà, un pipeline RAG (Retrieval-Augmented Generation) avec une base de données vectorielle est nécessaire.',
+              text: 'Cela dépend de la fenêtre de contexte du modèle. GPT-5.6 (OpenAI), Claude Opus 5 (Anthropic) et Gemini 3.1 Pro (Google DeepMind) traitent actuellement ~800 pages académiques standard par session (fenêtre de 1M tokens chacun). Au-delà, un pipeline RAG (Retrieval-Augmented Generation) avec une base de données vectorielle est nécessaire.',
             },
           },
           {
@@ -2786,7 +2786,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: 'L\'assistance à la recherche IA fonctionne-t-elle différemment en dehors des États-Unis ?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Oui. Les chercheurs européens doivent respecter les exigences de transparence de l\'AI Act de l\'UE pour les travaux assistés par IA. Les institutions chinoises utilisent principalement Qwen 3 (Alibaba) et DeepSeek V3. Les chercheurs japonais sous les directives de gouvernance des données METI utilisent souvent des modèles locaux basés sur Ollama — LLaMA 3.1 7B fonctionne localement avec 8 Go de RAM.',
+              text: 'Oui. Les chercheurs européens doivent respecter les exigences de transparence de l\'AI Act de l\'UE pour les travaux assistés par IA. Les institutions chinoises utilisent principalement Qwen3 (Alibaba) et DeepSeek. Les chercheurs japonais sous les directives de gouvernance des données METI utilisent souvent des modèles locaux basés sur Ollama — Llama 4 8B fonctionne localement avec 8 Go de RAM.',
             },
           },
           {
@@ -2889,7 +2889,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         toolComparison: {
           title: 'Le bon outil pour chaque étape de recherche',
           content: [
-            '**En avril 2026, aucun outil de recherche IA unique ne gère bien toutes les étapes de recherche — les workflows de meilleure qualité acheminent chaque tâche vers l\'outil le mieux conçu pour elle.**',
+            '**Aucun outil de recherche IA unique ne gère bien toutes les étapes de recherche — les workflows de meilleure qualité acheminent chaque tâche vers l\'outil le mieux conçu pour elle.**',
             'Elicit (elicit.com) utilise la recherche sémantique sur 138M+ articles académiques et 545 000 essais cliniques pour extraire des données structurées directement des PDFs — méthodologies, tailles d\'échantillon, résultats — sans nécessiter de correspondance par mots-clés. Consensus (consensus.app) recherche dans ~200 millions d\'articles et retourne un "Consensus Meter" résumant l\'accord scientifique (Oui / Non / Peut-être) sur une question spécifique. Perplexity AI fournit les réponses citées les plus rapides sur le web et la littérature académique, ce qui en fait un choix optimal pour les phases exploratoires.',
           ],
           columns: ['Outil', 'Base de données', 'Fonction principale', 'Gratuit'],
@@ -2941,7 +2941,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         hallucinationRisk: {
           title: 'Le problème des hallucinations dans la recherche IA',
           content: [
-            '**En avril 2026, les systèmes IA hallucinent des citations et fabriquent des statistiques — et ces erreurs survivent à la révision par les pairs.** GPTZero a analysé 4 841 articles acceptés par NeurIPS 2025 (la principale conférence en machine learning, taux d\'acceptation de 24,52%) et a trouvé 100+ citations hallucinées confirmées dans 53 articles, tous ayant passé la révision multi-réviseurs.',
+            '**Les systèmes IA hallucinent des citations et fabriquent des statistiques — et ces erreurs survivent à la révision par les pairs.** GPTZero a analysé 4 841 articles acceptés par NeurIPS 2025 (la principale conférence en machine learning, taux d\'acceptation de 24,52%) et a trouvé 100+ citations hallucinées confirmées dans 53 articles, tous ayant passé la révision multi-réviseurs.',
             'Les taux d\'hallucination varient fortement selon le domaine et la complexité de la tâche :',
           ],
           columns: ['Domaine', 'Taux d\'hallucination'],
@@ -3067,7 +3067,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
           ],
           items: [
-            'Depuis août 2026, GPT-5.6, Claude Opus 5 et Gemini 3.1 Pro partagent tous une fenêtre de contexte de 1 million de tokens. Pour les tâches de recherche impliquant moins de 20 articles, les trois modèles gèrent le contexte complet sans difficulté. Pour les revues systématiques couvrant 50 à 200 articles, les trois peuvent désormais traiter le corpus complet en une seule session — même si l\'effet "lost in the middle" continue de dégrader la précision de récupération pour le contenu situé au milieu du contexte, quelle que soit la taille de la fenêtre.',
+            'GPT-5.6, Claude Opus 5 et Gemini 3.1 Pro partagent actuellement tous une fenêtre de contexte de 1 million de tokens. Pour les tâches de recherche impliquant moins de 20 articles, les trois modèles gèrent le contexte complet sans difficulté. Pour les revues systématiques couvrant 50 à 200 articles, les trois peuvent désormais traiter le corpus complet en une seule session — même si l\'effet "lost in the middle" continue de dégrader la précision de récupération pour le contenu situé au milieu du contexte, quelle que soit la taille de la fenêtre.',
             'Pour les très grands corpus (500+ articles), un pipeline RAG — où les articles sont découpés, intégrés dans une base de données vectorielle et récupérés par similarité sémantique — est l\'architecture correcte, pas l\'injection directe de contexte.',
             'Pour une explication plus profonde des fenêtres de contexte et pourquoi les modèles perdent l\'information au milieu des longs contextes, voir [les fenêtres de contexte expliquées](/fr/prompt-engineering/context-windows-explained-why-ai-forgets).',
           ],
@@ -3082,8 +3082,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Contexte mondial et régional de la recherche IA',
           content: [
             'Les institutions de recherche européennes exigent de plus en plus que la recherche assistée par IA soit conforme à l\'AI Act de l\'UE, qui mandate transparence, traçabilité et supervision humaine pour les applications IA à haut risque incluant la publication académique. Mistral AI (France) est largement utilisé dans les milieux académiques européens car ses modèles sont déployables en local, satisfaisant les exigences de résidence des données RGPD pour les données de recherche sensibles.',
-            'Les institutions de recherche chinoises utilisent **Qwen 3** (Alibaba) et **DeepSeek V3** comme principaux outils de recherche IA — les deux sont open-source, déployables localement et traitent la littérature académique en langues CJK avec un traitement de tokens plus rapide que les modèles entraînés en Occident. Les Mesures Provisoires pour l\'IA Générative de Chine (2023) exigent que le contenu de recherche généré par IA soit étiqueté comme tel — une politique qui influence maintenant les normes mondiales de publication académique.',
-            'Les universités japonaises opérant sous les directives de gouvernance des données METI déploient fréquemment **Ollama** avec les modèles LLaMA 3.1 localement — LLaMA 3.1 7B nécessite 8 Go de RAM pour l\'inférence locale, ne produit aucun appel API externe et répond aux normes strictes de résidence des données pour la recherche sensible.',
+            'Les institutions de recherche chinoises utilisent **Qwen3** (Alibaba) et **DeepSeek** comme principaux outils de recherche IA — les deux sont open-source, déployables localement et traitent la littérature académique en langues CJK avec un traitement de tokens plus rapide que les modèles entraînés en Occident. Les Mesures Provisoires pour l\'IA Générative de Chine (2023) exigent que le contenu de recherche généré par IA soit étiqueté comme tel — une politique qui influence maintenant les normes mondiales de publication académique.',
+            'Les universités japonaises opérant sous les directives de gouvernance des données METI déploient fréquemment **Ollama** avec Llama 4 8B localement — le modèle nécessite 8 Go de RAM pour l\'inférence locale, ne produit aucun appel API externe et répond aux normes strictes de résidence des données pour la recherche sensible.',
           ],
         },
         commonMistakes: {
@@ -3095,7 +3095,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Choisir basé sur les leaderboards de benchmarks (pas la tâche réelle)** – **Correction :** Choisissez les modèles par adéquation à la tâche, pas par rang de leaderboard. Les gagnants de benchmarks (GPT-5.6) sont excessifs pour la synthèse ; l\'avantage de coût de Gemini 3.1 Pro domine quand vous avez juste besoin de traitement de contexte.',
             '**Assumer que fenêtre de contexte = qualité (les trois modèles de pointe sont désormais à 1M ; LLaMA 4 Scout offre 10M en local)** – **Correction :** La fenêtre de contexte est une dimension, pas une mesure de qualité. 1M tokens compte seulement pour 50+ articles. Pour les petites revues de littérature, le prix et l\'adéquation à la tâche — pas la taille de la fenêtre — devraient guider le choix du modèle, puisque GPT-5.6, Claude Opus 5 et Gemini 3.1 Pro sont désormais à égalité sur le contexte.',
             '**Utiliser le modèle frontier pour chaque tâche (différence de coût 60× Gemini Flash vs GPT)** – **Correction :** Acheminez les tâches par efficacité de coût : Gemini Flash pour classification, Claude Opus 5 pour écriture, GPT-5.6 pour code. Le dispatch multi-modèles via PromptQuorum permet la sélection de modèle par tâche.',
-            '**Ignorer la géographie et la résidence des données (UE RGPD, Chine)** – **Correction :** La recherche en UE doit utiliser des outils conformes RGPD (Mistral on-premise, Ollama local). Les institutions basées en Chine utilisent Qwen 3 ou DeepSeek. Le Japon sous les directives METI utilise Ollama avec LLaMA 3.1 localement.',
+            '**Ignorer la géographie et la résidence des données (UE RGPD, Chine)** – **Correction :** La recherche en UE doit utiliser des outils conformes RGPD (Mistral on-premise, Ollama local). Les institutions basées en Chine utilisent Qwen3 ou DeepSeek. Le Japon sous les directives METI utilise Ollama avec Llama 4 Scout localement.',
             '**S\'enfermer dans un SDK provider sans couche d\'abstraction** – **Correction :** Utilisez des outils de dispatch multi-modèles (PromptQuorum) pour éviter le verrouillage fournisseur. Un seul appel API achemine vers le meilleur modèle par tâche ; changer de fournisseur ne nécessite aucun changement de code.',
           ],
         },
@@ -3137,7 +3137,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Combien d\'articles académiques une IA peut-elle traiter à la fois ?',
-              a: 'Cela dépend de la fenêtre de contexte du modèle. Depuis août 2026, GPT-5.6 (OpenAI), Claude Opus 5 (Anthropic) et Gemini 3.1 Pro (Google DeepMind) traitent tous ~800 pages académiques standard par session (1M tokens chacun). Au-delà, un pipeline RAG avec une base de données vectorielle est nécessaire.',
+              a: 'Cela dépend de la fenêtre de contexte du modèle. GPT-5.6 (OpenAI), Claude Opus 5 (Anthropic) et Gemini 3.1 Pro (Google DeepMind) traitent actuellement ~800 pages académiques standard par session (1M tokens chacun). Au-delà, un pipeline RAG avec une base de données vectorielle est nécessaire.',
             },
             {
               q: 'Est-il sûr de citer des références générées par IA dans des articles académiques ?',
@@ -3145,7 +3145,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'L\'assistance à la recherche IA fonctionne-t-elle différemment en dehors des États-Unis ?',
-              a: 'Oui. Les chercheurs européens doivent respecter les exigences de transparence de l\'AI Act de l\'UE. Les institutions chinoises utilisent principalement Qwen 3 (Alibaba) et DeepSeek V3. Les chercheurs japonais sous les directives METI utilisent souvent des modèles locaux basés sur Ollama — LLaMA 3.1 7B fonctionne localement avec 8 Go de RAM, sans données quittant l\'infrastructure institutionnelle.',
+              a: 'Oui. Les chercheurs européens doivent respecter les exigences de transparence de l\'AI Act de l\'UE. Les institutions chinoises utilisent principalement Qwen3 (Alibaba) et DeepSeek. Les chercheurs japonais sous les directives METI utilisent souvent des modèles locaux basés sur Ollama — Llama 4 8B fonctionne localement avec 8 Go de RAM, sans données quittant l\'infrastructure institutionnelle.',
             },
             {
               q: 'Quelle température dois-je utiliser pour les tâches de recherche IA ?',
@@ -3185,7 +3185,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       theme: 'Use Cases',
       heroImage: '/images/ai-powered-research-overview-hero-ja.webp',
       title: 'AI駆動型研究：ツール、幻想率、検証ワークフロー',
-      intro: 'AI研究ツールは文献レビューの時間を数週間から数時間に短縮します — ただし、重大なリスクをもたらします。ピアレビューを通過した幻想的な引用です。GPTZeroは、複数レビュアーの審査に合格したNeurIPS 2025論文で、100を超える捏造参考文献を確認しました。2026年5月現在、信頼できるワークフローは各研究段階を適切なツール（抽出用Elicit、合成用Consensus、検証用scite.ai）に送り、少なくとも2つの独立したモデルで事実主張をクロスチェックしてから信頼します。',
+      intro: 'AI研究ツールは文献レビューの時間を数週間から数時間に短縮します — ただし、重大なリスクをもたらします。ピアレビューを通過した幻想的な引用です。GPTZeroは、複数レビュアーの審査に合格したNeurIPS 2025論文で、100を超える捏造参考文献を確認しました。信頼できるワークフローは各研究段階を適切なツール（抽出用Elicit、合成用Consensus、検証用scite.ai）に送り、少なくとも2つの独立したモデルで事実主張をクロスチェックしてから信頼します。',
       publishDate: '2026-03-23',
       dateModified: '2026-08-29',
       readTime: '9分で読める',
@@ -3277,7 +3277,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: 'AIは一度に何件の学術論文を処理できますか？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'モデルのコンテキストウィンドウに依存。2026年8月時点で、GPT-5.6（OpenAI）、Claude Opus 5（Anthropic）、Gemini 3.1 Pro（Google DeepMind）はいずれもセッションあたり〜800標準学術ページを処理（各1Mトークンコンテキスト）。それを超えるコーパスにはベクトルデータベースを持つRAGパイプラインが必要。',
+              text: 'モデルのコンテキストウィンドウに依存。GPT-5.6（OpenAI）、Claude Opus 5（Anthropic）、Gemini 3.1 Proは現在いずれもセッションあたり〜800標準学術ページを処理（各1Mトークンコンテキスト）。それを超えるコーパスにはベクトルデータベースを持つRAGパイプラインが必要。',
             },
           },
           {
@@ -3293,7 +3293,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: '米国外でAI研究支援は異なる方法で機能しますか？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'はい。欧州研究機関はAI支援作業のEU AI Act透明性要件を遵守が必須。中国機関は主にQwen 3（Alibaba）とDeepSeek V3を使用 — CJK言語文献により高速トークン処理。日本研究者はMETIデータガバナンスガイドラインの下Ollama基盤ローカルモデルを頻繁に使用 — LLaMA 3.1 7Bは8GB RAMで動作、機関インフラ外にデータが出ない。',
+              text: 'はい。欧州研究機関はAI支援作業のEU AI Act透明性要件を遵守が必須。中国機関は主にQwen3（Alibaba）とDeepSeekを使用 — CJK言語文献により高速トークン処理。日本研究者はMETIデータガバナンスガイドラインの下Ollama基盤ローカルモデルを頻繁に使用 — Llama 4 8Bは8GB RAMで動作、機関インフラ外にデータが出ない。',
             },
           },
           {
@@ -3302,6 +3302,38 @@ export const article: Partial<Record<Language, PEArticle>> = {
             acceptedAnswer: {
               '@type': 'Answer',
               text: '引用生成に温度を0.0–0.1に設定 — 決定論的出力は著者名やDOI破損可能なトークン変動を最小化。自然な文言が重要な要約は0.1–0.3を使用。仮説ブレインストーミング（多様な出力が目標）にのみ0.7–0.9を予約。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Elicitとは何ですか？どのように機能しますか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Elicitは、138M+件の学術論文と545,000件の臨床試験にわたってセマンティック検索を使用するAI研究アシスタントです。キーワード検索とは異なり、概念的な類似性で論文をマッチングします。中核機能は構造化データ抽出です — キーワード一致を必要とせず、PDF全文から方法論、サンプルサイズ、結果を直接比較テーブルに抽出します。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'AI研究ツールはペイウォールの背後にある論文にアクセスできますか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'ほとんどのAI研究ツール（Elicit、Consensus、Semantic Scholar）はオープンアクセスの論文データベースを使用しています。PDFを直接アップロードしない限り、機関のペイウォールの背後にある論文にはアクセスできません。NotebookLM（Google）とElicitはいずれも、アクセス権のある論文についてソース根拠付きQ&Aを行うためのPDFアップロードに対応しています。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '幻想的な引用をどう見分ければよいですか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '引用をGoogle ScholarまたはPubMedで照合してください。著者名、ジャーナル、巻号、年、DOIがすべて正確に一致するかを確認します。scite.aiを使用して、その論文に引用活動があるかを確認してください — 影響力があるとされる論文の引用数がゼロであれば要注意サインです。別のAIモデルでクロスチェックし、著者やジャーナルの詳細が異なる場合は、両方のバージョンとも手動検証が必要です。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Perplexity AIは学術研究にとって信頼できますか？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Perplexity AIは探索的な研究には信頼できます — トピックの全体像の把握、主要な研究者の特定、さらに調査すべき関連ソースの発見などです。ピアレビューされていないソースを含むWeb全体を検索するため、最終的な引用元としては信頼性がありません。発見にはPerplexityを使用し、引用する前に具体的な主張はElicit、Semantic Scholar、または直接データベース検索で検証してください。',
             },
           },
         ],
@@ -3354,10 +3386,95 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**仕組み：** Retrieval-Augmented Generation（RAG）はほとんどのAI研究ツール背後の中核アーキテクチャ。RAGはLLMを外部知識ベース（学術データベース、アップロードPDF、ライブWeb索引）に接続し、モデルがトレーニングデータのみに依存するのではなく取得文書に回答を根拠付ける。RAGなし、モデルはトレーニングデータを思い出すのみ；RAGで、提供ソースから回答。',
           ],
         },
+        toolComparison: {
+          id: 'right-tool',
+          title: '研究段階ごとの最適ツール',
+          content: [
+            '**単一のAI研究ツールがすべての研究段階に対応できるわけではありません — 最高品質のワークフローは、各タスクをそれに最も適したツールへ振り分けます。**',
+            'Elicit（elicit.com）は138M+件の学術論文と545,000件の臨床試験にセマンティック検索を適用し、キーワード一致を必要とせずPDFから方法論、サンプルサイズ、結果などの構造化データを直接抽出します。Consensus（consensus.app）は約2億件の論文を検索し、特定の質問に対する科学的合意を要約する「コンセンサスメーター」（はい／いいえ／おそらく）を返します。Perplexity AIはオープンWebと学術文献の両方にわたって最速の汎用引用済み回答を提供し、探索フェーズに最適です。',
+          ],
+          columns: ['ツール', 'データベース', '主な機能', '無料枠'],
+          rows: [
+            {
+              'ツール': 'Elicit',
+              'データベース': '138M+論文+54.5万件の臨床試験',
+              '主な機能': 'PDFからの構造化データ抽出',
+              '無料枠': 'あり（月5,000クレジット）',
+            },
+            {
+              'ツール': 'Consensus',
+              'データベース': '約2億件の論文',
+              '主な機能': 'コンセンサスメーターによる証拠合成',
+              '無料枠': 'あり（制限付き）',
+            },
+            {
+              'ツール': 'Semantic Scholar',
+              'データベース': '2億+件の論文',
+              '主な機能': '論文発見、引用グラフ、TLDR要約',
+              '無料枠': '完全無料',
+            },
+            {
+              'ツール': 'Perplexity AI',
+              'データベース': 'Web+学術',
+              '主な機能': 'リアルタイム引用済み回答、幅広い探索',
+              '無料枠': 'あり（制限付き）',
+            },
+            {
+              'ツール': 'scite.ai',
+              'データベース': '12億+件の引用ステートメント',
+              '主な機能': '支持／矛盾／言及分析',
+              '無料枠': 'あり（制限付き）',
+            },
+            {
+              'ツール': 'NotebookLM（Google）',
+              'データベース': 'アップロード文書',
+              '主な機能': '自分のファイルに基づくソース根拠付きQ&A',
+              '無料枠': '無料／Plusティア',
+            },
+          ],
+          items: [
+            '**発見** — Perplexityでトピックの全体像を把握し、研究課題を定義します',
+            '**文献収集** — Elicitで特定の論文を探し、データテーブルを抽出します',
+            '**証拠検証** — Consensusで科学界がコア仮説に同意しているかを確認します',
+            '**引用チェック** — scite.aiで主要な参考文献が広く反証されていないかを確認します',
+          ],
+        },
+        hallucinationRisk: {
+          id: 'hallucination',
+          title: '研究AIにおける幻想問題',
+          content: [
+            '**AIシステムは引用を幻想し、統計を捏造します — そしてこれらの誤りはピアレビューを通過してしまいます。** GPTZeroはNeurIPS 2025（採択率24.52%のトップ機械学習カンファレンス）で採択された4,841本の論文を分析し、複数レビュアーのピアレビューを通過した53本の論文にわたって100件以上の幻想引用を確認しました。',
+            '幻想率はドメインとタスクの複雑さによって大きく異なります：',
+          ],
+          columns: ['ドメイン', '幻想率'],
+          rows: [
+            { 'ドメイン': '一般知識の質問', '幻想率': '9.2%（モデル平均）' },
+            { 'ドメイン': '法律情報', '幻想率': '18.7%（上位モデル）' },
+            { 'ドメイン': '医療・ヘルスケアの質問', '幻想率': '15.6%（全体平均）' },
+            { 'ドメイン': 'テキスト要約（最良モデル）', '幻想率': '1.3—4.1%' },
+            { 'ドメイン': 'OpenAI o4-miniのPersonQAベンチマーク', '幻想率': '48%' },
+          ],
+          blockquote: '**平易な言葉で言うと：** 幻想率9.2%のAI研究アシスタントは、生成する引用のおよそ11件に1件を捏造します。40件の引用を含む論文では、3〜4件の架空の参考文献が生まれる計算になり、これは出版物の撤回につながりかねない数です。根本的な問題は「自信」です。LLMは自身の精度に比例した不確実性を表現しません。幻想的な引用は本物の引用と見分けがつきません — 同じフォーマット、それらしいジャーナル名、一貫性のある著者の組み合わせです。',
+        },
         confidenceProblem: {
           title: '🔍 信頼問題',
           content: [
             'LLMは精度に比例して不確実性を表現しません。幻想引用は実引用と同一に見える — 同一フォーマット、尤もらしいジャーナル名、一貫した著者組み合わせ。引用が捏造されていることを示す視覚信号はない。検証が唯一の防御。',
+          ],
+        },
+        multiModelCheck: {
+          title: 'AI研究出力を検証する方法：マルチモデルクロスチェック',
+          content: [
+            '**マルチモデルクロスチェック — 同じ研究課題をGPT-5.6、Claude Opus 5、Gemini 3.1 Proに同時に実行すること — は、単一モデルのワークフローでは見逃される幻想を検出します。独立したモデルが同じ具体的な虚偽の主張を捏造することは稀だからです。**',
+            '検証ロジックは統計的なものです。3つの独立して訓練されたモデルが1件の引用について一致する場合、3つすべてが同じ著者、ジャーナル、巻号、年を幻想する確率は無視できるほど小さくなります。モデル間で一致しない場合、その相違は手動検証が必要であることを示す明確なシグナルです。',
+            'PromptQuorumは、1つのプロンプトを複数のAIプロバイダーに同時送信し、すべての回答を並べて返すマルチモデルAIディスパッチツールです。研究ワークフローでは、これは1回のディスパッチで引用や事実主張をGPT-5.6（OpenAI）、Claude Opus 5（Anthropic）、Gemini 3.1 Pro（Google DeepMind）に実行し、3つのモデルが一致する箇所と対立する箇所を確認することを意味します。',
+            '**PromptQuorumでのテスト — 3モデルにわたる30件の研究引用プロンプト：** 3つのモデル（GPT-5.6、Claude Opus 5、Gemini 3.1 Pro）はすべて、30件中22件で同じ引用フォーマットとDOIに一致しました。8件では、少なくとも1つのモデルが異なる著者名またはジャーナルの巻号を生成しており、この8件すべてがGoogle Scholarでの手動検証により幻想と確認されました。',
+          ],
+          items: [
+            '**生成** — 1つのモデル（例：Claude Opus 5）に引用付きの文献要約を作成させます',
+            '**クロスチェック** — PromptQuorum経由で同じ質問をGPT-5.6とGemini 3.1 Proに送信します',
+            '**相違をフラグ** — 著者、年、またはジャーナルでモデルの意見が分かれる引用はすべて手動検証が必要です',
+            '**一致した主張を検証** — scite.aiを使用して、一致した引用が撤回されたり反証されたりしていないことを確認します',
           ],
         },
         whyCrossCheckingWorks: {
@@ -3386,6 +3503,100 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**出力フォーマット** — 「結果を構造化テーブルで返却：主張|ソース|年|信頼度（高/中/低）。」',
           ],
         },
+        promptBadExample: {
+          content: [
+            '**悪いプロンプトの例：** 役割や引用要件のないオープンエンドな質問は、幻想的な統計を生み出します：',
+          ],
+          blockquote: 'AIの幻想に関する研究にはどのようなものがありますか？',
+        },
+        promptGoodExample: {
+          title: '良いプロンプトの例',
+          content: [
+            '**良いプロンプトの例：** 以下の構造化バージョンは検証可能な出力テーブルを生成します。上記のオープンなプロンプトは、捏造された統計を含む可能性のある自信満々な段落を生成します。',
+          ],
+          blockquote: 'あなたはシステマティックレビュー研究者です。医療、法律、一般知識などのドメイン全体におけるAI幻想率に関する現在の科学的合意を要約してください。2023〜2026年に発表されたピアレビュー論文または公式モデル評価レポートのみを引用してください。結果は以下の形式でまとめてください：ドメイン｜幻想率｜研究｜年。特定の数値が検証されていない場合は「推定」とラベル付けしフラグを立ててください。',
+        },
+        parameters: {
+          id: 'temperature',
+          title: '研究における温度設定',
+          content: [
+            '**事実精度が求められるすべての研究タスクでは、温度（T）を0.0〜0.2に設定してください。** 温度（T）はソフトマックス出力分布に適用されるハイパーパラメータです。T = 0.0では、モデルは各ステップで最も確率の高いトークンを選択し、決定論的な出力を生成します。T = 1.0では出力がより多様になります — これは創造的なタスクには望ましい一方、1つの誤ったトークンが著者名やDOIを変えてしまう引用生成には危険です。',
+          ],
+          columns: ['タスク', '推奨T', '理由'],
+          rows: [
+            {
+              'タスク': '引用生成',
+              '推奨T': '0.0—0.1',
+              '理由': '決定論的出力；トークン変動を最小化',
+            },
+            {
+              'タスク': '要約',
+              '推奨T': '0.1—0.3',
+              '理由': '事実に基づきつつ自然な言い回し',
+            },
+            {
+              'タスク': '仮説ブレインストーミング',
+              '推奨T': '0.7—0.9',
+              '理由': '多様な出力が発想の幅を広げる',
+            },
+            {
+              'タスク': '文献レビューの下書き',
+              '推奨T': '0.2—0.4',
+              '理由': '精度と読みやすさのバランス',
+            },
+          ],
+        },
+        oneWrongToken: {
+          title: '🔍 たった1つの誤ったトークン',
+          content: [
+            '温度0.7では、たった1つのトークンの変動が「Smith 2024」を「Smith 2023」に、あるいは「Nature」を「Nature Methods」に変えてしまうことがあります。引用生成では、T = 0.2でさえ不要なリスクをもたらします。特別な理由がない限り、T = 0.0を使用してください。',
+          ],
+        },
+        contextWindow: {
+          id: 'context-window',
+          title: 'モデル別AI研究ツール：コンテキストウィンドウの制限',
+          content: [
+            '**コンテキストウィンドウのサイズは、LLMが1回のセッションで処理できる研究論文の数を左右します — これは大規模な文献統合における主要な技術的制約です。**',
+          ],
+          columns: ['モデル', 'コンテキストウィンドウ', 'おおよそのページ容量'],
+          rows: [
+            {
+              'モデル': 'GPT-5.6（OpenAI）',
+              'コンテキストウィンドウ': '1Mトークン',
+              'おおよそのページ容量': 'セッションあたり〜800標準学術ページ',
+            },
+            {
+              'モデル': 'Claude Opus 5（Anthropic）',
+              'コンテキストウィンドウ': '1Mトークン',
+              'おおよそのページ容量': 'セッションあたり〜800標準学術ページ',
+            },
+            {
+              'モデル': 'Gemini 3.1 Pro（Google DeepMind）',
+              'コンテキストウィンドウ': '1Mトークン',
+              'おおよそのページ容量': 'セッションあたり〜800標準学術ページ',
+            },
+          ],
+          items: [
+            'GPT-5.6、Claude Opus 5、Gemini 3.1 Proは現在いずれも100万トークンのコンテキストウィンドウを共有しています。20本未満の論文を扱う研究タスクでは、3モデルすべてが問題なく全コンテキストを処理できます。50〜200本の論文を対象とするシステマティックレビューでは、3モデルすべてが1回のセッションで全コーパスを処理できるようになりましたが、ウィンドウサイズにかかわらず「lost in the middle」効果がコンテキスト中間に埋もれた素材の検索精度を依然として低下させます。',
+            '本当に大規模なコーパス（500本以上の論文）の場合、論文をチャンク化し、ベクトルデータベースに埋め込み、セマンティックな類似性で検索するRAGパイプラインが正しいアーキテクチャであり、コンテキストへの直接投入ではありません。',
+            'コンテキストウィンドウの詳細な解説と、モデルがなぜコンテキストの中間で情報を失うのかについては、[コンテキストウィンドウの解説](/ja/prompt-engineering/context-windows-explained-why-ai-forgets)をご覧ください。',
+          ],
+        },
+        lostInMiddle: {
+          title: '🔍 Lost in the Middle（中間情報の喪失）',
+          content: [
+            'モデルの公称コンテキストウィンドウの範囲内であっても、長い入力の中間に配置された情報は検索精度が低下します。最も重要な論文は先頭に配置し、参考資料は末尾に置いてください。これはAnthropicとGoogleの研究で文書化されている既知の制約です。',
+          ],
+        },
+        globalContext: {
+          id: 'regional',
+          title: 'グローバルおよび地域別の研究AI事情',
+          content: [
+            '欧州の研究機関では、AI支援による研究がEU AI Actに準拠することを求める動きが強まっています。同法は、学術出版を含む高リスクAIアプリケーションに対して透明性、追跡可能性、人間による監督を義務付けています。Mistral AI（フランス）はモデルをオンプレミスで展開できるため、機密性の高い研究データに対するGDPRのデータレジデンシー要件を満たすことができ、EUの学術現場で広く使用されています。',
+            '中国の研究機関は**Qwen3**（Alibaba）と**DeepSeek**を主要な研究AIツールとして使用しています — いずれもオープンソースでローカル展開が可能であり、欧米で訓練されたモデルよりも高速なトークン処理でCJK言語の学術文献を扱えます。中国の「生成AIサービス管理暫定弁法」（2023年）は、AI生成の研究コンテンツにその旨のラベル付けを義務付けており、この方針は現在、世界的な学術出版基準にも影響を与えています。',
+            '経済産業省（METI）のデータガバナンスガイドラインの下で運営される日本の大学は、**Ollama**とLlama 4 8Bをローカルに展開することがよくあります — このモデルはローカル推論に8GBのRAMを必要とし、外部APIコールを一切発生させず、機密性の高い研究に対する厳格なデータレジデンシー基準を満たします。',
+          ],
+        },
         commonMistakes: {
           title: 'AI支援研究の一般的エラー',
           content: [
@@ -3395,7 +3606,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**ベンチマークリーダボードで選択（実際のタスク非）** — **修正：** タスク適合で、リーダボード順位ではなくモデルを選択。ベンチマーク勝者（GPT-5.6）は要約に過度；Gemini 3.1 Proのコスト利点は単なるコンテキスト処理で支配。',
             '**コンテキストウィンドウ=品質と想定（3大フロンティアモデルすべてが現在1M；LLaMA 4 Scoutはローカルで10M）** — **修正：** コンテキストウィンドウは1次元であり品質の指標ではない。1Mトークンは50+論文でのみ重要。小規模な文献レビューでは、ウィンドウサイズではなく価格とタスク適合性でモデルを選ぶべき — GPT-5.6、Claude Opus 5、Gemini 3.1 Proは現在コンテキストで同等。',
             '**あらゆるタスクでフロンティアモデルを使用（60倍のコスト差Gemini Flash対GPT）** — **修正：** コスト効率でタスクを送信：Gemini Flash分類、Claude Opus 5執筆、GPT-5.6コード。PromptQuorum経由マルチモデルディスパッチがタスク別モデル選択を可能化。',
-            '**地政学とデータレジデンスを無視（EU GDPR、中国）** — **修正：** EU研究はGDPR準拠ツール使用（Mistralオンプレミス、Ollama​ローカル）。中国機関はQwen 3またはDeepSeek使用。日本はMETIガイドラインの下Ollama+LLaMA 3.1ローカルで使用。',
+            '**地政学とデータレジデンスを無視（EU GDPR、中国）** — **修正：** EU研究はGDPR準拠ツール使用（Mistralオンプレミス、Ollama​ローカル）。中国機関はQwen3またはDeepSeek使用。日本はMETIガイドラインの下Ollama+Llama 4 Scoutローカルで使用。',
             '**抽象化レイヤーなしプロバイダSDKにロック** — **修正：** ベンダーロックイン回避にマルチモデルディスパッチツール（PromptQuorum）を使用。単一APIコールは最良モデルに送信；プロバイダ切り替えはコード変更なし。',
           ],
         },
@@ -3423,6 +3634,52 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**学術著作に含める前にすべての引用を手動検証。** すべてのAI生成参考文献をソースデータベースで確認が必須。幻想引用はNeurIPS 2025を含むトップカンファレンス論文で確認されている。',
           ],
         },
+        faq: {
+          id: 'faq',
+          title: 'よくある質問',
+          faqs: [
+            {
+              q: '2026年の学術研究向け最高のAIツールは何ですか？',
+              a: '単一ツールはすべての研究段階で勝ちません。Elicitは138M+論文データベースからの構造化文献レビューとPDFデータ抽出で優位。Consensusはコンセンサスメーター（はい/いいえ/おそらく）による迅速な証拠合成で優位。Perplexityは学術・Web情報源にわたる高速引用済み回答で優位。最高品質ワークフローは3つを順序立てて使用。',
+            },
+            {
+              q: 'AI生成研究出力の精度はどのくらいですか？',
+              a: '精度はタスクとモデルによって異なります。テキスト要約の最高幻想率は1.3–4.1%。一般知識質問ではモデル平均9.2%。法律・医療分野は18.7%・15.6%。2026年1月、GPTZeroはピアレビューを通過した53のNeurIPS 2025論文で100+の幻想引用を確認 — AIエラーが専門家レビュアーに必ずしも検出されないことを示す。',
+            },
+            {
+              q: 'AIは一度に何件の学術論文を処理できますか？',
+              a: 'モデルのコンテキストウィンドウに依存。GPT-5.6（OpenAI）、Claude Opus 5（Anthropic）、Gemini 3.1 Proは現在いずれもセッションあたり〜800標準学術ページを処理（各1Mトークンコンテキスト）。それを超えるコーパスにはベクトルデータベースを持つRAGパイプラインが必要。',
+            },
+            {
+              q: 'AI生成参考文献を学術論文に引用することは安全ですか？',
+              a: 'いいえ — 検証なしではできません。AIモデルは著者名、巻号、DOIが誤った尤もらしい引用を生成します。すべてのAI生成引用は学術論文に含める前にGoogle Scholar、PubMed、arXivで検証が必須。幻想引用はNeurIPS 2025を含むトップMLカンファレンス論文で発見されている。',
+            },
+            {
+              q: '米国外でAI研究支援は異なる方法で機能しますか？',
+              a: 'はい。欧州研究機関はAI支援作業のEU AI Act透明性要件を遵守が必須。中国機関は主にQwen3（Alibaba）とDeepSeekを使用 — CJK言語文献により高速トークン処理。日本研究者はMETIデータガバナンスガイドラインの下Ollama基盤ローカルモデルを頻繁に使用 — Llama 4 8Bは8GB RAMで動作、機関インフラ外にデータが出ない。',
+            },
+            {
+              q: 'AI研究タスクに使用する温度は何ですか？',
+              a: '引用生成に温度を0.0–0.1に設定 — 決定論的出力は著者名やDOI破損可能なトークン変動を最小化。自然な文言が重要な要約は0.1–0.3を使用。仮説ブレインストーミング（多様な出力が目標）にのみ0.7–0.9を予約。',
+            },
+            {
+              q: 'Elicitとは何ですか？どのように機能しますか？',
+              a: 'Elicitは、138M+件の学術論文と545,000件の臨床試験にわたってセマンティック検索を使用するAI研究アシスタントです。キーワード検索とは異なり、概念的な類似性で論文をマッチングします。中核機能は構造化データ抽出です — キーワード一致を必要とせず、PDF全文から方法論、サンプルサイズ、結果を直接比較テーブルに抽出します。',
+            },
+            {
+              q: 'AI研究ツールはペイウォールの背後にある論文にアクセスできますか？',
+              a: 'ほとんどのAI研究ツール（Elicit、Consensus、Semantic Scholar）はオープンアクセスの論文データベースを使用しています。PDFを直接アップロードしない限り、機関のペイウォールの背後にある論文にはアクセスできません。NotebookLM（Google）とElicitはいずれも、アクセス権のある論文についてソース根拠付きQ&Aを行うためのPDFアップロードに対応しています。',
+            },
+            {
+              q: '幻想的な引用をどう見分ければよいですか？',
+              a: '引用をGoogle ScholarまたはPubMedで照合してください。著者名、ジャーナル、巻号、年、DOIがすべて正確に一致するかを確認します。scite.aiを使用して、その論文に引用活動があるかを確認してください — 影響力があるとされる論文の引用数がゼロであれば要注意サインです。別のAIモデルでクロスチェックし、著者やジャーナルの詳細が異なる場合は、両方のバージョンとも手動検証が必要です。',
+            },
+            {
+              q: 'Perplexity AIは学術研究にとって信頼できますか？',
+              a: 'Perplexity AIは探索的な研究には信頼できます — トピックの全体像の把握、主要な研究者の特定、さらに調査すべき関連ソースの発見などです。ピアレビューされていないソースを含むWeb全体を検索するため、最終的な引用元としては信頼性がありません。発見にはPerplexityを使用し、引用する前に具体的な主張はElicit、Semantic Scholar、または直接データベース検索で検証してください。',
+            },
+          ],
+        },
         sources: {
           title: 'ソースと参考読書',
           items: [
@@ -3439,7 +3696,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       theme: 'Use Cases',
       heroImage: '/images/ai-powered-research-overview-hero-zh.webp',
       title: 'AI研究：工具、幻想率和验证工作流',
-      intro: 'AI研究工具将文献评审时间从数周缩短至数小时 — 但引入关键风险：通过同行评审的幻想引用。GPTZero确认了超过100条NeurIPS 2025论文中的捏造引用通过多评审人审查。截至2026年5月，可靠工作流将每个研究阶段路由到合适工具（Elicit进行提取、Consensus进行合成、scite.ai进行验证），并在至少两个独立模型间交叉检查事实声明后信任。',
+      intro: 'AI研究工具将文献评审时间从数周缩短至数小时 — 但引入关键风险：通过同行评审的幻想引用。GPTZero确认了超过100条NeurIPS 2025论文中的捏造引用通过多评审人审查。可靠工作流将每个研究阶段路由到合适工具（Elicit进行提取、Consensus进行合成、scite.ai进行验证），并在至少两个独立模型间交叉检查事实声明后信任。',
       publishDate: '2026-03-23',
       dateModified: '2026-08-29',
       readTime: '阅读约9分钟',
@@ -3531,7 +3788,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: 'AI一次可以处理多少学术论文？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: '这取决于模型的上下文窗口。截至2026年8月，GPT-5.6（OpenAI）、Claude Opus 5（Anthropic）和Gemini 3.1 Pro（Google DeepMind）都能每个会话处理约800页标准学术页面（各自拥有1M令牌上下文）。超出此范围的语料库需要具有向量数据库的RAG管道。',
+              text: '这取决于模型的上下文窗口。GPT-5.6（OpenAI）、Claude Opus 5（Anthropic）和Gemini 3.1 Pro（Google DeepMind）目前都能每个会话处理约800页标准学术页面（各自拥有1M令牌上下文）。超出此范围的语料库需要具有向量数据库的RAG管道。',
             },
           },
           {
@@ -3547,7 +3804,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: 'AI研究协助在美国外是否以不同方式运作？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: '是的。欧洲研究人员必须遵守AI协助工作的EU AI法透明度要求。中国机构主要使用Qwen 3（阿里巴巴）和DeepSeek V3 — 两者对CJK语言文献有更快的令牌处理。日本研究人员在METI数据治理指南下经常使用基于Ollama的本地模型 — LLaMA 3.1 7B在8GB RAM上本地运行，没有数据离开机构基础设施。',
+              text: '是的。欧洲研究人员必须遵守AI协助工作的EU AI法透明度要求。中国机构主要使用Qwen3（阿里巴巴）和DeepSeek — 两者对CJK语言文献有更快的令牌处理。日本研究人员在METI数据治理指南下经常使用基于Ollama的本地模型 — Llama 4 8B在8GB RAM上本地运行，没有数据离开机构基础设施。',
             },
           },
           {
@@ -3556,6 +3813,38 @@ export const article: Partial<Record<Language, PEArticle>> = {
             acceptedAnswer: {
               '@type': 'Answer',
               text: '将温度设置为0.0–0.1以生成引用 — 确定性输出最小化令牌变动，令牌变动可能会损坏作者姓名或DOI。对于自然措辞很重要的摘要，使用0.1–0.3。仅为假设头脑风暴（多样输出是目标）保留0.7–0.9。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Elicit是什么？它是如何工作的？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Elicit是一款AI研究助手，在138M+学术论文和545,000项临床试验中使用语义搜索。与关键字搜索不同，它按概念相似性匹配论文。其核心功能是结构化数据提取 — 无需关键字匹配，即可直接从PDF全文中提取方法论、样本量和结果，生成比较表格。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'AI研究工具能访问付费墙背后的论文吗？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '大多数AI研究工具（Elicit、Consensus、Semantic Scholar）使用开放获取的论文数据库。除非您直接上传PDF，否则它们无法访问机构付费墙背后的论文。NotebookLM（Google）和Elicit都支持上传PDF，为您有权访问的论文提供基于来源的问答。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: '如何识别幻想引用？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: '在Google Scholar或PubMed中核对该引用。检查作者姓名、期刊、卷号、年份和DOI是否完全一致。使用scite.ai确认该论文有引用活动 — 一篇号称有影响力的论文如果引用数为零，就是危险信号。用第二个AI模型进行交叉检查：如果它给出不同的作者或期刊信息，两个版本都需要人工验证。',
+            },
+          },
+          {
+            '@type': 'Question',
+            name: 'Perplexity AI对学术研究可靠吗？',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'Perplexity AI对探索性研究可靠 — 例如梳理主题全景、识别关键研究者、寻找需要进一步调查的相关来源。但它不适合作为最终引用来源，因为它搜索的是包括非同行评审来源在内的整个网络。使用Perplexity进行发现，然后在引用前用Elicit、Semantic Scholar或直接数据库查询验证任何具体声明。',
             },
           },
         ],
@@ -3608,10 +3897,95 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**工作原理：** Retrieval-Augmented Generation（RAG）是大多数AI研究工具背后的核心架构。RAG将LLM连接到外部知识库 — 学术数据库、上传PDF或实时网络索引 — 以便模型在检索文档中而不仅从训练数据锚定答案。没有RAG，模型只能回忆训练的事实；使用RAG，他们从您提供的来源回答。',
           ],
         },
+        toolComparison: {
+          id: 'right-tool',
+          title: '每个研究阶段的最佳工具',
+          content: [
+            '**没有单一AI研究工具能很好地处理每个研究阶段 — 最高质量的工作流会将每项任务路由到为其设计的最佳工具。**',
+            'Elicit（elicit.com）对138M+学术论文和545,000项临床试验使用语义搜索，无需关键字匹配即可直接从PDF提取方法论、样本量、结果等结构化数据。Consensus（consensus.app）搜索约2亿篇论文，返回总结特定问题科学共识的"共识计量器"（是/否/也许）。Perplexity AI在开放网络和学术文献中提供最快的通用引用答案，是探索阶段的最佳选择。',
+          ],
+          columns: ['工具', '数据库', '主要功能', '免费层级'],
+          rows: [
+            {
+              '工具': 'Elicit',
+              '数据库': '138M+论文+54.5万项临床试验',
+              '主要功能': '从PDF提取结构化数据',
+              '免费层级': '有（每月5,000点数）',
+            },
+            {
+              '工具': 'Consensus',
+              '数据库': '约2亿篇论文',
+              '主要功能': '使用共识计量器进行证据合成',
+              '免费层级': '有（受限）',
+            },
+            {
+              '工具': 'Semantic Scholar',
+              '数据库': '2亿+论文',
+              '主要功能': '论文发现、引用图谱、TLDR摘要',
+              '免费层级': '完全免费',
+            },
+            {
+              '工具': 'Perplexity AI',
+              '数据库': '网络+学术',
+              '主要功能': '实时引用答案、广泛探索',
+              '免费层级': '有（受限）',
+            },
+            {
+              '工具': 'scite.ai',
+              '数据库': '12亿+引用声明',
+              '主要功能': '支持/矛盾/提及分析',
+              '免费层级': '有（受限）',
+            },
+            {
+              '工具': 'NotebookLM（Google）',
+              '数据库': '上传的文档',
+              '主要功能': '基于您自己文件的源引用问答',
+              '免费层级': '免费/Plus层级',
+            },
+          ],
+          items: [
+            '**发现** — 使用Perplexity绘制主题全景并明确研究问题',
+            '**文献收集** — 使用Elicit查找特定论文并提取数据表',
+            '**证据验证** — 使用Consensus检查科学界是否认同您的核心假设',
+            '**引用核查** — 使用scite.ai验证您的关键参考文献未被广泛反驳',
+          ],
+        },
+        hallucinationRisk: {
+          id: 'hallucination',
+          title: '研究AI中的幻想问题',
+          content: [
+            '**AI系统会幻想引用并捏造统计数据 — 这些错误甚至能通过同行评审。** GPTZero分析了NeurIPS 2025（采用率24.52%的顶级机器学习会议）录用的4,841篇论文，在通过多评审人同行评审的53篇论文中发现了100多个确认的幻想引用。',
+            '幻想率因领域和任务复杂度而显著不同：',
+          ],
+          columns: ['领域', '幻想率'],
+          rows: [
+            { '领域': '一般知识问题', '幻想率': '9.2%（模型平均）' },
+            { '领域': '法律信息', '幻想率': '18.7%（顶级模型）' },
+            { '领域': '医疗/健康查询', '幻想率': '15.6%（整体平均）' },
+            { '领域': '文本摘要（最佳模型）', '幻想率': '1.3—4.1%' },
+            { '领域': 'OpenAI o4-mini的PersonQA基准', '幻想率': '48%' },
+          ],
+          blockquote: '**用简单的话说：** 幻想率为9.2%的AI研究助手，每生成11条引用大约会捏造1条。在一篇包含40条引用的论文中，这意味着3—4条虚构的参考文献 — 足以导致一篇出版物被撤回。核心问题在于"自信"。LLM表达的不确定性与其准确性并不成正比。幻想引用与真实引用几乎无法区分 — 相同的格式、看似合理的期刊名称、连贯的作者组合。',
+        },
         confidenceProblem: {
           title: '🔍 信心问题',
           content: [
             'LLM不按比例表达与其准确性成正比的不确定性。虚幻引用看起来与真实引用相同 — 相同格式、似是而非的期刊名称、一致的作者组合。没有视觉信号表明引用是捏造的。验证是唯一的防御。',
+          ],
+        },
+        multiModelCheck: {
+          title: '如何验证AI研究输出：多模型交叉检查',
+          content: [
+            '**多模型交叉检查 — 同时通过GPT-5.6、Claude Opus 5和Gemini 3.1 Pro运行同一研究问题 — 能检测出单模型工作流会遗漏的幻想，因为独立模型很少捏造出相同的具体虚假声明。**',
+            '验证逻辑基于统计学：当三个独立训练的模型对某条引用达成一致时，三者都幻想出相同作者、期刊、卷号和年份的概率微乎其微。当它们意见不一致时，这种分歧就是需要手动验证的明确信号。',
+            'PromptQuorum是一款多模型AI分派工具，可将同一提示同时发送给多个AI提供商，并并排返回所有回答。在研究工作流中，这意味着通过一次分派，将引用或事实性声明同时提交给GPT-5.6（OpenAI）、Claude Opus 5（Anthropic）和Gemini 3.1 Pro（Google DeepMind），然后查看三个模型在哪些地方一致、哪些地方冲突。',
+            '**在PromptQuorum中测试 — 三个模型的30条研究引用提示：** 三个模型（GPT-5.6、Claude Opus 5、Gemini 3.1 Pro）在30个案例中有22个案例就相同的引用格式和DOI达成一致。在8个案例中，至少有一个模型给出了不同的作者姓名或期刊卷号 — 经Google Scholar人工核实，这8个案例全部确认为幻想。',
+          ],
+          items: [
+            '**生成** — 让一个模型（例如Claude Opus 5）生成带引用的文献摘要',
+            '**交叉检查** — 通过PromptQuorum将同一问题分派给GPT-5.6和Gemini 3.1 Pro',
+            '**标记分歧** — 任何模型在作者、年份或期刊上意见不一致的引用都需要人工验证',
+            '**验证一致的声明** — 使用scite.ai确认达成一致的引用未被撤回或反驳',
           ],
         },
         whyCrossCheckingWorks: {
@@ -3640,6 +4014,100 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**输出格式** — "以结构化表格返回结果：声明|来源|年份|信心（高/中/低）。"',
           ],
         },
+        promptBadExample: {
+          content: [
+            '**错误提示：** 没有角色或引用要求的开放式问题会产生幻想统计数据：',
+          ],
+          blockquote: '关于AI幻想的研究有哪些？',
+        },
+        promptGoodExample: {
+          title: '好的提示示例',
+          content: [
+            '**好的提示：** 下面的结构化版本会生成可验证的输出表格。上面的开放式提示会生成一段自信满满、但可能包含捏造统计数据的文字。',
+          ],
+          blockquote: '您是一名系统评审研究人员。请总结当前关于各领域（医疗、法律、一般知识）AI幻想率的科学共识。仅引用2023—2026年间发表的同行评审论文或官方模型评估报告。结果格式为：领域|幻想率|研究|年份。如果某个具体比率未经验证，请标注为"估计"并加以标记。',
+        },
+        parameters: {
+          id: 'temperature',
+          title: '研究任务的温度设置',
+          content: [
+            '**对所有需要事实准确性的研究任务，将温度（T）设置为0.0—0.2。** 温度（T）是应用于softmax输出分布的超参数：当T = 0.0时，模型在每一步都选择概率最高的令牌，产生确定性输出。当T = 1.0时，输出变得更加多样 — 这对创意任务是理想的，但对引用生成来说很危险，因为一个错误的令牌就可能改变作者姓名或DOI。',
+          ],
+          columns: ['任务', '推荐T值', '原因'],
+          rows: [
+            {
+              '任务': '引用生成',
+              '推荐T值': '0.0—0.1',
+              '原因': '确定性输出；最小化令牌变动',
+            },
+            {
+              '任务': '摘要',
+              '推荐T值': '0.1—0.3',
+              '原因': '事实准确同时表述自然',
+            },
+            {
+              '任务': '假设头脑风暴',
+              '推荐T值': '0.7—0.9',
+              '原因': '多样化输出扩大构思范围',
+            },
+            {
+              '任务': '文献综述初稿',
+              '推荐T值': '0.2—0.4',
+              '原因': '准确性与可读性的平衡',
+            },
+          ],
+        },
+        oneWrongToken: {
+          title: '🔍 一个错误令牌',
+          content: [
+            '在温度0.7时，单个令牌的变动就可能将"Smith 2024"变为"Smith 2023"，或将"Nature"变为"Nature Methods"。对于引用生成，即使T = 0.2也会带来不必要的风险。除非有特殊理由，否则请使用T = 0.0。',
+          ],
+        },
+        contextWindow: {
+          id: 'context-window',
+          title: '按模型划分的AI研究工具：上下文窗口限制',
+          content: [
+            '**上下文窗口大小决定了LLM在单个会话中能处理多少研究论文 — 这是大规模文献综合的主要技术限制。**',
+          ],
+          columns: ['模型', '上下文窗口', '大致页面容量'],
+          rows: [
+            {
+              '模型': 'GPT-5.6（OpenAI）',
+              '上下文窗口': '1M令牌',
+              '大致页面容量': '每个会话约800页标准学术页面',
+            },
+            {
+              '模型': 'Claude Opus 5（Anthropic）',
+              '上下文窗口': '1M令牌',
+              '大致页面容量': '每个会话约800页标准学术页面',
+            },
+            {
+              '模型': 'Gemini 3.1 Pro（Google DeepMind）',
+              '上下文窗口': '1M令牌',
+              '大致页面容量': '每个会话约800页标准学术页面',
+            },
+          ],
+          items: [
+            'GPT-5.6、Claude Opus 5和Gemini 3.1 Pro目前都共享100万令牌的上下文窗口。对于涉及不到20篇论文的研究任务，三个模型都能轻松处理完整上下文。对于覆盖50—200篇论文的系统评审，三个模型现在都能在单次会话中处理完整语料库 — 尽管无论窗口大小如何，"lost in the middle"效应仍会降低对埋藏在上下文中间的材料的检索准确性。',
+            '对于真正大规模的语料库（500篇以上论文），正确的架构是RAG管道 — 将论文分块、嵌入向量数据库、并通过语义相似性检索 — 而非直接注入上下文。',
+            '关于上下文窗口的更深入解释，以及模型为何会丢失上下文中间的信息，请参阅[上下文窗口详解](/zh/prompt-engineering/context-windows-explained-why-ai-forgets)。',
+          ],
+        },
+        lostInMiddle: {
+          title: '🔍 中间丢失效应',
+          content: [
+            '即使在模型声明的上下文窗口范围内，放置在长输入中间的信息其检索准确性也会下降。将最重要的论文放在前面，参考材料放在最后。这是Anthropic和Google研究中记录的已知限制。',
+          ],
+        },
+        globalContext: {
+          id: 'regional',
+          title: '全球及区域研究AI概况',
+          content: [
+            '欧洲研究机构越来越多地要求AI辅助研究遵守《欧盟人工智能法案》（EU AI Act），该法案要求包括学术出版在内的高风险AI应用具备透明度、可追溯性和人工监督。Mistral AI（法国）因其模型可在本地部署、满足敏感研究数据的GDPR数据驻留要求，而在欧盟学术界被广泛使用。',
+            '中国的研究机构将**Qwen3**（阿里巴巴）和**DeepSeek**用作主要的研究AI工具 — 两者均为开源、可本地部署，且在处理CJK语言学术文献时的令牌处理速度快于西方训练的模型。中国的《生成式人工智能服务管理暂行办法》（2023年）要求对AI生成的研究内容进行标注，这一政策目前正影响着全球的学术出版标准。',
+            '在METI数据治理指南下运营的日本大学，经常在本地部署**Ollama**和Llama 4 8B — 该模型的本地推理需要8GB RAM，不产生任何外部API调用，符合敏感研究严格的数据驻留标准。',
+          ],
+        },
         commonMistakes: {
           title: 'AI支持研究中的常见错误',
           content: [
@@ -3649,7 +4117,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**基于基准排行榜选择（非实际任务）** — **修复：** 按任务拟合选择模型，而不是排行榜排名。基准赢家（GPT-5.6）对于摘要来说是过度的；Gemini 3.1 Pro的成本优势在您只需要上下文处理时占主导地位。',
             '**假设上下文窗口=质量（三大前沿模型现在都是1M；LLaMA 4 Scout本地可达10M）** — **修复：** 上下文窗口只是一个维度，不是质量的衡量标准。1M令牌仅对50+论文重要。对于小型文献评审，应由价格和任务适配性——而非窗口大小——决定模型选择，因为GPT-5.6、Claude Opus 5和Gemini 3.1 Pro现在在上下文上已持平。',
             '**对每个任务使用前沿模型（Gemini Flash对GPT成本相差60倍）** — **修复：** 按成本效率路由任务：Gemini Flash用于分类、Claude Opus 5用于写作、GPT-5.6用于代码。PromptQuorum多模型分派可实现按任务模型选择。',
-            '**忽视地理位置和数据驻留（EU GDPR、中国）** — **修复：** EU研究必须使用符合GDPR的工具（Mistral本地、Ollama本地）。中国机构使用Qwen 3或DeepSeek。日本在METI指南下本地使用Ollama+LLaMA 3.1。',
+            '**忽视地理位置和数据驻留（EU GDPR、中国）** — **修复：** EU研究必须使用符合GDPR的工具（Mistral本地、Ollama本地）。中国机构使用Qwen3或DeepSeek。日本在METI指南下本地使用Ollama+Llama 4 Scout。',
             '**在没有抽象层的情况下锁定到提供者SDK** — **修复：** 使用多模型分派工具（PromptQuorum）避免供应商锁定。单个API调用路由到最佳模型；更换提供者无需代码更改。',
           ],
         },
@@ -3677,6 +4145,52 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**在学术著作中包含前验证所有引用。** 每个AI生成的参考文献都必须针对源数据库进行检查。虚幻引用已在包括NeurIPS 2025的顶级会议论文中得到确认。',
           ],
         },
+        faq: {
+          id: 'faq',
+          title: '常见问题',
+          faqs: [
+            {
+              q: '2026年学术研究的最佳AI工具是什么？',
+              a: '没有单一工具在所有研究阶段都获胜。Elicit在结构化文献评审和从其138M+论文数据库PDF提取中领先。Consensus在使用其共识计量器（是/否/也许）快速证据合成中领先。Perplexity在跨学术和网络来源快速、广泛引用的探索研究中领先。最高质量工作流顺序使用所有三个。',
+            },
+            {
+              q: 'AI生成研究输出的准确性如何？',
+              a: '准确性因任务和模型而异。文本摘要的最佳幻想率为1.3–4.1%。一般知识问题平均9.2%。法律和医疗领域分别达到18.7%和15.6%。2026年1月，GPTZero在通过同行评审的53篇NeurIPS 2025论文中确认了100+个虚幻引用 — 这意味着AI错误并不总是被专家审查人员捕获。',
+            },
+            {
+              q: 'AI一次可以处理多少学术论文？',
+              a: '这取决于模型的上下文窗口。GPT-5.6（OpenAI）、Claude Opus 5（Anthropic）和Gemini 3.1 Pro（Google DeepMind）目前都能每个会话处理约800页标准学术页面（各自拥有1M令牌上下文）。超出此范围的语料库需要具有向量数据库的RAG管道。',
+            },
+            {
+              q: '在学术论文中引用AI生成的引用是否安全？',
+              a: '否 — 未经验证不安全。AI模型生成看似合理的引用，可能有不正确的作者、错误的卷号或错误的DOI。每个AI生成的引用都必须在学术工作中包含前针对源数据库（Google Scholar、PubMed、arXiv）验证。虚幻引用已被发现在包括NeurIPS 2025的顶级机器学习会议论文中。',
+            },
+            {
+              q: 'AI研究协助在美国外是否以不同方式运作？',
+              a: '是的。欧洲研究人员必须遵守AI协助工作的EU AI法透明度要求。中国机构主要使用Qwen3（阿里巴巴）和DeepSeek — 两者对CJK语言文献有更快的令牌处理。日本研究人员在METI数据治理指南下经常使用基于Ollama的本地模型 — Llama 4 8B在8GB RAM上本地运行，没有数据离开机构基础设施。',
+            },
+            {
+              q: '我应该为AI研究任务使用什么温度？',
+              a: '将温度设置为0.0–0.1以生成引用 — 确定性输出最小化令牌变动，令牌变动可能会损坏作者姓名或DOI。对于自然措辞很重要的摘要，使用0.1–0.3。仅为假设头脑风暴（多样输出是目标）保留0.7–0.9。',
+            },
+            {
+              q: 'Elicit是什么？它是如何工作的？',
+              a: 'Elicit是一款AI研究助手，在138M+学术论文和545,000项临床试验中使用语义搜索。与关键字搜索不同，它按概念相似性匹配论文。其核心功能是结构化数据提取 — 无需关键字匹配，即可直接从PDF全文中提取方法论、样本量和结果，生成比较表格。',
+            },
+            {
+              q: 'AI研究工具能访问付费墙背后的论文吗？',
+              a: '大多数AI研究工具（Elicit、Consensus、Semantic Scholar）使用开放获取的论文数据库。除非您直接上传PDF，否则它们无法访问机构付费墙背后的论文。NotebookLM（Google）和Elicit都支持上传PDF，为您有权访问的论文提供基于来源的问答。',
+            },
+            {
+              q: '如何识别幻想引用？',
+              a: '在Google Scholar或PubMed中核对该引用。检查作者姓名、期刊、卷号、年份和DOI是否完全一致。使用scite.ai确认该论文有引用活动 — 一篇号称有影响力的论文如果引用数为零，就是危险信号。用第二个AI模型进行交叉检查：如果它给出不同的作者或期刊信息，两个版本都需要人工验证。',
+            },
+            {
+              q: 'Perplexity AI对学术研究可靠吗？',
+              a: 'Perplexity AI对探索性研究可靠 — 例如梳理主题全景、识别关键研究者、寻找需要进一步调查的相关来源。但它不适合作为最终引用来源，因为它搜索的是包括非同行评审来源在内的整个网络。使用Perplexity进行发现，然后在引用前用Elicit、Semantic Scholar或直接数据库查询验证任何具体声明。',
+            },
+          ],
+        },
         sources: {
           title: '来源和进一步阅读',
           items: [
@@ -3694,7 +4208,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     theme: 'Use Cases',
     heroImage: '/images/ai-powered-research-overview-hero-ko.webp',
     title: 'AI 기반 연구: 도구, 환각률, 검증 워크플로우',
-    intro: 'AI 연구 도구는 문헌 검토 시간을 몇 주에서 몇 시간으로 단축합니다 — 그러나 동료 심사를 통과하는 환각된 인용이라는 심각한 위험을 도입합니다. GPTZero는 다수의 심사자 검토를 통과한 NeurIPS 2025 논문에서 100개 이상의 조작된 참고문헌을 확인했습니다. 2026년 4월 기준, 신뢰할 수 있는 워크플로우는 각 연구 단계를 올바른 도구(Elicit로 추출, Consensus로 합성, scite.ai로 검증)로 라우팅하고 신뢰하기 전에 최소 두 개의 독립 모델에서 사실적 주장을 교차 검증합니다.',
+    intro: 'AI 연구 도구는 문헌 검토 시간을 몇 주에서 몇 시간으로 단축합니다 — 그러나 동료 심사를 통과하는 환각된 인용이라는 심각한 위험을 도입합니다. GPTZero는 다수의 심사자 검토를 통과한 NeurIPS 2025 논문에서 100개 이상의 조작된 참고문헌을 확인했습니다. 신뢰할 수 있는 워크플로우는 각 연구 단계를 올바른 도구(Elicit로 추출, Consensus로 합성, scite.ai로 검증)로 라우팅하고 신뢰하기 전에 최소 두 개의 독립 모델에서 사실적 주장을 교차 검증합니다.',
     publishDate: '2026-03-23',
     dateModified: '2026-08-29',
     readTime: '9분 분량',
@@ -3803,7 +4317,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           name: 'AI가 한 번에 처리할 수 있는 학술 논문은 몇 편입니까?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: '모델의 컨텍스트 윈도우에 따라 다릅니다. 2026년 8월 기준, GPT-5.6(OpenAI), Claude Opus 5(Anthropic), Gemini 3.1 Pro(Google DeepMind)는 모두 세션당 약 800페이지의 학술 논문을 처리합니다(각각 1M 토큰 컨텍스트). 그보다 큰 코퍼스의 경우 벡터 데이터베이스가 있는 RAG 파이프라인이 필요합니다.',
+            text: '모델의 컨텍스트 윈도우에 따라 다릅니다. GPT-5.6(OpenAI), Claude Opus 5(Anthropic), Gemini 3.1 Pro(Google DeepMind)는 현재 모두 세션당 약 800페이지의 학술 논문을 처리합니다(각각 1M 토큰 컨텍스트). 그보다 큰 코퍼스의 경우 벡터 데이터베이스가 있는 RAG 파이프라인이 필요합니다.',
           },
         },
         {
@@ -3819,7 +4333,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           name: '미국 외부에서 AI 연구 지원이 다르게 작동합니까?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: '예. 유럽 연구자들은 AI 지원 저작물에 대해 EU AI법의 투명성 요건을 준수해야 합니다. 중국 기관들은 주로 Qwen 3(Alibaba)와 DeepSeek V3를 사용합니다. METI 데이터 거버넌스 지침 하의 일본 연구자들은 일반적으로 Ollama 기반 로컬 모델을 사용합니다 — LLaMA 3.1 7B는 8GB RAM으로 로컬에서 실행되며 데이터가 기관 인프라를 벗어나지 않습니다.',
+            text: '예. 유럽 연구자들은 AI 지원 저작물에 대해 EU AI법의 투명성 요건을 준수해야 합니다. 중국 기관들은 주로 Qwen3(Alibaba)와 DeepSeek를 사용합니다. METI 데이터 거버넌스 지침 하의 일본 연구자들은 일반적으로 Ollama 기반 로컬 모델을 사용합니다 — Llama 4 8B는 8GB RAM으로 로컬에서 실행되며 데이터가 기관 인프라를 벗어나지 않습니다.',
           },
         },
         {
@@ -3923,7 +4437,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       toolComparison: {
         title: '각 연구 단계에 적합한 도구',
         content: [
-          '**2026년 4월 기준, 어떤 단일 AI 연구 도구도 모든 연구 단계를 잘 처리하지 못합니다 — 최고 품질의 워크플로우는 각 작업을 가장 잘 설계된 도구로 라우팅합니다.**',
+          '**어떤 단일 AI 연구 도구도 모든 연구 단계를 잘 처리하지 못합니다 — 최고 품질의 워크플로우는 각 작업을 가장 잘 설계된 도구로 라우팅합니다.**',
           'Elicit(elicit.com)은 1억 3,800만 개 이상의 학술 논문과 545,000개의 임상 시험에서 의미론적 검색을 사용하여 키워드 매칭 없이도 PDF에서 직접 방법론, 표본 크기, 결과를 비교 테이블로 추출합니다. Consensus(consensus.app)는 약 2억 개의 논문을 검색하고 특정 질문에 대한 과학적 합의(예/아니오/가능)를 요약하는 "Consensus Meter"를 반환합니다. Perplexity AI는 개방형 웹과 학술 문헌 모두에서 가장 빠른 범용 인용 응답을 제공하여 탐색 단계에 최적입니다.',
         ],
         columns: ['도구', '데이터베이스', '주요 기능', '무료 티어'],
@@ -3975,7 +4489,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       hallucinationRisk: {
         title: '연구 AI의 환각 문제',
         content: [
-          '**2026년 4월 기준, AI 시스템은 인용을 환각하고 통계를 조작합니다 — 이러한 오류는 동료 심사를 통과합니다.** GPTZero는 NeurIPS 2025(엘리트 기계 학습 컨퍼런스, 합격률 24.52%)에 수락된 4,841편의 논문을 분석하여 다수의 심사자 동료 심사를 통과한 53편의 논문에서 100개 이상의 확인된 환각된 인용을 발견했습니다.',
+          '**AI 시스템은 인용을 환각하고 통계를 조작합니다 — 이러한 오류는 동료 심사를 통과합니다.** GPTZero는 NeurIPS 2025(엘리트 기계 학습 컨퍼런스, 합격률 24.52%)에 수락된 4,841편의 논문을 분석하여 다수의 심사자 동료 심사를 통과한 53편의 논문에서 100개 이상의 확인된 환각된 인용을 발견했습니다.',
           '환각률은 도메인과 작업 복잡도에 따라 상당히 다릅니다:',
         ],
         columns: ['도메인', '환각률'],
@@ -4101,7 +4615,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
         ],
         items: [
-          '2026년 8월 기준, GPT-5.6, Claude Opus 5, Gemini 3.1 Pro는 모두 1백만 토큰 컨텍스트 윈도우를 공유합니다. 20개 미만의 논문을 가진 연구 작업의 경우 세 모델 모두 전체 컨텍스트를 문제없이 처리합니다. 50~200개의 논문을 포괄하는 체계적 검토의 경우 세 모델 모두 이제 단일 세션에서 전체 텍스트를 처리할 수 있습니다 — 다만 창 크기와 무관하게, 컨텍스트 중간에 위치한 자료에 대해서는 "lost in the middle" 효과로 검색 정확도가 여전히 저하됩니다.',
+          'GPT-5.6, Claude Opus 5, Gemini 3.1 Pro는 현재 모두 1백만 토큰 컨텍스트 윈도우를 공유합니다. 20개 미만의 논문을 가진 연구 작업의 경우 세 모델 모두 전체 컨텍스트를 문제없이 처리합니다. 50~200개의 논문을 포괄하는 체계적 검토의 경우 세 모델 모두 이제 단일 세션에서 전체 텍스트를 처리할 수 있습니다 — 다만 창 크기와 무관하게, 컨텍스트 중간에 위치한 자료에 대해서는 "lost in the middle" 효과로 검색 정확도가 여전히 저하됩니다.',
           '정말 큰 코퍼스(500개 이상의 논문)의 경우, 논문이 청크로 나뉘어 벡터 데이터베이스에 임베딩되고 의미론적 유사성으로 검색되는 RAG 파이프라인이 올바른 아키텍처입니다.',
           '컨텍스트 윈도우와 모델이 긴 컨텍스트의 중간에서 정보를 잃는 이유에 대한 자세한 설명은 [컨텍스트 윈도우 설명](/ko/prompt-engineering/context-windows-explained-why-ai-forgets)을 참조하십시오.',
         ],
@@ -4116,8 +4630,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: '연구 AI를 위한 글로벌 및 지역별 맥락',
         content: [
           '유럽 연구 기관들은 AI 지원 출판을 포함한 고위험 AI 응용 프로그램에 대한 투명성, 추적 가능성, 인간 감독을 요구하는 EU AI법을 점점 더 많이 준수하도록 요구받고 있습니다. Mistral AI(프랑스)는 모델이 온프레미스 배포 가능하고 민감한 연구 데이터에 대한 GDPR 데이터 잔류 요건을 충족하기 때문에 EU 학술 환경에서 자주 사용됩니다.',
-          '중국 연구 기관들은 **Qwen 3**(Alibaba)과 **DeepSeek V3**를 주요 AI 연구 도구로 사용합니다 — 둘 다 오픈 소스이고 로컬 배포 가능하며 서양에서 훈련된 모델보다 CJK 언어 문헌을 더 빠르게 처리합니다. 중국의 생성형 AI 잠정 조치(2023)는 AI가 생성한 연구 콘텐츠를 그렇게 표시하도록 요구합니다.',
-          'METI 데이터 보호 지침 하에 운영되는 일본 대학들은 일반적으로 **Ollama**와 LLaMA 3.1 모델을 로컬에서 배포합니다 — LLaMA 3.1 7B는 로컬 추론에 8GB RAM이 필요하고 외부 API 호출이 전혀 없으며 민감한 연구에 대한 엄격한 데이터 잔류 기준을 충족합니다.',
+          '중국 연구 기관들은 **Qwen3**(Alibaba)과 **DeepSeek**를 주요 AI 연구 도구로 사용합니다 — 둘 다 오픈 소스이고 로컬 배포 가능하며 서양에서 훈련된 모델보다 CJK 언어 문헌을 더 빠르게 처리합니다. 중국의 생성형 AI 잠정 조치(2023)는 AI가 생성한 연구 콘텐츠를 그렇게 표시하도록 요구합니다.',
+          'METI 데이터 보호 지침 하에 운영되는 일본 대학들은 일반적으로 **Ollama**와 Llama 4 8B를 로컬에서 배포합니다 — 이 모델은 로컬 추론에 8GB RAM이 필요하고 외부 API 호출이 전혀 없으며 민감한 연구에 대한 엄격한 데이터 잔류 기준을 충족합니다.',
         ],
       },
       commonMistakes: {
@@ -4129,7 +4643,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**벤치마크 리더보드 순위를 기반으로 선택(실제 작업이 아닌)** — **수정:** 리더보드 위치가 아닌 작업 적합성으로 모델을 선택하십시오. 벤치마크 챔피언(GPT-5.6)은 요약에는 과도하고; Gemini 3.1 Pro의 비용 우위는 컨텍스트 처리만 필요할 때 지배합니다.',
           '**컨텍스트 윈도우 = 품질이라고 가정(3대 프론티어 모델 모두 현재 1M; LLaMA 4 Scout는 로컬에서 10M 제공)** — **수정:** 컨텍스트 윈도우는 한 가지 차원일 뿐, 품질의 척도가 아닙니다. 1M 토큰은 50개 이상의 논문에서만 중요합니다. 소규모 문헌 검토의 경우 창 크기가 아니라 가격과 작업 적합성이 모델 선택을 결정해야 합니다 — GPT-5.6, Claude Opus 5, Gemini 3.1 Pro는 이제 컨텍스트 면에서 동등합니다.',
           '**모든 작업에 프론티어 모델 사용** — **수정:** 비용 효율성으로 작업을 라우팅하십시오: 분류에는 Gemini Flash, 작문에는 Claude Opus 5, 코드에는 GPT-5.6. PromptQuorum을 통한 다중 모델 디스패치는 작업별 모델 선택을 가능하게 합니다.',
-          '**지리 및 데이터 잔류 무시(EU GDPR, 중국)** — **수정:** EU 연구는 GDPR 준수 도구(Mistral 온프레미스, 로컬 Ollama)를 사용해야 합니다. 중국의 기관들은 Qwen 3 또는 DeepSeek를 사용합니다. METI 지침 하의 일본은 로컬에서 LLaMA 3.1과 함께 Ollama를 사용합니다.',
+          '**지리 및 데이터 잔류 무시(EU GDPR, 중국)** — **수정:** EU 연구는 GDPR 준수 도구(Mistral 온프레미스, 로컬 Ollama)를 사용해야 합니다. 중국의 기관들은 Qwen3 또는 DeepSeek를 사용합니다. METI 지침 하의 일본은 로컬에서 Llama 4 Scout과 함께 Ollama를 사용합니다.',
           '**추상화 레이어 없는 공급업체 종속** — **수정:** 공급업체 종속을 피하기 위해 다중 모델 디스패치 도구(PromptQuorum)를 사용하십시오. 단일 API 호출이 작업별 최적 모델로 라우팅하고; 공급업체 전환이 코드 변경을 필요로 하지 않습니다.',
         ],
       },
@@ -4171,7 +4685,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'AI가 한 번에 처리할 수 있는 학술 논문은 몇 편입니까?',
-            a: '모델의 컨텍스트 윈도우에 따라 다릅니다. 2026년 8월 기준, GPT-5.6(OpenAI), Claude Opus 5(Anthropic), Gemini 3.1 Pro(Google DeepMind)는 모두 세션당 약 800페이지의 학술 논문을 처리합니다(각각 1M 토큰 컨텍스트). 그보다 큰 코퍼스의 경우 벡터 데이터베이스가 있는 RAG 파이프라인이 필요합니다.',
+            a: '모델의 컨텍스트 윈도우에 따라 다릅니다. GPT-5.6(OpenAI), Claude Opus 5(Anthropic), Gemini 3.1 Pro(Google DeepMind)는 현재 모두 세션당 약 800페이지의 학술 논문을 처리합니다(각각 1M 토큰 컨텍스트). 그보다 큰 코퍼스의 경우 벡터 데이터베이스가 있는 RAG 파이프라인이 필요합니다.',
           },
           {
             q: '학술 논문에서 AI가 생성한 참고문헌을 인용하는 것이 안전합니까?',
@@ -4179,7 +4693,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: '미국 외부에서 AI 연구 지원이 다르게 작동합니까?',
-            a: '예. 유럽 연구자들은 AI 지원 저작물에 대해 EU AI법의 투명성 요건을 준수해야 합니다. 중국 기관들은 주로 Qwen 3(Alibaba)와 DeepSeek V3를 사용하며 CJK 언어 문헌 처리가 더 빠릅니다. METI 데이터 거버넌스 지침 하의 일본 연구자들은 일반적으로 Ollama 기반 로컬 모델을 사용합니다 — LLaMA 3.1 7B는 8GB RAM으로 로컬에서 실행되며 데이터가 기관 인프라를 벗어나지 않습니다.',
+            a: '예. 유럽 연구자들은 AI 지원 저작물에 대해 EU AI법의 투명성 요건을 준수해야 합니다. 중국 기관들은 주로 Qwen3(Alibaba)와 DeepSeek를 사용하며 CJK 언어 문헌 처리가 더 빠릅니다. METI 데이터 거버넌스 지침 하의 일본 연구자들은 일반적으로 Ollama 기반 로컬 모델을 사용합니다 — Llama 4 8B는 8GB RAM으로 로컬에서 실행되며 데이터가 기관 인프라를 벗어나지 않습니다.',
           },
           {
             q: 'AI 연구 작업에 어떤 온도를 사용해야 합니까?',
