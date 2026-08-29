@@ -959,5 +959,19 @@
     ],
     "reason": "Page 32 batch: title/meta already well-optimized (55/158 chars, matches continue.dev vs cursor 2026 exactly). Top real gap: best autocomplete model for continue (13 impr, pos 8.0, 0% CTR) had no direct FAQ answer despite the fact existing elsewhere in the article. Added FAQ reusing already-established facts, translated to all 9 languages.",
     "baseline": null
+  },
+  {
+    "id": "cedb937e-d9fb-4326-be07-1862894da994",
+    "slug": "/smart-home/home-assistant-ollama-integration",
+    "date": "2026-08-29T13:29:58.906Z",
+    "fields": [
+      {
+        "field": "faqs (all 9 locales)",
+        "old": "No mention of Home-LLM (acon96) anywhere in the article despite it being a real, distinct HACS integration users search for by name",
+        "new": "Added What is Home-LLM (acon96) and how is it different from the Ollama integration? FAQ to all 9 locales"
+      }
+    ],
+    "reason": "Page 33 batch: home llm (76 impr) + home-llm (26) + in house llm (3) + llm home (3) + llm.home (3) + acon96/home-llm (1) + homellm (1) = ~114 combined impressions, all 0% CTR - the single largest addressable cluster on the page, referring to the real acon96/home-llm HACS custom integration, completely absent from the article which only covers the official built-in Ollama integration. Added a factual, conservative FAQ distinguishing the two rather than overstating specifics not verified.",
+    "baseline": null
   }
 ]
