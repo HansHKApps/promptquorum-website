@@ -593,5 +593,24 @@
       "ctr": 0.008771929824561403,
       "period": "last 90 days"
     }
+  },
+  {
+    "id": "fddd6295-608b-4bad-b0b8-d40faa43333c",
+    "slug": "/local-llms/best-ai-coding-assistant-local-llm",
+    "date": "2026-08-29T07:33:44.076Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Best AI Coding Assistant for Local LLM 2026",
+        "new": "Best AI Coding Assistant & IDE for Local LLMs 2026"
+      }
+    ],
+    "reason": "18,908 impr, 1.55% CTR (pre-flagged in the worklist as ~30% AI Overview share, expect smaller gains). Unlike other pages in this batch, no query here has 0% CTR -- every query already converts at some rate, consistent with the AIO-share note. Found one modest, evidence-backed opportunity instead of a broken-page fix: a substantial 'IDE'-framed query cluster (~446 impr across 'best ide for local llm coding' 110 impr pos 3.3, 'llm ide' 89 impr pos 3.9, 'best ide for ollama' 15 impr, etc.) converts positively but the word 'IDE' never appears in the title or meta, despite being well covered in the body content (per-tool 'IDE support' spec rows). Added 'IDE' to title/meta in EN plus the 5 locales that mirror EN's exact title structure (ES, PT, DE, FR, KO); left AR/JA/ZH untouched since their titles use a different structure (comparison-style / listicle) not a direct parallel of this change, and their own locale-specific GSC data wasn't provided.",
+    "baseline": {
+      "impressions": 18908,
+      "clicks": 293,
+      "ctr": 0.015496086312671884,
+      "period": "last 90 days"
+    }
   }
 ]
