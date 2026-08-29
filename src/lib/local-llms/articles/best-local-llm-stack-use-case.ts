@@ -17,7 +17,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       heroImage: '/images/best-local-llm-stack-use-case-hardware-tier-hero-en.webp',
       twitterDescription: 'Local LLM stacks by use case: Coding → vLLM + Qwen3-Coder. Writing → Ollama + Llama 3.3. RAG → LlamaIndex + Qdrant + Qwen3. Agents → LangGraph + vLLM. June 2026 guide.',
       publishDate: '2026-04-05',
-      dateModified: '2026-08-28',
+      dateModified: '2026-08-29',
       leadAnswerBlock: '**The best local LLM stack depends on your workflow: writers need OpenWebUI + Llama 3.3, developers need vLLM + Python SDK, researchers need LangGraph + custom scripts. As of June 2026, no single tool excels at everything.**',
       audience: 'Developers familiar with Ollama or LM Studio optimizing local LLM workflows',
       readTime: '10 min',
@@ -308,6 +308,7 @@ for filename, review in reviews:
         'faqSection': {
           id: 'faq',
           faqs: [
+            { q: 'Which local inference stack handles 32K+ context windows best?', a: "vLLM — its PagedAttention KV-cache management scales memory near-linearly with context length instead of over-allocating, so a 32K-context session doesn't blow your VRAM budget the way naive attention implementations do. Ollama and llama.cpp also serve long-context models fine (most current open-weight models ship with 32K-128K native context), but vLLM's continuous batching keeps throughput higher when several long-context requests run concurrently. Whichever backend you pick, remember VRAM cost scales with context length, not just model size — a 32K-context session can use several GB more than the same model at 4K context." },
             { q: 'Should I use Ollama or vLLM?', a: 'Ollama for chat UI + simplicity. vLLM for API server + batch processing + performance. Not mutually exclusive; can run both.' },
             { q: 'Can I use Ollama for production API?', a: 'Yes, but vLLM is faster (3–5× higher throughput). Ollama is good for <10 req/sec. vLLM for 10+ req/sec.' },
             { q: 'What\'s the best local LLM for code review?', a: 'vLLM + Qwen3-Coder-7B-Instruct. Qwen3-Coder scores 82% on HumanEval (best open-source). vLLM processes 10 files in parallel. ~30–50 tok/sec on RTX 3060 12GB.' },
@@ -590,6 +591,7 @@ for filename, review in reviews:
         'faqSection': {
           id: 'faq',
           faqs: [
+            { q: '¿Qué stack de inferencia local soporta mejor ventanas de contexto de 32K o más?', a: 'vLLM: su gestión de caché KV con PagedAttention escala la memoria de forma casi lineal con la longitud del contexto, en vez de sobreasignar, así que una sesión de 32K de contexto no dispara tu presupuesto de VRAM como ocurre con implementaciones de atención más ingenuas. Ollama y llama.cpp también sirven modelos de contexto largo sin problema (la mayoría de los modelos abiertos actuales vienen con 32K-128K de contexto nativo), pero el batching continuo de vLLM mantiene mayor throughput cuando corren varias solicitudes de contexto largo a la vez. Sea cual sea el backend que elijas, recuerda que el coste de VRAM escala con la longitud del contexto, no solo con el tamaño del modelo — una sesión de 32K puede usar varios GB más que el mismo modelo a 4K de contexto.' },
             { q: '¿Debo usar Ollama o vLLM?', a: 'Ollama para UI de chat + simplicidad. vLLM para servidor API + procesamiento por lotes + rendimiento. No son mutuamente excluyentes; puedes ejecutar ambos.' },
             { q: '¿Puedo usar Ollama como API de producción?', a: 'Sí, pero vLLM es más rápido (3–5× mayor throughput). Ollama es adecuado para <10 req/seg. vLLM para 10+ req/seg.' },
             { q: '¿Cuál es el mejor LLM local para revisión de código?', a: 'vLLM + Qwen3-Coder-7B-Instruct. Qwen3-Coder obtiene un 82% en HumanEval (el mejor open-source). vLLM procesa 10 archivos en paralelo. ~30–50 tok/seg en RTX 3060 12GB.' },
@@ -881,6 +883,7 @@ for filename, review in reviews:
         'faqSection': {
           id: 'faq',
           faqs: [
+            { q: 'أي حزمة استدلال محلية تتعامل بشكل أفضل مع نوافذ سياق 32K فأكثر؟', a: 'vLLM — إدارة ذاكرة التخزين المؤقت KV الخاصة بها عبر PagedAttention تُوسّع الذاكرة بشكل شبه خطي مع طول السياق بدلاً من التخصيص الزائد، لذا فإن جلسة بسياق 32K لن تستنزف ميزانية VRAM كما يحدث مع تطبيقات الانتباه الساذجة. تخدم Ollama وllama.cpp أيضاً النماذج ذات السياق الطويل بشكل جيد (معظم النماذج مفتوحة الوزن الحالية تأتي بسياق أصلي 32K-128K)، لكن التجميع المستمر (continuous batching) في vLLM يحافظ على إنتاجية أعلى عند تشغيل عدة طلبات طويلة السياق في آن واحد. أياً كان العتاد الخلفي الذي تختاره، تذكّر أن تكلفة VRAM تتوسع مع طول السياق، وليس فقط مع حجم النموذج — جلسة بسياق 32K قد تستخدم عدة جيجابايت أكثر من نفس النموذج بسياق 4K.' },
             { q: 'هل أستخدم Ollama أم vLLM؟', a: 'Ollama لواجهة الدردشة + البساطة. vLLM لخادم API + معالجة الدفعات + الأداء. ليسا متعارضين؛ يمكنك تشغيل كليهما.' },
             { q: 'هل يمكنني استخدام Ollama كـ API إنتاجي؟', a: 'نعم، لكن vLLM أسرع (إنتاجية أعلى بمقدار 3–5×). Ollama مناسب لـ <10 طلب/ثانية. vLLM لـ 10+ طلب/ثانية.' },
             { q: 'ما هو أفضل نموذج LLM محلي لمراجعة الكود؟', a: 'vLLM + Qwen3-Coder-7B-Instruct. يحقق Qwen3-Coder نسبة 82% في HumanEval (الأفضل مفتوح المصدر). يعالج vLLM 10 ملفات بالتوازي. ~30–50 tok/ثانية على RTX 3060 12GB.' },
@@ -1079,6 +1082,7 @@ for filename, review in reviews:
           id: 'faq',
           title: 'Perguntas frequentes',
           faqs: [
+            { q: 'Qual stack de inferência local lida melhor com janelas de contexto de 32K ou mais?', a: 'vLLM — seu gerenciamento de cache KV com PagedAttention escala a memória de forma quase linear com o tamanho do contexto, em vez de superalocar, então uma sessão de 32K de contexto não estoura seu orçamento de VRAM como acontece com implementações de atenção mais ingênuas. Ollama e llama.cpp também servem modelos de contexto longo sem problemas (a maioria dos modelos abertos atuais vem com 32K-128K de contexto nativo), mas o batching contínuo do vLLM mantém throughput maior quando várias requisições de contexto longo rodam simultaneamente. Seja qual for o backend escolhido, lembre-se de que o custo de VRAM escala com o tamanho do contexto, não só com o tamanho do modelo — uma sessão de 32K pode usar vários GB a mais que o mesmo modelo a 4K de contexto.' },
             { q: 'Qual stack de LLM local é melhor para desenvolvimento em Python?', a: 'vLLM + Qwen3-Coder-14B + Continue.dev é o melhor stack para desenvolvimento Python em 2026. Qwen3-Coder obtém 82% no HumanEval, vLLM fornece inferência rápida com API compatível com OpenAI.' },
             { q: 'Como implementar RAG em português com LLMs locais?', a: 'Use LlamaIndex + Ollama + Qdrant. Para documentos em português, use um modelo de embedding multilíngue (ex: multilingual-e5-large) e Llama 3.3 ou Qwen3 como modelo de geração. Ambos têm bom suporte para português.' },
             { q: 'O stack local precisa de conexão à internet?', a: 'Não. Todos os componentes desta lista (Ollama, vLLM, LlamaIndex, Qdrant, Open WebUI) funcionam totalmente offline. Ideal para ambientes com requisitos de conformidade com LGPD.' },
@@ -1313,6 +1317,7 @@ for filename, review in reviews:
         'faqSection': {
           id: 'faq',
           faqs: [
+            { q: 'Welcher lokale Inference-Stack eignet sich am besten für 32K+ Kontextfenster?', a: 'vLLM — dessen KV-Cache-Verwaltung mit PagedAttention skaliert den Speicherbedarf nahezu linear mit der Kontextlänge, statt zu überallozieren, sodass eine Sitzung mit 32K Kontext Ihr VRAM-Budget nicht so sprengt wie bei naiveren Attention-Implementierungen. Ollama und llama.cpp bedienen ebenfalls Long-Context-Modelle problemlos (die meisten aktuellen offenen Modelle bieten nativ 32K–128K Kontext), aber das kontinuierliche Batching von vLLM hält den Durchsatz höher, wenn mehrere Long-Context-Anfragen gleichzeitig laufen. Unabhängig vom gewählten Backend gilt: Der VRAM-Bedarf skaliert mit der Kontextlänge, nicht nur mit der Modellgröße — eine 32K-Kontext-Sitzung kann mehrere GB mehr benötigen als dasselbe Modell bei 4K Kontext.' },
             { q: 'Soll ich Ollama oder vLLM verwenden?', a: 'Ollama für Chat-UI + Einfachheit. vLLM für API-Server + Batch-Verarbeitung + Performance. Nicht gegenseitig ausschließend; beide können gleichzeitig betrieben werden.' },
             { q: 'Kann ich Ollama als Produktions-API verwenden?', a: 'Ja, aber vLLM ist schneller (3–5-fach höherer Durchsatz). Ollama eignet sich für <10 Anfragen/Sek. vLLM für 10+ Anfragen/Sek.' },
             { q: 'Was ist der beste lokale LLM für Code-Review?', a: 'vLLM + Qwen3-Coder-7B-Instruct. Qwen3-Coder erzielt 82% auf HumanEval (bestes Open-Source-Coding-Modell). vLLM verarbeitet 10 Dateien parallel. Ca. 30–50 Tok/Sek auf RTX 3060 12 GB.' },
@@ -1599,6 +1604,7 @@ for filename, review in reviews:
         'faqSection': {
           id: 'faq',
           faqs: [
+            { q: "Quelle pile d'inférence locale gère le mieux les fenêtres de contexte de 32K et plus ?", a: "vLLM — sa gestion du cache KV via PagedAttention fait évoluer la mémoire de façon quasi linéaire avec la longueur du contexte au lieu de surallouer, si bien qu'une session à 32K de contexte ne fait pas exploser votre budget VRAM comme avec des implémentations d'attention plus naïves. Ollama et llama.cpp servent également très bien les modèles à contexte long (la plupart des modèles ouverts actuels proposent nativement 32K à 128K de contexte), mais le batching continu de vLLM maintient un débit plus élevé lorsque plusieurs requêtes à contexte long tournent en parallèle. Quel que soit le backend choisi, gardez à l'esprit que le coût en VRAM évolue avec la longueur du contexte, pas seulement avec la taille du modèle — une session à 32K peut consommer plusieurs Go de plus que le même modèle à 4K de contexte." },
             { q: 'Dois-je utiliser Ollama ou vLLM ?', a: 'Ollama pour l\'interface chat + simplicité. vLLM pour le serveur API + traitement par lots + performance. Pas mutuellement exclusifs ; les deux peuvent fonctionner simultanément.' },
             { q: 'Puis-je utiliser Ollama pour une API de production ?', a: 'Oui, mais vLLM est plus rapide (débit 3–5× supérieur). Ollama convient pour <10 req/s. vLLM pour 10+ req/s.' },
             { q: 'Quel est le meilleur LLM local pour la revue de code ?', a: 'vLLM + Qwen3-Coder-7B-Instruct. Qwen3-Coder obtient 82 % sur HumanEval. vLLM traite 10 fichiers en parallèle. ~30–50 tok/s sur RTX 3060 12 Go.' },
@@ -1881,6 +1887,7 @@ for filename, review in reviews:
         'faqSection': {
           id: 'faq',
           faqs: [
+            { q: '32K以上のコンテキストウィンドウに最も適したローカル推論スタックはどれですか？', a: 'vLLMです。PagedAttentionによるKVキャッシュ管理により、過剰確保ではなくコンテキスト長にほぼ比例してメモリを拡張するため、32Kコンテキストのセッションでも単純なAttention実装のようにVRAM予算を圧迫しません。Ollamaやllama.cppも長コンテキストモデルを問題なく提供できます（現在の主要なオープンウェイトモデルの多くはネイティブで32K〜128Kのコンテキストに対応）が、複数の長コンテキストリクエストを同時に処理する場合はvLLMの継続的バッチ処理の方がスループットを高く保てます。どのバックエンドを選んでも、VRAMコストはモデルサイズだけでなくコンテキスト長にも比例して増加する点に注意してください——32Kコンテキストのセッションは、同じモデルの4Kコンテキスト時より数GB多くVRAMを消費することがあります。' },
             { q: 'OllamaとvLLMはどちらを使うべきですか？', a: 'OllamaはチャットUI + シンプルさ向け。vLLMはAPIサーバー + バッチ処理 + パフォーマンス向け。相互排他ではない。両方並行実行可能。' },
             { q: 'Ollamaを本番環境のAPIに使えますか？', a: '使えますが、vLLMの方が高速（3–5倍のスループット）。Ollamaは<10 req/s向け。vLLMは10+ req/s向け。' },
             { q: 'コードレビューに最適なローカルLLMは？', a: 'vLLM + Qwen3-Coder-7B-Instruct。Qwen3-CoderはHumanEvalで８２％（オープンソース最高）。vLLMは10ファイルを並列分。RTX 3060 12GBで絀30–50 tok/s。' },
@@ -2163,6 +2170,7 @@ for filename, review in reviews:
         'faqSection': {
           id: 'faq',
           faqs: [
+            { q: '哪种本地推理堆栈最能支持32K以上的上下文窗口？', a: 'vLLM——其基于PagedAttention的KV缓存管理让显存占用几乎随上下文长度线性增长，而不是过度分配，因此32K上下文会话不会像朴素注意力实现那样瞬间耗尽你的显存预算。Ollama和llama.cpp同样能很好地处理长上下文模型（目前大多数主流开源模型原生支持32K–128K上下文），但当多个长上下文请求并发运行时，vLLM的连续批处理（continuous batching）能保持更高的吞吐量。无论选择哪种后端，都要记住显存开销随上下文长度而非仅模型大小扩展——32K上下文会话可能比同一模型在4K上下文下多消耗数GB显存。' },
             { q: '应该选Ollama还是vLLM？', a: 'Ollama适合聊天UI + 简单开发。vLLM適合API服务器 + 批量处理 + 高性能場景。两者不互斥，可同时运行。' },
             { q: 'Ollama可以用于生产环API吗？', a: '可以，但vLLM更快（吐射2刀3–5倍）。Ollama适合<10 req/s。vLLM适合高10+ req/s场景。' },
             { q: '代码审查最佳本地LLM是什么？', a: 'vLLM + Qwen3-Coder-7B-Instruct。Qwen3-Coder在HumanEval得劆8剸2%（开源最佳）。vLLM并行处理10个文件。RTX 3060 12GB成逗30–50 tok/s。' },

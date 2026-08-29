@@ -903,5 +903,19 @@
     ],
     "reason": "Page 29 batch: largest addressable cluster is Open Arabic LLM Leaderboard (OALL) queries (43 impr combined across ~10 variants, 0% CTR, pos 8.7-11.3) - title/meta never mentioned OALL/leaderboard despite body already covering OALL-v2 scores for all 5 models in depth. Also title only named 3 of 5 covered models (Jais, Falcon-H1-Arabic, Qwen3), missing ALLaM and Fanar which co-occur in the leaderboard queries. Body coverage was already excellent (56 OALL/ALLaM/Fanar/Emirati mentions) - this was diagnosis A, title-only fix, no body change needed.",
     "baseline": null
+  },
+  {
+    "id": "a7710ec4-c5d6-4c4f-bce7-514389258c90",
+    "slug": "/local-llms/best-local-llm-stack-use-case",
+    "date": "2026-08-29T12:34:34.473Z",
+    "fields": [
+      {
+        "field": "faqs (en + 7 existing locales)",
+        "old": "No FAQ answering which inference stack handles 32K+ context windows",
+        "new": "Added Which local inference stack handles 32K+ context windows best? FAQ (vLLM PagedAttention answer) to en, es, ar, pt, de, fr, ja, zh"
+      }
+    ],
+    "reason": "Page 30 batch: second-highest-impression query on the page (best inference stack supporting 32k context windows, 34 impr, pos 6.6, 0% CTR) had zero body coverage - no context-window or 32K mention anywhere. Title/meta already covered the primary RAG/agents/coding queries well (both already converting with clicks), so this was a body-only fix. Note: this article has no ko locale block at all (7 non-EN locales exist, not 8) - flagged as a separate pre-existing gap, not fixed here.",
+    "baseline": null
   }
 ]
