@@ -34,7 +34,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         keywords: ['prompt engineering', 'answer length', 'prompt optimization', 'concise outputs', 'LLM efficiency', 'GPT-5.6', 'Claude', 'Gemini'],
         mentions: [
           { '@type': 'SoftwareApplication', name: 'GPT-5.6' },
-          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8' },
+          { '@type': 'SoftwareApplication', name: 'Claude Opus 5' },
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
           { '@type': 'SoftwareApplication', name: 'PromptQuorum' },
         ],
@@ -44,7 +44,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           title: 'Why AI Answers Bloat',
           content: [
-            '**Speed in prompt engineering means getting concise, direct AI responses through deliberate prompt design—not hardware latency.** Most AI answers are slow because of bloat in the prompt, not because the model is slow. In my experience after testing hundreds of prompts across GPT-5.6, Claude Opus 4.8, and Gemini 3.1 Pro, the fastest answers come from the tightest constraints.',
+            '**Speed in prompt engineering means getting concise, direct AI responses through deliberate prompt design—not hardware latency.** Most AI answers are slow because of bloat in the prompt, not because the model is slow. In my experience after testing hundreds of prompts across GPT-5.6, Claude Opus 5, and Gemini 3.1 Pro, the fastest answers come from the tightest constraints.',
             'Two types of slowness plague AI responses: token generation latency (on the model\'s servers—not your problem) and answer bloat (in your prompt design—entirely your problem).',
             'Bloat happens when the model must hedge its bets. Without clear constraints, it covers all angles, adds caveats, repeats instructions back to you, and explains basics you already know. Each of these adds tokens that you didn\'t ask for.',
           ],
@@ -207,7 +207,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptquorumTest: {
           title: 'PromptQuorum Consensus Test',
           content: [
-            'I tested this speed principle across GPT-5.6, Claude Opus 4.8, and Gemini 3.1 Pro by sending the same vague prompt versus a speed-optimized prompt:',
+            'I tested this speed principle across GPT-5.6, Claude Opus 5, and Gemini 3.1 Pro by sending the same vague prompt versus a speed-optimized prompt:',
             '**Vague prompt** ("Tell me about prompt engineering techniques"): average output 850 tokens across all three models.',
             '**Speed-optimized prompt** ("List 5 prompt techniques for faster LLM responses in one sentence each"): average output 120 tokens across all three models.',
             'All three models respected the format constraint equally. The speed-optimized version was **7× shorter** while remaining accurate.',
@@ -302,7 +302,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           title: 'Warum KI-Antworten aufgebläht werden',
           content: [
-            '**Geschwindigkeit beim Prompt Engineering bedeutet, prägnante und direkte KI-Antworten durch durchdachtes Prompt-Design zu erreichen—nicht Hardware-Latenz.** Die meisten KI-Antworten sind langsam, weil der Prompt zu vage ist, nicht weil das Modell langsam ist. Nach dem Testen von Hunderten von Prompts mit GPT-5.6, Claude Opus 4.8 und Gemini 3.1 Pro bin ich zu dem Ergebnis gekommen, dass die schnellsten Antworten von den strengsten Einschränkungen kommen.',
+            '**Geschwindigkeit beim Prompt Engineering bedeutet, prägnante und direkte KI-Antworten durch durchdachtes Prompt-Design zu erreichen—nicht Hardware-Latenz.** Die meisten KI-Antworten sind langsam, weil der Prompt zu vage ist, nicht weil das Modell langsam ist. Nach dem Testen von Hunderten von Prompts mit GPT-5.6, Claude Opus 5 und Gemini 3.1 Pro bin ich zu dem Ergebnis gekommen, dass die schnellsten Antworten von den strengsten Einschränkungen kommen.',
             'Zwei Arten von Langsamkeit plagen KI-Antworten: Token-Generierungslatenz (auf den Servern des Modells—nicht dein Problem) und Antwortaufblähtheit (in deinem Prompt-Design—vollständig dein Problem).',
             'Aufblähtheit tritt auf, wenn das Modell hedgen muss. Ohne klare Einschränkungen deckt es alle Winkel ab, fügt Vorbehalte hinzu, wiederholt Anweisungen und erklärt Grundlagen, die du bereits kennst. Jedes davon fügt Token hinzu, die du nicht angefordert hast.',
           ],
@@ -439,7 +439,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptquorumTest: {
           title: 'PromptQuorum Konsensus-Test',
           content: [
-            'Ich testete dieses Speed-Prinzip mit GPT-5.6, Claude Opus 4.8 und Gemini 3.1 Pro, indem ich den gleichen vagen Prompt versus einen speed-optimierten Prompt sendete:',
+            'Ich testete dieses Speed-Prinzip mit GPT-5.6, Claude Opus 5 und Gemini 3.1 Pro, indem ich den gleichen vagen Prompt versus einen speed-optimierten Prompt sendete:',
             '**Vager Prompt** ("Erzähle mir von Prompt-Engineering-Techniken"): durchschnittliche Ausgabe 850 Token über alle drei Modelle.',
             '**Speed-optimierter Prompt** ("Liste 5 Prompt-Techniken für schnellere LLM-Antworten auf, je ein Satz"): durchschnittliche Ausgabe 120 Token über alle drei Modelle.',
             'Alle drei Modelle respektierten die Formateinschränkung gleichermaßen. Die speed-optimierte Version war **7× kürzer** und blieb dennoch genau.',
@@ -541,7 +541,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           title: 'Por qué las respuestas de IA se inflan',
           content: [
-            '**La velocidad en prompt engineering significa obtener respuestas de IA concisas y directas mediante un diseño de prompt deliberado — no latencia de hardware.** Tras probar cientos de prompts en GPT-5.6, Claude Opus 4.8 y Gemini 3.1 Pro, la conclusión es constante: las respuestas más rápidas vienen de las restricciones más ajustadas, no de un modelo "más rápido".',
+            '**La velocidad en prompt engineering significa obtener respuestas de IA concisas y directas mediante un diseño de prompt deliberado — no latencia de hardware.** Tras probar cientos de prompts en GPT-5.6, Claude Opus 5 y Gemini 3.1 Pro, la conclusión es constante: las respuestas más rápidas vienen de las restricciones más ajustadas, no de un modelo "más rápido".',
             'Dos tipos de lentitud afectan a las respuestas de IA: la latencia de generación de tokens (ocurre en los servidores del modelo — no es tu problema) y la inflación de la respuesta (ocurre en el diseño de tu prompt — es enteramente tu problema).',
             'La inflación ocurre cuando el modelo tiene que cubrirse las espaldas. Sin restricciones claras, cubre todos los ángulos, añade advertencias, repite tus instrucciones y explica conceptos básicos que ya conoces. Cada uno de estos añade tokens que no pediste.',
           ],
@@ -678,7 +678,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptquorumTest: {
           title: 'Prueba de consenso de PromptQuorum',
           content: [
-            'Probé este principio de velocidad en GPT-5.6, Claude Opus 4.8 y Gemini 3.1 Pro enviando el mismo prompt vago frente a un prompt optimizado para velocidad:',
+            'Probé este principio de velocidad en GPT-5.6, Claude Opus 5 y Gemini 3.1 Pro enviando el mismo prompt vago frente a un prompt optimizado para velocidad:',
             '**Prompt vago** ("Cuéntame sobre técnicas de prompt engineering"): output promedio de 850 tokens en los tres modelos.',
             '**Prompt optimizado para velocidad** ("Enumera 5 técnicas de prompting para respuestas de LLM más rápidas, una frase cada una"): output promedio de 120 tokens en los tres modelos.',
             'Los tres modelos respetaron la restricción de formato por igual. La versión optimizada para velocidad fue **7 veces más corta** manteniendo la precisión.',
@@ -779,7 +779,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           title: 'لماذا تُنفَّخ إجابات الذكاء الاصطناعي',
           content: [
-            '**السرعة في هندسة البرومبت تعني الحصول على إجابات ذكاء اصطناعي موجزة ومباشرة عبر تصميم برومبت متعمّد — لا عبر زمن استجابة العتاد.** بعد اختبار مئات البرومبتات على GPT-5.6 وClaude Opus 4.8 وGemini 3.1 Pro، تظل النتيجة ثابتة: الإجابات الأسرع تأتي من القيود الأكثر إحكامًا، لا من نموذج "أسرع".',
+            '**السرعة في هندسة البرومبت تعني الحصول على إجابات ذكاء اصطناعي موجزة ومباشرة عبر تصميم برومبت متعمّد — لا عبر زمن استجابة العتاد.** بعد اختبار مئات البرومبتات على GPT-5.6 وClaude Opus 5 وGemini 3.1 Pro، تظل النتيجة ثابتة: الإجابات الأسرع تأتي من القيود الأكثر إحكامًا، لا من نموذج "أسرع".',
             'نوعان من البطء يُصيبان إجابات الذكاء الاصطناعي: زمن استجابة توليد الرموز (يحدث على خوادم النموذج — ليس مشكلتك) وتضخّم الإجابة (يحدث في تصميم برومبتك — هو مشكلتك بالكامل).',
             'يحدث التضخّم حين يضطر النموذج للتحوّط. بدون قيود واضحة، يُغطي كل الزوايا، يُضيف تحفظات، يُكرر تعليماتك، ويشرح أساسيات تعرفها بالفعل. كل واحد من هذه يُضيف رموزًا لم تطلبها.',
           ],
@@ -916,7 +916,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptquorumTest: {
           title: 'اختبار الإجماع في PromptQuorum',
           content: [
-            'اختبرت مبدأ السرعة هذا على GPT-5.6 وClaude Opus 4.8 وGemini 3.1 Pro بإرسال نفس البرومبت الغامض مقابل برومبت محسّن للسرعة:',
+            'اختبرت مبدأ السرعة هذا على GPT-5.6 وClaude Opus 5 وGemini 3.1 Pro بإرسال نفس البرومبت الغامض مقابل برومبت محسّن للسرعة:',
             '**برومبت غامض** ("أخبرني عن تقنيات هندسة البرومبت"): متوسط مخرجات 850 رمزًا عبر النماذج الثلاثة.',
             '**برومبت محسّن للسرعة** ("اذكر 5 تقنيات برومبتات لاستجابات LLM أسرع، جملة واحدة لكل منها"): متوسط مخرجات 120 رمزًا عبر النماذج الثلاثة.',
             'احترمت النماذج الثلاثة قيد التنسيق بالتساوي. كانت النسخة المحسّنة للسرعة **أقصر بـ7 مرات** مع بقائها دقيقة.',
@@ -1018,7 +1018,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           title: 'Por que as respostas de IA ficam infladas',
           content: [
-            '**Velocidade em prompt engineering significa obter respostas de IA concisas e diretas por meio de um design de prompt deliberado — não latência de hardware.** Depois de testar centenas de prompts no GPT-5.6, Claude Opus 4.8 e Gemini 3.1 Pro, a conclusão se mantém: as respostas mais rápidas vêm das restrições mais rígidas, não de um modelo "mais rápido".',
+            '**Velocidade em prompt engineering significa obter respostas de IA concisas e diretas por meio de um design de prompt deliberado — não latência de hardware.** Depois de testar centenas de prompts no GPT-5.6, Claude Opus 5 e Gemini 3.1 Pro, a conclusão se mantém: as respostas mais rápidas vêm das restrições mais rígidas, não de um modelo "mais rápido".',
             'Dois tipos de lentidão afetam as respostas de IA: latência de geração de tokens (ocorre nos servidores do modelo — não é o seu problema) e inflação da resposta (ocorre no design do seu prompt — é totalmente o seu problema).',
             'A inflação acontece quando o modelo precisa se proteger. Sem restrições claras, ele cobre todos os ângulos, adiciona ressalvas, repete suas instruções e explica conceitos básicos que você já conhece. Cada um desses itens adiciona tokens que você não pediu.',
           ],
@@ -1155,7 +1155,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptquorumTest: {
           title: 'Teste de consenso do PromptQuorum',
           content: [
-            'Testei esse princípio de velocidade no GPT-5.6, Claude Opus 4.8 e Gemini 3.1 Pro enviando o mesmo prompt vago contra um prompt otimizado para velocidade:',
+            'Testei esse princípio de velocidade no GPT-5.6, Claude Opus 5 e Gemini 3.1 Pro enviando o mesmo prompt vago contra um prompt otimizado para velocidade:',
             '**Prompt vago** ("Me conte sobre técnicas de prompt engineering"): output médio de 850 tokens nos três modelos.',
             '**Prompt otimizado para velocidade** ("Liste 5 técnicas de prompt para respostas de LLM mais rápidas, uma frase cada"): output médio de 120 tokens nos três modelos.',
             'Os três modelos respeitaram a restrição de formato igualmente. A versão otimizada para velocidade foi **7 vezes mais curta** mantendo a precisão.',
@@ -1242,7 +1242,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           title: 'Pourquoi les réponses IA sont gonflées',
           content: [
-            '**La rapidité en ingénierie de prompt signifie obtenir des réponses IA concises et directes grâce à une conception délibérée—non une latence matérielle.** La plupart des réponses IA sont lentes à cause d\'un gonflement du prompt, non pas parce que le modèle est lent. Après avoir testé des centaines de prompts sur GPT-5.6, Claude Opus 4.8 et Gemini 3.1 Pro, j\'ai trouvé que les réponses les plus rapides proviennent des contraintes les plus strictes.',
+            '**La rapidité en ingénierie de prompt signifie obtenir des réponses IA concises et directes grâce à une conception délibérée—non une latence matérielle.** La plupart des réponses IA sont lentes à cause d\'un gonflement du prompt, non pas parce que le modèle est lent. Après avoir testé des centaines de prompts sur GPT-5.6, Claude Opus 5 et Gemini 3.1 Pro, j\'ai trouvé que les réponses les plus rapides proviennent des contraintes les plus strictes.',
             'Deux types de lenteur affligent les réponses IA : la latence de génération de tokens (du côté des serveurs du modèle—pas votre problème) et le gonflement de réponse (dans votre conception de prompt—entièrement votre problème).',
             'Le gonflement se produit lorsque le modèle doit couvrir ses paris. Sans contraintes claires, il couvre tous les angles, ajoute des mises en garde, répète les instructions et explique les bases que vous connaissez déjà. Chacun d\'eux ajoute des tokens que vous n\'avez pas demandés.',
           ],
@@ -1379,7 +1379,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptquorumTest: {
           title: 'Test de consensus PromptQuorum',
           content: [
-            'J\'ai testé ce principe de vitesse sur GPT-5.6, Claude Opus 4.8 et Gemini 3.1 Pro en envoyant le même prompt vague par rapport à un prompt optimisé pour la vitesse :',
+            'J\'ai testé ce principe de vitesse sur GPT-5.6, Claude Opus 5 et Gemini 3.1 Pro en envoyant le même prompt vague par rapport à un prompt optimisé pour la vitesse :',
             '**Prompt vague** ("Parle-moi des techniques d\'ingénierie de prompt"): sortie moyenne 850 tokens sur tous les trois modèles.',
             '**Prompt optimisé pour la vitesse** ("Liste 5 techniques de prompt pour des réponses LLM plus rapides en une phrase chacun"): sortie moyenne 120 tokens sur tous les trois modèles.',
             'Les trois modèles ont respecté la contrainte de format de la même manière. La version optimisée pour la vitesse était **7× plus courte** tout en restant précise.',
@@ -1466,7 +1466,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           title: 'AI回答が膨張する理由',
           content: [
-            '**プロンプトエンジニアリングにおける「速度」とは、意図的なプロンプト設計によって簡潔で直接的なAI応答を得ることです。** AI回答が遅いのは、モデルが遅いからではなく、プロンプトの膨張が原因です。GPT-5.6、Claude Opus 4.8、Gemini 3.1 Proで数百個のプロンプトをテストした経験から、最速の回答は最も厳しい制約から生まれることを発見しました。',
+            '**プロンプトエンジニアリングにおける「速度」とは、意図的なプロンプト設計によって簡潔で直接的なAI応答を得ることです。** AI回答が遅いのは、モデルが遅いからではなく、プロンプトの膨張が原因です。GPT-5.6、Claude Opus 5、Gemini 3.1 Proで数百個のプロンプトをテストした経験から、最速の回答は最も厳しい制約から生まれることを発見しました。',
             'AI回答の遅さには2つのタイプがあります：トークン生成レイテンシー（モデルのサーバー側—あなたの問題ではない）と回答膨張（プロンプト設計—完全にあなたの問題）。',
             '膨張は、モデルがリスクヘッジする必要があるときに発生します。明確な制約がないと、あらゆる観点をカバーし、注釈を追加し、指示を繰り返し、すでに知っている基礎を説明します。これらのすべてが、要求していないトークンを追加します。',
           ],
@@ -1603,7 +1603,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptquorumTest: {
           title: 'PromptQuorumコンセンサステスト',
           content: [
-            'この速度の原則を、同じ曖昧なプロンプトとスピード最適化プロンプトをGPT-5.6、Claude Opus 4.8、Gemini 3.1 Proに送信してテストしました：',
+            'この速度の原則を、同じ曖昧なプロンプトとスピード最適化プロンプトをGPT-5.6、Claude Opus 5、Gemini 3.1 Proに送信してテストしました：',
             '**曖昧なプロンプト** (「プロンプトエンジニアリング技術について教えてください」)：3つのモデルすべてで平均850トークンの出力。',
             '**スピード最適化プロンプト** (「より高速なLLM応答のための5つのプロンプト技術を1文ずつリストしてください」)：3つのモデルすべてで平均120トークンの出力。',
             '3つのモデルすべてがフォーマット制約を同等に尊重しました。スピード最適化版は**7倍短く** 、正確性を保ちました。',
@@ -1691,7 +1691,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           title: 'AI回答为何臃肿',
           content: [
-            '**提示词工程中的"速度"是指通过有意的提示词设计获得简洁、直接的AI回答，而不是硬件延迟。** 大多数AI回答缓慢是由于提示词臃肿，而不是模型缓慢。根据在GPT-5.6、Claude Opus 4.8和Gemini 3.1 Pro上测试数百个提示词的经验，最快的回答来自最严格的约束。',
+            '**提示词工程中的"速度"是指通过有意的提示词设计获得简洁、直接的AI回答，而不是硬件延迟。** 大多数AI回答缓慢是由于提示词臃肿，而不是模型缓慢。根据在GPT-5.6、Claude Opus 5和Gemini 3.1 Pro上测试数百个提示词的经验，最快的回答来自最严格的约束。',
             'AI回答缓慢有两种类型：令牌生成延迟（在模型服务器端—不是你的问题）和回答臃肿（在你的提示词设计中—完全是你的问题）。',
             '当模型必须权衡时会出现臃肿。没有明确的约束，它会覆盖所有角度、添加注意事项、重复指示、解释你已经知道的基础知识。这些都增加了你没有要求的令牌。',
           ],
@@ -1828,7 +1828,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptquorumTest: {
           title: 'PromptQuorum共识测试',
           content: [
-            '我通过向GPT-5.6、Claude Opus 4.8和Gemini 3.1 Pro发送相同的模糊提示词与速度优化的提示词来测试这一原理：',
+            '我通过向GPT-5.6、Claude Opus 5和Gemini 3.1 Pro发送相同的模糊提示词与速度优化的提示词来测试这一原理：',
             '**模糊提示词** ("告诉我关于提示词工程技术")：所有三个模型的平均输出850令牌。',
             '**速度优化提示词** ("列出5个用于更快LLM响应的提示词技术，每个一句话")：所有三个模型的平均输出120令牌。',
             '所有三个模型同样尊重格式约束。速度优化版本**7倍更短**，同时保持准确。',
@@ -1930,7 +1930,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           title: 'AI 답변이 부풀려지는 이유',
           content: [
-            '**Prompt engineering에서 속도란 하드웨어 지연 시간이 아니라 의도적인 prompt 설계를 통해 간결하고 직접적인 AI 답변을 얻는 것을 의미합니다.** GPT-5.6, Claude Opus 4.8, Gemini 3.1 Pro에서 수백 개의 prompt를 테스트한 결과, 결론은 일관됩니다: 가장 빠른 답변은 "더 빠른" 모델이 아니라 가장 엄격한 제약에서 나옵니다.',
+            '**Prompt engineering에서 속도란 하드웨어 지연 시간이 아니라 의도적인 prompt 설계를 통해 간결하고 직접적인 AI 답변을 얻는 것을 의미합니다.** GPT-5.6, Claude Opus 5, Gemini 3.1 Pro에서 수백 개의 prompt를 테스트한 결과, 결론은 일관됩니다: 가장 빠른 답변은 "더 빠른" 모델이 아니라 가장 엄격한 제약에서 나옵니다.',
             'AI 답변에는 두 가지 유형의 지연이 있습니다: 토큰 생성 지연 시간(모델의 서버에서 발생하며, 사용자의 문제가 아님)과 답변 부풀리기(prompt 설계에서 발생하며, 전적으로 사용자의 문제).',
             '부풀리기는 모델이 위험을 회피해야 할 때 발생합니다. 명확한 제약이 없으면 모델은 모든 측면을 다루고, 유보 조건을 추가하고, 지시를 반복하고, 이미 알고 있는 기본 사항을 설명합니다. 이러한 요소 각각이 요청하지 않은 토큰을 추가합니다.',
           ],
@@ -2067,7 +2067,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptquorumTest: {
           title: 'PromptQuorum 합의 테스트',
           content: [
-            'GPT-5.6, Claude Opus 4.8, Gemini 3.1 Pro에서 동일한 모호한 prompt와 속도에 최적화된 prompt를 각각 보내 이 속도 원칙을 테스트했습니다:',
+            'GPT-5.6, Claude Opus 5, Gemini 3.1 Pro에서 동일한 모호한 prompt와 속도에 최적화된 prompt를 각각 보내 이 속도 원칙을 테스트했습니다:',
             '**모호한 prompt** ("prompt engineering 기법에 대해 알려주세요"): 세 모델 평균 850 토큰 출력.',
             '**속도에 최적화된 prompt** ("더 빠른 LLM 응답을 위한 prompt 기법 5가지를 각각 한 문장으로 나열하십시오"): 세 모델 평균 120 토큰 출력.',
             '세 모델 모두 형식 제약을 동등하게 준수했습니다. 속도에 최적화된 버전은 정확성을 유지하면서 **7배 더 짧았습니다**.',

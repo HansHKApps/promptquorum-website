@@ -36,8 +36,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
       mentions: [
         { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-        { '@type': 'SoftwareApplication', name: 'GPT-5.5', url: 'https://openai.com' },
-        { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8', url: 'https://www.anthropic.com' },
+        { '@type': 'SoftwareApplication', name: 'GPT-5.6', url: 'https://openai.com' },
+        { '@type': 'SoftwareApplication', name: 'Claude Opus 5', url: 'https://www.anthropic.com' },
         { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro', url: 'https://deepmind.google' },
       ],
     },
@@ -45,7 +45,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       whatIsSPECS: {
         title: 'What the SPECS Framework Is',
         content: [
-          '**The SPECS Framework is a specification-first prompt pattern that treats every prompt like a mini requirements document instead of a casual chat message.** It is designed for tasks where accuracy, structure, and repeatability matter more than open-ended creativity. SPECS works well with models such as GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro, and local models, because it removes ambiguity from your instructions.',
+          '**The SPECS Framework is a specification-first prompt pattern that treats every prompt like a mini requirements document instead of a casual chat message.** It is designed for tasks where accuracy, structure, and repeatability matter more than open-ended creativity. SPECS works well with models such as GPT-5.6, Claude Opus 5, Gemini 3.1 Pro, and local models, because it removes ambiguity from your instructions.',
           'SPECS is especially useful when different people or systems must run the same prompt and get consistent results. By turning the prompt into a clear specification, you make it easier to debug issues, compare model behavior, and enforce standards across your workflows.',
         ],
       },
@@ -172,8 +172,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
       mentions: [
         { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-        { '@type': 'SoftwareApplication', name: 'GPT-5.5', url: 'https://openai.com' },
-        { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8', url: 'https://www.anthropic.com' },
+        { '@type': 'SoftwareApplication', name: 'GPT-5.6', url: 'https://openai.com' },
+        { '@type': 'SoftwareApplication', name: 'Claude Opus 5', url: 'https://www.anthropic.com' },
         { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro', url: 'https://deepmind.google' },
       ],
     },
@@ -181,7 +181,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       whatIsSPECS: {
         title: 'Was das SPECS-Framework ist',
         content: [
-          '**Das SPECS-Framework ist ein spezifikationsorientiertes Prompt-Muster, das jeden Prompt wie ein kleines Anforderungsdokument behandelt statt wie eine beiläufige Chat-Nachricht.** Es ist für Aufgaben gedacht, bei denen Genauigkeit, Struktur und Wiederholbarkeit wichtiger sind als offene Kreativität. SPECS funktioniert gut mit Modellen wie GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro und lokalen Modellen, weil es Mehrdeutigkeit aus Ihren Anweisungen entfernt.',
+          '**Das SPECS-Framework ist ein spezifikationsorientiertes Prompt-Muster, das jeden Prompt wie ein kleines Anforderungsdokument behandelt statt wie eine beiläufige Chat-Nachricht.** Es ist für Aufgaben gedacht, bei denen Genauigkeit, Struktur und Wiederholbarkeit wichtiger sind als offene Kreativität. SPECS funktioniert gut mit Modellen wie GPT-5.6, Claude Opus 5, Gemini 3.1 Pro und lokalen Modellen, weil es Mehrdeutigkeit aus Ihren Anweisungen entfernt.',
           'SPECS ist besonders nützlich, wenn verschiedene Personen oder Systeme denselben Prompt ausführen und konsistente Ergebnisse erhalten müssen. Indem Sie den Prompt in eine klare Spezifikation verwandeln, erleichtern Sie das Debuggen von Problemen, den Vergleich des Modellverhaltens und die Durchsetzung von Standards in Ihren Workflows.',
         ],
       },
@@ -308,8 +308,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
       mentions: [
         { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-        { '@type': 'SoftwareApplication', name: 'GPT-5.5', url: 'https://openai.com' },
-        { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8', url: 'https://www.anthropic.com' },
+        { '@type': 'SoftwareApplication', name: 'GPT-5.6', url: 'https://openai.com' },
+        { '@type': 'SoftwareApplication', name: 'Claude Opus 5', url: 'https://www.anthropic.com' },
         { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro', url: 'https://deepmind.google' },
       ],
     },
@@ -317,7 +317,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       whatIsSPECS: {
         title: 'Qué es el Framework SPECS',
         content: [
-          '**El Framework SPECS es un patrón de prompts orientado a la especificación que trata cada prompt como un mini documento de requisitos en lugar de un mensaje de chat informal.** Está diseñado para tareas donde la precisión, la estructura y la repetibilidad importan más que la creatividad abierta. SPECS funciona bien con modelos como GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro y modelos locales, porque elimina la ambigüedad de tus instrucciones.',
+          '**El Framework SPECS es un patrón de prompts orientado a la especificación que trata cada prompt como un mini documento de requisitos en lugar de un mensaje de chat informal.** Está diseñado para tareas donde la precisión, la estructura y la repetibilidad importan más que la creatividad abierta. SPECS funciona bien con modelos como GPT-5.6, Claude Opus 5, Gemini 3.1 Pro y modelos locales, porque elimina la ambigüedad de tus instrucciones.',
           'SPECS es especialmente útil cuando distintas personas o sistemas deben ejecutar el mismo prompt y obtener resultados consistentes. Al convertir el prompt en una especificación clara, facilitas la depuración de problemas, la comparación del comportamiento de los modelos y el cumplimiento de estándares en tus flujos de trabajo.',
         ],
       },
@@ -444,8 +444,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
       mentions: [
         { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-        { '@type': 'SoftwareApplication', name: 'GPT-5.5', url: 'https://openai.com' },
-        { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8', url: 'https://www.anthropic.com' },
+        { '@type': 'SoftwareApplication', name: 'GPT-5.6', url: 'https://openai.com' },
+        { '@type': 'SoftwareApplication', name: 'Claude Opus 5', url: 'https://www.anthropic.com' },
         { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro', url: 'https://deepmind.google' },
       ],
     },
@@ -453,7 +453,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       whatIsSPECS: {
         title: '什么是 SPECS 框架',
         content: [
-          '**SPECS 框架是一种面向规范的提示词模式，它将每个提示词视为一份微型需求文档，而不是随意的聊天消息。** 它专为那些精确性、结构性和可重复性比开放式创意更重要的任务而设计。SPECS 对 GPT-5.5、Claude Opus 4.8、Gemini 3.1 Pro 及本地模型都很有效，因为它消除了指令中的歧义。',
+          '**SPECS 框架是一种面向规范的提示词模式，它将每个提示词视为一份微型需求文档，而不是随意的聊天消息。** 它专为那些精确性、结构性和可重复性比开放式创意更重要的任务而设计。SPECS 对 GPT-5.6、Claude Opus 5、Gemini 3.1 Pro 及本地模型都很有效，因为它消除了指令中的歧义。',
           '当不同的人或系统必须执行同一个提示词并获得一致的结果时，SPECS 尤其有用。通过将提示词转化为清晰的规范，你可以更轻松地排查问题、比较模型行为，并在工作流中保持标准一致。',
         ],
       },
@@ -581,8 +581,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
       mentions: [
         { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-        { '@type': 'SoftwareApplication', name: 'GPT-5.5', url: 'https://openai.com' },
-        { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8', url: 'https://www.anthropic.com' },
+        { '@type': 'SoftwareApplication', name: 'GPT-5.6', url: 'https://openai.com' },
+        { '@type': 'SoftwareApplication', name: 'Claude Opus 5', url: 'https://www.anthropic.com' },
         { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro', url: 'https://deepmind.google' },
       ],
     },
@@ -590,7 +590,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       whatIsSPECS: {
         title: 'O que é o Framework SPECS',
         content: [
-          '**O Framework SPECS é um padrão de prompts orientado à especificação que trata cada prompt como um mini documento de requisitos, e não como uma mensagem casual de chat.** É projetado para tarefas em que precisão, estrutura e repetibilidade importam mais do que criatividade aberta. O SPECS funciona bem com modelos como GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro e modelos locais, pois elimina a ambiguidade das suas instruções.',
+          '**O Framework SPECS é um padrão de prompts orientado à especificação que trata cada prompt como um mini documento de requisitos, e não como uma mensagem casual de chat.** É projetado para tarefas em que precisão, estrutura e repetibilidade importam mais do que criatividade aberta. O SPECS funciona bem com modelos como GPT-5.6, Claude Opus 5, Gemini 3.1 Pro e modelos locais, pois elimina a ambiguidade das suas instruções.',
           'O SPECS é especialmente útil quando diferentes pessoas ou sistemas precisam executar o mesmo prompt e obter resultados consistentes. Ao transformar o prompt em uma especificação clara, você facilita a depuração de problemas, a comparação do comportamento dos modelos e a aplicação de padrões nos seus fluxos de trabalho.',
         ],
       },
@@ -825,7 +825,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       whatIsSPECS: {
         title: 'SPECS 프레임워크란 무엇인가',
         content: [
-          '**SPECS 프레임워크는 모든 프롬프트를 일상적인 채팅 메시지가 아닌 소형 요구사항 문서처럼 취급하는 명세 우선 프롬프트 패턴입니다.** 개방형 창의성보다 정확성, 구조, 반복성이 더 중요한 작업을 위해 설계되었습니다. SPECS는 GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro, 그리고 로컬 모델과 같은 모델과 잘 작동하는데, 지시사항에서 모호성을 제거하기 때문입니다.',
+          '**SPECS 프레임워크는 모든 프롬프트를 일상적인 채팅 메시지가 아닌 소형 요구사항 문서처럼 취급하는 명세 우선 프롬프트 패턴입니다.** 개방형 창의성보다 정확성, 구조, 반복성이 더 중요한 작업을 위해 설계되었습니다. SPECS는 GPT-5.6, Claude Opus 5, Gemini 3.1 Pro, 그리고 로컬 모델과 같은 모델과 잘 작동하는데, 지시사항에서 모호성을 제거하기 때문입니다.',
           'SPECS는 서로 다른 사람이나 시스템이 동일한 프롬프트를 실행하여 일관된 결과를 얻어야 할 때 특히 유용합니다. 프롬프트를 명확한 명세로 전환함으로써 문제를 디버깅하고, 모델 동작을 비교하며, 워크플로 전반에 걸쳐 표준을 적용하기가 더 쉬워집니다.',
         ],
       },
@@ -952,8 +952,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
       mentions: [
         { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-        { '@type': 'SoftwareApplication', name: 'GPT-5.5', url: 'https://openai.com' },
-        { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8', url: 'https://www.anthropic.com' },
+        { '@type': 'SoftwareApplication', name: 'GPT-5.6', url: 'https://openai.com' },
+        { '@type': 'SoftwareApplication', name: 'Claude Opus 5', url: 'https://www.anthropic.com' },
         { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro', url: 'https://deepmind.google' },
       ],
     },
@@ -961,7 +961,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       whatIsSPECS: {
         title: 'Ce qu\'est le Framework SPECS',
         content: [
-          '**Le Framework SPECS est un modèle de prompt axé sur la spécification, qui traite chaque prompt comme un mini cahier des charges plutôt que comme un message de chat informel.** Il est conçu pour les tâches où la précision, la structure et la reproductibilité comptent davantage que la créativité libre. SPECS fonctionne bien avec des modèles comme GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro et les modèles locaux, car il élimine l\'ambiguïté de vos instructions.',
+          '**Le Framework SPECS est un modèle de prompt axé sur la spécification, qui traite chaque prompt comme un mini cahier des charges plutôt que comme un message de chat informel.** Il est conçu pour les tâches où la précision, la structure et la reproductibilité comptent davantage que la créativité libre. SPECS fonctionne bien avec des modèles comme GPT-5.6, Claude Opus 5, Gemini 3.1 Pro et les modèles locaux, car il élimine l\'ambiguïté de vos instructions.',
           'SPECS est particulièrement utile lorsque différentes personnes ou différents systèmes doivent exécuter le même prompt et obtenir des résultats cohérents. En transformant le prompt en une spécification claire, vous facilitez le débogage, la comparaison du comportement des modèles et l\'application de standards dans vos workflows.',
         ],
       },
@@ -1090,8 +1090,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       ],
       mentions: [
         { '@type': 'SoftwareApplication', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
-        { '@type': 'SoftwareApplication', name: 'GPT-5.5', url: 'https://openai.com' },
-        { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8', url: 'https://www.anthropic.com' },
+        { '@type': 'SoftwareApplication', name: 'GPT-5.6', url: 'https://openai.com' },
+        { '@type': 'SoftwareApplication', name: 'Claude Opus 5', url: 'https://www.anthropic.com' },
         { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro', url: 'https://deepmind.google' },
       ],
     },
@@ -1099,7 +1099,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       whatIsSPECS: {
         title: 'SPECS フレームワークとは',
         content: [
-          '**SPECS フレームワークは、すべてのプロンプトを気軽なチャットメッセージではなく小さな要件定義書のように扱う、仕様重視のプロンプトパターンです。** 正確性・構造・再現性が自由な創造性よりも重要なタスク向けに設計されています。SPECS は指示から曖昧さを取り除くため、GPT-5.5、Claude Opus 4.8、Gemini 3.1 Pro、そしてローカルモデルなどのモデルと相性が良いです。',
+          '**SPECS フレームワークは、すべてのプロンプトを気軽なチャットメッセージではなく小さな要件定義書のように扱う、仕様重視のプロンプトパターンです。** 正確性・構造・再現性が自由な創造性よりも重要なタスク向けに設計されています。SPECS は指示から曖昧さを取り除くため、GPT-5.6、Claude Opus 5、Gemini 3.1 Pro、そしてローカルモデルなどのモデルと相性が良いです。',
           'SPECS は、異なる担当者やシステムが同じプロンプトを実行して一貫した結果を得る必要がある場合に特に役立ちます。プロンプトを明確な仕様に変えることで、問題のデバッグ、モデル挙動の比較、ワークフロー全体での基準の徹底が容易になります。',
         ],
       },

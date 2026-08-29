@@ -190,10 +190,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       anthropicConsole: {
         id: 'anthropic-console',
         title: 'Claude Console: System Prompt & Model Testing',
-        content: '**Anthropic Console (console.anthropic.com) is optimized for testing Claude models and system prompts.** You can craft complex system prompts, test against multiple Claude versions (Claude Sonnet 5, Claude Opus 4.8), and compare outputs side-by-side. Vision support for image inputs.',
+        content: '**Anthropic Console (console.anthropic.com) is optimized for testing Claude models and system prompts.** You can craft complex system prompts, test against multiple Claude versions (Claude Sonnet 5, Claude Opus 5), and compare outputs side-by-side. Vision support for image inputs.',
         numberedItems: [
           'Best for Claude-specific development and system prompt refinement',
-          'Supports Claude Sonnet 5, Claude Opus 4.8, Claude Haiku 4.5 (current versions)',
+          'Supports Claude Sonnet 5, Claude Opus 5, Claude Haiku 4.5 (current versions)',
           'Vision support: test prompts against images and PDFs',
           'Metered billing like OpenAI Playground',
         ],
@@ -482,7 +482,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         numberedItems: [
           'Bestens geeignet für API-Tests und Token-Zählung vor der Code-Implementierung',
           'Verbrauchsabhängige Abrechnung: Sie zahlen für jeden im Rahmen der Erkundung genutzten Token',
-          'Modellauswahl: GPT-5.6, GPT-5.6 mini, individuelle Fine-Tunes',
+          'Modellauswahl: GPT-5.6, GPT-5.6 Luna, individuelle Fine-Tunes',
           'Export nach curl/Python/JS mit einem Klick',
         ],
         callouts: [
@@ -492,10 +492,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       anthropicConsole: {
         id: 'anthropic-console',
         title: 'Claude Console: Systemprompt- und Modell-Tests',
-        content: '**Die Anthropic Console (console.anthropic.com) ist für das Testen von Claude-Modellen und Systemprompts optimiert.** Sie können komplexe Systemprompts erstellen, diese gegen mehrere Claude-Versionen (Claude Sonnet 5, Claude Opus 4.8) testen und Ausgaben direkt vergleichen. Vision-Unterstützung für Bildeingaben.',
+        content: '**Die Anthropic Console (console.anthropic.com) ist für das Testen von Claude-Modellen und Systemprompts optimiert.** Sie können komplexe Systemprompts erstellen, diese gegen mehrere Claude-Versionen (Claude Sonnet 5, Claude Opus 5) testen und Ausgaben direkt vergleichen. Vision-Unterstützung für Bildeingaben.',
         numberedItems: [
           'Bestens geeignet für Claude-spezifische Entwicklung und Systemprompt-Optimierung',
-          'Unterstützt Claude Sonnet 5, Claude Opus 4.8, Claude Haiku 4.5 (aktuelle Versionen)',
+          'Unterstützt Claude Sonnet 5, Claude Opus 5, Claude Haiku 4.5 (aktuelle Versionen)',
           'Vision-Unterstützung: Prompts gegen Bilder und PDFs testen',
           'Verbrauchsabhängige Abrechnung wie bei OpenAI Playground',
         ],
@@ -786,7 +786,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         numberedItems: [
           'Ideal para testing de API y conteo de tokens antes de escribir código',
           'Facturación metered: pagas por cada token utilizado durante la exploración',
-          'Selección de modelo: GPT-5.6, GPT-5.6 mini, fine-tunes personalizados',
+          'Selección de modelo: GPT-5.6, GPT-5.6 Luna, fine-tunes personalizados',
           'Exportar a curl/Python/JS con un clic',
         ],
         callouts: [
@@ -796,10 +796,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       anthropicConsole: {
         id: 'anthropic-console',
         title: 'Claude Console: testing de system prompts y modelos',
-        content: '**La Anthropic Console (console.anthropic.com) está optimizada para testear modelos Claude y system prompts.** Puedes crear system prompts complejos, testearlos contra múltiples versiones de Claude (Claude Sonnet 5, Claude Opus 4.8) y comparar outputs lado a lado. Soporte de visión para entradas de imagen.',
+        content: '**La Anthropic Console (console.anthropic.com) está optimizada para testear modelos Claude y system prompts.** Puedes crear system prompts complejos, testearlos contra múltiples versiones de Claude (Claude Sonnet 5, Claude Opus 5) y comparar outputs lado a lado. Soporte de visión para entradas de imagen.',
         numberedItems: [
           'Ideal para desarrollo específico de Claude y refinamiento de system prompts',
-          'Soporta Claude Sonnet 5, Claude Opus 4.8, Claude Haiku 4.5 (versiones actuales)',
+          'Soporta Claude Sonnet 5, Claude Opus 5, Claude Haiku 4.5 (versiones actuales)',
           'Soporte de visión: testea prompts contra imágenes y PDFs',
           'Facturación metered como OpenAI Playground',
         ],
@@ -1086,7 +1086,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         numberedItems: [
           'Ideal para testes de API e contagem de tokens antes de escrever código',
           'Faturamento medido: você paga por cada token usado durante a exploração',
-          'Seleção de modelo: GPT-5.6, GPT-5.6 mini, fine-tunes personalizados',
+          'Seleção de modelo: GPT-5.6, GPT-5.6 Luna, fine-tunes personalizados',
           'Exportar para curl/Python/JS com um clique',
         ],
         callouts: [
@@ -1096,10 +1096,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       anthropicConsole: {
         id: 'anthropic-console',
         title: 'Claude Console: testes de system prompts e modelos',
-        content: '**A Anthropic Console (console.anthropic.com) é otimizada para testar modelos Claude e system prompts.** Você pode criar system prompts complexos, testá-los contra múltiplas versões do Claude (Claude Sonnet 5, Claude Opus 4.8) e comparar saídas lado a lado. Suporte de visão para entradas de imagem.',
+        content: '**A Anthropic Console (console.anthropic.com) é otimizada para testar modelos Claude e system prompts.** Você pode criar system prompts complexos, testá-los contra múltiplas versões do Claude (Claude Sonnet 5, Claude Opus 5) e comparar saídas lado a lado. Suporte de visão para entradas de imagem.',
         numberedItems: [
           'Ideal para desenvolvimento específico de Claude e refinamento de system prompts',
-          'Suporta Claude Sonnet 5, Claude Opus 4.8, Claude Haiku 4.5 (versões atuais)',
+          'Suporta Claude Sonnet 5, Claude Opus 5, Claude Haiku 4.5 (versões atuais)',
           'Suporte de visão: teste prompts contra imagens e PDFs',
           'Faturamento medido como OpenAI Playground',
         ],
@@ -1389,7 +1389,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         numberedItems: [
           'Idéal pour les tests d\'API et le comptage de tokens avant de coder',
           'Facturation à la consommation : vous payez chaque token utilisé pendant l\'exploration',
-          'Sélection de modèles : GPT-5.6, GPT-5.6 mini, fine-tunes personnalisés',
+          'Sélection de modèles : GPT-5.6, GPT-5.6 Luna, fine-tunes personnalisés',
           'Export vers curl/Python/JS en un clic',
         ],
         callouts: [
@@ -1399,10 +1399,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       anthropicConsole: {
         id: 'anthropic-console',
         title: 'Claude Console : tests de system prompt et de modèle',
-        content: '**Anthropic Console (console.anthropic.com) est optimisé pour tester les modèles Claude et les system prompts.** Vous pouvez concevoir des system prompts complexes, les tester sur plusieurs versions de Claude (Claude Sonnet 5, Claude Opus 4.8) et comparer les sorties côte à côte. Support vision pour les entrées image.',
+        content: '**Anthropic Console (console.anthropic.com) est optimisé pour tester les modèles Claude et les system prompts.** Vous pouvez concevoir des system prompts complexes, les tester sur plusieurs versions de Claude (Claude Sonnet 5, Claude Opus 5) et comparer les sorties côte à côte. Support vision pour les entrées image.',
         numberedItems: [
           'Idéal pour le développement spécifique à Claude et l\'optimisation des system prompts',
-          'Supporte Claude Sonnet 5, Claude Opus 4.8, Claude Haiku 4.5 (versions actuelles)',
+          'Supporte Claude Sonnet 5, Claude Opus 5, Claude Haiku 4.5 (versions actuelles)',
           'Support vision : testez des prompts avec des images et des PDF',
           'Facturation à la consommation comme OpenAI Playground',
         ],
@@ -1691,7 +1691,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         numberedItems: [
           'コードを書く前のAPIテストとトークンカウントに最適',
           '従量課金：探索中に使用するすべてのトークンが課金されます',
-          'モデル選択：GPT-5.6、GPT-5.6、GPT-5.6 mini、カスタムファインチューン',
+          'モデル選択：GPT-5.6、GPT-5.6、GPT-5.6 Luna、カスタムファインチューン',
           'curl/Python/JSへワンクリックでエクスポート',
         ],
         callouts: [
@@ -1701,10 +1701,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       anthropicConsole: {
         id: 'anthropic-console',
         title: 'Claude Console：システムプロンプト＆モデルテスト',
-        content: '**Anthropic Console（console.anthropic.com）はClaudeモデルとシステムプロンプトのテストに最適化されています。** 複雑なシステムプロンプトを作成し、複数のClaudeバージョン（Claude Sonnet 5、Claude Opus 4.8）に対してテストし、出力を並べて比較できます。画像入力のビジョンサポートあり。',
+        content: '**Anthropic Console（console.anthropic.com）はClaudeモデルとシステムプロンプトのテストに最適化されています。** 複雑なシステムプロンプトを作成し、複数のClaudeバージョン（Claude Sonnet 5、Claude Opus 5）に対してテストし、出力を並べて比較できます。画像入力のビジョンサポートあり。',
         numberedItems: [
           'Claude固有の開発とシステムプロンプトの最適化に最適',
-          'Claude Sonnet 5、Claude Opus 4.8、Claude Haiku 4.5（最新バージョン）をサポート',
+          'Claude Sonnet 5、Claude Opus 5、Claude Haiku 4.5（最新バージョン）をサポート',
           'ビジョンサポート：画像やPDFに対してプロンプトをテスト可能',
           'OpenAI Playgroundと同様に従量課金',
         ],
@@ -1993,7 +1993,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         numberedItems: [
           '最适合写代码前的API测试和Token计数',
           '按量计费：探索阶段使用的每个Token都会计费',
-          '模型选择：GPT-5.6、GPT-5.6、GPT-5.6 mini、自定义微调模型',
+          '模型选择：GPT-5.6、GPT-5.6、GPT-5.6 Luna、自定义微调模型',
           '一键导出curl/Python/JS',
         ],
         callouts: [
@@ -2003,10 +2003,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       anthropicConsole: {
         id: 'anthropic-console',
         title: 'Claude Console：系统提示词与模型测试',
-        content: '**Anthropic Console（console.anthropic.com）专为测试Claude模型和系统提示词而优化。** 可设计复杂系统提示词，在多个Claude版本（Claude Sonnet 5、Claude Opus 4.8）上测试，并排对比输出结果。支持图像输入的视觉功能。',
+        content: '**Anthropic Console（console.anthropic.com）专为测试Claude模型和系统提示词而优化。** 可设计复杂系统提示词，在多个Claude版本（Claude Sonnet 5、Claude Opus 5）上测试，并排对比输出结果。支持图像输入的视觉功能。',
         numberedItems: [
           '最适合Claude专项开发和系统提示词优化',
-          '支持Claude Sonnet 5、Claude Opus 4.8、Claude Haiku 4.5（当前版本）',
+          '支持Claude Sonnet 5、Claude Opus 5、Claude Haiku 4.5（当前版本）',
           '视觉支持：可针对图像和PDF测试Prompt',
           '与OpenAI Playground类似的按量计费模式',
         ],
@@ -2256,7 +2256,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       openAIPlayground: {
         id: 'openai-playground',
         title: 'OpenAI Playground: اختبار GPT الأسرع',
-        content: '**OpenAI Playground هي بيئة ويب لاختبار نماذج GPT بضبط البارامترات مباشرة — الأسرع للتجربة التجريبية مع GPT-5.6 وGPT-5.6 mini.** لا حاجة لأي إعداد، تعمل في ثوانٍ.',
+        content: '**OpenAI Playground هي بيئة ويب لاختبار نماذج GPT بضبط البارامترات مباشرة — الأسرع للتجربة التجريبية مع GPT-5.6 وGPT-5.6 Luna.** لا حاجة لأي إعداد، تعمل في ثوانٍ.',
         items: [
           '**السعر:** الوصول مجاني؛ كل مكالمة API تُحاسَب بنفس أسعار API الإنتاج',
           '**نقطة القوة:** ضبط temperature وtop_p وmax_tokens في الوقت الفعلي ورؤية التأثير فورًا',
@@ -2268,7 +2268,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       anthropicConsole: {
         id: 'anthropic-console',
         title: 'Claude Console من Anthropic: اختبار Claude',
-        content: '**Claude Console من Anthropic هي بيئة اختبار Claude الرسمية — مثالية لاستكشاف قدرات Claude Opus 4.8 مع دعم سياق يصل إلى 1M token.** الأنسب لمن يريد اختبار برومبتات طويلة أو مستندات كبيرة.',
+        content: '**Claude Console من Anthropic هي بيئة اختبار Claude الرسمية — مثالية لاستكشاف قدرات Claude Opus 5 مع دعم سياق يصل إلى 1M token.** الأنسب لمن يريد اختبار برومبتات طويلة أو مستندات كبيرة.',
         items: [
           '**السعر:** الوصول مجاني؛ كل مكالمة تُحاسَب بأسعار API الإنتاج',
           '**نقطة القوة:** سياق 1M token — يمكن تحميل وثائق كاملة أو قواعد بيانات ضخمة',
@@ -2555,7 +2555,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         numberedItems: [
           '코드 작성 전 API 테스트 및 토큰 카운팅에 이상적',
           '종량 과금: 탐색 중 사용된 각 토큰에 대해 요금 지불',
-          '모델 선택: GPT-5.6, GPT-5.6 mini, 커스텀 파인튜닝',
+          '모델 선택: GPT-5.6, GPT-5.6 Luna, 커스텀 파인튜닝',
           '클릭 한 번으로 curl/Python/JS로 내보내기',
         ],
         callouts: [
@@ -2565,10 +2565,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
       anthropicConsole: {
         id: 'anthropic-console',
         title: 'Claude Console: system 프롬프트 및 모델 테스트',
-        content: '**Anthropic Console(console.anthropic.com)은 Claude 모델과 system 프롬프트 테스트에 최적화되어 있습니다.** 복잡한 system 프롬프트를 작성하고, 여러 Claude 버전(Claude Sonnet 5, Claude Opus 4.8)에 대해 테스트하고, 출력을 나란히 비교할 수 있습니다. 이미지 입력을 위한 비전 지원.',
+        content: '**Anthropic Console(console.anthropic.com)은 Claude 모델과 system 프롬프트 테스트에 최적화되어 있습니다.** 복잡한 system 프롬프트를 작성하고, 여러 Claude 버전(Claude Sonnet 5, Claude Opus 5)에 대해 테스트하고, 출력을 나란히 비교할 수 있습니다. 이미지 입력을 위한 비전 지원.',
         numberedItems: [
           'Claude 특화 개발 및 system 프롬프트 정제에 이상적',
-          'Claude Sonnet 5, Claude Opus 4.8, Claude Haiku 4.5 지원(현재 버전)',
+          'Claude Sonnet 5, Claude Opus 5, Claude Haiku 4.5 지원(현재 버전)',
           '비전 지원: 이미지 및 PDF에 대한 프롬프트 테스트',
           'OpenAI Playground와 동일한 종량 과금',
         ],

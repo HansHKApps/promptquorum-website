@@ -221,7 +221,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'Observability tools measure what you already chose to run in production — they don’t help you pick the model. PromptQuorum answers "which model handles this prompt best?" before you commit engineering time to instrumenting production tracing for it.',
         ],
         items: [
-          '25+ models including GPT-5.6, Claude Opus 4.8, Gemini 3.1 Pro, and local models via Ollama and LM Studio',
+          '25+ models including GPT-5.6, Claude Opus 5, Gemini 3.1 Pro, and local models via Ollama and LM Studio',
           '9 built-in prompt frameworks — TRACE, CO-STAR, CRAFT, and more',
           'Side-by-side response comparison with consensus scoring',
           'Token count per model — see cost differences before committing to production tracing for one provider',
@@ -748,7 +748,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'Observability-Tools messen, was Sie bereits gewählt haben, in Produktion laufen zu lassen — sie helfen nicht bei der Modellwahl. PromptQuorum beantwortet „Welches Modell handhabt diesen Prompt am besten?", bevor Sie Entwicklungszeit in die Instrumentierung von Production-Tracing dafür investieren.',
         ],
         items: [
-          '25+ Modelle inklusive GPT-5.6, Claude Opus 4.8, Gemini 3.1 Pro und lokale Modelle über Ollama und LM Studio',
+          '25+ Modelle inklusive GPT-5.6, Claude Opus 5, Gemini 3.1 Pro und lokale Modelle über Ollama und LM Studio',
           '9 eingebaute Prompt-Frameworks — TRACE, CO-STAR, CRAFT und mehr',
           'Side-by-Side-Antwortvergleich mit Konsens-Scoring',
           'Token-Anzahl pro Modell — Kostenunterschiede sehen, bevor Sie sich auf Production-Tracing für einen Anbieter festlegen',
@@ -1275,7 +1275,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'Les outils d’observabilité mesurent ce que vous avez déjà choisi de faire tourner en production — ils ne vous aident pas à choisir le modèle. PromptQuorum répond à « quel modèle gère le mieux ce prompt ? » avant que vous n’investissiez du temps d’ingénierie à instrumenter le tracing en production pour lui.',
         ],
         items: [
-          '25+ modèles dont GPT-5.6, Claude Opus 4.8, Gemini 3.1 Pro, et des modèles locaux via Ollama et LM Studio',
+          '25+ modèles dont GPT-5.6, Claude Opus 5, Gemini 3.1 Pro, et des modèles locaux via Ollama et LM Studio',
           '9 frameworks de prompts intégrés — TRACE, CO-STAR, CRAFT, et plus',
           'Comparaison des réponses côte à côte avec scoring de consensus',
           'Nombre de tokens par modèle — voir les différences de coût avant de vous engager sur le tracing en production pour un fournisseur',
@@ -1802,7 +1802,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'オブザーバビリティツールは、すでに本番で動かすと決めたものを測定するだけで、モデル選びは助けてくれません。PromptQuorumは、そのために本番トレーシングの計装にエンジニアリング時間を投じる前に「このプロンプトを最も上手く扱うモデルはどれか?」に答えます。',
         ],
         items: [
-          'GPT-5.6、Claude Opus 4.8、Gemini 3.1 Proを含む25以上のモデル、OllamaやLM Studio経由のローカルモデルにも対応',
+          'GPT-5.6、Claude Opus 5、Gemini 3.1 Proを含む25以上のモデル、OllamaやLM Studio経由のローカルモデルにも対応',
           '9つの組み込みプロンプトフレームワーク — TRACE、CO-STAR、CRAFTなど',
           'コンセンサススコアリング付きの並列レスポンス比較',
           'モデルごとのトークン数 — 1つのプロバイダーへの本番トレーシングに投資する前にコスト差を確認',
@@ -2329,7 +2329,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '可观测性工具衡量的是你已经决定在生产环境运行的东西 —— 它们不会帮你选模型。PromptQuorum在你投入工程时间为某个模型接入生产追踪之前,先回答"哪个模型最能处理这个prompt?"',
         ],
         items: [
-          '25+模型,包括GPT-5.6、Claude Opus 4.8、Gemini 3.1 Pro,以及通过Ollama和LM Studio运行的本地模型',
+          '25+模型,包括GPT-5.6、Claude Opus 5、Gemini 3.1 Pro,以及通过Ollama和LM Studio运行的本地模型',
           '9种内置prompt框架 —— TRACE、CO-STAR、CRAFT等',
           '并排响应对比,配合共识评分',
           '每个模型的token数 —— 在为某个供应商投入生产追踪成本之前先看清成本差异',
@@ -2856,7 +2856,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'Las herramientas de observabilidad miden lo que ya decidiste correr en producción — no te ayudan a elegir el modelo. PromptQuorum responde "¿qué modelo maneja mejor este prompt?" antes de que inviertas tiempo de ingeniería en instrumentar trazabilidad en producción para él.',
         ],
         items: [
-          '25+ modelos incluyendo GPT-5.6, Claude Opus 4.8, Gemini 3.1 Pro, y modelos locales vía Ollama y LM Studio',
+          '25+ modelos incluyendo GPT-5.6, Claude Opus 5, Gemini 3.1 Pro, y modelos locales vía Ollama y LM Studio',
           '9 frameworks de prompts incorporados — TRACE, CO-STAR, CRAFT, y más',
           'Comparación de respuestas lado a lado con puntuación de consenso',
           'Conteo de tokens por modelo — ve las diferencias de costo antes de comprometerte con trazabilidad en producción para un proveedor',
@@ -3383,7 +3383,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'Ferramentas de observabilidade medem o que você já decidiu rodar em produção — elas não ajudam a escolher o modelo. O PromptQuorum responde "qual modelo lida melhor com esse prompt?" antes de você investir tempo de engenharia instrumentando rastreamento em produção para ele.',
         ],
         items: [
-          '25+ modelos incluindo GPT-5.6, Claude Opus 4.8, Gemini 3.1 Pro, e modelos locais via Ollama e LM Studio',
+          '25+ modelos incluindo GPT-5.6, Claude Opus 5, Gemini 3.1 Pro, e modelos locais via Ollama e LM Studio',
           '9 frameworks de prompt integrados — TRACE, CO-STAR, CRAFT, e mais',
           'Comparação de respostas lado a lado com pontuação de consenso',
           'Contagem de tokens por modelo — veja as diferenças de custo antes de se comprometer com rastreamento em produção para um provedor',
@@ -3910,7 +3910,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'تقيس أدوات المراقبة ما قررت بالفعل تشغيله في بيئة الإنتاج — ولا تساعدك في اختيار النموذج. يجيب PromptQuorum عن سؤال "أي نموذج يتعامل بشكل أفضل مع هذا الـ prompt؟" قبل أن تستثمر وقت هندسي في تجهيز التتبع في بيئة الإنتاج له.',
         ],
         items: [
-          '25+ نموذجًا بما في ذلك GPT-5.6 وClaude Opus 4.8 وGemini 3.1 Pro، ونماذج محلية عبر Ollama وLM Studio',
+          '25+ نموذجًا بما في ذلك GPT-5.6 وClaude Opus 5 وGemini 3.1 Pro، ونماذج محلية عبر Ollama وLM Studio',
           '9 أطر prompt مدمجة — TRACE وCO-STAR وCRAFT والمزيد',
           'مقارنة ردود جنبًا إلى جنب مع تقييم توافقي',
           'عدد الرموز لكل نموذج — شاهد فروق التكلفة قبل الالتزام بالتتبع في بيئة الإنتاج لمزوّد واحد',
@@ -4437,7 +4437,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '관찰 가능성 도구는 이미 프로덕션에서 실행하기로 결정한 것을 측정할 뿐, 모델 선택에는 도움이 되지 않습니다. PromptQuorum은 프로덕션 추적을 계측하는 데 엔지니어링 시간을 투자하기 전에 "이 prompt를 가장 잘 처리하는 모델은 무엇인가?"라는 질문에 답합니다.',
         ],
         items: [
-          'GPT-5.6, Claude Opus 4.8, Gemini 3.1 Pro를 포함한 25개 이상의 모델, 그리고 Ollama와 LM Studio를 통한 로컬 모델',
+          'GPT-5.6, Claude Opus 5, Gemini 3.1 Pro를 포함한 25개 이상의 모델, 그리고 Ollama와 LM Studio를 통한 로컬 모델',
           '내장된 9개 prompt 프레임워크 — TRACE, CO-STAR, CRAFT 등',
           '합의 채점을 곁들인 나란히 비교되는 응답 비교',
           '모델별 토큰 수 — 한 제공업체에 대한 프로덕션 추적을 결정하기 전에 비용 차이를 확인',

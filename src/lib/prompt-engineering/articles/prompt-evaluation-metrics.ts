@@ -32,7 +32,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         'Semantic similarity above 0.85 typically indicates semantically equivalent content',
         'LLM-as-judge scales to thousands of evaluations per hour',
         'A 5-point drop in pass rate is the standard regression alert threshold',
-        'GPT-5.5 and Claude models can differ 10–20 points on the same prompt test set',
+        'GPT-5.6 and Claude models can differ 10–20 points on the same prompt test set',
       ],
       toc: [
         { label: 'Key Takeaways', anchor: '#key-takeaways' },
@@ -77,7 +77,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Question', name: 'What are prompt evaluation metrics?', acceptedAnswer: { '@type': 'Answer', text: 'Prompt evaluation metrics are quantitative signals that measure whether a prompt produces the intended output reliably. Key metrics include pass rate (binary correct/incorrect), BLEU score (n-gram overlap for translation and summarization), semantic similarity (embedding cosine similarity for paraphrase tasks), and LLM-as-judge (model-scored quality rubric for free text). Choosing the wrong metric for your output type produces misleading scores.' } },
           { '@type': 'Question', name: 'What is pass rate in prompt evaluation?', acceptedAnswer: { '@type': 'Answer', text: 'Pass rate is the percentage of test inputs where the prompt output meets the defined success criteria. Pass rate = passing outputs / total test cases. It is the most actionable metric for structured outputs because it maps directly to production failure rate.' } },
           { '@type': 'Question', name: 'When should you use BLEU score for prompts?', acceptedAnswer: { '@type': 'Answer', text: 'BLEU is appropriate for translation and summarization tasks where the output should closely match a reference text. It is misleading for JSON generation, instruction-following, and creative writing because it measures n-gram word overlap, not format compliance or semantic correctness. For example, a JSON extraction prompt that returns the correct structure but different phrasing will score near zero on BLEU despite being functionally correct.' } },
-          { '@type': 'Question', name: 'What is LLM-as-judge evaluation?', acceptedAnswer: { '@type': 'Answer', text: 'LLM-as-judge uses a capable model like GPT-5.5 or Claude Opus 4.8 to score outputs against a rubric. It scales to thousands of test cases without human review and handles nuanced quality dimensions that binary metrics miss. The main risk is model bias: the judge may favor outputs similar to its own style.' } },
+          { '@type': 'Question', name: 'What is LLM-as-judge evaluation?', acceptedAnswer: { '@type': 'Answer', text: 'LLM-as-judge uses a capable model like GPT-5.6 or Claude Opus 5 to score outputs against a rubric. It scales to thousands of test cases without human review and handles nuanced quality dimensions that binary metrics miss. The main risk is model bias: the judge may favor outputs similar to its own style.' } },
           { '@type': 'Question', name: 'How do you detect prompt metric regression?', acceptedAnswer: { '@type': 'Answer', text: 'Track your primary metric per prompt version and alert when it drops more than 5 percentage points from the established baseline. The workflow is: record baseline metric before any change, make the change, re-run the full test set, compare against baseline. A drop of more than 5 points should block deployment. A drop of more than 10 points is a critical regression requiring investigation before proceeding.' } },
           { '@type': 'Question', name: 'Which metric should I use for JSON output prompts?', acceptedAnswer: { '@type': 'Answer', text: 'Use binary pass/fail for JSON output prompts. Define pass as: valid JSON + required fields present + values within allowed range. BLEU and semantic similarity are not meaningful for structured outputs.' } },
           { '@type': 'Question', name: 'Can you combine multiple prompt evaluation metrics?', acceptedAnswer: { '@type': 'Answer', text: 'Yes — production prompts typically need a primary metric (pass rate for structured outputs, accuracy for classification) and a secondary metric (semantic similarity or LLM-as-judge) to catch different failure modes. A JSON extraction prompt might score 100% on pass rate but produce semantically wrong values that only a secondary check detects. Track both metrics independently and alert on either dropping below threshold.' } },
@@ -104,7 +104,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Pass rate (correct outputs / total) is the most actionable metric for production prompts with structured outputs',
             'BLEU score measures n-gram overlap and is meaningful only for translation and summarization tasks',
             'Semantic similarity (cosine similarity of embeddings) outperforms BLEU for paraphrase and rewriting tasks',
-            'LLM-as-judge uses GPT-5.5 or Claude Opus 4.8 to score nuanced free-text outputs at scale',
+            'LLM-as-judge uses GPT-5.6 or Claude Opus 5 to score nuanced free-text outputs at scale',
             'Track pass rate per prompt version and alert on drops of more than 5 percentage points',
             'No single metric covers all output types - choose based on your prompt\'s intended output format',
           ],
@@ -141,7 +141,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         passRate: {
           id: 'pass-rate',
           title: 'What Is Pass Rate and Why Is It the Most Useful Metric?',
-          content: '**Pass rate is the percentage of test inputs where the prompt output meets the defined success criteria — and it is the most actionable metric because it maps directly to the production failure rate.** A pass rate of 92% means 8% of real user requests will fail.\n\nPass rate = passing outputs / total test cases\n\nFor structured outputs, define "pass" precisely before running tests: valid JSON, required fields present, values within allowed enum, length under the specified limit. For classification, "pass" means the correct label was returned.\n\nTrack pass rate per prompt version. A drop of more than 5 percentage points is a regression. A drop of more than 10 percentage points should block production deployment. As of April 2026, PromptQuorum observes median pass rates of 88–94% for GPT-5.5 JSON extraction prompts on first deployment. When you [build a prompt library](/prompt-engineering/build-a-prompt-library), establish baseline pass rates for each prompt to detect regressions.',
+          content: '**Pass rate is the percentage of test inputs where the prompt output meets the defined success criteria — and it is the most actionable metric because it maps directly to the production failure rate.** A pass rate of 92% means 8% of real user requests will fail.\n\nPass rate = passing outputs / total test cases\n\nFor structured outputs, define "pass" precisely before running tests: valid JSON, required fields present, values within allowed enum, length under the specified limit. For classification, "pass" means the correct label was returned.\n\nTrack pass rate per prompt version. A drop of more than 5 percentage points is a regression. A drop of more than 10 percentage points should block production deployment. As of April 2026, PromptQuorum observes median pass rates of 88–94% for GPT-5.6 JSON extraction prompts on first deployment. When you [build a prompt library](/prompt-engineering/build-a-prompt-library), establish baseline pass rates for each prompt to detect regressions.',
           callouts: [
             { type: 'warning', label: 'Warning', text: 'A pass rate of 90% means 10% of real user requests will fail. Set your regression threshold based on production risk tolerance, not what looks good in a dashboard.' }
           ],
@@ -165,7 +165,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         llmAsJudge: {
           id: 'llm-as-judge',
           title: 'What Is LLM-as-Judge Evaluation?',
-          content: '**LLM-as-judge uses a capable model — typically GPT-5.5 or Claude Opus 4.8 — to score outputs against a rubric.** This scales evaluation to thousands of test cases without human review and handles quality dimensions that binary metrics cannot capture: coherence, tone, completeness, and factual accuracy.\n\nThe judge approach requires:\n\n1. A detailed rubric (scoring criteria per dimension)\n2. A structured output format (e.g., JSON with score + justification)\n3. When you [test prompts across models](/prompt-engineering/how-to-test-prompts-across-models), calibrate the judge against human judgments for your specific task',
+          content: '**LLM-as-judge uses a capable model — typically GPT-5.6 or Claude Opus 5 — to score outputs against a rubric.** This scales evaluation to thousands of test cases without human review and handles quality dimensions that binary metrics cannot capture: coherence, tone, completeness, and factual accuracy.\n\nThe judge approach requires:\n\n1. A detailed rubric (scoring criteria per dimension)\n2. A structured output format (e.g., JSON with score + justification)\n3. When you [test prompts across models](/prompt-engineering/how-to-test-prompts-across-models), calibrate the judge against human judgments for your specific task',
           columns: ['Dimension', 'Advantage', 'Limitation'],
           rows: [
             { 'Dimension': 'Scale', 'Advantage': 'Thousands of cases per hour', 'Limitation': 'API cost increases with volume' },
@@ -222,7 +222,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Related Reading',
           items: [
             '[How to Evaluate Prompt Quality](/prompt-engineering/how-to-evaluate-prompt-quality) — Three-component framework: accuracy, consistency, instruction-following rate',
-            '[How to Test Prompts Across Models](/prompt-engineering/how-to-test-prompts-across-models) — Running the same test set on GPT-5.5, Claude, and Gemini',
+            '[How to Test Prompts Across Models](/prompt-engineering/how-to-test-prompts-across-models) — Running the same test set on GPT-5.6, Claude, and Gemini',
             '[Prompt Audit and Regression Risk](/prompt-engineering/prompt-audit-and-regression-risk) — Automated regression suites and CI/CD gates',
             '[Braintrust vs Prompthub vs Vellum](/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo) — Comparing dedicated prompt evaluation platforms for teams',
             '[Best Prompt Testing & Evaluation Tools 2026](/prompt-engineering/best-prompt-testing-evaluation-tools) — Ranked tools for systematic prompt QA',
@@ -236,7 +236,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'What are prompt evaluation metrics?', a: 'Prompt evaluation metrics are quantitative signals that measure whether a prompt produces the intended output reliably. Key metrics include pass rate (binary correct/incorrect), BLEU score (n-gram overlap for translation and summarization), semantic similarity (embedding cosine similarity for paraphrase tasks), and LLM-as-judge (model-scored quality rubric for free text). Choosing the wrong metric for your output type produces misleading scores.' },
             { q: 'What is pass rate in prompt evaluation?', a: 'Pass rate is the percentage of test inputs where the output meets defined success criteria. It maps directly to production failure rate and is the most actionable metric for structured output prompts.' },
             { q: 'When should you use BLEU score for prompts?', a: 'BLEU is appropriate for translation and summarization tasks where output should match a reference text. It is misleading for JSON generation, instruction-following, and creative writing because it measures n-gram word overlap, not format compliance or semantic correctness. For example, a JSON extraction prompt that returns the correct structure but different phrasing will score near zero on BLEU despite being functionally correct.' },
-            { q: 'What is LLM-as-judge evaluation?', a: 'LLM-as-judge uses GPT-5.5 or Claude Opus 4.8 to score outputs against a rubric at scale. It handles nuanced quality dimensions that binary metrics miss. The main risk is model bias toward its own output style.' },
+            { q: 'What is LLM-as-judge evaluation?', a: 'LLM-as-judge uses GPT-5.6 or Claude Opus 5 to score outputs against a rubric at scale. It handles nuanced quality dimensions that binary metrics miss. The main risk is model bias toward its own output style.' },
             { q: 'How do you detect prompt metric regression?', a: 'Track your primary metric per prompt version and alert when it drops more than 5 percentage points from the established baseline. The workflow is: record baseline metric before any change, make the change, re-run the full test set, compare against baseline. A drop of more than 5 points should block deployment. A drop of more than 10 points is a critical regression requiring investigation before proceeding.' },
             { q: 'Which metric should I use for JSON output prompts?', a: 'Use binary pass/fail for JSON output prompts. Define pass as valid JSON + required fields present + values within allowed range. BLEU and semantic similarity are not meaningful for structured outputs.' },
             { q: 'Can you combine multiple prompt evaluation metrics?', a: 'Yes — production prompts typically need a primary metric (pass rate for structured outputs, accuracy for classification) and a secondary metric (semantic similarity or LLM-as-judge) to catch different failure modes. A JSON extraction prompt might score 100% on pass rate but produce semantically wrong values that only a secondary check detects. Track both metrics independently and alert on either dropping below threshold.' },
@@ -285,7 +285,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         'Semantische Ähnlichkeit über 0,85 deutet typischerweise auf semantisch gleichwertige Inhalte hin',
         'LLM-as-Judge skaliert auf Tausende von Evaluierungen pro Stunde',
         'Ein Rückgang um 5 Punkte in der Pass Rate ist der Standard-Regressionsschwellenwert',
-        'GPT-5.5 und Claude-Modelle können bei gleichem Prompt-Testsatz um 10–20 Punkte unterscheiden',
+        'GPT-5.6 und Claude-Modelle können bei gleichem Prompt-Testsatz um 10–20 Punkte unterscheiden',
       ],
       toc: [
         { label: 'Wichtigste Erkenntnisse', anchor: '#key-takeaways' },
@@ -331,7 +331,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Question', name: 'Was sind Prompt-Evaluierungsmetriken?', acceptedAnswer: { '@type': 'Answer', text: 'Prompt-Evaluierungsmetriken sind quantitative Signale, die messen, ob ein Prompt die beabsichtigte Ausgabe zuverlässig produziert. Wichtige Metriken sind Pass Rate (binär richtig/falsch), BLEU-Score (n-Gramm-Überlap für Übersetzungen und Zusammenfassungen), semantische Ähnlichkeit (Cosinus-Ähnlichkeit von Embeddings für Paraphrasenaufgaben) und LLM-as-Judge (modellgestützte Qualitätsbewertung für Freitext). Die Auswahl der falschen Metrik für Ihren Ausgabetyp führt zu irreführenden Scores.' } },
           { '@type': 'Question', name: 'Was ist Pass Rate in der Prompt-Evaluierung?', acceptedAnswer: { '@type': 'Answer', text: 'Pass Rate ist der Prozentsatz der Testeingaben, bei denen die Prompt-Ausgabe die definierten Erfolgskriterien erfüllt. Pass Rate = bestandene Ausgaben / Gesamtfall-Tests. Sie ist die aussagekräftigste Metrik für strukturierte Ausgaben, da sie sich direkt auf die Produktionsfehlerquote abbildet.' } },
           { '@type': 'Question', name: 'Wann sollte man BLEU-Score für Prompts verwenden?', acceptedAnswer: { '@type': 'Answer', text: 'BLEU eignet sich für Übersetzungs- und Zusammenfassungsaufgaben, bei denen die Ausgabe stark mit einem Referenztext übereinstimmen sollte. Es ist irreführend für JSON-Generierung, Befolgung von Anweisungen und kreatives Schreiben, da es n-Gramm-Wort-Überlap misst, nicht Format-Einhaltung oder semantische Korrektheit. Beispielsweise wird ein JSON-Extraktions-Prompt, der die richtige Struktur zurückgibt, aber mit anderer Formulierung, fast null auf BLEU bewert, obwohl er funktionell korrekt ist.' } },
-          { '@type': 'Question', name: 'Was ist LLM-as-Judge-Evaluierung?', acceptedAnswer: { '@type': 'Answer', text: 'LLM-as-Judge nutzt ein leistungsstarkes Modell wie GPT-5.5 oder Claude Opus 4,7 zur Bewertung von Ausgaben gegen ein Bewertungsschema. Es skaliert auf Tausende von Testfällen ohne menschliche Überprüfung und behandelt Qualitätsdimensionen, die binäre Metriken nicht erfassen. Das Hauptrisiko ist Model Bias: Der Judge könnte Ausgaben begünstigen, die seinem eigenen Stil ähneln.' } },
+          { '@type': 'Question', name: 'Was ist LLM-as-Judge-Evaluierung?', acceptedAnswer: { '@type': 'Answer', text: 'LLM-as-Judge nutzt ein leistungsstarkes Modell wie GPT-5.6 oder Claude Opus 4,7 zur Bewertung von Ausgaben gegen ein Bewertungsschema. Es skaliert auf Tausende von Testfällen ohne menschliche Überprüfung und behandelt Qualitätsdimensionen, die binäre Metriken nicht erfassen. Das Hauptrisiko ist Model Bias: Der Judge könnte Ausgaben begünstigen, die seinem eigenen Stil ähneln.' } },
           { '@type': 'Question', name: 'Wie erkennt man Metrik-Regression bei Prompts?', acceptedAnswer: { '@type': 'Answer', text: 'Verfolgen Sie Ihre primäre Metrik pro Prompt-Version und alarmieren Sie, wenn sie mehr als 5 Prozentpunkte unter dem etablierten Baseline fällt. Der Workflow ist: Baseline-Metrik vor Änderung aufzeichnen, Änderung durchführen, vollständigen Testsatz erneut ausführen, gegen Baseline vergleichen. Ein Rückgang von mehr als 5 Punkten sollte die Bereitstellung blockieren. Ein Rückgang von mehr als 10 Punkten ist eine kritische Regression, die Untersuchung vor dem Fortschritt erfordert.' } },
           { '@type': 'Question', name: 'Welche Metrik sollte ich für JSON-Ausgabe-Prompts verwenden?', acceptedAnswer: { '@type': 'Answer', text: 'Verwenden Sie binäres Bestehen/Durchfallen für JSON-Ausgabe-Prompts. Definieren Sie Bestehen als: gültiges JSON + erforderliche Felder vorhanden + Werte im zulässigen Bereich. BLEU und semantische Ähnlichkeit sind für strukturierte Ausgaben nicht aussagekräftig.' } },
           { '@type': 'Question', name: 'Kann man mehrere Prompt-Evaluierungsmetriken kombinieren?', acceptedAnswer: { '@type': 'Answer', text: 'Ja — Produktions-Prompts benötigen typischerweise eine Primär-Metrik (Pass Rate für strukturierte Ausgaben, Genauigkeit für Klassifizierung) und eine Sekundär-Metrik (semantische Ähnlichkeit oder LLM-as-Judge), um unterschiedliche Fehlermodi zu erfassen. Ein JSON-Extraktions-Prompt könnte 100% auf Pass Rate erreichen, aber semantisch falsche Werte produzieren, die nur eine Sekundärprüfung erkennt. Verfolgen Sie beide Metriken unabhängig und alarmieren Sie, wenn eine unter den Schwellenwert fällt.' } },
@@ -361,7 +361,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Pass Rate (richtige Ausgaben / Gesamtzahl) ist die aussagekräftigste Metrik für Produktions-Prompts mit strukturierten Ausgaben',
             'BLEU-Score misst n-Gramm-Überlap und ist nur für Übersetzungs- und Zusammenfassungsaufgaben aussagekräftig',
             'Semantische Ähnlichkeit (Cosinus-Ähnlichkeit von Embeddings) übertrifft BLEU bei Paraphrase- und Umschreibungsaufgaben',
-            'LLM-as-Judge nutzt GPT-5.5 oder Claude Opus 4,7 zur Bewertung nuancierter Freitextausgaben in großem Maßstab',
+            'LLM-as-Judge nutzt GPT-5.6 oder Claude Opus 4,7 zur Bewertung nuancierter Freitextausgaben in großem Maßstab',
             'Verfolgen Sie Pass Rate pro Prompt-Version und alarmieren Sie bei Rückgängen von mehr als 5 Prozentpunkten',
             'Keine einzelne Metrik deckt alle Ausgabetypen ab — wählen Sie basierend auf Ihrem beabsichtigten Ausgabeformat',
           ],
@@ -398,7 +398,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         passRate: {
           id: 'pass-rate',
           title: 'Was ist Pass Rate und warum ist sie die nützlichste Metrik?',
-          content: '**Pass Rate ist der Prozentsatz der Testeingaben, bei denen die Prompt-Ausgabe die definierten Erfolgskriterien erfüllt — und sie ist die aussagekräftigste Metrik, da sie sich direkt auf die Produktionsfehlerquote abbildet.** Eine Pass Rate von 92% bedeutet, dass 8% der echten Benutzeranfragen fehlschlagen.\n\nPass Rate = bestandene Ausgaben / Gesamtzahl Testfälle\n\nFür strukturierte Ausgaben definieren Sie „Bestehen" präzise vor Testbeginn: gültiges JSON, erforderliche Felder vorhanden, Werte innerhalb zulässiger Enumerationen, Länge unter angegebenem Limit. Für Klassifizierung bedeutet „Bestehen" die richtige Etikette wurde zurückgegeben.\n\nVerfolgen Sie Pass Rate pro Prompt-Version. Ein Rückgang von mehr als 5 Prozentpunkten ist eine Regression. Ein Rückgang von mehr als 10 Prozentpunkten sollte die Produktionsbereitstellung blockieren. Ab April 2026 beobachtet PromptQuorum Median-Pass-Rates von 88–94% für GPT-5.5 JSON-Extraktions-Prompts bei erster Bereitstellung. Wenn Sie [eine Prompt-Bibliothek aufbauen](/de/prompt-engineering/build-a-prompt-library), etablieren Sie Baseline-Pass-Rates für jeden Prompt zur Regressionserkennung.',
+          content: '**Pass Rate ist der Prozentsatz der Testeingaben, bei denen die Prompt-Ausgabe die definierten Erfolgskriterien erfüllt — und sie ist die aussagekräftigste Metrik, da sie sich direkt auf die Produktionsfehlerquote abbildet.** Eine Pass Rate von 92% bedeutet, dass 8% der echten Benutzeranfragen fehlschlagen.\n\nPass Rate = bestandene Ausgaben / Gesamtzahl Testfälle\n\nFür strukturierte Ausgaben definieren Sie „Bestehen" präzise vor Testbeginn: gültiges JSON, erforderliche Felder vorhanden, Werte innerhalb zulässiger Enumerationen, Länge unter angegebenem Limit. Für Klassifizierung bedeutet „Bestehen" die richtige Etikette wurde zurückgegeben.\n\nVerfolgen Sie Pass Rate pro Prompt-Version. Ein Rückgang von mehr als 5 Prozentpunkten ist eine Regression. Ein Rückgang von mehr als 10 Prozentpunkten sollte die Produktionsbereitstellung blockieren. Ab April 2026 beobachtet PromptQuorum Median-Pass-Rates von 88–94% für GPT-5.6 JSON-Extraktions-Prompts bei erster Bereitstellung. Wenn Sie [eine Prompt-Bibliothek aufbauen](/de/prompt-engineering/build-a-prompt-library), etablieren Sie Baseline-Pass-Rates für jeden Prompt zur Regressionserkennung.',
           callouts: [
             { type: 'warning', label: 'Warnung', text: 'Eine Pass Rate von 90% bedeutet, dass 10% der echten Benutzeranfragen fehlschlagen. Legen Sie Ihren Regressions-Schwellenwert basierend auf Produktionsrisiko-Toleranz fest, nicht darauf, was im Dashboard gut aussieht.' }
           ],
@@ -422,7 +422,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         llmAsJudge: {
           id: 'llm-as-judge',
           title: 'Was ist LLM-as-Judge-Evaluierung?',
-          content: '**LLM-as-Judge nutzt ein leistungsstarkes Modell — typischerweise GPT-5.5 oder Claude Opus 4,7 — zur Bewertung von Ausgaben gegen ein Bewertungsschema.** Dies skaliert die Evaluierung auf Tausende von Testfällen ohne menschliche Überprüfung und behandelt Qualitätsdimensionen, die binäre Metriken nicht erfassen: Kohärenz, Ton, Vollständigkeit und faktische Genauigkeit.\n\nDer Judge-Ansatz erfordert:\n\n1. Ein detailliertes Bewertungsschema (Kriterien pro Dimension)\n2. Ein strukturiertes Ausgabeformat (z.B. JSON mit Score + Begründung)\n3. Wenn Sie [Prompts über Modelle hinweg testen](/de/prompt-engineering/how-to-test-prompts-across-models), kalibrieren Sie den Judge gegen menschliche Urteile für Ihre spezifische Aufgabe',
+          content: '**LLM-as-Judge nutzt ein leistungsstarkes Modell — typischerweise GPT-5.6 oder Claude Opus 4,7 — zur Bewertung von Ausgaben gegen ein Bewertungsschema.** Dies skaliert die Evaluierung auf Tausende von Testfällen ohne menschliche Überprüfung und behandelt Qualitätsdimensionen, die binäre Metriken nicht erfassen: Kohärenz, Ton, Vollständigkeit und faktische Genauigkeit.\n\nDer Judge-Ansatz erfordert:\n\n1. Ein detailliertes Bewertungsschema (Kriterien pro Dimension)\n2. Ein strukturiertes Ausgabeformat (z.B. JSON mit Score + Begründung)\n3. Wenn Sie [Prompts über Modelle hinweg testen](/de/prompt-engineering/how-to-test-prompts-across-models), kalibrieren Sie den Judge gegen menschliche Urteile für Ihre spezifische Aufgabe',
           columns: ['Dimension', 'Vorteil', 'Einschränkung'],
           rows: [
             { 'Dimension': 'Skalierung', 'Vorteil': 'Tausende Fälle pro Stunde', 'Einschränkung': 'API-Kosten steigen mit Volumen' },
@@ -479,7 +479,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Weiterführende Literatur',
           items: [
             '[Wie man Prompt-Qualität evaluiert](/de/prompt-engineering/how-to-evaluate-prompt-quality) — Drei-Komponenten-Framework: Genauigkeit, Konsistenz, Befolgungsrate',
-            '[Prompts über Modelle hinweg testen](/de/prompt-engineering/how-to-test-prompts-across-models) — Denselben Testsatz auf GPT-5.5, Claude und Gemini ausführen',
+            '[Prompts über Modelle hinweg testen](/de/prompt-engineering/how-to-test-prompts-across-models) — Denselben Testsatz auf GPT-5.6, Claude und Gemini ausführen',
             '[Prompt-Audit und Regressions-Risiko](/de/prompt-engineering/prompt-audit-and-regression-risk) — Automatisierte Regressionssuits und CI/CD-Gates',
             '[Braintrust vs Prompthub vs Vellum](/de/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo) — Vergleich dedizierter Prompt-Evaluierungs-Plattformen für Teams',
             '[Best Prompt Testing & Evaluation Tools 2026](/de/prompt-engineering/best-prompt-testing-evaluation-tools) — Bewertete Tools für systematische Prompt-QA',
@@ -493,7 +493,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'Was sind Prompt-Evaluierungsmetriken?', a: 'Prompt-Evaluierungsmetriken sind quantitative Signale, die messen, ob ein Prompt die beabsichtigte Ausgabe zuverlässig produziert. Wichtige Metriken sind Pass Rate (binär richtig/falsch), BLEU-Score (n-Gramm-Überlap für Übersetzungen und Zusammenfassungen), semantische Ähnlichkeit (Cosinus-Ähnlichkeit von Embeddings für Paraphrasenaufgaben) und LLM-as-Judge (modellgestützte Qualitätsbewertung für Freitext). Die Auswahl der falschen Metrik für Ihren Ausgabetyp führt zu irreführenden Scores.' },
             { q: 'Was ist Pass Rate in der Prompt-Evaluierung?', a: 'Pass Rate ist der Prozentsatz der Testeingaben, bei denen die Ausgabe die definierten Erfolgskriterien erfüllt. Sie bildet sich direkt auf Produktionsfehlerquote ab und ist die aussagekräftigste Metrik für strukturierte Ausgabe-Prompts.' },
             { q: 'Wann sollte man BLEU-Score für Prompts verwenden?', a: 'BLEU eignet sich für Übersetzungs- und Zusammenfassungsaufgaben, bei denen die Ausgabe stark mit einem Referenztext übereinstimmen sollte. Es ist irreführend für JSON-Generierung, Befolgung von Anweisungen und kreatives Schreiben, da es n-Gramm-Wort-Überlap misst, nicht Format-Einhaltung oder semantische Korrektheit. Beispielsweise wird ein JSON-Extraktions-Prompt, der die richtige Struktur zurückgibt, aber mit anderer Formulierung, fast null auf BLEU bewertet, obwohl er funktionell korrekt ist.' },
-            { q: 'Was ist LLM-as-Judge-Evaluierung?', a: 'LLM-as-Judge nutzt GPT-5.5 oder Claude Opus 4,7 zur Bewertung von Ausgaben gegen ein Bewertungsschema in großem Maßstab. Es behandelt nuancierte Qualitätsdimensionen, die binäre Metriken nicht erfassen. Das Hauptrisiko ist Model Bias zu eigenem Output-Stil.' },
+            { q: 'Was ist LLM-as-Judge-Evaluierung?', a: 'LLM-as-Judge nutzt GPT-5.6 oder Claude Opus 4,7 zur Bewertung von Ausgaben gegen ein Bewertungsschema in großem Maßstab. Es behandelt nuancierte Qualitätsdimensionen, die binäre Metriken nicht erfassen. Das Hauptrisiko ist Model Bias zu eigenem Output-Stil.' },
             { q: 'Wie erkennt man Metrik-Regression bei Prompts?', a: 'Verfolgen Sie Ihre primäre Metrik pro Prompt-Version und alarmieren Sie, wenn sie mehr als 5 Prozentpunkte unter der Baseline fällt. Der Workflow ist: Baseline-Metrik vor Änderung aufzeichnen, Änderung durchführen, vollständigen Testsatz erneut ausführen, gegen Baseline vergleichen. Ein Rückgang von mehr als 5 Punkten sollte die Bereitstellung blockieren. Ein Rückgang von mehr als 10 Punkten ist eine kritische Regression, die Untersuchung vor dem Fortschritt erfordert.' },
             { q: 'Welche Metrik sollte ich für JSON-Ausgabe-Prompts verwenden?', a: 'Verwenden Sie binäres Bestehen/Durchfallen für JSON-Ausgabe-Prompts. Definieren Sie Bestehen als gültiges JSON + erforderliche Felder vorhanden + Werte im zulässigen Bereich. BLEU und semantische Ähnlichkeit sind für strukturierte Ausgaben nicht aussagekräftig.' },
             { q: 'Kann man mehrere Prompt-Evaluierungsmetriken kombinieren?', a: 'Ja — Produktions-Prompts benötigen typischerweise eine Primär-Metrik (Pass Rate für strukturierte Ausgaben, Genauigkeit für Klassifizierung) und eine Sekundär-Metrik (semantische Ähnlichkeit oder LLM-as-Judge) um unterschiedliche Fehlermodi zu erfassen. Ein JSON-Extraktions-Prompt könnte 100% auf Pass Rate erreichen, aber semantisch falsche Werte produzieren, die nur eine Sekundärprüfung erkennt. Verfolgen Sie beide Metriken unabhängig und alarmieren Sie, wenn eine unter Schwellenwert fällt.' },
@@ -545,7 +545,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         'La similitud semántica por encima de 0,85 generalmente indica contenido semánticamente equivalente',
         'LLM-as-judge escala a miles de evaluaciones por hora',
         'Una caída de 5 puntos en el pass rate es el umbral estándar de alerta de regresión',
-        'Los modelos GPT-5.5 y Claude pueden diferir entre 10 y 20 puntos en el mismo conjunto de prueba de prompts',
+        'Los modelos GPT-5.6 y Claude pueden diferir entre 10 y 20 puntos en el mismo conjunto de prueba de prompts',
       ],
       toc: [
         { label: 'Puntos clave', anchor: '#key-takeaways' },
@@ -591,7 +591,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Question', name: '¿Qué son las métricas de evaluación de prompts?', acceptedAnswer: { '@type': 'Answer', text: 'Las métricas de evaluación de prompts son señales cuantitativas que miden si un prompt produce la salida esperada de forma fiable. Las métricas clave incluyen pass rate (correcto/incorrecto binario), puntuación BLEU (superposición de n-gramas para traducción y resumen), similitud semántica (similitud coseno de embeddings para tareas de paráfrasis) y LLM-as-judge (rúbrica de calidad puntuada por modelo para texto libre). Elegir la métrica incorrecta para tu tipo de salida produce puntuaciones engañosas.' } },
           { '@type': 'Question', name: '¿Qué es el pass rate en la evaluación de prompts?', acceptedAnswer: { '@type': 'Answer', text: 'El pass rate es el porcentaje de entradas de prueba donde la salida del prompt cumple los criterios de éxito definidos. Pass rate = salidas que pasan / total de casos de prueba. Es la métrica más útil para salidas estructuradas porque se mapea directamente a la tasa de fallos en producción.' } },
           { '@type': 'Question', name: '¿Cuándo debes usar la puntuación BLEU para los prompts?', acceptedAnswer: { '@type': 'Answer', text: 'BLEU es apropiado para tareas de traducción y resumen donde la salida debe coincidir estrechamente con un texto de referencia. Es engañoso para la generación de JSON, el seguimiento de instrucciones y la escritura creativa porque mide la superposición de palabras en n-gramas, no el cumplimiento del formato o la corrección semántica.' } },
-          { '@type': 'Question', name: '¿Qué es la evaluación LLM-as-judge?', acceptedAnswer: { '@type': 'Answer', text: 'LLM-as-judge usa un modelo capaz como GPT-5.5 o Claude Opus 4.8 para puntuar las salidas contra una rúbrica. Escala a miles de casos de prueba sin revisión humana y maneja dimensiones de calidad matizadas que las métricas binarias no pueden capturar. El principal riesgo es el sesgo del modelo: el juez puede favorecer las salidas similares a su propio estilo.' } },
+          { '@type': 'Question', name: '¿Qué es la evaluación LLM-as-judge?', acceptedAnswer: { '@type': 'Answer', text: 'LLM-as-judge usa un modelo capaz como GPT-5.6 o Claude Opus 5 para puntuar las salidas contra una rúbrica. Escala a miles de casos de prueba sin revisión humana y maneja dimensiones de calidad matizadas que las métricas binarias no pueden capturar. El principal riesgo es el sesgo del modelo: el juez puede favorecer las salidas similares a su propio estilo.' } },
           { '@type': 'Question', name: '¿Cómo detectas la regresión de métricas de prompts?', acceptedAnswer: { '@type': 'Answer', text: 'Rastrea tu métrica principal por versión de prompt y alerta cuando caiga más de 5 puntos porcentuales desde la línea base establecida. El workflow es: registrar la métrica de línea base antes de cualquier cambio, hacer el cambio, volver a ejecutar el conjunto de prueba completo, comparar con la línea base. Una caída de más de 5 puntos debe bloquear el despliegue.' } },
           { '@type': 'Question', name: '¿Qué métrica debo usar para los prompts de salida JSON?', acceptedAnswer: { '@type': 'Answer', text: 'Usa pass/fail binario para los prompts de salida JSON. Define "pasar" como: JSON válido + campos requeridos presentes + valores dentro del rango permitido. BLEU y la similitud semántica no tienen sentido para las salidas estructuradas.' } },
           { '@type': 'Question', name: '¿Puedes combinar múltiples métricas de evaluación de prompts?', acceptedAnswer: { '@type': 'Answer', text: 'Sí — los prompts de producción típicamente necesitan una métrica primaria (pass rate para salidas estructuradas, precisión para clasificación) y una secundaria (similitud semántica o LLM-as-judge) para detectar diferentes modos de fallo. Rastrea ambas métricas de forma independiente y alerta si cualquiera cae por debajo del umbral.' } },
@@ -619,7 +619,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'El pass rate (salidas correctas / total) es la métrica más útil para los prompts de producción con salidas estructuradas',
             'La puntuación BLEU mide la superposición de n-gramas y solo tiene sentido para tareas de traducción y resumen',
             'La similitud semántica (similitud coseno de embeddings) supera a BLEU para tareas de paráfrasis y reescritura',
-            'LLM-as-judge usa GPT-5.5 o Claude Opus 4.8 para puntuar salidas de texto libre matizadas a escala',
+            'LLM-as-judge usa GPT-5.6 o Claude Opus 5 para puntuar salidas de texto libre matizadas a escala',
             'Rastrea el pass rate por versión de prompt y alerta con caídas de más de 5 puntos porcentuales',
             'Ninguna métrica única cubre todos los tipos de salida — elige según el formato de salida esperado de tu prompt',
           ],
@@ -680,7 +680,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         llmAsJudge: {
           id: 'llm-as-judge',
           title: '¿Qué es la evaluación LLM-as-judge?',
-          content: '**LLM-as-judge usa un modelo capaz — típicamente GPT-5.5 o Claude Opus 4.8 — para puntuar las salidas contra una rúbrica.** Esto escala la evaluación a miles de casos de prueba sin revisión humana y maneja dimensiones de calidad que las métricas binarias no pueden capturar: coherencia, tono, completitud y exactitud factual.',
+          content: '**LLM-as-judge usa un modelo capaz — típicamente GPT-5.6 o Claude Opus 5 — para puntuar las salidas contra una rúbrica.** Esto escala la evaluación a miles de casos de prueba sin revisión humana y maneja dimensiones de calidad que las métricas binarias no pueden capturar: coherencia, tono, completitud y exactitud factual.',
           columns: ['Dimensión', 'Ventaja', 'Limitación'],
           rows: [
             { 'Dimensión': 'Escala', 'Ventaja': 'Miles de casos por hora', 'Limitación': 'El costo de API aumenta con el volumen' },
@@ -737,7 +737,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Lecturas relacionadas',
           items: [
             '[Cómo evaluar la calidad de los prompts](/es/prompt-engineering/how-to-evaluate-prompt-quality) — Framework de tres componentes: precisión, consistencia, tasa de seguimiento',
-            '[Prueba prompts entre modelos](/es/prompt-engineering/how-to-test-prompts-across-models) — Ejecuta el mismo conjunto de prueba en GPT-5.5, Claude y Gemini',
+            '[Prueba prompts entre modelos](/es/prompt-engineering/how-to-test-prompts-across-models) — Ejecuta el mismo conjunto de prueba en GPT-5.6, Claude y Gemini',
             '[Auditoría de prompts y riesgo de regresión](/es/prompt-engineering/prompt-audit-and-regression-risk) — Suites de regresión automatizadas y gates de CI/CD',
             '[Braintrust vs Prompthub vs Vellum](/es/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo) — Comparación de plataformas de evaluación de prompts dedicadas para equipos',
             '[Mejores herramientas de prueba y evaluación de prompts 2026](/es/prompt-engineering/best-prompt-testing-evaluation-tools) — Herramientas valoradas para QA sistemática de prompts',
@@ -751,7 +751,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: '¿Qué son las métricas de evaluación de prompts?', a: 'Las métricas de evaluación de prompts son señales cuantitativas que miden si un prompt produce la salida esperada de forma fiable. Las métricas clave incluyen pass rate (correcto/incorrecto binario), BLEU (superposición de n-gramas para traducción y resumen), similitud semántica (similitud coseno de embeddings) y LLM-as-judge (rúbrica de calidad para texto libre). Elegir la métrica incorrecta produce puntuaciones engañosas.' },
             { q: '¿Qué es el pass rate en la evaluación de prompts?', a: 'El pass rate es el porcentaje de entradas de prueba donde la salida del prompt cumple los criterios de éxito definidos. Se mapea directamente a la tasa de fallos en producción y es la métrica más útil para los prompts de salida estructurada.' },
             { q: '¿Cuándo debes usar la puntuación BLEU para los prompts?', a: 'BLEU es apropiado para tareas de traducción y resumen donde la salida debe coincidir estrechamente con un texto de referencia. Es engañoso para la generación de JSON, el seguimiento de instrucciones y la escritura creativa.' },
-            { q: '¿Qué es la evaluación LLM-as-judge?', a: 'LLM-as-judge usa GPT-5.5 o Claude Opus 4.8 para puntuar las salidas contra una rúbrica a escala. Maneja dimensiones de calidad matizadas que las métricas binarias no pueden capturar. El principal riesgo es el sesgo del modelo hacia su propio estilo de salida.' },
+            { q: '¿Qué es la evaluación LLM-as-judge?', a: 'LLM-as-judge usa GPT-5.6 o Claude Opus 5 para puntuar las salidas contra una rúbrica a escala. Maneja dimensiones de calidad matizadas que las métricas binarias no pueden capturar. El principal riesgo es el sesgo del modelo hacia su propio estilo de salida.' },
             { q: '¿Cómo detectas la regresión de métricas de prompts?', a: 'Rastrea tu métrica principal por versión de prompt y alerta cuando caiga más de 5 puntos porcentuales desde la línea base. Ejecuta el mismo conjunto de prueba antes y después de cada cambio. Una caída de más de 10 puntos es una regresión crítica.' },
             { q: '¿Qué métrica debo usar para los prompts de salida JSON?', a: 'Usa pass/fail binario. Define "pasar" como: JSON válido + campos requeridos presentes + valores dentro del rango permitido. BLEU y la similitud semántica no tienen sentido para las salidas estructuradas.' },
             { q: '¿Puedes combinar múltiples métricas de evaluación de prompts?', a: 'Sí — los prompts de producción típicamente necesitan una métrica primaria y una secundaria para detectar diferentes modos de fallo. Rastrea ambas de forma independiente y alerta si cualquiera cae por debajo del umbral.' },
@@ -803,7 +803,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         'التشابه الدلالي فوق 0.85 يشير عادةً إلى محتوى مكافئ دلاليًا',
         'LLM-as-judge يتوسّع إلى آلاف التقييمات في الساعة',
         'انخفاض 5 نقاط في pass rate هو الحد الافتراضي لتنبيه الانحدار',
-        'نماذج GPT-5.5 وClaude قد تختلف بـ10–20 نقطة على نفس مجموعة اختبار البرومبتات',
+        'نماذج GPT-5.6 وClaude قد تختلف بـ10–20 نقطة على نفس مجموعة اختبار البرومبتات',
       ],
       toc: [
         { label: 'النقاط الرئيسية', anchor: '#key-takeaways' },
@@ -849,7 +849,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Question', name: 'ما هي مقاييس تقييم البرومبتات؟', acceptedAnswer: { '@type': 'Answer', text: 'مقاييس تقييم البرومبتات إشارات كمية تقيس ما إذا كان البرومبت ينتج المخرجات المتوقعة بشكل موثوق. المقاييس الرئيسية تشمل pass rate (صحيح/خاطئ ثنائي) ودرجة BLEU (تداخل n-gram للترجمة والتلخيص) والتشابه الدلالي (تشابه جيب التمام للـembeddings لمهام الصياغة) وLLM-as-judge (رابطة جودة مُقيَّمة بالنموذج للنص الحر). اختيار المقياس الخاطئ لنوع مخرجاتك يُنتج درجات مضللة.' } },
           { '@type': 'Question', name: 'ما هو pass rate في تقييم البرومبتات؟', acceptedAnswer: { '@type': 'Answer', text: 'pass rate هو النسبة المئوية لمدخلات الاختبار حيث تفي مخرجات البرومبت بمعايير النجاح المحددة. Pass rate = المخرجات الناجحة / إجمالي حالات الاختبار. هو المقياس الأكثر فائدة للمخرجات المنظمة لأنه يتوافق مباشرةً مع معدل الفشل في الإنتاج.' } },
           { '@type': 'Question', name: 'متى يجب استخدام درجة BLEU للبرومبتات؟', acceptedAnswer: { '@type': 'Answer', text: 'BLEU مناسب لمهام الترجمة والتلخيص حيث يجب أن تتطابق المخرجات عن كثب مع نص مرجعي. هو مضلّل لتوليد JSON واتباع التعليمات والكتابة الإبداعية لأنه يقيس تداخل الكلمات n-gram، لا امتثال التنسيق أو الصحة الدلالية.' } },
-          { '@type': 'Question', name: 'ما هو تقييم LLM-as-judge؟', acceptedAnswer: { '@type': 'Answer', text: 'LLM-as-judge يستخدم نموذجًا قادرًا كـGPT-5.5 أو Claude Opus 4.8 لتقييم المخرجات مقابل رابطة. يتوسّع إلى آلاف حالات الاختبار دون مراجعة بشرية ويتعامل مع أبعاد الجودة الدقيقة التي لا تستطيع المقاييس الثنائية التقاطها. الخطر الرئيسي هو تحيّز النموذج: قد يُفضّل الحكم المخرجات المشابهة لأسلوبه.' } },
+          { '@type': 'Question', name: 'ما هو تقييم LLM-as-judge؟', acceptedAnswer: { '@type': 'Answer', text: 'LLM-as-judge يستخدم نموذجًا قادرًا كـGPT-5.6 أو Claude Opus 5 لتقييم المخرجات مقابل رابطة. يتوسّع إلى آلاف حالات الاختبار دون مراجعة بشرية ويتعامل مع أبعاد الجودة الدقيقة التي لا تستطيع المقاييس الثنائية التقاطها. الخطر الرئيسي هو تحيّز النموذج: قد يُفضّل الحكم المخرجات المشابهة لأسلوبه.' } },
           { '@type': 'Question', name: 'كيف تكتشف انحدار مقاييس البرومبتات؟', acceptedAnswer: { '@type': 'Answer', text: 'تتبّع مقياسك الرئيسي حسب إصدار البرومبت وأطلق تنبيهًا حين ينخفض أكثر من 5 نقاط مئوية عن خط الأساس المعتمد. سير العمل: سجّل المقياس الأساسي قبل أي تغيير، أجرِ التغيير، أعِد تشغيل مجموعة الاختبار الكاملة، قارن بالخط الأساسي. انخفاض أكثر من 5 نقاط يجب أن يحجب النشر.' } },
           { '@type': 'Question', name: 'أي مقياس يجب استخدامه لبرومبتات مخرجات JSON؟', acceptedAnswer: { '@type': 'Answer', text: 'استخدم pass/fail الثنائي لبرومبتات مخرجات JSON. عرّف "النجاح" بـ: JSON صالح + الحقول المطلوبة موجودة + القيم ضمن النطاق المسموح. BLEU والتشابه الدلالي لا معنى لهما للمخرجات المنظمة.' } },
           { '@type': 'Question', name: 'هل يمكن دمج مقاييس تقييم برومبتات متعددة؟', acceptedAnswer: { '@type': 'Answer', text: 'نعم — البرومبتات الإنتاجية عادةً تحتاج مقياسًا أساسيًا (pass rate للمخرجات المنظمة، الدقة للتصنيف) وثانويًا (التشابه الدلالي أو LLM-as-judge) للكشف عن أوضاع فشل مختلفة. تتبّع كلا المقياسين بشكل مستقل وأطلق تنبيهًا إذا انخفض أيٌّ منهما عن العتبة.' } },
@@ -877,7 +877,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'pass rate (المخرجات الصحيحة / الإجمالي) هو المقياس الأكثر فائدة لبرومبتات الإنتاج ذات المخرجات المنظمة',
             'درجة BLEU تقيس تداخل n-gram ولا معنى لها إلا في مهام الترجمة والتلخيص',
             'التشابه الدلالي (تشابه جيب التمام للـembeddings) يتفوق على BLEU في مهام الصياغة وإعادة الكتابة',
-            'LLM-as-judge يستخدم GPT-5.5 أو Claude Opus 4.8 لتقييم مخرجات النص الحر الدقيق على نطاق واسع',
+            'LLM-as-judge يستخدم GPT-5.6 أو Claude Opus 5 لتقييم مخرجات النص الحر الدقيق على نطاق واسع',
             'تتبّع pass rate حسب إصدار البرومبت وأطلق تنبيهًا عند انخفاض أكثر من 5 نقاط مئوية',
             'لا مقياس واحد يغطي جميع أنواع المخرجات — اختر حسب تنسيق مخرجات برومبتك المتوقعة',
           ],
@@ -938,7 +938,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         llmAsJudge: {
           id: 'llm-as-judge',
           title: 'ما هو تقييم LLM-as-judge؟',
-          content: '**LLM-as-judge يستخدم نموذجًا قادرًا — عادةً GPT-5.5 أو Claude Opus 4.8 — لتقييم المخرجات مقابل رابطة.** هذا يُوسّع التقييم إلى آلاف حالات الاختبار دون مراجعة بشرية ويتعامل مع أبعاد الجودة التي لا تستطيع المقاييس الثنائية التقاطها: الاتساق والنبرة والاكتمال والدقة الواقعية.',
+          content: '**LLM-as-judge يستخدم نموذجًا قادرًا — عادةً GPT-5.6 أو Claude Opus 5 — لتقييم المخرجات مقابل رابطة.** هذا يُوسّع التقييم إلى آلاف حالات الاختبار دون مراجعة بشرية ويتعامل مع أبعاد الجودة التي لا تستطيع المقاييس الثنائية التقاطها: الاتساق والنبرة والاكتمال والدقة الواقعية.',
           columns: ['البُعد', 'الميزة', 'القيد'],
           rows: [
             { 'البُعد': 'الحجم', 'الميزة': 'آلاف الحالات في الساعة', 'القيد': 'تكلفة API تزداد مع الحجم' },
@@ -995,7 +995,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'قراءات ذات صلة',
           items: [
             '[كيفية تقييم جودة البرومبتات](/ar/prompt-engineering/how-to-evaluate-prompt-quality) — إطار مكوّن من ثلاثة عناصر: الدقة والاتساق ومعدل الاتباع',
-            '[اختبر البرومبتات عبر النماذج](/ar/prompt-engineering/how-to-test-prompts-across-models) — شغّل نفس مجموعة الاختبار على GPT-5.5 وClaude وGemini',
+            '[اختبر البرومبتات عبر النماذج](/ar/prompt-engineering/how-to-test-prompts-across-models) — شغّل نفس مجموعة الاختبار على GPT-5.6 وClaude وGemini',
             '[تدقيق البرومبتات ومخاطر الانحدار](/ar/prompt-engineering/prompt-audit-and-regression-risk) — مجموعات انحدار آلية وبوابات CI/CD',
             '[Braintrust مقابل Prompthub مقابل Vellum](/ar/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo) — مقارنة منصات تقييم البرومبتات المخصصة للفرق',
             '[أفضل أدوات اختبار وتقييم البرومبتات 2026](/ar/prompt-engineering/best-prompt-testing-evaluation-tools) — أدوات مُقيَّمة لضبط جودة البرومبتات المنهجي',
@@ -1009,7 +1009,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'ما هي مقاييس تقييم البرومبتات؟', a: 'مقاييس تقييم البرومبتات إشارات كمية تقيس ما إذا كان البرومبت ينتج المخرجات المتوقعة بشكل موثوق. المقاييس الرئيسية تشمل pass rate وBLEU والتشابه الدلالي وLLM-as-judge. اختيار المقياس الخاطئ يُنتج درجات مضللة.' },
             { q: 'ما هو pass rate في تقييم البرومبتات؟', a: 'pass rate هو النسبة المئوية لمدخلات الاختبار حيث تفي مخرجات البرومبت بمعايير النجاح المحددة. يتوافق مباشرةً مع معدل الفشل في الإنتاج وهو المقياس الأكثر فائدة لبرومبتات المخرجات المنظمة.' },
             { q: 'متى يجب استخدام درجة BLEU للبرومبتات؟', a: 'BLEU مناسب لمهام الترجمة والتلخيص حيث يجب أن تتطابق المخرجات عن كثب مع نص مرجعي. هو مضلّل لتوليد JSON واتباع التعليمات والكتابة الإبداعية.' },
-            { q: 'ما هو تقييم LLM-as-judge؟', a: 'LLM-as-judge يستخدم GPT-5.5 أو Claude Opus 4.8 لتقييم المخرجات مقابل رابطة على نطاق واسع. يتعامل مع أبعاد الجودة الدقيقة. الخطر الرئيسي هو تحيّز النموذج نحو أسلوب مخرجاته.' },
+            { q: 'ما هو تقييم LLM-as-judge؟', a: 'LLM-as-judge يستخدم GPT-5.6 أو Claude Opus 5 لتقييم المخرجات مقابل رابطة على نطاق واسع. يتعامل مع أبعاد الجودة الدقيقة. الخطر الرئيسي هو تحيّز النموذج نحو أسلوب مخرجاته.' },
             { q: 'كيف تكتشف انحدار مقاييس البرومبتات؟', a: 'تتبّع مقياسك الرئيسي حسب إصدار البرومبت وأطلق تنبيهًا حين ينخفض أكثر من 5 نقاط مئوية عن الخط الأساسي. انخفاض أكثر من 10 نقاط انحدار حرج.' },
             { q: 'أي مقياس يجب استخدامه لبرومبتات مخرجات JSON؟', a: 'استخدم pass/fail ثنائي. عرّف "النجاح" بـ: JSON صالح + الحقول المطلوبة موجودة + القيم ضمن النطاق المسموح.' },
             { q: 'هل يمكن دمج مقاييس تقييم برومبتات متعددة؟', a: 'نعم — البرومبتات الإنتاجية عادةً تحتاج مقياسًا أساسيًا وثانويًا للكشف عن أوضاع فشل مختلفة. تتبّع كليهما بشكل مستقل.' },
@@ -1058,7 +1058,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         'Similaridade semântica acima de 0,85 geralmente indica conteúdo semanticamente equivalente',
         'LLM-as-judge escala para milhares de avaliações por hora',
         'Uma queda de 5 pontos no pass rate é o limiar padrão de alerta de regressão',
-        'Os modelos GPT-5.5 e Claude podem diferir entre 10 e 20 pontos no mesmo conjunto de teste de prompts',
+        'Os modelos GPT-5.6 e Claude podem diferir entre 10 e 20 pontos no mesmo conjunto de teste de prompts',
       ],
       toc: [
         { label: 'Pontos-chave', anchor: '#key-takeaways' },
@@ -1103,7 +1103,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Question', name: 'O que são métricas de avaliação de prompts?', acceptedAnswer: { '@type': 'Answer', text: 'Métricas de avaliação de prompts são sinais quantitativos que medem se um prompt produz a saída esperada de forma confiável. As métricas-chave incluem pass rate (correto/incorreto binário), pontuação BLEU (sobreposição de n-gramas para tradução e resumo), similaridade semântica (similaridade cosseno de embeddings para tarefas de paráfrase) e LLM-as-judge (rubrica de qualidade pontuada por modelo para texto livre). Escolher a métrica errada para seu tipo de saída produz pontuações enganosas.' } },
           { '@type': 'Question', name: 'O que é o pass rate na avaliação de prompts?', acceptedAnswer: { '@type': 'Answer', text: 'O pass rate é a porcentagem de entradas de teste onde a saída do prompt atende aos critérios de sucesso definidos. Pass rate = saídas que passam / total de casos de teste. É a métrica mais útil para saídas estruturadas porque mapeia diretamente para a taxa de falhas em produção.' } },
           { '@type': 'Question', name: 'Quando você deve usar a pontuação BLEU para prompts?', acceptedAnswer: { '@type': 'Answer', text: 'BLEU é apropriado para tarefas de tradução e resumo onde a saída deve corresponder estreitamente a um texto de referência. É enganoso para geração de JSON, seguimento de instruções e escrita criativa porque mede sobreposição de palavras em n-gramas, não conformidade de formato ou correção semântica.' } },
-          { '@type': 'Question', name: 'O que é avaliação LLM-as-judge?', acceptedAnswer: { '@type': 'Answer', text: 'LLM-as-judge usa um modelo capaz como GPT-5.5 ou Claude Opus 4.8 para pontuar saídas contra uma rubrica. Escala para milhares de casos de teste sem revisão humana e lida com dimensões de qualidade matizadas que métricas binárias não conseguem capturar. O principal risco é o viés do modelo: o juiz pode favorecer saídas similares ao seu próprio estilo.' } },
+          { '@type': 'Question', name: 'O que é avaliação LLM-as-judge?', acceptedAnswer: { '@type': 'Answer', text: 'LLM-as-judge usa um modelo capaz como GPT-5.6 ou Claude Opus 5 para pontuar saídas contra uma rubrica. Escala para milhares de casos de teste sem revisão humana e lida com dimensões de qualidade matizadas que métricas binárias não conseguem capturar. O principal risco é o viés do modelo: o juiz pode favorecer saídas similares ao seu próprio estilo.' } },
           { '@type': 'Question', name: 'Como você detecta regressão de métricas de prompts?', acceptedAnswer: { '@type': 'Answer', text: 'Rastreie sua métrica principal por versão de prompt e alerte quando cair mais de 5 pontos percentuais desde a linha de base estabelecida. O fluxo de trabalho é: registrar a métrica de linha de base antes de qualquer alteração, fazer a alteração, executar novamente o conjunto de teste completo, comparar com a linha de base. Uma queda de mais de 5 pontos deve bloquear a implantação.' } },
           { '@type': 'Question', name: 'Qual métrica devo usar para prompts de saída JSON?', acceptedAnswer: { '@type': 'Answer', text: 'Use pass/fail binário para prompts de saída JSON. Defina "passar" como: JSON válido + campos obrigatórios presentes + valores dentro do intervalo permitido. BLEU e similaridade semântica não fazem sentido para saídas estruturadas.' } },
           { '@type': 'Question', name: 'Você pode combinar múltiplas métricas de avaliação de prompts?', acceptedAnswer: { '@type': 'Answer', text: 'Sim — prompts de produção tipicamente precisam de uma métrica primária (pass rate para saídas estruturadas, precisão para classificação) e uma secundária (similaridade semântica ou LLM-as-judge) para detectar diferentes modos de falha. Rastreie ambas as métricas de forma independente e alerte se qualquer uma cair abaixo do limiar.' } },
@@ -1131,7 +1131,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'O pass rate (saídas corretas / total) é a métrica mais útil para prompts de produção com saídas estruturadas',
             'A pontuação BLEU mede a sobreposição de n-gramas e só faz sentido para tarefas de tradução e resumo',
             'A similaridade semântica (similaridade cosseno de embeddings) supera o BLEU para tarefas de paráfrase e reescrita',
-            'LLM-as-judge usa GPT-5.5 ou Claude Opus 4.8 para pontuar saídas de texto livre matizadas em escala',
+            'LLM-as-judge usa GPT-5.6 ou Claude Opus 5 para pontuar saídas de texto livre matizadas em escala',
             'Rastreie o pass rate por versão de prompt e alerte com quedas de mais de 5 pontos percentuais',
             'Nenhuma métrica única cobre todos os tipos de saída — escolha com base no formato de saída esperado do seu prompt',
           ],
@@ -1192,7 +1192,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         llmAsJudge: {
           id: 'llm-as-judge',
           title: 'O que é avaliação LLM-as-judge?',
-          content: '**LLM-as-judge usa um modelo capaz — tipicamente GPT-5.5 ou Claude Opus 4.8 — para pontuar saídas contra uma rubrica.** Isso escala a avaliação para milhares de casos de teste sem revisão humana e lida com dimensões de qualidade que métricas binárias não conseguem capturar: coerência, tom, completude e exatidão factual.',
+          content: '**LLM-as-judge usa um modelo capaz — tipicamente GPT-5.6 ou Claude Opus 5 — para pontuar saídas contra uma rubrica.** Isso escala a avaliação para milhares de casos de teste sem revisão humana e lida com dimensões de qualidade que métricas binárias não conseguem capturar: coerência, tom, completude e exatidão factual.',
           columns: ['Dimensão', 'Vantagem', 'Limitação'],
           rows: [
             { 'Dimensão': 'Escala', 'Vantagem': 'Milhares de casos por hora', 'Limitação': 'O custo da API aumenta com o volume' },
@@ -1249,7 +1249,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Leituras relacionadas',
           items: [
             '[Como avaliar a qualidade dos prompts](/pt/prompt-engineering/how-to-evaluate-prompt-quality) — Framework de três componentes: precisão, consistência, taxa de seguimento',
-            '[Teste prompts entre modelos](/pt/prompt-engineering/how-to-test-prompts-across-models) — Execute o mesmo conjunto de teste no GPT-5.5, Claude e Gemini',
+            '[Teste prompts entre modelos](/pt/prompt-engineering/how-to-test-prompts-across-models) — Execute o mesmo conjunto de teste no GPT-5.6, Claude e Gemini',
             '[Auditoria de prompts e risco de regressão](/pt/prompt-engineering/prompt-audit-and-regression-risk) — Suites de regressão automatizadas e gates de CI/CD',
             '[Braintrust vs Prompthub vs Vellum](/pt/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo) — Comparação de plataformas de avaliação de prompts dedicadas para equipes',
             '[Melhores ferramentas de teste e avaliação de prompts 2026](/pt/prompt-engineering/best-prompt-testing-evaluation-tools) — Ferramentas avaliadas para QA sistemática de prompts',
@@ -1263,7 +1263,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'O que são métricas de avaliação de prompts?', a: 'Métricas de avaliação de prompts são sinais quantitativos que medem se um prompt produz a saída esperada de forma confiável. As métricas-chave incluem pass rate (correto/incorreto binário), BLEU (sobreposição de n-gramas para tradução e resumo), similaridade semântica (similaridade cosseno de embeddings) e LLM-as-judge (rubrica de qualidade para texto livre). Escolher a métrica errada produz pontuações enganosas.' },
             { q: 'O que é o pass rate na avaliação de prompts?', a: 'O pass rate é a porcentagem de entradas de teste onde a saída do prompt atende aos critérios de sucesso definidos. Ele mapeia diretamente para a taxa de falhas em produção e é a métrica mais útil para prompts de saída estruturada.' },
             { q: 'Quando você deve usar a pontuação BLEU para prompts?', a: 'BLEU é apropriado para tarefas de tradução e resumo onde a saída deve corresponder estreitamente a um texto de referência. É enganoso para geração de JSON, seguimento de instruções e escrita criativa.' },
-            { q: 'O que é avaliação LLM-as-judge?', a: 'LLM-as-judge usa GPT-5.5 ou Claude Opus 4.8 para pontuar saídas contra uma rubrica em escala. Lida com dimensões de qualidade matizadas que métricas binárias não conseguem capturar. O principal risco é o viés do modelo em direção ao seu próprio estilo de saída.' },
+            { q: 'O que é avaliação LLM-as-judge?', a: 'LLM-as-judge usa GPT-5.6 ou Claude Opus 5 para pontuar saídas contra uma rubrica em escala. Lida com dimensões de qualidade matizadas que métricas binárias não conseguem capturar. O principal risco é o viés do modelo em direção ao seu próprio estilo de saída.' },
             { q: 'Como você detecta regressão de métricas de prompts?', a: 'Rastreie sua métrica principal por versão de prompt e alerte quando cair mais de 5 pontos percentuais desde a linha de base. Execute o mesmo conjunto de teste antes e depois de cada alteração. Uma queda de mais de 10 pontos é uma regressão crítica.' },
             { q: 'Qual métrica devo usar para prompts de saída JSON?', a: 'Use pass/fail binário. Defina "passar" como: JSON válido + campos obrigatórios presentes + valores dentro do intervalo permitido. BLEU e similaridade semântica não fazem sentido para saídas estruturadas.' },
             { q: 'Você pode combinar múltiplas métricas de avaliação de prompts?', a: 'Sim — prompts de produção tipicamente precisam de uma métrica primária e uma secundária para detectar diferentes modos de falha. Rastreie ambas de forma independente e alerte se qualquer uma cair abaixo do limiar.' },
@@ -1315,7 +1315,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         'Similarité sémantique > 0,85 indique généralement un contenu sémantiquement équivalent',
         'LLM-as-Judge traite des milliers d\'évaluations par heure',
         'Une chute de 5 points en taux de réussite déclenche l\'alerte de régression standard',
-        'GPT-5.5 et Claude peuvent différer de 10–20 points sur le même ensemble de test',
+        'GPT-5.6 et Claude peuvent différer de 10–20 points sur le même ensemble de test',
       ],
       toc: [
         { label: 'Points clés', anchor: '#key-takeaways' },
@@ -1361,7 +1361,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Question', name: 'Que sont les métriques d\'évaluation de prompts ?', acceptedAnswer: { '@type': 'Answer', text: 'Les métriques d\'évaluation de prompts sont des signaux quantitatifs mesurant si un prompt produit la sortie souhaitée de manière fiable. Les métriques clés incluent le taux de réussite (correct/incorrect), le score BLEU (chevauchement n-gramme pour traduction et résumé), la similarité sémantique (similarité cosinus d\'embeddings pour paraphrases), et LLM-as-Judge (évaluation basée modèle pour texte libre). Choisir la mauvaise métrique produit des scores trompeurs.' } },
           { '@type': 'Question', name: 'Qu\'est-ce que le taux de réussite en évaluation de prompts ?', acceptedAnswer: { '@type': 'Answer', text: 'Le taux de réussite est le pourcentage d\'entrées de test où la sortie prompt satisfait les critères de succès définis. Taux de réussite = sorties réussies / nombre total de tests. C\'est la métrique la plus utile pour les sorties structurées car elle se traduit directement par le taux d\'erreur en production.' } },
           { '@type': 'Question', name: 'Quand utiliser le score BLEU pour les prompts ?', acceptedAnswer: { '@type': 'Answer', text: 'BLEU convient aux traductions et résumés où la sortie doit correspondre étroitement à un texte de référence. Il est trompeur pour JSON, l\'exécution d\'instructions et l\'écriture créative car il mesure le chevauchement de mots n-gramme, pas la conformité de format. Par exemple, un prompt d\'extraction JSON retournant la bonne structure avec une formulation différente obtient quasi zéro sur BLEU malgré une correction fonctionnelle.' } },
-          { '@type': 'Question', name: 'Qu\'est-ce que l\'évaluation LLM-as-Judge ?', acceptedAnswer: { '@type': 'Answer', text: 'LLM-as-Judge utilise un modèle capable comme GPT-5.5 ou Claude Opus 4.8 pour évaluer les sorties selon une rubrique. Il scale à des milliers de cas sans examen humain et gère les dimensions de qualité que les métriques binaires manquent. Le principal risque est le biais du modèle : le juge peut favoriser les sorties similaires à son style.' } },
+          { '@type': 'Question', name: 'Qu\'est-ce que l\'évaluation LLM-as-Judge ?', acceptedAnswer: { '@type': 'Answer', text: 'LLM-as-Judge utilise un modèle capable comme GPT-5.6 ou Claude Opus 5 pour évaluer les sorties selon une rubrique. Il scale à des milliers de cas sans examen humain et gère les dimensions de qualité que les métriques binaires manquent. Le principal risque est le biais du modèle : le juge peut favoriser les sorties similaires à son style.' } },
           { '@type': 'Question', name: 'Comment détecter une régression de métrique ?', acceptedAnswer: { '@type': 'Answer', text: 'Suivez votre métrique primaire par version de prompt et alertez si elle baisse de plus de 5 points. Le flux : enregistrer la métrique avant changement, faire le changement, relancer l\'ensemble de test, comparer à la baseline. Une baisse > 5 points bloque le déploiement. Une baisse > 10 points est critique et nécessite investigation.' } },
           { '@type': 'Question', name: 'Quelle métrique pour les sorties JSON ?', acceptedAnswer: { '@type': 'Answer', text: 'Utilisez taux de réussite binaire pour les sorties JSON. Définissez réussite comme : JSON valide + champs obligatoires présents + valeurs dans la plage admissible. BLEU et similarité sémantique ne sont pas significatifs pour les sorties structurées.' } },
           { '@type': 'Question', name: 'Peut-on combiner plusieurs métriques ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui — les prompts de production nécessitent généralement une métrique primaire (taux de réussite pour structuré, exactitude pour classification) et une métrique secondaire (similarité sémantique ou LLM-as-Judge). Un prompt d\'extraction JSON peut avoir 100% de taux de réussite mais produire des valeurs sémantiquement incorrectes. Suivez les deux indépendamment et alertez si l\'une baisse.' } },
@@ -1391,7 +1391,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Taux de réussite est la métrique la plus utile pour les prompts de production à sorties structurées',
             'Score BLEU mesure le chevauchement n-gramme, significatif seulement pour traduction et résumé',
             'Similarité sémantique surpasse BLEU pour paraphrases et reformulations',
-            'LLM-as-Judge utilise GPT-5.5 ou Claude Opus pour noter les sorties libres à grande échelle',
+            'LLM-as-Judge utilise GPT-5.6 ou Claude Opus pour noter les sorties libres à grande échelle',
             'Suivez le taux de réussite par version et alertez sur chutes > 5 points',
             'Pas une métrique unique pour tous — choisissez selon votre format de sortie',
           ],
@@ -1428,7 +1428,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         passRate: {
           id: 'pass-rate',
           title: 'Qu\'est-ce que le taux de réussite et pourquoi est-il si utile ?',
-          content: '**Le taux de réussite est le pourcentage d\'entrées de test où la sortie rencontre les critères de succès — et c\'est la métrique la plus utile car elle se traduit directement par le taux d\'erreur en production.** Un taux de 92% signifie 8% des demandes réelles échoueront.\n\nTaux de réussite = sorties réussies / nombre total de tests\n\nPour les sorties structurées, définissez « réussite » précisément avant les tests : JSON valide, champs obligatoires présents, valeurs dans l\'énumération admissible, longueur sous la limite. Pour la classification, « réussite » signifie le label correct est retourné.\n\nSuivez le taux de réussite par version de prompt. Une chute de plus de 5 points est une régression. Plus de 10 points bloque le déploiement en production. En avril 2026, PromptQuorum observe des taux médians de 88–94% pour les prompts d\'extraction JSON avec GPT-5.5 au premier déploiement. Quand vous [construisez une bibliothèque](/fr/prompt-engineering/build-a-prompt-library), établissez les baselines pour détecter les régressions.',
+          content: '**Le taux de réussite est le pourcentage d\'entrées de test où la sortie rencontre les critères de succès — et c\'est la métrique la plus utile car elle se traduit directement par le taux d\'erreur en production.** Un taux de 92% signifie 8% des demandes réelles échoueront.\n\nTaux de réussite = sorties réussies / nombre total de tests\n\nPour les sorties structurées, définissez « réussite » précisément avant les tests : JSON valide, champs obligatoires présents, valeurs dans l\'énumération admissible, longueur sous la limite. Pour la classification, « réussite » signifie le label correct est retourné.\n\nSuivez le taux de réussite par version de prompt. Une chute de plus de 5 points est une régression. Plus de 10 points bloque le déploiement en production. En avril 2026, PromptQuorum observe des taux médians de 88–94% pour les prompts d\'extraction JSON avec GPT-5.6 au premier déploiement. Quand vous [construisez une bibliothèque](/fr/prompt-engineering/build-a-prompt-library), établissez les baselines pour détecter les régressions.',
           callouts: [
             { type: 'warning', label: 'Attention', text: 'Taux de 90% = 10% des demandes échoueront. Fixez le seuil selon la tolérance au risque de production, pas selon ce qui paraît bien au tableau de bord.' }
           ],
@@ -1452,7 +1452,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         llmAsJudge: {
           id: 'llm-as-judge',
           title: 'LLM-as-Judge : l\'évaluation par modèle',
-          content: '**LLM-as-Judge utilise un modèle capable — généralement GPT-5.5 ou Claude Opus 4.8 — pour noter les sorties selon une rubrique.** Cela scale l\'évaluation à des milliers de cas sans examen humain et gère les dimensions de qualité que les métriques binaires manquent : cohérence, ton, complétude, exactitude factuelle.\n\nL\'approche du juge requiert :\n\n1. Une rubrique détaillée (critères de notation par dimension)\n2. Un format de sortie structuré (par ex. JSON avec score + justification)\n3. Quand vous [testez les prompts sur plusieurs modèles](/fr/prompt-engineering/how-to-test-prompts-across-models), calibrez le juge contre les jugements humains pour votre tâche',
+          content: '**LLM-as-Judge utilise un modèle capable — généralement GPT-5.6 ou Claude Opus 5 — pour noter les sorties selon une rubrique.** Cela scale l\'évaluation à des milliers de cas sans examen humain et gère les dimensions de qualité que les métriques binaires manquent : cohérence, ton, complétude, exactitude factuelle.\n\nL\'approche du juge requiert :\n\n1. Une rubrique détaillée (critères de notation par dimension)\n2. Un format de sortie structuré (par ex. JSON avec score + justification)\n3. Quand vous [testez les prompts sur plusieurs modèles](/fr/prompt-engineering/how-to-test-prompts-across-models), calibrez le juge contre les jugements humains pour votre tâche',
           columns: ['Dimension', 'Avantage', 'Limitation'],
           rows: [
             { 'Dimension': 'Scalabilité', 'Avantage': 'Milliers de cas par heure', 'Limitation': 'Le coût API augmente avec le volume' },
@@ -1509,7 +1509,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Lectures complémentaires',
           items: [
             '[Comment évaluer la qualité d\'un prompt](/fr/prompt-engineering/how-to-evaluate-prompt-quality) — Framework à trois composants : exactitude, consistance, taux de réussite',
-            '[Tester les prompts sur plusieurs modèles](/fr/prompt-engineering/how-to-test-prompts-across-models) — Exécuter le même ensemble sur GPT-5.5, Claude et Gemini',
+            '[Tester les prompts sur plusieurs modèles](/fr/prompt-engineering/how-to-test-prompts-across-models) — Exécuter le même ensemble sur GPT-5.6, Claude et Gemini',
             '[Audit de prompt et risque de régression](/fr/prompt-engineering/prompt-audit-and-regression-risk) — Suites automatisées et portes CI/CD',
             '[Braintrust vs Prompthub vs Vellum](/fr/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo) — Comparaison de plateformes d\'évaluation pour équipes',
             '[Meilleurs outils d\'évaluation de prompts 2026](/fr/prompt-engineering/best-prompt-testing-evaluation-tools) — Outils classés pour QA systématique',
@@ -1523,7 +1523,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'Que sont les métriques d\'évaluation de prompts ?', a: 'Ce sont des signaux quantitatifs mesurant si un prompt produit la sortie souhaitée fiablement. Les clés incluent taux de réussite (correct/incorrect), BLEU (chevauchement pour traduction/résumé), similarité sémantique (embeddings pour paraphrases) et LLM-as-Judge (rubrique modèle pour texte libre). Choisir mal produit des scores trompeurs.' },
             { q: 'Qu\'est-ce que le taux de réussite ?', a: 'Pourcentage d\'entrées de test où la sortie rencontre les critères de succès. C\'est la métrique la plus utile pour les sorties structurées car elle se traduit directement par le taux d\'erreur en production.' },
             { q: 'Quand utiliser BLEU ?', a: 'BLEU convient pour traduction et résumé où la sortie doit correspondre à une référence. Il est trompeur pour JSON, instructions et créatif car il mesure le chevauchement de mots, pas la correction sémantique. Un prompt correct avec formulation différente scores près de zéro malgré la fonctionnalité.' },
-            { q: 'Qu\'est-ce que LLM-as-Judge ?', a: 'Utilise GPT-5.5 ou Claude Opus pour noter les sorties selon une rubrique à l\'échelle. Gère les dimensions que les métriques binaires manquent. Principal risque : biais du modèle vers son propre style.' },
+            { q: 'Qu\'est-ce que LLM-as-Judge ?', a: 'Utilise GPT-5.6 ou Claude Opus pour noter les sorties selon une rubrique à l\'échelle. Gère les dimensions que les métriques binaires manquent. Principal risque : biais du modèle vers son propre style.' },
             { q: 'Comment détecter une régression ?', a: 'Suivez la métrique primaire par version et alertez si elle baisse de plus de 5 points. Flux : enregistrer avant, faire le changement, relancer les tests, comparer. Plus de 5 points bloque, plus de 10 est critique.' },
             { q: 'Quelle métrique pour JSON ?', a: 'Utilisez réussite/échec binaire. Définissez réussite comme JSON valide + champs obligatoires + valeurs autorisées. BLEU et similarité sémantique ne sont pas significatifs pour structuré.' },
             { q: 'Combiner des métriques ?', a: 'Oui — production nécessite généralement une primaire (taux pour structuré, exactitude pour classification) et une secondaire (similarité ou LLM-as-Judge) pour différents modes de panne. JSON peut avoir 100% réussite mais valeurs sémantiquement fausses. Suivez les deux indépendamment.' },
@@ -1574,7 +1574,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '意味的類似度0.85超は通常、意味的に等価なコンテンツを示す',
         'LLM-as-Judgeは1時間で数千の評価に拡張可能',
         '合格率の5ポイント低下は標準的な回帰アラート閾値',
-        'GPT-5.5とClaudeモデルは同じプロンプトテストセットで10–20ポイント異なる可能性がある',
+        'GPT-5.6とClaudeモデルは同じプロンプトテストセットで10–20ポイント異なる可能性がある',
       ],
       toc: [
         { label: '重要ポイント', anchor: '#key-takeaways' },
@@ -1620,7 +1620,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Question', name: 'プロンプト評価指標とは何ですか？', acceptedAnswer: { '@type': 'Answer', text: 'プロンプト評価指標は、プロンプトが意図した出力を確実に生成するかを測定する定量的シグナルです。重要な指標には合格率（正誤二値）、BLEUスコア（翻訳・要約用n-gram重複）、意味的類似度（言い換え用埋め込みコサイン類似度）、LLM-as-Judge（フリーテキスト用モデル評点）が含まれます。出力タイプに間違った指標を選ぶと、誤解を招くスコアが生じます。' } },
           { '@type': 'Question', name: 'プロンプト評価における合格率とは？', acceptedAnswer: { '@type': 'Answer', text: '合格率は、定義された成功基準を満たすテスト入力の割合です。合格率 = 合格出力 / テストケース総数。構造化出力に対して最も実用的な指標です。本番環境の失敗率に直結するからです。' } },
           { '@type': 'Question', name: 'プロンプトにBLEUスコアをいつ使うべきですか？', acceptedAnswer: { '@type': 'Answer', text: 'BLEUは翻訳・要約など、出力が参照テキストと密接に一致すべき場合に適切です。JSON生成、命令遵守、創作文には誤解を招きます。単語n-gram重複を測定し、形式遵守や意味的正確性は測定しないためです。例えば、正しい構造を返すがフレーズが異なるJSON抽出プロンプトは、機能的に正確なのにBLEUでほぼゼロになります。' } },
-          { '@type': 'Question', name: 'LLM-as-Judge評価とは何ですか？', acceptedAnswer: { '@type': 'Answer', text: 'LLM-as-JudgeはGPT-5.5やClaude Opus 4.8などの高性能モデルを使い、ルーブリックに基づいて出力を評点します。人間の審査なしに数千のテストケースに拡張でき、二値指標では捉えられない品質次元を扱います。主なリスクはモデルバイアス：判定者が自身のスタイルと類似した出力を高く評価する傾向があります。' } },
+          { '@type': 'Question', name: 'LLM-as-Judge評価とは何ですか？', acceptedAnswer: { '@type': 'Answer', text: 'LLM-as-JudgeはGPT-5.6やClaude Opus 5などの高性能モデルを使い、ルーブリックに基づいて出力を評点します。人間の審査なしに数千のテストケースに拡張でき、二値指標では捉えられない品質次元を扱います。主なリスクはモデルバイアス：判定者が自身のスタイルと類似した出力を高く評価する傾向があります。' } },
           { '@type': 'Question', name: 'プロンプト指標の回帰をどのように検出しますか？', acceptedAnswer: { '@type': 'Answer', text: 'プロンプトバージョンごとに主要指標を追跡し、確立されたベースラインから5ポイント以上低下したらアラートを出します。ワークフロー：変更前に指標を記録し、変更を実施し、完全なテストセットを再実行し、ベースラインと比較します。5ポイント以上の低下は展開をブロックします。10ポイント以上は調査が必要な重大回帰です。' } },
           { '@type': 'Question', name: 'JSON出力プロンプトにはどの指標を使うべきですか？', acceptedAnswer: { '@type': 'Answer', text: 'JSON出力プロンプトには二値合格/不合格を使用します。合格を以下のように定義します：有効なJSON + 必須フィールド存在 + 値は許可範囲内。BLEUと意味的類似度は構造化出力には意味がありません。' } },
           { '@type': 'Question', name: '複数のプロンプト評価指標を組み合わせられますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい—本番プロンプトは通常、主要指標（構造化には合格率、分類には正確度）と副次指標（意味的類似度またはLLM-as-Judge）が必要です。異なる障害モードを捉えるためです。JSON抽出プロンプトは合格率100%でも意味的に誤った値を生じる可能性があり、副次検査だけで検出されます。両方を独立して追跡し、どちらかが閾値を下回ったらアラートを出します。' } },
@@ -1650,7 +1650,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '合格率は構造化出力を持つ本番プロンプトで最も実用的な指標です',
             'BLEUスコアはn-gram重複を測定し、翻訳・要約タスクでのみ意味があります',
             '意味的類似度は言い換えと言い直しタスクでBLEUを上回ります',
-            'LLM-as-JudgeはGPT-5.5やClaude Opus 4.8を使い、微妙な自由記述を大規模に評点します',
+            'LLM-as-JudgeはGPT-5.6やClaude Opus 5を使い、微妙な自由記述を大規模に評点します',
             'プロンプトバージョンごとに合格率を追跡し、5ポイント超の低下でアラートを出します',
             '単一の指標がすべての出力タイプを網羅しません。出力形式に基づいて選択します',
           ],
@@ -1687,7 +1687,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         passRate: {
           id: 'pass-rate',
           title: '合格率とは？なぜ最も有用な指標なのか？',
-          content: '**合格率は、定義された成功基準を満たすテスト入力の割合です。最も実用的な指標です。本番環境の失敗率に直結するからです。** 92%の合格率は、実際のユーザーリクエストの8%が失敗することを意味します。\n\n合格率 = 合格出力 / テストケース総数\n\n構造化出力の場合、テスト前に「合格」を正確に定義してください：有効なJSON、必須フィールド存在、列挙値内の値、指定限度以下の長さ。分類の場合、「合格」は正しいラベルが返されたことを意味します。\n\nプロンプトバージョンごとに合格率を追跡します。5ポイント以上の低下は回帰です。10ポイント以上の低下は本番デプロイをブロックすべきです。2026年4月時点で、PromptQuorumは初回デプロイでGPT-5.5 JSON抽出プロンプトで88–94%の中央合格率を観察しています。[プロンプトライブラリを構築する](/ja/prompt-engineering/build-a-prompt-library)場合、各プロンプトのベースライン合格率を確立して回帰を検出してください。',
+          content: '**合格率は、定義された成功基準を満たすテスト入力の割合です。最も実用的な指標です。本番環境の失敗率に直結するからです。** 92%の合格率は、実際のユーザーリクエストの8%が失敗することを意味します。\n\n合格率 = 合格出力 / テストケース総数\n\n構造化出力の場合、テスト前に「合格」を正確に定義してください：有効なJSON、必須フィールド存在、列挙値内の値、指定限度以下の長さ。分類の場合、「合格」は正しいラベルが返されたことを意味します。\n\nプロンプトバージョンごとに合格率を追跡します。5ポイント以上の低下は回帰です。10ポイント以上の低下は本番デプロイをブロックすべきです。2026年4月時点で、PromptQuorumは初回デプロイでGPT-5.6 JSON抽出プロンプトで88–94%の中央合格率を観察しています。[プロンプトライブラリを構築する](/ja/prompt-engineering/build-a-prompt-library)場合、各プロンプトのベースライン合格率を確立して回帰を検出してください。',
           callouts: [
             { type: 'warning', label: '警告', text: '90%の合格率は実際のリクエストの10%が失敗することを意味します。本番環境リスク許容度に基づいて回帰閾値を設定してください。ダッシュボードで良く見えるもので設定しないでください。' }
           ],
@@ -1711,7 +1711,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         llmAsJudge: {
           id: 'llm-as-judge',
           title: 'LLM-as-Judgeによる評価',
-          content: '**LLM-as-JudgeはGPT-5.5やClaude Opus 4.8などの高性能モデルを使用してルーブリックに基づいて出力を評点します。** これにより評価が数千のテストケースに拡張可能になり、人間の審査なしで、二値指標では捉えられない品質次元を扱います。一貫性、トーン、完全性、事実的正確性。\n\nJudgeアプローチには以下が必要です ：\n\n1. 詳細なルーブリック（次元ごとに評点基準）\n2. 構造化出力形式（例：スコア + 正当性を含むJSON）\n3. [複数モデル間でプロンプトをテストする](/ja/prompt-engineering/how-to-test-prompts-across-models)場合、あなたの特定タスクに対してJudgeを人間の判定と校正します',
+          content: '**LLM-as-JudgeはGPT-5.6やClaude Opus 5などの高性能モデルを使用してルーブリックに基づいて出力を評点します。** これにより評価が数千のテストケースに拡張可能になり、人間の審査なしで、二値指標では捉えられない品質次元を扱います。一貫性、トーン、完全性、事実的正確性。\n\nJudgeアプローチには以下が必要です ：\n\n1. 詳細なルーブリック（次元ごとに評点基準）\n2. 構造化出力形式（例：スコア + 正当性を含むJSON）\n3. [複数モデル間でプロンプトをテストする](/ja/prompt-engineering/how-to-test-prompts-across-models)場合、あなたの特定タスクに対してJudgeを人間の判定と校正します',
           columns: ['評価軸', 'メリット', 'デメリット'],
           rows: [
             { '評価軸': '拡張性', 'メリット': '1時間に数千ケース', 'デメリット': 'API費用はボリュームで増加' },
@@ -1768,7 +1768,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '関連資料',
           items: [
             '[プロンプト品質を評価する方法](/ja/prompt-engineering/how-to-evaluate-prompt-quality) — 3成分フレームワーク：正確度、一貫性、命令遵守率',
-            '[複数モデル間でプロンプトをテストする](/ja/prompt-engineering/how-to-test-prompts-across-models) — GPT-5.5、Claude、Geminiで同じテストセットを実行',
+            '[複数モデル間でプロンプトをテストする](/ja/prompt-engineering/how-to-test-prompts-across-models) — GPT-5.6、Claude、Geminiで同じテストセットを実行',
             '[プロンプト監査と回帰リスク](/ja/prompt-engineering/prompt-audit-and-regression-risk) — 自動回帰スイートとCI/CDゲート',
             '[Braintrust vs Prompthub vs Vellum](/ja/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo) — チーム向け評価プラットフォーム比較',
             '[最高のプロンプトテスト・評価ツール2026](/ja/prompt-engineering/best-prompt-testing-evaluation-tools) — 体系的プロンプトQA用ツールランキング',
@@ -1782,7 +1782,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'プロンプト評価指標とは何ですか？', a: 'プロンプトが意図した出力を確実に生成するかを測定する定量的シグナルです。重要な指標：合格率（正誤）、BLEUスコア（翻訳・要約用n-gram）、意味的類似度（言い換え用埋め込みコサイン）、LLM-as-Judge（フリーテキスト用モデル評点）。出力タイプに間違った指標を選ぶと誤解を招くスコアになります。' },
             { q: 'プロンプト評価における合格率とは何ですか？', a: 'テスト入力で定義された成功基準を満たす割合です。本番環境の失敗率に直結し、構造化出力プロンプトで最も実用的な指標です。' },
             { q: 'プロンプトにBLEUスコアをいつ使うべきですか？', a: '翻訳・要約で参照テキストと出力が密接に一致すべき場合に使います。JSON、命令遵守、創作には誤解を招きます。n-gram単語重複を測定し、形式遵守や意味的正確性ではないからです。例：正しい構造を返すが異なるフレーズのJSON抽出プロンプトはBLEUでほぼゼロなのに機能的に正確です。' },
-            { q: 'LLM-as-Judge評価とは何ですか？', a: 'GPT-5.5やClaude Opus 4.8でルーブリックに基づいて出力を評点し、大規模に拡張します。二値指標では捉えられない品質次元を扱います。主なリスクはモデルバイアス：判定者が自身のスタイルに似た出力を優先する傾向。' },
+            { q: 'LLM-as-Judge評価とは何ですか？', a: 'GPT-5.6やClaude Opus 5でルーブリックに基づいて出力を評点し、大規模に拡張します。二値指標では捉えられない品質次元を扱います。主なリスクはモデルバイアス：判定者が自身のスタイルに似た出力を優先する傾向。' },
             { q: 'プロンプト指標の回帰をどのように検出しますか？', a: 'バージョンごとに主要指標を追跡し、ベースラインから5ポイント以上低下でアラート。フロー：変更前に記録、変更実施、テスト再実行、ベースラインと比較。5ポイント超は展開をブロック、10ポイント超は調査が必要な重大回帰です。' },
             { q: 'JSON出力プロンプトにはどの指標を使うべきですか？', a: '二値合格/不合格を使用。合格を以下のように定義：有効なJSON + 必須フィールド + 値は許可範囲。BLEUと意味的類似度は構造化出力には意味がありません。' },
             { q: '複数のプロンプト評価指標を組み合わせられますか？', a: 'はい—本番プロンプトは主要指標（構造化には合格率、分類には正確度）と副次指標（意味的類似度またはLLM-as-Judge）が必要です。JSON抽出は合格率100%でも意味的に誤った値を生じ、副次検査だけで検出。両方を独立追跡し、どちらかが閾値を下回ったらアラート。' },
@@ -1834,7 +1834,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '语义相似度0.85以上通常表示语义等价的内容',
         'LLM-as-Judge可扩展到每小时数千次评估',
         '通过率下降5点是标准的回归警报阈值',
-        'GPT-5.5和Claude模型在相同提示词测试集上可能相差10–20点',
+        'GPT-5.6和Claude模型在相同提示词测试集上可能相差10–20点',
       ],
       toc: [
         { label: '核心要点', anchor: '#key-takeaways' },
@@ -1880,7 +1880,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Question', name: '什么是提示词评估指标？', acceptedAnswer: { '@type': 'Answer', text: '提示词评估指标是定量信号，衡量提示词是否可靠地生成预期输出。关键指标包括通过率（正确/错误二值）、BLEU分数（翻译和摘要的n-gram重叠）、语义相似度（改写任务的嵌入余弦相似度）和LLM-as-Judge（自由文本的模型评分）。为输出类型选择错误的指标会产生误导性的分数。' } },
           { '@type': 'Question', name: '什么是提示词评估中的通过率？', acceptedAnswer: { '@type': 'Answer', text: '通过率是测试输入中满足定义的成功标准的百分比。通过率 = 合格输出 / 总测试用例。对于结构化输出，这是最实用的指标，因为它直接映射到生产失败率。' } },
           { '@type': 'Question', name: '何时应该为提示词使用BLEU分数？', acceptedAnswer: { '@type': 'Answer', text: 'BLEU适用于翻译和摘要任务，其中输出应该与参考文本紧密匹配。对于JSON生成、遵循指令和创意写作来说，它会误导，因为它测量n-gram单词重叠，而非格式合规性或语义正确性。例如，返回正确结构但措辞不同的JSON提取提示词在BLEU上的分数接近零，尽管功能上是正确的。' } },
-          { '@type': 'Question', name: 'LLM-as-Judge评估是什么？', acceptedAnswer: { '@type': 'Answer', text: 'LLM-as-Judge使用GPT-5.5或Claude Opus 4.8等强大的模型根据评分标准为输出评分。它可扩展到数千个测试用例，无需人工审查，并处理二值指标无法捕捉的质量维度。主要风险是模型偏见：评判者可能倾向于与其自身风格相似的输出。' } },
+          { '@type': 'Question', name: 'LLM-as-Judge评估是什么？', acceptedAnswer: { '@type': 'Answer', text: 'LLM-as-Judge使用GPT-5.6或Claude Opus 5等强大的模型根据评分标准为输出评分。它可扩展到数千个测试用例，无需人工审查，并处理二值指标无法捕捉的质量维度。主要风险是模型偏见：评判者可能倾向于与其自身风格相似的输出。' } },
           { '@type': 'Question', name: '如何检测提示词指标的回归？', acceptedAnswer: { '@type': 'Answer', text: '按提示词版本追踪主要指标，并在其从既定基准下降超过5个百分点时发出警报。工作流程：在任何变更前记录基准指标，进行变更，重新运行完整测试集，与基准进行比较。下降超过5点应阻止部署。下降超过10点是需要调查的关键回归。' } },
           { '@type': 'Question', name: '我应该为JSON输出提示词使用哪种指标？', acceptedAnswer: { '@type': 'Answer', text: '为JSON输出提示词使用二值通过/失败。将合格定义为：有效JSON + 必填字段存在 + 值在允许范围内。BLEU和语义相似度对结构化输出没有意义。' } },
           { '@type': 'Question', name: '可以组合多个提示词评估指标吗？', acceptedAnswer: { '@type': 'Answer', text: '可以——生产提示词通常需要主要指标（结构化输出用通过率、分类用准确性）和次要指标（语义相似度或LLM-as-Judge）来捕捉不同的失败模式。JSON提取提示词的通过率可能是100%，但会产生语义上错误的值，只有次要检查才能检测到。独立追踪两个指标，并在任一指标低于阈值时发出警报。' } },
@@ -1910,7 +1910,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '通过率是具有结构化输出的生产提示词最实用的指标',
             'BLEU分数测量n-gram重叠，仅对翻译和摘要任务有意义',
             '语义相似度在改写和言语改述任务中超过BLEU',
-            'LLM-as-Judge使用GPT-5.5或Claude Opus 4.8大规模评分微妙的自由文本',
+            'LLM-as-Judge使用GPT-5.6或Claude Opus 5大规模评分微妙的自由文本',
             '按提示词版本追踪通过率，在下降超过5点时发出警报',
             '没有单一指标适用所有输出类型——根据预期输出格式选择',
           ],
@@ -1947,7 +1947,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         passRate: {
           id: 'pass-rate',
           title: '通过率：为什么是最实用的指标？',
-          content: '**通过率是测试输入中满足定义的成功标准的百分比——也是最实用的指标，因为它直接映射到生产失败率。** 92%的通过率意味着实际用户请求的8%会失败。\n\n通过率 = 合格输出 / 总测试用例\n\n对于结构化输出，在测试前精确定义「合格」：有效JSON、必填字段存在、值在允许的枚举内、长度在指定限制以下。对于分类，「合格」意味着返回了正确的标签。\n\n按提示词版本追踪通过率。下降超过5个百分点是回归。下降超过10个百分点应阻止生产部署。截至2026年4月，PromptQuorum在首次部署时对GPT-5.5 JSON提取提示词观察到88–94%的中位数通过率。当你[构建提示词库](/zh/prompt-engineering/build-a-prompt-library)时，为每个提示词建立基准通过率以检测回归。',
+          content: '**通过率是测试输入中满足定义的成功标准的百分比——也是最实用的指标，因为它直接映射到生产失败率。** 92%的通过率意味着实际用户请求的8%会失败。\n\n通过率 = 合格输出 / 总测试用例\n\n对于结构化输出，在测试前精确定义「合格」：有效JSON、必填字段存在、值在允许的枚举内、长度在指定限制以下。对于分类，「合格」意味着返回了正确的标签。\n\n按提示词版本追踪通过率。下降超过5个百分点是回归。下降超过10个百分点应阻止生产部署。截至2026年4月，PromptQuorum在首次部署时对GPT-5.6 JSON提取提示词观察到88–94%的中位数通过率。当你[构建提示词库](/zh/prompt-engineering/build-a-prompt-library)时，为每个提示词建立基准通过率以检测回归。',
           callouts: [
             { type: 'warning', label: '警告', text: '90%的通过率意味着实际用户请求的10%会失败。根据生产风险容限设置回归阈值，而不是基于仪表板看起来不错的内容。' }
           ],
@@ -1971,7 +1971,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         llmAsJudge: {
           id: 'llm-as-judge',
           title: 'LLM-as-Judge评估方法',
-          content: '**LLM-as-Judge使用强大的模型（通常是GPT-5.5或Claude Opus 4.8）根据标准对输出进行评分。** 这将评估扩展到数千个测试用例，无需人工审查，并处理二值指标无法捕捉的质量维度：连贯性、语气、完整性和事实准确性。\n\nJudge方法需要：\n\n1. 详细的标准（每个维度的评分标准）\n2. 结构化的输出格式（例如包含分数和理由的JSON）\n3. 当你[跨模型测试提示词](/zh/prompt-engineering/how-to-test-prompts-across-models)时，针对你的特定任务将Judge与人工判断相校准',
+          content: '**LLM-as-Judge使用强大的模型（通常是GPT-5.6或Claude Opus 5）根据标准对输出进行评分。** 这将评估扩展到数千个测试用例，无需人工审查，并处理二值指标无法捕捉的质量维度：连贯性、语气、完整性和事实准确性。\n\nJudge方法需要：\n\n1. 详细的标准（每个维度的评分标准）\n2. 结构化的输出格式（例如包含分数和理由的JSON）\n3. 当你[跨模型测试提示词](/zh/prompt-engineering/how-to-test-prompts-across-models)时，针对你的特定任务将Judge与人工判断相校准',
           columns: ['评估维度', '优势', '局限性'],
           rows: [
             { '评估维度': '可扩展性', '优势': '每小时数千个案例', '局限性': 'API成本随体积增加' },
@@ -2028,7 +2028,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '延伸阅读',
           items: [
             '[如何评估提示词质量](/zh/prompt-engineering/how-to-evaluate-prompt-quality) — 三部分框架：准确性、一致性、指令遵从率',
-            '[跨模型测试提示词](/zh/prompt-engineering/how-to-test-prompts-across-models) — 在GPT-5.5、Claude和Gemini上运行相同测试集',
+            '[跨模型测试提示词](/zh/prompt-engineering/how-to-test-prompts-across-models) — 在GPT-5.6、Claude和Gemini上运行相同测试集',
             '[提示词审计和回归风险](/zh/prompt-engineering/prompt-audit-and-regression-risk) — 自动化回归套件和CI/CD门禁',
             '[Braintrust vs Prompthub vs Vellum](/zh/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo) — 比较团队的专用评估平台',
             '[最佳提示词测试与评估工具2026](/zh/prompt-engineering/best-prompt-testing-evaluation-tools) — 排名的系统提示词QA工具',
@@ -2042,7 +2042,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: '什么是提示词评估指标？', a: '定量信号，衡量提示词是否可靠地生成预期输出。关键指标包括通过率（正确/错误）、BLEU分数（翻译/摘要n-gram）、语义相似度（改写嵌入余弦）和LLM-as-Judge（自由文本模型评分）。为输出类型选择错误的指标会产生误导性的分数。' },
             { q: '什么是提示词评估中的通过率？', a: '测试输入中满足定义的成功标准的百分比。它直接映射到生产失败率，是结构化输出提示词最实用的指标。' },
             { q: '何时应该为提示词使用BLEU分数？', a: '适用于翻译和摘要，其中输出应与参考文本密切匹配。对于JSON、指令和创意来说它是误导的，因为它测量单词n-gram重叠，不是格式合规性或语义正确性。例如，返回正确结构但措辞不同的JSON提取提示词在BLEU上几乎零分，尽管功能正确。' },
-            { q: 'LLM-as-Judge评估是什么？', a: '使用GPT-5.5或Claude Opus 4.8根据标准为输出评分，大规模无需人工审查。处理二值指标无法捕捉的质量维度。主要风险是模型偏见：评判者可能倾向自身风格相似的输出。' },
+            { q: 'LLM-as-Judge评估是什么？', a: '使用GPT-5.6或Claude Opus 5根据标准为输出评分，大规模无需人工审查。处理二值指标无法捕捉的质量维度。主要风险是模型偏见：评判者可能倾向自身风格相似的输出。' },
             { q: '如何检测提示词指标的回归？', a: '按版本追踪主要指标，下降超过5点时发出警报。流程：变更前记录、进行变更、重新运行测试、与基准比较。下降超过5点阻止部署，超过10点是需要调查的关键回归。' },
             { q: '我应该为JSON输出提示词使用哪种指标？', a: '使用二值通过/失败。定义为：有效JSON + 必填字段 + 值在范围内。BLEU和语义相似度对结构化输出没有意义。' },
             { q: '可以组合多个提示词评估指标吗？', a: '可以——生产需要主要指标（结构化用通过率，分类用准确度）和次要指标（语义相似度或LLM-as-Judge）来捕捉不同故障模式。JSON可能100%通过率但值语义错误，只有次要检查能检测。独立追踪两者，任一低于阈值时发出警报。' },
@@ -2094,7 +2094,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '0.85 이상의 시맨틱 유사성은 일반적으로 의미론적으로 동등한 콘텐츠를 나타냅니다',
         'LLM-as-judge는 시간당 수천 건의 평가로 확장됩니다',
         'Pass rate가 5포인트 하락하는 것이 표준 회귀 경보 임계값입니다',
-        'GPT-5.5와 Claude 모델은 동일한 prompt 테스트 세트에서 10-20포인트 차이가 날 수 있습니다',
+        'GPT-5.6와 Claude 모델은 동일한 prompt 테스트 세트에서 10-20포인트 차이가 날 수 있습니다',
       ],
       toc: [
         { label: '핵심 요약', anchor: '#key-takeaways' },
@@ -2140,7 +2140,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Question', name: 'Prompt 평가 지표란 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: 'Prompt 평가 지표는 prompt가 의도한 출력을 안정적으로 생성하는지 측정하는 정량적 신호입니다. 주요 지표에는 pass rate(이진 정확/부정확), BLEU 점수(번역 및 요약을 위한 n-그램 겹침), 시맨틱 유사성(의역 작업을 위한 임베딩 코사인 유사성), LLM-as-judge(자유 텍스트를 위한 모델 점수 품질 루브릭)가 포함됩니다. 출력 유형에 잘못된 지표를 선택하면 오해의 소지가 있는 점수가 나옵니다.' } },
           { '@type': 'Question', name: 'Prompt 평가에서 pass rate란 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: 'Pass rate는 prompt 출력이 정의된 성공 기준을 충족하는 테스트 입력의 비율입니다. Pass rate = 통과한 출력 / 총 테스트 케이스. 구조화된 출력에 가장 실행 가능한 지표로, 프로덕션 실패율에 직접 매핑됩니다.' } },
           { '@type': 'Question', name: 'Prompt에 BLEU 점수를 언제 사용해야 합니까?', acceptedAnswer: { '@type': 'Answer', text: 'BLEU는 출력이 참조 텍스트와 밀접하게 일치해야 하는 번역 및 요약 작업에 적합합니다. n-그램 단어 겹침을 측정하고 형식 준수나 의미론적 정확성을 측정하지 않기 때문에 JSON 생성, 지시 따르기, 창의적 글쓰기에는 오해의 소지가 있습니다.' } },
-          { '@type': 'Question', name: 'LLM-as-judge 평가란 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: 'LLM-as-judge는 GPT-5.5 또는 Claude Opus 4.8 같은 유능한 모델을 사용하여 루브릭에 따라 출력을 점수화합니다. 인간 검토 없이 수천 건의 테스트 케이스로 확장되며 이진 지표가 놓치는 품질 차원을 처리합니다. 주요 위험은 모델 편향입니다: 판사가 자체 스타일과 유사한 출력을 더 높이 평가할 수 있습니다.' } },
+          { '@type': 'Question', name: 'LLM-as-judge 평가란 무엇입니까?', acceptedAnswer: { '@type': 'Answer', text: 'LLM-as-judge는 GPT-5.6 또는 Claude Opus 5 같은 유능한 모델을 사용하여 루브릭에 따라 출력을 점수화합니다. 인간 검토 없이 수천 건의 테스트 케이스로 확장되며 이진 지표가 놓치는 품질 차원을 처리합니다. 주요 위험은 모델 편향입니다: 판사가 자체 스타일과 유사한 출력을 더 높이 평가할 수 있습니다.' } },
           { '@type': 'Question', name: 'Prompt 지표 회귀를 어떻게 감지합니까?', acceptedAnswer: { '@type': 'Answer', text: 'Prompt 버전별 기본 지표를 추적하고 설정된 기준선에서 5포인트 이상 하락할 때 경보를 울리십시오. 워크플로우: 변경 전 기준선 지표 기록, 변경 수행, 전체 테스트 세트 재실행, 기준선과 비교. 5포인트 이상 하락 시 배포를 차단해야 합니다. 10포인트 이상 하락은 진행 전 조사가 필요한 심각한 회귀입니다.' } },
           { '@type': 'Question', name: 'JSON 출력 prompt에 어떤 지표를 사용해야 합니까?', acceptedAnswer: { '@type': 'Answer', text: 'JSON 출력 prompt에 이진 pass/fail을 사용하십시오. 통과를 다음과 같이 정의하십시오: 유효한 JSON + 필수 필드 존재 + 허용 범위 내의 값. BLEU와 시맨틱 유사성은 구조화된 출력에 의미가 없습니다.' } },
           { '@type': 'Question', name: '여러 prompt 평가 지표를 결합할 수 있습니까?', acceptedAnswer: { '@type': 'Answer', text: '네 — 프로덕션 prompt는 일반적으로 다양한 실패 모드를 포착하기 위해 기본 지표(구조화된 출력의 pass rate, 분류의 정확도)와 보조 지표(시맨틱 유사성 또는 LLM-as-judge)가 모두 필요합니다. 두 지표를 독립적으로 추적하고 임계값 아래로 떨어지면 경보를 울리십시오.' } },
@@ -2168,7 +2168,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Pass rate(올바른 출력 / 총계)는 구조화된 출력이 있는 프로덕션 prompt에 가장 실행 가능한 지표입니다',
             'BLEU 점수는 n-그램 겹침을 측정하며 번역 및 요약 작업에만 의미가 있습니다',
             '시맨틱 유사성(임베딩의 코사인 유사성)은 의역 및 재작성 작업에서 BLEU를 능가합니다',
-            'LLM-as-judge는 GPT-5.5 또는 Claude Opus 4.8을 사용하여 미묘한 자유 텍스트 출력을 대규모로 점수화합니다',
+            'LLM-as-judge는 GPT-5.6 또는 Claude Opus 5을 사용하여 미묘한 자유 텍스트 출력을 대규모로 점수화합니다',
             'Prompt 버전별 pass rate를 추적하고 5포인트 이상 하락 시 경보를 울리십시오',
             '모든 출력 유형을 커버하는 단일 지표는 없습니다 — prompt의 의도한 출력 형식에 따라 선택하십시오',
           ],
@@ -2229,7 +2229,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         llmAsJudge: {
           id: 'llm-as-judge',
           title: 'LLM-as-judge 평가란 무엇입니까?',
-          content: '**LLM-as-judge는 유능한 모델 — 일반적으로 GPT-5.5 또는 Claude Opus 4.8 — 을 사용하여 루브릭에 따라 출력을 점수화합니다.** 이것은 인간 검토 없이 수천 건의 테스트 케이스로 평가를 확장하고 이진 지표가 포착할 수 없는 품질 차원을 처리합니다: 일관성, 톤, 완전성, 사실적 정확성.',
+          content: '**LLM-as-judge는 유능한 모델 — 일반적으로 GPT-5.6 또는 Claude Opus 5 — 을 사용하여 루브릭에 따라 출력을 점수화합니다.** 이것은 인간 검토 없이 수천 건의 테스트 케이스로 평가를 확장하고 이진 지표가 포착할 수 없는 품질 차원을 처리합니다: 일관성, 톤, 완전성, 사실적 정확성.',
           columns: ['차원', '장점', '한계'],
           rows: [
             { '차원': '규모', '장점': '시간당 수천 건의 케이스', '한계': '볼륨에 따라 API 비용 증가' },
@@ -2286,7 +2286,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '관련 자료',
           items: [
             '[Prompt 품질 평가 방법](/ko/prompt-engineering/how-to-evaluate-prompt-quality) — 세 가지 구성 요소 프레임워크: 정확도, 일관성, 지시 준수율',
-            '[모델에 걸쳐 prompt 테스트하는 방법](/ko/prompt-engineering/how-to-test-prompts-across-models) — GPT-5.5, Claude, Gemini에서 동일한 테스트 세트 실행',
+            '[모델에 걸쳐 prompt 테스트하는 방법](/ko/prompt-engineering/how-to-test-prompts-across-models) — GPT-5.6, Claude, Gemini에서 동일한 테스트 세트 실행',
             '[Prompt 감사 및 회귀 위험](/ko/prompt-engineering/prompt-audit-and-regression-risk) — 자동화된 회귀 스위트 및 CI/CD 게이트',
             '[Braintrust vs Prompthub vs Vellum](/ko/prompt-engineering/braintrust-vs-prompthub-vs-vellum-vs-promptfoo) — 팀을 위한 전용 prompt 평가 플랫폼 비교',
             '[최고의 Prompt 테스트 및 평가 도구 2026](/ko/prompt-engineering/best-prompt-testing-evaluation-tools) — 체계적인 prompt QA를 위한 순위 도구',
@@ -2300,7 +2300,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'Prompt 평가 지표란 무엇입니까?', a: 'Prompt 평가 지표는 prompt가 의도한 출력을 안정적으로 생성하는지 측정하는 정량적 신호입니다. 주요 지표에는 pass rate, BLEU 점수, 시맨틱 유사성, LLM-as-judge가 포함됩니다. 출력 유형에 잘못된 지표를 선택하면 오해의 소지가 있는 점수가 나옵니다.' },
             { q: 'Prompt 평가에서 pass rate란 무엇입니까?', a: 'Pass rate는 출력이 정의된 성공 기준을 충족하는 테스트 입력의 비율입니다. 프로덕션 실패율에 직접 매핑되며 구조화된 출력 prompt에 가장 실행 가능한 지표입니다.' },
             { q: 'Prompt에 BLEU 점수를 언제 사용해야 합니까?', a: 'BLEU는 출력이 참조 텍스트와 밀접하게 일치해야 하는 번역 및 요약 작업에 적합합니다. 형식 준수나 의미론적 정확성이 아닌 n-그램 단어 겹침을 측정하기 때문에 JSON 생성, 지시 따르기, 창의적 글쓰기에는 오해의 소지가 있습니다.' },
-            { q: 'LLM-as-judge 평가란 무엇입니까?', a: 'LLM-as-judge는 GPT-5.5 또는 Claude Opus 4.8을 사용하여 대규모로 루브릭에 따라 출력을 점수화합니다. 이진 지표가 놓치는 미묘한 품질 차원을 처리합니다. 주요 위험은 자체 출력 스타일에 대한 모델 편향입니다.' },
+            { q: 'LLM-as-judge 평가란 무엇입니까?', a: 'LLM-as-judge는 GPT-5.6 또는 Claude Opus 5을 사용하여 대규모로 루브릭에 따라 출력을 점수화합니다. 이진 지표가 놓치는 미묘한 품질 차원을 처리합니다. 주요 위험은 자체 출력 스타일에 대한 모델 편향입니다.' },
             { q: 'Prompt 지표 회귀를 어떻게 감지합니까?', a: 'Prompt 버전별 기본 지표를 추적하고 설정된 기준선에서 5포인트 이상 하락할 때 경보를 울리십시오. 5포인트 이상 하락 시 배포를 차단해야 합니다. 10포인트 이상 하락은 진행 전 조사가 필요한 심각한 회귀입니다.' },
             { q: 'JSON 출력 prompt에 어떤 지표를 사용해야 합니까?', a: '이진 pass/fail을 사용하십시오. 통과를 유효한 JSON + 필수 필드 존재 + 허용 범위 내의 값으로 정의하십시오. BLEU와 시맨틱 유사성은 구조화된 출력에 의미가 없습니다.' },
             { q: '여러 prompt 평가 지표를 결합할 수 있습니까?', a: '네 — 프로덕션 prompt는 일반적으로 다양한 실패 모드를 포착하기 위해 기본 지표와 보조 지표가 모두 필요합니다. 두 지표를 독립적으로 추적하고 임계값 아래로 떨어지면 경보를 울리십시오.' },

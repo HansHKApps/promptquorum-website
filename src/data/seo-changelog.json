@@ -749,5 +749,19 @@
     ],
     "reason": "This flagship 'which AI model should I use' comparison article (3,834 lines) was discovered while investigating a smaller related fix on a different page (blog/ai-model-comparison). It was materially out of date -- the whole article discussed GPT-5.5 as current (one full generation behind GPT-5.6) and Claude Opus 4.8 (superseded by Opus 5 on 2026-07-24), with several pricing figures that were wrong even for the older models they named, not just stale. This is not part of the original 20-page GSC worklist -- found via a systematic site-wide check for the same stale facts (GPT-5.x version, Claude Opus version, Gemini context window) already verified and fixed on other pages during this campaign, since a page this central to the site's AI-model content being a full generation behind is a real risk regardless of its own GSC numbers.",
     "baseline": null
+  },
+  {
+    "id": "ff10750c-5409-4e41-b38e-8d3c68345128",
+    "slug": "site-wide",
+    "date": "2026-08-29T11:04:51.223Z",
+    "fields": [
+      {
+        "field": "content",
+        "old": "GPT-5.5/GPT-5.5 mini/Claude Opus 4.8 stale model references scattered across 50 prompt-engineering, local-llms, power-local-llm, blog, and prompt-bites files (illustrative current-model examples, benchmark tables, FAQ schema, entity mentions)",
+        "new": "renamed GPT-5.5 -> GPT-5.6, GPT-5.5 mini / GPT-5.6 mini -> GPT-5.6 Luna (mini is not a real GPT-5.6 tier name), and Claude Opus 4.8 -> Claude Opus 5 across all current-state mentions in 50 files, all locales present in each file"
+      }
+    ],
+    "reason": "Continuation of the same-session GPT-5.6/Opus-5 currency fix first applied to individual campaign pages (context-windows-explained.ts, gpt-claude-gemini-which-model.ts). Found ~2,300+ more stale 'Opus 4.8' instances across 49 additional files site-wide via grep, all following the same 'current illustrative model example' pattern already verified safe on the pages fixed earlier. Pre-checked every file for genuine historical/timeline framing before touching it: 3 files were correctly left untouched because they document Opus 4.8 as a deliberate historical/legacy reference with real point-in-time data (src/lib/shared/cutoff-data.ts's knowledge-cutoff table, glm-5-2-open-weights-frontier-2026.ts's 'at launch, June 2026' benchmark comparison, best-llm-right-now.ts's Opus-5-vs-its-predecessor generational improvement claim) -- renaming those would have corrupted real historical/benchmark data. Also fixed specific wrong pricing figures found along the way in tokens-costs-limits.ts (a dedicated token-pricing article): GPT-5.6 Sol was quoted at $15 output instead of $30, Claude Opus 5 at $3/$15 instead of $5/$25, Gemini 3.1 Pro at $3.50/$10.50 instead of $2/$12, and GPT-5.6 Luna at $0.15/$0.60 instead of $0.20/$1.20, with cost-ratio claims corrected from 33x/50x to the accurate ~25x, across all locales in that file. Did not chase downstream dependent example calculations in that file (e.g. one PromptQuorum-test cost-per-call scenario) since those would need full re-derivation from new prices, which is out of reasonable scope without re-running the actual test. Also found and fixed a separate, adjacent naming bug -- 'GPT-5.6 mini' (not a real tier; the family is Sol/Terra/Luna) -- in 5 files. Discovered but did NOT act on a further ~40 files with pure GPT-5.5 mentions unrelated to any Opus 4.8 co-occurrence -- that is a distinct, larger scope not part of the original request and flagged separately to the user rather than expanded into silently.",
+    "baseline": null
   }
 ]

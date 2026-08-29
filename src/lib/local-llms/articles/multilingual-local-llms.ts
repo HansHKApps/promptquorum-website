@@ -42,7 +42,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**European languages (German, French, Spanish, Italian)**: Mistral and Llama 3.x are competitive with Qwen3 for EU languages; Qwen3 still leads on code-mixed and formal register tasks.',
             '**Japanese and Korean**: Qwen3 is significantly stronger -- 15-25% better on language-specific benchmarks than Llama 3.x at the same size.',
             '**Chinese (Simplified and Traditional)**: Qwen3 is the dominant model -- trained on the largest Chinese corpus of any open-weight model.',
-            'As of April 2026, no locally-runnable model matches GPT-5.5 or Claude Opus 4.8 quality in Japanese or Korean for complex tasks. Qwen3 is the best available locally.',
+            'As of April 2026, no locally-runnable model matches GPT-5.6 or Claude Opus 5 quality in Japanese or Korean for complex tasks. Qwen3 is the best available locally.',
           ],
         },
         whichSupport: {
@@ -93,7 +93,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'Which Local LLMs Perform Best for Arabic?',
           content: [
             '**Arabic presents a unique challenge due to its right-to-left script, morphological complexity, and the large number of dialects (Modern Standard Arabic vs.** Egyptian, Gulf, Levantine). Qwen3 and Gemma 4 are the strongest locally-runnable Arabic models.',
-            'For MSA (Modern Standard Arabic) instruction-following, Qwen3 14B and larger produce acceptable quality. For dialect Arabic, all local models perform significantly worse than cloud models like GPT-5.5, which has broader Arabic dialect coverage.',
+            'For MSA (Modern Standard Arabic) instruction-following, Qwen3 14B and larger produce acceptable quality. For dialect Arabic, all local models perform significantly worse than cloud models like GPT-5.6, which has broader Arabic dialect coverage.',
           ],
         },
         howToBenchmark: {
@@ -104,7 +104,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Run m-MMLU -- the multilingual version of MMLU covering 57 subjects in multiple languages.',
             'For conversational quality: write 10 test prompts in your target language covering different task types (summarization, Q&A, translation, creative writing). Evaluate responses manually or with a native speaker.',
             'For Japanese specifically: use JMT-bench (github.com/Stability-AI/lm-evaluation-harness) which covers Japanese instruction-following.',
-            'Compare your local model against cloud APIs using [PromptQuorum](/) -- send the same multilingual prompt to your local Ollama model and GPT-5.5 simultaneously to quantify the quality gap on your specific use case.',
+            'Compare your local model against cloud APIs using [PromptQuorum](/) -- send the same multilingual prompt to your local Ollama model and GPT-5.6 simultaneously to quantify the quality gap on your specific use case.',
           ],
         },
         comparisonTable: {
@@ -215,7 +215,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**Idiomas europeos (alemán, francés, español, italiano)**: Mistral y Llama 3.x son competitivos con Qwen3 para idiomas de la UE; Qwen3 sigue liderando en tareas de registro formal y código mixto.',
             '**Japonés y coreano**: Qwen3 es significativamente más fuerte -- 15-25% mejor en benchmarks específicos de idioma que Llama 3.x en el mismo tamaño.',
             '**Chino (simplificado y tradicional)**: Qwen3 es el modelo dominante -- entrenado con el mayor corpus chino de cualquier modelo de pesos abiertos.',
-            'Ningún modelo ejecutable localmente iguala la calidad de GPT-5.5 o Claude Opus 4.8 en japonés o coreano para tareas complejas. Qwen3 es la mejor opción disponible localmente.',
+            'Ningún modelo ejecutable localmente iguala la calidad de GPT-5.6 o Claude Opus 5 en japonés o coreano para tareas complejas. Qwen3 es la mejor opción disponible localmente.',
           ],
         },
         whichSupport: {
@@ -266,7 +266,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: '¿Qué LLM locales funcionan mejor para el árabe?',
           content: [
             '**El árabe presenta un desafío único por su escritura de derecha a izquierda, su complejidad morfológica y la gran cantidad de dialectos (árabe estándar moderno vs.** egipcio, del Golfo, levantino). Qwen3 y Gemma 4 son los modelos árabes ejecutables localmente más potentes.',
-            'Para el seguimiento de instrucciones en MSA (árabe estándar moderno), Qwen3 14B y versiones más grandes producen calidad aceptable. Para el árabe dialectal, todos los modelos locales rinden significativamente peor que los modelos en la nube como GPT-5.5, que tiene mayor cobertura de dialectos árabes.',
+            'Para el seguimiento de instrucciones en MSA (árabe estándar moderno), Qwen3 14B y versiones más grandes producen calidad aceptable. Para el árabe dialectal, todos los modelos locales rinden significativamente peor que los modelos en la nube como GPT-5.6, que tiene mayor cobertura de dialectos árabes.',
           ],
         },
         howToBenchmark: {
@@ -277,7 +277,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Ejecuta m-MMLU -- la versión multilingue de MMLU que cubre 57 materias en varios idiomas.',
             'Para calidad conversacional: escribe 10 prompts de prueba en tu idioma objetivo que abarquen distintos tipos de tarea (resumen, preguntas y respuestas, traducción, escritura creativa). Evalúa las respuestas manualmente o con un hablante nativo.',
             'Para japonés específicamente: usa JMT-bench (github.com/Stability-AI/lm-evaluation-harness), que cubre el seguimiento de instrucciones en japonés.',
-            'Compara tu modelo local con APIs en la nube usando [PromptQuorum](/) -- envía el mismo prompt multilingue a tu modelo Ollama local y a GPT-5.5 simultáneamente para cuantificar la diferencia de calidad en tu caso de uso específico.',
+            'Compara tu modelo local con APIs en la nube usando [PromptQuorum](/) -- envía el mismo prompt multilingue a tu modelo Ollama local y a GPT-5.6 simultáneamente para cuantificar la diferencia de calidad en tu caso de uso específico.',
           ],
         },
         comparisonTable: {
@@ -420,7 +420,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '@type': 'HowToStep',
             'position': 5,
             'name': 'Comparar con APIs en la nube',
-            'text': 'Compara tu modelo local con APIs en la nube usando PromptQuorum -- envía el mismo prompt multilingue a tu modelo Ollama local y a GPT-5.5 simultáneamente para cuantificar la diferencia de calidad en tu caso de uso específico.'
+            'text': 'Compara tu modelo local con APIs en la nube usando PromptQuorum -- envía el mismo prompt multilingue a tu modelo Ollama local y a GPT-5.6 simultáneamente para cuantificar la diferencia de calidad en tu caso de uso específico.'
           }
         ]
       },
@@ -549,7 +549,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**اللغات الأوروبية (الألمانية، الفرنسية، الإسبانية، الإيطالية)**: Mistral وLlama 3.x تنافسان Qwen3 للغات الاتحاد الأوروبي؛ يبقى Qwen3 متصدرًا في مهام التسجيل الرسمي والشيفرة المختلطة.',
             '**اليابانية والكورية**: Qwen3 أقوى بشكل ملحوظ -- أفضل بنسبة 15-25% في اختبارات الأداء الخاصة باللغة من Llama 3.x في نفس الحجم.',
             '**الصينية (المبسطة والتقليدية)**: Qwen3 هو النموذج المهيمن -- مدرَّب على أكبر مدوّنة صينية لأي نموذج مفتوح الأوزان.',
-            'لا يضاهي أي نموذج قابل للتشغيل محليًا جودة GPT-5.5 أو Claude Opus 4.8 في اليابانية أو الكورية للمهام المعقدة. Qwen3 هو أفضل خيار متاح محليًا.',
+            'لا يضاهي أي نموذج قابل للتشغيل محليًا جودة GPT-5.6 أو Claude Opus 5 في اليابانية أو الكورية للمهام المعقدة. Qwen3 هو أفضل خيار متاح محليًا.',
           ],
         },
         whichSupport: {
@@ -600,7 +600,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'أي نماذج LLM المحلية تعمل بشكل أفضل للعربية؟',
           content: [
             '**تطرح العربية تحديًا فريدًا بسبب كتابتها من اليمين إلى اليسار وتعقيدها الصرفي وكثرة لهجاتها (العربية الفصحى الحديثة مقابل** المصرية والخليجية والشامية). Qwen3 وGemma 4 هما أقوى النماذج العربية القابلة للتشغيل محليًا. كما تقدّم نماذج عربية سيادية مثل Jais وALLaM وFalcon دعمًا محليًا قويًا للعربية.',
-            'لاتباع التعليمات بالفصحى (العربية الفصحى الحديثة)، ينتج Qwen3 14B والإصدارات الأكبر جودة مقبولة. للعربية العامية، تؤدي جميع النماذج المحلية أسوأ بشكل ملحوظ من النماذج السحابية مثل GPT-5.5، التي لها تغطية أكبر للهجات العربية.',
+            'لاتباع التعليمات بالفصحى (العربية الفصحى الحديثة)، ينتج Qwen3 14B والإصدارات الأكبر جودة مقبولة. للعربية العامية، تؤدي جميع النماذج المحلية أسوأ بشكل ملحوظ من النماذج السحابية مثل GPT-5.6، التي لها تغطية أكبر للهجات العربية.',
           ],
         },
         howToBenchmark: {
@@ -611,7 +611,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'شغّل m-MMLU -- النسخة متعددة اللغات من MMLU التي تغطي 57 مادة بعدة لغات.',
             'للجودة الحوارية: اكتب 10 محفّزات اختبار بلغتك المستهدفة تشمل أنواع مهام مختلفة (تلخيص، أسئلة وأجوبة، ترجمة، كتابة إبداعية). قيّم الإجابات يدويًا أو مع متحدث أصلي.',
             'لليابانية تحديدًا: استخدم JMT-bench (github.com/Stability-AI/lm-evaluation-harness)، الذي يغطي اتباع التعليمات باليابانية.',
-            'قارن نموذجك المحلي بواجهات API السحابية باستخدام [PromptQuorum](/) -- أرسل نفس المحفّز متعدد اللغات إلى نموذج Ollama المحلي وإلى GPT-5.5 في آنٍ واحد لقياس فرق الجودة في حالة استخدامك المحددة.',
+            'قارن نموذجك المحلي بواجهات API السحابية باستخدام [PromptQuorum](/) -- أرسل نفس المحفّز متعدد اللغات إلى نموذج Ollama المحلي وإلى GPT-5.6 في آنٍ واحد لقياس فرق الجودة في حالة استخدامك المحددة.',
           ],
         },
         comparisonTable: {
@@ -754,7 +754,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '@type': 'HowToStep',
             'position': 5,
             'name': 'المقارنة مع واجهات API السحابية',
-            'text': 'قارن نموذجك المحلي بواجهات API السحابية باستخدام PromptQuorum -- أرسل نفس المحفّز متعدد اللغات إلى نموذج Ollama المحلي وإلى GPT-5.5 في آنٍ واحد لقياس فرق الجودة في حالة استخدامك المحددة.'
+            'text': 'قارن نموذجك المحلي بواجهات API السحابية باستخدام PromptQuorum -- أرسل نفس المحفّز متعدد اللغات إلى نموذج Ollama المحلي وإلى GPT-5.6 في آنٍ واحد لقياس فرق الجودة في حالة استخدامك المحددة.'
           }
         ]
       },
@@ -884,7 +884,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**Japonês e coreano**: Qwen3 é significativamente mais forte — 15–25% melhor em benchmarks específicos de idioma que o Llama 3.x no mesmo tamanho.',
             '**Chinês (simplificado e tradicional)**: Qwen3 é o modelo dominante — treinado com o maior corpus chinês de qualquer modelo de pesos abertos.',
             '**Português (Brasil e Portugal)**: Qwen3 e Mistral oferecem bom suporte; Qwen3 8B lidera em seguimento de instruções formais em português.',
-            'Nenhum modelo executável localmente iguala a qualidade do GPT-5.5 ou Claude Opus 4.8 em japonês ou coreano para tarefas complexas. Qwen3 é a melhor opção disponível localmente.',
+            'Nenhum modelo executável localmente iguala a qualidade do GPT-5.6 ou Claude Opus 5 em japonês ou coreano para tarefas complexas. Qwen3 é a melhor opção disponível localmente.',
           ],
         },
         whichSupport: {
@@ -934,7 +934,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'Quais LLMs locais funcionam melhor para árabe e línguas do Oriente Médio?',
           content: [
             '**O árabe é o idioma mais desafiador para modelos locais** por causa da escrita da direita para a esquerda (RTL), morfologia complexa e a distinção entre árabe moderno padrão (MSA) e dialetos.',
-            'Qwen3 e Gemma 4 oferecem o melhor suporte ao árabe em modelos executáveis localmente. O Llama 3.x tem suporte ao árabe limitado. Para árabe de qualidade profissional, nenhum modelo local atinge a qualidade do GPT-5.5.',
+            'Qwen3 e Gemma 4 oferecem o melhor suporte ao árabe em modelos executáveis localmente. O Llama 3.x tem suporte ao árabe limitado. Para árabe de qualidade profissional, nenhum modelo local atinge a qualidade do GPT-5.6.',
           ],
           rows: [
             { 'Modelo': 'Qwen3 8B', 'Pontuação MSA (1–5)': '★★★', 'Pontuação dialeto': '★★', 'Velocidade de geração': '30–50 tok/s' },
@@ -954,7 +954,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Execute o m-MMLU -- a versão multilíngue do MMLU, cobrindo 57 disciplinas em vários idiomas.',
             'Para qualidade conversacional: escreva 10 prompts de teste no idioma alvo cobrindo diferentes tipos de tarefa (resumo, perguntas e respostas, tradução, escrita criativa). Avalie as respostas manualmente ou com um falante nativo.',
             'Para japonês especificamente: use o JMT-bench (github.com/Stability-AI/lm-evaluation-harness), que cobre o seguimento de instruções em japonês.',
-            'Compare seu modelo local com APIs na nuvem usando o [PromptQuorum](/pt) -- envie o mesmo prompt multilíngue simultaneamente para seu modelo Ollama local e para o GPT-5.5 para quantificar a diferença de qualidade no seu caso de uso específico.',
+            'Compare seu modelo local com APIs na nuvem usando o [PromptQuorum](/pt) -- envie o mesmo prompt multilíngue simultaneamente para seu modelo Ollama local e para o GPT-5.6 para quantificar a diferença de qualidade no seu caso de uso específico.',
           ],
         },
         comparisonTable: {
@@ -978,7 +978,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**Assumir que qualquer LLM suporta bem todos os idiomas.** O Llama 3.1 8B tem suporte limitado ao japonês, coreano e árabe — para esses idiomas, use Qwen3 ou Gemma 4.',
             '**Usar o modelo de embedding errado.** Para RAG multilíngue, o bge-m3 (suporte a 100+ idiomas) supera o nomic-embed-text em idiomas não-ingleses.',
             '**Ignorar diferenças de tokenização.** Modelos com tokenização nativa do idioma (Qwen3 para chinês/japonês/coreano) processam texto 30–40% mais eficientemente, reduzindo o custo de inferência.',
-            '**Esperar qualidade de nível GPT-5.5 em modelos locais para idiomas asiáticos.** A lacuna é maior do que em inglês. Para uso profissional crítico em japonês/coreano, os modelos locais ainda ficam atrás.',
+            '**Esperar qualidade de nível GPT-5.6 em modelos locais para idiomas asiáticos.** A lacuna é maior do que em inglês. Para uso profissional crítico em japonês/coreano, os modelos locais ainda ficam atrás.',
           ],
         },
         faqSection: {
@@ -1267,8 +1267,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               a: 'Sie haben ähnliche Geschwindigkeit. **Ollama** ist einsteigerfreundlich (CLI, Web-UI). **llama.cpp** ist direkter und schneller für High-Performance-Setup. Für Anfänger: Ollama. Für Experten: llama.cpp.'
             },
             {
-              q: 'Wie viel kostet das Ausführen eines lokalen LLMs im Vergleich zu OpenAI GPT-5.5?',
-              a: 'Lokale Nutzung (Hardware-Amortisation): $0 pro Anfrage (nach Hardwarekauf). GPT-5.5 API: $0,03 pro 1K Input-Tokens, $0,06 pro 1K Output-Tokens. Bei 1.000 Anfragen pro Monat: Lokal $0, GPT-5.5 $30-100.'
+              q: 'Wie viel kostet das Ausführen eines lokalen LLMs im Vergleich zu OpenAI GPT-5.6?',
+              a: 'Lokale Nutzung (Hardware-Amortisation): $0 pro Anfrage (nach Hardwarekauf). GPT-5.6 API: $0,03 pro 1K Input-Tokens, $0,06 pro 1K Output-Tokens. Bei 1.000 Anfragen pro Monat: Lokal $0, GPT-5.6 $30-100.'
             },
             {
               q: 'Kann ich ein 13B-Modell auf meinem Laptop ausführen?',
@@ -1292,7 +1292,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             },
             {
               q: 'Kann ein lokales LLM bei großen Batch-Verarbeitungen (100+ Anfragen) mit OpenAI konkurrieren?',
-              a: 'Bei Latenzanforderungen: Nein. OpenAI GPT-5.5 ist 5-10x schneller. Bei Kostenoptimierung: Ja, lokal ist kostengünstiger. Trade-Off: Wählen Sie lokal für Datenschutz/Offline, OpenAI für Geschwindigkeit/Präzision.'
+              a: 'Bei Latenzanforderungen: Nein. OpenAI GPT-5.6 ist 5-10x schneller. Bei Kostenoptimierung: Ja, lokal ist kostengünstiger. Trade-Off: Wählen Sie lokal für Datenschutz/Offline, OpenAI für Geschwindigkeit/Präzision.'
             },
             {
               q: 'Sollte ich CPU- oder GPU-Inferenz verwenden?',
@@ -1439,10 +1439,10 @@ schema: {
           },
           {
             '@type': 'Question',
-            'name': 'Wie viel kostet das Ausführen eines lokalen LLMs im Vergleich zu OpenAI GPT-5.5?',
+            'name': 'Wie viel kostet das Ausführen eines lokalen LLMs im Vergleich zu OpenAI GPT-5.6?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Lokale Nutzung (Hardware-Amortisation): $0 pro Anfrage (nach Hardwarekauf). GPT-5.5 API: $0,03 pro 1K Input-Tokens, $0,06 pro 1K Output-Tokens. Bei 1.000 Anfragen pro Monat: Lokal $0, GPT-5.5 $30-100.'
+              'text': 'Lokale Nutzung (Hardware-Amortisation): $0 pro Anfrage (nach Hardwarekauf). GPT-5.6 API: $0,03 pro 1K Input-Tokens, $0,06 pro 1K Output-Tokens. Bei 1.000 Anfragen pro Monat: Lokal $0, GPT-5.6 $30-100.'
             }
           },
           {
@@ -1490,7 +1490,7 @@ schema: {
             'name': 'Kann ein lokales LLM bei großen Batch-Verarbeitungen (100+ Anfragen) mit OpenAI konkurrieren?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Bei Latenzanforderungen: Nein. OpenAI GPT-5.5 ist 5-10x schneller. Bei Kostenoptimierung: Ja, lokal ist kostengünstiger. Trade-Off: Wählen Sie lokal für Datenschutz/Offline, OpenAI für Geschwindigkeit/Präzision.'
+              'text': 'Bei Latenzanforderungen: Nein. OpenAI GPT-5.6 ist 5-10x schneller. Bei Kostenoptimierung: Ja, lokal ist kostengünstiger. Trade-Off: Wählen Sie lokal für Datenschutz/Offline, OpenAI für Geschwindigkeit/Präzision.'
             }
           },
           {
@@ -1802,8 +1802,8 @@ schema: {
               a: 'Ils ont une vitesse similaire. **Ollama** est convivial pour les débutants (CLI, Web UI). **llama.cpp** est plus direct et plus rapide pour la configuration haute performance. Pour les débutants : Ollama. Pour les experts : llama.cpp.'
             },
             {
-              q: 'Combien coûte l\'exécution d\'un LLM local comparé à OpenAI GPT-5.5 ?',
-              a: 'Utilisation locale (amortissement matériel) : 0 $ par requête (après l\'achat du matériel). API GPT-5.5 : 0.03 $ par 1K tokens d\'entrée, 0.06 $ par 1K tokens de sortie. Pour 1.000 requêtes par mois : local 0 $, GPT-5.5 30-100 $.'
+              q: 'Combien coûte l\'exécution d\'un LLM local comparé à OpenAI GPT-5.6 ?',
+              a: 'Utilisation locale (amortissement matériel) : 0 $ par requête (après l\'achat du matériel). API GPT-5.6 : 0.03 $ par 1K tokens d\'entrée, 0.06 $ par 1K tokens de sortie. Pour 1.000 requêtes par mois : local 0 $, GPT-5.6 30-100 $.'
             },
             {
               q: 'Puis-je exécuter un modèle 13B sur mon ordinateur portable ?',
@@ -1827,7 +1827,7 @@ schema: {
             },
             {
               q: 'Un LLM local peut-il rivaliser avec OpenAI pour les traitements par lot importants (100+ requêtes) ?',
-              a: 'Pour les exigences de latence : non. OpenAI GPT-5.5 est 5-10x plus rapide. Pour l\'optimisation des coûts : oui, le local est plus rentable. Compromis : choisissez local pour la confidentialité/hors ligne, OpenAI pour la vitesse/précision.'
+              a: 'Pour les exigences de latence : non. OpenAI GPT-5.6 est 5-10x plus rapide. Pour l\'optimisation des coûts : oui, le local est plus rentable. Compromis : choisissez local pour la confidentialité/hors ligne, OpenAI pour la vitesse/précision.'
             },
             {
               q: 'Devrais-je utiliser l\'inférence CPU ou GPU ?',
@@ -1965,10 +1965,10 @@ schema: {
           },
           {
             '@type': 'Question',
-            'name': 'Combien coûte l\'exécution d\'un LLM local comparé à OpenAI GPT-5.5 ?',
+            'name': 'Combien coûte l\'exécution d\'un LLM local comparé à OpenAI GPT-5.6 ?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Utilisation locale (amortissement matériel) : 0 $ par requête (après l\'achat du matériel). API GPT-5.5 : 0.03 $ par 1K tokens d\'entrée, 0.06 $ par 1K tokens de sortie. Pour 1.000 requêtes par mois : local 0 $, GPT-5.5 30-100 $.'
+              'text': 'Utilisation locale (amortissement matériel) : 0 $ par requête (après l\'achat du matériel). API GPT-5.6 : 0.03 $ par 1K tokens d\'entrée, 0.06 $ par 1K tokens de sortie. Pour 1.000 requêtes par mois : local 0 $, GPT-5.6 30-100 $.'
             }
           },
           {
@@ -2016,7 +2016,7 @@ schema: {
             'name': 'Un LLM local peut-il rivaliser avec OpenAI pour les traitements par lot importants (100+ requêtes) ?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'Pour les exigences de latence : non. OpenAI GPT-5.5 est 5-10x plus rapide. Pour l\'optimisation des coûts : oui, le local est plus rentable. Compromis : choisissez local pour la confidentialité/hors ligne, OpenAI pour la vitesse/précision.'
+              'text': 'Pour les exigences de latence : non. OpenAI GPT-5.6 est 5-10x plus rapide. Pour l\'optimisation des coûts : oui, le local est plus rentable. Compromis : choisissez local pour la confidentialité/hors ligne, OpenAI pour la vitesse/précision.'
             }
           },
           {
@@ -2312,8 +2312,8 @@ schema: {
               a: '速度は同等。**Ollama** は初心者向けで使い易い（CLI、Web UI）。**llama.cpp** より直接的で高性能セットアップで高速。初心者：Ollama、エキスパート：llama.cpp。'
             },
             {
-              q: 'ローカルLLM実行 vs OpenAI GPT-5.5 のコスト比較？',
-              a: 'ローカル利用（ハードウェア償却後）：$0/クエリ。GPT-5.5 API：$0.03/1K 入力トークン、$0.06/1K 出力トークン。月 1,000 クエリ：ローカル $0、GPT-5.5 $30-100。'
+              q: 'ローカルLLM実行 vs OpenAI GPT-5.6 のコスト比較？',
+              a: 'ローカル利用（ハードウェア償却後）：$0/クエリ。GPT-5.6 API：$0.03/1K 入力トークン、$0.06/1K 出力トークン。月 1,000 クエリ：ローカル $0、GPT-5.6 $30-100。'
             },
             {
               q: 'ノート PC で 13B モデル実行可能？',
@@ -2337,7 +2337,7 @@ schema: {
             },
             {
               q: '大規模バッチ処理（100+クエリ）で OpenAI と競争可能？',
-              a: 'レイテンシ要件：いいえ。OpenAI GPT-5.5 は 5-10x 高速。コスト最適化：はい、ローカル費用効率的。トレードオフ：プライバシー/オフラインはローカル、速度/精度は OpenAI。'
+              a: 'レイテンシ要件：いいえ。OpenAI GPT-5.6 は 5-10x 高速。コスト最適化：はい、ローカル費用効率的。トレードオフ：プライバシー/オフラインはローカル、速度/精度は OpenAI。'
             },
             {
               q: 'CPU または GPU 推論選択？',
@@ -2479,10 +2479,10 @@ schema: {
           },
           {
             '@type': 'Question',
-            'name': 'ローカルLLM実行 vs OpenAI GPT-5.5 のコスト比較？',
+            'name': 'ローカルLLM実行 vs OpenAI GPT-5.6 のコスト比較？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'ローカル利用（ハードウェア償却後）：$0/クエリ。GPT-5.5 API：$0.03/1K 入力トークン、$0.06/1K 出力トークン。月 1,000 クエリ：ローカル $0、GPT-5.5 $30-100。'
+              'text': 'ローカル利用（ハードウェア償却後）：$0/クエリ。GPT-5.6 API：$0.03/1K 入力トークン、$0.06/1K 出力トークン。月 1,000 クエリ：ローカル $0、GPT-5.6 $30-100。'
             }
           },
           {
@@ -2530,7 +2530,7 @@ schema: {
             'name': '大規模バッチ処理（100+クエリ）で OpenAI と競争可能？',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'レイテンシ要件：いいえ。OpenAI GPT-5.5 は 5-10x 高速。コスト最適化：はい、ローカル費用効率的。トレードオフ：プライバシー/オフラインはローカル、速度/精度は OpenAI。'
+              'text': 'レイテンシ要件：いいえ。OpenAI GPT-5.6 は 5-10x 高速。コスト最適化：はい、ローカル費用効率的。トレードオフ：プライバシー/オフラインはローカル、速度/精度は OpenAI。'
             }
           },
           {
@@ -2729,8 +2729,8 @@ schema: {
               a: '速度相当。**Ollama**更适合新手，使用简便（CLI、Web界面）。**llama.cpp**更直接，在高性能配置下更快。新手选Ollama，专家选llama.cpp。'
             },
             {
-              q: '本地LLM与OpenAI GPT-5.5的费用对比？',
-              a: '本地使用（硬件折旧后）：0美元/查询。GPT-5.5 API：0.03美元/1K输入令牌，0.06美元/1K输出令牌。月均1,000次查询：本地0美元，GPT-5.5约30-100美元。'
+              q: '本地LLM与OpenAI GPT-5.6的费用对比？',
+              a: '本地使用（硬件折旧后）：0美元/查询。GPT-5.6 API：0.03美元/1K输入令牌，0.06美元/1K输出令牌。月均1,000次查询：本地0美元，GPT-5.6约30-100美元。'
             },
             {
               q: '笔记本电脑能运行13B模型吗？',
@@ -2754,7 +2754,7 @@ schema: {
             },
             {
               q: '大批量处理（100+查询）能与OpenAI竞争吗？',
-              a: '延迟要求：不能。OpenAI GPT-5.5快5-10倍。成本优化：能，本地更具成本效益。权衡：隐私/离线选本地，速度/精度选OpenAI。'
+              a: '延迟要求：不能。OpenAI GPT-5.6快5-10倍。成本优化：能，本地更具成本效益。权衡：隐私/离线选本地，速度/精度选OpenAI。'
             },
             {
               q: '选CPU还是GPU推理？',
@@ -2834,7 +2834,7 @@ schema: {
             '**유럽 언어(독일어, 프랑스어, 스페인어, 이탈리아어)**: Mistral과 Llama 3.x는 유럽 언어에서 Qwen3와 경쟁력이 있습니다. 코드 혼합 및 공식 문체 작업에서는 Qwen3가 여전히 앞섭니다.',
             '**일본어 및 한국어**: Qwen3가 동급 크기의 Llama 3.x 대비 언어별 벤치마크에서 15~25% 높은 성능을 보입니다.',
             '**중국어(간체 및 번체)**: Qwen3가 지배적인 모델입니다 -- 오픈 웨이트 모델 중 가장 방대한 중국어 코퍼스로 학습되었습니다.',
-            '복잡한 작업에서 로컬 실행 가능한 어떤 모델도 일본어나 한국어에서 GPT-5.5 또는 Claude Opus 4.8 수준의 품질에 도달하지 못합니다. Qwen3가 로컬에서 최선의 선택입니다.',
+            '복잡한 작업에서 로컬 실행 가능한 어떤 모델도 일본어나 한국어에서 GPT-5.6 또는 Claude Opus 5 수준의 품질에 도달하지 못합니다. Qwen3가 로컬에서 최선의 선택입니다.',
           ],
         },
         whichSupport: {
@@ -2885,7 +2885,7 @@ schema: {
           title: '아랍어에서 가장 뛰어난 로컬 LLM은 무엇입니까?',
           content: [
             '**아랍어는 오른쪽에서 왼쪽으로 쓰는 문자 체계, 형태론적 복잡성, 다양한 방언(현대 표준 아랍어 vs. 이집트어, 걸프어, 레반트어)으로 인해 독특한 도전을 제시합니다.** Qwen3와 Gemma 3가 로컬 실행 가능한 아랍어 모델 중 가장 강력합니다.',
-            '현대 표준 아랍어(MSA) 명령 수행의 경우, Qwen3 14B 이상의 모델이 수용 가능한 품질을 생성합니다. 방언 아랍어의 경우, 모든 로컬 모델은 더 광범위한 아랍어 방언 지원을 갖춘 GPT-5.5와 같은 클라우드 모델보다 현저히 낮은 성능을 보입니다.',
+            '현대 표준 아랍어(MSA) 명령 수행의 경우, Qwen3 14B 이상의 모델이 수용 가능한 품질을 생성합니다. 방언 아랍어의 경우, 모든 로컬 모델은 더 광범위한 아랍어 방언 지원을 갖춘 GPT-5.6와 같은 클라우드 모델보다 현저히 낮은 성능을 보입니다.',
           ],
         },
         howToBenchmark: {
@@ -2896,7 +2896,7 @@ schema: {
             'm-MMLU를 실행하십시오 -- 여러 언어로 57개 주제를 다루는 MMLU의 다국어 버전입니다.',
             '대화 품질의 경우: 요약, Q&A, 번역, 창의적 글쓰기 등 다양한 작업 유형을 포함하여 대상 언어로 10개의 테스트 프롬프트를 작성하십시오. 결과를 수동으로 또는 원어민 화자와 함께 평가하십시오.',
             '일본어의 경우: JMT-bench(github.com/Stability-AI/lm-evaluation-harness)를 사용하십시오 -- 일본어 명령 수행을 다룹니다.',
-            '[PromptQuorum](/)을 사용하여 로컬 모델과 클라우드 API를 비교하십시오 -- 동일한 다국어 프롬프트를 로컬 Ollama 모델과 GPT-5.5에 동시에 전송하여 특정 사용 사례에서의 품질 격차를 정량화하십시오.',
+            '[PromptQuorum](/)을 사용하여 로컬 모델과 클라우드 API를 비교하십시오 -- 동일한 다국어 프롬프트를 로컬 Ollama 모델과 GPT-5.6에 동시에 전송하여 특정 사용 사례에서의 품질 격차를 정량화하십시오.',
           ],
         },
         comparisonTable: {

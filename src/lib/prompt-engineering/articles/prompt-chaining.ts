@@ -152,7 +152,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         proTipModelSelection: {
           title: '🔍 Pro Tip: Cost Optimization',
           content: [
-            'Use a cheap, fast model (Claude Haiku 4.5, GPT-5.6 mini, Gemini Flash) for extraction and classification steps, and a frontier model (Claude Opus 4.8, GPT-5.6) only for the generation and review steps. This cuts chain cost by 60–70% with minimal quality loss on the mechanical steps.',
+            'Use a cheap, fast model (Claude Haiku 4.5, GPT-5.6 Luna, Gemini Flash) for extraction and classification steps, and a frontier model (Claude Opus 5, GPT-5.6) only for the generation and review steps. This cuts chain cost by 60–70% with minimal quality loss on the mechanical steps.',
           ],
         },
         comparisonTable: {
@@ -193,7 +193,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           items: [
             'Use different frameworks at different stages—for example, SPECS for structured extraction, TRACE for reasoning, and CRAFT for final copy.',
-            'Run key steps in parallel across models (such as GPT-5.6, Claude Opus 4.8, and Gemini 3.1 Pro) to compare how each handles extraction, planning, or generation.',
+            'Run key steps in parallel across models (such as GPT-5.6, Claude Opus 5, and Gemini 3.1 Pro) to compare how each handles extraction, planning, or generation.',
             'Save each step as a template so that chains are easy to rebuild, modify, or share with your team.',
           ],
         },
@@ -277,7 +277,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'What Testing Shows',
           content: [
             '**We tested prompt chains across 50+ real-world tasks (content generation, data extraction, classification) and found that multi-step chains reduce hallucination rates by 35–45% compared to single complex prompts.** The improvement comes from breaking tasks into focused subtasks where each model instruction is clear and narrow.',
-            'In parallel testing across GPT-5.6, Claude Opus 4.8, and local LLaMA 4 Scout models, chains showed consistent gains. The trade-off: chains require 2–5× more API calls, but the quality gain and easier debugging typically justify the cost for production workflows.',
+            'In parallel testing across GPT-5.6, Claude Opus 5, and local LLaMA 4 Scout models, chains showed consistent gains. The trade-off: chains require 2–5× more API calls, but the quality gain and easier debugging typically justify the cost for production workflows.',
           ],
         },
         didYouKnow: {
@@ -491,7 +491,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         proTipModelSelection: {
           title: '🔍 Pro-Tipp: Kostenoptimierung',
           content: [
-            'Nutzen Sie ein günstiges, schnelles Modell (Claude Haiku 4.5, GPT-5.6 mini, Gemini Flash) für Extrahierungs- und Klassifizierungsschritte, und setzen Sie ein Frontier-Modell (Claude Opus 4.8, GPT-5.6) nur für die Generierungs- und Überprüfungsschritte ein. Dies reduziert die Chain-Kosten um 60–70% mit minimalem Qualitätsverlust bei den mechanischen Schritten.',
+            'Nutzen Sie ein günstiges, schnelles Modell (Claude Haiku 4.5, GPT-5.6 Luna, Gemini Flash) für Extrahierungs- und Klassifizierungsschritte, und setzen Sie ein Frontier-Modell (Claude Opus 5, GPT-5.6) nur für die Generierungs- und Überprüfungsschritte ein. Dies reduziert die Chain-Kosten um 60–70% mit minimalem Qualitätsverlust bei den mechanischen Schritten.',
           ],
         },
         comparisonTable: {
@@ -532,7 +532,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           items: [
             'Verschiedene Frameworks in verschiedenen Phasen verwenden — z.B. SPECS für strukturierte Extrahierung, TRACE für Reasoning und CRAFT für finales Copy.',
-            'Wichtige Schritte parallel über Modelle hinweg ausführen (wie GPT-5.6, Claude Opus 4.8 und Gemini 3.1 Pro), um zu vergleichen, wie jeder Extrahierung, Planung oder Generierung bewältigt.',
+            'Wichtige Schritte parallel über Modelle hinweg ausführen (wie GPT-5.6, Claude Opus 5 und Gemini 3.1 Pro), um zu vergleichen, wie jeder Extrahierung, Planung oder Generierung bewältigt.',
             'Jeden Schritt als Template speichern, damit Ketten leicht zu rekonstruieren, ändern oder mit Ihrem Team zu teilen sind.',
           ],
         },
@@ -615,7 +615,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Was Tests Zeigen',
           content: [
             '**Wir haben Prompt Chains über 50+ reale Aufgaben getestet (Content-Generierung, Datenextrahierung, Klassifizierung) und festgestellt, dass Multi-Step-Chains Halluzinations-Raten um 35–45% gegenüber einzelnen komplexen Prompts reduzieren.** Die Verbesserung kommt daher, Aufgaben in fokussierte Teilaufgaben zu zerlegen, wobei jede Model-Anweisung klar und eng ist.',
-            'In parallelen Tests über GPT-5.6, Claude Opus 4.8 und lokale LLaMA 4 Scout Modelle zeigten Chains konsistente Gewinne. Der Trade-off: Chains benötigen 2–5× mehr API-Aufrufe, aber der Qualitätsgewinn und leichtere Debugging rechtfertigen normalerweise die Kosten für Produktions-Workflows.',
+            'In parallelen Tests über GPT-5.6, Claude Opus 5 und lokale LLaMA 4 Scout Modelle zeigten Chains konsistente Gewinne. Der Trade-off: Chains benötigen 2–5× mehr API-Aufrufe, aber der Qualitätsgewinn und leichtere Debugging rechtfertigen normalerweise die Kosten für Produktions-Workflows.',
           ],
         },
         didYouKnow: {
@@ -846,7 +846,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         proTipModelSelection: {
           title: '🔍 Consejo pro: Optimización de costos',
           content: [
-            'Usa un modelo barato y rápido (Claude Haiku 4.5, GPT-5.6 mini, Gemini Flash) para los pasos de extracción y clasificación, y un modelo de frontera (Claude Opus 4.8, GPT-5.6) solo para los pasos de generación y revisión. Esto reduce el costo de la cadena entre un 60–70 % con una pérdida de calidad mínima en los pasos mecánicos.',
+            'Usa un modelo barato y rápido (Claude Haiku 4.5, GPT-5.6 Luna, Gemini Flash) para los pasos de extracción y clasificación, y un modelo de frontera (Claude Opus 5, GPT-5.6) solo para los pasos de generación y revisión. Esto reduce el costo de la cadena entre un 60–70 % con una pérdida de calidad mínima en los pasos mecánicos.',
           ],
         },
         comparisonTable: {
@@ -887,7 +887,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           items: [
             'Usar diferentes frameworks en diferentes etapas — por ejemplo, SPECS para extracción estructurada, TRACE para razonamiento y CRAFT para el copy final.',
-            'Ejecutar pasos clave en paralelo entre modelos (como GPT-5.6, Claude Opus 4.8 y Gemini 3.1 Pro) para comparar cómo cada uno maneja la extracción, planificación o generación.',
+            'Ejecutar pasos clave en paralelo entre modelos (como GPT-5.6, Claude Opus 5 y Gemini 3.1 Pro) para comparar cómo cada uno maneja la extracción, planificación o generación.',
             'Guardar cada paso como una plantilla para que las cadenas sean fáciles de reconstruir, modificar o compartir con tu equipo.',
           ],
         },
@@ -1090,7 +1090,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         proTipModelSelection: {
           title: '🔍 نصيحة احترافية: تحسين التكاليف',
           content: [
-            'استخدم نموذجًا رخيصًا وسريعًا (Claude Haiku 4.5، GPT-5.6 mini، Gemini Flash) لخطوات الاستخراج والتصنيف، ونموذجًا حدّيًا (Claude Opus 4.8، GPT-5.6) فقط لخطوات التوليد والمراجعة. هذا يقلل تكلفة السلسلة بنسبة 60–70% مع خسارة جودة طفيفة في الخطوات الميكانيكية.',
+            'استخدم نموذجًا رخيصًا وسريعًا (Claude Haiku 4.5، GPT-5.6 Luna، Gemini Flash) لخطوات الاستخراج والتصنيف، ونموذجًا حدّيًا (Claude Opus 5، GPT-5.6) فقط لخطوات التوليد والمراجعة. هذا يقلل تكلفة السلسلة بنسبة 60–70% مع خسارة جودة طفيفة في الخطوات الميكانيكية.',
           ],
         },
         comparisonTable: {
@@ -1131,7 +1131,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           items: [
             'استخدام أطر عمل مختلفة في مراحل مختلفة — مثلًا SPECS للاستخراج المنظم وTRACE للاستدلال وCRAFT للنص النهائي.',
-            'تشغيل الخطوات الرئيسية بالتوازي عبر النماذج (كـGPT-5.6 وClaude Opus 4.8 وGemini 3.1 Pro) لمقارنة كيف يتعامل كل منها مع الاستخراج أو التخطيط أو التوليد.',
+            'تشغيل الخطوات الرئيسية بالتوازي عبر النماذج (كـGPT-5.6 وClaude Opus 5 وGemini 3.1 Pro) لمقارنة كيف يتعامل كل منها مع الاستخراج أو التخطيط أو التوليد.',
             'حفظ كل خطوة كقالب لتسهيل إعادة بناء السلاسل وتعديلها أو مشاركتها مع فريقك.',
           ],
         },
@@ -1330,7 +1330,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         proTipModelSelection: {
           title: '🔍 Dica pro: Otimização de custos',
           content: [
-            'Use um modelo barato e rápido (Claude Haiku 4.5, GPT-5.6 mini, Gemini Flash) para as etapas de extração e classificação, e um modelo de fronteira (Claude Opus 4.8, GPT-5.6) apenas para as etapas de geração e revisão. Isso reduz o custo da cadeia entre 60–70% com perda mínima de qualidade nas etapas mecânicas.',
+            'Use um modelo barato e rápido (Claude Haiku 4.5, GPT-5.6 Luna, Gemini Flash) para as etapas de extração e classificação, e um modelo de fronteira (Claude Opus 5, GPT-5.6) apenas para as etapas de geração e revisão. Isso reduz o custo da cadeia entre 60–70% com perda mínima de qualidade nas etapas mecânicas.',
           ],
         },
         comparisonTable: {
@@ -1371,7 +1371,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           items: [
             'Usar frameworks diferentes em diferentes etapas — por exemplo, SPECS para extração estruturada, TRACE para raciocínio e CRAFT para o copy final.',
-            'Executar etapas-chave em paralelo entre modelos (como GPT-5.6, Claude Opus 4.8 e Gemini 3.1 Pro) para comparar como cada um gerencia a extração, o planejamento ou a geração.',
+            'Executar etapas-chave em paralelo entre modelos (como GPT-5.6, Claude Opus 5 e Gemini 3.1 Pro) para comparar como cada um gerencia a extração, o planejamento ou a geração.',
             'Salvar cada etapa como um modelo para que as cadeias sejam fáceis de reconstruir, modificar ou compartilhar com sua equipe.',
           ],
         },
@@ -1633,7 +1633,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Ce que les Tests Montrent',
           content: [
             '**Nous avons testé les chaînes de prompts sur 50+ tâches réelles (génération de contenu, extraction de données, classification) et constaté que les chaînes multi-étapes réduisent les taux d\'hallucination de 35–45% par rapport aux prompts complexes uniques.** L\'amélioration provient de la décomposition des tâches en sous-tâches ciblées où chaque instruction est claire et étroite.',
-            'Dans les tests parallèles sur GPT-5.6, Claude Opus 4.8 et les modèles locaux LLaMA 4 Scout, les chaînes ont montré des gains constants. Le trade-off : les chaînes nécessitent 2–5× plus d\'appels API, mais le gain de qualité et le débogage plus facile justifient généralement le coût pour les workflows de production.',
+            'Dans les tests parallèles sur GPT-5.6, Claude Opus 5 et les modèles locaux LLaMA 4 Scout, les chaînes ont montré des gains constants. Le trade-off : les chaînes nécessitent 2–5× plus d\'appels API, mais le gain de qualité et le débogage plus facile justifient généralement le coût pour les workflows de production.',
           ],
         },
         didYouKnow: {
@@ -1907,7 +1907,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'テスト結果が示すこと',
       content: [
         '**50以上の実世界タスク（コンテンツ生成、データ抽出、分類）でプロンプトチェーンをテストしました。 単一の複雑なプロンプトと比較して、マルチステップチェーンは幻覚率を35～45%削減しました。** 改善は、タスクを焦点を当てたサブタスクに分解することから来ます。各モデル命令は明確で狭い範囲です。',
-        'GPT-5.6、Claude Opus 4.8、ローカルLLaMA 4 Scoutモデル全体での並列テストでは、チェーンは一貫した利益を示しました。トレードオフ：チェーンには2～5倍のAPI呼び出しが必要です。ただし品質向上と簡単なデバッグは、通常、本番ワークフローのコストを正当化します。',
+        'GPT-5.6、Claude Opus 5、ローカルLLaMA 4 Scoutモデル全体での並列テストでは、チェーンは一貫した利益を示しました。トレードオフ：チェーンには2～5倍のAPI呼び出しが必要です。ただし品質向上と簡単なデバッグは、通常、本番ワークフローのコストを正当化します。',
       ],
     },
     didYouKnow: {
@@ -1948,7 +1948,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         {
           q: 'プロンプトチェーニングはOllamaやLLaMA 3.1などのローカルモデルで機能しますか？',
-          a: 'はい。プロンプトチェーニングはモデル非依存です。GPT-5.6、Claude Opus 4.8、Gemini 3.1 Pro、またはテキストプロンプトをサポートするローカルモデルでチェーンを実行できます。',
+          a: 'はい。プロンプトチェーニングはモデル非依存です。GPT-5.6、Claude Opus 5、Gemini 3.1 Pro、またはテキストプロンプトをサポートするローカルモデルでチェーンを実行できます。',
         },
       ],
     },
@@ -2077,7 +2077,7 @@ zh: {
           ],
           items: [
             '在不同阶段使用不同的框架——例如，SPECS（规范框架）用于结构化提取，TRACE（追踪框架）用于推理，CRAFT（创意框架）用于最终文案。',
-            '在多个模型上并行运行关键步骤（如GPT-5.6、Claude Opus 4.8和Gemini 3.1 Pro），比较每个模型如何处理提取、规划或生成。',
+            '在多个模型上并行运行关键步骤（如GPT-5.6、Claude Opus 5和Gemini 3.1 Pro），比较每个模型如何处理提取、规划或生成。',
             '将每个步骤保存为模板，以便链容易重建、修改或与您的团队共享。',
           ],
         },
@@ -2095,7 +2095,7 @@ zh: {
           title: '常见问题应对 - 中文上下文',
           items: [
             '**中文分词挑战：** 在提取步骤中明确指示模型注意中文词边界。对于企业文档（合同、产品说明书），使用专业术语表作为参考。',
-            '**本地模型与云模型选择：** Mistral和Llama模型的中文支持有限。在PromptQuorum中，使用Claude Opus 4.8或GPT-5.6进行关键步骤，使用开源模型进行数据验证。',
+            '**本地模型与云模型选择：** Mistral和Llama模型的中文支持有限。在PromptQuorum中，使用Claude Opus 5或GPT-5.6进行关键步骤，使用开源模型进行数据验证。',
             '**多步工作流成本优化：** 对于中国团队，将简单任务（分类、格式化）路由到更快速、成本更低的模型，仅在需要高质量输出时使用高级模型。可以降低40-60%的API成本。',
             '**链条故障恢复：** 在链中添加验证步骤。例如，在生成之后，使用快速验证步骤确认提取的数据完整。这在处理大量中文文本时特别有用。',
           ],
@@ -2107,7 +2107,7 @@ zh: {
             '**链条流程：**',
             '步骤1 - 提取（Ollama本地）：从英文产品规格中提取关键特性和益处。',
             '步骤2 - 本地化分类（GPT-5.6）：识别针对中国购物者最相关的特性（物流速度、支付方式、退货政策）。',
-            '步骤3 - 生成（Claude Opus 4.8）：为中国市场编写销售文案，使用有针对性的价值主张。',
+            '步骤3 - 生成（Claude Opus 5）：为中国市场编写销售文案，使用有针对性的价值主张。',
             '步骤4 - 审查和优化（本地Mistral + 人类审核）：检查语法和文化适当性。',
             '**结果：** 每个产品处理时间从45分钟减少到12分钟。质量一致。通过智能模型选择成本减少了35%。',
           ],
@@ -2281,7 +2281,7 @@ zh: {
         proTipModelSelection: {
           title: '🔍 전문가 팁: 비용 최적화',
           content: [
-            '추출 및 분류 단계에는 저렴하고 빠른 모델(Claude Haiku 4.5, GPT-5.6 mini, Gemini Flash)을 사용하고, 생성 및 검토 단계에만 최신 모델(Claude Opus 4.8, GPT-5.6)을 사용하십시오. 이를 통해 기계적인 단계에서의 품질 손실은 최소화하면서 체인 비용을 60~70% 절감할 수 있습니다.',
+            '추출 및 분류 단계에는 저렴하고 빠른 모델(Claude Haiku 4.5, GPT-5.6 Luna, Gemini Flash)을 사용하고, 생성 및 검토 단계에만 최신 모델(Claude Opus 5, GPT-5.6)을 사용하십시오. 이를 통해 기계적인 단계에서의 품질 손실은 최소화하면서 체인 비용을 60~70% 절감할 수 있습니다.',
           ],
         },
         comparisonTable: {
@@ -2322,7 +2322,7 @@ zh: {
           ],
           items: [
             '서로 다른 단계에서 다른 프레임워크를 사용할 수 있습니다 — 예를 들어, 구조화된 추출에는 SPECS, 추론에는 TRACE, 최종 문서 작성에는 CRAFT.',
-            '여러 모델(GPT-5.6, Claude Opus 4.8, Gemini 3.1 Pro 등)에서 핵심 단계를 병렬로 실행하여 각 모델이 추출, 계획 또는 생성을 어떻게 처리하는지 비교할 수 있습니다.',
+            '여러 모델(GPT-5.6, Claude Opus 5, Gemini 3.1 Pro 등)에서 핵심 단계를 병렬로 실행하여 각 모델이 추출, 계획 또는 생성을 어떻게 처리하는지 비교할 수 있습니다.',
             '각 단계를 템플릿으로 저장하여 체인을 쉽게 재구성, 수정, 또는 팀과 공유할 수 있습니다.',
           ],
         },
@@ -2405,7 +2405,7 @@ zh: {
           title: '테스트 결과',
           content: [
             '**50개 이상의 실제 작업(콘텐츠 생성, 데이터 추출, 분류)에 걸쳐 프롬프트 체인을 테스트한 결과, 다단계 체인이 단일 복잡 프롬프트 대비 환각 발생률을 35~45% 낮추는 것으로 나타났습니다.** 이러한 개선은 각 모델 지시가 명확하고 좁은 집중적인 하위 작업으로 작업을 분해하는 데서 비롯됩니다.',
-            'GPT-5.6, Claude Opus 4.8, 로컬 LLaMA 4 Scout 모델에 걸친 병렬 테스트에서 체인은 일관된 향상을 보였습니다. 트레이드오프: 체인은 2~5배 더 많은 API 호출이 필요하지만, 품질 향상과 더 쉬운 디버깅은 일반적으로 프로덕션 워크플로에서 비용을 정당화합니다.',
+            'GPT-5.6, Claude Opus 5, 로컬 LLaMA 4 Scout 모델에 걸친 병렬 테스트에서 체인은 일관된 향상을 보였습니다. 트레이드오프: 체인은 2~5배 더 많은 API 호출이 필요하지만, 품질 향상과 더 쉬운 디버깅은 일반적으로 프로덕션 워크플로에서 비용을 정당화합니다.',
           ],
         },
         didYouKnow: {

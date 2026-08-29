@@ -150,7 +150,7 @@ export const imagesWithTextDe: Record<string, PESection> = {
       '**Sei bei der Bildanalyse konkret, was du extrahieren willst.** Statt „Analysiere dieses Bild" frage „Extrahiere Datum, Rechnungsnummer und Gesamtbetrag aus dieser Quittung" oder „Identifiziere alle Personen auf diesem Foto und ihre Position."',
       '**Strukturiere jeden Text-zu-Bild-Prompt um fünf Elemente:** Subjekt (was zu sehen ist), Aktion (was es tut), Stil (wie es aussieht), Kontext (wo es ist) und technische Details (Beleuchtung, Winkel, Kamera). Vermeide vage Begriffe wie „schön."',
       '**Beschreibe bei der Bildbearbeitung explizit die zu ändernde Region und was unverändert bleiben muss.** Beispiel: „Ersetze den Hintergrund durch einen Wald, aber behalte Haltung und Ausdruck der Person identisch."',
-      '**Teste mit PromptQuorum über mehrere Modelle hinweg.** GPT-5.5 ist stark im Szenenverständnis, Claude Opus 4.8 bei der Textextraktion, Gemini 3.5 Pro bei langen Kontexten. Ein einzelnes Modell ist selten für alle Aufgaben am besten – vergleiche die Ausgaben.',
+      '**Teste mit PromptQuorum über mehrere Modelle hinweg.** GPT-5.6 ist stark im Szenenverständnis, Claude Opus 5 bei der Textextraktion, Gemini 3.5 Pro bei langen Kontexten. Ein einzelnes Modell ist selten für alle Aufgaben am besten – vergleiche die Ausgaben.',
       '**Vermeide drei Fallstricke:** vage Prompts („analysiere dieses Bild"), Annahme von Präzision (VLMs halluzinieren Details) und Überladung mit zu vielen Bildern (ab 10 in Stapeln arbeiten).',
     ],
   },
@@ -358,7 +358,7 @@ export const imagesWithTextFr: Record<string, PESection> = {
       '**Pour l\'analyse d\'image, soyez précis sur ce que vous voulez extraire.** Au lieu de « Analysez cette image », demandez « Extrayez la date, le numéro de facture et le montant total de ce reçu » ou « Identifiez toutes les personnes sur cette photo et leur position. »',
       '**Pour la génération texte-image, structurez chaque prompt autour de cinq éléments :** Sujet (ce que vous voyez), Action (ce qu\'il fait), Style (à quoi cela ressemble), Contexte (où cela se trouve) et détails techniques (éclairage, angle, caméra). Évitez les termes vagues comme « beau ».',
       '**Pour l\'édition d\'image, décrivez explicitement la région à modifier et ce qui doit rester inchangé.** Exemple : « Remplacez l\'arrière-plan par une forêt, mais gardez la pose et l\'expression de la personne identiques. »',
-      '**Testez sur plusieurs modèles avec PromptQuorum.** GPT-5.5 excelle dans la compréhension de scène, Claude Opus 4.8 dans l\'extraction de texte, Gemini 3.5 Pro dans les longs contextes. Un seul modèle est rarement le meilleur pour toutes les tâches — comparez les résultats.',
+      '**Testez sur plusieurs modèles avec PromptQuorum.** GPT-5.6 excelle dans la compréhension de scène, Claude Opus 5 dans l\'extraction de texte, Gemini 3.5 Pro dans les longs contextes. Un seul modèle est rarement le meilleur pour toutes les tâches — comparez les résultats.',
       '**Évitez trois pièges :** les prompts vagues (« analysez cette image »), supposer la précision (les VLM hallucinent des détails), et surcharger avec trop d\'images (regroupez au-delà de 10).',
     ],
   },
@@ -566,7 +566,7 @@ export const imagesWithTextJa: Record<string, PESection> = {
       '**画像分析では、抽出したい内容を具体的にする。** 「この画像を分析してください」ではなく、「この領収書から日付、請求書番号、合計金額を抽出してください」や「この写真に写っているすべての人物とその位置を特定してください」と依頼します。',
       '**テキストから画像への生成では、すべてのプロンプトを5つの要素で構成する:** 主題（何が見えるか）、アクション（何をしているか）、スタイル（どう見えるか）、文脈（どこにあるか）、技術的詳細（照明、角度、カメラ）。「美しい」のような曖昧な表現は避けます。',
       '**画像編集では、変更する領域と変更してはいけない部分を明示的に説明する。** 例: 「背景を森に置き換えてください。ただし人物のポーズと表情は同一のままにしてください。」',
-      '**PromptQuorumで複数モデルを横断してテストする。** GPT-5.5はシーン理解に優れ、Claude Opus 4.8はテキスト抽出に優れ、Gemini 3.5 Proは長いコンテキストに優れています。単一モデルがすべてのタスクで最良であることはまれです — 出力を比較してください。',
+      '**PromptQuorumで複数モデルを横断してテストする。** GPT-5.6はシーン理解に優れ、Claude Opus 5はテキスト抽出に優れ、Gemini 3.5 Proは長いコンテキストに優れています。単一モデルがすべてのタスクで最良であることはまれです — 出力を比較してください。',
       '**3つの落とし穴を避ける:** 曖昧なプロンプト（「この画像を分析してください」）、精度を過信すること（VLMは詳細を幻覚する）、そして多すぎる画像での過負荷（10枚を超える場合はバッチ処理する）。',
     ],
   },
@@ -634,7 +634,7 @@ export const imagesWithTextEs: Record<string, PESection> = {
     title: 'Puntos clave',
     isTldr: true,
     items: [
-      'El prompting multimodal combina texto e imágenes; modelos como GPT-5.6 y Claude Opus 4.8 se destacan en el análisis y la descripción de imágenes',
+      'El prompting multimodal combina texto e imágenes; modelos como GPT-5.6 y Claude Opus 5 se destacan en el análisis y la descripción de imágenes',
       'Existen tres modos: Imagen→Texto (describir/analizar), Texto→Imagen (generar) e Imagen↔Imagen (editar/transformar)',
       'Los modelos de visión-lenguaje tienen dificultades con el conteo preciso, los límites de objetos detallados y la lectura de texto pequeño en imágenes',
       'Sigue patrones estructurados: sé específico sobre los objetivos de análisis, proporciona contexto y usa ejemplos para lograr consistencia',
@@ -672,7 +672,7 @@ export const imagesWithTextEs: Record<string, PESection> = {
   howVisionWorks: {
     title: 'Cómo los modelos de visión-lenguaje ven las imágenes',
     content: [
-      '**Los modelos de visión-lenguaje como GPT-5.6, Claude Opus 4.8 y Gemini 1.5 Pro convierten imágenes en vectores de alta dimensión (embeddings) utilizando un codificador visual y luego procesan esos embeddings junto con los tokens de texto en un espacio semántico compartido.** Este enfoque otorga a los VLM fortalezas claras en múltiples tareas: identifican objetos, leen texto, comprenden relaciones espaciales y razonan sobre el contenido en múltiples imágenes. Gemini 1.5 Pro admite hasta 1 millón de tokens, lo que permite el análisis de secuencias multimodales más largas que la context window de 128k de GPT-5.6. Entender los [límites de la context window](/es/prompt-engineering/context-windows-explained-why-ai-forgets) te ayuda a estructurar prompts que eviten la truncación cuando trabajas con descripciones de imágenes largas o secuencias de múltiples imágenes.',
+      '**Los modelos de visión-lenguaje como GPT-5.6, Claude Opus 5 y Gemini 1.5 Pro convierten imágenes en vectores de alta dimensión (embeddings) utilizando un codificador visual y luego procesan esos embeddings junto con los tokens de texto en un espacio semántico compartido.** Este enfoque otorga a los VLM fortalezas claras en múltiples tareas: identifican objetos, leen texto, comprenden relaciones espaciales y razonan sobre el contenido en múltiples imágenes. Gemini 1.5 Pro admite hasta 1 millón de tokens, lo que permite el análisis de secuencias multimodales más largas que la context window de 128k de GPT-5.6. Entender los [límites de la context window](/es/prompt-engineering/context-windows-explained-why-ai-forgets) te ayuda a estructurar prompts que eviten la truncación cuando trabajas con descripciones de imágenes largas o secuencias de múltiples imágenes.',
       'Los VLM se destacan en la comprensión de escenas, el análisis de documentos y la comparación de elementos visuales. Sin embargo, tienen debilidades predecibles:',
     ],
     items: [
@@ -744,7 +744,7 @@ export const imagesWithTextEs: Record<string, PESection> = {
   promptquorumHelps: {
     title: 'Cómo PromptQuorum te ayuda a hacer prompts con imágenes',
     content: [
-      '**PromptQuorum es una plataforma de distribución de prompts multimodelo que te permite probar prompts multimodales en GPT-5.6, Claude Opus 4.8, Gemini 1.5 Pro y otros modelos simultáneamente.** Al probar el mismo prompt de descripción de imagen de producto en tres modelos, GPT-5.6 devolvió la salida más estructurada, Claude Opus 4.8 logró la mayor precisión en la extracción de texto y Gemini 1.5 Pro capturó más detalles contextuales — revelando que diferentes modelos se destacan en diferentes tareas de análisis de imágenes. Claude Opus 4.8 es preciso en el análisis de documentos; GPT-5.6 se destaca en la comprensión de escenas; Gemini 1.5 Pro maneja el razonamiento multimodal complejo.',
+      '**PromptQuorum es una plataforma de distribución de prompts multimodelo que te permite probar prompts multimodales en GPT-5.6, Claude Opus 5, Gemini 1.5 Pro y otros modelos simultáneamente.** Al probar el mismo prompt de descripción de imagen de producto en tres modelos, GPT-5.6 devolvió la salida más estructurada, Claude Opus 5 logró la mayor precisión en la extracción de texto y Gemini 1.5 Pro capturó más detalles contextuales — revelando que diferentes modelos se destacan en diferentes tareas de análisis de imágenes. Claude Opus 5 es preciso en el análisis de documentos; GPT-5.6 se destaca en la comprensión de escenas; Gemini 1.5 Pro maneja el razonamiento multimodal complejo.',
       'Al distribuir el mismo prompt multimodal a los tres, ves qué modelo responde mejor y luego usas el Consensus Scoring para ponderar sus resultados.',
     ],
     items: [
@@ -774,7 +774,7 @@ export const imagesWithTextEs: Record<string, PESection> = {
       '**Para el análisis de imágenes, sé específico sobre lo que quieres extraer.** En lugar de "Analiza esta imagen", pregunta "Extrae la fecha, el número de factura y el monto total de este recibo" o "Identifica a todas las personas en esta foto y su posición."',
       '**Para la generación de texto a imagen, estructura cada prompt en torno a cinco elementos:** Sujeto (lo que ves), Acción (lo que hace), Estilo (cómo se ve), Contexto (dónde está) y detalles técnicos (iluminación, ángulo, cámara). Evita términos vagos como "bonito."',
       '**Para la edición de imágenes, describe explícitamente la región a cambiar y lo que debe permanecer sin cambios.** Ejemplo: "Reemplaza el fondo con un bosque, pero mantén la pose y expresión de la persona idénticas."',
-      '**Prueba en múltiples modelos con PromptQuorum.** GPT-5.5 destaca en la comprensión de escenas, Claude Opus 4.8 en la extracción de texto, Gemini 3.5 Pro en contextos largos. Un solo modelo rara vez es el mejor para todas las tareas — compara los resultados.',
+      '**Prueba en múltiples modelos con PromptQuorum.** GPT-5.6 destaca en la comprensión de escenas, Claude Opus 5 en la extracción de texto, Gemini 3.5 Pro en contextos largos. Un solo modelo rara vez es el mejor para todas las tareas — compara los resultados.',
       '**Evita tres errores comunes:** prompts vagos ("analiza esta imagen"), asumir precisión (los VLM alucinan detalles), y sobrecargar con demasiadas imágenes (agrupa más de 10).',
     ],
   },
@@ -784,7 +784,7 @@ export const imagesWithTextEs: Record<string, PESection> = {
     faqs: [
       {
         q: '¿Qué modelo de visión-lenguaje es mejor para analizar imágenes?',
-        a: 'No hay un único modelo mejor. GPT-5.6 se destaca en la comprensión general de escenas y el razonamiento complejo. Claude Opus 4.8 es preciso en el análisis de documentos y la extracción de texto. Gemini 1.5 Pro maneja contextos multimodales más largos (1 millón de tokens). Usa PromptQuorum para probar los tres en tu tarea específica.',
+        a: 'No hay un único modelo mejor. GPT-5.6 se destaca en la comprensión general de escenas y el razonamiento complejo. Claude Opus 5 es preciso en el análisis de documentos y la extracción de texto. Gemini 1.5 Pro maneja contextos multimodales más largos (1 millón de tokens). Usa PromptQuorum para probar los tres en tu tarea específica.',
       },
       {
         q: '¿Pueden los modelos de visión-lenguaje contar objetos con precisión?',
@@ -796,11 +796,11 @@ export const imagesWithTextEs: Record<string, PESection> = {
       },
       {
         q: '¿Qué formatos de imagen admiten los modelos de visión-lenguaje?',
-        a: 'GPT-5.6, Claude Opus 4.8 y Gemini 1.5 Pro aceptan JPEG, PNG, GIF y WebP. La mayoría admite imágenes de hasta 20 MB. Los límites específicos varían según el modelo; consulta la documentación de OpenAI y Anthropic para obtener detalles actuales.',
+        a: 'GPT-5.6, Claude Opus 5 y Gemini 1.5 Pro aceptan JPEG, PNG, GIF y WebP. La mayoría admite imágenes de hasta 20 MB. Los límites específicos varían según el modelo; consulta la documentación de OpenAI y Anthropic para obtener detalles actuales.',
       },
       {
         q: '¿Puedo usar modelos locales como Ollama para el prompting multimodal?',
-        a: 'Sí. Modelos como LLaVA y Ollama admiten el análisis de imágenes local. Los modelos locales ofrecen privacidad, pero menor precisión que GPT-5.6 o Claude Opus 4.8. Úsalos para tareas no críticas o cuando la privacidad sea esencial.',
+        a: 'Sí. Modelos como LLaVA y Ollama admiten el análisis de imágenes local. Los modelos locales ofrecen privacidad, pero menor precisión que GPT-5.6 o Claude Opus 5. Úsalos para tareas no críticas o cuando la privacidad sea esencial.',
       },
       {
         q: '¿Cómo mejoro la consistencia en la generación de texto a imagen?',
@@ -982,7 +982,7 @@ export const imagesWithTextZh: Record<string, PESection> = {
       '**在图像分析中，明确说明你想提取的内容。** 不要说「分析这张图像」，而要问「从这张收据中提取日期、发票号码和总金额」或「识别这张照片中的所有人物及其位置」。',
       '**在文本到图像生成中，围绕五个要素构建每个提示词：** 主题（你看到什么）、动作（它在做什么）、风格（它看起来如何）、背景（它在哪里）和技术细节（光线、角度、相机）。避免使用「漂亮」这样的模糊词汇。',
       '**在图像编辑中，明确描述要更改的区域以及必须保持不变的部分。** 示例：「将背景替换为森林，但保持人物的姿势和表情完全不变。」',
-      '**使用PromptQuorum在多个模型间进行测试。** GPT-5.5擅长场景理解，Claude Opus 4.8擅长文本提取，Gemini 3.5 Pro擅长长上下文。单一模型很少在所有任务中都是最佳的——比较输出以找到最适合的模型。',
+      '**使用PromptQuorum在多个模型间进行测试。** GPT-5.6擅长场景理解，Claude Opus 5擅长文本提取，Gemini 3.5 Pro擅长长上下文。单一模型很少在所有任务中都是最佳的——比较输出以找到最适合的模型。',
       '**避免三个常见误区：** 模糊的提示词（「分析这张图像」）、假设精确度（VLM会幻觉出细节）以及用过多图像造成过载（超过10张时应分批处理）。',
     ],
   },
@@ -1050,7 +1050,7 @@ export const imagesWithTextPt: Record<string, PESection> = {
     title: 'Principais conclusões',
     isTldr: true,
     items: [
-      'O prompting multimodal combina texto e imagens; modelos como GPT-5.6 e Claude Opus 4.8 se destacam na análise e descrição de imagens',
+      'O prompting multimodal combina texto e imagens; modelos como GPT-5.6 e Claude Opus 5 se destacam na análise e descrição de imagens',
       'Existem três modos: Imagem→Texto (descrever/analisar), Texto→Imagem (gerar) e Imagem↔Imagem (editar/transformar)',
       'Os modelos de visão-linguagem têm dificuldades com contagem precisa, limites detalhados de objetos e leitura de texto pequeno em imagens',
       'Siga padrões estruturados: seja específico sobre os objetivos de análise, forneça contexto e use exemplos para garantir consistência',
@@ -1088,7 +1088,7 @@ export const imagesWithTextPt: Record<string, PESection> = {
   howVisionWorks: {
     title: 'Como os modelos de visão-linguagem enxergam imagens',
     content: [
-      '**Modelos de visão-linguagem como GPT-5.6, Claude Opus 4.8 e Gemini 3.5 Pro convertem imagens em vetores de alta dimensão (embeddings) usando um codificador visual e, em seguida, processam esses embeddings junto com tokens de texto em um espaço semântico compartilhado.** Essa abordagem confere aos VLMs pontos fortes claros em várias tarefas: eles identificam objetos, leem texto, compreendem relações espaciais e raciocinam sobre conteúdo em múltiplas imagens. O Gemini 3.5 Pro suporta até 1 milhão de tokens, permitindo a análise de sequências multimodais mais longas do que a janela de contexto de 128k do GPT-5.6. Compreender os [limites da janela de contexto](/pt/prompt-engineering/context-windows-explained-why-ai-forgets) ajuda você a estruturar prompts que evitam truncamento ao trabalhar com descrições longas de imagens ou sequências de múltiplas imagens.',
+      '**Modelos de visão-linguagem como GPT-5.6, Claude Opus 5 e Gemini 3.5 Pro convertem imagens em vetores de alta dimensão (embeddings) usando um codificador visual e, em seguida, processam esses embeddings junto com tokens de texto em um espaço semântico compartilhado.** Essa abordagem confere aos VLMs pontos fortes claros em várias tarefas: eles identificam objetos, leem texto, compreendem relações espaciais e raciocinam sobre conteúdo em múltiplas imagens. O Gemini 3.5 Pro suporta até 1 milhão de tokens, permitindo a análise de sequências multimodais mais longas do que a janela de contexto de 128k do GPT-5.6. Compreender os [limites da janela de contexto](/pt/prompt-engineering/context-windows-explained-why-ai-forgets) ajuda você a estruturar prompts que evitam truncamento ao trabalhar com descrições longas de imagens ou sequências de múltiplas imagens.',
       'Os VLMs se destacam na compreensão de cenas, análise de documentos e comparação de elementos visuais. No entanto, eles têm pontos fracos previsíveis:',
     ],
     items: [
@@ -1160,7 +1160,7 @@ export const imagesWithTextPt: Record<string, PESection> = {
   promptquorumHelps: {
     title: 'Como o PromptQuorum ajuda você a fazer prompts com imagens',
     content: [
-      '**O PromptQuorum é uma plataforma de despacho de prompts multimódelo que permite testar prompts multimodais no GPT-5.6, Claude Opus 4.8, Gemini 3.5 Pro e outros modelos simultaneamente.** Ao testar o mesmo prompt de descrição de imagem de produto em três modelos, o GPT-5.6 retornou a saída mais estruturada, o Claude Opus 4.8 alcançou a maior precisão na extração de texto e o Gemini 3.5 Pro capturou mais detalhes contextuais — revelando que diferentes modelos se destacam em diferentes tarefas de análise de imagens. O Claude Opus 4.8 é preciso na análise de documentos; o GPT-5.6 se destaca na compreensão de cenas; o Gemini 3.5 Pro lida com raciocínio multimodal complexo.',
+      '**O PromptQuorum é uma plataforma de despacho de prompts multimódelo que permite testar prompts multimodais no GPT-5.6, Claude Opus 5, Gemini 3.5 Pro e outros modelos simultaneamente.** Ao testar o mesmo prompt de descrição de imagem de produto em três modelos, o GPT-5.6 retornou a saída mais estruturada, o Claude Opus 5 alcançou a maior precisão na extração de texto e o Gemini 3.5 Pro capturou mais detalhes contextuais — revelando que diferentes modelos se destacam em diferentes tarefas de análise de imagens. O Claude Opus 5 é preciso na análise de documentos; o GPT-5.6 se destaca na compreensão de cenas; o Gemini 3.5 Pro lida com raciocínio multimodal complexo.',
       'Ao despachar o mesmo prompt multimodal para os três, você vê qual modelo responde melhor e usa o Consensus Scoring para ponderar os resultados.',
     ],
     items: [
@@ -1190,7 +1190,7 @@ export const imagesWithTextPt: Record<string, PESection> = {
       '**Para análise de imagem, seja específico sobre o que deseja extrair.** Em vez de "Analise esta imagem", pergunte "Extraia a data, o número da nota fiscal e o valor total deste recibo" ou "Identifique todas as pessoas nesta foto e sua posição."',
       '**Para geração de texto para imagem, estruture cada prompt em torno de cinco elementos:** Sujeito (o que você vê), Ação (o que está fazendo), Estilo (como se parece), Contexto (onde está) e detalhes técnicos (iluminação, ângulo, câmera). Evite termos vagos como "bonito."',
       '**Para edição de imagem, descreva explicitamente a região a ser alterada e o que deve permanecer inalterado.** Exemplo: "Substitua o fundo por uma floresta, mas mantenha a pose e a expressão da pessoa idênticas."',
-      '**Teste em vários modelos com o PromptQuorum.** GPT-5.5 se destaca na compreensão de cenas, Claude Opus 4.8 na extração de texto, Gemini 3.5 Pro em contextos longos. Um único modelo raramente é o melhor para todas as tarefas — compare os resultados.',
+      '**Teste em vários modelos com o PromptQuorum.** GPT-5.6 se destaca na compreensão de cenas, Claude Opus 5 na extração de texto, Gemini 3.5 Pro em contextos longos. Um único modelo raramente é o melhor para todas as tarefas — compare os resultados.',
       '**Evite três armadilhas:** prompts vagos ("analise esta imagem"), assumir precisão (VLMs alucinam detalhes) e sobrecarregar com muitas imagens (agrupe além de 10).',
     ],
   },
@@ -1200,7 +1200,7 @@ export const imagesWithTextPt: Record<string, PESection> = {
     faqs: [
       {
         q: 'Qual modelo de visão-linguagem é melhor para analisar imagens?',
-        a: 'Não há um único modelo melhor. O GPT-5.6 se destaca na compreensão geral de cenas e no raciocínio complexo. O Claude Opus 4.8 é preciso na análise de documentos e extração de texto. O Gemini 3.5 Pro lida com contextos multimodais mais longos (1 milhão de tokens). Use o PromptQuorum para testar os três em sua tarefa específica.',
+        a: 'Não há um único modelo melhor. O GPT-5.6 se destaca na compreensão geral de cenas e no raciocínio complexo. O Claude Opus 5 é preciso na análise de documentos e extração de texto. O Gemini 3.5 Pro lida com contextos multimodais mais longos (1 milhão de tokens). Use o PromptQuorum para testar os três em sua tarefa específica.',
       },
       {
         q: 'Os modelos de visão-linguagem conseguem contar objetos com precisão?',
@@ -1212,11 +1212,11 @@ export const imagesWithTextPt: Record<string, PESection> = {
       },
       {
         q: 'Quais formatos de imagem os modelos de visão-linguagem suportam?',
-        a: 'GPT-5.6, Claude Opus 4.8 e Gemini 3.5 Pro aceitam JPEG, PNG, GIF e WebP. A maioria suporta imagens de até 20 MB. Os limites específicos variam por modelo; consulte a documentação da OpenAI e da Anthropic para detalhes atuais.',
+        a: 'GPT-5.6, Claude Opus 5 e Gemini 3.5 Pro aceitam JPEG, PNG, GIF e WebP. A maioria suporta imagens de até 20 MB. Os limites específicos variam por modelo; consulte a documentação da OpenAI e da Anthropic para detalhes atuais.',
       },
       {
         q: 'Posso usar modelos locais como Ollama para prompting multimodal?',
-        a: 'Sim. Modelos como LLaVA e Ollama suportam análise de imagens local. Os modelos locais oferecem privacidade, mas menor precisão do que GPT-5.6 ou Claude Opus 4.8. Use-os para tarefas não críticas ou quando a privacidade for essencial.',
+        a: 'Sim. Modelos como LLaVA e Ollama suportam análise de imagens local. Os modelos locais oferecem privacidade, mas menor precisão do que GPT-5.6 ou Claude Opus 5. Use-os para tarefas não críticas ou quando a privacidade for essencial.',
       },
       {
         q: 'Como melhoro a consistência na geração de texto para imagem?',
@@ -1258,7 +1258,7 @@ export const imagesWithTextAr: Record<string, PESection> = {
     title: 'النقاط الرئيسية',
     isTldr: true,
     items: [
-      'يجمع الاستفسار متعدد الوسائط بين النصوص والصور؛ وتتميز نماذج مثل GPT-5.6 وClaude Opus 4.8 في تحليل الصور ووصفها',
+      'يجمع الاستفسار متعدد الوسائط بين النصوص والصور؛ وتتميز نماذج مثل GPT-5.6 وClaude Opus 5 في تحليل الصور ووصفها',
       'توجد ثلاثة أوضاع: صورة←نص (وصف/تحليل)، ونص←صورة (توليد)، وصورة↔صورة (تحرير/تحويل)',
       'تواجه نماذج الرؤية واللغة صعوبات في العد الدقيق، وحدود الكائنات التفصيلية، وقراءة النصوص الصغيرة في الصور',
       'اتبع أنماطاً منظمة: كن محدداً في أهداف التحليل، ووفّر السياق، واستخدم الأمثلة لتحقيق الاتساق',
@@ -1296,7 +1296,7 @@ export const imagesWithTextAr: Record<string, PESection> = {
   howVisionWorks: {
     title: 'كيف ترى نماذج الرؤية واللغة الصور',
     content: [
-      '**تحوّل نماذج الرؤية واللغة مثل GPT-5.6 وClaude Opus 4.8 وGemini 1.5 Pro الصورَ إلى متجهات عالية الأبعاد (تضمينات) باستخدام مشفِّر بصري، ثم تعالج هذه التضمينات جنباً إلى جنب مع رموز النص في فضاء دلالي مشترك.** يمنح هذا النهج نماذج VLM مزايا واضحة عبر مهام متعددة: فهي تُعرِّف الكائنات، وتقرأ النصوص، وتفهم العلاقات المكانية، وتستدل على المحتوى عبر صور متعددة. يدعم Gemini 1.5 Pro ما يصل إلى مليون رمز، مما يتيح تحليل متتاليات متعددة الوسائط أطول من نافذة السياق البالغة 128 ألف رمز لـ GPT-5.6. يساعدك فهم [حدود نافذة السياق](/ar/prompt-engineering/context-windows-explained-why-ai-forgets) على تنظيم الاستفسارات التي تتجنب الاقتطاع عند العمل مع أوصاف صور طويلة أو متتاليات صور متعددة.',
+      '**تحوّل نماذج الرؤية واللغة مثل GPT-5.6 وClaude Opus 5 وGemini 1.5 Pro الصورَ إلى متجهات عالية الأبعاد (تضمينات) باستخدام مشفِّر بصري، ثم تعالج هذه التضمينات جنباً إلى جنب مع رموز النص في فضاء دلالي مشترك.** يمنح هذا النهج نماذج VLM مزايا واضحة عبر مهام متعددة: فهي تُعرِّف الكائنات، وتقرأ النصوص، وتفهم العلاقات المكانية، وتستدل على المحتوى عبر صور متعددة. يدعم Gemini 1.5 Pro ما يصل إلى مليون رمز، مما يتيح تحليل متتاليات متعددة الوسائط أطول من نافذة السياق البالغة 128 ألف رمز لـ GPT-5.6. يساعدك فهم [حدود نافذة السياق](/ar/prompt-engineering/context-windows-explained-why-ai-forgets) على تنظيم الاستفسارات التي تتجنب الاقتطاع عند العمل مع أوصاف صور طويلة أو متتاليات صور متعددة.',
       'تتميز نماذج VLM في فهم المشاهد، وتحليل المستندات، ومقارنة العناصر البصرية. بيد أن لها نقاط ضعف يمكن التنبؤ بها:',
     ],
     items: [
@@ -1368,7 +1368,7 @@ export const imagesWithTextAr: Record<string, PESection> = {
   promptquorumHelps: {
     title: 'كيف يساعدك PromptQuorum على الاستفسار بالصور',
     content: [
-      '**PromptQuorum هي منصة توزيع استفسارات متعددة النماذج تتيح لك اختبار الاستفسارات متعددة الوسائط عبر GPT-5.6 وClaude Opus 4.8 وGemini 1.5 Pro وغيرها من النماذج في آنٍ واحد.** عند اختبار استفسار وصف صورة المنتج ذاته عبر ثلاثة نماذج، أعاد GPT-5.6 المخرجات الأكثر تنظيماً، وحقق Claude Opus 4.8 أعلى دقة في استخراج النصوص، والتقط Gemini 1.5 Pro أكثر التفاصيل السياقية — مما يكشف أن نماذج مختلفة تتفوق في مهام تحليل صور مختلفة. Claude Opus 4.8 دقيق في تحليل المستندات؛ GPT-5.6 يتميز في فهم المشاهد؛ Gemini 1.5 Pro يتعامل مع الاستدلال المعقد متعدد الصور.',
+      '**PromptQuorum هي منصة توزيع استفسارات متعددة النماذج تتيح لك اختبار الاستفسارات متعددة الوسائط عبر GPT-5.6 وClaude Opus 5 وGemini 1.5 Pro وغيرها من النماذج في آنٍ واحد.** عند اختبار استفسار وصف صورة المنتج ذاته عبر ثلاثة نماذج، أعاد GPT-5.6 المخرجات الأكثر تنظيماً، وحقق Claude Opus 5 أعلى دقة في استخراج النصوص، والتقط Gemini 1.5 Pro أكثر التفاصيل السياقية — مما يكشف أن نماذج مختلفة تتفوق في مهام تحليل صور مختلفة. Claude Opus 5 دقيق في تحليل المستندات؛ GPT-5.6 يتميز في فهم المشاهد؛ Gemini 1.5 Pro يتعامل مع الاستدلال المعقد متعدد الصور.',
       'بإرسال الاستفسار متعدد الوسائط ذاته إلى النماذج الثلاثة، ترى أي نموذج يجيب بشكل أفضل، ثم تستخدم نظام تقييم الإجماع لترجيح مخرجاتها.',
     ],
     items: [
@@ -1398,7 +1398,7 @@ export const imagesWithTextAr: Record<string, PESection> = {
       '**في تحليل الصور، كن محدداً بشأن ما تريد استخراجه.** بدلاً من "حلِّل هذه الصورة"، اسأل "استخرج التاريخ ورقم الفاتورة والمبلغ الإجمالي من هذا الإيصال" أو "حدِّد جميع الأشخاص في هذه الصورة وموضعهم."',
       '**في توليد النص إلى صورة، نظِّم كل استفسار حول خمسة عناصر:** الموضوع (ما تراه)، الفعل (ما يفعله)، الأسلوب (كيف يبدو)، السياق (أين يوجد)، والتفاصيل التقنية (الإضاءة، الزاوية، الكاميرا). تجنّب المصطلحات الغامضة مثل "جميل."',
       '**في تحرير الصور، صِف بوضوح المنطقة المراد تغييرها وما يجب أن يبقى دون تغيير.** مثال: "استبدل الخلفية بغابة، لكن حافظ على وضعية الشخص وتعبيره كما هما تماماً."',
-      '**اختبر عبر نماذج متعددة باستخدام PromptQuorum.** يتفوق GPT-5.5 في فهم المشهد، وClaude Opus 4.8 في استخراج النص، وGemini 3.5 Pro في السياقات الطويلة. نادراً ما يكون نموذج واحد الأفضل لكل المهام — قارن المخرجات.',
+      '**اختبر عبر نماذج متعددة باستخدام PromptQuorum.** يتفوق GPT-5.6 في فهم المشهد، وClaude Opus 5 في استخراج النص، وGemini 3.5 Pro في السياقات الطويلة. نادراً ما يكون نموذج واحد الأفضل لكل المهام — قارن المخرجات.',
       '**تجنّب ثلاثة مزالق:** الاستفسارات الغامضة ("حلِّل هذه الصورة")، افتراض الدقة (نماذج الرؤية واللغة تهلوس التفاصيل)، والإفراط في التحميل بعدد كبير من الصور (نظِّمها في دفعات تتجاوز 10 صور).',
     ],
   },
@@ -1408,7 +1408,7 @@ export const imagesWithTextAr: Record<string, PESection> = {
     faqs: [
       {
         q: 'ما أفضل نموذج رؤية ولغة لتحليل الصور؟',
-        a: 'لا يوجد نموذج أفضل بشكل مطلق. يتفوق GPT-5.6 في الفهم العام للمشاهد والاستدلال المعقد. Claude Opus 4.8 دقيق في تحليل المستندات واستخراج النصوص. Gemini 1.5 Pro يتعامل مع سياقات متعددة الوسائط أطول (مليون رمز). استخدم PromptQuorum لاختبار النماذج الثلاثة على مهمتك المحددة.',
+        a: 'لا يوجد نموذج أفضل بشكل مطلق. يتفوق GPT-5.6 في الفهم العام للمشاهد والاستدلال المعقد. Claude Opus 5 دقيق في تحليل المستندات واستخراج النصوص. Gemini 1.5 Pro يتعامل مع سياقات متعددة الوسائط أطول (مليون رمز). استخدم PromptQuorum لاختبار النماذج الثلاثة على مهمتك المحددة.',
       },
       {
         q: 'هل تستطيع نماذج الرؤية واللغة عد الكائنات بدقة؟',
@@ -1420,11 +1420,11 @@ export const imagesWithTextAr: Record<string, PESection> = {
       },
       {
         q: 'ما تنسيقات الصور التي تدعمها نماذج الرؤية واللغة؟',
-        a: 'تقبل كل من GPT-5.6 وClaude Opus 4.8 وGemini 1.5 Pro صيَغ JPEG وPNG وGIF وWebP. تدعم معظمها صوراً بحجم يصل إلى 20 ميجابايت. تتفاوت الحدود المحددة حسب النموذج؛ راجع وثائق OpenAI وAnthropic للاطلاع على التفاصيل الحالية.',
+        a: 'تقبل كل من GPT-5.6 وClaude Opus 5 وGemini 1.5 Pro صيَغ JPEG وPNG وGIF وWebP. تدعم معظمها صوراً بحجم يصل إلى 20 ميجابايت. تتفاوت الحدود المحددة حسب النموذج؛ راجع وثائق OpenAI وAnthropic للاطلاع على التفاصيل الحالية.',
       },
       {
         q: 'هل يمكنني استخدام نماذج محلية مثل Ollama للاستفسار متعدد الوسائط؟',
-        a: 'نعم. تدعم نماذج مثل LLaVA وOllama تحليل الصور محلياً. توفر النماذج المحلية الخصوصية لكنها أقل دقة من GPT-5.6 أو Claude Opus 4.8. استخدمها للمهام غير الحرجة أو عندما تكون الخصوصية ضرورية.',
+        a: 'نعم. تدعم نماذج مثل LLaVA وOllama تحليل الصور محلياً. توفر النماذج المحلية الخصوصية لكنها أقل دقة من GPT-5.6 أو Claude Opus 5. استخدمها للمهام غير الحرجة أو عندما تكون الخصوصية ضرورية.',
       },
       {
         q: 'كيف أحسّن الاتساق في توليد صور من نص؟',
@@ -1466,7 +1466,7 @@ export const imagesWithTextKo: Record<string, PESection> = {
     title: '핵심 요점',
     isTldr: true,
     items: [
-      '멀티모달 프롬프팅은 텍스트와 이미지를 결합합니다. GPT-5.6 및 Claude Opus 4.8과 같은 모델은 이미지 분석과 설명에 뛰어납니다.',
+      '멀티모달 프롬프팅은 텍스트와 이미지를 결합합니다. GPT-5.6 및 Claude Opus 5과 같은 모델은 이미지 분석과 설명에 뛰어납니다.',
       '세 가지 모드가 있습니다: Image→Text(설명/분석), Text→Image(생성), Image↔Image(편집/변환)',
       '비전-언어 모델은 정확한 개수 세기, 세밀한 객체 경계, 이미지 내 소형 텍스트 읽기에 어려움을 겪습니다.',
       '구조화된 패턴을 따르십시오: 분석 목표를 구체적으로 명시하고 맥락을 제공하며 일관성을 위해 예시를 활용하십시오.',
@@ -1489,7 +1489,7 @@ export const imagesWithTextKo: Record<string, PESection> = {
   howVisionWorks: {
     title: '비전-언어 모델이 이미지를 인식하는 방법',
     content: [
-      '**GPT-5.6, Claude Opus 4.8, Gemini 3.5 Pro와 같은 비전-언어 모델은 시각적 인코더를 사용하여 이미지를 고차원 벡터(임베딩)로 변환한 다음, 공유된 의미 공간에서 텍스트 토큰과 함께 해당 임베딩을 처리합니다.** 이 접근 방식은 VLM에게 여러 작업에 걸쳐 명확한 강점을 부여합니다. 객체를 식별하고 텍스트를 읽으며 공간적 관계를 이해하고 여러 이미지에 걸쳐 콘텐츠를 추론합니다. Gemini 3.5 Pro는 최대 100만 토큰을 지원하여 GPT-5.6의 128k 컨텍스트 창보다 긴 멀티모달 시퀀스를 분석할 수 있습니다. [컨텍스트 창 한계](/ko/prompt-engineering/context-windows-explained-why-ai-forgets)를 이해하면 긴 이미지 설명이나 다중 이미지 시퀀스 작업 시 잘림을 방지하는 프롬프트를 구성하는 데 도움이 됩니다.',
+      '**GPT-5.6, Claude Opus 5, Gemini 3.5 Pro와 같은 비전-언어 모델은 시각적 인코더를 사용하여 이미지를 고차원 벡터(임베딩)로 변환한 다음, 공유된 의미 공간에서 텍스트 토큰과 함께 해당 임베딩을 처리합니다.** 이 접근 방식은 VLM에게 여러 작업에 걸쳐 명확한 강점을 부여합니다. 객체를 식별하고 텍스트를 읽으며 공간적 관계를 이해하고 여러 이미지에 걸쳐 콘텐츠를 추론합니다. Gemini 3.5 Pro는 최대 100만 토큰을 지원하여 GPT-5.6의 128k 컨텍스트 창보다 긴 멀티모달 시퀀스를 분석할 수 있습니다. [컨텍스트 창 한계](/ko/prompt-engineering/context-windows-explained-why-ai-forgets)를 이해하면 긴 이미지 설명이나 다중 이미지 시퀀스 작업 시 잘림을 방지하는 프롬프트를 구성하는 데 도움이 됩니다.',
       'VLM은 장면 이해, 문서 분석, 시각적 요소 비교에 뛰어납니다. 그러나 예측 가능한 약점도 있습니다:',
     ],
     items: [
@@ -1561,7 +1561,7 @@ export const imagesWithTextKo: Record<string, PESection> = {
   promptquorumHelps: {
     title: 'PromptQuorum이 이미지 프롬프팅을 돕는 방법',
     content: [
-      '**PromptQuorum은 GPT-5.6, Claude Opus 4.8, Gemini 3.5 Pro 및 기타 모델에 걸쳐 멀티모달 프롬프트를 동시에 테스트할 수 있는 다중 모델 프롬프트 디스패치 플랫폼입니다.** 동일한 제품 이미지 설명 프롬프트를 세 모델에서 테스트했을 때 GPT-5.6는 가장 구조화된 출력을 반환했고, Claude Opus 4.8은 텍스트 추출에서 가장 높은 정확도를 달성했으며, Gemini 3.5 Pro는 가장 많은 맥락적 세부 사항을 포착했습니다 — 서로 다른 모델이 서로 다른 이미지 분석 작업에 탁월함을 보여줍니다.',
+      '**PromptQuorum은 GPT-5.6, Claude Opus 5, Gemini 3.5 Pro 및 기타 모델에 걸쳐 멀티모달 프롬프트를 동시에 테스트할 수 있는 다중 모델 프롬프트 디스패치 플랫폼입니다.** 동일한 제품 이미지 설명 프롬프트를 세 모델에서 테스트했을 때 GPT-5.6는 가장 구조화된 출력을 반환했고, Claude Opus 5은 텍스트 추출에서 가장 높은 정확도를 달성했으며, Gemini 3.5 Pro는 가장 많은 맥락적 세부 사항을 포착했습니다 — 서로 다른 모델이 서로 다른 이미지 분석 작업에 탁월함을 보여줍니다.',
       '세 모델 모두에 동일한 멀티모달 프롬프트를 디스패치함으로써 어떤 모델이 가장 잘 답변하는지 확인한 다음 Consensus Scoring을 사용하여 출력에 가중치를 부여합니다.',
     ],
     items: [
@@ -1589,7 +1589,7 @@ export const imagesWithTextKo: Record<string, PESection> = {
     faqs: [
       {
         q: '이미지 분석에 가장 적합한 비전-언어 모델은 무엇입니까?',
-        a: '단일 최고 모델은 없습니다. GPT-5.6는 일반적인 장면 이해와 복잡한 추론에 뛰어납니다. Claude Opus 4.8은 문서 분석과 텍스트 추출에 정확합니다. Gemini 3.5 Pro는 더 긴 멀티모달 컨텍스트(100만 토큰)를 처리합니다. PromptQuorum을 사용하여 특정 작업에 대해 세 모델 모두를 테스트하십시오.',
+        a: '단일 최고 모델은 없습니다. GPT-5.6는 일반적인 장면 이해와 복잡한 추론에 뛰어납니다. Claude Opus 5은 문서 분석과 텍스트 추출에 정확합니다. Gemini 3.5 Pro는 더 긴 멀티모달 컨텍스트(100만 토큰)를 처리합니다. PromptQuorum을 사용하여 특정 작업에 대해 세 모델 모두를 테스트하십시오.',
       },
       {
         q: '비전-언어 모델이 객체를 정확하게 셀 수 있습니까?',
@@ -1601,11 +1601,11 @@ export const imagesWithTextKo: Record<string, PESection> = {
       },
       {
         q: '비전-언어 모델은 어떤 이미지 형식을 지원합니까?',
-        a: 'GPT-5.6, Claude Opus 4.8, Gemini 3.5 Pro는 JPEG, PNG, GIF, WebP를 허용합니다. 대부분은 최대 20 MB의 이미지를 지원합니다. 특정 제한은 모델마다 다릅니다. 현재 세부 사항은 OpenAI 및 Anthropic 문서를 확인하십시오.',
+        a: 'GPT-5.6, Claude Opus 5, Gemini 3.5 Pro는 JPEG, PNG, GIF, WebP를 허용합니다. 대부분은 최대 20 MB의 이미지를 지원합니다. 특정 제한은 모델마다 다릅니다. 현재 세부 사항은 OpenAI 및 Anthropic 문서를 확인하십시오.',
       },
       {
         q: '멀티모달 프롬프팅에 Ollama와 같은 로컬 모델을 사용할 수 있습니까?',
-        a: '예. LLaVA 및 Ollama와 같은 모델은 로컬 이미지 분석을 지원합니다. 로컬 모델은 개인정보 보호를 제공하지만 GPT-5.6 또는 Claude Opus 4.8보다 정확도가 낮습니다. 중요하지 않은 작업이나 개인정보 보호가 필수적인 경우에 사용하십시오.',
+        a: '예. LLaVA 및 Ollama와 같은 모델은 로컬 이미지 분석을 지원합니다. 로컬 모델은 개인정보 보호를 제공하지만 GPT-5.6 또는 Claude Opus 5보다 정확도가 낮습니다. 중요하지 않은 작업이나 개인정보 보호가 필수적인 경우에 사용하십시오.',
       },
       {
         q: '텍스트-이미지 생성의 일관성을 어떻게 향상시킵니까?',

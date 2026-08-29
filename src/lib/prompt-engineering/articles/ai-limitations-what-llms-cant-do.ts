@@ -12,7 +12,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       next_refresh_due: '2026-09-24',
       theme: 'Fundamentals',
       title: 'AI Limitations: What LLMs Can\'t Do in 2026',
-      intro: 'Large language models have eight hard limits that no amount of fine-tuning, scaling, or prompt engineering can eliminate: no real-time data, confident hallucinations, weak multi-step reasoning, context window caps, no memory, no real-world actions, training bias, and no self-verification. Every model — GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro, and open-source alternatives — shares these structural constraints. This guide covers each limit with the engineering workaround that works in production.',
+      intro: 'Large language models have eight hard limits that no amount of fine-tuning, scaling, or prompt engineering can eliminate: no real-time data, confident hallucinations, weak multi-step reasoning, context window caps, no memory, no real-world actions, training bias, and no self-verification. Every model — GPT-5.6, Claude Opus 5, Gemini 3.1 Pro, and open-source alternatives — shares these structural constraints. This guide covers each limit with the engineering workaround that works in production.',
       publishDate: '2026-03-24',
       seoTitle: 'LLM Limitations & Workarounds 2026: 8 Key Constraints',
       metaDescription: 'All local LLMs share 8 structural limits: no real-time data, hallucinations, context caps, no memory. Learn workarounds for each constraint and when to use cloud.',
@@ -47,8 +47,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: 'Prompt engineering strategies' },
         ],
         mentions: [
-          { '@type': 'SoftwareApplication', name: 'GPT-5.5', url: 'https://openai.com' },
-          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8', url: 'https://anthropic.com' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5.6', url: 'https://openai.com' },
+          { '@type': 'SoftwareApplication', name: 'Claude Opus 5', url: 'https://anthropic.com' },
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro', url: 'https://deepmind.google' },
           { '@type': 'Organization', name: 'OpenAI', url: 'https://openai.com' },
           { '@type': 'Organization', name: 'Anthropic', url: 'https://anthropic.com' },
@@ -69,9 +69,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'ListItem', position: 1, name: 'Knowledge cutoff', description: 'Root cause: static training data with an end date. Severity: high for current events. Workaround: retrieval-augmented generation (RAG) or paste current facts directly into the prompt.' },
           { '@type': 'ListItem', position: 2, name: 'Hallucination', description: 'Root cause: token prediction based on training patterns, not truth lookup. Severity: high for specific facts, citations, and numeric figures. Workaround: ground prompts with source material and validate outputs against primary sources.' },
           { '@type': 'ListItem', position: 3, name: 'No reliable multi-step reasoning', description: 'Root cause: no working memory or state between token predictions. Severity: medium, improves significantly with chain-of-thought prompting. Workaround: use chain-of-thought prompting or route arithmetic to a code interpreter.' },
-          { '@type': 'ListItem', position: 4, name: 'Context window limits', description: 'Root cause: transformer attention has a hard token cap. Severity: medium for long documents. Context caps: GPT-5.5 128K, Claude Opus 4.8 1M, Gemini 3.1 Pro 2M tokens. Workaround: RAG, chunking, summarization.' },
+          { '@type': 'ListItem', position: 4, name: 'Context window limits', description: 'Root cause: transformer attention has a hard token cap. Severity: medium for long documents. Context caps: GPT-5.6 128K, Claude Opus 5 1M, Gemini 3.1 Pro 2M tokens. Workaround: RAG, chunking, summarization.' },
           { '@type': 'ListItem', position: 5, name: 'No persistent memory', description: 'Root cause: stateless architecture — each session starts from a blank context. Severity: medium for multi-session workflows. Workaround: application-layer memory injection using vector databases or conversation summaries.' },
-          { '@type': 'ListItem', position: 6, name: 'No real-world action capability', description: 'Root cause: LLMs output text only by default. Severity: high for autonomous tasks. Workaround: tool use / function calling available in GPT-5.5, Claude Opus 4.8, and Gemini 3.1 Pro.' },
+          { '@type': 'ListItem', position: 6, name: 'No real-world action capability', description: 'Root cause: LLMs output text only by default. Severity: high for autonomous tasks. Workaround: tool use / function calling available in GPT-5.6, Claude Opus 5, and Gemini 3.1 Pro.' },
           { '@type': 'ListItem', position: 7, name: 'Training data bias', description: 'Root cause: training corpus is primarily English-language, Western, and pre-2025 internet content. Severity: medium, varies by language and domain. Workaround: provide domain-specific context, terminology, and examples explicitly in the prompt.' },
           { '@type': 'ListItem', position: 8, name: 'Cannot self-verify outputs', description: 'Root cause: no access to ground truth — models can only assess consistency with training patterns, not factual accuracy. Severity: high for factual claims. Workaround: external validation against authoritative primary sources before publishing.' },
         ],
@@ -97,7 +97,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             name: 'What are the main things LLMs can\'t do?',
-            acceptedAnswer: { '@type': 'Answer', text: 'LLMs cannot access real-time data, verify their own outputs, retain memory across sessions, take real-world actions without tool scaffolding, or reason reliably through multi-step logic without chain-of-thought prompting. These are structural limits applying to every model — GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro, and open-source alternatives alike.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'LLMs cannot access real-time data, verify their own outputs, retain memory across sessions, take real-world actions without tool scaffolding, or reason reliably through multi-step logic without chain-of-thought prompting. These are structural limits applying to every model — GPT-5.6, Claude Opus 5, Gemini 3.1 Pro, and open-source alternatives alike.' },
           },
           {
             '@type': 'Question',
@@ -106,13 +106,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             '@type': 'Question',
-            name: 'Can GPT-5.5 access the internet?',
-            acceptedAnswer: { '@type': 'Answer', text: 'GPT-5.5 in the standard API cannot access the internet. ChatGPT\'s interface offers an optional browsing tool, but the base model API has a training cutoff of October 2024 and no live retrieval. Always confirm whether a tool-use layer is active in your specific integration before assuming the model has current data.' },
+            name: 'Can GPT-5.6 access the internet?',
+            acceptedAnswer: { '@type': 'Answer', text: 'GPT-5.6 in the standard API cannot access the internet. ChatGPT\'s interface offers an optional browsing tool, but the base model API has a training cutoff of October 2024 and no live retrieval. Always confirm whether a tool-use layer is active in your specific integration before assuming the model has current data.' },
           },
           {
             '@type': 'Question',
-            name: 'How do knowledge cutoffs differ between GPT-5.5, Claude, and Gemini?',
-            acceptedAnswer: { '@type': 'Answer', text: 'As of 2026: OpenAI GPT-5.5 has a training cutoff of October 2024; Anthropic Claude Opus 4.8 and Google Gemini 3.1 Pro have cutoffs in early 2025. All three models may have imprecise knowledge of events close to their cutoffs due to sparse training coverage of the most recent months.' },
+            name: 'How do knowledge cutoffs differ between GPT-5.6, Claude, and Gemini?',
+            acceptedAnswer: { '@type': 'Answer', text: 'As of 2026: OpenAI GPT-5.6 has a training cutoff of October 2024; Anthropic Claude Opus 5 and Google Gemini 3.1 Pro have cutoffs in early 2025. All three models may have imprecise knowledge of events close to their cutoffs due to sparse training coverage of the most recent months.' },
           },
           {
             '@type': 'Question',
@@ -122,7 +122,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             name: 'Do fine-tuned models have the same limitations?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Yes. Fine-tuning adjusts style, domain focus, or instruction-following behavior — it does not add real-time data access, true reasoning, or persistent memory. A fine-tuned GPT-5.5 retains the same knowledge cutoff and hallucination risk as the base model.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Yes. Fine-tuning adjusts style, domain focus, or instruction-following behavior — it does not add real-time data access, true reasoning, or persistent memory. A fine-tuned GPT-5.6 retains the same knowledge cutoff and hallucination risk as the base model.' },
           },
           {
             '@type': 'Question',
@@ -132,12 +132,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             name: 'Which LLM has the fewest limitations?',
-            acceptedAnswer: { '@type': 'Answer', text: 'No model eliminates any of the eight structural limitations — they are universal to transformer architecture. Gemini 3.1 Pro has the largest context window (2 million tokens), best mitigating limitation 4. Claude Opus 4.8 hedges uncertainty and acknowledges knowledge cutoffs most reliably, mitigating hallucination risk. GPT-5.5 excels at tool use (limitation 6 workaround). Choose based on your specific limitation bottleneck, not on which model is "least limited."' },
+            acceptedAnswer: { '@type': 'Answer', text: 'No model eliminates any of the eight structural limitations — they are universal to transformer architecture. Gemini 3.1 Pro has the largest context window (2 million tokens), best mitigating limitation 4. Claude Opus 5 hedges uncertainty and acknowledges knowledge cutoffs most reliably, mitigating hallucination risk. GPT-5.6 excels at tool use (limitation 6 workaround). Choose based on your specific limitation bottleneck, not on which model is "least limited."' },
           },
           {
             '@type': 'Question',
             name: 'How do limitations differ between open-source and proprietary models in 2026?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Open-source models (LLaMA 3.1, Mistral Large, Qwen 3) and proprietary models (GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro) face identical structural limitations — knowledge cutoffs, hallucination, context windows, reasoning constraints. The differences are in severity and cost: proprietary models typically have larger contexts (Gemini 3.1 Pro: 2M tokens vs. Mistral: 128K), better instruction-following, and more frequent training updates. Open-source models trade capabilities for cost and deployment control. Neither category eliminates any of the eight limitations.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Open-source models (LLaMA 3.1, Mistral Large, Qwen 3) and proprietary models (GPT-5.6, Claude Opus 5, Gemini 3.1 Pro) face identical structural limitations — knowledge cutoffs, hallucination, context windows, reasoning constraints. The differences are in severity and cost: proprietary models typically have larger contexts (Gemini 3.1 Pro: 2M tokens vs. Mistral: 128K), better instruction-following, and more frequent training updates. Open-source models trade capabilities for cost and deployment control. Neither category eliminates any of the eight limitations.' },
           },
         ],
       },
@@ -160,7 +160,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Knowledge cutoffs mean every LLM is working from outdated information by default',
             'Hallucination is structural — all LLMs generate false content confidently when they lack training signal',
             'Multi-step reasoning fails without chain-of-thought prompting or external tools',
-            'Context windows cap every session: GPT-5.5 128K, Claude Opus 4.8 1M, Gemini 3.1 Pro 2M tokens',
+            'Context windows cap every session: GPT-5.6 128K, Claude Opus 5 1M, Gemini 3.1 Pro 2M tokens',
             'No LLM remembers previous conversations without an application-layer memory system',
             'LLMs cannot browse the web, run code, or take actions without tool-use scaffolding',
             'Every limitation has a known engineering workaround — knowing the limit is the first step',
@@ -211,19 +211,19 @@ export const article: Partial<Record<Language, PEArticle>> = {
         modelLimitsComparison: {
           title: 'How Limitations Differ by Model (2026)',
           content: ['The eight structural limits apply universally — but severity and available partial workarounds vary by model.'],
-          columns: ['Limitation', 'GPT-5.5', 'Claude Opus 4.8', 'Gemini 3.1 Pro', 'Open-Source (LLaMA 3.1)'],
+          columns: ['Limitation', 'GPT-5.6', 'Claude Opus 5', 'Gemini 3.1 Pro', 'Open-Source (LLaMA 3.1)'],
           rows: [
-            { 'Limitation': 'Knowledge cutoff', 'GPT-5.5': 'Oct 2024', 'Claude Opus 4.8': 'Early 2025', 'Gemini 3.1 Pro': 'Early 2025', 'Open-Source (LLaMA 3.1)': 'Varies by release' },
-            { 'Limitation': 'Context window', 'GPT-5.5': '128K tokens', 'Claude Opus 4.8': '1M tokens', 'Gemini 3.1 Pro': '2M tokens', 'Open-Source (LLaMA 3.1)': '8K–128K tokens' },
-            { 'Limitation': 'Tool use quality', 'GPT-5.5': 'Excellent', 'Claude Opus 4.8': 'Excellent', 'Gemini 3.1 Pro': 'Good', 'Open-Source (LLaMA 3.1)': 'Varies' },
-            { 'Limitation': 'Hallucination handling', 'GPT-5.5': 'Moderate', 'Claude Opus 4.8': 'Strong (flags uncertainty)', 'Gemini 3.1 Pro': 'Moderate', 'Open-Source (LLaMA 3.1)': 'Weak' },
-            { 'Limitation': 'Reasoning (extended)', 'GPT-5.5': 'o3/o4-mini available', 'Claude Opus 4.8': 'Extended thinking available', 'Gemini 3.1 Pro': 'Flash Thinking available', 'Open-Source (LLaMA 3.1)': 'Limited' },
+            { 'Limitation': 'Knowledge cutoff', 'GPT-5.6': 'Oct 2024', 'Claude Opus 5': 'Early 2025', 'Gemini 3.1 Pro': 'Early 2025', 'Open-Source (LLaMA 3.1)': 'Varies by release' },
+            { 'Limitation': 'Context window', 'GPT-5.6': '128K tokens', 'Claude Opus 5': '1M tokens', 'Gemini 3.1 Pro': '2M tokens', 'Open-Source (LLaMA 3.1)': '8K–128K tokens' },
+            { 'Limitation': 'Tool use quality', 'GPT-5.6': 'Excellent', 'Claude Opus 5': 'Excellent', 'Gemini 3.1 Pro': 'Good', 'Open-Source (LLaMA 3.1)': 'Varies' },
+            { 'Limitation': 'Hallucination handling', 'GPT-5.6': 'Moderate', 'Claude Opus 5': 'Strong (flags uncertainty)', 'Gemini 3.1 Pro': 'Moderate', 'Open-Source (LLaMA 3.1)': 'Weak' },
+            { 'Limitation': 'Reasoning (extended)', 'GPT-5.6': 'o3/o4-mini available', 'Claude Opus 5': 'Extended thinking available', 'Gemini 3.1 Pro': 'Flash Thinking available', 'Open-Source (LLaMA 3.1)': 'Limited' },
           ],
         },
         knowledgeCutoff: {
           title: 'Limitation 1 — Knowledge Cutoffs and No Real-Time Data',
           content: [
-            '**Every LLM has a training cutoff date, and the model has no knowledge of events, prices, papers, or product versions released after that date unless external retrieval is added.** OpenAI GPT-5.5 has a cutoff of October 2024. Anthropic Claude Opus 4.8 and Google Gemini 3.1 Pro have cutoffs in early 2025.',
+            '**Every LLM has a training cutoff date, and the model has no knowledge of events, prices, papers, or product versions released after that date unless external retrieval is added.** OpenAI GPT-5.6 has a cutoff of October 2024. Anthropic Claude Opus 5 and Google Gemini 3.1 Pro have cutoffs in early 2025.',
             'Models also have sparse knowledge of events *close to* their cutoff, because training data collection and processing takes weeks to months after events occur. A model trained through October 2024 may have thin coverage of September–October 2024 events.',
             'The primary workaround is [retrieval-augmented generation (RAG)](/prompt-engineering/rag-explained), which injects live or recent documents into the prompt at query time. A secondary workaround is prompt grounding: pasting the relevant current facts directly into the prompt and instructing the model to answer only from that context.',
           ],
@@ -231,7 +231,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         hallucination: {
           title: 'Limitation 2 — Hallucination Is Structural, Not a Bug',
           content: [
-            '**LLMs generate statistically plausible tokens, not verified facts — when the training signal for a specific fact is thin, the model produces a confident-sounding fabrication.** This applies to every model including GPT-5.5, Claude Opus 4.8, and Gemini 3.1 Pro. For a deep dive, see [AI Hallucinations — Why AI Makes Things Up](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up).',
+            '**LLMs generate statistically plausible tokens, not verified facts — when the training signal for a specific fact is thin, the model produces a confident-sounding fabrication.** This applies to every model including GPT-5.6, Claude Opus 5, and Gemini 3.1 Pro. For a deep dive, see [AI Hallucinations — Why AI Makes Things Up](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up).',
             'Hallucination occurs most frequently on: specific numeric figures (prices, dates, statistics), citations and paper references, niche technical specifications, and events close to or after the training cutoff. Models rarely signal when they are hallucinating.',
             'Workarounds: provide the source material in the prompt and instruct the model to answer only from it; ask the model to flag any claim it cannot confirm from provided context; use [RAG](/prompt-engineering/rag-explained) to anchor answers to verified documents; validate all key figures against primary sources before publishing.',
           ],
@@ -249,7 +249,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         contextWindow: {
           title: 'Limitation 4 — Context Window Caps',
           content: [
-            '**Every LLM session has a hard token limit — GPT-5.5 at 128,000 tokens, Claude Opus 4.8 at 200,000 tokens, Gemini 3.1 Pro at 2,000,000 tokens — and performance on earlier content degrades as the window fills.** See [Context Windows Explained](/prompt-engineering/context-windows-explained-why-ai-forgets) for a full breakdown.',
+            '**Every LLM session has a hard token limit — GPT-5.6 at 128,000 tokens, Claude Opus 5 at 200,000 tokens, Gemini 3.1 Pro at 2,000,000 tokens — and performance on earlier content degrades as the window fills.** See [Context Windows Explained](/prompt-engineering/context-windows-explained-why-ai-forgets) for a full breakdown.',
             'The "lost in the middle" problem: multiple studies show LLM accuracy on retrieving information from the middle of a long context is significantly lower than from the beginning or end. A 1M token window does not mean uniform attention across all 1M tokens.',
             'Workarounds: structure important information at the start or end of the prompt; use RAG to retrieve only relevant chunks rather than dumping full documents; break long documents into chunked sessions with summarization steps.',
           ],
@@ -268,7 +268,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Limitation 6 — LLMs Cannot Take Real-World Actions',
           content: [
             '**LLMs generate text — they cannot browse the web, run code, send emails, modify files, or interact with external systems unless a tool-use layer explicitly enables these actions.** The model produces a text description of what it would do; the scaffolding layer executes it.',
-            'Tool use (also called function calling) — available in GPT-5.5, Claude Opus 4.8, and Gemini 3.1 Pro — lets a model output structured function calls that an application intercepts and executes. The model still cannot take action on its own; it can only emit structured text that triggers external execution.',
+            'Tool use (also called function calling) — available in GPT-5.6, Claude Opus 5, and Gemini 3.1 Pro — lets a model output structured function calls that an application intercepts and executes. The model still cannot take action on its own; it can only emit structured text that triggers external execution.',
             'Autonomous agents wrap multiple tool calls in an orchestration loop, creating the appearance of independent action. Prompt injection and security vulnerabilities are significant concerns in these architectures — see [Prompt Injection and Security](/prompt-engineering/prompt-injection-and-security).',
           ],
         },
@@ -276,7 +276,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Limitation 7 — Training Data Bias and Coverage Gaps',
           content: [
             '**LLMs inherit the biases, gaps, and skews of their training data — primarily English-language, Western, and pre-2025 internet content.** Performance on non-English queries, non-Western cultural contexts, and minority-language topics is structurally weaker.',
-            'This is relevant for international teams: GPT-5.5, Claude Opus 4.8, and Gemini 3.1 Pro all produce stronger outputs in English than in lower-resource languages. Technical terminology in niche domains (specific industries, local legal systems, regional dialects) may be poorly represented in training data.',
+            'This is relevant for international teams: GPT-5.6, Claude Opus 5, and Gemini 3.1 Pro all produce stronger outputs in English than in lower-resource languages. Technical terminology in niche domains (specific industries, local legal systems, regional dialects) may be poorly represented in training data.',
             'Workaround: provide domain-specific context, terminology definitions, or examples in the prompt. Do not assume the model has accurate knowledge of your specific industry, region, or institution.',
           ],
         },
@@ -309,9 +309,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**The eight structural limitations are real, but each has at least one scenario where the conventional warning overstates the problem — or where 2025–2026 research has partially closed the gap.** Knowing the exceptions is as important as knowing the rule.',
           ],
           items: [
-            '**Knowledge cutoff is irrelevant for stable-domain questions.** The cutoff matters for current events, recent releases, and changing prices. For physics, mathematics, established software APIs (pre-2024), classical literature, and foundational legal frameworks, GPT-5.5\'s October 2024 cutoff carries almost no practical penalty. Routing stable-domain queries to unaugmented models is often faster and cheaper than RAG.',
+            '**Knowledge cutoff is irrelevant for stable-domain questions.** The cutoff matters for current events, recent releases, and changing prices. For physics, mathematics, established software APIs (pre-2024), classical literature, and foundational legal frameworks, GPT-5.6\'s October 2024 cutoff carries almost no practical penalty. Routing stable-domain queries to unaugmented models is often faster and cheaper than RAG.',
             '**Hallucination is a feature for generative tasks.** The same token-prediction mechanism that fabricates citations also generates novel metaphors, product names, and creative variations that no retrieval system could produce. Designers, copywriters, and product teams often want LLM "confabulation" — the problem arises only when treating generated content as factual. Separating generation tasks from fact-lookup tasks eliminates most hallucination risk without suppressing creativity.',
-            '**Extended-thinking models have substantially narrowed the reasoning gap.** OpenAI o3 and o4-mini and Anthropic\'s extended thinking in Claude Opus 4.8 use inference-time compute scaling — generating chains of reasoning tokens before answering — and achieve near-human accuracy on graduate-level math and formal logic benchmarks (AIME, MMLU-Pro) as of 2025. The "LLMs can\'t reason" claim is accurate for standard-mode inference; it is increasingly inaccurate for extended-thinking modes on well-defined tasks.',
+            '**Extended-thinking models have substantially narrowed the reasoning gap.** OpenAI o3 and o4-mini and Anthropic\'s extended thinking in Claude Opus 5 use inference-time compute scaling — generating chains of reasoning tokens before answering — and achieve near-human accuracy on graduate-level math and formal logic benchmarks (AIME, MMLU-Pro) as of 2025. The "LLMs can\'t reason" claim is accurate for standard-mode inference; it is increasingly inaccurate for extended-thinking modes on well-defined tasks.',
             '**The "lost in the middle" context problem is position-dependent, not universal.** Liu et al. (2023) showed degradation specifically when critical information is placed in the middle of very long contexts. For prompts under ~20,000 tokens, or when critical facts are placed at the start or end of the prompt, the degradation is minimal. The 2M-token Gemini 3.1 Pro window does not suffer the same magnitude of middle-degradation as earlier 4K or 8K models.',
             '**Self-consistency prompting partially addresses the self-verification gap.** Generating three independent answers to the same question and selecting the majority response (Wang et al., 2023, "Self-Consistency Improves Chain of Thought Reasoning in Language Models," [arXiv:2203.11171](https://arxiv.org/abs/2203.11171)) improves factual accuracy on closed-domain tasks by 10–20 percentage points compared to greedy decoding. It does not substitute for external validation, but it does reduce the rate of confident errors on questions with retrievable answers.',
           ],
@@ -319,12 +319,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptExamples: {
           title: 'Prompting Around Limitations — Bad and Good Examples',
           content: ['These examples show how the same underlying request fails when it ignores LLM limitations and succeeds when it accounts for them.'],
-          blockquote: '[Bad Prompt] "What\'s the current pricing for GPT-5.5?"',
+          blockquote: '[Bad Prompt] "What\'s the current pricing for GPT-5.6?"',
           blockquoteSource: 'This prompt assumes real-time knowledge the model does not have. The model will confidently state outdated or fabricated pricing.',
           items: [
-            'This prompt ignores the knowledge cutoff limitation. GPT-5.5\'s training data ends October 2024 — pricing may have changed since then. The model will generate an answer that sounds authoritative but may be months out of date.',
+            'This prompt ignores the knowledge cutoff limitation. GPT-5.6\'s training data ends October 2024 — pricing may have changed since then. The model will generate an answer that sounds authoritative but may be months out of date.',
             'A better approach explicitly accounts for the limitation:',
-            '[Good Prompt] "Explain the typical pricing structure OpenAI uses for GPT-5.5 (input tokens, output tokens, batching). Note: I know your training data may not reflect the latest rates — I\'ll verify the exact current numbers at platform.openai.com after reading your explanation."',
+            '[Good Prompt] "Explain the typical pricing structure OpenAI uses for GPT-5.6 (input tokens, output tokens, batching). Note: I know your training data may not reflect the latest rates — I\'ll verify the exact current numbers at platform.openai.com after reading your explanation."',
           ],
         },
         howToStart: {
@@ -342,9 +342,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Key Terms',
           content: ['Definitions for the core concepts used throughout this article. Each term links to the full entry in the [Prompt Engineering Glossary](/prompt-engineering/prompt-engineering-glossary).'],
           items: [
-            '**[Knowledge Cutoff](/prompt-engineering/prompt-engineering-glossary)** — The date beyond which a model has no training data. Any event, pricing change, or release after this date is invisible to the model unless you paste it into the prompt. GPT-5.5: October 2024; Claude Opus 4.8 and Gemini 3.1 Pro: early 2025.',
+            '**[Knowledge Cutoff](/prompt-engineering/prompt-engineering-glossary)** — The date beyond which a model has no training data. Any event, pricing change, or release after this date is invisible to the model unless you paste it into the prompt. GPT-5.6: October 2024; Claude Opus 5 and Gemini 3.1 Pro: early 2025.',
             '**[Hallucination](/prompt-engineering/prompt-engineering-glossary#core-concepts)** — Confident-sounding but factually incorrect or fabricated output. Caused by statistical token prediction rather than truth lookup. Grounding prompts with source material reduces but does not eliminate it.',
-            '**[Context Window](/prompt-engineering/prompt-engineering-glossary#core-concepts)** — The maximum number of tokens (words + punctuation) the model can process at once, including system prompt, conversation history, and retrieved documents. GPT-5.5: 128K tokens; Claude Opus 4.8: 1M; Gemini 3.1 Pro: 2M.',
+            '**[Context Window](/prompt-engineering/prompt-engineering-glossary#core-concepts)** — The maximum number of tokens (words + punctuation) the model can process at once, including system prompt, conversation history, and retrieved documents. GPT-5.6: 128K tokens; Claude Opus 5: 1M; Gemini 3.1 Pro: 2M.',
             '**[Tool Use / Function Calling](/prompt-engineering/prompt-engineering-glossary#agents-orchestration)** — A capability that lets the model invoke external functions (web search, code execution, database queries) instead of generating text answers. Required to work around the no-real-world-action limitation.',
             '**[Chain-of-Thought (CoT)](/prompt-engineering/prompt-engineering-glossary#core-concepts)** — A prompting technique where you ask the model to reason step by step before giving a final answer. Significantly improves accuracy on multi-step arithmetic, logic, and planning tasks.',
             '**[RAG (Retrieval-Augmented Generation)](/prompt-engineering/prompt-engineering-glossary#core-concepts)** — Architecture where relevant documents are retrieved from an external knowledge base and injected into the prompt at query time. The primary workaround for knowledge cutoffs.',
@@ -376,15 +376,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'faq',
           title: 'Frequently Asked Questions',
           faqs: [
-            { q: 'What are the main things LLMs can\'t do?', a: 'LLMs cannot access real-time data, verify their own outputs, retain memory across sessions, take real-world actions without tool scaffolding, or reason reliably through multi-step logic without chain-of-thought prompting. These are structural limits applying to every model — GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro, and open-source alternatives alike.' },
+            { q: 'What are the main things LLMs can\'t do?', a: 'LLMs cannot access real-time data, verify their own outputs, retain memory across sessions, take real-world actions without tool scaffolding, or reason reliably through multi-step logic without chain-of-thought prompting. These are structural limits applying to every model — GPT-5.6, Claude Opus 5, Gemini 3.1 Pro, and open-source alternatives alike.' },
             { q: 'Why do LLMs hallucinate?', a: 'Hallucination is structural: LLMs predict the most statistically likely next token based on training data, not verified truth. When training signal for a specific fact is thin — niche figures, recent events, obscure citations — the model generates a plausible-sounding fabrication without flagging uncertainty. Grounding prompts with explicit source material reduces but does not eliminate hallucination.' },
-            { q: 'Can GPT-5.5 access the internet?', a: 'GPT-5.5 in the standard API cannot access the internet. ChatGPT\'s interface offers an optional browsing tool, but the base model API has a training cutoff of October 2024 and no live retrieval. Always confirm whether a tool-use layer is active in your specific integration before assuming the model has current data.' },
-            { q: 'How do knowledge cutoffs differ between GPT-5.5, Claude, and Gemini?', a: 'As of 2026: OpenAI GPT-5.5 has a training cutoff of October 2024; Anthropic Claude Opus 4.8 and Google Gemini 3.1 Pro have cutoffs in early 2025. All three models may have imprecise knowledge of events close to their cutoffs due to sparse training coverage of the most recent months.' },
+            { q: 'Can GPT-5.6 access the internet?', a: 'GPT-5.6 in the standard API cannot access the internet. ChatGPT\'s interface offers an optional browsing tool, but the base model API has a training cutoff of October 2024 and no live retrieval. Always confirm whether a tool-use layer is active in your specific integration before assuming the model has current data.' },
+            { q: 'How do knowledge cutoffs differ between GPT-5.6, Claude, and Gemini?', a: 'As of 2026: OpenAI GPT-5.6 has a training cutoff of October 2024; Anthropic Claude Opus 5 and Google Gemini 3.1 Pro have cutoffs in early 2025. All three models may have imprecise knowledge of events close to their cutoffs due to sparse training coverage of the most recent months.' },
             { q: 'Can I fix LLM limitations with better prompting?', a: 'Prompting reduces the impact of limitations but does not eliminate them. Chain-of-thought prompting improves reasoning accuracy. Providing facts in the prompt mitigates knowledge cutoffs. Explicit uncertainty instructions reduce hallucination confidence. But prompting cannot give a model real-time data access, genuine memory, or the ability to take real-world actions.' },
-            { q: 'Do fine-tuned models have the same limitations?', a: 'Yes. Fine-tuning adjusts style, domain focus, or instruction-following behavior — it does not add real-time data access, true reasoning, or persistent memory. A fine-tuned GPT-5.5 retains the same knowledge cutoff and hallucination risk as the base model.' },
+            { q: 'Do fine-tuned models have the same limitations?', a: 'Yes. Fine-tuning adjusts style, domain focus, or instruction-following behavior — it does not add real-time data access, true reasoning, or persistent memory. A fine-tuned GPT-5.6 retains the same knowledge cutoff and hallucination risk as the base model.' },
             { q: 'What\'s the difference between an LLM limitation and a bug?', a: 'A bug is an unintended error fixable with a software update. A limitation is a structural property of how the model works. Hallucination, knowledge cutoffs, and context window caps are limitations — they emerge from the transformer architecture and training process and cannot be patched away, only worked around with system design.' },
-            { q: 'Which LLM has the fewest limitations?', a: 'No model eliminates any of the eight structural limitations — they are universal to transformer architecture. Gemini 3.1 Pro has the largest context window (2 million tokens), best mitigating limitation 4. Claude Opus 4.8 hedges uncertainty and acknowledges knowledge cutoffs most reliably, mitigating hallucination risk. GPT-5.5 excels at tool use (limitation 6 workaround). Choose based on your specific limitation bottleneck, not on which model is "least limited."' },
-            { q: 'How do limitations differ between open-source and proprietary models in 2026?', a: 'Open-source models (LLaMA 3.1, Mistral Large, Qwen 3) and proprietary models (GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro) face identical structural limitations — knowledge cutoffs, hallucination, context windows, reasoning constraints. The differences are in severity and cost: proprietary models typically have larger contexts (Gemini 3.1 Pro: 2M tokens vs. Mistral: 128K), better instruction-following, and more frequent training updates. Open-source models trade capabilities for cost and deployment control. Neither category eliminates any of the eight limitations.' },
+            { q: 'Which LLM has the fewest limitations?', a: 'No model eliminates any of the eight structural limitations — they are universal to transformer architecture. Gemini 3.1 Pro has the largest context window (2 million tokens), best mitigating limitation 4. Claude Opus 5 hedges uncertainty and acknowledges knowledge cutoffs most reliably, mitigating hallucination risk. GPT-5.6 excels at tool use (limitation 6 workaround). Choose based on your specific limitation bottleneck, not on which model is "least limited."' },
+            { q: 'How do limitations differ between open-source and proprietary models in 2026?', a: 'Open-source models (LLaMA 3.1, Mistral Large, Qwen 3) and proprietary models (GPT-5.6, Claude Opus 5, Gemini 3.1 Pro) face identical structural limitations — knowledge cutoffs, hallucination, context windows, reasoning constraints. The differences are in severity and cost: proprietary models typically have larger contexts (Gemini 3.1 Pro: 2M tokens vs. Mistral: 128K), better instruction-following, and more frequent training updates. Open-source models trade capabilities for cost and deployment control. Neither category eliminates any of the eight limitations.' },
           ],
         },
         sources: {
@@ -400,7 +400,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     de: {
       theme: 'Fundamentals',
       title: 'KI-Einschränkungen: Was LLMs 2026 nicht können',
-      intro: 'Große Sprachmodelle haben acht harte Grenzen, die kein Fine-Tuning, kein Skalieren und kein Prompt Engineering beseitigen kann: kein Echtzeitzugriff, Halluzinationen, schwaches mehrstufiges Reasoning, Kontextfenster-Limits, kein Gedächtnis, keine Aktionen, Trainingsbias und keine Selbstverifikation. Jedes Modell — GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro und Open-Source-Alternativen — teilt diese strukturellen Einschränkungen. Dieser Leitfaden behandelt jede Grenze mit dem Engineering-Workaround, der in der Praxis funktioniert.',
+      intro: 'Große Sprachmodelle haben acht harte Grenzen, die kein Fine-Tuning, kein Skalieren und kein Prompt Engineering beseitigen kann: kein Echtzeitzugriff, Halluzinationen, schwaches mehrstufiges Reasoning, Kontextfenster-Limits, kein Gedächtnis, keine Aktionen, Trainingsbias und keine Selbstverifikation. Jedes Modell — GPT-5.6, Claude Opus 5, Gemini 3.1 Pro und Open-Source-Alternativen — teilt diese strukturellen Einschränkungen. Dieser Leitfaden behandelt jede Grenze mit dem Engineering-Workaround, der in der Praxis funktioniert.',
       metaDescription: 'Alle lokalen LLMs teilen 8 Strukturgrenzen: kein Echtzeitzugriff, Halluzinationen, Kontextlimits, kein Gedächtnis. Lösungsansätze und wann Cloud besser ist.',
       heroImage: '/images/ai-limitations-what-llms-cant-do-quick-reference-hero-de.webp',
       publishDate: '2026-03-24',
@@ -435,8 +435,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: 'Prompt engineering strategies' },
         ],
         mentions: [
-          { '@type': 'SoftwareApplication', name: 'GPT-5.5', url: 'https://openai.com' },
-          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8', url: 'https://anthropic.com' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5.6', url: 'https://openai.com' },
+          { '@type': 'SoftwareApplication', name: 'Claude Opus 5', url: 'https://anthropic.com' },
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro', url: 'https://deepmind.google' },
           { '@type': 'Organization', name: 'OpenAI', url: 'https://openai.com' },
           { '@type': 'Organization', name: 'Anthropic', url: 'https://anthropic.com' },
@@ -457,9 +457,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'ListItem', position: 1, name: 'Wissens-Cutoff', description: 'Ursache: statische Trainingsdaten mit einem Enddatum. Schweregrad: hoch für aktuelle Ereignisse. Workaround: Retrieval-Augmented Generation (RAG) oder aktuelle Fakten direkt in den Prompt einfügen.' },
           { '@type': 'ListItem', position: 2, name: 'Halluzination', description: 'Ursache: Token-Vorhersage basierend auf Trainingsmustern, keine Wahrheitsabfrage. Schweregrad: hoch für spezifische Fakten, Zitate und numerische Werte. Workaround: Prompts mit Quellmaterial erden und Ausgaben gegen primäre Quellen validieren.' },
           { '@type': 'ListItem', position: 3, name: 'Kein zuverlässiges mehrstufiges Schlussfolgern', description: 'Ursache: kein Arbeitsgedächtnis oder Zustand zwischen Token-Vorhersagen. Schweregrad: mittel, verbessert sich deutlich mit Chain-of-Thought-Prompting. Workaround: Chain-of-Thought-Prompting verwenden oder Arithmetik an einen Code-Interpreter weiterleiten.' },
-          { '@type': 'ListItem', position: 4, name: 'Kontextfenster-Grenzen', description: 'Ursache: Transformer-Attention hat ein hartes Token-Limit. Schweregrad: mittel für lange Dokumente. Kontextlimits: GPT-5.5 128K, Claude Opus 4.8 1M, Gemini 3.1 Pro 2M Tokens. Workaround: RAG, Chunking, Zusammenfassung.' },
+          { '@type': 'ListItem', position: 4, name: 'Kontextfenster-Grenzen', description: 'Ursache: Transformer-Attention hat ein hartes Token-Limit. Schweregrad: mittel für lange Dokumente. Kontextlimits: GPT-5.6 128K, Claude Opus 5 1M, Gemini 3.1 Pro 2M Tokens. Workaround: RAG, Chunking, Zusammenfassung.' },
           { '@type': 'ListItem', position: 5, name: 'Kein dauerhaftes Gedächtnis', description: 'Ursache: zustandslose Architektur — jede Sitzung beginnt mit einem leeren Kontext. Schweregrad: mittel für Multi-Sitzungs-Workflows. Workaround: Anwendungsschicht-Gedächtniseinspeisung mit Vektordatenbanken oder Gesprächszusammenfassungen.' },
-          { '@type': 'ListItem', position: 6, name: 'Keine Echtwelt-Aktionsfähigkeit', description: 'Ursache: LLMs geben standardmäßig nur Text aus. Schweregrad: hoch für autonome Aufgaben. Workaround: Tool-Use / Function Calling verfügbar in GPT-5.5, Claude Opus 4.8 und Gemini 3.1 Pro.' },
+          { '@type': 'ListItem', position: 6, name: 'Keine Echtwelt-Aktionsfähigkeit', description: 'Ursache: LLMs geben standardmäßig nur Text aus. Schweregrad: hoch für autonome Aufgaben. Workaround: Tool-Use / Function Calling verfügbar in GPT-5.6, Claude Opus 5 und Gemini 3.1 Pro.' },
           { '@type': 'ListItem', position: 7, name: 'Trainingsdaten-Bias', description: 'Ursache: Trainingskorpus ist primär englischsprachige, westliche und Pre-2025-Internetinhalte. Schweregrad: mittel, variiert je nach Sprache und Domäne. Workaround: domänenspezifischen Kontext, Terminologie und Beispiele explizit im Prompt bereitstellen.' },
           { '@type': 'ListItem', position: 8, name: 'Kann eigene Ausgaben nicht überprüfen', description: 'Ursache: kein Zugang zur Grundwahrheit — Modelle können nur die Konsistenz mit Trainingsmustern beurteilen, nicht die faktische Richtigkeit. Schweregrad: hoch für faktische Behauptungen. Workaround: externe Validierung gegen autoritative primäre Quellen vor der Veröffentlichung.' },
         ],
@@ -485,7 +485,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             name: 'Was sind die wichtigsten Dinge, die LLMs nicht können?',
-            acceptedAnswer: { '@type': 'Answer', text: 'LLMs können nicht auf Echtzeitdaten zugreifen, ihre eigenen Ausgaben überprüfen, Gedächtnis über Sitzungen hinweg behalten, ohne Tool-Gerüst Echtwelt-Aktionen durchführen oder zuverlässig durch mehrstufige Logik ohne Chain-of-Thought-Prompting schlussfolgern. Dies sind strukturelle Grenzen, die für jedes Modell gelten — GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro und Open-Source-Alternativen gleichermaßen.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'LLMs können nicht auf Echtzeitdaten zugreifen, ihre eigenen Ausgaben überprüfen, Gedächtnis über Sitzungen hinweg behalten, ohne Tool-Gerüst Echtwelt-Aktionen durchführen oder zuverlässig durch mehrstufige Logik ohne Chain-of-Thought-Prompting schlussfolgern. Dies sind strukturelle Grenzen, die für jedes Modell gelten — GPT-5.6, Claude Opus 5, Gemini 3.1 Pro und Open-Source-Alternativen gleichermaßen.' },
           },
           {
             '@type': 'Question',
@@ -494,13 +494,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             '@type': 'Question',
-            name: 'Kann GPT-5.5 auf das Internet zugreifen?',
-            acceptedAnswer: { '@type': 'Answer', text: 'GPT-5.5 in der Standard-API kann nicht auf das Internet zugreifen. Die ChatGPT-Oberfläche bietet ein optionales Browsing-Tool, aber die Basis-Modell-API hat einen Trainings-Cutoff von Oktober 2024 und kein Live-Retrieval. Bestätigen Sie immer, ob eine Tool-Use-Schicht in Ihrer spezifischen Integration aktiv ist, bevor Sie davon ausgehen, dass das Modell aktuelle Daten hat.' },
+            name: 'Kann GPT-5.6 auf das Internet zugreifen?',
+            acceptedAnswer: { '@type': 'Answer', text: 'GPT-5.6 in der Standard-API kann nicht auf das Internet zugreifen. Die ChatGPT-Oberfläche bietet ein optionales Browsing-Tool, aber die Basis-Modell-API hat einen Trainings-Cutoff von Oktober 2024 und kein Live-Retrieval. Bestätigen Sie immer, ob eine Tool-Use-Schicht in Ihrer spezifischen Integration aktiv ist, bevor Sie davon ausgehen, dass das Modell aktuelle Daten hat.' },
           },
           {
             '@type': 'Question',
-            name: 'Wie unterscheiden sich Wissens-Cutoffs zwischen GPT-5.5, Claude und Gemini?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Stand 2026: OpenAI GPT-5.5 hat einen Trainings-Cutoff von Oktober 2024; Anthropic Claude Opus 4.8 und Google Gemini 3.1 Pro haben Cutoffs Anfang 2025. Alle drei Modelle können ungenaues Wissen über Ereignisse nahe ihrer Cutoffs haben, da die Trainingsabdeckung der jüngsten Monate spärlich ist.' },
+            name: 'Wie unterscheiden sich Wissens-Cutoffs zwischen GPT-5.6, Claude und Gemini?',
+            acceptedAnswer: { '@type': 'Answer', text: 'Stand 2026: OpenAI GPT-5.6 hat einen Trainings-Cutoff von Oktober 2024; Anthropic Claude Opus 5 und Google Gemini 3.1 Pro haben Cutoffs Anfang 2025. Alle drei Modelle können ungenaues Wissen über Ereignisse nahe ihrer Cutoffs haben, da die Trainingsabdeckung der jüngsten Monate spärlich ist.' },
           },
           {
             '@type': 'Question',
@@ -510,7 +510,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             name: 'Haben fein abgestimmte Modelle die gleichen Einschränkungen?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Ja. Fine-Tuning passt Stil, Domänenfokus oder instruktionsfolgendes Verhalten an — es fügt keinen Echtzeit-Datenzugang, echtes Schlussfolgern oder dauerhaftes Gedächtnis hinzu. Ein fein abgestimmtes GPT-5.5 behält den gleichen Wissens-Cutoff und das gleiche Halluzinationsrisiko wie das Basismodell.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Ja. Fine-Tuning passt Stil, Domänenfokus oder instruktionsfolgendes Verhalten an — es fügt keinen Echtzeit-Datenzugang, echtes Schlussfolgern oder dauerhaftes Gedächtnis hinzu. Ein fein abgestimmtes GPT-5.6 behält den gleichen Wissens-Cutoff und das gleiche Halluzinationsrisiko wie das Basismodell.' },
           },
           {
             '@type': 'Question',
@@ -520,12 +520,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             name: 'Welches LLM hat die wenigsten Einschränkungen?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Kein Modell eliminiert eine der acht strukturellen Einschränkungen — sie sind universell für die Transformer-Architektur. Gemini 3.1 Pro hat das größte Kontextfenster (2 Millionen Tokens) und mildert am besten Einschränkung 4. Claude Opus 4.8 erkennt Wissens-Cutoffs am zuverlässigsten und mindert so das Halluzinationsrisiko. GPT-5.5 glänzt bei Tool-Use (Workaround für Einschränkung 6). Wählen Sie basierend auf Ihrem spezifischen Engpass, nicht danach, welches Modell am "wenigsten eingeschränkt" ist.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Kein Modell eliminiert eine der acht strukturellen Einschränkungen — sie sind universell für die Transformer-Architektur. Gemini 3.1 Pro hat das größte Kontextfenster (2 Millionen Tokens) und mildert am besten Einschränkung 4. Claude Opus 5 erkennt Wissens-Cutoffs am zuverlässigsten und mindert so das Halluzinationsrisiko. GPT-5.6 glänzt bei Tool-Use (Workaround für Einschränkung 6). Wählen Sie basierend auf Ihrem spezifischen Engpass, nicht danach, welches Modell am "wenigsten eingeschränkt" ist.' },
           },
           {
             '@type': 'Question',
             name: 'Wie unterscheiden sich die Einschränkungen zwischen Open-Source- und proprietären Modellen im Jahr 2026?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Open-Source-Modelle (LLaMA 3.1, Mistral Large, Qwen 3) und proprietäre Modelle (GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro) stehen vor identischen strukturellen Einschränkungen — Wissens-Cutoffs, Halluzination, Kontextfenster, Schlussfolgerungsbeschränkungen. Die Unterschiede liegen im Schweregrad und den Kosten: Proprietäre Modelle haben typischerweise größere Kontexte (Gemini 3.1 Pro: 2M Tokens vs. Mistral: 128K), besseres Instruktions-Following und häufigere Trainingsupdates. Open-Source-Modelle tauschen Fähigkeiten gegen Kosten und Deployment-Kontrolle. Keine Kategorie eliminiert eine der acht Einschränkungen.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Open-Source-Modelle (LLaMA 3.1, Mistral Large, Qwen 3) und proprietäre Modelle (GPT-5.6, Claude Opus 5, Gemini 3.1 Pro) stehen vor identischen strukturellen Einschränkungen — Wissens-Cutoffs, Halluzination, Kontextfenster, Schlussfolgerungsbeschränkungen. Die Unterschiede liegen im Schweregrad und den Kosten: Proprietäre Modelle haben typischerweise größere Kontexte (Gemini 3.1 Pro: 2M Tokens vs. Mistral: 128K), besseres Instruktions-Following und häufigere Trainingsupdates. Open-Source-Modelle tauschen Fähigkeiten gegen Kosten und Deployment-Kontrolle. Keine Kategorie eliminiert eine der acht Einschränkungen.' },
           },
         ],
       },
@@ -548,7 +548,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Wissens-Cutoffs bedeuten, dass jedes LLM standardmäßig mit veralteten Informationen arbeitet',
             'Halluzination ist strukturell — alle LLMs generieren selbstbewusst falsche Inhalte, wenn ihnen das Trainings-Signal fehlt',
             'Mehrstufiges Schlussfolgern scheitert ohne Chain-of-Thought-Prompting oder externe Tools',
-            'Kontextfenster begrenzen jede Sitzung: GPT-5.5 128K, Claude Opus 4.8 1M, Gemini 3.1 Pro 2M Tokens',
+            'Kontextfenster begrenzen jede Sitzung: GPT-5.6 128K, Claude Opus 5 1M, Gemini 3.1 Pro 2M Tokens',
             'Kein LLM erinnert sich ohne ein Anwendungsschicht-Gedächtnissystem an frühere Gespräche',
             'LLMs können ohne Tool-Use-Gerüst nicht im Web surfen, Code ausführen oder Aktionen durchführen',
             'Jede Einschränkung hat einen bekannten technischen Workaround — die Grenze zu kennen ist der erste Schritt',
@@ -599,19 +599,19 @@ export const article: Partial<Record<Language, PEArticle>> = {
         modelLimitsComparison: {
           title: 'Wie sich Grenzen nach Modell unterscheiden (2026)',
           content: ['Die acht strukturellen Grenzen gelten universell — aber Schweregrad und verfügbare Workarounds variieren je nach Modell.'],
-          columns: ['Einschränkung', 'GPT-5.5', 'Claude Opus 4.8', 'Gemini 3.1 Pro', 'Open-Source (LLaMA 3.1)'],
+          columns: ['Einschränkung', 'GPT-5.6', 'Claude Opus 5', 'Gemini 3.1 Pro', 'Open-Source (LLaMA 3.1)'],
           rows: [
-            { 'Einschränkung': 'Wissens-Cutoff', 'GPT-5.5': 'Okt. 2024', 'Claude Opus 4.8': 'Anfang 2025', 'Gemini 3.1 Pro': 'Anfang 2025', 'Open-Source (LLaMA 3.1)': 'Je nach Release' },
-            { 'Einschränkung': 'Kontextfenster', 'GPT-5.5': '128K Tokens', 'Claude Opus 4.8': '1M Tokens', 'Gemini 3.1 Pro': '2M Tokens', 'Open-Source (LLaMA 3.1)': '8K–128K Tokens' },
-            { 'Einschränkung': 'Tool Use Qualität', 'GPT-5.5': 'Ausgezeichnet', 'Claude Opus 4.8': 'Ausgezeichnet', 'Gemini 3.1 Pro': 'Gut', 'Open-Source (LLaMA 3.1)': 'Variiert' },
-            { 'Einschränkung': 'Halluzinationskontrolle', 'GPT-5.5': 'Mittel', 'Claude Opus 4.8': 'Stark (markiert Unsicherheit)', 'Gemini 3.1 Pro': 'Mittel', 'Open-Source (LLaMA 3.1)': 'Schwach' },
-            { 'Einschränkung': 'Reasoning (erweitert)', 'GPT-5.5': 'o3/o4-mini verfügbar', 'Claude Opus 4.8': 'Extended Thinking verfügbar', 'Gemini 3.1 Pro': 'Flash Thinking verfügbar', 'Open-Source (LLaMA 3.1)': 'Begrenzt' },
+            { 'Einschränkung': 'Wissens-Cutoff', 'GPT-5.6': 'Okt. 2024', 'Claude Opus 5': 'Anfang 2025', 'Gemini 3.1 Pro': 'Anfang 2025', 'Open-Source (LLaMA 3.1)': 'Je nach Release' },
+            { 'Einschränkung': 'Kontextfenster', 'GPT-5.6': '128K Tokens', 'Claude Opus 5': '1M Tokens', 'Gemini 3.1 Pro': '2M Tokens', 'Open-Source (LLaMA 3.1)': '8K–128K Tokens' },
+            { 'Einschränkung': 'Tool Use Qualität', 'GPT-5.6': 'Ausgezeichnet', 'Claude Opus 5': 'Ausgezeichnet', 'Gemini 3.1 Pro': 'Gut', 'Open-Source (LLaMA 3.1)': 'Variiert' },
+            { 'Einschränkung': 'Halluzinationskontrolle', 'GPT-5.6': 'Mittel', 'Claude Opus 5': 'Stark (markiert Unsicherheit)', 'Gemini 3.1 Pro': 'Mittel', 'Open-Source (LLaMA 3.1)': 'Schwach' },
+            { 'Einschränkung': 'Reasoning (erweitert)', 'GPT-5.6': 'o3/o4-mini verfügbar', 'Claude Opus 5': 'Extended Thinking verfügbar', 'Gemini 3.1 Pro': 'Flash Thinking verfügbar', 'Open-Source (LLaMA 3.1)': 'Begrenzt' },
           ],
         },
         knowledgeCutoff: {
           title: 'Einschränkung 1 — Wissens-Cutoffs und keine Echtzeitdaten',
           content: [
-            '**Jedes LLM hat ein Trainings-Cutoff-Datum, und das Modell hat kein Wissen über Ereignisse, Preise, Forschungsarbeiten oder Produktversionen, die nach diesem Datum veröffentlicht wurden, sofern kein externes Retrieval hinzugefügt wird.** OpenAI GPT-5.5 hat einen Cutoff von Oktober 2024. Anthropic Claude Opus 4.8 und Google Gemini 3.1 Pro haben Cutoffs Anfang 2025.',
+            '**Jedes LLM hat ein Trainings-Cutoff-Datum, und das Modell hat kein Wissen über Ereignisse, Preise, Forschungsarbeiten oder Produktversionen, die nach diesem Datum veröffentlicht wurden, sofern kein externes Retrieval hinzugefügt wird.** OpenAI GPT-5.6 hat einen Cutoff von Oktober 2024. Anthropic Claude Opus 5 und Google Gemini 3.1 Pro haben Cutoffs Anfang 2025.',
             'Modelle haben auch spärliches Wissen über Ereignisse *nahe* ihres Cutoffs, da die Trainingsdatensammlung und -verarbeitung Wochen bis Monate nach dem Eintreten von Ereignissen dauert. Ein Modell, das bis Oktober 2024 trainiert wurde, kann dünne Abdeckung von Ereignissen September–Oktober 2024 haben.',
             'Der primäre Workaround ist [Retrieval-Augmented Generation (RAG)](/de/prompt-engineering/rag-explained), das aktuelle oder neuere Dokumente zur Abfragezeit in den Prompt einfügt. Ein sekundärer Workaround ist Prompt-Erdung: die relevanten aktuellen Fakten direkt in den Prompt einfügen und das Modell anweisen, nur aus diesem Kontext zu antworten.',
           ],
@@ -619,7 +619,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         hallucination: {
           title: 'Einschränkung 2 — Halluzination ist strukturell, kein Bug',
           content: [
-            '**LLMs generieren statistisch plausible Tokens, keine verifizierten Fakten — wenn das Trainings-Signal für einen spezifischen Fakt dünn ist, produziert das Modell eine selbstbewusst klingende Erfindung.** Dies gilt für jedes Modell, einschließlich GPT-5.5, Claude Opus 4.8 und Gemini 3.1 Pro. Für einen tieferen Einblick siehe [KI-Halluzinationen — Warum KI Dinge erfindet](/de/prompt-engineering/ai-hallucinations-why-ai-makes-things-up).',
+            '**LLMs generieren statistisch plausible Tokens, keine verifizierten Fakten — wenn das Trainings-Signal für einen spezifischen Fakt dünn ist, produziert das Modell eine selbstbewusst klingende Erfindung.** Dies gilt für jedes Modell, einschließlich GPT-5.6, Claude Opus 5 und Gemini 3.1 Pro. Für einen tieferen Einblick siehe [KI-Halluzinationen — Warum KI Dinge erfindet](/de/prompt-engineering/ai-hallucinations-why-ai-makes-things-up).',
             'Halluzination tritt am häufigsten auf bei: spezifischen numerischen Werten (Preise, Daten, Statistiken), Zitaten und Papierreferenzen, Nischen-Technikspezifikationen und Ereignissen nahe oder nach dem Trainings-Cutoff. Modelle signalisieren selten, wenn sie halluzinieren.',
             'Workarounds: das Quellmaterial im Prompt bereitstellen und das Modell anweisen, nur daraus zu antworten; das Modell bitten, jede Behauptung zu markieren, die es nicht aus dem bereitgestellten Kontext bestätigen kann; [RAG](/de/prompt-engineering/rag-explained) verwenden, um Antworten an verifizierten Dokumenten zu verankern; alle Schlüsselzahlen vor der Veröffentlichung gegen primäre Quellen validieren.',
           ],
@@ -637,7 +637,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         contextWindow: {
           title: 'Einschränkung 4 — Kontextfenster-Limits',
           content: [
-            '**Jede LLM-Sitzung hat ein hartes Token-Limit — GPT-5.5 bei 128.000 Tokens, Claude Opus 4.8 bei 200.000 Tokens, Gemini 3.1 Pro bei 2.000.000 Tokens — und die Leistung bei früheren Inhalten nimmt ab, wenn das Fenster sich füllt.** Siehe [Kontextfenster erklärt](/de/prompt-engineering/context-windows-explained-why-ai-forgets) für eine vollständige Erklärung.',
+            '**Jede LLM-Sitzung hat ein hartes Token-Limit — GPT-5.6 bei 128.000 Tokens, Claude Opus 5 bei 200.000 Tokens, Gemini 3.1 Pro bei 2.000.000 Tokens — und die Leistung bei früheren Inhalten nimmt ab, wenn das Fenster sich füllt.** Siehe [Kontextfenster erklärt](/de/prompt-engineering/context-windows-explained-why-ai-forgets) für eine vollständige Erklärung.',
             'Das "Lost in the Middle"-Problem: mehrere Studien zeigen, dass die LLM-Genauigkeit beim Abrufen von Informationen aus der Mitte eines langen Kontexts deutlich geringer ist als vom Anfang oder Ende. Ein 1M-Token-Fenster bedeutet keine einheitliche Aufmerksamkeit über alle 1M Tokens.',
             'Workarounds: wichtige Informationen am Anfang oder Ende des Prompts strukturieren; RAG verwenden, um nur relevante Chunks abzurufen, anstatt vollständige Dokumente einzufügen; lange Dokumente in Chunk-Sitzungen mit Zusammenfassungsschritten aufteilen.',
           ],
@@ -656,7 +656,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Einschränkung 6 — LLMs können keine Echtwelt-Aktionen durchführen',
           content: [
             '**LLMs generieren Text — sie können nicht im Web surfen, Code ausführen, E-Mails senden, Dateien ändern oder mit externen Systemen interagieren, sofern eine Tool-Use-Schicht diese Aktionen nicht explizit ermöglicht.** Das Modell produziert eine Textbeschreibung dessen, was es tun würde; die Gerüstschicht führt es aus.',
-            'Tool-Use (auch Function Calling genannt) — verfügbar in GPT-5.5, Claude Opus 4.8 und Gemini 3.1 Pro — lässt ein Modell strukturierte Funktionsaufrufe ausgeben, die eine Anwendung abfängt und ausführt. Das Modell kann immer noch keine Aktionen eigenständig durchführen; es kann nur strukturierten Text ausgeben, der externe Ausführung auslöst.',
+            'Tool-Use (auch Function Calling genannt) — verfügbar in GPT-5.6, Claude Opus 5 und Gemini 3.1 Pro — lässt ein Modell strukturierte Funktionsaufrufe ausgeben, die eine Anwendung abfängt und ausführt. Das Modell kann immer noch keine Aktionen eigenständig durchführen; es kann nur strukturierten Text ausgeben, der externe Ausführung auslöst.',
             'Autonome Agenten verpacken mehrere Tool-Aufrufe in einer Orchestrierungsschleife, was den Anschein unabhängiger Aktion erzeugt. Prompt-Injection und Sicherheitslücken sind erhebliche Bedenken in diesen Architekturen — siehe [Prompt Injection und Sicherheit](/de/prompt-engineering/prompt-injection-and-security).',
           ],
         },
@@ -664,7 +664,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Einschränkung 7 — Trainingsdaten-Bias und Abdeckungslücken',
           content: [
             '**LLMs erben die Biases, Lücken und Verzerrungen ihrer Trainingsdaten — primär englischsprachige, westliche und Pre-2025-Internetinhalte.** Die Leistung bei nicht-englischen Anfragen, nicht-westlichen kulturellen Kontexten und Minderheitensprachthemen ist strukturell schwächer.',
-            'Das ist relevant für internationale Teams: GPT-5.5, Claude Opus 4.8 und Gemini 3.1 Pro produzieren alle stärkere Ausgaben auf Englisch als in ressourcenärmeren Sprachen. Technische Terminologie in Nischendomänen (spezifische Branchen, lokale Rechtssysteme, regionale Dialekte) kann in den Trainingsdaten schlecht vertreten sein.',
+            'Das ist relevant für internationale Teams: GPT-5.6, Claude Opus 5 und Gemini 3.1 Pro produzieren alle stärkere Ausgaben auf Englisch als in ressourcenärmeren Sprachen. Technische Terminologie in Nischendomänen (spezifische Branchen, lokale Rechtssysteme, regionale Dialekte) kann in den Trainingsdaten schlecht vertreten sein.',
             'Workaround: domänenspezifischen Kontext, Terminologiedefinitionen oder Beispiele im Prompt bereitstellen. Gehen Sie nicht davon aus, dass das Modell genaues Wissen über Ihre spezifische Branche, Region oder Institution hat.',
           ],
         },
@@ -697,9 +697,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Die acht strukturellen Einschränkungen sind real, aber jede hat mindestens ein Szenario, in dem die konventionelle Warnung das Problem übertreibt — oder wo Forschung von 2025–2026 die Lücke teilweise geschlossen hat.** Die Ausnahmen zu kennen ist genauso wichtig wie die Regel zu kennen.',
           ],
           items: [
-            '**Wissens-Cutoff ist für stabile Domänenfragen irrelevant.** Der Cutoff ist wichtig für aktuelle Ereignisse, neue Releases und sich ändernde Preise. Für Physik, Mathematik, etablierte Software-APIs (vor 2024), klassische Literatur und grundlegende Rechtsrahmen hat GPT-5.5s Oktober-2024-Cutoff kaum praktische Konsequenz. Stabile Domänenanfragen an nicht-augmentierte Modelle zu routen ist oft schneller und günstiger als RAG.',
+            '**Wissens-Cutoff ist für stabile Domänenfragen irrelevant.** Der Cutoff ist wichtig für aktuelle Ereignisse, neue Releases und sich ändernde Preise. Für Physik, Mathematik, etablierte Software-APIs (vor 2024), klassische Literatur und grundlegende Rechtsrahmen hat GPT-5.6s Oktober-2024-Cutoff kaum praktische Konsequenz. Stabile Domänenanfragen an nicht-augmentierte Modelle zu routen ist oft schneller und günstiger als RAG.',
             '**Halluzination ist ein Feature für generative Aufgaben.** Derselbe Token-Vorhersage-Mechanismus, der Zitate erfindet, generiert auch neue Metaphern, Produktnamen und kreative Variationen, die kein Retrieval-System produzieren könnte. Designer, Texter und Produktteams wollen oft LLM-"Konfabulation" — das Problem entsteht nur, wenn generierte Inhalte als faktisch behandelt werden. Generierungsaufgaben von Faktenabfragen zu trennen eliminiert die meisten Halluzinationsrisiken, ohne Kreativität zu unterdrücken.',
-            '**Extended-Thinking-Modelle haben die Schlussfolgerungslücke erheblich verringert.** OpenAI o3 und o4-mini sowie Anthropics Extended Thinking in Claude Opus 4.8 nutzen Inferenzzeit-Compute-Skalierung — Generierung von Schlussfolgerungs-Token-Ketten vor der Antwort — und erreichen nahezu menschliche Genauigkeit bei Hochschulmathematik und formalen Logik-Benchmarks (AIME, MMLU-Pro) Stand 2025. Die Behauptung "LLMs können nicht schlussfolgern" trifft für Standard-Inferenz zu; sie ist zunehmend unzutreffend für Extended-Thinking-Modi bei klar definierten Aufgaben.',
+            '**Extended-Thinking-Modelle haben die Schlussfolgerungslücke erheblich verringert.** OpenAI o3 und o4-mini sowie Anthropics Extended Thinking in Claude Opus 5 nutzen Inferenzzeit-Compute-Skalierung — Generierung von Schlussfolgerungs-Token-Ketten vor der Antwort — und erreichen nahezu menschliche Genauigkeit bei Hochschulmathematik und formalen Logik-Benchmarks (AIME, MMLU-Pro) Stand 2025. Die Behauptung "LLMs können nicht schlussfolgern" trifft für Standard-Inferenz zu; sie ist zunehmend unzutreffend für Extended-Thinking-Modi bei klar definierten Aufgaben.',
             '**Das "Lost in the Middle"-Kontextproblem ist positionsabhängig, nicht universell.** Liu et al. (2023) zeigte Leistungsabbau speziell, wenn kritische Informationen in der Mitte sehr langer Kontexte platziert werden. Bei Prompts unter ~20.000 Tokens oder wenn kritische Fakten am Anfang oder Ende des Prompts platziert werden, ist der Abbau minimal. Das 2M-Token-Fenster von Gemini 3.1 Pro leidet nicht unter demselben Ausmaß an mittlerer Degradation wie frühere 4K- oder 8K-Modelle.',
             '**Self-Consistency-Prompting adressiert die Selbstverifikationslücke teilweise.** Drei unabhängige Antworten auf dieselbe Frage zu generieren und die Mehrheitsantwort auszuwählen (Wang et al., 2023, "Self-Consistency Improves Chain of Thought Reasoning in Language Models," [arXiv:2203.11171](https://arxiv.org/abs/2203.11171)) verbessert die faktische Genauigkeit bei geschlossenen Domänenaufgaben um 10–20 Prozentpunkte im Vergleich zu Greedy-Decoding. Es ersetzt keine externe Validierung, reduziert aber die Rate selbstbewusster Fehler bei Fragen mit abrufbaren Antworten.',
           ],
@@ -707,12 +707,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptExamples: {
           title: 'Prompting um Einschränkungen herum — schlechte und gute Beispiele',
           content: ['Diese Beispiele zeigen, wie dieselbe zugrunde liegende Anfrage scheitert, wenn sie LLM-Einschränkungen ignoriert, und erfolgreich ist, wenn sie diese berücksichtigt.'],
-          blockquote: '[Bad Prompt] "What\'s the current pricing for GPT-5.5?"',
+          blockquote: '[Bad Prompt] "What\'s the current pricing for GPT-5.6?"',
           blockquoteSource: 'Dieser Prompt setzt Echtzeit-Wissen voraus, das das Modell nicht hat. Das Modell wird veraltete oder erfundene Preise selbstbewusst angeben.',
           items: [
-            'Dieser Prompt ignoriert die Wissens-Cutoff-Einschränkung. GPT-5.5s Trainingsdaten enden Oktober 2024 — die Preise können sich seitdem geändert haben. Das Modell wird eine Antwort generieren, die autoritativ klingt, aber möglicherweise Monate veraltet ist.',
+            'Dieser Prompt ignoriert die Wissens-Cutoff-Einschränkung. GPT-5.6s Trainingsdaten enden Oktober 2024 — die Preise können sich seitdem geändert haben. Das Modell wird eine Antwort generieren, die autoritativ klingt, aber möglicherweise Monate veraltet ist.',
             'Ein besserer Ansatz berücksichtigt explizit die Einschränkung:',
-            '[Good Prompt] "Explain the typical pricing structure OpenAI uses for GPT-5.5 (input tokens, output tokens, batching). Note: I know your training data may not reflect the latest rates — I\'ll verify the exact current numbers at platform.openai.com after reading your explanation."',
+            '[Good Prompt] "Explain the typical pricing structure OpenAI uses for GPT-5.6 (input tokens, output tokens, batching). Note: I know your training data may not reflect the latest rates — I\'ll verify the exact current numbers at platform.openai.com after reading your explanation."',
           ],
         },
         howToStart: {
@@ -730,9 +730,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Schlüsselbegriffe',
           content: ['Definitionen der Kernkonzepte, die in diesem Artikel verwendet werden. Jeder Begriff verlinkt zum vollständigen Eintrag im [Prompt Engineering Glossar](/de/prompt-engineering/prompt-engineering-glossary).'],
           items: [
-            '**[Wissens-Cutoff](/de/prompt-engineering/prompt-engineering-glossary)** — Das Datum, nach dem ein Modell keine Trainingsdaten hat. Jedes Ereignis, jede Preisänderung oder jeder Release nach diesem Datum ist für das Modell unsichtbar, sofern er nicht in den Prompt eingefügt wird. GPT-5.5: Oktober 2024; Claude Opus 4.8 und Gemini 3.1 Pro: Anfang 2025.',
+            '**[Wissens-Cutoff](/de/prompt-engineering/prompt-engineering-glossary)** — Das Datum, nach dem ein Modell keine Trainingsdaten hat. Jedes Ereignis, jede Preisänderung oder jeder Release nach diesem Datum ist für das Modell unsichtbar, sofern er nicht in den Prompt eingefügt wird. GPT-5.6: Oktober 2024; Claude Opus 5 und Gemini 3.1 Pro: Anfang 2025.',
             '**[Halluzination](/de/prompt-engineering/prompt-engineering-glossary#core-concepts)** — Selbstbewusst klingende, aber faktisch falsche oder erfundene Ausgabe. Verursacht durch statistische Token-Vorhersage statt Wahrheitsabfrage. Das Erden von Prompts mit Quellmaterial reduziert, eliminiert sie aber nicht.',
-            '**[Kontextfenster](/de/prompt-engineering/prompt-engineering-glossary#core-concepts)** — Die maximale Anzahl von Tokens (Wörter + Interpunktion), die das Modell gleichzeitig verarbeiten kann, einschließlich System-Prompt, Gesprächsverlauf und abgerufener Dokumente. GPT-5.5: 128K Tokens; Claude Opus 4.8: 1M; Gemini 3.1 Pro: 2M.',
+            '**[Kontextfenster](/de/prompt-engineering/prompt-engineering-glossary#core-concepts)** — Die maximale Anzahl von Tokens (Wörter + Interpunktion), die das Modell gleichzeitig verarbeiten kann, einschließlich System-Prompt, Gesprächsverlauf und abgerufener Dokumente. GPT-5.6: 128K Tokens; Claude Opus 5: 1M; Gemini 3.1 Pro: 2M.',
             '**[Tool-Use / Function Calling](/de/prompt-engineering/prompt-engineering-glossary#agents-orchestration)** — Eine Fähigkeit, die es dem Modell ermöglicht, externe Funktionen (Websuche, Code-Ausführung, Datenbankabfragen) aufzurufen, anstatt Text-Antworten zu generieren. Erforderlich, um die Keine-Echtwelt-Aktion-Einschränkung zu umgehen.',
             '**[Chain-of-Thought (CoT)](/de/prompt-engineering/prompt-engineering-glossary#core-concepts)** — Eine Prompting-Technik, bei der Sie das Modell bitten, Schritt für Schritt zu schlussfolgen, bevor Sie eine endgültige Antwort geben. Verbessert die Genauigkeit bei mehrstufiger Arithmetik, Logik und Planungsaufgaben erheblich.',
             '**[RAG (Retrieval-Augmented Generation)](/de/prompt-engineering/prompt-engineering-glossary#core-concepts)** — Architektur, bei der relevante Dokumente aus einer externen Wissensdatenbank abgerufen und zur Abfragezeit in den Prompt eingefügt werden. Der primäre Workaround für Wissens-Cutoffs.',
@@ -764,15 +764,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'faq',
           title: 'Häufig gestellte Fragen',
           faqs: [
-            { q: 'Was sind die wichtigsten Dinge, die LLMs nicht können?', a: 'LLMs können nicht auf Echtzeitdaten zugreifen, ihre eigenen Ausgaben überprüfen, Gedächtnis über Sitzungen hinweg behalten, ohne Tool-Gerüst Echtwelt-Aktionen durchführen oder zuverlässig durch mehrstufige Logik ohne Chain-of-Thought-Prompting schlussfolgern. Dies sind strukturelle Grenzen, die für jedes Modell gelten — GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro und Open-Source-Alternativen gleichermaßen.' },
+            { q: 'Was sind die wichtigsten Dinge, die LLMs nicht können?', a: 'LLMs können nicht auf Echtzeitdaten zugreifen, ihre eigenen Ausgaben überprüfen, Gedächtnis über Sitzungen hinweg behalten, ohne Tool-Gerüst Echtwelt-Aktionen durchführen oder zuverlässig durch mehrstufige Logik ohne Chain-of-Thought-Prompting schlussfolgern. Dies sind strukturelle Grenzen, die für jedes Modell gelten — GPT-5.6, Claude Opus 5, Gemini 3.1 Pro und Open-Source-Alternativen gleichermaßen.' },
             { q: 'Warum halluzinieren LLMs?', a: 'Halluzination ist strukturell: LLMs sagen das statistisch wahrscheinlichste nächste Token basierend auf Trainingsdaten voraus, keine verifizierte Wahrheit. Wenn das Trainings-Signal für einen spezifischen Fakt dünn ist — Nischenzahlen, aktuelle Ereignisse, obskure Zitate — generiert das Modell eine plausibel klingende Erfindung, ohne Unsicherheit zu signalisieren. Das Erden von Prompts mit explizitem Quellmaterial reduziert, eliminiert aber keine Halluzination.' },
-            { q: 'Kann GPT-5.5 auf das Internet zugreifen?', a: 'GPT-5.5 in der Standard-API kann nicht auf das Internet zugreifen. Die ChatGPT-Oberfläche bietet ein optionales Browsing-Tool, aber die Basis-Modell-API hat einen Trainings-Cutoff von Oktober 2024 und kein Live-Retrieval. Bestätigen Sie immer, ob eine Tool-Use-Schicht in Ihrer spezifischen Integration aktiv ist, bevor Sie davon ausgehen, dass das Modell aktuelle Daten hat.' },
-            { q: 'Wie unterscheiden sich Wissens-Cutoffs zwischen GPT-5.5, Claude und Gemini?', a: 'Stand 2026: OpenAI GPT-5.5 hat einen Trainings-Cutoff von Oktober 2024; Anthropic Claude Opus 4.8 und Google Gemini 3.1 Pro haben Cutoffs Anfang 2025. Alle drei Modelle können ungenaues Wissen über Ereignisse nahe ihrer Cutoffs haben, da die Trainingsabdeckung der jüngsten Monate spärlich ist.' },
+            { q: 'Kann GPT-5.6 auf das Internet zugreifen?', a: 'GPT-5.6 in der Standard-API kann nicht auf das Internet zugreifen. Die ChatGPT-Oberfläche bietet ein optionales Browsing-Tool, aber die Basis-Modell-API hat einen Trainings-Cutoff von Oktober 2024 und kein Live-Retrieval. Bestätigen Sie immer, ob eine Tool-Use-Schicht in Ihrer spezifischen Integration aktiv ist, bevor Sie davon ausgehen, dass das Modell aktuelle Daten hat.' },
+            { q: 'Wie unterscheiden sich Wissens-Cutoffs zwischen GPT-5.6, Claude und Gemini?', a: 'Stand 2026: OpenAI GPT-5.6 hat einen Trainings-Cutoff von Oktober 2024; Anthropic Claude Opus 5 und Google Gemini 3.1 Pro haben Cutoffs Anfang 2025. Alle drei Modelle können ungenaues Wissen über Ereignisse nahe ihrer Cutoffs haben, da die Trainingsabdeckung der jüngsten Monate spärlich ist.' },
             { q: 'Kann ich LLM-Einschränkungen durch besseres Prompting beheben?', a: 'Prompting reduziert die Auswirkungen von Einschränkungen, eliminiert sie aber nicht. Chain-of-Thought-Prompting verbessert die Schlussfolgerungsgenauigkeit. Das Bereitstellen von Fakten im Prompt mildert Wissens-Cutoffs. Explizite Unsicherheitsanweisungen reduzieren das Halluzinationsvertrauen. Aber Prompting kann einem Modell keinen Echtzeit-Datenzugang, echtes Gedächtnis oder die Fähigkeit zu Echtwelt-Aktionen geben.' },
-            { q: 'Haben fein abgestimmte Modelle die gleichen Einschränkungen?', a: 'Ja. Fine-Tuning passt Stil, Domänenfokus oder instruktionsfolgendes Verhalten an — es fügt keinen Echtzeit-Datenzugang, echtes Schlussfolgern oder dauerhaftes Gedächtnis hinzu. Ein fein abgestimmtes GPT-5.5 behält den gleichen Wissens-Cutoff und das gleiche Halluzinationsrisiko wie das Basismodell.' },
+            { q: 'Haben fein abgestimmte Modelle die gleichen Einschränkungen?', a: 'Ja. Fine-Tuning passt Stil, Domänenfokus oder instruktionsfolgendes Verhalten an — es fügt keinen Echtzeit-Datenzugang, echtes Schlussfolgern oder dauerhaftes Gedächtnis hinzu. Ein fein abgestimmtes GPT-5.6 behält den gleichen Wissens-Cutoff und das gleiche Halluzinationsrisiko wie das Basismodell.' },
             { q: 'Was ist der Unterschied zwischen einer LLM-Einschränkung und einem Bug?', a: 'Ein Bug ist ein unbeabsichtigter Fehler, der durch ein Software-Update behoben werden kann. Eine Einschränkung ist eine strukturelle Eigenschaft der Funktionsweise des Modells. Halluzination, Wissens-Cutoffs und Kontextfenster-Limits sind Einschränkungen — sie entstehen aus der Transformer-Architektur und dem Trainingsprozess und können nicht durch Patches behoben werden, sondern nur durch System-Design umgangen werden.' },
-            { q: 'Welches LLM hat die wenigsten Einschränkungen?', a: 'Kein Modell eliminiert eine der acht strukturellen Einschränkungen — sie sind universell für die Transformer-Architektur. Gemini 3.1 Pro hat das größte Kontextfenster (2 Millionen Tokens) und mildert am besten Einschränkung 4. Claude Opus 4.8 erkennt Wissens-Cutoffs am zuverlässigsten und mindert so das Halluzinationsrisiko. GPT-5.5 glänzt bei Tool-Use (Workaround für Einschränkung 6). Wählen Sie basierend auf Ihrem spezifischen Engpass, nicht danach, welches Modell am "wenigsten eingeschränkt" ist.' },
-            { q: 'Wie unterscheiden sich die Einschränkungen zwischen Open-Source- und proprietären Modellen im Jahr 2026?', a: 'Open-Source-Modelle (LLaMA 3.1, Mistral Large, Qwen 3) und proprietäre Modelle (GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro) stehen vor identischen strukturellen Einschränkungen — Wissens-Cutoffs, Halluzination, Kontextfenster, Schlussfolgerungsbeschränkungen. Die Unterschiede liegen im Schweregrad und den Kosten: Proprietäre Modelle haben typischerweise größere Kontexte (Gemini 3.1 Pro: 2M Tokens vs. Mistral: 128K), besseres Instruktions-Following und häufigere Trainingsupdates. Open-Source-Modelle tauschen Fähigkeiten gegen Kosten und Deployment-Kontrolle. Keine Kategorie eliminiert eine der acht Einschränkungen.' },
+            { q: 'Welches LLM hat die wenigsten Einschränkungen?', a: 'Kein Modell eliminiert eine der acht strukturellen Einschränkungen — sie sind universell für die Transformer-Architektur. Gemini 3.1 Pro hat das größte Kontextfenster (2 Millionen Tokens) und mildert am besten Einschränkung 4. Claude Opus 5 erkennt Wissens-Cutoffs am zuverlässigsten und mindert so das Halluzinationsrisiko. GPT-5.6 glänzt bei Tool-Use (Workaround für Einschränkung 6). Wählen Sie basierend auf Ihrem spezifischen Engpass, nicht danach, welches Modell am "wenigsten eingeschränkt" ist.' },
+            { q: 'Wie unterscheiden sich die Einschränkungen zwischen Open-Source- und proprietären Modellen im Jahr 2026?', a: 'Open-Source-Modelle (LLaMA 3.1, Mistral Large, Qwen 3) und proprietäre Modelle (GPT-5.6, Claude Opus 5, Gemini 3.1 Pro) stehen vor identischen strukturellen Einschränkungen — Wissens-Cutoffs, Halluzination, Kontextfenster, Schlussfolgerungsbeschränkungen. Die Unterschiede liegen im Schweregrad und den Kosten: Proprietäre Modelle haben typischerweise größere Kontexte (Gemini 3.1 Pro: 2M Tokens vs. Mistral: 128K), besseres Instruktions-Following und häufigere Trainingsupdates. Open-Source-Modelle tauschen Fähigkeiten gegen Kosten und Deployment-Kontrolle. Keine Kategorie eliminiert eine der acht Einschränkungen.' },
           ],
         },
         sources: {
@@ -799,7 +799,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       theme: 'Fundamentals',
       title: 'Limitaciones de la IA: Lo que los LLMs no pueden hacer en 2026',
-      intro: 'Los grandes modelos de lenguaje tienen ocho límites estrictos que ninguna cantidad de fine-tuning, escala o prompt engineering puede eliminar: sin datos en tiempo real, alucinaciones confiadas, razonamiento débil de varios pasos, límites del context window, sin memoria, sin acciones en el mundo real, sesgo de entrenamiento y sin autoverificación. Cada modelo — GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro y las alternativas de código abierto — comparte estas restricciones estructurales. Esta guía cubre cada límite con el workaround de ingeniería que funciona en producción.',
+      intro: 'Los grandes modelos de lenguaje tienen ocho límites estrictos que ninguna cantidad de fine-tuning, escala o prompt engineering puede eliminar: sin datos en tiempo real, alucinaciones confiadas, razonamiento débil de varios pasos, límites del context window, sin memoria, sin acciones en el mundo real, sesgo de entrenamiento y sin autoverificación. Cada modelo — GPT-5.6, Claude Opus 5, Gemini 3.1 Pro y las alternativas de código abierto — comparte estas restricciones estructurales. Esta guía cubre cada límite con el workaround de ingeniería que funciona en producción.',
       publishDate: '2026-03-24',
       seoTitle: 'Limitaciones y workarounds de LLMs 2026: 8 restricciones clave',
       metaDescription: 'Todos los LLMs comparten 8 límites estructurales: sin datos en tiempo real, alucinaciones, límites de contexto, sin memoria. Aprende los workarounds para cada restricción.',
@@ -835,7 +835,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'ListItem', position: 3, name: 'Sin razonamiento fiable de varios pasos', description: 'Causa raíz: sin memoria de trabajo o estado entre predicciones de tokens. Severidad: media, mejora significativamente con chain-of-thought prompting. Workaround: usar chain-of-thought prompting o dirigir la aritmética a un intérprete de código.' },
           { '@type': 'ListItem', position: 4, name: 'Límites del context window', description: 'Causa raíz: el transformer attention tiene un límite duro de tokens. Severidad: media para documentos largos. Workaround: RAG, chunking, resumen.' },
           { '@type': 'ListItem', position: 5, name: 'Sin memoria persistente', description: 'Causa raíz: arquitectura sin estado — cada sesión comienza desde un contexto en blanco. Severidad: media para flujos de trabajo de varias sesiones. Workaround: inyección de memoria a nivel de aplicación usando bases de datos vectoriales o resúmenes de conversación.' },
-          { '@type': 'ListItem', position: 6, name: 'Sin capacidad de acción en el mundo real', description: 'Causa raíz: los LLMs por defecto solo producen texto. Severidad: alta para tareas autónomas. Workaround: uso de herramientas/function calling disponible en GPT-5.5, Claude Opus 4.8 y Gemini 3.1 Pro.' },
+          { '@type': 'ListItem', position: 6, name: 'Sin capacidad de acción en el mundo real', description: 'Causa raíz: los LLMs por defecto solo producen texto. Severidad: alta para tareas autónomas. Workaround: uso de herramientas/function calling disponible en GPT-5.6, Claude Opus 5 y Gemini 3.1 Pro.' },
           { '@type': 'ListItem', position: 7, name: 'Sesgo en los datos de entrenamiento', description: 'Causa raíz: el corpus de entrenamiento es principalmente contenido en inglés, occidental y de internet pre-2025. Severidad: media, varía según el idioma y el dominio. Workaround: proporcionar contexto, terminología y ejemplos específicos del dominio explícitamente en el prompt.' },
           { '@type': 'ListItem', position: 8, name: 'No puede autoverificar los outputs', description: 'Causa raíz: sin acceso a la verdad fundamental — los modelos solo pueden evaluar la consistencia con los patrones de entrenamiento, no la precisión factual. Severidad: alta para afirmaciones factuales. Workaround: validación externa contra fuentes primarias autorizadas antes de publicar.' },
         ],
@@ -860,7 +860,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Las 8 limitaciones estructurales de los LLMs',
           content: [
             '**Los grandes modelos de lenguaje tienen ocho límites estrictos que se aplican independientemente del tamaño del modelo, el proveedor o el enfoque de entrenamiento.** Estos no son errores — son propiedades estructurales de cómo los LLMs están diseñados. Cada workaround a continuación es una solución de producción probada, no una teoría.',
-            'Estas restricciones aplican universalmente: GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro, LLaMA 3.1, Mistral Large y todos los modelos de código abierto son igualmente afectados. El prompt engineering puede mitigar el impacto de estas limitaciones pero no puede eliminarlas.',
+            'Estas restricciones aplican universalmente: GPT-5.6, Claude Opus 5, Gemini 3.1 Pro, LLaMA 3.1, Mistral Large y todos los modelos de código abierto son igualmente afectados. El prompt engineering puede mitigar el impacto de estas limitaciones pero no puede eliminarlas.',
           ],
         },
         tldr: {
@@ -868,7 +868,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           isTldr: true,
           items: [
             'Los LLMs tienen 8 límites estructurales universales: corte de conocimiento, alucinación, razonamiento débil de varios pasos, límites del context window, sin memoria persistente, sin acciones en el mundo real, sesgo de entrenamiento y sin autoverificación',
-            'Ningún modelo — GPT-5.5, Claude, Gemini u open-source — elimina estas restricciones',
+            'Ningún modelo — GPT-5.6, Claude, Gemini u open-source — elimina estas restricciones',
             'El prompt engineering puede mitigar el impacto pero no puede eliminar ninguna de las 8 limitaciones',
             'Cada limitación tiene un workaround de producción probado: RAG para el corte de conocimiento, chain-of-thought para el razonamiento, tool calling para las acciones',
             'Comprender estas limitaciones es la base del prompt engineering efectivo — sabes qué esperar y cuándo usar herramientas complementarias',
@@ -878,7 +878,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Limitación 1: Corte de conocimiento',
           content: [
             '**Los LLMs son entrenados en datos con una fecha final específica — conocido como el corte de conocimiento o corte de entrenamiento.** Cualquier evento, cambio de precio, nuevo lanzamiento de producto o actualización regulatoria después de esa fecha es invisible para el modelo.',
-            'Los cortes de conocimiento en 2026: GPT-5.5 (OpenAI): octubre 2024. Claude Opus 4.8 (Anthropic): principios de 2025. Gemini 3.1 Pro (Google DeepMind): principios de 2025.',
+            'Los cortes de conocimiento en 2026: GPT-5.6 (OpenAI): octubre 2024. Claude Opus 5 (Anthropic): principios de 2025. Gemini 3.1 Pro (Google DeepMind): principios de 2025.',
           ],
           items: [
             '**Workaround principal: RAG (Retrieval-Augmented Generation).** Antes de enviar la solicitud, recupera hechos actuales relevantes de una fuente confiable e inyéctalos en el contexto del prompt. El modelo responde basándose en esa información en lugar de en sus datos de entrenamiento obsoletos.',
@@ -933,7 +933,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Los LLMs por defecto solo producen texto — no pueden llamar a APIs, leer bases de datos, enviar emails, interactuar con páginas web ni realizar ninguna acción real por sí mismos.** "Hacer algo" para un LLM significa producir texto que describe cómo hacerlo.',
           ],
           items: [
-            '**Workaround: Tool calling / function calling.** Las APIs de LLM modernas (GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro) admiten tool use, donde el modelo puede solicitar la ejecución de funciones definidas por el desarrollador. El modelo genera una llamada a herramienta estructurada; tu código ejecuta la acción real y devuelve el resultado al modelo.',
+            '**Workaround: Tool calling / function calling.** Las APIs de LLM modernas (GPT-5.6, Claude Opus 5, Gemini 3.1 Pro) admiten tool use, donde el modelo puede solicitar la ejecución de funciones definidas por el desarrollador. El modelo genera una llamada a herramienta estructurada; tu código ejecuta la acción real y devuelve el resultado al modelo.',
           ],
         },
         limit7: {
@@ -981,13 +981,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
           faqs: [
             { q: '¿Cuáles son las principales cosas que los LLMs no pueden hacer?', a: 'Los LLMs no pueden acceder a datos en tiempo real, verificar sus propios outputs, retener memoria entre sesiones, realizar acciones en el mundo real sin herramientas de scaffolding ni razonar de forma fiable a través de la lógica de varios pasos sin chain-of-thought prompting. Estas son restricciones estructurales que aplican a todos los modelos.' },
             { q: '¿Por qué alucinan los LLMs?', a: 'La alucinación es estructural: los LLMs predicen el siguiente token estadísticamente más probable basándose en los datos de entrenamiento, no la verdad verificada. Cuando la señal de entrenamiento para un hecho específico es escasa, el modelo genera una invención que suena plausible sin señalar la incertidumbre. Fundamentar los prompts con material fuente explícito reduce pero no elimina la alucinación.' },
-            { q: '¿Puede GPT-5.5 acceder a internet?', a: 'GPT-5.5 en la API estándar no puede acceder a internet. La interfaz ChatGPT ofrece una herramienta de navegación opcional, pero la API del modelo base tiene un corte de entrenamiento de octubre de 2024 y sin recuperación en vivo. Confirma siempre si hay una capa de tool use activa en tu integración específica antes de asumir que el modelo tiene datos actuales.' },
-            { q: '¿Cómo difieren los cortes de conocimiento entre GPT-5.5, Claude y Gemini?', a: 'A partir de 2026: OpenAI GPT-5.5 tiene un corte de entrenamiento de octubre 2024; Anthropic Claude Opus 4.8 y Google Gemini 3.1 Pro tienen cortes de principios de 2025. Los tres modelos pueden tener conocimiento inexacto sobre eventos cercanos a sus cortes, ya que la cobertura de entrenamiento de los meses más recientes es escasa.' },
+            { q: '¿Puede GPT-5.6 acceder a internet?', a: 'GPT-5.6 en la API estándar no puede acceder a internet. La interfaz ChatGPT ofrece una herramienta de navegación opcional, pero la API del modelo base tiene un corte de entrenamiento de octubre de 2024 y sin recuperación en vivo. Confirma siempre si hay una capa de tool use activa en tu integración específica antes de asumir que el modelo tiene datos actuales.' },
+            { q: '¿Cómo difieren los cortes de conocimiento entre GPT-5.6, Claude y Gemini?', a: 'A partir de 2026: OpenAI GPT-5.6 tiene un corte de entrenamiento de octubre 2024; Anthropic Claude Opus 5 y Google Gemini 3.1 Pro tienen cortes de principios de 2025. Los tres modelos pueden tener conocimiento inexacto sobre eventos cercanos a sus cortes, ya que la cobertura de entrenamiento de los meses más recientes es escasa.' },
             { q: '¿Puedo solucionar las limitaciones de los LLMs mediante un mejor prompting?', a: 'El prompting reduce el impacto de las limitaciones pero no las elimina. El chain-of-thought prompting mejora la precisión del razonamiento. Proporcionar hechos en el prompt mitiga los cortes de conocimiento. Las instrucciones de incertidumbre explícitas reducen la confianza de la alucinación. Pero el prompting no puede darle a un modelo acceso a datos en tiempo real, memoria real o la capacidad de acciones en el mundo real.' },
-            { q: '¿Los modelos ajustados tienen las mismas limitaciones?', a: 'Sí. El fine-tuning ajusta el estilo, el enfoque del dominio o el comportamiento de seguimiento de instrucciones — no añade acceso a datos en tiempo real, razonamiento real o memoria persistente. Un GPT-5.5 ajustado retiene el mismo corte de conocimiento y el mismo riesgo de alucinación que el modelo base.' },
+            { q: '¿Los modelos ajustados tienen las mismas limitaciones?', a: 'Sí. El fine-tuning ajusta el estilo, el enfoque del dominio o el comportamiento de seguimiento de instrucciones — no añade acceso a datos en tiempo real, razonamiento real o memoria persistente. Un GPT-5.6 ajustado retiene el mismo corte de conocimiento y el mismo riesgo de alucinación que el modelo base.' },
             { q: '¿Cuál es la diferencia entre una limitación de LLM y un bug?', a: 'Un bug es un error no intencionado que puede corregirse con una actualización de software. Una limitación es una propiedad estructural de cómo funciona el modelo. La alucinación, los cortes de conocimiento y los límites del context window son limitaciones — surgen de la arquitectura transformer y el proceso de entrenamiento y no pueden corregirse con parches, solo ser sorteadas mediante el diseño del sistema.' },
-            { q: '¿Qué LLM tiene las menos limitaciones?', a: 'Ningún modelo elimina ninguna de las ocho restricciones estructurales — son universales para la arquitectura transformer. Gemini 3.1 Pro tiene el mayor context window (2 millones de tokens) y mitiga mejor la limitación 4. Claude Opus 4.8 reconoce los cortes de conocimiento de forma más fiable, mitigando así el riesgo de alucinación. GPT-5.5 destaca en tool use (workaround para la limitación 6). Elige basándote en tu cuello de botella específico, no en qué modelo está "menos limitado".' },
-            { q: '¿Cómo difieren las limitaciones entre modelos open-source y propietarios en 2026?', a: 'Los modelos de código abierto (LLaMA 3.1, Mistral Large, Qwen 3) y los propietarios (GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro) enfrentan restricciones estructurales idénticas. Las diferencias están en la severidad y el coste: los modelos propietarios típicamente tienen contextos más grandes, mejor seguimiento de instrucciones y actualizaciones de entrenamiento más frecuentes. Ninguna categoría elimina ninguna de las ocho limitaciones.' },
+            { q: '¿Qué LLM tiene las menos limitaciones?', a: 'Ningún modelo elimina ninguna de las ocho restricciones estructurales — son universales para la arquitectura transformer. Gemini 3.1 Pro tiene el mayor context window (2 millones de tokens) y mitiga mejor la limitación 4. Claude Opus 5 reconoce los cortes de conocimiento de forma más fiable, mitigando así el riesgo de alucinación. GPT-5.6 destaca en tool use (workaround para la limitación 6). Elige basándote en tu cuello de botella específico, no en qué modelo está "menos limitado".' },
+            { q: '¿Cómo difieren las limitaciones entre modelos open-source y propietarios en 2026?', a: 'Los modelos de código abierto (LLaMA 3.1, Mistral Large, Qwen 3) y los propietarios (GPT-5.6, Claude Opus 5, Gemini 3.1 Pro) enfrentan restricciones estructurales idénticas. Las diferencias están en la severidad y el coste: los modelos propietarios típicamente tienen contextos más grandes, mejor seguimiento de instrucciones y actualizaciones de entrenamiento más frecuentes. Ninguna categoría elimina ninguna de las ocho limitaciones.' },
           ],
         },
         sources: {
@@ -1006,7 +1006,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       next_refresh_due: '2026-09-24',
       theme: 'Fundamentals',
       title: 'قيود الذكاء الاصطناعي: ما لا تستطيع النماذج اللغوية الكبيرة فعله في ⁨2026⁩',
-      intro: 'للنماذج اللغوية الكبيرة ثمانية قيود صارمة لا يمكن لأي قدر من الضبط الدقيق أو التوسع أو هندسة التعليمات إزالتها: لا بيانات في الوقت الحقيقي، وهلوسات واثقة، واستدلال ضعيف متعدد الخطوات، وقيود نافذة السياق، ولا ذاكرة، ولا إجراءات في العالم الحقيقي، وتحيز التدريب، ولا تحقق ذاتي. كل نموذج — GPT-5.5 وClaude Opus 4.8 وGemini 3.1 Pro والبدائل مفتوحة المصدر — يشترك في هذه القيود الهيكلية. يغطي هذا الدليل كل قيد مع الحل الهندسي الذي يعمل في الإنتاج.',
+      intro: 'للنماذج اللغوية الكبيرة ثمانية قيود صارمة لا يمكن لأي قدر من الضبط الدقيق أو التوسع أو هندسة التعليمات إزالتها: لا بيانات في الوقت الحقيقي، وهلوسات واثقة، واستدلال ضعيف متعدد الخطوات، وقيود نافذة السياق، ولا ذاكرة، ولا إجراءات في العالم الحقيقي، وتحيز التدريب، ولا تحقق ذاتي. كل نموذج — GPT-5.6 وClaude Opus 5 وGemini 3.1 Pro والبدائل مفتوحة المصدر — يشترك في هذه القيود الهيكلية. يغطي هذا الدليل كل قيد مع الحل الهندسي الذي يعمل في الإنتاج.',
       publishDate: '2026-03-24',
       seoTitle: 'قيود النماذج اللغوية الكبيرة ⁨2026⁩: ⁨8⁩ قيود رئيسية',
       metaDescription: '⁨8⁩ قيود هيكلية تشترك فيها جميع ⁨LLMs⁩: لا بيانات حية، هلوسات، قيود السياق، لا ذاكرة. تعلَّم حلًا عمليًا لكل قيد واعرف متى تختار النماذج السحابية.',
@@ -1043,7 +1043,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'ListItem', position: 3, name: 'لا استدلال موثوق متعدد الخطوات', description: 'السبب الجذري: لا ذاكرة عمل أو حالة بين تنبؤات الرموز. الخطورة: متوسطة، تتحسن بشكل ملحوظ مع صياغة التعليمات بأسلوب سلسلة التفكير. الحل: استخدام صياغة سلسلة التفكير أو توجيه الحساب إلى مُفسِّر كود.' },
           { '@type': 'ListItem', position: 4, name: 'قيود نافذة السياق', description: 'السبب الجذري: انتباه المحول له حد صارم من الرموز. الخطورة: متوسطة للمستندات الطويلة. الحل: RAG والتقطيع والتلخيص.' },
           { '@type': 'ListItem', position: 5, name: 'لا ذاكرة مستمرة', description: 'السبب الجذري: معمارية عديمة الحالة — كل جلسة تبدأ من سياق فارغ. الخطورة: متوسطة لسير العمل متعددة الجلسات. الحل: حقن الذاكرة على مستوى التطبيق باستخدام قواعد البيانات المتجهة أو ملخصات المحادثات.' },
-          { '@type': 'ListItem', position: 6, name: 'لا قدرة على الإجراء في العالم الحقيقي', description: 'السبب الجذري: النماذج اللغوية الكبيرة تُنتج نصًا فقط افتراضيًا. الخطورة: عالية للمهام المستقلة. الحل: استخدام الأدوات/استدعاء الدوال المتاح في GPT-5.5 وClaude Opus 4.8 وGemini 3.1 Pro.' },
+          { '@type': 'ListItem', position: 6, name: 'لا قدرة على الإجراء في العالم الحقيقي', description: 'السبب الجذري: النماذج اللغوية الكبيرة تُنتج نصًا فقط افتراضيًا. الخطورة: عالية للمهام المستقلة. الحل: استخدام الأدوات/استدعاء الدوال المتاح في GPT-5.6 وClaude Opus 5 وGemini 3.1 Pro.' },
           { '@type': 'ListItem', position: 7, name: 'التحيز في بيانات التدريب', description: 'السبب الجذري: يتكون المجموعة التدريبية أساسًا من محتوى إنجليزي غربي من الإنترنت قبل عام 2025. الخطورة: متوسطة، تتفاوت حسب اللغة والمجال. الحل: تقديم السياق والمصطلحات والأمثلة الخاصة بالمجال صراحةً في التعليمة.' },
           { '@type': 'ListItem', position: 8, name: 'لا يستطيع التحقق الذاتي من المخرجات', description: 'السبب الجذري: لا وصول إلى المصدر الأصلي — النماذج تستطيع فقط تقييم الاتساق مع أنماط التدريب، لا الدقة الواقعية. الخطورة: عالية للادعاءات الواقعية. الحل: التحقق الخارجي مقابل المصادر الأولية الموثوقة قبل النشر.' },
         ],
@@ -1076,7 +1076,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'القيود الهيكلية الثمانية للنماذج اللغوية الكبيرة',
           content: [
             '**للنماذج اللغوية الكبيرة ثمانية قيود صارمة تُطبَّق بصرف النظر عن حجم النموذج أو المزوِّد أو منهج التدريب.** هذه ليست أخطاءً — بل هي خصائص هيكلية لكيفية تصميم النماذج اللغوية الكبيرة. كل حل مذكور أدناه هو حل إنتاجي مُجرَّب، لا نظرية.',
-            'تُطبَّق هذه القيود بشكل شامل: GPT-5.5 وClaude Opus 4.8 وGemini 3.1 Pro وLLaMA 3.1 وMistral Large وجميع النماذج مفتوحة المصدر متأثرة بالقدر ذاته. يمكن لهندسة التعليمات أن تُخفِّف من تأثير هذه القيود لكن لا تستطيع إزالتها.',
+            'تُطبَّق هذه القيود بشكل شامل: GPT-5.6 وClaude Opus 5 وGemini 3.1 Pro وLLaMA 3.1 وMistral Large وجميع النماذج مفتوحة المصدر متأثرة بالقدر ذاته. يمكن لهندسة التعليمات أن تُخفِّف من تأثير هذه القيود لكن لا تستطيع إزالتها.',
           ],
         },
         tldr: {
@@ -1084,7 +1084,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           isTldr: true,
           items: [
             'للنماذج اللغوية الكبيرة 8 قيود هيكلية شاملة: قطع المعرفة، والهلوسة، واستدلال ضعيف متعدد الخطوات، وقيود نافذة السياق، ولا ذاكرة مستمرة، ولا إجراءات في العالم الحقيقي، وتحيز التدريب، ولا تحقق ذاتي',
-            'لا نموذج — GPT-5.5 أو Claude أو Gemini أو مفتوح المصدر — يُزيل هذه القيود',
+            'لا نموذج — GPT-5.6 أو Claude أو Gemini أو مفتوح المصدر — يُزيل هذه القيود',
             'يمكن لهندسة التعليمات تخفيف التأثير لكن لا تستطيع إزالة أي من القيود الثمانية',
             'كل قيد له حل إنتاجي مُجرَّب: RAG لقطع المعرفة، وسلسلة التفكير للاستدلال، واستدعاء الأدوات للإجراءات',
             'فهم هذه القيود هو أساس هندسة التعليمات الفعَّالة — تعرف ما تتوقعه ومتى تستخدم الأدوات التكميلية',
@@ -1094,7 +1094,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'القيد ١: قطع المعرفة',
           content: [
             '**تُدرَّب النماذج اللغوية الكبيرة على بيانات ذات تاريخ نهائي محدد — المعروف بقطع المعرفة أو قطع التدريب.** أي حدث أو تغيير في الأسعار أو إطلاق منتج جديد أو تحديث تنظيمي بعد ذلك التاريخ يكون غير مرئي للنموذج.',
-            'قطوع المعرفة في عام 2026: GPT-5.5 (OpenAI): أكتوبر 2024. Claude Opus 4.8 (Anthropic): مطلع 2025. Gemini 3.1 Pro (Google DeepMind): مطلع 2025.',
+            'قطوع المعرفة في عام 2026: GPT-5.6 (OpenAI): أكتوبر 2024. Claude Opus 5 (Anthropic): مطلع 2025. Gemini 3.1 Pro (Google DeepMind): مطلع 2025.',
           ],
           items: [
             '**الحل الرئيسي: RAG (التوليد المعزَّز بالاسترجاع).** قبل إرسال الطلب، استرجع الحقائق الحالية ذات الصلة من مصدر موثوق وأدرجها في سياق التعليمة. يُجيب النموذج بناءً على تلك المعلومات بدلًا من بيانات تدريبه القديمة.',
@@ -1149,7 +1149,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**النماذج اللغوية الكبيرة افتراضيًا تُنتج نصًا فقط — لا تستطيع استدعاء APIs أو قراءة قواعد البيانات أو إرسال بريد إلكتروني أو التفاعل مع صفحات الويب أو تنفيذ أي إجراء حقيقي بمفردها.** "فعل شيء ما" بالنسبة للنموذج اللغوي الكبير يعني إنتاج نص يصف كيفية القيام به.',
           ],
           items: [
-            '**الحل: استدعاء الأدوات/الدوال.** تدعم واجهات API الحديثة للنماذج اللغوية الكبيرة (GPT-5.5 وClaude Opus 4.8 وGemini 3.1 Pro) استخدام الأدوات، حيث يستطيع النموذج طلب تنفيذ دوال يُعرِّفها المطوِّر. يولِّد النموذج استدعاء أداة منظَّمًا؛ يُنفِّذ كودك الإجراء الحقيقي ويُعيد النتيجة للنموذج.',
+            '**الحل: استدعاء الأدوات/الدوال.** تدعم واجهات API الحديثة للنماذج اللغوية الكبيرة (GPT-5.6 وClaude Opus 5 وGemini 3.1 Pro) استخدام الأدوات، حيث يستطيع النموذج طلب تنفيذ دوال يُعرِّفها المطوِّر. يولِّد النموذج استدعاء أداة منظَّمًا؛ يُنفِّذ كودك الإجراء الحقيقي ويُعيد النتيجة للنموذج.',
           ],
         },
         limit7: {
@@ -1197,13 +1197,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
           faqs: [
             { q: 'ما هي الأشياء الرئيسية التي لا تستطيع النماذج اللغوية الكبيرة فعلها؟', a: 'لا تستطيع النماذج اللغوية الكبيرة الوصول إلى البيانات في الوقت الحقيقي، أو التحقق من مخرجاتها، أو الاحتفاظ بالذاكرة بين الجلسات، أو تنفيذ إجراءات في العالم الحقيقي دون أدوات scaffolding، أو الاستدلال بشكل موثوق عبر منطق متعدد الخطوات دون صياغة سلسلة التفكير. هذه قيود هيكلية تُطبَّق على جميع النماذج.' },
             { q: 'لماذا تهلوس النماذج اللغوية الكبيرة؟', a: 'الهلوسة هيكلية: تتنبأ النماذج اللغوية الكبيرة بالرمز التالي الأكثر احتمالية إحصائيًا بناءً على بيانات التدريب، لا الحقيقة المحققة. حين تكون إشارة التدريب لحقيقة محددة شحيحة، يولِّد النموذج اختراعًا يبدو معقولًا دون الإشارة إلى عدم اليقين. تأسيس التعليمات بمواد مصدرية صريحة يُقلِّل لكن لا يُزيل الهلوسة.' },
-            { q: 'هل يستطيع GPT-5.5 الوصول إلى الإنترنت؟', a: 'GPT-5.5 في API القياسية لا يستطيع الوصول إلى الإنترنت. توفِّر واجهة ChatGPT أداة تصفح اختيارية، لكن API النموذج الأساسي له قطع تدريب في أكتوبر 2024 ولا استرجاع مباشر. تحقق دائمًا مما إذا كانت طبقة استخدام أدوات نشطة في تكاملك المحدد قبل افتراض أن النموذج يملك بيانات حالية.' },
-            { q: 'كيف تختلف قطوع المعرفة بين GPT-5.5 وClaude وGemini؟', a: 'اعتبارًا من 2026: OpenAI GPT-5.5 له قطع تدريب في أكتوبر 2024؛ Anthropic Claude Opus 4.8 وGoogle Gemini 3.1 Pro لهما قطوع في مطلع 2025. قد تكون المعرفة لدى النماذج الثلاثة غير دقيقة حول الأحداث القريبة من قطوعها، إذ تكون تغطية التدريب للأشهر الأخيرة شحيحة.' },
+            { q: 'هل يستطيع GPT-5.6 الوصول إلى الإنترنت؟', a: 'GPT-5.6 في API القياسية لا يستطيع الوصول إلى الإنترنت. توفِّر واجهة ChatGPT أداة تصفح اختيارية، لكن API النموذج الأساسي له قطع تدريب في أكتوبر 2024 ولا استرجاع مباشر. تحقق دائمًا مما إذا كانت طبقة استخدام أدوات نشطة في تكاملك المحدد قبل افتراض أن النموذج يملك بيانات حالية.' },
+            { q: 'كيف تختلف قطوع المعرفة بين GPT-5.6 وClaude وGemini؟', a: 'اعتبارًا من 2026: OpenAI GPT-5.6 له قطع تدريب في أكتوبر 2024؛ Anthropic Claude Opus 5 وGoogle Gemini 3.1 Pro لهما قطوع في مطلع 2025. قد تكون المعرفة لدى النماذج الثلاثة غير دقيقة حول الأحداث القريبة من قطوعها، إذ تكون تغطية التدريب للأشهر الأخيرة شحيحة.' },
             { q: 'هل يمكنني حل قيود النماذج اللغوية الكبيرة عبر صياغة أفضل للتعليمات؟', a: 'تُقلِّل الصياغة من تأثير القيود لكن لا تُزيلها. تُحسِّن صياغة سلسلة التفكير دقة الاستدلال. تقديم الحقائق في التعليمة يُخفِّف قطوع المعرفة. تعليمات عدم اليقين الصريحة تُقلِّل ثقة الهلوسة. لكن الصياغة لا تستطيع منح النموذج وصولًا للبيانات في الوقت الحقيقي أو ذاكرة حقيقية أو قدرة الإجراءات في العالم الحقيقي.' },
-            { q: 'هل النماذج المضبوطة دقيقًا لها القيود ذاتها؟', a: 'نعم. الضبط الدقيق يُعدِّل الأسلوب وتركيز المجال أو سلوك اتباع التعليمات — لا يُضيف وصولًا للبيانات في الوقت الحقيقي أو استدلالًا حقيقيًا أو ذاكرة مستمرة. GPT-5.5 المضبوط دقيقًا يحتفظ بقطع المعرفة ذاته وخطر الهلوسة ذاته كالنموذج الأساسي.' },
+            { q: 'هل النماذج المضبوطة دقيقًا لها القيود ذاتها؟', a: 'نعم. الضبط الدقيق يُعدِّل الأسلوب وتركيز المجال أو سلوك اتباع التعليمات — لا يُضيف وصولًا للبيانات في الوقت الحقيقي أو استدلالًا حقيقيًا أو ذاكرة مستمرة. GPT-5.6 المضبوط دقيقًا يحتفظ بقطع المعرفة ذاته وخطر الهلوسة ذاته كالنموذج الأساسي.' },
             { q: 'ما الفرق بين قيد النموذج اللغوي الكبير والخطأ؟', a: 'الخطأ هو عيب غير مقصود يمكن تصحيحه بتحديث برنامجي. القيد هو خاصية هيكلية لكيفية عمل النموذج. الهلوسة وقطوع المعرفة وقيود نافذة السياق هي قيود — تنشأ من معمارية المحوِّل وعملية التدريب ولا يمكن تصحيحها بالتصحيحات البرمجية، بل يمكن فقط التحايل عليها عبر تصميم النظام.' },
-            { q: 'ما النموذج اللغوي الكبير الذي يملك أقل القيود؟', a: 'لا نموذج يُزيل أيًا من القيود الهيكلية الثمانية — فهي شاملة لمعمارية المحوِّل. Gemini 3.1 Pro يملك أكبر نافذة سياق (٢ مليون رمز) ويُخفِّف القيد الرابع بشكل أفضل. Claude Opus 4.8 يُقِرُّ بقطوع المعرفة بشكل أكثر موثوقية، مما يُخفِّف بذلك خطر الهلوسة. GPT-5.5 يتفوق في استخدام الأدوات (الحل للقيد السادس). اختر بناءً على نقطة اختناقك المحددة، لا بناءً على أي نموذج "أقل قيودًا".' },
-            { q: 'كيف تختلف القيود بين النماذج مفتوحة المصدر والخاصة في 2026؟', a: 'النماذج مفتوحة المصدر (LLaMA 3.1 وMistral Large وQwen 3) والخاصة (GPT-5.5 وClaude Opus 4.8 وGemini 3.1 Pro) تواجه قيودًا هيكلية متطابقة. الاختلافات في الخطورة والتكلفة: النماذج الخاصة عادةً لها سياقات أكبر واتباع تعليمات أفضل وتحديثات تدريب أكثر تكرارًا. لا فئة تُزيل أيًا من القيود الثمانية.' },
+            { q: 'ما النموذج اللغوي الكبير الذي يملك أقل القيود؟', a: 'لا نموذج يُزيل أيًا من القيود الهيكلية الثمانية — فهي شاملة لمعمارية المحوِّل. Gemini 3.1 Pro يملك أكبر نافذة سياق (٢ مليون رمز) ويُخفِّف القيد الرابع بشكل أفضل. Claude Opus 5 يُقِرُّ بقطوع المعرفة بشكل أكثر موثوقية، مما يُخفِّف بذلك خطر الهلوسة. GPT-5.6 يتفوق في استخدام الأدوات (الحل للقيد السادس). اختر بناءً على نقطة اختناقك المحددة، لا بناءً على أي نموذج "أقل قيودًا".' },
+            { q: 'كيف تختلف القيود بين النماذج مفتوحة المصدر والخاصة في 2026؟', a: 'النماذج مفتوحة المصدر (LLaMA 3.1 وMistral Large وQwen 3) والخاصة (GPT-5.6 وClaude Opus 5 وGemini 3.1 Pro) تواجه قيودًا هيكلية متطابقة. الاختلافات في الخطورة والتكلفة: النماذج الخاصة عادةً لها سياقات أكبر واتباع تعليمات أفضل وتحديثات تدريب أكثر تكرارًا. لا فئة تُزيل أيًا من القيود الثمانية.' },
           ],
         },
         sources: {
@@ -1220,7 +1220,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     pt: {
       theme: 'Fundamentals',
       title: 'Limitações da IA: O que os LLMs não podem fazer em 2026',
-      intro: 'Os grandes modelos de linguagem têm oito limites rígidos que nenhuma quantidade de fine-tuning, escala ou prompt engineering pode eliminar: sem dados em tempo real, alucinações confiantes, raciocínio fraco de múltiplas etapas, limites da janela de contexto, sem memória, sem ações no mundo real, viés de treinamento e sem autoverificação. Cada modelo — GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro e as alternativas de código aberto — compartilha essas restrições estruturais. Este guia cobre cada limite com o workaround de engenharia que funciona em produção.',
+      intro: 'Os grandes modelos de linguagem têm oito limites rígidos que nenhuma quantidade de fine-tuning, escala ou prompt engineering pode eliminar: sem dados em tempo real, alucinações confiantes, raciocínio fraco de múltiplas etapas, limites da janela de contexto, sem memória, sem ações no mundo real, viés de treinamento e sem autoverificação. Cada modelo — GPT-5.6, Claude Opus 5, Gemini 3.1 Pro e as alternativas de código aberto — compartilha essas restrições estruturais. Este guia cobre cada limite com o workaround de engenharia que funciona em produção.',
       publishDate: '2026-03-24',
       seoTitle: 'Limitações e workarounds de LLMs 2026: 8 restrições-chave',
       metaDescription: 'Todos os LLMs compartilham 8 limites estruturais: sem dados em tempo real, alucinações, limites de contexto, sem memória. Aprenda os workarounds para cada restrição.',
@@ -1256,7 +1256,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'ListItem', position: 3, name: 'Sem raciocínio confiável de múltiplas etapas', description: 'Causa raiz: sem memória de trabalho ou estado entre previsões de tokens. Gravidade: média, melhora significativamente com prompting chain-of-thought. Workaround: usar prompting chain-of-thought ou direcionar a aritmética para um interpretador de código.' },
           { '@type': 'ListItem', position: 4, name: 'Limites da janela de contexto', description: 'Causa raiz: a atenção do transformer tem um limite rígido de tokens. Gravidade: média para documentos longos. Workaround: RAG, chunking, sumarização.' },
           { '@type': 'ListItem', position: 5, name: 'Sem memória persistente', description: 'Causa raiz: arquitetura sem estado — cada sessão começa a partir de um contexto em branco. Gravidade: média para fluxos de trabalho de várias sessões. Workaround: injeção de memória em nível de aplicação usando bancos de dados vetoriais ou resumos de conversa.' },
-          { '@type': 'ListItem', position: 6, name: 'Sem capacidade de ação no mundo real', description: 'Causa raiz: os LLMs por padrão produzem apenas texto. Gravidade: alta para tarefas autônomas. Workaround: uso de ferramentas/chamada de função disponível no GPT-5.5, Claude Opus 4.8 e Gemini 3.1 Pro.' },
+          { '@type': 'ListItem', position: 6, name: 'Sem capacidade de ação no mundo real', description: 'Causa raiz: os LLMs por padrão produzem apenas texto. Gravidade: alta para tarefas autônomas. Workaround: uso de ferramentas/chamada de função disponível no GPT-5.6, Claude Opus 5 e Gemini 3.1 Pro.' },
           { '@type': 'ListItem', position: 7, name: 'Viés nos dados de treinamento', description: 'Causa raiz: o corpus de treinamento é principalmente conteúdo em inglês, ocidental e da internet pré-2025. Gravidade: média, varia por idioma e domínio. Workaround: fornecer contexto, terminologia e exemplos específicos do domínio explicitamente no prompt.' },
           { '@type': 'ListItem', position: 8, name: 'Não pode autoverificar as saídas', description: 'Causa raiz: sem acesso à verdade fundamental — os modelos só podem avaliar consistência com padrões de treinamento, não precisão factual. Gravidade: alta para afirmações factuais. Workaround: validação externa contra fontes primárias autorizadas antes de publicar.' },
         ],
@@ -1289,7 +1289,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'As 8 limitações estruturais dos LLMs',
           content: [
             '**Os grandes modelos de linguagem têm oito limites rígidos que se aplicam independentemente do tamanho do modelo, do fornecedor ou da abordagem de treinamento.** Esses não são bugs — são propriedades estruturais de como os LLMs são projetados. Cada workaround abaixo é uma solução de produção testada, não uma teoria.',
-            'Essas restrições se aplicam universalmente: GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro, LLaMA 3.1, Mistral Large e todos os modelos de código aberto são igualmente afetados. O prompt engineering pode mitigar o impacto dessas limitações, mas não pode eliminá-las.',
+            'Essas restrições se aplicam universalmente: GPT-5.6, Claude Opus 5, Gemini 3.1 Pro, LLaMA 3.1, Mistral Large e todos os modelos de código aberto são igualmente afetados. O prompt engineering pode mitigar o impacto dessas limitações, mas não pode eliminá-las.',
           ],
         },
         tldr: {
@@ -1297,7 +1297,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           isTldr: true,
           items: [
             'Os LLMs têm 8 limites estruturais universais: corte de conhecimento, alucinação, raciocínio fraco de múltiplas etapas, limites da janela de contexto, sem memória persistente, sem ações no mundo real, viés de treinamento e sem autoverificação',
-            'Nenhum modelo — GPT-5.5, Claude, Gemini ou código aberto — elimina essas restrições',
+            'Nenhum modelo — GPT-5.6, Claude, Gemini ou código aberto — elimina essas restrições',
             'O prompt engineering pode mitigar o impacto, mas não pode eliminar nenhuma das 8 limitações',
             'Cada limitação tem um workaround de produção testado: RAG para o corte de conhecimento, chain-of-thought para o raciocínio, chamada de ferramentas para as ações',
             'Entender essas limitações é a base do prompt engineering eficaz — você sabe o que esperar e quando usar ferramentas complementares',
@@ -1307,7 +1307,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Limitação 1: Corte de conhecimento',
           content: [
             '**Os LLMs são treinados em dados com uma data final específica — conhecida como o corte de conhecimento ou corte de treinamento.** Qualquer evento, mudança de preço, novo lançamento de produto ou atualização regulatória após essa data é invisível para o modelo.',
-            'Cortes de conhecimento em 2026: GPT-5.5 (OpenAI): outubro de 2024. Claude Opus 4.8 (Anthropic): início de 2025. Gemini 3.1 Pro (Google DeepMind): início de 2025.',
+            'Cortes de conhecimento em 2026: GPT-5.6 (OpenAI): outubro de 2024. Claude Opus 5 (Anthropic): início de 2025. Gemini 3.1 Pro (Google DeepMind): início de 2025.',
           ],
           items: [
             '**Workaround principal: RAG (Retrieval-Augmented Generation).** Antes de enviar a solicitação, recupere fatos atuais relevantes de uma fonte confiável e injete-os no contexto do prompt. O modelo responde com base nessa informação em vez de nos seus dados de treinamento desatualizados.',
@@ -1362,7 +1362,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Os LLMs por padrão produzem apenas texto — eles não podem chamar APIs, ler bancos de dados, enviar e-mails, interagir com páginas web nem realizar qualquer ação real por si mesmos.** "Fazer algo" para um LLM significa produzir texto que descreve como fazê-lo.',
           ],
           items: [
-            '**Workaround: Chamada de ferramentas / chamada de função.** As APIs de LLM modernas (GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro) suportam uso de ferramentas, onde o modelo pode solicitar a execução de funções definidas pelo desenvolvedor. O modelo gera uma chamada de ferramenta estruturada; seu código executa a ação real e retorna o resultado ao modelo.',
+            '**Workaround: Chamada de ferramentas / chamada de função.** As APIs de LLM modernas (GPT-5.6, Claude Opus 5, Gemini 3.1 Pro) suportam uso de ferramentas, onde o modelo pode solicitar a execução de funções definidas pelo desenvolvedor. O modelo gera uma chamada de ferramenta estruturada; seu código executa a ação real e retorna o resultado ao modelo.',
           ],
         },
         limit7: {
@@ -1410,13 +1410,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
           faqs: [
             { q: 'Quais são as principais coisas que os LLMs não podem fazer?', a: 'Os LLMs não podem acessar dados em tempo real, verificar suas próprias saídas, reter memória entre sessões, realizar ações no mundo real sem ferramentas de scaffolding nem raciocinar de forma confiável por meio de lógica de múltiplas etapas sem prompting chain-of-thought. Essas são restrições estruturais que se aplicam a todos os modelos.' },
             { q: 'Por que os LLMs alucinam?', a: 'A alucinação é estrutural: os LLMs preveem o próximo token estatisticamente mais provável com base nos dados de treinamento, não a verdade verificada. Quando o sinal de treinamento para um fato específico é escasso, o modelo gera uma invenção plausível sem sinalizar incerteza. Fundamentar os prompts com material fonte explícito reduz, mas não elimina, a alucinação.' },
-            { q: 'O GPT-5.5 pode acessar a internet?', a: 'O GPT-5.5 na API padrão não pode acessar a internet. A interface ChatGPT oferece uma ferramenta de navegação opcional, mas a API do modelo base tem um corte de treinamento de outubro de 2024 e sem recuperação em tempo real. Sempre confirme se há uma camada de uso de ferramentas ativa na sua integração específica antes de assumir que o modelo tem dados atuais.' },
-            { q: 'Como os cortes de conhecimento diferem entre GPT-5.5, Claude e Gemini?', a: 'A partir de 2026: OpenAI GPT-5.5 tem um corte de treinamento de outubro de 2024; Anthropic Claude Opus 4.8 e Google Gemini 3.1 Pro têm cortes do início de 2025. Os três modelos podem ter conhecimento impreciso sobre eventos próximos aos seus cortes, pois a cobertura de treinamento dos meses mais recentes é escassa.' },
+            { q: 'O GPT-5.6 pode acessar a internet?', a: 'O GPT-5.6 na API padrão não pode acessar a internet. A interface ChatGPT oferece uma ferramenta de navegação opcional, mas a API do modelo base tem um corte de treinamento de outubro de 2024 e sem recuperação em tempo real. Sempre confirme se há uma camada de uso de ferramentas ativa na sua integração específica antes de assumir que o modelo tem dados atuais.' },
+            { q: 'Como os cortes de conhecimento diferem entre GPT-5.6, Claude e Gemini?', a: 'A partir de 2026: OpenAI GPT-5.6 tem um corte de treinamento de outubro de 2024; Anthropic Claude Opus 5 e Google Gemini 3.1 Pro têm cortes do início de 2025. Os três modelos podem ter conhecimento impreciso sobre eventos próximos aos seus cortes, pois a cobertura de treinamento dos meses mais recentes é escassa.' },
             { q: 'Posso contornar as limitações dos LLMs por meio de melhor prompting?', a: 'O prompting reduz o impacto das limitações, mas não as elimina. O prompting chain-of-thought melhora a precisão do raciocínio. Fornecer fatos no prompt mitiga os cortes de conhecimento. As instruções de incerteza explícitas reduzem a confiança da alucinação. Mas o prompting não pode dar a um modelo acesso a dados em tempo real, memória real ou capacidade de ações no mundo real.' },
-            { q: 'Os modelos ajustados têm as mesmas limitações?', a: 'Sim. O fine-tuning ajusta o estilo, o foco do domínio ou o comportamento de seguimento de instruções — não adiciona acesso a dados em tempo real, raciocínio real ou memória persistente. Um GPT-5.5 ajustado retém o mesmo corte de conhecimento e o mesmo risco de alucinação que o modelo base.' },
+            { q: 'Os modelos ajustados têm as mesmas limitações?', a: 'Sim. O fine-tuning ajusta o estilo, o foco do domínio ou o comportamento de seguimento de instruções — não adiciona acesso a dados em tempo real, raciocínio real ou memória persistente. Um GPT-5.6 ajustado retém o mesmo corte de conhecimento e o mesmo risco de alucinação que o modelo base.' },
             { q: 'Qual é a diferença entre uma limitação de LLM e um bug?', a: 'Um bug é um erro não intencional que pode ser corrigido com uma atualização de software. Uma limitação é uma propriedade estrutural de como o modelo funciona. A alucinação, os cortes de conhecimento e os limites da janela de contexto são limitações — surgem da arquitetura transformer e do processo de treinamento e não podem ser corrigidos com patches, apenas contornados por meio do design do sistema.' },
-            { q: 'Qual LLM tem menos limitações?', a: 'Nenhum modelo elimina nenhuma das oito restrições estruturais — elas são universais para a arquitetura transformer. Gemini 3.1 Pro tem a maior janela de contexto (2 milhões de tokens) e mitiga melhor a limitação 4. Claude Opus 4.8 reconhece os cortes de conhecimento de forma mais confiável, mitigando assim o risco de alucinação. GPT-5.5 se destaca no uso de ferramentas (workaround para a limitação 6). Escolha com base no seu gargalo específico, não em qual modelo está "menos limitado".' },
-            { q: 'Como as limitações diferem entre modelos de código aberto e proprietários em 2026?', a: 'Modelos de código aberto (LLaMA 3.1, Mistral Large, Qwen 3) e proprietários (GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro) enfrentam restrições estruturais idênticas. As diferenças estão na gravidade e no custo: os modelos proprietários tipicamente têm contextos maiores, melhor seguimento de instruções e atualizações de treinamento mais frequentes. Nenhuma categoria elimina nenhuma das oito limitações.' },
+            { q: 'Qual LLM tem menos limitações?', a: 'Nenhum modelo elimina nenhuma das oito restrições estruturais — elas são universais para a arquitetura transformer. Gemini 3.1 Pro tem a maior janela de contexto (2 milhões de tokens) e mitiga melhor a limitação 4. Claude Opus 5 reconhece os cortes de conhecimento de forma mais confiável, mitigando assim o risco de alucinação. GPT-5.6 se destaca no uso de ferramentas (workaround para a limitação 6). Escolha com base no seu gargalo específico, não em qual modelo está "menos limitado".' },
+            { q: 'Como as limitações diferem entre modelos de código aberto e proprietários em 2026?', a: 'Modelos de código aberto (LLaMA 3.1, Mistral Large, Qwen 3) e proprietários (GPT-5.6, Claude Opus 5, Gemini 3.1 Pro) enfrentam restrições estruturais idênticas. As diferenças estão na gravidade e no custo: os modelos proprietários tipicamente têm contextos maiores, melhor seguimento de instruções e atualizações de treinamento mais frequentes. Nenhuma categoria elimina nenhuma das oito limitações.' },
           ],
         },
         sources: {
@@ -1433,7 +1433,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     fr: {
       theme: 'Fundamentals',
       title: 'Limitations de l\'IA : Ce que les LLMs ne peuvent pas faire en 2026',
-      intro: 'Les grands modèles de langage ont huit limites structurelles qu\'aucun fine-tuning, mise à l\'échelle ou ingénierie des prompts ne peut éliminer : pas d\'accès en temps réel, hallucinations, raisonnement multi-étapes peu fiable, limites de contexte, pas de mémoire, pas d\'actions, biais d\'entraînement et impossibilité de vérifier les sorties. Chaque modèle — GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro et les alternatives open-source — partage ces contraintes. Ce guide couvre chaque limite avec le contournement technique qui fonctionne en production.',
+      intro: 'Les grands modèles de langage ont huit limites structurelles qu\'aucun fine-tuning, mise à l\'échelle ou ingénierie des prompts ne peut éliminer : pas d\'accès en temps réel, hallucinations, raisonnement multi-étapes peu fiable, limites de contexte, pas de mémoire, pas d\'actions, biais d\'entraînement et impossibilité de vérifier les sorties. Chaque modèle — GPT-5.6, Claude Opus 5, Gemini 3.1 Pro et les alternatives open-source — partage ces contraintes. Ce guide couvre chaque limite avec le contournement technique qui fonctionne en production.',
       metaDescription: 'Tous les LLMs locaux partagent 8 limites : pas accès réel, hallucinations, limites contexte, pas mémoire. Solutions pour chaque contrainte et quand choisir cloud.',
       heroImage: '/images/ai-limitations-what-llms-cant-do-quick-reference-hero-fr.webp',
       publishDate: '2026-03-24',
@@ -1468,8 +1468,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Thing', name: 'Prompt engineering strategies' },
         ],
         mentions: [
-          { '@type': 'SoftwareApplication', name: 'GPT-5.5', url: 'https://openai.com' },
-          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8', url: 'https://anthropic.com' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5.6', url: 'https://openai.com' },
+          { '@type': 'SoftwareApplication', name: 'Claude Opus 5', url: 'https://anthropic.com' },
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro', url: 'https://deepmind.google' },
           { '@type': 'Organization', name: 'OpenAI', url: 'https://openai.com' },
           { '@type': 'Organization', name: 'Anthropic', url: 'https://anthropic.com' },
@@ -1490,9 +1490,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'ListItem', position: 1, name: 'Coupure de connaissance', description: 'Cause : données d\'entraînement statiques avec une date de fin. Sévérité : élevée pour les événements récents. Solution : génération augmentée par récupération (RAG) ou coller les faits actuels directement dans le prompt.' },
           { '@type': 'ListItem', position: 2, name: 'Hallucination', description: 'Cause : prédiction de tokens basée sur des motifs d\'entraînement, pas une recherche de vérité. Sévérité : élevée pour les faits spécifiques, citations et chiffres. Solution : ancrer les prompts avec des sources et valider les sorties contre des sources primaires.' },
           { '@type': 'ListItem', position: 3, name: 'Raisonnement multi-étapes non fiable', description: 'Cause : absence de mémoire de travail ou d\'état entre les prédictions de tokens. Sévérité : moyenne, s\'améliore significativement avec le prompting chaîne-de-pensée. Solution : utiliser le prompting CoT ou orienter l\'arithmétique vers un interpréteur de code.' },
-          { '@type': 'ListItem', position: 4, name: 'Limites de la fenêtre de contexte', description: 'Cause : l\'attention du transformer a une limite stricte de tokens. Sévérité : moyenne pour les longs documents. Limites : GPT-5.5 128K, Claude Opus 4.8 1M, Gemini 3.1 Pro 2M tokens. Solution : RAG, découpage, résumé.' },
+          { '@type': 'ListItem', position: 4, name: 'Limites de la fenêtre de contexte', description: 'Cause : l\'attention du transformer a une limite stricte de tokens. Sévérité : moyenne pour les longs documents. Limites : GPT-5.6 128K, Claude Opus 5 1M, Gemini 3.1 Pro 2M tokens. Solution : RAG, découpage, résumé.' },
           { '@type': 'ListItem', position: 5, name: 'Absence de mémoire persistante', description: 'Cause : architecture sans état — chaque session commence avec un contexte vide. Sévérité : moyenne pour les workflows multi-sessions. Solution : injection de mémoire au niveau de la couche applicative via des bases vectorielles.' },
-          { '@type': 'ListItem', position: 6, name: 'Absence de capacité d\'action réelle', description: 'Cause : les LLMs ne produisent que du texte par défaut. Sévérité : élevée pour les tâches autonomes. Solution : utilisation d\'outils disponible dans GPT-5.5, Claude Opus 4.8 et Gemini 3.1 Pro.' },
+          { '@type': 'ListItem', position: 6, name: 'Absence de capacité d\'action réelle', description: 'Cause : les LLMs ne produisent que du texte par défaut. Sévérité : élevée pour les tâches autonomes. Solution : utilisation d\'outils disponible dans GPT-5.6, Claude Opus 5 et Gemini 3.1 Pro.' },
           { '@type': 'ListItem', position: 7, name: 'Biais des données d\'entraînement', description: 'Cause : le corpus d\'entraînement est principalement en anglais, occidental et issu d\'internet avant 2025. Sévérité : moyenne, varie selon la langue et le domaine. Solution : fournir explicitement du contexte, de la terminologie et des exemples spécifiques au domaine.' },
           { '@type': 'ListItem', position: 8, name: 'Incapacité à auto-vérifier les sorties', description: 'Cause : absence d\'accès à la vérité terrain — les modèles ne peuvent évaluer que la cohérence avec les motifs d\'entraînement, pas l\'exactitude factuelle. Sévérité : élevée pour les affirmations factuelles. Solution : validation externe contre des sources primaires avant publication.' },
         ],
@@ -1518,7 +1518,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             name: 'Quelles sont les principales choses que les LLMs ne peuvent pas faire ?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Les LLMs ne peuvent pas accéder aux données en temps réel, vérifier leurs propres sorties, retenir la mémoire entre sessions, effectuer des actions réelles sans infrastructure d\'outils, ni raisonner de manière fiable à travers une logique multi-étapes sans prompting chaîne-de-pensée. Ce sont des limites structurelles s\'appliquant à chaque modèle — GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro et les alternatives open-source.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Les LLMs ne peuvent pas accéder aux données en temps réel, vérifier leurs propres sorties, retenir la mémoire entre sessions, effectuer des actions réelles sans infrastructure d\'outils, ni raisonner de manière fiable à travers une logique multi-étapes sans prompting chaîne-de-pensée. Ce sont des limites structurelles s\'appliquant à chaque modèle — GPT-5.6, Claude Opus 5, Gemini 3.1 Pro et les alternatives open-source.' },
           },
           {
             '@type': 'Question',
@@ -1527,13 +1527,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             '@type': 'Question',
-            name: 'GPT-5.5 peut-il accéder à Internet ?',
-            acceptedAnswer: { '@type': 'Answer', text: 'GPT-5.5 dans l\'API standard ne peut pas accéder à Internet. L\'interface ChatGPT propose un outil de navigation optionnel, mais l\'API du modèle de base a une coupure d\'entraînement d\'octobre 2024 sans récupération en direct. Confirmez toujours si une couche d\'utilisation d\'outils est active dans votre intégration spécifique avant de supposer que le modèle dispose de données actuelles.' },
+            name: 'GPT-5.6 peut-il accéder à Internet ?',
+            acceptedAnswer: { '@type': 'Answer', text: 'GPT-5.6 dans l\'API standard ne peut pas accéder à Internet. L\'interface ChatGPT propose un outil de navigation optionnel, mais l\'API du modèle de base a une coupure d\'entraînement d\'octobre 2024 sans récupération en direct. Confirmez toujours si une couche d\'utilisation d\'outils est active dans votre intégration spécifique avant de supposer que le modèle dispose de données actuelles.' },
           },
           {
             '@type': 'Question',
-            name: 'Comment les coupures de connaissance diffèrent-elles entre GPT-5.5, Claude et Gemini ?',
-            acceptedAnswer: { '@type': 'Answer', text: 'En 2026 : OpenAI GPT-5.5 a une coupure d\'entraînement d\'octobre 2024 ; Anthropic Claude Opus 4.8 et Google Gemini 3.1 Pro ont des coupures début 2025. Les trois modèles peuvent avoir des connaissances imprécises sur les événements proches de leurs coupures en raison d\'une couverture d\'entraînement clairsemée des mois les plus récents.' },
+            name: 'Comment les coupures de connaissance diffèrent-elles entre GPT-5.6, Claude et Gemini ?',
+            acceptedAnswer: { '@type': 'Answer', text: 'En 2026 : OpenAI GPT-5.6 a une coupure d\'entraînement d\'octobre 2024 ; Anthropic Claude Opus 5 et Google Gemini 3.1 Pro ont des coupures début 2025. Les trois modèles peuvent avoir des connaissances imprécises sur les événements proches de leurs coupures en raison d\'une couverture d\'entraînement clairsemée des mois les plus récents.' },
           },
           {
             '@type': 'Question',
@@ -1543,7 +1543,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             name: 'Les modèles affinés ont-ils les mêmes limitations ?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Oui. L\'affinage ajuste le style, le focus du domaine ou le comportement de suivi des instructions — il n\'ajoute pas l\'accès aux données en temps réel, un vrai raisonnement ou une mémoire persistante. Un GPT-5.5 affiné conserve la même coupure de connaissance et le même risque d\'hallucination que le modèle de base.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Oui. L\'affinage ajuste le style, le focus du domaine ou le comportement de suivi des instructions — il n\'ajoute pas l\'accès aux données en temps réel, un vrai raisonnement ou une mémoire persistante. Un GPT-5.6 affiné conserve la même coupure de connaissance et le même risque d\'hallucination que le modèle de base.' },
           },
           {
             '@type': 'Question',
@@ -1553,12 +1553,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             '@type': 'Question',
             name: 'Quel LLM a le moins de limitations ?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Aucun modèle n\'élimine l\'une des huit limitations structurelles — elles sont universelles à l\'architecture transformer. Gemini 3.1 Pro a la plus grande fenêtre de contexte (2 millions de tokens), atténuant au mieux la limitation 4. Claude Opus 4.8 reconnaît les coupures de connaissance le plus fiablement, réduisant le risque d\'hallucination. GPT-5.5 excelle dans l\'utilisation d\'outils (contournement de la limitation 6). Choisissez selon votre goulot d\'étranglement spécifique, pas selon le modèle le "moins limité".' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Aucun modèle n\'élimine l\'une des huit limitations structurelles — elles sont universelles à l\'architecture transformer. Gemini 3.1 Pro a la plus grande fenêtre de contexte (2 millions de tokens), atténuant au mieux la limitation 4. Claude Opus 5 reconnaît les coupures de connaissance le plus fiablement, réduisant le risque d\'hallucination. GPT-5.6 excelle dans l\'utilisation d\'outils (contournement de la limitation 6). Choisissez selon votre goulot d\'étranglement spécifique, pas selon le modèle le "moins limité".' },
           },
           {
             '@type': 'Question',
             name: 'Comment les limitations diffèrent-elles entre les modèles open-source et propriétaires en 2026 ?',
-            acceptedAnswer: { '@type': 'Answer', text: 'Les modèles open-source (LLaMA 3.1, Mistral Large, Qwen 3) et propriétaires (GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro) font face à des limitations structurelles identiques — coupures de connaissance, hallucination, fenêtres de contexte, contraintes de raisonnement. Les différences résident dans la sévérité et le coût : les modèles propriétaires ont généralement des contextes plus grands (Gemini 3.1 Pro : 2M tokens vs Mistral : 128K), un meilleur suivi des instructions et des mises à jour d\'entraînement plus fréquentes. Les modèles open-source échangent des capacités contre le coût et le contrôle du déploiement. Aucune catégorie n\'élimine l\'une des huit limitations.' },
+            acceptedAnswer: { '@type': 'Answer', text: 'Les modèles open-source (LLaMA 3.1, Mistral Large, Qwen 3) et propriétaires (GPT-5.6, Claude Opus 5, Gemini 3.1 Pro) font face à des limitations structurelles identiques — coupures de connaissance, hallucination, fenêtres de contexte, contraintes de raisonnement. Les différences résident dans la sévérité et le coût : les modèles propriétaires ont généralement des contextes plus grands (Gemini 3.1 Pro : 2M tokens vs Mistral : 128K), un meilleur suivi des instructions et des mises à jour d\'entraînement plus fréquentes. Les modèles open-source échangent des capacités contre le coût et le contrôle du déploiement. Aucune catégorie n\'élimine l\'une des huit limitations.' },
           },
         ],
       },
@@ -1581,7 +1581,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Les coupures de connaissance signifient que chaque LLM travaille par défaut avec des informations obsolètes',
             'L\'hallucination est structurelle — tous les LLMs génèrent des contenus faux avec assurance quand le signal d\'entraînement fait défaut',
             'Le raisonnement multi-étapes échoue sans prompting chaîne-de-pensée ou outils externes',
-            'Les fenêtres de contexte limitent chaque session : GPT-5.5 128K, Claude Opus 4.8 1M, Gemini 3.1 Pro 2M tokens',
+            'Les fenêtres de contexte limitent chaque session : GPT-5.6 128K, Claude Opus 5 1M, Gemini 3.1 Pro 2M tokens',
             'Aucun LLM ne se souvient des conversations précédentes sans système de mémoire au niveau applicatif',
             'Les LLMs ne peuvent pas naviguer sur le web, exécuter du code ou effectuer des actions sans infrastructure d\'outils',
             'Chaque limitation dispose d\'une solution technique connue — connaître la limite est la première étape',
@@ -1632,19 +1632,19 @@ export const article: Partial<Record<Language, PEArticle>> = {
         modelLimitsComparison: {
           title: 'Comment les limites diffèrent selon le modèle (2026)',
           content: ['Les huit limites structurelles s\'appliquent universellement — mais la sévérité et les contournements partiels varient selon le modèle.'],
-          columns: ['Limitation', 'GPT-5.5', 'Claude Opus 4.8', 'Gemini 3.1 Pro', 'Open-Source (LLaMA 3.1)'],
+          columns: ['Limitation', 'GPT-5.6', 'Claude Opus 5', 'Gemini 3.1 Pro', 'Open-Source (LLaMA 3.1)'],
           rows: [
-            { 'Limitation': 'Coupure de connaissance', 'GPT-5.5': 'Oct. 2024', 'Claude Opus 4.8': 'Début 2025', 'Gemini 3.1 Pro': 'Début 2025', 'Open-Source (LLaMA 3.1)': 'Varie selon la version' },
-            { 'Limitation': 'Fenêtre contextuelle', 'GPT-5.5': '128K tokens', 'Claude Opus 4.8': '1M tokens', 'Gemini 3.1 Pro': '2M tokens', 'Open-Source (LLaMA 3.1)': '8K–128K tokens' },
-            { 'Limitation': 'Qualité des outils', 'GPT-5.5': 'Excellente', 'Claude Opus 4.8': 'Excellente', 'Gemini 3.1 Pro': 'Bonne', 'Open-Source (LLaMA 3.1)': 'Variable' },
-            { 'Limitation': 'Gestion des hallucinations', 'GPT-5.5': 'Modérée', 'Claude Opus 4.8': 'Forte (signale l\'incertitude)', 'Gemini 3.1 Pro': 'Modérée', 'Open-Source (LLaMA 3.1)': 'Faible' },
-            { 'Limitation': 'Raisonnement étendu', 'GPT-5.5': 'o3/o4-mini disponible', 'Claude Opus 4.8': 'Extended thinking disponible', 'Gemini 3.1 Pro': 'Flash Thinking disponible', 'Open-Source (LLaMA 3.1)': 'Limité' },
+            { 'Limitation': 'Coupure de connaissance', 'GPT-5.6': 'Oct. 2024', 'Claude Opus 5': 'Début 2025', 'Gemini 3.1 Pro': 'Début 2025', 'Open-Source (LLaMA 3.1)': 'Varie selon la version' },
+            { 'Limitation': 'Fenêtre contextuelle', 'GPT-5.6': '128K tokens', 'Claude Opus 5': '1M tokens', 'Gemini 3.1 Pro': '2M tokens', 'Open-Source (LLaMA 3.1)': '8K–128K tokens' },
+            { 'Limitation': 'Qualité des outils', 'GPT-5.6': 'Excellente', 'Claude Opus 5': 'Excellente', 'Gemini 3.1 Pro': 'Bonne', 'Open-Source (LLaMA 3.1)': 'Variable' },
+            { 'Limitation': 'Gestion des hallucinations', 'GPT-5.6': 'Modérée', 'Claude Opus 5': 'Forte (signale l\'incertitude)', 'Gemini 3.1 Pro': 'Modérée', 'Open-Source (LLaMA 3.1)': 'Faible' },
+            { 'Limitation': 'Raisonnement étendu', 'GPT-5.6': 'o3/o4-mini disponible', 'Claude Opus 5': 'Extended thinking disponible', 'Gemini 3.1 Pro': 'Flash Thinking disponible', 'Open-Source (LLaMA 3.1)': 'Limité' },
           ],
         },
         knowledgeCutoff: {
           title: 'Limitation 1 — Coupures de connaissance et absence de données en temps réel',
           content: [
-            '**Chaque LLM a une date de coupure d\'entraînement, et le modèle n\'a aucune connaissance des événements, prix, articles ou versions de produits publiés après cette date sans récupération externe.** OpenAI GPT-5.5 a une coupure d\'octobre 2024. Anthropic Claude Opus 4.8 et Google Gemini 3.1 Pro ont des coupures début 2025.',
+            '**Chaque LLM a une date de coupure d\'entraînement, et le modèle n\'a aucune connaissance des événements, prix, articles ou versions de produits publiés après cette date sans récupération externe.** OpenAI GPT-5.6 a une coupure d\'octobre 2024. Anthropic Claude Opus 5 et Google Gemini 3.1 Pro ont des coupures début 2025.',
             'Les modèles ont également des connaissances clairsemées des événements *proches* de leur coupure, car la collecte et le traitement des données d\'entraînement prennent des semaines à des mois après que les événements se produisent. Un modèle entraîné jusqu\'en octobre 2024 peut avoir une couverture mince des événements de septembre–octobre 2024.',
             'La solution principale est la [génération augmentée par récupération (RAG)](/fr/prompt-engineering/rag-explained), qui injecte des documents actuels ou récents dans le prompt au moment de la requête. Une solution secondaire est l\'ancrage du prompt : coller les faits actuels pertinents directement dans le prompt et demander au modèle de répondre uniquement à partir de ce contexte.',
           ],
@@ -1652,7 +1652,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         hallucination: {
           title: 'Limitation 2 — L\'hallucination est structurelle, pas un bug',
           content: [
-            '**Les LLMs génèrent des tokens statistiquement plausibles, pas des faits vérifiés — quand le signal d\'entraînement pour un fait spécifique est faible, le modèle produit une fabrication qui sonne assurée.** Cela s\'applique à chaque modèle, y compris GPT-5.5, Claude Opus 4.8 et Gemini 3.1 Pro. Pour un approfondissement, voir [Hallucinations de l\'IA — Pourquoi l\'IA invente des choses](/fr/prompt-engineering/ai-hallucinations-why-ai-makes-things-up).',
+            '**Les LLMs génèrent des tokens statistiquement plausibles, pas des faits vérifiés — quand le signal d\'entraînement pour un fait spécifique est faible, le modèle produit une fabrication qui sonne assurée.** Cela s\'applique à chaque modèle, y compris GPT-5.6, Claude Opus 5 et Gemini 3.1 Pro. Pour un approfondissement, voir [Hallucinations de l\'IA — Pourquoi l\'IA invente des choses](/fr/prompt-engineering/ai-hallucinations-why-ai-makes-things-up).',
             'L\'hallucination se produit le plus fréquemment sur : les chiffres numériques spécifiques (prix, dates, statistiques), les citations et références d\'articles, les spécifications techniques de niche et les événements proches ou après la coupure d\'entraînement. Les modèles signalent rarement quand ils hallucinent.',
             'Solutions : fournir le matériel source dans le prompt et demander au modèle de n\'y répondre qu\'à partir de celui-ci ; demander au modèle de signaler toute affirmation qu\'il ne peut pas confirmer à partir du contexte fourni ; utiliser [RAG](/fr/prompt-engineering/rag-explained) pour ancrer les réponses sur des documents vérifiés ; valider tous les chiffres clés contre des sources primaires avant publication.',
           ],
@@ -1670,7 +1670,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         contextWindow: {
           title: 'Limitation 4 — Limites de la fenêtre de contexte',
           content: [
-            '**Chaque session LLM a une limite stricte de tokens — GPT-5.5 à 128 000 tokens, Claude Opus 4.8 à 200 000 tokens, Gemini 3.1 Pro à 2 000 000 tokens — et les performances sur le contenu antérieur se dégradent à mesure que la fenêtre se remplit.** Voir [Fenêtres de contexte expliquées](/fr/prompt-engineering/context-windows-explained-why-ai-forgets) pour une explication complète.',
+            '**Chaque session LLM a une limite stricte de tokens — GPT-5.6 à 128 000 tokens, Claude Opus 5 à 200 000 tokens, Gemini 3.1 Pro à 2 000 000 tokens — et les performances sur le contenu antérieur se dégradent à mesure que la fenêtre se remplit.** Voir [Fenêtres de contexte expliquées](/fr/prompt-engineering/context-windows-explained-why-ai-forgets) pour une explication complète.',
             'Le problème « perdu au milieu » : plusieurs études montrent que la précision des LLMs pour récupérer des informations au milieu d\'un long contexte est significativement plus faible qu\'au début ou à la fin. Une fenêtre de 1M tokens ne signifie pas une attention uniforme sur tous les 1M tokens.',
             'Solutions : structurer les informations importantes au début ou à la fin du prompt ; utiliser RAG pour récupérer uniquement les morceaux pertinents plutôt que d\'insérer des documents complets ; découper les longs documents en sessions fragmentées avec des étapes de résumé.',
           ],
@@ -1689,7 +1689,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Limitation 6 — Les LLMs ne peuvent pas effectuer d\'actions réelles',
           content: [
             '**Les LLMs génèrent du texte — ils ne peuvent pas naviguer sur le web, exécuter du code, envoyer des e-mails, modifier des fichiers ou interagir avec des systèmes externes sauf si une couche d\'utilisation d\'outils active explicitement ces actions.** Le modèle produit une description textuelle de ce qu\'il ferait ; la couche d\'infrastructure l\'exécute.',
-            'L\'utilisation d\'outils (aussi appelée appel de fonctions) — disponible dans GPT-5.5, Claude Opus 4.8 et Gemini 3.1 Pro — permet à un modèle d\'émettre des appels de fonctions structurés qu\'une application intercepte et exécute. Le modèle ne peut toujours pas agir de manière autonome ; il peut seulement émettre du texte structuré qui déclenche une exécution externe.',
+            'L\'utilisation d\'outils (aussi appelée appel de fonctions) — disponible dans GPT-5.6, Claude Opus 5 et Gemini 3.1 Pro — permet à un modèle d\'émettre des appels de fonctions structurés qu\'une application intercepte et exécute. Le modèle ne peut toujours pas agir de manière autonome ; il peut seulement émettre du texte structuré qui déclenche une exécution externe.',
             'Les agents autonomes encapsulent plusieurs appels d\'outils dans une boucle d\'orchestration, créant l\'apparence d\'une action indépendante. L\'injection de prompts et les vulnérabilités de sécurité sont des préoccupations importantes dans ces architectures — voir [Injection de prompts et sécurité](/fr/prompt-engineering/prompt-injection-and-security).',
           ],
         },
@@ -1697,7 +1697,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Limitation 7 — Biais des données d\'entraînement et lacunes de couverture',
           content: [
             '**Les LLMs héritent des biais, lacunes et distorsions de leurs données d\'entraînement — principalement du contenu internet anglophone, occidental et d\'avant 2025.** Les performances sur les requêtes non anglophones, les contextes culturels non occidentaux et les sujets en langues minoritaires sont structurellement plus faibles.',
-            'C\'est pertinent pour les équipes internationales : GPT-5.5, Claude Opus 4.8 et Gemini 3.1 Pro produisent tous des sorties plus fortes en anglais que dans les langues à moins de ressources. La terminologie technique dans les domaines de niche (industries spécifiques, systèmes juridiques locaux, dialectes régionaux) peut être mal représentée dans les données d\'entraînement.',
+            'C\'est pertinent pour les équipes internationales : GPT-5.6, Claude Opus 5 et Gemini 3.1 Pro produisent tous des sorties plus fortes en anglais que dans les langues à moins de ressources. La terminologie technique dans les domaines de niche (industries spécifiques, systèmes juridiques locaux, dialectes régionaux) peut être mal représentée dans les données d\'entraînement.',
             'Solution : fournir du contexte spécifique au domaine, des définitions de terminologie ou des exemples dans le prompt. Ne supposez pas que le modèle dispose de connaissances précises sur votre industrie, région ou institution spécifique.',
           ],
         },
@@ -1730,9 +1730,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Les huit limitations structurelles sont réelles, mais chacune a au moins un scénario où l\'avertissement conventionnel surestime le problème — ou où la recherche de 2025–2026 a partiellement comblé l\'écart.** Connaître les exceptions est aussi important que connaître la règle.',
           ],
           items: [
-            '**La coupure de connaissance est sans importance pour les questions sur des domaines stables.** La coupure est importante pour les événements actuels, les nouvelles versions et les prix changeants. Pour la physique, les mathématiques, les API logicielles établies (avant 2024), la littérature classique et les cadres juridiques fondamentaux, la coupure d\'octobre 2024 de GPT-5.5 a très peu de conséquences pratiques. Router les requêtes sur des domaines stables vers des modèles non augmentés est souvent plus rapide et moins cher que RAG.',
+            '**La coupure de connaissance est sans importance pour les questions sur des domaines stables.** La coupure est importante pour les événements actuels, les nouvelles versions et les prix changeants. Pour la physique, les mathématiques, les API logicielles établies (avant 2024), la littérature classique et les cadres juridiques fondamentaux, la coupure d\'octobre 2024 de GPT-5.6 a très peu de conséquences pratiques. Router les requêtes sur des domaines stables vers des modèles non augmentés est souvent plus rapide et moins cher que RAG.',
             '**L\'hallucination est une fonctionnalité pour les tâches génératives.** Le même mécanisme de prédiction de tokens qui fabrique des citations génère aussi de nouvelles métaphores, noms de produits et variations créatives qu\'aucun système de récupération ne pourrait produire. Les designers, rédacteurs et équipes produit veulent souvent la "confabulation" des LLMs — le problème survient uniquement quand on traite le contenu généré comme factuel. Séparer les tâches de génération des recherches de faits élimine la plupart des risques d\'hallucination sans supprimer la créativité.',
-            '**Les modèles à pensée étendue ont considérablement réduit l\'écart de raisonnement.** OpenAI o3 et o4-mini et la pensée étendue d\'Anthropic dans les Claude Opus 4.8 utilisent la mise à l\'échelle du calcul à l\'inférence — générant des chaînes de tokens de raisonnement avant de répondre — et atteignent une précision quasi-humaine sur les benchmarks de mathématiques universitaires et de logique formelle (AIME, MMLU-Pro) en 2025. L\'affirmation "les LLMs ne peuvent pas raisonner" est exacte pour l\'inférence en mode standard ; elle est de moins en moins exacte pour les modes à pensée étendue sur des tâches bien définies.',
+            '**Les modèles à pensée étendue ont considérablement réduit l\'écart de raisonnement.** OpenAI o3 et o4-mini et la pensée étendue d\'Anthropic dans les Claude Opus 5 utilisent la mise à l\'échelle du calcul à l\'inférence — générant des chaînes de tokens de raisonnement avant de répondre — et atteignent une précision quasi-humaine sur les benchmarks de mathématiques universitaires et de logique formelle (AIME, MMLU-Pro) en 2025. L\'affirmation "les LLMs ne peuvent pas raisonner" est exacte pour l\'inférence en mode standard ; elle est de moins en moins exacte pour les modes à pensée étendue sur des tâches bien définies.',
             '**Le problème de contexte "perdu au milieu" est positionnel, pas universel.** Liu et al. (2023) a montré une dégradation spécifiquement quand les informations critiques sont placées au milieu de très longs contextes. Pour les prompts de moins de ~20 000 tokens, ou quand les faits critiques sont placés au début ou à la fin du prompt, la dégradation est minimale. La fenêtre de 2M tokens de Gemini 3.1 Pro ne souffre pas de la même ampleur de dégradation médiane que les anciens modèles à 4K ou 8K tokens.',
             '**Le prompting d\'auto-cohérence adresse partiellement l\'écart d\'auto-vérification.** Générer trois réponses indépendantes à la même question et sélectionner la réponse majoritaire (Wang et al., 2023, "Self-Consistency Improves Chain of Thought Reasoning in Language Models," [arXiv:2203.11171](https://arxiv.org/abs/2203.11171)) améliore la précision factuelle sur les tâches à domaine fermé de 10 à 20 points de pourcentage par rapport au décodage glouton. Cela ne remplace pas la validation externe, mais réduit le taux d\'erreurs assurées sur les questions avec des réponses récupérables.',
           ],
@@ -1740,12 +1740,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptExamples: {
           title: 'Prompting autour des limitations — Mauvais et bons exemples',
           content: ['Ces exemples montrent comment la même requête sous-jacente échoue quand elle ignore les limitations des LLMs et réussit quand elle les prend en compte.'],
-          blockquote: '[Mauvais Prompt] « Quel est le tarif actuel de GPT-5.5 ? »',
+          blockquote: '[Mauvais Prompt] « Quel est le tarif actuel de GPT-5.6 ? »',
           blockquoteSource: 'Ce prompt suppose que le modèle dispose de connaissances en temps réel qu\'il n\'a pas. Le modèle affirmera avec assurance des tarifs obsolètes ou inventés.',
           items: [
-            'Ce prompt ignore la limitation de coupure de connaissance. Les données d\'entraînement de GPT-5.5 se terminent en octobre 2024 — les tarifs peuvent avoir changé depuis. Le modèle va générer une réponse qui sonne autoritaire mais peut être obsolète de plusieurs mois.',
+            'Ce prompt ignore la limitation de coupure de connaissance. Les données d\'entraînement de GPT-5.6 se terminent en octobre 2024 — les tarifs peuvent avoir changé depuis. Le modèle va générer une réponse qui sonne autoritaire mais peut être obsolète de plusieurs mois.',
             'Une meilleure approche tient explicitement compte de la limitation :',
-            '[Bon Prompt] « Expliquer la structure de tarification typique qu\'OpenAI utilise pour GPT-5.5 (jetons d\'entrée, jetons de sortie, traitement par lots). Remarque : je sais que vos données d\'entraînement peuvent ne pas refléter les tarifs les plus récents — je vérifierai les chiffres exacts actuels sur platform.openai.com après avoir lu votre explication. »',
+            '[Bon Prompt] « Expliquer la structure de tarification typique qu\'OpenAI utilise pour GPT-5.6 (jetons d\'entrée, jetons de sortie, traitement par lots). Remarque : je sais que vos données d\'entraînement peuvent ne pas refléter les tarifs les plus récents — je vérifierai les chiffres exacts actuels sur platform.openai.com après avoir lu votre explication. »',
           ],
         },
         howToStart: {
@@ -1763,9 +1763,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Termes clés',
           content: ['Définitions des concepts fondamentaux utilisés tout au long de cet article. Chaque terme renvoie à l\'entrée complète dans le [Glossaire d\'ingénierie des prompts](/fr/prompt-engineering/prompt-engineering-glossary).'],
           items: [
-            '**[Coupure de connaissance](/fr/prompt-engineering/prompt-engineering-glossary)** — La date au-delà de laquelle un modèle n\'a pas de données d\'entraînement. Tout événement, changement de prix ou publication après cette date est invisible pour le modèle sauf si vous le collez dans le prompt. GPT-5.5 : octobre 2024 ; Claude Opus 4.8 et Gemini 3.1 Pro : début 2025.',
+            '**[Coupure de connaissance](/fr/prompt-engineering/prompt-engineering-glossary)** — La date au-delà de laquelle un modèle n\'a pas de données d\'entraînement. Tout événement, changement de prix ou publication après cette date est invisible pour le modèle sauf si vous le collez dans le prompt. GPT-5.6 : octobre 2024 ; Claude Opus 5 et Gemini 3.1 Pro : début 2025.',
             '**[Hallucination](/fr/prompt-engineering/prompt-engineering-glossary#core-concepts)** — Sortie qui sonne assurée mais factuellement incorrecte ou inventée. Causée par la prédiction statistique de tokens plutôt que la recherche de vérité. Ancrer les prompts avec des sources réduit mais n\'élimine pas ce phénomène.',
-            '**[Fenêtre de contexte](/fr/prompt-engineering/prompt-engineering-glossary#core-concepts)** — Le nombre maximum de tokens (mots + ponctuation) que le modèle peut traiter en même temps, incluant le prompt système, l\'historique de conversation et les documents récupérés. GPT-5.5 : 128K tokens ; Claude Opus 4.8 : 1M ; Gemini 3.1 Pro : 2M.',
+            '**[Fenêtre de contexte](/fr/prompt-engineering/prompt-engineering-glossary#core-concepts)** — Le nombre maximum de tokens (mots + ponctuation) que le modèle peut traiter en même temps, incluant le prompt système, l\'historique de conversation et les documents récupérés. GPT-5.6 : 128K tokens ; Claude Opus 5 : 1M ; Gemini 3.1 Pro : 2M.',
             '**[Utilisation d\'outils / Appel de fonctions](/fr/prompt-engineering/prompt-engineering-glossary#agents-orchestration)** — Une capacité permettant au modèle d\'invoquer des fonctions externes (recherche web, exécution de code, requêtes de base de données) au lieu de générer des réponses textuelles. Nécessaire pour contourner la limitation d\'absence d\'action réelle.',
             '**[Chaîne-de-pensée (CoT)](/fr/prompt-engineering/prompt-engineering-glossary#core-concepts)** — Une technique de prompting où vous demandez au modèle de raisonner étape par étape avant de donner une réponse finale. Améliore significativement la précision sur l\'arithmétique multi-étapes, la logique et les tâches de planification.',
             '**[RAG (Génération augmentée par récupération)](/fr/prompt-engineering/prompt-engineering-glossary#core-concepts)** — Architecture où des documents pertinents sont récupérés depuis une base de connaissances externe et injectés dans le prompt au moment de la requête. La solution principale pour les coupures de connaissance.',
@@ -1797,15 +1797,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'faq',
           title: 'Questions fréquemment posées',
           faqs: [
-            { q: 'Quelles sont les principales choses que les LLMs ne peuvent pas faire ?', a: 'Les LLMs ne peuvent pas accéder aux données en temps réel, vérifier leurs propres sorties, retenir la mémoire entre sessions, effectuer des actions réelles sans infrastructure d\'outils, ni raisonner de manière fiable à travers une logique multi-étapes sans prompting chaîne-de-pensée. Ce sont des limites structurelles s\'appliquant à chaque modèle — GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro et les alternatives open-source.' },
+            { q: 'Quelles sont les principales choses que les LLMs ne peuvent pas faire ?', a: 'Les LLMs ne peuvent pas accéder aux données en temps réel, vérifier leurs propres sorties, retenir la mémoire entre sessions, effectuer des actions réelles sans infrastructure d\'outils, ni raisonner de manière fiable à travers une logique multi-étapes sans prompting chaîne-de-pensée. Ce sont des limites structurelles s\'appliquant à chaque modèle — GPT-5.6, Claude Opus 5, Gemini 3.1 Pro et les alternatives open-source.' },
             { q: 'Pourquoi les LLMs hallucinent-ils ?', a: 'L\'hallucination est structurelle : les LLMs prédisent le token suivant statistiquement le plus probable basé sur les données d\'entraînement, pas sur une vérité vérifiée. Quand le signal d\'entraînement pour un fait spécifique est faible — chiffres de niche, événements récents, citations obscures — le modèle génère une fabrication plausible sans signaler l\'incertitude. Ancrer les prompts avec des sources explicites réduit mais n\'élimine pas l\'hallucination.' },
-            { q: 'GPT-5.5 peut-il accéder à Internet ?', a: 'GPT-5.5 dans l\'API standard ne peut pas accéder à Internet. L\'interface ChatGPT propose un outil de navigation optionnel, mais l\'API du modèle de base a une coupure d\'entraînement d\'octobre 2024 sans récupération en direct. Confirmez toujours si une couche d\'utilisation d\'outils est active dans votre intégration spécifique avant de supposer que le modèle dispose de données actuelles.' },
-            { q: 'Comment les coupures de connaissance diffèrent-elles entre GPT-5.5, Claude et Gemini ?', a: 'En 2026 : OpenAI GPT-5.5 a une coupure d\'entraînement d\'octobre 2024 ; Anthropic Claude Opus 4.8 et Google Gemini 3.1 Pro ont des coupures début 2025. Les trois modèles peuvent avoir des connaissances imprécises sur les événements proches de leurs coupures en raison d\'une couverture d\'entraînement clairsemée des mois les plus récents.' },
+            { q: 'GPT-5.6 peut-il accéder à Internet ?', a: 'GPT-5.6 dans l\'API standard ne peut pas accéder à Internet. L\'interface ChatGPT propose un outil de navigation optionnel, mais l\'API du modèle de base a une coupure d\'entraînement d\'octobre 2024 sans récupération en direct. Confirmez toujours si une couche d\'utilisation d\'outils est active dans votre intégration spécifique avant de supposer que le modèle dispose de données actuelles.' },
+            { q: 'Comment les coupures de connaissance diffèrent-elles entre GPT-5.6, Claude et Gemini ?', a: 'En 2026 : OpenAI GPT-5.6 a une coupure d\'entraînement d\'octobre 2024 ; Anthropic Claude Opus 5 et Google Gemini 3.1 Pro ont des coupures début 2025. Les trois modèles peuvent avoir des connaissances imprécises sur les événements proches de leurs coupures en raison d\'une couverture d\'entraînement clairsemée des mois les plus récents.' },
             { q: 'Puis-je corriger les limitations des LLMs avec de meilleurs prompts ?', a: 'Le prompting réduit l\'impact des limitations mais ne les élimine pas. Le prompting chaîne-de-pensée améliore la précision du raisonnement. Fournir des faits dans le prompt atténue les coupures de connaissance. Des instructions explicites d\'incertitude réduisent la confiance dans les hallucinations. Mais le prompting ne peut pas donner à un modèle un accès aux données en temps réel, une vraie mémoire ou la capacité d\'effectuer des actions réelles.' },
-            { q: 'Les modèles affinés ont-ils les mêmes limitations ?', a: 'Oui. L\'affinage ajuste le style, le focus du domaine ou le comportement de suivi des instructions — il n\'ajoute pas l\'accès aux données en temps réel, un vrai raisonnement ou une mémoire persistante. Un GPT-5.5 affiné conserve la même coupure de connaissance et le même risque d\'hallucination que le modèle de base.' },
+            { q: 'Les modèles affinés ont-ils les mêmes limitations ?', a: 'Oui. L\'affinage ajuste le style, le focus du domaine ou le comportement de suivi des instructions — il n\'ajoute pas l\'accès aux données en temps réel, un vrai raisonnement ou une mémoire persistante. Un GPT-5.6 affiné conserve la même coupure de connaissance et le même risque d\'hallucination que le modèle de base.' },
             { q: 'Quelle est la différence entre une limitation d\'un LLM et un bug ?', a: 'Un bug est une erreur involontaire corrigeable par une mise à jour logicielle. Une limitation est une propriété structurelle du fonctionnement du modèle. L\'hallucination, les coupures de connaissance et les limites de la fenêtre de contexte sont des limitations — elles émergent de l\'architecture transformer et du processus d\'entraînement et ne peuvent pas être supprimées par un patch, seulement contournées par la conception du système.' },
-            { q: 'Quel LLM a le moins de limitations ?', a: 'Aucun modèle n\'élimine l\'une des huit limitations structurelles — elles sont universelles à l\'architecture transformer. Gemini 3.1 Pro a la plus grande fenêtre de contexte (2 millions de tokens), atténuant au mieux la limitation 4. Claude Opus 4.8 reconnaît les coupures de connaissance le plus fiablement, réduisant le risque d\'hallucination. GPT-5.5 excelle dans l\'utilisation d\'outils (contournement de la limitation 6). Choisissez selon votre goulot d\'étranglement spécifique, pas selon le modèle le "moins limité".' },
-            { q: 'Comment les limitations diffèrent-elles entre les modèles open-source et propriétaires en 2026 ?', a: 'Les modèles open-source (LLaMA 3.1, Mistral Large, Qwen 3) et propriétaires (GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro) font face à des limitations structurelles identiques — coupures de connaissance, hallucination, fenêtres de contexte, contraintes de raisonnement. Les différences résident dans la sévérité et le coût : les modèles propriétaires ont généralement des contextes plus grands (Gemini 3.1 Pro : 2M tokens vs Mistral : 128K), un meilleur suivi des instructions et des mises à jour d\'entraînement plus fréquentes. Les modèles open-source échangent des capacités contre le coût et le contrôle du déploiement. Aucune catégorie n\'élimine l\'une des huit limitations.' },
+            { q: 'Quel LLM a le moins de limitations ?', a: 'Aucun modèle n\'élimine l\'une des huit limitations structurelles — elles sont universelles à l\'architecture transformer. Gemini 3.1 Pro a la plus grande fenêtre de contexte (2 millions de tokens), atténuant au mieux la limitation 4. Claude Opus 5 reconnaît les coupures de connaissance le plus fiablement, réduisant le risque d\'hallucination. GPT-5.6 excelle dans l\'utilisation d\'outils (contournement de la limitation 6). Choisissez selon votre goulot d\'étranglement spécifique, pas selon le modèle le "moins limité".' },
+            { q: 'Comment les limitations diffèrent-elles entre les modèles open-source et propriétaires en 2026 ?', a: 'Les modèles open-source (LLaMA 3.1, Mistral Large, Qwen 3) et propriétaires (GPT-5.6, Claude Opus 5, Gemini 3.1 Pro) font face à des limitations structurelles identiques — coupures de connaissance, hallucination, fenêtres de contexte, contraintes de raisonnement. Les différences résident dans la sévérité et le coût : les modèles propriétaires ont généralement des contextes plus grands (Gemini 3.1 Pro : 2M tokens vs Mistral : 128K), un meilleur suivi des instructions et des mises à jour d\'entraînement plus fréquentes. Les modèles open-source échangent des capacités contre le coût et le contrôle du déploiement. Aucune catégorie n\'élimine l\'une des huit limitations.' },
           ],
         },
         sources: {
@@ -1821,7 +1821,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     ja: {
   theme: 'Fundamentals',
   title: 'AI制限：2026年にLLMができないこと',
-  intro: '大規模言語モデルには、ファインチューニング、スケーリング、プロンプトエンジニアリングのいずれによっても排除できない8つの硬い制限があります：リアルタイムデータへのアクセス不可、幻覚、不安定な複数ステップ推論、コンテキストウィンドウの上限、記憶なし、現実世界のアクション不可、学習バイアス、自己検証の不可能性。すべてのモデル — GPT-5.5、Claude Opus 4.8、Gemini 3.1 Proとオープンソースの代替品 — がこれらの構造的制約を共有しています。このガイドでは、各制限について本番環境で機能するエンジニアリング上の回避策と合わせて説明します。',
+  intro: '大規模言語モデルには、ファインチューニング、スケーリング、プロンプトエンジニアリングのいずれによっても排除できない8つの硬い制限があります：リアルタイムデータへのアクセス不可、幻覚、不安定な複数ステップ推論、コンテキストウィンドウの上限、記憶なし、現実世界のアクション不可、学習バイアス、自己検証の不可能性。すべてのモデル — GPT-5.6、Claude Opus 5、Gemini 3.1 Proとオープンソースの代替品 — がこれらの構造的制約を共有しています。このガイドでは、各制限について本番環境で機能するエンジニアリング上の回避策と合わせて説明します。',
   metaDescription: 'すべてのLLMが共有する8つの構造的限界：知識カットオフ、幻覚、コンテキスト上限、メモリ不可、リアルタイムデータなし。各制約の実装ワークアラウンドと使い分けのコツ。',
   heroImage: '/images/ai-limitations-what-llms-cant-do-quick-reference-hero-ja.webp',
   publishDate: '2026-03-24',
@@ -1856,8 +1856,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       { '@type': 'Thing', name: 'Prompt engineering strategies' },
     ],
     mentions: [
-      { '@type': 'SoftwareApplication', name: 'GPT-5.5', url: 'https://openai.com' },
-      { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8', url: 'https://anthropic.com' },
+      { '@type': 'SoftwareApplication', name: 'GPT-5.6', url: 'https://openai.com' },
+      { '@type': 'SoftwareApplication', name: 'Claude Opus 5', url: 'https://anthropic.com' },
       { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro', url: 'https://deepmind.google' },
       { '@type': 'Organization', name: 'OpenAI', url: 'https://openai.com' },
       { '@type': 'Organization', name: 'Anthropic', url: 'https://anthropic.com' },
@@ -1878,9 +1878,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
       { '@type': 'ListItem', position: 1, name: '知識カットオフ', description: '根本原因：終了日を持つ静的なトレーニングデータ。重大度：現在のイベント対して高い。回避方法：検索拡張生成（RAG）または現在の事実をプロンプトに直接貼り付ける。' },
       { '@type': 'ListItem', position: 2, name: '幻覚', description: '根本原因：真実検索ではなく、トレーニングパターンに基づくトークン予測。重大度：特定の事実、引用、数値に対して高い。回避方法：ソース資料でプロンプトを接地し、出力を一次資料に対して検証する。' },
       { '@type': 'ListItem', position: 3, name: '信頼性の低い複数ステップの推論', description: '根本原因：トークン予測間にワーキングメモリまたは状態がない。重大度：中程度（chain-of-thoughtプロンプトで大幅に改善）。回避方法：chain-of-thoughtプロンプトを使用するか、算術をコードインタープリターにルーティングする。' },
-      { '@type': 'ListItem', position: 4, name: 'コンテキストウィンドウ制限', description: '根本原因：トランスフォーマーアテンションに硬いトークンキャップがある。重大度：長いドキュメント対して中程度。コンテキスト制限：GPT-5.5 128K、Claude Opus 4.8 1M、Gemini 3.1 Pro 2Mトークン。回避方法：RAG、チャンキング、要約。' },
+      { '@type': 'ListItem', position: 4, name: 'コンテキストウィンドウ制限', description: '根本原因：トランスフォーマーアテンションに硬いトークンキャップがある。重大度：長いドキュメント対して中程度。コンテキスト制限：GPT-5.6 128K、Claude Opus 5 1M、Gemini 3.1 Pro 2Mトークン。回避方法：RAG、チャンキング、要約。' },
       { '@type': 'ListItem', position: 5, name: '永続的なメモリがない', description: '根本原因：ステートレスアーキテクチャ — 各セッションが空白のコンテキストから始まる。重大度：複数セッションのワークフロー対して中程度。回避方法：ベクトルデータベースまたは会話の要約を使用したアプリケーション層メモリ注入。' },
-      { '@type': 'ListItem', position: 6, name: '実世界のアクション機能がない', description: '根本原因：LLMはデフォルトではテキストのみを出力する。重大度：自律的なタスク対して高い。回避方法：GPT-5.5、Claude Opus 4.8、Gemini 3.1 Proで利用可能なツール使用/関数呼び出し。' },
+      { '@type': 'ListItem', position: 6, name: '実世界のアクション機能がない', description: '根本原因：LLMはデフォルトではテキストのみを出力する。重大度：自律的なタスク対して高い。回避方法：GPT-5.6、Claude Opus 5、Gemini 3.1 Proで利用可能なツール使用/関数呼び出し。' },
       { '@type': 'ListItem', position: 7, name: 'トレーニングデータバイアス', description: '根本原因：トレーニングコーパスは主に英語、西洋、2025年以前のインターネットコンテンツ。重大度：中程度、言語とドメインによって異なる。回避方法：プロンプトでドメイン固有のコンテキスト、用語、例を明示的に提供する。' },
       { '@type': 'ListItem', position: 8, name: '出力の自己検証ができない', description: '根本原因：グラウンドトゥルースへのアクセスがない — モデルはトレーニングパターンとの一貫性のみを評価でき、事実の正確さを評価できない。重大度：事実上の主張に対して高い。回避方法：公開前に権威ある一次資料に対する外部検証。' },
     ],
@@ -1906,7 +1906,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       {
         '@type': 'Question',
         name: 'LLMができない主なことは何ですか?',
-        acceptedAnswer: { '@type': 'Answer', text: 'LLMはリアルタイムデータにアクセスできず、独自の出力を検証できず、セッション間でメモリを保持できず、ツールスキャフォルディングなしで実世界のアクションを実行できず、chain-of-thoughtプロンプトなしで複数ステップのロジックを確実に推論できません。これらは、すべてのモデル（GPT-5.5、Claude Opus 4.8、Gemini 3.1 Pro、およびオープンソースの代替案など）に適用される構造的な制限です。' },
+        acceptedAnswer: { '@type': 'Answer', text: 'LLMはリアルタイムデータにアクセスできず、独自の出力を検証できず、セッション間でメモリを保持できず、ツールスキャフォルディングなしで実世界のアクションを実行できず、chain-of-thoughtプロンプトなしで複数ステップのロジックを確実に推論できません。これらは、すべてのモデル（GPT-5.6、Claude Opus 5、Gemini 3.1 Pro、およびオープンソースの代替案など）に適用される構造的な制限です。' },
       },
       {
         '@type': 'Question',
@@ -1915,13 +1915,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       {
         '@type': 'Question',
-        name: 'GPT-5.5はインターネットにアクセスできますか?',
-        acceptedAnswer: { '@type': 'Answer', text: '標準APIのGPT-5.5はインターネットにアクセスできません。ChatGPTのインターフェースはオプションのブラウジングツールを提供しますが、ベースモデルAPIは2024年10月のトレーニングカットオフを持っており、ライブ検索はありません。モデルが現在のデータを持っていると仮定する前に、ツール使用レイヤーが特定の統合でアクティブであることを常に確認してください。' },
+        name: 'GPT-5.6はインターネットにアクセスできますか?',
+        acceptedAnswer: { '@type': 'Answer', text: '標準APIのGPT-5.6はインターネットにアクセスできません。ChatGPTのインターフェースはオプションのブラウジングツールを提供しますが、ベースモデルAPIは2024年10月のトレーニングカットオフを持っており、ライブ検索はありません。モデルが現在のデータを持っていると仮定する前に、ツール使用レイヤーが特定の統合でアクティブであることを常に確認してください。' },
       },
       {
         '@type': 'Question',
-        name: 'GPT-5.5、Claude、Geminiの知識カットオフはどのように異なりますか?',
-        acceptedAnswer: { '@type': 'Answer', text: '2026年現在：OpenAI GPT-5.5は2024年10月のトレーニングカットオフを持っています。Anthropic Claude Opus 4.8とGoogle Gemini 3.1 Proは2025年初頭のカットオフを持っています。3つのモデルすべてが、最近数か月のトレーニング情報が希薄であるため、カットオフに近いイベントについて不正確な知識を持つ可能性があります。' },
+        name: 'GPT-5.6、Claude、Geminiの知識カットオフはどのように異なりますか?',
+        acceptedAnswer: { '@type': 'Answer', text: '2026年現在：OpenAI GPT-5.6は2024年10月のトレーニングカットオフを持っています。Anthropic Claude Opus 5とGoogle Gemini 3.1 Proは2025年初頭のカットオフを持っています。3つのモデルすべてが、最近数か月のトレーニング情報が希薄であるため、カットオフに近いイベントについて不正確な知識を持つ可能性があります。' },
       },
       {
         '@type': 'Question',
@@ -1931,7 +1931,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       {
         '@type': 'Question',
         name: 'ファインチューニングされたモデルは同じ制限を持っていますか?',
-        acceptedAnswer: { '@type': 'Answer', text: 'はい。ファインチューニングはスタイル、ドメインフォーカス、または指示追従の動作を調整します — リアルタイムのデータアクセス、真の推論、または永続的なメモリを追加しません。ファインチューニングされたGPT-5.5は、ベースモデルと同じ知識カットオフと幻覚リスクを保持しています。' },
+        acceptedAnswer: { '@type': 'Answer', text: 'はい。ファインチューニングはスタイル、ドメインフォーカス、または指示追従の動作を調整します — リアルタイムのデータアクセス、真の推論、または永続的なメモリを追加しません。ファインチューニングされたGPT-5.6は、ベースモデルと同じ知識カットオフと幻覚リスクを保持しています。' },
       },
       {
         '@type': 'Question',
@@ -1941,12 +1941,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
       {
         '@type': 'Question',
         name: '最も制限が少ないLLMはどれですか?',
-        acceptedAnswer: { '@type': 'Answer', text: 'どのモデルも8つの構造的な制限のいずれかを排除することはできません — これらはトランスフォーマーアーキテクチャに普遍的です。Gemini 3.1 Proは最大のコンテキストウィンドウ（200万トークン）を持ち、制限4を最よく緩和します。Claude Opus 4.8は不確実性を回避し、知識カットオフを最も確実に認め、幻覚リスクを緩和します。GPT-5.5はツール使用（制限6の回避）で優れています。「最も制限が少ない」モデルではなく、特定の制限のボトルネックに基づいて選択してください。' },
+        acceptedAnswer: { '@type': 'Answer', text: 'どのモデルも8つの構造的な制限のいずれかを排除することはできません — これらはトランスフォーマーアーキテクチャに普遍的です。Gemini 3.1 Proは最大のコンテキストウィンドウ（200万トークン）を持ち、制限4を最よく緩和します。Claude Opus 5は不確実性を回避し、知識カットオフを最も確実に認め、幻覚リスクを緩和します。GPT-5.6はツール使用（制限6の回避）で優れています。「最も制限が少ない」モデルではなく、特定の制限のボトルネックに基づいて選択してください。' },
       },
       {
         '@type': 'Question',
         name: '2026年のオープンソースと専有モデル間で制限はどのように異なりますか?',
-        acceptedAnswer: { '@type': 'Answer', text: 'オープンソースモデル（LLaMA 3.1、Mistral Large、Qwen 3）と専有モデル（GPT-5.5、Claude Opus 4.8、Gemini 3.1 Pro）は、同じ構造的な制限（知識カットオフ、幻覚、コンテキストウィンドウ、推論の制約）に直面しています。違いは重大度とコストにあります：専有モデルは通常、より大きなコンテキスト（Gemini 3.1 Pro：2Mトークン対Mistral：128K）、より良い指示追従、およびより頻繁なトレーニング更新を持っています。オープンソースモデルは、コストと展開制御のための能力をトレードします。どのカテゴリも8つの制限のいずれかを排除しません。' },
+        acceptedAnswer: { '@type': 'Answer', text: 'オープンソースモデル（LLaMA 3.1、Mistral Large、Qwen 3）と専有モデル（GPT-5.6、Claude Opus 5、Gemini 3.1 Pro）は、同じ構造的な制限（知識カットオフ、幻覚、コンテキストウィンドウ、推論の制約）に直面しています。違いは重大度とコストにあります：専有モデルは通常、より大きなコンテキスト（Gemini 3.1 Pro：2Mトークン対Mistral：128K）、より良い指示追従、およびより頻繁なトレーニング更新を持っています。オープンソースモデルは、コストと展開制御のための能力をトレードします。どのカテゴリも8つの制限のいずれかを排除しません。' },
       },
     ],
   },
@@ -1969,7 +1969,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         'デフォルトではすべてのLLMが古い情報から作業しているため、知識カットオフはすべてのLLM作業が古い情報から始まることを意味します。',
         '幻覚は構造的です — すべてのLLMはトレーニング信号が不足している場合、確信を持って虚偽の内容を生成します。',
         'Chain-of-thoughtプロンプトまたは外部ツールなしでは、複数ステップの推論は失敗します。',
-        'コンテキストウィンドウはすべてのセッションを上限に制限します：GPT-5.5 128K、Claude Opus 4.8 1M、Gemini 3.1 Pro 2Mトークン',
+        'コンテキストウィンドウはすべてのセッションを上限に制限します：GPT-5.6 128K、Claude Opus 5 1M、Gemini 3.1 Pro 2Mトークン',
         '永続的なメモリシステムがない限り、LLMは以前の会話を記憶しません。',
         'ツール使用スキャフォルディングなしでは、LLMはウェブをブラウズしたり、コードを実行したり、アクションを実行したりすることはできません。',
         'すべての制限には既知のエンジニアリング回避方法があります — 制限を知ることが最初のステップです。',
@@ -2020,19 +2020,19 @@ export const article: Partial<Record<Language, PEArticle>> = {
     modelLimitsComparison: {
       title: 'モデル別の制限の違い（2026年）',
       content: ['8つの構造的制限はすべてのモデルに共通ですが、重大度と利用可能な回避策はモデルによって異なります。'],
-      columns: ['制限', 'GPT-5.5', 'Claude Opus 4.8', 'Gemini 3.1 Pro', 'オープンソース (LLaMA 3.1)'],
+      columns: ['制限', 'GPT-5.6', 'Claude Opus 5', 'Gemini 3.1 Pro', 'オープンソース (LLaMA 3.1)'],
       rows: [
-        { '制限': '知識カットオフ', 'GPT-5.5': '2024年10月', 'Claude Opus 4.8': '2025年初頭', 'Gemini 3.1 Pro': '2025年初頭', 'オープンソース (LLaMA 3.1)': 'リリースにより異なる' },
-        { '制限': 'コンテキストウィンドウ', 'GPT-5.5': '128Kトークン', 'Claude Opus 4.8': '1Mトークン', 'Gemini 3.1 Pro': '200万トークン', 'オープンソース (LLaMA 3.1)': '8K〜128Kトークン' },
-        { '制限': 'ツール使用品質', 'GPT-5.5': '優秀', 'Claude Opus 4.8': '優秀', 'Gemini 3.1 Pro': '良好', 'オープンソース (LLaMA 3.1)': '様々' },
-        { '制限': '幻覚への対処', 'GPT-5.5': '普通', 'Claude Opus 4.8': '強い（不確実性を明示）', 'Gemini 3.1 Pro': '普通', 'オープンソース (LLaMA 3.1)': '弱い' },
-        { '制限': '拡張推論', 'GPT-5.5': 'o3/o4-mini利用可能', 'Claude Opus 4.8': 'Extended thinking利用可能', 'Gemini 3.1 Pro': 'Flash Thinking利用可能', 'オープンソース (LLaMA 3.1)': '限定的' },
+        { '制限': '知識カットオフ', 'GPT-5.6': '2024年10月', 'Claude Opus 5': '2025年初頭', 'Gemini 3.1 Pro': '2025年初頭', 'オープンソース (LLaMA 3.1)': 'リリースにより異なる' },
+        { '制限': 'コンテキストウィンドウ', 'GPT-5.6': '128Kトークン', 'Claude Opus 5': '1Mトークン', 'Gemini 3.1 Pro': '200万トークン', 'オープンソース (LLaMA 3.1)': '8K〜128Kトークン' },
+        { '制限': 'ツール使用品質', 'GPT-5.6': '優秀', 'Claude Opus 5': '優秀', 'Gemini 3.1 Pro': '良好', 'オープンソース (LLaMA 3.1)': '様々' },
+        { '制限': '幻覚への対処', 'GPT-5.6': '普通', 'Claude Opus 5': '強い（不確実性を明示）', 'Gemini 3.1 Pro': '普通', 'オープンソース (LLaMA 3.1)': '弱い' },
+        { '制限': '拡張推論', 'GPT-5.6': 'o3/o4-mini利用可能', 'Claude Opus 5': 'Extended thinking利用可能', 'Gemini 3.1 Pro': 'Flash Thinking利用可能', 'オープンソース (LLaMA 3.1)': '限定的' },
       ],
     },
     knowledgeCutoff: {
       title: '制限1 — 知識カットオフとリアルタイムデータなし',
       content: [
-        '**すべてのLLMはトレーニングカットオフ日を持ち、外部検索が追加されない限り、モデルはその日付の後にリリースされたイベント、価格、論文、または製品バージョンについての知識を持ちません。** OpenAI GPT-5.5は2024年10月のカットオフを持っています。Anthropic Claude Opus 4.8とGoogle Gemini 3.1 Proは2025年初頭のカットオフを持っています。',
+        '**すべてのLLMはトレーニングカットオフ日を持ち、外部検索が追加されない限り、モデルはその日付の後にリリースされたイベント、価格、論文、または製品バージョンについての知識を持ちません。** OpenAI GPT-5.6は2024年10月のカットオフを持っています。Anthropic Claude Opus 5とGoogle Gemini 3.1 Proは2025年初頭のカットオフを持っています。',
         'モデルはまた、カットオフに*近い*イベントについて希薄な知識を持っています。トレーニングデータの収集と処理にはイベントの発生から数週間から数か月かかるため。2024年10月までトレーニングされたモデルは、2024年9月から10月のイベントについてのカバレッジが薄い可能性があります。',
         '主要な回避方法は、[検索拡張生成（RAG）](/ja/prompt-engineering/rag-explained)で、クエリ時にプロンプトにライブまたは最近のドキュメントを注入します。二次的な回避方法はプロンプトの接地です：関連する現在の事実をプロンプトに直接貼り付けて、モデルにそのコンテキストからのみ答えるよう指示する。',
       ],
@@ -2040,7 +2040,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     hallucination: {
       title: '制限2 — 幻覚は構造的で、バグではない',
       content: [
-        '**LLMは検証された事実ではなく、統計的にもっともらしいトークンを生成します — 特定の事実のトレーニング信号が薄いとき、モデルは確信を持った虚偽を生成します。** これはGPT-5.5、Claude Opus 4.8、Gemini 3.1 Proを含むすべてのモデルに適用されます。詳細については、[AI幻覚 — AIが物事を作り出す理由](/ja/prompt-engineering/ai-hallucinations-why-ai-makes-things-up)を参照してください。',
+        '**LLMは検証された事実ではなく、統計的にもっともらしいトークンを生成します — 特定の事実のトレーニング信号が薄いとき、モデルは確信を持った虚偽を生成します。** これはGPT-5.6、Claude Opus 5、Gemini 3.1 Proを含むすべてのモデルに適用されます。詳細については、[AI幻覚 — AIが物事を作り出す理由](/ja/prompt-engineering/ai-hallucinations-why-ai-makes-things-up)を参照してください。',
         '幻覚は最も頻繁に発生します：特定の数値（価格、日付、統計）、引用と論文参考文献、ニッチな技術仕様、およびトレーニングカットオフに近いまたは後のイベント。モデルが幻覚を起こしているときは、ほとんど信号を送りません。',
         '回避方法：ソース資料をプロンプトに提供し、モデルにそれからのみ回答するよう指示する；モデルに提供されたコンテキストから確認できない主張にフラグを立てるよう指示する；[RAG](/ja/prompt-engineering/rag-explained)を使用して、確認されたドキュメントに回答を結合する；公開前にすべての重要な数字を一次資料に対して検証する。',
       ],
@@ -2058,7 +2058,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     contextWindow: {
       title: '制限4 — コンテキストウィンドウの上限',
       content: [
-        '**すべてのLLMセッションにハードなトークン制限があります — GPT-5.5は128,000トークン、Claude Opus 4.8は200,000トークン、Gemini 3.1 Proは2,000,000トークン — ウィンドウが満杯になると、前のコンテンツのパフォーマンスが低下します。** [コンテキストウィンドウの説明](/ja/prompt-engineering/context-windows-explained-why-ai-forgets)を参照して、完全な詳細を確認してください。',
+        '**すべてのLLMセッションにハードなトークン制限があります — GPT-5.6は128,000トークン、Claude Opus 5は200,000トークン、Gemini 3.1 Proは2,000,000トークン — ウィンドウが満杯になると、前のコンテンツのパフォーマンスが低下します。** [コンテキストウィンドウの説明](/ja/prompt-engineering/context-windows-explained-why-ai-forgets)を参照して、完全な詳細を確認してください。',
         '「中間で失われる」問題：複数の研究によると、長いコンテキストの中間から情報を取得するLLM精度は、始まりまたは終わりから大幅に低くなっています。1Mトークンウィンドウは、すべての1Mトークンに対して均一な注意が広がることを意味しません。',
         '回避方法：重要な情報をプロンプトの開始または終了に配置する；RAGを使用して関連チャンクのみを取得し、完全なドキュメントをダンプしない；長いドキュメントを要約ステップで分割されたセッションに分割する。',
       ],
@@ -2077,7 +2077,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: '制限6 — LLMは実世界のアクションを実行できない',
       content: [
         '**LLMはテキストを生成します — ツール使用レイヤーが明示的にこれらのアクションを有効にしない限り、ウェブをブラウズしたり、コードを実行したり、メールを送信したり、ファイルを変更したり、外部システムと相互作用したりすることはできません。** モデルはそれが何をするかを説明するテキスト説明を生成します；スキャフォルディングレイヤーが実行します。',
-        'ツール使用（関数呼び出しとも呼ばれる）— GPT-5.5、Claude Opus 4.8、Gemini 3.1 Proで利用可能です — モデルがアプリケーションが傍受して実行する構造化関数呼び出しを出力できるようにします。モデルは独立してアクションを実行することはできず、外部実行をトリガーする構造化テキストのみを出力できます。',
+        'ツール使用（関数呼び出しとも呼ばれる）— GPT-5.6、Claude Opus 5、Gemini 3.1 Proで利用可能です — モデルがアプリケーションが傍受して実行する構造化関数呼び出しを出力できるようにします。モデルは独立してアクションを実行することはできず、外部実行をトリガーする構造化テキストのみを出力できます。',
         '自律的なエージェントは、複数のツール呼び出しをオーケストレーションループで包みます。プロンプト注入とセキュリティの脆弱性はこれらのアーキテクチャの重大な懸念です — [プロンプト注入とセキュリティ](/ja/prompt-engineering/prompt-injection-and-security)を参照してください。',
       ],
     },
@@ -2085,7 +2085,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: '制限7 — トレーニングデータバイアスとカバレッジギャップ',
       content: [
         '**LLMはトレーニングデータのバイアス、ギャップ、スキューを継承します — 主に英語、西洋、2025年前のインターネットコンテンツ。** 非英語クエリ、非西洋文化コンテキスト、少数言語トピックのパフォーマンスは構造的に弱い。',
-        'これは国際チームに関連します：GPT-5.5、Claude Opus 4.8、Gemini 3.1 Proは、低リソース言語よりも英語でより強力な出力を生成します。ニッチドメイン（特定の業界、ローカル法制度、地域方言）の技術用語は、トレーニングデータに不十分に表現されている可能性があります。',
+        'これは国際チームに関連します：GPT-5.6、Claude Opus 5、Gemini 3.1 Proは、低リソース言語よりも英語でより強力な出力を生成します。ニッチドメイン（特定の業界、ローカル法制度、地域方言）の技術用語は、トレーニングデータに不十分に表現されている可能性があります。',
         '回避方法：プロンプトでドメイン固有のコンテキスト、用語定義、または例を提供する。特定の業界、地域、または機関について、モデルが正確な知識を持っていると仮定しないこと。',
       ],
     },
@@ -2118,9 +2118,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '**8つの構造的な制限は実在していますが、各々には、従来の警告が問題を過度に述べるか、2025～2026年の研究が部分的にギャップを閉じたシナリオが少なくとも1つあります。** 例外を知ることは、ルールを知ることと同じくらい重要です。',
       ],
       items: [
-        '**知識カットオフは安定ドメイン質問には無関係です。** カットオフは現在のイベント、最近のリリース、価格の変更に問題になります。物理学、数学、確立されたソフトウェアAPI（2024年前）、古典文学、基本的な法律の枠組みについては、GPT-5.5の2024年10月のカットオフはほぼ実用的なペナルティを持ちません。安定ドメイン質問を拡張されていないモデルにルーティングすることは、RAGよりも速く、安い場合が多い。',
+        '**知識カットオフは安定ドメイン質問には無関係です。** カットオフは現在のイベント、最近のリリース、価格の変更に問題になります。物理学、数学、確立されたソフトウェアAPI（2024年前）、古典文学、基本的な法律の枠組みについては、GPT-5.6の2024年10月のカットオフはほぼ実用的なペナルティを持ちません。安定ドメイン質問を拡張されていないモデルにルーティングすることは、RAGよりも速く、安い場合が多い。',
         '**幻覚は生成的なタスクの機能です。** 引用を捏造する同じトークン予測メカニズムも、取得システムが生成できない新しい隠喩、製品名、および創造的な変数を生成します。デザイナー、コピーライター、製品チームは、しばしばLLMの「虚偽」が実際に求めるもので、問題は、生成されたコンテンツを事実として扱う場合にのみ発生します。生成タスクと事実検索タスクを分離することで、創造性を抑制することなく、ほとんどの幻覚リスクが排除される。',
-        '**拡張思考モデルは推論ギャップを大幅に縮小しました。** OpenAI o3およびo4-miniとAnthropicの拡張思考in Claude Opus 4.8は推論時の計算スケーリング — 回答前にトークンの推論チェーンを生成 — を使用し、2025年現在、大学院数学と形式論理ベンチマーク（AIME、MMLU-Pro）でほぼ人間レベルの精度を達成します。「LLMは推論できない」という主張は標準モード推論で正確です；拡張思考モードで明確に定義されたタスクに対しては、ますます不正確です。',
+        '**拡張思考モデルは推論ギャップを大幅に縮小しました。** OpenAI o3およびo4-miniとAnthropicの拡張思考in Claude Opus 5は推論時の計算スケーリング — 回答前にトークンの推論チェーンを生成 — を使用し、2025年現在、大学院数学と形式論理ベンチマーク（AIME、MMLU-Pro）でほぼ人間レベルの精度を達成します。「LLMは推論できない」という主張は標準モード推論で正確です；拡張思考モードで明確に定義されたタスクに対しては、ますます不正確です。',
         '**「中間で失われた」コンテキスト問題は普遍的ではなく、位置依存です。** Liu et al. (2023)は、非常に長いコンテキストの中間に重要な情報を置いた場合、具体的に低下を示しました。約20,000トークン以下のプロンプト、または重要な事実がプロンプトの開始または終了に置かれた場合、低下は最小限です。2Mトークン Gemini 3.1 Pro ウィンドウは、初期の4Kまたは8Kモデルと同じ大きさの中間低下に悩まされません。',
         '**自己一貫性プロンプティングは自己検証ギャップを部分的に解決します。** 同じ質問に3つの独立した回答を生成し、多数回答（Wang et al., 2023, "Self-Consistency Improves Chain of Thought Reasoning in Language Models," [arXiv:2203.11171](https://arxiv.org/abs/2203.11171)）を選択すると、閉じたドメイン タスクの事実的精度をむさぼり実行と比較して10～20パーセント改善します。外部検証の代わりにはなりませんが、取得可能な答えの質問で確実なエラーの率を削減します。',
       ],
@@ -2128,12 +2128,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
     promptExamples: {
       title: '制限の回避 — 悪い例と良い例',
       content: ['これらの例は、同じ基本的なリクエストが、LLM制限を無視する場合は失敗し、制限を考慮する場合は成功する方法を示しています。'],
-      blockquote: '[悪いプロンプト] 「GPT-5.5の現在の価格は?」',
+      blockquote: '[悪いプロンプト] 「GPT-5.6の現在の価格は?」',
       blockquoteSource: 'このプロンプトはモデルが持っていないリアルタイムの知識を仮定しています。モデルは古い、またはでっちあげられた価格を確信を持って述べます。',
       items: [
-        'このプロンプトは知識カットオフ制限を無視しています。GPT-5.5のトレーニングデータは2024年10月で終わります — 価格はそれ以来変更された可能性があります。モデルは権威ある音に聞こえるが、数ヶ月古い可能性がある答えを生成します。',
+        'このプロンプトは知識カットオフ制限を無視しています。GPT-5.6のトレーニングデータは2024年10月で終わります — 価格はそれ以来変更された可能性があります。モデルは権威ある音に聞こえるが、数ヶ月古い可能性がある答えを生成します。',
         'より良いアプローチは明示的に制限を考慮しています：',
-        '[良いプロンプト] 「OpenAIがGPT-5.5に使用する典型的な価格設定構造を説明してください（入力トークン、出力トークン、バッチ処理）。注記：トレーニングデータが最新のレートを反映していない可能性があることを知っています — platform.openai.comで説明を読んだ後、正確な現在の数字を確認します。」',
+        '[良いプロンプト] 「OpenAIがGPT-5.6に使用する典型的な価格設定構造を説明してください（入力トークン、出力トークン、バッチ処理）。注記：トレーニングデータが最新のレートを反映していない可能性があることを知っています — platform.openai.comで説明を読んだ後、正確な現在の数字を確認します。」',
       ],
     },
     howToStart: {
@@ -2151,9 +2151,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'キーター',
       content: ['この記事全体で使用されるコア概念の定義。各用語は、[プロンプトエンジニアリング用語集](/ja/prompt-engineering/prompt-engineering-glossary)の完全なエントリにリンクしています。'],
       items: [
-        '**[知識カットオフ](/ja/prompt-engineering/prompt-engineering-glossary)** — モデルがトレーニングデータを持たない日付。この日付後の任何のイベント、価格変更、またはリリースは、プロンプトに貼り付けない限り、モデルに見えません。GPT-5.5：2024年10月；Claude Opus 4.8およびGemini 3.1 Pro：2025年初頭。',
+        '**[知識カットオフ](/ja/prompt-engineering/prompt-engineering-glossary)** — モデルがトレーニングデータを持たない日付。この日付後の任何のイベント、価格変更、またはリリースは、プロンプトに貼り付けない限り、モデルに見えません。GPT-5.6：2024年10月；Claude Opus 5およびGemini 3.1 Pro：2025年初頭。',
         '**[幻覚](/ja/prompt-engineering/prompt-engineering-glossary#core-concepts)** — 事実的に不正確または捏造された、確信を持った音の出力。統計的なトークン予測ではなく、真実検索による。ソース資料でプロンプトを接地することで削減されますが、排除されません。',
-        '**[コンテキストウィンドウ](/ja/prompt-engineering/prompt-engineering-glossary#core-concepts)** — モデルが一度に処理できるトークンの最大数（単語 + 句読点）、システムプロンプト、会話履歴、取得ドキュメントを含む。GPT-5.5：128Kトークン；Claude Opus 4.8：1M；Gemini 3.1 Pro：2M。',
+        '**[コンテキストウィンドウ](/ja/prompt-engineering/prompt-engineering-glossary#core-concepts)** — モデルが一度に処理できるトークンの最大数（単語 + 句読点）、システムプロンプト、会話履歴、取得ドキュメントを含む。GPT-5.6：128Kトークン；Claude Opus 5：1M；Gemini 3.1 Pro：2M。',
         '**[ツール使用/関数呼び出し](/ja/prompt-engineering/prompt-engineering-glossary#agents-orchestration)** — モデルがテキスト答えを生成する代わりに、外部関数（ウェブ検索、コード実行、データベースクエリ）を呼び出すことができる機能。実世界のアクション制限を回避するために必要。',
         '**[Chain-of-Thought (CoT)](/ja/prompt-engineering/prompt-engineering-glossary#core-concepts)** — モデルに最終的な答えを与える前にステップバイステップで推論するよう指示するプロンプト技術。複数ステップの算術、ロジック、計画タスクの精度を大幅に改善します。',
         '**[RAG (検索拡張生成)](/ja/prompt-engineering/prompt-engineering-glossary#core-concepts)** — 関連するドキュメントが外部知識ベースから取得され、クエリ時にプロンプトに注入されるアーキテクチャ。知識カットオフの主要な回避方法。',
@@ -2184,15 +2184,15 @@ export const article: Partial<Record<Language, PEArticle>> = {
       id: 'faq',
       title: 'よくある質問',
       faqs: [
-        { q: 'LLMができない主なことは何ですか?', a: 'LLMはリアルタイムデータにアクセスできず、独自の出力を検証できず、セッション間でメモリを保持できず、ツールスキャフォルディングなしで実世界のアクションを実行できず、chain-of-thoughtプロンプトなしで複数ステップのロジックを確実に推論できません。これらは、すべてのモデル（GPT-5.5、Claude Opus 4.8、Gemini 3.1 Pro、およびオープンソースの代替案など）に適用される構造的な制限です。' },
+        { q: 'LLMができない主なことは何ですか?', a: 'LLMはリアルタイムデータにアクセスできず、独自の出力を検証できず、セッション間でメモリを保持できず、ツールスキャフォルディングなしで実世界のアクションを実行できず、chain-of-thoughtプロンプトなしで複数ステップのロジックを確実に推論できません。これらは、すべてのモデル（GPT-5.6、Claude Opus 5、Gemini 3.1 Pro、およびオープンソースの代替案など）に適用される構造的な制限です。' },
         { q: 'LLMが幻覚を起こすのはなぜですか?', a: '幻覚は構造的です：LLMは確認された真実ではなく、トレーニングデータに基づいて統計的に最も可能性の高い次のトークンを予測します。特定の事実のトレーニング信号が薄い場合（マイナーな数字、最近のイベント、不明瞭な引用）、モデルは不確実性を示さない、もっともらしい音がする捏造を生成します。明示的なソース資料でプロンプトを接地することで、幻覚は減少しますが排除されません。' },
-        { q: 'GPT-5.5はインターネットにアクセスできますか?', a: '標準APIのGPT-5.5はインターネットにアクセスできません。ChatGPTのインターフェースはオプションのブラウジングツールを提供しますが、ベースモデルAPIは2024年10月のトレーニングカットオフを持っており、ライブ検索はありません。モデルが現在のデータを持っていると仮定する前に、ツール使用レイヤーが特定の統合でアクティブであることを常に確認してください。' },
-        { q: 'GPT-5.5、Claude、Geminiの知識カットオフはどのように異なりますか?', a: '2026年現在：OpenAI GPT-5.5は2024年10月のトレーニングカットオフを持っています。Anthropic Claude Opus 4.8とGoogle Gemini 3.1 Proは2025年初頭のカットオフを持っています。3つのモデルすべてが、最近数か月のトレーニング情報が希薄であるため、カットオフに近いイベントについて不正確な知識を持つ可能性があります。' },
+        { q: 'GPT-5.6はインターネットにアクセスできますか?', a: '標準APIのGPT-5.6はインターネットにアクセスできません。ChatGPTのインターフェースはオプションのブラウジングツールを提供しますが、ベースモデルAPIは2024年10月のトレーニングカットオフを持っており、ライブ検索はありません。モデルが現在のデータを持っていると仮定する前に、ツール使用レイヤーが特定の統合でアクティブであることを常に確認してください。' },
+        { q: 'GPT-5.6、Claude、Geminiの知識カットオフはどのように異なりますか?', a: '2026年現在：OpenAI GPT-5.6は2024年10月のトレーニングカットオフを持っています。Anthropic Claude Opus 5とGoogle Gemini 3.1 Proは2025年初頭のカットオフを持っています。3つのモデルすべてが、最近数か月のトレーニング情報が希薄であるため、カットオフに近いイベントについて不正確な知識を持つ可能性があります。' },
         { q: 'より良いプロンプトでLLM制限を修正できますか?', a: 'プロンプティングは制限の影響を軽減しますが、排除しません。Chain-of-thoughtプロンプティングは推論精度を改善します。プロンプトに事実を提供することで、知識カットオフを緩和します。明示的な不確実性の指示は、幻覚の信頼度を軽減します。しかし、プロンプティングはモデルにリアルタイムのデータアクセス、真のメモリ、または実世界のアクションを実行する能力を与えることはできません。' },
-        { q: 'ファインチューニングされたモデルは同じ制限を持っていますか?', a: 'はい。ファインチューニングはスタイル、ドメインフォーカス、または指示追従の動作を調整します — リアルタイムのデータアクセス、真の推論、または永続的なメモリを追加しません。ファインチューニングされたGPT-5.5は、ベースモデルと同じ知識カットオフと幻覚リスクを保持しています。' },
+        { q: 'ファインチューニングされたモデルは同じ制限を持っていますか?', a: 'はい。ファインチューニングはスタイル、ドメインフォーカス、または指示追従の動作を調整します — リアルタイムのデータアクセス、真の推論、または永続的なメモリを追加しません。ファインチューニングされたGPT-5.6は、ベースモデルと同じ知識カットオフと幻覚リスクを保持しています。' },
         { q: 'LLM制限とバグの違いは何ですか?', a: 'バグは、ソフトウェアアップデートで修正可能な意図しないエラーです。制限は、モデルがどのように機能するかの構造的な特性です。幻覚、知識カットオフ、およびコンテキストウィンドウの制限は、トランスフォーマーアーキテクチャとトレーニングプロセスから生じ、パッチできず、システム設計でのみ回避できる制限です。' },
-        { q: '最も制限が少ないLLMはどれですか?', a: 'どのモデルも8つの構造的な制限のいずれかを排除することはできません — これらはトランスフォーマーアーキテクチャに普遍的です。Gemini 3.1 Proは最大のコンテキストウィンドウ（200万トークン）を持ち、制限4を最よく緩和します。Claude Opus 4.8は不確実性を回避し、知識カットオフを最も確実に認め、幻覚リスクを緩和します。GPT-5.5はツール使用（制限6の回避）で優れています。「最も制限が少ない」モデルではなく、特定の制限のボトルネックに基づいて選択してください。' },
-        { q: '2026年のオープンソースと専有モデル間で制限はどのように異なりますか?', a: 'オープンソースモデル（LLaMA 3.1、Mistral Large、Qwen 3）と専有モデル（GPT-5.5、Claude Opus 4.8、Gemini 3.1 Pro）は、同じ構造的な制限（知識カットオフ、幻覚、コンテキストウィンドウ、推論の制約）に直面しています。違いは重大度とコストにあります：専有モデルは通常、より大きなコンテキスト（Gemini 3.1 Pro：2Mトークン対Mistral：128K）、より良い指示追従、およびより頻繁なトレーニング更新を持っています。オープンソースモデルは、コストと展開制御のための能力をトレードします。どのカテゴリも8つの制限のいずれかを排除しません。' },
+        { q: '最も制限が少ないLLMはどれですか?', a: 'どのモデルも8つの構造的な制限のいずれかを排除することはできません — これらはトランスフォーマーアーキテクチャに普遍的です。Gemini 3.1 Proは最大のコンテキストウィンドウ（200万トークン）を持ち、制限4を最よく緩和します。Claude Opus 5は不確実性を回避し、知識カットオフを最も確実に認め、幻覚リスクを緩和します。GPT-5.6はツール使用（制限6の回避）で優れています。「最も制限が少ない」モデルではなく、特定の制限のボトルネックに基づいて選択してください。' },
+        { q: '2026年のオープンソースと専有モデル間で制限はどのように異なりますか?', a: 'オープンソースモデル（LLaMA 3.1、Mistral Large、Qwen 3）と専有モデル（GPT-5.6、Claude Opus 5、Gemini 3.1 Pro）は、同じ構造的な制限（知識カットオフ、幻覚、コンテキストウィンドウ、推論の制約）に直面しています。違いは重大度とコストにあります：専有モデルは通常、より大きなコンテキスト（Gemini 3.1 Pro：2Mトークン対Mistral：128K）、より良い指示追従、およびより頻繁なトレーニング更新を持っています。オープンソースモデルは、コストと展開制御のための能力をトレードします。どのカテゴリも8つの制限のいずれかを排除しません。' },
       ],
     },
     sources: {
@@ -2208,7 +2208,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 zh: {
       theme: 'Fundamentals',
       title: 'AI 局限性：2026年大语言模型无法做什么',
-      intro: '大语言模型有八个硬性限制，无论是微调、扩展规模还是提示工程都无法消除：无法访问实时数据、产生幻觉、多步骤推理不可靠、上下文窗口上限、无持久记忆、无现实世界行动能力、训练偏差以及无法自我验证输出。每个模型——GPT-5.5、Claude Opus 4.8、Gemini 3.1 Pro以及开源替代方案——都共享这些结构性限制。本指南涵盖每个限制及其在生产环境中可行的工程解决方案。',
+      intro: '大语言模型有八个硬性限制，无论是微调、扩展规模还是提示工程都无法消除：无法访问实时数据、产生幻觉、多步骤推理不可靠、上下文窗口上限、无持久记忆、无现实世界行动能力、训练偏差以及无法自我验证输出。每个模型——GPT-5.6、Claude Opus 5、Gemini 3.1 Pro以及开源替代方案——都共享这些结构性限制。本指南涵盖每个限制及其在生产环境中可行的工程解决方案。',
       metaDescription: '所有本地LLM共同面临的8项结构限制：知识截断、幻觉生成、上下文限制、无内存、无实时数据。各项约束的解决方案及何时选用云端模型。',
       heroImage: '/images/ai-limitations-what-llms-cant-do-quick-reference-hero-zh.webp',
       publishDate: '2026-03-24',
@@ -2243,8 +2243,8 @@ zh: {
           { '@type': 'Thing', name: 'Prompt engineering strategies' },
         ],
         mentions: [
-          { '@type': 'SoftwareApplication', name: 'GPT-5.5', url: 'https://openai.com' },
-          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8', url: 'https://anthropic.com' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5.6', url: 'https://openai.com' },
+          { '@type': 'SoftwareApplication', name: 'Claude Opus 5', url: 'https://anthropic.com' },
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro', url: 'https://deepmind.google' },
           { '@type': 'Organization', name: 'OpenAI', url: 'https://openai.com' },
           { '@type': 'Organization', name: 'Anthropic', url: 'https://anthropic.com' },
@@ -2265,9 +2265,9 @@ zh: {
           { '@type': 'ListItem', position: 1, name: '知识截断', description: '根本原因：具有结束日期的静态训练数据。严重程度：对当前事件为高。解决方案：检索增强生成（RAG）或将当前事实直接粘贴到提示词中。' },
           { '@type': 'ListItem', position: 2, name: '幻觉', description: '根本原因：基于训练模式的令牌预测，而非真实查找。严重程度：对特定事实、引用和数值为高。解决方案：用源材料基础化提示词并根据原始来源验证输出。' },
           { '@type': 'ListItem', position: 3, name: '无可靠的多步推理', description: '根本原因：令牌预测之间没有工作内存或状态。严重程度：中等，使用思维链提示词时显著改善。解决方案：使用思维链提示词或将算术路由到代码解释器。' },
-          { '@type': 'ListItem', position: 4, name: '上下文窗口限制', description: '根本原因：transformer 注意力有硬令牌上限。严重程度：对长文档为中等。上下文上限：GPT-5.5 128K、Claude Opus 4.8 1M、Gemini 3.1 Pro 2M 令牌。解决方案：RAG、分块、摘要。' },
+          { '@type': 'ListItem', position: 4, name: '上下文窗口限制', description: '根本原因：transformer 注意力有硬令牌上限。严重程度：对长文档为中等。上下文上限：GPT-5.6 128K、Claude Opus 5 1M、Gemini 3.1 Pro 2M 令牌。解决方案：RAG、分块、摘要。' },
           { '@type': 'ListItem', position: 5, name: '无持久内存', description: '根本原因：无状态架构 — 每个会话从空白上下文开始。严重程度：对多会话工作流为中等。解决方案：使用向量数据库或对话摘要的应用层内存注入。' },
-          { '@type': 'ListItem', position: 6, name: '无现实世界操作能力', description: '根本原因：大语言模型默认仅输出文本。严重程度：对自主任务为高。解决方案：在 GPT-5.5、Claude Opus 4.8 和 Gemini 3.1 Pro 中可用的工具使用/函数调用。' },
+          { '@type': 'ListItem', position: 6, name: '无现实世界操作能力', description: '根本原因：大语言模型默认仅输出文本。严重程度：对自主任务为高。解决方案：在 GPT-5.6、Claude Opus 5 和 Gemini 3.1 Pro 中可用的工具使用/函数调用。' },
           { '@type': 'ListItem', position: 7, name: '训练数据偏见', description: '根本原因：训练语料库主要是英文、西方和 2025 年前互联网内容。严重程度：中等，因语言和领域而异。解决方案：在提示词中明确提供特定领域的上下文、术语和示例。' },
           { '@type': 'ListItem', position: 8, name: '无法自我验证输出', description: '根本原因：无法获取事实真相 — 模型只能评估与训练模式的一致性，而非事实准确性。严重程度：对事实声明为高。解决方案：根据权威原始来源进行外部验证后再发布。' },
         ],
@@ -2293,7 +2293,7 @@ zh: {
           {
             '@type': 'Question',
             name: '大语言模型主要无法做什么？',
-            acceptedAnswer: { '@type': 'Answer', text: '大语言模型无法获取实时数据、验证自己的输出、在会话间保留内存、在没有工具支架的情况下采取现实世界的操作，或在没有思维链提示词的情况下可靠地进行多步逻辑推理。这些是适用于每个模型的结构性限制 — GPT-5.5、Claude Opus 4.8、Gemini 3.1 Pro 和开源替代品。' },
+            acceptedAnswer: { '@type': 'Answer', text: '大语言模型无法获取实时数据、验证自己的输出、在会话间保留内存、在没有工具支架的情况下采取现实世界的操作，或在没有思维链提示词的情况下可靠地进行多步逻辑推理。这些是适用于每个模型的结构性限制 — GPT-5.6、Claude Opus 5、Gemini 3.1 Pro 和开源替代品。' },
           },
           {
             '@type': 'Question',
@@ -2302,13 +2302,13 @@ zh: {
           },
           {
             '@type': 'Question',
-            name: 'GPT-5.5 可以访问互联网吗？',
-            acceptedAnswer: { '@type': 'Answer', text: '标准 API 中的 GPT-5.5 无法访问互联网。ChatGPT 界面提供可选的浏览工具，但基础模型 API 的训练截断日期为 2024 年 10 月，无实时检索。在假设模型具有当前数据前，始终确认工具使用层是否在您的特定集成中激活。' },
+            name: 'GPT-5.6 可以访问互联网吗？',
+            acceptedAnswer: { '@type': 'Answer', text: '标准 API 中的 GPT-5.6 无法访问互联网。ChatGPT 界面提供可选的浏览工具，但基础模型 API 的训练截断日期为 2024 年 10 月，无实时检索。在假设模型具有当前数据前，始终确认工具使用层是否在您的特定集成中激活。' },
           },
           {
             '@type': 'Question',
-            name: 'GPT-5.5、Claude 和 Gemini 的知识截断如何不同？',
-            acceptedAnswer: { '@type': 'Answer', text: '截至 2026 年：OpenAI GPT-5.5 的训练截断为 2024 年 10 月；Anthropic Claude Opus 4.8 和 Google Gemini 3.1 Pro 的截断为 2025 年初。所有三个模型可能对接近其截断日期的事件有不精确的知识，因为最近几个月的训练覆盖很少。' },
+            name: 'GPT-5.6、Claude 和 Gemini 的知识截断如何不同？',
+            acceptedAnswer: { '@type': 'Answer', text: '截至 2026 年：OpenAI GPT-5.6 的训练截断为 2024 年 10 月；Anthropic Claude Opus 5 和 Google Gemini 3.1 Pro 的截断为 2025 年初。所有三个模型可能对接近其截断日期的事件有不精确的知识，因为最近几个月的训练覆盖很少。' },
           },
           {
             '@type': 'Question',
@@ -2318,7 +2318,7 @@ zh: {
           {
             '@type': 'Question',
             name: '微调的模型是否有相同的局限性？',
-            acceptedAnswer: { '@type': 'Answer', text: '是的。微调调整风格、领域焦点或指令遵循行为 — 它不添加实时数据访问、真正推理或持久内存。微调的 GPT-5.5 保留与基础模型相同的知识截断和幻觉风险。' },
+            acceptedAnswer: { '@type': 'Answer', text: '是的。微调调整风格、领域焦点或指令遵循行为 — 它不添加实时数据访问、真正推理或持久内存。微调的 GPT-5.6 保留与基础模型相同的知识截断和幻觉风险。' },
           },
           {
             '@type': 'Question',
@@ -2328,12 +2328,12 @@ zh: {
           {
             '@type': 'Question',
             name: '哪个大语言模型的局限性最少？',
-            acceptedAnswer: { '@type': 'Answer', text: '没有模型消除这八个结构性限制中的任何一个 — 它们对 transformer 架构是通用的。Gemini 3.1 Pro 拥有最大的上下文窗口（200 万令牌），最好地缓解了限制 4。Claude Opus 4.8 最可靠地对冲不确定性并承认知识截断，缓解了幻觉风险。GPT-5.5 在工具使用（限制 6 解决方案）上表现出色。根据您的特定限制瓶颈选择，而不是哪个模型"最不受限制"。' },
+            acceptedAnswer: { '@type': 'Answer', text: '没有模型消除这八个结构性限制中的任何一个 — 它们对 transformer 架构是通用的。Gemini 3.1 Pro 拥有最大的上下文窗口（200 万令牌），最好地缓解了限制 4。Claude Opus 5 最可靠地对冲不确定性并承认知识截断，缓解了幻觉风险。GPT-5.6 在工具使用（限制 6 解决方案）上表现出色。根据您的特定限制瓶颈选择，而不是哪个模型"最不受限制"。' },
           },
           {
             '@type': 'Question',
             name: '2026 年开源和专有模型之间的局限性如何不同？',
-            acceptedAnswer: { '@type': 'Answer', text: '开源模型（LLaMA 3.1、Mistral Large、Qwen 3）和专有模型（GPT-5.5、Claude Opus 4.8、Gemini 3.1 Pro）面临相同的结构性限制 — 知识截断、幻觉、上下文窗口、推理约束。区别在于严重程度和成本：专有模型通常有更大的上下文（Gemini 3.1 Pro：200 万令牌 vs Mistral：128K）、更好的指令遵循和更频繁的训练更新。开源模型以成本和部署控制为代价换取功能。两个类别都不消除这八个限制中的任何一个。' },
+            acceptedAnswer: { '@type': 'Answer', text: '开源模型（LLaMA 3.1、Mistral Large、Qwen 3）和专有模型（GPT-5.6、Claude Opus 5、Gemini 3.1 Pro）面临相同的结构性限制 — 知识截断、幻觉、上下文窗口、推理约束。区别在于严重程度和成本：专有模型通常有更大的上下文（Gemini 3.1 Pro：200 万令牌 vs Mistral：128K）、更好的指令遵循和更频繁的训练更新。开源模型以成本和部署控制为代价换取功能。两个类别都不消除这八个限制中的任何一个。' },
           },
         ],
       },
@@ -2356,7 +2356,7 @@ zh: {
             '知识截断意味着每个大语言模型默认使用过时信息',
             '幻觉是结构性的 — 当所有大语言模型缺乏训练信号时，它们有信心地生成虚假内容',
             '多步推理在没有思维链提示词或外部工具的情况下失败',
-            '上下文窗口限制每个会话：GPT-5.5 128K、Claude Opus 4.8 1M、Gemini 3.1 Pro 200 万令牌',
+            '上下文窗口限制每个会话：GPT-5.6 128K、Claude Opus 5 1M、Gemini 3.1 Pro 200 万令牌',
             '没有大语言模型在没有应用层内存系统的情况下记得前一个对话',
             '大语言模型在没有工具使用支架的情况下无法浏览网络、运行代码或采取操作',
             '每个限制都有已知的工程解决方案 — 了解限制是第一步',
@@ -2408,19 +2408,19 @@ zh: {
         modelLimitsComparison: {
           title: '各模型局限性对比（2026年）',
           content: ['八个结构性限制对所有模型普遍适用——但严重程度和可用的部分解决方案因模型而异。'],
-          columns: ['限制', 'GPT-5.5', 'Claude Opus 4.8', 'Gemini 3.1 Pro', '开源 (LLaMA 3.1)'],
+          columns: ['限制', 'GPT-5.6', 'Claude Opus 5', 'Gemini 3.1 Pro', '开源 (LLaMA 3.1)'],
           rows: [
-            { '限制': '知识截止日期', 'GPT-5.5': '2024年10月', 'Claude Opus 4.8': '2025年初', 'Gemini 3.1 Pro': '2025年初', '开源 (LLaMA 3.1)': '因版本而异' },
-            { '限制': '上下文窗口', 'GPT-5.5': '128K tokens', 'Claude Opus 4.8': '1M tokens', 'Gemini 3.1 Pro': '200万 tokens', '开源 (LLaMA 3.1)': '8K–128K tokens' },
-            { '限制': '工具调用质量', 'GPT-5.5': '优秀', 'Claude Opus 4.8': '优秀', 'Gemini 3.1 Pro': '良好', '开源 (LLaMA 3.1)': '参差不齐' },
-            { '限制': '幻觉处理', 'GPT-5.5': '一般', 'Claude Opus 4.8': '强（会标注不确定性）', 'Gemini 3.1 Pro': '一般', '开源 (LLaMA 3.1)': '较弱' },
-            { '限制': '扩展推理', 'GPT-5.5': 'o3/o4-mini可用', 'Claude Opus 4.8': 'Extended thinking可用', 'Gemini 3.1 Pro': 'Flash Thinking可用', '开源 (LLaMA 3.1)': '有限' },
+            { '限制': '知识截止日期', 'GPT-5.6': '2024年10月', 'Claude Opus 5': '2025年初', 'Gemini 3.1 Pro': '2025年初', '开源 (LLaMA 3.1)': '因版本而异' },
+            { '限制': '上下文窗口', 'GPT-5.6': '128K tokens', 'Claude Opus 5': '1M tokens', 'Gemini 3.1 Pro': '200万 tokens', '开源 (LLaMA 3.1)': '8K–128K tokens' },
+            { '限制': '工具调用质量', 'GPT-5.6': '优秀', 'Claude Opus 5': '优秀', 'Gemini 3.1 Pro': '良好', '开源 (LLaMA 3.1)': '参差不齐' },
+            { '限制': '幻觉处理', 'GPT-5.6': '一般', 'Claude Opus 5': '强（会标注不确定性）', 'Gemini 3.1 Pro': '一般', '开源 (LLaMA 3.1)': '较弱' },
+            { '限制': '扩展推理', 'GPT-5.6': 'o3/o4-mini可用', 'Claude Opus 5': 'Extended thinking可用', 'Gemini 3.1 Pro': 'Flash Thinking可用', '开源 (LLaMA 3.1)': '有限' },
           ],
         },
         knowledgeCutoff: {
           title: '限制 1 — 知识截断和无实时数据',
           content: [
-            '**每个大语言模型都有训练截断日期，除非添加外部检索，否则模型对该日期后发布的事件、价格、论文或产品版本一无所知。** OpenAI GPT-5.5 的截断为 2024 年 10 月。Anthropic Claude Opus 4.8 和 Google Gemini 3.1 Pro 的截断为 2025 年初。',
+            '**每个大语言模型都有训练截断日期，除非添加外部检索，否则模型对该日期后发布的事件、价格、论文或产品版本一无所知。** OpenAI GPT-5.6 的截断为 2024 年 10 月。Anthropic Claude Opus 5 和 Google Gemini 3.1 Pro 的截断为 2025 年初。',
             '模型对*接近*其截断的事件的了解也很少，因为训练数据收集和处理在事件发生后需要数周到数月。训练到 2024 年 10 月的模型可能对 2024 年 9 月-10 月的事件覆盖很少。',
             '主要解决方案是[检索增强生成（RAG）](/zh/prompt-engineering/rag-explained)，在查询时将实时或最近的文档注入提示词中。次要解决方案是提示词基础化：将相关当前事实直接粘贴到提示词中，并指示模型仅从该上下文回答。',
           ],
@@ -2428,7 +2428,7 @@ zh: {
         hallucination: {
           title: '限制 2 — 幻觉是结构性的，不是错误',
           content: [
-            '**大语言模型生成统计上合理的令牌，而非已验证的事实 — 当特定事实的训练信号很少时，模型生成有信心但虚假的说法。** 这适用于每个模型，包括 GPT-5.5、Claude Opus 4.8 和 Gemini 3.1 Pro。深入了解，请参见[AI 幻觉 — 为什么 AI 编造东西](/zh/prompt-engineering/ai-hallucinations-why-ai-makes-things-up)。',
+            '**大语言模型生成统计上合理的令牌，而非已验证的事实 — 当特定事实的训练信号很少时，模型生成有信心但虚假的说法。** 这适用于每个模型，包括 GPT-5.6、Claude Opus 5 和 Gemini 3.1 Pro。深入了解，请参见[AI 幻觉 — 为什么 AI 编造东西](/zh/prompt-engineering/ai-hallucinations-why-ai-makes-things-up)。',
             '幻觉最常发生在：特定数值（价格、日期、统计数据）、引用和论文参考、利基技术规格和接近或超过训练截断的事件。模型很少在幻觉时发出信号。',
             '解决方案：在提示词中提供源材料，指示模型仅从中回答；要求模型标记任何无法从提供的上下文确认的声明；使用[RAG](/zh/prompt-engineering/rag-explained)将答案锚定到已验证文档；在发布前根据原始来源验证所有关键数字。',
           ],
@@ -2446,7 +2446,7 @@ zh: {
         contextWindow: {
           title: '限制 4 — 上下文窗口限制',
           content: [
-            '**每个大语言模型会话都有硬令牌限制 — GPT-5.5 128,000 令牌、Claude Opus 4.8 200,000 令牌、Gemini 3.1 Pro 2,000,000 令牌 — 随着窗口填充，早期内容的性能会下降。** 请参见[上下文窗口详解](/zh/prompt-engineering/context-windows-explained-why-ai-forgets)获取完整分析。',
+            '**每个大语言模型会话都有硬令牌限制 — GPT-5.6 128,000 令牌、Claude Opus 5 200,000 令牌、Gemini 3.1 Pro 2,000,000 令牌 — 随着窗口填充，早期内容的性能会下降。** 请参见[上下文窗口详解](/zh/prompt-engineering/context-windows-explained-why-ai-forgets)获取完整分析。',
             '"中间遗忘"问题：多项研究表明大语言模型从长上下文中间检索信息的准确性明显低于从开始或结束。1M 令牌窗口不意味着对所有 1M 令牌的统一注意。',
             '解决方案：在提示词的开始或结束位置构造重要信息；使用 RAG 仅检索相关块而不是转储完整文档；将长文档分解为带摘要步骤的分块会话。',
           ],
@@ -2465,7 +2465,7 @@ zh: {
           title: '限制 6 — 大语言模型无法采取现实世界操作',
           content: [
             '**大语言模型生成文本 — 除非工具使用层明确启用这些操作，否则它们无法浏览网络、运行代码、发送电子邮件、修改文件或与外部系统交互。** 模型生成它会做什么的文本描述；支架层执行它。',
-            '工具使用（也称函数调用） — 在 GPT-5.5、Claude Opus 4.8 和 Gemini 3.1 Pro 中可用 — 让模型输出应用拦截和执行的结构化函数调用。模型仍然无法独立采取行动；它只能发出触发外部执行的结构化文本。',
+            '工具使用（也称函数调用） — 在 GPT-5.6、Claude Opus 5 和 Gemini 3.1 Pro 中可用 — 让模型输出应用拦截和执行的结构化函数调用。模型仍然无法独立采取行动；它只能发出触发外部执行的结构化文本。',
             '自主代理在编排循环中包装多个工具调用，创建独立操作的*表象*。提示词注入和安全漏洞在这些架构中是重大问题 — 请参见[提示词注入和安全性](/zh/prompt-engineering/prompt-injection-and-security)。',
           ],
         },
@@ -2473,7 +2473,7 @@ zh: {
           title: '限制 7 — 训练数据偏见和覆盖间隙',
           content: [
             '**大语言模型继承其训练数据的偏见、间隙和偏斜 — 主要是英文、西方和 2025 年前的互联网内容。** 非英语查询、非西方文化背景和少数民族语言主题的性能在结构上更弱。',
-            '这与国际团队相关：GPT-5.5、Claude Opus 4.8 和 Gemini 3.1 Pro 都在英语中比在低资源语言中生成更强的输出。技术术语处于利基域（特定行业、本地法律制度、地区方言）可能在训练数据中的代表性很差。',
+            '这与国际团队相关：GPT-5.6、Claude Opus 5 和 Gemini 3.1 Pro 都在英语中比在低资源语言中生成更强的输出。技术术语处于利基域（特定行业、本地法律制度、地区方言）可能在训练数据中的代表性很差。',
             '解决方案：在提示词中提供领域特定的上下文、术语定义或示例。不要假设模型对您的特定行业、地区或机构有准确的了解。',
           ],
         },
@@ -2506,9 +2506,9 @@ zh: {
             '**八个结构性限制是真实的，但每个至少有一个常规警告过度陈述问题的场景 — 或者 2025-2026 年的研究已部分缩小差距。** 了解例外与了解规则一样重要。',
           ],
           items: [
-            '**知识截断对稳定域问题无关。** 截断对当前事件、最近发布和变化的价格很重要。对于物理、数学、已建立的软件 API（2024 年前）、古典文学和基础法律框架，GPT-5.5 的 2024 年 10 月截断几乎没有实际处罚。将稳定域查询路由到非增强模型通常比 RAG 更快和更便宜。',
+            '**知识截断对稳定域问题无关。** 截断对当前事件、最近发布和变化的价格很重要。对于物理、数学、已建立的软件 API（2024 年前）、古典文学和基础法律框架，GPT-5.6 的 2024 年 10 月截断几乎没有实际处罚。将稳定域查询路由到非增强模型通常比 RAG 更快和更便宜。',
             '**幻觉是生成任务的特征。** 虚构引用的相同令牌预测机制也生成新的隐喻、产品名称和创意变体，任何检索系统都无法生成。设计师、文案撰稿人和产品团队通常希望大语言模型"虚构" — 问题仅在于将生成的内容视为事实时出现。分离生成任务和事实查找任务消除了大部分幻觉风险，而不抑制创意。',
-            '**扩展思维模型已显著缩小推理差距。** OpenAI o3 和 o4-mini 以及 Anthropic Claude Opus 4.8中的扩展思维使用推理时计算缩放 — 在回答前生成推理令牌链 — 并在 2025 年在研究生级数学和形式逻辑基准（AIME、MMLU-Pro）上实现接近人类的准确性。"大语言模型无法推理"声明对标准模式推理准确；对扩展思维模式在定义明确的任务上越来越不准确。',
+            '**扩展思维模型已显著缩小推理差距。** OpenAI o3 和 o4-mini 以及 Anthropic Claude Opus 5中的扩展思维使用推理时计算缩放 — 在回答前生成推理令牌链 — 并在 2025 年在研究生级数学和形式逻辑基准（AIME、MMLU-Pro）上实现接近人类的准确性。"大语言模型无法推理"声明对标准模式推理准确；对扩展思维模式在定义明确的任务上越来越不准确。',
             '**"中间遗忘"上下文问题是位置依赖的，而非通用的。** Liu 等（2023）表明退化特别是当关键信息放在非常长的上下文中间时。对于提示词在 ~20,000 令牌下，或当关键事实放在提示词的开始或结束时，退化是最小的。200 万令牌 Gemini 3.1 Pro 窗口不会像早期的 4K 或 8K 模型那样遭受相同的中间退化。',
             '**自我一致性提示词部分解决自我验证差距。** 对同一问题生成三个独立答案并选择多数响应（Wang 等，2023，"Self-Consistency Improves Chain of Thought Reasoning in Language Models，" [arXiv:2203.11171](https://arxiv.org/abs/2203.11171)）与贪心解码相比，在封闭域任务的事实准确性上提高 10-20 个百分点。它不替代外部验证，但它减少对有可检索答案的问题的有信心错误率。',
           ],
@@ -2516,12 +2516,12 @@ zh: {
         promptExamples: {
           title: '围绕限制的提示词 — 坏和好的示例',
           content: ['这些示例展示相同的底层请求如何在忽视大语言模型限制时失败，在考虑时成功。'],
-          blockquote: '[坏提示词] "GPT-5.5 的当前价格是什么？"',
+          blockquote: '[坏提示词] "GPT-5.6 的当前价格是什么？"',
           blockquoteSource: '此提示词假设模型没有的实时知识。模型将自信地陈述过时或虚构的价格。',
           items: [
-            '此提示词忽视知识截断限制。GPT-5.5 的训练数据于 2024 年 10 月结束 — 价格可能自那时起改变。模型将生成听起来权威但可能已过时数月的答案。',
+            '此提示词忽视知识截断限制。GPT-5.6 的训练数据于 2024 年 10 月结束 — 价格可能自那时起改变。模型将生成听起来权威但可能已过时数月的答案。',
             '一个更好的方法明确考虑限制：',
-            '[好提示词] "解释 OpenAI 对 GPT-5.5 使用的典型价格结构（输入令牌、输出令牌、批处理）。注意：我知道您的训练数据可能不反映最新费率 — 我将在阅读您的解释后在 platform.openai.com 验证确切的当前数字。"',
+            '[好提示词] "解释 OpenAI 对 GPT-5.6 使用的典型价格结构（输入令牌、输出令牌、批处理）。注意：我知道您的训练数据可能不反映最新费率 — 我将在阅读您的解释后在 platform.openai.com 验证确切的当前数字。"',
           ],
         },
         howToStart: {
@@ -2539,9 +2539,9 @@ zh: {
           title: '关键术语',
           content: ['本文中使用的核心概念定义。每个术语链接到[提示词工程词汇表](/zh/prompt-engineering/prompt-engineering-glossary)中的完整条目。'],
           items: [
-            '**[知识截断](/zh/prompt-engineering/prompt-engineering-glossary)** — 模型之后没有训练数据的日期。此日期后的任何事件、价格变化或发布对模型是无形的，除非您将其粘贴到提示词中。GPT-5.5：2024 年 10 月；Claude Opus 4.8 和 Gemini 3.1 Pro：2025 年初。',
+            '**[知识截断](/zh/prompt-engineering/prompt-engineering-glossary)** — 模型之后没有训练数据的日期。此日期后的任何事件、价格变化或发布对模型是无形的，除非您将其粘贴到提示词中。GPT-5.6：2024 年 10 月；Claude Opus 5 和 Gemini 3.1 Pro：2025 年初。',
             '**[幻觉](/zh/prompt-engineering/prompt-engineering-glossary#core-concepts)** — 有信心但事实不正确或虚构的输出。由统计令牌预测而非真实查找导致。用源材料基础化提示词减少但不消除它。',
-            '**[上下文窗口](/zh/prompt-engineering/prompt-engineering-glossary#core-concepts)** — 模型一次可处理的最大令牌数（单词+标点），包括系统提示、对话历史和检索文档。GPT-5.5：128K 令牌；Claude Opus 4.8：1M；Gemini 3.1 Pro：200 万。',
+            '**[上下文窗口](/zh/prompt-engineering/prompt-engineering-glossary#core-concepts)** — 模型一次可处理的最大令牌数（单词+标点），包括系统提示、对话历史和检索文档。GPT-5.6：128K 令牌；Claude Opus 5：1M；Gemini 3.1 Pro：200 万。',
             '**[工具使用/函数调用](/zh/prompt-engineering/prompt-engineering-glossary#agents-orchestration)** — 让模型调用外部函数（网络搜索、代码执行、数据库查询）而非生成文本答案的能力。需要解决无现实世界操作限制。',
             '**[思维链（CoT）](/zh/prompt-engineering/prompt-engineering-glossary#core-concepts)** — 一种提示词技术，要求模型在给出最终答案前逐步推理。显著改善多步算术、逻辑和规划任务的准确性。',
             '**[RAG（检索增强生成）](/zh/prompt-engineering/prompt-engineering-glossary#core-concepts)** — 相关文档从外部知识库检索并在查询时注入提示词的架构。知识截断的主要解决方案。',
@@ -2572,15 +2572,15 @@ zh: {
           id: 'faq',
           title: '常见问题',
           faqs: [
-            { q: '大语言模型主要无法做什么？', a: '大语言模型无法获取实时数据、验证自己的输出、在会话间保留内存、在没有工具支架的情况下采取现实世界的操作，或在没有思维链提示词的情况下可靠地进行多步逻辑推理。这些是适用于每个模型的结构性限制 — GPT-5.5、Claude Opus 4.8、Gemini 3.1 Pro 和开源替代品。' },
+            { q: '大语言模型主要无法做什么？', a: '大语言模型无法获取实时数据、验证自己的输出、在会话间保留内存、在没有工具支架的情况下采取现实世界的操作，或在没有思维链提示词的情况下可靠地进行多步逻辑推理。这些是适用于每个模型的结构性限制 — GPT-5.6、Claude Opus 5、Gemini 3.1 Pro 和开源替代品。' },
             { q: '为什么大语言模型会产生幻觉？', a: '幻觉是结构性的：大语言模型根据训练数据预测最可能的下一个令牌，而非已验证的真实。当特定事实的训练信号很少 — 小众人物、最近事件、晦涩引用 — 时，模型生成听起来可信的虚构，而不标记不确定性。用明确的源材料基础化提示词可减少但不能消除幻觉。' },
-            { q: 'GPT-5.5 可以访问互联网吗？', a: '标准 API 中的 GPT-5.5 无法访问互联网。ChatGPT 界面提供可选的浏览工具，但基础模型 API 的训练截断日期为 2024 年 10 月，无实时检索。在假设模型具有当前数据前，始终确认工具使用层是否在您的特定集成中激活。' },
-            { q: 'GPT-5.5、Claude 和 Gemini 的知识截断如何不同？', a: '截至 2026 年：OpenAI GPT-5.5 的训练截断为 2024 年 10 月；Anthropic Claude Opus 4.8 和 Google Gemini 3.1 Pro 的截断为 2025 年初。所有三个模型可能对接近其截断日期的事件有不精确的知识，因为最近几个月的训练覆盖很少。' },
+            { q: 'GPT-5.6 可以访问互联网吗？', a: '标准 API 中的 GPT-5.6 无法访问互联网。ChatGPT 界面提供可选的浏览工具，但基础模型 API 的训练截断日期为 2024 年 10 月，无实时检索。在假设模型具有当前数据前，始终确认工具使用层是否在您的特定集成中激活。' },
+            { q: 'GPT-5.6、Claude 和 Gemini 的知识截断如何不同？', a: '截至 2026 年：OpenAI GPT-5.6 的训练截断为 2024 年 10 月；Anthropic Claude Opus 5 和 Google Gemini 3.1 Pro 的截断为 2025 年初。所有三个模型可能对接近其截断日期的事件有不精确的知识，因为最近几个月的训练覆盖很少。' },
             { q: '我能通过更好的提示词来修复大语言模型局限性吗？', a: '提示词减少了局限性的影响，但不能消除它们。思维链提示词提高推理准确性。在提示词中提供事实缓解知识截断。明确的不确定性指导减少幻觉信心。但提示词无法给模型实时数据访问、真正的内存或采取现实世界操作的能力。' },
-            { q: '微调的模型是否有相同的局限性？', a: '是的。微调调整风格、领域焦点或指令遵循行为 — 它不添加实时数据访问、真正推理或持久内存。微调的 GPT-5.5 保留与基础模型相同的知识截断和幻觉风险。' },
+            { q: '微调的模型是否有相同的局限性？', a: '是的。微调调整风格、领域焦点或指令遵循行为 — 它不添加实时数据访问、真正推理或持久内存。微调的 GPT-5.6 保留与基础模型相同的知识截断和幻觉风险。' },
             { q: '大语言模型局限性和错误之间的区别是什么？', a: '错误是无意的错误，可通过软件更新修复。局限性是模型工作方式的结构性属性。幻觉、知识截断和上下文窗口限制是局限性 — 它们来自 transformer 架构和训练过程，无法补丁修复，只能通过系统设计解决。' },
-            { q: '哪个大语言模型的局限性最少？', a: '没有模型消除这八个结构性限制中的任何一个 — 它们对 transformer 架构是通用的。Gemini 3.1 Pro 拥有最大的上下文窗口（200 万令牌），最好地缓解了限制 4。Claude Opus 4.8 最可靠地对冲不确定性并承认知识截断，缓解了幻觉风险。GPT-5.5 在工具使用（限制 6 解决方案）上表现出色。根据您的特定限制瓶颈选择，而不是哪个模型"最不受限制"。' },
-            { q: '2026 年开源和专有模型之间的局限性如何不同？', a: '开源模型（LLaMA 3.1、Mistral Large、Qwen 3）和专有模型（GPT-5.5、Claude Opus 4.8、Gemini 3.1 Pro）面临相同的结构性限制 — 知识截断、幻觉、上下文窗口、推理约束。区别在于严重程度和成本：专有模型通常有更大的上下文（Gemini 3.1 Pro：200 万令牌 vs Mistral：128K）、更好的指令遵循和更频繁的训练更新。开源模型以成本和部署控制为代价换取功能。两个类别都不消除这八个限制中的任何一个。' },
+            { q: '哪个大语言模型的局限性最少？', a: '没有模型消除这八个结构性限制中的任何一个 — 它们对 transformer 架构是通用的。Gemini 3.1 Pro 拥有最大的上下文窗口（200 万令牌），最好地缓解了限制 4。Claude Opus 5 最可靠地对冲不确定性并承认知识截断，缓解了幻觉风险。GPT-5.6 在工具使用（限制 6 解决方案）上表现出色。根据您的特定限制瓶颈选择，而不是哪个模型"最不受限制"。' },
+            { q: '2026 年开源和专有模型之间的局限性如何不同？', a: '开源模型（LLaMA 3.1、Mistral Large、Qwen 3）和专有模型（GPT-5.6、Claude Opus 5、Gemini 3.1 Pro）面临相同的结构性限制 — 知识截断、幻觉、上下文窗口、推理约束。区别在于严重程度和成本：专有模型通常有更大的上下文（Gemini 3.1 Pro：200 万令牌 vs Mistral：128K）、更好的指令遵循和更频繁的训练更新。开源模型以成本和部署控制为代价换取功能。两个类别都不消除这八个限制中的任何一个。' },
           ],
         },
         sources: {
@@ -2598,7 +2598,7 @@ zh: {
     next_refresh_due: '2026-09-24',
     theme: 'Fundamentals',
     title: 'AI 한계: 2026년 LLM이 할 수 없는 것들',
-    intro: '대형 언어 모델에는 파인튜닝, 스케일링, 프롬프트 엔지니어링으로도 제거할 수 없는 여덟 가지 근본적인 한계가 있습니다. 실시간 데이터 없음, 자신만만한 환각, 약한 다단계 추론, 컨텍스트 윈도우 제한, 메모리 없음, 실제 행동 불가, 학습 데이터 편향, 자기 검증 불가. GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro 및 오픈소스 대안 모두 이러한 구조적 제약을 공유합니다. 이 가이드는 각 한계와 프로덕션에서 효과적인 엔지니어링 우회법을 다룹니다.',
+    intro: '대형 언어 모델에는 파인튜닝, 스케일링, 프롬프트 엔지니어링으로도 제거할 수 없는 여덟 가지 근본적인 한계가 있습니다. 실시간 데이터 없음, 자신만만한 환각, 약한 다단계 추론, 컨텍스트 윈도우 제한, 메모리 없음, 실제 행동 불가, 학습 데이터 편향, 자기 검증 불가. GPT-5.6, Claude Opus 5, Gemini 3.1 Pro 및 오픈소스 대안 모두 이러한 구조적 제약을 공유합니다. 이 가이드는 각 한계와 프로덕션에서 효과적인 엔지니어링 우회법을 다룹니다.',
     publishDate: '2026-03-24',
     seoTitle: 'LLM 한계 및 우회법 2026: 8가지 핵심 제약사항',
     metaDescription: '모든 LLM은 8가지 구조적 한계를 공유합니다: 실시간 데이터 없음, 환각, 컨텍스트 제한, 메모리 없음. 각 제약사항에 대한 우회법을 알아보세요.',
@@ -2662,7 +2662,7 @@ zh: {
         title: 'LLM의 8가지 구조적 한계',
         content: [
           '**대형 언어 모델에는 모델 크기, 제공업체, 학습 방식에 관계없이 적용되는 여덟 가지 엄격한 한계가 있습니다.** 이것들은 버그가 아닙니다 — LLM의 설계 방식에서 비롯된 구조적 특성입니다. 아래의 각 우회법은 이론이 아닌 검증된 프로덕션 해결책입니다.',
-          '이러한 제약사항은 보편적으로 적용됩니다: GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro, LLaMA 3.1, Mistral Large 및 모든 오픈소스 모델이 동등하게 영향을 받습니다. 프롬프트 엔지니어링은 이러한 한계의 영향을 완화할 수 있지만 제거할 수는 없습니다.',
+          '이러한 제약사항은 보편적으로 적용됩니다: GPT-5.6, Claude Opus 5, Gemini 3.1 Pro, LLaMA 3.1, Mistral Large 및 모든 오픈소스 모델이 동등하게 영향을 받습니다. 프롬프트 엔지니어링은 이러한 한계의 영향을 완화할 수 있지만 제거할 수는 없습니다.',
         ],
       },
       tldr: {
@@ -2670,7 +2670,7 @@ zh: {
         isTldr: true,
         items: [
           'LLM에는 8가지 보편적 구조적 한계가 있습니다: 지식 콼오프, 환각, 약한 다단계 추론, 컨텍스트 윈도우 제한, 지속적 메모리 없음, 실제 세계 행동 불가, 학습 데이터 편향, 자기 검증 불가',
-          '어떤 모델도 — GPT-5.5, Claude, Gemini 또는 오픈소스 — 이러한 제약사항을 제거하지 않습니다',
+          '어떤 모델도 — GPT-5.6, Claude, Gemini 또는 오픈소스 — 이러한 제약사항을 제거하지 않습니다',
           '프롬프트 엔지니어링은 영향을 완화할 수 있지만 8가지 한계 중 어느 것도 제거할 수 없습니다',
           '각 한계에는 검증된 프로덕션 우회법이 있습니다: 지식 콼오프에는 RAG, 추론에는 chain-of-thought, 행동에는 도구 호출',
           '이러한 한계를 이해하는 것이 효과적인 프롬프트 엔지니어링의 기초입니다 — 무엇을 기대하고 언제 보완 도구를 사용할지 알 수 있습니다',
@@ -2680,7 +2680,7 @@ zh: {
         title: '한계 1: 지식 콼오프',
         content: [
           '**LLM은 특정 최종 날짜가 있는 데이터로 학습됩니다 — 지식 콼오프 또는 학습 콼오프라고 알려져 있습니다.** 그 날짜 이후의 모든 이벤트, 가격 변동, 신제품 출시 또는 규정 업데이트는 모델에게 보이지 않습니다.',
-          '2026년 지식 콼오프: GPT-5.5 (OpenAI): 2024년 10월. Claude Opus 4.8 (Anthropic): 2025년 초. Gemini 3.1 Pro (Google DeepMind): 2025년 초.',
+          '2026년 지식 콼오프: GPT-5.6 (OpenAI): 2024년 10월. Claude Opus 5 (Anthropic): 2025년 초. Gemini 3.1 Pro (Google DeepMind): 2025년 초.',
         ],
         items: [
           '**주요 우회법: RAG (검색 증강 생성).** 요청을 보내기 전에 신뢰할 수 있는 소스에서 관련 현재 사실을 검색하여 프롬프트 컨텍스트에 주입합니다. 모델은 오래된 학습 데이터 대신 해당 정보를 기반으로 응답합니다.',
@@ -2735,7 +2735,7 @@ zh: {
           '**LLM은 기본적으로 텍스트만 생성합니다 — API를 호출하거나, 데이터베이스를 읽거나, 이메일을 보내거나, 웹 페이지와 상호작용하거나, 독립적으로 실제 행동을 수행할 수 없습니다.** LLM에게 "무언가를 하는 것"은 하는 방법을 설명하는 텍스트를 생성하는 것을 의미합니다.',
         ],
         items: [
-          '**우회법: 도구 호출/함수 호출.** 최신 LLM API(GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro)는 도구 사용을 지원하며 모델이 개발자 정의 함수 실행을 요청할 수 있습니다. 모델은 구조화된 도구 호출을 생성하고, 코드가 실제 행동을 실행하여 결과를 모델에 반환합니다.',
+          '**우회법: 도구 호출/함수 호출.** 최신 LLM API(GPT-5.6, Claude Opus 5, Gemini 3.1 Pro)는 도구 사용을 지원하며 모델이 개발자 정의 함수 실행을 요청할 수 있습니다. 모델은 구조화된 도구 호출을 생성하고, 코드가 실제 행동을 실행하여 결과를 모델에 반환합니다.',
         ],
       },
       limit7: {
@@ -2783,13 +2783,13 @@ zh: {
         faqs: [
           { q: 'LLM이 할 수 없는 주요 사항은 무엇입니까?', a: 'LLM은 실시간 데이터에 접근하거나, 자체 출력을 검증하거나, 세션 간 메모리를 유지하거나, 스케폴딩 도구 없이 실제 세계 행동을 수행하거나, chain-of-thought 프롬프팅 없이 다단계 논리를 통해 안정적으로 추론할 수 없습니다. 이것들은 모든 모델에 적용되는 구조적 제약사항입니다.' },
           { q: 'LLM이 환각을 일으키는 이유는 무엇입니까?', a: '환각은 구조적입니다: LLM은 검증된 진실이 아닌 학습 데이터를 기반으로 통계적으로 가장 가능성 있는 다음 토큰을 예측합니다. 특정 사실에 대한 학습 신호가 희박하면 모델은 불확실성을 표시하지 않고 그럴듯하게 들리는 내용을 만들어냅니다. 명시적 소스 자료로 프롬프트를 기반화하면 환각이 줄어들지만 제거되지는 않습니다.' },
-          { q: 'GPT-5.5가 인터넷에 접속할 수 있습니까?', a: '표준 API의 GPT-5.5는 인터넷에 접속할 수 없습니다. ChatGPT 인터페이스는 선택적 검색 도구를 제공하지만 기본 모델 API는 2024년 10월 학습 콼오프를 가지며 실시간 검색이 없습니다. 모델이 현재 데이터를 가지고 있다고 가정하기 전에 특정 통합에서 도구 사용 레이어가 활성화되어 있는지 항상 확인하세요.' },
-          { q: 'GPT-5.5, Claude, Gemini의 지식 콼오프는 어떻게 다릅니까?', a: '2026년 기준: OpenAI GPT-5.5는 2024년 10월 학습 콼오프; Anthropic Claude Opus 4.8과 Google Gemini 3.1 Pro는 2025년 초 콼오프를 가집니다. 세 모델 모두 콼오프 날짜에 근접한 이벤트에 대해 부정확한 지식을 가질 수 있으며 최근 몇 달간의 학습 커버리지가 희박합니다.' },
+          { q: 'GPT-5.6가 인터넷에 접속할 수 있습니까?', a: '표준 API의 GPT-5.6는 인터넷에 접속할 수 없습니다. ChatGPT 인터페이스는 선택적 검색 도구를 제공하지만 기본 모델 API는 2024년 10월 학습 콼오프를 가지며 실시간 검색이 없습니다. 모델이 현재 데이터를 가지고 있다고 가정하기 전에 특정 통합에서 도구 사용 레이어가 활성화되어 있는지 항상 확인하세요.' },
+          { q: 'GPT-5.6, Claude, Gemini의 지식 콼오프는 어떻게 다릅니까?', a: '2026년 기준: OpenAI GPT-5.6는 2024년 10월 학습 콼오프; Anthropic Claude Opus 5과 Google Gemini 3.1 Pro는 2025년 초 콼오프를 가집니다. 세 모델 모두 콼오프 날짜에 근접한 이벤트에 대해 부정확한 지식을 가질 수 있으며 최근 몇 달간의 학습 커버리지가 희박합니다.' },
           { q: '더 나은 프롬프팅으로 LLM 한계를 해결할 수 있습니까?', a: '프롬프팅은 한계의 영향을 줄이지만 제거하지는 않습니다. Chain-of-thought 프롬프팅은 추론 정확도를 개선합니다. 프롬프트에 사실을 제공하면 지식 콼오프를 완화합니다. 명시적 불확실성 지시는 환각 자신감을 줄입니다. 그러나 프롬프팅은 모델에게 실시간 데이터 접근, 실제 메모리, 또는 실제 세계 행동 능력을 부여할 수 없습니다.' },
-          { q: '파인튜닝된 모델도 같은 한계를 가집니까?', a: '네. 파인튜닝은 스타일, 도메인 초점, 또는 지시 따르기 동작을 조정합니다 — 실시간 데이터 접근, 실제 추론 또는 지속적 메모리를 추가하지 않습니다. 파인튜닝된 GPT-5.5는 기본 모델과 동일한 지식 콼오프와 환각 위험을 유지합니다.' },
+          { q: '파인튜닝된 모델도 같은 한계를 가집니까?', a: '네. 파인튜닝은 스타일, 도메인 초점, 또는 지시 따르기 동작을 조정합니다 — 실시간 데이터 접근, 실제 추론 또는 지속적 메모리를 추가하지 않습니다. 파인튜닝된 GPT-5.6는 기본 모델과 동일한 지식 콼오프와 환각 위험을 유지합니다.' },
           { q: 'LLM 한계와 버그의 차이는 무엇입니까?', a: '버그는 소프트웨어 업데이트로 수정할 수 있는 의도하지 않은 결함입니다. 한계는 모델이 작동하는 방식의 구조적 특성입니다. 환각, 지식 콼오프, 컨텍스트 윈도우 제한은 한계입니다 — 트랜스포머 아키텍체와 학습 프로세스에서 발생하며 패치로 수정할 수 없고 시스템 설계를 통해서만 해결할 수 있습니다.' },
-          { q: '어떤 LLM이 한계가 가장 적습니까?', a: '어떤 모델도 여덟 가지 구조적 제약 중 어느 것도 제거하지 않습니다 — 트랜스포머 아키텍체에 보편적입니다. Gemini 3.1 Pro는 가장 큰 컨텍스트 윈도우(200만 토큰)를 가지며 한계 4를 가장 잘 완화합니다. Claude Opus 4.8는 지식 콼오프를 더 안정적으로 인정하여 환각 위험을 완화합니다. GPT-5.5는 도구 사용(한계 6 우회법)에서 뛰어납니다. "덜 제한된" 모델이 아닌 특정 병목 현상을 기반으로 선택하세요.' },
-          { q: '2026년 오픈소스 모델과 독점 모델의 한계 차이는 무엇입니까?', a: '오픈소스 모델(LLaMA 3.1, Mistral Large, Qwen 3)과 독점 모델(GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro)은 동일한 구조적 제약에 직면합니다. 차이점은 심각도와 비용입니다: 독점 모델은 일반적으로 더 큰 컨텍스트, 더 나은 지시 따르기, 더 빈번한 학습 업데이트를 가집니다. 어떤 범주도 여덟 가지 한계 중 어느 것도 제거하지 않습니다.' },
+          { q: '어떤 LLM이 한계가 가장 적습니까?', a: '어떤 모델도 여덟 가지 구조적 제약 중 어느 것도 제거하지 않습니다 — 트랜스포머 아키텍체에 보편적입니다. Gemini 3.1 Pro는 가장 큰 컨텍스트 윈도우(200만 토큰)를 가지며 한계 4를 가장 잘 완화합니다. Claude Opus 5는 지식 콼오프를 더 안정적으로 인정하여 환각 위험을 완화합니다. GPT-5.6는 도구 사용(한계 6 우회법)에서 뛰어납니다. "덜 제한된" 모델이 아닌 특정 병목 현상을 기반으로 선택하세요.' },
+          { q: '2026년 오픈소스 모델과 독점 모델의 한계 차이는 무엇입니까?', a: '오픈소스 모델(LLaMA 3.1, Mistral Large, Qwen 3)과 독점 모델(GPT-5.6, Claude Opus 5, Gemini 3.1 Pro)은 동일한 구조적 제약에 직면합니다. 차이점은 심각도와 비용입니다: 독점 모델은 일반적으로 더 큰 컨텍스트, 더 나은 지시 따르기, 더 빈번한 학습 업데이트를 가집니다. 어떤 범주도 여덟 가지 한계 중 어느 것도 제거하지 않습니다.' },
         ],
       },
       sources: {
