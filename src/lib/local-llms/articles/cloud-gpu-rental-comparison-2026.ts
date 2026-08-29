@@ -2765,7 +2765,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       updateNotice: {
         id: 'update-notice',
-        title: '🔄 2026年8月更新',
+        title: '🔄 更新情報',
         content: '今回の更新では、比較表・各プロバイダーのセクション・下記の価格詳細表の間でずれていた数値を修正し、RunPod・Vast.ai・Lambda Labsの数字を全箇所で統一しました。RTX 5090の入手性に関する注記と、Stable Diffusion/画像生成に関するFAQを追加。このページは毎月の価格確認サイクルに移行し、タイトルとメタディスクリプションもRunPod vs Vast.ai vs Lambda Labsの比較を明示するよう見直しました。',
       },
       verifiedSources: {
@@ -3157,7 +3157,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       updateNotice: {
         id: 'update-notice',
-        title: '🔄 2026年8月更新',
+        title: '🔄 更新情報',
         content: '本次更新修正了此前在对比表、各提供商章节和下方价格明细表之间不一致的数字——三处现在均显示相同的RunPod、Vast.ai、Lambda Labs数据。新增RTX 5090可用性说明及关于Stable Diffusion/图像生成的常见问题。本页现已转为每月价格核实周期；标题和元描述本次也做了修订，明确体现RunPod vs Vast.ai vs Lambda Labs的对比。',
       },
       verifiedSources: {
@@ -3551,7 +3551,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     },
     updateNotice: {
       id: 'update-notice',
-      title: '🔄 2026년 8월 업데이트',
+      title: '🔄 업데이트 안내',
       content: '전체 공급업체 가격이 확인되었습니다. GDPR 준수 공급업체 목록에 GMKtec, Nebius EU, STACKIT가 추가되었습니다. RunPod 가격은 변동 없습니다. Vast.ai 평균 스팟 요금은 4월 대비 8% 하락하였습니다. Lambda Labs는 예약 인스턴스 할인을 추가하였습니다. 다음 업데이트: 2026년 6월.',
       callouts: [
         { type: '📋 검증된 데이터', text: '이 가이드의 모든 가격 및 가동률 관련 내용은 공급업체 웹사이트를 기반으로 검증되었습니다. 업데이트는 매월 진행됩니다.' },
