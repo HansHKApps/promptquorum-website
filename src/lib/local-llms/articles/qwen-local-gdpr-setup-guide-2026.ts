@@ -11,7 +11,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'GDPR-Compliant Local LLM Setup with Qwen 2026 | PromptQuorum',
     metaDescription: 'Step-by-step guide to running Qwen 3 14B locally for GDPR compliance: Ollama install, network isolation, disk encryption, and Article 30 audit trail.',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-08-29',
     readTime: '9 min read',
     educationalLevel: 'Intermediate',
     audience: 'DPOs, IT leads, and legal ops teams setting up a GDPR-compliant local LLM stack',
@@ -22,53 +22,53 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       en: {
         question: 'How do I set up Qwen locally for GDPR compliance?',
-        answer: 'Install Ollama, run ollama run qwen2.5:14b on a machine with 12 GB VRAM, block all outbound network calls from the inference process, enable full-disk encryption, and log prompt/response hashes (not content) for your Article 30 processing record. Total setup time: under 30 minutes.',
+        answer: 'Install Ollama, run ollama run qwen3:14b on a machine with 12 GB VRAM, block all outbound network calls from the inference process, enable full-disk encryption, and log prompt/response hashes (not content) for your Article 30 processing record. Total setup time: under 30 minutes.',
         bullets: [
           'Hardware: RTX 3080 / RTX 4070 / any 12 GB VRAM GPU — minimum for Qwen 3 14B at Q4',
           'Isolation: firewall the Ollama port (11434) to LAN-only; disable telemetry in .ollama/config',
           'Article 30 record: log model name, quantization, timestamp, and prompt hash — never raw PII',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-08',
       },
       de: {
         question: 'Wie richte ich Qwen lokal für DSGVO-Compliance ein?',
-        answer: 'Ollama installieren, ollama run qwen2.5:14b auf einer Maschine mit 12 GB VRAM ausführen, alle ausgehenden Netzwerkaufrufe des Inferenzprozesses blockieren, Festplattenverschlüsselung aktivieren und Prompt/Antwort-Hashes (nicht den Inhalt) für das Verarbeitungsverzeichnis nach Artikel 30 protokollieren. Einrichtungszeit: unter 30 Minuten.',
+        answer: 'Ollama installieren, ollama run qwen3:14b auf einer Maschine mit 12 GB VRAM ausführen, alle ausgehenden Netzwerkaufrufe des Inferenzprozesses blockieren, Festplattenverschlüsselung aktivieren und Prompt/Antwort-Hashes (nicht den Inhalt) für das Verarbeitungsverzeichnis nach Artikel 30 protokollieren. Einrichtungszeit: unter 30 Minuten.',
         bullets: [
           'Hardware: RTX 3080 / RTX 4070 / beliebige 12-GB-VRAM-GPU — Minimum für Qwen 3 14B bei Q4',
           'Isolation: Ollama-Port (11434) per Firewall auf LAN beschränken; Telemetrie in .ollama/config deaktivieren',
           'Artikel-30-Verzeichnis: Modellname, Quantisierung, Zeitstempel und Prompt-Hash protokollieren — keine rohen personenbezogenen Daten',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-08',
       },
       fr: {
         question: 'Comment configurer Qwen localement pour la conformité RGPD ?',
-        answer: 'Installez Ollama, exécutez ollama run qwen2.5:14b sur une machine avec 12 Go de VRAM, bloquez tous les appels réseau sortants du processus d\'inférence, activez le chiffrement intégral du disque, et journalisez les hachages de prompt/réponse (pas le contenu) pour votre registre de traitement Article 30. Durée d\'installation : moins de 30 minutes.',
+        answer: 'Installez Ollama, exécutez ollama run qwen3:14b sur une machine avec 12 Go de VRAM, bloquez tous les appels réseau sortants du processus d\'inférence, activez le chiffrement intégral du disque, et journalisez les hachages de prompt/réponse (pas le contenu) pour votre registre de traitement Article 30. Durée d\'installation : moins de 30 minutes.',
         bullets: [
           'Matériel : RTX 3080 / RTX 4070 / toute GPU 12 Go VRAM — minimum pour Qwen 3 14B en Q4',
           'Isolation : restreindre le port Ollama (11434) au LAN par pare-feu ; désactiver la télémétrie dans .ollama/config',
           'Registre Article 30 : journaliser nom du modèle, quantisation, horodatage et hash du prompt — jamais les données personnelles brutes',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-08',
       },
       ja: {
         question: 'GDPR準拠のためにQwenをローカルでセットアップするには？',
-        answer: 'Ollamaをインストールし、12 GB VRAMのマシンでollama run qwen2.5:14bを実行し、推論プロセスのすべての外部ネットワーク呼び出しをブロックし、フルディスク暗号化を有効にし、第30条処理記録のためにプロンプト/レスポンスのハッシュ（内容でなく）をログに記録します。セットアップ時間：30分未満。',
+        answer: 'Ollamaをインストールし、12 GB VRAMのマシンでollama run qwen3:14bを実行し、推論プロセスのすべての外部ネットワーク呼び出しをブロックし、フルディスク暗号化を有効にし、第30条処理記録のためにプロンプト/レスポンスのハッシュ（内容でなく）をログに記録します。セットアップ時間：30分未満。',
         bullets: [
           'ハードウェア：RTX 3080 / RTX 4070 / 12 GB VRAM以上のGPU——Q4でのQwen 3 14Bの最低要件',
           '分離：ファイアウォールでOllamaポート（11434）をLAN専用に制限；.ollama/configでテレメトリを無効化',
           '第30条記録：モデル名・量子化・タイムスタンプ・プロンプトハッシュをログ記録——生の個人データは含めない',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-08',
       },
       zh: {
         question: '如何为GDPR合规本地设置Qwen？',
-        answer: '安装Ollama，在12 GB VRAM的机器上运行ollama run qwen2.5:14b，阻止推理进程的所有外部网络调用，启用全盘加密，并记录提示词/响应哈希（非内容）用于第30条处理记录。安装时间：30分钟以内。',
+        answer: '安装Ollama，在12 GB VRAM的机器上运行ollama run qwen3:14b，阻止推理进程的所有外部网络调用，启用全盘加密，并记录提示词/响应哈希（非内容）用于第30条处理记录。安装时间：30分钟以内。',
         bullets: [
           '硬件：RTX 3080 / RTX 4070 / 任意12 GB VRAM GPU——Q4运行Qwen 3 14B的最低要求',
           '隔离：防火墙限制Ollama端口（11434）仅限局域网；在.ollama/config中禁用遥测',
           '第30条记录：记录模型名称、量化、时间戳和提示词哈希——绝不包含原始个人数据',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-08',
       },
     },
     toc: [
@@ -79,6 +79,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: 'Disk Encryption', anchor: 'disk-encryption' },
       { label: 'Article 30 Audit Trail', anchor: 'article-30' },
       { label: 'What to Document for Your DPA', anchor: 'dpa-docs' },
+      { label: 'FAQ', anchor: 'faq' },
     ],
     sections: {
       tldr: {
@@ -133,7 +134,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Pull the model (one-time HTTPS download)',
-            whyItMatters: 'Run <code>ollama pull qwen2.5:14b</code>. This downloads ~9 GB from Hugging Face via HTTPS. This is the only time external network access is required. For an air-gapped environment: download on a networked machine, transfer the GGUF file via USB, and import with <code>ollama create qwen2.5:14b --from /path/to/file.gguf</code>.',
+            whyItMatters: 'Run <code>ollama pull qwen3:14b</code>. This downloads ~9 GB from Hugging Face via HTTPS. This is the only time external network access is required. For an air-gapped environment: download on a networked machine, transfer the GGUF file via USB, and import with <code>ollama create qwen3:14b --from /path/to/file.gguf</code>.',
           },
           {
             title: 'Disable telemetry',
@@ -141,10 +142,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Test inference',
-            whyItMatters: 'Run <code>ollama run qwen2.5:14b</code> and type a prompt. Confirm the response generates locally. Use <code>ss -tnp | grep ollama</code> (Linux) or Wireshark to verify no outbound connections occur during inference.',
+            whyItMatters: 'Run <code>ollama run qwen3:14b</code> and type a prompt. Confirm the response generates locally. Use <code>ss -tnp | grep ollama</code> (Linux) or Wireshark to verify no outbound connections occur during inference.',
           },
         ],
-        codeBlock: 'curl -fsSL https://ollama.com/install.sh | sh\nollama pull qwen2.5:14b\nollama run qwen2.5:14b',
+        codeBlock: 'curl -fsSL https://ollama.com/install.sh | sh\nollama pull qwen3:14b\nollama run qwen3:14b',
       },
       networkIsolation: {
         id: 'network-isolation',
@@ -175,7 +176,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Article 30 Audit Trail — What to Log and How',
         content: [
           '<strong>GDPR Article 30 requires organisations to maintain a record of processing activities involving personal data. For an LLM deployment, this means documenting: the purpose of processing, the categories of data processed, the technical and organisational measures, and retention periods.</strong>',
-          'What to log per inference session: (1) model name and version (e.g., qwen2.5:14b), (2) quantization level (Q4_K_M), (3) session timestamp (ISO 8601), (4) SHA-256 hash of the input prompt — not the raw text. The hash allows you to demonstrate consistency without retaining PII. (5) User identifier (pseudonymous) if applicable.',
+          'What to log per inference session: (1) model name and version (e.g., qwen3:14b), (2) quantization level (Q4_K_M), (3) session timestamp (ISO 8601), (4) SHA-256 hash of the input prompt — not the raw text. The hash allows you to demonstrate consistency without retaining PII. (5) User identifier (pseudonymous) if applicable.',
           'What NOT to log: the raw prompt text, the raw response text, any personally identifiable information extracted from the response. The purpose of the hash is to create a tamper-evident record without creating a new personal data retention problem.',
         ],
         callouts: [
@@ -234,7 +235,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'DSGVO-konformes lokales LLM mit Qwen 2026 | PromptQuorum',
     metaDescription: 'Qwen lokal DSGVO-konform einrichten 2026: Anleitung für datenschutzkonforme KI. Ollama, Verschlüsselung und Zugriffskontrolle für Unternehmen.',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-08-29',
     readTime: '9 Min. Lesezeit',
     sections: {
       tldr: {
@@ -282,11 +283,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: ['<strong>Ollama auf Linux, macOS oder Windows installieren. Qwen 3 14B einmalig über HTTPS herunterladen. Danach ist Inferenz vollständig offline.</strong>'],
         numberedItems: [
           { title: 'Ollama installieren', whyItMatters: 'Einzeiler auf Linux: <code>curl -fsSL https://ollama.com/install.sh | sh</code>. macOS: .app von ollama.com herunterladen. Windows: .exe-Installer. Überprüfen: <code>ollama --version</code> gibt Versionsnummer aus.' },
-          { title: 'Modell herunterladen (einmaliger HTTPS-Download)', whyItMatters: '<code>ollama pull qwen2.5:14b</code> ausführen. ~9 GB werden von Hugging Face über HTTPS heruntergeladen. Dies ist die einzige erforderliche externe Netzwerkverbindung. Für Air-Gap-Umgebungen: auf vernetztem Rechner herunterladen, GGUF-Datei per USB übertragen und mit <code>ollama create qwen2.5:14b --from /pfad/zur/datei.gguf</code> importieren.' },
+          { title: 'Modell herunterladen (einmaliger HTTPS-Download)', whyItMatters: '<code>ollama pull qwen3:14b</code> ausführen. ~9 GB werden von Hugging Face über HTTPS heruntergeladen. Dies ist die einzige erforderliche externe Netzwerkverbindung. Für Air-Gap-Umgebungen: auf vernetztem Rechner herunterladen, GGUF-Datei per USB übertragen und mit <code>ollama create qwen3:14b --from /pfad/zur/datei.gguf</code> importieren.' },
           { title: 'Telemetrie deaktivieren', whyItMatters: '<code>~/.ollama/config.json</code> erstellen/bearbeiten und hinzufügen: <code>{"telemetry": false}</code>. Ollama sendet keine Inferenzdaten extern, aber Telemetrie-Pings beim Start. Deaktivierung eliminiert jede verbleibende Netzwerkaktivität.' },
-          { title: 'Inferenz testen', whyItMatters: '<code>ollama run qwen2.5:14b</code> ausführen und Prompt eingeben. Bestätigen, dass Antwort lokal generiert wird. Mit <code>ss -tnp | grep ollama</code> (Linux) oder Wireshark verifizieren, dass keine ausgehenden Verbindungen während der Inferenz entstehen.' },
+          { title: 'Inferenz testen', whyItMatters: '<code>ollama run qwen3:14b</code> ausführen und Prompt eingeben. Bestätigen, dass Antwort lokal generiert wird. Mit <code>ss -tnp | grep ollama</code> (Linux) oder Wireshark verifizieren, dass keine ausgehenden Verbindungen während der Inferenz entstehen.' },
         ],
-        codeBlock: 'curl -fsSL https://ollama.com/install.sh | sh\nollama pull qwen2.5:14b\nollama run qwen2.5:14b',
+        codeBlock: 'curl -fsSL https://ollama.com/install.sh | sh\nollama pull qwen3:14b\nollama run qwen3:14b',
       },
       networkIsolation: {
         id: 'network-isolation',
@@ -339,7 +340,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'Configuration LLM local conforme RGPD avec Qwen 2026 | PromptQuorum',
     metaDescription: 'Guide étape par étape pour faire tourner Qwen 3 14B localement en conformité RGPD : installation Ollama, isolation réseau, chiffrement disque, journal Article 30.',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-08-29',
     readTime: '9 min de lecture',
     sections: {
       tldr: {
@@ -387,11 +388,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: ['<strong>Installez Ollama sur Linux, macOS ou Windows. Téléchargez Qwen 3 14B une fois via HTTPS. Ensuite, l\'inférence est entièrement hors ligne.</strong>'],
         numberedItems: [
           { title: 'Installer Ollama', whyItMatters: 'En une ligne sur Linux : <code>curl -fsSL https://ollama.com/install.sh | sh</code>. macOS : télécharger le .app. Windows : télécharger l\'installateur .exe. Vérifier : <code>ollama --version</code>.' },
-          { title: 'Télécharger le modèle (téléchargement HTTPS unique)', whyItMatters: 'Exécutez <code>ollama pull qwen2.5:14b</code>. Télécharge ~9 Go depuis Hugging Face via HTTPS. C\'est la seule connexion réseau externe requise. En environnement isolé : téléchargez sur une machine connectée, transférez le fichier GGUF par USB et importez avec <code>ollama create qwen2.5:14b --from /chemin/fichier.gguf</code>.' },
+          { title: 'Télécharger le modèle (téléchargement HTTPS unique)', whyItMatters: 'Exécutez <code>ollama pull qwen3:14b</code>. Télécharge ~9 Go depuis Hugging Face via HTTPS. C\'est la seule connexion réseau externe requise. En environnement isolé : téléchargez sur une machine connectée, transférez le fichier GGUF par USB et importez avec <code>ollama create qwen3:14b --from /chemin/fichier.gguf</code>.' },
           { title: 'Désactiver la télémétrie', whyItMatters: 'Créez ou éditez <code>~/.ollama/config.json</code> et ajoutez : <code>{"telemetry": false}</code>.' },
-          { title: 'Tester l\'inférence', whyItMatters: 'Exécutez <code>ollama run qwen2.5:14b</code> et tapez un prompt. Utilisez <code>ss -tnp | grep ollama</code> (Linux) ou Wireshark pour vérifier qu\'aucune connexion sortante n\'a lieu pendant l\'inférence.' },
+          { title: 'Tester l\'inférence', whyItMatters: 'Exécutez <code>ollama run qwen3:14b</code> et tapez un prompt. Utilisez <code>ss -tnp | grep ollama</code> (Linux) ou Wireshark pour vérifier qu\'aucune connexion sortante n\'a lieu pendant l\'inférence.' },
         ],
-        codeBlock: 'curl -fsSL https://ollama.com/install.sh | sh\nollama pull qwen2.5:14b\nollama run qwen2.5:14b',
+        codeBlock: 'curl -fsSL https://ollama.com/install.sh | sh\nollama pull qwen3:14b\nollama run qwen3:14b',
       },
       networkIsolation: {
         id: 'network-isolation',
@@ -444,7 +445,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'QwenでGDPR準拠ローカルLLM構築 2026 | PromptQuorum',
     metaDescription: 'Qwen 3 14BをGDPR準拠でローカル実行するステップバイステップガイド：Ollamaインストール、ネットワーク分離、ディスク暗号化、第30条監査証跡。',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-08-29',
     readTime: '9分で読める',
     sections: {
       tldr: {
@@ -492,11 +493,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: ['<strong>Linux・macOS・WindowsにOllamaをインストール。Qwen 3 14Bを一度だけHTTPSでダウンロード。その後、推論は完全にオフライン。</strong>'],
         numberedItems: [
           { title: 'Ollamaをインストール', whyItMatters: 'Linuxのワンライン：<code>curl -fsSL https://ollama.com/install.sh | sh</code>。macOS：ollama.comから.appをダウンロード。Windows：.exeインストーラーをダウンロード。確認：<code>ollama --version</code>。' },
-          { title: 'モデルをダウンロード（一度限りのHTTPS）', whyItMatters: '<code>ollama pull qwen2.5:14b</code>を実行。Hugging FaceからHTTPS経由で~9 GBをダウンロード。これが唯一必要な外部ネットワーク接続です。エアギャップ環境の場合：ネットワーク接続マシンでダウンロードし、USBでGGUFファイルを転送、<code>ollama create qwen2.5:14b --from /path/to/file.gguf</code>でインポート。' },
+          { title: 'モデルをダウンロード（一度限りのHTTPS）', whyItMatters: '<code>ollama pull qwen3:14b</code>を実行。Hugging FaceからHTTPS経由で~9 GBをダウンロード。これが唯一必要な外部ネットワーク接続です。エアギャップ環境の場合：ネットワーク接続マシンでダウンロードし、USBでGGUFファイルを転送、<code>ollama create qwen3:14b --from /path/to/file.gguf</code>でインポート。' },
           { title: 'テレメトリを無効化', whyItMatters: '<code>~/.ollama/config.json</code>を作成/編集し追加：<code>{"telemetry": false}</code>。' },
-          { title: '推論をテスト', whyItMatters: '<code>ollama run qwen2.5:14b</code>を実行してプロンプトを入力。Linux：<code>ss -tnp | grep ollama</code>またはWiresharkで推論中に外部接続がないことを確認。' },
+          { title: '推論をテスト', whyItMatters: '<code>ollama run qwen3:14b</code>を実行してプロンプトを入力。Linux：<code>ss -tnp | grep ollama</code>またはWiresharkで推論中に外部接続がないことを確認。' },
         ],
-        codeBlock: 'curl -fsSL https://ollama.com/install.sh | sh\nollama pull qwen2.5:14b\nollama run qwen2.5:14b',
+        codeBlock: 'curl -fsSL https://ollama.com/install.sh | sh\nollama pull qwen3:14b\nollama run qwen3:14b',
       },
       networkIsolation: {
         id: 'network-isolation',
@@ -549,7 +550,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'Configuración local de Qwen conforme al RGPD 2026',
     metaDescription: 'Guía paso a paso para ejecutar Qwen 3 14B en local con RGPD: Ollama, aislamiento de red, cifrado de disco y registro de auditoría del Artículo 30.',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-08-29',
     readTime: '9 min de lectura',
     sections: {
       tldr: {
@@ -602,7 +603,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Descargar el modelo (descarga única por HTTPS)',
-            whyItMatters: 'Ejecuta <code>ollama pull qwen2.5:14b</code>. Esto descarga ~9 GB desde Hugging Face a través de HTTPS. Esta es la única vez que se requiere acceso a red externa. En entornos con air-gap: descarga en una máquina conectada, transfiere el archivo GGUF por USB e impórtalo con <code>ollama create qwen2.5:14b --from /ruta/al/archivo.gguf</code>.',
+            whyItMatters: 'Ejecuta <code>ollama pull qwen3:14b</code>. Esto descarga ~9 GB desde Hugging Face a través de HTTPS. Esta es la única vez que se requiere acceso a red externa. En entornos con air-gap: descarga en una máquina conectada, transfiere el archivo GGUF por USB e impórtalo con <code>ollama create qwen3:14b --from /ruta/al/archivo.gguf</code>.',
           },
           {
             title: 'Deshabilitar la telemetría',
@@ -610,10 +611,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Probar la inferencia',
-            whyItMatters: 'Ejecuta <code>ollama run qwen2.5:14b</code> e introduce un prompt. Confirma que la respuesta se genera localmente. Usa <code>ss -tnp | grep ollama</code> (Linux) o Wireshark para verificar que no se producen conexiones salientes durante la inferencia.',
+            whyItMatters: 'Ejecuta <code>ollama run qwen3:14b</code> e introduce un prompt. Confirma que la respuesta se genera localmente. Usa <code>ss -tnp | grep ollama</code> (Linux) o Wireshark para verificar que no se producen conexiones salientes durante la inferencia.',
           },
         ],
-        codeBlock: 'curl -fsSL https://ollama.com/install.sh | sh\nollama pull qwen2.5:14b\nollama run qwen2.5:14b',
+        codeBlock: 'curl -fsSL https://ollama.com/install.sh | sh\nollama pull qwen3:14b\nollama run qwen3:14b',
       },
       networkIsolation: {
         id: 'network-isolation',
@@ -644,7 +645,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Registro de auditoría del Artículo 30 — qué registrar y cómo',
         content: [
           '<strong>El Artículo 30 del RGPD exige que las organizaciones mantengan un registro de las actividades de tratamiento que implican datos personales. Para un despliegue de LLM, esto significa documentar: la finalidad del tratamiento, las categorías de datos tratados, las medidas técnicas y organizativas, y los períodos de conservación.</strong>',
-          'Qué registrar por sesión de inferencia: (1) nombre y versión del modelo (p. ej., qwen2.5:14b), (2) nivel de cuantización (Q4_K_M), (3) marca de tiempo de la sesión (ISO 8601), (4) hash SHA-256 del prompt de entrada — no el texto en bruto. El hash permite demostrar consistencia sin retener datos personales. (5) Identificador de usuario (seudónimo) si aplica.',
+          'Qué registrar por sesión de inferencia: (1) nombre y versión del modelo (p. ej., qwen3:14b), (2) nivel de cuantización (Q4_K_M), (3) marca de tiempo de la sesión (ISO 8601), (4) hash SHA-256 del prompt de entrada — no el texto en bruto. El hash permite demostrar consistencia sin retener datos personales. (5) Identificador de usuario (seudónimo) si aplica.',
           'Qué NO registrar: el texto en bruto del prompt, el texto en bruto de la respuesta, ni ningún dato de identificación personal extraído de la respuesta. El propósito del hash es crear un registro a prueba de manipulaciones sin generar un nuevo problema de retención de datos personales.',
         ],
         callouts: [
@@ -692,7 +693,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/es/local-llms/qwen-local-gdpr-setup-guide-2026',
       inLanguage: 'es',
       datePublished: '2026-05-22',
-      dateModified: '2026-05-22',
+      dateModified: '2026-08-29',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -707,7 +708,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'إعداد ⁨Qwen 3 14B⁩ محليًا بامتثال ⁨GDPR 2026⁩',
     metaDescription: '⁨Qwen 3 14B⁩ يعمل بـ ⁨12 GB VRAM⁩ عبر ⁨Ollama⁩ مع صفر نقل للبيانات. خطوات عزل الشبكة وتشفير القرص وسجل المادة ⁨30⁩ لامتثال ⁨GDPR⁩ الكامل.',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-08-29',
     readTime: '9 دقائق قراءة',
     sections: {
       tldr: {
@@ -760,7 +761,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'نزّل النموذج (تنزيل واحد عبر HTTPS)',
-            whyItMatters: 'نفّذ <code>ollama pull qwen2.5:14b</code>. يُنزّل هذا ~9 GB من Hugging Face عبر HTTPS. هذه هي المرة الوحيدة التي يُطلب فيها وصول شبكة خارجي. في بيئات الفصل التام عن الشبكة: نزّل على جهاز متصل، وانقل ملف GGUF عبر USB واستورده بـ <code>ollama create qwen2.5:14b --from /ruta/al/archivo.gguf</code>.',
+            whyItMatters: 'نفّذ <code>ollama pull qwen3:14b</code>. يُنزّل هذا ~9 GB من Hugging Face عبر HTTPS. هذه هي المرة الوحيدة التي يُطلب فيها وصول شبكة خارجي. في بيئات الفصل التام عن الشبكة: نزّل على جهاز متصل، وانقل ملف GGUF عبر USB واستورده بـ <code>ollama create qwen3:14b --from /ruta/al/archivo.gguf</code>.',
           },
           {
             title: 'عطّل القياس عن بُعد',
@@ -768,10 +769,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'اختبر الاستدلال',
-            whyItMatters: 'نفّذ <code>ollama run qwen2.5:14b</code> وأدخل أمرًا. تأكد من توليد الاستجابة محليًا. استخدم <code>ss -tnp | grep ollama</code> (Linux) أو Wireshark للتحقق من عدم حدوث اتصالات صادرة أثناء الاستدلال.',
+            whyItMatters: 'نفّذ <code>ollama run qwen3:14b</code> وأدخل أمرًا. تأكد من توليد الاستجابة محليًا. استخدم <code>ss -tnp | grep ollama</code> (Linux) أو Wireshark للتحقق من عدم حدوث اتصالات صادرة أثناء الاستدلال.',
           },
         ],
-        codeBlock: 'curl -fsSL https://ollama.com/install.sh | sh\nollama pull qwen2.5:14b\nollama run qwen2.5:14b',
+        codeBlock: 'curl -fsSL https://ollama.com/install.sh | sh\nollama pull qwen3:14b\nollama run qwen3:14b',
       },
       networkIsolation: {
         id: 'network-isolation',
@@ -802,7 +803,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'سجل تدقيق المادة 30 — ماذا تسجّل وكيف',
         content: [
           '<strong>تتطلب المادة 30 من GDPR أن تحتفظ المؤسسات بسجل لأنشطة المعالجة التي تتضمن بيانات شخصية. بالنسبة إلى نشر نموذج LLM، يعني ذلك توثيق: غرض المعالجة، وفئات البيانات المعالَجة، والتدابير التقنية والتنظيمية، وفترات الاحتفاظ.</strong>',
-          'ماذا تسجّل لكل جلسة استدلال: (1) اسم النموذج وإصداره (مثلًا qwen2.5:14b)، (2) مستوى التكميم (Q4_K_M)، (3) طابع وقت الجلسة (ISO 8601)، (4) تجزئة SHA-256 لأمر الإدخال — لا النص الخام. تتيح التجزئة إثبات الاتساق دون الاحتفاظ ببيانات شخصية. (5) معرّف المستخدم (اسم مستعار) إن انطبق.',
+          'ماذا تسجّل لكل جلسة استدلال: (1) اسم النموذج وإصداره (مثلًا qwen3:14b)، (2) مستوى التكميم (Q4_K_M)، (3) طابع وقت الجلسة (ISO 8601)، (4) تجزئة SHA-256 لأمر الإدخال — لا النص الخام. تتيح التجزئة إثبات الاتساق دون الاحتفاظ ببيانات شخصية. (5) معرّف المستخدم (اسم مستعار) إن انطبق.',
           'ماذا لا تسجّل: النص الخام للأمر، والنص الخام للاستجابة، وأي بيانات تعريف شخصية مستخرجة من الاستجابة. الغرض من التجزئة هو إنشاء سجل مقاوم للتلاعب دون توليد مشكلة احتفاظ ببيانات شخصية جديدة.',
         ],
         callouts: [
@@ -850,7 +851,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ar/local-llms/qwen-local-gdpr-setup-guide-2026',
       inLanguage: 'ar',
       datePublished: '2026-05-22',
-      dateModified: '2026-05-22',
+      dateModified: '2026-08-29',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -865,7 +866,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: '使用Qwen构建GDPR合规本地LLM 2026 | PromptQuorum',
     metaDescription: '本地GDPR合规运行Qwen 3 14B的步骤指南：Ollama安装、网络隔离、磁盘加密、第30条审计追踪。',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-08-29',
     readTime: '9分钟阅读',
     sections: {
       tldr: {
@@ -913,11 +914,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: ['<strong>在Linux、macOS或Windows上安装Ollama。通过HTTPS一次性拉取Qwen 3 14B。之后推理完全离线。</strong>'],
         numberedItems: [
           { title: '安装Ollama', whyItMatters: 'Linux单行安装：<code>curl -fsSL https://ollama.com/install.sh | sh</code>。macOS：从ollama.com下载.app。Windows：下载.exe安装程序。验证：<code>ollama --version</code>应返回版本号。' },
-          { title: '拉取模型（一次性HTTPS下载）', whyItMatters: '运行<code>ollama pull qwen2.5:14b</code>。通过HTTPS从Hugging Face下载约9 GB。这是唯一需要外部网络访问的时候。气隙环境：在联网机器上下载，通过USB传输GGUF文件，用<code>ollama create qwen2.5:14b --from /path/to/file.gguf</code>导入。' },
+          { title: '拉取模型（一次性HTTPS下载）', whyItMatters: '运行<code>ollama pull qwen3:14b</code>。通过HTTPS从Hugging Face下载约9 GB。这是唯一需要外部网络访问的时候。气隙环境：在联网机器上下载，通过USB传输GGUF文件，用<code>ollama create qwen3:14b --from /path/to/file.gguf</code>导入。' },
           { title: '禁用遥测', whyItMatters: '创建或编辑<code>~/.ollama/config.json</code>并添加：<code>{"telemetry": false}</code>。' },
-          { title: '测试推理', whyItMatters: '运行<code>ollama run qwen2.5:14b</code>并输入提示词。使用Linux：<code>ss -tnp | grep ollama</code>或Wireshark确认推理期间没有外部连接。' },
+          { title: '测试推理', whyItMatters: '运行<code>ollama run qwen3:14b</code>并输入提示词。使用Linux：<code>ss -tnp | grep ollama</code>或Wireshark确认推理期间没有外部连接。' },
         ],
-        codeBlock: 'curl -fsSL https://ollama.com/install.sh | sh\nollama pull qwen2.5:14b\nollama run qwen2.5:14b',
+        codeBlock: 'curl -fsSL https://ollama.com/install.sh | sh\nollama pull qwen3:14b\nollama run qwen3:14b',
       },
       networkIsolation: {
         id: 'network-isolation',
@@ -970,18 +971,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'Configuração local do Qwen em conformidade com o GDPR 2026',
     metaDescription: 'Guia passo a passo para rodar o Qwen 3 14B localmente com GDPR/LGPD: Ollama, isolamento de rede, criptografia de disco e registro de auditoria do Artigo 30.',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-08-29',
     readTime: '9 min de leitura',
     quickAnswerTop: {
       pt: {
-        question: 'Como configuro o Qwen localmente para conformidade com o GDPR?', // VERIFY
-        answer: 'Instale o Ollama, rode ollama run qwen2.5:14b em uma máquina com 12 GB de VRAM, bloqueie todas as chamadas de rede de saída do processo de inferência, ative a criptografia de disco completa e registre hashes de prompt/resposta (não o conteúdo) para o seu registro de tratamento do Artigo 30. Tempo total de configuração: menos de 30 minutos.', // VERIFY
+        question: 'Como configuro o Qwen localmente para conformidade com o GDPR?',
+        answer: 'Instale o Ollama, rode ollama run qwen3:14b em uma máquina com 12 GB de VRAM, bloqueie todas as chamadas de rede de saída do processo de inferência, ative a criptografia de disco completa e registre hashes de prompt/resposta (não o conteúdo) para o seu registro de tratamento do Artigo 30. Tempo total de configuração: menos de 30 minutos.',
         bullets: [
-          'Hardware: RTX 3080 / RTX 4070 / qualquer GPU com 12 GB de VRAM — mínimo para o Qwen 3 14B em Q4', // VERIFY
-          'Isolamento: restrinja a porta do Ollama (11434) apenas à LAN via firewall; desabilite a telemetria em .ollama/config', // VERIFY
-          'Registro do Artigo 30: registre nome do modelo, quantização, carimbo de data/hora e hash do prompt — nunca dados pessoais em texto bruto', // VERIFY
+          'Hardware: RTX 3080 / RTX 4070 / qualquer GPU com 12 GB de VRAM — mínimo para o Qwen 3 14B em Q4',
+          'Isolamento: restrinja a porta do Ollama (11434) apenas à LAN via firewall; desabilite a telemetria em .ollama/config',
+          'Registro do Artigo 30: registre nome do modelo, quantização, carimbo de data/hora e hash do prompt — nunca dados pessoais em texto bruto',
         ],
-        updatedDate: '2026-05', // VERIFY
+        updatedDate: '2026-08',
       },
     },
     sections: {
@@ -1035,7 +1036,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Baixar o modelo (download único por HTTPS)',
-            whyItMatters: 'Execute <code>ollama pull qwen2.5:14b</code>. Isso baixa ~9 GB do Hugging Face via HTTPS. Esta é a única vez que o acesso à rede externa é necessário. Em ambientes air-gap: baixe em uma máquina conectada, transfira o arquivo GGUF por USB e importe com <code>ollama create qwen2.5:14b --from /caminho/para/o/arquivo.gguf</code>.',
+            whyItMatters: 'Execute <code>ollama pull qwen3:14b</code>. Isso baixa ~9 GB do Hugging Face via HTTPS. Esta é a única vez que o acesso à rede externa é necessário. Em ambientes air-gap: baixe em uma máquina conectada, transfira o arquivo GGUF por USB e importe com <code>ollama create qwen3:14b --from /caminho/para/o/arquivo.gguf</code>.',
           },
           {
             title: 'Desabilitar a telemetria',
@@ -1043,10 +1044,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: 'Testar a inferência',
-            whyItMatters: 'Execute <code>ollama run qwen2.5:14b</code> e digite um prompt. Confirme que a resposta é gerada localmente. Use <code>ss -tnp | grep ollama</code> (Linux) ou o Wireshark para verificar que nenhuma conexão de saída ocorre durante a inferência.',
+            whyItMatters: 'Execute <code>ollama run qwen3:14b</code> e digite um prompt. Confirme que a resposta é gerada localmente. Use <code>ss -tnp | grep ollama</code> (Linux) ou o Wireshark para verificar que nenhuma conexão de saída ocorre durante a inferência.',
           },
         ],
-        codeBlock: 'curl -fsSL https://ollama.com/install.sh | sh\nollama pull qwen2.5:14b\nollama run qwen2.5:14b',
+        codeBlock: 'curl -fsSL https://ollama.com/install.sh | sh\nollama pull qwen3:14b\nollama run qwen3:14b',
       },
       networkIsolation: {
         id: 'network-isolation',
@@ -1077,7 +1078,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Registro de auditoria do Artigo 30 — o que registrar e como',
         content: [
           '<strong>O Artigo 30 do GDPR exige que as organizações mantenham um registro das atividades de tratamento que envolvem dados pessoais. Para uma implantação de LLM, isso significa documentar: a finalidade do tratamento, as categorias de dados tratados, as medidas técnicas e organizacionais e os períodos de retenção. A LGPD brasileira prevê obrigação equivalente de registro das operações de tratamento.</strong>',
-          'O que registrar por sessão de inferência: (1) nome e versão do modelo (p. ex., qwen2.5:14b), (2) nível de quantização (Q4_K_M), (3) carimbo de data/hora da sessão (ISO 8601), (4) hash SHA-256 do prompt de entrada — não o texto bruto. O hash permite demonstrar consistência sem reter dados pessoais. (5) Identificador de usuário (pseudônimo), se aplicável.',
+          'O que registrar por sessão de inferência: (1) nome e versão do modelo (p. ex., qwen3:14b), (2) nível de quantização (Q4_K_M), (3) carimbo de data/hora da sessão (ISO 8601), (4) hash SHA-256 do prompt de entrada — não o texto bruto. O hash permite demonstrar consistência sem reter dados pessoais. (5) Identificador de usuário (pseudônimo), se aplicável.',
           'O que NÃO registrar: o texto bruto do prompt, o texto bruto da resposta, nem qualquer dado de identificação pessoal extraído da resposta. O objetivo do hash é criar um registro à prova de adulteração sem gerar um novo problema de retenção de dados pessoais.',
         ],
         callouts: [
@@ -1125,7 +1126,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/pt/local-llms/qwen-local-gdpr-setup-guide-2026',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-22',
-      dateModified: '2026-05-22',
+      dateModified: '2026-08-29',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -1140,7 +1141,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     seoTitle: 'Qwen으로 GDPR 준수 로컬 LLM 설정하기 2026 | PromptQuorum',
     metaDescription: 'Ollama 설치, 네트워크 격리, 디스크 암호화, Article 30 감사 추적을 포함한 GDPR 준수 Qwen 3 14B 로컬 실행 단계별 가이드.',
     publishDate: '2026-05-22',
-    dateModified: '2026-05-22',
+    dateModified: '2026-08-29',
     readTime: '9분 읽기',
     educationalLevel: 'Intermediate',
     audience: 'GDPR 준수 로컬 LLM 환경을 구성하는 DPO, IT 책임자, 법무 운영 팀',
@@ -1151,13 +1152,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     quickAnswerTop: {
       ko: {
         question: 'GDPR 준수를 위해 Qwen을 로컬에서 어떻게 설정합니까?',
-        answer: 'Ollama를 설치하고, 12 GB VRAM이 탑재된 기기에서 ollama run qwen2.5:14b를 실행한 뒤, 추론 프로세스의 모든 외부 네트워크 호출을 차단하고, 전체 디스크 암호화를 활성화하며, 제30조 처리 기록을 위해 프롬프트/응답 해시(내용이 아닌)를 기록합니다. 총 설치 시간: 30분 미만.',
+        answer: 'Ollama를 설치하고, 12 GB VRAM이 탑재된 기기에서 ollama run qwen3:14b를 실행한 뒤, 추론 프로세스의 모든 외부 네트워크 호출을 차단하고, 전체 디스크 암호화를 활성화하며, 제30조 처리 기록을 위해 프롬프트/응답 해시(내용이 아닌)를 기록합니다. 총 설치 시간: 30분 미만.',
         bullets: [
           '하드웨어: RTX 3080 / RTX 4070 / 12 GB VRAM 이상의 GPU — Q4에서 Qwen 3 14B 실행을 위한 최소 요건',
           '격리: 방화벽으로 Ollama 포트(11434)를 LAN 전용으로 제한; .ollama/config에서 원격 측정 비활성화',
           '제30조 기록: 모델명, 양자화 수준, 타임스탬프, 프롬프트 해시를 기록 — 원시 개인 식별 정보는 절대 포함 금지',
         ],
-        updatedDate: '2026-05',
+        updatedDate: '2026-08',
       },
     },
     toc: [
@@ -1168,6 +1169,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '디스크 암호화', anchor: 'disk-encryption' },
       { label: '제30조 감사 기록', anchor: 'article-30' },
       { label: 'DPA에 제출할 문서', anchor: 'dpa-docs' },
+      { label: 'FAQ', anchor: 'faq' },
     ],
     sections: {
       tldr: {
@@ -1222,7 +1224,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: '모델 다운로드 (최초 1회 HTTPS 다운로드)',
-            whyItMatters: '<code>ollama pull qwen2.5:14b</code>를 실행합니다. Hugging Face에서 HTTPS를 통해 약 9 GB를 다운로드합니다. 이것이 외부 네트워크 접근이 필요한 유일한 단계입니다. 에어갭(air-gapped) 환경의 경우: 네트워크가 연결된 기기에서 다운로드하고, USB를 통해 GGUF 파일을 전송한 뒤, <code>ollama create qwen2.5:14b --from /path/to/file.gguf</code>로 가져옵니다.',
+            whyItMatters: '<code>ollama pull qwen3:14b</code>를 실행합니다. Hugging Face에서 HTTPS를 통해 약 9 GB를 다운로드합니다. 이것이 외부 네트워크 접근이 필요한 유일한 단계입니다. 에어갭(air-gapped) 환경의 경우: 네트워크가 연결된 기기에서 다운로드하고, USB를 통해 GGUF 파일을 전송한 뒤, <code>ollama create qwen3:14b --from /path/to/file.gguf</code>로 가져옵니다.',
           },
           {
             title: '원격 측정 비활성화',
@@ -1230,10 +1232,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             title: '추론 테스트',
-            whyItMatters: '<code>ollama run qwen2.5:14b</code>를 실행하고 프롬프트를 입력합니다. 응답이 로컬에서 생성되는지 확인합니다. 추론 중 외부 연결이 발생하지 않는지 <code>ss -tnp | grep ollama</code>(Linux) 또는 Wireshark로 검증합니다.',
+            whyItMatters: '<code>ollama run qwen3:14b</code>를 실행하고 프롬프트를 입력합니다. 응답이 로컬에서 생성되는지 확인합니다. 추론 중 외부 연결이 발생하지 않는지 <code>ss -tnp | grep ollama</code>(Linux) 또는 Wireshark로 검증합니다.',
           },
         ],
-        codeBlock: 'curl -fsSL https://ollama.com/install.sh | sh\nollama pull qwen2.5:14b\nollama run qwen2.5:14b',
+        codeBlock: 'curl -fsSL https://ollama.com/install.sh | sh\nollama pull qwen3:14b\nollama run qwen3:14b',
       },
       networkIsolation: {
         id: 'network-isolation',
@@ -1264,7 +1266,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '제30조 감사 기록 — 기록 항목 및 방법',
         content: [
           '<strong>GDPR 제30조는 조직이 개인 데이터와 관련된 처리 활동의 기록을 유지할 것을 요구합니다. LLM 배포의 경우, 이는 처리의 목적, 처리되는 데이터의 범주, 기술적·조직적 조치, 보존 기간을 문서화하는 것을 의미합니다.</strong>',
-          '추론 세션별 기록 항목: (1) 모델명 및 버전(예: qwen2.5:14b), (2) 양자화 수준(Q4_K_M), (3) 세션 타임스탬프(ISO 8601), (4) 입력 프롬프트의 SHA-256 해시 — 원시 텍스트가 아닌 해시만 기록. 해시를 통해 PII를 보존하지 않고도 일관성을 증명할 수 있습니다. (5) 해당하는 경우 사용자 식별자(가명 처리).',
+          '추론 세션별 기록 항목: (1) 모델명 및 버전(예: qwen3:14b), (2) 양자화 수준(Q4_K_M), (3) 세션 타임스탬프(ISO 8601), (4) 입력 프롬프트의 SHA-256 해시 — 원시 텍스트가 아닌 해시만 기록. 해시를 통해 PII를 보존하지 않고도 일관성을 증명할 수 있습니다. (5) 해당하는 경우 사용자 식별자(가명 처리).',
           '기록하지 말아야 할 항목: 원시 프롬프트 텍스트, 원시 응답 텍스트, 응답에서 추출한 모든 개인 식별 정보. 해시의 목적은 새로운 개인 데이터 보존 문제를 만들지 않고 변조 방지 기록을 생성하는 것입니다.',
         ],
         callouts: [
