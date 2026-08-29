@@ -777,5 +777,19 @@
     ],
     "reason": "Page 21 batch: 0.47% CTR at avg pos 6.8 despite decent volume (129/57/33/24/23 impr head queries). EN+KO titles dropped the second Prompt/word after System, unlike DE/ES/ZH/PT/FR/JA siblings which kept literal phrase match. Restored exact-phrase match to dominant query system prompt vs user prompt, rewrote meta to lead with direct answer.",
     "baseline": null
+  },
+  {
+    "id": "dc0d2dcf-415d-4ece-8bbc-d948a57016b7",
+    "slug": "/local-llms/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026",
+    "date": "2026-08-29T11:53:15.604Z",
+    "fields": [
+      {
+        "field": "seoTitle,metaDescription (en)",
+        "old": "AutoDL Pricing 2026: A100 80GB vs Alibaba and Tencent",
+        "new": "AutoDL GPU Pricing 2026: A100 vs Alibaba and Tencent"
+      }
+    ],
+    "reason": "Page 22 batch: top query autodl gpu (120 impr, pos 4.0, 0% CTR) has no literal GPU match in title. Added GPU to title and led meta with GPU pricing framing instead of pinning to A100 80GB specifically, to match the broader head query intent. RTX 4090 sub-queries at pos 1.8-2.4 with 0% CTR left untouched (AIO-answered, not title-fixable).",
+    "baseline": null
   }
 ]

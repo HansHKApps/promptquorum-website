@@ -19,9 +19,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     current_benchmarks_used: ['Qwen3 72B tokens/sec', 'first-token latency'],
     theme: 'Cost & Comparisons',
     title: 'AutoDL Pricing 2026: A100 80 GB vs Alibaba Cloud & Tencent GPU',
-    seoTitle: 'AutoDL Pricing 2026: A100 80GB vs Alibaba & Tencent',
+    seoTitle: 'AutoDL GPU Pricing 2026: A100 vs Alibaba & Tencent',
     metaDescription:
-      'AutoDL A100 80 GB is ¥5.98/hr (~$0.82) — cheapest China GPU cloud, vs ¥8–12/hr on Alibaba Cloud PAI and ¥7.5–10/hr on Tencent Cloud TI. RTX 4090 from ¥2.68/hr.',
+      'AutoDL GPU pricing 2026: A100 80GB from ¥5.98/hr (~$0.82), RTX 4090 from ¥2.68/hr — cheapest China GPU cloud vs Alibaba Cloud PAI and Tencent Cloud TI.',
     heroImage: '/images/alibaba-cloud-vs-tencent-cloud-gpu-ai-2026-pricing-hero-en.webp',
     twitterDescription:
       'AutoDL is cheapest for burst GPU use in China. Alibaba Cloud wins for Qwen-optimized inference. Tencent Cloud wins for teams already in WeChat/Tencent ecosystem.',
