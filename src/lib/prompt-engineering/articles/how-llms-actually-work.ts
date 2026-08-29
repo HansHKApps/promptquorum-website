@@ -38,7 +38,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com', logo: { '@type': 'ImageObject', url: 'https://www.promptquorum.com/logo.svg' } },
         image: buildOgImageObject(OG_SLUG, 'en'),
-        keywords: ['large language models', 'LLM architecture', 'transformer', 'tokenization', 'attention mechanism', 'RLHF', 'temperature', 'context window', 'prompt engineering', 'GPT-5.5', 'Claude'],
+        keywords: ['large language models', 'LLM architecture', 'transformer', 'tokenization', 'attention mechanism', 'RLHF', 'temperature', 'context window', 'prompt engineering', 'GPT-5.6', 'Claude'],
         about: [
           { '@type': 'Thing', name: 'Large Language Models' },
           { '@type': 'Thing', name: 'Transformer architecture' },
@@ -52,8 +52,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           url: 'https://www.promptquorum.com/prompt-engineering',
         },
         mentions: [
-          { '@type': 'SoftwareApplication', name: 'GPT-5.5' },
-          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5.6' },
+          { '@type': 'SoftwareApplication', name: 'Claude Opus 5' },
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
           { '@type': 'Thing', name: 'Transformer' },
           { '@type': 'Thing', name: 'RLHF' },
@@ -81,7 +81,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: 'What is a token in an LLM?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'A token is the smallest unit an LLM processes — roughly 0.75 words in English and 0.5 words in Chinese or Japanese. Words, sub-words, punctuation, and spaces all become tokens. GPT-5.5 uses BPE (Byte Pair Encoding) to split text into tokens before processing. A 1,000-word document becomes approximately 1,300 tokens in English.',
+              text: 'A token is the smallest unit an LLM processes — roughly 0.75 words in English and 0.5 words in Chinese or Japanese. Words, sub-words, punctuation, and spaces all become tokens. GPT-5.6 uses BPE (Byte Pair Encoding) to split text into tokens before processing. A 1,000-word document becomes approximately 1,300 tokens in English.',
             },
           },
           {
@@ -113,7 +113,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: 'What is the difference between a context window and memory?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'The context window is all the text the model can see during a single inference call — including the system prompt, conversation history, and the current user message. It is not persistent memory: when the conversation ends, the model retains nothing. GPT-5.5 has a 128,000-token context window (~96,000 words). Claude Opus 4.8 supports 200,000 tokens (~150,000 words). Gemini 3.1 Pro supports 2,000,000 tokens (~1,500,000 words).',
+              text: 'The context window is all the text the model can see during a single inference call — including the system prompt, conversation history, and the current user message. It is not persistent memory: when the conversation ends, the model retains nothing. GPT-5.6 has a 128,000-token context window (~96,000 words). Claude Opus 5 supports 200,000 tokens (~150,000 words). Gemini 3.1 Pro supports 2,000,000 tokens (~1,500,000 words).',
             },
           },
           {
@@ -134,10 +134,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             '@type': 'Question',
-            name: 'What is the difference between GPT-5.5, Claude, and Gemini architecturally?',
+            name: 'What is the difference between GPT-5.6, Claude, and Gemini architecturally?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'All three are transformer-based LLMs trained on massive text corpora, but they differ in scale, context window, and post-training approach. GPT-5.5 (OpenAI) has a 128,000-token context window. Claude Opus 4.8 (Anthropic) has 200,000 tokens and uses Constitutional AI for alignment. Gemini 3.1 Pro (Google DeepMind) has the largest context window at 2,000,000 tokens. These differences affect cost, latency, and suitability for different tasks — GPT-5.5 excels at reasoning, Claude at long context and nuance, Gemini at ultra-long document processing.',
+              text: 'All three are transformer-based LLMs trained on massive text corpora, but they differ in scale, context window, and post-training approach. GPT-5.6 (OpenAI) has a 128,000-token context window. Claude Opus 5 (Anthropic) has 200,000 tokens and uses Constitutional AI for alignment. Gemini 3.1 Pro (Google DeepMind) has the largest context window at 2,000,000 tokens. These differences affect cost, latency, and suitability for different tasks — GPT-5.6 excels at reasoning, Claude at long context and nuance, Gemini at ultra-long document processing.',
             },
           },
           {
@@ -145,7 +145,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: 'How many tokens is 1000 words?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'In English, 1,000 words ≈ 1,300–1,350 tokens using GPT-5.5 or Claude tokenizers. Roughly 1 token = 0.75 words. For Chinese or Japanese, use 1 token ≈ 0.5 words — so 1,000 Chinese/Japanese words ≈ 2,000 tokens. Token count directly affects API cost and context window consumption, so understanding the ratio is critical for budgeting.',
+              text: 'In English, 1,000 words ≈ 1,300–1,350 tokens using GPT-5.6 or Claude tokenizers. Roughly 1 token = 0.75 words. For Chinese or Japanese, use 1 token ≈ 0.5 words — so 1,000 Chinese/Japanese words ≈ 2,000 tokens. Token count directly affects API cost and context window consumption, so understanding the ratio is critical for budgeting.',
             },
           },
           {
@@ -262,7 +262,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**LLMs predict tokens, not answers.** They generate statistically probable text sequences — not retrieved facts, logical deductions, or verified information.',
             '**1 token ≈ 0.75 English words.** A 1,000-word document uses ~1,300 tokens. Chinese and Japanese are ~50% denser.',
             '**[Temperature](/prompt-engineering/prompt-engineering-glossary#temperature) controls creativity vs. determinism.** Temperature 0 = deterministic. Temperature 1.0 = proportional sampling. Above 1.5 = high hallucination risk.',
-            '**[Context windows](/prompt-engineering/prompt-engineering-glossary#context-window) are not memory.** GPT-5.5: 128k tokens. Claude Opus 4.8: 200k tokens. Gemini 3.1 Pro: 2M tokens. Nothing persists between sessions.',
+            '**[Context windows](/prompt-engineering/prompt-engineering-glossary#context-window) are not memory.** GPT-5.6: 128k tokens. Claude Opus 5: 200k tokens. Gemini 3.1 Pro: 2M tokens. Nothing persists between sessions.',
             '**Position matters.** Transformer [attention](/prompt-engineering/prompt-engineering-glossary#attention) weights the beginning and end of the context more heavily. Put critical instructions first and last — not buried in the middle.',
             '**[RLHF](/prompt-engineering/prompt-engineering-glossary#rlhf) shapes behavior, not capability.** Refusals, tone, and helpfulness come from post-training fine-tuning — not the base model architecture.',
           ],
@@ -271,7 +271,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         tokenization: {
           title: '[Tokenization](/prompt-engineering/prompt-engineering-glossary#tokenization): How Text Becomes Numbers',
           content: [
-            '**Before an LLM can process any text, it must convert it into a sequence of integer token IDs — a process called [tokenization](/prompt-engineering/prompt-engineering-glossary#tokenization).** GPT-5.5 uses Byte Pair Encoding (BPE), which breaks text into frequently occurring sub-word units. Claude Opus 4.8 and Gemini 3.1 Pro use similar sub-word tokenization schemes.',
+            '**Before an LLM can process any text, it must convert it into a sequence of integer token IDs — a process called [tokenization](/prompt-engineering/prompt-engineering-glossary#tokenization).** GPT-5.6 uses Byte Pair Encoding (BPE), which breaks text into frequently occurring sub-word units. Claude Opus 5 and Gemini 3.1 Pro use similar sub-word tokenization schemes.',
             'Tokenization is language-dependent. English text averages approximately 1 token per 0.75 words. Chinese and Japanese average 1 token per 0.5 words — meaning the same document costs roughly twice as many tokens in Chinese as in English, which directly affects API cost and context window usage.',
           ],
           tableFormat: true,
@@ -279,7 +279,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           rows: [
             { 'Input text': '"Hello, world!"', Tokens: '"Hello", ",", " world", "!"', 'Token count': '4' },
             { 'Input text': '"Tokenization"', Tokens: '"Token", "ization"', 'Token count': '2' },
-            { 'Input text': '"GPT-5.5"', Tokens: '"G", "PT", "-", "4", "o"', 'Token count': '5' },
+            { 'Input text': '"GPT-5.6"', Tokens: '"G", "PT", "-", "4", "o"', 'Token count': '5' },
             { 'Input text': '"你好世界" (Hello world, Chinese)', Tokens: '"你好", "世界"', 'Token count': '2–4 depending on model' },
           ],
         },
@@ -288,7 +288,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'How Transformer Attention Works',
           content: [
             '**The transformer architecture uses a mechanism called self-attention to determine how much each token should "pay attention" to every other token in the sequence when computing its representation.** For each token, the model computes three vectors — Query (Q), Key (K), and Value (V) — and calculates attention scores as dot products between Q and K, scaled and normalized with softmax.',
-            'Multi-head attention runs this process in parallel across multiple "heads" (GPT-5.5 uses 96 attention heads in its largest layers), each learning different relationship patterns. Some heads specialize in syntactic relationships (subject-verb), others in semantic similarity, others in coreference (matching pronouns to nouns).',
+            'Multi-head attention runs this process in parallel across multiple "heads" (GPT-5.6 uses 96 attention heads in its largest layers), each learning different relationship patterns. Some heads specialize in syntactic relationships (subject-verb), others in semantic similarity, others in coreference (matching pronouns to nouns).',
             'A key practical implication: the "lost in the middle" effect. Research from Liu et al. (2023) at Stanford shows that LLMs systematically underweight information in the middle of long contexts. For prompts exceeding ~2,000 tokens, place critical instructions in the system prompt (beginning) and repeat the most important constraint at the end of the user message.',
           ],
         },
@@ -304,7 +304,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Pretraining:** Unsupervised next-token prediction on web-scale data. Encodes language patterns, world knowledge, and reasoning shortcuts into model weights (~70B–405B parameters for frontier models).',
             '**Supervised Fine-Tuning (SFT):** The model is trained on curated instruction-response pairs to behave like an assistant rather than a raw text predictor.',
             '**RLHF / DPO:** Human preferences steer the model toward helpful, harmless, and honest outputs. DPO (Direct Preference Optimization) is a more computationally efficient alternative used by Llama and Mistral models.',
-            '**Constitutional AI (Anthropic):** Claude is additionally trained using a set of principles ("constitution") to reduce reliance on human feedback for every edge case — Claude Opus 4.8 uses this approach.',
+            '**Constitutional AI (Anthropic):** Claude is additionally trained using a set of principles ("constitution") to reduce reliance on human feedback for every edge case — Claude Opus 5 uses this approach.',
           ],
         },
 
@@ -333,8 +333,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           tableFormat: true,
           columns: ['Model', 'Context window', 'Approximate word equivalent', 'Practical document limit'],
           rows: [
-            { Model: 'GPT-5.5 (OpenAI)', 'Context window': '128,000 tokens', 'Approximate word equivalent': '~96,000 words', 'Practical document limit': '~200-page PDF' },
-            { Model: 'Claude Opus 4.8 (Anthropic)', 'Context window': '200,000 tokens', 'Approximate word equivalent': '~150,000 words', 'Practical document limit': '~300-page PDF' },
+            { Model: 'GPT-5.6 (OpenAI)', 'Context window': '128,000 tokens', 'Approximate word equivalent': '~96,000 words', 'Practical document limit': '~200-page PDF' },
+            { Model: 'Claude Opus 5 (Anthropic)', 'Context window': '200,000 tokens', 'Approximate word equivalent': '~150,000 words', 'Practical document limit': '~300-page PDF' },
             { Model: 'Gemini 3.1 Pro (Google DeepMind)', 'Context window': '2,000,000 tokens', 'Approximate word equivalent': '~1,500,000 words', 'Practical document limit': '~3,000-page PDF' },
             { Model: 'LLaMA 3.1 70B (Meta, via Ollama)', 'Context window': '128,000 tokens', 'Approximate word equivalent': '~96,000 words', 'Practical document limit': '~200-page PDF' },
           ],
@@ -371,7 +371,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptquorumBridge: {
           title: 'Testing Temperature Effects Across Models in PromptQuorum',
           content: [
-            '**Tested in PromptQuorum — sending the same creative brief to GPT-5.5, Claude Opus 4.8, and Gemini 3.1 Pro at temperature 0 vs. temperature 0.9 showed that Claude Opus 4.8 has the smallest output variance between temperatures, while Gemini 3.1 Pro shows the highest variance.** At temperature 0.9, Gemini 3.1 Pro produced outputs 34% longer on average than at temperature 0.',
+            '**Tested in PromptQuorum — sending the same creative brief to GPT-5.6, Claude Opus 5, and Gemini 3.1 Pro at temperature 0 vs. temperature 0.9 showed that Claude Opus 5 has the smallest output variance between temperatures, while Gemini 3.1 Pro shows the highest variance.** At temperature 0.9, Gemini 3.1 Pro produced outputs 34% longer on average than at temperature 0.',
             'Using PromptQuorum\'s multi-model dispatch, you can run any prompt simultaneously against all available models at a specified temperature and compare outputs side-by-side — making it practical to calibrate temperature settings for your specific task rather than relying on model defaults.',
           ],
         },
@@ -380,7 +380,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'LLM Architecture Differences by Region',
           content: [
             '**LLM architecture and performance vary significantly by training data composition, tokenization strategy, and regulatory constraints across regions.** Understanding these differences is critical for teams deploying models globally.',
-            '**[Qwen 3](/prompt-engineering/prompt-engineering-glossary#tokenization) achieves superior tokenization efficiency for CJK (Chinese, Japanese, Korean) scripts** — using approximately 0.3 tokens per character for Mandarin Chinese compared to GPT-5.5\'s 0.5 tokens per character. This 40% reduction in token count directly reduces API costs and latency for Asian language applications. Qwen\'s training data includes 20% CJK content, optimizing the tokenizer for scripts where character-to-semantic density is highest.',
+            '**[Qwen 3](/prompt-engineering/prompt-engineering-glossary#tokenization) achieves superior tokenization efficiency for CJK (Chinese, Japanese, Korean) scripts** — using approximately 0.3 tokens per character for Mandarin Chinese compared to GPT-5.6\'s 0.5 tokens per character. This 40% reduction in token count directly reduces API costs and latency for Asian language applications. Qwen\'s training data includes 20% CJK content, optimizing the tokenizer for scripts where character-to-semantic density is highest.',
             '**Mistral Small and Mistral Large are explicitly architected for European deployment**, with training data filtered to comply with GDPR, France\'s AI Act, and EU regulations on data retention and model transparency. Unlike models trained primarily on unfiltered web data, Mistral documents data sourcing and excludes EU citizens\' personal information from training, making it the default choice for regulated industries in Europe (banking, healthcare, legal tech).',
             '**DeepSeek\'s architecture reflects its training composition**: 70% of pretraining data is in Chinese and English, 15% in code, 15% in other languages. This ratio produces a model biased toward Chinese language fluency and code-generation speed, with substantially lower performance on low-resource languages. The token distribution and attention patterns are optimized for the frequency patterns in Mandarin Chinese, not English.',
           ],
@@ -391,7 +391,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '[Fundamentals: What Is Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — how to apply LLM architecture knowledge to systematic prompt design',
             '[Fundamentals: Context Windows Explained — Why AI Forgets](/prompt-engineering/context-windows-explained-why-ai-forgets) — deep dive into context window limits and retrieval strategies',
-            '[Fundamentals: Tokens, Costs & Limits: The Economics of AI Prompting](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — token pricing, rate limits, and cost optimization across GPT-5.5, Claude, and Gemini',
+            '[Fundamentals: Tokens, Costs & Limits: The Economics of AI Prompting](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — token pricing, rate limits, and cost optimization across GPT-5.6, Claude, and Gemini',
             '[Fundamentals: AI Hallucinations Explained — Why LLMs Make Things Up](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — how token prediction and the lack of fact retrieval lead to confidence errors',
             '[AI Limitations: What LLMs Can\'t Do](/prompt-engineering/ai-limitations-what-llms-cant-do) — the eight structural constraints every LLM shares and the engineering workaround for each',
           ],
@@ -403,7 +403,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Learn the transformer architecture\'s three core layers: embeddings, attention, and output projection.** You don\'t need to implement it, but know conceptually: embeddings convert tokens to vectors, attention compares all pairs of tokens to understand relationships, output projection maps back to vocabulary. This explains why LLMs understand context and why they hallucinate.',
             '**Understand why LLMs hallucinate: they predict \'likely next tokens\' based on training data patterns, not \'correct facts.\'** When training data has conflicting or scarce information on a topic, the model\'s best guess is sometimes wrong. This is a fundamental property, not a fixable bug. Set Temperature (T) low for factual tasks, high for creative ones.',
             '**Experiment with temperature and top-p to see how they change output.** Generate text at T=0.0 (deterministic), T=0.7 (varied but coherent), and T=1.5 (random). See that higher T = more variation. Understand top-p (nucleus sampling) filters unlikely tokens, reducing nonsense.',
-            '**Understand context windows: the model \'sees\' only a fixed window of recent tokens.** GPT-5.5\'s 128k-token window is ~96,000 words. Old information gets \'forgotten\' because it falls outside the window. This explains why LLMs sometimes contradict information earlier in a long conversation.',
+            '**Understand context windows: the model \'sees\' only a fixed window of recent tokens.** GPT-5.6\'s 128k-token window is ~96,000 words. Old information gets \'forgotten\' because it falls outside the window. This explains why LLMs sometimes contradict information earlier in a long conversation.',
           ],
         },
 
@@ -417,7 +417,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'What is a token in an LLM?',
-              a: 'A token is the smallest unit an LLM processes — roughly 0.75 words in English and 0.5 words in Chinese or Japanese. Words, sub-words, punctuation, and spaces all become tokens. GPT-5.5 uses BPE (Byte Pair Encoding) to split text into tokens before processing. A 1,000-word document becomes approximately 1,300 tokens in English.',
+              a: 'A token is the smallest unit an LLM processes — roughly 0.75 words in English and 0.5 words in Chinese or Japanese. Words, sub-words, punctuation, and spaces all become tokens. GPT-5.6 uses BPE (Byte Pair Encoding) to split text into tokens before processing. A 1,000-word document becomes approximately 1,300 tokens in English.',
             },
             {
               q: 'What does temperature do in an LLM?',
@@ -433,7 +433,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'What is the difference between a context window and memory?',
-              a: 'The context window is all text the model can see during one inference call — system prompt, history, and current message. It is not persistent: when the conversation ends, the model retains nothing. GPT-5.5: 128,000 tokens. Claude Opus 4.8: 200,000 tokens. Gemini 3.1 Pro: 2,000,000 tokens.',
+              a: 'The context window is all text the model can see during one inference call — system prompt, history, and current message. It is not persistent: when the conversation ends, the model retains nothing. GPT-5.6: 128,000 tokens. Claude Opus 5: 200,000 tokens. Gemini 3.1 Pro: 2,000,000 tokens.',
             },
             {
               q: 'What is the "lost in the middle" effect and how do I avoid it?',
@@ -444,8 +444,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
               a: 'RLHF (Reinforcement Learning from Human Feedback) uses human raters to score outputs, trains a reward model, and fine-tunes the LLM to maximize reward. Constitutional AI (used by Anthropic for Claude) extends RLHF by adding a set of written principles ("constitution") that guide behavior without needing human feedback for every edge case. This reduces reliance on human raters while maintaining consistent alignment with values.',
             },
             {
-              q: 'What is the difference between GPT-5.5, Claude, and Gemini architecturally?',
-              a: 'All three are transformer-based LLMs trained on massive text corpora but differ in scale and post-training. GPT-5.5 (OpenAI) has 128,000-token context and excels at reasoning. Claude Opus 4.8 (Anthropic) has 200,000 tokens and uses Constitutional AI for alignment. Gemini 3.1 Pro (Google DeepMind) has 2,000,000 tokens for ultra-long document processing. These differences affect cost, latency, and suitability for different tasks.',
+              q: 'What is the difference between GPT-5.6, Claude, and Gemini architecturally?',
+              a: 'All three are transformer-based LLMs trained on massive text corpora but differ in scale and post-training. GPT-5.6 (OpenAI) has 128,000-token context and excels at reasoning. Claude Opus 5 (Anthropic) has 200,000 tokens and uses Constitutional AI for alignment. Gemini 3.1 Pro (Google DeepMind) has 2,000,000 tokens for ultra-long document processing. These differences affect cost, latency, and suitability for different tasks.',
             },
           ],
         },
@@ -501,10 +501,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         description: 'Große Sprachmodelle sagen das nächste Token per Wahrscheinlichkeitsverteilung voraus — kein Verstehen, kein Abrufen. Lerne Tokenisierung, Attention, RLHF und Inferenzparameter.',
         datePublished: '2026-03-30',
         dateModified: '2026-04-12',
-        keywords: ['große Sprachmodelle', 'LLM-Architektur', 'Transformer', 'Tokenisierung', 'Aufmerksamkeitsmechanismus', 'RLHF', 'Temperatur', 'Kontextfenster', 'Prompt Engineering', 'GPT-5.5', 'Claude'],
+        keywords: ['große Sprachmodelle', 'LLM-Architektur', 'Transformer', 'Tokenisierung', 'Aufmerksamkeitsmechanismus', 'RLHF', 'Temperatur', 'Kontextfenster', 'Prompt Engineering', 'GPT-5.6', 'Claude'],
         mentions: [
-          { '@type': 'SoftwareApplication', name: 'GPT-5.5' },
-          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5.6' },
+          { '@type': 'SoftwareApplication', name: 'Claude Opus 5' },
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
           { '@type': 'Thing', name: 'Transformer' },
           { '@type': 'Thing', name: 'RLHF' },
@@ -538,7 +538,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**LLMs sagen Tokens voraus, keine Antworten.** Sie erzeugen statistisch wahrscheinliche Textsequenzen — keine abgerufenen Fakten, logischen Schlussfolgerungen oder verifizierten Informationen.',
             '**1 Token ≈ 0,75 englische Wörter.** Ein 1.000-Wort-Dokument verwendet ~1.300 Tokens. Chinesisch und Japanisch sind ~50 % dichter.',
             '**[Temperatur](/prompt-engineering/prompt-engineering-glossary#temperature) steuert Kreativität vs. Determinismus.** Temperatur 0 = deterministisch. Temperatur 1,0 = proportionales Sampling. Über 1,5 = hohes Halluzinationsrisiko.',
-            '**[Kontextfenster](/prompt-engineering/prompt-engineering-glossary#context-window) sind kein Gedächtnis.** GPT-5.5: 128k Tokens. Claude Opus 4.8: 200k Tokens. Gemini 3.1 Pro: 2 Mio. Tokens. Nichts bleibt zwischen Sitzungen erhalten.',
+            '**[Kontextfenster](/prompt-engineering/prompt-engineering-glossary#context-window) sind kein Gedächtnis.** GPT-5.6: 128k Tokens. Claude Opus 5: 200k Tokens. Gemini 3.1 Pro: 2 Mio. Tokens. Nichts bleibt zwischen Sitzungen erhalten.',
             '**Position ist entscheidend.** Der Transformer-[Attention](/prompt-engineering/prompt-engineering-glossary#attention)-Mechanismus gewichtet Anfang und Ende des Kontexts stärker. Wichtige Anweisungen zuerst und zuletzt platzieren — nicht in der Mitte.',
             '**[RLHF](/prompt-engineering/prompt-engineering-glossary#rlhf) formt Verhalten, nicht Fähigkeiten.** Ablehnungen, Ton und Hilfsbereitschaft entstehen durch Post-Training-Fine-Tuning — nicht durch die Basisarchitektur.',
           ],
@@ -546,7 +546,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         tokenization: {
           title: '[Tokenisierung](/prompt-engineering/prompt-engineering-glossary#tokenization): Wie Text zu Zahlen wird',
           content: [
-            '**Bevor ein LLM Text verarbeiten kann, muss er diesen in eine Folge ganzzahliger Token-IDs umwandeln — ein Prozess, der als [Tokenisierung](/prompt-engineering/prompt-engineering-glossary#tokenization) bezeichnet wird.** GPT-5.5 verwendet Byte Pair Encoding (BPE), das Text in häufig vorkommende Subwort-Einheiten zerlegt. Claude Opus 4.8 und Gemini 3.1 Pro verwenden ähnliche Subwort-Tokenisierungsverfahren.',
+            '**Bevor ein LLM Text verarbeiten kann, muss er diesen in eine Folge ganzzahliger Token-IDs umwandeln — ein Prozess, der als [Tokenisierung](/prompt-engineering/prompt-engineering-glossary#tokenization) bezeichnet wird.** GPT-5.6 verwendet Byte Pair Encoding (BPE), das Text in häufig vorkommende Subwort-Einheiten zerlegt. Claude Opus 5 und Gemini 3.1 Pro verwenden ähnliche Subwort-Tokenisierungsverfahren.',
             'Tokenisierung ist sprachabhängig. Englischer Text umfasst durchschnittlich 1 Token pro 0,75 Wörtern. Chinesisch und Japanisch kommen auf 1 Token pro 0,5 Wörtern — dasselbe Dokument kostet auf Chinesisch also etwa doppelt so viele Tokens wie auf Englisch, was sich direkt auf API-Kosten und die Nutzung des Kontextfensters auswirkt.',
           ],
           tableFormat: true,
@@ -554,7 +554,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           rows: [
             { 'Eingabetext': '"Hello, world!"', Tokens: '"Hello", ",", " world", "!"', 'Anzahl Tokens': '4' },
             { 'Eingabetext': '"Tokenization"', Tokens: '"Token", "ization"', 'Anzahl Tokens': '2' },
-            { 'Eingabetext': '"GPT-5.5"', Tokens: '"G", "PT", "-", "4", "o"', 'Anzahl Tokens': '5' },
+            { 'Eingabetext': '"GPT-5.6"', Tokens: '"G", "PT", "-", "4", "o"', 'Anzahl Tokens': '5' },
             { 'Eingabetext': '"你好世界" (Hallo Welt, Chinesisch)', Tokens: '"你好", "世界"', 'Anzahl Tokens': '2–4 je nach Modell' },
           ],
         },
@@ -562,7 +562,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Wie der Transformer-Attention-Mechanismus funktioniert',
           content: [
             '**Die Transformer-Architektur verwendet einen Mechanismus namens Self-Attention, um zu bestimmen, wie stark jedes Token bei der Berechnung seiner Repräsentation auf alle anderen Tokens in der Sequenz "achten" soll.** Für jedes Token berechnet das Modell drei Vektoren — Query (Q), Key (K) und Value (V) — und ermittelt Attention-Scores als Skalarprodukte von Q und K, skaliert und normiert mit Softmax.',
-            'Multi-Head-Attention führt diesen Prozess parallel über mehrere "Heads" aus (GPT-5.5 verwendet 96 Attention-Heads in seinen größten Schichten), wobei jeder Head unterschiedliche Beziehungsmuster erlernt. Einige Heads spezialisieren sich auf syntaktische Beziehungen (Subjekt-Verb), andere auf semantische Ähnlichkeit, wieder andere auf Koreferenzen (Pronomen auf Substantive beziehen).',
+            'Multi-Head-Attention führt diesen Prozess parallel über mehrere "Heads" aus (GPT-5.6 verwendet 96 Attention-Heads in seinen größten Schichten), wobei jeder Head unterschiedliche Beziehungsmuster erlernt. Einige Heads spezialisieren sich auf syntaktische Beziehungen (Subjekt-Verb), andere auf semantische Ähnlichkeit, wieder andere auf Koreferenzen (Pronomen auf Substantive beziehen).',
             'Eine wichtige praktische Konsequenz: der "Lost in the Middle"-Effekt. Forschungen von Liu et al. (2023) an der Stanford University zeigen, dass LLMs Informationen in der Mitte langer Kontexte systematisch untergewichten. Bei Prompts mit mehr als ~2.000 Tokens sollten kritische Anweisungen im System-Prompt (Anfang) platziert und die wichtigste Einschränkung am Ende der Nutzernachricht wiederholt werden.',
           ],
         },
@@ -577,7 +577,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Vortraining:** Unüberwachte Vorhersage des nächsten Tokens auf webskalierten Daten. Kodiert Sprachmuster, Weltwissen und Reasoning-Abkürzungen in Modellgewichte (~70B–405B Parameter bei Frontier-Modellen).',
             '**Supervised Fine-Tuning (SFT):** Das Modell wird auf kuratierten Anweisungs-Antwort-Paaren trainiert, um sich wie ein Assistent zu verhalten statt wie ein reiner Textprediktor.',
             '**RLHF / DPO:** Menschliche Präferenzen steuern das Modell in Richtung hilfreicher, harmloser und ehrlicher Ausgaben. DPO (Direct Preference Optimization) ist eine recheneffizientere Alternative, die von Llama- und Mistral-Modellen genutzt wird.',
-            '**Constitutional AI (Anthropic):** Claude wird zusätzlich mit einem Satz von Prinzipien ("Verfassung") trainiert, um die Abhängigkeit von menschlichem Feedback bei Randfällen zu reduzieren — Claude Opus 4.8 verwendet diesen Ansatz.',
+            '**Constitutional AI (Anthropic):** Claude wird zusätzlich mit einem Satz von Prinzipien ("Verfassung") trainiert, um die Abhängigkeit von menschlichem Feedback bei Randfällen zu reduzieren — Claude Opus 5 verwendet diesen Ansatz.',
           ],
         },
         inference: {
@@ -604,8 +604,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           tableFormat: true,
           columns: ['Modell', 'Kontextfenster', 'Ungefähres Wortäquivalent', 'Praktisches Dokumentenlimit'],
           rows: [
-            { Modell: 'GPT-5.5 (OpenAI)', Kontextfenster: '128.000 Tokens', 'Ungefähres Wortäquivalent': '~96.000 Wörter', 'Praktisches Dokumentenlimit': '~200-seitiges PDF' },
-            { Modell: 'Claude Opus 4.8 (Anthropic)', Kontextfenster: '200.000 Tokens', 'Ungefähres Wortäquivalent': '~150.000 Wörter', 'Praktisches Dokumentenlimit': '~300-seitiges PDF' },
+            { Modell: 'GPT-5.6 (OpenAI)', Kontextfenster: '128.000 Tokens', 'Ungefähres Wortäquivalent': '~96.000 Wörter', 'Praktisches Dokumentenlimit': '~200-seitiges PDF' },
+            { Modell: 'Claude Opus 5 (Anthropic)', Kontextfenster: '200.000 Tokens', 'Ungefähres Wortäquivalent': '~150.000 Wörter', 'Praktisches Dokumentenlimit': '~300-seitiges PDF' },
             { Modell: 'Gemini 3.1 Pro (Google DeepMind)', Kontextfenster: '2.000.000 Tokens', 'Ungefähres Wortäquivalent': '~1.500.000 Wörter', 'Praktisches Dokumentenlimit': '~3.000-seitiges PDF' },
             { Modell: 'LLaMA 3.1 70B (Meta, via Ollama)', Kontextfenster: '128.000 Tokens', 'Ungefähres Wortäquivalent': '~96.000 Wörter', 'Praktisches Dokumentenlimit': '~200-seitiges PDF' },
           ],
@@ -639,7 +639,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptquorumBridge: {
           title: 'Temperature-Effekte über Modelle hinweg in PromptQuorum testen',
           content: [
-            '**Getestet in PromptQuorum — das Senden desselben kreativen Briefings an GPT-5.5, Claude Opus 4.8 und Gemini 3.1 Pro bei Temperatur 0 vs. Temperatur 0,9 zeigte, dass Claude Opus 4.8 die geringste Ausgabevariation zwischen Temperaturen aufweist, während Gemini 3.1 Pro die höchste Variation zeigt.** Bei Temperatur 0,9 erzeugte Gemini 3.1 Pro im Durchschnitt 34 % längere Ausgaben als bei Temperatur 0.',
+            '**Getestet in PromptQuorum — das Senden desselben kreativen Briefings an GPT-5.6, Claude Opus 5 und Gemini 3.1 Pro bei Temperatur 0 vs. Temperatur 0,9 zeigte, dass Claude Opus 5 die geringste Ausgabevariation zwischen Temperaturen aufweist, während Gemini 3.1 Pro die höchste Variation zeigt.** Bei Temperatur 0,9 erzeugte Gemini 3.1 Pro im Durchschnitt 34 % längere Ausgaben als bei Temperatur 0.',
             'Mit PromptQuorums Multi-Modell-Dispatch kannst du jeden Prompt gleichzeitig gegen alle verfügbaren Modelle bei einer bestimmten Temperatur ausführen und Ausgaben nebeneinander vergleichen — was es praktisch macht, Temperatureinstellungen für eine bestimmte Aufgabe zu kalibrieren statt auf Modell-Standardeinstellungen zu vertrauen.',
           ],
         },
@@ -647,7 +647,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'LLM-Architekturunterschiede nach Region',
           content: [
             '**LLM-Architektur und -Leistung variieren je nach Trainingsdatenzusammensetzung, Tokenisierungsstrategie und regulatorischen Anforderungen erheblich zwischen Regionen.** Das Verstehen dieser Unterschiede ist entscheidend für Teams, die Modelle global einsetzen.',
-            '**[Qwen 3](/prompt-engineering/prompt-engineering-glossary#tokenization) erreicht überlegene Tokenisierungseffizienz für CJK-Skripte (Chinesisch, Japanisch, Koreanisch)** — mit etwa 0,3 Tokens pro Zeichen für Mandarin-Chinesisch im Vergleich zu GPT-5.5s 0,5 Tokens pro Zeichen. Diese 40-prozentige Reduktion der Token-Anzahl senkt direkt die API-Kosten und Latenz für asiatischsprachige Anwendungen. Qwens Trainingsdaten umfassen 20 % CJK-Inhalte und optimieren den Tokenizer für Skripte, bei denen die Zeichen-zu-Semantik-Dichte am höchsten ist.',
+            '**[Qwen 3](/prompt-engineering/prompt-engineering-glossary#tokenization) erreicht überlegene Tokenisierungseffizienz für CJK-Skripte (Chinesisch, Japanisch, Koreanisch)** — mit etwa 0,3 Tokens pro Zeichen für Mandarin-Chinesisch im Vergleich zu GPT-5.6s 0,5 Tokens pro Zeichen. Diese 40-prozentige Reduktion der Token-Anzahl senkt direkt die API-Kosten und Latenz für asiatischsprachige Anwendungen. Qwens Trainingsdaten umfassen 20 % CJK-Inhalte und optimieren den Tokenizer für Skripte, bei denen die Zeichen-zu-Semantik-Dichte am höchsten ist.',
             '**Mistral Small und Mistral Large sind explizit für den europäischen Einsatz konzipiert**, mit Trainingsdaten, die für die Einhaltung der DSGVO, des französischen KI-Gesetzes und der EU-Vorschriften zu Datenspeicherung und Modelltransparenz gefiltert wurden. Im Gegensatz zu Modellen, die primär auf ungefilterten Webdaten trainiert wurden, dokumentiert Mistral die Datenherkunft und schließt personenbezogene Daten von EU-Bürgern aus dem Training aus, was es zur Standardwahl für regulierte Branchen in Europa (Banken, Gesundheitswesen, Legal Tech) macht.',
             '**DeepSeeks Architektur spiegelt seine Trainingszusammensetzung wider**: 70 % der Vortrainingsdaten sind auf Chinesisch und Englisch, 15 % auf Code, 15 % auf anderen Sprachen. Dieses Verhältnis erzeugt ein Modell mit Bias zugunsten chinesischer Sprachflüssigkeit und Code-Generierungsgeschwindigkeit, mit deutlich geringerer Leistung bei ressourcenarmen Sprachen. Die Token-Verteilung und Attention-Muster sind für die Frequenzmuster im Mandarin-Chinesischen optimiert, nicht für Englisch.',
           ],
@@ -657,7 +657,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '[Grundlagen: Was ist Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — wie man das Wissen über LLM-Architektur auf systematisches Prompt-Design anwendet',
             '[Grundlagen: Kontextfenster erklärt — Warum KI vergisst](/prompt-engineering/context-windows-explained-why-ai-forgets) — Tiefgang zu Kontextfensterlimits und Retrieval-Strategien',
-            '[Grundlagen: Tokens, Kosten & Limits: Die Ökonomie des KI-Promptings](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — Token-Preisgestaltung, Rate Limits und Kostenoptimierung über GPT-5.5, Claude und Gemini',
+            '[Grundlagen: Tokens, Kosten & Limits: Die Ökonomie des KI-Promptings](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — Token-Preisgestaltung, Rate Limits und Kostenoptimierung über GPT-5.6, Claude und Gemini',
             '[Grundlagen: KI-Halluzinationen erklärt — Warum LLMs Dinge erfinden](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — wie Token-Vorhersage und fehlende Faktenabrufung zu Konfidenzfehlern führen',
           ],
         },
@@ -668,7 +668,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Lernen Sie die drei Kernschichten der Transformer-Architektur: Embeddings, Attention und Output-Projektion.** Sie müssen sie nicht implementieren, aber konzeptionell verstehen: Embeddings wandeln Tokens in Vektoren um, Attention vergleicht alle Token-Paare, um Beziehungen zu verstehen, die Output-Projektion bildet wieder auf das Vokabular ab. Das erklärt, warum LLMs Kontext verstehen und warum sie halluzinieren.',
             '**Verstehen Sie, warum LLMs halluzinieren: Sie sagen „wahrscheinlich nächste Tokens" basierend auf Mustern der Trainingsdaten voraus, nicht „korrekte Fakten".** Wenn die Trainingsdaten zu einem Thema widersprüchlich oder spärlich sind, liegt die beste Schätzung des Modells manchmal falsch. Das ist eine fundamentale Eigenschaft, kein behebbarer Fehler. Setzen Sie die Temperature (T) niedrig für faktische Aufgaben, hoch für kreative.',
             '**Experimentieren Sie mit Temperature und Top-p, um zu sehen, wie sie den Output verändern.** Erzeugen Sie Text bei T=0,0 (deterministisch), T=0,7 (variiert, aber kohärent) und T=1,5 (zufällig). Höheres T bedeutet mehr Variation. Top-p (Nucleus Sampling) filtert unwahrscheinliche Tokens heraus und reduziert Unsinn.',
-            '**Verstehen Sie Kontextfenster: Das Modell „sieht" nur ein festes Fenster der jüngsten Tokens.** Das 128k-Token-Fenster von GPT-5.5 entspricht ~96.000 Wörtern. Ältere Informationen werden „vergessen", weil sie außerhalb des Fensters liegen. Das erklärt, warum LLMs sich manchmal in einem langen Gespräch selbst widersprechen.',
+            '**Verstehen Sie Kontextfenster: Das Modell „sieht" nur ein festes Fenster der jüngsten Tokens.** Das 128k-Token-Fenster von GPT-5.6 entspricht ~96.000 Wörtern. Ältere Informationen werden „vergessen", weil sie außerhalb des Fensters liegen. Das erklärt, warum LLMs sich manchmal in einem langen Gespräch selbst widersprechen.',
           ],
         },
         faq: {
@@ -681,7 +681,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Was ist ein Token in einem LLM?',
-              a: 'Ein Token ist die kleinste Einheit, die ein LLM verarbeitet — etwa 0,75 Wörter auf Englisch und 0,5 Wörter auf Chinesisch oder Japanisch. Wörter, Subwörter, Satzzeichen und Leerzeichen werden alle zu Tokens. GPT-5.5 verwendet BPE (Byte Pair Encoding), um Text in Tokens aufzuteilen. Ein 1.000-Wort-Dokument ergibt auf Englisch etwa 1.300 Tokens.',
+              a: 'Ein Token ist die kleinste Einheit, die ein LLM verarbeitet — etwa 0,75 Wörter auf Englisch und 0,5 Wörter auf Chinesisch oder Japanisch. Wörter, Subwörter, Satzzeichen und Leerzeichen werden alle zu Tokens. GPT-5.6 verwendet BPE (Byte Pair Encoding), um Text in Tokens aufzuteilen. Ein 1.000-Wort-Dokument ergibt auf Englisch etwa 1.300 Tokens.',
             },
             {
               q: 'Was bewirkt die Temperatur in einem LLM?',
@@ -697,7 +697,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Was ist der Unterschied zwischen einem Kontextfenster und Gedächtnis?',
-              a: 'Das Kontextfenster umfasst den gesamten Text, den das Modell während eines Inferenzaufrufs sehen kann — System-Prompt, Verlauf und aktuelle Nachricht. Es ist kein persistentes Gedächtnis: Wenn das Gespräch endet, behält das Modell nichts. GPT-5.5: 128.000 Tokens. Claude Opus 4.8: 200.000 Tokens. Gemini 3.1 Pro: 2.000.000 Tokens.',
+              a: 'Das Kontextfenster umfasst den gesamten Text, den das Modell während eines Inferenzaufrufs sehen kann — System-Prompt, Verlauf und aktuelle Nachricht. Es ist kein persistentes Gedächtnis: Wenn das Gespräch endet, behält das Modell nichts. GPT-5.6: 128.000 Tokens. Claude Opus 5: 200.000 Tokens. Gemini 3.1 Pro: 2.000.000 Tokens.',
             },
             {
               q: 'Was ist der "Lost in the Middle"-Effekt und wie vermeide ich ihn?',
@@ -708,8 +708,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
               a: 'RLHF ist eine Post-Training-Technik, bei der menschliche Bewerter Modellausgaben beurteilen, ein Belohnungsmodell trainiert wird und das LLM fine-getuned wird, den Reward zu maximieren. Constitutional AI (von Anthropic für Claude) erweitert RLHF durch einen Satz schriftlicher Prinzipien ("Verfassung"), die das Modellverhalten leiten — dies reduziert die Abhängigkeit von menschlichem Feedback bei Randfällen.',
             },
             {
-              q: 'Was ist der Unterschied zwischen GPT-5.5, Claude und Gemini in der Architektur?',
-              a: 'Alle drei sind transformerbasierte LLMs, unterscheiden sich aber in Skalierung, Kontextfenster und Post-Training. GPT-5.5 (OpenAI): 128.000 Tokens. Claude Opus 4.8 (Anthropic): 200.000 Tokens, verwendet Constitutional AI. Gemini 3.1 Pro (Google DeepMind): 2.000.000 Tokens. Diese Unterschiede beeinflussen Kosten, Latenz und Eignung — GPT-5.5 glänzt beim Reasoning, Claude bei langem Kontext, Gemini bei der Verarbeitung extrem langer Dokumente.',
+              q: 'Was ist der Unterschied zwischen GPT-5.6, Claude und Gemini in der Architektur?',
+              a: 'Alle drei sind transformerbasierte LLMs, unterscheiden sich aber in Skalierung, Kontextfenster und Post-Training. GPT-5.6 (OpenAI): 128.000 Tokens. Claude Opus 5 (Anthropic): 200.000 Tokens, verwendet Constitutional AI. Gemini 3.1 Pro (Google DeepMind): 2.000.000 Tokens. Diese Unterschiede beeinflussen Kosten, Latenz und Eignung — GPT-5.6 glänzt beim Reasoning, Claude bei langem Kontext, Gemini bei der Verarbeitung extrem langer Dokumente.',
             },
             {
               q: 'Wie viele Tokens hat ein Text von 1.000 Wörtern?',
@@ -772,10 +772,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         description: 'Los grandes modelos de lenguaje predicen el siguiente token mediante distribuciones de probabilidad — no comprensión. Aprende tokenización, transformer attention, RLHF y parámetros de inferencia.',
         datePublished: '2026-03-30',
         dateModified: '2026-04-12',
-        keywords: ['grandes modelos de lenguaje', 'arquitectura LLM', 'transformer', 'tokenización', 'mecanismo de attention', 'RLHF', 'temperatura', 'context window', 'prompt engineering', 'GPT-5.5', 'Claude'],
+        keywords: ['grandes modelos de lenguaje', 'arquitectura LLM', 'transformer', 'tokenización', 'mecanismo de attention', 'RLHF', 'temperatura', 'context window', 'prompt engineering', 'GPT-5.6', 'Claude'],
         mentions: [
-          { '@type': 'SoftwareApplication', name: 'GPT-5.5' },
-          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5.6' },
+          { '@type': 'SoftwareApplication', name: 'Claude Opus 5' },
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
           { '@type': 'Thing', name: 'Transformer' },
           { '@type': 'Thing', name: 'RLHF' },
@@ -811,7 +811,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Los LLMs predicen tokens, no respuestas.** Generan secuencias de texto estadísticamente probables — no hechos recuperados, deducciones lógicas ni información verificada.',
             '**1 token ≈ 0.75 palabras en inglés.** Un documento de 1.000 palabras usa ~1.300 tokens. El chino y el japonés son ~50% más densos.',
             '**[La temperatura](/prompt-engineering/prompt-engineering-glossary#temperature) controla creatividad vs. determinismo.** Temperatura 0 = determinista. Temperatura 1.0 = muestreo proporcional. Por encima de 1.5 = alto riesgo de alucinación.',
-            '**Los [context windows](/prompt-engineering/prompt-engineering-glossary#context-window) no son memoria.** GPT-5.5: 128k tokens. Claude Opus 4.8: 200k tokens. Gemini 3.1 Pro: 2M tokens. Nada persiste entre sesiones.',
+            '**Los [context windows](/prompt-engineering/prompt-engineering-glossary#context-window) no son memoria.** GPT-5.6: 128k tokens. Claude Opus 5: 200k tokens. Gemini 3.1 Pro: 2M tokens. Nada persiste entre sesiones.',
             '**La posición importa.** El [attention](/prompt-engineering/prompt-engineering-glossary#attention) del transformer pondera más el inicio y el final del contexto. Pon las instrucciones críticas al principio y al final — no enterradas en el medio.',
             '**[RLHF](/prompt-engineering/prompt-engineering-glossary#rlhf) da forma al comportamiento, no a la capacidad.** Los rechazos, el tono y la utilidad vienen del fine-tuning post-entrenamiento — no de la arquitectura base.',
           ],
@@ -819,7 +819,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         tokenization: {
           title: '[Tokenización](/prompt-engineering/prompt-engineering-glossary#tokenization): Cómo el texto se convierte en números',
           content: [
-            '**Antes de que un LLM pueda procesar cualquier texto, debe convertirlo en una secuencia de IDs de token enteros — un proceso llamado [tokenización](/prompt-engineering/prompt-engineering-glossary#tokenization).** GPT-5.5 usa Byte Pair Encoding (BPE), que divide el texto en unidades de subpalabras que aparecen con frecuencia. Claude Opus 4.8 y Gemini 3.1 Pro usan esquemas de tokenización de subpalabras similares.',
+            '**Antes de que un LLM pueda procesar cualquier texto, debe convertirlo en una secuencia de IDs de token enteros — un proceso llamado [tokenización](/prompt-engineering/prompt-engineering-glossary#tokenization).** GPT-5.6 usa Byte Pair Encoding (BPE), que divide el texto en unidades de subpalabras que aparecen con frecuencia. Claude Opus 5 y Gemini 3.1 Pro usan esquemas de tokenización de subpalabras similares.',
             'La tokenización depende del idioma. El texto en inglés promedia aproximadamente 1 token por 0.75 palabras. El chino y el japonés promedian 1 token por 0.5 palabras — lo que significa que el mismo documento cuesta aproximadamente el doble de tokens en chino que en inglés, lo que afecta directamente al coste de la API y al uso del context window.',
           ],
           tableFormat: true,
@@ -827,7 +827,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           rows: [
             { 'Texto de entrada': '"Hello, world!"', Tokens: '"Hello", ",", " world", "!"', 'Número de tokens': '4' },
             { 'Texto de entrada': '"Tokenization"', Tokens: '"Token", "ization"', 'Número de tokens': '2' },
-            { 'Texto de entrada': '"GPT-5.5"', Tokens: '"G", "PT", "-", "4", "o"', 'Número de tokens': '5' },
+            { 'Texto de entrada': '"GPT-5.6"', Tokens: '"G", "PT", "-", "4", "o"', 'Número de tokens': '5' },
             { 'Texto de entrada': '"你好世界" (Hola mundo, chino)', Tokens: '"你好", "世界"', 'Número de tokens': '2–4 según el modelo' },
           ],
         },
@@ -835,7 +835,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Cómo funciona el transformer attention',
           content: [
             '**La arquitectura transformer usa un mecanismo llamado self-attention para determinar cuánto debe "prestar atención" cada token a todos los demás tokens de la secuencia al calcular su representación.** Para cada token, el modelo calcula tres vectores — Query (Q), Key (K) y Value (V) — y calcula puntuaciones de attention como productos escalares entre Q y K, escalados y normalizados con softmax.',
-            'El multi-head attention ejecuta este proceso en paralelo en múltiples "cabezas" (GPT-5.5 usa 96 cabezas de attention en sus capas más grandes), cada una aprendiendo diferentes patrones de relación. Algunas cabezas se especializan en relaciones sintácticas (sujeto-verbo), otras en similitud semántica, otras en correferencia (relacionar pronombres con sustantivos).',
+            'El multi-head attention ejecuta este proceso en paralelo en múltiples "cabezas" (GPT-5.6 usa 96 cabezas de attention en sus capas más grandes), cada una aprendiendo diferentes patrones de relación. Algunas cabezas se especializan en relaciones sintácticas (sujeto-verbo), otras en similitud semántica, otras en correferencia (relacionar pronombres con sustantivos).',
             'Una implicación práctica clave: el efecto "lost in the middle". La investigación de Liu et al. (2023) en Stanford muestra que los LLMs subestiman sistemáticamente la información en el medio de contextos largos. Para prompts de más de ~2.000 tokens, coloca las instrucciones críticas en el system prompt (al inicio) y repite la restricción más importante al final del user message.',
           ],
         },
@@ -850,7 +850,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Pretraining:** Predicción no supervisada del siguiente token en datos a escala web. Codifica patrones de lenguaje, conocimiento del mundo y atajos de razonamiento en los pesos del modelo (~70B–405B parámetros para modelos frontier).',
             '**Supervised Fine-Tuning (SFT):** El modelo se entrena en pares instrucción-respuesta curados para comportarse como un asistente en lugar de un predictor de texto puro.',
             '**RLHF / DPO:** Las preferencias humanas dirigen el modelo hacia outputs útiles, inofensivos y honestos. DPO (Direct Preference Optimization) es una alternativa más eficiente computacionalmente utilizada por los modelos Llama y Mistral.',
-            '**Constitutional AI (Anthropic):** Claude se entrena adicionalmente usando un conjunto de principios ("constitución") para reducir la dependencia de la retroalimentación humana en casos extremos — Claude Opus 4.8 usa este enfoque.',
+            '**Constitutional AI (Anthropic):** Claude se entrena adicionalmente usando un conjunto de principios ("constitución") para reducir la dependencia de la retroalimentación humana en casos extremos — Claude Opus 5 usa este enfoque.',
           ],
         },
         inference: {
@@ -877,8 +877,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           tableFormat: true,
           columns: ['Modelo', 'Context window', 'Equivalente aproximado en palabras', 'Límite práctico de documento'],
           rows: [
-            { Modelo: 'GPT-5.5 (OpenAI)', 'Context window': '128.000 tokens', 'Equivalente aproximado en palabras': '~96.000 palabras', 'Límite práctico de documento': '~PDF de 200 páginas' },
-            { Modelo: 'Claude Opus 4.8 (Anthropic)', 'Context window': '200.000 tokens', 'Equivalente aproximado en palabras': '~150.000 palabras', 'Límite práctico de documento': '~PDF de 300 páginas' },
+            { Modelo: 'GPT-5.6 (OpenAI)', 'Context window': '128.000 tokens', 'Equivalente aproximado en palabras': '~96.000 palabras', 'Límite práctico de documento': '~PDF de 200 páginas' },
+            { Modelo: 'Claude Opus 5 (Anthropic)', 'Context window': '200.000 tokens', 'Equivalente aproximado en palabras': '~150.000 palabras', 'Límite práctico de documento': '~PDF de 300 páginas' },
             { Modelo: 'Gemini 3.1 Pro (Google DeepMind)', 'Context window': '2.000.000 tokens', 'Equivalente aproximado en palabras': '~1.500.000 palabras', 'Límite práctico de documento': '~PDF de 3.000 páginas' },
             { Modelo: 'LLaMA 3.1 70B (Meta, vía Ollama)', 'Context window': '128.000 tokens', 'Equivalente aproximado en palabras': '~96.000 palabras', 'Límite práctico de documento': '~PDF de 200 páginas' },
           ],
@@ -912,7 +912,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptquorumBridge: {
           title: 'Probando los efectos de la temperatura en varios modelos en PromptQuorum',
           content: [
-            '**Probado en PromptQuorum — enviar el mismo brief creativo a GPT-5.5, Claude Opus 4.8 y Gemini 3.1 Pro a temperatura 0 vs. temperatura 0.9 mostró que Claude Opus 4.8 tiene la menor variación de output entre temperaturas, mientras que Gemini 3.1 Pro muestra la mayor variación.** A temperatura 0.9, Gemini 3.1 Pro produjo outputs un 34% más largos en promedio que a temperatura 0.',
+            '**Probado en PromptQuorum — enviar el mismo brief creativo a GPT-5.6, Claude Opus 5 y Gemini 3.1 Pro a temperatura 0 vs. temperatura 0.9 mostró que Claude Opus 5 tiene la menor variación de output entre temperaturas, mientras que Gemini 3.1 Pro muestra la mayor variación.** A temperatura 0.9, Gemini 3.1 Pro produjo outputs un 34% más largos en promedio que a temperatura 0.',
             'Usando el dispatch multi-modelo de PromptQuorum, puedes ejecutar cualquier prompt simultáneamente contra todos los modelos disponibles a una temperatura especificada y comparar outputs en paralelo — haciendo práctico calibrar los ajustes de temperatura para tu tarea específica en lugar de confiar en los valores predeterminados del modelo.',
           ],
         },
@@ -920,7 +920,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Diferencias de arquitectura LLM por región',
           content: [
             '**La arquitectura y el rendimiento de los LLMs varían significativamente según la composición de los datos de entrenamiento, la estrategia de tokenización y las restricciones regulatorias entre regiones.** Entender estas diferencias es fundamental para los equipos que despliegan modelos globalmente.',
-            '**[Qwen 3](/prompt-engineering/prompt-engineering-glossary#tokenization) logra una eficiencia de tokenización superior para scripts CJK (chino, japonés, coreano)** — usando aproximadamente 0.3 tokens por carácter para el chino mandarín, frente a los 0.5 tokens por carácter de GPT-5.5. Esta reducción del 40% en el número de tokens reduce directamente los costes de la API y la latencia para aplicaciones en idiomas asiáticos.',
+            '**[Qwen 3](/prompt-engineering/prompt-engineering-glossary#tokenization) logra una eficiencia de tokenización superior para scripts CJK (chino, japonés, coreano)** — usando aproximadamente 0.3 tokens por carácter para el chino mandarín, frente a los 0.5 tokens por carácter de GPT-5.6. Esta reducción del 40% en el número de tokens reduce directamente los costes de la API y la latencia para aplicaciones en idiomas asiáticos.',
             '**Mistral Small y Mistral Large están explícitamente diseñados para el despliegue europeo**, con datos de entrenamiento filtrados para cumplir con el RGPD, la Ley de IA de Francia y las regulaciones de la UE sobre retención de datos y transparencia de modelos.',
             '**La arquitectura de DeepSeek refleja su composición de entrenamiento**: el 70% de los datos de pretraining están en chino e inglés, el 15% en código, el 15% en otros idiomas. Esta proporción produce un modelo sesgado hacia la fluidez en chino y la velocidad de generación de código.',
           ],
@@ -930,7 +930,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '[Fundamentals: What Is Prompt Engineering?](/es/prompt-engineering/what-is-prompt-engineering) — cómo aplicar el conocimiento de la arquitectura LLM al diseño sistemático de prompts',
             '[Fundamentals: Context Windows Explained — Why AI Forgets](/es/prompt-engineering/context-windows-explained-why-ai-forgets) — análisis profundo de los límites del context window y las estrategias de recuperación',
-            '[Fundamentals: Tokens, Costs & Limits: The Economics of AI Prompting](/es/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — precios de tokens, límites de tasa y optimización de costes en GPT-5.5, Claude y Gemini',
+            '[Fundamentals: Tokens, Costs & Limits: The Economics of AI Prompting](/es/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — precios de tokens, límites de tasa y optimización de costes en GPT-5.6, Claude y Gemini',
             '[Fundamentals: AI Hallucinations Explained — Why LLMs Make Things Up](/es/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — cómo la predicción de tokens y la falta de recuperación de hechos llevan a errores de confianza',
             '[AI Limitations: What LLMs Can\'t Do](/es/prompt-engineering/ai-limitations-what-llms-cant-do) — las ocho restricciones estructurales que comparten todos los LLMs y el workaround de ingeniería para cada una',
           ],
@@ -942,7 +942,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Aprende las tres capas principales de la arquitectura transformer: embeddings, attention y proyección de output.** No necesitas implementarla, pero entiende conceptualmente: los embeddings convierten tokens en vectores, el attention compara todos los pares de tokens para entender relaciones, la proyección de output vuelve a mapear al vocabulario. Esto explica por qué los LLMs entienden el contexto y por qué alucinan.',
             '**Entiende por qué los LLMs alucinan: predicen "tokens probables siguientes" basándose en patrones de datos de entrenamiento, no "hechos correctos".** Cuando los datos de entrenamiento tienen información conflictiva o escasa sobre un tema, la mejor estimación del modelo a veces es incorrecta. Esta es una propiedad fundamental, no un bug corregible.',
             '**Experimenta con temperatura y top-p para ver cómo cambian el output.** Genera texto a T=0.0 (determinista), T=0.7 (variado pero coherente) y T=1.5 (aleatorio). Observa que mayor T = mayor variación. Entiende que top-p (nucleus sampling) filtra tokens poco probables, reduciendo el sinsentido.',
-            '**Entiende los context windows: el modelo "ve" solo una ventana fija de tokens recientes.** La ventana de 128k tokens de GPT-5.5 es ~96.000 palabras. La información antigua se "olvida" porque cae fuera de la ventana. Esto explica por qué los LLMs a veces contradicen información anterior en una conversación larga.',
+            '**Entiende los context windows: el modelo "ve" solo una ventana fija de tokens recientes.** La ventana de 128k tokens de GPT-5.6 es ~96.000 palabras. La información antigua se "olvida" porque cae fuera de la ventana. Esto explica por qué los LLMs a veces contradicen información anterior en una conversación larga.',
           ],
         },
         faq: {
@@ -955,7 +955,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: '¿Qué es un token en un LLM?',
-              a: 'Un token es la unidad más pequeña que procesa un LLM — aproximadamente 0.75 palabras en inglés y 0.5 palabras en chino o japonés. Las palabras, las subpalabras, la puntuación y los espacios se convierten en tokens. GPT-5.5 usa BPE (Byte Pair Encoding) para dividir el texto en tokens antes de procesarlo. Un documento de 1.000 palabras se convierte en aproximadamente 1.300 tokens en inglés.',
+              a: 'Un token es la unidad más pequeña que procesa un LLM — aproximadamente 0.75 palabras en inglés y 0.5 palabras en chino o japonés. Las palabras, las subpalabras, la puntuación y los espacios se convierten en tokens. GPT-5.6 usa BPE (Byte Pair Encoding) para dividir el texto en tokens antes de procesarlo. Un documento de 1.000 palabras se convierte en aproximadamente 1.300 tokens en inglés.',
             },
             {
               q: '¿Qué hace la temperatura en un LLM?',
@@ -971,7 +971,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: '¿Cuál es la diferencia entre un context window y la memoria?',
-              a: 'El context window es todo el texto que el modelo puede ver durante una sola llamada de inferencia — system prompt, historial y message actual. No es memoria persistente: cuando termina la conversación, el modelo no retiene nada. GPT-5.5: 128.000 tokens. Claude Opus 4.8: 200.000 tokens. Gemini 3.1 Pro: 2.000.000 tokens.',
+              a: 'El context window es todo el texto que el modelo puede ver durante una sola llamada de inferencia — system prompt, historial y message actual. No es memoria persistente: cuando termina la conversación, el modelo no retiene nada. GPT-5.6: 128.000 tokens. Claude Opus 5: 200.000 tokens. Gemini 3.1 Pro: 2.000.000 tokens.',
             },
             {
               q: '¿Qué es el efecto "lost in the middle" y cómo evitarlo?',
@@ -982,8 +982,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
               a: 'RLHF usa evaluadores humanos para puntuar outputs, entrena un modelo de recompensa y ajusta el LLM para maximizar la recompensa. Constitutional AI (usado por Anthropic para Claude) extiende RLHF añadiendo un conjunto de principios escritos ("constitución") que guían el comportamiento sin necesitar retroalimentación humana para cada caso extremo. Esto reduce la dependencia de los evaluadores humanos mientras mantiene una alineación consistente.',
             },
             {
-              q: '¿Cuál es la diferencia entre GPT-5.5, Claude y Gemini arquitecturalmente?',
-              a: 'Los tres son LLMs basados en transformer pero difieren en escala y post-entrenamiento. GPT-5.5 (OpenAI): 128.000 tokens de contexto, destaca en razonamiento. Claude Opus 4.8 (Anthropic): 200.000 tokens, usa Constitutional AI para la alineación. Gemini 3.1 Pro (Google DeepMind): 2.000.000 tokens para el procesamiento de documentos ultra-largos. Estas diferencias afectan al coste, la latencia y la idoneidad para diferentes tareas.',
+              q: '¿Cuál es la diferencia entre GPT-5.6, Claude y Gemini arquitecturalmente?',
+              a: 'Los tres son LLMs basados en transformer pero difieren en escala y post-entrenamiento. GPT-5.6 (OpenAI): 128.000 tokens de contexto, destaca en razonamiento. Claude Opus 5 (Anthropic): 200.000 tokens, usa Constitutional AI para la alineación. Gemini 3.1 Pro (Google DeepMind): 2.000.000 tokens para el procesamiento de documentos ultra-largos. Estas diferencias afectan al coste, la latencia y la idoneidad para diferentes tareas.',
             },
             {
               q: '¿Cuántos tokens tiene un texto de 1000 palabras?',
@@ -1044,10 +1044,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         description: 'تتنبأ نماذج اللغة الكبيرة بالرمز التالي عبر توزيعات الاحتمالات — لا بالفهم. تعلّم التحليل إلى رموز، وانتباه المحوّل، وRLHF، ومعاملات الاستدلال.',
         datePublished: '2026-03-30',
         dateModified: '2026-04-12',
-        keywords: ['نماذج اللغة الكبيرة', 'بنية LLM', 'محوّل', 'تحليل إلى رموز', 'آلية الانتباه', 'RLHF', 'درجة الحرارة', 'نافذة السياق', 'هندسة التلقيح', 'GPT-5.5', 'Claude'],
+        keywords: ['نماذج اللغة الكبيرة', 'بنية LLM', 'محوّل', 'تحليل إلى رموز', 'آلية الانتباه', 'RLHF', 'درجة الحرارة', 'نافذة السياق', 'هندسة التلقيح', 'GPT-5.6', 'Claude'],
         mentions: [
-          { '@type': 'SoftwareApplication', name: 'GPT-5.5' },
-          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5.6' },
+          { '@type': 'SoftwareApplication', name: 'Claude Opus 5' },
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
           { '@type': 'Thing', name: 'Transformer' },
           { '@type': 'Thing', name: 'RLHF' },
@@ -1083,7 +1083,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**تتنبأ نماذج LLM بالرموز لا بالإجابات.** تُولّد تسلسلات نصية محتملة إحصائياً — لا حقائق مُسترجَعة أو استنتاجات منطقية أو معلومات مُتحقَّق منها.',
             '**1 رمز ≈ 0.75 كلمة بالإنجليزية.** مستند من 1,000 كلمة يستخدم ~1,300 رمز. الصينية واليابانية أكثف بنسبة ~50%.',
             '**[درجة الحرارة](/prompt-engineering/prompt-engineering-glossary#temperature) تتحكم في الإبداع مقابل الحتمية.** درجة الحرارة 0 = حتمية. 1.0 = أخذ عيّنات تناسبية. فوق 1.5 = خطر هلوسة مرتفع.',
-            '**[نوافذ السياق](/prompt-engineering/prompt-engineering-glossary#context-window) ليست ذاكرة.** GPT-5.5: 128k رمز. Claude Opus 4.8: 200k رمز. Gemini 3.1 Pro: 2M رمز. لا شيء يستمر بين الجلسات.',
+            '**[نوافذ السياق](/prompt-engineering/prompt-engineering-glossary#context-window) ليست ذاكرة.** GPT-5.6: 128k رمز. Claude Opus 5: 200k رمز. Gemini 3.1 Pro: 2M رمز. لا شيء يستمر بين الجلسات.',
             '**الموضع مهم.** يُرجّح [الانتباه](/prompt-engineering/prompt-engineering-glossary#attention) في المحوّل بداية ونهاية السياق أكثر. ضع التعليمات الحاسمة في البداية والنهاية — لا في الوسط.',
             '**[RLHF](/prompt-engineering/prompt-engineering-glossary#rlhf) يُشكّل السلوك لا القدرة.** الرفض والنبرة والفائدة تأتي من الضبط الدقيق بعد التدريب — لا من البنية الأساسية.',
           ],
@@ -1091,7 +1091,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         tokenization: {
           title: '[التحليل إلى رموز](/prompt-engineering/prompt-engineering-glossary#tokenization): كيف يتحوّل النص إلى أرقام',
           content: [
-            '**قبل أن يتمكن نموذج LLM من معالجة أي نص، يجب تحويله إلى تسلسل من معرّفات الرموز الصحيحة — وهذه العملية تُسمى [التحليل إلى رموز](/prompt-engineering/prompt-engineering-glossary#tokenization).** يستخدم GPT-5.5 ترميز الأزواج الثنائية (BPE) الذي يُقسّم النص إلى وحدات فرعية للكلمات تظهر بكثرة. يستخدم Claude Opus 4.8 وGemini 3.1 Pro مخططات تحليل إلى رموز فرعية مشابهة.',
+            '**قبل أن يتمكن نموذج LLM من معالجة أي نص، يجب تحويله إلى تسلسل من معرّفات الرموز الصحيحة — وهذه العملية تُسمى [التحليل إلى رموز](/prompt-engineering/prompt-engineering-glossary#tokenization).** يستخدم GPT-5.6 ترميز الأزواج الثنائية (BPE) الذي يُقسّم النص إلى وحدات فرعية للكلمات تظهر بكثرة. يستخدم Claude Opus 5 وGemini 3.1 Pro مخططات تحليل إلى رموز فرعية مشابهة.',
             'يعتمد التحليل إلى رموز على اللغة. يبلغ متوسط النص الإنجليزي حوالي رمز واحد لكل 0.75 كلمة. أما الصينية واليابانية فمتوسطها رمز واحد لكل 0.5 كلمة — مما يعني أن المستند ذاته يكلّف ضعف عدد الرموز بالصينية مقارنةً بالإنجليزية، مما يؤثر مباشرةً على تكلفة الواجهة البرمجية واستخدام نافذة السياق.',
           ],
           tableFormat: true,
@@ -1099,7 +1099,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           rows: [
             { 'نص المدخل': '"Hello, world!"', 'الرموز': '"Hello"، ","، " world"، "!"', 'عدد الرموز': '4' },
             { 'نص المدخل': '"Tokenization"', 'الرموز': '"Token"، "ization"', 'عدد الرموز': '2' },
-            { 'نص المدخل': '"GPT-5.5"', 'الرموز': '"G"، "PT"، "-"، "4"، "o"', 'عدد الرموز': '5' },
+            { 'نص المدخل': '"GPT-5.6"', 'الرموز': '"G"، "PT"، "-"، "4"، "o"', 'عدد الرموز': '5' },
             { 'نص المدخل': '"你好世界" (مرحبا بالعالم، صينية)', 'الرموز': '"你好"، "世界"', 'عدد الرموز': '2–4 حسب النموذج' },
           ],
         },
@@ -1107,7 +1107,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'كيف يعمل انتباه المحوّل',
           content: [
             '**تستخدم بنية المحوّل آلية تُسمى الانتباه الذاتي لتحديد مقدار "انتباه" كل رمز لجميع الرموز الأخرى في التسلسل عند حساب تمثيله.** لكل رمز، يحسب النموذج ثلاثة متجهات — الاستعلام (Q) والمفتاح (K) والقيمة (V) — ويحسب نتائج الانتباه كضرب نقطي بين Q وK، مُقيَّساً ومُطبَّعاً بـsoftmax.',
-            'يُشغّل الانتباه متعدد الرؤوس هذه العملية بالتوازي عبر رؤوس متعددة (يستخدم GPT-5.5 ما يصل إلى 96 رأس انتباه في طبقاته الأكبر)، يتعلم كل منها أنماط علاقات مختلفة. تتخصص بعض الرؤوس في العلاقات النحوية (الفاعل-الفعل)، وأخرى في التشابه الدلالي، وأخرى في الإحالة المشتركة (ربط الضمائر بالأسماء).',
+            'يُشغّل الانتباه متعدد الرؤوس هذه العملية بالتوازي عبر رؤوس متعددة (يستخدم GPT-5.6 ما يصل إلى 96 رأس انتباه في طبقاته الأكبر)، يتعلم كل منها أنماط علاقات مختلفة. تتخصص بعض الرؤوس في العلاقات النحوية (الفاعل-الفعل)، وأخرى في التشابه الدلالي، وأخرى في الإحالة المشتركة (ربط الضمائر بالأسماء).',
             'إحدى التداعيات العملية الرئيسية: تأثير "الضياع في المنتصف". تُظهر أبحاث Liu et al. (2023) في ستانفورد أن نماذج LLM تُقلّل منهجياً من المعلومات الموجودة في منتصف السياقات الطويلة. للتلقيحات التي تتجاوز ~2,000 رمز، ضع التعليمات الحاسمة في التلقيح النظامي (البداية) وكرّر القيد الأهم في نهاية رسالة المستخدم.',
           ],
         },
@@ -1122,7 +1122,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**التدريب المسبق:** التنبؤ غير الخاضع للإشراف بالرمز التالي على بيانات نطاق الويب. يُرمّز أنماط اللغة ومعرفة العالم واختصارات الاستدلال في أوزان النموذج (~70B–405B معامل للنماذج الحدية).',
             '**الضبط الدقيق الخاضع للإشراف (SFT):** يُدرَّب النموذج على أزواج تعليمة-استجابة منتقاة للتصرف كمساعد بدلاً من مُتنبئ نص خالص.',
             '**RLHF / DPO:** تُوجّه التفضيلات البشرية النموذج نحو مخرجات مفيدة وغير ضارة وصادقة. DPO (التحسين المباشر للتفضيل) بديل أكثر كفاءة حسابياً يستخدمه Llama وMistral.',
-            '**الذكاء الاصطناعي الدستوري (Anthropic):** يُدرَّب Claude إضافياً باستخدام مجموعة من المبادئ ("الدستور") لتقليل الاعتماد على التغذية الراجعة البشرية في الحالات القصوى — يستخدم Claude Opus 4.8 هذا النهج.',
+            '**الذكاء الاصطناعي الدستوري (Anthropic):** يُدرَّب Claude إضافياً باستخدام مجموعة من المبادئ ("الدستور") لتقليل الاعتماد على التغذية الراجعة البشرية في الحالات القصوى — يستخدم Claude Opus 5 هذا النهج.',
           ],
         },
         inference: {
@@ -1149,8 +1149,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           tableFormat: true,
           columns: ['النموذج', 'نافذة السياق', 'ما يعادله تقريباً بالكلمات', 'الحد العملي للمستند'],
           rows: [
-            { 'النموذج': 'GPT-5.5 (OpenAI)', 'نافذة السياق': '128,000 رمز', 'ما يعادله تقريباً بالكلمات': '~96,000 كلمة', 'الحد العملي للمستند': '~PDF من 200 صفحة' },
-            { 'النموذج': 'Claude Opus 4.8 (Anthropic)', 'نافذة السياق': '200,000 رمز', 'ما يعادله تقريباً بالكلمات': '~150,000 كلمة', 'الحد العملي للمستند': '~PDF من 300 صفحة' },
+            { 'النموذج': 'GPT-5.6 (OpenAI)', 'نافذة السياق': '128,000 رمز', 'ما يعادله تقريباً بالكلمات': '~96,000 كلمة', 'الحد العملي للمستند': '~PDF من 200 صفحة' },
+            { 'النموذج': 'Claude Opus 5 (Anthropic)', 'نافذة السياق': '200,000 رمز', 'ما يعادله تقريباً بالكلمات': '~150,000 كلمة', 'الحد العملي للمستند': '~PDF من 300 صفحة' },
             { 'النموذج': 'Gemini 3.1 Pro (Google DeepMind)', 'نافذة السياق': '2,000,000 رمز', 'ما يعادله تقريباً بالكلمات': '~1,500,000 كلمة', 'الحد العملي للمستند': '~PDF من 3,000 صفحة' },
             { 'النموذج': 'LLaMA 3.1 70B (Meta، عبر Ollama)', 'نافذة السياق': '128,000 رمز', 'ما يعادله تقريباً بالكلمات': '~96,000 كلمة', 'الحد العملي للمستند': '~PDF من 200 صفحة' },
           ],
@@ -1184,7 +1184,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptquorumBridge: {
           title: 'اختبار تأثيرات درجة الحرارة عبر نماذج متعددة على PromptQuorum',
           content: [
-            '**اختُبر على PromptQuorum — إرسال نفس الموجز الإبداعي إلى GPT-5.5 وClaude Opus 4.8 وGemini 3.1 Pro عند درجة الحرارة 0 مقابل 0.9 أظهر أن Claude Opus 4.8 يمتلك أدنى تباين في المخرجات بين درجات الحرارة، بينما يُظهر Gemini 3.1 Pro أعلى تباين.** عند درجة الحرارة 0.9، أنتج Gemini 3.1 Pro مخرجات أطول بنسبة 34% في المتوسط مقارنةً بدرجة الحرارة 0.',
+            '**اختُبر على PromptQuorum — إرسال نفس الموجز الإبداعي إلى GPT-5.6 وClaude Opus 5 وGemini 3.1 Pro عند درجة الحرارة 0 مقابل 0.9 أظهر أن Claude Opus 5 يمتلك أدنى تباين في المخرجات بين درجات الحرارة، بينما يُظهر Gemini 3.1 Pro أعلى تباين.** عند درجة الحرارة 0.9، أنتج Gemini 3.1 Pro مخرجات أطول بنسبة 34% في المتوسط مقارنةً بدرجة الحرارة 0.',
             'باستخدام إرسال PromptQuorum متعدد النماذج، يمكنك تشغيل أي تلقيح في آنٍ واحد ضد جميع النماذج المتاحة بدرجة حرارة محددة ومقارنة المخرجات بالتوازي — مما يجعل معايرة إعدادات درجة الحرارة لمهمتك المحددة عملياً بدلاً من الاعتماد على الإعدادات الافتراضية للنموذج.',
           ],
         },
@@ -1192,7 +1192,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'الاختلافات المعمارية لنماذج LLM حسب المنطقة',
           content: [
             '**تتباين بنية نماذج LLM وأداؤها تبايناً ملحوظاً بحسب تكوين بيانات التدريب واستراتيجية التحليل إلى رموز والقيود التنظيمية عبر المناطق.** إن فهم هذه الاختلافات جوهري للفرق التي تنشر نماذج عالمياً.',
-            '**[Qwen 3](/prompt-engineering/prompt-engineering-glossary#tokenization) يحقق كفاءة تحليل رموز متفوقة للنصوص CJK (الصينية، اليابانية، الكورية)** — مستخدماً حوالي 0.3 رمز لكل حرف للصينية الماندرينية، مقابل 0.5 رمز لكل حرف لـGPT-5.5. هذا التخفيض بنسبة 40% في عدد الرموز يُقلّل مباشرةً من تكاليف الواجهة البرمجية والكمون للتطبيقات باللغات الآسيوية.',
+            '**[Qwen 3](/prompt-engineering/prompt-engineering-glossary#tokenization) يحقق كفاءة تحليل رموز متفوقة للنصوص CJK (الصينية، اليابانية، الكورية)** — مستخدماً حوالي 0.3 رمز لكل حرف للصينية الماندرينية، مقابل 0.5 رمز لكل حرف لـGPT-5.6. هذا التخفيض بنسبة 40% في عدد الرموز يُقلّل مباشرةً من تكاليف الواجهة البرمجية والكمون للتطبيقات باللغات الآسيوية.',
             '**صُمّم Mistral Small وMistral Large صراحةً للنشر الأوروبي**، مع بيانات تدريب مُصفَّاة للامتثال للائحة الأوروبية لحماية البيانات (GDPR) وقانون الذكاء الاصطناعي الفرنسي ولوائح الاتحاد الأوروبي بشأن الاحتفاظ بالبيانات وشفافية النماذج.',
             '**تعكس بنية DeepSeek تكوين تدريبه**: 70% من بيانات التدريب المسبق بالصينية والإنجليزية، و15% كود، و15% لغات أخرى. تُنتج هذه النسبة نموذجاً منحازاً نحو الطلاقة بالصينية وسرعة توليد الكود.',
           ],
@@ -1202,7 +1202,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '[الأساسيات: ما هي هندسة التلقيح؟](/ar/prompt-engineering/what-is-prompt-engineering) — كيفية تطبيق معرفة بنية LLM في التصميم المنهجي للتلقيحات',
             '[الأساسيات: نوافذ السياق — لماذا تنسى الذكاء الاصطناعي](/ar/prompt-engineering/context-windows-explained-why-ai-forgets) — تحليل معمّق لحدود نافذة السياق واستراتيجيات الاسترداد',
-            '[الأساسيات: الرموز والتكاليف والحدود: اقتصاديات تلقيح الذكاء الاصطناعي](/ar/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — أسعار الرموز وحدود المعدل وتحسين التكاليف في GPT-5.5 وClaude وGemini',
+            '[الأساسيات: الرموز والتكاليف والحدود: اقتصاديات تلقيح الذكاء الاصطناعي](/ar/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — أسعار الرموز وحدود المعدل وتحسين التكاليف في GPT-5.6 وClaude وGemini',
             '[الأساسيات: هلوسة الذكاء الاصطناعي — لماذا تخترع نماذج LLM الأشياء](/ar/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — كيف يُؤدي التنبؤ بالرموز وعدم استرجاع الحقائق إلى أخطاء الثقة',
             '[قيود الذكاء الاصطناعي: ما لا تستطيع نماذج LLM فعله](/ar/prompt-engineering/ai-limitations-what-llms-cant-do) — القيود البنيوية الثمانية المشتركة بين جميع نماذج LLM والحل الهندسي لكل منها',
           ],
@@ -1214,7 +1214,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**تعلّم الطبقات الثلاث الرئيسية لبنية المحوّل: التضمينات والانتباه وإسقاط المخرج.** لا تحتاج إلى تطبيقها، لكن افهم مفاهيمياً: التضمينات تحوّل الرموز إلى متجهات، والانتباه يقارن جميع أزواج الرموز لفهم العلاقات، وإسقاط المخرج يُعيد التعيين إلى المفردات. يُفسّر هذا لماذا تفهم نماذج LLM السياق ولماذا تُهلوس.',
             '**افهم لماذا تُهلوس نماذج LLM: إنها تتنبأ بـ"الرموز التالية المحتملة" بناءً على أنماط بيانات التدريب لا "الحقائق الصحيحة".** عندما تحتوي بيانات التدريب على معلومات متضاربة أو شحيحة حول موضوع ما، قد يكون أفضل تخمين النموذج خاطئاً في بعض الأحيان. هذه خاصية أصيلة لا ثغرة قابلة للإصلاح.',
             '**جرّب درجة الحرارة وtop-p لترى كيف تُغيّر المخرج.** ولّد نصاً عند T=0.0 (حتمي) وT=0.7 (متنوع لكن متماسك) وT=1.5 (عشوائي). لاحظ أن T أعلى = تنوع أكبر. افهم أن top-p (أخذ عيّنات النواة) يُصفّي الرموز قليلة الاحتمال مما يُقلّل الهراء.',
-            '**افهم نوافذ السياق: النموذج "يرى" فقط نافذة ثابتة من الرموز الأخيرة.** نافذة 128k رمز لـGPT-5.5 هي ~96,000 كلمة. المعلومات القديمة "تُنسى" لأنها تسقط خارج النافذة. يُفسّر هذا لماذا تتناقض نماذج LLM أحياناً مع معلومات سابقة في محادثة طويلة.',
+            '**افهم نوافذ السياق: النموذج "يرى" فقط نافذة ثابتة من الرموز الأخيرة.** نافذة 128k رمز لـGPT-5.6 هي ~96,000 كلمة. المعلومات القديمة "تُنسى" لأنها تسقط خارج النافذة. يُفسّر هذا لماذا تتناقض نماذج LLM أحياناً مع معلومات سابقة في محادثة طويلة.',
           ],
         },
         faq: {
@@ -1227,7 +1227,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'ما هو الرمز في نموذج LLM؟',
-              a: 'الرمز هو أصغر وحدة تعالجها نماذج LLM — حوالي 0.75 كلمة بالإنجليزية و0.5 كلمة بالصينية أو اليابانية. تُحوَّل الكلمات والكلمات الفرعية وعلامات الترقيم والمسافات إلى رموز. يستخدم GPT-5.5 BPE (ترميز الأزواج الثنائية) لتقسيم النص إلى رموز قبل معالجته. مستند من 1,000 كلمة يُصبح حوالي 1,300 رمز بالإنجليزية.',
+              a: 'الرمز هو أصغر وحدة تعالجها نماذج LLM — حوالي 0.75 كلمة بالإنجليزية و0.5 كلمة بالصينية أو اليابانية. تُحوَّل الكلمات والكلمات الفرعية وعلامات الترقيم والمسافات إلى رموز. يستخدم GPT-5.6 BPE (ترميز الأزواج الثنائية) لتقسيم النص إلى رموز قبل معالجته. مستند من 1,000 كلمة يُصبح حوالي 1,300 رمز بالإنجليزية.',
             },
             {
               q: 'ما الذي تفعله درجة الحرارة في نموذج LLM؟',
@@ -1243,7 +1243,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'ما الفرق بين نافذة السياق والذاكرة؟',
-              a: 'نافذة السياق هي كل النص الذي يستطيع النموذج رؤيته أثناء استدعاء استدلال واحد — التلقيح النظامي والتاريخ والرسالة الحالية. إنها ليست ذاكرة مستمرة: عند انتهاء المحادثة، لا يحتفظ النموذج بشيء. GPT-5.5: 128,000 رمز. Claude Opus 4.8: 200,000 رمز. Gemini 3.1 Pro: 2,000,000 رمز.',
+              a: 'نافذة السياق هي كل النص الذي يستطيع النموذج رؤيته أثناء استدعاء استدلال واحد — التلقيح النظامي والتاريخ والرسالة الحالية. إنها ليست ذاكرة مستمرة: عند انتهاء المحادثة، لا يحتفظ النموذج بشيء. GPT-5.6: 128,000 رمز. Claude Opus 5: 200,000 رمز. Gemini 3.1 Pro: 2,000,000 رمز.',
             },
             {
               q: 'ما هو تأثير "الضياع في المنتصف" وكيف تتجنبه؟',
@@ -1254,8 +1254,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
               a: 'يستخدم RLHF مُقيّمين بشريين لتقييم المخرجات، ويُدرّب نموذج مكافأة، ويضبط نموذج LLM لتعظيم المكافأة. الذكاء الاصطناعي الدستوري (المستخدم من Anthropic لـClaude) يمتد RLHF بإضافة مجموعة من المبادئ المكتوبة ("الدستور") التي توجّه السلوك دون الحاجة إلى تغذية راجعة بشرية لكل حالة قصوى. يُقلّل هذا من الاعتماد على المُقيّمين البشريين مع الحفاظ على مواءمة متسقة.',
             },
             {
-              q: 'ما الفرق المعماري بين GPT-5.5 وClaude وGemini؟',
-              a: 'الثلاثة نماذج LLM قائمة على المحوّل لكنها تختلف في الحجم وما بعد التدريب. GPT-5.5 (OpenAI): 128,000 رمز سياق، يتميز في الاستدلال. Claude Opus 4.8 (Anthropic): 200,000 رمز، يستخدم الذكاء الاصطناعي الدستوري للمواءمة. Gemini 3.1 Pro (Google DeepMind): 2,000,000 رمز لمعالجة المستندات الطويلة جداً. هذه الاختلافات تؤثر على التكلفة والكمون والملاءمة لمهام مختلفة.',
+              q: 'ما الفرق المعماري بين GPT-5.6 وClaude وGemini؟',
+              a: 'الثلاثة نماذج LLM قائمة على المحوّل لكنها تختلف في الحجم وما بعد التدريب. GPT-5.6 (OpenAI): 128,000 رمز سياق، يتميز في الاستدلال. Claude Opus 5 (Anthropic): 200,000 رمز، يستخدم الذكاء الاصطناعي الدستوري للمواءمة. Gemini 3.1 Pro (Google DeepMind): 2,000,000 رمز لمعالجة المستندات الطويلة جداً. هذه الاختلافات تؤثر على التكلفة والكمون والملاءمة لمهام مختلفة.',
             },
             {
               q: 'كم عدد رموز نص من 1000 كلمة؟',
@@ -1316,10 +1316,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         description: 'Les grands modèles de langage prédisent le prochain token par distribution de probabilités — sans comprendre ni récupérer. Apprenez la tokenisation, l\'attention, le RLHF et les paramètres d\'inférence.',
         datePublished: '2026-03-30',
         dateModified: '2026-04-12',
-        keywords: ['grands modèles de langage', 'architecture LLM', 'transformer', 'tokenisation', 'mécanisme d\'attention', 'RLHF', 'température', 'fenêtre de contexte', 'ingénierie de prompt', 'GPT-5.5', 'Claude'],
+        keywords: ['grands modèles de langage', 'architecture LLM', 'transformer', 'tokenisation', 'mécanisme d\'attention', 'RLHF', 'température', 'fenêtre de contexte', 'ingénierie de prompt', 'GPT-5.6', 'Claude'],
         mentions: [
-          { '@type': 'SoftwareApplication', name: 'GPT-5.5' },
-          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5.6' },
+          { '@type': 'SoftwareApplication', name: 'Claude Opus 5' },
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
           { '@type': 'Thing', name: 'Transformer' },
           { '@type': 'Thing', name: 'RLHF' },
@@ -1353,7 +1353,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Les LLMs prédisent des tokens, pas des réponses.** Ils génèrent des séquences de texte statistiquement probables — pas des faits récupérés, des déductions logiques ou des informations vérifiées.',
             '**1 token ≈ 0,75 mot en anglais.** Un document de 1 000 mots utilise ~1 300 tokens. Le chinois et le japonais sont ~50 % plus denses.',
             '**La [température](/prompt-engineering/prompt-engineering-glossary#temperature) contrôle créativité vs déterminisme.** Température 0 = déterministe. Température 1,0 = échantillonnage proportionnel. Au-dessus de 1,5 = risque élevé d\'hallucination.',
-            '**Les [fenêtres de contexte](/prompt-engineering/prompt-engineering-glossary#context-window) ne sont pas de la mémoire.** GPT-5.5 : 128k tokens. Claude Opus 4.8 : 200k tokens. Gemini 3.1 Pro : 2 M de tokens. Rien ne persiste entre les sessions.',
+            '**Les [fenêtres de contexte](/prompt-engineering/prompt-engineering-glossary#context-window) ne sont pas de la mémoire.** GPT-5.6 : 128k tokens. Claude Opus 5 : 200k tokens. Gemini 3.1 Pro : 2 M de tokens. Rien ne persiste entre les sessions.',
             '**La position est déterminante.** Le mécanisme d\'[attention](/prompt-engineering/prompt-engineering-glossary#attention) transformer pondère davantage le début et la fin du contexte. Placez les instructions critiques en premier et en dernier — pas au milieu.',
             '**Le [RLHF](/prompt-engineering/prompt-engineering-glossary#rlhf) façonne le comportement, pas les capacités.** Les refus, le ton et la serviabilité proviennent du fine-tuning post-entraînement — pas de l\'architecture de base.',
           ],
@@ -1361,7 +1361,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         tokenization: {
           title: '[Tokenisation](/prompt-engineering/prompt-engineering-glossary#tokenization) : comment le texte devient des nombres',
           content: [
-            '**Avant qu\'un LLM puisse traiter du texte, il doit le convertir en une séquence d\'identifiants de tokens entiers — un processus appelé [tokenisation](/prompt-engineering/prompt-engineering-glossary#tokenization).** GPT-5.5 utilise le Byte Pair Encoding (BPE), qui décompose le texte en unités de sous-mots fréquents. Claude Opus 4.8 et Gemini 3.1 Pro utilisent des schémas de tokenisation par sous-mots similaires.',
+            '**Avant qu\'un LLM puisse traiter du texte, il doit le convertir en une séquence d\'identifiants de tokens entiers — un processus appelé [tokenisation](/prompt-engineering/prompt-engineering-glossary#tokenization).** GPT-5.6 utilise le Byte Pair Encoding (BPE), qui décompose le texte en unités de sous-mots fréquents. Claude Opus 5 et Gemini 3.1 Pro utilisent des schémas de tokenisation par sous-mots similaires.',
             'La tokenisation dépend de la langue. Le texte anglais représente en moyenne 1 token pour 0,75 mots. Le chinois et le japonais atteignent 1 token pour 0,5 mots — le même document coûte donc environ deux fois plus de tokens en chinois qu\'en anglais, ce qui affecte directement le coût de l\'API et l\'utilisation de la fenêtre de contexte.',
           ],
           tableFormat: true,
@@ -1369,7 +1369,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           rows: [
             { 'Texte d\'entrée': '"Hello, world!"', Tokens: '"Hello", ",", " world", "!"', 'Nombre de tokens': '4' },
             { 'Texte d\'entrée': '"Tokenization"', Tokens: '"Token", "ization"', 'Nombre de tokens': '2' },
-            { 'Texte d\'entrée': '"GPT-5.5"', Tokens: '"G", "PT", "-", "4", "o"', 'Nombre de tokens': '5' },
+            { 'Texte d\'entrée': '"GPT-5.6"', Tokens: '"G", "PT", "-", "4", "o"', 'Nombre de tokens': '5' },
             { 'Texte d\'entrée': '"你好世界" (Bonjour monde, chinois)', Tokens: '"你好", "世界"', 'Nombre de tokens': '2–4 selon le modèle' },
           ],
         },
@@ -1377,7 +1377,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Comment fonctionne le mécanisme d\'attention transformer',
           content: [
             '**L\'architecture transformer utilise un mécanisme appelé self-attention pour déterminer dans quelle mesure chaque token doit « faire attention » à tous les autres tokens de la séquence lors du calcul de sa représentation.** Pour chaque token, le modèle calcule trois vecteurs — Query (Q), Key (K) et Value (V) — et calcule les scores d\'attention comme des produits scalaires entre Q et K, mis à l\'échelle et normalisés avec softmax.',
-            'L\'attention multi-têtes exécute ce processus en parallèle sur plusieurs « têtes » (GPT-5.5 utilise 96 têtes d\'attention dans ses plus grandes couches), chacune apprenant différents patterns de relations. Certaines têtes se spécialisent dans les relations syntaxiques (sujet-verbe), d\'autres dans la similarité sémantique, d\'autres encore dans la coréférence (faire correspondre les pronoms aux noms).',
+            'L\'attention multi-têtes exécute ce processus en parallèle sur plusieurs « têtes » (GPT-5.6 utilise 96 têtes d\'attention dans ses plus grandes couches), chacune apprenant différents patterns de relations. Certaines têtes se spécialisent dans les relations syntaxiques (sujet-verbe), d\'autres dans la similarité sémantique, d\'autres encore dans la coréférence (faire correspondre les pronoms aux noms).',
             'Une implication pratique majeure : l\'effet « lost in the middle ». Les recherches de Liu et al. (2023) à Stanford montrent que les LLMs sous-pondèrent systématiquement les informations au milieu des longs contextes. Pour les prompts dépassant ~2 000 tokens, placez les instructions critiques dans le system prompt (début) et répétez la contrainte la plus importante à la fin du message utilisateur.',
           ],
         },
@@ -1392,7 +1392,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Pré-entraînement :** Prédiction non supervisée du prochain token sur des données à l\'échelle du web. Encode les patterns linguistiques, les connaissances du monde et les raccourcis de raisonnement dans les poids du modèle (~70B–405B paramètres pour les modèles frontier).',
             '**Supervised Fine-Tuning (SFT) :** Le modèle est entraîné sur des paires instruction-réponse soigneusement sélectionnées pour se comporter comme un assistant plutôt que comme un simple prédicteur de texte.',
             '**RLHF / DPO :** Les préférences humaines orientent le modèle vers des sorties utiles, inoffensives et honnêtes. Le DPO (Direct Preference Optimization) est une alternative plus efficace en calcul utilisée par les modèles Llama et Mistral.',
-            '**Constitutional AI (Anthropic) :** Claude est en plus entraîné avec un ensemble de principes (« constitution ») pour réduire la dépendance aux retours humains pour chaque cas limite — Claude Opus 4.8 utilise cette approche.',
+            '**Constitutional AI (Anthropic) :** Claude est en plus entraîné avec un ensemble de principes (« constitution ») pour réduire la dépendance aux retours humains pour chaque cas limite — Claude Opus 5 utilise cette approche.',
           ],
         },
         inference: {
@@ -1419,8 +1419,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           tableFormat: true,
           columns: ['Modèle', 'Fenêtre de contexte', 'Équivalent en mots approximatif', 'Limite pratique pour les documents'],
           rows: [
-            { Modèle: 'GPT-5.5 (OpenAI)', 'Fenêtre de contexte': '128 000 tokens', 'Équivalent en mots approximatif': '~96 000 mots', 'Limite pratique pour les documents': '~200 pages PDF' },
-            { Modèle: 'Claude Opus 4.8 (Anthropic)', 'Fenêtre de contexte': '200 000 tokens', 'Équivalent en mots approximatif': '~150 000 mots', 'Limite pratique pour les documents': '~300 pages PDF' },
+            { Modèle: 'GPT-5.6 (OpenAI)', 'Fenêtre de contexte': '128 000 tokens', 'Équivalent en mots approximatif': '~96 000 mots', 'Limite pratique pour les documents': '~200 pages PDF' },
+            { Modèle: 'Claude Opus 5 (Anthropic)', 'Fenêtre de contexte': '200 000 tokens', 'Équivalent en mots approximatif': '~150 000 mots', 'Limite pratique pour les documents': '~300 pages PDF' },
             { Modèle: 'Gemini 3.1 Pro (Google DeepMind)', 'Fenêtre de contexte': '2 000 000 tokens', 'Équivalent en mots approximatif': '~1 500 000 mots', 'Limite pratique pour les documents': '~3 000 pages PDF' },
             { Modèle: 'LLaMA 3.1 70B (Meta, via Ollama)', 'Fenêtre de contexte': '128 000 tokens', 'Équivalent en mots approximatif': '~96 000 mots', 'Limite pratique pour les documents': '~200 pages PDF' },
           ],
@@ -1454,7 +1454,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptquorumBridge: {
           title: 'Tester les effets de température entre modèles dans PromptQuorum',
           content: [
-            '**Testé dans PromptQuorum — l\'envoi du même brief créatif à GPT-5.5, Claude Opus 4.8 et Gemini 3.1 Pro à température 0 vs température 0,9 a montré que Claude Opus 4.8 présente la plus faible variation de sortie entre températures, tandis que Gemini 3.1 Pro affiche la plus grande variation.** À température 0,9, Gemini 3.1 Pro a produit des sorties en moyenne 34 % plus longues qu\'à température 0.',
+            '**Testé dans PromptQuorum — l\'envoi du même brief créatif à GPT-5.6, Claude Opus 5 et Gemini 3.1 Pro à température 0 vs température 0,9 a montré que Claude Opus 5 présente la plus faible variation de sortie entre températures, tandis que Gemini 3.1 Pro affiche la plus grande variation.** À température 0,9, Gemini 3.1 Pro a produit des sorties en moyenne 34 % plus longues qu\'à température 0.',
             'Avec le dispatch multi-modèle de PromptQuorum, vous pouvez exécuter n\'importe quel prompt simultanément contre tous les modèles disponibles à une température spécifiée et comparer les sorties côte à côte — ce qui rend pratique le calibrage des paramètres de température pour votre tâche spécifique plutôt que de s\'appuyer sur les valeurs par défaut des modèles.',
           ],
         },
@@ -1462,7 +1462,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Différences d\'architecture LLM par région',
           content: [
             '**L\'architecture et les performances des LLMs varient considérablement selon la composition des données d\'entraînement, la stratégie de tokenisation et les contraintes réglementaires d\'une région à l\'autre.** Comprendre ces différences est crucial pour les équipes déployant des modèles à l\'échelle mondiale.',
-            '**[Qwen 3](/prompt-engineering/prompt-engineering-glossary#tokenization) atteint une efficacité de tokenisation supérieure pour les scripts CJK (chinois, japonais, coréen)** — utilisant environ 0,3 token par caractère pour le mandarin comparé à 0,5 token par caractère pour GPT-5.5. Cette réduction de 40 % du nombre de tokens réduit directement les coûts API et la latence pour les applications en langues asiatiques. Les données d\'entraînement de Qwen comprennent 20 % de contenu CJK, optimisant le tokeniseur pour les scripts où la densité caractère-sémantique est la plus élevée.',
+            '**[Qwen 3](/prompt-engineering/prompt-engineering-glossary#tokenization) atteint une efficacité de tokenisation supérieure pour les scripts CJK (chinois, japonais, coréen)** — utilisant environ 0,3 token par caractère pour le mandarin comparé à 0,5 token par caractère pour GPT-5.6. Cette réduction de 40 % du nombre de tokens réduit directement les coûts API et la latence pour les applications en langues asiatiques. Les données d\'entraînement de Qwen comprennent 20 % de contenu CJK, optimisant le tokeniseur pour les scripts où la densité caractère-sémantique est la plus élevée.',
             '**Mistral Small et Mistral Large sont explicitement conçus pour le déploiement européen**, avec des données d\'entraînement filtrées pour respecter le RGPD, la loi française sur l\'IA et les réglementations de l\'UE sur la conservation des données et la transparence des modèles. Contrairement aux modèles entraînés principalement sur des données web non filtrées, Mistral documente les sources de données et exclut les informations personnelles des citoyens de l\'UE de l\'entraînement, ce qui en fait le choix par défaut pour les secteurs réglementés en Europe (banque, santé, legal tech).',
             '**L\'architecture de DeepSeek reflète sa composition d\'entraînement** : 70 % des données de pré-entraînement sont en chinois et en anglais, 15 % en code, 15 % dans d\'autres langues. Ce ratio produit un modèle biaisé vers la fluidité en langue chinoise et la vitesse de génération de code, avec des performances nettement inférieures sur les langues à faibles ressources. La distribution des tokens et les patterns d\'attention sont optimisés pour les patterns de fréquence du mandarin, pas de l\'anglais.',
           ],
@@ -1472,7 +1472,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '[Fondamentaux : Qu\'est-ce que l\'ingénierie de prompt ?](/prompt-engineering/what-is-prompt-engineering) — comment appliquer les connaissances sur l\'architecture LLM à la conception systématique de prompts',
             '[Fondamentaux : Fenêtres de contexte expliquées — Pourquoi l\'IA oublie](/prompt-engineering/context-windows-explained-why-ai-forgets) — exploration approfondie des limites des fenêtres de contexte et des stratégies de récupération',
-            '[Fondamentaux : Tokens, coûts et limites : l\'économie du prompting IA](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — tarification des tokens, limites de débit et optimisation des coûts pour GPT-5.5, Claude et Gemini',
+            '[Fondamentaux : Tokens, coûts et limites : l\'économie du prompting IA](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — tarification des tokens, limites de débit et optimisation des coûts pour GPT-5.6, Claude et Gemini',
             '[Fondamentaux : Hallucinations IA expliquées — Pourquoi les LLMs inventent](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — comment la prédiction de tokens et l\'absence de récupération de faits conduisent à des erreurs de confiance',
           ],
         },
@@ -1483,7 +1483,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Apprenez les trois couches principales de l\'architecture transformer : embeddings, attention et projection de sortie.** Vous n\'avez pas besoin de l\'implémenter, mais comprenez conceptuellement : les embeddings convertissent les tokens en vecteurs, l\'attention compare toutes les paires de tokens pour comprendre les relations, la projection de sortie remappe vers le vocabulaire. Cela explique pourquoi les LLMs comprennent le contexte et pourquoi ils hallucinent.',
             '**Comprenez pourquoi les LLMs hallucinent : ils prédisent les « tokens suivants probables » à partir des motifs des données d\'entraînement, pas des « faits corrects ».** Lorsque les données d\'entraînement sont contradictoires ou rares sur un sujet, la meilleure estimation du modèle est parfois erronée. C\'est une propriété fondamentale, pas un bug corrigible. Réglez la température (T) basse pour les tâches factuelles, haute pour les tâches créatives.',
             '**Expérimentez avec la température et le top-p pour voir comment ils modifient la sortie.** Générez du texte à T=0.0 (déterministe), T=0.7 (varié mais cohérent) et T=1.5 (aléatoire). Un T plus élevé signifie plus de variation. Le top-p (nucleus sampling) filtre les tokens peu probables, réduisant les incohérences.',
-            '**Comprenez les fenêtres de contexte : le modèle ne « voit » qu\'une fenêtre fixe des tokens les plus récents.** La fenêtre de 128k tokens de GPT-5.5 équivaut à environ 96 000 mots. Les informations anciennes sont « oubliées » car elles tombent hors de la fenêtre. Cela explique pourquoi les LLMs contredisent parfois des informations antérieures dans une longue conversation.',
+            '**Comprenez les fenêtres de contexte : le modèle ne « voit » qu\'une fenêtre fixe des tokens les plus récents.** La fenêtre de 128k tokens de GPT-5.6 équivaut à environ 96 000 mots. Les informations anciennes sont « oubliées » car elles tombent hors de la fenêtre. Cela explique pourquoi les LLMs contredisent parfois des informations antérieures dans une longue conversation.',
           ],
         },
         faq: {
@@ -1496,7 +1496,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Qu\'est-ce qu\'un token dans un LLM ?',
-              a: 'Un token est la plus petite unité traitée par un LLM — environ 0,75 mot en anglais et 0,5 mot en chinois ou japonais. Les mots, sous-mots, ponctuation et espaces deviennent tous des tokens. GPT-5.5 utilise le BPE (Byte Pair Encoding) pour diviser le texte en tokens. Un document de 1 000 mots représente environ 1 300 tokens en anglais.',
+              a: 'Un token est la plus petite unité traitée par un LLM — environ 0,75 mot en anglais et 0,5 mot en chinois ou japonais. Les mots, sous-mots, ponctuation et espaces deviennent tous des tokens. GPT-5.6 utilise le BPE (Byte Pair Encoding) pour diviser le texte en tokens. Un document de 1 000 mots représente environ 1 300 tokens en anglais.',
             },
             {
               q: 'Que fait la température dans un LLM ?',
@@ -1512,7 +1512,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Quelle est la différence entre une fenêtre de contexte et la mémoire ?',
-              a: 'La fenêtre de contexte englobe tout le texte que le modèle peut voir lors d\'un appel d\'inférence — system prompt, historique et message actuel. Ce n\'est pas de la mémoire persistante : lorsque la conversation se termine, le modèle ne retient rien. GPT-5.5 : 128 000 tokens. Claude Opus 4.8 : 200 000 tokens. Gemini 3.1 Pro : 2 000 000 tokens.',
+              a: 'La fenêtre de contexte englobe tout le texte que le modèle peut voir lors d\'un appel d\'inférence — system prompt, historique et message actuel. Ce n\'est pas de la mémoire persistante : lorsque la conversation se termine, le modèle ne retient rien. GPT-5.6 : 128 000 tokens. Claude Opus 5 : 200 000 tokens. Gemini 3.1 Pro : 2 000 000 tokens.',
             },
             {
               q: 'Qu\'est-ce que l\'effet « lost in the middle » et comment l\'éviter ?',
@@ -1523,8 +1523,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
               a: 'Le RLHF est une technique post-entraînement où des évaluateurs humains notent les sorties, un modèle de récompense est entraîné et le LLM est fine-tuné pour maximiser la récompense. Le Constitutional AI (utilisé par Anthropic pour Claude) étend le RLHF en ajoutant un ensemble de principes écrits (« constitution ») qui guident le comportement du modèle — ce qui réduit la dépendance aux retours humains pour chaque cas limite.',
             },
             {
-              q: 'Quelle est la différence architecturale entre GPT-5.5, Claude et Gemini ?',
-              a: 'Tous trois sont des LLMs basés sur transformer mais diffèrent en taille, fenêtre de contexte et post-entraînement. GPT-5.5 (OpenAI) : 128 000 tokens. Claude Opus 4.8 (Anthropic) : 200 000 tokens, utilise le Constitutional AI. Gemini 3.1 Pro (Google DeepMind) : 2 000 000 tokens. Ces différences influencent le coût, la latence et l\'adéquation — GPT-5.5 excelle en raisonnement, Claude sur les longs contextes, Gemini pour le traitement de documents extrêmement longs.',
+              q: 'Quelle est la différence architecturale entre GPT-5.6, Claude et Gemini ?',
+              a: 'Tous trois sont des LLMs basés sur transformer mais diffèrent en taille, fenêtre de contexte et post-entraînement. GPT-5.6 (OpenAI) : 128 000 tokens. Claude Opus 5 (Anthropic) : 200 000 tokens, utilise le Constitutional AI. Gemini 3.1 Pro (Google DeepMind) : 2 000 000 tokens. Ces différences influencent le coût, la latence et l\'adéquation — GPT-5.6 excelle en raisonnement, Claude sur les longs contextes, Gemini pour le traitement de documents extrêmement longs.',
             },
             {
               q: 'Combien de tokens représentent 1 000 mots ?',
@@ -1587,10 +1587,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         description: '大規模言語モデルは確率分布経由で次のトークンを予測します — 理解や取得ではなく。トークン化、注意、RLHF、推論パラメータを学んでください。',
         datePublished: '2026-03-30',
         dateModified: '2026-04-12',
-        keywords: ['大規模言語モデル', 'LLMアーキテクチャ', 'Transformer', 'トークン化', '注意メカニズム', 'RLHF', '温度', 'コンテキストウィンドウ', 'プロンプトエンジニアリング', 'GPT-5.5', 'Claude'],
+        keywords: ['大規模言語モデル', 'LLMアーキテクチャ', 'Transformer', 'トークン化', '注意メカニズム', 'RLHF', '温度', 'コンテキストウィンドウ', 'プロンプトエンジニアリング', 'GPT-5.6', 'Claude'],
         mentions: [
-          { '@type': 'SoftwareApplication', name: 'GPT-5.5' },
-          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5.6' },
+          { '@type': 'SoftwareApplication', name: 'Claude Opus 5' },
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
           { '@type': 'Thing', name: 'Transformer' },
           { '@type': 'Thing', name: 'RLHF' },
@@ -1625,7 +1625,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**LLMはトークンを予測し、回答を予測しません。** これらは統計的に可能性の高いテキストシーケンスを生成します — 取得された事実、論理的推論、または検証された情報ではありません。',
             '**1トークン≈0.75英語単語。** 1,000語のドキュメントは〜1,300トークンを使用します。中国語と日本語は〜50％密です。',
             '**[温度](/prompt-engineering/prompt-engineering-glossary#temperature)は創造性対決定性を制御します。** 温度0 =決定的。温度1.0 =比例サンプリング。1.5以上 =高い幻覚リスク。',
-            '**[コンテキストウィンドウ](/prompt-engineering/prompt-engineering-glossary#context-window)はメモリではありません。** GPT-5.5：128kトークン。Claude Opus 4.8：200kトークン。Gemini 3.1 Pro：200万トークン。セッション間で何も保持されません。',
+            '**[コンテキストウィンドウ](/prompt-engineering/prompt-engineering-glossary#context-window)はメモリではありません。** GPT-5.6：128kトークン。Claude Opus 5：200kトークン。Gemini 3.1 Pro：200万トークン。セッション間で何も保持されません。',
             '**位置は決定的です。** トランスフォーマー[注意](/prompt-engineering/prompt-engineering-glossary#attention)メカニズムは、コンテキストの開始と終了の方が中央より重い。重要な指示を最初と最後に配置してください — 中央ではありません。',
             '**[RLHF](/prompt-engineering/prompt-engineering-glossary#rlhf)は動作を形作る、機能ではない。** 拒否、トーン、有用性はポストトレーニングの微調整から生じます — ベースアーキテクチャではなく。',
           ],
@@ -1634,7 +1634,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         tokenization: {
           title: '[トークン化](/prompt-engineering/prompt-engineering-glossary#tokenization)：テキストが数字になる方法',
           content: [
-            '**LLMがテキストを処理する前に、それを整数トークンIDのシーケンスに変換する必要があります — [トークン化](/prompt-engineering/prompt-engineering-glossary#tokenization)と呼ばれるプロセス。** GPT-5.5はバイトペアエンコーディング（BPE）を使用し、テキストを一般的な部分単語ユニットに分割します。Claude Opus 4.8とGemini 3.1 Proは同様のサブワードトークン化スキームを使用します。',
+            '**LLMがテキストを処理する前に、それを整数トークンIDのシーケンスに変換する必要があります — [トークン化](/prompt-engineering/prompt-engineering-glossary#tokenization)と呼ばれるプロセス。** GPT-5.6はバイトペアエンコーディング（BPE）を使用し、テキストを一般的な部分単語ユニットに分割します。Claude Opus 5とGemini 3.1 Proは同様のサブワードトークン化スキームを使用します。',
             'トークン化は言語に依存しています。英語のテキストは平均1トークンあたり0.75単語です。中国語と日本語は1トークンあたり0.5単語になります — 同じドキュメントは中国語では英語の約2倍のトークンがかかり、APIコストとコンテキストウィンドウの使用法に直接影響します。',
           ],
           tableFormat: true,
@@ -1642,7 +1642,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           rows: [
             { '入力テキスト': '"Hello, world!"', 'トークン': '"Hello", ",", " world", "!"', 'トークン数': '4' },
             { '入力テキスト': '"Tokenization"', 'トークン': '"Token", "ization"', 'トークン数': '2' },
-            { '入力テキスト': '"GPT-5.5"', 'トークン': '"G", "PT", "-", "4", "o"', 'トークン数': '5' },
+            { '入力テキスト': '"GPT-5.6"', 'トークン': '"G", "PT", "-", "4", "o"', 'トークン数': '5' },
             { '入力テキスト': '"你好世界"（こんにちは世界、中国語）', 'トークン': '"你好", "世界"', 'トークン数': 'モデルに応じて2–4' },
           ],
         },
@@ -1651,7 +1651,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'トランスフォーマー注意メカニズムがどのように機能するか',
           content: [
             '**トランスフォーマーアーキテクチャはセルフアテンションと呼ばれるメカニズムを使用して、シーケンス内のすべての他のトークンに「注意を払う」各トークンの程度を決定します。** 各トークンのために、モデルは3つのベクトル — クエリ（Q）、キー（K）、値（V） — を計算し、QとKのドット積として注意スコアを決定し、ソフトマックスでスケーリングと正規化します。',
-            'マルチヘッド注意は複数の「ヘッド」にわたってこのプロセスを並列に実行します（GPT-5.5は最大層で96注意ヘッドを使用）。各ヘッドは異なる関係パターンを学習します。いくつかのヘッドは構文関係（主語-動詞）に専門化し、他は意味論的な類似性に、他は照応（代名詞を名詞に関連付ける）。',
+            'マルチヘッド注意は複数の「ヘッド」にわたってこのプロセスを並列に実行します（GPT-5.6は最大層で96注意ヘッドを使用）。各ヘッドは異なる関係パターンを学習します。いくつかのヘッドは構文関係（主語-動詞）に専門化し、他は意味論的な類似性に、他は照応（代名詞を名詞に関連付ける）。',
             '重要な実際の結果：「Lost in the Middle」効果。Stanford Universityの Liu et al.（2023）の研究は、LLMが長いコンテキストの真ん中の情報を体系的に下重することを示しています。プロンプトに〜2,000を超えるトークンがある場合、重要な指示をシステムプロンプト（開始）に配置し、最も重要な制約をユーザーメッセージの終わりで繰り返します。',
           ],
         },
@@ -1667,7 +1667,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**事前トレーニング：** Webスケールデータの教師なし次トークン予測。言語パターン、世界知識、推論のショートカットをモデルウェイト（フロンティアモデルで70B〜405Bパラメータ）にエンコードします。',
             '**監視されたファインチューニング（SFT）：** モデルは、純粋なテキスト予測器ではなくアシスタントとして動作するために、キュートされた指示応答ペアで訓練されます。',
             '**RLHF / DPO：** 人的嗜好がモデルを有用で無害で誠実な出力に向かって導きます。DPO（Direct Preference Optimization）はLlamaおよびMistralモデルで使用される、より計算効率の高い代替手段です。',
-            '**Constitutional AI（Anthropic）：** Claudeは、エッジケースで人的フィードバックへの依存性を減らすために、原則のセット（「憲法」）を使って追加でトレーニングされます — Claude Opus 4.8はこのアプローチを使用します。',
+            '**Constitutional AI（Anthropic）：** Claudeは、エッジケースで人的フィードバックへの依存性を減らすために、原則のセット（「憲法」）を使って追加でトレーニングされます — Claude Opus 5はこのアプローチを使用します。',
           ],
         },
 
@@ -1696,8 +1696,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           tableFormat: true,
           columns: ['モデル', 'コンテキストウィンドウ', '概算単語相当', '実用的なドキュメント制限'],
           rows: [
-            { 'モデル': 'GPT-5.5（OpenAI）', 'コンテキストウィンドウ': '128,000トークン', '概算単語相当': '〜96,000単語', '実用的なドキュメント制限': '〜200ページのPDF' },
-            { 'モデル': 'Claude Opus 4.8（Anthropic）', 'コンテキストウィンドウ': '200,000トークン', '概算単語相当': '〜150,000単語', '実用的なドキュメント制限': '〜300ページのPDF' },
+            { 'モデル': 'GPT-5.6（OpenAI）', 'コンテキストウィンドウ': '128,000トークン', '概算単語相当': '〜96,000単語', '実用的なドキュメント制限': '〜200ページのPDF' },
+            { 'モデル': 'Claude Opus 5（Anthropic）', 'コンテキストウィンドウ': '200,000トークン', '概算単語相当': '〜150,000単語', '実用的なドキュメント制限': '〜300ページのPDF' },
             { 'モデル': 'Gemini 3.1 Pro（Google DeepMind）', 'コンテキストウィンドウ': '2,000,000トークン', '概算単語相当': '〜1,500,000単語', '実用的なドキュメント制限': '〜3,000ページのPDF' },
             { 'モデル': 'LLaMA 3.1 70B（Meta、Ollamaより）', 'コンテキストウィンドウ': '128,000トークン', '概算単語相当': '〜96,000単語', '実用的なドキュメント制限': '〜200ページのPDF' },
           ],
@@ -1734,7 +1734,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptquorumBridge: {
           title: 'PromptQuorumを使用したモデル全体の温度効果をテストします',
           content: [
-            '**PromptQuorumでテスト済み — 温度0対温度0.9の同じ創造的なブリーフィングをGPT-5.5、Claude Opus 4.8、Gemini 3.1 Proに送信すると、Claude Opus 4.8は気温の間で出力の変動が最も低く、Gemini 3.1 Proは最も高いです。** 温度0.9では、Gemini 3.1 Proは温度0での平均出力より平均34％長い出力を生成しました。',
+            '**PromptQuorumでテスト済み — 温度0対温度0.9の同じ創造的なブリーフィングをGPT-5.6、Claude Opus 5、Gemini 3.1 Proに送信すると、Claude Opus 5は気温の間で出力の変動が最も低く、Gemini 3.1 Proは最も高いです。** 温度0.9では、Gemini 3.1 Proは温度0での平均出力より平均34％長い出力を生成しました。',
             'PromptQuorumのマルチモデルディスパッチを使用すると、特定の温度で利用可能なすべてのモデルに対して同時に各プロンプトを実行し、側次に出力を比較できます — これは特定のタスクの温度設定をキャリブレートし、モデルのデフォルトを信頼する代わりに、実用的にします。',
           ],
         },
@@ -1743,7 +1743,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'LLMアーキテクチャ地域別の違い',
           content: [
             '**LLMアーキテクチャとパフォーマンスは、トレーニングデータの構成、トークン化戦略、地域全体の規制要件によって大きく異なります。** グローバルモデルを展開するチームにとって、これらの違いを理解することは重要です。',
-            '**[Qwen 3](/prompt-engineering/prompt-engineering-glossary#tokenization)はCJKスクリプト（中国語、日本語、韓国語）の優れたトークン化効率を達成しています** — 標準中国語で約0.3トークン/文字対GPT-5.5の0.5トークン/文字。このトークンの40％削減は、アジア言語のアプリケーションのAPIコストと遅延を直接削減します。Qwenのトレーニングデータには20％のCJK含量が含まれており、文字対セマンティック密度が最も高いスクリプトのトークン化器を最適化します。',
+            '**[Qwen 3](/prompt-engineering/prompt-engineering-glossary#tokenization)はCJKスクリプト（中国語、日本語、韓国語）の優れたトークン化効率を達成しています** — 標準中国語で約0.3トークン/文字対GPT-5.6の0.5トークン/文字。このトークンの40％削減は、アジア言語のアプリケーションのAPIコストと遅延を直接削減します。Qwenのトレーニングデータには20％のCJK含量が含まれており、文字対セマンティック密度が最も高いスクリプトのトークン化器を最適化します。',
             '**Mistral SmallおよびMistral LargeはEU展開用に明示的に設計されており、GDPR、フランスのAI法、およびデータストレージとモデルの透明性に関するEU規制のコンプライアンスのためにフィルターされたトレーニングデータがあります。** 主に無フィルタWebデータで訓練されたモデルとは異なり、Mistralはデータの出所を文書化し、トレーニングからEU市民の個人データを除外しており、ヨーロッパの規制産業（銀行、医療、法務技術）の標準選択になります。',
             '**DeepSeekのアーキテクチャはトレーニング構成に反映されています**：事前訓練データの70％は中国語と英語、15％はコード、15％は他の言語です。この比率は、中国語の言語流暢性とコード生成速度を優先するモデルを作成し、リソース貧弱言語で明らかに低いパフォーマンスがあります。トークン分布と注意パターンは、英語ではなく標準中国語の周波数パターンに対して最適化されています。',
           ],
@@ -1754,7 +1754,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '[基礎：プロンプトエンジニアリングとは？](/prompt-engineering/what-is-prompt-engineering) — LLMアーキテクチャの知識を体系的なプロンプト設計に適用する方法',
             '[基礎：コンテキストウィンドウの説明 — AIが忘れる理由](/prompt-engineering/context-windows-explained-why-ai-forgets) — コンテキストウィンドウの制限と検索戦略への深い潜在',
-            '[基礎：トークン、コスト＆制限：AIプロンプティングの経済学](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — トークン価格設定、レート制限、およびGPT-5.5、Claude、Gemini全体のコスト最適化',
+            '[基礎：トークン、コスト＆制限：AIプロンプティングの経済学](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — トークン価格設定、レート制限、およびGPT-5.6、Claude、Gemini全体のコスト最適化',
             '[基礎：AI幻覚が説明 — LLMなぜ物を作る](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — トークン予測と不足した事実検索がどのように信頼エラーに導くか',
           ],
         },
@@ -1766,7 +1766,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Transformerアーキテクチャの3つの中核層（埋め込み、注意、出力射影）を学ぶ。** 実装する必要はありませんが、概念として理解してください：埋め込みはトークンをベクトルに変換し、注意はすべてのトークンペアを比較して関係性を理解し、出力射影は語彙に再マッピングします。これにより、LLMがなぜ文脈を理解し、なぜ幻覚を起こすのかが説明できます。',
             '**LLMがなぜ幻覚を起こすのかを理解する：訓練データのパターンに基づいて「起こりそうな次のトークン」を予測しているのであり、「正しい事実」を予測しているのではありません。** あるトピックについて訓練データが矛盾していたり乏しかったりすると、モデルの最良の推測が時に誤ることがあります。これは修正可能なバグではなく、根本的な性質です。事実に基づくタスクでは温度（T）を低く、創造的なタスクでは高く設定してください。',
             '**温度とtop-pを実験して、出力がどう変化するかを確認する。** T=0.0（決定的）、T=0.7（多様だが一貫性あり）、T=1.5（ランダム）でテキストを生成してください。Tが高いほど変動が大きくなります。top-p（核サンプリング）は起こりにくいトークンを除外し、無意味な出力を減らします。',
-            '**コンテキストウィンドウを理解する：モデルは最近のトークンの固定されたウィンドウしか「見て」いません。** GPT-5.5の128kトークンウィンドウは約96,000語に相当します。古い情報はウィンドウの外に出るため「忘れられ」ます。これにより、LLMが長い会話の中で以前の情報と矛盾することがある理由が説明できます。',
+            '**コンテキストウィンドウを理解する：モデルは最近のトークンの固定されたウィンドウしか「見て」いません。** GPT-5.6の128kトークンウィンドウは約96,000語に相当します。古い情報はウィンドウの外に出るため「忘れられ」ます。これにより、LLMが長い会話の中で以前の情報と矛盾することがある理由が説明できます。',
           ],
         },
 
@@ -1780,7 +1780,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'LLMのトークンは何ですか？',
-              a: 'トークンはLLMが処理する最小単位です — 英語では約0.75単語であり、中国語または日本語では約0.5単語です。単語、部分単語、句読点、スペースはすべてトークンです。GPT-5.5はバイトペアエンコーディング（BPE）を使用してテキストをトークンに分割します。1,000語のドキュメントは英語で約1,300トークンを生成します。',
+              a: 'トークンはLLMが処理する最小単位です — 英語では約0.75単語であり、中国語または日本語では約0.5単語です。単語、部分単語、句読点、スペースはすべてトークンです。GPT-5.6はバイトペアエンコーディング（BPE）を使用してテキストをトークンに分割します。1,000語のドキュメントは英語で約1,300トークンを生成します。',
             },
             {
               q: 'LLMの温度は何をしますか？',
@@ -1796,7 +1796,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'コンテキストウィンドウとメモリの違いは何ですか？',
-              a: 'コンテキストウィンドウは、推論呼び出し中にモデルが見ることができるすべてのテキストをカバーしています — システムプロンプト、履歴、現在のメッセージ。永続的なメモリではありません。会話が終わると、モデルは何も保持します。GPT-5.5：128,000トークン。Claude Opus 4.8：200,000トークン。Gemini 3.1 Pro：2,000,000トークン。',
+              a: 'コンテキストウィンドウは、推論呼び出し中にモデルが見ることができるすべてのテキストをカバーしています — システムプロンプト、履歴、現在のメッセージ。永続的なメモリではありません。会話が終わると、モデルは何も保持します。GPT-5.6：128,000トークン。Claude Opus 5：200,000トークン。Gemini 3.1 Pro：2,000,000トークン。',
             },
             {
               q: '「Lost in the Middle」効果は何ですか、そしてどのようにそれを避けますか？',
@@ -1807,8 +1807,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
               a: 'RLHFは、人間の評価者がモデル出力を評価し、報酬モデルが訓練され、LLMがその報酬を最大化するために微調整されるポストトレーニング技術です。Constitutional AI（ClaudeのAnthropicによって）は、モデルの動作をガイドする書き込みの原則（「憲法」）のセットでRLHFを拡張します — これにより、エッジケースで人的フィードバックへの依存性が低下します。',
             },
             {
-              q: 'アーキテクチャのGPT-5.5、Claude、Geminはどのように異なりますか？',
-              a: '3つはすべてトランスフォーマーベースのLLMですが、スケーリング、コンテキストウィンドウ、ポストトレーニングが異なります。GPT-5.5（OpenAI）：128,000トークン。Claude Opus 4.8（Anthropic）：200,000トークン、Constitutional AIを使用します。Gemini 3.1 Pro（Google DeepMind）：2,000,000トークン。これらの違いはコスト、遅延、適合性に影響を与えます — GPT-5.5は推論で輝き、長コンテキストではClaude、Geminは非常に長いドキュメント処理に適しています。',
+              q: 'アーキテクチャのGPT-5.6、Claude、Geminはどのように異なりますか？',
+              a: '3つはすべてトランスフォーマーベースのLLMですが、スケーリング、コンテキストウィンドウ、ポストトレーニングが異なります。GPT-5.6（OpenAI）：128,000トークン。Claude Opus 5（Anthropic）：200,000トークン、Constitutional AIを使用します。Gemini 3.1 Pro（Google DeepMind）：2,000,000トークン。これらの違いはコスト、遅延、適合性に影響を与えます — GPT-5.6は推論で輝き、長コンテキストではClaude、Geminは非常に長いドキュメント処理に適しています。',
             },
             {
               q: '1,000文字のテキストにはいくつのトークンがありますか？',
@@ -1872,10 +1872,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         description: '大型语言模型通过概率分布预测下一个令牌——而非理解或检索。学习令牌化、注意力机制、RLHF和推理参数。',
         datePublished: '2026-03-30',
         dateModified: '2026-04-12',
-        keywords: ['大型语言模型', 'LLM架构', 'Transformer', '令牌化', '注意力机制', 'RLHF', '温度', '上下文窗口', '提示工程', 'GPT-5.5', 'Claude'],
+        keywords: ['大型语言模型', 'LLM架构', 'Transformer', '令牌化', '注意力机制', 'RLHF', '温度', '上下文窗口', '提示工程', 'GPT-5.6', 'Claude'],
         mentions: [
-          { '@type': 'SoftwareApplication', name: 'GPT-5.5' },
-          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5.6' },
+          { '@type': 'SoftwareApplication', name: 'Claude Opus 5' },
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
           { '@type': 'Thing', name: 'Transformer' },
           { '@type': 'Thing', name: 'RLHF' },
@@ -1910,7 +1910,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**LLM预测令牌，而非答案。** 它们生成统计上可能的文本序列——不是检索到的事实、逻辑推理或经过验证的信息。',
             '**1个令牌≈0.75个英语单词。** 1,000词的文档使用约1,300个令牌。中文和日文密度约高50%。',
             '**[温度](/prompt-engineering/prompt-engineering-glossary#temperature)控制创意与确定性。** 温度0=确定性。温度1.0=按比例采样。超过1.5=高幻觉风险。',
-            '**[上下文窗口](/prompt-engineering/prompt-engineering-glossary#context-window)不是记忆。** GPT-5.5：128k令牌。Claude Opus 4.8：200k令牌。Gemini 3.1 Pro：200万令牌。会话之间不保留任何内容。',
+            '**[上下文窗口](/prompt-engineering/prompt-engineering-glossary#context-window)不是记忆。** GPT-5.6：128k令牌。Claude Opus 5：200k令牌。Gemini 3.1 Pro：200万令牌。会话之间不保留任何内容。',
             '**位置至关重要。** Transformer[注意力](/prompt-engineering/prompt-engineering-glossary#attention)机制对上下文开头和结尾的权重高于中间。将重要指令放在最前面和最后面——而不是中间。',
             '**[RLHF](/prompt-engineering/prompt-engineering-glossary#rlhf)塑造行为，而非能力。** 拒绝、语气和有用性来自训练后微调——而非基础架构。',
           ],
@@ -1919,7 +1919,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         tokenization: {
           title: '[令牌化](/prompt-engineering/prompt-engineering-glossary#tokenization)：文本如何变为数字',
           content: [
-            '**在LLM处理文本之前，必须将其转换为整数令牌ID序列——这一过程称为[令牌化](/prompt-engineering/prompt-engineering-glossary#tokenization)。** GPT-5.5使用字节对编码（BPE），将文本分解为常见的子词单元。Claude Opus 4.8和Gemini 3.1 Pro使用类似的子词令牌化方案。',
+            '**在LLM处理文本之前，必须将其转换为整数令牌ID序列——这一过程称为[令牌化](/prompt-engineering/prompt-engineering-glossary#tokenization)。** GPT-5.6使用字节对编码（BPE），将文本分解为常见的子词单元。Claude Opus 5和Gemini 3.1 Pro使用类似的子词令牌化方案。',
             '令牌化取决于语言。英文文本平均每0.75个单词对应1个令牌。中文和日文为每0.5个词对应1个令牌——同一文档的中文版本需要约英文版两倍的令牌，直接影响API成本和上下文窗口使用。',
           ],
           tableFormat: true,
@@ -1927,7 +1927,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           rows: [
             { '输入文本': '"Hello, world!"', '令牌': '"Hello", ",", " world", "!"', '令牌数量': '4' },
             { '输入文本': '"Tokenization"', '令牌': '"Token", "ization"', '令牌数量': '2' },
-            { '输入文本': '"GPT-5.5"', '令牌': '"G", "PT", "-", "4", "o"', '令牌数量': '5' },
+            { '输入文本': '"GPT-5.6"', '令牌': '"G", "PT", "-", "4", "o"', '令牌数量': '5' },
             { '输入文本': '"你好世界"（中文问候）', '令牌': '"你好", "世界"', '令牌数量': '根据模型为2–4' },
           ],
         },
@@ -1936,7 +1936,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Transformer注意力机制如何工作',
           content: [
             '**Transformer架构使用一种称为自注意力的机制来确定每个令牌在计算其表示时应"关注"序列中所有其他令牌的程度。** 对于每个令牌，模型计算三个向量——查询（Q）、键（K）和值（V）——并将注意力分数计算为Q和K的点积，用softmax进行缩放和归一化。',
-            '多头注意力在多个"头"上并行运行此过程（GPT-5.5在其最大层中使用96个注意力头），每个头学习不同的关系模式。一些头专注于句法关系（主语-动词），其他头关注语义相似性，还有一些关注共指（将代词与名词关联）。',
+            '多头注意力在多个"头"上并行运行此过程（GPT-5.6在其最大层中使用96个注意力头），每个头学习不同的关系模式。一些头专注于句法关系（主语-动词），其他头关注语义相似性，还有一些关注共指（将代词与名词关联）。',
             '一个重要的实际结果："Lost in the Middle"效应。Stanford University的Liu et al.（2023）的研究表明，LLM系统性地低估长上下文中间的信息。对于超过约2,000个令牌的提示，将关键指令放在系统提示（开头）中，并在用户消息结尾重复最重要的约束。',
           ],
         },
@@ -1952,7 +1952,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**预训练：** 对网络规模数据进行无监督的下一个令牌预测。将语言模式、世界知识和推理捷径编码到模型权重中（前沿模型约70B至405B参数）。',
             '**监督微调（SFT）：** 在精心策划的指令-响应对上训练模型，使其表现得像助手而非纯文本预测器。',
             '**RLHF / DPO：** 人类偏好引导模型产生有用、无害和诚实的输出。DPO（直接偏好优化）是Llama和Mistral模型使用的计算效率更高的替代方案。',
-            '**Constitutional AI（Anthropic）：** Claude额外使用一套原则（"宪法"）进行训练，以减少对边缘案例中人类反馈的依赖——Claude Opus 4.8使用此方法。',
+            '**Constitutional AI（Anthropic）：** Claude额外使用一套原则（"宪法"）进行训练，以减少对边缘案例中人类反馈的依赖——Claude Opus 5使用此方法。',
           ],
         },
 
@@ -1981,8 +1981,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           tableFormat: true,
           columns: ['模型', '上下文窗口', '近似单词当量', '实际文档限制'],
           rows: [
-            { '模型': 'GPT-5.5（OpenAI）', '上下文窗口': '128,000令牌', '近似单词当量': '约96,000词', '实际文档限制': '约200页PDF' },
-            { '模型': 'Claude Opus 4.8（Anthropic）', '上下文窗口': '200,000令牌', '近似单词当量': '约150,000词', '实际文档限制': '约300页PDF' },
+            { '模型': 'GPT-5.6（OpenAI）', '上下文窗口': '128,000令牌', '近似单词当量': '约96,000词', '实际文档限制': '约200页PDF' },
+            { '模型': 'Claude Opus 5（Anthropic）', '上下文窗口': '200,000令牌', '近似单词当量': '约150,000词', '实际文档限制': '约300页PDF' },
             { '模型': 'Gemini 3.1 Pro（Google DeepMind）', '上下文窗口': '2,000,000令牌', '近似单词当量': '约1,500,000词', '实际文档限制': '约3,000页PDF' },
             { '模型': 'LLaMA 3.1 70B（Meta，通过Ollama）', '上下文窗口': '128,000令牌', '近似单词当量': '约96,000词', '实际文档限制': '约200页PDF' },
           ],
@@ -2019,7 +2019,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptquorumBridge: {
           title: '使用PromptQuorum测试跨模型的温度效果',
           content: [
-            '**在PromptQuorum中测试——向GPT-5.5、Claude Opus 4.8和Gemini 3.1 Pro分别在温度0和温度0.9下发送相同的创意简报，显示Claude Opus 4.8在不同温度间的输出变化最小，而Gemini 3.1 Pro的变化最大。** 在温度0.9时，Gemini 3.1 Pro生成的输出平均比温度0时长34%。',
+            '**在PromptQuorum中测试——向GPT-5.6、Claude Opus 5和Gemini 3.1 Pro分别在温度0和温度0.9下发送相同的创意简报，显示Claude Opus 5在不同温度间的输出变化最小，而Gemini 3.1 Pro的变化最大。** 在温度0.9时，Gemini 3.1 Pro生成的输出平均比温度0时长34%。',
             '使用PromptQuorum的多模型调度，您可以同时针对所有可用模型在特定温度下运行每个提示，并并排比较输出——这使得校准特定任务的温度设置变得实际可行，而不是依赖模型默认值。',
           ],
         },
@@ -2028,7 +2028,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'LLM架构的地区差异',
           content: [
             '**LLM架构和性能因训练数据构成、令牌化策略和法规要求在不同地区存在显著差异。** 对于全球部署模型的团队来说，理解这些差异至关重要。',
-            '**[Qwen 3](/prompt-engineering/prompt-engineering-glossary#tokenization)在CJK脚本（中文、日文、韩文）上实现了卓越的令牌化效率** — 普通话中文约0.3令牌/字符，而GPT-5.5为0.5令牌/字符。这40%的令牌减少直接降低了亚洲语言应用的API成本和延迟。Qwen的训练数据包含20%的CJK内容，优化了字符与语义密度最高的脚本的令牌化器。',
+            '**[Qwen 3](/prompt-engineering/prompt-engineering-glossary#tokenization)在CJK脚本（中文、日文、韩文）上实现了卓越的令牌化效率** — 普通话中文约0.3令牌/字符，而GPT-5.6为0.5令牌/字符。这40%的令牌减少直接降低了亚洲语言应用的API成本和延迟。Qwen的训练数据包含20%的CJK内容，优化了字符与语义密度最高的脚本的令牌化器。',
             '**Mistral Small和Mistral Large专为欧盟部署设计**，训练数据经过过滤以符合GDPR、法国AI法以及欧盟关于数据存储和模型透明度的法规。与主要在未过滤网络数据上训练的模型不同，Mistral记录数据来源并从训练中排除欧盟公民的个人数据，使其成为欧洲受监管行业（银行、医疗保健、法律技术）的标准选择。',
             '**DeepSeek的架构反映了其训练构成**：预训练数据的70%是中文和英文，15%是代码，15%是其他语言。这一比例产生了一个优先考虑中文语言流畅性和代码生成速度的模型，在资源匮乏的语言上性能明显较低。令牌分布和注意力模式针对普通话中文的频率模式优化，而非英语。',
           ],
@@ -2039,7 +2039,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '[基础：什么是提示工程？](/prompt-engineering/what-is-prompt-engineering) — 如何将LLM架构知识应用于系统性提示设计',
             '[基础：上下文窗口解析——AI为何遗忘](/prompt-engineering/context-windows-explained-why-ai-forgets) — 深入探讨上下文窗口限制和检索策略',
-            '[基础：令牌、成本与限制：AI提示的经济学](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — 令牌定价、速率限制以及GPT-5.5、Claude和Gemini的成本优化',
+            '[基础：令牌、成本与限制：AI提示的经济学](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — 令牌定价、速率限制以及GPT-5.6、Claude和Gemini的成本优化',
             '[基础：AI幻觉解析——LLM为何编造内容](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — 令牌预测和缺乏事实检索如何导致置信度错误',
           ],
         },
@@ -2051,7 +2051,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**学习Transformer架构的三个核心层：嵌入、注意力和输出投影。** 你不需要自己实现它，但要从概念上理解：嵌入将令牌转换为向量，注意力比较所有令牌对以理解关系，输出投影再映射回词汇表。这解释了LLM为什么能理解上下文，也解释了它们为什么会产生幻觉。',
             '**理解LLM为什么会产生幻觉：它们基于训练数据中的模式预测"可能的下一个令牌"，而不是"正确的事实"。** 当训练数据在某个主题上存在冲突或稀缺时，模型的最佳猜测有时会出错。这是一种根本属性，而非可修复的缺陷。事实性任务将温度（T）设低，创意性任务设高。',
             '**尝试调整温度和top-p，观察输出的变化。** 在T=0.0（确定性）、T=0.7（多样但连贯）和T=1.5（随机）下生成文本。观察到T越高变化越大。理解top-p（核采样）会过滤掉不太可能的令牌，减少无意义输出。',
-            '**理解上下文窗口：模型只能"看到"最近令牌的固定窗口。** GPT-5.5的128k令牌窗口约等于96,000个单词。较旧的信息因落在窗口之外而被"遗忘"。这解释了为什么LLM有时会在长对话中与之前的信息相矛盾。',
+            '**理解上下文窗口：模型只能"看到"最近令牌的固定窗口。** GPT-5.6的128k令牌窗口约等于96,000个单词。较旧的信息因落在窗口之外而被"遗忘"。这解释了为什么LLM有时会在长对话中与之前的信息相矛盾。',
           ],
         },
 
@@ -2065,7 +2065,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'LLM中的令牌是什么？',
-              a: '令牌是LLM处理的最小单位——英语约0.75个单词，中文或日文约0.5个词。单词、子词、标点符号和空格都是令牌。GPT-5.5使用字节对编码（BPE）将文本分割为令牌。1,000词的文档在英语中产生约1,300个令牌。',
+              a: '令牌是LLM处理的最小单位——英语约0.75个单词，中文或日文约0.5个词。单词、子词、标点符号和空格都是令牌。GPT-5.6使用字节对编码（BPE）将文本分割为令牌。1,000词的文档在英语中产生约1,300个令牌。',
             },
             {
               q: 'LLM中的温度有什么作用？',
@@ -2081,7 +2081,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: '上下文窗口和记忆有什么区别？',
-              a: '上下文窗口涵盖模型在推理调用期间能看到的所有文本——系统提示、历史记录和当前消息。它不是持久记忆：对话结束时，模型不保留任何内容。GPT-5.5：128,000令牌。Claude Opus 4.8：200,000令牌。Gemini 3.1 Pro：2,000,000令牌。',
+              a: '上下文窗口涵盖模型在推理调用期间能看到的所有文本——系统提示、历史记录和当前消息。它不是持久记忆：对话结束时，模型不保留任何内容。GPT-5.6：128,000令牌。Claude Opus 5：200,000令牌。Gemini 3.1 Pro：2,000,000令牌。',
             },
             {
               q: '"Lost in the Middle"效应是什么，如何避免？',
@@ -2092,8 +2092,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
               a: 'RLHF是一种训练后技术，人类评估者对模型输出进行评分，训练奖励模型，然后对LLM进行微调以最大化该奖励。Constitutional AI（Anthropic为Claude开发）通过一套书面原则（"宪法"）扩展了RLHF以指导模型行为——这减少了边缘案例中对人类反馈的依赖。',
             },
             {
-              q: 'GPT-5.5、Claude和Gemini在架构上有何不同？',
-              a: '三者都是基于Transformer的LLM，但在扩展、上下文窗口和训练后处理上有所不同。GPT-5.5（OpenAI）：128,000令牌。Claude Opus 4.8（Anthropic）：200,000令牌，使用Constitutional AI。Gemini 3.1 Pro（Google DeepMind）：2,000,000令牌。这些差异影响成本、延迟和适用性——GPT-5.5在推理上表现出色，Claude擅长长上下文，Gemini适合处理超长文档。',
+              q: 'GPT-5.6、Claude和Gemini在架构上有何不同？',
+              a: '三者都是基于Transformer的LLM，但在扩展、上下文窗口和训练后处理上有所不同。GPT-5.6（OpenAI）：128,000令牌。Claude Opus 5（Anthropic）：200,000令牌，使用Constitutional AI。Gemini 3.1 Pro（Google DeepMind）：2,000,000令牌。这些差异影响成本、延迟和适用性——GPT-5.6在推理上表现出色，Claude擅长长上下文，Gemini适合处理超长文档。',
             },
             {
               q: '1,000词的文本有多少个令牌？',
@@ -2155,10 +2155,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Como os LLMs Realmente Funcionam: Tokens, Atenção e Inferência',
         description: 'Os grandes modelos de linguagem preveem o próximo token usando distribuições de probabilidade — não por compreensão. Aprenda tokenização, transformer attention, RLHF e parâmetros de inferência.',
         datePublished: '2026-03-30',
-        keywords: ['grandes modelos de linguagem', 'arquitetura LLM', 'transformer', 'tokenização', 'mecanismo de atenção', 'RLHF', 'temperatura', 'context window', 'prompt engineering', 'GPT-5.5', 'Claude'],
+        keywords: ['grandes modelos de linguagem', 'arquitetura LLM', 'transformer', 'tokenização', 'mecanismo de atenção', 'RLHF', 'temperatura', 'context window', 'prompt engineering', 'GPT-5.6', 'Claude'],
         mentions: [
-          { '@type': 'SoftwareApplication', name: 'GPT-5.5' },
-          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5.6' },
+          { '@type': 'SoftwareApplication', name: 'Claude Opus 5' },
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
           { '@type': 'Thing', name: 'Transformer' },
           { '@type': 'Thing', name: 'RLHF' },
@@ -2194,7 +2194,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**LLMs preveem tokens, não respostas.** Geram sequências de texto estatisticamente prováveis — não fatos recuperados, deduções lógicas ou informações verificadas.',
             '**1 token ≈ 0,75 palavras em inglês.** Um documento de 1.000 palavras usa ~1.300 tokens. Chinês e japonês são ~50% mais densos.',
             '**A [temperatura](/prompt-engineering/prompt-engineering-glossary#temperature) controla criatividade vs. determinismo.** Temperatura 0 = determinístico. Temperatura 1,0 = amostragem proporcional. Acima de 1,5 = alto risco de alucinação.',
-            '**Os [context windows](/prompt-engineering/prompt-engineering-glossary#context-window) não são memória.** GPT-5.5: 128k tokens. Claude Opus 4.8: 200k tokens. Gemini 3.1 Pro: 2M tokens. Nada persiste entre sessões.',
+            '**Os [context windows](/prompt-engineering/prompt-engineering-glossary#context-window) não são memória.** GPT-5.6: 128k tokens. Claude Opus 5: 200k tokens. Gemini 3.1 Pro: 2M tokens. Nada persiste entre sessões.',
             '**A posição importa.** O [attention](/prompt-engineering/prompt-engineering-glossary#attention) do transformer pondera mais o início e o fim do contexto. Coloque as instruções críticas no início e no final — não no meio.',
             '**O [RLHF](/prompt-engineering/prompt-engineering-glossary#rlhf) molda o comportamento, não a capacidade.** Recusas, tom e utilidade vêm do fine-tuning pós-treinamento — não da arquitetura base.',
           ],
@@ -2202,7 +2202,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         tokenization: {
           title: '[Tokenização](/prompt-engineering/prompt-engineering-glossary#tokenization): Como o Texto Vira Números',
           content: [
-            '**Antes de um LLM poder processar qualquer texto, ele precisa convertê-lo em uma sequência de IDs de token inteiros — um processo chamado [tokenização](/prompt-engineering/prompt-engineering-glossary#tokenization).** O GPT-5.5 usa Byte Pair Encoding (BPE), que divide o texto em unidades de subpalavras frequentes. Claude Opus 4.8 e Gemini 3.1 Pro usam esquemas de tokenização de subpalavras semelhantes.',
+            '**Antes de um LLM poder processar qualquer texto, ele precisa convertê-lo em uma sequência de IDs de token inteiros — um processo chamado [tokenização](/prompt-engineering/prompt-engineering-glossary#tokenization).** O GPT-5.6 usa Byte Pair Encoding (BPE), que divide o texto em unidades de subpalavras frequentes. Claude Opus 5 e Gemini 3.1 Pro usam esquemas de tokenização de subpalavras semelhantes.',
             'A tokenização depende do idioma. O texto em inglês tem em média aproximadamente 1 token por 0,75 palavras. Chinês e japonês têm em média 1 token por 0,5 palavras — o que significa que o mesmo documento custa aproximadamente o dobro de tokens em chinês do que em inglês, afetando diretamente o custo da API e o uso do context window.',
           ],
           tableFormat: true,
@@ -2210,7 +2210,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           rows: [
             { 'Texto de entrada': '"Hello, world!"', Tokens: '"Hello", ",", " world", "!"', 'Número de tokens': '4' },
             { 'Texto de entrada': '"Tokenization"', Tokens: '"Token", "ization"', 'Número de tokens': '2' },
-            { 'Texto de entrada': '"GPT-5.5"', Tokens: '"G", "PT", "-", "4", "o"', 'Número de tokens': '5' },
+            { 'Texto de entrada': '"GPT-5.6"', Tokens: '"G", "PT", "-", "4", "o"', 'Número de tokens': '5' },
             { 'Texto de entrada': '"你好世界" (Olá mundo, chinês)', Tokens: '"你好", "世界"', 'Número de tokens': '2–4 dependendo do modelo' },
           ],
         },
@@ -2218,7 +2218,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Como o Transformer Attention Funciona',
           content: [
             '**A arquitetura transformer usa um mecanismo chamado self-attention para determinar quanto cada token deve "prestar atenção" a todos os outros tokens da sequência ao calcular sua representação.** Para cada token, o modelo calcula três vetores — Query (Q), Key (K) e Value (V) — e calcula pontuações de atenção como produtos escalares entre Q e K, escalados e normalizados com softmax.',
-            'O multi-head attention executa esse processo em paralelo em múltiplas "cabeças" (o GPT-5.5 usa 96 cabeças de atenção em suas maiores camadas), cada uma aprendendo padrões de relacionamento diferentes. Algumas cabeças se especializam em relações sintáticas (sujeito-verbo), outras em similaridade semântica, outras em correferência (associar pronomes a substantivos).',
+            'O multi-head attention executa esse processo em paralelo em múltiplas "cabeças" (o GPT-5.6 usa 96 cabeças de atenção em suas maiores camadas), cada uma aprendendo padrões de relacionamento diferentes. Algumas cabeças se especializam em relações sintáticas (sujeito-verbo), outras em similaridade semântica, outras em correferência (associar pronomes a substantivos).',
             'Uma implicação prática fundamental: o efeito "lost in the middle". Pesquisas de Liu et al. (2023) em Stanford mostram que os LLMs sistematicamente subponderam informações no meio de contextos longos. Para prompts com mais de ~2.000 tokens, coloque as instruções críticas no system prompt (início) e repita a restrição mais importante no final da mensagem do usuário.',
           ],
         },
@@ -2233,7 +2233,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Pré-treinamento:** Previsão não supervisionada do próximo token em dados na escala da web. Codifica padrões de linguagem, conhecimento do mundo e atalhos de raciocínio nos pesos do modelo (~70B–405B parâmetros para modelos frontier).',
             '**Supervised Fine-Tuning (SFT):** O modelo é treinado em pares instrução-resposta curados para se comportar como um assistente, e não como um preditor de texto puro.',
             '**RLHF / DPO:** As preferências humanas guiam o modelo em direção a saídas úteis, inofensivas e honestas. DPO (Direct Preference Optimization) é uma alternativa computacionalmente mais eficiente usada pelos modelos Llama e Mistral.',
-            '**Constitutional AI (Anthropic):** O Claude é adicionalmente treinado usando um conjunto de princípios ("constituição") para reduzir a dependência de feedback humano em casos extremos — o Claude Opus 4.8 usa essa abordagem.',
+            '**Constitutional AI (Anthropic):** O Claude é adicionalmente treinado usando um conjunto de princípios ("constituição") para reduzir a dependência de feedback humano em casos extremos — o Claude Opus 5 usa essa abordagem.',
           ],
         },
         inference: {
@@ -2260,8 +2260,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           tableFormat: true,
           columns: ['Modelo', 'Context window', 'Equivalente aproximado em palavras', 'Limite prático de documento'],
           rows: [
-            { Modelo: 'GPT-5.5 (OpenAI)', 'Context window': '128.000 tokens', 'Equivalente aproximado em palavras': '~96.000 palavras', 'Limite prático de documento': '~PDF de 200 páginas' },
-            { Modelo: 'Claude Opus 4.8 (Anthropic)', 'Context window': '200.000 tokens', 'Equivalente aproximado em palavras': '~150.000 palavras', 'Limite prático de documento': '~PDF de 300 páginas' },
+            { Modelo: 'GPT-5.6 (OpenAI)', 'Context window': '128.000 tokens', 'Equivalente aproximado em palavras': '~96.000 palavras', 'Limite prático de documento': '~PDF de 200 páginas' },
+            { Modelo: 'Claude Opus 5 (Anthropic)', 'Context window': '200.000 tokens', 'Equivalente aproximado em palavras': '~150.000 palavras', 'Limite prático de documento': '~PDF de 300 páginas' },
             { Modelo: 'Gemini 3.1 Pro (Google DeepMind)', 'Context window': '2.000.000 tokens', 'Equivalente aproximado em palavras': '~1.500.000 palavras', 'Limite prático de documento': '~PDF de 3.000 páginas' },
             { Modelo: 'LLaMA 3.1 70B (Meta, via Ollama)', 'Context window': '128.000 tokens', 'Equivalente aproximado em palavras': '~96.000 palavras', 'Limite prático de documento': '~PDF de 200 páginas' },
           ],
@@ -2295,7 +2295,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptquorumBridge: {
           title: 'Testando Efeitos de Temperatura entre Modelos no PromptQuorum',
           content: [
-            '**Testado no PromptQuorum — enviar o mesmo briefing criativo ao GPT-5.5, Claude Opus 4.8 e Gemini 3.1 Pro a temperatura 0 vs. temperatura 0,9 mostrou que o Claude Opus 4.8 tem a menor variação de saída entre temperaturas, enquanto o Gemini 3.1 Pro apresenta a maior variação.** A temperatura 0,9, o Gemini 3.1 Pro produziu saídas em média 34% mais longas do que a temperatura 0.',
+            '**Testado no PromptQuorum — enviar o mesmo briefing criativo ao GPT-5.6, Claude Opus 5 e Gemini 3.1 Pro a temperatura 0 vs. temperatura 0,9 mostrou que o Claude Opus 5 tem a menor variação de saída entre temperaturas, enquanto o Gemini 3.1 Pro apresenta a maior variação.** A temperatura 0,9, o Gemini 3.1 Pro produziu saídas em média 34% mais longas do que a temperatura 0.',
             'Usando o dispatch multi-modelo do PromptQuorum, você pode executar qualquer prompt simultaneamente contra todos os modelos disponíveis a uma temperatura especificada e comparar as saídas lado a lado — tornando prático calibrar as configurações de temperatura para sua tarefa específica em vez de depender dos padrões do modelo.',
           ],
         },
@@ -2303,7 +2303,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Diferenças de Arquitetura LLM por Região',
           content: [
             '**A arquitetura e o desempenho dos LLMs variam significativamente pela composição dos dados de treinamento, estratégia de tokenização e restrições regulatórias entre regiões.** Compreender essas diferenças é fundamental para equipes que implantam modelos globalmente.',
-            '**O [Qwen 3](/prompt-engineering/prompt-engineering-glossary#tokenization) alcança eficiência de tokenização superior para scripts CJK (chinês, japonês, coreano)** — usando aproximadamente 0,3 tokens por caractere para o mandarim comparado a 0,5 tokens por caractere do GPT-5.5. Essa redução de 40% no número de tokens reduz diretamente os custos da API e a latência para aplicações em idiomas asiáticos. Os dados de treinamento do Qwen incluem 20% de conteúdo CJK, otimizando o tokenizador para scripts onde a densidade caractere-semântica é maior.',
+            '**O [Qwen 3](/prompt-engineering/prompt-engineering-glossary#tokenization) alcança eficiência de tokenização superior para scripts CJK (chinês, japonês, coreano)** — usando aproximadamente 0,3 tokens por caractere para o mandarim comparado a 0,5 tokens por caractere do GPT-5.6. Essa redução de 40% no número de tokens reduz diretamente os custos da API e a latência para aplicações em idiomas asiáticos. Os dados de treinamento do Qwen incluem 20% de conteúdo CJK, otimizando o tokenizador para scripts onde a densidade caractere-semântica é maior.',
             '**O Mistral Small e o Mistral Large são explicitamente projetados para implantação europeia**, com dados de treinamento filtrados para conformidade com o RGPD, a Lei de IA da França e os regulamentos da UE sobre retenção de dados e transparência de modelos. Ao contrário de modelos treinados principalmente em dados web não filtrados, o Mistral documenta a origem dos dados e exclui informações pessoais de cidadãos da UE do treinamento, tornando-o a escolha padrão para setores regulados na Europa (bancos, saúde, legal tech).',
             '**A arquitetura do DeepSeek reflete sua composição de treinamento**: 70% dos dados de pré-treinamento estão em chinês e inglês, 15% em código, 15% em outros idiomas. Essa proporção produz um modelo com viés para fluência em chinês e velocidade de geração de código, com desempenho substancialmente menor em idiomas de poucos recursos. A distribuição de tokens e os padrões de atenção são otimizados para os padrões de frequência do mandarim, não do inglês.',
           ],
@@ -2313,7 +2313,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '[Fundamentos: O Que é Prompt Engineering?](/prompt-engineering/what-is-prompt-engineering) — como aplicar o conhecimento da arquitetura LLM ao design sistemático de prompts',
             '[Fundamentos: Context Windows Explicados — Por Que a IA Esquece](/prompt-engineering/context-windows-explained-why-ai-forgets) — análise profunda dos limites do context window e estratégias de recuperação',
-            '[Fundamentos: Tokens, Custos e Limites: A Economia do Prompting com IA](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — preços de tokens, limites de taxa e otimização de custos no GPT-5.5, Claude e Gemini',
+            '[Fundamentos: Tokens, Custos e Limites: A Economia do Prompting com IA](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — preços de tokens, limites de taxa e otimização de custos no GPT-5.6, Claude e Gemini',
             '[Fundamentos: Alucinações de IA Explicadas — Por Que LLMs Inventam Coisas](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — como a previsão de tokens e a falta de recuperação de fatos levam a erros de confiança',
             '[Limitações de IA: O Que os LLMs Não Podem Fazer](/prompt-engineering/ai-limitations-what-llms-cant-do) — as oito restrições estruturais que todos os LLMs compartilham e a solução de engenharia para cada uma',
           ],
@@ -2325,7 +2325,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Aprenda as três camadas principais da arquitetura transformer: embeddings, attention e projeção de saída.** Você não precisa implementar, mas entenda conceitualmente: embeddings convertem tokens em vetores, o attention compara todos os pares de tokens para entender relações, a projeção de saída mapeia de volta ao vocabulário. Isso explica por que os LLMs entendem contexto e por que alucinam.',
             '**Entenda por que os LLMs alucinam: eles preveem "próximos tokens prováveis" com base em padrões de dados de treinamento, não "fatos corretos".** Quando os dados de treinamento têm informações conflitantes ou escassas sobre um tópico, a melhor estimativa do modelo às vezes está errada. Esta é uma propriedade fundamental, não um bug corrigível. Defina a temperatura (T) baixa para tarefas factuais, alta para as criativas.',
             '**Experimente temperatura e top-p para ver como eles alteram a saída.** Gere texto a T=0,0 (determinístico), T=0,7 (variado mas coerente) e T=1,5 (aleatório). Veja que T mais alto = mais variação. Entenda que o top-p (nucleus sampling) filtra tokens improváveis, reduzindo o nonsense.',
-            '**Entenda os context windows: o modelo "vê" apenas uma janela fixa de tokens recentes.** A janela de 128k tokens do GPT-5.5 equivale a ~96.000 palavras. Informações antigas são "esquecidas" porque ficam fora da janela. Isso explica por que os LLMs às vezes contradizem informações anteriores em uma conversa longa.',
+            '**Entenda os context windows: o modelo "vê" apenas uma janela fixa de tokens recentes.** A janela de 128k tokens do GPT-5.6 equivale a ~96.000 palavras. Informações antigas são "esquecidas" porque ficam fora da janela. Isso explica por que os LLMs às vezes contradizem informações anteriores em uma conversa longa.',
           ],
         },
         faq: {
@@ -2338,7 +2338,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'O que é um token em um LLM?',
-              a: 'Um token é a menor unidade que um LLM processa — aproximadamente 0,75 palavras em inglês e 0,5 palavras em chinês ou japonês. Palavras, subpalavras, pontuação e espaços se tornam tokens. O GPT-5.5 usa BPE (Byte Pair Encoding) para dividir o texto em tokens antes de processá-lo. Um documento de 1.000 palavras se torna aproximadamente 1.300 tokens em inglês.',
+              a: 'Um token é a menor unidade que um LLM processa — aproximadamente 0,75 palavras em inglês e 0,5 palavras em chinês ou japonês. Palavras, subpalavras, pontuação e espaços se tornam tokens. O GPT-5.6 usa BPE (Byte Pair Encoding) para dividir o texto em tokens antes de processá-lo. Um documento de 1.000 palavras se torna aproximadamente 1.300 tokens em inglês.',
             },
             {
               q: 'O que a temperatura faz em um LLM?',
@@ -2354,7 +2354,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Qual é a diferença entre um context window e memória?',
-              a: 'O context window é todo o texto que o modelo pode ver durante uma única chamada de inferência — system prompt, histórico e mensagem atual. Não é memória persistente: quando a conversa termina, o modelo não retém nada. GPT-5.5: 128.000 tokens. Claude Opus 4.8: 200.000 tokens. Gemini 3.1 Pro: 2.000.000 tokens.',
+              a: 'O context window é todo o texto que o modelo pode ver durante uma única chamada de inferência — system prompt, histórico e mensagem atual. Não é memória persistente: quando a conversa termina, o modelo não retém nada. GPT-5.6: 128.000 tokens. Claude Opus 5: 200.000 tokens. Gemini 3.1 Pro: 2.000.000 tokens.',
             },
             {
               q: 'O que é o efeito "lost in the middle" e como evitá-lo?',
@@ -2365,8 +2365,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
               a: 'RLHF (Reinforcement Learning from Human Feedback) usa avaliadores humanos para pontuar saídas, treina um modelo de recompensa e ajusta o LLM para maximizar a recompensa. O Constitutional AI (usado pela Anthropic para o Claude) estende o RLHF adicionando um conjunto de princípios escritos ("constituição") que guiam o comportamento do modelo — isso reduz a dependência de feedback humano para cada caso extremo, mantendo um alinhamento consistente com os valores.',
             },
             {
-              q: 'Qual é a diferença arquitetural entre GPT-5.5, Claude e Gemini?',
-              a: 'Os três são LLMs baseados em transformer mas diferem em escala e pós-treinamento. GPT-5.5 (OpenAI): 128.000 tokens de contexto, destaca-se em raciocínio. Claude Opus 4.8 (Anthropic): 200.000 tokens, usa Constitutional AI para alinhamento. Gemini 3.1 Pro (Google DeepMind): 2.000.000 tokens para processamento de documentos ultra-longos. Essas diferenças afetam custo, latência e adequação para diferentes tarefas.',
+              q: 'Qual é a diferença arquitetural entre GPT-5.6, Claude e Gemini?',
+              a: 'Os três são LLMs baseados em transformer mas diferem em escala e pós-treinamento. GPT-5.6 (OpenAI): 128.000 tokens de contexto, destaca-se em raciocínio. Claude Opus 5 (Anthropic): 200.000 tokens, usa Constitutional AI para alinhamento. Gemini 3.1 Pro (Google DeepMind): 2.000.000 tokens para processamento de documentos ultra-longos. Essas diferenças afetam custo, latência e adequação para diferentes tarefas.',
             },
             {
               q: 'Quantos tokens tem um texto de 1.000 palavras?',
@@ -2429,10 +2429,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         description: '대규모 언어 모델은 확률 분포를 이용해 다음 토큰을 예측합니다 — 이해하거나 검색하는 것이 아닙니다. 토크나이제이션, 어텐션, RLHF, 추론 매개변수를 학습하십시오.',
         datePublished: '2026-03-30',
         dateModified: '2026-04-12',
-        keywords: ['대규모 언어 모델', 'LLM 아키텍처', '트랜스포머', '토크나이제이션', '어텐션 메커니즘', 'RLHF', '온도', '컨텍스트 윈도우', '프롬프트 엔지니어링', 'GPT-5.5', 'Claude'],
+        keywords: ['대규모 언어 모델', 'LLM 아키텍처', '트랜스포머', '토크나이제이션', '어텐션 메커니즘', 'RLHF', '온도', '컨텍스트 윈도우', '프롬프트 엔지니어링', 'GPT-5.6', 'Claude'],
         mentions: [
-          { '@type': 'SoftwareApplication', name: 'GPT-5.5' },
-          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8' },
+          { '@type': 'SoftwareApplication', name: 'GPT-5.6' },
+          { '@type': 'SoftwareApplication', name: 'Claude Opus 5' },
           { '@type': 'SoftwareApplication', name: 'Gemini 3.1 Pro' },
           { '@type': 'Thing', name: 'Transformer' },
           { '@type': 'Thing', name: 'RLHF' },
@@ -2468,7 +2468,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**LLM은 답변이 아닌 토큰을 예측합니다.** 통계적으로 확률이 높은 텍스트 시퀀스를 생성합니다 — 검색된 사실, 논리적 추론, 또는 검증된 정보가 아닙니다.',
             '**1 토큰 ≈ 영어 단어 0.75개.** 1,000단어 문서는 약 1,300개의 토큰을 사용합니다. 중국어와 일본어는 약 50% 더 밀도가 높습니다.',
             '**[온도](/prompt-engineering/prompt-engineering-glossary#temperature)는 창의성과 결정론을 조절합니다.** 온도 0 = 결정론적. 온도 1.0 = 비례 샘플링. 1.5 초과 = 높은 환각 위험.',
-            '**[컨텍스트 윈도우](/prompt-engineering/prompt-engineering-glossary#context-window)는 메모리가 아닙니다.** GPT-5.5: 128k 토큰. Claude Opus 4.8: 200k 토큰. Gemini 3.1 Pro: 200만 토큰. 세션 간에는 아무것도 유지되지 않습니다.',
+            '**[컨텍스트 윈도우](/prompt-engineering/prompt-engineering-glossary#context-window)는 메모리가 아닙니다.** GPT-5.6: 128k 토큰. Claude Opus 5: 200k 토큰. Gemini 3.1 Pro: 200만 토큰. 세션 간에는 아무것도 유지되지 않습니다.',
             '**위치가 중요합니다.** 트랜스포머 [어텐션](/prompt-engineering/prompt-engineering-glossary#attention)은 컨텍스트의 처음과 끝 부분에 더 높은 가중치를 부여합니다. 중요한 지시사항은 중간이 아닌 처음과 끝에 배치하십시오.',
             '**[RLHF](/prompt-engineering/prompt-engineering-glossary#rlhf)는 능력이 아닌 행동을 형성합니다.** 거절, 어조, 유용성은 기본 아키텍처가 아닌 학습 후 파인튜닝에서 비롯됩니다.',
           ],
@@ -2476,7 +2476,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         tokenization: {
           title: '[토크나이제이션](/prompt-engineering/prompt-engineering-glossary#tokenization): 텍스트가 숫자가 되는 방법',
           content: [
-            '**LLM이 텍스트를 처리하기 전에 먼저 정수 토큰 ID 시퀀스로 변환해야 합니다 — 이 과정을 [토크나이제이션](/prompt-engineering/prompt-engineering-glossary#tokenization)이라고 합니다.** GPT-5.5는 자주 등장하는 서브워드 단위로 텍스트를 분할하는 BPE(Byte Pair Encoding)를 사용합니다. Claude Opus 4.8과 Gemini 3.1 Pro도 유사한 서브워드 토크나이제이션 방식을 사용합니다.',
+            '**LLM이 텍스트를 처리하기 전에 먼저 정수 토큰 ID 시퀀스로 변환해야 합니다 — 이 과정을 [토크나이제이션](/prompt-engineering/prompt-engineering-glossary#tokenization)이라고 합니다.** GPT-5.6는 자주 등장하는 서브워드 단위로 텍스트를 분할하는 BPE(Byte Pair Encoding)를 사용합니다. Claude Opus 5과 Gemini 3.1 Pro도 유사한 서브워드 토크나이제이션 방식을 사용합니다.',
             '토크나이제이션은 언어에 따라 다릅니다. 영어 텍스트는 평균적으로 단어 0.75개당 토큰 1개에 해당합니다. 중국어와 일본어는 단어 0.5개당 토큰 1개에 해당합니다 — 동일한 문서가 영어보다 중국어로 작성될 때 약 두 배의 토큰이 필요하며, 이는 API 비용과 컨텍스트 윈도우 사용에 직접적인 영향을 미칩니다.',
           ],
           tableFormat: true,
@@ -2484,7 +2484,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           rows: [
             { '입력 텍스트': '"Hello, world!"', '토큰': '"Hello", ",", " world", "!"', '토큰 수': '4' },
             { '입력 텍스트': '"Tokenization"', '토큰': '"Token", "ization"', '토큰 수': '2' },
-            { '입력 텍스트': '"GPT-5.5"', '토큰': '"G", "PT", "-", "4", "o"', '토큰 수': '5' },
+            { '입력 텍스트': '"GPT-5.6"', '토큰': '"G", "PT", "-", "4", "o"', '토큰 수': '5' },
             { '입력 텍스트': '"你好世界" (안녕하세요, 중국어)', '토큰': '"你好", "世界"', '토큰 수': '모델에 따라 2–4' },
           ],
         },
@@ -2492,7 +2492,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '트랜스포머 어텐션 작동 방식',
           content: [
             '**트랜스포머 아키텍처는 셀프 어텐션이라는 메커니즘을 사용하여 각 토큰이 자신의 표현을 계산할 때 시퀀스의 다른 모든 토큰에 얼마나 "주의를 기울여야" 하는지를 결정합니다.** 각 토큰에 대해 모델은 쿼리(Q), 키(K), 값(V)이라는 세 개의 벡터를 계산하고, Q와 K의 내적으로 어텐션 점수를 계산한 뒤 소프트맥스로 스케일링 및 정규화합니다.',
-            '멀티헤드 어텐션은 이 과정을 여러 "헤드"에서 병렬로 실행합니다(GPT-5.5는 가장 큰 레이어에서 96개의 어텐션 헤드를 사용합니다). 각 헤드는 서로 다른 관계 패턴을 학습합니다. 일부 헤드는 구문적 관계(주어-동사), 다른 헤드는 의미적 유사성, 또 다른 헤드는 공참조(대명사를 명사와 연결)에 특화됩니다.',
+            '멀티헤드 어텐션은 이 과정을 여러 "헤드"에서 병렬로 실행합니다(GPT-5.6는 가장 큰 레이어에서 96개의 어텐션 헤드를 사용합니다). 각 헤드는 서로 다른 관계 패턴을 학습합니다. 일부 헤드는 구문적 관계(주어-동사), 다른 헤드는 의미적 유사성, 또 다른 헤드는 공참조(대명사를 명사와 연결)에 특화됩니다.',
             '핵심적인 실제 시사점은 "중간 손실" 효과입니다. Stanford University의 Liu et al.(2023) 연구에 따르면 LLM은 긴 컨텍스트의 중간 부분에 있는 정보를 체계적으로 과소 평가합니다. 2,000 토큰을 초과하는 프롬프트의 경우 중요한 지시사항을 시스템 프롬프트(처음)에 배치하고 가장 중요한 제약 조건을 사용자 메시지 끝에 반복하십시오.',
           ],
         },
@@ -2507,7 +2507,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**사전 학습:** 웹 규모 데이터에 대한 비지도 다음 토큰 예측. 언어 패턴, 세계 지식, 추론 단축키를 모델 가중치에 인코딩합니다(최신 모델의 경우 약 70B–405B 파라미터).',
             '**지도 파인튜닝(SFT):** 순수 텍스트 예측기가 아닌 어시스턴트처럼 행동하도록 선별된 지시-응답 쌍으로 모델을 학습합니다.',
             '**RLHF / DPO:** 인간의 선호도가 모델을 유용하고 무해하며 정직한 출력으로 이끕니다. DPO(직접 선호도 최적화)는 Llama 및 Mistral 모델이 사용하는 더 계산 효율적인 대안입니다.',
-            '**Constitutional AI (Anthropic):** Claude는 엣지 케이스에서 인간 피드백에 대한 의존도를 줄이기 위해 원칙 집합("헌법")을 사용하여 추가로 학습됩니다 — Claude Opus 4.8이 이 방식을 사용합니다.',
+            '**Constitutional AI (Anthropic):** Claude는 엣지 케이스에서 인간 피드백에 대한 의존도를 줄이기 위해 원칙 집합("헌법")을 사용하여 추가로 학습됩니다 — Claude Opus 5이 이 방식을 사용합니다.',
           ],
         },
         inference: {
@@ -2534,8 +2534,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           tableFormat: true,
           columns: ['모델', '컨텍스트 윈도우', '대략적인 단어 수 환산', '실용적인 문서 한계'],
           rows: [
-            { '모델': 'GPT-5.5 (OpenAI)', '컨텍스트 윈도우': '128,000 토큰', '대략적인 단어 수 환산': '약 96,000단어', '실용적인 문서 한계': '약 200페이지 PDF' },
-            { '모델': 'Claude Opus 4.8 (Anthropic)', '컨텍스트 윈도우': '200,000 토큰', '대략적인 단어 수 환산': '약 150,000단어', '실용적인 문서 한계': '약 300페이지 PDF' },
+            { '모델': 'GPT-5.6 (OpenAI)', '컨텍스트 윈도우': '128,000 토큰', '대략적인 단어 수 환산': '약 96,000단어', '실용적인 문서 한계': '약 200페이지 PDF' },
+            { '모델': 'Claude Opus 5 (Anthropic)', '컨텍스트 윈도우': '200,000 토큰', '대략적인 단어 수 환산': '약 150,000단어', '실용적인 문서 한계': '약 300페이지 PDF' },
             { '모델': 'Gemini 3.1 Pro (Google DeepMind)', '컨텍스트 윈도우': '2,000,000 토큰', '대략적인 단어 수 환산': '약 1,500,000단어', '실용적인 문서 한계': '약 3,000페이지 PDF' },
             { '모델': 'LLaMA 3.1 70B (Meta, Ollama 경유)', '컨텍스트 윈도우': '128,000 토큰', '대략적인 단어 수 환산': '약 96,000단어', '실용적인 문서 한계': '약 200페이지 PDF' },
           ],
@@ -2569,7 +2569,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptquorumBridge: {
           title: 'PromptQuorum에서 여러 모델의 온도 효과 테스트',
           content: [
-            '**PromptQuorum에서 테스트한 결과 — GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro에 동일한 창의적 브리프를 온도 0과 온도 0.9에서 각각 전송했을 때, Claude Opus 4.8이 온도 간 출력 편차가 가장 작고 Gemini 3.1 Pro가 가장 크다는 것이 나타났습니다.** 온도 0.9에서 Gemini 3.1 Pro는 온도 0 대비 평균 34% 더 긴 출력을 생성했습니다.',
+            '**PromptQuorum에서 테스트한 결과 — GPT-5.6, Claude Opus 5, Gemini 3.1 Pro에 동일한 창의적 브리프를 온도 0과 온도 0.9에서 각각 전송했을 때, Claude Opus 5이 온도 간 출력 편차가 가장 작고 Gemini 3.1 Pro가 가장 크다는 것이 나타났습니다.** 온도 0.9에서 Gemini 3.1 Pro는 온도 0 대비 평균 34% 더 긴 출력을 생성했습니다.',
             'PromptQuorum의 멀티 모델 디스패치를 사용하면 지정된 온도에서 모든 사용 가능한 모델에 동시에 프롬프트를 실행하고 출력을 나란히 비교할 수 있습니다 — 모델 기본값에 의존하는 대신 특정 과제에 맞는 온도 설정을 실용적으로 조정할 수 있습니다.',
           ],
         },
@@ -2577,7 +2577,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '지역별 LLM 아키텍처 차이',
           content: [
             '**LLM의 아키텍처와 성능은 학습 데이터 구성, 토크나이제이션 전략, 규제 제약 등에 따라 지역별로 크게 다릅니다.** 이러한 차이를 이해하는 것은 모델을 전 세계적으로 배포하는 팀에게 매우 중요합니다.',
-            '**[Qwen 3](/prompt-engineering/prompt-engineering-glossary#tokenization)은 CJK(중국어, 일본어, 한국어) 스크립트에 대한 뛰어난 토크나이제이션 효율성을 달성합니다** — 만다린 중국어에서 문자당 약 0.3 토큰을 사용하는 반면 GPT-5.5는 문자당 0.5 토큰을 사용합니다. 이 40% 토큰 감소는 아시아 언어 애플리케이션의 API 비용과 지연 시간을 직접적으로 줄여 줍니다. Qwen의 학습 데이터는 20%가 CJK 콘텐츠로 구성되어 있어, 문자 대 의미 밀도가 가장 높은 스크립트에 맞게 토크나이저를 최적화합니다.',
+            '**[Qwen 3](/prompt-engineering/prompt-engineering-glossary#tokenization)은 CJK(중국어, 일본어, 한국어) 스크립트에 대한 뛰어난 토크나이제이션 효율성을 달성합니다** — 만다린 중국어에서 문자당 약 0.3 토큰을 사용하는 반면 GPT-5.6는 문자당 0.5 토큰을 사용합니다. 이 40% 토큰 감소는 아시아 언어 애플리케이션의 API 비용과 지연 시간을 직접적으로 줄여 줍니다. Qwen의 학습 데이터는 20%가 CJK 콘텐츠로 구성되어 있어, 문자 대 의미 밀도가 가장 높은 스크립트에 맞게 토크나이저를 최적화합니다.',
             '**Mistral Small과 Mistral Large는 유럽 배포를 위해 명시적으로 설계되었으며**, 학습 데이터는 GDPR, 프랑스 AI 법, 데이터 보존 및 모델 투명성에 관한 EU 규정을 준수하도록 필터링되었습니다. 필터링되지 않은 웹 데이터를 주로 학습에 사용하는 모델과 달리, Mistral은 데이터 출처를 문서화하고 EU 시민의 개인 정보를 학습에서 제외시켜, 유럽의 규제 산업(은행, 의료, 법률 기술)에서 기본 선택지가 되었습니다.',
             '**DeepSeek의 아키텍처는 학습 구성을 반영합니다**: 사전 학습 데이터의 70%가 중국어와 영어, 15%가 코드, 15%가 기타 언어입니다. 이 비율은 중국어 언어 유창성과 코드 생성 속도에 편향된 모델을 만들어 내며, 저자원 언어에서는 성능이 크게 떨어집니다. 토큰 분포와 어텐션 패턴은 영어가 아닌 만다린 중국어의 빈도 패턴에 최적화되어 있습니다.',
           ],
@@ -2587,7 +2587,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '[기초: 프롬프트 엔지니어링이란?](/prompt-engineering/what-is-prompt-engineering) — LLM 아키텍처 지식을 체계적인 프롬프트 설계에 적용하는 방법',
             '[기초: 컨텍스트 윈도우 설명 — AI가 잊는 이유](/prompt-engineering/context-windows-explained-why-ai-forgets) — 컨텍스트 윈도우 한계와 검색 전략에 대한 심층 분석',
-            '[기초: 토큰, 비용, 한계: AI 프롬프팅의 경제학](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — 토큰 가격 책정, 요청 한도, GPT-5.5, Claude, Gemini 전반의 비용 최적화',
+            '[기초: 토큰, 비용, 한계: AI 프롬프팅의 경제학](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — 토큰 가격 책정, 요청 한도, GPT-5.6, Claude, Gemini 전반의 비용 최적화',
             '[기초: AI 환각 설명 — LLM이 정보를 꾸며내는 이유](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — 토큰 예측과 사실 검색 부재가 어떻게 신뢰도 오류로 이어지는지',
             '[AI 한계: LLM이 할 수 없는 것들](/prompt-engineering/ai-limitations-what-llms-cant-do) — 모든 LLM이 공유하는 8가지 구조적 제약과 각각에 대한 엔지니어링 해결책',
           ],
@@ -2599,7 +2599,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**트랜스포머 아키텍처의 세 가지 핵심 레이어를 학습하십시오: 임베딩, 어텐션, 출력 프로젝션.** 직접 구현할 필요는 없지만 개념적으로 이해하십시오: 임베딩은 토큰을 벡터로 변환하고, 어텐션은 모든 토큰 쌍을 비교하여 관계를 파악하며, 출력 프로젝션은 다시 어휘로 매핑합니다. 이것이 LLM이 맥락을 이해하는 이유와 환각을 일으키는 이유를 설명합니다.',
             '**LLM이 환각을 일으키는 이유를 이해하십시오: "올바른 사실"이 아닌 학습 데이터 패턴을 기반으로 "확률적으로 그럴듯한 다음 토큰"을 예측합니다.** 학습 데이터에 특정 주제에 대한 상충되거나 부족한 정보가 있으면 모델의 최선의 추측이 틀릴 수도 있습니다. 이는 수정 가능한 버그가 아닌 근본적인 특성입니다. 사실 기반 과제에는 온도(T)를 낮게, 창의적인 과제에는 높게 설정하십시오.',
             '**온도와 top-p를 실험하여 출력이 어떻게 변하는지 확인하십시오.** T=0.0(결정론적), T=0.7(다양하지만 일관성 있음), T=1.5(무작위)에서 텍스트를 생성하십시오. 더 높은 T = 더 많은 변형임을 확인하십시오. top-p(핵 샘플링)이 확률이 낮은 토큰을 필터링하여 의미 없는 출력을 줄인다는 것을 이해하십시오.',
-            '**컨텍스트 윈도우를 이해하십시오: 모델은 최근 토큰의 고정된 윈도우만 "봅니다".** GPT-5.5의 128k 토큰 윈도우는 약 96,000단어에 해당합니다. 오래된 정보는 윈도우 밖으로 벗어나기 때문에 "잊혀집니다". 이것이 LLM이 긴 대화에서 이전 정보와 모순되는 발언을 하는 이유를 설명합니다.',
+            '**컨텍스트 윈도우를 이해하십시오: 모델은 최근 토큰의 고정된 윈도우만 "봅니다".** GPT-5.6의 128k 토큰 윈도우는 약 96,000단어에 해당합니다. 오래된 정보는 윈도우 밖으로 벗어나기 때문에 "잊혀집니다". 이것이 LLM이 긴 대화에서 이전 정보와 모순되는 발언을 하는 이유를 설명합니다.',
           ],
         },
         faq: {
@@ -2612,7 +2612,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'LLM에서 토큰이란 무엇입니까?',
-              a: '토큰은 LLM이 처리하는 가장 작은 단위입니다 — 영어에서는 약 단어 0.75개, 중국어나 일본어에서는 약 0.5개에 해당합니다. 단어, 서브워드, 구두점, 공백이 모두 토큰이 됩니다. GPT-5.5는 BPE(Byte Pair Encoding)를 사용하여 처리 전에 텍스트를 토큰으로 분할합니다. 1,000단어 문서는 영어로 약 1,300개의 토큰이 됩니다.',
+              a: '토큰은 LLM이 처리하는 가장 작은 단위입니다 — 영어에서는 약 단어 0.75개, 중국어나 일본어에서는 약 0.5개에 해당합니다. 단어, 서브워드, 구두점, 공백이 모두 토큰이 됩니다. GPT-5.6는 BPE(Byte Pair Encoding)를 사용하여 처리 전에 텍스트를 토큰으로 분할합니다. 1,000단어 문서는 영어로 약 1,300개의 토큰이 됩니다.',
             },
             {
               q: 'LLM에서 온도는 무엇을 합니까?',
@@ -2628,7 +2628,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: '컨텍스트 윈도우와 메모리의 차이는 무엇입니까?',
-              a: '컨텍스트 윈도우는 단일 추론 호출 중에 모델이 볼 수 있는 모든 텍스트입니다 — 시스템 프롬프트, 기록, 현재 메시지를 포함합니다. 지속적인 메모리가 아닙니다: 대화가 끝나면 모델은 아무것도 유지하지 않습니다. GPT-5.5: 128,000 토큰. Claude Opus 4.8: 200,000 토큰. Gemini 3.1 Pro: 2,000,000 토큰.',
+              a: '컨텍스트 윈도우는 단일 추론 호출 중에 모델이 볼 수 있는 모든 텍스트입니다 — 시스템 프롬프트, 기록, 현재 메시지를 포함합니다. 지속적인 메모리가 아닙니다: 대화가 끝나면 모델은 아무것도 유지하지 않습니다. GPT-5.6: 128,000 토큰. Claude Opus 5: 200,000 토큰. Gemini 3.1 Pro: 2,000,000 토큰.',
             },
             {
               q: '"중간 손실" 효과란 무엇이며 어떻게 피할 수 있습니까?',
@@ -2639,8 +2639,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
               a: 'RLHF(인간 피드백 강화 학습)는 인간 평가자가 출력을 채점하고, 보상 모델을 학습하며, LLM을 파인튜닝하여 보상을 최대화하는 학습 후 기법입니다. Constitutional AI(Anthropic이 Claude에 사용)는 모든 엣지 케이스에 대한 인간 피드백 없이 행동을 안내하는 서면 원칙 집합("헌법")을 추가함으로써 RLHF를 확장합니다. 이는 일관된 가치 정렬을 유지하면서 인간 평가자에 대한 의존도를 줄여 줍니다.',
             },
             {
-              q: 'GPT-5.5, Claude, Gemini의 아키텍처적 차이는 무엇입니까?',
-              a: '세 모델 모두 트랜스포머 기반 LLM이지만 규모와 학습 후 처리에서 차이가 있습니다. GPT-5.5(OpenAI): 128,000 토큰 컨텍스트, 추론에 뛰어남. Claude Opus 4.8(Anthropic): 200,000 토큰, 정렬을 위해 Constitutional AI 사용. Gemini 3.1 Pro(Google DeepMind): 초장문 문서 처리를 위한 2,000,000 토큰. 이러한 차이는 비용, 지연 시간, 다양한 과제에 대한 적합성에 영향을 미칩니다.',
+              q: 'GPT-5.6, Claude, Gemini의 아키텍처적 차이는 무엇입니까?',
+              a: '세 모델 모두 트랜스포머 기반 LLM이지만 규모와 학습 후 처리에서 차이가 있습니다. GPT-5.6(OpenAI): 128,000 토큰 컨텍스트, 추론에 뛰어남. Claude Opus 5(Anthropic): 200,000 토큰, 정렬을 위해 Constitutional AI 사용. Gemini 3.1 Pro(Google DeepMind): 초장문 문서 처리를 위한 2,000,000 토큰. 이러한 차이는 비용, 지연 시간, 다양한 과제에 대한 적합성에 영향을 미칩니다.',
             },
             {
               q: '1,000단어 텍스트의 토큰 수는 몇 개입니까?',

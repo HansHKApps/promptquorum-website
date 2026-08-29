@@ -25,7 +25,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     primaryTerm: 'prompt engineering setup for small teams',
     aboutTopics: ['Prompt Library Management', 'Team Prompt Workflow', 'Multi-Model Prompt Testing'],
     quickFacts: [
-      'A 50-case test run across GPT-5.5 and Claude 4.6 Sonnet costs under $2 at April 2026 API rates ($5/1M input tokens for GPT-5.5; $3/1M for Claude 4.6 Sonnet)',
+      'A 50-case test run across GPT-5.6 and Claude 4.6 Sonnet costs under $2 at April 2026 API rates ($5/1M input tokens for GPT-5.6; $3/1M for Claude 4.6 Sonnet)',
       'Git handles prompt version history with zero additional tooling — a flat YAML or JSON file in a shared repo is sufficient for teams under 15 people',
       'GPT-5.6 and Claude Sonnet 5 produce meaningfully different outputs on creative, summarisation, and ambiguous instruction tasks — multi-model testing is required to detect divergence before it reaches users',
       'Teams of 2–5 can implement the full setup in this guide using only free tools: Git, VS Code, and a shared API key',
@@ -187,7 +187,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Choose GPT-5.6 for Structured Output, Claude Sonnet 5 for Nuance',
         content: [
           '**Start with GPT-5.6 and Claude Sonnet 5 for most tasks — run both and compare pass rates on your specific use case before committing to one model.** The right model depends on task type, not general leaderboard rankings.',
-          '[GPT-5.5 from OpenAI](https://platform.openai.com/playground) and [Claude 4.6 Sonnet from Anthropic](https://docs.anthropic.com/) are the two most widely used frontier models for production prompt engineering [as of April 2026](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model). For documents exceeding 100k tokens, add Gemini 2.5 Pro. For cost-sensitive high-volume tasks, use Claude 4.5 Haiku or GPT-5.6 mini.',
+          '[GPT-5.6 from OpenAI](https://platform.openai.com/playground) and [Claude 4.6 Sonnet from Anthropic](https://docs.anthropic.com/) are the two most widely used frontier models for production prompt engineering [as of April 2026](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model). For documents exceeding 100k tokens, add Gemini 2.5 Pro. For cost-sensitive high-volume tasks, use Claude 4.5 Haiku or GPT-5.6 Luna.',
         ],
         columns: ['Task type', 'Recommended model', 'Why'],
         rows: [
@@ -195,7 +195,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { 'Task type': 'Long-form writing, nuanced instructions', 'Recommended model': 'Claude Sonnet 5', 'Why': 'Handles multi-constraint instructions with fewer literal interpretation errors' },
           { 'Task type': 'Code generation and review', 'Recommended model': 'GPT-5.6 or Claude Sonnet 5', 'Why': 'Both perform well — run both and compare on your specific codebase and language' },
           { 'Task type': 'Documents over 100k tokens', 'Recommended model': 'Gemini 2.5 Pro', 'Why': '1M-token context window; GPT-5.6 and Claude Sonnet 5 both cap at 200k tokens' },
-          { 'Task type': 'High-volume cost-sensitive tasks', 'Recommended model': 'Claude 4.5 Haiku or GPT-5.6 mini', 'Why': 'Both are 10–20× cheaper than flagship models with acceptable quality for many production tasks' },
+          { 'Task type': 'High-volume cost-sensitive tasks', 'Recommended model': 'Claude 4.5 Haiku or GPT-5.6 Luna', 'Why': 'Both are 10–20× cheaper than flagship models with acceptable quality for many production tasks' },
         ],
         tableFormat: true,
         callouts: [
@@ -291,7 +291,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'Which AI model should a small team standardize on?',
-            a: 'Do not standardize on one model. Run your most critical prompts on both GPT-5.6 and Claude Sonnet 5 and choose per task type. GPT-5.6 is more reliable for structured output such as JSON and classification. Claude Sonnet 5 handles nuanced multi-constraint instructions with fewer literal errors. Use Claude 4.5 Haiku or GPT-5.6 mini for cost-sensitive high-volume tasks.',
+            a: 'Do not standardize on one model. Run your most critical prompts on both GPT-5.6 and Claude Sonnet 5 and choose per task type. GPT-5.6 is more reliable for structured output such as JSON and classification. Claude Sonnet 5 handles nuanced multi-constraint instructions with fewer literal errors. Use Claude 4.5 Haiku or GPT-5.6 Luna for cost-sensitive high-volume tasks.',
           },
           {
             q: 'How many prompts do we need before a shared library is worth building?',
@@ -323,7 +323,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'sources',
         title: 'Sources',
         items: [
-          '[OpenAI API Pricing (April 2026)](https://openai.com/api/pricing) — GPT-5.5 and GPT-5.5 mini input/output token rates used for cost estimates in this article',
+          '[OpenAI API Pricing (April 2026)](https://openai.com/api/pricing) — GPT-5.6 and GPT-5.6 mini input/output token rates used for cost estimates in this article',
           '[Anthropic API Pricing (April 2026)](https://www.anthropic.com/pricing) — Claude 4.6 Sonnet and Claude 4.5 Haiku token rates',
           '[Google Gemini API Pricing (April 2026)](https://ai.google.dev/pricing) — Gemini 2.5 Pro context window and token rates',
           '[GitHub: InnerSource Fundamentals](https://resources.github.com/innersource/fundamentals/) — Principles of shared code ownership and governance applicable to shared prompt libraries',
@@ -352,7 +352,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     primaryTerm: 'Prompt-Engineering-Setup für kleine Teams',
     aboutTopics: ['Prompt-Bibliotheksverwaltung', 'Team-Prompt-Workflow', 'Multi-Modell-Prompt-Testing'],
     quickFacts: [
-      'Ein 50-Testfälle-Lauf über GPT-5.5 und Claude 4.6 Sonnet kostet bei den API-Preisen vom April 2026 unter 2 $ ($5/1M Input-Token für GPT-5.5; $3/1M für Claude 4.6 Sonnet)',
+      'Ein 50-Testfälle-Lauf über GPT-5.6 und Claude 4.6 Sonnet kostet bei den API-Preisen vom April 2026 unter 2 $ ($5/1M Input-Token für GPT-5.6; $3/1M für Claude 4.6 Sonnet)',
       'Git verwaltet den Prompt-Versionsverlauf ohne zusätzliche Werkzeuge – eine flache YAML- oder JSON-Datei in einem gemeinsamen Repo ist für Teams unter 15 Personen ausreichend',
       'GPT-5.6 und Claude Sonnet 5 liefern bei kreativen, zusammenfassenden und mehrdeutigen Aufgaben deutlich unterschiedliche Ergebnisse – Multi-Modell-Testing ist erforderlich, um Abweichungen zu erkennen, bevor sie die Nutzer erreichen',
       'Teams von 2–5 Personen können das vollständige Setup dieser Anleitung mit nur kostenlosen Tools umsetzen: Git, VS Code und einem gemeinsamen API-Key',
@@ -514,7 +514,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Auswahl von KI-Modellen für Ihre Prompts',
         content: [
           '**Beginnen Sie für die meisten Aufgaben mit GPT-5.6 und Claude Sonnet 5 – führen Sie beide aus und vergleichen Sie Pass-Raten für Ihren spezifischen Anwendungsfall, bevor Sie sich auf ein Modell festlegen.** Das richtige Modell hängt vom Aufgabentyp ab, nicht von allgemeinen Leaderboard-Rankings.',
-          'GPT-5.5 (OpenAI) und Claude 4.6 Sonnet (Anthropic) sind die zwei am weitesten verbreiteten Frontier-Modelle für Produktions-Prompt-Engineering [Stand April 2026](/de/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model). Für Dokumente über 100k Token: Gemini 2.5 Pro hinzufügen. Für kostenempfindliche Hochvolumen-Aufgaben: Claude 4.5 Haiku oder GPT-5.6 mini verwenden.',
+          'GPT-5.6 (OpenAI) und Claude 4.6 Sonnet (Anthropic) sind die zwei am weitesten verbreiteten Frontier-Modelle für Produktions-Prompt-Engineering [Stand April 2026](/de/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model). Für Dokumente über 100k Token: Gemini 2.5 Pro hinzufügen. Für kostenempfindliche Hochvolumen-Aufgaben: Claude 4.5 Haiku oder GPT-5.6 Luna verwenden.',
         ],
         columns: ['Aufgabentyp', 'Empfohlenes Modell', 'Begründung'],
         rows: [
@@ -522,7 +522,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { 'Aufgabentyp': 'Langtextgenerierung, nuancierte Anweisungen', 'Empfohlenes Modell': 'Claude Sonnet 5', 'Begründung': 'Verarbeitet Mehrfachbedingungen mit weniger wörtlichen Auslegungsfehlern' },
           { 'Aufgabentyp': 'Code-Generierung und Review', 'Empfohlenes Modell': 'GPT-5.6 oder Claude Sonnet 5', 'Begründung': 'Beide leistungsstark – führen Sie beide aus und vergleichen Sie für Ihre spezifische Codebasis und Sprache' },
           { 'Aufgabentyp': 'Dokumente über 100k Token', 'Empfohlenes Modell': 'Gemini 2.5 Pro', 'Begründung': '1M-Token-Kontextfenster; GPT-5.6 und Claude Sonnet 5 sind beide auf 200k Token begrenzt' },
-          { 'Aufgabentyp': 'Hochvolumen kostenempfindliche Aufgaben', 'Empfohlenes Modell': 'Claude 4.5 Haiku oder GPT-5.6 mini', 'Begründung': 'Beide sind 10–20× günstiger als Flagship-Modelle bei akzeptabler Qualität für viele Produktionsaufgaben' },
+          { 'Aufgabentyp': 'Hochvolumen kostenempfindliche Aufgaben', 'Empfohlenes Modell': 'Claude 4.5 Haiku oder GPT-5.6 Luna', 'Begründung': 'Beide sind 10–20× günstiger als Flagship-Modelle bei akzeptabler Qualität für viele Produktionsaufgaben' },
         ],
         tableFormat: true,
         callouts: [
@@ -627,7 +627,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'Auf welches KI-Modell sollte sich ein kleines Team standardisieren?',
-            a: 'Standardisieren Sie sich nicht auf ein Modell. Führen Sie Ihre wichtigsten Prompts auf GPT-5.6 und Claude Sonnet 5 aus und wählen Sie nach Aufgabentyp. GPT-5.6 ist zuverlässiger für strukturierte Ausgaben wie JSON und Klassifikation. Claude Sonnet 5 verarbeitet nuancierte Mehrfachbedingungen mit weniger wörtlichen Auslegungsfehlern. Verwenden Sie Claude 4.5 Haiku oder GPT-5.6 mini für kostenempfindliche Hochvolumen-Aufgaben.',
+            a: 'Standardisieren Sie sich nicht auf ein Modell. Führen Sie Ihre wichtigsten Prompts auf GPT-5.6 und Claude Sonnet 5 aus und wählen Sie nach Aufgabentyp. GPT-5.6 ist zuverlässiger für strukturierte Ausgaben wie JSON und Klassifikation. Claude Sonnet 5 verarbeitet nuancierte Mehrfachbedingungen mit weniger wörtlichen Auslegungsfehlern. Verwenden Sie Claude 4.5 Haiku oder GPT-5.6 Luna für kostenempfindliche Hochvolumen-Aufgaben.',
           },
           {
             q: 'Wie viele Prompts brauchen wir, bevor sich eine gemeinsame Bibliothek lohnt?',
@@ -667,7 +667,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'sources',
         title: 'Quellen',
         items: [
-          '[OpenAI API-Preise (April 2026)](https://openai.com/api/pricing) — GPT-5.5 und GPT-5.5 mini Input/Output-Token-Raten für Kostenschätzungen in diesem Artikel',
+          '[OpenAI API-Preise (April 2026)](https://openai.com/api/pricing) — GPT-5.6 und GPT-5.6 mini Input/Output-Token-Raten für Kostenschätzungen in diesem Artikel',
           '[Anthropic API-Preise (April 2026)](https://www.anthropic.com/pricing) — Claude 4.6 Sonnet und Claude 4.5 Haiku Token-Raten',
           '[Google Gemini API-Preise (April 2026)](https://ai.google.dev/pricing) — Gemini 2.5 Pro Kontextfenster und Token-Raten',
           '[GitHub: InnerSource Fundamentals](https://resources.github.com/innersource/fundamentals/) — Prinzipien gemeinsamer Code-Ownership und Governance, anwendbar auf gemeinsame Prompt-Bibliotheken',
@@ -697,7 +697,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     primaryTerm: 'configuración de prompt engineering para equipos pequeños',
     aboutTopics: ['Gestión de biblioteca de prompts', 'Flujo de trabajo de prompts de equipo', 'Pruebas de prompts multi-modelo'],
     quickFacts: [
-      'Una ejecución de 50 casos de prueba en GPT-5.5 y Claude 4.6 Sonnet cuesta menos de $2 a los precios de API de abril de 2026 ($5/1M tokens de entrada para GPT-5.5; $3/1M para Claude 4.6 Sonnet)',
+      'Una ejecución de 50 casos de prueba en GPT-5.6 y Claude 4.6 Sonnet cuesta menos de $2 a los precios de API de abril de 2026 ($5/1M tokens de entrada para GPT-5.6; $3/1M para Claude 4.6 Sonnet)',
       'Git maneja el historial de versiones de prompts sin herramientas adicionales — un archivo YAML o JSON plano en un repositorio compartido es suficiente para equipos de menos de 15 personas',
       'GPT-5.6 y Claude Sonnet 5 producen salidas significativamente diferentes en tareas creativas, de resumen e instrucciones ambiguas — las pruebas multi-modelo son necesarias para detectar divergencias antes de que lleguen a los usuarios',
       'Los equipos de 2–5 pueden implementar la configuración completa de esta guía usando solo herramientas gratuitas: Git, VS Code y una clave API compartida',
@@ -859,7 +859,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Elige GPT-5.6 para salida estructurada, Claude Sonnet 5 para matices',
         content: [
           '**Empieza con GPT-5.6 y Claude Sonnet 5 para la mayoría de las tareas — ejecuta ambos y compara las tasas de aprobación en tu caso de uso específico antes de comprometerte con un modelo.** El modelo correcto depende del tipo de tarea, no de los rankings generales de clasificación.',
-          'GPT-5.5 de OpenAI y Claude 4.6 Sonnet de Anthropic son los dos modelos frontier más utilizados para el prompt engineering de producción a abril de 2026. Para documentos que superan los 100k tokens, añade Gemini 2.5 Pro. Para tareas de alto volumen sensibles al coste, usa Claude 4.5 Haiku o GPT-5.6 mini.',
+          'GPT-5.6 de OpenAI y Claude 4.6 Sonnet de Anthropic son los dos modelos frontier más utilizados para el prompt engineering de producción a abril de 2026. Para documentos que superan los 100k tokens, añade Gemini 2.5 Pro. Para tareas de alto volumen sensibles al coste, usa Claude 4.5 Haiku o GPT-5.6 Luna.',
         ],
         columns: ['Tipo de tarea', 'Modelo recomendado', 'Por qué'],
         rows: [
@@ -867,7 +867,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { 'Tipo de tarea': 'Escritura de forma larga, instrucciones con matices', 'Modelo recomendado': 'Claude Sonnet 5', 'Por qué': 'Maneja instrucciones de múltiples restricciones con menos errores de interpretación literal' },
           { 'Tipo de tarea': 'Generación y revisión de código', 'Modelo recomendado': 'GPT-5.6 o Claude Sonnet 5', 'Por qué': 'Ambos rinden bien — ejecuta ambos y compara en tu código base y lenguaje específicos' },
           { 'Tipo de tarea': 'Documentos de más de 100k tokens', 'Modelo recomendado': 'Gemini 2.5 Pro', 'Por qué': 'Ventana de contexto de 1M tokens; GPT-5.6 y Claude Sonnet 5 tienen un límite de 200k tokens' },
-          { 'Tipo de tarea': 'Tareas de alto volumen sensibles al coste', 'Modelo recomendado': 'Claude 4.5 Haiku o GPT-5.6 mini', 'Por qué': 'Ambos son 10–20× más baratos que los modelos flagship con calidad aceptable para muchas tareas de producción' },
+          { 'Tipo de tarea': 'Tareas de alto volumen sensibles al coste', 'Modelo recomendado': 'Claude 4.5 Haiku o GPT-5.6 Luna', 'Por qué': 'Ambos son 10–20× más baratos que los modelos flagship con calidad aceptable para muchas tareas de producción' },
         ],
         tableFormat: true,
         callouts: [
@@ -963,7 +963,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: '¿En qué modelo de IA debe estandarizarse un equipo pequeño?',
-            a: 'No te estandarices en un solo modelo. Ejecuta tus prompts más críticos en GPT-5.6 y Claude Sonnet 5 y elige por tipo de tarea. GPT-5.6 es más fiable para salida estructurada como JSON y clasificación. Claude Sonnet 5 maneja instrucciones con matices y múltiples restricciones con menos errores literales. Usa Claude 4.5 Haiku o GPT-5.6 mini para tareas de alto volumen sensibles al coste.',
+            a: 'No te estandarices en un solo modelo. Ejecuta tus prompts más críticos en GPT-5.6 y Claude Sonnet 5 y elige por tipo de tarea. GPT-5.6 es más fiable para salida estructurada como JSON y clasificación. Claude Sonnet 5 maneja instrucciones con matices y múltiples restricciones con menos errores literales. Usa Claude 4.5 Haiku o GPT-5.6 Luna para tareas de alto volumen sensibles al coste.',
           },
           {
             q: '¿Cuántos prompts necesitamos antes de que valga la pena construir una biblioteca compartida?',
@@ -995,7 +995,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'sources',
         title: 'Fuentes',
         items: [
-          '[OpenAI API Pricing (abril 2026)](https://openai.com/api/pricing) — Tarifas de tokens de entrada/salida de GPT-5.5 y GPT-5.5 mini usadas para estimaciones de coste en este artículo',
+          '[OpenAI API Pricing (abril 2026)](https://openai.com/api/pricing) — Tarifas de tokens de entrada/salida de GPT-5.6 y GPT-5.6 mini usadas para estimaciones de coste en este artículo',
           '[Anthropic API Pricing (abril 2026)](https://www.anthropic.com/pricing) — Tarifas de tokens de Claude 4.6 Sonnet y Claude 4.5 Haiku',
           '[Google Gemini API Pricing (abril 2026)](https://ai.google.dev/pricing) — Ventana de contexto y tarifas de tokens de Gemini 2.5 Pro',
           '[GitHub: InnerSource Fundamentals](https://resources.github.com/innersource/fundamentals/) — Principios de propiedad de código compartida y gobernanza aplicables a bibliotecas de prompts compartidas',
@@ -1022,7 +1022,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     primaryTerm: 'configuração de prompt engineering para equipes pequenas',
     aboutTopics: ['Gerenciamento de biblioteca de prompts', 'Fluxo de trabalho de prompts de equipe', 'Testes de prompts multi-modelo'],
     quickFacts: [
-      'Uma execução de 50 casos de teste no GPT-5.5 e Claude 4.6 Sonnet custa menos de US$ 2 nos preços de API de abril de 2026 (US$ 5/1M tokens de entrada para GPT-5.5; US$ 3/1M para Claude 4.6 Sonnet)',
+      'Uma execução de 50 casos de teste no GPT-5.6 e Claude 4.6 Sonnet custa menos de US$ 2 nos preços de API de abril de 2026 (US$ 5/1M tokens de entrada para GPT-5.6; US$ 3/1M para Claude 4.6 Sonnet)',
       'O Git gerencia o histórico de versões de prompts sem ferramentas adicionais — um arquivo YAML ou JSON simples em um repositório compartilhado é suficiente para equipes de menos de 15 pessoas',
       'GPT-5.6 e Claude Sonnet 5 produzem saídas significativamente diferentes em tarefas criativas, de resumo e instruções ambíguas — testes multi-modelo são necessários para detectar divergências antes de chegarem aos usuários',
       'Equipes de 2–5 pessoas podem implementar a configuração completa deste guia usando apenas ferramentas gratuitas: Git, VS Code e uma chave API compartilhada',
@@ -1183,7 +1183,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Escolha GPT-5.6 para saída estruturada, Claude Sonnet 5 para nuances',
         content: [
           '**Comece com GPT-5.6 e Claude Sonnet 5 para a maioria das tarefas — execute ambos e compare as taxas de aprovação em seu caso de uso específico antes de se comprometer com um modelo.** O modelo correto depende do tipo de tarefa, não dos rankings gerais de classificação.',
-          'GPT-5.5 da OpenAI e Claude 4.6 Sonnet da Anthropic são os dois modelos frontier mais usados para prompt engineering de produção em abril de 2026. Para documentos que excedem 100k tokens, adicione Gemini 2.5 Pro. Para tarefas de alto volume sensíveis ao custo, use Claude 4.5 Haiku ou GPT-5.6 mini.',
+          'GPT-5.6 da OpenAI e Claude 4.6 Sonnet da Anthropic são os dois modelos frontier mais usados para prompt engineering de produção em abril de 2026. Para documentos que excedem 100k tokens, adicione Gemini 2.5 Pro. Para tarefas de alto volume sensíveis ao custo, use Claude 4.5 Haiku ou GPT-5.6 Luna.',
         ],
         columns: ['Tipo de tarefa', 'Modelo recomendado', 'Por quê'],
         rows: [
@@ -1191,7 +1191,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { 'Tipo de tarefa': 'Escrita de forma longa, instruções com nuances', 'Modelo recomendado': 'Claude Sonnet 5', 'Por quê': 'Lida com instruções de múltiplas restrições com menos erros de interpretação literal' },
           { 'Tipo de tarefa': 'Geração e revisão de código', 'Modelo recomendado': 'GPT-5.6 ou Claude Sonnet 5', 'Por quê': 'Ambos têm bom desempenho — execute os dois e compare em seu código base e linguagem específicos' },
           { 'Tipo de tarefa': 'Documentos com mais de 100k tokens', 'Modelo recomendado': 'Gemini 2.5 Pro', 'Por quê': 'Janela de contexto de 1M tokens; GPT-5.6 e Claude Sonnet 5 têm limite de 200k tokens' },
-          { 'Tipo de tarefa': 'Tarefas de alto volume sensíveis ao custo', 'Modelo recomendado': 'Claude 4.5 Haiku ou GPT-5.6 mini', 'Por quê': 'Ambos são 10–20× mais econômicos que os modelos flagship com qualidade aceitável para muitas tarefas de produção' },
+          { 'Tipo de tarefa': 'Tarefas de alto volume sensíveis ao custo', 'Modelo recomendado': 'Claude 4.5 Haiku ou GPT-5.6 Luna', 'Por quê': 'Ambos são 10–20× mais econômicos que os modelos flagship com qualidade aceitável para muitas tarefas de produção' },
         ],
         tableFormat: true,
         callouts: [
@@ -1287,7 +1287,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'Em qual modelo de IA uma equipe pequena deve se padronizar?',
-            a: 'Não se padronize em um único modelo. Execute seus prompts mais críticos no GPT-5.6 e no Claude Sonnet 5 e escolha por tipo de tarefa. GPT-5.6 é mais confiável para saída estruturada como JSON e classificação. Claude Sonnet 5 lida com instruções com nuances e múltiplas restrições com menos erros literais. Use Claude 4.5 Haiku ou GPT-5.6 mini para tarefas de alto volume sensíveis ao custo.',
+            a: 'Não se padronize em um único modelo. Execute seus prompts mais críticos no GPT-5.6 e no Claude Sonnet 5 e escolha por tipo de tarefa. GPT-5.6 é mais confiável para saída estruturada como JSON e classificação. Claude Sonnet 5 lida com instruções com nuances e múltiplas restrições com menos erros literais. Use Claude 4.5 Haiku ou GPT-5.6 Luna para tarefas de alto volume sensíveis ao custo.',
           },
           {
             q: 'Quantos prompts precisamos antes de valer a pena construir uma biblioteca compartilhada?',
@@ -1319,7 +1319,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'sources',
         title: 'Fontes',
         items: [
-          '[OpenAI API Pricing (abril 2026)](https://openai.com/api/pricing) — Tarifas de tokens de entrada/saída do GPT-5.5 e GPT-5.5 mini usadas para estimativas de custo neste artigo',
+          '[OpenAI API Pricing (abril 2026)](https://openai.com/api/pricing) — Tarifas de tokens de entrada/saída do GPT-5.6 e GPT-5.6 mini usadas para estimativas de custo neste artigo',
           '[Anthropic API Pricing (abril 2026)](https://www.anthropic.com/pricing) — Tarifas de tokens do Claude 4.6 Sonnet e Claude 4.5 Haiku',
           '[Google Gemini API Pricing (abril 2026)](https://ai.google.dev/pricing) — Janela de contexto e tarifas de tokens do Gemini 2.5 Pro',
           '[GitHub: InnerSource Fundamentals](https://resources.github.com/innersource/fundamentals/) — Princípios de propriedade de código compartilhada e governança aplicáveis a bibliotecas de prompts compartilhadas',
@@ -1349,7 +1349,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     primaryTerm: 'prompt engineering setup for small teams',
     aboutTopics: ['Gestion de bibliothèque de prompts', 'Workflow de prompts en équipe', 'Tests de prompts multi-modèles'],
     quickFacts: [
-      'Un test de 50 cas sur GPT-5.5 et Claude 4.6 Sonnet coûte moins de 2 $ aux tarifs API d\'avril 2026 ($5/1M tokens en entrée pour GPT-5.5 ; $3/1M pour Claude 4.6 Sonnet)',
+      'Un test de 50 cas sur GPT-5.6 et Claude 4.6 Sonnet coûte moins de 2 $ aux tarifs API d\'avril 2026 ($5/1M tokens en entrée pour GPT-5.6 ; $3/1M pour Claude 4.6 Sonnet)',
       'Git gère l\'historique des versions de prompts sans outil supplémentaire — un fichier YAML dans un dépôt partagé suffit pour les équipes de moins de 15 personnes',
       'GPT-5.6 et Claude Sonnet 5 produisent des résultats significativement différents sur les tâches créatives, de synthèse et à instructions ambiguës — les tests multi-modèles sont indispensables',
       'Les équipes de 2–5 personnes peuvent implémenter le setup complet avec uniquement des outils gratuits : Git, VS Code et une clé API partagée',
@@ -1510,7 +1510,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'Choisir les modèles IA pour vos prompts',
         content: [
           '**Commencez avec GPT-5.6 et Claude Sonnet 5 pour la plupart des tâches — exécutez les deux et comparez les taux de réussite sur votre cas d\'usage avant de vous engager sur un modèle.** Le bon modèle dépend du type de tâche, pas des classements généraux.',
-          'GPT-5.5 (OpenAI) et Claude 4.6 Sonnet (Anthropic) sont les deux modèles frontier les plus utilisés pour le prompt engineering en production [en avril 2026](/fr/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model). Pour les documents dépassant 100k tokens, ajoutez Gemini 2.5 Pro. Pour les tâches en volume à faible coût, utilisez Claude 4.5 Haiku ou GPT-5.6 mini.',
+          'GPT-5.6 (OpenAI) et Claude 4.6 Sonnet (Anthropic) sont les deux modèles frontier les plus utilisés pour le prompt engineering en production [en avril 2026](/fr/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model). Pour les documents dépassant 100k tokens, ajoutez Gemini 2.5 Pro. Pour les tâches en volume à faible coût, utilisez Claude 4.5 Haiku ou GPT-5.6 Luna.',
         ],
         columns: ['Type de tâche', 'Modèle recommandé', 'Pourquoi'],
         rows: [
@@ -1518,7 +1518,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { 'Type de tâche': 'Rédaction longue, instructions nuancées', 'Modèle recommandé': 'Claude Sonnet 5', 'Pourquoi': 'Gère les instructions multi-contraintes avec moins d\'erreurs d\'interprétation littérale' },
           { 'Type de tâche': 'Génération et revue de code', 'Modèle recommandé': 'GPT-5.6 ou Claude Sonnet 5', 'Pourquoi': 'Les deux sont performants — exécutez les deux et comparez sur votre codebase' },
           { 'Type de tâche': 'Documents de plus de 100k tokens', 'Modèle recommandé': 'Gemini 2.5 Pro', 'Pourquoi': 'Fenêtre de contexte de 1M tokens ; GPT-5.6 et Claude Sonnet 5 sont limités à 200k tokens' },
-          { 'Type de tâche': 'Tâches en volume à faible coût', 'Modèle recommandé': 'Claude 4.5 Haiku ou GPT-5.6 mini', 'Pourquoi': 'Les deux sont 10–20× moins chers que les modèles phares avec une qualité acceptable' },
+          { 'Type de tâche': 'Tâches en volume à faible coût', 'Modèle recommandé': 'Claude 4.5 Haiku ou GPT-5.6 Luna', 'Pourquoi': 'Les deux sont 10–20× moins chers que les modèles phares avec une qualité acceptable' },
         ],
         tableFormat: true,
         callouts: [
@@ -1615,7 +1615,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'Sur quel modèle IA une petite équipe devrait-elle se standardiser ?',
-            a: 'Ne vous standardisez pas sur un seul modèle. Exécutez vos prompts les plus critiques sur GPT-5.6 et Claude Sonnet 5 et choisissez selon le type de tâche. GPT-5.6 est plus fiable pour les sorties structurées comme JSON et la classification. Claude Sonnet 5 gère les instructions multi-contraintes avec moins d\'erreurs d\'interprétation littérale. Utilisez Claude 4.5 Haiku ou GPT-5.6 mini pour les tâches en volume à faible coût.',
+            a: 'Ne vous standardisez pas sur un seul modèle. Exécutez vos prompts les plus critiques sur GPT-5.6 et Claude Sonnet 5 et choisissez selon le type de tâche. GPT-5.6 est plus fiable pour les sorties structurées comme JSON et la classification. Claude Sonnet 5 gère les instructions multi-contraintes avec moins d\'erreurs d\'interprétation littérale. Utilisez Claude 4.5 Haiku ou GPT-5.6 Luna pour les tâches en volume à faible coût.',
           },
           {
             q: 'Combien de prompts faut-il avant qu\'une bibliothèque partagée soit rentable ?',
@@ -1647,7 +1647,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'sources',
         title: 'Sources',
         items: [
-          '[Tarifs API OpenAI (avril 2026)](https://openai.com/api/pricing) — taux d\'entrée/sortie de tokens GPT-5.5 et GPT-5.5 mini utilisés pour les estimations de coûts dans cet article',
+          '[Tarifs API OpenAI (avril 2026)](https://openai.com/api/pricing) — taux d\'entrée/sortie de tokens GPT-5.6 et GPT-5.6 mini utilisés pour les estimations de coûts dans cet article',
           '[Tarifs API Anthropic (avril 2026)](https://www.anthropic.com/pricing) — taux de tokens Claude 4.6 Sonnet et Claude 4.5 Haiku',
           '[Tarifs API Google Gemini (avril 2026)](https://ai.google.dev/pricing) — fenêtre de contexte et taux de tokens Gemini 2.5 Pro',
           '[GitHub : InnerSource Fundamentals](https://resources.github.com/innersource/fundamentals/) — principes de propriété partagée du code et de gouvernance applicables aux bibliothèques de prompts',
@@ -1676,7 +1676,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     primaryTerm: 'prompt engineering setup for small teams',
     aboutTopics: ['プロンプトライブラリ管理', 'チームプロンプトワークフロー', 'マルチモデルプロンプトテスト'],
     quickFacts: [
-      'GPT-5.5とClaude 4.6 Sonnetで50件のテスト実行にかかるコストは、2026年4月のAPIレートで2ドル未満です（GPT-5.5：入力100万トークンあたり5ドル、Claude 4.6 Sonnet：3ドル）',
+      'GPT-5.6とClaude 4.6 Sonnetで50件のテスト実行にかかるコストは、2026年4月のAPIレートで2ドル未満です（GPT-5.6：入力100万トークンあたり5ドル、Claude 4.6 Sonnet：3ドル）',
       'GitはPromptのバージョン履歴を追加ツールなしで管理できます — 15人以下のチームには共有リポジトリのフラットなYAMLファイルで十分です',
       'GPT-5.6とClaude Sonnet 5は、クリエイティブ・要約・曖昧な指示のタスクで意味のある違いがある出力を生成します — ユーザーへの影響前に差異を検出するにはマルチモデルテストが必要です',
       '2〜5人のチームは無料ツールのみ（Git、VS Code、共有APIキー）でこのガイドの全セットアップを実装できます',
@@ -1837,7 +1837,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'プロンプトに使うAIモデルの選び方',
         content: [
           '**ほとんどのタスクはGPT-5.6とClaude Sonnet 5から始めてください — 1つのモデルに絞る前に、両方を実行して特定のユースケースでの合格率を比較します。** 適切なモデルはタスクの種類に依存します。一般的なリーダーボードランキングではありません。',
-          'GPT-5.5（OpenAI）とClaude 4.6 Sonnet（Anthropic）は、[2026年4月時点で](/ja/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model)本番プロンプトエンジニアリングで最も広く使われている2つのフロンティアモデルです。100kトークンを超えるドキュメントにはGemini 2.5 Proを追加します。コスト重視の大量処理タスクにはClaude 4.5 HaikuまたはGPT-5.6 miniを使用します。',
+          'GPT-5.6（OpenAI）とClaude 4.6 Sonnet（Anthropic）は、[2026年4月時点で](/ja/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model)本番プロンプトエンジニアリングで最も広く使われている2つのフロンティアモデルです。100kトークンを超えるドキュメントにはGemini 2.5 Proを追加します。コスト重視の大量処理タスクにはClaude 4.5 HaikuまたはGPT-5.6 Lunaを使用します。',
         ],
         columns: ['タスクの種類', '推奨モデル', '理由'],
         rows: [
@@ -1845,7 +1845,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { 'タスクの種類': '長文生成、ニュアンスのある指示', '推奨モデル': 'Claude Sonnet 5', '理由': '文字通りの解釈エラーが少なく複数制約の指示を処理' },
           { 'タスクの種類': 'コード生成とレビュー', '推奨モデル': 'GPT-5.6またはClaude Sonnet 5', '理由': '両方とも高性能 — 特定のコードベースと言語で両方を実行して比較' },
           { 'タスクの種類': '100kトークン超えのドキュメント', '推奨モデル': 'Gemini 2.5 Pro', '理由': '100万トークンのコンテキストウィンドウ；GPT-5.6とClaude Sonnet 5は両方とも200kトークンが上限' },
-          { 'タスクの種類': 'コスト重視の大量タスク', '推奨モデル': 'Claude 4.5 HaikuまたはGPT-5.6 mini', '理由': '多くの本番タスクで十分な品質で、フラッグシップモデルより10〜20倍安い' },
+          { 'タスクの種類': 'コスト重視の大量タスク', '推奨モデル': 'Claude 4.5 HaikuまたはGPT-5.6 Luna', '理由': '多くの本番タスクで十分な品質で、フラッグシップモデルより10〜20倍安い' },
         ],
         tableFormat: true,
         callouts: [
@@ -1942,7 +1942,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: '小規模チームはどのAIモデルに統一すべきですか？',
-            a: '1つのモデルに統一しないでください。最も重要なPromptをGPT-5.6とClaude Sonnet 5の両方で実行し、タスクの種類ごとに選択してください。GPT-5.6はJSONや分類などの構造化された出力に信頼性が高いです。Claude Sonnet 5は複数制約の指示を文字通りの解釈エラーが少なく処理します。コスト重視の大量処理タスクにはClaude 4.5 HaikuまたはGPT-5.6 miniを使用してください。',
+            a: '1つのモデルに統一しないでください。最も重要なPromptをGPT-5.6とClaude Sonnet 5の両方で実行し、タスクの種類ごとに選択してください。GPT-5.6はJSONや分類などの構造化された出力に信頼性が高いです。Claude Sonnet 5は複数制約の指示を文字通りの解釈エラーが少なく処理します。コスト重視の大量処理タスクにはClaude 4.5 HaikuまたはGPT-5.6 Lunaを使用してください。',
           },
           {
             q: '共有ライブラリを構築する価値があるのは何件からですか？',
@@ -1974,7 +1974,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'sources',
         title: '参考資料',
         items: [
-          '[OpenAI APIの料金（2026年4月）](https://openai.com/api/pricing) — この記事のコスト試算に使用したGPT-5.5およびGPT-5.5 miniの入出力トークンレート',
+          '[OpenAI APIの料金（2026年4月）](https://openai.com/api/pricing) — この記事のコスト試算に使用したGPT-5.6およびGPT-5.6 miniの入出力トークンレート',
           '[Anthropic APIの料金（2026年4月）](https://www.anthropic.com/pricing) — Claude 4.6 SonnetおよびClaude 4.5 Haikuのトークンレート',
           '[Google Gemini APIの料金（2026年4月）](https://ai.google.dev/pricing) — Gemini 2.5 Proのコンテキストウィンドウとトークンレート',
           '[GitHub: InnerSource Fundamentals](https://resources.github.com/innersource/fundamentals/) — 共有Promptライブラリに適用できるコードの共有所有権とガバナンスの原則',
@@ -2003,7 +2003,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     primaryTerm: '小团队Prompt工程设置',
     aboutTopics: ['Prompt库管理', '团队Prompt工作流', '多模型Prompt测试'],
     quickFacts: [
-      'GPT-5.5和Claude 4.6 Sonnet在2026年4月API定价下，50条测试集跨模型运行成本低于$2（GPT-5.5输入$5/百万token；Claude 4.6 Sonnet输入$3/百万token）',
+      'GPT-5.6和Claude 4.6 Sonnet在2026年4月API定价下，50条测试集跨模型运行成本低于$2（GPT-5.6输入$5/百万token；Claude 4.6 Sonnet输入$3/百万token）',
       'Git无需额外工具即可处理Prompt版本历史——共享仓库中的YAML或JSON文件对15人以下团队已足够',
       'GPT-5.6和Claude Sonnet 5在创意写作、摘要和模糊指令任务上产生显著不同的输出——必须通过多模型测试才能在影响用户前发现差异',
       '2–5人团队只需免费工具即可完成本指南的全部设置：Git、VS Code和共享API密钥',
@@ -2158,7 +2158,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '任务类型': '长篇写作、细微指令', '推荐模型': 'Claude Sonnet 5', '原因': '处理复杂指令时字面错误更少' },
           { '任务类型': '代码生成和调试', '推荐模型': 'Claude Sonnet 5或GPT-5.6', '原因': '两者都很强；同时运行并比较' },
           { '任务类型': '长上下文（100k+ tokens）', '推荐模型': 'Gemini 2.5 Pro', '原因': '100万token上下文；GPT-5.6和Claude均上限200k' },
-          { '任务类型': '成本敏感的大批量任务', '推荐模型': 'Claude 4.5 Haiku或GPT-5.6 mini', '原因': '比旗舰模型便宜约10–20倍' },
+          { '任务类型': '成本敏感的大批量任务', '推荐模型': 'Claude 4.5 Haiku或GPT-5.6 Luna', '原因': '比旗舰模型便宜约10–20倍' },
         ],
         tableFormat: true,
       },
@@ -2256,7 +2256,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: '小团队应该统一使用哪个模型？',
-            a: '不要统一使用一个模型——在GPT-5.6和Claude Sonnet 5上运行最关键的Prompt，按任务选择。GPT-5.6在结构化输出（JSON、分类）上更可靠。Claude Sonnet 5处理细微指令时字面错误更少。对成本敏感的大批量任务使用Claude 4.5 Haiku或GPT-5.6 mini。',
+            a: '不要统一使用一个模型——在GPT-5.6和Claude Sonnet 5上运行最关键的Prompt，按任务选择。GPT-5.6在结构化输出（JSON、分类）上更可靠。Claude Sonnet 5处理细微指令时字面错误更少。对成本敏感的大批量任务使用Claude 4.5 Haiku或GPT-5.6 Luna。',
           },
           {
             q: '团队共享库中有多少Prompt时应添加审查流程？',
@@ -2287,7 +2287,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'sources',
         title: '参考来源',
         items: [
-          '[OpenAI API定价（2026年4月）](https://openai.com/api/pricing) — GPT-5.5、GPT-5.5 mini输入/输出token费率',
+          '[OpenAI API定价（2026年4月）](https://openai.com/api/pricing) — GPT-5.6、GPT-5.6 mini输入/输出token费率',
           '[Anthropic API定价（2026年4月）](https://www.anthropic.com/pricing) — Claude 4.6 Sonnet、Claude 4.5 Haiku token费率',
           '[Google Gemini API定价（2026年4月）](https://ai.google.dev/pricing) — Gemini 2.5 Pro和Flash token费率',
           '[中华人民共和国数据安全法（2021年）](https://www.moj.gov.cn) — 数据分类、跨境传输和安全评估要求',
@@ -2317,7 +2317,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     primaryTerm: 'إعداد هندسة البرومبت للفرق الصغيرة',
     aboutTopics: ['إدارة مكتبة البرومبتات', 'سير عمل البرومبتات للفريق', 'اختبار البرومبتات متعدد النماذج'],
     quickFacts: [
-      'تكلف تشغيل 50 حالة اختبار على GPT-5.5 وClaude 4.6 Sonnet أقل من 2 دولار وفق أسعار API في أبريل 2026 (5 دولارات لكل مليون رمز مدخل لـGPT-5.5؛ 3 دولارات لكل مليون لـClaude 4.6 Sonnet)',
+      'تكلف تشغيل 50 حالة اختبار على GPT-5.6 وClaude 4.6 Sonnet أقل من 2 دولار وفق أسعار API في أبريل 2026 (5 دولارات لكل مليون رمز مدخل لـGPT-5.6؛ 3 دولارات لكل مليون لـClaude 4.6 Sonnet)',
       'يتولى Git تاريخ إصدارات البرومبتات دون أي أدوات إضافية — ملف YAML أو JSON مسطح في مستودع مشترك كافٍ للفرق الأقل من 15 شخصاً',
       'ينتج GPT-5.6 وClaude Sonnet 5 مخرجات مختلفة بشكل ملحوظ في المهام الإبداعية والتلخيصية والتعليمات الغامضة — الاختبار متعدد النماذج ضروري لاكتشاف التباين قبل وصوله للمستخدمين',
       'يمكن للفرق من 2 إلى 5 أشخاص تطبيق الإعداد الكامل في هذا الدليل باستخدام أدوات مجانية فقط: Git وVS Code ومفتاح API مشترك',
@@ -2479,7 +2479,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: 'اختر GPT-5.6 للمخرجات المنظمة وClaude Sonnet 5 للتفاصيل الدقيقة',
         content: [
           '**ابدأ بـGPT-5.6 وClaude Sonnet 5 لمعظم المهام — شغّل كليهما وقارن معدلات النجاح في حالة استخدامك المحددة قبل الالتزام بنموذج.** النموذج الصحيح يعتمد على نوع المهمة، وليس على التصنيفات العامة.',
-          'GPT-5.5 من OpenAI وClaude 4.6 Sonnet من Anthropic هما النموذجان الأكثر استخداماً لهندسة البرومبت الإنتاجية اعتباراً من أبريل 2026. للوثائق التي تتجاوز 100k رمز، أضف Gemini 2.5 Pro. للمهام عالية الحجم الحساسة للتكلفة، استخدم Claude 4.5 Haiku أو GPT-5.6 mini.',
+          'GPT-5.6 من OpenAI وClaude 4.6 Sonnet من Anthropic هما النموذجان الأكثر استخداماً لهندسة البرومبت الإنتاجية اعتباراً من أبريل 2026. للوثائق التي تتجاوز 100k رمز، أضف Gemini 2.5 Pro. للمهام عالية الحجم الحساسة للتكلفة، استخدم Claude 4.5 Haiku أو GPT-5.6 Luna.',
         ],
         columns: ['نوع المهمة', 'النموذج الموصى به', 'السبب'],
         rows: [
@@ -2487,7 +2487,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { 'نوع المهمة': 'الكتابة الطويلة، التعليمات الدقيقة', 'النموذج الموصى به': 'Claude Sonnet 5', 'السبب': 'يتعامل مع تعليمات متعددة القيود بأخطاء تفسير حرفي أقل' },
           { 'نوع المهمة': 'توليد الكود ومراجعته', 'النموذج الموصى به': 'GPT-5.6 أو Claude Sonnet 5', 'السبب': 'كلاهما يؤدي جيداً — شغّل كليهما وقارن على قاعدة الكود واللغة المحددة لديك' },
           { 'نوع المهمة': 'وثائق أكثر من 100k رمز', 'النموذج الموصى به': 'Gemini 2.5 Pro', 'السبب': 'نافذة سياق 1M رمز؛ GPT-5.6 وClaude Sonnet 5 لهما حد 200k رمز' },
-          { 'نوع المهمة': 'مهام عالية الحجم حساسة للتكلفة', 'النموذج الموصى به': 'Claude 4.5 Haiku أو GPT-5.6 mini', 'السبب': 'كلاهما أرخص بـ10–20 مرة من النماذج الرائدة بجودة مقبولة للعديد من مهام الإنتاج' },
+          { 'نوع المهمة': 'مهام عالية الحجم حساسة للتكلفة', 'النموذج الموصى به': 'Claude 4.5 Haiku أو GPT-5.6 Luna', 'السبب': 'كلاهما أرخص بـ10–20 مرة من النماذج الرائدة بجودة مقبولة للعديد من مهام الإنتاج' },
         ],
         tableFormat: true,
         callouts: [
@@ -2583,7 +2583,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'على أي نموذج ذكاء اصطناعي يجب أن يعتمد الفريق الصغير؟',
-            a: 'لا تعتمد على نموذج واحد. شغّل برومبتاتك الأكثر أهمية على GPT-5.6 وClaude Sonnet 5 واختر حسب نوع المهمة. GPT-5.6 أكثر موثوقية للمخرجات المنظمة مثل JSON والتصنيف. يتعامل Claude Sonnet 5 مع التعليمات الدقيقة ومتعددة القيود بأخطاء حرفية أقل. استخدم Claude 4.5 Haiku أو GPT-5.6 mini للمهام عالية الحجم الحساسة للتكلفة.',
+            a: 'لا تعتمد على نموذج واحد. شغّل برومبتاتك الأكثر أهمية على GPT-5.6 وClaude Sonnet 5 واختر حسب نوع المهمة. GPT-5.6 أكثر موثوقية للمخرجات المنظمة مثل JSON والتصنيف. يتعامل Claude Sonnet 5 مع التعليمات الدقيقة ومتعددة القيود بأخطاء حرفية أقل. استخدم Claude 4.5 Haiku أو GPT-5.6 Luna للمهام عالية الحجم الحساسة للتكلفة.',
           },
           {
             q: 'كم عدد البرومبتات التي نحتاجها قبل أن يستحق بناء مكتبة مشتركة؟',
@@ -2615,7 +2615,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'sources',
         title: 'المصادر',
         items: [
-          '[أسعار OpenAI API (أبريل 2026)](https://openai.com/api/pricing) — أسعار رموز الإدخال/الإخراج لـGPT-5.5 وGPT-5.5 mini المستخدمة في تقديرات التكلفة في هذا المقال',
+          '[أسعار OpenAI API (أبريل 2026)](https://openai.com/api/pricing) — أسعار رموز الإدخال/الإخراج لـGPT-5.6 وGPT-5.6 mini المستخدمة في تقديرات التكلفة في هذا المقال',
           '[أسعار Anthropic API (أبريل 2026)](https://www.anthropic.com/pricing) — أسعار رموز Claude 4.6 Sonnet وClaude 4.5 Haiku',
           '[أسعار Google Gemini API (أبريل 2026)](https://ai.google.dev/pricing) — نافذة السياق وأسعار رموز Gemini 2.5 Pro',
           '[GitHub: InnerSource Fundamentals](https://resources.github.com/innersource/fundamentals/) — مبادئ ملكية الكود المشترك والحوكمة المطبقة على مكتبات البرومبتات المشتركة',
@@ -2644,7 +2644,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     primaryTerm: '소규모 팀을 위한 프롬프트 엔지니어링 설정',
     aboutTopics: ['프롬프트 라이브러리 관리', '팀 프롬프트 워크플로우', '멀티 모델 프롬프트 테스트'],
     quickFacts: [
-      'GPT-5.5와 Claude 4.6 Sonnet을 대상으로 한 50개 케이스 테스트 실행 비용은 2026년 4월 API 요금 기준 2달러 미만입니다 (GPT-5.5: 입력 토큰 100만 개당 5달러, Claude 4.6 Sonnet: 100만 개당 3달러)',
+      'GPT-5.6와 Claude 4.6 Sonnet을 대상으로 한 50개 케이스 테스트 실행 비용은 2026년 4월 API 요금 기준 2달러 미만입니다 (GPT-5.6: 입력 토큰 100만 개당 5달러, Claude 4.6 Sonnet: 100만 개당 3달러)',
       'Git은 추가 도구 없이도 프롬프트 버전 기록을 완벽하게 관리합니다. 공유 저장소의 단일 YAML 또는 JSON 파일만으로도 15인 이하 팀에 충분합니다.',
       'GPT-5.6와 Claude Sonnet 5은 창의적 작업, 요약, 모호한 지시 작업에서 의미 있게 다른 결과물을 생성합니다. 사용자에게 도달하기 전에 차이를 감지하려면 멀티 모델 테스트가 반드시 필요합니다.',
       '2~5인 팀은 Git, VS Code, 공유 API 키 등 무료 도구만으로 이 가이드의 전체 설정을 구현할 수 있습니다.',
@@ -2806,7 +2806,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: '구조화된 출력에는 GPT-5.6, 뉘앙스 처리에는 Claude Sonnet 5 선택',
         content: [
           '**대부분의 작업에는 GPT-5.6와 Claude Sonnet 5으로 시작하십시오. 하나의 모델을 확정하기 전에 두 모델을 실행하고 특정 사용 사례의 합격률을 비교하십시오.** 올바른 모델은 일반적인 리더보드 순위가 아닌 작업 유형에 달려 있습니다.',
-          '[OpenAI의 GPT-5.5](https://platform.openai.com/playground)와 [Anthropic의 Claude 4.6 Sonnet](https://docs.anthropic.com/)은 [2026년 4월 기준](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) 프로덕션 프롬프트 엔지니어링에서 가장 널리 사용되는 두 개의 프론티어 모델입니다. 100k 토큰을 초과하는 문서의 경우 Gemini 2.5 Pro를 추가하십시오. 비용에 민감한 대용량 작업에는 Claude 4.5 Haiku 또는 GPT-5.6 mini를 사용하십시오.',
+          '[OpenAI의 GPT-5.6](https://platform.openai.com/playground)와 [Anthropic의 Claude 4.6 Sonnet](https://docs.anthropic.com/)은 [2026년 4월 기준](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) 프로덕션 프롬프트 엔지니어링에서 가장 널리 사용되는 두 개의 프론티어 모델입니다. 100k 토큰을 초과하는 문서의 경우 Gemini 2.5 Pro를 추가하십시오. 비용에 민감한 대용량 작업에는 Claude 4.5 Haiku 또는 GPT-5.6 Luna를 사용하십시오.',
         ],
         columns: ['작업 유형', '권장 모델', '이유'],
         rows: [
@@ -2814,7 +2814,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '작업 유형': '장문 작성, 섬세한 지시 처리', '권장 모델': 'Claude Sonnet 5', '이유': '리터럴 해석 오류를 줄이면서 다중 조건 지시를 처리' },
           { '작업 유형': '코드 생성 및 리뷰', '권장 모델': 'GPT-5.6 또는 Claude Sonnet 5', '이유': '두 모델 모두 우수합니다. 특정 코드베이스와 언어로 두 모델을 실행하고 비교하십시오.' },
           { '작업 유형': '100k 토큰 초과 문서', '권장 모델': 'Gemini 2.5 Pro', '이유': '100만 토큰 컨텍스트 창 제공. GPT-5.6와 Claude Sonnet 5은 모두 200k 토큰에서 제한됩니다.' },
-          { '작업 유형': '비용에 민감한 대용량 작업', '권장 모델': 'Claude 4.5 Haiku 또는 GPT-5.6 mini', '이유': '플래그십 모델보다 10~20배 저렴하면서도 많은 프로덕션 작업에서 허용 가능한 품질 제공' },
+          { '작업 유형': '비용에 민감한 대용량 작업', '권장 모델': 'Claude 4.5 Haiku 또는 GPT-5.6 Luna', '이유': '플래그십 모델보다 10~20배 저렴하면서도 많은 프로덕션 작업에서 허용 가능한 품질 제공' },
         ],
         tableFormat: true,
         callouts: [
@@ -2910,7 +2910,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: '소규모 팀은 어떤 AI 모델을 표준으로 채택해야 합니까?',
-            a: '하나의 모델로 표준화하지 마십시오. 가장 중요한 프롬프트를 GPT-5.6와 Claude Sonnet 5 모두에서 실행하고 작업 유형별로 선택하십시오. GPT-5.6는 JSON, 분류 같은 구조화된 출력에 더 안정적입니다. Claude Sonnet 5은 리터럴 오류를 줄이면서 섬세한 다중 조건 지시를 처리합니다. 비용에 민감한 대용량 작업에는 Claude 4.5 Haiku 또는 GPT-5.6 mini를 사용하십시오.',
+            a: '하나의 모델로 표준화하지 마십시오. 가장 중요한 프롬프트를 GPT-5.6와 Claude Sonnet 5 모두에서 실행하고 작업 유형별로 선택하십시오. GPT-5.6는 JSON, 분류 같은 구조화된 출력에 더 안정적입니다. Claude Sonnet 5은 리터럴 오류를 줄이면서 섬세한 다중 조건 지시를 처리합니다. 비용에 민감한 대용량 작업에는 Claude 4.5 Haiku 또는 GPT-5.6 Luna를 사용하십시오.',
           },
           {
             q: '공유 라이브러리 구축이 가치 있으려면 프롬프트가 몇 개 필요합니까?',
@@ -2942,7 +2942,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'sources',
         title: '출처',
         items: [
-          '[OpenAI API 요금 (2026년 4월)](https://openai.com/api/pricing) — 이 문서의 비용 추정에 사용된 GPT-5.5 및 GPT-5.5 mini 입력/출력 토큰 요금',
+          '[OpenAI API 요금 (2026년 4월)](https://openai.com/api/pricing) — 이 문서의 비용 추정에 사용된 GPT-5.6 및 GPT-5.6 mini 입력/출력 토큰 요금',
           '[Anthropic API 요금 (2026년 4월)](https://www.anthropic.com/pricing) — Claude 4.6 Sonnet 및 Claude 4.5 Haiku 토큰 요금',
           '[Google Gemini API 요금 (2026년 4월)](https://ai.google.dev/pricing) — Gemini 2.5 Pro 컨텍스트 창 및 토큰 요금',
           '[GitHub: InnerSource 기초](https://resources.github.com/innersource/fundamentals/) — 공유 프롬프트 라이브러리에 적용 가능한 공유 코드 소유권 및 거버넌스 원칙',

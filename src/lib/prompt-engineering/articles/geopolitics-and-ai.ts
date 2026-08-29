@@ -14,7 +14,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     en: {
       freshness_tier: 'annual',
       last_full_refresh: '2026-08-26',
-      current_models_mentioned: ['Qwen 3', 'ERNIE 4.0', 'Doubao', 'Z.ai GLM-4', 'DeepSeek R1', 'GPT-5.5', 'Claude Opus 4.8', 'Gemini 3.1 Pro', 'Mistral Large 2'],
+      current_models_mentioned: ['Qwen 3', 'ERNIE 4.0', 'Doubao', 'Z.ai GLM-4', 'DeepSeek R1', 'GPT-5.6', 'Claude Opus 5', 'Gemini 3.1 Pro', 'Mistral Large 2'],
       theme: 'Policy & Compliance',
       heroImage: '/images/geopolitics-and-ai-overview-hero-en.webp',
       title: 'AI Geopolitics Explained: EU AI Act vs US vs China (2026 Analysis)',
@@ -148,11 +148,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Question', name: 'What are the fines for violating the EU AI Act?', acceptedAnswer: { '@type': 'Answer', text: 'Fines reach up to €35 million or 7% of global annual turnover for prohibited AI practices (whichever is higher). High-risk AI violations carry fines up to €15 million or 3% of global turnover. Providing incorrect information to authorities carries fines up to €7.5 million or 1% of global turnover.' } },
           { '@type': 'Question', name: 'What AI applications does the EU ban outright?', acceptedAnswer: { '@type': 'Answer', text: 'The EU AI Act prohibits: social scoring systems by public authorities, real-time biometric surveillance in public spaces (with narrow law enforcement exceptions), AI that exploits cognitive vulnerabilities, and untargeted scraping of facial images from the internet to build recognition databases. These are categorized as Unacceptable Risk.' } },
           { '@type': 'Question', name: 'How does US AI regulation differ from the EU approach?', acceptedAnswer: { '@type': 'Answer', text: 'The US uses a sectoral, voluntary approach — existing regulators (FTC, FDA, CFPB, EEOC) apply their mandates to AI within their domains. There is no federal AI law equivalent to the EU AI Act. The Biden Executive Order on AI Safety (October 2023) was revoked by the Trump administration in January 2025 and replaced with a competitiveness-focused AI Action Plan.' } },
-          { '@type': 'Question', name: 'Is China\'s AI as capable as US AI systems?', acceptedAnswer: { '@type': 'Answer', text: 'DeepSeek R1, released January 2025, exceeded GPT-5.5 on reasoning and coding benchmarks (AIME 2024: 79.8% vs GPT-5.5\'s 74.4%, MATH-500: 97.3%, HumanEval) while reportedly training at ~$6 million — a 94% cost reduction vs estimated frontier model training costs. China\'s leading models — including Alibaba\'s Qwen 3 and Baidu\'s ERNIE 4.0 — are competitive on many tasks but trail on multilingual reasoning and safety benchmarks. Hardware export controls limit China\'s access to the latest Nvidia GPUs, but DeepSeek\'s success demonstrates those controls have significant limits.' } },
-          { '@type': 'Question', name: 'Can EU companies use GPT-5.5 and Claude under the AI Act?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, for most use cases. GPT-5.5 and Claude Opus 4.8 qualify as General Purpose AI (GPAI) models and must comply with transparency obligations — including publishing training data summaries and complying with EU copyright law — which took effect August 2025. OpenAI and Anthropic have both published GPAI compliance documentation for EU users.' } },
+          { '@type': 'Question', name: 'Is China\'s AI as capable as US AI systems?', acceptedAnswer: { '@type': 'Answer', text: 'DeepSeek R1, released January 2025, exceeded GPT-5.6 on reasoning and coding benchmarks (AIME 2024: 79.8% vs GPT-5.6\'s 74.4%, MATH-500: 97.3%, HumanEval) while reportedly training at ~$6 million — a 94% cost reduction vs estimated frontier model training costs. China\'s leading models — including Alibaba\'s Qwen 3 and Baidu\'s ERNIE 4.0 — are competitive on many tasks but trail on multilingual reasoning and safety benchmarks. Hardware export controls limit China\'s access to the latest Nvidia GPUs, but DeepSeek\'s success demonstrates those controls have significant limits.' } },
+          { '@type': 'Question', name: 'Can EU companies use GPT-5.6 and Claude under the AI Act?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, for most use cases. GPT-5.6 and Claude Opus 5 qualify as General Purpose AI (GPAI) models and must comply with transparency obligations — including publishing training data summaries and complying with EU copyright law — which took effect August 2025. OpenAI and Anthropic have both published GPAI compliance documentation for EU users.' } },
           { '@type': 'Question', name: 'What is the UK AI Safety Institute (AISI)?', acceptedAnswer: { '@type': 'Answer', text: 'The UK AI Safety Institute (AISI) was established in November 2023 following the AI Safety Summit at Bletchley Park. It conducts technical research on AI safety, evaluates frontier AI models for dangerous capabilities, and publishes safety reports. The AISI operates independently of commercial AI developers and collaborates with the US AI Safety Institute.' } },
           { '@type': 'Question', name: 'How does DeepSeek affect the AI geopolitics race?', acceptedAnswer: { '@type': 'Answer', text: 'DeepSeek R1\'s January 2025 release demonstrated that frontier AI capabilities are achievable at significantly lower compute costs than previously assumed. This weakens the argument that export controls on Nvidia GPUs will permanently limit Chinese AI development. It accelerated US and EU policy discussions about whether compute-based containment strategies are sufficient.' } },
-          { '@type': 'Question', name: 'What is the Brussels Effect in AI?', acceptedAnswer: { '@type': 'Answer', text: 'The Brussels Effect describes how EU regulations become de facto global standards because multinational companies find it easier to apply the strictest standard worldwide rather than maintain separate compliance stacks per jurisdiction. For AI, this means the EU AI Act effectively raises standards for GPT-5.5, Claude, and Gemini globally — regardless of where users are located.' } },
+          { '@type': 'Question', name: 'What is the Brussels Effect in AI?', acceptedAnswer: { '@type': 'Answer', text: 'The Brussels Effect describes how EU regulations become de facto global standards because multinational companies find it easier to apply the strictest standard worldwide rather than maintain separate compliance stacks per jurisdiction. For AI, this means the EU AI Act effectively raises standards for GPT-5.6, Claude, and Gemini globally — regardless of where users are located.' } },
           { '@type': 'Question', name: 'What is the Hiroshima AI Process and what did it achieve?', acceptedAnswer: { '@type': 'Answer', text: 'The Hiroshima AI Process is a G7 initiative launched at the 2023 Hiroshima Summit under Japan\'s G7 presidency. It produced the Hiroshima AI Process Code of Conduct — 11 voluntary principles for developers of advanced AI systems, adopted by G7 nations in October 2023. Principles cover transparency, incident reporting, safety testing, and AI-generated content watermarking. The Code of Conduct is voluntary, not legally binding, and is separate from the EU AI Act.' } },
           { '@type': 'Question', name: 'Can EU organizations use DeepSeek for commercial applications?', acceptedAnswer: { '@type': 'Answer', text: 'Technically yes, with GDPR-compliant Standard Contractual Clauses (SCCs). In practice, SCCs are difficult to enforce against Chinese law obligations requiring CAC data disclosure compliance. Germany (BSI), France (ANSSI), and the Netherlands (NCSC) have issued advisories restricting Chinese AI tools for government and critical infrastructure. Private-sector organizations must conduct a Transfer Impact Assessment under GDPR Article 46 before processing personal data through DeepSeek.' } },
         ],
@@ -185,10 +185,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         name: 'How to Deploy Generative AI Products in China: A Developer Guide',
         description: 'Step-by-step guide for developers deploying AI products in China — model selection, content restrictions, CAC security assessment, PIPL data residency, and go-to-market timeline.',
         step: [
-          { '@type': 'HowToStep', position: 1, name: 'Understand Available AI Models in China', text: 'Foreign models (GPT-5.5, Claude, Gemini) are inaccessible from mainland China without a VPN. Available options: Alibaba Qwen 3 (open-weights, 7B–72B, 128K context), Baidu ERNIE 4.0 (Qianfan API), ByteDance Doubao (Volcano Engine), Z.ai GLM-4, DeepSeek R1/V3. Qwen 3 72B is the strongest open-weights option for self-hosting.' },
+          { '@type': 'HowToStep', position: 1, name: 'Understand Available AI Models in China', text: 'Foreign models (GPT-5.6, Claude, Gemini) are inaccessible from mainland China without a VPN. Available options: Alibaba Qwen 3 (open-weights, 7B–72B, 128K context), Baidu ERNIE 4.0 (Qianfan API), ByteDance Doubao (Volcano Engine), Z.ai GLM-4, DeepSeek R1/V3. Qwen 3 72B is the strongest open-weights option for self-hosting.' },
           { '@type': 'HowToStep', position: 2, name: 'Plan for API-Level Content Restrictions', text: 'CAC-registered generative AI services filter content blocking CPC leadership criticism, Taiwan/Tibet/Xinjiang independence discussions, politically sensitive historical events, and content undermining "socialist core values." Filters are built into the API. Filter errors return HTTP 200 with is_safe: 0 — not HTTP 4xx — requiring explicit application-level handling.' },
           { '@type': 'HowToStep', position: 3, name: 'Complete the CAC Security Assessment', text: 'Required before any consumer-facing generative AI service launches in China. Submit training data sources, content filtering documentation, and sample outputs. Timeline: 45–90 days. Foreign companies must partner with a mainland China entity or licensed cloud provider (Alibaba Cloud, Tencent Cloud) as the registered provider.' },
-          { '@type': 'HowToStep', position: 4, name: 'Deploy a Hybrid Model for China and International Users', text: 'Deploy Qwen 3 72B (Apache 2.0) on your own infrastructure outside China for international users. Use Alibaba Cloud API for the China segment under their CAC registration. Qwen 3 72B scores within 5 points of GPT-5.5 on MMLU and outperforms on C-Eval. 128K context window.' },
+          { '@type': 'HowToStep', position: 4, name: 'Deploy a Hybrid Model for China and International Users', text: 'Deploy Qwen 3 72B (Apache 2.0) on your own infrastructure outside China for international users. Use Alibaba Cloud API for the China segment under their CAC registration. Qwen 3 72B scores within 5 points of GPT-5.6 on MMLU and outperforms on C-Eval. 128K context window.' },
           { '@type': 'HowToStep', position: 5, name: 'Comply with PIPL Data Residency Requirements', text: 'PIPL (2021) requires personal data from Chinese users to stay in China or pass a government security assessment before cross-border transfer. Route all China-user traffic through mainland-hosted inference (Alibaba Cloud, Tencent Cloud, Huawei Cloud).' },
           { '@type': 'HowToStep', position: 6, name: 'Plan Your China Go-to-Market Timeline', text: 'Budget 45–90 days for CAC pre-launch review. Partner with a mainland entity for consumer-facing products. Use Qwen 3 72B for Chinese-language tasks. Avoid routing Chinese user data through US-hosted APIs.' },
         ],
@@ -223,7 +223,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'The Brussels Effect: EU AI Act rules apply to any AI reaching EU users, worldwide.',
             'The US has no federal AI law — sector regulators apply existing mandates to AI in their domains.',
             'The US revoked its AI safety executive order in January 2025 — competitiveness now leads over safety.',
-            'China\'s DeepSeek R1 exceeded GPT-5.5 on key benchmarks (AIME, MATH, HumanEval) at $6M training cost — a 94% reduction — demonstrating GPU export controls have limits.',
+            'China\'s DeepSeek R1 exceeded GPT-5.6 on key benchmarks (AIME, MATH, HumanEval) at $6M training cost — a 94% reduction — demonstrating GPU export controls have limits.',
             'TSMC in Taiwan fabricates the chips that power all frontier AI — a single geopolitical dependency.',
             'Organizations must comply with three conflicting regulatory frameworks simultaneously: EU, US, and China.',
           ],
@@ -236,7 +236,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**US AI Policy:** No federal AI law. Trump Administration pursuing state law preemption via EO 14365 (December 2025) and the National Framework (March 2026). The FTC issued its EO-mandated proposed policy statement on AI accuracy and state-law preemption on July 7, 2026 — four months after its March 11 deadline — and closed public comment July 31, 2026. Neither the TRUMP AMERICA AI Act nor the Democratic GUARDRAILS Act counter-proposal has passed Congress; both remain discussion drafts.',
             '**China AI Governance:** CAC (Cyberspace Administration of China) pre-launch assessment mandatory. Content filters block CPC criticism, Taiwan/Tibet/Xinjiang discussions, and content undermining "socialist core values." Filters return HTTP 200 with `is_safe: 0` flag (not 4xx errors). PIPL requires data residency for Chinese personal data.',
             '**Hardware Chokepoints:** Nvidia controls ~80% of AI training GPU market. TSMC fabricates ~90% of advanced semiconductors. Both are geopolitical flashpoints. US CHIPS Act ($52B) aims to reduce TSMC dependency.',
-            '**DeepSeek R1 Impact:** Exceeded GPT-5.5 on reasoning/coding (AIME 2024, MATH, HumanEval) at estimated ~$6M training cost (94% reduction vs. frontier model estimates; cost figure disputed). Trained on China-restricted Nvidia H800 GPUs. Demonstrates hardware export controls have limits.',
+            '**DeepSeek R1 Impact:** Exceeded GPT-5.6 on reasoning/coding (AIME 2024, MATH, HumanEval) at estimated ~$6M training cost (94% reduction vs. frontier model estimates; cost figure disputed). Trained on China-restricted Nvidia H800 GPUs. Demonstrates hardware export controls have limits.',
             '**Global Regulatory Conflict:** EU focuses on rights and safety; US focuses on innovation and competitiveness; China focuses on state control and strategic advantage. Organizations deploying AI globally must navigate three incompatible frameworks simultaneously.',
           ],
         },
@@ -245,7 +245,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'If You\'re an EU-Based Organization: Critical Compliance Deadlines',
           content: [
             '**The EU AI Act is binding and its transparency and GPAI rules are enforced as of August 2026.** If your organization is EU-headquartered or serves EU users, you must comply with its four-tier risk classification system. The Digital Omnibus (in force since July 27, 2026) pushed standalone high-risk AI (Annex III) compliance to December 2, 2027, but disclosure requirements for chatbots and AI-generated content still applied on the original August 2026 date. Fines for prohibited practices reach €35 million or 7% of global turnover — whichever is higher. Non-compliance is not negotiable.',
-            '**If you deploy GPT-5.5, Claude Opus 4.8, or Gemini 3.1 Pro in the EU, you must audit their General Purpose AI (GPAI) compliance documentation.** OpenAI, Anthropic, and Google published transparency documentation (training data summaries, capability limitations, safety testing) as of August 2025. Store these attestations as proof of compliance — regulators will ask.',
+            '**If you deploy GPT-5.6, Claude Opus 5, or Gemini 3.1 Pro in the EU, you must audit their General Purpose AI (GPAI) compliance documentation.** OpenAI, Anthropic, and Google published transparency documentation (training data summaries, capability limitations, safety testing) as of August 2025. Store these attestations as proof of compliance — regulators will ask.',
             '**High-risk AI systems (hiring, credit decisions, healthcare, law enforcement) require conformity assessments before deployment.** This means testing for bias, documentation of human oversight mechanisms, and audit trails of all AI decisions. Open-weights models deployed locally (LLaMA via Ollama, Mistral Large) satisfy data residency requirements — no data leaves your infrastructure, and you control the audit trail.',
             '**The Brussels Effect applies to you.** If your AI system reaches a single EU resident, the EU AI Act applies — even if your company is headquartered in the US or China. This means enforcing the same compliance level globally is often simpler than maintaining multiple configurations.',
           ],
@@ -257,9 +257,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             'Chinese AI APIs (DeepSeek, ERNIE 4.0, Qwen via Alibaba Cloud) filter content at the API level — political topics, CPC criticism, and Taiwan/Tibet/Xinjiang return `is_safe: 0` in HTTP 200 responses, not HTTP 4xx. Handle these explicitly in your application code.',
             'Mistral models and local Ollama deployments satisfy EU AI Act data residency requirements — prompts and outputs never leave your infrastructure. This is the lowest-friction path to EU GDPR + AI Act compliance for prompt engineers.',
-            'GPT-5.5 and Claude Opus 4.8 are GPAI-compliant under the EU AI Act as of August 2025. You can use them in EU-facing deployments without additional model-level compliance work — your obligation is at the application (deployer) level, not the model level.',
+            'GPT-5.6 and Claude Opus 5 are GPAI-compliant under the EU AI Act as of August 2025. You can use them in EU-facing deployments without additional model-level compliance work — your obligation is at the application (deployer) level, not the model level.',
             'The Brussels Effect means prompts sent to US-hosted models for products used by EU residents are subject to EU AI Act requirements — even if your company is not EU-based.',
-            'For multi-jurisdictional testing, dispatch the same prompt to Mistral (EU-compliant), GPT-5.5 (US/GPAI), and Qwen (China-accessible) simultaneously to benchmark outputs across regulatory contexts. PromptQuorum supports this natively.',
+            'For multi-jurisdictional testing, dispatch the same prompt to Mistral (EU-compliant), GPT-5.6 (US/GPAI), and Qwen (China-accessible) simultaneously to benchmark outputs across regulatory contexts. PromptQuorum supports this natively.',
           ],
         },
 
@@ -272,7 +272,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             {
               type: 'pro-tip',
               label: 'Pro Tip: Write Prompts in the Target Language',
-              text: 'GPT-5.5, Claude Opus 4.8, and Gemini 3.1 Pro perform significantly better on German, French, Japanese, and Chinese tasks when the prompt itself is in that language. English prompts for non-English output add a translation layer that degrades quality. If you\'re optimizing model performance for a specific country, write your prompts in that country\'s language from the start.',
+              text: 'GPT-5.6, Claude Opus 5, and Gemini 3.1 Pro perform significantly better on German, French, Japanese, and Chinese tasks when the prompt itself is in that language. English prompts for non-English output add a translation layer that degrades quality. If you\'re optimizing model performance for a specific country, write your prompts in that country\'s language from the start.',
             },
           ],
           tableFormat: true,
@@ -281,14 +281,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
             {
               'Region': 'European Union',
               'Legal constraint on prompts': 'EU AI Act: prompts generating content that interacts with EU consumers must include AI disclosure. GDPR: prompts must not include personal data without legal basis. High-risk AI applications (HR, credit, healthcare) require human oversight — prompts must not automate final decisions.',
-              'Language optimization': 'Write prompts in the target language (German, French, etc.) — GPT-5.5 and Claude Opus 4.8 perform significantly better on non-English tasks when prompts are in the same language as the desired output. Explicitly specify output language in system prompts.',
-              'Recommended model': 'Mistral Large (French, EU-headquartered), local Ollama deployment (data never leaves infrastructure), or GPT-5.5/Claude with EU-region API endpoints and SCCs.',
+              'Language optimization': 'Write prompts in the target language (German, French, etc.) — GPT-5.6 and Claude Opus 5 perform significantly better on non-English tasks when prompts are in the same language as the desired output. Explicitly specify output language in system prompts.',
+              'Recommended model': 'Mistral Large (French, EU-headquartered), local Ollama deployment (data never leaves infrastructure), or GPT-5.6/Claude with EU-region API endpoints and SCCs.',
             },
             {
               'Region': 'United States',
               'Legal constraint on prompts': 'No federal AI law, but sector rules apply: HIPAA (healthcare — PHI must not appear in prompts), CCPA/CPRA (California — personal data in prompts triggers consumer rights), FTC Act (prompts must not generate deceptive content in consumer contexts). State biometric laws (Illinois BIPA) restrict prompts that process facial/voice data.',
-              'Language optimization': 'US frontier models (GPT-5.5, Claude Opus 4.8) are English-optimized and perform at their ceiling on English prompts. For Spanish-language US markets, explicitly instruct the model in Spanish or use a bilingual system prompt — do not rely on auto-detection.',
-              'Recommended model': 'GPT-5.5 or Claude Opus 4.8 for general use. For regulated healthcare or financial prompts, use API with SCCs and avoid sending PHI/PII in prompt context.',
+              'Language optimization': 'US frontier models (GPT-5.6, Claude Opus 5) are English-optimized and perform at their ceiling on English prompts. For Spanish-language US markets, explicitly instruct the model in Spanish or use a bilingual system prompt — do not rely on auto-detection.',
+              'Recommended model': 'GPT-5.6 or Claude Opus 5 for general use. For regulated healthcare or financial prompts, use API with SCCs and avoid sending PHI/PII in prompt context.',
             },
             {
               'Region': 'China',
@@ -299,14 +299,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
             {
               'Region': 'UK / Post-Brexit',
               'Legal constraint on prompts': 'UK GDPR (equivalent to EU GDPR) applies to personal data. UK AI Safety Institute focuses on frontier model evaluation, not application-level compliance. No mandatory AI disclosure law — UK chose a pro-innovation, sector-led approach. OFCOM regulates AI-generated content in broadcast contexts.',
-              'Language optimization': 'British English spellings and idioms in prompts improve output quality for UK-facing content. GPT-5.5 responds to explicit "UK English" instructions in system prompts; without them, defaults to American English.',
-              'Recommended model': 'GPT-5.5 or Claude Opus 4.8. UK-EU data transfers require SCCs post-Brexit — UK adequacy decision from EU in place but subject to review.',
+              'Language optimization': 'British English spellings and idioms in prompts improve output quality for UK-facing content. GPT-5.6 responds to explicit "UK English" instructions in system prompts; without them, defaults to American English.',
+              'Recommended model': 'GPT-5.6 or Claude Opus 5. UK-EU data transfers require SCCs post-Brexit — UK adequacy decision from EU in place but subject to review.',
             },
             {
               'Region': 'Japan',
               'Legal constraint on prompts': 'Japan\'s Act on Protection of Personal Information (APPI) restricts use of personal data in AI prompts. Japan has no AI-specific law (as of 2026) — guidance from METI and Ministry of Internal Affairs is voluntary. Japan participated in the Hiroshima AI Process — adherence to its 11 principles is encouraged for Japanese enterprises.',
-              'Language optimization': 'Japanese prompts on Japanese-language tasks outperform English prompts across all major models. GPT-5.5 and Claude Opus 4.8 handle Japanese well; Rakuten AI and NTT LLMs are available for Japan-specific deployments. Avoid casual (tame-go) register in system prompts — polite (keigo) framing improves compliance and output quality for Japanese business contexts.',
-              'Recommended model': 'GPT-5.5 or Claude Opus 4.8 for general Japanese tasks. Rakuten AI (Rakuten Group) or NTT LLMs for Japan-domestic compliance-sensitive deployments.',
+              'Language optimization': 'Japanese prompts on Japanese-language tasks outperform English prompts across all major models. GPT-5.6 and Claude Opus 5 handle Japanese well; Rakuten AI and NTT LLMs are available for Japan-specific deployments. Avoid casual (tame-go) register in system prompts — polite (keigo) framing improves compliance and output quality for Japanese business contexts.',
+              'Recommended model': 'GPT-5.6 or Claude Opus 5 for general Japanese tasks. Rakuten AI (Rakuten Group) or NTT LLMs for Japan-domestic compliance-sensitive deployments.',
             },
           ],
         },
@@ -342,7 +342,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         qaWhichCountriesDominate: {
           title: 'Which Countries Dominate AI Development?',
           content: [
-            'The United States dominates frontier model capability — OpenAI (GPT-5.5), Anthropic (Claude), and Google DeepMind (Gemini) are all US-headquartered. China leads on AI patent volume (~70% of global patents in 2022 per WIPO) and has the most capable domestic models outside the US: Alibaba Qwen 3, Baidu ERNIE 4.0, and DeepSeek R1. The EU leads on AI regulation but trails on frontier capability — France\'s Mistral AI is the strongest European contender. The UK, Canada, and UAE are investing in AI as independent actors rather than aligning exclusively with either US or Chinese infrastructure.',
+            'The United States dominates frontier model capability — OpenAI (GPT-5.6), Anthropic (Claude), and Google DeepMind (Gemini) are all US-headquartered. China leads on AI patent volume (~70% of global patents in 2022 per WIPO) and has the most capable domestic models outside the US: Alibaba Qwen 3, Baidu ERNIE 4.0, and DeepSeek R1. The EU leads on AI regulation but trails on frontier capability — France\'s Mistral AI is the strongest European contender. The UK, Canada, and UAE are investing in AI as independent actors rather than aligning exclusively with either US or Chinese infrastructure.',
           ],
         },
 
@@ -374,9 +374,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**AI regulation** is the body of laws, executive orders, and voluntary frameworks that govern how artificial intelligence systems are developed, deployed, and governed. AI regulation is produced by sovereign states and international bodies; the three primary regulatory regimes are the EU AI Act (European Union), the NIST AI Risk Management Framework (United States), and the CAC Generative AI Measures (China).',
             '**The US-China tech rivalry** is the bilateral competition between the United States and China for leadership in semiconductors, artificial intelligence, and advanced manufacturing. The rivalry is expressed through US export controls on Nvidia GPUs, China\'s domestic substitution strategy (Made in China 2025), and competing AI governance frameworks. The EU is a third actor — not a bilateral party — that shapes the rivalry through its regulatory power.',
             '**The EU AI Act** is a regulation passed by the European Parliament in March 2024. It is enforced by the EU AI Office and national market surveillance authorities. It applies to any organization — regardless of headquarters location — whose AI systems affect EU users. The EU AI Act is related to the Brussels Effect: because it applies extraterritorially, it effectively regulates OpenAI, Google DeepMind, and Anthropic globally.',
-            '**NVIDIA** is a US semiconductor company that designs AI training GPUs (H100, H200, B200 series). NVIDIA\'s hardware is the primary compute substrate for training GPT-5.5, Claude, Gemini, and most frontier AI models. US export controls on NVIDIA GPUs to China are a central mechanism in the US-China tech rivalry. NVIDIA\'s market position (~80% AI GPU share) makes it a geopolitical actor as well as a commercial one.',
+            '**NVIDIA** is a US semiconductor company that designs AI training GPUs (H100, H200, B200 series). NVIDIA\'s hardware is the primary compute substrate for training GPT-5.6, Claude, Gemini, and most frontier AI models. US export controls on NVIDIA GPUs to China are a central mechanism in the US-China tech rivalry. NVIDIA\'s market position (~80% AI GPU share) makes it a geopolitical actor as well as a commercial one.',
             '**TSMC** (Taiwan Semiconductor Manufacturing Company) is a Taiwanese chip foundry that manufactures advanced semiconductors for NVIDIA, Apple, AMD, and Google. TSMC\'s geographic location in Taiwan — and the island\'s disputed political status — makes TSMC a critical variable in AI geopolitics. The CHIPS and Science Act was enacted partly to reduce US dependency on TSMC by funding domestic US fabs.',
-            '**DeepSeek** is a Chinese AI laboratory (backed by High-Flyer Capital Management) that released DeepSeek R1 in January 2025. DeepSeek R1 exceeded GPT-5.5 on reasoning and coding benchmarks (AIME 2024, MATH-500, HumanEval) while training at estimated ~$6 million cost — 94% less than frontier model estimates — using China-restricted NVIDIA H800 GPUs. DeepSeek\'s release weakened the argument that US export controls could permanently limit Chinese frontier AI development.',
+            '**DeepSeek** is a Chinese AI laboratory (backed by High-Flyer Capital Management) that released DeepSeek R1 in January 2025. DeepSeek R1 exceeded GPT-5.6 on reasoning and coding benchmarks (AIME 2024, MATH-500, HumanEval) while training at estimated ~$6 million cost — 94% less than frontier model estimates — using China-restricted NVIDIA H800 GPUs. DeepSeek\'s release weakened the argument that US export controls could permanently limit Chinese frontier AI development.',
           ],
         },
 
@@ -398,13 +398,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'The AI Arms Race: US, China, and the EU',
           content: [
             '**Three incompatible visions of AI governance are competing for global adoption — the US prioritizes innovation and competitiveness, China uses state direction to achieve strategic AI dominance, and the EU builds a rights-based legal framework that exports its standards globally through the Brussels Effect.** This AI arms race is primarily civilian: the leading labs are private companies (OpenAI, Anthropic, Google DeepMind, Baidu, Alibaba), but the stakes — regulatory control, hardware supply chains, and talent — are geopolitical.',
-            'The race is not only about who builds the most capable models. It is about which regulatory framework becomes the global default. The EU AI Act, by applying to any AI system deployed to EU users, has already made Brussels the effective regulator of OpenAI, Anthropic, and Google DeepMind globally. Hardware control is a third dimension: the CHIPS and Science Act ($52 billion) and Nvidia GPU export controls aim to limit China\'s compute access. DeepSeek R1\'s January 2025 release — competitive with GPT-5.5 at a fraction of the training cost — demonstrated those controls have limits. See [open-source vs proprietary LLMs](/prompt-engineering/open-source-vs-proprietary-llms) for how these dynamics affect model availability.',
+            'The race is not only about who builds the most capable models. It is about which regulatory framework becomes the global default. The EU AI Act, by applying to any AI system deployed to EU users, has already made Brussels the effective regulator of OpenAI, Anthropic, and Google DeepMind globally. Hardware control is a third dimension: the CHIPS and Science Act ($52 billion) and Nvidia GPU export controls aim to limit China\'s compute access. DeepSeek R1\'s January 2025 release — competitive with GPT-5.6 at a fraction of the training cost — demonstrated those controls have limits. See [open-source vs proprietary LLMs](/prompt-engineering/open-source-vs-proprietary-llms) for how these dynamics affect model availability.',
           ],
           items: [
-            '**US position:** Leads on frontier model capability (GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro), chip design (Nvidia, AMD), and AI investment ($67B private investment in 2023 per OECD). No unified federal AI law — accelerates deployment but creates compliance fragmentation.',
+            '**US position:** Leads on frontier model capability (GPT-5.6, Claude Opus 5, Gemini 3.1 Pro), chip design (Nvidia, AMD), and AI investment ($67B private investment in 2023 per OECD). No unified federal AI law — accelerates deployment but creates compliance fragmentation.',
             '**China\'s position:** Leads on AI patent volume, facial recognition scale, and state-directed infrastructure deployment. Models (Qwen 3, ERNIE 4.0, DeepSeek R1) are competitive on many benchmarks. Hardware dependence on Nvidia architectures is the primary strategic vulnerability export controls target.',
             '**Europe\'s position:** Leads on AI regulation — the EU AI Act is the global reference framework — and open-weights research (Mistral from France). Trails on frontier model capability and private investment. Compensates through regulatory leverage: the Brussels Effect forces US and Chinese providers to comply with EU standards for global products.',
-            '**The hardware layer:** Nvidia H100/H200 GPUs dominate AI training. US export controls restrict sales to China. DeepSeek R1 trained on restricted H800 GPUs at reported ~$6M — a 94% cost reduction vs GPT-5.5 training estimates — demonstrating hardware controls have not halted Chinese frontier AI.',
+            '**The hardware layer:** Nvidia H100/H200 GPUs dominate AI training. US export controls restrict sales to China. DeepSeek R1 trained on restricted H800 GPUs at reported ~$6M — a 94% cost reduction vs GPT-5.6 training estimates — demonstrating hardware controls have not halted Chinese frontier AI.',
           ],
           image: '/images/regional-ai-players-en.svg',
           imageCaption: 'US: OpenAI, Anthropic, Google DeepMind (VC-funded). EU: Mistral, Hugging Face (open-source, underfunded vs US). China: Baidu, Alibaba, Tencent (state-backed, CAC oversight).',
@@ -421,7 +421,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**High Risk:** AI in critical infrastructure, education, employment, essential services (credit, benefits), law enforcement, border control, and administration of justice. Requires conformity assessments, transparency documentation, human oversight, and registration in the EU database.',
             '**Limited Risk:** Chatbots and AI-generated content. Requires disclosure — users must know they are interacting with AI.',
             '**Minimal Risk:** Spam filters, AI in video games, recommendation systems without significant impact. No specific obligations beyond existing law.',
-            '**General Purpose AI (GPAI):** Models like GPT-5.5, Claude, and Gemini must publish training data summaries, comply with EU copyright law, and report serious incidents. Models with systemic risk (trained with >10^25 FLOPS) face additional adversarial testing requirements. GPAI rules applied August 2025.',
+            '**General Purpose AI (GPAI):** Models like GPT-5.6, Claude, and Gemini must publish training data summaries, comply with EU copyright law, and report serious incidents. Models with systemic risk (trained with >10^25 FLOPS) face additional adversarial testing requirements. GPAI rules applied August 2025.',
             '**Enforcement:** EU AI Office (within European Commission) oversees GPAI models. National market surveillance authorities enforce high-risk AI rules. Fines: up to €35M or 7% global turnover for prohibited practices; €15M or 3% for high-risk violations.',
             '**Timeline:** Prohibited practices: August 2024. GPAI obligations: August 2025. Article 50 transparency duties (chatbot/deepfake disclosure): August 2026, unaffected by the Digital Omnibus. Standalone high-risk AI systems (Annex III): deferred from August 2026 to December 2, 2027 by the Digital Omnibus. High-risk AI embedded in regulated products (Annex I): deferred from August 2027 to August 2, 2028.',
           ],
@@ -464,8 +464,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         franceMistral: {
           title: 'France & Mistral: Building European AI Independence',
           content: [
-            '**France is building a strategic counter to US AI dominance through public investment and Mistral AI — positioning open-weights models as Europe\'s path to AI sovereignty.** Mistral represents the EU\'s most viable alternative to GPT-5.5 and Claude, and France\'s €2 billion AI investment is explicitly designed to fund companies like Mistral and reduce reliance on OpenAI, Google, and Anthropic.',
-            '**Mistral AI (founded 2023):** Founded by Arthur Mensch, Guilaume Blanc, and Tim Caron — all former Meta employees. Mistral released Mistral Small (open-weights) in September 2023, followed by Mistral Large 2 (competitive with GPT-5.5 on many tasks). Mistral Large 2 scores 81.2% on MMLU vs GPT-5.5\'s 88.7%, but matches proprietary models on classification, summarization, and extraction tasks. 123K token context window. Licensed under Mistral Community License (permits commercial use; derivative naming restrictions similar to LLaMA).',
+            '**France is building a strategic counter to US AI dominance through public investment and Mistral AI — positioning open-weights models as Europe\'s path to AI sovereignty.** Mistral represents the EU\'s most viable alternative to GPT-5.6 and Claude, and France\'s €2 billion AI investment is explicitly designed to fund companies like Mistral and reduce reliance on OpenAI, Google, and Anthropic.',
+            '**Mistral AI (founded 2023):** Founded by Arthur Mensch, Guilaume Blanc, and Tim Caron — all former Meta employees. Mistral released Mistral Small (open-weights) in September 2023, followed by Mistral Large 2 (competitive with GPT-5.6 on many tasks). Mistral Large 2 scores 81.2% on MMLU vs GPT-5.6\'s 88.7%, but matches proprietary models on classification, summarization, and extraction tasks. 123K token context window. Licensed under Mistral Community License (permits commercial use; derivative naming restrictions similar to LLaMA).',
             '**Why France chose open-weights:** France\'s position is that proprietary APIs create vendor lock-in, data residency risks, and long-term dependency on US companies. Open-weights models can be deployed on European infrastructure, keeping data within EU jurisdictions and avoiding GDPR/AI Act friction with US cloud providers. This aligns with the Brussels Effect — by ensuring Mistral compliance with the EU AI Act, France strengthens Europe\'s regulatory leverage globally.',
             '**Government support:** French government backing via La Caisse des Dépôts et Placements (state investment fund) and direct subsidies. Mistral received €385 million Series B funding (February 2024) with support from French strategic investors. Positioned as a "European champion" in AI — similar to how Airbus was built as a European aerospace counterweight to Boeing.',
           ],
@@ -513,7 +513,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '**Made in China 2025 and New Generation AI Development Plan (2017):** China\'s 2017 AI plan targeted global AI leadership by 2030 across research, talent, product development, and regulation. It allocated $15 billion in state funding and set benchmarks for AI patent output, research citations, and industry revenue. AI is designated a core strategic technology alongside semiconductors and quantum computing.',
             '**Cyberspace Administration of China (CAC) algorithm regulations (March 2022):** Required all algorithm-based recommendation systems serving Chinese users to register with the CAC, disclose how algorithms work, and allow users to opt out of personalized recommendations. Extended to generative AI in July 2023 — all generative AI services must register, pass a security assessment, and ensure outputs align with "socialist core values."',
-            '**DeepSeek R1 (January 2025):** Released by DeepSeek (a Chinese AI lab backed by High-Flyer hedge fund), R1 exceeded GPT-5.5 on multiple benchmarks including AIME 2024 (79.8%), MATH-500 (97.3%), and HumanEval coding tasks. Trained on Nvidia H800 GPUs — the China-specific variant within export control limits — with estimated training cost of ~$6 million (94% reduction vs. frontier model estimates; figure is disputed but significant cost advantage clear). The release triggered a significant drop in Nvidia\'s stock price and accelerated US policy debates about the effectiveness of hardware export controls.',
+            '**DeepSeek R1 (January 2025):** Released by DeepSeek (a Chinese AI lab backed by High-Flyer hedge fund), R1 exceeded GPT-5.6 on multiple benchmarks including AIME 2024 (79.8%), MATH-500 (97.3%), and HumanEval coding tasks. Trained on Nvidia H800 GPUs — the China-specific variant within export control limits — with estimated training cost of ~$6 million (94% reduction vs. frontier model estimates; figure is disputed but significant cost advantage clear). The release triggered a significant drop in Nvidia\'s stock price and accelerated US policy debates about the effectiveness of hardware export controls.',
             '**Huawei Ascend chips:** Huawei\'s Ascend 910B and 910C chips are positioned as domestic alternatives to Nvidia GPUs for AI training. Performance remains below Nvidia H100 on most benchmarks but sufficient for training medium-scale models. Major Chinese tech companies (Baidu, Alibaba, ByteDance) have begun migrating some workloads to Ascend to reduce Nvidia dependency.',
             '**Belt and Road AI diplomacy:** China exports AI surveillance infrastructure (facial recognition, smart city systems) to developing nations through BRI partnerships. Providers include Huawei, Alibaba Cloud, and ZTE. This exports Chinese AI governance norms — including algorithmic social management — to partner countries, creating a parallel AI standards ecosystem outside the OECD/EU framework.',
             '**Leading Chinese AI models:** Alibaba Qwen 3, Baidu ERNIE 4.0, ByteDance Doubao, Z.ai GLM-4. These are competitive on Chinese-language tasks and increasingly on multilingual benchmarks. [Open-source vs proprietary LLM tradeoffs](/prompt-engineering/open-source-vs-proprietary-llms) affect Chinese model adoption — Qwen\'s open-weights release has attracted international developers.',
@@ -523,8 +523,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         chinaModelsAccessibility: {
           title: 'China for Prompt Engineers: Which Models Are Available',
           content: [
-            '**If your product serves users in China, you are operating in a distinct AI ecosystem with different available models, mandatory content filters, and a pre-launch approval requirement that has no equivalent in the EU or US.** Foreign models — GPT-5.5, Claude, Gemini — are inaccessible from mainland China without a VPN. Your options are limited to domestically registered alternatives.',
-            '**Available models in China:** Alibaba Qwen 3 (open-weights, 7B–72B, 128K context, API via Alibaba Cloud), Baidu ERNIE 4.0 (API via Qianfan platform), ByteDance Doubao (API via Volcano Engine), Z.ai GLM-4 (API via Z.ai platform), and DeepSeek R1/V3 (API via DeepSeek platform). Qwen 3 72B is the strongest open-weights option — you can self-host it outside China while using it for Chinese-language tasks. It scores within 5 percentage points of GPT-5.5 on MMLU and outperforms on Chinese-specific benchmarks (C-Eval).',
+            '**If your product serves users in China, you are operating in a distinct AI ecosystem with different available models, mandatory content filters, and a pre-launch approval requirement that has no equivalent in the EU or US.** Foreign models — GPT-5.6, Claude, Gemini — are inaccessible from mainland China without a VPN. Your options are limited to domestically registered alternatives.',
+            '**Available models in China:** Alibaba Qwen 3 (open-weights, 7B–72B, 128K context, API via Alibaba Cloud), Baidu ERNIE 4.0 (API via Qianfan platform), ByteDance Doubao (API via Volcano Engine), Z.ai GLM-4 (API via Z.ai platform), and DeepSeek R1/V3 (API via DeepSeek platform). Qwen 3 72B is the strongest open-weights option — you can self-host it outside China while using it for Chinese-language tasks. It scores within 5 percentage points of GPT-5.6 on MMLU and outperforms on Chinese-specific benchmarks (C-Eval).',
           ],
         },
 
@@ -603,7 +603,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '**EU-based organizations:** Must comply with the [EU AI Act](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689) directly. Standalone high-risk AI systems (HR, credit, healthcare, public services) require conformity assessments, human oversight documentation, and registration in the [EU AI database](https://digital-strategy.ec.europa.eu/en/policies/ai-office) before December 2, 2027 (deferred from August 2026 by the Digital Omnibus, in force since July 27, 2026). Article 50 disclosure duties for chatbots and AI-generated content already apply as of August 2026. All AI handling personal data must comply with GDPR — including AI training pipelines and output processing.',
             '**Non-EU organizations serving EU users:** Subject to the Brussels Effect — the [EU AI Act](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689) applies to your AI outputs if they reach EU users. GPAI models used in EU-facing products must comply with transparency obligations (August 2025 onwards). Failing to comply carries the same fines as EU-headquartered violators.',
-            '**US AI tools in EU deployments:** GPT-5.5, Claude Opus 4.8, and Gemini 3.1 Pro are all classified as GPAI models. OpenAI, Anthropic, and Google have published EU AI Act GPAI compliance documentation. Organizations using these tools in high-risk AI systems (as deployers) remain responsible for their own conformity assessments — the provider\'s GPAI compliance does not cover your deployment.',
+            '**US AI tools in EU deployments:** GPT-5.6, Claude Opus 5, and Gemini 3.1 Pro are all classified as GPAI models. OpenAI, Anthropic, and Google have published EU AI Act GPAI compliance documentation. Organizations using these tools in high-risk AI systems (as deployers) remain responsible for their own conformity assessments — the provider\'s GPAI compliance does not cover your deployment.',
             '**Chinese AI tools:** DeepSeek R1 and other Chinese models are available internationally but carry additional procurement risk for EU and US organizations — data residency is unclear, the provider is subject to CAC content regulations, and the Cyberspace Administration of China can compel data disclosure. Government and critical infrastructure organizations in EU and NATO member states are restricting or prohibiting Chinese AI tool usage.',
             '**Data residency:** EU GDPR restricts personal data transfer to countries without "adequacy" decisions or appropriate safeguards. AI inference on personal data using US providers requires Standard Contractual Clauses (SCCs) or relies on the EU-US Data Privacy Framework (2023). Transfer to China has no adequacy decision — contractual safeguards must be in place and are difficult to enforce.',
             '**Procurement decisions:** US federal agencies are prohibited from using AI from designated Chinese entities. Several EU member states (Germany, France, Netherlands) have issued guidance restricting Chinese AI tools in government procurement. For private sector organizations, procurement policy should address the jurisdiction of the AI provider\'s training data, content moderation practices, and government access provisions.',
@@ -623,7 +623,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         qaWhoIsWinning: {
           title: 'Who is Winning the Global AI Race?',
           content: [
-            'The United States leads on frontier model capability — GPT-5.5 (OpenAI), Claude (Anthropic), and Gemini (Google DeepMind) — and on private AI investment ($67 billion in 2023 per [OECD data](https://oecd.ai)). China leads on AI patent filings, state-directed deployment scale, and domestic model development; DeepSeek R1 matched GPT-5.5 on key benchmarks in January 2025. The European Union leads on AI regulation — the [EU AI Act](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689) is the global reference framework — but trails on frontier model capability and private investment relative to its economic size. No single actor leads on all three dimensions simultaneously.',
+            'The United States leads on frontier model capability — GPT-5.6 (OpenAI), Claude (Anthropic), and Gemini (Google DeepMind) — and on private AI investment ($67 billion in 2023 per [OECD data](https://oecd.ai)). China leads on AI patent filings, state-directed deployment scale, and domestic model development; DeepSeek R1 matched GPT-5.6 on key benchmarks in January 2025. The European Union leads on AI regulation — the [EU AI Act](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689) is the global reference framework — but trails on frontier model capability and private investment relative to its economic size. No single actor leads on all three dimensions simultaneously.',
           ],
         },
 
@@ -637,21 +637,21 @@ export const article: Partial<Record<Language, PEArticle>> = {
         qaHowChinaRegulates: {
           title: 'How Does China Regulate Artificial Intelligence?',
           content: [
-            'China regulates AI through the Cyberspace Administration of China (CAC). The Algorithm Recommendation Regulations (2022) require labeling of algorithmically curated content. The Generative AI Measures (2023) require a CAC security assessment — a 45–90 day process — before any consumer-facing generative AI service can launch in China, and mandate that AI outputs align with "socialist core values." Foreign AI models (GPT-5.5, Claude, Gemini) are inaccessible from mainland China without circumvention tools. Domestic alternatives include Alibaba Qwen, Baidu ERNIE 4.0, ByteDance Doubao, and DeepSeek.',
+            'China regulates AI through the Cyberspace Administration of China (CAC). The Algorithm Recommendation Regulations (2022) require labeling of algorithmically curated content. The Generative AI Measures (2023) require a CAC security assessment — a 45–90 day process — before any consumer-facing generative AI service can launch in China, and mandate that AI outputs align with "socialist core values." Foreign AI models (GPT-5.6, Claude, Gemini) are inaccessible from mainland China without circumvention tools. Domestic alternatives include Alibaba Qwen, Baidu ERNIE 4.0, ByteDance Doubao, and DeepSeek.',
           ],
         },
 
         qaWhatEUAIActRequires: {
           title: 'What Does the EU AI Act Require from Organizations?',
           content: [
-            'The EU AI Act classifies AI systems into four risk tiers with scaled obligations. Prohibited practices — social scoring by public authorities, real-time biometric surveillance in public spaces — are banned from August 2024. Standalone high-risk AI systems used in employment, credit assessment, healthcare, or law enforcement require conformity assessments, human oversight documentation, and registration in the EU AI database before December 2, 2027 (deferred from the original August 2026 date by the Digital Omnibus, in force since July 27, 2026). General Purpose AI models (GPT-5.5, Claude, Gemini) must publish training data summaries and comply with EU copyright law — rules that applied from August 2025. Article 50 transparency duties (chatbot and AI-content disclosure) still applied from August 2026 as originally scheduled. All organizations serving EU users must comply regardless of where they are headquartered.',
+            'The EU AI Act classifies AI systems into four risk tiers with scaled obligations. Prohibited practices — social scoring by public authorities, real-time biometric surveillance in public spaces — are banned from August 2024. Standalone high-risk AI systems used in employment, credit assessment, healthcare, or law enforcement require conformity assessments, human oversight documentation, and registration in the EU AI database before December 2, 2027 (deferred from the original August 2026 date by the Digital Omnibus, in force since July 27, 2026). General Purpose AI models (GPT-5.6, Claude, Gemini) must publish training data summaries and comply with EU copyright law — rules that applied from August 2025. Article 50 transparency duties (chatbot and AI-content disclosure) still applied from August 2026 as originally scheduled. All organizations serving EU users must comply regardless of where they are headquartered.',
           ],
         },
 
         qaExportControls: {
           title: 'How Do US Export Controls Affect AI Development?',
           content: [
-            'US export controls restrict the sale of advanced Nvidia GPUs — including the A100 and H100 — to China, aiming to limit China\'s capacity to train frontier AI models. The controls are enforced through the Export Administration Regulations (EAR) and apply to Nvidia, AMD, and Intel products above specified compute thresholds. DeepSeek R1\'s January 2025 release demonstrated the limits of this approach: trained on China-restricted H800 GPUs at a fraction of the reported cost of comparable US models, it matched GPT-5.5 on AIME 2024, MATH-500, and HumanEval benchmarks. Export controls slow but have not halted Chinese frontier AI development.',
+            'US export controls restrict the sale of advanced Nvidia GPUs — including the A100 and H100 — to China, aiming to limit China\'s capacity to train frontier AI models. The controls are enforced through the Export Administration Regulations (EAR) and apply to Nvidia, AMD, and Intel products above specified compute thresholds. DeepSeek R1\'s January 2025 release demonstrated the limits of this approach: trained on China-restricted H800 GPUs at a fraction of the reported cost of comparable US models, it matched GPT-5.6 on AIME 2024, MATH-500, and HumanEval benchmarks. Export controls slow but have not halted Chinese frontier AI development.',
           ],
         },
 
@@ -686,7 +686,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         defGPAI: {
           title: 'Definition: General Purpose AI (GPAI)',
-          content: 'An AI system trained on broad data with a general architecture (not specialized or domain-specific) that can be adapted for a wide range of downstream tasks. GPT-5.5, Claude Opus 4.8, and Gemini 3.1 Pro are GPAI models. Under the EU AI Act, GPAI models with >10^25 FLOP training compute face transparency obligations including training data summaries, capability documentation, and copyright compliance.',
+          content: 'An AI system trained on broad data with a general architecture (not specialized or domain-specific) that can be adapted for a wide range of downstream tasks. GPT-5.6, Claude Opus 5, and Gemini 3.1 Pro are GPAI models. Under the EU AI Act, GPAI models with >10^25 FLOP training compute face transparency obligations including training data summaries, capability documentation, and copyright compliance.',
         },
 
         defCAC: {
@@ -756,7 +756,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'faq',
           title: 'Frequently Asked Questions',
           faqs: [
-            { q: 'What is the EU AI Act and when does it apply?', a: 'The EU AI Act is the world\'s first comprehensive AI law, passed by the European Parliament in March 2024. Prohibited practices apply from August 2024. GPAI model obligations (for GPT-5.5, Claude, Gemini-class models) apply from August 2025. Article 50 transparency duties (chatbot and AI-content disclosure) apply from August 2026. Standalone high-risk AI system requirements (Annex III) were deferred by the Digital Omnibus, in force since July 27, 2026, from August 2026 to December 2, 2027. It applies to any organization placing AI on the EU market or using AI that affects EU residents.' },
+            { q: 'What is the EU AI Act and when does it apply?', a: 'The EU AI Act is the world\'s first comprehensive AI law, passed by the European Parliament in March 2024. Prohibited practices apply from August 2024. GPAI model obligations (for GPT-5.6, Claude, Gemini-class models) apply from August 2025. Article 50 transparency duties (chatbot and AI-content disclosure) apply from August 2026. Standalone high-risk AI system requirements (Annex III) were deferred by the Digital Omnibus, in force since July 27, 2026, from August 2026 to December 2, 2027. It applies to any organization placing AI on the EU market or using AI that affects EU residents.' },
             { q: 'Does the EU AI Act apply to non-EU companies?', a: 'Yes. The EU AI Act has extraterritorial reach — it applies to any provider whose AI outputs are used in the EU, regardless of where the provider is headquartered. A US company whose AI product is used by EU residents must comply. This is the same extraterritorial principle that made GDPR a global standard.' },
             { q: 'What are the fines for violating the EU AI Act?', a: 'Fines up to €35 million or 7% of global annual turnover (whichever is higher) for prohibited AI practices. Up to €15 million or 3% for high-risk AI violations. Up to €7.5 million or 1% for providing incorrect information to enforcement authorities. The higher of the percentage or fixed amount applies.' },
             { q: 'What AI applications are banned under the EU AI Act?', a: 'Banned (Unacceptable Risk): social scoring systems by public authorities; real-time biometric identification in public spaces (with narrow exceptions); AI that exploits psychological vulnerabilities; untargeted scraping of facial images from the internet. These have been prohibited since August 2024.' },
@@ -770,7 +770,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'Can EU organizations use DeepSeek for commercial applications?', a: 'Technically yes, with GDPR-compliant contractual safeguards (Standard Contractual Clauses). In practice, SCCs are difficult to enforce against Chinese law obligations, which require DeepSeek to comply with CAC data disclosure requests. Government procurement is a separate constraint: Germany\'s BSI, France\'s ANSSI, and the Netherlands\' NCSC have issued advisories or restrictions on Chinese AI tools for government and critical infrastructure use. Private-sector EU organizations can use DeepSeek commercially but must conduct a Transfer Impact Assessment under GDPR Article 46 and document the residual risk. Most legal counsel advise against processing personal data through DeepSeek.' },
             { q: 'Does the EU AI Act help or hurt EU competitiveness in AI?', a: 'This is a genuine strategic dilemma: the EU AI Act may slow EU AI startups but strengthens Europe\'s regulatory credibility globally. On one side, compliance costs and conformity assessments create friction for EU companies — France\'s Mistral AI is more constrained than US competitors. On the other side, the Brussels Effect means the EU\'s regulatory framework becomes the global standard, giving EU-based companies a competitive advantage on compliance and giving the EU leverage over US/Chinese tech giants. Europe is betting on "regulatory leadership" rather than "raw capability leadership" — a fundamentally different AI strategy than the US or China, and one that makes Europe indispensable to global AI governance rather than a second-rate technology producer.' },
             { q: 'How does Europe\'s compute capacity compare to the US and China?', a: 'Europe lags significantly on compute infrastructure. The US dominates GPU manufacturing (Nvidia ~80% market share) and custom silicon (Google TPUs, Amazon Trainium). China manufactures at TSMC (Taiwan) and uses restricted Nvidia H-series and A-series GPUs. Europe has no equivalent: ASML (Netherlands) manufactures chip fabrication equipment but does not own fabs. The EU Chips Act (€43 billion, 2023–2032) aims to build Intel and TSMC fabs in EU territory, but neither will be operational until 2027–2029 — a 3–5 year deficit in compute capacity that Europe cannot close through investment alone. This is the core infrastructure vulnerability for European AI: training frontier models requires thousands of GPUs running for months. Without domestic fab capacity, Europe remains dependent on US (Nvidia) and Taiwan (TSMC) supply.' },
-            { q: 'What is Europe\'s AI advantage besides regulation?', a: 'Europe has three non-regulatory advantages: (1) Mistral AI and other open-weights models funded by the EU (France, Germany) provide GDPR-compliant alternatives without US or Chinese dependencies; (2) Europe leads on AI safety research through UK AI Safety Institute, ETH Zurich, and French research centers (INRIA, CNRS); (3) Europe\'s highly educated workforce and existing software/semiconductor talent give it an edge in AI applications and custom silicon (Arm, RISC-V chip design). However, none of these offset Europe\'s disadvantage in frontier model capability — the US leads on GPT-5.5, Claude, and Gemini, and China leads on deployment scale and volume. Europe\'s strategy is "do what you\'re good at (safety, regulation, ethics) rather than compete on raw capability."' },
+            { q: 'What is Europe\'s AI advantage besides regulation?', a: 'Europe has three non-regulatory advantages: (1) Mistral AI and other open-weights models funded by the EU (France, Germany) provide GDPR-compliant alternatives without US or Chinese dependencies; (2) Europe leads on AI safety research through UK AI Safety Institute, ETH Zurich, and French research centers (INRIA, CNRS); (3) Europe\'s highly educated workforce and existing software/semiconductor talent give it an edge in AI applications and custom silicon (Arm, RISC-V chip design). However, none of these offset Europe\'s disadvantage in frontier model capability — the US leads on GPT-5.6, Claude, and Gemini, and China leads on deployment scale and volume. Europe\'s strategy is "do what you\'re good at (safety, regulation, ethics) rather than compete on raw capability."' },
           ],
         },
 
@@ -795,13 +795,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               mistake: 'Treating GPU export controls as a permanent bar to Chinese AI development.',
-              problem: 'DeepSeek R1 (January 2025) matched GPT-5.5 on major benchmarks while training on restricted H800 GPUs at ~$6M compute cost — 94% cheaper than GPT-4 training estimates. Export controls slow Chinese progress but do not stop it.',
+              problem: 'DeepSeek R1 (January 2025) matched GPT-5.6 on major benchmarks while training on restricted H800 GPUs at ~$6M compute cost — 94% cheaper than GPT-4 training estimates. Export controls slow Chinese progress but do not stop it.',
               fix: 'Plan for a multi-decade geopolitical competition in AI. For long-term product roadmaps, don\'t assume US hardware dominance is permanent. Consider investing in open-weights alternatives (Llama, Mistral, Qwen) that are harder to restrict. Monitor TSMC\'s political status since it fabricates all advanced chips.',
             },
             {
-              mistake: 'Assuming proprietary US models (GPT-5.5, Claude) will remain available globally without regulatory friction.',
-              problem: 'The EU AI Act already applies compliance obligations to GPT-5.5 and Claude. Future EU regulation could restrict export of data or require on-premises deployment for sensitive use cases. China\'s domestic substitution strategy (Made in China 2025) may limit foreign model access.',
-              fix: 'Diversify your AI infrastructure. Use a mix of proprietary models (for frontier capability), open-weights models (for regulatory flexibility), and local deployments (for data residency). Test your product across GPT-5.5, Claude, Mistral, and Qwen to reduce vendor lock-in.',
+              mistake: 'Assuming proprietary US models (GPT-5.6, Claude) will remain available globally without regulatory friction.',
+              problem: 'The EU AI Act already applies compliance obligations to GPT-5.6 and Claude. Future EU regulation could restrict export of data or require on-premises deployment for sensitive use cases. China\'s domestic substitution strategy (Made in China 2025) may limit foreign model access.',
+              fix: 'Diversify your AI infrastructure. Use a mix of proprietary models (for frontier capability), open-weights models (for regulatory flexibility), and local deployments (for data residency). Test your product across GPT-5.6, Claude, Mistral, and Qwen to reduce vendor lock-in.',
             },
           ],
         },
@@ -865,7 +865,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         name: 'Wie man generative KI-Produkte in China einführt: Ein Entwicklerleitfaden',
         description: 'Schritt-für-Schritt-Anleitung für Entwickler, die KI-Produkte in China einführen — Modellauswahl, Inhaltsbeschränkungen, CAC-Sicherheitsbewertung, PIPL-Datenresidenz und Markteinführungszeitplan.',
         step: [
-          { '@type': 'HowToStep', position: 1, name: 'Verfügbare KI-Modelle in China verstehen', text: 'Ausländische Modelle (GPT-5.5, Claude, Gemini) sind vom chinesischen Festland ohne VPN nicht zugänglich. Verfügbare Optionen: Alibaba Qwen 3 (offene Gewichte, 7B–72B, 128K Kontext), Baidu ERNIE 4.0 (Qianfan API), ByteDance Doubao (Volcano Engine), Z.ai GLM-4, DeepSeek R1/V3. Qwen 3 72B ist die stärkste Open-Weights-Option für Self-Hosting.' },
+          { '@type': 'HowToStep', position: 1, name: 'Verfügbare KI-Modelle in China verstehen', text: 'Ausländische Modelle (GPT-5.6, Claude, Gemini) sind vom chinesischen Festland ohne VPN nicht zugänglich. Verfügbare Optionen: Alibaba Qwen 3 (offene Gewichte, 7B–72B, 128K Kontext), Baidu ERNIE 4.0 (Qianfan API), ByteDance Doubao (Volcano Engine), Z.ai GLM-4, DeepSeek R1/V3. Qwen 3 72B ist die stärkste Open-Weights-Option für Self-Hosting.' },
           { '@type': 'HowToStep', position: 2, name: 'API-seitige Inhaltsbeschränkungen einplanen', text: 'CAC-registrierte generative KI-Dienste filtern Inhalte, die Kritik an der KPCh-Führung, Diskussionen über die Unabhängigkeit von Taiwan/Tibet/Xinjiang, politisch sensible historische Ereignisse und Inhalte, die den „sozialistischen Grundwerten" widersprechen, blockieren. Die Filter sind in die API integriert. Filterfehler geben HTTP 200 mit is_safe: 0 zurück — nicht HTTP 4xx — und erfordern eine explizite Behandlung auf Anwendungsebene.' },
           { '@type': 'HowToStep', position: 3, name: 'CAC-Sicherheitsbewertung abschließen', text: 'Erforderlich, bevor ein verbraucherorientierter generativer KI-Dienst in China startet. Einreichung von Trainingsdatenquellen, Dokumentation der Inhaltsfilterung und Beispielausgaben. Zeitrahmen: 45–90 Tage. Ausländische Unternehmen müssen mit einer Festlandchina-Entität oder einem lizenzierten Cloud-Anbieter (Alibaba Cloud, Tencent Cloud) als registriertem Anbieter zusammenarbeiten.' },
           { '@type': 'HowToStep', position: 4, name: 'PIPL-Datenresidenzanforderungen einhalten', text: 'Das PIPL (2021) verlangt, dass personenbezogene Daten chinesischer Nutzer in China verbleiben oder vor einer grenzüberschreitenden Übertragung eine staatliche Sicherheitsbewertung durchlaufen. Leiten Sie den gesamten Datenverkehr chinesischer Nutzer über auf dem Festland gehostete Inferenz (Alibaba Cloud, Tencent Cloud, Huawei Cloud).' },
@@ -894,8 +894,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Question', 'name': 'Welche Bußgelder drohen bei Verstößen gegen den EU AI Act?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Bußgelder erreichen bis zu 35 Millionen Euro oder 7 % des weltweiten Jahresumsatzes für verbotene KI-Praktiken. Verstöße bei Hochrisiko-KI kosten bis zu 15 Millionen Euro oder 3 % des Umsatzes. Falsche Angaben gegenüber Behörden werden mit bis zu 7,5 Millionen Euro oder 1 % des Umsatzes bestraft.' } },
           { '@type': 'Question', 'name': 'Welche KI-Anwendungen verbietet die EU grundsätzlich?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Der EU AI Act verbietet: Social-Scoring-Systeme staatlicher Behörden, Echtzeit-Biometrie-Überwachung im öffentlichen Raum (mit engen Ausnahmen), KI zur Ausnutzung kognitiver Schwächen und ungezieltes Scraping von Gesichtsbildern aus dem Internet zum Aufbau von Erkennungsdatenbanken.' } },
           { '@type': 'Question', 'name': 'Wie unterscheidet sich die US-KI-Regulierung von der EU?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Die USA verwenden einen sektoralen, freiwilligen Ansatz — bestehende Regulierungsbehörden (FTC, FDA, CFPB, EEOC) wenden ihre Mandate auf KI in ihren Bereichen an. Es gibt kein bundesweites KI-Gesetz wie den EU AI Act. Der Biden-Erlass zur KI-Sicherheit wurde von der Trump-Administration im Januar 2025 aufgehoben und durch einen wettbewerbsorientierten KI-Aktionsplan ersetzt.' } },
-          { '@type': 'Question', 'name': 'Ist Chinas KI so leistungsfähig wie US-Systeme?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'DeepSeek R1 (Januar 2025) erreichte bei mehreren Benchmarks das Niveau von GPT-5.5, darunter AIME 2024, MATH-500 und HumanEval — angeblich zu einem Bruchteil der Trainingskosten. Chinas führende Modelle wie Alibabas Qwen und Baidus ERNIE sind bei vielen Aufgaben konkurrenzfähig, liegen aber bei mehrsprachigem Reasoning und Sicherheits-Benchmarks zurück.' } },
-          { '@type': 'Question', 'name': 'Können EU-Unternehmen GPT-5.5 und Claude unter dem AI Act nutzen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja, für die meisten Unternehmensanwendungen. GPT-5.5 und Claude werden als Allzweck-KI (GPAI) klassifiziert. EU-Unternehmen müssen jedoch eigene Sorgfaltspflichten erfüllen, insbesondere bei Hochrisiko-Anwendungen wie Personalentscheidungen, Kreditvergabe oder kritischer Infrastruktur.' } },
+          { '@type': 'Question', 'name': 'Ist Chinas KI so leistungsfähig wie US-Systeme?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'DeepSeek R1 (Januar 2025) erreichte bei mehreren Benchmarks das Niveau von GPT-5.6, darunter AIME 2024, MATH-500 und HumanEval — angeblich zu einem Bruchteil der Trainingskosten. Chinas führende Modelle wie Alibabas Qwen und Baidus ERNIE sind bei vielen Aufgaben konkurrenzfähig, liegen aber bei mehrsprachigem Reasoning und Sicherheits-Benchmarks zurück.' } },
+          { '@type': 'Question', 'name': 'Können EU-Unternehmen GPT-5.6 und Claude unter dem AI Act nutzen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja, für die meisten Unternehmensanwendungen. GPT-5.6 und Claude werden als Allzweck-KI (GPAI) klassifiziert. EU-Unternehmen müssen jedoch eigene Sorgfaltspflichten erfüllen, insbesondere bei Hochrisiko-Anwendungen wie Personalentscheidungen, Kreditvergabe oder kritischer Infrastruktur.' } },
           { '@type': 'Question', 'name': 'Was ist das UK AI Safety Institute (AISI)?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Das AISI wurde im November 2023 als weltweit erste staatliche KI-Sicherheitsbehörde gegründet. Es führt Pre-Deployment-Tests an Frontier-Modellen durch, hat Memoranden of Understanding mit OpenAI, Anthropic, Google DeepMind und Meta unterzeichnet und koordiniert internationale Sicherheitsstandards.' } },
           { '@type': 'Question', 'name': 'Wie verändert DeepSeek die KI-Geopolitik?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'DeepSeek R1 bewies, dass Frontier-KI-Fähigkeiten mit deutlich geringerem Rechenaufwand erreichbar sind und Exportkontrollen für Nvidia-Chips allein kein ausreichendes Bollwerk darstellen. Die Schockwellen veranlassten US-Gesetzgeber, die Chip-Exportpolitik zu überdenken, und trieben europäische Investitionen in souveräne KI-Infrastruktur voran.' } },
           { '@type': 'Question', 'name': 'Was ist der Brussels Effect bei KI?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Der Brussels Effect bezeichnet das Phänomen, dass EU-Regulierung weltweit zu De-facto-Standards wird, da globale Unternehmen ihre Produkte an EU-Regeln anpassen, anstatt mehrere Varianten zu pflegen. Im KI-Bereich bedeutet dies, dass der EU AI Act Compliance-Anforderungen für US- und asiatische KI-Anbieter schafft, die EU-Nutzer bedienen.' } },
@@ -917,7 +917,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Der Brussels Effect: EU AI Act-Regeln gelten für jede KI, die europäische Nutzer erreicht, weltweit.',
             'Die USA haben kein bundesweites KI-Gesetz — sektorale Regulierungsbehörden wenden bestehende Mandate auf KI an.',
             'Die USA hoben ihre KI-Sicherheitsverordnung im Januar 2025 auf — Wettbewerbsfähigkeit führt jetzt vor Sicherheit.',
-            'Chinas DeepSeek R1 entspricht GPT-5.5 bei Schlüsselbenchmarks — GPU-Exportkontrollen haben chinesische KI nicht gestoppt.',
+            'Chinas DeepSeek R1 entspricht GPT-5.6 bei Schlüsselbenchmarks — GPU-Exportkontrollen haben chinesische KI nicht gestoppt.',
             'TSMC in Taiwan fertigt die Chips, die alle Frontier-KI antreiben — eine einzelne geopolitische Abhängigkeit.',
             'Organisationen müssen drei konkurrierende Regulierungsrahmen gleichzeitig erfüllen: EU, USA und China.',
           ],
@@ -930,7 +930,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**US-KI-Politik:** Kein bundesweites KI-Gesetz. Die Trump-Administration verfolgt eine Vorrangstellung des Bundesrechts gegenüber Landesgesetzen über EO 14365 (Dezember 2025) und das National Framework (März 2026). Die FTC veröffentlichte ihre von der EO vorgeschriebene Grundsatzerklärung zu KI-Genauigkeit und Bundesvorrang erst am 7. Juli 2026 — vier Monate nach der Frist vom 11. März — und schloss die öffentliche Konsultation am 31. Juli 2026 ab. Weder der TRUMP AMERICA AI Act noch der demokratische Gegenentwurf GUARDRAILS Act wurde vom Kongress verabschiedet; beide bleiben Diskussionsentwürfe.',
             '**Chinas KI-Governance:** CAC (Cyberspace Administration of China)-Vorab-Prüfung ist verpflichtend. Inhaltsfilter blockieren KPCh-Kritik, Diskussionen zu Taiwan/Tibet/Xinjiang und Inhalte, die die "sozialistischen Grundwerte" untergraben. Filter liefern HTTP 200 mit dem Flag `is_safe: 0` (nicht 4xx). PIPL verlangt Datenspeicherort für personenbezogene Daten chinesischer Nutzer.',
             '**Hardware-Engpässe:** Nvidia kontrolliert ca. 80% des Markts für KI-Trainings-GPUs. TSMC fertigt ca. 90% der fortschrittlichsten Halbleiter. Beide sind geopolitische Brennpunkte. Der US CHIPS Act (52 Mrd. USD) zielt darauf ab, die TSMC-Abhängigkeit zu reduzieren.',
-            '**DeepSeek-R1-Auswirkung:** Übertraf GPT-5.5 bei Reasoning/Coding (AIME 2024, MATH, HumanEval) bei geschätzten ~6 Mio. USD Trainingskosten (94% Reduktion gegenüber Frontier-Modell-Schätzungen; Zahl umstritten). Trainiert auf China-beschränkten Nvidia-H800-GPUs. Zeigt, dass Hardware-Exportkontrollen Grenzen haben.',
+            '**DeepSeek-R1-Auswirkung:** Übertraf GPT-5.6 bei Reasoning/Coding (AIME 2024, MATH, HumanEval) bei geschätzten ~6 Mio. USD Trainingskosten (94% Reduktion gegenüber Frontier-Modell-Schätzungen; Zahl umstritten). Trainiert auf China-beschränkten Nvidia-H800-GPUs. Zeigt, dass Hardware-Exportkontrollen Grenzen haben.',
             '**Globaler Regulierungskonflikt:** Die EU fokussiert auf Rechte und Sicherheit; die USA auf Innovation und Wettbewerbsfähigkeit; China auf staatliche Kontrolle und strategischen Vorteil. Organisationen, die global KI einsetzen, müssen drei unvereinbare Rahmenwerke gleichzeitig navigieren.',
           ],
         },
@@ -939,7 +939,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Wenn Sie eine EU-basierte Organisation sind: Kritische Compliance-Fristen',
           content: [
             '**Der EU AI Act ist verbindlich; seine Transparenz- und GPAI-Regeln werden seit August 2026 durchgesetzt.** Wenn Ihre Organisation in der EU ansässig ist oder EU-Nutzer bedient, müssen Sie sein vierteiliges Risikoeinstufungssystem erfüllen. Das seit 27. Juli 2026 geltende Digital Omnibus verschob die Konformitätsfrist für eigenständige Hochrisiko-KI (Anhang III) auf den 2. Dezember 2027 — die Offenlegungspflichten für Chatbots und KI-generierte Inhalte galten jedoch weiterhin ab dem ursprünglichen Termin im August 2026. Geldstrafen für verbotene Praktiken erreichen 35 Mio. EUR oder 7% des weltweiten Umsatzes — je nachdem, welcher Wert höher ist. Nicht-Konformität ist nicht verhandelbar.',
-            '**Wenn Sie GPT-5.5, Claude Opus 4.8 oder Gemini 3.1 Pro in der EU einsetzen, müssen Sie ihre Konformitätsdokumentation zu General Purpose AI (GPAI) überprüfen.** OpenAI, Anthropic und Google veröffentlichten Transparenzdokumentation (Trainingsdaten-Zusammenfassungen, Leistungsgrenzen, Sicherheitstests) ab August 2025. Speichern Sie diese Bescheinigungen als Nachweis der Konformität — Regulierungsbehörden werden danach fragen.',
+            '**Wenn Sie GPT-5.6, Claude Opus 5 oder Gemini 3.1 Pro in der EU einsetzen, müssen Sie ihre Konformitätsdokumentation zu General Purpose AI (GPAI) überprüfen.** OpenAI, Anthropic und Google veröffentlichten Transparenzdokumentation (Trainingsdaten-Zusammenfassungen, Leistungsgrenzen, Sicherheitstests) ab August 2025. Speichern Sie diese Bescheinigungen als Nachweis der Konformität — Regulierungsbehörden werden danach fragen.',
             '**Hochrisiko-KI-Systeme (Einstellung, Kreditentscheidungen, Gesundheitswesen, Strafverfolgung) erfordern Konformitätsbewertungen vor dem Einsatz.** Dies bedeutet Tests auf Voreingenommenheit, Dokumentation von Überwachungsmechanismen durch Menschen und Audit-Protokolle aller KI-Entscheidungen. Open-Weights-Modelle, die lokal eingesetzt werden (LLaMA via Ollama, Mistral Large), erfüllen Datenspeicherort-Anforderungen — keine Daten verlassen Ihre Infrastruktur, und Sie kontrollieren die Audit-Spur.',
             '**Der Brussels Effect gilt auch für Sie.** Wenn Ihre KI-System einen einzelnen EU-Einwohner erreicht, gilt der EU AI Act — auch wenn Ihr Unternehmen in den USA oder China ansässig ist. Dies bedeutet, dass die Durchsetzung der gleichen Compliance-Stufe global oft einfacher ist als die Verwaltung mehrerer Konfigurationen.',
           ],
@@ -951,9 +951,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             'Chinesische KI-APIs (DeepSeek, ERNIE 4.0, Qwen via Alibaba Cloud) filtern Inhalte auf API-Ebene — politische Themen, KP-Kritik und Taiwan/Tibet/Xinjiang geben `is_safe: 0` in HTTP-200-Antworten zurück, nicht HTTP-4xx. Behandeln Sie diese explizit in Ihrem Anwendungscode.',
             'Mistral-Modelle und lokale Ollama-Implementierungen erfüllen EU AI Act-Anforderungen an Datenspeicherorte — Prompts und Outputs verlassen nie Ihre Infrastruktur. Dies ist der reibungsloseste Weg zu EU GDPR + AI Act-Konformität für Prompt Engineers.',
-            'GPT-5.5 und Claude Opus 4.8 sind ab August 2025 GPAI-konform unter dem EU AI Act. Sie können sie in EU-bezogenen Implementierungen ohne zusätzliche Konformitätsarbeit auf Modellebene verwenden — Ihre Verpflichtung liegt auf der Anwendungsebene (Bereitsteller), nicht auf der Modellebene.',
+            'GPT-5.6 und Claude Opus 5 sind ab August 2025 GPAI-konform unter dem EU AI Act. Sie können sie in EU-bezogenen Implementierungen ohne zusätzliche Konformitätsarbeit auf Modellebene verwenden — Ihre Verpflichtung liegt auf der Anwendungsebene (Bereitsteller), nicht auf der Modellebene.',
             'Der Brussels Effect bedeutet, dass Prompts, die für EU-Bewohner bestimmte Produkte an US-gehostete Modelle gesendet werden, EU AI Act-Anforderungen unterliegen — auch wenn Ihr Unternehmen nicht in der EU ansässig ist.',
-            'Für Multi-Jurisdiktions-Tests versenden Sie denselben Prompt gleichzeitig an Mistral (EU-konform), GPT-5.5 (US/GPAI) und Qwen (China-zugänglich), um Outputs über Regulierungskontexte hinweg zu vergleichen. PromptQuorum unterstützt dies nativ.',
+            'Für Multi-Jurisdiktions-Tests versenden Sie denselben Prompt gleichzeitig an Mistral (EU-konform), GPT-5.6 (US/GPAI) und Qwen (China-zugänglich), um Outputs über Regulierungskontexte hinweg zu vergleichen. PromptQuorum unterstützt dies nativ.',
           ],
         },
 
@@ -968,14 +968,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
             {
               'Region': 'Europäische Union',
               'Gesetzliche Einschränkung für Prompts': 'EU AI Act: Prompts, die Inhalte für EU-Verbraucher generieren, müssen KI-Offenlegung enthalten. GDPR: Prompts dürfen personenbezogene Daten nicht ohne Rechtsgrundlage enthalten. Hochrisiko-KI-Anwendungen (HR, Kredit, Gesundheitswesen) erfordern Überwachung durch Menschen — Prompts dürfen finale Entscheidungen nicht automatisieren.',
-              'Sprachoptimierung': 'Schreiben Sie Prompts in der Zielsprache (Deutsch, Französisch usw.) — GPT-5.5 und Claude Opus 4.8 performen deutlich besser bei Nicht-Englisch-Aufgaben, wenn Prompts in der gleichen Sprache wie die gewünschte Ausgabe sind. Geben Sie die Ausgabesprache in System-Prompts explizit an.',
-              'Empfohlenes Modell': 'Mistral Large (Französisch, in der EU ansässig), lokale Ollama-Implementierung (Daten verlassen nie die Infrastruktur) oder GPT-5.5/Claude mit EU-Region API-Endpoints und SCCs.',
+              'Sprachoptimierung': 'Schreiben Sie Prompts in der Zielsprache (Deutsch, Französisch usw.) — GPT-5.6 und Claude Opus 5 performen deutlich besser bei Nicht-Englisch-Aufgaben, wenn Prompts in der gleichen Sprache wie die gewünschte Ausgabe sind. Geben Sie die Ausgabesprache in System-Prompts explizit an.',
+              'Empfohlenes Modell': 'Mistral Large (Französisch, in der EU ansässig), lokale Ollama-Implementierung (Daten verlassen nie die Infrastruktur) oder GPT-5.6/Claude mit EU-Region API-Endpoints und SCCs.',
             },
             {
               'Region': 'Vereinigte Staaten',
               'Gesetzliche Einschränkung für Prompts': 'Kein bundesweites KI-Gesetz, aber Sektorregeln gelten: HIPAA (Gesundheitswesen — PHI darf nicht in Prompts vorkommen), CCPA/CPRA (Kalifornien — personenbezogene Daten in Prompts triggern Verbraucherrechte), FTC Act (Prompts dürfen keinen täuschenden Inhalt in Verbraucherkontext generieren). Biometrische Gesetze der Bundesstaaten (Illinois BIPA) beschränken Prompts, die Gesichts-/Sprachdaten verarbeiten.',
-              'Sprachoptimierung': 'US-Frontier-Modelle (GPT-5.5, Claude Opus 4.8) sind Englisch-optimiert und erreichen ihre Spitzenleistung bei Englisch-Prompts. Für spanischsprachige US-Märkte instrui Sie das Modell explizit auf Spanisch oder verwenden Sie einen zweisprachigen System-Prompt — verlassen Sie sich nicht auf automatische Erkennung.',
-              'Empfohlenes Modell': 'GPT-5.5 oder Claude Opus 4.8 für allgemeine Nutzung. Für regulierte Gesundheits- oder Finanz-Prompts verwenden Sie API mit SCCs und senden Sie keine PHI/PII im Prompt-Kontext.',
+              'Sprachoptimierung': 'US-Frontier-Modelle (GPT-5.6, Claude Opus 5) sind Englisch-optimiert und erreichen ihre Spitzenleistung bei Englisch-Prompts. Für spanischsprachige US-Märkte instrui Sie das Modell explizit auf Spanisch oder verwenden Sie einen zweisprachigen System-Prompt — verlassen Sie sich nicht auf automatische Erkennung.',
+              'Empfohlenes Modell': 'GPT-5.6 oder Claude Opus 5 für allgemeine Nutzung. Für regulierte Gesundheits- oder Finanz-Prompts verwenden Sie API mit SCCs und senden Sie keine PHI/PII im Prompt-Kontext.',
             },
             {
               'Region': 'China',
@@ -986,14 +986,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
             {
               'Region': 'UK / Post-Brexit',
               'Gesetzliche Einschränkung für Prompts': 'UK GDPR (äquivalent zu EU GDPR) gilt für personenbezogene Daten. UK AI Safety Institute konzentriert sich auf Frontier-Modell-Evaluierung, nicht auf Konformität auf Anwendungsebene. Kein verbindliches KI-Offenlegungsgesetz — UK wählte einen innovationsfreundlichen, sektorgeführten Ansatz. OFCOM reguliert KI-generierte Inhalte in Broadcast-Kontexten.',
-              'Sprachoptimierung': 'Britisches Englisch Rechtschreibungen und Redewendungen in Prompts verbessern die Ausgabequalität für UK-bezogene Inhalte. GPT-5.5 antwortet auf explizite "UK English"-Anweisungen in System-Prompts; ohne diese standardmäßig auf American English.',
-              'Empfohlenes Modell': 'GPT-5.5 oder Claude Opus 4.8. UK-EU-Datenübertragungen erfordern SCCs post-Brexit — UK-Angemessenheitsentscheidung der EU ist vorhanden, aber Überprüfung unterliegt.',
+              'Sprachoptimierung': 'Britisches Englisch Rechtschreibungen und Redewendungen in Prompts verbessern die Ausgabequalität für UK-bezogene Inhalte. GPT-5.6 antwortet auf explizite "UK English"-Anweisungen in System-Prompts; ohne diese standardmäßig auf American English.',
+              'Empfohlenes Modell': 'GPT-5.6 oder Claude Opus 5. UK-EU-Datenübertragungen erfordern SCCs post-Brexit — UK-Angemessenheitsentscheidung der EU ist vorhanden, aber Überprüfung unterliegt.',
             },
             {
               'Region': 'Japan',
               'Gesetzliche Einschränkung für Prompts': 'Japans Act on Protection of Personal Information (APPI) beschränkt die Verwendung personenbezogener Daten in KI-Prompts. Japan hat kein KI-spezifisches Gesetz (ab 2026) — Richtlinien von METI und Ministry of Internal Affairs sind freiwillig. Japan nahm am Hiroshima AI Process teil — Einhaltung seiner 11 Prinzipien wird für japanische Unternehmungen empfohlen.',
-              'Sprachoptimierung': 'Japanische Prompts für japanischsprachige Aufgaben outperformen Englisch-Prompts über alle großen Modelle. GPT-5.5 und Claude Opus 4.8 behandeln Japanisch gut; Rakuten AI und NTT LLMs sind für Japan-spezifische Implementierungen verfügbar. Vermeiden Sie Casual (tame-go) Register in System-Prompts — höfliche (keigo) Formulierung verbessert Konformität und Ausgabequalität für japanische Geschäftskontexte.',
-              'Empfohlenes Modell': 'GPT-5.5 oder Claude Opus 4.8 für allgemeine japanische Aufgaben. Rakuten AI (Rakuten Group) oder NTT LLMs für Japan-inländische Konformitäts-sensitive Implementierungen.',
+              'Sprachoptimierung': 'Japanische Prompts für japanischsprachige Aufgaben outperformen Englisch-Prompts über alle großen Modelle. GPT-5.6 und Claude Opus 5 behandeln Japanisch gut; Rakuten AI und NTT LLMs sind für Japan-spezifische Implementierungen verfügbar. Vermeiden Sie Casual (tame-go) Register in System-Prompts — höfliche (keigo) Formulierung verbessert Konformität und Ausgabequalität für japanische Geschäftskontexte.',
+              'Empfohlenes Modell': 'GPT-5.6 oder Claude Opus 5 für allgemeine japanische Aufgaben. Rakuten AI (Rakuten Group) oder NTT LLMs für Japan-inländische Konformitäts-sensitive Implementierungen.',
             },
           ],
         },
@@ -1027,7 +1027,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         qaWhichCountriesDominate: {
           title: 'Welche Länder dominieren die KI-Entwicklung?',
           content: [
-            'Die Vereinigten Staaten dominieren Frontier-Modell-Leistung — OpenAI (GPT-5.5), Anthropic (Claude) und Google DeepMind (Gemini) sind alle in der USA ansässig. China führt beim KI-Patent-Volumen (~70% globaler Patente 2022 per WIPO) und hat die fähigsten inländischen Modelle außerhalb der USA: Alibaba Qwen 3, Baidu ERNIE 4.0 und DeepSeek R1. Die EU führt bei KI-Regulierung, bleibt aber bei Frontier-Leistung zurück — Frankreichs Mistral AI ist der stärkste europäische Kandidat. UK, Kanada und UAE investieren in KI als unabhängige Akteure statt exklusiv mit US oder chinesischer Infrastruktur zu alignieren.',
+            'Die Vereinigten Staaten dominieren Frontier-Modell-Leistung — OpenAI (GPT-5.6), Anthropic (Claude) und Google DeepMind (Gemini) sind alle in der USA ansässig. China führt beim KI-Patent-Volumen (~70% globaler Patente 2022 per WIPO) und hat die fähigsten inländischen Modelle außerhalb der USA: Alibaba Qwen 3, Baidu ERNIE 4.0 und DeepSeek R1. Die EU führt bei KI-Regulierung, bleibt aber bei Frontier-Leistung zurück — Frankreichs Mistral AI ist der stärkste europäische Kandidat. UK, Kanada und UAE investieren in KI als unabhängige Akteure statt exklusiv mit US oder chinesischer Infrastruktur zu alignieren.',
           ],
         },
 
@@ -1059,9 +1059,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**KI-Regulierung** ist die Gesamtheit von Gesetzen, Exekutivverordnungen und freiwilligen Rahmenbedingungen, die regeln, wie künstliche Intelligenzsysteme entwickelt, bereitgestellt und regiert werden. KI-Regulierung wird von souveränen Staaten und internationalen Körperschaften produziert; die drei primären Regulierungsregime sind der EU AI Act (Europäische Union), das NIST AI Risk Management Framework (Vereinigte Staaten) und die CAC Generative AI Measures (China).',
             '**Der US-China-Tech-Wettstreit** ist der bilaterale Wettbewerb zwischen den Vereinigten Staaten und China um Führerschaft in Halbleitern, künstlicher Intelligenz und fortgeschrittener Fertigung. Der Wettstreit wird ausgedrückt durch US-Exportkontrollen auf Nvidia GPUs, Chinas inländische Substitutionsstrategie (Made in China 2025) und konkurrierende KI-Governance-Rahmen. Die EU ist ein dritter Akteur — keine bilaterale Partei — der den Wettstreit durch seine Regulierungsmacht formt.',
             '**Der EU AI Act** ist eine Verordnung, die das Europäische Parlament im März 2024 verabschiedete. Sie wird durchgesetzt durch das EU AI Office und nationale Marktüberwachungsbehörden. Sie gilt für jede Organisation — unabhängig vom Hauptsitz — deren KI-Systeme EU-Nutzer beeinflussen. Der EU AI Act steht in Beziehung zum Brussels Effect: Weil er extraterritorial gilt, reguliert er tatsächlich OpenAI, Google DeepMind und Anthropic global.',
-            '**NVIDIA** ist ein US-Halbleitunternehmen, das KI-Trainings-GPUs entwirft (H100, H200, B200 Serie). NVIDIAs Hardware ist das primäre Berechnungs-Substrat für das Training von GPT-5.5, Claude, Gemini und den meisten Frontier-KI-Modellen. US-Exportkontrollen auf NVIDIA GPUs nach China sind ein zentraler Mechanismus im US-China-Tech-Wettstreit. NVIDIAs Marktposition (~80% KI-GPU-Anteil) macht es zu einem geopolitischen Akteur sowie zu einem kommerziellen.',
+            '**NVIDIA** ist ein US-Halbleitunternehmen, das KI-Trainings-GPUs entwirft (H100, H200, B200 Serie). NVIDIAs Hardware ist das primäre Berechnungs-Substrat für das Training von GPT-5.6, Claude, Gemini und den meisten Frontier-KI-Modellen. US-Exportkontrollen auf NVIDIA GPUs nach China sind ein zentraler Mechanismus im US-China-Tech-Wettstreit. NVIDIAs Marktposition (~80% KI-GPU-Anteil) macht es zu einem geopolitischen Akteur sowie zu einem kommerziellen.',
             '**TSMC** (Taiwan Semiconductor Manufacturing Company) ist eine taiwanische Chip-Gießerei, die fortgeschrittene Halbleiter für NVIDIA, Apple, AMD und Google herstellt. TSMCs geografische Lage in Taiwan — und der umstrittene politische Status der Insel — macht TSMC zu einer kritischen Variablen in der KI-Geopolitik. Der CHIPS and Science Act wurde teilweise verabschiedet, um die US-Abhängigkeit von TSMC durch Finanzierung inländischer US-Fabs zu reduzieren.',
-            '**DeepSeek** ist ein chinesisches KI-Labor (unterstützt von High-Flyer Capital Management), das DeepSeek R1 im Januar 2025 freigab. DeepSeek R1 entsprach GPT-5.5 bei mehreren Benchmarks, während es angeblich bei einem Bruchteil der Kosten trainiert wurde, unter Verwendung von China-beschränkten NVIDIA H800 GPUs. DeepSeeks Freigabe schwächte das Argument, dass US-Exportkontrollen chinesische Frontier-KI-Entwicklung dauerhaft begrenzen könnten.',
+            '**DeepSeek** ist ein chinesisches KI-Labor (unterstützt von High-Flyer Capital Management), das DeepSeek R1 im Januar 2025 freigab. DeepSeek R1 entsprach GPT-5.6 bei mehreren Benchmarks, während es angeblich bei einem Bruchteil der Kosten trainiert wurde, unter Verwendung von China-beschränkten NVIDIA H800 GPUs. DeepSeeks Freigabe schwächte das Argument, dass US-Exportkontrollen chinesische Frontier-KI-Entwicklung dauerhaft begrenzen könnten.',
           ],
         },
 
@@ -1083,13 +1083,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Das KI-Wettrüsten: USA, China und die EU',
           content: [
             '**Drei unvereinbare Visionen der KI-Governance konkurrieren um globale Übernahme — die USA priorisieren Innovation und Wettbewerbsfähigkeit, China nutzt staatliche Richtung, um strategische KI-Dominanz zu erreichen, und die EU baut einen rechtsbasierten rechtlichen Rahmen, der ihre Standards global durch den Brussels Effect exportiert.** Dieses KI-Wettrüsten ist hauptsächlich zivil: die führenden Labs sind private Unternehmen (OpenAI, Anthropic, Google DeepMind, Baidu, Alibaba), aber die Einsätze — Regulierungskontrolle, Hardware-Supply-Chains und Talente — sind geopolitisch.',
-            'Das Rennen geht nicht nur darum, wer die fähigsten Modelle baut. Es geht darum, welcher Regulierungsrahmen zur globalen Standard wird. Der EU AI Act, indem er auf jedes KI-System gilt, das für EU-Nutzer bereitgestellt wird, hat bereits Brüssel zum effektiven Regulator von OpenAI, Anthropic und Google DeepMind global gemacht. Hardware-Kontrolle ist eine dritte Dimension: Der CHIPS and Science Act (52 Milliarden USD) und Nvidia GPU-Exportkontrollen zielen darauf ab, Chinas Compute-Zugang zu begrenzen. DeepSeeks R1-Freigabe im Januar 2025 — wettbewerbsfähig mit GPT-5.5 bei einem Bruchteil der Trainings-Kosten — zeigte, dass diese Kontrollen Grenzen haben. Siehe [open-source vs proprietary LLMs](/prompt-engineering/open-source-vs-proprietary-llms) für wie diese Dynamiken Modell-Verfügbarkeit beeinflussen.',
+            'Das Rennen geht nicht nur darum, wer die fähigsten Modelle baut. Es geht darum, welcher Regulierungsrahmen zur globalen Standard wird. Der EU AI Act, indem er auf jedes KI-System gilt, das für EU-Nutzer bereitgestellt wird, hat bereits Brüssel zum effektiven Regulator von OpenAI, Anthropic und Google DeepMind global gemacht. Hardware-Kontrolle ist eine dritte Dimension: Der CHIPS and Science Act (52 Milliarden USD) und Nvidia GPU-Exportkontrollen zielen darauf ab, Chinas Compute-Zugang zu begrenzen. DeepSeeks R1-Freigabe im Januar 2025 — wettbewerbsfähig mit GPT-5.6 bei einem Bruchteil der Trainings-Kosten — zeigte, dass diese Kontrollen Grenzen haben. Siehe [open-source vs proprietary LLMs](/prompt-engineering/open-source-vs-proprietary-llms) für wie diese Dynamiken Modell-Verfügbarkeit beeinflussen.',
           ],
           items: [
-            '**US-Position:** Führt bei Frontier-Modell-Leistung (GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro), Chip-Design (Nvidia, AMD) und KI-Investitionen (67 Mrd. USD private Investition 2023 pro OECD). Kein einheitliches bundesweites KI-Gesetz — beschleunigt Bereitstellung, schafft aber Compliance-Fragmentierung.',
+            '**US-Position:** Führt bei Frontier-Modell-Leistung (GPT-5.6, Claude Opus 5, Gemini 3.1 Pro), Chip-Design (Nvidia, AMD) und KI-Investitionen (67 Mrd. USD private Investition 2023 pro OECD). Kein einheitliches bundesweites KI-Gesetz — beschleunigt Bereitstellung, schafft aber Compliance-Fragmentierung.',
             '**Chinas Position:** Führt bei KI-Patent-Volumen, Gesichtserkennung im großen Maßstab und staatlich geleiteter Infrastruktur-Bereitstellung. Modelle (Qwen 3, ERNIE 4.0, DeepSeek R1) sind bei vielen Benchmarks wettbewerbsfähig. Hardware-Abhängigkeit von Nvidia-Architekturen ist die primäre strategische Schwachstelle, die Export-Kontrolle anvisiert.',
             '**Europas Position:** Führt bei KI-Regulierung — der EU AI Act ist das globale Referenz-Framework — und Open-Weights-Forschung (Mistral aus Frankreich). Bleibt bei Frontier-Modell-Leistung und private Investitionen zurück. Kompensiert durch Regulierungs-Hebelwirkung: Der Brussels Effect zwingt US- und chinesische Anbieter, EU-Standards für globale Produkte zu erfüllen.',
-            '**Die Hardware-Schicht:** Nvidia H100/H200 GPUs dominieren KI-Training. US-Exportkontrollen beschränken Verkäufe nach China. DeepSeek R1 trainiert auf beschränkten H800 GPUs bei berichteten ~6 Mio. USD — eine 94% Kostenreduktion vs GPT-5.5 Trainings-Schätzungen — zeigt, dass Hardware-Kontrolle chinesische Frontier-KI nicht gestoppt hat.',
+            '**Die Hardware-Schicht:** Nvidia H100/H200 GPUs dominieren KI-Training. US-Exportkontrollen beschränken Verkäufe nach China. DeepSeek R1 trainiert auf beschränkten H800 GPUs bei berichteten ~6 Mio. USD — eine 94% Kostenreduktion vs GPT-5.6 Trainings-Schätzungen — zeigt, dass Hardware-Kontrolle chinesische Frontier-KI nicht gestoppt hat.',
           ],
         },
 
@@ -1104,7 +1104,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Hohes Risiko:** KI in kritischer Infrastruktur, Bildung, Beschäftigung, wesentlichen Dienstleistungen (Kredit, Leistungen), Strafverfolgung, Grenzschutz und Rechtsverwaltung. Erfordert Konformitätsbewertungen, Transparenzdokumentation, menschliche Überwachung und Registrierung in der EU-Datenbank.',
             '**Begrenzte Risiko:** Chatbots und KI-generierte Inhalte. Erfordert Offenlegung — Nutzer müssen wissen, dass sie mit KI interagieren.',
             '**Minimalrisiko:** Spam-Filter, KI in Videospielen, Empfehlungssysteme ohne signifikanten Einfluss. Keine spezifischen Verpflichtungen über bestehendes Recht hinaus.',
-            '**General Purpose AI (GPAI):** Modelle wie GPT-5.5, Claude und Gemini müssen Trainingsdaten-Zusammenfassungen veröffentlichen, EU-Urheberrechtsgesetz befolgen und schwerwiegende Vorfälle melden. Modelle mit Systemrisiko (trainiert mit >10^25 FLOPS) sehen zusätzliche Adversarial-Testing-Anforderungen. GPAI-Regeln galten ab August 2025.',
+            '**General Purpose AI (GPAI):** Modelle wie GPT-5.6, Claude und Gemini müssen Trainingsdaten-Zusammenfassungen veröffentlichen, EU-Urheberrechtsgesetz befolgen und schwerwiegende Vorfälle melden. Modelle mit Systemrisiko (trainiert mit >10^25 FLOPS) sehen zusätzliche Adversarial-Testing-Anforderungen. GPAI-Regeln galten ab August 2025.',
             '**Durchsetzung:** EU AI Office (innerhalb der Europäischen Kommission) überwacht GPAI-Modelle. Nationale Marktüberwachungsbehörden setzen Hochrisiko-KI-Regeln durch. Geldstrafen: bis zu 35 Mio. EUR oder 7% globaler Umsatz für verbotene Praktiken; 15 Mio. EUR oder 3% für Hochrisiko-Verstöße.',
             '**Zeitplan:** Verbotene Praktiken: August 2024. GPAI-Verpflichtungen: August 2025. Transparenzpflichten nach Artikel 50 (Chatbot-/Deepfake-Offenlegung): August 2026, vom Digital Omnibus nicht berührt. Eigenständige Hochrisiko-KI-Systeme (Anhang III): durch das Digital Omnibus von August 2026 auf den 2. Dezember 2027 verschoben. Produktintegrierte Hochrisiko-KI (Anhang I): verschoben von August 2027 auf den 2. August 2028.',
           ],
@@ -1145,8 +1145,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         franceMistral: {
           title: 'Frankreich & Mistral: Europäische KI-Unabhängigkeit aufbauen',
           content: [
-            '**Frankreich baut einen strategischen Gegenpoint zu US-KI-Dominanz durch öffentliche Investition und Mistral AI — positioniert Open-Weights-Modelle als Europas Weg zu KI-Souveränität.** Mistral stellt die lebensfähigste Alternative der EU zu GPT-5.5 und Claude dar, und Frankreichs 2 Mrd. EUR KI-Investition ist explizit entworfen, um Unternehmen wie Mistral zu finanzieren und die Abhängigkeit von OpenAI, Google und Anthropic zu reduzieren.',
-            '**Mistral AI (gegründet 2023):** Gegründet von Arthur Mensch, Guilaume Blanc und Tim Caron — alle ehemalige Meta-Mitarbeiter. Mistral gab Mistral Small (Open-Weights) im September 2023 frei, gefolgt von Mistral Large 2 (wettbewerbsfähig mit GPT-5.5 bei vielen Aufgaben). Mistral Large 2 bewertet 81,2% auf MMLU vs GPT-5.5\'s 88,7%, passt aber zu proprietären Modellen bei Klassifizierung, Zusammenfassung und Extraktionsaufgaben. 123K Token-Kontextfenster. Lizenziert unter Mistral Community License (erlaubt kommerzielle Nutzung; Ableitungs-Namensrestriktionen ähnlich LLaMA).',
+            '**Frankreich baut einen strategischen Gegenpoint zu US-KI-Dominanz durch öffentliche Investition und Mistral AI — positioniert Open-Weights-Modelle als Europas Weg zu KI-Souveränität.** Mistral stellt die lebensfähigste Alternative der EU zu GPT-5.6 und Claude dar, und Frankreichs 2 Mrd. EUR KI-Investition ist explizit entworfen, um Unternehmen wie Mistral zu finanzieren und die Abhängigkeit von OpenAI, Google und Anthropic zu reduzieren.',
+            '**Mistral AI (gegründet 2023):** Gegründet von Arthur Mensch, Guilaume Blanc und Tim Caron — alle ehemalige Meta-Mitarbeiter. Mistral gab Mistral Small (Open-Weights) im September 2023 frei, gefolgt von Mistral Large 2 (wettbewerbsfähig mit GPT-5.6 bei vielen Aufgaben). Mistral Large 2 bewertet 81,2% auf MMLU vs GPT-5.6\'s 88,7%, passt aber zu proprietären Modellen bei Klassifizierung, Zusammenfassung und Extraktionsaufgaben. 123K Token-Kontextfenster. Lizenziert unter Mistral Community License (erlaubt kommerzielle Nutzung; Ableitungs-Namensrestriktionen ähnlich LLaMA).',
             '**Warum Frankreich Open-Weights wählte:** Frankreichs Position ist, dass proprietäre APIs Anbieter-Lock-in, Datenresidenz-Risiken und langfristige Abhängigkeit von US-Unternehmen schaffen. Open-Weights-Modelle können auf europäischer Infrastruktur bereitgestellt werden, Daten innerhalb der EU-Jurisdiktionen halten und GDPR/AI Act-Reibung mit US-Cloud-Anbietern vermeiden. Dies aligniert sich mit dem Brussels Effect — durch die Sicherstellung von Mistrals Konformität mit dem EU AI Act stärkt Frankreich Europas Regulierungs-Hebelwirkung global.',
             '**Regierungsunterstützung:** Französische Regierungsunterstützung via La Caisse des Dépôts et Placements (staatlicher Investitionsfonds) und direkte Subventionen. Mistral erhielt 385 Millionen EUR Series B Finanzierung (Februar 2024) mit Unterstützung von französischen strategischen Investoren. Positioniert als "europäischer Champion" in KI — ähnlich, wie Airbus als europäischer Luft- und Raumfahrt-Gegenpoint zu Boeing gebaut wurde.',
           ],
@@ -1188,7 +1188,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '**Made in China 2025 und New Generation AI Development Plan (2017):** Chinas 2017 KI-Plan zielt auf globale KI-Führerschaft bis 2030 über Forschung, Talent, Produktentwicklung und Regulierung. Es teilte 15 Milliarden USD staatliche Finanzierung zu und setzte Benchmarks für KI-Patent-Output, Forschungs-Zitate und Industrie-Umsatz. KI wird bezeichnet als eine Kern-Strategische Technologie neben Halbleitern und Quantencomputing.',
             '**Cyberspace Administration of China (CAC) Algorithmus-Regulierungen (März 2022):** Verlangte von allen Algorithmen-basierte Empfehlungs-Systemen, die chinesische Nutzer bedienen, sich bei der CAC zu registrieren, offenzulegen wie Algorithmen funktionieren und Nutzern zu erlauben, aus personalisierten Empfehlungen auszusteigen. Erweitert zu generativer KI im Juli 2023 — alle generativen KI-Services müssen registrieren, eine Sicherheitsbewertung bestehen und Outputs sicherstellen, um sich mit "sozialistischen Kernwerten" zu alignieren.',
-            '**DeepSeek R1 (Januar 2025):** Freigegeben von DeepSeek (ein chinesisches KI-Lab von High-Flyer-Hedgefonds unterstützt), R1 passte oder übertraf GPT-5.5 bei mehreren Benchmarks, einschließlich AIME 2024 (79,8% vs GPT-5.5\'s 74,4%), MATH-500 (97,3%) und HumanEval-Coding-Aufgaben. Trainiert auf Nvidia H800 GPUs — die China-spezifische Variante innerhalb von Exportkontroll-Grenzen. Die Freigabe triggerte einen signifikanten Drop in Nvidias Aktienkurs und beschleunigte US-Richtlinien-Debatten über die Effektivität von Hardware-Exportkontrollen.',
+            '**DeepSeek R1 (Januar 2025):** Freigegeben von DeepSeek (ein chinesisches KI-Lab von High-Flyer-Hedgefonds unterstützt), R1 passte oder übertraf GPT-5.6 bei mehreren Benchmarks, einschließlich AIME 2024 (79,8% vs GPT-5.6\'s 74,4%), MATH-500 (97,3%) und HumanEval-Coding-Aufgaben. Trainiert auf Nvidia H800 GPUs — die China-spezifische Variante innerhalb von Exportkontroll-Grenzen. Die Freigabe triggerte einen signifikanten Drop in Nvidias Aktienkurs und beschleunigte US-Richtlinien-Debatten über die Effektivität von Hardware-Exportkontrollen.',
             '**Huawei Ascend Chips:** Huaweis Ascend 910B und 910C Chips sind positioniert als inländische Alternativen zu Nvidia GPUs für KI-Training. Performance bleibt unter Nvidia H100 bei den meisten Benchmarks, aber ausreichend für das Training von Medium-Scale-Modellen. Große chinesische Tech-Unternehmen (Baidu, Alibaba, ByteDance) haben begonnen, einige Workloads zu Ascend zu migrieren, um Nvidia-Abhängigkeit zu reduzieren.',
             '**Belt and Road KI-Diplomatie:** China exportiert KI-Überwachungs-Infrastruktur (Gesichtserkennung, Smart-City-Systeme) zu entwickelnden Nationen durch BRI-Partnerschaften. Anbieter enthalten Huawei, Alibaba Cloud und ZTE. Dies exportiert chinesische KI-Governance-Normen — einschließlich algorithmischer sozialer Verwaltung — zu Partner-Ländern, eine parallele KI-Standards-Ökosystem außerhalb des OECD/EU-Rahmens schaffend.',
             '**Führende chinesische KI-Modelle:** Alibaba Qwen 3, Baidu ERNIE 4.0, ByteDance Doubao, Z.ai GLM-4. Diese sind wettbewerbsfähig bei chinesischen Sprach-Aufgaben und zunehmend bei mehrsprachigen Benchmarks. [Open-source vs proprietary LLM Tradeoffs](/prompt-engineering/open-source-vs-proprietary-llms) beeinflussen chinesische Modell-Annahme — Qwens Open-Weights-Freigabe hat internationale Entwickler angezogen.',
@@ -1198,8 +1198,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         chinaModelsAccessibility: {
           title: 'China für Prompt Engineers: Welche Modelle sind verfügbar',
           content: [
-            '**Wenn Ihr Produkt Nutzer in China bedient, funktionieren Sie in einem eigenständigen KI-Ökosystem mit unterschiedlichen verfügbaren Modellen, zwingenden Inhaltsfiltern und einer Pre-Launch-Genehmigungsanforderung ohne Äquivalent in der EU oder USA.** Ausländische Modelle — GPT-5.5, Claude, Gemini — sind vom Festland China ohne VPN unzugänglich. Ihre Optionen sind auf domestic registrierte Alternativen begrenzt.',
-            '**Verfügbare Modelle in China:** Alibaba Qwen 3 (Open-Weights, 7B–72B, 128K Kontext, API via Alibaba Cloud), Baidu ERNIE 4.0 (API via Qianfan Plattform), ByteDance Doubao (API via Volcano Engine), Z.ai GLM-4 (API via Z.ai Plattform) und DeepSeek R1/V3 (API via DeepSeek Plattform). Qwen 3 72B ist die stärkste Open-Weights-Option — Sie können sie außerhalb Chinas selbst-hosten, während Sie sie für chinesischsprachige Aufgaben nutzen. Sie bewertet sich innerhalb von 5 Prozentpunkten von GPT-5.5 bei MMLU und outperformt bei chinesisch-spezifischen Benchmarks (C-Eval).',
+            '**Wenn Ihr Produkt Nutzer in China bedient, funktionieren Sie in einem eigenständigen KI-Ökosystem mit unterschiedlichen verfügbaren Modellen, zwingenden Inhaltsfiltern und einer Pre-Launch-Genehmigungsanforderung ohne Äquivalent in der EU oder USA.** Ausländische Modelle — GPT-5.6, Claude, Gemini — sind vom Festland China ohne VPN unzugänglich. Ihre Optionen sind auf domestic registrierte Alternativen begrenzt.',
+            '**Verfügbare Modelle in China:** Alibaba Qwen 3 (Open-Weights, 7B–72B, 128K Kontext, API via Alibaba Cloud), Baidu ERNIE 4.0 (API via Qianfan Plattform), ByteDance Doubao (API via Volcano Engine), Z.ai GLM-4 (API via Z.ai Plattform) und DeepSeek R1/V3 (API via DeepSeek Plattform). Qwen 3 72B ist die stärkste Open-Weights-Option — Sie können sie außerhalb Chinas selbst-hosten, während Sie sie für chinesischsprachige Aufgaben nutzen. Sie bewertet sich innerhalb von 5 Prozentpunkten von GPT-5.6 bei MMLU und outperformt bei chinesisch-spezifischen Benchmarks (C-Eval).',
           ],
         },
 
@@ -1269,7 +1269,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '**EU-basierte Organisationen:** Müssen den EU AI Act direkt befolgen. Hochrisiko-KI-Systeme (HR, Kredit, Gesundheitswesen, öffentliche Services) verlangen Konformitätsbewertungen, Menschliche Überwachungs-Dokumentation und Registrierung in der EU AI-Datenbank vor August 2026. Alle KI, die personenbezogene Daten behandelt, muss GDPR befolgen — einschließlich KI-Trainings-Pipelines und Output-Verarbeitung.',
             '**Nicht-EU-Organisationen, die EU-Nutzer bedienen:** Unterliegen dem Brussels Effect — der EU AI Act gilt für Ihre KI-Outputs, wenn sie EU-Nutzer erreichen. GPAI-Modelle, die in EU-bezogenen Produkten genutzt werden, müssen Transparenzverpflichtungen befolgen (ab August 2025). Nicht-Konformität trägt die gleichen Geldstrafen wie EU-ansässige Violators.',
-            '**US KI-Tools in EU-Einsätzen:** GPT-5.5, Claude Opus 4.8 und Gemini 3.1 Pro sind alle als GPAI-Modelle klassifiziert. OpenAI, Anthropic und Google veröffentlichten EU AI Act GPAI-Konformitäts-Dokumentation. Organisationen, die diese Tools in Hochrisiko-KI-Systemen (als Bereitsteller) nutzen, bleiben selbst verantwortlich für ihre eigenen Konformitätsbewertungen — der Provider\'s GPAI-Konformität deckt nicht Ihren Einsatz.',
+            '**US KI-Tools in EU-Einsätzen:** GPT-5.6, Claude Opus 5 und Gemini 3.1 Pro sind alle als GPAI-Modelle klassifiziert. OpenAI, Anthropic und Google veröffentlichten EU AI Act GPAI-Konformitäts-Dokumentation. Organisationen, die diese Tools in Hochrisiko-KI-Systemen (als Bereitsteller) nutzen, bleiben selbst verantwortlich für ihre eigenen Konformitätsbewertungen — der Provider\'s GPAI-Konformität deckt nicht Ihren Einsatz.',
             '**Chinesische KI-Tools:** DeepSeek R1 und andere chinesische Modelle sind international verfügbar, tragen aber zusätzliche Beschaffungs-Risiko für EU und US-Organisationen — Datenspeicherort ist unklar, der Provider unterliegt CAC-Content-Regulierungen und die Cyberspace Administration of China kann Daten-Offenlegung zwingen. Regierungs- und kritische Infrastruktur-Organisationen in EU und NATO-Mitgliedstaaten schränken oder verbieten chinesische KI-Tool-Nutzung.',
             '**Datenspeicherort:** EU GDPR schränkt personenbezogenen Daten-Transfer zu Ländern ohne "Angemessenheit"-Entscheidungen oder angemessene Sicherheitsvorkehrungen ein. KI-Inferenz auf personenbezogenen Daten, die US-Provider nutzen, verlangt Standard Contractual Clauses (SCCs) oder verlässt sich auf das EU-US Data Privacy Framework (2023). Transfer nach China hat keine Angemessenheits-Entscheidung — contractuelle Sicherheitsvorkehrungen müssen vorhanden sein und sind schwer durchzusetzen.',
             '**Beschaffungs-Entscheidungen:** US-Bundesbehörden sind verboten, KI von designierten chinesischen Entitäten zu nutzen. Mehrere EU-Mitgliedstaaten (Deutschland, Frankreich, Niederlande) gaben Richtlinien aus, die chinesische KI-Tools in Regierungs-Beschaffung einschränken. Für Private-Sector-Organisationen sollte Beschaffungs-Politik die Jurisdiktion der KI-Provider\'s Trainingsdaten, Content-Moderations-Praktiken und Regierungs-Zugangs-Bestimmungen adressieren.',
@@ -1287,7 +1287,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         qaWhoIsWinning: {
           title: 'Wer gewinnt das globale KI-Rennen?',
           content: [
-            'Die Vereinigten Staaten führen bei Frontier-Modell-Leistung — GPT-5.5 (OpenAI), Claude (Anthropic) und Gemini (Google DeepMind) — und bei privaten KI-Investitionen (67 Milliarden USD 2023 per OECD-Daten). China führt bei KI-Patent-Anmeldungen, staatlich geleiteter Einsatz-Skala und inländlicher Modell-Entwicklung; DeepSeek R1 entsprach GPT-5.5 bei Schlüssel-Benchmarks im Januar 2025. Die Europäische Union führt bei KI-Regulierung — der EU AI Act ist das globale Referenz-Framework — bleibt aber bei Frontier-Modell-Leistung und privaten Investitionen relativ zu seiner wirtschaftlichen Größe zurück. Kein einzelner Akteur führt bei allen drei Dimensionen gleichzeitig.',
+            'Die Vereinigten Staaten führen bei Frontier-Modell-Leistung — GPT-5.6 (OpenAI), Claude (Anthropic) und Gemini (Google DeepMind) — und bei privaten KI-Investitionen (67 Milliarden USD 2023 per OECD-Daten). China führt bei KI-Patent-Anmeldungen, staatlich geleiteter Einsatz-Skala und inländlicher Modell-Entwicklung; DeepSeek R1 entsprach GPT-5.6 bei Schlüssel-Benchmarks im Januar 2025. Die Europäische Union führt bei KI-Regulierung — der EU AI Act ist das globale Referenz-Framework — bleibt aber bei Frontier-Modell-Leistung und privaten Investitionen relativ zu seiner wirtschaftlichen Größe zurück. Kein einzelner Akteur führt bei allen drei Dimensionen gleichzeitig.',
           ],
         },
 
@@ -1301,21 +1301,21 @@ export const article: Partial<Record<Language, PEArticle>> = {
         qaHowChinaRegulates: {
           title: 'Wie reguliert China künstliche Intelligenz?',
           content: [
-            'China reguliert KI durch die Cyberspace Administration of China (CAC). Die Algorithm Recommendation Regulations (2022) verlangen die Kennzeichnung von algorithmen-kuratierten Inhalten. Die Generative AI Measures (2023) verlangen eine CAC-Sicherheitsbewertung — ein 45–90-Tage-Prozess — bevor irgend ein Consumer-facing generatives KI-Service in China starten kann und mandat, dass KI-Outputs sich mit "sozialistischen Kernwerten" alignieren. Ausländische KI-Modelle (GPT-5.5, Claude, Gemini) sind vom Festland China ohne Circumvention Tools unerreichbar. Inländische Alternativen enthalten Alibaba Qwen, Baidu ERNIE 4.0, ByteDance Doubao und DeepSeek.',
+            'China reguliert KI durch die Cyberspace Administration of China (CAC). Die Algorithm Recommendation Regulations (2022) verlangen die Kennzeichnung von algorithmen-kuratierten Inhalten. Die Generative AI Measures (2023) verlangen eine CAC-Sicherheitsbewertung — ein 45–90-Tage-Prozess — bevor irgend ein Consumer-facing generatives KI-Service in China starten kann und mandat, dass KI-Outputs sich mit "sozialistischen Kernwerten" alignieren. Ausländische KI-Modelle (GPT-5.6, Claude, Gemini) sind vom Festland China ohne Circumvention Tools unerreichbar. Inländische Alternativen enthalten Alibaba Qwen, Baidu ERNIE 4.0, ByteDance Doubao und DeepSeek.',
           ],
         },
 
         qaWhatEUAIActRequires: {
           title: 'Was verlangt der EU AI Act von Organisationen?',
           content: [
-            'Der EU AI Act klassifiziert KI-Systeme in vier Risiko-Stufen mit skalieren Verpflichtungen. Verbotene Praktiken — soziales Scoring durch öffentliche Behörden, Echtzeit-Biometrische Überwachung in öffentlichen Räumen — sind ab August 2024 verboten. Hochrisiko-KI-Systeme in Beschäftigung, Kredit-Bewertung, Gesundheitswesen oder Strafverfolgung verlangen Konformitätsbewertungen, Menschliche Überwachungs-Dokumentation und Registrierung in der EU AI-Datenbank vor August 2026. General Purpose AI-Modelle (GPT-5.5, Claude, Gemini) müssen Trainingsdaten-Zusammenfassungen veröffentlichen und EU-Urheberrecht befolgen — Regeln, die ab August 2025 galten. Alle Organisationen, die EU-Nutzer bedienen, müssen konform sein, unabhängig davon, wo sie ansässig sind.',
+            'Der EU AI Act klassifiziert KI-Systeme in vier Risiko-Stufen mit skalieren Verpflichtungen. Verbotene Praktiken — soziales Scoring durch öffentliche Behörden, Echtzeit-Biometrische Überwachung in öffentlichen Räumen — sind ab August 2024 verboten. Hochrisiko-KI-Systeme in Beschäftigung, Kredit-Bewertung, Gesundheitswesen oder Strafverfolgung verlangen Konformitätsbewertungen, Menschliche Überwachungs-Dokumentation und Registrierung in der EU AI-Datenbank vor August 2026. General Purpose AI-Modelle (GPT-5.6, Claude, Gemini) müssen Trainingsdaten-Zusammenfassungen veröffentlichen und EU-Urheberrecht befolgen — Regeln, die ab August 2025 galten. Alle Organisationen, die EU-Nutzer bedienen, müssen konform sein, unabhängig davon, wo sie ansässig sind.',
           ],
         },
 
         qaExportControls: {
           title: 'Wie beeinflussen US-Exportkontrollen die KI-Entwicklung?',
           content: [
-            'US-Exportkontrollen schränken den Verkauf fortgeschrittener Nvidia GPUs — einschließlich A100 und H100 — nach China ein, anvisierend, Chinas Kapazität zu begrenzen, Frontier-KI-Modelle zu trainieren. Die Kontrollen werden durchgesetzt durch die Export Administration Regulations (EAR) und gelten für Nvidia, AMD und Intel Produkte über angegebenen Compute-Schwellen. DeepSeeks R1-Freigabe im Januar 2025 demonstrierte die Grenzen dieses Ansatzes: trainiert auf China-beschränkten H800 GPUs bei einem Bruchteil der berichteten Kosten vergleichbarer US-Modelle, entsprach es GPT-5.5 bei AIME 2024, MATH-500 und HumanEval-Benchmarks. Export-Kontrolle verlangsamen, aber haben chinesische Frontier-KI-Entwicklung nicht gestoppt.',
+            'US-Exportkontrollen schränken den Verkauf fortgeschrittener Nvidia GPUs — einschließlich A100 und H100 — nach China ein, anvisierend, Chinas Kapazität zu begrenzen, Frontier-KI-Modelle zu trainieren. Die Kontrollen werden durchgesetzt durch die Export Administration Regulations (EAR) und gelten für Nvidia, AMD und Intel Produkte über angegebenen Compute-Schwellen. DeepSeeks R1-Freigabe im Januar 2025 demonstrierte die Grenzen dieses Ansatzes: trainiert auf China-beschränkten H800 GPUs bei einem Bruchteil der berichteten Kosten vergleichbarer US-Modelle, entsprach es GPT-5.6 bei AIME 2024, MATH-500 und HumanEval-Benchmarks. Export-Kontrolle verlangsamen, aber haben chinesische Frontier-KI-Entwicklung nicht gestoppt.',
           ],
         },
 
@@ -1350,7 +1350,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         defGPAI: {
           title: 'Definition: General Purpose AI (GPAI)',
-          content: 'Ein KI-System, trainiert auf breite Daten mit einer allgemeinen Architektur (nicht spezialisiert oder Domäne-spezifisch), die für eine Breite Reihe von Downstream-Aufgaben angepasst werden kann. GPT-5.5, Claude Opus 4.8 und Gemini 3.1 Pro sind GPAI-Modelle. Unter dem EU AI Act, GPAI-Modelle mit >10^25 FLOP Trainings-Compute-Seite Transparenzverpflichtungen enthalten Trainingsdaten-Zusammenfassungen, Leistungs-Dokumentation und Copyright-Konformität.',
+          content: 'Ein KI-System, trainiert auf breite Daten mit einer allgemeinen Architektur (nicht spezialisiert oder Domäne-spezifisch), die für eine Breite Reihe von Downstream-Aufgaben angepasst werden kann. GPT-5.6, Claude Opus 5 und Gemini 3.1 Pro sind GPAI-Modelle. Unter dem EU AI Act, GPAI-Modelle mit >10^25 FLOP Trainings-Compute-Seite Transparenzverpflichtungen enthalten Trainingsdaten-Zusammenfassungen, Leistungs-Dokumentation und Copyright-Konformität.',
         },
 
         defCAC: {
@@ -1420,7 +1420,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'faq',
           title: 'Häufig gestellte Fragen',
           faqs: [
-            { q: 'Was ist der EU AI Act und wann wird er angewendet?', a: 'Der EU AI Act ist das weltweite erste umfassende KI-Gesetz, verabschiedet durch das Europäische Parlament im März 2024. Verbotene Praktiken gelten ab August 2024. GPAI-Modell-Verpflichtungen (für GPT-5.5, Claude, Gemini-Klasse-Modelle) gelten ab August 2025. Hochrisiko-KI-System-Anforderungen gelten ab August 2026. Es wird angewendet auf jede Organisation, die KI auf dem EU-Markt platziert oder KI nutzt, die EU-Einwohner beeinflusst.' },
+            { q: 'Was ist der EU AI Act und wann wird er angewendet?', a: 'Der EU AI Act ist das weltweite erste umfassende KI-Gesetz, verabschiedet durch das Europäische Parlament im März 2024. Verbotene Praktiken gelten ab August 2024. GPAI-Modell-Verpflichtungen (für GPT-5.6, Claude, Gemini-Klasse-Modelle) gelten ab August 2025. Hochrisiko-KI-System-Anforderungen gelten ab August 2026. Es wird angewendet auf jede Organisation, die KI auf dem EU-Markt platziert oder KI nutzt, die EU-Einwohner beeinflusst.' },
             { q: 'Wird der EU AI Act auf Nicht-EU-Unternehmen angewendet?', a: 'Ja. Der EU AI Act hat extraterritoriales Reichweite — er wird angewendet auf jeden Provider, dessen KI-Outputs in der EU genutzt werden, unabhängig davon, wo der Provider ansässig ist. Ein US-Unternehmen, dessen KI-Produkt von EU-Einwohnern genutzt wird, muss konform sein. Dies ist das gleiche extraterritoriale Prinzip, das GDPR zu einem globalen Standard machte.' },
             { q: 'Was sind die Geldstrafen für Verstöße gegen den EU AI Act?', a: 'Geldstrafen bis zu 35 Millionen EUR oder 7% des globalen jährlichen Umsatzes (je nachdem, welcher Wert höher ist) für verbotene KI-Praktiken. Bis zu 15 Millionen EUR oder 3% für Hochrisiko-KI-Verstöße. Bis zu 7,5 Millionen EUR oder 1% für die Bereitstellung falscher Informationen an Durchsetzungsbehörden. Die höhere des Prozentsatzes oder des festen Betrages wird angewendet.' },
             { q: 'Welche KI-Anwendungen sind unter dem EU AI Act verboten?', a: 'Verboten (Inakzeptables Risiko): Soziale Scoring-Systeme durch öffentliche Behörden; Echtzeit-Biometrische Identifizierung in öffentlichen Räumen (mit engen Ausnahmen); KI, die psychologische Schwachstellen nutzt aus; unkontrolliertes Scraping von Gesichtsbildern aus dem Internet. Diese wurden seit August 2024 verboten.' },
@@ -1434,7 +1434,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'Können EU-Organisationen DeepSeek für kommerzielle Anwendungen nutzen?', a: 'Technisch ja, mit GDPR-konformen vertraglichen Sicherheitsvorkehrungen (Standard Contractual Clauses). In der Praxis sind SCCs schwer gegen chinesisches Gesetz durchzusetzen, das DeepSeek verlangt, CAC-Daten-Offenlegungsanforderungen zu befolgen. Regierungs-Beschaffung ist eine separate Einschränkung: Deutschlands BSI, Frankreichs ANSSI und die Niederlande\'s NCSC gaben Empfehlungen oder Restriktionen zu chinesischen KI-Tools für Regierungs- und kritische Infrastruktur-Nutzung aus. Privat-Sektor EU-Organisationen können DeepSeek kommerziell nutzen, müssen aber eine Transfer Impact Assessment unter GDPR Artikel 46 durchführen und das residuale Risiko dokumentieren. Die meisten Legal-Ratgeber raten gegen die Verarbeitung personenbezogener Daten über DeepSeek.' },
             { q: 'Schadet das EU-KI-Gesetz der europäischen KI-Wettbewerbsfähigkeit?', a: 'Das ist ein echtes strategisches Dilemma: Das EU-KI-Gesetz kann europäische KI-Startups verlangsamen, stärkt aber Europas regulatorische Glaubwürdigkeit weltweit. Einerseits schaffen Compliance-Kosten und Konformitätsbewertungen Reibung für EU-Unternehmen — Frankreichs Mistral AI ist stärker eingeschränkt als US-Konkurrenten. Andererseits bedeutet der Brüssel-Effekt, dass der regulatorische Rahmen der EU zum globalen Standard wird und EU-basierten Unternehmen einen Wettbewerbsvorteil bei Compliance gibt. Europa setzt auf regulatorische Führerschaft statt reine technologische Fähigkeit — eine grundlegend andere KI-Strategie als die USA oder China.' },
             { q: 'Wie vergleicht sich Europas Rechenkapazität mit den USA und China?', a: 'Europa hinkt bei der Recheninfrastruktur deutlich hinterher. Die USA dominieren GPU-Fertigung (Nvidia ~80 % Marktanteil) und Custom Silicon. China produziert bei TSMC (Taiwan) und nutzt begrenzte Nvidia H- und A-Serien GPUs. Europa hat kein Äquivalent: ASML (Niederlande) stellt Chipfertigungsausrüstung her, besitzt aber keine Fabs. Der EU Chips Act (43 Milliarden Euro) zielt darauf ab, Intel- und TSMC-Fabs auf EU-Gebiet zu bauen, aber keine wird vor 2027–2029 betriebsbereit sein. Dies ist Europas zentrale Infrastruktur-Schwachstelle: Training von Frontier-Modellen erfordert tausende GPUs monatelang. Ohne inländische Fab-Kapazität bleibt Europa von US (Nvidia) und Taiwan (TSMC) abhängig.' },
-            { q: 'Was ist Europas KI-Vorteil neben Regulierung?', a: 'Europa hat drei nicht-regulatorische Vorteile: (1) Mistral AI und andere von der EU finanzierte Open-Source-Modelle bieten GDPR-konforme Alternativen ohne US- oder China-Abhängigkeit; (2) Europa führt bei KI-Sicherheitsforschung durch UK AI Safety Institute und französische Forschungszentren; (3) Europas hochgebildete Belegschaft und bestehendes Software-/Halbleiter-Talent geben ihm einen Vorteil bei KI-Anwendungen und Custom Silicon. Jedoch kompensiert keiner dieser Vorteile Europas Nachteil bei Frontier-Modell-Fähigkeit — die USA führen bei GPT-5.5 und Claude, China bei Skalierung und Volumen. Europas Strategie ist mach das, worin du gut bist (Sicherheit, Regulierung, Ethik), statt um reine Fähigkeit zu konkurrieren.' },
+            { q: 'Was ist Europas KI-Vorteil neben Regulierung?', a: 'Europa hat drei nicht-regulatorische Vorteile: (1) Mistral AI und andere von der EU finanzierte Open-Source-Modelle bieten GDPR-konforme Alternativen ohne US- oder China-Abhängigkeit; (2) Europa führt bei KI-Sicherheitsforschung durch UK AI Safety Institute und französische Forschungszentren; (3) Europas hochgebildete Belegschaft und bestehendes Software-/Halbleiter-Talent geben ihm einen Vorteil bei KI-Anwendungen und Custom Silicon. Jedoch kompensiert keiner dieser Vorteile Europas Nachteil bei Frontier-Modell-Fähigkeit — die USA führen bei GPT-5.6 und Claude, China bei Skalierung und Volumen. Europas Strategie ist mach das, worin du gut bist (Sicherheit, Regulierung, Ethik), statt um reine Fähigkeit zu konkurrieren.' },
           ],
         },
 
@@ -1459,13 +1459,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               mistake: 'GPU-Exportkontrollen als dauerhafte Schranke für die chinesische KI-Entwicklung behandeln.',
-              problem: 'DeepSeek R1 (Januar 2025) erreichte GPT-5.5-Niveau bei wichtigen Benchmarks — trainiert auf beschränkten H800-GPUs bei ~6 Mio. USD Rechenkosten, 94% günstiger als GPT-4-Trainingsschätzungen. Exportkontrollen verlangsamen Chinas Fortschritt, stoppen ihn aber nicht.',
+              problem: 'DeepSeek R1 (Januar 2025) erreichte GPT-5.6-Niveau bei wichtigen Benchmarks — trainiert auf beschränkten H800-GPUs bei ~6 Mio. USD Rechenkosten, 94% günstiger als GPT-4-Trainingsschätzungen. Exportkontrollen verlangsamen Chinas Fortschritt, stoppen ihn aber nicht.',
               fix: 'Planen Sie für einen mehrere Jahrzehnte andauernden geopolitischen Wettbewerb bei KI. Gehen Sie bei langfristigen Produkt-Roadmaps nicht davon aus, dass US-Hardware-Dominanz dauerhaft ist. Erwägen Sie Investitionen in Open-Weights-Alternativen (Llama, Mistral, Qwen), die schwerer einzuschränken sind. Beobachten Sie TSMCs politischen Status, da dort alle fortschrittlichen Chips gefertigt werden.',
             },
             {
-              mistake: 'Annahme, dass proprietäre US-Modelle (GPT-5.5, Claude) global ohne regulatorische Reibung verfügbar bleiben.',
-              problem: 'Der EU AI Act legt bereits Compliance-Pflichten für GPT-5.5 und Claude fest. Künftige EU-Regulierung könnte den Datenexport einschränken oder On-Premises-Deployment für sensible Anwendungsfälle verlangen. Chinas Strategie der heimischen Substitution (Made in China 2025) könnte den Zugang zu ausländischen Modellen begrenzen.',
-              fix: 'Diversifizieren Sie Ihre KI-Infrastruktur. Nutzen Sie eine Mischung aus proprietären Modellen (für Frontier-Fähigkeit), Open-Weights-Modellen (für regulatorische Flexibilität) und lokalen Deployments (für Datenspeicherort). Testen Sie Ihr Produkt über GPT-5.5, Claude, Mistral und Qwen, um Vendor-Lock-in zu reduzieren.',
+              mistake: 'Annahme, dass proprietäre US-Modelle (GPT-5.6, Claude) global ohne regulatorische Reibung verfügbar bleiben.',
+              problem: 'Der EU AI Act legt bereits Compliance-Pflichten für GPT-5.6 und Claude fest. Künftige EU-Regulierung könnte den Datenexport einschränken oder On-Premises-Deployment für sensible Anwendungsfälle verlangen. Chinas Strategie der heimischen Substitution (Made in China 2025) könnte den Zugang zu ausländischen Modellen begrenzen.',
+              fix: 'Diversifizieren Sie Ihre KI-Infrastruktur. Nutzen Sie eine Mischung aus proprietären Modellen (für Frontier-Fähigkeit), Open-Weights-Modellen (für regulatorische Flexibilität) und lokalen Deployments (für Datenspeicherort). Testen Sie Ihr Produkt über GPT-5.6, Claude, Mistral und Qwen, um Vendor-Lock-in zu reduzieren.',
             },
           ],
         },
@@ -1528,7 +1528,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         name: 'Cómo desplegar productos de IA generativa en China: guía para desarrolladores',
         description: 'Guía paso a paso para desarrolladores que despliegan productos de IA en China — selección de modelo, restricciones de contenido, evaluación de seguridad de la CAC, residencia de datos según la PIPL y cronograma de lanzamiento.',
         step: [
-          { '@type': 'HowToStep', position: 1, name: 'Comprender los modelos de IA disponibles en China', text: 'Los modelos extranjeros (GPT-5.5, Claude, Gemini) no son accesibles desde China continental sin VPN. Opciones disponibles: Alibaba Qwen 3 (pesos abiertos, 7B–72B, contexto de 128K), Baidu ERNIE 4.0 (API Qianfan), ByteDance Doubao (Volcano Engine), Z.ai GLM-4, DeepSeek R1/V3. Qwen 3 72B es la opción de pesos abiertos más sólida para autoalojamiento.' },
+          { '@type': 'HowToStep', position: 1, name: 'Comprender los modelos de IA disponibles en China', text: 'Los modelos extranjeros (GPT-5.6, Claude, Gemini) no son accesibles desde China continental sin VPN. Opciones disponibles: Alibaba Qwen 3 (pesos abiertos, 7B–72B, contexto de 128K), Baidu ERNIE 4.0 (API Qianfan), ByteDance Doubao (Volcano Engine), Z.ai GLM-4, DeepSeek R1/V3. Qwen 3 72B es la opción de pesos abiertos más sólida para autoalojamiento.' },
           { '@type': 'HowToStep', position: 2, name: 'Planificar las restricciones de contenido a nivel de API', text: 'Los servicios de IA generativa registrados ante la CAC filtran contenido que bloquea críticas al liderazgo del PCCh, discusiones sobre la independencia de Taiwán/Tíbet/Xinjiang, eventos históricos políticamente sensibles y contenido que socava los "valores socialistas fundamentales". Los filtros están integrados en la API. Los errores de filtrado devuelven HTTP 200 con is_safe: 0 — no HTTP 4xx — lo que requiere un manejo explícito a nivel de aplicación.' },
           { '@type': 'HowToStep', position: 3, name: 'Completar la evaluación de seguridad de la CAC', text: 'Obligatoria antes de lanzar cualquier servicio de IA generativa orientado al consumidor en China. Presenta las fuentes de datos de entrenamiento, la documentación del filtrado de contenido y ejemplos de salida. Plazo: 45–90 días. Las empresas extranjeras deben asociarse con una entidad de China continental o un proveedor de nube con licencia (Alibaba Cloud, Tencent Cloud) como proveedor registrado.' },
           { '@type': 'HowToStep', position: 4, name: 'Cumplir con los requisitos de residencia de datos de la PIPL', text: 'La PIPL (2021) exige que los datos personales de usuarios chinos permanezcan en China o pasen una evaluación de seguridad gubernamental antes de una transferencia transfronteriza. Enruta todo el tráfico de usuarios de China a través de inferencia alojada en el continente (Alibaba Cloud, Tencent Cloud, Huawei Cloud).' },
@@ -1557,10 +1557,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Question', 'name': '¿Cuáles son las multas por violar el EU AI Act?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Las multas alcanzan hasta 35 millones de euros o el 7% de la facturación global anual por prácticas de IA prohibidas (lo que sea mayor). Las infracciones de IA de alto riesgo acarrean multas de hasta 15 millones de euros o el 3% de la facturación global. Proporcionar información incorrecta a las autoridades conlleva multas de hasta 7,5 millones de euros o el 1% de la facturación global.' } },
           { '@type': 'Question', 'name': '¿Qué aplicaciones de IA prohíbe la UE de forma absoluta?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'El EU AI Act prohíbe: sistemas de puntuación social por parte de autoridades públicas, vigilancia biométrica en tiempo real en espacios públicos (con excepciones reducidas para fuerzas del orden), IA que explote vulnerabilidades cognitivas y la recopilación masiva de imágenes faciales de internet para construir bases de datos de reconocimiento. Estas están categorizadas como Riesgo Inaceptable.' } },
           { '@type': 'Question', 'name': '¿En qué se diferencia la regulación de IA de EE.UU. del enfoque de la UE?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'EE.UU. utiliza un enfoque sectorial y voluntario: los reguladores existentes (FTC, FDA, CFPB, EEOC) aplican sus mandatos a la IA en sus dominios. No existe ninguna ley federal de IA equivalente al EU AI Act. La Orden Ejecutiva de Biden sobre Seguridad de la IA (octubre de 2023) fue revocada por la administración Trump en enero de 2025 y reemplazada por un Plan de Acción de IA centrado en la competitividad.' } },
-          { '@type': 'Question', 'name': '¿La IA de China es tan capaz como los sistemas de IA de EE.UU.?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'DeepSeek R1, lanzado en enero de 2025, superó a GPT-5.5 en benchmarks de razonamiento y codificación (AIME 2024: 79.8% vs 74.4% de GPT-5.5, MATH-500: 97.3%, HumanEval) mientras que supuestamente se entrenó a un costo de ~6 millones de dólares — una reducción del 94% frente a los costos estimados de entrenamiento de modelos de frontera. Los modelos líderes de China son competitivos en muchas tareas pero quedan por detrás en razonamiento multilingüe y benchmarks de seguridad.' } },
-          { '@type': 'Question', 'name': '¿Pueden las empresas de la UE usar GPT-5.5 y Claude bajo el AI Act?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí, para la mayoría de los casos de uso. GPT-5.5 y Claude Opus 4.8 califican como modelos de Propósito General de IA (GPAI) y deben cumplir obligaciones de transparencia — incluyendo publicar resúmenes de datos de entrenamiento y cumplir con la ley de derechos de autor de la UE — que entraron en vigor en agosto de 2025. OpenAI y Anthropic han publicado documentación de cumplimiento GPAI para usuarios de la UE.' } },
+          { '@type': 'Question', 'name': '¿La IA de China es tan capaz como los sistemas de IA de EE.UU.?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'DeepSeek R1, lanzado en enero de 2025, superó a GPT-5.6 en benchmarks de razonamiento y codificación (AIME 2024: 79.8% vs 74.4% de GPT-5.6, MATH-500: 97.3%, HumanEval) mientras que supuestamente se entrenó a un costo de ~6 millones de dólares — una reducción del 94% frente a los costos estimados de entrenamiento de modelos de frontera. Los modelos líderes de China son competitivos en muchas tareas pero quedan por detrás en razonamiento multilingüe y benchmarks de seguridad.' } },
+          { '@type': 'Question', 'name': '¿Pueden las empresas de la UE usar GPT-5.6 y Claude bajo el AI Act?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sí, para la mayoría de los casos de uso. GPT-5.6 y Claude Opus 5 califican como modelos de Propósito General de IA (GPAI) y deben cumplir obligaciones de transparencia — incluyendo publicar resúmenes de datos de entrenamiento y cumplir con la ley de derechos de autor de la UE — que entraron en vigor en agosto de 2025. OpenAI y Anthropic han publicado documentación de cumplimiento GPAI para usuarios de la UE.' } },
           { '@type': 'Question', 'name': '¿Cómo afecta DeepSeek a la carrera geopolítica de la IA?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'El lanzamiento de DeepSeek R1 en enero de 2025 demostró que las capacidades de IA de frontera son alcanzables a costos de cómputo significativamente menores de lo que se asumía previamente. Esto debilita el argumento de que los controles de exportación sobre las GPU de Nvidia limitarán permanentemente el desarrollo de IA en China. Aceleró los debates de política en EE.UU. y la UE sobre si las estrategias de contención basadas en cómputo son suficientes.' } },
-          { '@type': 'Question', 'name': '¿Qué es el Efecto Bruselas en la IA?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'El Efecto Bruselas describe cómo las regulaciones de la UE se convierten en estándares globales de facto porque las empresas multinacionales encuentran más fácil aplicar el estándar más estricto en todo el mundo en lugar de mantener pilas de cumplimiento separadas por jurisdicción. Para la IA, esto significa que el EU AI Act efectivamente eleva los estándares para GPT-5.5, Claude y Gemini globalmente — independientemente de dónde estén ubicados los usuarios.' } },
+          { '@type': 'Question', 'name': '¿Qué es el Efecto Bruselas en la IA?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'El Efecto Bruselas describe cómo las regulaciones de la UE se convierten en estándares globales de facto porque las empresas multinacionales encuentran más fácil aplicar el estándar más estricto en todo el mundo en lugar de mantener pilas de cumplimiento separadas por jurisdicción. Para la IA, esto significa que el EU AI Act efectivamente eleva los estándares para GPT-5.6, Claude y Gemini globalmente — independientemente de dónde estén ubicados los usuarios.' } },
           { '@type': 'Question', 'name': '¿Pueden las organizaciones de la UE usar DeepSeek para aplicaciones comerciales?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Técnicamente sí, con Cláusulas Contractuales Estándar (SCC) conformes con el RGPD. En la práctica, las SCC son difíciles de hacer cumplir frente a las obligaciones de la ley china que requieren el cumplimiento del acceso a datos del CAC. Alemania (BSI), Francia (ANSSI) y los Países Bajos (NCSC) han emitido avisos que restringen las herramientas de IA chinas para el gobierno y las infraestructuras críticas. Las organizaciones del sector privado deben realizar una Evaluación de Impacto de Transferencia bajo el Artículo 46 del RGPD antes de procesar datos personales a través de DeepSeek.' } },
           { '@type': 'Question', 'name': '¿Qué marcos de gobernanza de IA existen en América Latina?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'América Latina no tiene equivalente al EU AI Act. Colombia lidera con el Conpes 3975 (2019), una política nacional de IA con directrices voluntarias sobre gobernanza responsable. Brasil avanza en una legislación de IA específica. Chile, México y Argentina han publicado estrategias nacionales de IA. La mayoría de los marcos latinoamericanos se alinean con los principios de IA de la OCDE y son voluntarios, sin sanciones vinculantes equivalentes a las del EU AI Act.' } },
         ],
@@ -1579,7 +1579,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'El Efecto Bruselas: las reglas del EU AI Act se aplican a cualquier IA que llegue a usuarios de la UE, en todo el mundo.',
             'EE.UU. no tiene ley federal de IA — los reguladores sectoriales aplican mandatos existentes a la IA en sus dominios.',
             'EE.UU. revocó su orden ejecutiva de seguridad en IA en enero de 2025 — la competitividad lidera ahora sobre la seguridad.',
-            'DeepSeek R1 de China superó a GPT-5.5 en benchmarks clave (AIME, MATH, HumanEval) a un costo de entrenamiento de $6M — una reducción del 94% — demostrando que los controles de exportación de GPU tienen límites.',
+            'DeepSeek R1 de China superó a GPT-5.6 en benchmarks clave (AIME, MATH, HumanEval) a un costo de entrenamiento de $6M — una reducción del 94% — demostrando que los controles de exportación de GPU tienen límites.',
             'TSMC en Taiwán fabrica los chips que impulsan toda la IA de frontera — una única dependencia geopolítica.',
             'Las organizaciones deben cumplir simultáneamente tres marcos regulatorios incompatibles: UE, EE.UU. y China.',
           ],
@@ -1592,7 +1592,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Política de IA de EE.UU.:** Sin ley federal de IA. La administración Trump persigue la preemption de leyes estatales mediante la EO 14365 (diciembre de 2025) y el Marco Nacional (marzo de 2026). La FTC emitió su declaración de política sobre precisión de la IA y preemption estatal, exigida por la orden ejecutiva, el 7 de julio de 2026 — cuatro meses después de su plazo del 11 de marzo — y cerró el período de comentarios públicos el 31 de julio de 2026. Ni la TRUMP AMERICA AI Act ni la contrapropuesta demócrata GUARDRAILS Act han sido aprobadas por el Congreso; ambas siguen siendo borradores de discusión.',
             '**Gobernanza de IA en China:** Evaluación previa al lanzamiento del CAC (Administración del Ciberespacio de China) obligatoria. Los filtros de contenido bloquean la crítica al PCCh, las discusiones sobre Taiwán/Tíbet/Xinjiang y el contenido que socava los "valores socialistas fundamentales". Los filtros devuelven HTTP 200 con flag `is_safe: 0` (no errores 4xx). La PIPL exige residencia de datos para datos personales chinos.',
             '**Cuellos de botella de hardware:** Nvidia controla ~80% del mercado de GPU para entrenamiento de IA. TSMC fabrica ~90% de los semiconductores avanzados. Ambos son puntos de conflicto geopolítico. La CHIPS Act de EE.UU. ($52B) tiene como objetivo reducir la dependencia de TSMC.',
-            '**Impacto de DeepSeek R1:** Superó a GPT-5.5 en razonamiento/codificación (AIME 2024, MATH, HumanEval) a un costo de entrenamiento estimado de ~$6M (reducción del 94% frente a las estimaciones de modelos de frontera). Entrenado en GPU Nvidia H800 restringidas para China. Demuestra que los controles de exportación de hardware tienen límites.',
+            '**Impacto de DeepSeek R1:** Superó a GPT-5.6 en razonamiento/codificación (AIME 2024, MATH, HumanEval) a un costo de entrenamiento estimado de ~$6M (reducción del 94% frente a las estimaciones de modelos de frontera). Entrenado en GPU Nvidia H800 restringidas para China. Demuestra que los controles de exportación de hardware tienen límites.',
             '**Conflicto regulatorio global:** La UE se centra en derechos y seguridad; EE.UU. se centra en innovación y competitividad; China se centra en control estatal y ventaja estratégica. Las organizaciones que despliegan IA globalmente deben navegar tres marcos incompatibles simultáneamente.',
           ],
         },
@@ -1601,7 +1601,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Si eres una organización con sede en la UE: Plazos de cumplimiento críticos',
           content: [
             '**El EU AI Act es vinculante, y sus reglas de transparencia y GPAI se aplican desde agosto de 2026.** Si tu organización tiene sede en la UE o atiende a usuarios de la UE, debes cumplir con su sistema de clasificación de riesgo de cuatro niveles. El Ómnibus Digital (en vigor desde el 27 de julio de 2026) aplazó el cumplimiento de la IA de alto riesgo independiente (Anexo III) al 2 de diciembre de 2027, pero los requisitos de divulgación para chatbots y contenido generado por IA siguieron aplicándose desde la fecha original de agosto de 2026. Las multas por prácticas prohibidas alcanzan €35 millones o el 7% de la facturación global — lo que sea mayor. El incumplimiento no es negociable.',
-            '**Si despliegas GPT-5.5, Claude Opus 4.8 o Gemini 3.1 Pro en la UE, debes auditar su documentación de cumplimiento de IA de Propósito General (GPAI).** OpenAI, Anthropic y Google publicaron documentación de transparencia (resúmenes de datos de entrenamiento, limitaciones de capacidades, pruebas de seguridad) a partir de agosto de 2025. Guarda estas certificaciones como prueba de cumplimiento — los reguladores las pedirán.',
+            '**Si despliegas GPT-5.6, Claude Opus 5 o Gemini 3.1 Pro en la UE, debes auditar su documentación de cumplimiento de IA de Propósito General (GPAI).** OpenAI, Anthropic y Google publicaron documentación de transparencia (resúmenes de datos de entrenamiento, limitaciones de capacidades, pruebas de seguridad) a partir de agosto de 2025. Guarda estas certificaciones como prueba de cumplimiento — los reguladores las pedirán.',
             '**Los sistemas de IA de alto riesgo (contratación, decisiones de crédito, atención sanitaria, aplicación de la ley) requieren evaluaciones de conformidad antes del despliegue.** Esto significa pruebas de sesgo, documentación de mecanismos de supervisión humana y trazas de auditoría de todas las decisiones de IA. Los modelos de pesos abiertos desplegados localmente (LLaMA vía Ollama, Mistral Large) satisfacen los requisitos de residencia de datos — ningún dato sale de tu infraestructura y tú controlas la traza de auditoría.',
             '**El Efecto Bruselas se aplica a ti.** Si tu sistema de IA llega a un único residente de la UE, el EU AI Act se aplica — aunque tu empresa tenga sede en EE.UU. o China. Esto significa que aplicar el mismo nivel de cumplimiento globalmente suele ser más sencillo que mantener múltiples configuraciones.',
           ],
@@ -1613,9 +1613,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             'Las APIs de IA chinas (DeepSeek, ERNIE 4.0, Qwen vía Alibaba Cloud) filtran contenido a nivel de API — los temas políticos, las críticas al PCCh y los temas de Taiwán/Tíbet/Xinjiang devuelven `is_safe: 0` en respuestas HTTP 200, no HTTP 4xx. Manéjalos explícitamente en el código de tu aplicación.',
             'Los modelos Mistral y los despliegues locales de Ollama satisfacen los requisitos de residencia de datos del EU AI Act — los prompts y salidas nunca salen de tu infraestructura. Esta es la ruta de menor fricción hacia el cumplimiento de RGPD + EU AI Act para prompt engineers.',
-            'GPT-5.5 y Claude Opus 4.8 son conformes con GPAI bajo el EU AI Act a partir de agosto de 2025. Puedes usarlos en despliegues orientados a la UE sin trabajo de cumplimiento adicional a nivel de modelo — tu obligación está a nivel de aplicación (desplegador), no a nivel de modelo.',
+            'GPT-5.6 y Claude Opus 5 son conformes con GPAI bajo el EU AI Act a partir de agosto de 2025. Puedes usarlos en despliegues orientados a la UE sin trabajo de cumplimiento adicional a nivel de modelo — tu obligación está a nivel de aplicación (desplegador), no a nivel de modelo.',
             'El Efecto Bruselas significa que los prompts enviados a modelos alojados en EE.UU. para productos utilizados por residentes de la UE están sujetos a los requisitos del EU AI Act — aunque tu empresa no tenga sede en la UE.',
-            'Para pruebas multijurisdiccionales, despacha el mismo prompt a Mistral (conforme con la UE), GPT-5.5 (EE.UU./GPAI) y Qwen (accesible en China) simultáneamente para comparar salidas en diferentes contextos regulatorios. PromptQuorum lo soporta de forma nativa.',
+            'Para pruebas multijurisdiccionales, despacha el mismo prompt a Mistral (conforme con la UE), GPT-5.6 (EE.UU./GPAI) y Qwen (accesible en China) simultáneamente para comparar salidas en diferentes contextos regulatorios. PromptQuorum lo soporta de forma nativa.',
           ],
         },
 
@@ -1628,7 +1628,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             {
               type: 'pro-tip',
               label: 'Consejo profesional: Escribe prompts en el idioma objetivo',
-              text: 'GPT-5.5, Claude Opus 4.8 y Gemini 3.1 Pro tienen un rendimiento significativamente mejor en tareas en alemán, francés, japonés y chino cuando el propio prompt está en ese idioma. Los prompts en inglés para salida en otro idioma añaden una capa de traducción que degrada la calidad. Si estás optimizando el rendimiento del modelo para un país específico, escribe tus prompts en el idioma de ese país desde el principio.',
+              text: 'GPT-5.6, Claude Opus 5 y Gemini 3.1 Pro tienen un rendimiento significativamente mejor en tareas en alemán, francés, japonés y chino cuando el propio prompt está en ese idioma. Los prompts en inglés para salida en otro idioma añaden una capa de traducción que degrada la calidad. Si estás optimizando el rendimiento del modelo para un país específico, escribe tus prompts en el idioma de ese país desde el principio.',
             },
           ],
           tableFormat: true,
@@ -1637,14 +1637,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
             {
               'Región': 'Unión Europea',
               'Restricción legal en prompts': 'EU AI Act: los prompts que generan contenido que interactúa con consumidores de la UE deben incluir divulgación de IA. RGPD: los prompts no deben incluir datos personales sin base legal. Las aplicaciones de IA de alto riesgo (RRHH, crédito, salud) requieren supervisión humana — los prompts no deben automatizar decisiones finales.',
-              'Optimización de idioma': 'Escribe prompts en el idioma objetivo (alemán, francés, etc.) — GPT-5.5 y Claude Opus 4.8 tienen un rendimiento significativamente mejor en tareas no inglesas cuando los prompts están en el mismo idioma que la salida deseada. Especifica el idioma de salida explícitamente en los system prompts.',
-              'Modelo recomendado': 'Mistral Large (francés, sede en la UE), despliegue local de Ollama (los datos nunca salen de la infraestructura), o GPT-5.5/Claude con endpoints de API de la región UE y SCC.',
+              'Optimización de idioma': 'Escribe prompts en el idioma objetivo (alemán, francés, etc.) — GPT-5.6 y Claude Opus 5 tienen un rendimiento significativamente mejor en tareas no inglesas cuando los prompts están en el mismo idioma que la salida deseada. Especifica el idioma de salida explícitamente en los system prompts.',
+              'Modelo recomendado': 'Mistral Large (francés, sede en la UE), despliegue local de Ollama (los datos nunca salen de la infraestructura), o GPT-5.6/Claude con endpoints de API de la región UE y SCC.',
             },
             {
               'Región': 'Estados Unidos',
               'Restricción legal en prompts': 'Sin ley federal de IA, pero aplican reglas sectoriales: HIPAA (salud — la PHI no debe aparecer en los prompts), CCPA/CPRA (California — los datos personales en prompts activan derechos del consumidor), Ley FTC (los prompts no deben generar contenido engañoso en contextos de consumo). Las leyes biométricas estatales (Illinois BIPA) restringen los prompts que procesan datos faciales/de voz.',
-              'Optimización de idioma': 'Los modelos de frontera de EE.UU. (GPT-5.5, Claude Opus 4.8) están optimizados para el inglés y tienen su mejor rendimiento en prompts en inglés. Para mercados de habla hispana en EE.UU., instruye explícitamente al modelo en español o usa un system prompt bilingüe — no confíes en la detección automática.',
-              'Modelo recomendado': 'GPT-5.5 o Claude Opus 4.8 para uso general. Para prompts regulados en salud o finanzas, usa la API con SCC y evita enviar PHI/PII en el contexto del prompt.',
+              'Optimización de idioma': 'Los modelos de frontera de EE.UU. (GPT-5.6, Claude Opus 5) están optimizados para el inglés y tienen su mejor rendimiento en prompts en inglés. Para mercados de habla hispana en EE.UU., instruye explícitamente al modelo en español o usa un system prompt bilingüe — no confíes en la detección automática.',
+              'Modelo recomendado': 'GPT-5.6 o Claude Opus 5 para uso general. Para prompts regulados en salud o finanzas, usa la API con SCC y evita enviar PHI/PII en el contexto del prompt.',
             },
             {
               'Región': 'China',
@@ -1655,14 +1655,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
             {
               'Región': 'Reino Unido / Post-Brexit',
               'Restricción legal en prompts': 'El RGPD del Reino Unido (equivalente al RGPD de la UE) aplica a los datos personales. El UK AI Safety Institute se centra en la evaluación de modelos de frontera, no en el cumplimiento a nivel de aplicación. Sin ley de divulgación de IA obligatoria — el Reino Unido eligió un enfoque pro-innovación liderado por el sector. OFCOM regula el contenido generado por IA en contextos de radiodifusión.',
-              'Optimización de idioma': 'Las ortografías y expresiones del inglés británico en los prompts mejoran la calidad de salida para contenido orientado al Reino Unido. GPT-5.5 responde a instrucciones explícitas de "inglés del Reino Unido" en los system prompts; sin ellas, utiliza el inglés americano por defecto.',
-              'Modelo recomendado': 'GPT-5.5 o Claude Opus 4.8. Las transferencias de datos del Reino Unido a la UE requieren SCC post-Brexit — la decisión de adecuación del Reino Unido por parte de la UE está vigente pero sujeta a revisión.',
+              'Optimización de idioma': 'Las ortografías y expresiones del inglés británico en los prompts mejoran la calidad de salida para contenido orientado al Reino Unido. GPT-5.6 responde a instrucciones explícitas de "inglés del Reino Unido" en los system prompts; sin ellas, utiliza el inglés americano por defecto.',
+              'Modelo recomendado': 'GPT-5.6 o Claude Opus 5. Las transferencias de datos del Reino Unido a la UE requieren SCC post-Brexit — la decisión de adecuación del Reino Unido por parte de la UE está vigente pero sujeta a revisión.',
             },
             {
               'Región': 'Japón',
               'Restricción legal en prompts': 'La Ley japonesa de Protección de Información Personal (APPI) restringe el uso de datos personales en prompts de IA. Japón no tiene una ley específica de IA (a partir de 2026) — la orientación del METI y el Ministerio de Asuntos Internos es voluntaria. Japón participó en el Proceso AI de Hiroshima — se alienta la adhesión a sus 11 principios para las empresas japonesas.',
-              'Optimización de idioma': 'Los prompts en japonés para tareas en japonés superan a los prompts en inglés en todos los modelos principales. GPT-5.5 y Claude Opus 4.8 manejan bien el japonés; Rakuten AI y NTT LLMs están disponibles para despliegues específicos de Japón. Evita el registro casual (tame-go) en los system prompts — el registro formal (keigo) mejora el cumplimiento y la calidad de salida para contextos empresariales japoneses.',
-              'Modelo recomendado': 'GPT-5.5 o Claude Opus 4.8 para tareas japonesas generales. Rakuten AI (Rakuten Group) o NTT LLMs para despliegues nacionales de Japón con sensibilidad al cumplimiento.',
+              'Optimización de idioma': 'Los prompts en japonés para tareas en japonés superan a los prompts en inglés en todos los modelos principales. GPT-5.6 y Claude Opus 5 manejan bien el japonés; Rakuten AI y NTT LLMs están disponibles para despliegues específicos de Japón. Evita el registro casual (tame-go) en los system prompts — el registro formal (keigo) mejora el cumplimiento y la calidad de salida para contextos empresariales japoneses.',
+              'Modelo recomendado': 'GPT-5.6 o Claude Opus 5 para tareas japonesas generales. Rakuten AI (Rakuten Group) o NTT LLMs para despliegues nacionales de Japón con sensibilidad al cumplimiento.',
             },
           ],
         },
@@ -1698,7 +1698,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         qaWhichCountriesDominate: {
           title: '¿Qué países dominan el desarrollo de la IA?',
           content: [
-            'EE.UU. domina la capacidad de modelos de frontera — OpenAI (GPT-5.5), Anthropic (Claude) y Google DeepMind (Gemini) tienen todas sede en EE.UU. China lidera en volumen de patentes de IA (~70% de las patentes globales en 2022 según la OMPI) y tiene los modelos domésticos más capaces fuera de EE.UU.: Alibaba Qwen 3, Baidu ERNIE 4.0 y DeepSeek R1. La UE lidera en regulación de IA pero va por detrás en capacidad de frontera — Mistral AI de Francia es el principal contendiente europeo.',
+            'EE.UU. domina la capacidad de modelos de frontera — OpenAI (GPT-5.6), Anthropic (Claude) y Google DeepMind (Gemini) tienen todas sede en EE.UU. China lidera en volumen de patentes de IA (~70% de las patentes globales en 2022 según la OMPI) y tiene los modelos domésticos más capaces fuera de EE.UU.: Alibaba Qwen 3, Baidu ERNIE 4.0 y DeepSeek R1. La UE lidera en regulación de IA pero va por detrás en capacidad de frontera — Mistral AI de Francia es el principal contendiente europeo.',
           ],
         },
 
@@ -1730,9 +1730,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**La regulación de IA** es el conjunto de leyes, órdenes ejecutivas y marcos voluntarios que rigen cómo se desarrollan, despliegan y gobiernan los sistemas de inteligencia artificial. La regulación de IA es producida por estados soberanos y organismos internacionales; los tres regímenes regulatorios principales son el EU AI Act (Unión Europea), el NIST AI Risk Management Framework (Estados Unidos) y las Medidas de IA Generativa del CAC (China).',
             '**La rivalidad tecnológica EE.UU.-China** es la competencia bilateral entre Estados Unidos y China por el liderazgo en semiconductores, inteligencia artificial y fabricación avanzada. La rivalidad se expresa a través de los controles de exportación de EE.UU. sobre las GPU de Nvidia, la estrategia de sustitución doméstica de China (Made in China 2025) y marcos de gobernanza de IA en competencia. La UE es un tercer actor — no una parte bilateral — que moldea la rivalidad a través de su poder regulatorio.',
             '**El EU AI Act** es un reglamento aprobado por el Parlamento Europeo en marzo de 2024. Es aplicado por la Oficina de IA de la UE y las autoridades nacionales de vigilancia del mercado. Se aplica a cualquier organización — independientemente de su ubicación — cuyos sistemas de IA afecten a usuarios de la UE. El EU AI Act está relacionado con el Efecto Bruselas: dado que se aplica extraterritorialmente, efectivamente regula a OpenAI, Google DeepMind y Anthropic globalmente.',
-            '**NVIDIA** es una empresa de semiconductores estadounidense que diseña GPU para entrenamiento de IA (series H100, H200, B200). El hardware de NVIDIA es el sustrato de cómputo principal para entrenar GPT-5.5, Claude, Gemini y la mayoría de los modelos de IA de frontera. Los controles de exportación de EE.UU. sobre las GPU de NVIDIA para China son un mecanismo central en la rivalidad tecnológica EE.UU.-China.',
+            '**NVIDIA** es una empresa de semiconductores estadounidense que diseña GPU para entrenamiento de IA (series H100, H200, B200). El hardware de NVIDIA es el sustrato de cómputo principal para entrenar GPT-5.6, Claude, Gemini y la mayoría de los modelos de IA de frontera. Los controles de exportación de EE.UU. sobre las GPU de NVIDIA para China son un mecanismo central en la rivalidad tecnológica EE.UU.-China.',
             '**TSMC** (Taiwan Semiconductor Manufacturing Company) es una fundición de chips taiwanesa que fabrica semiconductores avanzados para NVIDIA, Apple, AMD y Google. La ubicación geográfica de TSMC en Taiwán — y el estatus político disputado de la isla — hace que TSMC sea una variable crítica en la geopolítica de la IA.',
-            '**DeepSeek** es un laboratorio de IA chino que lanzó DeepSeek R1 en enero de 2025. DeepSeek R1 superó a GPT-5.5 en benchmarks de razonamiento y codificación (AIME 2024, MATH-500, HumanEval) mientras se entrenaba a un costo estimado de ~$6 millones — un 94% menos que las estimaciones de modelos de frontera — usando GPU NVIDIA H800 restringidas para China.',
+            '**DeepSeek** es un laboratorio de IA chino que lanzó DeepSeek R1 en enero de 2025. DeepSeek R1 superó a GPT-5.6 en benchmarks de razonamiento y codificación (AIME 2024, MATH-500, HumanEval) mientras se entrenaba a un costo estimado de ~$6 millones — un 94% menos que las estimaciones de modelos de frontera — usando GPU NVIDIA H800 restringidas para China.',
           ],
         },
 
@@ -1757,10 +1757,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'La carrera no se trata solo de quién construye los modelos más capaces. Se trata de qué marco regulatorio se convierte en el estándar global predeterminado. El EU AI Act, al aplicarse a cualquier sistema de IA desplegado para usuarios de la UE, ya ha hecho de Bruselas el regulador efectivo de OpenAI, Anthropic y Google DeepMind globalmente. Consulta [open source vs. LLM propietarios](/prompt-engineering/open-source-vs-proprietary-llms) para ver cómo estas dinámicas afectan la disponibilidad de modelos.',
           ],
           items: [
-            '**Posición de EE.UU.:** Lidera en capacidad de modelos de frontera (GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro), diseño de chips (Nvidia, AMD) e inversión en IA ($67B de inversión privada en 2023 según la OCDE). Sin ley federal unificada de IA — acelera el despliegue pero crea fragmentación de cumplimiento.',
+            '**Posición de EE.UU.:** Lidera en capacidad de modelos de frontera (GPT-5.6, Claude Opus 5, Gemini 3.1 Pro), diseño de chips (Nvidia, AMD) e inversión en IA ($67B de inversión privada en 2023 según la OCDE). Sin ley federal unificada de IA — acelera el despliegue pero crea fragmentación de cumplimiento.',
             '**Posición de China:** Lidera en volumen de patentes de IA, escala de reconocimiento facial y despliegue de infraestructura dirigido por el estado. Los modelos (Qwen 3, ERNIE 4.0, DeepSeek R1) son competitivos en muchos benchmarks. La dependencia del hardware en arquitecturas Nvidia es la principal vulnerabilidad estratégica que buscan los controles de exportación.',
             '**Posición de Europa:** Lidera en regulación de IA — el EU AI Act es el marco de referencia global — e investigación de pesos abiertos (Mistral de Francia). Va por detrás en capacidad de modelos de frontera e inversión privada. Compensa mediante apalancamiento regulatorio: el Efecto Bruselas obliga a los proveedores de EE.UU. y China a cumplir con los estándares de la UE para productos globales.',
-            '**La capa de hardware:** Las GPU Nvidia H100/H200 dominan el entrenamiento de IA. Los controles de exportación de EE.UU. restringen las ventas a China. DeepSeek R1 entrenado en GPU H800 restringidas a un costo reportado de ~$6M — una reducción del 94% frente a las estimaciones de entrenamiento de GPT-5.5 — demostrando que los controles de hardware no han detenido la IA de frontera china.',
+            '**La capa de hardware:** Las GPU Nvidia H100/H200 dominan el entrenamiento de IA. Los controles de exportación de EE.UU. restringen las ventas a China. DeepSeek R1 entrenado en GPU H800 restringidas a un costo reportado de ~$6M — una reducción del 94% frente a las estimaciones de entrenamiento de GPT-5.6 — demostrando que los controles de hardware no han detenido la IA de frontera china.',
           ],
           image: '/images/regional-ai-players-es.svg',
           imageCaption: 'EE.UU.: OpenAI, Anthropic, Google DeepMind (financiados por VC). UE: Mistral, Hugging Face (open-source, infra-financiados vs. EE.UU.). China: Baidu, Alibaba, Tencent (respaldados por el estado, supervisión del CAC).',
@@ -1777,7 +1777,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Alto riesgo:** IA en infraestructura crítica, educación, empleo, servicios esenciales (crédito, beneficios), aplicación de la ley, control fronterizo y administración de justicia. Requiere evaluaciones de conformidad, documentación de transparencia, supervisión humana y registro en la base de datos de la UE.',
             '**Riesgo limitado:** Chatbots y contenido generado por IA. Requiere divulgación — los usuarios deben saber que están interactuando con IA.',
             '**Riesgo mínimo:** Filtros de spam, IA en videojuegos, sistemas de recomendación sin impacto significativo. Sin obligaciones específicas más allá de la ley existente.',
-            '**IA de Propósito General (GPAI):** Modelos como GPT-5.5, Claude y Gemini deben publicar resúmenes de datos de entrenamiento, cumplir con la ley de derechos de autor de la UE e informar de incidentes graves. Los modelos con riesgo sistémico (entrenados con >10^25 FLOPS) enfrentan requisitos adicionales de pruebas adversariales. Las reglas GPAI se aplicaron en agosto de 2025.',
+            '**IA de Propósito General (GPAI):** Modelos como GPT-5.6, Claude y Gemini deben publicar resúmenes de datos de entrenamiento, cumplir con la ley de derechos de autor de la UE e informar de incidentes graves. Los modelos con riesgo sistémico (entrenados con >10^25 FLOPS) enfrentan requisitos adicionales de pruebas adversariales. Las reglas GPAI se aplicaron en agosto de 2025.',
             '**Aplicación:** La Oficina de IA de la UE (dentro de la Comisión Europea) supervisa los modelos GPAI. Las autoridades nacionales de vigilancia del mercado aplican las reglas de IA de alto riesgo. Multas: hasta €35M o el 7% de la facturación global por prácticas prohibidas; €15M o el 3% por infracciones de alto riesgo.',
             '**Cronograma:** Prácticas prohibidas: agosto de 2024. Obligaciones GPAI: agosto de 2025. Deberes de transparencia del Artículo 50 (divulgación de chatbots/deepfakes): agosto de 2026, no afectados por el Ómnibus Digital. Sistemas de IA de alto riesgo independientes (Anexo III): aplazados de agosto de 2026 al 2 de diciembre de 2027 por el Ómnibus Digital. IA de alto riesgo integrada en productos regulados (Anexo I): aplazada de agosto de 2027 al 2 de agosto de 2028.',
           ],
@@ -1821,7 +1821,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Francia y Mistral: Construyendo la independencia europea en IA',
           content: [
             '**Francia está construyendo un contrapeso estratégico a la dominancia de IA de EE.UU. a través de la inversión pública y Mistral AI — posicionando los modelos de pesos abiertos como el camino de Europa hacia la soberanía de IA.**',
-            '**Mistral AI (fundada en 2023):** Fundada por Arthur Mensch, Guillaume Blanc y Tim Caron — todos ex empleados de Meta. Mistral lanzó Mistral Small (pesos abiertos) en septiembre de 2023, seguido de Mistral Large 2 (competitivo con GPT-5.5 en muchas tareas). Mistral Large 2 puntúa 81.2% en MMLU vs. el 88.7% de GPT-5.5. Ventana de contexto de 123K tokens.',
+            '**Mistral AI (fundada en 2023):** Fundada por Arthur Mensch, Guillaume Blanc y Tim Caron — todos ex empleados de Meta. Mistral lanzó Mistral Small (pesos abiertos) en septiembre de 2023, seguido de Mistral Large 2 (competitivo con GPT-5.6 en muchas tareas). Mistral Large 2 puntúa 81.2% en MMLU vs. el 88.7% de GPT-5.6. Ventana de contexto de 123K tokens.',
             '**Por qué Francia eligió pesos abiertos:** La posición de Francia es que las APIs propietarias crean dependencia de proveedor, riesgos de residencia de datos y dependencia a largo plazo de empresas de EE.UU. Los modelos de pesos abiertos pueden desplegarse en infraestructura europea, manteniendo los datos dentro de las jurisdicciones de la UE.',
             '**Apoyo gubernamental:** Respaldo del gobierno francés a través de La Caisse des Dépôts et Placements (fondo de inversión estatal). Mistral recibió €385 millones en financiación de la Serie B (febrero de 2024) con apoyo de inversores estratégicos franceses.',
           ],
@@ -1872,7 +1872,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         chinaModelsAccessibility: {
           title: 'China para prompt engineers: qué modelos están disponibles',
           content: [
-            '**Los modelos extranjeros (GPT-5.5, Claude, Gemini) son inaccesibles desde China continental sin una VPN.** Para despliegues en China, los desarrolladores deben usar modelos nacionales a través de plataformas aprobadas por el CAC.',
+            '**Los modelos extranjeros (GPT-5.6, Claude, Gemini) son inaccesibles desde China continental sin una VPN.** Para despliegues en China, los desarrolladores deben usar modelos nacionales a través de plataformas aprobadas por el CAC.',
           ],
           items: [
             'Alibaba Qwen 3 (pesos abiertos, 7B–72B, ventana de contexto de 128K): el modelo de código abierto más fuerte de China. Licencia Apache 2.0. Desplegable auto-alojado fuera de China sin filtros del CAC.',
@@ -1932,7 +1932,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           items: [
             '**Incertidumbre regulatoria:** El EU AI Act tiene plazos de cumplimiento escalonados — el Ómnibus Digital (en vigor desde el 27 de julio de 2026) confirmó el aplazamiento de la IA de alto riesgo independiente de agosto de 2026 a diciembre de 2027, pero los deberes de divulgación del Artículo 50 ya se aplican desde agosto de 2026. La política de IA de EE.UU. varía entre administraciones. Las regulaciones del CAC en China se aplican retroactivamente a los servicios existentes. Planifica para cumplir con el estándar más estricto (EU AI Act) como línea de base global.',
-            '**Restricciones de disponibilidad de modelos:** Los modelos de EE.UU. (GPT-5.5, Claude) son inaccesibles en China continental. Los modelos chinos (ERNIE 4.0, Qwen vía Alibaba Cloud) tienen filtros de contenido del CAC integrados. Las organizaciones que operan en ambos mercados necesitan dos pilas de modelos.',
+            '**Restricciones de disponibilidad de modelos:** Los modelos de EE.UU. (GPT-5.6, Claude) son inaccesibles en China continental. Los modelos chinos (ERNIE 4.0, Qwen vía Alibaba Cloud) tienen filtros de contenido del CAC integrados. Las organizaciones que operan en ambos mercados necesitan dos pilas de modelos.',
             '**Fragmentación de residencia de datos:** El RGPD de la UE, la PIPL de China y las regulaciones sectoriales de EE.UU. requieren que los datos permanezcan en jurisdicciones específicas. Los despliegues globales necesitan arquitecturas de inferencia regional para enrutar los datos de los usuarios a través del procesamiento local.',
             '**Disrupciones de la cadena de suministro de hardware:** La concentración de TSMC en Taiwán y la cuota de mercado de Nvidia del 80% en GPU crean vulnerabilidades de cadena de suministro. Cualquier escalada geopolítica en el Estrecho de Taiwán afectaría la capacidad de entrenamiento de IA a nivel mundial. Las restricciones de GPU de EE.UU. a China demuestran que el acceso al hardware puede ser revocado políticamente.',
           ],
@@ -1942,7 +1942,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Definiciones clave',
           items: [
             '**EU AI Act:** Primera ley de IA legalmente vinculante del mundo, aprobada por el Parlamento Europeo en 2024. Clasifica los sistemas de IA por riesgo y se aplica a cualquier organización que sirva a usuarios de la UE.',
-            '**GPAI (Propósito General de IA):** Modelos de IA que pueden realizar una amplia gama de tareas (GPT-5.5, Claude, Gemini). Bajo el EU AI Act, los modelos GPAI deben publicar documentación de transparencia y cumplir con la ley de derechos de autor de la UE.',
+            '**GPAI (Propósito General de IA):** Modelos de IA que pueden realizar una amplia gama de tareas (GPT-5.6, Claude, Gemini). Bajo el EU AI Act, los modelos GPAI deben publicar documentación de transparencia y cumplir con la ley de derechos de autor de la UE.',
             '**Efecto Bruselas:** La tendencia de las regulaciones de la UE a convertirse en estándares globales de facto porque las empresas multinacionales aplican el estándar más estricto en todo el mundo en lugar de mantener pilas de cumplimiento separadas.',
             '**CAC (Administración del Ciberespacio de China):** El regulador chino que supervisa los servicios de IA generativa. Requiere evaluaciones de seguridad previas al lanzamiento y aplica filtros de contenido.',
             '**PIPL (Ley de Protección de Información Personal de China):** Equivalente chino del RGPD. Requiere que los datos personales de los usuarios chinos permanezcan en China o pasen por una evaluación de seguridad gubernamental antes de la transferencia transfronteriza.',
@@ -1961,7 +1961,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
               fix: 'Audita todos los despliegues de IA para determinar si sirven a algún usuario de la UE. Si es así, aplica los requisitos del EU AI Act a esos despliegues independientemente de la ubicación de la empresa.',
             },
             {
-              mistake: 'Usar modelos de EE.UU. (GPT-5.5, Claude) para usuarios de China continental sin una arquitectura alternativa',
+              mistake: 'Usar modelos de EE.UU. (GPT-5.6, Claude) para usuarios de China continental sin una arquitectura alternativa',
               problem: 'Los modelos de EE.UU. son inaccesibles en China continental sin una VPN, que es ilegal para uso comercial. Los servicios basados en estos modelos fallarán para usuarios de China continental.',
               fix: 'Despliega una arquitectura de dos pilas: modelos de EE.UU. para usuarios internacionales, Qwen 3 o ERNIE 4.0 vía Alibaba Cloud para usuarios de China. Enruta las solicitudes según la detección de ubicación del usuario.',
             },
@@ -2001,7 +2001,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         qaWhoIsWinning: {
           title: '¿Quién está ganando la carrera global de la IA?',
           content: [
-            'EE.UU. lidera en capacidad de modelos de frontera — GPT-5.5 (OpenAI), Claude (Anthropic) y Gemini (Google DeepMind) — y en inversión privada en IA ($67 mil millones en 2023 según datos de la OCDE). China lidera en presentación de patentes de IA, escala de despliegue dirigido por el estado y desarrollo de modelos domésticos; DeepSeek R1 igualó a GPT-5.5 en benchmarks clave en enero de 2025. La Unión Europea lidera en regulación de IA — el EU AI Act es el marco de referencia global — pero queda atrás en capacidad de modelos de frontera e inversión privada relativa a su tamaño económico. Ningún actor lidera en las tres dimensiones simultáneamente.',
+            'EE.UU. lidera en capacidad de modelos de frontera — GPT-5.6 (OpenAI), Claude (Anthropic) y Gemini (Google DeepMind) — y en inversión privada en IA ($67 mil millones en 2023 según datos de la OCDE). China lidera en presentación de patentes de IA, escala de despliegue dirigido por el estado y desarrollo de modelos domésticos; DeepSeek R1 igualó a GPT-5.6 en benchmarks clave en enero de 2025. La Unión Europea lidera en regulación de IA — el EU AI Act es el marco de referencia global — pero queda atrás en capacidad de modelos de frontera e inversión privada relativa a su tamaño económico. Ningún actor lidera en las tres dimensiones simultáneamente.',
           ],
         },
 
@@ -2015,21 +2015,21 @@ export const article: Partial<Record<Language, PEArticle>> = {
         qaHowChinaRegulates: {
           title: '¿Cómo regula China la Inteligencia Artificial?',
           content: [
-            'China regula la IA a través de la Administración del Ciberespacio de China (CAC). El Reglamento de Recomendaciones de Algoritmos (2022) exige el etiquetado del contenido curado algorítmicamente. Las Medidas de IA Generativa (2023) requieren una evaluación de seguridad del CAC — un proceso de 45–90 días — antes de que cualquier servicio de IA generativa orientado al consumidor pueda lanzarse en China, y exigen que los outputs de IA se alineen con los "valores socialistas fundamentales". Los modelos de IA extranjeros (GPT-5.5, Claude, Gemini) son inaccesibles desde China continental sin herramientas de evasión. Las alternativas domésticas incluyen Alibaba Qwen, Baidu ERNIE 4.0, ByteDance Doubao y DeepSeek.',
+            'China regula la IA a través de la Administración del Ciberespacio de China (CAC). El Reglamento de Recomendaciones de Algoritmos (2022) exige el etiquetado del contenido curado algorítmicamente. Las Medidas de IA Generativa (2023) requieren una evaluación de seguridad del CAC — un proceso de 45–90 días — antes de que cualquier servicio de IA generativa orientado al consumidor pueda lanzarse en China, y exigen que los outputs de IA se alineen con los "valores socialistas fundamentales". Los modelos de IA extranjeros (GPT-5.6, Claude, Gemini) son inaccesibles desde China continental sin herramientas de evasión. Las alternativas domésticas incluyen Alibaba Qwen, Baidu ERNIE 4.0, ByteDance Doubao y DeepSeek.',
           ],
         },
 
         qaWhatEUAIActRequires: {
           title: '¿Qué exige el EU AI Act a las organizaciones?',
           content: [
-            'El EU AI Act clasifica los sistemas de IA en cuatro niveles de riesgo con obligaciones escalonadas. Las prácticas prohibidas — puntuación social por parte de autoridades públicas, vigilancia biométrica en tiempo real en espacios públicos — están prohibidas desde agosto de 2024. Los sistemas de IA de alto riesgo independientes usados en empleo, evaluación crediticia, atención médica o aplicación de la ley requieren evaluaciones de conformidad, documentación de supervisión humana y registro en la base de datos de IA de la UE antes del 2 de diciembre de 2027 (aplazado desde la fecha original de agosto de 2026 por el Ómnibus Digital, en vigor desde el 27 de julio de 2026). Los modelos de IA de Propósito General (GPT-5.5, Claude, Gemini) deben publicar resúmenes de datos de entrenamiento y cumplir con la ley de derechos de autor de la UE — reglas que se aplican desde agosto de 2025. Los deberes de transparencia del Artículo 50 (divulgación de chatbots y contenido de IA) siguen aplicándose desde agosto de 2026 según lo previsto. Todas las organizaciones que atienden a usuarios de la UE deben cumplir independientemente de dónde estén radicadas.',
+            'El EU AI Act clasifica los sistemas de IA en cuatro niveles de riesgo con obligaciones escalonadas. Las prácticas prohibidas — puntuación social por parte de autoridades públicas, vigilancia biométrica en tiempo real en espacios públicos — están prohibidas desde agosto de 2024. Los sistemas de IA de alto riesgo independientes usados en empleo, evaluación crediticia, atención médica o aplicación de la ley requieren evaluaciones de conformidad, documentación de supervisión humana y registro en la base de datos de IA de la UE antes del 2 de diciembre de 2027 (aplazado desde la fecha original de agosto de 2026 por el Ómnibus Digital, en vigor desde el 27 de julio de 2026). Los modelos de IA de Propósito General (GPT-5.6, Claude, Gemini) deben publicar resúmenes de datos de entrenamiento y cumplir con la ley de derechos de autor de la UE — reglas que se aplican desde agosto de 2025. Los deberes de transparencia del Artículo 50 (divulgación de chatbots y contenido de IA) siguen aplicándose desde agosto de 2026 según lo previsto. Todas las organizaciones que atienden a usuarios de la UE deben cumplir independientemente de dónde estén radicadas.',
           ],
         },
 
         qaExportControls: {
           title: '¿Cómo afectan los controles de exportación de EE.UU. al desarrollo de la IA?',
           content: [
-            'Los controles de exportación de EE.UU. restringen la venta de GPU avanzadas de Nvidia — incluyendo la A100 y la H100 — a China, con el objetivo de limitar la capacidad de China para entrenar modelos de IA de frontera. El lanzamiento de DeepSeek R1 en enero de 2025 demostró los límites de este enfoque: entrenado con GPU H800 restringidas para China a una fracción del costo reportado de modelos estadounidenses comparables, igualó a GPT-5.5 en AIME 2024, MATH-500 y benchmarks de HumanEval. Los controles de exportación ralentizan pero no han detenido el desarrollo de IA de frontera en China.',
+            'Los controles de exportación de EE.UU. restringen la venta de GPU avanzadas de Nvidia — incluyendo la A100 y la H100 — a China, con el objetivo de limitar la capacidad de China para entrenar modelos de IA de frontera. El lanzamiento de DeepSeek R1 en enero de 2025 demostró los límites de este enfoque: entrenado con GPU H800 restringidas para China a una fracción del costo reportado de modelos estadounidenses comparables, igualó a GPT-5.6 en AIME 2024, MATH-500 y benchmarks de HumanEval. Los controles de exportación ralentizan pero no han detenido el desarrollo de IA de frontera en China.',
           ],
         },
 
@@ -2059,7 +2059,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         defGPAI: {
           title: 'Definición: IA de Propósito General (GPAI)',
-          content: 'Un sistema de IA entrenado en datos amplios con una arquitectura general (no especializada ni específica de dominio) que puede adaptarse para una amplia gama de tareas. GPT-5.5, Claude Opus 4.8 y Gemini 3.1 Pro son modelos GPAI. Según el EU AI Act, los modelos GPAI con más de 10²⁵ FLOP de cómputo de entrenamiento tienen obligaciones de transparencia que incluyen resúmenes de datos de entrenamiento, documentación de capacidades y cumplimiento de derechos de autor.',
+          content: 'Un sistema de IA entrenado en datos amplios con una arquitectura general (no especializada ni específica de dominio) que puede adaptarse para una amplia gama de tareas. GPT-5.6, Claude Opus 5 y Gemini 3.1 Pro son modelos GPAI. Según el EU AI Act, los modelos GPAI con más de 10²⁵ FLOP de cómputo de entrenamiento tienen obligaciones de transparencia que incluyen resúmenes de datos de entrenamiento, documentación de capacidades y cumplimiento de derechos de autor.',
         },
 
         defCAC: {
@@ -2200,7 +2200,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         name: 'كيفية نشر منتجات الذكاء الاصطناعي التوليدي في الصين: دليل للمطورين',
         description: 'دليل خطوة بخطوة للمطورين الذين ينشرون منتجات الذكاء الاصطناعي في الصين — اختيار النموذج، قيود المحتوى، تقييم أمان CAC، إقامة البيانات وفق PIPL، والجدول الزمني للدخول إلى السوق.',
         step: [
-          { '@type': 'HowToStep', position: 1, name: 'فهم نماذج الذكاء الاصطناعي المتاحة في الصين', text: 'النماذج الأجنبية (GPT-5.5، Claude، Gemini) غير متاحة من الصين القارية دون VPN. الخيارات المتاحة: Alibaba Qwen 3 (أوزان مفتوحة، 7B–72B، سياق 128K)، Baidu ERNIE 4.0 (واجهة Qianfan)، ByteDance Doubao (Volcano Engine)، Z.ai GLM-4، DeepSeek R1/V3. يُعد Qwen 3 72B أقوى خيار بأوزان مفتوحة للاستضافة الذاتية.' },
+          { '@type': 'HowToStep', position: 1, name: 'فهم نماذج الذكاء الاصطناعي المتاحة في الصين', text: 'النماذج الأجنبية (GPT-5.6، Claude، Gemini) غير متاحة من الصين القارية دون VPN. الخيارات المتاحة: Alibaba Qwen 3 (أوزان مفتوحة، 7B–72B، سياق 128K)، Baidu ERNIE 4.0 (واجهة Qianfan)، ByteDance Doubao (Volcano Engine)، Z.ai GLM-4، DeepSeek R1/V3. يُعد Qwen 3 72B أقوى خيار بأوزان مفتوحة للاستضافة الذاتية.' },
           { '@type': 'HowToStep', position: 2, name: 'التخطيط لقيود المحتوى على مستوى الواجهة البرمجية', text: 'تقوم خدمات الذكاء الاصطناعي التوليدي المسجّلة لدى CAC بتصفية المحتوى الذي ينتقد قيادة الحزب الشيوعي الصيني، ومناقشات استقلال تايوان/التبت/شينجيانغ، والأحداث التاريخية الحساسة سياسياً، والمحتوى الذي يقوّض "القيم الاشتراكية الأساسية". المرشحات مدمجة في الواجهة البرمجية. تُعيد أخطاء التصفية الرمز HTTP 200 مع is_safe: 0 — وليس HTTP 4xx — مما يتطلب معالجة صريحة على مستوى التطبيق.' },
           { '@type': 'HowToStep', position: 3, name: 'إكمال تقييم أمان CAC', text: 'مطلوب قبل إطلاق أي خدمة ذكاء اصطناعي توليدي موجّهة للمستهلكين في الصين. قدّم مصادر بيانات التدريب، وتوثيق تصفية المحتوى، وأمثلة على المخرجات. الجدول الزمني: 45–90 يوماً. يجب على الشركات الأجنبية الشراكة مع كيان في الصين القارية أو مزوّد سحابة مرخّص (Alibaba Cloud، Tencent Cloud) كمزوّد مسجّل.' },
           { '@type': 'HowToStep', position: 4, name: 'الامتثال لمتطلبات إقامة البيانات وفق PIPL', text: 'يتطلب قانون PIPL (2021) بقاء البيانات الشخصية للمستخدمين الصينيين داخل الصين أو اجتيازها تقييماً أمنياً حكومياً قبل النقل عبر الحدود. وجّه كل حركة بيانات المستخدمين الصينيين عبر استدلال مستضاف في الصين القارية (Alibaba Cloud، Tencent Cloud، Huawei Cloud).' },
@@ -2230,10 +2230,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Question', 'name': 'ما هي الغرامات المترتبة على انتهاك قانون الذكاء الاصطناعي الأوروبي؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'تبلغ الغرامات حتى 35 مليون يورو أو 7% من حجم الأعمال السنوي العالمي على الممارسات المحظورة (أيهما أكبر). تصل غرامات الذكاء الاصطناعي عالي المخاطر إلى 15 مليون يورو أو 3% من حجم الأعمال العالمي. تبلغ غرامة تقديم معلومات غير صحيحة للسلطات حتى 7.5 مليون يورو أو 1% من حجم الأعمال العالمي.' } },
           { '@type': 'Question', 'name': 'ما تطبيقات الذكاء الاصطناعي التي يحظرها الاتحاد الأوروبي بشكل مطلق؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'يحظر قانون الذكاء الاصطناعي الأوروبي: أنظمة التسجيل الاجتماعي من قِبل السلطات العامة، والمراقبة البيومترية في الوقت الفعلي في الأماكن العامة (مع استثناءات محدودة لجهات إنفاذ القانون)، والذكاء الاصطناعي الذي يستغل الثغرات المعرفية، وجمع صور الوجوه بشكل جماعي من الإنترنت لبناء قواعد بيانات التعرف. هذه مُصنَّفة ضمن المخاطر غير المقبولة.' } },
           { '@type': 'Question', 'name': 'كيف تختلف تنظيمات الذكاء الاصطناعي في الولايات المتحدة عن نهج الاتحاد الأوروبي؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'تعتمد الولايات المتحدة نهجاً قطاعياً طوعياً: يطبق المنظمون القائمون (FTC وFDA وCFPB وEEOC) صلاحياتهم على الذكاء الاصطناعي في نطاقاتهم. لا يوجد قانون فيدرالي للذكاء الاصطناعي مماثل لقانون الاتحاد الأوروبي. ألغى المرسوم التنفيذي لإدارة ترامب بشأن سلامة الذكاء الاصطناعي الصادر في يناير 2025 مرسوم بايدن السابق، واستُعيض عنه بخطة عمل مُركّزة على التنافسية.' } },
-          { '@type': 'Question', 'name': 'هل الذكاء الاصطناعي الصيني بمستوى الأنظمة الأمريكية؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'DeepSeek R1، الذي أُطلق في يناير 2025، تفوّق على GPT-5.5 في معايير الاستدلال والبرمجة (AIME 2024: 79.8% مقابل 74.4% لـGPT-5.5، وMATH-500: 97.3%، وHumanEval) بتكلفة تدريب مُقدَّرة بـ6 ملايين دولار — تخفيض بنسبة 94% مقارنة بتكاليف تدريب النماذج الحدودية. النماذج الصينية الرائدة تنافسية في كثير من المهام لكنها تتأخر في الاستدلال متعدد اللغات ومعايير السلامة.' } },
-          { '@type': 'Question', 'name': 'هل يمكن لمؤسسات الاتحاد الأوروبي استخدام GPT-5.5 وClaude في ظل قانون الذكاء الاصطناعي؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'نعم، في معظم حالات الاستخدام. يُصنَّف GPT-5.5 وClaude Opus 4.8 كنماذج ذكاء اصطناعي للأغراض العامة (GPAI) وعليهما التزامات الشفافية — تشمل نشر ملخصات بيانات التدريب والامتثال لقانون حقوق الملكية الفكرية في الاتحاد الأوروبي — المُطبَّقة منذ أغسطس 2025. نشرت OpenAI وAnthropic وثائق امتثال GPAI لمستخدمي الاتحاد الأوروبي.' } },
+          { '@type': 'Question', 'name': 'هل الذكاء الاصطناعي الصيني بمستوى الأنظمة الأمريكية؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'DeepSeek R1، الذي أُطلق في يناير 2025، تفوّق على GPT-5.6 في معايير الاستدلال والبرمجة (AIME 2024: 79.8% مقابل 74.4% لـGPT-5.6، وMATH-500: 97.3%، وHumanEval) بتكلفة تدريب مُقدَّرة بـ6 ملايين دولار — تخفيض بنسبة 94% مقارنة بتكاليف تدريب النماذج الحدودية. النماذج الصينية الرائدة تنافسية في كثير من المهام لكنها تتأخر في الاستدلال متعدد اللغات ومعايير السلامة.' } },
+          { '@type': 'Question', 'name': 'هل يمكن لمؤسسات الاتحاد الأوروبي استخدام GPT-5.6 وClaude في ظل قانون الذكاء الاصطناعي؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'نعم، في معظم حالات الاستخدام. يُصنَّف GPT-5.6 وClaude Opus 5 كنماذج ذكاء اصطناعي للأغراض العامة (GPAI) وعليهما التزامات الشفافية — تشمل نشر ملخصات بيانات التدريب والامتثال لقانون حقوق الملكية الفكرية في الاتحاد الأوروبي — المُطبَّقة منذ أغسطس 2025. نشرت OpenAI وAnthropic وثائق امتثال GPAI لمستخدمي الاتحاد الأوروبي.' } },
           { '@type': 'Question', 'name': 'كيف أثّر DeepSeek على السباق الجيوسياسي للذكاء الاصطناعي؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'أثبت إطلاق DeepSeek R1 في يناير 2025 أن قدرات الذكاء الاصطناعي الحدودي قابلة للتحقيق بتكاليف حوسبة أقل بكثير مما كان مفترضاً. هذا يُضعف الحجة القائلة بأن ضوابط التصدير على وحدات معالجة الرسوميات Nvidia ستُقيّد تطوير الذكاء الاصطناعي في الصين بشكل دائم، وأسرع النقاشات السياسية في الولايات المتحدة والاتحاد الأوروبي حول ما إذا كانت استراتيجيات الاحتواء القائمة على الحوسبة كافية.' } },
-          { '@type': 'Question', 'name': 'ما هو تأثير بروكسل في مجال الذكاء الاصطناعي؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'يصف تأثير بروكسل كيف تصبح لوائح الاتحاد الأوروبي معايير عالمية فعلية لأن الشركات متعددة الجنسيات تجد أنه من الأسهل تطبيق المعيار الأكثر صرامة على مستوى العالم بدلاً من الحفاظ على هياكل امتثال منفصلة لكل ولاية قضائية. في مجال الذكاء الاصطناعي، يعني هذا أن قانون الذكاء الاصطناعي الأوروبي يرفع فعلياً المعايير لنماذج GPT-5.5 وClaude وGemini عالمياً — بصرف النظر عن موقع المستخدمين.' } },
+          { '@type': 'Question', 'name': 'ما هو تأثير بروكسل في مجال الذكاء الاصطناعي؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'يصف تأثير بروكسل كيف تصبح لوائح الاتحاد الأوروبي معايير عالمية فعلية لأن الشركات متعددة الجنسيات تجد أنه من الأسهل تطبيق المعيار الأكثر صرامة على مستوى العالم بدلاً من الحفاظ على هياكل امتثال منفصلة لكل ولاية قضائية. في مجال الذكاء الاصطناعي، يعني هذا أن قانون الذكاء الاصطناعي الأوروبي يرفع فعلياً المعايير لنماذج GPT-5.6 وClaude وGemini عالمياً — بصرف النظر عن موقع المستخدمين.' } },
           { '@type': 'Question', 'name': 'هل يمكن للمؤسسات الأوروبية استخدام DeepSeek في التطبيقات التجارية؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'من الناحية التقنية نعم، مع البنود التعاقدية القياسية (SCC) المتوافقة مع اللائحة الأوروبية لحماية البيانات GDPR. من الناحية العملية، يصعب إنفاذ البنود التعاقدية القياسية في مواجهة التزامات القانون الصيني التي تُلزم بالامتثال لمتطلبات وصول CAC للبيانات. أصدرت ألمانيا (BSI) وفرنسا (ANSSI) وهولندا (NCSC) تحذيرات تُقيّد أدوات الذكاء الاصطناعي الصينية لصالح الحكومة والبنية التحتية الحيوية. يجب على مؤسسات القطاع الخاص إجراء تقييم أثر نقل البيانات بموجب المادة 46 من GDPR قبل معالجة بيانات شخصية عبر DeepSeek.' } },
           { '@type': 'Question', 'name': 'ما أطر حوكمة الذكاء الاصطناعي في أمريكا اللاتينية؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'لا يوجد في أمريكا اللاتينية ما يعادل قانون الذكاء الاصطناعي الأوروبي. تتصدّر كولومبيا المشهد بـConpes 3975 (2019)، وهي سياسة وطنية للذكاء الاصطناعي مع إرشادات طوعية للحوكمة المسؤولة. تُحرز البرازيل تقدماً في تشريع خاص بالذكاء الاصطناعي. نشرت كل من تشيلي والمكسيك والأرجنتين استراتيجيات وطنية للذكاء الاصطناعي. تتوافق معظم الأطر اللاتينية مع مبادئ الذكاء الاصطناعي للمنظمة الاقتصادية للتعاون والتنمية وهي طوعية بدون عقوبات ملزمة مماثلة لقانون الاتحاد الأوروبي.' } },
         ],
@@ -2252,7 +2252,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'تأثير بروكسل: تسري قواعد قانون الذكاء الاصطناعي الأوروبي على أي نظام ذكاء اصطناعي يصل إلى مستخدمي الاتحاد الأوروبي في أي مكان بالعالم.',
             'لا يوجد قانون فيدرالي أمريكي للذكاء الاصطناعي — تطبّق المنظمات القطاعية صلاحياتها القائمة على الذكاء الاصطناعي في نطاقاتها.',
             'ألغت الولايات المتحدة مرسومها التنفيذي بشأن سلامة الذكاء الاصطناعي في يناير 2025 — التنافسية تتصدر الآن على حساب السلامة.',
-            'تفوّق DeepSeek R1 الصيني على GPT-5.5 في معايير رئيسية (AIME وMATH وHumanEval) بتكلفة تدريب 6 ملايين دولار — تخفيض بنسبة 94% — مما يُثبت أن ضوابط تصدير وحدات معالجة الرسوميات لها حدود.',
+            'تفوّق DeepSeek R1 الصيني على GPT-5.6 في معايير رئيسية (AIME وMATH وHumanEval) بتكلفة تدريب 6 ملايين دولار — تخفيض بنسبة 94% — مما يُثبت أن ضوابط تصدير وحدات معالجة الرسوميات لها حدود.',
             'تُصنّع TSMC في تايوان الرقائق التي تُشغّل كل الذكاء الاصطناعي الحدودي — اعتماد جيوسياسي على مصدر واحد.',
             'يجب على المؤسسات الامتثال في آنٍ واحد لثلاثة أطر تنظيمية متعارضة: الاتحاد الأوروبي والولايات المتحدة والصين.',
           ],
@@ -2265,7 +2265,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**سياسة الذكاء الاصطناعي الأمريكية:** لا يوجد قانون فيدرالي للذكاء الاصطناعي. تسعى إدارة ترامب إلى إلغاء القوانين الولائية عبر المرسوم 14365 (ديسمبر 2025) والإطار الوطني (مارس 2026). أصدرت لجنة التجارة الفيدرالية (FTC) بيانها السياسي المُلزَم بموجب المرسوم بشأن دقة الذكاء الاصطناعي وإلغاء القوانين الولائية في 7 يوليو 2026 — بعد أربعة أشهر من موعده النهائي في 11 مارس — وأغلقت فترة التعليقات العامة في 31 يوليو 2026. لم يُقرّ الكونغرس بعد مشروع قانون TRUMP AMERICA AI Act ولا مشروع القانون المضاد GUARDRAILS Act الديمقراطي؛ كلاهما لا يزال مسودة نقاش.',
             '**حوكمة الذكاء الاصطناعي في الصين:** تقييم إلزامي قبل الإطلاق من قِبل CAC (إدارة الفضاء الإلكتروني الصيني). تحجب فلاتر المحتوى انتقاد الحزب الشيوعي الصيني والنقاشات حول تايوان/التبت/شينجيانغ والمحتوى الذي يُقوّض "القيم الاشتراكية الجوهرية". تُعيد الفلاتر HTTP 200 مع علامة `is_safe: 0` (لا أخطاء 4xx). يشترط PIPL إقامة البيانات للبيانات الشخصية الصينية.',
             '**اختناقات الأجهزة:** تسيطر Nvidia على ~80% من سوق وحدات معالجة الرسوميات لتدريب الذكاء الاصطناعي. تُصنّع TSMC ~90% من أشباه الموصلات المتقدمة. كلاهما نقطة احتكاك جيوسياسي. تستهدف قانون CHIPS الأمريكي (52 مليار دولار) تقليل الاعتماد على TSMC.',
-            '**تأثير DeepSeek R1:** تفوّق على GPT-5.5 في الاستدلال/البرمجة (AIME 2024 وMATH وHumanEval) بتكلفة تدريب مُقدَّرة بـ6 ملايين دولار (تخفيض 94% مقارنة بتقديرات النماذج الحدودية). دُرِّب على وحدات معالجة رسوميات Nvidia H800 المقيّدة للصين. يُثبت أن ضوابط تصدير الأجهزة لها حدود.',
+            '**تأثير DeepSeek R1:** تفوّق على GPT-5.6 في الاستدلال/البرمجة (AIME 2024 وMATH وHumanEval) بتكلفة تدريب مُقدَّرة بـ6 ملايين دولار (تخفيض 94% مقارنة بتقديرات النماذج الحدودية). دُرِّب على وحدات معالجة رسوميات Nvidia H800 المقيّدة للصين. يُثبت أن ضوابط تصدير الأجهزة لها حدود.',
             '**التعارض التنظيمي العالمي:** يُركّز الاتحاد الأوروبي على الحقوق والسلامة؛ تُركّز الولايات المتحدة على الابتكار والتنافسية؛ تُركّز الصين على السيطرة الحكومية والميزة الاستراتيجية. يجب على المؤسسات التي تنشر الذكاء الاصطناعي عالمياً التعامل مع ثلاثة أطر متعارضة في آنٍ واحد.',
           ],
         },
@@ -2274,7 +2274,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'إذا كانت مؤسستك مقرّها في الاتحاد الأوروبي: مواعيد الامتثال الحرجة',
           content: [
             '**قانون الذكاء الاصطناعي الأوروبي ملزم، وتُطبَّق قواعده الخاصة بالشفافية وبنماذج الذكاء الاصطناعي للأغراض العامة اعتباراً من أغسطس 2026.** إذا كانت مؤسستك مقرّها في الاتحاد الأوروبي أو تخدم مستخدميه، فعليك الامتثال لنظام تصنيف المخاطر الرباعي. أجّلت الحزمة الرقمية الشاملة (السارية منذ 27 يوليو 2026) امتثال الذكاء الاصطناعي عالي المخاطر المستقل إلى 2 ديسمبر 2027 — لكن متطلبات الإفصاح للروبوتات المحادثة والمحتوى المولَّد بالذكاء الاصطناعي استمرت في التطبيق اعتباراً من الموعد الأصلي في أغسطس 2026. تبلغ الغرامات على الممارسات المحظورة 35 مليون يورو أو 7% من حجم الأعمال العالمي — أيهما أكبر. الامتثال غير قابل للتفاوض.',
-            '**إذا كنت تنشر GPT-5.5 أو Claude Opus 4.8 أو Gemini 3.1 Pro في الاتحاد الأوروبي، فعليك مراجعة وثائق امتثال الذكاء الاصطناعي للأغراض العامة (GPAI).** نشرت OpenAI وAnthropic وGoogle وثائق الشفافية (ملخصات بيانات التدريب وقيود القدرات واختبارات السلامة) اعتباراً من أغسطس 2025. احتفظ بهذه الشهادات كدليل على الامتثال — ستطلبها الجهات التنظيمية.',
+            '**إذا كنت تنشر GPT-5.6 أو Claude Opus 5 أو Gemini 3.1 Pro في الاتحاد الأوروبي، فعليك مراجعة وثائق امتثال الذكاء الاصطناعي للأغراض العامة (GPAI).** نشرت OpenAI وAnthropic وGoogle وثائق الشفافية (ملخصات بيانات التدريب وقيود القدرات واختبارات السلامة) اعتباراً من أغسطس 2025. احتفظ بهذه الشهادات كدليل على الامتثال — ستطلبها الجهات التنظيمية.',
             '**تستلزم أنظمة الذكاء الاصطناعي عالية المخاطر (التوظيف وقرارات الائتمان والرعاية الصحية وإنفاذ القانون) إجراء تقييمات مطابقة قبل النشر.** هذا يعني اختبار التحيز وتوثيق آليات الإشراف البشري وسجلات تدقيق جميع قرارات الذكاء الاصطناعي. تُلبّي نماذج الأوزان المفتوحة المنشورة محلياً (LLaMA عبر Ollama وMistral Large) متطلبات إقامة البيانات — لا تغادر أي بيانات بنيتك التحتية وأنت تتحكم في سجل التدقيق.',
             '**تأثير بروكسل يسري عليك.** إذا وصل نظام الذكاء الاصطناعي الخاص بك إلى مقيم واحد في الاتحاد الأوروبي، يسري قانون الذكاء الاصطناعي الأوروبي — حتى لو كانت شركتك مقرّها في الولايات المتحدة أو الصين. هذا يعني أن تطبيق نفس مستوى الامتثال عالمياً يكون عادةً أبسط من الحفاظ على إعدادات متعددة.',
           ],
@@ -2286,9 +2286,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             'تُرشّح واجهات برمجة تطبيقات الذكاء الاصطناعي الصينية (DeepSeek وERNIE 4.0 وQwen عبر Alibaba Cloud) المحتوى على مستوى API — تُعيد الموضوعات السياسية ونقد الحزب الشيوعي ومواضيع تايوان/التبت/شينجيانغ قيمة `is_safe: 0` في استجابات HTTP 200، لا HTTP 4xx. تعامل معها صراحةً في كود تطبيقك.',
             'تُلبّي نماذج Mistral والنشر المحلي عبر Ollama متطلبات إقامة البيانات لقانون الذكاء الاصطناعي الأوروبي — الأوامر والمخرجات لا تغادر بنيتك التحتية أبداً. هذا هو المسار الأقل احتكاكاً نحو الامتثال المشترك لـGDPR وقانون الذكاء الاصطناعي الأوروبي لمهندسي الأوامر.',
-            'يتوافق GPT-5.5 وClaude Opus 4.8 مع معايير GPAI بموجب قانون الذكاء الاصطناعي الأوروبي اعتباراً من أغسطس 2025. يمكنك استخدامهما في نشر موجّه لمستخدمي الاتحاد الأوروبي دون عمل امتثال إضافي على مستوى النموذج — التزامك على مستوى التطبيق (النشر)، لا على مستوى النموذج.',
+            'يتوافق GPT-5.6 وClaude Opus 5 مع معايير GPAI بموجب قانون الذكاء الاصطناعي الأوروبي اعتباراً من أغسطس 2025. يمكنك استخدامهما في نشر موجّه لمستخدمي الاتحاد الأوروبي دون عمل امتثال إضافي على مستوى النموذج — التزامك على مستوى التطبيق (النشر)، لا على مستوى النموذج.',
             'يعني تأثير بروكسل أن الأوامر المُرسَلة إلى نماذج مستضافة في الولايات المتحدة لمنتجات يستخدمها مقيمو الاتحاد الأوروبي تخضع لمتطلبات قانون الذكاء الاصطناعي الأوروبي — حتى لو لم تكن شركتك مقرّها في الاتحاد الأوروبي.',
-            'لاختبار متعدد الولايات القضائية، أرسل نفس الأمر إلى Mistral (المتوافق مع الاتحاد الأوروبي) وGPT-5.5 (الولايات المتحدة/GPAI) وQwen (متاح في الصين) في آنٍ واحد لمقارنة المخرجات في سياقات تنظيمية مختلفة. تدعم PromptQuorum هذا بشكل أصلي.',
+            'لاختبار متعدد الولايات القضائية، أرسل نفس الأمر إلى Mistral (المتوافق مع الاتحاد الأوروبي) وGPT-5.6 (الولايات المتحدة/GPAI) وQwen (متاح في الصين) في آنٍ واحد لمقارنة المخرجات في سياقات تنظيمية مختلفة. تدعم PromptQuorum هذا بشكل أصلي.',
           ],
         },
 
@@ -2301,7 +2301,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             {
               type: 'pro-tip',
               label: 'نصيحة مهنية: اكتب الأوامر باللغة الهدف',
-              text: 'يؤدي GPT-5.5 وClaude Opus 4.8 وGemini 3.1 Pro أداءً أفضل بكثير في المهام بالألمانية والفرنسية واليابانية والصينية عندما يكون الأمر نفسه بتلك اللغة. الأوامر الإنجليزية للمخرجات بلغة أخرى تُضيف طبقة ترجمة تُفسد الجودة. إذا كنت تُحسّن أداء النموذج لدولة بعينها، اكتب أوامرك بلغة تلك الدولة من البداية.',
+              text: 'يؤدي GPT-5.6 وClaude Opus 5 وGemini 3.1 Pro أداءً أفضل بكثير في المهام بالألمانية والفرنسية واليابانية والصينية عندما يكون الأمر نفسه بتلك اللغة. الأوامر الإنجليزية للمخرجات بلغة أخرى تُضيف طبقة ترجمة تُفسد الجودة. إذا كنت تُحسّن أداء النموذج لدولة بعينها، اكتب أوامرك بلغة تلك الدولة من البداية.',
             },
           ],
           tableFormat: true,
@@ -2310,14 +2310,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
             {
               'المنطقة': 'الاتحاد الأوروبي',
               'القيود القانونية على الأوامر': 'قانون الذكاء الاصطناعي الأوروبي: يجب أن تتضمن الأوامر التي تُولّد محتوى يتفاعل مع مستهلكي الاتحاد الأوروبي إفصاحاً بوجود ذكاء اصطناعي. GDPR: يجب ألا تتضمن الأوامر بيانات شخصية دون أساس قانوني. تستلزم تطبيقات الذكاء الاصطناعي عالية المخاطر (الموارد البشرية والائتمان والصحة) إشراف بشرياً — يجب ألا تُؤتمت الأوامر القرارات النهائية.',
-              'تحسين اللغة': 'اكتب الأوامر باللغة الهدف (الألمانية والفرنسية وغيرها) — يؤدي GPT-5.5 وClaude Opus 4.8 أداءً أفضل بكثير في المهام غير الإنجليزية عندما تكون الأوامر بنفس لغة المخرجات المطلوبة. حدّد لغة المخرجات صراحةً في أوامر النظام.',
-              'النموذج الموصى به': 'Mistral Large (فرنسي، مقرّه في الاتحاد الأوروبي)، أو نشر Ollama محلياً (البيانات لا تغادر البنية التحتية)، أو GPT-5.5/Claude مع نقاط نهاية API في منطقة الاتحاد الأوروبي وبنود تعاقدية قياسية.',
+              'تحسين اللغة': 'اكتب الأوامر باللغة الهدف (الألمانية والفرنسية وغيرها) — يؤدي GPT-5.6 وClaude Opus 5 أداءً أفضل بكثير في المهام غير الإنجليزية عندما تكون الأوامر بنفس لغة المخرجات المطلوبة. حدّد لغة المخرجات صراحةً في أوامر النظام.',
+              'النموذج الموصى به': 'Mistral Large (فرنسي، مقرّه في الاتحاد الأوروبي)، أو نشر Ollama محلياً (البيانات لا تغادر البنية التحتية)، أو GPT-5.6/Claude مع نقاط نهاية API في منطقة الاتحاد الأوروبي وبنود تعاقدية قياسية.',
             },
             {
               'المنطقة': 'الولايات المتحدة',
               'القيود القانونية على الأوامر': 'لا يوجد قانون فيدرالي للذكاء الاصطناعي، لكن تسري قواعد قطاعية: HIPAA (الصحة — يُحظر وجود PHI في الأوامر)، CCPA/CPRA (كاليفورنيا — البيانات الشخصية في الأوامر تُفعّل حقوق المستهلك)، قانون FTC (يجب ألا تُولّد الأوامر محتوى مضلّلاً في السياقات الاستهلاكية). تُقيّد القوانين البيومترية الولائية (BIPA بإيلينوي) الأوامر التي تعالج بيانات الوجه/الصوت.',
-              'تحسين اللغة': 'نماذج الحدود الأمريكية (GPT-5.5 وClaude Opus 4.8) مُحسَّنة للإنجليزية وتؤدي أفضل أداء مع الأوامر الإنجليزية. للأسواق الناطقة بالعربية أو الإسبانية، وجّه النموذج صراحةً بالعربية أو الإسبانية أو استخدم أمر نظام ثنائي اللغة — لا تعتمد على الكشف التلقائي.',
-              'النموذج الموصى به': 'GPT-5.5 أو Claude Opus 4.8 للاستخدام العام. للأوامر المنظّمة في مجال الصحة أو المال، استخدم API مع بنود تعاقدية قياسية وتجنب إرسال PHI/PII في سياق الأمر.',
+              'تحسين اللغة': 'نماذج الحدود الأمريكية (GPT-5.6 وClaude Opus 5) مُحسَّنة للإنجليزية وتؤدي أفضل أداء مع الأوامر الإنجليزية. للأسواق الناطقة بالعربية أو الإسبانية، وجّه النموذج صراحةً بالعربية أو الإسبانية أو استخدم أمر نظام ثنائي اللغة — لا تعتمد على الكشف التلقائي.',
+              'النموذج الموصى به': 'GPT-5.6 أو Claude Opus 5 للاستخدام العام. للأوامر المنظّمة في مجال الصحة أو المال، استخدم API مع بنود تعاقدية قياسية وتجنب إرسال PHI/PII في سياق الأمر.',
             },
             {
               'المنطقة': 'الصين',
@@ -2328,14 +2328,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
             {
               'المنطقة': 'المملكة المتحدة / ما بعد Brexit',
               'القيود القانونية على الأوامر': 'يسري UK GDPR (مماثل لـGDPR الأوروبي) على البيانات الشخصية. يركّز معهد سلامة الذكاء الاصطناعي البريطاني على تقييم النماذج الحدودية لا الامتثال على مستوى التطبيق. لا يوجد قانون إلزامي للإفصاح عن الذكاء الاصطناعي — اختارت المملكة المتحدة نهجاً مُيسِّراً للابتكار يقوده القطاع. تنظّم OFCOM المحتوى الذي يُولّده الذكاء الاصطناعي في سياقات البث.',
-              'تحسين اللغة': 'التهجئة والتعبيرات البريطانية في الأوامر تُحسّن جودة المخرجات للمحتوى الموجّه للمملكة المتحدة. يستجيب GPT-5.5 لتعليمات "اللغة الإنجليزية البريطانية" الصريحة في أوامر النظام؛ بدونها يُعيد الإنجليزية الأمريكية افتراضياً.',
-              'النموذج الموصى به': 'GPT-5.5 أو Claude Opus 4.8. نقل بيانات المملكة المتحدة إلى الاتحاد الأوروبي يستلزم بنوداً تعاقدية قياسية بعد Brexit — قرار الكفاءة الصادر من الاتحاد الأوروبي بشأن المملكة المتحدة سارٍ لكنه قابل للمراجعة.',
+              'تحسين اللغة': 'التهجئة والتعبيرات البريطانية في الأوامر تُحسّن جودة المخرجات للمحتوى الموجّه للمملكة المتحدة. يستجيب GPT-5.6 لتعليمات "اللغة الإنجليزية البريطانية" الصريحة في أوامر النظام؛ بدونها يُعيد الإنجليزية الأمريكية افتراضياً.',
+              'النموذج الموصى به': 'GPT-5.6 أو Claude Opus 5. نقل بيانات المملكة المتحدة إلى الاتحاد الأوروبي يستلزم بنوداً تعاقدية قياسية بعد Brexit — قرار الكفاءة الصادر من الاتحاد الأوروبي بشأن المملكة المتحدة سارٍ لكنه قابل للمراجعة.',
             },
             {
               'المنطقة': 'اليابان',
               'القيود القانونية على الأوامر': 'يُقيّد قانون حماية المعلومات الشخصية الياباني (APPI) استخدام البيانات الشخصية في أوامر الذكاء الاصطناعي. لا يوجد قانون ياباني خاص بالذكاء الاصطناعي (حتى 2026) — إرشادات وزارة الاقتصاد والتجارة والصناعة ووزارة الشؤون الداخلية طوعية. شاركت اليابان في عملية AI هيروشيما — يُشجَّع الالتزام بمبادئها الإحدى عشرة للشركات اليابانية.',
-              'تحسين اللغة': 'الأوامر اليابانية للمهام اليابانية تتفوق على الأوامر الإنجليزية في جميع النماذج الرئيسية. يتعامل GPT-5.5 وClaude Opus 4.8 جيداً مع اليابانية؛ Rakuten AI وNTT LLMs متاحان لنشر خاص باليابان. تجنّب الأسلوب غير الرسمي (tame-go) في أوامر النظام — الأسلوب الرسمي (keigo) يُحسّن الامتثال وجودة المخرجات في السياقات التجارية اليابانية.',
-              'النموذج الموصى به': 'GPT-5.5 أو Claude Opus 4.8 للمهام اليابانية العامة. Rakuten AI (مجموعة Rakuten) أو NTT LLMs للنشر الوطني في اليابان مع حساسية الامتثال.',
+              'تحسين اللغة': 'الأوامر اليابانية للمهام اليابانية تتفوق على الأوامر الإنجليزية في جميع النماذج الرئيسية. يتعامل GPT-5.6 وClaude Opus 5 جيداً مع اليابانية؛ Rakuten AI وNTT LLMs متاحان لنشر خاص باليابان. تجنّب الأسلوب غير الرسمي (tame-go) في أوامر النظام — الأسلوب الرسمي (keigo) يُحسّن الامتثال وجودة المخرجات في السياقات التجارية اليابانية.',
+              'النموذج الموصى به': 'GPT-5.6 أو Claude Opus 5 للمهام اليابانية العامة. Rakuten AI (مجموعة Rakuten) أو NTT LLMs للنشر الوطني في اليابان مع حساسية الامتثال.',
             },
           ],
         },
@@ -2371,7 +2371,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         qaWhichCountriesDominate: {
           title: 'أي الدول تهيمن على تطوير الذكاء الاصطناعي؟',
           content: [
-            'تهيمن الولايات المتحدة على قدرة النماذج الحدودية — OpenAI (GPT-5.5) وAnthropic (Claude) وGoogle DeepMind (Gemini) جميعها مقرّها في الولايات المتحدة. تتصدر الصين في حجم براءات اختراع الذكاء الاصطناعي (~70% من البراءات العالمية في 2022 وفق WIPO) ولديها أكثر النماذج المحلية قدرةً خارج الولايات المتحدة: Alibaba Qwen 3 وBaidu ERNIE 4.0 وDeepSeek R1. يتصدر الاتحاد الأوروبي في تنظيم الذكاء الاصطناعي لكنه يتأخر في قدرة النماذج الحدودية — Mistral AI الفرنسية هي المنافس الأوروبي الرئيسي.',
+            'تهيمن الولايات المتحدة على قدرة النماذج الحدودية — OpenAI (GPT-5.6) وAnthropic (Claude) وGoogle DeepMind (Gemini) جميعها مقرّها في الولايات المتحدة. تتصدر الصين في حجم براءات اختراع الذكاء الاصطناعي (~70% من البراءات العالمية في 2022 وفق WIPO) ولديها أكثر النماذج المحلية قدرةً خارج الولايات المتحدة: Alibaba Qwen 3 وBaidu ERNIE 4.0 وDeepSeek R1. يتصدر الاتحاد الأوروبي في تنظيم الذكاء الاصطناعي لكنه يتأخر في قدرة النماذج الحدودية — Mistral AI الفرنسية هي المنافس الأوروبي الرئيسي.',
           ],
         },
 
@@ -2403,9 +2403,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**تنظيم الذكاء الاصطناعي** هو مجموعة القوانين والمراسيم التنفيذية والأطر الطوعية التي تحكم كيفية تطوير أنظمة الذكاء الاصطناعي ونشرها وإدارتها. يُنتج تنظيم الذكاء الاصطناعي دولٌ ذات سيادة وهيئات دولية؛ والأنظمة التنظيمية الثلاثة الرئيسية هي قانون الذكاء الاصطناعي الأوروبي (الاتحاد الأوروبي) وإطار NIST لإدارة مخاطر الذكاء الاصطناعي (الولايات المتحدة) وتدابير الذكاء الاصطناعي التوليدي لـCAC (الصين).',
             '**التنافس التكنولوجي بين الولايات المتحدة والصين** هو المنافسة الثنائية بين الولايات المتحدة والصين على القيادة في مجالات أشباه الموصلات والذكاء الاصطناعي والتصنيع المتقدم. يتجلّى التنافس من خلال ضوابط تصدير وحدات معالجة الرسوميات Nvidia الأمريكية واستراتيجية الاستبدال المحلي الصينية (صنع في الصين 2025) وأطر حوكمة الذكاء الاصطناعي المتنافسة. الاتحاد الأوروبي طرف ثالث — لا طرف ثنائي — يُشكّل التنافس من خلال قوته التنظيمية.',
             '**قانون الذكاء الاصطناعي الأوروبي** لائحةٌ أقرّها البرلمان الأوروبي في مارس 2024. تُطبّقه مكتب الذكاء الاصطناعي الأوروبي وسلطات مراقبة السوق الوطنية. يسري على أي مؤسسة — بصرف النظر عن موقعها — تؤثر أنظمة ذكائها الاصطناعي على مستخدمي الاتحاد الأوروبي. يرتبط قانون الذكاء الاصطناعي الأوروبي بتأثير بروكسل: نظراً لتطبيقه خارج الإقليم، فإنه يُنظّم فعلياً OpenAI وGoogle DeepMind وAnthropic عالمياً.',
-            '**NVIDIA** شركة أشباه موصلات أمريكية تُصمّم وحدات معالجة الرسوميات لتدريب الذكاء الاصطناعي (سلسلتا H100 وH200 وB200). أجهزة NVIDIA هي الركيزة الحوسبية الرئيسية لتدريب GPT-5.5 وClaude وGemini وغالبية نماذج الذكاء الاصطناعي الحدودية. ضوابط التصدير الأمريكية على وحدات معالجة الرسوميات NVIDIA للصين آلية محورية في التنافس التكنولوجي الأمريكي-الصيني.',
+            '**NVIDIA** شركة أشباه موصلات أمريكية تُصمّم وحدات معالجة الرسوميات لتدريب الذكاء الاصطناعي (سلسلتا H100 وH200 وB200). أجهزة NVIDIA هي الركيزة الحوسبية الرئيسية لتدريب GPT-5.6 وClaude وGemini وغالبية نماذج الذكاء الاصطناعي الحدودية. ضوابط التصدير الأمريكية على وحدات معالجة الرسوميات NVIDIA للصين آلية محورية في التنافس التكنولوجي الأمريكي-الصيني.',
             '**TSMC** (شركة تايوان لتصنيع أشباه الموصلات) مسبكة رقائق تايوانية تُصنّع أشباه موصلات متقدمة لـNVIDIA وApple وAMD وGoogle. يجعل الموقع الجغرافي لـTSMC في تايوان — والوضع السياسي المتنازع عليه للجزيرة — من TSMC متغيراً بالغ الأهمية في جيوسياسة الذكاء الاصطناعي.',
-            '**DeepSeek** مختبر ذكاء اصطناعي صيني أطلق DeepSeek R1 في يناير 2025. تفوّق DeepSeek R1 على GPT-5.5 في معايير الاستدلال والبرمجة (AIME 2024 وMATH-500 وHumanEval) بتكلفة تدريب مُقدَّرة بـ~6 ملايين دولار — أي 94% أقل من تقديرات النماذج الحدودية — باستخدام وحدات معالجة رسوميات NVIDIA H800 المقيّدة للصين.',
+            '**DeepSeek** مختبر ذكاء اصطناعي صيني أطلق DeepSeek R1 في يناير 2025. تفوّق DeepSeek R1 على GPT-5.6 في معايير الاستدلال والبرمجة (AIME 2024 وMATH-500 وHumanEval) بتكلفة تدريب مُقدَّرة بـ~6 ملايين دولار — أي 94% أقل من تقديرات النماذج الحدودية — باستخدام وحدات معالجة رسوميات NVIDIA H800 المقيّدة للصين.',
           ],
         },
 
@@ -2430,10 +2430,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'السباق لا يتعلق فقط بمن يبني النماذج الأكثر قدرة. يتعلق بأي إطار تنظيمي يصبح المعيار العالمي الافتراضي. قانون الذكاء الاصطناعي الأوروبي، بتطبيقه على أي نظام ذكاء اصطناعي مُنشَر لمستخدمي الاتحاد الأوروبي، جعل بالفعل من بروكسل المنظّم الفعلي لـOpenAI وAnthropic وGoogle DeepMind عالمياً. راجع [المصدر المفتوح مقابل النماذج الملكية](/prompt-engineering/open-source-vs-proprietary-llms) لمعرفة كيف تؤثر هذه الديناميكيات على توفر النماذج.',
           ],
           items: [
-            '**موقف الولايات المتحدة:** تتصدر في قدرة النماذج الحدودية (GPT-5.5 وClaude Opus 4.8 وGemini 3.1 Pro) وتصميم الرقائق (Nvidia وAMD) والاستثمار في الذكاء الاصطناعي (67 مليار دولار استثمار خاص في 2023 وفق منظمة التعاون الاقتصادي والتنمية). لا يوجد قانون فيدرالي موحّد للذكاء الاصطناعي — يُسرّع النشر لكنه يُفرز تشرذماً في الامتثال.',
+            '**موقف الولايات المتحدة:** تتصدر في قدرة النماذج الحدودية (GPT-5.6 وClaude Opus 5 وGemini 3.1 Pro) وتصميم الرقائق (Nvidia وAMD) والاستثمار في الذكاء الاصطناعي (67 مليار دولار استثمار خاص في 2023 وفق منظمة التعاون الاقتصادي والتنمية). لا يوجد قانون فيدرالي موحّد للذكاء الاصطناعي — يُسرّع النشر لكنه يُفرز تشرذماً في الامتثال.',
             '**موقف الصين:** تتصدر في حجم براءات اختراع الذكاء الاصطناعي وحجم التعرف على الوجه والنشر الموجَّه حكومياً. النماذج (Qwen 3 وERNIE 4.0 وDeepSeek R1) تنافسية في كثير من المعايير. الاعتماد على معمارية Nvidia في الأجهزة هو الثغرة الاستراتيجية الرئيسية التي تستهدفها ضوابط التصدير.',
             '**موقف أوروبا:** تتصدر في تنظيم الذكاء الاصطناعي — قانون الذكاء الاصطناعي الأوروبي هو الإطار المرجعي العالمي — وبحث الأوزان المفتوحة (Mistral الفرنسية). تتأخر في قدرة النماذج الحدودية والاستثمار الخاص. تُعوّض ذلك بالنفوذ التنظيمي: تأثير بروكسل يُلزم موردي الولايات المتحدة والصين بالامتثال لمعايير الاتحاد الأوروبي للمنتجات العالمية.',
-            '**طبقة الأجهزة:** تهيمن وحدات معالجة الرسوميات Nvidia H100/H200 على تدريب الذكاء الاصطناعي. تُقيّد ضوابط التصدير الأمريكية المبيعات للصين. دُرِّب DeepSeek R1 على وحدات H800 المقيّدة بتكلفة مُبلَّغ عنها ~6 ملايين دولار — تخفيض 94% عن تقديرات تدريب GPT-5.5 — مما يُثبت أن ضوابط الأجهزة لم توقف الذكاء الاصطناعي الحدودي الصيني.',
+            '**طبقة الأجهزة:** تهيمن وحدات معالجة الرسوميات Nvidia H100/H200 على تدريب الذكاء الاصطناعي. تُقيّد ضوابط التصدير الأمريكية المبيعات للصين. دُرِّب DeepSeek R1 على وحدات H800 المقيّدة بتكلفة مُبلَّغ عنها ~6 ملايين دولار — تخفيض 94% عن تقديرات تدريب GPT-5.6 — مما يُثبت أن ضوابط الأجهزة لم توقف الذكاء الاصطناعي الحدودي الصيني.',
           ],
           image: '/images/regional-ai-players-es.svg',
           imageCaption: 'الولايات المتحدة: OpenAI وAnthropic وGoogle DeepMind (بتمويل VC). الاتحاد الأوروبي: Mistral وHugging Face (مفتوح المصدر، ممول بالبنية التحتية مقارنة بالولايات المتحدة). الصين: Baidu وAlibaba وTencent (بدعم حكومي، تحت إشراف CAC).',
@@ -2450,7 +2450,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**مخاطر عالية:** الذكاء الاصطناعي في البنية التحتية الحيوية والتعليم والتوظيف والخدمات الأساسية (الائتمان والمزايا) وإنفاذ القانون ومراقبة الحدود وإدارة العدالة. يستلزم تقييمات مطابقة ووثائق شفافية وإشرافاً بشرياً وتسجيلاً في قاعدة بيانات الاتحاد الأوروبي.',
             '**مخاطر محدودة:** روبوتات الدردشة والمحتوى الذي يُولّده الذكاء الاصطناعي. يستلزم الإفصاح — يجب إعلام المستخدمين بأنهم يتفاعلون مع ذكاء اصطناعي.',
             '**مخاطر أدنى:** فلاتر البريد المزعج والذكاء الاصطناعي في ألعاب الفيديو وأنظمة التوصية دون تأثير جوهري. لا التزامات محددة تتجاوز القانون القائم.',
-            '**الذكاء الاصطناعي للأغراض العامة (GPAI):** يجب على نماذج كـGPT-5.5 وClaude وGemini نشر ملخصات بيانات التدريب والامتثال لقانون حقوق الملكية الفكرية في الاتحاد الأوروبي والإبلاغ عن الحوادث الجسيمة. تواجه النماذج ذات المخاطر المنهجية (المدرَّبة بأكثر من 10^25 FLOP) متطلبات اختبار عدائي إضافية. طُبّقت قواعد GPAI في أغسطس 2025.',
+            '**الذكاء الاصطناعي للأغراض العامة (GPAI):** يجب على نماذج كـGPT-5.6 وClaude وGemini نشر ملخصات بيانات التدريب والامتثال لقانون حقوق الملكية الفكرية في الاتحاد الأوروبي والإبلاغ عن الحوادث الجسيمة. تواجه النماذج ذات المخاطر المنهجية (المدرَّبة بأكثر من 10^25 FLOP) متطلبات اختبار عدائي إضافية. طُبّقت قواعد GPAI في أغسطس 2025.',
             '**التطبيق:** تشرف مكتب الذكاء الاصطناعي في الاتحاد الأوروبي (ضمن المفوضية الأوروبية) على نماذج GPAI. تُطبّق سلطات مراقبة السوق الوطنية قواعد الذكاء الاصطناعي عالي المخاطر. الغرامات: تصل إلى 35 مليون يورو أو 7% من حجم الأعمال العالمي على الممارسات المحظورة؛ و15 مليون يورو أو 3% على انتهاكات المخاطر العالية.',
             '**الجدول الزمني:** الممارسات المحظورة: أغسطس 2024. التزامات GPAI: أغسطس 2025. واجبات الشفافية بموجب المادة 50 (الإفصاح عن روبوتات الدردشة/المحتوى المزيّف): أغسطس 2026، ولم تتأثر بالحزمة الرقمية الشاملة. أنظمة الذكاء الاصطناعي المستقلة عالية المخاطر (الملحق الثالث): أُجّلت من أغسطس 2026 إلى 2 ديسمبر 2027 بموجب الحزمة الرقمية الشاملة. الذكاء الاصطناعي عالي المخاطر المدمج في المنتجات المنظّمة (الملحق الأول): أُجّل من أغسطس 2027 إلى 2 أغسطس 2028.',
           ],
@@ -2494,7 +2494,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'فرنسا وMistral: بناء الاستقلالية الأوروبية في الذكاء الاصطناعي',
           content: [
             '**تبني فرنسا ثقلاً موازناً استراتيجياً لهيمنة الذكاء الاصطناعي الأمريكية من خلال الاستثمار العام وشركة Mistral AI — في موضعة نماذج الأوزان المفتوحة بوصفها مسار أوروبا نحو السيادة في الذكاء الاصطناعي.**',
-            '**Mistral AI (تأسّست 2023):** أسّسها Arthur Mensch وGuillaume Blanc وTim Caron — جميعهم موظفون سابقون في Meta. أطلقت Mistral نموذج Mistral Small (أوزان مفتوحة) في سبتمبر 2023، تلاه Mistral Large 2 (تنافسي مع GPT-5.5 في كثير من المهام). يسجّل Mistral Large 2 نسبة 81.2% في MMLU مقابل 88.7% لـGPT-5.5. نافذة سياق 123K رمز.',
+            '**Mistral AI (تأسّست 2023):** أسّسها Arthur Mensch وGuillaume Blanc وTim Caron — جميعهم موظفون سابقون في Meta. أطلقت Mistral نموذج Mistral Small (أوزان مفتوحة) في سبتمبر 2023، تلاه Mistral Large 2 (تنافسي مع GPT-5.6 في كثير من المهام). يسجّل Mistral Large 2 نسبة 81.2% في MMLU مقابل 88.7% لـGPT-5.6. نافذة سياق 123K رمز.',
             '**لماذا اختارت فرنسا الأوزان المفتوحة:** ترى فرنسا أن APIs الملكية تُفرز اعتماداً على المورّد ومخاطر في إقامة البيانات وتبعية طويلة الأمد للشركات الأمريكية. يمكن نشر نماذج الأوزان المفتوحة على بنية تحتية أوروبية مع إبقاء البيانات في نطاق الولايات القضائية الأوروبية.',
             '**الدعم الحكومي:** دعم الحكومة الفرنسية عبر Caisse des Dépôts et Placements (صندوق الاستثمار الحكومي). حصلت Mistral على 385 مليون يورو في جولة تمويل السلسلة B (فبراير 2024) بدعم من مستثمرين استراتيجيين فرنسيين.',
           ],
@@ -2545,7 +2545,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         chinaModelsAccessibility: {
           title: 'الصين لمهندسي الأوامر: النماذج المتاحة',
           content: [
-            '**النماذج الأجنبية (GPT-5.5 وClaude وGemini) غير متاحة من الصين القارية دون VPN.** للنشر داخل الصين، يجب على المطوّرين استخدام النماذج المحلية عبر منصات معتمدة من CAC.',
+            '**النماذج الأجنبية (GPT-5.6 وClaude وGemini) غير متاحة من الصين القارية دون VPN.** للنشر داخل الصين، يجب على المطوّرين استخدام النماذج المحلية عبر منصات معتمدة من CAC.',
           ],
           items: [
             'Alibaba Qwen 3 (أوزان مفتوحة، 7B–72B، نافذة سياق 128K): أقوى نموذج مفتوح المصدر في الصين. رخصة Apache 2.0. قابل للنشر ذاتياً خارج الصين بلا فلاتر CAC.',
@@ -2605,7 +2605,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           items: [
             '**الغموض التنظيمي:** مواعيد امتثال قانون الذكاء الاصطناعي الأوروبي متدرّجة — أكّدت الحزمة الرقمية الشاملة (سارية منذ 27 يوليو 2026) تأجيل الذكاء الاصطناعي المستقل عالي المخاطر من أغسطس 2026 إلى ديسمبر 2027، لكن واجبات الإفصاح بموجب المادة 50 سارية بالفعل منذ أغسطس 2026. سياسة الذكاء الاصطناعي الأمريكية تتبدّل بتغيّر الإدارات. لوائح CAC في الصين تسري بأثر رجعي على الخدمات القائمة. خطّط للامتثال للمعيار الأكثر صرامة (قانون الذكاء الاصطناعي الأوروبي) خطاً أساسياً عالمياً.',
-            '**قيود توفر النماذج:** نماذج الولايات المتحدة (GPT-5.5 وClaude) غير متاحة في الصين القارية. النماذج الصينية (ERNIE 4.0 وQwen عبر Alibaba Cloud) تحمل فلاتر محتوى CAC مُدمَجة. المؤسسات العاملة في كلا السوقين تحتاج إلى حزمتي نماذج.',
+            '**قيود توفر النماذج:** نماذج الولايات المتحدة (GPT-5.6 وClaude) غير متاحة في الصين القارية. النماذج الصينية (ERNIE 4.0 وQwen عبر Alibaba Cloud) تحمل فلاتر محتوى CAC مُدمَجة. المؤسسات العاملة في كلا السوقين تحتاج إلى حزمتي نماذج.',
             '**تشرذم إقامة البيانات:** يستلزم كل من GDPR الأوروبي وPIPL الصيني واللوائح القطاعية الأمريكية بقاء البيانات في ولايات قضائية بعينها. تحتاج عمليات النشر العالمية إلى معماريات استنتاج إقليمية لتوجيه بيانات المستخدمين عبر المعالجة المحلية.',
             '**اضطرابات سلسلة توريد الأجهزة:** تركّز TSMC في تايوان وحصة Nvidia البالغة 80% في سوق وحدات معالجة الرسوميات يُفرزان ثغرات في سلسلة التوريد. أي تصعيد جيوسياسي في مضيق تايوان سيؤثر على طاقة تدريب الذكاء الاصطناعي عالمياً. قيود وحدات معالجة الرسوميات الأمريكية على الصين تُثبت أن الوصول إلى الأجهزة قابل للسحب سياسياً.',
           ],
@@ -2615,7 +2615,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'تعريفات رئيسية',
           items: [
             '**قانون الذكاء الاصطناعي الأوروبي:** أول قانون ملزم قانونياً للذكاء الاصطناعي في العالم، أقرّه البرلمان الأوروبي في 2024. يُصنّف أنظمة الذكاء الاصطناعي بحسب المخاطر ويسري على أي مؤسسة تخدم مستخدمي الاتحاد الأوروبي.',
-            '**GPAI (ذكاء اصطناعي للأغراض العامة):** نماذج ذكاء اصطناعي قادرة على أداء مجموعة واسعة من المهام (GPT-5.5 وClaude وGemini). بموجب قانون الذكاء الاصطناعي الأوروبي، يجب على نماذج GPAI نشر وثائق الشفافية والامتثال لقانون حقوق الملكية الفكرية في الاتحاد الأوروبي.',
+            '**GPAI (ذكاء اصطناعي للأغراض العامة):** نماذج ذكاء اصطناعي قادرة على أداء مجموعة واسعة من المهام (GPT-5.6 وClaude وGemini). بموجب قانون الذكاء الاصطناعي الأوروبي، يجب على نماذج GPAI نشر وثائق الشفافية والامتثال لقانون حقوق الملكية الفكرية في الاتحاد الأوروبي.',
             '**تأثير بروكسل:** ميل لوائح الاتحاد الأوروبي إلى أن تصبح معايير عالمية فعلية لأن الشركات متعددة الجنسيات تُطبّق المعيار الأكثر صرامة على مستوى العالم بدلاً من الحفاظ على هياكل امتثال منفصلة.',
             '**CAC (إدارة الفضاء الإلكتروني الصيني):** الجهة التنظيمية الصينية التي تشرف على خدمات الذكاء الاصطناعي التوليدي. تستلزم تقييمات أمنية قبل الإطلاق وتُطبّق فلاتر المحتوى.',
             '**PIPL (قانون حماية المعلومات الشخصية الصيني):** مكافئ GDPR الصيني. يشترط بقاء البيانات الشخصية للمستخدمين الصينيين في الصين أو إخضاعها لتقييم أمني حكومي قبل النقل عبر الحدود.',
@@ -2634,7 +2634,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
               fix: 'دقّق جميع عمليات نشر الذكاء الاصطناعي لتحديد ما إذا كانت تخدم أي مستخدم في الاتحاد الأوروبي. إذا كان الأمر كذلك، طبّق متطلبات قانون الذكاء الاصطناعي الأوروبي على تلك العمليات بصرف النظر عن موقع الشركة.',
             },
             {
-              mistake: 'استخدام نماذج الولايات المتحدة (GPT-5.5 وClaude) لمستخدمي الصين القارية دون معمارية بديلة',
+              mistake: 'استخدام نماذج الولايات المتحدة (GPT-5.6 وClaude) لمستخدمي الصين القارية دون معمارية بديلة',
               problem: 'النماذج الأمريكية غير متاحة في الصين القارية دون VPN، وهو غير قانوني للاستخدام التجاري. ستفشل الخدمات المبنية على هذه النماذج لمستخدمي الصين القارية.',
               fix: 'انشر معمارية ثنائية المنصة: نماذج أمريكية للمستخدمين الدوليين، Qwen 3 أو ERNIE 4.0 عبر Alibaba Cloud لمستخدمي الصين. وجّه الطلبات بناءً على كشف موقع المستخدم.',
             },
@@ -2674,7 +2674,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         qaWhoIsWinning: {
           title: 'من يتصدّر السباق العالمي للذكاء الاصطناعي؟',
           content: [
-            'تتصدر الولايات المتحدة في قدرة النماذج الحدودية — GPT-5.5 (OpenAI) وClaude (Anthropic) وGemini (Google DeepMind) — وفي الاستثمار الخاص في الذكاء الاصطناعي (67 مليار دولار في 2023 وفق بيانات منظمة التعاون الاقتصادي والتنمية). تتصدر الصين في تقديم براءات اختراع الذكاء الاصطناعي وحجم النشر الموجَّه حكومياً وتطوير النماذج المحلية؛ بارز DeepSeek R1 بمنافسة GPT-5.5 في معايير رئيسية في يناير 2025. يتصدر الاتحاد الأوروبي في تنظيم الذكاء الاصطناعي — قانون الذكاء الاصطناعي الأوروبي هو الإطار المرجعي العالمي — لكنه يتأخر في قدرة النماذج الحدودية والاستثمار الخاص قياساً بحجمه الاقتصادي. لا أحد يتصدر الأبعاد الثلاثة في آنٍ واحد.',
+            'تتصدر الولايات المتحدة في قدرة النماذج الحدودية — GPT-5.6 (OpenAI) وClaude (Anthropic) وGemini (Google DeepMind) — وفي الاستثمار الخاص في الذكاء الاصطناعي (67 مليار دولار في 2023 وفق بيانات منظمة التعاون الاقتصادي والتنمية). تتصدر الصين في تقديم براءات اختراع الذكاء الاصطناعي وحجم النشر الموجَّه حكومياً وتطوير النماذج المحلية؛ بارز DeepSeek R1 بمنافسة GPT-5.6 في معايير رئيسية في يناير 2025. يتصدر الاتحاد الأوروبي في تنظيم الذكاء الاصطناعي — قانون الذكاء الاصطناعي الأوروبي هو الإطار المرجعي العالمي — لكنه يتأخر في قدرة النماذج الحدودية والاستثمار الخاص قياساً بحجمه الاقتصادي. لا أحد يتصدر الأبعاد الثلاثة في آنٍ واحد.',
           ],
         },
 
@@ -2688,21 +2688,21 @@ export const article: Partial<Record<Language, PEArticle>> = {
         qaHowChinaRegulates: {
           title: 'كيف تنظّم الصين الذكاء الاصطناعي؟',
           content: [
-            'تنظّم الصين الذكاء الاصطناعي عبر إدارة الفضاء الإلكتروني (CAC). يُلزم نظام التوصيات الخوارزمية (2022) بوضع علامات على المحتوى المُنظَّم خوارزمياً. تشترط تدابير الذكاء الاصطناعي التوليدي (2023) تقييم أمني من CAC — عملية تستغرق 45–90 يوماً — قبل إطلاق أي خدمة ذكاء اصطناعي تولیدي موجّهة للمستهلك في الصين، وتُلزم بمواءمة مخرجات الذكاء الاصطناعي مع "القيم الاشتراكية الجوهرية". النماذج الأجنبية (GPT-5.5 وClaude وGemini) غير متاحة من الصين القارية دون أدوات تحايل. البدائل المحلية تشمل Alibaba Qwen وBaidu ERNIE 4.0 وByteDance Doubao وDeepSeek.',
+            'تنظّم الصين الذكاء الاصطناعي عبر إدارة الفضاء الإلكتروني (CAC). يُلزم نظام التوصيات الخوارزمية (2022) بوضع علامات على المحتوى المُنظَّم خوارزمياً. تشترط تدابير الذكاء الاصطناعي التوليدي (2023) تقييم أمني من CAC — عملية تستغرق 45–90 يوماً — قبل إطلاق أي خدمة ذكاء اصطناعي تولیدي موجّهة للمستهلك في الصين، وتُلزم بمواءمة مخرجات الذكاء الاصطناعي مع "القيم الاشتراكية الجوهرية". النماذج الأجنبية (GPT-5.6 وClaude وGemini) غير متاحة من الصين القارية دون أدوات تحايل. البدائل المحلية تشمل Alibaba Qwen وBaidu ERNIE 4.0 وByteDance Doubao وDeepSeek.',
           ],
         },
 
         qaWhatEUAIActRequires: {
           title: 'ما الذي يستلزمه قانون الذكاء الاصطناعي الأوروبي من المؤسسات؟',
           content: [
-            'يُصنّف قانون الذكاء الاصطناعي الأوروبي أنظمة الذكاء الاصطناعي في أربعة مستويات مخاطر مع التزامات متدرّجة. الممارسات المحظورة — التسجيل الاجتماعي من السلطات العامة والمراقبة البيومترية في الوقت الفعلي في الأماكن العامة — محظورة منذ أغسطس 2024. أنظمة الذكاء الاصطناعي المستقلة عالية المخاطر المُستخدَمة في التوظيف وتقييم الائتمان والرعاية الصحية وإنفاذ القانون تستلزم تقييمات مطابقة ووثائق إشراف بشري والتسجيل في قاعدة بيانات الذكاء الاصطناعي للاتحاد الأوروبي قبل 2 ديسمبر 2027 (بعد تأجيلها من موعدها الأصلي في أغسطس 2026 بموجب الحزمة الرقمية الشاملة، السارية منذ 27 يوليو 2026). يجب على نماذج الذكاء الاصطناعي للأغراض العامة (GPT-5.5 وClaude وGemini) نشر ملخصات بيانات التدريب والامتثال لقانون حقوق الملكية الفكرية — قواعد سارية منذ أغسطس 2025. واجبات الشفافية بموجب المادة 50 (الإفصاح عن روبوتات الدردشة والمحتوى المولَّد بالذكاء الاصطناعي) لا تزال سارية منذ أغسطس 2026 كما هو مقرر. يجب على جميع المؤسسات التي تخدم مستخدمي الاتحاد الأوروبي الامتثال بصرف النظر عن موقعها.',
+            'يُصنّف قانون الذكاء الاصطناعي الأوروبي أنظمة الذكاء الاصطناعي في أربعة مستويات مخاطر مع التزامات متدرّجة. الممارسات المحظورة — التسجيل الاجتماعي من السلطات العامة والمراقبة البيومترية في الوقت الفعلي في الأماكن العامة — محظورة منذ أغسطس 2024. أنظمة الذكاء الاصطناعي المستقلة عالية المخاطر المُستخدَمة في التوظيف وتقييم الائتمان والرعاية الصحية وإنفاذ القانون تستلزم تقييمات مطابقة ووثائق إشراف بشري والتسجيل في قاعدة بيانات الذكاء الاصطناعي للاتحاد الأوروبي قبل 2 ديسمبر 2027 (بعد تأجيلها من موعدها الأصلي في أغسطس 2026 بموجب الحزمة الرقمية الشاملة، السارية منذ 27 يوليو 2026). يجب على نماذج الذكاء الاصطناعي للأغراض العامة (GPT-5.6 وClaude وGemini) نشر ملخصات بيانات التدريب والامتثال لقانون حقوق الملكية الفكرية — قواعد سارية منذ أغسطس 2025. واجبات الشفافية بموجب المادة 50 (الإفصاح عن روبوتات الدردشة والمحتوى المولَّد بالذكاء الاصطناعي) لا تزال سارية منذ أغسطس 2026 كما هو مقرر. يجب على جميع المؤسسات التي تخدم مستخدمي الاتحاد الأوروبي الامتثال بصرف النظر عن موقعها.',
           ],
         },
 
         qaExportControls: {
           title: 'كيف تؤثر ضوابط تصدير الولايات المتحدة في تطوير الذكاء الاصطناعي؟',
           content: [
-            'تُقيّد ضوابط التصدير الأمريكية بيع وحدات معالجة الرسوميات Nvidia المتقدمة — بما فيها A100 وH100 — إلى الصين، بهدف تحديد قدرتها على تدريب نماذج الذكاء الاصطناعي الحدودية. أثبت إطلاق DeepSeek R1 في يناير 2025 حدود هذا النهج: دُرِّب بوحدات معالجة H800 المقيّدة للصين بجزء بسيط من التكلفة المُبلَّغ عنها للنماذج الأمريكية المماثلة، وبارى GPT-5.5 في AIME 2024 وMATH-500 ومعايير HumanEval. ضوابط التصدير أبطأت لكنها لم توقف تطوير الذكاء الاصطناعي الحدودي في الصين.',
+            'تُقيّد ضوابط التصدير الأمريكية بيع وحدات معالجة الرسوميات Nvidia المتقدمة — بما فيها A100 وH100 — إلى الصين، بهدف تحديد قدرتها على تدريب نماذج الذكاء الاصطناعي الحدودية. أثبت إطلاق DeepSeek R1 في يناير 2025 حدود هذا النهج: دُرِّب بوحدات معالجة H800 المقيّدة للصين بجزء بسيط من التكلفة المُبلَّغ عنها للنماذج الأمريكية المماثلة، وبارى GPT-5.6 في AIME 2024 وMATH-500 ومعايير HumanEval. ضوابط التصدير أبطأت لكنها لم توقف تطوير الذكاء الاصطناعي الحدودي في الصين.',
           ],
         },
 
@@ -2732,7 +2732,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         defGPAI: {
           title: 'تعريف: الذكاء الاصطناعي للأغراض العامة (GPAI)',
-          content: 'نظام ذكاء اصطناعي مُدرَّب على بيانات واسعة بمعمارية عامة (غير متخصصة وغير قطاعية) قابل للتكيف لمجموعة واسعة من المهام. GPT-5.5 وClaude Opus 4.8 وGemini 3.1 Pro نماذج GPAI. بموجب قانون الذكاء الاصطناعي الأوروبي، تمتلك نماذج GPAI ذات حوسبة تدريب تتجاوز 10²⁵ FLOP التزامات شفافية تشمل ملخصات بيانات التدريب ووثائق القدرات والامتثال لحقوق الملكية الفكرية.',
+          content: 'نظام ذكاء اصطناعي مُدرَّب على بيانات واسعة بمعمارية عامة (غير متخصصة وغير قطاعية) قابل للتكيف لمجموعة واسعة من المهام. GPT-5.6 وClaude Opus 5 وGemini 3.1 Pro نماذج GPAI. بموجب قانون الذكاء الاصطناعي الأوروبي، تمتلك نماذج GPAI ذات حوسبة تدريب تتجاوز 10²⁵ FLOP التزامات شفافية تشمل ملخصات بيانات التدريب ووثائق القدرات والامتثال لحقوق الملكية الفكرية.',
         },
 
         defCAC: {
@@ -2874,7 +2874,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         name: 'Comment déployer des produits d\'IA générative en Chine : guide pour développeurs',
         description: 'Guide étape par étape pour les développeurs déployant des produits d\'IA en Chine — sélection du modèle, restrictions de contenu, évaluation de sécurité CAC, résidence des données selon la PIPL et calendrier de mise sur le marché.',
         step: [
-          { '@type': 'HowToStep', position: 1, name: 'Comprendre les modèles d\'IA disponibles en Chine', text: 'Les modèles étrangers (GPT-5.5, Claude, Gemini) sont inaccessibles depuis la Chine continentale sans VPN. Options disponibles : Alibaba Qwen 3 (poids ouverts, 7B–72B, contexte 128K), Baidu ERNIE 4.0 (API Qianfan), ByteDance Doubao (Volcano Engine), Z.ai GLM-4, DeepSeek R1/V3. Qwen 3 72B est l\'option à poids ouverts la plus solide pour l\'auto-hébergement.' },
+          { '@type': 'HowToStep', position: 1, name: 'Comprendre les modèles d\'IA disponibles en Chine', text: 'Les modèles étrangers (GPT-5.6, Claude, Gemini) sont inaccessibles depuis la Chine continentale sans VPN. Options disponibles : Alibaba Qwen 3 (poids ouverts, 7B–72B, contexte 128K), Baidu ERNIE 4.0 (API Qianfan), ByteDance Doubao (Volcano Engine), Z.ai GLM-4, DeepSeek R1/V3. Qwen 3 72B est l\'option à poids ouverts la plus solide pour l\'auto-hébergement.' },
           { '@type': 'HowToStep', position: 2, name: 'Prévoir les restrictions de contenu au niveau de l\'API', text: 'Les services d\'IA générative enregistrés auprès de la CAC filtrent le contenu bloquant la critique de la direction du PCC, les discussions sur l\'indépendance de Taïwan/Tibet/Xinjiang, les événements historiques politiquement sensibles et le contenu qui sape les « valeurs socialistes fondamentales ». Les filtres sont intégrés à l\'API. Les erreurs de filtrage renvoient un code HTTP 200 avec is_safe: 0 — pas un code HTTP 4xx — nécessitant un traitement explicite au niveau de l\'application.' },
           { '@type': 'HowToStep', position: 3, name: 'Compléter l\'évaluation de sécurité CAC', text: 'Obligatoire avant le lancement de tout service d\'IA générative destiné aux consommateurs en Chine. Soumettre les sources de données d\'entraînement, la documentation du filtrage de contenu et des exemples de sorties. Délai : 45 à 90 jours. Les entreprises étrangères doivent s\'associer à une entité de Chine continentale ou à un fournisseur de cloud agréé (Alibaba Cloud, Tencent Cloud) en tant que fournisseur enregistré.' },
           { '@type': 'HowToStep', position: 4, name: 'Se conformer aux exigences de résidence des données de la PIPL', text: 'La PIPL (2021) exige que les données personnelles des utilisateurs chinois restent en Chine ou passent une évaluation de sécurité gouvernementale avant tout transfert transfrontalier. Acheminez tout le trafic des utilisateurs chinois via une inférence hébergée sur le continent (Alibaba Cloud, Tencent Cloud, Huawei Cloud).' },
@@ -2942,8 +2942,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Question', 'name': 'Quelles sont les amendes en cas de violation de la loi IA de l\'UE ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Les amendes atteignent jusqu\'a 35 millions d\'euros ou 7 % du chiffre d\'affaires mondial annuel pour les pratiques d\'IA interdites. Les violations liees a l\'IA a haut risque entrainent des amendes jusqu\'a 15 millions d\'euros ou 3 % du chiffre d\'affaires. Les informations incorrectes transmises aux autorites coutent jusqu\'a 7,5 millions d\'euros ou 1 % du chiffre d\'affaires.' } },
           { '@type': 'Question', 'name': 'Quelles applications d\'IA l\'UE interdit-elle formellement ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'La loi IA de l\'UE interdit : les systemes de notation sociale par les autorites publiques, la surveillance biometrique en temps reel dans les espaces publics (avec exceptions etroites), les IA exploitant des vulnerabilites cognitives, et la collecte non ciblee d\'images faciales sur internet pour creer des bases de donnees de reconnaissance.' } },
           { '@type': 'Question', 'name': 'En quoi la reglementation americaine de l\'IA differe-t-elle de l\'approche europeenne ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Les Etats-Unis adoptent une approche sectorielle et volontaire — les regulateurs existants (FTC, FDA, CFPB, EEOC) appliquent leurs mandats a l\'IA dans leurs domaines. Il n\'existe pas de loi federale sur l\'IA equivalente a la loi UE. Le decret Biden sur la securite de l\'IA (octobre 2023) a ete revoque par l\'administration Trump en janvier 2025.' } },
-          { '@type': 'Question', 'name': 'L\'IA chinoise est-elle aussi avancee que l\'IA americaine ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'DeepSeek R1 (janvier 2025) a egale GPT-5.5 sur plusieurs benchmarks (AIME 2024, MATH-500, HumanEval) tout en se formant apparemment a une fraction du cout. Les modeles chinois de pointe — Qwen d\'Alibaba et ERNIE de Baidu — sont competitifs sur de nombreuses taches mais restent en retrait sur le raisonnement multilingue et les benchmarks de securite.' } },
-          { '@type': 'Question', 'name': 'Les entreprises europeennes peuvent-elles utiliser GPT-5.5 et Claude sous la loi IA ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui, pour la plupart des applications professionnelles. GPT-5.5 et Claude sont classifies comme IA a usage general (GPAI). Les entreprises europeennes doivent cependant assumer leurs propres obligations de diligence, notamment pour les applications a haut risque comme les decisions RH, l\'octroi de credit ou les infrastructures critiques.' } },
+          { '@type': 'Question', 'name': 'L\'IA chinoise est-elle aussi avancee que l\'IA americaine ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'DeepSeek R1 (janvier 2025) a egale GPT-5.6 sur plusieurs benchmarks (AIME 2024, MATH-500, HumanEval) tout en se formant apparemment a une fraction du cout. Les modeles chinois de pointe — Qwen d\'Alibaba et ERNIE de Baidu — sont competitifs sur de nombreuses taches mais restent en retrait sur le raisonnement multilingue et les benchmarks de securite.' } },
+          { '@type': 'Question', 'name': 'Les entreprises europeennes peuvent-elles utiliser GPT-5.6 et Claude sous la loi IA ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui, pour la plupart des applications professionnelles. GPT-5.6 et Claude sont classifies comme IA a usage general (GPAI). Les entreprises europeennes doivent cependant assumer leurs propres obligations de diligence, notamment pour les applications a haut risque comme les decisions RH, l\'octroi de credit ou les infrastructures critiques.' } },
           { '@type': 'Question', 'name': 'Qu\'est-ce que l\'UK AI Safety Institute (AISI) ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'L\'AISI a ete cree en novembre 2023 comme premiere agence gouvernementale de securite IA au monde. Il effectue des tests pre-deploiement sur les modeles frontier, a signe des memorandums avec OpenAI, Anthropic, Google DeepMind et Meta, et coordonne les standards de securite internationaux.' } },
           { '@type': 'Question', 'name': 'Comment DeepSeek modifie-t-il la geopolitique de l\'IA ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'DeepSeek R1 a prouve que des capacites IA frontier sont atteignables avec beaucoup moins de puissance de calcul, et que les controles a l\'exportation des puces Nvidia seuls sont insuffisants. Ces resultats ont pousse les legislateurs americains a reexaminer la politique d\'exportation de puces et accelere les investissements europeens dans des infrastructures IA souveraines.' } },
           { '@type': 'Question', 'name': 'Qu\'est-ce que l\'effet Bruxelles dans l\'IA ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'L\'effet Bruxelles decrit le phenomene par lequel la reglementation de l\'UE devient de facto un standard mondial, car les entreprises globales adaptent leurs produits aux regles europeennes plutot que de maintenir des versions multiples. Pour l\'IA, cela signifie que la loi IA de l\'UE cree des obligations de conformite pour les fournisseurs americains et asiatiques qui servent des utilisateurs europeens.' } },
@@ -2951,7 +2951,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Question', 'name': 'Les organisations europeennes peuvent-elles utiliser DeepSeek pour des usages commerciaux ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Avec prudence. DeepSeek est soumis au droit chinois, qui permet l\'acces des autorites chinoises aux donnees. Les preoccupations ont conduit l\'Italie, l\'Irlande et l\'Allemagne a saisir leurs autorites de protection des donnees. Pour les applications d\'entreprise, les versions open source (DeepSeek R1 en local) ou les fournisseurs bases dans l\'UE sont les options les plus conformes au RGPD.' } },
           { '@type': 'Question', 'name': 'L\'EU AI Act aide-t-il ou nuit-il à la compétitivité de l\'IA en Europe?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'C\'est un dilemme stratégique réel : l\'EU AI Act peut ralentir les startups IA européennes mais renforce la crédibilité réglementaire de l\'Europe mondialement. D\'un côté, les coûts de conformité et les évaluations créent des frictions pour les entreprises européennes — Mistral AI français est plus contraint que les concurrents américains. De l\'autre, l\'effet Bruxelles signifie que le cadre réglementaire de l\'UE devient le standard mondial, donnant aux entreprises basées en UE un avantage compétitif en conformité et à l\'UE un levier sur les géants technologiques US/chinois.' } },
           { '@type': 'Question', 'name': 'Comment la capacité informatique de l\'Europe se compare-t-elle aux États-Unis et à la Chine?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'L\'Europe accuse un retard important. Les États-Unis dominent la fabrication de GPU (Nvidia ~80 % part de marché) et le silicium personnalisé. La Chine fabrique chez TSMC (Taïwan) et utilise des GPU Nvidia restreints. L\'Europe n\'a pas d\'équivalent : ASML (Pays-Bas) fabrique des équipements mais ne possède pas de fabs. L\'EU Chips Act (43 milliards d\'euros) vise à construire des fabs Intel et TSMC, mais aucune ne sera opérationnelle avant 2027–2029. C\'est la vulnérabilité centrale de l\'Europe : l\'entraînement de modèles frontier nécessite des milliers de GPU pendant des mois. Sans fab nationale, l\'Europe dépend de l\'approvisionnement US (Nvidia) et taïwanais (TSMC).' } },
-          { '@type': 'Question', 'name': 'Quel est l\'avantage de l\'Europe en matière d\'IA au-delà de la réglementation?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'L\'Europe a trois avantages non-réglementaires : (1) Mistral AI et autres modèles open-source financés par l\'UE offrent des alternatives conformes à GDPR sans dépendance US ou chinoise; (2) L\'Europe mène la recherche en sécurité de l\'IA via le UK AI Safety Institute et les centres de recherche français; (3) La main-d\'œuvre éduquée et le talent logiciel/semi-conducteur donnent un avantage en applications IA et silicium personnalisé. Cependant, aucun ne compense le désavantage en capacité des modèles frontier — les États-Unis mènent sur GPT-5.5 et Claude, la Chine sur l\'échelle et le volume. La stratégie de l\'Europe est faire ce que tu sais bien (sécurité, régulation, éthique) plutôt que de concourir sur la capacité brute.' } },
+          { '@type': 'Question', 'name': 'Quel est l\'avantage de l\'Europe en matière d\'IA au-delà de la réglementation?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'L\'Europe a trois avantages non-réglementaires : (1) Mistral AI et autres modèles open-source financés par l\'UE offrent des alternatives conformes à GDPR sans dépendance US ou chinoise; (2) L\'Europe mène la recherche en sécurité de l\'IA via le UK AI Safety Institute et les centres de recherche français; (3) La main-d\'œuvre éduquée et le talent logiciel/semi-conducteur donnent un avantage en applications IA et silicium personnalisé. Cependant, aucun ne compense le désavantage en capacité des modèles frontier — les États-Unis mènent sur GPT-5.6 et Claude, la Chine sur l\'échelle et le volume. La stratégie de l\'Europe est faire ce que tu sais bien (sécurité, régulation, éthique) plutôt que de concourir sur la capacité brute.' } },
         ],
       },
       gammaEmbedUrl: '/presentations/geopolitics-and-ai-static.html',
@@ -2978,7 +2978,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Politique IA américaine :** aucune loi fédérale sur l\'IA. L\'administration Trump cherche à faire prévaloir le droit fédéral sur les lois des États via l\'Executive Order 14365 (décembre 2025) et le National Framework (mars 2026). La FTC a publié sa déclaration de politique imposée par le décret sur la précision de l\'IA et la préemption des lois des États le 7 juillet 2026 — avec quatre mois de retard sur l\'échéance du 11 mars — et a clos la consultation publique le 31 juillet 2026. Ni le TRUMP AMERICA AI Act ni sa contre-proposition démocrate, le GUARDRAILS Act, n\'ont été adoptés par le Congrès ; les deux restent à l\'état de projet.',
             '**Gouvernance IA chinoise :** l\'évaluation préalable de la CAC (Cyberspace Administration of China) est obligatoire. Les filtres de contenu bloquent la critique du PCC, les discussions sur Taïwan/Tibet/Xinjiang et tout contenu portant atteinte aux « valeurs socialistes fondamentales ». Les filtres renvoient un HTTP 200 avec un indicateur `is_safe: 0` (pas une erreur 4xx). La PIPL impose la localisation des données pour les données personnelles des utilisateurs chinois.',
             '**Goulots d\'étranglement matériels :** Nvidia contrôle environ 80 % du marché des GPU d\'entraînement IA. TSMC fabrique environ 90 % des semi-conducteurs les plus avancés. Ces deux points sont des enjeux géopolitiques majeurs. Le CHIPS Act américain (52 Md$) vise à réduire la dépendance à TSMC.',
-            '**Impact de DeepSeek R1 :** a dépassé GPT-5.5 en raisonnement et en code (AIME 2024, MATH, HumanEval) pour un coût d\'entraînement estimé à ~6 M$ (réduction de 94 % par rapport aux estimations des modèles de pointe ; chiffre contesté). Entraîné sur des GPU Nvidia H800 soumis aux restrictions d\'exportation vers la Chine. Démontre les limites des contrôles à l\'export.',
+            '**Impact de DeepSeek R1 :** a dépassé GPT-5.6 en raisonnement et en code (AIME 2024, MATH, HumanEval) pour un coût d\'entraînement estimé à ~6 M$ (réduction de 94 % par rapport aux estimations des modèles de pointe ; chiffre contesté). Entraîné sur des GPU Nvidia H800 soumis aux restrictions d\'exportation vers la Chine. Démontre les limites des contrôles à l\'export.',
             '**Conflit réglementaire mondial :** l\'UE privilégie les droits et la sécurité ; les États-Unis, l\'innovation et la compétitivité ; la Chine, le contrôle étatique et l\'avantage stratégique. Les organisations déployant l\'IA à l\'échelle mondiale doivent composer avec trois cadres incompatibles simultanément.',
           ],
         },
@@ -3044,7 +3044,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               'Métrique': 'Modèles fondamentaux actifs',
-              'États-Unis': 'OpenAI (GPT-5.5), Anthropic (Claude), Google (Gemini), Meta (Llama)',
+              'États-Unis': 'OpenAI (GPT-5.6), Anthropic (Claude), Google (Gemini), Meta (Llama)',
               'Chine': 'Alibaba (Qwen), Baidu (Ernie), DeepSeek (R1)',
               'UE': 'Mistral AI, Aleph Alpha, Runway',
             },
@@ -3084,7 +3084,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Les modèles chinois rattraperont-ils les modèles US ?',
-              a: 'Déjà partiellement. DeepSeek R1 offre une performance brute comparable à GPT-5.5, mais sous contrôles gouvernementaux. L\'écart diminue rapidement. L\'enjeu clé : NVIDIA (puces) — sans accès illimité, la Chine reste légèrement en retard.',
+              a: 'Déjà partiellement. DeepSeek R1 offre une performance brute comparable à GPT-5.6, mais sous contrôles gouvernementaux. L\'écart diminue rapidement. L\'enjeu clé : NVIDIA (puces) — sans accès illimité, la Chine reste légèrement en retard.',
             },
           ],
         },
@@ -3141,7 +3141,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           rows: [
             {
               'Dimension': 'Modèles fondamentaux',
-              'États-Unis': 'Leader : GPT-5.5, Claude, Gemini. Nouveaux modèles chaque trimestre.',
+              'États-Unis': 'Leader : GPT-5.6, Claude, Gemini. Nouveaux modèles chaque trimestre.',
               'Chine': 'Concurrence accrue : Qwen, Ernie, DeepSeek R1. Recherche active en vidéo et multimodal.',
               'UE': 'Retard significatif. Mistral le plus avancé, mais bien en retrait vs US/Chine.',
             },
@@ -3242,7 +3242,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'France & Mistral : la réponse européenne',
           content: 'La France a positionné Mistral AI comme son champion technologique IA — similaire à la stratégie chinoise avec DeepSeek. Mistral a levé $640M en 2024 et poursuit une approche open-source + modèles propriétaires.',
           items: [
-            'Mistral Large : modèle généraliste concurrençant Claude/GPT-5.5, mais moins performant.',
+            'Mistral Large : modèle généraliste concurrençant Claude/GPT-5.6, mais moins performant.',
             'Mistral est soutenu par l\'État français et les investisseurs européens (BPI, Temasek).',
             'Approche : open-source pour l\'écosystème, propriétaire pour les hauts risques (chatbots enterprise).',
             'Défi : attirer le talent et les resources face à la domination US. L\'équipe est petite comparée à OpenAI.',
@@ -3263,7 +3263,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Les États-Unis poursuivent une stratégie en trois piliers :',
             '**Innovation rapide** : Moins de régulation = iterate vite. OpenAI, Anthropic, Google innovent à vitesse rapide. Modèles publiés chaque trimestre.',
             '**Levier technologique** : Exporter NVIDIA comme point de contrôle. CHIPS Act relocalise la fabrication US. Cela donne aux US le contrôle de qui peut faire de l\'IA (Chine exclue).',
-            '**Soft power** : Les modèles US (GPT-5.5, Claude) deviennent les standards mondiaux car ils sont les meilleurs. Cette dominance = influence culturelle et politique.',
+            '**Soft power** : Les modèles US (GPT-5.6, Claude) deviennent les standards mondiaux car ils sont les meilleurs. Cette dominance = influence culturelle et politique.',
             'Risque US : régulation inévitable. À mesure que l\'IA grandit, la pression pour la régulation augmente (antitrust, sécurité, emploi). Les États-Unis pourraient passer du "innovation d\'abord" au "regulation-heavy" comme l\'UE.',
           ],
         },
@@ -3272,7 +3272,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             'La Chine poursuit une stratégie en trois piliers :',
             '**Substituts locaux** : Construire des alternatives à NVIDIA (Huawei Ascend), OpenAI (DeepSeek), Google (Baidu). L\'objectif : zéro dépendance US.',
-            '**Déploiement rapide** : L\'IA n\'a pas besoin d\'être la meilleure — elle doit être rapide et pratique. DeepSeek V3 n\'est pas mieux que GPT-5.5, mais elle est "assez bonne" et déployée immédiatement.',
+            '**Déploiement rapide** : L\'IA n\'a pas besoin d\'être la meilleure — elle doit être rapide et pratique. DeepSeek V3 n\'est pas mieux que GPT-5.6, mais elle est "assez bonne" et déployée immédiatement.',
             '**Contrôle total** : L\'État approuve chaque modèle, chaque donnée, chaque usage. Cela garantit que l\'IA sert les objectifs de l\'État, pas les individus.',
             'Risque Chine : lagging en innovation brute. Dépendance TSMC (Taiwan) pour les puces avancées. L\'écart avec les États-Unis diminue mais ne disparaîtra pas rapidement.',
           ],
@@ -3496,7 +3496,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         defGPAI: {
           title: 'Définition : GPAI (General Purpose AI)',
-          content: 'GPAI signifie "General Purpose Artificial Intelligence" — c\'est un modèle fondamental (comme GPT-5.5 ou Claude) capable de performer une large gamme de tâches. Contrairement à une IA spécialisée (qui ne fait qu\'une chose), une GPAI peut être adaptée à de nombreux cas d\'usage. La loi IA de l\'UE impose des obligations légères sur les GPAI mais plus lourdes sur les GPAI "à haut impact" (si elle affecte les droits fondamentaux).',
+          content: 'GPAI signifie "General Purpose Artificial Intelligence" — c\'est un modèle fondamental (comme GPT-5.6 ou Claude) capable de performer une large gamme de tâches. Contrairement à une IA spécialisée (qui ne fait qu\'une chose), une GPAI peut être adaptée à de nombreux cas d\'usage. La loi IA de l\'UE impose des obligations légères sur les GPAI mais plus lourdes sur les GPAI "à haut impact" (si elle affecte les droits fondamentaux).',
         },
         defCAC: {
           title: 'Définition : CAC (Cyberspace Administration of China)',
@@ -3614,13 +3614,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               mistake: 'Considérer les contrôles d\'exportation de GPU comme un frein permanent au développement de l\'IA chinoise.',
-              problem: 'DeepSeek R1 (janvier 2025) a égalé GPT-5.5 sur des benchmarks majeurs en s\'entraînant sur des GPU H800 restreints pour environ 6 M$ de coût de calcul — 94 % moins cher que les estimations d\'entraînement de GPT-4. Les contrôles à l\'export ralentissent la progression chinoise mais ne l\'arrêtent pas.',
+              problem: 'DeepSeek R1 (janvier 2025) a égalé GPT-5.6 sur des benchmarks majeurs en s\'entraînant sur des GPU H800 restreints pour environ 6 M$ de coût de calcul — 94 % moins cher que les estimations d\'entraînement de GPT-4. Les contrôles à l\'export ralentissent la progression chinoise mais ne l\'arrêtent pas.',
               fix: 'Planifiez pour une compétition géopolitique de plusieurs décennies dans l\'IA. Pour vos feuilles de route produit à long terme, ne présumez pas que la domination matérielle américaine est permanente. Envisagez des alternatives open-weights (Llama, Mistral, Qwen) plus difficiles à restreindre. Surveillez le statut politique de TSMC, qui fabrique tous les puces avancées.',
             },
             {
-              mistake: 'Supposer que les modèles propriétaires américains (GPT-5.5, Claude) resteront disponibles mondialement sans friction réglementaire.',
-              problem: 'L\'AI Act européen impose déjà des obligations de conformité à GPT-5.5 et Claude. Une future réglementation européenne pourrait restreindre l\'export de données ou exiger un déploiement sur site pour les cas d\'usage sensibles. La stratégie chinoise de substitution nationale (Made in China 2025) pourrait limiter l\'accès aux modèles étrangers.',
-              fix: 'Diversifiez votre infrastructure IA. Combinez modèles propriétaires (pour la capacité de pointe), modèles open-weights (pour la flexibilité réglementaire) et déploiements locaux (pour la résidence des données). Testez votre produit sur GPT-5.5, Claude, Mistral et Qwen pour réduire la dépendance à un fournisseur unique.',
+              mistake: 'Supposer que les modèles propriétaires américains (GPT-5.6, Claude) resteront disponibles mondialement sans friction réglementaire.',
+              problem: 'L\'AI Act européen impose déjà des obligations de conformité à GPT-5.6 et Claude. Une future réglementation européenne pourrait restreindre l\'export de données ou exiger un déploiement sur site pour les cas d\'usage sensibles. La stratégie chinoise de substitution nationale (Made in China 2025) pourrait limiter l\'accès aux modèles étrangers.',
+              fix: 'Diversifiez votre infrastructure IA. Combinez modèles propriétaires (pour la capacité de pointe), modèles open-weights (pour la flexibilité réglementaire) et déploiements locaux (pour la résidence des données). Testez votre produit sur GPT-5.6, Claude, Mistral et Qwen pour réduire la dépendance à un fournisseur unique.',
             },
           ],
         },
@@ -3685,7 +3685,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         name: '中国で生成AI製品を展開する方法：開発者向けガイド',
         description: '中国でAI製品を展開する開発者向けのステップバイステップガイド — モデル選定、コンテンツ制限、CACセキュリティ評価、PIPLデータローカライゼーション、市場投入スケジュール。',
         step: [
-          { '@type': 'HowToStep', position: 1, name: '中国で利用可能なAIモデルを理解する', text: '海外モデル（GPT-5.5、Claude、Gemini）はVPNなしでは中国本土からアクセスできません。利用可能な選択肢：Alibaba Qwen 3（オープンウェイト、7B〜72B、128Kコンテキスト）、Baidu ERNIE 4.0（Qianfan API）、ByteDance Doubao（Volcano Engine）、Z.ai GLM-4、DeepSeek R1/V3。Qwen 3 72Bはセルフホスティングに最も適した最強のオープンウェイト選択肢です。' },
+          { '@type': 'HowToStep', position: 1, name: '中国で利用可能なAIモデルを理解する', text: '海外モデル（GPT-5.6、Claude、Gemini）はVPNなしでは中国本土からアクセスできません。利用可能な選択肢：Alibaba Qwen 3（オープンウェイト、7B〜72B、128Kコンテキスト）、Baidu ERNIE 4.0（Qianfan API）、ByteDance Doubao（Volcano Engine）、Z.ai GLM-4、DeepSeek R1/V3。Qwen 3 72Bはセルフホスティングに最も適した最強のオープンウェイト選択肢です。' },
           { '@type': 'HowToStep', position: 2, name: 'APIレベルのコンテンツ制限を計画する', text: 'CAC登録済みの生成AIサービスは、中国共産党の指導批判、台湾/チベット/新疆の独立に関する議論、政治的に敏感な歴史的出来事、「社会主義の核心的価値観」を損なうコンテンツをブロックするフィルターを備えています。フィルターはAPIに組み込まれています。フィルターエラーはHTTP 4xxではなく、is_safe: 0を伴うHTTP 200を返すため、アプリケーションレベルでの明示的な処理が必要です。' },
           { '@type': 'HowToStep', position: 3, name: 'CACセキュリティ評価を完了する', text: '中国で消費者向け生成AIサービスを開始する前に必須です。トレーニングデータのソース、コンテンツフィルタリングの文書、サンプル出力を提出します。所要期間：45〜90日。海外企業は、登録プロバイダーとして中国本土の事業体または認可されたクラウドプロバイダー（Alibaba Cloud、Tencent Cloud）と提携する必要があります。' },
           { '@type': 'HowToStep', position: 4, name: 'PIPLのデータ現地化要件を遵守する', text: 'PIPL（2021年）は、中国ユーザーの個人データが中国国内に留まるか、国境を越えた移転の前に政府のセキュリティ評価に合格することを求めています。中国ユーザーのトラフィックはすべて、中国本土でホストされている推論（Alibaba Cloud、Tencent Cloud、Huawei Cloud）を経由させてください。' },
@@ -3753,8 +3753,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Question', 'name': 'EU AI法違反の罰則はどのくらいですか？', 'acceptedAnswer': { '@type': 'Answer', 'text': '禁止されたAI実践に対しては最大3,500万ユーロまたは世界年間売上高の7%の罰金が科されます。高リスクAIの違反は最大1,500万ユーロまたは売上高の3%。当局への虚偽報告は最大750万ユーロまたは売上高の1%の罰金となります。' } },
           { '@type': 'Question', 'name': 'EUが禁止するAI用途はどれですか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'EU AI法が禁止するのは：政府機関によるソーシャルスコアリング、公共空間でのリアルタイム生体認証監視（例外あり）、認知的脆弱性を悪用するAI、顔識別データベース構築のためのインターネット上の顔画像の無差別収集です。' } },
           { '@type': 'Question', 'name': '米国のAI規制はEUとどう違いますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': '米国はセクター別・任意のアプローチを採用しています。既存の規制機関（FTC、FDA、CFPB、EEOC）が各分野でAIに既存の権限を適用します。EU AI法のような連邦AI法は存在しません。バイデン政権のAI安全性に関する大統領令は2025年1月にトランプ政権によって撤回されました。' } },
-          { '@type': 'Question', 'name': '中国のAIは米国のシステムと同等の能力を持っていますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'DeepSeek R1（2025年1月）は複数のベンチマーク（AIME 2024、MATH-500、HumanEval）でGPT-5.5と同水準を達成し、はるかに低いコストで訓練されたとされています。AlibabaのQwenやBaiduのERNIEなど中国の主要モデルは多くのタスクで競争力がありますが、多言語推論とセキュリティベンチマークでは遅れをとっています。' } },
-          { '@type': 'Question', 'name': 'EU企業はAI法の下でGPT-5.5やClaudeを使用できますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい、ほとんどのビジネス用途で使用できます。GPT-5.5とClaudeは汎用AI（GPAI）に分類されます。ただし、EU企業は採用決定、与信、重要インフラなどの高リスク用途には独自のデューデリジェンス義務を果たす必要があります。' } },
+          { '@type': 'Question', 'name': '中国のAIは米国のシステムと同等の能力を持っていますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'DeepSeek R1（2025年1月）は複数のベンチマーク（AIME 2024、MATH-500、HumanEval）でGPT-5.6と同水準を達成し、はるかに低いコストで訓練されたとされています。AlibabaのQwenやBaiduのERNIEなど中国の主要モデルは多くのタスクで競争力がありますが、多言語推論とセキュリティベンチマークでは遅れをとっています。' } },
+          { '@type': 'Question', 'name': 'EU企業はAI法の下でGPT-5.6やClaudeを使用できますか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'はい、ほとんどのビジネス用途で使用できます。GPT-5.6とClaudeは汎用AI（GPAI）に分類されます。ただし、EU企業は採用決定、与信、重要インフラなどの高リスク用途には独自のデューデリジェンス義務を果たす必要があります。' } },
           { '@type': 'Question', 'name': 'UK AI Safety Institute（AISI）とは何ですか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'AISIは2023年11月に世界初の政府AI安全機関として設立されました。フロンティアモデルのデプロイ前テストを実施し、OpenAI、Anthropic、Google DeepMind、Metaと覚書を締結し、国際的な安全基準の調整を行っています。' } },
           { '@type': 'Question', 'name': 'DeepSeekはAI地政学をどのように変えましたか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'DeepSeek R1は、フロンティアAI能力がはるかに少ない計算資源で達成可能であり、Nvidia製チップの輸出規制だけでは十分なバリアにならないことを証明しました。この衝撃から米国の立法者はチップ輸出政策の再検討を迫られ、欧州ではAI主権インフラへの投資が加速しました。' } },
           { '@type': 'Question', 'name': 'AIにおけるブリュッセル効果とは何ですか？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'ブリュッセル効果とは、EU規制が事実上のグローバルスタンダードとなる現象を指します。グローバル企業は複数バージョンを維持するより製品をEUルールに合わせる方を選ぶためです。AIでは、EU AI法がEUユーザーにサービスを提供する米国・アジアのAIプロバイダーにコンプライアンス要件を課しています。' } },
@@ -3776,7 +3776,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'ブリュッセル効果：EU AI法のルールは世界中のヨーロッパユーザーに届くあらゆるAIに適用される',
             '米国には連邦AI法がない — 規制当局が既存の権限をAIに適用している',
             '米国は2025年1月にAI安全命令を廃止 — 競争力が安全より優先される',
-            'DeepSeek R1は主要ベンチマークでGPT-5.5と同等 — GPU輸出規制は中国のAIを阻止していない',
+            'DeepSeek R1は主要ベンチマークでGPT-5.6と同等 — GPU輸出規制は中国のAIを阻止していない',
             'TSMCはすべてのフロンティアAIを駆動するチップを製造 — 単一の地政学的依存',
             '組織は3つの競争する規制フレームワークを同時に満たす必要がある：EU、米国、中国',
           ],
@@ -3788,7 +3788,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**米国のAI政策：** 連邦AI法は存在しない。トランプ政権は大統領令14365号（2025年12月）と国家フレームワーク（2026年3月）を通じて州法への連邦優先を推進。FTCは大統領令が義務付けたAIの正確性と州法優先に関する政策声明を、3月11日の期限から4カ月遅れの2026年7月7日に公表し、2026年7月31日にパブリックコメントを締め切った。TRUMP AMERICA AI法も、民主党側の対抗法案GUARDRAILS法も議会を通過しておらず、いずれも議論案の段階にとどまっている。',
             '**中国のAIガバナンス：** CAC（中国国家インターネット情報弁公室）による事前審査が義務。コンテンツフィルターは中国共産党批判、台湾/チベット/新疆に関する議論、「社会主義の核心的価値観」を損なう内容をブロックする。フィルターはHTTP 4xxエラーではなくHTTP 200で`is_safe: 0`フラグを返す。PIPLは中国国民の個人データについてデータ現地化を義務付けている。',
             '**ハードウェアのボトルネック：** NvidiaはAIトレーニング用GPU市場の約80%を占める。TSMCは先端半導体の約90%を製造する。両者は地政学的な火種であり、米国のCHIPS法（520億ドル）はTSMC依存の低減を目指している。',
-            '**DeepSeek R1の影響：** 推論・コーディング（AIME 2024、MATH、HumanEval）でGPT-5.5を上回りながら、訓練コストは推定約600万ドル（フロンティアモデル推定比94%減、金額は議論あり）。中国向けに制限されたNvidia H800 GPUで訓練され、ハードウェア輸出規制に限界があることを示している。',
+            '**DeepSeek R1の影響：** 推論・コーディング（AIME 2024、MATH、HumanEval）でGPT-5.6を上回りながら、訓練コストは推定約600万ドル（フロンティアモデル推定比94%減、金額は議論あり）。中国向けに制限されたNvidia H800 GPUで訓練され、ハードウェア輸出規制に限界があることを示している。',
             '**世界的な規制の対立：** EUは権利と安全性を重視し、米国はイノベーションと競争力を重視し、中国は国家統制と戦略的優位性を重視する。グローバルにAIを展開する組織は、3つの相容れない枠組みを同時に乗りこなす必要がある。',
           ],
         },
@@ -3797,7 +3797,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'EU組織の場合：重要なコンプライアンス期限',
           content: [
             '**EU AI法は拘束力があり、その透明性規則とGPAI規則は2026年8月から施行されている。** EU本拠地の組織またはEUユーザーにサービスを提供する場合、4部構成のリスク分類システムを満たす必要がある。2026年7月27日発効のデジタル・オムニバスにより単独型ハイリスクAIの適用は2027年12月2日へ延期されたが、チャットボットやAI生成コンテンツの開示義務は当初予定どおり2026年8月から適用されている。禁止慣行の罰金は3500万ユーロまたは世界売上の7%に達する — どちらか大きい方。非準拠は交渉の余地がない。',
-            '**EU内でGPT-5.5、Claude Opus 4.8、またはGemini 3.1 Proを展開する場合、汎用AI（GPAI）の準拠ドキュメントを確認する必要がある。** OpenAI、Anthropic、GoogleはAug 2025からトランスペアレンシードキュメント（訓練データサマリー、パフォーマンスボーダー、セキュリティテスト）を発行している。これらの認定書を準拠の証拠として保存 — 規制当局がそれを求める。',
+            '**EU内でGPT-5.6、Claude Opus 5、またはGemini 3.1 Proを展開する場合、汎用AI（GPAI）の準拠ドキュメントを確認する必要がある。** OpenAI、Anthropic、GoogleはAug 2025からトランスペアレンシードキュメント（訓練データサマリー、パフォーマンスボーダー、セキュリティテスト）を発行している。これらの認定書を準拠の証拠として保存 — 規制当局がそれを求める。',
             '**高リスクAIシステム（採用、信用決定、ヘルスケア、執行）は展開前に準拠評価が必要。** これは、バイアスのテスト、人間監視メカニズムのドキュメント、すべてのAI決定の監査ログを意味する。ローカルに展開されるオープンウェイトモデル（LLaMA via Ollama、Mistral Large）はデータ常駐要件を満たす — データは決してインフラから出ず、監査証跡を制御する。',
             '**ブリュッセル効果はあなたにも適用される。** あなたのAIシステムが単一のEU住民に到達した場合、EU AI法が適用される — 組織がUS または中国に本拠地を置いている場合でも。つまり、複数の構成の管理より全体的に同じコンプライアンスレベルを実施する方が簡単。',
           ],
@@ -3808,9 +3808,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '中国のAI API（DeepSeek、ERNIE 4.0、Qwen via Alibaba Cloud）はAPIレベルでコンテンツをフィルタリング — 政治的なトピック、CP批判、台湾/チベット/新疆の独立は HTTP-200 でレスポンスで is_safe: 0 を返す、HTTP-4xx ではない。アプリケーションコードで明示的に処理。',
             'Mistralモデルとローカル Ollama 実装はEU AI法のデータ常駐要件を満たす — プロンプトと出力はインフラを離れない。これがプロンプトエンジニアのEU GDPR + AI法準拠への最もスムーズな方法。',
-            'GPT-5.5 と Claude Opus 4.8 は August 2025 から EU AI法の GPAI準拠。EU関連の実装で追加のモデルレベル準拠作業なしで使用可能 — 責務はアプリケーションレベル（プロバイダー）にある、モデルレベルではない。',
+            'GPT-5.6 と Claude Opus 5 は August 2025 から EU AI法の GPAI準拠。EU関連の実装で追加のモデルレベル準拠作業なしで使用可能 — 責務はアプリケーションレベル（プロバイダー）にある、モデルレベルではない。',
             'ブリュッセル効果は、EU住民向けのプロンプトが米国ホストのモデルに送信される場合、EU AI法の要件に従う — 組織がEU内に本拠地を置いていない場合でも。',
-            'マルチジュリスディクション・テストでは同じプロンプトを同時に Mistral（EU準拠）、GPT-5.5（US/GPAI）、Qwen（中国アクセス可能）に送信して、規制コンテキスト全体で出力を比較。PromptQuorum はこれをネイティブにサポート。',
+            'マルチジュリスディクション・テストでは同じプロンプトを同時に Mistral（EU準拠）、GPT-5.6（US/GPAI）、Qwen（中国アクセス可能）に送信して、規制コンテキスト全体で出力を比較。PromptQuorum はこれをネイティブにサポート。',
           ],
         },
         promptOptimizationByRegion: {
@@ -3825,14 +3825,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
             {
               '地域': 'ヨーロッパ連合',
               'プロンプトの法的制限': 'EU AI法：EU消費者向けコンテンツを生成するプロンプトはAI開示を含む必要がある。GDPR：プロンプトに法的根拠なく個人データを含めることはできない。高リスクAIアプリケーション（HR、クレジット、ヘルスケア）は人間の監視が必要 — プロンプトは最終決定を自動化することはできない。',
-              '言語最適化': 'ターゲット言語（ドイツ語、フランス語など）でプロンプトを書く — GPT-5.5 と Claude Opus 4.8 は、プロンプトが出力と同じ言語の場合、非英語タスクでかなり良好。出力言語をシステムプロンプトに明示的に指定。',
-              '推奨モデル': 'Mistral Large（フランス語、EU本拠地）、ローカル Ollama 実装（データはインフラを離れない）、またはEU地域APIエンドポイントと SCC を持つGPT-5.5/Claude。',
+              '言語最適化': 'ターゲット言語（ドイツ語、フランス語など）でプロンプトを書く — GPT-5.6 と Claude Opus 5 は、プロンプトが出力と同じ言語の場合、非英語タスクでかなり良好。出力言語をシステムプロンプトに明示的に指定。',
+              '推奨モデル': 'Mistral Large（フランス語、EU本拠地）、ローカル Ollama 実装（データはインフラを離れない）、またはEU地域APIエンドポイントと SCC を持つGPT-5.6/Claude。',
             },
             {
               '地域': 'アメリカ合衆国',
               'プロンプトの法的制限': '連邦AI法なし、ただしセクター規則が適用：HIPAA（ヘルスケア — PHI はプロンプトに含まれない）、CCPA/CPRA（カリフォルニア — プロンプト内の個人データは消費者権利をトリガー）、FTC法（プロンプトは消費者コンテキストで欺瞞的なコンテンツを生成することはできない）。州の生体認証法（イリノイ BIPA）は顔/音声データを処理するプロンプトを制限。',
-              '言語最適化': 'US フロンティアモデル（GPT-5.5、Claude Opus 4.8）は英語に最適化され、英語プロンプトで最高のパフォーマンスを達成。スペイン語の米国市場では、モデルに明示的にスペイン語を指示するか、二言語システムプロンプトを使用 — 自動検出に依存しないこと。',
-              '推奨モデル': '一般使用では GPT-5.5 または Claude Opus 4.8。規制されたヘルスケアまたは金融プロンプトでは、SCC を備えた API を使用し、プロンプトコンテキストで PHI/PII を送信しないこと。',
+              '言語最適化': 'US フロンティアモデル（GPT-5.6、Claude Opus 5）は英語に最適化され、英語プロンプトで最高のパフォーマンスを達成。スペイン語の米国市場では、モデルに明示的にスペイン語を指示するか、二言語システムプロンプトを使用 — 自動検出に依存しないこと。',
+              '推奨モデル': '一般使用では GPT-5.6 または Claude Opus 5。規制されたヘルスケアまたは金融プロンプトでは、SCC を備えた API を使用し、プロンプトコンテキストで PHI/PII を送信しないこと。',
             },
             {
               '地域': '中国',
@@ -3843,14 +3843,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
             {
               '地域': 'UK / ポストブレグジット',
               'プロンプトの法的制限': 'UK GDPR（EU GDPR と同等）個人データに適用。UK AI Safety Institute はモデルレベルの準拠ではなくフロンティアモデル評価に焦点。拘束力のあるAI開示法なし — UK はイノベーション志向のセクター主導のアプローチを選択。OFCOM はブロードキャストコンテキストで AI生成コンテンツを規制。',
-              '言語最適化': 'プロンプト内のイギリス英語の綴りと慣用句が UK 関連コンテンツの出力品質を向上させる。GPT-5.5 は明示的な「UK English」の指示に応答；これなしで標準は American English。',
-              '推奨モデル': 'GPT-5.5 または Claude Opus 4.8。UK-EU データ転送はブレグジット後 SCC が必要 — UK 適切性決定が存在するも審査対象。',
+              '言語最適化': 'プロンプト内のイギリス英語の綴りと慣用句が UK 関連コンテンツの出力品質を向上させる。GPT-5.6 は明示的な「UK English」の指示に応答；これなしで標準は American English。',
+              '推奨モデル': 'GPT-5.6 または Claude Opus 5。UK-EU データ転送はブレグジット後 SCC が必要 — UK 適切性決定が存在するも審査対象。',
             },
             {
               '地域': '日本',
               'プロンプトの法的制限': '日本個人情報保護法（APPI）はAIプロンプトでの個人データ使用を制限。日本は専門AIの法律を持たない（2026年）— METI と内務省のガイダンスは任意。日本は広島AIプロセスに参加 — その11の原則への準拠は日本企業に推奨。',
-              '言語最適化': '日本語タスク用の日本語プロンプトはすべての主要モデルで英語プロンプトを上回る。GPT-5.5 と Claude Opus 4.8 は日本語をよく処理；楽天 AI と NTT LLM は日本固有の実装で利用可能。カジュアル（タメ口）レジスターをシステムプロンプトで避ける — 敬語の定式化は日本のビジネスコンテキストで準拠と出力品質を改善。',
-              '推奨モデル': '一般的な日本語タスク用 GPT-5.5 または Claude Opus 4.8。楽天 AI（楽天グループ）または NTT LLM は日本国内準拠に敏感な実装用。',
+              '言語最適化': '日本語タスク用の日本語プロンプトはすべての主要モデルで英語プロンプトを上回る。GPT-5.6 と Claude Opus 5 は日本語をよく処理；楽天 AI と NTT LLM は日本固有の実装で利用可能。カジュアル（タメ口）レジスターをシステムプロンプトで避ける — 敬語の定式化は日本のビジネスコンテキストで準拠と出力品質を改善。',
+              '推奨モデル': '一般的な日本語タスク用 GPT-5.6 または Claude Opus 5。楽天 AI（楽天グループ）または NTT LLM は日本国内準拠に敏感な実装用。',
             },
           ],
         },
@@ -3886,7 +3886,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         qaWhichCountriesDominate: {
           title: 'どの国がAI開発を主導しているのか？',
           content: [
-            '米国はフロンティアモデルの能力で主導している — OpenAI（GPT-5.5）、Anthropic（Claude）、Google DeepMind（Gemini）はすべて米国本社である。中国はAI特許件数で世界を主導しており（WIPO調べで2022年の世界特許の約70%）、米国外で最も能力の高い国産モデル — Alibaba Qwen 3、Baidu ERNIE 4.0、DeepSeek R1 — を有する。EUはAI規制で主導しているが、フロンティア能力では遅れをとっている — フランスのMistral AIが欧州最強の対抗馬だ。英国、カナダ、UAEは米国・中国いずれのインフラにも一元的に依存しない独立した主体としてAIに投資している。',
+            '米国はフロンティアモデルの能力で主導している — OpenAI（GPT-5.6）、Anthropic（Claude）、Google DeepMind（Gemini）はすべて米国本社である。中国はAI特許件数で世界を主導しており（WIPO調べで2022年の世界特許の約70%）、米国外で最も能力の高い国産モデル — Alibaba Qwen 3、Baidu ERNIE 4.0、DeepSeek R1 — を有する。EUはAI規制で主導しているが、フロンティア能力では遅れをとっている — フランスのMistral AIが欧州最強の対抗馬だ。英国、カナダ、UAEは米国・中国いずれのインフラにも一元的に依存しない独立した主体としてAIに投資している。',
           ],
         },
 
@@ -3918,9 +3918,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**AI規制**とは、人工知能システムの開発・展開・統治を規律する法律、大統領令、任意のフレームワークの総体である。AI規制は主権国家と国際機関によって策定される。3つの主要な規制体制は、EU AI法（欧州連合）、NIST AIリスクマネジメントフレームワーク（米国）、CAC生成AI対策（中国）である。',
             '**米中テック覇権争い**とは、半導体、人工知能、先端製造業における主導権をめぐる米国と中国の二国間競争である。この覇権争いは、米国によるNvidia GPUの輸出規制、中国の国産代替戦略（Made in China 2025）、対立するAIガバナンス枠組みを通じて表れる。EUはこの覇権争いの当事者ではなく、規制力を通じてそれを形作る第三の主体である。',
             '**EU AI法**は、2024年3月に欧州議会で可決された規則である。EU AI局と各国の市場監視当局によって施行される。本社所在地にかかわらず、AIシステムがEUユーザーに影響を与えるすべての組織に適用される。EU AI法はブリュッセル効果と関連している — 域外適用されるため、事実上OpenAI、Google DeepMind、Anthropicを世界規模で規制している。',
-            '**NVIDIA**は、AIトレーニング用GPU（H100、H200、B200シリーズ）を設計する米国の半導体企業である。NVIDIAのハードウェアは、GPT-5.5、Claude、Gemini、その他大半のフロンティアAIモデルの訓練を支える主要な計算基盤である。対中NVIDIA GPU輸出規制は米中テック覇権争いの中心的なメカニズムである。NVIDIAの市場地位（AI用GPUの約80%のシェア）は、同社を商業的主体であると同時に地政学的主体にもしている。',
+            '**NVIDIA**は、AIトレーニング用GPU（H100、H200、B200シリーズ）を設計する米国の半導体企業である。NVIDIAのハードウェアは、GPT-5.6、Claude、Gemini、その他大半のフロンティアAIモデルの訓練を支える主要な計算基盤である。対中NVIDIA GPU輸出規制は米中テック覇権争いの中心的なメカニズムである。NVIDIAの市場地位（AI用GPUの約80%のシェア）は、同社を商業的主体であると同時に地政学的主体にもしている。',
             '**TSMC**（台湾積体電路製造）は、NVIDIA、Apple、AMD、Googleのために先端半導体を製造する台湾のファウンドリである。台湾という地理的所在 — およびこの島の政治的地位をめぐる係争 — がTSMCをAI地政学の重要な変数にしている。CHIPS and Science Actは、国内米国ファブに資金を投じることでTSMCへの米国の依存を減らす目的も部分的に持って制定された。',
-            '**DeepSeek**は、High-Flyer Capital Managementの支援を受ける中国のAI研究所で、2025年1月にDeepSeek R1をリリースした。DeepSeek R1は推論・コーディングのベンチマーク（AIME 2024、MATH-500、HumanEval）でGPT-5.5を上回りながら、中国向けに制限されたNVIDIA H800 GPUを用いて推定約600万ドルという — フロンティアモデル推定比94%減の — コストで訓練された。DeepSeekのリリースは、米国の輸出規制が中国のフロンティアAI開発を恒久的に制限できるという主張の説得力を弱めた。',
+            '**DeepSeek**は、High-Flyer Capital Managementの支援を受ける中国のAI研究所で、2025年1月にDeepSeek R1をリリースした。DeepSeek R1は推論・コーディングのベンチマーク（AIME 2024、MATH-500、HumanEval）でGPT-5.6を上回りながら、中国向けに制限されたNVIDIA H800 GPUを用いて推定約600万ドルという — フロンティアモデル推定比94%減の — コストで訓練された。DeepSeekのリリースは、米国の輸出規制が中国のフロンティアAI開発を恒久的に制限できるという主張の説得力を弱めた。',
           ],
         },
 
@@ -3942,13 +3942,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'AI軍拡競争：米国、中国、EU',
           content: [
             '**世界的な採用をめぐって、AIガバナンスに関する3つの相容れないビジョンが競合している — 米国はイノベーションと競争力を優先し、中国は国家主導によって戦略的なAI優位を達成しようとし、EUはブリュッセル効果を通じて世界に基準を輸出する権利ベースの法的枠組みを構築している。** このAI軍拡競争は主に民間主導だ — 主導的な研究所は民間企業（OpenAI、Anthropic、Google DeepMind、Baidu、Alibaba）だが、規制の主導権、ハードウェアのサプライチェーン、人材といった賭け金は地政学的である。',
-            'この競争は、誰が最も能力の高いモデルを作るかだけの問題ではない。どの規制枠組みが世界標準になるかの問題でもある。EU AI法はEUユーザーに展開されるあらゆるAIシステムに適用されるため、すでにブリュッセルを事実上OpenAI、Anthropic、Google DeepMindの世界的な規制者にしている。ハードウェア支配は第三の次元である — CHIPS and Science Act（520億ドル）とNvidia GPU輸出規制は、中国の計算資源へのアクセスを制限することを狙う。訓練コストのごく一部でGPT-5.5に匹敵したDeepSeek R1の2025年1月のリリースは、そうした規制に限界があることを示した。これらのダイナミクスがモデルの利用可能性にどう影響するかは、[オープンソース vs プロプライエタリLLM](https://www.promptquorum.com/ja/prompt-engineering/open-source-vs-proprietary-llms)を参照。',
+            'この競争は、誰が最も能力の高いモデルを作るかだけの問題ではない。どの規制枠組みが世界標準になるかの問題でもある。EU AI法はEUユーザーに展開されるあらゆるAIシステムに適用されるため、すでにブリュッセルを事実上OpenAI、Anthropic、Google DeepMindの世界的な規制者にしている。ハードウェア支配は第三の次元である — CHIPS and Science Act（520億ドル）とNvidia GPU輸出規制は、中国の計算資源へのアクセスを制限することを狙う。訓練コストのごく一部でGPT-5.6に匹敵したDeepSeek R1の2025年1月のリリースは、そうした規制に限界があることを示した。これらのダイナミクスがモデルの利用可能性にどう影響するかは、[オープンソース vs プロプライエタリLLM](https://www.promptquorum.com/ja/prompt-engineering/open-source-vs-proprietary-llms)を参照。',
           ],
           items: [
-            '**米国の立場：** フロンティアモデル能力（GPT-5.5、Claude Opus 4.8、Gemini 3.1 Pro）、チップ設計（Nvidia、AMD）、AI投資（OECD調べで2023年に民間投資670億ドル）で主導。統一された連邦AI法はなく、展開は加速するがコンプライアンスは断片化する。',
+            '**米国の立場：** フロンティアモデル能力（GPT-5.6、Claude Opus 5、Gemini 3.1 Pro）、チップ設計（Nvidia、AMD）、AI投資（OECD調べで2023年に民間投資670億ドル）で主導。統一された連邦AI法はなく、展開は加速するがコンプライアンスは断片化する。',
             '**中国の立場：** AI特許件数、顔認識の規模、国家主導のインフラ展開で主導。モデル（Qwen 3、ERNIE 4.0、DeepSeek R1）は多くのベンチマークで競争力がある。Nvidiaアーキテクチャへのハードウェア依存が、輸出規制が狙う主要な戦略的脆弱性である。',
             '**欧州の立場：** AI規制 — EU AI法は世界の参照枠組み — とオープンウェイト研究（フランスのMistral）で主導。フロンティアモデル能力と民間投資では遅れをとる。規制力で補う — ブリュッセル効果は米国・中国のプロバイダーに、世界向け製品でEU基準への準拠を強いる。',
-            '**ハードウェア層：** Nvidia H100/H200 GPUがAI訓練を席巻する。米国の輸出規制は対中販売を制限。DeepSeek R1は制限対象のH800 GPUで訓練され、報告コストは約600万ドル — GPT-5.5の訓練コスト推定比94%減 — であり、ハードウェア規制が中国のフロンティアAIを止めていないことを示している。',
+            '**ハードウェア層：** Nvidia H100/H200 GPUがAI訓練を席巻する。米国の輸出規制は対中販売を制限。DeepSeek R1は制限対象のH800 GPUで訓練され、報告コストは約600万ドル — GPT-5.6の訓練コスト推定比94%減 — であり、ハードウェア規制が中国のフロンティアAIを止めていないことを示している。',
           ],
           image: '/images/regional-ai-players-ja.svg',
           imageCaption: '米国：OpenAI、Anthropic、Google DeepMind（VC出資）。EU：Mistral、Hugging Face（オープンソース、対米で資金不足）。中国：Baidu、Alibaba、Tencent（国家支援、CAC監督下）。',
@@ -3965,7 +3965,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**高リスク：** 重要インフラ、教育、雇用、必須サービス（信用、給付）、法執行、国境管理、司法運営におけるAI。適合性評価、透明性文書、人間による監視、EUデータベースへの登録が必要。',
             '**限定的リスク：** チャットボットとAI生成コンテンツ。開示が必要 — ユーザーはAIと対話していることを知らなければならない。',
             '**最小リスク：** スパムフィルター、ビデオゲーム内のAI、重大な影響のないレコメンドシステム。既存法を超える特別な義務はない。',
-            '**汎用AI（GPAI）：** GPT-5.5、Claude、Geminiのようなモデルは、訓練データの概要を公表し、EU著作権法を遵守し、重大インシデントを報告しなければならない。システミックリスクを持つモデル（訓練計算量10の25乗FLOPS超）は、追加の敵対的テスト要件に直面する。GPAI規則は2025年8月から適用された。',
+            '**汎用AI（GPAI）：** GPT-5.6、Claude、Geminiのようなモデルは、訓練データの概要を公表し、EU著作権法を遵守し、重大インシデントを報告しなければならない。システミックリスクを持つモデル（訓練計算量10の25乗FLOPS超）は、追加の敵対的テスト要件に直面する。GPAI規則は2025年8月から適用された。',
             '**執行：** EU AI局（欧州委員会内）がGPAIモデルを監督する。各国の市場監視当局が高リスクAI規則を執行する。罰金：禁止行為に対して最大3,500万ユーロまたは世界売上高の7%、高リスク違反に対して1,500万ユーロまたは3%。',
             '**スケジュール：** 禁止行為：2024年8月。GPAI義務：2025年8月。第50条の透明性義務（チャットボット/ディープフェイクの開示）：2026年8月、デジタル・オムニバスの影響を受けない。単独型高リスクAIシステム（附属書III）：デジタル・オムニバスにより2026年8月から2027年12月2日へ延期。規制対象製品に組み込まれた高リスクAI（附属書I）：2027年8月から2028年8月2日へ延期。',
           ],
@@ -4008,8 +4008,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         franceMistral: {
           title: 'フランスとMistral：欧州のAI独立を築く',
           content: [
-            '**フランスは公的投資とMistral AIを通じて米国のAI優位に対する戦略的対抗軸を構築しており、オープンウェイトモデルを欧州のAI主権への道と位置づけている。** MistralはGPT-5.5やClaudeに対するEU最有力の代替であり、フランスの20億ユーロのAI投資は、Mistralのような企業に資金を提供し、OpenAI、Google、Anthropicへの依存を減らすことを明確な目的としている。',
-            '**Mistral AI（2023年設立）：** 元Meta社員のArthur Mensch、Guilaume Blanc、Tim Caronによって設立。Mistralは2023年9月にMistral Small（オープンウェイト）をリリースし、続いて多くのタスクでGPT-5.5に匹敵するMistral Large 2をリリースした。Mistral Large 2はMMLUで81.2%を記録（GPT-5.5は88.7%）だが、分類、要約、抽出タスクではプロプライエタリモデルに匹敵する。コンテキストウィンドウは12万3,000トークン。Mistral Community License下でライセンスされる（商用利用可、派生モデルの命名に関する制限はLLaMAに類似）。',
+            '**フランスは公的投資とMistral AIを通じて米国のAI優位に対する戦略的対抗軸を構築しており、オープンウェイトモデルを欧州のAI主権への道と位置づけている。** MistralはGPT-5.6やClaudeに対するEU最有力の代替であり、フランスの20億ユーロのAI投資は、Mistralのような企業に資金を提供し、OpenAI、Google、Anthropicへの依存を減らすことを明確な目的としている。',
+            '**Mistral AI（2023年設立）：** 元Meta社員のArthur Mensch、Guilaume Blanc、Tim Caronによって設立。Mistralは2023年9月にMistral Small（オープンウェイト）をリリースし、続いて多くのタスクでGPT-5.6に匹敵するMistral Large 2をリリースした。Mistral Large 2はMMLUで81.2%を記録（GPT-5.6は88.7%）だが、分類、要約、抽出タスクではプロプライエタリモデルに匹敵する。コンテキストウィンドウは12万3,000トークン。Mistral Community License下でライセンスされる（商用利用可、派生モデルの命名に関する制限はLLaMAに類似）。',
             '**フランスがオープンウェイトを選んだ理由：** フランスの立場は、プロプライエタリAPIがベンダーロックイン、データ常駐リスク、米国企業への長期依存を生むというものだ。オープンウェイトモデルは欧州のインフラに展開でき、データをEU管轄内に留め、米国クラウドプロバイダーとのGDPR/AI法上の摩擦を回避できる。これはブリュッセル効果とも整合する — MistralのEU AI法準拠を確保することで、フランスは欧州の規制力を世界的に強化している。',
             '**政府の支援：** Caisse des Dépôts et Placements（国家投資基金）を通じたフランス政府の後ろ盾と直接的な補助金。Mistralはフランスの戦略的投資家の支援を受け、2024年2月に3億8,500万ユーロのシリーズB資金調達を実施した。かつてAirbusが欧州の航空宇宙分野でBoeingへの対抗軸として構築されたのと同様に、AI分野の「欧州チャンピオン」として位置づけられている。',
           ],
@@ -4057,7 +4057,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '**Made in China 2025と新世代AI発展計画（2017年）：** 2017年の中国のAI計画は、研究、人材、製品開発、規制のすべてにわたり2030年までの世界的なAIリーダーシップを目標とした。150億ドルの国家資金を配分し、AI特許件数、研究引用数、産業収益のベンチマークを設定した。AIは半導体・量子コンピューティングと並ぶ中核的な戦略技術に指定されている。',
             '**中国国家インターネット情報弁公室（CAC）のアルゴリズム規制（2022年3月）：** 中国のユーザーにサービスを提供するすべてのアルゴリズムベースのレコメンドシステムに対し、CACへの登録、アルゴリズムの仕組みの開示、ユーザーがパーソナライズされたレコメンドをオプトアウトできる仕組みの提供を義務付けた。2023年7月には生成AIにも拡大され、すべての生成AIサービスは登録・安全性評価をパスし、出力が「社会主義の核心的価値観」に沿うことを確保しなければならない。',
-            '**DeepSeek R1（2025年1月）：** ヘッジファンドHigh-Flyerが支援する中国のAI研究所DeepSeekがリリース。R1はAIME 2024（79.8%）、MATH-500（97.3%）、HumanEvalコーディングタスクを含む複数のベンチマークでGPT-5.5を上回った。輸出規制の範囲内にある中国専用の変種であるNvidia H800 GPUで訓練され、推定訓練コストは約600万ドル（フロンティアモデル推定比94%減。金額自体には議論があるが、大幅なコスト優位は明白）。このリリースはNvidia株価の大幅下落を引き起こし、ハードウェア輸出規制の有効性をめぐる米国の政策論争を加速させた。',
+            '**DeepSeek R1（2025年1月）：** ヘッジファンドHigh-Flyerが支援する中国のAI研究所DeepSeekがリリース。R1はAIME 2024（79.8%）、MATH-500（97.3%）、HumanEvalコーディングタスクを含む複数のベンチマークでGPT-5.6を上回った。輸出規制の範囲内にある中国専用の変種であるNvidia H800 GPUで訓練され、推定訓練コストは約600万ドル（フロンティアモデル推定比94%減。金額自体には議論があるが、大幅なコスト優位は明白）。このリリースはNvidia株価の大幅下落を引き起こし、ハードウェア輸出規制の有効性をめぐる米国の政策論争を加速させた。',
             '**Huawei Ascendチップ：** HuaweiのAscend 910B・910Cチップは、AI訓練向けのNvidia GPUの国産代替として位置づけられている。性能はほとんどのベンチマークでNvidia H100に及ばないが、中規模モデルの訓練には十分である。中国の大手テック企業（Baidu、Alibaba、ByteDance）は、Nvidia依存を減らすため一部のワークロードをAscendへ移行し始めている。',
             '**一帯一路AI外交：** 中国は一帯一路（BRI）のパートナーシップを通じて、顔認識やスマートシティシステムといったAI監視インフラを発展途上国に輸出している。プロバイダーにはHuawei、Alibaba Cloud、ZTEが含まれる。これは、アルゴリズムによる社会管理を含む中国のAIガバナンス規範をパートナー国に輸出し、OECD/EUの枠組みの外側に並行するAI標準のエコシステムを生み出している。',
             '**主要な中国AIモデル：** Alibaba Qwen 3、Baidu ERNIE 4.0、ByteDance Doubao、Z.ai GLM-4。これらは中国語タスクで競争力があり、多言語ベンチマークでも徐々に力をつけている。[オープンソース vs プロプライエタリLLMのトレードオフ](https://www.promptquorum.com/ja/prompt-engineering/open-source-vs-proprietary-llms)は中国モデルの採用に影響する — Qwenのオープンウェイトリリースは海外の開発者を引きつけている。',
@@ -4067,8 +4067,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         chinaModelsAccessibility: {
           title: '中国のプロンプトエンジニア向け：利用可能なモデル',
           content: [
-            '**中国のユーザーにサービスを提供する製品を運営している場合、利用可能なモデル、義務的なコンテンツフィルター、EUや米国には存在しない事前審査要件を伴う、独自のAIエコシステムの中で活動していることになる。** 海外モデル — GPT-5.5、Claude、Gemini — はVPNなしでは中国本土からアクセスできない。選択肢は国内登録済みの代替モデルに限られる。',
-            '**中国で利用可能なモデル：** Alibaba Qwen 3（オープンウェイト、7B〜72B、128Kコンテキスト、Alibaba Cloud経由のAPI）、Baidu ERNIE 4.0（Qianfanプラットフォーム経由のAPI）、ByteDance Doubao（Volcano Engine経由のAPI）、Z.ai GLM-4（Z.aiプラットフォーム経由のAPI）、DeepSeek R1/V3（DeepSeekプラットフォーム経由のAPI）。Qwen 3 72Bは最強のオープンウェイトの選択肢であり、中国語タスクに使いながら中国国外でセルフホストできる。MMLUでGPT-5.5に5ポイント差まで迫り、中国語特化ベンチマーク（C-Eval）では上回る。',
+            '**中国のユーザーにサービスを提供する製品を運営している場合、利用可能なモデル、義務的なコンテンツフィルター、EUや米国には存在しない事前審査要件を伴う、独自のAIエコシステムの中で活動していることになる。** 海外モデル — GPT-5.6、Claude、Gemini — はVPNなしでは中国本土からアクセスできない。選択肢は国内登録済みの代替モデルに限られる。',
+            '**中国で利用可能なモデル：** Alibaba Qwen 3（オープンウェイト、7B〜72B、128Kコンテキスト、Alibaba Cloud経由のAPI）、Baidu ERNIE 4.0（Qianfanプラットフォーム経由のAPI）、ByteDance Doubao（Volcano Engine経由のAPI）、Z.ai GLM-4（Z.aiプラットフォーム経由のAPI）、DeepSeek R1/V3（DeepSeekプラットフォーム経由のAPI）。Qwen 3 72Bは最強のオープンウェイトの選択肢であり、中国語タスクに使いながら中国国外でセルフホストできる。MMLUでGPT-5.6に5ポイント差まで迫り、中国語特化ベンチマーク（C-Eval）では上回る。',
           ],
         },
 
@@ -4147,7 +4147,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '**EU内の組織：** [EU AI法](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)に直接準拠しなければならない。単独型高リスクAIシステム（人事、信用、ヘルスケア、公共サービス）は、2026年8月2日から2027年12月2日へ延期された期限までに適合性評価、人間による監視の文書化、[EU AIデータベース](https://digital-strategy.ec.europa.eu/en/policies/ai-office)への登録が必要（2026年7月27日発効のデジタル・オムニバスによる延期）。チャットボットとAI生成コンテンツに関する第50条の開示義務は、2026年8月からすでに適用されている。個人データを扱うすべてのAIはGDPRを遵守しなければならない — AI訓練パイプラインと出力処理を含む。',
             '**EUユーザーにサービスを提供する非EU組織：** ブリュッセル効果の対象となる — [EU AI法](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)は、あなたのAI出力がEUユーザーに届く場合に適用される。EU向け製品で使用されるGPAIモデルは、2025年8月以降の透明性義務を遵守しなければならない。非準拠には、EU本社の違反者と同じ罰則が科される。',
-            '**EU展開における米国のAIツール：** GPT-5.5、Claude Opus 4.8、Gemini 3.1 ProはすべてGPAIモデルに分類される。OpenAI、Anthropic、GoogleはEU AI法のGPAI準拠文書を公表している。実装者としてこれらのツールを高リスクAIシステムで使用する組織は、自らの適合性評価に引き続き責任を負う — プロバイダーのGPAI準拠はあなたの展開をカバーしない。',
+            '**EU展開における米国のAIツール：** GPT-5.6、Claude Opus 5、Gemini 3.1 ProはすべてGPAIモデルに分類される。OpenAI、Anthropic、GoogleはEU AI法のGPAI準拠文書を公表している。実装者としてこれらのツールを高リスクAIシステムで使用する組織は、自らの適合性評価に引き続き責任を負う — プロバイダーのGPAI準拠はあなたの展開をカバーしない。',
             '**中国のAIツール：** DeepSeek R1などの中国モデルは国際的に利用可能だが、EU・米国の組織にとって追加の調達リスクを伴う — データ常駐は不明確で、プロバイダーはCACコンテンツ規制の対象であり、中国国家インターネット情報弁公室はデータ開示を強制できる。EU・NATO加盟国の政府機関や重要インフラ組織は、中国製AIツールの利用を制限または禁止しつつある。',
             '**データ常駐：** EUのGDPRは、十分性認定や適切な保護措置のない国への個人データ移転を制限する。米国プロバイダーを用いた個人データのAI推論には、標準契約条項（SCC）またはEU-米国データプライバシーフレームワーク（2023年）への依拠が必要である。中国への移転には十分性認定がなく、契約上の保護措置が必要だが、その執行は難しい。',
             '**調達の判断：** 米国連邦機関は、指定された中国企業のAIの使用を禁じられている。複数のEU加盟国（ドイツ、フランス、オランダ）は、政府調達における中国製AIツールの使用を制限するガイダンスを発行した。民間セクターの組織にとって、調達方針はAIプロバイダーの訓練データの法域、コンテンツモデレーションの実務、政府アクセス規定に対応すべきである。',
@@ -4167,7 +4167,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         qaWhoIsWinning: {
           title: '世界のAI競争で勝っているのは誰か？',
           content: [
-            '米国はフロンティアモデルの能力 — GPT-5.5（OpenAI）、Claude（Anthropic）、Gemini（Google DeepMind）— と民間AI投資（[OECDデータ](https://oecd.ai)によれば2023年に670億ドル）で主導している。中国はAI特許出願、国家主導の展開規模、国産モデル開発で主導しており、DeepSeek R1は2025年1月に主要なベンチマークでGPT-5.5に匹敵した。欧州連合はAI規制で主導している — [EU AI法](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)は世界の参照枠組みである — が、その経済規模に対してフロンティアモデル能力と民間投資では遅れをとっている。3つの次元すべてで同時に主導する単一の主体は存在しない。',
+            '米国はフロンティアモデルの能力 — GPT-5.6（OpenAI）、Claude（Anthropic）、Gemini（Google DeepMind）— と民間AI投資（[OECDデータ](https://oecd.ai)によれば2023年に670億ドル）で主導している。中国はAI特許出願、国家主導の展開規模、国産モデル開発で主導しており、DeepSeek R1は2025年1月に主要なベンチマークでGPT-5.6に匹敵した。欧州連合はAI規制で主導している — [EU AI法](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)は世界の参照枠組みである — が、その経済規模に対してフロンティアモデル能力と民間投資では遅れをとっている。3つの次元すべてで同時に主導する単一の主体は存在しない。',
           ],
         },
 
@@ -4181,21 +4181,21 @@ export const article: Partial<Record<Language, PEArticle>> = {
         qaHowChinaRegulates: {
           title: '中国はどのように人工知能を規制しているか？',
           content: [
-            '中国は中国国家インターネット情報弁公室（CAC）を通じてAIを規制する。アルゴリズムレコメンド規制（2022年）は、アルゴリズムによってキュレーションされたコンテンツのラベル表示を義務付ける。生成AI対策（2023年）は、消費者向け生成AIサービスが中国で開始される前にCACセキュリティ評価（45〜90日のプロセス）をパスすることを求め、AI出力が「社会主義の核心的価値観」に沿うことを義務付ける。海外AIモデル（GPT-5.5、Claude、Gemini）は回避手段なしでは中国本土からアクセスできない。国内の代替にはAlibaba Qwen、Baidu ERNIE 4.0、ByteDance Doubao、DeepSeekがある。',
+            '中国は中国国家インターネット情報弁公室（CAC）を通じてAIを規制する。アルゴリズムレコメンド規制（2022年）は、アルゴリズムによってキュレーションされたコンテンツのラベル表示を義務付ける。生成AI対策（2023年）は、消費者向け生成AIサービスが中国で開始される前にCACセキュリティ評価（45〜90日のプロセス）をパスすることを求め、AI出力が「社会主義の核心的価値観」に沿うことを義務付ける。海外AIモデル（GPT-5.6、Claude、Gemini）は回避手段なしでは中国本土からアクセスできない。国内の代替にはAlibaba Qwen、Baidu ERNIE 4.0、ByteDance Doubao、DeepSeekがある。',
           ],
         },
 
         qaWhatEUAIActRequires: {
           title: 'EU AI法は組織に何を求めているか？',
           content: [
-            'EU AI法はAIシステムを4段階のリスクに分類し、それぞれに応じた義務を課す。禁止行為 — 政府機関によるソーシャルスコアリング、公共空間でのリアルタイム生体監視 — は2024年8月から禁止されている。雇用、信用評価、ヘルスケア、法執行で使用される単独型高リスクAIシステムは、2026年7月27日発効のデジタル・オムニバスにより当初の2026年8月から延期された2027年12月2日までに、適合性評価、人間による監視の文書化、EU AIデータベースへの登録が必要である。汎用AIモデル（GPT-5.5、Claude、Gemini）は訓練データの概要を公表し、EU著作権法を遵守しなければならない — この規則は2025年8月から適用された。チャットボットとAI生成コンテンツに関する第50条の透明性義務は、予定どおり2026年8月から引き続き適用されている。EUユーザーにサービスを提供するすべての組織は、本社所在地にかかわらず準拠しなければならない。',
+            'EU AI法はAIシステムを4段階のリスクに分類し、それぞれに応じた義務を課す。禁止行為 — 政府機関によるソーシャルスコアリング、公共空間でのリアルタイム生体監視 — は2024年8月から禁止されている。雇用、信用評価、ヘルスケア、法執行で使用される単独型高リスクAIシステムは、2026年7月27日発効のデジタル・オムニバスにより当初の2026年8月から延期された2027年12月2日までに、適合性評価、人間による監視の文書化、EU AIデータベースへの登録が必要である。汎用AIモデル（GPT-5.6、Claude、Gemini）は訓練データの概要を公表し、EU著作権法を遵守しなければならない — この規則は2025年8月から適用された。チャットボットとAI生成コンテンツに関する第50条の透明性義務は、予定どおり2026年8月から引き続き適用されている。EUユーザーにサービスを提供するすべての組織は、本社所在地にかかわらず準拠しなければならない。',
           ],
         },
 
         qaExportControls: {
           title: '米国の輸出規制はAI開発にどう影響するか？',
           content: [
-            '米国の輸出規制は、A100やH100を含む先進的なNvidia GPUの中国への販売を制限し、中国のフロンティアAIモデル訓練能力を制限することを狙っている。この規制は輸出管理規則（EAR）を通じて執行され、指定の計算能力閾値を超えるNvidia、AMD、Intel製品に適用される。DeepSeek R1の2025年1月のリリースは、このアプローチの限界を示した — 中国向けに制限されたH800 GPUで、比較可能な米国モデルの報告コストのごく一部で訓練されながら、AIME 2024、MATH-500、HumanEvalのベンチマークでGPT-5.5に匹敵した。輸出規制は中国のフロンティアAI開発を減速させているが、止めてはいない。',
+            '米国の輸出規制は、A100やH100を含む先進的なNvidia GPUの中国への販売を制限し、中国のフロンティアAIモデル訓練能力を制限することを狙っている。この規制は輸出管理規則（EAR）を通じて執行され、指定の計算能力閾値を超えるNvidia、AMD、Intel製品に適用される。DeepSeek R1の2025年1月のリリースは、このアプローチの限界を示した — 中国向けに制限されたH800 GPUで、比較可能な米国モデルの報告コストのごく一部で訓練されながら、AIME 2024、MATH-500、HumanEvalのベンチマークでGPT-5.6に匹敵した。輸出規制は中国のフロンティアAI開発を減速させているが、止めてはいない。',
           ],
         },
 
@@ -4230,7 +4230,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         defGPAI: {
           title: '定義：汎用AI（GPAI）',
-          content: '広範なデータで訓練され、特化・専門分野に限定されない汎用的なアーキテクチャを持ち、幅広い下流タスクに適応可能なAIシステム。GPT-5.5、Claude Opus 4.8、Gemini 3.1 ProはGPAIモデルである。EU AI法の下で、訓練計算量が10の25乗FLOPを超えるGPAIモデルは、訓練データの概要、能力に関する文書、著作権遵守を含む透明性義務に直面する。',
+          content: '広範なデータで訓練され、特化・専門分野に限定されない汎用的なアーキテクチャを持ち、幅広い下流タスクに適応可能なAIシステム。GPT-5.6、Claude Opus 5、Gemini 3.1 ProはGPAIモデルである。EU AI法の下で、訓練計算量が10の25乗FLOPを超えるGPAIモデルは、訓練データの概要、能力に関する文書、著作権遵守を含む透明性義務に直面する。',
         },
 
         defCAC: {
@@ -4300,7 +4300,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'faq',
           title: 'よくある質問',
           faqs: [
-            { q: 'EU AI法とは何ですか？いつから適用されますか？', a: 'EU AI法は、2024年3月に欧州議会で可決された世界初の包括的なAI法です。禁止行為は2024年8月から適用されます。GPAIモデル（GPT-5.5、Claude、Geminiクラスのモデル）の義務は2025年8月から適用されます。第50条の透明性義務（チャットボットやAI生成コンテンツの開示）は2026年8月から適用されます。単独型高リスクAIシステムの要件は、2026年7月27日発効のデジタル・オムニバスにより2026年8月から2027年12月2日へ延期されました。EU市場にAIを提供する、またはEU居住者に影響を与えるAIを使用するすべての組織に適用されます。' },
+            { q: 'EU AI法とは何ですか？いつから適用されますか？', a: 'EU AI法は、2024年3月に欧州議会で可決された世界初の包括的なAI法です。禁止行為は2024年8月から適用されます。GPAIモデル（GPT-5.6、Claude、Geminiクラスのモデル）の義務は2025年8月から適用されます。第50条の透明性義務（チャットボットやAI生成コンテンツの開示）は2026年8月から適用されます。単独型高リスクAIシステムの要件は、2026年7月27日発効のデジタル・オムニバスにより2026年8月から2027年12月2日へ延期されました。EU市場にAIを提供する、またはEU居住者に影響を与えるAIを使用するすべての組織に適用されます。' },
             { q: 'EU AI法は非EU企業にも適用されますか？', a: 'はい。EU AI法は域外適用されます — プロバイダーの本社所在地にかかわらず、そのAI出力がEU内で使用されるすべてのプロバイダーに適用されます。AI製品がEU居住者に使用される米国企業も準拠しなければなりません。これはGDPRを世界標準にしたのと同じ域外適用の原則です。' },
             { q: 'EU AI法違反の罰則はどのくらいですか？', a: '禁止されたAI行為に対して最大3,500万ユーロまたは世界年間売上高の7%（いずれか高い方）。高リスクAI違反は最大1,500万ユーロまたは3%。執行当局への虚偽情報提供は最大750万ユーロまたは1%。金額の割合と固定額のうち高い方が適用されます。' },
             { q: 'EU AI法で禁止されているAI用途は何ですか？', a: '禁止（容認できないリスク）：政府機関によるソーシャルスコアリングシステム、公共空間でのリアルタイム生体識別（限定的な例外あり）、心理的脆弱性を悪用するAI、インターネット上の顔画像の無差別収集。これらは2024年8月以降禁止されています。' },
@@ -4314,7 +4314,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'EU組織はDeepSeekを商業目的で使用できますか？', a: '技術的には可能で、GDPR準拠の契約上の保護措置（標準契約条項）を用います。しかし実際には、SCCは中国法上の義務 — DeepSeekにCACのデータ開示要請への対応を求める義務 — に対して執行するのが困難です。政府調達は別の制約です — ドイツのBSI、フランスのANSSI、オランダのNCSCは、政府および重要インフラ用途での中国製AIツールに関する勧告または制限を発行しています。民間セクターのEU組織は商業目的でDeepSeekを使用できますが、GDPR第46条に基づく移転影響評価を実施し、残存リスクを文書化しなければなりません。ほとんどの法律顧問は、DeepSeekを通じた個人データの処理を避けるよう助言しています。' },
             { q: 'EU AI法はEUの競争力を助けますか、それとも損ないますか？', a: 'これは本物の戦略的ジレンマです — EU AI法はEUのAIスタートアップを減速させる可能性がある一方、欧州の規制上の信頼性を世界的に強化します。一方では、コンプライアンスコストと適合性評価がEU企業にとっての摩擦を生みます — フランスのMistral AIは米国の競合他社よりも制約が大きい状況にあります。他方では、ブリュッセル効果によりEUの規制枠組みが世界標準になり、コンプライアンスにおけるEU拠点企業の競争優位と、米中テック大手に対する欧州の交渉力を生み出します。欧州は「規制上のリーダーシップ」に賭けており、「純粋な能力のリーダーシップ」ではありません — 米国や中国とは根本的に異なるAI戦略であり、欧州を二流の技術生産者ではなく世界のAIガバナンスに不可欠な存在にしています。' },
             { q: '欧州の計算能力は米国・中国と比べてどうですか？', a: '欧州は計算インフラで大きく遅れをとっています。米国はGPU製造（Nvidiaの市場シェア約80%）とカスタムシリコン（Google TPU、Amazon Trainium）で優位に立っています。中国はTSMC（台湾）で製造し、制限対象のNvidia H系列・A系列GPUを使用しています。欧州には相当するものがありません — ASML（オランダ）はチップ製造装置を製造していますが、自社ファブは所有していません。EU Chips Act（430億ユーロ、2023〜2032年）はEU域内にIntelとTSMCのファブを建設することを目指していますが、いずれも2027〜2029年まで稼働しません — 投資だけでは埋められない3〜5年の計算能力の格差です。これは欧州AIの中核的なインフラ上の脆弱性です — フロンティアモデルの訓練には数千基のGPUを数か月間稼働させる必要があります。国内ファブ能力がなければ、欧州は米国（Nvidia）と台湾（TSMC）の供給に依存し続けます。' },
-            { q: '規制以外の欧州のAI優位性は何ですか？', a: '欧州には3つの非規制的な優位性があります。（1）EU（フランス、ドイツ）が資金提供するMistral AIなどのオープンウェイトモデルは、米国や中国への依存なしにGDPR準拠の代替を提供します。（2）欧州は英国AI安全研究所、ETHチューリッヒ、フランスの研究センター（INRIA、CNRS）を通じてAI安全性研究で主導しています。（3）欧州の高学歴の労働力と既存のソフトウェア・半導体人材は、AIアプリケーションとカスタムシリコン（Arm、RISC-Vチップ設計）で優位性を与えています。ただし、これらのいずれも、欧州のフロンティアモデル能力における不利を相殺するものではありません — 米国はGPT-5.5、Claude、Geminiで主導し、中国は展開規模と量で主導しています。欧州の戦略は「得意なこと（安全性、規制、倫理）に集中し、純粋な能力で競争しない」ことです。' },
+            { q: '規制以外の欧州のAI優位性は何ですか？', a: '欧州には3つの非規制的な優位性があります。（1）EU（フランス、ドイツ）が資金提供するMistral AIなどのオープンウェイトモデルは、米国や中国への依存なしにGDPR準拠の代替を提供します。（2）欧州は英国AI安全研究所、ETHチューリッヒ、フランスの研究センター（INRIA、CNRS）を通じてAI安全性研究で主導しています。（3）欧州の高学歴の労働力と既存のソフトウェア・半導体人材は、AIアプリケーションとカスタムシリコン（Arm、RISC-Vチップ設計）で優位性を与えています。ただし、これらのいずれも、欧州のフロンティアモデル能力における不利を相殺するものではありません — 米国はGPT-5.6、Claude、Geminiで主導し、中国は展開規模と量で主導しています。欧州の戦略は「得意なこと（安全性、規制、倫理）に集中し、純粋な能力で競争しない」ことです。' },
           ],
         },
 
@@ -4339,13 +4339,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               mistake: 'GPU輸出規制を中国のAI開発への恒久的な障壁として扱う。',
-              problem: 'DeepSeek R1（2025年1月）は、制限対象のH800 GPUで約600万ドルの計算コスト — GPT-4の訓練コスト推定比94%減 — で訓練されながら、主要ベンチマークでGPT-5.5に匹敵した。輸出規制は中国の進展を遅らせるが、止めることはない。',
+              problem: 'DeepSeek R1（2025年1月）は、制限対象のH800 GPUで約600万ドルの計算コスト — GPT-4の訓練コスト推定比94%減 — で訓練されながら、主要ベンチマークでGPT-5.6に匹敵した。輸出規制は中国の進展を遅らせるが、止めることはない。',
               fix: 'AI分野における数十年規模の地政学的競争を前提に計画すること。長期的な製品ロードマップでは、米国のハードウェア優位が恒久的だと想定しないこと。制限しにくいオープンウェイトの代替（Llama、Mistral、Qwen）への投資を検討する。すべての先端チップを製造するTSMCの政治的地位を監視すること。',
             },
             {
-              mistake: 'プロプライエタリな米国モデル（GPT-5.5、Claude）が規制上の摩擦なく世界的に利用可能であり続けると想定する。',
-              problem: 'EU AI法はすでにGPT-5.5とClaudeにコンプライアンス義務を課している。将来のEU規制はデータの輸出を制限したり、機密用途にはオンプレミス展開を求めたりする可能性がある。中国の国産代替戦略（Made in China 2025）は海外モデルへのアクセスを制限しうる。',
-              fix: 'AIインフラを多様化すること。プロプライエタリモデル（フロンティア能力向け）、オープンウェイトモデル（規制上の柔軟性向け）、ローカル展開（データ常駐向け）を組み合わせて使用する。GPT-5.5、Claude、Mistral、Qwenで製品をテストし、ベンダーロックインを減らす。',
+              mistake: 'プロプライエタリな米国モデル（GPT-5.6、Claude）が規制上の摩擦なく世界的に利用可能であり続けると想定する。',
+              problem: 'EU AI法はすでにGPT-5.6とClaudeにコンプライアンス義務を課している。将来のEU規制はデータの輸出を制限したり、機密用途にはオンプレミス展開を求めたりする可能性がある。中国の国産代替戦略（Made in China 2025）は海外モデルへのアクセスを制限しうる。',
+              fix: 'AIインフラを多様化すること。プロプライエタリモデル（フロンティア能力向け）、オープンウェイトモデル（規制上の柔軟性向け）、ローカル展開（データ常駐向け）を組み合わせて使用する。GPT-5.6、Claude、Mistral、Qwenで製品をテストし、ベンダーロックインを減らす。',
             },
           ],
         },
@@ -4509,11 +4509,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Question', name: '违反EU AI法案的罚款是多少？', acceptedAnswer: { '@type': 'Answer', text: '对禁止的AI做法，罚款最高€3500万或全球年度营业额的7%（以较高者为准）。高风险AI违规的罚款最高€1500万或全球营业额的3%。向当局提供不正确信息的罚款最高€750万或全球营业额的1%。' } },
           { '@type': 'Question', name: 'EU AI法案明确禁止哪些AI应用？', acceptedAnswer: { '@type': 'Answer', text: 'EU AI法案禁止：公共当局的社会评分系统、公共场所的实时生物特征监控（警执法例外除外）、利用认知漏洞的AI以及从互联网无差别抓取面部图像来构建识别数据库。这些被归类为不可接受的风险。' } },
           { '@type': 'Question', name: '美国AI监管与欧盟方式有何不同？', acceptedAnswer: { '@type': 'Answer', text: '美国采用部门化、自愿性方式——现有监管机构（FTC、FDA、CFPB、EEOC）在其领域内对AI适用其任务。没有等同于EU AI法案的联邦AI法。Biden关于AI安全的行政令（2023年10月）于2025年1月被Trump政府撤销，取而代之的是以竞争力为中心的AI行动计划。' } },
-          { '@type': 'Question', name: '中国的AI与美国AI系统一样强大吗？', acceptedAnswer: { '@type': 'Answer', text: 'DeepSeek R1于2025年1月发布，在多个基准（AIME 2024、MATH-500、HumanEval）上与GPT-5.5相当，同时据报训练成本仅为其一小部分。中国的主要模型——包括阿里巴巴的Qwen和百度的ERNIE——在许多任务上具有竞争力，但在多语言推理和安全基准上落后。硬件出口管制限制了中国获取最新Nvidia GPU的途径。' } },
-          { '@type': 'Question', name: '欧盟公司能否在AI法案下使用GPT-5.5和Claude？', acceptedAnswer: { '@type': 'Answer', text: '是的，在大多数用例中可以。GPT-5.5和Claude Opus 4.8符合通用AI（GPAI）模型条件，必须遵守透明度义务——包括发布训练数据摘要和遵守欧盟版权法——这于2025年8月生效。OpenAI和Anthropic都已为欧盟用户发布了GPAI合规文档。' } },
+          { '@type': 'Question', name: '中国的AI与美国AI系统一样强大吗？', acceptedAnswer: { '@type': 'Answer', text: 'DeepSeek R1于2025年1月发布，在多个基准（AIME 2024、MATH-500、HumanEval）上与GPT-5.6相当，同时据报训练成本仅为其一小部分。中国的主要模型——包括阿里巴巴的Qwen和百度的ERNIE——在许多任务上具有竞争力，但在多语言推理和安全基准上落后。硬件出口管制限制了中国获取最新Nvidia GPU的途径。' } },
+          { '@type': 'Question', name: '欧盟公司能否在AI法案下使用GPT-5.6和Claude？', acceptedAnswer: { '@type': 'Answer', text: '是的，在大多数用例中可以。GPT-5.6和Claude Opus 5符合通用AI（GPAI）模型条件，必须遵守透明度义务——包括发布训练数据摘要和遵守欧盟版权法——这于2025年8月生效。OpenAI和Anthropic都已为欧盟用户发布了GPAI合规文档。' } },
           { '@type': 'Question', name: '英国AI安全研究所（AISI）是什么？', acceptedAnswer: { '@type': 'Answer', text: '英国AI安全研究所（AISI）于2023年11月在Bletchley Park的AI安全峰会后成立。它进行AI安全的技术研究，评估前沿AI模型的危险能力，并发布安全报告。AISI独立于商业AI开发者运作，与美国AI安全研究所合作。' } },
           { '@type': 'Question', name: 'DeepSeek如何影响AI地缘政治竞争？', acceptedAnswer: { '@type': 'Answer', text: 'DeepSeek R1于2025年1月发布，表明可以以远低于先前假设的计算成本实现前沿AI能力。这削弱了出口管制Nvidia GPU将永久限制中国AI发展的论点。它加速了美国和欧盟关于基于计算的遏制战略是否充分的政策讨论。' } },
-          { '@type': 'Question', name: '什么是AI中的布鲁塞尔效应？', acceptedAnswer: { '@type': 'Answer', text: '布鲁塞尔效应描述欧盟法规如何成为事实上的全球标准，因为跨国公司发现在全球应用最严格的标准比维护每个管辖区的单独合规堆栈更简单。对于AI，这意味着EU AI法案实际上为GPT-5.5、Claude和Gemini设定了全球标准——无论用户位于何处。' } },
+          { '@type': 'Question', name: '什么是AI中的布鲁塞尔效应？', acceptedAnswer: { '@type': 'Answer', text: '布鲁塞尔效应描述欧盟法规如何成为事实上的全球标准，因为跨国公司发现在全球应用最严格的标准比维护每个管辖区的单独合规堆栈更简单。对于AI，这意味着EU AI法案实际上为GPT-5.6、Claude和Gemini设定了全球标准——无论用户位于何处。' } },
           { '@type': 'Question', name: '什么是广岛AI进程及其成就是什么？', acceptedAnswer: { '@type': 'Answer', text: '广岛AI进程是由日本担任G7主席时在2023年广岛峰会期间启动的G7倡议。它产生了广岛AI进程行为准则——G7采纳的11项自愿原则，供高级AI系统开发者遵循，于2023年10月通过。原则涵盖透明度、事件报告、安全测试和AI生成内容水印。行为准则是自愿性的，无法律约束力，独立于EU AI法案。' } },
           { '@type': 'Question', name: '欧盟组织能否将DeepSeek用于商业应用？', acceptedAnswer: { '@type': 'Answer', text: '从技术上讲可以，使用GDPR兼容的标准合约条款（SCC）。实际上，对中国法律义务要求CAC数据披露合规，SCC很难执行。德国（BSI）、法国（ANSSI）和荷兰（NCSC）已发布建议，限制政府和关键基础设施中的中国AI工具。私营部门组织在通过DeepSeek处理个人数据之前必须根据GDPR第46条进行转让影响评估。' } },
         ],
@@ -4534,10 +4534,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
         name: '如何在中国部署生成式AI产品：开发者指南',
         description: '在中国部署AI产品的分步指南——模型选择、内容限制、CAC安全评估、PIPL数据驻留和上市时间表。',
         step: [
-          { '@type': 'HowToStep', position: 1, name: '了解中国可用的AI模型', text: '外国模型（GPT-5.5、Claude、Gemini）在中国大陆无法在不使用VPN的情况下访问。可用选项：Alibaba Qwen 3（开源权重，7B–72B，128K上下文）、Baidu ERNIE 4.0（Qianfan API）、ByteDance Doubao（Volcano Engine）、Z.ai GLM-4、DeepSeek R1/V3。Qwen 3 72B是自托管的最强开源权重选项。' },
+          { '@type': 'HowToStep', position: 1, name: '了解中国可用的AI模型', text: '外国模型（GPT-5.6、Claude、Gemini）在中国大陆无法在不使用VPN的情况下访问。可用选项：Alibaba Qwen 3（开源权重，7B–72B，128K上下文）、Baidu ERNIE 4.0（Qianfan API）、ByteDance Doubao（Volcano Engine）、Z.ai GLM-4、DeepSeek R1/V3。Qwen 3 72B是自托管的最强开源权重选项。' },
           { '@type': 'HowToStep', position: 2, name: '规划API级内容限制', text: 'CAC注册的生成式AI服务过滤阻止CPC领导批评、台湾/西藏/新疆独立讨论、政治敏感历史事件以及损害"社会主义核心价值观"的内容。过滤器内置于API中。过滤错误返回HTTP 200，is_safe: 0——而不是HTTP 4xx——需要显式应用级处理。' },
           { '@type': 'HowToStep', position: 3, name: '完成CAC安全评估', text: '在中国任何面向消费者的生成式AI服务上市前需要。提交训练数据源、内容过滤文档和示例输出。时间表：45–90天。外国公司必须与中国大陆实体或持证云提供商（Alibaba Cloud、Tencent Cloud）合作作为注册提供商。' },
-          { '@type': 'HowToStep', position: 4, name: '为中国和国际用户部署混合模型', text: '在中国外的自有基础设施上部署Qwen 3 72B（Apache 2.0）供国际用户使用。根据CAC注册使用Alibaba Cloud API处理中国部分。Qwen 3 72B在MMLU上的分数在GPT-5.5的5分以内，在C-Eval上表现优于GPT-5.5。128K上下文窗口。' },
+          { '@type': 'HowToStep', position: 4, name: '为中国和国际用户部署混合模型', text: '在中国外的自有基础设施上部署Qwen 3 72B（Apache 2.0）供国际用户使用。根据CAC注册使用Alibaba Cloud API处理中国部分。Qwen 3 72B在MMLU上的分数在GPT-5.6的5分以内，在C-Eval上表现优于GPT-5.6。128K上下文窗口。' },
           { '@type': 'HowToStep', position: 5, name: '遵守PIPL数据驻留要求', text: 'PIPL（2021年）要求中国用户的个人数据留在中国，或在跨境转移前通过政府安全评估。通过中国大陆托管的推理（Alibaba Cloud、Tencent Cloud、Huawei Cloud）路由所有中国用户流量。' },
           { '@type': 'HowToStep', position: 6, name: '规划中国上市时间表', text: '为CAC上市前审查预留45–90天。与中国大陆实体合作进行面向消费者的产品。使用Qwen 3 72B处理中文语言任务。避免通过美国托管API路由中国用户数据。' },
         ],
@@ -4572,7 +4572,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '布鲁塞尔效应：EU AI法案规则适用于任何到达欧盟用户的AI，全球适用。',
             '美国没有联邦AI法——部门监管机构对其领域内的AI适用现有任务。',
             '美国于2025年1月撤销了AI安全行政令——竞争力现已优先于安全。',
-            '中国的DeepSeek R1在关键基准上与GPT-5.5相当——GPU出口管制并未停止中国AI。',
+            '中国的DeepSeek R1在关键基准上与GPT-5.6相当——GPU出口管制并未停止中国AI。',
             'TSMC在台湾制造为所有前沿AI提供动力的芯片——单一地缘政治依赖。',
             '组织必须同时遵守三个相互冲突的监管框架：欧盟、美国和中国。',
           ],
@@ -4585,7 +4585,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**美国AI政策：** 无联邦AI法。特朗普政府正通过EO 14365（2025年12月）及《国家框架》（2026年3月）推动联邦法优先于州法。FTC已于2026年7月7日发布该行政令要求的AI准确性与州法优先政策声明——较3月11日的期限晚了近四个月——并于2026年7月31日结束公众意见征询。TRUMP AMERICA AI Act与民主党提出的对案GUARDRAILS Act均未获国会通过，两者仍停留在讨论草案阶段。',
             '**中国AI治理：** CAC（国家网信办）上线前评估为强制要求。内容过滤屏蔽涉及中共批评、台湾/西藏/新疆相关讨论及损害"社会主义核心价值观"的内容。过滤器返回HTTP 200并携带`is_safe: 0`标志（而非4xx错误）。PIPL要求中国用户个人数据本地存储。',
             '**硬件瓶颈：** Nvidia占据约80%的AI训练GPU市场份额。TSMC生产全球约90%的最先进芯片。两者均为地缘政治焦点。美国CHIPS法案（520亿美元）旨在降低对TSMC的依赖。',
-            '**DeepSeek R1的影响：** 在推理与编码基准（AIME 2024、MATH、HumanEval）上超越GPT-5.5，训练成本估计约600万美元（较前沿模型估算降低94%；该数字存在争议）。使用受出口管制的Nvidia H800 GPU训练，表明硬件出口管制存在局限。',
+            '**DeepSeek R1的影响：** 在推理与编码基准（AIME 2024、MATH、HumanEval）上超越GPT-5.6，训练成本估计约600万美元（较前沿模型估算降低94%；该数字存在争议）。使用受出口管制的Nvidia H800 GPU训练，表明硬件出口管制存在局限。',
             '**全球监管冲突：** 欧盟聚焦权利与安全；美国聚焦创新与竞争力；中国聚焦国家控制与战略优势。在全球部署AI的组织必须同时应对三套互不兼容的框架。',
           ],
         },
@@ -4594,7 +4594,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '如果您是欧盟组织：关键合规期限',
           content: [
             '**EU AI法案具有约束力，其透明度规则与GPAI规则自2026年8月起强制执行。** 如果您的组织以欧盟为基地或为欧盟用户服务，您必须遵守其四级风险分类系统。2026年7月27日生效的Digital Omnibus已将独立高风险AI的合规期限推迟至2027年12月2日，但聊天机器人和AI生成内容的披露义务仍按原定的2026年8月生效。禁止行为的罚款最高€3500万或全球营业额的7%——以较高者为准。不合规是不可协商的。',
-            '**如果您在欧盟中部署GPT-5.5、Claude Opus 4.8或Gemini 3.1 Pro，您必须审核其通用AI（GPAI）合规文档。** OpenAI、Anthropic和Google已于2025年8月发布了透明度文档（训练数据摘要、能力限制、安全测试）。保存这些证明作为合规证据——监管机构会问询。',
+            '**如果您在欧盟中部署GPT-5.6、Claude Opus 5或Gemini 3.1 Pro，您必须审核其通用AI（GPAI）合规文档。** OpenAI、Anthropic和Google已于2025年8月发布了透明度文档（训练数据摘要、能力限制、安全测试）。保存这些证明作为合规证据——监管机构会问询。',
             '**高风险AI系统（招聘、信贷决策、医疗、执法）在部署前需要符合性评估。** 这意味着测试偏见、记录人工监督机制文档和所有AI决策的审计日志。本地部署的开源权重模型（通过Ollama的LLaMA、Mistral Large）满足数据驻留要求——没有数据离开您的基础设施，您控制审计日志。',
             '**布鲁塞尔效应适用于您。** 如果您的AI系统到达单个欧盟居民，EU AI法案适用——即使您的公司总部在美国或中国。这意味着全球执行相同的合规级别通常比维护多个配置更简单。',
           ],
@@ -4606,9 +4606,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '中国AI API（DeepSeek、ERNIE 4.0、通过Alibaba Cloud的Qwen）在API级别过滤内容——政治话题、CPC批评和台湾/西藏/新疆返回HTTP 200响应中的`is_safe: 0`，而不是HTTP 4xx。在您的应用代码中明确处理这些。',
             'Mistral模型和本地Ollama部署满足EU AI法案的数据驻留要求——提示和输出永远不会离开您的基础设施。这是提示工程师实现欧盟GDPR + AI法案合规的最低摩擦路径。',
-            'GPT-5.5和Claude Opus 4.8从2025年8月起在EU AI法案下符合GPAI条件。您可以在面向欧盟的部署中使用它们，无需额外的模型级合规工作——您的义务在应用（部署者）级别，而非模型级别。',
+            'GPT-5.6和Claude Opus 5从2025年8月起在EU AI法案下符合GPAI条件。您可以在面向欧盟的部署中使用它们，无需额外的模型级合规工作——您的义务在应用（部署者）级别，而非模型级别。',
             '布鲁塞尔效应意味着为欧盟居民使用的产品发送到美国托管模型的提示受EU AI法案要求的约束——即使您的公司不以欧盟为基地。',
-            '对于多管辖区测试，同时向Mistral（欧盟兼容）、GPT-5.5（美国/GPAI）和Qwen（中国可访问）分派相同提示，以在监管环境下对输出进行基准测试。PromptQuorum本质上支持这一点。',
+            '对于多管辖区测试，同时向Mistral（欧盟兼容）、GPT-5.6（美国/GPAI）和Qwen（中国可访问）分派相同提示，以在监管环境下对输出进行基准测试。PromptQuorum本质上支持这一点。',
           ],
         },
 
@@ -4623,14 +4623,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
             {
               '地区': '欧洲联盟',
               '对提示的法律约束': 'EU AI法案：与欧盟消费者互动的提示生成内容必须包括AI披露。GDPR：提示必须不包含没有法律依据的个人数据。高风险AI应用（人力资源、信贷、医疗）需要人工监督——提示不能自动化最终决策。',
-              '语言优化': '用目标语言（德文、法文等）写提示——GPT-5.5和Claude Opus 4.8在非英语任务上表现明显更好，当提示与所需输出使用相同语言时。在系统提示中明确指定输出语言。',
-              '推荐模型': 'Mistral Large（法国、欧盟总部）、本地Ollama部署（数据永远不离开基础设施）或GPT-5.5/Claude使用欧盟区域API端点和SCC。',
+              '语言优化': '用目标语言（德文、法文等）写提示——GPT-5.6和Claude Opus 5在非英语任务上表现明显更好，当提示与所需输出使用相同语言时。在系统提示中明确指定输出语言。',
+              '推荐模型': 'Mistral Large（法国、欧盟总部）、本地Ollama部署（数据永远不离开基础设施）或GPT-5.6/Claude使用欧盟区域API端点和SCC。',
             },
             {
               '地区': '美国',
               '对提示的法律约束': '无联邦AI法，但适用部门规则：HIPAA（医疗——PHI不能出现在提示中）、CCPA/CPRA（加州——提示中的个人数据触发消费者权利）、FTC法案（提示不能在消费者环境中生成欺骗内容）。州生物特征法（伊利诺伊州BIPA）限制处理面部/语音数据的提示。',
-              '语言优化': '美国前沿模型（GPT-5.5、Claude Opus 4.8）是英文优化的，在英文提示上达到其天花板表现。对于西班牙语美国市场，在西班牙语中明确指示模型或使用双语系统提示——不要依赖自动检测。',
-              '推荐模型': '通用使用GPT-5.5或Claude Opus 4.8。对于受监管的医疗或金融提示，使用API与SCC并避免在提示上下文中发送PHI/PII。',
+              '语言优化': '美国前沿模型（GPT-5.6、Claude Opus 5）是英文优化的，在英文提示上达到其天花板表现。对于西班牙语美国市场，在西班牙语中明确指示模型或使用双语系统提示——不要依赖自动检测。',
+              '推荐模型': '通用使用GPT-5.6或Claude Opus 5。对于受监管的医疗或金融提示，使用API与SCC并避免在提示上下文中发送PHI/PII。',
             },
             {
               '地区': '中国',
@@ -4641,14 +4641,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
             {
               '地区': '英国/脱欧后',
               '对提示的法律约束': '英国GDPR（等同于欧盟GDPR）适用于个人数据。英国AI安全研究所关注前沿模型评估，不是应用级合规。无强制AI披露法——英国选择了以创新为先、部门主导的方式。OFCOM在广播环境中监管AI生成内容。',
-              '语言优化': '英国英文拼写和习语在提示中改善英国面向内容的输出质量。GPT-5.5对系统提示中的显式"英国英文"指令有反应；否则默认为美国英文。',
-              '推荐模型': 'GPT-5.5或Claude Opus 4.8。脱欧后的英国-欧盟数据转移需要SCC——欧盟向英国的充分性决定已生效但受审查。',
+              '语言优化': '英国英文拼写和习语在提示中改善英国面向内容的输出质量。GPT-5.6对系统提示中的显式"英国英文"指令有反应；否则默认为美国英文。',
+              '推荐模型': 'GPT-5.6或Claude Opus 5。脱欧后的英国-欧盟数据转移需要SCC——欧盟向英国的充分性决定已生效但受审查。',
             },
             {
               '地区': '日本',
               '对提示的法律约束': '日本个人信息保护法（APPI）限制在AI提示中使用个人数据。日本没有AI特定法（截至2026年）——来自METI和内务部的指导是自愿性。日本参与了广岛AI进程——日本企业鼓励遵守其11项原则。',
-              '语言优化': '日文提示在日文语言任务上优于所有主要模型的英文提示。GPT-5.5和Claude Opus 4.8很好地处理日文；楽天AI和NTT LLM可用于日本特定部署。避免在系统提示中使用非正式（tame-go）寄存器——礼貌（keigo）框架改善了日本商业环境中的合规和输出质量。',
-              '推荐模型': '通用日文任务使用GPT-5.5或Claude Opus 4.8。使用楽天AI（楽天集团）或NTT LLM用于日本国内合规敏感部署。',
+              '语言优化': '日文提示在日文语言任务上优于所有主要模型的英文提示。GPT-5.6和Claude Opus 5很好地处理日文；楽天AI和NTT LLM可用于日本特定部署。避免在系统提示中使用非正式（tame-go）寄存器——礼貌（keigo）框架改善了日本商业环境中的合规和输出质量。',
+              '推荐模型': '通用日文任务使用GPT-5.6或Claude Opus 5。使用楽天AI（楽天集团）或NTT LLM用于日本国内合规敏感部署。',
             },
           ],
         },
@@ -4683,7 +4683,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         qaWhichCountriesDominate: {
           title: '哪些国家主导AI开发？',
           content: [
-            '美国主导前沿模型能力——OpenAI（GPT-5.5）、Anthropic（Claude）和Google DeepMind（Gemini）都以美国为基地。中国在AI专利数量（2022年WIPO约70%的全球专利）上领先，并拥有美国之外最强大的国内模型：Alibaba Qwen 3、Baidu ERNIE 4.0和DeepSeek R1。欧盟在AI监管上领先但在前沿能力上落后——法国的Mistral AI是最强的欧洲竞争对手。英国、加拿大和阿联酋正在将AI作为独立参与者投资，而非专门排列于美国或中国基础设施。',
+            '美国主导前沿模型能力——OpenAI（GPT-5.6）、Anthropic（Claude）和Google DeepMind（Gemini）都以美国为基地。中国在AI专利数量（2022年WIPO约70%的全球专利）上领先，并拥有美国之外最强大的国内模型：Alibaba Qwen 3、Baidu ERNIE 4.0和DeepSeek R1。欧盟在AI监管上领先但在前沿能力上落后——法国的Mistral AI是最强的欧洲竞争对手。英国、加拿大和阿联酋正在将AI作为独立参与者投资，而非专门排列于美国或中国基础设施。',
           ],
         },
 
@@ -4718,7 +4718,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           items: [
             '**政府：** 美国（White House、NSA、Defense Dept.）、中国（CAC、NDRC）、欧盟（欧盟委员会、欧洲议会）、英国（AISI）。',
-            '**AI公司：** OpenAI（美国，GPT-5.5）、Anthropic（美国，Claude）、Google DeepMind（英国，Gemini）、Meta（美国，Llama）、Mistral AI（法国）、Alibaba（中国，Qwen）、Baidu（中国，ERNIE）、DeepSeek（中国）。',
+            '**AI公司：** OpenAI（美国，GPT-5.6）、Anthropic（美国，Claude）、Google DeepMind（英国，Gemini）、Meta（美国，Llama）、Mistral AI（法国）、Alibaba（中国，Qwen）、Baidu（中国，ERNIE）、DeepSeek（中国）。',
             '**芯片制造商：** NVIDIA（美国）、TSMC（台湾）、Samsung（韩国）、Intel（美国）。',
             '**政策制定者和思想领袖：** Ursula von der Leyen（欧盟委员会主席）、Emmanuel Macron（法国总统）、Rishi Sunak（前英国首相）、Demis Hassabis（Google DeepMind CEO）、Sam Altman（OpenAI CEO）。',
           ],
@@ -4830,7 +4830,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**国家新一代AI发展计划：** 2017年启动，目标2030年在AI竞争中全球领先。目标¥1万亿（$1400亿）投资2021–2025年。',
             '**CAC（中国网络空间管理部门）监管：** 所有生成式AI必须通过CAC审查。内容过滤强制内容符合"社会主义核心价值观"。算法推荐必须满足CAC标准。',
             '**PIPL（个人信息保护法，2021）：** 中国用户数据必须存储在中国或通过官方通道转移。限制外国AI公司对中国用户数据的访问。',
-            '**DeepSeek R1（2025年1月）：** 中国模型与GPT-5.5在关键基准上相当。表明中国AI能力正在快速进步。',
+            '**DeepSeek R1（2025年1月）：** 中国模型与GPT-5.6在关键基准上相当。表明中国AI能力正在快速进步。',
           ],
         },
 
@@ -4840,12 +4840,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '对于在中国运营的开发者，可用的模型有限制：',
           ],
           items: [
-            '**Alibaba Qwen 3：** 开源权重（Apache 2.0），7B至72B参数，128K上下文。分数接近GPT-5.5在多个基准上。可在中国外自托管。',
+            '**Alibaba Qwen 3：** 开源权重（Apache 2.0），7B至72B参数，128K上下文。分数接近GPT-5.6在多个基准上。可在中国外自托管。',
             '**Baidu ERNIE 4.0：** 通过Qianfan API可用。CAC注册。在中文任务上强大。',
             '**ByteDance Doubao：** 通过Volcano Engine API可用。面向中国市场优化。',
-            '**DeepSeek R1：** 新型推理模型。与GPT-5.5相当。经过CAC审查。',
+            '**DeepSeek R1：** 新型推理模型。与GPT-5.6相当。经过CAC审查。',
             '**Z.ai GLM-4：** 多语言模型。通过API可用。',
-            '**外国模型（GPT-5.5、Claude、Gemini）：** 在中国大陆无法访问，除非使用VPN。',
+            '**外国模型（GPT-5.6、Claude、Gemini）：** 在中国大陆无法访问，除非使用VPN。',
           ],
         },
 
@@ -4930,7 +4930,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '谁在赢得全球AI竞争？',
           content: [
             '到2026年，不清楚谁在"赢"，因为每个参与者优先级不同的指标：',
-            '**美国领先：** 前沿模型能力（GPT-5.5 > Qwen 3）、GPU设计（Nvidia）、人才吸引力。',
+            '**美国领先：** 前沿模型能力（GPT-5.6 > Qwen 3）、GPU设计（Nvidia）、人才吸引力。',
             '**中国赶上：** AI专利数量（全球70%）、成本效率（DeepSeek）、国内市场（4亿用户）。',
             '**欧盟领先：** 监管框架（EU AI法案作为全球规范）、数据权利（GDPR）、独立模型（Mistral）。',
             'DeepSeek R1在2025年1月的发布表明中国的快速进步。美国不能再假设技术优势是永久的。',
@@ -4940,7 +4940,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         qaExportControls: {
           title: '美国出口管制如何影响AI发展？',
           content: [
-            '美国出口管制限制向中国出售先进Nvidia GPU（包括A100和H100），旨在限制中国训练前沿AI模型的能力。这些管制通过《出口管理条例》（EAR）执行，适用于超过特定算力阈值的Nvidia、AMD和Intel产品。DeepSeek R1于2025年1月发布，证明了这种方式存在局限：它使用受限的H800 GPU训练，成本仅为可比美国模型报告成本的一小部分，却在AIME 2024、MATH-500和HumanEval基准上追平GPT-5.5。出口管制减缓但并未阻止中国前沿AI的发展。',
+            '美国出口管制限制向中国出售先进Nvidia GPU（包括A100和H100），旨在限制中国训练前沿AI模型的能力。这些管制通过《出口管理条例》（EAR）执行，适用于超过特定算力阈值的Nvidia、AMD和Intel产品。DeepSeek R1于2025年1月发布，证明了这种方式存在局限：它使用受限的H800 GPU训练，成本仅为可比美国模型报告成本的一小部分，却在AIME 2024、MATH-500和HumanEval基准上追平GPT-5.6。出口管制减缓但并未阻止中国前沿AI的发展。',
           ],
         },
 
@@ -4981,12 +4981,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         defGPAI: {
           title: '定义：通用AI（GPAI）',
           content: [
-            '通用AI（GPAI）模型是能够在广泛的下游应用中使用的基础模型——例如GPT-5.5、Claude、Gemini。它们不是为特定任务开发的，而是可以根据用户提示进行微调。在EU AI Act下，GPAI模型（尤其是那些在10²⁵ FLOPs的训练计算阈值上）需要：',
+            '通用AI（GPAI）模型是能够在广泛的下游应用中使用的基础模型——例如GPT-5.6、Claude、Gemini。它们不是为特定任务开发的，而是可以根据用户提示进行微调。在EU AI Act下，GPAI模型（尤其是那些在10²⁵ FLOPs的训练计算阈值上）需要：',
             '- 发布训练数据摘要',
             '- 说明能力和限制',
             '- 表明他们遵守欧盟版权法',
             '- 定期更新这些信息',
-            'OpenAI（GPT-5.5）和Anthropic（Claude）都已发布GPAI合规文档。',
+            'OpenAI（GPT-5.6）和Anthropic（Claude）都已发布GPAI合规文档。',
           ],
         },
 
@@ -5090,7 +5090,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'faq',
           title: '常见问题',
           faqs: [
-            { q: 'EU AI法案是什么？何时适用？', a: 'EU AI法案是全球首部全面的AI法律，于2024年3月由欧洲议会通过。禁止行为条款自2024年8月起适用。GPAI模型义务（针对GPT-5.5、Claude、Gemini级模型）自2025年8月起适用。第50条透明度义务（聊天机器人与AI内容披露）自2026年8月起适用。独立高风险AI系统要求已由2026年7月27日生效的Digital Omnibus从2026年8月推迟至2027年12月2日。它适用于任何在欧盟市场投放AI或其AI影响欧盟居民的组织。' },
+            { q: 'EU AI法案是什么？何时适用？', a: 'EU AI法案是全球首部全面的AI法律，于2024年3月由欧洲议会通过。禁止行为条款自2024年8月起适用。GPAI模型义务（针对GPT-5.6、Claude、Gemini级模型）自2025年8月起适用。第50条透明度义务（聊天机器人与AI内容披露）自2026年8月起适用。独立高风险AI系统要求已由2026年7月27日生效的Digital Omnibus从2026年8月推迟至2027年12月2日。它适用于任何在欧盟市场投放AI或其AI影响欧盟居民的组织。' },
             { q: 'EU AI法案是否适用于非欧盟公司？', a: '适用。EU AI法案具有域外效力——只要提供商的AI输出在欧盟境内被使用，无论该提供商总部位于何处都必须遵守。这与GDPR成为全球标准的域外原则相同。' },
             { q: '违反EU AI法案的罚款是多少？', a: '对于禁止的AI做法，罚款最高为€3500万或全球年营业额的7%（以较高者为准）。高风险AI违规最高€1500万或3%。向执法机构提供不正确信息最高€750万或1%。较高的比例或固定金额将适用。' },
             { q: 'EU AI法案禁止哪些AI应用？', a: '禁止（不可接受风险）：公共当局的社会评分系统；公共场所的实时生物特征识别（有限的执法例外）；利用心理弱点的AI；无差别抓取互联网面部图像。这些自2024年8月起被禁止。' },
@@ -5125,13 +5125,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               mistake: '将GPU出口管制视为对中国AI发展的永久性阻碍。',
-              problem: 'DeepSeek R1（2025年1月）在使用受限H800 GPU、算力成本约600万美元（比GPT-4训练估算低94%）的情况下，在主要基准上追平GPT-5.5。出口管制减缓了中国的进展，但并未阻止它。',
+              problem: 'DeepSeek R1（2025年1月）在使用受限H800 GPU、算力成本约600万美元（比GPT-4训练估算低94%）的情况下，在主要基准上追平GPT-5.6。出口管制减缓了中国的进展，但并未阻止它。',
               fix: '为长达数十年的地缘政治AI竞争做好规划。在制定长期产品路线图时，不要假设美国硬件优势是永久的。可考虑投资更难受限的开源权重替代方案（Llama、Mistral、Qwen），并持续关注TSMC的政治地位，因为所有先进芯片均在此制造。',
             },
             {
-              mistake: '假设GPT-5.5、Claude等美国专有模型将在全球范围内不受监管摩擦地持续可用。',
-              problem: 'EU AI法案已对GPT-5.5和Claude施加合规义务。未来的欧盟监管可能限制数据出口，或要求敏感场景采用本地部署。中国的国产替代战略（中国制造2025）可能限制对外国模型的访问。',
-              fix: '实现AI基础设施多元化。结合使用专有模型（获取前沿能力）、开源权重模型（获取监管灵活性）和本地部署（满足数据驻留要求）。在GPT-5.5、Claude、Mistral和Qwen之间测试您的产品，以降低对单一供应商的依赖。',
+              mistake: '假设GPT-5.6、Claude等美国专有模型将在全球范围内不受监管摩擦地持续可用。',
+              problem: 'EU AI法案已对GPT-5.6和Claude施加合规义务。未来的欧盟监管可能限制数据出口，或要求敏感场景采用本地部署。中国的国产替代战略（中国制造2025）可能限制对外国模型的访问。',
+              fix: '实现AI基础设施多元化。结合使用专有模型（获取前沿能力）、开源权重模型（获取监管灵活性）和本地部署（满足数据驻留要求）。在GPT-5.6、Claude、Mistral和Qwen之间测试您的产品，以降低对单一供应商的依赖。',
             },
           ],
         },
@@ -5142,7 +5142,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '本文综合了来自以下来源的信息：',
           ],
           items: [
-            'OpenAI GPT-5.5法律文件和GPAI合规说明',
+            'OpenAI GPT-5.6法律文件和GPAI合规说明',
             'Anthropic Claude法律文件和GDPR合规指南',
             'Google DeepMind Gemini技术文件',
             '欧盟委员会EU AI法案官方文本（2024年）',
@@ -5197,7 +5197,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         name: 'Como implantar produtos de IA generativa na China: um guia para desenvolvedores',
         description: 'Guia passo a passo para desenvolvedores que implantam produtos de IA na China — seleção de modelo, restrições de conteúdo, avaliação de segurança da CAC, residência de dados conforme a PIPL e cronograma de lançamento.',
         step: [
-          { '@type': 'HowToStep', position: 1, name: 'Entenda os modelos de IA disponíveis na China', text: 'Modelos estrangeiros (GPT-5.5, Claude, Gemini) são inacessíveis a partir da China continental sem VPN. Opções disponíveis: Alibaba Qwen 3 (pesos abertos, 7B–72B, contexto de 128K), Baidu ERNIE 4.0 (API Qianfan), ByteDance Doubao (Volcano Engine), Z.ai GLM-4, DeepSeek R1/V3. O Qwen 3 72B é a opção de pesos abertos mais forte para auto-hospedagem.' },
+          { '@type': 'HowToStep', position: 1, name: 'Entenda os modelos de IA disponíveis na China', text: 'Modelos estrangeiros (GPT-5.6, Claude, Gemini) são inacessíveis a partir da China continental sem VPN. Opções disponíveis: Alibaba Qwen 3 (pesos abertos, 7B–72B, contexto de 128K), Baidu ERNIE 4.0 (API Qianfan), ByteDance Doubao (Volcano Engine), Z.ai GLM-4, DeepSeek R1/V3. O Qwen 3 72B é a opção de pesos abertos mais forte para auto-hospedagem.' },
           { '@type': 'HowToStep', position: 2, name: 'Planeje as restrições de conteúdo em nível de API', text: 'Os serviços de IA generativa registrados na CAC filtram conteúdo que bloqueia críticas à liderança do PCC, discussões sobre a independência de Taiwan/Tibete/Xinjiang, eventos históricos politicamente sensíveis e conteúdo que enfraquece os "valores socialistas essenciais". Os filtros estão integrados à API. Erros de filtragem retornam HTTP 200 com is_safe: 0 — não HTTP 4xx — exigindo tratamento explícito no nível da aplicação.' },
           { '@type': 'HowToStep', position: 3, name: 'Complete a avaliação de segurança da CAC', text: 'Obrigatória antes do lançamento de qualquer serviço de IA generativa voltado ao consumidor na China. Envie as fontes dos dados de treinamento, a documentação de filtragem de conteúdo e exemplos de saída. Prazo: 45–90 dias. Empresas estrangeiras devem se associar a uma entidade da China continental ou a um provedor de nuvem licenciado (Alibaba Cloud, Tencent Cloud) como fornecedor registrado.' },
           { '@type': 'HowToStep', position: 4, name: 'Cumpra os requisitos de residência de dados da PIPL', text: 'A PIPL (2021) exige que os dados pessoais de usuários chineses permaneçam na China ou passem por uma avaliação de segurança governamental antes da transferência transfronteiriça. Direcione todo o tráfego de usuários chineses por meio de inferência hospedada no continente (Alibaba Cloud, Tencent Cloud, Huawei Cloud).' },
@@ -5226,10 +5226,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'Question', 'name': 'Quais são as multas por violar o EU AI Act?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'As multas chegam a até €35 milhões ou 7% do faturamento anual global por práticas de IA proibidas (o que for maior). Violações de IA de alto risco acarretam multas de até €15 milhões ou 3% do faturamento global. Fornecer informações incorretas às autoridades acarreta multas de até €7,5 milhões ou 1% do faturamento global.' } },
           { '@type': 'Question', 'name': 'Quais aplicações de IA a UE proíbe completamente?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'O EU AI Act proíbe: sistemas de pontuação social por autoridades públicas, vigilância biométrica em tempo real em espaços públicos (com exceções restritas para forças de segurança), IA que explore vulnerabilidades cognitivas e coleta indiscriminada de imagens faciais da internet para construir bancos de dados de reconhecimento. Esses são categorizados como Risco Inaceitável.' } },
           { '@type': 'Question', 'name': 'Como a regulação de IA dos EUA difere da abordagem da UE?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Os EUA utilizam uma abordagem setorial e voluntária — reguladores existentes (FTC, FDA, CFPB, EEOC) aplicam seus mandatos à IA em seus domínios. Não existe lei federal de IA equivalente ao EU AI Act. A Ordem Executiva de Biden sobre Segurança de IA (outubro de 2023) foi revogada pela administração Trump em janeiro de 2025 e substituída por um Plano de Ação de IA focado em competitividade.' } },
-          { '@type': 'Question', 'name': 'A IA da China é tão capaz quanto os sistemas de IA dos EUA?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'O DeepSeek R1, lançado em janeiro de 2025, superou o GPT-5.5 em benchmarks de raciocínio e codificação (AIME 2024: 79,8% vs 74,4% do GPT-5.5, MATH-500: 97,3%, HumanEval) enquanto supostamente foi treinado a um custo de ~US$6 milhões — uma redução de 94% em relação aos custos estimados de treinamento de modelos de fronteira. Os modelos líderes da China são competitivos em muitas tarefas, mas ficam atrás em raciocínio multilíngue e benchmarks de segurança.' } },
-          { '@type': 'Question', 'name': 'Empresas da UE podem usar GPT-5.5 e Claude sob o AI Act?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sim, para a maioria dos casos de uso. GPT-5.5 e Claude Opus 4.8 se qualificam como modelos de IA de Propósito Geral (GPAI) e devem cumprir obrigações de transparência — incluindo publicar resumos de dados de treinamento e cumprir a lei de direitos autorais da UE — que entraram em vigor em agosto de 2025. OpenAI e Anthropic publicaram documentação de conformidade GPAI para usuários da UE.' } },
+          { '@type': 'Question', 'name': 'A IA da China é tão capaz quanto os sistemas de IA dos EUA?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'O DeepSeek R1, lançado em janeiro de 2025, superou o GPT-5.6 em benchmarks de raciocínio e codificação (AIME 2024: 79,8% vs 74,4% do GPT-5.6, MATH-500: 97,3%, HumanEval) enquanto supostamente foi treinado a um custo de ~US$6 milhões — uma redução de 94% em relação aos custos estimados de treinamento de modelos de fronteira. Os modelos líderes da China são competitivos em muitas tarefas, mas ficam atrás em raciocínio multilíngue e benchmarks de segurança.' } },
+          { '@type': 'Question', 'name': 'Empresas da UE podem usar GPT-5.6 e Claude sob o AI Act?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Sim, para a maioria dos casos de uso. GPT-5.6 e Claude Opus 5 se qualificam como modelos de IA de Propósito Geral (GPAI) e devem cumprir obrigações de transparência — incluindo publicar resumos de dados de treinamento e cumprir a lei de direitos autorais da UE — que entraram em vigor em agosto de 2025. OpenAI e Anthropic publicaram documentação de conformidade GPAI para usuários da UE.' } },
           { '@type': 'Question', 'name': 'Como o DeepSeek afeta a corrida geopolítica de IA?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'O lançamento do DeepSeek R1 em janeiro de 2025 demonstrou que capacidades de IA de fronteira são alcançáveis a custos de computação significativamente menores do que se assumia anteriormente. Isso enfraquece o argumento de que os controles de exportação sobre GPUs da Nvidia limitarão permanentemente o desenvolvimento de IA na China. Acelerou debates de política nos EUA e na UE sobre se estratégias de contenção baseadas em computação são suficientes.' } },
-          { '@type': 'Question', 'name': 'O que é o Efeito Bruxelas na IA?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'O Efeito Bruxelas descreve como as regulamentações da UE se tornam padrões globais de fato porque empresas multinacionais consideram mais fácil aplicar o padrão mais rigoroso em todo o mundo em vez de manter pilhas de conformidade separadas por jurisdição. Para a IA, isso significa que o EU AI Act efetivamente eleva os padrões para GPT-5.5, Claude e Gemini globalmente — independentemente de onde os usuários estão localizados.' } },
+          { '@type': 'Question', 'name': 'O que é o Efeito Bruxelas na IA?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'O Efeito Bruxelas descreve como as regulamentações da UE se tornam padrões globais de fato porque empresas multinacionais consideram mais fácil aplicar o padrão mais rigoroso em todo o mundo em vez de manter pilhas de conformidade separadas por jurisdição. Para a IA, isso significa que o EU AI Act efetivamente eleva os padrões para GPT-5.6, Claude e Gemini globalmente — independentemente de onde os usuários estão localizados.' } },
           { '@type': 'Question', 'name': 'Organizações da UE podem usar DeepSeek para aplicações comerciais?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Tecnicamente sim, com Cláusulas Contratuais Padrão (SCC) em conformidade com o RGPD. Na prática, as SCCs são difíceis de aplicar diante das obrigações da lei chinesa que exigem conformidade com o acesso a dados do CAC. Alemanha (BSI), França (ANSSI) e Países Baixos (NCSC) emitiram avisos restringindo ferramentas de IA chinesas para o governo e infraestruturas críticas. Organizações do setor privado precisam realizar uma Avaliação de Impacto de Transferência nos termos do Artigo 46 do RGPD antes de processar dados pessoais por meio do DeepSeek.' } },
           { '@type': 'Question', 'name': 'Quais frameworks de governança de IA existem na América Latina?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'A América Latina não possui equivalente ao EU AI Act. A Colômbia lidera com o Conpes 3975 (2019), uma política nacional de IA com diretrizes voluntárias sobre governança responsável. O Brasil avança em legislação específica para IA. Chile, México e Argentina publicaram estratégias nacionais de IA. A maioria dos frameworks latino-americanos se alinha com os princípios de IA da OCDE e são voluntários, sem sanções vinculantes equivalentes às do EU AI Act.' } },
         ],
@@ -5248,7 +5248,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Efeito Bruxelas: as regras do EU AI Act se aplicam a qualquer IA que alcance usuários da UE, em todo o mundo.',
             'Os EUA não têm lei federal de IA — reguladores setoriais aplicam mandatos existentes à IA em seus domínios.',
             'Os EUA revogaram sua ordem executiva de segurança em IA em janeiro de 2025 — competitividade agora lidera sobre segurança.',
-            'O DeepSeek R1 da China superou o GPT-5.5 em benchmarks-chave (AIME, MATH, HumanEval) a um custo de treinamento de US$6M — redução de 94% — demonstrando que controles de exportação de GPU têm limites.',
+            'O DeepSeek R1 da China superou o GPT-5.6 em benchmarks-chave (AIME, MATH, HumanEval) a um custo de treinamento de US$6M — redução de 94% — demonstrando que controles de exportação de GPU têm limites.',
             'A TSMC em Taiwan fabrica os chips que alimentam toda a IA de fronteira — uma única dependência geopolítica.',
             'As organizações precisam cumprir simultaneamente três frameworks regulatórios incompatíveis: UE, EUA e China.',
           ],
@@ -5261,7 +5261,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Política de IA dos EUA:** Sem lei federal de IA. Administração Trump busca a preempção de leis estaduais via EO 14365 (dezembro de 2025) e o Framework Nacional (março de 2026). A FTC emitiu sua declaração de política sobre precisão da IA e preempção estadual, exigida pela ordem executiva, em 7 de julho de 2026 — quatro meses após o prazo de 11 de março — e encerrou o período de comentários públicos em 31 de julho de 2026. Nem o TRUMP AMERICA AI Act nem a contraproposta democrata GUARDRAILS Act foram aprovados pelo Congresso; ambos permanecem como minutas de discussão.',
             '**Governança de IA na China:** Avaliação prévia ao lançamento do CAC (Administração do Ciberespaço da China) obrigatória. Filtros de conteúdo bloqueiam críticas ao PCCh, discussões sobre Taiwan/Tibet/Xinjiang e conteúdo que mina os "valores socialistas fundamentais". Os filtros retornam HTTP 200 com flag `is_safe: 0` (não erros 4xx). A PIPL exige residência de dados para dados pessoais chineses.',
             '**Gargalos de hardware:** Nvidia controla ~80% do mercado de GPU para treinamento de IA. TSMC fabrica ~90% dos semicondutores avançados. Ambos são pontos críticos geopolíticos. A CHIPS Act dos EUA (US$52B) visa reduzir a dependência da TSMC.',
-            '**Impacto do DeepSeek R1:** Superou o GPT-5.5 em raciocínio/codificação (AIME 2024, MATH, HumanEval) a um custo estimado de treinamento de ~US$6M (redução de 94% em relação às estimativas de modelos de fronteira). Treinado em GPUs Nvidia H800 restritas para a China. Demonstra que controles de exportação de hardware têm limites.',
+            '**Impacto do DeepSeek R1:** Superou o GPT-5.6 em raciocínio/codificação (AIME 2024, MATH, HumanEval) a um custo estimado de treinamento de ~US$6M (redução de 94% em relação às estimativas de modelos de fronteira). Treinado em GPUs Nvidia H800 restritas para a China. Demonstra que controles de exportação de hardware têm limites.',
             '**Conflito regulatório global:** A UE foca em direitos e segurança; os EUA focam em inovação e competitividade; a China foca em controle estatal e vantagem estratégica. Organizações que implantam IA globalmente precisam navegar por três frameworks incompatíveis simultaneamente.',
           ],
         },
@@ -5270,7 +5270,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'Se você é uma organização com sede na UE: Prazos críticos de conformidade',
           content: [
             '**O EU AI Act é vinculante, e suas regras de transparência e GPAI são aplicadas desde agosto de 2026.** Se a sua organização está sediada na UE ou atende usuários da UE, você deve cumprir seu sistema de classificação de risco em quatro níveis. O Omnibus Digital (em vigor desde 27 de julho de 2026) adiou a conformidade da IA de alto risco autônoma para 2 de dezembro de 2027, mas as exigências de divulgação para chatbots e conteúdo gerado por IA continuaram a valer a partir da data original de agosto de 2026. Multas por práticas proibidas chegam a €35 milhões ou 7% do faturamento global — o que for maior. O não cumprimento não é negociável.',
-            '**Se você implanta GPT-5.5, Claude Opus 4.8 ou Gemini 3.1 Pro na UE, você deve auditar sua documentação de conformidade de IA de Propósito Geral (GPAI).** OpenAI, Anthropic e Google publicaram documentação de transparência (resumos de dados de treinamento, limitações de capacidades, testes de segurança) a partir de agosto de 2025. Guarde essas atestações como prova de conformidade — os reguladores vão solicitá-las.',
+            '**Se você implanta GPT-5.6, Claude Opus 5 ou Gemini 3.1 Pro na UE, você deve auditar sua documentação de conformidade de IA de Propósito Geral (GPAI).** OpenAI, Anthropic e Google publicaram documentação de transparência (resumos de dados de treinamento, limitações de capacidades, testes de segurança) a partir de agosto de 2025. Guarde essas atestações como prova de conformidade — os reguladores vão solicitá-las.',
             '**Sistemas de IA de alto risco (contratação, decisões de crédito, saúde, aplicação da lei) exigem avaliações de conformidade antes da implantação.** Isso significa testes de viés, documentação de mecanismos de supervisão humana e trilhas de auditoria de todas as decisões de IA. Modelos de pesos abertos implantados localmente (LLaMA via Ollama, Mistral Large) satisfazem os requisitos de residência de dados — nenhum dado sai da sua infraestrutura e você controla a trilha de auditoria.',
             '**O Efeito Bruxelas se aplica a você.** Se o seu sistema de IA alcança um único residente da UE, o EU AI Act se aplica — mesmo que sua empresa esteja sediada nos EUA ou na China. Isso significa que aplicar o mesmo nível de conformidade globalmente costuma ser mais simples do que manter múltiplas configurações.',
           ],
@@ -5282,9 +5282,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             'APIs de IA chinesas (DeepSeek, ERNIE 4.0, Qwen via Alibaba Cloud) filtram conteúdo no nível da API — tópicos políticos, críticas ao PCCh e Taiwan/Tibet/Xinjiang retornam `is_safe: 0` em respostas HTTP 200, não HTTP 4xx. Trate esses casos explicitamente no código da sua aplicação.',
             'Modelos Mistral e implantações locais do Ollama satisfazem os requisitos de residência de dados do EU AI Act — prompts e saídas nunca saem da sua infraestrutura. Esse é o caminho de menor atrito para conformidade com EU RGPD + AI Act para engenheiros de prompt.',
-            'GPT-5.5 e Claude Opus 4.8 estão em conformidade com GPAI sob o EU AI Act a partir de agosto de 2025. Você pode usá-los em implantações voltadas à UE sem trabalho adicional de conformidade no nível do modelo — sua obrigação está no nível da aplicação (implantador), não no nível do modelo.',
+            'GPT-5.6 e Claude Opus 5 estão em conformidade com GPAI sob o EU AI Act a partir de agosto de 2025. Você pode usá-los em implantações voltadas à UE sem trabalho adicional de conformidade no nível do modelo — sua obrigação está no nível da aplicação (implantador), não no nível do modelo.',
             'O Efeito Bruxelas significa que prompts enviados a modelos hospedados nos EUA para produtos usados por residentes da UE estão sujeitos aos requisitos do EU AI Act — mesmo que sua empresa não seja sediada na UE.',
-            'Para testes multijurisdicionais, envie o mesmo prompt simultaneamente para Mistral (em conformidade com a UE), GPT-5.5 (EUA/GPAI) e Qwen (acessível na China) para comparar saídas entre contextos regulatórios. O PromptQuorum suporta isso nativamente.',
+            'Para testes multijurisdicionais, envie o mesmo prompt simultaneamente para Mistral (em conformidade com a UE), GPT-5.6 (EUA/GPAI) e Qwen (acessível na China) para comparar saídas entre contextos regulatórios. O PromptQuorum suporta isso nativamente.',
           ],
         },
 
@@ -5299,14 +5299,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
             {
               'Região': 'União Europeia',
               'Restrição legal sobre prompts': 'EU AI Act: prompts que geram conteúdo que interage com consumidores da UE devem incluir divulgação de IA. RGPD: prompts não devem incluir dados pessoais sem base legal. Aplicações de IA de alto risco (RH, crédito, saúde) exigem supervisão humana — prompts não devem automatizar decisões finais.',
-              'Otimização de idioma': 'Escreva prompts no idioma-alvo (alemão, francês, etc.) — GPT-5.5 e Claude Opus 4.8 têm desempenho significativamente melhor em tarefas não inglesas quando os prompts estão no mesmo idioma da saída desejada. Especifique explicitamente o idioma de saída nos prompts do sistema.',
-              'Modelo recomendado': 'Mistral Large (francês, com sede na UE), implantação local Ollama (dados nunca saem da infraestrutura) ou GPT-5.5/Claude com endpoints de API da região UE e SCCs.',
+              'Otimização de idioma': 'Escreva prompts no idioma-alvo (alemão, francês, etc.) — GPT-5.6 e Claude Opus 5 têm desempenho significativamente melhor em tarefas não inglesas quando os prompts estão no mesmo idioma da saída desejada. Especifique explicitamente o idioma de saída nos prompts do sistema.',
+              'Modelo recomendado': 'Mistral Large (francês, com sede na UE), implantação local Ollama (dados nunca saem da infraestrutura) ou GPT-5.6/Claude com endpoints de API da região UE e SCCs.',
             },
             {
               'Região': 'Estados Unidos',
               'Restrição legal sobre prompts': 'Sem lei federal de IA, mas regras setoriais se aplicam: HIPAA (saúde — PHI não deve aparecer nos prompts), CCPA/CPRA (Califórnia — dados pessoais nos prompts aciona direitos do consumidor), FTC Act (prompts não devem gerar conteúdo enganoso em contextos de consumidor). Leis biométricas estaduais (Illinois BIPA) restringem prompts que processam dados faciais/de voz.',
-              'Otimização de idioma': 'Modelos de fronteira dos EUA (GPT-5.5, Claude Opus 4.8) são otimizados para inglês e têm desempenho máximo em prompts em inglês. Para mercados hispânicos nos EUA, instrua o modelo explicitamente em espanhol ou use um prompt de sistema bilíngue — não dependa da detecção automática.',
-              'Modelo recomendado': 'GPT-5.5 ou Claude Opus 4.8 para uso geral. Para prompts regulados de saúde ou financeiros, use a API com SCCs e evite enviar PHI/PII no contexto do prompt.',
+              'Otimização de idioma': 'Modelos de fronteira dos EUA (GPT-5.6, Claude Opus 5) são otimizados para inglês e têm desempenho máximo em prompts em inglês. Para mercados hispânicos nos EUA, instrua o modelo explicitamente em espanhol ou use um prompt de sistema bilíngue — não dependa da detecção automática.',
+              'Modelo recomendado': 'GPT-5.6 ou Claude Opus 5 para uso geral. Para prompts regulados de saúde ou financeiros, use a API com SCCs e evite enviar PHI/PII no contexto do prompt.',
             },
             {
               'Região': 'China',
@@ -5317,14 +5317,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
             {
               'Região': 'Reino Unido / Pós-Brexit',
               'Restrição legal sobre prompts': 'UK RGPD (equivalente ao RGPD da UE) aplica-se a dados pessoais. UK AI Safety Institute foca na avaliação de modelos de fronteira, não em conformidade no nível de aplicação. Sem lei obrigatória de divulgação de IA — o Reino Unido escolheu uma abordagem pró-inovação e liderada pelo setor. OFCOM regula conteúdo gerado por IA em contextos de transmissão.',
-              'Otimização de idioma': 'Grafias e expressões do inglês britânico nos prompts melhoram a qualidade da saída para conteúdo voltado ao Reino Unido. GPT-5.5 responde a instruções explícitas de "UK English" em prompts do sistema; sem elas, padroniza para inglês americano.',
-              'Modelo recomendado': 'GPT-5.5 ou Claude Opus 4.8. Transferências de dados UK-UE exigem SCCs pós-Brexit — decisão de adequação do Reino Unido da UE em vigor, mas sujeita a revisão.',
+              'Otimização de idioma': 'Grafias e expressões do inglês britânico nos prompts melhoram a qualidade da saída para conteúdo voltado ao Reino Unido. GPT-5.6 responde a instruções explícitas de "UK English" em prompts do sistema; sem elas, padroniza para inglês americano.',
+              'Modelo recomendado': 'GPT-5.6 ou Claude Opus 5. Transferências de dados UK-UE exigem SCCs pós-Brexit — decisão de adequação do Reino Unido da UE em vigor, mas sujeita a revisão.',
             },
             {
               'Região': 'Japão',
               'Restrição legal sobre prompts': 'A Lei de Proteção de Informações Pessoais do Japão (APPI) restringe o uso de dados pessoais em prompts de IA. O Japão não tem lei específica de IA (a partir de 2026) — as orientações do METI e do Ministério dos Assuntos Internos são voluntárias. O Japão participou do Processo de IA de Hiroshima — a adesão aos seus 11 princípios é incentivada para empresas japonesas.',
-              'Otimização de idioma': 'Prompts em japonês para tarefas em japonês superam prompts em inglês em todos os principais modelos. GPT-5.5 e Claude Opus 4.8 lidam bem com o japonês; Rakuten AI e NTT LLMs estão disponíveis para implantações específicas do Japão. Evite o registro casual (tame-go) em prompts do sistema — a formulação educada (keigo) melhora a conformidade e a qualidade da saída para contextos empresariais japoneses.',
-              'Modelo recomendado': 'GPT-5.5 ou Claude Opus 4.8 para tarefas gerais em japonês. Rakuten AI (Rakuten Group) ou NTT LLMs para implantações sensíveis à conformidade no mercado doméstico japonês.',
+              'Otimização de idioma': 'Prompts em japonês para tarefas em japonês superam prompts em inglês em todos os principais modelos. GPT-5.6 e Claude Opus 5 lidam bem com o japonês; Rakuten AI e NTT LLMs estão disponíveis para implantações específicas do Japão. Evite o registro casual (tame-go) em prompts do sistema — a formulação educada (keigo) melhora a conformidade e a qualidade da saída para contextos empresariais japoneses.',
+              'Modelo recomendado': 'GPT-5.6 ou Claude Opus 5 para tarefas gerais em japonês. Rakuten AI (Rakuten Group) ou NTT LLMs para implantações sensíveis à conformidade no mercado doméstico japonês.',
             },
           ],
         },
@@ -5360,7 +5360,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         qaWhichCountriesDominate: {
           title: 'Quais países dominam o desenvolvimento de IA?',
           content: [
-            'Os Estados Unidos dominam a capacidade de modelos de fronteira — OpenAI (GPT-5.5), Anthropic (Claude) e Google DeepMind (Gemini) são todas sediadas nos EUA. A China lidera em volume de patentes de IA (~70% das patentes globais em 2022 segundo a WIPO) e tem os modelos domésticos mais capazes fora dos EUA: Alibaba Qwen 3, Baidu ERNIE 4.0 e DeepSeek R1. A UE lidera em regulamentação de IA, mas fica atrás em capacidade de fronteira — a Mistral AI da França é o concorrente europeu mais forte. Reino Unido, Canadá e EAU estão investindo em IA como atores independentes em vez de se alinhar exclusivamente com infraestrutura dos EUA ou chinesa.',
+            'Os Estados Unidos dominam a capacidade de modelos de fronteira — OpenAI (GPT-5.6), Anthropic (Claude) e Google DeepMind (Gemini) são todas sediadas nos EUA. A China lidera em volume de patentes de IA (~70% das patentes globais em 2022 segundo a WIPO) e tem os modelos domésticos mais capazes fora dos EUA: Alibaba Qwen 3, Baidu ERNIE 4.0 e DeepSeek R1. A UE lidera em regulamentação de IA, mas fica atrás em capacidade de fronteira — a Mistral AI da França é o concorrente europeu mais forte. Reino Unido, Canadá e EAU estão investindo em IA como atores independentes em vez de se alinhar exclusivamente com infraestrutura dos EUA ou chinesa.',
           ],
         },
 
@@ -5392,9 +5392,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**A regulamentação de IA** é o conjunto de leis, ordens executivas e frameworks voluntários que governam como os sistemas de inteligência artificial são desenvolvidos, implantados e regulados. A regulamentação de IA é produzida por estados soberanos e organismos internacionais; os três principais regimes regulatórios são o EU AI Act (União Europeia), o NIST AI Risk Management Framework (Estados Unidos) e as Medidas de IA Generativa do CAC (China).',
             '**A rivalidade tecnológica EUA-China** é a competição bilateral entre os Estados Unidos e a China pela liderança em semicondutores, inteligência artificial e manufatura avançada. A rivalidade se expressa por meio de controles de exportação dos EUA sobre GPUs da Nvidia, a estratégia de substituição doméstica da China (Made in China 2025) e frameworks concorrentes de governança de IA. A UE é um terceiro ator — não uma parte bilateral — que molda a rivalidade por meio de seu poder regulatório.',
             '**O EU AI Act** é um regulamento aprovado pelo Parlamento Europeu em março de 2024. É aplicado pelo EU AI Office e pelas autoridades nacionais de vigilância de mercado. Aplica-se a qualquer organização — independentemente da localização da sede — cujos sistemas de IA afetam usuários da UE. O EU AI Act está relacionado ao Efeito Bruxelas: por se aplicar extraterritorialmente, ele efetivamente regula OpenAI, Google DeepMind e Anthropic globalmente.',
-            '**A NVIDIA** é uma empresa americana de semicondutores que projeta GPUs de treinamento de IA (séries H100, H200, B200). O hardware da NVIDIA é o principal substrato de computação para treinar GPT-5.5, Claude, Gemini e a maioria dos modelos de IA de fronteira. Os controles de exportação dos EUA sobre GPUs da NVIDIA para a China são um mecanismo central na rivalidade tecnológica EUA-China. A posição de mercado da NVIDIA (~80% de participação em GPU de IA) a torna um ator geopolítico além de comercial.',
+            '**A NVIDIA** é uma empresa americana de semicondutores que projeta GPUs de treinamento de IA (séries H100, H200, B200). O hardware da NVIDIA é o principal substrato de computação para treinar GPT-5.6, Claude, Gemini e a maioria dos modelos de IA de fronteira. Os controles de exportação dos EUA sobre GPUs da NVIDIA para a China são um mecanismo central na rivalidade tecnológica EUA-China. A posição de mercado da NVIDIA (~80% de participação em GPU de IA) a torna um ator geopolítico além de comercial.',
             '**A TSMC** (Taiwan Semiconductor Manufacturing Company) é uma fundição de chips taiwanesa que fabrica semicondutores avançados para NVIDIA, Apple, AMD e Google. A localização geográfica da TSMC em Taiwan — e o status político disputado da ilha — torna a TSMC uma variável crítica na geopolítica da IA. A CHIPS and Science Act foi promulgada em parte para reduzir a dependência dos EUA da TSMC por meio do financiamento de fábricas domésticas nos EUA.',
-            '**A DeepSeek** é um laboratório de IA chinês (apoiado pela High-Flyer Capital Management) que lançou o DeepSeek R1 em janeiro de 2025. O DeepSeek R1 superou o GPT-5.5 em vários benchmarks enquanto supostamente treinava a um custo estimado de ~US$6 milhões — 94% menos do que estimativas de modelos de fronteira — usando GPUs NVIDIA H800 restritas para a China. O lançamento do DeepSeek enfraqueceu o argumento de que os controles de exportação dos EUA poderiam limitar permanentemente o desenvolvimento de IA de fronteira chinesa.',
+            '**A DeepSeek** é um laboratório de IA chinês (apoiado pela High-Flyer Capital Management) que lançou o DeepSeek R1 em janeiro de 2025. O DeepSeek R1 superou o GPT-5.6 em vários benchmarks enquanto supostamente treinava a um custo estimado de ~US$6 milhões — 94% menos do que estimativas de modelos de fronteira — usando GPUs NVIDIA H800 restritas para a China. O lançamento do DeepSeek enfraqueceu o argumento de que os controles de exportação dos EUA poderiam limitar permanentemente o desenvolvimento de IA de fronteira chinesa.',
           ],
         },
 
@@ -5416,13 +5416,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'A corrida armamentista de IA: EUA, China e UE',
           content: [
             '**Três visões incompatíveis de governança de IA estão competindo pela adoção global — os EUA priorizam inovação e competitividade, a China usa direção estatal para alcançar dominância estratégica em IA e a UE constrói um framework jurídico baseado em direitos que exporta seus padrões globalmente por meio do Efeito Bruxelas.** Essa corrida armamentista de IA é primariamente civil: os laboratórios líderes são empresas privadas (OpenAI, Anthropic, Google DeepMind, Baidu, Alibaba), mas as apostas — controle regulatório, cadeias de suprimentos de hardware e talentos — são geopolíticas.',
-            'A corrida não é apenas sobre quem constrói os modelos mais capazes. Trata-se de qual framework regulatório se torna o padrão global. O EU AI Act, ao se aplicar a qualquer sistema de IA implantado para usuários da UE, já tornou Bruxelas o regulador efetivo da OpenAI, Anthropic e Google DeepMind globalmente. O controle de hardware é uma terceira dimensão: a CHIPS and Science Act (US$52 bilhões) e os controles de exportação de GPU da Nvidia visam limitar o acesso da China à computação. O lançamento do DeepSeek R1 em janeiro de 2025 — competitivo com o GPT-5.5 a uma fração do custo de treinamento — demonstrou que esses controles têm limites. Veja [LLMs open-source vs proprietários](/prompt-engineering/open-source-vs-proprietary-llms) para como essas dinâmicas afetam a disponibilidade de modelos.',
+            'A corrida não é apenas sobre quem constrói os modelos mais capazes. Trata-se de qual framework regulatório se torna o padrão global. O EU AI Act, ao se aplicar a qualquer sistema de IA implantado para usuários da UE, já tornou Bruxelas o regulador efetivo da OpenAI, Anthropic e Google DeepMind globalmente. O controle de hardware é uma terceira dimensão: a CHIPS and Science Act (US$52 bilhões) e os controles de exportação de GPU da Nvidia visam limitar o acesso da China à computação. O lançamento do DeepSeek R1 em janeiro de 2025 — competitivo com o GPT-5.6 a uma fração do custo de treinamento — demonstrou que esses controles têm limites. Veja [LLMs open-source vs proprietários](/prompt-engineering/open-source-vs-proprietary-llms) para como essas dinâmicas afetam a disponibilidade de modelos.',
           ],
           items: [
-            '**Posição dos EUA:** Lidera em capacidade de modelos de fronteira (GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro), design de chips (Nvidia, AMD) e investimento em IA (US$67B em investimento privado em 2023 segundo a OCDE). Sem lei federal unificada de IA — acelera a implantação, mas cria fragmentação de conformidade.',
+            '**Posição dos EUA:** Lidera em capacidade de modelos de fronteira (GPT-5.6, Claude Opus 5, Gemini 3.1 Pro), design de chips (Nvidia, AMD) e investimento em IA (US$67B em investimento privado em 2023 segundo a OCDE). Sem lei federal unificada de IA — acelera a implantação, mas cria fragmentação de conformidade.',
             '**Posição da China:** Lidera em volume de patentes de IA, escala de reconhecimento facial e implantação de infraestrutura dirigida pelo Estado. Modelos (Qwen 3, ERNIE 4.0, DeepSeek R1) são competitivos em muitos benchmarks. A dependência de hardware das arquiteturas Nvidia é a principal vulnerabilidade estratégica que os controles de exportação visam.',
             '**Posição da Europa:** Lidera em regulamentação de IA — o EU AI Act é o framework de referência global — e pesquisa de pesos abertos (Mistral da França). Fica atrás em capacidade de modelos de fronteira e investimento privado. Compensa por meio de alavancagem regulatória: o Efeito Bruxelas força fornecedores dos EUA e da China a cumprirem os padrões da UE para produtos globais.',
-            '**A camada de hardware:** GPUs Nvidia H100/H200 dominam o treinamento de IA. Controles de exportação dos EUA restringem vendas para a China. DeepSeek R1 treinado em GPUs H800 restritas a ~US$6M reportados — uma redução de custo de 94% vs. estimativas de treinamento do GPT-5.5 — demonstrando que os controles de hardware não detiveram a IA de fronteira chinesa.',
+            '**A camada de hardware:** GPUs Nvidia H100/H200 dominam o treinamento de IA. Controles de exportação dos EUA restringem vendas para a China. DeepSeek R1 treinado em GPUs H800 restritas a ~US$6M reportados — uma redução de custo de 94% vs. estimativas de treinamento do GPT-5.6 — demonstrando que os controles de hardware não detiveram a IA de fronteira chinesa.',
           ],
           image: '/images/regional-ai-players-en.svg',
           imageCaption: 'EUA: OpenAI, Anthropic, Google DeepMind (financiados por VC). UE: Mistral, Hugging Face (open-source, subfinanciados vs. EUA). China: Baidu, Alibaba, Tencent (apoiados pelo Estado, supervisão do CAC).',
@@ -5439,7 +5439,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Alto Risco:** IA em infraestrutura crítica, educação, emprego, serviços essenciais (crédito, benefícios), aplicação da lei, controle de fronteiras e administração da justiça. Requer avaliações de conformidade, documentação de transparência, supervisão humana e registro no banco de dados da UE.',
             '**Risco Limitado:** Chatbots e conteúdo gerado por IA. Requer divulgação — os usuários precisam saber que estão interagindo com IA.',
             '**Risco Mínimo:** Filtros de spam, IA em videogames, sistemas de recomendação sem impacto significativo. Sem obrigações específicas além da lei existente.',
-            '**IA de Propósito Geral (GPAI):** Modelos como GPT-5.5, Claude e Gemini devem publicar resumos de dados de treinamento, cumprir a lei de direitos autorais da UE e relatar incidentes graves. Modelos com risco sistêmico (treinados com >10^25 FLOPS) enfrentam requisitos adicionais de teste adversarial. As regras de GPAI se aplicaram em agosto de 2025.',
+            '**IA de Propósito Geral (GPAI):** Modelos como GPT-5.6, Claude e Gemini devem publicar resumos de dados de treinamento, cumprir a lei de direitos autorais da UE e relatar incidentes graves. Modelos com risco sistêmico (treinados com >10^25 FLOPS) enfrentam requisitos adicionais de teste adversarial. As regras de GPAI se aplicaram em agosto de 2025.',
             '**Aplicação:** EU AI Office (dentro da Comissão Europeia) supervisiona modelos GPAI. Autoridades nacionais de vigilância de mercado aplicam regras de IA de alto risco. Multas: até €35M ou 7% do faturamento global para práticas proibidas; €15M ou 3% para violações de alto risco.',
             '**Cronograma:** Práticas proibidas: agosto de 2024. Obrigações de GPAI: agosto de 2025. Deveres de transparência do Artigo 50 (divulgação de chatbots/deepfakes): agosto de 2026, não afetados pelo Omnibus Digital. Sistemas de IA de alto risco autônomos (Anexo III): adiados de agosto de 2026 para 2 de dezembro de 2027 pelo Omnibus Digital. IA de alto risco embutida em produtos regulados (Anexo I): adiada de agosto de 2027 para 2 de agosto de 2028.',
           ],
@@ -5482,8 +5482,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         franceMistral: {
           title: 'França e Mistral: construindo independência europeia em IA',
           content: [
-            '**A França está construindo um contraponto estratégico à dominância dos EUA em IA por meio de investimento público e da Mistral AI — posicionando modelos de pesos abertos como o caminho da Europa para a soberania em IA.** A Mistral representa a alternativa mais viável da UE ao GPT-5.5 e ao Claude, e o investimento de €2 bilhões da França em IA é explicitamente projetado para financiar empresas como a Mistral e reduzir a dependência da OpenAI, Google e Anthropic.',
-            '**Mistral AI (fundada em 2023):** Fundada por Arthur Mensch, Guillaume Blanc e Tim Caron — todos ex-funcionários da Meta. A Mistral lançou o Mistral Small (pesos abertos) em setembro de 2023, seguido pelo Mistral Large 2 (competitivo com GPT-5.5 em muitas tarefas). O Mistral Large 2 pontua 81,2% no MMLU vs. 88,7% do GPT-5.5, mas equipara modelos proprietários em classificação, sumarização e tarefas de extração. Janela de contexto de 123K tokens. Licenciado sob a Licença de Comunidade Mistral (permite uso comercial; restrições de nomenclatura para derivados semelhantes ao LLaMA).',
+            '**A França está construindo um contraponto estratégico à dominância dos EUA em IA por meio de investimento público e da Mistral AI — posicionando modelos de pesos abertos como o caminho da Europa para a soberania em IA.** A Mistral representa a alternativa mais viável da UE ao GPT-5.6 e ao Claude, e o investimento de €2 bilhões da França em IA é explicitamente projetado para financiar empresas como a Mistral e reduzir a dependência da OpenAI, Google e Anthropic.',
+            '**Mistral AI (fundada em 2023):** Fundada por Arthur Mensch, Guillaume Blanc e Tim Caron — todos ex-funcionários da Meta. A Mistral lançou o Mistral Small (pesos abertos) em setembro de 2023, seguido pelo Mistral Large 2 (competitivo com GPT-5.6 em muitas tarefas). O Mistral Large 2 pontua 81,2% no MMLU vs. 88,7% do GPT-5.6, mas equipara modelos proprietários em classificação, sumarização e tarefas de extração. Janela de contexto de 123K tokens. Licenciado sob a Licença de Comunidade Mistral (permite uso comercial; restrições de nomenclatura para derivados semelhantes ao LLaMA).',
             '**Por que a França escolheu pesos abertos:** A posição da França é que APIs proprietárias criam dependência de fornecedor, riscos de residência de dados e dependência de longo prazo de empresas dos EUA. Modelos de pesos abertos podem ser implantados em infraestrutura europeia, mantendo dados dentro das jurisdições da UE e evitando atrito com RGPD/AI Act com provedores de nuvem dos EUA.',
             '**Apoio governamental:** Apoio do governo francês via La Caisse des Dépôts et Placements (fundo de investimento estatal) e subsídios diretos. A Mistral recebeu financiamento Série B de €385 milhões (fevereiro de 2024) com apoio de investidores estratégicos franceses. Posicionada como um "campeão europeu" em IA — semelhante a como a Airbus foi construída como um contrapeso aeroespacial europeu à Boeing.',
           ],
@@ -5529,7 +5529,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '**Made in China 2025 e Plano Nacional de Desenvolvimento de IA de Nova Geração (2017):** O plano de IA da China de 2017 visava a liderança global em IA até 2030 em pesquisa, talentos, desenvolvimento de produtos e regulamentação. Alocou US$15 bilhões em financiamento estatal e estabeleceu benchmarks para produção de patentes de IA, citações de pesquisa e receita da indústria. A IA é designada como uma tecnologia estratégica central juntamente com semicondutores e computação quântica.',
             '**Regulamentações de algoritmos do CAC (março de 2022):** Exigiram que todos os sistemas de recomendação baseados em algoritmos que servem usuários chineses se registrassem no CAC, divulgassem como os algoritmos funcionam e permitissem que os usuários optassem por não receber recomendações personalizadas. Estendido à IA generativa em julho de 2023 — todos os serviços de IA generativa devem se registrar, passar por uma avaliação de segurança e garantir que as saídas se alinhem com os "valores socialistas fundamentais".',
-            '**DeepSeek R1 (janeiro de 2025):** Lançado pela DeepSeek (um laboratório de IA chinês apoiado pelo hedge fund High-Flyer), o R1 superou o GPT-5.5 em vários benchmarks, incluindo AIME 2024 (79,8%), MATH-500 (97,3%) e tarefas de codificação HumanEval. Treinado em GPUs Nvidia H800 — a variante específica para a China dentro dos limites de controle de exportação — com custo estimado de treinamento de ~US$6 milhões. O lançamento desencadeou uma queda significativa no preço das ações da Nvidia e acelerou debates de política dos EUA sobre a eficácia dos controles de exportação de hardware.',
+            '**DeepSeek R1 (janeiro de 2025):** Lançado pela DeepSeek (um laboratório de IA chinês apoiado pelo hedge fund High-Flyer), o R1 superou o GPT-5.6 em vários benchmarks, incluindo AIME 2024 (79,8%), MATH-500 (97,3%) e tarefas de codificação HumanEval. Treinado em GPUs Nvidia H800 — a variante específica para a China dentro dos limites de controle de exportação — com custo estimado de treinamento de ~US$6 milhões. O lançamento desencadeou uma queda significativa no preço das ações da Nvidia e acelerou debates de política dos EUA sobre a eficácia dos controles de exportação de hardware.',
             '**Chips Huawei Ascend:** Os chips Ascend 910B e 910C da Huawei estão posicionados como alternativas domésticas às GPUs Nvidia para treinamento de IA. O desempenho permanece abaixo do Nvidia H100 na maioria dos benchmarks, mas suficiente para treinar modelos de médio porte. Grandes empresas de tecnologia chinesas (Baidu, Alibaba, ByteDance) começaram a migrar algumas cargas de trabalho para o Ascend para reduzir a dependência da Nvidia.',
             '**Diplomacia de IA da Belt and Road:** A China exporta infraestrutura de vigilância de IA (reconhecimento facial, sistemas de cidade inteligente) para nações em desenvolvimento por meio de parcerias BRI. Os fornecedores incluem Huawei, Alibaba Cloud e ZTE. Isso exporta normas de governança de IA chinesas para países parceiros, criando um ecossistema paralelo de padrões de IA fora do framework OCDE/UE.',
             '**Principais modelos de IA chineses:** Alibaba Qwen 3, Baidu ERNIE 4.0, ByteDance Doubao, Z.ai GLM-4. Esses são competitivos em tarefas em chinês e cada vez mais em benchmarks multilíngues. O Qwen de pesos abertos atraiu desenvolvedores internacionais.',
@@ -5539,8 +5539,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         chinaModelsAccessibility: {
           title: 'China para engenheiros de prompt: quais modelos estão disponíveis',
           content: [
-            '**Se o seu produto atende usuários na China, você está operando em um ecossistema de IA distinto com diferentes modelos disponíveis, filtros de conteúdo obrigatórios e um requisito de aprovação pré-lançamento sem equivalente na UE ou nos EUA.** Modelos estrangeiros — GPT-5.5, Claude, Gemini — são inacessíveis da China continental sem uma VPN. Suas opções são limitadas a alternativas registradas domesticamente.',
-            '**Modelos disponíveis na China:** Alibaba Qwen 3 (pesos abertos, 7B–72B, contexto de 128K, API via Alibaba Cloud), Baidu ERNIE 4.0 (API via plataforma Qianfan), ByteDance Doubao (API via Volcano Engine), Z.ai GLM-4 (API via plataforma Z.ai) e DeepSeek R1/V3 (API via plataforma DeepSeek). O Qwen 3 72B é a opção de pesos abertos mais forte — você pode auto-hospedá-lo fora da China enquanto o usa para tarefas em chinês. Pontua dentro de 5 pontos percentuais do GPT-5.5 no MMLU e supera em benchmarks específicos do chinês (C-Eval).',
+            '**Se o seu produto atende usuários na China, você está operando em um ecossistema de IA distinto com diferentes modelos disponíveis, filtros de conteúdo obrigatórios e um requisito de aprovação pré-lançamento sem equivalente na UE ou nos EUA.** Modelos estrangeiros — GPT-5.6, Claude, Gemini — são inacessíveis da China continental sem uma VPN. Suas opções são limitadas a alternativas registradas domesticamente.',
+            '**Modelos disponíveis na China:** Alibaba Qwen 3 (pesos abertos, 7B–72B, contexto de 128K, API via Alibaba Cloud), Baidu ERNIE 4.0 (API via plataforma Qianfan), ByteDance Doubao (API via Volcano Engine), Z.ai GLM-4 (API via plataforma Z.ai) e DeepSeek R1/V3 (API via plataforma DeepSeek). O Qwen 3 72B é a opção de pesos abertos mais forte — você pode auto-hospedá-lo fora da China enquanto o usa para tarefas em chinês. Pontua dentro de 5 pontos percentuais do GPT-5.6 no MMLU e supera em benchmarks específicos do chinês (C-Eval).',
           ],
         },
 
@@ -5619,7 +5619,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '**Organizações sediadas na UE:** Precisam cumprir o EU AI Act diretamente. Sistemas de IA de alto risco autônomos (RH, crédito, saúde, serviços públicos) exigem avaliações de conformidade, documentação de supervisão humana e registro no banco de dados de IA da UE antes de 2 de dezembro de 2027 (adiado de agosto de 2026 pelo Omnibus Digital, em vigor desde 27 de julho de 2026). Os deveres de divulgação do Artigo 50 para chatbots e conteúdo gerado por IA já se aplicam desde agosto de 2026. Toda IA que lida com dados pessoais deve cumprir o RGPD — incluindo pipelines de treinamento de IA e processamento de saídas.',
             '**Organizações não pertencentes à UE que atendem usuários da UE:** Sujeitas ao Efeito Bruxelas — o EU AI Act aplica-se às suas saídas de IA se alcançarem usuários da UE. Modelos GPAI usados em produtos voltados à UE devem cumprir obrigações de transparência (a partir de agosto de 2025). O não cumprimento acarreta as mesmas multas que os violadores sediados na UE.',
-            '**Ferramentas de IA dos EUA em implantações na UE:** GPT-5.5, Claude Opus 4.8 e Gemini 3.1 Pro são todos classificados como modelos GPAI. OpenAI, Anthropic e Google publicaram documentação de conformidade GPAI do EU AI Act. Organizações que usam essas ferramentas em sistemas de IA de alto risco (como implantadores) permanecem responsáveis por suas próprias avaliações de conformidade — a conformidade GPAI do fornecedor não cobre a sua implantação.',
+            '**Ferramentas de IA dos EUA em implantações na UE:** GPT-5.6, Claude Opus 5 e Gemini 3.1 Pro são todos classificados como modelos GPAI. OpenAI, Anthropic e Google publicaram documentação de conformidade GPAI do EU AI Act. Organizações que usam essas ferramentas em sistemas de IA de alto risco (como implantadores) permanecem responsáveis por suas próprias avaliações de conformidade — a conformidade GPAI do fornecedor não cobre a sua implantação.',
             '**Ferramentas de IA chinesas:** DeepSeek R1 e outros modelos chineses estão disponíveis internacionalmente, mas carregam risco adicional de aquisição para organizações da UE e dos EUA — a residência de dados é incerta, o fornecedor está sujeito a regulamentações de conteúdo do CAC e a Administração do Ciberespaço da China pode compelir a divulgação de dados. Organizações governamentais e de infraestrutura crítica em estados-membros da UE e da OTAN estão restringindo ou proibindo o uso de ferramentas de IA chinesas.',
             '**Residência de dados:** O RGPD da UE restringe a transferência de dados pessoais para países sem decisões de "adequação" ou salvaguardas apropriadas. A inferência de IA em dados pessoais usando fornecedores dos EUA requer Cláusulas Contratuais Padrão (SCCs) ou depende do EU-US Data Privacy Framework (2023). A transferência para a China não tem decisão de adequação — salvaguardas contratuais precisam estar em vigor e são difíceis de aplicar.',
             '**Decisões de aquisição:** Agências federais dos EUA estão proibidas de usar IA de entidades chinesas designadas. Vários estados-membros da UE (Alemanha, França, Países Baixos) emitiram orientações restringindo ferramentas de IA chinesas em aquisições governamentais. Para organizações do setor privado, a política de aquisição deve abordar a jurisdição dos dados de treinamento do fornecedor de IA, práticas de moderação de conteúdo e disposições de acesso governamental.',
@@ -5639,7 +5639,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         qaWhoIsWinning: {
           title: 'Quem está vencendo a corrida global de IA?',
           content: [
-            'Os Estados Unidos lideram em capacidade de modelos de fronteira — GPT-5.5 (OpenAI), Claude (Anthropic) e Gemini (Google DeepMind) — e em investimento privado em IA (US$67 bilhões em 2023 segundo dados da OCDE). A China lidera em registros de patentes de IA, escala de implantação dirigida pelo Estado e desenvolvimento de modelos domésticos; o DeepSeek R1 igualou o GPT-5.5 em benchmarks-chave em janeiro de 2025. A União Europeia lidera em regulamentação de IA — o EU AI Act é o framework de referência global — mas fica atrás em capacidade de modelos de fronteira e investimento privado em relação ao seu tamanho econômico. Nenhum único ator lidera nas três dimensões simultaneamente.',
+            'Os Estados Unidos lideram em capacidade de modelos de fronteira — GPT-5.6 (OpenAI), Claude (Anthropic) e Gemini (Google DeepMind) — e em investimento privado em IA (US$67 bilhões em 2023 segundo dados da OCDE). A China lidera em registros de patentes de IA, escala de implantação dirigida pelo Estado e desenvolvimento de modelos domésticos; o DeepSeek R1 igualou o GPT-5.6 em benchmarks-chave em janeiro de 2025. A União Europeia lidera em regulamentação de IA — o EU AI Act é o framework de referência global — mas fica atrás em capacidade de modelos de fronteira e investimento privado em relação ao seu tamanho econômico. Nenhum único ator lidera nas três dimensões simultaneamente.',
           ],
         },
 
@@ -5653,21 +5653,21 @@ export const article: Partial<Record<Language, PEArticle>> = {
         qaHowChinaRegulates: {
           title: 'Como a China regula a inteligência artificial?',
           content: [
-            'A China regula a IA por meio da Administração do Ciberespaço da China (CAC). As Regulamentações de Recomendação de Algoritmos (2022) exigem a rotulagem de conteúdo curado algoritmicamente. As Medidas de IA Generativa (2023) exigem uma avaliação de segurança do CAC — um processo de 45–90 dias — antes de qualquer serviço de IA generativa voltado ao consumidor poder ser lançado na China, e determinam que as saídas de IA se alinhem com os "valores socialistas fundamentais". Modelos de IA estrangeiros (GPT-5.5, Claude, Gemini) são inacessíveis da China continental sem ferramentas de contorno. As alternativas domésticas incluem Alibaba Qwen, Baidu ERNIE 4.0, ByteDance Doubao e DeepSeek.',
+            'A China regula a IA por meio da Administração do Ciberespaço da China (CAC). As Regulamentações de Recomendação de Algoritmos (2022) exigem a rotulagem de conteúdo curado algoritmicamente. As Medidas de IA Generativa (2023) exigem uma avaliação de segurança do CAC — um processo de 45–90 dias — antes de qualquer serviço de IA generativa voltado ao consumidor poder ser lançado na China, e determinam que as saídas de IA se alinhem com os "valores socialistas fundamentais". Modelos de IA estrangeiros (GPT-5.6, Claude, Gemini) são inacessíveis da China continental sem ferramentas de contorno. As alternativas domésticas incluem Alibaba Qwen, Baidu ERNIE 4.0, ByteDance Doubao e DeepSeek.',
           ],
         },
 
         qaWhatEUAIActRequires: {
           title: 'O que o EU AI Act exige das organizações?',
           content: [
-            'O EU AI Act classifica sistemas de IA em quatro níveis de risco com obrigações dimensionadas. Práticas proibidas — pontuação social por autoridades públicas, vigilância biométrica em tempo real em espaços públicos — estão proibidas desde agosto de 2024. Sistemas de IA de alto risco autônomos usados em emprego, avaliação de crédito, saúde ou aplicação da lei exigem avaliações de conformidade, documentação de supervisão humana e registro no banco de dados de IA da UE antes de 2 de dezembro de 2027 (adiado da data original de agosto de 2026 pelo Omnibus Digital, em vigor desde 27 de julho de 2026). Modelos de IA de Propósito Geral (GPT-5.5, Claude, Gemini) devem publicar resumos de dados de treinamento e cumprir a lei de direitos autorais da UE — regras que se aplicaram a partir de agosto de 2025. Os deveres de transparência do Artigo 50 (divulgação de chatbots e conteúdo de IA) continuam a se aplicar desde agosto de 2026, conforme programado. Todas as organizações que atendem usuários da UE devem estar em conformidade, independentemente de onde estão sediadas.',
+            'O EU AI Act classifica sistemas de IA em quatro níveis de risco com obrigações dimensionadas. Práticas proibidas — pontuação social por autoridades públicas, vigilância biométrica em tempo real em espaços públicos — estão proibidas desde agosto de 2024. Sistemas de IA de alto risco autônomos usados em emprego, avaliação de crédito, saúde ou aplicação da lei exigem avaliações de conformidade, documentação de supervisão humana e registro no banco de dados de IA da UE antes de 2 de dezembro de 2027 (adiado da data original de agosto de 2026 pelo Omnibus Digital, em vigor desde 27 de julho de 2026). Modelos de IA de Propósito Geral (GPT-5.6, Claude, Gemini) devem publicar resumos de dados de treinamento e cumprir a lei de direitos autorais da UE — regras que se aplicaram a partir de agosto de 2025. Os deveres de transparência do Artigo 50 (divulgação de chatbots e conteúdo de IA) continuam a se aplicar desde agosto de 2026, conforme programado. Todas as organizações que atendem usuários da UE devem estar em conformidade, independentemente de onde estão sediadas.',
           ],
         },
 
         qaExportControls: {
           title: 'Como os controles de exportação dos EUA afetam o desenvolvimento de IA?',
           content: [
-            'Os controles de exportação dos EUA restringem a venda de GPUs Nvidia avançadas — incluindo A100 e H100 — para a China, visando limitar a capacidade da China de treinar modelos de IA de fronteira. Os controles são aplicados por meio das Regulamentações de Administração de Exportações (EAR) e se aplicam a produtos da Nvidia, AMD e Intel acima de limites de computação especificados. O lançamento do DeepSeek R1 em janeiro de 2025 demonstrou os limites dessa abordagem: treinado em GPUs H800 restritas para a China a uma fração do custo reportado de modelos dos EUA comparáveis, igualou o GPT-5.5 em benchmarks AIME 2024, MATH-500 e HumanEval. Os controles de exportação diminuem, mas não detiveram o desenvolvimento de IA de fronteira chinesa.',
+            'Os controles de exportação dos EUA restringem a venda de GPUs Nvidia avançadas — incluindo A100 e H100 — para a China, visando limitar a capacidade da China de treinar modelos de IA de fronteira. Os controles são aplicados por meio das Regulamentações de Administração de Exportações (EAR) e se aplicam a produtos da Nvidia, AMD e Intel acima de limites de computação especificados. O lançamento do DeepSeek R1 em janeiro de 2025 demonstrou os limites dessa abordagem: treinado em GPUs H800 restritas para a China a uma fração do custo reportado de modelos dos EUA comparáveis, igualou o GPT-5.6 em benchmarks AIME 2024, MATH-500 e HumanEval. Os controles de exportação diminuem, mas não detiveram o desenvolvimento de IA de fronteira chinesa.',
           ],
         },
 
@@ -5702,7 +5702,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         defGPAI: {
           title: 'Definição: IA de Propósito Geral (GPAI)',
-          content: 'Um sistema de IA treinado em dados amplos com uma arquitetura geral (não especializada ou específica de domínio) que pode ser adaptado para uma ampla gama de tarefas downstream. GPT-5.5, Claude Opus 4.8 e Gemini 3.1 Pro são modelos GPAI. Sob o EU AI Act, modelos GPAI com computação de treinamento >10^25 FLOP enfrentam obrigações de transparência incluindo resumos de dados de treinamento, documentação de capacidades e conformidade com direitos autorais.',
+          content: 'Um sistema de IA treinado em dados amplos com uma arquitetura geral (não especializada ou específica de domínio) que pode ser adaptado para uma ampla gama de tarefas downstream. GPT-5.6, Claude Opus 5 e Gemini 3.1 Pro são modelos GPAI. Sob o EU AI Act, modelos GPAI com computação de treinamento >10^25 FLOP enfrentam obrigações de transparência incluindo resumos de dados de treinamento, documentação de capacidades e conformidade com direitos autorais.',
         },
 
         defCAC: {
@@ -5772,7 +5772,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'faq',
           title: 'Perguntas frequentes',
           faqs: [
-            { q: 'O que é o EU AI Act e quando se aplica?', a: 'O EU AI Act é a primeira lei abrangente de IA do mundo, aprovada pelo Parlamento Europeu em março de 2024. Práticas proibidas se aplicam a partir de agosto de 2024. Obrigações de modelos GPAI (para modelos GPT-5.5, Claude, classe Gemini) aplicam-se a partir de agosto de 2025. Os deveres de transparência do Artigo 50 aplicam-se a partir de agosto de 2026. Os requisitos de sistemas de IA de alto risco autônomos foram adiados pelo Omnibus Digital, em vigor desde 27 de julho de 2026, de agosto de 2026 para 2 de dezembro de 2027. Aplica-se a qualquer organização que coloque IA no mercado da UE ou use IA que afete residentes da UE.' },
+            { q: 'O que é o EU AI Act e quando se aplica?', a: 'O EU AI Act é a primeira lei abrangente de IA do mundo, aprovada pelo Parlamento Europeu em março de 2024. Práticas proibidas se aplicam a partir de agosto de 2024. Obrigações de modelos GPAI (para modelos GPT-5.6, Claude, classe Gemini) aplicam-se a partir de agosto de 2025. Os deveres de transparência do Artigo 50 aplicam-se a partir de agosto de 2026. Os requisitos de sistemas de IA de alto risco autônomos foram adiados pelo Omnibus Digital, em vigor desde 27 de julho de 2026, de agosto de 2026 para 2 de dezembro de 2027. Aplica-se a qualquer organização que coloque IA no mercado da UE ou use IA que afete residentes da UE.' },
             { q: 'O EU AI Act se aplica a empresas não pertencentes à UE?', a: 'Sim. O EU AI Act tem alcance extraterritorial — aplica-se a qualquer fornecedor cujas saídas de IA são usadas na UE, independentemente de onde o fornecedor está sediado. Uma empresa dos EUA cujo produto de IA é usado por residentes da UE precisa estar em conformidade. Este é o mesmo princípio extraterritorial que tornou o RGPD um padrão global.' },
             { q: 'Quais são as multas por violar o EU AI Act?', a: 'Multas de até €35 milhões ou 7% do faturamento anual global (o que for maior) por práticas de IA proibidas. Até €15 milhões ou 3% por violações de IA de alto risco. Até €7,5 milhões ou 1% por fornecer informações incorretas às autoridades de aplicação. O maior percentual ou valor fixo se aplica.' },
             { q: 'Quais aplicações de IA são proibidas sob o EU AI Act?', a: 'Proibidas (Risco Inaceitável): sistemas de pontuação social por autoridades públicas; identificação biométrica em tempo real em espaços públicos (com exceções restritas); IA que explora vulnerabilidades psicológicas; coleta indiscriminada de imagens faciais da internet. Essas estão proibidas desde agosto de 2024.' },
@@ -5786,7 +5786,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'Organizações da UE podem usar DeepSeek para aplicações comerciais?', a: 'Tecnicamente sim, com salvaguardas contratuais em conformidade com o RGPD (Cláusulas Contratuais Padrão). Na prática, as SCCs são difíceis de aplicar contra obrigações da lei chinesa, que exigem que o DeepSeek cumpra as solicitações de divulgação de dados do CAC. A aquisição governamental é uma restrição separada: o BSI da Alemanha, a ANSSI da França e o NCSC dos Países Baixos emitiram avisos ou restrições sobre ferramentas de IA chinesas para uso governamental e de infraestrutura crítica. Organizações privadas da UE podem usar o DeepSeek comercialmente, mas devem realizar uma Avaliação de Impacto de Transferência nos termos do Artigo 46 do RGPD e documentar o risco residual.' },
             { q: 'O EU AI Act prejudica ou ajuda a competitividade da UE em IA?', a: 'Este é um dilema estratégico genuíno: o EU AI Act pode desacelerar as startups de IA da UE, mas fortalece a credibilidade regulatória da Europa globalmente. Por um lado, os custos de conformidade e as avaliações de conformidade criam atrito para as empresas da UE — a Mistral AI da França é mais restrita do que os concorrentes dos EUA. Por outro lado, o Efeito Bruxelas significa que o framework regulatório da UE se torna o padrão global, dando às empresas sediadas na UE uma vantagem competitiva em conformidade. A Europa está apostando em "liderança regulatória" em vez de "liderança de capacidade bruta" — uma estratégia de IA fundamentalmente diferente dos EUA ou da China.' },
             { q: 'Como a capacidade de computação da Europa se compara aos EUA e à China?', a: 'A Europa fica significativamente atrás em infraestrutura de computação. Os EUA dominam a fabricação de GPU (Nvidia ~80% de participação de mercado) e o silício personalizado. A China fabrica na TSMC (Taiwan) e usa GPUs Nvidia H e A-series restritas. A Europa não tem equivalente: a ASML (Países Baixos) fabrica equipamentos de fabricação de chips, mas não possui fábricas. A EU Chips Act (€43 bilhões) visa construir fábricas da Intel e TSMC no território da UE, mas nenhuma estará operacional antes de 2027–2029. Esta é a principal vulnerabilidade de infraestrutura da Europa: treinar modelos de fronteira requer milhares de GPUs rodando por meses. Sem capacidade de fabricação doméstica, a Europa permanece dependente dos EUA (Nvidia) e de Taiwan (TSMC).' },
-            { q: 'Qual é a vantagem da Europa em IA além da regulamentação?', a: 'A Europa tem três vantagens não regulatórias: (1) Mistral AI e outros modelos de pesos abertos financiados pela UE fornecem alternativas em conformidade com o RGPD sem dependências dos EUA ou da China; (2) A Europa lidera em pesquisa de segurança de IA por meio do UK AI Safety Institute, ETH Zurique e centros de pesquisa franceses (INRIA, CNRS); (3) A força de trabalho altamente qualificada da Europa e os talentos existentes em software/semicondutores lhe dão vantagem em aplicações de IA e silício personalizado. No entanto, nenhuma dessas vantagens compensa a desvantagem da Europa na capacidade de modelos de fronteira — os EUA lideram no GPT-5.5 e Claude, e a China na escala de implantação e volume. A estratégia da Europa é "fazer o que você é bom (segurança, regulamentação, ética) em vez de competir na capacidade bruta".' },
+            { q: 'Qual é a vantagem da Europa em IA além da regulamentação?', a: 'A Europa tem três vantagens não regulatórias: (1) Mistral AI e outros modelos de pesos abertos financiados pela UE fornecem alternativas em conformidade com o RGPD sem dependências dos EUA ou da China; (2) A Europa lidera em pesquisa de segurança de IA por meio do UK AI Safety Institute, ETH Zurique e centros de pesquisa franceses (INRIA, CNRS); (3) A força de trabalho altamente qualificada da Europa e os talentos existentes em software/semicondutores lhe dão vantagem em aplicações de IA e silício personalizado. No entanto, nenhuma dessas vantagens compensa a desvantagem da Europa na capacidade de modelos de fronteira — os EUA lideram no GPT-5.6 e Claude, e a China na escala de implantação e volume. A estratégia da Europa é "fazer o que você é bom (segurança, regulamentação, ética) em vez de competir na capacidade bruta".' },
           ],
         },
 
@@ -5811,13 +5811,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               mistake: 'Tratar os controles de exportação de GPU como uma barreira permanente ao desenvolvimento de IA chinesa.',
-              problem: 'O DeepSeek R1 (janeiro de 2025) igualou o GPT-5.5 em principais benchmarks enquanto treinava em GPUs H800 restritas a ~US$6M de custo de computação — 94% mais barato do que as estimativas de treinamento do GPT-4. Os controles de exportação desaceleram o progresso chinês, mas não o detêm.',
+              problem: 'O DeepSeek R1 (janeiro de 2025) igualou o GPT-5.6 em principais benchmarks enquanto treinava em GPUs H800 restritas a ~US$6M de custo de computação — 94% mais barato do que as estimativas de treinamento do GPT-4. Os controles de exportação desaceleram o progresso chinês, mas não o detêm.',
               fix: 'Planeje para uma competição geopolítica de IA de várias décadas. Para roteiros de produtos de longo prazo, não assuma que a dominância de hardware dos EUA é permanente. Considere investir em alternativas de pesos abertos (Llama, Mistral, Qwen) que são mais difíceis de restringir. Monitore o status político da TSMC, pois ela fabrica todos os chips avançados.',
             },
             {
-              mistake: 'Assumir que modelos proprietários dos EUA (GPT-5.5, Claude) permanecerão disponíveis globalmente sem atrito regulatório.',
-              problem: 'O EU AI Act já aplica obrigações de conformidade ao GPT-5.5 e ao Claude. Regulamentações futuras da UE poderiam restringir a exportação de dados ou exigir implantação on-premises para casos de uso sensíveis. A estratégia de substituição doméstica da China (Made in China 2025) pode limitar o acesso a modelos estrangeiros.',
-              fix: 'Diversifique sua infraestrutura de IA. Use uma combinação de modelos proprietários (para capacidade de fronteira), modelos de pesos abertos (para flexibilidade regulatória) e implantações locais (para residência de dados). Teste seu produto em GPT-5.5, Claude, Mistral e Qwen para reduzir a dependência de fornecedor.',
+              mistake: 'Assumir que modelos proprietários dos EUA (GPT-5.6, Claude) permanecerão disponíveis globalmente sem atrito regulatório.',
+              problem: 'O EU AI Act já aplica obrigações de conformidade ao GPT-5.6 e ao Claude. Regulamentações futuras da UE poderiam restringir a exportação de dados ou exigir implantação on-premises para casos de uso sensíveis. A estratégia de substituição doméstica da China (Made in China 2025) pode limitar o acesso a modelos estrangeiros.',
+              fix: 'Diversifique sua infraestrutura de IA. Use uma combinação de modelos proprietários (para capacidade de fronteira), modelos de pesos abertos (para flexibilidade regulatória) e implantações locais (para residência de dados). Teste seu produto em GPT-5.6, Claude, Mistral e Qwen para reduzir a dependência de fornecedor.',
             },
           ],
         },
@@ -5885,7 +5885,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         description: 'EU AI법 적용 대상 조직이 규정 준수를 위해 거쳐야 할 핵심 단계입니다.',
         step: [
           { '@type': 'HowToStep', position: 1, name: 'AI 시스템의 위험 등급 분류', text: 'EU AI법의 4단계 체계(금지/고위험/제한적/최소)에 따라 사용 중인 AI 시스템을 분류합니다.' },
-          { '@type': 'HowToStep', position: 2, name: '투명성 의무 확인', text: 'GPT-5.5, Claude 등 범용 AI(GPAI) 모델을 사용하는 경우, 학습 데이터 요약 공개 등 투명성 의무를 확인합니다.' },
+          { '@type': 'HowToStep', position: 2, name: '투명성 의무 확인', text: 'GPT-5.6, Claude 등 범용 AI(GPAI) 모델을 사용하는 경우, 학습 데이터 요약 공개 등 투명성 의무를 확인합니다.' },
           { '@type': 'HowToStep', position: 3, name: '데이터 보호 영향 평가 수행', text: 'GDPR 제46조에 따라 개인정보를 처리하기 전에 이전 영향 평가(Transfer Impact Assessment)를 수행합니다.' },
         ],
       },
@@ -5901,7 +5901,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '브뤼셀 효과: EU AI법 규정은 전 세계 어디서든 EU 사용자에게 도달하는 모든 AI에 적용됩니다.',
             '미국에는 연방 AI 법률이 없습니다 — 부문별 규제 기관이 각자의 권한을 AI에 적용합니다.',
             '미국은 2025년 1월 AI 안전 행정명령을 폐기했습니다 — 이제 안전보다 경쟁력이 우선입니다.',
-            '중국의 DeepSeek R1은 주요 벤치마크(AIME, MATH, HumanEval)에서 GPT-5.5를 초과했으며, 학습 비용은 600만 달러로 94% 절감을 달성해 GPU 수출 통제의 한계를 입증했습니다.',
+            '중국의 DeepSeek R1은 주요 벤치마크(AIME, MATH, HumanEval)에서 GPT-5.6를 초과했으며, 학습 비용은 600만 달러로 94% 절감을 달성해 GPU 수출 통제의 한계를 입증했습니다.',
             'TSMC(대만)는 모든 프론티어 AI를 구동하는 칩을 생산합니다 — 단일한 지정학적 의존성입니다.',
             '조직은 EU, 미국, 중국의 상충되는 세 가지 규제 체계를 동시에 준수해야 합니다.',
           ],
@@ -5913,7 +5913,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**미국 AI 정책:** 연방 AI 법률 없음. 트럼프 행정부는 행정명령 14365(2025년 12월)와 국가 프레임워크(2026년 3월)를 통해 주법 선점을 추진 중입니다. FTC는 행정명령이 요구한 AI 정확성 및 주법 선점에 관한 정책 성명을 3월 11일 기한에서 4개월 늦은 2026년 7월 7일에 발표했으며, 2026년 7월 31일 공개 의견 수렴을 마감했습니다. TRUMP AMERICA AI법과 민주당의 대응 법안인 GUARDRAILS법 모두 의회를 통과하지 못했으며, 여전히 논의 초안 단계에 머물러 있습니다.',
             '**중국 AI 거버넌스:** CAC(국가인터넷정보판공실) 사전 출시 평가 의무. 콘텐츠 필터는 CPC 비판, 대만/티베트/신장 논의, "사회주의 핵심 가치"를 훼손하는 콘텐츠를 차단합니다. 필터는 4xx 오류가 아닌 HTTP 200에 `is_safe: 0` 플래그를 반환합니다. PIPL은 중국인 개인정보에 대한 데이터 거주를 요구합니다.',
             '**하드웨어 병목:** Nvidia는 AI 학습용 GPU 시장의 약 80%를 장악하고 있습니다. TSMC는 첨단 반도체의 약 90%를 제조합니다. 둘 다 지정학적 화약고입니다. 미국 CHIPS법(520억 달러)은 TSMC 의존도를 낮추는 것을 목표로 합니다.',
-            '**DeepSeek R1의 영향:** 추론/코딩(AIME 2024, MATH, HumanEval)에서 GPT-5.5를 능가했으며, 학습 비용은 약 600만 달러로 추정됩니다(프론티어 모델 추정치 대비 94% 절감; 비용 수치는 논란의 여지가 있음). 중국에 제한된 Nvidia H800 GPU로 학습되었습니다. 하드웨어 수출 통제에 한계가 있음을 입증합니다.',
+            '**DeepSeek R1의 영향:** 추론/코딩(AIME 2024, MATH, HumanEval)에서 GPT-5.6를 능가했으며, 학습 비용은 약 600만 달러로 추정됩니다(프론티어 모델 추정치 대비 94% 절감; 비용 수치는 논란의 여지가 있음). 중국에 제한된 Nvidia H800 GPU로 학습되었습니다. 하드웨어 수출 통제에 한계가 있음을 입증합니다.',
             '**글로벌 규제 충돌:** EU는 권리와 안전에 중점을 두고, 미국은 혁신과 경쟁력에 중점을 두며, 중국은 국가 통제와 전략적 우위에 중점을 둡니다. 전 세계에 AI를 배포하는 조직은 서로 양립할 수 없는 세 가지 프레임워크를 동시에 헤쳐나가야 합니다.',
           ],
         },
@@ -5921,7 +5921,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'EU 소재 조직을 위한 핵심 컴플라이언스 일정',
           content: [
             '**EU AI법은 구속력이 있으며, 투명성 규정과 GPAI 규정은 2026년 8월부터 시행되고 있습니다.** 조직이 EU에 본사를 두거나 EU 사용자에게 서비스를 제공하는 경우, 4단계 위험 분류 체계를 준수해야 합니다. 2026년 7월 27일 발효된 디지털 옴니버스로 단독형 고위험 AI의 준수 기한은 2027년 12월 2일로 연기되었지만, 챗봇과 AI 생성 콘텐츠에 대한 고지 의무는 원래 예정된 2026년 8월부터 계속 적용됩니다. 금지된 관행에 대한 과태료는 최대 €3,500만 또는 전 세계 매출의 7%에 달하며, 어느 쪽이든 더 높은 금액이 적용됩니다. 불이행은 협상의 여지가 없습니다.',
-            '**EU에서 GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro를 배포하는 경우, 해당 범용 AI(GPAI) 컴플라이언스 문서를 감사해야 합니다.** OpenAI, Anthropic, Google은 2025년 8월부터 투명성 문서(학습 데이터 요약, 역량 한계, 안전 테스트 결과)를 공개했습니다. 이 증명서를 컴플라이언스 증거로 저장하십시오 — 규제 당국이 요청할 것입니다.',
+            '**EU에서 GPT-5.6, Claude Opus 5, Gemini 3.1 Pro를 배포하는 경우, 해당 범용 AI(GPAI) 컴플라이언스 문서를 감사해야 합니다.** OpenAI, Anthropic, Google은 2025년 8월부터 투명성 문서(학습 데이터 요약, 역량 한계, 안전 테스트 결과)를 공개했습니다. 이 증명서를 컴플라이언스 증거로 저장하십시오 — 규제 당국이 요청할 것입니다.',
             '**고위험 AI 시스템(채용, 신용 결정, 의료, 법 집행)은 배포 전 적합성 평가가 필요합니다.** 이는 편향성 테스트, 인간 감독 메커니즘 문서화, 모든 AI 결정의 감사 추적을 의미합니다. 로컬에 배포된 오픈 가중치 모델(Ollama를 통한 LLaMA, Mistral Large)은 데이터 거주 요건을 충족합니다 — 데이터가 인프라를 벗어나지 않아 감사 추적을 직접 통제할 수 있습니다.',
             '**브뤼셀 효과가 귀 조직에도 적용됩니다.** AI 시스템이 단 한 명의 EU 거주자에게 도달하더라도 EU AI법이 적용됩니다 — 회사 본사가 미국이나 중국에 있어도 마찬가지입니다. 이는 관할권별로 별도 구성을 유지하는 것보다 전 세계적으로 동일한 컴플라이언스 수준을 적용하는 것이 더 단순한 경우가 많다는 것을 의미합니다.',
           ],
@@ -5932,9 +5932,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '중국 AI API(DeepSeek, ERNIE 4.0, Alibaba Cloud를 통한 Qwen)는 API 수준에서 콘텐츠를 필터링합니다 — 정치적 주제, CPC 비판, 대만/티베트/신장 관련 내용은 HTTP 4xx가 아닌 HTTP 200 응답에 `is_safe: 0`을 반환합니다. 애플리케이션 코드에서 이를 명시적으로 처리해야 합니다.',
             'Mistral 모델과 로컬 Ollama 배포는 EU AI법의 데이터 거주 요건을 충족합니다 — 프롬프트와 출력이 인프라를 벗어나지 않습니다. 이는 프롬프트 엔지니어에게 EU GDPR + AI법 컴플라이언스를 위한 가장 간편한 경로입니다.',
-            'GPT-5.5와 Claude Opus 4.8은 2025년 8월부터 EU AI법에 따른 GPAI 컴플라이언스를 충족합니다. 추가적인 모델 수준의 컴플라이언스 작업 없이 EU 대상 배포에 사용할 수 있습니다 — 의무는 모델 수준이 아닌 애플리케이션(배포자) 수준에 있습니다.',
+            'GPT-5.6와 Claude Opus 5은 2025년 8월부터 EU AI법에 따른 GPAI 컴플라이언스를 충족합니다. 추가적인 모델 수준의 컴플라이언스 작업 없이 EU 대상 배포에 사용할 수 있습니다 — 의무는 모델 수준이 아닌 애플리케이션(배포자) 수준에 있습니다.',
             '브뤼셀 효과는 EU 거주자가 사용하는 제품을 위해 미국 호스팅 모델에 보내는 프롬프트도 EU AI법 요건의 적용을 받는다는 것을 의미합니다 — 회사가 EU에 기반을 두지 않더라도 마찬가지입니다.',
-            '다중 관할권 테스트를 위해 동일한 프롬프트를 Mistral(EU 컴플라이언트), GPT-5.5(미국/GPAI), Qwen(중국 접근 가능)에 동시에 보내어 규제 맥락별 출력을 벤치마크하십시오. PromptQuorum은 이를 기본적으로 지원합니다.',
+            '다중 관할권 테스트를 위해 동일한 프롬프트를 Mistral(EU 컴플라이언트), GPT-5.6(미국/GPAI), Qwen(중국 접근 가능)에 동시에 보내어 규제 맥락별 출력을 벤치마크하십시오. PromptQuorum은 이를 기본적으로 지원합니다.',
           ],
         },
         promptOptimizationByRegion: {
@@ -5946,7 +5946,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             {
               type: 'pro-tip',
               label: '실용 팁: 대상 언어로 프롬프트를 작성하십시오',
-              text: 'GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro는 프롬프트 자체가 해당 언어로 작성되었을 때 독일어, 프랑스어, 일본어, 중국어 작업에서 훨씬 더 나은 성능을 보입니다. 비영어 출력을 위해 영어 프롬프트를 사용하면 번역 계층이 추가되어 품질이 저하됩니다. 특정 국가에 맞게 모델 성능을 최적화하려면 처음부터 해당 국가의 언어로 프롬프트를 작성하십시오.',
+              text: 'GPT-5.6, Claude Opus 5, Gemini 3.1 Pro는 프롬프트 자체가 해당 언어로 작성되었을 때 독일어, 프랑스어, 일본어, 중국어 작업에서 훨씬 더 나은 성능을 보입니다. 비영어 출력을 위해 영어 프롬프트를 사용하면 번역 계층이 추가되어 품질이 저하됩니다. 특정 국가에 맞게 모델 성능을 최적화하려면 처음부터 해당 국가의 언어로 프롬프트를 작성하십시오.',
             },
           ],
           tableFormat: true,
@@ -5955,14 +5955,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
             {
               '지역': '유럽연합',
               '프롬프트에 대한 법적 제약': 'EU AI법: EU 소비자와 상호작용하는 콘텐츠를 생성하는 프롬프트에는 AI 공개 표시가 포함되어야 합니다. GDPR: 프롬프트에는 법적 근거 없이 개인 데이터를 포함해서는 안 됩니다. 고위험 AI 응용(인사, 신용, 의료)은 인간 감독이 필요합니다 — 프롬프트가 최종 결정을 자동화해서는 안 됩니다.',
-              '언어 최적화': '대상 언어(독일어, 프랑스어 등)로 프롬프트를 작성하십시오 — GPT-5.5와 Claude Opus 4.8은 프롬프트가 원하는 출력과 같은 언어로 작성되었을 때 비영어 작업에서 훨씬 더 나은 성능을 보입니다. 시스템 프롬프트에서 출력 언어를 명시적으로 지정하십시오.',
-              '권장 모델': 'Mistral Large(프랑스어, EU 본사), 로컬 Ollama 배포(데이터가 인프라를 벗어나지 않음), 또는 EU 리전 API 엔드포인트와 SCC를 사용하는 GPT-5.5/Claude.',
+              '언어 최적화': '대상 언어(독일어, 프랑스어 등)로 프롬프트를 작성하십시오 — GPT-5.6와 Claude Opus 5은 프롬프트가 원하는 출력과 같은 언어로 작성되었을 때 비영어 작업에서 훨씬 더 나은 성능을 보입니다. 시스템 프롬프트에서 출력 언어를 명시적으로 지정하십시오.',
+              '권장 모델': 'Mistral Large(프랑스어, EU 본사), 로컬 Ollama 배포(데이터가 인프라를 벗어나지 않음), 또는 EU 리전 API 엔드포인트와 SCC를 사용하는 GPT-5.6/Claude.',
             },
             {
               '지역': '미국',
               '프롬프트에 대한 법적 제약': '연방 AI 법률은 없지만 부문별 규정이 적용됩니다: HIPAA(의료 — 프롬프트에 PHI가 포함되어서는 안 됨), CCPA/CPRA(캘리포니아 — 프롬프트 내 개인 데이터는 소비자 권리를 유발함), FTC법(프롬프트가 소비자 맥락에서 기만적 콘텐츠를 생성해서는 안 됨). 주(州) 생체 인식법(일리노이 BIPA)은 얼굴/음성 데이터를 처리하는 프롬프트를 제한합니다.',
-              '언어 최적화': '미국 프론티어 모델(GPT-5.5, Claude Opus 4.8)은 영어에 최적화되어 있으며 영어 프롬프트에서 최고 성능을 발휘합니다. 스페인어권 미국 시장의 경우, 자동 감지에 의존하지 말고 모델에 스페인어로 명시적으로 지시하거나 이중 언어 시스템 프롬프트를 사용하십시오.',
-              '권장 모델': '일반적인 용도에는 GPT-5.5 또는 Claude Opus 4.8. 규제 대상 의료 또는 금융 프롬프트에는 SCC가 적용된 API를 사용하고 프롬프트 컨텍스트에 PHI/PII를 보내지 마십시오.',
+              '언어 최적화': '미국 프론티어 모델(GPT-5.6, Claude Opus 5)은 영어에 최적화되어 있으며 영어 프롬프트에서 최고 성능을 발휘합니다. 스페인어권 미국 시장의 경우, 자동 감지에 의존하지 말고 모델에 스페인어로 명시적으로 지시하거나 이중 언어 시스템 프롬프트를 사용하십시오.',
+              '권장 모델': '일반적인 용도에는 GPT-5.6 또는 Claude Opus 5. 규제 대상 의료 또는 금융 프롬프트에는 SCC가 적용된 API를 사용하고 프롬프트 컨텍스트에 PHI/PII를 보내지 마십시오.',
             },
             {
               '지역': '중국',
@@ -5973,14 +5973,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
             {
               '지역': '영국 / 브렉시트 이후',
               '프롬프트에 대한 법적 제약': '영국 GDPR(EU GDPR과 동등)이 개인 데이터에 적용됩니다. 영국 AI 안전 연구소는 애플리케이션 수준 컴플라이언스가 아닌 프론티어 모델 평가에 중점을 둡니다. 의무적인 AI 공개 법률은 없습니다 — 영국은 친혁신적이고 부문 주도적인 접근을 선택했습니다. OFCOM은 방송 맥락에서 AI 생성 콘텐츠를 규제합니다.',
-              '언어 최적화': '영국식 영어 철자와 관용구를 프롬프트에 사용하면 영국 대상 콘텐츠의 출력 품질이 향상됩니다. GPT-5.5는 시스템 프롬프트에서 명시적인 "영국식 영어" 지시에 응답합니다. 지시가 없으면 미국식 영어가 기본값입니다.',
-              '권장 모델': 'GPT-5.5 또는 Claude Opus 4.8. 브렉시트 이후 영국-EU 데이터 이전에는 SCC가 필요합니다 — EU의 영국 적정성 결정이 마련되어 있지만 재검토 대상입니다.',
+              '언어 최적화': '영국식 영어 철자와 관용구를 프롬프트에 사용하면 영국 대상 콘텐츠의 출력 품질이 향상됩니다. GPT-5.6는 시스템 프롬프트에서 명시적인 "영국식 영어" 지시에 응답합니다. 지시가 없으면 미국식 영어가 기본값입니다.',
+              '권장 모델': 'GPT-5.6 또는 Claude Opus 5. 브렉시트 이후 영국-EU 데이터 이전에는 SCC가 필요합니다 — EU의 영국 적정성 결정이 마련되어 있지만 재검토 대상입니다.',
             },
             {
               '지역': '일본',
               '프롬프트에 대한 법적 제약': '일본의 개인정보 보호법(APPI)은 AI 프롬프트에서 개인 데이터 사용을 제한합니다. 일본은 (2026년 기준) AI 전용 법률이 없습니다 — 경제산업성(METI)과 총무성의 지침은 자발적입니다. 일본은 히로시마 AI 프로세스에 참여했으며, 일본 기업에 11가지 원칙 준수가 권장됩니다.',
-              '언어 최적화': '일본어 작업에서는 일본어 프롬프트가 모든 주요 모델에서 영어 프롬프트보다 우수한 성능을 보입니다. GPT-5.5와 Claude Opus 4.8은 일본어를 잘 처리합니다. 라쿠텐 AI와 NTT LLM은 일본 특화 배포에 사용 가능합니다. 시스템 프롬프트에서 반말(반말체) 사용을 피하십시오 — 존댓말(경어체) 프레이밍이 일본 비즈니스 맥락에서 준수율과 출력 품질을 향상시킵니다.',
-              '권장 모델': '일반적인 일본어 작업에는 GPT-5.5 또는 Claude Opus 4.8. 일본 국내 컴플라이언스 민감 배포에는 라쿠텐 AI(라쿠텐 그룹) 또는 NTT LLM.',
+              '언어 최적화': '일본어 작업에서는 일본어 프롬프트가 모든 주요 모델에서 영어 프롬프트보다 우수한 성능을 보입니다. GPT-5.6와 Claude Opus 5은 일본어를 잘 처리합니다. 라쿠텐 AI와 NTT LLM은 일본 특화 배포에 사용 가능합니다. 시스템 프롬프트에서 반말(반말체) 사용을 피하십시오 — 존댓말(경어체) 프레이밍이 일본 비즈니스 맥락에서 준수율과 출력 품질을 향상시킵니다.',
+              '권장 모델': '일반적인 일본어 작업에는 GPT-5.6 또는 Claude Opus 5. 일본 국내 컴플라이언스 민감 배포에는 라쿠텐 AI(라쿠텐 그룹) 또는 NTT LLM.',
             },
           ],
         },
@@ -6013,7 +6013,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         qaWhichCountriesDominate: {
           title: '어느 국가가 AI 개발을 주도하는가?',
           content: [
-            '미국은 프론티어 모델 역량에서 앞서고 있습니다 — OpenAI(GPT-5.5), Anthropic(Claude), Google DeepMind(Gemini) 모두 미국에 본사를 두고 있습니다. 중국은 AI 특허 출원 물량(WIPO 기준 2022년 전 세계 특허의 약 70%)에서 앞서고 있으며, 미국 외 지역에서 가장 유능한 자체 모델을 보유하고 있습니다: Alibaba Qwen 3, Baidu ERNIE 4.0, DeepSeek R1. EU는 AI 규제에서 앞서지만 프론티어 역량에서는 뒤처집니다 — 프랑스의 Mistral AI가 가장 강력한 유럽 경쟁자입니다. 영국, 캐나다, UAE는 미국이나 중국 인프라에 전적으로 의존하기보다 독립적인 행위자로서 AI에 투자하고 있습니다.',
+            '미국은 프론티어 모델 역량에서 앞서고 있습니다 — OpenAI(GPT-5.6), Anthropic(Claude), Google DeepMind(Gemini) 모두 미국에 본사를 두고 있습니다. 중국은 AI 특허 출원 물량(WIPO 기준 2022년 전 세계 특허의 약 70%)에서 앞서고 있으며, 미국 외 지역에서 가장 유능한 자체 모델을 보유하고 있습니다: Alibaba Qwen 3, Baidu ERNIE 4.0, DeepSeek R1. EU는 AI 규제에서 앞서지만 프론티어 역량에서는 뒤처집니다 — 프랑스의 Mistral AI가 가장 강력한 유럽 경쟁자입니다. 영국, 캐나다, UAE는 미국이나 중국 인프라에 전적으로 의존하기보다 독립적인 행위자로서 AI에 투자하고 있습니다.',
           ],
         },
         qaChipsRole: {
@@ -6041,9 +6041,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**AI 규제**는 인공지능 시스템의 개발, 배포, 거버넌스 방식을 규율하는 법률, 행정명령, 자발적 프레임워크의 총체입니다. AI 규제는 주권 국가와 국제 기구에 의해 만들어지며, 세 가지 주요 규제 체제는 EU AI법(유럽연합), NIST AI 위험 관리 프레임워크(미국), CAC 생성 AI 조치(중국)입니다.',
             '**미중 기술 경쟁**은 반도체, 인공지능, 첨단 제조 분야에서의 리더십을 두고 미국과 중국 사이에 벌어지는 양자 간 경쟁입니다. 이 경쟁은 Nvidia GPU에 대한 미국의 수출 통제, 중국의 국내 대체 전략(중국제조 2025), 경쟁하는 AI 거버넌스 프레임워크를 통해 표출됩니다. EU는 양자 당사자가 아닌 제3의 행위자로서 규제력을 통해 이 경쟁 구도를 형성합니다.',
             '**EU AI법**은 2024년 3월 유럽 의회에서 통과된 규정입니다. EU AI 사무소와 각국 시장 감시 당국이 이를 집행합니다. 본사 위치와 관계없이 AI 시스템이 EU 사용자에게 영향을 미치는 모든 조직에 적용됩니다. EU AI법은 브뤼셀 효과와 관련이 있습니다: 역외 적용되기 때문에 OpenAI, Google DeepMind, Anthropic을 사실상 전 세계적으로 규제합니다.',
-            '**NVIDIA**는 AI 학습용 GPU(H100, H200, B200 시리즈)를 설계하는 미국 반도체 기업입니다. NVIDIA의 하드웨어는 GPT-5.5, Claude, Gemini 및 대부분의 프론티어 AI 모델을 학습시키는 주요 컴퓨팅 기반입니다. 중국에 대한 NVIDIA GPU 수출을 제한하는 미국의 통제는 미중 기술 경쟁의 핵심 메커니즘입니다. NVIDIA의 시장 지위(AI GPU 점유율 약 80%)는 상업적 행위자일 뿐만 아니라 지정학적 행위자이기도 합니다.',
+            '**NVIDIA**는 AI 학습용 GPU(H100, H200, B200 시리즈)를 설계하는 미국 반도체 기업입니다. NVIDIA의 하드웨어는 GPT-5.6, Claude, Gemini 및 대부분의 프론티어 AI 모델을 학습시키는 주요 컴퓨팅 기반입니다. 중국에 대한 NVIDIA GPU 수출을 제한하는 미국의 통제는 미중 기술 경쟁의 핵심 메커니즘입니다. NVIDIA의 시장 지위(AI GPU 점유율 약 80%)는 상업적 행위자일 뿐만 아니라 지정학적 행위자이기도 합니다.',
             '**TSMC**(대만반도체제조회사)는 NVIDIA, Apple, AMD, Google을 위해 첨단 반도체를 제조하는 대만의 칩 파운드리입니다. 대만이라는 지리적 위치와 대만의 정치적 지위를 둘러싼 논쟁은 TSMC를 AI 지정학의 핵심 변수로 만듭니다. CHIPS 및 과학법은 부분적으로 국내 미국 팹에 자금을 지원함으로써 TSMC에 대한 미국의 의존도를 줄이기 위해 제정되었습니다.',
-            '**DeepSeek**는 2025년 1월 DeepSeek R1을 출시한 중국의 AI 연구소입니다(High-Flyer Capital Management가 지원). DeepSeek R1은 추론 및 코딩 벤치마크(AIME 2024, MATH-500, HumanEval)에서 GPT-5.5를 능가했으며, 학습 비용은 약 600만 달러로 추정되어 프론티어 모델 추정치보다 94% 낮았고, 중국에 제한된 NVIDIA H800 GPU를 사용했습니다. DeepSeek의 출시는 미국의 수출 통제가 중국의 프론티어 AI 개발을 영구적으로 제한할 수 있다는 주장을 약화시켰습니다.',
+            '**DeepSeek**는 2025년 1월 DeepSeek R1을 출시한 중국의 AI 연구소입니다(High-Flyer Capital Management가 지원). DeepSeek R1은 추론 및 코딩 벤치마크(AIME 2024, MATH-500, HumanEval)에서 GPT-5.6를 능가했으며, 학습 비용은 약 600만 달러로 추정되어 프론티어 모델 추정치보다 94% 낮았고, 중국에 제한된 NVIDIA H800 GPU를 사용했습니다. DeepSeek의 출시는 미국의 수출 통제가 중국의 프론티어 AI 개발을 영구적으로 제한할 수 있다는 주장을 약화시켰습니다.',
           ],
         },
         fiveGeopoliticalDimensions: {
@@ -6063,13 +6063,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'AI 군비 경쟁: 미국, 중국, EU',
           content: [
             '**세 가지 양립 불가능한 AI 거버넌스 비전이 글로벌 채택을 두고 경쟁하고 있습니다 — 미국은 혁신과 경쟁력을 우선시하고, 중국은 국가 주도로 전략적 AI 패권을 추구하며, EU는 브뤼셀 효과를 통해 자국 기준을 전 세계에 수출하는 권리 기반의 법적 체계를 구축합니다.** 이 AI 군비 경쟁은 주로 민간 영역입니다: 선두 연구소들은 민간 기업(OpenAI, Anthropic, Google DeepMind, Baidu, Alibaba)이지만, 규제 통제, 하드웨어 공급망, 인재라는 판돈은 지정학적입니다.',
-            '이 경쟁은 누가 가장 유능한 모델을 구축하느냐에 관한 것만이 아닙니다. 어느 규제 체계가 글로벌 기본값이 되느냐에 관한 것이기도 합니다. EU AI법은 EU 사용자에게 배포되는 모든 AI 시스템에 적용됨으로써 이미 브뤼셀을 OpenAI, Anthropic, Google DeepMind의 사실상 글로벌 규제자로 만들었습니다. 하드웨어 통제는 세 번째 차원입니다: CHIPS 및 과학법(520억 달러)과 Nvidia GPU 수출 통제는 중국의 컴퓨팅 접근을 제한하는 것을 목표로 합니다. 2025년 1월에 출시된 DeepSeek R1 — 학습 비용의 일부만으로 GPT-5.5와 경쟁력 있는 성능 — 은 그러한 통제에 한계가 있음을 입증했습니다.',
+            '이 경쟁은 누가 가장 유능한 모델을 구축하느냐에 관한 것만이 아닙니다. 어느 규제 체계가 글로벌 기본값이 되느냐에 관한 것이기도 합니다. EU AI법은 EU 사용자에게 배포되는 모든 AI 시스템에 적용됨으로써 이미 브뤼셀을 OpenAI, Anthropic, Google DeepMind의 사실상 글로벌 규제자로 만들었습니다. 하드웨어 통제는 세 번째 차원입니다: CHIPS 및 과학법(520억 달러)과 Nvidia GPU 수출 통제는 중국의 컴퓨팅 접근을 제한하는 것을 목표로 합니다. 2025년 1월에 출시된 DeepSeek R1 — 학습 비용의 일부만으로 GPT-5.6와 경쟁력 있는 성능 — 은 그러한 통제에 한계가 있음을 입증했습니다.',
           ],
           items: [
-            '**미국의 위상:** 프론티어 모델 역량(GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro), 칩 설계(Nvidia, AMD), AI 투자(OECD에 따르면 2023년 민간 투자 670억 달러)에서 선두. 통합된 연방 AI 법률 부재 — 배포를 가속화하지만 컴플라이언스 분산을 야기.',
+            '**미국의 위상:** 프론티어 모델 역량(GPT-5.6, Claude Opus 5, Gemini 3.1 Pro), 칩 설계(Nvidia, AMD), AI 투자(OECD에 따르면 2023년 민간 투자 670억 달러)에서 선두. 통합된 연방 AI 법률 부재 — 배포를 가속화하지만 컴플라이언스 분산을 야기.',
             '**중국의 위상:** AI 특허 수량, 안면 인식 규모, 국가 주도 인프라 배포에서 선두. 모델들(Qwen 3, ERNIE 4.0, DeepSeek R1)은 많은 벤치마크에서 경쟁력이 있습니다. Nvidia 아키텍처에 대한 하드웨어 의존성이 수출 통제가 목표로 하는 주요 전략적 취약점입니다.',
             '**유럽의 위상:** AI 규제에서 선두 — EU AI법이 글로벌 기준 프레임워크 — 오픈 가중치 연구(프랑스의 Mistral). 프론티어 모델 역량과 민간 투자에서는 뒤처짐. 브뤼셀 효과를 통한 규제 레버리지로 보완: 미국과 중국 공급업체가 글로벌 제품에 대해 EU 기준을 준수하도록 강제.',
-            '**하드웨어 계층:** Nvidia H100/H200 GPU가 AI 학습을 지배합니다. 미국 수출 통제는 중국 판매를 제한합니다. DeepSeek R1은 제한된 H800 GPU로 약 600만 달러에 학습되었으며 — GPT-5.5 학습 추정 비용 대비 94% 절감 — 하드웨어 통제가 중국의 프론티어 AI를 저지하지 못했음을 입증했습니다.',
+            '**하드웨어 계층:** Nvidia H100/H200 GPU가 AI 학습을 지배합니다. 미국 수출 통제는 중국 판매를 제한합니다. DeepSeek R1은 제한된 H800 GPU로 약 600만 달러에 학습되었으며 — GPT-5.6 학습 추정 비용 대비 94% 절감 — 하드웨어 통제가 중국의 프론티어 AI를 저지하지 못했음을 입증했습니다.',
           ],
           image: '/images/regional-ai-players-en.svg',
           imageCaption: '미국: OpenAI, Anthropic, Google DeepMind (VC 지원). EU: Mistral, Hugging Face (오픈소스, 미국 대비 투자 부족). 중국: Baidu, Alibaba, Tencent (국가 지원, CAC 감독).',
@@ -6085,7 +6085,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**고위험:** 핵심 인프라, 교육, 고용, 필수 서비스(신용, 복지), 법 집행, 국경 통제, 사법 행정에서의 AI. 적합성 평가, 투명성 문서, 인간 감독, EU 데이터베이스 등록이 필요합니다.',
             '**제한적 위험:** 챗봇 및 AI 생성 콘텐츠. 공개가 필요합니다 — 사용자는 자신이 AI와 상호작용하고 있음을 알아야 합니다.',
             '**최소 위험:** 스팸 필터, 비디오 게임 내 AI, 중대한 영향이 없는 추천 시스템. 기존 법률 외 특정 의무는 없습니다.',
-            '**범용 AI(GPAI):** GPT-5.5, Claude, Gemini와 같은 모델은 학습 데이터 요약을 공개하고, EU 저작권법을 준수하며, 중대한 사고를 보고해야 합니다. 시스템적 위험이 있는 모델(10^25 FLOPS 초과 학습)은 추가적인 적대적 테스트 요건에 직면합니다. GPAI 규정은 2025년 8월부터 적용되었습니다.',
+            '**범용 AI(GPAI):** GPT-5.6, Claude, Gemini와 같은 모델은 학습 데이터 요약을 공개하고, EU 저작권법을 준수하며, 중대한 사고를 보고해야 합니다. 시스템적 위험이 있는 모델(10^25 FLOPS 초과 학습)은 추가적인 적대적 테스트 요건에 직면합니다. GPAI 규정은 2025년 8월부터 적용되었습니다.',
             '**집행:** EU AI 사무소(유럽 위원회 산하)가 GPAI 모델을 감독합니다. 국가 시장 감시 당국이 고위험 AI 규정을 집행합니다. 과태료: 금지된 관행에는 최대 €3,500만 또는 전 세계 매출의 7%; 고위험 위반에는 €1,500만 또는 3%.',
             '**일정:** 금지된 관행: 2024년 8월. GPAI 의무: 2025년 8월. 제50조 투명성 의무(챗봇/딥페이크 고지): 2026년 8월, 디지털 옴니버스의 영향을 받지 않음. 단독형 고위험 AI 시스템(부속서 III): 디지털 옴니버스에 의해 2026년 8월에서 2027년 12월 2일로 연기됨. 규제 제품 내 고위험 AI(부속서 I): 2027년 8월에서 2028년 8월 2일로 연기됨.',
           ],
@@ -6125,8 +6125,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         franceMistral: {
           title: '프랑스와 Mistral: 유럽의 AI 자주권 구축',
           content: [
-            '**프랑스는 공공 투자와 Mistral AI를 통해 미국 AI 패권에 대한 전략적 대항마를 구축하고 있습니다 — 오픈 가중치 모델을 유럽 AI 자주권의 경로로 자리매김시킵니다.** Mistral은 GPT-5.5와 Claude에 대한 EU의 가장 실현 가능한 대안이며, 프랑스의 20억 유로 AI 투자는 Mistral과 같은 기업에 자금을 지원하고 OpenAI, Google, Anthropic에 대한 의존도를 낮추기 위해 명시적으로 설계되었습니다.',
-            '**Mistral AI(2023년 설립):** 모두 전(前) Meta 직원인 Arthur Mensch, Guilaume Blanc, Tim Caron이 설립했습니다. Mistral은 2023년 9월 Mistral Small(오픈 가중치)를 출시한 데 이어 Mistral Large 2(많은 작업에서 GPT-5.5와 경쟁력 있음)를 출시했습니다. Mistral Large 2는 MMLU에서 81.2%를 기록해 GPT-5.5의 88.7%에는 못 미치지만, 분류, 요약, 추출 작업에서는 독점 모델과 대등한 성능을 보입니다. 컨텍스트 윈도우는 123K 토큰입니다. Mistral 커뮤니티 라이선스에 따라 라이선스가 부여됩니다(상업적 사용 허용; LLaMA와 유사한 파생 명명 제한).',
+            '**프랑스는 공공 투자와 Mistral AI를 통해 미국 AI 패권에 대한 전략적 대항마를 구축하고 있습니다 — 오픈 가중치 모델을 유럽 AI 자주권의 경로로 자리매김시킵니다.** Mistral은 GPT-5.6와 Claude에 대한 EU의 가장 실현 가능한 대안이며, 프랑스의 20억 유로 AI 투자는 Mistral과 같은 기업에 자금을 지원하고 OpenAI, Google, Anthropic에 대한 의존도를 낮추기 위해 명시적으로 설계되었습니다.',
+            '**Mistral AI(2023년 설립):** 모두 전(前) Meta 직원인 Arthur Mensch, Guilaume Blanc, Tim Caron이 설립했습니다. Mistral은 2023년 9월 Mistral Small(오픈 가중치)를 출시한 데 이어 Mistral Large 2(많은 작업에서 GPT-5.6와 경쟁력 있음)를 출시했습니다. Mistral Large 2는 MMLU에서 81.2%를 기록해 GPT-5.6의 88.7%에는 못 미치지만, 분류, 요약, 추출 작업에서는 독점 모델과 대등한 성능을 보입니다. 컨텍스트 윈도우는 123K 토큰입니다. Mistral 커뮤니티 라이선스에 따라 라이선스가 부여됩니다(상업적 사용 허용; LLaMA와 유사한 파생 명명 제한).',
             '**프랑스가 오픈 가중치를 선택한 이유:** 프랑스의 입장은 독점 API가 벤더 종속, 데이터 거주 위험, 미국 기업에 대한 장기적 의존을 만든다는 것입니다. 오픈 가중치 모델은 유럽 인프라에 배포할 수 있어 데이터를 EU 관할권 내에 유지하고 미국 클라우드 제공업체와의 GDPR/AI법 마찰을 피할 수 있습니다. 이는 브뤼셀 효과와 일치합니다 — Mistral이 EU AI법을 준수하도록 함으로써 프랑스는 유럽의 글로벌 규제 레버리지를 강화합니다.',
             '**정부 지원:** 프랑스 정부는 예금공탁금고(국가 투자 기금)와 직접 보조금을 통해 지원합니다. Mistral은 2024년 2월 프랑스 전략 투자자들의 지원으로 3억 8,500만 유로의 시리즈 B 자금을 조달했습니다. 보잉에 대한 유럽의 항공우주 대항마로 에어버스가 구축된 방식과 유사하게, AI 분야의 "유럽 챔피언"으로 자리매김하고 있습니다.',
           ],
@@ -6171,7 +6171,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '**중국제조 2025 및 차세대 AI 발전 계획(2017년):** 중국의 2017년 AI 계획은 연구, 인재, 제품 개발, 규제 전반에서 2030년까지 글로벌 AI 리더십을 목표로 삼았습니다. 150억 달러의 국가 자금을 배정하고 AI 특허 출원, 연구 인용, 산업 매출에 대한 벤치마크를 설정했습니다. AI는 반도체, 양자 컴퓨팅과 함께 핵심 전략 기술로 지정되어 있습니다.',
             '**국가인터넷정보판공실(CAC) 알고리즘 규정(2022년 3월):** 중국 사용자에게 서비스를 제공하는 모든 알고리즘 기반 추천 시스템이 CAC에 등록하고, 알고리즘 작동 방식을 공개하며, 사용자가 개인화된 추천을 거부할 수 있도록 요구했습니다. 2023년 7월 생성형 AI로 확대되어 — 모든 생성형 AI 서비스는 등록하고, 보안 평가를 통과하며, 출력이 "사회주의 핵심 가치"에 부합하도록 보장해야 합니다.',
-            '**DeepSeek R1(2025년 1월):** High-Flyer 헤지펀드가 지원하는 중국 AI 연구소 DeepSeek가 출시한 R1은 AIME 2024(79.8%), MATH-500(97.3%), HumanEval 코딩 작업을 포함한 여러 벤치마크에서 GPT-5.5를 능가했습니다. 수출 통제 한도 내에 있는 중국 특화 변형인 Nvidia H800 GPU로 학습되었으며, 추정 학습 비용은 약 600만 달러입니다(프론티어 모델 추정치 대비 94% 절감; 수치는 논란의 여지가 있지만 상당한 비용 우위는 분명함). 이 출시는 Nvidia 주가의 큰 하락을 촉발했고 하드웨어 수출 통제의 효과에 대한 미국 정책 논쟁을 가속화했습니다.',
+            '**DeepSeek R1(2025년 1월):** High-Flyer 헤지펀드가 지원하는 중국 AI 연구소 DeepSeek가 출시한 R1은 AIME 2024(79.8%), MATH-500(97.3%), HumanEval 코딩 작업을 포함한 여러 벤치마크에서 GPT-5.6를 능가했습니다. 수출 통제 한도 내에 있는 중국 특화 변형인 Nvidia H800 GPU로 학습되었으며, 추정 학습 비용은 약 600만 달러입니다(프론티어 모델 추정치 대비 94% 절감; 수치는 논란의 여지가 있지만 상당한 비용 우위는 분명함). 이 출시는 Nvidia 주가의 큰 하락을 촉발했고 하드웨어 수출 통제의 효과에 대한 미국 정책 논쟁을 가속화했습니다.',
             '**화웨이 어센드 칩:** 화웨이의 어센드 910B 및 910C 칩은 AI 학습을 위한 Nvidia GPU의 국내 대안으로 자리매김하고 있습니다. 대부분의 벤치마크에서 성능은 여전히 Nvidia H100에 못 미치지만 중간 규모 모델을 학습시키기에는 충분합니다. 주요 중국 기술 기업(Baidu, Alibaba, ByteDance)은 Nvidia 의존도를 줄이기 위해 일부 워크로드를 어센드로 이전하기 시작했습니다.',
             '**일대일로 AI 외교:** 중국은 일대일로(BRI) 파트너십을 통해 개발도상국에 AI 감시 인프라(안면 인식, 스마트 시티 시스템)를 수출합니다. 제공업체로는 화웨이, Alibaba Cloud, ZTE가 있습니다. 이는 알고리즘 사회 관리를 포함한 중국식 AI 거버넌스 규범을 파트너 국가로 수출하며, OECD/EU 프레임워크 외부에 병렬적인 AI 표준 생태계를 만들어냅니다.',
             '**주요 중국 AI 모델:** Alibaba Qwen 3, Baidu ERNIE 4.0, ByteDance Doubao, Z.ai GLM-4. 이들은 중국어 작업에서 경쟁력이 있으며 다국어 벤치마크에서도 점점 더 경쟁력을 갖추고 있습니다. [오픈소스 대 독점 LLM 트레이드오프](https://www.promptquorum.com/ko/prompt-engineering/open-source-vs-proprietary-llms)는 중국 모델 도입에 영향을 미칩니다 — Qwen의 오픈 가중치 출시는 국제 개발자들을 끌어들였습니다.',
@@ -6180,8 +6180,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
         chinaModelsAccessibility: {
           title: '프롬프트 엔지니어를 위한 중국: 어떤 모델을 사용할 수 있는가',
           content: [
-            '**제품이 중국 사용자에게 서비스를 제공한다면, EU나 미국에는 없는 사전 출시 승인 요건과 함께 사용 가능한 모델과 필수 콘텐츠 필터가 다른 별개의 AI 생태계에서 운영하고 있는 것입니다.** GPT-5.5, Claude, Gemini와 같은 외국 모델은 VPN 없이는 중국 본토에서 접근할 수 없습니다. 선택지는 국내에 등록된 대안으로 제한됩니다.',
-            '**중국에서 사용 가능한 모델:** Alibaba Qwen 3(오픈 가중치, 7B~72B, 128K 컨텍스트, Alibaba Cloud를 통한 API), Baidu ERNIE 4.0(Qianfan 플랫폼을 통한 API), ByteDance Doubao(Volcano Engine을 통한 API), Z.ai GLM-4(Z.ai 플랫폼을 통한 API), DeepSeek R1/V3(DeepSeek 플랫폼을 통한 API). Qwen 3 72B는 가장 강력한 오픈 가중치 옵션입니다 — 중국어 작업에 사용하면서 중국 외부에서 자체 호스팅할 수 있습니다. MMLU에서 GPT-5.5와 5퍼센트포인트 이내의 점수를 기록하며 중국어 특화 벤치마크(C-Eval)에서는 이를 능가합니다.',
+            '**제품이 중국 사용자에게 서비스를 제공한다면, EU나 미국에는 없는 사전 출시 승인 요건과 함께 사용 가능한 모델과 필수 콘텐츠 필터가 다른 별개의 AI 생태계에서 운영하고 있는 것입니다.** GPT-5.6, Claude, Gemini와 같은 외국 모델은 VPN 없이는 중국 본토에서 접근할 수 없습니다. 선택지는 국내에 등록된 대안으로 제한됩니다.',
+            '**중국에서 사용 가능한 모델:** Alibaba Qwen 3(오픈 가중치, 7B~72B, 128K 컨텍스트, Alibaba Cloud를 통한 API), Baidu ERNIE 4.0(Qianfan 플랫폼을 통한 API), ByteDance Doubao(Volcano Engine을 통한 API), Z.ai GLM-4(Z.ai 플랫폼을 통한 API), DeepSeek R1/V3(DeepSeek 플랫폼을 통한 API). Qwen 3 72B는 가장 강력한 오픈 가중치 옵션입니다 — 중국어 작업에 사용하면서 중국 외부에서 자체 호스팅할 수 있습니다. MMLU에서 GPT-5.6와 5퍼센트포인트 이내의 점수를 기록하며 중국어 특화 벤치마크(C-Eval)에서는 이를 능가합니다.',
           ],
         },
         chinaContentFilters: {
@@ -6255,7 +6255,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '**EU 소재 조직:** [EU AI법](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)을 직접 준수해야 합니다. 단독형 고위험 AI 시스템(HR, 신용, 의료, 공공 서비스)은 2026년 7월 27일 발효된 디지털 옴니버스에 의해 2026년 8월에서 연기된 2027년 12월 2일까지 적합성 평가, 인간 감독 문서, [EU AI 데이터베이스](https://digital-strategy.ec.europa.eu/en/policies/ai-office) 등록이 필요합니다. 챗봇과 AI 생성 콘텐츠에 대한 제50조 고지 의무는 2026년 8월부터 이미 적용되고 있습니다. 개인 데이터를 처리하는 모든 AI는 AI 학습 파이프라인과 출력 처리를 포함하여 GDPR을 준수해야 합니다.',
             '**EU 사용자를 대상으로 하는 비EU 조직:** 브뤼셀 효과의 적용을 받습니다 — [EU AI법](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)은 EU 사용자에게 도달하는 AI 출력에 적용됩니다. EU 대상 제품에 사용되는 GPAI 모델은 투명성 의무를 준수해야 합니다(2025년 8월부터). 미준수 시 EU 본사 위반자와 동일한 과태료가 부과됩니다.',
-            '**EU 배포에서의 미국 AI 도구:** GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro는 모두 GPAI 모델로 분류됩니다. OpenAI, Anthropic, Google은 EU AI법 GPAI 컴플라이언스 문서를 공개했습니다. 고위험 AI 시스템에서 이러한 도구를 사용하는 조직(배포자)은 자체 적합성 평가에 대한 책임이 있습니다 — 공급업체의 GPAI 컴플라이언스가 배포를 포괄하지는 않습니다.',
+            '**EU 배포에서의 미국 AI 도구:** GPT-5.6, Claude Opus 5, Gemini 3.1 Pro는 모두 GPAI 모델로 분류됩니다. OpenAI, Anthropic, Google은 EU AI법 GPAI 컴플라이언스 문서를 공개했습니다. 고위험 AI 시스템에서 이러한 도구를 사용하는 조직(배포자)은 자체 적합성 평가에 대한 책임이 있습니다 — 공급업체의 GPAI 컴플라이언스가 배포를 포괄하지는 않습니다.',
             '**중국 AI 도구:** DeepSeek R1 및 기타 중국 모델은 국제적으로 이용 가능하지만 EU 및 미국 조직에게 추가적인 조달 위험을 수반합니다 — 데이터 거주가 불명확하고, 공급업체가 CAC 콘텐츠 규정의 적용을 받으며, CAC가 데이터 공개를 강제할 수 있습니다. EU 및 NATO 회원국의 정부 및 핵심 인프라 조직은 중국 AI 도구 사용을 제한하거나 금지하고 있습니다.',
             '**데이터 거주:** EU GDPR은 "적정성" 결정이나 적절한 안전장치가 없는 국가로의 개인 데이터 이전을 제한합니다. 미국 공급업체를 통한 개인 데이터 AI 추론에는 표준 계약 조항(SCC) 또는 EU-미국 데이터 프라이버시 프레임워크(2023)에 의존해야 합니다. 중국으로의 이전에는 적정성 결정이 없습니다 — 계약적 안전장치가 마련되어야 하며 집행하기 어렵습니다.',
             '**조달 결정:** 미국 연방 기관은 중국 지정 기업의 AI 사용이 금지됩니다. 여러 EU 회원국(독일, 프랑스, 네덜란드)은 정부 조달에서 중국 AI 도구를 제한하는 지침을 발표했습니다. 민간 부문 조직의 경우 조달 정책은 AI 공급업체의 학습 데이터 관할권, 콘텐츠 조정 관행, 정부 접근 조항을 다루어야 합니다.',
@@ -6273,7 +6273,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         qaWhoIsWinning: {
           title: '누가 글로벌 AI 경쟁에서 앞서고 있는가?',
           content: [
-            '미국은 프론티어 모델 역량 — GPT-5.5(OpenAI), Claude(Anthropic), Gemini(Google DeepMind) — 와 민간 AI 투자([OECD 데이터](https://oecd.ai) 기준 2023년 670억 달러)에서 앞서고 있습니다. 중국은 AI 특허 출원, 국가 주도 배포 규모, 국내 모델 개발에서 앞서고 있습니다. DeepSeek R1은 2025년 1월 주요 벤치마크에서 GPT-5.5와 대등한 성능을 보였습니다. 유럽연합은 AI 규제에서 앞서고 있습니다 — [EU AI법](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)이 글로벌 기준 프레임워크입니다 — 하지만 경제 규모에 비해 프론티어 모델 역량과 민간 투자에서는 뒤처집니다. 세 차원 모두에서 동시에 앞서는 단일 행위자는 없습니다.',
+            '미국은 프론티어 모델 역량 — GPT-5.6(OpenAI), Claude(Anthropic), Gemini(Google DeepMind) — 와 민간 AI 투자([OECD 데이터](https://oecd.ai) 기준 2023년 670억 달러)에서 앞서고 있습니다. 중국은 AI 특허 출원, 국가 주도 배포 규모, 국내 모델 개발에서 앞서고 있습니다. DeepSeek R1은 2025년 1월 주요 벤치마크에서 GPT-5.6와 대등한 성능을 보였습니다. 유럽연합은 AI 규제에서 앞서고 있습니다 — [EU AI법](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32024R1689)이 글로벌 기준 프레임워크입니다 — 하지만 경제 규모에 비해 프론티어 모델 역량과 민간 투자에서는 뒤처집니다. 세 차원 모두에서 동시에 앞서는 단일 행위자는 없습니다.',
           ],
         },
         qaWhatIsBrusselsEffect: {
@@ -6285,19 +6285,19 @@ export const article: Partial<Record<Language, PEArticle>> = {
         qaHowChinaRegulates: {
           title: '중국은 인공지능을 어떻게 규제하는가?',
           content: [
-            '중국은 국가인터넷정보판공실(CAC)을 통해 AI를 규제합니다. 알고리즘 추천 규정(2022)은 알고리즘으로 선별된 콘텐츠에 라벨 표시를 요구합니다. 생성 AI 조치(2023)는 중국에서 소비자 대상 생성형 AI 서비스를 출시하기 전에 45~90일이 소요되는 CAC 보안 평가를 요구하며, AI 출력이 "사회주의 핵심 가치"에 부합하도록 의무화합니다. 외국 AI 모델(GPT-5.5, Claude, Gemini)은 우회 도구 없이는 중국 본토에서 접근할 수 없습니다. 국내 대안으로는 Alibaba Qwen, Baidu ERNIE 4.0, ByteDance Doubao, DeepSeek가 있습니다.',
+            '중국은 국가인터넷정보판공실(CAC)을 통해 AI를 규제합니다. 알고리즘 추천 규정(2022)은 알고리즘으로 선별된 콘텐츠에 라벨 표시를 요구합니다. 생성 AI 조치(2023)는 중국에서 소비자 대상 생성형 AI 서비스를 출시하기 전에 45~90일이 소요되는 CAC 보안 평가를 요구하며, AI 출력이 "사회주의 핵심 가치"에 부합하도록 의무화합니다. 외국 AI 모델(GPT-5.6, Claude, Gemini)은 우회 도구 없이는 중국 본토에서 접근할 수 없습니다. 국내 대안으로는 Alibaba Qwen, Baidu ERNIE 4.0, ByteDance Doubao, DeepSeek가 있습니다.',
           ],
         },
         qaWhatEUAIActRequires: {
           title: 'EU AI법은 조직에 무엇을 요구하는가?',
           content: [
-            'EU AI법은 AI 시스템을 4단계 위험 등급으로 분류하고 등급에 따라 의무를 조정합니다. 금지된 관행 — 공공 기관의 사회적 점수 부여, 공공장소에서의 실시간 생체 인식 감시 — 은 2024년 8월부터 금지됩니다. 고용, 신용 평가, 의료, 법 집행에 사용되는 단독형 고위험 AI 시스템은 2026년 7월 27일 발효된 디지털 옴니버스에 의해 원래의 2026년 8월에서 연기된 2027년 12월 2일까지 적합성 평가, 인간 감독 문서, EU AI 데이터베이스 등록이 필요합니다. 범용 AI 모델(GPT-5.5, Claude, Gemini)은 학습 데이터 요약을 공개하고 EU 저작권법을 준수해야 하며, 이 규정은 2025년 8월부터 적용되었습니다. 챗봇과 AI 생성 콘텐츠에 대한 제50조 투명성 의무는 예정대로 2026년 8월부터 계속 적용됩니다. 본사 위치와 관계없이 EU 사용자에게 서비스를 제공하는 모든 조직이 이를 준수해야 합니다.',
+            'EU AI법은 AI 시스템을 4단계 위험 등급으로 분류하고 등급에 따라 의무를 조정합니다. 금지된 관행 — 공공 기관의 사회적 점수 부여, 공공장소에서의 실시간 생체 인식 감시 — 은 2024년 8월부터 금지됩니다. 고용, 신용 평가, 의료, 법 집행에 사용되는 단독형 고위험 AI 시스템은 2026년 7월 27일 발효된 디지털 옴니버스에 의해 원래의 2026년 8월에서 연기된 2027년 12월 2일까지 적합성 평가, 인간 감독 문서, EU AI 데이터베이스 등록이 필요합니다. 범용 AI 모델(GPT-5.6, Claude, Gemini)은 학습 데이터 요약을 공개하고 EU 저작권법을 준수해야 하며, 이 규정은 2025년 8월부터 적용되었습니다. 챗봇과 AI 생성 콘텐츠에 대한 제50조 투명성 의무는 예정대로 2026년 8월부터 계속 적용됩니다. 본사 위치와 관계없이 EU 사용자에게 서비스를 제공하는 모든 조직이 이를 준수해야 합니다.',
           ],
         },
         qaExportControls: {
           title: '미국의 수출 통제는 AI 개발에 어떤 영향을 미치는가?',
           content: [
-            '미국의 수출 통제는 A100과 H100을 포함한 첨단 Nvidia GPU의 중국 판매를 제한하여 중국의 프론티어 AI 모델 학습 역량을 제한하는 것을 목표로 합니다. 이 통제는 수출관리규정(EAR)을 통해 시행되며 특정 컴퓨팅 임계값을 초과하는 Nvidia, AMD, Intel 제품에 적용됩니다. 2025년 1월 DeepSeek R1의 출시는 이 접근 방식의 한계를 보여주었습니다: 중국에 제한된 H800 GPU로 비교 가능한 미국 모델 보고 비용의 일부만으로 학습되었음에도, AIME 2024, MATH-500, HumanEval 벤치마크에서 GPT-5.5와 대등한 성능을 보였습니다. 수출 통제는 중국의 프론티어 AI 개발을 늦추었지만 중단시키지는 못했습니다.',
+            '미국의 수출 통제는 A100과 H100을 포함한 첨단 Nvidia GPU의 중국 판매를 제한하여 중국의 프론티어 AI 모델 학습 역량을 제한하는 것을 목표로 합니다. 이 통제는 수출관리규정(EAR)을 통해 시행되며 특정 컴퓨팅 임계값을 초과하는 Nvidia, AMD, Intel 제품에 적용됩니다. 2025년 1월 DeepSeek R1의 출시는 이 접근 방식의 한계를 보여주었습니다: 중국에 제한된 H800 GPU로 비교 가능한 미국 모델 보고 비용의 일부만으로 학습되었음에도, AIME 2024, MATH-500, HumanEval 벤치마크에서 GPT-5.6와 대등한 성능을 보였습니다. 수출 통제는 중국의 프론티어 AI 개발을 늦추었지만 중단시키지는 못했습니다.',
           ],
         },
         qaTSMCRole: {
@@ -6326,7 +6326,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         defGPAI: {
           title: '정의: 범용 AI(GPAI)',
-          content: '광범위한 데이터로 학습되고 일반적인 아키텍처(특정 도메인에 한정되지 않음)를 가져 광범위한 후속 작업에 적용될 수 있는 AI 시스템입니다. GPT-5.5, Claude Opus 4.8, Gemini 3.1 Pro는 GPAI 모델입니다. EU AI법에 따라 10^25 FLOP를 초과하는 학습 컴퓨팅을 사용한 GPAI 모델은 학습 데이터 요약, 역량 문서, 저작권 준수를 포함한 투명성 의무에 직면합니다.',
+          content: '광범위한 데이터로 학습되고 일반적인 아키텍처(특정 도메인에 한정되지 않음)를 가져 광범위한 후속 작업에 적용될 수 있는 AI 시스템입니다. GPT-5.6, Claude Opus 5, Gemini 3.1 Pro는 GPAI 모델입니다. EU AI법에 따라 10^25 FLOP를 초과하는 학습 컴퓨팅을 사용한 GPAI 모델은 학습 데이터 요약, 역량 문서, 저작권 준수를 포함한 투명성 의무에 직면합니다.',
         },
         defCAC: {
           title: '정의: 국가인터넷정보판공실(CAC)',
@@ -6384,7 +6384,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'faq',
           title: '자주 묻는 질문',
           faqs: [
-            { q: 'EU AI법이란 무엇이며 언제 적용됩니까?', a: 'EU AI법은 세계 최초의 포괄적 AI 법률로, 2024년 3월 유럽 의회에서 523표 찬성으로 통과되었습니다. 금지 관행은 2024년 8월부터 적용됩니다. GPAI 모델 의무(GPT-5.5, Claude, Gemini급 모델)는 2025년 8월부터 적용됩니다. 제50조 투명성 의무(챗봇 및 AI 콘텐츠 고지)는 2026년 8월부터 적용됩니다. 단독형 고위험 AI 시스템 요건은 2026년 7월 27일 발효된 디지털 옴니버스에 의해 2026년 8월에서 2027년 12월 2일로 연기되었습니다. EU 시장에 AI를 출시하거나 EU 거주자에게 영향을 미치는 AI를 사용하는 모든 조직에 적용됩니다.' },
+            { q: 'EU AI법이란 무엇이며 언제 적용됩니까?', a: 'EU AI법은 세계 최초의 포괄적 AI 법률로, 2024년 3월 유럽 의회에서 523표 찬성으로 통과되었습니다. 금지 관행은 2024년 8월부터 적용됩니다. GPAI 모델 의무(GPT-5.6, Claude, Gemini급 모델)는 2025년 8월부터 적용됩니다. 제50조 투명성 의무(챗봇 및 AI 콘텐츠 고지)는 2026년 8월부터 적용됩니다. 단독형 고위험 AI 시스템 요건은 2026년 7월 27일 발효된 디지털 옴니버스에 의해 2026년 8월에서 2027년 12월 2일로 연기되었습니다. EU 시장에 AI를 출시하거나 EU 거주자에게 영향을 미치는 AI를 사용하는 모든 조직에 적용됩니다.' },
             { q: 'EU AI법이 비EU 기업에도 적용됩니까?', a: '예. EU AI법은 역외 적용 범위를 가집니다 — 공급업체의 본사 위치에 관계없이 EU에서 사용되는 AI 출력을 제공하는 모든 조직에 적용됩니다. EU 사용자가 사용하는 AI 제품을 보유한 미국 기업도 준수해야 합니다. 이것이 GDPR을 글로벌 표준으로 만든 것과 동일한 역외 원칙입니다.' },
             { q: 'EU AI법 위반 시 과태료는 얼마입니까?', a: '금지된 AI 관행에 대해 최대 €3,500만 또는 전 세계 연간 매출의 7%(어느 쪽이든 더 높은 금액)의 과태료가 부과됩니다. 고위험 AI 위반에는 최대 €1,500만 또는 3%가 적용됩니다. 집행 당국에 부정확한 정보 제공 시 최대 €750만 또는 1%가 부과됩니다. 백분율과 고정 금액 중 더 높은 쪽이 적용됩니다.' },
             { q: 'EU AI법에서 금지하는 AI 응용 프로그램은 무엇입니까?', a: '금지(허용 불가 위험): 공공 기관의 사회적 점수 시스템; 공공장소 실시간 생체 인식 식별(좁은 예외 있음); 심리적 취약성을 이용하는 AI; 인터넷에서 안면 이미지를 비표적으로 수집하는 행위. 이들은 2024년 8월부터 금지되었습니다.' },
@@ -6398,7 +6398,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             { q: 'EU 조직이 상업적 응용에 DeepSeek를 사용할 수 있습니까?', a: '기술적으로는 GDPR 준수 계약적 안전장치(표준 계약 조항)를 통해 가능합니다. 실질적으로는 SCC는 CAC 데이터 공개 요청에 DeepSeek가 응해야 하는 중국 법률 의무에 대해 집행하기 어렵습니다. 정부 조달은 별도의 제약입니다: 독일 BSI, 프랑스 ANSSI, 네덜란드 NCSC는 정부 및 핵심 인프라 사용에 대해 중국 AI 도구에 대한 권고사항이나 제한을 발표했습니다. EU 민간 부문 조직은 상업적으로 DeepSeek를 사용할 수 있지만 GDPR 제46조에 따른 이전 영향 평가를 실시하고 잔류 위험을 문서화해야 합니다. 대부분의 법률 자문은 DeepSeek를 통한 개인 데이터 처리에 반대합니다.' },
             { q: 'EU AI법이 EU 경쟁력에 도움이 됩니까, 해가 됩니까?', a: '이것은 진정한 전략적 딜레마입니다: EU AI법은 EU AI 스타트업을 늦출 수 있지만 유럽의 글로벌 규제 신뢰성을 강화합니다. 한편으로는 컴플라이언스 비용과 적합성 평가가 EU 기업에 마찰을 일으킵니다 — 프랑스의 Mistral AI는 미국 경쟁자보다 더 많은 제약을 받습니다. 다른 한편으로는 브뤼셀 효과가 EU의 규제 체계를 글로벌 표준으로 만들어 EU 기반 기업에게 컴플라이언스 경쟁력 우위를 제공하고 EU에게 미국/중국 기술 대기업에 대한 레버리지를 부여합니다. 유럽은 미국이나 중국과 근본적으로 다른 AI 전략인 "원시 역량 리더십"이 아닌 "규제 리더십"에 베팅하고 있으며, 이는 유럽을 2등 기술 생산자가 아닌 글로벌 AI 거버넌스에 필수 불가결한 존재로 만드는 전략입니다.' },
             { q: '유럽의 컴퓨팅 역량은 미국, 중국과 어떻게 비교됩니까?', a: '유럽은 컴퓨팅 인프라에서 크게 뒤처집니다. 미국은 GPU 제조(Nvidia ~80% 시장점유율)와 맞춤형 실리콘(Google TPU, Amazon Trainium)을 지배합니다. 중국은 TSMC(대만)에서 제조하고 제한된 Nvidia H시리즈 및 A시리즈 GPU를 사용합니다. 유럽에는 이에 상응하는 것이 없습니다: ASML(네덜란드)은 칩 제조 장비를 만들지만 팹을 소유하지 않습니다. EU 칩법(430억 유로, 2023~2032)은 EU 영토 내 Intel 및 TSMC 팹 건설을 목표로 하지만, 어느 것도 2027~2029년 이전에 가동되지 않을 것입니다 — 투자만으로는 메울 수 없는 3~5년의 컴퓨팅 역량 적자입니다.' },
-            { q: '규제 외 유럽의 AI 우위는 무엇입니까?', a: '유럽에는 세 가지 비규제적 우위가 있습니다: (1) EU(프랑스, 독일)가 지원하는 Mistral AI 및 기타 오픈 가중치 모델이 미국 또는 중국 의존성 없는 GDPR 준수 대안을 제공합니다; (2) 유럽은 영국 AI 안전 연구소, ETH 취리히, 프랑스 연구 센터(INRIA, CNRS)를 통한 AI 안전 연구에서 선두입니다; (3) 유럽의 고학력 인력과 기존 소프트웨어/반도체 인재가 AI 응용 분야와 맞춤형 실리콘(Arm, RISC-V 칩 설계)에서 우위를 제공합니다. 그러나 이 중 어느 것도 프론티어 모델 역량에서 유럽의 불리함을 상쇄하지 못합니다 — 미국이 GPT-5.5, Claude, Gemini에서 선두이고 중국이 배포 규모와 수량에서 선두입니다. 유럽의 전략은 "원시 역량 경쟁보다 잘하는 것(안전, 규제, 윤리)을 하는 것"입니다.' },
+            { q: '규제 외 유럽의 AI 우위는 무엇입니까?', a: '유럽에는 세 가지 비규제적 우위가 있습니다: (1) EU(프랑스, 독일)가 지원하는 Mistral AI 및 기타 오픈 가중치 모델이 미국 또는 중국 의존성 없는 GDPR 준수 대안을 제공합니다; (2) 유럽은 영국 AI 안전 연구소, ETH 취리히, 프랑스 연구 센터(INRIA, CNRS)를 통한 AI 안전 연구에서 선두입니다; (3) 유럽의 고학력 인력과 기존 소프트웨어/반도체 인재가 AI 응용 분야와 맞춤형 실리콘(Arm, RISC-V 칩 설계)에서 우위를 제공합니다. 그러나 이 중 어느 것도 프론티어 모델 역량에서 유럽의 불리함을 상쇄하지 못합니다 — 미국이 GPT-5.6, Claude, Gemini에서 선두이고 중국이 배포 규모와 수량에서 선두입니다. 유럽의 전략은 "원시 역량 경쟁보다 잘하는 것(안전, 규제, 윤리)을 하는 것"입니다.' },
           ],
         },
         commonMistakes: {
@@ -6422,13 +6422,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               mistake: 'GPU 수출 통제를 중국 AI 개발에 대한 영구적인 장벽으로 취급하는 것.',
-              problem: 'DeepSeek R1(2025년 1월)은 제한된 H800 GPU로 약 600만 달러의 컴퓨팅 비용으로 학습되었음에도 — GPT-4 학습 추정치보다 94% 저렴 — 주요 벤치마크에서 GPT-5.5와 대등한 성능을 보였습니다. 수출 통제는 중국의 진전을 늦추지만 막지는 못합니다.',
+              problem: 'DeepSeek R1(2025년 1월)은 제한된 H800 GPU로 약 600만 달러의 컴퓨팅 비용으로 학습되었음에도 — GPT-4 학습 추정치보다 94% 저렴 — 주요 벤치마크에서 GPT-5.6와 대등한 성능을 보였습니다. 수출 통제는 중국의 진전을 늦추지만 막지는 못합니다.',
               fix: 'AI 분야에서 수십 년에 걸친 지정학적 경쟁을 대비해 계획하십시오. 장기 제품 로드맵의 경우 미국 하드웨어 우위가 영구적이라고 가정하지 마십시오. 제한하기 더 어려운 오픈 가중치 대안(Llama, Mistral, Qwen)에 투자하는 것을 고려하십시오. TSMC가 모든 첨단 칩을 제조하므로 대만의 정치적 지위를 계속 모니터링하십시오.',
             },
             {
-              mistake: '독점 미국 모델(GPT-5.5, Claude)이 규제 마찰 없이 전 세계에서 계속 이용 가능할 것이라고 가정하는 것.',
-              problem: 'EU AI법은 이미 GPT-5.5와 Claude에 컴플라이언스 의무를 적용하고 있습니다. 향후 EU 규제는 데이터 수출을 제한하거나 민감한 사용 사례에 온프레미스 배포를 요구할 수 있습니다. 중국의 국내 대체 전략(중국제조 2025)은 외국 모델 접근을 제한할 수 있습니다.',
-              fix: 'AI 인프라를 다각화하십시오. 독점 모델(프론티어 역량을 위해), 오픈 가중치 모델(규제 유연성을 위해), 로컬 배포(데이터 거주를 위해)를 혼합해 사용하십시오. 벤더 종속을 줄이기 위해 GPT-5.5, Claude, Mistral, Qwen 전반에서 제품을 테스트하십시오.',
+              mistake: '독점 미국 모델(GPT-5.6, Claude)이 규제 마찰 없이 전 세계에서 계속 이용 가능할 것이라고 가정하는 것.',
+              problem: 'EU AI법은 이미 GPT-5.6와 Claude에 컴플라이언스 의무를 적용하고 있습니다. 향후 EU 규제는 데이터 수출을 제한하거나 민감한 사용 사례에 온프레미스 배포를 요구할 수 있습니다. 중국의 국내 대체 전략(중국제조 2025)은 외국 모델 접근을 제한할 수 있습니다.',
+              fix: 'AI 인프라를 다각화하십시오. 독점 모델(프론티어 역량을 위해), 오픈 가중치 모델(규제 유연성을 위해), 로컬 배포(데이터 거주를 위해)를 혼합해 사용하십시오. 벤더 종속을 줄이기 위해 GPT-5.6, Claude, Mistral, Qwen 전반에서 제품을 테스트하십시오.',
             },
           ],
         },

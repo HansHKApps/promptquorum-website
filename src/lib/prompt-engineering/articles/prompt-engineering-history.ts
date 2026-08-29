@@ -74,7 +74,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'GPT-3', url: 'https://openai.com' },
           { '@type': 'SoftwareApplication', name: 'GPT-4', url: 'https://openai.com' },
           { '@type': 'SoftwareApplication', name: 'ChatGPT', url: 'https://openai.com' },
-          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8', url: 'https://www.anthropic.com' },
+          { '@type': 'SoftwareApplication', name: 'Claude Opus 5', url: 'https://www.anthropic.com' },
           { '@type': 'SoftwareApplication', name: 'Gemini 3.5 Pro', url: 'https://deepmind.google' },
           { '@type': 'Organization', name: 'Google DeepMind', url: 'https://deepmind.google' },
           { '@type': 'Organization', name: 'Meta AI', url: 'https://www.meta.com' },
@@ -1644,7 +1644,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         pqTest: {
           title: 'PromptQuorum マルチモデルテスト：フレームワークのモデル間での効果',
           content: [
-            'PromptQuorumは同じタスク — CO-STARフレームワークで構造化された — をGPT-5.6、Claude Opus 4.8、Gemini 3.5 Proに送信しました。3つのモデル全てが最初の試行でフォーマット準拠、長さ準拠の回答を生成しました。フレームワークなしの同じタスクは、モデル間で平均2～3回の修正ラウンドが必要でした、有用な出力に到達するために。',
+            'PromptQuorumは同じタスク — CO-STARフレームワークで構造化された — をGPT-5.6、Claude Opus 5、Gemini 3.5 Proに送信しました。3つのモデル全てが最初の試行でフォーマット準拠、長さ準拠の回答を生成しました。フレームワークなしの同じタスクは、モデル間で平均2～3回の修正ラウンドが必要でした、有用な出力に到達するために。',
             'PromptQuorumは、この期間に正式化された9つのフレームワーク — CO-STAR、CRAFT、RISEN、SPECS、TRACE、その他4つ — を単一のインターフェースに統合し、実践者が毎回ゼロから構築することなく各構造を適用できるようにしています。',
           ],
         },
@@ -2060,7 +2060,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           { '@type': 'SoftwareApplication', name: 'GPT-3', url: 'https://openai.com' },
           { '@type': 'SoftwareApplication', name: 'GPT-4', url: 'https://openai.com' },
           { '@type': 'SoftwareApplication', name: 'ChatGPT', url: 'https://openai.com' },
-          { '@type': 'SoftwareApplication', name: 'Claude Opus 4.8', url: 'https://www.anthropic.com' },
+          { '@type': 'SoftwareApplication', name: 'Claude Opus 5', url: 'https://www.anthropic.com' },
           { '@type': 'SoftwareApplication', name: 'Gemini 3.5 Pro', url: 'https://deepmind.google' },
           { '@type': 'Organization', name: 'Google DeepMind', url: 'https://deepmind.google' },
           { '@type': 'Organization', name: 'Meta AI', url: 'https://www.meta.com' },
