@@ -9,6 +9,8 @@ import type { PEArticle } from "@/lib/prompt-engineering/types";
 export const article: Partial<Record<Language, PEArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
+      last_full_refresh: '2026-08-29',
+      next_refresh_due: '2027-02-28',
       theme: 'Fundamentals',
       heroImage: '/images/prompt-engineering-glossary-overview-hero-en.webp',
       title: 'Prompt Engineering Glossary: 500 Key Terms',
@@ -25,7 +27,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         inLanguage: 'en',
         headline: 'Prompt Engineering Glossary: 500 Key Terms',
         datePublished: '2026-03-28',
-        dateModified: '2026-03-28',
+        dateModified: '2026-08-29',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Beginner',
@@ -50,13 +52,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         corePrompting: {
           title: 'Core Prompting Concepts',
+          itemHeadings: true,
           columns: ['Term', 'What it means', 'Sources & references'],
           rows: [
             { 'Term': 'Prompt', 'What it means': 'Any text instruction, question, or example you give an AI model to steer its output toward a specific goal; quality is bounded by how clearly the prompt defines role, task, context, format, and constraints.', 'Sources & references': '[Wikipedia](https://en.wikipedia.org/wiki/Prompt_engineering), [PromptingGuide Basics](https://www.promptingguide.ai/introduction/basics), [LearnPrompting Prompt](https://learnprompting.org/vocabulary/prompt)', 'wikidataId': 'Q117217619' },
             { 'Term': 'Prompt engineering', 'What it means': 'Discipline of designing and iterating prompts so language models produce useful, predictable, and safe outputs; involves structuring instructions, adding context, and choosing techniques like few-shot or chain-of-thought.', 'Sources & references': '[PromptingGuide Overview](https://www.promptingguide.ai), [LearnPrompting Definition](https://learnprompting.org/vocabulary/prompt_engineering), [IBM Techniques](https://www.ibm.com/think/topics/prompt-engineering-techniques)', 'wikidataId': 'Q108941486' },
             { 'Term': 'LLM (Large Language Model)', 'What it means': 'Neural network trained on massive text corpora to predict and generate human-like language from prompts; examples include GPT-5.6, Claude, Gemini, and others used for chat, coding, and reasoning.', 'Sources & references': '[PromptingGuide LLM](https://www.promptingguide.ai/introduction/llms), [AWS Guide](https://aws.amazon.com/what-is/large-language-model/), [ClipboardAI Glossary](https://www.clipboard-ai.com/blog/ai-glossary)', 'wikidataId': 'Q115305900' },
             { 'Term': 'Token', 'What it means': '[Smallest text unit processed by an LLM](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) (roughly word pieces); all context limits, costs, and latencies are measured in tokens, so shorter prompts are cheaper and faster.', 'Sources & references': '[OpenAI Tokenizer](https://platform.openai.com/tokenizer), [PromptingGuide Settings](https://www.promptingguide.ai/introduction/settings), [KeepMyPrompts 2026](https://www.keepmyprompts.com/blog/en/prompt-engineering-guide-2026)', 'wikidataId': ''},
-            { 'Term': 'Context window', 'What it means': '[Maximum number of tokens the model can consider at once](/prompt-engineering/context-windows-explained-why-ai-forgets), including system prompt, conversation history, and retrieved documents; exceeding this truncates or ignores older context. PromptQuorum manages context window optimization across models with different limits (Claude 200K, GPT-4 128K, Gemini 1M) automatically within your workflow.', 'Sources & references': '[Wikipedia](https://en.wikipedia.org/wiki/Prompt_engineering), [Firecrawl Context Engineering](https://www.firecrawl.dev/blog/context-engineering), [PromptingGuide Settings](https://www.promptingguide.ai/introduction/settings)', 'wikidataId': ''},
+            { 'Term': 'Context window', 'What it means': '[Maximum number of tokens the model can consider at once](/prompt-engineering/context-windows-explained-why-ai-forgets), including system prompt, conversation history, and retrieved documents; exceeding this truncates or ignores older context. PromptQuorum manages context window optimization across models with different limits (Claude 200K, GPT-5.6 128K, Gemini 3.1 Pro 1M) automatically within your workflow.', 'Sources & references': '[Wikipedia](https://en.wikipedia.org/wiki/Prompt_engineering), [Firecrawl Context Engineering](https://www.firecrawl.dev/blog/context-engineering), [PromptingGuide Settings](https://www.promptingguide.ai/introduction/settings)', 'wikidataId': ''},
             { 'Term': 'System prompt', 'What it means': '[High-priority, usually hidden instruction that sets the assistant\'s role, style, and hard rules for the entire conversation](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) (e.g., "You are a legal assistant; never give medical advice").', 'Sources & references': '[Anthropic Docs](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference), [OpenAI Guide](https://platform.openai.com/docs/guides/prompt-engineering), [IBM Techniques](https://www.ibm.com/think/topics/prompt-engineering-techniques)', 'wikidataId': ''},
             { 'Term': 'Hallucination', 'What it means': 'Confident-sounding but factually incorrect or fabricated output from an LLM, often caused by missing context, ambiguous prompts, or over-generalization beyond training data.', 'Sources & references': '[Zendesk Glossary](https://www.zendesk.com/blog/generative-ai-glossary/), [LearnPrompting](https://learnprompting.org/docs/hallucinations), [Infomineo Best Practices](https://infomineo.com/artificial-intelligence/prompt-engineering-techniques-examples-best-practices-guide/)', 'wikidataId': ''},
             { 'Term': 'Grounding', 'What it means': 'Supplying the model with authoritative, task-specific data (documents, database results, web pages) inside the prompt so answers rely on real sources instead of model memory alone.', 'Sources & references': '[PromptingGuide RAG](https://www.promptingguide.ai/techniques/rag), [AWS RAG Guide](https://aws.amazon.com/what-is/retrieval-augmented-generation/), [CoherePath Glossary](https://coherepath.org/coherepath/ai-prompting-glossary/)', 'wikidataId': ''},
@@ -82,6 +85,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         agentsOrchestration: {
           title: 'Agents & Orchestration',
+          itemHeadings: true,
           columns: ['Term', 'What it means', 'Sources & references'],
           rows: [
             { 'Term': 'Agent', 'What it means': 'LLM-powered entity equipped with a goal, instructions, and tools that can autonomously decide which actions to take (querying APIs, calling other agents, updating state) to move a task forward.', 'Sources & references': '[OpenAI Agents – Orchestration](https://openai.github.io/openai-agents-python/multi_agent/), [Genesys – LLM agent orchestration](https://www.genesys.com/definitions/what-is-llm-agent-orchestration), [GetStream – AI agent orchestration](https://getstream.io/glossary/ai-agent-orchestration/)', 'wikidataId': ''},
@@ -110,6 +114,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         safetyAlignment: {
           title: 'Safety & Alignment',
+          itemHeadings: true,
           columns: ['Term', 'What it means', 'Sources & references'],
           rows: [
             { 'Term': 'Safety policy', 'What it means': 'Documented rules that define which topics, behaviors, and data uses are allowed or disallowed for an AI system (e.g., no medical diagnosis, no personal data disclosure).', 'Sources & references': '[OpenAI – Safety best practices](https://platform.openai.com/docs/guides/safety-best-practices), [Anthropic – Safety overview](https://trust.anthropic.com/), [Lakera – Safety & guardrails](https://www.lakera.ai/blog/prompt-engineering-guide)', 'wikidataId': ''},
@@ -128,6 +133,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         evalsTesting: {
           title: 'Evaluation & Testing',
+          itemHeadings: true,
           columns: ['Term', 'What it means', 'Sources & references'],
           rows: [
             { 'Term': 'Evals (evaluation suite)', 'What it means': 'Collection of automated tests (question sets, tasks, metrics) used to quantitatively measure how well prompts, models, or agents perform across quality, safety, and reliability dimensions.', 'Sources & references': '[OpenAI – Evals framework](https://github.com/openai/evals), [Anthropic – Model evaluations](https://www.anthropic.com/research/evaluating-ai-systems), [ClipboardAI – AI glossary](https://www.clipboard-ai.com/blog/ai-glossary)', 'wikidataId': ''},
@@ -144,6 +150,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         advancedTechniques: {
           title: 'Advanced Techniques',
+          itemHeadings: true,
           columns: ['Term', 'What it means', 'Sources & references'],
           rows: [
             { 'Term': 'Self-Consistency', 'What it means': '[Technique that generates multiple independent reasoning chains (often via CoT) at higher temperature, then selects the most frequent or majority-voted final answer](/prompt-engineering/self-consistency-prompting) to improve reliability on arithmetic, commonsense, or ambiguous tasks. PromptQuorum\'s Quorum Verdict automatically applies self-consistency logic across 25+ models to reduce hallucination risk.', 'Sources & references': '[PromptingGuide – Self-Consistency](https://www.promptingguide.ai/techniques/consistency), [IBM – Prompt techniques](https://www.ibm.com/think/topics/prompt-engineering-techniques), [Lakera – Prompt engineering guide](https://www.lakera.ai/blog/prompt-engineering-guide)', 'wikidataId': ''},
@@ -170,6 +177,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         metricsProduction: {
           title: 'Metrics & Production',
+          itemHeadings: true,
           columns: ['Term', 'What it means', 'Sources & references'],
           rows: [
             { 'Term': 'BERTScore', 'What it means': 'Semantic similarity metric that uses contextual embeddings (from BERT-like models) to evaluate how well a generated output matches a reference, going beyond simple lexical overlap.', 'Sources & references': '[Comet – LLM evaluation metrics](https://www.comet.com/site/blog/llm-evaluation-metrics-every-developer-should-know/), [Codecademy – LLM evaluation](https://www.codecademy.com/article/llm-evaluation-metrics-benchmarks-best-practices)', 'wikidataId': ''},
@@ -337,6 +345,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
     corePrompting: {
       title: 'Kernkonzepte: Grundlagen für effektives Prompt Engineering',
+      itemHeadings: true,
       columns: ['Begriff', 'Bedeutung', 'Quellenangaben'],
       rows: [
         { 'Begriff': 'Prompt', 'Bedeutung': 'Jede Textanweisung, Frage oder Beispielmenge, die Sie einem KI-Modell geben, um seine Ausgabe auf ein bestimmtes Ziel auszurichten. Die Qualität eines Prompts ist durch die Klarheit begrenzt, mit der die Anweisung Rolle, Aufgabe, Kontext, gewünschtes Format und harte Einschränkungen definiert.', 'Quellenangaben': '[Wikipedia – Prompt Engineering](https://en.wikipedia.org/wiki/Prompt_engineering), [PromptingGuide – Grundlagen](https://www.promptingguide.ai/introduction/basics), [LearnPrompting – Prompt Definition](https://learnprompting.org/vocabulary/prompt)' },
@@ -394,6 +403,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     corePrompting: {
       title: 'Conceptos básicos de prompting',
+      itemHeadings: true,
       columns: ['Término', 'Qué significa', 'Fuentes y referencias'],
       rows: [
         { 'Término': 'Prompt', 'Qué significa': 'Cualquier instrucción de texto, pregunta o ejemplo que le das a un modelo de IA para orientar su output hacia un objetivo específico; la calidad está limitada por la claridad con que el prompt define el rol, la tarea, el contexto, el formato y las restricciones.', 'Fuentes y referencias': '[Wikipedia](https://en.wikipedia.org/wiki/Prompt_engineering), [PromptingGuide Basics](https://www.promptingguide.ai/introduction/basics), [LearnPrompting Prompt](https://learnprompting.org/vocabulary/prompt)' },
@@ -422,6 +432,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     agentsOrchestration: {
       title: 'Agentes y orquestación',
+      itemHeadings: true,
       columns: ['Término', 'Qué significa', 'Fuentes y referencias'],
       rows: [
         { 'Término': 'Agent', 'Qué significa': 'Entidad impulsada por LLM equipada con un objetivo, instrucciones y herramientas que puede decidir de forma autónoma qué acciones tomar para avanzar en una tarea.', 'Fuentes y referencias': '[OpenAI Agents – Orchestration](https://openai.github.io/openai-agents-python/multi_agent/), [Genesys – LLM agent orchestration](https://www.genesys.com/definitions/what-is-llm-agent-orchestration)' },
@@ -436,6 +447,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     safetyAlignment: {
       title: 'Seguridad y alineación',
+      itemHeadings: true,
       columns: ['Término', 'Qué significa', 'Fuentes y referencias'],
       rows: [
         { 'Término': 'Safety policy', 'Qué significa': 'Reglas documentadas que definen qué temas, comportamientos y usos de datos están permitidos o prohibidos para un sistema de IA.', 'Fuentes y referencias': '[OpenAI – Safety best practices](https://platform.openai.com/docs/guides/safety-best-practices), [Anthropic – Safety overview](https://trust.anthropic.com/)' },
@@ -448,6 +460,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     evalsTesting: {
       title: 'Evaluación y pruebas',
+      itemHeadings: true,
       columns: ['Término', 'Qué significa', 'Fuentes y referencias'],
       rows: [
         { 'Término': 'Evals (evaluation suite)', 'Qué significa': 'Colección de pruebas automatizadas (conjuntos de preguntas, tareas, métricas) usadas para medir cuantitativamente qué tan bien funcionan los prompts, modelos o agentes en dimensiones de calidad, seguridad y fiabilidad.', 'Fuentes y referencias': '[OpenAI – Evals framework](https://github.com/openai/evals), [Anthropic – Model evaluations](https://www.anthropic.com/research/evaluating-ai-systems)' },
@@ -458,6 +471,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     advancedTechniques: {
       title: 'Técnicas avanzadas',
+      itemHeadings: true,
       columns: ['Término', 'Qué significa', 'Fuentes y referencias'],
       rows: [
         { 'Término': 'Self-Consistency', 'Qué significa': '[Técnica que genera múltiples cadenas de razonamiento independientes (a menudo mediante CoT) a mayor temperatura, luego selecciona la respuesta final más frecuente o con mayor votación mayoritaria](/prompt-engineering/self-consistency-prompting) para mejorar la fiabilidad.', 'Fuentes y referencias': '[PromptingGuide – Self-Consistency](https://www.promptingguide.ai/techniques/consistency), [IBM – Prompt techniques](https://www.ibm.com/think/topics/prompt-engineering-techniques)' },
@@ -469,6 +483,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     metricsProduction: {
       title: 'Métricas y producción',
+      itemHeadings: true,
       columns: ['Término', 'Qué significa', 'Fuentes y referencias'],
       rows: [
         { 'Término': 'BERTScore', 'Qué significa': 'Métrica de similitud semántica que usa embeddings contextuales (de modelos tipo BERT) para evaluar qué tan bien un output generado coincide con una referencia, más allá de la simple superposición léxica.', 'Fuentes y referencias': '[Comet – LLM evaluation metrics](https://www.comet.com/site/blog/llm-evaluation-metrics-every-developer-should-know/)' },
@@ -545,6 +560,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     corePrompting: {
       title: 'المفاهيم الأساسية للبرومبت',
+      itemHeadings: true,
       columns: ['المصطلح', 'ما يعنيه', 'المصادر والمراجع'],
       rows: [
         { 'المصطلح': 'Prompt (برومبت)', 'ما يعنيه': 'أي تعليمة نصية أو سؤال أو مثال تقدمه لنموذج ذكاء اصطناعي لتوجيه مخرجاته نحو هدف محدد؛ الجودة محدودة بوضوح البرومبت في تحديد الدور والمهمة والسياق والتنسيق والقيود.', 'المصادر والمراجع': '[Wikipedia](https://en.wikipedia.org/wiki/Prompt_engineering), [PromptingGuide Basics](https://www.promptingguide.ai/introduction/basics), [LearnPrompting Prompt](https://learnprompting.org/vocabulary/prompt)' },
@@ -573,6 +589,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     agentsOrchestration: {
       title: 'الوكلاء والتنسيق',
+      itemHeadings: true,
       columns: ['المصطلح', 'ما يعنيه', 'المصادر والمراجع'],
       rows: [
         { 'المصطلح': 'Agent (وكيل)', 'ما يعنيه': 'كيان مدفوع بـLLM مزوّد بهدف وتعليمات وأدوات يستطيع اتخاذ قرارات مستقلة بشأن الإجراءات التي يتخذها للتقدم في مهمة.', 'المصادر والمراجع': '[OpenAI Agents – Orchestration](https://openai.github.io/openai-agents-python/multi_agent/), [Genesys – LLM agent orchestration](https://www.genesys.com/definitions/what-is-llm-agent-orchestration)' },
@@ -587,6 +604,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     safetyAlignment: {
       title: 'الأمان والمواءمة',
+      itemHeadings: true,
       columns: ['المصطلح', 'ما يعنيه', 'المصادر والمراجع'],
       rows: [
         { 'المصطلح': 'Safety policy (سياسة الأمان)', 'ما يعنيه': 'قواعد موثّقة تحدد الموضوعات والسلوكيات واستخدامات البيانات المسموح بها أو المحظورة لنظام ذكاء اصطناعي.', 'المصادر والمراجع': '[OpenAI – Safety best practices](https://platform.openai.com/docs/guides/safety-best-practices), [Anthropic – Safety overview](https://trust.anthropic.com/)' },
@@ -599,6 +617,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     evalsTesting: {
       title: 'التقييم والاختبار',
+      itemHeadings: true,
       columns: ['المصطلح', 'ما يعنيه', 'المصادر والمراجع'],
       rows: [
         { 'المصطلح': 'Evals (مجموعة التقييم)', 'ما يعنيه': 'مجموعة اختبارات آلية (أسئلة ومهام ومقاييس) تُستخدم لقياس كيفية أداء البرومبتات والنماذج والوكلاء كميًا عبر أبعاد الجودة والأمان والموثوقية.', 'المصادر والمراجع': '[OpenAI – Evals framework](https://github.com/openai/evals), [Anthropic – Model evaluations](https://www.anthropic.com/research/evaluating-ai-systems)' },
@@ -609,6 +628,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     advancedTechniques: {
       title: 'التقنيات المتقدمة',
+      itemHeadings: true,
       columns: ['المصطلح', 'ما يعنيه', 'المصادر والمراجع'],
       rows: [
         { 'المصطلح': 'Self-Consistency', 'ما يعنيه': '[تقنية تولّد فيها سلاسل استدلال مستقلة متعددة (غالبًا عبر CoT) بدرجة حرارة أعلى، ثم تختار الإجابة النهائية الأكثر تكرارًا أو الحاصلة على أعلى تصويت](/prompt-engineering/self-consistency-prompting) لتحسين الموثوقية.', 'المصادر والمراجع': '[PromptingGuide – Self-Consistency](https://www.promptingguide.ai/techniques/consistency), [IBM – Prompt techniques](https://www.ibm.com/think/topics/prompt-engineering-techniques)' },
@@ -620,6 +640,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     metricsProduction: {
       title: 'المقاييس والإنتاج',
+      itemHeadings: true,
       columns: ['المصطلح', 'ما يعنيه', 'المصادر والمراجع'],
       rows: [
         { 'المصطلح': 'BERTScore', 'ما يعنيه': 'مقياس تشابه دلالي يستخدم embeddings سياقية (من نماذج مشابهة لـBERT) لتقييم مدى تطابق مخرجات مولَّدة مع مرجع، أبعد من مجرد التداخل المعجمي البسيط.', 'المصادر والمراجع': '[Comet – LLM evaluation metrics](https://www.comet.com/site/blog/llm-evaluation-metrics-every-developer-should-know/)' },
@@ -695,6 +716,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     corePrompting: {
       title: 'Conceitos básicos de prompting',
+      itemHeadings: true,
       columns: ['Termo', 'O que significa', 'Fontes e referências'],
       rows: [
         { 'Termo': 'Prompt', 'O que significa': 'Qualquer instrução de texto, pergunta ou exemplo que você dá a um modelo de IA para orientar seu output em direção a um objetivo específico; a qualidade depende da clareza com que o prompt define o papel, a tarefa, o contexto, o formato e as restrições.', 'Fontes e referências': '[Wikipedia](https://en.wikipedia.org/wiki/Prompt_engineering), [PromptingGuide Basics](https://www.promptingguide.ai/introduction/basics), [LearnPrompting Prompt](https://learnprompting.org/vocabulary/prompt)' },
@@ -723,6 +745,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     agentsOrchestration: {
       title: 'Agentes e orquestração',
+      itemHeadings: true,
       columns: ['Termo', 'O que significa', 'Fontes e referências'],
       rows: [
         { 'Termo': 'Agent', 'O que significa': 'Entidade impulsionada por LLM equipada com um objetivo, instruções e ferramentas que pode decidir de forma autônoma quais ações tomar para avançar em uma tarefa.', 'Fontes e referências': '[OpenAI Agents – Orchestration](https://openai.github.io/openai-agents-python/multi_agent/), [Genesys – LLM agent orchestration](https://www.genesys.com/definitions/what-is-llm-agent-orchestration)' },
@@ -737,6 +760,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     safetyAlignment: {
       title: 'Segurança e alinhamento',
+      itemHeadings: true,
       columns: ['Termo', 'O que significa', 'Fontes e referências'],
       rows: [
         { 'Termo': 'Safety policy', 'O que significa': 'Regras documentadas que definem quais tópicos, comportamentos e usos de dados são permitidos ou proibidos para um sistema de IA.', 'Fontes e referências': '[OpenAI – Safety best practices](https://platform.openai.com/docs/guides/safety-best-practices), [Anthropic – Safety overview](https://trust.anthropic.com/)' },
@@ -749,6 +773,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     evalsTesting: {
       title: 'Avaliação e testes',
+      itemHeadings: true,
       columns: ['Termo', 'O que significa', 'Fontes e referências'],
       rows: [
         { 'Termo': 'Evals (evaluation suite)', 'O que significa': 'Coleção de testes automatizados (conjuntos de perguntas, tarefas, métricas) usados para medir quantitativamente o desempenho de prompts, modelos ou agentes nas dimensões de qualidade, segurança e confiabilidade.', 'Fontes e referências': '[OpenAI – Evals framework](https://github.com/openai/evals), [Anthropic – Model evaluations](https://www.anthropic.com/research/evaluating-ai-systems)' },
@@ -759,6 +784,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     advancedTechniques: {
       title: 'Técnicas avançadas',
+      itemHeadings: true,
       columns: ['Termo', 'O que significa', 'Fontes e referências'],
       rows: [
         { 'Termo': 'Self-Consistency', 'O que significa': '[Técnica que gera múltiplas cadeias de raciocínio independentes (frequentemente via CoT) em temperatura mais alta, depois seleciona a resposta final mais frequente ou com maior votação por maioria](/prompt-engineering/self-consistency-prompting) para melhorar a confiabilidade.', 'Fontes e referências': '[PromptingGuide – Self-Consistency](https://www.promptingguide.ai/techniques/consistency), [IBM – Prompt techniques](https://www.ibm.com/think/topics/prompt-engineering-techniques)' },
@@ -770,6 +796,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     metricsProduction: {
       title: 'Métricas e produção',
+      itemHeadings: true,
       columns: ['Termo', 'O que significa', 'Fontes e referências'],
       rows: [
         { 'Termo': 'BERTScore', 'O que significa': 'Métrica de similaridade semântica que usa embeddings contextuais (de modelos como BERT) para avaliar o quão bem um output gerado corresponde a uma referência, além da simples sobreposição léxica.', 'Fontes e referências': '[Comet – LLM evaluation metrics](https://www.comet.com/site/blog/llm-evaluation-metrics-every-developer-should-know/)' },
@@ -822,7 +849,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     inLanguage: 'fr',
     headline: 'Glossaire de l\'ingénierie de prompt : 500 termes essentiels',
     datePublished: '2026-03-28',
-    dateModified: '2026-03-28',
+    dateModified: '2026-08-29',
     'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
     publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
     speakable: { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
@@ -854,13 +881,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     corePrompting: {
       title: 'Concepts fondamentaux de Prompting',
+      itemHeadings: true,
       columns: ['Term', 'What it means', 'Sources & references'],
       rows: [
         { 'Term': 'Prompt', 'What it means': 'Toute instruction textuelle, question ou exemple que vous donnez à un modèle IA pour orienter sa sortie vers un objectif spécifique; la qualité est limitée par la clarté avec laquelle le prompt définit le rôle, la tâche, le contexte, le format et les contraintes.', 'Sources & references': '[Wikipedia](https://en.wikipedia.org/wiki/Prompt_engineering), [PromptingGuide Basics](https://www.promptingguide.ai/introduction/basics), [LearnPrompting Prompt](https://learnprompting.org/vocabulary/prompt)', 'wikidataId': ''},
         { 'Term': 'Prompt Engineering', 'What it means': 'Discipline de la conception et de l\'itération des prompts pour que les modèles de langage produisent des résultats utiles, prévisibles et sûrs; implique de structurer les instructions, d\'ajouter du contexte et de choisir des techniques comme Few-Shot ou Chain-of-Thought.', 'Sources & references': '[PromptingGuide Overview](https://www.promptingguide.ai), [LearnPrompting Definition](https://learnprompting.org/vocabulary/prompt_engineering), [IBM Techniques](https://www.ibm.com/think/topics/prompt-engineering-techniques)', 'wikidataId': ''},
         { 'Term': 'LLM (Large Language Model)', 'What it means': 'Réseau neuronal entraîné sur de vastes corpus textuels pour prédire et générer un langage similaire à celui humain à partir de prompts; les exemples incluent GPT-5.6, Claude, Gemini et d\'autres utilisés pour le chat, le codage et le raisonnement.', 'Sources & references': '[PromptingGuide LLM](https://www.promptingguide.ai/introduction/llms), [AWS Guide](https://aws.amazon.com/what-is/large-language-model/), [ClipboardAI Glossary](https://www.clipboard-ai.com/blog/ai-glossary)', 'wikidataId': ''},
         { 'Term': 'Token', 'What it means': '[Plus petite unité de texte traitée par un LLM](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) (approximativement des parties de mots); toutes les limites de contexte, coûts et latences sont mesurés en tokens, donc les prompts plus courts sont moins chers et plus rapides.', 'Sources & references': '[OpenAI Tokenizer](https://platform.openai.com/tokenizer), [PromptingGuide Settings](https://www.promptingguide.ai/introduction/settings), [KeepMyPrompts 2026](https://www.keepmyprompts.com/blog/en/prompt-engineering-guide-2026)', 'wikidataId': ''},
-        { 'Term': 'Fenêtre de contexte', 'What it means': '[Nombre maximum de tokens que le modèle peut considérer simultanément](/prompt-engineering/context-windows-explained-why-ai-forgets), incluant le prompt système, l\'historique de conversation et les documents récupérés; dépasser cette limite tronque ou ignore le contexte antérieur. PromptQuorum gère automatiquement l\'optimisation de la fenêtre de contexte sur les modèles avec des limites différentes (Claude 200K, GPT-4 128K, Gemini 1M) dans votre flux de travail.', 'Sources & references': '[Wikipedia](https://en.wikipedia.org/wiki/Prompt_engineering), [Firecrawl Context Engineering](https://www.firecrawl.dev/blog/context-engineering), [PromptingGuide Settings](https://www.promptingguide.ai/introduction/settings)', 'wikidataId': ''},
+        { 'Term': 'Fenêtre de contexte', 'What it means': '[Nombre maximum de tokens que le modèle peut considérer simultanément](/prompt-engineering/context-windows-explained-why-ai-forgets), incluant le prompt système, l\'historique de conversation et les documents récupérés; dépasser cette limite tronque ou ignore le contexte antérieur. PromptQuorum gère automatiquement l\'optimisation de la fenêtre de contexte sur les modèles avec des limites différentes (Claude 200K, GPT-5.6 128K, Gemini 3.1 Pro 1M) dans votre flux de travail.', 'Sources & references': '[Wikipedia](https://en.wikipedia.org/wiki/Prompt_engineering), [Firecrawl Context Engineering](https://www.firecrawl.dev/blog/context-engineering), [PromptingGuide Settings](https://www.promptingguide.ai/introduction/settings)', 'wikidataId': ''},
         { 'Term': 'Prompt système', 'What it means': '[Instruction hautement prioritaire, généralement cachée, qui établit le rôle, le style et les règles dures du comportement de l\'assistant pour l\'ensemble de la conversation](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) (par exemple, "Vous êtes un avocat; ne donnez jamais de conseils médicaux").', 'Sources & references': '[Anthropic Docs](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference), [OpenAI Guide](https://platform.openai.com/docs/guides/prompt-engineering), [IBM Techniques](https://www.ibm.com/think/topics/prompt-engineering-techniques)', 'wikidataId': ''},
         { 'Term': 'Hallucination', 'What it means': 'Sortie confiante mais factuellement incorrecte ou fabriquée d\'un LLM, souvent causée par un contexte manquant, des prompts ambigus ou une sur-généralisation au-delà des données d\'entraînement.', 'Sources & references': '[Zendesk Glossary](https://www.zendesk.com/blog/generative-ai-glossary/), [LearnPrompting](https://learnprompting.org/docs/hallucinations), [Infomineo Best Practices](https://infomineo.com/artificial-intelligence/prompt-engineering-techniques-examples-best-practices-guide/)', 'wikidataId': ''},
         { 'Term': 'Grounding', 'What it means': 'Fournir au modèle des données autorisées et spécifiques à la tâche (documents, résultats de base de données, pages web) dans le prompt afin que les réponses s\'appuient sur des sources réelles au lieu de la mémoire du modèle seule.', 'Sources & references': '[PromptingGuide RAG](https://www.promptingguide.ai/techniques/rag), [AWS RAG Guide](https://aws.amazon.com/what-is/retrieval-augmented-generation/), [CoherePath Glossary](https://coherepath.org/coherepath/ai-prompting-glossary/)', 'wikidataId': ''},
@@ -884,6 +912,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     agentsOrchestration: {
       title: 'Agents & Orchestration',
+      itemHeadings: true,
       columns: ['Term', 'What it means', 'Sources & references'],
       rows: [
         { 'Term': 'Agent', 'What it means': 'Entité pilotée par LLM équipée d\'un objectif, d\'instructions et d\'outils qui peut décider de manière autonome quelles actions entreprendre (interroger des APIs, appeler d\'autres agents, mettre à jour l\'état) pour faire avancer une tâche.', 'Sources & references': '[OpenAI Agents – Orchestration](https://openai.github.io/openai-agents-python/multi_agent/), [Genesys – LLM agent orchestration](https://www.genesys.com/definitions/what-is-llm-agent-orchestration), [GetStream – AI agent orchestration](https://getstream.io/glossary/ai-agent-orchestration/)', 'wikidataId': ''},
@@ -910,6 +939,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     safetyAlignment: {
       title: 'Sécurité & Alignement',
+      itemHeadings: true,
       columns: ['Term', 'What it means', 'Sources & references'],
       rows: [
         { 'Term': 'Politique de sécurité', 'What it means': 'Règles documentées qui définissent les sujets, comportements et utilisations de données autorisés ou interdits pour un système IA (par exemple, pas de diagnostic médical, pas de divulgation de données personnelles).', 'Sources & references': '[OpenAI – Safety best practices](https://platform.openai.com/docs/guides/safety-best-practices), [Anthropic – Safety overview](https://trust.anthropic.com/), [Lakera – Safety & guardrails](https://www.lakera.ai/blog/prompt-engineering-guide)', 'wikidataId': ''},
@@ -926,6 +956,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     evalsTesting: {
       title: 'Évaluation & Testing',
+      itemHeadings: true,
       columns: ['Term', 'What it means', 'Sources & references'],
       rows: [
         { 'Term': 'Evals (suite d\'évaluation)', 'What it means': 'Ensemble de tests automatisés (ensembles de questions, tâches, métriques) utilisés pour mesurer quantitativement la performance des prompts, modèles ou agents sur les dimensions de qualité, sécurité et fiabilité.', 'Sources & references': '[OpenAI – Evals framework](https://github.com/openai/evals), [Anthropic – Model evaluations](https://www.anthropic.com/research/evaluating-ai-systems), [ClipboardAI – AI glossary](https://www.clipboard-ai.com/blog/ai-glossary)', 'wikidataId': ''},
@@ -942,6 +973,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     advancedTechniques: {
       title: 'Techniques avancées',
+      itemHeadings: true,
       columns: ['Term', 'What it means', 'Sources & references'],
       rows: [
         { 'Term': 'Auto-cohérence', 'What it means': '[Technique qui génère plusieurs chaînes de raisonnement indépendantes (souvent via CoT) à température plus élevée, puis sélectionne la réponse finale la plus fréquente ou par vote majoritaire](/prompt-engineering/self-consistency-prompting), pour améliorer la fiabilité sur les tâches arithmétiques, de sens commun ou ambiguës. Le Quorum Verdict de PromptQuorum applique automatiquement la logique d\'auto-cohérence sur 25+ modèles pour réduire le risque d\'hallucination.', 'Sources & references': '[PromptingGuide – Self-Consistency](https://www.promptingguide.ai/techniques/consistency), [IBM – Prompt techniques](https://www.ibm.com/think/topics/prompt-engineering-techniques), [Lakera – Prompt engineering guide](https://www.lakera.ai/blog/prompt-engineering-guide)', 'wikidataId': ''},
@@ -968,6 +1000,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     metricsProduction: {
       title: 'Métriques & Production',
+      itemHeadings: true,
       columns: ['Term', 'What it means', 'Sources & references'],
       rows: [
         { 'Term': 'BERTScore', 'What it means': 'Métrique de similitude sémantique qui utilise des embeddings contextuels (de modèles semblables à BERT) pour évaluer comment bien une sortie générée correspond à une référence, au-delà du chevauchement lexical simple.', 'Sources & references': '[Comet – LLM evaluation metrics](https://www.comet.com/site/blog/llm-evaluation-metrics-every-developer-should-know/), [Codecademy – LLM evaluation](https://www.codecademy.com/article/llm-evaluation-metrics-benchmarks-best-practices)', 'wikidataId': ''},
@@ -1022,11 +1055,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         {
           q: 'Quels modèles souverains ou alternatifs fonctionnent bien avec l\'ingénierie de prompt en français?',
-          a: 'Plusieurs alternatives aux modèles américains offrent une meilleure conformité et souveraineté : Mistral Small/Medium (France, optimisé pour français), Llama 3 via Ollama (auto-hébergement), et Claude via API (Anthropic respecte DSGVO). Pour les organisations privilégiant la souveraineté, des modèles quantifiés (4-bit QLoRA) permettent auto-hébergement sur GPU standard. L\'ingénierie de prompt reste identique : structure, contexte, examples — seul change le modèle cible.',
+          a: 'Plusieurs alternatives aux modèles américains offrent une meilleure conformité et souveraineté : Mistral Small/Medium (France, optimisé pour français), Llama 4 Scout via Ollama (auto-hébergement), et Claude via API (Anthropic respecte DSGVO). Pour les organisations privilégiant la souveraineté, des modèles quantifiés (4-bit QLoRA) permettent auto-hébergement sur GPU standard. L\'ingénierie de prompt reste identique : structure, contexte, examples — seul change le modèle cible.',
         },
         {
           q: 'Comment former une équipe française à l\'ingénierie de prompt efficacement?',
-          a: 'L\'ingénierie de prompt se maîtrise par la pratique itérative, pas par théorie seule. Commencez par : (1) conceptualisez (rôle, tâche, format), (2) écrivez un prompt initial, (3) testez sur plusieurs modèles (GPT-4, Claude, Mistral), (4) analysez les erreurs, (5) raffiniz par Few-Shot ou Chain-of-Thought. Les équipes françaises bénéficient d\'une formation axée sur des cas d\'usage réels (génération juridique, support client multilingue, analyse de données publiques) plutôt que de tutoriels abstraits.',
+          a: 'L\'ingénierie de prompt se maîtrise par la pratique itérative, pas par théorie seule. Commencez par : (1) conceptualisez (rôle, tâche, format), (2) écrivez un prompt initial, (3) testez sur plusieurs modèles (GPT-5.6, Claude, Mistral), (4) analysez les erreurs, (5) raffiniz par Few-Shot ou Chain-of-Thought. Les équipes françaises bénéficient d\'une formation axée sur des cas d\'usage réels (génération juridique, support client multilingue, analyse de données publiques) plutôt que de tutoriels abstraits.',
         },
       ],
     },
@@ -1048,7 +1081,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     inLanguage: 'ja',
     headline: 'プロンプトエンジニアリング用語集：500の必須用語',
     datePublished: '2026-03-28',
-    dateModified: '2026-03-28',
+    dateModified: '2026-08-29',
     author: { '@type': 'Organization', 'name': 'PromptQuorum' },
     publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
     speakable: { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
@@ -1093,7 +1126,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '- **マルチモデル検証：** Claude、Gemini、日本語特化モデル（Swallow、Qwen、Llama JP等）を複数試し、用途ごとに最適なモデルを選定',
         '',
         '## モデル選択のベストプラクティス',
-        '- **クラウドvs.ローカルの選別基準：** データ保護が最優先（金融・医療）→ローカル運用（Ollama + Llama 3.3等）。リアルタイム性・高性能重視 → クラウドAPI（GPT-5.6、Claude）',
+        '- **クラウドvs.ローカルの選別基準：** データ保護が最優先（金融・医療）→ローカル運用（Ollama + Llama 4 Scout等）。リアルタイム性・高性能重視 → クラウドAPI（GPT-5.6、Claude）',
         '- **コスト効率化：** 単純なタスク（テンプレート生成、要約）→軽量モデル（GPT-5.6 Luna、Claude Haiku）。複雑な推論 → 大規模モデル。本番前に必ずコスト試算',
         '- **評価とロールアウト：** 小規模なパイロット（10～100ユーザー）で品質・コスト検証後、段階的に本番展開。日本語品質の低下がないか継続監視',
         '',
@@ -1117,13 +1150,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     corePrompting: {
       title: 'プロンプティングのコアコンセプト',
+      itemHeadings: true,
       columns: ['Term', 'What it means', 'Sources & references'],
       rows: [
         { 'Term': 'プロンプト', 'What it means': 'AIモデルに与えるテキスト指示、質問、または例で、出力を特定の目標に向けます。品質はプロンプトがロール、タスク、コンテキスト、形式、制約をどの程度明確に定義するかによって制限されます。', 'Sources & references': '[Wikipedia](https://en.wikipedia.org/wiki/Prompt_engineering), [PromptingGuide Basics](https://www.promptingguide.ai/introduction/basics), [LearnPrompting Prompt](https://learnprompting.org/vocabulary/prompt)', 'wikidataId': ''},
         { 'Term': 'プロンプトエンジニアリング', 'What it means': '言語モデルが有用で予測可能、安全な出力を生成するようにプロンプトを設計・改善する分野。指示の構造化、コンテキストの追加、および Few-Shot や Chain-of-Thought などのテクニックの選択が含まれます。', 'Sources & references': '[PromptingGuide Overview](https://www.promptingguide.ai), [LearnPrompting Definition](https://learnprompting.org/vocabulary/prompt_engineering), [IBM Techniques](https://www.ibm.com/think/topics/prompt-engineering-techniques)', 'wikidataId': ''},
         { 'Term': 'LLM（大規模言語モデル）', 'What it means': '膨大なテキストコーパスで訓練されたニューラルネットワークで、プロンプトから人間らしい言語を予測・生成します。GPT-5.6、Claude、Gemini などがあり、チャット、コーディング、推論に使用されます。', 'Sources & references': '[PromptingGuide LLM](https://www.promptingguide.ai/introduction/llms), [AWS Guide](https://aws.amazon.com/what-is/large-language-model/), [ClipboardAI Glossary](https://www.clipboard-ai.com/blog/ai-glossary)', 'wikidataId': ''},
         { 'Term': 'トークン', 'What it means': '[LLMが処理する最小テキスト単位](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting)（大よそ単語の部分）。すべてのコンテキスト制限、コスト、遅延はトークンで測定されるため、短いプロンプトはより安く高速です。', 'Sources & references': '[OpenAI Tokenizer](https://platform.openai.com/tokenizer), [PromptingGuide Settings](https://www.promptingguide.ai/introduction/settings), [KeepMyPrompts 2026](https://www.keepmyprompts.com/blog/en/prompt-engineering-guide-2026)', 'wikidataId': ''},
-        { 'Term': 'コンテキストウィンドウ', 'What it means': '[モデルが一度に考慮できるトークンの最大数](/prompt-engineering/context-windows-explained-why-ai-forgets)。システムプロンプト、会話履歴、取得したドキュメントを含みます。この制限を超えると、古いコンテキストが切り詰められるか無視されます。PromptQuorum は、異なる制限のあるモデル（Claude 200K、GPT-4 128K、Gemini 1M）間でのコンテキストウィンドウ最適化をワークフロー内で自動的に管理します。', 'Sources & references': '[Wikipedia](https://en.wikipedia.org/wiki/Prompt_engineering), [Firecrawl Context Engineering](https://www.firecrawl.dev/blog/context-engineering), [PromptingGuide Settings](https://www.promptingguide.ai/introduction/settings)', 'wikidataId': ''},
+        { 'Term': 'コンテキストウィンドウ', 'What it means': '[モデルが一度に考慮できるトークンの最大数](/prompt-engineering/context-windows-explained-why-ai-forgets)。システムプロンプト、会話履歴、取得したドキュメントを含みます。この制限を超えると、古いコンテキストが切り詰められるか無視されます。PromptQuorum は、異なる制限のあるモデル（Claude 200K、GPT-5.6 128K、Gemini 3.1 Pro 1M）間でのコンテキストウィンドウ最適化をワークフロー内で自動的に管理します。', 'Sources & references': '[Wikipedia](https://en.wikipedia.org/wiki/Prompt_engineering), [Firecrawl Context Engineering](https://www.firecrawl.dev/blog/context-engineering), [PromptingGuide Settings](https://www.promptingguide.ai/introduction/settings)', 'wikidataId': ''},
         { 'Term': 'システムプロンプト', 'What it means': '[会話全体でアシスタントの役割、スタイル、厳格なルールを設定する高優先度で通常は非表示の指示](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference)（例：「あなたは法的支援者です。医学的なアドバイスは与えないでください」）。', 'Sources & references': '[Anthropic Docs](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference), [OpenAI Guide](https://platform.openai.com/docs/guides/prompt-engineering), [IBM Techniques](https://www.ibm.com/think/topics/prompt-engineering-techniques)', 'wikidataId': ''},
         { 'Term': 'ハルシネーション', 'What it means': 'LLMからの自信満々だが事実的に不正確または捏造された出力。多くは文脈の欠落、曖昧なプロンプト、またはトレーニングデータを超えた過度な一般化によって引き起こされます。', 'Sources & references': '[Zendesk Glossary](https://www.zendesk.com/blog/generative-ai-glossary/), [LearnPrompting](https://learnprompting.org/docs/hallucinations), [Infomineo Best Practices](https://infomineo.com/artificial-intelligence/prompt-engineering-techniques-examples-best-practices-guide/)', 'wikidataId': ''},
         { 'Term': 'グラウンディング', 'What it means': 'プロンプト内にモデルに権威ある、タスク固有のデータ（ドキュメント、データベース結果、ウェブページ）を提供して、モデルのメモリだけに頼るのではなく、実際のソースに基づいた回答を得られるようにします。', 'Sources & references': '[PromptingGuide RAG](https://www.promptingguide.ai/techniques/rag), [AWS RAG Guide](https://aws.amazon.com/what-is/retrieval-augmented-generation/), [CoherePath Glossary](https://coherepath.org/coherepath/ai-prompting-glossary/)', 'wikidataId': ''},
@@ -1147,6 +1181,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     agentsOrchestration: {
       title: 'エージェント＆オーケストレーション',
+      itemHeadings: true,
       columns: ['Term', 'What it means', 'Sources & references'],
       rows: [
         { 'Term': 'エージェント', 'What it means': '目標、指示、ツールを備えたLLMパワードエンティティで、自律的にアクション（API、他のエージェント呼び出し、状態更新）をとって、タスクを進めることができます。', 'Sources & references': '[OpenAI Agents – Orchestration](https://openai.github.io/openai-agents-python/multi_agent/), [Genesys – LLM agent orchestration](https://www.genesys.com/definitions/what-is-llm-agent-orchestration), [GetStream – AI agent orchestration](https://getstream.io/glossary/ai-agent-orchestration/)', 'wikidataId': ''},
@@ -1173,6 +1208,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     safetyAlignment: {
       title: 'セキュリティ＆アライメント',
+      itemHeadings: true,
       columns: ['Term', 'What it means', 'Sources & references'],
       rows: [
         { 'Term': 'セーフティポリシー', 'What it means': 'AIシステムでどのトピック、動作、データ使用が許可または禁止されているかを定義する文書化されたルール（例：医学診断なし、個人データ開示なし）。', 'Sources & references': '[OpenAI – Safety best practices](https://platform.openai.com/docs/guides/safety-best-practices), [Anthropic – Safety overview](https://trust.anthropic.com/), [Lakera – Safety & guardrails](https://www.lakera.ai/blog/prompt-engineering-guide)', 'wikidataId': ''},
@@ -1189,6 +1225,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     evalsTesting: {
       title: '評価＆テスト',
+      itemHeadings: true,
       columns: ['Term', 'What it means', 'Sources & references'],
       rows: [
         { 'Term': 'Evals（評価スイート）', 'What it means': '品質、セーフティ、信頼性の次元でプロンプト、モデル、またはエージェントのパフォーマンスを定量的に測定するために使用される自動テスト（質問セット、タスク、メトリック）の収集。', 'Sources & references': '[OpenAI – Evals framework](https://github.com/openai/evals), [Anthropic – Model evaluations](https://www.anthropic.com/research/evaluating-ai-systems), [ClipboardAI – AI glossary](https://www.clipboard-ai.com/blog/ai-glossary)', 'wikidataId': ''},
@@ -1205,6 +1242,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     advancedTechniques: {
       title: '高度なテクニック',
+      itemHeadings: true,
       columns: ['Term', 'What it means', 'Sources & references'],
       rows: [
         { 'Term': 'Self-Consistency', 'What it means': '[モデルが複数の推論パスを生成し、最も一貫した答えを選択する](/prompt-engineering/self-consistency-prompting) — コンセンサスにより、タスク完了率と推論の質が向上します。', 'Sources & references': '[PromptingGuide – Self-Consistency](https://www.promptingguide.ai/techniques/self-consistency), [Lakera – Prompting guide](https://www.lakera.ai/blog/prompt-engineering-guide)', 'wikidataId': ''},
@@ -1231,6 +1269,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     },
     metricsProduction: {
       title: 'メトリクス＆プロダクション',
+      itemHeadings: true,
       columns: ['Term', 'What it means', 'Sources & references'],
       rows: [
         { 'Term': 'BERTScore', 'What it means': 'セマンティック類似性メトリック。BERT のような文脈的埋め込みを使用して、生成出力が参照とどの程度よく一致するかを評価します。単純なレキシカルオーバーラップを超えています。', 'Sources & references': '[Comet – LLM evaluation metrics](https://www.comet.com/site/blog/llm-evaluation-metrics-every-developer-should-know/), [Codecademy – LLM evaluation](https://www.codecademy.com/article/llm-evaluation-metrics-benchmarks-best-practices)', 'wikidataId': ''},
@@ -1301,7 +1340,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         {
           q: 'オンプレミス（ローカル）運用と、クラウドAPI利用（GPT-5.6、Claude）の選択基準は？',
-          a: 'データ保護レベルで判断します：(1) **クラウド推奨**―データ流出リスクが低い、リアルタイム高性能重視（顧客向けチャットボット、マーケティング）。コスト安定、最新モデルへのアクセス。(2) **オンプレミス推奨**―顧客個人情報、財務データ、営業秘密を含む、データローカライゼーション要件あり。クラウド送信できない。Ollama + Llama 3.3等で実運用可能。(3) **ハイブリッド**―非機密タスクはClaudeで高速処理、機密部分はローカルで自社制御。多くの日本企業がこのアプローチ。初期構築コスト vs. 長期運用コスト、スタッフスキル、規制要件を総合判断してください。',
+          a: 'データ保護レベルで判断します：(1) **クラウド推奨**―データ流出リスクが低い、リアルタイム高性能重視（顧客向けチャットボット、マーケティング）。コスト安定、最新モデルへのアクセス。(2) **オンプレミス推奨**―顧客個人情報、財務データ、営業秘密を含む、データローカライゼーション要件あり。クラウド送信できない。Ollama + Llama 4 Scout等で実運用可能。(3) **ハイブリッド**―非機密タスクはClaudeで高速処理、機密部分はローカルで自社制御。多くの日本企業がこのアプローチ。初期構築コスト vs. 長期運用コスト、スタッフスキル、規制要件を総合判断してください。',
         },
         {
           q: 'エンタープライズ環境で複数チームがプロンプトを共有・管理するベストプラクティスは？',
@@ -1327,7 +1366,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         inLanguage: 'zh',
         headline: '提示工程词汇表：500个必备术语',
         datePublished: '2026-03-28',
-        dateModified: '2026-03-28',
+        dateModified: '2026-08-29',
         author: { '@type': 'Organization', 'name': 'PromptQuorum' },
         publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         speakable: { '@type': 'SpeakableSpecification', 'cssSelector': ['.article-intro', '.key-takeaways', 'h2'] },
@@ -1411,13 +1450,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         corePrompting: {
           title: '核心提示概念',
+          itemHeadings: true,
           columns: ['术语', '含义', '来源和参考'],
           rows: [
             { '术语': '提示', '含义': '您给AI模型的任何文本指令、问题或示例，以将其输出引导至特定目标；质量受提示明确定义角色、任务、上下文、格式和约束的程度限制。', '来源和参考': '[Wikipedia](https://en.wikipedia.org/wiki/Prompt_engineering), [PromptingGuide Basics](https://www.promptingguide.ai/introduction/basics), [LearnPrompting Prompt](https://learnprompting.org/vocabulary/prompt)' },
             { '术语': '提示工程', '含义': '设计和迭代提示的学科，使语言模型生成有用、可预测和安全的输出；涉及结构化指令、添加上下文和选择Few-Shot或Chain-of-Thought等技术。', '来源和参考': '[PromptingGuide Overview](https://www.promptingguide.ai), [LearnPrompting Definition](https://learnprompting.org/vocabulary/prompt_engineering), [IBM Techniques](https://www.ibm.com/think/topics/prompt-engineering-techniques)' },
             { '术语': 'LLM（大语言模型）', '含义': '在大量文本语料库上训练的神经网络，可从提示预测和生成类人语言；包括GPT-5.6、Claude、Gemini等，用于聊天、编码和推理。', '来源和参考': '[PromptingGuide LLM](https://www.promptingguide.ai/introduction/llms), [AWS Guide](https://aws.amazon.com/what-is/large-language-model/), [ClipboardAI Glossary](https://www.clipboard-ai.com/blog/ai-glossary)' },
             { '术语': '令牌', '含义': '[LLM处理的最小文本单位](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting)（大约单词片段）；所有上下文限制、成本和延迟都以令牌衡量，因此较短的提示更便宜且更快。', '来源和参考': '[OpenAI Tokenizer](https://platform.openai.com/tokenizer), [PromptingGuide Settings](https://www.promptingguide.ai/introduction/settings), [KeepMyPrompts 2026](https://www.keepmyprompts.com/blog/en/prompt-engineering-guide-2026)' },
-            { '术语': '上下文窗口', '含义': '[模型一次可以考虑的最大令牌数](/prompt-engineering/context-windows-explained-why-ai-forgets)，包括系统提示、对话历史和检索文档；超过此限制会截断或忽略较早的上下文。PromptQuorum在您的工作流中自动管理具有不同限制（Claude 200K、GPT-4 128K、Gemini 1M）的模型的上下文窗口优化。', '来源和参考': '[Wikipedia](https://en.wikipedia.org/wiki/Prompt_engineering), [Firecrawl Context Engineering](https://www.firecrawl.dev/blog/context-engineering), [PromptingGuide Settings](https://www.promptingguide.ai/introduction/settings)' },
+            { '术语': '上下文窗口', '含义': '[模型一次可以考虑的最大令牌数](/prompt-engineering/context-windows-explained-why-ai-forgets)，包括系统提示、对话历史和检索文档；超过此限制会截断或忽略较早的上下文。PromptQuorum在您的工作流中自动管理具有不同限制（Claude 200K、GPT-5.6 128K、Gemini 3.1 Pro 1M）的模型的上下文窗口优化。', '来源和参考': '[Wikipedia](https://en.wikipedia.org/wiki/Prompt_engineering), [Firecrawl Context Engineering](https://www.firecrawl.dev/blog/context-engineering), [PromptingGuide Settings](https://www.promptingguide.ai/introduction/settings)' },
             { '术语': '系统提示', '含义': '[在整个对话中优先级高、通常隐藏的指令，为助手设置角色、风格和硬规则](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference)（例如："你是法律助手；不要给出医学建议"）。', '来源和参考': '[Anthropic Docs](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference), [OpenAI Guide](https://platform.openai.com/docs/guides/prompt-engineering), [IBM Techniques](https://www.ibm.com/think/topics/prompt-engineering-techniques)' },
             { '术语': '幻觉', '含义': 'LLM的自信但事实上不正确或虚构的输出，通常由丢失的上下文、模糊的提示或超越训练数据的过度泛化引起。', '来源和参考': '[Zendesk Glossary](https://www.zendesk.com/blog/generative-ai-glossary/), [LearnPrompting](https://learnprompting.org/docs/hallucinations), [Infomineo Best Practices](https://infomineo.com/artificial-intelligence/prompt-engineering-techniques-examples-best-practices-guide/)' },
             { '术语': '接地', '含义': '向模型提供权威的、任务特定的数据（文档、数据库结果、网页），在提示内部，以便答案依赖真实来源而不仅仅是模型记忆。', '来源和参考': '[PromptingGuide RAG](https://www.promptingguide.ai/techniques/rag), [AWS RAG Guide](https://aws.amazon.com/what-is/retrieval-augmented-generation/), [CoherePath Glossary](https://coherepath.org/coherepath/ai-prompting-glossary/)' },
@@ -1441,6 +1481,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         agentsOrchestration: {
           title: '代理和编排',
+          itemHeadings: true,
           columns: ['术语', '含义', '来源和参考'],
           rows: [
             { '术语': '代理', '含义': '配备目标、指令和工具的LLM驱动实体，可以自主决定采取哪些行动（查询API、调用其他代理、更新状态）推进任务。', '来源和参考': '[OpenAI Agents – Orchestration](https://openai.github.io/openai-agents-python/multi_agent/), [Genesys – LLM agent orchestration](https://www.genesys.com/definitions/what-is-llm-agent-orchestration), [GetStream – AI agent orchestration](https://getstream.io/glossary/ai-agent-orchestration/)' },
@@ -1467,6 +1508,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         safetyAlignment: {
           title: '安全和对齐',
+          itemHeadings: true,
           columns: ['术语', '含义', '来源和参考'],
           rows: [
             { '术语': '安全政策', '含义': '定义AI系统允许或禁止哪些主题、行为和数据使用的文件化规则（例如无医学诊断、无个人数据披露）。', '来源和参考': '[OpenAI – Safety best practices](https://platform.openai.com/docs/guides/safety-best-practices), [Anthropic – Safety overview](https://trust.anthropic.com/), [Lakera – Safety & guardrails](https://www.lakera.ai/blog/prompt-engineering-guide)' },
@@ -1483,6 +1525,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         evalsTesting: {
           title: '评估和测试',
+          itemHeadings: true,
           columns: ['术语', '含义', '来源和参考'],
           rows: [
             { '术语': '评估（评估套件）', '含义': '自动化测试的集合（问题集、任务、指标），用于定量衡量提示、模型或代理在质量、安全和可靠性维度上的表现。', '来源和参考': '[OpenAI – Evals framework](https://github.com/openai/evals), [Anthropic – Model evaluations](https://www.anthropic.com/research/evaluating-ai-systems), [ClipboardAI – AI glossary](https://www.clipboard-ai.com/blog/ai-glossary)' },
@@ -1499,6 +1542,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         advancedTechniques: {
           title: '高级技术',
+          itemHeadings: true,
           columns: ['术语', '含义', '来源和参考'],
           rows: [
             { '术语': '自我一致性', '含义': '[技术，生成多个独立推理链（通常通过CoT）](/prompt-engineering/self-consistency-prompting)，然后选择最常见或多数投票的最终答案，以改进算术、常识或模糊任务上的可靠性。PromptQuorum的Quorum Verdict在25+个模型上自动应用自我一致性逻辑，以减少幻觉风险。', '来源和参考': '[PromptingGuide – Self-Consistency](https://www.promptingguide.ai/techniques/consistency), [IBM – Prompt techniques](https://www.ibm.com/think/topics/prompt-engineering-techniques), [Lakera – Prompt engineering guide](https://www.lakera.ai/blog/prompt-engineering-guide)' },
@@ -1525,6 +1569,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         metricsProduction: {
           title: '指标和生产',
+          itemHeadings: true,
           columns: ['术语', '含义', '来源和参考'],
           rows: [
             { '术语': 'BERTScore', '含义': '语义相似度指标，使用来自BERT样模型的上下文嵌入，评估生成输出与参考有多少匹配，超越简单的词汇重叠。', '来源和参考': '[Comet – LLM evaluation metrics](https://www.comet.com/site/blog/llm-evaluation-metrics-every-developer-should-know/), [Codecademy – LLM evaluation](https://www.codecademy.com/article/llm-evaluation-metrics-benchmarks-best-practices)' },
@@ -1635,7 +1680,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         inLanguage: 'ko',
         headline: '프롬프트 엔지니어링 용어집: 500개 핵심 용어',
         datePublished: '2026-03-28',
-        dateModified: '2026-03-28',
+        dateModified: '2026-08-29',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'proficiencyLevel': 'Beginner',
@@ -1660,13 +1705,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         corePrompting: {
           title: '핵심 프롬프팅 개념',
+          itemHeadings: true,
           columns: ['용어', '의미', '출처 및 참고 자료'],
           rows: [
             { 'Term': 'Prompt', 'What it means': 'AI 모델에 제공하는 텍스트 지침, 질문 또는 예시로, 특정 목표를 향해 출력을 유도합니다. 프롬프트의 품질은 역할, 과제, 맥락, 형식, 제약 조건을 얼마나 명확히 정의하느냐에 달려 있습니다.', 'Sources & references': '[Wikipedia](https://en.wikipedia.org/wiki/Prompt_engineering), [PromptingGuide Basics](https://www.promptingguide.ai/introduction/basics), [LearnPrompting Prompt](https://learnprompting.org/vocabulary/prompt)', 'wikidataId': 'Q117217619' },
             { 'Term': 'Prompt engineering', 'What it means': '언어 모델이 유용하고 예측 가능하며 안전한 출력을 생성하도록 프롬프트를 설계하고 반복하는 분야입니다. few-shot 또는 chain-of-thought와 같은 기법을 선택하고 지침을 구조화하며 맥락을 추가하는 작업이 포함됩니다.', 'Sources & references': '[PromptingGuide Overview](https://www.promptingguide.ai), [LearnPrompting Definition](https://learnprompting.org/vocabulary/prompt_engineering), [IBM Techniques](https://www.ibm.com/think/topics/prompt-engineering-techniques)', 'wikidataId': 'Q108941486' },
             { 'Term': 'LLM (Large Language Model)', 'What it means': '프롬프트로부터 인간과 유사한 언어를 예측하고 생성하기 위해 방대한 텍스트 코퍼스로 훈련된 신경망입니다. GPT-5.6, Claude, Gemini 등이 대표적이며 채팅, 코딩, 추론에 활용됩니다.', 'Sources & references': '[PromptingGuide LLM](https://www.promptingguide.ai/introduction/llms), [AWS Guide](https://aws.amazon.com/what-is/large-language-model/), [ClipboardAI Glossary](https://www.clipboard-ai.com/blog/ai-glossary)', 'wikidataId': 'Q115305900' },
             { 'Term': 'Token', 'What it means': '[LLM이 처리하는 가장 작은 텍스트 단위](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting)(대략 단어 조각)입니다. 모든 컨텍스트 제한, 비용, 지연 시간은 토큰 단위로 측정되므로 짧은 프롬프트일수록 저렴하고 빠릅니다.', 'Sources & references': '[OpenAI Tokenizer](https://platform.openai.com/tokenizer), [PromptingGuide Settings](https://www.promptingguide.ai/introduction/settings), [KeepMyPrompts 2026](https://www.keepmyprompts.com/blog/en/prompt-engineering-guide-2026)', 'wikidataId': ''},
-            { 'Term': 'Context window', 'What it means': '[모델이 한 번에 고려할 수 있는 최대 토큰 수](/prompt-engineering/context-windows-explained-why-ai-forgets)로, 시스템 프롬프트, 대화 기록, 검색된 문서를 모두 포함합니다. 이 한도를 초과하면 오래된 컨텍스트가 잘리거나 무시됩니다. PromptQuorum은 Claude 200K, GPT-4 128K, Gemini 1M 등 다양한 한도를 가진 모델에서 워크플로 내 컨텍스트 윈도우 최적화를 자동으로 관리합니다.', 'Sources & references': '[Wikipedia](https://en.wikipedia.org/wiki/Prompt_engineering), [Firecrawl Context Engineering](https://www.firecrawl.dev/blog/context-engineering), [PromptingGuide Settings](https://www.promptingguide.ai/introduction/settings)', 'wikidataId': ''},
+            { 'Term': 'Context window', 'What it means': '[모델이 한 번에 고려할 수 있는 최대 토큰 수](/prompt-engineering/context-windows-explained-why-ai-forgets)로, 시스템 프롬프트, 대화 기록, 검색된 문서를 모두 포함합니다. 이 한도를 초과하면 오래된 컨텍스트가 잘리거나 무시됩니다. PromptQuorum은 Claude 200K, GPT-5.6 128K, Gemini 3.1 Pro 1M 등 다양한 한도를 가진 모델에서 워크플로 내 컨텍스트 윈도우 최적화를 자동으로 관리합니다.', 'Sources & references': '[Wikipedia](https://en.wikipedia.org/wiki/Prompt_engineering), [Firecrawl Context Engineering](https://www.firecrawl.dev/blog/context-engineering), [PromptingGuide Settings](https://www.promptingguide.ai/introduction/settings)', 'wikidataId': ''},
             { 'Term': 'System prompt', 'What it means': '[전체 대화에 걸쳐 어시스턴트의 역할, 스타일, 규칙을 설정하는 우선순위가 높고 일반적으로 숨겨진 지침입니다](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference)(예: "당신은 법률 어시스턴트입니다. 의료 조언은 절대 제공하지 마십시오.").', 'Sources & references': '[Anthropic Docs](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference), [OpenAI Guide](https://platform.openai.com/docs/guides/prompt-engineering), [IBM Techniques](https://www.ibm.com/think/topics/prompt-engineering-techniques)', 'wikidataId': ''},
             { 'Term': 'Hallucination', 'What it means': 'LLM이 생성하는 자신감 있어 보이지만 사실적으로 틀리거나 날조된 출력입니다. 맥락 부족, 모호한 프롬프트, 또는 훈련 데이터를 넘어선 과도한 일반화로 인해 발생하는 경우가 많습니다.', 'Sources & references': '[Zendesk Glossary](https://www.zendesk.com/blog/generative-ai-glossary/), [LearnPrompting](https://learnprompting.org/docs/hallucinations), [Infomineo Best Practices](https://infomineo.com/artificial-intelligence/prompt-engineering-techniques-examples-best-practices-guide/)', 'wikidataId': ''},
             { 'Term': 'Grounding', 'What it means': '모델 메모리만이 아닌 실제 출처를 기반으로 답변하도록 프롬프트 내에 신뢰할 수 있는 과제별 데이터(문서, 데이터베이스 결과, 웹 페이지)를 제공하는 것입니다.', 'Sources & references': '[PromptingGuide RAG](https://www.promptingguide.ai/techniques/rag), [AWS RAG Guide](https://aws.amazon.com/what-is/retrieval-augmented-generation/), [CoherePath Glossary](https://coherepath.org/coherepath/ai-prompting-glossary/)', 'wikidataId': ''},
@@ -1692,6 +1738,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         agentsOrchestration: {
           title: '에이전트 및 오케스트레이션',
+          itemHeadings: true,
           columns: ['용어', '의미', '출처 및 참고 자료'],
           rows: [
             { 'Term': 'Agent', 'What it means': '목표, 지침, 도구를 갖춘 LLM 기반 엔티티로, 과제를 진행하기 위해 어떤 행동을 취할지 자율적으로 결정할 수 있습니다(API 쿼리, 다른 에이전트 호출, 상태 업데이트 등).', 'Sources & references': '[OpenAI Agents – Orchestration](https://openai.github.io/openai-agents-python/multi_agent/), [Genesys – LLM agent orchestration](https://www.genesys.com/definitions/what-is-llm-agent-orchestration), [GetStream – AI agent orchestration](https://getstream.io/glossary/ai-agent-orchestration/)', 'wikidataId': ''},
@@ -1720,6 +1767,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         safetyAlignment: {
           title: '안전성 및 정렬',
+          itemHeadings: true,
           columns: ['용어', '의미', '출처 및 참고 자료'],
           rows: [
             { 'Term': 'Safety policy', 'What it means': 'AI 시스템에서 허용되거나 허용되지 않는 주제, 동작 및 데이터 사용을 정의하는 문서화된 규칙입니다(예: 의료 진단 금지, 개인 데이터 공개 금지).', 'Sources & references': '[OpenAI – Safety best practices](https://platform.openai.com/docs/guides/safety-best-practices), [Anthropic – Safety overview](https://trust.anthropic.com/), [Lakera – Safety & guardrails](https://www.lakera.ai/blog/prompt-engineering-guide)', 'wikidataId': ''},
@@ -1738,6 +1786,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         evalsTesting: {
           title: '평가 및 테스트',
+          itemHeadings: true,
           columns: ['용어', '의미', '출처 및 참고 자료'],
           rows: [
             { 'Term': 'Evals (evaluation suite)', 'What it means': '프롬프트, 모델 또는 에이전트가 품질, 안전성, 신뢰성 차원에서 얼마나 잘 수행하는지 정량적으로 측정하는 데 사용되는 자동화된 테스트(질문 세트, 과제, 지표)의 모음입니다.', 'Sources & references': '[OpenAI – Evals framework](https://github.com/openai/evals), [Anthropic – Model evaluations](https://www.anthropic.com/research/evaluating-ai-systems), [ClipboardAI – AI glossary](https://www.clipboard-ai.com/blog/ai-glossary)', 'wikidataId': ''},
@@ -1754,6 +1803,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         advancedTechniques: {
           title: '고급 기법',
+          itemHeadings: true,
           columns: ['용어', '의미', '출처 및 참고 자료'],
           rows: [
             { 'Term': 'Self-Consistency', 'What it means': '[높은 temperature에서 여러 독립적인 추론 체인(종종 CoT를 통해)을 생성한 다음 가장 빈번하거나 다수결로 선택된 최종 답변을 선택하는 기법입니다](/prompt-engineering/self-consistency-prompting). 산술, 상식, 모호한 과제에서 신뢰성을 향상시킵니다. PromptQuorum의 Quorum Verdict는 25개 이상의 모델에 걸쳐 자동으로 자기 일관성 논리를 적용하여 환각 위험을 줄입니다.', 'Sources & references': '[PromptingGuide – Self-Consistency](https://www.promptingguide.ai/techniques/consistency), [IBM – Prompt techniques](https://www.ibm.com/think/topics/prompt-engineering-techniques), [Lakera – Prompt engineering guide](https://www.lakera.ai/blog/prompt-engineering-guide)', 'wikidataId': ''},
@@ -1780,6 +1830,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         metricsProduction: {
           title: '지표 및 프로덕션',
+          itemHeadings: true,
           columns: ['용어', '의미', '출처 및 참고 자료'],
           rows: [
             { 'Term': 'BERTScore', 'What it means': '단순한 어휘 중복을 넘어 생성된 출력이 참조와 얼마나 잘 일치하는지 평가하기 위해 문맥 임베딩(BERT 유사 모델 사용)을 사용하는 의미적 유사성 지표입니다.', 'Sources & references': '[Comet – LLM evaluation metrics](https://www.comet.com/site/blog/llm-evaluation-metrics-every-developer-should-know/), [Codecademy – LLM evaluation](https://www.codecademy.com/article/llm-evaluation-metrics-benchmarks-best-practices)', 'wikidataId': ''},
