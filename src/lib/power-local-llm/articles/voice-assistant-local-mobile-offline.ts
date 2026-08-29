@@ -12,7 +12,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-05-08',
+    dateModified: '2026-08-29',
     next_refresh_due: '2026-11-08',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/voice-assistant-local-mobile-offline-overview-hero-en.webp',
@@ -389,6 +389,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Frequently Asked Questions',
         faqs: [
           {
+            q: 'Is Whisper or Piper better for a local voice assistant?',
+            a: "They're not competitors — they do opposite jobs. Whisper converts your speech into text (speech-to-text); Piper converts the assistant's text response into speech (text-to-speech). A local voice assistant needs both, not one instead of the other: Whisper handles the input side, Piper (or the system TTS) handles the output side. If you're comparing TTS options specifically, Piper is lightweight and runs fully offline with 30+ language voices — the system TTS built into iOS/Android is the other local option.",
+          },
+          {
             q: 'How accurate is local Whisper vs cloud Whisper?',
             a: 'Whisper Small running locally on a phone achieves ~3% WER on clean speech; OpenAI\'s cloud Whisper (Large v3) achieves ~2%. In noisy environments, local Small drops to ~10–14% WER while cloud Large v3 drops to ~5–7%. For everyday voice-assistant use, the local accuracy is close enough to be imperceptible. For dictation of long-form text where every word matters, cloud or local Medium / Large is preferable.',
           },
@@ -447,7 +451,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-05-08',
+    dateModified: '2026-08-29',
     next_refresh_due: '2026-11-08',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/voice-assistant-local-mobile-offline-overview-hero-de.webp',
@@ -723,13 +727,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Sprache-zu-erstem-Audio-Latenzbudget auf dem iPhone 16 Pro: VAD-Erkennung 250 ms, Whisper-STT 200 ms, LLM-Zeit-bis-zum-ersten-Token 700 ms (54% der Gesamtzeit, der größte Hebel), TTS-erstes-Audio 150 ms — Gesamt ≈1,3 Sekunden.',
         content:
           '**Auf Flaggschiff-Telefonen 2026 dominiert die LLM Zeit-zum-ersten-Token die Gesamtlatenz — typischerweise 50–60% der Sprache-zu-erstem-Audio-Zeit.** Die Optimierung des LLM-Schritts hat mehr Auswirkungen als die Optimierung von Whisper oder TTS.',
-        columns: ['Schritt', 'Typische Zeit (iPhone 16 Pro, auf dem Gerät)', 'Notizen'],
+        columns: ['Schritt', 'Zeit (iPhone 16 Pro)', 'Notizen'],
         rows: [
-          { 'Schritt': 'VAD Äußerungsende-Erkennung', 'Typische Zeit (iPhone 16 Pro, auf dem Gerät)': '~200–500 ms', 'Notizen': 'Optimierbar; 300 ms Standard. Zählt zur wahrgenommenen Latenz.' },
-          { 'Schritt': 'Whisper Small STT (5-Sekunden-Äußerung)', 'Typische Zeit (iPhone 16 Pro, auf dem Gerät)': '~150–300 ms', 'Notizen': 'WhisperKit ~30–40% schneller über Apple Neural Engine.' },
-          { 'Schritt': 'LLM Zeit-zum-ersten-Token (Phi-4 Mini)', 'Typische Zeit (iPhone 16 Pro, auf dem Gerät)': '~400–800 ms', 'Notizen': 'Größter Beitrag. Kleineres Modell = schneller.' },
-          { 'Schritt': 'TTS erstes Audio (Piper oder System)', 'Typische Zeit (iPhone 16 Pro, auf dem Gerät)': '~100–200 ms', 'Notizen': 'System-TTS etwas schneller als Piper.' },
-          { 'Schritt': 'Gesamt Sprache-zu-erstem-Audio', 'Typische Zeit (iPhone 16 Pro, auf dem Gerät)': '~0,9–1,4 Sekunden', 'Notizen': 'Unter 2 Sekunden = „nutzbar anfühlend"; unter 1 Sekunde = „wirkt nativ".' },
+          { 'Schritt': 'VAD Äußerungsende-Erkennung', 'Zeit (iPhone 16 Pro)': '~200–500 ms', 'Notizen': 'Optimierbar; 300 ms Standard. Zählt zur wahrgenommenen Latenz.' },
+          { 'Schritt': 'Whisper Small STT (5-Sekunden-Äußerung)', 'Zeit (iPhone 16 Pro)': '~150–300 ms', 'Notizen': 'WhisperKit ~30–40% schneller über Apple Neural Engine.' },
+          { 'Schritt': 'LLM Zeit-zum-ersten-Token (Phi-4 Mini)', 'Zeit (iPhone 16 Pro)': '~400–800 ms', 'Notizen': 'Größter Beitrag. Kleineres Modell = schneller.' },
+          { 'Schritt': 'TTS erstes Audio (Piper oder System)', 'Zeit (iPhone 16 Pro)': '~100–200 ms', 'Notizen': 'System-TTS etwas schneller als Piper.' },
+          { 'Schritt': 'Gesamt Sprache-zu-erstem-Audio', 'Zeit (iPhone 16 Pro)': '~0,9–1,4 Sekunden', 'Notizen': 'Unter 2 Sekunden = „nutzbar anfühlend"; unter 1 Sekunde = „wirkt nativ".' },
         ],
         callouts: [
           {
@@ -824,6 +828,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Häufig gestellte Fragen',
         faqs: [
           {
+            q: 'Ist Whisper oder Piper besser für einen lokalen Sprachassistenten?',
+            a: 'Sie sind keine Konkurrenten — sie erledigen gegensätzliche Aufgaben. Whisper wandelt Ihre Sprache in Text um (Speech-to-Text); Piper wandelt die Textantwort des Assistenten in Sprache um (Text-to-Speech). Ein lokaler Sprachassistent braucht beide, nicht eines statt des anderen: Whisper übernimmt die Eingabeseite, Piper (oder die System-TTS) die Ausgabeseite. Wenn Sie speziell TTS-Optionen vergleichen: Piper ist leichtgewichtig, läuft vollständig offline und bietet Stimmen in über 30 Sprachen — die in iOS/Android integrierte System-TTS ist die andere lokale Option.',
+          },
+          {
             q: 'Wie genau ist lokales Whisper vs. Cloud Whisper?',
             a: 'Whisper Small lokal auf einem Telefon laufend erreicht ~3% WER bei sauberer Sprache; OpenAIs Cloud Whisper (Large v3) erreicht ~2%. In lauten Umgebungen, fällt lokales Small auf ~10–14% WER, während Cloud Large v3 auf ~5–7% fällt. Für alltägliche Voice-Assistant-Nutzung ist die lokale Genauigkeit nah genug, um kaum wahrnehmbar zu sein. Für Diktate von langen Texten, wo jedes Wort zählt, ist Cloud oder lokales Medium / Large vorzuziehen.',
           },
@@ -900,7 +908,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
       },
       datePublished: '2026-05-08',
-      dateModified: '2026-05-08',
+      dateModified: '2026-08-29',
       about: [
         { '@type': 'Thing', name: 'Whisper STT' },
         { '@type': 'Thing', name: 'lokale LLMs' },
@@ -926,7 +934,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-05-08',
+    dateModified: '2026-08-29',
     next_refresh_due: '2026-11-08',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/voice-assistant-local-mobile-offline-overview-hero-fr.webp',
@@ -1303,6 +1311,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Questions fréquemment posées',
         faqs: [
           {
+            q: "Whisper ou Piper : lequel choisir pour un assistant vocal local ?",
+            a: "Ce ne sont pas des concurrents — ils font des tâches opposées. Whisper convertit votre voix en texte (reconnaissance vocale) ; Piper convertit la réponse textuelle de l'assistant en voix (synthèse vocale). Un assistant vocal local a besoin des deux, pas de l'un à la place de l'autre : Whisper gère le côté entrée, Piper (ou la synthèse vocale système) gère le côté sortie. Si vous comparez spécifiquement des options de synthèse vocale, Piper est léger, fonctionne entièrement hors ligne avec plus de 30 langues — la synthèse vocale système intégrée à iOS/Android est l'autre option locale.",
+          },
+          {
             q: 'Quelle est la précision de Whisper local vs Cloud Whisper ?',
             a: 'Whisper Small exécuté localement sur un téléphone atteint ~3% WER en parole propre ; Whisper Cloud d\'OpenAI (Large v3) atteint ~2%. Dans les environnements bruyants, Small local chute à ~10–14% WER tandis que Cloud Large v3 chute à ~5–7%. Pour l\'utilisation quotidienne d\'assistant vocal, la précision locale est suffisamment proche pour être imperceptible. Pour la dictation de texte long où chaque mot compte, le cloud ou le Medium / Large local est préférable.',
           },
@@ -1379,7 +1391,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
       },
       datePublished: '2026-05-08',
-      dateModified: '2026-05-08',
+      dateModified: '2026-08-29',
       about: [
         { '@type': 'Thing', name: 'Whisper STT' },
         { '@type': 'Thing', name: 'LLMs locaux' },
@@ -1405,7 +1417,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-05-08',
+    dateModified: '2026-08-29',
     next_refresh_due: '2026-11-08',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/voice-assistant-local-mobile-offline-overview-hero-ja.webp',
@@ -1782,6 +1794,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'よくある質問',
         faqs: [
           {
+            q: 'ローカル音声アシスタントにはWhisperとPiper、どちらが優れていますか？',
+            a: 'この2つは競合関係にはなく、正反対の役割を担っています。Whisperは音声をテキストに変換します（音声認識）。Piperはアシスタントのテキスト応答を音声に変換します（音声合成）。ローカル音声アシスタントには、どちらか一方ではなく両方が必要です。Whisperが入力側を、Piper（またはシステムTTS）が出力側を担当します。TTSの選択肢を比較したい場合、Piperは軽量で完全オフラインで動作し、30以上の言語の音声に対応しています。もう一つのローカルな選択肢は、iOS/Androidに組み込まれているシステムTTSです。' ,
+          },
+          {
             q: 'ローカルWhisper対Cloud Whisperの精度はどの程度？',
             a: 'スマートフォン上で実行されているWhisper Smallは、クリーンな音声で~3% WERを実現します；OpenAIのCloud Whisper（Large v3）は~2%を実現します。ノイズの多い環境では、ローカルSmallは~10～14% WERに落ち、Cloud Large v3は~5～7%に落ちます。毎日の音声アシスタント使用の場合、ローカルの精度は認識可能でないほど十分に閉じています。すべての言葉が重要な長い形式のテキスト口述の場合、クラウドまたはローカルMedium / Largeが望ましい。',
           },
@@ -1858,7 +1874,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
       },
       datePublished: '2026-05-08',
-      dateModified: '2026-05-08',
+      dateModified: '2026-08-29',
       about: [
         { '@type': 'Thing', name: 'Whisper STT' },
         { '@type': 'Thing', name: 'ローカルLLM' },
@@ -1884,7 +1900,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-05-08',
+    dateModified: '2026-08-29',
     next_refresh_due: '2026-11-08',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/voice-assistant-local-mobile-offline-overview-hero-zh.webp',
@@ -2261,6 +2277,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '常见问题',
         faqs: [
           {
+            q: '本地语音助手用Whisper好还是Piper好？',
+            a: '两者并非竞争关系——它们承担的是相反的任务。Whisper把你的语音转换成文本（语音转文本）；Piper把助手的文本回复转换成语音（文本转语音）。本地语音助手两者都需要，而不是二选一：Whisper负责输入端，Piper（或系统TTS）负责输出端。如果你是在专门比较TTS方案，Piper轻量、完全离线运行，支持30多种语言的语音；iOS/Android内置的系统TTS是另一个本地选项。',
+          },
+          {
             q: '本地Whisper与Cloud Whisper的精度如何？',
             a: '在手机上本地运行的Whisper Small在清洁语音上实现~3% WER；OpenAI的Cloud Whisper（Large v3）实现~2%。在嘈杂的环境中，本地Small下降到~10-14% WER，而Cloud Large v3下降到~5-7%。对于日常语音助手使用，本地精度足够接近，无法察觉。对于长形式文本口述，其中每个字都很重要，云或本地Medium / Large是优选的。',
           },
@@ -2337,7 +2357,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
       },
       datePublished: '2026-05-08',
-      dateModified: '2026-05-08',
+      dateModified: '2026-08-29',
       about: [
         { '@type': 'Thing', name: 'Whisper STT' },
         { '@type': 'Thing', name: '本地LLM' },
@@ -2363,7 +2383,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-05-08',
+    dateModified: '2026-08-29',
     next_refresh_due: '2026-11-08',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/voice-assistant-local-mobile-offline-overview-hero-es.webp',
@@ -2639,13 +2659,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Presupuesto de latencia de voz a primer audio en iPhone 16 Pro: detección VAD 250 ms, STT de Whisper 200 ms, tiempo hasta el primer token del LLM 700 ms (54% del total, la mayor palanca), primer audio TTS 150 ms — total ≈1,3 segundos.',
         content:
           '**En teléfonos de gama alta en 2026, el tiempo hasta el primer token del LLM domina la latencia total — generalmente el 50–60% del tiempo de voz al primer audio.** Optimizar el paso del LLM tiene más impacto que ajustar Whisper o el TTS.',
-        columns: ['Paso', 'Tiempo típico (iPhone 16 Pro, en el dispositivo)', 'Notas'],
+        columns: ['Paso', 'Tiempo (iPhone 16 Pro)', 'Notas'],
         rows: [
-          { 'Paso': 'Detección de fin de emisión VAD', 'Tiempo típico (iPhone 16 Pro, en el dispositivo)': '~200–500 ms', 'Notas': 'Ajustable; 300 ms por defecto. Cuenta en la latencia percibida.' },
-          { 'Paso': 'Whisper Small STT (emisión de 5 seg)', 'Tiempo típico (iPhone 16 Pro, en el dispositivo)': '~150–300 ms', 'Notas': 'WhisperKit ~30–40% más rápido vía Apple Neural Engine.' },
-          { 'Paso': 'Tiempo hasta primer token del LLM (Phi-4 Mini)', 'Tiempo típico (iPhone 16 Pro, en el dispositivo)': '~400–800 ms', 'Notas': 'Mayor contribuyente. Modelo más pequeño = más rápido.' },
-          { 'Paso': 'Primer audio del TTS (Piper o sistema)', 'Tiempo típico (iPhone 16 Pro, en el dispositivo)': '~100–200 ms', 'Notas': 'TTS del sistema algo más rápido que Piper.' },
-          { 'Paso': 'Total voz al primer audio', 'Tiempo típico (iPhone 16 Pro, en el dispositivo)': '~0,9–1,4 seg', 'Notas': 'Menos de 2 seg = "se siente usable"; menos de 1 seg = "se siente nativo".' },
+          { 'Paso': 'Detección de fin de emisión VAD', 'Tiempo (iPhone 16 Pro)': '~200–500 ms', 'Notas': 'Ajustable; 300 ms por defecto. Cuenta en la latencia percibida.' },
+          { 'Paso': 'Whisper Small STT (emisión de 5 seg)', 'Tiempo (iPhone 16 Pro)': '~150–300 ms', 'Notas': 'WhisperKit ~30–40% más rápido vía Apple Neural Engine.' },
+          { 'Paso': 'Tiempo hasta primer token del LLM (Phi-4 Mini)', 'Tiempo (iPhone 16 Pro)': '~400–800 ms', 'Notas': 'Mayor contribuyente. Modelo más pequeño = más rápido.' },
+          { 'Paso': 'Primer audio del TTS (Piper o sistema)', 'Tiempo (iPhone 16 Pro)': '~100–200 ms', 'Notas': 'TTS del sistema algo más rápido que Piper.' },
+          { 'Paso': 'Total voz al primer audio', 'Tiempo (iPhone 16 Pro)': '~0,9–1,4 seg', 'Notas': 'Menos de 2 seg = "se siente usable"; menos de 1 seg = "se siente nativo".' },
         ],
         callouts: [
           {
@@ -2740,6 +2760,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Preguntas frecuentes',
         faqs: [
           {
+            q: '¿Qué es mejor para un asistente de voz local, Whisper o Piper?',
+            a: 'No son competidores: hacen tareas opuestas. Whisper convierte tu voz en texto (reconocimiento de voz); Piper convierte la respuesta en texto del asistente en voz (síntesis de voz). Un asistente de voz local necesita ambos, no uno en lugar del otro: Whisper se encarga de la entrada, Piper (o el TTS del sistema) se encarga de la salida. Si estás comparando opciones de TTS específicamente, Piper es ligero, funciona completamente sin conexión y tiene voces en más de 30 idiomas; el TTS del sistema integrado en iOS/Android es la otra opción local.',
+          },
+          {
             q: '¿Cuán preciso es Whisper local frente a Whisper en la nube?',
             a: 'Whisper Small ejecutándose localmente en un teléfono alcanza ~3% WER en habla limpia; el Whisper en la nube de OpenAI (Large v3) alcanza ~2%. En entornos ruidosos, Small local cae a ~10–14% WER mientras que Cloud Large v3 cae a ~5–7%. Para el uso cotidiano del asistente de voz, la precisión local es suficientemente cercana para ser imperceptible. Para dictado de texto largo donde cada palabra importa, es preferible la nube o el Medium / Large local.',
           },
@@ -2816,7 +2840,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
       },
       datePublished: '2026-05-08',
-      dateModified: '2026-05-08',
+      dateModified: '2026-08-29',
       about: [
         { '@type': 'Thing', name: 'Whisper STT' },
         { '@type': 'Thing', name: 'LLM locales' },
@@ -2842,7 +2866,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-05-08',
+    dateModified: '2026-08-29',
     next_refresh_due: '2026-11-08',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/voice-assistant-local-mobile-offline-overview-hero-ko.webp',
@@ -3219,6 +3243,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '자주 묻는 질문',
         faqs: [
           {
+            q: '로컬 음성 비서에는 Whisper와 Piper 중 무엇이 더 낫습니까?',
+            a: '둘은 경쟁 관계가 아니라 정반대의 역할을 합니다. Whisper는 음성을 텍스트로 변환하고(음성 인식), Piper는 비서의 텍스트 응답을 음성으로 변환합니다(음성 합성). 로컬 음성 비서에는 둘 다 필요하며 어느 한쪽만으로는 부족합니다 — Whisper가 입력 측을, Piper(또는 시스템 TTS)가 출력 측을 담당합니다. TTS 옵션만 비교하고 있다면, Piper는 가볍고 완전히 오프라인으로 작동하며 30개 이상 언어의 음성을 지원합니다. iOS/Android에 내장된 시스템 TTS가 또 다른 로컬 선택지입니다.',
+          },
+          {
             q: '로컬 Whisper는 클라우드 Whisper와 비교하여 얼마나 정확합니까?',
             a: '전화기에서 로컬로 실행되는 Whisper Small은 깨끗한 말에서 ~3% WER을 달성합니다; OpenAI의 클라우드 Whisper(Large v3)는 ~2%를 달성합니다. 소음이 있는 환경에서 로컬 Small은 동일한 오디오에서 ~10–14% WER로 떨어지는 반면 Cloud Large v3는 ~5–7%로 떨어집니다. 일상적인 음성 비서 사용에서 로컬 정확도는 실용적으로 감지되지 않을 만큼 충분히 가깝습니다. 모든 단어가 중요한 긴 받아쓰기의 경우 클라우드나 로컬 Medium/Large가 선호됩니다.',
           },
@@ -3295,7 +3323,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
       },
       datePublished: '2026-05-08',
-      dateModified: '2026-05-08',
+      dateModified: '2026-08-29',
       about: [
         { '@type': 'Thing', name: 'Whisper STT' },
         { '@type': 'Thing', name: '로컬 LLM' },
@@ -3321,7 +3349,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-05-08',
+    dateModified: '2026-08-29',
     next_refresh_due: '2026-11-08',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/voice-assistant-local-mobile-offline-overview-hero-pt.webp',
@@ -3597,13 +3625,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Orçamento de latência de voz até o primeiro áudio no iPhone 16 Pro: detecção VAD 250 ms, STT do Whisper 200 ms, tempo até o primeiro token do LLM 700 ms (54% do total, a maior alavanca), primeiro áudio do TTS 150 ms — total ≈1,3 segundo.',
         content:
           '**Em telefones de ponta em 2026, o tempo até o primeiro token do LLM domina a latência total — geralmente 50–60% do tempo de voz ao primeiro áudio.** Otimizar o passo do LLM tem mais impacto do que ajustar o Whisper ou o TTS.',
-        columns: ['Passo', 'Tempo típico (iPhone 16 Pro, no dispositivo)', 'Notas'],
+        columns: ['Passo', 'Tempo (iPhone 16 Pro)', 'Notas'],
         rows: [
-          { 'Passo': 'Detecção de fim de fala VAD', 'Tempo típico (iPhone 16 Pro, no dispositivo)': '~200–500 ms', 'Notas': 'Ajustável; 300 ms por padrão. Conta na latência percebida.' },
-          { 'Passo': 'Whisper Small STT (fala de 5 seg)', 'Tempo típico (iPhone 16 Pro, no dispositivo)': '~150–300 ms', 'Notas': 'WhisperKit ~30–40% mais rápido via Apple Neural Engine.' },
-          { 'Passo': 'Tempo até o primeiro token do LLM (Phi-4 Mini)', 'Tempo típico (iPhone 16 Pro, no dispositivo)': '~400–800 ms', 'Notas': 'Maior contribuinte. Modelo menor = mais rápido.' },
-          { 'Passo': 'Primeiro áudio do TTS (Piper ou sistema)', 'Tempo típico (iPhone 16 Pro, no dispositivo)': '~100–200 ms', 'Notas': 'TTS do sistema um pouco mais rápido que o Piper.' },
-          { 'Passo': 'Total voz ao primeiro áudio', 'Tempo típico (iPhone 16 Pro, no dispositivo)': '~0,9–1,4 seg', 'Notas': 'Menos de 2 seg = "parece utilizável"; menos de 1 seg = "parece nativo".' },
+          { 'Passo': 'Detecção de fim de fala VAD', 'Tempo (iPhone 16 Pro)': '~200–500 ms', 'Notas': 'Ajustável; 300 ms por padrão. Conta na latência percebida.' },
+          { 'Passo': 'Whisper Small STT (fala de 5 seg)', 'Tempo (iPhone 16 Pro)': '~150–300 ms', 'Notas': 'WhisperKit ~30–40% mais rápido via Apple Neural Engine.' },
+          { 'Passo': 'Tempo até o primeiro token do LLM (Phi-4 Mini)', 'Tempo (iPhone 16 Pro)': '~400–800 ms', 'Notas': 'Maior contribuinte. Modelo menor = mais rápido.' },
+          { 'Passo': 'Primeiro áudio do TTS (Piper ou sistema)', 'Tempo (iPhone 16 Pro)': '~100–200 ms', 'Notas': 'TTS do sistema um pouco mais rápido que o Piper.' },
+          { 'Passo': 'Total voz ao primeiro áudio', 'Tempo (iPhone 16 Pro)': '~0,9–1,4 seg', 'Notas': 'Menos de 2 seg = "parece utilizável"; menos de 1 seg = "parece nativo".' },
         ],
         callouts: [
           {
@@ -3698,6 +3726,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Perguntas frequentes',
         faqs: [
           {
+            q: 'O que é melhor para um assistente de voz local: Whisper ou Piper?',
+            a: 'Eles não são concorrentes — fazem tarefas opostas. O Whisper converte sua voz em texto (reconhecimento de voz); o Piper converte a resposta em texto do assistente em voz (síntese de voz). Um assistente de voz local precisa dos dois, não de um no lugar do outro: o Whisper cuida da entrada, o Piper (ou o TTS do sistema) cuida da saída. Se você está comparando opções de TTS especificamente, o Piper é leve, funciona totalmente offline e tem vozes em mais de 30 idiomas — o TTS do sistema embutido no iOS/Android é a outra opção local.',
+          },
+          {
             q: 'Quão preciso é o Whisper local frente ao Whisper na nuvem?',
             a: 'O Whisper Small executando localmente em um telefone atinge ~3% WER em fala limpa; o Whisper na nuvem da OpenAI (Large v3) atinge ~2%. Em ambientes ruidosos, o Small local cai para ~10–14% WER enquanto o Cloud Large v3 cai para ~5–7%. Para o uso cotidiano do assistente de voz, a precisão local é próxima o suficiente para ser imperceptível. Para ditado de texto longo onde cada palavra importa, é preferível a nuvem ou o Medium / Large local.',
           },
@@ -3774,7 +3806,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
       },
       datePublished: '2026-05-08',
-      dateModified: '2026-05-08',
+      dateModified: '2026-08-29',
       about: [
         { '@type': 'Thing', name: 'Whisper STT' },
         { '@type': 'Thing', name: 'LLM locais' },
@@ -3801,7 +3833,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-05-08',
+    dateModified: '2026-08-29',
     next_refresh_due: '2026-11-08',
     theme: 'Mobile & Edge LLMs',
     heroImage: '/images/voice-assistant-local-mobile-offline-overview-hero-ar.webp',
@@ -4077,13 +4109,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'ميزانية الكمون من انتهاء الكلام إلى أول صوت على iPhone 16 Pro: كشف VAD 250 مللي ثانية، تحويل الصوت بواسطة Whisper 200 مللي ثانية، وقت أول رمز من LLM 700 مللي ثانية (54% من الإجمالي، أكبر عامل للتحسين)، أول صوت من TTS 150 مللي ثانية — الإجمالي ≈1.3 ثانية.',
         content:
           '**على الهواتف المتميزة في 2026، وقت أول رمز LLM يهيمن على الكمون الكلي — عادةً 50–60% من وقت الصوت إلى أول صوت.** تحسين خطوة LLM له أكبر أثر من ضبط Whisper أو TTS.',
-        columns: ['الخطوة', 'الوقت النموذجي ‏(iPhone 16 Pro، على الجهاز)‏', 'ملاحظات'],
+        columns: ['الخطوة', 'الوقت ‏(iPhone 16 Pro)‏', 'ملاحظات'],
         rows: [
-          { 'الخطوة': 'كشف نهاية العبارة VAD', 'الوقت النموذجي ‏(iPhone 16 Pro، على الجهاز)‏': '~200–500 مللي ث', 'ملاحظات': 'قابل للضبط؛ 300 مللي ث افتراضيًا. يُحتسب في الكمون المُدرَك.' },
-          { 'الخطوة': 'Whisper Small STT ‏(عبارة 5 ثوانٍ)‏', 'الوقت النموذجي ‏(iPhone 16 Pro، على الجهاز)‏': '~150–300 مللي ث', 'ملاحظات': 'WhisperKit ~30–40% أسرع عبر Apple Neural Engine.' },
-          { 'الخطوة': 'وقت أول رمز LLM ‏(Phi-4 Mini)‏', 'الوقت النموذجي ‏(iPhone 16 Pro، على الجهاز)‏': '~400–800 مللي ث', 'ملاحظات': 'أكبر مساهم. نموذج أصغر = أسرع.' },
-          { 'الخطوة': 'أول صوت TTS ‏(Piper أو نظام)‏', 'الوقت النموذجي ‏(iPhone 16 Pro، على الجهاز)‏': '~100–200 مللي ث', 'ملاحظات': 'TTS النظام أسرع قليلًا من Piper.' },
-          { 'الخطوة': 'إجمالي صوت إلى أول صوت', 'الوقت النموذجي ‏(iPhone 16 Pro، على الجهاز)‏': '~0.9–1.4 ث', 'ملاحظات': 'أقل من ثانيتين = "يبدو قابلًا للاستخدام"؛ أقل من ثانية = "يبدو طبيعيًا".' },
+          { 'الخطوة': 'كشف نهاية العبارة VAD', 'الوقت ‏(iPhone 16 Pro)‏': '~200–500 مللي ث', 'ملاحظات': 'قابل للضبط؛ 300 مللي ث افتراضيًا. يُحتسب في الكمون المُدرَك.' },
+          { 'الخطوة': 'Whisper Small STT ‏(عبارة 5 ثوانٍ)‏', 'الوقت ‏(iPhone 16 Pro)‏': '~150–300 مللي ث', 'ملاحظات': 'WhisperKit ~30–40% أسرع عبر Apple Neural Engine.' },
+          { 'الخطوة': 'وقت أول رمز LLM ‏(Phi-4 Mini)‏', 'الوقت ‏(iPhone 16 Pro)‏': '~400–800 مللي ث', 'ملاحظات': 'أكبر مساهم. نموذج أصغر = أسرع.' },
+          { 'الخطوة': 'أول صوت TTS ‏(Piper أو نظام)‏', 'الوقت ‏(iPhone 16 Pro)‏': '~100–200 مللي ث', 'ملاحظات': 'TTS النظام أسرع قليلًا من Piper.' },
+          { 'الخطوة': 'إجمالي صوت إلى أول صوت', 'الوقت ‏(iPhone 16 Pro)‏': '~0.9–1.4 ث', 'ملاحظات': 'أقل من ثانيتين = "يبدو قابلًا للاستخدام"؛ أقل من ثانية = "يبدو طبيعيًا".' },
         ],
         callouts: [
           {
@@ -4178,6 +4210,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الأسئلة الشائعة',
         faqs: [
           {
+            q: 'ما الأفضل لمساعد صوتي محلي: Whisper أم Piper؟',
+            a: 'ليسا متنافسين — بل يؤديان مهمتين متعاكستين. يحوّل Whisper كلامك إلى نص (تحويل الكلام إلى نص)؛ ويحوّل Piper رد المساعد النصي إلى كلام (تحويل النص إلى كلام). يحتاج المساعد الصوتي المحلي إلى كليهما، وليس أحدهما بدلاً من الآخر: يتولى Whisper جانب الإدخال، ويتولى Piper (أو محول النص إلى كلام في النظام) جانب الإخراج. إذا كنت تقارن خيارات تحويل النص إلى كلام تحديدًا، فإن Piper خفيف الوزن ويعمل بالكامل دون اتصال بالإنترنت مع أصوات بأكثر من 30 لغة — ومحول النص إلى كلام المدمج في iOS/Android هو الخيار المحلي الآخر.',
+          },
+          {
             q: 'ما مدى دقة Whisper المحلي مقارنة بـ Whisper السحابي؟',
             a: 'Whisper Small يعمل محليًا على هاتف ويصل إلى ~3% WER على كلام نظيف؛ Whisper السحابي من OpenAI ‏(Large v3)‏ يصل إلى ~2%. في البيئات الصاخبة، Small المحلي يتراجع إلى ~10–14% WER بينما Cloud Large v3 يتراجع إلى ~5–7%. للاستخدام اليومي للمساعد الصوتي، الدقة المحلية قريبة بما يكفي لعدم ملاحظة الفرق. للإملاء النصي الطويل حيث كل كلمة مهمة، السحابة أو Medium / Large المحلي هو الأفضل.',
           },
@@ -4254,7 +4290,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         },
       },
       datePublished: '2026-05-08',
-      dateModified: '2026-05-08',
+      dateModified: '2026-08-29',
       about: [
         { '@type': 'Thing', name: 'Whisper STT' },
         { '@type': 'Thing', name: 'نماذج LLM محلية' },

@@ -1043,5 +1043,19 @@
     ],
     "reason": "Page 40: the nucbox naming variant (gmktec nucbox g3 plus, nucbox g3 plus, gmktec nucbox g3 plus n150, etc.) totals roughly 170 impressions across 10+ query variants - the manufacturer's actual full product name - but was completely absent from title/meta despite being covered 12x in the body. Added NucBox to both title and meta to match the real product-name search behavior.",
     "baseline": null
+  },
+  {
+    "id": "f39e93d2-a367-4283-bff3-d8537c0c739c",
+    "slug": "/power-local-llm/voice-assistant-local-mobile-offline",
+    "date": "2026-08-29T21:08:10.616Z",
+    "fields": [
+      {
+        "field": "faqs (all 9 locales)",
+        "old": "No FAQ clarifying that Whisper and Piper are not competing tools",
+        "new": "Added Is Whisper or Piper better for a local voice assistant? FAQ (STT vs TTS clarification) to all 9 locales"
+      }
+    ],
+    "reason": "Page 41: low overall volume page (max query 9 impr). Body already has excellent Termux/Android coverage (dedicated section, 20+ mentions) so no gap there. Real gap: whisper vs piper (2 impr) reflects a genuine conceptual confusion - Whisper is STT and Piper is TTS, not alternatives - never addressed directly despite the article using both terms extensively. Added a clarifying FAQ, translated to all 9 languages.",
+    "baseline": null
   }
 ]
