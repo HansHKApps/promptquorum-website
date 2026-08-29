@@ -748,7 +748,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-07-14',
+    dateModified: '2026-08-28',
     next_refresh_due: '2026-11-07',
     theme: 'Easiest Desktop Apps',
     title: 'Application IA locale la plus facile pour Windows, Mac et Linux (2026)',
@@ -1110,7 +1110,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         url: 'https://www.promptquorum.com',
       },
       datePublished: '2026-05-07',
-      dateModified: '2026-07-14',
+      dateModified: '2026-08-28',
       educationalLevel: 'Beginner',
       'proficiencyLevel': 'Beginner',
       about: [
@@ -1156,7 +1156,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-07-14',
+    dateModified: '2026-08-28',
     next_refresh_due: '2026-11-07',
     theme: 'Easiest Desktop Apps',
     title: '最も簡単なローカルAIアプリ Windows、Mac、Linux (2026)',
@@ -1518,7 +1518,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         url: 'https://www.promptquorum.com',
       },
       datePublished: '2026-05-07',
-      dateModified: '2026-07-14',
+      dateModified: '2026-08-28',
       educationalLevel: 'Beginner',
       about: [
         { '@type': 'Thing', name: 'LM Studio' },
@@ -1568,7 +1568,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-07-14',
+    dateModified: '2026-08-28',
     next_refresh_due: '2026-11-07',
     theme: 'Easiest Desktop Apps',
     title: '最简单的本地AI应用 Windows、Mac、Linux (2026)',
@@ -1930,7 +1930,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         url: 'https://www.promptquorum.com',
       },
       datePublished: '2026-05-07',
-      dateModified: '2026-07-14',
+      dateModified: '2026-08-28',
       educationalLevel: 'Beginner',
       about: [
         { '@type': 'Thing', name: 'LM Studio' },

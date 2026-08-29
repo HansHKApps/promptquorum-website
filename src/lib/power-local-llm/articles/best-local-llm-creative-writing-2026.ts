@@ -9,7 +9,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-07-13',
+    dateModified: '2026-07-16',
     next_refresh_due: '2026-11-07',
     theme: 'Creative & Roleplay',
     title: 'Best Local LLMs for Creative Writing 2026: Fiction, Dialogue & Worldbuilding',
@@ -283,7 +283,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Your situation': 'My work is dialogue-heavy — character voices need to stay distinct', 'Pick': 'Command A+ (or Llama 3.3 70B as a lighter alternative)' },
           { 'Your situation': 'I write poetry, verse, or lyrical prose', 'Pick': 'Yi-1.5 34B' },
           { 'Your situation': 'The instruct model is refusing scenes I need to write', 'Pick': 'Hermes 3 (Llama 3.3 base) or Dolphin 3.0 — keep the instruct version installed for non-mature work' },
-          { 'Your situation': 'I want one model to start with and will iterate', 'Pick': 'Qwen3 32B — covers most workflows on consumer hardware; switch up when one task type becomes the load-bearing part' },
+          { 'Your situation': 'I want one model to start with and will iterate', 'Pick': 'Qwen3 32B — covers most workflows; switch up once one task type becomes load-bearing' },
         ],
         snippetBlocks: [
           {
@@ -670,7 +670,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Meine Situation': 'Mein Werk ist dialogintensiv — Charakterstimmen müssen unterscheidbar bleiben', 'Empfehlung': 'Command A+ (oder Llama 3.3 70B als leichtere Alternative)' },
           { 'Meine Situation': 'Ich schreibe Gedichte, Verse oder lyrische Prosa', 'Empfehlung': 'Yi-1.5 34B' },
           { 'Meine Situation': 'Das Instruct-Modell lehnt Szenen ab, die ich schreiben muss', 'Empfehlung': 'Hermes 3 (Llama-3.3-Basis) oder Dolphin 3.0 — Instruct-Version für reguläre Arbeit installiert lassen' },
-          { 'Meine Situation': 'Ich möchte mit einem Modell starten und dann anpassen', 'Empfehlung': 'Qwen3 32B — deckt die meisten Workflows auf Consumer-Hardware ab; wechseln, wenn ein Aufgabentyp zum Schwerpunkt wird' },
+          { 'Meine Situation': 'Ich möchte mit einem Modell starten und dann anpassen', 'Empfehlung': 'Qwen3 32B — deckt die meisten Workflows ab; wechseln, wenn ein Aufgabentyp dominiert' },
         ],
         snippetBlocks: [
           {
@@ -1064,7 +1064,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Ma situation': 'Mon travail est à dominante dialogue — les voix des personnages doivent rester distinctes', 'Recommandation': 'Command A+ (ou Llama 3.3 70B comme alternative plus légère)' },
           { 'Ma situation': 'J\'écris de la poésie, des vers ou de la prose lyrique', 'Recommandation': 'Yi-1.5 34B' },
           { 'Ma situation': 'Le modèle instruct refuse des scènes que je dois écrire', 'Recommandation': 'Hermes 3 (base Llama 3.3) ou Dolphin 3.0 — conserver la version instruct pour le travail sans contenu adulte' },
-          { 'Ma situation': 'Je veux commencer avec un seul modèle et itérer ensuite', 'Recommandation': 'Qwen3 32B — couvre la plupart des usages sur matériel grand public ; basculer quand un type de tâche spécifique devient prépondérant' },
+          { 'Ma situation': 'Je veux commencer avec un seul modèle et itérer ensuite', 'Recommandation': 'Qwen3 32B — couvre la plupart des usages ; basculer quand une tâche devient prépondérante' },
         ],
         snippetBlocks: [
           {
@@ -2246,7 +2246,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Tu situación': 'Mi trabajo es muy intensivo en diálogo — las voces de los personajes deben mantenerse distintas', 'Elección': 'Command A+ (o Llama 3.3 70B como alternativa más ligera)' },
           { 'Tu situación': 'Escribo poesía, verso o prosa lírica', 'Elección': 'Yi-1.5 34B' },
           { 'Tu situación': 'El modelo instruct rechaza escenas que necesito escribir', 'Elección': 'Hermes 3 (base Llama 3.3) o Dolphin 3.0 — mantén la versión instruct instalada para trabajo no maduro' },
-          { 'Tu situación': 'Quiero empezar con un modelo e iterar', 'Elección': 'Qwen3 32B — cubre la mayoría de flujos de trabajo en hardware de consumo; cambia cuando un tipo de tarea se convierta en la parte esencial' },
+          { 'Tu situación': 'Quiero empezar con un modelo e iterar', 'Elección': 'Qwen3 32B — cubre la mayoría de flujos de trabajo; cambia cuando una tarea se vuelva dominante' },
         ],
         snippetBlocks: [
           {
@@ -2645,7 +2645,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { 'Sua situação': 'Meu trabalho é muito intensivo em diálogo — as vozes dos personagens devem se manter distintas', 'Escolha': 'Command A+ (ou Llama 3.3 70B como alternativa mais leve)' },
           { 'Sua situação': 'Escrevo poesia, verso ou prosa lírica', 'Escolha': 'Yi-1.5 34B' },
           { 'Sua situação': 'O modelo instruct recusa cenas que preciso escrever', 'Escolha': 'Hermes 3 (base Llama 3.3) ou Dolphin 3.0 — mantenha a versão instruct instalada para trabalho não maduro' },
-          { 'Sua situação': 'Quero começar com um modelo e iterar', 'Escolha': 'Qwen3 32B — cobre a maioria dos fluxos de trabalho em hardware de consumo; mude quando um tipo de tarefa se tornar a parte essencial' },
+          { 'Sua situação': 'Quero começar com um modelo e iterar', 'Escolha': 'Qwen3 32B — cobre a maioria dos fluxos de trabalho; mude quando uma tarefa se tornar dominante' },
         ],
         snippetBlocks: [
           {

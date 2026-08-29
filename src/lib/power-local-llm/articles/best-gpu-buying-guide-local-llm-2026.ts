@@ -4137,7 +4137,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-07-01',
+    dateModified: '2026-08-28',
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
     title: 'أفضل وحدات معالجة الرسومات لنماذج اللغة المحلية: دليل الشراء الشامل ⁨2026⁩',
@@ -4591,7 +4591,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ar/power-local-llm/best-gpu-buying-guide-local-llm-2026',
       inLanguage: 'ar',
       datePublished: '2026-05-22',
-      dateModified: '2026-07-01',
+      dateModified: '2026-08-28',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',

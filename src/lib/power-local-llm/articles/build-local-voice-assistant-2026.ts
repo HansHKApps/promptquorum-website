@@ -9,7 +9,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
-    dateModified: '2026-06-19',
+    dateModified: '2026-08-28',
     next_refresh_due: '2026-12-19',
     theme: 'Voice, Speech & Multimodal',
     title: 'Build a Fully Offline Voice Assistant in 2026: Whisper + LLM + Piper (Step-by-Step)',
@@ -444,7 +444,7 @@ if __name__ == "__main__":
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
-    dateModified: '2026-06-19',
+    dateModified: '2026-08-28',
     next_refresh_due: '2026-12-19',
     theme: 'Voice, Speech & Multimodal',
     title: 'Vollständig offline Sprachassistenten bauen 2026: Whisper + LLM + Piper (Schritt für Schritt)',
@@ -857,7 +857,7 @@ if __name__ == "__main__":
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
-    dateModified: '2026-06-19',
+    dateModified: '2026-08-28',
     next_refresh_due: '2026-12-19',
     theme: 'Voice, Speech & Multimodal',
     title: 'Construire un assistant vocal entièrement hors ligne en 2026 : Whisper + LLM + Piper (guide étape par étape)',
@@ -1262,7 +1262,7 @@ if __name__ == "__main__":
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
-    dateModified: '2026-06-19',
+    dateModified: '2026-08-28',
     next_refresh_due: '2026-12-19',
     theme: 'Voice, Speech & Multimodal',
     title: '完全オフライン音声アシスタントを2026年に構築：Whisper + LLM + Piper（ステップバイステップ）',
@@ -1666,7 +1666,7 @@ if __name__ == "__main__":
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
-    dateModified: '2026-06-19',
+    dateModified: '2026-08-28',
     next_refresh_due: '2026-12-19',
     theme: 'Voice, Speech & Multimodal',
     title: '2026年构建完全离线语音助手：Whisper + LLM + Piper（逐步指南）',
@@ -2070,7 +2070,7 @@ if __name__ == "__main__":
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
-    dateModified: '2026-06-19',
+    dateModified: '2026-08-28',
     next_refresh_due: '2026-12-19',
     theme: 'Voice, Speech & Multimodal',
     title: 'Crea un asistente de voz completamente offline en 2026: Whisper + LLM + Piper (paso a paso)',
@@ -2518,7 +2518,7 @@ if __name__ == "__main__":
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
-    dateModified: '2026-06-19',
+    dateModified: '2026-08-28',
     next_refresh_due: '2026-12-19',
     theme: 'Voice, Speech & Multimodal',
     title: '2026년 완전 오프라인 음성 어시스턴트 만들기: Whisper + LLM + Piper (단계별 가이드)',
@@ -2950,7 +2950,7 @@ if __name__ == "__main__":
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
-    dateModified: '2026-06-19',
+    dateModified: '2026-08-28',
     next_refresh_due: '2026-12-19',
     theme: 'Voice, Speech & Multimodal',
     title: 'Crie um assistente de voz totalmente offline em 2026: Whisper + LLM + Piper (passo a passo)',
@@ -3399,7 +3399,7 @@ if __name__ == "__main__":
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
-    dateModified: '2026-06-19',
+    dateModified: '2026-08-28',
     next_refresh_due: '2026-12-19',
     theme: 'Voice, Speech & Multimodal',
     title: 'بناء مساعد صوتي يعمل بالكامل دون اتصال ⁨2026⁩: ⁨Whisper⁩ + نموذج لغة + ⁨Piper⁩ (خطوة بخطوة)',
