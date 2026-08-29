@@ -16,7 +16,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-07-01',
+    dateModified: '2026-08-29',
     next_refresh_due: '2026-12-19',
     theme: 'Overview & Reference',
     title: 'Best AI Coding Tools Compared 2026: Cursor vs Continue.dev',
@@ -424,6 +424,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Frequently Asked Questions',
         faqs: [
           {
+            q: 'What is the best autocomplete model for Continue.dev?',
+            a: 'Qwen3 Coder 14B — it is the mid-size default and the best all-around pick for most GPUs. Drop to Qwen3 Coder 7B if you have a smaller (8–12 GB) card, or move up to a 33B-class model on a 24 GB GPU for stronger completions. Pull it with Ollama and point Continue.dev at your local endpoint — setup takes about 5 minutes.',
+          },
+          {
             q: 'Which AI coding tool has the best local LLM support?',
             a: 'Continue.dev. It was built with local LLMs — Ollama, LM Studio, and llama.cpp — as primary targets, not afterthoughts. Setup takes roughly 5 minutes: point it at your local endpoint in a config file. All features work locally, it is free and open source under Apache 2.0, and no account is required for local-only use.',
           },
@@ -474,7 +478,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-07-01',
+    dateModified: '2026-08-29',
     next_refresh_due: '2026-12-19',
     theme: 'Overview & Reference',
     title: 'Beste KI-Coding-Tools im Vergleich 2026: Cursor vs. Continue.dev',
@@ -882,6 +886,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Häufig gestellte Fragen',
         faqs: [
           {
+            q: 'Was ist das beste Autocomplete-Modell für Continue.dev?',
+            a: 'Qwen3 Coder 14B — der mittelgroße Standard und die beste Allround-Wahl für die meisten GPUs. Weichen Sie bei einer kleineren Karte (8–12 GB) auf Qwen3 Coder 7B aus, oder nutzen Sie auf einer 24-GB-GPU ein Modell der 33B-Klasse für stärkere Vervollständigungen. Laden Sie es mit Ollama herunter und richten Sie Continue.dev auf Ihren lokalen Endpunkt aus — die Einrichtung dauert etwa 5 Minuten.',
+          },
+          {
             q: 'Welches KI-Coding-Tool hat die beste Unterstützung für lokale LLMs?',
             a: 'Continue.dev. Es wurde mit lokalen LLMs — Ollama, LM Studio und llama.cpp — als primären Zielen entwickelt, nicht als nachträglicher Ergänzung. Die Einrichtung dauert rund 5 Minuten: richten Sie es in einer Konfigurationsdatei auf Ihren lokalen Endpunkt aus. Alle Funktionen arbeiten lokal, es ist kostenlos und quelloffen unter Apache 2.0, und für die rein lokale Nutzung ist kein Konto erforderlich.',
           },
@@ -931,7 +939,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-07-01',
+    dateModified: '2026-08-29',
     next_refresh_due: '2026-12-19',
     theme: 'Overview & Reference',
     title: "Meilleurs outils de codage IA comparés 2026 : Cursor vs Continue.dev",
@@ -1340,6 +1348,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Questions fréquemment posées',
         faqs: [
           {
+            q: "Quel est le meilleur modèle d'autocomplétion pour Continue.dev ?",
+            a: "Qwen3 Coder 14B — le choix par défaut de taille moyenne et le meilleur choix polyvalent pour la plupart des GPU. Passez à Qwen3 Coder 7B pour une carte plus petite (8–12 Go), ou optez pour un modèle de classe 33B sur un GPU de 24 Go pour des complétions plus puissantes. Téléchargez-le avec Ollama et pointez Continue.dev vers votre point de terminaison local — la configuration prend environ 5 minutes.",
+          },
+          {
             q: "Quel outil de codage IA a la meilleure prise en charge des LLM locaux ?",
             a: "Continue.dev. Il a été conçu avec les LLM locaux — Ollama, LM Studio et llama.cpp — comme cibles principales, pas comme des ajouts tardifs. La mise en place prend environ 5 minutes : pointez-le vers votre point de terminaison local dans un fichier de configuration. Toutes les fonctions marchent en local, il est gratuit et open source sous Apache 2.0, et aucun compte n'est requis pour un usage local uniquement.",
           },
@@ -1389,7 +1401,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-07-01',
+    dateModified: '2026-08-29',
     next_refresh_due: '2026-12-19',
     theme: 'Overview & Reference',
     title: '2026年 ベストAIコーディングツール比較: Cursor 対 Continue.dev',
@@ -1797,6 +1809,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'よくある質問',
         faqs: [
           {
+            q: 'Continue.devに最適なオートコンプリートモデルはどれですか?',
+            a: 'Qwen3 Coder 14Bです。中間サイズのデフォルトであり、ほとんどのGPUに最適なオールラウンドな選択肢です。VRAMが少ない（8〜12GB）カードならQwen3 Coder 7Bに、24GBのGPUならより強力な補完のために33Bクラスのモデルに切り替えてください。Ollamaでプルし、Continue.devをローカルエンドポイントに向けてください——セットアップは約5分です。',
+          },
+          {
             q: 'どのAIコーディングツールが最高のローカルLLMサポートを持っていますか?',
             a: 'Continue.dev です。ローカルLLM — Ollama、LM Studio、llama.cpp — を後付けではなく主要なターゲットとして作られています。セットアップはおよそ5分かかります。設定ファイルでローカルエンドポイントを指定するだけです。すべての機能がローカルで動作し、無料で Apache 2.0 のもとでオープンソースであり、ローカル専用の利用にはアカウントが不要です。',
           },
@@ -1846,7 +1862,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-07-01',
+    dateModified: '2026-08-29',
     next_refresh_due: '2026-12-19',
     theme: 'Overview & Reference',
     title: '2026 年最佳 AI 编程工具对比：Cursor vs Continue.dev',
@@ -2254,6 +2270,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '常见问题',
         faqs: [
           {
+            q: 'Continue.dev最佳的自动补全模型是什么？',
+            a: 'Qwen3 Coder 14B——它是中等规模的默认选择，也是大多数显卡的最佳全能之选。若显存较小（8–12GB），可换用Qwen3 Coder 7B；若显卡有24GB显存，可升级到33B级别的模型以获得更强的补全效果。用Ollama拉取该模型，并将Continue.dev指向你的本地端点——配置大约需要5分钟。',
+          },
+          {
             q: '哪款 AI 编程工具的本地 LLM 支持最好？',
             a: 'Continue.dev。它以本地 LLM——Ollama、LM Studio 和 llama.cpp——作为主要目标构建，而非事后补充。搭建大约需要 5 分钟：在配置文件中把它指向你的本地端点。所有功能都能本地运行，它在 Apache 2.0 下免费且开源，仅本地使用时无需账户。',
           },
@@ -2303,7 +2323,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-07-01',
+    dateModified: '2026-08-29',
     next_refresh_due: '2026-12-19',
     theme: 'Overview & Reference',
     title: 'Mejores herramientas de programación con IA 2026: Cursor vs Continue.dev',
@@ -2711,6 +2731,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Preguntas frecuentes',
         faqs: [
           {
+            q: '¿Cuál es el mejor modelo de autocompletado para Continue.dev?',
+            a: 'Qwen3 Coder 14B: es la opción intermedia por defecto y la mejor opción general para la mayoría de las GPU. Baja a Qwen3 Coder 7B si tienes una tarjeta más pequeña (8–12 GB), o sube a un modelo de clase 33B en una GPU de 24 GB para completaciones más potentes. Descárgalo con Ollama y apunta Continue.dev a tu endpoint local: la configuración lleva unos 5 minutos.',
+          },
+          {
             q: '¿Qué herramienta de programación con IA tiene el mejor soporte para LLM local?',
             a: 'Continue.dev. Fue construida con LLM locales — Ollama, LM Studio y llama.cpp — como objetivos principales, no como añadidos posteriores. La configuración lleva aproximadamente 5 minutos: apúntala a tu endpoint local en un archivo de configuración. Todas las funciones funcionan en local, es gratuita y de código abierto bajo Apache 2.0, y no se requiere cuenta para uso exclusivamente local.',
           },
@@ -2764,7 +2788,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/es/power-local-llm/best-ai-coding-tools-comparison-2026',
       inLanguage: 'es',
       datePublished: '2026-05-24',
-      dateModified: '2026-07-01',
+      dateModified: '2026-08-29',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -2773,7 +2797,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-07-01',
+    dateModified: '2026-08-29',
     next_refresh_due: '2026-12-19',
     theme: 'Overview & Reference',
     title: 'Melhores ferramentas de programação com IA 2026: Cursor vs Continue.dev',
@@ -3181,6 +3205,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Perguntas frequentes',
         faqs: [
           {
+            q: 'Qual é o melhor modelo de autocompletar para o Continue.dev?',
+            a: 'Qwen3 Coder 14B — é o padrão de tamanho médio e a melhor escolha geral para a maioria das GPUs. Use o Qwen3 Coder 7B se tiver uma placa menor (8–12 GB), ou suba para um modelo de classe 33B em uma GPU de 24 GB para completações mais fortes. Baixe-o com o Ollama e aponte o Continue.dev para o seu endpoint local — a configuração leva cerca de 5 minutos.',
+          },
+          {
             q: 'Qual ferramenta de programação com IA tem o melhor suporte para LLM local?',
             a: 'Continue.dev. Foi construída com LLMs locais — Ollama, LM Studio e llama.cpp — como alvos principais, não como acréscimos posteriores. A configuração leva aproximadamente 5 minutos: aponte-a para o seu endpoint local em um arquivo de configuração. Todos os recursos funcionam em local, é gratuita e de código aberto sob Apache 2.0, e nenhuma conta é necessária para uso exclusivamente local.',
           },
@@ -3234,7 +3262,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/pt/power-local-llm/best-ai-coding-tools-comparison-2026',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-24',
-      dateModified: '2026-07-01',
+      dateModified: '2026-08-29',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -3243,7 +3271,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-07-01',
+    dateModified: '2026-08-29',
     next_refresh_due: '2026-12-19',
     theme: 'Overview & Reference',
     title: 'أفضل أدوات البرمجة بالذكاء الاصطناعي ⁨2026⁩: ⁨Cursor⁩ مقابل ⁨Continue.dev⁩',
@@ -3651,6 +3679,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الأسئلة الشائعة',
         faqs: [
           {
+            q: 'ما هو أفضل نموذج للإكمال التلقائي مع Continue.dev؟',
+            a: 'Qwen3 Coder 14B — وهو الحجم الافتراضي المتوسط وأفضل اختيار شامل لمعظم بطاقات الرسوميات. انتقل إلى Qwen3 Coder 7B إذا كانت بطاقتك أصغر (8–12 جيجابايت)، أو إلى نموذج من فئة 33B على بطاقة بـ24 جيجابايت للحصول على إكمالات أقوى. اسحبه عبر Ollama ووجّه Continue.dev إلى نقطة النهاية المحلية الخاصة بك — يستغرق الإعداد نحو 5 دقائق.',
+          },
+          {
             q: 'أي أداة برمجة بالذكاء الاصطناعي تمتلك أفضل دعم للنموذج المحلي؟',
             a: 'Continue.dev. بُنيت مع النماذج المحلية — Ollama وLM Studio وllama.cpp — كأهداف رئيسية لا كإضافات لاحقة. الإعداد يستغرق نحو 5 دقائق: وجّهها إلى نقطة نهايتك المحلية في ملف تكوين. جميع الميزات تعمل محلياً، وهي مجانية ومفتوحة المصدر تحت Apache 2.0، ولا حاجة إلى حساب للاستخدام المحلي الحصري.',
           },
@@ -3704,7 +3736,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ar/power-local-llm/best-ai-coding-tools-comparison-2026',
       inLanguage: 'ar',
       datePublished: '2026-05-24',
-      dateModified: '2026-07-01',
+      dateModified: '2026-08-29',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -3713,7 +3745,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-07-01',
+    dateModified: '2026-08-29',
     next_refresh_due: '2026-12-19',
     theme: 'Overview & Reference',
     title: '2026년 최고의 AI 코딩 도구 비교: Cursor vs Continue.dev',
@@ -4121,6 +4153,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '자주 묻는 질문',
         faqs: [
           {
+            q: 'Continue.dev에 가장 적합한 자동 완성 모델은 무엇입니까?',
+            a: 'Qwen3 Coder 14B입니다 — 중간 크기의 기본값이며 대부분의 GPU에 가장 적합한 만능 선택입니다. VRAM이 더 작은(8~12GB) 카드라면 Qwen3 Coder 7B로, 24GB GPU라면 더 강력한 완성을 위해 33B급 모델로 전환하십시오. Ollama로 내려받고 Continue.dev를 로컬 엔드포인트로 지정하십시오 — 설정에는 약 5분이 걸립니다.',
+          },
+          {
             q: '어떤 AI 코딩 도구가 로컬 LLM을 가장 잘 지원합니까?',
             a: 'Continue.dev입니다. Ollama, LM Studio, llama.cpp를 나중에 추가된 기능이 아니라 주요 대상으로 구축했습니다. 설정에 약 5분이 걸립니다: 설정 파일에서 로컬 엔드포인트를 지정하면 됩니다. 모든 기능이 로컬에서 작동하며, Apache 2.0 하에 무료 오픈소스이고, 로컬 전용 사용에는 계정이 필요하지 않습니다.',
           },
@@ -4174,7 +4210,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ko/power-local-llm/best-ai-coding-tools-comparison-2026',
       inLanguage: 'ko',
       datePublished: '2026-05-24',
-      dateModified: '2026-07-01',
+      dateModified: '2026-08-29',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',

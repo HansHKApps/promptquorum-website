@@ -945,5 +945,19 @@
     ],
     "reason": "Page 31 batch: top 2 query clusters (best autocomplete model ~27 impr combined, does cursor support local llm ~15 impr combined, both 0% CTR) exactly matched 2 of the 6 EN-only schema questions never rendered on the page. Fixed the schema/visible-content mismatch for EN and closed the resulting 8-locale translation gap per user direction, rather than leaving new content EN-only.",
     "baseline": null
+  },
+  {
+    "id": "bdad03ef-f979-4d93-a79c-a2468a73e9cf",
+    "slug": "/power-local-llm/best-ai-coding-tools-comparison-2026",
+    "date": "2026-08-29T13:18:17.570Z",
+    "fields": [
+      {
+        "field": "faqs (all 9 locales)",
+        "old": "No direct FAQ for what is the best autocomplete model for Continue.dev - fact existed scattered in leadAnswerBlock/intro/quickFacts only",
+        "new": "Added dedicated FAQ entry (Qwen3 Coder 14B default, 7B for 8-12GB, 33B-class for 24GB) to all 9 locales"
+      }
+    ],
+    "reason": "Page 32 batch: title/meta already well-optimized (55/158 chars, matches continue.dev vs cursor 2026 exactly). Top real gap: best autocomplete model for continue (13 impr, pos 8.0, 0% CTR) had no direct FAQ answer despite the fact existing elsewhere in the article. Added FAQ reusing already-established facts, translated to all 9 languages.",
+    "baseline": null
   }
 ]
