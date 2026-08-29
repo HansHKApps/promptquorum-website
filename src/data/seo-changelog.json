@@ -6,16 +6,16 @@
     "fields": [
       {
         "field": "metaDescription",
-        "old": "Prompt Engineering 2026: die Technik, die Qualit\u00e4t Ihrer KI-Ausgaben bestimmt. Lernen Sie Rollenanweisung, Chain-of-Thought und Few-Shot f\u00fcr ChatGPT, Claude und Ollama.",
-        "new": "Prompt Engineering 2026: die Technik, die KI-Ausgaben zuverl\u00e4ssig macht. Rollenanweisung, Chain-of-Thought und Few-Shot f\u00fcr ChatGPT, Claude und Ollama."
+        "old": "Prompt Engineering 2026: die Technik, die Qualität Ihrer KI-Ausgaben bestimmt. Lernen Sie Rollenanweisung, Chain-of-Thought und Few-Shot für ChatGPT, Claude und Ollama.",
+        "new": "Prompt Engineering 2026: die Technik, die KI-Ausgaben zuverlässig macht. Rollenanweisung, Chain-of-Thought und Few-Shot für ChatGPT, Claude und Ollama."
       },
       {
         "field": "metaDescription",
-        "old": "\u30d7\u30ed\u30f3\u30d7\u30c8\u30a8\u30f3\u30b8\u30cb\u30a2\u30ea\u30f3\u30b0\u306fAI\u51fa\u529b\u306e\u54c1\u8cea\u3092\u6c7a\u3081\u308b\u6280\u8853\u3067\u3059\u3002ChatGPT\u30fbClaude\u30fbOllama\u3067\u5b9f\u8df5\u3059\u308b\u5165\u9580\u30ac\u30a4\u30c9\u3002\u57fa\u790e\u309210\u5206\u3067\u5b66\u3079\u307e\u3059\u3002",
-        "new": "\u30d7\u30ed\u30f3\u30d7\u30c8\u30a8\u30f3\u30b8\u30cb\u30a2\u30ea\u30f3\u30b0\u306fAI\u51fa\u529b\u306e\u54c1\u8cea\u3092\u6c7a\u3081\u308b\u6280\u8853\u3067\u3059\u3002ChatGPT\u30fbClaude\u30fbOllama\u3067\u5b9f\u8df5\u3059\u308b\u5165\u9580\u30ac\u30a4\u30c9\u3002\u30ed\u30fc\u30eb\u6307\u793a\u30fbChain-of-Thought\u542b\u3080\u300210\u5206\u3067\u7fd2\u5f97\u3002"
+        "old": "プロンプトエンジニアリングはAI出力の品質を決める技術です。ChatGPT・Claude・Ollamaで実践する入門ガイド。基礎を10分で学べます。",
+        "new": "プロンプトエンジニアリングはAI出力の品質を決める技術です。ChatGPT・Claude・Ollamaで実践する入門ガイド。ロール指示・Chain-of-Thought含む。10分で習得。"
       }
     ],
-    "reason": "geo-meta-optimizer: fix DE metaDescription (168\u2192150 chars), fix JA metaDescription (74\u219294 chars, below 80-char min)",
+    "reason": "geo-meta-optimizer: fix DE metaDescription (168→150 chars), fix JA metaDescription (74→94 chars, below 80-char min)",
     "baseline": null
   },
   {
@@ -57,7 +57,7 @@
         "new": "What LLMs Still Can't Do in 2026: 8 Structural Limits"
       }
     ],
-    "reason": "GSC 'still/current' keyword signal \u2014 74% impressions from 'current limitations' queries; 'Still' retains that signal while adding CTR-boosting numbered format",
+    "reason": "GSC 'still/current' keyword signal — 74% impressions from 'current limitations' queries; 'Still' retains that signal while adding CTR-boosting numbered format",
     "baseline": null
   },
   {
@@ -67,11 +67,11 @@
     "fields": [
       {
         "field": "metaDescription",
-        "old": "Current LLM limitations: no real-time data, hallucination, weak reasoning. 8 hard limits for GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro \u2014 with workarounds.",
-        "new": "LLMs can't access real-time data, verify outputs, or reason reliably. 8 structural limits for GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro \u2014 with workarounds."
+        "old": "Current LLM limitations: no real-time data, hallucination, weak reasoning. 8 hard limits for GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro — with workarounds.",
+        "new": "LLMs can't access real-time data, verify outputs, or reason reliably. 8 structural limits for GPT-5.5, Claude Opus 4.7, Gemini 3.1 Pro — with workarounds."
       }
     ],
-    "reason": "Front-load 3 concrete failure modes as statement (not topic list) \u2014 stronger snippet hook and matches 'can LLMs verify' long-tail queries",
+    "reason": "Front-load 3 concrete failure modes as statement (not topic list) — stronger snippet hook and matches 'can LLMs verify' long-tail queries",
     "baseline": null
   },
   {
@@ -110,7 +110,7 @@
       },
       {
         "field": "metaDescription",
-        "old": "AI code review tools detect 42-85% of runtime bugs vs sub-20% for SAST. CodeRabbit, Greptile, and Snyk compared. Includes 5-part prompt framework to cut noise by 3\u00d7.",
+        "old": "AI code review tools detect 42-85% of runtime bugs vs sub-20% for SAST. CodeRabbit, Greptile, and Snyk compared. Includes 5-part prompt framework to cut noise by 3×.",
         "new": "Snyk vs Greptile vs CodeRabbit: AI code review tools compared. Detect 42-85% of runtime bugs vs SAST's 20%. Benchmarks, pricing, and when to use each."
       }
     ],
@@ -201,7 +201,7 @@
       },
       {
         "field": "metaDescription",
-        "old": "Choose quantization by VRAM: 6GB VRAM \u2192 Q4_K_M (run 7B), 8GB \u2192 Q4_K_M (7B-13B), 16GB \u2192 Q5_K_M, 24GB+ \u2192 Q8_0. Decision matrix + models for each tier.",
+        "old": "Choose quantization by VRAM: 6GB VRAM → Q4_K_M (run 7B), 8GB → Q4_K_M (7B-13B), 16GB → Q5_K_M, 24GB+ → Q8_0. Decision matrix + models for each tier.",
         "new": "Choose the right LLM quantization for your hardware. Q4_K_M for 6-8GB VRAM, Q5_K_M for 16GB, Q8_0 for 24GB+. 2026 guide with RAM tables."
       }
     ],
@@ -255,7 +255,7 @@
         "new": "Ollama's latest version is v0.33.1. See the full v0.32-v0.33 changelog, new models added in 2026, and which model is best for chat, coding and vision."
       }
     ],
-    "reason": "geo-meta-optimizer coherence-C-fix: page claimed v0.32.0 (Jul 11) was current; actual latest stable is v0.33.1 (Aug 26). Title now carries literal 'latest version' phrase (960+810 imps at ~0% CTR) and drops the month to stop monthly staleness. Body version facts + 3 version FAQs added across all 9 locales. NOTE: prior seoTitle was changed in a July refresh without being logged \u2014 'old' here is the actual file value, not changelog entry #1's 'new'.",
+    "reason": "geo-meta-optimizer coherence-C-fix: page claimed v0.32.0 (Jul 11) was current; actual latest stable is v0.33.1 (Aug 26). Title now carries literal 'latest version' phrase (960+810 imps at ~0% CTR) and drops the month to stop monthly staleness. Body version facts + 3 version FAQs added across all 9 locales. NOTE: prior seoTitle was changed in a July refresh without being logged — 'old' here is the actual file value, not changelog entry #1's 'new'.",
     "baseline": {
       "position": 7.4,
       "impressions": 6889,
@@ -275,7 +275,7 @@
         "new": "v1.9.3 (August 20, 2026)"
       }
     ],
-    "reason": "geo-meta-optimizer coherence-C fix (body-only, title/meta untouched \u2014 comparison-cluster CTR already strong, pos 2-3, 7-20%): body claimed whisper.cpp v1.8.6 was latest; actual latest is v1.9.3. Version/changelog section corrected across 9 locales, plus 2 new FAQs per locale (official Debian/apt package \u2014 new info, previously zero coverage; how to check installed version). KO got the 2 FAQs but still lacks the whatsNew/changelog section entirely vs EN \u2014 pre-existing structural gap, flagged separately, not fixed in this pass.",
+    "reason": "geo-meta-optimizer coherence-C fix (body-only, title/meta untouched — comparison-cluster CTR already strong, pos 2-3, 7-20%): body claimed whisper.cpp v1.8.6 was latest; actual latest is v1.9.3. Version/changelog section corrected across 9 locales, plus 2 new FAQs per locale (official Debian/apt package — new info, previously zero coverage; how to check installed version). KO got the 2 FAQs but still lacks the whatsNew/changelog section entirely vs EN — pre-existing structural gap, flagged separately, not fixed in this pass.",
     "baseline": {
       "position": 6.9,
       "impressions": 500,
@@ -361,11 +361,11 @@
     "fields": [
       {
         "field": "metaDescription",
-        "old": "Best local LLM models ranked by VRAM tier (4GB\u201348GB): RTX 3060 12GB, RTX 4090, Apple Silicon guides. Ollama setup, hardware tier comparison, beginner tutorials \u2014 June 2026.",
-        "new": "Best local LLM models ranked by VRAM tier (4GB\u201348GB): RTX 3060 12GB, RTX 4090, Apple Silicon guides. Ollama setup, hardware tier comparison, beginner tutorials."
+        "old": "Best local LLM models ranked by VRAM tier (4GB–48GB): RTX 3060 12GB, RTX 4090, Apple Silicon guides. Ollama setup, hardware tier comparison, beginner tutorials — June 2026.",
+        "new": "Best local LLM models ranked by VRAM tier (4GB–48GB): RTX 3060 12GB, RTX 4090, Apple Silicon guides. Ollama setup, hardware tier comparison, beginner tutorials."
       }
     ],
-    "reason": "geo-meta-optimizer + seo-cannibalization: ran cannibalization scan first (no conflict found \u2014 how-much-vram-local-llm answers 'how much VRAM do I need', hub's queries are 'best model for my VRAM' \u2014 different intent, not competing). Title already matched intent well; real fix was (1) stale '\u2014 June/Juni/junio/mayo 2026' trailing date-stamp removed from meta desc, twitter desc, and H1 across all 9 locales (H1 also had a separate drift bug: LocalLLMsHub.tsx's own hardcoded H1 didn't match the metadata title), and (2) added a genuine text-based 'Best Local LLM by VRAM Tier' section (7-row table, 4-48GB) sourced from the existing how-much-vram-local-llm article for fact consistency, since the title promised VRAM-tier content the body never delivered \u2014 Diagnosis B3. Also discovered and fixed: the ENTIRE hub component (LocalLLMsHub.tsx) had zero Arabic translations across every single data constant (title, description, comparison table, model table, CTAs \u2014 everything), silently falling back to English via '?? [...]['en']' for the whole /ar/local-llms page. Added Arabic for the new VRAM section only (in scope); the pre-existing site-wide AR gap on this page is flagged separately as a much larger finding, not fixed in this pass.",
+    "reason": "geo-meta-optimizer + seo-cannibalization: ran cannibalization scan first (no conflict found — how-much-vram-local-llm answers 'how much VRAM do I need', hub's queries are 'best model for my VRAM' — different intent, not competing). Title already matched intent well; real fix was (1) stale '— June/Juni/junio/mayo 2026' trailing date-stamp removed from meta desc, twitter desc, and H1 across all 9 locales (H1 also had a separate drift bug: LocalLLMsHub.tsx's own hardcoded H1 didn't match the metadata title), and (2) added a genuine text-based 'Best Local LLM by VRAM Tier' section (7-row table, 4-48GB) sourced from the existing how-much-vram-local-llm article for fact consistency, since the title promised VRAM-tier content the body never delivered — Diagnosis B3. Also discovered and fixed: the ENTIRE hub component (LocalLLMsHub.tsx) had zero Arabic translations across every single data constant (title, description, comparison table, model table, CTAs — everything), silently falling back to English via '?? [...]['en']' for the whole /ar/local-llms page. Added Arabic for the new VRAM section only (in scope); the pre-existing site-wide AR gap on this page is flagged separately as a much larger finding, not fixed in this pass.",
     "baseline": {
       "impressions": 46602,
       "clicks": 466,
@@ -389,7 +389,7 @@
         "new": "M5 Pro vs M5 Max bandwidth (307-614 GB/s), tokens/sec benchmarks, and how to speed up Ollama on Apple Silicon M5. Mac mini, Studio, MacBook Pro compared."
       }
     ],
-    "reason": "geo-meta-optimizer coherence-B2 fix: single largest query on the page ('ollama macbook pro m5 speed optimization', 273 impr, pos 7.7, 0% CTR \u2014 more than the next 3 queries combined) had no matching content anywhere on the page. Added a new 'How to Speed Up Ollama on Apple Silicon M5' section (concrete tuning: ollama ps GPU-offload check, freeing unified memory, num_ctx, quantization choice, MacBook Pro thermal/power management, OLLAMA_MAX_LOADED_MODELS) plus a matching FAQ entry, in all 9 locales (FR required syncing both faqs[] and the separate faqSchema.mainEntity[] it maintains). Bandwidth cluster (~242 impr across 10 query variants, ~0% CTR) was already well-covered in the body (307/460/614 GB/s, up to 1.2 TB/s) \u2014 Diagnosis A, fixed via title/meta wording only, no body change needed there. Comparison-cluster queries left untouched (already converting 11-20% in places).",
+    "reason": "geo-meta-optimizer coherence-B2 fix: single largest query on the page ('ollama macbook pro m5 speed optimization', 273 impr, pos 7.7, 0% CTR — more than the next 3 queries combined) had no matching content anywhere on the page. Added a new 'How to Speed Up Ollama on Apple Silicon M5' section (concrete tuning: ollama ps GPU-offload check, freeing unified memory, num_ctx, quantization choice, MacBook Pro thermal/power management, OLLAMA_MAX_LOADED_MODELS) plus a matching FAQ entry, in all 9 locales (FR required syncing both faqs[] and the separate faqSchema.mainEntity[] it maintains). Bandwidth cluster (~242 impr across 10 query variants, ~0% CTR) was already well-covered in the body (307/460/614 GB/s, up to 1.2 TB/s) — Diagnosis A, fixed via title/meta wording only, no body change needed there. Comparison-cluster queries left untouched (already converting 11-20% in places).",
     "baseline": {
       "impressions": 34797,
       "clicks": 257,
@@ -425,7 +425,7 @@
       {
         "field": "faq",
         "old": "Mistral Small on 6GB GPU: barely, buy 8GB (wrong, Mistral Small is 22-24B needing ~13-14GB)",
-        "new": "No \u2014 needs ~13-14GB, budget 16GB, or use a 7B-8B model instead"
+        "new": "No — needs ~13-14GB, budget 16GB, or use a 7B-8B model instead"
       }
     ],
     "reason": "Query 'small 7b model q4 memory 4-5gb rule of thumb' (1,185 impr, pos 2.1, 0% CTR) and 'how to choose quantization level llm vram requirements 6gb' (442 impr, pos 7.3, 0% CTR) exposed that the page's own VRAM-per-quantization math was factually wrong; corrected across all 9 locales and every table/FAQ/schema instance after cross-validating against real GGUF file sizes",
@@ -443,7 +443,7 @@
     "fields": [
       {
         "field": "seoTitle",
-        "old": "Memory Guide for Local LLMs 2026: 16\u2013128GB",
+        "old": "Memory Guide for Local LLMs 2026: 16–128GB",
         "new": "Unified Memory = VRAM: 16GB=7B, 64GB=34B, 128GB=70B (2026)"
       }
     ],
@@ -586,7 +586,7 @@
         "new": "added two FAQ entries: TauriTavern (verified as a Rust/Tauri rewrite of SillyTavern, not a different frontend) and Marinara Engine (clarified as a SillyTavern preset pack, not a competing frontend) -- all 9 locales"
       }
     ],
-    "reason": "13,794 impr, 0.88% CTR. 'risuai vs sillytavern' and 'agnai vs sillytavern' already convert well (6.7-12.2% CTR). Found a real, verified content gap in the long tail of alternative-frontend comparison queries: 'tauritavern vs sillytavern' (34 impr, pos 6.6, 0%), 'marinara engine vs sillytavern' (22 impr, pos 7.5, 0%) -- neither TauriTavern nor Marinara were mentioned anywhere in the article. Researched both: TauriTavern is a genuine Rust/Tauri rewrite of SillyTavern's backend (verified via GitHub/docs); 'Marinara Engine' is a common searcher mix-up -- Marinara is actually a well-known creator of SillyTavern presets/settings packs, not a competing frontend. Added FAQ entries addressing both directly. Did not add content for 'sillybunny vs sillytavern' / 'hapuppy sillytavern' / 'lumiverse vs sillytavern' (12, 11, 30 impr) -- could not verify what these are via research, and fabricating descriptions of unverified apps would violate the campaign's no-fabrication rule. Also noted a large tail of non-query fragments (short phrases in multiple languages: 'otra', '\u0432\u043e\u0442 \u044d\u0442\u043e\u0442?', '\u3069\u3063\u3061\u3082\u3042\u308b') that look like conversational/chatbot artifacts rather than real search queries -- set aside as likely data-quality noise, not actionable.",
+    "reason": "13,794 impr, 0.88% CTR. 'risuai vs sillytavern' and 'agnai vs sillytavern' already convert well (6.7-12.2% CTR). Found a real, verified content gap in the long tail of alternative-frontend comparison queries: 'tauritavern vs sillytavern' (34 impr, pos 6.6, 0%), 'marinara engine vs sillytavern' (22 impr, pos 7.5, 0%) -- neither TauriTavern nor Marinara were mentioned anywhere in the article. Researched both: TauriTavern is a genuine Rust/Tauri rewrite of SillyTavern's backend (verified via GitHub/docs); 'Marinara Engine' is a common searcher mix-up -- Marinara is actually a well-known creator of SillyTavern presets/settings packs, not a competing frontend. Added FAQ entries addressing both directly. Did not add content for 'sillybunny vs sillytavern' / 'hapuppy sillytavern' / 'lumiverse vs sillytavern' (12, 11, 30 impr) -- could not verify what these are via research, and fabricating descriptions of unverified apps would violate the campaign's no-fabrication rule. Also noted a large tail of non-query fragments (short phrases in multiple languages: 'otra', 'вот этот?', 'どっちもある') that look like conversational/chatbot artifacts rather than real search queries -- set aside as likely data-quality noise, not actionable.",
     "baseline": {
       "impressions": 13794,
       "clicks": 121,
@@ -695,7 +695,7 @@
         "new": "reviewed, no change made -- dominated by noise, no clean actionable cluster"
       }
     ],
-    "reason": "5,998 impr, 0.47% CTR. Data dominated by noise: the top query (47 impr, pos 4.9, 0% CTR) is an essay-length technical-architecture question that reads like an AI agent's research prompt, not human search; a separate cluster ('skales ollama vision model text to speech speech to text local free windows *' with escalating literal asterisks across 4 near-identical queries) looks like a broken scraper/non-organic artifact, not real searcher behavior; and a long tail of single-impression fragments in many languages (vocale, si, iya, \u8981\u6709\u8072\u97f3, a mixed Hindi-English IoT question) adds no real signal. Title already covers the genuine short-query terms explicitly ('Local Voice Assistant 2026: Whisper + LLM + Piper TTS'), and remaining real volume ('piper llm' 23 impr, 'whisper piper' 13 impr) is too small and inconsistent (adjacent queries at the same position show both 0% and 3.8% CTR) to indicate a systematic, fixable gap rather than sampling noise. No edit made.",
+    "reason": "5,998 impr, 0.47% CTR. Data dominated by noise: the top query (47 impr, pos 4.9, 0% CTR) is an essay-length technical-architecture question that reads like an AI agent's research prompt, not human search; a separate cluster ('skales ollama vision model text to speech speech to text local free windows *' with escalating literal asterisks across 4 near-identical queries) looks like a broken scraper/non-organic artifact, not real searcher behavior; and a long tail of single-impression fragments in many languages (vocale, si, iya, 要有聲音, a mixed Hindi-English IoT question) adds no real signal. Title already covers the genuine short-query terms explicitly ('Local Voice Assistant 2026: Whisper + LLM + Piper TTS'), and remaining real volume ('piper llm' 23 impr, 'whisper piper' 13 impr) is too small and inconsistent (adjacent queries at the same position show both 0% and 3.8% CTR) to indicate a systematic, fixable gap rather than sampling noise. No edit made.",
     "baseline": {
       "impressions": 5998,
       "clicks": 28,
@@ -721,5 +721,33 @@
       "ctr": 0.0009765625,
       "period": "last 90 days"
     }
+  },
+  {
+    "id": "b611b105-d9de-446d-af08-6170b76f615e",
+    "slug": "/prompt-engineering/context-windows-explained-why-ai-forgets",
+    "date": "2026-08-29T10:22:10.986Z",
+    "fields": [
+      {
+        "field": "factual-accuracy",
+        "old": "Gemini 3.1 Pro stated as 2,000,000 tokens / 'largest available context' (inherited error from before this campaign's Aug 29 fix -- that fix corrected GPT-5.6/Claude Opus figures but left this one unverified)",
+        "new": "corrected to the verified real figure: Gemini 3.1 Pro = 1,048,576 tokens (~1.05M) -- the 2M figure belongs to a different tier, Gemini 3.1 Ultra, not Pro. All three flagship models (GPT-5.6, Claude Opus 5, Gemini 3.1 Pro) now correctly described as near-parity at ~1-1.05M tokens, not Gemini uniquely 'largest.' Fixed across all 9 locales, both files (context-windows-explained.ts + contextWindowsTranslations.ts)"
+      }
+    ],
+    "reason": "Follow-up correction to this campaign's own earlier fix on this page (2026-08-29, commit f7d240f22). While researching a different page (blog/ai-model-comparison), verified via web research that Gemini 3.1 Pro's real context window is 1,048,576 tokens (~1M), and the 2,000,000-token figure belongs to a separate, larger tier called Gemini 3.1 Ultra -- not the Pro model this page discusses. The earlier fix correctly updated GPT-5.6 and Claude Opus figures but left the pre-existing Gemini 2M claim unverified and uncorrected, so the page still had one stale/wrong figure after that pass. Caught and fixed now, including the 'largest available context' framing (no longer accurate -- all three cluster together).",
+    "baseline": null
+  },
+  {
+    "id": "f5e359b6-ec61-4df9-9410-cb35e7bc3c1f",
+    "slug": "/prompt-engineering/gpt-claude-gemini-which-model",
+    "date": "2026-08-29T10:33:02.853Z",
+    "fields": [
+      {
+        "field": "content",
+        "old": "entire article was one full generation behind: 'GPT-5.5' throughout (never updated to GPT-5.6), 'GPT-5.5 mini' as the budget tier (real tier name is Luna, not mini), 371 'Claude Opus 4.8' mentions (superseded by Opus 5), and multiple wrong pricing figures (GPT-5.6 Sol quoted at $15 output instead of $30, GPT-5.6 Luna quoted at $0.15/$0.60 instead of the real $0.20/$1.20, Claude Opus quoted at $3/$15 in one locale instead of $5/$25, frontier/budget pricing-tier ranges stated as $15-60/$0.15-3 instead of the real $5-30/$0.20-2)",
+        "new": "renamed GPT-5.5 -> GPT-5.6 and GPT-5.5 mini -> GPT-5.6 Luna throughout (mini is not a real GPT-5.6 tier name; the family ships as Sol/Terra/Luna); renamed all Claude Opus 4.8 -> Opus 5; corrected every identified wrong pricing figure to verified real rates (GPT-5.6 Sol $5/$30, Terra $2/$12, Luna $0.20/$1.20, Claude Opus 5 $5/$25) and recalculated the Sol-vs-Luna cost-reduction ratio from the stated 33x/50x to the correct ~25x; bumped dateModified. Applied across all 9 locales"
+      }
+    ],
+    "reason": "This flagship 'which AI model should I use' comparison article (3,834 lines) was discovered while investigating a smaller related fix on a different page (blog/ai-model-comparison). It was materially out of date -- the whole article discussed GPT-5.5 as current (one full generation behind GPT-5.6) and Claude Opus 4.8 (superseded by Opus 5 on 2026-07-24), with several pricing figures that were wrong even for the older models they named, not just stale. This is not part of the original 20-page GSC worklist -- found via a systematic site-wide check for the same stale facts (GPT-5.x version, Claude Opus version, Gemini context window) already verified and fixed on other pages during this campaign, since a page this central to the site's AI-model content being a full generation behind is a real risk regardless of its own GSC numbers.",
+    "baseline": null
   }
 ]
