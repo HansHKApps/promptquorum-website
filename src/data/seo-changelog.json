@@ -805,5 +805,19 @@
     ],
     "reason": "Page 23 batch: 148 total queries, near-total 0% CTR, mostly unrelated quiz/exam lookups (skip, diagnosis-E). Real addressable signal: prompt blocks (11 impr, pos 3.5), prompt block (11, pos 4.2), block prompt (10, pos 6.1), building block of prompting (7, pos 2.6), context building block (6, pos 4.7) all use literal Block(s) wording. seoTitle said Parts, not Blocks, despite the H1/body already saying Building Blocks. Restored literal-match wording, added 2026 for semi_annual tier.",
     "baseline": null
+  },
+  {
+    "id": "7af96ccf-9898-4239-ab34-bf40e2d779a0",
+    "slug": "/local-llms/mlx-vs-ollama-vs-llama-cpp-mac",
+    "date": "2026-08-29T12:00:59.113Z",
+    "fields": [
+      {
+        "field": "faqs (en, body content), dateModified (en)",
+        "old": "No FAQ entry answering the plain What does MLX mean? question; dateModified 2026-08-28",
+        "new": "Added What does MLX mean? as first FAQ entry, built from existing verified MLX-framework facts already in the article body; dateModified 2026-08-29"
+      }
+    ],
+    "reason": "geo-meta-optimizer page 24: title/meta already strong (43-char title, 143-char meta, hits top-3 query terms, correct 2026/semi_annual handling) - diagnosis B3 light coverage gap, not a title issue. A ~140-impression cluster of 0%-CTR definitional queries (what does mlx mean in ollama, mlx meaning ollama, what is mlx in ollama, +6 more variants) had no direct FAQ answer, only an indirect explanation buried in a body section. Body-only fix, title/meta untouched.",
+    "baseline": null
   }
 ]

@@ -13,7 +13,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/mlx-vs-ollama-vs-llama-cpp-mac-benchmarks-hero-en.webp',
     twitterDescription: 'MLX vs Ollama vs llama.cpp on Mac: speed, ease of use, model support. Which framework for Apple Silicon LLMs in 2026?',
     publishDate: '2026-05-15',
-    dateModified: '2026-08-28',
+    dateModified: '2026-08-29',
     current_models_mentioned: ['Llama 3.1 8B', 'Llama 3.3 70B', 'Mistral Small', 'Phi-4'],
     current_hardware_mentioned: ['M5 Pro', 'M5 Max'],
     audience: 'Mac users choosing between inference frameworks for local LLMs.',
@@ -268,6 +268,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       faq: {
         id: 'faq',
         faqs: [
+          { q: 'What does MLX mean?', a: 'MLX is Apple\'s own machine-learning framework, built specifically for Apple Silicon. It gives you a NumPy-like Python API, lazy evaluation, and unified-memory optimization, plus native LoRA/QLoRA fine-tuning. It is not related to Ollama or llama.cpp — those are separate inference engines. On Apple Silicon, MLX is typically 10–25% faster than Ollama, but it only runs MLX-format models and only on macOS.' },
           { q: 'Which framework is fastest?', a: 'MLX, 15–25% faster than Ollama on Apple Silicon. llama.cpp is comparable to Ollama. Speed difference only matters for large models (70B+); for 8B, all are fast enough.' },
           { q: 'Can I switch frameworks later?', a: 'Yes. You can install Ollama today, switch to MLX tomorrow. Models are compatible (just in different formats). No lock-in.' },
           { q: 'Is MLX only for Python?', a: 'MLX has Python native API, but you can call it from other languages via subprocess or HTTP server wrapper. Best used from Python.' },
