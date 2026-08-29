@@ -574,5 +574,24 @@
       "ctr": 0.008863876187126274,
       "period": "last 90 days"
     }
+  },
+  {
+    "id": "851ccd52-9b84-465a-a7f4-a154e281ae23",
+    "slug": "/power-local-llm/sillytavern-vs-agnai-vs-risuai-roleplay",
+    "date": "2026-08-29T06:44:14.774Z",
+    "fields": [
+      {
+        "field": "faq",
+        "old": "no coverage of TauriTavern or the Marinara preset-pack confusion",
+        "new": "added two FAQ entries: TauriTavern (verified as a Rust/Tauri rewrite of SillyTavern, not a different frontend) and Marinara Engine (clarified as a SillyTavern preset pack, not a competing frontend) -- all 9 locales"
+      }
+    ],
+    "reason": "13,794 impr, 0.88% CTR. 'risuai vs sillytavern' and 'agnai vs sillytavern' already convert well (6.7-12.2% CTR). Found a real, verified content gap in the long tail of alternative-frontend comparison queries: 'tauritavern vs sillytavern' (34 impr, pos 6.6, 0%), 'marinara engine vs sillytavern' (22 impr, pos 7.5, 0%) -- neither TauriTavern nor Marinara were mentioned anywhere in the article. Researched both: TauriTavern is a genuine Rust/Tauri rewrite of SillyTavern's backend (verified via GitHub/docs); 'Marinara Engine' is a common searcher mix-up -- Marinara is actually a well-known creator of SillyTavern presets/settings packs, not a competing frontend. Added FAQ entries addressing both directly. Did not add content for 'sillybunny vs sillytavern' / 'hapuppy sillytavern' / 'lumiverse vs sillytavern' (12, 11, 30 impr) -- could not verify what these are via research, and fabricating descriptions of unverified apps would violate the campaign's no-fabrication rule. Also noted a large tail of non-query fragments (short phrases in multiple languages: 'otra', '\u0432\u043e\u0442 \u044d\u0442\u043e\u0442?', '\u3069\u3063\u3061\u3082\u3042\u308b') that look like conversational/chatbot artifacts rather than real search queries -- set aside as likely data-quality noise, not actionable.",
+    "baseline": {
+      "impressions": 13794,
+      "clicks": 121,
+      "ctr": 0.008771929824561403,
+      "period": "last 90 days"
+    }
   }
 ]

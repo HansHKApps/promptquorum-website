@@ -392,6 +392,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Are group chats stable on local backends?',
             a: 'Yes, with the right model. Group chat with 3+ characters wants a model with strong voice differentiation — Command A+ is the best option, Llama 3.3 70B is the practical default. On smaller models (under 13B), characters drift toward the same voice within 5–10 exchanges. SillyTavern has the most mature group-chat implementation; Agnai and RisuAI handle 2–4 character scenes cleanly but offer less control over turn-taking dynamics.',
           },
+          {
+            q: 'Is TauriTavern different from SillyTavern?',
+            a: 'TauriTavern is a rewrite of SillyTavern\'s backend in Rust using the Tauri framework, not a competing frontend with a different feature set. The frontend UI is kept in sync with upstream SillyTavern, so the day-to-day experience is nearly identical — the difference is under the hood: no Node.js runtime, a smaller native binary, and lower idle memory use. Character cards, lore books, and extensions written for SillyTavern carry over. Pick TauriTavern if you specifically want a lighter native build; pick standard SillyTavern for the largest plugin ecosystem and fastest access to new upstream features.',
+          },
+          {
+            q: 'Is "Marinara Engine" a SillyTavern alternative?',
+            a: 'No — this is a common mix-up. Marinara is a well-known creator of SillyTavern presets and settings packs (prompts, sampler settings, formatting templates), not a separate frontend application. Installing "Marinara\'s settings" means importing a preset file into your existing SillyTavern, Agnai, or RisuAI install — it changes how the frontend prompts the model, not which frontend you\'re running. If you\'re looking for an actual alternative frontend, see the SillyTavern vs. Agnai vs. RisuAI comparison above, or TauriTavern for a lighter native rebuild of SillyTavern itself.',
+          },
         ],
       },
       relatedReading: {
@@ -692,6 +700,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       decision: {
         id: 'decision',
         title: 'Entscheidung: Welche Oberfläche sollten Sie wählen',
+        itemHeadings: true,
         content:
           '**Drei Fragen führen die meisten Nutzerinnen und Nutzer zur richtigen Wahl.**',
         columns: ['Ihre Situation', 'Empfehlung'],
@@ -794,6 +803,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'Sind diese Roleplay-Oberflächen für den deutschen Mittelstand geeignet?',
             a: 'Für Mittelstandsunternehmen, die lokale KI-Tools für interne kreative Anwendungen — z. B. Storytelling, Schulungssimulationen, Produktnarrative oder Kundenszenario-Training — einsetzen möchten, bietet SillyTavern die tiefste Anpassungsbasis. Die vollständig lokale Betriebsweise entspricht den Datenschutzanforderungen des BSI-Grundschutzes und vermeidet Cloud-Abhängigkeiten. Agnai eignet sich für kleine Teams (5–20 Personen), die gemeinsame Chat-Szenarien ohne Cloud-Dienste benötigen. RisuAI empfiehlt sich für Einstiegsprojekte mit minimalem IT-Aufwand. Alle drei laufen auf handelsüblicher Hardware (16 GB RAM, Consumer-GPU empfohlen) ohne Lizenzkosten.',
+          },
+          {
+            q: 'Ist TauriTavern etwas anderes als SillyTavern?',
+            a: 'TauriTavern ist eine Neuimplementierung des SillyTavern-Backends in Rust mit dem Tauri-Framework, kein konkurrierendes Frontend mit anderem Funktionsumfang. Die Frontend-Oberfläche bleibt mit dem Original SillyTavern synchron, sodass sich die tägliche Nutzung nahezu identisch anfühlt — der Unterschied liegt im Unterbau: keine Node.js-Laufzeitumgebung, eine kleinere native Binärdatei und geringerer Speicherverbrauch im Leerlauf. Charakterkarten, Lore-Bücher und Erweiterungen für SillyTavern funktionieren weiter. Wählen Sie TauriTavern, wenn Sie gezielt einen leichteren nativen Build wollen; wählen Sie das Standard-SillyTavern für das größte Plugin-Ökosystem und den schnellsten Zugriff auf neue Upstream-Funktionen.',
+          },
+          {
+            q: 'Ist die „Marinara Engine" eine SillyTavern-Alternative?',
+            a: 'Nein — das ist eine häufige Verwechslung. Marinara ist ein bekannter Ersteller von SillyTavern-Presets und Einstellungspaketen (Prompts, Sampler-Einstellungen, Formatierungsvorlagen), kein eigenständiges Frontend. „Marinaras Einstellungen" zu installieren bedeutet, eine Preset-Datei in Ihre bestehende SillyTavern-, Agnai- oder RisuAI-Installation zu importieren — das ändert, wie das Frontend das Modell anspricht, nicht welches Frontend Sie nutzen. Wenn Sie eine echte Frontend-Alternative suchen, siehe den Vergleich SillyTavern vs. Agnai vs. RisuAI oben, oder TauriTavern für einen leichteren nativen Nachbau von SillyTavern selbst.',
           },
         ],
       },
@@ -1103,6 +1120,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       decision: {
         id: 'decision',
         title: 'Decisión: qué interfaz debes elegir',
+        itemHeadings: true,
         content:
           '**Tres preguntas llevan a la mayoría de usuarios a la opción correcta.**',
         image: '/images/sillytavern-vs-agnai-vs-risuai-decision-es.svg',
@@ -1199,6 +1217,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: '¿Son estables los chats grupales en backends locales?',
             a: 'Sí, con el modelo correcto. El chat grupal con 3+ personajes necesita un modelo con fuerte diferenciación de voces — Command A+ es la mejor opción, Llama 3.3 70B es el predeterminado práctico. En modelos más pequeños (menos de 13B), los personajes derivan hacia la misma voz en 5 a 10 intercambios. SillyTavern tiene la implementación de chat grupal más madura; Agnai y RisuAI manejan escenas de 2 a 4 personajes limpiamente pero ofrecen menos control sobre la dinámica de turnos.',
+          },
+          {
+            q: '¿TauriTavern es diferente de SillyTavern?',
+            a: 'TauriTavern es una reescritura del backend de SillyTavern en Rust usando el framework Tauri, no un frontend competidor con un conjunto de funciones distinto. La interfaz se mantiene sincronizada con SillyTavern original, así que la experiencia diaria es casi idéntica — la diferencia está por debajo: sin runtime de Node.js, un binario nativo más pequeño y menor uso de memoria en reposo. Las tarjetas de personaje, los libros de lore y las extensiones creadas para SillyTavern siguen funcionando. Elige TauriTavern si quieres específicamente un build nativo más ligero; elige el SillyTavern estándar para el ecosistema de plugins más grande y el acceso más rápido a nuevas funciones del proyecto original.',
+          },
+          {
+            q: '¿"Marinara Engine" es una alternativa a SillyTavern?',
+            a: 'No — es una confusión común. Marinara es un conocido creador de presets y paquetes de configuración para SillyTavern (prompts, ajustes de muestreo, plantillas de formato), no un frontend independiente. Instalar "los ajustes de Marinara" significa importar un archivo de preset en tu instalación existente de SillyTavern, Agnai o RisuAI — cambia cómo el frontend le da instrucciones al modelo, no qué frontend estás usando. Si buscas una alternativa de frontend real, consulta la comparación SillyTavern vs. Agnai vs. RisuAI de arriba, o TauriTavern para una reconstrucción nativa más ligera del propio SillyTavern.',
           },
         ],
       },
@@ -1618,6 +1644,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: '로컬 백엔드에서 그룹 채팅이 안정적입니까?',
             a: '네, 올바른 모델로는 가능합니다. 3명 이상의 캐릭터가 있는 그룹 채팅에는 강한 목소리 차별화를 가진 모델이 필요합니다 — Command A+가 최선이며, Llama 3.3 70B가 실용적인 기본 선택입니다. 더 작은 모델(13B 미만)에서는 캐릭터가 5~10번 교환 후 동일한 목소리로 표류합니다. SillyTavern은 가장 성숙한 그룹 채팅 구현을 갖추고 있고; Agnai·RisuAI는 2~4명의 캐릭터 장면을 깔끔하게 처리하지만 턴 역학에 대한 제어가 적습니다.',
           },
+          {
+            q: 'TauriTavern은 SillyTavern과 다른가요?',
+            a: 'TauriTavern은 SillyTavern의 백엔드를 Tauri 프레임워크로 Rust에서 다시 작성한 것이며, 기능 구성이 다른 경쟁 프론트엔드가 아닙니다. 프론트엔드 UI는 원본 SillyTavern과 동기화되어 있어 일상적인 사용 경험은 거의 동일합니다 — 차이는 내부에 있습니다: Node.js 런타임이 없고, 네이티브 바이너리가 더 작으며, 유휴 시 메모리 사용량이 더 적습니다. SillyTavern용으로 만든 캐릭터 카드, 로어북, 확장 기능은 그대로 사용할 수 있습니다. 더 가벼운 네이티브 빌드를 원한다면 TauriTavern을, 가장 큰 플러그인 생태계와 최신 업스트림 기능에 대한 가장 빠른 접근을 원한다면 표준 SillyTavern을 선택하세요.',
+          },
+          {
+            q: '"Marinara Engine"은 SillyTavern의 대안인가요?',
+            a: '아니요 — 흔한 오해입니다. Marinara는 SillyTavern용 프리셋과 설정 팩(프롬프트, 샘플러 설정, 포맷 템플릿)으로 잘 알려진 제작자이며, 별도의 프론트엔드가 아닙니다. "Marinara의 설정"을 설치한다는 것은 기존 SillyTavern, Agnai, RisuAI 설치에 프리셋 파일을 가져오는 것을 의미합니다 — 이는 프론트엔드가 모델에 프롬프트를 전달하는 방식을 바꿀 뿐, 어떤 프론트엔드를 사용하는지는 바꾸지 않습니다. 실제 대안 프론트엔드를 찾고 있다면 위의 SillyTavern vs. Agnai vs. RisuAI 비교를 참고하거나, SillyTavern 자체를 더 가볍게 네이티브로 재구축한 TauriTavern을 확인하세요.',
+          },
         ],
       },
       relatedReading: {
@@ -2033,6 +2067,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Os chats em grupo são estáveis em backends locais?',
             a: 'Sim, com o modelo certo. O chat em grupo com 3+ personagens precisa de um modelo com forte diferenciação de vozes — Command A+ é a melhor opção, Llama 3.3 70B é o padrão prático. Em modelos menores (abaixo de 13B), os personagens derivam para a mesma voz em 5 a 10 trocas.',
           },
+          {
+            q: 'O TauriTavern é diferente do SillyTavern?',
+            a: 'O TauriTavern é uma reescrita do backend do SillyTavern em Rust usando o framework Tauri, não um frontend concorrente com um conjunto de recursos diferente. A interface do frontend é mantida sincronizada com o SillyTavern original, então a experiência do dia a dia é quase idêntica — a diferença está por baixo do capô: sem runtime Node.js, um binário nativo menor e menor uso de memória em repouso. Cartões de personagem, livros de lore e extensões feitos para o SillyTavern continuam funcionando. Escolha o TauriTavern se quiser especificamente um build nativo mais leve; escolha o SillyTavern padrão para o maior ecossistema de plugins e acesso mais rápido a novos recursos do projeto original.',
+          },
+          {
+            q: 'O "Marinara Engine" é uma alternativa ao SillyTavern?',
+            a: 'Não — essa é uma confusão comum. Marinara é um criador conhecido de presets e pacotes de configuração para o SillyTavern (prompts, ajustes de amostragem, modelos de formatação), não um frontend separado. Instalar "as configurações da Marinara" significa importar um arquivo de preset na sua instalação existente do SillyTavern, Agnai ou RisuAI — isso muda como o frontend orienta o modelo, não qual frontend você está usando. Se você procura uma alternativa de frontend real, veja a comparação SillyTavern vs. Agnai vs. RisuAI acima, ou o TauriTavern para uma reconstrução nativa mais leve do próprio SillyTavern.',
+          },
         ],
       },
       relatedReading: {
@@ -2345,6 +2387,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       decision: {
         id: 'decision',
         title: 'Décision : quelle interface choisir',
+        itemHeadings: true,
         content:
           '**Trois questions orientent la plupart des utilisateurs vers le bon choix.**',
         columns: ['Votre situation', 'Choix'],
@@ -2439,6 +2482,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'Les chats de groupe sont-ils stables sur les backends locaux ?',
             a: 'Oui, avec le bon modèle. Le chat de groupe avec 3+ personnages nécessite un modèle avec une forte différenciation de voix — Command A+ est la meilleure option, Llama 3.3 70B est la valeur par défaut pratique. Sur les petits modèles (sous 13B), les personnages dérivent vers la même voix en 5 à 10 échanges. SillyTavern a l\'implémentation de chat de groupe la plus mature ; Agnai et RisuAI gèrent proprement les scènes de 2 à 4 personnages mais offrent moins de contrôle sur la dynamique de prise de parole.',
+          },
+          {
+            q: 'TauriTavern est-il différent de SillyTavern ?',
+            a: 'TauriTavern est une réécriture du backend de SillyTavern en Rust avec le framework Tauri, pas un frontend concurrent avec un ensemble de fonctionnalités différent. L\'interface frontend reste synchronisée avec SillyTavern d\'origine, donc l\'expérience quotidienne est presque identique — la différence est sous le capot : pas de runtime Node.js, un binaire natif plus petit et une utilisation mémoire au repos plus faible. Les fiches de personnage, les lore books et les extensions créées pour SillyTavern continuent de fonctionner. Choisissez TauriTavern si vous voulez spécifiquement un build natif plus léger ; choisissez SillyTavern standard pour le plus grand écosystème de plugins et l\'accès le plus rapide aux nouvelles fonctionnalités du projet d\'origine.',
+          },
+          {
+            q: '« Marinara Engine » est-elle une alternative à SillyTavern ?',
+            a: 'Non — c\'est une confusion fréquente. Marinara est un créateur connu de presets et de packs de configuration pour SillyTavern (prompts, réglages d\'échantillonnage, modèles de formatage), pas un frontend distinct. Installer « les réglages de Marinara » signifie importer un fichier de preset dans votre installation existante de SillyTavern, Agnai ou RisuAI — cela change la façon dont le frontend guide le modèle, pas quel frontend vous utilisez. Si vous cherchez une véritable alternative de frontend, consultez la comparaison SillyTavern vs. Agnai vs. RisuAI ci-dessus, ou TauriTavern pour une reconstruction native plus légère de SillyTavern lui-même.',
           },
         ],
       },
@@ -2834,6 +2885,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'グループチャットはローカルバックエンドで安定していますか？',
             a: 'はい、適切なモデルを使えば安定しています。3人以上のキャラクターとのグループチャットには強い声の差別化を持つモデルが必要です — Command A+が最良の選択肢で、Llama 3.3 70Bが実用的なデフォルトです。小さなモデル（13B未満）ではキャラクターが5〜10回のやり取りで同じ声に収束します。SillyTavernが最も成熟したグループチャット実装を持っています；AgnaiとRisuAIは2〜4キャラクターシーンをきれいに処理しますが、ターンテイキングダイナミクスの制御は少ないです。',
+          },
+          {
+            q: 'TauriTavernはSillyTavernと違うのですか？',
+            a: 'TauriTavernはSillyTavernのバックエンドをTauriフレームワークでRustに書き直したものであり、機能セットが異なる競合フロントエンドではありません。フロントエンドUIは本家SillyTavernと同期しているため、日常の使用感はほぼ同じです — 違いは内部にあります：Node.jsランタイムが不要で、ネイティブバイナリが小さく、アイドル時のメモリ使用量が少ないことです。SillyTavern向けに作られたキャラクターカード、ロアブック、拡張機能はそのまま使えます。軽量なネイティブビルドを特に望む場合はTauriTavernを、最大のプラグインエコシステムと本家の新機能への最速アクセスを望む場合は標準のSillyTavernを選んでください。',
+          },
+          {
+            q: '「Marinara Engine」はSillyTavernの代替ですか？',
+            a: 'いいえ — よくある勘違いです。Marinaraは、SillyTavern用のプリセットや設定パック（プロンプト、サンプラー設定、フォーマットテンプレート）で知られる制作者であり、独立したフロントエンドではありません。「Marinaraの設定」をインストールするとは、既存のSillyTavern、Agnai、RisuAIのインストールにプリセットファイルを取り込むことを意味します — これはフロントエンドがモデルにどう指示するかを変えるだけで、どのフロントエンドを使うかを変えるものではありません。本当の代替フロントエンドを探しているなら、上記のSillyTavern対Agnai対RisuAIの比較を参照するか、SillyTavern自体を軽量にネイティブ再構築したTauriTavernを確認してください。',
           },
         ],
       },
@@ -3245,6 +3304,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: '在本地后端上群组聊天稳定吗？',
             a: '是的，使用正确的模型时稳定。与3个以上角色的群组聊天需要具有强声音差异化的模型——Command A+是最佳选择，Llama 3.3 70B是实用的默认选择。在较小的模型（13B以下）上，角色在5到10次交流内向同一声音漂移。SillyTavern拥有最成熟的群组聊天实现；Agnai和RisuAI能干净地处理2到4角色场景，但对轮次动态的控制较少。',
           },
+          {
+            q: 'TauriTavern和SillyTavern有什么不同？',
+            a: 'TauriTavern是使用Tauri框架用Rust重写的SillyTavern后端，而不是功能集不同的竞争前端。前端界面与原版SillyTavern保持同步，因此日常使用体验几乎相同——区别在底层：无需Node.js运行时，原生二进制文件更小，空闲时内存占用更低。为SillyTavern制作的角色卡、知识库和扩展都可以继续使用。如果你特别想要更轻量的原生构建，选择TauriTavern；如果想要最大的插件生态和最快获得上游新功能，选择标准SillyTavern。',
+          },
+          {
+            q: '"Marinara Engine"是SillyTavern的替代品吗？',
+            a: '不是——这是一个常见的误解。Marinara是知名的SillyTavern预设和设置包（提示词、采样器设置、格式模板）制作者，而不是独立的前端。安装"Marinara的设置"是指将预设文件导入到你现有的SillyTavern、Agnai或RisuAI安装中——这改变的是前端如何提示模型，而不是你使用哪个前端。如果你在寻找真正的替代前端，请参阅上文的SillyTavern对比Agnai对比RisuAI，或查看TauriTavern——SillyTavern本身的轻量原生重构版本。',
+          },
         ],
       },
       countrySpecific: {
@@ -3522,6 +3589,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'هل كتب العوالم جيدة في Agnai وRisuAI؟',
             a: 'كلاهما يدعمان كتب عوالم بمسح الكلمات المفتاحية البسيطة — مناسبة للمشاريع ذات أقل من ~50 إدخالًا. لبناء أكوان معقدة مع مشغّلات متكررة وأولوية كلمات مفتاحية ومشغّلات شرطية، SillyTavern هو الخيار الوحيد الموثوق من الثلاثة.',
+          },
+          {
+            q: 'هل TauriTavern مختلف عن SillyTavern؟',
+            a: 'لا — TauriTavern هو إعادة كتابة للواجهة الخلفية لـSillyTavern بلغة Rust باستخدام إطار عمل Tauri، وليس واجهة أمامية منافسة بمجموعة ميزات مختلفة. تبقى واجهة المستخدم متزامنة مع SillyTavern الأصلي، لذا فإن تجربة الاستخدام اليومية مطابقة تقريبًا — يكمن الفرق تحت الغطاء: لا يوجد وقت تشغيل Node.js، وملف ثنائي أصلي أصغر، واستهلاك ذاكرة أقل عند الخمول. بطاقات الشخصيات وكتب العوالم والإضافات المصممة لـSillyTavern تعمل كما هي. اختر TauriTavern إذا كنت تريد تحديدًا نسخة أصلية أخف؛ اختر SillyTavern القياسي لأكبر نظام إضافات ولأسرع وصول إلى الميزات الجديدة.',
+          },
+          {
+            q: 'هل "Marinara Engine" بديل لـSillyTavern؟',
+            a: 'لا — هذا لبس شائع. Marinara صانع معروف لحزم إعدادات وقوالب جاهزة لـSillyTavern (موجّهات، إعدادات أخذ العينات، قوالب تنسيق)، وليس واجهة أمامية منفصلة. تثبيت "إعدادات Marinara" يعني استيراد ملف إعدادات جاهز إلى تثبيتك الحالي لـSillyTavern أو Agnai أو RisuAI — وهذا يغيّر كيفية توجيه الواجهة للنموذج، لا أي واجهة تستخدمها. إذا كنت تبحث عن واجهة بديلة حقيقية، راجع مقارنة SillyTavern مقابل Agnai مقابل RisuAI أعلاه، أو TauriTavern لإعادة بناء أصلية أخف لـSillyTavern نفسه.',
           },
         ],
       },
