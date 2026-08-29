@@ -132,6 +132,7 @@ schema: {
       toc: [
         { label: 'TLDR', anchor: '#key-takeaways' },
         { label: 'Which AMD GPUs Are Actually Worth Using?', anchor: '#key-takeaways' },
+        { label: 'How Do AMD GPUs Compare to RTX on Price and Speed?', anchor: '#amd-vs-nvidia' },
         { label: 'FAQ', anchor: '#faq' },
       ],
       sections: {
@@ -375,6 +376,7 @@ schema: {
       toc: [
         { label: 'Puntos clave', anchor: '#key-takeaways' },
         { label: '¿Qué GPUs AMD realmente valen la pena?', anchor: '#key-takeaways' },
+        { label: '¿Cómo se comparan las GPU AMD con las RTX en precio y velocidad?', anchor: '#amd-vs-nvidia' },
         { label: 'Preguntas frecuentes', anchor: '#faq' },
       ],
       sections: {
@@ -620,6 +622,7 @@ schema: {
       toc: [
         { label: 'النقاط الرئيسية', anchor: '#key-takeaways' },
         { label: 'أي كروت رسوميات AMD تستحق العناء فعلًا؟', anchor: '#key-takeaways' },
+        { label: 'كيف تقارن كروت AMD بكروت RTX من حيث السعر والسرعة؟', anchor: '#amd-vs-nvidia' },
         { label: 'الأسئلة الشائعة', anchor: '#faq' },
       ],
       sections: {
@@ -864,6 +867,7 @@ schema: {
       toc: [
         { label: 'Pontos principais', anchor: '#key-takeaways' },
         { label: 'Quais GPUs AMD realmente valem a pena?', anchor: '#key-takeaways' },
+        { label: 'Como as GPUs AMD se comparam às RTX em preço e velocidade?', anchor: '#amd-vs-nvidia' },
         { label: 'Perguntas frequentes', anchor: '#faq' },
       ],
       sections: {
@@ -1385,6 +1389,7 @@ schema: {
       toc: [
         { label: '重要ポイント', anchor: '#key-takeaways' },
         { label: '実際に価値のある AMD GPU は？', anchor: '#key-takeaways' },
+        { label: 'AMD GPUは価格と速度でRTXとどう比較される？', anchor: '#amd-vs-nvidia' },
         { label: 'よくある質問', anchor: '#faq' },
       ],
       sections: {
@@ -1565,6 +1570,7 @@ schema: {
       toc: [
         { label: '核心要点', anchor: '#key-takeaways' },
         { label: '哪些 AMD GPU 值得考虑？', anchor: '#key-takeaways' },
+        { label: 'AMD GPU 在价格和速度上与 RTX 相比如何？', anchor: '#amd-vs-nvidia' },
         { label: '常见问题', anchor: '#faq' },
       ],
       sections: {
@@ -1857,6 +1863,7 @@ schema: {
     toc: [
       { label: '요약', anchor: '#key-takeaways' },
       { label: '실제로 사용할 만한 AMD GPU는?', anchor: '#key-takeaways' },
+      { label: 'AMD GPU는 가격과 속도 면에서 RTX와 어떻게 비교되나요?', anchor: '#amd-vs-nvidia' },
       { label: '자주 묻는 질문', anchor: '#faq' },
     ],
     sections: {

@@ -536,5 +536,24 @@
       "ctr": 0.0020973687555612052,
       "period": "last 90 days"
     }
+  },
+  {
+    "id": "a3ad4316-cf3f-435c-aef2-b517ce333fb6",
+    "slug": "/local-llms/best-amd-gpus-local-llm",
+    "date": "2026-08-29T06:28:40.439Z",
+    "fields": [
+      {
+        "field": "toc",
+        "old": "EN + 6 other locales missing TOC entry for the existing #amd-vs-nvidia section (only DE/FR had it)",
+        "new": "added the missing TOC entry pointing to the existing #amd-vs-nvidia section in all 7 locales that lacked it"
+      }
+    ],
+    "reason": "25,617 impr, 1.32% CTR overall -- a healthy performer, not a broken page. Diagnosed the failing segment: every 'amd vs nvidia'/'best amd gpu for local llm(s)' query WITHOUT a '2026'/'rocm'/'inference' qualifier gets healthy CTR (2.9-10.1%) at similar positions (3-7), while the identical topic WITH those qualifiers gets 0% CTR at equally good positions (3.4-6.6) -- e.g. 'amd vs nvidia for local llm' 70 impr pos 6.0 CTR 4.3% vs 'amd vs nvidia for local llms 2026' 57 impr pos 4.9 CTR 0%. Title already says 'Best AMD GPU for Local LLMs 2026' and covers ROCm/RTX explicitly, so this is not title-fixable -- diagnosed as diagnosis-E (AI Overview answering the year/technical-qualified variants inline from our own already-strong snippet). Per campaign policy, not chased. Found and fixed one unrelated, low-risk gap during the audit: the #amd-vs-nvidia section exists in the body of all 9 locales but only DE/FR linked to it from the TOC.",
+    "baseline": {
+      "impressions": 25617,
+      "clicks": 338,
+      "ctr": 0.013194363118241792,
+      "period": "last 90 days"
+    }
   }
 ]
