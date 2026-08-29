@@ -9,16 +9,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-07-14',
+    dateModified: '2026-08-29',
     next_refresh_due: '2026-11-07',
     theme: 'Local AI Agents & Tool Use',
     title: 'Local AI Agents in 2026: What Actually Works (And What Still Fails)',
     heroImage: '/images/autonomous-local-agents-actually-work-overview-hero-en.webp',
-    seoTitle: 'Local AI Agents 2026: Multi-Agent Orchestration Tested',
+    seoTitle: 'Local AI Agents 2026: 6 Stacks, Orchestration Tested',
     intro:
       'Six local AI agent stacks, five real tasks, thirty days of evaluation. Two stacks land tasks reliably. Three fail in ways the demos do not show. One is effectively unusable. This is the honest report — what each agent setup actually does on a refactor, a research task, an email triage, a scrape-and-summarize, and a bug hunt, with the failures named specifically and the supervision cost quantified. CrewAI and AutoGen/AG2, evaluated separately as the multi-agent orchestration frameworks readers ask about most, confirm the same pattern rather than break it.',
     metaDescription:
-      'Autonomous, multi-step local agents & multi-agent orchestration (CrewAI, AutoGen) tested on 5 real cross-app tasks. 2 work reliably, most fail.',
+      '6 local AI agent stacks tested on 5 real tasks over 30 days: Cline + Ollama and Continue.dev work reliably, CrewAI/AutoGen and 3 others mostly fail.',
     twitterDescription:
       'Tested 6 autonomous, multi-step local AI agent stacks on 5 real cross-app tasks for 30 days. 2 worked, 3 failed in surprising ways, 1 was unusable. The honest verdict on which stacks ship work and which only ship demos.',
     current_models_mentioned: [
@@ -137,6 +137,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       realityTable: {
         id: 'reality-table',
+        itemHeadings: true,
         title: 'Agent Reality Table: Six Stacks, Five Tasks, Honest Verdicts',
         content:
           '**Two stacks finish work; three stumble in different ways; one is broken.** The verdict column is the one to read first. CrewAI and AutoGen/AG2 — the two multi-agent orchestration frameworks most readers ask about — were evaluated separately; see [Multi-Agent Orchestration: CrewAI & AutoGen/AG2](#multi-agent-orchestration) below.',
@@ -360,6 +361,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       decision: {
         id: 'decision',
+        itemHeadings: true,
         title: 'Decision: Pick Your Stack',
         content:
           '**Most people should install Cline + Ollama and stop.** The decision tree below covers the cases where another stack is the right pick.',
@@ -422,6 +424,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
+          {
+            q: 'Cline says "hit repeated tool call failures, try guiding it with a new prompt" — what does this mean?',
+            a: 'Cline\'s own safeguard against the circular-tool-call pattern this article measures: the agent called a tool, got a result it couldn\'t use, and repeated the same (or an equivalent) call enough times that Cline stopped and asked for human input instead of looping silently. It is not a bug — it is the approval gate working as designed. Fix it by giving Cline a narrower next instruction (name the exact file or function instead of repeating the original broad task), or by checking whether the underlying local model has enough context window left (a 32K-context model streaming full files can run out of room mid-task — switch to a 128K-context model like DeepSeek Coder V3 for multi-file work). If it recurs on the same file repeatedly, the model may be hallucinating a path or symbol that does not exist — open the file yourself to confirm it is real before re-prompting.',
+          },
           {
             q: 'Are autonomous AI agents actually useful in 2026?',
             a: 'Yes, but only in scoped, supervised forms. Cline + Ollama and Continue.dev Agent mode finish real tasks (multi-file refactors, exploratory debugging, scoped research) with manageable supervision cost — typically 5–12 approvals per task. The "fully autonomous" framing is still aspirational; agents pitched as unsupervised (AutoGPT-local, MetaGPT) drift, repeat work, or stall on long horizons. The right mental model is "supervised assistant", not "autonomous worker".',
@@ -613,6 +619,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       realityTable: {
         id: 'reality-table',
+        itemHeadings: true,
         title: 'Tabla de realidad de agentes: seis stacks, cinco tareas, veredictos honestos',
         content:
           '**Dos stacks terminan el trabajo; tres tropiezan de formas distintas; uno está roto.** La columna de veredicto es la que hay que leer primero. CrewAI y AutoGen/AG2 —los dos frameworks de orquestación multiagente que más preguntan los lectores— se evaluaron por separado; consulta [Orquestación multiagente: CrewAI y AutoGen/AG2](#multi-agent-orchestration) más abajo.',
@@ -836,6 +843,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       decision: {
         id: 'decision',
+        itemHeadings: true,
         title: 'Decisión: elige tu stack',
         content:
           '**La mayoría de las personas debería instalar Cline + Ollama y no continuar.** El árbol de decisión a continuación cubre los casos donde otro stack es la elección correcta.',
@@ -898,6 +906,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Preguntas frecuentes',
         faqs: [
+          {
+            q: '¿Qué significa cuando Cline dice "hit repeated tool call failures, try guiding it with a new prompt"?',
+            a: 'Es la propia salvaguarda de Cline contra el patrón de llamadas a herramientas en bucle que mide este artículo: el agente llamó a una herramienta, obtuvo un resultado que no pudo usar, y repitió la misma llamada (o una equivalente) las veces suficientes como para que Cline se detuviera y pidiera intervención humana en vez de seguir en bucle en silencio. No es un error — es el approval gate funcionando como está diseñado. Solucionalo dando a Cline una instrucción más acotada (nombra el archivo o la función exacta en vez de repetir la tarea original amplia), o revisando si al modelo local le queda suficiente contexto (un modelo de 32K puede quedarse sin espacio a mitad de tarea si transmite archivos completos — cambia a un modelo de 128K como DeepSeek Coder V3 para trabajo multi-archivo). Si se repite siempre en el mismo archivo, el modelo puede estar alucinando una ruta o símbolo que no existe — abre el archivo tú mismo para confirmarlo antes de volver a pedir.',
+          },
           {
             q: '¿Son realmente útiles los agentes de IA autónomos en 2026?',
             a: 'Sí, pero solo en formas acotadas y supervisadas. Cline + Ollama y Continue.dev en modo Agent completan tareas reales (refactorizaciones de múltiples archivos, depuración exploratoria, investigación acotada) con un coste de supervisión manejable: típicamente 5–12 aprobaciones por tarea. El encuadre "completamente autónomo" sigue siendo aspiracional; los agentes presentados como sin supervisión (AutoGPT-local, MetaGPT) derivan, repiten trabajo o se bloquean en horizontes largos. El modelo mental correcto es "asistente supervisado", no "trabajador autónomo".',
@@ -1102,6 +1114,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       realityTable: {
         id: 'reality-table',
+        itemHeadings: true,
         title: 'Tableau de réalité des agents : Six stacks, cinq tâches, verdicts honnêtes',
         content:
           '**Deux stacks terminent le travail ; trois trébuchent de différentes façons ; un est cassé.** La colonne verdict est celle à lire en premier. CrewAI et AutoGen/AG2 — les deux frameworks d\'orchestration multi-agents les plus demandés par les lecteurs — ont été évalués séparément ; voir [Orchestration multi-agents : CrewAI et AutoGen/AG2](#multi-agent-orchestration) ci-dessous.',
@@ -1325,6 +1338,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       decision: {
         id: 'decision',
+        itemHeadings: true,
         title: 'Décision : Choisissez votre stack',
         content:
           '**La plupart des gens devraient installer Cline + Ollama et arrêter.** L\'arbre de décision ci-dessous couvre les cas où un autre stack est le bon choix.',
@@ -1387,6 +1401,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Questions fréquemment posées',
         faqs: [
+          {
+            q: 'Que signifie le message de Cline « hit repeated tool call failures, try guiding it with a new prompt » ?',
+            a: 'C\'est le garde-fou propre à Cline contre le schéma d\'appels d\'outils en boucle mesuré dans cet article : l\'agent a appelé un outil, obtenu un résultat inutilisable, et répété le même appel (ou un équivalent) suffisamment de fois pour que Cline s\'arrête et demande une intervention humaine plutôt que de boucler silencieusement. Ce n\'est pas un bug — c\'est le mécanisme d\'approbation qui fonctionne comme prévu. Corrigez-le en donnant à Cline une instruction plus précise (nommez le fichier ou la fonction exacte plutôt que de répéter la tâche initiale trop large), ou vérifiez si le modèle local dispose d\'assez de contexte restant (un modèle à contexte 32K peut manquer d\'espace en cours de tâche s\'il diffuse des fichiers entiers — passez à un modèle à 128K comme DeepSeek Coder V3 pour le travail multi-fichiers). Si cela se reproduit toujours sur le même fichier, le modèle hallucine peut-être un chemin ou un symbole qui n\'existe pas — ouvrez le fichier vous-même pour vérifier avant de relancer.',
+          },
           {
             q: 'Les agents IA autonomes sont-ils vraiment utiles en 2026 ?',
             a: 'Oui, mais seulement sous des formes limitées et supervisées. Cline + Ollama et Continue.dev Agent mode terminent les tâches réelles (refontes multi-fichiers, débogage exploratoire, recherche limitée) avec un coût de supervision gérable — généralement 5–12 approbations par tâche. Les « entièrement autonomes » sont toujours aspirationnels ; les agents présentés comme sans surveillance (AutoGPT-local, MetaGPT) dérivent, répètent le travail, ou stagnent sur les longs horizons. Le bon modèle mental est « assistant supervisé », pas « travailleur autonome ».',
@@ -1758,6 +1776,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'よくある質問',
         faqs: [
         {
+          q: 'Cline が「hit repeated tool call failures, try guiding it with a new prompt」と表示するのはどういう意味ですか？',
+          a: 'これは、本記事で計測している「循環的なツール呼び出し」パターンに対する Cline 自身の安全機構です。エージェントがツールを呼び出し、使えない結果を得て、同じ（または同等の）呼び出しを一定回数繰り返したため、Cline が黙ってループし続ける代わりに停止し、人間の入力を求めた状態です。バグではなく、承認ゲートが設計どおりに機能している証拠です。対処法は、Cline に対してより狭い範囲の次の指示を与えること（元の広いタスクを繰り返すのではなく、対象のファイルや関数名を具体的に指定する）、またはローカルモデルのコンテキストウィンドウが残っているか確認することです（32K コンテキストのモデルはファイル全体をストリーミングするとタスク途中で容量不足になることがあります — マルチファイル作業には DeepSeek Coder V3 のような 128K コンテキストのモデルに切り替えてください）。同じファイルで繰り返し発生する場合、モデルが存在しないパスやシンボルを幻覚している可能性があるため、再プロンプトする前に自分でファイルを開いて確認してください。',
+        },
+        {
           q: 'ローカル AI エージェントと「クラウド API」ベースのエージェント（OpenAI Assistants API など）の主な違いは何ですか？',
           a: 'ローカルエージェント（Ollama + Cline、LangGraph）は、LLM を自分のハードウェアで実行するため、データが外部に送信されません。クラウド API ベースのエージェント（OpenAI Assistants）は、より高い精度と信頼性を提供しますが、入力データはサーバーに転送されます。ローカル実行はプライバシーと低遅延を選択し、クラウド API は精度と管理の容易性を選択する場合の代替案です。',
         },
@@ -2002,6 +2024,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       realityTable: {
         id: 'reality-table',
+        itemHeadings: true,
         title: 'Agent-Wirklichkeitstabelle: Sechs Stacks, fünf Aufgaben, ehrliche Verdikt',
         content:
           '**Zwei Stacks erledigen Arbeit; drei stolpern unterschiedlich; einer ist kaputt.** Die Verdikt-Spalte ist die erste, die zu lesen ist. CrewAI und AutoGen/AG2 — die zwei Multi-Agent-Orchestrierungs-Frameworks, nach denen Leser am häufigsten fragen — wurden separat evaluiert; siehe [Multi-Agent-Orchestrierung: CrewAI & AutoGen/AG2](#multi-agent-orchestration) weiter unten.',
@@ -2225,6 +2248,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       decision: {
         id: 'decision',
+        itemHeadings: true,
         title: 'Entscheidung: Wähle deinen Stack',
         content:
           '**Die meisten Menschen sollten Cline + Ollama installieren und anhalten.** Der Entscheidungs-Baum unten deckt die Fälle ab, wo ein anderer Stack die richtige Wahl ist.',
@@ -2287,6 +2311,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Häufig gestellte Fragen',
         faqs: [
+          {
+            q: 'Was bedeutet die Cline-Meldung "hit repeated tool call failures, try guiding it with a new prompt"?',
+            a: 'Das ist Clines eigene Schutzmaßnahme gegen das zirkuläre Tool-Call-Muster, das dieser Artikel misst: Der Agent hat ein Tool aufgerufen, ein unbrauchbares Ergebnis erhalten und denselben (oder einen gleichwertigen) Aufruf so oft wiederholt, dass Cline anhält und um menschliche Eingabe bittet, statt still weiterzuloopen. Das ist kein Bug — das ist das Approval-Gate, das wie vorgesehen funktioniert. Beheben Sie es, indem Sie Cline eine engere nächste Anweisung geben (nennen Sie die genaue Datei oder Funktion, statt die ursprüngliche breite Aufgabe zu wiederholen), oder prüfen Sie, ob dem lokalen Modell noch genug Kontextfenster bleibt (ein Modell mit 32K-Kontext kann bei vollständigem Datei-Streaming mitten in der Aufgabe der Platz ausgehen — wechseln Sie für Multi-Datei-Arbeit zu einem 128K-Kontext-Modell wie DeepSeek Coder V3). Tritt es wiederholt bei derselben Datei auf, halluziniert das Modell möglicherweise einen nicht existierenden Pfad oder ein Symbol — öffnen Sie die Datei selbst, um dies vor einem erneuten Prompt zu bestätigen.',
+          },
           {
             q: 'Sind autonome KI-Agenten 2026 wirklich nützlich?',
             a: 'Ja, aber nur in scoped, beaufsichtigten Formen. Cline + Ollama und Continue.dev Agent mode erledigen echte Aufgaben (Multi-Datei-Refactors, explorative Debugging, scoped Research) mit handhabbaren Überwachungskosten — typischerweise 5–12 Approvals pro Aufgabe. Das „vollständig autonom"-Framing ist noch immer aspirativ; Agenten, die als unbeaufsichtigt gepriesen werden (AutoGPT-local, MetaGPT), driften, wiederholen Arbeit, oder stagnieren bei langen Horizonte. Das richtige mentale Modell ist „beaufsichtigter Assistent", nicht „autonomer Arbeiter".',
@@ -2656,6 +2684,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: '常见问题',
         faqs: [
           {
+            q: 'Cline提示"hit repeated tool call failures, try guiding it with a new prompt"是什么意思？',
+            a: '这是Cline自身针对本文测量的"循环工具调用"模式的保护机制：代理调用了一个工具，得到无法使用的结果，并重复相同（或等效）调用足够多次，导致Cline停止并请求人工输入，而不是静默循环。这不是bug——而是审批机制按设计运行。解决方法：给Cline一个更精确的下一步指令（明确指定文件或函数名，而不是重复原来宽泛的任务），或检查本地模型剩余的上下文窗口是否足够（32K上下文模型在流式传输完整文件时可能中途耗尽空间——多文件任务请切换到128K上下文模型，如DeepSeek Coder V3）。如果在同一文件上反复出现，模型可能在幻觉一个不存在的路径或符号——重新提示前请自己打开文件确认。',
+          },
+          {
             q: '本地AI代理和"云API"代理（如OpenAI Assistants API）的主要区别是什么？',
             a: '本地代理（Ollama + Cline、LangGraph）在自己硬件上运行LLM，数据不外传。云API代理（OpenAI Assistants）提供更高精度和可靠性，但输入数据转移到服务器。本地运行选择隐私和低延迟，云API选择精度和管理便利。',
           },
@@ -2912,6 +2944,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       realityTable: {
         id: 'reality-table',
+        itemHeadings: true,
         title: 'Tabela da realidade dos agentes: seis stacks, cinco tarefas, vereditos honestos',
         content:
           '**Dois stacks terminam o trabalho; três tropeçam de formas diferentes; um está quebrado.** A coluna de veredito é a primeira a ler. O CrewAI e o AutoGen/AG2 — os dois frameworks de orquestração multiagente mais perguntados pelos leitores — foram avaliados separadamente; veja [Orquestração multiagente: CrewAI e AutoGen/AG2](#multi-agent-orchestration) abaixo.',
@@ -3135,6 +3168,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       decision: {
         id: 'decision',
+        itemHeadings: true,
         title: 'Decisão: escolha seu stack',
         content:
           '**A maioria das pessoas deve instalar o Cline + Ollama e parar.** A árvore de decisão abaixo cobre os casos em que outro stack é a escolha certa.',
@@ -3197,6 +3231,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Perguntas frequentes',
         faqs: [
+          {
+            q: 'O que significa quando o Cline diz "hit repeated tool call failures, try guiding it with a new prompt"?',
+            a: 'É a proteção própria do Cline contra o padrão de chamadas de ferramenta em loop que este artigo mede: o agente chamou uma ferramenta, recebeu um resultado que não conseguiu usar, e repetiu a mesma chamada (ou uma equivalente) vezes suficientes para o Cline parar e pedir intervenção humana em vez de continuar em loop silenciosamente. Não é um bug — é o approval gate funcionando como projetado. Resolva dando ao Cline uma instrução mais específica (nomeie o arquivo ou a função exata em vez de repetir a tarefa original ampla), ou verifique se o modelo local ainda tem contexto suficiente (um modelo de 32K de contexto pode ficar sem espaço no meio da tarefa ao transmitir arquivos inteiros — mude para um modelo de 128K, como o DeepSeek Coder V3, para trabalho com múltiplos arquivos). Se isso se repetir sempre no mesmo arquivo, o modelo pode estar alucinando um caminho ou símbolo que não existe — abra o arquivo você mesmo para confirmar antes de pedir novamente.',
+          },
           {
             q: 'Os agentes de IA autônomos são realmente úteis em 2026?',
             a: 'Sim, mas apenas em formas delimitadas e supervisionadas. Cline + Ollama e o modo Agent do Continue.dev concluem tarefas reais (refatorações multiarquivo, depuração exploratória, pesquisa delimitada) com custo de supervisão gerenciável — tipicamente 5–12 aprovações por tarefa. O enquadramento "totalmente autônomo" ainda é aspiracional; os agentes vendidos como sem supervisão (AutoGPT-local, MetaGPT) derivam, repetem trabalho ou travam em horizontes longos. O modelo mental certo é "assistente supervisionado", não "trabalhador autônomo".',
@@ -3401,6 +3439,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       realityTable: {
         id: 'reality-table',
+        itemHeadings: true,
         title: 'جدول واقعية الوكلاء: ستة أطر، خمس مهام، أحكام صادقة',
         content:
           '**إطاران ينجزان العمل؛ ثلاثة تعثر بطرق مختلفة؛ وواحد معطوب.** عمود الحكم هو ما يُقرأ أولاً. أُقيّم CrewAI وAutoGen/AG2 — إطارا تنسيق الوكلاء المتعددين الأكثر تساؤلاً من القراء — بشكل منفصل؛ انظر [تنسيق الوكلاء المتعددين: CrewAI وAutoGen/AG2](#multi-agent-orchestration) أدناه.',
@@ -3624,6 +3663,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       decision: {
         id: 'decision',
+        itemHeadings: true,
         title: 'القرار: اختر إطار عملك',
         content:
           '**معظم الناس ينبغي أن يثبّتوا Cline + Ollama ويتوقفوا.** شجرة القرار أدناه تغطي الحالات التي يكون فيها إطار آخر هو الاختيار الصحيح.',
@@ -3686,6 +3726,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'الأسئلة الشائعة',
         faqs: [
+          {
+            q: 'ماذا تعني رسالة Cline: "hit repeated tool call failures, try guiding it with a new prompt"؟',
+            a: 'هذه آلية حماية خاصة بـ Cline ضد نمط استدعاءات الأدوات الدائرية الذي يقيسه هذا المقال: استدعى الوكيل أداةً، وحصل على نتيجة لم يستطع استخدامها، وكرر نفس الاستدعاء (أو ما يعادله) عدداً كافياً من المرات حتى توقف Cline وطلب تدخلاً بشرياً بدلاً من الاستمرار في الحلقة بصمت. هذا ليس خطأً برمجياً — بل بوابة الموافقة تعمل كما هو مصمم لها. أصلح المشكلة بإعطاء Cline تعليمة أضيق للخطوة التالية (حدد اسم الملف أو الدالة بالضبط بدلاً من تكرار المهمة الأصلية الواسعة)، أو تحقق مما إذا كان النموذج المحلي لديه نافذة سياق كافية متبقية (نموذج بسياق 32K قد ينفد مساحته في منتصف المهمة عند بث ملفات كاملة — انتقل إلى نموذج بسياق 128K مثل DeepSeek Coder V3 للعمل متعدد الملفات). إذا تكرر الأمر دائماً على نفس الملف، فقد يكون النموذج يهلوس مساراً أو رمزاً غير موجود — افتح الملف بنفسك للتأكد قبل إعادة المطالبة.',
+          },
           {
             q: 'هل وكلاء الذكاء الاصطناعي المستقلون مفيدون فعلاً في 2026؟',
             a: 'نعم، لكن فقط بأشكال محدودة وخاضعة للإشراف. Cline + Ollama ووضع Agent في Continue.dev يُكملان مهاماً حقيقية (إعادة هيكلة متعددة الملفات، وتصحيح أخطاء استكشافي، وبحث محدود) بتكلفة إشراف قابلة للإدارة — عادةً 5–12 موافقة لكل مهمة. إطار "المستقل كلياً" لا يزال طموحاً؛ الوكلاء المُقدَّمون كغير خاضعين للإشراف (AutoGPT المحلي وMetaGPT) ينجرفون ويكررون عملاً أو يتعطلون في الآفاق الطويلة. النموذج الذهني الصحيح هو "مساعد تحت الإشراف" لا "عامل مستقل".',
@@ -3890,6 +3934,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       realityTable: {
         id: 'reality-table',
+        itemHeadings: true,
         title: '에이전트 현실 테이블: 6개 스택, 5가지 작업, 정직한 평가',
         content:
           '**두 스택은 작업을 완수하고, 세 스택은 각자 다른 방식으로 실패하며, 하나는 망가져 있습니다.** 평가 열을 먼저 읽으십시오. 독자들이 가장 많이 묻는 두 가지 멀티에이전트 오케스트레이션 프레임워크인 CrewAI와 AutoGen/AG2는 별도로 평가했습니다. 아래 [멀티에이전트 오케스트레이션: CrewAI 및 AutoGen/AG2](#multi-agent-orchestration)를 참고하십시오.',
@@ -4113,6 +4158,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       decision: {
         id: 'decision',
+        itemHeadings: true,
         title: '결정: 스택 선택',
         content:
           '**대부분의 사람들은 Cline + Ollama를 설치하고 더 이상 읽지 말아야 합니다.** 아래 결정 트리는 다른 스택이 올바른 선택인 경우를 다룹니다.',
@@ -4175,6 +4221,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
+          {
+            q: 'Cline이 "hit repeated tool call failures, try guiding it with a new prompt"라고 표시하면 무슨 뜻입니까?',
+            a: '이 문서가 측정하는 순환 도구 호출 패턴에 대한 Cline 자체의 안전장치입니다. 에이전트가 도구를 호출했지만 사용할 수 없는 결과를 받았고, 동일한(또는 동등한) 호출을 충분히 여러 번 반복하여 Cline이 조용히 계속 반복하는 대신 멈추고 사람의 입력을 요청한 상태입니다. 버그가 아니라 승인 게이트가 설계대로 작동하는 것입니다. 해결하려면 Cline에게 더 좁은 범위의 다음 지시를 내리십시오(원래의 광범위한 작업을 반복하는 대신 정확한 파일이나 함수 이름을 지정하십시오). 또는 로컬 모델에 남은 컨텍스트 윈도우가 충분한지 확인하십시오(32K 컨텍스트 모델은 전체 파일을 스트리밍할 때 작업 도중 공간이 부족해질 수 있습니다 — 다중 파일 작업에는 DeepSeek Coder V3와 같은 128K 컨텍스트 모델로 전환하십시오). 동일한 파일에서 반복적으로 발생하면 모델이 존재하지 않는 경로나 심볼을 환각하고 있을 수 있습니다 — 다시 프롬프트하기 전에 직접 파일을 열어 확인하십시오.',
+          },
           {
             q: '2026년에 자율 AI 에이전트가 실제로 유용합니까?',
             a: '네, 그러나 범위가 제한되고 감독받는 방식에서만입니다. Cline + Ollama와 Continue.dev Agent 모드는 관리 가능한 감독 비용으로 실제 작업(다중 파일 리팩터링, 탐색적 디버깅, 범위 제한적 리서치)을 완수합니다. 작업당 일반적으로 5–12번 승인입니다. "완전 자율" 프레이밍은 여전히 열망적입니다. 무감독으로 제시된 에이전트(AutoGPT-local, MetaGPT)는 표류하거나, 작업을 반복하거나, 긴 계획 범위에서 막힙니다. 올바른 정신 모델은 "감독받는 어시스턴트"이며, "자율 작업자"가 아닙니다.',

@@ -584,6 +584,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       faq: {
         id: 'faq',
         faqs: [
+          { q: 'Was bedeutet MLX?', a: 'MLX ist Apples eigenes Machine-Learning-Framework, speziell für Apple Silicon entwickelt. Es bietet eine NumPy-ähnliche Python-API, Lazy Evaluation und Unified-Memory-Optimierung sowie natives LoRA/QLoRA-Fine-Tuning. MLX steht in keiner Beziehung zu Ollama oder llama.cpp — das sind separate Inference-Engines. Auf Apple Silicon ist MLX typischerweise 10–25% schneller als Ollama, läuft aber nur mit MLX-Format-Modellen und nur unter macOS.' },
           { q: 'Welches Framework ist am schnellsten?', a: 'MLX, 15–25% schneller als Ollama auf Apple Silicon. llama.cpp ist vergleichbar mit Ollama. Der Geschwindigkeitsunterschied ist nur bei großen Modellen (70B+) relevant; für 8B sind alle schnell genug.' },
           { q: 'Kann ich später das Framework wechseln?', a: 'Ja. Ollama heute installieren, morgen zu MLX wechseln. Modelle sind kompatibel (nur in verschiedenen Formaten). Kein Lock-in.' },
           { q: 'Ist MLX nur für Python?', a: 'MLX hat eine native Python-API, kann aber über Subprocess oder HTTP-Server-Wrapper aus anderen Sprachen aufgerufen werden. Am besten von Python aus verwendet.' },
@@ -898,6 +899,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       faq: {
         id: 'faq',
         faqs: [
+          { q: 'Que signifie MLX ?', a: "MLX est le framework de machine learning propre à Apple, conçu spécifiquement pour Apple Silicon. Il offre une API Python de type NumPy, l'évaluation paresseuse (lazy evaluation) et une optimisation de la mémoire unifiée, ainsi qu'un fine-tuning LoRA/QLoRA natif. MLX n'a aucun rapport avec Ollama ou llama.cpp — ce sont des moteurs d'inférence distincts. Sur Apple Silicon, MLX est généralement 10 à 25 % plus rapide qu'Ollama, mais il n'exécute que des modèles au format MLX, et uniquement sur macOS." },
           { q: 'Quel framework est le plus rapide ?', a: "MLX, 15–25% plus rapide qu'Ollama sur Apple Silicon. llama.cpp est comparable à Ollama. La différence de vitesse ne s'observe que sur les grands modèles (70B+) ; pour les 8B, tous sont suffisamment rapides." },
           { q: 'Puis-je changer de framework plus tard ?', a: "Oui. Installez Ollama aujourd'hui, passez à MLX demain. Les modèles sont compatibles (juste en formats différents). Pas de verrouillage." },
           { q: 'MLX est-il uniquement pour Python ?', a: "MLX possède une API Python native, mais vous pouvez l'appeler depuis d'autres langages via subprocess ou un wrapper de serveur HTTP. Meilleure utilisation depuis Python." },
@@ -1225,6 +1227,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       faq: {
         id: 'faq',
         faqs: [
+          { q: 'MLXとは何ですか？', a: 'MLXはApple Silicon専用に構築された、Apple独自の機械学習フレームワークです。NumPyライクなPython API、遅延評価（lazy evaluation）、ユニファイドメモリ最適化を提供し、LoRA/QLoRAのネイティブなファインチューニングにも対応しています。Ollamaやllama.cppとは無関係で、それぞれ別のインファレンスエンジンです。Apple Silicon上では、MLXは一般的にOllamaより10〜25%高速ですが、MLX形式のモデルのみ、macOS上でのみ動作します。' },
           { q: 'どのフレームワークが最速ですか？', a: 'Apple Silicon上でMLXがOllamaより15〜25%高速。llama.cppはOllamaと同程度。速度の差は大型モデル（70B以上）でのみ重要；8Bはすべて十分な速度。' },
           { q: '後でフレームワークを変更できますか？', a: 'はい。今日Ollamaをインストールし、明日MLXに切り替え可能。モデルは互換性あり（フォーマットが異なるだけ）。ロックインなし。' },
           { q: 'MLXはPythonのみですか？', a: 'MLXはPythonネイティブAPIを持ちますが、サブプロセスやHTTPサーバーラッパーを通じて他の言語からも呼び出せます。Pythonからの使用が最適。' },
@@ -1552,6 +1555,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       faq: {
         id: 'faq',
         faqs: [
+          { q: 'MLX是什么意思？', a: 'MLX是Apple自研的机器学习框架，专为Apple Silicon打造。它提供类NumPy的Python API、惰性求值（lazy evaluation）和统一内存优化，并原生支持LoRA/QLoRA微调。MLX与Ollama或llama.cpp无关——它们是各自独立的推理引擎。在Apple Silicon上，MLX通常比Ollama快10–25%，但仅运行MLX格式的模型，且仅支持macOS。' },
           { q: '哪个框架最快？', a: 'MLX在Apple Silicon上比Ollama快15–25%。llama.cpp与Ollama相当。速度差异仅在大型模型（70B+）上明显；对于8B，三者速度均足够快。' },
           { q: '以后可以切换框架吗？', a: '可以。今天安装Ollama，明天换成MLX。模型兼容（只是格式不同）。无厂商锁定。' },
           { q: 'MLX只能用Python吗？', a: 'MLX有Python原生API，但也可以通过子进程或HTTP服务器封装从其他语言调用。最好从Python使用。' },
@@ -1867,6 +1871,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       faq: {
         id: 'faq',
         faqs: [
+          { q: '¿Qué significa MLX?', a: 'MLX es el propio framework de machine learning de Apple, creado específicamente para Apple Silicon. Ofrece una API de Python al estilo NumPy, evaluación diferida (lazy evaluation) y optimización de memoria unificada, además de fine-tuning nativo con LoRA/QLoRA. MLX no tiene relación con Ollama ni con llama.cpp — son motores de inferencia independientes. En Apple Silicon, MLX suele ser un 10–25% más rápido que Ollama, pero solo ejecuta modelos en formato MLX y únicamente en macOS.' },
           { q: '¿Qué framework es el más rápido?', a: 'MLX, un 15–25% más rápido que Ollama en Apple Silicon. llama.cpp es comparable a Ollama. La diferencia de velocidad solo importa en modelos grandes (70B+); para 8B, los tres son suficientemente rápidos.' },
           { q: '¿Puedo cambiar de framework más adelante?', a: 'Sí. Instala Ollama hoy, cambia a MLX mañana. Los modelos son compatibles (solo en formatos distintos). Sin dependencia de proveedor.' },
           { q: '¿MLX es solo para Python?', a: 'MLX tiene una API Python nativa, pero puedes llamarlo desde otros lenguajes mediante subprocess o un wrapper de servidor HTTP. Lo óptimo es usarlo desde Python.' },
@@ -2176,6 +2181,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       faq: {
         id: 'faq',
         faqs: [
+          { q: 'ماذا يعني MLX؟', a: 'MLX هو إطار عمل التعلم الآلي الخاص بشركة Apple، مصمم خصيصاً لمعالجات Apple Silicon. يوفر واجهة برمجة بايثون شبيهة بـ NumPy، وتقييماً كسولاً (lazy evaluation)، وتحسيناً للذاكرة الموحدة، إضافةً إلى دعم أصلي للضبط الدقيق LoRA/QLoRA. لا علاقة لـ MLX بـ Ollama أو llama.cpp — فهما محركا استدلال منفصلان. على معالجات Apple Silicon، يكون MLX عادةً أسرع من Ollama بنسبة 10–25%، لكنه يشغّل فقط النماذج بصيغة MLX، وعلى macOS فقط.' },
           { q: 'أي إطار عمل هو الأسرع؟', a: 'MLX، أسرع بنسبة 15–25% من Ollama على Apple Silicon. llama.cpp مماثل لـ Ollama. لا يهم فرق السرعة إلا في النماذج الكبيرة (70B+)؛ لنموذج 8B، الثلاثة سريعة بما يكفي.' },
           { q: 'هل يمكنني تغيير إطار العمل لاحقًا؟', a: 'نعم. ثبّت Ollama اليوم، وانتقل إلى MLX غدًا. النماذج متوافقة (بصيغ مختلفة فقط). بلا ارتباط بمزوّد.' },
           { q: 'هل MLX لـ Python فقط؟', a: 'لـ MLX واجهة Python أصلية، لكن يمكنك استدعاؤه من لغات أخرى عبر subprocess أو غلاف خادم HTTP. الأمثل استخدامه من Python.' },
@@ -2373,6 +2379,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       faq: {
         id: 'faq',
         faqs: [
+          {
+            q: 'O que significa MLX?',
+            a: 'O MLX é o framework de machine learning próprio da Apple, criado especificamente para o Apple Silicon. Ele oferece uma API Python no estilo NumPy, avaliação preguiçosa (lazy evaluation) e otimização de memória unificada, além de fine-tuning nativo com LoRA/QLoRA. O MLX não tem relação com o Ollama ou o llama.cpp — são engines de inferência separadas. No Apple Silicon, o MLX costuma ser 10–25% mais rápido que o Ollama, mas só executa modelos no formato MLX e apenas no macOS.',
+          },
           {
             q: 'Posso usar Ollama e MLX ao mesmo tempo no mesmo Mac?',
             a: 'Sim. O Ollama roda como um daemon em segundo plano na porta 11434. O MLX é uma biblioteca Python que você importa. Eles não conflitam. Você pode ter ambos instalados e usar cada um para diferentes tarefas.',
@@ -2702,6 +2712,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       faq: {
         id: 'faq',
         faqs: [
+          { q: 'MLX는 무슨 뜻입니까?', a: 'MLX는 Apple Silicon 전용으로 만들어진 Apple 자체 머신러닝 프레임워크입니다. NumPy와 유사한 Python API, 지연 평가(lazy evaluation), 통합 메모리 최적화를 제공하며 LoRA/QLoRA 파인튜닝도 기본 지원합니다. MLX는 Ollama나 llama.cpp와는 관련이 없습니다 — 이들은 별개의 추론 엔진입니다. Apple Silicon에서 MLX는 일반적으로 Ollama보다 10~25% 빠르지만, MLX 형식 모델만 실행 가능하며 macOS에서만 작동합니다.' },
           { q: '어느 프레임워크가 가장 빠릅니까?', a: 'MLX이며, Apple Silicon에서 Ollama보다 15~25% 빠릅니다. llama.cpp는 Ollama와 비슷한 수준입니다. 속도 차이는 대형 모델(70B 이상)에서만 체감되며, 8B 모델에서는 세 가지 모두 충분히 빠릅니다.' },
           { q: '나중에 프레임워크를 바꿀 수 있습니까?', a: '예. 오늘 Ollama를 설치하고 내일 MLX로 전환할 수 있습니다. 모델은 호환됩니다(포맷만 다름). 종속성이 없습니다.' },
           { q: 'MLX는 Python 전용입니까?', a: 'MLX는 Python 네이티브 API를 갖고 있지만, subprocess나 HTTP 서버 래퍼를 통해 다른 언어에서도 호출할 수 있습니다. Python에서 사용하는 것이 가장 좋습니다.' },

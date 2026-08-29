@@ -833,5 +833,61 @@
     ],
     "reason": "Page 26 batch: dominant query language across ~8 queries (over 130 impr combined) is self host/self-hosted, but title/meta only said Local Deployment - literal-match gap. Also top single query qwen3.8 local (61 impr, pos 8.3, 0% CTR) is a naming-confusion search (no Qwen 3.8 exists); added a direct disambiguation FAQ alongside the existing no 7B entry. Sibling page /local-llms/qwen-local-deployment-guide-2026 flagged separately as a possible cannibalization pair, not addressed here.",
     "baseline": null
+  },
+  {
+    "id": "fbf00832-2f36-40c9-9013-7316fec2e634",
+    "slug": "/power-local-llm/autonomous-local-agents-actually-work",
+    "date": "2026-08-29T12:12:52.405Z",
+    "fields": [
+      {
+        "field": "seoTitle,metaDescription,faqs (en)",
+        "old": "Local AI Agents 2026: Multi-Agent Orchestration Tested | no FAQ for Cline repeated tool call failures error",
+        "new": "Local AI Agents 2026: 6 Stacks, Orchestration Tested | added Cline hit repeated tool call failures troubleshooting FAQ"
+      }
+    ],
+    "reason": "Page 27 batch: title/meta already reasonably matched core local ai agent(s)/orchestration queries; added a number (6 Stacks) per Rule 2d and named Cline explicitly in meta since it is the articles top recommendation and most-mentioned entity (419x in body) yet absent from meta. Bigger gap: the literal Cline in-app error message cline hit repeated tool call failures... try guiding it with a new prompt (36+4=40 impr combined, pos 9.1/11.8, 0% CTR) is a real troubleshooting query the body never directly answers - only discusses circular tool calls for the frameworks that fail, not for Cline itself. Added a direct FAQ entry.",
+    "baseline": null
+  },
+  {
+    "id": "de7371f8-73d4-4ab1-9f21-f848fc7115a0",
+    "slug": "/local-llms/mlx-vs-ollama-vs-llama-cpp-mac",
+    "date": "2026-08-29T12:20:08.153Z",
+    "fields": [
+      {
+        "field": "faqs (all 8 non-EN locales)",
+        "old": "What does MLX mean? FAQ was EN-only",
+        "new": "Added translated equivalent to de, fr, ja, zh, es, ar, pt, ko faqs arrays"
+      }
+    ],
+    "reason": "Follow-up to page 24: new body content must not ship EN-only per site convention. Translated the FAQ entry into all 8 non-EN locales, preserving array position/order and keeping technical terms (MLX, Ollama, llama.cpp, NumPy, LoRA/QLoRA) in Latin script per each locale's existing terminology conventions.",
+    "baseline": null
+  },
+  {
+    "id": "e82022d9-d64b-49eb-b669-333a12fa6b04",
+    "slug": "/power-local-llm/qwen-local-deployment-complete-guide-2026",
+    "date": "2026-08-29T12:20:15.933Z",
+    "fields": [
+      {
+        "field": "faqs (all 8 non-EN locales)",
+        "old": "Is there a Qwen 3.8 model? FAQ was EN-only",
+        "new": "Added translated equivalent to de, fr, ja, zh, es, pt, ar, ko faqs arrays"
+      }
+    ],
+    "reason": "Follow-up to page 26: new body content must not ship EN-only. Translated the Qwen 3.8 disambiguation FAQ into all 8 non-EN locales, preserving array position and model/CLI-command naming (Qwen3-8B, Qwen 3.6, ollama pull commands) verbatim per geo-translation rules.",
+    "baseline": null
+  },
+  {
+    "id": "093d38ca-5734-4d21-bbee-a71b8141cc21",
+    "slug": "/power-local-llm/autonomous-local-agents-actually-work",
+    "date": "2026-08-29T12:20:26.895Z",
+    "fields": [
+      {
+        "field": "seoTitle,metaDescription,faqs (en + all 8 locales)",
+        "old": "Local AI Agents 2026: Multi-Agent Orchestration Tested | no FAQ for Cline repeated tool call failures error, EN only",
+        "new": "Local AI Agents 2026: 6 Stacks, Orchestration Tested | added Cline tool-call-failure troubleshooting FAQ, translated to all 9 languages"
+      }
+    ],
+    "reason": "Page 27 batch: title/meta gap - added number (6 Stacks) and named Cline explicitly in meta despite it being the top recommendation and most-mentioned entity (419x). Real gap: literal Cline error message cline hit repeated tool call failures... try guiding it with a new prompt (36+4=40 impr, pos 9.1/11.8, 0% CTR) had no direct FAQ answer. Added troubleshooting FAQ in EN plus natural (non-literal) translations in all 8 other locales, matching each locale's register rules (Sie/Vous/desu-masu/hapnida forms, tech terms kept in Latin script).",
+    "baseline": null
   }
 ]

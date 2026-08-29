@@ -666,6 +666,10 @@ docker run --gpus all \\
         title: 'Häufig gestellte Fragen',
         faqs: [
           {
+            q: 'Gibt es ein Qwen 3.8 Modell?',
+            a: 'Nein — "Qwen 3.8" ist keine reale Version. Gemeint ist wahrscheinlich Qwen3-8B (`ollama pull qwen3:8b`, 8 Milliarden Parameter) oder Qwen 3.6 (`ollama pull qwen3.6:27b`), ein neueres, im Coding stärkeres Release von Alibaba in derselben VRAM-Klasse wie Qwen3 32B. Alibabas Versionierung besteht aus Qwen3 (Dense-Größen 0,6B–32B) und dem separaten Qwen 3.6 Point-Release — eine "3.8" gibt es in keiner der beiden Reihen.',
+          },
+          {
             q: 'Gibt es ein Qwen3 7B Modell?',
             a: 'Nein. Die Qwen3-Dense-Reihe umfasst 0,6B, 1,7B, 4B, 8B, 14B und 32B — es gibt kein 7B. Wer nach "Qwen3 7B" gesucht hat, findet als nächstliegendes Modell Qwen3-8B (`ollama pull qwen3:8b`), das bei Q4_K_M ~5–6 GB VRAM belegt und auf einer RTX 3060 12 GB rund 25 tok/s erreicht. Für ein 72B-Klasse-Modell nutzen Sie Qwen2.5-72B.',
           },
@@ -788,6 +792,10 @@ docker run --gpus all \\
         id: 'faq',
         title: 'Questions fréquentes',
         faqs: [
+          {
+            q: 'Existe-t-il un modèle Qwen 3.8 ?',
+            a: "Non — « Qwen 3.8 » n'est pas une version réelle. Vous voulez probablement dire Qwen3-8B (`ollama pull qwen3:8b`, 8 milliards de paramètres) ou Qwen 3.6 (`ollama pull qwen3.6:27b`), une version plus récente et plus performante en code publiée par Alibaba, dans la même classe de VRAM que Qwen3 32B. Le versionnement d'Alibaba se compose de Qwen3 (tailles denses de 0,6B à 32B) et de la version ponctuelle distincte Qwen 3.6 — il n'existe de « 3.8 » dans aucune des deux gammes.",
+          },
           {
             q: 'Existe-t-il un modèle Qwen3 7B ?',
             a: 'Non. La gamme dense de Qwen3 comprend 0,6B, 1,7B, 4B, 8B, 14B et 32B — il n\'y a pas de 7B. Si vous avez cherché « Qwen3 7B », le modèle le plus proche est Qwen3-8B (`ollama pull qwen3:8b`), qui occupe ~5–6 Go de VRAM en Q4_K_M et atteint environ 25 tok/s sur une RTX 3060 12 Go. Pour un modèle de classe 72B, utilisez Qwen2.5-72B.',
@@ -919,6 +927,10 @@ docker run --gpus all \\
         id: 'faq',
         title: 'よくある質問',
         faqs: [
+          {
+            q: 'Qwen 3.8というモデルは存在しますか？',
+            a: 'いいえ——「Qwen 3.8」という実在のリリースはありません。おそらくQwen3-8B（`ollama pull qwen3:8b`、80億パラメータ）か、Qwen 3.6（`ollama pull qwen3.6:27b`、Qwen3 32Bと同じVRAM帯でコーディング性能が強化されたAlibabaの新しいリリース）のことを指していると考えられます。Alibabaのバージョン体系はQwen3（denseサイズ0.6B〜32B）と、別系統のポイントリリースであるQwen 3.6で構成されており、どちらのラインにも「3.8」は存在しません。',
+          },
           {
             q: 'Qwen3 7Bモデルは存在しますか？',
             a: 'いいえ。Qwen3のdenseラインナップは0.6B・1.7B・4B・8B・14B・32Bで、7Bはありません。「Qwen3 7B」を探していた場合、最も近いモデルはQwen3-8B（`ollama pull qwen3:8b`）で、Q4_K_Mで約5〜6GBのVRAMに収まり、RTX 3060 12GBで約25 tok/sで動作します。72Bクラスが必要な場合はQwen2.5-72Bを使用してください。',
@@ -1073,6 +1085,10 @@ docker run --gpus all \\
         id: 'faq',
         title: '常见问题',
         faqs: [
+          {
+            q: '有Qwen 3.8这个型号吗？',
+            a: '没有——"Qwen 3.8"并非真实存在的版本。你很可能想找的是Qwen3-8B（`ollama pull qwen3:8b`，80亿参数）或Qwen 3.6（`ollama pull qwen3.6:27b`），后者是阿里巴巴发布的更新、编码能力更强的版本，与Qwen3 32B处于相同的显存档位。阿里巴巴的版本体系由Qwen3（dense尺寸0.6B–32B）和独立的Qwen 3.6点版本组成——这两条线中都不存在"3.8"。',
+          },
           {
             q: '有Qwen3 7B型号吗？',
             a: '没有。Qwen3的dense系列为0.6B、1.7B、4B、8B、14B和32B——没有7B。如果你搜索的是"Qwen3 7B"，最接近的型号是Qwen3-8B（`ollama pull qwen3:8b`），在Q4_K_M下约占用5–6GB显存，在RTX 3060 12GB上约为25 tok/s。如需72B级别的模型，请使用Qwen2.5-72B。',
@@ -1550,6 +1566,10 @@ docker run --gpus all \\
         id: 'faq',
         title: 'Preguntas frecuentes',
         faqs: [
+          {
+            q: '¿Existe un modelo Qwen 3.8?',
+            a: 'No — "Qwen 3.8" no es una versión real. Probablemente te refieras a Qwen3-8B (`ollama pull qwen3:8b`, 8 mil millones de parámetros) o a Qwen 3.6 (`ollama pull qwen3.6:27b`), un lanzamiento más reciente de Alibaba con mejor rendimiento en código, en la misma categoría de VRAM que Qwen3 32B. El versionado de Alibaba consiste en Qwen3 (tamaños densos de 0,6B a 32B) y el lanzamiento puntual independiente Qwen 3.6 — no existe un "3.8" en ninguna de las dos líneas.',
+          },
           {
             q: '¿Existe un modelo Qwen3 7B?',
             a: 'No. La gama densa de Qwen3 es 0,6B, 1,7B, 4B, 8B, 14B y 32B — no hay 7B. Si buscabas "Qwen3 7B", el modelo más cercano es Qwen3-8B (`ollama pull qwen3:8b`), que ocupa ~5–6 GB de VRAM en Q4_K_M y alcanza unos 25 tok/s en una RTX 3060 12 GB. Para un modelo de clase 72B, usa Qwen2.5-72B.',
@@ -2093,6 +2113,10 @@ docker run --gpus all \\
         title: 'Perguntas frequentes',
         faqs: [
           {
+            q: 'Existe um modelo Qwen 3.8?',
+            a: 'Não — "Qwen 3.8" não é um lançamento real. Você provavelmente quer dizer Qwen3-8B (`ollama pull qwen3:8b`, 8 bilhões de parâmetros) ou Qwen 3.6 (`ollama pull qwen3.6:27b`), um lançamento mais novo e com melhor desempenho em código da Alibaba, na mesma faixa de VRAM do Qwen3 32B. O versionamento da Alibaba é composto pelo Qwen3 (tamanhos densos de 0,6B a 32B) e pelo lançamento pontual separado Qwen 3.6 — não existe um "3.8" em nenhuma das duas linhas.',
+          },
+          {
             q: 'Existe um modelo Qwen3 7B?',
             a: 'Não. A linha densa do Qwen3 é 0,6B, 1,7B, 4B, 8B, 14B e 32B — não há 7B. Se você buscou "Qwen3 7B", o modelo mais próximo é o Qwen3-8B (`ollama pull qwen3:8b`), que ocupa ~5–6 GB de VRAM em Q4_K_M e roda cerca de 25 tok/s em uma RTX 3060 12 GB. Para um modelo da classe 72B, use o Qwen2.5-72B.',
           },
@@ -2497,6 +2521,10 @@ docker exec -e CUDA_VISIBLE_DEVICES=0,1 ollama ollama run qwen2.5:72b`,
         id: 'faq',
         title: 'الأسئلة الشائعة',
         faqs: [
+          {
+            q: 'هل يوجد نموذج Qwen 3.8؟',
+            a: 'لا — "Qwen 3.8" ليس إصداراً حقيقياً. على الأرجح تقصد Qwen3-8B (`ollama pull qwen3:8b`، بـ8 مليارات معامل) أو Qwen 3.6 (`ollama pull qwen3.6:27b`)، وهو إصدار أحدث وأقوى في البرمجة من Alibaba يقع ضمن نفس فئة VRAM الخاصة بـ Qwen3 32B. يتكون ترقيم Alibaba من Qwen3 (بأحجام كثيفة من 0.6B إلى 32B) وإصدار Qwen 3.6 المنفصل — ولا يوجد "3.8" في أي من السلسلتين.',
+          },
           {
             q: 'هل يوجد نموذج Qwen3 7B؟',
             a: 'لا. تشكيلة Qwen3 الكثيفة هي 0.6B و1.7B و4B و8B و14B و32B — لا يوجد 7B. إذا بحثت عن "Qwen3 7B"، فإن أقرب نموذج هو Qwen3-8B (`ollama pull qwen3:8b`)، الذي يتسع ضمن ~5–6 جيجابايت من VRAM بتكميم Q4_K_M ويعمل بنحو 25 رمز/ثانية على RTX 3060 بـ 12 جيجابايت. ولنموذج من فئة 72B، استخدم Qwen2.5-72B.',
@@ -3005,6 +3033,10 @@ docker run --gpus all \
         id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
+          {
+            q: 'Qwen 3.8 모델이 있습니까?',
+            a: '아니요 — "Qwen 3.8"은 실제 출시된 버전이 아닙니다. Qwen3-8B(`ollama pull qwen3:8b`, 80억 파라미터) 또는 Qwen 3.6(`ollama pull qwen3.6:27b`, Qwen3 32B와 동일한 VRAM 등급이며 코딩 성능이 더 강화된 알리바바의 최신 릴리스)을 찾으시는 것일 가능성이 높습니다. 알리바바의 버전 체계는 Qwen3(0.6B~32B의 dense 크기)와 별도의 Qwen 3.6 포인트 릴리스로 구성되며, 두 라인 어디에도 "3.8"은 존재하지 않습니다.',
+          },
           {
             q: 'Qwen3 7B 모델이 있습니까?',
             a: '없습니다. Qwen3 dense 라인업은 0.6B, 1.7B, 4B, 8B, 14B, 32B이며 7B는 없습니다. "Qwen3 7B"를 검색했다면 가장 가까운 모델은 Qwen3-8B(`ollama pull qwen3:8b`)이며, Q4_K_M에서 VRAM 약 5~6 GB에 맞고 RTX 3060 12 GB에서 약 25 tok/s로 동작합니다. 72B급 모델이 필요하면 Qwen2.5-72B를 사용하세요.',
