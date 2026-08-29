@@ -819,5 +819,19 @@
     ],
     "reason": "geo-meta-optimizer page 24: title/meta already strong (43-char title, 143-char meta, hits top-3 query terms, correct 2026/semi_annual handling) - diagnosis B3 light coverage gap, not a title issue. A ~140-impression cluster of 0%-CTR definitional queries (what does mlx mean in ollama, mlx meaning ollama, what is mlx in ollama, +6 more variants) had no direct FAQ answer, only an indirect explanation buried in a body section. Body-only fix, title/meta untouched.",
     "baseline": null
+  },
+  {
+    "id": "76a6e12a-3598-4b84-993f-1bbe682b9fc5",
+    "slug": "/power-local-llm/qwen-local-deployment-complete-guide-2026",
+    "date": "2026-08-29T12:07:43.177Z",
+    "fields": [
+      {
+        "field": "seoTitle,metaDescription,faqs (en)",
+        "old": "Qwen3 Local Deployment 2026: 8B, 14B, 32B + Docker API | no FAQ for the qwen 3.8 naming confusion",
+        "new": "Self-Host Qwen3 2026: 8B, 14B, 32B + Docker API | added Is there a Qwen 3.8 model? FAQ"
+      }
+    ],
+    "reason": "Page 26 batch: dominant query language across ~8 queries (over 130 impr combined) is self host/self-hosted, but title/meta only said Local Deployment - literal-match gap. Also top single query qwen3.8 local (61 impr, pos 8.3, 0% CTR) is a naming-confusion search (no Qwen 3.8 exists); added a direct disambiguation FAQ alongside the existing no 7B entry. Sibling page /local-llms/qwen-local-deployment-guide-2026 flagged separately as a possible cannibalization pair, not addressed here.",
+    "baseline": null
   }
 ]

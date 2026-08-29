@@ -11,13 +11,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-26',
-    dateModified: '2026-08-27',
+    dateModified: '2026-08-29',
     next_refresh_due: '2027-02-27',
     theme: 'Overview & Reference',
     title: 'Qwen3 Local Deployment: Complete Production Guide (2026)',
-    seoTitle: 'Qwen3 Local Deployment 2026: 8B, 14B, 32B + Docker API',
+    seoTitle: 'Self-Host Qwen3 2026: 8B, 14B, 32B + Docker API',
     metaDescription:
-      'Deploy Qwen3 locally: 8B, 14B and 32B via Ollama/vLLM with a Docker API server, hardware picks, and multi-GPU. Note — Qwen3 has no 7B; use the 8B (qwen3:8b). 2026 guide.',
+      'Self-host Qwen3 locally: 8B, 14B and 32B via Ollama/vLLM, hardware requirements, Docker API, and multi-GPU setup. Qwen3 has no 7B — use the 8B (qwen3:8b).',
     heroImage: '/images/qwen-local-deployment-complete-guide-2026-hardware-performance-hero-en.webp',
     twitterDescription:
       'Qwen3 8B runs at 25 tok/s on an RTX 3060. Qwen2.5-72B needs dual RTX 4090s or a cloud GPU. Full Docker, API server, and multi-GPU setup guide for 2026.',
@@ -421,6 +421,10 @@ docker run --gpus all \\
           {
             q: 'Is there a Qwen3 7B model?',
             a: 'No. The Qwen3 dense lineup is 0.6B, 1.7B, 4B, 8B, 14B, and 32B — there is no 7B. If you searched "Qwen3 7B", the closest model is Qwen3-8B (`ollama pull qwen3:8b`), which fits ~5–6 GB of VRAM at Q4_K_M and runs about 25 tok/s on an RTX 3060 12 GB. For a 72B-class model, use Qwen2.5-72B.',
+          },
+          {
+            q: 'Is there a Qwen 3.8 model?',
+            a: 'No — "Qwen 3.8" is not a real release. You most likely mean Qwen3-8B (`ollama pull qwen3:8b`, 8 billion parameters) or Qwen 3.6 (`ollama pull qwen3.6:27b`), a newer, stronger-coding release from Alibaba in the same VRAM tier as Qwen3 32B. Alibaba\'s versioning is Qwen3 (dense sizes 0.6B–32B) and the separate Qwen 3.6 point release — there is no "3.8" in either line.',
           },
           {
             q: 'Can I run Qwen2.5-72B on a single RTX 4090?',
