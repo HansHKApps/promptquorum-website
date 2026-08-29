@@ -931,5 +931,19 @@
     ],
     "reason": "Correction to page 30 changelog entry: this article's ko locale block exists (found at line 2266, uses inconsistent 2-space indentation vs other locales' 4-space, which caused my earlier grep to miss it and wrongly report the article as ko-less). Completing the 32K FAQ translation set across all 9 languages.",
     "baseline": null
+  },
+  {
+    "id": "f5b3212b-1f14-434b-94f1-43e87e609148",
+    "slug": "/local-llms/local-llms-with-vscode-cursor",
+    "date": "2026-08-29T12:54:40.231Z",
+    "fields": [
+      {
+        "field": "faqs (all 9 locales), faqSchema (en + 7 locales with faqSchema)",
+        "old": "EN faqSchema had 10 questions but visible faqs only rendered 4 - structured-data/visible-content mismatch. All 8 non-EN locales only had the same 4 questions in both faqs and faqSchema (ko has no faqSchema field at all, pre-existing gap not fixed).",
+        "new": "Synced EN visible faqs to all 10 schema questions. Translated the 6 previously-EN-only questions (best autocomplete model, does Cursor support local LLMs natively, min VRAM, Continue.dev setup, code review/chat in VS Code, Ollama-not-running troubleshooting) into all 8 non-EN locales' faqs, and into faqSchema for the 7 locales that have one."
+      }
+    ],
+    "reason": "Page 31 batch: top 2 query clusters (best autocomplete model ~27 impr combined, does cursor support local llm ~15 impr combined, both 0% CTR) exactly matched 2 of the 6 EN-only schema questions never rendered on the page. Fixed the schema/visible-content mismatch for EN and closed the resulting 8-locale translation gap per user direction, rather than leaving new content EN-only.",
+    "baseline": null
   }
 ]

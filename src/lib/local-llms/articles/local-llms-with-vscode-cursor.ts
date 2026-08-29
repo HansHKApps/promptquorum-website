@@ -12,7 +12,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       theme: 'Tools & Interfaces',
       title: 'Local LLMs With VS Code and Cursor: Setup and Best Practices',
       heroImage: '/images/local-llms-with-vscode-cursor-overview-hero-en.webp',
-      dateModified: '2026-08-28',
+      dateModified: '2026-08-29',
       seoTitle: 'Local LLMs in VS Code and Cursor: 2026 Setup Guide',
       intro: 'VS Code and Cursor (an AI-first code editor) can both use local LLMs for code completions and suggestions, via Continue.dev extension (VS Code) or direct integration (Cursor). Local code completions are practical for 7B-13B models and require 8-16 GB RAM. This guide covers setup, best models, and performance tuning.',
       metaDescription: 'Use Ollama with VS Code via Continue.dev for local code completions -- no API key needed. Best models, VRAM requirements, and Cursor integration for 2026.',
@@ -119,6 +119,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'Common Questions About Local Code Completions',
           faqs: [
             {
+              q: 'Which model is best for code completions with Ollama?',
+              a: 'Qwen3-Coder 7B is the best balance of speed and quality, scoring 72% on HumanEval and requiring only 4.7 GB VRAM. For 16 GB+ VRAM, Code Llama 13B (74% HumanEval, 8.5 GB VRAM) improves quality further.',
+            },
+            {
+              q: 'Does Cursor support local LLMs natively?',
+              a: 'Yes. Cursor supports custom OpenAI-compatible endpoints. Set the base URL to http://localhost:11434/v1 and enter any API key (Ollama does not require authentication). Select your Ollama model from the model dropdown and Cursor will route requests to your local model.',
+            },
+            {
+              q: 'What is the minimum VRAM for usable local code completions?',
+              a: '8 GB VRAM is the minimum for usable code completions with a 7B model at Q4_K_M quantization (~4.5 GB). With only 8 GB, you have little headroom. 12 GB or more is recommended for comfortable use with Qwen3-Coder 7B or Code Llama 7B.',
+            },
+            {
+              q: 'How do I set up Continue.dev in VS Code?',
+              a: 'Install the Continue extension from the VS Code marketplace, then configure it to use Ollama: open the Continue sidebar, click the model selector, choose "Ollama" as provider, select your model (e.g., qwen2.5-coder:7b), and save. Continue will connect to Ollama at localhost:11434 automatically.',
+            },
+            {
               q: 'Is local code completion faster than cloud?',
               a: 'No. Cloud completions (GitHub Copilot) are faster due to optimized servers. Local completions have higher latency but zero cost and zero privacy risk.',
             },
@@ -133,6 +149,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             {
               q: 'Does local code completion work offline?',
               a: 'Yes. If you have pulled the model in Ollama, completions work entirely offline.',
+            },
+            {
+              q: 'Can I use local LLMs for code review and chat in VS Code?',
+              a: 'Yes. Continue.dev provides both tab completion and an inline chat mode. Highlight code in your editor, press Cmd/Ctrl+I, and type a question or instruction. The local model responds within the editor context. This works for code review, refactoring suggestions, and explanation requests.',
+            },
+            {
+              q: 'What happens if Ollama is not running when I open VS Code?',
+              a: 'Continue.dev will display a connection error and completions will not appear. Start Ollama with `ollama serve` in a terminal before opening VS Code. On macOS, you can set Ollama to start automatically at login in the Ollama menu bar settings.',
             },
           ],
         },
@@ -167,7 +191,7 @@ schema: {
         'description': 'Use Ollama with VS Code via Continue.dev for local code completions -- no API key needed. Best models, VRAM requirements, and Cursor integration for 2026.',
         'url': 'https://www.promptquorum.com/local-llms/local-llms-with-vscode-cursor',
         'datePublished': '2026-04-04',
-        'dateModified': '2026-08-28',
+        'dateModified': '2026-08-29',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },
         'publisher': { '@type': 'Organization', 'name': 'PromptQuorum', 'url': 'https://www.promptquorum.com' },
         'about': [
@@ -381,6 +405,30 @@ schema: {
           title: 'FAQ: Lokale Code-Vervollständigung',
           faqs: [
             {
+              q: 'Welches Modell ist am besten für Codevervollständigungen mit Ollama?',
+              a: 'Qwen3-Coder 7B bietet das beste Verhältnis von Geschwindigkeit und Qualität, mit 72% auf HumanEval und nur 4,7 GB VRAM. Bei 16 GB+ VRAM verbessert Code Llama 13B (74% HumanEval, 8,5 GB VRAM) die Qualität weiter.',
+            },
+            {
+              q: 'Unterstützt Cursor lokale LLMs nativ?',
+              a: 'Ja. Cursor unterstützt benutzerdefinierte OpenAI-kompatible Endpunkte. Setzen Sie die Basis-URL auf http://localhost:11434/v1 und geben Sie einen beliebigen API-Schlüssel ein (Ollama erfordert keine Authentifizierung). Wählen Sie Ihr Ollama-Modell aus dem Modell-Dropdown, und Cursor leitet Anfragen an Ihr lokales Modell weiter.',
+            },
+            {
+              q: 'Wie viel VRAM ist mindestens für nutzbare lokale Codevervollständigungen nötig?',
+              a: '8 GB VRAM sind das Minimum für nutzbare Codevervollständigungen mit einem 7B-Modell bei Q4_K_M-Quantisierung (~4,5 GB). Bei nur 8 GB haben Sie wenig Spielraum. 12 GB oder mehr werden für komfortablen Einsatz mit Qwen3-Coder 7B oder Code Llama 7B empfohlen.',
+            },
+            {
+              q: 'Wie richte ich Continue.dev in VS Code ein?',
+              a: 'Installieren Sie die Continue-Erweiterung aus dem VS Code Marketplace, konfigurieren Sie sie dann für Ollama: Öffnen Sie die Continue-Seitenleiste, klicken Sie auf die Modellauswahl, wählen Sie "Ollama" als Provider, wählen Sie Ihr Modell (z. B. qwen2.5-coder:7b) und speichern Sie. Continue verbindet sich automatisch mit Ollama unter localhost:11434.',
+            },
+            {
+              q: 'Kann ich lokale LLMs für Code-Review und Chat in VS Code nutzen?',
+              a: 'Ja. Continue.dev bietet sowohl Tab-Vervollständigung als auch einen Inline-Chat-Modus. Markieren Sie Code in Ihrem Editor, drücken Sie Cmd/Strg+I, und geben Sie eine Frage oder Anweisung ein. Das lokale Modell antwortet im Editor-Kontext. Dies funktioniert für Code-Reviews, Refactoring-Vorschläge und Erklärungsanfragen.',
+            },
+            {
+              q: 'Was passiert, wenn Ollama beim Öffnen von VS Code nicht läuft?',
+              a: 'Continue.dev zeigt einen Verbindungsfehler an, und Vervollständigungen erscheinen nicht. Starten Sie Ollama mit `ollama serve` in einem Terminal, bevor Sie VS Code öffnen. Unter macOS können Sie Ollama in den Ollama-Menüleisteneinstellungen automatisch beim Login starten lassen.',
+            },
+            {
               q: 'Ist lokale Code-Vervollständigung schneller als Cloud?',
               a: 'Nein. Cloud-Vervollständigungen (GitHub Copilot) sind schneller wegen optimierter Server. Lokale Vervollständigungen haben höhere Latenz, aber Null-Kosten und Null-Datenschutzrisiko.',
             },
@@ -466,6 +514,12 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         mainEntity: [
+          { '@type': 'Question', name: 'Welches Modell ist am besten für Codevervollständigungen mit Ollama?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3-Coder 7B bietet das beste Verhältnis von Geschwindigkeit und Qualität, mit 72% auf HumanEval und nur 4,7 GB VRAM. Bei 16 GB+ VRAM verbessert Code Llama 13B (74% HumanEval, 8,5 GB VRAM) die Qualität weiter.' } },
+          { '@type': 'Question', name: 'Unterstützt Cursor lokale LLMs nativ?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Cursor unterstützt benutzerdefinierte OpenAI-kompatible Endpunkte. Setzen Sie die Basis-URL auf http://localhost:11434/v1 und geben Sie einen beliebigen API-Schlüssel ein (Ollama erfordert keine Authentifizierung). Wählen Sie Ihr Ollama-Modell aus dem Modell-Dropdown, und Cursor leitet Anfragen an Ihr lokales Modell weiter.' } },
+          { '@type': 'Question', name: 'Wie viel VRAM ist mindestens für nutzbare lokale Codevervollständigungen nötig?', acceptedAnswer: { '@type': 'Answer', text: '8 GB VRAM sind das Minimum für nutzbare Codevervollständigungen mit einem 7B-Modell bei Q4_K_M-Quantisierung (~4,5 GB). Bei nur 8 GB haben Sie wenig Spielraum. 12 GB oder mehr werden für komfortablen Einsatz mit Qwen3-Coder 7B oder Code Llama 7B empfohlen.' } },
+          { '@type': 'Question', name: 'Wie richte ich Continue.dev in VS Code ein?', acceptedAnswer: { '@type': 'Answer', text: 'Installieren Sie die Continue-Erweiterung aus dem VS Code Marketplace, konfigurieren Sie sie dann für Ollama: Öffnen Sie die Continue-Seitenleiste, klicken Sie auf die Modellauswahl, wählen Sie "Ollama" als Provider, wählen Sie Ihr Modell (z. B. qwen2.5-coder:7b) und speichern Sie. Continue verbindet sich automatisch mit Ollama unter localhost:11434.' } },
+          { '@type': 'Question', name: 'Kann ich lokale LLMs für Code-Review und Chat in VS Code nutzen?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Continue.dev bietet sowohl Tab-Vervollständigung als auch einen Inline-Chat-Modus. Markieren Sie Code in Ihrem Editor, drücken Sie Cmd/Strg+I, und geben Sie eine Frage oder Anweisung ein. Das lokale Modell antwortet im Editor-Kontext. Dies funktioniert für Code-Reviews, Refactoring-Vorschläge und Erklärungsanfragen.' } },
+          { '@type': 'Question', name: 'Was passiert, wenn Ollama beim Öffnen von VS Code nicht läuft?', acceptedAnswer: { '@type': 'Answer', text: 'Continue.dev zeigt einen Verbindungsfehler an, und Vervollständigungen erscheinen nicht. Starten Sie Ollama mit `ollama serve` in einem Terminal, bevor Sie VS Code öffnen. Unter macOS können Sie Ollama in den Ollama-Menüleisteneinstellungen automatisch beim Login starten lassen.' } },
           { '@type': 'Question', name: 'Ist lokale Code-Vervollständigung schneller als Cloud?', acceptedAnswer: { '@type': 'Answer', text: 'Nein. Cloud-Vervollständigungen (GitHub Copilot) sind schneller wegen optimierter Server. Lokale Vervollständigungen haben höhere Latenz, aber Null-Kosten und Null-Datenschutzrisiko.' } },
           { '@type': 'Question', name: 'Kann ich lokale Vervollständigungen mit anderen IDEs nutzen (PyCharm, Neovim)?', acceptedAnswer: { '@type': 'Answer', text: 'Ja, aber Setup variiert. PyCharm hat ein Ollama-Plugin. Für Neovim verwenden Sie cmp-ollama (Completion-Plugin). Prüfen Sie immer die IDE-Community auf Integrationen.' } },
           { '@type': 'Question', name: 'Kann ich Cloud-Modelle in Continue oder Cursor verwenden?', acceptedAnswer: { '@type': 'Answer', text: 'Ja. Konfigurieren Sie Continue für OpenAI, Claude oder Gemini. Sie können auch mischen (lokal für schnell, Cloud für komplexer Code).' } },
@@ -598,6 +652,30 @@ schema: {
           title: 'FAQ : Complétions de code locales',
           faqs: [
             {
+              q: 'Quel modèle est le meilleur pour les complétions de code avec Ollama ?',
+              a: "Qwen3-Coder 7B offre le meilleur équilibre entre vitesse et qualité, avec un score de 72 % sur HumanEval et seulement 4,7 Go de VRAM. Avec 16 Go de VRAM ou plus, Code Llama 13B (74 % HumanEval, 8,5 Go de VRAM) améliore encore la qualité.",
+            },
+            {
+              q: 'Cursor prend-il en charge nativement les LLM locaux ?',
+              a: "Oui. Cursor prend en charge les points de terminaison personnalisés compatibles OpenAI. Définissez l'URL de base sur http://localhost:11434/v1 et saisissez n'importe quelle clé API (Ollama ne nécessite pas d'authentification). Sélectionnez votre modèle Ollama dans le menu déroulant des modèles, et Cursor acheminera les requêtes vers votre modèle local.",
+            },
+            {
+              q: 'Quelle est la VRAM minimale pour des complétions de code locales utilisables ?',
+              a: "8 Go de VRAM constituent le minimum pour des complétions utilisables avec un modèle 7B en quantification Q4_K_M (~4,5 Go). Avec seulement 8 Go, la marge est faible. 12 Go ou plus sont recommandés pour un usage confortable avec Qwen3-Coder 7B ou Code Llama 7B.",
+            },
+            {
+              q: 'Comment configurer Continue.dev dans VS Code ?',
+              a: "Installez l'extension Continue depuis le VS Code Marketplace, puis configurez-la pour utiliser Ollama : ouvrez la barre latérale Continue, cliquez sur le sélecteur de modèle, choisissez « Ollama » comme fournisseur, sélectionnez votre modèle (par ex. qwen2.5-coder:7b), puis enregistrez. Continue se connectera automatiquement à Ollama sur localhost:11434.",
+            },
+            {
+              q: 'Puis-je utiliser des LLM locaux pour la revue de code et le chat dans VS Code ?',
+              a: "Oui. Continue.dev propose à la fois la complétion par tabulation et un mode de chat en ligne. Sélectionnez du code dans votre éditeur, appuyez sur Cmd/Ctrl+I, puis saisissez une question ou une instruction. Le modèle local répond dans le contexte de l'éditeur. Cela fonctionne pour la revue de code, les suggestions de refactoring et les demandes d'explication.",
+            },
+            {
+              q: "Que se passe-t-il si Ollama n'est pas lancé à l'ouverture de VS Code ?",
+              a: "Continue.dev affichera une erreur de connexion et aucune complétion n'apparaîtra. Démarrez Ollama avec `ollama serve` dans un terminal avant d'ouvrir VS Code. Sur macOS, vous pouvez configurer Ollama pour qu'il démarre automatiquement à la connexion dans les réglages de la barre de menus Ollama.",
+            },
+            {
               q: 'Les complétions de code locales sont-elles plus rapides que le cloud ?',
               a: 'Non. Les complétions cloud (GitHub Copilot) sont plus rapides en raison des serveurs optimisés. Les complétions locales ont une latence plus élevée mais zéro coût et zéro risque de confidentialité.',
             },
@@ -667,6 +745,12 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         mainEntity: [
+          { '@type': 'Question', name: 'Quel modèle est le meilleur pour les complétions de code avec Ollama ?', acceptedAnswer: { '@type': 'Answer', text: "Qwen3-Coder 7B offre le meilleur équilibre entre vitesse et qualité, avec un score de 72 % sur HumanEval et seulement 4,7 Go de VRAM. Avec 16 Go de VRAM ou plus, Code Llama 13B (74 % HumanEval, 8,5 Go de VRAM) améliore encore la qualité." } },
+          { '@type': 'Question', name: 'Cursor prend-il en charge nativement les LLM locaux ?', acceptedAnswer: { '@type': 'Answer', text: "Oui. Cursor prend en charge les points de terminaison personnalisés compatibles OpenAI. Définissez l'URL de base sur http://localhost:11434/v1 et saisissez n'importe quelle clé API (Ollama ne nécessite pas d'authentification). Sélectionnez votre modèle Ollama dans le menu déroulant des modèles, et Cursor acheminera les requêtes vers votre modèle local." } },
+          { '@type': 'Question', name: 'Quelle est la VRAM minimale pour des complétions de code locales utilisables ?', acceptedAnswer: { '@type': 'Answer', text: "8 Go de VRAM constituent le minimum pour des complétions utilisables avec un modèle 7B en quantification Q4_K_M (~4,5 Go). Avec seulement 8 Go, la marge est faible. 12 Go ou plus sont recommandés pour un usage confortable avec Qwen3-Coder 7B ou Code Llama 7B." } },
+          { '@type': 'Question', name: 'Comment configurer Continue.dev dans VS Code ?', acceptedAnswer: { '@type': 'Answer', text: "Installez l'extension Continue depuis le VS Code Marketplace, puis configurez-la pour utiliser Ollama : ouvrez la barre latérale Continue, cliquez sur le sélecteur de modèle, choisissez « Ollama » comme fournisseur, sélectionnez votre modèle (par ex. qwen2.5-coder:7b), puis enregistrez. Continue se connectera automatiquement à Ollama sur localhost:11434." } },
+          { '@type': 'Question', name: 'Puis-je utiliser des LLM locaux pour la revue de code et le chat dans VS Code ?', acceptedAnswer: { '@type': 'Answer', text: "Oui. Continue.dev propose à la fois la complétion par tabulation et un mode de chat en ligne. Sélectionnez du code dans votre éditeur, appuyez sur Cmd/Ctrl+I, puis saisissez une question ou une instruction. Le modèle local répond dans le contexte de l'éditeur. Cela fonctionne pour la revue de code, les suggestions de refactoring et les demandes d'explication." } },
+          { '@type': 'Question', name: "Que se passe-t-il si Ollama n'est pas lancé à l'ouverture de VS Code ?", acceptedAnswer: { '@type': 'Answer', text: "Continue.dev affichera une erreur de connexion et aucune complétion n'apparaîtra. Démarrez Ollama avec `ollama serve` dans un terminal avant d'ouvrir VS Code. Sur macOS, vous pouvez configurer Ollama pour qu'il démarre automatiquement à la connexion dans les réglages de la barre de menus Ollama." } },
           { '@type': 'Question', name: 'Les complétions de code locales sont-elles plus rapides que le cloud ?', acceptedAnswer: { '@type': 'Answer', text: 'Non. Les complétions cloud (GitHub Copilot) sont plus rapides en raison des serveurs optimisés. Les complétions locales ont une latence plus élevée mais zéro coût et zéro risque de confidentialité.' } },
           { '@type': 'Question', name: 'Puis-je utiliser les complétions locales avec d\'autres IDE (PyCharm, Neovim) ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui, mais la configuration varie. PyCharm a un plugin Ollama. Pour Neovim, utilisez cmp-ollama (plugin de complétions). Vérifiez toujours auprès de la communauté IDE les intégrations.' } },
           { '@type': 'Question', name: 'Puis-je utiliser les modèles cloud dans Continue ou Cursor ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui. Configurez Continue pour utiliser OpenAI, Claude ou Gemini. Vous pouvez également mélanger (local pour rapide, cloud pour code complexe).' } },
@@ -799,6 +883,30 @@ schema: {
           title: 'FAQ：ローカルコード補完',
           faqs: [
             {
+              q: 'Ollamaでのコード補完に最適なモデルはどれですか？',
+              a: 'Qwen3-Coder 7Bは速度と品質のバランスが最も優れており、HumanEvalで72%のスコア、VRAMはわずか4.7GBです。16GB以上のVRAMがあれば、Code Llama 13B（HumanEval 74%、VRAM 8.5GB）でさらに品質が向上します。',
+            },
+            {
+              q: 'CursorはローカルLLMをネイティブにサポートしていますか？',
+              a: 'はい。CursorはカスタムのOpenAI互換エンドポイントをサポートしています。ベースURLをhttp://localhost:11434/v1に設定し、任意のAPIキーを入力してください（Ollamaは認証を必要としません）。モデルのドロップダウンからOllamaモデルを選択すると、Cursorがリクエストをローカルモデルにルーティングします。',
+            },
+            {
+              q: '実用的なローカルコード補完に最低限必要なVRAMはどれくらいですか？',
+              a: 'Q4_K_M量子化の7Bモデル（約4.5GB）で実用的な補完を行うには、最低8GBのVRAMが必要です。8GBだと余裕がほとんどありません。Qwen3-Coder 7BやCode Llama 7Bを快適に使うには12GB以上を推奨します。',
+            },
+            {
+              q: 'VS CodeでContinue.devをセットアップするにはどうすればよいですか？',
+              a: 'VS Code MarketplaceからContinue拡張機能をインストールし、Ollamaを使用するよう設定します。Continueサイドバーを開き、モデルセレクターをクリックし、プロバイダーとして「Ollama」を選択し、モデル（例：qwen2.5-coder:7b）を選択して保存します。Continueは自動的にlocalhost:11434のOllamaに接続します。',
+            },
+            {
+              q: 'VS CodeでコードレビューとチャットにローカルLLMを使えますか？',
+              a: 'はい。Continue.devはタブ補完とインラインチャットモードの両方を提供します。エディタでコードを選択し、Cmd/Ctrl+Iを押して質問や指示を入力すると、ローカルモデルがエディタのコンテキスト内で応答します。これはコードレビュー、リファクタリング提案、説明依頼に使用できます。',
+            },
+            {
+              q: 'VS Codeを開いたときにOllamaが起動していない場合はどうなりますか？',
+              a: 'Continue.devは接続エラーを表示し、補完が表示されなくなります。VS Codeを開く前にターミナルで`ollama serve`を実行してOllamaを起動してください。macOSでは、Ollamaのメニューバー設定でログイン時に自動起動するよう設定できます。',
+            },
+            {
               q: 'ローカルコード補完はクラウドより速いですか？',
               a: 'いいえ。クラウド補完（GitHub Copilot）は最適化されたサーバーで速いです。ローカル補完はレイテンシが高いですがゼロコストとゼロプライバシーリスク。',
             },
@@ -884,6 +992,12 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         mainEntity: [
+          { '@type': 'Question', name: 'Ollamaでのコード補完に最適なモデルはどれですか？', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3-Coder 7Bは速度と品質のバランスが最も優れており、HumanEvalで72%のスコア、VRAMはわずか4.7GBです。16GB以上のVRAMがあれば、Code Llama 13B（HumanEval 74%、VRAM 8.5GB）でさらに品質が向上します。' } },
+          { '@type': 'Question', name: 'CursorはローカルLLMをネイティブにサポートしていますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい。CursorはカスタムのOpenAI互換エンドポイントをサポートしています。ベースURLをhttp://localhost:11434/v1に設定し、任意のAPIキーを入力してください（Ollamaは認証を必要としません）。モデルのドロップダウンからOllamaモデルを選択すると、Cursorがリクエストをローカルモデルにルーティングします。' } },
+          { '@type': 'Question', name: '実用的なローカルコード補完に最低限必要なVRAMはどれくらいですか？', acceptedAnswer: { '@type': 'Answer', text: 'Q4_K_M量子化の7Bモデル（約4.5GB）で実用的な補完を行うには、最低8GBのVRAMが必要です。8GBだと余裕がほとんどありません。Qwen3-Coder 7BやCode Llama 7Bを快適に使うには12GB以上を推奨します。' } },
+          { '@type': 'Question', name: 'VS CodeでContinue.devをセットアップするにはどうすればよいですか？', acceptedAnswer: { '@type': 'Answer', text: 'VS Code MarketplaceからContinue拡張機能をインストールし、Ollamaを使用するよう設定します。Continueサイドバーを開き、モデルセレクターをクリックし、プロバイダーとして「Ollama」を選択し、モデル（例：qwen2.5-coder:7b）を選択して保存します。Continueは自動的にlocalhost:11434のOllamaに接続します。' } },
+          { '@type': 'Question', name: 'VS CodeでコードレビューとチャットにローカルLLMを使えますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい。Continue.devはタブ補完とインラインチャットモードの両方を提供します。エディタでコードを選択し、Cmd/Ctrl+Iを押して質問や指示を入力すると、ローカルモデルがエディタのコンテキスト内で応答します。これはコードレビュー、リファクタリング提案、説明依頼に使用できます。' } },
+          { '@type': 'Question', name: 'VS Codeを開いたときにOllamaが起動していない場合はどうなりますか？', acceptedAnswer: { '@type': 'Answer', text: 'Continue.devは接続エラーを表示し、補完が表示されなくなります。VS Codeを開く前にターミナルで`ollama serve`を実行してOllamaを起動してください。macOSでは、Ollamaのメニューバー設定でログイン時に自動起動するよう設定できます。' } },
           { '@type': 'Question', name: 'ローカルコード補完はクラウドより速いですか？', acceptedAnswer: { '@type': 'Answer', text: 'いいえ。クラウド補完（GitHub Copilot）は最適化されたサーバーで速いです。ローカル補完はレイテンシが高いですがゼロコストとゼロプライバシーリスク。' } },
           { '@type': 'Question', name: '他のIDE（PyCharm、Neovim）でローカル補完を使用できますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい、しかしセットアップは異なる。PyCharmはOllamaプラグインを持つ。Neovimの場合、cmp-ollama（補完プラグイン）を使用。常にIDEコミュニティ統合をチェック。' } },
           { '@type': 'Question', name: 'ContinueまたはCursorでクラウドモデルを使用できますか？', acceptedAnswer: { '@type': 'Answer', text: 'はい。ContinueをOpenAI、Claude、またはGeminiで使用するように設定。また混合できます（高速ローカル、複雑コード用クラウド）。' } },
@@ -1016,6 +1130,30 @@ schema: {
           title: '常见问题：本地代码补全',
           faqs: [
             {
+              q: 'Ollama下哪个模型最适合代码补全？',
+              a: 'Qwen3-Coder 7B在速度与质量之间取得最佳平衡，HumanEval得分72%，仅需4.7GB显存。若显存达到16GB以上，Code Llama 13B（HumanEval 74%，显存8.5GB）可进一步提升质量。',
+            },
+            {
+              q: 'Cursor原生支持本地LLM吗？',
+              a: '支持。Cursor支持自定义的OpenAI兼容端点。将基础URL设置为http://localhost:11434/v1，并输入任意API密钥（Ollama不需要身份验证）。从模型下拉菜单中选择你的Ollama模型，Cursor就会将请求路由到你的本地模型。',
+            },
+            {
+              q: '实用的本地代码补全最低需要多少显存？',
+              a: '在Q4_K_M量化下运行7B模型（约4.5GB）实现可用的代码补全，最低需要8GB显存。仅8GB时几乎没有余量。若要流畅使用Qwen3-Coder 7B或Code Llama 7B，建议12GB以上显存。',
+            },
+            {
+              q: '如何在VS Code中设置Continue.dev？',
+              a: '从VS Code扩展市场安装Continue扩展，然后配置使用Ollama：打开Continue侧边栏，点击模型选择器，选择"Ollama"作为提供商，选择你的模型（例如qwen2.5-coder:7b），然后保存。Continue会自动连接到localhost:11434上的Ollama。',
+            },
+            {
+              q: '可以在VS Code中用本地LLM进行代码审查和聊天吗？',
+              a: '可以。Continue.dev同时提供Tab补全和内联聊天模式。在编辑器中选中代码，按下Cmd/Ctrl+I，输入问题或指令，本地模型会在编辑器上下文中作答。这适用于代码审查、重构建议和解释请求。',
+            },
+            {
+              q: '打开VS Code时如果Ollama没有运行会怎样？',
+              a: 'Continue.dev会显示连接错误，补全不会出现。请在打开VS Code之前在终端运行`ollama serve`启动Ollama。在macOS上，可以在Ollama菜单栏设置中开启登录时自动启动。',
+            },
+            {
               q: '本地代码补全比云更快吗？',
               a: '不。云补全（GitHub Copilot）由于优化的服务器而更快。本地补全具有更高延迟但零成本和零隐私风险。',
             },
@@ -1086,6 +1224,12 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         mainEntity: [
+          { '@type': 'Question', name: 'Ollama下哪个模型最适合代码补全？', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3-Coder 7B在速度与质量之间取得最佳平衡，HumanEval得分72%，仅需4.7GB显存。若显存达到16GB以上，Code Llama 13B（HumanEval 74%，显存8.5GB）可进一步提升质量。' } },
+          { '@type': 'Question', name: 'Cursor原生支持本地LLM吗？', acceptedAnswer: { '@type': 'Answer', text: '支持。Cursor支持自定义的OpenAI兼容端点。将基础URL设置为http://localhost:11434/v1，并输入任意API密钥（Ollama不需要身份验证）。从模型下拉菜单中选择你的Ollama模型，Cursor就会将请求路由到你的本地模型。' } },
+          { '@type': 'Question', name: '实用的本地代码补全最低需要多少显存？', acceptedAnswer: { '@type': 'Answer', text: '在Q4_K_M量化下运行7B模型（约4.5GB）实现可用的代码补全，最低需要8GB显存。仅8GB时几乎没有余量。若要流畅使用Qwen3-Coder 7B或Code Llama 7B，建议12GB以上显存。' } },
+          { '@type': 'Question', name: '如何在VS Code中设置Continue.dev？', acceptedAnswer: { '@type': 'Answer', text: '从VS Code扩展市场安装Continue扩展，然后配置使用Ollama：打开Continue侧边栏，点击模型选择器，选择"Ollama"作为提供商，选择你的模型（例如qwen2.5-coder:7b），然后保存。Continue会自动连接到localhost:11434上的Ollama。' } },
+          { '@type': 'Question', name: '可以在VS Code中用本地LLM进行代码审查和聊天吗？', acceptedAnswer: { '@type': 'Answer', text: '可以。Continue.dev同时提供Tab补全和内联聊天模式。在编辑器中选中代码，按下Cmd/Ctrl+I，输入问题或指令，本地模型会在编辑器上下文中作答。这适用于代码审查、重构建议和解释请求。' } },
+          { '@type': 'Question', name: '打开VS Code时如果Ollama没有运行会怎样？', acceptedAnswer: { '@type': 'Answer', text: 'Continue.dev会显示连接错误，补全不会出现。请在打开VS Code之前在终端运行`ollama serve`启动Ollama。在macOS上，可以在Ollama菜单栏设置中开启登录时自动启动。' } },
           { '@type': 'Question', name: '本地代码补全比云更快吗？', acceptedAnswer: { '@type': 'Answer', text: '不。云补全（GitHub Copilot）由于优化的服务器而更快。本地补全具有更高延迟但零成本和零隐私风险。' } },
           { '@type': 'Question', name: '我可以在其他IDE（PyCharm、Neovim）中使用本地补全吗？', acceptedAnswer: { '@type': 'Answer', text: '可以，但设置有所不同。PyCharm有Ollama插件。对于Neovim，使用cmp-ollama（补全插件）。始终检查IDE社区以了解集成。' } },
           { '@type': 'Question', name: '我可以在Continue或Cursor中使用云模型吗？', acceptedAnswer: { '@type': 'Answer', text: '可以。配置Continue以使用OpenAI、Claude或Gemini。您也可以混合（本地快速，云复杂代码）。' } },
@@ -1222,6 +1366,30 @@ schema: {
           title: 'Preguntas frecuentes: Completaciones de código locales',
           faqs: [
             {
+              q: '¿Qué modelo es mejor para completaciones de código con Ollama?',
+              a: 'Qwen3-Coder 7B ofrece el mejor equilibrio entre velocidad y calidad, con un 72% en HumanEval y solo 4,7 GB de VRAM. Con 16 GB de VRAM o más, Code Llama 13B (74% en HumanEval, 8,5 GB de VRAM) mejora aún más la calidad.',
+            },
+            {
+              q: '¿Cursor soporta LLMs locales de forma nativa?',
+              a: 'Sí. Cursor admite endpoints personalizados compatibles con OpenAI. Configura la URL base como http://localhost:11434/v1 e introduce cualquier clave de API (Ollama no requiere autenticación). Selecciona tu modelo de Ollama en el desplegable de modelos y Cursor enviará las solicitudes a tu modelo local.',
+            },
+            {
+              q: '¿Cuál es la VRAM mínima para completaciones de código locales utilizables?',
+              a: '8 GB de VRAM es el mínimo para completaciones utilizables con un modelo 7B en cuantización Q4_K_M (~4,5 GB). Con solo 8 GB tienes poco margen. Se recomiendan 12 GB o más para un uso cómodo con Qwen3-Coder 7B o Code Llama 7B.',
+            },
+            {
+              q: '¿Cómo configuro Continue.dev en VS Code?',
+              a: 'Instala la extensión Continue desde el VS Code Marketplace y configúrala para usar Ollama: abre la barra lateral de Continue, haz clic en el selector de modelo, elige "Ollama" como proveedor, selecciona tu modelo (por ejemplo, qwen2.5-coder:7b) y guarda. Continue se conectará automáticamente a Ollama en localhost:11434.',
+            },
+            {
+              q: '¿Puedo usar LLMs locales para revisión de código y chat en VS Code?',
+              a: 'Sí. Continue.dev ofrece tanto completado por tabulación como un modo de chat en línea. Selecciona código en tu editor, pulsa Cmd/Ctrl+I, y escribe una pregunta o instrucción. El modelo local responde dentro del contexto del editor. Funciona para revisión de código, sugerencias de refactorización y solicitudes de explicación.',
+            },
+            {
+              q: '¿Qué ocurre si Ollama no está en ejecución al abrir VS Code?',
+              a: 'Continue.dev mostrará un error de conexión y no aparecerán completaciones. Inicia Ollama con `ollama serve` en una terminal antes de abrir VS Code. En macOS, puedes configurar Ollama para que se inicie automáticamente al iniciar sesión desde los ajustes de la barra de menú de Ollama.',
+            },
+            {
               q: '¿Las completaciones de código locales son más rápidas que las de la nube?',
               a: 'No. Las completaciones en la nube (GitHub Copilot) son más rápidas gracias a servidores optimizados. Las completaciones locales tienen mayor latencia, pero tienen coste cero y cero riesgo para la privacidad.',
             },
@@ -1292,6 +1460,12 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         mainEntity: [
+          { '@type': 'Question', name: '¿Qué modelo es mejor para completaciones de código con Ollama?', acceptedAnswer: { '@type': 'Answer', text: 'Qwen3-Coder 7B ofrece el mejor equilibrio entre velocidad y calidad, con un 72% en HumanEval y solo 4,7 GB de VRAM. Con 16 GB de VRAM o más, Code Llama 13B (74% en HumanEval, 8,5 GB de VRAM) mejora aún más la calidad.' } },
+          { '@type': 'Question', name: '¿Cursor soporta LLMs locales de forma nativa?', acceptedAnswer: { '@type': 'Answer', text: 'Sí. Cursor admite endpoints personalizados compatibles con OpenAI. Configura la URL base como http://localhost:11434/v1 e introduce cualquier clave de API (Ollama no requiere autenticación). Selecciona tu modelo de Ollama en el desplegable de modelos y Cursor enviará las solicitudes a tu modelo local.' } },
+          { '@type': 'Question', name: '¿Cuál es la VRAM mínima para completaciones de código locales utilizables?', acceptedAnswer: { '@type': 'Answer', text: '8 GB de VRAM es el mínimo para completaciones utilizables con un modelo 7B en cuantización Q4_K_M (~4,5 GB). Con solo 8 GB tienes poco margen. Se recomiendan 12 GB o más para un uso cómodo con Qwen3-Coder 7B o Code Llama 7B.' } },
+          { '@type': 'Question', name: '¿Cómo configuro Continue.dev en VS Code?', acceptedAnswer: { '@type': 'Answer', text: 'Instala la extensión Continue desde el VS Code Marketplace y configúrala para usar Ollama: abre la barra lateral de Continue, haz clic en el selector de modelo, elige "Ollama" como proveedor, selecciona tu modelo (por ejemplo, qwen2.5-coder:7b) y guarda. Continue se conectará automáticamente a Ollama en localhost:11434.' } },
+          { '@type': 'Question', name: '¿Puedo usar LLMs locales para revisión de código y chat en VS Code?', acceptedAnswer: { '@type': 'Answer', text: 'Sí. Continue.dev ofrece tanto completado por tabulación como un modo de chat en línea. Selecciona código en tu editor, pulsa Cmd/Ctrl+I, y escribe una pregunta o instrucción. El modelo local responde dentro del contexto del editor. Funciona para revisión de código, sugerencias de refactorización y solicitudes de explicación.' } },
+          { '@type': 'Question', name: '¿Qué ocurre si Ollama no está en ejecución al abrir VS Code?', acceptedAnswer: { '@type': 'Answer', text: 'Continue.dev mostrará un error de conexión y no aparecerán completaciones. Inicia Ollama con `ollama serve` en una terminal antes de abrir VS Code. En macOS, puedes configurar Ollama para que se inicie automáticamente al iniciar sesión desde los ajustes de la barra de menú de Ollama.' } },
           { '@type': 'Question', name: '¿Las completaciones de código locales son más rápidas que las de la nube?', acceptedAnswer: { '@type': 'Answer', text: 'No. Las completaciones en la nube (GitHub Copilot) son más rápidas gracias a servidores optimizados. Las completaciones locales tienen mayor latencia, pero tienen coste cero y cero riesgo para la privacidad.' } },
           { '@type': 'Question', name: '¿Puedo usar completaciones locales con otros IDEs (PyCharm, Neovim)?', acceptedAnswer: { '@type': 'Answer', text: 'Sí, aunque la configuración varía. PyCharm tiene un plugin para Ollama. Para Neovim, usa cmp-ollama (plugin de completaciones). Consulta siempre la comunidad de tu IDE para conocer las integraciones disponibles.' } },
           { '@type': 'Question', name: '¿Puedo usar modelos en la nube en Continue o Cursor?', acceptedAnswer: { '@type': 'Answer', text: 'Sí. Configura Continue para usar OpenAI, Claude o Gemini. También puedes combinarlos (local para tareas rápidas, nube para código complejo).' } },
@@ -1428,6 +1602,30 @@ schema: {
           title: 'الأسئلة الشائعة: إكمالات الشيفرة المحلية',
           faqs: [
             {
+              q: 'ما هو أفضل نموذج لإكمالات الشيفرة مع Ollama؟',
+              a: 'يوفر Qwen3-Coder 7B أفضل توازن بين السرعة والجودة، بتحقيقه 72% على HumanEval واحتياجه لـ4.7 جيجابايت فقط من VRAM. مع 16 جيجابايت أو أكثر من VRAM، يحسّن Code Llama 13B (74% على HumanEval، 8.5 جيجابايت VRAM) الجودة أكثر.',
+            },
+            {
+              q: 'هل يدعم Cursor نماذج LLM المحلية بشكل أصلي؟',
+              a: 'نعم. يدعم Cursor نقاط النهاية المخصصة المتوافقة مع OpenAI. اضبط عنوان URL الأساسي على http://localhost:11434/v1 وأدخل أي مفتاح API (لا يتطلب Ollama مصادقة). اختر نموذج Ollama الخاص بك من قائمة النماذج المنسدلة، وسيوجّه Cursor الطلبات إلى نموذجك المحلي.',
+            },
+            {
+              q: 'ما هو الحد الأدنى من VRAM لإكمالات شيفرة محلية قابلة للاستخدام؟',
+              a: '8 جيجابايت من VRAM هو الحد الأدنى لإكمالات قابلة للاستخدام مع نموذج 7B بتكميم Q4_K_M (~4.5 جيجابايت). مع 8 جيجابايت فقط، يكون الهامش ضئيلاً جداً. يُنصح بـ12 جيجابايت أو أكثر للاستخدام المريح مع Qwen3-Coder 7B أو Code Llama 7B.',
+            },
+            {
+              q: 'كيف أُعدّ Continue.dev في VS Code؟',
+              a: 'ثبّت إضافة Continue من متجر VS Code، ثم اضبطها لاستخدام Ollama: افتح الشريط الجانبي لـContinue، انقر على محدد النموذج، اختر "Ollama" كمزوّد، اختر نموذجك (مثل qwen2.5-coder:7b)، ثم احفظ. سيتصل Continue تلقائياً بـOllama على localhost:11434.',
+            },
+            {
+              q: 'هل يمكنني استخدام نماذج LLM المحلية لمراجعة الشيفرة والدردشة في VS Code؟',
+              a: 'نعم. يوفر Continue.dev كلاً من إكمال Tab ووضع الدردشة المضمّنة. حدّد شيفرة في المحرر، اضغط Cmd/Ctrl+I، واكتب سؤالاً أو تعليمة. يستجيب النموذج المحلي ضمن سياق المحرر. يعمل هذا لمراجعة الشيفرة، واقتراحات إعادة الهيكلة، وطلبات الشرح.',
+            },
+            {
+              q: 'ماذا يحدث إذا لم يكن Ollama يعمل عند فتح VS Code؟',
+              a: 'سيعرض Continue.dev خطأ اتصال ولن تظهر الإكمالات. شغّل Ollama بالأمر `ollama serve` في الطرفية قبل فتح VS Code. على macOS، يمكنك ضبط Ollama ليبدأ تلقائياً عند تسجيل الدخول من إعدادات شريط قوائم Ollama.',
+            },
+            {
               q: 'هل إكمالات الشيفرة المحلية أسرع من السحابية؟',
               a: 'لا. الإكمالات السحابية (GitHub Copilot) أسرع بفضل الخوادم المحسّنة. الإكمالات المحلية ذات زمن استجابة أعلى، لكنها بتكلفة صفرية وصفر خطر على الخصوصية.',
             },
@@ -1498,6 +1696,12 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         mainEntity: [
+          { '@type': 'Question', name: 'ما هو أفضل نموذج لإكمالات الشيفرة مع Ollama؟', acceptedAnswer: { '@type': 'Answer', text: 'يوفر Qwen3-Coder 7B أفضل توازن بين السرعة والجودة، بتحقيقه 72% على HumanEval واحتياجه لـ4.7 جيجابايت فقط من VRAM. مع 16 جيجابايت أو أكثر من VRAM، يحسّن Code Llama 13B (74% على HumanEval، 8.5 جيجابايت VRAM) الجودة أكثر.' } },
+          { '@type': 'Question', name: 'هل يدعم Cursor نماذج LLM المحلية بشكل أصلي؟', acceptedAnswer: { '@type': 'Answer', text: 'نعم. يدعم Cursor نقاط النهاية المخصصة المتوافقة مع OpenAI. اضبط عنوان URL الأساسي على http://localhost:11434/v1 وأدخل أي مفتاح API (لا يتطلب Ollama مصادقة). اختر نموذج Ollama الخاص بك من قائمة النماذج المنسدلة، وسيوجّه Cursor الطلبات إلى نموذجك المحلي.' } },
+          { '@type': 'Question', name: 'ما هو الحد الأدنى من VRAM لإكمالات شيفرة محلية قابلة للاستخدام؟', acceptedAnswer: { '@type': 'Answer', text: '8 جيجابايت من VRAM هو الحد الأدنى لإكمالات قابلة للاستخدام مع نموذج 7B بتكميم Q4_K_M (~4.5 جيجابايت). مع 8 جيجابايت فقط، يكون الهامش ضئيلاً جداً. يُنصح بـ12 جيجابايت أو أكثر للاستخدام المريح مع Qwen3-Coder 7B أو Code Llama 7B.' } },
+          { '@type': 'Question', name: 'كيف أُعدّ Continue.dev في VS Code؟', acceptedAnswer: { '@type': 'Answer', text: 'ثبّت إضافة Continue من متجر VS Code، ثم اضبطها لاستخدام Ollama: افتح الشريط الجانبي لـContinue، انقر على محدد النموذج، اختر "Ollama" كمزوّد، اختر نموذجك (مثل qwen2.5-coder:7b)، ثم احفظ. سيتصل Continue تلقائياً بـOllama على localhost:11434.' } },
+          { '@type': 'Question', name: 'هل يمكنني استخدام نماذج LLM المحلية لمراجعة الشيفرة والدردشة في VS Code؟', acceptedAnswer: { '@type': 'Answer', text: 'نعم. يوفر Continue.dev كلاً من إكمال Tab ووضع الدردشة المضمّنة. حدّد شيفرة في المحرر، اضغط Cmd/Ctrl+I، واكتب سؤالاً أو تعليمة. يستجيب النموذج المحلي ضمن سياق المحرر. يعمل هذا لمراجعة الشيفرة، واقتراحات إعادة الهيكلة، وطلبات الشرح.' } },
+          { '@type': 'Question', name: 'ماذا يحدث إذا لم يكن Ollama يعمل عند فتح VS Code؟', acceptedAnswer: { '@type': 'Answer', text: 'سيعرض Continue.dev خطأ اتصال ولن تظهر الإكمالات. شغّل Ollama بالأمر `ollama serve` في الطرفية قبل فتح VS Code. على macOS، يمكنك ضبط Ollama ليبدأ تلقائياً عند تسجيل الدخول من إعدادات شريط قوائم Ollama.' } },
           { '@type': 'Question', name: 'هل إكمالات الشيفرة المحلية أسرع من السحابية؟', acceptedAnswer: { '@type': 'Answer', text: 'لا. الإكمالات السحابية (GitHub Copilot) أسرع بفضل الخوادم المحسّنة. الإكمالات المحلية ذات زمن استجابة أعلى، لكنها بتكلفة صفرية وصفر خطر على الخصوصية.' } },
           { '@type': 'Question', name: 'هل يمكنني استخدام الإكمالات المحلية مع بيئات IDE أخرى (PyCharm، Neovim)؟', acceptedAnswer: { '@type': 'Answer', text: 'نعم، رغم أن الإعداد يتفاوت. لدى PyCharm إضافة لـOllama. لـNeovim، استخدم cmp-ollama (إضافة إكمالات). راجع دائمًا مجتمع الـIDE الخاص بك لمعرفة التكاملات المتاحة.' } },
           { '@type': 'Question', name: 'هل يمكنني استخدام النماذج السحابية في Continue أو Cursor؟', acceptedAnswer: { '@type': 'Answer', text: 'نعم. اضبط Continue لاستخدام OpenAI أو Claude أو Gemini. يمكنك أيضًا الجمع بينها (المحلي للمهام السريعة، السحابة للشيفرة المعقّدة).' } },
@@ -1634,6 +1838,30 @@ schema: {
           title: 'Perguntas frequentes: Completamentos de código locais',
           faqs: [
             {
+              q: 'Qual modelo é melhor para completamentos de código com o Ollama?',
+              a: 'O Qwen3-Coder 7B oferece o melhor equilíbrio entre velocidade e qualidade, com 72% no HumanEval e apenas 4,7 GB de VRAM. Com 16 GB de VRAM ou mais, o Code Llama 13B (74% no HumanEval, 8,5 GB de VRAM) melhora ainda mais a qualidade.',
+            },
+            {
+              q: 'O Cursor suporta LLMs locais nativamente?',
+              a: 'Sim. O Cursor suporta endpoints personalizados compatíveis com OpenAI. Defina a URL base como http://localhost:11434/v1 e insira qualquer chave de API (o Ollama não exige autenticação). Selecione seu modelo Ollama no menu suspenso de modelos e o Cursor encaminhará as solicitações para seu modelo local.',
+            },
+            {
+              q: 'Qual é a VRAM mínima para completamentos de código locais utilizáveis?',
+              a: '8 GB de VRAM é o mínimo para completamentos utilizáveis com um modelo 7B em quantização Q4_K_M (~4,5 GB). Com apenas 8 GB, a margem é pequena. Recomenda-se 12 GB ou mais para uso confortável com Qwen3-Coder 7B ou Code Llama 7B.',
+            },
+            {
+              q: 'Como configuro o Continue.dev no VS Code?',
+              a: 'Instale a extensão Continue no VS Code Marketplace e configure-a para usar o Ollama: abra a barra lateral do Continue, clique no seletor de modelo, escolha "Ollama" como provedor, selecione seu modelo (por exemplo, qwen2.5-coder:7b) e salve. O Continue se conectará automaticamente ao Ollama em localhost:11434.',
+            },
+            {
+              q: 'Posso usar LLMs locais para revisão de código e chat no VS Code?',
+              a: 'Sim. O Continue.dev oferece tanto o completamento por tabulação quanto um modo de chat inline. Selecione código no seu editor, pressione Cmd/Ctrl+I e digite uma pergunta ou instrução. O modelo local responde dentro do contexto do editor. Isso funciona para revisão de código, sugestões de refatoração e pedidos de explicação.',
+            },
+            {
+              q: 'O que acontece se o Ollama não estiver rodando ao abrir o VS Code?',
+              a: 'O Continue.dev exibirá um erro de conexão e os completamentos não aparecerão. Inicie o Ollama com `ollama serve` em um terminal antes de abrir o VS Code. No macOS, você pode configurar o Ollama para iniciar automaticamente ao fazer login nas configurações da barra de menu do Ollama.',
+            },
+            {
               q: 'Os completamentos de código locais são mais rápidos que os da nuvem?',
               a: 'Não. Os completamentos na nuvem (GitHub Copilot) são mais rápidos graças a servidores otimizados. Os completamentos locais têm maior latência, mas têm custo zero e risco zero para a privacidade.',
             },
@@ -1704,6 +1932,12 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         mainEntity: [
+          { '@type': 'Question', name: 'Qual modelo é melhor para completamentos de código com o Ollama?', acceptedAnswer: { '@type': 'Answer', text: 'O Qwen3-Coder 7B oferece o melhor equilíbrio entre velocidade e qualidade, com 72% no HumanEval e apenas 4,7 GB de VRAM. Com 16 GB de VRAM ou mais, o Code Llama 13B (74% no HumanEval, 8,5 GB de VRAM) melhora ainda mais a qualidade.' } },
+          { '@type': 'Question', name: 'O Cursor suporta LLMs locais nativamente?', acceptedAnswer: { '@type': 'Answer', text: 'Sim. O Cursor suporta endpoints personalizados compatíveis com OpenAI. Defina a URL base como http://localhost:11434/v1 e insira qualquer chave de API (o Ollama não exige autenticação). Selecione seu modelo Ollama no menu suspenso de modelos e o Cursor encaminhará as solicitações para seu modelo local.' } },
+          { '@type': 'Question', name: 'Qual é a VRAM mínima para completamentos de código locais utilizáveis?', acceptedAnswer: { '@type': 'Answer', text: '8 GB de VRAM é o mínimo para completamentos utilizáveis com um modelo 7B em quantização Q4_K_M (~4,5 GB). Com apenas 8 GB, a margem é pequena. Recomenda-se 12 GB ou mais para uso confortável com Qwen3-Coder 7B ou Code Llama 7B.' } },
+          { '@type': 'Question', name: 'Como configuro o Continue.dev no VS Code?', acceptedAnswer: { '@type': 'Answer', text: 'Instale a extensão Continue no VS Code Marketplace e configure-a para usar o Ollama: abra a barra lateral do Continue, clique no seletor de modelo, escolha "Ollama" como provedor, selecione seu modelo (por exemplo, qwen2.5-coder:7b) e salve. O Continue se conectará automaticamente ao Ollama em localhost:11434.' } },
+          { '@type': 'Question', name: 'Posso usar LLMs locais para revisão de código e chat no VS Code?', acceptedAnswer: { '@type': 'Answer', text: 'Sim. O Continue.dev oferece tanto o completamento por tabulação quanto um modo de chat inline. Selecione código no seu editor, pressione Cmd/Ctrl+I e digite uma pergunta ou instrução. O modelo local responde dentro do contexto do editor. Isso funciona para revisão de código, sugestões de refatoração e pedidos de explicação.' } },
+          { '@type': 'Question', name: 'O que acontece se o Ollama não estiver rodando ao abrir o VS Code?', acceptedAnswer: { '@type': 'Answer', text: 'O Continue.dev exibirá um erro de conexão e os completamentos não aparecerão. Inicie o Ollama com `ollama serve` em um terminal antes de abrir o VS Code. No macOS, você pode configurar o Ollama para iniciar automaticamente ao fazer login nas configurações da barra de menu do Ollama.' } },
           { '@type': 'Question', name: 'Os completamentos de código locais são mais rápidos que os da nuvem?', acceptedAnswer: { '@type': 'Answer', text: 'Não. Os completamentos na nuvem (GitHub Copilot) são mais rápidos graças a servidores otimizados. Os completamentos locais têm maior latência, mas têm custo zero e risco zero para a privacidade.' } },
           { '@type': 'Question', name: 'Posso usar completamentos locais com outros IDEs (PyCharm, Neovim)?', acceptedAnswer: { '@type': 'Answer', text: 'Sim, embora a configuração varie. O PyCharm tem um plugin para o Ollama. Para o Neovim, use o cmp-ollama (plugin de completamentos). Consulte sempre a comunidade do seu IDE para conhecer as integrações disponíveis.' } },
           { '@type': 'Question', name: 'Posso usar modelos em nuvem no Continue ou no Cursor?', acceptedAnswer: { '@type': 'Answer', text: 'Sim. Configure o Continue para usar OpenAI, Claude ou Gemini. Você também pode combiná-los (local para tarefas rápidas, nuvem para código complexo).' } },
@@ -1832,6 +2066,30 @@ schema: {
           id: 'faq',
           title: '로컬 코드 자동 완성에 관한 자주 묻는 질문',
           faqs: [
+            {
+              q: 'Ollama에서 코드 자동 완성에 가장 적합한 모델은 무엇입니까?',
+              a: 'Qwen3-Coder 7B는 속도와 품질의 균형이 가장 뛰어나며, HumanEval에서 72%를 기록하고 VRAM은 4.7GB만 필요합니다. VRAM이 16GB 이상이면 Code Llama 13B(HumanEval 74%, VRAM 8.5GB)로 품질을 더 높일 수 있습니다.',
+            },
+            {
+              q: 'Cursor는 로컬 LLM을 네이티브로 지원합니까?',
+              a: '예. Cursor는 사용자 지정 OpenAI 호환 엔드포인트를 지원합니다. 기본 URL을 http://localhost:11434/v1로 설정하고 아무 API 키나 입력하십시오(Ollama는 인증이 필요하지 않습니다). 모델 드롭다운에서 Ollama 모델을 선택하면 Cursor가 요청을 로컬 모델로 라우팅합니다.',
+            },
+            {
+              q: '사용 가능한 로컬 코드 자동 완성을 위한 최소 VRAM은 얼마입니까?',
+              a: 'Q4_K_M 양자화된 7B 모델(약 4.5GB)로 사용 가능한 자동 완성을 하려면 최소 8GB의 VRAM이 필요합니다. 8GB만 있으면 여유가 거의 없습니다. Qwen3-Coder 7B 또는 Code Llama 7B를 편안하게 사용하려면 12GB 이상을 권장합니다.',
+            },
+            {
+              q: 'VS Code에서 Continue.dev를 설정하는 방법은 무엇입니까?',
+              a: 'VS Code 마켓플레이스에서 Continue 확장을 설치한 다음 Ollama를 사용하도록 설정하십시오. Continue 사이드바를 열고 모델 선택기를 클릭하여 공급자로 "Ollama"를 선택하고, 모델(예: qwen2.5-coder:7b)을 선택한 후 저장하십시오. Continue는 localhost:11434의 Ollama에 자동으로 연결됩니다.',
+            },
+            {
+              q: 'VS Code에서 코드 리뷰와 채팅에 로컬 LLM을 사용할 수 있습니까?',
+              a: '예. Continue.dev는 탭 자동 완성과 인라인 채팅 모드를 모두 제공합니다. 에디터에서 코드를 선택하고 Cmd/Ctrl+I를 누른 다음 질문이나 지시를 입력하십시오. 로컬 모델이 에디터 컨텍스트 내에서 응답합니다. 이는 코드 리뷰, 리팩터링 제안, 설명 요청에 사용할 수 있습니다.',
+            },
+            {
+              q: 'VS Code를 열 때 Ollama가 실행 중이 아니면 어떻게 됩니까?',
+              a: 'Continue.dev는 연결 오류를 표시하며 자동 완성이 나타나지 않습니다. VS Code를 열기 전에 터미널에서 `ollama serve`로 Ollama를 시작하십시오. macOS에서는 Ollama 메뉴 바 설정에서 로그인 시 자동 시작하도록 설정할 수 있습니다.',
+            },
             {
               q: '로컬 코드 자동 완성이 클라우드보다 빠릅니까?',
               a: '그렇지 않습니다. 클라우드 자동 완성(GitHub Copilot)은 최적화된 서버 덕분에 더 빠릅니다. 로컬 자동 완성은 지연 시간이 더 길지만 비용이 없고 개인 정보 보호 위험도 없습니다.',
