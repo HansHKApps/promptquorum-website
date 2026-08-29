@@ -483,5 +483,29 @@
       "ctr": 0.00013497705390083686,
       "period": "last 90 days"
     }
+  },
+  {
+    "id": "6c3facf0-04d7-49b8-ab4e-d7602ad79a8e",
+    "slug": "/local-llms/local-llm-openai-compatible-api",
+    "date": "2026-08-29T06:04:47.587Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "LM Studio & Ollama OpenAI API Docs: Setup Guide (2026)",
+        "new": "Official LM Studio & Ollama OpenAI API Docs (2026)"
+      },
+      {
+        "field": "metaDescription",
+        "old": "LM Studio (localhost:1234) & Ollama (localhost:11434) OpenAI-compatible API docs...",
+        "new": "Official OpenAI-compatible API docs for LM Studio & Ollama: endpoints, Python, Node.js..."
+      }
+    ],
+    "reason": "21,738 impr, 0.08% CTR across 100+ near-duplicate long-tail queries. Almost every query variant leads with or contains 'official' or 'docs/documentation' (e.g. 'lm studio local server openai compatible api official docs' 62 impr pos 6.8, 'official lm studio local server openai compatible api documentation' 62 impr pos 7.1) -- same pattern as the CPML/XTTS page fixed earlier in this batch. Title already said 'Docs' but never 'Official'. Rewrote across all 9 locales to lead with the official-sourcing hook. Skipped 8 position-1-3 queries (~127 impr total: 'http://localhost:1234/v1' pos 2.3, 'is ollama openai compatible' pos 2.9, 'openai local llm' pos 1.7, etc.) as diagnosis-E -- already ranking top-3, a title rewrite won't move CTR there.",
+    "baseline": {
+      "impressions": 21738,
+      "clicks": 1,
+      "ctr": 4.600239212439047e-05,
+      "period": "last 90 days"
+    }
   }
 ]
