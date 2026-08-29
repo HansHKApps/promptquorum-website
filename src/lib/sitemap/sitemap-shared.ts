@@ -44,8 +44,6 @@ export const BASE = 'https://www.promptquorum.com'
 export const NOINDEX_PAGES = new Set([
   '/download',
   '/image-license', // robots.txt Disallow'd — utility/attribution page, not indexable
-  '/prompt-engineering/prompt-engineering-glossary',
-  '/prompt-engineering/the-single-step-prompt-method',
 ])
 
 // Path prefixes excluded from sitemap entirely

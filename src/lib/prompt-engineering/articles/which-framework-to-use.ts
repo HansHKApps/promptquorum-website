@@ -9,6 +9,8 @@ import type { PEArticle } from "@/lib/prompt-engineering/types";
 export const article: Partial<Record<Language, PEArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
+      last_full_refresh: '2026-08-29',
+      next_refresh_due: '2027-02-28',
       theme: 'Frameworks',
       heroImage: '/images/which-framework-to-use-overview-hero-en.webp',
       title: 'Which Prompt Framework Should You Use?',
@@ -237,7 +239,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Welches Prompt-Framework ist das richtige für Sie? (2026)',
         description: 'Vergleich der wichtigsten Prompt-Frameworks: CO-STAR, CRAFT, SPECS, RISEN, TRACE. Wählen Sie das richtige Framework für GPT-5.6, Claude Opus 5, Gemini 3.1 Pro und lokale Modelle.',
         datePublished: '2026-03-24',
-        dateModified: '2026-03-24',
+        dateModified: '2026-08-29',
         keywords: ['Prompt-Frameworks', 'Prompt Engineering', 'GPT-5.6', 'Claude Opus 5', 'Gemini 3.1 Pro', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -392,6 +394,16 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Überprüfen Sie die Framework-Wahl, wenn sich Aufgabenanforderungen ändern.** Wenn Ihre Zusammenfassungsaufgabe von "Fakten extrahieren" zu "drei Perspektiven synthetisieren" wechselt, könnten Sie von direkter Zusammenfassung (schneller) zu Chaining (differenzierter) wechseln. Framework-Wahl ist iterativ, nicht dauerhaft.',
           ],
         },
+        relatedReading: {
+          title: 'Weiterführende Artikel',
+          items: [
+            '[CO-STAR Prompt-Framework](/de/prompt-engineering/co-star-framework)',
+            '[RISEN-Framework](/de/prompt-engineering/risen-framework)',
+            '[RTF-Framework: Role, Task, Format](/de/prompt-engineering/rtf-framework)',
+            '[SPECS-Framework](/de/prompt-engineering/specs-framework)',
+            '[Ihr eigenes Prompt-Framework erstellen](/de/prompt-engineering/build-your-own-prompt-framework)',
+          ],
+        },
         faqSection: {
           id: 'faq',
           title: 'Häufig Gestellte Fragen',
@@ -427,7 +439,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: '¿Qué framework de prompts deberías usar?',
         description: 'Cómo elegir el framework de prompt correcto para GPT-5.6, Claude Opus 5, Gemini 3.1 Pro y modelos locales — y cómo PromptQuorum automatiza la selección de frameworks.',
         datePublished: '2026-03-24',
-        dateModified: '2026-03-24',
+        dateModified: '2026-08-29',
         keywords: ['frameworks de prompt', 'prompt engineering', 'GPT-5.6', 'Claude Opus 5', 'Gemini 3.1 Pro', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -596,6 +608,16 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Revisa la elección del framework cuando cambien los requisitos de la tarea.** Si tu tarea de resumen pasa de "extraer hechos" a "sintetizar tres perspectivas", podrías pasar del resumen directo (más rápido) al Chaining (más matizado). La elección del framework es iterativa, no permanente.',
           ],
         },
+        relatedReading: {
+          title: 'Lecturas relacionadas',
+          items: [
+            '[Framework de prompts CO-STAR](/es/prompt-engineering/co-star-framework)',
+            '[Framework RISEN](/es/prompt-engineering/risen-framework)',
+            '[Framework RTF: Role, Task, Format](/es/prompt-engineering/rtf-framework)',
+            '[Framework SPECS](/es/prompt-engineering/specs-framework)',
+            '[Crea tu propio framework de prompts](/es/prompt-engineering/build-your-own-prompt-framework)',
+          ],
+        },
         faqSection: {
           id: 'faq',
           title: 'Preguntas frecuentes',
@@ -631,7 +653,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'أي إطار طلب يجب استخدامه؟',
         description: 'كيف تختار إطار الطلب الصحيح لـ GPT-5.6 وClaude Opus 5 وGemini 3.1 Pro والنماذج المحلية — وكيف تُؤتمت PromptQuorum اختيار الأطر.',
         datePublished: '2026-03-24',
-        dateModified: '2026-03-24',
+        dateModified: '2026-08-29',
         keywords: ['أطر الطلبات', 'هندسة الطلبات', 'GPT-5.6', 'Claude Opus 5', 'Gemini 3.1 Pro', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -800,6 +822,16 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**راجع اختيار الإطار عندما تتغير متطلبات المهمة.** إذا انتقلت مهمة التلخيص من "استخلاص الحقائق" إلى "تجميع ثلاثة منظورات"، قد تنتقل من التلخيص المباشر (أسرع) إلى Chaining (أكثر دقة). اختيار الإطار تكراري، لا دائم.',
           ],
         },
+        relatedReading: {
+          title: 'مواد ذات صلة',
+          items: [
+            '[إطار CO-STAR للطلبات](/ar/prompt-engineering/co-star-framework)',
+            '[إطار RISEN](/ar/prompt-engineering/risen-framework)',
+            '[إطار RTF: الدور والمهمة والتنسيق](/ar/prompt-engineering/rtf-framework)',
+            '[إطار SPECS](/ar/prompt-engineering/specs-framework)',
+            '[ابنِ إطار الطلبات الخاص بك](/ar/prompt-engineering/build-your-own-prompt-framework)',
+          ],
+        },
         faqSection: {
           id: 'faq',
           title: 'الأسئلة الشائعة',
@@ -834,6 +866,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Qual framework de prompt você deve usar?',
         description: 'Como escolher o framework de prompt certo para GPT-5.6, Claude Opus 5, Gemini 3.1 Pro e modelos locais — e como o PromptQuorum automatiza a seleção de frameworks.',
         datePublished: '2026-03-24',
+        dateModified: '2026-08-29',
         keywords: ['frameworks de prompt', 'prompt engineering', 'GPT-5.6', 'Claude Opus 5', 'Gemini 3.1 Pro', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -943,6 +976,30 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Definir seu próprio framework especificando funções, perguntas obrigatórias, restrições e esquemas de output, então reutilizá-lo em todos os modelos e projetos.',
           ],
         },
+        automaticSelection: {
+          title: 'Seleção automática de frameworks do PromptQuorum',
+          content: [
+            '**O seletor de frameworks do PromptQuorum recomenda um framework de prompt automaticamente usando a categoria da tarefa, o formato de output desejado e suas preferências salvas.** Isso reduz o tempo que você gasta pensando na meta-estrutura e permite que você foque em descrever a tarefa em si.',
+            'Um fluxo típico:',
+          ],
+          numberedItems: [
+            'Você seleciona uma tarefa como "resumir pesquisa com citações" ou "gerar ideias de posts para o LinkedIn".',
+            'O PromptQuorum mapeia essa tarefa para um framework padrão — por exemplo, um framework orientado a raciocínio para pesquisa ou um framework criativo para geração de ideias.',
+            'Você pode aceitar a sugestão, substituí-la por um framework diferente ou travar determinados projetos em um framework específico para manter a consistência.',
+          ],
+        },
+        customFrameworks: {
+          title: 'Criando seus próprios frameworks de prompt no PromptQuorum',
+          content: [
+            '**O PromptQuorum permite que você defina, salve e reutilize seus próprios frameworks de prompt para que seus fluxos de trabalho específicos de domínio se tornem ferramentas de primeira classe em vez de prompts improvisados.** Isso é essencial se você faz análises, relatórios ou auditorias repetidas com padrões internos rígidos.',
+            'Ao criar um framework personalizado no PromptQuorum, você pode:',
+          ],
+          items: [
+            'Definir as seções (por exemplo, Objetivo, Contexto, Fontes de Dados, Restrições, Formato de Output).',
+            'Adicionar perguntas obrigatórias que o aplicativo fará a cada uso antes do despacho, para que você nunca esqueça entradas críticas.',
+            'Anexar formatos de output específicos, como seções em Markdown, listas com marcadores ou JSON com chaves predefinidas.',
+          ],
+        },
         badVsGoodExample: {
           title: 'Exemplo: Uso ruim vs. bom de um framework',
           content: [
@@ -954,6 +1011,19 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'No PromptQuorum, você pode armazenar essa estrutura como um framework reutilizável e aplicá-la ao GPT-5.6, Claude Opus 5 e Gemini 3.1 Pro em paralelo.',
           ],
         },
+        conclusion: {
+          title: 'Qual framework de prompt você deve usar hoje?',
+          content: [
+            '**Para a maioria dos usuários, o melhor ponto de partida é escolher um framework focado em raciocínio para tarefas de análise e um framework focado em criatividade para tarefas de escrita, depois padronizar esses dois em todos os modelos via PromptQuorum.** Conforme seus fluxos de trabalho amadurecem, você pode introduzir um framework rico em especificações para outputs estruturados e, opcionalmente, um framework personalizado ajustado ao seu domínio.',
+            'Uma linha de base prática:',
+          ],
+          items: [
+            'Use um framework estilo CO-STAR ou TRACE para resumos de pesquisa, análises técnicas e raciocínio complexo.',
+            'Use um framework estilo CRAFT para copy de marketing, ideias de conteúdo e experimentos de mensagens.',
+            'Use um framework estilo SPECS para outputs estruturados como relatórios, checklists ou JSON que precisam ser processados por ferramentas posteriores.',
+            'O seletor automático e o editor de frameworks personalizados do PromptQuorum ajudam você a aplicar esse padrão em escala, para que a qualidade do prompt não dependa da memória ou habilidade individual.',
+          ],
+        },
         howToStart: {
           title: 'Como escolher um framework de prompt',
           numberedItems: [
@@ -962,6 +1032,16 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Para tarefas complexas, combine frameworks: use Persona para tom, SPECS para restrições e CoT para raciocinar sobre casos extremos.** Você não precisa se limitar a um único framework.',
             '**Documente por que você escolheu um framework para cada prompt na sua biblioteca.** Exemplo: "Para análise de erros, usamos CoT porque o modelo precisa rastrear a execução antes de identificar o erro."',
             '**Revise a escolha do framework quando os requisitos da tarefa mudarem.** A escolha do framework é iterativa, não permanente.',
+          ],
+        },
+        relatedReading: {
+          title: 'Leituras relacionadas',
+          items: [
+            '[Framework de prompt CO-STAR](/pt/prompt-engineering/co-star-framework)',
+            '[Framework RISEN](/pt/prompt-engineering/risen-framework)',
+            '[Framework RTF: Role, Task, Format](/pt/prompt-engineering/rtf-framework)',
+            '[Framework SPECS](/pt/prompt-engineering/specs-framework)',
+            '[Crie seu próprio framework de prompt](/pt/prompt-engineering/build-your-own-prompt-framework)',
           ],
         },
         faqSection: {
@@ -988,7 +1068,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       publishDate: '2026-03-24',
       readTime: '9 min de lecture',
       seoTitle: 'Quel Framework de Prompt 2026 ? Comparatif complet',
-      metaDescription: 'Choisir le bon framework de prompts pour GPT-5.6, Claude Sonnet et Gemini. Comparez Chain-of-Thought, ReAct, Tree-of-Thought. Guide pratique avec cas d\'usage et conseils décisionnels pour tous les niveaux.',
+      metaDescription: 'Choisir le bon framework de prompts pour GPT-5.6, Claude Opus 5 et Gemini 3.1 Pro. Comparez Chain-of-Thought, ReAct, Tree-of-Thought. Guide pratique avec cas d\'usage et conseils décisionnels pour tous les niveaux.',
       educationalLevel: 'Intermediate',
       schema: {
         '@context': 'https://schema.org',
@@ -997,7 +1077,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Quel framework de prompt choisir ? (2026)',
         description: 'Comparaison des frameworks de prompt majeurs : CO-STAR, CRAFT, SPECS, RISEN, TRACE. Choisissez le bon framework pour GPT-5.6, Claude Opus 5, Gemini 3.1 Pro et modèles locaux.',
         datePublished: '2026-03-24',
-        dateModified: '2026-03-24',
+        dateModified: '2026-08-29',
         keywords: ['frameworks de prompt', 'prompt engineering', 'GPT-5.6', 'Claude Opus 5', 'Gemini 3.1 Pro', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -1152,6 +1232,16 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**Réévaluez le choix du framework quand les exigences de la tâche changent.** Si votre tâche de synthèse passe de « extraire des faits » à « synthétiser trois perspectives », vous passerez peut-être du résumé direct (plus rapide) au Chaining (plus nuancé). Le choix du framework est itératif, pas permanent.',
           ],
         },
+        relatedReading: {
+          title: 'Lectures complémentaires',
+          items: [
+            '[Framework de prompt CO-STAR](/fr/prompt-engineering/co-star-framework)',
+            '[Framework RISEN](/fr/prompt-engineering/risen-framework)',
+            '[Framework RTF : Role, Task, Format](/fr/prompt-engineering/rtf-framework)',
+            '[Framework SPECS](/fr/prompt-engineering/specs-framework)',
+            '[Créez votre propre framework de prompt](/fr/prompt-engineering/build-your-own-prompt-framework)',
+          ],
+        },
         faqSection: {
           id: 'faq',
           title: 'Questions Fréquemment Posées',
@@ -1177,7 +1267,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       readTime: '9分で読める',
       educationalLevel: 'Intermediate',
       seoTitle: '2026年プロンプトフレームワーク完全ガイド：Chain-of-Thought選択方法と実践活用法',
-      metaDescription: 'Chain-of-Thought、ReAct、Tree-of-Thoughtなどプロンプトフレームワークの完全ガイド。GPT-5.6、Claude Sonnet、Gemini、Ollama各モデルでの使い方やタスク別選択方法、各フレームワークのメリット・デメリット比較を詳しく解説。',
+      metaDescription: 'Chain-of-Thought、ReAct、Tree-of-Thoughtなどプロンプトフレームワークの完全ガイド。GPT-5.6、Claude Opus 5、Gemini 3.1 Pro、Ollama各モデルでの使い方やタスク別選択方法、各フレームワークのメリット・デメリット比較を詳しく解説。',
             schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -1185,7 +1275,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'どのプロンプトフレームワーク？2026年比較',
         description: 'Chain-of-Thought、ReAct、Tree-of-Thoughtを比較。ユースケース別に選べるフレームワーク。メリット・デメリット解説。',
         datePublished: '2026-03-24',
-        dateModified: '2026-03-24',
+        dateModified: '2026-08-29',
         keywords: ['プロンプトフレームワーク', 'プロンプトエンジニアリング', 'GPT-5.6', 'Claude Opus 5', 'Gemini 3.1 Pro', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -1340,6 +1430,16 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**タスク要件が変わったらフレームワークの選択を見直す。** 要約タスクが「事実の抽出」から「3つの視点の統合」に変わったら、直接要約（より速い）からチェーニング（より細かい）に移行するかもしれない。フレームワークの選択は反復的なもの。',
           ],
         },
+        relatedReading: {
+          title: '関連記事',
+          items: [
+            '[CO-STARプロンプトフレームワーク](/ja/prompt-engineering/co-star-framework)',
+            '[RISENフレームワーク](/ja/prompt-engineering/risen-framework)',
+            '[RTFフレームワーク：Role, Task, Format](/ja/prompt-engineering/rtf-framework)',
+            '[SPECSフレームワーク](/ja/prompt-engineering/specs-framework)',
+            '[独自のプロンプトフレームワークを作る](/ja/prompt-engineering/build-your-own-prompt-framework)',
+          ],
+        },
         faqSection: {
           id: 'faq',
           title: 'よくある質問',
@@ -1365,7 +1465,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       readTime: '阅读约9分钟',
       educationalLevel: 'Intermediate',
       seoTitle: '2026年提示词框架完全指南：选择方法、应用场景与GPT-5.6 Claude Gemini活用方法指南',
-      metaDescription: 'Chain-of-Thought、ReAct、Tree-of-Thought等主流提示词框架的完全对比与应用指南。涵盖GPT-5.6、Claude Sonnet、Gemini、Ollama等主流大语言模型的应用建议。框架优缺点深度分析与对比，企业场景选择方案，实战技巧与最佳实践详细讲解。',
+      metaDescription: 'Chain-of-Thought、ReAct、Tree-of-Thought等主流提示词框架的完全对比与应用指南。涵盖GPT-5.6、Claude Opus 5、Gemini 3.1 Pro、Ollama等主流大语言模型的应用建议。框架优缺点深度分析与对比，企业场景选择方案，实战技巧与最佳实践详细讲解。',
             schema: {
         '@context': 'https://schema.org',
         '@type': 'TechArticle',
@@ -1373,7 +1473,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: '选择哪个提示框架？2026年对比',
         description: 'Chain-of-Thought vs ReAct vs Tree-of-Thought框架对比。按用例选择。优缺点解析，推荐决策指南。',
         datePublished: '2026-03-24',
-        dateModified: '2026-03-24',
+        dateModified: '2026-08-29',
         keywords: ['提示框架', '提示工程', 'GPT-5.6', 'Claude Opus 5', 'Gemini 3.1 Pro', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -1526,6 +1626,16 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**对于复杂任务，组合框架：用角色扮演设定语气，SPECS定义约束，CoT处理边缘情况。** 不必局限于一个框架，根据任务复杂度组合使用。',
             '**记录为库中每个提示词选择框架的原因。** 示例："错误分析使用CoT（因为模型需要追踪执行流程）；代码生成使用SPECS（因为需要确定性的、符合约束的输出）。"',
             '**任务需求变化时重新评估框架选择。** 如果摘要任务从"提取事实"转变为"综合三个视角"，可能会从直接摘要（更快）转移到链式（更细致）。框架选择是迭代的，而非永久的。',
+          ],
+        },
+        relatedReading: {
+          title: '相关阅读',
+          items: [
+            '[CO-STAR提示词框架](/zh/prompt-engineering/co-star-framework)',
+            '[RISEN框架](/zh/prompt-engineering/risen-framework)',
+            '[RTF框架：Role, Task, Format](/zh/prompt-engineering/rtf-framework)',
+            '[SPECS框架](/zh/prompt-engineering/specs-framework)',
+            '[构建你自己的提示词框架](/zh/prompt-engineering/build-your-own-prompt-framework)',
           ],
         },
         faqSection: {

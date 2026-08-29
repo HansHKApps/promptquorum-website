@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-29T17:08:01.192Z",
+  "generatedAt": "2026-08-29T21:41:38.565Z",
   "scope": "EN articles: local-llms, prompt-engineering, power-local-llm, smart-home, balcony-solar, blog",
   "unweighted": {
     "n": 530,
-    "meanDays": 34.1,
-    "medianDays": 37,
+    "meanDays": 31.6,
+    "medianDays": 30,
     "buckets": [
       {
         "label": "0-5",
-        "count": 247,
-        "pct": 46.6
+        "count": 257,
+        "pct": 48.5
       },
       {
         "label": "6-15",
@@ -28,13 +28,13 @@
       },
       {
         "label": "61-120",
-        "count": 78,
-        "pct": 14.7
+        "count": 74,
+        "pct": 14
       },
       {
         "label": "121+",
-        "count": 23,
-        "pct": 4.3
+        "count": 17,
+        "pct": 3.2
       }
     ]
   },
@@ -83,22 +83,8 @@
     },
     {
       "cluster": "power-local-llm",
-      "slug": "voice-assistant-local-mobile-offline",
-      "urlPath": "/power-local-llm/voice-assistant-local-mobile-offline",
-      "ageDays": 113,
-      "dateSource": "dateModified"
-    },
-    {
-      "cluster": "power-local-llm",
       "slug": "local-llm-with-obsidian-2026",
       "urlPath": "/power-local-llm/local-llm-with-obsidian-2026",
-      "ageDays": 113,
-      "dateSource": "dateModified"
-    },
-    {
-      "cluster": "power-local-llm",
-      "slug": "local-llm-personal-knowledge-base-2026",
-      "urlPath": "/power-local-llm/local-llm-personal-knowledge-base-2026",
       "ageDays": 113,
       "dateSource": "dateModified"
     },
@@ -107,20 +93,6 @@
       "slug": "run-qwen-vl-locally-2026",
       "urlPath": "/local-llms/run-qwen-vl-locally-2026",
       "ageDays": 99,
-      "dateSource": "dateModified"
-    },
-    {
-      "cluster": "power-local-llm",
-      "slug": "deepseek-vs-qwen-local-comparison-2026",
-      "urlPath": "/power-local-llm/deepseek-vs-qwen-local-comparison-2026",
-      "ageDays": 95,
-      "dateSource": "dateModified"
-    },
-    {
-      "cluster": "power-local-llm",
-      "slug": "local-ai-behind-firewall-offline-2026",
-      "urlPath": "/power-local-llm/local-ai-behind-firewall-offline-2026",
-      "ageDays": 95,
       "dateSource": "dateModified"
     },
     {
@@ -134,13 +106,13 @@
   "warnings": [],
   "weighted": {
     "n": 252,
-    "meanDays": 16.6,
-    "medianDays": 3,
+    "meanDays": 15.6,
+    "medianDays": 2,
     "buckets": [
       {
         "label": "0-5",
-        "impressions": 232817,
-        "pct": 70.2
+        "impressions": 235530,
+        "pct": 71
       },
       {
         "label": "6-15",
@@ -159,13 +131,13 @@
       },
       {
         "label": "61-120",
-        "impressions": 25002,
-        "pct": 7.5
+        "impressions": 23731,
+        "pct": 7.2
       },
       {
         "label": "121+",
-        "impressions": 2666,
-        "pct": 0.8
+        "impressions": 1224,
+        "pct": 0.4
       }
     ],
     "unmatchedGscRows": 12,

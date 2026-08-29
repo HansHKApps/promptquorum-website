@@ -13054,9 +13054,9 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
     en: {
       category: 'Prompt Optimization',
       title: 'Automatic Prompt Optimization: Your Guide to the 8 Refinement Tools',
-      intro: 'As of July 2026: Automatic prompt optimization is AI-powered transformation that restructures rough, unclear prompts into professional, structured versions in seconds. PromptQuorum\'s optimization engine improves prompt quality scores from an average of 48% (manual) to 82% (auto-optimized) while reducing optimization time from 20-30 minutes to 2-3 minutes.',
+      intro: 'Automatic prompt optimization is AI-powered transformation that restructures rough, unclear prompts into professional, structured versions in seconds. PromptQuorum\'s optimization engine improves prompt quality scores from an average of 48% (manual) to 82% (auto-optimized) while reducing optimization time from 20-30 minutes to 2-3 minutes.',
       publishDate: 'Published March 14, 2026',
-      last_full_refresh: '2026-03-14',
+      last_full_refresh: '2026-08-29',
       seoTitle: 'Prompt Optimization 2026: 8 Tools to Boost AI Output',
       readTime: '12 min read',
             metaDescription: 'Master 8 refinement techniques to optimize prompts: add context, clarity, structure, and constraints. Improve quality from 48% to 82% in 2–3 minutes.',
@@ -13604,7 +13604,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
     ar: {
       category: 'تحسين الـ Prompt',
       title: 'التحسين التلقائي للـ Prompt: دليلك إلى أدوات التنقيح الثماني',
-      intro: 'اعتبارًا من يوليو 2026: التحسين التلقائي للـ Prompt هو تحويل مدعوم بالذكاء الاصطناعي يعيد هيكلة الـ Prompts الخام وغير الواضحة إلى نسخ احترافية ومنظمة خلال ثوانٍ. يرفع محرك التحسين في PromptQuorum درجات جودة الـ Prompt من متوسط 48% (يدوي) إلى 82% (محسّن تلقائيًا)، مع تقليص وقت التحسين من 20–30 دقيقة إلى 2–3 دقائق.',
+      intro: 'التحسين التلقائي للـ Prompt هو تحويل مدعوم بالذكاء الاصطناعي يعيد هيكلة الـ Prompts الخام وغير الواضحة إلى نسخ احترافية ومنظمة خلال ثوانٍ. يرفع محرك التحسين في PromptQuorum درجات جودة الـ Prompt من متوسط 48% (يدوي) إلى 82% (محسّن تلقائيًا)، مع تقليص وقت التحسين من 20–30 دقيقة إلى 2–3 دقائق.',
       publishDate: 'نُشر في 14 مارس 2026',
       seoTitle: 'تحسين الـ Prompt 2026: 8 أدوات لتعزيز مخرجات الذكاء الاصطناعي',
       readTime: '12 دقيقة للقراءة',
@@ -14633,7 +14633,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
     es: {
       category: 'Optimización de Prompts',
       title: 'Optimización Automática de Prompts: Tu Guía de las 8 Herramientas de Refinamiento',
-      intro: 'A partir de julio de 2026: La optimización automática de prompts es una transformación impulsada por IA que reestructura prompts ásperos e inciertos en versiones profesionales y estructuradas en segundos. El motor de optimización de PromptQuorum mejora las puntuaciones de calidad de prompts de un promedio del 48% (manual) al 82% (auto-optimizado) mientras reduce el tiempo de optimización de 20-30 minutos a 2-3 minutos.',
+      intro: 'La optimización automática de prompts es una transformación impulsada por IA que reestructura prompts ásperos e inciertos en versiones profesionales y estructuradas en segundos. El motor de optimización de PromptQuorum mejora las puntuaciones de calidad de prompts de un promedio del 48% (manual) al 82% (auto-optimizado) mientras reduce el tiempo de optimización de 20-30 minutos a 2-3 minutos.',
       publishDate: 'Publicado el 14 de marzo de 2026',
       seoTitle: 'Optimización de Prompts 2026: 8 Herramientas para Potenciar Salida de IA',
       readTime: '12 min de lectura',
@@ -14808,7 +14808,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
     pt: {
       category: 'Otimização de Prompts',
       title: 'Otimização Automática de Prompts: Seu Guia para as 8 Ferramentas de Refinamento',
-      intro: 'A partir de julho de 2026: a otimização automática de prompts é uma transformação impulsionada por IA que reestrutura prompts confusos e imprecisos em versões profissionais e estruturadas em segundos. O motor de otimização do PromptQuorum melhora as pontuações de qualidade de prompts de uma média de 48% (manual) para 82% (auto-otimizado), reduzindo o tempo de otimização de 20 a 30 minutos para 2 a 3 minutos.',
+      intro: 'A otimização automática de prompts é uma transformação impulsionada por IA que reestrutura prompts confusos e imprecisos em versões profissionais e estruturadas em segundos. O motor de otimização do PromptQuorum melhora as pontuações de qualidade de prompts de uma média de 48% (manual) para 82% (auto-otimizado), reduzindo o tempo de otimização de 20 a 30 minutos para 2 a 3 minutos.',
       publishDate: 'Publicado em 14 de março de 2026',
       seoTitle: 'Otimização de Prompts 2026: 8 Ferramentas para Potencializar a Saída de IA',
       readTime: '12 min de leitura',
@@ -15250,7 +15250,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
     ko: {
       category: '프롬프트 최적화',
       title: '자동 프롬프트 최적화: 8가지 정제 도구 가이드',
-      intro: '2026년 7월 기준: 자동 프롬프트 최적화는 AI 기반 변환으로 수 초 만에 불명확한 프롬프트를 전문적이고 구조화된 버전으로 재구성합니다. PromptQuorum의 최적화 엔진은 프롬프트 품질 점수를 평균 48%(수동)에서 82%(자동 최적화)로 향상시키며, 최적화 시간을 20-30분에서 2-3분으로 단축합니다.',
+      intro: '자동 프롬프트 최적화는 AI 기반 변환으로 수 초 만에 불명확한 프롬프트를 전문적이고 구조화된 버전으로 재구성합니다. PromptQuorum의 최적화 엔진은 프롬프트 품질 점수를 평균 48%(수동)에서 82%(자동 최적화)로 향상시키며, 최적화 시간을 20-30분에서 2-3분으로 단축합니다.',
       publishDate: 'Published March 14, 2026',
       seoTitle: '프롬프트 최적화 2026: AI 출력을 높이는 8가지 도구',
       readTime: '12분 읽기',

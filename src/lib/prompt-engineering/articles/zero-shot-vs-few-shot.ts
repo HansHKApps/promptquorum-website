@@ -537,6 +537,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     headline: 'Zero-Shot vs. Few-Shot Prompting',
     description: 'Uma comparação prática do zero-shot e few-shot prompting, quando usar cada técnica e como o PromptQuorum ajuda a escolher a estratégia certa.',
     datePublished: '2026-03-26',
+    dateModified: '2026-03-26',
     keywords: ['Zero-Shot Prompting', 'Few-Shot Prompting', 'prompt engineering', 'PromptQuorum'],
     author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
     publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
