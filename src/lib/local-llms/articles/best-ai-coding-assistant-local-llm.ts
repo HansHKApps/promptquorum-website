@@ -1394,7 +1394,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       verifiedSources: {
         id: 'verified-sources',
-        title: 'Verificação de fontes (junho de 2026)',
+        title: 'Verificação de fontes',
         content: '**Preços verificados nas fontes oficiais:** Cursor (US$ 20/mês Pro) — cursor.com/pricing; Continue.dev (gratuito) — continue.dev, open source Apache 2.0 confirmado, sem tier premium; Sourcegraph Cody (US$ 59/usuário/mês) — sourcegraph.com/cody/pricing; Tabnine (US$ 39/mês Pro) — tabnine.com/pricing; Windsurf (gratuito/US$ 15/mês) — codeium.com/windsurf/pricing; GitHub Copilot (US$ 10/mês) — github.com/features/copilot/pricing. Todos verificados em 2026-06-21.\n\n**Ambiente de teste de integração LLM local:** Ollama 0.30.8 (última versão estável em junho de 2026), Qwen 3 Coder 14B (modelo de código de porte médio representativo), Deepseek Coder 33B (alternativa maior), M3 Max MacBook Pro + RTX 4090 + RTX 3090 Ti (hardware representativo).\n\n**Próxima atualização:** julho de 2026. Reverificação mensal em vigor.',
       },
       continueSection: {
