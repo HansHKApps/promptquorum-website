@@ -1001,5 +1001,19 @@
     ],
     "reason": "Page 37: uniformly weak positions (7-11) across nearly all 30+ queries despite already-thorough body coverage (dimensions, idle power, official specs FAQ all already present) - not a content gap, diagnosis A/D. Real official specs query cluster (beelink ser8 official specs, ryzen 7 8845hs official specs, dimensions official, official website: ~23 impr combined) not reflected in title/meta despite matching an established successful pattern from earlier pages this campaign (official framing). Title/meta-only fix.",
     "baseline": null
+  },
+  {
+    "id": "adb14a63-376e-4d3b-b339-e6d62b06e829",
+    "slug": "/prompt-engineering/prompting-across-languages",
+    "date": "2026-08-29T14:07:07.989Z",
+    "fields": [
+      {
+        "field": "seoTitle,metaDescription (en), faqs (all 9 locales)",
+        "old": "seoTitle 65 chars no year (Rule 2d violation); no FAQ for respond in the same language as the user input pattern",
+        "new": "seoTitle 51 chars with 2026; added FAQ addressing the same-language-as-input system prompt pattern to all 9 locales"
+      }
+    ],
+    "reason": "Page 38 batch: seoTitle exceeded 60-char limit and lacked the required year for semi_annual tier. Real content gap: literal phrase query in the same language as the user input. (54 impr, pos 9.9, 0% CTR) is common real-world system-prompt boilerplate the article never addressed directly - it only covers the more robust explicit-declaration alternative it recommends. Added an FAQ that answers the literal query while reinforcing the article's existing guidance (explicit declaration over auto-detection), translated to all 9 languages.",
+    "baseline": null
   }
 ]
