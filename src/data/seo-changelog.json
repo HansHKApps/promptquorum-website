@@ -702,5 +702,24 @@
       "ctr": 0.004668222740913638,
       "period": "last 90 days"
     }
+  },
+  {
+    "id": "1ee726b9-742a-45e8-8b62-c93e78f89aee",
+    "slug": "/blog/ai-model-comparison",
+    "date": "2026-08-29T09:38:39.641Z",
+    "fields": [
+      {
+        "field": "content",
+        "old": "title/intro already said 'Claude Opus 5' but 108 remaining body mentions across 9 locales (benchmark tables, FAQ, section headings) still said 'Claude Opus 4.8'; 5 locales also had a wrong API pricing figure (~$15/$75 per million tokens)",
+        "new": "renamed all remaining 'Claude Opus 4.8' references to 'Claude Opus 5' across all 9 locales (122 total instances); corrected the wrong pricing figure to the verified real price ($5/1M input, $25/1M output -- same as Opus 4.8, unchanged at the Opus 5 launch) in the 5 locales that had it wrong; bumped last_full_refresh"
+      }
+    ],
+    "reason": "5,120 impr, 0.10% CTR (worst CTR in the whole campaign). Query data overwhelmingly about GPT-5.6/Gemini 3.1 Pro/Claude Opus comparisons -- dozens of 'opus 4.8' variants. Found the page's title and intro had already been updated to say 'Claude Opus 5' at some point, but the body content was only partially refreshed: 108 remaining 'Claude Opus 4.8' mentions across 9 locales (benchmark tables, FAQ answers, section headings) still named the superseded model, creating an internal inconsistency on the same page. Also found the API pricing line itself was factually wrong even before the rename -- the page said ~$15/1M input, ~$75/1M output for Claude, but verified real pricing (via web research) is $5/1M input, $25/1M output, unchanged from Opus 4.8 to Opus 5's July 24, 2026 launch. Fixed both the stale name and the wrong price across all 9 locales.",
+    "baseline": {
+      "impressions": 5120,
+      "clicks": 5,
+      "ctr": 0.0009765625,
+      "period": "last 90 days"
+    }
   }
 ]

@@ -5215,7 +5215,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
       heroImage: '/images/ai-model-comparison-comparisonTable-hero-en.webp',
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-09-14',
-      last_full_refresh: '2026-07-14',
+      last_full_refresh: '2026-08-29',
       current_models_mentioned: ['GPT-5.6', 'GPT-4o', 'Claude Opus 5', 'Gemini 3.1 Pro'],
       educationalLevel: 'Intermediate',
       faqSchema: {
@@ -5235,7 +5235,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'Which model is best for coding?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Claude Opus 4.8 has the edge in code quality and debugging, scoring ~94% on HumanEval benchmarks. GPT-5.6 (~92%) is faster. Use both and compare their code suggestions for critical work.',
+              text: 'Claude Opus 5 has the edge in code quality and debugging, scoring ~94% on HumanEval benchmarks. GPT-5.6 (~92%) is faster. Use both and compare their code suggestions for critical work.',
             },
           },
           {
@@ -5275,7 +5275,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'How does GPT-4o compare to Claude Opus 5 and Gemini 3.1 Pro?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'GPT-4o was OpenAI\'s flagship model before GPT-5.6 superseded it as the model behind ChatGPT. Its official model card lists a 128K token context window, ~88.7% on MMLU, and ~90.2% on HumanEval. Claude Opus 4.8 outperforms it on reasoning (~91% MMLU-Pro, a harder benchmark) and coding (~94% HumanEval) with an 1M token context window. If you\'re using ChatGPT today, you\'re most likely on GPT-5.6, not GPT-4o — check your account\'s model picker to confirm.',
+              text: 'GPT-4o was OpenAI\'s flagship model before GPT-5.6 superseded it as the model behind ChatGPT. Its official model card lists a 128K token context window, ~88.7% on MMLU, and ~90.2% on HumanEval. Claude Opus 5 outperforms it on reasoning (~91% MMLU-Pro, a harder benchmark) and coding (~94% HumanEval) with an 1M token context window. If you\'re using ChatGPT today, you\'re most likely on GPT-5.6, not GPT-4o — check your account\'s model picker to confirm.',
             },
           },
         ],
@@ -5343,7 +5343,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '@type': 'ListItem',
             position: 4,
             name: 'Reasoning Quality',
-            description: '1. Claude Opus 4.8 (~91% MMLU-Pro, shows reasoning). 2. GPT-5.6 (~90%). 3. Gemini 3.1 Pro (~89%).',
+            description: '1. Claude Opus 5 (~91% MMLU-Pro, shows reasoning). 2. GPT-5.6 (~90%). 3. Gemini 3.1 Pro (~89%).',
           },
           {
             '@type': 'ListItem',
@@ -5398,9 +5398,9 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
         },
         claudeSection: {
-          title: 'Claude (Anthropic) — Opus 4.8',
+          title: 'Claude (Anthropic) — Opus 5',
           content: [
-            'The reasoning-first model. Claude Opus 4.8 is optimized for accuracy, logical depth, and long-document analysis. Extended thinking mode achieves the highest scores on MMLU-Pro (~91%) and AIME benchmarks among frontier models as of 2025.',
+            'The reasoning-first model. Claude Opus 5 is optimized for accuracy, logical depth, and long-document analysis. Extended thinking mode achieves the highest scores on MMLU-Pro (~91%) and AIME benchmarks among frontier models as of 2025.',
             '**Strengths:** Superior step-by-step reasoning — shows its work consistently. Lower hallucination rate than competitors. 1M token context window for long documents and codebases. Constitutional AI training for safety transparency. Best-in-class code review (~94% HumanEval). Free tier available.',
             '**Weaknesses:** Slower inference than GPT-5.6 and Gemini 3.1 Pro. More conservative on highly creative tasks. Highest API cost of the three. Fewer third-party integrations than ChatGPT.',
             '**Best for:** Technical analysis, code review, logical reasoning, document analysis, research, complex problem-solving — any task where accuracy outweighs speed.',
@@ -5408,7 +5408,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           items: [
             'Free tier: Limited daily usage (Claude.ai)',
             'Claude.ai Pro: $20/month — higher usage limits',
-            'API: ~$15/1M input tokens, ~$75/1M output tokens (Opus 4.8)',
+            'API: $5/1M input tokens, $25/1M output tokens (Opus 5)',
             'Enterprise: Custom pricing with SLA',
           ],
         },
@@ -5417,7 +5417,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             'Google\'s multimodal flagship. Gemini 3.1 Pro leads on visual understanding, real-time web access via Google Search, and the largest context window of any frontier model at 2M tokens.',
             '**Strengths:** Best multimodal capabilities — images, video, audio, documents natively. Native Google Search integration for real-time information. Fast inference, competitive with GPT-5.6. Largest context window (2M tokens). Lowest API cost of the three. Free tier available.',
-            '**Weaknesses:** Step-by-step logical reasoning is not as strong as Claude Opus 4.8 (~89% MMLU-Pro vs Claude\'s ~91%). Google\'s default data-sharing practices are broader. Smaller third-party integration ecosystem than ChatGPT.',
+            '**Weaknesses:** Step-by-step logical reasoning is not as strong as Claude Opus 5 (~89% MMLU-Pro vs Claude\'s ~91%). Google\'s default data-sharing practices are broader. Smaller third-party integration ecosystem than ChatGPT.',
             '**Best for:** Image analysis, video understanding, tasks requiring real-time web data, Google Workspace integration, cost-conscious API users, very long-document processing.',
           ],
           items: [
@@ -5433,7 +5433,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           items: [
             'All three models have free consumer tiers — Pro/Plus plans are $20/month across all three',
             'GPT-5.6: 128K tokens | Claude Opus 5: 1M tokens | Gemini 3.1 Pro: 2M tokens',
-            'Claude Opus 4.8 extended thinking scores highest on MMLU-Pro (~91%) and AIME reasoning benchmarks',
+            'Claude Opus 5 extended thinking scores highest on MMLU-Pro (~91%) and AIME reasoning benchmarks',
             'Gemini 3.1 Pro is the only model with 2M context — fits an entire codebase, book, or legal filing',
             'All three support tool use, function calling, and RAG integration in production',
           ],
@@ -5444,8 +5444,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           columns: ['Factor', 'GPT-5.6', 'Claude Opus 5', 'Gemini 3.1 Pro'],
           rows: [
             { 'Factor': 'Context window', 'GPT-5.6': '128K tokens', 'Claude Opus 5': '1M tokens', 'Gemini 3.1 Pro': '2M tokens' },
-            { 'Factor': 'Reasoning (MMLU-Pro)', 'GPT-5.6': '~90%', 'Claude Opus 4.8': '~91%', 'Gemini 3.1 Pro': '~89%' },
-            { 'Factor': 'Code (HumanEval)', 'GPT-5.6': '~92%', 'Claude Opus 4.8': '~94%', 'Gemini 3.1 Pro': '~88%' },
+            { 'Factor': 'Reasoning (MMLU-Pro)', 'GPT-5.6': '~90%', 'Claude Opus 5': '~91%', 'Gemini 3.1 Pro': '~89%' },
+            { 'Factor': 'Code (HumanEval)', 'GPT-5.6': '~92%', 'Claude Opus 5': '~94%', 'Gemini 3.1 Pro': '~88%' },
             { 'Factor': 'Multimodal', 'GPT-5.6': 'Text + images', 'Claude Opus 5': 'Text + images', 'Gemini 3.1 Pro': 'Text, images, video, audio' },
             { 'Factor': 'Speed', 'GPT-5.6': 'Fast', 'Claude Opus 5': 'Moderate', 'Gemini 3.1 Pro': 'Fast' },
             { 'Factor': 'API input (per 1M tokens)', 'GPT-5.6': '~$5', 'Claude Opus 5': '~$15', 'Gemini 3.1 Pro': '~$3.5' },
@@ -5461,7 +5461,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         codeReview: {
           title: 'Code Review & Debugging',
-          content: 'Claude Opus 4.8 wins — highest HumanEval score (~94%), best at step-by-step explanation of code, finding bugs, and security issues. Shows reasoning clearly. GPT-5.6 (~92%) is a strong alternative when speed matters.',
+          content: 'Claude Opus 5 wins — highest HumanEval score (~94%), best at step-by-step explanation of code, finding bugs, and security issues. Shows reasoning clearly. GPT-5.6 (~92%) is a strong alternative when speed matters.',
         },
         dataAnalysis: {
           title: 'Data Analysis & Research',
@@ -5531,7 +5531,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           isTldr: true,
           items: [
             'GPT-5.6: Best for speed, versatility, creative writing. Fastest inference. 128K context.',
-            'Claude Opus 4.8: Best for reasoning (~91% MMLU-Pro), code (~94% HumanEval), long-form analysis. 1M context.',
+            'Claude Opus 5: Best for reasoning (~91% MMLU-Pro), code (~94% HumanEval), long-form analysis. 1M context.',
             'Gemini 3.1 Pro: Best for multimodal (images, video, audio). Real-time web access. Largest context (2M). Lowest API cost.',
             'All three have free consumer tiers and $20/month Pro plans.',
             'Reasoning: Claude Opus 5 > GPT-5.6 > Gemini 3.1 Pro.',
@@ -5544,11 +5544,11 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'Frequently Asked Questions',
           faqs: [
             { q: 'Which AI model is best for creative writing?', a: 'GPT-5.6 (ChatGPT) excels at creative writing, brainstorming, and general versatility. It is fast and accessible. Claude Opus 5 is better for deeper reasoning and analysis of creative work.' },
-            { q: 'Which model is best for coding?', a: 'Claude Opus 4.8 has the edge in code quality and debugging (~94% HumanEval). GPT-5.6 (~92%) is faster. Use both and compare their code suggestions for critical work.' },
+            { q: 'Which model is best for coding?', a: 'Claude Opus 5 has the edge in code quality and debugging (~94% HumanEval). GPT-5.6 (~92%) is faster. Use both and compare their code suggestions for critical work.' },
             { q: 'What is the cost comparison in 2026?', a: 'GPT-5.6: ~$5/1M input, ~$15/1M output. Claude Opus 5: ~$5/1M input, ~$25/1M output. Gemini 3.1 Pro: ~$3.5/1M input, ~$10.5/1M output. All have $20/month consumer plans. Verify current pricing at each provider.' },
             { q: 'Which model handles multimodal tasks best?', a: 'Gemini 3.1 Pro is strongest for images, video, audio, and document understanding. GPT-5.6 supports text and images. Claude Opus 5 supports text and images but not video.' },
             { q: 'Do all three models have free tiers?', a: 'Yes. ChatGPT, Claude.ai, and Gemini all offer free tiers with limited daily usage. All three also offer $20/month Pro/Plus/Premium plans for higher usage limits.' },
-            { q: 'How does GPT-4o compare to Claude Opus 4.8 and Gemini 3.1 Pro?', a: 'GPT-4o was OpenAI\'s flagship model before GPT-5.6 superseded it as the model behind ChatGPT. Its official model card lists a 128K token context window, ~88.7% on MMLU, and ~90.2% on HumanEval. Claude Opus 4.8 outperforms it on reasoning (~91% MMLU-Pro, a harder benchmark) and coding (~94% HumanEval) with a 1M token context window. If you\'re using ChatGPT today, you\'re most likely on GPT-5.6, not GPT-4o — check your account\'s model picker to confirm.' },
+            { q: 'How does GPT-4o compare to Claude Opus 5 and Gemini 3.1 Pro?', a: 'GPT-4o was OpenAI\'s flagship model before GPT-5.6 superseded it as the model behind ChatGPT. Its official model card lists a 128K token context window, ~88.7% on MMLU, and ~90.2% on HumanEval. Claude Opus 5 outperforms it on reasoning (~91% MMLU-Pro, a harder benchmark) and coding (~94% HumanEval) with a 1M token context window. If you\'re using ChatGPT today, you\'re most likely on GPT-5.6, not GPT-4o — check your account\'s model picker to confirm.' },
             { q: 'Can I use multiple models in the same workflow?', a: 'Yes. PromptQuorum lets you send the same prompt to GPT-5.6, Claude Opus 5, Gemini 3.1 Pro, and other models simultaneously, then compare results side-by-side. This is the recommended approach for critical work.' },
           ],
         },
@@ -5610,7 +5610,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'أي نموذج هو الأفضل للبرمجة؟',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'يتمتع Claude Opus 4.8 بالأفضلية في جودة الشيفرة وتصحيح الأخطاء، إذ يسجل نحو 94% في اختبارات HumanEval. وGPT-5.6 (نحو 92%) أسرع. استخدم كليهما وقارن بين اقتراحاتهما البرمجية في المهام الحرجة.',
+              text: 'يتمتع Claude Opus 5 بالأفضلية في جودة الشيفرة وتصحيح الأخطاء، إذ يسجل نحو 94% في اختبارات HumanEval. وGPT-5.6 (نحو 92%) أسرع. استخدم كليهما وقارن بين اقتراحاتهما البرمجية في المهام الحرجة.',
             },
           },
           {
@@ -5650,7 +5650,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'كيف يقارن GPT-4o بـClaude Opus 5 وGemini 3.1 Pro؟',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'كان GPT-4o هو النموذج الرائد لدى OpenAI قبل أن يحلّ محله GPT-5.6 كنموذج مشغّل لـChatGPT. تشير بطاقة النموذج الرسمية إلى نافذة سياق بـ128K رمز، ونحو 88.7% في اختبار MMLU، ونحو 90.2% في HumanEval. يتفوق عليه Claude Opus 4.8 في الاستدلال (نحو 91% في MMLU-Pro، وهو اختبار أصعب) وفي البرمجة (نحو 94% HumanEval)، بنافذة سياق بـ1M رمز. إذا كنت تستخدم ChatGPT اليوم، فمن المرجح أنك تستخدم GPT-5.6 وليس GPT-4o — تحقق من محدد النموذج في حسابك للتأكد.',
+              text: 'كان GPT-4o هو النموذج الرائد لدى OpenAI قبل أن يحلّ محله GPT-5.6 كنموذج مشغّل لـChatGPT. تشير بطاقة النموذج الرسمية إلى نافذة سياق بـ128K رمز، ونحو 88.7% في اختبار MMLU، ونحو 90.2% في HumanEval. يتفوق عليه Claude Opus 5 في الاستدلال (نحو 91% في MMLU-Pro، وهو اختبار أصعب) وفي البرمجة (نحو 94% HumanEval)، بنافذة سياق بـ1M رمز. إذا كنت تستخدم ChatGPT اليوم، فمن المرجح أنك تستخدم GPT-5.6 وليس GPT-4o — تحقق من محدد النموذج في حسابك للتأكد.',
             },
           },
         ],
@@ -5720,7 +5720,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '@type': 'ListItem',
             position: 4,
             name: 'جودة الاستدلال',
-            description: '1. Claude Opus 4.8 (نحو 91% MMLU-Pro، يُظهر خطوات الاستدلال). 2. GPT-5.6 (نحو 90%). 3. Gemini 3.1 Pro (نحو 89%).',
+            description: '1. Claude Opus 5 (نحو 91% MMLU-Pro، يُظهر خطوات الاستدلال). 2. GPT-5.6 (نحو 90%). 3. Gemini 3.1 Pro (نحو 89%).',
           },
           {
             '@type': 'ListItem',
@@ -5775,9 +5775,9 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
         },
         claudeSection: {
-          title: 'Claude (Anthropic) — Opus 4.8',
+          title: 'Claude (Anthropic) — Opus 5',
           content: [
-            'النموذج الذي يضع الاستدلال أولًا. جرى تحسين Claude Opus 4.8 من أجل الدقة والعمق المنطقي وتحليل المستندات الطويلة. ويحقق وضع التفكير الموسّع أعلى النتائج في اختبارات MMLU-Pro (نحو 91%) وAIME بين النماذج الرائدة حتى عام 2025.',
+            'النموذج الذي يضع الاستدلال أولًا. جرى تحسين Claude Opus 5 من أجل الدقة والعمق المنطقي وتحليل المستندات الطويلة. ويحقق وضع التفكير الموسّع أعلى النتائج في اختبارات MMLU-Pro (نحو 91%) وAIME بين النماذج الرائدة حتى عام 2025.',
             '**نقاط القوة:** استدلال متفوق خطوة بخطوة — يُظهر خطواته باستمرار. معدل هلوسة أقل من المنافسين. نافذة سياق بـ1M رمز للمستندات وقواعد الشيفرة الطويلة. تدريب Constitutional AI من أجل شفافية الأمان. أفضل مراجعة للشيفرة في فئتها (نحو 94% HumanEval). تتوفر خطة مجانية.',
             '**نقاط الضعف:** استدلال أبطأ من GPT-5.6 وGemini 3.1 Pro. أكثر تحفظًا في المهام الإبداعية العالية. أعلى تكلفة API بين الثلاثة. تكاملات خارجية أقل من ChatGPT.',
             '**الأفضل لـ:** التحليل التقني ومراجعة الشيفرة والاستدلال المنطقي وتحليل المستندات والبحث وحل المشكلات المعقدة — أي مهمة تتقدّم فيها الدقة على السرعة.',
@@ -5785,7 +5785,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           items: [
             'الخطة المجانية: استخدام يومي محدود (Claude.ai)',
             'Claude.ai Pro: 20$ شهريًا — حدود استخدام أعلى',
-            'API: نحو 15$ لكل مليون رمز إدخال، ونحو 75$ لكل مليون رمز إخراج (Opus 4.8)',
+            'API: نحو 5$ لكل مليون رمز إدخال، ونحو 25$ لكل مليون رمز إخراج (Opus 5)',
             'المؤسسات: تسعير مخصص مع اتفاقية مستوى خدمة',
           ],
         },
@@ -5794,7 +5794,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             'النموذج الرائد متعدد الوسائط من Google. يتصدّر Gemini 3.1 Pro في الفهم البصري والوصول الآني إلى الويب عبر Google Search، ويمتلك أكبر نافذة سياق بين النماذج الرائدة بـ2M رمز.',
             '**نقاط القوة:** أفضل القدرات متعددة الوسائط — الصور والفيديو والصوت والمستندات بشكل أصلي. تكامل أصلي مع Google Search للمعلومات الآنية. استدلال سريع ينافس GPT-5.6. أكبر نافذة سياق (2M رمز). أقل تكلفة API بين الثلاثة. تتوفر خطة مجانية.',
-            '**نقاط الضعف:** الاستدلال المنطقي خطوة بخطوة ليس بقوة Claude Opus 4.8 (نحو 89% MMLU-Pro مقابل نحو 91% لـClaude). ممارسات مشاركة البيانات الافتراضية لدى Google أوسع نطاقًا. منظومة تكاملات خارجية أصغر من ChatGPT.',
+            '**نقاط الضعف:** الاستدلال المنطقي خطوة بخطوة ليس بقوة Claude Opus 5 (نحو 89% MMLU-Pro مقابل نحو 91% لـClaude). ممارسات مشاركة البيانات الافتراضية لدى Google أوسع نطاقًا. منظومة تكاملات خارجية أصغر من ChatGPT.',
             '**الأفضل لـ:** تحليل الصور وفهم الفيديو والمهام التي تتطلب بيانات ويب آنية والتكامل مع Google Workspace ومستخدمي الـAPI المهتمين بالتكلفة ومعالجة المستندات الطويلة جدًا.',
           ],
           items: [
@@ -5810,7 +5810,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           items: [
             'تمتلك النماذج الثلاثة جميعها خططًا استهلاكية مجانية — وخطط Pro/Plus بـ20$ شهريًا لدى الثلاثة',
             'GPT-5.6: 128K رمز | Claude Opus 5: 1M رمز | Gemini 3.1 Pro: 2M رمز',
-            'يسجّل وضع التفكير الموسّع في Claude Opus 4.8 أعلى النتائج في اختبارات MMLU-Pro (نحو 91%) وAIME للاستدلال',
+            'يسجّل وضع التفكير الموسّع في Claude Opus 5 أعلى النتائج في اختبارات MMLU-Pro (نحو 91%) وAIME للاستدلال',
             'Gemini 3.1 Pro هو النموذج الوحيد بسياق 2M — يتسع لقاعدة شيفرة كاملة أو كتاب أو ملف قانوني',
             'تدعم النماذج الثلاثة جميعها استخدام الأدوات واستدعاء الدوال وتكامل RAG في الإنتاج',
           ],
@@ -5821,8 +5821,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           columns: ['العامل', 'GPT-5.6', 'Claude Opus 5', 'Gemini 3.1 Pro'],
           rows: [
             { 'العامل': 'نافذة السياق', 'GPT-5.6': '128K رمز', 'Claude Opus 5': '1M رمز', 'Gemini 3.1 Pro': '2M رمز' },
-            { 'العامل': 'الاستدلال (MMLU-Pro)', 'GPT-5.6': 'نحو 90%', 'Claude Opus 4.8': 'نحو 91%', 'Gemini 3.1 Pro': 'نحو 89%' },
-            { 'العامل': 'البرمجة (HumanEval)', 'GPT-5.6': 'نحو 92%', 'Claude Opus 4.8': 'نحو 94%', 'Gemini 3.1 Pro': 'نحو 88%' },
+            { 'العامل': 'الاستدلال (MMLU-Pro)', 'GPT-5.6': 'نحو 90%', 'Claude Opus 5': 'نحو 91%', 'Gemini 3.1 Pro': 'نحو 89%' },
+            { 'العامل': 'البرمجة (HumanEval)', 'GPT-5.6': 'نحو 92%', 'Claude Opus 5': 'نحو 94%', 'Gemini 3.1 Pro': 'نحو 88%' },
             { 'العامل': 'متعدد الوسائط', 'GPT-5.6': 'نصوص + صور', 'Claude Opus 5': 'نصوص + صور', 'Gemini 3.1 Pro': 'نصوص، صور، فيديو، صوت' },
             { 'العامل': 'السرعة', 'GPT-5.6': 'سريع', 'Claude Opus 5': 'متوسط', 'Gemini 3.1 Pro': 'سريع' },
             { 'العامل': 'إدخال الـAPI (لكل مليون رمز)', 'GPT-5.6': 'نحو 5$', 'Claude Opus 5': 'نحو 15$', 'Gemini 3.1 Pro': 'نحو 3.5$' },
@@ -5838,7 +5838,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         codeReview: {
           title: 'مراجعة الشيفرة وتصحيح الأخطاء',
-          content: 'يفوز Claude Opus 4.8 — أعلى نتيجة في HumanEval (نحو 94%)، والأفضل في شرح الشيفرة خطوة بخطوة وإيجاد الأخطاء والمشكلات الأمنية. يُظهر الاستدلال بوضوح. وGPT-5.6 (نحو 92%) بديل قوي عندما تكون السرعة مهمة.',
+          content: 'يفوز Claude Opus 5 — أعلى نتيجة في HumanEval (نحو 94%)، والأفضل في شرح الشيفرة خطوة بخطوة وإيجاد الأخطاء والمشكلات الأمنية. يُظهر الاستدلال بوضوح. وGPT-5.6 (نحو 92%) بديل قوي عندما تكون السرعة مهمة.',
         },
         dataAnalysis: {
           title: 'تحليل البيانات والبحث',
@@ -5908,7 +5908,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           isTldr: true,
           items: [
             'GPT-5.6: الأفضل للسرعة والتنوع والكتابة الإبداعية. أسرع استدلال. سياق 128K.',
-            'Claude Opus 4.8: الأفضل للاستدلال (نحو 91% MMLU-Pro) والبرمجة (نحو 94% HumanEval) والتحليل الطويل. سياق 1M.',
+            'Claude Opus 5: الأفضل للاستدلال (نحو 91% MMLU-Pro) والبرمجة (نحو 94% HumanEval) والتحليل الطويل. سياق 1M.',
             'Gemini 3.1 Pro: الأفضل لتعدد الوسائط (الصور والفيديو والصوت). وصول آني إلى الويب. أكبر سياق (2M). أقل تكلفة API.',
             'تمتلك النماذج الثلاثة جميعها خططًا استهلاكية مجانية وخطط Pro بـ20$ شهريًا.',
             'الاستدلال: Claude Opus 5 > GPT-5.6 > Gemini 3.1 Pro.',
@@ -5921,11 +5921,11 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'الأسئلة الشائعة',
           faqs: [
             { q: 'أي نموذج ذكاء اصطناعي هو الأفضل للكتابة الإبداعية؟', a: 'يتفوق GPT-5.6 (ChatGPT) في الكتابة الإبداعية والعصف الذهني والتنوع العام. وهو سريع وسهل الوصول إليه. أما Claude Opus 5 فهو أفضل للاستدلال الأعمق وتحليل الأعمال الإبداعية.' },
-            { q: 'أي نموذج هو الأفضل للبرمجة؟', a: 'يتمتع Claude Opus 4.8 بالأفضلية في جودة الشيفرة وتصحيح الأخطاء (نحو 94% HumanEval). وGPT-5.6 (نحو 92%) أسرع. استخدم كليهما وقارن بين اقتراحاتهما البرمجية في المهام الحرجة.' },
+            { q: 'أي نموذج هو الأفضل للبرمجة؟', a: 'يتمتع Claude Opus 5 بالأفضلية في جودة الشيفرة وتصحيح الأخطاء (نحو 94% HumanEval). وGPT-5.6 (نحو 92%) أسرع. استخدم كليهما وقارن بين اقتراحاتهما البرمجية في المهام الحرجة.' },
             { q: 'ما مقارنة التكلفة في عام 2026؟', a: 'GPT-5.6: نحو 5$ إدخال، ونحو 15$ إخراج لكل مليون رمز. Claude Opus 5: نحو 5$ إدخال، ونحو 25$ إخراج. Gemini 3.1 Pro: نحو 3.5$ إدخال، ونحو 10.5$ إخراج. لدى الجميع خطط استهلاكية بـ20$ شهريًا. تحقق من التسعير الحالي لدى كل مزوّد.' },
             { q: 'أي نموذج يتعامل مع المهام متعددة الوسائط بشكل أفضل؟', a: 'Gemini 3.1 Pro هو الأقوى في الصور والفيديو والصوت وفهم المستندات. يدعم GPT-5.6 النصوص والصور. ويدعم Claude Opus 5 النصوص والصور لكن ليس الفيديو.' },
             { q: 'هل تمتلك النماذج الثلاثة جميعها خططًا مجانية؟', a: 'نعم. يقدّم كل من ChatGPT وClaude.ai وGemini خططًا مجانية بحدود استخدام يومية محدودة. كما يقدّم الثلاثة خطط Pro/Plus/Premium بـ20$ شهريًا لحدود استخدام أعلى.' },
-            { q: 'كيف يقارن GPT-4o بـClaude Opus 4.8 وGemini 3.1 Pro؟', a: 'كان GPT-4o هو النموذج الرائد لدى OpenAI قبل أن يحلّ محله GPT-5.6 كنموذج مشغّل لـChatGPT. تشير بطاقة النموذج الرسمية إلى نافذة سياق بـ128K رمز، ونحو 88.7% في اختبار MMLU، ونحو 90.2% في HumanEval. يتفوق عليه Claude Opus 4.8 في الاستدلال (نحو 91% في MMLU-Pro، وهو اختبار أصعب) وفي البرمجة (نحو 94% HumanEval)، بنافذة سياق بـ1M رمز. إذا كنت تستخدم ChatGPT اليوم، فمن المرجح أنك تستخدم GPT-5.6 وليس GPT-4o — تحقق من محدد النموذج في حسابك للتأكد.' },
+            { q: 'كيف يقارن GPT-4o بـClaude Opus 5 وGemini 3.1 Pro؟', a: 'كان GPT-4o هو النموذج الرائد لدى OpenAI قبل أن يحلّ محله GPT-5.6 كنموذج مشغّل لـChatGPT. تشير بطاقة النموذج الرسمية إلى نافذة سياق بـ128K رمز، ونحو 88.7% في اختبار MMLU، ونحو 90.2% في HumanEval. يتفوق عليه Claude Opus 5 في الاستدلال (نحو 91% في MMLU-Pro، وهو اختبار أصعب) وفي البرمجة (نحو 94% HumanEval)، بنافذة سياق بـ1M رمز. إذا كنت تستخدم ChatGPT اليوم، فمن المرجح أنك تستخدم GPT-5.6 وليس GPT-4o — تحقق من محدد النموذج في حسابك للتأكد.' },
             { q: 'هل يمكنني استخدام نماذج متعددة في سير العمل نفسه؟', a: 'نعم. يتيح لك PromptQuorum إرسال المطالبة نفسها إلى GPT-5.6 وClaude Opus 5 وGemini 3.1 Pro ونماذج أخرى في وقت واحد، ثم مقارنة النتائج جنبًا إلى جنب. وهذا هو النهج الموصى به للمهام الحرجة.' },
           ],
         },
@@ -5987,7 +5987,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'Welches Modell ist am besten für Programmierung geeignet?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Claude Opus 4.8 hat beim Code-Review und Debugging die Nase vorn und erzielt ca. 94 % auf dem HumanEval-Benchmark. GPT-5.6 (ca. 92 %) ist schneller. Für kritische Aufgaben empfiehlt es sich, beide Modelle zu vergleichen.',
+              text: 'Claude Opus 5 hat beim Code-Review und Debugging die Nase vorn und erzielt ca. 94 % auf dem HumanEval-Benchmark. GPT-5.6 (ca. 92 %) ist schneller. Für kritische Aufgaben empfiehlt es sich, beide Modelle zu vergleichen.',
             },
           },
           {
@@ -6019,7 +6019,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'Wie schneidet GPT-4o im Vergleich zu Claude Opus 5 und Gemini 3.1 Pro ab?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'GPT-4o war das Flaggschiff-Modell von OpenAI, bevor GPT-5.6 es als Modell hinter ChatGPT ablöste. Laut offizieller Modellkarte bietet es ein 128K-Token-Kontextfenster, ca. 88,7 % bei MMLU und ca. 90,2 % bei HumanEval. Claude Opus 4.8 übertrifft es beim logischen Schlussfolgern (ca. 91 % MMLU-Pro, ein anspruchsvollerer Benchmark) und beim Programmieren (ca. 94 % HumanEval) mit einem 1-Mio.-Token-Kontextfenster. Wer ChatGPT heute nutzt, verwendet höchstwahrscheinlich GPT-5.6 und nicht GPT-4o — die Modellauswahl im eigenen Konto gibt Gewissheit.',
+              text: 'GPT-4o war das Flaggschiff-Modell von OpenAI, bevor GPT-5.6 es als Modell hinter ChatGPT ablöste. Laut offizieller Modellkarte bietet es ein 128K-Token-Kontextfenster, ca. 88,7 % bei MMLU und ca. 90,2 % bei HumanEval. Claude Opus 5 übertrifft es beim logischen Schlussfolgern (ca. 91 % MMLU-Pro, ein anspruchsvollerer Benchmark) und beim Programmieren (ca. 94 % HumanEval) mit einem 1-Mio.-Token-Kontextfenster. Wer ChatGPT heute nutzt, verwendet höchstwahrscheinlich GPT-5.6 und nicht GPT-4o — die Modellauswahl im eigenen Konto gibt Gewissheit.',
             },
           },
           {
@@ -6116,7 +6116,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '@type': 'ListItem',
             position: 4,
             name: 'Reasoning-Qualität',
-            description: '1. Claude Opus 4.8 (ca. 91 % MMLU-Pro, transparentes Reasoning). 2. GPT-5.6 (ca. 90 %). 3. Gemini 3.1 Pro (ca. 89 %).',
+            description: '1. Claude Opus 5 (ca. 91 % MMLU-Pro, transparentes Reasoning). 2. GPT-5.6 (ca. 90 %). 3. Gemini 3.1 Pro (ca. 89 %).',
           },
           {
             '@type': 'ListItem',
@@ -6171,9 +6171,9 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
         },
         claudeSection: {
-          title: 'Claude (Anthropic) — Opus 4.8',
+          title: 'Claude (Anthropic) — Opus 5',
           content: [
-            'Das Reasoning-orientierte Modell. Claude Opus 4.8 ist auf Genauigkeit, logische Tiefe und die Analyse langer Dokumente optimiert. Der Extended-Thinking-Modus erzielt die höchsten Werte auf MMLU-Pro (ca. 91 %) und AIME-Benchmarks unter den Frontier-Modellen (Stand 2025).',
+            'Das Reasoning-orientierte Modell. Claude Opus 5 ist auf Genauigkeit, logische Tiefe und die Analyse langer Dokumente optimiert. Der Extended-Thinking-Modus erzielt die höchsten Werte auf MMLU-Pro (ca. 91 %) und AIME-Benchmarks unter den Frontier-Modellen (Stand 2025).',
             '**Stärken:** Überlegenes Schritt-für-Schritt-Reasoning — zeigt den Lösungsweg konsequent. Geringere Halluzinationsrate als Wettbewerber. 1 Mio. Token Kontextfenster für lange Dokumente und Codebasen. Constitutional-AI-Training für Sicherheitstransparenz. Bester Code-Review in der Klasse (ca. 94 % HumanEval). Kostenloser Tarif verfügbar.',
             '**Schwächen:** Langsamere Inferenz als GPT-5.6 und Gemini 3.1 Pro. Bei stark kreativen Aufgaben konservativer. Höchste API-Kosten der drei Modelle. Weniger Drittanbieter-Integrationen als ChatGPT.',
             '**Optimal für:** Technische Analysen, Code-Review, logisches Reasoning, Dokumentenanalyse, Recherche und komplexe Problemlösungen — kurz: alle Aufgaben, bei denen Genauigkeit wichtiger ist als Geschwindigkeit.',
@@ -6181,7 +6181,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           items: [
             'Kostenloser Tarif: Begrenzte tägliche Nutzung (Claude.ai)',
             'Claude.ai Pro: ca. 20 $/Monat — höhere Nutzungslimits',
-            'API: ca. 15 $/1 Mio. Input-Tokens, ca. 75 $/1 Mio. Output-Tokens (Opus 4.8)',
+            'API: ca. 5 $/1 Mio. Input-Tokens, ca. 25 $/1 Mio. Output-Tokens (Opus 5)',
             'Enterprise: Individuelle Preisgestaltung mit SLA',
           ],
         },
@@ -6190,7 +6190,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             'Googles multimodales Flaggschiff. Gemini 3.1 Pro führt beim visuellen Verständnis, beim Echtzeitzugriff über die Google-Suche und verfügt mit 2 Mio. Tokens über das größte Kontextfenster aller Frontier-Modelle.',
             '**Stärken:** Beste Multimodal-Fähigkeiten — Bilder, Video, Audio und Dokumente nativ. Native Google-Search-Integration für Echtzeitinformationen. Schnelle Inferenz, vergleichbar mit GPT-5.6. Größtes Kontextfenster (2 Mio. Tokens). Niedrigste API-Kosten der drei Modelle. Kostenloser Tarif verfügbar.',
-            '**Schwächen:** Schritt-für-Schritt-Reasoning nicht so stark wie Claude Opus 4.8 (ca. 89 % MMLU-Pro vs. Claudes ca. 91 %). Googles Standard-Datenweitergabepraktiken sind breiter gefasst. Kleineres Drittanbieter-Ökosystem als ChatGPT.',
+            '**Schwächen:** Schritt-für-Schritt-Reasoning nicht so stark wie Claude Opus 5 (ca. 89 % MMLU-Pro vs. Claudes ca. 91 %). Googles Standard-Datenweitergabepraktiken sind breiter gefasst. Kleineres Drittanbieter-Ökosystem als ChatGPT.',
             '**Optimal für:** Bildanalyse, Videoanalyse, Aufgaben mit Echtzeitwebdaten, Google-Workspace-Integration, kostenoptimierte API-Nutzer und die Verarbeitung sehr langer Dokumente.',
           ],
           items: [
@@ -6206,7 +6206,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           items: [
             'Alle drei Modelle bieten kostenlose Verbrauchertarife — Pro-/Plus-Pläne kosten bei allen ca. 20 $/Monat',
             'GPT-5.6: 128K Tokens | Claude Opus 5: 1 Mio. Tokens | Gemini 3.1 Pro: 2 Mio. Tokens',
-            'Claude Opus 4.8 Extended Thinking erzielt die höchsten Werte auf MMLU-Pro (ca. 91 %) und AIME-Benchmarks',
+            'Claude Opus 5 Extended Thinking erzielt die höchsten Werte auf MMLU-Pro (ca. 91 %) und AIME-Benchmarks',
             'Gemini 3.1 Pro ist das einzige Modell mit 2 Mio. Kontext — Platz für eine gesamte Codebasis, ein Buch oder eine Vertragsdokumentation',
             'Alle drei unterstützen Tool Use, Function Calling und RAG-Integration im Produktivbetrieb',
           ],
@@ -6217,8 +6217,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           columns: ['Faktor', 'GPT-5.6', 'Claude Opus 5', 'Gemini 3.1 Pro'],
           rows: [
             { 'Faktor': 'Kontextfenster', 'GPT-5.6': '128K Tokens', 'Claude Opus 5': '1 Mio. Tokens', 'Gemini 3.1 Pro': '2 Mio. Tokens' },
-            { 'Faktor': 'Reasoning (MMLU-Pro)', 'GPT-5.6': '~90 %', 'Claude Opus 4.8': '~91 %', 'Gemini 3.1 Pro': '~89 %' },
-            { 'Faktor': 'Code (HumanEval)', 'GPT-5.6': '~92 %', 'Claude Opus 4.8': '~94 %', 'Gemini 3.1 Pro': '~88 %' },
+            { 'Faktor': 'Reasoning (MMLU-Pro)', 'GPT-5.6': '~90 %', 'Claude Opus 5': '~91 %', 'Gemini 3.1 Pro': '~89 %' },
+            { 'Faktor': 'Code (HumanEval)', 'GPT-5.6': '~92 %', 'Claude Opus 5': '~94 %', 'Gemini 3.1 Pro': '~88 %' },
             { 'Faktor': 'Multimodal', 'GPT-5.6': 'Text + Bilder', 'Claude Opus 5': 'Text + Bilder', 'Gemini 3.1 Pro': 'Text, Bilder, Video, Audio' },
             { 'Faktor': 'Geschwindigkeit', 'GPT-5.6': 'Schnell', 'Claude Opus 5': 'Mittel', 'Gemini 3.1 Pro': 'Schnell' },
             { 'Faktor': 'API-Kosten (pro 1 Mio. Tokens)', 'GPT-5.6': '~5 $', 'Claude Opus 5': '~15 $', 'Gemini 3.1 Pro': '~3,50 $' },
@@ -6234,7 +6234,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         codeReview: {
           title: 'Code-Review & Debugging',
-          content: 'Claude Opus 4.8 gewinnt — höchster HumanEval-Score (ca. 94 %), bestes Schritt-für-Schritt-Debugging, Fehlererkennung und Sicherheitsanalyse. Zeigt Reasoning transparent. GPT-5.6 (ca. 92 %) ist eine starke Alternative, wenn Geschwindigkeit Vorrang hat.',
+          content: 'Claude Opus 5 gewinnt — höchster HumanEval-Score (ca. 94 %), bestes Schritt-für-Schritt-Debugging, Fehlererkennung und Sicherheitsanalyse. Zeigt Reasoning transparent. GPT-5.6 (ca. 92 %) ist eine starke Alternative, wenn Geschwindigkeit Vorrang hat.',
         },
         dataAnalysis: {
           title: 'Datenanalyse & Recherche',
@@ -6304,7 +6304,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           isTldr: true,
           items: [
             'GPT-5.6: Beste Wahl für Geschwindigkeit, Vielseitigkeit und kreatives Schreiben. Schnellste Inferenz. 128K Kontext.',
-            'Claude Opus 4.8: Bestes Reasoning (ca. 91 % MMLU-Pro), Code (ca. 94 % HumanEval), Langform-Analysen. 1 Mio. Kontext.',
+            'Claude Opus 5: Bestes Reasoning (ca. 91 % MMLU-Pro), Code (ca. 94 % HumanEval), Langform-Analysen. 1 Mio. Kontext.',
             'Gemini 3.1 Pro: Bestes Multimodal (Bilder, Video, Audio). Echtzeit-Webzugriff. Größter Kontext (2 Mio. Tokens). Niedrigste API-Kosten.',
             'Alle drei bieten kostenlose Verbrauchertarife und Pro-Pläne für ca. 20 $/Monat.',
             'Reasoning: Claude Opus 5 > GPT-5.6 > Gemini 3.1 Pro.',
@@ -6330,11 +6330,11 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'Häufig gestellte Fragen',
           faqs: [
             { q: 'Welches KI-Modell eignet sich am besten für kreatives Schreiben?', a: 'GPT-5.6 (ChatGPT) ist die stärkste Wahl für kreatives Schreiben, Brainstorming und allgemeine Aufgaben — schnell und vielseitig. Claude Opus 5 eignet sich besser für tieferes Reasoning und die analytische Auseinandersetzung mit kreativen Inhalten.' },
-            { q: 'Welches Modell ist am besten für Programmierung geeignet?', a: 'Claude Opus 4.8 hat beim Code-Review und Debugging die Nase vorn (ca. 94 % HumanEval). GPT-5.6 (ca. 92 %) ist schneller. Für kritische Aufgaben empfiehlt es sich, beide Modelle zu vergleichen.' },
+            { q: 'Welches Modell ist am besten für Programmierung geeignet?', a: 'Claude Opus 5 hat beim Code-Review und Debugging die Nase vorn (ca. 94 % HumanEval). GPT-5.6 (ca. 92 %) ist schneller. Für kritische Aufgaben empfiehlt es sich, beide Modelle zu vergleichen.' },
             { q: 'Wie sehen die Kosten im Jahr 2026 aus?', a: 'GPT-5.6: ca. 5 $/1 Mio. Input, ca. 15 $/1 Mio. Output. Claude Opus 5: ca. 5 $/1 Mio. Input, ca. 25 $/1 Mio. Output. Gemini 3.1 Pro: ca. 3,50 $/1 Mio. Input, ca. 10,50 $/1 Mio. Output. Alle bieten Verbrauchertarife für ca. 20 $/Monat. Aktuelle Preise beim jeweiligen Anbieter prüfen.' },
             { q: 'Welches Modell eignet sich am besten für multimodale Aufgaben?', a: 'Gemini 3.1 Pro ist das stärkste Modell für Bilder, Video, Audio und das Verständnis von Dokumenten. GPT-5.6 unterstützt Text und Bilder. Claude Opus 5 unterstützt Text und Bilder, aber kein Video.' },
             { q: 'Verfügen alle drei Modelle über kostenlose Tarife?', a: 'Ja. ChatGPT, Claude.ai und Gemini bieten alle kostenlose Tarife mit täglichen Nutzungslimits. Alle drei bieten außerdem Pro-/Plus-Tarife für ca. 20 $/Monat mit höheren Nutzungslimits.' },
-            { q: 'Wie schneidet GPT-4o im Vergleich zu Claude Opus 4.8 und Gemini 3.1 Pro ab?', a: 'GPT-4o war das Flaggschiff-Modell von OpenAI, bevor GPT-5.6 es als Modell hinter ChatGPT ablöste. Laut offizieller Modellkarte bietet es ein 128K-Token-Kontextfenster, ca. 88,7 % bei MMLU und ca. 90,2 % bei HumanEval. Claude Opus 4.8 übertrifft es beim logischen Schlussfolgern (ca. 91 % MMLU-Pro, ein anspruchsvollerer Benchmark) und beim Programmieren (ca. 94 % HumanEval) mit einem 1-Mio.-Token-Kontextfenster. Wer ChatGPT heute nutzt, verwendet höchstwahrscheinlich GPT-5.6 und nicht GPT-4o — die Modellauswahl im eigenen Konto gibt Gewissheit.' },
+            { q: 'Wie schneidet GPT-4o im Vergleich zu Claude Opus 5 und Gemini 3.1 Pro ab?', a: 'GPT-4o war das Flaggschiff-Modell von OpenAI, bevor GPT-5.6 es als Modell hinter ChatGPT ablöste. Laut offizieller Modellkarte bietet es ein 128K-Token-Kontextfenster, ca. 88,7 % bei MMLU und ca. 90,2 % bei HumanEval. Claude Opus 5 übertrifft es beim logischen Schlussfolgern (ca. 91 % MMLU-Pro, ein anspruchsvollerer Benchmark) und beim Programmieren (ca. 94 % HumanEval) mit einem 1-Mio.-Token-Kontextfenster. Wer ChatGPT heute nutzt, verwendet höchstwahrscheinlich GPT-5.6 und nicht GPT-4o — die Modellauswahl im eigenen Konto gibt Gewissheit.' },
             { q: 'Kann ich mehrere Modelle im selben Workflow nutzen?', a: 'Ja. PromptQuorum ermöglicht es, denselben Prompt gleichzeitig an GPT-5.6, Claude Opus 5, Gemini 3.1 Pro und weitere Modelle zu senden und die Ergebnisse direkt zu vergleichen. Dieser Ansatz wird für kritische Aufgaben empfohlen.' },
             { q: 'Muss ich bei der Verwendung von ChatGPT, Claude oder Gemini die DSGVO beachten?', a: 'Ja. Bei der Verarbeitung personenbezogener Daten mit Cloud-KI-Diensten sind die DSGVO-Anforderungen — insbesondere Artikel 28 (Auftragsverarbeitung) — zu beachten. Alle drei Anbieter stellen DPAs bereit, die vor dem produktiven Einsatz abzuschließen sind. Für hochsensible Daten empfehlen die BSI-Grundschutz-Kataloge den Einsatz lokaler Modelle.' },
             { q: 'Sind diese KI-Modelle für den deutschen Mittelstand geeignet?', a: 'Ja, mit den richtigen Vorkehrungen. Mittelständische Unternehmen können alle drei Modelle für zahlreiche Aufgaben einsetzen. Wichtig sind: abgeschlossenes DPA nach DSGVO Artikel 28, Prüfung der Datenspeicherorte und Mitarbeiterschulungen. Für besonders schutzbedürftige Daten sind lokale Open-Source-Modelle (LLaMA 3.1, Mistral) die datenschutzkonforme Alternative.' },
@@ -6398,7 +6398,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'Quel modèle est le meilleur pour la programmation ?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Claude Opus 4.8 est en tête pour la qualité du code et le débogage, avec environ 94 % sur HumanEval. GPT-5.6 (~92 %) est plus rapide. Pour les travaux critiques, comparez les suggestions des deux modèles.',
+              text: 'Claude Opus 5 est en tête pour la qualité du code et le débogage, avec environ 94 % sur HumanEval. GPT-5.6 (~92 %) est plus rapide. Pour les travaux critiques, comparez les suggestions des deux modèles.',
             },
           },
           {
@@ -6430,7 +6430,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'Comment GPT-4o se compare-t-il à Claude Opus 5 et Gemini 3.1 Pro ?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'GPT-4o était le modèle phare d\'OpenAI avant que GPT-5.6 ne le remplace comme modèle derrière ChatGPT. Sa fiche technique officielle indique une fenêtre de contexte de 128K tokens, ~88,7 % sur MMLU et ~90,2 % sur HumanEval. Claude Opus 4.8 le surpasse en raisonnement (~91 % sur MMLU-Pro, un benchmark plus exigeant) et en code (~94 % HumanEval), avec une fenêtre de contexte de 1M tokens. Si vous utilisez ChatGPT aujourd\'hui, vous utilisez très probablement GPT-5.6, et non GPT-4o — vérifiez le sélecteur de modèle de votre compte pour en avoir la confirmation.',
+              text: 'GPT-4o était le modèle phare d\'OpenAI avant que GPT-5.6 ne le remplace comme modèle derrière ChatGPT. Sa fiche technique officielle indique une fenêtre de contexte de 128K tokens, ~88,7 % sur MMLU et ~90,2 % sur HumanEval. Claude Opus 5 le surpasse en raisonnement (~91 % sur MMLU-Pro, un benchmark plus exigeant) et en code (~94 % HumanEval), avec une fenêtre de contexte de 1M tokens. Si vous utilisez ChatGPT aujourd\'hui, vous utilisez très probablement GPT-5.6, et non GPT-4o — vérifiez le sélecteur de modèle de votre compte pour en avoir la confirmation.',
             },
           },
           {
@@ -6511,7 +6511,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '@type': 'ListItem',
             position: 4,
             name: 'Qualité de raisonnement',
-            description: '1. Claude Opus 4.8 (~91 % MMLU-Pro, raisonnement transparent). 2. GPT-5.6 (~90 %). 3. Gemini 3.1 Pro (~89 %).',
+            description: '1. Claude Opus 5 (~91 % MMLU-Pro, raisonnement transparent). 2. GPT-5.6 (~90 %). 3. Gemini 3.1 Pro (~89 %).',
           },
           {
             '@type': 'ListItem',
@@ -6566,9 +6566,9 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
         },
         claudeSection: {
-          title: 'Claude (Anthropic) — Opus 4.8',
+          title: 'Claude (Anthropic) — Opus 5',
           content: [
-            'Le modèle orienté raisonnement. Claude Opus 4.8 est optimisé pour la précision, la profondeur logique et l\'analyse de longs documents. Son mode de réflexion approfondie obtient les meilleurs scores sur MMLU-Pro (~91 %) et les benchmarks AIME parmi les modèles frontier (2025).',
+            'Le modèle orienté raisonnement. Claude Opus 5 est optimisé pour la précision, la profondeur logique et l\'analyse de longs documents. Son mode de réflexion approfondie obtient les meilleurs scores sur MMLU-Pro (~91 %) et les benchmarks AIME parmi les modèles frontier (2025).',
             '**Points forts :** Raisonnement étape par étape supérieur — montre systématiquement son cheminement. Taux d\'hallucination plus faible que les concurrents. Fenêtre de contexte 1M tokens pour les longs documents et bases de code. Formation Constitutional AI pour la transparence en matière de sécurité. Meilleure revue de code de sa catégorie (~94 % HumanEval). Offre gratuite disponible.',
             '**Limites :** Inférence plus lente que GPT-5.6 et Gemini 3.1 Pro. Plus conservateur sur les tâches très créatives. Coûts API les plus élevés des trois. Moins d\'intégrations tierces que ChatGPT.',
             '**Idéal pour :** Analyse technique, revue de code, raisonnement logique, analyse documentaire, recherche et résolution de problèmes complexes — toute tâche où la précision prime sur la vitesse.',
@@ -6576,7 +6576,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           items: [
             'Offre gratuite : Usage quotidien limité (Claude.ai)',
             'Claude.ai Pro : ~20 $/mois — limites d\'usage plus élevées',
-            'API : ~15 $/1M tokens en entrée, ~75 $/1M en sortie (Opus 4.8)',
+            'API : ~5 $/1M tokens en entrée, ~25 $/1M en sortie (Opus 5)',
             'Enterprise : Tarification personnalisée avec SLA',
           ],
         },
@@ -6585,7 +6585,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             'Le flagship multimodal de Google. Gemini 3.1 Pro domine en compréhension visuelle, en accès temps réel via Google Search, et dispose de la plus grande fenêtre de contexte de tous les modèles frontier avec 2M tokens.',
             '**Points forts :** Meilleures capacités multimodales — images, vidéo, audio et documents nativement. Intégration native Google Search pour l\'information en temps réel. Inférence rapide, comparable à GPT-5.6. Plus grande fenêtre de contexte (2M tokens). Coût API le plus bas des trois. Offre gratuite disponible.',
-            '**Limites :** Raisonnement logique étape par étape moins fort que Claude Opus 4.8 (~89 % MMLU-Pro vs ~91 % pour Claude). Pratiques de partage de données Google plus larges par défaut. Écosystème d\'intégrations tierces plus restreint que ChatGPT.',
+            '**Limites :** Raisonnement logique étape par étape moins fort que Claude Opus 5 (~89 % MMLU-Pro vs ~91 % pour Claude). Pratiques de partage de données Google plus larges par défaut. Écosystème d\'intégrations tierces plus restreint que ChatGPT.',
             '**Idéal pour :** Analyse d\'images, compréhension vidéo, tâches nécessitant des données web en temps réel, intégration Google Workspace, utilisateurs API soucieux des coûts, traitement de très longs documents.',
           ],
           items: [
@@ -6601,7 +6601,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           items: [
             'Les trois modèles proposent des offres gratuites — abonnements Pro/Plus à ~20 $/mois pour tous',
             'GPT-5.6 : 128K tokens | Claude Opus 5 : 1M tokens | Gemini 3.1 Pro : 2M tokens',
-            'Claude Opus 4.8 Extended Thinking obtient les meilleurs scores sur MMLU-Pro (~91 %) et les benchmarks AIME',
+            'Claude Opus 5 Extended Thinking obtient les meilleurs scores sur MMLU-Pro (~91 %) et les benchmarks AIME',
             'Gemini 3.1 Pro est le seul modèle avec 2M tokens de contexte — une base de code entière, un livre ou un dossier juridique',
             'Les trois supportent l\'utilisation d\'outils, le function calling et l\'intégration RAG en production',
           ],
@@ -6612,8 +6612,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           columns: ['Facteur', 'GPT-5.6', 'Claude Opus 5', 'Gemini 3.1 Pro'],
           rows: [
             { 'Facteur': 'Fenêtre de contexte', 'GPT-5.6': '128K tokens', 'Claude Opus 5': '1M tokens', 'Gemini 3.1 Pro': '2M tokens' },
-            { 'Facteur': 'Raisonnement (MMLU-Pro)', 'GPT-5.6': '~90 %', 'Claude Opus 4.8': '~91 %', 'Gemini 3.1 Pro': '~89 %' },
-            { 'Facteur': 'Code (HumanEval)', 'GPT-5.6': '~92 %', 'Claude Opus 4.8': '~94 %', 'Gemini 3.1 Pro': '~88 %' },
+            { 'Facteur': 'Raisonnement (MMLU-Pro)', 'GPT-5.6': '~90 %', 'Claude Opus 5': '~91 %', 'Gemini 3.1 Pro': '~89 %' },
+            { 'Facteur': 'Code (HumanEval)', 'GPT-5.6': '~92 %', 'Claude Opus 5': '~94 %', 'Gemini 3.1 Pro': '~88 %' },
             { 'Facteur': 'Multimodal', 'GPT-5.6': 'Texte + images', 'Claude Opus 5': 'Texte + images', 'Gemini 3.1 Pro': 'Texte, images, vidéo, audio' },
             { 'Facteur': 'Vitesse', 'GPT-5.6': 'Rapide', 'Claude Opus 5': 'Modérée', 'Gemini 3.1 Pro': 'Rapide' },
             { 'Facteur': 'Coût API (entrée/1M tokens)', 'GPT-5.6': '~5 $', 'Claude Opus 5': '~15 $', 'Gemini 3.1 Pro': '~3,5 $' },
@@ -6629,7 +6629,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         codeReview: {
           title: 'Revue de code & débogage',
-          content: 'Claude Opus 4.8 s\'impose — meilleur score HumanEval (~94 %), excellent pour l\'explication étape par étape du code, la détection de bugs et les problèmes de sécurité. Raisonnement transparent. GPT-5.6 (~92 %) est une alternative solide quand la vitesse prime.',
+          content: 'Claude Opus 5 s\'impose — meilleur score HumanEval (~94 %), excellent pour l\'explication étape par étape du code, la détection de bugs et les problèmes de sécurité. Raisonnement transparent. GPT-5.6 (~92 %) est une alternative solide quand la vitesse prime.',
         },
         dataAnalysis: {
           title: 'Analyse de données & recherche',
@@ -6699,7 +6699,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           isTldr: true,
           items: [
             'GPT-5.6 : Meilleur pour la vitesse, la polyvalence et l\'écriture créative. Inférence la plus rapide. Contexte 128K.',
-            'Claude Opus 4.8 : Meilleur pour le raisonnement (~91 % MMLU-Pro), le code (~94 % HumanEval), l\'analyse longue forme. Contexte 1M.',
+            'Claude Opus 5 : Meilleur pour le raisonnement (~91 % MMLU-Pro), le code (~94 % HumanEval), l\'analyse longue forme. Contexte 1M.',
             'Gemini 3.1 Pro : Meilleur pour le multimodal (images, vidéo, audio). Accès web temps réel. Plus grand contexte (2M). Coût API le plus bas.',
             'Les trois proposent des offres gratuites et des abonnements Pro à ~20 $/mois.',
             'Raisonnement : Claude Opus 5 > GPT-5.6 > Gemini 3.1 Pro.',
@@ -6725,11 +6725,11 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'Questions fréquentes',
           faqs: [
             { q: 'Quel modèle d\'IA est le meilleur pour l\'écriture créative ?', a: 'GPT-5.6 (ChatGPT) excelle en écriture créative, brainstorming et polyvalence — rapide et accessible. Claude Opus 5 est préférable pour un raisonnement plus profond et l\'analyse critique de contenus créatifs.' },
-            { q: 'Quel modèle est le meilleur pour la programmation ?', a: 'Claude Opus 4.8 est en tête pour la qualité du code et le débogage (~94 % HumanEval). GPT-5.6 (~92 %) est plus rapide. Pour les travaux critiques, comparez les suggestions des deux modèles.' },
+            { q: 'Quel modèle est le meilleur pour la programmation ?', a: 'Claude Opus 5 est en tête pour la qualité du code et le débogage (~94 % HumanEval). GPT-5.6 (~92 %) est plus rapide. Pour les travaux critiques, comparez les suggestions des deux modèles.' },
             { q: 'Quelle est la comparaison des coûts en 2026 ?', a: 'GPT-5.6 : ~5 $/1M tokens entrée, ~15 $/1M sortie. Claude Opus 5 : ~5 $/1M entrée, ~25 $/1M sortie. Gemini 3.1 Pro : ~3,5 $/1M entrée, ~10,5 $/1M sortie. Abonnements grand public à ~20 $/mois pour les trois. Vérifiez les tarifs actuels chez chaque fournisseur.' },
             { q: 'Quel modèle gère le mieux les tâches multimodales ?', a: 'Gemini 3.1 Pro est le plus performant pour les images, la vidéo, l\'audio et la compréhension de documents. GPT-5.6 prend en charge texte et images. Claude Opus 5 prend en charge texte et images, mais pas la vidéo.' },
             { q: 'Les trois modèles proposent-ils des offres gratuites ?', a: 'Oui. ChatGPT, Claude.ai et Gemini proposent tous des offres gratuites avec des limites d\'usage quotidiennes. Les trois proposent également des abonnements Pro/Plus à ~20 $/mois pour des limites plus élevées.' },
-            { q: 'Comment GPT-4o se compare-t-il à Claude Opus 4.8 et Gemini 3.1 Pro ?', a: 'GPT-4o était le modèle phare d\'OpenAI avant que GPT-5.6 ne le remplace comme modèle derrière ChatGPT. Sa fiche technique officielle indique une fenêtre de contexte de 128K tokens, ~88,7 % sur MMLU et ~90,2 % sur HumanEval. Claude Opus 4.8 le surpasse en raisonnement (~91 % sur MMLU-Pro, un benchmark plus exigeant) et en code (~94 % HumanEval), avec une fenêtre de contexte de 1M tokens. Si vous utilisez ChatGPT aujourd\'hui, vous utilisez très probablement GPT-5.6, et non GPT-4o — vérifiez le sélecteur de modèle de votre compte pour en avoir la confirmation.' },
+            { q: 'Comment GPT-4o se compare-t-il à Claude Opus 5 et Gemini 3.1 Pro ?', a: 'GPT-4o était le modèle phare d\'OpenAI avant que GPT-5.6 ne le remplace comme modèle derrière ChatGPT. Sa fiche technique officielle indique une fenêtre de contexte de 128K tokens, ~88,7 % sur MMLU et ~90,2 % sur HumanEval. Claude Opus 5 le surpasse en raisonnement (~91 % sur MMLU-Pro, un benchmark plus exigeant) et en code (~94 % HumanEval), avec une fenêtre de contexte de 1M tokens. Si vous utilisez ChatGPT aujourd\'hui, vous utilisez très probablement GPT-5.6, et non GPT-4o — vérifiez le sélecteur de modèle de votre compte pour en avoir la confirmation.' },
             { q: 'Puis-je utiliser plusieurs modèles dans le même flux de travail ?', a: 'Oui. PromptQuorum vous permet d\'envoyer le même prompt à GPT-5.6, Claude Opus 5, Gemini 3.1 Pro et d\'autres modèles simultanément, puis de comparer les résultats côte à côte. C\'est l\'approche recommandée pour les travaux critiques.' },
           ],
         },
@@ -6791,7 +6791,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'コーディングに最適なモデルはどれですか？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Claude Opus 4.8はコード品質とデバッグでリードしており、HumanEvalベンチマークで約94%を記録しています。GPT-5.6（約92%）はより高速です。重要な作業では両方を比較することをお勧めします。',
+              text: 'Claude Opus 5はコード品質とデバッグでリードしており、HumanEvalベンチマークで約94%を記録しています。GPT-5.6（約92%）はより高速です。重要な作業では両方を比較することをお勧めします。',
             },
           },
           {
@@ -6823,7 +6823,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'GPT-4oはClaude Opus 5やGemini 3.1 Proと比べてどうですか？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'GPT-4oは、GPT-5.6がChatGPTを支えるモデルとして後継する前のOpenAIのフラッグシップモデルでした。公式モデルカードでは、128Kトークンのコンテキストウィンドウ、MMLUで約88.7%、HumanEvalで約90.2%を記録しています。Claude Opus 4.8は推論(より難しいベンチマークであるMMLU-Proで約91%)とコーディング(HumanEvalで約94%)の両方で上回り、1Mトークンのコンテキストウィンドウを備えています。現在ChatGPTを使っている場合、GPT-4oではなくGPT-5.6を使用している可能性が高いです — アカウントのモデル選択画面で確認してください。',
+              text: 'GPT-4oは、GPT-5.6がChatGPTを支えるモデルとして後継する前のOpenAIのフラッグシップモデルでした。公式モデルカードでは、128Kトークンのコンテキストウィンドウ、MMLUで約88.7%、HumanEvalで約90.2%を記録しています。Claude Opus 5は推論(より難しいベンチマークであるMMLU-Proで約91%)とコーディング(HumanEvalで約94%)の両方で上回り、1Mトークンのコンテキストウィンドウを備えています。現在ChatGPTを使っている場合、GPT-4oではなくGPT-5.6を使用している可能性が高いです — アカウントのモデル選択画面で確認してください。',
             },
           },
           {
@@ -6920,7 +6920,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '@type': 'ListItem',
             position: 4,
             name: '推論品質',
-            description: '1. Claude Opus 4.8（約91% MMLU-Pro、推論を表示）。2. GPT-5.6（約90%）。3. Gemini 3.1 Pro（約89%）。',
+            description: '1. Claude Opus 5（約91% MMLU-Pro、推論を表示）。2. GPT-5.6（約90%）。3. Gemini 3.1 Pro（約89%）。',
           },
           {
             '@type': 'ListItem',
@@ -6975,9 +6975,9 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
         },
         claudeSection: {
-          title: 'Claude（Anthropic）— Opus 4.8',
+          title: 'Claude（Anthropic）— Opus 5',
           content: [
-            '推論特化型モデルです。Claude Opus 4.8は正確性、論理的な深さ、長文書分析に最適化されています。Extended ThinkingモードはMMLU-Pro（約91%）とAIMEベンチマークでフロンティアモデルの中で最高スコアを達成しています（2025年時点）。',
+            '推論特化型モデルです。Claude Opus 5は正確性、論理的な深さ、長文書分析に最適化されています。Extended ThinkingモードはMMLU-Pro（約91%）とAIMEベンチマークでフロンティアモデルの中で最高スコアを達成しています（2025年時点）。',
             '**強み：** 優れたステップバイステップの推論 — 一貫して作業過程を示します。競合より幻覚率が低い。長文書やコードベース向けに1Mトークンのコンテキストウィンドウ。安全性の透明性のためのConstitutional AIトレーニング。クラス最高のコードレビュー（約94% HumanEval）。無料プランあり。',
             '**弱み：** GPT-5.6やGemini 3.1 Proより推論が遅い。高度にクリエイティブなタスクでは保守的。3つの中で最も高いAPIコスト。ChatGPTよりサードパーティ統合が少ない。',
             '**最適な用途：** 技術分析、コードレビュー、論理的推論、文書分析、調査、複雑な問題解決 — 速度より精度が重要なあらゆるタスク。',
@@ -6985,7 +6985,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           items: [
             '無料プラン：1日の利用制限あり（Claude.ai）',
             'Claude.ai Pro：月額約$20 — 利用制限が高め',
-            'API：入力約$15/100万トークン、出力約$75/100万トークン（Opus 4.8）',
+            'API：入力約$15/100万トークン、出力約$75/100万トークン（Opus 5）',
             'Enterprise：SLA付きカスタム料金',
           ],
         },
@@ -6994,7 +6994,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             'Googleのマルチモーダルフラッグシップモデルです。Gemini 3.1 Proは視覚的理解、Google検索によるリアルタイムWebアクセス、そしてあらゆるフロンティアモデルの中で最大の2Mトークンというコンテキストウィンドウでリードしています。',
             '**強み：** 最優秀のマルチモーダル機能 — 画像、動画、音声、文書をネイティブに処理。リアルタイム情報のためのネイティブGoogle Search統合。GPT-5.6と競合する高速推論。最大のコンテキストウィンドウ（2Mトークン）。3つの中で最低のAPIコスト。無料プランあり。',
-            '**弱み：** ステップバイステップの論理推論はClaude Opus 4.8より弱い（MMLU-Pro約89% vs Claudeの約91%）。Googleのデフォルトのデータ共有慣行はより広範。ChatGPTよりサードパーティ統合エコシステムが小さい。',
+            '**弱み：** ステップバイステップの論理推論はClaude Opus 5より弱い（MMLU-Pro約89% vs Claudeの約91%）。Googleのデフォルトのデータ共有慣行はより広範。ChatGPTよりサードパーティ統合エコシステムが小さい。',
             '**最適な用途：** 画像分析、動画理解、リアルタイムWebデータが必要なタスク、Google Workspace統合、コスト意識の高いAPIユーザー、非常に長い文書の処理。',
           ],
           items: [
@@ -7010,7 +7010,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           items: [
             '3つすべてに無料プランあり — Pro/Plusプランは全て月額約$20',
             'GPT-5.6：128Kトークン | Claude Opus 5：1Mトークン | Gemini 3.1 Pro：2Mトークン',
-            'Claude Opus 4.8 Extended ThinkingはMMLU-Pro（約91%）とAIME推論ベンチマークで最高スコア',
+            'Claude Opus 5 Extended ThinkingはMMLU-Pro（約91%）とAIME推論ベンチマークで最高スコア',
             'Gemini 3.1 Proは2Mコンテキストを持つ唯一のモデル — コードベース全体、書籍、法的書類全体を処理可能',
             '3つすべてがTool Use、Function Calling、RAG統合を本番環境でサポート',
           ],
@@ -7021,8 +7021,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           columns: ['比較項目', 'GPT-5.6', 'Claude Opus 5', 'Gemini 3.1 Pro'],
           rows: [
             { '比較項目': 'コンテキストウィンドウ', 'GPT-5.6': '128Kトークン', 'Claude Opus 5': '1Mトークン', 'Gemini 3.1 Pro': '2Mトークン' },
-            { '比較項目': '推論（MMLU-Pro）', 'GPT-5.6': '約90%', 'Claude Opus 4.8': '約91%', 'Gemini 3.1 Pro': '約89%' },
-            { '比較項目': 'コード（HumanEval）', 'GPT-5.6': '約92%', 'Claude Opus 4.8': '約94%', 'Gemini 3.1 Pro': '約88%' },
+            { '比較項目': '推論（MMLU-Pro）', 'GPT-5.6': '約90%', 'Claude Opus 5': '約91%', 'Gemini 3.1 Pro': '約89%' },
+            { '比較項目': 'コード（HumanEval）', 'GPT-5.6': '約92%', 'Claude Opus 5': '約94%', 'Gemini 3.1 Pro': '約88%' },
             { '比較項目': 'マルチモーダル', 'GPT-5.6': 'テキスト＋画像', 'Claude Opus 5': 'テキスト＋画像', 'Gemini 3.1 Pro': 'テキスト、画像、動画、音声' },
             { '比較項目': '速度', 'GPT-5.6': '高速', 'Claude Opus 5': '中程度', 'Gemini 3.1 Pro': '高速' },
             { '比較項目': 'API料金（入力/100万トークン）', 'GPT-5.6': '約$5', 'Claude Opus 5': '約$15', 'Gemini 3.1 Pro': '約$3.5' },
@@ -7038,7 +7038,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         codeReview: {
           title: 'コードレビュー・デバッグ',
-          content: 'Claude Opus 4.8が優位 — 最高のHumanEvalスコア（約94%）、コードのステップバイステップ説明、バグ発見、セキュリティ問題の特定が最も優れています。推論を明確に示します。速度が重要な場合はGPT-5.6（約92%）が有力な代替手段です。',
+          content: 'Claude Opus 5が優位 — 最高のHumanEvalスコア（約94%）、コードのステップバイステップ説明、バグ発見、セキュリティ問題の特定が最も優れています。推論を明確に示します。速度が重要な場合はGPT-5.6（約92%）が有力な代替手段です。',
         },
         dataAnalysis: {
           title: 'データ分析・調査',
@@ -7108,7 +7108,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           isTldr: true,
           items: [
             'GPT-5.6：速度、汎用性、クリエイティブライティングに最適。最速の推論。128Kコンテキスト。',
-            'Claude Opus 4.8：推論（約91% MMLU-Pro）、コード（約94% HumanEval）、長文分析に最適。1Mコンテキスト。',
+            'Claude Opus 5：推論（約91% MMLU-Pro）、コード（約94% HumanEval）、長文分析に最適。1Mコンテキスト。',
             'Gemini 3.1 Pro：マルチモーダル（画像、動画、音声）に最適。リアルタイムWebアクセス。最大コンテキスト（2M）。最低APIコスト。',
             '3つすべてに無料プランと月額約$20のProプランがあります。',
             '推論：Claude Opus 5 > GPT-5.6 > Gemini 3.1 Pro。',
@@ -7134,11 +7134,11 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'よくある質問',
           faqs: [
             { q: 'クリエイティブライティングに最適なAIモデルはどれですか？', a: 'GPT-5.6（ChatGPT）はクリエイティブライティング、ブレインストーミング、汎用タスクに優れています。速くてアクセスしやすいのが特徴です。Claude Opus 5はより深いリーズニングやクリエイティブ作品の分析に向いています。' },
-            { q: 'コーディングに最適なモデルはどれですか？', a: 'Claude Opus 4.8はコード品質とデバッグでリードしており、HumanEvalで約94%を記録しています。GPT-5.6（約92%）はより高速です。重要な作業では両方のコード提案を比較することをお勧めします。' },
+            { q: 'コーディングに最適なモデルはどれですか？', a: 'Claude Opus 5はコード品質とデバッグでリードしており、HumanEvalで約94%を記録しています。GPT-5.6（約92%）はより高速です。重要な作業では両方のコード提案を比較することをお勧めします。' },
             { q: '2026年のコスト比較を教えてください。', a: 'GPT-5.6：入力約$5/100万トークン、出力約$15。Claude Opus 5：入力約$5、出力約$25。Gemini 3.1 Pro：入力約$3.5、出力約$10.5。3つすべてに月額約$20のコンシューマープランがあります。最新価格は各プロバイダーでご確認ください。' },
             { q: 'マルチモーダルタスクに最も優れているモデルはどれですか？', a: 'Gemini 3.1 Proは画像、動画、音声、文書理解で最も優れています。GPT-5.6はテキストと画像に対応。Claude Opus 5はテキストと画像に対応していますが、動画には非対応です。' },
             { q: '3つのモデルすべてに無料プランはありますか？', a: 'はい。ChatGPT、Claude.ai、Geminiはいずれも日次使用制限付きの無料プランを提供しています。3つすべてに月額約$20のPro/Plusプランもあります。' },
-            { q: 'GPT-4oはClaude Opus 4.8やGemini 3.1 Proと比べてどうですか？', a: 'GPT-4oは、GPT-5.6がChatGPTを支えるモデルとして後継する前のOpenAIのフラッグシップモデルでした。公式モデルカードでは、128Kトークンのコンテキストウィンドウ、MMLUで約88.7%、HumanEvalで約90.2%を記録しています。Claude Opus 4.8は推論(より難しいベンチマークであるMMLU-Proで約91%)とコーディング(HumanEvalで約94%)の両方で上回り、1Mトークンのコンテキストウィンドウを備えています。現在ChatGPTを使っている場合、GPT-4oではなくGPT-5.6を使用している可能性が高いです — アカウントのモデル選択画面で確認してください。' },
+            { q: 'GPT-4oはClaude Opus 5やGemini 3.1 Proと比べてどうですか？', a: 'GPT-4oは、GPT-5.6がChatGPTを支えるモデルとして後継する前のOpenAIのフラッグシップモデルでした。公式モデルカードでは、128Kトークンのコンテキストウィンドウ、MMLUで約88.7%、HumanEvalで約90.2%を記録しています。Claude Opus 5は推論(より難しいベンチマークであるMMLU-Proで約91%)とコーディング(HumanEvalで約94%)の両方で上回り、1Mトークンのコンテキストウィンドウを備えています。現在ChatGPTを使っている場合、GPT-4oではなくGPT-5.6を使用している可能性が高いです — アカウントのモデル選択画面で確認してください。' },
             { q: '同じワークフローで複数のモデルを使用できますか？', a: 'はい。PromptQuorumを使えば、GPT-5.6、Claude Opus 5、Gemini 3.1 Proなど複数のモデルに同じプロンプトを同時に送信し、結果を並べて比較できます。重要な作業ではこのアプローチを推奨します。' },
             { q: 'METI AIガバナンスガイドラインとこれらのモデルの関係は？', a: '経済産業省（METI）の「AI事業者ガイドライン（2024年版）」では、AIシステムの透明性・安全性・信頼性の確保を求めています。Claude Opus 5はConstitutional AIによる透明性の高い推論、OpenAIとGoogleはAI安全に関する報告書を公開しています。機密データを扱う企業では、データ処理契約（DPA）の締結とローカルモデルの活用検討を推奨します。' },
             { q: '日本企業がこれらのAIモデルを導入する際の注意点は？', a: '個人情報保護法（個人情報の保護に関する法律）に基づき、個人データをクラウドAIサービスに送信する場合は、データ処理契約の確認が必要です。金融・医療・法律分野では特に注意が必要です。高い機密性が求められる場合は、LLaMA 3.1やMistralなどのローカルモデルが適切な選択肢となります。' },
@@ -7202,7 +7202,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: '哪款模型最适合编程？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Claude Opus 4.8在代码质量和调试方面领先，HumanEval基准得分约94%。GPT-5.6（约92%）速度更快。关键任务建议对比两者的代码建议。',
+              text: 'Claude Opus 5在代码质量和调试方面领先，HumanEval基准得分约94%。GPT-5.6（约92%）速度更快。关键任务建议对比两者的代码建议。',
             },
           },
           {
@@ -7234,7 +7234,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'GPT-4o与Claude Opus 5、Gemini 3.1 Pro相比如何？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'GPT-4o是OpenAI在GPT-5.6取代其成为ChatGPT背后的模型之前的旗舰模型。据官方模型卡显示，它拥有128K token上下文窗口，MMLU得分约88.7%，HumanEval得分约90.2%。Claude Opus 4.8在推理（MMLU-Pro约91%，这是一项更难的基准测试）和编程（HumanEval约94%）方面均优于它，且拥有1M token上下文窗口。如果你现在正在使用ChatGPT，很可能用的是GPT-5.6而非GPT-4o——可在账户的模型选择菜单中确认。',
+              text: 'GPT-4o是OpenAI在GPT-5.6取代其成为ChatGPT背后的模型之前的旗舰模型。据官方模型卡显示，它拥有128K token上下文窗口，MMLU得分约88.7%，HumanEval得分约90.2%。Claude Opus 5在推理（MMLU-Pro约91%，这是一项更难的基准测试）和编程（HumanEval约94%）方面均优于它，且拥有1M token上下文窗口。如果你现在正在使用ChatGPT，很可能用的是GPT-5.6而非GPT-4o——可在账户的模型选择菜单中确认。',
             },
           },
           {
@@ -7331,7 +7331,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '@type': 'ListItem',
             position: 4,
             name: '推理质量',
-            description: '1. Claude Opus 4.8（约91% MMLU-Pro，展示推理过程）。2. GPT-5.6（约90%）。3. Gemini 3.1 Pro（约89%）。',
+            description: '1. Claude Opus 5（约91% MMLU-Pro，展示推理过程）。2. GPT-5.6（约90%）。3. Gemini 3.1 Pro（约89%）。',
           },
           {
             '@type': 'ListItem',
@@ -7386,9 +7386,9 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
         },
         claudeSection: {
-          title: 'Claude（Anthropic）— Opus 4.8',
+          title: 'Claude（Anthropic）— Opus 5',
           content: [
-            '以推理为核心的模型。Claude Opus 4.8针对准确性、逻辑深度和长文档分析进行了优化。Extended Thinking模式在2025年前沿模型中，MMLU-Pro（约91%）和AIME基准测试上取得最高分。',
+            '以推理为核心的模型。Claude Opus 5针对准确性、逻辑深度和长文档分析进行了优化。Extended Thinking模式在2025年前沿模型中，MMLU-Pro（约91%）和AIME基准测试上取得最高分。',
             '**优势：** 卓越的逐步推理能力——持续展示推理过程。幻觉率低于竞争对手。1M token上下文窗口，适合长文档和代码库。Constitutional AI训练确保安全透明度。最佳代码审查能力（约94% HumanEval）。提供免费套餐。',
             '**局限：** 推理速度慢于GPT-5.6和Gemini 3.1 Pro。在高度创意任务上较为保守。三款中API成本最高。第三方集成少于ChatGPT。',
             '**最适合：** 技术分析、代码审查、逻辑推理、文档分析、研究和复杂问题解决——任何精度优先于速度的任务。',
@@ -7396,7 +7396,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           items: [
             '免费套餐：每日使用限制（Claude.ai）',
             'Claude.ai Pro：约$20/月——更高使用限额',
-            'API：输入约$15/百万token，输出约$75/百万token（Opus 4.8）',
+            'API：输入约$15/百万token，输出约$75/百万token（Opus 5）',
             '企业版：含SLA的定制定价',
           ],
         },
@@ -7405,7 +7405,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             'Google的多模态旗舰模型。Gemini 3.1 Pro在视觉理解、通过Google Search实现实时网络访问，以及所有前沿模型中最大的2M token上下文窗口方面领先。',
             '**优势：** 最强的多模态能力——原生支持图像、视频、音频和文档。原生Google Search集成获取实时信息。推理速度快，可与GPT-5.6媲美。最大上下文窗口（2M token）。三款中API成本最低。提供免费套餐。',
-            '**局限：** 逐步逻辑推理不如Claude Opus 4.8（MMLU-Pro约89% vs Claude的约91%）。Google默认数据共享范围较广。第三方集成生态系统小于ChatGPT。',
+            '**局限：** 逐步逻辑推理不如Claude Opus 5（MMLU-Pro约89% vs Claude的约91%）。Google默认数据共享范围较广。第三方集成生态系统小于ChatGPT。',
             '**最适合：** 图像分析、视频理解、需要实时网络数据的任务、Google Workspace集成、注重成本的API用户，以及超长文档处理。',
           ],
           items: [
@@ -7421,7 +7421,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           items: [
             '三款模型均提供免费消费者套餐——Pro/Plus套餐均约$20/月',
             'GPT-5.6：128K token | Claude Opus 5：1M token | Gemini 3.1 Pro：2M token',
-            'Claude Opus 4.8 Extended Thinking在MMLU-Pro（约91%）和AIME推理基准上得分最高',
+            'Claude Opus 5 Extended Thinking在MMLU-Pro（约91%）和AIME推理基准上得分最高',
             'Gemini 3.1 Pro是唯一拥有2M上下文的模型——可容纳整个代码库、书籍或法律文件',
             '三款均在生产环境中支持Tool Use、Function Calling和RAG集成',
           ],
@@ -7432,8 +7432,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           columns: ['对比维度', 'GPT-5.6', 'Claude Opus 5', 'Gemini 3.1 Pro'],
           rows: [
             { '对比维度': '上下文窗口', 'GPT-5.6': '128K token', 'Claude Opus 5': '1M token', 'Gemini 3.1 Pro': '2M token' },
-            { '对比维度': '推理能力（MMLU-Pro）', 'GPT-5.6': '约90%', 'Claude Opus 4.8': '约91%', 'Gemini 3.1 Pro': '约89%' },
-            { '对比维度': '代码能力（HumanEval）', 'GPT-5.6': '约92%', 'Claude Opus 4.8': '约94%', 'Gemini 3.1 Pro': '约88%' },
+            { '对比维度': '推理能力（MMLU-Pro）', 'GPT-5.6': '约90%', 'Claude Opus 5': '约91%', 'Gemini 3.1 Pro': '约89%' },
+            { '对比维度': '代码能力（HumanEval）', 'GPT-5.6': '约92%', 'Claude Opus 5': '约94%', 'Gemini 3.1 Pro': '约88%' },
             { '对比维度': '多模态', 'GPT-5.6': '文本+图像', 'Claude Opus 5': '文本+图像', 'Gemini 3.1 Pro': '文本、图像、视频、音频' },
             { '对比维度': '速度', 'GPT-5.6': '快速', 'Claude Opus 5': '中等', 'Gemini 3.1 Pro': '快速' },
             { '对比维度': 'API成本（输入/百万token）', 'GPT-5.6': '约$5', 'Claude Opus 5': '约$15', 'Gemini 3.1 Pro': '约$3.5' },
@@ -7449,7 +7449,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         codeReview: {
           title: '代码审查与调试',
-          content: 'Claude Opus 4.8胜出——HumanEval得分最高（约94%），最擅长逐步解释代码、发现bug和安全问题，推理过程清晰透明。GPT-5.6（约92%）在速度优先时是有力替代选择。',
+          content: 'Claude Opus 5胜出——HumanEval得分最高（约94%），最擅长逐步解释代码、发现bug和安全问题，推理过程清晰透明。GPT-5.6（约92%）在速度优先时是有力替代选择。',
         },
         dataAnalysis: {
           title: '数据分析与研究',
@@ -7519,7 +7519,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           isTldr: true,
           items: [
             'GPT-5.6：最适合速度、通用性和创意写作。推理最快。128K上下文。',
-            'Claude Opus 4.8：最适合推理（约91% MMLU-Pro）、代码（约94% HumanEval）、长篇分析。1M上下文。',
+            'Claude Opus 5：最适合推理（约91% MMLU-Pro）、代码（约94% HumanEval）、长篇分析。1M上下文。',
             'Gemini 3.1 Pro：最适合多模态（图像、视频、音频）。实时网络访问。最大上下文（2M）。API成本最低。',
             '三款均提供免费消费者套餐和约$20/月的Pro套餐。',
             '推理能力：Claude Opus 5 > GPT-5.6 > Gemini 3.1 Pro。',
@@ -7545,11 +7545,11 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: '常见问题',
           faqs: [
             { q: '哪款AI模型最适合创意写作？', a: 'GPT-5.6（ChatGPT）在创意写作、头脑风暴和通用任务方面表现出色——速度快且易于使用。Claude Opus 5更擅长深度推理和创意内容的分析工作。' },
-            { q: '哪款模型最适合编程？', a: 'Claude Opus 4.8在代码质量和调试方面领先，HumanEval得分约94%。GPT-5.6（约92%）速度更快。关键任务建议对比两者的代码建议。' },
+            { q: '哪款模型最适合编程？', a: 'Claude Opus 5在代码质量和调试方面领先，HumanEval得分约94%。GPT-5.6（约92%）速度更快。关键任务建议对比两者的代码建议。' },
             { q: '2026年的价格对比如何？', a: 'GPT-5.6：输入约$5/百万token，输出约$15。Claude Opus 5：输入约$5，输出约$25。Gemini 3.1 Pro：输入约$3.5，输出约$10.5。三款均提供月费约$20的消费者套餐。请向各服务商确认最新价格。' },
             { q: '哪款模型最擅长多模态任务？', a: 'Gemini 3.1 Pro在图像、视频、音频和文档理解方面最为出色。GPT-5.6支持文本和图像。Claude Opus 5支持文本和图像，但不支持视频。' },
             { q: '三款模型都有免费套餐吗？', a: '是的。ChatGPT、Claude.ai和Gemini均提供有每日使用限制的免费套餐。三者均提供月费约$20的Pro/Plus套餐，具有更高的使用限额。' },
-            { q: 'GPT-4o与Claude Opus 4.8、Gemini 3.1 Pro相比如何？', a: 'GPT-4o是OpenAI在GPT-5.6取代其成为ChatGPT背后的模型之前的旗舰模型。据官方模型卡显示，它拥有128K token上下文窗口，MMLU得分约88.7%，HumanEval得分约90.2%。Claude Opus 4.8在推理（MMLU-Pro约91%，这是一项更难的基准测试）和编程（HumanEval约94%）方面均优于它，且拥有1M token上下文窗口。如果你现在正在使用ChatGPT，很可能用的是GPT-5.6而非GPT-4o——可在账户的模型选择菜单中确认。' },
+            { q: 'GPT-4o与Claude Opus 5、Gemini 3.1 Pro相比如何？', a: 'GPT-4o是OpenAI在GPT-5.6取代其成为ChatGPT背后的模型之前的旗舰模型。据官方模型卡显示，它拥有128K token上下文窗口，MMLU得分约88.7%，HumanEval得分约90.2%。Claude Opus 5在推理（MMLU-Pro约91%，这是一项更难的基准测试）和编程（HumanEval约94%）方面均优于它，且拥有1M token上下文窗口。如果你现在正在使用ChatGPT，很可能用的是GPT-5.6而非GPT-4o——可在账户的模型选择菜单中确认。' },
             { q: '可以在同一工作流中使用多个模型吗？', a: '可以。PromptQuorum支持将同一提示词同时发送给GPT-5.6、Claude Opus 5、Gemini 3.1 Pro及其他模型，然后并排比较结果。这是关键任务的推荐方式。' },
             { q: '使用这些AI模型需要遵守中国数据安全法吗？', a: '是的。根据《数据安全法》（2021年）和《个人信息保护法》（PIPL），将重要数据发送至境外云服务须进行合规评估。对于涉及敏感数据的企业应用，建议使用Qwen2.5等本地化模型或境内服务器部署方案。' },
             { q: '本地推理如何满足企业合规要求？', a: '本地部署的开源模型（如LLaMA 3.1、Qwen2.5、Mistral）可完全满足数据不出境的合规要求，适用于金融、医疗、法律等敏感行业。数据全程在本地处理，无需向第三方云服务发送任何信息。' },
@@ -7597,7 +7597,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
       heroImage: '/images/ai-model-comparison-comparisonTable-hero-es.webp',
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-09-14',
-      last_full_refresh: '2026-07-14',
+      last_full_refresh: '2026-08-29',
       current_models_mentioned: ['GPT-5.6', 'GPT-4o', 'Claude Opus 5', 'Gemini 3.1 Pro'],
       educationalLevel: 'Intermedio',
       faqSchema: {
@@ -7618,7 +7618,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: '¿Qué modelo es mejor para programación?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Claude Opus 4.8 lidera en calidad de código y depuración, con ~94% en HumanEval. GPT-5.6 (~92%) es más rápido. Para trabajo crítico, compara las sugerencias de código de ambos.',
+              text: 'Claude Opus 5 lidera en calidad de código y depuración, con ~94% en HumanEval. GPT-5.6 (~92%) es más rápido. Para trabajo crítico, compara las sugerencias de código de ambos.',
             },
           },
           {
@@ -7658,7 +7658,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: '¿Cómo se compara GPT-4o con Claude Opus 5 y Gemini 3.1 Pro?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'GPT-4o fue el modelo insignia de OpenAI antes de que GPT-5.6 lo sustituyera como el modelo detrás de ChatGPT. Según su model card oficial, tiene una ventana de contexto de 128K tokens, ~88.7% en MMLU y ~90.2% en HumanEval. Claude Opus 4.8 lo supera en razonamiento (~91% en MMLU-Pro, un benchmark más exigente) y en código (~94% HumanEval), con una ventana de contexto de 1M tokens. Si usas ChatGPT hoy, lo más probable es que estés usando GPT-5.6, no GPT-4o — verifica el selector de modelo en tu cuenta para confirmarlo.',
+              text: 'GPT-4o fue el modelo insignia de OpenAI antes de que GPT-5.6 lo sustituyera como el modelo detrás de ChatGPT. Según su model card oficial, tiene una ventana de contexto de 128K tokens, ~88.7% en MMLU y ~90.2% en HumanEval. Claude Opus 5 lo supera en razonamiento (~91% en MMLU-Pro, un benchmark más exigente) y en código (~94% HumanEval), con una ventana de contexto de 1M tokens. Si usas ChatGPT hoy, lo más probable es que estés usando GPT-5.6, no GPT-4o — verifica el selector de modelo en tu cuenta para confirmarlo.',
             },
           },
           {
@@ -7760,7 +7760,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             '@type': 'ListItem',
             position: 4,
             name: 'Calidad de Razonamiento',
-            description: '1. Claude Opus 4.8 (~91% MMLU-Pro, muestra razonamiento). 2. GPT-5.6 (~90%). 3. Gemini 3.1 Pro (~89%).',
+            description: '1. Claude Opus 5 (~91% MMLU-Pro, muestra razonamiento). 2. GPT-5.6 (~90%). 3. Gemini 3.1 Pro (~89%).',
           },
           {
             '@type': 'ListItem',
@@ -7815,9 +7815,9 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
         },
         claudeSection: {
-          title: 'Claude (Anthropic) — Opus 4.8',
+          title: 'Claude (Anthropic) — Opus 5',
           content: [
-            'El modelo orientado al razonamiento. Claude Opus 4.8 está optimizado para precisión, profundidad lógica y análisis de documentos largos. El modo de pensamiento extendido logra las puntuaciones más altas en MMLU-Pro (~91%) y benchmarks AIME entre modelos fronterizos a partir de 2025.',
+            'El modelo orientado al razonamiento. Claude Opus 5 está optimizado para precisión, profundidad lógica y análisis de documentos largos. El modo de pensamiento extendido logra las puntuaciones más altas en MMLU-Pro (~91%) y benchmarks AIME entre modelos fronterizos a partir de 2025.',
             '**Fortalezas:** Razonamiento superior paso a paso — muestra su trabajo consistentemente. Tasa de alucinación más baja que competidores. Ventana de contexto de 1M tokens para documentos largos y bases de código. Entrenamiento de IA constitucional para transparencia de seguridad. Mejor revisión de código (~94% HumanEval). Nivel gratuito disponible.',
             '**Debilidades:** Inferencia más lenta que GPT-5.6 y Gemini 3.1 Pro. Más conservador en tareas altamente creativas. Costo de API más alto de los tres. Menos integraciones de terceros que ChatGPT.',
             '**Mejor para:** Análisis técnico, revisión de código, razonamiento lógico, análisis de documentos, investigación, resolución de problemas complejos — cualquier tarea donde la precisión supera la velocidad.',
@@ -7825,7 +7825,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           items: [
             'Nivel gratuito: Acceso limitado (Claude.ai)',
             'Claude Pro: $20/mes — límites de uso más altos',
-            'API: ~$15/1M tokens entrada, ~$75/1M tokens salida (Opus 4.8)',
+            'API: ~$5/1M tokens entrada, ~$25/1M tokens salida (Opus 5)',
             'Empresa: DPAs personalizados, modelos dedicados',
           ],
         },
@@ -7850,8 +7850,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           rows: [
             { 'Factor': 'Interfaz', 'ChatGPT (GPT-5.6)': 'Web + app móvil, navegación web integrada', 'Claude (Opus 5)': 'Web, aplicación de escritorio, API', 'Gemini (3.1 Pro)': 'Web + app móvil, búsqueda web integrada' },
             { 'Factor': 'Ventana de Contexto', 'ChatGPT (GPT-5.6)': '128K tokens', 'Claude (Opus 5)': '1M tokens', 'Gemini (3.1 Pro)': '2M tokens' },
-            { 'Factor': 'Razonamiento (MMLU-Pro)', 'ChatGPT (GPT-5.6)': '~90%', 'Claude (Opus 4.8)': '~91%', 'Gemini (3.1 Pro)': '~89%' },
-            { 'Factor': 'Código (HumanEval)', 'ChatGPT (GPT-5.6)': '~92%', 'Claude (Opus 4.8)': '~94%', 'Gemini (3.1 Pro)': '~88%' },
+            { 'Factor': 'Razonamiento (MMLU-Pro)', 'ChatGPT (GPT-5.6)': '~90%', 'Claude (Opus 5)': '~91%', 'Gemini (3.1 Pro)': '~89%' },
+            { 'Factor': 'Código (HumanEval)', 'ChatGPT (GPT-5.6)': '~92%', 'Claude (Opus 5)': '~94%', 'Gemini (3.1 Pro)': '~88%' },
             { 'Factor': 'Multimodal', 'ChatGPT (GPT-5.6)': 'Texto + imágenes', 'Claude (Opus 5)': 'Texto + imágenes', 'Gemini (3.1 Pro)': 'Texto, imágenes, video, audio' },
             { 'Factor': 'Velocidad', 'ChatGPT (GPT-5.6)': 'Rápido', 'Claude (Opus 5)': 'Moderado', 'Gemini (3.1 Pro)': 'Rápido' },
             { 'Factor': 'Costo de API (por 1M tokens entrada)', 'ChatGPT (GPT-5.6)': '~$5', 'Claude (Opus 5)': '~$15', 'Gemini (3.1 Pro)': '~$3.50' },
@@ -7866,7 +7866,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         codeReview: {
           title: 'Revisión de Código y Depuración',
-          content: 'Claude Opus 4.8 gana — puntuación HumanEval más alta (aprox. 94%), mejor depuración paso a paso, detección de errores y análisis de seguridad. Muestra el razonamiento de forma transparente. GPT-5.6 (aprox. 92%) es una fuerte alternativa cuando la velocidad es prioritaria.',
+          content: 'Claude Opus 5 gana — puntuación HumanEval más alta (aprox. 94%), mejor depuración paso a paso, detección de errores y análisis de seguridad. Muestra el razonamiento de forma transparente. GPT-5.6 (aprox. 92%) es una fuerte alternativa cuando la velocidad es prioritaria.',
         },
         dataAnalysis: {
           title: 'Análisis de Datos y Investigación',
@@ -7936,7 +7936,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           isTldr: true,
           items: [
             'GPT-5.6: Mejor opción para velocidad, versatilidad y escritura creativa. Inferencia más rápida. Contexto de 128K.',
-            'Claude Opus 4.8: Mejor razonamiento (~91% MMLU-Pro), código (~94% HumanEval), análisis de forma larga. Contexto de 1M.',
+            'Claude Opus 5: Mejor razonamiento (~91% MMLU-Pro), código (~94% HumanEval), análisis de forma larga. Contexto de 1M.',
             'Gemini 3.1 Pro: Mejor multimodal (imágenes, video, audio). Acceso web en tiempo real. Contexto más grande (2M tokens). Costos de API más bajos.',
             'Los tres ofrecen niveles gratuitos de consumidor y planes Pro a ~$20/mes.',
             'Razonamiento: Claude Opus 5 > GPT-5.6 > Gemini 3.1 Pro.',
@@ -7949,12 +7949,12 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'Preguntas Frecuentes',
           faqs: [
             { q: '¿Qué modelo de IA es mejor para escritura creativa?', a: 'GPT-5.6 (ChatGPT) destaca en escritura creativa, lluvia de ideas y tareas versátiles — rápido y accesible. Claude Opus 5 es mejor para razonamiento más profundo y análisis crítico de contenido creativo.' },
-            { q: '¿Qué modelo es mejor para programación?', a: 'Claude Opus 4.8 lidera en calidad de código y depuración, con ~94% en HumanEval. GPT-5.6 (~92%) es más rápido. Para trabajo crítico, compara las sugerencias de código de ambos.' },
+            { q: '¿Qué modelo es mejor para programación?', a: 'Claude Opus 5 lidera en calidad de código y depuración, con ~94% en HumanEval. GPT-5.6 (~92%) es más rápido. Para trabajo crítico, compara las sugerencias de código de ambos.' },
             { q: '¿Cuál es la comparación de costos para 2026?', a: 'GPT-5.6: ~$5/1M tokens entrada, ~$15/1M salida. Claude Opus 5: ~$5/1M entrada, ~$25/1M salida. Gemini 3.1 Pro: ~$3.5/1M entrada, ~$10.5/1M salida. Los tres ofrecen planes de consumidor a ~$20/mes. Verifica los precios actuales con cada proveedor.' },
             { q: '¿Qué modelo maneja mejor tareas multimodales?', a: 'Gemini 3.1 Pro es más fuerte en imágenes, video, audio y comprensión de documentos. GPT-5.6 admite texto e imágenes. Claude Opus 5 admite texto e imágenes, pero no video.' },
             { q: '¿Cuál es la ventana de contexto más grande?', a: 'Gemini 3.1 Pro tiene la más grande con 2M tokens — cabe una base de código completa o un libro. Claude Opus 5 tiene 1M tokens. GPT-5.6 tiene 128K tokens. Para análisis de documentos largos, Claude o Gemini es la opción correcta.' },
             { q: '¿Los tres modelos tienen niveles gratuitos?', a: 'Sí. ChatGPT, Claude.ai y Gemini ofrecen niveles gratuitos con límites de uso diario. Los tres ofrecen planes Pro/Plus a ~$20/mes con límites más altos. El acceso a API es de pago por token para los tres.' },
-            { q: '¿Cómo se compara GPT-4o con Claude Opus 4.8 y Gemini 3.1 Pro?', a: 'GPT-4o fue el modelo insignia de OpenAI antes de que GPT-5.6 lo sustituyera como el modelo detrás de ChatGPT. Según su model card oficial, tiene una ventana de contexto de 128K tokens, ~88.7% en MMLU y ~90.2% en HumanEval. Claude Opus 4.8 lo supera en razonamiento (~91% en MMLU-Pro, un benchmark más exigente) y en código (~94% HumanEval), con una ventana de contexto de 1M tokens. Si usas ChatGPT hoy, lo más probable es que estés usando GPT-5.6, no GPT-4o — verifica el selector de modelo en tu cuenta para confirmarlo.' },
+            { q: '¿Cómo se compara GPT-4o con Claude Opus 5 y Gemini 3.1 Pro?', a: 'GPT-4o fue el modelo insignia de OpenAI antes de que GPT-5.6 lo sustituyera como el modelo detrás de ChatGPT. Según su model card oficial, tiene una ventana de contexto de 128K tokens, ~88.7% en MMLU y ~90.2% en HumanEval. Claude Opus 5 lo supera en razonamiento (~91% en MMLU-Pro, un benchmark más exigente) y en código (~94% HumanEval), con una ventana de contexto de 1M tokens. Si usas ChatGPT hoy, lo más probable es que estés usando GPT-5.6, no GPT-4o — verifica el selector de modelo en tu cuenta para confirmarlo.' },
             { q: '¿Cuál es el mejor modelo para análisis de datos grandes?', a: 'Claude Opus 5 o Gemini 3.1 Pro — ambos tienen ventanas de contexto grandes (1M y 2M tokens respectivamente). Claude Opus 5 genera resúmenes más estructurados con razonamiento transparente. Gemini 3.1 Pro procesa documentos más largos.' },
             { q: '¿Puedo usar varios modelos en el mismo flujo de trabajo?', a: 'Sí. PromptQuorum permite enviar el mismo prompt simultáneamente a GPT-5.6, Claude Opus 5, Gemini 3.1 Pro y más modelos — y comparar los resultados lado a lado. Este enfoque se recomienda para trabajo crítico.' },
             { q: '¿Cuál es la diferencia entre estos modelos en velocidad de respuesta?', a: 'GPT-5.6 y Gemini 3.1 Pro son más rápidos. Claude Opus 5 es más lento pero proporciona razonamiento más profundo. Para tareas que priorizan velocidad, elige GPT-5.6. Para precisión, elige Claude.' },
@@ -8002,7 +8002,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
       metaDescription: 'GPT-5.6, Claude Opus 5 e Gemini 3.1 Pro comparados em velocidade, raciocínio, preços e janela de contexto. Qual modelo de IA usar — e quando usar os três.',
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-09-14',
-      last_full_refresh: '2026-07-14',
+      last_full_refresh: '2026-08-29',
       current_models_mentioned: ['GPT-5.6', 'GPT-4o', 'Claude Opus 5', 'Gemini 3.1 Pro'],
       educationalLevel: 'Intermediate',
       faqSchema: {
@@ -8023,7 +8023,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'Qual modelo é melhor para programação?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Claude Opus 4.8 tem vantagem em qualidade de código e depuração, com ~94% no HumanEval. GPT-5.6 (~92%) é mais rápido. Para trabalho crítico, compare as sugestões de código de ambos.',
+              text: 'Claude Opus 5 tem vantagem em qualidade de código e depuração, com ~94% no HumanEval. GPT-5.6 (~92%) é mais rápido. Para trabalho crítico, compare as sugestões de código de ambos.',
             },
           },
           {
@@ -8063,7 +8063,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'Como o GPT-4o se compara ao Claude Opus 5 e ao Gemini 3.1 Pro?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'O GPT-4o era o modelo principal da OpenAI antes de o GPT-5.6 substituí-lo como o modelo por trás do ChatGPT. Segundo o model card oficial, ele tem uma janela de contexto de 128K tokens, ~88.7% no MMLU e ~90.2% no HumanEval. O Claude Opus 4.8 supera esses números em raciocínio (~91% no MMLU-Pro, um benchmark mais exigente) e em código (~94% no HumanEval), com uma janela de contexto de 1M tokens. Se você usa o ChatGPT hoje, provavelmente está usando o GPT-5.6, não o GPT-4o — confira o seletor de modelo na sua conta para confirmar.',
+              text: 'O GPT-4o era o modelo principal da OpenAI antes de o GPT-5.6 substituí-lo como o modelo por trás do ChatGPT. Segundo o model card oficial, ele tem uma janela de contexto de 128K tokens, ~88.7% no MMLU e ~90.2% no HumanEval. O Claude Opus 5 supera esses números em raciocínio (~91% no MMLU-Pro, um benchmark mais exigente) e em código (~94% no HumanEval), com uma janela de contexto de 1M tokens. Se você usa o ChatGPT hoje, provavelmente está usando o GPT-5.6, não o GPT-4o — confira o seletor de modelo na sua conta para confirmar.',
             },
           },
           {
@@ -8167,9 +8167,9 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
         },
         claudeSection: {
-          title: 'Claude (Anthropic) — Opus 4.8',
+          title: 'Claude (Anthropic) — Opus 5',
           content: [
-            'O modelo focado em raciocínio. Claude Opus 4.8 é otimizado para precisão, profundidade lógica e análise de documentos longos. O modo de pensamento estendido alcança as pontuações mais altas no MMLU-Pro (~91%) e nos benchmarks AIME entre os modelos de ponta até 2025.',
+            'O modelo focado em raciocínio. Claude Opus 5 é otimizado para precisão, profundidade lógica e análise de documentos longos. O modo de pensamento estendido alcança as pontuações mais altas no MMLU-Pro (~91%) e nos benchmarks AIME entre os modelos de ponta até 2025.',
             '**Pontos fortes:** Raciocínio superior passo a passo — mostra seu trabalho de forma consistente. Taxa de alucinação mais baixa do que os concorrentes. Janela de contexto de 1M tokens para documentos longos e bases de código. Treinamento de IA constitucional para transparência de segurança. Melhor revisão de código (~94% HumanEval). Plano gratuito disponível.',
             '**Pontos fracos:** Inferência mais lenta do que GPT-5.6 e Gemini 3.1 Pro. Mais conservador em tarefas altamente criativas. Maior custo de API dos três. Menos integrações de terceiros do que o ChatGPT.',
             '**Ideal para:** Análise técnica, revisão de código, raciocínio lógico, análise de documentos, pesquisa, resolução de problemas complexos — qualquer tarefa onde precisão supera velocidade.',
@@ -8177,7 +8177,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           items: [
             'Plano gratuito: Uso diário limitado (Claude.ai)',
             'Claude.ai Pro: ~$20/mês — limites de uso mais altos',
-            'API: ~$15/1M tokens de entrada, ~$75/1M tokens de saída (Opus 4.8)',
+            'API: ~$5/1M tokens de entrada, ~$25/1M tokens de saída (Opus 5)',
             'Enterprise: Preços personalizados com SLA',
           ],
         },
@@ -8186,7 +8186,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             'O carro-chefe multimodal do Google. Gemini 3.1 Pro lidera em compreensão visual, acesso à web em tempo real via Google Search e tem a maior janela de contexto de qualquer modelo de ponta com 2M tokens.',
             '**Pontos fortes:** Melhor capacidade multimodal — imagens, vídeo, áudio e documentos nativamente. Integração nativa com o Google Search para informações em tempo real. Inferência rápida, competitiva com GPT-5.6. Maior janela de contexto (2M tokens). Menor custo de API dos três. Plano gratuito disponível.',
-            '**Pontos fracos:** O raciocínio lógico passo a passo não é tão forte quanto o Claude Opus 4.8 (~89% MMLU-Pro vs ~91% do Claude). As práticas padrão de compartilhamento de dados do Google são mais amplas. Ecossistema de integrações de terceiros menor do que o ChatGPT.',
+            '**Pontos fracos:** O raciocínio lógico passo a passo não é tão forte quanto o Claude Opus 5 (~89% MMLU-Pro vs ~91% do Claude). As práticas padrão de compartilhamento de dados do Google são mais amplas. Ecossistema de integrações de terceiros menor do que o ChatGPT.',
             '**Ideal para:** Análise de imagens, compreensão de vídeo, tarefas que requerem dados da web em tempo real, integração com o Google Workspace, usuários de API conscientes de custos, processamento de documentos muito longos.',
           ],
           items: [
@@ -8202,7 +8202,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           items: [
             'Os três modelos têm planos gratuitos para consumidores — planos Pro/Plus custam ~$20/mês nos três',
             'GPT-5.6: 128K tokens | Claude Opus 5: 1M tokens | Gemini 3.1 Pro: 2M tokens',
-            'Claude Opus 4.8 com pensamento estendido pontua mais alto no MMLU-Pro (~91%) e nos benchmarks de raciocínio AIME',
+            'Claude Opus 5 com pensamento estendido pontua mais alto no MMLU-Pro (~91%) e nos benchmarks de raciocínio AIME',
             'Gemini 3.1 Pro é o único modelo com 2M de contexto — cabe uma base de código inteira, livro ou documento jurídico',
             'Os três suportam uso de ferramentas, chamadas de função e integração RAG em produção',
           ],
@@ -8213,8 +8213,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           columns: ['Factor', 'GPT-5.6', 'Claude Opus 5', 'Gemini 3.1 Pro'],
           rows: [
             { 'Factor': 'Janela de contexto', 'GPT-5.6': '128K tokens', 'Claude Opus 5': '1M tokens', 'Gemini 3.1 Pro': '2M tokens' },
-            { 'Factor': 'Raciocínio (MMLU-Pro)', 'GPT-5.6': '~90%', 'Claude Opus 4.8': '~91%', 'Gemini 3.1 Pro': '~89%' },
-            { 'Factor': 'Código (HumanEval)', 'GPT-5.6': '~92%', 'Claude Opus 4.8': '~94%', 'Gemini 3.1 Pro': '~88%' },
+            { 'Factor': 'Raciocínio (MMLU-Pro)', 'GPT-5.6': '~90%', 'Claude Opus 5': '~91%', 'Gemini 3.1 Pro': '~89%' },
+            { 'Factor': 'Código (HumanEval)', 'GPT-5.6': '~92%', 'Claude Opus 5': '~94%', 'Gemini 3.1 Pro': '~88%' },
             { 'Factor': 'Multimodal', 'GPT-5.6': 'Texto + imagens', 'Claude Opus 5': 'Texto + imagens', 'Gemini 3.1 Pro': 'Texto, imagens, vídeo, áudio' },
             { 'Factor': 'Velocidade', 'GPT-5.6': 'Rápida', 'Claude Opus 5': 'Moderada', 'Gemini 3.1 Pro': 'Rápida' },
             { 'Factor': 'API entrada (por 1M tokens)', 'GPT-5.6': '~$5', 'Claude Opus 5': '~$15', 'Gemini 3.1 Pro': '~$3,50' },
@@ -8228,7 +8228,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         codeReview: {
           title: 'Revisão de Código e Depuração',
-          content: 'Claude Opus 4.8 vence — maior pontuação no HumanEval (~94%), melhor em explicação passo a passo de código, detecção de bugs e problemas de segurança. Mostra o raciocínio com clareza. GPT-5.6 (~92%) é uma alternativa sólida quando a velocidade importa.',
+          content: 'Claude Opus 5 vence — maior pontuação no HumanEval (~94%), melhor em explicação passo a passo de código, detecção de bugs e problemas de segurança. Mostra o raciocínio com clareza. GPT-5.6 (~92%) é uma alternativa sólida quando a velocidade importa.',
         },
         dataAnalysis: {
           title: 'Análise de Dados e Pesquisa',
@@ -8298,7 +8298,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           isTldr: true,
           items: [
             'GPT-5.6: Melhor para velocidade, versatilidade, escrita criativa. Inferência mais rápida. Contexto de 128K.',
-            'Claude Opus 4.8: Melhor para raciocínio (~91% MMLU-Pro), código (~94% HumanEval), análise de longa duração. Contexto de 1M.',
+            'Claude Opus 5: Melhor para raciocínio (~91% MMLU-Pro), código (~94% HumanEval), análise de longa duração. Contexto de 1M.',
             'Gemini 3.1 Pro: Melhor para multimodal (imagens, vídeo, áudio). Acesso à web em tempo real. Maior contexto (2M). Menor custo de API.',
             'Os três têm planos gratuitos para consumidores e planos Pro por ~$20/mês.',
             'Raciocínio: Claude Opus 5 > GPT-5.6 > Gemini 3.1 Pro.',
@@ -8311,11 +8311,11 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: 'Perguntas Frequentes',
           faqs: [
             { q: 'Qual modelo de IA é melhor para escrita criativa?', a: 'GPT-5.6 (ChatGPT) se destaca em escrita criativa, brainstorming e versatilidade geral — rápido e acessível. Claude Opus 5 é melhor para raciocínio mais profundo e análise de trabalho criativo.' },
-            { q: 'Qual modelo é melhor para programação?', a: 'Claude Opus 4.8 tem vantagem em qualidade de código e depuração (~94% HumanEval). GPT-5.6 (~92%) é mais rápido. Para trabalho crítico, compare as sugestões de código de ambos.' },
+            { q: 'Qual modelo é melhor para programação?', a: 'Claude Opus 5 tem vantagem em qualidade de código e depuração (~94% HumanEval). GPT-5.6 (~92%) é mais rápido. Para trabalho crítico, compare as sugestões de código de ambos.' },
             { q: 'Qual é a comparação de custos em 2026?', a: 'GPT-5.6: ~$5/1M entrada, ~$15/1M saída. Claude Opus 5: ~$5/1M entrada, ~$25/1M saída. Gemini 3.1 Pro: ~$3,50/1M entrada, ~$10,50/1M saída. Os três têm planos de consumidor a ~$20/mês. Verifique os preços atuais com cada provedor.' },
             { q: 'Qual modelo lida melhor com tarefas multimodais?', a: 'Gemini 3.1 Pro é o mais forte para imagens, vídeo, áudio e compreensão de documentos. GPT-5.6 suporta texto e imagens. Claude Opus 5 suporta texto e imagens, mas não vídeo.' },
             { q: 'Os três modelos têm planos gratuitos?', a: 'Sim. ChatGPT, Claude.ai e Gemini oferecem planos gratuitos com limites de uso diário limitados. Os três também oferecem planos Pro/Plus/Premium por ~$20/mês com limites de uso mais altos.' },
-            { q: 'Como o GPT-4o se compara ao Claude Opus 4.8 e ao Gemini 3.1 Pro?', a: 'O GPT-4o era o modelo principal da OpenAI antes de o GPT-5.6 substituí-lo como o modelo por trás do ChatGPT. Segundo o model card oficial, ele tem uma janela de contexto de 128K tokens, ~88.7% no MMLU e ~90.2% no HumanEval. O Claude Opus 4.8 supera esses números em raciocínio (~91% no MMLU-Pro, um benchmark mais exigente) e em código (~94% no HumanEval), com uma janela de contexto de 1M tokens. Se você usa o ChatGPT hoje, provavelmente está usando o GPT-5.6, não o GPT-4o — confira o seletor de modelo na sua conta para confirmar.' },
+            { q: 'Como o GPT-4o se compara ao Claude Opus 5 e ao Gemini 3.1 Pro?', a: 'O GPT-4o era o modelo principal da OpenAI antes de o GPT-5.6 substituí-lo como o modelo por trás do ChatGPT. Segundo o model card oficial, ele tem uma janela de contexto de 128K tokens, ~88.7% no MMLU e ~90.2% no HumanEval. O Claude Opus 5 supera esses números em raciocínio (~91% no MMLU-Pro, um benchmark mais exigente) e em código (~94% no HumanEval), com uma janela de contexto de 1M tokens. Se você usa o ChatGPT hoje, provavelmente está usando o GPT-5.6, não o GPT-4o — confira o seletor de modelo na sua conta para confirmar.' },
             { q: 'Posso usar múltiplos modelos no mesmo fluxo de trabalho?', a: 'Sim. O PromptQuorum permite enviar o mesmo prompt para GPT-5.6, Claude Opus 5, Gemini 3.1 Pro e outros modelos simultaneamente e comparar os resultados lado a lado. Esta é a abordagem recomendada para trabalho crítico.' },
           ],
         },
@@ -8360,7 +8360,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
       metaDescription: 'GPT-5.6, Claude Opus 5, Gemini 3.1 Pro를 속도, 추론, 가격, 컨텍스트 창으로 비교. 어떤 AI 모델을 사용할지—세 가지 모두를 언제 사용할지.',
       freshness_tier: 'semi_annual',
       next_refresh_due: '2026-09-14',
-      last_full_refresh: '2026-07-14',
+      last_full_refresh: '2026-08-29',
       current_models_mentioned: ['GPT-5.6', 'GPT-4o', 'Claude Opus 5', 'Gemini 3.1 Pro'],
       educationalLevel: 'Intermediate',
       faqSchema: {
@@ -8381,7 +8381,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: '프로그래밍에 어떤 모델이 가장 좋습니까?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Claude Opus 4.8은 코드 품질과 디버깅에서 우위를 점합니다, HumanEval에서 ~94%. GPT-5.6(~92%)는 더 빠릅니다. 중요한 작업의 경우 두 모델의 코드 제안을 비교하세요.',
+              text: 'Claude Opus 5은 코드 품질과 디버깅에서 우위를 점합니다, HumanEval에서 ~94%. GPT-5.6(~92%)는 더 빠릅니다. 중요한 작업의 경우 두 모델의 코드 제안을 비교하세요.',
             },
           },
           {
@@ -8421,7 +8421,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
             name: 'GPT-4o는 Claude Opus 5, Gemini 3.1 Pro와 비교해 어떻습니까?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'GPT-4o는 GPT-5.6이 ChatGPT를 구동하는 모델로 대체되기 전 OpenAI의 대표 모델이었습니다. 공식 모델 카드에 따르면 128K 토큰 컨텍스트 윈도우, MMLU 약 88.7%, HumanEval 약 90.2%를 기록했습니다. Claude Opus 4.8은 추론(더 어려운 벤치마크인 MMLU-Pro에서 약 91%)과 코딩(HumanEval 약 94%) 모두에서 이를 앞서며, 1M 토큰 컨텍스트 윈도우를 제공합니다. 현재 ChatGPT를 사용 중이라면 GPT-4o가 아닌 GPT-5.6을 사용하고 있을 가능성이 높습니다 — 계정의 모델 선택 메뉴에서 확인하십시오.',
+              text: 'GPT-4o는 GPT-5.6이 ChatGPT를 구동하는 모델로 대체되기 전 OpenAI의 대표 모델이었습니다. 공식 모델 카드에 따르면 128K 토큰 컨텍스트 윈도우, MMLU 약 88.7%, HumanEval 약 90.2%를 기록했습니다. Claude Opus 5은 추론(더 어려운 벤치마크인 MMLU-Pro에서 약 91%)과 코딩(HumanEval 약 94%) 모두에서 이를 앞서며, 1M 토큰 컨텍스트 윈도우를 제공합니다. 현재 ChatGPT를 사용 중이라면 GPT-4o가 아닌 GPT-5.6을 사용하고 있을 가능성이 높습니다 — 계정의 모델 선택 메뉴에서 확인하십시오.',
             },
           },
           {
@@ -8525,9 +8525,9 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           ],
         },
         claudeSection: {
-          title: 'Claude (Anthropic) — Opus 4.8',
+          title: 'Claude (Anthropic) — Opus 5',
           content: [
-            '추론에 집중한 모델입니다. Claude Opus 4.8은 정확도, 논리적 깊이, 긴 문서 분석에 최적화되어 있습니다. 확장 사고 모드는 2025년까지 최첨단 모델 중 MMLU-Pro(~91%)와 AIME 벤치마크에서 가장 높은 점수를 달성합니다.',
+            '추론에 집중한 모델입니다. Claude Opus 5은 정확도, 논리적 깊이, 긴 문서 분석에 최적화되어 있습니다. 확장 사고 모드는 2025년까지 최첨단 모델 중 MMLU-Pro(~91%)와 AIME 벤치마크에서 가장 높은 점수를 달성합니다.',
             '**강점:** 우수한 단계별 추론—일관되게 작업 과정을 보여줌. 경쟁자보다 낮은 환각률. 긴 문서와 코드베이스를 위한 1M 토큰 컨텍스트 창. 보안 투명성을 위한 헌법적 AI 훈련. 최상의 코드 리뷰(~94% HumanEval). 무료 플랜 제공.',
             '**약점:** GPT-5.6와 Gemini 3.1 Pro보다 느린 추론. 고도로 창의적인 작업에서 더 보수적. 세 가지 중 가장 높은 API 비용. ChatGPT보다 적은 제3자 통합.',
             '**적합한 경우:** 기술 분석, 코드 리뷰, 논리적 추론, 문서 분석, 연구, 복잡한 문제 해결—속도보다 정밀도가 중요한 모든 작업.',
@@ -8535,7 +8535,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           items: [
             '무료 플랜: 일일 제한 사용(Claude.ai)',
             'Claude.ai Pro: ~$20/월 — 더 높은 사용 한도',
-            'API: Opus 4.8 입력 1M 토큰당 ~$15, 출력 1M 토큰당 ~$75',
+            'API: Opus 5 입력 1M 토큰당 ~$15, 출력 1M 토큰당 ~$75',
             '기업: SLA가 포함된 맞춤 가격',
           ],
         },
@@ -8544,7 +8544,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           content: [
             'Google의 멀티모달 플래그십입니다. Gemini 3.1 Pro는 시각적 이해, Google 검색을 통한 실시간 웹 접근에서 앞서며, 2M 토큰으로 최첨단 모델 중 가장 큰 컨텍스트 창을 보유합니다.',
             '**강점:** 최상의 멀티모달 기능—이미지, 비디오, 오디오, 문서를 기본으로 처리. 실시간 정보를 위한 Google 검색 기본 통합. GPT-5.6와 경쟁하는 빠른 추론. 가장 큰 컨텍스트 창(2M 토큰). 세 가지 중 가장 낮은 API 비용. 무료 플랜 제공.',
-            '**약점:** 단계별 논리 추론이 Claude Opus 4.8만큼 강하지 않음(MMLU-Pro ~89% vs Claude ~91%). Google의 기본 데이터 공유 관행이 더 광범위함. ChatGPT보다 작은 제3자 통합 생태계.',
+            '**약점:** 단계별 논리 추론이 Claude Opus 5만큼 강하지 않음(MMLU-Pro ~89% vs Claude ~91%). Google의 기본 데이터 공유 관행이 더 광범위함. ChatGPT보다 작은 제3자 통합 생태계.',
             '**적합한 경우:** 이미지 분석, 비디오 이해, 실시간 웹 데이터가 필요한 작업, Google Workspace 통합, 비용을 의식하는 API 사용자, 매우 긴 문서 처리.',
           ],
           items: [
@@ -8560,7 +8560,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           items: [
             '세 모델 모두 소비자용 무료 플랜 제공—Pro/Plus 플랜은 세 모두 ~$20/월',
             'GPT-5.6: 128K 토큰 | Claude Opus 5: 1M 토큰 | Gemini 3.1 Pro: 2M 토큰',
-            'Claude Opus 4.8 확장 사고는 MMLU-Pro(~91%)와 AIME 추론 벤치마크에서 가장 높은 점수',
+            'Claude Opus 5 확장 사고는 MMLU-Pro(~91%)와 AIME 추론 벤치마크에서 가장 높은 점수',
             'Gemini 3.1 Pro는 2M 컨텍스트를 가진 유일한 모델—전체 코드베이스, 책, 법률 문서가 들어감',
             '세 모두 프로덕션에서 도구 사용, 함수 호출, RAG 통합을 지원합니다',
           ],
@@ -8571,8 +8571,8 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           columns: ['요소', 'GPT-5.6', 'Claude Opus 5', 'Gemini 3.1 Pro'],
           rows: [
             { '요소': '컨텍스트 창', 'GPT-5.6': '128K 토큰', 'Claude Opus 5': '1M 토큰', 'Gemini 3.1 Pro': '2M 토큰' },
-            { '요소': '추론 (MMLU-Pro)', 'GPT-5.6': '~90%', 'Claude Opus 4.8': '~91%', 'Gemini 3.1 Pro': '~89%' },
-            { '요소': '코드 (HumanEval)', 'GPT-5.6': '~92%', 'Claude Opus 4.8': '~94%', 'Gemini 3.1 Pro': '~88%' },
+            { '요소': '추론 (MMLU-Pro)', 'GPT-5.6': '~90%', 'Claude Opus 5': '~91%', 'Gemini 3.1 Pro': '~89%' },
+            { '요소': '코드 (HumanEval)', 'GPT-5.6': '~92%', 'Claude Opus 5': '~94%', 'Gemini 3.1 Pro': '~88%' },
             { '요소': '멀티모달', 'GPT-5.6': '텍스트 + 이미지', 'Claude Opus 5': '텍스트 + 이미지', 'Gemini 3.1 Pro': '텍스트, 이미지, 비디오, 오디오' },
             { '요소': '속도', 'GPT-5.6': '빠름', 'Claude Opus 5': '보통', 'Gemini 3.1 Pro': '빠름' },
             { '요소': 'API 입력 (1M 토큰당)', 'GPT-5.6': '~$5', 'Claude Opus 5': '~$15', 'Gemini 3.1 Pro': '~$3.50' },
@@ -8586,7 +8586,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
         },
         codeReview: {
           title: '코드 리뷰 및 디버깅',
-          content: 'Claude Opus 4.8이 승리합니다—HumanEval에서 가장 높은 점수(~94%), 단계별 코드 설명, 버그 및 보안 문제 감지에서 최상. 추론 과정을 명확하게 보여줍니다. GPT-5.6(~92%)는 속도가 중요할 때 강력한 대안입니다.',
+          content: 'Claude Opus 5이 승리합니다—HumanEval에서 가장 높은 점수(~94%), 단계별 코드 설명, 버그 및 보안 문제 감지에서 최상. 추론 과정을 명확하게 보여줍니다. GPT-5.6(~92%)는 속도가 중요할 때 강력한 대안입니다.',
         },
         dataAnalysis: {
           title: '데이터 분석 및 연구',
@@ -8656,7 +8656,7 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           isTldr: true,
           items: [
             'GPT-5.6: 속도, 다목적성, 창의적 글쓰기에 최상. 가장 빠른 추론. 128K 컨텍스트.',
-            'Claude Opus 4.8: 추론(~91% MMLU-Pro), 코드(~94% HumanEval), 긴 분석에 최상. 1M 컨텍스트.',
+            'Claude Opus 5: 추론(~91% MMLU-Pro), 코드(~94% HumanEval), 긴 분석에 최상. 1M 컨텍스트.',
             'Gemini 3.1 Pro: 멀티모달(이미지, 비디오, 오디오)에 최상. 실시간 웹 접근. 가장 큰 컨텍스트(2M). 가장 낮은 API 비용.',
             '세 모두 소비자용 무료 플랜과 ~$20/월 Pro 플랜 제공.',
             '추론: Claude Opus 5 > GPT-5.6 > Gemini 3.1 Pro.',
@@ -8669,11 +8669,11 @@ export const blogContent: Record<string, Partial<Record<Language, BlogPost>>> = 
           title: '자주 묻는 질문',
           faqs: [
             { q: '창의적 글쓰기에 어떤 AI 모델이 가장 좋습니까?', a: 'GPT-5.6(ChatGPT)는 창의적 글쓰기, 브레인스토밍, 일반적인 다목적 용도에서 탁월합니다—빠르고 접근 가능합니다. Claude Opus 5은 더 깊은 추론과 창의적 작업 분석에 더 좋습니다.' },
-            { q: '프로그래밍에 어떤 모델이 가장 좋습니까?', a: 'Claude Opus 4.8은 코드 품질과 디버깅에서 우위를 점합니다(~94% HumanEval). GPT-5.6(~92%)는 더 빠릅니다. 중요한 작업의 경우 두 모델의 코드 제안을 비교하세요.' },
+            { q: '프로그래밍에 어떤 모델이 가장 좋습니까?', a: 'Claude Opus 5은 코드 품질과 디버깅에서 우위를 점합니다(~94% HumanEval). GPT-5.6(~92%)는 더 빠릅니다. 중요한 작업의 경우 두 모델의 코드 제안을 비교하세요.' },
             { q: '2026년 가격 비교는 어떻습니까?', a: 'GPT-5.6: 입력 ~$5/1M, 출력 ~$15/1M. Claude Opus 5: 입력 ~$5/1M, 출력 ~$25/1M. Gemini 3.1 Pro: 입력 ~$3.50/1M, 출력 ~$10.50/1M. 세 모두 소비자 플랜이 ~$20/월. 각 공급자에서 현재 가격을 확인하세요.' },
             { q: '멀티모달 작업에 어떤 모델이 가장 잘 처리합니까?', a: 'Gemini 3.1 Pro는 이미지, 비디오, 오디오, 문서 이해에 가장 강합니다. GPT-5.6는 텍스트와 이미지를 지원합니다. Claude Opus 5은 텍스트와 이미지를 지원하지만 비디오는 지원하지 않습니다.' },
             { q: '세 모델 모두 무료 플랜이 있습니까?', a: '예. ChatGPT, Claude.ai, Gemini는 모두 일일 사용 한도가 있는 무료 플랜을 제공합니다. 세 모두 더 높은 사용 한도의 Pro/Plus/Premium 플랜을 ~$20/월에 제공합니다.' },
-            { q: 'GPT-4o는 Claude Opus 4.8, Gemini 3.1 Pro와 비교해 어떻습니까?', a: 'GPT-4o는 GPT-5.6이 ChatGPT를 구동하는 모델로 대체되기 전 OpenAI의 대표 모델이었습니다. 공식 모델 카드에 따르면 128K 토큰 컨텍스트 윈도우, MMLU 약 88.7%, HumanEval 약 90.2%를 기록했습니다. Claude Opus 4.8은 추론(더 어려운 벤치마크인 MMLU-Pro에서 약 91%)과 코딩(HumanEval 약 94%) 모두에서 이를 앞서며, 1M 토큰 컨텍스트 윈도우를 제공합니다. 현재 ChatGPT를 사용 중이라면 GPT-4o가 아닌 GPT-5.6을 사용하고 있을 가능성이 높습니다 — 계정의 모델 선택 메뉴에서 확인하십시오.' },
+            { q: 'GPT-4o는 Claude Opus 5, Gemini 3.1 Pro와 비교해 어떻습니까?', a: 'GPT-4o는 GPT-5.6이 ChatGPT를 구동하는 모델로 대체되기 전 OpenAI의 대표 모델이었습니다. 공식 모델 카드에 따르면 128K 토큰 컨텍스트 윈도우, MMLU 약 88.7%, HumanEval 약 90.2%를 기록했습니다. Claude Opus 5은 추론(더 어려운 벤치마크인 MMLU-Pro에서 약 91%)과 코딩(HumanEval 약 94%) 모두에서 이를 앞서며, 1M 토큰 컨텍스트 윈도우를 제공합니다. 현재 ChatGPT를 사용 중이라면 GPT-4o가 아닌 GPT-5.6을 사용하고 있을 가능성이 높습니다 — 계정의 모델 선택 메뉴에서 확인하십시오.' },
             { q: '같은 워크플로에서 여러 모델을 사용할 수 있습니까?', a: '예. PromptQuorum은 동일한 프롬프트를 GPT-5.6, Claude Opus 5, Gemini 3.1 Pro 및 기타 모델에 동시에 보내고 결과를 나란히 비교할 수 있습니다. 중요한 작업에 권장되는 접근법입니다.' },
           ],
         },
