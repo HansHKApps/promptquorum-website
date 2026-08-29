@@ -1071,5 +1071,19 @@
     ],
     "reason": "Page 43: wyoming whisper models (11 impr) + whisper wyoming protocol (4 impr) = 15 impr combined, 0% CTR, uncovered as a direct definitional question - the article uses Wyoming throughout but never explains what it is. Added a factual FAQ built from facts already established in the article (Wyoming = the protocol Assist uses to connect to voice add-ons like Whisper), translated to all 9 languages.",
     "baseline": null
+  },
+  {
+    "id": "7929aa96-d5fe-458d-af50-c3f9677b86c8",
+    "slug": "/local-llms/hbm-memory-on-device-ai-samsung-sk-hynix-2026",
+    "date": "2026-08-29T21:37:59.699Z",
+    "fields": [
+      {
+        "field": "faqs (all 9 locales)",
+        "old": "LPDDR5X bandwidth figure (85.6 GB/s) only existed embedded in an HBM-comparison table, no standalone factual answer",
+        "new": "Added What is LPDDR5X memory bandwidth? FAQ to all 9 locales"
+      }
+    ],
+    "reason": "Page 44: single highest-volume query (lpddr5x bandwidth, 65 impr, pos 14.9, 0% CTR) has no clean standalone answer despite the 85.6 GB/s figure existing in the article - only embedded in an HBM comparison table/formula FAQs. Added a direct FAQ answering the simple factual question, reusing already-established figures (85.6 GB/s, LPDDR5X-PIM 3.01x).",
+    "baseline": null
   }
 ]

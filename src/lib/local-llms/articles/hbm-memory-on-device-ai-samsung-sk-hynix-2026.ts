@@ -15,7 +15,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro: 'Memory bandwidth, not compute TOPS, is the bottleneck for AI inference. The Galaxy S26 (Exynos 2600) has LPDDR5X at 85.6 GB/s; data centers use HBM3E at 1.229 TB/s—a 14x difference. This gap explains why 7B-parameter models run on phones at 8–15 tokens/sec but data-center GPUs handle 100+ tokens/sec. Samsung and SK Hynix are the key players: SK Hynix holds roughly half to two-thirds of the HBM market depending on the quarter, while Samsung shipped the industry\'s first 12-layer HBM4E samples (3.6 TB/s per stack) in May 2026 and, in August 2026, demonstrated a validated LPDDR5X-PIM (Processing-In-Memory) chip that triples on-device inference throughput. This guide explains the memory bottleneck, the role of Samsung and SK Hynix, and what it means for on-device AI in 2026 and beyond.',
     metaDescription: 'HBM vs LPDDR5X: Memory bandwidth is the AI bottleneck. SK Hynix HBM4 vs Samsung LPDDR5X-PIM (3x faster, validated Aug 2026). Why on-device AI is slow and data-center AI is fast.',
     publishDate: '2026-06-15',
-    dateModified: '2026-08-28',
+    dateModified: '2026-08-29',
     readTime: '11 min read',
     educationalLevel: 'Advanced',
     audience: 'AI engineers, hardware designers, anyone curious about why local AI is slower than cloud AI',
@@ -201,6 +201,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
+          {
+            q: 'What is LPDDR5X memory bandwidth?',
+            a: "LPDDR5X at 10.7 Gbps on a x64 bus delivers 85.6 GB/s — the memory speed used in the Galaxy S26, Snapdragon 8 Elite Gen 5, and most 2026 flagship phones. That's roughly 5.4x to 14x slower than data-center HBM (HBM2E at 460 GB/s up to HBM4/HBM4E at 2-3.6 TB/s per stack), which is why on-device AI inference is much slower than data-center inference for the same model size. Samsung's LPDDR5X-PIM variant, validated August 2026, closes part of that gap — it ran Llama-3.1-8B at 3.01x the tokens/sec of standard LPDDR5X in Samsung's own Hot Chips 2026 demonstration.",
+          },
           {
             q: 'Why is memory bandwidth the bottleneck for AI inference?',
             a: 'Because the decode phase (generating each token) requires loading the entire model into memory for one forward pass. The compute units finish quickly, but memory can\'t feed them data fast enough. FLOPS are not the bottleneck; data delivery is.'
@@ -439,6 +443,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: '자주 묻는 질문',
         faqs: [
+          { q: 'LPDDR5X 메모리 대역폭은 얼마입니까?', a: 'x64 버스에서 10.7 Gbps로 동작하는 LPDDR5X는 85.6 GB/s를 제공합니다 — Galaxy S26, Snapdragon 8 Elite Gen 5, 그리고 2026년 대부분의 플래그십 폰에서 사용되는 메모리 속도입니다. 이는 데이터센터용 HBM(HBM2E의 460 GB/s부터 HBM4/HBM4E의 스택당 2~3.6 TB/s까지)보다 약 5.4배에서 14배 느립니다. 이 때문에 동일한 모델 크기라도 온디바이스 AI 추론이 데이터센터 추론보다 훨씬 느립니다. 2026년 8월 검증된 삼성의 LPDDR5X-PIM 변형은 이 격차의 일부를 좁혔습니다 — 삼성 자체의 Hot Chips 2026 시연에서 Llama-3.1-8B를 표준 LPDDR5X 대비 3.01배의 tokens/sec로 실행했습니다.' },
           { q: '왜 AI 추론에 메모리 대역폭이 병목인가?', a: '디코드 단계(각 토큰 생성)는 한 번의 전향 패스에 대해 전체 모델을 메모리에 로드해야 하기 때문. 계산 단위가 빨리 끝나지만 메모리가 충분히 빨리 데이터를 공급할 수 없습니다. FLOPS가 병목이 아니라 데이터 배달입니다.' },
           { q: '온디바이스 AI의 tokens/sec 공식은 무엇입니까?', a: '단순화: tokens/sec = memory_bandwidth / (model_size × bytes_per_precision). 7B FP16 모델(14 GB) 85.6 GB/s에서: 85.6 ÷ 14 = ~6 tokens/sec. Q4 양자화(3.5 GB): 85.6 ÷ 3.5 = ~24 tokens/sec.' },
           { q: 'SK하이닉스가 HBM 시장을 지배하나요?', a: 'SK하이닉스는 HBM 출하량에서 선두이며, 2026년 분기에 따라 50–62%의 점유율이 보고됩니다. Samsung은 격차 일부를 좁혔습니다: 2026년 5월 스택당 3.6 TB/s의 12단 HBM4E 샘플을 출하해 이 특정 지표에서 SK하이닉스의 HBM4 스펙을 앞섰습니다.' },
@@ -640,6 +645,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Preguntas Frecuentes',
         faqs: [
+          { q: '¿Cuál es el ancho de banda de memoria de LPDDR5X?', a: 'LPDDR5X a 10.7 Gbps en un bus x64 ofrece 85.6 GB/s, la velocidad de memoria usada en el Galaxy S26, el Snapdragon 8 Elite Gen 5 y la mayoría de los teléfonos flagship de 2026. Eso es entre 5.4x y 14x más lento que el HBM de centro de datos (desde HBM2E a 460 GB/s hasta HBM4/HBM4E a 2-3.6 TB/s por stack), por lo que la inferencia de IA en el dispositivo es mucho más lenta que en un centro de datos para el mismo tamaño de modelo. La variante LPDDR5X-PIM de Samsung, validada en agosto de 2026, cierra parte de esa brecha: ejecutó Llama-3.1-8B a 3.01x los tokens/seg del LPDDR5X estándar en la propia demostración de Samsung en Hot Chips 2026.' },
           { q: '¿Por qué el ancho de banda de memoria es el cuello de botella para la inferencia de IA?', a: 'Porque la fase de decodificación (generar cada token) requiere cargar todo el modelo en memoria para una pasada hacia adelante. Las unidades de cálculo terminan rápido, pero la memoria no puede alimentarlas con datos lo suficientemente rápido.' },
           { q: '¿Cuál es la fórmula de tokens/seg para IA en dispositivo?', a: 'Simplificada: tokens/seg = ancho_banda_memoria / (tamaño_modelo × bytes_por_precisión). Para un modelo 7B FP16 (14 GB) a 85.6 GB/s: 85.6 ÷ 14 = ~6 tokens/seg. Cuantizado Q4 (3.5 GB): 85.6 ÷ 3.5 = ~24 tokens/seg.' },
           { q: '¿Domina SK Hynix el mercado de HBM?', a: 'SK Hynix lidera los envíos de HBM, con una cuota reportada de entre 50–62% según el trimestre de 2026. Samsung cerró parte de la brecha: envió muestras de HBM4E de 12 capas a 3.6 TB/s en mayo de 2026, superando la especificación de HBM4 de SK en ese punto concreto.' },
@@ -841,6 +847,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Häufig gestellte Fragen',
         faqs: [
+          { q: 'Wie hoch ist die Speicherbandbreite von LPDDR5X?', a: 'LPDDR5X liefert bei 10,7 Gbps auf einem x64-Bus 85,6 GB/s — die Speichergeschwindigkeit im Galaxy S26, Snapdragon 8 Elite Gen 5 und den meisten Flaggschiff-Handys von 2026. Das ist etwa 5,4- bis 14-mal langsamer als Rechenzentrums-HBM (von HBM2E mit 460 GB/s bis HBM4/HBM4E mit 2-3,6 TB/s pro Stack) — deshalb ist On-Device-KI-Inferenz bei gleicher Modellgröße deutlich langsamer als im Rechenzentrum. Samsungs im August 2026 validierte LPDDR5X-PIM-Variante schließt einen Teil dieser Lücke: In Samsungs eigener Hot-Chips-2026-Demonstration lief Llama-3.1-8B mit dem 3,01-Fachen der Tokens/Sekunde von Standard-LPDDR5X.' },
           { q: 'Warum ist Speicherbandbreite der Engpass für KI-Inferenz?', a: 'Weil die Dekodierungsphase (jeden Token erzeugen) das Laden des gesamten Modells in den Speicher für einen Forward-Pass erfordert. Die Recheneinheiten sind schnell fertig, aber der Speicher kann sie nicht schnell genug mit Daten versorgen.' },
           { q: 'Was ist die Tokens/Sekunde-Formel für On-Device-KI?', a: 'Vereinfacht: Tokens/Sekunde = Speicherbandbreite / (Modellgröße × Bytes_pro_Präzision). Für ein 7B-FP16-Modell (14 GB) bei 85,6 GB/s: 85,6 ÷ 14 = ~6 Tokens/Sekunde. Quantisiert Q4 (3,5 GB): 85,6 ÷ 3,5 = ~24 Tokens/Sekunde.' },
           { q: 'Dominiert SK Hynix den HBM-Markt?', a: 'SK Hynix führt bei HBM-Lieferungen, mit einem berichteten Anteil von 50–62% je nach Quartal 2026. Samsung hat einen Teil der Lücke geschlossen: Es lieferte im Mai 2026 12-Layer-HBM4E-Samples mit 3,6 TB/s aus, bei dieser Kennzahl vor SK Hynix\' HBM4-Spezifikation.' },
@@ -1042,6 +1049,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Questions Fréquentes',
         faqs: [
+          { q: "Quelle est la bande passante mémoire du LPDDR5X ?", a: "Le LPDDR5X à 10,7 Gbps sur un bus x64 offre 85,6 Go/s — la vitesse mémoire utilisée dans le Galaxy S26, le Snapdragon 8 Elite Gen 5 et la plupart des téléphones haut de gamme de 2026. C'est environ 5,4 à 14 fois plus lent que le HBM des centres de données (du HBM2E à 460 Go/s jusqu'au HBM4/HBM4E à 2-3,6 To/s par stack), ce qui explique pourquoi l'inférence IA sur l'appareil est bien plus lente qu'en centre de données pour une même taille de modèle. La variante LPDDR5X-PIM de Samsung, validée en août 2026, comble une partie de cet écart : elle a fait tourner Llama-3.1-8B à 3,01 fois le débit en tokens/s du LPDDR5X standard lors de la démonstration de Samsung à Hot Chips 2026." },
           { q: 'Pourquoi la bande passante mémoire est-elle le goulot d\'étranglement pour l\'inférence IA?', a: 'Parce que la phase de décodage (générer chaque token) nécessite de charger le modèle entier en mémoire pour une passe avant. Les unités de calcul finissent vite, mais la mémoire ne peut pas les alimenter assez vite.' },
           { q: 'Quelle est la formule tokens/sec pour l\'IA sur appareil?', a: 'Simplifiée: tokens/sec = bande_passante_mémoire / (taille_modèle × octets_par_précision). Pour un modèle 7B FP16 (14 GB) à 85,6 GB/s: 85,6 ÷ 14 = ~6 tokens/sec. Quantifié Q4 (3,5 GB): 85,6 ÷ 3,5 = ~24 tokens/sec.' },
           { q: 'SK Hynix domine-t-il le marché HBM?', a: 'SK Hynix domine les livraisons HBM, avec une part rapportée de 50–62% selon le trimestre 2026. Samsung a comblé une partie de l\'écart: il a livré des échantillons HBM4E 12 couches à 3,6 TB/s en mai 2026, devançant la spécification HBM4 de SK sur ce point précis.' },
@@ -1243,6 +1251,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'よくある質問',
         faqs: [
+          { q: 'LPDDR5Xのメモリ帯域幅はどれくらいですか?', a: 'x64バスで10.7GbpsのLPDDR5Xは85.6GB/sを実現します——Galaxy S26、Snapdragon 8 Elite Gen 5、2026年の主要フラッグシップスマートフォンで使われているメモリ速度です。これはデータセンター向けHBM(HBM2Eの460GB/sからHBM4/HBM4Eのスタックあたり2〜3.6TB/sまで)より約5.4倍〜14倍遅く、同じモデルサイズでもオンデバイスAI推論がデータセンター推論よりはるかに遅い理由です。2026年8月に検証されたSamsungのLPDDR5X-PIM版は、このギャップの一部を埋めます——SamsungのHot Chips 2026でのデモでは、Llama-3.1-8Bを標準LPDDR5Xの3.01倍のtokens/secで実行しました。' },
           { q: 'なぜメモリ帯域幅がAI推論のボトルネックなのですか?', a: 'デコード段階(各トークンの生成)は、1回のフォワードパスのためにモデル全体をメモリにロードする必要があるためです。計算ユニットはすぐに終わりますが、メモリが十分な速さでデータを供給できません。' },
           { q: 'オンデバイスAIのtokens/sec公式は何ですか?', a: '簡略化:tokens/sec = memory_bandwidth / (model_size × bytes_per_precision)。85.6 GB/sでの7B FP16モデル(14 GB):85.6 ÷ 14 = ~6 tokens/sec。Q4量子化(3.5 GB):85.6 ÷ 3.5 = ~24 tokens/sec。' },
           { q: 'SK HynixはHBM市場を支配していますか?', a: 'SK HynixはHBM出荷を主導しており、2026年の四半期によって50〜62%のシェアが報告されています。Samsungは一部のギャップを埋めました:2026年5月に12層HBM4Eサンプル(3.6 TB/s)を出荷し、この特定の指標ではSK HynixのHBM4仕様を上回りました。' },
@@ -1444,6 +1453,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: '常见问题',
         faqs: [
+          { q: 'LPDDR5X的内存带宽是多少?', a: 'LPDDR5X在x64总线上以10.7 Gbps运行,提供85.6 GB/s的带宽——这是Galaxy S26、骁龙8 Elite Gen 5以及2026年大多数旗舰手机所使用的内存速度。这比数据中心用的HBM(从HBM2E的460 GB/s到HBM4/HBM4E每堆栈2-3.6 TB/s)慢约5.4到14倍,这也是为什么在相同模型规模下,端侧AI推理比数据中心推理慢得多。三星于2026年8月验证的LPDDR5X-PIM变体缩小了部分差距——在三星自己的Hot Chips 2026演示中,该方案以标准LPDDR5X 3.01倍的tokens/sec运行了Llama-3.1-8B。' },
           { q: '为什么内存带宽是AI推理的瓶颈?', a: '因为解码阶段(生成每个token)需要为一次前向传递将整个模型加载到内存中。计算单元很快完成,但内存无法足够快地供给数据。' },
           { q: '设备端AI的tokens/sec公式是什么?', a: '简化版:tokens/sec = memory_bandwidth / (model_size × bytes_per_precision)。对于85.6 GB/s下的7B FP16模型(14 GB):85.6 ÷ 14 = ~6 tokens/sec。Q4量化(3.5 GB):85.6 ÷ 3.5 = ~24 tokens/sec。' },
           { q: 'SK海力士主导HBM市场吗?', a: 'SK海力士主导HBM出货,根据2026年不同季度报告份额为50–62%。三星缩小了部分差距:2026年5月出货12层HBM4E样品,每堆栈3.6 TB/s,在这一具体指标上超过了SK海力士的HBM4规格。' },
@@ -1645,6 +1655,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Perguntas Frequentes',
         faqs: [
+          { q: 'Qual é a largura de banda de memória do LPDDR5X?', a: 'O LPDDR5X a 10,7 Gbps em um barramento x64 entrega 85,6 GB/s — a velocidade de memória usada no Galaxy S26, Snapdragon 8 Elite Gen 5 e na maioria dos celulares topo de linha de 2026. Isso é cerca de 5,4x a 14x mais lento que o HBM de data center (do HBM2E a 460 GB/s até o HBM4/HBM4E a 2-3,6 TB/s por stack), por isso a inferência de IA no dispositivo é muito mais lenta que a de data center para o mesmo tamanho de modelo. A variante LPDDR5X-PIM da Samsung, validada em agosto de 2026, fecha parte dessa lacuna — rodou o Llama-3.1-8B a 3,01x os tokens/seg do LPDDR5X padrão na própria demonstração da Samsung na Hot Chips 2026.' },
           { q: 'Por que a largura de banda de memória é o gargalo para inferência de IA?', a: 'Porque a fase de decodificação (gerar cada token) exige carregar o modelo inteiro na memória para uma passagem direta. As unidades de computação terminam rápido, mas a memória não consegue alimentá-las com dados rápido o suficiente.' },
           { q: 'Qual é a fórmula de tokens/seg para IA no dispositivo?', a: 'Simplificada: tokens/seg = largura_banda_memória / (tamanho_modelo × bytes_por_precisão). Para um modelo 7B FP16 (14 GB) a 85,6 GB/s: 85,6 ÷ 14 = ~6 tokens/seg. Quantizado Q4 (3,5 GB): 85,6 ÷ 3,5 = ~24 tokens/seg.' },
           { q: 'A SK Hynix domina o mercado de HBM?', a: 'A SK Hynix lidera os envios de HBM, com participação reportada de 50–62% dependendo do trimestre de 2026. A Samsung fechou parte da lacuna: enviou amostras de HBM4E de 12 camadas a 3,6 TB/s em maio de 2026, à frente da especificação HBM4 da SK nesse ponto específico.' },
@@ -1846,6 +1857,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'الأسئلة الشائعة',
         faqs: [
+          { q: 'ما هو عرض النطاق الترددي لذاكرة LPDDR5X؟', a: 'توفر LPDDR5X بسرعة 10.7 جيجابت/ثانية على ناقل x64 عرض نطاق ترددي يبلغ 85.6 جيجابايت/ثانية — وهي سرعة الذاكرة المستخدمة في Galaxy S26 وSnapdragon 8 Elite Gen 5 ومعظم هواتف 2026 الرائدة. هذا أبطأ بنحو 5.4 إلى 14 مرة من ذاكرة HBM المخصصة لمراكز البيانات (من HBM2E بسرعة 460 جيجابايت/ثانية إلى HBM4/HBM4E بسرعة 2-3.6 تيرابايت/ثانية لكل حزمة)، وهو ما يفسر كون استدلال الذكاء الاصطناعي على الجهاز أبطأ بكثير من الاستدلال في مراكز البيانات لنفس حجم النموذج. يسدّ متغير LPDDR5X-PIM من سامسونج، الذي تم التحقق منه في أغسطس 2026، جزءاً من هذه الفجوة — إذ شغّل Llama-3.1-8B بمعدل 3.01 أضعاف عدد الرموز في الثانية مقارنة بـ LPDDR5X القياسي في عرض سامسونج التوضيحي الخاص بمؤتمر Hot Chips 2026.' },
           { q: 'لماذا يمثل عرض النطاق الترددي للذاكرة اختناقاً لاستدلال الذكاء الاصطناعي؟', a: 'لأن مرحلة فك التشفير (توليد كل رمز) تتطلب تحميل النموذج بأكمله في الذاكرة لتمريرة أمامية واحدة. تنتهي وحدات الحساب بسرعة، لكن الذاكرة لا يمكنها تغذيتها بالبيانات بالسرعة الكافية.' },
           { q: 'ما هي صيغة رموز/ثانية للذكاء الاصطناعي على الجهاز؟', a: 'مبسطة: رموز/ثانية = عرض_النطاق_الترددي_للذاكرة / (حجم_النموذج × بايت_لكل_دقة). لنموذج 7B FP16 (14 GB) على 85.6 GB/s: 85.6 ÷ 14 = ~6 رموز/ثانية. مُكمَّم Q4 (3.5 GB): 85.6 ÷ 3.5 = ~24 رموز/ثانية.' },
           { q: 'هل تهيمن SK Hynix على سوق HBM؟', a: 'تتصدر SK Hynix شحنات HBM، بحصة مُبلَّغ عنها 50–62% حسب ربع 2026. سدت Samsung جزءاً من الفجوة: شحنت عينات HBM4E ذات 12 طبقة بعرض نطاق 3.6 TB/s في مايو 2026، متقدمة على مواصفة HBM4 من SK في هذه النقطة تحديداً.' },
