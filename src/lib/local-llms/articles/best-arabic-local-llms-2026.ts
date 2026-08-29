@@ -5,8 +5,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     title: 'Best Arabic Local LLMs: Jais, Falcon & Running Arabic AI On-Premise (2026)',
     heroImage: '/images/best-arabic-local-llms-2026-overview-hero-en.webp',
-    seoTitle: 'Best Arabic Local LLMs 2026: Jais, Falcon-H1-Arabic, Qwen3',
-    metaDescription: 'Compare Jais 30B, Falcon-H1-Arabic 7B and Qwen3-8B, the top Arabic local LLMs in 2026. VRAM table, on-premise setup and quality evaluation tips.',
+    seoTitle: 'Best Arabic LLMs 2026: Jais, Falcon, ALLaM, Fanar (OALL)',
+    metaDescription: 'Compare Jais, Falcon-H1-Arabic, ALLaM and Fanar-2 with real Open Arabic LLM Leaderboard (OALL) scores, VRAM requirements, and on-premise setup for 2026.',
     intro: 'Jais 30B (Core42/G42, Abu Dhabi, Apache 2.0) and Falcon-H1-Arabic 7B (TII, Abu Dhabi) are the top Arabic-native local LLMs in 2026. For general multilingual workloads with strong Arabic support, Qwen3-8B leads HELM Arabic benchmarks among models sized for consumer hardware. All three run on-premise with Ollama or vLLM, keeping Arabic-language data within national borders. This guide ranks the models, gives a VRAM table, and shows how to deploy and evaluate Arabic AI locally.',
     theme: 'Best Models',
     freshness_tier: 'semi_annual',

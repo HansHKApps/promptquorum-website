@@ -889,5 +889,19 @@
     ],
     "reason": "Page 27 batch: title/meta gap - added number (6 Stacks) and named Cline explicitly in meta despite it being the top recommendation and most-mentioned entity (419x). Real gap: literal Cline error message cline hit repeated tool call failures... try guiding it with a new prompt (36+4=40 impr, pos 9.1/11.8, 0% CTR) had no direct FAQ answer. Added troubleshooting FAQ in EN plus natural (non-literal) translations in all 8 other locales, matching each locale's register rules (Sie/Vous/desu-masu/hapnida forms, tech terms kept in Latin script).",
     "baseline": null
+  },
+  {
+    "id": "661e1a60-f426-4db1-a2a3-7a111150caf4",
+    "slug": "/local-llms/best-arabic-local-llms-2026",
+    "date": "2026-08-29T12:27:27.566Z",
+    "fields": [
+      {
+        "field": "seoTitle,metaDescription (en)",
+        "old": "Best Arabic Local LLMs 2026: Jais, Falcon-H1-Arabic, Qwen3",
+        "new": "Best Arabic LLMs 2026: Jais, Falcon, ALLaM, Fanar (OALL)"
+      }
+    ],
+    "reason": "Page 29 batch: largest addressable cluster is Open Arabic LLM Leaderboard (OALL) queries (43 impr combined across ~10 variants, 0% CTR, pos 8.7-11.3) - title/meta never mentioned OALL/leaderboard despite body already covering OALL-v2 scores for all 5 models in depth. Also title only named 3 of 5 covered models (Jais, Falcon-H1-Arabic, Qwen3), missing ALLaM and Fanar which co-occur in the leaderboard queries. Body coverage was already excellent (56 OALL/ALLaM/Fanar/Emirati mentions) - this was diagnosis A, title-only fix, no body change needed.",
+    "baseline": null
   }
 ]
