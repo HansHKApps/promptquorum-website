@@ -1,13 +1,14 @@
 // Power Local LLM — Best NAS and Storage for Local AI Models 2026
 // Slug: best-nas-storage-local-ai-models-2026
 // Affiliate buying guide. Outbound product links use rel="nofollow" (no affiliate
-// tags joined yet) and a neutral third-party-link notice. EN block first;
-// DE/FR/JA/ZH render as "Coming Soon" until translated.
+// tags joined yet) and a neutral third-party-link notice. All 9 languages
+// (en/de/fr/ja/zh/es/pt/ar/ko) are fully translated.
 //
-// Prices: July 2026 snapshot. The 2026 memory-chip shortage pushed NAND/SSD
-// prices well above prior levels — every price here is a July 2026 estimate,
-// confirm current pricing before buying. Capacity, RAID, and backup figures
-// reuse audited data from /local-llms/best-nas-storage-local-llm.
+// Prices: intentionally month-agnostic. The 2026 memory-chip shortage pushed
+// NAND/SSD prices well above prior levels — every price here is an estimate,
+// confirm current pricing before buying, with no snapshot month/date in body
+// copy so this article never needs a monthly touch-up. Capacity, RAID, and
+// backup figures reuse audited data from /local-llms/best-nas-storage-local-llm.
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
@@ -16,18 +17,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-07-01',
+    dateModified: '2026-08-29',
     next_refresh_due: '2026-12-01',
     theme: 'Overview & Reference',
     title: 'Best NAS and Storage for Local AI Models 2026: Buying Guide',
     seoTitle: 'Best NAS for AI 2026: NAS & NVMe SSD Buying Guide for Local Models',
     intro:
-      'Most storage advice for local AI optimizes for one number — capacity — and misses that two storage jobs are involved. A fast NVMe SSD is where models load from at inference time; a NAS is where the model library lives, stays backed up, and is shared across machines. They are not interchangeable, and buying one when you need the other is the most common storage mistake. This guide compares Synology and QNAP NAS units for the library role, and Samsung and Western Digital SSDs for the loading role, on the figures that bind the purchase: capacity, redundancy, transfer speed, and price. One caveat on price: the 2026 memory-chip shortage pushed SSD prices well above prior levels, so every price here is a July 2026 snapshot — confirm current pricing before you buy.',
+      'Most storage advice for local AI optimizes for one number — capacity — and misses that two storage jobs are involved. A fast NVMe SSD is where models load from at inference time; a NAS is where the model library lives, stays backed up, and is shared across machines. They are not interchangeable, and buying one when you need the other is the most common storage mistake. This guide compares Synology and QNAP NAS units for the library role, and Samsung and Western Digital SSDs for the loading role, on the figures that bind the purchase: capacity, redundancy, transfer speed, and price. One caveat on price: the 2026 memory-chip shortage pushed SSD prices well above prior levels, so treat every price here as an estimate — confirm current pricing before you buy.',
     metaDescription:
-      'Best NAS for AI 2026: Synology and QNAP NAS units plus Samsung and WD NVMe SSDs compared for local AI models — RAID 6 redundancy, fast model loading, and July 2026 prices.',
+      'Best NAS for AI 2026: Synology and QNAP NAS units plus Samsung and WD NVMe SSDs compared for local AI models — RAID 6 redundancy, fast model loading, and current prices.',
     heroImage: '/images/best-nas-storage-local-ai-models-2026-comparison-table-hero-en.webp',
     twitterDescription:
-      'Best NAS for AI 2026: NAS for the model library, NVMe SSD for fast loading — two jobs, not one. Synology, QNAP, Samsung, WD compared with July 2026 prices.',
+      'Best NAS for AI 2026: NAS for the model library, NVMe SSD for fast loading — two jobs, not one. Synology, QNAP, Samsung, WD compared with current prices.',
     affiliateDisclosure: true,
     current_models_mentioned: [
       'Llama 3.3 70B',
@@ -70,9 +71,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Shared library: Synology 4-bay NAS — easiest software, best for non-specialist teams',
           'More hardware per dollar: QNAP 4-bay NAS — stronger CPU and ports at a similar price',
           'Run the NAS in RAID 6: survives two simultaneous drive failures',
-          'SSD prices rose in the 2026 memory shortage — treat every price as a July 2026 snapshot',
+          'SSD prices rose in the 2026 memory shortage — treat every price here as an estimate',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-08',
       },
     },
     toc: [
@@ -105,7 +106,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Shared-library pick (more hardware per dollar): QNAP 4-bay NAS.** QNAP typically offers a stronger CPU and more ports at a similar price, at the cost of a slightly steeper learning curve.',
           '**Run the NAS in RAID 6.** RAID 6 survives two simultaneous drive failures and is the production default; RAID 5 on large drives risks a second failure during the 24-48 hour rebuild.',
           '**RAID is not a backup.** RAID protects against drive failure, not ransomware, theft, or deletion. Follow the 3-2-1 rule: 3 copies, 2 media types, 1 offsite.',
-          '**Prices rose in 2026.** The memory-chip shortage pushed NAND and SSD prices up. Treat every price here as a July 2026 snapshot and re-check before buying.',
+          '**Prices rose in 2026.** The memory-chip shortage pushed NAND and SSD prices up. Treat every price here as an estimate and re-check before buying.',
         ],
       },
       quickFacts: {
@@ -118,7 +119,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Network speed:** a NAS on the same gigabit LAN is fine for transferring a 35 GB model (about 1 hour); 10 GbE matters only for teams above ~20 users.',
           '**Backup rule:** 3-2-1 — 3 copies, 2 media types, 1 offsite. RAID alone is not a backup.',
           '**Solo developer:** a fast internal SSD plus one external backup drive usually beats buying a NAS.',
-          '**2026 price reality:** the memory-chip shortage raised SSD prices; treat figures as a July 2026 snapshot.',
+          '**2026 price reality:** the memory-chip shortage raised SSD prices; treat every figure here as an estimate.',
         ],
       },
       editorsChoice: {
@@ -154,7 +155,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'How NAS and SSD Storage Compare for Local AI in 2026',
         content:
-          'The table separates the two storage jobs. NAS rows cover the shared-library role; SSD rows cover the fast-loading role. Capacity and RAID figures are based on standard 4-bay configurations. Prices are a July 2026 snapshot — the 2026 memory-chip shortage pushed SSD pricing up, so confirm the current figure before buying. NAS prices are hardware-only and exclude drives.',
+          'The table separates the two storage jobs. NAS rows cover the shared-library role; SSD rows cover the fast-loading role. Capacity and RAID figures are based on standard 4-bay configurations. Prices below are estimates — the 2026 memory-chip shortage pushed SSD pricing up, so confirm the current figure before buying. NAS prices are hardware-only and exclude drives.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -165,14 +166,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Think of the SSD as the kitchen counter where you actually cook and the NAS as the pantry where everything is stored. You cook fast on the counter; you keep the stock safe in the pantry. Trying to cook in the pantry is slow, and a counter with no pantry runs out of room.',
           },
         ],
-        columns: ['Storage', 'Role', 'Capacity', 'Redundancy', 'Price (July 2026)', 'Best for'],
+        columns: ['Storage', 'Role', 'Capacity', 'Redundancy', 'Price', 'Best for'],
         rows: [
           {
             'Storage': 'Synology 4-bay NAS',
             'Role': 'Shared model library',
             'Capacity': '~8 TB usable in RAID 6 (4x 4 TB)',
             'Redundancy': 'RAID 6 — survives 2 drive failures',
-            'Price (July 2026)': '~$450-650 hardware only',
+            'Price': '~$450-650 hardware only',
             'Best for': 'Teams wanting the easiest software',
           },
           {
@@ -180,7 +181,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Role': 'Shared model library',
             'Capacity': '~8 TB usable in RAID 6 (4x 4 TB)',
             'Redundancy': 'RAID 6 — survives 2 drive failures',
-            'Price (July 2026)': '~$450-650 hardware only',
+            'Price': '~$450-650 hardware only',
             'Best for': 'Teams wanting more CPU and ports',
           },
           {
@@ -188,7 +189,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Role': 'Fast model loading',
             'Capacity': '1-4 TB per drive',
             'Redundancy': 'None — pair with a backup',
-            'Price (July 2026)': '~$304–$350 for 4 TB',
+            'Price': '~$304–$350 for 4 TB',
             'Best for': 'Value pick — Gen5 speed at lowest price',
           },
           {
@@ -196,7 +197,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Role': 'Fast model loading',
             'Capacity': '1-4 TB per drive',
             'Redundancy': 'None — pair with a backup',
-            'Price (July 2026)': '~$615–$740 for 4 TB',
+            'Price': '~$615–$740 for 4 TB',
             'Best for': 'Fast loading, proven PCIe 4.0',
           },
           {
@@ -204,7 +205,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Role': 'Fast model loading',
             'Capacity': '1-4 TB per drive',
             'Redundancy': 'None — pair with a backup',
-            'Price (July 2026)': '~$780–$950 for 4 TB',
+            'Price': '~$780–$950 for 4 TB',
             'Best for': 'Premium pick, highest TBW endurance',
           },
           {
@@ -212,12 +213,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Role': 'Offline backup',
             'Capacity': '2-8 TB',
             'Redundancy': 'None — it is the backup',
-            'Price (July 2026)': '~$80-200',
+            'Price': '~$80-200',
             'Best for': 'Solo developers, offsite copy',
           },
         ],
         image: '/images/best-nas-storage-local-ai-models-2026-comparison-table-hero-en.webp',
-        imageCaption: 'NAS vs SSD for Local AI Storage -- Price snapshot, July 2026',
+        imageCaption: 'NAS vs SSD for Local AI Storage -- price comparison',
       },
       whichStorage: {
         id: 'which-storage',
@@ -244,7 +245,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Software:** Synology DSM is the most approachable NAS operating system — RAID configuration, scheduled snapshots, and cloud backup are guided wizards, not config files.',
           '**Capacity:** a 4-bay unit with four 4 TB drives gives roughly 8 TB usable in RAID 6 — room for a large library of quantized models (a 70B Q4 model is roughly 35-42 GB).',
           '**Network:** a NAS on the same gigabit LAN transfers a 35 GB model in about an hour; that is fine for the library role. 10 GbE only matters above roughly 20 users.',
-          '**Price:** roughly $450-650 hardware-only as a July 2026 snapshot; budget separately for NAS-rated drives.',
+          '**Price:** roughly $450-650 hardware-only as an estimate; budget separately for NAS-rated drives.',
           '**Why buy Synology:** you want a shared, backed-up library and the lowest setup and maintenance effort.',
           '**Why skip Synology:** a solo developer with one machine does not need a NAS — an SSD plus an external drive is cheaper and simpler.',
         ],
@@ -273,7 +274,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Hardware:** QNAP units commonly ship a faster CPU and more ports (including faster networking options) at a price similar to the comparable Synology model.',
           '**Software:** QTS is capable but less guided than Synology DSM — expect more menus and a steeper first-time setup.',
           '**Capacity:** a 4-bay unit in RAID 6 with four 4 TB drives gives roughly 8 TB usable — the same library headroom as the Synology equivalent.',
-          '**Price:** roughly $450-650 hardware-only as a July 2026 snapshot, drives separate.',
+          '**Price:** roughly $450-650 hardware-only as an estimate, drives separate.',
           '**Why buy QNAP:** you want more CPU and faster networking options per dollar, and you are comfortable with a less hand-held setup.',
           '**Why skip QNAP:** if the team has no storage specialist and wants the simplest possible software, Synology DSM is the easier path.',
         ],
@@ -302,7 +303,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Samsung 990 Pro:** a high-end PCIe 4.0 NVMe SSD; the recommended pick for fastest model loading. A 70B Q4 model is roughly 35-42 GB, so read speed is felt every time you switch models.',
           '**WD Black SN850X:** a comparable high-end PCIe 4.0 NVMe SSD; the value alternative when the Samsung is priced higher in the moment.',
           '**Capacity:** 2 TB is the practical sweet spot for an on-machine working set; 4 TB if you keep many large models loaded locally rather than on the NAS.',
-          '**Price:** roughly $304–$350 for the Crucial T705 4TB (best value), $615–$740 for the WD Black SN850X 4TB, or $780–$950 for the Samsung 990 Pro 4TB as a July 2026 snapshot — supply constraints pushed PCIe 4.0 SSDs significantly higher than the Gen5 Crucial, so compare all three before buying.',
+          '**Price:** roughly $304–$350 for the Crucial T705 4TB (best value), $615–$740 for the WD Black SN850X 4TB, or $780–$950 for the Samsung 990 Pro 4TB as an estimate — supply constraints pushed PCIe 4.0 SSDs significantly higher than the Gen5 Crucial, so compare all three before buying.',
           '**Why buy a high-end NVMe SSD:** model loading time is felt on every switch, and a fast SSD removes seconds from each one.',
           '**Why skip the top tier:** if you load one model and rarely switch, a mid-range NVMe SSD is sufficient — the top-tier read speed matters most under frequent switching.',
         ],
@@ -331,13 +332,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       nvmeSsdPicks: {
         id: 'nvme-ssd-picks',
-        title: 'Best NVMe SSD for AI Inference Workloads: Picks and July 2026 Prices',
+        title: 'Best NVMe SSD for AI Inference Workloads: Picks and Prices',
         content:
-          '**The best internal NVMe SSD for hosting a local AI inference workload is one with sequential read speed at or above 5 GB/s and at least 2 TB capacity — 4 TB if you rotate between multiple large models.** A 70B model at Q4 quantization is roughly 35-42 GB; a single model swap reads the entire weight file from disk. Read speed is the bottleneck between a model switch and the first output token. The picks below all clear 5 GB/s sequential read on PCIe 4.0 or PCIe 5.0 interfaces and are available in 4 TB configurations. Note: 2026 tariff and supply constraints pushed PCIe 4.0 SSDs (Samsung, WD) significantly higher than the faster PCIe 5.0 Crucial T705 — the Gen5 drive is the clear value pick at July 2026 prices.',
+          '**The best internal NVMe SSD for hosting a local AI inference workload is one with sequential read speed at or above 5 GB/s and at least 2 TB capacity — 4 TB if you rotate between multiple large models.** A 70B model at Q4 quantization is roughly 35-42 GB; a single model swap reads the entire weight file from disk. Read speed is the bottleneck between a model switch and the first output token. The picks below all clear 5 GB/s sequential read on PCIe 4.0 or PCIe 5.0 interfaces and are available in 4 TB configurations. Note: 2026 tariff and supply constraints pushed PCIe 4.0 SSDs (Samsung, WD) significantly higher than the faster PCIe 5.0 Crucial T705 — the Gen5 drive is the clear value pick at current prices.',
         items: [
-          '**Crucial T705 4TB (~$304–$350, July 2026):** PCIe 5.0 NVMe, sequential reads up to 14,500 MB/s. The clear value pick despite being the fastest — Gen5 delivers roughly double the peak throughput of PCIe 4.0, and the Crucial T705 4TB is the least expensive of the three despite that speed advantage. Current inference runtimes (llama.cpp, Ollama) load sequentially and benefit from the faster read; the gap over the 990 Pro narrows once the model is in VRAM. Requires a PCIe 5.0 M.2 slot. Stores model weights only; VRAM runs inference once loaded.',
-          '**WD Black SN850X 4TB (~$615–$740, July 2026):** PCIe 4.0 NVMe, sequential reads up to 7,300 MB/s, 5-year warranty. The mid-tier option — significantly more expensive than the Crucial T705 4TB due to 2026 supply constraints on PCIe 4.0 NAND, but well-stocked and proven across inference workloads.',
-          '**Samsung 990 Pro 4TB (~$780–$950, July 2026):** PCIe 4.0 NVMe, sequential reads up to 7,450 MB/s, 5-year warranty with 2,400 TBW endurance rating. The premium pick — the most expensive of the three in July 2026 due to tariff and supply pressures (Samsung MSRP $1,099, street $780–$950). Consistent high-end performance, but the Crucial T705 4TB delivers more speed at a much lower price.',
+          '**Crucial T705 4TB (~$304–$350):** PCIe 5.0 NVMe, sequential reads up to 14,500 MB/s. The clear value pick despite being the fastest — Gen5 delivers roughly double the peak throughput of PCIe 4.0, and the Crucial T705 4TB is the least expensive of the three despite that speed advantage. Current inference runtimes (llama.cpp, Ollama) load sequentially and benefit from the faster read; the gap over the 990 Pro narrows once the model is in VRAM. Requires a PCIe 5.0 M.2 slot. Stores model weights only; VRAM runs inference once loaded.',
+          '**WD Black SN850X 4TB (~$615–$740):** PCIe 4.0 NVMe, sequential reads up to 7,300 MB/s, 5-year warranty. The mid-tier option — significantly more expensive than the Crucial T705 4TB due to 2026 supply constraints on PCIe 4.0 NAND, but well-stocked and proven across inference workloads.',
+          '**Samsung 990 Pro 4TB (~$780–$950):** PCIe 4.0 NVMe, sequential reads up to 7,450 MB/s, 5-year warranty with 2,400 TBW endurance rating. The premium pick — the most expensive of the three currently due to tariff and supply pressures (Samsung MSRP $1,099, street $780–$950). Consistent high-end performance, but the Crucial T705 4TB delivers more speed at a much lower price.',
         ],
         callouts: [
           {
@@ -383,7 +384,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/best-nas-storage-local-ai-models-2026-nvme-ssd-picks-hero-en.webp',
-        imageCaption: 'Best NVMe SSDs for AI Inference -- Speed vs price, July 2026 (4TB)',
+        imageCaption: 'Best NVMe SSDs for AI Inference -- Speed vs price (4TB)',
       },
       raidBackup: {
         id: 'raid-backup',
@@ -447,7 +448,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'Because the 2026 memory-chip shortage moved SSD prices, every figure in this guide is a July 2026 snapshot. Open the current retailer listing before buying, and compare the Samsung 990 Pro, WD Black SN850X, and Crucial T705 on the day — the better value alternates.',
+            text: 'Because the 2026 memory-chip shortage moved SSD prices, every figure in this guide is an estimate. Open the current retailer listing before buying, and compare the Samsung 990 Pro, WD Black SN850X, and Crucial T705 on the day — the better value alternates.',
           },
         ],
         affiliateLinks: [
@@ -539,7 +540,31 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Did SSD prices change in 2026?',
-            a: 'Yes. The 2026 memory-chip shortage pushed NAND and SSD prices above prior levels. Every price in this guide is a July 2026 snapshot. Confirm current pricing on the retailer listing before buying, and compare the Samsung 990 Pro, WD Black SN850X, and Crucial T705 on the day — the cheapest of the three alternates with the market.',
+            a: 'Yes. The 2026 memory-chip shortage pushed NAND and SSD prices above prior levels. Every price in this guide is an estimate. Confirm current pricing on the retailer listing before buying, and compare the Samsung 990 Pro, WD Black SN850X, and Crucial T705 on the day — the cheapest of the three alternates with the market.',
+          },
+          {
+            q: 'What is a sensible storage mix for a small AI lab — fast local NVMe, shared storage, and archive — without overspending?',
+            a: 'Split into three tiers and size each one by how often it is touched, not by how much data theoretically exists. Fast local NVMe (1-4 TB per machine) holds the model weights currently loaded for inference or the active training run — this is the tier where speed matters and capacity should stay lean. Shared NAS storage (a 4-bay unit in RAID 6) holds the full model library, datasets, and checkpoints that the whole team needs — this is where you buy real capacity, because NAS drives cost far less per terabyte than NVMe. Long-term archive is the cheapest tier: bulk HDDs or a cold cloud tier for models and datasets you are not actively using but do not want to delete. The overspending mistake is buying NVMe capacity for the archive tier — pay premium prices only for the drives that are actually on the hot path.',
+          },
+          {
+            q: 'Should I use NAS-rated drives or enterprise data center drives for a 24/7 AI NAS with multiple users?',
+            a: 'NAS-rated drives (e.g., Seagate IronWolf, WD Red Plus) are built for continuous 24/7 operation, multi-bay vibration, and moderate multi-user workloads — they are the right default for a small team\'s model-library NAS. Step up to enterprise data center drives (e.g., Seagate Exos, WD Gold) when the NAS serves many concurrent users, runs sustained heavy read/write beyond typical NAS workload ratings, or when the extra endurance and longer warranty justify the higher cost per drive. For most local-AI teams under about 10 users, NAS-rated drives in RAID 6 are sufficient; enterprise drives are an upgrade for scale, not a requirement to get started.',
+          },
+          {
+            q: 'How much SSD space do I need for an LLM inference box, accounting for model weights, quantized variants, and a rollback copy?',
+            a: 'Budget for more than just the model you run today. A single 70B model at Q4 is roughly 35-42 GB, but a working setup typically keeps at least two quantization levels of the same model (for quality-vs-speed testing) plus the previous model version as a rollback copy before switching — that is roughly 3x a single model\'s footprint as a rule of thumb. For a library of several model families at 7B-70B, a 2-4 TB NVMe SSD on the inference machine covers active use comfortably, with the full historical library kept on the NAS rather than local disk.',
+          },
+          {
+            q: 'What should I check before buying drives for a multi-bay NAS used for AI or LLM datasets?',
+            a: 'Confirm four things before buying: workload rating (NAS-rated drives list an annual workload limit in TB/year — check it covers your actual read/write volume, not just capacity), vibration tolerance (multi-bay enclosures create more vibration than a single external drive, and non-NAS-rated drives can throttle or fail early in that environment), compatibility (check the NAS vendor\'s drive compatibility list — some NAS firmware restricts non-approved drives or disables features on them), and warranty length (NAS-rated drives typically carry 3-5 year warranties; match that to how long you expect to run the array before a refresh).',
+          },
+          {
+            q: 'For an on-prem AI server, is a single huge drive, RAID, or a mix of SSD and HDD the more reliable setup?',
+            a: 'A single drive of any size is the least reliable option — one failure loses everything, with no redundancy and no path to a fast rebuild. RAID (specifically RAID 6 on a NAS) is the right default for the shared model library because it survives drive failure without data loss. A mixed SSD-plus-HDD setup is not an alternative to RAID — it describes a different split of roles: fast local NVMe SSD for active inference, RAID-protected HDDs on the NAS for the bulk library. For reliability specifically, RAID 6 plus a real backup (the 3-2-1 rule) beats any single-drive configuration regardless of drive type.',
+          },
+          {
+            q: 'In an AI pipeline, when does it make sense to use local NVMe scratch disks versus a shared NAS for training or inference data?',
+            a: 'Use local NVMe scratch disks for anything read repeatedly during an active run — training data being streamed into the GPU, or a model\'s weights during inference. Local NVMe has no network hop, so it is faster and removes the shared NAS as a bottleneck when multiple jobs run at once. Use the shared NAS for the library that persists between runs and that other machines or team members need: the full model collection, completed checkpoints, and datasets not currently in use. A common pattern is to copy a dataset or model from the NAS to local NVMe scratch space at the start of a job, then write results back to the NAS afterward — the NAS is for storage and sharing, not for serving an active training loop.',
           },
         ],
       },
@@ -559,18 +584,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-07-01',
+    dateModified: '2026-08-29',
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
     title: 'Bester NAS und Speicher für lokale KI-Modelle 2026: Kaufberatung',
     seoTitle: 'Bester NAS & SSD für lokale KI-Modelle 2026: Kaufberatung',
     intro:
-      'Die meisten Speicherempfehlungen für lokale KI optimieren eine einzige Kennzahl — die Kapazität — und übersehen, dass zwei verschiedene Speicheraufgaben im Spiel sind. Eine schnelle NVMe-SSD ist der Ort, von dem Modelle zur Inferenzzeit geladen werden; ein NAS ist der Ort, an dem die Modellbibliothek liegt, gesichert bleibt und über mehrere Rechner hinweg geteilt wird. Die beiden sind nicht austauschbar, und das eine zu kaufen, wenn man das andere braucht, ist der häufigste Speicherfehler. Diese Kaufberatung vergleicht Synology- und QNAP-NAS-Geräte für die Bibliotheksrolle sowie Samsung- und Western-Digital-SSDs für die Laderolle anhand der Kennzahlen, die die Kaufentscheidung bestimmen: Kapazität, Redundanz, Übertragungsgeschwindigkeit und Preis. Ein Vorbehalt zum Preis: Die Speicherchip-Knappheit von 2026 hat die SSD-Preise deutlich über das frühere Niveau getrieben, daher ist jeder Preis hier eine Momentaufnahme von Juli 2026 — prüfen Sie die aktuelle Preislage vor dem Kauf.',
+      'Die meisten Speicherempfehlungen für lokale KI optimieren eine einzige Kennzahl — die Kapazität — und übersehen, dass zwei verschiedene Speicheraufgaben im Spiel sind. Eine schnelle NVMe-SSD ist der Ort, von dem Modelle zur Inferenzzeit geladen werden; ein NAS ist der Ort, an dem die Modellbibliothek liegt, gesichert bleibt und über mehrere Rechner hinweg geteilt wird. Die beiden sind nicht austauschbar, und das eine zu kaufen, wenn man das andere braucht, ist der häufigste Speicherfehler. Diese Kaufberatung vergleicht Synology- und QNAP-NAS-Geräte für die Bibliotheksrolle sowie Samsung- und Western-Digital-SSDs für die Laderolle anhand der Kennzahlen, die die Kaufentscheidung bestimmen: Kapazität, Redundanz, Übertragungsgeschwindigkeit und Preis. Ein Vorbehalt zum Preis: Die Speicherchip-Knappheit von 2026 hat die SSD-Preise deutlich über das frühere Niveau getrieben, sodass jeder Preis hier ein ungefährer Wert ist — prüfen Sie die aktuelle Preislage vor dem Kauf.',
     metaDescription:
       'Bestes NAS für lokale KI-Modelle 2026: Speicher für Modell-Bibliotheken, Netzwerkgeschwindigkeit und GPU-fähige NAS. Synology, QNAP und DIY im Vergleich.',
     heroImage: '/images/best-nas-storage-local-ai-models-2026-comparison-table-hero-de.webp',
     twitterDescription:
-      'NAS für die Modellbibliothek, NVMe-SSD für schnelles Laden — zwei Aufgaben, nicht eine. Synology, QNAP, Samsung, WD für lokalen KI-Speicher im Vergleich, mit Preisen von Juli 2026.',
+      'NAS für die Modellbibliothek, NVMe-SSD für schnelles Laden — zwei Aufgaben, nicht eine. Synology, QNAP, Samsung, WD für lokalen KI-Speicher im Vergleich, mit aktuellen Preisen.',
     affiliateDisclosure: true,
     current_models_mentioned: [
       'Llama 3.3 70B',
@@ -608,9 +633,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Geteilte Bibliothek: Synology-NAS mit 4 Einschüben — einfachste Software, ideal für Teams ohne Speicherspezialisten',
           'Mehr Hardware pro Euro: QNAP-NAS mit 4 Einschüben — stärkere CPU und mehr Anschlüsse zu ähnlichem Preis',
           'Betreiben Sie das NAS im RAID 6: übersteht zwei gleichzeitige Laufwerksausfälle',
-          'SSD-Preise sind in der Speicherknappheit 2026 gestiegen — betrachten Sie jeden Preis als Momentaufnahme von Juli 2026',
+          'SSD-Preise sind in der Speicherknappheit 2026 gestiegen — betrachten Sie jeden Preis hier als ungefähren Wert',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-08',
       },
     },
     toc: [
@@ -642,7 +667,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Empfehlung für die geteilte Bibliothek (mehr Hardware pro Euro): QNAP-NAS mit 4 Einschüben.** QNAP bietet in der Regel eine stärkere CPU und mehr Anschlüsse zu ähnlichem Preis, allerdings mit einer etwas steileren Lernkurve.',
           '**Betreiben Sie das NAS im RAID 6.** RAID 6 übersteht zwei gleichzeitige Laufwerksausfälle und ist der Produktionsstandard; RAID 5 mit großen Laufwerken riskiert einen zweiten Ausfall während des 24-48 Stunden dauernden Wiederaufbaus.',
           '**RAID ist kein Backup.** RAID schützt vor Laufwerksausfall, nicht vor Ransomware, Diebstahl oder Löschung. Befolgen Sie die 3-2-1-Regel: 3 Kopien, 2 Medientypen, 1 außer Haus.',
-          '**Preise sind 2026 gestiegen.** Die Speicherchip-Knappheit hat die NAND- und SSD-Preise nach oben getrieben. Betrachten Sie jeden Preis hier als Momentaufnahme von Juli 2026 und prüfen Sie ihn vor dem Kauf erneut.',
+          '**Preise sind 2026 gestiegen.** Die Speicherchip-Knappheit hat die NAND- und SSD-Preise nach oben getrieben. Betrachten Sie jeden Preis hier als ungefähren Wert und prüfen Sie ihn vor dem Kauf erneut.',
         ],
       },
       quickFacts: {
@@ -655,7 +680,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Netzwerkgeschwindigkeit:** ein NAS im selben Gigabit-LAN reicht aus, um ein 35-GB-Modell zu übertragen (etwa 1 Stunde); 10 GbE ist erst für Teams ab rund 20 Nutzern relevant.',
           '**Backup-Regel:** 3-2-1 — 3 Kopien, 2 Medientypen, 1 außer Haus. RAID allein ist kein Backup.',
           '**Einzelner Entwickler:** eine schnelle interne SSD plus eine externe Sicherungsfestplatte ist meist besser als der Kauf eines NAS.',
-          '**Preisrealität 2026:** die Speicherchip-Knappheit hat die SSD-Preise erhöht; betrachten Sie die Zahlen als Momentaufnahme von Juli 2026.',
+          '**Preisrealität 2026:** die Speicherchip-Knappheit hat die SSD-Preise erhöht; betrachten Sie die Zahlen als ungefähre Werte.',
         ],
       },
       editorsChoice: {
@@ -691,7 +716,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Wie NAS- und SSD-Speicher für lokale KI 2026 abschneiden',
         content:
-          'Die Tabelle trennt die beiden Speicheraufgaben. Die NAS-Zeilen decken die Rolle der geteilten Bibliothek ab; die SSD-Zeilen die Rolle des schnellen Ladens. Kapazitäts- und RAID-Angaben beruhen auf üblichen Konfigurationen mit 4 Einschüben. Die Preise sind eine Momentaufnahme von Juli 2026 — die Speicherchip-Knappheit von 2026 hat die SSD-Preise nach oben getrieben, prüfen Sie also den aktuellen Wert vor dem Kauf. NAS-Preise verstehen sich nur als Hardware und ohne Laufwerke.',
+          'Die Tabelle trennt die beiden Speicheraufgaben. Die NAS-Zeilen decken die Rolle der geteilten Bibliothek ab; die SSD-Zeilen die Rolle des schnellen Ladens. Kapazitäts- und RAID-Angaben beruhen auf üblichen Konfigurationen mit 4 Einschüben. Die Preise unten sind ungefähre Werte — die Speicherchip-Knappheit von 2026 hat die SSD-Preise nach oben getrieben, prüfen Sie also den aktuellen Wert vor dem Kauf. NAS-Preise verstehen sich nur als Hardware und ohne Laufwerke.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -702,14 +727,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Stellen Sie sich die SSD als die Küchenarbeitsplatte vor, auf der Sie tatsächlich kochen, und das NAS als die Vorratskammer, in der alles aufbewahrt wird. Auf der Arbeitsplatte kochen Sie schnell; in der Vorratskammer bewahren Sie die Vorräte sicher auf. In der Vorratskammer zu kochen ist langsam, und eine Arbeitsplatte ohne Vorratskammer geht der Platz aus.',
           },
         ],
-        columns: ['Speicher', 'Rolle', 'Kapazität', 'Redundanz', 'Preis (Juli 2026)', 'Am besten für'],
+        columns: ['Speicher', 'Rolle', 'Kapazität', 'Redundanz', 'Preis', 'Am besten für'],
         rows: [
           {
             'Speicher': 'Synology-NAS mit 4 Einschüben',
             'Rolle': 'Geteilte Modellbibliothek',
             'Kapazität': '~8 TB nutzbar im RAID 6 (4x 4 TB)',
             'Redundanz': 'RAID 6 — übersteht 2 Laufwerksausfälle',
-            'Preis (Juli 2026)': 'ca. 850-1.150 € nur Hardware',
+            'Preis': 'ca. 850-1.150 € nur Hardware',
             'Am besten für': 'Teams, die die einfachste Software wollen',
           },
           {
@@ -717,7 +742,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Rolle': 'Geteilte Modellbibliothek',
             'Kapazität': '~8 TB nutzbar im RAID 6 (4x 4 TB)',
             'Redundanz': 'RAID 6 — übersteht 2 Laufwerksausfälle',
-            'Preis (Juli 2026)': 'ca. 700-870 € nur Hardware',
+            'Preis': 'ca. 700-870 € nur Hardware',
             'Am besten für': 'Teams, die mehr CPU und Anschlüsse wollen',
           },
           {
@@ -725,7 +750,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Rolle': 'Schnelles Modellladen',
             'Kapazität': '1-4 TB pro Laufwerk',
             'Redundanz': 'Keine — mit Backup kombinieren',
-            'Preis (Juli 2026)': 'ca. 290-340 € für 2 TB',
+            'Preis': 'ca. 290-340 € für 2 TB',
             'Am besten für': 'Schnellstes Laden, einzelner Rechner',
           },
           {
@@ -733,7 +758,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Rolle': 'Schnelles Modellladen',
             'Kapazität': '1-4 TB pro Laufwerk',
             'Redundanz': 'Keine — mit Backup kombinieren',
-            'Preis (Juli 2026)': 'ca. 235-300 € für 2 TB',
+            'Preis': 'ca. 235-300 € für 2 TB',
             'Am besten für': 'Schnelles Laden, preiswerte Alternative',
           },
           {
@@ -741,12 +766,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Rolle': 'Offline-Backup',
             'Kapazität': '2-8 TB',
             'Redundanz': 'Keine — sie ist das Backup',
-            'Preis (Juli 2026)': 'ca. 120-200 €',
+            'Preis': 'ca. 120-200 €',
             'Am besten für': 'Einzelne Entwickler, Kopie außer Haus',
           },
         ],
         image: '/images/best-nas-storage-local-ai-models-2026-comparison-table-hero-de.webp',
-        imageCaption: 'NAS vs. SSD für lokalen KI-Speicher -- Preisstand Juli 2026',
+        imageCaption: 'NAS vs. SSD für lokalen KI-Speicher -- Preisvergleich',
       },
       whichStorage: {
         id: 'which-storage',
@@ -773,7 +798,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Software:** Synology DSM ist das zugänglichste NAS-Betriebssystem — RAID-Konfiguration, geplante Snapshots und Cloud-Backup sind geführte Assistenten, keine Konfigurationsdateien.',
           '**Kapazität:** ein Gerät mit 4 Einschüben und vier 4-TB-Laufwerken bietet im RAID 6 rund 8 TB nutzbar — Platz für eine umfangreiche Bibliothek quantisierter Modelle (ein 70B-Q4-Modell ist etwa 35-42 GB groß).',
           '**Netzwerk:** ein NAS im selben Gigabit-LAN überträgt ein 35-GB-Modell in etwa einer Stunde; das reicht für die Bibliotheksrolle. 10 GbE ist erst ab rund 20 Nutzern relevant.',
-          '**Preis:** rund 850-1.150 € nur für die Hardware als Momentaufnahme von Juli 2026; kalkulieren Sie NAS-taugliche Laufwerke separat ein.',
+          '**Preis:** rund 850-1.150 € nur für die Hardware als ungefährer Wert; kalkulieren Sie NAS-taugliche Laufwerke separat ein.',
           '**Warum Synology kaufen:** Sie wollen eine geteilte, gesicherte Bibliothek und den geringsten Einrichtungs- und Wartungsaufwand.',
           '**Warum auf Synology verzichten:** ein einzelner Entwickler mit einem Rechner braucht kein NAS — eine SSD plus eine externe Festplatte ist günstiger und einfacher.',
         ],
@@ -802,7 +827,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Hardware:** QNAP-Geräte liefern häufig eine schnellere CPU und mehr Anschlüsse (einschließlich schnellerer Netzwerkoptionen) zu einem Preis, der dem vergleichbaren Synology-Modell ähnelt.',
           '**Software:** QTS ist leistungsfähig, aber weniger geführt als Synology DSM — rechnen Sie mit mehr Menüs und einer steileren Ersteinrichtung.',
           '**Kapazität:** ein Gerät mit 4 Einschüben im RAID 6 mit vier 4-TB-Laufwerken bietet rund 8 TB nutzbar — dieselbe Bibliotheksreserve wie das Synology-Pendant.',
-          '**Preis:** rund 700-870 € nur für die Hardware als Momentaufnahme von Juli 2026, Laufwerke separat.',
+          '**Preis:** rund 700-870 € nur für die Hardware als ungefährer Wert, Laufwerke separat.',
           '**Warum QNAP kaufen:** Sie wollen mehr CPU und schnellere Netzwerkoptionen pro Euro und sind mit einer weniger an die Hand genommenen Einrichtung vertraut.',
           '**Warum auf QNAP verzichten:** wenn das Team keinen Speicherspezialisten hat und die einfachstmögliche Software will, ist Synology DSM der leichtere Weg.',
         ],
@@ -831,7 +856,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Samsung 990 Pro:** eine High-End-PCIe-4.0-NVMe-SSD; die empfohlene Wahl für das schnellste Modellladen. Ein 70B-Q4-Modell ist etwa 35-42 GB groß, daher ist die Lesegeschwindigkeit bei jedem Modellwechsel spürbar.',
           '**WD Black SN850X:** eine vergleichbare High-End-PCIe-4.0-NVMe-SSD; die preiswerte Alternative, wenn die Samsung gerade teurer angeboten wird.',
           '**Kapazität:** 2 TB ist der praktische Idealwert für einen Arbeitssatz auf dem Rechner; 4 TB, wenn Sie viele große Modelle lokal statt auf dem NAS bereithalten.',
-          '**Preis:** rund 290-340 € für ein 2-TB-Laufwerk als Momentaufnahme von Juli 2026 — die Speicherchip-Knappheit hat die NAND-Preise erhöht, prüfen Sie also vor dem Kauf.',
+          '**Preis:** rund 290-340 € für ein 2-TB-Laufwerk als ungefährer Wert — die Speicherchip-Knappheit hat die NAND-Preise erhöht, prüfen Sie also vor dem Kauf.',
           '**Warum eine High-End-NVMe-SSD kaufen:** die Modellladezeit ist bei jedem Wechsel spürbar, und eine schnelle SSD nimmt jedem Wechsel Sekunden ab.',
           '**Warum auf die Spitzenklasse verzichten:** wenn Sie ein Modell laden und selten wechseln, reicht eine NVMe-SSD der Mittelklasse — die Lesegeschwindigkeit der Spitzenklasse zählt am meisten bei häufigem Wechsel.',
         ],
@@ -864,9 +889,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Die beste interne NVMe-SSD für ein lokales KI-Inferenz-Workload benötigt sequenzielle Lesegeschwindigkeit von mindestens 5 GB/s und mindestens 2 TB Kapazität — 4 TB, wenn Sie zwischen mehreren großen Modellen wechseln.** Ein 70B-Modell mit Q4-Quantisierung ist etwa 35-42 GB groß; ein einzelner Modellwechsel liest die gesamte Gewichtsdatei vom Datenträger. Die Lesegeschwindigkeit ist der Engpass zwischen einem Modellwechsel und dem ersten Ausgabe-Token. Die Empfehlungen unten erfüllen alle ≥ 5 GB/s sequenzielles Lesen auf PCIe-4.0- oder PCIe-5.0-Schnittstellen und sind in 4-TB-Konfigurationen erhältlich. Hinweis: Im DACH-Handel liegt die schnellere PCIe-5.0-Crucial T705 preislich am unteren Ende, während die Samsung 990 Pro am oberen Ende rangiert — das Gen5-Laufwerk ist damit das Preis-Leistungs-Angebot zu Juli-2026-Preisen.',
         items: [
-          '**Crucial T705 4TB (~450–560 €, Juli 2026):** PCIe 5.0 NVMe, sequenzielle Leserate bis zu 14.500 MB/s. Trotz Gen5-Geschwindigkeit die günstigste der drei Optionen — bestes Preis-Leistungs-Verhältnis. Speichert nur Modellgewichte; VRAM führt die Inferenz aus, sobald das Modell geladen ist. Erfordert einen PCIe-5.0-M.2-Steckplatz.',
-          '**WD Black SN850X 4TB (~510–580 €, Juli 2026):** PCIe 4.0 NVMe, sequenzielle Leserate bis zu 7.300 MB/s, 5 Jahre Garantie. Die mittlere Option — im DACH-Handel etwas teurer als die Crucial T705 4TB, aber gut verfügbar und bewährt.',
-          '**Samsung 990 Pro 4TB (~600–650 €, Juli 2026):** PCIe 4.0 NVMe, sequenzielle Leserate bis zu 7.450 MB/s, 5 Jahre Garantie mit 2.400 TBW Ausdauerrating. Die Premium-Option — im Juli 2026 die teuerste der drei (Samsung UVP ca. 700 €, Straßenpreis 600–650 €). Zuverlässige High-End-Leistung, aber die Crucial T705 4TB liefert mehr Geschwindigkeit zu einem niedrigeren Preis.',
+          '**Crucial T705 4TB (~450–560 €):** PCIe 5.0 NVMe, sequenzielle Leserate bis zu 14.500 MB/s. Trotz Gen5-Geschwindigkeit die günstigste der drei Optionen — bestes Preis-Leistungs-Verhältnis. Speichert nur Modellgewichte; VRAM führt die Inferenz aus, sobald das Modell geladen ist. Erfordert einen PCIe-5.0-M.2-Steckplatz.',
+          '**WD Black SN850X 4TB (~510–580 €):** PCIe 4.0 NVMe, sequenzielle Leserate bis zu 7.300 MB/s, 5 Jahre Garantie. Die mittlere Option — im DACH-Handel etwas teurer als die Crucial T705 4TB, aber gut verfügbar und bewährt.',
+          '**Samsung 990 Pro 4TB (~600–650 €):** PCIe 4.0 NVMe, sequenzielle Leserate bis zu 7.450 MB/s, 5 Jahre Garantie mit 2.400 TBW Ausdauerrating. Die Premium-Option — aktuell die teuerste der drei (Samsung UVP ca. 700 €, Straßenpreis 600–650 €). Zuverlässige High-End-Leistung, aber die Crucial T705 4TB liefert mehr Geschwindigkeit zu einem niedrigeren Preis.',
         ],
         callouts: [
           {
@@ -900,7 +925,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Die beste interne NVMe-SSD für ein selbst gehostetes lokales KI-Inferenz-Workload benötigt sequenzielle Lesegeschwindigkeit von mindestens 5 GB/s und mindestens 2-4 TB Kapazität — die Crucial T705 4TB (~450–560 €) ist das Preis-Leistungs-Angebot mit Gen5-Geschwindigkeit, während WD Black SN850X 4TB (~510–580 €) und Samsung 990 Pro 4TB (~600–650 €) im Juli 2026 etwas teurer sind.',
+            text: 'Die beste interne NVMe-SSD für ein selbst gehostetes lokales KI-Inferenz-Workload benötigt sequenzielle Lesegeschwindigkeit von mindestens 5 GB/s und mindestens 2-4 TB Kapazität — die Crucial T705 4TB (~450–560 €) ist das Preis-Leistungs-Angebot mit Gen5-Geschwindigkeit, während WD Black SN850X 4TB (~510–580 €) und Samsung 990 Pro 4TB (~600–650 €) derzeit etwas teurer sind.',
           },
           {
             type: 'plain-terms',
@@ -908,7 +933,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/best-nas-storage-local-ai-models-2026-nvme-ssd-picks-hero-de.webp',
-        imageCaption: 'Beste NVMe-SSDs für KI-Inferenz -- Geschwindigkeit vs. Preis, Juli 2026 (4TB)',
+        imageCaption: 'Beste NVMe-SSDs für KI-Inferenz -- Geschwindigkeit vs. Preis (4TB)',
       },
       raidBackup: {
         id: 'raid-backup',
@@ -972,7 +997,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'Da die Speicherchip-Knappheit von 2026 die SSD-Preise bewegt hat, ist jede Zahl in dieser Kaufberatung eine Momentaufnahme von Juli 2026. Öffnen Sie die aktuelle Händleranzeige vor dem Kauf und vergleichen Sie die Samsung- und WD-Laufwerke am jeweiligen Tag — das bessere Angebot wechselt.',
+            text: 'Da die Speicherchip-Knappheit von 2026 die SSD-Preise bewegt hat, ist jede Zahl in dieser Kaufberatung ein ungefährer Wert. Öffnen Sie die aktuelle Händleranzeige vor dem Kauf und vergleichen Sie die Samsung- und WD-Laufwerke am jeweiligen Tag — das bessere Angebot wechselt.',
           },
         ],
         affiliateLinks: [
@@ -1064,7 +1089,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Haben sich die SSD-Preise 2026 verändert?',
-            a: 'Ja. Die Speicherchip-Knappheit von 2026 hat die NAND- und SSD-Preise über das frühere Niveau getrieben. Jeder Preis in dieser Kaufberatung ist eine Momentaufnahme von Juli 2026. Bestätigen Sie die aktuelle Preislage in der Händleranzeige vor dem Kauf und vergleichen Sie die Samsung 990 Pro mit der WD Black SN850X am jeweiligen Tag — die günstigere der beiden wechselt mit dem Markt.',
+            a: 'Ja. Die Speicherchip-Knappheit von 2026 hat die NAND- und SSD-Preise über das frühere Niveau getrieben. Jeder Preis in dieser Kaufberatung ist ein ungefährer Wert. Bestätigen Sie die aktuelle Preislage in der Händleranzeige vor dem Kauf und vergleichen Sie die Samsung 990 Pro mit der WD Black SN850X am jeweiligen Tag — die günstigere der beiden wechselt mit dem Markt.',
           },
           {
             q: 'Erfüllt die Speicherung von KI-Modellen auf einem NAS die DSGVO-Anforderungen?',
@@ -1073,6 +1098,30 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             q: 'Ist diese NAS-und-SSD-Lösung für den deutschen Mittelstand geeignet?',
             a: 'Ja. Ein Synology- oder QNAP-NAS mit 4 Einschüben plus eine NVMe-SSD im Inferenzrechner ist eine typische Lösung für ein mittelständisches Unternehmen, das eine lokale KI-Modellbibliothek aufbaut. Die Investition von rund 700-1.150 € für das NAS plus rund 235-340 € für die SSD bleibt überschaubar, und ein NAS mit 4 Einschüben deckt ein Team von 3-10 Personen ohne weitere Infrastruktur ab. Synology DSM lässt sich auch ohne dedizierten IT-Speicherspezialisten betreiben, was für kleinere Mittelständler mit schlanker IT-Abteilung entscheidend ist. Für die On-Premise-Speicherung spricht zusätzlich, dass sensible Geschäfts- und Kundendaten das Haus nicht verlassen — ein Vorteil für Unternehmen, die ihre Datenhoheit wahren wollen.',
+          },
+          {
+            q: 'Was ist eine sinnvolle Speicheraufteilung für ein kleines KI-Labor — schnelles lokales NVMe, gemeinsamer Speicher und Archiv — ohne zu viel auszugeben?',
+            a: 'Teilen Sie in drei Stufen auf und bemessen Sie jede danach, wie oft auf sie zugegriffen wird, nicht danach, wie viele Daten theoretisch existieren. Schnelles lokales NVMe (1-4 TB pro Rechner) enthält die Modellgewichte, die gerade für Inferenz oder einen aktiven Trainingslauf geladen sind — hier zählt Geschwindigkeit, die Kapazität sollte schlank bleiben. Gemeinsamer NAS-Speicher (ein 4-Bay-Gerät im RAID 6) enthält die vollständige Modellbibliothek, Datensätze und Checkpoints, die das gesamte Team braucht — hier kaufen Sie echte Kapazität, weil NAS-Laufwerke pro Terabyte deutlich günstiger sind als NVMe. Das Langzeitarchiv ist die günstigste Stufe: Massen-HDDs oder eine kalte Cloud-Stufe für Modelle und Datensätze, die Sie gerade nicht aktiv nutzen, aber nicht löschen wollen. Der Fehler beim Ausgeben ist, NVMe-Kapazität für die Archivstufe zu kaufen — zahlen Sie Premium-Preise nur für die Laufwerke, die tatsächlich im aktiven Pfad liegen.',
+          },
+          {
+            q: 'Sollte ich NAS-taugliche Laufwerke oder Enterprise-Rechenzentrums-Laufwerke für ein durchgehend laufendes KI-NAS mit mehreren Nutzern verwenden?',
+            a: 'NAS-taugliche Laufwerke (z. B. Seagate IronWolf, WD Red Plus) sind für durchgehenden 24/7-Betrieb, Vibrationen im Mehrfach-Einschub-Gehäuse und moderate Mehrbenutzer-Workloads ausgelegt — sie sind der richtige Standard für das Modellbibliotheks-NAS eines kleinen Teams. Steigen Sie auf Enterprise-Rechenzentrums-Laufwerke (z. B. Seagate Exos, WD Gold) um, wenn das NAS viele gleichzeitige Nutzer bedient, dauerhaft über die typische NAS-Workload-Bewertung hinaus liest und schreibt, oder wenn die zusätzliche Ausdauer und längere Garantie den höheren Preis pro Laufwerk rechtfertigen. Für die meisten lokalen KI-Teams unter etwa 10 Nutzern reichen NAS-taugliche Laufwerke im RAID 6; Enterprise-Laufwerke sind ein Upgrade für Skalierung, kein Muss für den Einstieg.',
+          },
+          {
+            q: 'Wie viel SSD-Speicher brauche ich für einen Inferenzrechner, wenn ich Modellgewichte, quantisierte Varianten und eine Rollback-Kopie einrechne?',
+            a: 'Kalkulieren Sie mehr ein als nur das Modell, das Sie heute nutzen. Ein einzelnes 70B-Modell mit Q4 ist etwa 35-42 GB groß, aber ein funktionierendes Setup hält typischerweise mindestens zwei Quantisierungsstufen desselben Modells vor (zum Testen von Qualität gegen Geschwindigkeit) plus die vorherige Modellversion als Rollback-Kopie vor einem Wechsel — als Faustregel etwa das Dreifache des Speicherbedarfs eines einzelnen Modells. Für eine Bibliothek mehrerer Modellfamilien von 7B bis 70B deckt eine 2-4-TB-NVMe-SSD im Inferenzrechner die aktive Nutzung bequem ab, während die vollständige historische Bibliothek auf dem NAS statt auf lokaler Festplatte liegt.',
+          },
+          {
+            q: 'Worauf sollte ich beim Kauf von Laufwerken für ein Mehrfach-Einschub-NAS für KI- oder LLM-Datensätze achten?',
+            a: 'Prüfen Sie vier Dinge vor dem Kauf: die Workload-Bewertung (NAS-taugliche Laufwerke geben ein jährliches Workload-Limit in TB/Jahr an — prüfen Sie, ob es Ihr tatsächliches Lese-/Schreibvolumen abdeckt, nicht nur die Kapazität), die Vibrationstoleranz (Mehrfach-Einschub-Gehäuse erzeugen mehr Vibration als ein einzelnes externes Laufwerk, und nicht NAS-taugliche Laufwerke können in dieser Umgebung frühzeitig drosseln oder ausfallen), die Kompatibilität (prüfen Sie die Kompatibilitätsliste des NAS-Herstellers — manche NAS-Firmware schränkt nicht freigegebene Laufwerke ein oder deaktiviert Funktionen bei ihnen) und die Garantiedauer (NAS-taugliche Laufwerke tragen meist 3-5 Jahre Garantie; das sollte zur geplanten Nutzungsdauer des Arrays vor einem Refresh passen).',
+          },
+          {
+            q: 'Ist für einen On-Premise-KI-Server ein einzelnes großes Laufwerk, RAID oder eine Mischung aus SSD und HDD die zuverlässigere Lösung?',
+            a: 'Ein einzelnes Laufwerk jeder Größe ist die am wenigsten zuverlässige Option — ein Ausfall verliert alles, ohne Redundanz und ohne schnellen Rebuild-Pfad. RAID (konkret RAID 6 auf einem NAS) ist der richtige Standard für die geteilte Modellbibliothek, weil es einen Laufwerksausfall ohne Datenverlust übersteht. Eine gemischte SSD-plus-HDD-Konfiguration ist keine Alternative zu RAID — sie beschreibt eine andere Rollenaufteilung: schnelle lokale NVMe-SSD für aktive Inferenz, RAID-geschützte HDDs auf dem NAS für die Massenbibliothek. Für Zuverlässigkeit speziell schlägt RAID 6 plus ein echtes Backup (die 3-2-1-Regel) jede Einzellaufwerk-Konfiguration unabhängig vom Laufwerkstyp.',
+          },
+          {
+            q: 'Wann ergibt es in einer KI-Pipeline Sinn, lokale NVMe-Scratch-Disks statt eines geteilten NAS für Trainings- oder Inferenzdaten zu verwenden?',
+            a: 'Verwenden Sie lokale NVMe-Scratch-Disks für alles, was während eines aktiven Laufs wiederholt gelesen wird — Trainingsdaten, die in die GPU gestreamt werden, oder die Gewichte eines Modells während der Inferenz. Lokales NVMe hat keinen Netzwerk-Hop, ist also schneller und entfernt das geteilte NAS als Engpass, wenn mehrere Jobs gleichzeitig laufen. Verwenden Sie das geteilte NAS für die Bibliothek, die zwischen Läufen bestehen bleibt und die andere Rechner oder Teammitglieder brauchen: die vollständige Modellsammlung, abgeschlossene Checkpoints und derzeit nicht genutzte Datensätze. Ein gängiges Muster ist, einen Datensatz oder ein Modell zu Beginn eines Jobs vom NAS auf lokalen NVMe-Scratch-Speicher zu kopieren und die Ergebnisse danach zurück auf das NAS zu schreiben — das NAS dient der Speicherung und dem Teilen, nicht dem Bedienen einer aktiven Trainingsschleife.',
           },
         ],
       },
@@ -1092,18 +1141,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-07-01',
+    dateModified: '2026-08-29',
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
     title: 'Meilleur NAS et stockage pour modèles IA locaux 2026 : guide d\'achat',
     seoTitle: 'Meilleur NAS et SSD pour modèles IA locaux 2026 : guide d\'achat',
     intro:
-      'La plupart des conseils de stockage pour l\'IA locale optimisent un seul chiffre — la capacité — et passent à côté du fait que deux tâches de stockage sont en jeu. Un SSD NVMe rapide est l\'endroit d\'où les modèles se chargent au moment de l\'inférence ; un NAS est l\'endroit où réside la bibliothèque de modèles, où elle reste sauvegardée et partagée entre plusieurs machines. Les deux ne sont pas interchangeables, et acheter l\'un alors que vous avez besoin de l\'autre est l\'erreur de stockage la plus courante. Ce guide compare les NAS Synology et QNAP pour le rôle de bibliothèque, et les SSD Samsung et Western Digital pour le rôle de chargement, sur les chiffres qui conditionnent l\'achat : capacité, redondance, vitesse de transfert et prix. Une réserve sur le prix : la pénurie de puces mémoire de 2026 a poussé les prix des SSD bien au-delà des niveaux antérieurs, donc chaque prix indiqué ici est un instantané de juillet 2026 — vérifiez les tarifs actuels avant d\'acheter.',
+      'La plupart des conseils de stockage pour l\'IA locale optimisent un seul chiffre — la capacité — et passent à côté du fait que deux tâches de stockage sont en jeu. Un SSD NVMe rapide est l\'endroit d\'où les modèles se chargent au moment de l\'inférence ; un NAS est l\'endroit où réside la bibliothèque de modèles, où elle reste sauvegardée et partagée entre plusieurs machines. Les deux ne sont pas interchangeables, et acheter l\'un alors que vous avez besoin de l\'autre est l\'erreur de stockage la plus courante. Ce guide compare les NAS Synology et QNAP pour le rôle de bibliothèque, et les SSD Samsung et Western Digital pour le rôle de chargement, sur les chiffres qui conditionnent l\'achat : capacité, redondance, vitesse de transfert et prix. Une réserve sur le prix : la pénurie de puces mémoire de 2026 a poussé les prix des SSD bien au-delà des niveaux antérieurs, donc traitez chaque prix indiqué ici comme une estimation — vérifiez les tarifs actuels avant d\'acheter.',
     metaDescription:
       'Meilleur NAS pour modèles IA locaux 2026 : stockage pour bibliothèques de modèles, vitesse réseau et NAS compatibles GPU. Synology, QNAP et DIY comparés.',
     heroImage: '/images/best-nas-storage-local-ai-models-2026-comparison-table-hero-fr.webp',
     twitterDescription:
-      'Le NAS pour la bibliothèque de modèles, le SSD NVMe pour un chargement rapide — deux tâches, pas une. Synology, QNAP, Samsung, WD comparés pour le stockage IA local avec les prix de juillet 2026.',
+      'Le NAS pour la bibliothèque de modèles, le SSD NVMe pour un chargement rapide — deux tâches, pas une. Synology, QNAP, Samsung, WD comparés pour le stockage IA local avec les prix actuels.',
     affiliateDisclosure: true,
     current_models_mentioned: [
       'Llama 3.3 70B',
@@ -1141,9 +1190,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Bibliothèque partagée : NAS Synology 4 baies — logiciel le plus simple, idéal pour les équipes non spécialistes',
           'Plus de matériel par euro : NAS QNAP 4 baies — processeur plus puissant et plus de ports à prix similaire',
           'Faites fonctionner le NAS en RAID 6 : il survit à deux pannes de disque simultanées',
-          'Les prix des SSD ont augmenté avec la pénurie mémoire de 2026 — traitez chaque prix comme un instantané de juillet 2026',
+          'Les prix des SSD ont augmenté avec la pénurie mémoire de 2026 — traitez chaque prix ici comme une estimation',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-08',
       },
     },
     toc: [
@@ -1175,7 +1224,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Choix pour la bibliothèque partagée (plus de matériel par euro) : NAS QNAP 4 baies.** QNAP offre généralement un processeur plus puissant et davantage de ports à prix similaire, au prix d\'une courbe d\'apprentissage un peu plus raide.',
           '**Faites fonctionner le NAS en RAID 6.** Le RAID 6 survit à deux pannes de disque simultanées et constitue le standard de production ; le RAID 5 sur de gros disques risque une seconde panne durant la reconstruction de 24 à 48 heures.',
           '**Le RAID n\'est pas une sauvegarde.** Le RAID protège contre la panne de disque, pas contre les rançongiciels, le vol ou la suppression. Suivez la règle 3-2-1 : 3 copies, 2 types de supports, 1 hors site.',
-          '**Les prix ont augmenté en 2026.** La pénurie de puces mémoire a fait grimper les prix de la NAND et des SSD. Traitez chaque prix indiqué ici comme un instantané de juillet 2026 et revérifiez-le avant d\'acheter.',
+          '**Les prix ont augmenté en 2026.** La pénurie de puces mémoire a fait grimper les prix de la NAND et des SSD. Traitez chaque prix indiqué ici comme une estimation et revérifiez-le avant d\'acheter.',
         ],
       },
       quickFacts: {
@@ -1188,7 +1237,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Vitesse réseau :** un NAS sur le même réseau gigabit suffit pour transférer un modèle de 35 Go (environ 1 heure) ; le 10 GbE ne compte que pour les équipes au-delà de ~20 utilisateurs.',
           '**Règle de sauvegarde :** 3-2-1 — 3 copies, 2 types de supports, 1 hors site. Le RAID seul n\'est pas une sauvegarde.',
           '**Développeur seul :** un SSD interne rapide plus un disque de sauvegarde externe vaut généralement mieux que l\'achat d\'un NAS.',
-          '**Réalité des prix 2026 :** la pénurie de puces mémoire a fait monter les prix des SSD ; traitez les chiffres comme un instantané de juillet 2026.',
+          '**Réalité des prix 2026 :** la pénurie de puces mémoire a fait monter les prix des SSD ; traitez les chiffres comme des estimations.',
         ],
       },
       editorsChoice: {
@@ -1224,7 +1273,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Comment le stockage NAS et SSD se comparent pour l\'IA locale en 2026',
         content:
-          'Le tableau sépare les deux tâches de stockage. Les lignes NAS couvrent le rôle de bibliothèque partagée ; les lignes SSD couvrent le rôle de chargement rapide. Les chiffres de capacité et de RAID reposent sur des configurations 4 baies standard. Les prix sont un instantané de juillet 2026 — la pénurie de puces mémoire de 2026 a fait monter les tarifs des SSD, vérifiez donc le chiffre actuel avant d\'acheter. Les prix des NAS portent sur le matériel seul et excluent les disques.',
+          'Le tableau sépare les deux tâches de stockage. Les lignes NAS couvrent le rôle de bibliothèque partagée ; les lignes SSD couvrent le rôle de chargement rapide. Les chiffres de capacité et de RAID reposent sur des configurations 4 baies standard. Les prix ci-dessous sont des estimations — la pénurie de puces mémoire de 2026 a fait monter les tarifs des SSD, vérifiez donc le chiffre actuel avant d\'acheter. Les prix des NAS portent sur le matériel seul et excluent les disques.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1235,14 +1284,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Voyez le SSD comme le plan de travail de la cuisine où vous cuisinez réellement, et le NAS comme le garde-manger où tout est rangé. Vous cuisinez vite sur le plan de travail ; vous gardez les réserves en sécurité dans le garde-manger. Cuisiner dans le garde-manger est lent, et un plan de travail sans garde-manger manque vite de place.',
           },
         ],
-        columns: ['Stockage', 'Rôle', 'Capacité', 'Redondance', 'Prix (juillet 2026)', 'Idéal pour'],
+        columns: ['Stockage', 'Rôle', 'Capacité', 'Redondance', 'Prix', 'Idéal pour'],
         rows: [
           {
             'Stockage': 'NAS Synology 4 baies',
             'Rôle': 'Bibliothèque de modèles partagée',
             'Capacité': '~8 To utilisables en RAID 6 (4x 4 To)',
             'Redondance': 'RAID 6 — survit à 2 pannes de disque',
-            'Prix (juillet 2026)': 'env. 750 €, matériel seul',
+            'Prix': 'env. 750 €, matériel seul',
             'Idéal pour': 'Les équipes voulant le logiciel le plus simple',
           },
           {
@@ -1250,7 +1299,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Rôle': 'Bibliothèque de modèles partagée',
             'Capacité': '~8 To utilisables en RAID 6 (4x 4 To)',
             'Redondance': 'RAID 6 — survit à 2 pannes de disque',
-            'Prix (juillet 2026)': 'env. 800 €, matériel seul',
+            'Prix': 'env. 800 €, matériel seul',
             'Idéal pour': 'Les équipes voulant plus de processeur et de ports',
           },
           {
@@ -1258,7 +1307,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Rôle': 'Chargement rapide des modèles',
             'Capacité': '1-4 To par disque',
             'Redondance': 'Aucune — à associer à une sauvegarde',
-            'Prix (juillet 2026)': 'env. 300-330 € pour 2 To',
+            'Prix': 'env. 300-330 € pour 2 To',
             'Idéal pour': 'Le chargement le plus rapide, machine unique',
           },
           {
@@ -1266,7 +1315,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Rôle': 'Chargement rapide des modèles',
             'Capacité': '1-4 To par disque',
             'Redondance': 'Aucune — à associer à une sauvegarde',
-            'Prix (juillet 2026)': 'env. 275-300 € pour 2 To',
+            'Prix': 'env. 275-300 € pour 2 To',
             'Idéal pour': 'Chargement rapide, alternative économique',
           },
           {
@@ -1274,12 +1323,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Rôle': 'Sauvegarde hors ligne',
             'Capacité': '2-8 To',
             'Redondance': 'Aucune — c\'est la sauvegarde',
-            'Prix (juillet 2026)': 'env. 120-200 €',
+            'Prix': 'env. 120-200 €',
             'Idéal pour': 'Les développeurs seuls, la copie hors site',
           },
         ],
         image: '/images/best-nas-storage-local-ai-models-2026-comparison-table-hero-fr.webp',
-        imageCaption: 'NAS vs SSD pour le Stockage IA Local -- Instantané des prix, juillet 2026',
+        imageCaption: 'NAS vs SSD pour le Stockage IA Local -- comparaison des prix',
       },
       whichStorage: {
         id: 'which-storage',
@@ -1306,7 +1355,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Logiciel :** Synology DSM est le système d\'exploitation NAS le plus accessible — la configuration RAID, les instantanés planifiés et la sauvegarde cloud sont des assistants guidés, pas des fichiers de configuration.',
           '**Capacité :** un boîtier 4 baies avec quatre disques de 4 To offre environ 8 To utilisables en RAID 6 — de la place pour une grande bibliothèque de modèles quantifiés (un modèle 70B Q4 fait environ 35-42 Go).',
           '**Réseau :** un NAS sur le même réseau gigabit transfère un modèle de 35 Go en environ une heure ; cela suffit pour le rôle de bibliothèque. Le 10 GbE ne compte qu\'au-delà d\'environ 20 utilisateurs.',
-          '**Prix :** environ 750 € pour le matériel seul, en instantané de juillet 2026 ; prévoyez un budget distinct pour les disques certifiés NAS.',
+          '**Prix :** environ 750 € pour le matériel seul, en estimation ; prévoyez un budget distinct pour les disques certifiés NAS.',
           '**Pourquoi acheter Synology :** vous voulez une bibliothèque partagée et sauvegardée et le moindre effort de configuration et d\'entretien.',
           '**Pourquoi écarter Synology :** un développeur seul avec une seule machine n\'a pas besoin de NAS — un SSD plus un disque externe est moins cher et plus simple.',
         ],
@@ -1335,7 +1384,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Matériel :** les boîtiers QNAP embarquent souvent un processeur plus rapide et davantage de ports (y compris des options réseau plus rapides) à un prix proche du modèle Synology comparable.',
           '**Logiciel :** QTS est capable mais moins guidé que Synology DSM — attendez-vous à plus de menus et à une première configuration plus exigeante.',
           '**Capacité :** un boîtier 4 baies en RAID 6 avec quatre disques de 4 To offre environ 8 To utilisables — la même marge de bibliothèque que l\'équivalent Synology.',
-          '**Prix :** environ 800 € pour le matériel seul, en instantané de juillet 2026, disques en sus.',
+          '**Prix :** environ 800 € pour le matériel seul, en estimation, disques en sus.',
           '**Pourquoi acheter QNAP :** vous voulez plus de processeur et des options réseau plus rapides par euro, et vous êtes à l\'aise avec une mise en place moins accompagnée.',
           '**Pourquoi écarter QNAP :** si l\'équipe n\'a pas de spécialiste du stockage et veut le logiciel le plus simple possible, Synology DSM est la voie la plus facile.',
         ],
@@ -1364,7 +1413,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Samsung 990 Pro :** un SSD NVMe PCIe 4.0 haut de gamme ; le choix recommandé pour le chargement de modèles le plus rapide. Un modèle 70B Q4 fait environ 35-42 Go, donc la vitesse de lecture se ressent à chaque changement de modèle.',
           '**WD Black SN850X :** un SSD NVMe PCIe 4.0 haut de gamme comparable ; l\'alternative économique lorsque le Samsung est plus cher à l\'instant T.',
           '**Capacité :** 2 To est le point d\'équilibre pratique pour un jeu de travail sur la machine ; 4 To si vous gardez de nombreux gros modèles en local plutôt que sur le NAS.',
-          '**Prix :** environ 300-330 € pour un disque de 2 To, en instantané de juillet 2026 — la pénurie de puces mémoire a fait monter les prix de la NAND, vérifiez donc avant d\'acheter.',
+          '**Prix :** environ 300-330 € pour un disque de 2 To, en estimation — la pénurie de puces mémoire a fait monter les prix de la NAND, vérifiez donc avant d\'acheter.',
           '**Pourquoi acheter un SSD NVMe haut de gamme :** le temps de chargement des modèles se ressent à chaque changement, et un SSD rapide retire des secondes à chacun.',
           '**Pourquoi écarter le haut de gamme :** si vous chargez un seul modèle et changez rarement, un SSD NVMe de milieu de gamme suffit — la vitesse de lecture du haut de gamme compte surtout en cas de changements fréquents.',
         ],
@@ -1395,11 +1444,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'nvme-ssd-picks',
         title: 'Meilleures NVMe pour l\'hébergement de modèles IA locaux 2026',
         content:
-          '**Le meilleur SSD NVMe interne pour une charge de travail d\'inférence IA locale doit atteindre une vitesse de lecture séquentielle d\'au moins 5 Go/s et disposer d\'au moins 2 To de capacité — 4 To si vous alternez entre plusieurs grands modèles.** Un modèle 70B en quantification Q4 pèse environ 35-42 Go ; un seul changement de modèle lit l\'intégralité du fichier de poids depuis le disque. La vitesse de lecture est le goulot d\'étranglement entre un changement de modèle et le premier token de sortie. Les choix ci-dessous atteignent tous ≥ 5 Go/s de lecture séquentielle sur des interfaces PCIe 4.0 ou PCIe 5.0 et sont disponibles en configurations 4 To. Note : dans le commerce français, le Crucial T705 PCIe 5.0 plus rapide se situe dans le bas de la fourchette de prix tandis que le Samsung 990 Pro est le plus cher — le lecteur Gen5 offre donc le meilleur rapport qualité-prix aux prix de juillet 2026.',
+          '**Le meilleur SSD NVMe interne pour une charge de travail d\'inférence IA locale doit atteindre une vitesse de lecture séquentielle d\'au moins 5 Go/s et disposer d\'au moins 2 To de capacité — 4 To si vous alternez entre plusieurs grands modèles.** Un modèle 70B en quantification Q4 pèse environ 35-42 Go ; un seul changement de modèle lit l\'intégralité du fichier de poids depuis le disque. La vitesse de lecture est le goulot d\'étranglement entre un changement de modèle et le premier token de sortie. Les choix ci-dessous atteignent tous ≥ 5 Go/s de lecture séquentielle sur des interfaces PCIe 4.0 ou PCIe 5.0 et sont disponibles en configurations 4 To. Note : dans le commerce français, le Crucial T705 PCIe 5.0 plus rapide se situe dans le bas de la fourchette de prix tandis que le Samsung 990 Pro est le plus cher — le lecteur Gen5 offre donc le meilleur rapport qualité-prix aux prix actuels.',
         items: [
-          '**Crucial T705 4 To (~450–560 €, juillet 2026) :** NVMe PCIe 5.0, lectures séquentielles jusqu\'à 14 500 Mo/s. Malgré sa vitesse Gen5, c\'est le moins cher des trois — le meilleur rapport qualité-prix. Stocke uniquement les poids du modèle ; le VRAM exécute l\'inférence une fois chargé. Nécessite un slot M.2 PCIe 5.0.',
-          '**WD Black SN850X 4 To (~510–580 €, juillet 2026) :** NVMe PCIe 4.0, lectures séquentielles jusqu\'à 7 300 Mo/s, garantie 5 ans. L\'option intermédiaire — légèrement plus chère que le Crucial T705 4 To dans le commerce français, mais bien disponible et éprouvée.',
-          '**Samsung 990 Pro 4 To (~600–650 €, juillet 2026) :** NVMe PCIe 4.0, lectures séquentielles jusqu\'à 7 450 Mo/s, garantie 5 ans avec 2 400 TBW. L\'option premium — la plus chère des trois en juillet 2026 (Samsung MSRP env. 700 €, rue 600–650 €). Performances haut de gamme constantes, mais le Crucial T705 4 To offre plus de vitesse à un prix inférieur.',
+          '**Crucial T705 4 To (~450–560 €) :** NVMe PCIe 5.0, lectures séquentielles jusqu\'à 14 500 Mo/s. Malgré sa vitesse Gen5, c\'est le moins cher des trois — le meilleur rapport qualité-prix. Stocke uniquement les poids du modèle ; le VRAM exécute l\'inférence une fois chargé. Nécessite un slot M.2 PCIe 5.0.',
+          '**WD Black SN850X 4 To (~510–580 €) :** NVMe PCIe 4.0, lectures séquentielles jusqu\'à 7 300 Mo/s, garantie 5 ans. L\'option intermédiaire — légèrement plus chère que le Crucial T705 4 To dans le commerce français, mais bien disponible et éprouvée.',
+          '**Samsung 990 Pro 4 To (~600–650 €) :** NVMe PCIe 4.0, lectures séquentielles jusqu\'à 7 450 Mo/s, garantie 5 ans avec 2 400 TBW. L\'option premium — actuellement la plus chère des trois (Samsung MSRP env. 700 €, rue 600–650 €). Performances haut de gamme constantes, mais le Crucial T705 4 To offre plus de vitesse à un prix inférieur.',
         ],
         callouts: [
           {
@@ -1433,7 +1482,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'Le meilleur SSD NVMe interne pour une charge de travail d\'inférence IA locale auto-hébergée nécessite une vitesse de lecture séquentielle d\'au moins 5 Go/s et au moins 2-4 To de capacité — le Crucial T705 4 To (~450–560 €) est le meilleur rapport qualité-prix à vitesse Gen5, tandis que le WD Black SN850X 4 To (~510–580 €) et le Samsung 990 Pro 4 To (~600–650 €) coûtent un peu plus cher en juillet 2026.',
+            text: 'Le meilleur SSD NVMe interne pour une charge de travail d\'inférence IA locale auto-hébergée nécessite une vitesse de lecture séquentielle d\'au moins 5 Go/s et au moins 2-4 To de capacité — le Crucial T705 4 To (~450–560 €) est le meilleur rapport qualité-prix à vitesse Gen5, tandis que le WD Black SN850X 4 To (~510–580 €) et le Samsung 990 Pro 4 To (~600–650 €) coûtent actuellement un peu plus cher.',
           },
           {
             type: 'plain-terms',
@@ -1441,7 +1490,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/best-nas-storage-local-ai-models-2026-nvme-ssd-picks-hero-fr.webp',
-        imageCaption: 'Meilleurs SSD NVMe pour l\'Inférence IA -- Vitesse vs prix, juillet 2026 (4To)',
+        imageCaption: 'Meilleurs SSD NVMe pour l\'Inférence IA -- Vitesse vs prix (4To)',
       },
       raidBackup: {
         id: 'raid-backup',
@@ -1505,7 +1554,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'Comme la pénurie de puces mémoire de 2026 a fait bouger les prix des SSD, chaque chiffre de ce guide est un instantané de juillet 2026. Ouvrez l\'annonce actuelle du revendeur avant d\'acheter, et comparez les disques Samsung et WD le jour même — la meilleure affaire change.',
+            text: 'Comme la pénurie de puces mémoire de 2026 a fait bouger les prix des SSD, chaque chiffre de ce guide est une estimation. Ouvrez l\'annonce actuelle du revendeur avant d\'acheter, et comparez les disques Samsung et WD le jour même — la meilleure affaire change.',
           },
         ],
         affiliateLinks: [
@@ -1597,7 +1646,31 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Les prix des SSD ont-ils changé en 2026 ?',
-            a: 'Oui. La pénurie de puces mémoire de 2026 a poussé les prix de la NAND et des SSD au-delà des niveaux antérieurs. Chaque prix de ce guide est un instantané de juillet 2026. Confirmez les tarifs actuels sur l\'annonce du revendeur avant d\'acheter, et comparez le Samsung 990 Pro au WD Black SN850X le jour même — le moins cher des deux alterne avec le marché.',
+            a: 'Oui. La pénurie de puces mémoire de 2026 a poussé les prix de la NAND et des SSD au-delà des niveaux antérieurs. Chaque prix de ce guide est une estimation. Confirmez les tarifs actuels sur l\'annonce du revendeur avant d\'acheter, et comparez le Samsung 990 Pro au WD Black SN850X le jour même — le moins cher des deux alterne avec le marché.',
+          },
+          {
+            q: 'Quel est un mélange de stockage sensé pour un petit laboratoire IA — NVMe local rapide, stockage partagé et archive — sans dépenser trop ?',
+            a: 'Répartissez en trois niveaux et dimensionnez chacun selon la fréquence d\'accès, pas selon la quantité de données existant théoriquement. Le NVMe local rapide (1 à 4 To par machine) contient les poids du modèle actuellement chargé pour l\'inférence ou l\'entraînement en cours — c\'est le niveau où la vitesse compte, la capacité doit rester raisonnable. Le stockage NAS partagé (une unité 4 baies en RAID 6) contient la bibliothèque de modèles complète, les jeux de données et les checkpoints dont toute l\'équipe a besoin — c\'est là qu\'il faut acheter de la vraie capacité, car les disques NAS coûtent bien moins cher au téraoctet que le NVMe. L\'archive à long terme est le niveau le moins cher : des HDD en volume ou un niveau cloud froid pour les modèles et jeux de données que vous n\'utilisez pas activement mais ne voulez pas supprimer. L\'erreur de dépense excessive consiste à acheter de la capacité NVMe pour le niveau archive — ne payez le prix fort que pour les disques réellement sur le chemin critique.',
+          },
+          {
+            q: 'Faut-il des disques certifiés NAS ou des disques de centre de données professionnels pour un NAS IA fonctionnant 24 h/24 avec plusieurs utilisateurs ?',
+            a: 'Les disques certifiés NAS (par ex. Seagate IronWolf, WD Red Plus) sont conçus pour un fonctionnement continu 24/7, les vibrations d\'un boîtier multi-baies et des charges multi-utilisateurs modérées — c\'est le choix par défaut pour le NAS de bibliothèque de modèles d\'une petite équipe. Passez aux disques de centre de données professionnels (par ex. Seagate Exos, WD Gold) quand le NAS sert de nombreux utilisateurs simultanés, subit une lecture/écriture soutenue au-delà de la charge NAS typique, ou quand l\'endurance supplémentaire et la garantie plus longue justifient le coût plus élevé par disque. Pour la plupart des équipes IA locales sous environ 10 utilisateurs, des disques certifiés NAS en RAID 6 suffisent ; les disques professionnels sont une montée en gamme pour la mise à l\'échelle, pas un prérequis pour démarrer.',
+          },
+          {
+            q: 'De combien d\'espace SSD ai-je besoin pour un serveur d\'inférence LLM, en comptant les poids du modèle, les variantes quantifiées et une copie de retour arrière ?',
+            a: 'Prévoyez plus que le seul modèle utilisé aujourd\'hui. Un seul modèle 70B en Q4 pèse environ 35-42 Go, mais une configuration fonctionnelle conserve généralement au moins deux niveaux de quantification du même modèle (pour tester qualité contre vitesse) plus la version précédente du modèle en copie de retour arrière avant un changement — soit environ 3 fois l\'empreinte d\'un seul modèle en règle générale. Pour une bibliothèque de plusieurs familles de modèles de 7B à 70B, un SSD NVMe de 2 à 4 To sur la machine d\'inférence couvre confortablement l\'usage actif, la bibliothèque historique complète restant sur le NAS plutôt que sur le disque local.',
+          },
+          {
+            q: 'Que faut-il vérifier avant d\'acheter des disques pour un NAS multi-baies utilisé pour des jeux de données IA ou LLM ?',
+            a: 'Vérifiez quatre points avant d\'acheter : la charge de travail nominale (les disques certifiés NAS indiquent une limite annuelle en To/an — vérifiez qu\'elle couvre votre volume réel de lecture/écriture, pas seulement la capacité), la tolérance aux vibrations (les boîtiers multi-baies génèrent plus de vibrations qu\'un disque externe unique, et les disques non certifiés NAS peuvent brider leurs performances ou tomber en panne prématurément dans cet environnement), la compatibilité (vérifiez la liste de compatibilité du fabricant du NAS — certains firmwares NAS restreignent les disques non approuvés ou en désactivent des fonctions), et la durée de garantie (les disques certifiés NAS portent généralement une garantie de 3 à 5 ans ; faites-la correspondre à la durée d\'utilisation prévue de la grappe avant un renouvellement).',
+          },
+          {
+            q: 'Pour un serveur IA sur site, un seul gros disque, du RAID, ou un mélange SSD et HDD est-il la configuration la plus fiable ?',
+            a: 'Un seul disque, quelle que soit sa taille, est l\'option la moins fiable — une panne fait tout perdre, sans redondance ni reconstruction rapide possible. Le RAID (concrètement RAID 6 sur un NAS) est le choix par défaut pour la bibliothèque de modèles partagée car il survit à une panne de disque sans perte de données. Une configuration mixte SSD-plus-HDD n\'est pas une alternative au RAID — elle décrit une répartition différente des rôles : SSD NVMe local rapide pour l\'inférence active, HDD protégés par RAID sur le NAS pour la bibliothèque en masse. Pour la fiabilité spécifiquement, RAID 6 plus une vraie sauvegarde (la règle 3-2-1) bat toute configuration à disque unique, quel que soit le type de disque.',
+          },
+          {
+            q: 'Dans un pipeline IA, quand est-il pertinent d\'utiliser des disques de travail NVMe locaux plutôt qu\'un NAS partagé pour les données d\'entraînement ou d\'inférence ?',
+            a: 'Utilisez des disques de travail NVMe locaux pour tout ce qui est lu de manière répétée pendant une exécution active — les données d\'entraînement diffusées vers le GPU, ou les poids d\'un modèle pendant l\'inférence. Le NVMe local n\'a pas de saut réseau, il est donc plus rapide et retire le NAS partagé comme goulot d\'étranglement quand plusieurs tâches tournent simultanément. Utilisez le NAS partagé pour la bibliothèque qui persiste entre les exécutions et dont d\'autres machines ou membres de l\'équipe ont besoin : la collection complète de modèles, les checkpoints terminés, et les jeux de données non utilisés actuellement. Un schéma courant consiste à copier un jeu de données ou un modèle du NAS vers l\'espace de travail NVMe local au début d\'une tâche, puis à réécrire les résultats sur le NAS ensuite — le NAS sert au stockage et au partage, pas à alimenter une boucle d\'entraînement active.',
           },
         ],
       },
@@ -1617,18 +1690,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-07-01',
+    dateModified: '2026-08-29',
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
     title: 'ローカルAIモデル向けの最適なNASとストレージ 2026：購入ガイド',
     seoTitle: 'ローカルAIモデル向け最適NAS・SSD 2026：購入ガイド',
     intro:
-      'ローカルAI向けのストレージに関するアドバイスの多くは、容量という1つの数値だけを最適化しており、2つのストレージの役割が関わっているという点を見落としています。高速なNVMe SSDは、推論時にモデルが読み込まれる場所です。NASは、モデルライブラリが保管され、バックアップされ、複数のマシン間で共有される場所です。この2つは交換可能ではなく、一方が必要なときにもう一方を買ってしまうのが最もよくあるストレージの失敗です。本ガイドでは、ライブラリの役割についてSynologyとQNAPのNAS機器を、読み込みの役割についてSamsungとWestern DigitalのSSDを、購入を左右する数値（容量、冗長性、転送速度、価格）で比較します。価格に関する注意点が1つあります。2026年のメモリチップ不足によりSSD価格は従来の水準を大きく上回ったため、本ガイドの価格はすべて2026年7月時点のスナップショットです。購入前に最新の価格を確認してください。',
+      'ローカルAI向けのストレージに関するアドバイスの多くは、容量という1つの数値だけを最適化しており、2つのストレージの役割が関わっているという点を見落としています。高速なNVMe SSDは、推論時にモデルが読み込まれる場所です。NASは、モデルライブラリが保管され、バックアップされ、複数のマシン間で共有される場所です。この2つは交換可能ではなく、一方が必要なときにもう一方を買ってしまうのが最もよくあるストレージの失敗です。本ガイドでは、ライブラリの役割についてSynologyとQNAPのNAS機器を、読み込みの役割についてSamsungとWestern DigitalのSSDを、購入を左右する数値（容量、冗長性、転送速度、価格）で比較します。価格に関する注意点が1つあります。2026年のメモリチップ不足によりSSD価格は従来の水準を大きく上回ったため、本ガイドの価格はすべておおよその目安です。購入前に最新の価格を確認してください。',
     metaDescription:
       '2026年のローカルAIモデルに最適なNAS：モデルライブラリのストレージ、ネットワーク速度、GPU対応NASシステム。Synology、QNAP、DIYオプションを徹底比較。',
     heroImage: '/images/best-nas-storage-local-ai-models-2026-comparison-table-hero-ja.webp',
     twitterDescription:
-      'モデルライブラリにはNAS、高速読み込みにはNVMe SSD — 役割は1つではなく2つ。Synology、QNAP、Samsung、WDをローカルAIストレージ向けに2026年7月の価格で比較。',
+      'モデルライブラリにはNAS、高速読み込みにはNVMe SSD — 役割は1つではなく2つ。Synology、QNAP、Samsung、WDをローカルAIストレージ向けに現在の価格で比較。',
     affiliateDisclosure: true,
     current_models_mentioned: [
       'Llama 3.3 70B',
@@ -1666,9 +1739,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '共有ライブラリ：Synologyの4ベイNAS — 最も簡単なソフトウェアで、専門家のいないチームに最適',
           '価格あたりのハードウェアが多い：QNAPの4ベイNAS — 同等の価格で強力なCPUと多くのポート',
           'NASはRAID 6で運用：2台同時のドライブ故障に耐える',
-          'SSD価格は2026年のメモリ不足で上昇 — すべての価格を2026年7月時点のスナップショットとして扱う',
+          'SSD価格は2026年のメモリ不足で上昇 — すべての価格をおおよその目安として扱う',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-08',
       },
     },
     toc: [
@@ -1700,7 +1773,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**共有ライブラリのおすすめ（価格あたりのハードウェアが多い）：QNAPの4ベイNAS。** QNAPは通常、同等の価格でより強力なCPUと多くのポートを提供しますが、学習曲線がやや急になります。',
           '**NASはRAID 6で運用してください。** RAID 6は2台同時のドライブ故障に耐え、本番環境の標準です。大容量ドライブでのRAID 5は、24-48時間のリビルド中に2台目が故障するリスクがあります。',
           '**RAIDはバックアップではありません。** RAIDはドライブの故障から保護しますが、ランサムウェア、盗難、削除からは保護しません。3-2-1ルール（3つのコピー、2種類のメディア、1つは別の場所）に従ってください。',
-          '**価格は2026年に上昇しました。** メモリチップ不足によりNANDとSSDの価格が上昇しました。本ガイドの価格はすべて2026年7月時点のスナップショットとして扱い、購入前に再確認してください。',
+          '**価格は2026年に上昇しました。** メモリチップ不足によりNANDとSSDの価格が上昇しました。本ガイドの価格はすべておおよその目安として扱い、購入前に再確認してください。',
         ],
       },
       quickFacts: {
@@ -1713,7 +1786,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**ネットワーク速度：** 同じギガビットLAN上のNASは35 GBのモデルの転送に十分です（約1時間）。10 GbEは約20ユーザーを超えるチームでのみ重要になります。',
           '**バックアップのルール：** 3-2-1 — 3つのコピー、2種類のメディア、1つは別の場所。RAID単独ではバックアップになりません。',
           '**1人で作業する開発者：** 高速な内蔵SSDと1台の外付けバックアップドライブのほうが、NASを買うよりたいてい優れています。',
-          '**2026年の価格の実情：** メモリチップ不足によりSSD価格が上昇しました。数値は2026年7月時点のスナップショットとして扱ってください。',
+          '**2026年の価格の実情：** メモリチップ不足によりSSD価格が上昇しました。数値はおおよその目安として扱ってください。',
         ],
       },
       editorsChoice: {
@@ -1749,7 +1822,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: '2026年のローカルAIにおけるNASとSSDストレージの比較',
         content:
-          'この表は2つのストレージの役割を分けています。NASの行は共有ライブラリの役割を、SSDの行は高速読み込みの役割を扱います。容量とRAIDの数値は標準的な4ベイ構成に基づいています。価格は2026年7月時点のスナップショットです — 2026年のメモリチップ不足によりSSDの価格が上昇したため、購入前に最新の数値を確認してください。NASの価格はハードウェアのみで、ドライブは含みません。',
+          'この表は2つのストレージの役割を分けています。NASの行は共有ライブラリの役割を、SSDの行は高速読み込みの役割を扱います。容量とRAIDの数値は標準的な4ベイ構成に基づいています。以下の価格はおおよその目安です — 2026年のメモリチップ不足によりSSDの価格が上昇したため、購入前に最新の数値を確認してください。NASの価格はハードウェアのみで、ドライブは含みません。',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1760,14 +1833,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'SSDは実際に調理するキッチンの作業台、NASはすべてを保管するパントリーだと考えてください。作業台では素早く調理し、パントリーでは在庫を安全に保管します。パントリーで調理しようとすると遅く、パントリーのない作業台はすぐに場所が足りなくなります。',
           },
         ],
-        columns: ['ストレージ', '役割', '容量', '冗長性', '価格（2026年7月）', '最適な用途'],
+        columns: ['ストレージ', '役割', '容量', '冗長性', '価格', '最適な用途'],
         rows: [
           {
             'ストレージ': 'Synologyの4ベイNAS',
             '役割': '共有モデルライブラリ',
             '容量': 'RAID 6で約8 TB利用可能（4x 4 TB）',
             '冗長性': 'RAID 6 — 2台のドライブ故障に耐える',
-            '価格（2026年7月）': '約¥98,000、ハードウェアのみ',
+            '価格': '約¥98,000、ハードウェアのみ',
             '最適な用途': '最も簡単なソフトウェアを求めるチーム',
           },
           {
@@ -1775,7 +1848,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '役割': '共有モデルライブラリ',
             '容量': 'RAID 6で約8 TB利用可能（4x 4 TB）',
             '冗長性': 'RAID 6 — 2台のドライブ故障に耐える',
-            '価格（2026年7月）': '約¥88,000、ハードウェアのみ',
+            '価格': '約¥88,000、ハードウェアのみ',
             '最適な用途': 'より強力なCPUとポートを求めるチーム',
           },
           {
@@ -1783,7 +1856,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '役割': '高速なモデル読み込み',
             '容量': 'ドライブあたり1-4 TB',
             '冗長性': 'なし — バックアップと組み合わせる',
-            '価格（2026年7月）': '2 TBで約¥38,000-50,000',
+            '価格': '2 TBで約¥38,000-50,000',
             '最適な用途': '最速の読み込み、単一マシン',
           },
           {
@@ -1791,7 +1864,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '役割': '高速なモデル読み込み',
             '容量': 'ドライブあたり1-4 TB',
             '冗長性': 'なし — バックアップと組み合わせる',
-            '価格（2026年7月）': '2 TBで約¥35,000-46,000',
+            '価格': '2 TBで約¥35,000-46,000',
             '最適な用途': '高速な読み込み、コスト重視の代替',
           },
           {
@@ -1799,12 +1872,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '役割': 'オフラインバックアップ',
             '容量': '2-8 TB',
             '冗長性': 'なし — それ自体がバックアップ',
-            '価格（2026年7月）': '約¥10,000-22,000',
+            '価格': '約¥10,000-22,000',
             '最適な用途': '1人の開発者、別の場所へのコピー',
           },
         ],
         image: '/images/best-nas-storage-local-ai-models-2026-comparison-table-hero-ja.webp',
-        imageCaption: 'ローカルAIストレージ：NAS対SSD -- 価格スナップショット（2026年7月）',
+        imageCaption: 'ローカルAIストレージ：NAS対SSD -- 価格比較',
       },
       whichStorage: {
         id: 'which-storage',
@@ -1831,7 +1904,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**ソフトウェア：** Synology DSMは最も扱いやすいNASのオペレーティングシステムです — RAID構成、スケジュール設定されたスナップショット、クラウドバックアップは設定ファイルではなく、ガイド付きのウィザードです。',
           '**容量：** 4 TBドライブ4台を搭載した4ベイの機器は、RAID 6で約8 TBを利用可能にします — 量子化されたモデルの大規模なライブラリに十分な余裕があります（70B Q4モデルは約35-42 GB）。',
           '**ネットワーク：** 同じギガビットLAN上のNASは35 GBのモデルを約1時間で転送し、ライブラリの役割には十分です。10 GbEは約20ユーザーを超える場合のみ重要になります。',
-          '**価格：** 2026年7月時点のスナップショットで、ハードウェアのみで約¥98,000です。NAS対応ドライブは別途予算を組んでください。',
+          '**価格：** おおよその目安で、ハードウェアのみで約¥98,000です。NAS対応ドライブは別途予算を組んでください。',
           '**Synologyを買う理由：** 共有・バックアップされたライブラリと、最小限の設定・運用の手間が欲しい。',
           '**Synologyを見送る理由：** 1台のマシンで作業する1人の開発者にNASは不要です — SSDと外付けドライブのほうが安く、シンプルです。',
         ],
@@ -1860,7 +1933,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**ハードウェア：** QNAPの機器は、同等のSynologyモデルと近い価格で、より高速なCPUと多くのポート（より高速なネットワークオプションを含む）を搭載していることがよくあります。',
           '**ソフトウェア：** QTSは高機能ですが、Synology DSMほどガイドされていません — メニューが多く、初回設定がより難しくなることを想定してください。',
           '**容量：** 4 TBドライブ4台を搭載した4ベイの機器はRAID 6で約8 TBを利用可能にします — Synologyの同等機と同じライブラリの余裕です。',
-          '**価格：** 2026年7月時点のスナップショットで、ハードウェアのみで約¥88,000、ドライブは別途です。',
+          '**価格：** おおよその目安で、ハードウェアのみで約¥88,000、ドライブは別途です。',
           '**QNAPを買う理由：** 価格あたりでより多くのCPUと高速なネットワークオプションが欲しく、手取り足取りではない設定でも問題ない。',
           '**QNAPを見送る理由：** チームにストレージの専門家がおらず、可能な限りシンプルなソフトウェアが欲しい場合は、Synology DSMのほうが容易な道です。',
         ],
@@ -1889,7 +1962,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Samsung 990 Pro：** ハイエンドなPCIe 4.0 NVMe SSDで、最速のモデル読み込みのために推奨される選択肢です。70B Q4モデルは約35-42 GBあるため、読み込み速度はモデルを切り替えるたびに体感できます。',
           '**WD Black SN850X：** 同等のハイエンドなPCIe 4.0 NVMe SSDで、その時点でSamsungの価格が高い場合のコスト重視の代替です。',
           '**容量：** マシン上の作業セットには2 TBが実用的なちょうどよい容量です。多くの大きなモデルをNASではなくローカルに保持する場合は4 TBです。',
-          '**価格：** 2026年7月時点のスナップショットで、2 TBドライブが約¥38,000-50,000です — メモリチップ不足によりNANDの価格が上昇したため、購入前に確認してください。',
+          '**価格：** おおよその目安で、2 TBドライブが約¥38,000-50,000です — メモリチップ不足によりNANDの価格が上昇したため、購入前に確認してください。',
           '**ハイエンドのNVMe SSDを買う理由：** モデルの読み込み時間は切り替えるたびに体感され、高速なSSDはそのたびに数秒を削減します。',
           '**最上位クラスを見送る理由：** 1つのモデルを読み込み、めったに切り替えないなら、ミドルレンジのNVMe SSDで十分です — 最上位クラスの読み込み速度は、頻繁な切り替えで最も効いてきます。',
         ],
@@ -1920,11 +1993,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'nvme-ssd-picks',
         title: 'ローカルAIモデルホスティング向けベストNVMe SSD 2026',
         content:
-          '**ローカルAIインファレンスワークロード向けの最良の内蔵NVMe SSDは、シーケンシャル読み取り速度が5 GB/s以上で、最低でも2TBの容量が必要です — 複数の大型モデルを交互に使用する場合は4TBです。** 70BモデルのQ4量子化は約35-42 GBあり、1回のモデルスワップでディスクから重みファイル全体を読み込みます。読み取り速度がモデルスワッチと最初の出力トークンの間のボトルネックです。以下の選択肢はすべてPCIe 4.0またはPCIe 5.0インターフェース上でシーケンシャル読み取り5 GB/s以上を達成し、4TB構成で入手可能です。注意：2026年の関税・供給制約により、PCIe 4.0 SSD（Samsung、WD）はより高速なPCIe 5.0 Crucial T705より大幅に高価になっています — Gen5ドライブが2026年7月時点の価格での明確なコスパ最良の選択肢です。',
+          '**ローカルAIインファレンスワークロード向けの最良の内蔵NVMe SSDは、シーケンシャル読み取り速度が5 GB/s以上で、最低でも2TBの容量が必要です — 複数の大型モデルを交互に使用する場合は4TBです。** 70BモデルのQ4量子化は約35-42 GBあり、1回のモデルスワップでディスクから重みファイル全体を読み込みます。読み取り速度がモデルスワッチと最初の出力トークンの間のボトルネックです。以下の選択肢はすべてPCIe 4.0またはPCIe 5.0インターフェース上でシーケンシャル読み取り5 GB/s以上を達成し、4TB構成で入手可能です。注意：2026年の関税・供給制約により、PCIe 4.0 SSD（Samsung、WD）はより高速なPCIe 5.0 Crucial T705より大幅に高価になっています — Gen5ドライブが現在の価格での明確なコスパ最良の選択肢です。',
         items: [
-          '**Crucial T705 4TB（約¥98,000、2026年7月）：** PCIe 5.0 NVMe、シーケンシャル読み取り最大14,500 MB/s。Gen5の速度にもかかわらず3つの中で最も安価 — 最良のコスパ。モデルの重みのみを保存。モデルが読み込まれるとVRAMがインファレンスを実行します。PCIe 5.0 M.2スロットが必要です。',
-          '**WD Black SN850X 4TB（約¥99,800、2026年7月）：** PCIe 4.0 NVMe、シーケンシャル読み取り最大7,300 MB/s、5年保証。中間の選択肢 — 2026年のPCIe 4.0 NANDの供給制約によりCrucial T705 4TBとほぼ同価格ですが、在庫が豊富で実績があります。',
-          '**Samsung 990 Pro 4TB（約¥154,000、2026年7月）：** PCIe 4.0 NVMe、シーケンシャル読み取り最大7,450 MB/s、5年保証、2,400 TBW耐久評価。プレミアムの選択肢 — 関税と供給不足により2026年7月時点で最も高価（Samsung希望小売価格約¥170,000、実売約¥154,000）。一貫したハイエンドパフォーマンスですが、Crucial T705 4TBははるかに低価格でより高速です。',
+          '**Crucial T705 4TB（約¥98,000）：** PCIe 5.0 NVMe、シーケンシャル読み取り最大14,500 MB/s。Gen5の速度にもかかわらず3つの中で最も安価 — 最良のコスパ。モデルの重みのみを保存。モデルが読み込まれるとVRAMがインファレンスを実行します。PCIe 5.0 M.2スロットが必要です。',
+          '**WD Black SN850X 4TB（約¥99,800）：** PCIe 4.0 NVMe、シーケンシャル読み取り最大7,300 MB/s、5年保証。中間の選択肢 — 2026年のPCIe 4.0 NANDの供給制約によりCrucial T705 4TBとほぼ同価格ですが、在庫が豊富で実績があります。',
+          '**Samsung 990 Pro 4TB（約¥154,000）：** PCIe 4.0 NVMe、シーケンシャル読み取り最大7,450 MB/s、5年保証、2,400 TBW耐久評価。プレミアムの選択肢 — 関税と供給不足により現在3つの中で最も高価（Samsung希望小売価格約¥170,000、実売約¥154,000）。一貫したハイエンドパフォーマンスですが、Crucial T705 4TBははるかに低価格でより高速です。',
         ],
         callouts: [
           {
@@ -1966,7 +2039,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/best-nas-storage-local-ai-models-2026-nvme-ssd-picks-hero-ja.webp',
-        imageCaption: 'AI推論に最適なNVMe SSD -- 速度対価格（2026年7月・4TB）',
+        imageCaption: 'AI推論に最適なNVMe SSD -- 速度対価格（4TB）',
       },
       raidBackup: {
         id: 'raid-backup',
@@ -2030,7 +2103,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: '2026年のメモリチップ不足によりSSD価格が変動したため、本ガイドのすべての数値は2026年7月時点のスナップショットです。購入前に最新の小売店の掲載を開き、SamsungとWDのドライブをその日に比較してください — お得なほうは入れ替わります。',
+            text: '2026年のメモリチップ不足によりSSD価格が変動したため、本ガイドのすべての数値はおおよその目安です。購入前に最新の小売店の掲載を開き、SamsungとWDのドライブをその日に比較してください — お得なほうは入れ替わります。',
           },
         ],
         affiliateLinks: [
@@ -2122,7 +2195,31 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'SSDの価格は2026年に変わりましたか？',
-            a: 'はい。2026年のメモリチップ不足により、NANDとSSDの価格が従来の水準を上回りました。本ガイドのすべての価格は2026年7月時点のスナップショットです。購入前に小売店の掲載で最新の価格を確認し、Samsung 990 ProとWD Black SN850Xをその日に比較してください — 安いほうは市場とともに入れ替わります。',
+            a: 'はい。2026年のメモリチップ不足により、NANDとSSDの価格が従来の水準を上回りました。本ガイドのすべての価格はおおよその目安です。購入前に小売店の掲載で最新の価格を確認し、Samsung 990 ProとWD Black SN850Xをその日に比較してください — 安いほうは市場とともに入れ替わります。',
+          },
+          {
+            q: '小規模なAIラボにとって、高速なローカルNVMe、共有ストレージ、アーカイブを使った、コストをかけすぎない賢いストレージ構成とは何ですか？',
+            a: '理論上のデータ量ではなく、アクセス頻度によって3つの階層に分けてサイズを決めてください。高速なローカルNVMe（マシンごとに1〜4 TB）には、推論中またはアクティブな学習実行のために現在ロードされているモデルの重みを置きます — ここは速度が重要な階層で、容量は控えめにすべきです。共有NASストレージ（RAID 6の4ベイユニット）には、チーム全体が必要とする完全なモデルライブラリ、データセット、チェックポイントを置きます — ここは実際の容量を購入すべき場所です。NASドライブはNVMeよりもテラバイトあたりのコストがはるかに低いためです。長期アーカイブは最も安価な階層で、現在アクティブに使用していないが削除したくないモデルやデータセット向けに、大容量HDDまたはコールドクラウド階層を使います。コストをかけすぎる典型的な失敗は、アーカイブ階層にNVMeの容量を購入することです。実際にホットパス上にあるドライブだけにプレミアム価格を払ってください。',
+          },
+          {
+            q: '複数ユーザーが利用する24時間稼働のAI NASには、NAS向けドライブとエンタープライズデータセンタードライブのどちらを使うべきですか？',
+            a: 'NAS向けドライブ（例：Seagate IronWolf、WD Red Plus）は、24時間365日の連続稼働、複数ベイの振動、中程度のマルチユーザーワークロード向けに設計されており、小規模チームのモデルライブラリNASのデフォルトとして適切です。NASが多数の同時ユーザーにサービスを提供する場合、典型的なNASワークロード評価を超える持続的な読み書きが発生する場合、または追加の耐久性と長い保証がドライブあたりの高いコストを正当化する場合は、エンタープライズデータセンタードライブ（例：Seagate Exos、WD Gold）にアップグレードしてください。約10ユーザー未満のほとんどのローカルAIチームでは、RAID 6構成のNAS向けドライブで十分です。エンタープライズドライブはスケールのためのアップグレードであり、始めるための必須条件ではありません。',
+          },
+          {
+            q: 'モデルの重み、量子化バリアント、ロールバック用コピーを考慮すると、LLM推論マシンにはどれくらいのSSD容量が必要ですか？',
+            a: '今日使っているモデルだけでなく、それ以上の容量を見込んでください。単一の70BモデルのQ4は約35-42 GBですが、実際に使えるセットアップでは通常、同じモデルの少なくとも2つの量子化レベル（品質と速度のテスト用）に加え、切り替え前のロールバック用コピーとして直前のモデルバージョンを保持します — 目安として単一モデルの容量の約3倍です。7Bから70Bまでの複数のモデルファミリーのライブラリでは、推論マシン上の2-4 TBのNVMe SSDでアクティブな用途を十分にカバーでき、完全な過去のライブラリはローカルディスクではなくNASに保存します。',
+          },
+          {
+            q: 'AIやLLMのデータセットに使う複数ベイNAS用のドライブを購入する前に、何を確認すべきですか？',
+            a: '購入前に4点を確認してください。ワークロード評価（NAS向けドライブには年間のワークロード上限がTB/年で記載されています。単なる容量ではなく、実際の読み書き量をカバーしているか確認してください）、振動耐性（複数ベイのエンクロージャーは単一の外付けドライブより多くの振動を発生させ、NAS向けでないドライブはこの環境で早期にスロットリングしたり故障したりすることがあります）、互換性（NASベンダーのドライブ互換性リストを確認してください。一部のNASファームウェアは承認されていないドライブを制限したり機能を無効化したりします）、保証期間（NAS向けドライブは通常3〜5年の保証が付いています。アレイを刷新するまでに想定している運用期間に合わせてください）。',
+          },
+          {
+            q: 'オンプレミスのAIサーバーには、単一の大容量ドライブ、RAID、SSDとHDDの組み合わせのどれが最も信頼性が高いですか？',
+            a: 'どのようなサイズであっても単一ドライブは最も信頼性の低い選択肢です。冗長性も高速な再構築の手段もなく、1回の故障ですべてを失います。RAID（具体的にはNAS上のRAID 6）は、ドライブ故障時にデータを失わずに済むため、共有モデルライブラリの正しいデフォルトです。SSDとHDDを組み合わせた構成はRAIDの代替ではありません — これは異なる役割分担を表しています。アクティブな推論用の高速なローカルNVMe SSDと、大量のライブラリ用にNAS上でRAID保護されたHDDです。信頼性という点では、RAID 6に加えて本物のバックアップ（3-2-1ルール）が、ドライブの種類にかかわらず単一ドライブ構成に勝ります。',
+          },
+          {
+            q: 'AIパイプラインにおいて、学習または推論データにローカルNVMeスクラッチディスクと共有NASのどちらを使うべきタイミングはいつですか？',
+            a: 'アクティブな実行中に繰り返し読み込まれるものにはローカルNVMeスクラッチディスクを使ってください — GPUにストリーミングされる学習データや、推論中のモデルの重みなどです。ローカルNVMeにはネットワークのホップがないため高速で、複数のジョブが同時に実行されるときに共有NASがボトルネックになるのを防ぎます。実行間で持続し、他のマシンやチームメンバーが必要とするライブラリには共有NASを使ってください。完全なモデルコレクション、完了したチェックポイント、現在使用していないデータセットなどです。よくあるパターンは、ジョブの開始時にデータセットやモデルをNASからローカルNVMeスクラッチ領域にコピーし、その後結果をNASに書き戻すことです — NASはストレージと共有のためのものであり、アクティブな学習ループに直接サービスを提供するものではありません。',
           },
         ],
       },
@@ -2142,18 +2239,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-07-01',
+    dateModified: '2026-08-29',
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
     title: '本地 AI 模型的最佳 NAS 与存储 2026：选购指南',
     seoTitle: '本地 AI 模型最佳 NAS 与 SSD 2026：选购指南',
     intro:
-      '大多数针对本地 AI 的存储建议只优化一个数字——容量——却忽视了其中涉及两项存储任务。快速的 NVMe SSD 是推理时模型加载的来源；NAS 则是模型库的所在地，负责保持备份并在多台机器之间共享。两者不可互换，在需要其中一个时却买了另一个，是最常见的存储错误。本指南就左右购买决策的几项数据——容量、冗余、传输速度和价格——比较了承担模型库角色的 Synology 与 QNAP NAS 设备，以及承担加载角色的 Samsung 与 Western Digital SSD。关于价格有一点提醒：2026 年的内存芯片短缺把 SSD 价格推到了远高于以往的水平，因此本文每个价格都是 2026 年 7 月的快照——购买前请确认当前价格。',
+      '大多数针对本地 AI 的存储建议只优化一个数字——容量——却忽视了其中涉及两项存储任务。快速的 NVMe SSD 是推理时模型加载的来源；NAS 则是模型库的所在地，负责保持备份并在多台机器之间共享。两者不可互换，在需要其中一个时却买了另一个，是最常见的存储错误。本指南就左右购买决策的几项数据——容量、冗余、传输速度和价格——比较了承担模型库角色的 Synology 与 QNAP NAS 设备，以及承担加载角色的 Samsung 与 Western Digital SSD。关于价格有一点提醒：2026 年的内存芯片短缺把 SSD 价格推到了远高于以往的水平，因此本文每个价格都请视为大致估算——购买前请确认当前价格。',
     metaDescription:
-      '面向本地 AI 模型比较 Synology 与 QNAP NAS 设备以及 Samsung 与 WD SSD：RAID 6 冗余、快速模型加载、容量和 2026 年 7 月价格。',
+      '面向本地 AI 模型比较 Synology 与 QNAP NAS 设备以及 Samsung 与 WD SSD：RAID 6 冗余、快速模型加载、容量和当前价格。',
     heroImage: '/images/best-nas-storage-local-ai-models-2026-comparison-table-hero-zh.webp',
     twitterDescription:
-      'NAS 用于模型库，NVMe SSD 用于快速加载——两项任务，而非一项。就本地 AI 存储以 2026 年 7 月价格比较 Synology、QNAP、Samsung、WD。',
+      'NAS 用于模型库，NVMe SSD 用于快速加载——两项任务，而非一项。就本地 AI 存储以当前价格比较 Synology、QNAP、Samsung、WD。',
     affiliateDisclosure: true,
     current_models_mentioned: [
       'Llama 3.3 70B',
@@ -2191,9 +2288,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '共享模型库：Synology 4 盘位 NAS——软件最简单，最适合非专业团队',
           '每美元硬件更多：QNAP 4 盘位 NAS——相近价格下更强的 CPU 和更多端口',
           '以 RAID 6 运行 NAS：可承受两块硬盘同时故障',
-          'SSD 价格在 2026 年内存短缺中上涨——将每个价格都视为 2026 年 7 月的快照',
+          'SSD 价格在 2026 年内存短缺中上涨——将每个价格都视为大致估算',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-08',
       },
     },
     toc: [
@@ -2225,7 +2322,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**共享模型库之选（每美元硬件更多）：QNAP 4 盘位 NAS。** QNAP 通常以相近价格提供更强的 CPU 和更多端口，代价是学习曲线略陡。',
           '**以 RAID 6 运行 NAS。** RAID 6 可承受两块硬盘同时故障，是生产环境的默认选择；大容量硬盘上的 RAID 5 有在 24-48 小时重建期间发生第二次故障的风险。',
           '**RAID 不是备份。** RAID 防止硬盘故障，但不防勒索软件、盗窃或误删。遵循 3-2-1 原则：3 份副本、2 种介质、1 份异地。',
-          '**价格在 2026 年上涨。** 内存芯片短缺推高了 NAND 和 SSD 价格。将本文每个价格都视为 2026 年 7 月的快照，并在购买前重新核对。',
+          '**价格在 2026 年上涨。** 内存芯片短缺推高了 NAND 和 SSD 价格。将本文每个价格都视为大致估算，并在购买前重新核对。',
         ],
       },
       quickFacts: {
@@ -2238,7 +2335,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**网络速度：** 同一千兆 LAN 上的 NAS 足以传输 35 GB 的模型（约 1 小时）；10 GbE 仅对约 20 名用户以上的团队有意义。',
           '**备份原则：** 3-2-1——3 份副本、2 种介质、1 份异地。仅靠 RAID 不是备份。',
           '**单人开发者：** 一块快速的内置 SSD 加一块外置备份硬盘通常胜过购买 NAS。',
-          '**2026 年价格现实：** 内存芯片短缺推高了 SSD 价格；请将数字视为 2026 年 7 月的快照。',
+          '**2026 年价格现实：** 内存芯片短缺推高了 SSD 价格；请将数字视为大致估算。',
         ],
       },
       editorsChoice: {
@@ -2274,7 +2371,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: '2026 年 NAS 与 SSD 存储在本地 AI 上的对比',
         content:
-          '本表将两项存储任务分开。NAS 各行涵盖共享模型库角色；SSD 各行涵盖快速加载角色。容量和 RAID 数据基于标准的 4 盘位配置。价格为 2026 年 7 月的快照——2026 年的内存芯片短缺推高了 SSD 定价，因此购买前请确认当前数字。NAS 价格仅含硬件，不含硬盘。',
+          '本表将两项存储任务分开。NAS 各行涵盖共享模型库角色；SSD 各行涵盖快速加载角色。容量和 RAID 数据基于标准的 4 盘位配置。以下价格均为大致估算——2026 年的内存芯片短缺推高了 SSD 定价，因此购买前请确认当前数字。NAS 价格仅含硬件，不含硬盘。',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2285,14 +2382,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '把 SSD 想象成你实际下厨的厨房台面，把 NAS 想象成存放一切的储藏室。你在台面上快速烹饪；你把存货安全地放在储藏室里。在储藏室里做饭很慢，而没有储藏室的台面很快就会没地方放。',
           },
         ],
-        columns: ['存储', '角色', '容量', '冗余', '价格（2026 年 7 月）', '最适合'],
+        columns: ['存储', '角色', '容量', '冗余', '价格', '最适合'],
         rows: [
           {
             '存储': 'Synology 4 盘位 NAS',
             '角色': '共享模型库',
             '容量': 'RAID 6 下约 8 TB 可用（4x 4 TB）',
             '冗余': 'RAID 6——可承受 2 块硬盘故障',
-            '价格（2026 年 7 月）': '约 $450-650，仅硬件',
+            '价格': '约 $450-650，仅硬件',
             '最适合': '想要最简单软件的团队',
           },
           {
@@ -2300,7 +2397,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '角色': '共享模型库',
             '容量': 'RAID 6 下约 8 TB 可用（4x 4 TB）',
             '冗余': 'RAID 6——可承受 2 块硬盘故障',
-            '价格（2026 年 7 月）': '约 $450-650，仅硬件',
+            '价格': '约 $450-650，仅硬件',
             '最适合': '想要更强 CPU 和更多端口的团队',
           },
           {
@@ -2308,7 +2405,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '角色': '快速模型加载',
             '容量': '每块 1-4 TB',
             '冗余': '无——需搭配备份',
-            '价格（2026 年 7 月）': '2 TB 约 $150-250',
+            '价格': '2 TB 约 $150-250',
             '最适合': '最快加载，单台机器',
           },
           {
@@ -2316,7 +2413,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '角色': '快速模型加载',
             '容量': '每块 1-4 TB',
             '冗余': '无——需搭配备份',
-            '价格（2026 年 7 月）': '2 TB 约 $150-250',
+            '价格': '2 TB 约 $150-250',
             '最适合': '快速加载，性价比替代方案',
           },
           {
@@ -2324,12 +2421,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '角色': '离线备份',
             '容量': '2-8 TB',
             '冗余': '无——它本身就是备份',
-            '价格（2026 年 7 月）': '约 $80-200',
+            '价格': '约 $80-200',
             '最适合': '单人开发者，异地副本',
           },
         ],
         image: '/images/best-nas-storage-local-ai-models-2026-comparison-table-hero-zh.webp',
-        imageCaption: '本地AI存储：NAS对比SSD -- 价格速览（2026年7月）',
+        imageCaption: '本地AI存储：NAS对比SSD -- 价格速览',
       },
       whichStorage: {
         id: 'which-storage',
@@ -2356,7 +2453,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**软件：** Synology DSM 是最易上手的 NAS 操作系统——RAID 配置、计划快照和云备份都是引导式向导，而非配置文件。',
           '**容量：** 装有四块 4 TB 硬盘的 4 盘位设备在 RAID 6 下提供约 8 TB 可用容量——足以容纳大型的量化模型库（70B Q4 模型约为 35-42 GB）。',
           '**网络：** 同一千兆 LAN 上的 NAS 在约一小时内传输 35 GB 的模型；这对模型库角色已经足够。10 GbE 仅在约 20 名用户以上时才有意义。',
-          '**价格：** 2026 年 7 月快照下约为 $450-650，仅含硬件；NAS 专用硬盘需另行预算。',
+          '**价格：** 大致估算约为 $450-650，仅含硬件；NAS 专用硬盘需另行预算。',
           '**为何选择 Synology：** 你想要共享、已备份的模型库，并希望搭建和维护的工作量最小。',
           '**为何跳过 Synology：** 只有一台机器的单人开发者不需要 NAS——一块 SSD 加一块外置硬盘更便宜也更简单。',
         ],
@@ -2385,7 +2482,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**硬件：** QNAP 设备通常以与同档 Synology 型号相近的价格搭载更快的 CPU 和更多端口（包括更快的网络选项）。',
           '**软件：** QTS 功能强大，但不如 Synology DSM 那样有引导——预期会有更多菜单和更陡的首次设置。',
           '**容量：** 装有四块 4 TB 硬盘的 4 盘位设备在 RAID 6 下提供约 8 TB 可用容量——与 Synology 同类产品相同的模型库余量。',
-          '**价格：** 2026 年 7 月快照下约为 $450-650，仅含硬件，硬盘另计。',
+          '**价格：** 大致估算约为 $450-650，仅含硬件，硬盘另计。',
           '**为何选择 QNAP：** 你想要每美元更多的 CPU 和更快的网络选项，并能从容应对引导较少的设置。',
           '**为何跳过 QNAP：** 如果团队没有存储专家且想要尽可能简单的软件，Synology DSM 是更轻松的路径。',
         ],
@@ -2414,7 +2511,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Samsung 990 Pro：** 一块高端 PCIe 4.0 NVMe SSD；最快模型加载的推荐之选。70B Q4 模型约为 35-42 GB，因此每次切换模型都能感受到读取速度。',
           '**WD Black SN850X：** 一块同级的高端 PCIe 4.0 NVMe SSD；当 Samsung 当下定价更高时的性价比替代方案。',
           '**容量：** 对于机器上的工作集，2 TB 是实用的甜点容量；如果你在本地而非 NAS 上保留许多大型模型，则选 4 TB。',
-          '**价格：** 2026 年 7 月快照下,2 TB 硬盘约为 $150-250——内存芯片短缺推高了 NAND 定价,因此购买前请确认。',
+          '**价格：** 大致估算下,2 TB 硬盘约为 $150-250——内存芯片短缺推高了 NAND 定价,因此购买前请确认。',
           '**为何购买高端 NVMe SSD：** 每次切换都能感受到模型加载时间，而快速 SSD 为每次切换省下数秒。',
           '**为何跳过顶级档：** 如果你只加载一个模型且很少切换，一块中端 NVMe SSD 就够了——顶级档的读取速度在频繁切换时最为重要。',
         ],
@@ -2445,11 +2542,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'nvme-ssd-picks',
         title: '本地AI模型托管最佳NVMe SSD 2026',
         content:
-          '**本地AI推理工作负载的最佳内置NVMe SSD需要顺序读取速度达到5 GB/s以上，容量至少2TB——如果在多个大型模型之间切换则需要4TB。** 70B模型在Q4量化下约为35-42 GB；单次模型切换会从磁盘读取整个权重文件。读取速度是模型切换到第一个输出token之间的瓶颈。以下选择均在PCIe 4.0或PCIe 5.0接口上实现≥5 GB/s顺序读取，并提供4TB配置。注意：2026年的关税和供应约束使PCIe 4.0 SSD（Samsung、WD）比更快的PCIe 5.0 Crucial T705贵得多——Gen5硬盘在2026年7月的价格下是明显的性价比之选。',
+          '**本地AI推理工作负载的最佳内置NVMe SSD需要顺序读取速度达到5 GB/s以上，容量至少2TB——如果在多个大型模型之间切换则需要4TB。** 70B模型在Q4量化下约为35-42 GB；单次模型切换会从磁盘读取整个权重文件。读取速度是模型切换到第一个输出token之间的瓶颈。以下选择均在PCIe 4.0或PCIe 5.0接口上实现≥5 GB/s顺序读取，并提供4TB配置。注意：2026年的关税和供应约束使PCIe 4.0 SSD（Samsung、WD）比更快的PCIe 5.0 Crucial T705贵得多——Gen5硬盘在当前价格下是明显的性价比之选。',
         items: [
-          '**Crucial T705 4TB（约$304–$350，2026年7月）：** PCIe 5.0 NVMe，顺序读取速度高达14,500 MB/s。尽管是Gen5速度，却是三者中价格最低的——性价比最佳。仅存储模型权重；模型加载后VRAM执行推理。需要PCIe 5.0 M.2插槽。',
-          '**WD Black SN850X 4TB（约$615–$740，2026年7月）：** PCIe 4.0 NVMe，顺序读取速度高达7,300 MB/s，5年保修。中间选项——由于2026年PCIe 4.0 NAND供应限制，比Crucial T705 4TB贵得多，但库存充足且经过验证。',
-          '**Samsung 990 Pro 4TB（约$780–$950，2026年7月）：** PCIe 4.0 NVMe，顺序读取速度高达7,450 MB/s，5年保修，2,400 TBW耐久评级。高端选项——因关税和供应紧张，2026年7月价格最高（Samsung建议零售价$1,099，市场价$780–$950）。稳定的高端性能，但Crucial T705 4TB以低得多的价格提供更快的速度。',
+          '**Crucial T705 4TB（约$304–$350）：** PCIe 5.0 NVMe，顺序读取速度高达14,500 MB/s。尽管是Gen5速度，却是三者中价格最低的——性价比最佳。仅存储模型权重；模型加载后VRAM执行推理。需要PCIe 5.0 M.2插槽。',
+          '**WD Black SN850X 4TB（约$615–$740）：** PCIe 4.0 NVMe，顺序读取速度高达7,300 MB/s，5年保修。中间选项——由于2026年PCIe 4.0 NAND供应限制，比Crucial T705 4TB贵得多，但库存充足且经过验证。',
+          '**Samsung 990 Pro 4TB（约$780–$950）：** PCIe 4.0 NVMe，顺序读取速度高达7,450 MB/s，5年保修，2,400 TBW耐久评级。高端选项——因关税和供应紧张，目前价格最高（Samsung建议零售价$1,099，市场价$780–$950）。稳定的高端性能，但Crucial T705 4TB以低得多的价格提供更快的速度。',
         ],
         callouts: [
           {
@@ -2491,7 +2588,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/best-nas-storage-local-ai-models-2026-nvme-ssd-picks-hero-zh.webp',
-        imageCaption: 'AI推理最佳NVMe SSD -- 速度对比价格（2026年7月，4TB）',
+        imageCaption: 'AI推理最佳NVMe SSD -- 速度对比价格（4TB）',
       },
       raidBackup: {
         id: 'raid-backup',
@@ -2555,7 +2652,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: '由于 2026 年的内存芯片短缺使 SSD 价格波动，本指南中的每个数字都是 2026 年 7 月的快照。购买前请打开当前的零售商页面，并当天比较 Samsung 与 WD 硬盘——更划算的那一个会交替变化。',
+            text: '由于 2026 年的内存芯片短缺使 SSD 价格波动，本指南中的每个数字都是大致估算。购买前请打开当前的零售商页面，并当天比较 Samsung 与 WD 硬盘——更划算的那一个会交替变化。',
           },
         ],
         affiliateLinks: [
@@ -2647,7 +2744,31 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'SSD 价格在 2026 年变了吗？',
-            a: '变了。2026 年的内存芯片短缺把 NAND 和 SSD 价格推到高于以往的水平。本指南中的每个价格都是 2026 年 7 月的快照。购买前请在零售商页面确认当前价格，并当天比较 Samsung 990 Pro 与 WD Black SN850X——两者中更便宜的那一个会随市场交替变化。',
+            a: '变了。2026 年的内存芯片短缺把 NAND 和 SSD 价格推到高于以往的水平。本指南中的每个价格都是大致估算。购买前请在零售商页面确认当前价格，并当天比较 Samsung 990 Pro 与 WD Black SN850X——两者中更便宜的那一个会随市场交替变化。',
+          },
+          {
+            q: '对于小型 AI 实验室来说，快速本地 NVMe、共享存储和归档之间怎样搭配才既合理又不至于超支？',
+            a: '按访问频率而非理论数据量分成三层。快速本地 NVMe（每台机器 1-4 TB）存放当前用于推理或活跃训练任务加载的模型权重——这一层速度最重要，容量应保持精简。共享 NAS 存储（RAID 6 的 4 盘位设备）存放整个团队需要的完整模型库、数据集和检查点——这是应该购买真正容量的地方，因为 NAS 硬盘的每 TB 成本远低于 NVMe。长期归档是最便宜的一层：用于存放当前未使用但不想删除的模型和数据集的大容量 HDD 或冷云存储层。超支的常见错误是为归档层购买 NVMe 容量——只为真正处于热路径上的硬盘支付高价。',
+          },
+          {
+            q: '对于 24 小时运行、有多个用户的 AI NAS，应该使用 NAS 专用硬盘还是企业级数据中心硬盘？',
+            a: 'NAS 专用硬盘（如 Seagate IronWolf、WD Red Plus）专为 24/7 连续运行、多盘位振动环境和中等程度的多用户负载而设计——对于小团队的模型库 NAS 来说是合适的默认选择。当 NAS 需要服务大量并发用户、持续读写超出典型 NAS 工作负载评级，或额外的耐用性和更长的保修能够证明每块硬盘更高成本合理时，再升级到企业级数据中心硬盘（如 Seagate Exos、WD Gold）。对于用户数在 10 人以下的大多数本地 AI 团队，RAID 6 下的 NAS 专用硬盘已经足够；企业级硬盘是面向规模扩展的升级，而非起步的必需品。',
+          },
+          {
+            q: '考虑到模型权重、量化变体和回滚副本，LLM 推理主机需要多少 SSD 空间？',
+            a: '预算应该超过今天使用的那一个模型。单个 70B 模型在 Q4 量化下约为 35-42 GB，但一个实用的配置通常会同时保留同一模型的至少两种量化级别（用于测试质量与速度的权衡），加上切换前作为回滚副本保留的上一个模型版本——经验法则大约是单个模型体积的 3 倍。对于涵盖 7B 到 70B 多个模型系列的模型库，推理主机上的 2-4 TB NVMe SSD 足以从容覆盖日常使用，而完整的历史模型库则保存在 NAS 上而非本地磁盘。',
+          },
+          {
+            q: '为用于 AI 或 LLM 数据集的多盘位 NAS 购买硬盘前，应该检查哪些方面？',
+            a: '购买前请确认四点：工作负载评级（NAS 专用硬盘会标注年度工作负载上限，单位为 TB/年——确认它能覆盖你实际的读写量，而不仅仅是容量）、振动耐受性（多盘位机箱比单个外置硬盘产生更多振动，非 NAS 专用硬盘在这种环境中可能提前降速或故障）、兼容性（查看 NAS 厂商的硬盘兼容性列表——部分 NAS 固件会限制未获批准的硬盘或在其上禁用某些功能），以及保修期限（NAS 专用硬盘通常提供 3-5 年保修——应与你计划在更新硬件阵列前运行的时间相匹配）。',
+          },
+          {
+            q: '对于本地部署的 AI 服务器，单块大容量硬盘、RAID，还是 SSD 与 HDD 混合，哪种配置更可靠？',
+            a: '无论容量多大，单块硬盘都是可靠性最低的选择——一次故障就会丢失所有数据，没有冗余，也没有快速重建的途径。RAID（具体来说是 NAS 上的 RAID 6）是共享模型库的正确默认选择，因为它能在硬盘故障时不丢失数据。SSD 加 HDD 的混合配置并不是 RAID 的替代方案——它描述的是另一种角色划分：快速的本地 NVMe SSD 用于活跃推理，NAS 上受 RAID 保护的 HDD 用于海量模型库。就可靠性而言，RAID 6 加上真正的备份（3-2-1 规则）胜过任何单盘配置，无论硬盘类型如何。',
+          },
+          {
+            q: '在 AI 流水线中，什么时候应该为训练或推理数据使用本地 NVMe 暂存盘，而不是共享 NAS？',
+            a: '对于活跃运行期间会被反复读取的内容，使用本地 NVMe 暂存盘——例如持续流式传入 GPU 的训练数据，或推理过程中的模型权重。本地 NVMe 没有网络跳转，因此更快，并且在多个任务同时运行时能避免共享 NAS 成为瓶颈。对于在多次运行之间持续存在、其他机器或团队成员需要用到的模型库，使用共享 NAS——完整的模型集合、已完成的检查点，以及当前未使用的数据集。一种常见模式是在任务开始时把数据集或模型从 NAS 复制到本地 NVMe 暂存空间，任务结束后再把结果写回 NAS——NAS 用于存储和共享，而不是直接支撑一个活跃的训练循环。',
           },
         ],
       },
@@ -2667,18 +2788,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-07-01',
+    dateModified: '2026-08-29',
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
     title: 'El mejor NAS y almacenamiento para modelos de IA local 2026: guía de compra',
     seoTitle: 'Mejor NAS y SSD para modelos de IA local 2026',
     intro:
-      'La mayoría de los consejos de almacenamiento para IA local optimizan un único número —la capacidad— y pasan por alto que hay dos tareas de almacenamiento involucradas. Un SSD NVMe rápido es el lugar desde donde se cargan los modelos en el momento de la inferencia; un NAS es donde reside la biblioteca de modelos, se mantiene respaldada y se comparte entre varias máquinas. Ambos no son intercambiables, y comprar uno cuando se necesita el otro es el error de almacenamiento más común. Esta guía compara los NAS de Synology y QNAP para el rol de biblioteca, y los SSD de Samsung y Western Digital para el rol de carga, en las cifras que determinan la compra: capacidad, redundancia, velocidad de transferencia y precio. Una advertencia sobre el precio: la escasez de chips de memoria de 2026 elevó los precios de los SSD muy por encima de los niveles anteriores, por lo que cada precio aquí es una instantánea de julio de 2026 — confirma el precio actual antes de comprar.',
+      'La mayoría de los consejos de almacenamiento para IA local optimizan un único número —la capacidad— y pasan por alto que hay dos tareas de almacenamiento involucradas. Un SSD NVMe rápido es el lugar desde donde se cargan los modelos en el momento de la inferencia; un NAS es donde reside la biblioteca de modelos, se mantiene respaldada y se comparte entre varias máquinas. Ambos no son intercambiables, y comprar uno cuando se necesita el otro es el error de almacenamiento más común. Esta guía compara los NAS de Synology y QNAP para el rol de biblioteca, y los SSD de Samsung y Western Digital para el rol de carga, en las cifras que determinan la compra: capacidad, redundancia, velocidad de transferencia y precio. Una advertencia sobre el precio: la escasez de chips de memoria de 2026 elevó los precios de los SSD muy por encima de los niveles anteriores, por lo que trata cada precio aquí como una estimación — confirma el precio actual antes de comprar.',
     metaDescription:
       'Compara NAS Synology y QNAP más SSD Samsung y WD para modelos de IA local: redundancia RAID 6, carga rápida, capacidad y precios de 2026.',
     heroImage: '/images/best-nas-storage-local-ai-models-2026-comparison-table-hero-es.webp',
     twitterDescription:
-      'NAS para la biblioteca de modelos, SSD NVMe para carga rápida — dos tareas, no una. Synology, QNAP, Samsung, WD comparados para almacenamiento de IA local con precios de julio de 2026.',
+      'NAS para la biblioteca de modelos, SSD NVMe para carga rápida — dos tareas, no una. Synology, QNAP, Samsung, WD comparados para almacenamiento de IA local con precios actuales.',
     affiliateDisclosure: true,
     current_models_mentioned: [
       'Llama 3.3 70B',
@@ -2716,9 +2837,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Biblioteca compartida: NAS Synology de 4 bahías — software más sencillo, ideal para equipos sin especialistas',
           'Más hardware por euro: NAS QNAP de 4 bahías — CPU más potente y más puertos a precio similar',
           'Ejecuta el NAS en RAID 6: sobrevive a dos fallos de disco simultáneos',
-          'Los precios de los SSD subieron con la escasez de memoria de 2026 — trata cada precio como una instantánea de julio de 2026',
+          'Los precios de los SSD subieron con la escasez de memoria de 2026 — trata cada precio aquí como una estimación',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-08',
       },
     },
     toc: [
@@ -2750,7 +2871,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Elección para biblioteca compartida (más hardware por euro): NAS QNAP de 4 bahías.** QNAP suele ofrecer una CPU más potente y más puertos a un precio similar, a costa de una curva de aprendizaje ligeramente más pronunciada.',
           '**Ejecuta el NAS en RAID 6.** El RAID 6 sobrevive a dos fallos de disco simultáneos y es el estándar en producción; el RAID 5 con discos grandes arriesga un segundo fallo durante la reconstrucción de 24-48 horas.',
           '**RAID no es un respaldo.** RAID protege frente al fallo de disco, no frente al ransomware, robo o borrado. Sigue la regla 3-2-1: 3 copias, 2 tipos de medios, 1 fuera del sitio.',
-          '**Los precios subieron en 2026.** La escasez de chips de memoria elevó los precios de NAND y SSD. Trata cada precio aquí como una instantánea de julio de 2026 y vuelve a comprobarlo antes de comprar.',
+          '**Los precios subieron en 2026.** La escasez de chips de memoria elevó los precios de NAND y SSD. Trata cada precio aquí como una estimación y vuelve a comprobarlo antes de comprar.',
         ],
       },
       quickFacts: {
@@ -2763,7 +2884,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Velocidad de red:** un NAS en la misma LAN gigabit es suficiente para transferir un modelo de 35 GB (aproximadamente 1 hora); el 10 GbE solo importa para equipos de más de ~20 usuarios.',
           '**Regla de respaldo:** 3-2-1 — 3 copias, 2 tipos de medios, 1 fuera del sitio. Solo RAID no es un respaldo.',
           '**Desarrollador en solitario:** un SSD interno rápido más una unidad de respaldo externa suele ser mejor que comprar un NAS.',
-          '**Realidad de precios 2026:** la escasez de chips de memoria elevó los precios de los SSD; trata las cifras como una instantánea de julio de 2026.',
+          '**Realidad de precios 2026:** la escasez de chips de memoria elevó los precios de los SSD; trata las cifras como estimaciones.',
         ],
       },
       editorsChoice: {
@@ -2799,7 +2920,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Cómo se comparan el NAS y el SSD para IA local en 2026',
         content:
-          'La tabla separa las dos tareas de almacenamiento. Las filas de NAS cubren el rol de biblioteca compartida; las filas de SSD cubren el rol de carga rápida. Las cifras de capacidad y RAID se basan en configuraciones estándar de 4 bahías. Los precios son una instantánea de julio de 2026 — la escasez de chips de memoria de 2026 elevó los precios de los SSD, así que confirma la cifra actual antes de comprar. Los precios de los NAS son solo de hardware y excluyen los discos.',
+          'La tabla separa las dos tareas de almacenamiento. Las filas de NAS cubren el rol de biblioteca compartida; las filas de SSD cubren el rol de carga rápida. Las cifras de capacidad y RAID se basan en configuraciones estándar de 4 bahías. Los precios de abajo son estimaciones — la escasez de chips de memoria de 2026 elevó los precios de los SSD, así que confirma la cifra actual antes de comprar. Los precios de los NAS son solo de hardware y excluyen los discos.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2810,14 +2931,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Imagina el SSD como la encimera de la cocina donde realmente cocinas y el NAS como la despensa donde se guarda todo. Cocinas rápido en la encimera; mantienes el stock seguro en la despensa. Cocinar en la despensa es lento, y una encimera sin despensa se queda sin espacio.',
           },
         ],
-        columns: ['Almacenamiento', 'Rol', 'Capacidad', 'Redundancia', 'Precio (julio 2026)', 'Mejor para'],
+        columns: ['Almacenamiento', 'Rol', 'Capacidad', 'Redundancia', 'Precio', 'Mejor para'],
         rows: [
           {
             'Almacenamiento': 'NAS Synology de 4 bahías',
             'Rol': 'Biblioteca de modelos compartida',
             'Capacidad': '~8 TB utilizables en RAID 6 (4x 4 TB)',
             'Redundancia': 'RAID 6 — sobrevive a 2 fallos de disco',
-            'Precio (julio 2026)': '~850-1.150 € solo hardware',
+            'Precio': '~850-1.150 € solo hardware',
             'Mejor para': 'Equipos que quieren el software más sencillo',
           },
           {
@@ -2825,7 +2946,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Rol': 'Biblioteca de modelos compartida',
             'Capacidad': '~8 TB utilizables en RAID 6 (4x 4 TB)',
             'Redundancia': 'RAID 6 — sobrevive a 2 fallos de disco',
-            'Precio (julio 2026)': '~700-870 € solo hardware',
+            'Precio': '~700-870 € solo hardware',
             'Mejor para': 'Equipos que quieren más CPU y puertos',
           },
           {
@@ -2833,7 +2954,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Rol': 'Carga rápida de modelos',
             'Capacidad': '1-4 TB por disco',
             'Redundancia': 'Ninguna — combina con un respaldo',
-            'Precio (julio 2026)': '~290-340 € para 2 TB',
+            'Precio': '~290-340 € para 2 TB',
             'Mejor para': 'Carga más rápida, máquina única',
           },
           {
@@ -2841,7 +2962,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Rol': 'Carga rápida de modelos',
             'Capacidad': '1-4 TB por disco',
             'Redundancia': 'Ninguna — combina con un respaldo',
-            'Precio (julio 2026)': '~235-300 € para 2 TB',
+            'Precio': '~235-300 € para 2 TB',
             'Mejor para': 'Carga rápida, alternativa de valor',
           },
           {
@@ -2849,12 +2970,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Rol': 'Respaldo sin conexión',
             'Capacidad': '2-8 TB',
             'Redundancia': 'Ninguna — es el respaldo',
-            'Precio (julio 2026)': '~120-200 €',
+            'Precio': '~120-200 €',
             'Mejor para': 'Desarrolladores en solitario, copia fuera del sitio',
           },
         ],
         image: '/images/best-nas-storage-local-ai-models-2026-comparison-table-hero-es.webp',
-        imageCaption: 'NAS vs SSD para Almacenamiento IA Local -- Precios de julio de 2026',
+        imageCaption: 'NAS vs SSD para Almacenamiento IA Local -- comparación de precios',
       },
       whichStorage: {
         id: 'which-storage',
@@ -2881,7 +3002,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Software:** Synology DSM es el sistema operativo NAS más accesible — la configuración de RAID, las instantáneas programadas y el respaldo en la nube son asistentes guiados, no archivos de configuración.',
           '**Capacidad:** una unidad de 4 bahías con cuatro discos de 4 TB ofrece aproximadamente 8 TB utilizables en RAID 6 — espacio para una biblioteca grande de modelos cuantizados (un modelo de 70B en Q4 pesa aproximadamente 35-42 GB).',
           '**Red:** un NAS en la misma LAN gigabit transfiere un modelo de 35 GB en aproximadamente una hora; eso es suficiente para el rol de biblioteca. El 10 GbE solo importa a partir de aproximadamente 20 usuarios.',
-          '**Precio:** aproximadamente 850-1.150 € solo de hardware como instantánea de julio de 2026 (precios de retail en España; en Latinoamérica varían por impuestos de importación); presupuesta los discos aparte.',
+          '**Precio:** aproximadamente 850-1.150 € solo de hardware como estimación (precios de retail en España; en Latinoamérica varían por impuestos de importación); presupuesta los discos aparte.',
           '**Por qué comprar Synology:** quieres una biblioteca compartida y respaldada con el menor esfuerzo de configuración y mantenimiento.',
           '**Por qué evitar Synology:** un desarrollador en solitario con una máquina no necesita un NAS — un SSD más una unidad externa es más barato y sencillo.',
         ],
@@ -2910,7 +3031,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Hardware:** los modelos QNAP suelen incluir una CPU más rápida y más puertos (incluyendo opciones de red más rápidas) a un precio similar al modelo Synology comparable.',
           '**Software:** QTS es capaz pero menos guiado que Synology DSM — espera más menús y una configuración inicial más compleja.',
           '**Capacidad:** una unidad de 4 bahías en RAID 6 con cuatro discos de 4 TB ofrece aproximadamente 8 TB utilizables — el mismo margen de biblioteca que el equivalente Synology.',
-          '**Precio:** aproximadamente 700-870 € solo de hardware como instantánea de julio de 2026 (retail en España; en Latinoamérica varían por impuestos de importación), discos aparte.',
+          '**Precio:** aproximadamente 700-870 € solo de hardware como estimación (retail en España; en Latinoamérica varían por impuestos de importación), discos aparte.',
           '**Por qué comprar QNAP:** quieres más CPU y opciones de red más rápidas por euro, y te resulta cómoda una configuración menos guiada.',
           '**Por qué evitar QNAP:** si el equipo no tiene especialistas en almacenamiento y quiere el software más sencillo posible, Synology DSM es el camino más fácil.',
         ],
@@ -2939,7 +3060,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Samsung 990 Pro:** un SSD NVMe PCIe 4.0 de gama alta; la opción recomendada para la carga de modelos más rápida. Un modelo de 70B en Q4 pesa aproximadamente 35-42 GB, por lo que la velocidad de lectura se nota en cada cambio de modelo.',
           '**WD Black SN850X:** un SSD NVMe PCIe 4.0 de gama alta comparable; la alternativa de valor cuando el Samsung tiene un precio más alto en ese momento.',
           '**Capacidad:** 2 TB es el punto óptimo práctico para un conjunto de trabajo en la máquina; 4 TB si mantienes muchos modelos grandes cargados localmente en lugar de en el NAS.',
-          '**Precio:** aproximadamente 235-340 € para un disco de 2 TB como instantánea de julio de 2026 (retail en España; en Latinoamérica varían por impuestos de importación) — la escasez de chips de memoria elevó los precios de NAND, así que confirma antes de comprar.',
+          '**Precio:** aproximadamente 235-340 € para un disco de 2 TB como estimación (retail en España; en Latinoamérica varían por impuestos de importación) — la escasez de chips de memoria elevó los precios de NAND, así que confirma antes de comprar.',
           '**Por qué comprar un SSD NVMe de gama alta:** el tiempo de carga del modelo se nota en cada cambio, y un SSD rápido elimina segundos de cada uno.',
           '**Por qué evitar la gama alta:** si cargas un modelo y rara vez cambias, un SSD NVMe de gama media es suficiente — la velocidad de lectura de gama alta importa más con cambios frecuentes.',
         ],
@@ -2970,11 +3091,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'nvme-ssd-picks',
         title: 'Mejores NVMe para alojar modelos de IA locales 2026',
         content:
-          '**El mejor SSD NVMe interno para una carga de trabajo de inferencia de IA local necesita una velocidad de lectura secuencial de al menos 5 GB/s y al menos 2 TB de capacidad — 4 TB si alternas entre varios modelos grandes.** Un modelo de 70B en cuantización Q4 pesa aproximadamente 35-42 GB; un solo cambio de modelo lee el archivo de pesos completo desde el disco. La velocidad de lectura es el cuello de botella entre un cambio de modelo y el primer token de salida. Las opciones a continuación alcanzan todas ≥ 5 GB/s de lectura secuencial en interfaces PCIe 4.0 o PCIe 5.0 y están disponibles en configuraciones de 4 TB. Nota: en el retail español, el Crucial T705 PCIe 5.0 más rápido se sitúa en la parte baja de precios mientras que el Samsung 990 Pro es el más caro — el disco Gen5 es la mejor relación calidad-precio a precios de julio de 2026 (en Latinoamérica los precios varían por impuestos de importación).',
+          '**El mejor SSD NVMe interno para una carga de trabajo de inferencia de IA local necesita una velocidad de lectura secuencial de al menos 5 GB/s y al menos 2 TB de capacidad — 4 TB si alternas entre varios modelos grandes.** Un modelo de 70B en cuantización Q4 pesa aproximadamente 35-42 GB; un solo cambio de modelo lee el archivo de pesos completo desde el disco. La velocidad de lectura es el cuello de botella entre un cambio de modelo y el primer token de salida. Las opciones a continuación alcanzan todas ≥ 5 GB/s de lectura secuencial en interfaces PCIe 4.0 o PCIe 5.0 y están disponibles en configuraciones de 4 TB. Nota: en el retail español, el Crucial T705 PCIe 5.0 más rápido se sitúa en la parte baja de precios mientras que el Samsung 990 Pro es el más caro — el disco Gen5 es la mejor relación calidad-precio a precios actuales (en Latinoamérica los precios varían por impuestos de importación).',
         items: [
-          '**Crucial T705 4TB (~450–560 €, julio 2026):** NVMe PCIe 5.0, lecturas secuenciales de hasta 14.500 MB/s. A pesar de su velocidad Gen5, es el más barato de los tres — la mejor relación calidad-precio. Solo almacena pesos del modelo; la VRAM ejecuta la inferencia una vez cargado. Requiere un slot M.2 PCIe 5.0.',
-          '**WD Black SN850X 4TB (~510–580 €, julio 2026):** NVMe PCIe 4.0, lecturas secuenciales de hasta 7.300 MB/s, garantía de 5 años. La opción intermedia — algo más cara que el Crucial T705 4TB en el retail español, pero bien disponible y probada.',
-          '**Samsung 990 Pro 4TB (~600–650 €, julio 2026):** NVMe PCIe 4.0, lecturas secuenciales de hasta 7.450 MB/s, garantía de 5 años con 2.400 TBW de calificación de resistencia. La opción premium — la más cara de las tres en julio de 2026 (PVP Samsung ~700 €, calle 600–650 €). Rendimiento premium constante, pero el Crucial T705 4TB ofrece más velocidad a un precio menor.',
+          '**Crucial T705 4TB (~450–560 €):** NVMe PCIe 5.0, lecturas secuenciales de hasta 14.500 MB/s. A pesar de su velocidad Gen5, es el más barato de los tres — la mejor relación calidad-precio. Solo almacena pesos del modelo; la VRAM ejecuta la inferencia una vez cargado. Requiere un slot M.2 PCIe 5.0.',
+          '**WD Black SN850X 4TB (~510–580 €):** NVMe PCIe 4.0, lecturas secuenciales de hasta 7.300 MB/s, garantía de 5 años. La opción intermedia — algo más cara que el Crucial T705 4TB en el retail español, pero bien disponible y probada.',
+          '**Samsung 990 Pro 4TB (~600–650 €):** NVMe PCIe 4.0, lecturas secuenciales de hasta 7.450 MB/s, garantía de 5 años con 2.400 TBW de calificación de resistencia. La opción premium — actualmente la más cara de las tres (PVP Samsung ~700 €, calle 600–650 €). Rendimiento premium constante, pero el Crucial T705 4TB ofrece más velocidad a un precio menor.',
         ],
         callouts: [
           {
@@ -3008,7 +3129,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         snippetBlocks: [
           {
             type: 'one-sentence',
-            text: 'El mejor SSD NVMe interno para una carga de trabajo de inferencia de IA local auto-alojada necesita velocidad de lectura secuencial de al menos 5 GB/s y al menos 2-4 TB de capacidad — el Crucial T705 4TB (~450–560 €) es la mejor relación calidad-precio a velocidad Gen5, mientras que el WD Black SN850X 4TB (~510–580 €) y el Samsung 990 Pro 4TB (~600–650 €) cuestan algo más en julio de 2026 (retail en España; en Latinoamérica varían por impuestos de importación).',
+            text: 'El mejor SSD NVMe interno para una carga de trabajo de inferencia de IA local auto-alojada necesita velocidad de lectura secuencial de al menos 5 GB/s y al menos 2-4 TB de capacidad — el Crucial T705 4TB (~450–560 €) es la mejor relación calidad-precio a velocidad Gen5, mientras que el WD Black SN850X 4TB (~510–580 €) y el Samsung 990 Pro 4TB (~600–650 €) cuestan actualmente algo más (retail en España; en Latinoamérica varían por impuestos de importación).',
           },
           {
             type: 'plain-terms',
@@ -3016,7 +3137,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/best-nas-storage-local-ai-models-2026-nvme-ssd-picks-hero-es.webp',
-        imageCaption: 'Mejores SSD NVMe para Inferencia IA -- Velocidad vs precio, julio de 2026 (4TB)',
+        imageCaption: 'Mejores SSD NVMe para Inferencia IA -- Velocidad vs precio (4TB)',
       },
       raidBackup: {
         id: 'raid-backup',
@@ -3080,7 +3201,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'Debido a que la escasez de chips de memoria de 2026 movió los precios de los SSD, cada cifra de esta guía es una instantánea de julio de 2026. Abre el listado actual del distribuidor antes de comprar y compara los discos Samsung y WD ese día — el mejor valor alterna.',
+            text: 'Debido a que la escasez de chips de memoria de 2026 movió los precios de los SSD, cada cifra de esta guía es una estimación. Abre el listado actual del distribuidor antes de comprar y compara los discos Samsung y WD ese día — el mejor valor alterna.',
           },
         ],
         affiliateLinks: [
@@ -3172,7 +3293,31 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Cambiaron los precios de los SSD en 2026?',
-            a: 'Sí. La escasez de chips de memoria de 2026 elevó los precios de NAND y SSD por encima de los niveles anteriores. Cada precio de esta guía es una instantánea de julio de 2026. Confirma el precio actual en el listado del distribuidor antes de comprar, y compara el Samsung 990 Pro con el WD Black SN850X ese día — el más barato de los dos alterna con el mercado.',
+            a: 'Sí. La escasez de chips de memoria de 2026 elevó los precios de NAND y SSD por encima de los niveles anteriores. Cada precio de esta guía es una estimación. Confirma el precio actual en el listado del distribuidor antes de comprar, y compara el Samsung 990 Pro con el WD Black SN850X ese día — el más barato de los dos alterna con el mercado.',
+          },
+          {
+            q: '¿Cuál es una mezcla de almacenamiento sensata para un laboratorio de IA pequeño — NVMe local rápido, almacenamiento compartido y archivo — sin gastar de más?',
+            a: 'Divide en tres niveles y dimensiona cada uno según la frecuencia de acceso, no según la cantidad de datos que existan en teoría. El NVMe local rápido (1-4 TB por máquina) contiene los pesos del modelo cargado actualmente para inferencia o un entrenamiento activo — aquí importa la velocidad, y la capacidad debe mantenerse ajustada. El almacenamiento NAS compartido (una unidad de 4 bahías en RAID 6) contiene la biblioteca de modelos completa, los conjuntos de datos y los checkpoints que necesita todo el equipo — aquí es donde debes comprar capacidad real, porque los discos NAS cuestan mucho menos por terabyte que el NVMe. El archivo a largo plazo es el nivel más barato: HDD masivos o un nivel de nube fría para modelos y datos que no usas activamente pero no quieres borrar. El error de gastar de más es comprar capacidad NVMe para el nivel de archivo — paga precios premium solo por los discos que realmente están en la ruta activa.',
+          },
+          {
+            q: '¿Debo usar discos certificados para NAS o discos de centro de datos empresariales para un NAS de IA que funciona 24/7 con varios usuarios?',
+            a: 'Los discos certificados para NAS (por ejemplo, Seagate IronWolf, WD Red Plus) están diseñados para funcionamiento continuo 24/7, la vibración de chasis multibahía y cargas moderadas multiusuario — son la opción por defecto correcta para el NAS de biblioteca de modelos de un equipo pequeño. Pasa a discos de centro de datos empresariales (por ejemplo, Seagate Exos, WD Gold) cuando el NAS atienda a muchos usuarios simultáneos, tenga lectura/escritura sostenida más allá de la calificación de carga de trabajo típica de un NAS, o cuando la resistencia adicional y la garantía más larga justifiquen el mayor coste por disco. Para la mayoría de los equipos de IA local con menos de unos 10 usuarios, los discos certificados para NAS en RAID 6 son suficientes; los discos empresariales son una mejora para escalar, no un requisito para empezar.',
+          },
+          {
+            q: '¿Cuánto espacio SSD necesito para un servidor de inferencia LLM, contando los pesos del modelo, las variantes cuantizadas y una copia de reversión?',
+            a: 'Presupuesta más que solo el modelo que usas hoy. Un solo modelo de 70B en Q4 pesa aproximadamente 35-42 GB, pero una configuración funcional suele mantener al menos dos niveles de cuantización del mismo modelo (para probar calidad frente a velocidad) más la versión anterior del modelo como copia de reversión antes de un cambio — como regla general, unas 3 veces el tamaño de un solo modelo. Para una biblioteca de varias familias de modelos de 7B a 70B, un SSD NVMe de 2-4 TB en la máquina de inferencia cubre cómodamente el uso activo, mientras que la biblioteca histórica completa se mantiene en el NAS en lugar del disco local.',
+          },
+          {
+            q: '¿Qué debo comprobar antes de comprar discos para un NAS multibahía usado con conjuntos de datos de IA o LLM?',
+            a: 'Confirma cuatro cosas antes de comprar: la calificación de carga de trabajo (los discos certificados para NAS indican un límite anual en TB/año — comprueba que cubra tu volumen real de lectura/escritura, no solo la capacidad), la tolerancia a la vibración (los chasis multibahía generan más vibración que un disco externo único, y los discos no certificados para NAS pueden limitar su rendimiento o fallar antes en ese entorno), la compatibilidad (revisa la lista de compatibilidad de discos del fabricante del NAS — algunos firmwares de NAS restringen discos no aprobados o desactivan funciones en ellos), y la duración de la garantía (los discos certificados para NAS suelen llevar garantías de 3-5 años; hazla coincidir con cuánto tiempo planeas usar la matriz antes de renovarla).',
+          },
+          {
+            q: 'Para un servidor de IA local, ¿es un solo disco enorme, RAID, o una mezcla de SSD y HDD la configuración más fiable?',
+            a: 'Un solo disco de cualquier tamaño es la opción menos fiable — un fallo lo pierde todo, sin redundancia ni una vía de reconstrucción rápida. El RAID (concretamente RAID 6 en un NAS) es la opción por defecto correcta para la biblioteca de modelos compartida porque sobrevive a un fallo de disco sin pérdida de datos. Una configuración mixta de SSD más HDD no es una alternativa al RAID — describe un reparto diferente de roles: SSD NVMe local rápido para inferencia activa, HDD protegidos por RAID en el NAS para la biblioteca masiva. En cuanto a fiabilidad específicamente, RAID 6 más una copia de seguridad real (la regla 3-2-1) supera a cualquier configuración de disco único sin importar el tipo de disco.',
+          },
+          {
+            q: 'En un pipeline de IA, ¿cuándo tiene sentido usar discos de trabajo NVMe locales en lugar de un NAS compartido para datos de entrenamiento o inferencia?',
+            a: 'Usa discos de trabajo NVMe locales para todo lo que se lea repetidamente durante una ejecución activa — datos de entrenamiento transmitidos a la GPU, o los pesos de un modelo durante la inferencia. El NVMe local no tiene salto de red, así que es más rápido y elimina el NAS compartido como cuello de botella cuando varios trabajos se ejecutan a la vez. Usa el NAS compartido para la biblioteca que persiste entre ejecuciones y que otras máquinas o miembros del equipo necesitan: la colección completa de modelos, los checkpoints terminados y los conjuntos de datos que no están en uso actualmente. Un patrón habitual es copiar un conjunto de datos o modelo del NAS al espacio de trabajo NVMe local al inicio de un trabajo, y luego escribir los resultados de vuelta al NAS después — el NAS sirve para almacenamiento y compartición, no para servir un bucle de entrenamiento activo.',
           },
         ],
       },
@@ -3192,11 +3337,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'El mejor NAS y almacenamiento para modelos de IA local 2026: guía de compra',
-      description: 'Comparativa de NAS Synology y QNAP más SSD Samsung y WD para modelos de IA local: redundancia RAID 6, carga rápida de modelos, capacidad y precios de julio de 2026.',
+      description: 'Comparativa de NAS Synology y QNAP más SSD Samsung y WD para modelos de IA local: redundancia RAID 6, carga rápida de modelos, capacidad y precios actuales.',
       url: 'https://www.promptquorum.com/es/power-local-llm/best-nas-storage-local-ai-models-2026',
       inLanguage: 'es',
       datePublished: '2026-05-24',
-      dateModified: '2026-07-01',
+      dateModified: '2026-08-29',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -3205,18 +3350,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-07-01',
+    dateModified: '2026-08-29',
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
     title: 'O melhor NAS e armazenamento para modelos de IA local 2026: guia de compra',
     seoTitle: 'Melhor NAS e SSD para modelos de IA local 2026',
     intro:
-      'A maioria dos conselhos de armazenamento para IA local otimiza um único número —a capacidade— e ignora que há duas tarefas de armazenamento envolvidas. Um SSD NVMe rápido é o lugar de onde os modelos são carregados no momento da inferência; um NAS é onde a biblioteca de modelos reside, se mantém com backup e é compartilhada entre várias máquinas. Os dois não são intercambiáveis, e comprar um quando você precisa do outro é o erro de armazenamento mais comum. Este guia compara os NAS da Synology e da QNAP para o papel de biblioteca, e os SSDs da Samsung e da Western Digital para o papel de carregamento, nos números que definem a compra: capacidade, redundância, velocidade de transferência e preço. Um aviso sobre o preço: a escassez de chips de memória de 2026 elevou os preços dos SSDs muito acima dos níveis anteriores, então cada preço aqui é um instantâneo de julho de 2026 — confirme o preço atual antes de comprar.',
+      'A maioria dos conselhos de armazenamento para IA local otimiza um único número —a capacidade— e ignora que há duas tarefas de armazenamento envolvidas. Um SSD NVMe rápido é o lugar de onde os modelos são carregados no momento da inferência; um NAS é onde a biblioteca de modelos reside, se mantém com backup e é compartilhada entre várias máquinas. Os dois não são intercambiáveis, e comprar um quando você precisa do outro é o erro de armazenamento mais comum. Este guia compara os NAS da Synology e da QNAP para o papel de biblioteca, e os SSDs da Samsung e da Western Digital para o papel de carregamento, nos números que definem a compra: capacidade, redundância, velocidade de transferência e preço. Um aviso sobre o preço: a escassez de chips de memória de 2026 elevou os preços dos SSDs muito acima dos níveis anteriores, então trate cada preço aqui como uma estimativa — confirme o preço atual antes de comprar.',
     metaDescription:
       'Compare NAS Synology e QNAP mais SSDs Samsung e WD para modelos de IA local: redundância RAID 6, carregamento rápido, capacidade e preços de 2026.',
     heroImage: '/images/best-nas-storage-local-ai-models-2026-comparison-table-hero-pt.webp',
     twitterDescription:
-      'NAS para a biblioteca de modelos, SSD NVMe para carregamento rápido — duas tarefas, não uma. Synology, QNAP, Samsung, WD comparados para armazenamento de IA local com preços de julho de 2026.',
+      'NAS para a biblioteca de modelos, SSD NVMe para carregamento rápido — duas tarefas, não uma. Synology, QNAP, Samsung, WD comparados para armazenamento de IA local com preços atuais.',
     affiliateDisclosure: true,
     current_models_mentioned: [
       'Llama 3.3 70B',
@@ -3254,9 +3399,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Biblioteca compartilhada: NAS Synology de 4 baias — software mais simples, ideal para times sem especialistas',
           'Mais hardware por real: NAS QNAP de 4 baias — CPU mais potente e mais portas a preço similar',
           'Execute o NAS em RAID 6: sobrevive a duas falhas de disco simultâneas',
-          'Os preços dos SSDs subiram com a escassez de memória de 2026 — trate cada preço como um instantâneo de julho de 2026',
+          'Os preços dos SSDs subiram com a escassez de memória de 2026 — trate cada preço aqui como uma estimativa',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-08',
       },
     },
     toc: [
@@ -3288,7 +3433,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Escolha para biblioteca compartilhada (mais hardware por real): NAS QNAP de 4 baias.** A QNAP costuma oferecer uma CPU mais potente e mais portas a um preço similar, ao custo de uma curva de aprendizado ligeiramente mais acentuada.',
           '**Execute o NAS em RAID 6.** O RAID 6 sobrevive a duas falhas de disco simultâneas e é o padrão em produção; o RAID 5 com discos grandes arrisca uma segunda falha durante a reconstrução de 24-48 horas.',
           '**RAID não é um backup.** O RAID protege contra falha de disco, não contra ransomware, roubo ou exclusão. Siga a regra 3-2-1: 3 cópias, 2 tipos de mídia, 1 fora do local.',
-          '**Os preços subiram em 2026.** A escassez de chips de memória elevou os preços de NAND e SSD. Trate cada preço aqui como um instantâneo de julho de 2026 e verifique novamente antes de comprar.',
+          '**Os preços subiram em 2026.** A escassez de chips de memória elevou os preços de NAND e SSD. Trate cada preço aqui como uma estimativa e verifique novamente antes de comprar.',
         ],
       },
       quickFacts: {
@@ -3301,7 +3446,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Velocidade de rede:** um NAS na mesma LAN gigabit é suficiente para transferir um modelo de 35 GB (aproximadamente 1 hora); o 10 GbE só importa para times com mais de ~20 usuários.',
           '**Regra de backup:** 3-2-1 — 3 cópias, 2 tipos de mídia, 1 fora do local. Só RAID não é um backup.',
           '**Desenvolvedor solo:** um SSD interno rápido mais uma unidade de backup externa costuma ser melhor que comprar um NAS.',
-          '**Realidade de preços 2026:** a escassez de chips de memória elevou os preços dos SSDs; trate os números como um instantâneo de julho de 2026.',
+          '**Realidade de preços 2026:** a escassez de chips de memória elevou os preços dos SSDs; trate os números como estimativas.',
         ],
       },
       editorsChoice: {
@@ -3337,7 +3482,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Como o NAS e o SSD se comparam para IA local em 2026',
         content:
-          'A tabela separa as duas tarefas de armazenamento. As linhas de NAS cobrem o papel de biblioteca compartilhada; as linhas de SSD cobrem o papel de carregamento rápido. Os números de capacidade e RAID baseiam-se em configurações padrão de 4 baias. Os preços são um instantâneo de julho de 2026 — a escassez de chips de memória de 2026 elevou os preços dos SSDs, então confirme o número atual antes de comprar. Os preços dos NAS são apenas de hardware e excluem os discos.',
+          'A tabela separa as duas tarefas de armazenamento. As linhas de NAS cobrem o papel de biblioteca compartilhada; as linhas de SSD cobrem o papel de carregamento rápido. Os números de capacidade e RAID baseiam-se em configurações padrão de 4 baias. Os preços abaixo são estimativas — a escassez de chips de memória de 2026 elevou os preços dos SSDs, então confirme o número atual antes de comprar. Os preços dos NAS são apenas de hardware e excluem os discos.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -3348,14 +3493,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Imagine o SSD como a bancada da cozinha onde você realmente cozinha e o NAS como a despensa onde tudo é guardado. Você cozinha rápido na bancada; mantém o estoque seguro na despensa. Cozinhar na despensa é lento, e uma bancada sem despensa fica sem espaço.',
           },
         ],
-        columns: ['Armazenamento', 'Papel', 'Capacidade', 'Redundância', 'Preço (julho 2026)', 'Melhor para'],
+        columns: ['Armazenamento', 'Papel', 'Capacidade', 'Redundância', 'Preço', 'Melhor para'],
         rows: [
           {
             'Armazenamento': 'NAS Synology de 4 baias',
             'Papel': 'Biblioteca de modelos compartilhada',
             'Capacidade': '~8 TB utilizáveis em RAID 6 (4x 4 TB)',
             'Redundância': 'RAID 6 — sobrevive a 2 falhas de disco',
-            'Preço (julho 2026)': '~R$ 6.500-8.500 só hardware',
+            'Preço': '~R$ 6.500-8.500 só hardware',
             'Melhor para': 'Times que querem o software mais simples',
           },
           {
@@ -3363,7 +3508,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Papel': 'Biblioteca de modelos compartilhada',
             'Capacidade': '~8 TB utilizáveis em RAID 6 (4x 4 TB)',
             'Redundância': 'RAID 6 — sobrevive a 2 falhas de disco',
-            'Preço (julho 2026)': '~R$ 5.500-7.500 só hardware',
+            'Preço': '~R$ 5.500-7.500 só hardware',
             'Melhor para': 'Times que querem mais CPU e portas',
           },
           {
@@ -3371,7 +3516,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Papel': 'Carregamento rápido de modelos',
             'Capacidade': '1-4 TB por disco',
             'Redundância': 'Nenhuma — combine com um backup',
-            'Preço (julho 2026)': '~R$ 3.400-4.000 para 2 TB',
+            'Preço': '~R$ 3.400-4.000 para 2 TB',
             'Melhor para': 'Carregamento mais rápido, máquina única',
           },
           {
@@ -3379,7 +3524,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Papel': 'Carregamento rápido de modelos',
             'Capacidade': '1-4 TB por disco',
             'Redundância': 'Nenhuma — combine com um backup',
-            'Preço (julho 2026)': '~R$ 2.900-3.500 para 2 TB',
+            'Preço': '~R$ 2.900-3.500 para 2 TB',
             'Melhor para': 'Carregamento rápido, alternativa de valor',
           },
           {
@@ -3387,12 +3532,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Papel': 'Backup sem conexão',
             'Capacidade': '2-8 TB',
             'Redundância': 'Nenhuma — é o backup',
-            'Preço (julho 2026)': '~R$ 700-1.600',
+            'Preço': '~R$ 700-1.600',
             'Melhor para': 'Desenvolvedores solo, cópia fora do local',
           },
         ],
         image: '/images/best-nas-storage-local-ai-models-2026-comparison-table-hero-pt.webp',
-        imageCaption: 'NAS vs SSD para Armazenamento de IA Local -- Preços de julho de 2026',
+        imageCaption: 'NAS vs SSD para Armazenamento de IA Local -- comparação de preços',
       },
       whichStorage: {
         id: 'which-storage',
@@ -3419,7 +3564,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Software:** o Synology DSM é o sistema operacional NAS mais acessível — a configuração de RAID, os snapshots programados e o backup na nuvem são assistentes guiados, não arquivos de configuração.',
           '**Capacidade:** uma unidade de 4 baias com quatro discos de 4 TB oferece aproximadamente 8 TB utilizáveis em RAID 6 — espaço para uma biblioteca grande de modelos quantizados (um modelo de 70B em Q4 pesa aproximadamente 35-42 GB).',
           '**Rede:** um NAS na mesma LAN gigabit transfere um modelo de 35 GB em aproximadamente uma hora; isso é suficiente para o papel de biblioteca. O 10 GbE só importa a partir de aproximadamente 20 usuários.',
-          '**Preço:** aproximadamente R$ 6.500-8.500 só de hardware como instantâneo de julho de 2026 (varejo brasileiro já com impostos de importação; o preço em dólar dos EUA é bem menor, mas a importação individual acrescenta imposto e frete); orce os discos à parte.',
+          '**Preço:** aproximadamente R$ 6.500-8.500 só de hardware como estimativa (varejo brasileiro já com impostos de importação; o preço em dólar dos EUA é bem menor, mas a importação individual acrescenta imposto e frete); orce os discos à parte.',
           '**Por que comprar a Synology:** você quer uma biblioteca compartilhada e com backup com o menor esforço de configuração e manutenção.',
           '**Por que evitar a Synology:** um desenvolvedor solo com uma máquina não precisa de um NAS — um SSD mais uma unidade externa é mais barato e simples.',
         ],
@@ -3448,7 +3593,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Hardware:** os modelos QNAP costumam incluir uma CPU mais rápida e mais portas (incluindo opções de rede mais rápidas) a um preço similar ao modelo Synology comparável.',
           '**Software:** o QTS é capaz mas menos guiado que o Synology DSM — espere mais menus e uma configuração inicial mais complexa.',
           '**Capacidade:** uma unidade de 4 baias em RAID 6 com quatro discos de 4 TB oferece aproximadamente 8 TB utilizáveis — a mesma margem de biblioteca que o equivalente Synology.',
-          '**Preço:** aproximadamente R$ 5.500-7.500 só de hardware como instantâneo de julho de 2026 (varejo brasileiro com impostos de importação inclusos), discos à parte.',
+          '**Preço:** aproximadamente R$ 5.500-7.500 só de hardware como estimativa (varejo brasileiro com impostos de importação inclusos), discos à parte.',
           '**Por que comprar a QNAP:** você quer mais CPU e opções de rede mais rápidas por real, e se sente confortável com uma configuração menos guiada.',
           '**Por que evitar a QNAP:** se o time não tem especialistas em armazenamento e quer o software mais simples possível, o Synology DSM é o caminho mais fácil.',
         ],
@@ -3477,7 +3622,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Samsung 990 Pro:** um SSD NVMe PCIe 4.0 de ponta; a opção recomendada para o carregamento de modelos mais rápido. Um modelo de 70B em Q4 pesa aproximadamente 35-42 GB, então a velocidade de leitura se nota em cada troca de modelo.',
           '**WD Black SN850X:** um SSD NVMe PCIe 4.0 de ponta comparável; a alternativa de valor quando o Samsung tem um preço mais alto no momento.',
           '**Capacidade:** 2 TB é o ponto ideal prático para um conjunto de trabalho na máquina; 4 TB se você mantém muitos modelos grandes carregados localmente em vez de no NAS.',
-          '**Preço:** aproximadamente R$ 2.900-4.000 para um disco de 2 TB como instantâneo de julho de 2026 (varejo brasileiro com impostos de importação) — a escassez de chips de memória elevou os preços de NAND, então confirme antes de comprar.',
+          '**Preço:** aproximadamente R$ 2.900-4.000 para um disco de 2 TB como estimativa (varejo brasileiro com impostos de importação) — a escassez de chips de memória elevou os preços de NAND, então confirme antes de comprar.',
           '**Por que comprar um SSD NVMe de ponta:** o tempo de carregamento do modelo se nota em cada troca, e um SSD rápido elimina segundos de cada uma.',
           '**Por que evitar o topo de linha:** se você carrega um modelo e raramente troca, um SSD NVMe intermediário é suficiente — a velocidade de leitura de topo de linha importa mais com trocas frequentes.',
         ],
@@ -3508,11 +3653,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'nvme-ssd-picks',
         title: 'Melhores NVMe para hospedar modelos de IA locais 2026',
         content:
-          '**O melhor SSD NVMe interno para uma carga de trabalho de inferência de IA local precisa de velocidade de leitura sequencial de pelo menos 5 GB/s e pelo menos 2 TB de capacidade — 4 TB se você alterna entre vários modelos grandes.** Um modelo de 70B em quantização Q4 pesa aproximadamente 35-42 GB; uma única troca de modelo lê o arquivo de pesos inteiro do disco. A velocidade de leitura é o gargalo entre uma troca de modelo e o primeiro token de saída. As opções abaixo atingem todas ≥ 5 GB/s de leitura sequencial em interfaces PCIe 4.0 ou PCIe 5.0 e estão disponíveis em configurações de 4 TB. Nota: no varejo brasileiro (com impostos de importação embutidos), o Crucial T705 PCIe 5.0 mais rápido fica na faixa mais baixa de preço, enquanto o Samsung 990 Pro é o mais caro — o disco Gen5 é a melhor relação custo-benefício nos preços de julho de 2026.',
+          '**O melhor SSD NVMe interno para uma carga de trabalho de inferência de IA local precisa de velocidade de leitura sequencial de pelo menos 5 GB/s e pelo menos 2 TB de capacidade — 4 TB se você alterna entre vários modelos grandes.** Um modelo de 70B em quantização Q4 pesa aproximadamente 35-42 GB; uma única troca de modelo lê o arquivo de pesos inteiro do disco. A velocidade de leitura é o gargalo entre uma troca de modelo e o primeiro token de saída. As opções abaixo atingem todas ≥ 5 GB/s de leitura sequencial em interfaces PCIe 4.0 ou PCIe 5.0 e estão disponíveis em configurações de 4 TB. Nota: no varejo brasileiro (com impostos de importação embutidos), o Crucial T705 PCIe 5.0 mais rápido fica na faixa mais baixa de preço, enquanto o Samsung 990 Pro é o mais caro — o disco Gen5 é a melhor relação custo-benefício nos preços atuais.',
         items: [
-          '**Crucial T705 4TB (~R$ 3.800-4.500, julho 2026):** NVMe PCIe 5.0, leituras sequenciais de até 14.500 MB/s. Apesar da velocidade Gen5, é o mais barato dos três — a melhor relação custo-benefício. Disponibilidade limitada no varejo nacional; a maior parte chega via importação, o que acrescenta imposto e frete — confirme o preço final. Armazena apenas pesos do modelo; a VRAM executa a inferência após o carregamento. Requer slot M.2 PCIe 5.0.',
-          '**WD Black SN850X 4TB (~R$ 5.500-5.900, julho 2026):** NVMe PCIe 4.0, leituras sequenciais de até 7.300 MB/s, garantia de 5 anos. A opção intermediária — mais caro que o Crucial T705 4TB no varejo brasileiro, mas bem disponível e comprovado.',
-          '**Samsung 990 Pro 4TB (~R$ 6.400-7.000, julho 2026):** NVMe PCIe 4.0, leituras sequenciais de até 7.450 MB/s, garantia de 5 anos com classificação de resistência de 2.400 TBW. A opção premium — a mais cara das três em julho de 2026 (varejo brasileiro com impostos de importação; PVP à vista no PIX cerca de R$ 6.439). Desempenho premium consistente, mas o Crucial T705 4TB oferece mais velocidade a um preço menor.',
+          '**Crucial T705 4TB (~R$ 3.800-4.500):** NVMe PCIe 5.0, leituras sequenciais de até 14.500 MB/s. Apesar da velocidade Gen5, é o mais barato dos três — a melhor relação custo-benefício. Disponibilidade limitada no varejo nacional; a maior parte chega via importação, o que acrescenta imposto e frete — confirme o preço final. Armazena apenas pesos do modelo; a VRAM executa a inferência após o carregamento. Requer slot M.2 PCIe 5.0.',
+          '**WD Black SN850X 4TB (~R$ 5.500-5.900):** NVMe PCIe 4.0, leituras sequenciais de até 7.300 MB/s, garantia de 5 anos. A opção intermediária — mais caro que o Crucial T705 4TB no varejo brasileiro, mas bem disponível e comprovado.',
+          '**Samsung 990 Pro 4TB (~R$ 6.400-7.000):** NVMe PCIe 4.0, leituras sequenciais de até 7.450 MB/s, garantia de 5 anos com classificação de resistência de 2.400 TBW. A opção premium — atualmente a mais cara das três (varejo brasileiro com impostos de importação; PVP à vista no PIX cerca de R$ 6.439). Desempenho premium consistente, mas o Crucial T705 4TB oferece mais velocidade a um preço menor.',
         ],
         callouts: [
           {
@@ -3554,7 +3699,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/best-nas-storage-local-ai-models-2026-nvme-ssd-picks-hero-pt.webp',
-        imageCaption: 'Melhores SSDs NVMe para Inferência de IA -- Velocidade vs preço, julho de 2026 (4TB)',
+        imageCaption: 'Melhores SSDs NVMe para Inferência de IA -- Velocidade vs preço (4TB)',
       },
       raidBackup: {
         id: 'raid-backup',
@@ -3618,7 +3763,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'Como a escassez de chips de memória de 2026 mexeu nos preços dos SSDs, cada número deste guia é um instantâneo de julho de 2026. Abra o anúncio atual do varejista antes de comprar e compare os discos Samsung e WD nesse dia — o melhor valor alterna.',
+            text: 'Como a escassez de chips de memória de 2026 mexeu nos preços dos SSDs, cada número deste guia é uma estimativa. Abra o anúncio atual do varejista antes de comprar e compare os discos Samsung e WD nesse dia — o melhor valor alterna.',
           },
         ],
         affiliateLinks: [
@@ -3710,7 +3855,31 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Os preços dos SSDs mudaram em 2026?',
-            a: 'Sim. A escassez de chips de memória de 2026 elevou os preços de NAND e SSD acima dos níveis anteriores. Cada preço deste guia é um instantâneo de julho de 2026. Confirme o preço atual no anúncio do varejista antes de comprar, e compare o Samsung 990 Pro com o WD Black SN850X nesse dia — o mais barato dos dois alterna com o mercado.',
+            a: 'Sim. A escassez de chips de memória de 2026 elevou os preços de NAND e SSD acima dos níveis anteriores. Cada preço deste guia é uma estimativa. Confirme o preço atual no anúncio do varejista antes de comprar, e compare o Samsung 990 Pro com o WD Black SN850X nesse dia — o mais barato dos dois alterna com o mercado.',
+          },
+          {
+            q: 'Qual é uma combinação de armazenamento sensata para um laboratório de IA pequeno — NVMe local rápido, armazenamento compartilhado e arquivo — sem gastar demais?',
+            a: 'Divida em três camadas e dimensione cada uma pela frequência de acesso, não pela quantidade de dados que existe em teoria. O NVMe local rápido (1-4 TB por máquina) guarda os pesos do modelo atualmente carregado para inferência ou um treinamento ativo — aqui a velocidade é o que importa, e a capacidade deve ficar enxuta. O armazenamento NAS compartilhado (uma unidade de 4 baias em RAID 6) guarda a biblioteca de modelos completa, os conjuntos de dados e os checkpoints que toda a equipe precisa — é aqui que você compra capacidade de verdade, porque os discos de NAS custam bem menos por terabyte do que o NVMe. O arquivo de longo prazo é a camada mais barata: HDDs em volume ou uma camada de nuvem fria para modelos e conjuntos de dados que você não está usando ativamente mas não quer apagar. O erro de gastar demais é comprar capacidade NVMe para a camada de arquivo — pague preços premium apenas pelos discos que realmente estão no caminho ativo.',
+          },
+          {
+            q: 'Devo usar discos certificados para NAS ou discos de data center empresariais para um NAS de IA funcionando 24/7 com vários usuários?',
+            a: 'Discos certificados para NAS (por exemplo, Seagate IronWolf, WD Red Plus) são feitos para operação contínua 24/7, vibração de gabinete multi-baia e cargas moderadas com múltiplos usuários — são a opção padrão certa para o NAS de biblioteca de modelos de uma equipe pequena. Suba para discos de data center empresariais (por exemplo, Seagate Exos, WD Gold) quando o NAS atender muitos usuários simultâneos, tiver leitura/gravação sustentada além da classificação típica de carga de trabalho do NAS, ou quando a resistência extra e a garantia mais longa justificarem o custo maior por disco. Para a maioria das equipes de IA local com menos de cerca de 10 usuários, discos certificados para NAS em RAID 6 são suficientes; discos empresariais são um upgrade para escala, não um requisito para começar.',
+          },
+          {
+            q: 'Quanto espaço em SSD preciso para um servidor de inferência de LLM, considerando pesos do modelo, variantes quantizadas e uma cópia de rollback?',
+            a: 'Planeje mais do que apenas o modelo que você usa hoje. Um único modelo de 70B em Q4 pesa aproximadamente 35-42 GB, mas uma configuração funcional normalmente mantém pelo menos dois níveis de quantização do mesmo modelo (para testar qualidade versus velocidade) mais a versão anterior do modelo como cópia de rollback antes de uma troca — como regra geral, cerca de 3 vezes o tamanho de um único modelo. Para uma biblioteca de várias famílias de modelos de 7B a 70B, um SSD NVMe de 2-4 TB na máquina de inferência cobre confortavelmente o uso ativo, com a biblioteca histórica completa mantida no NAS em vez do disco local.',
+          },
+          {
+            q: 'O que devo verificar antes de comprar discos para um NAS multi-baia usado com conjuntos de dados de IA ou LLM?',
+            a: 'Confirme quatro coisas antes de comprar: a classificação de carga de trabalho (discos certificados para NAS listam um limite anual em TB/ano — verifique se ele cobre seu volume real de leitura/gravação, não apenas a capacidade), a tolerância a vibração (gabinetes multi-baia geram mais vibração do que um disco externo único, e discos não certificados para NAS podem reduzir o desempenho ou falhar mais cedo nesse ambiente), a compatibilidade (verifique a lista de compatibilidade de discos do fabricante do NAS — alguns firmwares de NAS restringem discos não aprovados ou desativam recursos neles), e a duração da garantia (discos certificados para NAS geralmente trazem garantias de 3-5 anos; combine isso com quanto tempo você planeja rodar o array antes de uma renovação).',
+          },
+          {
+            q: 'Para um servidor de IA on-premise, um único disco enorme, RAID, ou uma mistura de SSD e HDD é a configuração mais confiável?',
+            a: 'Um único disco de qualquer tamanho é a opção menos confiável — uma falha perde tudo, sem redundância nem um caminho rápido de reconstrução. O RAID (especificamente RAID 6 em um NAS) é a opção padrão certa para a biblioteca de modelos compartilhada porque sobrevive a uma falha de disco sem perda de dados. Uma configuração mista de SSD mais HDD não é uma alternativa ao RAID — ela descreve uma divisão diferente de papéis: SSD NVMe local rápido para inferência ativa, HDDs protegidos por RAID no NAS para a biblioteca em massa. Em termos de confiabilidade especificamente, RAID 6 mais um backup de verdade (a regra 3-2-1) supera qualquer configuração de disco único, independentemente do tipo de disco.',
+          },
+          {
+            q: 'Em um pipeline de IA, quando faz sentido usar discos de scratch NVMe locais em vez de um NAS compartilhado para dados de treinamento ou inferência?',
+            a: 'Use discos de scratch NVMe locais para tudo que é lido repetidamente durante uma execução ativa — dados de treinamento transmitidos para a GPU, ou os pesos de um modelo durante a inferência. O NVMe local não tem salto de rede, então é mais rápido e remove o NAS compartilhado como gargalo quando vários trabalhos rodam ao mesmo tempo. Use o NAS compartilhado para a biblioteca que persiste entre execuções e que outras máquinas ou membros da equipe precisam: a coleção completa de modelos, os checkpoints concluídos e os conjuntos de dados não usados no momento. Um padrão comum é copiar um conjunto de dados ou modelo do NAS para o espaço de scratch NVMe local no início de um trabalho, e depois escrever os resultados de volta no NAS — o NAS serve para armazenamento e compartilhamento, não para atender um loop de treinamento ativo.',
           },
         ],
       },
@@ -3730,11 +3899,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'O melhor NAS e armazenamento para modelos de IA local 2026: guia de compra',
-      description: 'Comparativo de NAS Synology e QNAP mais SSDs Samsung e WD para modelos de IA local: redundância RAID 6, carregamento rápido de modelos, capacidade e preços de julho de 2026.',
+      description: 'Comparativo de NAS Synology e QNAP mais SSDs Samsung e WD para modelos de IA local: redundância RAID 6, carregamento rápido de modelos, capacidade e preços atuais.',
       url: 'https://www.promptquorum.com/pt/power-local-llm/best-nas-storage-local-ai-models-2026',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-24',
-      dateModified: '2026-07-01',
+      dateModified: '2026-08-29',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -3744,18 +3913,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-07-01',
+    dateModified: '2026-08-29',
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
     title: 'أفضل ⁨NAS⁩ وتخزين لنماذج الذكاء الاصطناعي المحلي ⁨2026⁩: دليل الشراء',
     seoTitle: '⁨NAS⁩ و⁨SSD⁩ لنماذج ⁨LLM⁩ المحلية ⁨2026⁩: دليل الشراء',
     intro:
-      'تُحسّن معظم نصائح التخزين للذكاء الاصطناعي المحلي رقماً واحداً — السعة — وتتجاهل أن هناك مهمتَي تخزين مختلفتَين. وحدة SSD NVMe سريعة هي المكان الذي تُحمَّل منه النماذج في وقت الاستدلال؛ وNAS هو المكان الذي تقيم فيه مكتبة النماذج، وتُحفظ نسخها الاحتياطية، وتُشارَك بين عدة أجهزة. الاثنان ليسا قابلَين للتبادل، وشراء أحدهما عندما تحتاج الآخر هو أكثر أخطاء التخزين شيوعاً. يقارن هذا الدليل أجهزة NAS من Synology وQNAP لدور المكتبة، وأقراص SSD من Samsung وWestern Digital لدور التحميل، في الأرقام التي تحدد الشراء: السعة والتكرار وسرعة النقل والسعر. تحذير بشأن السعر: أدى نقص رقائق الذاكرة في 2026 إلى رفع أسعار SSD بكثير فوق مستوياتها السابقة، لذا كل سعر هنا لقطة من يوليو 2026 — تحقق من السعر الحالي قبل الشراء.',
+      'تُحسّن معظم نصائح التخزين للذكاء الاصطناعي المحلي رقماً واحداً — السعة — وتتجاهل أن هناك مهمتَي تخزين مختلفتَين. وحدة SSD NVMe سريعة هي المكان الذي تُحمَّل منه النماذج في وقت الاستدلال؛ وNAS هو المكان الذي تقيم فيه مكتبة النماذج، وتُحفظ نسخها الاحتياطية، وتُشارَك بين عدة أجهزة. الاثنان ليسا قابلَين للتبادل، وشراء أحدهما عندما تحتاج الآخر هو أكثر أخطاء التخزين شيوعاً. يقارن هذا الدليل أجهزة NAS من Synology وQNAP لدور المكتبة، وأقراص SSD من Samsung وWestern Digital لدور التحميل، في الأرقام التي تحدد الشراء: السعة والتكرار وسرعة النقل والسعر. تحذير بشأن السعر: أدى نقص رقائق الذاكرة في 2026 إلى رفع أسعار SSD بكثير فوق مستوياتها السابقة، لذا تعامل مع كل سعر هنا كتقدير — تحقق من السعر الحالي قبل الشراء.',
     metaDescription:
       'NAS من Synology وQNAP للمكتبة المشتركة، وSSD NVMe من Samsung وWD للتحميل السريع — مقارنة بالسعة والتكرار والسرعة وأسعار 2026.',
     heroImage: '/images/best-nas-storage-local-ai-models-2026-comparison-table-hero-ar.webp',
     twitterDescription:
-      'NAS لمكتبة النماذج، SSD NVMe للتحميل السريع — مهمتان لا مهمة واحدة. Synology وQNAP وSamsung وWD مقارنةً لتخزين الذكاء الاصطناعي المحلي بأسعار يوليو 2026.',
+      'NAS لمكتبة النماذج، SSD NVMe للتحميل السريع — مهمتان لا مهمة واحدة. Synology وQNAP وSamsung وWD مقارنةً لتخزين الذكاء الاصطناعي المحلي بالأسعار الحالية.',
     affiliateDisclosure: true,
     current_models_mentioned: [
       'Llama 3.3 70B',
@@ -3793,9 +3962,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'مكتبة مشتركة: NAS Synology بـ4 حجرات — برنامج أبسط، مثالي للفرق بدون متخصصين',
           'مزيد من الأجهزة مقابل الدولار: NAS QNAP بـ4 حجرات — معالج أقوى وموانئ أكثر بسعر مماثل',
           'شغّل NAS على RAID 6: يتحمل فشل قرصَين في آن واحد',
-          'ارتفعت أسعار SSD مع نقص الذاكرة في 2026 — عامل كل سعر لقطة من يوليو 2026',
+          'ارتفعت أسعار SSD مع نقص الذاكرة في 2026 — عامل كل سعر هنا كتقدير',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-08',
       },
     },
     toc: [
@@ -3827,7 +3996,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**الاختيار للمكتبة المشتركة (مزيد من الأجهزة مقابل الدولار): NAS QNAP بـ4 حجرات.** عادةً ما يوفر QNAP معالجاً أقوى وموانئ أكثر بسعر مماثل، على حساب منحنى تعلّم أكثر انحداراً قليلاً.',
           '**شغّل NAS على RAID 6.** RAID 6 يتحمل فشل قرصَين في آن واحد وهو المعيار في بيئة الإنتاج؛ RAID 5 مع أقراص كبيرة يخاطر بفشل ثانٍ أثناء إعادة بناء 24-48 ساعة.',
           '**RAID ليس نسخة احتياطية.** RAID يحمي من فشل القرص، لا من برامج الفدية أو السرقة أو الحذف. اتبع قاعدة 3-2-1: 3 نسخ، نوعان من الوسائط، نسخة واحدة خارج الموقع.',
-          '**ارتفعت الأسعار في 2026.** أدى نقص رقائق الذاكرة إلى رفع أسعار NAND وSSD. عامل كل سعر هنا لقطة من يوليو 2026 وتحقق منه قبل الشراء.',
+          '**ارتفعت الأسعار في 2026.** أدى نقص رقائق الذاكرة إلى رفع أسعار NAND وSSD. عامل كل سعر هنا كتقدير وتحقق منه قبل الشراء.',
         ],
       },
       quickFacts: {
@@ -3840,7 +4009,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**سرعة الشبكة:** NAS على نفس شبكة LAN غيغابت كافٍ لنقل نموذج 35 GB (حوالي ساعة)؛ 10 GbE لا يهم إلا لفرق تزيد عن ~20 مستخدماً.',
           '**قاعدة النسخ الاحتياطي:** 3-2-1 — 3 نسخ، نوعان من الوسائط، نسخة واحدة خارج الموقع. RAID وحده ليس نسخة احتياطية.',
           '**مطور منفرد:** SSD داخلي سريع بالإضافة إلى محرك نسخ احتياطي خارجي غالباً أفضل من شراء NAS.',
-          '**واقع الأسعار 2026:** أدى نقص رقائق الذاكرة إلى رفع أسعار SSD؛ عامل الأرقام لقطة من يوليو 2026.',
+          '**واقع الأسعار 2026:** أدى نقص رقائق الذاكرة إلى رفع أسعار SSD؛ عامل الأرقام كتقديرات.',
         ],
       },
       editorsChoice: {
@@ -3876,7 +4045,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'مقارنة NAS وSSD للذكاء الاصطناعي المحلي في 2026',
         content:
-          'يفصل الجدول بين مهمتَي التخزين. صفوف NAS تغطي دور المكتبة المشتركة؛ صفوف SSD تغطي دور التحميل السريع. أرقام السعة وRAID مبنية على تهيئات 4 حجرات قياسية. الأسعار لقطة من يوليو 2026 — أدى نقص رقائق الذاكرة إلى رفع أسعار SSD، لذا تحقق من الرقم الحالي قبل الشراء. أسعار NAS للأجهزة فقط ولا تشمل الأقراص.',
+          'يفصل الجدول بين مهمتَي التخزين. صفوف NAS تغطي دور المكتبة المشتركة؛ صفوف SSD تغطي دور التحميل السريع. أرقام السعة وRAID مبنية على تهيئات 4 حجرات قياسية. الأسعار أدناه تقديرية — أدى نقص رقائق الذاكرة إلى رفع أسعار SSD، لذا تحقق من الرقم الحالي قبل الشراء. أسعار NAS للأجهزة فقط ولا تشمل الأقراص.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -3887,14 +4056,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'تخيّل SSD كطاولة المطبخ حيث تطبخ فعلاً وNAS كالمستودع حيث يُحفظ كل شيء. تطبخ بسرعة على الطاولة؛ تحافظ على المخزون آمناً في المستودع. الطبخ في المستودع بطيء، وطاولة بدون مستودع تنفد بسرعة.',
           },
         ],
-        columns: ['التخزين', 'الدور', 'السعة', 'التكرار', 'السعر (يوليو 2026)', 'الأفضل لـ'],
+        columns: ['التخزين', 'الدور', 'السعة', 'التكرار', 'السعر', 'الأفضل لـ'],
         rows: [
           {
             'التخزين': 'NAS Synology بـ4 حجرات',
             'الدور': 'مكتبة نماذج مشتركة',
             'السعة': '~8 TB قابلة للاستخدام على RAID 6 (4 أقراص × 4 TB)',
             'التكرار': 'RAID 6 — يتحمل فشل 2 قرص',
-            'السعر (يوليو 2026)': '~450-650 دولار أجهزة فقط',
+            'السعر': '~450-650 دولار أجهزة فقط',
             'الأفضل لـ': 'الفرق التي تريد البرنامج الأبسط',
           },
           {
@@ -3902,7 +4071,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'الدور': 'مكتبة نماذج مشتركة',
             'السعة': '~8 TB قابلة للاستخدام على RAID 6 (4 أقراص × 4 TB)',
             'التكرار': 'RAID 6 — يتحمل فشل 2 قرص',
-            'السعر (يوليو 2026)': '~450-650 دولار أجهزة فقط',
+            'السعر': '~450-650 دولار أجهزة فقط',
             'الأفضل لـ': 'الفرق التي تريد معالجاً أقوى وموانئ أكثر',
           },
           {
@@ -3910,7 +4079,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'الدور': 'تحميل سريع للنماذج',
             'السعة': '1-4 TB لكل قرص',
             'التكرار': 'لا — ادمجه مع نسخة احتياطية',
-            'السعر (يوليو 2026)': '~150-250 دولار لـ2 TB',
+            'السعر': '~150-250 دولار لـ2 TB',
             'الأفضل لـ': 'التحميل الأسرع، جهاز واحد',
           },
           {
@@ -3918,7 +4087,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'الدور': 'تحميل سريع للنماذج',
             'السعة': '1-4 TB لكل قرص',
             'التكرار': 'لا — ادمجه مع نسخة احتياطية',
-            'السعر (يوليو 2026)': '~150-250 دولار لـ2 TB',
+            'السعر': '~150-250 دولار لـ2 TB',
             'الأفضل لـ': 'تحميل سريع، بديل ذو قيمة',
           },
           {
@@ -3926,12 +4095,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'الدور': 'نسخة احتياطية غير متصلة',
             'السعة': '2-8 TB',
             'التكرار': 'لا — هو النسخة الاحتياطية',
-            'السعر (يوليو 2026)': '~80-200 دولار',
+            'السعر': '~80-200 دولار',
             'الأفضل لـ': 'المطورون المنفردون، نسخة خارج الموقع',
           },
         ],
         image: '/images/best-nas-storage-local-ai-models-2026-comparison-table-hero-ar.webp',
-        imageCaption: 'NAS مقابل SSD لتخزين الذكاء الاصطناعي المحلي -- لمحة أسعار يوليو 2026',
+        imageCaption: 'NAS مقابل SSD لتخزين الذكاء الاصطناعي المحلي -- مقارنة الأسعار',
       },
       whichStorage: {
         id: 'which-storage',
@@ -3958,7 +4127,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**البرنامج:** Synology DSM هو نظام تشغيل NAS الأسهل وصولاً — إعداد RAID واللقطات المجدولة والنسخ الاحتياطي السحابي معالج موجّه، لا ملفات تهيئة.',
           '**السعة:** حجرات 4 مع أربعة أقراص بـ4 TB توفر حوالي 8 TB قابلة للاستخدام على RAID 6 — مساحة لمكتبة كبيرة من النماذج المكمّمة (نموذج 70B بتكميم Q4 يزن حوالي 35-42 GB).',
           '**الشبكة:** NAS على نفس شبكة LAN غيغابت ينقل نموذج 35 GB في حوالي ساعة؛ هذا كافٍ لدور المكتبة. 10 GbE لا يهم إلا من حوالي 20 مستخدماً.',
-          '**السعر:** حوالي 450-650 دولار أجهزة فقط لقطة من يوليو 2026؛ ضع الأقراص في الميزانية بشكل منفصل.',
+          '**السعر:** حوالي 450-650 دولار أجهزة فقط كتقدير؛ ضع الأقراص في الميزانية بشكل منفصل.',
           '**لماذا تشتري Synology:** تريد مكتبة مشتركة محفوظة بأقل جهد إعداد وصيانة.',
           '**لماذا تتجنب Synology:** مطور منفرد مع جهاز واحد لا يحتاج NAS — SSD مع محرك خارجي أرخص وأبسط.',
         ],
@@ -3987,7 +4156,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**الأجهزة:** طرازات QNAP عادةً تتضمن معالجاً أسرع وموانئ أكثر (بما فيها خيارات شبكة أسرع) بسعر مماثل للطراز المقابل من Synology.',
           '**البرنامج:** QTS قادر لكن أقل توجيهاً من Synology DSM — توقع قوائم أكثر وإعداداً أولياً أكثر تعقيداً.',
           '**السعة:** حجرات 4 على RAID 6 مع أربعة أقراص بـ4 TB توفر حوالي 8 TB قابلة للاستخدام — نفس هامش المكتبة مثل نظيره من Synology.',
-          '**السعر:** حوالي 450-650 دولار أجهزة فقط لقطة من يوليو 2026، والأقراص بشكل منفصل.',
+          '**السعر:** حوالي 450-650 دولار أجهزة فقط كتقدير، والأقراص بشكل منفصل.',
           '**لماذا تشتري QNAP:** تريد معالجاً أقوى وخيارات شبكة أسرع مقابل الدولار، وتعمل بشكل مريح مع إعداد أقل توجيهاً.',
           '**لماذا تتجنب QNAP:** إذا كان الفريق بدون متخصصين في التخزين ويريد أبسط برنامج ممكن، Synology DSM هو المسار الأسهل.',
         ],
@@ -4016,7 +4185,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Samsung 990 Pro:** SSD NVMe PCIe 4.0 عالي الأداء؛ الخيار الموصى به للتحميل الأسرع للنماذج. نموذج 70B بتكميم Q4 يزن حوالي 35-42 GB، لذا تُلاحَظ سرعة القراءة في كل تبديل نموذج.',
           '**WD Black SN850X:** SSD NVMe PCIe 4.0 عالي الأداء مماثل؛ البديل ذو القيمة عندما يكون سعر Samsung أعلى في ذلك الوقت.',
           '**السعة:** 2 TB هي النقطة المثلى العملية للحجم التشغيلي في الجهاز؛ 4 TB إذا احتفظت بنماذج كبيرة كثيرة محلياً بدلاً من NAS.',
-          '**السعر:** حوالي 150-250 دولار لقرص 2 TB لقطة من يوليو 2026 — أدى نقص رقائق الذاكرة إلى رفع أسعار NAND، لذا تحقق قبل الشراء.',
+          '**السعر:** حوالي 150-250 دولار لقرص 2 TB كتقدير — أدى نقص رقائق الذاكرة إلى رفع أسعار NAND، لذا تحقق قبل الشراء.',
           '**لماذا تشتري SSD NVMe عالي الأداء:** وقت تحميل النموذج ملحوظ في كل تبديل، وSSD سريعة تُزيل ثوانٍ من كل تبديل.',
           '**لماذا تتجنب الأداء العالي:** إذا كنت تُحمّل نموذجاً واحداً ونادراً ما تبدّل، SSD NVMe متوسط الأداء كافٍ — سرعة القراءة العالية تهم أكثر مع التبديل المتكرر.',
         ],
@@ -4047,11 +4216,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'nvme-ssd-picks',
         title: 'أفضل SSD NVMe لاستضافة نماذج الذكاء الاصطناعي المحلية 2026',
         content:
-          '**أفضل SSD NVMe داخلي لحمل عمل الاستدلال بالذكاء الاصطناعي المحلي يحتاج إلى سرعة قراءة تسلسلية لا تقل عن 5 GB/s وسعة لا تقل عن 2 TB — 4 TB إذا كنت تتناوب بين عدة نماذج كبيرة.** نموذج 70B عند تكميم Q4 يزن حوالي 35-42 GB؛ تبديل نموذج واحد يقرأ ملف الأوزان بأكمله من القرص. سرعة القراءة هي عنق الزجاجة بين تبديل النموذج والرمز المميز الأول في الإخراج. الخيارات أدناه تحقق جميعها ≥ 5 GB/s قراءة تسلسلية على واجهات PCIe 4.0 أو PCIe 5.0 ومتوفرة بتهيئات 4 TB. ملاحظة: أدت قيود التعريفات الجمركية والإمداد في 2026 إلى جعل SSD PCIe 4.0 (Samsung وWD) أغلى بكثير من Crucial T705 PCIe 5.0 الأسرع — محرك Gen5 هو الاختيار الأفضل قيمة بأسعار يوليو 2026.',
+          '**أفضل SSD NVMe داخلي لحمل عمل الاستدلال بالذكاء الاصطناعي المحلي يحتاج إلى سرعة قراءة تسلسلية لا تقل عن 5 GB/s وسعة لا تقل عن 2 TB — 4 TB إذا كنت تتناوب بين عدة نماذج كبيرة.** نموذج 70B عند تكميم Q4 يزن حوالي 35-42 GB؛ تبديل نموذج واحد يقرأ ملف الأوزان بأكمله من القرص. سرعة القراءة هي عنق الزجاجة بين تبديل النموذج والرمز المميز الأول في الإخراج. الخيارات أدناه تحقق جميعها ≥ 5 GB/s قراءة تسلسلية على واجهات PCIe 4.0 أو PCIe 5.0 ومتوفرة بتهيئات 4 TB. ملاحظة: أدت قيود التعريفات الجمركية والإمداد في 2026 إلى جعل SSD PCIe 4.0 (Samsung وWD) أغلى بكثير من Crucial T705 PCIe 5.0 الأسرع — محرك Gen5 هو الاختيار الأفضل قيمة بالأسعار الحالية.',
         items: [
-          '**Crucial T705 4TB (~304–350 دولار، يوليو 2026):** NVMe PCIe 5.0، قراءات تسلسلية تصل إلى 14,500 MB/s. على الرغم من سرعة Gen5، فهو الأرخص بين الثلاثة — الأفضل قيمة. يخزّن أوزان النموذج فقط؛ VRAM يُشغّل الاستدلال بعد التحميل. يتطلب فتحة M.2 PCIe 5.0.',
-          '**WD Black SN850X 4TB (~615–740 دولار، يوليو 2026):** NVMe PCIe 4.0، قراءات تسلسلية تصل إلى 7,300 MB/s، ضمان 5 سنوات. الخيار الوسط — أغلى بكثير من Crucial T705 4TB بسبب قيود إمداد NAND PCIe 4.0 في 2026، لكنه متوفر بشكل جيد ومجرّب.',
-          '**Samsung 990 Pro 4TB (~780–950 دولار، يوليو 2026):** NVMe PCIe 4.0، قراءات تسلسلية تصل إلى 7,450 MB/s، ضمان 5 سنوات مع تصنيف تحمّل 2,400 TBW. الخيار المميز — الأغلى بين الثلاثة في يوليو 2026 بسبب التعريفات الجمركية وضغوط الإمداد (سعر Samsung الرسمي 1,099 دولار، سعر السوق 780–950 دولار). أداء متميز ومتسق، لكن Crucial T705 4TB يوفر سرعة أكبر بسعر أقل بكثير.',
+          '**Crucial T705 4TB (~304–350 دولار):** NVMe PCIe 5.0، قراءات تسلسلية تصل إلى 14,500 MB/s. على الرغم من سرعة Gen5، فهو الأرخص بين الثلاثة — الأفضل قيمة. يخزّن أوزان النموذج فقط؛ VRAM يُشغّل الاستدلال بعد التحميل. يتطلب فتحة M.2 PCIe 5.0.',
+          '**WD Black SN850X 4TB (~615–740 دولار):** NVMe PCIe 4.0، قراءات تسلسلية تصل إلى 7,300 MB/s، ضمان 5 سنوات. الخيار الوسط — أغلى بكثير من Crucial T705 4TB بسبب قيود إمداد NAND PCIe 4.0 في 2026، لكنه متوفر بشكل جيد ومجرّب.',
+          '**Samsung 990 Pro 4TB (~780–950 دولار):** NVMe PCIe 4.0، قراءات تسلسلية تصل إلى 7,450 MB/s، ضمان 5 سنوات مع تصنيف تحمّل 2,400 TBW. الخيار المميز — الأغلى حالياً بين الثلاثة بسبب التعريفات الجمركية وضغوط الإمداد (سعر Samsung الرسمي 1,099 دولار، سعر السوق 780–950 دولار). أداء متميز ومتسق، لكن Crucial T705 4TB يوفر سرعة أكبر بسعر أقل بكثير.',
         ],
         callouts: [
           {
@@ -4093,7 +4262,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/best-nas-storage-local-ai-models-2026-nvme-ssd-picks-hero-ar.webp',
-        imageCaption: 'أفضل أقراص NVMe SSD لاستدلال الذكاء الاصطناعي -- السرعة مقابل السعر، يوليو 2026 (4TB)',
+        imageCaption: 'أفضل أقراص NVMe SSD لاستدلال الذكاء الاصطناعي -- السرعة مقابل السعر (4TB)',
       },
       raidBackup: {
         id: 'raid-backup',
@@ -4157,7 +4326,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'نظراً لأن نقص رقائق الذاكرة في 2026 حرّك أسعار SSD، كل رقم في هذا الدليل لقطة من يوليو 2026. افتح قائمة الموزّع الحالية قبل الشراء وقارن أقراص Samsung وWD ذلك اليوم — الأفضل قيمةً يتناوب.',
+            text: 'نظراً لأن نقص رقائق الذاكرة في 2026 حرّك أسعار SSD، كل رقم في هذا الدليل تقديري. افتح قائمة الموزّع الحالية قبل الشراء وقارن أقراص Samsung وWD ذلك اليوم — الأفضل قيمةً يتناوب.',
           },
         ],
         affiliateLinks: [
@@ -4249,7 +4418,31 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'هل تغيّرت أسعار SSD في 2026؟',
-            a: 'نعم. أدى نقص رقائق الذاكرة في 2026 إلى رفع أسعار NAND وSSD فوق مستوياتها السابقة. كل سعر في هذا الدليل لقطة من يوليو 2026. تأكد من السعر الحالي في قائمة الموزّع قبل الشراء، وقارن Samsung 990 Pro بـWD Black SN850X ذلك اليوم — الأرخص بين الاثنين يتناوب مع السوق.',
+            a: 'نعم. أدى نقص رقائق الذاكرة في 2026 إلى رفع أسعار NAND وSSD فوق مستوياتها السابقة. كل سعر في هذا الدليل تقديري. تأكد من السعر الحالي في قائمة الموزّع قبل الشراء، وقارن Samsung 990 Pro بـWD Black SN850X ذلك اليوم — الأرخص بين الاثنين يتناوب مع السوق.',
+          },
+          {
+            q: 'ما هو مزيج التخزين المعقول لمختبر ذكاء اصطناعي صغير — NVMe محلي سريع، وتخزين مشترك، وأرشيف — دون إنفاق مبالغ زائدة؟',
+            a: 'قسّم إلى ثلاث طبقات وحدد حجم كل طبقة بحسب مدى تكرار الوصول إليها، لا بحسب كمية البيانات الموجودة نظرياً. يحتفظ NVMe المحلي السريع (1-4 TB لكل جهاز) بأوزان النموذج المُحمَّل حالياً للاستدلال أو لتشغيل تدريب نشط — هذه هي الطبقة التي تهم فيها السرعة، ويجب أن تبقى السعة فيها محدودة. يحتفظ التخزين المشترك عبر NAS (وحدة 4 حجرات في RAID 6) بمكتبة النماذج الكاملة ومجموعات البيانات ونقاط التحقق التي يحتاجها الفريق بأكمله — وهنا يجب شراء سعة حقيقية، لأن أقراص NAS أرخص بكثير لكل تيرابايت من NVMe. الأرشيف طويل الأمد هو الطبقة الأرخص: أقراص HDD كبيرة السعة أو طبقة سحابية باردة للنماذج ومجموعات البيانات التي لا تستخدمها بنشاط لكنك لا تريد حذفها. خطأ الإنفاق الزائد الشائع هو شراء سعة NVMe لطبقة الأرشيف — ادفع أسعاراً مميزة فقط مقابل الأقراص التي تقع فعلياً على المسار النشط.',
+          },
+          {
+            q: 'هل يجب استخدام أقراص مخصصة لـNAS أم أقراص مراكز بيانات على مستوى المؤسسات لـNAS ذكاء اصطناعي يعمل على مدار الساعة مع عدة مستخدمين؟',
+            a: 'الأقراص المخصصة لـNAS (مثل Seagate IronWolf وWD Red Plus) مصمَّمة للتشغيل المستمر على مدار الساعة طوال الأسبوع، ولاهتزاز الحجرات المتعددة، ولأحمال عمل متوسطة متعددة المستخدمين — وهي الخيار الافتراضي الصحيح لـNAS مكتبة نماذج فريق صغير. انتقل إلى أقراص مراكز البيانات على مستوى المؤسسات (مثل Seagate Exos وWD Gold) عندما يخدم NAS عدداً كبيراً من المستخدمين المتزامنين، أو عندما يكون هناك قراءة/كتابة مستمرة تتجاوز تصنيف حمل العمل المعتاد لـNAS، أو عندما تبرر المتانة الإضافية والضمان الأطول التكلفة الأعلى لكل قرص. بالنسبة لمعظم فرق الذكاء الاصطناعي المحلي التي يقل عدد مستخدميها عن 10 تقريباً، تكفي الأقراص المخصصة لـNAS في RAID 6؛ أما أقراص المؤسسات فهي ترقية للتوسع، وليست شرطاً للبدء.',
+          },
+          {
+            q: 'كم مساحة SSD أحتاجها لجهاز استدلال LLM، مع احتساب أوزان النموذج والمتغيرات المكممة ونسخة للتراجع؟',
+            a: 'ضع ميزانية أكبر من مجرد النموذج الذي تستخدمه اليوم. نموذج واحد بحجم 70B عند تكميم Q4 يزن حوالي 35-42 GB، لكن الإعداد العملي يحتفظ عادةً بمستويين على الأقل من تكميم نفس النموذج (لاختبار الجودة مقابل السرعة) بالإضافة إلى نسخة النموذج السابقة كنسخة للتراجع قبل التبديل — أي ما يقرب من 3 أضعاف مساحة نموذج واحد كقاعدة تقريبية. بالنسبة لمكتبة تضم عدة عائلات نماذج من 7B إلى 70B، يغطي قرص SSD من نوع NVMe بسعة 2-4 TB على جهاز الاستدلال الاستخدام النشط بشكل مريح، بينما تبقى المكتبة التاريخية الكاملة على NAS بدلاً من القرص المحلي.',
+          },
+          {
+            q: 'ما الذي يجب التحقق منه قبل شراء أقراص لـNAS متعدد الحجرات يُستخدم لمجموعات بيانات الذكاء الاصطناعي أو LLM؟',
+            a: 'تحقق من أربعة أمور قبل الشراء: تصنيف حمل العمل (تذكر الأقراص المخصصة لـNAS حداً سنوياً لحمل العمل بوحدة TB/سنة — تحقق من أنه يغطي حجم القراءة/الكتابة الفعلي لديك، لا السعة فقط)، وتحمّل الاهتزاز (تُنتج الهياكل متعددة الحجرات اهتزازاً أكبر من قرص خارجي واحد، وقد تُبطئ الأقراص غير المخصصة لـNAS أداءها أو تتعطل مبكراً في هذه البيئة)، والتوافق (راجع قائمة توافق الأقراص لدى مُصنّع NAS — تُقيّد بعض برامج تشغيل NAS الأقراص غير المعتمدة أو تعطّل ميزات عليها)، ومدة الضمان (تحمل الأقراص المخصصة لـNAS عادةً ضماناً لمدة 3-5 سنوات — طابق ذلك مع المدة التي تخطط لتشغيل المصفوفة خلالها قبل التحديث).',
+          },
+          {
+            q: 'بالنسبة لخادم ذكاء اصطناعي محلي، هل قرص واحد ضخم، أم RAID، أم مزيج من SSD وHDD هو الإعداد الأكثر موثوقية؟',
+            a: 'قرص واحد من أي حجم هو الخيار الأقل موثوقية — فشل واحد يفقد كل شيء، دون تكرار ودون مسار سريع لإعادة البناء. RAID (وتحديداً RAID 6 على NAS) هو الخيار الافتراضي الصحيح لمكتبة النماذج المشتركة لأنه يصمد أمام فشل قرص واحد دون فقدان البيانات. إعداد مختلط من SSD وHDD ليس بديلاً عن RAID — بل يصف توزيعاً مختلفاً للأدوار: SSD NVMe محلي سريع للاستدلال النشط، وأقراص HDD محمية بـRAID على NAS للمكتبة الكبيرة. من ناحية الموثوقية تحديداً، يتفوق RAID 6 مع نسخة احتياطية حقيقية (قاعدة 3-2-1) على أي إعداد بقرص واحد بغض النظر عن نوع القرص.',
+          },
+          {
+            q: 'في خط أنابيب الذكاء الاصطناعي، متى يكون من المنطقي استخدام أقراص NVMe محلية للعمل المؤقت بدلاً من NAS مشترك لبيانات التدريب أو الاستدلال؟',
+            a: 'استخدم أقراص NVMe محلية للعمل المؤقت لكل ما يُقرأ بشكل متكرر أثناء التشغيل النشط — بيانات التدريب المتدفقة إلى GPU، أو أوزان نموذج أثناء الاستدلال. لا يحتوي NVMe المحلي على قفزة شبكة، لذا فهو أسرع ويزيل NAS المشترك كعنق زجاجة عند تشغيل عدة مهام في وقت واحد. استخدم NAS المشترك للمكتبة التي تستمر بين عمليات التشغيل والتي تحتاجها أجهزة أخرى أو أعضاء الفريق: مجموعة النماذج الكاملة، ونقاط التحقق المكتملة، ومجموعات البيانات غير المستخدمة حالياً. النمط الشائع هو نسخ مجموعة بيانات أو نموذج من NAS إلى مساحة العمل المؤقت على NVMe المحلي في بداية المهمة، ثم كتابة النتائج مرة أخرى إلى NAS بعد ذلك — فـNAS مخصص للتخزين والمشاركة، وليس لخدمة حلقة تدريب نشطة مباشرة.',
           },
         ],
       },
@@ -4269,11 +4462,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'أفضل NAS وتخزين لنماذج الذكاء الاصطناعي المحلي 2026: دليل الشراء',
-      description: 'مقارنة NAS من Synology وQNAP بالإضافة إلى SSD من Samsung وWD لنماذج الذكاء الاصطناعي المحلي: تكرار RAID 6، تحميل سريع للنماذج، السعة وأسعار يوليو 2026.',
+      description: 'مقارنة NAS من Synology وQNAP بالإضافة إلى SSD من Samsung وWD لنماذج الذكاء الاصطناعي المحلي: تكرار RAID 6، تحميل سريع للنماذج، السعة والأسعار الحالية.',
       url: 'https://www.promptquorum.com/ar/power-local-llm/best-nas-storage-local-ai-models-2026',
       inLanguage: 'ar',
       datePublished: '2026-05-22',
-      dateModified: '2026-07-01',
+      dateModified: '2026-08-29',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -4282,18 +4475,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-07-01',
+    dateModified: '2026-08-29',
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
     title: '2026년 로컬 AI 모델을 위한 최고의 NAS 및 스토리지: 구매 가이드',
     seoTitle: '2026년 로컬 AI 모델을 위한 최고의 NAS 및 SSD',
     intro:
-      '로컬 AI 스토리지 관련 조언의 대부분은 용량이라는 단일 수치에만 집중하며, 실제로는 두 가지 스토리지 작업이 존재한다는 사실을 간과합니다. 빠른 NVMe SSD는 추론 시점에 모델을 로드하는 장치이고, NAS는 모델 라이브러리가 저장되며 백업이 유지되고 여러 머신 간에 공유되는 장치입니다. 이 두 가지는 상호 대체가 불가능하며, 하나가 필요할 때 다른 하나를 구매하는 것이 가장 흔한 스토리지 실수입니다. 이 가이드는 라이브러리 역할을 위한 Synology와 QNAP의 NAS를, 로드 역할을 위한 Samsung과 Western Digital의 SSD를 구매 결정을 좌우하는 수치인 용량, 중복성, 전송 속도, 가격 기준으로 비교합니다. 가격에 대한 주의 사항: 2026년 메모리 칩 공급 부족으로 SSD 가격이 이전 수준보다 훨씬 높아졌으므로, 이 가이드의 모든 가격은 2026년 7월 기준 스냅샷입니다. 구매 전 반드시 현재 가격을 확인하십시오.',
+      '로컬 AI 스토리지 관련 조언의 대부분은 용량이라는 단일 수치에만 집중하며, 실제로는 두 가지 스토리지 작업이 존재한다는 사실을 간과합니다. 빠른 NVMe SSD는 추론 시점에 모델을 로드하는 장치이고, NAS는 모델 라이브러리가 저장되며 백업이 유지되고 여러 머신 간에 공유되는 장치입니다. 이 두 가지는 상호 대체가 불가능하며, 하나가 필요할 때 다른 하나를 구매하는 것이 가장 흔한 스토리지 실수입니다. 이 가이드는 라이브러리 역할을 위한 Synology와 QNAP의 NAS를, 로드 역할을 위한 Samsung과 Western Digital의 SSD를 구매 결정을 좌우하는 수치인 용량, 중복성, 전송 속도, 가격 기준으로 비교합니다. 가격에 대한 주의 사항: 2026년 메모리 칩 공급 부족으로 SSD 가격이 이전 수준보다 훨씬 높아졌으므로, 이 가이드의 모든 가격은 대략적인 수치입니다. 구매 전 반드시 현재 가격을 확인하십시오.',
     metaDescription:
       '로컬 AI 모델을 위한 Synology 및 QNAP NAS와 Samsung 및 WD SSD 비교: RAID 6 중복성, 빠른 로드, 용량 및 2026년 가격.',
     heroImage: '/images/best-nas-storage-local-ai-models-2026-comparison-table-hero-ko.webp',
     twitterDescription:
-      '모델 라이브러리용 NAS, 빠른 로드용 NVMe SSD — 하나가 아닌 두 가지 작업. 로컬 AI 스토리지를 위한 Synology, QNAP, Samsung, WD 비교 (2026년 7월 가격 기준).',
+      '모델 라이브러리용 NAS, 빠른 로드용 NVMe SSD — 하나가 아닌 두 가지 작업. 로컬 AI 스토리지를 위한 Synology, QNAP, Samsung, WD 비교 (현재 가격 기준).',
     affiliateDisclosure: true,
     current_models_mentioned: [
       'Llama 3.3 70B',
@@ -4331,9 +4524,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '공유 라이브러리: 4베이 Synology NAS — 스토리지 전문가 없는 팀에 적합한 간단한 소프트웨어',
           '달러당 더 많은 하드웨어: 4베이 QNAP NAS — 비슷한 가격에 더 강력한 CPU와 더 많은 포트',
           'NAS를 RAID 6로 운용: 동시 디스크 2개 고장에서 생존',
-          '2026년 메모리 부족으로 SSD 가격이 상승했습니다. 각 가격을 2026년 7월 스냅샷으로 취급하십시오.',
+          '2026년 메모리 부족으로 SSD 가격이 상승했습니다. 각 가격을 대략적인 수치로 취급하십시오.',
         ],
-        updatedDate: '2026-07',
+        updatedDate: '2026-08',
       },
     },
     toc: [
@@ -4365,7 +4558,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**공유 라이브러리 선택 (달러당 더 많은 하드웨어): 4베이 QNAP NAS.** QNAP는 비슷한 가격에 더 강력한 CPU와 더 많은 포트를 제공하는 경우가 많지만, 학습 곡선이 약간 더 가파릅니다.',
           '**NAS를 RAID 6로 운용하십시오.** RAID 6는 동시 디스크 2개 고장에서 생존하며 프로덕션 표준입니다. 대용량 디스크에서의 RAID 5는 24-48시간 재구성 중 두 번째 고장 위험이 있습니다.',
           '**RAID는 백업이 아닙니다.** RAID는 디스크 고장으로부터 보호하지만 랜섬웨어, 도난, 삭제로부터는 보호하지 못합니다. 3-2-1 규칙을 따르십시오: 복사본 3개, 미디어 유형 2가지, 외부 저장소 1개.',
-          '**2026년에 가격이 상승했습니다.** 메모리 칩 공급 부족으로 NAND 및 SSD 가격이 올랐습니다. 이 가이드의 모든 가격을 2026년 7월 스냅샷으로 취급하고 구매 전 다시 확인하십시오.',
+          '**2026년에 가격이 상승했습니다.** 메모리 칩 공급 부족으로 NAND 및 SSD 가격이 올랐습니다. 이 가이드의 모든 가격을 대략적인 수치로 취급하고 구매 전 다시 확인하십시오.',
         ],
       },
       quickFacts: {
@@ -4378,7 +4571,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**네트워크 속도:** 동일한 기가비트 LAN의 NAS는 35 GB 모델 전송에 충분합니다 (약 1시간); 10 GbE는 ~20명 이상의 팀에서만 중요합니다.',
           '**백업 규칙:** 3-2-1 — 복사본 3개, 미디어 유형 2가지, 외부 저장소 1개. RAID만으로는 백업이 되지 않습니다.',
           '**단독 개발자:** 빠른 내장 SSD와 외장 백업 드라이브가 NAS 구매보다 나은 경우가 많습니다.',
-          '**2026년 가격 현실:** 메모리 칩 공급 부족으로 SSD 가격이 상승했습니다. 수치를 2026년 7월 스냅샷으로 취급하십시오.',
+          '**2026년 가격 현실:** 메모리 칩 공급 부족으로 SSD 가격이 상승했습니다. 수치를 대략적인 수치로 취급하십시오.',
         ],
       },
       editorsChoice: {
@@ -4414,7 +4607,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: '2026년 로컬 AI를 위한 NAS와 SSD 비교',
         content:
-          '표는 두 가지 스토리지 작업을 구분합니다. NAS 행은 공유 라이브러리 역할을 다루고, SSD 행은 빠른 로드 역할을 다룹니다. 용량 및 RAID 수치는 표준 4베이 구성을 기반으로 합니다. 가격은 2026년 7월 스냅샷입니다. 2026년 메모리 칩 공급 부족으로 SSD 가격이 상승했으므로 구매 전 현재 수치를 확인하십시오. NAS 가격은 하드웨어만이며 드라이브는 포함되지 않습니다.',
+          '표는 두 가지 스토리지 작업을 구분합니다. NAS 행은 공유 라이브러리 역할을 다루고, SSD 행은 빠른 로드 역할을 다룹니다. 용량 및 RAID 수치는 표준 4베이 구성을 기반으로 합니다. 아래 가격은 대략적인 수치입니다. 2026년 메모리 칩 공급 부족으로 SSD 가격이 상승했으므로 구매 전 현재 수치를 확인하십시오. NAS 가격은 하드웨어만이며 드라이브는 포함되지 않습니다.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -4425,14 +4618,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'SSD를 실제로 요리하는 주방 조리대로, NAS를 모든 것이 보관되는 식료품 저장실로 생각하십시오. 조리대에서는 빠르게 요리하고, 저장실에서는 재고를 안전하게 보관합니다. 저장실에서 요리하면 느리고, 저장실 없는 조리대는 공간이 금방 부족해집니다.',
           },
         ],
-        columns: ['스토리지', '역할', '용량', '중복성', '가격 (2026년 7월)', '적합 대상'],
+        columns: ['스토리지', '역할', '용량', '중복성', '가격', '적합 대상'],
         rows: [
           {
             '스토리지': '4베이 Synology NAS',
             '역할': '공유 모델 라이브러리',
             '용량': 'RAID 6에서 ~8 TB 사용 가능 (4x 4 TB)',
             '중복성': 'RAID 6 — 디스크 2개 동시 고장에서 생존',
-            '가격 (2026년 7월)': '~$450-650 하드웨어만',
+            '가격': '~$450-650 하드웨어만',
             '적합 대상': '가장 간단한 소프트웨어를 원하는 팀',
           },
           {
@@ -4440,7 +4633,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '역할': '공유 모델 라이브러리',
             '용량': 'RAID 6에서 ~8 TB 사용 가능 (4x 4 TB)',
             '중복성': 'RAID 6 — 디스크 2개 동시 고장에서 생존',
-            '가격 (2026년 7월)': '~$450-650 하드웨어만',
+            '가격': '~$450-650 하드웨어만',
             '적합 대상': '더 많은 CPU와 포트를 원하는 팀',
           },
           {
@@ -4448,7 +4641,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '역할': '빠른 모델 로드',
             '용량': '디스크당 1-4 TB',
             '중복성': '없음 — 백업과 함께 사용',
-            '가격 (2026년 7월)': '2 TB 기준 ~$150-250',
+            '가격': '2 TB 기준 ~$150-250',
             '적합 대상': '가장 빠른 로드, 단일 머신',
           },
           {
@@ -4456,7 +4649,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '역할': '빠른 모델 로드',
             '용량': '디스크당 1-4 TB',
             '중복성': '없음 — 백업과 함께 사용',
-            '가격 (2026년 7월)': '2 TB 기준 ~$150-250',
+            '가격': '2 TB 기준 ~$150-250',
             '적합 대상': '빠른 로드, 가성비 대안',
           },
           {
@@ -4464,12 +4657,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '역할': '오프라인 백업',
             '용량': '2-8 TB',
             '중복성': '없음 — 백업 자체',
-            '가격 (2026년 7월)': '~$80-200',
+            '가격': '~$80-200',
             '적합 대상': '단독 개발자, 외부 복사본',
           },
         ],
         image: '/images/best-nas-storage-local-ai-models-2026-comparison-table-hero-ko.webp',
-        imageCaption: '로컬 AI 스토리지: NAS 대 SSD -- 2026년 7월 가격 스냅샷',
+        imageCaption: '로컬 AI 스토리지: NAS 대 SSD -- 가격 비교',
       },
       whichStorage: {
         id: 'which-storage',
@@ -4496,7 +4689,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**소프트웨어:** Synology DSM은 가장 접근하기 쉬운 NAS 운영 체제입니다. RAID 설정, 예약 스냅샷, 클라우드 백업이 안내 마법사로 제공되며 설정 파일이 필요하지 않습니다.',
           '**용량:** 4개의 4 TB 드라이브가 있는 4베이 유닛은 RAID 6에서 약 8 TB의 사용 가능 용량을 제공합니다. 양자화된 모델의 대규모 라이브러리에 충분합니다 (Q4 양자화 70B 모델은 약 35-42 GB).',
           '**네트워크:** 동일한 기가비트 LAN의 NAS는 35 GB 모델을 약 1시간 내에 전송합니다. 이는 라이브러리 역할에 충분합니다. 10 GbE는 약 20명 이상의 사용자에서만 중요합니다.',
-          '**가격:** 2026년 7월 스냅샷 기준 하드웨어만 약 $450-650; 드라이브는 별도로 예산을 책정하십시오.',
+          '**가격:** 대략적인 수치로 하드웨어만 약 $450-650; 드라이브는 별도로 예산을 책정하십시오.',
           '**Synology를 구매해야 하는 이유:** 가장 적은 설정 및 유지 관리 노력으로 공유 및 백업된 라이브러리를 원합니다.',
           '**Synology를 피해야 하는 이유:** 단일 머신을 사용하는 단독 개발자는 NAS가 필요하지 않습니다. SSD와 외장 드라이브가 더 저렴하고 간단합니다.',
         ],
@@ -4525,7 +4718,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**하드웨어:** QNAP 모델은 일반적으로 비슷한 가격에 더 빠른 CPU와 더 많은 포트 (더 빠른 네트워킹 옵션 포함)를 제공합니다.',
           '**소프트웨어:** QTS는 유능하지만 Synology DSM보다 안내가 적습니다. 더 많은 메뉴와 더 복잡한 초기 설정을 예상하십시오.',
           '**용량:** RAID 6의 4베이 유닛에 4개의 4 TB 드라이브를 사용하면 약 8 TB의 사용 가능 용량이 제공됩니다. Synology 동급 제품과 동일한 라이브러리 여유입니다.',
-          '**가격:** 2026년 7월 스냅샷 기준 하드웨어만 약 $450-650, 드라이브 별도.',
+          '**가격:** 대략적인 수치로 하드웨어만 약 $450-650, 드라이브 별도.',
           '**QNAP를 구매해야 하는 이유:** 달러당 더 많은 CPU와 더 빠른 네트워킹 옵션을 원하며, 덜 안내된 설정이 편안합니다.',
           '**QNAP를 피해야 하는 이유:** 팀에 스토리지 전문가가 없고 가능한 가장 간단한 소프트웨어를 원한다면, Synology DSM이 더 쉬운 경로입니다.',
         ],
@@ -4554,7 +4747,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Samsung 990 Pro:** 고급 PCIe 4.0 NVMe SSD; 가장 빠른 모델 로드를 위한 권장 선택. Q4 양자화 70B 모델은 약 35-42 GB이므로 모델을 전환할 때마다 읽기 속도가 체감됩니다.',
           '**WD Black SN850X:** 비슷한 고급 PCIe 4.0 NVMe SSD; 해당 시점에 Samsung 가격이 더 높을 때의 가성비 대안.',
           '**용량:** 2 TB가 머신의 작업 세트에 실용적인 최적점입니다. NAS 대신 로컬에서 많은 대형 모델을 유지한다면 4 TB.',
-          '**가격:** 2026년 7월 스냅샷 기준 2 TB 디스크는 약 $150-250입니다. 메모리 칩 공급 부족으로 NAND 가격이 상승했으므로 구매 전 확인하십시오.',
+          '**가격:** 대략적인 수치로 2 TB 디스크는 약 $150-250입니다. 메모리 칩 공급 부족으로 NAND 가격이 상승했으므로 구매 전 확인하십시오.',
           '**고급 NVMe SSD를 구매해야 하는 이유:** 모델 로드 시간은 매 전환마다 체감되며, 빠른 SSD는 매번 몇 초를 절약합니다.',
           '**고급 제품을 피해야 하는 이유:** 모델을 로드하고 거의 전환하지 않는다면 중급 NVMe SSD로 충분합니다. 빠른 읽기 속도는 잦은 전환 시 더 중요합니다.',
         ],
@@ -4585,11 +4778,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'nvme-ssd-picks',
         title: '로컬 AI 모델 호스팅을 위한 최고의 NVMe SSD 추천 2026',
         content:
-          '**로컬 AI 추론 워크로드에 적합한 내장형 NVMe SSD는 순차 읽기 속도 5 GB/s 이상과 최소 2 TB — 여러 대형 모델 간 전환 시 4 TB — 용량이 필요합니다.** 70B 모델을 Q4로 양자화하면 약 35-42 GB 크기이며, 모델 전환 시마다 전체 가중치 파일을 디스크에서 읽습니다. 읽기 속도가 모델 전환과 첫 번째 출력 토큰 사이의 병목입니다. 아래 옵션은 모두 PCIe 4.0 또는 PCIe 5.0 인터페이스에서 ≥ 5 GB/s 순차 읽기를 달성하며 4 TB 구성으로 제공됩니다. 참고: 2026년 관세 및 공급 제약으로 인해 PCIe 4.0 SSD(Samsung, WD)가 더 빠른 Crucial T705 PCIe 5.0보다 훨씬 비싸졌습니다 — 2026년 7월 기준으로 Gen5 드라이브가 최고의 가성비 선택입니다.',
+          '**로컬 AI 추론 워크로드에 적합한 내장형 NVMe SSD는 순차 읽기 속도 5 GB/s 이상과 최소 2 TB — 여러 대형 모델 간 전환 시 4 TB — 용량이 필요합니다.** 70B 모델을 Q4로 양자화하면 약 35-42 GB 크기이며, 모델 전환 시마다 전체 가중치 파일을 디스크에서 읽습니다. 읽기 속도가 모델 전환과 첫 번째 출력 토큰 사이의 병목입니다. 아래 옵션은 모두 PCIe 4.0 또는 PCIe 5.0 인터페이스에서 ≥ 5 GB/s 순차 읽기를 달성하며 4 TB 구성으로 제공됩니다. 참고: 2026년 관세 및 공급 제약으로 인해 PCIe 4.0 SSD(Samsung, WD)가 더 빠른 Crucial T705 PCIe 5.0보다 훨씬 비싸졌습니다 — 현재 기준으로 Gen5 드라이브가 최고의 가성비 선택입니다.',
         items: [
-          '**Crucial T705 4TB (~$304–$350, 2026년 7월):** PCIe 5.0 NVMe, 순차 읽기 최대 14,500 MB/s. Gen5임에도 불구하고 세 제품 중 가장 저렴하여 가성비 최고의 선택입니다. 가중치만 저장하며, 로드 후에는 VRAM이 추론을 처리합니다. PCIe 5.0 M.2 슬롯이 필요합니다.',
-          '**WD Black SN850X 4TB (~$615–$740, 2026년 7월):** PCIe 4.0 NVMe, 순차 읽기 최대 7,300 MB/s, 5년 보증. 중간 옵션 — 2026년 PCIe 4.0 NAND 공급 제약으로 Crucial T705 4TB보다 훨씬 비싸지만 공급이 안정적이고 검증된 제품입니다.',
-          '**Samsung 990 Pro 4TB (~$780–$950, 2026년 7월):** PCIe 4.0 NVMe, 순차 읽기 최대 7,450 MB/s, 2,400 TBW 내구성 등급의 5년 보증. 프리미엄 선택 — 2026년 7월 기준 관세와 공급 압박으로 세 제품 중 가장 비쌉니다(Samsung 권장 소비자가 $1,099, 시장가 $780–$950). 탁월하고 일관된 성능이지만 Crucial T705 4TB가 훨씬 저렴한 가격에 더 빠른 속도를 제공합니다.',
+          '**Crucial T705 4TB (~$304–$350):** PCIe 5.0 NVMe, 순차 읽기 최대 14,500 MB/s. Gen5임에도 불구하고 세 제품 중 가장 저렴하여 가성비 최고의 선택입니다. 가중치만 저장하며, 로드 후에는 VRAM이 추론을 처리합니다. PCIe 5.0 M.2 슬롯이 필요합니다.',
+          '**WD Black SN850X 4TB (~$615–$740):** PCIe 4.0 NVMe, 순차 읽기 최대 7,300 MB/s, 5년 보증. 중간 옵션 — 2026년 PCIe 4.0 NAND 공급 제약으로 Crucial T705 4TB보다 훨씬 비싸지만 공급이 안정적이고 검증된 제품입니다.',
+          '**Samsung 990 Pro 4TB (~$780–$950):** PCIe 4.0 NVMe, 순차 읽기 최대 7,450 MB/s, 2,400 TBW 내구성 등급의 5년 보증. 프리미엄 선택 — 현재 관세와 공급 압박으로 세 제품 중 가장 비쌉니다(Samsung 권장 소비자가 $1,099, 시장가 $780–$950). 탁월하고 일관된 성능이지만 Crucial T705 4TB가 훨씬 저렴한 가격에 더 빠른 속도를 제공합니다.',
         ],
         callouts: [
           {
@@ -4631,7 +4824,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
         ],
         image: '/images/best-nas-storage-local-ai-models-2026-nvme-ssd-picks-hero-ko.webp',
-        imageCaption: 'AI 추론에 가장 적합한 NVMe SSD -- 속도 대 가격, 2026년 7월 (4TB)',
+        imageCaption: 'AI 추론에 가장 적합한 NVMe SSD -- 속도 대 가격 (4TB)',
       },
       raidBackup: {
         id: 'raid-backup',
@@ -4695,7 +4888,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: '2026년 메모리 칩 공급 부족으로 SSD 가격이 이동했으므로, 이 가이드의 모든 수치는 2026년 7월 스냅샷입니다. 구매 전 유통업체의 현재 목록을 열고 당일 Samsung과 WD 드라이브를 비교하십시오. 최고 가성비는 번갈아 바뀝니다.',
+            text: '2026년 메모리 칩 공급 부족으로 SSD 가격이 이동했으므로, 이 가이드의 모든 수치는 대략적인 값입니다. 구매 전 유통업체의 현재 목록을 열고 당일 Samsung과 WD 드라이브를 비교하십시오. 최고 가성비는 번갈아 바뀝니다.',
           },
         ],
         affiliateLinks: [
@@ -4787,7 +4980,31 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '2026년에 SSD 가격이 변동했습니까?',
-            a: '예. 2026년 메모리 칩 공급 부족으로 NAND 및 SSD 가격이 이전 수준보다 높아졌습니다. 이 가이드의 모든 가격은 2026년 7월 스냅샷입니다. 구매 전 유통업체의 현재 목록에서 가격을 확인하고, Samsung 990 Pro와 WD Black SN850X를 당일 비교하십시오. 둘 중 더 저렴한 것이 시장에 따라 번갈아 바뀝니다.',
+            a: '예. 2026년 메모리 칩 공급 부족으로 NAND 및 SSD 가격이 이전 수준보다 높아졌습니다. 이 가이드의 모든 가격은 대략적인 값입니다. 구매 전 유통업체의 현재 목록에서 가격을 확인하고, Samsung 990 Pro와 WD Black SN850X를 당일 비교하십시오. 둘 중 더 저렴한 것이 시장에 따라 번갈아 바뀝니다.',
+          },
+          {
+            q: '소규모 AI 랩에 적합한 스토리지 구성은 무엇입니까 — 과도한 지출 없이 빠른 로컬 NVMe, 공유 스토리지, 아카이브를 어떻게 조합해야 합니까?',
+            a: '이론적으로 존재하는 데이터양이 아니라 접근 빈도에 따라 세 단계로 나누십시오. 빠른 로컬 NVMe(머신당 1-4 TB)에는 추론이나 활성 학습 실행을 위해 현재 로드된 모델 가중치를 둡니다 — 여기서는 속도가 중요하며 용량은 최소한으로 유지해야 합니다. 공유 NAS 스토리지(RAID 6 구성의 4베이 장치)에는 팀 전체가 필요로 하는 전체 모델 라이브러리, 데이터셋, 체크포인트를 둡니다 — NAS 드라이브는 테라바이트당 비용이 NVMe보다 훨씬 저렴하므로 실제 용량을 구매해야 할 곳입니다. 장기 아카이브는 가장 저렴한 계층으로, 현재 적극적으로 사용하지는 않지만 삭제하고 싶지 않은 모델과 데이터셋을 위한 대용량 HDD 또는 콜드 클라우드 계층입니다. 과도한 지출의 흔한 실수는 아카이브 계층에 NVMe 용량을 구매하는 것입니다 — 실제로 활성 경로에 있는 드라이브에만 프리미엄 가격을 지불하십시오.',
+          },
+          {
+            q: '여러 사용자가 이용하는 24시간 가동 AI NAS에는 NAS 전용 드라이브와 엔터프라이즈 데이터센터 드라이브 중 무엇을 사용해야 합니까?',
+            a: 'NAS 전용 드라이브(예: Seagate IronWolf, WD Red Plus)는 24시간 연속 가동, 다중 베이 진동, 중간 수준의 다중 사용자 워크로드를 위해 설계되어 있어 소규모 팀의 모델 라이브러리 NAS에 적합한 기본 선택입니다. NAS가 많은 동시 사용자를 처리하거나, 일반적인 NAS 워크로드 등급을 넘어서는 지속적인 읽기/쓰기가 발생하거나, 추가적인 내구성과 더 긴 보증이 드라이브당 더 높은 비용을 정당화할 때 엔터프라이즈 데이터센터 드라이브(예: Seagate Exos, WD Gold)로 업그레이드하십시오. 사용자가 약 10명 미만인 대부분의 로컬 AI 팀에는 RAID 6 구성의 NAS 전용 드라이브로 충분합니다. 엔터프라이즈 드라이브는 시작을 위한 필수 조건이 아니라 규모 확장을 위한 업그레이드입니다.',
+          },
+          {
+            q: '모델 가중치, 양자화 변형, 롤백 사본을 고려할 때 LLM 추론 머신에는 얼마나 많은 SSD 공간이 필요합니까?',
+            a: '오늘 사용하는 모델보다 더 많은 용량을 계획하십시오. 단일 70B 모델의 Q4 양자화는 약 35-42 GB이지만, 실제 작동하는 구성에서는 일반적으로 동일 모델의 최소 두 가지 양자화 수준(품질 대 속도 테스트용)에 더해 전환 전 롤백 사본으로 이전 모델 버전을 함께 유지합니다 — 대략적인 기준으로 단일 모델 용량의 약 3배입니다. 7B부터 70B까지 여러 모델 계열의 라이브러리라면, 추론 머신의 2-4 TB NVMe SSD로 활성 사용을 넉넉히 커버할 수 있으며, 전체 이력 라이브러리는 로컬 디스크가 아닌 NAS에 보관합니다.',
+          },
+          {
+            q: 'AI 또는 LLM 데이터셋에 사용하는 다중 베이 NAS용 드라이브를 구매하기 전에 무엇을 확인해야 합니까?',
+            a: '구매 전 네 가지를 확인하십시오. 워크로드 등급(NAS 전용 드라이브는 연간 워크로드 한도를 TB/년 단위로 표시합니다 — 단순 용량이 아니라 실제 읽기/쓰기 볼륨을 커버하는지 확인하십시오), 진동 내성(다중 베이 인클로저는 단일 외장 드라이브보다 더 많은 진동을 발생시키며, NAS 전용이 아닌 드라이브는 이런 환경에서 성능이 저하되거나 조기에 고장 날 수 있습니다), 호환성(NAS 제조사의 드라이브 호환성 목록을 확인하십시오 — 일부 NAS 펌웨어는 승인되지 않은 드라이브를 제한하거나 기능을 비활성화합니다), 보증 기간(NAS 전용 드라이브는 일반적으로 3-5년 보증을 제공합니다 — 어레이를 교체하기 전까지 운영할 계획인 기간과 맞추십시오).',
+          },
+          {
+            q: '온프레미스 AI 서버에는 단일 대용량 드라이브, RAID, SSD와 HDD 혼합 중 어느 것이 더 안정적인 구성입니까?',
+            a: '크기에 상관없이 단일 드라이브는 가장 신뢰성이 낮은 옵션입니다 — 한 번의 고장으로 모든 것을 잃으며, 중복성도 빠른 재구축 경로도 없습니다. RAID(구체적으로는 NAS의 RAID 6)는 드라이브 고장 시에도 데이터 손실 없이 견디기 때문에 공유 모델 라이브러리에 적합한 기본 선택입니다. SSD와 HDD를 혼합한 구성은 RAID의 대안이 아니라 다른 역할 분담을 나타냅니다 — 활성 추론을 위한 빠른 로컬 NVMe SSD, 대용량 라이브러리를 위한 NAS의 RAID 보호 HDD입니다. 신뢰성 측면에서 구체적으로 말하면, RAID 6에 실제 백업(3-2-1 규칙)을 더한 구성이 드라이브 유형과 관계없이 단일 드라이브 구성보다 우수합니다.',
+          },
+          {
+            q: 'AI 파이프라인에서 학습 또는 추론 데이터에 로컬 NVMe 스크래치 디스크와 공유 NAS 중 언제 어느 것을 사용해야 합니까?',
+            a: '활성 실행 중 반복적으로 읽히는 모든 것에는 로컬 NVMe 스크래치 디스크를 사용하십시오 — GPU로 스트리밍되는 학습 데이터나 추론 중인 모델의 가중치가 그 예입니다. 로컬 NVMe는 네트워크 홉이 없으므로 더 빠르며, 여러 작업이 동시에 실행될 때 공유 NAS가 병목이 되는 것을 방지합니다. 실행 사이에 유지되며 다른 머신이나 팀원이 필요로 하는 라이브러리에는 공유 NAS를 사용하십시오 — 전체 모델 컬렉션, 완료된 체크포인트, 현재 사용하지 않는 데이터셋이 여기에 해당합니다. 일반적인 패턴은 작업 시작 시 NAS에서 로컬 NVMe 스크래치 공간으로 데이터셋이나 모델을 복사한 후, 작업 완료 후 결과를 다시 NAS에 기록하는 것입니다 — NAS는 저장과 공유를 위한 것이지, 활성 학습 루프에 직접 서비스를 제공하기 위한 것이 아닙니다.',
           },
         ],
       },
@@ -4807,11 +5024,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: '2026년 로컬 AI 모델을 위한 최고의 NAS 및 스토리지: 구매 가이드',
-      description: '로컬 AI 모델을 위한 Synology 및 QNAP NAS와 Samsung 및 WD SSD 비교: RAID 6 중복성, 빠른 모델 로드, 용량 및 2026년 7월 가격.',
+      description: '로컬 AI 모델을 위한 Synology 및 QNAP NAS와 Samsung 및 WD SSD 비교: RAID 6 중복성, 빠른 모델 로드, 용량 및 현재 가격.',
       url: 'https://www.promptquorum.com/ko/power-local-llm/best-nas-storage-local-ai-models-2026',
       inLanguage: 'ko',
       datePublished: '2026-05-22',
-      dateModified: '2026-07-01',
+      dateModified: '2026-08-29',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',

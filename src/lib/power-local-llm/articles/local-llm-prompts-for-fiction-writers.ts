@@ -540,6 +540,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
       },
       models: {
         id: 'models',
+        itemHeadings: true,
         title: 'Model Recommendations for Fiction Writing',
         content:
           '**Model choice matters less than prompt structure, but it matters.** A well-structured prompt on a 7B model will outperform a vague prompt on a 70B model — but given equivalent prompts, larger models maintain constraint adherence over longer completions and differentiate character voices more reliably.',
@@ -1166,6 +1167,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
       },
       models: {
         id: 'models',
+        itemHeadings: true,
         title: 'Modellempfehlungen für Belletristik-Schreiben',
         content:
           '**Modellwahl ist weniger wichtig als Prompt-Struktur, aber sie ist wichtig.** Ein gut strukturierter Prompt auf einem 7B-Modell übertrifft einen vagen Prompt auf einem 70B-Modell — aber bei äquivalenten Prompts halten größere Modelle Einschränkungs-Treue über längere Completions besser aufrecht.',
@@ -1801,6 +1803,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
       },
       models: {
         id: 'models',
+        itemHeadings: true,
         title: 'Recommandations de modèles pour l\'écriture de fiction',
         content:
           '**Le choix du modèle compte moins que la structure du prompt, mais il compte.** Un prompt bien structuré sur un modèle 7B surpassera un prompt vague sur un modèle 70B — mais à prompts équivalents, les modèles plus grands maintiennent mieux l\'adhérence aux contraintes sur les longues générations et différencient les voix des personnages plus fiablement.',
@@ -1905,7 +1908,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-07-13',
+    dateModified: '2026-08-29',
     next_refresh_due: '2026-11-07',
     theme: 'Creative & Roleplay',
     heroImage: '/images/local-llm-prompts-for-fiction-writers-overview-hero-ja.webp',
@@ -2436,6 +2439,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
       },
       models: {
         id: 'models',
+        itemHeadings: true,
         title: '小説執筆のためのモデル推薦',
         content:
           '**モデルの選択はプロンプト構造よりも重要ではありませんが、重要です。** 7Bモデルでのよく構造化されたプロンプトは70Bモデルでの漠然としたプロンプトを上回ります——しかし同等のプロンプトでは、大きいモデルは長い生成全体にわたって制約への準拠をより良く維持し、キャラクターの声をより確実に分化させます。',
@@ -2520,6 +2524,18 @@ Word ceiling: same length as the input paragraph. Do not add any new information
           {
             q: '日本でローカルLLMを使って成人向けコンテンツを生成する場合、法的な注意点はありますか？',
             a: '「児童買春・児童ポルノに係る行為等の処罰及び児童の保護等に関する法律」（いわゆる児童ポルノ禁止法）第7条は、AIによる生成物・フィクションを問わず、18歳未満の者を性的に描写するコンテンツの製造・所持・提供を絶対的に禁止しています。ローカル生成・非公開であっても例外ではありません。成人同士のフィクションコンテンツについては、刑法第175条（わいせつ物頒布罪）は「頒布・公然と陳列」する行為を規制しており、未公開の私的生成は一般に適用外です。スタイル転換プロンプトについては、著者のテクニックを複製することは許容されます；実質的な文章を逐語的に複製することは著作権を侵害する可能性があります。ローカルで標準的なフィクションを生成することには一般的な禁止事項はありません。',
+          },
+          {
+            q: 'フィクション執筆用のシステムプロンプトはどう書けばいいですか？',
+            a: 'ジャンル・POV（視点）・文体レジスターをユーザーターンではなくシステムメッセージに設定してください——これによりセッション内の全ての生成がその制約を自動的に継承し、ターンごとに繰り返す必要がなくなります。基本形は「あなたは[ジャンル]小説のアシスタントです。生成する散文は全て[POV：例、過去時制の密着した三人称]で書かれ、[重視する要素：例、感覚的詳細とサブテキスト]を重視します」です。長編セッションでは、キャラクターシート（名前・支配的な特性・矛盾する行動・話し言葉レジスター）もシステムメッセージに含めると、声の一貫性が大幅に向上します。Ollama・LM Studio・SillyTavernのいずれも、システムプロンプトフィールドは同じ働きをします——チャットの最初のユーザーメッセージではなく、専用のシステムプロンプト欄に入力してください。',
+          },
+          {
+            q: 'LM Studioでこれらのプロンプトテンプレートをどう使えばいいですか？',
+            a: 'LM Studioのチャット画面右側にある「System Prompt」欄に、ジャンル・POV・文体の制約を貼り付けてください（Ollamaの`--system`フラグやModelfileの`SYSTEM`命令と同じ役割です）。その後、通常のチャット入力欄に本ガイドのシーン・ダイアログ・世界構築などのテンプレートをユーザーメッセージとして入力します。LM StudioはOpenAI互換のローカルサーバーも起動できるため、システムプロンプトとユーザープロンプトをAPI経由で分けて送信することも可能です——結果はチャットUIから直接使う場合と同じです。テンプレート自体はフロントエンドに依存しないプレーンテキストなので、Ollama用に書かれたものもそのままLM Studioで使えます。',
+          },
+          {
+            q: 'ローカルLLM自体にフィクション用のプロンプトを生成させることはできますか？',
+            a: 'はい。モデルに「[ジャンル]の小説シーンを書くための、ジャンル・POV・感覚的制約・感情的ビート・語数上限を含む5パートプロンプトを作成してください」のように依頼すれば、本ガイドの構造に沿ったプロンプトの土台を生成できます。ただし、モデルが自動生成したプロンプトは制約が曖昧になりがちなので、そのまま使うより本ガイドのテンプレートを土台にして自分で微調整する方が、一貫して良い結果を得られます。プロンプト生成そのものを目的にするより、まずは既製のテンプレートから始めて、自分の作品に合わせて語数上限や感覚的詳細を調整していくのが実用的です。',
           },
         ],
       },
@@ -3071,6 +3087,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
       },
       models: {
         id: 'models',
+        itemHeadings: true,
         title: '小说写作的模型推荐',
         content:
           '**模型选择的影响小于提示词结构，但确实有影响。** 一个结构良好的提示词在7B模型上会胜过7B模型上模糊提示词——但在等效提示词的情况下，较大的模型在较长补全中更好地保持约束遵从性，并更可靠地区分角色声音。',
@@ -3706,6 +3723,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
       },
       models: {
         id: 'models',
+        itemHeadings: true,
         title: 'Recomendaciones de modelos para la escritura de ficción',
         content:
           '**La elección del modelo importa menos que la estructura del prompt, pero importa.** Un prompt bien estructurado en un modelo de 7B superará a un prompt vago en un modelo de 70B — pero dados prompts equivalentes, los modelos más grandes mantienen la adherencia a las restricciones en generaciones largas de forma más confiable y diferencian las voces de los personajes con mayor fiabilidad.',
@@ -4347,6 +4365,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
       },
       models: {
         id: 'models',
+        itemHeadings: true,
         title: 'Recomendações de modelos para a escrita de ficção',
         content:
           '**A escolha do modelo importa menos do que a estrutura do prompt, mas importa.** Um prompt bem estruturado em um modelo de 7B superará um prompt vago em um modelo de 70B — mas, dados prompts equivalentes, os modelos maiores mantêm a aderência às restrições em gerações longas de forma mais confiável e diferenciam as vozes dos personagens com maior fidelidade.',
@@ -4987,6 +5006,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
       },
       models: {
         id: 'models',
+        itemHeadings: true,
         title: 'توصيات النماذج لكتابة الخيال الأدبي',
         content:
           '**اختيار النموذج أقل أهمية من هيكل الأمر، لكنه مهم.** أمر جيد الهيكلة على نموذج 7B سيتفوق على أمر غامض على نموذج 70B — لكن مع أوامر متكافئة، تحافظ النماذج الأكبر على الالتزام بالقيود في التوليدات الطويلة بشكل أكثر موثوقية وتُميز أصوات الشخصيات بدقة أعلى.',
@@ -5627,6 +5647,7 @@ Word ceiling: same length as the input paragraph. Do not add any new information
       },
       models: {
         id: 'models',
+        itemHeadings: true,
         title: '소설 쓰기를 위한 모델 추천',
         content:
           '**모델 선택은 프롬프트 구조보다 덜 중요하지만, 중요합니다.** 7B 모델에서 잘 구조화된 프롬프트가 70B 모델에서 모호한 프롬프트를 능가할 것입니다 — 하지만 동등한 프롬프트 기준으로 더 큰 모델이 긴 생성에서 더 안정적으로 제약 조건을 따르고 인물 목소리를 더 신뢰할 수 있게 구별합니다.',
