@@ -504,7 +504,7 @@
     "baseline": {
       "impressions": 21738,
       "clicks": 1,
-      "ctr": 4.600239212439047e-05,
+      "ctr": 0.00004600239212439047,
       "period": "last 90 days"
     }
   },
@@ -1028,6 +1028,20 @@
       }
     ],
     "reason": "Page 39: low volume overall (top query 9 impr) but every real query is about vision models specifically (best local vision models/model, local vision model, best ollama vision model), while seoTitle was just \"Multimodal Local LLMs\" at 21 chars with no year (Rule 2d violation for semi_annual tier) and no mention of vision or best. Rewrote to match the actual query intent and fixed the year gap; meta also extended from 110 to 140 chars.",
+    "baseline": null
+  },
+  {
+    "id": "d10aa3c7-17ee-4ebe-beba-afea54527acc",
+    "slug": "/smart-home/gmktec-g3-plus-local-ai-review",
+    "date": "2026-08-29T20:57:33.108Z",
+    "fields": [
+      {
+        "field": "seoTitle,metaDescription (en)",
+        "old": "GMKtec G3 Plus N150 Review 2026: Budget HA Mini PC",
+        "new": "GMKtec NucBox G3 Plus N150 Review 2026 - HA Mini PC"
+      }
+    ],
+    "reason": "Page 40: the nucbox naming variant (gmktec nucbox g3 plus, nucbox g3 plus, gmktec nucbox g3 plus n150, etc.) totals roughly 170 impressions across 10+ query variants - the manufacturer's actual full product name - but was completely absent from title/meta despite being covered 12x in the body. Added NucBox to both title and meta to match the real product-name search behavior.",
     "baseline": null
   }
 ]

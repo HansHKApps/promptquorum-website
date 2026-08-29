@@ -15,11 +15,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/gmktec-g3-plus-local-ai-review-overview-hero-en.webp',
     affiliateDisclosure: true,
     title: 'GMKtec G3 Plus N150 Review (2026): Best Budget Mini PC for Home Assistant + Local AI?',
-    seoTitle: 'GMKtec G3 Plus N150 Review 2026: Budget HA Mini PC',
+    seoTitle: 'GMKtec NucBox G3 Plus N150 Review 2026 — HA Mini PC',
     intro:
       'The GMKtec NucBox G3 Plus (Intel N150, single-channel DDR4 upgradeable to 32 GB) is a budget mini PC built for a local-first smart home. At about $180–200 for the 16 GB / 512 GB configuration (price checked August 25, 2026) it runs Home Assistant and a small local model, with a genuine advantage over some rivals: its RAM is a replaceable SO-DIMM, not soldered. This review verifies its specs against the manufacturer and independent sources, sets honest expectations for local-LLM speed, and scores it directly against the Beelink EQ14 and the Ryzen-class step-up boxes.',
     metaDescription:
-      'GMKtec G3 Plus N150 review 2026: real prices (Aug 2026), scorecard, configuration guide, and a direct EQ14 comparison. Budget Home Assistant box with upgradeable RAM.',
+      'GMKtec NucBox G3 Plus N150 review 2026: real prices, scorecard, and a direct EQ14 comparison. Budget Home Assistant box with upgradeable RAM.',
     twitterDescription:
       'GMKtec G3 Plus (2026): Intel N150, DDR4 upgradeable to 32 GB (not soldered), ~$180–200. Scorecard, configuration picks, and where it beats — and loses to — the Beelink EQ14.',
     readTime: '9 min read',
