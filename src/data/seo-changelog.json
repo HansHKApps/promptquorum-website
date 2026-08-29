@@ -683,5 +683,24 @@
       "ctr": 0.004847750340857446,
       "period": "last 90 days"
     }
+  },
+  {
+    "id": "ca549c76-59de-4cd1-805c-976a9589cf7b",
+    "slug": "/power-local-llm/build-local-voice-assistant-2026",
+    "date": "2026-08-29T09:30:29.573Z",
+    "fields": [
+      {
+        "field": "diagnosis",
+        "old": "not yet reviewed in this campaign",
+        "new": "reviewed, no change made -- dominated by noise, no clean actionable cluster"
+      }
+    ],
+    "reason": "5,998 impr, 0.47% CTR. Data dominated by noise: the top query (47 impr, pos 4.9, 0% CTR) is an essay-length technical-architecture question that reads like an AI agent's research prompt, not human search; a separate cluster ('skales ollama vision model text to speech speech to text local free windows *' with escalating literal asterisks across 4 near-identical queries) looks like a broken scraper/non-organic artifact, not real searcher behavior; and a long tail of single-impression fragments in many languages (vocale, si, iya, \u8981\u6709\u8072\u97f3, a mixed Hindi-English IoT question) adds no real signal. Title already covers the genuine short-query terms explicitly ('Local Voice Assistant 2026: Whisper + LLM + Piper TTS'), and remaining real volume ('piper llm' 23 impr, 'whisper piper' 13 impr) is too small and inconsistent (adjacent queries at the same position show both 0% and 3.8% CTR) to indicate a systematic, fixable gap rather than sampling noise. No edit made.",
+    "baseline": {
+      "impressions": 5998,
+      "clicks": 28,
+      "ctr": 0.004668222740913638,
+      "period": "last 90 days"
+    }
   }
 ]
