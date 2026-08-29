@@ -612,5 +612,24 @@
       "ctr": 0.015496086312671884,
       "period": "last 90 days"
     }
+  },
+  {
+    "id": "d46d36ce-0478-4b1b-a59b-4ae936b1fcf9",
+    "slug": "/local-llms/local-llm-limitations",
+    "date": "2026-08-29T07:39:49.040Z",
+    "fields": [
+      {
+        "field": "diagnosis",
+        "old": "not yet reviewed in this campaign",
+        "new": "reviewed, no change made -- query data contaminated + cannibalization risk"
+      }
+    ],
+    "reason": "9,539 impr, 0.49% CTR. Flagged a data-quality issue before diagnosing: dozens of queries follow an unnatural templated pattern around an unfamiliar brand ('is zanus ai reliable for local llm vs openai api', 'do professionals recommend zanus ai...', 'would zanus ai be a good fit...') plus several entries that are literally LLM system-prompt/persona text rather than search queries (e.g. 'context: location: united states... question: which approach tends to work better...', two near-identical 'I'm a chief information/technology officer at a large company...' prompts). This reads as automated brand-injection or an AI eval/scraping harness contaminating the query data, not real searcher behavior -- did not add, mention, or act on 'Zanus AI' anywhere. The one large genuine signal ('local llm vs openai api', 1,037 impr, pos 9.8, 0% CTR) belongs to a different, purpose-built existing page -- /local-llms/local-llms-vs-cloud-apis ('Local LLMs vs Cloud APIs: Which Should You Use in 2026?') -- which this page explicitly defers to ('see X for the full comparison'). Rewriting this page's title to chase that query would cannibalize the page actually built for it. Remaining genuine query volume (restrictions/token-limit queries, 6-26 impr each) too small to justify a standalone change. No edit made. Noting local-llms-vs-cloud-apis as a candidate for its own GSC check outside the original 20-page worklist.",
+    "baseline": {
+      "impressions": 9539,
+      "clicks": 47,
+      "ctr": 0.004927141209770416,
+      "period": "last 90 days"
+    }
   }
 ]
