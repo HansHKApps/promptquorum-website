@@ -9,7 +9,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
-    dateModified: '2026-05-14',
+    dateModified: '2026-08-28',
     next_refresh_due: '2026-11-14',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/local-multimodal-pipeline-voice-vision-text-overview-hero-en.webp',
@@ -69,7 +69,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           'Vision + LLM can share one Ollama instance (Llama 3.2 Vision handles both).',
           'Total VRAM for full stack: ~15 GB (whisper 3 GB + LLaVA 7B 6 GB + Llama 3.1 8B 6 GB + Piper CPU).',
         ],
-        updatedDate: '2026-05-14',
+        updatedDate: '2026-08-28',
       },
     },
     toc: [
@@ -568,7 +568,7 @@ if __name__ == "__main__":
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
-    dateModified: '2026-05-14',
+    dateModified: '2026-08-28',
     next_refresh_due: '2026-11-14',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/local-multimodal-pipeline-voice-vision-text-overview-hero-de.webp',
@@ -940,7 +940,7 @@ if __name__ == "__main__":
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
-    dateModified: '2026-05-14',
+    dateModified: '2026-08-28',
     next_refresh_due: '2026-11-14',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/local-multimodal-pipeline-voice-vision-text-overview-hero-fr.webp',
@@ -1278,7 +1278,7 @@ if __name__ == "__main__":
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
-    dateModified: '2026-05-14',
+    dateModified: '2026-08-28',
     next_refresh_due: '2026-11-14',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/local-multimodal-pipeline-voice-vision-text-overview-hero-ja.webp',
@@ -1616,7 +1616,7 @@ if __name__ == "__main__":
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
-    dateModified: '2026-05-14',
+    dateModified: '2026-08-28',
     next_refresh_due: '2026-11-14',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/local-multimodal-pipeline-voice-vision-text-overview-hero-zh.webp',
@@ -1954,7 +1954,7 @@ if __name__ == "__main__":
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
-    dateModified: '2026-05-14',
+    dateModified: '2026-08-28',
     next_refresh_due: '2026-11-14',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/local-multimodal-pipeline-voice-vision-text-overview-hero-es.webp',
@@ -2012,7 +2012,7 @@ if __name__ == "__main__":
           'Visión + LLM pueden compartir una instancia de Ollama (Llama 3.2 Vision maneja ambos).',
           'VRAM total para el stack completo: ~15 GB (whisper 3 GB + LLaVA 7B 6 GB + Llama 3.1 8B 6 GB + Piper CPU).',
         ],
-        updatedDate: '2026-05-14',
+        updatedDate: '2026-08-28',
       },
     },
     toc: [
@@ -2524,7 +2524,7 @@ if __name__ == "__main__":
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
-    dateModified: '2026-05-14',
+    dateModified: '2026-08-28',
     next_refresh_due: '2026-11-14',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/local-multimodal-pipeline-voice-vision-text-overview-hero-pt.webp',
@@ -2582,7 +2582,7 @@ if __name__ == "__main__":
           'Visão + LLM podem compartilhar uma instância do Ollama (o Llama 3.2 Vision gerencia ambos).',
           'VRAM total para o stack completo: ~15 GB (whisper 3 GB + LLaVA 7B 6 GB + Llama 3.1 8B 6 GB + Piper CPU).',
         ],
-        updatedDate: '2026-05-14',
+        updatedDate: '2026-08-28',
       },
     },
     toc: [
@@ -3094,7 +3094,7 @@ if __name__ == "__main__":
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
-    dateModified: '2026-05-14',
+    dateModified: '2026-08-28',
     next_refresh_due: '2026-11-14',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/local-multimodal-pipeline-voice-vision-text-overview-hero-ar.webp',
@@ -3154,7 +3154,7 @@ if __name__ == "__main__":
           'يمكن للرؤية وLLM مشاركة مثيل Ollama واحد (يتولى Llama 3.2 Vision الاثنين).',
           'إجمالي VRAM للمجموعة الكاملة: ~15 غيغابايت (whisper 3 غيغابايت + LLaVA 7B 6 غيغابايت + Llama 3.1 8B 6 غيغابايت + Piper CPU).',
         ],
-        updatedDate: '2026-05-14',
+        updatedDate: '2026-08-28',
       },
     },
     toc: [
@@ -3652,7 +3652,7 @@ if __name__ == "__main__":
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-14',
-    dateModified: '2026-05-14',
+    dateModified: '2026-08-28',
     next_refresh_due: '2026-11-14',
     theme: 'Voice, Speech & Multimodal',
     heroImage: '/images/local-multimodal-pipeline-voice-vision-text-overview-hero-ko.webp',
@@ -3710,7 +3710,7 @@ if __name__ == "__main__":
           '비전 + LLM은 Ollama 인스턴스를 공유 가능(Llama 3.2 Vision이 두 작업 모두 처리).',
           '전체 스택 총 VRAM: ~15 GB(whisper 3 GB + LLaVA 7B 6 GB + Llama 3.1 8B 6 GB + Piper CPU).',
         ],
-        updatedDate: '2026-05-14',
+        updatedDate: '2026-08-28',
       },
     },
     toc: [
@@ -4212,7 +4212,7 @@ if __name__ == "__main__":
       url: 'https://www.promptquorum.com/ko/power-local-llm/local-multimodal-pipeline-voice-vision-text',
       inLanguage: 'ko',
       datePublished: '2026-05-14',
-      dateModified: '2026-05-14',
+      dateModified: '2026-08-28',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Advanced',

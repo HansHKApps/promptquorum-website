@@ -16,7 +16,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-22',
-    dateModified: '2026-07-01',
+    dateModified: '2026-08-27',
     next_refresh_due: '2026-12-19',
     theme: 'Overview & Reference',
     title: 'Best AI Coding Tools Compared 2026: Cursor vs Continue.dev',
