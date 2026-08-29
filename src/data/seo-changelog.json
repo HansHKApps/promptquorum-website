@@ -631,5 +631,24 @@
       "ctr": 0.004927141209770416,
       "period": "last 90 days"
     }
+  },
+  {
+    "id": "40006748-a533-4606-bb07-eea9b4eb3899",
+    "slug": "/local-llms/apple-silicon-local-llm-guide-2026",
+    "date": "2026-08-29T07:43:58.208Z",
+    "fields": [
+      {
+        "field": "diagnosis",
+        "old": "not yet reviewed in this campaign",
+        "new": "reviewed, no change made -- healthy performer"
+      }
+    ],
+    "reason": "12,406 impr, 1.56% CTR (per worklist). Pulled data (10 rows, smaller window) shows every single query already converting with positive CTR (3.6%-100%) around the 'M5 Pro vs M5 Max' cluster -- no 0%-CTR anomaly to fix. Title already covers the chip range ('M6 to M5 Ultra for Local LLMs'). No edit made.",
+    "baseline": {
+      "impressions": 12406,
+      "clicks": 194,
+      "ctr": 0.015637594712236014,
+      "period": "last 90 days"
+    }
   }
 ]
