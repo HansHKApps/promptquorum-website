@@ -917,5 +917,19 @@
     ],
     "reason": "Page 30 batch: second-highest-impression query on the page (best inference stack supporting 32k context windows, 34 impr, pos 6.6, 0% CTR) had zero body coverage - no context-window or 32K mention anywhere. Title/meta already covered the primary RAG/agents/coding queries well (both already converting with clicks), so this was a body-only fix. Note: this article has no ko locale block at all (7 non-EN locales exist, not 8) - flagged as a separate pre-existing gap, not fixed here.",
     "baseline": null
+  },
+  {
+    "id": "b14bf855-a894-463c-ac6c-69e1b10597ee",
+    "slug": "/local-llms/best-local-llm-stack-use-case",
+    "date": "2026-08-29T12:39:45.561Z",
+    "fields": [
+      {
+        "field": "faqs (ko)",
+        "old": "ko block already existed (my earlier no-ko-block claim was wrong, missed due to 2-space vs 4-space indentation) but was missing the 32K context window FAQ",
+        "new": "Added translated 32K context window FAQ to existing ko block, matching en/es/ar/pt/de/fr/ja/zh"
+      }
+    ],
+    "reason": "Correction to page 30 changelog entry: this article's ko locale block exists (found at line 2266, uses inconsistent 2-space indentation vs other locales' 4-space, which caused my earlier grep to miss it and wrongly report the article as ko-less). Completing the 32K FAQ translation set across all 9 languages.",
+    "baseline": null
   }
 ]

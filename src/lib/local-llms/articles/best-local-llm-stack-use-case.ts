@@ -2273,7 +2273,7 @@ schema: {
   heroImage: '/images/best-local-llm-stack-use-case-hardware-tier-hero-ko.webp',
   twitterDescription: '사용 사례별 로컬 LLM 스택: 코딩 → vLLM + Qwen3-Coder. 글쓰기 → Ollama + Llama 3.3. RAG → LlamaIndex + Qdrant. 에이전트 → LangGraph + vLLM. 2026년 6월 가이드.',
   publishDate: '2026-04-05',
-  dateModified: '2026-08-28',
+  dateModified: '2026-08-29',
   leadAnswerBlock: '**최적의 로컬 LLM 스택은 워크플로에 따라 다릅니다. 작가에게는 OpenWebUI + Llama 3, 개발자에게는 vLLM + Python SDK, 연구자에게는 LangGraph + 커스텀 스크립트가 필요합니다. 2026년 6월 기준, 모든 영역에서 우수한 단일 도구는 존재하지 않습니다.**',
   audience: 'Ollama 또는 LM Studio에 익숙한 개발자로서 로컬 LLM 워크플로를 최적화하고자 하는 분',
   readTime: '10분 분량',
@@ -2482,6 +2482,7 @@ for filename, review in reviews:
     'faqSection': {
       id: 'faq',
       faqs: [
+        { q: '32K 이상의 컨텍스트 윈도우를 가장 잘 지원하는 로컬 추론 스택은 무엇입니까?', a: 'vLLM입니다. PagedAttention 기반 KV 캐시 관리를 통해 과다 할당 대신 컨텍스트 길이에 거의 선형적으로 메모리를 확장하므로, 32K 컨텍스트 세션에서도 단순한 어텐션 구현처럼 VRAM 예산을 초과하지 않습니다. Ollama와 llama.cpp도 긴 컨텍스트 모델을 문제없이 서빙할 수 있습니다(현재 대부분의 오픈 웨이트 모델은 기본적으로 32K~128K 컨텍스트를 지원합니다). 다만 여러 개의 긴 컨텍스트 요청이 동시에 실행될 때는 vLLM의 연속 배치 처리(continuous batching)가 더 높은 처리량을 유지합니다. 어떤 백엔드를 선택하든, VRAM 비용은 모델 크기뿐 아니라 컨텍스트 길이에 따라서도 확장된다는 점을 기억하십시오 — 32K 컨텍스트 세션은 동일한 모델의 4K 컨텍스트 세션보다 몇 GB 더 많은 VRAM을 사용할 수 있습니다.' },
         { q: 'Ollama와 vLLM 중 어떤 것을 사용해야 합니까?', a: 'Ollama는 채팅 UI와 간편함에 적합합니다. vLLM은 API 서버, 배치 처리, 성능에 적합합니다. 상호 배타적이지 않으므로 둘 다 실행할 수 있습니다.' },
         { q: 'Ollama를 프로덕션 API에 사용할 수 있습니까?', a: '예, 하지만 vLLM이 더 빠릅니다(처리량 3~5배 높음). Ollama는 초당 10건 미만 요청에 적합합니다. 초당 10건 이상에는 vLLM을 사용하십시오.' },
         { q: '코드 리뷰에 가장 적합한 로컬 LLM은 무엇입니까?', a: 'vLLM + Qwen3-Coder-7B-Instruct입니다. Qwen3-Coder는 HumanEval에서 82%를 기록합니다(최고의 오픈소스). vLLM은 10개 파일을 병렬로 처리합니다. RTX 3060 12GB에서 약 30~50 tok/sec입니다.' },
