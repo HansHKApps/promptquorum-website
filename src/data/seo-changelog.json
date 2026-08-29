@@ -973,5 +973,19 @@
     ],
     "reason": "Page 33 batch: home llm (76 impr) + home-llm (26) + in house llm (3) + llm home (3) + llm.home (3) + acon96/home-llm (1) + homellm (1) = ~114 combined impressions, all 0% CTR - the single largest addressable cluster on the page, referring to the real acon96/home-llm HACS custom integration, completely absent from the article which only covers the official built-in Ollama integration. Added a factual, conservative FAQ distinguishing the two rather than overstating specifics not verified.",
     "baseline": null
+  },
+  {
+    "id": "7ffe4f88-3219-4cca-b7b2-e51e9f824c82",
+    "slug": "/prompt-bites/strix-halo-ollama-vulkan",
+    "date": "2026-08-29T13:42:42.022Z",
+    "fields": [
+      {
+        "field": "faqs (all 9 locales)",
+        "old": "Only a generic does it work on Windows FAQ existed - no answer for the specific 64K context window performance angle",
+        "new": "Added How does Ryzen AI Max 395 handle a 64K context window on Windows with Ollama? FAQ to all 9 locales"
+      }
+    ],
+    "reason": "Page 35: top query (strix halo ollama vulkan context window limit 64k tokens, 1,100 impr, pos 3.1, 0% CTR) already has an exact-match title/meta - likely AIO-satisfied at the SERP level, left alone (diagnosis-E pattern). Real gap: ryzen ai max 395 windows ollama 64k context window performance (194+86=280 impr combined, positions 5.0/9.4, 0% CTR) asks specifically about Windows performance, which the article only addressed with a generic works on Windows? FAQ, not the performance-specific angle. Added a dedicated FAQ explaining the CPU-fallback performance implication, reusing the already-established Vulkan build workaround fact.",
+    "baseline": null
   }
 ]

@@ -6,7 +6,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Hardware-Specific',
     heroImage: '/images/strix-halo-ollama-vulkan-overview-hero-en.webp',
     title: 'Strix Halo (Ryzen AI Max) + Ollama Vulkan: Setup and Performance',
-    dateModified: '2026-08-26',
+    dateModified: '2026-08-29',
     seoTitle: 'Strix Halo Ollama Vulkan: Context Limit & Setup 2026',
     metaDescription: 'Strix Halo (Ryzen AI Max+ 395) + Ollama Vulkan: no hard 64K context cap — 64K–96K is safe for a 30B model (~40 GB), 128K+ is memory-bound. Setup, models, tok/s.',
     publishDate: '2026-05-23',
@@ -144,6 +144,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             a: 'Not fully as of mid-2026. ROCm support for gfx1151 (RDNA 3.5) is in progress but not yet stable in the official Ollama builds. The Vulkan backend is the currently reliable GPU acceleration path on Linux. Check the Ollama GitHub releases page for updates on ROCm iGPU support.',
           },
           {
+            q: 'How does Ryzen AI Max 395 handle a 64K context window on Windows with Ollama?',
+            a: "Slowly, unless you build the Vulkan backend yourself. On Windows, the official Ollama build falls back to CPU inference for Strix Halo, and CPU inference has no GPU-parallel throughput advantage — a 64K-context session that runs comfortably on Linux/Vulkan (GPU-accelerated) will be meaningfully slower on stock Windows Ollama, since context processing cost scales with context length and CPU can't absorb that the way a GPU backend does. To get GPU-accelerated 64K context performance on Windows, build llama.cpp from source with -DGGML_VULKAN=ON — the manual build, not the default installer. If you need reliable long-context throughput without a custom build, Linux is the stable path.",
+          },
+          {
             q: 'Can I use Ollama with Strix Halo Vulkan on Windows?',
             a: 'Experimentally, yes. The official Ollama Windows build does not expose the Vulkan backend by default for Strix Halo — it falls back to CPU. You can build llama.cpp from source with -DGGML_VULKAN=ON on Windows to enable it, but this requires a manual build process. Linux is the recommended platform for Strix Halo Vulkan inference.',
           },
@@ -176,7 +180,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Hardware-Specific',
     heroImage: '/images/strix-halo-ollama-vulkan-overview-hero-de.webp',
     title: 'Strix Halo (Ryzen AI Max) + Ollama Vulkan: Einrichtung und Performance',
-    dateModified: '2026-08-26',
+    dateModified: '2026-08-29',
     seoTitle: 'Strix Halo Ollama Vulkan: Kontextlimit & Setup 2026',
     metaDescription: 'Strix Halo (Ryzen AI Max+ 395) + Ollama Vulkan: kein hartes 64K-Kontextlimit — 64K–96K sind sicher für ein 30B-Modell (~40 GB), 128K+ ist speicherbegrenzt. Setup, Modelle, tok/s.',
     publishDate: '2026-05-23',
@@ -268,6 +272,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             a: 'Stand Mitte 2026 nicht vollständig. Die ROCm-Unterstützung für gfx1151 (RDNA 3.5) befindet sich in Entwicklung, ist in den offiziellen Ollama-Builds jedoch noch nicht stabil. Das Vulkan-Backend ist der derzeit zuverlässige GPU-Beschleunigungspfad unter Linux. Überprüfen Sie die Ollama-GitHub-Releases-Seite auf Updates zur ROCm-iGPU-Unterstützung.',
           },
           {
+            q: 'Wie verhält sich der Ryzen AI Max 395 mit einem 64K-Kontextfenster unter Windows mit Ollama?',
+            a: 'Langsam, sofern Sie das Vulkan-Backend nicht selbst kompilieren. Unter Windows fällt der offizielle Ollama-Build für Strix Halo auf CPU-Inferenz zurück, und CPU-Inferenz hat keinen GPU-parallelen Durchsatzvorteil — eine 64K-Kontext-Sitzung, die unter Linux/Vulkan (GPU-beschleunigt) problemlos läuft, wird auf dem Standard-Windows-Ollama spürbar langsamer sein, da die Kosten der Kontextverarbeitung mit der Kontextlänge skalieren und CPU das nicht wie ein GPU-Backend abfangen kann. Um GPU-beschleunigte 64K-Kontext-Performance unter Windows zu erreichen, kompilieren Sie llama.cpp selbst mit -DGGML_VULKAN=ON — den manuellen Build, nicht den Standard-Installer. Wenn Sie zuverlässigen Long-Context-Durchsatz ohne eigenen Build benötigen, ist Linux der stabile Weg.',
+          },
+          {
             q: 'Kann ich Ollama mit Strix Halo Vulkan unter Windows verwenden?',
             a: 'Experimentell ja. Der offizielle Ollama-Windows-Build macht das Vulkan-Backend für Strix Halo standardmäßig nicht zugänglich — er fällt auf die CPU zurück. Sie können llama.cpp aus dem Quellcode mit -DGGML_VULKAN=ON unter Windows kompilieren, um es zu aktivieren, aber dies erfordert einen manuellen Build-Prozess. Linux ist die empfohlene Plattform für Strix-Halo-Vulkan-Inferenz.',
           },
@@ -300,7 +308,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Hardware-Specific',
     heroImage: '/images/strix-halo-ollama-vulkan-overview-hero-fr.webp',
     title: 'Strix Halo (Ryzen AI Max) + Ollama Vulkan : configuration et performances',
-    dateModified: '2026-08-26',
+    dateModified: '2026-08-29',
     seoTitle: 'Strix Halo Ollama Vulkan : limite de contexte 2026',
     metaDescription: 'Strix Halo (Ryzen AI Max+ 395) + Ollama Vulkan : pas de plafond de contexte 64K — 64K–96K sont sûrs pour un modèle 30B (~40 Go), 128K+ est limité par la mémoire. Configuration, modèles, tok/s.',
     publishDate: '2026-05-23',
@@ -392,6 +400,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             a: 'Pas complètement à mi-2026. La prise en charge ROCm pour gfx1151 (RDNA 3.5) est en cours mais pas encore stable dans les versions officielles d\'Ollama. Le backend Vulkan est le chemin d\'accélération GPU actuellement fiable sous Linux. Consultez la page des releases GitHub d\'Ollama pour les mises à jour sur la prise en charge ROCm iGPU.',
           },
           {
+            q: "Comment le Ryzen AI Max 395 gère-t-il une fenêtre de contexte de 64K sous Windows avec Ollama ?",
+            a: "Lentement, sauf si vous compilez vous-même le backend Vulkan. Sous Windows, la version officielle d'Ollama bascule sur l'inférence CPU pour Strix Halo, et l'inférence CPU n'a pas l'avantage de débit parallèle du GPU — une session à 64K de contexte qui tourne confortablement sous Linux/Vulkan (accéléré GPU) sera nettement plus lente sur Ollama Windows standard, car le coût de traitement du contexte augmente avec sa longueur et le CPU ne peut pas l'absorber comme un backend GPU. Pour obtenir des performances de contexte 64K accélérées par GPU sous Windows, compilez llama.cpp depuis les sources avec -DGGML_VULKAN=ON — la compilation manuelle, pas l'installateur par défaut. Si vous avez besoin d'un débit fiable en contexte long sans compilation personnalisée, Linux reste la voie stable.",
+          },
+          {
             q: 'Puis-je utiliser Ollama avec Strix Halo Vulkan sous Windows ?',
             a: 'De manière expérimentale, oui. La version officielle Windows d\'Ollama n\'expose pas le backend Vulkan par défaut pour Strix Halo — elle revient au CPU. Vous pouvez compiler llama.cpp depuis les sources avec -DGGML_VULKAN=ON sous Windows pour l\'activer, mais cela nécessite un processus de compilation manuel. Linux est la plateforme recommandée pour l\'inférence Strix Halo Vulkan.',
           },
@@ -424,7 +436,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Hardware-Specific',
     heroImage: '/images/strix-halo-ollama-vulkan-overview-hero-ja.webp',
     title: 'Strix Halo（Ryzen AI Max）+ Ollama Vulkan：セットアップとパフォーマンス',
-    dateModified: '2026-08-26',
+    dateModified: '2026-08-29',
     seoTitle: 'Strix Halo Ollama Vulkan：コンテキスト上限と設定 2026',
     metaDescription: 'Strix Halo（Ryzen AI Max+ 395）+ Ollama Vulkan：64Kの固定コンテキスト上限なし — 30Bモデルでは64K–96Kが安全（~40 GB）、128K+はメモリ制約。設定、モデル、tok/s。',
     publishDate: '2026-05-23',
@@ -516,6 +528,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             a: '2026年半ば時点では完全にはサポートされていません。gfx1151（RDNA 3.5）のROCmサポートは進行中ですが、公式Ollamaビルドではまだ安定していません。VulkanバックエンドがLinux上で現在信頼できるGPU加速パスです。ROCm iGPUサポートの最新情報はOllama GitHubリリースページを確認してください。',
           },
           {
+            q: 'Ryzen AI Max 395はWindows上のOllamaで64Kコンテキストウィンドウをどう扱いますか？',
+            a: 'Vulkanバックエンドを自分でビルドしない限り、遅くなります。WindowsではStrix Halo用の公式Ollamaビルドは CPU 推論にフォールバックし、CPU推論にはGPU並列によるスループットの優位性がありません。Linux/Vulkan（GPU加速）では快適に動く64Kコンテキストのセッションも、標準のWindows版Ollamaでは大幅に遅くなります。コンテキスト処理のコストはコンテキスト長に比例して増加し、CPUはGPUバックエンドのようにそれを吸収できないためです。WindowsでGPU加速された64Kコンテキスト性能を得るには、-DGGML_VULKAN=ONを付けてllama.cppをソースからビルドしてください（デフォルトのインストーラーではなく手動ビルドです）。カスタムビルドなしで信頼できる長文コンテキストのスループットが必要な場合は、Linuxが安定した選択肢です。',
+          },
+          {
             q: 'WindowsでStrix Halo VulkanとOllamaを使用できますか？',
             a: '実験的には可能です。公式OllamaのWindowsビルドはStrix HaloのVulkanバックエンドをデフォルトで公開しておらず、CPUにフォールバックします。Windowsで有効にするには-DGGML_VULKAN=ONを付けてllama.cppをソースからビルドできますが、手動ビルドプロセスが必要です。Strix Halo Vulkan推論にはLinuxが推奨プラットフォームです。',
           },
@@ -548,7 +564,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Hardware-Specific',
     heroImage: '/images/strix-halo-ollama-vulkan-overview-hero-zh.webp',
     title: 'Strix Halo（Ryzen AI Max）+ Ollama Vulkan：配置与性能',
-    dateModified: '2026-08-26',
+    dateModified: '2026-08-29',
     seoTitle: 'Strix Halo Ollama Vulkan：上下文上限与配置 2026',
     metaDescription: 'Strix Halo（Ryzen AI Max+ 395）+ Ollama Vulkan：无 64K 硬性上下文上限——30B 模型 64K–96K 安全（~40 GB），128K+ 受内存限制。配置、模型、tok/s。',
     publishDate: '2026-05-23',
@@ -640,6 +656,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             a: '截至 2026 年中尚不完全支持。gfx1151（RDNA 3.5）的 ROCm 支持正在进行中，但在官方 Ollama 版本中尚未稳定。Vulkan 后端是目前在 Linux 上可靠的 GPU 加速路径。请查看 Ollama GitHub 发布页面获取 ROCm iGPU 支持的更新。',
           },
           {
+            q: 'Ryzen AI Max 395 在 Windows 上通过 Ollama 处理 64K 上下文窗口的表现如何？',
+            a: '除非你自己编译 Vulkan 后端，否则会很慢。在 Windows 上，官方 Ollama 版本对 Strix Halo 会回退到 CPU 推理，而 CPU 推理没有 GPU 并行的吞吐量优势——在 Linux/Vulkan（GPU 加速）上流畅运行的 64K 上下文会话，在标准 Windows 版 Ollama 上会明显变慢，因为上下文处理成本随上下文长度增长，而 CPU 无法像 GPU 后端那样吸收这一开销。要在 Windows 上获得 GPU 加速的 64K 上下文性能，需要使用 -DGGML_VULKAN=ON 从源码编译 llama.cpp——是手动编译，而非默认安装程序。如果你需要在不自行编译的情况下获得可靠的长上下文吞吐量，Linux 是稳定的选择。',
+          },
+          {
             q: '我能在 Windows 上使用 Strix Halo Vulkan 运行 Ollama 吗？',
             a: '实验性地可以。官方 Ollama Windows 版本默认不为 Strix Halo 开放 Vulkan 后端——它回退到 CPU。您可以在 Windows 上使用 -DGGML_VULKAN=ON 从源码编译 llama.cpp 来启用它，但这需要手动编译过程。Linux 是 Strix Halo Vulkan 推理的推荐平台。',
           },
@@ -672,7 +692,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Hardware-Specific',
     heroImage: '/images/strix-halo-ollama-vulkan-overview-hero-pt.webp',
     title: 'Strix Halo (Ryzen AI Max) + Ollama Vulkan: configuração e desempenho',
-    dateModified: '2026-08-26',
+    dateModified: '2026-08-29',
     seoTitle: 'Strix Halo Ollama Vulkan: limite de contexto e config 2026',
     metaDescription: 'Strix Halo (Ryzen AI Max+ 395) + Ollama Vulkan: sem limite fixo de contexto de 64K — 64K–96K são seguros para um modelo 30B (~40 GB), 128K+ é limitado pela memória. Configuração, modelos, tok/s.',
     publishDate: '2026-05-23',
@@ -763,6 +783,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             a: 'Não completamente em meados de 2026. O suporte ROCm para gfx1151 (RDNA 3.5) está em desenvolvimento, mas ainda não está estável nas versões oficiais do Ollama. O backend Vulkan é o caminho de aceleração GPU atualmente confiável no Linux. Verifique a página de releases do Ollama no GitHub para atualizações sobre o suporte ROCm iGPU.',
           },
           {
+            q: 'Como o Ryzen AI Max 395 lida com uma janela de contexto de 64K no Windows com o Ollama?',
+            a: 'Lentamente, a menos que você compile o backend Vulkan você mesmo. No Windows, a versão oficial do Ollama recorre à inferência por CPU para o Strix Halo, e a inferência por CPU não tem a vantagem de throughput paralelo da GPU — uma sessão com contexto de 64K que roda tranquilamente no Linux/Vulkan (acelerado por GPU) será visivelmente mais lenta no Ollama padrão do Windows, já que o custo de processamento do contexto escala com o tamanho do contexto e a CPU não consegue absorver isso como um backend de GPU. Para obter desempenho de contexto de 64K acelerado por GPU no Windows, compile o llama.cpp a partir do código-fonte com -DGGML_VULKAN=ON — a compilação manual, não o instalador padrão. Se você precisa de throughput confiável em contexto longo sem uma compilação personalizada, o Linux é o caminho estável.',
+          },
+          {
             q: 'Posso usar Ollama com Strix Halo Vulkan no Windows?',
             a: 'De forma experimental, sim. A versão oficial do Ollama Windows não expõe o backend Vulkan por padrão para Strix Halo — ele cai para CPU. Você pode compilar llama.cpp do código fonte com -DGGML_VULKAN=ON no Windows para habilitá-lo, mas isso requer um processo de compilação manual. Linux é a plataforma recomendada para inferência Strix Halo Vulkan.',
           },
@@ -795,7 +819,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Hardware-Specific',
     heroImage: '/images/strix-halo-ollama-vulkan-overview-hero-es.webp',
     title: 'Strix Halo (Ryzen AI Max) + Ollama Vulkan: configuración y rendimiento',
-    dateModified: '2026-08-26',
+    dateModified: '2026-08-29',
     seoTitle: 'Strix Halo Ollama Vulkan: límite de contexto y config 2026',
     metaDescription: 'Strix Halo (Ryzen AI Max+ 395) + Ollama Vulkan: sin límite fijo de contexto de 64K — 64K–96K son seguros para un modelo 30B (~40 GB), 128K+ está limitado por la memoria. Configuración, modelos, tok/s.',
     publishDate: '2026-05-23',
@@ -886,6 +910,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             a: 'No completamente a mediados de 2026. El soporte ROCm para gfx1151 (RDNA 3.5) está en desarrollo pero aún no es estable en las versiones oficiales de Ollama. El backend Vulkan es la ruta de aceleración GPU actualmente fiable en Linux. Consulta la página de releases de Ollama en GitHub para actualizaciones sobre el soporte ROCm iGPU.',
           },
           {
+            q: '¿Cómo maneja el Ryzen AI Max 395 una ventana de contexto de 64K en Windows con Ollama?',
+            a: 'Con lentitud, a menos que compiles tú mismo el backend Vulkan. En Windows, la versión oficial de Ollama recurre a la inferencia por CPU para Strix Halo, y la inferencia por CPU no tiene la ventaja de rendimiento paralelo de la GPU: una sesión con contexto de 64K que funciona con fluidez en Linux/Vulkan (acelerado por GPU) será notablemente más lenta en el Ollama estándar de Windows, ya que el coste de procesar el contexto escala con su longitud y la CPU no puede absorberlo como lo hace un backend de GPU. Para obtener rendimiento de contexto de 64K acelerado por GPU en Windows, compila llama.cpp desde el código fuente con -DGGML_VULKAN=ON — la compilación manual, no el instalador por defecto. Si necesitas un rendimiento fiable en contexto largo sin compilar nada, Linux es la vía estable.',
+          },
+          {
             q: '¿Puedo usar Ollama con Strix Halo Vulkan en Windows?',
             a: 'De forma experimental, sí. La versión oficial de Ollama para Windows no expone el backend Vulkan por defecto para Strix Halo — vuelve a la CPU. Puedes compilar llama.cpp desde el código fuente con -DGGML_VULKAN=ON en Windows para habilitarlo, pero esto requiere un proceso de compilación manual. Linux es la plataforma recomendada para inferencia Strix Halo Vulkan.',
           },
@@ -918,7 +946,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Hardware-Specific',
     heroImage: '/images/strix-halo-ollama-vulkan-overview-hero-ar.webp',
     title: '⁨Strix Halo⁩ (⁨Ryzen AI Max⁩) + ⁨Ollama Vulkan⁩: الإعداد والأداء',
-    dateModified: '2026-08-26',
+    dateModified: '2026-08-29',
     seoTitle: '⁨Strix Halo Ollama Vulkan⁩: حد السياق والإعداد ⁨2026⁩',
     metaDescription: '⁨Strix Halo⁩ (⁨Ryzen AI Max+ 395⁩) + ⁨Ollama Vulkan⁩: لا حد ثابت للسياق عند ⁨64K⁩ — نطاق ⁨64K–96K⁩ آمن لنموذج ⁨30B⁩ (~⁨40 GB⁩)، و⁨128K+⁩ محدود بالذاكرة. الإعداد والنماذج و⁨tok/s⁩.',
     publishDate: '2026-05-23',
@@ -1009,6 +1037,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
             a: 'ليس بشكل كامل في منتصف 2026. دعم ROCm لـ gfx1151 (RDNA 3.5) قيد التطوير لكنه لم يستقر بعد في إصدارات Ollama الرسمية. الواجهة الخلفية Vulkan هي مسار تسريع GPU الموثوق حاليًا على Linux. راجع صفحة releases في Ollama على GitHub للتحديثات حول دعم ROCm iGPU.',
           },
           {
+            q: 'كيف يتعامل Ryzen AI Max 395 مع نافذة سياق 64K على Windows باستخدام Ollama؟',
+            a: 'ببطء، ما لم تُجمّع الواجهة الخلفية Vulkan بنفسك. على Windows، يرجع إصدار Ollama الرسمي إلى الاستدلال عبر وحدة المعالجة المركزية (CPU) لـ Strix Halo، ولا يتمتع الاستدلال عبر CPU بميزة الإنتاجية المتوازية لوحدة معالجة الرسوميات (GPU) — جلسة بسياق 64K تعمل بسلاسة على Linux/Vulkan (المُسرَّع بواسطة GPU) ستكون أبطأ بشكل ملحوظ على Ollama القياسي لـ Windows، لأن تكلفة معالجة السياق تتزايد مع طول السياق ولا تستطيع وحدة المعالجة المركزية استيعاب ذلك كما تفعل الواجهة الخلفية لوحدة معالجة الرسوميات. للحصول على أداء سياق 64K مُسرَّع بواسطة GPU على Windows، جمِّع llama.cpp من المصدر باستخدام -DGGML_VULKAN=ON — أي التجميع اليدوي، وليس المُثبِّت الافتراضي. إذا كنت بحاجة إلى إنتاجية موثوقة للسياق الطويل دون تجميع مخصص، فإن Linux هو المسار المستقر.',
+          },
+          {
             q: 'هل يمكنني استخدام Ollama مع Strix Halo Vulkan على Windows؟',
             a: 'بشكل تجريبي نعم. إصدار Ollama الرسمي لـ Windows لا يُظهر الواجهة الخلفية Vulkan افتراضيًا لـ Strix Halo — يتراجع إلى وحدة المعالجة المركزية. يمكنك تجميع llama.cpp من المصدر بـ -DGGML_VULKAN=ON على Windows لتفعيله، لكن هذا يتطلب عملية تجميع يدوية. Linux هي المنصة الموصى بها لاستنتاج Strix Halo Vulkan.',
           },
@@ -1041,7 +1073,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     theme: 'Hardware-Specific',
     heroImage: '/images/strix-halo-ollama-vulkan-overview-hero-ko.webp',
     title: 'Strix Halo (Ryzen AI Max) + Ollama Vulkan: 설정 및 성능',
-    dateModified: '2026-08-26',
+    dateModified: '2026-08-29',
     seoTitle: 'Strix Halo Ollama Vulkan: 컨텍스트 한도 및 설정 2026',
     metaDescription: 'Strix Halo (Ryzen AI Max+ 395) + Ollama Vulkan: 고정 64K 컨텍스트 한도 없음 — 30B 모델은 64K–96K가 안전(~40 GB), 128K+는 메모리 제약. 설정, 모델, tok/s.',
     publishDate: '2026-05-23',
@@ -1152,6 +1184,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
           {
             q: 'AMD Strix Halo는 Ollama에서 ROCm을 지원합니까?',
             a: '2026년 중반 기준 완전하지 않습니다. gfx1151 (RDNA 3.5)에 대한 ROCm 지원은 개발 중이지만 공식 Ollama 릴리스에서 아직 안정화되지 않았습니다. Vulkan 백엔드가 현재 Linux에서 신뢰할 수 있는 GPU 가속 경로입니다. ROCm iGPU 지원 업데이트는 GitHub의 Ollama 릴리스 페이지를 확인하십시오.',
+          },
+          {
+            q: 'Ryzen AI Max 395은 Windows의 Ollama에서 64K 컨텍스트 윈도우를 어떻게 처리합니까?',
+            a: 'Vulkan 백엔드를 직접 빌드하지 않는 한 느립니다. Windows에서는 공식 Ollama 빌드가 Strix Halo에 대해 CPU 추론으로 대체되며, CPU 추론에는 GPU 병렬 처리량의 이점이 없습니다 — Linux/Vulkan(GPU 가속)에서는 무리 없이 실행되는 64K 컨텍스트 세션이 표준 Windows Ollama에서는 눈에 띄게 느려집니다. 컨텍스트 처리 비용은 컨텍스트 길이에 비례해 증가하며, CPU는 GPU 백엔드처럼 이를 흡수할 수 없기 때문입니다. Windows에서 GPU 가속 64K 컨텍스트 성능을 얻으려면 -DGGML_VULKAN=ON으로 llama.cpp를 소스에서 직접 빌드해야 합니다 — 기본 설치 프로그램이 아니라 수동 빌드입니다. 별도의 커스텀 빌드 없이 안정적인 긴 컨텍스트 처리량이 필요하다면 Linux가 안정적인 선택입니다.',
           },
           {
             q: 'Windows에서 Strix Halo Vulkan으로 Ollama를 사용할 수 있습니까?',
