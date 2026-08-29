@@ -1085,5 +1085,19 @@
     ],
     "reason": "Page 44: single highest-volume query (lpddr5x bandwidth, 65 impr, pos 14.9, 0% CTR) has no clean standalone answer despite the 85.6 GB/s figure existing in the article - only embedded in an HBM comparison table/formula FAQs. Added a direct FAQ answering the simple factual question, reusing already-established figures (85.6 GB/s, LPDDR5X-PIM 3.01x).",
     "baseline": null
+  },
+  {
+    "id": "bf9e7118-b667-4c86-8c5b-a97130d6d614",
+    "slug": "/local-llms/local-llm-one-click-installers",
+    "date": "2026-08-29T22:25:09.431Z",
+    "fields": [
+      {
+        "field": "seoTitle,metaDescription (7 locales), faqSchema (pt/de/fr/ja/zh/ko), faqs (pt)",
+        "old": "seoTitle 76-79 chars (en/es/pt/de/fr) and 60-62 chars (ja/zh/ko) all over Rule 2d limits; metaDescription 165-174 chars (es/pt/de/fr) over limit; faqSchema missing entirely on pt/ko; faqSchema out of sync with visible faqs on de/fr/ja/zh (missing 4-6 questions each); pt visible faqs only had 4 of 12 questions (missing the first 8)",
+        "new": "All seoTitles now 39-55 chars (AR left at 53, already in its own 40-55 range); all metaDescriptions 89-153 chars; faqSchema built from scratch for pt and ko (12 questions each); faqSchema synced to match all visible faqs on de/fr/ja/zh; pt faqs completed to all 12 questions (translated the missing 8 from EN)"
+      }
+    ],
+    "reason": "Page 45 audit-mode findings, user requested full fix despite no GSC data. Rule 2d title/meta length violations existed identically across en/es/pt/de/fr (same oversized pattern propagated to every locale). Separately found real content gaps while syncing schemas: pt was missing 8 of 12 FAQs entirely (translated from EN), and ko/pt had no faqSchema field at all despite EN/other locales having one. Fixed all findings site-wide for this page rather than EN-only since these were structural/completeness gaps, not GSC-driven wording choices.",
+    "baseline": null
   }
 ]
