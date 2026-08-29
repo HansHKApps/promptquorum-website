@@ -18,7 +18,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       intro: 'Apple M5 Pro (64 GB, ~$2,399) is the best all-around platform for local LLMs in 2026. It runs 30B+ models in unified memory at 40–60 tok/s with low power draw. NVIDIA RTX 5090 is faster for 7B–14B models but cannot fit 30B+ without CPU offloading. CPU-only is viable for 7B models at 10–20 tok/s on modern hardware. This guide compares all three architectures across memory bandwidth, power draw, cost-per-tok/s, and use cases as of June 2026.',
       metaDescription: 'NVIDIA RTX 50-series vs Apple M5 vs CPU-only for local LLMs — real speed comparisons, power draw, and cost per tok/s. One clear winner per budget.',
       publishDate: '2026-04-04',
-      dateModified: '2026-06-19',
+      dateModified: '2026-08-29',
       leadAnswerBlock: '**Apple M5 Pro (64 GB, ~$2,399) is the best all-around platform for local LLMs in 2026. It runs 30B+ models in unified memory at 40–60 tok/s with low power draw. NVIDIA RTX 5090 is faster for 7B–14B models but cannot fit 30B+ without CPU offloading. CPU-only is viable for 7B models at 10–20 tok/s on modern hardware.**',
       audience: 'Developers familiar with Ollama or LM Studio optimizing local LLM workflows',
       readTime: '11 min read',
@@ -333,6 +333,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
               q: 'How does power consumption compare between GPU and Apple Silicon?',
               a: 'RTX 5090 draws ~450W at inference load. M5 Pro draws ~25W. At 8 hrs/day and $0.15/kWh, that is $200/year (RTX 5090) vs $14/year (M5 Pro). For home users and anyone paying commercial electricity rates, M5 Pro\'s power efficiency is a meaningful cost advantage.',
             },
+            {
+              q: 'How fast is LLM inference on an Intel MacBook Pro (i9, 16 GB RAM)?',
+              a: 'Slower than Apple Silicon and slower than a modern DDR5 desktop. Intel MacBook Pros have no unified-memory GPU path for llama.cpp — inference runs CPU-only over DDR4, which has roughly 38–45 GB/s of dual-channel bandwidth vs. 89 GB/s for a modern DDR5 desktop CPU. Using the memory-bandwidth ÷ model-size formula above, a quantized 7B model (~4.5 GB at Q4) lands around 8–10 tok/s theoretical, 4–7 tok/s realistic once CPU compute overhead is factored in. 16 GB total RAM also caps you near 7B–8B at Q4 with headroom left for the OS — don\'t expect to run 13B+ models without heavy swapping and a big speed penalty.',
+            },
+            {
+              q: 'What is the difference between pp tok/s and tg tok/s?',
+              a: 'pp tok/s (prompt processing) measures how fast the model ingests your input prompt — the "prefill" phase, which is compute-bound and scales well with parallel hardware like GPUs. tg tok/s (token generation) measures how fast it generates each new output token — the "decode" phase, which is memory-bandwidth-bound (see the bandwidth formula above). GPUs typically show a large pp/tg gap (fast prefill, generation limited by bandwidth); Apple Silicon\'s unified memory keeps the two closer together. When comparing benchmarks, always check which number you\'re reading — pp and tg can differ by 5–20× on the same hardware.',
+            },
           ],
         },
         relatedReading: {
@@ -390,6 +398,8 @@ schema: {
           { '@type': 'Question', 'name': 'Can Apple Silicon run 30B and 70B models?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'M5 Pro (64 GB) runs 30B models natively at 20–30 tok/s. M5 Max (128 GB) runs 70B models natively at 35–50 tok/s. No consumer GPU can match this for 30B+.' } },
           { '@type': 'Question', 'name': 'Is RTX 5090 worth $2,000 for local LLMs?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Only if your workflow is 7B–14B models at maximum speed or production inference pipelines. For 30B+ models, M5 Pro is the better choice. For budget GPU, RTX 5070 ($600) provides 80% of speed at 30% of cost.' } },
           { '@type': 'Question', 'name': 'How does power consumption compare between GPU and Apple Silicon?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'RTX 5090 draws ~450W at inference load. M5 Pro draws ~25W. At 8 hrs/day and $0.15/kWh, that is $200/year (RTX 5090) vs $14/year (M5 Pro).' } },
+          { '@type': 'Question', 'name': 'How fast is LLM inference on an Intel MacBook Pro (i9, 16 GB RAM)?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Slower than Apple Silicon or a DDR5 desktop. Intel MacBook Pros run CPU-only over DDR4 (~38-45 GB/s). A quantized 7B model lands around 4-7 tok/s realistic. 16 GB RAM caps you near 7B-8B at Q4.' } },
+          { '@type': 'Question', 'name': 'What is the difference between pp tok/s and tg tok/s?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'pp tok/s (prompt processing) is the compute-bound prefill phase. tg tok/s (token generation) is the memory-bandwidth-bound decode phase. They can differ by 5-20x on the same hardware.' } },
         ],
       },
       itemListSchema: {
@@ -419,7 +429,7 @@ schema: {
       intro: 'Apple M5 Pro (64 GB, ~2.399 $) es la mejor plataforma para LLMs locales en 2026. Ejecuta modelos de 30B+ en memoria unificada a 40–60 tok/s con bajo consumo energético. La NVIDIA RTX 5090 es más rápida en modelos de 7B–14B pero no puede cargar 30B+ sin CPU offloading. Solo CPU es viable para modelos de 7B a 10–20 tok/s en hardware moderno.',
       metaDescription: 'NVIDIA RTX 50 vs Apple M5 vs solo CPU para LLMs locales — comparativas de velocidad, consumo y coste por tok/s. Un ganador claro por presupuesto.',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-27',
+      dateModified: '2026-08-29',
       leadAnswerBlock: '**Apple M5 Pro (64 GB, ~2.399 $) es la mejor plataforma para LLMs locales en 2026. Ejecuta modelos de 30B+ en memoria unificada a 40–60 tok/s con bajo consumo. La NVIDIA RTX 5090 es más rápida en 7B–14B pero no puede cargar 30B+ sin offloading. Solo CPU: viable para 7B a 10–20 tok/s.**',
       audience: 'Desarrolladores familiarizados con Ollama o LM Studio que optimizan flujos de trabajo de LLMs locales',
       readTime: '11 min de lectura',
@@ -624,6 +634,14 @@ schema: {
               q: '¿Cómo se compara el consumo energético entre GPU y Apple Silicon?',
               a: 'La RTX 5090 consume ~450 W en carga de inferencia. El M5 Pro consume ~25 W. A 8 h/día y 0,15 $/kWh, eso equivale a 200 $/año (RTX 5090) frente a 14 $/año (M5 Pro). Para usuarios domésticos y quienes pagan tarifas eléctricas comerciales, la eficiencia energética del M5 Pro supone una ventaja de coste significativa.',
             },
+            {
+              q: '¿Qué tan rápida es la inferencia LLM en un MacBook Pro Intel (i9, 16 GB de RAM)?',
+              a: 'Más lenta que Apple Silicon y más lenta que un escritorio moderno con DDR5. Los MacBook Pro Intel no tienen una vía de GPU de memoria unificada para llama.cpp — la inferencia se ejecuta solo en CPU sobre DDR4, con aproximadamente 38–45 GB/s de ancho de banda de doble canal frente a 89 GB/s de un CPU de escritorio DDR5 moderno. Usando la fórmula ancho de banda de memoria ÷ tamaño del modelo de arriba, un modelo cuantizado de 7B (~4,5 GB en Q4) alcanza alrededor de 8–10 tok/s teóricos, 4–7 tok/s realistas una vez que se contabiliza la sobrecarga de cómputo de la CPU. Los 16 GB de RAM total también te limitan a cerca de 7B–8B en Q4 con margen para el sistema operativo — no esperes ejecutar modelos de 13B+ sin un intercambio de memoria intenso y una gran penalización de velocidad.',
+            },
+            {
+              q: '¿Cuál es la diferencia entre pp tok/s y tg tok/s?',
+              a: 'pp tok/s (procesamiento de prompt) mide qué tan rápido el modelo ingiere tu prompt de entrada — la fase de "prefill", que depende del cómputo y escala bien con hardware paralelo como las GPU. tg tok/s (generación de tokens) mide qué tan rápido genera cada nuevo token de salida — la fase de "decode", que depende del ancho de banda de memoria (ver la fórmula de ancho de banda de arriba). Las GPU normalmente muestran una brecha grande entre pp/tg (prefill rápido, generación limitada por el ancho de banda); la memoria unificada de Apple Silicon mantiene ambas cifras más cercanas entre sí. Al comparar benchmarks, siempre verifica qué número estás leyendo — pp y tg pueden diferir entre 5 y 20 veces en el mismo hardware.',
+            },
           ],
         },
         relatedReading: {
@@ -686,6 +704,8 @@ schema: {
           { '@type': 'Question', 'name': '¿Puede Apple Silicon ejecutar modelos de 30B y 70B?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'El M5 Pro (64 GB) ejecuta modelos de 30B de forma nativa a 20–30 tok/s. El M5 Max (128 GB) ejecuta modelos de 70B de forma nativa a 35–50 tok/s. Ninguna GPU de consumo puede igualarlo para 30B+.' } },
           { '@type': 'Question', 'name': '¿Vale la pena la RTX 5090 por 2.000 $ para LLMs locales?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Solo si tu flujo de trabajo requiere modelos de 7B–14B a máxima velocidad o pipelines de producción. Para 30B+, el M5 Pro es la mejor opción. Para GPU económica, la RTX 5070 (600 $) ofrece el 80% de la velocidad al 30% del coste.' } },
           { '@type': 'Question', 'name': '¿Cómo se compara el consumo energético entre GPU y Apple Silicon?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'La RTX 5090 consume ~450 W en carga de inferencia. El M5 Pro consume ~25 W. A 8 h/día y 0,15 $/kWh, eso equivale a 200 $/año (RTX 5090) frente a 14 $/año (M5 Pro).' } },
+          { '@type': 'Question', 'name': '¿Qué tan rápida es la inferencia LLM en un MacBook Pro Intel (i9, 16 GB de RAM)?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Más lenta que Apple Silicon o un escritorio DDR5. Los MacBook Pro Intel ejecutan solo CPU sobre DDR4 (~38-45 GB/s). Un modelo cuantizado de 7B alcanza alrededor de 4-7 tok/s realistas. 16 GB de RAM te limitan a cerca de 7B-8B en Q4.' } },
+          { '@type': 'Question', 'name': '¿Cuál es la diferencia entre pp tok/s y tg tok/s?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'pp tok/s (procesamiento de prompt) es la fase de prefill limitada por cómputo. tg tok/s (generación de tokens) es la fase de decode limitada por ancho de banda de memoria. Pueden diferir entre 5 y 20 veces en el mismo hardware.' } },
         ],
       },
       itemListSchema: {
@@ -715,7 +735,7 @@ schema: {
       intro: 'يُعدّ Apple M5 Pro (64 GB، بحوالي 2399$) أفضل منصة شاملة لنماذج LLM المحلية في 2026. يشغّل نماذج 30B+ في الذاكرة الموحدة بسرعة 40–60 رمز/ثانية مع استهلاك طاقة منخفض (~25 واط). NVIDIA RTX 5090 أسرع لنماذج 7B–14B لكنها لا تستطيع تشغيل 30B+ دون CPU offloading. CPU فقط: قابل للاستخدام مع نماذج 7B بسرعة 10–20 رمز/ثانية على الأجهزة الحديثة.',
       metaDescription: '⁨NVIDIA RTX 50⁩ مقابل ⁨Apple M5⁩ مقابل ⁨CPU⁩ فقط لنماذج ⁨LLM⁩ المحلية — مقارنات سرعة حقيقية واستهلاك الطاقة وتكلفة الرمز. فائز واضح لكل ميزانية.',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-27',
+      dateModified: '2026-08-29',
       leadAnswerBlock: '**Apple M5 Pro (64 GB، ~2399$) هو الخيار الأمثل لمعظم المستخدمين في 2026. يشغّل نماذج 30B+ بذاكرة موحدة بسرعة 40–60 رمز/ثانية. NVIDIA RTX 5090 أسرع لـ 7B–14B لكنها لا تتحمّل 30B+ دون offloading. CPU فقط: مقبول لـ 7B بسرعة 10–20 رمز/ثانية.**',
       audience: 'المطورون الملمّون بـ Ollama أو LM Studio الذين يحسّنون مسارات عمل نماذج LLM المحلية',
       readTime: '11 دقيقة للقراءة',
@@ -920,6 +940,14 @@ schema: {
               q: 'كيف يقارن استهلاك الطاقة بين GPU وApple Silicon؟',
               a: 'تستهلك RTX 5090 حوالي 450 واط عند حمل الاستدلال. ويستهلك M5 Pro حوالي 25 واط. عند 8 ساعات/يوم و0.15$/kWh، يعادل ذلك 200$/سنة (RTX 5090) مقابل 14$/سنة (M5 Pro). لمستخدمي المنازل ومن يدفعون تعرفة كهرباء تجارية، تمثّل كفاءة طاقة M5 Pro ميزة تكلفة ملموسة.',
             },
+            {
+              q: 'ما مدى سرعة استدلال LLM على MacBook Pro بمعالج Intel (i9، 16 GB رام)؟',
+              a: 'أبطأ من Apple Silicon وأبطأ من جهاز مكتبي حديث بذاكرة DDR5. أجهزة MacBook Pro من Intel لا تملك مسار GPU بذاكرة موحّدة لـ llama.cpp — يعمل الاستدلال على المعالج فقط (CPU-only) عبر ذاكرة DDR4، التي توفر نطاقًا تردديًا ثنائي القناة يبلغ نحو 38–45 GB/s مقارنةً بـ 89 GB/s لمعالج مكتبي حديث بذاكرة DDR5. باستخدام معادلة النطاق الترددي للذاكرة ÷ حجم النموذج المذكورة أعلاه، يصل نموذج مكمَّم بحجم 7B (نحو 4.5 GB عند Q4) إلى حوالي 8–10 رمز/ث نظريًا، و4–7 رمز/ث واقعيًا بعد احتساب النفقات الحسابية للمعالج. كما تحصرك ذاكرة 16 GB الإجمالية بالقرب من 7B–8B عند Q4 مع هامش لنظام التشغيل — لا تتوقع تشغيل نماذج 13B+ دون تبديل ذاكرة كثيف وعقوبة سرعة كبيرة.',
+            },
+            {
+              q: 'ما الفرق بين pp tok/s وtg tok/s؟',
+              a: 'يقيس pp tok/s (معالجة المطالبة) مدى سرعة استيعاب النموذج لمطالبتك المُدخَلة — مرحلة "prefill"، وهي مقيّدة بالحوسبة وتتوسع جيدًا مع الأجهزة المتوازية مثل وحدات معالجة الرسومات. ويقيس tg tok/s (توليد الرموز) مدى سرعة توليد كل رمز إخراج جديد — مرحلة "decode"، وهي مقيّدة بالنطاق الترددي للذاكرة (انظر معادلة النطاق الترددي أعلاه). عادةً ما تُظهر وحدات معالجة الرسومات فجوة كبيرة بين pp/tg (معالجة سريعة، وتوليد مقيّد بالنطاق الترددي)؛ بينما تُبقي الذاكرة الموحّدة في Apple Silicon الرقمين أقرب إلى بعضهما. عند مقارنة نتائج الاختبارات، تحقق دائمًا من الرقم الذي تقرأه — إذ يمكن أن يختلف pp وtg بمقدار 5 إلى 20 ضعفًا على نفس الجهاز.',
+            },
           ],
         },
         relatedReading: {
@@ -982,6 +1010,8 @@ schema: {
           { '@type': 'Question', 'name': 'هل يستطيع Apple Silicon تشغيل نماذج 30B و70B؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'يشغّل M5 Pro (64 GB) نماذج 30B بشكل أصلي بسرعة 20–30 رمز/ث. ويشغّل M5 Max (128 GB) نماذج 70B بشكل أصلي بسرعة 35–50 رمز/ث. لا تستطيع أي GPU استهلاكية مضاهاة هذا لـ 30B+.' } },
           { '@type': 'Question', 'name': 'هل تستحق RTX 5090 مقابل 2,000$ لنماذج LLM المحلية؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'فقط إذا كان سير عملك يتطلب نماذج 7B–14B بأقصى سرعة أو مسارات إنتاج. لنماذج 30B+، يُعد M5 Pro الخيار الأفضل. أما لـ GPU اقتصادية، فتقدّم RTX 5070 (600$) 80% من السرعة بـ 30% من التكلفة.' } },
           { '@type': 'Question', 'name': 'كيف يقارن استهلاك الطاقة بين GPU وApple Silicon؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'تستهلك RTX 5090 حوالي 450 واط عند حمل الاستدلال. ويستهلك M5 Pro حوالي 25 واط. عند 8 ساعات/يوم و0.15$/kWh، يعادل ذلك 200$/سنة (RTX 5090) مقابل 14$/سنة (M5 Pro).' } },
+          { '@type': 'Question', 'name': 'ما مدى سرعة استدلال LLM على MacBook Pro بمعالج Intel (i9، 16 GB رام)؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'أبطأ من Apple Silicon أو جهاز مكتبي بذاكرة DDR5. تعمل أجهزة MacBook Pro من Intel على المعالج فقط عبر DDR4 (نحو 38-45 GB/s). يصل نموذج مكمَّم بحجم 7B إلى نحو 4-7 رمز/ث واقعيًا. تحصرك ذاكرة 16 GB بالقرب من 7B-8B عند Q4.' } },
+          { '@type': 'Question', 'name': 'ما الفرق بين pp tok/s وtg tok/s؟', 'acceptedAnswer': { '@type': 'Answer', 'text': 'pp tok/s (معالجة المطالبة) هي مرحلة prefill المقيّدة بالحوسبة. tg tok/s (توليد الرموز) هي مرحلة decode المقيّدة بالنطاق الترددي للذاكرة. يمكن أن يختلفا بمقدار 5 إلى 20 ضعفًا على نفس الجهاز.' } },
         ],
       },
       itemListSchema: {
@@ -1011,7 +1041,7 @@ schema: {
       intro: 'O Apple M5 Pro (64 GB, ~R$ 12.000 / ~$2.399) é a melhor plataforma geral para LLMs locais em 2026. Executa modelos de 30B+ em memória unificada a 40–60 tok/s com baixo consumo de energia (~25W). A NVIDIA RTX 5090 é mais rápida em modelos de 7B–14B, mas não consegue carregar 30B+ sem CPU offloading. Somente CPU é viável para modelos de 7B a 10–20 tok/s em hardware moderno.',
       metaDescription: 'NVIDIA RTX 50 vs Apple M5 vs somente CPU para LLMs locais — comparações reais de velocidade, consumo e custo por tok/s. Um vencedor claro por orçamento.',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-27',
+      dateModified: '2026-08-29',
       leadAnswerBlock: '**Apple M5 Pro (64 GB, ~$2.399) é a melhor plataforma geral para LLMs locais em 2026. Executa modelos de 30B+ em memória unificada a 40–60 tok/s com baixo consumo. NVIDIA RTX 5090 é mais rápida em 7B–14B mas não carrega 30B+ sem offloading. Somente CPU: viável para 7B a 10–20 tok/s.**',
       audience: 'Desenvolvedores familiarizados com Ollama ou LM Studio otimizando workflows de LLM local',
       readTime: '11 min de leitura',
@@ -1186,6 +1216,8 @@ schema: {
             { q: 'O Apple Silicon consegue rodar modelos de 30B e 70B?', a: 'O M5 Pro (64 GB) roda modelos de 30B nativamente a 20–30 tok/s. O M5 Max (128 GB) roda modelos de 70B nativamente a 35–50 tok/s. São números reais de throughput sem CPU offloading — nenhuma GPU de consumo iguala isso para 30B+.' },
             { q: 'Vale a pena a RTX 5090 de $2.000 para LLMs locais?', a: 'Só se seu workflow exigir modelos de 7B–14B na velocidade máxima ou pipelines de inferência em produção. Para a maioria, a RTX 5070 ($600) entrega 80% da velocidade a 30% do custo. Para modelos de 30B+, o M5 Pro é a melhor escolha independente do orçamento.' },
             { q: 'Como o consumo de energia se compara entre GPU e Apple Silicon?', a: 'A RTX 5090 consome ~450W sob carga de inferência. O M5 Pro consome ~25W. A 8h/dia e $0,15/kWh, isso equivale a $200/ano (RTX 5090) contra $14/ano (M5 Pro). Para uso doméstico e quem paga tarifas comerciais de eletricidade, a eficiência energética do M5 Pro é uma vantagem de custo relevante.' },
+            { q: 'Qual a velocidade da inferência de LLM em um MacBook Pro Intel (i9, 16 GB de RAM)?', a: 'Mais lenta que Apple Silicon e mais lenta que um desktop moderno com DDR5. MacBook Pro Intel não têm um caminho de GPU de memória unificada para o llama.cpp — a inferência roda apenas na CPU sobre DDR4, que tem cerca de 38–45 GB/s de largura de banda dual-channel contra 89 GB/s de uma CPU de desktop DDR5 moderna. Usando a fórmula largura de banda de memória ÷ tamanho do modelo mencionada acima, um modelo quantizado de 7B (~4,5 GB em Q4) fica em torno de 8–10 tok/s teóricos, 4–7 tok/s realistas considerando a sobrecarga de computação da CPU. Os 16 GB de RAM total também limitam você a cerca de 7B–8B em Q4 com folga para o sistema operacional — não espere rodar modelos de 13B+ sem troca de memória pesada e uma grande penalidade de velocidade.' },
+            { q: 'Qual a diferença entre pp tok/s e tg tok/s?', a: 'pp tok/s (processamento de prompt) mede quão rápido o modelo processa seu prompt de entrada — a fase de "prefill", que é limitada por computação e escala bem com hardware paralelo como GPUs. tg tok/s (geração de tokens) mede quão rápido ele gera cada novo token de saída — a fase de "decode", limitada pela largura de banda de memória (veja a fórmula de largura de banda acima). GPUs normalmente mostram uma grande diferença entre pp/tg (prefill rápido, geração limitada pela largura de banda); a memória unificada da Apple Silicon mantém os dois números mais próximos. Ao comparar benchmarks, sempre verifique qual número você está lendo — pp e tg podem diferir em 5–20x no mesmo hardware.' },
           ],
         },
         sources: {
@@ -1215,7 +1247,7 @@ schema: {
         url: 'https://www.promptquorum.com/pt/local-llms/gpu-vs-cpu-vs-apple-silicon',
         inLanguage: 'pt-BR',
         datePublished: '2026-04-04',
-        dateModified: '2026-08-27',
+        dateModified: '2026-08-29',
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         proficiencyLevel: 'Intermediate',
@@ -1239,6 +1271,8 @@ schema: {
           { '@type': 'Question', name: 'O Apple Silicon consegue rodar modelos de 30B e 70B?', acceptedAnswer: { '@type': 'Answer', text: 'O M5 Pro (64 GB) roda modelos de 30B nativamente a 20–30 tok/s. O M5 Max (128 GB) roda modelos de 70B nativamente a 35–50 tok/s. Nenhuma GPU de consumo iguala isso para 30B+.' } },
           { '@type': 'Question', name: 'Vale a pena a RTX 5090 de $2.000 para LLMs locais?', acceptedAnswer: { '@type': 'Answer', text: 'Só se seu workflow exigir modelos de 7B–14B na velocidade máxima ou pipelines de produção. Para 30B+, o M5 Pro é a melhor escolha. Para GPU econômica, a RTX 5070 ($600) entrega 80% da velocidade a 30% do custo.' } },
           { '@type': 'Question', name: 'Como o consumo de energia se compara entre GPU e Apple Silicon?', acceptedAnswer: { '@type': 'Answer', text: 'A RTX 5090 consome ~450W sob carga de inferência. O M5 Pro consome ~25W. A 8h/dia e $0,15/kWh, isso equivale a $200/ano (RTX 5090) contra $14/ano (M5 Pro).' } },
+          { '@type': 'Question', name: 'Qual a velocidade da inferência de LLM em um MacBook Pro Intel (i9, 16 GB de RAM)?', acceptedAnswer: { '@type': 'Answer', text: 'Mais lenta que Apple Silicon ou um desktop DDR5. MacBook Pro Intel rodam apenas na CPU sobre DDR4 (~38-45 GB/s). Um modelo quantizado de 7B fica em torno de 4-7 tok/s realistas. 16 GB de RAM limitam você a cerca de 7B-8B em Q4.' } },
+          { '@type': 'Question', name: 'Qual a diferença entre pp tok/s e tg tok/s?', acceptedAnswer: { '@type': 'Answer', text: 'pp tok/s (processamento de prompt) é a fase de prefill limitada por computação. tg tok/s (geração de tokens) é a fase de decode limitada pela largura de banda de memória. Podem diferir em 5-20x no mesmo hardware.' } },
         ],
       },
       itemListSchema: {
@@ -1268,7 +1302,7 @@ schema: {
       intro: 'Apple M5 Pro (64 GB, ~2.399 $) ist 2026 die beste Allround-Plattform für lokale LLMs. Er führt 30B+-Modelle im einheitlichen Speicher mit 40–60 Tok/s bei geringer Leistungsaufnahme (~25 W) aus. Die NVIDIA RTX 5090 ist bei 7B–14B-Modellen schneller, kann jedoch 30B+ nicht ohne CPU-Offloading laden. Nur-CPU ist für 7B-Modelle mit 10–20 Tok/s auf moderner Hardware nutzbar.',
       metaDescription: 'NVIDIA RTX 50 vs Apple M5 vs nur CPU für lokale LLMs — Geschwindigkeit, Stromverbrauch, Kosten pro Tok/s. Klarer Sieger je Budget. Stromkosten 0,35 EUR/kWh.',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-27',
+      dateModified: '2026-08-29',
       leadAnswerBlock: '**Apple M5 Pro (64 GB, ~2.399 $) ist der beste Allround-Sieger 2026 — größere Modelle als jede einzelne GPU, günstig im Verbrauch (10× weniger Strom als RTX 5090). RTX 50-Serie nur wählen für maximale Geschwindigkeit bei 7B–14B oder Produktionsworkloads.**',
       audience: 'Entwickler, die Ollama oder LM Studio zur Optimierung lokaler LLM-Workflows verwenden',
       readTime: '11 Min. Lesezeit',
@@ -1474,6 +1508,14 @@ schema: {
               a: 'RTX 5090 zieht ~450 W bei Inferenzlast. M5 Pro zieht ~25 W. Bei 8 Std./Tag und 0,15 $/kWh sind das 200 $/Jahr (RTX 5090) gegenüber 14 $/Jahr (M5 Pro). Für Privatnutzer und alle mit gewerblichen Stromtarifen ist die Energieeffizienz von M5 Pro ein spürbarer Kostenvorteil.',
             },
             {
+              q: 'Wie schnell ist LLM-Inferenz auf einem Intel MacBook Pro (i9, 16 GB RAM)?',
+              a: 'Langsamer als Apple Silicon und langsamer als ein moderner DDR5-Desktop. Intel MacBook Pros haben keinen Unified-Memory-GPU-Pfad für llama.cpp — die Inferenz läuft rein auf der CPU über DDR4, mit etwa 38–45 GB/s Dual-Channel-Bandbreite gegenüber 89 GB/s bei einer modernen DDR5-Desktop-CPU. Mit der oben genannten Formel Speicherbandbreite ÷ Modellgröße landet ein quantisiertes 7B-Modell (~4,5 GB bei Q4) bei theoretisch etwa 8–10 Tok/Sek., realistisch bei 4–7 Tok/Sek. unter Berücksichtigung des CPU-Rechenaufwands. 16 GB Gesamt-RAM begrenzen Sie zudem auf etwa 7B–8B bei Q4 mit Spielraum für das Betriebssystem — erwarten Sie keine 13B+-Modelle ohne starkes Swapping und einen deutlichen Geschwindigkeitseinbruch.',
+            },
+            {
+              q: 'Was ist der Unterschied zwischen pp Tok/Sek. und tg Tok/Sek.?',
+              a: 'pp Tok/Sek. (Prompt Processing) misst, wie schnell das Modell Ihren Eingabe-Prompt verarbeitet — die "Prefill"-Phase, die rechengebunden ist und mit paralleler Hardware wie GPUs gut skaliert. tg Tok/Sek. (Token Generation) misst, wie schnell es jedes neue Ausgabe-Token erzeugt — die "Decode"-Phase, die speicherbandbreitengebunden ist (siehe die Bandbreitenformel oben). GPUs zeigen typischerweise eine große pp/tg-Lücke (schnelles Prefill, durch Bandbreite begrenzte Generierung); der Unified Memory von Apple Silicon hält beide Werte näher beieinander. Prüfen Sie beim Vergleich von Benchmarks immer, welche Zahl Sie gerade lesen — pp und tg können auf derselben Hardware um das 5- bis 20-Fache voneinander abweichen.',
+            },
+            {
               q: 'Muss ich bei der Verwendung lokaler LLMs die DSGVO beachten?',
               a: 'Ja. DSGVO Artikel 28 (Prozessor vs. Verantwortlicher), BSI-IT-Grundschutz-Kataloge. Egal ob RTX 5070 oder Apple M5 Pro: Lokale Inferenz hält Eingabe- und Ausgabedaten auf Ihrer eigenen Hardware — das Art.-44-Transferrisiko für die KI-Schicht entfällt. DSGVO-Konformität und BSI-IT-Grundschutz hängen vom Gesamtsystem und Ihren TOMs ab, nicht vom GPU- oder Chip-Modell.',
             },
@@ -1537,6 +1579,8 @@ schema: {
           { '@type': 'Question', 'name': 'Kann Apple Silicon 30B- und 70B-Modelle ausführen?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'M5 Pro (64 GB) führt 30B-Modelle nativ mit 20–30 Tok/s aus. M5 Max (128 GB) führt 70B-Modelle nativ mit 35–50 Tok/s aus. Keine Consumer-GPU kann das bei 30B+ erreichen.' } },
           { '@type': 'Question', 'name': 'Lohnt sich RTX 5090 für 2.000 $ bei lokalen LLMs?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Nur, wenn Ihr Workflow 7B–14B-Modelle bei maximaler Geschwindigkeit erfordert oder Sie Produktions-Pipelines betreiben. Für 30B+ ist M5 Pro die bessere Wahl. Für eine günstige GPU liefert RTX 5070 (600 $) 80 % der Geschwindigkeit zu 30 % der Kosten.' } },
           { '@type': 'Question', 'name': 'Wie vergleicht sich der Stromverbrauch zwischen GPU und Apple Silicon?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'RTX 5090 zieht ~450 W bei Inferenzlast. M5 Pro zieht ~25 W. Bei 8 Std./Tag und 0,15 $/kWh sind das 200 $/Jahr (RTX 5090) gegenüber 14 $/Jahr (M5 Pro).' } },
+          { '@type': 'Question', 'name': 'Wie schnell ist LLM-Inferenz auf einem Intel MacBook Pro (i9, 16 GB RAM)?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Langsamer als Apple Silicon oder ein DDR5-Desktop. Intel MacBook Pros laufen rein auf der CPU über DDR4 (~38-45 GB/s). Ein quantisiertes 7B-Modell landet bei etwa 4-7 Tok/Sek. realistisch. 16 GB RAM begrenzen Sie auf etwa 7B-8B bei Q4.' } },
+          { '@type': 'Question', 'name': 'Was ist der Unterschied zwischen pp Tok/Sek. und tg Tok/Sek.?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'pp Tok/Sek. (Prompt Processing) ist die rechengebundene Prefill-Phase. tg Tok/Sek. (Token Generation) ist die speicherbandbreitengebundene Decode-Phase. Sie können auf derselben Hardware um das 5- bis 20-Fache abweichen.' } },
           { '@type': 'Question', 'name': 'Muss ich bei der Verwendung lokaler LLMs die DSGVO beachten?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja. DSGVO Artikel 28 (Prozessor vs. Verantwortlicher), BSI-IT-Grundschutz-Kataloge. Egal ob RTX 5070 oder Apple M5 Pro: Lokale Inferenz hält Eingabe- und Ausgabedaten auf Ihrer eigenen Hardware — das Art.-44-Transferrisiko für die KI-Schicht entfällt. DSGVO-Konformität und BSI-IT-Grundschutz hängen vom Gesamtsystem und Ihren TOMs ab, nicht vom GPU- oder Chip-Modell.' } },
           { '@type': 'Question', 'name': 'Ist lokale LLM-Hardware für den deutschen Mittelstand geeignet?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja, besonders für den Mittelstand. RTX 5070 (600 $) ist ein kostengünstiger Einstieg, keine Abhängigkeit von US-Cloud-APIs. Lokale Inferenz hält Eingabe- und Ausgabedaten auf Ihrer eigenen Hardware — das Art.-44-Transferrisiko für die KI-Schicht entfällt. DSGVO-Konformität und BSI-IT-Grundschutz-Konformität hängen vom Gesamtsystem und Ihren TOMs ab, nicht vom Hardware-Modell.' } },
         ],
@@ -1568,7 +1612,7 @@ schema: {
       intro: 'L\'Apple M5 Pro (64 Go, ~2 399 €) est la meilleure plateforme polyvalente pour les LLM locaux en 2026. Il exécute des modèles 30B+ en mémoire unifiée à 40–60 Tok/s avec une faible consommation (~25 W). Le NVIDIA RTX 5090 est plus rapide pour les modèles 7B–14B mais ne peut pas charger 30B+ sans CPU offloading. CPU seul : utilisable pour les modèles 7B à 10–20 Tok/s sur matériel moderne.',
       metaDescription: 'NVIDIA RTX 50 vs Apple M5 vs CPU seul pour les LLM locaux — comparaisons de vitesse, consommation et coût par tok/s. Un gagnant clair par budget.',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-27',
+      dateModified: '2026-08-29',
       leadAnswerBlock: '**Apple M5 Pro (64 Go, ~2 399 €) est le meilleur choix polyvalent en 2026 — modèles plus grands que tout GPU, moins coûteux qu\'un build GPU, 10× moins d\'énergie. Choisissez RTX 50 uniquement pour une vitesse maximale sur 7B–14B ou des charges de production.**',
       audience: 'Développeurs familiers avec Ollama ou LM Studio optimisant les flux de travail des LLM locaux',
       readTime: '11 min de lecture',
@@ -1773,6 +1817,14 @@ schema: {
               q: 'Comment la consommation d\'énergie se compare-t-elle entre GPU et Apple Silicon ?',
               a: 'Le RTX 5090 consomme ~450 W en charge d\'inférence. Le M5 Pro consomme ~25 W. À 8 h/jour et 0,15 $/kWh, cela équivaut à 200 $/an (RTX 5090) contre 14 $/an (M5 Pro). Pour les particuliers et ceux payant des tarifs d\'électricité commerciaux, l\'efficacité énergétique du M5 Pro représente un avantage de coût notable.',
             },
+            {
+              q: 'Quelle est la vitesse d\'inférence LLM sur un MacBook Pro Intel (i9, 16 Go de RAM) ?',
+              a: 'Plus lente qu\'Apple Silicon et plus lente qu\'un ordinateur de bureau moderne équipé de DDR5. Les MacBook Pro Intel n\'ont pas de chemin GPU à mémoire unifiée pour llama.cpp — l\'inférence s\'exécute uniquement sur le CPU via DDR4, qui offre environ 38–45 Go/s de bande passante double canal contre 89 Go/s pour un CPU de bureau DDR5 moderne. En utilisant la formule bande passante mémoire ÷ taille du modèle mentionnée plus haut, un modèle quantifié 7B (~4,5 Go en Q4) atteint environ 8–10 Tok/s théoriques, 4–7 Tok/s réalistes une fois la surcharge de calcul du CPU prise en compte. Les 16 Go de RAM totale vous limitent également à environ 7B–8B en Q4 avec de la marge pour le système — n\'attendez pas de faire tourner des modèles 13B+ sans swap important et une forte pénalité de vitesse.',
+            },
+            {
+              q: 'Quelle est la différence entre pp tok/s et tg tok/s ?',
+              a: 'pp tok/s (traitement du prompt) mesure la vitesse à laquelle le modèle ingère votre prompt d\'entrée — la phase de "prefill", limitée par le calcul et qui s\'adapte bien au matériel parallèle comme les GPU. tg tok/s (génération de tokens) mesure la vitesse à laquelle il génère chaque nouveau token de sortie — la phase de "decode", limitée par la bande passante mémoire (voir la formule de bande passante ci-dessus). Les GPU présentent généralement un grand écart pp/tg (prefill rapide, génération limitée par la bande passante) ; la mémoire unifiée d\'Apple Silicon maintient les deux chiffres plus proches. Lorsque vous comparez des benchmarks, vérifiez toujours quel chiffre vous lisez — pp et tg peuvent différer de 5 à 20x sur le même matériel.',
+            },
           ],
         },
         relatedReading: {
@@ -1829,6 +1881,8 @@ schema: {
           { '@type': 'Question', 'name': 'Apple Silicon peut-il exécuter des modèles 30B et 70B ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Le M5 Pro (64 Go) exécute des modèles 30B nativement à 20–30 tok/s. Le M5 Max (128 Go) exécute des modèles 70B nativement à 35–50 tok/s. Aucun GPU grand public ne peut égaler cela pour 30B+.' } },
           { '@type': 'Question', 'name': 'Le RTX 5090 à 2 000 $ vaut-il la peine pour les LLM locaux ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Seulement si votre workflow nécessite des modèles 7B–14B à vitesse maximale ou des pipelines de production. Pour 30B+, le M5 Pro est le meilleur choix. Pour un GPU économique, le RTX 5070 (600 $) offre 80 % de la vitesse pour 30 % du coût.' } },
           { '@type': 'Question', 'name': 'Comment la consommation d\'énergie se compare-t-elle entre GPU et Apple Silicon ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Le RTX 5090 consomme ~450 W en charge d\'inférence. Le M5 Pro consomme ~25 W. À 8 h/jour et 0,15 $/kWh, cela équivaut à 200 $/an (RTX 5090) contre 14 $/an (M5 Pro).' } },
+          { '@type': 'Question', 'name': 'Quelle est la vitesse d\'inférence LLM sur un MacBook Pro Intel (i9, 16 Go de RAM) ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Plus lente qu\'Apple Silicon ou qu\'un bureau DDR5. Les MacBook Pro Intel tournent uniquement sur CPU via DDR4 (~38-45 Go/s). Un modèle quantifié 7B atteint environ 4-7 Tok/s réalistes. 16 Go de RAM vous limitent à environ 7B-8B en Q4.' } },
+          { '@type': 'Question', 'name': 'Quelle est la différence entre pp tok/s et tg tok/s ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'pp tok/s (traitement du prompt) est la phase de prefill limitée par le calcul. tg tok/s (génération de tokens) est la phase de decode limitée par la bande passante mémoire. Elles peuvent différer de 5 à 20x sur le même matériel.' } },
         ],
       },
       itemListSchema: {
@@ -1858,7 +1912,7 @@ schema: {
       intro: 'Apple M5 Pro（64GB、約2,399ドル）は2026年のローカルLLMに最もバランスの取れたプラットフォームです。統合メモリで30B+モデルを40–60 Tok/sで低消費電力（~25W）実行できます。NVIDIA RTX 5090は7B–14Bモデルでは高速ですが、30B+はCPUオフロードなしに入りません。CPUのみ：現代のハードウェアで7Bモデルを10–20 Tok/sで利用可能。',
       metaDescription: 'Apple M5 vs NVIDIA RTX 50 vs CPUのみ — ローカルLLMの実速度、消費電力、tok/s当たりコスト比較。2026年版。MacユーザーにはApple Siliconが断然おすすめ。',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-27',
+      dateModified: '2026-08-29',
       leadAnswerBlock: '**Apple M5 Pro（64GB）が2026年のベストオールラウンド — 30B+モデルをネイティブ実行、RTX 5090より10倍省電力。RTX 50シリーズは7B–14Bの最高速度や本番ワークロードに特化した場合のみ選択。**',
       audience: 'Ollama・LM Studio でローカル LLM ワークフロー最適化するエンジニア',
       readTime: '11分で読める',
@@ -2031,6 +2085,8 @@ schema: {
             { q: 'Apple Siliconは30Bや70Bモデルを実行できる？', a: 'M5 Pro（64GB）は30Bモデルをネイティブで20〜30 tok/s実行。M5 Max（128GB）は70Bモデルをネイティブで35〜50 tok/s実行。これはCPUオフロードなしの実際のスループット値であり、30B以上でこれに匹敵する一般向けGPUは存在しない。' },
             { q: '2,000ドルのRTX 5090はローカルLLMに価値がある？', a: '7B〜14Bモデルを最高速度で使うワークフロー、または本番推論パイプラインを運用する場合のみ。ほとんどのユーザーには、RTX 5070（600ドル）が速度の80%をコストの30%で提供する。30B以上のモデルには、予算に関わらずM5 Proの方が良い選択。' },
             { q: 'GPUとApple Siliconの消費電力はどう比較される？', a: 'RTX 5090は推論負荷時に約450Wを消費。M5 Proは約25W。1日8時間、0.15ドル/kWhの場合、年間200ドル（RTX 5090）対14ドル（M5 Pro）に相当する。家庭用途や商用電気料金を支払うユーザーにとって、M5 Proの電力効率は明確なコスト優位性となる。' },
+            { q: 'Intel MacBook Pro（i9、16GB RAM）でのLLM推論速度は？', a: 'Apple Siliconより遅く、最新のDDR5デスクトップよりも遅い。Intel MacBook ProにはllamacppのGPU統合メモリ経路がなく、推論はDDR4上でCPUのみで実行される。DDR4のデュアルチャネル帯域幅は約38〜45 GB/sで、最新のDDR5デスクトップCPUの89 GB/sを大きく下回る。上記のメモリ帯域幅÷モデルサイズの式を使うと、量子化された7Bモデル（Q4で約4.5GB）は理論上約8〜10 tok/s、CPUの計算オーバーヘッドを考慮した実質値では4〜7 tok/sとなる。合計16GBのRAMではOS用の余裕を残すと7B〜8B（Q4）程度が限界で、大幅なスワップと速度低下なしに13B以上のモデルを実行することは期待できない。' },
+            { q: 'pp tok/sとtg tok/sの違いは？', a: 'pp tok/s（プロンプト処理）は、モデルが入力プロンプトをどれだけ速く取り込むかを測る指標で、「プリフィル」フェーズにあたる。これは計算負荷が支配的で、GPUのような並列ハードウェアでよくスケールする。tg tok/s（トークン生成）は、新しい出力トークンをどれだけ速く生成するかを測る指標で、「デコード」フェーズにあたる。これは上記の帯域幅の式が示す通り、メモリ帯域幅が支配的である。GPUは通常pp/tgの差が大きく（プリフィルは速いが、生成は帯域幅に制限される）、Apple Siliconの統合メモリは両者の値をより近づける。ベンチマークを比較する際は、どちらの数値を読んでいるかを必ず確認すること — 同じハードウェアでもppとtgは5〜20倍異なることがある。' },
           ],
         },
         relatedReading: {
@@ -2083,6 +2139,8 @@ schema: {
           { '@type': 'Question', 'name': 'Apple Siliconは30Bや70Bモデルを実行できる？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'M5 Pro（64GB）は30Bモデルをネイティブで20〜30 tok/s実行。M5 Max（128GB）は70Bモデルをネイティブで35〜50 tok/s実行。30B以上でこれに匹敵する一般向けGPUは存在しない。' } },
           { '@type': 'Question', 'name': '2,000ドルのRTX 5090はローカルLLMに価値がある？', 'acceptedAnswer': { '@type': 'Answer', 'text': '7B〜14Bモデルを最高速度で使うワークフロー、または本番推論パイプラインを運用する場合のみ。30B以上のモデルにはM5 Proが最適。安価なGPUを求めるなら、RTX 5070（600ドル）が速度の80%をコストの30%で提供する。' } },
           { '@type': 'Question', 'name': 'GPUとApple Siliconの消費電力はどう比較される？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'RTX 5090は推論負荷時に約450Wを消費。M5 Proは約25W。1日8時間、0.15ドル/kWhの場合、年間200ドル（RTX 5090）対14ドル（M5 Pro）に相当する。' } },
+          { '@type': 'Question', 'name': 'Intel MacBook Pro（i9、16GB RAM）でのLLM推論速度は？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Apple Siliconや最新DDR5デスクトップより遅い。Intel MacBook ProはDDR4上でCPUのみで推論を実行する（約38〜45 GB/s）。量子化された7Bモデルは実質約4〜7 tok/sとなる。16GBのRAMでは7B〜8B（Q4）程度が限界。' } },
+          { '@type': 'Question', 'name': 'pp tok/sとtg tok/sの違いは？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'pp tok/s（プロンプト処理）は計算負荷が支配的なプリフィルフェーズ。tg tok/s（トークン生成）はメモリ帯域幅が支配的なデコードフェーズ。同じハードウェアでも5〜20倍異なることがある。' } },
         ],
       },
       itemListSchema: {
@@ -2112,7 +2170,7 @@ schema: {
       intro: 'Apple M5 Pro（64GB，约2399美元）是2026年本地大模型最均衡的平台。统一内存原生运行30B+模型速度40–60 Tok/s，功耗仅约25W。NVIDIA RTX 5090在7B–14B模型上更快，但无法在不offloading的情况下加载30B+。仅CPU：现代硬件7B模型可达10–20 Tok/s，偶发使用可行。注意：Qwen3系列模型在Apple MLX框架上有专项优化，中文用户运行Qwen3效果更佳。',
       metaDescription: 'Apple M5 vs NVIDIA RTX 50 vs 仅CPU — 本地大模型实际速度、功耗、每Tok/s成本对比（2026年版）。Qwen3在Apple MLX上有优化。',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-27',
+      dateModified: '2026-08-29',
       leadAnswerBlock: '**Apple M5 Pro（64GB）是2026年综合最优 — 比任何单块GPU能运行更大的模型，成本低于GPU建机，功耗低10倍。仅在7B–14B最高速度或生产工作负载时选择RTX 50系列。Qwen3用户：Apple MLX有专项加速。**',
       audience: '使用 Ollama 或 LM Studio 优化本地大模型工作流的开发者',
       readTime: '阅读约11分钟',
@@ -2285,6 +2343,8 @@ schema: {
             { q: 'Apple Silicon能运行30B和70B模型吗？', a: 'M5 Pro（64GB）原生运行30B模型达20–30 tok/s。M5 Max（128GB）原生运行70B模型达35–50 tok/s。这些是无需CPU offloading的真实吞吐量数据——没有消费级GPU能在30B以上模型上与之匹敌。' },
             { q: '花2,000美元买RTX 5090值得吗？', a: '仅当你的工作流需要7B–14B模型的最高速度，或运行生产推理管线时才值得。对大多数人而言，RTX 5070（600美元）能以30%的成本提供80%的速度。对30B以上模型而言，无论预算多少，M5 Pro都是更好的选择。' },
             { q: 'GPU和Apple Silicon的功耗对比如何？', a: 'RTX 5090在推理负载下功耗约450W。M5 Pro约25W。按每天8小时、0.15美元/千瓦时计算，相当于每年200美元（RTX 5090）对比14美元（M5 Pro）。对家庭用户及支付商业电价的用户而言，M5 Pro的能效带来了显著的成本优势。' },
+            { q: 'Intel MacBook Pro（i9、16GB内存）的LLM推理速度如何？', a: '比Apple Silicon慢，也比现代DDR5台式机慢。Intel MacBook Pro没有面向llama.cpp的统一内存GPU路径——推理仅在CPU上通过DDR4运行，其双通道带宽约为38–45 GB/s，而现代DDR5台式机CPU可达89 GB/s。按照上文的"内存带宽÷模型大小"公式计算，一个量化后的7B模型（Q4下约4.5 GB）理论速度约为8–10 tok/s，考虑到CPU计算开销后，实际速度约为4–7 tok/s。总共16GB的内存也将你限制在Q4下约7B–8B的模型规模，还要为操作系统预留空间——不要指望在没有严重内存交换和显著速度损失的情况下运行13B以上的模型。' },
+            { q: 'pp tok/s和tg tok/s有什么区别？', a: 'pp tok/s（提示词处理）衡量模型摄取你输入提示词的速度——即"预填充"阶段，该阶段受计算能力限制，在GPU等并行硬件上扩展性良好。tg tok/s（token生成）衡量模型生成每个新输出token的速度——即"解码"阶段，该阶段受内存带宽限制（参见上文的带宽公式）。GPU通常在pp和tg之间表现出较大差距（预填充快，但生成受带宽限制）；Apple Silicon的统一内存则使这两个数值更接近。比较基准测试时，务必确认你看到的是哪一个数值——同一硬件上pp和tg可能相差5到20倍。' },
           ],
         },
         relatedReading: {
@@ -2337,6 +2397,8 @@ schema: {
           { '@type': 'Question', 'name': 'Apple Silicon能运行30B和70B模型吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'M5 Pro（64GB）原生运行30B模型达20–30 tok/s。M5 Max（128GB）原生运行70B模型达35–50 tok/s。没有消费级GPU能在30B以上模型上与之匹敌。' } },
           { '@type': 'Question', 'name': '花2,000美元买RTX 5090值得吗？', 'acceptedAnswer': { '@type': 'Answer', 'text': '仅当你的工作流需要7B–14B模型的最高速度，或运行生产管线时才值得。对30B以上模型而言，M5 Pro是更好的选择。若想选经济型GPU，RTX 5070（600美元）能以30%的成本提供80%的速度。' } },
           { '@type': 'Question', 'name': 'GPU和Apple Silicon的功耗对比如何？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'RTX 5090在推理负载下功耗约450W。M5 Pro约25W。按每天8小时、0.15美元/千瓦时计算，相当于每年200美元（RTX 5090）对比14美元（M5 Pro）。' } },
+          { '@type': 'Question', 'name': 'Intel MacBook Pro（i9、16GB内存）的LLM推理速度如何？', 'acceptedAnswer': { '@type': 'Answer', 'text': '比Apple Silicon或DDR5台式机慢。Intel MacBook Pro仅通过DDR4在CPU上运行推理（约38-45 GB/s）。量化后的7B模型实际速度约为4-7 tok/s。16GB内存将你限制在Q4下约7B-8B的模型规模。' } },
+          { '@type': 'Question', 'name': 'pp tok/s和tg tok/s有什么区别？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'pp tok/s（提示词处理）是受计算限制的预填充阶段。tg tok/s（token生成）是受内存带宽限制的解码阶段。同一硬件上两者可能相差5-20倍。' } },
         ],
       },
       itemListSchema: {
@@ -2366,7 +2428,7 @@ schema: {
       intro: 'Apple M5 Pro(64GB, 약 2,399달러)는 2026년 로컬 LLM에 최고의 올라운드 플랫폼입니다. 통합 메모리에서 30B+ 모델을 40–60 tok/s로, 낮은 전력 소비(~25W)로 실행합니다. NVIDIA RTX 5090은 7B–14B 모델에서 더 빠르지만 CPU 오프로딩 없이 30B+를 로드할 수 없습니다. CPU만: 현대 하드웨어에서 7B 모델을 10–20 tok/s로 사용 가능합니다.',
       metaDescription: 'NVIDIA RTX 50 vs Apple M5 vs CPU만 — 로컬 LLM 실제 속도, 전력 소비, tok/s당 비용 비교 (2026). 예산별 명확한 승자.',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-27',
+      dateModified: '2026-08-29',
       leadAnswerBlock: '**Apple M5 Pro(64GB)가 2026년 종합 승자 — 단일 GPU보다 큰 모델, GPU 빌드보다 낮은 비용, 전력 10배 절감. RTX 50 시리즈는 7B–14B 최고 속도 또는 프로덕션 워크로드에만 선택하세요.**',
       audience: 'Ollama 또는 LM Studio에 익숙하고 로컬 LLM 워크플로우를 최적화하는 개발자',
       readTime: '11분 읽기',
@@ -2571,6 +2633,14 @@ schema: {
               q: 'GPU와 Apple Silicon의 전력 소비는 어떻게 비교됩니까?',
               a: 'RTX 5090은 추론 부하 시 약 450W를 사용합니다. M5 Pro는 약 25W를 사용합니다. 하루 8시간, $0.15/kWh 기준으로 연간 $200(RTX 5090) 대 $14(M5 Pro)에 해당합니다. 가정용 사용자와 상업용 전기 요금을 지불하는 사용자에게 M5 Pro의 전력 효율은 상당한 비용 이점입니다.',
             },
+            {
+              q: '인텔 MacBook Pro(i9, 16GB RAM)에서 LLM 추론 속도는 어느 정도입니까?',
+              a: 'Apple Silicon보다 느리고, 최신 DDR5 데스크톱보다도 느립니다. 인텔 MacBook Pro는 llama.cpp를 위한 통합 메모리 GPU 경로가 없습니다 — 추론은 DDR4를 통해 CPU에서만 실행되며, 최신 DDR5 데스크톱 CPU의 89 GB/s에 비해 듀얼 채널 대역폭이 약 38–45 GB/s에 불과합니다. 위에서 소개한 메모리 대역폭 ÷ 모델 크기 공식을 사용하면, 양자화된 7B 모델(Q4에서 약 4.5 GB)은 이론상 약 8–10 tok/s, CPU 연산 오버헤드를 고려한 실제 속도는 4–7 tok/s 정도입니다. 총 16GB RAM으로는 OS를 위한 여유를 두면 Q4 기준 7B–8B 정도가 한계이며, 심한 스와핑과 큰 속도 저하 없이 13B 이상 모델을 실행하기는 어렵습니다.',
+            },
+            {
+              q: 'pp tok/s와 tg tok/s의 차이는 무엇입니까?',
+              a: 'pp tok/s(프롬프트 처리)는 모델이 입력 프롬프트를 얼마나 빨리 처리하는지를 측정하는 지표로, "프리필" 단계에 해당하며 연산 능력에 좌우되고 GPU 같은 병렬 하드웨어에서 잘 확장됩니다. tg tok/s(토큰 생성)는 새로운 출력 토큰을 얼마나 빨리 생성하는지를 측정하는 지표로, "디코드" 단계에 해당하며 위의 대역폭 공식에서 보듯 메모리 대역폭에 좌우됩니다. GPU는 일반적으로 pp/tg 격차가 크게 나타나며(프리필은 빠르지만 생성은 대역폭에 제한됨), Apple Silicon의 통합 메모리는 두 수치를 더 가깝게 유지합니다. 벤치마크를 비교할 때는 항상 어떤 수치를 보고 있는지 확인하세요 — 동일한 하드웨어에서도 pp와 tg는 5~20배 차이가 날 수 있습니다.',
+            },
           ],
         },
         relatedReading: {
@@ -2628,6 +2698,8 @@ schema: {
           { '@type': 'Question', 'name': 'Apple Silicon이 30B와 70B 모델을 실행할 수 있습니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'M5 Pro(64GB)는 30B 모델을 네이티브로 20–30 tok/s에 실행합니다. M5 Max(128GB)는 70B 모델을 네이티브로 35–50 tok/s에 실행합니다. 30B 이상에서 이를 따라올 소비자용 GPU는 없습니다.' } },
           { '@type': 'Question', 'name': 'RTX 5090은 로컬 LLM에 $2,000의 가치가 있습니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': '워크플로우가 최고 속도의 7B–14B 모델을 필요로 하거나 프로덕션 파이프라인을 운영하는 경우에만 가치가 있습니다. 30B 이상 모델에는 M5 Pro가 더 나은 선택입니다. 저렴한 GPU를 원한다면 RTX 5070($600)이 30%의 비용으로 80%의 속도를 제공합니다.' } },
           { '@type': 'Question', 'name': 'GPU와 Apple Silicon의 전력 소비는 어떻게 비교됩니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'RTX 5090은 추론 부하 시 약 450W를 사용합니다. M5 Pro는 약 25W를 사용합니다. 하루 8시간, $0.15/kWh 기준으로 연간 $200(RTX 5090) 대 $14(M5 Pro)에 해당합니다.' } },
+          { '@type': 'Question', 'name': '인텔 MacBook Pro(i9, 16GB RAM)에서 LLM 추론 속도는 어느 정도입니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Apple Silicon이나 DDR5 데스크톱보다 느립니다. 인텔 MacBook Pro는 DDR4를 통해 CPU에서만 추론을 실행합니다(약 38-45 GB/s). 양자화된 7B 모델은 실제로 약 4-7 tok/s입니다. 16GB RAM은 Q4 기준 7B-8B 정도로 제한됩니다.' } },
+          { '@type': 'Question', 'name': 'pp tok/s와 tg tok/s의 차이는 무엇입니까?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'pp tok/s(프롬프트 처리)는 연산에 좌우되는 프리필 단계입니다. tg tok/s(토큰 생성)는 메모리 대역폭에 좌우되는 디코드 단계입니다. 동일한 하드웨어에서도 5~20배 차이가 날 수 있습니다.' } },
         ],
       },
       itemListSchema: {
