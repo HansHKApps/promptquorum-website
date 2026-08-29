@@ -454,5 +454,34 @@
       "ctr": 0,
       "period": "last 90 days"
     }
+  },
+  {
+    "id": "81a161e0-587f-46f0-858c-8bc9c6736a92",
+    "slug": "/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts",
+    "date": "2026-08-29T05:59:44.957Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Coqui XTTS v2 License (CPML): Commercial Use Guide 2026",
+        "new": "Official Coqui XTTS v2 License (CPML): Commercial Use 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "XTTS v2 = Coqui Public Model License (CPML), non-commercial...",
+        "new": "Official CPML license text for XTTS v2, linked from Hugging Face..."
+      },
+      {
+        "field": "faq",
+        "old": "17-language FAQ covered only Lithuanian as a not-supported example",
+        "new": "added Kazakh and Ukrainian not-supported FAQ entries alongside Lithuanian, all 9 locales"
+      }
+    ],
+    "reason": "294 queries, 22,226 impr, 0.05% CTR (page's own worst). Position data showed most volume clusters at pos 4-9 (real, fixable weak-CTR range), not top-3 (would be diagnosis-E/AI-Overview-answered, not chased). ~40% of all queries lead with the word 'official' (license, documentation, GitHub) -- e.g. 'official coqui xtts v2 license commercial use' 38 impr pos 6.3, 0% CTR -- while neither title nor meta said 'official' despite the page already citing the primary CPML source on Hugging Face. Rewrote title/meta across all 9 locales to lead with the official-sourcing hook. Also closed a real content gap: Kazakh (~22 impr) and Ukrainian (~5 impr) supported-language queries had zero FAQ coverage despite Lithuanian (a near-identical not-supported case) already having one; added matching FAQ entries in all 9 locales. Skipped 'cpml' (pos 1.0, 0% CTR) and 'best free ai tts commercial use' (pos 1.3, 0% CTR) as diagnosis-E per policy -- not title-fixable.",
+    "baseline": {
+      "impressions": 22226,
+      "clicks": 3,
+      "ctr": 0.00013497705390083686,
+      "period": "last 90 days"
+    }
   }
 ]
