@@ -15,11 +15,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/beelink-ser8-local-ai-review-overview-hero-en.webp',
     affiliateDisclosure: true,
     title: 'Beelink SER8 Review: Specs, Price & 32GB vs 64GB (2026)',
-    seoTitle: 'Beelink SER8 Review 2026 — Specs, Price, 32GB vs 64GB',
+    seoTitle: 'Beelink SER8 Review 2026: Official Specs, Price, 32GB/64GB',
     intro:
       'The Beelink SER8 (AMD Ryzen 7 8845HS, Radeon 780M, DDR5) is the best-value mini PC for a local-AI smart home in 2026 — the 32 GB / 1 TB configuration runs Home Assistant, Frigate, Whisper, and a 7B model on Ollama on one quiet box for roughly $799–849 (August 2026, price volatile by retailer and config). This review verifies every spec against Beelink and independent sources, sets honest expectations for local-LLM speed as estimates rather than measured benchmarks, and covers what changed since launch — including Beelink\'s newer SER9 and SER10 lines.',
     metaDescription:
-      'Beelink SER8 review 2026: Ryzen 7 8845HS specs, current price by config, 32GB vs 64GB, idle power, dimensions. Runs Home Assistant + a 7B local LLM — full breakdown.',
+      'Beelink SER8 official specs verified: Ryzen 7 8845HS, current price by config, 32GB vs 64GB, idle power, dimensions. Runs Home Assistant + a 7B local LLM.',
     twitterDescription:
       'Beelink SER8 (2026): Ryzen 7 8845HS, Radeon 780M, DDR5, from ~$799. Which config to buy for Home Assistant + a local LLM — 32GB vs 64GB, specs, and current price.',
     readTime: '9 min read',

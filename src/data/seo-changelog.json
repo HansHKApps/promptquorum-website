@@ -987,5 +987,19 @@
     ],
     "reason": "Page 35: top query (strix halo ollama vulkan context window limit 64k tokens, 1,100 impr, pos 3.1, 0% CTR) already has an exact-match title/meta - likely AIO-satisfied at the SERP level, left alone (diagnosis-E pattern). Real gap: ryzen ai max 395 windows ollama 64k context window performance (194+86=280 impr combined, positions 5.0/9.4, 0% CTR) asks specifically about Windows performance, which the article only addressed with a generic works on Windows? FAQ, not the performance-specific angle. Added a dedicated FAQ explaining the CPU-fallback performance implication, reusing the already-established Vulkan build workaround fact.",
     "baseline": null
+  },
+  {
+    "id": "03323e07-574c-43f8-9490-7f2d92d379a0",
+    "slug": "/smart-home/beelink-ser8-local-ai-review",
+    "date": "2026-08-29T13:54:51.861Z",
+    "fields": [
+      {
+        "field": "seoTitle,metaDescription (en)",
+        "old": "Beelink SER8 Review 2026 - Specs, Price, 32GB vs 64GB",
+        "new": "Beelink SER8 Review 2026: Official Specs, Price, 32GB/64GB"
+      }
+    ],
+    "reason": "Page 37: uniformly weak positions (7-11) across nearly all 30+ queries despite already-thorough body coverage (dimensions, idle power, official specs FAQ all already present) - not a content gap, diagnosis A/D. Real official specs query cluster (beelink ser8 official specs, ryzen 7 8845hs official specs, dimensions official, official website: ~23 impr combined) not reflected in title/meta despite matching an established successful pattern from earlier pages this campaign (official framing). Title/meta-only fix.",
+    "baseline": null
   }
 ]
