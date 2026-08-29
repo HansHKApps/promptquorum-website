@@ -9,6 +9,8 @@ import type { PEArticle } from "@/lib/prompt-engineering/types";
 export const article: Partial<Record<Language, PEArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
+      last_full_refresh: '2026-08-29',
+      next_refresh_due: '2027-02-28',
       theme: 'Techniques',
       heroImage: '/images/self-consistency-prompting-overview-hero-en.webp',
       title: 'Self-Consistency Prompting: Generate Multiple Answers, Pick the One That\'s Right',

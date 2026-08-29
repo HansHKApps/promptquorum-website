@@ -1,0 +1,181 @@
+{
+  "generatedAt": "2026-08-29T17:08:01.192Z",
+  "scope": "EN articles: local-llms, prompt-engineering, power-local-llm, smart-home, balcony-solar, blog",
+  "unweighted": {
+    "n": 530,
+    "meanDays": 34.1,
+    "medianDays": 37,
+    "buckets": [
+      {
+        "label": "0-5",
+        "count": 247,
+        "pct": 46.6
+      },
+      {
+        "label": "6-15",
+        "count": 7,
+        "pct": 1.3
+      },
+      {
+        "label": "16-30",
+        "count": 2,
+        "pct": 0.4
+      },
+      {
+        "label": "31-60",
+        "count": 173,
+        "pct": 32.6
+      },
+      {
+        "label": "61-120",
+        "count": 78,
+        "pct": 14.7
+      },
+      {
+        "label": "121+",
+        "count": 23,
+        "pct": 4.3
+      }
+    ]
+  },
+  "articlesAged90to120": [
+    {
+      "cluster": "blog",
+      "slug": "promptquorum-vs-askquorum",
+      "urlPath": "/blog/promptquorum-vs-askquorum",
+      "ageDays": 119,
+      "dateSource": "last_full_refresh"
+    },
+    {
+      "cluster": "prompt-engineering",
+      "slug": "the-single-step-prompt-method",
+      "urlPath": "/prompt-engineering/the-single-step-prompt-method",
+      "ageDays": 117,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "prompt-engineering",
+      "slug": "ape-framework",
+      "urlPath": "/prompt-engineering/ape-framework",
+      "ageDays": 117,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "prompt-engineering",
+      "slug": "co-star-framework",
+      "urlPath": "/prompt-engineering/co-star-framework",
+      "ageDays": 117,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "prompt-engineering",
+      "slug": "rtf-framework",
+      "urlPath": "/prompt-engineering/rtf-framework",
+      "ageDays": 117,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "prompt-engineering",
+      "slug": "self-consistency-prompting",
+      "urlPath": "/prompt-engineering/self-consistency-prompting",
+      "ageDays": 117,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "voice-assistant-local-mobile-offline",
+      "urlPath": "/power-local-llm/voice-assistant-local-mobile-offline",
+      "ageDays": 113,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "local-llm-with-obsidian-2026",
+      "urlPath": "/power-local-llm/local-llm-with-obsidian-2026",
+      "ageDays": 113,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "local-llm-personal-knowledge-base-2026",
+      "urlPath": "/power-local-llm/local-llm-personal-knowledge-base-2026",
+      "ageDays": 113,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "local-llms",
+      "slug": "run-qwen-vl-locally-2026",
+      "urlPath": "/local-llms/run-qwen-vl-locally-2026",
+      "ageDays": 99,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "deepseek-vs-qwen-local-comparison-2026",
+      "urlPath": "/power-local-llm/deepseek-vs-qwen-local-comparison-2026",
+      "ageDays": 95,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "local-ai-behind-firewall-offline-2026",
+      "urlPath": "/power-local-llm/local-ai-behind-firewall-offline-2026",
+      "ageDays": 95,
+      "dateSource": "dateModified"
+    },
+    {
+      "cluster": "power-local-llm",
+      "slug": "wechat-local-llm-integration-2026",
+      "urlPath": "/power-local-llm/wechat-local-llm-integration-2026",
+      "ageDays": 95,
+      "dateSource": "dateModified"
+    }
+  ],
+  "warnings": [],
+  "weighted": {
+    "n": 252,
+    "meanDays": 16.6,
+    "medianDays": 3,
+    "buckets": [
+      {
+        "label": "0-5",
+        "impressions": 232817,
+        "pct": 70.2
+      },
+      {
+        "label": "6-15",
+        "impressions": 1412,
+        "pct": 0.4
+      },
+      {
+        "label": "16-30",
+        "impressions": 1960,
+        "pct": 0.6
+      },
+      {
+        "label": "31-60",
+        "impressions": 68018,
+        "pct": 20.5
+      },
+      {
+        "label": "61-120",
+        "impressions": 25002,
+        "pct": 7.5
+      },
+      {
+        "label": "121+",
+        "impressions": 2666,
+        "pct": 0.8
+      }
+    ],
+    "unmatchedGscRows": 12,
+    "unmatchedArticles": 278
+  },
+  "byproducts": {
+    "enShareOfImpressions": 72.7,
+    "discardedQueryStringRows": 0,
+    "nonEnRows": 736,
+    "nonEnImpressions": 128612
+  },
+  "priorityRefreshList": []
+}

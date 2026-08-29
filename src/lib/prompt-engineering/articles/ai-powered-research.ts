@@ -13,12 +13,14 @@ const OG_SLUG = keyToSlug('ai-powered-research');
 export const article: Partial<Record<Language, PEArticle>> = {
     en: {
       freshness_tier: 'semi_annual',
+      last_full_refresh: '2026-08-29',
+      next_refresh_due: '2027-02-28',
       theme: 'Use Cases',
       heroImage: '/images/ai-powered-research-overview-hero-en.webp',
       title: 'AI-Powered Research: Tools, Hallucination Rates, and Verification Workflows',
       intro: 'AI research tools reduce literature review time from weeks to hours — but introduce a critical risk: hallucinated citations that pass peer review. GPTZero confirmed 100+ fabricated references in NeurIPS 2025 papers that cleared multi-reviewer scrutiny. As of April 2026, the reliable workflow routes each research stage to the right tool (Elicit for extraction, Consensus for synthesis, scite.ai for verification) and cross-checks factual claims across at least two independent models before trusting them.',
       publishDate: '2026-03-23',
-      dateModified: '2026-05-04',
+      dateModified: '2026-08-29',
       readTime: '9 min read',
       seoTitle: 'AI Research: Verify Citations & Avoid Hallucinations',
       metaDescription: 'Reduce literature review from weeks to hours. Detect hallucinations (9.2%), verify citations with Elicit, Consensus, scite.ai. Master research workflows.',
@@ -43,7 +45,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'AI-Powered Research: Tools, Hallucination Rates, and Verification Workflows',
         description: 'AI-powered research tools reduce literature review time from weeks to hours — but hallucination rates of 9.2% make verification workflows mandatory. Covers Elicit, Consensus, Perplexity, scite.ai, multi-model cross-checking, and prompt frameworks for research.',
         datePublished: '2026-03-23',
-        dateModified: '2026-05-04',
+        dateModified: '2026-08-29',
         author: {
           '@type': 'Person',
           name: 'Hans Kuepper',
@@ -137,7 +139,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: 'How many academic papers can an AI process at once?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'This depends on the model\'s context window. GPT-5.6 (OpenAI) handles ~100 standard academic pages per session (128k token context). Claude Opus 5 (Anthropic) handles ~160 pages (200k tokens). Gemini 3.1 Pro (Google DeepMind) handles ~800 pages (1M tokens). For larger corpora, a RAG (Retrieval-Augmented Generation) pipeline with a vector database is required.',
+              text: 'This depends on the model\'s context window. As of August 2026, GPT-5.6 (OpenAI), Claude Opus 5 (Anthropic), and Gemini 3.1 Pro (Google DeepMind) all handle ~800 standard academic pages per session (1M-token context each). For corpora beyond that, a RAG (Retrieval-Augmented Generation) pipeline with a vector database is required.',
             },
           },
           {
@@ -224,7 +226,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Use Elicit for structured data extraction, Consensus for evidence synthesis, Perplexity for exploration, scite.ai for citation verification',
             'Multi-model cross-checking (GPT-5.6 + Claude Opus 5 + Gemini 3.1 Pro) detects hallucinations that single-model workflows miss',
             'Set Temperature (T) to 0.0—0.2 for citation generation; use 0.7—0.9 only for hypothesis brainstorming',
-            'Gemini 3.1 Pro\'s 1M-token context window is the only current model capable of processing 800+ academic pages in a single session',
+            'GPT-5.6, Claude Opus 5, and Gemini 3.1 Pro now all share a 1M-token context window, capable of processing 800+ academic pages in a single session',
             '100+ hallucinated citations passed peer review in NeurIPS 2025 — AI research verification is not optional',
           ],
         },
@@ -234,7 +236,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Elicit covers 138M+ papers and 545,000 clinical trials with semantic (not keyword) search',
             'Average AI hallucination rate: 9.2% for general knowledge, 18.7% for legal, 48% for o4-mini on PersonQA',
             '100+ hallucinated citations passed peer review at NeurIPS 2025 (top ML conference, 24.52% acceptance rate)',
-            'Gemini 3.1 Pro\'s 1M-token context window processes ~800 academic pages per session; GPT-5.6 handles ~100, Claude ~160',
+            'GPT-5.6, Claude Opus 5, and Gemini 3.1 Pro all share a 1M-token context window, processing ~800 academic pages per session',
             'Temperature 0.0–0.1 for citation generation; 0.7–0.9 only for hypothesis brainstorming',
             'Multi-model cross-checking detected hallucinations in 8 of 30 test citations in PromptQuorum testing',
           ],
@@ -426,13 +428,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
           rows: [
             {
               Model: 'GPT-5.6 (OpenAI)',
-              'Context Window': '128k tokens',
-              'Approximate Page Capacity': '~100 standard academic pages per session',
+              'Context Window': '1M tokens',
+              'Approximate Page Capacity': '~800 standard academic pages per session',
             },
             {
               Model: 'Claude Opus 5 (Anthropic)',
-              'Context Window': '200k tokens',
-              'Approximate Page Capacity': '~160 standard academic pages per session',
+              'Context Window': '1M tokens',
+              'Approximate Page Capacity': '~800 standard academic pages per session',
             },
             {
               Model: 'Gemini 3.1 Pro (Google DeepMind)',
@@ -441,7 +443,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
           ],
           items: [
-            'For research tasks involving fewer than 20 papers, all three models handle the full context. For systematic reviews covering 50—200 papers, Gemini 3.1 Pro\'s 1-million-token context window is the only current model capable of processing the full corpus in a single session.',
+            'As of August 2026, GPT-5.6, Claude Opus 5, and Gemini 3.1 Pro all share a 1-million-token context window. For research tasks involving fewer than 20 papers, all three models handle the full context easily. For systematic reviews covering 50—200 papers, all three can now process the full corpus in a single session — though the "lost in the middle" effect still degrades retrieval accuracy for material buried mid-context, regardless of window size.',
             'For truly large corpora (500+ papers), a RAG pipeline — where papers are chunked, embedded in a vector database, and retrieved by semantic similarity — is the correct architecture, not direct context injection.',
             'For a deeper explanation of context windows and why models lose information mid-context, see [context windows explained](/prompt-engineering/context-windows-explained-why-ai-forgets).',
           ],
@@ -469,7 +471,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           items: [
             '**Choosing based on benchmark leaderboards (not actual task)** — **Fix:** Choose models by task fit, not leaderboard rank. Benchmark winners (GPT-5.6) are overkill for summarization; Gemini 3.1 Pro\'s cost advantage dominates when you only need context processing.',
-            '**Assuming context window = quality (all 1M; LLaMA 4 Scout at 10M local)** — **Fix:** Context window is one dimension. 1M tokens matters only for 50+ papers. For small literature reviews, GPT-5.6 (128k) or Claude Opus 5 (200k) suffice and cost less.',
+            '**Assuming context window = quality (all three frontier models now at 1M; LLaMA 4 Scout offers 10M locally)** — **Fix:** Context window is one dimension, not a quality proxy. A 1M-token window matters only once a corpus exceeds ~50 papers. For small literature reviews, price and task fit — not window size — should drive model choice, since GPT-5.6, Claude Opus 5, and Gemini 3.1 Pro are now equal on context.',
             '**Using frontier model for every task (60× cost difference Gemini Flash vs GPT)** — **Fix:** Route tasks by cost-efficiency: Gemini Flash for classification, Claude Opus 5 for writing, GPT-5.6 for code. Multi-model dispatch via PromptQuorum enables per-task model selection.',
             '**Ignoring geography and data residency (EU GDPR, China)** — **Fix:** EU research must use GDPR-compliant tools (Mistral on-premise, Ollama local). China-based institutions use Qwen 3 or DeepSeek. Japan under METI guidelines uses Ollama with LLaMA 3.1 locally.',
             '**Locking into one provider SDK without abstraction layer** — **Fix:** Use multi-model dispatch tools (PromptQuorum) to avoid vendor lock-in. A single API call routes to the best model per task; switching providers requires no code changes.',
@@ -513,7 +515,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'How many academic papers can an AI process at once?',
-              a: 'This depends on the model\'s context window. GPT-5.6 (OpenAI) handles ~100 standard academic pages per session (128k token context). Claude Opus 5 (Anthropic) handles ~160 pages (200k tokens). Gemini 3.1 Pro (Google DeepMind) handles ~800 pages (1M tokens). For larger corpora, a RAG (Retrieval-Augmented Generation) pipeline with a vector database is required.',
+              a: 'This depends on the model\'s context window. As of August 2026, GPT-5.6 (OpenAI), Claude Opus 5 (Anthropic), and Gemini 3.1 Pro (Google DeepMind) all handle ~800 standard academic pages per session (1M-token context each). For corpora beyond that, a RAG (Retrieval-Augmented Generation) pipeline with a vector database is required.',
             },
             {
               q: 'Is it safe to cite AI-generated references in academic papers?',
@@ -563,7 +565,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'KI-gestützte Forschung: Tools, Halluzinations-Quoten und Verifikations-Workflows',
       intro: 'KI-Forschungstools verkürzen Literaturrecherchen von Wochen auf Stunden – führen aber ein kritisches Risiko ein: halluzinierte Zitate, die Peer Reviews passieren. GPTZero bestätigte 100+ fabrizierte Referenzen in NeurIPS-2025-Papieren, die eine Multi-Reviewer-Prüfung bestanden haben. Ab Mai 2026 leitet der zuverlässige Workflow jede Forschungsphase an das richtige Tool (Elicit für Datenextraktion, Consensus für Synthese, scite.ai für Verifizierung) und prüft faktische Ansprüche zwischen mindestens zwei unabhängigen Modellen, bevor man ihnen vertraut.',
       publishDate: '2026-03-23',
-      dateModified: '2026-05-04',
+      dateModified: '2026-08-29',
       readTime: '9 Min. Lesezeit',
       seoTitle: 'KI-Forschung: Zitate verifizieren, Halluzinationen meiden',
       metaDescription: 'Literaturrecherche in Stunden mit Elicit, Consensus und scite.ai reduzieren. Halluzinationen (9,2%) erkennen, Zitate überprüfen und Workflows meistern.',
@@ -576,7 +578,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'KI-gestützte Forschung: Tools, Halluzinations-Quoten und Verifikations-Workflows',
         description: 'KI-gestützte Forschungstools verkürzen Literaturrecherchen von Wochen auf Stunden – aber Halluzinations-Quoten von 9,2% machen Verifikations-Workflows obligatorisch. Behandelt Elicit, Consensus, Perplexity, scite.ai, Multi-Modell-Cross-Checking und Prompt-Frameworks für Forschung.',
         datePublished: '2026-03-23',
-        dateModified: '2026-05-04',
+        dateModified: '2026-08-29',
         author: {
           '@type': 'Person',
           name: 'Hans Kuepper',
@@ -670,7 +672,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: 'Wie viele akademische Papiere kann eine KI auf einmal verarbeiten?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Das hängt vom Context-Window des Modells ab. GPT-5.6 (OpenAI) verarbeitet ~100 Standard-Akademie-Seiten pro Sitzung (128k Token Context). Claude Opus 5 (Anthropic) verarbeitet ~160 Seiten (200k Tokens). Gemini 3.1 Pro (Google DeepMind) verarbeitet ~800 Seiten (1M Tokens). Für größere Korpora ist eine RAG (Retrieval-Augmented Generation) Pipeline mit Vektor-Datenbank erforderlich.',
+              text: 'Das hängt vom Context-Window des Modells ab. Stand August 2026 verarbeiten GPT-5.6 (OpenAI), Claude Opus 5 (Anthropic) und Gemini 3.1 Pro (Google DeepMind) alle ~800 Standard-Akademie-Seiten pro Sitzung (je 1M Token Context). Für größere Korpora ist eine RAG (Retrieval-Augmented Generation) Pipeline mit Vektor-Datenbank erforderlich.',
             },
           },
           {
@@ -757,7 +759,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Nutzen Sie Elicit für strukturierte Datenextraktion, Consensus für Evidenzsynthese, Perplexity für Exploration, scite.ai für Zitat-Verifizierung',
             'Multi-Modell-Cross-Checking (GPT-5.6 + Claude Opus 5 + Gemini 3.1 Pro) erkennt Halluzinationen, die Single-Modell-Workflows verpassen',
             'Setzen Sie Temperature (T) auf 0,0–0,2 für Zitat-Generierung; nutzen Sie 0,7–0,9 nur für Hypothesen-Brainstorming',
-            'Gemini 3.1 Pros 1M-Token Context Window ist das einzige aktuelle Modell, das 800+ akademische Seiten in einer Sitzung verarbeitet',
+            'GPT-5.6, Claude Opus 5 und Gemini 3.1 Pro teilen sich jetzt alle ein 1M-Token Context Window und verarbeiten 800+ akademische Seiten in einer Sitzung',
             '100+ halluzinierte Zitate bestanden Peer Review bei NeurIPS 2025 – KI-Forschungsverifizierung ist nicht optional',
           ],
         },
@@ -952,13 +954,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
           rows: [
             {
               Modell: 'GPT-5.6 (OpenAI)',
-              'Context Window': '128k Tokens',
-              'Ungefähre Seiten-Kapazität': '~100 Standard-Akademie-Seiten pro Sitzung',
+              'Context Window': '1M Tokens',
+              'Ungefähre Seiten-Kapazität': '~800 Standard-Akademie-Seiten pro Sitzung',
             },
             {
               Modell: 'Claude Opus 5 (Anthropic)',
-              'Context Window': '200k Tokens',
-              'Ungefähre Seiten-Kapazität': '~160 Standard-Akademie-Seiten pro Sitzung',
+              'Context Window': '1M Tokens',
+              'Ungefähre Seiten-Kapazität': '~800 Standard-Akademie-Seiten pro Sitzung',
             },
             {
               Modell: 'Gemini 3.1 Pro (Google DeepMind)',
@@ -967,7 +969,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
           ],
           items: [
-            'Für Forschungsaufgaben mit weniger als 20 Papieren verarbeiten alle drei Modelle den vollständigen Context. Für Systematic Reviews, die 50–200 Papiere abdecken, ist Gemini 3.1 Pros 1-Million-Token Context Window das einzige aktuelle Modell, das die vollständige Kopie in einer Sitzung verarbeitet.',
+            'Stand August 2026 teilen sich GPT-5.6, Claude Opus 5 und Gemini 3.1 Pro alle ein 1-Million-Token Context Window. Für Forschungsaufgaben mit weniger als 20 Papieren verarbeiten alle drei Modelle den vollständigen Context problemlos. Für Systematic Reviews, die 50–200 Papiere abdecken, können jetzt alle drei die vollständige Kopie in einer Sitzung verarbeiten — der "Lost in the Middle"-Effekt beeinträchtigt jedoch weiterhin die Abrufgenauigkeit für Material in der Mitte des Contexts, unabhängig von der Fenstergröße.',
             'Für wirklich große Korpora (500+ Papiere) ist eine RAG-Pipeline – wo Papiere geckt, in einer Vektor-Datenbank eingebettet und durch semantische Ähnlichkeit abgerufen werden – die korrekte Architektur, nicht direkter Context-Injection.',
             'Für eine tiefere Erklärung von Context Windows und warum Modelle Informationen in der Mitte des Kontexts verlieren, siehe [Context Windows erklärt](/de/prompt-engineering/context-windows-explained-why-ai-forgets).',
           ],
@@ -993,7 +995,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           items: [
             '**Auswahl basierend auf Benchmark-Leaderboards (nicht tatsächliche Aufgabe)** – **Korrektur:** Wählen Sie Modelle nach Aufgaben-Passung, nicht Leaderboard-Rang. Benchmark-Sieger (GPT-5.6) sind übertrieben für Zusammenfassung; Gemini 3.1 Pros Kosten-Vorteil dominiert, wenn Sie nur Context-Verarbeitung benötigen.',
-            '**Annahme, Context Window = Qualität (alle 1M; LLaMA 4 Scout bei 10M lokal)** – **Korrektur:** Context Window ist eine Dimension. 1M Tokens ist wichtig nur für 50+ Papiere. Für kleine Literatur-Reviews reichen GPT-5.6 (128k) oder Claude Opus 5 (200k) aus und kosten weniger.',
+            '**Annahme, Context Window = Qualität (alle drei Frontier-Modelle jetzt bei 1M; LLaMA 4 Scout bietet lokal 10M)** – **Korrektur:** Context Window ist eine Dimension, kein Qualitätsmaßstab. 1M Tokens ist wichtig nur für 50+ Papiere. Für kleine Literatur-Reviews sollten Preis und Aufgaben-Fit die Modellwahl bestimmen, nicht die Fenstergröße — GPT-5.6, Claude Opus 5 und Gemini 3.1 Pro sind jetzt beim Context gleichauf.',
             '**Frontier-Modell für jede Aufgabe verwenden (60× Kosten-Unterschied Gemini Flash vs GPT)** – **Korrektur:** Leiten Sie Aufgaben nach Kosten-Effizienz: Gemini Flash für Klassifizierung, Claude Opus 5 für Schreiben, GPT-5.6 für Code. Multi-Modell-Dispatch über PromptQuorum ermöglicht Pro-Aufgaben-Modell-Auswahl.',
             '**Geografie und Daten-Residenz ignorieren (EU GDPR, China)** – **Korrektur:** EU-Forschung muss GDPR-konforme Tools verwenden (Mistral On-Premise, Ollama lokal). China-basierte Institutionen verwenden Qwen 3 oder DeepSeek. Japan unter METI-Richtlinien nutzt Ollama mit LLaMA 3.1 lokal.',
             '**Vendor Lock-in ohne Abstraktions-Layer:** In einen Provider SDK sperren** – **Korrektur:** Nutzen Sie Multi-Modell-Dispatch-Tools (PromptQuorum), um Vendor Lock-in zu vermeiden. Ein einzelner API-Aufruf leitet zum besten Modell pro Aufgabe; Anbieter-Wechsel erfordert keine Code-Änderungen.',
@@ -1037,7 +1039,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Wie viele akademische Papiere kann eine KI auf einmal verarbeiten?',
-              a: 'Das hängt vom Context-Window des Modells ab. GPT-5.6 (OpenAI) verarbeitet ~100 Standard-Akademie-Seiten pro Sitzung (128k Token Context). Claude Opus 5 (Anthropic) verarbeitet ~160 Seiten (200k Tokens). Gemini 3.1 Pro (Google DeepMind) verarbeitet ~800 Seiten (1M Tokens). Für größere Korpora ist eine RAG (Retrieval-Augmented Generation) Pipeline mit Vektor-Datenbank erforderlich.',
+              a: 'Das hängt vom Context-Window des Modells ab. Stand August 2026 verarbeiten GPT-5.6 (OpenAI), Claude Opus 5 (Anthropic) und Gemini 3.1 Pro (Google DeepMind) alle ~800 Standard-Akademie-Seiten pro Sitzung (je 1M Token Context). Für größere Korpora ist eine RAG (Retrieval-Augmented Generation) Pipeline mit Vektor-Datenbank erforderlich.',
             },
             {
               q: 'Ist es sicher, KI-generierte Referenzen in akademischen Papieren zu zitieren?',
@@ -1087,7 +1089,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'Investigación con IA: Herramientas, Tasas de Alucinaciones y Flujos de Verificación',
       intro: 'Las herramientas de investigación con IA reducen el tiempo de revisión bibliográfica de semanas a horas — pero introducen un riesgo crítico: citas alucinadas que superan la revisión por pares. GPTZero confirmó más de 100 referencias fabricadas en artículos de NeurIPS 2025 que superaron el escrutinio de múltiples revisores. A partir de abril de 2026, el flujo de trabajo fiable enruta cada fase de investigación a la herramienta correcta (Elicit para extracción, Consensus para síntesis, scite.ai para verificación) y verifica las afirmaciones factuales en al menos dos modelos independientes antes de confiar en ellas.',
       publishDate: '2026-03-23',
-      dateModified: '2026-05-04',
+      dateModified: '2026-08-29',
       readTime: '9 min de lectura',
       seoTitle: 'Investigación con IA: Verifica Citas y Evita Alucinaciones',
       metaDescription: 'Reduce la revisión bibliográfica de semanas a horas. Detecta alucinaciones (9,2 %) y verifica citas con Elicit, Consensus y scite.ai. Flujos con IA.',
@@ -1100,7 +1102,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Investigación con IA: Herramientas, Tasas de Alucinaciones y Flujos de Verificación',
         description: 'Las herramientas de investigación con IA reducen el tiempo de revisión bibliográfica de semanas a horas — pero las tasas de alucinación del 9,2 % hacen obligatorios los flujos de verificación. Cubre Elicit, Consensus, Perplexity, scite.ai, verificación cruzada multi-modelo y frameworks de prompts para investigación.',
         datePublished: '2026-03-23',
-        dateModified: '2026-05-04',
+        dateModified: '2026-08-29',
         author: {
           '@type': 'Person',
           name: 'Hans Kuepper',
@@ -1194,7 +1196,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: '¿Cuántos artículos académicos puede procesar una IA a la vez?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Depende de la ventana de contexto del modelo. GPT-5.6 (OpenAI) maneja ~100 páginas académicas estándar por sesión (contexto de 128k tokens). Claude Opus 5 (Anthropic) maneja ~160 páginas (200k tokens). Gemini 3.1 Pro (Google DeepMind) maneja ~800 páginas (1M tokens). Para corpus más grandes, se requiere un pipeline RAG con base de datos vectorial.',
+              text: 'Depende de la ventana de contexto del modelo. A partir de agosto de 2026, GPT-5.6 (OpenAI), Claude Opus 5 (Anthropic) y Gemini 3.1 Pro (Google DeepMind) manejan todos ~800 páginas académicas estándar por sesión (1M tokens de contexto cada uno). Para corpus más grandes, se requiere un pipeline RAG con base de datos vectorial.',
             },
           },
           {
@@ -1281,7 +1283,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Usa Elicit para extracción de datos estructurados, Consensus para síntesis de evidencia, Perplexity para exploración, scite.ai para verificación de citas',
             'La verificación cruzada multi-modelo (GPT-5.6 + Claude Opus 5 + Gemini 3.1 Pro) detecta alucinaciones que los flujos de trabajo de un solo modelo pierden',
             'Establece la Temperatura (T) en 0,0–0,2 para la generación de citas; usa 0,7–0,9 solo para lluvia de ideas de hipótesis',
-            'La ventana de contexto de 1M tokens de Gemini 3.1 Pro es el único modelo actual capaz de procesar más de 800 páginas académicas en una sola sesión',
+            'GPT-5.6, Claude Opus 5 y Gemini 3.1 Pro ahora comparten una ventana de contexto de 1M tokens, capaz de procesar más de 800 páginas académicas en una sola sesión',
             'Más de 100 citas alucinadas superaron la revisión por pares en NeurIPS 2025 — la verificación de investigación con IA no es opcional',
           ],
         },
@@ -1476,13 +1478,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
           rows: [
             {
               'Modelo': 'GPT-5.6 (OpenAI)',
-              'Ventana de Contexto': '128k tokens',
-              'Capacidad de Páginas Aproximada': '~100 páginas académicas estándar por sesión',
+              'Ventana de Contexto': '1M tokens',
+              'Capacidad de Páginas Aproximada': '~800 páginas académicas estándar por sesión',
             },
             {
               'Modelo': 'Claude Opus 5 (Anthropic)',
-              'Ventana de Contexto': '200k tokens',
-              'Capacidad de Páginas Aproximada': '~160 páginas académicas estándar por sesión',
+              'Ventana de Contexto': '1M tokens',
+              'Capacidad de Páginas Aproximada': '~800 páginas académicas estándar por sesión',
             },
             {
               'Modelo': 'Gemini 3.1 Pro (Google DeepMind)',
@@ -1491,7 +1493,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
           ],
           items: [
-            'Para tareas de investigación con menos de 20 artículos, los tres modelos procesan el contexto completo. Para revisiones sistemáticas que cubren 50–200 artículos, la ventana de contexto de 1 millón de tokens de Gemini 3.1 Pro es el único modelo actual que procesa la copia completa en una sesión.',
+            'A partir de agosto de 2026, GPT-5.6, Claude Opus 5 y Gemini 3.1 Pro comparten todos una ventana de contexto de 1 millón de tokens. Para tareas de investigación con menos de 20 artículos, los tres modelos procesan el contexto completo sin problemas. Para revisiones sistemáticas que cubren 50–200 artículos, los tres pueden ahora procesar la copia completa en una sesión — aunque el efecto "lost in the middle" sigue degradando la precisión de recuperación del material situado en medio del contexto, sin importar el tamaño de la ventana.',
             'Para corpus realmente grandes (más de 500 artículos), un pipeline RAG — donde los artículos se fragmentan, se embeben en una base de datos vectorial y se recuperan por similitud semántica — es la arquitectura correcta, no la inyección directa de contexto.',
             'Para una explicación más profunda de las ventanas de contexto y por qué los modelos pierden información en el medio del contexto, consulta [Ventanas de contexto explicadas](/es/prompt-engineering/context-windows-explained-why-ai-forgets).',
           ],
@@ -1517,7 +1519,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           items: [
             '**Seleccionar basándose en tablas de clasificación de benchmarks (no en la tarea real)** — **Corrección:** Elige modelos por adecuación a la tarea, no por posición en la tabla de clasificación. Los campeones de benchmark (GPT-5.6) están sobredimensionados para resúmenes; la ventaja de costo de Gemini 3.1 Pro domina cuando solo necesitas procesamiento de contexto.',
-            '**Asumir que ventana de contexto = calidad** — **Corrección:** La ventana de contexto es una dimensión. 1M de tokens importa solo para más de 50 artículos. Para revisiones bibliográficas pequeñas, GPT-5.6 (128k) o Claude Opus 5 (200k) son suficientes y cuestan menos.',
+            '**Asumir que ventana de contexto = calidad (los tres modelos frontera ahora en 1M; LLaMA 4 Scout ofrece 10M en local)** — **Corrección:** La ventana de contexto es una dimensión, no una medida de calidad. 1M de tokens importa solo para más de 50 artículos. Para revisiones bibliográficas pequeñas, el precio y la idoneidad para la tarea — no el tamaño de la ventana — deben guiar la elección del modelo, ya que GPT-5.6, Claude Opus 5 y Gemini 3.1 Pro están ahora igualados en contexto.',
             '**Usar modelo frontier para cada tarea** — **Corrección:** Enruta tareas por eficiencia de costo: Gemini Flash para clasificación, Claude Opus 5 para redacción, GPT-5.6 para código. El despacho multi-modelo mediante PromptQuorum permite la selección de modelo por tarea.',
             '**Ignorar geografía y residencia de datos (RGPD de la UE, China)** — **Corrección:** La investigación en la UE debe usar herramientas conformes con el RGPD (Mistral on-premise, Ollama local). Las instituciones en China usan Qwen 3 o DeepSeek. Japón bajo directrices de METI usa Ollama con LLaMA 3.1 localmente.',
             '**Bloqueo de proveedor sin capa de abstracción** — **Corrección:** Usa herramientas de despacho multi-modelo (PromptQuorum) para evitar el bloqueo de proveedor. Una sola llamada API enruta al mejor modelo por tarea; cambiar de proveedor no requiere cambios de código.',
@@ -1561,7 +1563,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: '¿Cuántos artículos académicos puede procesar una IA a la vez?',
-              a: 'Depende de la ventana de contexto del modelo. GPT-5.6 (OpenAI) maneja ~100 páginas académicas estándar por sesión (contexto de 128k tokens). Claude Opus 5 (Anthropic) maneja ~160 páginas (200k tokens). Gemini 3.1 Pro (Google DeepMind) maneja ~800 páginas (1M tokens). Para corpus más grandes, se requiere un pipeline RAG con base de datos vectorial.',
+              a: 'Depende de la ventana de contexto del modelo. A partir de agosto de 2026, GPT-5.6 (OpenAI), Claude Opus 5 (Anthropic) y Gemini 3.1 Pro (Google DeepMind) manejan todos ~800 páginas académicas estándar por sesión (1M tokens de contexto cada uno). Para corpus más grandes, se requiere un pipeline RAG con base de datos vectorial.',
             },
             {
               q: '¿Es seguro citar referencias generadas por IA en artículos académicos?',
@@ -1612,7 +1614,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'البحث بالذكاء الاصطناعي: الأدوات ومعدلات الهلوسة وسير عمل التحقق',
       intro: 'تُقلِّل أدوات البحث بالذكاء الاصطناعي وقت مراجعة الأدبيات من أسابيع إلى ساعات — لكنها تُقدِّم خطرًا حرجًا: اقتباسات مُهلوَسة تجتاز مراجعة الأقران. أكّد GPTZero أكثر من 100 مرجع مُختلَق في أوراق NeurIPS 2025 اجتازت تدقيق مراجعين متعددين. اعتبارًا من أبريل 2026، سير العمل الموثوق يُوجِّه كل مرحلة بحثية إلى الأداة الصحيحة (Elicit للاستخراج، Consensus للتوليف، scite.ai للتحقق) ويتحقق من الادعاءات الواقعية في نموذجين مستقلين على الأقل قبل الثقة بها.',
       publishDate: '2026-03-23',
-      dateModified: '2026-05-04',
+      dateModified: '2026-08-29',
       readTime: '٩ دقائق للقراءة',
       seoTitle: 'البحث بـ ⁨AI⁩: تحقق من الاقتباسات وتجنب الهلوسة',
       metaDescription: 'قلِّل مراجعة الأدبيات من أسابيع إلى ساعات. ⁨Elicit⁩ و⁨Consensus⁩ و⁨scite.ai⁩ يكتشفون نسبة الهلوسة (⁨9.2%⁩) ويتحققون من الاقتباسات تلقائيًا.',
@@ -1625,7 +1627,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'البحث بالذكاء الاصطناعي: الأدوات ومعدلات الهلوسة وسير عمل التحقق',
         description: 'تُقلِّل أدوات البحث بالذكاء الاصطناعي وقت مراجعة الأدبيات من أسابيع إلى ساعات — لكن معدلات الهلوسة البالغة 9.2٪ تجعل سير عمل التحقق إلزامية. يغطي Elicit وConsensus وPerplexity وscite.ai والتحقق المتبادل متعدد النماذج وأُطر التعليمات للبحث.',
         datePublished: '2026-03-23',
-        dateModified: '2026-05-04',
+        dateModified: '2026-08-29',
         author: {
           '@type': 'Person',
           name: 'Hans Kuepper',
@@ -1719,7 +1721,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: 'كم عدد الأوراق الأكاديمية التي يستطيع الذكاء الاصطناعي معالجتها في وقت واحد؟',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'يعتمد على نافذة سياق النموذج. GPT-5.6 (OpenAI) يعالج ~100 صفحة أكاديمية قياسية في جلسة (سياق 128 ألف رمز). Claude Opus 5 (Anthropic) يعالج ~160 صفحة (200 ألف رمز). Gemini 3.1 Pro (Google DeepMind) يعالج ~800 صفحة (مليون رمز). للمجموعات الأكبر، يُلزَم بخط أنابيب RAG مع قاعدة بيانات متجهية.',
+              text: 'يعتمد على نافذة سياق النموذج. اعتبارًا من أغسطس 2026، تعالج GPT-5.6 (OpenAI) وClaude Opus 5 (Anthropic) وGemini 3.1 Pro (Google DeepMind) جميعها ~800 صفحة أكاديمية قياسية في جلسة (نافذة سياق بحجم مليون رمز لكل منها). للمجموعات الأكبر من ذلك، يُلزَم بخط أنابيب RAG مع قاعدة بيانات متجهية.',
             },
           },
           {
@@ -1806,7 +1808,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'استخدم Elicit لاستخراج البيانات المنظمة، وConsensus لتوليف الأدلة، وPerplexity للاستكشاف، وscite.ai للتحقق من الاقتباسات',
             'التحقق المتبادل متعدد النماذج (GPT-5.6 + Claude Opus 5 + Gemini 3.1 Pro) يكتشف الهلوسة التي تفوتها سير عمل النموذج الواحد',
             'اضبط درجة الحرارة (T) على 0.0 إلى 0.2 لتوليد الاقتباسات؛ استخدم 0.7 إلى 0.9 فقط لعصف الفرضيات',
-            'نافذة السياق البالغة مليون رمز لـ Gemini 3.1 Pro هي النموذج الوحيد الحالي القادر على معالجة أكثر من 800 صفحة أكاديمية في جلسة واحدة',
+            'تشترك GPT-5.6 وClaude Opus 5 وGemini 3.1 Pro الآن جميعها في نافذة سياق بحجم مليون رمز، قادرة على معالجة أكثر من 800 صفحة أكاديمية في جلسة واحدة',
             'اجتازت أكثر من 100 اقتباس مُهلوَس مراجعة الأقران في NeurIPS 2025 — التحقق من البحث بالذكاء الاصطناعي ليس اختياريًا',
           ],
         },
@@ -2001,13 +2003,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
           rows: [
             {
               'النموذج': 'GPT-5.6 (OpenAI)',
-              'نافذة السياق': '128 ألف رمز',
-              'الطاقة الاستيعابية التقريبية للصفحات': '~100 صفحة أكاديمية قياسية في جلسة',
+              'نافذة السياق': 'مليون رمز',
+              'الطاقة الاستيعابية التقريبية للصفحات': '~800 صفحة أكاديمية قياسية في جلسة',
             },
             {
               'النموذج': 'Claude Opus 5 (Anthropic)',
-              'نافذة السياق': '200 ألف رمز',
-              'الطاقة الاستيعابية التقريبية للصفحات': '~160 صفحة أكاديمية قياسية في جلسة',
+              'نافذة السياق': 'مليون رمز',
+              'الطاقة الاستيعابية التقريبية للصفحات': '~800 صفحة أكاديمية قياسية في جلسة',
             },
             {
               'النموذج': 'Gemini 3.1 Pro (Google DeepMind)',
@@ -2016,7 +2018,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
           ],
           items: [
-            'لمهام البحث التي تضم أقل من 20 ورقة، تعالج النماذج الثلاثة السياق الكامل. لمراجعات منهجية تغطي 50 إلى 200 ورقة، نافذة السياق البالغة مليون رمز لـ Gemini 3.1 Pro هي النموذج الوحيد الحالي الذي يعالج النص الكامل في جلسة.',
+            'اعتبارًا من أغسطس 2026، تشترك GPT-5.6 وClaude Opus 5 وGemini 3.1 Pro جميعها في نافذة سياق بحجم مليون رمز. لمهام البحث التي تضم أقل من 20 ورقة، تعالج النماذج الثلاثة السياق الكامل دون مشاكل. لمراجعات منهجية تغطي 50 إلى 200 ورقة، يمكن للنماذج الثلاثة الآن معالجة النص الكامل في جلسة واحدة — رغم أن تأثير "الضياع في المنتصف" لا يزال يقلل من دقة الاسترجاع للمواد الموجودة في منتصف السياق، بغض النظر عن حجم النافذة.',
             'للمجموعات الكبيرة حقًا (أكثر من 500 ورقة)، خط أنابيب RAG — حيث تُجزَّأ الأوراق وتُضمَّن في قاعدة بيانات متجهية وتُسترجَع بالتشابه الدلالي — هو البنية المعمارية الصحيحة، لا الحقن المباشر للسياق.',
             'لشرح أعمق لنوافذ السياق ولماذا تفقد النماذج المعلومات في منتصف السياق، راجع [نوافذ السياق موضَّحة](/ar/prompt-engineering/context-windows-explained-why-ai-forgets).',
           ],
@@ -2042,7 +2044,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           items: [
             '**الاختيار بناءً على جداول الترتيب في المعايير (لا المهمة الفعلية)** — **الإصلاح:** اختَر النماذج حسب ملاءمة المهمة، لا موقعها في جدول الترتيب. أبطال المعايير (GPT-5.6) مبالَغ في مواصفاتهم للملخصات؛ ميزة تكلفة Gemini 3.1 Pro تتفوق حين تحتاج فقط معالجة السياق.',
-            '**افتراض أن نافذة السياق = الجودة** — **الإصلاح:** نافذة السياق بُعد واحد. مليون رمز مهم فقط لأكثر من 50 ورقة. لمراجعات أدبيات صغيرة، GPT-5.6 (128 ألف) أو Claude Opus 5 (200 ألف) كافيان وأرخص.',
+            '**افتراض أن نافذة السياق = الجودة (النماذج الثلاثة الرائدة الآن بمليون رمز؛ LLaMA 4 Scout يقدم 10 ملايين محليًا)** — **الإصلاح:** نافذة السياق بُعد واحد وليست مقياسًا للجودة. مليون رمز مهم فقط لأكثر من 50 ورقة. لمراجعات أدبيات صغيرة، يجب أن يحدد السعر وملاءمة المهمة — لا حجم النافذة — اختيار النموذج، لأن GPT-5.6 وClaude Opus 5 وGemini 3.1 Pro متساوون الآن في السياق.',
             '**استخدام نموذج الحدود لكل مهمة** — **الإصلاح:** وجِّه المهام حسب كفاءة التكلفة: Gemini Flash للتصنيف، وClaude Opus 5 للصياغة، وGPT-5.6 للكود. الإرسال متعدد النماذج عبر PromptQuorum يُتيح اختيار النموذج حسب المهمة.',
             '**تجاهل الجغرافيا وإقامة البيانات (GDPR الأوروبي، الصين)** — **الإصلاح:** البحث في الاتحاد الأوروبي يجب أن يستخدم أدوات متوافقة مع GDPR (Mistral داخلي، Ollama محلي). المؤسسات في الصين تستخدم Qwen 3 أو DeepSeek. اليابان تحت توجيهات METI تستخدم Ollama مع LLaMA 3.1 محليًا.',
             '**الاعتماد الحصري على مزوِّد واحد بدون طبقة تجريد** — **الإصلاح:** استخدم أدوات الإرسال متعددة النماذج (PromptQuorum) لتجنب الاعتماد الحصري. استدعاء API واحد يُوجِّه إلى أفضل نموذج حسب المهمة؛ تغيير المزوِّد لا يتطلب تغييرات الكود.',
@@ -2086,7 +2088,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'كم عدد الأوراق الأكاديمية التي يستطيع الذكاء الاصطناعي معالجتها في وقت واحد؟',
-              a: 'يعتمد على نافذة سياق النموذج. GPT-5.6 (OpenAI) يعالج ~100 صفحة أكاديمية قياسية في جلسة (سياق 128 ألف رمز). Claude Opus 5 (Anthropic) يعالج ~160 صفحة (200 ألف رمز). Gemini 3.1 Pro (Google DeepMind) يعالج ~800 صفحة (مليون رمز). للمجموعات الأكبر، يُلزَم بخط أنابيب RAG مع قاعدة بيانات متجهية.',
+              a: 'يعتمد على نافذة سياق النموذج. اعتبارًا من أغسطس 2026، تعالج GPT-5.6 (OpenAI) وClaude Opus 5 (Anthropic) وGemini 3.1 Pro (Google DeepMind) جميعها ~800 صفحة أكاديمية قياسية في جلسة (نافذة سياق بحجم مليون رمز لكل منها). للمجموعات الأكبر من ذلك، يُلزَم بخط أنابيب RAG مع قاعدة بيانات متجهية.',
             },
             {
               q: 'هل من الآمن الاستشهاد بمراجع يولِّدها الذكاء الاصطناعي في الأوراق الأكاديمية؟',
@@ -2149,7 +2151,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Pesquisa com IA: Ferramentas, Taxas de Alucinação e Fluxos de Verificação',
         description: 'As ferramentas de pesquisa com IA reduzem o tempo de revisão bibliográfica de semanas para horas — mas as taxas de alucinação de 9,2% tornam os fluxos de verificação obrigatórios. Cobre Elicit, Consensus, Perplexity, scite.ai, verificação cruzada multi-modelo e frameworks de prompts para pesquisa.',
         datePublished: '2026-03-23',
-        dateModified: '2026-05-04',
+        dateModified: '2026-08-29',
         author: {
           '@type': 'Person',
           name: 'Hans Kuepper',
@@ -2243,7 +2245,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: 'Quantos artigos acadêmicos uma IA pode processar de uma vez?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Depende da janela de contexto do modelo. GPT-5.6 (OpenAI) processa ~100 páginas acadêmicas padrão por sessão (contexto de 128k tokens). Claude Opus 5 (Anthropic) processa ~160 páginas (200k tokens). Gemini 3.1 Pro (Google DeepMind) processa ~800 páginas (1M tokens). Para corpus maiores, é necessário um pipeline RAG com banco de dados vetorial.',
+              text: 'Depende da janela de contexto do modelo. A partir de agosto de 2026, GPT-5.6 (OpenAI), Claude Opus 5 (Anthropic) e Gemini 3.1 Pro (Google DeepMind) processam todos ~800 páginas acadêmicas padrão por sessão (1M tokens de contexto cada). Para corpus maiores que isso, é necessário um pipeline RAG com banco de dados vetorial.',
             },
           },
           {
@@ -2330,7 +2332,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Use Elicit para extração de dados estruturados, Consensus para síntese de evidências, Perplexity para exploração, scite.ai para verificação de citações',
             'A verificação cruzada multi-modelo (GPT-5.6 + Claude Opus 5 + Gemini 3.1 Pro) detecta alucinações que os fluxos de trabalho de modelo único perdem',
             'Defina a Temperatura (T) em 0,0–0,2 para geração de citações; use 0,7–0,9 apenas para brainstorming de hipóteses',
-            'A janela de contexto de 1M tokens do Gemini 3.1 Pro é o único modelo atual capaz de processar mais de 800 páginas acadêmicas em uma única sessão',
+            'GPT-5.6, Claude Opus 5 e Gemini 3.1 Pro agora compartilham uma janela de contexto de 1M tokens, capaz de processar mais de 800 páginas acadêmicas em uma única sessão',
             'Mais de 100 citações alucinadas passaram pela revisão por pares no NeurIPS 2025 — a verificação de pesquisa com IA não é opcional',
           ],
         },
@@ -2340,7 +2342,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Elicit cobre mais de 138M de artigos e 545.000 ensaios clínicos com busca semântica (não por palavras-chave)',
             'Taxa média de alucinação de IA: 9,2% para conhecimento geral, 18,7% para questões jurídicas, 48% para o4-mini no PersonQA',
             'Mais de 100 citações alucinadas passaram pela revisão por pares no NeurIPS 2025 (conferência de ML de elite, taxa de aceitação de 24,52%)',
-            'A janela de contexto de 1M tokens do Gemini 3.1 Pro processa ~800 páginas acadêmicas por sessão; GPT-5.6 processa ~100, Claude ~160',
+            'GPT-5.6, Claude Opus 5 e Gemini 3.1 Pro compartilham uma janela de contexto de 1M tokens, processando ~800 páginas acadêmicas por sessão',
             'Temperatura 0,0–0,1 para geração de citações; 0,7–0,9 apenas para brainstorming de hipóteses',
             'A verificação cruzada multi-modelo detectou alucinações em 8 de 30 citações de teste nos testes do PromptQuorum',
           ],
@@ -2525,13 +2527,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
           rows: [
             {
               'Modelo': 'GPT-5.6 (OpenAI)',
-              'Janela de Contexto': '128k tokens',
-              'Capacidade Aproximada de Páginas': '~100 páginas acadêmicas padrão por sessão',
+              'Janela de Contexto': '1M tokens',
+              'Capacidade Aproximada de Páginas': '~800 páginas acadêmicas padrão por sessão',
             },
             {
               'Modelo': 'Claude Opus 5 (Anthropic)',
-              'Janela de Contexto': '200k tokens',
-              'Capacidade Aproximada de Páginas': '~160 páginas acadêmicas padrão por sessão',
+              'Janela de Contexto': '1M tokens',
+              'Capacidade Aproximada de Páginas': '~800 páginas acadêmicas padrão por sessão',
             },
             {
               'Modelo': 'Gemini 3.1 Pro (Google DeepMind)',
@@ -2540,7 +2542,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
           ],
           items: [
-            'Para tarefas de pesquisa com menos de 20 artigos, os três modelos processam o contexto completo. Para revisões sistemáticas cobrindo 50–200 artigos, a janela de contexto de 1 milhão de tokens do Gemini 3.1 Pro é o único modelo atual que processa a cópia completa em uma sessão.',
+            'A partir de agosto de 2026, GPT-5.6, Claude Opus 5 e Gemini 3.1 Pro compartilham uma janela de contexto de 1 milhão de tokens. Para tarefas de pesquisa com menos de 20 artigos, os três modelos processam o contexto completo sem problemas. Para revisões sistemáticas cobrindo 50–200 artigos, os três agora conseguem processar a cópia completa em uma sessão — embora o efeito "lost in the middle" continue reduzindo a precisão de recuperação para material no meio do contexto, independentemente do tamanho da janela.',
             'Para corpus realmente grandes (mais de 500 artigos), um pipeline RAG — onde os artigos são fragmentados, incorporados em um banco de dados vetorial e recuperados por similaridade semântica — é a arquitetura correta, não a injeção direta de contexto.',
             'Para uma explicação mais profunda das janelas de contexto e por que os modelos perdem informações no meio do contexto, consulte [Janelas de contexto explicadas](/pt/prompt-engineering/context-windows-explained-why-ai-forgets).',
           ],
@@ -2566,7 +2568,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           items: [
             '**Selecionar com base em tabelas de classificação de benchmarks (não na tarefa real)** — **Correção:** Escolha modelos por adequação à tarefa, não por posição na tabela de classificação. Os campeões de benchmark (GPT-5.6) são superdimensionados para resumos; a vantagem de custo do Gemini 3.1 Pro domina quando você só precisa de processamento de contexto.',
-            '**Assumir que janela de contexto = qualidade** — **Correção:** A janela de contexto é uma dimensão. 1M de tokens importa apenas para mais de 50 artigos. Para revisões bibliográficas pequenas, GPT-5.6 (128k) ou Claude Opus 5 (200k) são suficientes e custam menos.',
+            '**Assumir que janela de contexto = qualidade (os três modelos de ponta agora em 1M; LLaMA 4 Scout oferece 10M localmente)** — **Correção:** A janela de contexto é uma dimensão, não uma medida de qualidade. 1M de tokens importa apenas para mais de 50 artigos. Para revisões bibliográficas pequenas, preço e adequação à tarefa — não o tamanho da janela — devem guiar a escolha do modelo, já que GPT-5.6, Claude Opus 5 e Gemini 3.1 Pro agora estão empatados em contexto.',
             '**Usar modelo frontier para cada tarefa** — **Correção:** Encaminhe tarefas por eficiência de custo: Gemini Flash para classificação, Claude Opus 5 para redação, GPT-5.6 para código. O despacho multi-modelo via PromptQuorum permite a seleção de modelo por tarefa.',
             '**Ignorar conformidade regional e residência de dados (LGPD do Brasil, GDPR da UE)** — **Correção:** Pesquisa no Brasil deve usar ferramentas em conformidade com a LGPD para dados pessoais de participantes. Ferramentas locais (Ollama, Mistral on-premise) garantem que os dados não saiam da infraestrutura da instituição.',
             '**Bloqueio de fornecedor sem camada de abstração** — **Correção:** Use ferramentas de despacho multi-modelo (PromptQuorum) para evitar bloqueio de fornecedor. Uma única chamada de API encaminha para o melhor modelo por tarefa; mudar de fornecedor não requer mudanças de código.',
@@ -2610,7 +2612,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Quantos artigos acadêmicos uma IA pode processar de uma vez?',
-              a: 'Depende da janela de contexto do modelo. GPT-5.6 (OpenAI) processa ~100 páginas acadêmicas padrão por sessão (contexto de 128k tokens). Claude Opus 5 (Anthropic) processa ~160 páginas (200k tokens). Gemini 3.1 Pro (Google DeepMind) processa ~800 páginas (1M tokens). Para corpus maiores, é necessário um pipeline RAG com banco de dados vetorial.',
+              a: 'Depende da janela de contexto do modelo. A partir de agosto de 2026, GPT-5.6 (OpenAI), Claude Opus 5 (Anthropic) e Gemini 3.1 Pro (Google DeepMind) processam todos ~800 páginas acadêmicas padrão por sessão (1M tokens de contexto cada). Para corpus maiores que isso, é necessário um pipeline RAG com banco de dados vetorial.',
             },
             {
               q: 'É seguro citar referências geradas por IA em artigos acadêmicos?',
@@ -2661,7 +2663,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'Recherche Assistée par IA : Outils, Taux d\'Hallucination et Workflows de Vérification',
       intro: 'Les outils de recherche IA réduisent le temps de revue de littérature de plusieurs semaines à quelques heures — mais introduisent un risque critique : des citations hallucinées qui passent la révision par les pairs. GPTZero a confirmé plus de 100 références fabriquées dans des articles NeurIPS 2025 ayant passé un examen multi-réviseurs. En avril 2026, le workflow fiable achemine chaque étape de recherche vers le bon outil (Elicit pour l\'extraction, Consensus pour la synthèse, scite.ai pour la vérification) et vérifie les affirmations factuelles entre au moins deux modèles indépendants avant de leur faire confiance.',
       publishDate: '2026-03-23',
-      dateModified: '2026-04-05',
+      dateModified: '2026-08-29',
       readTime: '9 min de lecture',
       seoTitle: 'Recherche IA : Vérifier Citations & Éviter Hallucinations',
       metaDescription: 'Synthèse en heures au lieu de semaines avec Elicit, Consensus, scite.ai. Détectez hallucinations (9,2%), vérifiez citations modèles, maîtrisez workflows.',
@@ -2674,7 +2676,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Recherche Assistée par IA : Outils, Taux d\'Hallucination et Workflows de Vérification',
         description: 'Les outils de recherche IA réduisent les revues de littérature de semaines à heures — mais des taux d\'hallucination de 9,2% rendent les workflows de vérification obligatoires. Couvre Elicit, Consensus, Perplexity, scite.ai, le cross-checking multi-modèles et les frameworks de prompts pour la recherche.',
         datePublished: '2026-03-23',
-        dateModified: '2026-05-04',
+        dateModified: '2026-08-29',
         author: {
           '@type': 'Person',
           name: 'Hans Kuepper',
@@ -2768,7 +2770,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: 'Combien d\'articles académiques une IA peut-elle traiter à la fois ?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Cela dépend de la fenêtre de contexte du modèle. GPT-5.6 (OpenAI) traite ~100 pages académiques standard par session (contexte 128k tokens). Claude Opus 5 (Anthropic) traite ~160 pages (200k tokens). Gemini 3.1 Pro (Google DeepMind) traite ~800 pages (1M tokens). Pour les corpus plus grands, un pipeline RAG (Retrieval-Augmented Generation) avec une base de données vectorielle est nécessaire.',
+              text: 'Cela dépend de la fenêtre de contexte du modèle. Depuis août 2026, GPT-5.6 (OpenAI), Claude Opus 5 (Anthropic) et Gemini 3.1 Pro (Google DeepMind) traitent tous ~800 pages académiques standard par session (fenêtre de 1M tokens chacun). Au-delà, un pipeline RAG (Retrieval-Augmented Generation) avec une base de données vectorielle est nécessaire.',
             },
           },
           {
@@ -2855,7 +2857,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Utilisez Elicit pour l\'extraction de données structurées, Consensus pour la synthèse des preuves, Perplexity pour l\'exploration, scite.ai pour la vérification des citations',
             'Le cross-checking multi-modèles (GPT-5.6 + Claude Opus 5 + Gemini 3.1 Pro) détecte les hallucinations que les workflows à modèle unique manquent',
             'Réglez la Température (T) sur 0,0–0,2 pour la génération de citations ; utilisez 0,7–0,9 uniquement pour le brainstorming d\'hypothèses',
-            'La fenêtre de contexte de 1M tokens de Gemini 3.1 Pro est le seul modèle actuel capable de traiter 800+ pages académiques en une seule session',
+            'GPT-5.6, Claude Opus 5 et Gemini 3.1 Pro partagent désormais tous une fenêtre de contexte de 1M tokens, capable de traiter 800+ pages académiques en une seule session',
             '100+ citations hallucinées ont passé la révision par les pairs à NeurIPS 2025 — la vérification de la recherche IA n\'est pas optionnelle',
           ],
         },
@@ -3050,13 +3052,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
           rows: [
             {
               Modèle: 'GPT-5.6 (OpenAI)',
-              'Fenêtre de contexte': '128k tokens',
-              'Capacité approximative en pages': '~100 pages académiques standard par session',
+              'Fenêtre de contexte': '1M tokens',
+              'Capacité approximative en pages': '~800 pages académiques standard par session',
             },
             {
               Modèle: 'Claude Opus 5 (Anthropic)',
-              'Fenêtre de contexte': '200k tokens',
-              'Capacité approximative en pages': '~160 pages académiques standard par session',
+              'Fenêtre de contexte': '1M tokens',
+              'Capacité approximative en pages': '~800 pages académiques standard par session',
             },
             {
               Modèle: 'Gemini 3.1 Pro (Google DeepMind)',
@@ -3065,7 +3067,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
           ],
           items: [
-            'Pour les tâches de recherche impliquant moins de 20 articles, les trois modèles gèrent le contexte complet. Pour les revues systématiques couvrant 50 à 200 articles, la fenêtre de contexte de 1 million de tokens de Gemini 3.1 Pro est le seul modèle actuel capable de traiter le corpus complet en une seule session.',
+            'Depuis août 2026, GPT-5.6, Claude Opus 5 et Gemini 3.1 Pro partagent tous une fenêtre de contexte de 1 million de tokens. Pour les tâches de recherche impliquant moins de 20 articles, les trois modèles gèrent le contexte complet sans difficulté. Pour les revues systématiques couvrant 50 à 200 articles, les trois peuvent désormais traiter le corpus complet en une seule session — même si l\'effet "lost in the middle" continue de dégrader la précision de récupération pour le contenu situé au milieu du contexte, quelle que soit la taille de la fenêtre.',
             'Pour les très grands corpus (500+ articles), un pipeline RAG — où les articles sont découpés, intégrés dans une base de données vectorielle et récupérés par similarité sémantique — est l\'architecture correcte, pas l\'injection directe de contexte.',
             'Pour une explication plus profonde des fenêtres de contexte et pourquoi les modèles perdent l\'information au milieu des longs contextes, voir [les fenêtres de contexte expliquées](/fr/prompt-engineering/context-windows-explained-why-ai-forgets).',
           ],
@@ -3091,7 +3093,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           items: [
             '**Choisir basé sur les leaderboards de benchmarks (pas la tâche réelle)** – **Correction :** Choisissez les modèles par adéquation à la tâche, pas par rang de leaderboard. Les gagnants de benchmarks (GPT-5.6) sont excessifs pour la synthèse ; l\'avantage de coût de Gemini 3.1 Pro domine quand vous avez juste besoin de traitement de contexte.',
-            '**Assumer context window = qualité (tous 1M; LLaMA 4 Scout à 10M local)** – **Correction :** La fenêtre de contexte est une dimension. 1M tokens compte seulement pour 50+ articles. Pour les petites revues de littérature, GPT-5.6 (128k) ou Claude Opus 5 (200k) suffisent et coûtent moins.',
+            '**Assumer que fenêtre de contexte = qualité (les trois modèles de pointe sont désormais à 1M ; LLaMA 4 Scout offre 10M en local)** – **Correction :** La fenêtre de contexte est une dimension, pas une mesure de qualité. 1M tokens compte seulement pour 50+ articles. Pour les petites revues de littérature, le prix et l\'adéquation à la tâche — pas la taille de la fenêtre — devraient guider le choix du modèle, puisque GPT-5.6, Claude Opus 5 et Gemini 3.1 Pro sont désormais à égalité sur le contexte.',
             '**Utiliser le modèle frontier pour chaque tâche (différence de coût 60× Gemini Flash vs GPT)** – **Correction :** Acheminez les tâches par efficacité de coût : Gemini Flash pour classification, Claude Opus 5 pour écriture, GPT-5.6 pour code. Le dispatch multi-modèles via PromptQuorum permet la sélection de modèle par tâche.',
             '**Ignorer la géographie et la résidence des données (UE RGPD, Chine)** – **Correction :** La recherche en UE doit utiliser des outils conformes RGPD (Mistral on-premise, Ollama local). Les institutions basées en Chine utilisent Qwen 3 ou DeepSeek. Le Japon sous les directives METI utilise Ollama avec LLaMA 3.1 localement.',
             '**S\'enfermer dans un SDK provider sans couche d\'abstraction** – **Correction :** Utilisez des outils de dispatch multi-modèles (PromptQuorum) pour éviter le verrouillage fournisseur. Un seul appel API achemine vers le meilleur modèle par tâche ; changer de fournisseur ne nécessite aucun changement de code.',
@@ -3135,7 +3137,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               q: 'Combien d\'articles académiques une IA peut-elle traiter à la fois ?',
-              a: 'Cela dépend de la fenêtre de contexte du modèle. GPT-5.6 (OpenAI) traite ~100 pages académiques standard par session (128k tokens). Claude Opus 5 (Anthropic) traite ~160 pages (200k tokens). Gemini 3.1 Pro (Google DeepMind) traite ~800 pages (1M tokens). Pour les corpus plus grands, un pipeline RAG avec une base de données vectorielle est nécessaire.',
+              a: 'Cela dépend de la fenêtre de contexte du modèle. Depuis août 2026, GPT-5.6 (OpenAI), Claude Opus 5 (Anthropic) et Gemini 3.1 Pro (Google DeepMind) traitent tous ~800 pages académiques standard par session (1M tokens chacun). Au-delà, un pipeline RAG avec une base de données vectorielle est nécessaire.',
             },
             {
               q: 'Est-il sûr de citer des références générées par IA dans des articles académiques ?',
@@ -3185,7 +3187,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'AI駆動型研究：ツール、幻想率、検証ワークフロー',
       intro: 'AI研究ツールは文献レビューの時間を数週間から数時間に短縮します — ただし、重大なリスクをもたらします。ピアレビューを通過した幻想的な引用です。GPTZeroは、複数レビュアーの審査に合格したNeurIPS 2025論文で、100を超える捏造参考文献を確認しました。2026年5月現在、信頼できるワークフローは各研究段階を適切なツール（抽出用Elicit、合成用Consensus、検証用scite.ai）に送り、少なくとも2つの独立したモデルで事実主張をクロスチェックしてから信頼します。',
       publishDate: '2026-03-23',
-      dateModified: '2026-05-04',
+      dateModified: '2026-08-29',
       readTime: '9分で読める',
       seoTitle: 'AI研究：引用検証と幻想を回避（2026）',
       metaDescription: 'Elicit、Consensus、scite.aiを活用して複数週間かかる複雑な学術文献調査を数時間に短縮することが可能です。9.2%幻想率検出、マルチモデル検証、研究ワークフロー。',
@@ -3198,7 +3200,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'AI駆動型研究：ツール、幻想率、検証ワークフロー',
         description: 'AI研究ツールは文献レビューを数週間から数時間に短縮します — ただし9.2%の幻想率により検証ワークフローが必須。Elicit、Consensus、Perplexity、scite.ai、マルチモデルクロスチェック、研究用プロンプトフレームワークをカバー。',
         datePublished: '2026-03-23',
-        dateModified: '2026-05-04',
+        dateModified: '2026-08-29',
         author: {
           '@type': 'Organization',
           name: 'PromptQuorum',
@@ -3275,7 +3277,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: 'AIは一度に何件の学術論文を処理できますか？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'モデルのコンテキストウィンドウに依存。GPT-5.6（OpenAI）はセッションあたり〜100標準学術ページを処理（128kトークンコンテキスト）。Claude Opus 5（Anthropic）は〜160ページ（200kトークン）。Gemini 3.1 Pro（Google DeepMind）は〜800ページ（1Mトークン）。より大きなコーパスはベクトルデータベースを持つRAGパイプラインが必要。',
+              text: 'モデルのコンテキストウィンドウに依存。2026年8月時点で、GPT-5.6（OpenAI）、Claude Opus 5（Anthropic）、Gemini 3.1 Pro（Google DeepMind）はいずれもセッションあたり〜800標準学術ページを処理（各1Mトークンコンテキスト）。それを超えるコーパスにはベクトルデータベースを持つRAGパイプラインが必要。',
             },
           },
           {
@@ -3329,7 +3331,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Elicitは構造化データ抽出に、Consensusは証拠合成に、Perplexityは探索に、scite.aiは引用検証に使用',
             'マルチモデルクロスチェック（GPT-5.6+Claude Opus 5+Gemini 3.1 Pro）は単一モデルワークフローが見逃す幻想を検出',
             '引用生成には温度を0.0–0.2に設定；仮説ブレインストーミングにのみ0.7–0.9を使用',
-            'Gemini 3.1 Proの1Mトークンコンテキストウィンドウは単一セッションで800+学術ページを処理できる唯一の現在モデル',
+            'GPT-5.6、Claude Opus 5、Gemini 3.1 Proは現在いずれも1Mトークンのコンテキストウィンドウを共有し、単一セッションで800+学術ページを処理可能',
             '100+の幻想引用がNeurIPS 2025でピアレビューを通過 — AI研究検証はオプションではない',
           ],
         },
@@ -3339,7 +3341,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Elicitは138M+論文と545,000臨床試験をセマンティック検索（キーワード非）でカバー',
             'AI平均幻想率：一般知識9.2%、法律18.7%、o4-mini PersonQA 48%',
             '100+の幻想引用がNeurIPS 2025（トップMLカンファレンス、24.52%採択率）でピアレビューを通過',
-            'Gemini 3.1 Proの1Mトークンコンテキストはセッションあたり〜800学術ページを処理；GPT-5.6 〜100、Claude 〜160',
+            'GPT-5.6、Claude Opus 5、Gemini 3.1 Proはいずれも1Mトークンのコンテキストウィンドウを共有し、セッションあたり〜800学術ページを処理',
             '引用生成は温度0.0–0.1；仮説ブレインストーミングにのみ0.7–0.9',
             'マルチモデルクロスチェックはPromptQuantumテスト中の30テスト引用中8つの幻想を検出',
           ],
@@ -3391,7 +3393,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           items: [
             '**ベンチマークリーダボードで選択（実際のタスク非）** — **修正：** タスク適合で、リーダボード順位ではなくモデルを選択。ベンチマーク勝者（GPT-5.6）は要約に過度；Gemini 3.1 Proのコスト利点は単なるコンテキスト処理で支配。',
-            '**コンテキストウィンドウ=品質と想定（すべて1M；LLaMA 4 Scout10Mローカル）** — **修正：** コンテキストウィンドウは1次元。1Mトークンは50+論文のみで重要。小さい文献レビューはGPT-5.6（128k）やClaude Opus 5（200k）で十分かつ低コスト。',
+            '**コンテキストウィンドウ=品質と想定（3大フロンティアモデルすべてが現在1M；LLaMA 4 Scoutはローカルで10M）** — **修正：** コンテキストウィンドウは1次元であり品質の指標ではない。1Mトークンは50+論文でのみ重要。小規模な文献レビューでは、ウィンドウサイズではなく価格とタスク適合性でモデルを選ぶべき — GPT-5.6、Claude Opus 5、Gemini 3.1 Proは現在コンテキストで同等。',
             '**あらゆるタスクでフロンティアモデルを使用（60倍のコスト差Gemini Flash対GPT）** — **修正：** コスト効率でタスクを送信：Gemini Flash分類、Claude Opus 5執筆、GPT-5.6コード。PromptQuorum経由マルチモデルディスパッチがタスク別モデル選択を可能化。',
             '**地政学とデータレジデンスを無視（EU GDPR、中国）** — **修正：** EU研究はGDPR準拠ツール使用（Mistralオンプレミス、Ollama​ローカル）。中国機関はQwen 3またはDeepSeek使用。日本はMETIガイドラインの下Ollama+LLaMA 3.1ローカルで使用。',
             '**抽象化レイヤーなしプロバイダSDKにロック** — **修正：** ベンダーロックイン回避にマルチモデルディスパッチツール（PromptQuorum）を使用。単一APIコールは最良モデルに送信；プロバイダ切り替えはコード変更なし。',
@@ -3439,7 +3441,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       title: 'AI研究：工具、幻想率和验证工作流',
       intro: 'AI研究工具将文献评审时间从数周缩短至数小时 — 但引入关键风险：通过同行评审的幻想引用。GPTZero确认了超过100条NeurIPS 2025论文中的捏造引用通过多评审人审查。截至2026年5月，可靠工作流将每个研究阶段路由到合适工具（Elicit进行提取、Consensus进行合成、scite.ai进行验证），并在至少两个独立模型间交叉检查事实声明后信任。',
       publishDate: '2026-03-23',
-      dateModified: '2026-05-04',
+      dateModified: '2026-08-29',
       readTime: '阅读约9分钟',
       seoTitle: 'AI研究：验证引用与避免幻想（2026）',
       metaDescription: '用Elicit、Consensus、scite.ai等工具将文献综述从数周缩至数小时。掌握9.2%幻想率检测、多模型相互验证和研究工作流程。',
@@ -3452,7 +3454,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'AI研究：工具、幻想率和验证工作流',
         description: 'AI研究工具将文献评审从数周缩短至数小时 — 但9.2%幻想率使验证工作流成为必需。覆盖Elicit、Consensus、Perplexity、scite.ai、多模型交叉检查和研究提示框架。',
         datePublished: '2026-03-23',
-        dateModified: '2026-05-04',
+        dateModified: '2026-08-29',
         author: {
           '@type': 'Organization',
           name: 'PromptQuorum',
@@ -3529,7 +3531,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             name: 'AI一次可以处理多少学术论文？',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: '这取决于模型的上下文窗口。GPT-5.6（OpenAI）每个会话处理约100页标准学术页面（128k令牌上下文）。Claude Opus 5（Anthropic）处理约160页（200k令牌）。Gemini 3.1 Pro（Google DeepMind）处理约800页（1M令牌）。对于更大的语料库，需要具有向量数据库的RAG管道。',
+              text: '这取决于模型的上下文窗口。截至2026年8月，GPT-5.6（OpenAI）、Claude Opus 5（Anthropic）和Gemini 3.1 Pro（Google DeepMind）都能每个会话处理约800页标准学术页面（各自拥有1M令牌上下文）。超出此范围的语料库需要具有向量数据库的RAG管道。',
             },
           },
           {
@@ -3583,7 +3585,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '使用Elicit进行结构化数据提取、Consensus进行证据合成、Perplexity进行探索、scite.ai进行引用验证',
             '多模型交叉检查（GPT-5.6+Claude Opus 5+Gemini 3.1 Pro）检测单模型工作流遗漏的幻想',
             '为引用生成将温度(T)设置为0.0–0.2；仅为假设头脑风暴使用0.7–0.9',
-            'Gemini 3.1 Pro的1M令牌上下文窗口是唯一能在单个会话处理800+学术页面的当前模型',
+            'GPT-5.6、Claude Opus 5和Gemini 3.1 Pro现在都拥有1M令牌的上下文窗口，能在单个会话处理800+学术页面',
             '100+虚幻引用在NeurIPS 2025通过同行评审 — AI研究验证非可选',
           ],
         },
@@ -3593,7 +3595,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             'Elicit覆盖138M+论文和545,000临床试验，具有语义搜索（非关键字）',
             'AI平均幻想率：一般知识9.2%、法律18.7%、o4-mini PersonQA 48%',
             '100+虚幻引用在NeurIPS 2025（顶级ML会议，24.52%接受率）通过同行评审',
-            'Gemini 3.1 Pro的1M令牌上下文窗口处理约800学术页面/会话；GPT-5.6约100，Claude约160',
+            'GPT-5.6、Claude Opus 5和Gemini 3.1 Pro现在都拥有1M令牌的上下文窗口，每个会话处理约800页学术页面',
             '温度0.0–0.1用于引用生成；0.7–0.9仅用于假设头脑风暴',
             '多模型交叉检查在PromptQuorum测试中的30个测试引用中检测到8个幻想',
           ],
@@ -3645,7 +3647,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
           items: [
             '**基于基准排行榜选择（非实际任务）** — **修复：** 按任务拟合选择模型，而不是排行榜排名。基准赢家（GPT-5.6）对于摘要来说是过度的；Gemini 3.1 Pro的成本优势在您只需要上下文处理时占主导地位。',
-            '**假设上下文窗口=质量（全部1M；LLaMA 4 Scout本地10M）** — **修复：** 上下文窗口是一维的。1M令牌仅对50+论文重要。对于小文献评审，GPT-5.6（128k）或Claude Opus 5（200k）足够且成本更低。',
+            '**假设上下文窗口=质量（三大前沿模型现在都是1M；LLaMA 4 Scout本地可达10M）** — **修复：** 上下文窗口只是一个维度，不是质量的衡量标准。1M令牌仅对50+论文重要。对于小型文献评审，应由价格和任务适配性——而非窗口大小——决定模型选择，因为GPT-5.6、Claude Opus 5和Gemini 3.1 Pro现在在上下文上已持平。',
             '**对每个任务使用前沿模型（Gemini Flash对GPT成本相差60倍）** — **修复：** 按成本效率路由任务：Gemini Flash用于分类、Claude Opus 5用于写作、GPT-5.6用于代码。PromptQuorum多模型分派可实现按任务模型选择。',
             '**忽视地理位置和数据驻留（EU GDPR、中国）** — **修复：** EU研究必须使用符合GDPR的工具（Mistral本地、Ollama本地）。中国机构使用Qwen 3或DeepSeek。日本在METI指南下本地使用Ollama+LLaMA 3.1。',
             '**在没有抽象层的情况下锁定到提供者SDK** — **修复：** 使用多模型分派工具（PromptQuorum）避免供应商锁定。单个API调用路由到最佳模型；更换提供者无需代码更改。',
@@ -3694,7 +3696,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     title: 'AI 기반 연구: 도구, 환각률, 검증 워크플로우',
     intro: 'AI 연구 도구는 문헌 검토 시간을 몇 주에서 몇 시간으로 단축합니다 — 그러나 동료 심사를 통과하는 환각된 인용이라는 심각한 위험을 도입합니다. GPTZero는 다수의 심사자 검토를 통과한 NeurIPS 2025 논문에서 100개 이상의 조작된 참고문헌을 확인했습니다. 2026년 4월 기준, 신뢰할 수 있는 워크플로우는 각 연구 단계를 올바른 도구(Elicit로 추출, Consensus로 합성, scite.ai로 검증)로 라우팅하고 신뢰하기 전에 최소 두 개의 독립 모델에서 사실적 주장을 교차 검증합니다.',
     publishDate: '2026-03-23',
-    dateModified: '2026-05-04',
+    dateModified: '2026-08-29',
     readTime: '9분 분량',
     seoTitle: 'AI 연구: 인용 검증과 환각 방지 가이드',
     metaDescription: '문헌 검토를 몇 주에서 몇 시간으로 단축하십시오. Elicit, Consensus, scite.ai로 환각(9.2%)을 감지하고 인용을 검증합니다. AI 연구 워크플로우.',
@@ -3707,7 +3709,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: 'AI 기반 연구: 도구, 환각률, 검증 워크플로우',
       description: 'AI 연구 도구는 문헌 검토 시간을 몇 주에서 몇 시간으로 단축합니다 — 그러나 9.2%의 환각률로 인해 검증 워크플로우가 필수적입니다. Elicit, Consensus, Perplexity, scite.ai, 다중 모델 교차 검사, 연구용 프롬프트 프레임워크를 다룹니다.',
       datePublished: '2026-03-23',
-      dateModified: '2026-05-04',
+      dateModified: '2026-08-29',
       author: {
         '@type': 'Person',
         name: 'Hans Kuepper',
@@ -3801,7 +3803,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           name: 'AI가 한 번에 처리할 수 있는 학술 논문은 몇 편입니까?',
           acceptedAnswer: {
             '@type': 'Answer',
-            text: '모델의 컨텍스트 윈도우에 따라 다릅니다. GPT-5.6(OpenAI)는 세션당 약 100페이지의 학술 논문을 처리합니다(128k 토큰 컨텍스트). Claude Opus 5(Anthropic)은 약 160페이지를 처리합니다(200k 토큰). Gemini 3.1 Pro(Google DeepMind)는 약 800페이지를 처리합니다(1M 토큰). 더 큰 코퍼스의 경우 벡터 데이터베이스가 있는 RAG 파이프라인이 필요합니다.',
+            text: '모델의 컨텍스트 윈도우에 따라 다릅니다. 2026년 8월 기준, GPT-5.6(OpenAI), Claude Opus 5(Anthropic), Gemini 3.1 Pro(Google DeepMind)는 모두 세션당 약 800페이지의 학술 논문을 처리합니다(각각 1M 토큰 컨텍스트). 그보다 큰 코퍼스의 경우 벡터 데이터베이스가 있는 RAG 파이프라인이 필요합니다.',
           },
         },
         {
@@ -3889,7 +3891,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'Elicit은 구조화된 데이터 추출, Consensus는 증거 합성, Perplexity는 탐색, scite.ai는 인용 검증에 사용하십시오',
           '다중 모델 교차 검증(GPT-5.6 + Claude Opus 5 + Gemini 3.1 Pro)은 단일 모델 워크플로우가 놓치는 환각을 감지합니다',
           '인용 생성에 온도(T)를 0.0~0.2로 설정하십시오; 가설 브레인스토밍에만 0.7~0.9를 사용하십시오',
-          'Gemini 3.1 Pro의 1M 토큰 컨텍스트 윈도우는 단일 세션에서 800페이지 이상의 학술 논문을 처리할 수 있는 유일한 현재 모델입니다',
+          'GPT-5.6, Claude Opus 5, Gemini 3.1 Pro는 이제 모두 1M 토큰 컨텍스트 윈도우를 공유하며, 단일 세션에서 800페이지 이상의 학술 논문을 처리할 수 있습니다',
           '100개 이상의 환각된 인용이 NeurIPS 2025에서 동료 심사를 통과했습니다 — AI 연구 검증은 선택 사항이 아닙니다',
         ],
       },
@@ -3899,7 +3901,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           'Elicit은 의미론적 검색(키워드가 아닌)으로 1억 3,800만 개 이상의 논문과 545,000개의 임상 시험을 다룹니다',
           'AI 환각률 평균: 일반 지식 9.2%, 법률 문제 18.7%, PersonQA에서 o4-mini 48%',
           '100개 이상의 환각된 인용이 NeurIPS 2025에서 동료 심사를 통과했습니다(엘리트 ML 컨퍼런스, 합격률 24.52%)',
-          'Gemini 3.1 Pro의 1M 토큰 컨텍스트 윈도우는 세션당 약 800페이지의 학술 논문을 처리합니다; GPT-5.6는 약 100페이지, Claude는 약 160페이지',
+          'GPT-5.6, Claude Opus 5, Gemini 3.1 Pro는 모두 1M 토큰 컨텍스트 윈도우를 공유하며, 세션당 약 800페이지의 학술 논문을 처리합니다',
           '인용 생성에 온도 0.0~0.1; 가설 브레인스토밍에만 0.7~0.9',
           '다중 모델 교차 검증은 PromptQuorum 테스트에서 30개의 테스트 인용 중 8개의 환각을 감지했습니다',
         ],
@@ -4084,13 +4086,13 @@ export const article: Partial<Record<Language, PEArticle>> = {
         rows: [
           {
             '모델': 'GPT-5.6(OpenAI)',
-            '컨텍스트 윈도우': '128k 토큰',
-            '대략적인 페이지 처리 용량': '세션당 약 100페이지의 표준 학술 논문',
+            '컨텍스트 윈도우': '1M 토큰',
+            '대략적인 페이지 처리 용량': '세션당 약 800페이지의 표준 학술 논문',
           },
           {
             '모델': 'Claude Opus 5(Anthropic)',
-            '컨텍스트 윈도우': '200k 토큰',
-            '대략적인 페이지 처리 용량': '세션당 약 160페이지의 표준 학술 논문',
+            '컨텍스트 윈도우': '1M 토큰',
+            '대략적인 페이지 처리 용량': '세션당 약 800페이지의 표준 학술 논문',
           },
           {
             '모델': 'Gemini 3.1 Pro(Google DeepMind)',
@@ -4099,7 +4101,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
         ],
         items: [
-          '20개 미만의 논문을 가진 연구 작업의 경우 세 모델 모두 전체 컨텍스트를 처리합니다. 50~200개의 논문을 포괄하는 체계적 검토의 경우 Gemini 3.1 Pro의 1백만 토큰 컨텍스트 윈도우가 단일 세션에서 전체 텍스트를 처리하는 유일한 현재 모델입니다.',
+          '2026년 8월 기준, GPT-5.6, Claude Opus 5, Gemini 3.1 Pro는 모두 1백만 토큰 컨텍스트 윈도우를 공유합니다. 20개 미만의 논문을 가진 연구 작업의 경우 세 모델 모두 전체 컨텍스트를 문제없이 처리합니다. 50~200개의 논문을 포괄하는 체계적 검토의 경우 세 모델 모두 이제 단일 세션에서 전체 텍스트를 처리할 수 있습니다 — 다만 창 크기와 무관하게, 컨텍스트 중간에 위치한 자료에 대해서는 "lost in the middle" 효과로 검색 정확도가 여전히 저하됩니다.',
           '정말 큰 코퍼스(500개 이상의 논문)의 경우, 논문이 청크로 나뉘어 벡터 데이터베이스에 임베딩되고 의미론적 유사성으로 검색되는 RAG 파이프라인이 올바른 아키텍처입니다.',
           '컨텍스트 윈도우와 모델이 긴 컨텍스트의 중간에서 정보를 잃는 이유에 대한 자세한 설명은 [컨텍스트 윈도우 설명](/ko/prompt-engineering/context-windows-explained-why-ai-forgets)을 참조하십시오.',
         ],
@@ -4125,7 +4127,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
         items: [
           '**벤치마크 리더보드 순위를 기반으로 선택(실제 작업이 아닌)** — **수정:** 리더보드 위치가 아닌 작업 적합성으로 모델을 선택하십시오. 벤치마크 챔피언(GPT-5.6)은 요약에는 과도하고; Gemini 3.1 Pro의 비용 우위는 컨텍스트 처리만 필요할 때 지배합니다.',
-          '**컨텍스트 윈도우 = 품질이라고 가정** — **수정:** 컨텍스트 윈도우는 한 가지 차원입니다. 1M 토큰은 50개 이상의 논문에서만 중요합니다. 소규모 문헌 검토의 경우 GPT-5.6(128k) 또는 Claude Opus 5(200k)로 충분하고 비용이 덜 듭니다.',
+          '**컨텍스트 윈도우 = 품질이라고 가정(3대 프론티어 모델 모두 현재 1M; LLaMA 4 Scout는 로컬에서 10M 제공)** — **수정:** 컨텍스트 윈도우는 한 가지 차원일 뿐, 품질의 척도가 아닙니다. 1M 토큰은 50개 이상의 논문에서만 중요합니다. 소규모 문헌 검토의 경우 창 크기가 아니라 가격과 작업 적합성이 모델 선택을 결정해야 합니다 — GPT-5.6, Claude Opus 5, Gemini 3.1 Pro는 이제 컨텍스트 면에서 동등합니다.',
           '**모든 작업에 프론티어 모델 사용** — **수정:** 비용 효율성으로 작업을 라우팅하십시오: 분류에는 Gemini Flash, 작문에는 Claude Opus 5, 코드에는 GPT-5.6. PromptQuorum을 통한 다중 모델 디스패치는 작업별 모델 선택을 가능하게 합니다.',
           '**지리 및 데이터 잔류 무시(EU GDPR, 중국)** — **수정:** EU 연구는 GDPR 준수 도구(Mistral 온프레미스, 로컬 Ollama)를 사용해야 합니다. 중국의 기관들은 Qwen 3 또는 DeepSeek를 사용합니다. METI 지침 하의 일본은 로컬에서 LLaMA 3.1과 함께 Ollama를 사용합니다.',
           '**추상화 레이어 없는 공급업체 종속** — **수정:** 공급업체 종속을 피하기 위해 다중 모델 디스패치 도구(PromptQuorum)를 사용하십시오. 단일 API 호출이 작업별 최적 모델로 라우팅하고; 공급업체 전환이 코드 변경을 필요로 하지 않습니다.',
@@ -4169,7 +4171,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           },
           {
             q: 'AI가 한 번에 처리할 수 있는 학술 논문은 몇 편입니까?',
-            a: '모델의 컨텍스트 윈도우에 따라 다릅니다. GPT-5.6(OpenAI)는 세션당 약 100페이지의 학술 논문을 처리합니다(128k 토큰 컨텍스트). Claude Opus 5(Anthropic)은 약 160페이지를 처리합니다(200k 토큰). Gemini 3.1 Pro(Google DeepMind)는 약 800페이지를 처리합니다(1M 토큰). 더 큰 코퍼스의 경우 벡터 데이터베이스가 있는 RAG 파이프라인이 필요합니다.',
+            a: '모델의 컨텍스트 윈도우에 따라 다릅니다. 2026년 8월 기준, GPT-5.6(OpenAI), Claude Opus 5(Anthropic), Gemini 3.1 Pro(Google DeepMind)는 모두 세션당 약 800페이지의 학술 논문을 처리합니다(각각 1M 토큰 컨텍스트). 그보다 큰 코퍼스의 경우 벡터 데이터베이스가 있는 RAG 파이프라인이 필요합니다.',
           },
           {
             q: '학술 논문에서 AI가 생성한 참고문헌을 인용하는 것이 안전합니까?',
