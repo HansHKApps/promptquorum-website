@@ -555,5 +555,24 @@
       "ctr": 0.013194363118241792,
       "period": "last 90 days"
     }
+  },
+  {
+    "id": "4a1d65cb-f8ab-43b9-a2c4-0198d06315d9",
+    "slug": "/power-local-llm/best-local-models-tool-calling-2026",
+    "date": "2026-08-29T06:33:32.691Z",
+    "fields": [
+      {
+        "field": "diagnosis",
+        "old": "not yet reviewed in this campaign",
+        "new": "reviewed, no change made -- diagnosis-E dominated"
+      }
+    ],
+    "reason": "14,215 impr, 0.89% CTR. Head queries ('best local model for tool calling', 'best local tool calling model') already convert well (15.5%-20.8% CTR at pos 2.2-2.4). The 0%-CTR segment is dominated by hyper-specific/technical queries at excellent positions -- 'open-weight llm tool calling reliability techniques failure modes' (59 impr, pos 2.2, 0%), 'reliable structured tool calling local llm without json schemas' (60 impr, pos 3.7, 0%), 'local llm agent 7b vs 14b tool calling benchmark 2026' (108 impr, pos 2.4, 0%) -- the same '+2026 qualifier kills CTR at an otherwise-identical position' pattern seen on best-amd-gpus-local-llm also repeats here ('best local llm for tool calling' 3% CTR pos 5.0 vs 'best local llm for tool calling 2026' 0% CTR pos 5.9). Checked the literal query 'cline hit repeated tool call failures. try guiding it with a new prompt.' (57 impr, pos 7.1, 0%) against the article -- Cline-specific failure modes and retry behavior are already covered in depth per model, no gap found. Checked TOC completeness across locales -- only DE has one extra entry vs the other 8, too marginal to chase without a query signal behind it (unlike the AMD page's proven-high-volume gap). No title/meta/content change made; diagnosis-E per campaign policy.",
+    "baseline": {
+      "impressions": 14215,
+      "clicks": 126,
+      "ctr": 0.008863876187126274,
+      "period": "last 90 days"
+    }
   }
 ]
