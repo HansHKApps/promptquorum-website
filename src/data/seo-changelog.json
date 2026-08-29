@@ -1057,5 +1057,19 @@
     ],
     "reason": "Page 41: low overall volume page (max query 9 impr). Body already has excellent Termux/Android coverage (dedicated section, 20+ mentions) so no gap there. Real gap: whisper vs piper (2 impr) reflects a genuine conceptual confusion - Whisper is STT and Piper is TTS, not alternatives - never addressed directly despite the article using both terms extensively. Added a clarifying FAQ, translated to all 9 languages.",
     "baseline": null
+  },
+  {
+    "id": "cbb8b1d5-f81d-4fa2-8d01-076488c87584",
+    "slug": "/smart-home/local-whisper-home-assistant",
+    "date": "2026-08-29T21:23:12.484Z",
+    "fields": [
+      {
+        "field": "faqs (all 9 locales)",
+        "old": "No FAQ explaining what the Wyoming protocol is, despite it being used 10+ times functionally throughout the article",
+        "new": "Added What is the Wyoming protocol? FAQ to all 9 locales"
+      }
+    ],
+    "reason": "Page 43: wyoming whisper models (11 impr) + whisper wyoming protocol (4 impr) = 15 impr combined, 0% CTR, uncovered as a direct definitional question - the article uses Wyoming throughout but never explains what it is. Added a factual FAQ built from facts already established in the article (Wyoming = the protocol Assist uses to connect to voice add-ons like Whisper), translated to all 9 languages.",
+    "baseline": null
   }
 ]
