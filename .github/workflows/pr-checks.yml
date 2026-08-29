@@ -28,6 +28,10 @@ jobs:
       - name: Build (via build-with-fix.js, same path as Vercel)
         run: npm run build
 
+      - name: Validate model names (strict, informational)
+        run: npm run validate:models:strict
+        continue-on-error: true
+
       - name: Validate translation integrity
         run: node scripts/validate-translation-integrity.mjs
 
