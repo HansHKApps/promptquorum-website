@@ -4,7 +4,7 @@
  * Run manually: `npm run freshness`
  *
  * Scope: EN content, all clusters — local-llms, prompt-engineering, power-local-llm,
- * balcony-solar, smart-home, and blog.
+ * prompt-bites, balcony-solar, smart-home, and blog.
  *
  * Blog is structurally different (blogContent.ts is one monolithic file with all
  * posts inline, not one file per article, and posts have no dateModified field) —
@@ -83,6 +83,15 @@ const CLUSTERS = [
     publishedFilter: path.join(ROOT, 'src/lib/smart-home/published.ts'),
   },
   {
+    name: 'prompt-bites',
+    dir: path.join(ROOT, 'src/lib/prompt-bites/articles'),
+    barrel: path.join(ROOT, 'src/lib/prompt-bites/articles-barrel.ts'),
+    slugsFile: path.join(ROOT, 'src/lib/prompt-bites/slugs.ts'),
+    slugMapExport: 'PROMPT_BITES_SLUG_TO_KEY',
+    urlPrefix: '/prompt-bites/',
+    publishedFilter: path.join(ROOT, 'src/lib/prompt-bites/published.ts'),
+  },
+  {
     // published.ts derives its set from BALCONY_SOLAR_SLUG_TO_KEY at runtime
     // (`Object.keys(...).filter(...)`) rather than listing literal slugs, and its
     // current PENDING_SLUGS/LANG_ROLLOUT holdback lists are both empty — so every
@@ -122,17 +131,36 @@ function parseSlugMap(slugsFile, exportName) {
   return map
 }
 
+/**
+ * Two barrel conventions exist in this repo and both are valid:
+ *
+ *   local-llms / prompt-engineering / …:
+ *     import { article as a_what_are_local_llms } from "./articles/what-are-local-llms"
+ *     "what-are-local-llms": a_what_are_local_llms,
+ *
+ *   prompt-bites:
+ *     import { article as howMuchVramForLocalLlm } from './articles/how-much-vram-for-local-llm'
+ *     howMuchVramForLocalLlm,          // ES shorthand, key === variable name
+ *
+ * Matching only the first shape silently yielded an empty map for prompt-bites, which
+ * dropped all 123 of its articles from every figure in the report.
+ */
 function parseBarrel(barrelPath) {
   const content = fs.readFileSync(barrelPath, 'utf-8')
   const importMap = {}
   for (const line of content.split('\n')) {
-    const m = line.match(/^import\s*\{\s*article\s+as\s+(a_\S+)\s*\}\s*from\s*['"]([^'"]+)['"]/)
+    const m = line.match(/^import\s*\{\s*article\s+as\s+(\w+)\s*\}\s*from\s*['"]([^'"]+)['"]/)
     if (m) importMap[m[1]] = m[2]
   }
   const keyToVar = {}
   for (const line of content.split('\n')) {
-    const m = line.match(/^\s*['"]?([\w.-]+)['"]?\s*:\s*(a_[^,\s]+)/)
-    if (m) keyToVar[m[1]] = m[2]
+    const explicit = line.match(/^\s*['"]?([\w.-]+)['"]?\s*:\s*(\w+)\s*,/)
+    if (explicit && importMap[explicit[2]]) {
+      keyToVar[explicit[1]] = explicit[2]
+      continue
+    }
+    const shorthand = line.match(/^\s*(\w+)\s*,\s*$/)
+    if (shorthand && importMap[shorthand[1]]) keyToVar[shorthand[1]] = shorthand[1]
   }
   const keyToFile = {}
   const barrelDir = path.dirname(barrelPath)
