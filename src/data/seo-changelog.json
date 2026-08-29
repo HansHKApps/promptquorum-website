@@ -504,7 +504,7 @@
     "baseline": {
       "impressions": 21738,
       "clicks": 1,
-      "ctr": 0.00004600239212439047,
+      "ctr": 4.600239212439047e-05,
       "period": "last 90 days"
     }
   },
@@ -734,6 +734,20 @@
       }
     ],
     "reason": "Follow-up correction to this campaign's own earlier fix on this page (2026-08-29, commit f7d240f22). While researching a different page (blog/ai-model-comparison), verified via web research that Gemini 3.1 Pro's real context window is 1,048,576 tokens (~1M), and the 2,000,000-token figure belongs to a separate, larger tier called Gemini 3.1 Ultra -- not the Pro model this page discusses. The earlier fix correctly updated GPT-5.6 and Claude Opus figures but left the pre-existing Gemini 2M claim unverified and uncorrected, so the page still had one stale/wrong figure after that pass. Caught and fixed now, including the 'largest available context' framing (no longer accurate -- all three cluster together).",
+    "baseline": null
+  },
+  {
+    "id": "f5e359b6-ec61-4df9-9410-cb35e7bc3c1f",
+    "slug": "/prompt-engineering/gpt-claude-gemini-which-model",
+    "date": "2026-08-29T10:33:02.853Z",
+    "fields": [
+      {
+        "field": "content",
+        "old": "entire article was one full generation behind: 'GPT-5.5' throughout (never updated to GPT-5.6), 'GPT-5.5 mini' as the budget tier (real tier name is Luna, not mini), 371 'Claude Opus 4.8' mentions (superseded by Opus 5), and multiple wrong pricing figures (GPT-5.6 Sol quoted at $15 output instead of $30, GPT-5.6 Luna quoted at $0.15/$0.60 instead of the real $0.20/$1.20, Claude Opus quoted at $3/$15 in one locale instead of $5/$25, frontier/budget pricing-tier ranges stated as $15-60/$0.15-3 instead of the real $5-30/$0.20-2)",
+        "new": "renamed GPT-5.5 -> GPT-5.6 and GPT-5.5 mini -> GPT-5.6 Luna throughout (mini is not a real GPT-5.6 tier name; the family ships as Sol/Terra/Luna); renamed all Claude Opus 4.8 -> Opus 5; corrected every identified wrong pricing figure to verified real rates (GPT-5.6 Sol $5/$30, Terra $2/$12, Luna $0.20/$1.20, Claude Opus 5 $5/$25) and recalculated the Sol-vs-Luna cost-reduction ratio from the stated 33x/50x to the correct ~25x; bumped dateModified. Applied across all 9 locales"
+      }
+    ],
+    "reason": "This flagship 'which AI model should I use' comparison article (3,834 lines) was discovered while investigating a smaller related fix on a different page (blog/ai-model-comparison). It was materially out of date -- the whole article discussed GPT-5.5 as current (one full generation behind GPT-5.6) and Claude Opus 4.8 (superseded by Opus 5 on 2026-07-24), with several pricing figures that were wrong even for the older models they named, not just stale. This is not part of the original 20-page GSC worklist -- found via a systematic site-wide check for the same stale facts (GPT-5.x version, Claude Opus version, Gemini context window) already verified and fixed on other pages during this campaign, since a page this central to the site's AI-model content being a full generation behind is a real risk regardless of its own GSC numbers.",
     "baseline": null
   }
 ]
