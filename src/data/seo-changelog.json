@@ -791,5 +791,19 @@
     ],
     "reason": "Page 22 batch: top query autodl gpu (120 impr, pos 4.0, 0% CTR) has no literal GPU match in title. Added GPU to title and led meta with GPU pricing framing instead of pinning to A100 80GB specifically, to match the broader head query intent. RTX 4090 sub-queries at pos 1.8-2.4 with 0% CTR left untouched (AIO-answered, not title-fixable).",
     "baseline": null
+  },
+  {
+    "id": "1fcf3f0d-ee12-4fd0-a51d-bd7c97c01049",
+    "slug": "/prompt-engineering/prompt-building-blocks",
+    "date": "2026-08-29T11:56:59.726Z",
+    "fields": [
+      {
+        "field": "seoTitle,metaDescription (en)",
+        "old": "The 5 Essential Parts of Any AI Prompt (With Template)",
+        "new": "5 Prompt Building Blocks You Need (2026 Template)"
+      }
+    ],
+    "reason": "Page 23 batch: 148 total queries, near-total 0% CTR, mostly unrelated quiz/exam lookups (skip, diagnosis-E). Real addressable signal: prompt blocks (11 impr, pos 3.5), prompt block (11, pos 4.2), block prompt (10, pos 6.1), building block of prompting (7, pos 2.6), context building block (6, pos 4.7) all use literal Block(s) wording. seoTitle said Parts, not Blocks, despite the H1/body already saying Building Blocks. Restored literal-match wording, added 2026 for semi_annual tier.",
+    "baseline": null
   }
 ]
