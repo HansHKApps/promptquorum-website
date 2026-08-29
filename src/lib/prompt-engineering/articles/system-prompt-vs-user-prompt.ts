@@ -18,8 +18,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
     readTime: '8 min read',
     educationalLevel: 'Beginner',
     primaryTerm: 'System Prompt',
-    seoTitle: 'System vs User Prompt 2026: What Each One Controls',
-    metaDescription: 'System prompt vs user prompt: one controls AI behavior for the entire session, one drives each turn. Includes API examples and debug patterns.',
+    seoTitle: 'System Prompt vs User Prompt: Key Differences (2026)',
+    metaDescription: 'A system prompt sets AI behavior for the whole session; a user prompt drives one request. See the difference, API examples, and debug patterns.',
     schema: {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
@@ -1425,7 +1425,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
     readTime: '8분 읽기',
     educationalLevel: 'Beginner',
     primaryTerm: '시스템 프롬프트',
-    seoTitle: '시스템 vs 사용자 프롬프트 2026: 각각이 제어하는 것',
+    seoTitle: '시스템 프롬프트 vs 사용자 프롬프트 차이 (2026)',
     metaDescription: '시스템 프롬프트 vs 사용자 프롬프트: 하나는 세션 전체의 AI 동작을 제어하고, 하나는 각 턴을 이끕니다. API 예제 및 디버그 패턴 포함.',
     leadAnswerBlock: '시스템 프롬프트는 전체 대화 세션에 걸쳐 AI의 역할, 제약, 행동 방식을 정의하며 한 번 설정됩니다. 사용자 프롬프트는 각 상호작용에서 특정 작업을 지정하며 매 요청마다 변경됩니다.',
     itemListSchema: {

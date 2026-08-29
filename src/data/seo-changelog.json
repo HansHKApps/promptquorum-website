@@ -504,7 +504,7 @@
     "baseline": {
       "impressions": 21738,
       "clicks": 1,
-      "ctr": 4.600239212439047e-05,
+      "ctr": 0.00004600239212439047,
       "period": "last 90 days"
     }
   },
@@ -762,6 +762,20 @@
       }
     ],
     "reason": "Continuation of the same-session GPT-5.6/Opus-5 currency fix first applied to individual campaign pages (context-windows-explained.ts, gpt-claude-gemini-which-model.ts). Found ~2,300+ more stale 'Opus 4.8' instances across 49 additional files site-wide via grep, all following the same 'current illustrative model example' pattern already verified safe on the pages fixed earlier. Pre-checked every file for genuine historical/timeline framing before touching it: 3 files were correctly left untouched because they document Opus 4.8 as a deliberate historical/legacy reference with real point-in-time data (src/lib/shared/cutoff-data.ts's knowledge-cutoff table, glm-5-2-open-weights-frontier-2026.ts's 'at launch, June 2026' benchmark comparison, best-llm-right-now.ts's Opus-5-vs-its-predecessor generational improvement claim) -- renaming those would have corrupted real historical/benchmark data. Also fixed specific wrong pricing figures found along the way in tokens-costs-limits.ts (a dedicated token-pricing article): GPT-5.6 Sol was quoted at $15 output instead of $30, Claude Opus 5 at $3/$15 instead of $5/$25, Gemini 3.1 Pro at $3.50/$10.50 instead of $2/$12, and GPT-5.6 Luna at $0.15/$0.60 instead of $0.20/$1.20, with cost-ratio claims corrected from 33x/50x to the accurate ~25x, across all locales in that file. Did not chase downstream dependent example calculations in that file (e.g. one PromptQuorum-test cost-per-call scenario) since those would need full re-derivation from new prices, which is out of reasonable scope without re-running the actual test. Also found and fixed a separate, adjacent naming bug -- 'GPT-5.6 mini' (not a real tier; the family is Sol/Terra/Luna) -- in 5 files. Discovered but did NOT act on a further ~40 files with pure GPT-5.5 mentions unrelated to any Opus 4.8 co-occurrence -- that is a distinct, larger scope not part of the original request and flagged separately to the user rather than expanded into silently.",
+    "baseline": null
+  },
+  {
+    "id": "6c46960a-58fb-47c2-b2b1-f2475d6d4dc6",
+    "slug": "/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference",
+    "date": "2026-08-29T11:46:13.048Z",
+    "fields": [
+      {
+        "field": "seoTitle,metaDescription (en); seoTitle (ko)",
+        "old": "en: System vs User Prompt 2026: What Each One Controls | ko: dropped second prompt word",
+        "new": "en: System Prompt vs User Prompt: Key Differences (2026) | ko: aligned to match sibling-locale pattern"
+      }
+    ],
+    "reason": "Page 21 batch: 0.47% CTR at avg pos 6.8 despite decent volume (129/57/33/24/23 impr head queries). EN+KO titles dropped the second Prompt/word after System, unlike DE/ES/ZH/PT/FR/JA siblings which kept literal phrase match. Restored exact-phrase match to dominant query system prompt vs user prompt, rewrote meta to lead with direct answer.",
     "baseline": null
   }
 ]
