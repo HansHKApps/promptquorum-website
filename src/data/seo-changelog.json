@@ -504,7 +504,7 @@
     "baseline": {
       "impressions": 21738,
       "clicks": 1,
-      "ctr": 0.00004600239212439047,
+      "ctr": 4.600239212439047e-05,
       "period": "last 90 days"
     }
   },
@@ -1014,6 +1014,20 @@
       }
     ],
     "reason": "Page 38 batch: seoTitle exceeded 60-char limit and lacked the required year for semi_annual tier. Real content gap: literal phrase query in the same language as the user input. (54 impr, pos 9.9, 0% CTR) is common real-world system-prompt boilerplate the article never addressed directly - it only covers the more robust explicit-declaration alternative it recommends. Added an FAQ that answers the literal query while reinforcing the article's existing guidance (explicit declaration over auto-detection), translated to all 9 languages.",
+    "baseline": null
+  },
+  {
+    "id": "61e1a74f-d0af-4e27-b45c-3e0e3ab72178",
+    "slug": "/local-llms/multimodal-local-llms",
+    "date": "2026-08-29T20:50:25.966Z",
+    "fields": [
+      {
+        "field": "seoTitle,metaDescription (en)",
+        "old": "Multimodal Local LLMs | Multimodal local LLMs 2026: vision, image processing, OCR, audio models.",
+        "new": "Best Local Vision Models 2026: LLaVA, Qwen-VL & Ollama | Best local vision models 2026: LLaVA, Qwen-VL, and Llama 3.2 Vision compared..."
+      }
+    ],
+    "reason": "Page 39: low volume overall (top query 9 impr) but every real query is about vision models specifically (best local vision models/model, local vision model, best ollama vision model), while seoTitle was just \"Multimodal Local LLMs\" at 21 chars with no year (Rule 2d violation for semi_annual tier) and no mention of vision or best. Rewrote to match the actual query intent and fixed the year gap; meta also extended from 110 to 140 chars.",
     "baseline": null
   }
 ]
