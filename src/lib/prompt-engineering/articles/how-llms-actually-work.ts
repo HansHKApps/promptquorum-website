@@ -897,6 +897,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         misconceptions: {
+          itemHeadings: true,
           title: 'Conceptos erróneos comunes sobre los LLMs',
           content: ['**Estos conceptos erróneos sobre los LLMs causan frecuentemente prompts mal diseñados y expectativas equivocadas:**'],
           tableFormat: true,
@@ -1439,6 +1440,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         misconceptions: {
+          itemHeadings: true,
           title: 'Idées reçues courantes sur les LLMs',
           content: ['**Ces idées reçues sur les LLMs sont répandues et conduisent fréquemment à des prompts mal conçus :**'],
           tableFormat: true,
@@ -2280,6 +2282,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         misconceptions: {
+          itemHeadings: true,
           title: 'Equívocos Comuns sobre LLMs',
           content: ['**Esses equívocos sobre LLMs causam frequentemente prompts mal projetados e expectativas erradas:**'],
           tableFormat: true,

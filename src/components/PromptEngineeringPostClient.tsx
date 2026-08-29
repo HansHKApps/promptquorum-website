@@ -941,6 +941,29 @@ function SectionBlock({ section, colors, id, lang, slug, isGlossary, termPathMap
             <GlossaryTermCard key={i} row={row} lang={lang} pathIds={termPathMap?.get(row['Term'] ?? '') ?? []} />
           ))}
         </div>
+      ) : section.itemHeadings && section.rows && section.columns ? (
+        /* Item-heading cards — each row gets its own H3, for long-form cell content that doesn't fit a table */
+        <div className="my-6 space-y-4">
+          {section.rows.map((row, i) => {
+            const [nameCol, ...restCols] = section.columns!
+            const name = row[nameCol] ?? row['0'] ?? ''
+            return (
+              <div key={i} className="border border-primary/10 rounded-xl p-4">
+                <h3 className="text-lg font-bold text-text-primary mb-2">
+                  {renderInlineLinks(name, lang)}
+                </h3>
+                <dl className="text-sm text-text-secondary space-y-1.5">
+                  {restCols.map((col) => (
+                    <div key={col} className="flex flex-col sm:flex-row sm:gap-2">
+                      <dt className="font-semibold text-text-primary shrink-0 sm:w-32">{col}:</dt>
+                      <dd>{renderInlineLinks(row[col] ?? '—', lang)}</dd>
+                    </div>
+                  ))}
+                </dl>
+              </div>
+            )
+          })}
+        </div>
       ) : (
         /* Regular table for non-glossary content */
         section.rows && section.columns && (

@@ -546,6 +546,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         frameworks: {
+          itemHeadings: true,
           title: 'Prompt-Engineering-Frameworks',
           content: [
             '**Ein Prompt-Engineering-Framework ist eine benannte Vorlage, die festlegt, welche Bausteine in welcher Reihenfolge enthalten sein sollen.** Frameworks verwandeln Prompt Engineering von einer Ad-hoc-Fähigkeit in einen wiederholbaren Prozess. Sie sind einfacher zu lehren, leichter im Team zu teilen und schneller anzuwenden unter Zeitdruck als ein Prompt von Grund auf neu zu erstellen.',

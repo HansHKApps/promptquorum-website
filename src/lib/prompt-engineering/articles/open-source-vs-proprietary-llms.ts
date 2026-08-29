@@ -425,6 +425,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         comparisonTable: {
+          itemHeadings: true,
           title: 'Key Differences Between Open Source and Proprietary LLMs',
           content: '**Open-weights models cost less at scale and enable full customization; proprietary models deliver faster time-to-value and managed infrastructure at higher per-token cost.** Below 5M tokens/day, proprietary APIs are usually cheaper. Above 10M tokens/day, self-hosted open-weights wins on cost. Choose based on your volume, privacy requirements, and infrastructure readiness.',
           columns: ['Dimension', 'Open-Weights Models', 'Proprietary Models'],
@@ -985,6 +986,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
     
         comparisonTable: {
+          itemHeadings: true,
           title: 'Schlüsseldifferenzen zwischen Open-Source- und proprietären LLMs',
           content: '**Open-Weights-Modelle kosten in großem Maßstab weniger und ermöglichen vollständige Anpassung; proprietäre Modelle liefern schnellere Time-to-Value und verwaltete Infrastruktur zu höheren Pro-Token-Kosten.** Unter 5M Token/Tag sind proprietäre APIs üblicherweise billiger. Über 10M Token/Tag gewinnt Self-Hosted Open-Weights bei Kosten. Wählen Sie basierend auf Ihrem Volumen, Datenschutzanforderungen und Infrastruktur-Bereitschaft.',
           columns: ['Dimension', 'Open-Weights-Modelle', 'Proprietäre Modelle'],
@@ -2308,6 +2310,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         comparisonTable: {
+          itemHeadings: true,
           title: 'Différences clés entre LLMs open source et propriétaires',
           content: '**Les modèles open-weights coûtent moins cher à grande échelle et permettent une personnalisation complète ; les modèles propriétaires offrent une mise en valeur plus rapide et une infrastructure gérée à un coût par token plus élevé.** En dessous de 5 M tokens/jour, les APIs propriétaires sont généralement moins chères. Au-delà de 10 M tokens/jour, l\'open-weights auto-hébergé l\'emporte sur le coût. Choisissez selon votre volume, vos exigences de confidentialité et votre maturité d\'infrastructure.',
           columns: ['Dimension', 'Modèles open-weights', 'Modèles propriétaires'],

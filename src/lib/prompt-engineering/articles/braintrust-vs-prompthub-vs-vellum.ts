@@ -540,6 +540,7 @@ tests:
         ],
       },
       'evaluation-criteria': {
+        itemHeadings: true,
         title: 'Vergleichskriterien und -methodik',
         content: ['Wir haben diese vier Tools auf fünf Kriterien bewertet, die für die meisten Teams wichtig sind:'],
         columns: ['Kriterium', 'Gewicht', 'Definition'],
@@ -1847,6 +1848,7 @@ tests:
         ],
       },
       'evaluation-criteria': {
+        itemHeadings: true,
         title: 'Notre méthode de comparaison',
         content: ['Nous avons évalué ces quatre outils sur cinq critères importants pour la plupart des équipes :'],
         columns: ['Critère', 'Poids', 'Définition'],

@@ -1905,6 +1905,7 @@ def is_injection_attempt(text: str) -> bool:`,
         },
 
         definition: {
+          itemHeadings: true,
           title: 'Qu\'est-ce que l\'injection de prompt et pourquoi est-elle critique en 2026 ?',
           content: [
             '**Dernière mise à jour : mars 2026.** Les techniques d\'injection de prompt évoluent à mesure que les attaquants développent de nouvelles méthodes d\'obfuscation — ce guide reflète les vecteurs d\'attaque et les défenses actuels de 2026 testés sur des modèles en production.',

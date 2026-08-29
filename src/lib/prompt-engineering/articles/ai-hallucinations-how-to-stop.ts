@@ -399,6 +399,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         commonTypes: {
+          itemHeadings: true,
           title: 'Häufige Arten von Halluzinationen',
           content: 'Halluzinationen folgen erkennbaren Mustern. Die Identifikation des Typs hilft Ihnen, gezielte Minderungsstrategien auszuwählen.',
           rows: [
@@ -680,6 +681,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         commonTypes: {
+          itemHeadings: true,
           title: 'Tipos comunes de alucinaciones',
           content: 'Las alucinaciones siguen patrones reconocibles. Identificar el tipo te ayuda a elegir estrategias de mitigación específicas.',
           columns: ['Tipo', 'Ejemplo', 'Por qué ocurre', 'Severidad'],
@@ -1252,6 +1254,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         commonTypes: {
+          itemHeadings: true,
           title: 'Tipos comuns de alucinações',
           content: 'As alucinações seguem padrões reconhecíveis. Identificar o tipo ajuda a direcionar as estratégias de mitigação.',
           rows: [
@@ -1534,6 +1537,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         commonTypes: {
+          itemHeadings: true,
           title: 'Types courants d\'hallucinations',
           content: 'Les hallucinations viennent en motifs reconnaissables. Identifier le type vous aide à cibler les stratégies d\'atténuation.',
           rows: [

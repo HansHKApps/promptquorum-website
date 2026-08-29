@@ -9,6 +9,7 @@ export interface PESection {
   numberedItems?: (string | { title: string; whyItMatters: string })[]
   rows?: Array<{ [key: string]: string }>
   columns?: string[]
+  itemHeadings?: boolean    // Render rows as titled cards (first column -> H3) instead of a <table>, for long-form cell content
   faqs?: Array<{ q: string; a: string }>
   isTldr?: boolean
   tableFormat?: boolean

@@ -264,6 +264,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         promptOptimizationByRegion: {
+          itemHeadings: true,
           title: 'How Geopolitics Changes Prompt Optimization: Country-by-Country',
           content: [
             '**Where your AI output is consumed determines what your prompts must do — and what they must avoid.** Language affects model performance directly: a prompt written in English sent to a Chinese model (ERNIE 4.0, Qwen) underperforms the same prompt written in Mandarin. Law affects prompt design structurally: EU AI Act disclosure requirements, US sector regulations, and China\'s CAC content filters each impose different constraints on how prompts can be framed, what outputs can be generated, and how applications must handle responses.',
@@ -559,6 +560,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         regulatoryComparison: {
+          itemHeadings: true,
           title: 'Global AI Regulation: EU vs US vs China Compared',
           content: [
             '**The three major AI regulatory frameworks differ fundamentally in philosophy, legal force, and international reach.** Understanding these differences is essential for organizations that operate across jurisdictions or use AI tools from providers headquartered in different regulatory blocs.',
@@ -958,6 +960,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         promptOptimizationByRegion: {
+          itemHeadings: true,
           title: 'Wie Geopolitik die Prompt-Optimierung ändert: Land für Land',
           content: [
             '**Wo Ihre KI-Ausgabe verbraucht wird, bestimmt, was Ihre Prompts tun müssen — und was sie vermeiden müssen.** Sprache beeinflusst die Modellleistung direkt: Ein auf Englisch geschriebener Prompt, der an ein chinesisches Modell (ERNIE 4.0, Qwen) gesendet wird, ist schlechter als der gleiche Prompt, der auf Mandarin geschrieben ist. Gesetze beeinflussen das Prompt-Design strukturell: EU AI Act-Offenlegungsanforderungen, US-Sektorregulierung und Chinas CAC-Inhaltsfilter legen jeweils unterschiedliche Zwänge darauf auf, wie Prompts formuliert werden können, welche Outputs generiert werden können und wie Anwendungen auf Antworten reagieren müssen.',
@@ -1227,6 +1230,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         regulatoryComparison: {
+          itemHeadings: true,
           title: 'Globale KI-Regulierung: EU vs USA vs China verglichen',
           content: [
             '**Die drei großen KI-Regulierungs-Rahmen unterscheiden sich grundlegend in Philosophie, rechtlicher Kraft und internationalem Reichweite.** Das Verstehen dieser Unterschiede ist essentiell für Organisationen, die über Jurisdiktionen funktionieren oder KI-Tools von Anbietern in verschiedenen Regulierungs-Blöcken nutzen.',
@@ -1620,6 +1624,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         promptOptimizationByRegion: {
+          itemHeadings: true,
           title: 'Cómo la geopolítica cambia la optimización de prompts: País por país',
           content: [
             '**Dónde se consume la salida de tu IA determina qué deben hacer tus prompts — y qué deben evitar.** El idioma afecta directamente al rendimiento del modelo: un prompt escrito en inglés enviado a un modelo chino (ERNIE 4.0, Qwen) tiene un rendimiento inferior al mismo prompt escrito en chino mandarín. La ley afecta estructuralmente el diseño del prompt: los requisitos de divulgación del EU AI Act, las regulaciones sectoriales de EE.UU. y los filtros de contenido CAC de China imponen diferentes restricciones sobre cómo se pueden formular los prompts, qué salidas pueden generarse y cómo deben manejar las respuestas las aplicaciones.',
@@ -1909,6 +1914,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         regulatoryComparison: {
+          itemHeadings: true,
           title: 'Regulación global de IA: UE vs. EE.UU. vs. China comparados',
           content: [
             '**Las tres potencias reguladoras persiguen enfoques fundamentalmente diferentes a la gobernanza de IA.** La UE prioriza los derechos y la seguridad; EE.UU. prioriza la innovación; China prioriza el control del estado.',
@@ -2293,6 +2299,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         promptOptimizationByRegion: {
+          itemHeadings: true,
           title: 'كيف تُغيّر الجيوسياسة تحسين الأوامر: دولة بدولة',
           content: [
             '**المكان الذي تُستهلَك فيه مخرجات الذكاء الاصطناعي يحدد ما يجب أن تفعله أوامرك — وما يجب عليها تجنّبه.** تؤثر اللغة مباشرةً في أداء النموذج: أمر مكتوب بالإنجليزية ومُرسَل إلى نموذج صيني (ERNIE 4.0 وQwen) يؤدي أداءً أضعف من نفس الأمر مكتوباً بالصينية المندرين. يؤثر القانون هيكلياً في تصميم الأوامر: تفرض متطلبات الإفصاح في قانون الذكاء الاصطناعي الأوروبي واللوائح القطاعية الأمريكية وفلاتر محتوى CAC الصينية قيوداً مختلفة على كيفية صياغة الأوامر، وما يمكن توليده من مخرجات، وكيف يجب أن تتعامل التطبيقات مع الردود.',
@@ -2582,6 +2589,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         regulatoryComparison: {
+          itemHeadings: true,
           title: 'التنظيم العالمي للذكاء الاصطناعي: الاتحاد الأوروبي والولايات المتحدة والصين مقارنةً',
           content: [
             '**تتّبع القوى التنظيمية الثلاث مناهج مختلفة جوهرياً في حوكمة الذكاء الاصطناعي.** يُعطي الاتحاد الأوروبي الأولوية للحقوق والسلامة؛ تُعطيها الولايات المتحدة للابتكار؛ وتُعطيها الصين للسيطرة الحكومية.',
@@ -3010,6 +3018,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         promptOptimizationByRegion: {
+          itemHeadings: true,
           title: 'Optimiser les prompts selon la région',
           content: 'Les stratégies IA divergent par région. Ce qui fonctionne aux US peut être interdit en UE. Voici comment adapter :',
           columns: ['Région', 'Priorité', 'Approche prompt'],
@@ -3814,6 +3823,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         promptOptimizationByRegion: {
+          itemHeadings: true,
           title: 'ジオポリティクスがプロンプト最適化を変える方法：国ごと',
           content: [
             '**あなたのAI出力が消費される場所は、プロンプトが何をする必要があるか、そして何を避ける必要があるかを決定する。** 言語はモデルパフォーマンスに直接影響を与える：英語で書かれたプロンプトを中国のモデル（ERNIE 4.0、Qwen）に送信することは、同じプロンプトを中国語で書いて送信するより悪い。法律はプロンプト設計に構造的に影響を与える：EU AI法の開示要件、米国セクター規制、中国の CAC コンテンツフィルターはそれぞれ異なる制約を課す、プロンプトをどのように書くことができるか、何の出力が生成できるか、アプリケーションが回答にどのように反応する必要があるかについて。',
@@ -4613,6 +4623,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         promptOptimizationByRegion: {
+          itemHeadings: true,
           title: '地缘政治如何改变提示优化：逐国分析',
           content: [
             '**您的AI输出被消费的地点决定了您的提示必须做什么——以及必须避免什么。** 语言直接影响模型性能：用英语写的提示发送给中国模型（ERNIE 4.0、Qwen）表现不如用中文写的相同提示。法律在结构上影响提示设计：EU AI法案披露要求、美国部门监管和中国的CAC内容过滤对提示如何框架、可以生成什么输出以及应用必须如何处理响应施加不同约束。',
@@ -5289,6 +5300,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         promptOptimizationByRegion: {
+          itemHeadings: true,
           title: 'Como a geopolítica muda a otimização de prompts: país por país',
           content: [
             '**Onde a saída da sua IA é consumida determina o que seus prompts precisam fazer — e o que precisam evitar.** O idioma afeta o desempenho do modelo diretamente: um prompt escrito em inglês enviado a um modelo chinês (ERNIE 4.0, Qwen) tem desempenho inferior ao mesmo prompt escrito em mandarim. A lei afeta o design de prompts estruturalmente: requisitos de divulgação do EU AI Act, regulamentações setoriais dos EUA e filtros de conteúdo do CAC da China impõem restrições diferentes sobre como os prompts podem ser formulados, quais saídas podem ser geradas e como as aplicações precisam lidar com as respostas.',
@@ -5575,6 +5587,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         regulatoryComparison: {
+          itemHeadings: true,
           title: 'Regulamentação global de IA: UE vs. EUA vs. China comparados',
           content: [
             '**Os três principais frameworks regulatórios de IA diferem fundamentalmente em filosofia, força legal e alcance internacional.** Entender essas diferenças é essencial para organizações que operam em múltiplas jurisdições ou usam ferramentas de IA de fornecedores sediados em diferentes blocos regulatórios.',
@@ -5938,6 +5951,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         promptOptimizationByRegion: {
+          itemHeadings: true,
           title: '지정학이 프롬프트 최적화를 바꾸는 방식: 국가별 분석',
           content: [
             '**AI 출력이 소비되는 위치가 프롬프트가 해야 할 일과 피해야 할 일을 결정합니다.** 언어는 모델 성능에 직접적인 영향을 미칩니다 — 영어로 작성된 프롬프트를 중국어 모델(ERNIE 4.0, Qwen)에 보내면 같은 프롬프트를 중국어로 작성했을 때보다 성능이 떨어집니다. 법률은 프롬프트 설계에 구조적으로 영향을 미칩니다 — EU AI법의 공개 요건, 미국의 부문별 규제, 중국 CAC의 콘텐츠 필터는 각각 프롬프트를 구성하는 방식, 생성 가능한 출력, 애플리케이션이 응답을 처리하는 방식에 서로 다른 제약을 가합니다.',

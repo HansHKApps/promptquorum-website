@@ -249,6 +249,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         timeline: {
+          itemHeadings: true,
           id: 'timeline',
           title: 'Timeline: Key Milestones in Prompt Engineering',
           content: 'The table below summarises the key milestones from 2018 to 2026 — the events, papers, and model releases that shaped how prompt engineering evolved into its current form.',
@@ -533,6 +534,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         timeline: {
+          itemHeadings: true,
           title: 'Zeitleiste: Wichtige Meilensteine im Prompt Engineering',
           content: 'Die folgende Tabelle fasst die wichtigsten Meilensteine von 2018 bis 2026 zusammen – die Ereignisse, Paper und Modell-Veröffentlichungen, die die Entwicklung des Prompt Engineerings in seine heutige Form geprägt haben.',
           columns: ['Jahr', 'Meilenstein', 'Warum es wichtig ist'],
@@ -761,6 +763,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         timeline: {
+          itemHeadings: true,
           title: 'Línea de tiempo: Hitos clave del prompt engineering',
           content: 'La tabla a continuación resume los hitos clave de 2018 a 2026 — los eventos, artículos y lanzamientos de modelos que dieron forma a cómo el prompt engineering evolucionó a su forma actual.',
           columns: ['Año', 'Hito', 'Por qué importa'],
@@ -1197,6 +1200,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         timeline: {
+          itemHeadings: true,
           title: 'Linha do tempo: Marcos-chave do prompt engineering',
           content: 'A tabela abaixo resume os marcos-chave de 2018 a 2026 — os eventos, artigos e lançamentos de modelos que moldaram como o prompt engineering evoluiu para sua forma atual.',
           columns: ['Ano', 'Marco', 'Por que importa'],
@@ -1428,6 +1432,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
 
         timeline: {
+          itemHeadings: true,
           title: 'Chronologie : Les jalons clés du prompt engineering',
           content: 'Le tableau ci-dessous résume les jalons clés de 2018 à 2026 — les événements, articles et sorties de modèles qui ont façonné la façon dont le prompt engineering a évolué vers sa forme actuelle.',
           columns: ['Année', 'Jalon', 'Pourquoi c\'est important'],

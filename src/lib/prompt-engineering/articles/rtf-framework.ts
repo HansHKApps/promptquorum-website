@@ -311,6 +311,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         pairwiseComparison: {
+          itemHeadings: true,
           title: 'Pairwise Comparison (RTF vs Others)',
           tableFormat: true,
           columns: ['Comparison', 'Winner', 'Why'],
@@ -762,6 +763,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         pairwiseComparison: {
+          itemHeadings: true,
           title: 'Paarweiser Vergleich (RTF vs. andere)',
           tableFormat: true,
           columns: ['Vergleich', 'Gewinner', 'Warum'],
@@ -1155,6 +1157,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         pairwiseComparison: {
+          itemHeadings: true,
           title: 'Comparación por pares (RTF vs Otros)',
           tableFormat: true,
           columns: ['Comparación', 'Ganador', 'Por qué'],
@@ -1494,6 +1497,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         pairwiseComparison: {
+          itemHeadings: true,
           title: 'المقارنة الثنائية (RTF مقابل الأطر الأخرى)',
           tableFormat: true,
           columns: ['المقارنة', 'الفائز', 'السبب'],
@@ -1813,6 +1817,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         pairwiseComparison: {
+          itemHeadings: true,
           title: 'Comparação em Pares (RTF vs Outros)',
           tableFormat: true,
           columns: ['Comparação', 'Vencedor', 'Por quê'],
@@ -2233,6 +2238,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         pairwiseComparison: {
+          itemHeadings: true,
           title: 'Comparaison par paires (RTF vs autres)',
           tableFormat: true,
           columns: ['Comparaison', 'Gagnant', 'Pourquoi'],
@@ -3670,6 +3676,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         pairwiseComparison: {
+          itemHeadings: true,
           title: '쌍별 비교 (RTF vs 기타)',
           tableFormat: true,
           columns: ['비교', '우세', '이유'],

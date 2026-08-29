@@ -1179,6 +1179,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       modelSelection: {
+        itemHeadings: true,
         id: 'model-selection',
         title: 'Escolha GPT-5.6 para saída estruturada, Claude Sonnet 5 para nuances',
         content: [
