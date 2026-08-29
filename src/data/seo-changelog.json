@@ -507,5 +507,34 @@
       "ctr": 4.600239212439047e-05,
       "period": "last 90 days"
     }
+  },
+  {
+    "id": "14e497cd-fc5c-4786-a5b6-319e29eb01ae",
+    "slug": "/prompt-engineering/context-windows-explained-why-ai-forgets",
+    "date": "2026-08-29T06:20:16.772Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "LLM Context Window Sizes 2026: GPT-5.6 128k, Claude 200k",
+        "new": "LLM Context Window Sizes 2026: GPT-5.6 1M, Claude 1M"
+      },
+      {
+        "field": "factual-accuracy",
+        "old": "GPT-5.6 stated as 128k tokens (wrong, real spec is 1.05M across Sol/Terra/Luna tiers); Claude Opus 4.8 200k cited as current (superseded by Claude Opus 5, 1M tokens, launched 2026-07-24); GPT-5.6 Luna wrongly listed as a separate 4k-token tier",
+        "new": "corrected to verified real specs: GPT-5.6 (Sol/Terra/Luna, all share 1.05M tokens, differ only in speed/cost) and Claude Opus 5 (1M tokens) -- fixed in title, meta, leadAnswerBlock, quickFacts, schema, faqSchema, howToSchema, itemListSchema, and rendered body copy (both context-windows-explained.ts and the shared contextWindowsTranslations.ts) across all 9 locales"
+      },
+      {
+        "field": "faq",
+        "old": "no coverage of GPT-5.6 Sol/Terra/Luna tier differences",
+        "new": "added FAQ entry explaining Sol/Terra/Luna are speed/cost tiers sharing one context window, not different context sizes"
+      }
+    ],
+    "reason": "15,734 impr, 0.21% CTR. Top query 'gpt 5.6 context window' (257 impr, pos 9.5, 0% CTR) plus ~900 impressions across dozens of GPT-5.6/Luna/Sol variants, mostly at fixable pos 6-11 -- yet the page's own title/content already said 'GPT-5.6 128k', which was factually wrong (verified via web research: real GPT-5.6 context window is 1.05M tokens across all three Sol/Terra/Luna tiers; Claude Opus 4.8 cited was also one generation behind Claude Opus 5's 1M-token window, launched 2026-07-24). Searchers were bouncing off a page contradicting the number they already knew. Corrected throughout, all locales, both files; dateModified bumped since this is a real user-visible fact change.",
+    "baseline": {
+      "impressions": 15734,
+      "clicks": 33,
+      "ctr": 0.0020973687555612052,
+      "period": "last 90 days"
+    }
   }
 ]
