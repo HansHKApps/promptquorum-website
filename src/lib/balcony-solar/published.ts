@@ -25,24 +25,12 @@ import { BALCONY_SOLAR_SLUG_TO_KEY } from './slugs'
 // held back pending body content, translation, and internal linking; owner
 // confirmed indexing the image-only pages as-is rather than waiting.
 //
-// Renogy + ALLPOWERS company profiles (BSOL-53, BSOL-54) — added 2026-08-30.
-// Held back pending Hans's explicit review/authorization, matching the
-// documented pattern above for every prior batch in this cluster: new
-// profiles stay noindex + sitemap-excluded until a human explicitly
-// authorizes publishing, even though body content, FAQ/TL;DR, and all 9
-// language translations are already complete.
-//
-// Jackery + BLUETTI company profiles (BSOL-55, BSOL-56) — added 2026-08-30.
-// Same pattern as Renogy/ALLPOWERS immediately above: held back pending
-// Hans's explicit review/authorization, even though body content, FAQ/TL;DR,
-// product lineup affiliateLinks, and all 9 language translations are already
-// complete. Do not add these to the published set without explicit sign-off.
-const PENDING_SLUGS: ReadonlySet<string> = new Set([
-  'renogy-balcony-solar',
-  'allpowers-balcony-solar',
-  'jackery-balcony-solar',
-  'bluetti-balcony-solar',
-])
+// Renogy, ALLPOWERS, Jackery, BLUETTI company profiles (BSOL-53..56) —
+// added 2026-08-30, published 2026-08-30 on explicit authorization. Body
+// content, FAQ/TL;DR, product lineup affiliateLinks, and all 9 language
+// translations were complete before publishing; previously held back in
+// this set pending Hans's review, now cleared.
+const PENDING_SLUGS: ReadonlySet<string> = new Set([])
 
 export const BALCONY_SOLAR_PUBLISHED_SLUGS: ReadonlySet<string> = new Set(
   Object.keys(BALCONY_SOLAR_SLUG_TO_KEY).filter(slug => !PENDING_SLUGS.has(slug))
