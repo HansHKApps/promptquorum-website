@@ -13,11 +13,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-24',
     theme: 'Creative & Roleplay',
     title: 'Best Uncensored Local LLMs for Erotica & Creative Writing 2026: Hermes 3 vs Dolphin',
-    seoTitle: 'Uncensored LLMs for Erotica Writing 2026',
+    seoTitle: 'Uncensored LLMs for Erotica & NSFW Writing 2026',
     intro:
       'Uncensored local LLMs let fiction writers generate mature, erotic, morally complex, and dark content that cloud services refuse — with no data leaving your machine. This guide covers which models allow erotica writing, how to set them up through Ollama or LM Studio, the genuine ethical responsibilities that apply even when there is no terms-of-service enforcement, and the specific use cases where uncensored models are appropriate versus where they are not.',
     metaDescription:
-      'Best uncensored local LLMs for erotica & creative writing: Hermes 3 Llama 3.3 vs Dolphin 3.0 Mistral, Ollama setup, ethical responsibilities, and which models to use for adult content writing.',
+      'Best uncensored local LLMs with no content restrictions, for erotica and NSFW writing: Hermes 3 vs Dolphin 3.0, Ollama setup, and the ethical limits.',
     heroImage: '/images/uncensored-local-llm-creative-writing-ethics-model-comparison-hero-en.webp',
     twitterDescription:
       'Best uncensored local LLMs for erotica writing: Hermes 3 vs Dolphin 3.0, Ollama setup, and what ethical responsibilities still apply to creative writers.',
@@ -369,6 +369,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Are these models monitored or anonymous?',
             a: 'Open-weight models running locally via Ollama or LM Studio have no telemetry, no remote logging, and no usage tracking. The model authors (Nous Research for Hermes 3, Cognitive Computations for Dolphin) cannot see what you generate — there is no server callback during inference. The only telemetry risk is from the frontend (SillyTavern, Agnai — both telemetry-free by default) or the OS. Run a network monitor (Little Snitch on macOS, Wireshark on Linux) once after install to verify.',
           },
+            { q: 'Which local LLMs have no content restrictions?', a: 'The uncensored and abliterated fine-tunes covered here \u2014 Hermes 3 and Dolphin 3.0 among them \u2014 have had the refusal layer trained out, so they carry no content policy of their own. That is the practical difference between a local model and a hosted one: a cloud provider enforces its terms on every request, while an unrestricted model running on your own machine has no provider in the loop and no censorship applied at inference time. NSFW and explicit fiction are therefore not blocked. What does not change is the law where you live and the responsibility that comes with publishing \u2014 no content policy is not the same as no limits, and the ethics section below covers where those lines sit.' },
         ],
       },
       relatedReading: {
