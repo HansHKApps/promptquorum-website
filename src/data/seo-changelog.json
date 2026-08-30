@@ -1166,5 +1166,30 @@
       "ctr": 0.06616341030195382,
       "period": "GSC last 28d as pasted 2026-08-30"
     }
+  },
+  {
+    "id": "321aee8f-434c-475d-8c31-fbbde7f797e2",
+    "slug": "/ja/power-local-llm/uncensored-local-llm-creative-writing-ethics",
+    "date": "2026-08-30T08:32:51.154Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "無検閲ローカルLLM 5選：小説創作の設定と倫理 2026",
+        "new": "無検閲ローカルLLM 5選：日本語小説と倫理 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "小説・ダークフィクション向け無検閲ローカルLLMはHermes 3とDolphin 3.0が最適。無修正/非検閲モデル5つをVRAM別に比較し、LM StudioとOllamaの設定手順と倫理的責任まで解説。2026年版。",
+        "new": "小説・ダークフィクション向け無検閲ローカルLLMはHermes 3とDolphin 3.0が最適。無修正/非検閲モデル5つをVRAM別に比較し、日本語で書く場合のモデル選び、LM StudioとOllamaの設定、倫理的責任まで解説。"
+      }
+    ],
+    "reason": "geo-meta-optimizer: coherence-B2-fix part 2 — added 日本語 to title + new japanese section (536 impr query, 日本語 was 0 occurrences) + 4 FAQs for zero-click clusters (画像生成/脱獄/NSFW/LM Studio). Perfect-page 6/10 -> 9/10",
+    "baseline": {
+      "position": 5.3,
+      "impressions": 9008,
+      "clicks": 596,
+      "ctr": 0.06616341030195382,
+      "period": "GSC last 28d as pasted 2026-08-30"
+    }
   }
 ]
