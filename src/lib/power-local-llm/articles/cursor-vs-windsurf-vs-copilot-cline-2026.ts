@@ -27,7 +27,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Cursor, Windsurf, GitHub Copilot, and Cline all run an "agent mode" that edits multiple files and runs terminal commands on your behalf, but they differ on price, model access, and where your code goes. This guide compares the four on the criteria that decide a real purchase: agentic capability, pricing (verified against each vendor\'s own pricing page in August 2026), model flexibility, and IDE support.',
     metaDescription:
-      'Cursor vs Windsurf vs GitHub Copilot vs Cline compared for agent mode, pricing, and model access. August 2026 pricing verified on each vendor site.',
+      'Cursor vs Windsurf vs GitHub Copilot vs Cline compared for agent mode, pricing, and model access. Pricing verified on each vendor site.',
     publishDate: '2026-08-27',
     dateModified: '2026-08-27',
     readTime: '12 min read',
@@ -302,7 +302,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       'headline': 'Best Agentic AI Coding Assistant 2026: Cursor vs Windsurf vs GitHub Copilot vs Cline',
-      'description': 'Cursor vs Windsurf vs GitHub Copilot vs Cline compared for agent mode, pricing, and model access. August 2026 pricing verified on each vendor site.',
+      'description': 'Cursor vs Windsurf vs GitHub Copilot vs Cline compared for agent mode, pricing, and model access. Pricing verified on each vendor site.',
       'image': 'https://www.promptquorum.com/images/cursor-vs-windsurf-vs-copilot-cline-2026-hero-en.webp',
       'datePublished': '2026-08-27',
       'dateModified': '2026-08-27',

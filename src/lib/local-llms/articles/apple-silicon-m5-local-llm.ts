@@ -195,7 +195,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'comparison-table': {
         id: 'comparison-table',
         title: 'Apple Silicon M5 Comparison Table',
-        content: 'All configurations below are confirmed Apple retail pricing as of the August 25, 2026 announcement — none are projected. Mac mini, Mac Studio, and MacBook Pro configurations ship September 22, 2026, except the Mac Studio M5 Ultra 512GB configuration (late October 2026, priced well above $10,000). **Pricing:** USD prices verified August 2026 from Apple Store. No independent third-party tokens/sec benchmarks exist yet for the new Mac mini or Mac Studio SKUs — see the Benchmarks section for what is and is not verified.',
+        content: 'All configurations below are confirmed Apple retail pricing as of the August 25, 2026 announcement — none are projected. Mac mini, Mac Studio, and MacBook Pro configurations ship September 22, 2026, except the Mac Studio M5 Ultra 512GB configuration (late October 2026, priced well above $10,000). **Pricing:** USD prices verified from Apple Store. No independent third-party tokens/sec benchmarks exist yet for the new Mac mini or Mac Studio SKUs — see the Benchmarks section for what is and is not verified.',
         tableFormat: true,
         columns: ['Configuration', 'Chip', 'GPU Cores', 'Memory', 'Bandwidth', 'Price', 'Best For'],
         rows: [

@@ -1888,7 +1888,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**RunPod:** 0,34–0,69 $/Std. RTX 4090 — bestes Preis-Leistungs-Verhältnis für LLM-Inferenz (SLA 99 % Uptime)',
           '**Vast.ai:** 0,08–0,59 $/Std. — günstigste Option für unterbrechbare Spot-Workloads',
           '**Lambda Labs:** 1,99–2,79 $/Std. A100, 3,29–3,99 $/Std. H100 — SLA 99,9 % Uptime für Teams',
-          'Preise geprüft August 2026. Monatlich erneut verifiziert.',
+          'Preise geprüft. Monatlich erneut verifiziert.',
         ],
       },
       updateNotice: {

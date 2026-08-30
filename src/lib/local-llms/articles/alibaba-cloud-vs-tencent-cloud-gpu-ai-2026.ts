@@ -131,7 +131,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { '0': 'Alibaba Cloud PAI', '1': 'Qwen / production', '2': 'Qwen-optimized runtime + enterprise cloud', '3': '[Get Alibaba Cloud offer →](https://www.alibabacloud.com)' },
           { '0': 'Tencent Cloud TI', '1': 'WeChat / Tencent', '2': 'Native WeChat & Tencent ecosystem integration', '3': '[Try Tencent Cloud →](https://cloud.tencent.com/product/gpu)' },
         ],
-        note: 'Product links, no current affiliate relationship — PromptQuorum earns no commission on these clicks (see disclosure above). Prices last checked August 2026.',
+        note: 'Product links, no current affiliate relationship — PromptQuorum earns no commission on these clicks (see disclosure above). Prices last checked.',
         affiliateLinks: [
           { url: 'https://www.autodl.com', productName: 'AutoDL', productCategory: 'cloud-gpu', priceRange: 'From ¥1.68/hr', label: 'Check AutoDL GPU prices →' },
           { url: 'https://www.alibabacloud.com', productName: 'Alibaba Cloud PAI', productCategory: 'cloud-gpu', priceRange: 'From ¥3.5/hr', label: 'Get Alibaba Cloud offer →' },

@@ -151,12 +151,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Every AI coding tool needs a model to think with. Some can use a model running on your own computer, so your code never leaves the building. Others only use the vendor\'s cloud model, which means your code is uploaded. Decide which of those you need before comparing anything else.',
           },
         ],
-        columns: ['Tool', 'Local LLM', 'Price (July 2026)', 'Open source', 'IDEs', 'Best for'],
+        columns: ['Tool', 'Local LLM', 'Price', 'Open source', 'IDEs', 'Best for'],
         rows: [
           {
             'Tool': 'Continue.dev',
             'Local LLM': 'Native — Ollama, LM Studio, llama.cpp',
-            'Price (July 2026)': 'Free',
+            'Price': 'Free',
             'Open source': 'Yes — Apache 2.0',
             'IDEs': 'VS Code, JetBrains, Vim',
             'Best for': 'Local-first developers',
@@ -164,7 +164,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Tool': 'Cursor',
             'Local LLM': 'Via custom OpenAI-compatible endpoint',
-            'Price (July 2026)': '~$20/month (Pro)',
+            'Price': '~$20/month (Pro)',
             'Open source': 'No — closed',
             'IDEs': 'Cursor (VS Code fork)',
             'Best for': 'Most polished editor experience',
@@ -172,7 +172,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Tool': 'GitHub Copilot',
             'Local LLM': 'No — cloud only',
-            'Price (July 2026)': '~$10/month',
+            'Price': '~$10/month',
             'Open source': 'No — closed',
             'IDEs': 'VS Code, JetBrains, Vim',
             'Best for': 'GitHub ecosystem integration',
@@ -180,7 +180,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Tool': 'Sourcegraph Cody',
             'Local LLM': 'Via Ollama configuration',
-            'Price (July 2026)': '~$9/user/month standard; enterprise tier costs more',
+            'Price': '~$9/user/month standard; enterprise tier costs more',
             'Open source': 'Partial — CLI open, IDE extensions closed',
             'IDEs': 'VS Code, JetBrains, Neovim',
             'Best for': 'Teams needing codebase-wide context',
@@ -1075,12 +1075,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: "Chaque outil de codage IA a besoin d'un modèle pour réfléchir. Certains peuvent utiliser un modèle tournant sur votre propre ordinateur, donc votre code ne quitte jamais les lieux. D'autres n'utilisent que le modèle cloud de l'éditeur, ce qui signifie que votre code est téléversé. Décidez de ce dont vous avez besoin avant de comparer quoi que ce soit d'autre.",
           },
         ],
-        columns: ['Outil', 'LLM local', 'Prix (juillet 2026)', 'Open source', 'IDE', 'Idéal pour'],
+        columns: ['Outil', 'LLM local', 'Prix', 'Open source', 'IDE', 'Idéal pour'],
         rows: [
           {
             'Outil': 'Continue.dev',
             'LLM local': 'Natif — Ollama, LM Studio, llama.cpp',
-            'Prix (juillet 2026)': 'Gratuit',
+            'Prix': 'Gratuit',
             'Open source': 'Oui — Apache 2.0',
             'IDE': 'VS Code, JetBrains, Vim',
             'Idéal pour': 'Développeurs local-first',
@@ -1088,7 +1088,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Outil': 'Cursor',
             'LLM local': 'Via point de terminaison personnalisé compatible OpenAI',
-            'Prix (juillet 2026)': '~20 $/mois (Pro)',
+            'Prix': '~20 $/mois (Pro)',
             'Open source': 'Non — fermé',
             'IDE': 'Cursor (fork de VS Code)',
             'Idéal pour': "Expérience d'éditeur la plus aboutie",
@@ -1096,7 +1096,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Outil': 'GitHub Copilot',
             'LLM local': 'Non — uniquement cloud',
-            'Prix (juillet 2026)': '~10 $/mois',
+            'Prix': '~10 $/mois',
             'Open source': 'Non — fermé',
             'IDE': 'VS Code, JetBrains, Vim',
             'Idéal pour': "Intégration à l'écosystème GitHub",
@@ -1104,7 +1104,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Outil': 'Sourcegraph Cody',
             'LLM local': "Via configuration d'Ollama",
-            'Prix (juillet 2026)': '~9 $/utilisateur/mois en standard ; le palier entreprise coûte plus cher',
+            'Prix': '~9 $/utilisateur/mois en standard ; le palier entreprise coûte plus cher',
             'Open source': 'Partiel — CLI ouvert, extensions IDE fermées',
             'IDE': 'VS Code, JetBrains, Neovim',
             'Idéal pour': 'Équipes ayant besoin de contexte à l\'échelle du code source',
@@ -2458,12 +2458,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Toda herramienta de programación con IA necesita un modelo con el que pensar. Algunas pueden usar un modelo que se ejecuta en tu propio equipo, de modo que tu código nunca sale del edificio. Otras solo usan el modelo en la nube del proveedor, lo que significa que tu código se sube. Decide cuál de las dos necesitas antes de comparar cualquier otra cosa.',
           },
         ],
-        columns: ['Herramienta', 'LLM local', 'Precio (julio 2026)', 'Código abierto', 'IDEs', 'Ideal para'],
+        columns: ['Herramienta', 'LLM local', 'Precio', 'Código abierto', 'IDEs', 'Ideal para'],
         rows: [
           {
             'Herramienta': 'Continue.dev',
             'LLM local': 'Nativo — Ollama, LM Studio, llama.cpp',
-            'Precio (julio 2026)': 'Gratuito',
+            'Precio': 'Gratuito',
             'Código abierto': 'Sí — Apache 2.0',
             'IDEs': 'VS Code, JetBrains, Vim',
             'Ideal para': 'Desarrolladores local-first',
@@ -2471,7 +2471,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Herramienta': 'Cursor',
             'LLM local': 'Vía endpoint personalizado compatible con OpenAI',
-            'Precio (julio 2026)': '~$20/mes (Pro)',
+            'Precio': '~$20/mes (Pro)',
             'Código abierto': 'No — código cerrado',
             'IDEs': 'Cursor (bifurcación de VS Code)',
             'Ideal para': 'Experiencia de editor más pulida',
@@ -2479,7 +2479,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Herramienta': 'GitHub Copilot',
             'LLM local': 'No — solo nube',
-            'Precio (julio 2026)': '~$10/mes',
+            'Precio': '~$10/mes',
             'Código abierto': 'No — código cerrado',
             'IDEs': 'VS Code, JetBrains, Vim',
             'Ideal para': 'Integración con el ecosistema GitHub',
@@ -2487,7 +2487,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Herramienta': 'Sourcegraph Cody',
             'LLM local': 'Vía configuración de Ollama',
-            'Precio (julio 2026)': '~$9/usuario/mes estándar; el plan empresarial cuesta más',
+            'Precio': '~$9/usuario/mes estándar; el plan empresarial cuesta más',
             'Código abierto': 'Parcial — CLI abierto, extensiones IDE cerradas',
             'IDEs': 'VS Code, JetBrains, Neovim',
             'Ideal para': 'Equipos que necesitan contexto de toda la base de código',
@@ -2932,12 +2932,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Toda ferramenta de programação com IA precisa de um modelo com o qual pensar. Algumas conseguem usar um modelo que roda no seu próprio equipamento, de modo que o seu código nunca sai do prédio. Outras só usam o modelo na nuvem do fornecedor, o que significa que o seu código é enviado. Decida qual das duas você precisa antes de comparar qualquer outra coisa.',
           },
         ],
-        columns: ['Ferramenta', 'LLM local', 'Preço (julho 2026)', 'Código aberto', 'IDEs', 'Ideal para'],
+        columns: ['Ferramenta', 'LLM local', 'Preço', 'Código aberto', 'IDEs', 'Ideal para'],
         rows: [
           {
             'Ferramenta': 'Continue.dev',
             'LLM local': 'Nativo — Ollama, LM Studio, llama.cpp',
-            'Preço (julho 2026)': 'Gratuito',
+            'Preço': 'Gratuito',
             'Código aberto': 'Sim — Apache 2.0',
             'IDEs': 'VS Code, JetBrains, Vim',
             'Ideal para': 'Desenvolvedores local-first',
@@ -2945,7 +2945,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Ferramenta': 'Cursor',
             'LLM local': 'Via endpoint personalizado compatível com OpenAI',
-            'Preço (julho 2026)': '~US$ 20/mês (Pro)',
+            'Preço': '~US$ 20/mês (Pro)',
             'Código aberto': 'Não — código fechado',
             'IDEs': 'Cursor (fork do VS Code)',
             'Ideal para': 'Experiência de editor mais polida',
@@ -2953,7 +2953,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Ferramenta': 'GitHub Copilot',
             'LLM local': 'Não — somente nuvem',
-            'Preço (julho 2026)': '~US$ 10/mês',
+            'Preço': '~US$ 10/mês',
             'Código aberto': 'Não — código fechado',
             'IDEs': 'VS Code, JetBrains, Vim',
             'Ideal para': 'Integração com o ecossistema GitHub',
@@ -2961,7 +2961,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Ferramenta': 'Sourcegraph Cody',
             'LLM local': 'Via configuração de Ollama',
-            'Preço (julho 2026)': '~US$ 9/usuário/mês padrão; o plano empresarial custa mais',
+            'Preço': '~US$ 9/usuário/mês padrão; o plano empresarial custa mais',
             'Código aberto': 'Parcial — CLI aberto, extensões de IDE fechadas',
             'IDEs': 'VS Code, JetBrains, Neovim',
             'Ideal para': 'Times que precisam de contexto de toda a base de código',

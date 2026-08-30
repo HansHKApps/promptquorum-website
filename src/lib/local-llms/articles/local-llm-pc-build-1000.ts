@@ -62,7 +62,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'parts-list': {
         id: 'parts-list',
         title: 'Full Parts List',
-        content: 'Prices are street prices as of July 2026 and will vary by region and retailer.',
+        content: 'Prices are street prices and will vary by region and retailer.',
         image: '/images/pc-build-psu-headroom.svg',
         imageCaption: 'Estimated system power draw vs. PSU capacity: the $1,000 single-GPU build draws ~285W from a 650W PSU (56% headroom); the $2,000 dual-GPU build draws ~475W from an 850W PSU (44% headroom).',
         columns: ['Component', 'Pick', 'Price', 'Why'],

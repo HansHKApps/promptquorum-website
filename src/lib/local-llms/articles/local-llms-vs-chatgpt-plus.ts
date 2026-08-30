@@ -238,7 +238,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'sources': {
           title: 'Sources',
           items: [
-            '[OpenAI ChatGPT Pricing (April 2026)](https://chatgpt.com/pricing) — Official pricing for all 7 ChatGPT tiers including Pro $100 launched April 9, 2026',
+            '[OpenAI ChatGPT Pricing](https://chatgpt.com/pricing) — Official pricing for all 7 ChatGPT tiers including Pro $100 launched April 9, 2026',
             '[Meta Llama 3.3 70B Model Card](https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct) — Official benchmarks for the current flagship open-source 70B model (December 2024)',
             '[NVIDIA GeForce RTX 5060 Ti Specifications](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5060-family/) — Official specs for the 16 GB variant recommended for 13B–24B local inference',
             '[Framework Desktop (AMD Ryzen AI Max 395+)](https://frame.work/desktop) — Specifications for 128 GB unified memory desktop purpose-built for local LLMs',
