@@ -265,6 +265,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       dataTypePatterns: {
+        itemHeadings: true,
         id: 'data-type-patterns',
         title: 'Prompt Patterns for Arrays, Enums, and Nullable Fields',
         content: '**Arrays, enums, and nullable fields are the three most common sources of structured output failures that schema-in-prompt alone does not prevent. Each requires a specific instruction pattern in the prompt.**',
@@ -609,6 +610,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       dataTypePatterns: {
+        itemHeadings: true,
         id: 'data-type-patterns',
         title: 'Prompt-Muster für Arrays, Enums und nullable Felder',
         content: '**Arrays, Enums und nullable Felder sind die drei häufigsten Quellen für strukturierte Output-Fehler, die Schema im Prompt allein nicht verhindert. Jede benötigt ein spezifisches Anweisungsmuster im Prompt.**',
@@ -957,6 +959,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       dataTypePatterns: {
+        itemHeadings: true,
         id: 'data-type-patterns',
         title: 'Patrones de prompt para arrays, enums y campos nullable',
         content: '**Los arrays, enums y campos nullable son las tres fuentes más comunes de fallos de salida estructurada que el esquema en el prompt por sí solo no previene. Cada uno requiere un patrón de instrucción específico en el prompt.**',
@@ -1251,6 +1254,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       dataTypePatterns: {
+        itemHeadings: true,
         id: 'data-type-patterns',
         title: 'أنماط مطالبات للمصفوفات و enums والحقول القابلة للإلغاء',
         content: '**المصفوفات و enums والحقول القابلة للإلغاء هي المصادر الثلاثة الأكثر شيوعاً لإخفاقات المخرجات المنظمة التي لا يمنعها المخطط في الموجّه وحده. كل منها يتطلب نمط تعليمة محدداً في الموجّه.**',
@@ -1478,6 +1482,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       fieldInstructions: {
+        itemHeadings: true,
         id: 'field-instructions',
         title: 'Escrever instruções por campo para saída de alto risco',
         content: [
@@ -1544,6 +1549,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       dataTypePatterns: {
+        itemHeadings: true,
         id: 'data-type-patterns',
         title: 'Padrões de prompt para arrays, enums e campos anuláveis',
         content: '**Arrays, enums e campos anuláveis são as três fontes mais comuns de falhas em saída estruturada que o esquema no prompt sozinho não previne. Cada um requer um padrão de instrução específico no prompt.**',
@@ -1834,6 +1840,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       dataTypePatterns: {
+        itemHeadings: true,
         id: 'data-type-patterns',
         title: 'Modèles de Prompt pour les Tableaux, Énumérations et Champs Nullables',
         content: '**Les arrays, énumérations et champs nullable sont les trois sources courantes d\'erreurs de sortie structurée que schéma seul n\'empêche pas. Chacun nécessite un motif d\'instruction spécifique dans le prompt.**',
@@ -2572,6 +2579,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
       },
       dataTypePatterns: {
+        itemHeadings: true,
         id: 'data-type-patterns',
         title: '数组、列举和可空字段的提示词模式',
         content: '**数组、列举和可空字段是提示词内嵌 schema 本身无法防止的三大最常见结构化输出失败来源。每一类都需要在提示词中使用特定的指令模式。**',
@@ -3022,7 +3030,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             mistake: '프롬프트를 개발한 모델에서만 테스트',
             problem: '구조화 출력 신뢰도는 모델마다 크게 다릅니다 — 스키마 제약에 대한 다른 지시사항 따르기 동작 때문에 GPT-5.6에서 95%인 프롬프트가 Claude Sonnet 5에서 70%로 실패할 수 있습니다.',
-            fix: '모델에 무관한 것으로 처리하기 전에 모든 구조화 출력 프롬프트를 최소 2개 모델로 실행하십시오. PromptQuorum 또는 직접 API 호출을 사용하여 [여러 모델에서 프롬프트를 테스트](/prompt-engineering/how-to-test-prompts-across-models)하십시오.',
+            fix: '모델에 무관한 것으로 처리하기 전에 모든 구조화 출력 프롬프트를 최소 2개 모델로 실행하십시오. PromptQuorum 또는 직접 API 호출을 사용하여 [여러 모델에서 프롬프트를 테스트](/ko/prompt-engineering/how-to-test-prompts-across-models)하십시오.',
           },
           {
             mistake: '정확히 같은 프롬프트로 실패한 출력을 재시도',
@@ -3032,7 +3040,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             mistake: 'JSON 모드를 완전한 구조화 출력 솔루션으로 취급',
             problem: 'JSON 모드는 파싱 불가 출력을 방지하지만 스키마 준수 실패는 막지 못합니다 — JSON 모드를 사용하는 모델은 여전히 누락된 필드, 잘못된 타입, 유효하지 않은 enum 값이 있는 유효한 JSON을 반환할 수 있으며, 이 모두가 다운스트림 유효성 검사에 실패합니다.',
-            fix: 'API 강제 JSON 모드를 사용할 때도 항상 스키마-인-프롬프트와 필드 지시사항을 포함하십시오. API 설정은 [구조화 출력과 JSON 모드](/prompt-engineering/structured-output-and-json-mode)를 참조하십시오 — 이 가이드는 프롬프트 수준의 보완 내용을 다룹니다.',
+            fix: 'API 강제 JSON 모드를 사용할 때도 항상 스키마-인-프롬프트와 필드 지시사항을 포함하십시오. API 설정은 [구조화 출력과 JSON 모드](/ko/prompt-engineering/structured-output-and-json-mode)를 참조하십시오 — 이 가이드는 프롬프트 수준의 보완 내용을 다룹니다.',
           },
         ],
       },
@@ -3079,12 +3087,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: '관련 자료',
         items: [
-          '[구조화 출력과 JSON 모드: 사용 시기 및 방법](/prompt-engineering/structured-output-and-json-mode) — 모델 준수 테이블과 함께 GPT-5.6, Claude, Gemini를 위한 API 수준 JSON 모드 설정',
-          '[구조화 출력을 위한 최적 도구 (2026)](/prompt-engineering/best-tools-structured-output-json) — 구조화 추출 워크플로를 위한 Instructor, Outlines, Pydantic AI, LangChain 비교',
-          '[출력 제어 방법: 포맷, Temperature, 제약 디코딩](/prompt-engineering/control-the-output) — 제약 디코딩 메커니즘, 구조화 작업을 위한 temperature와 top-p, stop 시퀀스',
-          '[프롬프트 품질 평가 방법: 지표, 테스트, 체크리스트](/prompt-engineering/how-to-evaluate-prompt-quality) — 20개 케이스 테스트 세트 구성, 이진 통과/실패 점수, LLM-as-judge 루브릭',
-          '[여러 모델에서 프롬프트를 테스트하는 방법](/prompt-engineering/how-to-test-prompts-across-models) — 모델별 실패를 찾기 위해 GPT-5.6, Claude Sonnet 5, Gemini 2.5 Pro에서 동일한 프롬프트 실행',
-          '[제로샷 vs 퓨샷 프롬프팅](/prompt-engineering/zero-shot-vs-few-shot) — 프롬프트에 예시를 추가할 시기와 다양한 작업 유형에 맞는 예시 수',
+          '[구조화 출력과 JSON 모드: 사용 시기 및 방법](/ko/prompt-engineering/structured-output-and-json-mode) — 모델 준수 테이블과 함께 GPT-5.6, Claude, Gemini를 위한 API 수준 JSON 모드 설정',
+          '[구조화 출력을 위한 최적 도구 (2026)](/ko/prompt-engineering/best-tools-structured-output-json) — 구조화 추출 워크플로를 위한 Instructor, Outlines, Pydantic AI, LangChain 비교',
+          '[출력 제어 방법: 포맷, Temperature, 제약 디코딩](/ko/prompt-engineering/control-the-output) — 제약 디코딩 메커니즘, 구조화 작업을 위한 temperature와 top-p, stop 시퀀스',
+          '[프롬프트 품질 평가 방법: 지표, 테스트, 체크리스트](/ko/prompt-engineering/how-to-evaluate-prompt-quality) — 20개 케이스 테스트 세트 구성, 이진 통과/실패 점수, LLM-as-judge 루브릭',
+          '[여러 모델에서 프롬프트를 테스트하는 방법](/ko/prompt-engineering/how-to-test-prompts-across-models) — 모델별 실패를 찾기 위해 GPT-5.6, Claude Sonnet 5, Gemini 2.5 Pro에서 동일한 프롬프트 실행',
+          '[제로샷 vs 퓨샷 프롬프팅](/ko/prompt-engineering/zero-shot-vs-few-shot) — 프롬프트에 예시를 추가할 시기와 다양한 작업 유형에 맞는 예시 수',
         ],
       },
       sources: {

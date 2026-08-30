@@ -407,12 +407,20 @@ unprefixed URLs, dropping readers onto the English page; ko was the only locale 
 (37% bare). Every target resolved through its cluster's `slugs.ts` and confirmed to have a ko
 block first, so none lands on a `/ko/` URL serving English.
 
-**5 files held back**, tripping the table-cell hook on pre-existing full-sentence cells in their
-de/es/fr/pt/ar blocks — content this change does not touch:
-`local-llm-pc-build-1000.ts`, `local-llm-pc-build-2000.ts`,
-`elevenlabs-vs-local-tts-piper-xtts.ts`, `prompts-for-reliable-structured-data.ts`,
-`seo-meets-ai.ts`. Clearing them means converting those sections to `itemHeadings: true`, a
-rendering change in every locale.
+**5 files were held back** on the first pass (pre-existing full-sentence cells tripping the
+table-cell hook), then lost their uncommitted edits in the branch incident. **Completed in
+`f5c0f6c22`** — final 29 links prefixed. **Zero bare cluster links remain in any ko block
+site-wide.**
+
+The blocker was cleared two different ways, because one remedy did not fit both:
+
+- **power-local-llm + prompt-engineering (32 sections):** set `itemHeadings: true`, the documented
+  remedy (GEO_WRITING_GUIDELINES rule 6). Verified first that `PowerLocalLLMPostClient` and
+  `PromptEngineeringPostClient` actually implement the flag — they do, so those sections now
+  render as per-row cards instead of a table with 110+ char cells. That is the real mobile fix.
+- **local-llms (2 files):** `LocalLLMsPostClient` has **zero** references to `itemHeadings`.
+  Setting it there would have silenced the linter while leaving the rendering exactly as broken.
+  Trimmed the 8 offending fr/es/pt cells instead — 112–120 chars down to 59–86, meaning preserved.
 
 ## 4. hreflang `zh-Hans` — DONE (`608bbd0e4`)
 
