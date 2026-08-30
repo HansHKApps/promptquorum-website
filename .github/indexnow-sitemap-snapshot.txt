@@ -467,6 +467,7 @@ https://www.promptquorum.com/prompt-engineering/prompt-documentation-templates
 https://www.promptquorum.com/prompt-engineering/prompt-engineering-for-content-teams
 https://www.promptquorum.com/prompt-engineering/prompt-engineering-for-developers-workflow
 https://www.promptquorum.com/prompt-engineering/prompt-engineering-for-support-operations
+https://www.promptquorum.com/prompt-engineering/prompt-engineering-glossary
 https://www.promptquorum.com/prompt-engineering/prompt-engineering-setup-small-teams
 https://www.promptquorum.com/prompt-engineering/prompt-engineering-vs-fine-tuning
 https://www.promptquorum.com/prompt-engineering/prompt-engineering-vs-rag-decision
@@ -492,6 +493,7 @@ https://www.promptquorum.com/prompt-engineering/structured-output-and-json-mode
 https://www.promptquorum.com/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference
 https://www.promptquorum.com/prompt-engineering/teaching-with-ai
 https://www.promptquorum.com/prompt-engineering/temperature-and-top-p-control-ai-creativity
+https://www.promptquorum.com/prompt-engineering/the-single-step-prompt-method
 https://www.promptquorum.com/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting
 https://www.promptquorum.com/prompt-engineering/trace-framework
 https://www.promptquorum.com/prompt-engineering/tree-of-thought-and-react
