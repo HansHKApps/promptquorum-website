@@ -420,6 +420,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'La RTX 3060 12 GB (170–250 $ de segunda mano) mueve Qwen3 14B a 9–12 tok/s y es la mejor GPU económica para LLM locales en 2026.' },
+            { type: 'plain-terms', text: 'Lo que decide no es la potencia bruta sino la VRAM: con 12 GB entra un modelo de 14B en 4 bits; la versión de 6 GB solo llega a modelos de 3B. Qwen3 8B va a 16–20 tok/s y Mistral Small a 18 tok/s en la misma tarjeta.' },
+          ],
           items: [
             '**Mejor opción por presupuesto:** Menos de $200 — RX 6700 XT 12GB ($150–200, la más barata, fricción de configuración AMD) o RTX A4000 16GB si la encuentras por menos de $230 (mejor VRAM por dólar). ~$220 usada — RTX 3060 12GB (mejor opción de segunda mano). ~$390–400 nueva — RTX 5060 Ti 16GB (mejor tarjeta nueva, más margen de VRAM). Menos de $500 — RTX 4070 Super 12GB (la más rápida, 25–30 tok/s).',
             '**RTX 3060 12GB** ($170–220 usada): Ejecuta todos los modelos 7B-8B en Q4/Q5 y la mayoría de los densos 13B-14B en Q4. Mejor opción económica de segunda mano.',
@@ -755,6 +759,10 @@ rows: [
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'تشغّل بطاقة RTX 3060 بسعة 12 غيغابايت (170–250 دولاراً مستعملة) نموذج Qwen3 14B بسرعة 9–12 رمزاً في الثانية، وهي أفضل بطاقة اقتصادية للنماذج المحلية في 2026.' },
+            { type: 'plain-terms', text: 'الحاسم هنا ليس قوة المعالجة بل حجم الذاكرة: 12 غيغابايت تكفي لنموذج 14B بدقة 4 بت، بينما نسخة 6 غيغابايت لا تتجاوز نماذج 3B. وعلى البطاقة نفسها يعمل Qwen3 8B بسرعة 16–20 رمزاً في الثانية وMistral Small بسرعة 18.' },
+          ],
           items: [
             '**أفضل خيار حسب الميزانية:** أقل من 200$ — RX 6700 XT 12GB (150–200$، الأرخص، احتكاك إعداد AMD) أو RTX A4000 16GB إذا وجدتها بأقل من 230$ (أفضل VRAM لكل دولار). ~220$ مستعملة — RTX 3060 12GB (الأفضل مستعملة). ~390–400$ جديدة — RTX 5060 Ti 16GB (أفضل خيار جديد، هامش VRAM أكبر). أقل من 500$ — RTX 4070 Super 12GB (الأسرع، 25–30 tok/ث).',
             '**RTX 3060 12GB** (170–220 دولار مستعملة): تشغّل جميع نماذج 7B-8B بصيغة Q4/Q5 ومعظم النماذج الكثيفة 13B-14B بصيغة Q4. أفضل خيار اقتصادي مستعمل.',
@@ -1367,7 +1375,7 @@ rows: [
         { label: 'Beste Modelle nach Anwendungsfall auf der RTX 3060', anchor: '#best-by-use-case' },
       ],
       sections: {
-        tldr: { id: 'key-takeaways', isTldr: true, items: [
+        tldr: { id: 'key-takeaways', isTldr: true, snippetBlocks: [{ type: 'one-sentence', text: 'Die RTX 3060 12 GB (gebraucht 170–250 $) fährt Qwen3 14B mit 9–12 Tok/s und ist damit die beste günstige GPU für lokale LLMs 2026.' }, { type: 'plain-terms', text: 'Entscheidend ist nicht die Rechenleistung, sondern der VRAM: In 12 GB passt ein 14B-Modell in 4 Bit, die 6-GB-Variante schafft nur 3B-Modelle. Auf derselben Karte laufen Qwen3 8B mit 16–20 Tok/s und Mistral Small mit 18 Tok/s.' }], items: [
           '**Beste Wahl nach Budget:** Unter 200 € — RX 6700 XT 12GB (200–250 €, am günstigsten, AMD-Setup-Reibung) oder RTX A4000 16GB, falls unter ca. 300 € zu finden (bestes VRAM pro Euro). Ca. 170–200 € gebraucht — RTX 3060 12GB (beste gebrauchte Wahl). Ca. 400–420 € neu — RTX 5060 Ti 16GB (beste Neukauf-Wahl, mehr VRAM-Spielraum). Unter 500 € — RTX 4070 Super 12GB (am schnellsten mit 25–30 Tok/s).',
           '**RTX 3060 12GB** (170–200 € gebraucht): Betreibt jedes 7B-8B-Modell bei Q4/Q5 und die meisten dichten 13B-14B bei Q4. Beste gebrauchte Budget-Wahl.',
           '**RTX 5060 Ti 16GB** (ca. 400–420 € neu): Aktuelle Generation mit 4 GB mehr VRAM als die 3060 — passt komfortabel für 13B-14B-Modelle mit Spielraum für größere Kontextfenster. Beste Neukauf-Budget-Wahl.',
@@ -1528,7 +1536,7 @@ rows: [
         { label: 'Meilleurs modèles par usage sur RTX 3060', anchor: '#best-by-use-case' },
       ],
       sections: {
-        tldr: { id: 'key-takeaways', isTldr: true, items: [
+        tldr: { id: 'key-takeaways', isTldr: true, snippetBlocks: [{ type: 'one-sentence', text: 'La RTX 3060 12 Go (170–250 $ d\'occasion) fait tourner Qwen3 14B à 9–12 tok/s : c\'est la meilleure carte à petit budget pour les LLM locaux en 2026.' }, { type: 'plain-terms', text: 'Ce qui compte n\'est pas la puissance de calcul mais la VRAM : 12 Go suffisent pour un modèle 14B en 4 bits, alors que la version 6 Go plafonne aux modèles 3B. Sur la même carte, Qwen3 8B atteint 16–20 tok/s et Mistral Small 18 tok/s.' }], items: [
           '**Meilleur choix par budget :** Moins de 200 € — RX 6700 XT 12GB (140–190 €, la moins chère, friction de configuration AMD) ou RTX A4000 16GB si trouvée sous 220 € (meilleur rapport VRAM/€). ~170–200 € d\'occasion — RTX 3060 12GB (meilleur choix d\'occasion). ~400–420 € neuve — RTX 5060 Ti 16GB (meilleur choix neuf, plus de marge de VRAM). Moins de 450 € — RTX 4070 Super 12GB (la plus rapide à 25–30 tok/s).',
           '**RTX 3060 12GB** (170–200 € d\'occasion) : fait tourner tous les modèles 7B-8B en Q4/Q5 et la plupart des denses 13B-14B en Q4. Meilleur choix économique d\'occasion.',
           '**RTX 5060 Ti 16GB** (env. 400–420 € neuve) : carte de génération actuelle avec 4 Go de VRAM en plus que la 3060 — accueille confortablement les modèles 13B-14B avec de la marge pour des fenêtres de contexte plus larges. Meilleur choix économique neuf.',
@@ -2104,6 +2112,10 @@ rows: [
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'RTX 3060 12GB(중고 170~250달러)는 Qwen3 14B를 초당 9~12토큰으로 실행하며, 2026년 로컬 LLM용 가성비 GPU로는 최선의 선택입니다.' },
+            { type: 'plain-terms', text: '관건은 연산 성능이 아니라 VRAM입니다. 12GB면 14B 모델을 4비트로 올릴 수 있지만 6GB 버전은 3B 모델까지가 한계입니다. 같은 카드에서 Qwen3 8B는 초당 16~20토큰, Mistral Small은 초당 18토큰이 나옵니다.' },
+          ],
           items: [
             '**예산별 추천:** $200 미만 — RX 6700 XT 12GB($150–200, 가장 저렴, AMD 설정 번거로움) 또는 $230 미만이면 RTX A4000 16GB(달러당 최고의 VRAM). ~$220 중고 — RTX 3060 12GB(최고의 중고 선택). ~$390–400 신품 — RTX 5060 Ti 16GB(최고의 신품 선택, 더 여유로운 VRAM). $500 미만 — RTX 4070 Super 12GB(가장 빠름, 초당 25–30토큰).',
             '**RTX 3060 12GB** (중고 $170–220): Q4/Q5로 모든 7B-8B 모델과 대부분의 밀집형 13B-14B 모델을 Q4로 실행합니다. 최고의 중고 예산형 선택입니다.',

@@ -499,6 +499,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Phi-4 Mini (3,8B) alcanza unos 12 tokens/seg en una CPU moderna con 2,3 GB de RAM, lo que la convierte en la mejor opción solo-CPU para chat general.' },
+            { type: 'plain-terms', text: 'No hace falta tarjeta gráfica: estos modelos se ejecutan con la RAM del sistema. Van entre 10 y 30 veces más lentos que en GPU, pero no ocupan VRAM. Para chat general elige Phi-4 Mini, para velocidad Gemma 4 E2B (1,5 GB) y para mejor calidad Llama 3.2 3B, todos con Ollama o llama.cpp en modo CPU.' },
+          ],
           items: [
             'La inferencia solo con CPU funciona bien para modelos de 3–13B en procesadores modernos con 8–32 GB de RAM.',
             'Mejores modelos CPU: Phi-4 Mini (3,8B, 2,3 GB, 12 tokens/seg), Gemma 4 E2B (1,5 GB, 15 tokens/seg), Llama 3.2 3B (2 GB, 10 tokens/seg).',
@@ -837,6 +841,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'يعمل Phi-4 Mini (3.8B) بنحو 12 رمزًا في الثانية على معالج حديث مع 2.3 غيغابايت من الذاكرة، وهو أفضل خيار يعتمد على المعالج وحده للدردشة العامة.' },
+            { type: 'plain-terms', text: 'لا حاجة إلى بطاقة رسومات: هذه النماذج تعمل من ذاكرة النظام. أبطأ من وحدة معالجة الرسومات بنحو 10 إلى 30 مرة، لكنها لا تستهلك ذاكرة VRAM إطلاقًا. للدردشة العامة اختر Phi-4 Mini، وللسرعة Gemma 4 E2B بحجم 1.5 غيغابايت، وللجودة Llama 3.2 3B — جميعها عبر Ollama أو llama.cpp في وضع المعالج.' },
+          ],
           items: [
             'الاستدلال باستخدام CPU فقط يعمل جيداً لنماذج 3–13B على المعالجات الحديثة المزودة بذاكرة RAM بسعة 8–32 GB.',
             'أفضل نماذج CPU: Phi-4 Mini (3.8B، 2.3 GB، 12 token/ثانية)، وGemma 4 E2B (1.5 GB، 15 token/ثانية)، وLlama 3.2 3B (2 GB، 10 token/ثانية).',
@@ -1173,6 +1181,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'O Phi-4 Mini (3,8B) roda a cerca de 12 tokens/s em uma CPU moderna usando 2,3 GB de RAM, sendo a melhor escolha somente-CPU para chat geral.' },
+            { type: 'plain-terms', text: 'Não é preciso placa de vídeo: esses modelos rodam na memória do sistema. São de 10 a 30 vezes mais lentos que na GPU, mas não consomem VRAM. Para chat geral use o Phi-4 Mini, para velocidade o Gemma 4 E2B (1,5 GB) e para qualidade o Llama 3.2 3B, todos via Ollama ou llama.cpp em modo CPU.' },
+          ],
           items: [
             'A inferência somente com CPU funciona bem para modelos de 3-13B em processadores modernos com 8-32 GB de RAM.',
             'Melhores modelos CPU: Phi-4 Mini (3,8B, 2,3 GB, 12 tokens/s), Gemma 4 E2B (1,5 GB, 15 tokens/s), Llama 3.2 3B (2 GB, 10 tokens/s).',
@@ -1502,6 +1514,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Phi-4 Mini (3,8B) läuft mit rund 12 Token/Sekunde auf einer modernen CPU und braucht dafür 2,3 GB RAM — die beste CPU-only-Wahl für allgemeines Chatten.' },
+            { type: 'plain-terms', text: 'Eine Grafikkarte ist nicht nötig: Diese Modelle laufen aus dem Arbeitsspeicher. Sie sind 10- bis 30-mal langsamer als auf einer GPU, belegen dafür aber keinerlei VRAM. Für allgemeines Chatten nehmen Sie Phi-4 Mini, für Tempo Gemma 4 E2B (1,5 GB) und für Qualität Llama 3.2 3B — jeweils über Ollama oder llama.cpp im CPU-Modus.' },
+          ],
           items: [
             'CPU-only-Inferenz funktioniert gut für 3–13B-Modelle auf modernen Prozessoren mit 8–32 GB RAM.',
             'Beste CPU-Modelle: Phi-4 Mini (3,8B, 2,3 GB, 12 Token/Sekunde), Gemma 4 E2B (1,5 GB, 15 Token/Sekunde), Llama 3.2 3B (2 GB, 10 Token/Sekunde).',
@@ -1818,6 +1834,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Phi-4 Mini (3,8B) tourne à environ 12 tokens/seconde sur un processeur récent avec 2,3 Go de RAM, ce qui en fait le meilleur choix CPU-only pour la discussion générale.' },
+            { type: 'plain-terms', text: 'Pas besoin de carte graphique : ces modèles tournent sur la mémoire système. Ils sont 10 à 30 fois plus lents que sur GPU, mais ne consomment aucune VRAM. Pour discuter, prenez Phi-4 Mini ; pour la vitesse, Gemma 4 E2B (1,5 Go) ; pour la qualité, Llama 3.2 3B — via Ollama ou llama.cpp en mode CPU.' },
+          ],
           items: [
             'L\'inférence CPU-only fonctionne bien pour les modèles 3–13B sur processeurs modernes avec 8–32 GB RAM.',
             'Meilleurs modèles CPU: Phi-4 Mini (3.8B, 2.3 GB, 12 tokens/sec), Gemma 4 E2B (1.5 GB, 15 tokens/sec), Llama 3.2 3B (2 GB, 10 tokens/sec).',
@@ -2130,6 +2150,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Phi-4 Mini（3.8B）は最新CPU上で約12トークン/秒、必要メモリは2.3 GBで、一般的なチャット用途ではCPUのみの構成として最良の選択肢です。' },
+            { type: 'plain-terms', text: 'グラフィックスカードは不要で、これらのモデルはシステムメモリだけで動きます。GPUに比べて10〜30倍遅い代わりに、VRAMをまったく使いません。一般的なチャットならPhi-4 Mini、速度重視ならGemma 4 E2B（1.5 GB）、品質重視ならLlama 3.2 3Bを、OllamaまたはllamaCPPのCPUモードで実行します。' },
+          ],
           items: [
             'CPU-only 推論は 8–32 GB RAM 搭載のモダン CPU 上の 3–13B モデルで効果的です。',
             '最高の CPU モデル: Phi-4 Mini (3.8B、2.3 GB、12 トークン/秒)、Gemma 4 E2B (1.5 GB、15 トークン/秒)、Llama 3.2 3B (2 GB、10 トークン/秒)。',
@@ -2442,6 +2466,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Phi-4 Mini（3.8B）在现代 CPU 上约为 12 令牌/秒，仅需 2.3 GB 内存，是纯 CPU 环境下通用聊天的最佳选择。' },
+            { type: 'plain-terms', text: '不需要显卡，这些模型完全依靠系统内存运行。速度比 GPU 慢 10 到 30 倍，但完全不占用显存。通用聊天选 Phi-4 Mini，追求速度选 Gemma 4 E2B（1.5 GB），看重质量选 Llama 3.2 3B，均通过 Ollama 或 llama.cpp 的 CPU 模式运行。' },
+          ],
           items: [
             'CPU-only 推理对搭载 8–32 GB RAM 的现代处理器上的 3–13B 模型有效。',
             '最佳 CPU 模型: Phi-4 Mini (3.8B、2.3 GB、12 令牌/秒)、Gemma 4 E2B (1.5 GB、15 令牌/秒)、Llama 3.2 3B (2 GB、10 令牌/秒)。',
@@ -2768,6 +2796,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Phi-4 Mini(3.8B)는 최신 CPU에서 약 12토큰/초로 동작하며 2.3GB 램만 사용해, 일반 채팅용 CPU 전용 모델로는 가장 나은 선택입니다.' },
+            { type: 'plain-terms', text: '그래픽카드가 없어도 됩니다. 이 모델들은 시스템 메모리만으로 실행됩니다. GPU보다 10~30배 느리지만 VRAM은 전혀 쓰지 않습니다. 일반 채팅은 Phi-4 Mini, 속도가 중요하면 Gemma 4 E2B(1.5GB), 품질이 중요하면 Llama 3.2 3B를 Ollama나 llama.cpp의 CPU 모드로 실행하세요.' },
+          ],
           items: [
             'CPU 전용 추론은 8~32GB RAM을 탑재한 최신 프로세서에서 3~13B 모델을 효과적으로 실행합니다.',
             '최고의 CPU 모델: Phi-4 Mini(3.8B, 2.3GB, 12토큰/초), Gemma 4 E2B(1.5GB, 15토큰/초), Llama 3.2 3B(2GB, 10토큰/초).',

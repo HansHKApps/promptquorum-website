@@ -1012,6 +1012,10 @@ LOCAL_LLM_MODEL=qwen3.6:27b
       tldr: {
         id: 'key-takeaways',
         isTldr: true,
+        snippetBlocks: [
+          { type: 'one-sentence', text: 'Rodar o Qwen 3.6 27B localmente custa R$ 0 por token depois do hardware, mantém todos os dados na sua máquina e entrega mais de 35 tokens/s em uma RTX 4090.' },
+          { type: 'plain-terms', text: 'Basta um `ollama pull qwen3.6:27b` em qualquer máquina com 16 GB de VRAM, ou um Apple Silicon com 32 GB ou mais de memória unificada. Quem prefere interface gráfica pode usar o LM Studio. Um detalhe importante: defina `num_ctx` para 32768 ou mais, senão o contexto fica limitado ao padrão.' },
+        ],
         items: [
           '**Dois caminhos**: Ollama (CLI, headless, pronto para API) ou LM Studio (GUI, sem CLI). Ambos executam o Qwen 3.6 27B localmente.',
           '**Correção crítica**: O Ollama usa `num_ctx 2048` por padrão. Isso trunca a maioria dos prompts reais. Defina `num_ctx 32768` no seu Modelfile ou via parâmetro `num_ctx` da API.',
