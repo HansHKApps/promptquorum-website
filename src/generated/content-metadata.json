@@ -1,7 +1,7 @@
 {
   "local-llms": {
     "local-llm-lgpd-compliance-brazil-2026": {
-      "dateModified": "2026-06-14",
+      "dateModified": "2026-08-29",
       "lastFactChecked": null,
       "publishDate": "2026-06-14",
       "hasSections": true,
@@ -99,7 +99,7 @@
       ]
     },
     "what-are-local-llms": {
-      "dateModified": "2026-08-26",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -126,7 +126,7 @@
       ]
     },
     "how-to-install-ollama": {
-      "dateModified": "2026-06-21",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -153,7 +153,7 @@
       ]
     },
     "how-to-install-lm-studio": {
-      "dateModified": "2026-06-20",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -180,7 +180,7 @@
       ]
     },
     "run-first-local-llm": {
-      "dateModified": "2026-08-26",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -207,8 +207,8 @@
       ]
     },
     "best-beginner-local-llm-models": {
-      "dateModified": "2026-07-14",
-      "lastFactChecked": "2026-07-14",
+      "dateModified": "2026-08-28",
+      "lastFactChecked": "2026-08-28",
       "publishDate": "2026-04-04",
       "hasSections": true,
       "langs": [
@@ -229,16 +229,16 @@
         },
         {
           "url": "/images/best-beginner-local-llm-models-comparison-table-hero-en.webp",
-          "title": "Five beginner local LLM models compared by RAM, CPU inference speed, context window, and use case -- all benchmarked at Q4_K_M quantization via Ollama. Llama 3.2 3B is the recommended first model; Gemma 3 2B is fastest at 1.7 GB RAM."
+          "title": "Five beginner local LLM models compared by RAM, CPU inference speed, context window, and use case -- all benchmarked at Q4_K_M quantization via Ollama. Llama 3.2 3B is the recommended first model; Gemma 4 E2B is fastest at 1.7 GB RAM."
         },
         {
           "url": "/images/best-beginner-local-llm-models-ram-decision-en.svg",
-          "title": "RAM-based model selection guide -- Gemma 3 2B at ≤4 GB RAM, Llama 3.2 3B at 8 GB (best first model), Qwen3 8B at 8 GB+ for multilingual and coding workloads. All run via `ollama run` with no manual configuration."
+          "title": "RAM-based model selection guide -- Gemma 4 E2B at ≤4 GB RAM, Llama 3.2 3B at 8 GB (best first model), Qwen3 8B at 8 GB+ for multilingual and coding workloads. All run via `ollama run` with no manual configuration."
         }
       ]
     },
     "local-llm-one-click-installers": {
-      "dateModified": "2026-06-19",
+      "dateModified": "2026-08-30",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -273,7 +273,7 @@
       ]
     },
     "troubleshooting-local-llm-setup": {
-      "dateModified": "2026-07-15",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -347,7 +347,7 @@
       ]
     },
     "local-llm-security-privacy-checklist": {
-      "dateModified": "2026-06-19",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -436,7 +436,7 @@
       ]
     },
     "qwen-vs-llama-vs-mistral": {
-      "dateModified": "2026-06-19",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -454,7 +454,7 @@
       "images": [
         {
           "url": "/images/qwen-vs-llama-vs-mistral-benchmark-comparison-hero-en.webp",
-          "title": "Benchmark comparison (June 2026): Qwen 3.6 27B (77.2% SWE-bench) leads dense coding and fits 24 GB at Q4. SWE-bench (real-world multi-file coding) is now more relevant than HumanEval for evaluating coding models. Llama 4 Scout uses a 16-expert MoE architecture (17B active / 109B total) but needs ~55 GB VRAM at Q4."
+          "title": "Benchmark comparison (June 2026): Qwen3.8-27B (61.7% SWE-bench) leads dense coding and fits 24 GB at Q4. SWE-bench (real-world multi-file coding) is now more relevant than HumanEval for evaluating coding models. Llama 4 Scout uses a 16-expert MoE architecture (17B active / 109B total) but needs ~55 GB VRAM at Q4."
         },
         {
           "url": "/images/qwen-vs-llama-vs-mistral-multilingual-support-en.svg",
@@ -466,7 +466,7 @@
         },
         {
           "url": "/images/qwen-vs-llama-vs-mistral-task-winners-en.svg",
-          "title": "Task winner matrix (May 2026): Qwen 3.6 wins dense coding (77.2% SWE-bench); Devstral wins agentic; Codestral wins IDE autocomplete; Llama 4 Scout dominates long-context; Mistral Small 3.1 best quality-per-GB."
+          "title": "Task winner matrix (May 2026): Qwen3.8-27B wins dense coding (61.7% SWE-bench); Devstral wins agentic; Codestral wins IDE autocomplete; Llama 4 Scout dominates long-context; Mistral Small 3.1 best quality-per-GB."
         },
         {
           "url": "/images/qwen-vs-llama-vs-mistral-size-classes-en.svg",
@@ -529,7 +529,7 @@
       ]
     },
     "best-local-llms-for-creative-writing": {
-      "dateModified": "2026-07-29",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -591,7 +591,7 @@
       ]
     },
     "70b-models-consumer-hardware": {
-      "dateModified": "2026-08-26",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -653,7 +653,7 @@
       ]
     },
     "multilingual-local-llms": {
-      "dateModified": "2026-06-21",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -671,12 +671,12 @@
       "images": [
         {
           "url": "/multilingual-llm-comparison-en.svg",
-          "title": "Multilingual LLM comparison 2026: Qwen3 7B leads across all Asian languages (Chinese, Japanese, Korean with ★★★★-★★★★★ ratings). Mistral Small matches Qwen3 on European languages (French/German). Star ratings (1-5) reflect 2026 benchmarks."
+          "title": "Multilingual LLM comparison 2026: Qwen3 8B leads across all Asian languages (Chinese, Japanese, Korean with ★★★★-★★★★★ ratings). Mistral Small matches Qwen3 on European languages (French/German). Star ratings (1-5) reflect 2026 benchmarks."
         }
       ]
     },
     "long-context-local-llms": {
-      "dateModified": "2026-06-19",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -711,7 +711,7 @@
       ]
     },
     "top-open-source-models-ollama": {
-      "dateModified": "2026-07-14",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -729,7 +729,7 @@
       "images": [
         {
           "url": "/images/top-open-source-models-ollama-use-case-picks-hero-en.webp",
-          "title": "Ollama model selection by use case: pick qwen3.6:27b (best overall, 77.2% SWE-bench) for chat and coding, kimi-k2.6 for frontier coding, gpt-oss:20b on 16 GB, deepseek-r1:7b for math."
+          "title": "Ollama model selection by use case: pick qwen3.8:27b (best overall, 61.7% SWE-bench) for chat and coding, kimi-k2.6 for frontier coding, gpt-oss:20b on 16 GB, deepseek-r1:7b for math."
         },
         {
           "url": "/images/ollama-deepseek-r1-reasoning-comparison-en.svg",
@@ -741,12 +741,12 @@
         },
         {
           "url": "/images/top-open-source-models-ollama-top-models-hero-en.webp",
-          "title": "Top Ollama models July 2026: Qwen 3.6 27B (best overall, 24 GB Q4), Kimi K2.6, Laguna XS 2.1 (agentic coding), gpt-oss:20b. Llama 4 Scout for 10M-token context (~55 GB)."
+          "title": "Top Ollama models 2026: Qwen3.8-27B (best overall, 24 GB Q4), Kimi K2.6, Laguna XS 2.1 (agentic coding), gpt-oss:20b. Llama 4 Scout for 10M-token context (~55 GB)."
         }
       ]
     },
     "local-llm-model-updates-2026": {
-      "dateModified": "2026-07-30",
+      "dateModified": "2026-08-29",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -804,7 +804,7 @@
       ]
     },
     "local-llms-vs-cloud-apis": {
-      "dateModified": "2026-07-13",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -831,7 +831,7 @@
       ]
     },
     "ollama-vs-lm-studio": {
-      "dateModified": "2026-06-19",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -885,7 +885,7 @@
       ]
     },
     "text-generation-webui-vs-vllm-vs-llamacpp": {
-      "dateModified": "2026-08-27",
+      "dateModified": "2026-08-29",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -903,7 +903,7 @@
       "images": [
         {
           "url": "/images/inference-engine-feature-comparison-en.svg",
-          "title": "Feature comparison: llama.cpp (C++ library, GGUF, CUDA + Metal) vs vLLM (Python framework, 100-1000+ tok/s GPU, NVIDIA only) vs Text-Generation-WebUI (Python app, GGUF + safetensors, LoRA built-in)."
+          "title": "Feature comparison: llama.cpp (C++ library, GGUF, CUDA + Metal) vs vLLM (Python framework, 100-1000+ tok/s GPU, NVIDIA + AMD ROCm/Intel/CPU) vs Text-Generation-WebUI (Python app, GGUF + safetensors, LoRA built-in)."
         },
         {
           "url": "/images/inference-engine-performance-benchmarks-en.svg",
@@ -916,7 +916,7 @@
       ]
     },
     "local-llm-openai-compatible-api": {
-      "dateModified": "2026-07-14",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -946,7 +946,7 @@
         },
         {
           "url": "/images/openai-compatible-function-calling-en.svg",
-          "title": "Function calling flow with Ollama: the local model returns tool_call JSON, and your app executes the function -- supported by Llama 4 Scout, Qwen3 8B, Gemma 4 9B, and Mistral."
+          "title": "Function calling flow with Ollama: the local model returns tool_call JSON, and your app executes the function -- supported by Llama 4 Scout, Qwen3 8B, Gemma 4 26B-A4B, and Mistral."
         },
         {
           "url": "/images/openai-compatible-platform-comparison-en.svg",
@@ -955,7 +955,7 @@
       ]
     },
     "lm-studio-advanced-features": {
-      "dateModified": "2026-06-20",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -1009,7 +1009,7 @@
       ]
     },
     "best-local-rag-tools": {
-      "dateModified": "2026-06-20",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -1036,7 +1036,7 @@
       ]
     },
     "desktop-vs-webui-local-llm": {
-      "dateModified": "2026-06-20",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -1063,7 +1063,7 @@
       ]
     },
     "local-llms-with-vscode-cursor": {
-      "dateModified": "2026-07-13",
+      "dateModified": "2026-08-29",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -1085,12 +1085,12 @@
         },
         {
           "url": "/images/local-llms-with-vscode-cursor-best-coding-models-table-en.svg",
-          "title": "Comparison table of five local coding models -- Qwen3-Coder 7B, Llama Code 7B/13B, Mistral Small, and DeepSeek-Coder 6.7B -- showing HumanEval scores, VRAM requirements, and speed for use in VS Code and Cursor."
+          "title": "Comparison table of five local coding models -- Qwen3-Coder 7B, Code Llama 7B/13B, Mistral Small, and DeepSeek-Coder 6.7B -- showing HumanEval scores, VRAM requirements, and speed for use in VS Code and Cursor."
         }
       ]
     },
     "headless-local-llms": {
-      "dateModified": "2026-06-20",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -1210,7 +1210,7 @@
       ]
     },
     "gpu-vs-cpu-vs-apple-silicon": {
-      "dateModified": "2026-06-19",
+      "dateModified": "2026-08-29",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -1241,7 +1241,7 @@
       ]
     },
     "apple-silicon-vs-nvidia-gpu-local-llm": {
-      "dateModified": "2026-08-27",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-05-15",
       "hasSections": true,
@@ -1286,7 +1286,7 @@
       ]
     },
     "best-gpus-for-local-llms": {
-      "dateModified": "2026-08-26",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -1313,7 +1313,7 @@
       ]
     },
     "run-70b-models-24gb-vram": {
-      "dateModified": "2026-08-27",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -1375,7 +1375,7 @@
       ]
     },
     "multi-gpu-local-llms": {
-      "dateModified": "2026-08-27",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -1410,7 +1410,7 @@
       ]
     },
     "laptop-vs-desktop-local-llm": {
-      "dateModified": "2026-08-26",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -1445,7 +1445,7 @@
       ]
     },
     "mobile-local-llms": {
-      "dateModified": "2026-08-27",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -1484,7 +1484,7 @@
       ]
     },
     "local-rag-2026": {
-      "dateModified": "2026-06-20",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -1511,7 +1511,7 @@
       ]
     },
     "fine-tuning-local-llms-lora": {
-      "dateModified": "2026-06-20",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -1542,7 +1542,7 @@
       ]
     },
     "local-ai-agents-langgraph-ollama": {
-      "dateModified": "2026-04-24",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -1646,7 +1646,7 @@
       ]
     },
     "local-llms-for-coding-workflows": {
-      "dateModified": "2026-07-14",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -1677,7 +1677,7 @@
       ]
     },
     "multimodal-local-llms": {
-      "dateModified": "2026-06-20",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -1695,7 +1695,7 @@
       "images": []
     },
     "local-vs-cloud-agents": {
-      "dateModified": "2026-07-13",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -1725,7 +1725,7 @@
         },
         {
           "url": "/images/local-vs-cloud-agents-hybrid-flow-en.svg",
-          "title": "Hybrid approach: route simple queries to local agents (Llama 13B, 2 sec, free) and escalate complex reasoning to cloud (GPT-4, 200ms, $0.02). Result: 80% cost reduction with zero quality loss on hard problems."
+          "title": "Hybrid approach: route simple queries to local agents (Llama 13B, 2 sec, free) and escalate complex reasoning to cloud (GPT-5.6, 200ms, $0.02). Result: 80% cost reduction with zero quality loss on hard problems."
         }
       ]
     },
@@ -1769,7 +1769,7 @@
       ]
     },
     "future-of-local-llms": {
-      "dateModified": "2026-08-27",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -1796,7 +1796,7 @@
       ]
     },
     "why-enterprises-use-local-llms": {
-      "dateModified": "2026-07-13",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -1823,7 +1823,7 @@
       ]
     },
     "on-prem-air-gapped-local-llm": {
-      "dateModified": "2026-06-21",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -1859,7 +1859,7 @@
       "images": []
     },
     "scaling-local-llms-enterprise": {
-      "dateModified": "2026-07-13",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -1877,7 +1877,7 @@
       "images": []
     },
     "corporate-rag-local-llms": {
-      "dateModified": "2026-06-20",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-04",
       "hasSections": true,
@@ -1922,7 +1922,7 @@
       ]
     },
     "rtx-5090-vs-rtx-4090-local-llm": {
-      "dateModified": "2026-08-27",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-05",
       "hasSections": true,
@@ -1949,7 +1949,7 @@
       ]
     },
     "used-gpus-for-local-llms": {
-      "dateModified": "2026-06-20",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-05",
       "hasSections": true,
@@ -1967,7 +1967,7 @@
       "images": []
     },
     "how-much-vram-local-llm": {
-      "dateModified": "2026-08-26",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-05",
       "hasSections": true,
@@ -1985,7 +1985,7 @@
       "images": [
         {
           "url": "/images/how-much-vram-local-llm-vram-by-size-hero-en.webp",
-          "title": "Rule of thumb: divide model size in billions by 2 to get raw Q4 VRAM in GB, then add headroom."
+          "title": "Rule of thumb: multiply model size in billions by 0.6 to get raw Q4 VRAM in GB, then add 1-2GB headroom."
         },
         {
           "url": "/images/how-much-vram-local-llm-quantization-tradeoff-hero-en.webp",
@@ -2056,7 +2056,7 @@
       ]
     },
     "best-mini-pcs-local-llm": {
-      "dateModified": "2026-08-26",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-05",
       "hasSections": true,
@@ -2157,7 +2157,7 @@
       ]
     },
     "best-local-llm-stack-use-case": {
-      "dateModified": "2026-08-28",
+      "dateModified": "2026-08-29",
       "lastFactChecked": null,
       "publishDate": "2026-04-05",
       "hasSections": true,
@@ -2184,7 +2184,7 @@
       ]
     },
     "lm-studio-vs-jan-ai": {
-      "dateModified": "2026-06-20",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-05",
       "hasSections": true,
@@ -2211,7 +2211,7 @@
       ]
     },
     "open-webui-vs-sillytavern": {
-      "dateModified": "2026-04-19",
+      "dateModified": "2026-08-30",
       "lastFactChecked": null,
       "publishDate": "2026-04-05",
       "hasSections": true,
@@ -2238,7 +2238,7 @@
       ]
     },
     "llamacpp-vs-ollama-vs-vllm": {
-      "dateModified": "2026-04-19",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-05",
       "hasSections": true,
@@ -2269,7 +2269,7 @@
       ]
     },
     "local-llm-developer-stack": {
-      "dateModified": "2026-07-30",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-05",
       "hasSections": true,
@@ -2322,7 +2322,7 @@
       ]
     },
     "best-local-llms-code-review": {
-      "dateModified": "2026-08-27",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-05",
       "hasSections": true,
@@ -2349,7 +2349,7 @@
       ]
     },
     "best-local-llms-business-writing": {
-      "dateModified": "2026-06-20",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-05",
       "hasSections": true,
@@ -2367,7 +2367,7 @@
       "images": [
         {
           "url": "/images/model-selection-business-writing.svg",
-          "title": "Mistral Small 3.1 24B excels at precise, concise emails with best tone control (8-15 sec). Llama 3.1 8B adapts well to brand voice examples (5-10 sec). Qwen3 7B is fastest with native multilingual support for non-English business correspondence (3-8 sec)."
+          "title": "Mistral Small 3.1 24B excels at precise, concise emails with best tone control (8-15 sec). Llama 3.1 8B adapts well to brand voice examples (5-10 sec). Qwen3 8B is fastest with native multilingual support for non-English business correspondence (3-8 sec)."
         },
         {
           "url": "/images/common-mistakes-prevention-en.svg",
@@ -2380,7 +2380,7 @@
       ]
     },
     "best-7b-models-consumer-hardware": {
-      "dateModified": "2026-04-18",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-05",
       "hasSections": true,
@@ -2398,11 +2398,11 @@
       "images": [
         {
           "url": "/images/best-7b-models-consumer-hardware-speed-comparison-en.svg",
-          "title": "7B model speed comparison on RTX 3060 12GB: Phi 2.7B reaches 20 tok/s, Mistral Small 16 tok/s, Llama 3.3 7B and Qwen3 7B tie at 15 tok/s."
+          "title": "7B model speed comparison on RTX 3060 12GB: Phi 2.7B reaches 20 tok/s, Mistral Small 16 tok/s, Llama 3.1 8B and Qwen3 8B tie at 15 tok/s."
         },
         {
           "url": "/images/best-7b-models-consumer-hardware-math-benchmark-en.svg",
-          "title": "MATH benchmark scores for 7B models: Llama 3.3 7B leads at 82%, Qwen3 7B scores 79%, Mistral Small 75%, and budget pick Phi 2.7B scores 45%."
+          "title": "MATH benchmark scores for 7B models: Llama 3.1 8B leads at 82%, Qwen3 8B scores 79%, Mistral Small 75%, and budget pick Phi 2.7B scores 45%."
         }
       ]
     },
@@ -2442,7 +2442,7 @@
       ]
     },
     "quantization-levels-comparison": {
-      "dateModified": "2026-06-03",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-05",
       "hasSections": true,
@@ -2473,7 +2473,7 @@
       ]
     },
     "private-local-llm-sensitive-data": {
-      "dateModified": "2026-08-27",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-05",
       "hasSections": true,
@@ -2500,7 +2500,7 @@
       ]
     },
     "local-llm-setup-for-teams": {
-      "dateModified": "2026-04-19",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-05",
       "hasSections": true,
@@ -2539,7 +2539,7 @@
       ]
     },
     "best-nas-storage-local-llm": {
-      "dateModified": "2026-06-20",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-05",
       "hasSections": true,
@@ -2566,7 +2566,7 @@
       ]
     },
     "vpn-for-local-llm-users": {
-      "dateModified": "2026-06-20",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-05",
       "hasSections": true,
@@ -2584,7 +2584,7 @@
       "images": []
     },
     "secure-offline-local-llm-workflow": {
-      "dateModified": "2026-04-19",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-05",
       "hasSections": true,
@@ -2602,7 +2602,7 @@
       "images": []
     },
     "local-llms-vs-chatgpt-plus": {
-      "dateModified": "2026-08-27",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-05",
       "hasSections": true,
@@ -2652,7 +2652,7 @@
       ]
     },
     "cloud-gpu-rental-comparison-2026": {
-      "dateModified": "2026-07-15",
+      "dateModified": "2026-08-29",
       "lastFactChecked": null,
       "publishDate": "2026-05-17",
       "hasSections": true,
@@ -2670,7 +2670,7 @@
       "images": [
         {
           "url": "/images/cloud-gpu-rental-comparison-2026-provider-pricing-table-en.svg",
-          "title": "Hourly pricing comparison across RunPod, Vast.ai, and Lambda Labs for RTX 4090, RTX 5090, A100 80GB, and H100 80GB GPUs as of July 2026, including uptime SLA percentages for each provider. RunPod offers the most balanced pricing with a 99% uptime SLA, Vast.ai starts as low as $0.08/hr with no SLA, and Lambda Labs charges a premium for its 99.9% SLA."
+          "title": "Hourly pricing comparison across RunPod, Vast.ai, and Lambda Labs for RTX 4090, RTX 5090, A100 80GB, and H100 80GB GPUs as of August 2026, including uptime SLA percentages for each provider. RunPod offers the most balanced pricing with a 99% uptime SLA, Vast.ai starts as low as $0.08/hr with no SLA, and Lambda Labs charges a premium for its 99.9% SLA."
         },
         {
           "url": "/images/cloud-gpu-rental-comparison-2026-buy-vs-rent-breakeven-en.svg",
@@ -2679,7 +2679,7 @@
       ]
     },
     "eu-cloud-gpu-gdpr-2026": {
-      "dateModified": "2026-07-30",
+      "dateModified": "2026-08-30",
       "lastFactChecked": null,
       "publishDate": "May 17, 2026",
       "hasSections": true,
@@ -2697,7 +2697,7 @@
       "images": []
     },
     "local-llm-vs-cloud-gpu-cost": {
-      "dateModified": "2026-08-27",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-05",
       "hasSections": true,
@@ -2758,7 +2758,7 @@
       ]
     },
     "gpu-vs-ai-subscription-roi": {
-      "dateModified": "2026-08-27",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-04-05",
       "hasSections": true,
@@ -2884,7 +2884,7 @@
       ]
     },
     "mlx-vs-ollama-vs-llama-cpp-mac": {
-      "dateModified": "2026-08-28",
+      "dateModified": "2026-08-29",
       "lastFactChecked": null,
       "publishDate": "2026-05-15",
       "hasSections": true,
@@ -3127,7 +3127,7 @@
       ]
     },
     "qwen-gdpr-privacy-manifesto-2026": {
-      "dateModified": "2026-07-13",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-05-16",
       "hasSections": true,
@@ -3145,7 +3145,7 @@
       "images": [
         {
           "url": "/images/qwen-gdpr-privacy-manifesto-2026-data-flow-en.svg",
-          "title": "GDPR data flow comparison: cloud AI transfers prompts to non-EU servers (US/China), triggering an Article 44 transfer obligation, while a local LLM such as Qwen 3.6 27B keeps data on EU hardware with no transfer and no Article 44 obligation."
+          "title": "GDPR data flow comparison: cloud AI transfers prompts to non-EU servers (US/China), triggering an Article 44 transfer obligation, while a local LLM such as Qwen3.8-27B keeps data on EU hardware with no transfer and no Article 44 obligation."
         },
         {
           "url": "/images/qwen-gdpr-privacy-manifesto-2026-compliance-checklist-en.svg",
@@ -3154,7 +3154,7 @@
       ]
     },
     "qwen-local-gdpr-setup-guide-2026": {
-      "dateModified": "2026-05-22",
+      "dateModified": "2026-08-29",
       "lastFactChecked": null,
       "publishDate": "2026-05-22",
       "hasSections": true,
@@ -3217,7 +3217,7 @@
       ]
     },
     "xinference-llama-qwen-chatglm-mistral": {
-      "dateModified": "2026-05-23",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-05-23",
       "hasSections": true,
@@ -3496,7 +3496,7 @@
       ]
     },
     "galaxy-vs-iphone-on-device-ai-2026": {
-      "dateModified": "2026-06-15",
+      "dateModified": "2026-08-29",
       "lastFactChecked": null,
       "publishDate": "2026-06-15",
       "hasSections": true,
@@ -3550,7 +3550,7 @@
       ]
     },
     "hbm-memory-on-device-ai-samsung-sk-hynix-2026": {
-      "dateModified": "2026-08-28",
+      "dateModified": "2026-08-29",
       "lastFactChecked": null,
       "publishDate": "2026-06-15",
       "hasSections": true,
@@ -3637,7 +3637,122 @@
       "hasSections": true,
       "langs": [
         "en",
-        "de"
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "best-ai-code-review-tools-2026": {
+      "dateModified": "2026-08-28",
+      "lastFactChecked": null,
+      "publishDate": "2026-08-28",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "best-llm-fine-tuning-framework-2026": {
+      "dateModified": "2026-08-28",
+      "lastFactChecked": null,
+      "publishDate": "2026-08-28",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "best-ai-agent-framework-2026": {
+      "dateModified": "2026-08-28",
+      "lastFactChecked": null,
+      "publishDate": "2026-08-28",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "best-llm-evaluation-tools-2026": {
+      "dateModified": "2026-08-28",
+      "lastFactChecked": null,
+      "publishDate": "2026-08-28",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "best-llm-observability-tools-2026": {
+      "dateModified": "2026-08-28",
+      "lastFactChecked": null,
+      "publishDate": "2026-08-28",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
+      ],
+      "images": []
+    },
+    "best-vector-database-2026": {
+      "dateModified": "2026-08-28",
+      "lastFactChecked": null,
+      "publishDate": "2026-08-28",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de",
+        "fr",
+        "ja",
+        "zh",
+        "es",
+        "pt",
+        "ar",
+        "ko"
       ],
       "images": []
     }
@@ -3698,7 +3813,7 @@
       "images": []
     },
     "prompt-engineering-history": {
-      "dateModified": "2026-05-03",
+      "dateModified": "2026-08-29",
       "lastFactChecked": null,
       "publishDate": "2026-03-01",
       "hasSections": true,
@@ -3716,8 +3831,8 @@
       "images": []
     },
     "prompt-building-blocks": {
-      "dateModified": "2026-05-04",
-      "lastFactChecked": "2026-05-04",
+      "dateModified": "2026-08-29",
+      "lastFactChecked": "2026-08-29",
       "publishDate": "2026-03-01",
       "hasSections": true,
       "langs": [
@@ -3797,8 +3912,8 @@
       "images": []
     },
     "context-windows-explained": {
-      "dateModified": "2026-07-13",
-      "lastFactChecked": "2026-04-28",
+      "dateModified": "2026-08-29",
+      "lastFactChecked": "2026-08-29",
       "publishDate": "2026-03-22",
       "hasSections": true,
       "langs": [
@@ -3823,7 +3938,7 @@
         },
         {
           "url": "/images/context-windows-explained-context-table-hero-en.webp",
-          "title": "Context window sizes in 2026: Gemini 3.1 Pro supports 2M tokens — the largest available context, fitting an entire codebase or legal document in one request."
+          "title": "Context window sizes in 2026: GPT-5.6, Claude Opus 5, and Gemini 3.1 Pro all cluster around 1-1.05M tokens — enough to fit an entire codebase or legal document in one request."
         }
       ]
     },
@@ -3904,7 +4019,7 @@
         },
         {
           "url": "/images/model-strengths-radar.svg",
-          "title": "Radar chart: Claude dominates writing & reasoning; GPT-5.5 excels at tools & multimodal; Gemini wins on cost & long-context. No single winner — match model to task."
+          "title": "Radar chart: Claude dominates writing & reasoning; GPT-5.6 excels at tools & multimodal; Gemini wins on cost & long-context. No single winner — match model to task."
         }
       ]
     },
@@ -3927,7 +4042,7 @@
       "images": []
     },
     "ai-powered-research": {
-      "dateModified": "2026-05-04",
+      "dateModified": "2026-08-29",
       "lastFactChecked": null,
       "publishDate": "2026-03-23",
       "hasSections": true,
@@ -4102,7 +4217,7 @@
       "images": []
     },
     "prompt-injection-and-security": {
-      "dateModified": "2026-03-30",
+      "dateModified": "2026-08-29",
       "lastFactChecked": null,
       "publishDate": "2026-03-30",
       "hasSections": true,
@@ -4120,7 +4235,7 @@
       "images": []
     },
     "ai-limitations-what-llms-cant-do": {
-      "dateModified": "2026-05-01",
+      "dateModified": "2026-08-29",
       "lastFactChecked": null,
       "publishDate": "2026-03-24",
       "hasSections": true,
@@ -4294,7 +4409,7 @@
       "images": []
     },
     "specs-framework": {
-      "dateModified": null,
+      "dateModified": "2026-08-30",
       "lastFactChecked": null,
       "publishDate": "2026-03-24",
       "hasSections": true,
@@ -4348,7 +4463,7 @@
       "images": []
     },
     "google-prompting-guide": {
-      "dateModified": "2026-05-03",
+      "dateModified": "2026-08-29",
       "lastFactChecked": null,
       "publishDate": "2026-03-24",
       "hasSections": true,
@@ -4524,7 +4639,7 @@
     },
     "tree-of-thought-react": {
       "dateModified": "2026-07-13",
-      "lastFactChecked": "2026-05-03 — Yao et al. ToT/ReAct papers, Claude Opus 4.8/GPT-5.6/Gemini 3.1 Pro native tool use APIs",
+      "lastFactChecked": "2026-05-03 — Yao et al. ToT/ReAct papers, Claude Opus 5/GPT-5.6/Gemini 3.1 Pro native tool use APIs",
       "publishDate": "2026-03-26",
       "hasSections": true,
       "langs": [
@@ -4541,7 +4656,7 @@
       "images": []
     },
     "rag-explained": {
-      "dateModified": "2026-05-05",
+      "dateModified": "2026-08-29",
       "lastFactChecked": null,
       "publishDate": "2026-03-26",
       "hasSections": true,
@@ -4751,7 +4866,7 @@
       "images": []
     },
     "prompt-engineering-vs-fine-tuning": {
-      "dateModified": "2026-05-04",
+      "dateModified": "2026-08-29",
       "lastFactChecked": null,
       "publishDate": "2026-04-10",
       "hasSections": true,
@@ -4769,7 +4884,7 @@
       "images": []
     },
     "prompt-engineering-vs-rag": {
-      "dateModified": "2026-04-10",
+      "dateModified": "2026-08-29",
       "lastFactChecked": null,
       "publishDate": "2026-04-10",
       "hasSections": true,
@@ -4895,7 +5010,7 @@
       "images": []
     },
     "prompting-across-languages": {
-      "dateModified": "2026-04-29",
+      "dateModified": "2026-08-29",
       "lastFactChecked": "2026-04-29",
       "publishDate": "2026-04-29",
       "hasSections": true,
@@ -5219,8 +5334,8 @@
       "images": []
     },
     "knowledge-cutoffs-and-geo": {
-      "dateModified": "2026-08-27",
-      "lastFactChecked": "2026-08-27",
+      "dateModified": "2026-08-29",
+      "lastFactChecked": "2026-08-29",
       "publishDate": "2026-06-12",
       "hasSections": true,
       "langs": [
@@ -5291,7 +5406,7 @@
       ]
     },
     "autonomous-local-agents-actually-work": {
-      "dateModified": "2026-07-14",
+      "dateModified": "2026-08-29",
       "lastFactChecked": null,
       "publishDate": "2026-05-07",
       "hasSections": true,
@@ -5496,7 +5611,7 @@
       ]
     },
     "best-nas-storage-local-ai-models-2026": {
-      "dateModified": "2026-07-01",
+      "dateModified": "2026-08-29",
       "lastFactChecked": null,
       "publishDate": "2026-05-22",
       "hasSections": true,
@@ -5514,11 +5629,11 @@
       "images": [
         {
           "url": "/images/best-nas-storage-local-ai-models-2026-comparison-table-hero-en.webp",
-          "title": "NAS vs SSD for Local AI Storage -- Price snapshot, July 2026"
+          "title": "NAS vs SSD for Local AI Storage -- price comparison"
         },
         {
           "url": "/images/best-nas-storage-local-ai-models-2026-nvme-ssd-picks-hero-en.webp",
-          "title": "Best NVMe SSDs for AI Inference -- Speed vs price, July 2026 (4TB)"
+          "title": "Best NVMe SSDs for AI Inference -- Speed vs price (4TB)"
         },
         {
           "url": "/images/best-nas-storage-local-ai-models-2026-decision-flowchart-en.svg",
@@ -5527,7 +5642,7 @@
       ]
     },
     "best-ai-coding-tools-comparison-2026": {
-      "dateModified": "2026-07-01",
+      "dateModified": "2026-08-29",
       "lastFactChecked": null,
       "publishDate": "2026-05-22",
       "hasSections": true,
@@ -5554,7 +5669,7 @@
       ]
     },
     "best-monitors-ai-development-2026": {
-      "dateModified": "2026-07-01",
+      "dateModified": "2026-08-29",
       "lastFactChecked": null,
       "publishDate": "2026-05-22",
       "hasSections": true,
@@ -5608,7 +5723,7 @@
       ]
     },
     "best-ai-courses-certifications-2026": {
-      "dateModified": "2026-07-02",
+      "dateModified": "2026-08-29",
       "lastFactChecked": null,
       "publishDate": "2026-05-22",
       "hasSections": true,
@@ -5793,7 +5908,7 @@
       ]
     },
     "best-local-llm-creative-writing-2026": {
-      "dateModified": "2026-07-13",
+      "dateModified": "2026-07-16",
       "lastFactChecked": null,
       "publishDate": "2026-05-07",
       "hasSections": true,
@@ -6187,7 +6302,7 @@
       ]
     },
     "local-llm-with-obsidian-2026": {
-      "dateModified": "2026-05-08",
+      "dateModified": "2026-08-30",
       "lastFactChecked": null,
       "publishDate": "2026-05-08",
       "hasSections": true,
@@ -6214,7 +6329,7 @@
       ]
     },
     "local-llm-with-logseq-and-joplin": {
-      "dateModified": "2026-07-14",
+      "dateModified": "2026-08-30",
       "lastFactChecked": null,
       "publishDate": "2026-05-08",
       "hasSections": true,
@@ -6241,7 +6356,7 @@
       ]
     },
     "local-llm-personal-knowledge-base-2026": {
-      "dateModified": "2026-05-08",
+      "dateModified": "2026-08-29",
       "lastFactChecked": null,
       "publishDate": "2026-05-08",
       "hasSections": true,
@@ -6620,7 +6735,7 @@
       ]
     },
     "sillytavern-vs-agnai-vs-risuai-roleplay": {
-      "dateModified": "2026-07-13",
+      "dateModified": "2026-08-29",
       "lastFactChecked": null,
       "publishDate": "2026-05-07",
       "hasSections": true,
@@ -6686,7 +6801,7 @@
       ]
     },
     "voice-assistant-local-mobile-offline": {
-      "dateModified": "2026-05-08",
+      "dateModified": "2026-08-29",
       "lastFactChecked": null,
       "publishDate": "2026-05-08",
       "hasSections": true,
@@ -6713,8 +6828,8 @@
       ]
     },
     "local-whisper-stt-comparison-2026": {
-      "dateModified": "2026-06-15",
-      "lastFactChecked": "2026-06-15",
+      "dateModified": "2026-08-28",
+      "lastFactChecked": "2026-08-28",
       "publishDate": "2026-05-14",
       "hasSections": true,
       "langs": [
@@ -6794,7 +6909,7 @@
       ]
     },
     "build-local-voice-assistant-2026": {
-      "dateModified": "2026-06-19",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-05-14",
       "hasSections": true,
@@ -6821,7 +6936,7 @@
       ]
     },
     "local-multimodal-pipeline-voice-vision-text": {
-      "dateModified": "2026-05-14",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-05-14",
       "hasSections": true,
@@ -6857,7 +6972,7 @@
       "images": []
     },
     "best-affiliate-tools-ai-developers-2026": {
-      "dateModified": "2026-07-01",
+      "dateModified": "2026-08-29",
       "lastFactChecked": null,
       "publishDate": "2026-05-22",
       "hasSections": true,
@@ -6884,7 +6999,7 @@
       ]
     },
     "apple-mlx-vs-nvidia-cuda-local-llm-2026": {
-      "dateModified": "2026-07-01",
+      "dateModified": "2026-08-29",
       "lastFactChecked": null,
       "publishDate": "2026-05-24",
       "hasSections": true,
@@ -6951,7 +7066,7 @@
       "images": []
     },
     "qwen-local-deployment-complete-guide-2026": {
-      "dateModified": "2026-08-27",
+      "dateModified": "2026-08-29",
       "lastFactChecked": null,
       "publishDate": "2026-05-26",
       "hasSections": true,
@@ -7104,7 +7219,7 @@
       ]
     },
     "deepseek-vs-qwen-local-comparison-2026": {
-      "dateModified": "2026-05-26",
+      "dateModified": "2026-08-29",
       "lastFactChecked": null,
       "publishDate": "2026-05-26",
       "hasSections": true,
@@ -7131,7 +7246,7 @@
       ]
     },
     "local-ai-behind-firewall-offline-2026": {
-      "dateModified": "2026-05-26",
+      "dateModified": "2026-08-29",
       "lastFactChecked": null,
       "publishDate": "2026-05-26",
       "hasSections": true,
@@ -7430,7 +7545,7 @@
       ]
     },
     "ollamaLatestVersion": {
-      "dateModified": "2026-06-21",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-05-18",
       "hasSections": true,
@@ -7448,7 +7563,7 @@
       "images": []
     },
     "bestOllamaModelsRightNow": {
-      "dateModified": "2026-06-21",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-05-18",
       "hasSections": true,
@@ -7466,7 +7581,7 @@
       "images": [
         {
           "url": "/images/best-ollama-models-right-now-tier-leaders-hero-en.webp",
-          "title": "Best Ollama Models by VRAM Tier -- Current leader per tier"
+          "title": "Best Ollama Models by Tier -- Current leader per tier"
         },
         {
           "url": "/images/best-ollama-models-right-now-maturity-factors-hero-en.webp",
@@ -7637,7 +7752,7 @@
       ]
     },
     "bestFrontendForOllama": {
-      "dateModified": "2026-06-20",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-05-18",
       "hasSections": true,
@@ -7862,7 +7977,7 @@
       "images": []
     },
     "bestLlmRightNow": {
-      "dateModified": "2026-06-21",
+      "dateModified": "2026-08-28",
       "lastFactChecked": null,
       "publishDate": "2026-05-18",
       "hasSections": true,
@@ -8204,7 +8319,7 @@
       "images": []
     },
     "strixHaloOllamaVulkan": {
-      "dateModified": "2026-08-26",
+      "dateModified": "2026-08-29",
       "lastFactChecked": null,
       "publishDate": "2026-05-23",
       "hasSections": true,
@@ -8447,7 +8562,7 @@
       "images": []
     },
     "bestJapaneseLanguageModelsLocal": {
-      "dateModified": "2026-06-21",
+      "dateModified": "2026-08-30",
       "lastFactChecked": null,
       "publishDate": "2026-05-27",
       "hasSections": true,
@@ -8528,7 +8643,7 @@
       "images": []
     },
     "aiModelKnowledgeCutoffDates": {
-      "dateModified": "2026-08-27",
+      "dateModified": "2026-08-29",
       "lastFactChecked": null,
       "publishDate": "2026-06-12",
       "hasSections": true,
@@ -9337,7 +9452,7 @@
       "images": []
     },
     "isBalconySolarLegalNewHampshire": {
-      "dateModified": "2026-07-16",
+      "dateModified": "2026-08-29",
       "lastFactChecked": null,
       "publishDate": "2026-07-16",
       "hasSections": true,
@@ -9902,7 +10017,7 @@
       ]
     },
     "home-assistant-ollama-integration": {
-      "dateModified": "2026-06-04",
+      "dateModified": "2026-08-29",
       "lastFactChecked": null,
       "publishDate": "2026-06-04",
       "hasSections": true,
@@ -9956,7 +10071,7 @@
       ]
     },
     "local-whisper-home-assistant": {
-      "dateModified": "2026-06-04",
+      "dateModified": "2026-08-29",
       "lastFactChecked": null,
       "publishDate": "2026-06-04",
       "hasSections": true,
