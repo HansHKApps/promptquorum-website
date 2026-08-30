@@ -266,13 +266,13 @@ jobs:
         title: 'Hardware Sizing by Team Size',
         content:
           '**One RTX 4090 (24 GB) handles a 15–25-developer team comfortably.** The bottleneck on a single GPU is not throughput per review — it is concurrency at PR-flush moments (Monday morning, end of sprint). Sizing rules below assume Qwen3-Coder 30B at Q4_K_M and a typical 50–500-line PR diff.',
-        columns: ['Team size', 'GPU', 'VRAM', 'Concurrent reviews', 'Approx. price (August 2026)'],
+        columns: ['Team size', 'GPU', 'VRAM', 'Concurrent reviews', 'Approx. price'],
         rows: [
-          { 'Team size': '~5 developers', 'GPU': 'RTX 4070 / 4070 Ti', 'VRAM': '12–16 GB', 'Concurrent reviews': '1 (Qwen3-Coder 7B only)', 'Approx. price (August 2026)': '$600–900' },
-          { 'Team size': '15–25 developers', 'GPU': 'RTX 4090 / 5090', 'VRAM': '24–32 GB', 'Concurrent reviews': '1–3 (Qwen3-Coder 30B)', 'Approx. price (August 2026)': '$2,000–2,500' },
-          { 'Team size': '25–50 developers', 'GPU': 'L40S / A6000 Ada', 'VRAM': '48 GB', 'Concurrent reviews': '3–6', 'Approx. price (August 2026)': '$7,000–8,500' },
-          { 'Team size': '50–100 developers', 'GPU': '2× RTX 4090 or 1× H100', 'VRAM': '48 GB / 80 GB', 'Concurrent reviews': '6–10', 'Approx. price (August 2026)': '$5,000 (2× 4090) or $25,000+ (H100)' },
-          { 'Team size': '100+ developers', 'GPU': 'Multi-GPU H100 or H200', 'VRAM': '160 GB+', 'Concurrent reviews': '10+ with vLLM', 'Approx. price (August 2026)': '$50,000+' },
+          { 'Team size': '~5 developers', 'GPU': 'RTX 4070 / 4070 Ti', 'VRAM': '12–16 GB', 'Concurrent reviews': '1 (Qwen3-Coder 7B only)', 'Approx. price': '$600–900' },
+          { 'Team size': '15–25 developers', 'GPU': 'RTX 4090 / 5090', 'VRAM': '24–32 GB', 'Concurrent reviews': '1–3 (Qwen3-Coder 30B)', 'Approx. price': '$2,000–2,500' },
+          { 'Team size': '25–50 developers', 'GPU': 'L40S / A6000 Ada', 'VRAM': '48 GB', 'Concurrent reviews': '3–6', 'Approx. price': '$7,000–8,500' },
+          { 'Team size': '50–100 developers', 'GPU': '2× RTX 4090 or 1× H100', 'VRAM': '48 GB / 80 GB', 'Concurrent reviews': '6–10', 'Approx. price': '$5,000 (2× 4090) or $25,000+ (H100)' },
+          { 'Team size': '100+ developers', 'GPU': 'Multi-GPU H100 or H200', 'VRAM': '160 GB+', 'Concurrent reviews': '10+ with vLLM', 'Approx. price': '$50,000+' },
         ],
         callouts: [
           {
@@ -715,13 +715,13 @@ jobs:
         title: 'Hardware Dimensionierung nach Teamgröße',
         content:
           '**Eine RTX 4090 (24 GB) bedient ein 15–25-Entwickler Team komfortabel.** Der Bottleneck auf einer einzelnen GPU ist nicht Durchsatz pro Review — es ist Concurrency bei PR-Flush Momenten (Montagmorgen, End of Sprint). Sizing Regeln unten gehen von Qwen3-Coder 30B bei Q4_K_M und einer typischen 50–500-zeiligen PR Diff aus.',
-        columns: ['Teamgröße', 'GPU', 'VRAM', 'Gleichzeitige Reviews', 'Ungefährer Preis (August 2026)'],
+        columns: ['Teamgröße', 'GPU', 'VRAM', 'Gleichzeitige Reviews', 'Ungefährer Preis'],
         rows: [
-          { 'Teamgröße': '~5 Entwickler', 'GPU': 'RTX 4070 / 4070 Ti', 'VRAM': '12–16 GB', 'Gleichzeitige Reviews': '1 (nur Qwen3-Coder 7B)', 'Ungefährer Preis (August 2026)': 'ca. 799–1.099 €' },
-          { 'Teamgröße': '15–25 Entwickler', 'GPU': 'RTX 4090 / 5090', 'VRAM': '24–32 GB', 'Gleichzeitige Reviews': '1–3 (Qwen3-Coder 30B)', 'Ungefährer Preis (August 2026)': 'ca. 2.299–2.799 €' },
-          { 'Teamgröße': '25–50 Entwickler', 'GPU': 'L40S / A6000 Ada', 'VRAM': '48 GB', 'Gleichzeitige Reviews': '3–6', 'Ungefährer Preis (August 2026)': 'ca. 8.999–9.999 €' },
-          { 'Teamgröße': '50–100 Entwickler', 'GPU': '2× RTX 4090 oder 1× H100', 'VRAM': '48 GB / 80 GB', 'Gleichzeitige Reviews': '6–10', 'Ungefährer Preis (August 2026)': 'ca. 5.000 € (2× 4090) oder 27.000+ € (H100)' },
-          { 'Teamgröße': '100+ Entwickler', 'GPU': 'Multi-GPU H100 oder H200', 'VRAM': '160 GB+', 'Gleichzeitige Reviews': '10+ mit vLLM', 'Ungefährer Preis (August 2026)': 'ca. 50.000+ €' },
+          { 'Teamgröße': '~5 Entwickler', 'GPU': 'RTX 4070 / 4070 Ti', 'VRAM': '12–16 GB', 'Gleichzeitige Reviews': '1 (nur Qwen3-Coder 7B)', 'Ungefährer Preis': 'ca. 799–1.099 €' },
+          { 'Teamgröße': '15–25 Entwickler', 'GPU': 'RTX 4090 / 5090', 'VRAM': '24–32 GB', 'Gleichzeitige Reviews': '1–3 (Qwen3-Coder 30B)', 'Ungefährer Preis': 'ca. 2.299–2.799 €' },
+          { 'Teamgröße': '25–50 Entwickler', 'GPU': 'L40S / A6000 Ada', 'VRAM': '48 GB', 'Gleichzeitige Reviews': '3–6', 'Ungefährer Preis': 'ca. 8.999–9.999 €' },
+          { 'Teamgröße': '50–100 Entwickler', 'GPU': '2× RTX 4090 oder 1× H100', 'VRAM': '48 GB / 80 GB', 'Gleichzeitige Reviews': '6–10', 'Ungefährer Preis': 'ca. 5.000 € (2× 4090) oder 27.000+ € (H100)' },
+          { 'Teamgröße': '100+ Entwickler', 'GPU': 'Multi-GPU H100 oder H200', 'VRAM': '160 GB+', 'Gleichzeitige Reviews': '10+ mit vLLM', 'Ungefährer Preis': 'ca. 50.000+ €' },
         ],
         callouts: [
           {
@@ -1292,7 +1292,7 @@ jobs:
           'GPU',
           'VRAM',
           '同時レビュー',
-          'おおよその価格（2026年8月）',
+          'おおよその価格',
         ],
         rows: [
           {
@@ -1300,35 +1300,35 @@ jobs:
             'GPU': 'RTX 4070 / 4070 Ti',
             'VRAM': '12～16 GB',
             '同時レビュー': '1（Qwen3-Coder 7Bのみ）',
-            'おおよその価格（2026年8月）': '¥96,000～¥128,000',
+            'おおよその価格': '¥96,000～¥128,000',
           },
           {
             'チームサイズ': '15～25人の開発者',
             'GPU': 'RTX 4090 / 5090',
             'VRAM': '24～32 GB',
             '同時レビュー': '1～3（Qwen3-Coder 30B）',
-            'おおよその価格（2026年8月）': '¥320,000～¥450,000',
+            'おおよその価格': '¥320,000～¥450,000',
           },
           {
             'チームサイズ': '25～50人の開発者',
             'GPU': 'L40S / A6000 Ada',
             'VRAM': '48 GB',
             '同時レビュー': '3～6',
-            'おおよその価格（2026年8月）': '¥1,120,000～¥1,280,000',
+            'おおよその価格': '¥1,120,000～¥1,280,000',
           },
           {
             'チームサイズ': '50～100人の開発者',
             'GPU': '2×RTX 4090 または 1×H100',
             'VRAM': '48 GB / 80 GB',
             '同時レビュー': '6～10',
-            'おおよその価格（2026年8月）': '¥640,000（2×4090） または ¥4,000,000+（H100）',
+            'おおよその価格': '¥640,000（2×4090） または ¥4,000,000+（H100）',
           },
           {
             'チームサイズ': '100人以上の開発者',
             'GPU': 'マルチGPU H100 または H200',
             'VRAM': '160 GB以上',
             '同時レビュー': 'vLLMで10+',
-            'おおよその価格（2026年8月）': '¥8,000,000+',
+            'おおよその価格': '¥8,000,000+',
           },
         ],
         callouts: [
@@ -1545,7 +1545,7 @@ jobs:
       architectureComparison: { id: 'architecture-comparison', title: '架构比较', content: '**有三种架构模式：自托管（Ollama/vLLM）、云API（OpenAI/Anthropic）或混合。每种都有权衡。**', columns: ['架构', '设置复杂度', '成本扩展', '数据隐私', '定制', '推荐用途'], rows: [{ '架构': '自托管（Ollama）', '设置复杂度': '中等', '成本扩展': '15-25开发者时为零', '数据隐私': '网络内代码', '定制': '完全控制', '推荐用途': '大团队，敏感代码，金融/医疗' }, { '架构': '云API（OpenAI）', '设置复杂度': '低', '成本扩展': '与开发者数量线性', '数据隐私': '复制到第三方系统', '定制': '仅提示', '推荐用途': '少于5人团队，公开项目，实验' }, { '架构': '混合', '设置复杂度': '高', '成本扩展': '基于自托管vs API', '数据隐私': '政策可选', '定制': '高', '推荐用途': '大团队，分阶段推出' }], items: ['**自托管（推荐）：** 初始设置（GPU购买、系统管理、安全设置）为中等复杂度。但成本固定，在15-25+开发者时变为主导。代码永不离开网络。完整的提示控制、模型选择和审计。大型团队（25+）的标准。', '**云API：** 通过OpenAI、Anthropic或其他API服务。设置简单——API密钥和自定义GitHub Action。成本按请求单位（令牌/美元）扩展。5人以下团队便宜。大型团队从$2,000/月+开始扩展非常快。代码对第三方系统可见。', '**混合：** 小团队（<25人）从云API开始，随着增长切换到自托管。但支付架构迭代复杂性——版本化提示、管理模型质量差异、计划故障转移。'], callouts: [{ type: 'note', text: '本文关注自托管（Ollama +本地模型）。云API是更好的选择——从设置和成本角度——对于少于5人的团队且代码敏感性低的情况。' }] },
       recommendedStack: { id: 'recommended-stack', title: '推荐堆栈', content: '**2026年8月生产推荐设置是Ollama + Qwen3-Coder 30B。** 它在灵活性、开源许可、推论速度和按团队规模的经济学上取得最好平衡。', items: ['**Ollama：** 服务器推论框架。管理模型加载、量子化、批处理。设置简单、文档好、GPU内存效率好。https://github.com/ollama/ollama', '**Qwen3-Coder 30B：** Alibaba Qwen团队的编码专用模型。Apache 2.0（许可）。256K上下文长度。在一般代码质量、错误检测和安全性上与DeepSeek Coder V3相当。在HuggingFace上可得。', '**自定义GitHub Action（JavaScript）：** 获取PR diff，POST到Ollama HTTP端点，解析JSON响应，发布内联评论。100-200行。无用户依赖。', '**自托管GitHub Actions运行器或私有CI执行器：** 需要运行器或Ollama服务器可达性（同VPC、Tailscale或代理）。云运行器不起作用。', '**安全层（可选）：** Ollama前的反向代理（nginx、Envoy），具有mTLS认证或共享密钥。默认Ollama绑定到localhost。', '**日志管理：** Ollama记录请求体（包含PR diff）。应用syslog、文件轮转或systemd journalctl策略来轮转日志。'], callouts: [{ type: 'tip', text: '设置后，第一个月花时间在提示设计部分（见下文）。模型质量是固定的。假阳性率由提示决定。' }] },
       workflow: { id: 'workflow', title: 'GitHub Actions工作流', content: '**下面是生产可用的工作流。** 将文件放在`.github/workflows/local-llm-review.yml`，设置OLLAMA_HOST秘密，确保在自托管或VPC内的运行器上运行。', codeBlock: `name: Local LLM Code Review\n\non:\n  pull_request:\n    types: [opened, synchronize]\n\njobs:\n  review:\n    runs-on: [self-hosted, linux]\n    steps:\n      - uses: actions/checkout@v4\n        with:\n          fetch-depth: 0\n\n      - name: Get PR diff\n        id: diff\n        run: |\n          git diff origin/\${{ github.base_ref }}...HEAD > /tmp/pr.diff\n          wc -l /tmp/pr.diff\n\n      - name: Call local LLM review\n        id: review\n        env:\n          OLLAMA_HOST: \${{ secrets.OLLAMA_HOST }}   # ex. http://gpu-server.internal:11434\n        run: |\n          DIFF=$(jq -Rs . < /tmp/pr.diff)\n          curl -sS "$OLLAMA_HOST/api/chat" \\\\\n            -H 'Content-Type: application/json' \\\\\n            -d "{\n              \\"model\\": \\"qwen3-coder:30b\\",\n              \\"stream\\": false,\n              \\"format\\": \\"json\\",\n              \\"messages\\": [\n                {\\"role\\": \\"system\\", \\"content\\": \\"You are a senior code reviewer. Return JSON: {verdict: 'approve'|'comment'|'block', summary: string, comments: [{path, line, severity, message}]}\\"},\n                {\\"role\\": \\"user\\", \\"content\\": $DIFF}\n              ]\n            }" > /tmp/review.json\n          echo "verdict=$(jq -r '.message.content | fromjson | .verdict' < /tmp/review.json)" >> "$GITHUB_OUTPUT"\n\n      - name: Post review comment\n        uses: actions/github-script@v7\n        with:\n          script: |\n            const fs = require('fs');\n            const review = JSON.parse(JSON.parse(fs.readFileSync('/tmp/review.json')).message.content);\n            const body = \\\`### Local LLM Review: \\\\\`\${review.verdict}\\\\\`\\n\\n\${review.summary}\\\`;\n            await github.rest.issues.createComment({\n              owner: context.repo.owner,\n              repo: context.repo.repo,\n              issue_number: context.issue.number,\n              body\n            });\n\n      - name: Block on critical verdict\n        if: steps.review.outputs.verdict == 'block'\n        run: exit 1\n`, codeLanguage: 'yaml', items: ['运行器需要网络访问OLLAMA_HOST——自托管必须在同VPC内或通过Tailscale / WireGuard。', '系统提示强制结构化JSON响应。没有`format: "json"`和严格的schema，action花费30%的代码解析自由形式输出。', '`fetch-depth: 0`对于计算相对于基础分支的真实diff是必需的——浅检查生成畸形diff。', '对于超过约50K行代码更改的repo，在发送前截断或分割diff。256K上下文对Qwen3-Coder 30B很宽松，但实际工作上下文更接近64K-128K（见[2026年最佳本地编码模型](/zh/power-local-llm/best-local-coding-models-2026)）。', '对于提示深度工程——系统vs用户提示、示例、结构化结果——见[系统提示vs用户提示：有什么区别](/zh/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference)。'], callouts: [{ type: 'note', text: '这个工作流故意最小。生产部署添加：基于文件hash + diff hash的缓存以跳过未更改文件的重新审查、严重程度阈值（仅在`severity >= "high"`时阻止）、内联评论发布（而非单个摘要评论）、按语言的提示变体、审查人反馈获取以随时间改进提示。' }] },
-      hardwareSizing: { id: 'hardware-sizing', title: '按团队规模的硬件规划', content: '**单个RTX 4090（24 GB）舒适处理15-25开发者。** 单GPU的瓶颈不是每次审查的吞吐量，而是PR追踪时段的竞争（周一早上、冲刺结束）。下面的规划规则假设Qwen3-Coder 30B使用q4_K_M量子化和典型的50-500行PR diff。', columns: ['团队规模', 'GPU', 'VRAM', '并发审查', '约略价格（2026年8月）'], rows: [{ '团队规模': '~5开发者', 'GPU': 'RTX 4070 / 4070 Ti', 'VRAM': '12-16 GB', '并发审查': '1（仅Qwen3-Coder 7B）', '约略价格（2026年8月）': '约$600-800' }, { '团队规模': '15-25开发者', 'GPU': 'RTX 4090 / 5090', 'VRAM': '24-32 GB', '并发审查': '1-3（Qwen3-Coder 30B）', '约略价格（2026年8月）': '约$2,000-2,500' }, { '团队规模': '25-50开发者', 'GPU': 'L40S / A6000 Ada', 'VRAM': '48 GB', '并发审查': '3-6', '约略价格（2026年8月）': '约$7,000-8,000' }, { '团队规模': '50-100开发者', 'GPU': '2×RTX 4090或1×H100', 'VRAM': '48 GB / 80 GB', '并发审查': '6-10', '约略价格（2026年8月）': '约$5,000（2×4090）或$25,000+（H100）' }, { '团队规模': '100+开发者', 'GPU': '多GPU H100或H200', 'VRAM': '160 GB+', '并发审查': 'vLLM为10+', '约略价格（2026年8月）': '约$50,000+' }], callouts: [{ type: 'tip', text: '跨越50开发者阈值时，从Ollama切换到vLLM。Ollama优先易用性；vLLM优先共享GPU的吞吐量。相同的Qwen3-Coder 30B在两者上运行——仅推论服务器改变。' }] },
+      hardwareSizing: { id: 'hardware-sizing', title: '按团队规模的硬件规划', content: '**单个RTX 4090（24 GB）舒适处理15-25开发者。** 单GPU的瓶颈不是每次审查的吞吐量，而是PR追踪时段的竞争（周一早上、冲刺结束）。下面的规划规则假设Qwen3-Coder 30B使用q4_K_M量子化和典型的50-500行PR diff。', columns: ['团队规模', 'GPU', 'VRAM', '并发审查', '约略价格'], rows: [{ '团队规模': '~5开发者', 'GPU': 'RTX 4070 / 4070 Ti', 'VRAM': '12-16 GB', '并发审查': '1（仅Qwen3-Coder 7B）', '约略价格': '约$600-800' }, { '团队规模': '15-25开发者', 'GPU': 'RTX 4090 / 5090', 'VRAM': '24-32 GB', '并发审查': '1-3（Qwen3-Coder 30B）', '约略价格': '约$2,000-2,500' }, { '团队规模': '25-50开发者', 'GPU': 'L40S / A6000 Ada', 'VRAM': '48 GB', '并发审查': '3-6', '约略价格': '约$7,000-8,000' }, { '团队规模': '50-100开发者', 'GPU': '2×RTX 4090或1×H100', 'VRAM': '48 GB / 80 GB', '并发审查': '6-10', '约略价格': '约$5,000（2×4090）或$25,000+（H100）' }, { '团队规模': '100+开发者', 'GPU': '多GPU H100或H200', 'VRAM': '160 GB+', '并发审查': 'vLLM为10+', '约略价格': '约$50,000+' }], callouts: [{ type: 'tip', text: '跨越50开发者阈值时，从Ollama切换到vLLM。Ollama优先易用性；vLLM优先共享GPU的吞吐量。相同的Qwen3-Coder 30B在两者上运行——仅推论服务器改变。' }] },
       gpuSharing: { id: 'gpu-sharing', title: '构建间的GPU共享及其他负载', content: '**代码审查专用GPU是最简单的架构但不是唯一的。** 已为ML推论或训练运行GPU基础设施的团队可以共享——代价是审查延迟大幅增加。', items: ['**仅代码审查专用GPU：** 最简单的模型。延迟可预测。容量计划简单。故障模式隔离。对未运行GPU基础设施团队的推荐。', '**与ML推论共享GPU：** 可行如果推论负载有稳定的封装（例如，小集成服务适应4-6GB）。审查模型占用剩余VRAM。此模式下计划竞争少见。', '**与ML训练共享GPU：** 强烈不推荐。训练作业将VRAM使用激增到限制，使审查模型饥饿，导致30-120秒审查延迟侵蚀开发者对系统的信心。', '**vLLM与分页注意力：** 为高并发LLM服务而生。同个RTX 4090在Ollama下处理1-3并发审查，在vLLM下处理4-8个，代价是更复杂的配置。25+开发者时值得。', '**H100上多租户：** 在100+开发者规模，将H100分割为MIG片或使用租户配额运行vLLM。这是平台工程领地；不要即兴。'] },
       costComparison: { id: 'cost-comparison', title: '与GitHub Advanced Security的成本比较', content: '**经济学在约15-25个付费座位处转向自托管。** 这是一年的回收比较；更长的视角使自托管更有利。', items: ['**GitHub Advanced Security（代码安全）：** 价目表价格$19/开发者/月（检查GitHub定价页面；企业客户可得体积折扣）。', '**云LLM API（例OpenAI、Anthropic）：** 典型PR体积下约$50-200/月/活跃开发者。极大地因代码库大小和审查提示设计而异。', '**自托管本地LLM、RTX 4090构建：** 约$2,000硬件一次（GPU +基础服务器盒）。电力消耗：~50W空闲、~350W负载——在典型使用中约$25-35/月操作功耗。无按座位成本。', '**10开发者处平价：** GHAS $190/月 vs 自托管约$25-35/月操作+约$2,000 capex。Capex在约14个月内回收。', '**25开发者处平价：** GHAS $475/月 vs 自托管约$25-35/月操作+约$2,000 capex。Capex在约5-6个月内回收。', '**50开发者处平价：** GHAS $950/月 vs 自托管约$35-45/月操作+约$7,500 capex（48 GB GPU）。Capex在约8个月内回收。', '**Capex数字主导数学。** 如果具体为此购买GPU，回收是真实的。如果有现有GPU容量，边际成本接近零，自托管立即获胜。'], callouts: [{ type: 'note', text: '这些数字是价目表价格比较。大企业谈判的GHAS费率改变平价；现有GPU容量摧毁它。在提交硬件购买前用你的实际成本重做数学。' }] },
       securityModel: { id: 'security-model', title: '安全模型和审计态势', content: '**安全声称标题——"源代码永不离开你的网络"——是真实的、可证明的，也是这个架构最强的论点。** 审计表面小到可在采购审查中防守。', items: ['**模型仅看到你的action发送的diff。** 无遥测、无隐藏网络调用。可用`tcpdump`或GPU服务器发送接口上的`nft monitor`验证——在稳定操作中，你应该看到零个向非内部主机的发送数据包。', '**完整审计表面是一个进程和一个日志文件。** `ollama serve`就是整个LLM栈。它的日志（请求体、延迟、模型加载事件）是审计记录。无SaaS仪表板要查询、无第三方保留政策要读。', '**网络隔离简单。** 将`ollama serve`绑定到私有接口。把认证反向代理（mTLS或shared-secret）放在它前面。拒绝GPU服务器namespace的发送，除了你的CI运行网络子网。标准零信任模式，无LLM特定魔法。', '**模型权重是供应商签署的静态工件。** 通过Ollama拉一次、pin digest、模型不能在无操作者行动下改变。这是比可静默交换上游模型的SaaS API更强的供应链故事。', '**合规态势：** 零数据外泄对SOC 2、ISO 27001、GDPR和EU AI法限制风险分类简单可记录。自托管合规最困难的部分通常是记录推论服务器本身。Ollama和vLLM都有好文档。', '**信息安全和全球数据主权：** 对于在全球运营但在亚太地区存储数据的组织，自托管本地LLM满足区域数据驻留要求。代码评审从不离开你的服务器，符合许多亚太地区的监管框架。', '**模型看到你的代码。** 自托管不意味着对模型私密——意味着对第三方私密。内部威胁情景（有服务器访问权的工程师读含有历史PR diff的日志）仍在范围内。轮转日志并相应限制访问。'] },
@@ -3205,13 +3205,13 @@ jobs:
         title: '팀 규모별 하드웨어 사이징',
         content:
           '**RTX 4090 (24 GB)은 개발자 15~25명의 팀을 편안하게 처리합니다.** 단일 GPU의 병목은 리뷰당 처리량이 아니라 PR 집중 시간(월요일 아침, 스프린트 종료)의 동시성입니다. 다음 사이징 규칙은 Q4_K_M의 Qwen3-Coder 30B와 50~500줄의 일반적인 PR diff를 가정합니다.',
-        columns: ['팀 규모', 'GPU', 'VRAM', '동시 리뷰', '예상 가격 (2026년 8월)'],
+        columns: ['팀 규모', 'GPU', 'VRAM', '동시 리뷰', '예상 가격'],
         rows: [
-          { '팀 규모': '개발자 ~5명', 'GPU': 'RTX 4070 / 4070 Ti', 'VRAM': '12~16 GB', '동시 리뷰': '1개 (Qwen3-Coder 7B만 가능)', '예상 가격 (2026년 8월)': '$600~900' },
-          { '팀 규모': '개발자 15~25명', 'GPU': 'RTX 4090 / 5090', 'VRAM': '24~32 GB', '동시 리뷰': '1~3개 (Qwen3-Coder 30B)', '예상 가격 (2026년 8월)': '$2,000~2,500' },
-          { '팀 규모': '개발자 25~50명', 'GPU': 'L40S / A6000 Ada', 'VRAM': '48 GB', '동시 리뷰': '3~6개', '예상 가격 (2026년 8월)': '$7,000~8,500' },
-          { '팀 규모': '개발자 50~100명', 'GPU': '2× RTX 4090 또는 1× H100', 'VRAM': '48 GB / 80 GB', '동시 리뷰': '6~10개', '예상 가격 (2026년 8월)': '$5,000 (2× 4090) 또는 $25,000+ (H100)' },
-          { '팀 규모': '개발자 100명 이상', 'GPU': '멀티 GPU H100 또는 H200', 'VRAM': '160 GB 이상', '동시 리뷰': 'vLLM으로 10개 이상', '예상 가격 (2026년 8월)': '$50,000 이상' },
+          { '팀 규모': '개발자 ~5명', 'GPU': 'RTX 4070 / 4070 Ti', 'VRAM': '12~16 GB', '동시 리뷰': '1개 (Qwen3-Coder 7B만 가능)', '예상 가격': '$600~900' },
+          { '팀 규모': '개발자 15~25명', 'GPU': 'RTX 4090 / 5090', 'VRAM': '24~32 GB', '동시 리뷰': '1~3개 (Qwen3-Coder 30B)', '예상 가격': '$2,000~2,500' },
+          { '팀 규모': '개발자 25~50명', 'GPU': 'L40S / A6000 Ada', 'VRAM': '48 GB', '동시 리뷰': '3~6개', '예상 가격': '$7,000~8,500' },
+          { '팀 규모': '개발자 50~100명', 'GPU': '2× RTX 4090 또는 1× H100', 'VRAM': '48 GB / 80 GB', '동시 리뷰': '6~10개', '예상 가격': '$5,000 (2× 4090) 또는 $25,000+ (H100)' },
+          { '팀 규모': '개발자 100명 이상', 'GPU': '멀티 GPU H100 또는 H200', 'VRAM': '160 GB 이상', '동시 리뷰': 'vLLM으로 10개 이상', '예상 가격': '$50,000 이상' },
         ],
         callouts: [
           {

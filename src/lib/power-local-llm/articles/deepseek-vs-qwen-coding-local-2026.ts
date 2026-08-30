@@ -975,7 +975,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'VRAM 및 하드웨어 요구 사항',
         content:
           '**로컬 사용에서 DeepSeek과 Qwen의 핵심 차이는 벤치마크 점수가 아니라 하드웨어에서 실행 가능 여부입니다.** DeepSeek-V3는 236B MoE 모델입니다. INT4 양자화를 적용해도 약 140 GB의 VRAM이 필요하므로 소비자 구성으로는 불가능합니다.',
-        columns: ['모델', 'VRAM(Q4_K_M)', '최소 GPU', '예상 가격(2026년 7월)'],
+        columns: ['모델', 'VRAM(Q4_K_M)', '최소 GPU', '예상 가격'],
         rows: [
           { '0': 'Qwen3-Coder 7B', '1': '5.2 GB', '2': 'RTX 3060 12 GB', '3': '중고 $150~350' },
           { '0': 'Qwen3-Coder 14B', '1': '9.4 GB', '2': 'RTX 4060 Ti 16 GB', '3': '신품 $424' },
@@ -1100,7 +1100,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'DeepSeek-V3 API 가격은 Qwen 로컬 실행과 비교하면 어떻습니까?',
-            a: 'DeepSeek-V3 API 가격(2026년 7월 기준): 입력 토큰 1M당 $0.27, 출력 토큰 1M당 $1.10. 일반적인 IDE 사용량(하루 200K 토큰)의 경우 일 $0.27, 월 약 $8입니다. Qwen3-Coder 32B를 RTX 4090에서 로컬 실행하면 전기료 약 $0.05/일에 3년간 하드웨어 상각 약 $1.70/일이 추가됩니다. 이미 RTX 4090이 있지 않은 한 DeepSeek API가 더 경제적입니다.',
+            a: 'DeepSeek-V3 API 가격: 입력 토큰 1M당 $0.27, 출력 토큰 1M당 $1.10. 일반적인 IDE 사용량(하루 200K 토큰)의 경우 일 $0.27, 월 약 $8입니다. Qwen3-Coder 32B를 RTX 4090에서 로컬 실행하면 전기료 약 $0.05/일에 3년간 하드웨어 상각 약 $1.70/일이 추가됩니다. 이미 RTX 4090이 있지 않은 한 DeepSeek API가 더 경제적입니다.',
           },
           {
             q: 'Qwen3-Coder는 에이전트 코딩 작업을 위한 function calling을 지원합니까?',
