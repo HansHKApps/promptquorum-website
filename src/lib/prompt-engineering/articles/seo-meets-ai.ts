@@ -803,6 +803,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: 'Der erste Absatz ist Null-Information: Jeder könnte diesen Satz schreiben. Der zweite Absatz ist GEO-konform: Er nennt spezifische KI-Engines (mit Marktanteilen), definiert das Konzept (GEO), listet drei Anforderungen auf und verknüpft zu etabliertem Kontext (traditionelle SEO). Ein KI-Modell könnte diesen Absatz isolieren, in eine Antwort zitieren und die Quelle korrekt attribuieren. Das ist GEO-Sieg.',
         },
         seoFoundation: {
+          itemHeadings: true,
           id: 'does-traditional-seo-still-matter-for-geo',
           title: 'Spielt die traditionelle SEO-Grundlage noch eine Rolle?',
           content: 'Ja. GEO ergänzt traditionelle SEO; es ersetzt sie nicht. Crawlbarkeit, HTTPS, Sitemap, Core Web Vitals und Nutzersignale bleiben wichtig, weil KI-Engines auf den gleichen Datenquellen aufbauen wie Googlebot. Aber GEO fügt neue Anforderungen hinzu, die über klassisches SEO hinausgehen.',
@@ -845,6 +846,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         platformBreakdown: {
+          itemHeadings: true,
           id: 'which-ai-platforms-dominate-the-search-market',
           title: 'Welche KI-Plattformen dominieren den Suchmarkt?',
           content: 'Vier KI-Suchmaschinen teilen sich den Markt. Jede nutzt unterschiedliche Crawl-Strategien, Ranking-Algorithmen und Quellenmodelle. Hier ist der Status quo, Q2 2026:',
@@ -1150,6 +1152,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         definition: {
+          itemHeadings: true,
           id: 'geo-vs-seo-two-different-games',
           title: 'GEO vs. SEO: Dos juegos diferentes',
           content: 'Durante veinte años, "optimización para motores de búsqueda" fue sinónimo de posicionamiento en Google. En 2026, la definición debe expandirse. La Optimización para Motores Generativos (GEO) es la práctica de estructurar el contenido para que los motores de búsqueda con IA — no los humanos — seleccionen y citen tu contenido. Esta distinción no es semántica; es un cambio operativo con consecuencias.',
@@ -1255,6 +1258,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: 'El primer párrafo es de información cero: cualquiera podría escribir esa oración. El segundo párrafo es conforme a GEO: nombra motores de IA específicos con cuotas de mercado, define el concepto, enumera tres requisitos y vincula con contexto establecido. Un modelo de IA podría aislar este párrafo, citarlo en una respuesta y atribuir correctamente la fuente.',
         },
         seoFoundation: {
+          itemHeadings: true,
           id: 'does-traditional-seo-still-matter-for-geo',
           title: '¿Sigue importando la base del SEO tradicional?',
           content: 'Sí. GEO complementa el SEO tradicional; no lo reemplaza. La capacidad de rastreo, HTTPS, sitemap, Core Web Vitals y las señales de los usuarios siguen siendo importantes porque los motores de IA se construyen sobre las mismas fuentes de datos que Googlebot.',
@@ -1274,6 +1278,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         platformBreakdown: {
+          itemHeadings: true,
           id: 'which-ai-platforms-dominate-the-search-market',
           title: '¿Qué plataformas de IA dominan el mercado de búsqueda?',
           content: 'Cuatro motores de búsqueda con IA se reparten el mercado. Aquí está el status quo, T2 2026:',
@@ -1606,6 +1611,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: 'الفقرة الأولى معلومات صفرية: أي شخص يمكنه كتابة تلك الجملة. الفقرة الثانية متوافقة مع GEO: تُسمّي محركات ذكاء اصطناعي محددة بحصص سوقية وتُعرّف المفهوم وتُدرج ثلاثة متطلبات وترتبط بسياق راسخ. يمكن لنموذج ذكاء اصطناعي عزل هذه الفقرة والاستشهاد بها في إجابة وإسناد المصدر بشكل صحيح.',
         },
         seoFoundation: {
+          itemHeadings: true,
           id: 'does-traditional-seo-still-matter-for-geo',
           title: 'هل لا تزال أسس السيو التقليدي مهمة؟',
           content: 'نعم. GEO تكمل السيو التقليدي؛ لا تُحلّ محله. قابلية الزحف وHTTPS وخريطة الموقع وCore Web Vitals وإشارات المستخدمين لا تزال مهمة لأن محركات الذكاء الاصطناعي تبنى على مصادر البيانات نفسها التي يستخدمها Googlebot.',
@@ -1625,6 +1631,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         platformBreakdown: {
+          itemHeadings: true,
           id: 'which-ai-platforms-dominate-the-search-market',
           title: 'أي منصات ذكاء اصطناعي تهيمن على سوق البحث؟',
           content: 'أربعة محركات بحث بالذكاء الاصطناعي تتقاسم السوق. إليك الوضع الراهن، الربع الثاني 2026:',
@@ -1838,6 +1845,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         geoVsSeo: {
+          itemHeadings: true,
           id: 'geo-vs-seo-two-different-games',
           title: 'GEO vs SEO: Dois Jogos Diferentes',
           snippets: [
@@ -2052,6 +2060,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         definition: {
+          itemHeadings: true,
           id: 'geo-vs-seo-two-different-games',
           title: 'GEO vs SEO : deux jeux différents',
           content: 'Pendant vingt ans, « optimisation pour les moteurs de recherche » a signifié classement sur Google. En 2026, cette définition doit s\'étendre. Generative Engine Optimization (GEO) est son pendant : la pratique de structurer le contenu pour que les moteurs de recherche IA — pas les humains — le sélectionnent et le citent. Cette distinction n\'est pas sémantique ; c\'est un changement opérationnel avec des conséquences.',
@@ -2188,6 +2197,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: 'Le premier paragraphe est zéro-information : n\'importe qui pourrait l\'écrire. Le deuxième paragraphe est compatible GEO : il nomme des moteurs IA spécifiques (avec parts de marché), définit le concept (GEO), énumère trois exigences et relie au contexte établi (SEO traditionnel). Un modèle IA pourrait isoler ce paragraphe, le citer dans une réponse, et attribuer correctement la source. C\'est une victoire GEO.',
         },
         seoFoundation: {
+          itemHeadings: true,
           id: 'does-traditional-seo-still-matter-for-geo',
           title: 'Le SEO traditionnel est-il toujours pertinent ?',
           content: 'Oui. GEO complète le SEO traditionnel ; il ne le remplace pas. Crawlabilité, HTTPS, Sitemap, Core Web Vitals et signaux utilisateur restent importants, car les moteurs IA s\'appuient sur les mêmes sources de données que Googlebot. Mais GEO ajoute des exigences nouvelles qui vont au-delà du SEO classique.',
@@ -2230,6 +2240,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         platformBreakdown: {
+          itemHeadings: true,
           id: 'which-ai-platforms-dominate-the-search-market',
           title: 'Quelles plateformes IA dominent le marché ?',
           content: 'Quatre moteurs de recherche IA se partagent le marché. Chacun utilise des stratégies de crawl différentes, des algorithmes de classement et des modèles de sources. Voici l\'état des lieux, Q2 2026 :',
@@ -3444,7 +3455,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'geo-vs-seo-two-different-games',
           title: 'GEO vs. SEO: 서로 다른 두 게임',
           content: [
-            '**기존 SEO는 10개의 파란색 링크 중 한 자리를 차지하고, GEO는 AI 모델이 하나의 통합 답변에서 일반적으로 언급하는 2~7개 출처 중 하나로 인용되는 것을 목표로 합니다.** 순위 신호·콘텐츠 형식·성공 지표가 근본적으로 다릅니다. [AI 시스템의 작동 방식과 한계](/prompt-engineering/ai-limitations-what-llms-cant-do)를 이해하는 것이 GEO 최적화에 필수적입니다.',
+            '**기존 SEO는 10개의 파란색 링크 중 한 자리를 차지하고, GEO는 AI 모델이 하나의 통합 답변에서 일반적으로 언급하는 2~7개 출처 중 하나로 인용되는 것을 목표로 합니다.** 순위 신호·콘텐츠 형식·성공 지표가 근본적으로 다릅니다. [AI 시스템의 작동 방식과 한계](/ko/prompt-engineering/ai-limitations-what-llms-cant-do)를 이해하는 것이 GEO 최적화에 필수적입니다.',
           ],
           callouts: [
             {
@@ -3491,7 +3502,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'GEO의 기술적 토대란 무엇인가?',
           content: [
             '**올바른 JSON-LD 스키마 마크업이 있는 페이지는 마크업이 없는 페이지보다 리치 결과 노출 수가 최대 40% 많으며, 구조화 데이터를 올바르게 구현한 콘텐츠는 제어된 AI 인용 테스트에서 인용률이 최대 340% 높습니다.**',
-            'JSON-LD(JavaScript Object Notation for Linked Data)는 Google이 권장하는 스키마 형식으로, AI가 가장 잘 파싱하는 구조화 데이터 형식입니다. 페이지 `<head>`의 `<script>` 블록에 배치되어 의미론적 레이블을 가시적인 HTML에서 분리합니다. 이를 통해 인라인 Microdata나 RDFa 대비 구현 오류율이 약 60% 감소합니다. [잘 구성된 글쓰기](/prompt-engineering/write-better-code-with-ai)와 결합하면 스키마 마크업이 GEO의 토대가 됩니다.',
+            'JSON-LD(JavaScript Object Notation for Linked Data)는 Google이 권장하는 스키마 형식으로, AI가 가장 잘 파싱하는 구조화 데이터 형식입니다. 페이지 `<head>`의 `<script>` 블록에 배치되어 의미론적 레이블을 가시적인 HTML에서 분리합니다. 이를 통해 인라인 Microdata나 RDFa 대비 구현 오류율이 약 60% 감소합니다. [잘 구성된 글쓰기](/ko/prompt-engineering/write-better-code-with-ai)와 결합하면 스키마 마크업이 GEO의 토대가 됩니다.',
             'AI 인용 향상 효과 순으로 정렬한 가장 영향력 있는 스키마 유형:',
           ],
           callouts: [
@@ -3557,7 +3568,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
           ],
           items: [
-            '**답변 우선** — 모든 섹션의 첫 문장에 직접 답변을 배치하십시오. AI 크롤러는 각 제목의 시작 문장을 샘플링합니다. 이것이 작성된 콘텐츠에 적용된 [프롬프트 엔지니어링](/prompt-engineering/what-is-prompt-engineering)의 핵심 원칙입니다.',
+            '**답변 우선** — 모든 섹션의 첫 문장에 직접 답변을 배치하십시오. AI 크롤러는 각 제목의 시작 문장을 샘플링합니다. 이것이 작성된 콘텐츠에 적용된 [프롬프트 엔지니어링](/ko/prompt-engineering/what-is-prompt-engineering)의 핵심 원칙입니다.',
             '**엔티티 밀도** — 기사당 5~7개의 명명된 엔티티(제품명·회사명·기술 용어·연구자명)를 언급하여 주제적 권위를 신호하십시오. 이것이 AI 시스템에 주제가 권위 있고 인용 가능하다고 알리는 방법입니다.',
             '**의미적 완전성** — 각 섹션은 다른 섹션의 맥락 없이 질문에 답할 수 있어야 합니다. AI는 구절을 독립적으로 추출합니다.',
             '**모호한 주장 대신 구체적인 사실** — 정확한 수치·날짜·명명된 출처가 인용되며, "선도적인 솔루션"이나 "강력한 도구" 같은 문구는 무시됩니다.',
@@ -3610,7 +3621,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             },
             {
               '레이어': '콘텐츠 SEO',
-              '실행 사항': 'E-E-A-T 신호·저자 자격 증명·가시적 발행일; [더 나은 콘텐츠 작성법 보기](/prompt-engineering/write-better-code-with-ai)',
+              '실행 사항': 'E-E-A-T 신호·저자 자격 증명·가시적 발행일; [더 나은 콘텐츠 작성법 보기](/ko/prompt-engineering/write-better-code-with-ai)',
               '이유': 'AI 엔진은 명시적인 권위 신호가 있는 콘텐츠를 선호함',
             },
             {
@@ -3698,9 +3709,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'related-reading',
           title: '관련 읽기',
           items: [
-            '[프롬프트 엔지니어링이란?](/prompt-engineering/what-is-prompt-engineering) — AI 시스템이 추출하고 인용하는 내용을 결정하는 구조화된 지침',
-            '[AI 한계 — LLM이 할 수 없는 것](/prompt-engineering/ai-limitations-what-llms-cant-do) — AI 생성 콘텐츠 주장에 대한 검증 기법',
-            '[AI로 더 나은 코드 작성하기](/prompt-engineering/write-better-code-with-ai) — AI 지원 코드 생성에 GEO 준수 구조 적용',
+            '[프롬프트 엔지니어링이란?](/ko/prompt-engineering/what-is-prompt-engineering) — AI 시스템이 추출하고 인용하는 내용을 결정하는 구조화된 지침',
+            '[AI 한계 — LLM이 할 수 없는 것](/ko/prompt-engineering/ai-limitations-what-llms-cant-do) — AI 생성 콘텐츠 주장에 대한 검증 기법',
+            '[AI로 더 나은 코드 작성하기](/ko/prompt-engineering/write-better-code-with-ai) — AI 지원 코드 생성에 GEO 준수 구조 적용',
           ],
         },
         howToStart: {

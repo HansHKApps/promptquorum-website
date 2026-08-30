@@ -181,6 +181,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         blockquote: 'Do you want a production service that abstracts away the infrastructure, or a local speech system that you operate and control?'
       },
       cloudCosts: {
+        itemHeadings: true,
         id: 'cloud-costs',
         title: 'What You Pay For With Cloud TTS',
         sponsoredSlot: true,
@@ -1101,6 +1102,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         blockquote: 'Wollen Sie einen Produktionsservice, der die Infrastruktur abstrahiert, oder ein lokales Sprachsystem, das Sie selbst betreiben und kontrollieren?'
       },
       cloudCosts: {
+        itemHeadings: true,
         id: 'cloud-costs',
         title: 'Wofür Sie bei Cloud-TTS bezahlen',
         sponsoredSlot: true,
@@ -1148,6 +1150,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ]
       },
       localCosts: {
+        itemHeadings: true,
         id: 'local-costs',
         title: 'Was "kostenlose" lokale TTS wirklich kostet',
         content: 'Lokale TTS kann extrem wirtschaftlich sein, sobald sie läuft — besonders für Offline-Assistenten, interne Systeme, Kioske, eingebettete Projekte und vorhersehbare hochvolumige Workloads. Aber $0 an Modellgewichten ist nur ein Posten:',
@@ -1205,6 +1208,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         blockquote: '**Wollen Sie volle Offline-Kontrolle für einen Sprachassistenten oder ein eingebettetes Produkt?** Piper ist die zugänglichste lokale TTS-Engine für Einsteiger. Für Voice Cloning bieten Coqui TTS und XTTS v2 datenschutzfreundliche Alternativen. [Piper erkunden →](https://github.com/rhasspy/piper)'
       },
       comparisonTable: {
+        itemHeadings: true,
         id: 'comparison-table',
         title: 'ElevenLabs vs. Piper vs. ein lokaler Cloning-Stack',
         columns: ['Dimension', 'ElevenLabs', 'Piper', 'XTTS v2 oder ähnlicher lokaler Cloning-Stack'],
@@ -2021,6 +2025,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         blockquote: 'Voulez-vous un service de production qui masque l\'infrastructure, ou un système vocal local que vous exploitez et contrôlez vous-même ?'
       },
       cloudCosts: {
+        itemHeadings: true,
         id: 'cloud-costs',
         title: 'Ce que vous payez avec le TTS cloud',
         sponsoredSlot: true,
@@ -2068,6 +2073,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ]
       },
       localCosts: {
+        itemHeadings: true,
         id: 'local-costs',
         title: 'Ce que le TTS local « gratuit » coûte vraiment',
         content: 'Le TTS local peut être extrêmement économique une fois en fonctionnement, notamment pour les assistants hors ligne, les systèmes internes, les kiosques, les projets embarqués et les charges de travail à haut volume prévisibles. Mais des poids de modèle à 0 $ ne sont qu\'une ligne parmi d\'autres :',
@@ -2125,6 +2131,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         blockquote: '**Vous voulez un contrôle hors ligne complet pour un assistant vocal ou un produit embarqué ?** Piper est le moteur TTS local le plus accessible pour les débutants. Pour le clonage vocal, Coqui TTS et XTTS v2 offrent des alternatives axées confidentialité. [Explorer Piper →](https://github.com/rhasspy/piper)'
       },
       comparisonTable: {
+        itemHeadings: true,
         id: 'comparison-table',
         title: 'ElevenLabs vs Piper vs un stack de clonage local',
         columns: ['Dimension', 'ElevenLabs', 'Piper', 'XTTS v2 ou stack de clonage local similaire'],
@@ -4781,6 +4788,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         blockquote: '¿Quieres un servicio de producción que abstraiga la infraestructura, o un sistema de voz local que tú operes y controles?'
       },
       cloudCosts: {
+        itemHeadings: true,
         id: 'cloud-costs',
         title: 'Por qué pagas con el TTS en la nube',
         sponsoredSlot: true,
@@ -4828,6 +4836,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ]
       },
       localCosts: {
+        itemHeadings: true,
         id: 'local-costs',
         title: 'Lo que realmente cuesta el TTS local "gratis"',
         content: 'El TTS local puede ser extremadamente económico una vez en marcha, especialmente para asistentes offline, sistemas internos, kioscos, proyectos embebidos y cargas de trabajo predecibles de alto volumen. Pero que los pesos del modelo cuesten 0 $ es solo una línea del presupuesto:',
@@ -4885,6 +4894,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         blockquote: '**¿Quieres control offline total para un asistente de voz o un producto embebido?** Piper es el motor de TTS local más accesible para principiantes. Para clonación de voz, Coqui TTS y XTTS v2 ofrecen alternativas centradas en la privacidad. [Explora Piper →](https://github.com/rhasspy/piper)'
       },
       comparisonTable: {
+        itemHeadings: true,
         id: 'comparison-table',
         title: 'ElevenLabs vs Piper vs un stack local de clonación',
         columns: ['Dimension', 'ElevenLabs', 'Piper', 'XTTS v2 or Similar Local Cloning Stack'],
@@ -5701,6 +5711,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         blockquote: 'Você quer um serviço de produção que abstrai a infraestrutura, ou um sistema de fala local que você opera e controla?'
       },
       cloudCosts: {
+        itemHeadings: true,
         id: 'cloud-costs',
         title: 'Pelo Que Você Paga com TTS em Nuvem',
         sponsoredSlot: true,
@@ -5748,6 +5759,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ]
       },
       localCosts: {
+        itemHeadings: true,
         id: 'local-costs',
         title: 'O Que o TTS Local "Gratuito" Custa de Verdade',
         content: 'O TTS local pode ser extremamente econômico depois de configurado, especialmente para assistentes offline, sistemas internos, quiosques, projetos embarcados e cargas de trabalho previsíveis de alto volume. Mas pesos de modelo custando $0 é apenas um item da conta:',
@@ -6851,7 +6863,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**XTTS v2를 선택해야 할 때:** 음성 복제가 필요하고, 속도보다 음성 품질과 자연스러움이 더 중요하며, GPU가 있고, 다국어 복제가 중요하며, 더 기술적인 설정에 익숙할 때.'
         ],
         note: 'Piper와 XTTS v2는 가장 확립된 두 가지 로컬 옵션이지만, 유일한 선택지는 아닙니다. 보급형 하드웨어에서 더 빠른 합성을 목표로 하는 최신 로컬 TTS 모델과, XTTS 수준의 자연스러움과 복제 품질에 더 가까이 다가가는 모델들이 계속 등장하고 있습니다. 처음부터 로컬 TTS를 평가한다면 결정을 내리기 전에 현재 커뮤니티 리더보드를 잠깐 살펴볼 가치가 있습니다 — 하지만 대부분의 프로젝트에서 Piper와 XTTS v2는 여전히 가장 안전하고 가장 잘 문서화된 출발점입니다.',
-        blockquote: '두 엔진에 대한 전체 라이선스 세부 정보 — 음성별, 체크포인트별 약관 포함 — 는 [로컬 TTS 및 음성 복제 라이선스 가이드](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts)를 참고하세요.'
+        blockquote: '두 엔진에 대한 전체 라이선스 세부 정보 — 음성별, 체크포인트별 약관 포함 — 는 [로컬 TTS 및 음성 복제 라이선스 가이드](/ko/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts)를 참고하세요.'
       },
       hardwareGuide: {
         id: 'hardware-guide',
@@ -6867,7 +6879,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           { Hardware: 'CPU 전용 노트북', Piper: '매우 우수', 'XTTS v2': '느림' },
         ],
         note: '이는 벤치마크가 아니라 방향성을 제시하는 가이드라인입니다 — 실제 성능은 모델 버전, 음성 길이, 배치 처리, 동시 부하에 따라 달라집니다. 하드웨어를 구매하기 전에 직접 작성한 스크립트로 테스트하세요.',
-        blockquote: '로컬 AI 음성이나 LLM 작업을 위한 하드웨어 구매를 계획 중이신가요? 예산별 구매 추천은 [로컬 AI를 위한 최고의 GPU 가이드](/local-llms/best-gpus-for-local-llms)를 참고하세요.'
+        blockquote: '로컬 AI 음성이나 LLM 작업을 위한 하드웨어 구매를 계획 중이신가요? 예산별 구매 추천은 [로컬 AI를 위한 최고의 GPU 가이드](/ko/local-llms/best-gpus-for-local-llms)를 참고하세요.'
       },
       costComparison: {
         id: 'cost-comparison',
@@ -7585,6 +7597,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ]
       },
       localCosts: {
+        itemHeadings: true,
         id: 'local-costs',
         title: 'ما الذي تكلّفه TTS المحلي "المجاني" فعليًا',
         content: 'يمكن أن يكون TTS المحلي اقتصاديًا للغاية بمجرد أن يعمل، خاصة للمساعدين العاملين دون اتصال بالإنترنت والأنظمة الداخلية والأكشاك والمشاريع المدمجة وأحمال العمل عالية الحجم القابلة للتنبؤ. لكن كون أوزان النموذج تكلّف 0 دولار هو بند واحد فقط:',
