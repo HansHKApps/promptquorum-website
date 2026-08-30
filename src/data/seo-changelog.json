@@ -1141,5 +1141,30 @@
     ],
     "reason": "Page 49 batch: this is the single largest query-volume page found this campaign. The literal spelled-out phrase co-star prompt framework context objective style tone audience response alone gets 373 impr at pos 5.3 with 0% CTR, plus 20+ near-identical variants (official/source/format/singapore suffixes) totaling well over 1,500 combined impressions - all 0% CTR despite decent positions, because seoTitle never spelled out the acronym while the H1 title already did. Fixed EN and generalized the same fix to all 8 other locales since it is the same literal fact in every language, not an EN-specific query pattern. Separately found the co-star framework singapore / govtech singapore cluster (~60 impr combined) completely uncovered - CO-STAR's real, verifiable origin (Sheila Teo, GovTech Singapore prompt engineering competition) was never mentioned. Added a sourced FAQ to all 9 locales.",
     "baseline": null
+  },
+  {
+    "id": "77a6297a-9f52-4285-a602-296f0cc21f18",
+    "slug": "/ja/power-local-llm/uncensored-local-llm-creative-writing-ethics",
+    "date": "2026-08-30T08:14:39.227Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "無検閲ローカルLLMと創作活動：適切な用途と倫理 2026",
+        "new": "無検閲ローカルLLM 5選：小説創作の設定と倫理 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "無検閲ローカルLLMと創作活動：推奨モデル、Ollama設定、倫理的責任、適切な用途、創作者が守るべきガイドラインを網羅。",
+        "new": "小説・ダークフィクション向け無検閲ローカルLLMはHermes 3とDolphin 3.0が最適。無修正/非検閲モデル5つをVRAM別に比較し、LM StudioとOllamaの設定手順と倫理的責任まで解説。2026年版。"
+      }
+    ],
+    "reason": "geo-meta-optimizer: coherence-B2-fix — added 小説 + 5選 to title (206 impr @14.6% CTR query), swapped Ollama-only meta for LM Studio+Ollama, added 無修正/非検閲 synonym coverage (~680 impr at pos 7-11.5 with near-zero clicks) + JA-language and terminology FAQs",
+    "baseline": {
+      "position": 5.3,
+      "impressions": 9008,
+      "clicks": 596,
+      "ctr": 0.06616341030195382,
+      "period": "GSC last 28d as pasted 2026-08-30"
+    }
   }
 ]
