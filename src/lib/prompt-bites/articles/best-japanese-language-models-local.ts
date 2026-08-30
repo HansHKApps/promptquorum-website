@@ -5,9 +5,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
   en: {
     theme: 'Model Comparisons',
     title: 'Which Local LLM Models Support Japanese Best?',
-    dateModified: '2026-06-21',
-    seoTitle: 'Best Local LLMs Japanese 2026 | Prompt Bites | PromptQuorum',
-    metaDescription: 'Rinna 3.6B (4 GB), ELYZA-7B (6 GB), Qwen3 7B (multilingual JA/ZH/EN), Phi-4 (10–12 GB): four local LLMs for Japanese tasks, all via Ollama in 2026.',
+    dateModified: '2026-08-30',
+    seoTitle: 'Best Local LLMs for Japanese 2026: Rinna, ELYZA, Qwen3',
+    metaDescription: 'Rinna 3.6B, ELYZA-7B, Qwen3 7B (best for JA/EN/ZH translation), and Phi-4: 4 local LLMs for Japanese chat, writing, and translation via Ollama.',
     heroImage: '/images/best-japanese-language-models-local-model-comparison-hero-en.webp',
     publishDate: '2026-05-27',
     freshness_tier: 'semi_annual',
@@ -116,6 +116,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Quick Answers About Japanese Local LLMs',
         faqs: [
           {
+            q: 'What is the best local LLM for Japanese translation?',
+            a: "Qwen3 7B — it handles Japanese, English, and Chinese in a single model, so you don't need to swap models for JA-to-EN, EN-to-JA, or JA-to-ZH translation tasks. ELYZA-7B and Rinna 3.6B are Japanese-native, but they were trained primarily for generation and chat, not specifically for translation. Qwen3 7B's explicit multilingual training makes it the stronger pick when translation is the primary task.",
+          },
+          {
             q: 'Do Llama and Mistral support Japanese?',
             a: 'Basic support only. Llama 3.1 8B includes some Japanese training data but performs 30–40% worse than Japanese-specific models on Japanese-language benchmarks. Mistral Small has minimal Japanese training data and is not recommended for Japanese tasks. Use ELYZA-7B (Llama fine-tune) or Rinna 3.6B for reliable Japanese output.',
           },
@@ -142,7 +146,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'Rinna 3.6B (4 GB), ELYZA-7B (6 GB), Qwen3 7B (JA/ZH/EN), Phi-4 (10–12 GB): vier lokale LLMs für japanische Texte — alle über Ollama ausführbar.',
     heroImage: '/images/best-japanese-language-models-local-model-comparison-hero-de.webp',
     publishDate: '2026-05-27',
-    dateModified: '2026-06-21',
+    dateModified: '2026-08-30',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-27',
     quickAnswerTop: {
@@ -202,6 +206,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Häufige Fragen zu japanischen Lokal-LLMs',
         faqs: [
           {
+            q: 'Was ist das beste lokale LLM für Japanisch-Übersetzungen?',
+            a: 'Qwen3 7B — es beherrscht Japanisch, Englisch und Chinesisch in einem einzigen Modell, sodass Sie für JA-EN-, EN-JA- oder JA-ZH-Übersetzungen nicht das Modell wechseln müssen. ELYZA-7B und Rinna 3.6B sind Japanisch-nativ, wurden aber primär für Generierung und Chat trainiert, nicht speziell für Übersetzung. Qwen3 7Bs explizites mehrsprachiges Training macht es zur stärkeren Wahl, wenn Übersetzung die Hauptaufgabe ist.',
+          },
+          {
             q: 'Unterstützen Llama und Mistral Japanisch?',
             a: 'Nur grundlegende Unterstützung. Llama 3.1 8B enthält einige japanische Trainingsdaten, liefert aber 30–40% schlechtere Ergebnisse als japanisch-spezifische Modelle auf japanischen Benchmarks. Mistral Small hat minimale japanische Trainingsdaten und wird für japanische Aufgaben nicht empfohlen. ELYZA-7B (Llama Fine-Tune) oder Rinna 3.6B für zuverlässige japanische Ausgabe verwenden.',
           },
@@ -228,7 +236,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'Rinna 3.6B (4 Go), ELYZA-7B (6 Go), Qwen3 7B (JA/ZH/EN), Phi-4 (10–12 Go) : quatre LLM locaux pour le japonais, tous compatibles Ollama en 2026.',
     heroImage: '/images/best-japanese-language-models-local-model-comparison-hero-fr.webp',
     publishDate: '2026-05-27',
-    dateModified: '2026-06-21',
+    dateModified: '2026-08-30',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-27',
     quickAnswerTop: {
@@ -288,6 +296,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Réponses rapides sur les LLM locaux japonais',
         faqs: [
           {
+            q: 'Quel est le meilleur LLM local pour la traduction japonaise ?',
+            a: "Qwen3 7B — il gère le japonais, l'anglais et le chinois dans un seul modèle, donc pas besoin de changer de modèle pour une traduction JA-EN, EN-JA ou JA-ZH. ELYZA-7B et Rinna 3.6B sont natifs du japonais, mais ont été entraînés principalement pour la génération et le chat, pas spécifiquement pour la traduction. L'entraînement multilingue explicite de Qwen3 7B en fait le meilleur choix quand la traduction est la tâche principale.",
+          },
+          {
             q: 'Llama et Mistral supportent-ils le japonais ?',
             a: 'Support basique uniquement. Llama 3.1 8B inclut quelques données d\'entraînement en japonais mais performe 30–40% moins bien que les modèles spécifiques au japonais sur les benchmarks japonais. Mistral Small a des données d\'entraînement japonaises minimales et n\'est pas recommandé pour les tâches japonaises. Utilisez ELYZA-7B (fine-tune Llama) ou Rinna 3.6B pour une sortie japonaise fiable.',
           },
@@ -314,7 +326,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'Rinna 3.6Bは4 GB RAMで動作する最軽量の日本語ネイティブモデル。ELYZA-7Bは指示追従に最適。Qwen3 7BはJA/ZH/ENの多言語とコーディングをカバー。すべてOllama経由。',
     heroImage: '/images/best-japanese-language-models-local-model-comparison-hero-ja.webp',
     publishDate: '2026-05-27',
-    dateModified: '2026-06-21',
+    dateModified: '2026-08-30',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-27',
     quickAnswerTop: {
@@ -374,6 +386,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '日本語ローカルLLMに関するよくある質問',
         faqs: [
           {
+            q: '日本語翻訳に最適なローカルLLMはどれですか？',
+            a: 'Qwen3 7Bです。日本語・英語・中国語を単一モデルで扱えるため、JA→EN、EN→JA、JA→ZHの翻訳でモデルを切り替える必要がありません。ELYZA-7BとRinna 3.6Bは日本語ネイティブですが、主に生成やチャット用に訓練されており、翻訳に特化しているわけではありません。Qwen3 7Bは明示的な多言語訓練を受けているため、翻訳が主なタスクの場合はより強い選択肢です。',
+          },
+          {
             q: 'LlamaやMistralは日本語に対応していますか？',
             a: '基本的なサポートのみです。Llama 3.1 8Bには一部の日本語訓練データが含まれていますが、日本語ベンチマークでは日本語特化モデルより30–40%性能が低下します。Mistral Smallは日本語訓練データが最小限であり、日本語タスクには推奨されません。信頼性の高い日本語出力にはELYZA-7B（Llamaファインチューン）またはRinna 3.6Bを使用してください。',
           },
@@ -400,7 +416,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'Rinna 3.6B最低4 GB内存即可运行，是最轻量的日语原生本地LLM。ELYZA-7B在指令跟随方面领先。Qwen3 7B覆盖JA/ZH/EN多语言和编码。均可通过Ollama运行。',
     heroImage: '/images/best-japanese-language-models-local-model-comparison-hero-zh.webp',
     publishDate: '2026-05-27',
-    dateModified: '2026-06-21',
+    dateModified: '2026-08-30',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-27',
     quickAnswerTop: {
@@ -460,6 +476,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: '日语本地LLM常见问题',
         faqs: [
           {
+            q: '日语翻译最好的本地LLM是什么？',
+            a: 'Qwen3 7B——它在单一模型中同时处理日语、英语和中文，因此无需为JA→EN、EN→JA或JA→ZH翻译切换模型。ELYZA-7B和Rinna 3.6B是日语原生模型，但主要针对生成和对话训练，而非专门针对翻译。Qwen3 7B明确的多语言训练使其在以翻译为主要任务时是更强的选择。',
+          },
+          {
             q: 'Llama和Mistral支持日语吗？',
             a: '仅基础支持。Llama 3.1 8B包含一些日语训练数据，但在日语基准测试中比日语特化模型差30–40%。Mistral Small的日语训练数据极少，不推荐用于日语任务。可靠的日语输出请使用ELYZA-7B（Llama微调版）或Rinna 3.6B。',
           },
@@ -487,7 +507,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'Rinna 3.6B (4 GB), ELYZA-7B (6 GB), Qwen3 7B (multilingüe JA/ZH/EN), Phi-4 (10–12 GB): cuatro LLMs locales para tareas en japonés, todos vía Ollama en 2026.',
     heroImage: '/images/best-japanese-language-models-local-model-comparison-hero-es.webp',
     publishDate: '2026-05-27',
-    dateModified: '2026-06-02',
+    dateModified: '2026-08-30',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-27',
     current_models_mentioned: ['Rinna 3.6B', 'ELYZA-7B', 'CyberAgent CALM3-22B', 'Qwen3 7B', 'Phi-4'],
@@ -559,6 +579,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Respuestas rápidas sobre LLMs locales en japonés',
         faqs: [
           {
+            q: '¿Cuál es el mejor LLM local para traducción de japonés?',
+            a: 'Qwen3 7B: maneja japonés, inglés y chino en un solo modelo, así que no necesitas cambiar de modelo para traducción JA-EN, EN-JA o JA-ZH. ELYZA-7B y Rinna 3.6B son nativos de japonés, pero se entrenaron principalmente para generación y chat, no específicamente para traducción. El entrenamiento multilingüe explícito de Qwen3 7B lo convierte en la opción más sólida cuando la traducción es la tarea principal.',
+          },
+          {
             q: '¿Admiten japonés Llama y Mistral?',
             a: 'Solo soporte básico. Llama 3.1 8B incluye algunos datos de entrenamiento en japonés pero rinde un 30–40% peor que los modelos específicos de japonés en benchmarks de japonés. Mistral Small tiene datos de entrenamiento en japonés mínimos y no se recomienda para tareas en japonés. Usa ELYZA-7B (fine-tune de Llama) o Rinna 3.6B para salida fiable en japonés.',
           },
@@ -585,7 +609,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: '⁨Rinna 3.6B⁩ يعمل بـ⁨4 GB RAM⁩، و⁨ELYZA-7B⁩ بـ⁨6 GB⁩ للتعليمات، و⁨Qwen3 7B⁩ يغطي ⁨JA/ZH/EN⁩ — جميعها تعمل محلياً عبر ⁨Ollama⁩ بتكميم ⁨Q4⁩_⁨K⁩_⁨M⁩.',
     heroImage: '/images/best-japanese-language-models-local-model-comparison-hero-ar.webp',
     publishDate: '2026-05-27',
-    dateModified: '2026-06-20',
+    dateModified: '2026-08-30',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-27',
     current_models_mentioned: ['Rinna 3.6B', 'ELYZA-7B', 'CyberAgent CALM3-22B', 'Qwen3 7B', 'Phi-4'],
@@ -652,6 +676,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'أسئلة شائعة حول النماذج اللغوية الكبيرة المحلية باللغة اليابانية',
         faqs: [
           {
+            q: 'ما هو أفضل نموذج محلي للترجمة اليابانية؟',
+            a: 'Qwen3 7B — يتعامل مع اليابانية والإنجليزية والصينية في نموذج واحد، لذا لا تحتاج إلى تبديل النماذج لترجمة JA-EN أو EN-JA أو JA-ZH. نموذجا ELYZA-7B وRinna 3.6B يابانيان أصليان، لكنهما دُرِّبا بشكل أساسي للتوليد والدردشة، وليس للترجمة تحديدًا. تدريب Qwen3 7B متعدد اللغات الصريح يجعله الخيار الأقوى عندما تكون الترجمة هي المهمة الرئيسية.',
+          },
+          {
             q: 'هل تدعم Llama وMistral اللغة اليابانية؟',
             a: 'دعم محدود فقط. تتضمن Llama 3.1 8B بعض بيانات التدريب باليابانية لكن أداؤها أضعف بـ30–40% من النماذج المتخصصة في اليابانية في الاختبارات المعيارية. Mistral Small لديها بيانات تدريب يابانية ضئيلة وغير موصى بها للمهام اليابانية. استخدم ELYZA-7B (ضبط دقيق لـ Llama) أو Rinna 3.6B للإخراج الموثوق باليابانية.',
           },
@@ -678,7 +706,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'Rinna 3.6B (4 GB), ELYZA-7B (6 GB), Qwen3 7B (multilíngue JA/ZH/EN), Phi-4 (10–12 GB): quatro LLMs locais para tarefas em japonês, todos via Ollama em 2026.',
     heroImage: '/images/best-japanese-language-models-local-model-comparison-hero-pt.webp',
     publishDate: '2026-05-27',
-    dateModified: '2026-06-02',
+    dateModified: '2026-08-30',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-27',
     current_models_mentioned: ['Rinna 3.6B', 'ELYZA-7B', 'CyberAgent CALM3-22B', 'Qwen3 7B', 'Phi-4'],
@@ -760,6 +788,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         title: 'Respostas rápidas sobre LLMs locais em japonês',
         faqs: [
           {
+            q: 'Qual é o melhor LLM local para tradução de japonês?',
+            a: 'Qwen3 7B — ele lida com japonês, inglês e chinês em um único modelo, então você não precisa trocar de modelo para tradução JA-EN, EN-JA ou JA-ZH. ELYZA-7B e Rinna 3.6B são nativos em japonês, mas foram treinados principalmente para geração e chat, não especificamente para tradução. O treinamento multilíngue explícito do Qwen3 7B o torna a escolha mais forte quando a tradução é a tarefa principal.',
+          },
+          {
             q: 'Llama e Mistral suportam japonês?',
             a: 'Apenas suporte básico. Llama 3.1 8B inclui alguns dados de treinamento em japonês, mas tem desempenho 30–40% pior do que modelos específicos de japonês em benchmarks de japonês. Mistral Small tem dados de treinamento mínimos em japonês e não é recomendado para tarefas em japonês. Use ELYZA-7B (fine-tune do Llama) ou Rinna 3.6B para saída confiável em japonês.',
           },
@@ -786,7 +818,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     metaDescription: 'Rinna 3.6B (4 GB), ELYZA-7B (6 GB), Qwen3 7B (다국어 JA/ZH/EN), Phi-4 (10–12 GB): 2026년 Ollama를 통해 실행하는 일본어 작업용 로컬 LLM 4종 비교.',
     heroImage: '/images/best-japanese-language-models-local-model-comparison-hero-ko.webp',
     publishDate: '2026-05-27',
-    dateModified: '2026-06-12',
+    dateModified: '2026-08-30',
     freshness_tier: 'semi_annual',
     next_refresh_due: '2026-11-27',
     current_models_mentioned: ['Rinna 3.6B', 'ELYZA-7B', 'CyberAgent CALM3-22B', 'Qwen3 7B', 'Phi-4'],
@@ -862,6 +894,10 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'faq',
         title: '일본어 로컬 LLM에 관한 자주 묻는 질문',
         faqs: [
+          {
+            q: '일본어 번역에 가장 좋은 로컬 LLM은 무엇입니까?',
+            a: 'Qwen3 7B입니다 — 일본어, 영어, 중국어를 하나의 모델로 처리하므로 JA-EN, EN-JA, JA-ZH 번역을 위해 모델을 바꿀 필요가 없습니다. ELYZA-7B와 Rinna 3.6B는 일본어 네이티브 모델이지만 주로 생성과 채팅용으로 학습되었으며 번역에 특화되지는 않았습니다. Qwen3 7B는 명시적인 다국어 학습을 거쳤기 때문에 번역이 주요 작업일 때 더 강력한 선택입니다.',
+          },
           {
             q: 'Llama와 Mistral은 일본어를 지원합니까?',
             a: '기본적인 지원만 가능합니다. Llama 3.1 8B는 일부 일본어 학습 데이터를 포함하지만, 일본어 벤치마크에서 일본어 특화 모델보다 30–40% 낮은 성능을 보입니다. Mistral Small은 일본어 학습 데이터가 매우 적으며 일본어 작업에는 권장하지 않습니다. 안정적인 일본어 출력을 위해서는 ELYZA-7B(Llama 파인튜닝) 또는 Rinna 3.6B를 사용하십시오.',

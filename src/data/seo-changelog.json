@@ -1099,5 +1099,19 @@
     ],
     "reason": "Page 45 audit-mode findings, user requested full fix despite no GSC data. Rule 2d title/meta length violations existed identically across en/es/pt/de/fr (same oversized pattern propagated to every locale). Separately found real content gaps while syncing schemas: pt was missing 8 of 12 FAQs entirely (translated from EN), and ko/pt had no faqSchema field at all despite EN/other locales having one. Fixed all findings site-wide for this page rather than EN-only since these were structural/completeness gaps, not GSC-driven wording choices.",
     "baseline": null
+  },
+  {
+    "id": "10e95a1f-43bd-466c-8729-e895fb64a7b2",
+    "slug": "/prompt-bites/best-japanese-language-models-local",
+    "date": "2026-08-30T06:56:46.607Z",
+    "fields": [
+      {
+        "field": "seoTitle,metaDescription (en), faqs (all 9 locales)",
+        "old": "Best Local LLMs Japanese 2026 | Prompt Bites | PromptQuorum - wasted ~30 chars on site-branding suffix, no translation FAQ despite ~87 impr translation query cluster",
+        "new": "Best Local LLMs for Japanese 2026: Rinna, ELYZA, Qwen3 - dropped branding suffix to match real query phrasing, added dedicated translation FAQ to all 9 locales"
+      }
+    ],
+    "reason": "Page 46 batch: 130 total queries, large real volume (best japanese llm 37 impr 5.4% CTR, japanese llm models 45 impr, best local llm for japanese 2026 41 impr pos 3.0 0% CTR). Title wasted ~30 of 59 chars on a | Prompt Bites | PromptQuorum suffix instead of matching query phrasing. Separately found translation is a massive combined sub-theme (~87 impr across 7 query variants: japanese translation, japanese to english, japanese to chinese, etc.) with only one buried sentence mentioning it, no dedicated FAQ. Fixed title/meta and added a translation-specific FAQ (Qwen3 7B as the multilingual pick) to all 9 locales.",
+    "baseline": null
   }
 ]
