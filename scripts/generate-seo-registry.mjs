@@ -21,7 +21,7 @@ function extractMetaFromPeFile(filePath) {
   const langLines = [] // { lang, lineIndex }
 
   for (let i = 0; i < lines.length; i++) {
-    const m = lines[i].match(/^ {2,4}(en|de|fr|ja|zh|es|pt|ar):\s*\{/)
+    const m = lines[i].match(/^ {2,4}(en|de|fr|ja|zh|es|pt|ar|ko):\s*\{/)
     if (m) {
       langLines.push({ lang: m[1], lineIndex: i })
     }
@@ -80,58 +80,6 @@ function parseBarrel(barrelPath) {
   return slugToFile
 }
 
-// Extract seoTitle/metaDescription per language per article slug from content.ts.
-// Article keys are at 2-space indent: "  'slug': {"
-// Language blocks inside are at 4-space indent: "    en: {"
-function extractMetaFromLlmContent(contentPath) {
-  const lines = fs.readFileSync(contentPath, 'utf-8').split('\n')
-  const articles = {} // slug → { lang → { seoTitle, metaDescription } }
-
-  let currentSlug = null
-  let currentLang = null
-
-  const articleKeyLines = []  // { slug, lineIndex }
-  const langKeyLines = []     // { slug, lang, lineIndex }
-
-  for (let i = 0; i < lines.length; i++) {
-    // Article key: "  'slug': {"
-    const slugM = lines[i].match(/^  '([^']+)':\s*\{/)
-    if (slugM) articleKeyLines.push({ slug: slugM[1], lineIndex: i })
-
-    // Language key: "    en: {" (4-space indent inside article blocks)
-    const langM = lines[i].match(/^ {4}(en|de|fr|ja|zh|es|pt|ar):\s*\{/)
-    if (langM) {
-      // Associate with last seen article slug
-      const ownerSlug = articleKeyLines.length > 0
-        ? articleKeyLines[articleKeyLines.length - 1].slug
-        : null
-      if (ownerSlug) langKeyLines.push({ slug: ownerSlug, lang: langM[1], lineIndex: i })
-    }
-  }
-
-  // For each (slug, lang) block, scan until next lang block or next article
-  for (let li = 0; li < langKeyLines.length; li++) {
-    const { slug, lang, lineIndex } = langKeyLines[li]
-    const endLine = li + 1 < langKeyLines.length ? langKeyLines[li + 1].lineIndex : lines.length
-
-    if (!articles[slug]) articles[slug] = {}
-    articles[slug][lang] = { seoTitle: null, metaDescription: null }
-
-    for (let i = lineIndex; i < endLine; i++) {
-      const line = lines[i]
-      if (!articles[slug][lang].seoTitle) {
-        const m = line.match(/seoTitle:\s*'([^']*)'/) || line.match(/seoTitle:\s*"([^"]*)"/)
-        if (m) articles[slug][lang].seoTitle = m[1]
-      }
-      if (!articles[slug][lang].metaDescription) {
-        const m = line.match(/metaDescription:\s*'([^']*)'/) || line.match(/metaDescription:\s*"([^"]*)"/)
-        if (m) articles[slug][lang].metaDescription = m[1]
-      }
-    }
-  }
-
-  return articles
-}
 
 function buildChangeLookup(changelog) {
   const map = new Map()
@@ -192,21 +140,34 @@ function main() {
     const urlSlug = contentKeyToUrlSlug[articleKey] ?? articleKey
     for (const lang of LANGS) {
       if (!langMeta[lang]) continue
-      const slug = lang === 'en' ? `/prompt-engineering/${urlSlug}` : `/prompt-engineering/${urlSlug}?lang=${lang}`
+      const slug = lang === 'en' ? `/prompt-engineering/${urlSlug}` : `/${lang}/prompt-engineering/${urlSlug}`
       addPage(slug, langMeta[lang])
       peCount++
     }
   }
 
-  // Local LLMs articles
-  const llmContentPath = path.join(ROOT, 'src/lib/local-llms/content.ts')
-  const llmArticles = extractMetaFromLlmContent(llmContentPath)
+  // Local LLMs articles — read the split article files via the barrel.
+  // (content.ts is now only a re-export stub, so parsing it yielded 0 entries.)
+  const llmBarrelPath = path.join(ROOT, 'src/lib/local-llms/articles-barrel.ts')
+  const llmSlugToFile = parseBarrel(llmBarrelPath)
+
+  const llmSlugsPath = path.join(ROOT, 'src/lib/local-llms/slugs.ts')
+  const llmSlugsContent = fs.readFileSync(llmSlugsPath, 'utf-8')
+  const llmContentKeyToUrlSlug = {}
+  for (const line of llmSlugsContent.split('\n')) {
+    const m = line.match(/^\s+'([^']+)':\s+'([^']+)'/)
+    if (m) llmContentKeyToUrlSlug[m[2]] = m[1] // contentKey → urlSlug
+  }
+
   let llmCount = 0
-  for (const [articleKey, langMap] of Object.entries(llmArticles)) {
+  for (const [articleKey, filePath] of Object.entries(llmSlugToFile)) {
+    if (!fs.existsSync(filePath)) continue
+    const langMeta = extractMetaFromPeFile(filePath)
+    const urlSlug = llmContentKeyToUrlSlug[articleKey] ?? articleKey
     for (const lang of LANGS) {
-      if (!langMap[lang]) continue
-      const slug = lang === 'en' ? `/local-llms/${articleKey}` : `/local-llms/${articleKey}?lang=${lang}`
-      addPage(slug, langMap[lang])
+      if (!langMeta[lang]) continue
+      const slug = lang === 'en' ? `/local-llms/${urlSlug}` : `/${lang}/local-llms/${urlSlug}`
+      addPage(slug, langMeta[lang])
       llmCount++
     }
   }
