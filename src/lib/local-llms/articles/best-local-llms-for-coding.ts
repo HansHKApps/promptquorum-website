@@ -2924,13 +2924,13 @@ schema: {
       next_refresh_due: '2026-08-28',
       theme: 'ベストモデル',
       title: '2026年最高のコーディング用ローカルLLM：Kimi K2.6 vs Qwen vs Devstral',
-      seoTitle: 'コーディング向けローカルLLM 2026：Kimi K2.6・Qwen・Devstral',
+      seoTitle: 'ローカルLLM コーディング おすすめ 2026：Kimi',
       intro: '2026年7月のコーディング用最高のローカルLLMはKimi K2.6（58.6 SWE-Bench Pro、MoE、Modified MITライセンス）、Qwen 3.6 27B（77.2% SWE-bench、最高の密集モデル）、Devstral Small 24B（24B級エージェントコーディング最適）です。最新のエージェント型対抗モデルはLaguna XS 2.1（Poolside、SWE-bench Verified 70.9%、256Kコンテキスト）、コーディング特化のKimi K2.7 Code（Moonshot AI）も新登場。8GB マシンの場合、Qwen3 8B が以前の Qwen3-Coder 7B の推奨に置き換わります。すべて Ollama 経由でローカルで実行されます。',
-      metaDescription: 'Kimi K2.6は58.6 SWE-Bench Proで首位、Qwen 3.6 27Bは77.2% SWE-bench、Devstral 24Bはエージェントコーディングに最適。VRAM・速度・ベンチマークをOllamaで比較。',
+      metaDescription: 'コーディング向けローカルLLMのおすすめはKimi K2.6（SWE-Bench Pro 58.6で首位）。Qwen 3.6 27Bは77.2% SWE-bench、Devstral 24Bはエージェント用。VRAM・速度・ベンチマークを比較。',
       heroImage: '/images/best-local-llms-for-coding-benchmark-comparison-hero-ja.webp',
       publishDate: '2026-04-04',
       dateModified: '2026-07-29',
-      leadAnswerBlock: '**2026年7月の最高のローカルコーディングモデルはKimi K2.6（58.6 SWE-Bench Pro、MoE、Modified MIT ライセンス）で最高品質、Qwen 3.6 27B（77.2% SWE-bench、最高の密集モデル）でバランスのとれたパフォーマンス、Devstral Small 24B（24B級エージェントワークフロー最適）です。Laguna XS 2.1（Poolside、SWE-bench Verified 70.9%）は最新の長時間エージェントコーディング対抗モデル、Kimi K2.7 CodeはK2.6のコーディング特化進化版です。8GB RAM：Qwen3 8B。すべて Ollama を介してローカルで実行され、クラウド API コストなしのオフライン プライベート コード生成が可能です。** 単一関数をテストする HumanEval とは異なり、SWE-bench（実際の GitHub 問題の解決）は 2026 年の実践的なコーディングの主要ベンチマークです。',
+      leadAnswerBlock: '**最高のローカルコーディングモデルはKimi K2.6（58.6 SWE-Bench Pro、MoE、Modified MIT ライセンス）で最高品質、Qwen 3.6 27B（77.2% SWE-bench、最高の密集モデル）でバランスのとれたパフォーマンス、Devstral Small 24B（24B級エージェントワークフロー最適）です。Laguna XS 2.1（Poolside、SWE-bench Verified 70.9%）は最新の長時間エージェントコーディング対抗モデル、Kimi K2.7 CodeはK2.6のコーディング特化進化版です。8GB RAM：Qwen3 8B。すべて Ollama を介してローカルで実行され、クラウド API コストなしのオフライン プライベート コード生成が可能です。** 単一関数をテストする HumanEval とは異なり、SWE-bench（実際の GitHub 問題の解決）は 2026 年の実践的なコーディングの主要ベンチマークです。',
       audience: 'コンシューマハードウェア上で初めてのローカルLLMを実行している初心者',
       readTime: '9分で読める',
       educationalLevel: 'Beginner',
@@ -2963,7 +2963,7 @@ schema: {
           id: 'key-takeaways',
           isTldr: true,
           snippetBlocks: [
-            { type: 'one-sentence', text: '2026年7月のベストなローカルコーディングLLMは、最高品質のKimi K2.6（SWE-Bench Pro 58.6、MoE、Modified MITライセンス）と、コンシューマーハードウェアでバランスの良いQwen 3.6 27B（SWE-bench 77.2%）、最新のエージェント型対抗モデルLaguna XS 2.1（SWE-bench Verified 70.9%）。' },
+            { type: 'one-sentence', text: 'ベストなローカルコーディングLLMは、最高品質のKimi K2.6（SWE-Bench Pro 58.6、MoE、Modified MITライセンス）と、コンシューマーハードウェアでバランスの良いQwen 3.6 27B（SWE-bench 77.2%）、最新のエージェント型対抗モデルLaguna XS 2.1（SWE-bench Verified 70.9%）。' },
             { type: 'plain-terms', text: 'SWE-benchは、AIが実際のGitHubバグをどれだけ修正できるかを測定するスコアです。高いほど良い。Kimi K2.6はMixture-of-Expertsモデルで、クエリごとに1Tパラメータのうち32Bだけを使用します。' },
           ],
           items: [
@@ -2987,7 +2987,7 @@ schema: {
           id: 'qwen25-coder-32b',
           title: '#1 Kimi K2.6（総合最高）',
           content: [
-            '**Kimi K2.6（Moonshot AI）は2026年7月現在、ローカルで実行可能な最高性能のコーディングモデルです。** SWE-Bench Proで58.6を記録 — Tier Aに到達した初の非西洋モデル。MoEアーキテクチャ（32B active / 1T total）。Modified MITライセンス — 商用利用可。',
+            '**Kimi K2.6（Moonshot AI）は現在、ローカルで実行可能な最高性能のコーディングモデルです。** SWE-Bench Proで58.6を記録 — Tier Aに到達した初の非西洋モデル。MoEアーキテクチャ（32B active / 1T total）。Modified MITライセンス — 商用利用可。',
             '**セットアップ**：`ollama run kimi-k2.6`。コンシューマーハードウェアには量子化が必要。マルチファイル編集やセッション形式のマルチターンコーディングに強い。',
             'Moonshot AIは2026年6月に**Kimi K2.7 Code**をリリース — K2.6をベースにした、長時間のエージェントコーディングセッションに特化したコーディング専用モデル。`ollama run kimi-k2.7-code`。',
           ],
@@ -3040,7 +3040,7 @@ schema: {
             { 'モデル': 'DeepSeek-R1 14B', 'HumanEval': '—', 'SWE-bench': '—', 'RAM': '10 GB', 'FIM': '非対応' },
           ],
           image: '/images/best-local-llms-for-coding-benchmark-comparison-hero-ja.webp',
-          imageCaption: 'モデル別ベンチマークスコア(2026年7月):Qwen3-Coder 32BがHumanEval 87%で首位、DeepSeek V4 Flashは独立したリアルワールドテストで78/100、Qwen 3.6 27BはSWE-benchで77.2%、Laguna XS 2.1は最新のエージェント型対抗モデルとしてSWE-bench Verified 70.9%、Qwen3 8Bは約76% HumanEval、Kimi K2.6はより困難なSWE-Bench Proで58.6を記録。',
+          imageCaption: 'モデル別ベンチマークスコア:Qwen3-Coder 32BがHumanEval 87%で首位、DeepSeek V4 Flashは独立したリアルワールドテストで78/100、Qwen 3.6 27BはSWE-benchで77.2%、Laguna XS 2.1は最新のエージェント型対抗モデルとしてSWE-bench Verified 70.9%、Qwen3 8Bは約76% HumanEval、Kimi K2.6はより困難なSWE-Bench Proで58.6を記録。',
           callouts: [
             { type: 'note', text: 'HumanEvalは単一関数のPython生成を測定します。SWE-benchは実際のマルチファイルコード変更を測定します。「実運用」スコアは独立したマルチタスクコーディングベンチマークによるものです。両指標とも重要ですが、SWE-benchの方が本番環境でのコーディング性能をより正確に予測します。' },
           ],
@@ -3189,7 +3189,8 @@ schema: {
           id: 'faq',
           title: 'よくある質問',
           faqs: [
-            { q: '2026年7月に最高のコーディング用ローカルLLMは？', a: 'Kimi K2.6――58.6 SWE-Bench Pro（MoE、Modified MITライセンス）が総合的に最高です。最高の密集モデルはQwen 3.6 27B――77.2% SWE-bench、22 GB VRAM。最新のエージェント型対抗モデル：Laguna XS 2.1――SWE-bench Verified 70.9%。24B級エージェントコーディング：Devstral Small 24B。8 GBマシン用：Qwen3 8B。' },
+            { q: 'コーディング特化モデルと汎用モデルはどちらを選ぶべき？', a: '同じサイズなら、コード生成ではコーディング特化モデルが有利です。Qwen3-CoderやKimi K2.7 Codeのような特化モデルはコードとリポジトリ構造で追加学習されており、補完やFill-in-the-Middleの精度で汎用モデルを上回ります。一方、コードについて日本語で説明させたり、設計を相談したりする用途では汎用モデルのほうが自然です。1つしか置けないなら、実務ではコーディング特化を選び、説明が必要なときだけ汎用モデルに切り替える構成が扱いやすくなります。' },
+            { q: '2026年にコーディングで最強のローカルLLMは？', a: 'Kimi K2.6――58.6 SWE-Bench Pro（MoE、Modified MITライセンス）が総合的に最高です。最高の密集モデルはQwen 3.6 27B――77.2% SWE-bench、22 GB VRAM。最新のエージェント型対抗モデル：Laguna XS 2.1――SWE-bench Verified 70.9%。24B級エージェントコーディング：Devstral Small 24B。8 GBマシン用：Qwen3 8B。' },
             { q: 'Kimi K2.7 CodeとLaguna XS 2.1とは？', a: '2026年7月にOllamaに追加された最新のエージェントコーディングモデルです。Kimi K2.7 Code（Moonshot AI）はKimi K2.6のコーディング特化進化版で、長時間コーディングセッション向け――`ollama run kimi-k2.7-code`。Laguna XS 2.1（Poolside、2026年7月2日）は33B総パラメータ/3B活性化のMoEモデルで、256Kコンテキスト、SWE-bench Verified 70.9%、OpenMDW-1.1ライセンス――`ollama run laguna-xs-2.1`。' },
             { q: 'HumanEvalとは何で、なぜ重要？', a: 'HumanEvalは164のPythonプログラミング問題から成るベンチマーク。モデルは各問題で正しい関数本体を生成する必要がある。Pass@1スコア（最初の試行で解決された割合）は標準メトリクス。コーディングモデル比較における最も広く使用されているメジャー。' },
             { q: 'Fill-in-the-Middle（FIM）とは、どのモデルがサポート？', a: 'FIMはカーソル前後のコード指定でコード補完する能力――IDEオートコンプリートで使用されるパターン。Qwen3-Coder、DeepSeek-Coder、Starcoder2はすべてFIMをサポート。Llama 3.1 8B汎用はサポートしない。IDE統合用にはFIM互換モデルを使用。' },
@@ -3250,7 +3251,8 @@ schema: {
         '@type': 'FAQPage',
         inLanguage: 'ja',
         mainEntity: [
-          { '@type': 'Question', 'name': '2026年7月に最高のコーディング用ローカルLLMは？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Kimi K2.6――58.6 SWE-Bench Pro（MoE、Modified MITライセンス）が総合的に最高です。最高の密集モデルはQwen 3.6 27B――77.2% SWE-bench、22 GB VRAM。最新のエージェント型対抗モデル：Laguna XS 2.1――SWE-bench Verified 70.9%。24B級エージェントコーディング：Devstral Small 24B。8 GBマシン用：Qwen3 8B。' } },
+          { '@type': 'Question', 'name': 'コーディング特化モデルと汎用モデルはどちらを選ぶべき？', 'acceptedAnswer': { '@type': 'Answer', 'text': '同じサイズなら、コード生成ではコーディング特化モデルが有利です。Qwen3-CoderやKimi K2.7 Codeのような特化モデルはコードとリポジトリ構造で追加学習されており、補完やFill-in-the-Middleの精度で汎用モデルを上回ります。一方、コードについて日本語で説明させたり、設計を相談したりする用途では汎用モデルのほうが自然です。1つしか置けないなら、実務ではコーディング特化を選び、説明が必要なときだけ汎用モデルに切り替える構成が扱いやすくなります。' } },
+          { '@type': 'Question', 'name': '2026年にコーディングで最強のローカルLLMは？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Kimi K2.6――58.6 SWE-Bench Pro（MoE、Modified MITライセンス）が総合的に最高です。最高の密集モデルはQwen 3.6 27B――77.2% SWE-bench、22 GB VRAM。最新のエージェント型対抗モデル：Laguna XS 2.1――SWE-bench Verified 70.9%。24B級エージェントコーディング：Devstral Small 24B。8 GBマシン用：Qwen3 8B。' } },
           { '@type': 'Question', 'name': 'Kimi K2.7 CodeとLaguna XS 2.1とは？', 'acceptedAnswer': { '@type': 'Answer', 'text': '2026年7月にOllamaに追加された最新のエージェントコーディングモデルです。Kimi K2.7 Code（Moonshot AI）はKimi K2.6のコーディング特化進化版で、長時間コーディングセッション向け――`ollama run kimi-k2.7-code`。Laguna XS 2.1（Poolside、2026年7月2日）は33B総パラメータ/3B活性化のMoEモデルで、256Kコンテキスト、SWE-bench Verified 70.9%、OpenMDW-1.1ライセンス――`ollama run laguna-xs-2.1`。' } },
           { '@type': 'Question', 'name': 'HumanEvalとは何で、なぜ重要？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'HumanEvalは164のPythonプログラミング問題から成るベンチマーク。モデルは各問題で正しい関数本体を生成する必要がある。Pass@1スコア（最初の試行で解決された割合）は標準メトリクス。コーディングモデル比較における最も広く使用されているメジャー。' } },
           { '@type': 'Question', 'name': 'Fill-in-the-Middle（FIM）とは、どのモデルがサポート？', 'acceptedAnswer': { '@type': 'Answer', 'text': 'FIMはカーソル前後のコード指定でコード補完する能力――IDEオートコンプリートで使用されるパターン。Qwen3-Coder、DeepSeek-Coder、Starcoder2はすべてFIMをサポート。Llama 3.1 8B汎用はサポートしない。IDE統合用にはFIM互換モデルを使用。' } },

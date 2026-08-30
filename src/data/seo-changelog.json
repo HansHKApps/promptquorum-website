@@ -1513,5 +1513,30 @@
       "ctr": 0.043315674665004675,
       "period": "GSC last 28d as pasted 2026-08-30"
     }
+  },
+  {
+    "id": "dd62ac41-ba81-480d-8022-09f434e44a3c",
+    "slug": "/ja/local-llms/best-local-llms-for-coding",
+    "date": "2026-08-30T12:47:30.571Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "コーディング向けローカルLLM 2026：Kimi K2.6・Qwen・Devstral",
+        "new": "ローカルLLM コーディング おすすめ 2026：Kimi"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Kimi K2.6は58.6 SWE-Bench Proで首位、Qwen 3.6 27Bは77.2% SWE-bench、Devstral 24Bはエージェントコーディングに最適。VRAM・速度・ベンチマークをOllamaで比較。",
+        "new": "コーディング向けローカルLLMのおすすめはKimi K2.6（SWE-Bench Pro 58.6で首位）。Qwen 3.6 27Bは77.2% SWE-bench、Devstral 24Bはエージェント用。VRAM・速度・ベンチマークを比較。"
+      }
+    ],
+    "reason": "geo-meta-optimizer: おすすめ appears in ~190 impr of queries and ZERO times in the ja block; 最強 in 101 impr with 1 mention. Old title was 44 CJK chars, over the 32 budget. Removed 4 month freshness stamps incl. one in a FAQ heading, kept the day-precise Laguna release date. FAQ 16->17 and faqSchema re-synced. 8/10 -> 10/10",
+    "baseline": {
+      "position": 6.4,
+      "impressions": 2920,
+      "clicks": 188,
+      "ctr": 0.06438356164383562,
+      "period": "GSC last 28d as pasted 2026-08-30"
+    }
   }
 ]
