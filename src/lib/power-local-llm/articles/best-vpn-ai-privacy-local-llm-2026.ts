@@ -269,7 +269,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content:
           '**Mullvad is the strictest privacy choice because it does not ask for an email, a name, or any identifying detail — you get a random account number and can pay in cash or Monero.** That removes the link between your identity and your VPN subscription, which is the cleanest model for AI-privacy work. No account creation means there is no identity record ever linked to your AI usage patterns — your ISP cannot see which AI services you access, and remote LLM connections are encrypted through the VPN tunnel.',
         items: [
-          '**Mullvad VPN pricing (August 2026):** €5/month flat rate (~$5.83/month USD at current exchange rates). No annual plan, no long-term lock-in, no renewal-rate surprise — the price has been the same since 2009. Crypto payments (Bitcoin, Monero) receive a 10% discount → ~€4.50/month.',
+          '**Mullvad VPN pricing:** €5/month flat rate (~$5.83/month USD at current exchange rates). No annual plan, no long-term lock-in, no renewal-rate surprise — the price has been the same since 2009. Crypto payments (Bitcoin, Monero) receive a 10% discount → ~€4.50/month.',
           '**Payment options:** accepts cash, Monero, Bitcoin, bank transfer, and cards. Cash and Monero allow a fully anonymous purchase with no financial identity trail. No account creation required — a random account number is issued instead.',
           '**No-logs audit status (2026):** Cure53 has conducted four independent infrastructure audits of Mullvad — in 2018, 2020, 2022, and most recently June 2024 (4th audit). The June 2024 audit found two issues (one low severity, one medium severity); neither affected VPN core functionality or traffic anonymity. In 2025–2026 Mullvad was further audited by NCC Group (Android), Assured Security (web app, GotaTun WireGuard — no critical/high/medium issues), X41 D-Sec (account/payment), and Leviathan Security (Android MASA). Mullvad publishes all audit reports at mullvad.net/en/blog.',
           '**Account model:** random account numbers instead of email-and-password identities. No account creation means no identity record is ever associated with your subscription — and therefore no identity linkage to your AI usage patterns.',
@@ -1070,14 +1070,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'VPN은 보유하는 로그만큼만 프라이버시를 제공합니다. 제공업체가 누가 언제 연결했는지 저장한다면 그 데이터는 당국에 의해 요청될 수 있습니다. 그러한 로그를 보유하지 않는다는 것을 독립적으로 검증한 제공업체를 선택하고, 그 다음 속도에 대해 걱정하십시오.',
           },
         ],
-        columns: ['VPN', '무로그 (감사됨)', '관할권', 'WireGuard', '가격 (2026년 8월)', '가장 적합'],
+        columns: ['VPN', '무로그 (감사됨)', '관할권', 'WireGuard', '가격', '가장 적합'],
         rows: [
           {
             'VPN': 'ProtonVPN',
             '무로그 (감사됨)': '예, 독립적으로 감사됨',
             '관할권': '스위스',
             'WireGuard': '예',
-            '가격 (2026년 8월)': '무료 티어; 2년 플랜 월 ~$3부터',
+            '가격': '무료 티어; 2년 플랜 월 ~$3부터',
             '가장 적합': 'AI 프라이버시를 위한 최고의 균형 잡힌 선택',
           },
           {
@@ -1085,7 +1085,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '무로그 (감사됨)': '예, 독립적으로 감사됨',
             '관할권': '파나마',
             'WireGuard': '예 (NordLynx)',
-            '가격 (2026년 8월)': '장기 플랜 월 ~$3.5-4.5',
+            '가격': '장기 플랜 월 ~$3.5-4.5',
             '가장 적합': '가장 빠른 원격 LLM 접근',
           },
           {
@@ -1093,7 +1093,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '무로그 (감사됨)': '예 — Cure53 4회 (2018-2024); NCC Group, Assured, X41, Leviathan (2025-26)',
             '관할권': '스웨덴',
             'WireGuard': '예',
-            '가격 (2026년 8월)': '월 €5 고정 (~$5.83); 암호화폐 10% 할인 → ~€4.50/월; 연간 플랜 없음',
+            '가격': '월 €5 고정 (~$5.83); 암호화폐 10% 할인 → ~€4.50/월; 연간 플랜 없음',
             '가장 적합': '가장 엄격한 익명성, 계정 이메일 없음, 고정 가격',
           },
           {
@@ -1101,7 +1101,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '무로그 (감사됨)': '예, 독립적으로 감사됨',
             '관할권': '네덜란드',
             'WireGuard': '예',
-            '가격 (2026년 8월)': '장기 플랜 월 ~$2-2.5',
+            '가격': '장기 플랜 월 ~$2-2.5',
             '가장 적합': '무제한 기기에 가장 저렴',
           },
         ],
@@ -1185,7 +1185,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: '**Mullvad는 이메일, 이름, 어떠한 신원 정보도 요구하지 않기 때문에 가장 엄격한 프라이버시 선택입니다. 무작위 계정 번호를 받고 현금 또는 Monero로 결제할 수 있습니다.** 계정 생성이 필요 없으므로 AI 사용 패턴과 연결되는 신원 기록이 없습니다. ISP는 어떤 AI 서비스에 접근하는지 볼 수 없으며, 원격 LLM 연결은 VPN 터널을 통해 암호화됩니다.',
         items: [
           '**계정 모델:** 이메일 및 비밀번호 신원 대신 무작위 계정 번호 — 계정 생성이 필요 없으므로 AI 사용과 연결되는 신원 기록이 존재하지 않습니다.',
-          '**가격 (2026년 8월):** 월 €5 고정 요금 (현재 환율 기준 약 $5.83). 연간 플랜 없음, 장기 구속 없음, 갱신 요금 놀라움 없음. 2009년 이후 동일한 가격. Bitcoin 또는 Monero 결제 시 10% 할인 (→ 약 €4.50/월).',
+          '**가격:** 월 €5 고정 요금 (현재 환율 기준 약 $5.83). 연간 플랜 없음, 장기 구속 없음, 갱신 요금 놀라움 없음. 2009년 이후 동일한 가격. Bitcoin 또는 Monero 결제 시 10% 할인 (→ 약 €4.50/월).',
           '**결제:** 현금, Monero, Bitcoin, 은행 이체 및 카드 허용. 현금과 Monero는 신원 추적 없는 완전 익명 구매를 가능하게 합니다.',
           '**무로그 감사 현황 (2026):** Cure53은 Mullvad에 대해 4번의 독립적인 인프라 감사를 실시했습니다 — 2018년, 2020년, 2022년, 2024년 6월 (4차 감사). 2024년 6월 감사에서는 VPN 핵심 기능이나 트래픽 익명성에 영향을 미치는 취약점이 발견되지 않았습니다. 2025–2026년에는 NCC Group, Assured Security, X41 D-Sec, Leviathan이 추가 감사를 실시했습니다.',
           '**관할권:** 스웨덴 — EU 내이지만 공개 및 독립적으로 감사된 무로그 정책.',
@@ -2003,14 +2003,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Ein VPN ist nur so privat wie die Aufzeichnungen, die es führt. Speichert ein Anbieter, wer sich wann verbunden hat, können diese Daten von Behörden angefordert werden. Wählen Sie einen Anbieter, der unabhängig geprüft wurde und keine solchen Aufzeichnungen führt, und kümmern Sie sich erst dann um die Geschwindigkeit.',
           },
         ],
-        columns: ['VPN', 'No-Logs (geprüft)', 'Rechtsprechung', 'WireGuard', 'Preis (August 2026)', 'Am besten für'],
+        columns: ['VPN', 'No-Logs (geprüft)', 'Rechtsprechung', 'WireGuard', 'Preis', 'Am besten für'],
         rows: [
           {
             'VPN': 'ProtonVPN',
             'No-Logs (geprüft)': 'Ja, unabhängig geprüft',
             'Rechtsprechung': 'Schweiz',
             'WireGuard': 'Ja',
-            'Preis (August 2026)': 'Kostenloser Tarif; kostenpflichtig ab ca. 3 €/Monat bei Langzeittarifen',
+            'Preis': 'Kostenloser Tarif; kostenpflichtig ab ca. 3 €/Monat bei Langzeittarifen',
             'Am besten für': 'Beste Allround-Wahl für KI-Datenschutz',
           },
           {
@@ -2018,7 +2018,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'No-Logs (geprüft)': 'Ja, unabhängig geprüft',
             'Rechtsprechung': 'Panama',
             'WireGuard': 'Ja (NordLynx)',
-            'Preis (August 2026)': 'ca. 3.5–4.5 €/Monat bei Langzeittarifen',
+            'Preis': 'ca. 3.5–4.5 €/Monat bei Langzeittarifen',
             'Am besten für': 'Schnellster Fernzugriff auf das LLM',
           },
           {
@@ -2026,7 +2026,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'No-Logs (geprüft)': 'Ja — Cure53 x4 (2018-2024); NCC Group, Assured, X41, Leviathan (2025-26)',
             'Rechtsprechung': 'Schweden',
             'WireGuard': 'Ja',
-            'Preis (August 2026)': 'Pauschal 5 €/Monat (~5,83 $/Monat); 10 % Krypto-Rabatt → ca. 4,50 €/Monat; kein Jahresplan',
+            'Preis': 'Pauschal 5 €/Monat (~5,83 $/Monat); 10 % Krypto-Rabatt → ca. 4,50 €/Monat; kein Jahresplan',
             'Am besten für': 'Strengste Anonymität',
           },
           {
@@ -2034,7 +2034,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'No-Logs (geprüft)': 'Ja, unabhängig geprüft',
             'Rechtsprechung': 'Niederlande',
             'WireGuard': 'Ja',
-            'Preis (August 2026)': 'ca. 2–2.5 €/Monat bei Langzeittarifen',
+            'Preis': 'ca. 2–2.5 €/Monat bei Langzeittarifen',
             'Am besten für': 'Günstigste für unbegrenzt viele Geräte',
           },
         ],
@@ -2923,14 +2923,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'VPNのプライバシー性は、それが保持する記録の程度に等しいものです。プロバイダーが誰がいつ接続したかを保存していれば、そのデータは当局によって要求され得ます。そうした記録を保持していないと独立して確認されたプロバイダーを選び、それから速度を気にしてください。',
           },
         ],
-        columns: ['VPN', 'ノーログ（監査済み）', '管轄地', 'WireGuard', '価格（2026年8月）', '最適な用途'],
+        columns: ['VPN', 'ノーログ（監査済み）', '管轄地', 'WireGuard', '価格', '最適な用途'],
         rows: [
           {
             'VPN': 'ProtonVPN',
             'ノーログ（監査済み）': 'はい、独立した監査済み',
             '管轄地': 'スイス',
             'WireGuard': 'はい',
-            '価格（2026年8月）': '無料プランあり；有料は2年プランで月額約3ドルから',
+            '価格': '無料プランあり；有料は2年プランで月額約3ドルから',
             '最適な用途': 'AIプライバシーに最も適した万能な選択肢',
           },
           {
@@ -2938,7 +2938,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'ノーログ（監査済み）': 'はい、独立した監査済み',
             '管轄地': 'パナマ',
             'WireGuard': 'はい（NordLynx）',
-            '価格（2026年8月）': '2年プランで月額約560～720円',
+            '価格': '2年プランで月額約560～720円',
             '最適な用途': 'LLMへの最速のリモートアクセス',
           },
           {
@@ -2946,7 +2946,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'ノーログ（監査済み）': 'はい — Cure53 4回（2018-2024）；NCC Group、Assured、X41、Leviathan（2025-26年）',
             '管轄地': 'スウェーデン',
             'WireGuard': 'はい',
-            '価格（2026年8月）': '一律5ユーロ/月（約5.83米ドル）；暗号通貨10%割引→約4.50ユーロ/月；年間プランなし',
+            '価格': '一律5ユーロ/月（約5.83米ドル）；暗号通貨10%割引→約4.50ユーロ/月；年間プランなし',
             '最適な用途': '最も厳格な匿名性',
           },
           {
@@ -2954,7 +2954,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'ノーログ（監査済み）': 'はい、独立した監査済み',
             '管轄地': 'オランダ',
             'WireGuard': 'はい',
-            '価格（2026年8月）': '長期プランで月額約320～400円',
+            '価格': '長期プランで月額約320～400円',
             '最適な用途': '無制限の端末数で最も安価',
           },
         ],
@@ -3379,14 +3379,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'VPN 的隐私性，只取决于它保留的记录。如果一家提供商存储了谁在何时连接，这些数据就可能被当局索取。请选择一家经独立核查、确实不保留此类记录的提供商，然后再去关心它有多快。',
           },
         ],
-        columns: ['VPN', '无日志（经审计）', '司法管辖区', 'WireGuard', '价格（2026 年 8 月）', '最适合'],
+        columns: ['VPN', '无日志（经审计）', '司法管辖区', 'WireGuard', '价格', '最适合'],
         rows: [
           {
             'VPN': 'ProtonVPN',
             '无日志（经审计）': '是，经独立审计',
             '司法管辖区': '瑞士',
             'WireGuard': '是',
-            '价格（2026 年 8 月）': '有免费套餐；2 年期套餐付费版约 3 美元/月起',
+            '价格': '有免费套餐；2 年期套餐付费版约 3 美元/月起',
             '最适合': 'AI 隐私最佳全能选择',
           },
           {
@@ -3394,7 +3394,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '无日志（经审计）': '是，经独立审计',
             '司法管辖区': '巴拿马',
             'WireGuard': '是（NordLynx）',
-            '价格（2026 年 8 月）': '长期套餐约 3.5–4.5 美元/月',
+            '价格': '长期套餐约 3.5–4.5 美元/月',
             '最适合': '最快的远程 LLM 访问',
           },
           {
@@ -3402,7 +3402,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '无日志（经审计）': '是——Cure53 4 次（2018-2024）；NCC Group、Assured、X41、Leviathan（2025-26 年）',
             '司法管辖区': '瑞典',
             'WireGuard': '是',
-            '价格（2026 年 8 月）': '统一 5 欧元/月（约 5.83 美元/月）；加密货币 10% 折扣 → 约 4.50 欧元/月；无年度套餐',
+            '价格': '统一 5 欧元/月（约 5.83 美元/月）；加密货币 10% 折扣 → 约 4.50 欧元/月；无年度套餐',
             '最适合': '最严格的匿名性',
           },
           {
@@ -3410,7 +3410,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '无日志（经审计）': '是，经独立审计',
             '司法管辖区': '荷兰',
             'WireGuard': '是',
-            '价格（2026 年 8 月）': '长期套餐约 2–2.5 美元/月',
+            '价格': '长期套餐约 2–2.5 美元/月',
             '最适合': '无限设备最便宜',
           },
         ],

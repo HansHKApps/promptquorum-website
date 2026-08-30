@@ -1103,7 +1103,7 @@ schema: {
         'sources': {
           title: 'ソース',
           items: [
-            '[OpenAI ChatGPT 価格（2026年4月）](https://chatgpt.com/pricing) — 2026年4月9日立ち上げの Pro 100€を含む、すべての 7 つの ChatGPT レベルの公式価格',
+            '[OpenAI ChatGPT 価格](https://chatgpt.com/pricing) — 2026年4月9日立ち上げの Pro 100€を含む、すべての 7 つの ChatGPT レベルの公式価格',
             '[Meta Llama 3.3 70B モデルカード](https://huggingface.co/meta-llama/Llama-3.3-70B-Instruct) — 現在の フラッグシップ オープンソース 70B モデルの公式ベンチマーク（2024年12月）',
             '[NVIDIA GeForce RTX 5060 Ti 仕様](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5060-family/) — ローカル 13B～24B 推論に推奨される 16 GB バリアントの公式仕様',
             '[Framework Desktop（AMD Ryzen AI Max 395+）](https://frame.work/desktop) — ローカル LLM 専用設計の 128 GB 統一メモリデスクトップの仕様',

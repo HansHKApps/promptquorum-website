@@ -2217,7 +2217,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'unified memoryは、モデルとアプリとシステムが共有する一つのテーブルだと考えてください。帯域幅が高いチップはテーブルをより速く片付けますが、モデルがそもそもテーブルに乗らなければ速度は問題になりません。まずテーブルが十分大きいMacを選んでください。',
           },
         ],
-        columns: ['Mac', 'unified memory', '帯域幅', '速度（8B Q4）', '速度（70B Q4）', '価格（2026年8月）', '最適な用途'],
+        columns: ['Mac', 'unified memory', '帯域幅', '速度（8B Q4）', '速度（70B Q4）', '価格', '最適な用途'],
         rows: [
           {
             'Mac': '[Mac mini M6 32GB](https://www.apple.com/mac-mini/)',
@@ -2225,7 +2225,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '帯域幅': '170GB/s',
             '速度（8B Q4）': 'まだ未検証',
             '速度（70B Q4）': '収まらない（最大32GB）',
-            '価格（2026年8月）': '約¥139,800',
+            '価格': '約¥139,800',
             '最適な用途': 'エントリー、7B-14Bモデルのみ',
           },
           {
@@ -2234,7 +2234,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '帯域幅': '307GB/s',
             '速度（8B Q4）': 'まだ未検証',
             '速度（70B Q4）': 'まだ未検証（余裕少なめ）',
-            '価格（2026年8月）': '約¥259,800',
+            '価格': '約¥259,800',
             '最適な用途': '静音の常時稼働サーバー、34B',
           },
           {
@@ -2243,7 +2243,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '帯域幅': '307GB/s',
             '速度（8B Q4）': '約50-60 tok/s',
             '速度（70B Q4）': '約6-9 tok/s',
-            '価格（2026年8月）': '約¥554,800',
+            '価格': '約¥554,800',
             '最適な用途': 'ポータブル34B-70B Q4（余裕少なめ）',
           },
           {
@@ -2252,7 +2252,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '帯域幅': '614GB/s',
             '速度（8B Q4）': '約110-120 tok/s',
             '速度（70B Q4）': '12-16 tok/s',
-            '価格（2026年8月）': '約¥718,800',
+            '価格': '約¥718,800',
             '最適な用途': 'ポータブル70B Q5、マルチモデル',
           },
           {
@@ -2261,7 +2261,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '帯域幅': '460-614GB/s',
             '速度（8B Q4）': 'まだ未検証',
             '速度（70B Q4）': 'まだ未検証',
-            '価格（2026年8月）': '約¥379,800から',
+            '価格': '約¥379,800から',
             '最適な用途': 'デスクトップ70B、9月22日出荷',
           },
           {
@@ -2270,7 +2270,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '帯域幅': '1.2TB/s',
             '速度（8B Q4）': 'まだ未検証',
             '速度（70B Q4）': 'まだ未検証',
-            '価格（2026年8月）': '約¥829,800から',
+            '価格': '約¥829,800から',
             '最適な用途': '極端、512GBは10月出荷',
           },
         ],
@@ -2722,7 +2722,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '把统一内存想象成一张模型、应用和系统共用的桌子。带宽更高的芯片清理桌子更快，但如果模型根本放不上桌子，速度就毫无意义。先选桌子足够大的 Mac。',
           },
         ],
-        columns: ['Mac', '统一内存', '带宽', '速度（8B Q4）', '速度（70B Q4）', '价格（2026 年 8 月）', '最适合'],
+        columns: ['Mac', '统一内存', '带宽', '速度（8B Q4）', '速度（70B Q4）', '价格', '最适合'],
         rows: [
           {
             'Mac': '[Mac mini M6 32 GB](https://www.apple.com/mac-mini/)',
@@ -2730,7 +2730,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '带宽': '170 GB/s',
             '速度（8B Q4）': '尚未测试',
             '速度（70B Q4）': '装不下（最高 32 GB）',
-            '价格（2026 年 8 月）': '约 $899',
+            '价格': '约 $899',
             '最适合': '经济入门，仅限 7B-14B 模型',
           },
           {
@@ -2739,7 +2739,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '带宽': '307 GB/s',
             '速度（8B Q4）': '尚未测试',
             '速度（70B Q4）': '尚未测试（较紧张）',
-            '价格（2026 年 8 月）': '约 $1,699',
+            '价格': '约 $1,699',
             '最适合': '静音常开服务器，34B 模型',
           },
           {
@@ -2748,7 +2748,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '带宽': '307 GB/s',
             '速度（8B Q4）': '约 50-60 tok/s',
             '速度（70B Q4）': '约 6-9 tok/s',
-            '价格（2026 年 8 月）': '约 $3,499',
+            '价格': '约 $3,499',
             '最适合': '便携 34B-70B Q4（较紧张）',
           },
           {
@@ -2757,7 +2757,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '带宽': '614 GB/s',
             '速度（8B Q4）': '约 110-120 tok/s',
             '速度（70B Q4）': '12-16 tok/s',
-            '价格（2026 年 8 月）': '约 $4,499',
+            '价格': '约 $4,499',
             '最适合': '便携 70B Q5，多模型',
           },
           {
@@ -2766,7 +2766,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '带宽': '460-614 GB/s',
             '速度（8B Q4）': '尚未测试',
             '速度（70B Q4）': '尚未测试',
-            '价格（2026 年 8 月）': '起售价约 $2,499',
+            '价格': '起售价约 $2,499',
             '最适合': '桌面 70B，9 月 22 日发货',
           },
           {
@@ -2775,7 +2775,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '带宽': '1.2 TB/s',
             '速度（8B Q4）': '尚未测试',
             '速度（70B Q4）': '尚未测试',
-            '价格（2026 年 8 月）': '起售价约 $5,499',
+            '价格': '起售价约 $5,499',
             '最适合': '极限工作站，512 GB 10月发货',
           },
         ],
@@ -4264,7 +4264,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '통합 메모리를 모델, 앱, 시스템이 함께 사용하는 공유 작업대로 생각하십시오. 대역폭이 높은 칩은 작업대를 더 빨리 비우지만, 모델이 작업대에 맞지 않으면 속도는 의미가 없습니다. 먼저 작업대가 충분히 큰 Mac을 선택하십시오.',
           },
         ],
-        columns: ['Mac', '통합 메모리', '대역폭', '속도 (8B Q4)', '속도 (70B Q4)', '가격 (2026년 8월)', '최적 용도'],
+        columns: ['Mac', '통합 메모리', '대역폭', '속도 (8B Q4)', '속도 (70B Q4)', '가격', '최적 용도'],
         rows: [
           {
             'Mac': '[Mac Mini M6 32GB](https://www.apple.com/mac-mini/)',
@@ -4272,7 +4272,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '대역폭': '170GB/s',
             '속도 (8B Q4)': '아직 테스트되지 않음',
             '속도 (70B Q4)': '수용 불가(최대 32GB)',
-            '가격 (2026년 8월)': '약 $899',
+            '가격': '약 $899',
             '최적 용도': '보급형 진입, 7B-14B만',
           },
           {
@@ -4281,7 +4281,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '대역폭': '307GB/s',
             '속도 (8B Q4)': '아직 테스트되지 않음',
             '속도 (70B Q4)': '아직 테스트되지 않음(빠듯함)',
-            '가격 (2026년 8월)': '약 $1,699',
+            '가격': '약 $1,699',
             '최적 용도': '조용한 상시 가동 서버, 34B',
           },
           {
@@ -4290,7 +4290,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '대역폭': '307GB/s',
             '속도 (8B Q4)': '약 50-60 tok/s',
             '속도 (70B Q4)': '약 6-9 tok/s',
-            '가격 (2026년 8월)': '약 $3,499',
+            '가격': '약 $3,499',
             '최적 용도': '휴대용 34B-70B Q4(빠듯함)',
           },
           {
@@ -4299,7 +4299,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '대역폭': '614GB/s',
             '속도 (8B Q4)': '약 110-120 tok/s',
             '속도 (70B Q4)': '12-16 tok/s',
-            '가격 (2026년 8월)': '약 $4,499',
+            '가격': '약 $4,499',
             '최적 용도': '휴대용 70B Q5, 멀티 모델',
           },
           {
@@ -4308,7 +4308,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '대역폭': '460-614GB/s',
             '속도 (8B Q4)': '아직 테스트되지 않음',
             '속도 (70B Q4)': '아직 테스트되지 않음',
-            '가격 (2026년 8월)': '약 $2,499부터',
+            '가격': '약 $2,499부터',
             '최적 용도': '데스크톱 70B, 9월 22일 출하',
           },
           {
@@ -4317,7 +4317,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '대역폭': '1.2TB/s',
             '속도 (8B Q4)': '아직 테스트되지 않음',
             '속도 (70B Q4)': '아직 테스트되지 않음',
-            '가격 (2026년 8월)': '약 $5,499부터',
+            '가격': '약 $5,499부터',
             '최적 용도': '극단, 512GB는 10월 출하',
           },
         ],

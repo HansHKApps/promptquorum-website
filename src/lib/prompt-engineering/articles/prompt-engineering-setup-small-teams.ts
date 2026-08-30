@@ -667,9 +667,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'sources',
         title: 'Quellen',
         items: [
-          '[OpenAI API-Preise (April 2026)](https://openai.com/api/pricing) — GPT-5.6 und GPT-5.6 mini Input/Output-Token-Raten für Kostenschätzungen in diesem Artikel',
-          '[Anthropic API-Preise (April 2026)](https://www.anthropic.com/pricing) — Claude 4.6 Sonnet und Claude 4.5 Haiku Token-Raten',
-          '[Google Gemini API-Preise (April 2026)](https://ai.google.dev/pricing) — Gemini 2.5 Pro Kontextfenster und Token-Raten',
+          '[OpenAI API-Preise](https://openai.com/api/pricing) — GPT-5.6 und GPT-5.6 mini Input/Output-Token-Raten für Kostenschätzungen in diesem Artikel',
+          '[Anthropic API-Preise](https://www.anthropic.com/pricing) — Claude 4.6 Sonnet und Claude 4.5 Haiku Token-Raten',
+          '[Google Gemini API-Preise](https://ai.google.dev/pricing) — Gemini 2.5 Pro Kontextfenster und Token-Raten',
           '[GitHub: InnerSource Fundamentals](https://resources.github.com/innersource/fundamentals/) — Prinzipien gemeinsamer Code-Ownership und Governance, anwendbar auf gemeinsame Prompt-Bibliotheken',
           '[NIST AI Risk Management Framework (AI RMF)](https://www.nist.gov/artificial-intelligence/ai-risk-management-framework) — Governance-Prinzipien für KI-Systeme in Organisationen aller Größen',
         ],

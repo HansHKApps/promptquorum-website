@@ -3671,7 +3671,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'UniFi Protect — 최고의 프리미엄 생태계',
         content: '**UniFi Protect는 최고의 프리미엄, 중앙 관리형 생태계입니다 — 로컬 등급: 레벨 3.** 모든 UniFi Protect 카메라는 로컬 NVR(UNVR Instant 199달러, 최대 18대의 4K 카메라를 지원하는 4베이 UNVR 299달러, 최대 24대의 4K 카메라를 지원하는 7베이 UNVR Pro 499달러)에 녹화하며, 핵심 녹화 및 시청 기능에 지속적인 요금이 없습니다 — Ubiquiti 자체 스토어 페이지에서 확인되었습니다. 여기서 구매하는 것은 달러당 가장 저렴한 카메라가 아니라, 모든 카메라와 NVR을 아우르는 단일 콘솔이며, 이미 UniFi 네트워크 장비를 사용 중이라면 긴밀한 통합입니다.',
         items: [
-          '가격(2026년 8월 기준): UNVR Instant 199달러(PoE, 로컬 저장소, 입문형 NVR); UNVR 299달러(4베이, 최대 18대의 4K 카메라); UNVR Pro 499달러(7베이, 최대 24대의 4K 카메라)',
+          '가격: UNVR Instant 199달러(PoE, 로컬 저장소, 입문형 NVR); UNVR 299달러(4베이, 최대 18대의 4K 카메라); UNVR Pro 499달러(7베이, 최대 24대의 4K 카메라)',
           '로컬 녹화 확인됨 — 핵심 Protect 기능에 필수 클라우드 구독 불필요',
           '트레이드오프: UniFi 카메라는 개방형 RTSP/ONVIF가 아닌 Ubiquiti 자체 프로토콜을 사용합니다 — Frigate와 같은 타사 소프트웨어는 Reolink나 Amcrest처럼 스트림을 직접 가져올 수 없습니다',
           '최적 대상: 많은 카메라를 하나의 콘솔로 관리하고 싶고 이미 UniFi 네트워크에 투자한 구매자 — 주된 목표가 DIY Frigate 구축이라면 최선의 선택이 아님',

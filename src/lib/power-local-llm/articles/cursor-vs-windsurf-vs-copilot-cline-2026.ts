@@ -1302,12 +1302,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Cursor対Windsurf対GitHub Copilot対Cline',
         content:
           '価格は各社公式価格ページで検証した2026年8月時点のスナップショットです——Cursor、Windsurf、GitHub Copilotはいずれも2026年中に価格体系を少なくとも一度変更しているため、契約前に最新料金を確認してください。「モデルアクセス」は、単なる補完機能の裏側ではなく、各ツールがモデル選択レベルで選べる範囲を示します。',
-        columns: ['ツール', '最適な用途', '価格（2026年8月）', 'モデルアクセス', 'エージェントモード', 'IDE'],
+        columns: ['ツール', '最適な用途', '価格', 'モデルアクセス', 'エージェントモード', 'IDE'],
         rows: [
           {
             'ツール': 'Cursor',
             '最適な用途': 'エージェント型の複数ファイル編集',
-            '価格（2026年8月）': '無料Hobby / 月20ドル+ Pro〜Ultra',
+            '価格': '無料Hobby / 月20ドル+ Pro〜Ultra',
             'モデルアクセス': 'GPT／Claude／Gemini（複数モデル）',
             'エージェントモード': 'Composer + Cloud Agents',
             'IDE': 'Cursor（VS Codeフォーク）',
@@ -1315,7 +1315,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'ツール': 'Windsurf',
             '最適な用途': 'Cascadeの操作感、価格はCursorと同等',
-            '価格（2026年8月）': '無料 / 月20ドル Pro / 月200ドル Max',
+            '価格': '無料 / 月20ドル Pro / 月200ドル Max',
             'モデルアクセス': 'Claude、GPT、SWE-1.5（複数モデル）',
             'エージェントモード': 'Cascade',
             'IDE': 'Windsurfエディタ（VS Codeフォーク）',
@@ -1323,7 +1323,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'ツール': 'GitHub Copilot',
             '最適な用途': 'GitHub/Azure標準化チーム',
-            '価格（2026年8月）': '無料 / 10ドル Pro / 39ドル Pro+ / 100ドル Max',
+            '価格': '無料 / 10ドル Pro / 39ドル Pro+ / 100ドル Max',
             'モデルアクセス': 'GPT、Claude Opus（Pro+/Max）、サードパーティエージェント',
             'エージェントモード': 'コーディングエージェント + エージェントセッション',
             'IDE': 'VS Code、JetBrains、Visual Studio、CLI',
@@ -1331,7 +1331,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'ツール': 'Cline',
             '最適な用途': '自前APIキー／ローカルモデル',
-            '価格（2026年8月）': '拡張機能無料 / API従量課金',
+            '価格': '拡張機能無料 / API従量課金',
             'モデルアクセス': 'OpenAI互換すべて（Ollama等ローカル含む）',
             'エージェントモード': 'Plan/Actエージェント、完全な透明性',
             'IDE': 'VS Code、JetBrains',
@@ -2446,12 +2446,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Cursor vs Windsurf vs GitHub Copilot vs Cline',
         content:
           '가격은 각 공급업체의 공식 가격 페이지에서 확인한 2026년 8월 시점의 스냅샷입니다 — Cursor, Windsurf, GitHub Copilot 모두 2026년 중 가격 구조를 최소 한 번 변경했으므로 구독 전 현재 요금을 확인하십시오. "모델 접근성"은 단순히 자동 완성을 구동하는 모델이 아니라 각 도구가 모델 선택 수준에서 허용하는 범위를 나타냅니다.',
-        columns: ['도구', '최적 용도', '가격(2026년 8월)', '모델 접근성', '에이전트 모드', 'IDE'],
+        columns: ['도구', '최적 용도', '가격', '모델 접근성', '에이전트 모드', 'IDE'],
         rows: [
           {
             '도구': 'Cursor',
             '최적 용도': '에이전틱 다중 파일 편집',
-            '가격(2026년 8월)': '무료 Hobby / 월 20달러+ Pro–Ultra',
+            '가격': '무료 Hobby / 월 20달러+ Pro–Ultra',
             '모델 접근성': 'GPT / Claude / Gemini(다중 모델)',
             '에이전트 모드': 'Composer + Cloud Agents',
             'IDE': 'Cursor(VS Code 포크)',
@@ -2459,7 +2459,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '도구': 'Windsurf',
             '최적 용도': 'Cascade 흐름, 가격은 이제 Cursor와 동일',
-            '가격(2026년 8월)': '무료 / 월 20달러 Pro / 월 200달러 Max',
+            '가격': '무료 / 월 20달러 Pro / 월 200달러 Max',
             '모델 접근성': 'Claude, GPT, SWE-1.5(다중 모델)',
             '에이전트 모드': 'Cascade',
             'IDE': 'Windsurf 에디터(VS Code 포크)',
@@ -2467,7 +2467,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '도구': 'GitHub Copilot',
             '최적 용도': 'GitHub/Azure 표준화 팀',
-            '가격(2026년 8월)': '무료 / 10달러 Pro / 39달러 Pro+ / 100달러 Max',
+            '가격': '무료 / 10달러 Pro / 39달러 Pro+ / 100달러 Max',
             '모델 접근성': 'GPT, Claude Opus(Pro+/Max), 서드파티 에이전트',
             '에이전트 모드': '코딩 에이전트 + 에이전트 세션',
             'IDE': 'VS Code, JetBrains, Visual Studio, CLI',
@@ -2475,7 +2475,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '도구': 'Cline',
             '최적 용도': '자체 API 키 / 로컬 모델',
-            '가격(2026년 8월)': '확장 프로그램 무료 / API 토큰당 과금',
+            '가격': '확장 프로그램 무료 / API 토큰당 과금',
             '모델 접근성': 'OpenAI 호환 모델 전체(로컬 Ollama 포함)',
             '에이전트 모드': 'Plan/Act 에이전트, 완전한 투명성',
             'IDE': 'VS Code, JetBrains',

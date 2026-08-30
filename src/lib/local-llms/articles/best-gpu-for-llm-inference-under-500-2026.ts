@@ -1146,11 +1146,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       benchmarkTable: {
         title: 'Leistungsvergleich — Preise Juli 2026 + Testergebnisse',
         content: 'Benchmarks gemessen mit Ollama 0.30.x, llama.cpp-Server, Modelle von HuggingFace. Testsystem: Ryzen 9 7950X, 64 GB DDR5, NVMe-SSD. Preise verifiziert Juli 2026 — gebrauchte RTX 3090 (950–1.150 €), RTX 4070 12GB (~599 €) und RX 7800 XT 16GB (~682 €) ausgeschlossen: alle liegen jetzt über 500 €.',
-        columns: ['GPU', 'VRAM', 'Preis (Juli 2026)', 'Llama 3.1 8B Q4 Tok/s', 'Qwen3 14B Q8 Tok/s', 'Max. Modell (Q4)'],
+        columns: ['GPU', 'VRAM', 'Preis', 'Llama 3.1 8B Q4 Tok/s', 'Qwen3 14B Q8 Tok/s', 'Max. Modell (Q4)'],
         rows: [
-          { GPU: 'RTX 4060 Ti 16GB', VRAM: '16 GB', 'Preis (Juli 2026)': '~520 €', 'Llama 3.1 8B Q4 Tok/s': '55 Tok/s', 'Qwen3 14B Q8 Tok/s': '22 Tok/s', 'Max. Modell (Q4)': '30B (Q4)' },
-          { GPU: 'RTX 3060 12GB', VRAM: '12 GB', 'Preis (Juli 2026)': '~334 €', 'Llama 3.1 8B Q4 Tok/s': '36 Tok/s', 'Qwen3 14B Q8 Tok/s': 'VRAM-limitiert', 'Max. Modell (Q4)': '14B (Q4)' },
-          { GPU: 'Intel Arc B580 12GB', VRAM: '12 GB', 'Preis (Juli 2026)': '~250 €', 'Llama 3.1 8B Q4 Tok/s': '31 Tok/s', 'Qwen3 14B Q8 Tok/s': 'VRAM-limitiert', 'Max. Modell (Q4)': '13B (Q4)' },
+          { GPU: 'RTX 4060 Ti 16GB', VRAM: '16 GB', 'Preis': '~520 €', 'Llama 3.1 8B Q4 Tok/s': '55 Tok/s', 'Qwen3 14B Q8 Tok/s': '22 Tok/s', 'Max. Modell (Q4)': '30B (Q4)' },
+          { GPU: 'RTX 3060 12GB', VRAM: '12 GB', 'Preis': '~334 €', 'Llama 3.1 8B Q4 Tok/s': '36 Tok/s', 'Qwen3 14B Q8 Tok/s': 'VRAM-limitiert', 'Max. Modell (Q4)': '14B (Q4)' },
+          { GPU: 'Intel Arc B580 12GB', VRAM: '12 GB', 'Preis': '~250 €', 'Llama 3.1 8B Q4 Tok/s': '31 Tok/s', 'Qwen3 14B Q8 Tok/s': 'VRAM-limitiert', 'Max. Modell (Q4)': '13B (Q4)' },
         ],
         image: '/images/best-gpu-for-llm-inference-under-500-2026-benchmark-comparison-de.svg',
         imageCaption: 'Budget-GPU-Vergleich für lokale LLM-Inferenz unter 500 €: RTX 4060 Ti 16GB (~520 €, 55 Tok/s, 30B max.), RTX 3060 12GB (~334 €, 36 Tok/s) und Intel Arc B580 12GB (~250 €, 31 Tok/s), gemessen mit Ollama im Juli 2026.',
@@ -1590,11 +1590,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       benchmarkTable: {
         title: '性能比較 — 2026年7月価格 + テスト結果',
         content: 'ベンチマークはOllama 0.30.x、llama.cppサーバー、HuggingFaceのモデルで測定。テストシステム：Ryzen 9 7950X、64GB DDR5、NVMe SSD。価格は2026年7月確認済み——中古RTX 3090（約¥150,000〜200,000）、RTX 4070 12GB（約¥90,000）、RX 7800 XT 16GB（約¥120,000）は$500相当を超えるため除外。',
-        columns: ['GPU', 'VRAM', '価格（2026年7月）', 'Llama 3.1 8B Q4 トークン/秒', 'Qwen3 14B Q8 トークン/秒', '最大モデル（Q4）'],
+        columns: ['GPU', 'VRAM', '価格', 'Llama 3.1 8B Q4 トークン/秒', 'Qwen3 14B Q8 トークン/秒', '最大モデル（Q4）'],
         rows: [
-          { GPU: 'RTX 4060 Ti 16GB', VRAM: '16GB', '価格（2026年7月）': '~¥88,000', 'Llama 3.1 8B Q4 トークン/秒': '55トークン/秒', 'Qwen3 14B Q8 トークン/秒': '22トークン/秒', '最大モデル（Q4）': '30B（Q4）' },
-          { GPU: 'RTX 3060 12GB', VRAM: '12GB', '価格（2026年7月）': '~¥52,980', 'Llama 3.1 8B Q4 トークン/秒': '36トークン/秒', 'Qwen3 14B Q8 トークン/秒': 'VRAM制限あり', '最大モデル（Q4）': '14B（Q4）' },
-          { GPU: 'Intel Arc B580 12GB', VRAM: '12GB', '価格（2026年7月）': '約¥70,000', 'Llama 3.1 8B Q4 トークン/秒': '31トークン/秒', 'Qwen3 14B Q8 トークン/秒': 'VRAM制限あり', '最大モデル（Q4）': '13B（Q4）' },
+          { GPU: 'RTX 4060 Ti 16GB', VRAM: '16GB', '価格': '~¥88,000', 'Llama 3.1 8B Q4 トークン/秒': '55トークン/秒', 'Qwen3 14B Q8 トークン/秒': '22トークン/秒', '最大モデル（Q4）': '30B（Q4）' },
+          { GPU: 'RTX 3060 12GB', VRAM: '12GB', '価格': '~¥52,980', 'Llama 3.1 8B Q4 トークン/秒': '36トークン/秒', 'Qwen3 14B Q8 トークン/秒': 'VRAM制限あり', '最大モデル（Q4）': '14B（Q4）' },
+          { GPU: 'Intel Arc B580 12GB', VRAM: '12GB', '価格': '約¥70,000', 'Llama 3.1 8B Q4 トークン/秒': '31トークン/秒', 'Qwen3 14B Q8 トークン/秒': 'VRAM制限あり', '最大モデル（Q4）': '13B（Q4）' },
         ],
         image: '/images/best-gpu-for-llm-inference-under-500-2026-benchmark-comparison-ja.svg',
         imageCaption: '500ドル以下のローカルLLM推論向けバジェットGPU比較：RTX 4060 Ti 16GB（~¥88,000、55トークン/秒、最大30B）、RTX 3060 12GB（~¥52,980、36トークン/秒）、Intel Arc B580 12GB（約¥70,000、31トークン/秒）を2026年7月にOllamaで測定。',
@@ -1814,11 +1814,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       benchmarkTable: {
         title: '性能对比 — 2026年7月价格与测试结果',
         content: '基准测试使用Ollama 0.30.x、llama.cpp服务端，模型来自HuggingFace。测试系统：Ryzen 9 7950X、64GB DDR5、NVMe SSD。价格已于2026年7月核实——二手RTX 3090（$1,000–1,100）、RTX 4070 12GB（约$700）和RX 7800 XT 16GB（约$832）已排除：均已超过$500。',
-        columns: ['GPU', '显存', '价格（2026年7月）', 'Llama 3.1 8B Q4 tok/s', 'Qwen3 14B Q8 tok/s', '最大模型（Q4）'],
+        columns: ['GPU', '显存', '价格', 'Llama 3.1 8B Q4 tok/s', 'Qwen3 14B Q8 tok/s', '最大模型（Q4）'],
         rows: [
-          { GPU: 'RTX 4060 Ti 16GB', '显存': '16GB', '价格（2026年7月）': '~$424', 'Llama 3.1 8B Q4 tok/s': '55 tok/s', 'Qwen3 14B Q8 tok/s': '22 tok/s', '最大模型（Q4）': '30B（Q4）' },
-          { GPU: 'RTX 3060 12GB', '显存': '12GB', '价格（2026年7月）': '~$339', 'Llama 3.1 8B Q4 tok/s': '36 tok/s', 'Qwen3 14B Q8 tok/s': '显存受限', '最大模型（Q4）': '14B（Q4）' },
-          { GPU: 'Intel Arc B580 12GB', '显存': '12GB', '价格（2026年7月）': '~$303', 'Llama 3.1 8B Q4 tok/s': '31 tok/s', 'Qwen3 14B Q8 tok/s': '显存受限', '最大模型（Q4）': '13B（Q4）' },
+          { GPU: 'RTX 4060 Ti 16GB', '显存': '16GB', '价格': '~$424', 'Llama 3.1 8B Q4 tok/s': '55 tok/s', 'Qwen3 14B Q8 tok/s': '22 tok/s', '最大模型（Q4）': '30B（Q4）' },
+          { GPU: 'RTX 3060 12GB', '显存': '12GB', '价格': '~$339', 'Llama 3.1 8B Q4 tok/s': '36 tok/s', 'Qwen3 14B Q8 tok/s': '显存受限', '最大模型（Q4）': '14B（Q4）' },
+          { GPU: 'Intel Arc B580 12GB', '显存': '12GB', '价格': '~$303', 'Llama 3.1 8B Q4 tok/s': '31 tok/s', 'Qwen3 14B Q8 tok/s': '显存受限', '最大模型（Q4）': '13B（Q4）' },
         ],
         image: '/images/best-gpu-for-llm-inference-under-500-2026-benchmark-comparison-zh.svg',
         imageCaption: '500美元以下本地LLM推理预算GPU对比：RTX 4060 Ti 16GB（~$424，55 tok/s，最大30B）、RTX 3060 12GB（~$339，36 tok/s）、Intel Arc B580 12GB（~$303，31 tok/s），2026年7月使用Ollama测得。',
@@ -2043,11 +2043,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       benchmarkTable: {
         title: '성능 비교 — 2026년 7월 가격 + 테스트 결과',
         content: 'Ollama 0.30.x, llama.cpp 서버, HuggingFace 모델로 측정한 벤치마크입니다. 테스트 시스템: Ryzen 9 7950X, 64GB DDR5, NVMe SSD. 2026년 7월 가격 확인 — 중고 RTX 3090($1,000–1,100), RTX 4070 12GB(~$700), RX 7800 XT 16GB(~$832)는 $500 기준 초과로 제외: 모두 현재 $500을 넘어섭니다.',
-        columns: ['GPU', 'VRAM', '가격 (2026년 7월)', 'Llama 3.1 8B Q4 tok/s', 'Qwen3 14B Q8 tok/s', '최대 모델 (Q4)'],
+        columns: ['GPU', 'VRAM', '가격', 'Llama 3.1 8B Q4 tok/s', 'Qwen3 14B Q8 tok/s', '최대 모델 (Q4)'],
         rows: [
-          { GPU: 'RTX 4060 Ti 16GB', VRAM: '16 GB', '가격 (2026년 7월)': '~$424', 'Llama 3.1 8B Q4 tok/s': '55 tok/s', 'Qwen3 14B Q8 tok/s': '22 tok/s', '최대 모델 (Q4)': '30B (Q4)' },
-          { GPU: 'RTX 3060 12GB', VRAM: '12 GB', '가격 (2026년 7월)': '~$339', 'Llama 3.1 8B Q4 tok/s': '36 tok/s', 'Qwen3 14B Q8 tok/s': 'VRAM 부족', '최대 모델 (Q4)': '14B (Q4)' },
-          { GPU: 'Intel Arc B580 12GB', VRAM: '12 GB', '가격 (2026년 7월)': '~$303', 'Llama 3.1 8B Q4 tok/s': '31 tok/s', 'Qwen3 14B Q8 tok/s': 'VRAM 부족', '최대 모델 (Q4)': '13B (Q4)' },
+          { GPU: 'RTX 4060 Ti 16GB', VRAM: '16 GB', '가격': '~$424', 'Llama 3.1 8B Q4 tok/s': '55 tok/s', 'Qwen3 14B Q8 tok/s': '22 tok/s', '최대 모델 (Q4)': '30B (Q4)' },
+          { GPU: 'RTX 3060 12GB', VRAM: '12 GB', '가격': '~$339', 'Llama 3.1 8B Q4 tok/s': '36 tok/s', 'Qwen3 14B Q8 tok/s': 'VRAM 부족', '최대 모델 (Q4)': '14B (Q4)' },
+          { GPU: 'Intel Arc B580 12GB', VRAM: '12 GB', '가격': '~$303', 'Llama 3.1 8B Q4 tok/s': '31 tok/s', 'Qwen3 14B Q8 tok/s': 'VRAM 부족', '최대 모델 (Q4)': '13B (Q4)' },
         ],
         image: '/images/best-gpu-for-llm-inference-under-500-2026-benchmark-comparison-ko.svg',
         imageCaption: '500달러 이하 로컬 LLM 추론용 보급형 GPU 비교: RTX 4060 Ti 16GB(~$424, 55 tok/s, 최대 30B), RTX 3060 12GB(~$339, 36 tok/s), Intel Arc B580 12GB(~$303, 31 tok/s), 2026년 7월 Ollama로 측정.',

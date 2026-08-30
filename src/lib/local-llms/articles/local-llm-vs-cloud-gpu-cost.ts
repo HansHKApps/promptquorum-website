@@ -154,7 +154,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'Sources',
           items: [
             'Lambda Labs GPU pricing: lambdalabs.com/service/gpu-cloud (April 2026)',
-            'Paperspace GPU pricing: paperspace.com/pricing (April 2026)',
+            'Paperspace GPU pricing: paperspace.com/pricing',
             'AWS EC2 GPU instance pricing: aws.amazon.com/ec2/pricing/on-demand (April 2026)',
           ],
         },
@@ -341,7 +341,7 @@ schema: {
           title: 'Fuentes',
           items: [
             'Precios de GPU Lambda Labs: lambdalabs.com/service/gpu-cloud (abril 2026)',
-            'Precios de GPU Paperspace: paperspace.com/pricing (abril 2026)',
+            'Precios de GPU Paperspace: paperspace.com/pricing',
             'Precios de instancias GPU EC2 de AWS: aws.amazon.com/ec2/pricing/on-demand (abril 2026)',
           ],
         },
@@ -716,7 +716,7 @@ schema: {
           title: 'Fontes',
           items: [
             'Preços de GPU Lambda Labs: lambdalabs.com/service/gpu-cloud (abril 2026)',
-            'Preços de GPU Paperspace: paperspace.com/pricing (abril 2026)',
+            'Preços de GPU Paperspace: paperspace.com/pricing',
             'Preços de instâncias GPU EC2 da AWS: aws.amazon.com/ec2/pricing/on-demand (abril 2026)',
           ],
         },
@@ -1468,7 +1468,7 @@ schema: {
           title: '출처',
           items: [
             'Lambda Labs GPU 가격: lambdalabs.com/service/gpu-cloud (2026년 4월)',
-            'Paperspace GPU 가격: paperspace.com/pricing (2026년 4월)',
+            'Paperspace GPU 가격: paperspace.com/pricing',
             'AWS EC2 GPU 인스턴스 가격: aws.amazon.com/ec2/pricing/on-demand (2026년 4월)',
           ],
         },

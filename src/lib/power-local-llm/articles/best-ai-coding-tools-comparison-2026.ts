@@ -613,12 +613,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Jedes KI-Coding-Tool braucht ein Modell, mit dem es denkt. Manche können ein Modell nutzen, das auf Ihrem eigenen Rechner läuft, sodass Ihr Code das Haus nie verlässt. Andere nutzen nur das Cloud-Modell des Anbieters, was bedeutet, dass Ihr Code hochgeladen wird. Entscheiden Sie, welches davon Sie brauchen, bevor Sie irgendetwas anderes vergleichen.',
           },
         ],
-        columns: ['Tool', 'Lokales LLM', 'Preis (Juli 2026)', 'Quelloffen', 'IDEs', 'Am besten für'],
+        columns: ['Tool', 'Lokales LLM', 'Preis', 'Quelloffen', 'IDEs', 'Am besten für'],
         rows: [
           {
             'Tool': 'Continue.dev',
             'Lokales LLM': 'Nativ — Ollama, LM Studio, llama.cpp',
-            'Preis (Juli 2026)': 'Kostenlos',
+            'Preis': 'Kostenlos',
             'Quelloffen': 'Ja — Apache 2.0',
             'IDEs': 'VS Code, JetBrains, Vim',
             'Am besten für': 'Local-First-Entwickler',
@@ -626,7 +626,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Tool': 'Cursor',
             'Lokales LLM': 'Über benutzerdefinierten OpenAI-kompatiblen Endpunkt',
-            'Preis (Juli 2026)': '~20 $/Monat (Pro)',
+            'Preis': '~20 $/Monat (Pro)',
             'Quelloffen': 'Nein — closed',
             'IDEs': 'Cursor (VS-Code-Fork)',
             'Am besten für': 'Ausgereiftestes Editor-Erlebnis',
@@ -634,7 +634,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Tool': 'GitHub Copilot',
             'Lokales LLM': 'Nein — reine Cloud',
-            'Preis (Juli 2026)': '~10 $/Monat',
+            'Preis': '~10 $/Monat',
             'Quelloffen': 'Nein — closed',
             'IDEs': 'VS Code, JetBrains, Vim',
             'Am besten für': 'Integration ins GitHub-Ökosystem',
@@ -642,7 +642,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'Tool': 'Sourcegraph Cody',
             'Lokales LLM': 'Über Ollama-Konfiguration',
-            'Preis (Juli 2026)': '~9 $/Nutzer/Monat Standard; Enterprise-Stufe kostet mehr',
+            'Preis': '~9 $/Nutzer/Monat Standard; Enterprise-Stufe kostet mehr',
             'Quelloffen': 'Teilweise — CLI offen, IDE-Erweiterungen closed',
             'IDEs': 'VS Code, JetBrains, Neovim',
             'Am besten für': 'Teams, die projektweiten Kontext brauchen',
@@ -1536,12 +1536,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'すべてのAIコーディングツールは、考えるためのモデルを必要とします。一部のツールは自分のコンピュータで動作するモデルを使えるため、コードが建物の外に出ません。他のツールはベンダーのクラウドモデルのみを使うため、コードがアップロードされます。他のものを比較する前に、どちらが必要かを決めてください。',
           },
         ],
-        columns: ['ツール', 'ローカルLLM', '価格 (2026年7月)', 'オープンソース', 'IDE', '最適な用途'],
+        columns: ['ツール', 'ローカルLLM', '価格', 'オープンソース', 'IDE', '最適な用途'],
         rows: [
           {
             'ツール': 'Continue.dev',
             'ローカルLLM': 'ネイティブ — Ollama、LM Studio、llama.cpp',
-            '価格 (2026年7月)': '無料',
+            '価格': '無料',
             'オープンソース': 'はい — Apache 2.0',
             'IDE': 'VS Code、JetBrains、Vim',
             '最適な用途': 'ローカルファースト志向の開発者',
@@ -1549,7 +1549,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'ツール': 'Cursor',
             'ローカルLLM': 'カスタムのOpenAI互換エンドポイント経由',
-            '価格 (2026年7月)': '約$20/month (Pro)',
+            '価格': '約$20/month (Pro)',
             'オープンソース': 'いいえ — クローズド',
             'IDE': 'Cursor (VS Codeのフォーク)',
             '最適な用途': '最も洗練されたエディタ体験',
@@ -1557,7 +1557,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'ツール': 'GitHub Copilot',
             'ローカルLLM': 'なし — クラウド専用',
-            '価格 (2026年7月)': '約$10/month',
+            '価格': '約$10/month',
             'オープンソース': 'いいえ — クローズド',
             'IDE': 'VS Code、JetBrains、Vim',
             '最適な用途': 'GitHubエコシステムとの統合',
@@ -1565,7 +1565,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             'ツール': 'Sourcegraph Cody',
             'ローカルLLM': 'Ollama設定経由',
-            '価格 (2026年7月)': '標準で約$9/user/month。エンタープライズティアはさらに高い',
+            '価格': '標準で約$9/user/month。エンタープライズティアはさらに高い',
             'オープンソース': '一部 — CLIはオープン、IDE拡張機能はクローズド',
             'IDE': 'VS Code、JetBrains、Neovim',
             '最適な用途': 'コードベース全体のコンテキストが必要なチーム',
@@ -1997,12 +1997,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '每款 AI 编程工具都需要一个用来思考的模型。有些可以使用运行在你自己电脑上的模型，因此你的代码永不离开本地。其他的只使用厂商的云端模型，这意味着你的代码会被上传。在比较其他任何东西之前，先决定你需要哪一种。',
           },
         ],
-        columns: ['工具', '本地 LLM', '价格（2026 年 7 月）', '开源', 'IDE', '最适合'],
+        columns: ['工具', '本地 LLM', '价格', '开源', 'IDE', '最适合'],
         rows: [
           {
             '工具': 'Continue.dev',
             '本地 LLM': '原生——Ollama、LM Studio、llama.cpp',
-            '价格（2026 年 7 月）': '免费',
+            '价格': '免费',
             '开源': '是——Apache 2.0',
             'IDE': 'VS Code、JetBrains、Vim',
             '最适合': '本地优先的开发者',
@@ -2010,7 +2010,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '工具': 'Cursor',
             '本地 LLM': '通过自定义的 OpenAI 兼容端点',
-            '价格（2026 年 7 月）': '约 $20/month（Pro）',
+            '价格': '约 $20/month（Pro）',
             '开源': '否——闭源',
             'IDE': 'Cursor（VS Code 分支）',
             '最适合': '最精致的编辑器体验',
@@ -2018,7 +2018,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '工具': 'GitHub Copilot',
             '本地 LLM': '否——仅限云端',
-            '价格（2026 年 7 月）': '约 $10/month',
+            '价格': '约 $10/month',
             '开源': '否——闭源',
             'IDE': 'VS Code、JetBrains、Vim',
             '最适合': 'GitHub 生态集成',
@@ -2026,7 +2026,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '工具': 'Sourcegraph Cody',
             '本地 LLM': '通过 Ollama 配置',
-            '价格（2026 年 7 月）': '标准版约 $9/user/month；企业版费用更高',
+            '价格': '标准版约 $9/user/month；企业版费用更高',
             '开源': '部分——CLI 开源，IDE 扩展闭源',
             'IDE': 'VS Code、JetBrains、Neovim',
             '最适合': '需要全代码库上下文的团队',
@@ -3880,12 +3880,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '모든 AI 코딩 도구에는 생각할 모델이 필요합니다. 일부는 자신의 컴퓨터에서 실행되는 모델을 사용할 수 있어 코드가 건물 밖으로 나가지 않습니다. 다른 것들은 공급업체의 클라우드 모델만 사용하므로 코드가 전송됩니다. 다른 것을 비교하기 전에 어느 쪽이 필요한지 결정하십시오.',
           },
         ],
-        columns: ['도구', '로컬 LLM', '가격 (2026년 7월)', '오픈소스', 'IDE', '적합 대상'],
+        columns: ['도구', '로컬 LLM', '가격', '오픈소스', 'IDE', '적합 대상'],
         rows: [
           {
             '도구': 'Continue.dev',
             '로컬 LLM': '네이티브 — Ollama, LM Studio, llama.cpp',
-            '가격 (2026년 7월)': '무료',
+            '가격': '무료',
             '오픈소스': '예 — Apache 2.0',
             'IDE': 'VS Code, JetBrains, Vim',
             '적합 대상': '로컬 우선 개발자',
@@ -3893,7 +3893,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '도구': 'Cursor',
             '로컬 LLM': 'OpenAI 호환 맞춤형 엔드포인트를 통해',
-            '가격 (2026년 7월)': '월 약 $20 (Pro)',
+            '가격': '월 약 $20 (Pro)',
             '오픈소스': '아니요 — 소스 비공개',
             'IDE': 'Cursor (VS Code 포크)',
             '적합 대상': '가장 세련된 편집기 경험',
@@ -3901,7 +3901,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '도구': 'GitHub Copilot',
             '로컬 LLM': '아니요 — 클라우드 전용',
-            '가격 (2026년 7월)': '월 약 $10',
+            '가격': '월 약 $10',
             '오픈소스': '아니요 — 소스 비공개',
             'IDE': 'VS Code, JetBrains, Vim',
             '적합 대상': 'GitHub 생태계 통합',
@@ -3909,7 +3909,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           {
             '도구': 'Sourcegraph Cody',
             '로컬 LLM': 'Ollama 설정을 통해',
-            '가격 (2026년 7월)': '표준 사용자당 월 약 $9; 엔터프라이즈 요금제는 더 비쌈',
+            '가격': '표준 사용자당 월 약 $9; 엔터프라이즈 요금제는 더 비쌈',
             '오픈소스': '부분 — CLI 오픈소스, IDE 확장 소스 비공개',
             'IDE': 'VS Code, JetBrains, Neovim',
             '적합 대상': '전체 코드베이스 컨텍스트가 필요한 팀',
