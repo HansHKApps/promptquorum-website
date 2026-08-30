@@ -1127,5 +1127,19 @@
     ],
     "reason": "Page 47: main open webui vs sillytavern comparison queries already convert well (3.2-20% CTR on several variants). Real gap: best backend for sillytavern + supported backends 2026 + sillytavern vllm + sillytavern vs lm studio (~23 impr combined, 0% CTR) ask for a direct recommendation, not just confirmation that Ollama/vLLM/llama.cpp are all supported. Added a direct FAQ (Ollama simplest, vLLM highest throughput, llama.cpp most control) consistent with the article's established backend-agnostic stance.",
     "baseline": null
+  },
+  {
+    "id": "d7a82da7-6842-407c-aab1-1bb77336a9b0",
+    "slug": "/prompt-engineering/co-star-framework",
+    "date": "2026-08-30T07:30:09.224Z",
+    "fields": [
+      {
+        "field": "seoTitle,metaDescription (all 9 locales), faqs (all 9 locales)",
+        "old": "seoTitle Framework: Structure Complex Prompts in 6 Steps style (all locales) - never spelled out Context/Objective/Style/Tone/Audience/Response literally despite it being the H1 title; no FAQ on GovTech Singapore origin",
+        "new": "seoTitle now spells out the full acronym in every language (CO-STAR: Context, Objective, Style, Tone, Audience, Response and equivalents); added Who created CO-STAR? FAQ (Sheila Teo, GovTech Singapore) to all 9 locales"
+      }
+    ],
+    "reason": "Page 49 batch: this is the single largest query-volume page found this campaign. The literal spelled-out phrase co-star prompt framework context objective style tone audience response alone gets 373 impr at pos 5.3 with 0% CTR, plus 20+ near-identical variants (official/source/format/singapore suffixes) totaling well over 1,500 combined impressions - all 0% CTR despite decent positions, because seoTitle never spelled out the acronym while the H1 title already did. Fixed EN and generalized the same fix to all 8 other locales since it is the same literal fact in every language, not an EN-specific query pattern. Separately found the co-star framework singapore / govtech singapore cluster (~60 impr combined) completely uncovered - CO-STAR's real, verifiable origin (Sheila Teo, GovTech Singapore prompt engineering competition) was never mentioned. Added a sourced FAQ to all 9 locales.",
+    "baseline": null
   }
 ]

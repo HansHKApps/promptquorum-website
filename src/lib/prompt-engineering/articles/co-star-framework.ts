@@ -11,8 +11,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
       title: 'CO-STAR Prompt Framework: Context, Objective, Style, Tone, Audience, Response — Complete Guide',
-      seoTitle: 'CO-STAR Framework: Structure Complex Prompts in 6 Steps',
-      metaDescription: 'CO-STAR\'s 6 fields give you control over every output variable: voice, tone, audience, format. Full templates and a comparison table vs CRAFT, RISEN.',
+      seoTitle: 'CO-STAR: Context, Objective, Style, Tone, Audience, Response',
+      metaDescription: 'The CO-STAR prompt framework: Context, Objective, Style, Tone, Audience, and Response. What each field means, templates, and examples for 2026.',
       ogDescription: 'CO-STAR: 6-component prompt framework. Master voice and tone control.',
       twitterDescription: 'CO-STAR: Context, Objective, Style, Tone, Audience, Response. Control every aspect of AI output quality and voice.',
       intro: 'The CO-STAR Framework is a structured prompt format that helps you design clear, multi-step instructions for complex tasks by defining Context, Objective, Style, Tone, Audience, and Response in one coherent message. In PromptQuorum, the CO-STAR Framework is available as a built-in option that any user can select and apply across all supported models.',
@@ -27,7 +27,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'The CO-STAR Framework',
         description: 'How the CO-STAR Framework (Context, Objective, Style, Tone, Audience, Response) works, when to use it, and how PromptQuorum offers CO-STAR as a built-in option.',
         datePublished: '2026-03-24',
-        dateModified: '2026-05-04',
+        dateModified: '2026-08-30',
         keywords: ['CO-STAR Framework', 'Context Objective Style Tone Audience Response', 'prompt frameworks', 'prompt engineering', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -284,6 +284,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
               a: 'CO-STAR stands for Context, Objective, Style, Tone, Audience, and Response. Each letter represents one component of a structured AI prompt. Together, the six components give the model a complete brief — equivalent to what a human writer would need to produce the right output on the first attempt.'
             },
             {
+              q: 'Who created the CO-STAR framework?',
+              a: 'CO-STAR was popularized by Sheila Teo, a public officer at GovTech Singapore, who used it to win GovTech\'s internal prompt engineering competition. It has since spread widely as one of the most-cited structured prompting frameworks, independent of any specific AI vendor or product.'
+            },
+            {
               q: 'When should I use CO-STAR instead of a simpler prompt?',
               a: 'Use CO-STAR when multiple dimensions matter at once — when the output needs a specific structure AND tone AND must be calibrated for a particular audience. If you only need a factual answer or a simple format, a shorter prompt or single-step approach is sufficient. CO-STAR shines on documentation, customer-facing content, onboarding materials, and multi-stakeholder communications.'
             },
@@ -350,8 +354,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
       title: 'CO-STAR-Prompt-Framework: Kontext, Ziel, Stil, Ton, Zielgruppe, Response — Vollständiger Leitfaden',
-      seoTitle: 'CO-STAR-Framework: Strukturierte KI-Prompts in 6 Schritten',
-      metaDescription: 'Lernen Sie CO-STAR (Kontext, Ziel, Stil, Ton, Zielgruppe, Response) — ein 6-Komponenten-Framework für klare KI-Prompts. Vergleich mit CRAFT, SPECS, APE.',
+      seoTitle: 'CO-STAR: Kontext, Ziel, Stil, Ton, Zielgruppe, Response',
+      metaDescription: 'Das CO-STAR-Framework: Kontext, Ziel, Stil, Ton, Zielgruppe und Response. Was jedes Feld bedeutet, Vorlagen und Beispiele für 2026.',
       intro: 'Das CO-STAR-Framework ist ein strukturiertes Prompt-Format, das Ihnen hilft, klare, mehrstufige Anweisungen für komplexe Aufgaben zu entwerfen, indem Sie Kontext, Ziel, Stil, Ton, Zielgruppe und Response in einer kohärenten Botschaft definieren. In PromptQuorum ist das CO-STAR-Framework als integrierte Option verfügbar, die jeder Benutzer auswählen und auf alle unterstützten Modelle anwenden kann.',
       publishDate: '2026-03-24',
       readTime: '10 Min. Lesezeit',
@@ -364,7 +368,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'CO-STAR-Framework: Kontext, Ziel, Stil, Ton, Zielgruppe, Response',
         description: 'Das CO-STAR-Framework strukturiert komplexe Prompts in 6 Komponenten: Kontext, Ziel, Stil, Ton, Zielgruppe und Response. Wie es funktioniert, wann man es einsetzt, und wie PromptQuorum es als integrierte Option anbietet.',
         datePublished: '2026-03-24',
-        dateModified: '2026-05-04',
+        dateModified: '2026-08-30',
         keywords: ['CO-STAR-Framework', 'Prompt-Engineering', 'KI-Prompts', 'Prompt-Struktur', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -593,6 +597,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
               a: 'CO-STAR steht für Context (Kontext), Objective (Ziel), Style (Stil), Tone (Ton), Audience (Zielgruppe) und Response (Antwort). Jeder Buchstabe repräsentiert eine Komponente eines strukturierten KI-Prompts. Zusammen bilden die sechs Komponenten ein vollständiges Briefing — entsprechend dem, was ein menschlicher Autor benötigen würde, um beim ersten Versuch die richtige Ausgabe zu produzieren.'
             },
             {
+              q: 'Wer hat das CO-STAR-Framework entwickelt?',
+              a: 'CO-STAR wurde von Sheila Teo bekannt gemacht, einer Beamtin bei GovTech Singapore, die es nutzte, um den internen Prompt-Engineering-Wettbewerb von GovTech zu gewinnen. Seitdem hat es sich als eines der meistzitierten strukturierten Prompting-Frameworks verbreitet, unabhängig von einem bestimmten KI-Anbieter oder Produkt.'
+            },
+            {
               q: 'Wann sollte ich CO-STAR anstelle eines einfacheren Prompts verwenden?',
               a: 'Verwenden Sie CO-STAR, wenn mehrere Dimensionen gleichzeitig wichtig sind — wenn die Ausgabe eine bestimmte Struktur UND einen bestimmten Ton UND eine Kalibrierung für ein bestimmtes Publikum benötigt. Wenn Sie nur eine sachliche Antwort oder ein einfaches Format benötigen, ist ein kürzerer Prompt oder Single-Step-Ansatz ausreichend. CO-STAR glänzt bei Dokumentation, kundenorientiertem Inhalt, Onboarding-Materialien und Multi-Stakeholder-Kommunikation.'
             },
@@ -679,8 +687,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
       title: 'Framework CO-STAR: Contexto, Objetivo, Estilo, Tono, Audiencia, Respuesta — Guía Completa',
-      seoTitle: 'Framework CO-STAR: Estructura Prompts Complejos en 6 Pasos',
-      metaDescription: 'Los 6 campos de CO-STAR te dan control sobre cada variable de output: voz, tono, audiencia, formato. Plantillas completas y tabla comparativa vs CRAFT, RISEN.',
+      seoTitle: 'CO-STAR: Contexto, Objetivo, Estilo, Tono, Audiencia, Respuesta',
+      metaDescription: 'El framework CO-STAR: Contexto, Objetivo, Estilo, Tono, Audiencia y Respuesta. Qué significa cada campo, plantillas y ejemplos para 2026.',
       ogDescription: 'CO-STAR: framework de prompt de 6 componentes. Domina el control de voz y tono.',
       twitterDescription: 'CO-STAR: Contexto, Objetivo, Estilo, Tono, Audiencia, Respuesta. Controla cada aspecto de la calidad y voz del output de IA.',
       intro: 'El Framework CO-STAR es un formato de prompt estructurado que te ayuda a diseñar instrucciones claras y de múltiples pasos para tareas complejas al definir Contexto, Objetivo, Estilo, Tono, Audiencia y Respuesta en un único mensaje coherente. En PromptQuorum, el Framework CO-STAR está disponible como opción integrada que cualquier usuario puede seleccionar y aplicar en todos los modelos compatibles.',
@@ -696,7 +704,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Framework CO-STAR: Contexto, Objetivo, Estilo, Tono, Audiencia, Respuesta',
         description: 'Cómo funciona el Framework CO-STAR (Contexto, Objetivo, Estilo, Tono, Audiencia, Respuesta), cuándo usarlo y cómo PromptQuorum lo ofrece como opción integrada.',
         datePublished: '2026-03-24',
-        dateModified: '2026-05-04',
+        dateModified: '2026-08-30',
         keywords: ['Framework CO-STAR', 'Contexto Objetivo Estilo Tono Audiencia Respuesta', 'frameworks de prompt', 'prompt engineering', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -897,6 +905,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
               a: 'CO-STAR significa Contexto, Objetivo, Estilo, Tono, Audiencia y Respuesta. Cada letra representa un componente de un prompt de IA estructurado. Juntos, los seis componentes le dan al modelo un brief completo — equivalente a lo que un escritor humano necesitaría para producir el output correcto en el primer intento.'
             },
             {
+              q: '¿Quién creó el framework CO-STAR?',
+              a: 'CO-STAR fue popularizado por Sheila Teo, funcionaria pública de GovTech Singapur, quien lo usó para ganar la competencia interna de ingeniería de prompts de GovTech. Desde entonces se ha difundido ampliamente como uno de los frameworks de prompting estructurado más citados, independiente de cualquier proveedor o producto de IA específico.'
+            },
+            {
               q: '¿Cuándo debo usar CO-STAR en lugar de un prompt más simple?',
               a: 'Usa CO-STAR cuando múltiples dimensiones importan a la vez — cuando el output necesita una estructura específica Y tono Y debe calibrarse para una audiencia particular. Si solo necesitas una respuesta factual o un formato simple, un prompt más corto o enfoque de un solo paso es suficiente. CO-STAR brilla en documentación, contenido de cara al cliente, materiales de onboarding y comunicaciones con múltiples partes interesadas.'
             },
@@ -979,8 +991,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
       title: 'إطار ⁨CO-STAR⁩: السياق، الهدف، الأسلوب، النبرة، الجمهور، الاستجابة — دليل شامل',
-      seoTitle: 'إطار ⁨CO-STAR⁩: هيكل موجّهاتك في ⁨6⁩ خطوات واضحة',
-      metaDescription: 'إطار ⁨CO-STAR⁩ يتحكم في ⁨6⁩ متغيرات للمخرجات: السياق، الهدف، الأسلوب، النبرة، الجمهور، التنسيق. قوالب جاهزة ومقارنة مع ⁨CRAFT⁩ و⁨RISEN⁩ و⁨APE⁩.',
+      seoTitle: 'CO-STAR: السياق، الهدف، الأسلوب، النبرة، الجمهور، الاستجابة',
+      metaDescription: 'إطار CO-STAR: السياق، الهدف، الأسلوب، النبرة، الجمهور، والاستجابة. ماذا يعني كل حقل، مع قوالب وأمثلة لعام 2026.',
       ogDescription: 'CO-STAR: إطار موجّه من 6 مكوّنات. أتقن التحكم في الصوت والنبرة.',
       twitterDescription: '⁨CO-STAR⁩: السياق، الهدف، الأسلوب، النبرة، الجمهور، الاستجابة. تحكّم في كل جانب من جوانب جودة مخرجات الذكاء الاصطناعي.',
       intro: 'إطار CO-STAR هو تنسيق موجّه منظّم يساعدك على تصميم تعليمات واضحة ومتعددة الخطوات للمهام المعقدة، وذلك بتحديد السياق والهدف والأسلوب والنبرة والجمهور والاستجابة في رسالة واحدة متماسكة. في PromptQuorum، يتوفر إطار CO-STAR كخيار متكامل يمكن لأي مستخدم تحديده وتطبيقه على جميع النماذج المدعومة.',
@@ -996,7 +1008,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'إطار CO-STAR: السياق، الهدف، الأسلوب، النبرة، الجمهور، الاستجابة',
         description: 'كيف يعمل إطار CO-STAR (السياق، الهدف، الأسلوب، النبرة، الجمهور، الاستجابة)، ومتى تستخدمه، وكيف تقدمه PromptQuorum كخيار متكامل.',
         datePublished: '2026-03-24',
-        dateModified: '2026-05-04',
+        dateModified: '2026-08-30',
         keywords: ['إطار CO-STAR', 'السياق الهدف الأسلوب النبرة الجمهور الاستجابة', 'أطر الموجّهات', 'هندسة الموجّهات', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -1192,6 +1204,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
               a: 'CO-STAR اختصار للسياق والهدف والأسلوب والنبرة والجمهور والاستجابة. يمثّل كل حرف مكوّنًا في موجّه الذكاء الاصطناعي المنظّم. تمنح المكوّنات الست مجتمعةً النموذجَ نبذةً كاملة تعادل ما يحتاجه كاتب بشري لإنتاج المخرجات الصحيحة من المحاولة الأولى.'
             },
             {
+              q: 'من ابتكر إطار CO-STAR؟',
+              a: 'اشتُهر إطار CO-STAR على يد شيلا تيو، موظفة حكومية في GovTech سنغافورة، التي استخدمته للفوز بمسابقة هندسة الموجّهات الداخلية في GovTech. ومنذ ذلك الحين انتشر على نطاق واسع كواحد من أكثر أطر الموجّهات المنظمة استشهاداً، بمعزل عن أي مزود أو منتج ذكاء اصطناعي محدد.'
+            },
+            {
               q: 'متى أستخدم CO-STAR بدلًا من موجّه أبسط؟',
               a: 'استخدم CO-STAR حين تهم أبعاد متعددة في آنٍ واحد — عندما تحتاج المخرجات إلى بنية محددة ونبرة معينة وضبط لجمهور بعينه. إن احتجت إجابة واقعية أو تنسيقًا بسيطًا، يكفي موجّه أقصر. يتألق CO-STAR في التوثيق والمحتوى الموجّه للعملاء ومواد الإعداد والتواصل متعدد الأطراف.'
             },
@@ -1270,8 +1286,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
       title: 'Framework CO-STAR: Contexto, Objetivo, Estilo, Tom, Audiência, Resposta — Guia Completo',
-      seoTitle: 'Framework CO-STAR: Estruture Prompts Complexos em 6 Passos',
-      metaDescription: 'Os 6 campos do CO-STAR dão controle sobre cada variável de saída: voz, tom, audiência, formato. Modelos completos e tabela comparativa vs CRAFT, RISEN.',
+      seoTitle: 'CO-STAR: Contexto, Objetivo, Estilo, Tom, Audiência, Resposta',
+      metaDescription: 'O framework CO-STAR: Contexto, Objetivo, Estilo, Tom, Audiência e Resposta. O que cada campo significa, modelos e exemplos para 2026.',
       ogDescription: 'CO-STAR: framework de prompt de 6 componentes. Domine o controle de voz e tom.',
       twitterDescription: 'CO-STAR: Contexto, Objetivo, Estilo, Tom, Audiência, Resposta. Controle cada aspecto da qualidade e voz da saída de IA.',
       intro: 'O Framework CO-STAR é um formato de prompt estruturado que ajuda você a projetar instruções claras e de múltiplas etapas para tarefas complexas ao definir Contexto, Objetivo, Estilo, Tom, Audiência e Resposta em uma única mensagem coerente. No PromptQuorum, o Framework CO-STAR está disponível como opção integrada que qualquer usuário pode selecionar e aplicar em todos os modelos compatíveis.',
@@ -1287,7 +1303,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Framework CO-STAR: Contexto, Objetivo, Estilo, Tom, Audiência, Resposta',
         description: 'Como funciona o Framework CO-STAR (Contexto, Objetivo, Estilo, Tom, Audiência, Resposta), quando usá-lo e como o PromptQuorum o oferece como opção integrada.',
         datePublished: '2026-03-24',
-        dateModified: '2026-05-04',
+        dateModified: '2026-08-30',
         keywords: ['Framework CO-STAR', 'Contexto Objetivo Estilo Tom Audiência Resposta', 'frameworks de prompt', 'prompt engineering', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -1487,6 +1503,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
               a: 'CO-STAR significa Contexto, Objetivo, Estilo, Tom, Audiência e Resposta. Cada letra representa um componente de um prompt de IA estruturado. Juntos, os seis componentes dão ao modelo um briefing completo — equivalente ao que um escritor humano precisaria para produzir a saída correta na primeira tentativa.'
             },
             {
+              q: 'Quem criou o framework CO-STAR?',
+              a: 'O CO-STAR foi popularizado por Sheila Teo, funcionária pública do GovTech Singapura, que o usou para vencer a competição interna de engenharia de prompts do GovTech. Desde então, se espalhou amplamente como um dos frameworks de prompting estruturado mais citados, independente de qualquer fornecedor ou produto de IA específico.'
+            },
+            {
               q: 'Quando devo usar CO-STAR em vez de um prompt mais simples?',
               a: 'Use CO-STAR quando múltiplas dimensões importam ao mesmo tempo — quando a saída precisa de uma estrutura específica E tom E deve ser calibrada para uma audiência particular. Se você só precisa de uma resposta factual ou um formato simples, um prompt mais curto ou abordagem de uma etapa é suficiente.'
             },
@@ -1569,8 +1589,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
       title: 'Framework CO-STAR : Contexte, Objectif, Style, Ton, Audience, Réponse — Guide complet',
-      seoTitle: 'Framework CO-STAR : Structurer vos Prompts en 6 Étapes',
-      metaDescription: 'CO-STAR (Contexte, Objectif, Style, Ton, Audience, Réponse) — framework 6 composants pour prompts IA clairs et efficaces. Comparaison CRAFT, SPECS, APE.',
+      seoTitle: 'CO-STAR : Contexte, Objectif, Style, Ton, Audience, Réponse',
+      metaDescription: 'Le framework CO-STAR : Contexte, Objectif, Style, Ton, Audience et Réponse. Ce que signifie chaque champ, modèles et exemples pour 2026.',
       intro: 'Le framework CO-STAR est un format de prompt structuré qui vous aide à concevoir des instructions claires et multi-étapes pour les tâches complexes en définissant Contexte, Objectif, Style, Ton, Audience et Réponse dans un seul message cohérent. Dans PromptQuorum, le framework CO-STAR est disponible comme option intégrée que tout utilisateur peut sélectionner et appliquer sur tous les modèles supportés.',
       publishDate: '2026-03-24',
       readTime: '8 min de lecture',
@@ -1583,7 +1603,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'Framework CO-STAR : Contexte, Objectif, Style, Ton, Audience, Réponse',
         description: 'Comment fonctionne le framework CO-STAR (Contexte, Objectif, Style, Ton, Audience, Réponse), quand l\'utiliser, et comment PromptQuorum l\'intègre comme option native.',
         datePublished: '2026-03-24',
-        dateModified: '2026-05-04',
+        dateModified: '2026-08-30',
         keywords: ['Framework CO-STAR', 'Prompt Engineering', 'IA', 'Prompts structurés', 'PromptQuorum'],
         author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -1817,6 +1837,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
               a: 'CO-STAR signifie Context (Contexte), Objective (Objectif), Style (Style), Tone (Ton), Audience (Audience) et Response (Réponse). Chaque lettre représente un composant d\'un prompt IA structuré. Ensemble, les six composants forment un brief complet — équivalent à ce qu\'un auteur humain aurait besoin pour produire la bonne sortie au premier essai.'
             },
             {
+              q: 'Qui a créé le framework CO-STAR ?',
+              a: "CO-STAR a été popularisé par Sheila Teo, une fonctionnaire de GovTech Singapour, qui l'a utilisé pour remporter le concours interne d'ingénierie de prompts de GovTech. Il s'est depuis largement répandu comme l'un des frameworks de prompting structuré les plus cités, indépendamment de tout fournisseur ou produit IA spécifique."
+            },
+            {
               q: 'Quand devrais-je utiliser CO-STAR au lieu d\'un prompt plus simple ?',
               a: 'Utilisez CO-STAR quand plusieurs dimensions sont importantes simultanément — quand la sortie a besoin d\'une structure spécifique ET d\'un tone spécifique ET d\'une calibration pour une audience particulière. Si vous avez juste besoin d\'une réponse factuelle ou d\'un format simple, un prompt plus court ou Single-Step suffisent. CO-STAR brille sur documentation, contenu orienté client, matériels d\'intégration et communication multi-parties prenantes.'
             },
@@ -1907,8 +1931,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
       title: 'CO-STARフレームワーク：コンテキスト、目的、スタイル、トーン、対象者、レスポンス — 完全ガイド',
-      seoTitle: 'CO-STARフレームワーク：複雑なプロンプト用6要素構造',
-      metaDescription: 'CO-STARフレームワーク（コンテキスト、目的、スタイル、トーン、対象者、レスポンス）を学ぶ。複雑なAIプロンプトを6要素で構造化。CRAFT、SPECS、APEとの比較。',
+      seoTitle: 'CO-STAR：コンテキスト・目的・スタイル・トーン・対象者・レスポンス',
+      metaDescription: 'CO-STARフレームワーク：コンテキスト、目的、スタイル、トーン、対象者、レスポンス。各項目の意味とテンプレート、2026年の実例を解説。',
       intro: 'CO-STARフレームワークは、複雑なタスク向けに構造化されたプロンプト形式です。コンテキスト、目的、スタイル、トーン、対象者、レスポンスを定義することで、クリアで多段階の指示を設計するのに役立ちます。PromptQuorumでは、CO-STARフレームワークが組み込みオプションとして利用可能です。ユーザーは選択して、サポートされているすべてのモデルに適用できます。',
       publishDate: '2026-03-24',
       readTime: '10分で読める',
@@ -1921,7 +1945,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'CO-STARフレームワーク：コンテキスト、目的、スタイル、トーン、対象者、レスポンス',
         description: 'CO-STARフレームワークの仕組み、使用するタイミング、PromptQuorumがどのように組み込みオプションとして実装しているかについてのガイド。',
         datePublished: '2026-03-24',
-        dateModified: '2026-05-04',
+        dateModified: '2026-08-30',
         keywords: ['CO-STARフレームワーク', 'プロンプトエンジニアリング', 'AI', '構造化プロンプト', 'PromptQuorum'],
         author: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -2156,6 +2180,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
               a: 'CO-STARは Context（コンテキスト）、Objective（目的）、Style（スタイル）、Tone（トーン）、Audience（対象者）、Response（レスポンス）の略です。各文字は構造化されたAIプロンプトの1つの要素を表します。6つの要素全体で、完全なブリーフが形成されます。'
             },
             {
+              q: 'CO-STARフレームワークを作ったのは誰ですか？',
+              a: 'CO-STARは、GovTechシンガポールの公務員であるシーラ・テオ氏によって広められました。彼女はこのフレームワークを使ってGovTech社内のプロンプトエンジニアリングコンテストで優勝しました。以来、特定のAIベンダーや製品に依存しない、最も広く引用される構造化プロンプトフレームワークの一つとして広まっています。'
+            },
+            {
               q: 'CO-STARはいつ使うべきですか？',
               a: '複数の側面が同時に重要な場合に使用します。出力が特定の構造と特定のトーン、特定の対象者への調整が必要な場合です。単なる事実の回答または単純なフォーマットの場合は、より短いプロンプトで十分です。'
             },
@@ -2246,8 +2274,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
       freshness_tier: 'semi_annual',
       theme: 'Frameworks',
       title: 'CO-STAR框架：背景、目标、风格、语调、受众、回应 — 完整指南',
-      seoTitle: 'CO-STAR框架：复杂任务的6组件提示结构',
-      metaDescription: '学习CO-STAR框架（背景、目标、风格、语调、受众、回应）—6组件框架，编写清晰有效的AI提示。与CRAFT、SPECS、APE对比。',
+      seoTitle: 'CO-STAR：背景、目标、风格、语调、受众、回应',
+      metaDescription: 'CO-STAR框架：背景、目标、风格、语调、受众、回应。每个字段的含义、模板和2026年示例，编写清晰有效的AI提示。',
       intro: 'CO-STAR框架是一种结构化提示格式，通过定义背景、目标、风格、语调、受众和回应，帮助你为复杂任务设计清晰、多步骤的指令。在PromptQuorum中，CO-STAR框架作为内置选项提供，任何用户都可以选择并将其应用于所有支持的模型。',
       publishDate: '2026-03-24',
       readTime: '阅读约8分钟',
@@ -2260,7 +2288,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         headline: 'CO-STAR框架：背景、目标、风格、语调、受众、回应',
         description: 'CO-STAR框架如何运作，何时使用，以及PromptQuorum如何将CO-STAR作为内置选项实现的指南。',
         datePublished: '2026-03-24',
-        dateModified: '2026-05-04',
+        dateModified: '2026-08-30',
         keywords: ['CO-STAR框架', '提示工程', 'AI', '结构化提示', 'PromptQuorum'],
         author: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
         publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -2475,6 +2503,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '常见问题',
           faqs: [
             { q: 'CO-STAR代表什么？', a: 'CO-STAR代表Context（背景）、Objective（目标）、Style（风格）、Tone（语调）、Audience（受众）、Response（回应）。这是一个六要素框架，通过明确定义影响模型如何生成输出的每个因素，帮助您编写清晰、结构化的提示。' },
+            { q: 'CO-STAR框架是谁创建的？', a: 'CO-STAR由新加坡政府科技局（GovTech Singapore）的公务员Sheila Teo推广开来，她凭借该框架赢得了GovTech内部的提示工程比赛。此后，它已广泛传播，成为被引用最多的结构化提示框架之一，且不依赖于任何特定的AI供应商或产品。' },
             { q: 'CO-STAR与Chain-of-Thought有何区别？', a: 'Chain-of-Thought要求模型"逐步思考"。CO-STAR定义输出应该是什么以及应该如何感觉。它们解决不同的问题：CoT改进推理；CO-STAR改进输出一致性和受众适应。您可以将两者结合。' },
             { q: '我什么时候应该使用CO-STAR而不是更简单的提示？', a: '当输出质量取决于受众适应、语调、风格或格式时，使用CO-STAR。例如：为非技术读者写作、创建营销内容、生成正式文档。对于简单的事实性问题，更简单的提示就足够了。' },
             { q: 'CO-STAR能与任何语言模型一起使用吗？', a: '是的。CO-STAR适用于所有大型语言模型：专有API、开源模型和本地模型如Ollama。该框架与模型无关；它只是清晰地组织您的输入，使每个模型都能理解您的期望。' },
@@ -2492,8 +2521,8 @@ export const article: Partial<Record<Language, PEArticle>> = {
     freshness_tier: 'semi_annual',
     theme: 'Frameworks',
     title: 'CO-STAR 프레임워크: 컨텍스트, 목표, 스타일, 어조, 대상, 응답 — 완전 가이드',
-    seoTitle: 'CO-STAR 프레임워크: 6단계로 복잡한 프롬프트 구조화하기',
-    metaDescription: 'CO-STAR의 6개 필드로 모든 출력 변수(음성, 어조, 대상, 형식)를 제어하십시오. 완전한 템플릿과 CRAFT, RISEN 대비 비교표 제공.',
+    seoTitle: 'CO-STAR: 컨텍스트, 목표, 스타일, 어조, 대상, 응답',
+    metaDescription: 'CO-STAR 프레임워크: 컨텍스트, 목표, 스타일, 어조, 대상, 응답. 각 항목의 의미와 템플릿, 2026년 예시.',
     ogDescription: 'CO-STAR: 6요소 프롬프트 프레임워크. 음성과 어조 제어를 완전히 익히십시오.',
     twitterDescription: 'CO-STAR: 컨텍스트, 목표, 스타일, 어조, 대상, 응답. AI 출력 품질과 음성의 모든 측면을 제어하십시오.',
     intro: 'CO-STAR 프레임워크는 컨텍스트, 목표, 스타일, 어조, 대상, 응답을 하나의 일관된 메시지로 정의함으로써 복잡한 작업에 명확하고 다단계 지시를 설계할 수 있도록 돕는 구조화된 프롬프트 형식입니다. PromptQuorum에서 CO-STAR 프레임워크는 모든 지원 모델에 적용할 수 있는 내장 옵션으로 제공됩니다.',
@@ -2509,7 +2538,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       headline: 'CO-STAR 프레임워크: 컨텍스트, 목표, 스타일, 어조, 대상, 응답',
       description: 'CO-STAR 프레임워크(컨텍스트, 목표, 스타일, 어조, 대상, 응답)의 작동 방식, 사용 시기 및 PromptQuorum이 이를 내장 옵션으로 제공하는 방법에 대한 설명입니다.',
       datePublished: '2026-03-24',
-      dateModified: '2026-05-04',
+      dateModified: '2026-08-30',
       keywords: ['CO-STAR 프레임워크', '컨텍스트 목표 스타일 어조 대상 응답', '프롬프트 프레임워크', '프롬프트 엔지니어링', 'PromptQuorum'],
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
@@ -2704,6 +2733,10 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             q: 'CO-STAR는 무엇을 의미합니까?',
             a: 'CO-STAR는 컨텍스트(Context), 목표(Objective), 스타일(Style), 어조(Tone), 대상(Audience), 응답(Response)의 약어입니다. 각 글자는 구조화된 AI 프롬프트의 구성 요소를 나타냅니다. 6개의 구성 요소가 함께 모델에게 완전한 브리프를 제공합니다.'
+          },
+          {
+            q: 'CO-STAR 프레임워크는 누가 만들었습니까?',
+            a: 'CO-STAR는 GovTech 싱가포르의 공무원인 실라 테오(Sheila Teo)가 대중화했습니다. 그녀는 이 프레임워크를 사용해 GovTech 내부 프롬프트 엔지니어링 경진대회에서 우승했습니다. 이후 특정 AI 공급업체나 제품에 종속되지 않는, 가장 많이 인용되는 구조화된 프롬프팅 프레임워크 중 하나로 널리 퍼졌습니다.',
           },
           {
             q: '더 간단한 프롬프트 대신 CO-STAR를 언제 사용해야 합니까?',
