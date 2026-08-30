@@ -29,7 +29,8 @@
     "test:affiliate-clicks": "node scripts/test-affiliate-clicks.mjs",
     "indexnow": "node scripts/indexnow-direct.mjs",
     "freshness": "node scripts/freshness.mjs",
-    "deploy:now": "bash scripts/deploy-now.sh"
+    "deploy:now": "bash scripts/deploy-now.sh",
+    "validate-snippet-blocks": "node scripts/validate-snippet-blocks.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.7.1",
