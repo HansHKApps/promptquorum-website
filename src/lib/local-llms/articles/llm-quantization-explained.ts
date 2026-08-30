@@ -2430,10 +2430,10 @@ schema: {
       title: 'LLM-Quantisierung erklärt: Q4_K_M vs Q4_0 vs Q8_0 (2026)',
       seoTitle: 'Q4_K_M vs Q4_0 vs Q8_0: LLM-Quantisierung erklärt (2026)',
       intro: 'Vollständiger Leitfaden zur Wahl der richtigen LLM-Quantisierung für Ihre Hardware: Q4_K_M für 6–8 GB VRAM, Q5_K_M für 16 GB, Q8_0 für 24+ GB. Umfasst GGUF-Format erklärt, Qualitätsverlust-Aufschlüsselung nach Quantisierungsstufe und erweiterte Techniken (CPU-Offloading und Multi-GPU-Layer-Splitting). Erfahren Sie, wie Sie Llama 3.3 70B auf RTX 4090 via Offloading, 2× RTX 4090 via Layer Splitting oder Mac Studio mit M5 Ultra nativ ausführen. Der Leitfaden enthält jetzt Direktvergleiche von Q4_0 vs Q4_K_M, Q4_K_M vs Q4_K_S, Q8_0 vs Q4_K_M und Q8_0 vs Q8_K_XL. Aktualisiert im August 2026.',
-      metaDescription: 'Q4_K_M vs Q4_0, Q4_K_M vs Q4_K_S, Q8_0 vs Q4_K_M und Q8_0 vs Q8_K_XL im Vergleich. Bits, VRAM pro 7B, Qualitätsverlust und welche GGUF-Quantisierung Sie 2026 für Ihren VRAM wählen sollten.',
+      metaDescription: 'Q4_K_M ist für die meisten die richtige Wahl: ~4,5 GB pro 7B-Modell bei 1–3% Qualitätsverlust. Vergleich mit Q4_K_S, Q4_K_XL, Q5_K_M und Q8_0 nach VRAM.',
       heroImage: '/images/llm-quantization-explained-vram-by-quant-hero-de.webp',
       publishDate: '2026-04-04',
-      dateModified: '2026-08-27',
+      dateModified: '2026-08-30',
       lastFactChecked: '2026-08-27',
       current_models_mentioned: ['Llama 3.3 70B', 'Llama 3.1 8B', 'Qwen3', 'Mistral'],
       current_hardware_mentioned: ['RTX 4090', 'RTX 4060 Ti', 'RTX 5090', 'Mac Studio M5 Max', 'Mac Studio M5 Ultra'],
@@ -2472,6 +2472,10 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Q4_K_M ist die Standardquantisierung für lokale LLMs: ein 7B-Modell belegt damit rund 4,5 GB statt ~14 GB bei FP16, bei 1–3% Qualitätsverlust auf MMLU.' },
+            { type: 'plain-terms', text: 'Quantisierung schrumpft ein KI-Modell, indem die Zahlen darin gröber gespeichert werden. Q4_K_M ist die Stufe, die fast alle nehmen sollten: das Modell passt auf normale Hardware und der Qualitätsunterschied ist im Alltag kaum zu merken. Ist mehr VRAM frei, kommen Q5_K_M oder Q8_0 infrage.' },
+          ],
           items: [
             'Quantisierung konvertiert 16-Bit-Modellgewichte zu 4-Bit oder 8-Bit und reduziert RAM um 50-75%.',
             '**Q4_K_M** ist die Standard-Quantisierungsstufe -- beste Balance zwischen Qualität und RAM für Consumer-Hardware.',
@@ -2543,6 +2547,20 @@ schema: {
             { 'Format': 'Q4_K_M', 'Methode': 'K-Quant, gemischt 4/6-Bit', 'RAM (7B)': '~4.5 GB', 'Qualität': '1–3% Verlust gegenüber FP16', 'Wählen wenn': 'Standard für fast alle' },
           ],
           columns: ['Format', 'Methode', 'RAM (7B)', 'Qualität', 'Wählen wenn'],
+        },
+        compareQ4KMQ4KXL: {
+          id: 'q4-k-m-vs-q4-k-xl',
+          title: 'Q4_K_M vs Q4_K_XL: Standard-K-Quant vs Dynamic Upcast',
+          content: [
+            '**Q4_K_M ist der Standard-4-Bit-K-Quant von llama.cpp. Q4_K_XL ist kein Standard-Typ, sondern eine "Dynamic"-GGUF-Variante von Unsloth: Sie behält die 4-Bit-Basis bei, skaliert aber die empfindlichsten Schichten (Embeddings, Attention und Output) auf höhere Präzision hoch.** Dateigröße und Qualität liegen damit zwischen Q4_K_M und Q5_K_M — dasselbe Prinzip, das Q8_K_XL gegenüber Q8_0 anwendet, nur auf einer 4-Bit-Basis.',
+            'Die genauen Q4_K_XL-Dateigrößen variieren je nach Modell und danach, wie viele Schichten Unsloth hochskaliert. Prüfen Sie die in LM Studio oder auf Hugging Face angezeigte Größe vor dem Download, statt mit einer festen Zahl zu rechnen. Praktische Regel: Passt Q5_K_M in Ihren VRAM, nehmen Sie Q5_K_M — es ist ein Standardformat und überall unterstützt. Q4_K_XL ist die Zwischenstufe für den Fall, dass Q4_K_M passt, Q5_K_M aber knapp nicht mehr.',
+          ],
+          rows: [
+            { 'Format': 'Q4_K_M', 'Typ': 'Standard llama.cpp', 'Präzision': 'Gemischt 4/6-Bit', 'Qualität': '1–3% Verlust', 'Wählen wenn': 'Standard für fast alle' },
+            { 'Format': 'Q4_K_XL', 'Typ': 'Unsloth Dynamic', 'Präzision': '4-Bit + sensible Schichten höher', 'Qualität': 'Zwischen Q4_K_M und Q5_K_M', 'Wählen wenn': 'Q5_K_M passt knapp nicht' },
+            { 'Format': 'Q5_K_M', 'Typ': 'Standard llama.cpp', 'Präzision': 'Gemischt 5/6-Bit', 'Qualität': 'Unter 1% Verlust', 'Wählen wenn': 'VRAM frei, Standard-Tooling' },
+          ],
+          columns: ['Format', 'Typ', 'Präzision', 'Qualität', 'Wählen wenn'],
         },
         compareQ4KMQ4KS: {
           id: 'q4-k-m-vs-q4-k-s',
@@ -2770,6 +2788,22 @@ schema: {
           id: 'faq',
           title: 'Häufig gestellte Fragen zur LLM-Quantisierung',
           faqs: [
+            {
+              q: 'Was ist Q4_K_XL und lohnt es sich gegenüber Q4_K_M?',
+              a: 'Q4_K_XL ist kein Standardformat von llama.cpp, sondern eine Dynamic-GGUF-Variante von Unsloth. Sie behält die 4-Bit-Basis von Q4_K_M bei, speichert die empfindlichsten Schichten aber mit höherer Präzision. Dateigröße und Qualität liegen dadurch zwischen Q4_K_M und Q5_K_M. Es lohnt sich vor allem dann, wenn Q5_K_M knapp nicht mehr in den VRAM passt — passt Q5_K_M, nehmen Sie Q5_K_M, weil es ein Standardformat mit breiterer Tool-Unterstützung ist.',
+            },
+            {
+              q: 'Q5_K_M oder Q5_K_XL – was ist der Unterschied?',
+              a: 'Dasselbe Prinzip wie bei Q4 und Q8: Q5_K_M ist der Standard-K-Quant von llama.cpp, Q5_K_XL die Dynamic-Variante von Unsloth mit höher aufgelösten sensiblen Schichten und entsprechend etwas größerer Datei. Da Q5_K_M bereits unter 1% Qualitätsverlust liegt, ist der praktische Gewinn klein. Prüfen Sie die tatsächliche Dateigröße im Tool, bevor Sie sich für die XL-Variante entscheiden.',
+            },
+            {
+              q: 'FP8 oder Q8_0 – was sollte ich nehmen?',
+              a: 'Für die lokale Ausführung über llama.cpp, Ollama oder LM Studio ist Q8_0 das relevante Format. FP8 ist ein Datentyp, der vor allem beim Server-Inferencing auf aktueller NVIDIA-Hardware eine Rolle spielt und im GGUF-Ökosystem keine übliche Download-Option ist. Q8_0 liegt bereits unter 0,5% Qualitätsverlust gegenüber FP16, sodass die Entscheidung praktisch zwischen Q8_0 und den kleineren K-Quants fällt.',
+            },
+            {
+              q: 'Sind Q4_0 und Q4_1 noch relevant?',
+              a: 'Nein, beide sind ältere Formate ohne die K-Quant-Verbesserungen. Q4_0 quantisiert alle Gewichte gleichmäßig mit 4 Bit; Q4_1 ergänzt einen Offset, ist aber ebenfalls überholt. Q4_K_M erreicht bei praktisch gleichem Speicherbedarf eine spürbar bessere Qualität. Wenn Sie in einem Repository beide Varianten sehen, nehmen Sie Q4_K_M — Q4_0 und Q4_1 begegnen Ihnen nur noch bei älteren Modell-Uploads.',
+            },
             {
               q: 'Verwendet Ollama automatisch die beste Quantisierung?',
               a: 'Ja -- wenn Sie `ollama pull llama3.1:8b` ausführen, lädt Ollama standardmäßig die Q4_K_M-Variante herunter. Um eine bestimmte Quantisierung zu pullen, fügen Sie das Tag an: `ollama pull llama3.1:8b-instruct-q5_K_M`. Verfügbare Quantisierungs-Tags für jedes Modell werden auf der Modellseite unter ollama.com/library aufgelistet.',

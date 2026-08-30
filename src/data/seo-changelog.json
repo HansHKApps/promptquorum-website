@@ -1323,5 +1323,25 @@
       "ctr": 0.03605953659659353,
       "period": "GSC last 28d as pasted 2026-08-30"
     }
+  },
+  {
+    "id": "37a21ae1-43f1-4dfd-9a5c-eeb4c6d6d1ef",
+    "slug": "/de/local-llms/llm-quantization-explained",
+    "date": "2026-08-30T09:21:35.118Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Q4_K_M vs Q4_0, Q4_K_M vs Q4_K_S, Q8_0 vs Q4_K_M und Q8_0 vs Q8_K_XL im Vergleich. Bits, VRAM pro 7B, Qualitätsverlust und welche GGUF-Quantisierung Sie 2026 für Ihren VRAM wählen sollten.",
+        "new": "Q4_K_M ist für die meisten die richtige Wahl: ~4,5 GB pro 7B-Modell bei 1–3% Qualitätsverlust. Vergleich mit Q4_K_S, Q4_K_XL, Q5_K_M und Q8_0 nach VRAM."
+      }
+    ],
+    "reason": "geo-meta-optimizer: meta was 188 chars (truncated) and led with a list of vs-pairs instead of an answer. q4_k_m = 332 impr at 0.9% CTR despite position 3.4 — likely AI Overview absorption on a definitional token query, so the snippet must offer what the AIO does not. Added Q4_K_XL section (q4_k_m vs q4_k_xl = 21 impr, 0 coverage in ALL locales), mandatory snippetBlocks (missing in 6 of 9 locales), FAQs 17->21. 7/10 -> 10/10",
+    "baseline": {
+      "position": 3.7,
+      "impressions": 2415,
+      "clicks": 48,
+      "ctr": 0.01987577639751553,
+      "period": "GSC last 28d as pasted 2026-08-30"
+    }
   }
 ]
