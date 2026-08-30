@@ -107,7 +107,6 @@ export const POWER_LLM_SLUG_TO_KEY: Record<string, string> = {
   'best-web-hosting-2026':                        'best-web-hosting-2026',
   'beste-webhosting-anbieter-deutschland-2026':   'beste-webhosting-anbieter-deutschland-2026',
   'meilleur-hebergeur-web-france-2026':           'meilleur-hebergeur-web-france-2026',
-  'mejor-hosting-web-espana-latinoamerica-2026':  'mejor-hosting-web-espana-latinoamerica-2026',
   'best-web-hosting-japan-2026':                  'best-web-hosting-japan-2026',
   'best-web-hosting-china-2026':                  'best-web-hosting-china-2026',
 }

@@ -85,7 +85,6 @@ import { article as a_best_web_hosting_korea_2026 } from './articles/best-web-ho
 import { article as a_best_web_hosting_2026 } from './articles/best-web-hosting-2026'
 import { article as a_beste_webhosting_anbieter_deutschland_2026 } from './articles/beste-webhosting-anbieter-deutschland-2026'
 import { article as a_meilleur_hebergeur_web_france_2026 } from './articles/meilleur-hebergeur-web-france-2026'
-import { article as a_mejor_hosting_web_espana_latinoamerica_2026 } from './articles/mejor-hosting-web-espana-latinoamerica-2026'
 import { article as a_best_web_hosting_japan_2026 } from './articles/best-web-hosting-japan-2026'
 import { article as a_best_web_hosting_china_2026 } from './articles/best-web-hosting-china-2026'
 
@@ -171,7 +170,6 @@ export const powerLLMContent: Record<string, Partial<Record<Language, LLMArticle
   'best-web-hosting-2026':                             a_best_web_hosting_2026,
   'beste-webhosting-anbieter-deutschland-2026':        a_beste_webhosting_anbieter_deutschland_2026,
   'meilleur-hebergeur-web-france-2026':                a_meilleur_hebergeur_web_france_2026,
-  'mejor-hosting-web-espana-latinoamerica-2026':       a_mejor_hosting_web_espana_latinoamerica_2026,
   'best-web-hosting-japan-2026':                       a_best_web_hosting_japan_2026,
   'best-web-hosting-china-2026':                       a_best_web_hosting_china_2026,
 }
