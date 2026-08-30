@@ -287,9 +287,9 @@ schema: {
       theme: 'Getting Started',
       title: 'Instalar LM Studio: configuración de interfaz gráfica para macOS, Windows y Linux',
       heroImage: '/images/how-to-install-lm-studio-overview-hero-es.webp',
-      seoTitle: 'Instalar LM Studio: guía GUI para macOS, Windows y Linux',
+      seoTitle: 'Descargar e instalar LM Studio: macOS, Windows y Linux',
       intro: 'LM Studio es una aplicación de escritorio que te permite explorar, descargar y ejecutar LLMs locales a través de una interfaz gráfica, sin necesidad de comandos en la terminal. Funciona en macOS, Windows y Linux, e incluye una interfaz de chat integrada y un servidor local compatible con OpenAI. LM Studio admite cualquier modelo GGUF cuantizado de Hugging Face.',
-      metaDescription: 'Instala LM Studio en macOS, Windows o Linux: descarga un modelo y empieza a chatear en 5 minutos. Sin terminal. Guía para principiantes 2026.',
+      metaDescription: 'Descarga e instala LM Studio en macOS, Windows o Linux: instalador .exe, .dmg y .AppImage. Chatea con un modelo local en 5 minutos, sin terminal.',
       publishDate: '2026-04-04',
       leadAnswerBlock: '**LM Studio es una aplicación de escritorio que te permite explorar, descargar y ejecutar LLMs locales a través de una interfaz gráfica, sin necesidad de comandos en la terminal. Funciona en macOS, Windows y Linux, e incluye una interfaz de chat integrada y un servidor local compatible con OpenAI.**',
       audience: 'Principiantes que ejecutan su primer LLM local en hardware de consumo',
@@ -425,6 +425,22 @@ schema: {
           title: 'Solución de problemas comunes en LM Studio',
           faqs: [
             {
+              q: '¿Cómo instalo LM Studio en Ubuntu o Linux Mint?',
+              a: 'Descarga el archivo .AppImage desde lmstudio.ai, hazlo ejecutable con `chmod +x LM-Studio-*.AppImage` y ejecútalo directamente. No hace falta instalarlo en el sistema ni usar apt, así que el procedimiento es el mismo en Ubuntu, Linux Mint y otras distribuciones derivadas de Debian. El requisito mínimo es Ubuntu 22.04 o equivalente; se recomienda Ubuntu 24.04.',
+            },
+            {
+              q: '¿Dónde está el .exe de LM Studio para Windows?',
+              a: 'El instalador se llama LM-Studio-Setup.exe y se descarga desde lmstudio.ai eligiendo Windows. Al ejecutarlo, LM Studio queda instalado en %LOCALAPPDATA%\\\\LM-Studio y no pide permisos de administrador. El mínimo es Windows 10; se recomienda Windows 11.',
+            },
+            {
+              q: '¿Cómo instalo LM Studio en Mac?',
+              a: 'Descarga el archivo .dmg desde lmstudio.ai, ábrelo y arrastra LM Studio a la carpeta Aplicaciones. La primera vez que lo abras, macOS mostrará un aviso de seguridad: apruébalo en Preferencias del Sistema → Privacidad y Seguridad. El mínimo es macOS 13.6 y se recomienda macOS 14 o posterior.',
+            },
+            {
+              q: '¿Se llama LM Studio o LLM Studio?',
+              a: 'El nombre correcto es LM Studio, sin la segunda L. "LLM Studio", "LMStudio" y "LM Estudio" son variantes que mucha gente escribe al buscarlo, pero el producto y su web oficial son LM Studio (lmstudio.ai). Si buscas el instalador con otro nombre puede que no llegues a la descarga oficial, así que conviene comprobar el dominio antes de descargar nada.',
+            },
+            {
               q: 'LM Studio muestra "Not enough memory to load model"',
               a: 'El modelo requiere más RAM de la disponible. Cierra otras aplicaciones para liberar memoria o selecciona una cuantización menor (Q3_K_S en lugar de Q4_K_M). Como regla general: multiplica el tamaño del archivo del modelo por 1.2 para estimar la RAM necesaria. Un archivo de 4.5 GB necesita ~5.4 GB de RAM libre.',
             },
@@ -480,7 +496,7 @@ schema: {
         '@type': 'TechArticle',
         'url': 'https://www.promptquorum.com/es/local-llms/how-to-install-lm-studio',
         'headline': 'Instalar LM Studio: configuración de interfaz gráfica para macOS, Windows y Linux',
-        'description': 'Instala LM Studio en macOS, Windows o Linux: descarga un modelo y empieza a chatear en 5 minutos. Sin terminal. Guía para principiantes 2026.',
+        'description': 'Descarga e instala LM Studio en macOS, Windows o Linux: instalador .exe, .dmg y .AppImage. Chatea con un modelo local en 5 minutos, sin terminal.',
         'datePublished': '2026-04-04',
         'dateModified': '2026-08-28',
         'author': { '@type': 'Person', 'name': 'Hans Kuepper', 'sameAs': 'https://www.linkedin.com/in/hanskuepper/' },

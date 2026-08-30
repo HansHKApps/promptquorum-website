@@ -1438,5 +1438,30 @@
       "ctr": 0.03119682359614294,
       "period": "GSC last 28d as pasted 2026-08-30"
     }
+  },
+  {
+    "id": "2dfcd354-2ec4-44de-935b-2e07be0acd5c",
+    "slug": "/es/local-llms/how-to-install-lm-studio",
+    "date": "2026-08-30T12:33:58.143Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Instalar LM Studio: guía GUI para macOS, Windows y Linux",
+        "new": "Descargar e instalar LM Studio: macOS, Windows y Linux"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Instala LM Studio en macOS, Windows o Linux: descarga un modelo y empieza a chatear en 5 minutos. Sin terminal. Guía para principiantes 2026.",
+        "new": "Descarga e instala LM Studio en macOS, Windows o Linux: instalador .exe, .dmg y .AppImage. Chatea con un modelo local en 5 minutos, sin terminal."
+      }
+    ],
+    "reason": "geo-meta-optimizer: title said 'Instalar' while ~342 impr search 'descargar' (descargar lm studio 135, lm studio descargar 90, descargar lm studio para windows 73). Added platform FAQs (Linux/Mint 77 impr, Windows 109, Mac 31) and a name-variant FAQ for the ~56 impr of LLM Studio / LM Estudio misspellings. 7/10 -> 10/10",
+    "baseline": {
+      "position": 7.7,
+      "impressions": 3517,
+      "clicks": 22,
+      "ctr": 0.006255331248222917,
+      "period": "GSC last 28d as pasted 2026-08-30"
+    }
   }
 ]
