@@ -1,6 +1,7 @@
 https://www.promptquorum.com
 https://www.promptquorum.com/about
 https://www.promptquorum.com/balcony-solar
+https://www.promptquorum.com/balcony-solar/allpowers-balcony-solar
 https://www.promptquorum.com/balcony-solar/anker-solix-balcony-solar
 https://www.promptquorum.com/balcony-solar/apsystems-microinverter-balcony-solar
 https://www.promptquorum.com/balcony-solar/balcony-solar-battery-storage-standard-2027
@@ -26,6 +27,7 @@ https://www.promptquorum.com/balcony-solar/best-balcony-solar-batteries-2026
 https://www.promptquorum.com/balcony-solar/best-balcony-solar-home-battery-us-2026
 https://www.promptquorum.com/balcony-solar/best-balcony-solar-kits-2026
 https://www.promptquorum.com/balcony-solar/best-balcony-solar-microinverters
+https://www.promptquorum.com/balcony-solar/bluetti-balcony-solar
 https://www.promptquorum.com/balcony-solar/connect-balcony-solar-home-assistant-local
 https://www.promptquorum.com/balcony-solar/deye-microinverter-balcony-solar
 https://www.promptquorum.com/balcony-solar/do-you-need-a-battery-balcony-solar
@@ -42,12 +44,14 @@ https://www.promptquorum.com/balcony-solar/how-to-install-balcony-solar
 https://www.promptquorum.com/balcony-solar/how-to-register-balcony-solar
 https://www.promptquorum.com/balcony-solar/hoymiles-microinverter-balcony-solar
 https://www.promptquorum.com/balcony-solar/is-balcony-solar-legal-country-guide
+https://www.promptquorum.com/balcony-solar/jackery-balcony-solar
 https://www.promptquorum.com/balcony-solar/kleines-kraftwerk-balcony-solar
 https://www.promptquorum.com/balcony-solar/local-platforms-balcony-solar-home-assistant-alternatives
 https://www.promptquorum.com/balcony-solar/meyer-burger-solarwatt-heckert-balcony-solar
 https://www.promptquorum.com/balcony-solar/net-metering-rollback-balcony-solar-2027
 https://www.promptquorum.com/balcony-solar/plug-in-balcony-solar-uk-rules
 https://www.promptquorum.com/balcony-solar/priwatt-balcony-solar
+https://www.promptquorum.com/balcony-solar/renogy-balcony-solar
 https://www.promptquorum.com/balcony-solar/what-is-balcony-solar
 https://www.promptquorum.com/balcony-solar/where-balcony-solar-doesnt-exist-yet-2027
 https://www.promptquorum.com/balcony-solar/yuma-balcony-solar
