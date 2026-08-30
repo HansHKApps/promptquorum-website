@@ -380,7 +380,7 @@ export const translations = {
     promptEngineeringHubOgDescription: "80 Prompt-Engineering-Artikel für alle Kenntnisstufen — Chain-of-Thought, RAG, Few-Shot, Team-Governance und Evaluierung für GPT-4o, Claude 4.8 Sonnet und Gemini 2.5 Pro.",
     promptEngineeringHubTwitterDescription: "80 Prompt-Engineering-Leitfäden in 9 Themenbereichen. Beginnen Sie mit Grundlagen, meistern Sie Evaluierung — für GPT-4o, Claude und Gemini.",
     localLlmsHubTitle: "Beste lokale LLMs 2026: Local-LLM-Modelle im Vergleich",
-    localLlmsHubDescription: "Lokale LLMs (Local LLMs) laufen komplett auf Ihrem Rechner – ohne API-Kosten. Beste Modelle von 4 bis 48 GB VRAM, Hardware und Ollama-Setup im Vergleich.",
+    localLlmsHubDescription: "Lokale LLMs und KI-Modelle auf eigener Hardware betreiben – ohne API-Kosten. Beste Local-LLM-Modelle von 4 bis 48 GB VRAM und Ollama-Setup im Vergleich.",
     compareMetaTitle: "PromptQuorum vs. Konkurrenz: Funktionsvergleich 2026",
     compareMetaDescription: "Vergleichen Sie PromptQuorum mit Poe, LM Arena und OpenMark: Multi-Model-Versand, Konsensanalyse, lokaler LLM-Support, API-Kontrolle, 9 Frameworks.",
     frameworksMetaTitle: "Prompt-Frameworks: CO-STAR, CRAFT, RISEN & mehr",
