@@ -1130,7 +1130,7 @@
         },
         {
           "url": "/images/gpu-tier-comparison-en.svg",
-          "title": "GPU tier recommendations (July 2026 street prices): ~$394 RTX 5060 Ti (16GB, 7-13B, 60 tok/s), ~$609 RTX 5070 (12GB, 14B, 90 tok/s), ~$1,249 RTX 5080 (16GB, 14-32B, 130 tok/s), ~$4,300–5,000+ RTX 5090 (32GB, 70B, 200 tok/s), $4,699 DGX Spark (128GB, large MoE). GPU choice matters 10× more than CPU."
+          "title": "GPU tier recommendations (street prices): ~$394 RTX 5060 Ti (16GB, 7-13B, 60 tok/s), ~$609 RTX 5070 (12GB, 14B, 90 tok/s), ~$1,249 RTX 5080 (16GB, 14-32B, 130 tok/s), ~$4,300–5,000+ RTX 5090 (32GB, 70B, 200 tok/s), $4,699 DGX Spark (128GB, large MoE). GPU choice matters 10× more than CPU."
         },
         {
           "url": "/images/models-for-16gb-vram-en.svg",
@@ -7377,6 +7377,93 @@
         "pt",
         "ar",
         "ko"
+      ],
+      "images": []
+    },
+    "melhor-hospedagem-site-brasil-2026": {
+      "dateModified": "2026-08-30",
+      "lastFactChecked": null,
+      "publishDate": "2026-08-30",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "pt"
+      ],
+      "images": []
+    },
+    "best-web-hosting-arab-gulf-2026": {
+      "dateModified": "2026-08-30",
+      "lastFactChecked": null,
+      "publishDate": "2026-08-30",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "ar"
+      ],
+      "images": []
+    },
+    "best-web-hosting-korea-2026": {
+      "dateModified": "2026-08-30",
+      "lastFactChecked": null,
+      "publishDate": "2026-08-30",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "ko"
+      ],
+      "images": []
+    },
+    "best-web-hosting-2026": {
+      "dateModified": "2026-08-30",
+      "lastFactChecked": null,
+      "publishDate": "2026-08-30",
+      "hasSections": true,
+      "langs": [
+        "en"
+      ],
+      "images": []
+    },
+    "beste-webhosting-anbieter-deutschland-2026": {
+      "dateModified": "2026-08-30",
+      "lastFactChecked": null,
+      "publishDate": "2026-08-30",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "de"
+      ],
+      "images": []
+    },
+    "meilleur-hebergeur-web-france-2026": {
+      "dateModified": "2026-08-30",
+      "lastFactChecked": null,
+      "publishDate": "2026-08-30",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "fr"
+      ],
+      "images": []
+    },
+    "best-web-hosting-japan-2026": {
+      "dateModified": "2026-08-30",
+      "lastFactChecked": null,
+      "publishDate": "2026-08-30",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "ja"
+      ],
+      "images": []
+    },
+    "best-web-hosting-china-2026": {
+      "dateModified": "2026-08-30",
+      "lastFactChecked": null,
+      "publishDate": "2026-08-30",
+      "hasSections": true,
+      "langs": [
+        "en",
+        "zh"
       ],
       "images": []
     }

@@ -39,6 +39,16 @@ const CLUSTER_DIRS = [
 const REQUIRED_IF_ES = ['ko', 'pt', 'ar']
 const LANG_CODES = ['en', 'de', 'fr', 'ja', 'zh', 'es', 'pt', 'ar', 'ko']
 
+// Deliberate exceptions: single-region bilingual pages (EN + exactly one target
+// market language), not instances of the site's normal one-article/nine-locale
+// pattern. The regional web-hosting series is split into one page per market —
+// es/LatAm, pt/Brazil, ar/Gulf, ko/Korea, ja/Japan, zh/China — each carrying only
+// EN + its own market language by design. ko/pt/ar coverage for those markets is
+// served by the sibling regional pages below, not by adding those blocks here.
+const LOCALE_GAP_ALLOWLIST = new Set([
+  'src/lib/power-local-llm/articles/mejor-hosting-web-espana-latinoamerica-2026.ts',
+])
+
 // Non-article files that live in the articles dirs but are not article data.
 const SKIP_FILES = new Set(['index.ts', 'articles-barrel.ts', 'slugs.ts', 'types.ts'])
 
@@ -71,6 +81,8 @@ for (const dir of CLUSTER_DIRS) {
   for (const file of readdirSync(abs)) {
     if (!file.endsWith('.ts')) continue
     if (SKIP_FILES.has(file)) continue
+    const relPath = `${dir}/${file}`
+    if (LOCALE_GAP_ALLOWLIST.has(relPath)) continue
     const source = readFileSync(join(abs, file), 'utf8')
     const langs = topLevelLangs(source)
     if (!langs || !langs.has('es')) continue // only es-bearing articles are in scope
