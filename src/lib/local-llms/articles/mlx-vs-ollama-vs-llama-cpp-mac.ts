@@ -1627,7 +1627,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     leadAnswerBlock: '**Ollama: instalación más sencilla, ideal para principiantes, Metal automático, API REST incluida. MLX: inferencia más rápida (15–25% más veloz), nativo de Apple, integración Python, fine-tuning. llama.cpp: multiplataforma, más formatos de modelos, soporte Metal. Para la mayoría: empieza con Ollama, cambia a MLX si necesitas velocidad.**',
     ctaText: '¿Ya elegiste tu framework? Compara las salidas de Ollama/MLX/llama.cpp con GPT-4, Claude, Gemini y 22 modelos más en un solo envío con PromptQuorum — verifica que tu framework alcanza calidad de nube para tus tareas.',
     quickAnswerTop: {
-      en: {
+      es: {
         question: 'Which LLM framework should I use on Mac?',
         answer: 'Ollama for beginners (one-click install). MLX for maximum speed (15–25% faster than Ollama). llama.cpp for cross-platform compatibility. All three work on Apple Silicon with Metal GPU automatically.',
         bullets: [

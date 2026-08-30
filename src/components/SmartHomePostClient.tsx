@@ -956,15 +956,24 @@ function SmartHomePostContent({ slug, lang, articleData, availableLangs }: Props
         )}
 
         {/* Quick Answer Block — Top of page for featured snippet */}
-        {(article as any).quickAnswerTop && (article as any).quickAnswerTop[lang] && (
-          <QuickAnswer
-            lang={lang}
-            question={(article as any).quickAnswerTop[lang].question}
-            answer={(article as any).quickAnswerTop[lang].answer}
-            bullets={(article as any).quickAnswerTop[lang].bullets}
-            updatedDate={(article as any).quickAnswerTop[lang].updatedDate}
-          />
-        )}
+        {(() => {
+          // quickAnswerTop comes in two shapes: locale-keyed ({ de: {...} }) and flat
+          // ({ question, answer }) written directly inside the locale block. The flat form
+          // is already in that block's language, so it must render as-is — the old
+          // `quickAnswerTop[lang]` check silently dropped it on ~180 locale blocks.
+          const qat = (article as any).quickAnswerTop
+          const qa = qat?.[lang] ?? (qat?.question ? qat : null)
+          if (!qa) return null
+          return (
+            <QuickAnswer
+              lang={lang}
+              question={qa.question}
+              answer={qa.answer}
+              bullets={qa.bullets}
+              updatedDate={qa.updatedDate}
+            />
+          )
+        })()}
 
         {/* Quick Answer Block — AI-crawler-optimized featured snippet */}
         {article.quickAnswer && (

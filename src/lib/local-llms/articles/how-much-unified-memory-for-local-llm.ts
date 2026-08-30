@@ -258,7 +258,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     targetKeywords: ['memoria Mac para LLM', 'cuánta RAM necesito', 'dimensionamiento de modelos', 'Q4 vs Q5 cuantización', 'memoria unificada vs VRAM'],
     leadAnswerBlock: '**La memoria unificada ES la VRAM de tu Mac — la GPU puede acceder a casi todo el conjunto, a diferencia de la VRAM fija de una GPU discreta. 16GB: solo modelos 7B (justo). 36GB: 13B con comodidad, 34B Q4 justo. 64GB: 34B Q5 con comodidad, 70B Q3 apenas. 128GB: 70B Q5 con comodidad — el modelo más grande que cabe en un solo Mac. Compra la máxima memoria en el momento de la compra — no puedes actualizarla después. Mínimo recomendado: 36GB; M5 Pro 64GB está preparado para el futuro hasta 2027.**',
     quickAnswerTop: {
-      en: {
+      es: {
         question: 'How much Mac memory do I need for local LLMs?',
         answer: '16GB: 7B models only (tight). 36GB: 13B comfortably. 64GB: 34B comfortably. 128GB: 70B comfortably. Memory unavailable after purchase. 36GB is minimum recommended; don\'t buy less than 32GB.',
         bullets: [

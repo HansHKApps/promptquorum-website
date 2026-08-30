@@ -2763,7 +2763,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     leadAnswerBlock:
       '**如果你的优先考虑是低摩擦的设备上 AI 而非最大模型控制，Loci 最具吸引力。** 对于想要私密离线聊天但不希望把手机当作微型 ML 工作站的用户（需要手动 GGUF 选择、量化调整和 VRAM 计算），它可能是更好的第一个本地 AI 应用。Loci 适用于 iPhone、iPad、Android、Mac 和 Windows——只需下载应用并从精选列表中选择一个模型。如果你想要选择量化、导入模型或运行更大的模型库，应该与 Private LLM 或 PocketPal AI 等更技术性的替代方案进行比较。',
     quickAnswerTop: {
-      en: {
+      zh: {
         question: 'Should I use Loci for private, offline AI?',
         answer:
           'Use Loci if you want private on-device chat without model-management friction, across iPhone, Android, iPad, Mac, or Windows. Skip it if you need frontier reasoning quality, live web knowledge without connectivity, or deep control over model selection and quantization — those are better served by cloud AI or more technical local-LLM apps like Private LLM.',

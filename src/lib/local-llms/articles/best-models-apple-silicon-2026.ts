@@ -221,7 +221,7 @@ ollama pull aya-expanse:32b         # translation`,
     targetKeywords: ['mejor LLM Mac', 'recomendaciones de modelos', 'rendimiento por configuración Mac'],
     leadAnswerBlock: '**16 GB: Phi-4. 36 GB: Llama 3.1 8B Q8 (~38 tok/s). 64 GB: Qwen3 34B Q5 (~18 tok/s). 128 GB: Llama 3.3 70B Q5 (~14 tok/s M5 Pro, ~16 tok/s M5 Max). Todos funcionan mediante Ollama en Metal.**',
     quickAnswerTop: {
-      en: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
+      es: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
       de: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
       fr: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
       ja: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },

@@ -655,7 +655,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     leadAnswerBlock:
       '**Eine selbst gehostete RAG-Bereitstellung erfüllt die Anforderungen der DSGVO und des EU AI Act nur dann, wenn sechs Kontrollen vom ersten Tag an verankert sind: Air-Gap oder strikt kontrollierter Egress, Authentifizierung pro Nutzer mit rollenbasiertem Dokumentenzugriff, unveränderliche Audit-Logs für Ingest und Retrieval, Ende-zu-Ende-Verschlüsselung im Ruhezustand und bei der Übertragung, deterministische Datenherkunft vom Chunk bis zur Quelle sowie ein schriftlich definierter Löschpfad, der vom Quellsystem über den Vektorindex bis zu zwischengespeicherten Embeddings reicht. Das Bereitstellungsmuster (Einzelnutzer-Laptop, On-Prem-Server, private EU-Cloud) bestimmt, welche Kontrollen leicht umzusetzen sind und welche Aufwand erfordern — nicht, ob die Kontrollen erforderlich sind.**',
     quickAnswerTop: {
-      en: {
+      de: {
         question:
           'Ist lokales RAG standardmäßig DSGVO-konform, und welches Bereitstellungsmuster sollten regulierte Teams wählen?',
         answer:
@@ -1281,7 +1281,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     leadAnswerBlock:
       "**Un déploiement RAG auto-hébergé répond au RGPD et à l'AI Act seulement si six contrôles sont en place dès le premier jour : air-gap ou egress strictement contrôlé, authentification par utilisateur avec accès basé sur les rôles, journaux d'audit immuables couvrant l'ingestion et la recherche, chiffrement de bout en bout au repos et en transit, traçabilité déterministe du chunk vers la source, et un parcours de suppression écrit qui se propage du stockage source jusqu'à l'index vectoriel et aux embeddings en cache. Le modèle de déploiement (laptop mono-utilisateur, serveur on-prem, cloud privé EU) détermine quels contrôles sont triviaux et lesquels demandent du travail — pas si les contrôles sont requis.**",
     quickAnswerTop: {
-      en: {
+      fr: {
         question:
           'Le RAG local est-il conforme RGPD par défaut, et quel modèle de déploiement choisir pour des équipes régulées ?',
         answer:
@@ -1899,7 +1899,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     leadAnswerBlock:
       '**セルフホスト型RAGがGDPRおよびEU AI Actの要件を満たすには、初日から6つの統制が組み込まれている必要があります：Air-Gapまたは厳格にegress制御されたホスティング、ロールベースの文書アクセスを伴うユーザー単位認証、ingestおよびretrievalをカバーする改ざん防止監査ログ、保存時および転送時のend-to-end暗号化、chunkからソース文書まで遡れる決定論的データ系統、そしてソースストアからベクトルインデックス、キャッシュ済みembeddingまで伝播する文書化された削除パス。展開パターン（単一ユーザーラップトップ、On-Premサーバー、プライベートEUクラウド）は、どの統制が容易でどれが手間かを決めるだけで、統制が必要かどうかは決めません。**',
     quickAnswerTop: {
-      en: {
+      ja: {
         question:
           'ローカルRAGはデフォルトでGDPR準拠ですか？規制対象チームはどの展開パターンを選ぶべきですか？',
         answer:
@@ -2524,7 +2524,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     leadAnswerBlock:
       '**自托管 RAG 要满足 GDPR 与欧盟 AI 法案要求，必须从第一天就内置六项控制：空气隔离或严格出站控制；按用户认证并启用基于角色的文档访问；覆盖入库与检索的不可篡改审计日志；静态与传输全程加密；从分块到源文档的确定性数据血缘；以及覆盖向量索引和缓存嵌入的书面删除路径。部署模式（单用户笔记本、本地服务器、私有欧盟云）决定哪些控制易实施、哪些需要工作量 — 而不是这些控制是否必要。**',
     quickAnswerTop: {
-      en: {
+      zh: {
         question:
           '本地 RAG 默认就符合 GDPR 吗？受监管团队应选择哪种部署模式？',
         answer:
@@ -3150,7 +3150,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     leadAnswerBlock:
       '**Un despliegue RAG autoalojado cumple el RGPD y la Ley de IA de la UE solo cuando seis controles se integran desde el primer día: alojamiento en air-gap o con egress estrictamente controlado, autenticación por usuario con acceso a documentos basado en roles, registros de auditoría inmutables que cubran la ingesta y la recuperación, cifrado de extremo a extremo en reposo y en tránsito, trazabilidad determinista del chunk hasta la fuente, y un procedimiento de eliminación por escrito que se propague desde el almacén de origen a través del índice vectorial y cualquier embedding en caché. El patrón de despliegue (portátil de un solo usuario, servidor on-prem, nube privada en la UE) determina qué controles son sencillos y cuáles requieren trabajo — no si los controles son obligatorios.**',
     quickAnswerTop: {
-      en: {
+      es: {
         question: '¿El RAG local cumple el RGPD por defecto y qué patrón de despliegue deben elegir los equipos regulados?',
         answer:
           'El RAG local no cumple el RGPD por defecto. Ejecutar un modelo on-premise resuelve el problema de la transferencia transfronteriza de datos y reduce la lista de encargados del tratamiento, pero los artículos 5, 25, 30, 32 y 35 del RGPD siguen siendo aplicables: base jurídica, minimización de datos, registro de auditoría, seguridad del tratamiento y una EIPD para cualquier sistema que ingiera datos de categorías especiales a gran escala. Elige el patrón de portátil de un solo usuario para profesionales individuales y revisiones puntuales; un servidor on-prem para bases de conocimiento departamentales de hasta unos miles de documentos y 5–50 usuarios; una nube privada en la UE (nube soberana, claves gestionadas por el cliente, región exclusiva en la UE) para despliegues multi-entidad donde la resiliencia multiregional importa más que un air-gap completo. Independientemente del que elijas, los seis controles son los mismos — solo cambia el coste de implementación.',

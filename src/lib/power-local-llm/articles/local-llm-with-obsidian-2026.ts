@@ -507,7 +507,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     leadAnswerBlock:
       '**Für die meisten Obsidian-Anwender installieren Sie 2026 Smart Connections + Copilot for Obsidian und konfigurieren beide so, dass sie ein lokales Ollama-Backend nutzen.** Smart Connections übernimmt die vault-weite semantische Verknüpfung (Sidebar mit verwandten Notizen) über lokale Embeddings via `nomic-embed-text` oder `mxbai-embed-large`. Copilot for Obsidian liefert die Chat-Oberfläche und wird auf den OpenAI-kompatiblen Endpoint von Ollama unter `http://localhost:11434/v1` ausgerichtet. Dieses Paar deckt rund 80 % der typischen Anwendungsfälle eines „zweiten Gehirns" (semantische Suche + Chat mit Notizen) ab, ohne dass Vault-Inhalte die Cloud erreichen. Ergänzen Sie Text Generator als drittes Plugin, wenn Sie template-gesteuerte Inhaltserzeugung wünschen (Tagebuch-Prompts, Erweiterung von Meeting-Notizen). Die Embeddings von Smart Connections liegen unter `.smart-env/` im Vault — sie synchronisieren sich über Obsidian Sync geräteübergreifend, müssen aber bei iCloud oder Git pro Gerät neu erzeugt werden.',
     quickAnswerTop: {
-      en: {
+      de: {
         question: 'Welche Obsidian-Plugin-Kombination ist 2026 für lokale LLMs die beste?',
         answer:
           'Smart Connections + Copilot for Obsidian ist die empfohlene Kombination. Smart Connections übernimmt die semantische Vault-Suche mit lokalen Embeddings (nomic-embed-text oder mxbai-embed-large via Ollama); Copilot stellt die Chat-Sidebar bereit, die auf den OpenAI-kompatiblen Endpoint von Ollama konfiguriert ist. Zusammen decken sie das Auffinden verwandter Notizen und den Chat mit Vault-Kontext ab — etwa 80 % der typischen Anwendungsfälle eines „zweiten Gehirns". Ergänzen Sie Text Generator als drittes Plugin für template-gesteuerte Generierung. Local GPT und BMO Chatbot sind schlankere Alternativen zu Copilot für Anwender, die ein einfacheres reines Chat-Erlebnis bevorzugen. Alle fünf Plugins funktionieren mit jedem Ollama-Modell; das 2026 empfohlene Chat-Modell für Systeme mit 16 GB RAM ist Llama 3.2 3B oder Phi-4 Mini.',
@@ -960,7 +960,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     leadAnswerBlock:
       '**Pour la plupart des utilisateurs Obsidian en 2026, installez Smart Connections + Copilot for Obsidian et configurez-les pour utiliser un backend Ollama local.** Smart Connections gère la liaison sémantique dans l\'ensemble du vault (barre latérale de notes connexes) via des embeddings locaux `nomic-embed-text` ou `mxbai-embed-large`. Copilot for Obsidian fournit l\'interface de chat, configurée pour l\'endpoint compatible OpenAI d\'Ollama à `http://localhost:11434/v1`. Cette paire couvre ~80 % des cas d\'usage typiques du « deuxième cerveau » (recherche sémantique + chat avec notes) sans envoyer le contenu du vault vers le cloud. Ajoutez Text Generator comme troisième plugin si vous souhaitez la génération de contenu basée sur des templates (prompts pour journal quotidien, expansion des notes de réunion). Les embeddings de Smart Connections résident dans `.smart-env/` à l\'intérieur du vault — ils se synchronisent entre appareils via Obsidian Sync mais doivent être regénérés par appareil avec iCloud ou Git.',
     quickAnswerTop: {
-      en: {
+      fr: {
         question: 'Quelle combinaison de plugins Obsidian est la meilleure pour les LLMs locaux en 2026 ?',
         answer:
           'Smart Connections + Copilot for Obsidian est la combinaison recommandée. Smart Connections gère la recherche sémantique du vault avec embeddings locaux (nomic-embed-text ou mxbai-embed-large via Ollama) ; Copilot fournit la barre latérale de chat configurée pour l\'endpoint compatible OpenAI d\'Ollama. Ensemble, ils couvrent la découverte de notes connexes et le chat avec contexte du vault — environ 80 % des cas d\'usage « deuxième cerveau ». Ajoutez Text Generator comme troisième plugin pour la génération basée sur templates. Local GPT et BMO Chatbot sont des alternatives plus légères à Copilot pour les utilisateurs préférant une expérience chat-uniquement plus simple. Tous les cinq plugins fonctionnent avec n\'importe quel modèle Ollama ; le modèle de chat recommandé en 2026 pour les systèmes 16 GB RAM est Llama 3.2 3B ou Phi-4 Mini.',
@@ -1413,7 +1413,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     leadAnswerBlock:
       '**2026年のほとんどのObsidianユーザーにとって、Smart Connections + Copilot for Obsidianをインストールし、両方をローカルOllamaバックエンドを使用するよう設定してください。** Smart Connectionsは `nomic-embed-text` または `mxbai-embed-large` を介したローカルエンベディングを使用して、ボルト全体のセマンティック連携 (関連ノートサイドバー) を処理します。Copilot for Obsidianはチャットインターフェイスを提供し、`http://localhost:11434/v1` のOllamaのOpenAI互換エンドポイントに設定されます。このペアは、ボルトコンテンツをクラウドに送信することなく、「第二の脳」ユースケースの~80%(セマンティック検索+ノートとのチャット)をカバーしています。テンプレート駆動コンテンツ生成 (日次ジャーナルプロンプト、会議ノート展開) を望む場合は、Text Generatorを3番目のプラグインとして追加してください。Smart Connectionsエンベディングはボルト内の `.smart-env/` に存在します — Obsidian Syncで複数デバイス間で同期しますが、iCloudまたはGitを使用する場合はデバイスごとに再生成する必要があります。',
     quickAnswerTop: {
-      en: {
+      ja: {
         question: '2026年、ローカルLLMに最適なObsidianプラグイン組み合わせはどれですか?',
         answer:
           'Smart Connections + Copilot for Obsidianが推奨される組み合わせです。Smart Connectionsはローカルエンベディング (nomic-embed-text または mxbai-embed-large via Ollama) でボルトセマンティック検索を処理します; CopilotはあなたのボルトのOpenAI互換エンドポイントに設定されたチャットサイドバーを提供します。一緒に、関連ノートの発見とボルトコンテキストでのチャット — 「第二の脳」ユースケースの約80% をカバーしています。テンプレート駆動生成にはText Generatorを3番目のプラグインとして追加してください。Local GPTとBMO Chatbotはシンプルなチャットのみの体験を好むユーザーにはCopilotのより軽い代替案です。すべての5つのプラグインはあらゆるOllamaモデルで動作します; 2026年の16GB RAMシステムに推奨されるチャットモデルはLlama 3.2 3BまたはPhi-4 Miniです。',
@@ -1866,7 +1866,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     leadAnswerBlock:
       '**对于 2026 年的大多数 Obsidian 用户，安装 Smart Connections + Copilot for Obsidian 并配置两者使用本地 Ollama 后端。** Smart Connections 通过 `nomic-embed-text` 或 `mxbai-embed-large` 处理库范围内的语义链接（相关笔记侧边栏）。Copilot for Obsidian 提供聊天界面，配置指向 Ollama 的 OpenAI 兼容端点 `http://localhost:11434/v1`。这对插件覆盖了"第二大脑"大约 80% 的用例（语义搜索 + 聊天笔记），无需将任何库内容发送到云端。如果您需要模板驱动的内容生成（每日日记提示、会议笔记扩展），可添加 Text Generator 作为第三个插件。Smart Connections 嵌入存储在库内的 `.smart-env/` 文件夹中——通过 Obsidian Sync 跨设备同步，但使用 iCloud 或 Git 作为同步方法时必须按设备重新生成。',
     quickAnswerTop: {
-      en: {
+      zh: {
         question: '2026 年本地大模型的最佳 Obsidian 插件组合是什么？',
         answer:
           'Smart Connections + Copilot for Obsidian 是推荐的组合。Smart Connections 使用本地嵌入（nomic-embed-text 或 mxbai-embed-large via Ollama）处理语义库搜索；Copilot 提供聊天侧边栏，配置到 Ollama 的 OpenAI 兼容端点。两者一起覆盖相关笔记发现和库上下文聊天——大约 80% 的"第二大脑"用例。添加 Text Generator 作为第三个插件实现模板驱动生成。Local GPT 和 BMO Chatbot 是想要更简单纯聊天体验的用户对 Copilot 的轻量级替代品。所有五个插件都适用于任何 Ollama 模型；2026 年推荐的聊天模型适用于 16GB RAM 系统的是 Llama 3.2 3B 或 Phi-4 Mini。',
@@ -2319,7 +2319,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     leadAnswerBlock:
       '**Para la mayoría de usuarios de Obsidian en 2026, instala Smart Connections + Copilot for Obsidian y configura ambos para usar un backend local de Ollama.** Smart Connections gestiona la vinculación semántica en todo el vault (barra lateral de notas relacionadas) usando embeddings locales con `nomic-embed-text` o `mxbai-embed-large`. Copilot for Obsidian proporciona la interfaz de chat, configurada para apuntar al endpoint compatible con OpenAI de Ollama en `http://localhost:11434/v1`. Esta pareja cubre ~80 % de los casos de uso del "segundo cerebro" (búsqueda semántica + chat con notas) sin enviar contenido del vault a la nube. Agrega Text Generator como tercer plugin si quieres generación de contenido basada en plantillas (prompts para diario diario, expansión de notas de reunión). Los embeddings de Smart Connections viven en `.smart-env/` dentro del vault — se sincronizan entre dispositivos con Obsidian Sync pero deben regenerarse por dispositivo con iCloud o Git.',
     quickAnswerTop: {
-      en: {
+      es: {
         question: '¿Cuál es la mejor combinación de plugins de Obsidian para LLMs locales en 2026?',
         answer:
           'Smart Connections + Copilot for Obsidian es la combinación recomendada. Smart Connections gestiona la búsqueda semántica del vault con embeddings locales (nomic-embed-text o mxbai-embed-large vía Ollama); Copilot proporciona la barra lateral de chat configurada contra el endpoint compatible con OpenAI de Ollama. Juntos cubren el descubrimiento de notas relacionadas y el chat con contexto del vault — alrededor del 80 % de los casos de uso del "segundo cerebro". Agrega Text Generator como tercer plugin para generación basada en plantillas. Local GPT y BMO Chatbot son alternativas más ligeras a Copilot para usuarios que prefieren una experiencia de solo chat más simple. Los cinco plugins funcionan con cualquier modelo de Ollama; el modelo de chat recomendado en 2026 para sistemas de 16 GB de RAM es Llama 3.2 3B o Phi-4 Mini.',

@@ -305,7 +305,7 @@ while True:
     targetKeywords: ['Whisper Mac', 'reconocimiento de voz local', 'transcripción en tiempo real', 'benchmarks Apple Silicon'],
     leadAnswerBlock: '**Whisper large-v3 en M5 Pro: 10–12× tiempo real. GPU Metal automático. Large-v3-turbo equilibra velocidad + precisión a 14–18×. Sin costo, completamente offline.**',
     quickAnswerTop: {
-      en: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
+      es: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
       de: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
       fr: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
       ja: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
@@ -2163,7 +2163,7 @@ while True:
     targetKeywords: ['Whisper Mac', '로컬 음성 인식', '실시간 전사', 'Apple Silicon 벤치마크'],
     leadAnswerBlock: '**M5 Pro의 Whisper large-v3: 10–12× 실시간 속도. Metal GPU 자동 활성화. Large-v3-turbo는 14–18×에서 속도와 정확도를 균형 있게 제공합니다. 무료, 완전 오프라인.**',
     quickAnswerTop: {
-      en: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
+      ko: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
       de: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
       fr: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },
       ja: { question: '', answer: '', bullets: [], updatedDate: '2026-05-15' },

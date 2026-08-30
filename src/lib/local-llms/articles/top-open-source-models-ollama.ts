@@ -619,7 +619,7 @@ schema: {
       publishDate: '2026-04-04',
       leadAnswerBlock: '**La versión actual de Ollama es v0.33.1 (26 de agosto de 2026); v0.33.2 está disponible como candidata a versión. Los modelos más nuevos añadidos son Laguna XS 2.1 (Poolside, 33B/3B activos MoE, programación agéntica) y Kimi K2.7 Code (Moonshot AI, enfocado en programación, basado en K2.6). El mejor modelo general en hardware de consumo es Qwen3.8-27B (61,7% SWE-bench, cabe en 24 GB con Q4). Otras opciones destacadas: Kimi K2.6 o Laguna XS 2.1 (programación de frontera/agéntica), gpt-oss:20b (mejor pequeño / 16 GB), qwen3:30b (equilibrado), DeepSeek-R1 (razonamiento), Gemma 4 (visión/tool calling, ahora ~90% más rápido en Apple Silicon), Dolphin 3.0 (uso general sin censura) y Llama 4 Scout (contexto largo 10M / multimodal). Los más descargados en general siguen siendo la familia Llama.**',
       quickAnswerTop: {
-        en: {
+        es: {
           question: 'What are the best open source models for Ollama in June 2026?',
           answer: 'The top open source Ollama models in June 2026 are Qwen3.8-27B (best overall on consumer hardware, 24 GB Q4), Kimi K2.6 (best coding, frontier MoE), gpt-oss:20b (best small / 16 GB, adjustable reasoning), qwen3:30b (balanced all-round), Llama 4 Scout (best long-context 10M / multimodal), and DeepSeek-R1 (best reasoning). Install any with: ollama pull <model-name>',
           bullets: [

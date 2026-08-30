@@ -487,7 +487,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         href: '/local-llms/run-qwen-locally-guide-2026',
       },
       quickAnswerTop: {
-        en: {
+        es: {
           question: 'Qwen vs Llama vs Mistral — which local LLM should I use in 2026?',
           answer: 'June 2026: Qwen3.8-27B is the best overall on consumer hardware (61.7% SWE-bench, fits 24 GB at Q4). Llama 4 Scout is the long-context / multimodal pick (17B active, 10M context) but needs ~55 GB VRAM at Q4. Llama 3.3 70B remains strong for English reasoning. Mistral Small 3.1 best for quality per RAM. All run via Ollama.',
           bullets: [

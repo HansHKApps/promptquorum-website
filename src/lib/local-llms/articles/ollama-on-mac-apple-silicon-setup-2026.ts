@@ -889,7 +889,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       href: '/local-llms/top-open-source-models-ollama',
     },
     quickAnswerTop: {
-      en: { question: '', answer: '', bullets: [], updatedDate: '2026-08-28' },
+      es: { question: '', answer: '', bullets: [], updatedDate: '2026-08-28' },
       de: { question: '', answer: '', bullets: [], updatedDate: '2026-08-28' },
       fr: { question: '', answer: '', bullets: [], updatedDate: '2026-08-28' },
       ja: { question: '', answer: '', bullets: [], updatedDate: '2026-08-28' },
