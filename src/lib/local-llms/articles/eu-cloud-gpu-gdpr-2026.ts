@@ -127,7 +127,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparisonTable: {
         id: 'comparison-table',
         title: 'Provider Comparison Table',
-        content: 'All seven providers offer GDPR compliance. Pricing verified May 2026 and updated monthly.',
+        content: 'All seven providers offer GDPR compliance. Pricing verified and updated monthly.',
         columns: ['Provider', 'HQ', 'DataCenters', 'DPA', 'SchremsII', 'RTX4090', 'A10080GB', 'H100', 'BestFor'],
         rows: [
           {
@@ -510,7 +510,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       comparisonTable: {
         id: 'comparison-table',
         title: 'Tabla comparativa de proveedores',
-        content: 'Los siete proveedores ofrecen cumplimiento del RGPD. Precios verificados en mayo de 2026 y actualizados mensualmente.',
+        content: 'Los siete proveedores ofrecen cumplimiento del RGPD. Precios verificados y actualizados mensualmente.',
         columns: ['Proveedor', 'Sede', 'CentrosDeDatos', 'DPA', 'SchremsII', 'RTX4090', 'A10080GB', 'H100', 'MejorPara'],
         rows: [
           {

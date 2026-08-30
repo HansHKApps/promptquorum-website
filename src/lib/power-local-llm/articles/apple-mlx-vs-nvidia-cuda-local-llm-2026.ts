@@ -195,7 +195,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         callouts: [
           { type: 'tip', text: 'The 32B breakpoint is key: RTX 5090 at 32GB costs ~$3,949 for the card alone plus $1,500+ for the system. Mac Mini M4 Pro 48GB handles 32B for ~$2,199 total. For budget builds, see [best budget GPUs for local LLMs](/local-llms/best-budget-gpus-local-llm).' },
-          { type: 'note', text: 'Prices verified August 2026. NVIDIA GPU prices fluctuate — RTX 4090 production stopped Oct 2024. Apple pricing is fixed. Mac Studio M5 Ultra starts at $5,499 (96GB); a 256GB configuration is $9,499; both ship September 22, 2026. A 512GB configuration ships late October 2026 (price not yet listed at time of writing).' },
+          { type: 'note', text: 'Prices verified. NVIDIA GPU prices fluctuate — RTX 4090 production stopped Oct 2024. Apple pricing is fixed. Mac Studio M5 Ultra starts at $5,499 (96GB); a 256GB configuration is $9,499; both ship September 22, 2026. A 512GB configuration ships late October 2026 (price not yet listed at time of writing).' },
         ],
       },
       software: {

@@ -84,7 +84,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'best-models': {
           id: 'best-models',
           title: 'Best Laptops for Local LLMs (2026)',
-          content: 'Prices verified July 2026. All run Ollama, LM Studio, and llama.cpp out of the box. Affiliate disclosure: no commission links on this page.',
+          content: 'Prices verified. All run Ollama, LM Studio, and llama.cpp out of the box. Affiliate disclosure: no commission links on this page.',
           image: '/images/best-laptops-local-llm-comparison-table-hero-en.webp',
           imageCaption: 'Laptop comparison for local LLMs: MacBook Pro M5 Pro ($2,199, 24 GB unified memory, 45–60 tok/s) vs. RTX 5080 laptop (~$2,799, 16 GB VRAM, ~70 tok/s) vs. RTX 5070 Ti laptop (~$2,499, 12 GB VRAM), tested with Ollama and LM Studio.',
           items: [
@@ -387,7 +387,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'best-models': {
           id: 'best-models',
           title: 'Mejores laptops para LLMs locales (2026)',
-          content: 'Precios verificados en julio de 2026. Todas ejecutan Ollama, LM Studio y llama.cpp de fábrica. Aviso de afiliados: esta página no contiene enlaces con comisión.',
+          content: 'Precios verificados. Todas ejecutan Ollama, LM Studio y llama.cpp de fábrica. Aviso de afiliados: esta página no contiene enlaces con comisión.',
           image: '/images/best-laptops-local-llm-comparison-table-hero-es.webp',
           imageCaption: 'Comparativa de laptops para LLMs locales: MacBook Pro M5 Pro ($2,199, 24 GB de memoria unificada, 45–60 tok/s) frente a la laptop RTX 5080 (~$2,799, 16 GB VRAM, ~70 tok/s) y la RTX 5070 Ti (~$2,499, 12 GB VRAM), probadas con Ollama y LM Studio.',
           items: [
@@ -836,7 +836,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'best-models': {
           id: 'best-models',
           title: 'Melhores notebooks para LLMs locais (2026)',
-          content: 'Preços verificados em julho de 2026. Todos rodam Ollama, LM Studio e llama.cpp de imediato. Aviso de afiliados: esta página não tem links de comissão.',
+          content: 'Preços verificados. Todos rodam Ollama, LM Studio e llama.cpp de imediato. Aviso de afiliados: esta página não tem links de comissão.',
           image: '/images/best-laptops-local-llm-comparison-table-hero-pt.webp',
           imageCaption: 'Comparativo de notebooks para LLMs locais: MacBook Pro M5 Pro (US$ 2.199, 24 GB de memória unificada, 45–60 tok/s) contra o notebook RTX 5080 (~US$ 2.799, 16 GB de VRAM, ~70 tok/s) e o RTX 5070 Ti (~US$ 2.499, 12 GB de VRAM), testados com Ollama e LM Studio.',
           items: [
@@ -1283,7 +1283,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         'best-models': {
           id: 'best-models',
           title: 'Meilleurs Ordinateurs Portables pour LLM Locaux (2026)',
-          content: 'Prix vérifiés en juillet 2026. Tous exécutent Ollama, LM Studio et llama.cpp d\'emblée. Divulgation d\'affiliation : aucun lien de commission sur cette page.',
+          content: 'Prix vérifiés. Tous exécutent Ollama, LM Studio et llama.cpp d\'emblée. Divulgation d\'affiliation : aucun lien de commission sur cette page.',
           image: '/images/best-laptops-local-llm-comparison-table-hero-fr.webp',
           imageCaption: 'Comparatif d\'ordinateurs portables pour LLM locaux : MacBook Pro M5 Pro ($2,199, 24 GB de mémoire unifiée, 45–60 tok/s) contre l\'ordinateur portable RTX 5080 (~$2,799, 16 GB VRAM, ~70 tok/s) et le RTX 5070 Ti (~$2,499, 12 GB VRAM), testés avec Ollama et LM Studio.',
           items: [

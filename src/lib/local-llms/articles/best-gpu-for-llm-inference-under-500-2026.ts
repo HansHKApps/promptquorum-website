@@ -85,12 +85,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       benchmarkTable: {
         title: 'Performance Comparison — July 2026 Prices + Test Results',
-        content: 'Benchmarks measured with Ollama 0.30.x, llama.cpp server, models from HuggingFace. Test system: Ryzen 9 7950X, 64 GB DDR5, NVMe SSD. Prices verified July 2026 — used RTX 3090 ($1,000–1,100), RTX 4070 12GB (~$700), and RX 7800 XT 16GB (~$832) excluded: all now exceed $500.',
-        columns: ['GPU', 'VRAM', 'Price (July 2026)', 'Llama 3.1 8B Q4 tok/s', 'Qwen3 14B Q8 tok/s', 'Max Model (Q4)'],
+        content: 'Benchmarks measured with Ollama 0.30.x, llama.cpp server, models from HuggingFace. Test system: Ryzen 9 7950X, 64 GB DDR5, NVMe SSD. Prices verified — used RTX 3090 ($1,000–1,100), RTX 4070 12GB (~$700), and RX 7800 XT 16GB (~$832) excluded: all now exceed $500.',
+        columns: ['GPU', 'VRAM', 'Price', 'Llama 3.1 8B Q4 tok/s', 'Qwen3 14B Q8 tok/s', 'Max Model (Q4)'],
         rows: [
-          { GPU: 'RTX 4060 Ti 16GB', VRAM: '16 GB', 'Price (July 2026)': '~$424', 'Llama 3.1 8B Q4 tok/s': '55 tok/s', 'Qwen3 14B Q8 tok/s': '22 tok/s', 'Max Model (Q4)': '30B (Q4)' },
-          { GPU: 'RTX 3060 12GB', VRAM: '12 GB', 'Price (July 2026)': '~$339', 'Llama 3.1 8B Q4 tok/s': '36 tok/s', 'Qwen3 14B Q8 tok/s': 'VRAM limited', 'Max Model (Q4)': '14B (Q4)' },
-          { GPU: 'Intel Arc B580 12GB', VRAM: '12 GB', 'Price (July 2026)': '~$303', 'Llama 3.1 8B Q4 tok/s': '31 tok/s', 'Qwen3 14B Q8 tok/s': 'VRAM limited', 'Max Model (Q4)': '13B (Q4)' },
+          { GPU: 'RTX 4060 Ti 16GB', VRAM: '16 GB', 'Price': '~$424', 'Llama 3.1 8B Q4 tok/s': '55 tok/s', 'Qwen3 14B Q8 tok/s': '22 tok/s', 'Max Model (Q4)': '30B (Q4)' },
+          { GPU: 'RTX 3060 12GB', VRAM: '12 GB', 'Price': '~$339', 'Llama 3.1 8B Q4 tok/s': '36 tok/s', 'Qwen3 14B Q8 tok/s': 'VRAM limited', 'Max Model (Q4)': '14B (Q4)' },
+          { GPU: 'Intel Arc B580 12GB', VRAM: '12 GB', 'Price': '~$303', 'Llama 3.1 8B Q4 tok/s': '31 tok/s', 'Qwen3 14B Q8 tok/s': 'VRAM limited', 'Max Model (Q4)': '13B (Q4)' },
         ],
         image: '/images/best-gpu-for-llm-inference-under-500-2026-benchmark-comparison-en.svg',
         imageCaption: 'Budget GPU comparison for local LLM inference under $500: RTX 4060 Ti 16GB (~$424, 55 tok/s, 30B max), RTX 3060 12GB (~$339, 36 tok/s), and Intel Arc B580 12GB (~$303, 31 tok/s) benchmarked with Ollama in July 2026.',
@@ -122,7 +122,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       decisionMatrix: {
         title: 'Which GPU Should You Buy?',
-        content: 'Use this decision guide based on your primary use case. Prices verified July 2026:',
+        content: 'Use this decision guide based on your primary use case. Prices verified:',
         items: [
           '**Best all-around under $500** → RTX 4060 Ti 16GB (~$424 new, ~$340–$370 used). Runs 14B at Q4 fully in-GPU (Q8 with room), 16 GB VRAM, CUDA toolchain, and broad Windows/Linux support.',
           '**Cheapest CUDA card that works** → RTX 3060 12GB (~$339). Runner-up NVIDIA pick for 7B–13B models with the full CUDA toolchain; saves ~$85 if you do not need 14B-at-Q8 headroom.',
@@ -341,12 +341,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       benchmarkTable: {
         title: 'Comparación de rendimiento — Precios julio 2026 + Resultados de pruebas',
-        content: 'Benchmarks medidos con Ollama 0.30.x, servidor llama.cpp, modelos de HuggingFace. Sistema de prueba: Ryzen 9 7950X, 64 GB DDR5, NVMe SSD. Precios verificados julio 2026 — RTX 3090 usada (950–1.150 €), RTX 4070 12GB (~599 €) y RX 7800 XT 16GB (~682 €) excluidas: todas superan ahora los 500 €.',
-        columns: ['GPU', 'VRAM', 'Precio (julio 2026)', 'Llama 3.1 8B Q4 tok/s', 'Qwen3 14B Q8 tok/s', 'Modelo máximo (Q4)'],
+        content: 'Benchmarks medidos con Ollama 0.30.x, servidor llama.cpp, modelos de HuggingFace. Sistema de prueba: Ryzen 9 7950X, 64 GB DDR5, NVMe SSD. Precios verificados — RTX 3090 usada (950–1.150 €), RTX 4070 12GB (~599 €) y RX 7800 XT 16GB (~682 €) excluidas: todas superan ahora los 500 €.',
+        columns: ['GPU', 'VRAM', 'Precio', 'Llama 3.1 8B Q4 tok/s', 'Qwen3 14B Q8 tok/s', 'Modelo máximo (Q4)'],
         rows: [
-          { GPU: 'RTX 4060 Ti 16GB', VRAM: '16 GB', 'Precio (julio 2026)': '~520 €', 'Llama 3.1 8B Q4 tok/s': '55 tok/s', 'Qwen3 14B Q8 tok/s': '22 tok/s', 'Modelo máximo (Q4)': '30B (Q4)' },
-          { GPU: 'RTX 3060 12GB', VRAM: '12 GB', 'Precio (julio 2026)': '~334 €', 'Llama 3.1 8B Q4 tok/s': '36 tok/s', 'Qwen3 14B Q8 tok/s': 'Limitado por VRAM', 'Modelo máximo (Q4)': '14B (Q4)' },
-          { GPU: 'Intel Arc B580 12GB', VRAM: '12 GB', 'Precio (julio 2026)': '~250 €', 'Llama 3.1 8B Q4 tok/s': '31 tok/s', 'Qwen3 14B Q8 tok/s': 'Limitado por VRAM', 'Modelo máximo (Q4)': '13B (Q4)' },
+          { GPU: 'RTX 4060 Ti 16GB', VRAM: '16 GB', 'Precio': '~520 €', 'Llama 3.1 8B Q4 tok/s': '55 tok/s', 'Qwen3 14B Q8 tok/s': '22 tok/s', 'Modelo máximo (Q4)': '30B (Q4)' },
+          { GPU: 'RTX 3060 12GB', VRAM: '12 GB', 'Precio': '~334 €', 'Llama 3.1 8B Q4 tok/s': '36 tok/s', 'Qwen3 14B Q8 tok/s': 'Limitado por VRAM', 'Modelo máximo (Q4)': '14B (Q4)' },
+          { GPU: 'Intel Arc B580 12GB', VRAM: '12 GB', 'Precio': '~250 €', 'Llama 3.1 8B Q4 tok/s': '31 tok/s', 'Qwen3 14B Q8 tok/s': 'Limitado por VRAM', 'Modelo máximo (Q4)': '13B (Q4)' },
         ],
         image: '/images/best-gpu-for-llm-inference-under-500-2026-benchmark-comparison-es.svg',
         imageCaption: 'Comparativa de GPU económicas para inferencia LLM local por menos de 500 €: RTX 4060 Ti 16GB (~520 €, 55 tok/s, 30B máx.), RTX 3060 12GB (~334 €, 36 tok/s) e Intel Arc B580 12GB (~250 €, 31 tok/s), medidas con Ollama en julio de 2026.',
@@ -378,7 +378,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       decisionMatrix: {
         title: '¿Qué GPU deberías comprar?',
-        content: 'Usa esta guía de decisión según tu caso de uso principal. Precios verificados julio 2026:',
+        content: 'Usa esta guía de decisión según tu caso de uso principal. Precios verificados:',
         items: [
           '**Mejor opción general por menos de 500 €** → RTX 4060 Ti 16GB (~520 € nueva, ~420–440 € de segunda mano). Ejecuta 14B en Q4 completamente en GPU (Q8 con margen), 16 GB VRAM, cadena de herramientas CUDA y soporte amplio en Windows/Linux.',
           '**Tarjeta CUDA más barata que funciona** → RTX 3060 12GB (~334 €). Alternativa NVIDIA para modelos 7B–13B con toolchain CUDA completo; ahorra ~186 € si no necesitas margen para 14B a Q8.',
@@ -505,7 +505,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@type': 'TechArticle',
       headline: 'Mejor GPU para inferencia LLM por menos de 500 € (2026)',
-      description: 'Comparación clasificada de GPU por menos de 500 € para inferencia de IA local: RTX 4060 Ti 16GB, RTX 3060 12GB, Arc B580. Precios verificados julio 2026. RTX 3090, RTX 4070 y RX 7800 XT eliminadas — todas superan ahora los 500 €.',
+      description: 'Comparación clasificada de GPU por menos de 500 € para inferencia de IA local: RTX 4060 Ti 16GB, RTX 3060 12GB, Arc B580. Precios verificados. RTX 3090, RTX 4070 y RX 7800 XT eliminadas — todas superan ahora los 500 €.',
       datePublished: '2026-05-26',
       dateModified: '2026-08-28',
       url: 'https://www.promptquorum.com/es/local-llms/best-gpu-for-llm-inference-under-500-2026',
@@ -879,12 +879,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       benchmarkTable: {
         title: 'Comparação de desempenho — Preços de julho 2026 + resultados de testes',
-        content: 'Benchmarks medidos com Ollama 0.30.x, servidor llama.cpp, modelos do HuggingFace. Sistema de teste: Ryzen 9 7950X, 64 GB DDR5, SSD NVMe. Preços verificados em julho de 2026 — RTX 3090 usada (a partir de R$ 6.000), RTX 4070 12GB (~R$ 3.500) e RX 7800 XT 16GB (~R$ 2.900) excluídas: todas excedem a faixa de US$ 500. Os preços no Brasil podem variar bastante devido a impostos de importação.',
-        columns: ['GPU', 'VRAM', 'Preço (julho 2026)', 'Llama 3.1 8B Q4 tok/s', 'Qwen3 14B Q8 tok/s', 'Modelo máximo (Q4)'],
+        content: 'Benchmarks medidos com Ollama 0.30.x, servidor llama.cpp, modelos do HuggingFace. Sistema de teste: Ryzen 9 7950X, 64 GB DDR5, SSD NVMe. Preços verificados — RTX 3090 usada (a partir de R$ 6.000), RTX 4070 12GB (~R$ 3.500) e RX 7800 XT 16GB (~R$ 2.900) excluídas: todas excedem a faixa de US$ 500. Os preços no Brasil podem variar bastante devido a impostos de importação.',
+        columns: ['GPU', 'VRAM', 'Preço', 'Llama 3.1 8B Q4 tok/s', 'Qwen3 14B Q8 tok/s', 'Modelo máximo (Q4)'],
         rows: [
-          { GPU: 'RTX 4060 Ti 16GB', VRAM: '16 GB', 'Preço (julho 2026)': '~R$ 3.299', 'Llama 3.1 8B Q4 tok/s': '55 tok/s', 'Qwen3 14B Q8 tok/s': '22 tok/s', 'Modelo máximo (Q4)': '30B (Q4)' },
-          { GPU: 'RTX 3060 12GB', VRAM: '12 GB', 'Preço (julho 2026)': '~R$ 1.999', 'Llama 3.1 8B Q4 tok/s': '36 tok/s', 'Qwen3 14B Q8 tok/s': 'Limitado pela VRAM', 'Modelo máximo (Q4)': '14B (Q4)' },
-          { GPU: 'Intel Arc B580 12GB', VRAM: '12 GB', 'Preço (julho 2026)': '~R$ 1.919', 'Llama 3.1 8B Q4 tok/s': '31 tok/s', 'Qwen3 14B Q8 tok/s': 'Limitado pela VRAM', 'Modelo máximo (Q4)': '13B (Q4)' },
+          { GPU: 'RTX 4060 Ti 16GB', VRAM: '16 GB', 'Preço': '~R$ 3.299', 'Llama 3.1 8B Q4 tok/s': '55 tok/s', 'Qwen3 14B Q8 tok/s': '22 tok/s', 'Modelo máximo (Q4)': '30B (Q4)' },
+          { GPU: 'RTX 3060 12GB', VRAM: '12 GB', 'Preço': '~R$ 1.999', 'Llama 3.1 8B Q4 tok/s': '36 tok/s', 'Qwen3 14B Q8 tok/s': 'Limitado pela VRAM', 'Modelo máximo (Q4)': '14B (Q4)' },
+          { GPU: 'Intel Arc B580 12GB', VRAM: '12 GB', 'Preço': '~R$ 1.919', 'Llama 3.1 8B Q4 tok/s': '31 tok/s', 'Qwen3 14B Q8 tok/s': 'Limitado pela VRAM', 'Modelo máximo (Q4)': '13B (Q4)' },
         ],
         image: '/images/best-gpu-for-llm-inference-under-500-2026-benchmark-comparison-pt.svg',
         imageCaption: 'Comparativo de GPUs econômicas para inferência de LLM local por menos de US$ 500: RTX 4060 Ti 16GB (~R$ 3.299, 55 tok/s, máx. 30B), RTX 3060 12GB (~R$ 1.999, 36 tok/s) e Intel Arc B580 12GB (~R$ 1.919, 31 tok/s), testadas com Ollama em julho de 2026.',
@@ -1043,7 +1043,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     schema: {
       '@type': 'TechArticle',
       headline: 'Melhor GPU para inferência de LLM por menos de US$ 500 (2026)',
-      description: 'Comparação classificada de GPUs por menos de US$ 500 para inferência de IA local: RTX 4060 Ti 16GB, RTX 3060 12GB, Arc B580. Preços verificados em julho de 2026. RTX 3090, RTX 4070 e RX 7800 XT removidas — todas excedem US$ 500 agora.',
+      description: 'Comparação classificada de GPUs por menos de US$ 500 para inferência de IA local: RTX 4060 Ti 16GB, RTX 3060 12GB, Arc B580. Preços verificados. RTX 3090, RTX 4070 e RX 7800 XT removidas — todas excedem US$ 500 agora.',
       datePublished: '2026-05-26',
       dateModified: '2026-08-28',
       url: 'https://www.promptquorum.com/pt/local-llms/best-gpu-for-llm-inference-under-500-2026',
@@ -1367,12 +1367,12 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       benchmarkTable: {
         title: 'Comparatif de performances — Prix juillet 2026 + résultats de tests',
-        content: 'Benchmarks mesurés avec Ollama 0.30.x, serveur llama.cpp, modèles issus de HuggingFace. Système de test : Ryzen 9 7950X, 64 Go DDR5, SSD NVMe. Prix vérifiés juillet 2026 — RTX 3090 occasion (950–1 150 €), RTX 4070 12 Go (~599 €) et RX 7800 XT 16 Go (~682 €) exclues : toutes dépassent désormais 500 €.',
-        columns: ['GPU', 'VRAM', 'Prix (juillet 2026)', 'Llama 3.1 8B Q4 tok/s', 'Qwen3 14B Q8 tok/s', 'Modèle max (Q4)'],
+        content: 'Benchmarks mesurés avec Ollama 0.30.x, serveur llama.cpp, modèles issus de HuggingFace. Système de test : Ryzen 9 7950X, 64 Go DDR5, SSD NVMe. Prix vérifiés — RTX 3090 occasion (950–1 150 €), RTX 4070 12 Go (~599 €) et RX 7800 XT 16 Go (~682 €) exclues : toutes dépassent désormais 500 €.',
+        columns: ['GPU', 'VRAM', 'Prix', 'Llama 3.1 8B Q4 tok/s', 'Qwen3 14B Q8 tok/s', 'Modèle max (Q4)'],
         rows: [
-          { GPU: 'RTX 4060 Ti 16 Go', VRAM: '16 Go', 'Prix (juillet 2026)': '~520 €', 'Llama 3.1 8B Q4 tok/s': '55 tok/s', 'Qwen3 14B Q8 tok/s': '22 tok/s', 'Modèle max (Q4)': '30B (Q4)' },
-          { GPU: 'RTX 3060 12 Go', VRAM: '12 Go', 'Prix (juillet 2026)': '~334 €', 'Llama 3.1 8B Q4 tok/s': '36 tok/s', 'Qwen3 14B Q8 tok/s': 'Limité par la VRAM', 'Modèle max (Q4)': '14B (Q4)' },
-          { GPU: 'Intel Arc B580 12 Go', VRAM: '12 Go', 'Prix (juillet 2026)': '~250 €', 'Llama 3.1 8B Q4 tok/s': '31 tok/s', 'Qwen3 14B Q8 tok/s': 'Limité par la VRAM', 'Modèle max (Q4)': '13B (Q4)' },
+          { GPU: 'RTX 4060 Ti 16 Go', VRAM: '16 Go', 'Prix': '~520 €', 'Llama 3.1 8B Q4 tok/s': '55 tok/s', 'Qwen3 14B Q8 tok/s': '22 tok/s', 'Modèle max (Q4)': '30B (Q4)' },
+          { GPU: 'RTX 3060 12 Go', VRAM: '12 Go', 'Prix': '~334 €', 'Llama 3.1 8B Q4 tok/s': '36 tok/s', 'Qwen3 14B Q8 tok/s': 'Limité par la VRAM', 'Modèle max (Q4)': '14B (Q4)' },
+          { GPU: 'Intel Arc B580 12 Go', VRAM: '12 Go', 'Prix': '~250 €', 'Llama 3.1 8B Q4 tok/s': '31 tok/s', 'Qwen3 14B Q8 tok/s': 'Limité par la VRAM', 'Modèle max (Q4)': '13B (Q4)' },
         ],
         image: '/images/best-gpu-for-llm-inference-under-500-2026-benchmark-comparison-fr.svg',
         imageCaption: 'Comparatif de GPU économiques pour l\'inférence LLM locale sous 500 € : RTX 4060 Ti 16 Go (~520 €, 55 tok/s, 30B max), RTX 3060 12 Go (~334 €, 36 tok/s) et Intel Arc B580 12 Go (~250 €, 31 tok/s), mesurées avec Ollama en juillet 2026.',
@@ -1404,7 +1404,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       decisionMatrix: {
         title: 'Quelle GPU devriez-vous acheter ?',
-        content: 'Utilisez ce guide de décision selon votre usage principal. Prix vérifiés juillet 2026 :',
+        content: 'Utilisez ce guide de décision selon votre usage principal. Prix vérifiés :',
         items: [
           '**Meilleur choix global sous 500 €** → RTX 4060 Ti 16 Go (~520 € neuf, ~420–440 € d\'occasion). Fait tourner 14B en Q4 entièrement en GPU (Q8 avec marge), 16 Go de VRAM, chaîne CUDA complète et large support Windows/Linux.',
           '**Carte CUDA la moins chère qui fonctionne** → RTX 3060 12 Go (~334 €). Alternative NVIDIA pour les modèles 7B–13B avec la chaîne CUDA complète ; économise ~186 € si la marge 14B-en-Q8 n\'est pas nécessaire.',

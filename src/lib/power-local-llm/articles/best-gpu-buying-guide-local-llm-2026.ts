@@ -3102,14 +3102,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Piensa en la VRAM como el tamaño de un escritorio y en el modelo como lo que pones encima. Una GPU más rápida despeja el escritorio más rápido, pero si el modelo no cabe en el escritorio en absoluto, la velocidad nunca entra en juego. Primero elige el rango cuyo escritorio sea suficientemente grande.',
           },
         ],
-        columns: ['GPU', 'VRAM', 'Velocidad (7B Q4)', 'Consumo', 'Precio (julio 2026)', 'Ideal para'],
+        columns: ['GPU', 'VRAM', 'Velocidad (7B Q4)', 'Consumo', 'Precio', 'Ideal para'],
         rows: [
           {
             'GPU': 'RTX 3060 12 GB',
             'VRAM': '12 GB',
             'Velocidad (7B Q4)': '15-20 tok/s',
             'Consumo': '170 W',
-            'Precio (julio 2026)': '$350-680 nueva / $150-250 de segunda mano',
+            'Precio': '$350-680 nueva / $150-250 de segunda mano',
             'Ideal para': 'Entrada de presupuesto — cualquier modelo de 7B',
           },
           {
@@ -3117,7 +3117,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '12 GB',
             'Velocidad (7B Q4)': '10-14 tok/s',
             'Consumo': '230 W',
-            'Precio (julio 2026)': '$130-200 de segunda mano (descontinuada nueva)',
+            'Precio': '$130-200 de segunda mano (descontinuada nueva)',
             'Ideal para': 'VRAM más barata, acepta configuración AMD',
           },
           {
@@ -3125,7 +3125,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '16 GB',
             'Velocidad (7B Q4)': '~20-25 tok/s',
             'Consumo': '165 W',
-            'Precio (julio 2026)': '$424 nueva / $290 de segunda mano',
+            'Precio': '$424 nueva / $290 de segunda mano',
             'Ideal para': 'Rango medio — modelos de 14B, bajo consumo',
           },
           {
@@ -3133,7 +3133,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '16 GB',
             'Velocidad (7B Q4)': '~18-24 tok/s (est.)',
             'Consumo': '263 W',
-            'Precio (julio 2026)': '~$480-520 nueva',
+            'Precio': '~$480-520 nueva',
             'Ideal para': '16 GB en AMD, acepta configuración ROCm',
           },
           {
@@ -3141,7 +3141,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '16 GB',
             'Velocidad (7B Q4)': '~80-90 tok/s (est.)',
             'Consumo': '285 W',
-            'Precio (julio 2026)': '$1.179 nueva / $770 de segunda mano',
+            'Precio': '$1.179 nueva / $770 de segunda mano',
             'Ideal para': 'Rápida en 14B, menor consumo energético',
           },
           {
@@ -3149,7 +3149,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '16 GB',
             'Velocidad (7B Q4)': '~120 tok/s',
             'Consumo': '320 W',
-            'Precio (julio 2026)': '~$1.100-1.200 nueva / ~$900 de segunda mano',
+            'Precio': '~$1.100-1.200 nueva / ~$900 de segunda mano',
             'Ideal para': 'Elección del editor — la 16 GB más rápida',
           },
           {
@@ -3157,7 +3157,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '24 GB',
             'Velocidad (7B Q4)': '~150 tok/s',
             'Consumo': '450 W',
-            'Precio (julio 2026)': '$2.755 nueva / ~$2.268 de segunda mano',
+            'Precio': '$2.755 nueva / ~$2.268 de segunda mano',
             'Ideal para': 'Modelos de 33B, doble GPU para 70B',
           },
           {
@@ -3165,7 +3165,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '32 GB',
             'Velocidad (7B Q4)': '~160 tok/s',
             'Consumo': '575 W',
-            'Precio (julio 2026)': '$3.949 nueva / $3.999 de segunda mano',
+            'Precio': '$3.949 nueva / $3.999 de segunda mano',
             'Ideal para': 'GPU única para 70B en Q4',
           },
         ],
@@ -3700,14 +3700,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Pense na VRAM como o tamanho de uma mesa e no modelo como o que você coloca nela. Uma GPU mais rápida limpa a mesa mais depressa, mas se o modelo não cabe na mesa de jeito nenhum, a velocidade nunca entra em cena. Escolha primeiro a faixa cuja mesa é grande o suficiente.',
           },
         ],
-        columns: ['GPU', 'VRAM', 'Velocidade (7B Q4)', 'Consumo', 'Preço (julho 2026)', 'Melhor para'],
+        columns: ['GPU', 'VRAM', 'Velocidade (7B Q4)', 'Consumo', 'Preço', 'Melhor para'],
         rows: [
           {
             'GPU': 'RTX 3060 12 GB',
             'VRAM': '12 GB',
             'Velocidade (7B Q4)': '15–20 tok/s',
             'Consumo': '170 W',
-            'Preço (julho 2026)': '$350–680 nova / $150–250 usada',
+            'Preço': '$350–680 nova / $150–250 usada',
             'Melhor para': 'Entrada econômica — qualquer modelo 7B',
           },
           {
@@ -3715,7 +3715,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '12 GB',
             'Velocidade (7B Q4)': '10–14 tok/s',
             'Consumo': '230 W',
-            'Preço (julho 2026)': '$130–200 usada (descontinuada nova)',
+            'Preço': '$130–200 usada (descontinuada nova)',
             'Melhor para': 'VRAM mais barata, aceita configuração AMD',
           },
           {
@@ -3723,7 +3723,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '16 GB',
             'Velocidade (7B Q4)': '~20–25 tok/s',
             'Consumo': '165 W',
-            'Preço (julho 2026)': '$424 nova / $290 usada',
+            'Preço': '$424 nova / $290 usada',
             'Melhor para': 'Faixa intermediária — modelos 14B, baixo consumo',
           },
           {
@@ -3731,7 +3731,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '16 GB',
             'Velocidade (7B Q4)': '~18–24 tok/s (est.)',
             'Consumo': '263 W',
-            'Preço (julho 2026)': '~$480–520 nova',
+            'Preço': '~$480–520 nova',
             'Melhor para': '16 GB na AMD, aceita configuração ROCm',
           },
           {
@@ -3739,7 +3739,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '16 GB',
             'Velocidade (7B Q4)': '~80–90 tok/s (est.)',
             'Consumo': '285 W',
-            'Preço (julho 2026)': '$1.179 nova / $770 usada',
+            'Preço': '$1.179 nova / $770 usada',
             'Melhor para': 'Rápida em 14B, menor consumo de energia',
           },
           {
@@ -3747,7 +3747,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '16 GB',
             'Velocidade (7B Q4)': '~120 tok/s',
             'Consumo': '320 W',
-            'Preço (julho 2026)': '~$1.100–1.200 nova / ~$900 usada',
+            'Preço': '~$1.100–1.200 nova / ~$900 usada',
             'Melhor para': 'Escolha do editor — a 16 GB mais rápida',
           },
           {
@@ -3755,7 +3755,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '24 GB',
             'Velocidade (7B Q4)': '~150 tok/s',
             'Consumo': '450 W',
-            'Preço (julho 2026)': '$2.755 nova / ~$2.268 usada',
+            'Preço': '$2.755 nova / ~$2.268 usada',
             'Melhor para': 'Modelos 33B, GPU dupla para 70B',
           },
           {
@@ -3763,7 +3763,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '32 GB',
             'Velocidade (7B Q4)': '~160 tok/s',
             'Consumo': '575 W',
-            'Preço (julho 2026)': '$3.949 nova / $3.999 usada',
+            'Preço': '$3.949 nova / $3.999 usada',
             'Melhor para': 'GPU única para 70B em Q4',
           },
         ],
