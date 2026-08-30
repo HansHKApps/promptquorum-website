@@ -3140,10 +3140,10 @@ schema: {
     last_seo_review: '2026-08-28',
     theme: '시작하기',
     title: '2026년 초보자 입문 로컬 LLM: 4GB & 8GB RAM 모델 완전 비교 (Llama, Phi, Gemma, Qwen)',
-    seoTitle: '2026년 초보자 로컬 LLM: Llama, Phi, Gemma, Qwen',
+    seoTitle: '로컬 LLM 추천 순위 2026: Llama·Qwen',
     intro: '2026년 초보자를 위한 최고의 로컬 LLM 모델 5가지는 Meta Llama 3.2 3B, Microsoft Phi-4 Mini, Google Gemma 4 E2B, Meta Llama 3.1 8B, Qwen3 8B입니다. 각 모델은 4-8 GB RAM을 갖춘 소비자용 하드웨어에서 구동되며 일상적인 작업에 적합한 출력 품질을 제공합니다.',
     leadAnswerBlock: '**2026년 초보자를 위한 최고의 로컬 LLM 모델 5가지는 Llama 3.2 3B, Phi-4 Mini 3.8B, Gemma 4 E2B, Llama 3.1 8B, Qwen3 8B입니다. 모두 4-8 GB RAM에서 단 하나의 Ollama 명령으로 실행됩니다.**',
-    metaDescription: '순위 비교: Llama 3.2 3B (2.5 GB), Phi-4 Mini (2.5 GB), Gemma 4 E2B (1.7 GB), Llama 3.1 8B, Qwen3 8B. RAM 요구사항, 속도 벤치마크, Ollama 명령어.',
+    metaDescription: '로컬 LLM 추천 순위: Llama 3.2 3B(2.5GB), Phi-4 Mini(2.5GB), Gemma 4 E2B(1.7GB), Qwen3 8B. 모델 종류별 RAM 사양과 성능 비교, Ollama 명령어까지.',
     heroImage: '/images/best-beginner-local-llm-models-3b-vs-7b-hero-ko.webp',
     twitterDescription: '순위 비교: Llama 3.2 3B (2.5 GB, 25-45 tok/s), Phi-4 Mini (2.5 GB, 최고 추론), Gemma 4 E2B (1.7 GB, 최고 속도), Llama 3.1 8B, Qwen3 8B. 2026년 초보자용 로컬 LLM 5선.',
     publishDate: '2026-04-04',
@@ -3407,6 +3407,14 @@ schema: {
         id: 'common-questions',
         title: '자주 묻는 질문',
         faqs: [
+          {
+            q: '로컬 LLM에는 어떤 종류가 있나요?',
+            a: '크게 크기와 용도로 나뉩니다. 크기로는 1B~3B급(Llama 3.2 3B, Gemma 4 E2B)이 4GB RAM에서도 돌아가는 경량 모델, 7B~8B급(Llama 3.1 8B, Qwen3 8B)이 8GB RAM에서 품질과 속도의 균형을 잡는 표준 모델입니다. 용도로는 일반 대화용, 코딩 특화형, 다국어·한국어에 강한 모델로 갈립니다. 처음이라면 크기부터 정하세요. 보유한 RAM이 사실상 선택지를 결정하고, 그 안에서 용도에 맞는 모델을 고르는 순서가 실패가 적습니다.',
+          },
+          {
+            q: '로컬 LLM을 돌리려면 어떤 머신이 필요한가요?',
+            a: '이 문서에서 다루는 5개 모델은 모두 4~8GB RAM의 일반 소비자용 하드웨어에서 Ollama 명령 한 줄로 실행됩니다. 전용 그래픽카드는 필수가 아니며, GPU가 없으면 CPU만으로도 동작하되 생성 속도가 느려집니다. 램이 8GB면 7B~8B급까지, 4GB면 1B~3B급이 현실적인 상한입니다. 새로 장비를 맞추기보다, 지금 쓰는 PC의 RAM 용량을 먼저 확인하고 그에 맞는 모델을 고르는 편이 훨씬 낫습니다.',
+          },
           {
             q: '2026년 초보자에게 가장 좋은 로컬 LLM 모델은 무엇인가요?',
             a: '대부분의 사용자에게는 Llama 3.2 3B -- 4 GB RAM의 모든 기기에서 실행되고, 5분 이내에 다운로드되며, 우수한 명령 수행 출력을 제공합니다. RAM 8 GB에서는 Qwen3 8B가 더 나은 코딩과 다국어 성능을 제공합니다. 절대 최저 RAM에는 Gemma 4 E2B가 1.7 GB에서 CPU 기준 40-60 tok/s로 실행되며, 또는 Llama 3.2 1B가 RAM 2 GB 이하에서 실행됩니다.',
