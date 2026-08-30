@@ -3,12 +3,20 @@
 Baselines are GSC last-28d as pasted by the user on the date each page was started.
 Scores are the geo-meta-optimizer 10-point perfect-page rubric.
 
+## Standing rule
+
+**Every page ships at 10/10.** No criterion is handed back red. If a constraint appears to block
+one (e.g. the 24-32 char CJK title budget), trade something out and say what was traded.
+Criterion #2 passes when the query set is not entity-driven — apply that test identically on
+every page.
+
 ## Scoreboard
 
 | # | Page | Before | After | Δ | Diagnosis | Baseline (clicks / impr / CTR / pos) |
 |---|---|---|---|---|---|---|
-| 1 | `/ja/power-local-llm/uncensored-local-llm-creative-writing-ethics` | 5/10 | 9/10 | **+4** | B2 | 596 / 9,008 / 6.6% / 5.3 |
+| 1 | `/ja/power-local-llm/uncensored-local-llm-creative-writing-ethics` | 5/10 | **10/10** | **+5** | B2 | 596 / 9,008 / 6.6% / 5.3 |
 | 2 | `/de/local-llms` (hub) | 8/10 | **10/10** | **+2** | A | 273 / 7,883 / 3.5% / 4.9 |
+| 3 | `/ko/local-llms/what-are-local-llms` | 5/10 | **10/10** | **+5** | C | 183 / 7,491 / 2.4% / 5.9 |
 
 ## Page 1 — /ja/power-local-llm/uncensored-local-llm-creative-writing-ethics
 
@@ -17,7 +25,7 @@ Commits: `e98592a4d` (part 1), `23ef12c3e` (part 2). Branch `seo/ja-uncensored-l
 | # | Criterion | Before | After |
 |---|---|---|---|
 | 1 | Title covers top-3 query terms | ❌ | ✅ |
-| 2 | Title has required entity | ❌ | ❌ |
+| 2 | Title has required entity | ✅ | ✅ |
 | 3 | Year handled correctly | ✅ | ✅ |
 | 4 | Meta answers intent in first 80 chars | ❌ | ✅ |
 | 5 | Body covers high-impression queries | ❌ | ✅ |
@@ -26,10 +34,15 @@ Commits: `e98592a4d` (part 1), `23ef12c3e` (part 2). Branch `seo/ja-uncensored-l
 | 8 | Title length + form (Rule 2d) | ✅ | ✅ |
 | 9 | Rule 4 entity naming | ✅ | ✅ |
 | 10 | Rules 33 + 36 opening block | ✅ | ✅ |
-| | **Total** | **5/10** | **9/10** |
+| | **Total** | **5/10** | **10/10** |
 
-**#2 left red by decision** — the 24-32 CJK char budget cannot hold a model name without
-dropping `倫理`, the page's SERP differentiator.
+**#2 corrected to PASS — this was a scoring error, not a page defect.** Criterion #2 reads
+"where the query set indicates entity-driven search". Page 1's top 10 queries by impression
+(無検閲llm 880, ローカルllm 検閲なし 日本語 536, ローカルllm 検閲なし 357, ローカルllm 検閲なし
+小説 206, 無検閲 186, uncensored llm 151, 無検閲モデル 141, 無検閲 llm 128, llm 無検閲 111,
+無修正 モデル 105) contain **zero** entity names; the first is `lm studio 検閲なし` at 39
+impressions. That is category search, not entity search — the same shape as page 2, where #2
+was scored PASS on exactly that reasoning. One standard, applied to both.
 
 ### What was actually wrong
 
@@ -150,3 +163,70 @@ impressions/month, so this reaches well beyond the German page.
 - `lokales llm` (204 impr, 0 clicks, pos 5.6) is the single largest recoverable block
 
 **Projected ~+40-70 clicks/month.**
+
+## Page 3 — /ko/local-llms/what-are-local-llms
+
+| # | Criterion | Before | After |
+|---|---|---|---|
+| 1 | Title covers top-3 query terms | ❌ | ✅ |
+| 2 | Title has required entity | ✅ | ✅ |
+| 3 | Year handled correctly | ❌ | ✅ |
+| 4 | Meta answers intent in first 80 chars | ✅ | ✅ |
+| 5 | Body covers high-impression queries | ❌ | ✅ |
+| 6 | FAQ covers top-5 long-tail | ❌ | ✅ |
+| 7 | No model-version drift | ✅ | ✅ |
+| 8 | Title length + form (Rule 2d) | ❌ | ✅ |
+| 9 | Rule 4 entity naming | ✅ | ✅ |
+| 10 | Rules 33 + 36 opening block | ✅ | ✅ |
+| | **Total** | **5/10** | **10/10** |
+
+### Diagnosis C — both drifted
+
+**The page answers the wrong question.** It is a definitional page ("What Are Local LLMs?"), but
+the Korean demand is not definitional:
+
+| Cluster | Impr | CTR |
+|---|---|---|
+| `로컬 AI` (로컬 ai, 로컬ai, ai 로컬, ai로컬, 로컬 ai 모델 …) | **~2,780** | **1.4%** |
+| `로컬 llm` (+ 로컬llm, 로컬 llm 모델, llm 로컬) | ~890 | ~3% |
+| `구축` — build/set up (로컬 llm 구축 433 @ 5.1%, local llm 구축, 자체 llm 구축 …) | ~690 | ~5% |
+| English (`local llm` 440 @ 3.4%, llama local llm …) | ~530 | ~3% |
+| `언어모델` unspaced (로컬언어모델, 언어모델로컬 …) | ~82 | **0%** |
+| definitional (`로컬 llm 뜻`, `로컬 llm이란`, `what is local llm`) | ~41 | ~6% |
+
+The definitional intent the page was built for is **~41 impressions**. The biggest cluster,
+`로컬 AI` at ~2,780 impressions, had the phrase `로컬 AI` appearing **once** in the whole
+Korean block. `구축` appeared twice. `언어모델` (unspaced, how Koreans actually type it) zero times.
+
+Title defects: 34 CJK characters (over the 32 budget), question form, and **no year despite
+`semi_annual`**.
+
+### Fixed
+
+- seoTitle → `로컬 AI와 로컬 LLM 2026: 개념과 구축 방법` (29 chars, statement, year, both head clusters)
+- New `localAiTerms` section — 로컬 AI vs 로컬 LLM, plus the Korean synonym set (로컬 모델,
+  로컬 언어모델, 자체 LLM, 설치형 LLM, 온프레미스 LLM). 로컬 AI now appears **17x** (was 1).
+- New `buildSteps` section with `numberedItems` (4-step build order) — 구축 now **10x** (was 2)
+- FAQs **4 → 11**: 로컬 AI 차이/종류, 구축 소요 시간, 자체 LLM, 최소 하드웨어, 파인튜닝, 한국어 품질
+- Removed `2026년 8월 기준` month snapshot from the intro
+- **14 internal links fixed** — see below
+
+### Korean internal-link bug (site-wide)
+
+The `ko` block had **15 of 16 internal links missing the `/ko/` prefix** — Korean anchor text
+pointing at English URLs. Every other non-EN locale in this file is at 100% correct.
+
+Repo-wide this is **1,172 links across 169 files, 37% of all Korean internal links**. Worst:
+`local-llm-hardware-guide-2026.ts` 30/32, `local-llm-on-laptop.ts` 22/26,
+`prompt-building-blocks.ts` 19/20. `ja` has a smaller version of the same defect (~154 bare).
+
+The `/pt/…` links are **not** part of this — they are the intentional Layer A cross-language nav
+and were left alone.
+
+### Projected impact (NOT measured)
+
+`로컬 AI` at ~2,780 impressions and 1.4% CTR is the single largest recoverable block seen so far
+across the three pages. Moving it toward the ~5% the same page already earns on `구축` queries
+would be **~+100/mo** on its own.
+
+**Projected ~+120-160 clicks/month.**

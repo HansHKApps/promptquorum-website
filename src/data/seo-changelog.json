@@ -1236,5 +1236,30 @@
       "ctr": 0.03463148547507294,
       "period": "GSC last 28d as pasted 2026-08-30"
     }
+  },
+  {
+    "id": "f14d50fb-607c-4d27-bab2-638138baf27f",
+    "slug": "/ko/local-llms/what-are-local-llms",
+    "date": "2026-08-30T08:58:21.355Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "로컬 LLM이란? 자체 하드웨어에서 AI 모델을 실행하는 방법",
+        "new": "로컬 AI와 로컬 LLM 2026: 개념과 구축 방법"
+      },
+      {
+        "field": "metaDescription",
+        "old": "로컬 LLM은 인터넷 없이 자체 하드웨어에서 AI 모델을 실행합니다. 로컬 LLM이 무엇인지, 어떻게 작동하는지, 언제 사용해야 하는지 알아보세요. 2026년 가이드.",
+        "new": "로컬 AI는 인터넷 없이 내 하드웨어에서 실행되는 AI이고, 로컬 LLM은 그중 텍스트를 다루는 언어 모델입니다. 개념, 필요한 하드웨어, 4단계 구축 순서까지 정리한 2026년 가이드."
+      }
+    ],
+    "reason": "geo-meta-optimizer: coherence-C-fix — 로컬 AI cluster is ~2,780 impr at 1.4% CTR but appeared once in the body; 구축 cluster ~690 impr at 5% CTR barely covered. Old title was 34 CJK chars (over 32), question-form, and had no year despite semi_annual. Added localAiTerms + buildSteps sections, FAQs 4->11, fixed 14 ko internal links missing the /ko/ prefix. Perfect-page 5/10 -> 10/10",
+    "baseline": {
+      "position": 5.9,
+      "impressions": 7491,
+      "clicks": 183,
+      "ctr": 0.024429315178213857,
+      "period": "GSC last 28d as pasted 2026-08-30"
+    }
   }
 ]
