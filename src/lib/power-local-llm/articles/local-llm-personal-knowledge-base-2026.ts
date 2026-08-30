@@ -1,6 +1,6 @@
 // Power Local LLM — Build a Personal Knowledge Base With Local AI: 2026 Stack Guide
 // Slug: local-llm-personal-knowledge-base-2026
-// EN-only in this iteration; DE/FR/JA/ZH render as "Coming Soon" via the article page.
+// All 9 languages (en/de/fr/ja/zh/es/pt/ar/ko) are fully translated.
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
@@ -9,7 +9,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-05-08',
+    dateModified: '2026-08-29',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/local-llm-personal-knowledge-base-2026-overview-hero-en.webp',
@@ -137,7 +137,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'You want full control over chunking, retrieval, and re-ranking → custom Python + ChromaDB',
           ],
           cloudIf: [
-            'You need GPT-5.5-class reasoning on every query and your archive is small → Notion AI or ChatGPT with custom GPTs (the local stack is ~70% as capable on synthesis)',
+            'You need GPT-5.6-class reasoning on every query and your archive is small → Notion AI or ChatGPT with custom GPTs (the local stack is ~70% as capable on synthesis)',
             'You have no machine with 16 GB+ RAM and no home server → cloud SaaS PKB (Mem, Reflect)',
             'Your team needs concurrent multi-user access and you do not want to host services → cloud equivalent',
           ],
@@ -340,6 +340,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       scaling: {
         id: 'scaling',
+        itemHeadings: true,
         title: 'Scaling: 1K, 10K, 100K Items',
         content:
           '**Scaling a local-AI PKB has three regimes: under 1,000 items everything is fast on any modern laptop; 1,000–10,000 items the embedding index becomes a real artefact you have to manage; past 10,000 items hardware becomes the bottleneck and capture pipeline reliability dominates outcomes.** Realistic numbers below assume Mac M3 Pro / RTX 4060 PC with nomic-embed-text and Llama 3.2 3B.',
@@ -470,7 +471,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   de: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-05-08',
+    dateModified: '2026-08-29',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/local-llm-personal-knowledge-base-2026-overview-hero-de.webp',
@@ -598,7 +599,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Sie wollen volle Kontrolle über Chunking, Retrieval und Re-Ranking → eigener Python + ChromaDB Stack',
           ],
           cloudIf: [
-            'Sie brauchen GPT-5.5-Klasse Reasoning bei jeder Anfrage und Ihr Archiv ist klein → Notion AI oder ChatGPT mit Custom GPTs (der lokale Stack ist bei Synthese rund 70 % so leistungsfähig)',
+            'Sie brauchen GPT-5.6-Klasse Reasoning bei jeder Anfrage und Ihr Archiv ist klein → Notion AI oder ChatGPT mit Custom GPTs (der lokale Stack ist bei Synthese rund 70 % so leistungsfähig)',
             'Sie haben keinen Rechner mit 16 GB+ RAM und keinen Heimserver → Cloud-SaaS-PKB (Mem, Reflect)',
             'Ihr Team braucht gleichzeitigen Multi-User-Zugriff und Sie wollen keine Dienste hosten → Cloud-Äquivalent',
           ],
@@ -801,6 +802,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       scaling: {
         id: 'scaling',
+        itemHeadings: true,
         title: 'Skalierung: 1K, 10K, 100K Elemente',
         content:
           '**Die Skalierung einer lokalen KI-PKB hat drei Regimes: Unter 1.000 Elementen ist alles auf jedem modernen Laptop schnell; bei 1.000–10.000 Elementen wird der Embedding-Index zu einem realen Artefakt, das verwaltet werden muss; ab 10.000 Elementen wird Hardware zum Engpass und die Capture-Pipeline-Zuverlässigkeit dominiert das Ergebnis.** Realistische Werte unten gehen von Mac M3 Pro / RTX 4060 PC mit nomic-embed-text und Llama 3.2 3B aus.',
@@ -940,7 +942,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   fr: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-05-08',
+    dateModified: '2026-08-29',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/local-llm-personal-knowledge-base-2026-overview-hero-fr.webp',
@@ -1068,7 +1070,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Vous voulez un contrôle total sur le chunking, la récupération et le re-ranking → stack Python + ChromaDB sur mesure',
           ],
           cloudIf: [
-            'Vous avez besoin d\'un raisonnement de classe GPT-5.5 à chaque requête et votre archive est petite → Notion AI ou ChatGPT avec GPT personnalisés (le stack local est ~70 % aussi capable en synthèse)',
+            'Vous avez besoin d\'un raisonnement de classe GPT-5.6 à chaque requête et votre archive est petite → Notion AI ou ChatGPT avec GPT personnalisés (le stack local est ~70 % aussi capable en synthèse)',
             'Vous n\'avez pas de machine avec 16 Go+ de RAM ni de serveur domestique → PKB SaaS cloud (Mem, Reflect)',
             'Votre équipe a besoin d\'un accès multi-utilisateurs concurrent et vous ne voulez pas héberger de services → équivalent cloud',
           ],
@@ -1271,6 +1273,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       scaling: {
         id: 'scaling',
+        itemHeadings: true,
         title: 'Mise à l\'échelle : 1K, 10K, 100K éléments',
         content:
           '**La mise à l\'échelle d\'une PKB IA locale a trois régimes : sous 1 000 éléments, tout est rapide sur n\'importe quel portable moderne ; entre 1 000 et 10 000, l\'index d\'embeddings devient un artefact réel à gérer ; au-delà de 10 000 éléments, le matériel devient le goulot d\'étranglement et la fiabilité du pipeline de capture domine les résultats.** Les valeurs réalistes ci-dessous supposent un Mac M3 Pro / PC RTX 4060 avec nomic-embed-text et Llama 3.2 3B.',
@@ -1402,7 +1405,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-05-08',
+    dateModified: '2026-08-29',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/local-llm-personal-knowledge-base-2026-overview-hero-ja.webp',
@@ -1530,7 +1533,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'チャンキング、検索、再ランク付けを完全にコントロールしたい → カスタムPython + ChromaDBスタック',
           ],
           cloudIf: [
-            'すべてのクエリでGPT-5.5クラスの推論が必要で、アーカイブが小さい → Notion AIまたはChatGPT with Custom GPTs (ローカルスタックは合成で約70%の能力)',
+            'すべてのクエリでGPT-5.6クラスの推論が必要で、アーカイブが小さい → Notion AIまたはChatGPT with Custom GPTs (ローカルスタックは合成で約70%の能力)',
             '16 GB+ RAMのマシンもホームサーバーもない → クラウドSaaS PKB (Mem、Reflect)',
             'チームに同時マルチユーザーアクセスが必要で、サービスをホストしたくない → クラウド相当',
           ],
@@ -1733,6 +1736,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       scaling: {
         id: 'scaling',
+        itemHeadings: true,
         title: 'スケーリング: 1K、10K、100Kアイテム',
         content:
           '**ローカルAI PKBのスケーリングには3つの体制があります: 1,000アイテム未満では、すべてが現代のノートPCで高速; 1,000〜10,000アイテムでは、Embeddingインデックスが管理が必要な実物のアーティファクトになる; 10,000アイテム以上では、ハードウェアがボトルネックになり、キャプチャパイプラインの信頼性が結果を支配します。** 以下の現実的な数値は、Mac M3 Pro / RTX 4060 PCでnomic-embed-textとLlama 3.2 3Bを想定しています。',
@@ -1864,7 +1868,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-05-08',
+    dateModified: '2026-08-29',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/local-llm-personal-knowledge-base-2026-overview-hero-zh.webp',
@@ -1992,7 +1996,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '您希望完全控制分块、检索和重排 → 自建 Python + ChromaDB 技术栈',
           ],
           cloudIf: [
-            '您每次查询都需要 GPT-5.5 级推理且归档很小 → Notion AI 或带自定义 GPT 的 ChatGPT (本地技术栈在合成上约有 70% 的能力)',
+            '您每次查询都需要 GPT-5.6 级推理且归档很小 → Notion AI 或带自定义 GPT 的 ChatGPT (本地技术栈在合成上约有 70% 的能力)',
             '您没有 16 GB+ 内存的机器或家庭服务器 → 云 SaaS PKB (Mem、Reflect)',
             '您的团队需要并发多用户访问且不想托管服务 → 云等价方案',
           ],
@@ -2195,6 +2199,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       scaling: {
         id: 'scaling',
+        itemHeadings: true,
         title: '扩展:1K、10K、100K 条目',
         content:
           '**扩展本地 AI PKB 有三种状态:1,000 条目以下,任何现代笔记本上一切都很快;1,000–10,000 条目,嵌入索引成为需要管理的真实工件;10,000 条目以上,硬件成为瓶颈,捕获管道可靠性主导结果。** 以下现实数字假设 Mac M3 Pro / RTX 4060 PC 配 nomic-embed-text 和 Llama 3.2 3B。',
@@ -2326,7 +2331,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   es: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-05-08',
+    dateModified: '2026-08-29',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/local-llm-personal-knowledge-base-2026-overview-hero-es.webp',
@@ -2454,7 +2459,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Quieres control total sobre el chunking, la recuperación y el re-ranking → stack personalizado Python + ChromaDB',
           ],
           cloudIf: [
-            'Necesitas razonamiento de clase GPT-5.5 en cada consulta y tu archivo es pequeño → Notion AI o ChatGPT con GPTs personalizados (el stack local es ~70% tan capaz en síntesis)',
+            'Necesitas razonamiento de clase GPT-5.6 en cada consulta y tu archivo es pequeño → Notion AI o ChatGPT con GPTs personalizados (el stack local es ~70% tan capaz en síntesis)',
             'No tienes ninguna máquina con 16 GB+ de RAM ni servidor doméstico → PKB SaaS en la nube (Mem, Reflect)',
             'Tu equipo necesita acceso concurrente multiusuario y no quieres alojar servicios → equivalente en la nube',
           ],
@@ -2657,6 +2662,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       scaling: {
         id: 'scaling',
+        itemHeadings: true,
         title: 'Escalado: 1K, 10K, 100K elementos',
         content:
           '**El escalado de una PKB con IA local tiene tres regímenes: por debajo de 1.000 elementos todo es rápido en cualquier portátil moderno; entre 1.000 y 10.000 elementos el índice de embeddings se convierte en un artefacto real que debes gestionar; a partir de 10.000 elementos el hardware se convierte en el cuello de botella y la fiabilidad del pipeline de captura domina los resultados.** Los números realistas siguientes asumen Mac M3 Pro / PC RTX 4060 con nomic-embed-text y Llama 3.2 3B.',
@@ -2801,7 +2807,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   pt: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-05-08',
+    dateModified: '2026-08-29',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/local-llm-personal-knowledge-base-2026-overview-hero-pt.webp',
@@ -2929,7 +2935,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'Você quer controle total sobre o chunking, a recuperação e o re-ranking → stack personalizado Python + ChromaDB',
           ],
           cloudIf: [
-            'Você precisa de raciocínio de classe GPT-5.5 em cada consulta e seu arquivo é pequeno → Notion AI ou ChatGPT com GPTs personalizados (o stack local é ~70% tão capaz em síntese)',
+            'Você precisa de raciocínio de classe GPT-5.6 em cada consulta e seu arquivo é pequeno → Notion AI ou ChatGPT com GPTs personalizados (o stack local é ~70% tão capaz em síntese)',
             'Você não tem nenhuma máquina com 16 GB+ de RAM nem servidor doméstico → PKB SaaS na nuvem (Mem, Reflect)',
             'Sua equipe precisa de acesso concorrente multiusuário e você não quer hospedar serviços → equivalente na nuvem',
           ],
@@ -3132,6 +3138,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       scaling: {
         id: 'scaling',
+        itemHeadings: true,
         title: 'Escalonamento: 1K, 10K, 100K elementos',
         content:
           '**O escalonamento de uma PKB com IA local tem três regimes: abaixo de 1.000 elementos tudo é rápido em qualquer notebook moderno; entre 1.000 e 10.000 elementos o índice de embeddings se torna um artefato real que você deve gerenciar; a partir de 10.000 elementos o hardware se torna o gargalo e a confiabilidade do pipeline de captura domina os resultados.** Os números realistas a seguir assumem Mac M3 Pro / PC RTX 4060 com nomic-embed-text e Llama 3.2 3B.',
@@ -3275,7 +3282,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ar: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-05-08',
+    dateModified: '2026-08-29',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/local-llm-personal-knowledge-base-2026-overview-hero-ar.webp',
@@ -3403,7 +3410,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'تريد تحكماً كاملاً في التقسيم والاسترداد وإعادة الترتيب ← حزمة Python + ChromaDB المخصصة',
           ],
           cloudIf: [
-            'تحتاج استدلالاً بمستوى GPT-5.5 في كل استعلام وأرشيفك صغير ← Notion AI أو ChatGPT مع GPTs مخصصة (الحزمة المحلية ~70% قدرة في التوليف)',
+            'تحتاج استدلالاً بمستوى GPT-5.6 في كل استعلام وأرشيفك صغير ← Notion AI أو ChatGPT مع GPTs مخصصة (الحزمة المحلية ~70% قدرة في التوليف)',
             'لا تملك أي جهاز بـ 16 جيجابايت+ من الذاكرة العشوائية ولا خادماً منزلياً ← PKB SaaS سحابي (Mem، وReflect)',
             'يحتاج فريقك وصولاً متزامناً متعدد المستخدمين ولا تريد استضافة خدمات ← المكافئ السحابي',
           ],
@@ -3606,6 +3613,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       scaling: {
         id: 'scaling',
+        itemHeadings: true,
         title: 'التوسع: 1K و10K و100K عنصر',
         content:
           '**للتوسع في PKB بالذكاء الاصطناعي المحلي ثلاثة أنظمة: دون 1,000 عنصر كل شيء سريع على أي حاسوب محمول حديث؛ بين 1,000 و10,000 عنصر يصبح فهرس التضمينات أثراً حقيقياً يجب إدارته؛ وفوق 10,000 عنصر تصبح الأجهزة عنق الزجاجة وتسود موثوقية خط أنابيب الالتقاط.** الأرقام الواقعية التالية تفترض Mac M3 Pro / PC RTX 4060 مع nomic-embed-text وLlama 3.2 3B.',
@@ -3740,7 +3748,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ar/power-local-llm/local-llm-personal-knowledge-base-2026',
       inLanguage: 'ar',
       datePublished: '2026-05-08',
-      dateModified: '2026-05-08',
+      dateModified: '2026-08-29',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',
@@ -3749,7 +3757,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ko: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-05-08',
+    dateModified: '2026-08-29',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/local-llm-personal-knowledge-base-2026-overview-hero-ko.webp',
@@ -3877,7 +3885,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '청킹, 검색, 재순위 결정에 완전한 제어를 원함 → Python + ChromaDB 커스텀 스택',
           ],
           cloudIf: [
-            '모든 쿼리에 GPT-5.5 수준 추론이 필요하고 아카이브가 작음 → Notion AI 또는 커스텀 GPT를 사용한 ChatGPT(로컬 스택은 종합에서 약 70% 수준)',
+            '모든 쿼리에 GPT-5.6 수준 추론이 필요하고 아카이브가 작음 → Notion AI 또는 커스텀 GPT를 사용한 ChatGPT(로컬 스택은 종합에서 약 70% 수준)',
             '16 GB+ RAM 또는 홈 서버가 없음 → 클라우드 PKB SaaS(Mem, Reflect)',
             '팀에 동시 다중 사용자 액세스가 필요하고 서비스를 호스팅하고 싶지 않음 → 클라우드 동급',
           ],
@@ -4080,6 +4088,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       scaling: {
         id: 'scaling',
+        itemHeadings: true,
         title: '확장: 1K, 10K, 100K 항목',
         content:
           '**로컬 AI PKB 확장에는 세 가지 체제가 있습니다: 1,000개 항목 미만에서는 모든 현대 노트북에서 모든 것이 빠릅니다; 1,000~10,000개 항목 사이에서는 임베딩 인덱스가 관리해야 할 실제 아티팩트가 됩니다; 10,000개 항목을 초과하면 하드웨어가 병목이 되고 캡처 파이프라인 신뢰성이 결과를 지배합니다.** 아래 실제 수치는 nomic-embed-text와 Llama 3.2 3B를 사용하는 Mac M3 Pro / RTX 4060 PC를 가정합니다.',
@@ -4214,7 +4223,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       url: 'https://www.promptquorum.com/ko/power-local-llm/local-llm-personal-knowledge-base-2026',
       inLanguage: 'ko',
       datePublished: '2026-05-08',
-      dateModified: '2026-05-08',
+      dateModified: '2026-08-29',
       author: { '@type': 'Person', name: 'Hans Kuepper', sameAs: 'https://www.linkedin.com/in/hanskuepper/' },
       publisher: { '@type': 'Organization', name: 'PromptQuorum', url: 'https://www.promptquorum.com' },
       'proficiencyLevel': 'Intermediate',

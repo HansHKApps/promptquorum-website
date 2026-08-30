@@ -1,6 +1,6 @@
 // Power Local LLM — Logseq and Joplin With Local LLMs: Smart Notes Without Cloud Sync (2026)
 // Slug: local-llm-with-logseq-and-joplin
-// EN + DE + FR + JA + ZH (all five languages translated).
+// All 9 languages (en/de/fr/ja/zh/es/pt/ar/ko) are fully translated.
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
@@ -9,16 +9,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-07-14',
+    dateModified: '2026-08-30',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
     heroImage: '/images/local-llm-with-logseq-and-joplin-overview-hero-en.webp',
     title: 'Logseq and Joplin With Local LLMs: Smart Notes Without Cloud Sync (2026)',
-    seoTitle: 'Logseq + Ollama Local LLM: RAG, Sync & Joplin (2026)',
+    seoTitle: 'Logseq LLM vs Joplin LLM: Local AI Setup Guide 2026',
     intro:
       '[Logseq](https://logseq.com) and [Joplin](https://joplinapp.org) are the two open-source notes apps in 2026 that pair cleanly with a local LLM and never need a cloud round-trip. Logseq runs the logseq-copilot plugin against [Ollama](https://ollama.com) for outliner-native chat and daily-journal AI; Joplin runs the Jarvis plugin against Ollama for note-aware chat, summaries, and embedding-backed retrieval — the closer of the two to a true local RAG knowledge base. Both are GDPR-friendlier than Notion AI by default architecture — Notion sends note content to OpenAI; Logseq and Joplin send nothing unless you wire it up that way. The catch in 2026 is mobile: neither Logseq nor Joplin supports plugins on iOS or Android, so AI features run only on desktop. This guide ranks both tools on Ollama plugin setup, RAG/embedding support, sync-without-cloud paths (including iOS/cloud sync options), mobile compatibility, how each stacks up against Obsidian, and the migration path from Notion.',
     metaDescription:
-      'Logseq + Ollama local LLM guide: logseq-copilot plugin, RAG limits vs Joplin + Jarvis, cloud-free sync, and how each compares to Obsidian. 2026.',
+      'Logseq LLM (logseq-copilot) vs Joplin LLM (Jarvis) with Ollama: RAG support, cloud-free sync, mobile gaps, and Notion AI migration compared. 2026.',
     twitterDescription:
       'Open-source notes + local AI without cloud: Logseq (Ollama, no RAG) vs Joplin + Jarvis (RAG-backed knowledge base). Sync, mobile gap, Notion migration. 2026.',
     current_models_mentioned: [
@@ -159,6 +159,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       comparisonTable: {
         id: 'comparison-table',
+        itemHeadings: true,
         title: 'Tool Comparison Table',
         content:
           '**The four axes that matter most: AI plugin depth, sync without cloud, mobile plugin support, and best-fit workflow.** Obsidian is included as a reference — readers comparing all three should also read the dedicated Obsidian guide linked at the end.',
@@ -590,6 +591,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       comparisonTable: {
         id: 'comparison-table',
+        itemHeadings: true,
         title: 'Tabla comparativa de herramientas',
         content:
           '**Los cuatro ejes que más importan: profundidad de plugins de IA, sync sin nube, soporte de plugins móviles y flujo de trabajo más adecuado.** Obsidian se incluye como referencia — los lectores que comparan las tres herramientas también deberían leer la guía dedicada de Obsidian enlazada al final.',
@@ -1035,6 +1037,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       comparisonTable: {
         id: 'comparison-table',
+        itemHeadings: true,
         title: 'Tabela comparativa de ferramentas',
         content:
           '**Os quatro eixos que mais importam: profundidade dos plugins de IA, sync sem nuvem, suporte a plugins móveis e fluxo de trabalho mais adequado.** O Obsidian é incluído como referência — os leitores que comparam as três ferramentas também deveriam ler o guia dedicado do Obsidian vinculado no final.',
@@ -1479,6 +1482,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       comparisonTable: {
         id: 'comparison-table',
+        itemHeadings: true,
         title: 'Tool-Vergleichstabelle',
         content:
           '**Die vier wichtigsten Achsen: Tiefe der KI-Plugins, Synchronisierung ohne Cloud, mobile Plugin-Unterstützung und idealer Workflow.** Obsidian ist als Referenz enthalten — Leser, die alle drei vergleichen, sollten auch den dedizierten Obsidian-Leitfaden am Ende lesen.',
@@ -1918,6 +1922,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       comparisonTable: {
         id: 'comparison-table',
+        itemHeadings: true,
         title: 'Tableau comparatif des outils',
         content:
           '**Les quatre axes qui comptent le plus : profondeur des plugins IA, sync sans cloud, prise en charge des plugins mobiles et workflow le mieux adapté.** Obsidian est inclus comme référence — les lecteurs comparant les trois devraient également lire le guide Obsidian dédié lié à la fin.',
@@ -2349,6 +2354,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       comparisonTable: {
         id: 'comparison-table',
+        itemHeadings: true,
         title: 'ツール比較表',
         content:
           '**最も重要な4軸：AI プラグインの深さ、クラウドなし同期、モバイルプラグインサポート、最適ワークフロー。** Obsidian は参照として含まれます — 3つすべてを比較する読者は、末尾でリンクされる Obsidian の専用ガイドも読むべきです。',
@@ -2782,6 +2788,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       comparisonTable: {
         id: 'comparison-table',
+        itemHeadings: true,
         title: '工具对比表',
         content:
           '**最重要的四个维度：AI 插件深度、无云同步、移动端插件支持、最佳工作流。** Obsidian 作为参照纳入——比较三款的读者也应阅读文末链接的 Obsidian 专属指南。',
@@ -3214,6 +3221,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       comparisonTable: {
         id: 'comparison-table',
+        itemHeadings: true,
         title: 'جدول مقارنة الأدوات',
         content:
           '**المحاور الأربعة الأكثر أهمية: عمق ملحقات الذكاء الاصطناعي، المزامنة بدون سحابة، دعم ملحقات الجوّال، وسير العمل الأنسب.** Obsidian مُدرج كمرجع — القراء الذين يقارنون الأدوات الثلاث يجب أن يقرأوا أيضاً الدليل المخصص لـ Obsidian المرتبط في النهاية.',
@@ -3657,6 +3665,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       comparisonTable: {
         id: 'comparison-table',
+        itemHeadings: true,
         title: '도구 비교표',
         content:
           '**가장 중요한 네 가지 축: AI 플러그인 깊이, 클라우드 없는 동기화, 모바일 플러그인 지원, 가장 적합한 워크플로우.** Obsidian은 참조용으로 포함됩니다. 세 가지 도구를 비교하는 독자는 맨 아래에 링크된 Obsidian 전용 가이드도 읽어야 합니다.',

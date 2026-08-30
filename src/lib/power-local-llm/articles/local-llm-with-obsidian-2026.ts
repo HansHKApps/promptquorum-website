@@ -1,6 +1,6 @@
 // Power Local LLM — Obsidian + Local LLM: 5 Plugins That Turn Your Vault Into a Second Brain
 // Slug: local-llm-with-obsidian-2026
-// EN-only in this iteration; DE/FR/JA/ZH render as "Coming Soon" via the article page.
+// All 9 languages (en/de/fr/ja/zh/es/pt/ar/ko) have full content.
 
 import type { Language } from '@/lib/blog/blogContent'
 import type { LLMArticle } from '@/lib/local-llms/types'
@@ -9,15 +9,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   en: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-08',
-    dateModified: '2026-05-08',
+    dateModified: '2026-08-30',
     next_refresh_due: '2026-11-08',
     theme: 'Productivity & Knowledge Tools',
     title: 'Obsidian + Ollama: 5 Local LLM Plugins for Your Vault (2026)',
-    seoTitle: 'Best Obsidian Plugins for Local LLM with Ollama 2026',
+    seoTitle: 'Best Local LLM for Obsidian: 5 Plugins Compared 2026',
     intro:
-      'Five Obsidian plugins turn a vault into a working second brain when paired with a local Ollama backend in 2026: Smart Connections, Copilot for Obsidian, Text Generator, Local GPT, and BMO Chatbot. Each covers a different layer — semantic search, inline chat, template generation, privacy-first conversation, lightweight context-aware chat. The recommended combination for most users is Smart Connections + Copilot for Obsidian: one handles vault-wide semantic linking, the other handles the chat interface. This guide ranks all five on vault search quality, generation speed, prompt customisation, and mobile-sync behaviour, with concrete configuration steps for Ollama.',
+      'The best local LLM for Obsidian in 2026 is Llama 3.2 3B or Phi-4 Mini, run through Ollama and connected via Smart Connections and Copilot for Obsidian. Five Obsidian plugins turn a vault into a working second brain when paired with a local Ollama backend: Smart Connections, Copilot for Obsidian, Text Generator, Local GPT, and BMO Chatbot. Each covers a different layer — semantic search, inline chat, template generation, privacy-first conversation, lightweight context-aware chat. The recommended combination for most users is Smart Connections + Copilot for Obsidian: one handles vault-wide semantic linking, the other handles the chat interface. This guide ranks all five on vault search quality, generation speed, prompt customisation, and mobile-sync behaviour, with concrete configuration steps and model picks for Ollama.',
     metaDescription:
-      'Best Obsidian plugins for local LLM with Ollama in 2026: Smart Connections, Copilot, Text Generator, Local GPT, BMO Chatbot — tested and compared.',
+      'Best local LLM for Obsidian in 2026: Llama 3.2 3B and Phi-4 Mini via Ollama, paired with Smart Connections, Copilot, and Text Generator — tested and compared.',
     heroImage: '/images/local-llm-with-obsidian-2026-plugin-comparison-hero-en.webp',
     twitterDescription:
       'Best Obsidian plugins for local LLM with Ollama in 2026: Smart Connections (semantic vault search) + Copilot for Obsidian (chat). All 5 plugins tested. Mobile sync caveats.',
@@ -358,6 +358,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       vaultScale: {
         id: 'vault-scale',
+        itemHeadings: true,
         title: 'Vault Scale: 1K, 5K, 10K, 20K Notes',
         content:
           '**All five plugins remain responsive at 5,000+ notes; the bottleneck above 20K notes is Smart Connections re-indexing time, not query latency.** Realistic numbers below are measured on Mac M3 Pro (16 GB unified memory) with `nomic-embed-text` embeddings and Llama 3.2 3B chat.',
@@ -402,6 +403,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
+          {
+            q: 'What is the best local LLM for Obsidian?',
+            a: 'Llama 3.2 3B is the best general-purpose local LLM for Obsidian on 16 GB RAM systems, run through Ollama and connected via Copilot for Obsidian or Text Generator. Phi-4 Mini is a strong alternative if you want a smaller, faster model with similar reasoning quality. For embeddings (used by Smart Connections for vault-wide semantic search), pair either chat model with nomic-embed-text (faster) or mxbai-embed-large (more accurate). On 8 GB RAM systems, use Qwen3 1.7B for chat instead. None of these models need a GPU — all run acceptably on CPU-only Mac M-series or a mid-range PC.',
+          },
           {
             q: 'Which Obsidian plugin works best with Ollama?',
             a: 'For most users: Smart Connections (semantic vault search) + Copilot for Obsidian (chat). Both are configured to point at Ollama\'s endpoints (chat at `http://localhost:11434/v1`, embeddings at `http://localhost:11434/api/embeddings`). Smart Connections handles related-notes discovery; Copilot handles conversational queries with vault context. Add Text Generator as a third plugin if you have repeatable template workflows.',
@@ -810,6 +815,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       vaultScale: {
         id: 'vault-scale',
+        itemHeadings: true,
         title: 'Vault-Größe: 1K, 5K, 10K, 20K Notizen',
         content:
           '**Alle fünf Plugins bleiben bei über 5.000 Notizen reaktionsschnell; der Engpass jenseits von 20K Notizen ist die Re-Indizierungszeit von Smart Connections, nicht die Abfrage-Latenz.** Realistische Werte unten gemessen auf Mac M3 Pro (16 GB Unified Memory) mit `nomic-embed-text`-Embeddings und Llama 3.2 3B als Chat.',
@@ -1262,6 +1268,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       vaultScale: {
         id: 'vault-scale',
+        itemHeadings: true,
         title: 'Taille du Vault : 1K, 5K, 10K, 20K Notes',
         content:
           '**Tous les cinq plugins restent réactifs à 5 000+ notes ; le goulot d\'étranglement au-delà de 20K notes est le temps de réindexation de Smart Connections, pas la latence de requête.** Les nombres réalistes ci-dessous sont mesurés sur Mac M3 Pro (16 GB mémoire unifiée) avec embeddings `nomic-embed-text` et Llama 3.2 3B chat.',
@@ -1714,6 +1721,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       vaultScale: {
         id: 'vault-scale',
+        itemHeadings: true,
         title: 'ボルトスケール: 1K、5K、10K、20Kノート',
         content:
           '**すべての5つのプラグインは5,000以上のノートで応答性を保ちます; 20Kノートを超えるボトルネックはSmart Connections再インデックス時間で、クエリレイテンシーではありません。** 下の現実的な数字はMac M3 Pro (16GB統一メモリ)、`nomic-embed-text` エンベディング、Llama 3.2 3Bチャットで測定されました。',
@@ -2166,6 +2174,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       vaultScale: {
         id: 'vault-scale',
+        itemHeadings: true,
         title: '库规模：1K、5K、10K、20K 笔记',
         content:
           '**所有五个插件在 5000+ 笔记处保持响应；20K 笔记以上的瓶颈是 Smart Connections 重新索引时间，而不是查询延迟。** 下面的现实数字是在 Mac M3 Pro（16GB 统一内存）上用 `nomic-embed-text` 嵌入和 Llama 3.2 3B 聊天测量的。',
@@ -2618,6 +2627,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       vaultScale: {
         id: 'vault-scale',
+        itemHeadings: true,
         title: 'Escala del vault: 1K, 5K, 10K, 20K notas',
         content:
           '**Los cinco plugins permanecen responsivos con 5.000+ notas; el cuello de botella por encima de 20K notas es el tiempo de reindexación de Smart Connections, no la latencia de consulta.** Los números realistas a continuación se miden en Mac M3 Pro (16 GB de memoria unificada) con embeddings `nomic-embed-text` y chat Llama 3.2 3B.',
@@ -3101,6 +3111,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       vaultScale: {
         id: 'vault-scale',
+        itemHeadings: true,
         title: 'Escala do vault: 1K, 5K, 10K, 20K notas',
         content:
           '**Os cinco plugins permanecem responsivos com 5.000+ notas; o gargalo acima de 20K notas é o tempo de reindexação do Smart Connections, não a latência de consulta.** Os números realistas abaixo são medidos em um Mac M3 Pro (16 GB de memória unificada) com embeddings `nomic-embed-text` e chat Llama 3.2 3B.',
@@ -3566,6 +3577,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       vaultScale: {
         id: 'vault-scale',
+        itemHeadings: true,
         title: 'حجم المخزن: 1K و5K و10K و20K ملاحظة',
         content:
           '**تبقى الملحقات الخمسة مستجيبة مع 5,000+ ملاحظة؛ الاختناق فوق 20K ملاحظة هو وقت إعادة فهرسة Smart Connections، وليس زمن استجابة الاستعلام.** الأرقام الواقعية أدناه مقاسة على Mac M3 Pro (ذاكرة موحّدة 16 غيغابايت) مع تضمينات `nomic-embed-text` ودردشة Llama 3.2 3B.',
@@ -4031,6 +4043,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       vaultScale: {
         id: 'vault-scale',
+        itemHeadings: true,
         title: '보관함 규모: 1K, 5K, 10K, 20K 노트',
         content:
           '**5가지 플러그인 모두 5,000개 이상의 노트에서 반응적으로 유지됩니다. 20K 노트 이상에서 병목은 쿼리 지연이 아니라 Smart Connections 재인덱싱 시간입니다.** 아래의 현실적인 수치는 `nomic-embed-text` 임베딩과 Llama 3.2 3B 채팅을 사용하는 Mac M3 Pro(통합 메모리 16GB)에서 측정되었습니다.',

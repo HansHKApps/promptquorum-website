@@ -246,6 +246,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       tools: {
         id: 'tools',
+        itemHeadings: true,
         title: 'Tool Integrations for Writers',
         content:
           '**Ollama exposes an OpenAI-compatible API at localhost that a growing ecosystem of writer-facing tools connects to.** The integrations below represent the most established options as of 2026.',
@@ -269,6 +270,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       models: {
         id: 'models',
+        itemHeadings: true,
         title: 'Model Recommendations for Long-Form Work',
         content:
           '**Long-form drafting has different model requirements than short-form fiction.** Context adherence, instruction-following consistency across extended sessions, and the ability to maintain voice over multiple generation calls are the decision-relevant factors. For the broader model landscape across all use cases, see [Best Local LLMs in 2026](/local-llms/best-local-llms-2026).',
@@ -610,6 +612,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       tools: {
         id: 'tools',
+        itemHeadings: true,
         title: 'Integraciones de herramientas para escritores',
         content:
           '**Ollama expone una API compatible con OpenAI en localhost a la que se conecta un ecosistema creciente de herramientas orientadas a escritores.** Las integraciones a continuación representan las opciones más consolidadas a partir de 2026.',
@@ -633,6 +636,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       models: {
         id: 'models',
+        itemHeadings: true,
         title: 'Recomendaciones de modelos para trabajos de formato largo',
         content:
           '**La redacción de formato largo tiene requisitos de modelo diferentes a los de la ficción de formato corto.** La adherencia al contexto, la consistencia en el seguimiento de instrucciones a lo largo de sesiones extensas y la capacidad de mantener la voz en múltiples llamadas de generación son los factores decisivos. Para el panorama más amplio de modelos en todos los casos de uso, consulta [Mejores LLMs locales en 2026](/es/local-llms/best-local-llms-2026).',
@@ -988,6 +992,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       tools: {
         id: 'tools',
+        itemHeadings: true,
         title: 'Tool-Integrationen für Autoren',
         content:
           '**Ollama stellt eine OpenAI-kompatible API auf localhost bereit, mit der eine wachsende Zahl von autorenseitigen Tools verbindet.** Die folgenden Integrationen stellen die etabliertesten Optionen dar.',
@@ -1011,6 +1016,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       models: {
         id: 'models',
+        itemHeadings: true,
         title: 'Modellempfehlungen für Langformarbeiten',
         content:
           '**Langform-Drafting hat andere Modellanforderungen als Kurzformfiktion.** Kontextadhärenz, konsistente Instruktionsbefolgung und die Fähigkeit, die Stimme über mehrere Generierungsaufrufe beizubehalten, sind die entscheidenden Faktoren. Für das breitere Modellspektrum über alle Anwendungsfälle, siehe [Beste lokale LLMs 2026](/de/local-llms/best-local-llms-2026).',
@@ -1356,6 +1362,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       tools: {
         id: 'tools',
+        itemHeadings: true,
         title: 'Intégrations d\'outils pour les auteurs',
         content:
           '**Ollama expose une API compatible OpenAI sur localhost qu\'un écosystème croissant d\'outils orientés auteurs connecte.** Les intégrations ci-dessous représentent les options les plus établies.',
@@ -1379,6 +1386,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       models: {
         id: 'models',
+        itemHeadings: true,
         title: 'Recommandations de modèles pour le long format',
         content:
           '**Le long format a des exigences différentes de la fiction courte.** L\'adhérence au contexte, la cohérence du suivi des instructions sur des sessions longues et la capacité à maintenir la voix sur plusieurs appels de génération sont les facteurs décisifs. Pour le panorama complet des modèles, voir [Meilleurs LLM locaux en 2026](/fr/local-llms/best-local-llms-2026).',
@@ -1487,15 +1495,15 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   ja: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-07-13',
+    dateModified: '2026-08-29',
     theme: 'Creative & Roleplay',
     heroImage: '/images/local-llm-screenwriting-and-novel-drafting-overview-hero-ja.webp',
     title: 'ローカルLLMで小説・脚本を執筆する：10万語以上のワークフロー完全ガイド',
-    seoTitle: 'ローカルLLMで小説・脚本を執筆する：長編ワークフロー完全ガイド',
+    seoTitle: '小説執筆におすすめのローカルLLMモデルと長編ワークフロー',
     intro:
-      'ローカルLLMを小説・脚本のワークフローに統合することで、シーン草稿・ビートシート・ダイアログパス・リビジョンをインターネット接続なし、クラウドロギングなし、利用制限なしで実行できます。本ガイドでは完全なワークフローを解説します：モデル選択、長編作業のためのコンテキストウィンドウ管理、章の足場構築、シーン生成、そしてローカルLLMをライティングソフトウェアと連携させるツール。',
+      'ローカルLLMを小説・脚本のワークフローに統合することで、シーン草稿・ビートシート・ダイアログパス・リビジョンをインターネット接続なし、クラウドロギングなし、利用制限なしで実行できます。本ガイドでは完全なワークフローを解説します：タスク別のおすすめモデル、長編作業のためのコンテキストウィンドウ管理、章の足場構築、シーン生成、そしてローカルLLMをライティングソフトウェアと連携させるツール。',
     metaDescription:
-      'ローカルLLMを使った小説・脚本執筆の完全ワークフロー：モデル選択、コンテキスト管理、章構造、シーン生成、ツール統合を徹底解説。',
+      '小説執筆におすすめのローカルLLMモデルを用途別に比較（Llama 3.3 70B、Qwen3 32Bほか）。コンテキスト管理・章構造・シーン生成・ツール統合も解説。',
     twitterDescription:
       'ローカルLLMで小説・脚本を書く方法：コンテキストウィンドウ管理、章構造、シーン生成、ダイアログパス、ツール統合。',
     current_models_mentioned: [
@@ -1724,6 +1732,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       tools: {
         id: 'tools',
+        itemHeadings: true,
         title: 'ライター向けツール統合',
         content:
           '**OllamaはローカルホストでOpenAI互換APIを公開しており、成長しているライター向けツールのエコシステムが接続しています。** 以下の統合は最も確立されたオプションを示します。',
@@ -1747,6 +1756,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       models: {
         id: 'models',
+        itemHeadings: true,
         title: '長編作業のモデル推薦',
         content:
           '**長編執筆には短編フィクションとは異なるモデル要件があります。** コンテキスト遵守性、長いセッションにわたる命令追随の一貫性、複数の生成呼び出しにわたって声を維持する能力が意思決定に関連する要素です。すべてのユースケースにわたるモデル景観については、[ローカルLLMベスト2026](/ja/local-llms/best-local-llms-2026)を参照。',
@@ -1786,6 +1796,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: 'よくある質問',
         faqs: [
+          {
+            q: '小説執筆に最もおすすめのローカルLLMモデルは？',
+            a: '用途によって最適なモデルは異なります。長編小説の執筆（メインの生成タスク）にはLlama 3.3 70Bが最良の選択です——マルチセッションにわたるコンテキスト遵守性と命令追随が最も一貫しています。ビートシートやアウトラインの生成にはQwen3 32Bが構造的な制約に確実に従います。ダイアログパスにはCommand A+が自然な話し言葉レジスターとキャラクターごとの声の差別化に優れます。脚本のFountain形式出力にはMistral Largeが一貫したフォーマット遵守を示します。成熟した/暗いフィクションには、Llama 3.3 70Bと同じベースでアンセンサードファインチューンのHermes 3 Llama 3.3 70Bが、同一のワークフローとコンテキスト遵守性のまま使えます。迷ったらLlama 3.3 70Bから始め、特定のタスク（アウトラインやダイアログ）で物足りなさを感じたら該当タスク用のモデルに切り替えるのが実用的です。',
+          },
           {
             q: 'ローカルLLMは完全な小説を書けますか？',
             a: 'ローカルLLMは完全な小説の散文を生成できます——しかし構造的・編集的な知性はライターから来なければなりません。モデルは特定のセットアップでプロンプトされたときにシーンを生成します；自律的に計画、評価、テーマ的な決定を行いません。ローカルLLMを執筆ツールとして使うライターは「すでに書き方を知っているシーンのための非常に高速な初稿生成器」と説明します。',
@@ -1855,7 +1869,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
   zh: {
     freshness_tier: 'semi_annual',
     publishDate: '2026-05-07',
-    dateModified: '2026-07-13',
+    dateModified: '2026-08-29',
     theme: 'Creative & Roleplay',
     heroImage: '/images/local-llm-screenwriting-and-novel-drafting-overview-hero-zh.webp',
     title: '使用本地LLM创作小说与剧本：10万字以上工作流完整指南',
@@ -2092,6 +2106,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       tools: {
         id: 'tools',
+        itemHeadings: true,
         title: '作者工具集成',
         content:
           '**Ollama在本地主机上暴露一个OpenAI兼容API，越来越多的面向作者的工具生态系统与之连接。** 以下集成代表截至目前最成熟的选项。',
@@ -2115,6 +2130,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       models: {
         id: 'models',
+        itemHeadings: true,
         title: '长篇写作模型推荐',
         content:
           '**长篇写作与短篇小说的模型要求不同。** 上下文遵循性、跨长会话的指令跟随一致性，以及跨多次生成调用维持声音的能力，是决策相关因素。关于所有使用场景的更广泛模型概览，参见[本地LLM最佳选择2026](/zh/local-llms/best-local-llms-2026)。',
@@ -2154,6 +2170,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: '常见问题',
         faqs: [
+          {
+            q: '如何让本地LLM生成小说的下一章内容？',
+            a: '不要直接要求模型"继续写下一章"——超过32K token后模型会开始漂移，生成的内容会逐渐偏离已建立的情节和人物声音。正确做法是使用会话文档技术：在提示中提供压缩的角色卡（姓名、主导特质、说话方式）、已完成章节的情节摘要（每章100-200字），以及新章节的具体设定（场景、视角、目标字数），然后要求模型只生成这一章/一个场景，而不是延续整份不断增长的文档。每次生成一章后，将该章的摘要追加到会话文档中，供下一次生成使用。',
+          },
           {
             q: '本地LLM可以写一整部小说吗？',
             a: '本地LLM可以生成完整小说的散文——但结构性和编辑性智识必须来自作者。模型在给定具体设置时生成场景；它不会自主地计划、评估或做出主题决策。将本地LLM用作写作工具的作者将其描述为"我已经知道如何写的场景的非常快速的初稿生成器"。模型节省了空白页面问题的时间；作者仍然做出每一个重大决定。',
@@ -2460,6 +2480,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       tools: {
         id: 'tools',
+        itemHeadings: true,
         title: 'Integrações de ferramentas para escritores',
         content:
           '**O Ollama expõe uma API compatível com OpenAI em localhost à qual se conecta um ecossistema crescente de ferramentas voltadas para escritores.** As integrações abaixo representam as opções mais consolidadas a partir de 2026.',
@@ -2483,6 +2504,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       models: {
         id: 'models',
+        itemHeadings: true,
         title: 'Recomendações de modelos para trabalhos de formato longo',
         content:
           '**A redação de formato longo tem requisitos de modelo diferentes dos da ficção de formato curto.** A aderência ao contexto, a consistência no seguimento de instruções ao longo de sessões extensas e a capacidade de manter a voz em múltiplas chamadas de geração são os fatores decisivos. Para o panorama mais amplo de modelos em todos os casos de uso, consulte [Melhores LLMs locais em 2026](/pt/local-llms/best-local-llms-2026).',
@@ -2837,6 +2859,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       tools: {
         id: 'tools',
+        itemHeadings: true,
         title: 'تكاملات الأدوات للكتّاب',
         content:
           '**يعرض Ollama واجهة API متوافقة مع OpenAI على localhost تتصل بها مجموعة متنامية من الأدوات الموجهة للكتّاب.** التكاملات أدناه تمثل الخيارات الأكثر رسوخاً.',
@@ -2860,6 +2883,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       models: {
         id: 'models',
+        itemHeadings: true,
         title: 'توصيات النماذج للأعمال الطويلة',
         content:
           '**للكتابة الطويلة متطلبات نماذج مختلفة عن الخيال القصير.** الالتزام بالسياق والاتساق في اتباع التعليمات عبر جلسات ممتدة والقدرة على الحفاظ على الصوت عبر استدعاءات توليد متعددة هي العوامل الحاسمة. للاطلاع على المشهد الأوسع للنماذج عبر جميع حالات الاستخدام، انظر [أفضل النماذج اللغوية المحلية في 2026](/ar/local-llms/best-local-llms-2026).',
@@ -3214,6 +3238,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       tools: {
         id: 'tools',
+        itemHeadings: true,
         title: '작가를 위한 도구 통합',
         content:
           '**Ollama는 로컬호스트에서 OpenAI 호환 API를 노출하며, 점점 더 많은 작가 지향 도구들이 이에 연결됩니다.** 아래 통합은 2026년 기준 가장 확립된 옵션을 나타냅니다.',
@@ -3237,6 +3262,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       models: {
         id: 'models',
+        itemHeadings: true,
         title: '장문 작업을 위한 모델 추천',
         content:
           '**장문 집필은 단편 소설과 다른 모델 요구 사항을 가집니다.** 컨텍스트 준수, 긴 세션에 걸친 일관된 지시 따르기, 여러 생성 호출에 걸쳐 목소리를 유지하는 능력이 결정적 요소입니다. 모든 사용 사례에 걸친 더 넓은 모델 환경에 대해서는 [2026년 최고의 로컬 LLM](/ko/local-llms/best-local-llms-2026)을 참조하십시오.',
