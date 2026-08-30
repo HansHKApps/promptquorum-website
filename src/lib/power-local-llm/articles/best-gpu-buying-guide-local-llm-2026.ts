@@ -4,7 +4,7 @@
 // tags joined yet) and a neutral third-party-link notice. EN block first;
 // DE/FR/JA/ZH render as "Coming Soon" until translated.
 //
-// Prices: July 2026 snapshot. GPU prices surged in 2026 on a memory shortage —
+// Prices: snapshot. GPU prices surged in 2026 on a memory shortage —
 // cards run 1.5-2x above original MSRP. Figures sourced from Best Value GPU,
 // Newegg, geizhals.de, LDLC, and kakaku.com.
 
@@ -21,7 +21,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Best GPUs for Local LLMs: Complete Buying Guide 2026',
     seoTitle: 'Best GPU for Local LLMs 2026: Budget to RTX 5090 Guide',
     intro:
-      'Most local-LLM GPU advice optimizes for the wrong number. Speed in tokens per second decides how fast a model answers, but VRAM decides whether the model runs at all — and a model that does not fit is infinitely slower than one that does. This guide compares eight consumer GPUs across four price tiers on the figures that actually bind a purchase: VRAM capacity, measured inference speed, power draw, and price. One caveat on price: GPU prices surged in 2026 on a memory shortage, and cards now sell 1.5-2x above original MSRP — every price here is a July 2026 snapshot, so confirm current pricing before you buy.',
+      'Most local-LLM GPU advice optimizes for the wrong number. Speed in tokens per second decides how fast a model answers, but VRAM decides whether the model runs at all — and a model that does not fit is infinitely slower than one that does. This guide compares eight consumer GPUs across four price tiers on the figures that actually bind a purchase: VRAM capacity, measured inference speed, power draw, and price. One caveat on price: GPU prices surged in 2026 on a memory shortage, and cards now sell 1.5-2x above original MSRP — every price here is a snapshot, so confirm current pricing before you buy.',
     metaDescription:
       'Eight GPUs compared for local LLMs across four budgets: RTX 3060 to RTX 5090. VRAM, tokens/sec, power draw, and current prices — with the model size each tier runs.',
     heroImage: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-en.webp',
@@ -98,7 +98,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '**VRAM is the binding constraint.** A model that does not fit in VRAM either fails to load or spills to system RAM and becomes too slow for interactive use. Choose the tier whose VRAM fits your target model, then optimize for speed within that tier.',
-          '**Prices surged in 2026.** A memory shortage pushed GPU prices 1.5-2x above MSRP across every market — an RTX 5090 is ~$3,949, not its $1,999 launch price. Treat every price here as a July 2026 snapshot and lean on the used market.',
+          '**Prices surged in 2026.** A memory shortage pushed GPU prices 1.5-2x above MSRP across every market — an RTX 5090 is ~$3,949, not its $1,999 launch price. Treat every price here as a snapshot and lean on the used market.',
           '**Budget pick: NVIDIA RTX 3060 12 GB** ($150-220 used, $350-680 new) — runs every 7B model at 15-20 tok/s and most 13B models at Q4. The best value entry point for local LLMs in 2026.',
           '**Mid pick: NVIDIA RTX 4060 Ti 16 GB** (~$424 new, $290 used) — 16 GB of VRAM clears 14B models with context headroom, and it is the GPU closest to its MSRP, so the surge hit it least.',
           '**High pick: NVIDIA RTX 4080 Super 16 GB** (~$1,100-1,200) — the fastest 16 GB card, and after 2026 price moves it costs about the same as the slower RTX 4070 Ti Super ($1,179).',
@@ -153,7 +153,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'How the Eight GPUs Compare for Local LLMs in 2026',
         content:
-          'VRAM and power figures are manufacturer specifications. Inference speeds for the RTX 3060, RTX 4080 Super, RTX 4090, and RTX 5090 are measured 7B Q4 figures from PromptQuorum hardware testing; figures for the RTX 4060 Ti 16 GB, RX 7800 XT, and RTX 4070 Ti Super are family-level estimates. Prices are a July 2026 US snapshot — the 2026 memory shortage pushed them 1.5-2x above MSRP, so re-check before buying.',
+          'VRAM and power figures are manufacturer specifications. Inference speeds for the RTX 3060, RTX 4080 Super, RTX 4090, and RTX 5090 are measured 7B Q4 figures from PromptQuorum hardware testing; figures for the RTX 4060 Ti 16 GB, RX 7800 XT, and RTX 4070 Ti Super are family-level estimates. Prices are a US snapshot — the 2026 memory shortage pushed them 1.5-2x above MSRP, so re-check before buying.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -422,7 +422,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**GPU prices rose sharply in 2026 because of a memory shortage, pushing consumer cards 1.5-2x above their original MSRP.** This changes the buying math, so plan around it rather than around launch prices.',
         items: [
           '**The cause is memory, not GPUs.** A GDDR and HBM supply shortage raised the cost of every card with fast memory — and LLM-capable GPUs are exactly the high-VRAM cards affected most.',
-          '**The RTX 5090 is the clearest example:** a $1,999 launch price, but ~$3,949 in retail by July 2026 — nearly double.',
+          '**The RTX 5090 is the clearest example:** a $1,999 launch price, but ~$3,949 in retail — nearly double.',
           '**Lower-end cards held up better.** The RTX 4060 Ti 16 GB sits near its $399 MSRP; the surge scales with how much fast memory a card carries.',
           '**The used market is now the value play.** A used RTX 3060 12 GB or RX 6700 XT escapes most of the surge — used pricing rose far less than new.',
           '**Decision:** if you can wait, watch for the shortage to ease; if you cannot, buy used where possible and buy the smallest card that fits your target model.',
@@ -478,7 +478,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'Because of the 2026 surge, every dollar figure in this guide is a fast-moving July 2026 snapshot. Always open the current retailer listing before buying — prices have moved week to week.',
+            text: 'Because of the 2026 surge, every dollar figure in this guide is a fast-moving snapshot. Always open the current retailer listing before buying — prices have moved week to week.',
           },
         ],
         affiliateLinks: [
@@ -534,7 +534,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[NVIDIA GeForce RTX 40 Series Specifications](https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/) — Official VRAM capacity and power (TGP) figures for the RTX 4060 Ti, 4070 Ti Super, 4080 Super, and 4090.',
           '[NVIDIA GeForce RTX 5090 Specifications](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/) — Official 32 GB GDDR7 VRAM and 575 W power figures for the RTX 5090.',
-          '[Best Value GPU — RTX 5090 / 4090 / 4080 Super price trackers](https://bestvaluegpu.com/history/new-and-used-rtx-5090-price-history-and-specs/) — US new and used price history used for the July 2026 price snapshot.',
+          '[Best Value GPU — RTX 5090 / 4090 / 4080 Super price trackers](https://bestvaluegpu.com/history/new-and-used-rtx-5090-price-history-and-specs/) — US new and used price history used for the price snapshot.',
           '[AMD Radeon Specifications](https://www.amd.com/en/products/graphics/desktops/radeon.html) — Official VRAM and power figures for the RX 7800 XT and RX 6700 XT.',
           '[Best GPUs for Local LLMs 2026](/local-llms/best-gpus-for-local-llms) — PromptQuorum hardware testing: measured 7B Q4 inference speeds for the RTX 3060, 4080, 4090, and 5090.',
         ],
@@ -549,7 +549,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Why are GPU prices so high in 2026?',
-            a: 'A memory-chip shortage drove the 2026 GPU price surge. GDDR and HBM supply tightened, raising the cost of every graphics card with fast memory, and high-VRAM LLM-capable cards were hit hardest. By July 2026 most cards sell 1.5-2x above their original MSRP — an RTX 5090 launched at $1,999 but retails near $3,950. The used market escaped most of the increase.',
+            a: 'A memory-chip shortage drove the 2026 GPU price surge. GDDR and HBM supply tightened, raising the cost of every graphics card with fast memory, and high-VRAM LLM-capable cards were hit hardest. Most cards now sell 1.5-2x above their original MSRP — an RTX 5090 launched at $1,999 but retails near $3,950. The used market escaped most of the increase.',
           },
           {
             q: 'How much VRAM do I need for local LLMs?',
@@ -607,7 +607,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Beste GPUs für lokale LLMs: Kaufberatung 2026',
     seoTitle: 'Beste GPU für lokale LLMs 2026: Kaufberatung & Vergleich',
     intro:
-      'Die meisten GPU-Empfehlungen für lokale LLMs optimieren die falsche Kennzahl. Das Tempo in Token pro Sekunde entscheidet, wie schnell ein Modell antwortet — der VRAM entscheidet jedoch, ob das Modell überhaupt läuft. Ein Modell, das nicht in den Speicher passt, ist unendlich langsamer als eines, das passt. Dieser Leitfaden vergleicht acht Consumer-GPUs über vier Preisklassen anhand der Kennzahlen, die einen Kauf wirklich bestimmen: VRAM-Kapazität, gemessenes Inferenztempo, Leistungsaufnahme und Preis. Ein Hinweis zum Preis: Die GPU-Preise sind 2026 wegen einer Speicherknappheit stark gestiegen und liegen 1,5- bis 2-fach über der ursprünglichen UVP — alle Preise hier sind eine Momentaufnahme von Juli 2026, prüfen Sie also den aktuellen Preis vor dem Kauf.',
+      'Die meisten GPU-Empfehlungen für lokale LLMs optimieren die falsche Kennzahl. Das Tempo in Token pro Sekunde entscheidet, wie schnell ein Modell antwortet — der VRAM entscheidet jedoch, ob das Modell überhaupt läuft. Ein Modell, das nicht in den Speicher passt, ist unendlich langsamer als eines, das passt. Dieser Leitfaden vergleicht acht Consumer-GPUs über vier Preisklassen anhand der Kennzahlen, die einen Kauf wirklich bestimmen: VRAM-Kapazität, gemessenes Inferenztempo, Leistungsaufnahme und Preis. Ein Hinweis zum Preis: Die GPU-Preise sind 2026 wegen einer Speicherknappheit stark gestiegen und liegen 1,5- bis 2-fach über der ursprünglichen UVP — alle Preise hier sind eine Momentaufnahme, prüfen Sie also den aktuellen Preis vor dem Kauf.',
     metaDescription:
       'GPU-Kaufberatung für lokale LLMs 2026: VRAM je Modellgröße, beste GPUs nach Budget, gebraucht vs neu. RTX 4090, 3090, 4060 Ti und AMD-Optionen im Vergleich.',
     heroImage: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-de.webp',
@@ -684,7 +684,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '**VRAM ist die entscheidende Beschränkung.** Ein Modell, das nicht in den VRAM passt, lädt entweder nicht oder weicht in den System-RAM aus und wird zu langsam für den interaktiven Einsatz. Wählen Sie die Klasse, deren VRAM zu Ihrem Zielmodell passt, und optimieren Sie dann innerhalb dieser Klasse auf Tempo.',
-          '**Die Preise sind 2026 stark gestiegen.** Eine Speicherknappheit hat die GPU-Preise in allen Märkten 1,5- bis 2-fach über die UVP getrieben — eine RTX 5090 kostet ~3.700 €, nicht ihren UVP-Wert. Behandeln Sie jeden Preis hier als Momentaufnahme von Juli 2026 und setzen Sie auf den Gebrauchtmarkt.',
+          '**Die Preise sind 2026 stark gestiegen.** Eine Speicherknappheit hat die GPU-Preise in allen Märkten 1,5- bis 2-fach über die UVP getrieben — eine RTX 5090 kostet ~3.700 €, nicht ihren UVP-Wert. Behandeln Sie jeden Preis hier als Momentaufnahme und setzen Sie auf den Gebrauchtmarkt.',
           '**Budget-Wahl: NVIDIA RTX 3060 12 GB** (gebraucht günstiger, neu 545–575 €) — führt jedes 7B-Modell mit 15–20 Token/s aus und die meisten 13B-Modelle bei Q4. Der beste Einstiegspunkt für lokale LLMs 2026.',
           '**Mittelklasse-Wahl: NVIDIA RTX 4060 Ti 16 GB** (~450–500 €) — 16 GB VRAM bewältigen 14B-Modelle mit Kontextreserve, und es ist die GPU, die der UVP am nächsten blieb, also vom Preisanstieg am wenigsten betroffen.',
           '**Oberklasse-Wahl: NVIDIA RTX 4070 Ti Super 16 GB** (ab 1.390 €) — schnell genug, dass sich 7B–14B-Modelle sofort anfühlen; 16 GB entsprechen der RTX 4080 Super bei der Kapazität für mehrere Hundert Euro weniger.',
@@ -739,7 +739,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Wie die acht GPUs für lokale LLMs 2026 abschneiden',
         content:
-          'VRAM- und Leistungsangaben sind Herstellerspezifikationen. Inferenztempo für RTX 3060, RTX 4080 Super, RTX 4090 und RTX 5090 sind gemessene 7B-Q4-Werte aus PromptQuorum-Hardwaretests; Werte für RTX 4060 Ti 16 GB, RX 7800 XT und RTX 4070 Ti Super sind Schätzungen auf Modellreihen-Ebene. Preise sind eine Momentaufnahme aus Deutschland von Juli 2026 (inkl. MwSt.) — die Speicherknappheit 2026 trieb sie 1,5- bis 2-fach über die UVP, daher vor dem Kauf prüfen.',
+          'VRAM- und Leistungsangaben sind Herstellerspezifikationen. Inferenztempo für RTX 3060, RTX 4080 Super, RTX 4090 und RTX 5090 sind gemessene 7B-Q4-Werte aus PromptQuorum-Hardwaretests; Werte für RTX 4060 Ti 16 GB, RX 7800 XT und RTX 4070 Ti Super sind Schätzungen auf Modellreihen-Ebene. Preise sind eine Momentaufnahme aus Deutschland (inkl. MwSt.) — die Speicherknappheit 2026 trieb sie 1,5- bis 2-fach über die UVP, daher vor dem Kauf prüfen.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -750,14 +750,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Stellen Sie sich VRAM als die Größe eines Schreibtisches vor und das Modell als das, was Sie darauf legen. Eine schnellere GPU räumt den Tisch zügiger ab, aber wenn das Modell gar nicht auf den Tisch passt, spielt Tempo keine Rolle. Wählen Sie zuerst die Klasse, deren Tisch groß genug ist.',
           },
         ],
-        columns: ['GPU', 'VRAM', 'Tempo (7B Q4)', 'Leistungsaufnahme', 'Preis (Juli 2026)', 'Am besten für'],
+        columns: ['GPU', 'VRAM', 'Tempo (7B Q4)', 'Leistungsaufnahme', 'Preis', 'Am besten für'],
         rows: [
           {
             'GPU': 'RTX 3060 12 GB',
             'VRAM': '12 GB',
             'Tempo (7B Q4)': '15–20 Token/s',
             'Leistungsaufnahme': '170 W',
-            'Preis (Juli 2026)': '545–575 € neu / gebraucht günstiger',
+            'Preis': '545–575 € neu / gebraucht günstiger',
             'Am besten für': 'Budget-Einstieg — jedes 7B-Modell',
           },
           {
@@ -765,7 +765,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '12 GB',
             'Tempo (7B Q4)': '10–14 Token/s',
             'Leistungsaufnahme': '230 W',
-            'Preis (Juli 2026)': '530–550 € neu',
+            'Preis': '530–550 € neu',
             'Am besten für': 'Günstigster VRAM, AMD-Einrichtung nötig',
           },
           {
@@ -773,7 +773,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '16 GB',
             'Tempo (7B Q4)': '~20–25 Token/s',
             'Leistungsaufnahme': '165 W',
-            'Preis (Juli 2026)': '~800 €',
+            'Preis': '~800 €',
             'Am besten für': 'Mittelklasse — 14B-Modelle, sparsam',
           },
           {
@@ -781,7 +781,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '16 GB',
             'Tempo (7B Q4)': '~18–24 Token/s (geschätzt)',
             'Leistungsaufnahme': '263 W',
-            'Preis (Juli 2026)': '~550 € neu',
+            'Preis': '~550 € neu',
             'Am besten für': '16 GB bei AMD, ROCm-Einrichtung nötig',
           },
           {
@@ -789,7 +789,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '16 GB',
             'Tempo (7B Q4)': '~80–90 Token/s (geschätzt)',
             'Leistungsaufnahme': '285 W',
-            'Preis (Juli 2026)': 'ab 1.390 €',
+            'Preis': 'ab 1.390 €',
             'Am besten für': 'Redaktionsempfehlung — schnelle 14B',
           },
           {
@@ -797,7 +797,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '16 GB',
             'Tempo (7B Q4)': '~120 Token/s',
             'Leistungsaufnahme': '320 W',
-            'Preis (Juli 2026)': '~1.500 €',
+            'Preis': '~1.500 €',
             'Am besten für': 'Schnellste 16-GB-Karte',
           },
           {
@@ -805,7 +805,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '24 GB',
             'Tempo (7B Q4)': '~150 Token/s',
             'Leistungsaufnahme': '450 W',
-            'Preis (Juli 2026)': '~2.990–3.190 €',
+            'Preis': '~2.990–3.190 €',
             'Am besten für': '33B-Modelle, Dual-GPU für 70B',
           },
           {
@@ -813,13 +813,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '32 GB',
             'Tempo (7B Q4)': '~160 Token/s',
             'Leistungsaufnahme': '575 W',
-            'Preis (Juli 2026)': '3.659–3.889 €',
+            'Preis': '3.659–3.889 €',
             'Am besten für': '70B bei Q4 auf einer GPU',
           },
         ],
         image: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-de.webp',
         imageCaption:
-          'Acht Consumer-GPUs für lokale LLMs im Vergleich nach VRAM, 7B-Q4-Inferenztempo, Leistungsaufnahme und Preis (Juli 2026) über vier Preisklassen. Der VRAM steigt von 12 GB (RTX 3060) auf 32 GB (RTX 5090); kaufen Sie nach der benötigten Modellgröße, bevor Sie auf Tempo optimieren.',
+          'Acht Consumer-GPUs für lokale LLMs im Vergleich nach VRAM, 7B-Q4-Inferenztempo, Leistungsaufnahme und Preis über vier Preisklassen. Der VRAM steigt von 12 GB (RTX 3060) auf 32 GB (RTX 5090); kaufen Sie nach der benötigten Modellgröße, bevor Sie auf Tempo optimieren.',
       },
       whichGpu: {
         id: 'which-gpu',
@@ -1008,7 +1008,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Die GPU-Preise stiegen 2026 stark wegen einer Speicherknappheit und drückten Consumer-Karten 1,5- bis 2-fach über ihre ursprüngliche UVP.** Das verändert die Kaufrechnung, also planen Sie damit statt mit den Einführungspreisen.',
         items: [
           '**Die Ursache ist der Speicher, nicht die GPUs.** Eine GDDR- und HBM-Lieferknappheit verteuerte jede Karte mit schnellem Speicher — und LLM-fähige GPUs sind genau die Karten mit viel VRAM, die am stärksten betroffen sind.',
-          '**Die RTX 5090 ist das deutlichste Beispiel:** ein UVP von 1.999 $, aber rund 3.659–3.889 € im Handel bis Juli 2026 — nahezu das Doppelte.',
+          '**Die RTX 5090 ist das deutlichste Beispiel:** ein UVP von 1.999 $, aber rund 3.659–3.889 € im Handel — nahezu das Doppelte.',
           '**Karten der unteren Klassen hielten sich besser.** Die RTX 4060 Ti 16 GB liegt nahe ihrer UVP; der Anstieg skaliert damit, wie viel schnellen Speicher eine Karte trägt.',
           '**Der Gebrauchtmarkt ist jetzt das Preis-Leistungs-Argument.** Eine gebrauchte RTX 3060 12 GB oder RX 6700 XT entgeht dem Großteil des Anstiegs — Gebrauchtpreise stiegen weit weniger als Neupreise.',
           '**Entscheidung:** Wenn Sie warten können, beobachten Sie, ob sich die Knappheit löst; wenn nicht, kaufen Sie wo möglich gebraucht und die kleinste Karte, die zu Ihrem Zielmodell passt.',
@@ -1064,7 +1064,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'Wegen des Anstiegs 2026 ist jede Preisangabe in diesem Leitfaden eine schnelllebige Momentaufnahme von Juli 2026. Öffnen Sie immer das aktuelle Händlerangebot vor dem Kauf — die Preise haben sich von Woche zu Woche bewegt.',
+            text: 'Wegen des Anstiegs 2026 ist jede Preisangabe in diesem Leitfaden eine schnelllebige Momentaufnahme. Öffnen Sie immer das aktuelle Händlerangebot vor dem Kauf — die Preise haben sich von Woche zu Woche bewegt.',
           },
         ],
         affiliateLinks: [
@@ -1135,7 +1135,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Warum sind die GPU-Preise 2026 so hoch?',
-            a: 'Eine Speicherchip-Knappheit trieb den GPU-Preisanstieg 2026. Das GDDR- und HBM-Angebot wurde knapp, was die Kosten jeder Grafikkarte mit schnellem Speicher erhöhte, und LLM-fähige Karten mit viel VRAM traf es am härtesten. Bis Juli 2026 verkaufen sich die meisten Karten 1,5- bis 2-fach über ihrer ursprünglichen UVP — eine RTX 5090 startete bei 1.999 $, kostet aber im Handel um 3.700 €. Der Gebrauchtmarkt entging dem Großteil des Anstiegs.',
+            a: 'Eine Speicherchip-Knappheit trieb den GPU-Preisanstieg 2026. Das GDDR- und HBM-Angebot wurde knapp, was die Kosten jeder Grafikkarte mit schnellem Speicher erhöhte, und LLM-fähige Karten mit viel VRAM traf es am härtesten. Verkauft werden die meisten Karten 1,5- bis 2-fach über ihrer ursprünglichen UVP — eine RTX 5090 startete bei 1.999 $, kostet aber im Handel um 3.700 €. Der Gebrauchtmarkt entging dem Großteil des Anstiegs.',
           },
           {
             q: 'Wie viel VRAM brauche ich für lokale LLMs?',
@@ -1192,7 +1192,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Meilleurs GPU pour LLM locaux : guide d\'achat 2026',
     seoTitle: 'Meilleur GPU pour LLM locaux 2026 : du budget au RTX 5090',
     intro:
-      'La plupart des conseils sur les GPU pour LLM locaux optimisent le mauvais chiffre. La vitesse en tokens par seconde décide de la rapidité de réponse d\'un modèle, mais c\'est la VRAM qui décide si le modèle s\'exécute tout court — et un modèle qui ne tient pas en mémoire est infiniment plus lent qu\'un modèle qui y tient. Ce guide compare huit GPU grand public sur quatre gammes de prix selon les chiffres qui pèsent réellement sur un achat : capacité VRAM, vitesse d\'inférence mesurée, consommation et prix. Une réserve sur les prix : ils ont flambé en 2026 à cause d\'une pénurie de mémoire, et les cartes se vendent désormais 1,5 à 2 fois au-dessus de leur tarif de lancement — chaque prix ici est un instantané de juillet 2026, vérifiez donc le tarif actuel avant d\'acheter.',
+      'La plupart des conseils sur les GPU pour LLM locaux optimisent le mauvais chiffre. La vitesse en tokens par seconde décide de la rapidité de réponse d\'un modèle, mais c\'est la VRAM qui décide si le modèle s\'exécute tout court — et un modèle qui ne tient pas en mémoire est infiniment plus lent qu\'un modèle qui y tient. Ce guide compare huit GPU grand public sur quatre gammes de prix selon les chiffres qui pèsent réellement sur un achat : capacité VRAM, vitesse d\'inférence mesurée, consommation et prix. Une réserve sur les prix : ils ont flambé en 2026 à cause d\'une pénurie de mémoire, et les cartes se vendent désormais 1,5 à 2 fois au-dessus de leur tarif de lancement — chaque prix ici est un instantané, vérifiez donc le tarif actuel avant d\'acheter.',
     metaDescription:
       'Guide d\'achat GPU pour LLMs locaux 2026 : besoins VRAM par taille de modèle, meilleurs GPU par budget. RTX 4090, 3090, 4060 Ti et options AMD comparées.',
     heroImage: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-fr.webp',
@@ -1269,7 +1269,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '**La VRAM est la contrainte déterminante.** Un modèle qui ne tient pas en VRAM échoue au chargement ou déborde sur la RAM système et devient trop lent pour un usage interactif. Choisissez la gamme dont la VRAM correspond à votre modèle visé, puis optimisez la vitesse à l\'intérieur de cette gamme.',
-          '**Les prix ont flambé en 2026.** Une pénurie de mémoire a poussé les prix GPU 1,5 à 2 fois au-dessus du tarif de lancement sur tous les marchés — un RTX 5090 coûte env. 3 800 €, pas son tarif de lancement. Traitez chaque prix ici comme un instantané de juillet 2026 et appuyez-vous sur le marché de l\'occasion.',
+          '**Les prix ont flambé en 2026.** Une pénurie de mémoire a poussé les prix GPU 1,5 à 2 fois au-dessus du tarif de lancement sur tous les marchés — un RTX 5090 coûte env. 3 800 €, pas son tarif de lancement. Traitez chaque prix ici comme un instantané et appuyez-vous sur le marché de l\'occasion.',
           '**Choix budget : NVIDIA RTX 3060 12 Go** (neuf env. 340-400 €, moins cher d\'occasion) — exécute tout modèle 7B à 15-20 tok/s et la plupart des modèles 13B en Q4. Le meilleur rapport qualité-prix pour débuter avec les LLM locaux en 2026.',
           '**Choix milieu de gamme : NVIDIA RTX 4060 Ti 16 Go** (env. 780-820 €) — 16 Go de VRAM dégagent les modèles 14B avec une marge de contexte, et c\'est le GPU le plus proche de son tarif de lancement, donc le moins touché par la flambée.',
           '**Choix haut de gamme : NVIDIA RTX 4080 Super 16 Go** (env. 1 500-1 700 €) — la carte 16 Go la plus rapide, et après les mouvements de prix de 2026 elle coûte à peu près autant que le RTX 4070 Ti Super, plus lent.',
@@ -1324,7 +1324,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Comment les huit GPU se comparent pour les LLM locaux en 2026',
         content:
-          'Les chiffres de VRAM et de consommation sont les spécifications constructeur. Les vitesses d\'inférence du RTX 3060, RTX 4080 Super, RTX 4090 et RTX 5090 sont des valeurs 7B Q4 mesurées par les tests matériels de PromptQuorum ; les chiffres du RTX 4060 Ti 16 Go, du RX 7800 XT et du RTX 4070 Ti Super sont des estimations à l\'échelle de la gamme. Les prix sont un instantané français de juillet 2026 (TTC) — la pénurie de mémoire de 2026 les a poussés 1,5 à 2 fois au-dessus du tarif de lancement, vérifiez donc avant d\'acheter.',
+          'Les chiffres de VRAM et de consommation sont les spécifications constructeur. Les vitesses d\'inférence du RTX 3060, RTX 4080 Super, RTX 4090 et RTX 5090 sont des valeurs 7B Q4 mesurées par les tests matériels de PromptQuorum ; les chiffres du RTX 4060 Ti 16 Go, du RX 7800 XT et du RTX 4070 Ti Super sont des estimations à l\'échelle de la gamme. Les prix sont un instantané français (TTC) — la pénurie de mémoire de 2026 les a poussés 1,5 à 2 fois au-dessus du tarif de lancement, vérifiez donc avant d\'acheter.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1335,14 +1335,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'Voyez la VRAM comme la taille d\'un bureau et le modèle comme ce que vous posez dessus. Un GPU plus rapide dégage le bureau plus vite, mais si le modèle n\'y tient pas du tout, la vitesse n\'entre jamais en jeu. Choisissez d\'abord la gamme dont le bureau est assez grand.',
           },
         ],
-        columns: ['GPU', 'VRAM', 'Vitesse (7B Q4)', 'Consommation', 'Prix (juillet 2026)', 'Idéal pour'],
+        columns: ['GPU', 'VRAM', 'Vitesse (7B Q4)', 'Consommation', 'Prix', 'Idéal pour'],
         rows: [
           {
             'GPU': 'RTX 3060 12 Go',
             'VRAM': '12 Go',
             'Vitesse (7B Q4)': '15-20 tok/s',
             'Consommation': '170 W',
-            'Prix (juillet 2026)': 'env. 340-400 € neuf / moins cher d\'occasion',
+            'Prix': 'env. 340-400 € neuf / moins cher d\'occasion',
             'Idéal pour': 'Entrée budget — tout modèle 7B',
           },
           {
@@ -1350,7 +1350,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '12 Go',
             'Vitesse (7B Q4)': '10-14 tok/s',
             'Consommation': '230 W',
-            'Prix (juillet 2026)': 'env. 430-490 € (fin de production)',
+            'Prix': 'env. 430-490 € (fin de production)',
             'Idéal pour': 'VRAM la moins chère, accepte la config AMD',
           },
           {
@@ -1358,7 +1358,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '16 Go',
             'Vitesse (7B Q4)': '~20-25 tok/s',
             'Consommation': '165 W',
-            'Prix (juillet 2026)': 'env. 780-820 €',
+            'Prix': 'env. 780-820 €',
             'Idéal pour': 'Milieu de gamme — modèles 14B, faible conso',
           },
           {
@@ -1366,7 +1366,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '16 Go',
             'Vitesse (7B Q4)': '~18-24 tok/s (est.)',
             'Consommation': '263 W',
-            'Prix (juillet 2026)': 'env. 510-560 € neuf',
+            'Prix': 'env. 510-560 € neuf',
             'Idéal pour': '16 Go chez AMD, accepte la config ROCm',
           },
           {
@@ -1374,7 +1374,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '16 Go',
             'Vitesse (7B Q4)': '~80-90 tok/s (est.)',
             'Consommation': '285 W',
-            'Prix (juillet 2026)': 'env. 1 450-1 630 €',
+            'Prix': 'env. 1 450-1 630 €',
             'Idéal pour': '14B rapide, consommation plus basse',
           },
           {
@@ -1382,7 +1382,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '16 Go',
             'Vitesse (7B Q4)': '~120 tok/s',
             'Consommation': '320 W',
-            'Prix (juillet 2026)': 'env. 1 500-1 700 € neuf',
+            'Prix': 'env. 1 500-1 700 € neuf',
             'Idéal pour': 'Choix de la rédaction — la 16 Go la plus rapide',
           },
           {
@@ -1390,7 +1390,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '24 Go',
             'Vitesse (7B Q4)': '~150 tok/s',
             'Consommation': '450 W',
-            'Prix (juillet 2026)': 'env. 2 900-3 200 € neuf / env. 2 600 € d\'occasion',
+            'Prix': 'env. 2 900-3 200 € neuf / env. 2 600 € d\'occasion',
             'Idéal pour': 'Modèles 33B, bi-GPU pour le 70B',
           },
           {
@@ -1398,13 +1398,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '32 Go',
             'Vitesse (7B Q4)': '~160 tok/s',
             'Consommation': '575 W',
-            'Prix (juillet 2026)': '3 499-3 949 € neuf',
+            'Prix': '3 499-3 949 € neuf',
             'Idéal pour': '70B en Q4 sur un seul GPU',
           },
         ],
         image: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-fr.webp',
         imageCaption:
-          'Huit GPU grand public pour les LLM locaux comparés par VRAM, vitesse d\'inférence 7B Q4, consommation et prix de juillet 2026 sur quatre gammes de budget. La VRAM monte de 12 Go (RTX 3060) à 32 Go (RTX 5090) ; achetez pour la taille de modèle dont vous avez besoin avant d\'optimiser la vitesse.',
+          'Huit GPU grand public pour les LLM locaux comparés par VRAM, vitesse d\'inférence 7B Q4, consommation et prix sur quatre gammes de budget. La VRAM monte de 12 Go (RTX 3060) à 32 Go (RTX 5090) ; achetez pour la taille de modèle dont vous avez besoin avant d\'optimiser la vitesse.',
       },
       whichGpu: {
         id: 'which-gpu',
@@ -1593,7 +1593,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Les prix GPU ont fortement grimpé en 2026 à cause d\'une pénurie de mémoire, poussant les cartes grand public 1,5 à 2 fois au-dessus de leur tarif de lancement.** Cela modifie le calcul d\'achat, planifiez donc autour de cela plutôt qu\'autour des tarifs de lancement.',
         items: [
           '**La cause est la mémoire, pas les GPU.** Une pénurie d\'approvisionnement en GDDR et HBM a renchéri toute carte dotée de mémoire rapide — et les GPU aptes aux LLM sont précisément les cartes à forte VRAM les plus touchées.',
-          '**Le RTX 5090 est l\'exemple le plus clair :** un tarif de lancement de 1 999 $, mais env. 3 800 € en magasin en juillet 2026 — presque le double.',
+          '**Le RTX 5090 est l\'exemple le plus clair :** un tarif de lancement de 1 999 $, mais env. 3 800 € en magasin — presque le double.',
           '**Les cartes d\'entrée de gamme ont mieux résisté.** Le RTX 4060 Ti 16 Go reste proche de son tarif de lancement ; la flambée évolue avec la quantité de mémoire rapide qu\'une carte embarque.',
           '**Le marché de l\'occasion est désormais le bon plan.** Un RTX 3060 12 Go ou un RX 6700 XT d\'occasion échappe à l\'essentiel de la flambée — les prix d\'occasion ont bien moins augmenté que ceux du neuf.',
           '**Décision :** si vous pouvez attendre, guettez l\'apaisement de la pénurie ; sinon, achetez d\'occasion quand c\'est possible et prenez la plus petite carte qui correspond à votre modèle visé.',
@@ -1649,7 +1649,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'À cause de la flambée de 2026, chaque chiffre de ce guide est un instantané mouvant de juillet 2026. Ouvrez toujours l\'annonce actuelle du revendeur avant d\'acheter — les prix ont bougé d\'une semaine à l\'autre.',
+            text: 'À cause de la flambée de 2026, chaque chiffre de ce guide est un instantané mouvant. Ouvrez toujours l\'annonce actuelle du revendeur avant d\'acheter — les prix ont bougé d\'une semaine à l\'autre.',
           },
         ],
         affiliateLinks: [
@@ -1705,7 +1705,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Spécifications NVIDIA GeForce RTX série 40](https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/) — Capacité VRAM et consommation (TGP) officielles pour les RTX 4060 Ti, 4070 Ti Super, 4080 Super et 4090.',
           '[Spécifications NVIDIA GeForce RTX 5090](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/) — VRAM officielle de 32 Go GDDR7 et consommation de 575 W du RTX 5090.',
-          '[Best Value GPU — suivis de prix RTX 5090 / 4090 / 4080 Super](https://bestvaluegpu.com/history/new-and-used-rtx-5090-price-history-and-specs/) — historique des prix US neuf et occasion utilisé pour l\'instantané de prix de juillet 2026.',
+          '[Best Value GPU — suivis de prix RTX 5090 / 4090 / 4080 Super](https://bestvaluegpu.com/history/new-and-used-rtx-5090-price-history-and-specs/) — historique des prix US neuf et occasion utilisé pour l\'instantané de prix.',
           '[Spécifications AMD Radeon](https://www.amd.com/en/products/graphics/desktops/radeon.html) — Chiffres officiels de VRAM et de consommation pour les RX 7800 XT et RX 6700 XT.',
           '[Meilleurs GPU pour LLM locaux 2026](/fr/local-llms/best-gpus-for-local-llms) — tests matériels PromptQuorum : vitesses d\'inférence 7B Q4 mesurées pour les RTX 3060, 4080, 4090 et 5090.',
         ],
@@ -1720,7 +1720,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Pourquoi les prix GPU sont-ils si élevés en 2026 ?',
-            a: 'Une pénurie de puces mémoire a provoqué la flambée des prix GPU de 2026. L\'approvisionnement en GDDR et HBM s\'est resserré, renchérissant chaque carte graphique dotée de mémoire rapide, et les cartes à forte VRAM aptes aux LLM ont été les plus touchées. En juillet 2026, la plupart des cartes se vendent 1,5 à 2 fois au-dessus de leur tarif de lancement — un RTX 5090 lancé à 1 999 $ se vend autour de 3 800 €. Le marché de l\'occasion a échappé à l\'essentiel de la hausse.',
+            a: 'Une pénurie de puces mémoire a provoqué la flambée des prix GPU de 2026. L\'approvisionnement en GDDR et HBM s\'est resserré, renchérissant chaque carte graphique dotée de mémoire rapide, et les cartes à forte VRAM aptes aux LLM ont été les plus touchées. La plupart des cartes se vendent 1,5 à 2 fois au-dessus de leur tarif de lancement — un RTX 5090 lancé à 1 999 $ se vend autour de 3 800 €. Le marché de l\'occasion a échappé à l\'essentiel de la hausse.',
           },
           {
             q: 'Combien de VRAM me faut-il pour des LLM locaux ?',
@@ -1777,7 +1777,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'ローカルLLM向けGPUの選び方：完全購入ガイド2026',
     seoTitle: 'ローカルLLM向けベストGPU 2026：低予算からRTX 5090まで',
     intro:
-      'ローカルLLM向けのGPUアドバイスの多くは、見るべきでない数値を最適化しています。トークン毎秒の速度はモデルが答える速さを決めますが、VRAMはそもそもモデルが動くかどうかを決めます。そして収まらないモデルは、収まるモデルよりも無限に遅いのです。本ガイドは、購入を実際に左右する数値、つまりVRAM容量・実測した推論速度・消費電力・価格で、4つの価格帯にわたり8枚のコンシューマーGPUを比較します。価格について1点注意があります。GPU価格はメモリ不足により2026年に急騰し、カードは現在、当初のメーカー希望小売価格の1.5～2倍で売られています。本記事の価格はすべて2026年7月時点のスナップショットですので、購入前に最新価格を確認してください。',
+      'ローカルLLM向けのGPUアドバイスの多くは、見るべきでない数値を最適化しています。トークン毎秒の速度はモデルが答える速さを決めますが、VRAMはそもそもモデルが動くかどうかを決めます。そして収まらないモデルは、収まるモデルよりも無限に遅いのです。本ガイドは、購入を実際に左右する数値、つまりVRAM容量・実測した推論速度・消費電力・価格で、4つの価格帯にわたり8枚のコンシューマーGPUを比較します。価格について1点注意があります。GPU価格はメモリ不足により2026年に急騰し、カードは現在、当初のメーカー希望小売価格の1.5～2倍で売られています。本記事の価格はすべてスナップショットですので、購入前に最新価格を確認してください。',
     metaDescription:
       'ローカルLLM向けに8枚のGPUを4つの予算帯で比較：RTX 3060からRTX 5090まで。VRAM、トークン毎秒、消費電力、価格、各価格帯が動かせるモデルサイズを掲載。',
     heroImage: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-ja.webp',
@@ -1854,7 +1854,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '**VRAMが決定的な制約です。** VRAMに収まらないモデルは読み込みに失敗するか、システムRAMにあふれて対話用途には遅すぎる状態になります。対象モデルにVRAMが合う価格帯を選び、その帯の中で速度を最適化してください。',
-          '**価格は2026年に急騰しました。** メモリ不足がすべての市場でGPU価格をメーカー希望小売価格の1.5～2倍に押し上げました。RTX 5090は当初の発売価格ではなく約¥659,800です。本記事の価格はすべて2026年7月時点のスナップショットとして扱い、中古市場を活用してください。',
+          '**価格は2026年に急騰しました。** メモリ不足がすべての市場でGPU価格をメーカー希望小売価格の1.5～2倍に押し上げました。RTX 5090は当初の発売価格ではなく約¥659,800です。本記事の価格はすべてスナップショットとして扱い、中古市場を活用してください。',
           '**低予算の選択：NVIDIA RTX 3060 12 GB**（新品¥40,000前後、中古はさらに安い） — あらゆる7Bモデルを15～20 tok/sで動かし、ほとんどの13BモデルをQ4で動かします。2026年にローカルLLMを始める入口として最良のコストパフォーマンスです。',
           '**中位の選択：NVIDIA RTX 4060 Ti 16 GB**（¥69,800前後） — 16 GBのVRAMはコンテキストの余裕を残して14Bモデルをこなし、メーカー希望小売価格に最も近いGPUであり、急騰の影響を最も受けていません。',
           '**上位の選択：NVIDIA RTX 4080 Super 16 GB**（約¥290,000） — 最速の16 GBカードで、2026年の価格変動後はより遅いRTX 4070 Ti Superとほぼ同価格です。',
@@ -1909,7 +1909,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: '2026年のローカルLLMで8枚のGPUを比較',
         content:
-          'VRAMと消費電力の数値はメーカー仕様です。RTX 3060、RTX 4080 Super、RTX 4090、RTX 5090の推論速度はPromptQuorumのハードウェアテストによる実測7B Q4の値で、RTX 4060 Ti 16 GB、RX 7800 XT、RTX 4070 Ti Superの数値はファミリー単位の推定値です。価格は2026年7月時点の日本のスナップショット（税込）です — 2026年のメモリ不足がメーカー希望小売価格の1.5～2倍に押し上げているため、購入前に再確認してください。',
+          'VRAMと消費電力の数値はメーカー仕様です。RTX 3060、RTX 4080 Super、RTX 4090、RTX 5090の推論速度はPromptQuorumのハードウェアテストによる実測7B Q4の値で、RTX 4060 Ti 16 GB、RX 7800 XT、RTX 4070 Ti Superの数値はファミリー単位の推定値です。価格は日本のスナップショット（税込）です — 2026年のメモリ不足がメーカー希望小売価格の1.5～2倍に押し上げているため、購入前に再確認してください。',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -1920,14 +1920,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'VRAMを机の広さ、モデルをその上に置くものと考えてください。速いGPUは机を早く片付けますが、モデルがそもそも机に乗らなければ、速度は問題になりません。まず机が十分に大きい価格帯を選んでください。',
           },
         ],
-        columns: ['GPU', 'VRAM', '速度（7B Q4）', '消費電力', '価格（2026年7月）', '最適な用途'],
+        columns: ['GPU', 'VRAM', '速度（7B Q4）', '消費電力', '価格（）', '最適な用途'],
         rows: [
           {
             'GPU': 'RTX 3060 12 GB',
             'VRAM': '12 GB',
             '速度（7B Q4）': '15～20 tok/s',
             '消費電力': '170 W',
-            '価格（2026年7月）': '新品¥40,000前後 / 中古はさらに安い',
+            '価格（）': '新品¥40,000前後 / 中古はさらに安い',
             '最適な用途': '低予算の入口 — あらゆる7Bモデル',
           },
           {
@@ -1935,7 +1935,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '12 GB',
             '速度（7B Q4）': '10～14 tok/s',
             '消費電力': '230 W',
-            '価格（2026年7月）': '新品¥44,000前後',
+            '価格（）': '新品¥44,000前後',
             '最適な用途': '最も安いVRAM、AMDのセットアップを許容',
           },
           {
@@ -1943,7 +1943,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '16 GB',
             '速度（7B Q4）': '約20～25 tok/s',
             '消費電力': '165 W',
-            '価格（2026年7月）': '¥69,800前後',
+            '価格（）': '¥69,800前後',
             '最適な用途': '中位帯 — 14Bモデル、低消費電力',
           },
           {
@@ -1951,7 +1951,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '16 GB',
             '速度（7B Q4）': '約18～24 tok/s（推定）',
             '消費電力': '263 W',
-            '価格（2026年7月）': '新品¥56,000～75,000',
+            '価格（）': '新品¥56,000～75,000',
             '最適な用途': 'AMDで16 GB、ROCmのセットアップを許容',
           },
           {
@@ -1959,7 +1959,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '16 GB',
             '速度（7B Q4）': '約80～90 tok/s（推定）',
             '消費電力': '285 W',
-            '価格（2026年7月）': '約¥300,000',
+            '価格（）': '約¥300,000',
             '最適な用途': '高速な14B、低めの消費電力',
           },
           {
@@ -1967,7 +1967,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '16 GB',
             '速度（7B Q4）': '約120 tok/s',
             '消費電力': '320 W',
-            '価格（2026年7月）': '約¥290,000（新品）',
+            '価格（）': '約¥290,000（新品）',
             '最適な用途': '編集部の選択 — 最速の16 GB',
           },
           {
@@ -1975,7 +1975,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '24 GB',
             '速度（7B Q4）': '約150 tok/s',
             '消費電力': '450 W',
-            '価格（2026年7月）': '新品¥375,000 / 中古約¥290,000',
+            '価格（）': '新品¥375,000 / 中古約¥290,000',
             '最適な用途': '33Bモデル、70B用のデュアルGPU',
           },
           {
@@ -1983,13 +1983,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '32 GB',
             '速度（7B Q4）': '約160 tok/s',
             '消費電力': '575 W',
-            '価格（2026年7月）': '新品¥659,800',
+            '価格（）': '新品¥659,800',
             '最適な用途': '1枚のGPUでQ4の70B',
           },
         ],
         image: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-ja.webp',
         imageCaption:
-          'ローカルLLM向けの8枚のコンシューマーGPUを、VRAM、7B Q4推論速度、消費電力、2026年7月の価格で4つの予算帯にわたり比較。VRAMは12 GB（RTX 3060）から32 GB（RTX 5090）まで上がります。速度を最適化する前に、必要なモデルサイズで選んでください。',
+          'ローカルLLM向けの8枚のコンシューマーGPUを、VRAM、7B Q4推論速度、消費電力、価格で4つの予算帯にわたり比較。VRAMは12 GB（RTX 3060）から32 GB（RTX 5090）まで上がります。速度を最適化する前に、必要なモデルサイズで選んでください。',
       },
       whichGpu: {
         id: 'which-gpu',
@@ -2178,7 +2178,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**GPU価格はメモリ不足のため2026年に急騰し、コンシューマーカードを当初のメーカー希望小売価格の1.5～2倍に押し上げました。** これは購入の計算を変えるため、発売価格ではなくこれを前提に計画してください。',
         items: [
           '**原因はGPUではなくメモリです。** GDDRとHBMの供給不足が、高速メモリを積むあらゆるカードのコストを上げました — そしてLLM対応GPUは、まさに最も影響を受ける高VRAMカードです。',
-          '**RTX 5090が最も明確な例です：** 発売価格は1,999ドルでしたが、2026年7月の店頭では約¥659,800 — ほぼ倍です。',
+          '**RTX 5090が最も明確な例です：** 発売価格は1,999ドルでしたが、店頭では約¥659,800 — ほぼ倍です。',
           '**下位のカードはより持ちこたえました。** RTX 4060 Ti 16 GBはメーカー希望小売価格に近い水準にあります。急騰はカードが積む高速メモリの量に比例します。',
           '**今や中古市場がコストパフォーマンスの選択です。** 中古のRTX 3060 12 GBやRX 6700 XTは急騰の大半を免れます — 中古価格は新品価格よりはるかに上昇が小さいです。',
           '**判断：** 待てるなら不足の緩和を見守り、待てないなら可能な限り中古で買い、対象モデルに合う最小のカードを買ってください。',
@@ -2223,7 +2223,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'where-to-buy',
         title: '地域別価格と購入先',
         content:
-          '**GPU価格は地域によって異なります — ここでの価格は2026年7月時点の日本のスナップショット（消費税込）であり、2026年の急騰はあらゆる市場を直撃しました。** 以下のリンクは単なる製品検索リンクで、アフィリエイトタグは付いておらず、手数料を生みません。',
+          '**GPU価格は地域によって異なります — ここでの価格は日本のスナップショット（消費税込）であり、2026年の急騰はあらゆる市場を直撃しました。** 以下のリンクは単なる製品検索リンクで、アフィリエイトタグは付いておらず、手数料を生みません。',
         items: [
           '**日本：** Amazon.co.jpとドスパラ・パソコン工房・TSUKUMOがグラフィックカードの主な購入先です。',
           '**価格比較：** Kakaku.com（価格.com）は日本で新品価格を比較する標準であり、現在最も安い購入先をそこで確認してください。',
@@ -2234,7 +2234,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: '2026年の急騰のため、本ガイドのすべての価格は変動の速い2026年7月時点のスナップショットです。購入前に必ず現在の小売店の出品を開いてください — 価格は週ごとに動いています。',
+            text: '2026年の急騰のため、本ガイドのすべての価格は変動の速いスナップショットです。購入前に必ず現在の小売店の出品を開いてください — 価格は週ごとに動いています。',
           },
         ],
         affiliateLinks: [
@@ -2290,7 +2290,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[NVIDIA GeForce RTX 40シリーズ 仕様](https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/) — RTX 4060 Ti、4070 Ti Super、4080 Super、4090の公式VRAM容量と消費電力（TGP）。',
           '[NVIDIA GeForce RTX 5090 仕様](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/) — RTX 5090の公式32 GB GDDR7 VRAMと575 W消費電力。',
-          '[Best Value GPU — RTX 5090 / 4090 / 4080 Super 価格トラッカー](https://bestvaluegpu.com/history/new-and-used-rtx-5090-price-history-and-specs/) — 2026年7月の価格スナップショットに使用した米国の新品・中古価格履歴。',
+          '[Best Value GPU — RTX 5090 / 4090 / 4080 Super 価格トラッカー](https://bestvaluegpu.com/history/new-and-used-rtx-5090-price-history-and-specs/) — 価格スナップショットに使用した米国の新品・中古価格履歴。',
           '[AMD Radeon 仕様](https://www.amd.com/en/products/graphics/desktops/radeon.html) — RX 7800 XTとRX 6700 XTの公式VRAMと消費電力。',
           '[ローカルLLM向けベストGPU 2026](/ja/local-llms/best-gpus-for-local-llms) — PromptQuorumのハードウェアテスト：RTX 3060、4080、4090、5090の実測7B Q4推論速度。',
         ],
@@ -2305,7 +2305,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'なぜ2026年のGPU価格はこれほど高いのですか？',
-            a: 'メモリチップ不足が2026年のGPU価格急騰を引き起こしました。GDDRとHBMの供給が逼迫し、高速メモリを積むあらゆるグラフィックカードのコストが上がり、高VRAMでLLM対応のカードが最も激しく直撃されました。2026年7月時点で、ほとんどのカードは当初のメーカー希望小売価格の1.5～2倍で売られています — RTX 5090は1,999ドルで発売されましたが約¥659,800で取引されています。中古市場は値上がりの大半を免れました。',
+            a: 'メモリチップ不足が2026年のGPU価格急騰を引き起こしました。GDDRとHBMの供給が逼迫し、高速メモリを積むあらゆるグラフィックカードのコストが上がり、高VRAMでLLM対応のカードが最も激しく直撃されました。ほとんどのカードは当初のメーカー希望小売価格の1.5～2倍で売られています — RTX 5090は1,999ドルで発売されましたが約¥659,800で取引されています。中古市場は値上がりの大半を免れました。',
           },
           {
             q: 'ローカルLLMにはどれくらいのVRAMが必要ですか？',
@@ -2362,7 +2362,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: '本地大模型显卡选购指南 2026',
     seoTitle: '本地大模型显卡价格 2026：RTX 4090/5090 选购',
     intro:
-      '大多数关于本地大模型显卡的建议都在优化错误的数字。每秒 token 的速度决定模型回答的快慢，但显存决定模型能否运行——一个装不下的模型，比一个装得下的模型慢无数倍。本指南在四个价位档次中比较八款消费级显卡，依据真正决定购买的数字：显存容量、实测推理速度、功耗和价格。关于价格有一点提醒：2026 年因内存短缺，显卡价格大涨，目前售价为原始建议零售价的 1.5 到 2 倍——本文每个价格都是 2026 年 7 月的快照，购买前请确认当前价格。',
+      '大多数关于本地大模型显卡的建议都在优化错误的数字。每秒 token 的速度决定模型回答的快慢，但显存决定模型能否运行——一个装不下的模型，比一个装得下的模型慢无数倍。本指南在四个价位档次中比较八款消费级显卡，依据真正决定购买的数字：显存容量、实测推理速度、功耗和价格。关于价格有一点提醒：2026 年因内存短缺，显卡价格大涨，目前售价为原始建议零售价的 1.5 到 2 倍——本文每个价格都是 的快照，购买前请确认当前价格。',
     metaDescription:
       '本地大模型显卡怎么选：入门看 RTX 4060 Ti 16GB，跑 70B 看 RTX 4090 与 5090。八款显卡按显存、token/s、功耗和价格对比，含二手行情与各档可运行的模型规模。',
     heroImage: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-zh.webp',
@@ -2439,7 +2439,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '**显存是决定性约束。** 装不进显存的模型要么加载失败，要么溢出到系统内存，慢到无法交互使用。先选显存匹配目标模型的档次，再在该档次内优化速度。',
-          '**2026 年价格大涨。** 内存短缺把所有市场的显卡价格推高到建议零售价的 1.5 到 2 倍——RTX 5090 售价约 $3,949，而非其 $1,999 的发布价。把本文每个价格当作 2026 年 7 月的快照，并依靠二手市场。',
+          '**2026 年价格大涨。** 内存短缺把所有市场的显卡价格推高到建议零售价的 1.5 到 2 倍——RTX 5090 售价约 $3,949，而非其 $1,999 的发布价。把本文每个价格当作 的快照，并依靠二手市场。',
           '**预算之选：NVIDIA RTX 3060 12 GB**（二手 $150-250，全新 $350-680）——以 15-20 tok/s 运行任何 7B 模型，并以 Q4 运行大多数 13B 模型。2026 年入门本地大模型的最佳性价比。',
           '**中端之选：NVIDIA RTX 4060 Ti 16 GB**（全新约 $424，二手 $290）——16 GB 显存可容纳 14B 模型并留有上下文余量，也是最接近建议零售价的显卡，受涨价影响最小。',
           '**高端之选：NVIDIA RTX 4080 Super 16 GB**（约 $1,100-1,200）——最快的 16 GB 显卡，经 2026 年价格变动后，其售价与更慢的 RTX 4070 Ti Super（$1,179）大致相当。',
@@ -2494,7 +2494,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: '2026 年八款显卡运行本地大模型的对比',
         content:
-          '显存和功耗数字为厂商规格。RTX 3060、RTX 4080 Super、RTX 4090、RTX 5090 的推理速度为 PromptQuorum 硬件测试实测的 7B Q4 数值；RTX 4060 Ti 16 GB、RX 7800 XT、RTX 4070 Ti Super 的数字为系列级别估算。价格为 2026 年 7 月美国快照——2026 年内存短缺把价格推高到建议零售价的 1.5 到 2 倍，购买前请重新核对。',
+          '显存和功耗数字为厂商规格。RTX 3060、RTX 4080 Super、RTX 4090、RTX 5090 的推理速度为 PromptQuorum 硬件测试实测的 7B Q4 数值；RTX 4060 Ti 16 GB、RX 7800 XT、RTX 4070 Ti Super 的数字为系列级别估算。价格为 美国快照——2026 年内存短缺把价格推高到建议零售价的 1.5 到 2 倍，购买前请重新核对。',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -2505,14 +2505,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: '把显存想成桌面的大小，把模型想成你放在桌上的东西。更快的显卡能更快清空桌面，但如果模型根本放不上桌，速度就无从谈起。先选桌面足够大的档次。',
           },
         ],
-        columns: ['显卡', '显存', '速度（7B Q4）', '功耗', '价格（2026 年 7 月）', '最适合'],
+        columns: ['显卡', '显存', '速度（7B Q4）', '功耗', '价格（）', '最适合'],
         rows: [
           {
             '显卡': 'RTX 3060 12 GB',
             '显存': '12 GB',
             '速度（7B Q4）': '15-20 tok/s',
             '功耗': '170 W',
-            '价格（2026 年 7 月）': '全新 $350-680 / 二手 $150-250',
+            '价格（）': '全新 $350-680 / 二手 $150-250',
             '最适合': '预算入门——任何 7B 模型',
           },
           {
@@ -2520,7 +2520,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '显存': '12 GB',
             '速度（7B Q4）': '10-14 tok/s',
             '功耗': '230 W',
-            '价格（2026 年 7 月）': '二手 $130-200（全新已停产）',
+            '价格（）': '二手 $130-200（全新已停产）',
             '最适合': '最便宜的显存，接受 AMD 配置',
           },
           {
@@ -2528,7 +2528,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '显存': '16 GB',
             '速度（7B Q4）': '约 20-25 tok/s',
             '功耗': '165 W',
-            '价格（2026 年 7 月）': '全新 $424 / 二手 $290',
+            '价格（）': '全新 $424 / 二手 $290',
             '最适合': '中端档——14B 模型，低功耗',
           },
           {
@@ -2536,7 +2536,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '显存': '16 GB',
             '速度（7B Q4）': '约 18-24 tok/s（估算）',
             '功耗': '263 W',
-            '价格（2026 年 7 月）': '全新约 $480-520',
+            '价格（）': '全新约 $480-520',
             '最适合': 'AMD 平台的 16 GB，接受 ROCm 配置',
           },
           {
@@ -2544,7 +2544,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '显存': '16 GB',
             '速度（7B Q4）': '约 80-90 tok/s（估算）',
             '功耗': '285 W',
-            '价格（2026 年 7 月）': '全新 $1,179 / 二手 $770',
+            '价格（）': '全新 $1,179 / 二手 $770',
             '最适合': '快速 14B，较低功耗',
           },
           {
@@ -2552,7 +2552,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '显存': '16 GB',
             '速度（7B Q4）': '约 120 tok/s',
             '功耗': '320 W',
-            '价格（2026 年 7 月）': '全新约 $1,100-1,200 / 二手约 $900',
+            '价格（）': '全新约 $1,100-1,200 / 二手约 $900',
             '最适合': '编辑推荐——最快的 16 GB',
           },
           {
@@ -2560,7 +2560,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '显存': '24 GB',
             '速度（7B Q4）': '约 150 tok/s',
             '功耗': '450 W',
-            '价格（2026 年 7 月）': '全新 $2,755 / 二手 ~$2,268',
+            '价格（）': '全新 $2,755 / 二手 ~$2,268',
             '最适合': '33B 模型，双卡 70B',
           },
           {
@@ -2568,13 +2568,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '显存': '32 GB',
             '速度（7B Q4）': '约 160 tok/s',
             '功耗': '575 W',
-            '价格（2026 年 7 月）': '全新 $3,949 / 二手 $3,999',
+            '价格（）': '全新 $3,949 / 二手 $3,999',
             '最适合': '单卡 Q4 运行 70B',
           },
         ],
         image: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-zh.webp',
         imageCaption:
-          '八款消费级显卡在四个预算档次中按显存、7B Q4 推理速度、功耗和 2026 年 7 月价格对比本地大模型表现。显存从 12 GB（RTX 3060）升至 32 GB（RTX 5090）；优化速度之前，先按你需要的模型规模购买。',
+          '八款消费级显卡在四个预算档次中按显存、7B Q4 推理速度、功耗和 价格对比本地大模型表现。显存从 12 GB（RTX 3060）升至 32 GB（RTX 5090）；优化速度之前，先按你需要的模型规模购买。',
       },
       whichGpu: {
         id: 'which-gpu',
@@ -2763,7 +2763,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**2026 年显卡价格因内存短缺大幅上涨，把消费级显卡推高到原始建议零售价的 1.5 到 2 倍。** 这改变了购买的算账方式，所以要围绕它而非发布价来规划。',
         items: [
           '**根源是内存，不是 GPU。** GDDR 和 HBM 供应短缺抬高了每一张配有高速内存的显卡的成本——而具备本地大模型能力的 GPU，正是受影响最大的高显存显卡。',
-          '**RTX 5090 是最清晰的例子：** 发布价 $1,999，但到 2026 年 7 月零售价约 $3,949——几乎翻倍。',
+          '**RTX 5090 是最清晰的例子：** 发布价 $1,999，但到 零售价约 $3,949——几乎翻倍。',
           '**低端显卡撑得更好。** RTX 4060 Ti 16 GB 接近其 $399 建议零售价；涨幅与显卡搭载的高速内存数量成正比。',
           '**二手市场如今才是性价比之选。** 二手 RTX 3060 12 GB 或 RX 6700 XT 躲过了大部分涨价——二手价的涨幅远小于全新价。',
           '**决策：** 如果你能等，就关注短缺缓解的迹象；如果不能等，尽量买二手，并买能装下目标模型的最小显卡。',
@@ -2819,7 +2819,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: '由于 2026 年涨价，本指南中每个价格数字都是变动迅速的 2026 年 7 月快照。购买前请始终打开当前的零售商商品页——价格逐周变动。',
+            text: '由于 2026 年涨价，本指南中每个价格数字都是变动迅速的 快照。购买前请始终打开当前的零售商商品页——价格逐周变动。',
           },
         ],
         affiliateLinks: [
@@ -2875,7 +2875,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[NVIDIA GeForce RTX 40 系列规格](https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/) — RTX 4060 Ti、4070 Ti Super、4080 Super 和 4090 的官方显存容量与功耗（TGP）数据。',
           '[NVIDIA GeForce RTX 5090 规格](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/) — RTX 5090 的官方 32 GB GDDR7 显存与 575 W 功耗数据。',
-          '[Best Value GPU — RTX 5090 / 4090 / 4080 Super 价格追踪](https://bestvaluegpu.com/history/new-and-used-rtx-5090-price-history-and-specs/) — 用于 2026 年 7 月价格快照的美国全新与二手价格历史。',
+          '[Best Value GPU — RTX 5090 / 4090 / 4080 Super 价格追踪](https://bestvaluegpu.com/history/new-and-used-rtx-5090-price-history-and-specs/) — 用于 价格快照的美国全新与二手价格历史。',
           '[AMD Radeon 规格](https://www.amd.com/en/products/graphics/desktops/radeon.html) — RX 7800 XT 和 RX 6700 XT 的官方显存与功耗数据。',
           '[本地大模型最佳显卡 2026](/zh/local-llms/best-gpus-for-local-llms) — PromptQuorum 硬件测试：RTX 3060、4080、4090 和 5090 的实测 7B Q4 推理速度。',
         ],
@@ -2902,7 +2902,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '为什么 2026 年显卡价格这么高？',
-            a: '内存芯片短缺推动了 2026 年的显卡涨价。GDDR 和 HBM 供应收紧，抬高了每一张配有高速内存的显卡的成本，而具备本地大模型能力的高显存显卡受冲击最大。到 2026 年 7 月，大多数显卡售价为原始建议零售价的 1.5 到 2 倍——RTX 5090 发布价 $1,999，但零售价接近 $3,950。二手市场躲过了大部分涨幅。',
+            a: '内存芯片短缺推动了 2026 年的显卡涨价。GDDR 和 HBM 供应收紧，抬高了每一张配有高速内存的显卡的成本，而具备本地大模型能力的高显存显卡受冲击最大。大多数显卡售价为原始建议零售价的 1.5 到 2 倍——RTX 5090 发布价 $1,999，但零售价接近 $3,950。二手市场躲过了大部分涨幅。',
           },
           {
             q: '本地大模型需要多少显存？',
@@ -2959,7 +2959,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Mejores GPUs para LLMs locales: guía de compra completa 2026',
     seoTitle: 'Mejor GPU para LLMs locales 2026: de gama media al RTX 5090',
     intro:
-      'La mayoría de los consejos sobre GPUs para LLMs locales optimizan el número equivocado. La velocidad en tokens por segundo decide qué tan rápido responde un modelo, pero la VRAM decide si el modelo puede ejecutarse — y un modelo que no cabe en memoria es infinitamente más lento que uno que sí cabe. Esta guía compara ocho GPUs de consumo en cuatro rangos de precio según las cifras que realmente determinan una compra: capacidad de VRAM, velocidad de inferencia medida, consumo energético y precio. Una advertencia sobre los precios: los precios de GPUs se dispararon en 2026 debido a una escasez de memoria, y las tarjetas ahora se venden entre 1,5 y 2 veces por encima de su precio de lista original — cada precio aquí es un dato de julio de 2026, así que verifica el precio actual antes de comprar.',
+      'La mayoría de los consejos sobre GPUs para LLMs locales optimizan el número equivocado. La velocidad en tokens por segundo decide qué tan rápido responde un modelo, pero la VRAM decide si el modelo puede ejecutarse — y un modelo que no cabe en memoria es infinitamente más lento que uno que sí cabe. Esta guía compara ocho GPUs de consumo en cuatro rangos de precio según las cifras que realmente determinan una compra: capacidad de VRAM, velocidad de inferencia medida, consumo energético y precio. Una advertencia sobre los precios: los precios de GPUs se dispararon en 2026 debido a una escasez de memoria, y las tarjetas ahora se venden entre 1,5 y 2 veces por encima de su precio de lista original — cada precio aquí es un dato, así que verifica el precio actual antes de comprar.',
     metaDescription:
       'Ocho GPUs comparadas para LLMs locales en 4 presupuestos: de la RTX 3060 a la RTX 5090. VRAM, tokens/s, consumo y precios 2026 por tamaño de modelo.',
     heroImage: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-es.webp',
@@ -3036,7 +3036,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '**La VRAM es la restricción determinante.** Un modelo que no cabe en VRAM falla al cargar o se desborda hacia la RAM del sistema y se vuelve demasiado lento para uso interactivo. Elige el rango cuya VRAM encaje con tu modelo objetivo, luego optimiza la velocidad dentro de ese rango.',
-          '**Los precios se dispararon en 2026.** Una escasez de memoria empujó los precios de GPU entre 1,5 y 2 veces por encima del precio de lista en todos los mercados — una RTX 5090 cuesta ~$3.949, no su precio de lanzamiento de $1.999. Trata cada precio aquí como un dato de julio de 2026 y apóyate en el mercado de segunda mano.',
+          '**Los precios se dispararon en 2026.** Una escasez de memoria empujó los precios de GPU entre 1,5 y 2 veces por encima del precio de lista en todos los mercados — una RTX 5090 cuesta ~$3.949, no su precio de lanzamiento de $1.999. Trata cada precio aquí como un dato y apóyate en el mercado de segunda mano.',
           '**Elección de presupuesto: NVIDIA RTX 3060 12 GB** ($150-250 de segunda mano, $350-680 nueva) — ejecuta cualquier modelo de 7B a 15-20 tok/s y la mayoría de los modelos de 13B en Q4. El mejor punto de entrada en términos de valor para LLMs locales en 2026.',
           '**Elección de gama media: NVIDIA RTX 4060 Ti 16 GB** (~$424 nueva, $290 de segunda mano) — 16 GB de VRAM resuelve los modelos de 14B con margen de contexto, y es la GPU más cercana a su precio de lista, por lo que la subida la afectó menos.',
           '**Elección de gama alta: NVIDIA RTX 4080 Super 16 GB** (~$1.100-1.200) — la tarjeta de 16 GB más rápida, y tras los movimientos de precios de 2026 cuesta aproximadamente lo mismo que la RTX 4070 Ti Super más lenta ($1.179).',
@@ -3091,7 +3091,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Cómo se comparan las ocho GPUs para LLMs locales en 2026',
         content:
-          'Las cifras de VRAM y consumo energético son especificaciones del fabricante. Las velocidades de inferencia para la RTX 3060, RTX 4080 Super, RTX 4090 y RTX 5090 son valores medidos de 7B Q4 de las pruebas de hardware de PromptQuorum; las cifras para la RTX 4060 Ti 16 GB, RX 7800 XT y RTX 4070 Ti Super son estimaciones a nivel de familia. Los precios son un dato de julio de 2026 en EE. UU. — la escasez de memoria de 2026 los empujó entre 1,5 y 2 veces por encima del precio de lista, así que verifica antes de comprar.',
+          'Las cifras de VRAM y consumo energético son especificaciones del fabricante. Las velocidades de inferencia para la RTX 3060, RTX 4080 Super, RTX 4090 y RTX 5090 son valores medidos de 7B Q4 de las pruebas de hardware de PromptQuorum; las cifras para la RTX 4060 Ti 16 GB, RX 7800 XT y RTX 4070 Ti Super son estimaciones a nivel de familia. Los precios son un dato de EE. UU. — la escasez de memoria de 2026 los empujó entre 1,5 y 2 veces por encima del precio de lista, así que verifica antes de comprar.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -3171,7 +3171,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         image: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-es.webp',
         imageCaption:
-          'Ocho GPUs de consumo para LLMs locales comparadas por VRAM, velocidad de inferencia 7B Q4, consumo energético y precio de julio de 2026 en cuatro rangos de presupuesto. La VRAM sube de 12 GB (RTX 3060) a 32 GB (RTX 5090); compra por el tamaño de modelo que necesitas antes de optimizar la velocidad.',
+          'Ocho GPUs de consumo para LLMs locales comparadas por VRAM, velocidad de inferencia 7B Q4, consumo energético y precio en cuatro rangos de presupuesto. La VRAM sube de 12 GB (RTX 3060) a 32 GB (RTX 5090); compra por el tamaño de modelo que necesitas antes de optimizar la velocidad.',
       },
       whichGpu: {
         id: 'which-gpu',
@@ -3360,7 +3360,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Los precios de GPU subieron marcadamente en 2026 debido a una escasez de memoria, empujando las tarjetas de consumo entre 1,5 y 2 veces por encima de su precio de lista original.** Esto cambia el cálculo de compra, así que planifica en torno a ello en lugar de los precios de lanzamiento.',
         items: [
           '**La causa es la memoria, no las GPUs.** Una escasez de suministro de GDDR y HBM elevó el costo de cada tarjeta con memoria rápida — y las GPUs capaces de LLMs son exactamente las tarjetas de alta VRAM más afectadas.',
-          '**La RTX 5090 es el ejemplo más claro:** un precio de lanzamiento de $1.999, pero ~$3.949 en las tiendas para julio de 2026 — casi el doble.',
+          '**La RTX 5090 es el ejemplo más claro:** un precio de lanzamiento de $1.999, pero ~$3.949 en las tiendas — casi el doble.',
           '**Las tarjetas de gama baja aguantaron mejor.** La RTX 4060 Ti 16 GB se mantiene cerca de su precio de lista de $399; la subida escala con la cantidad de memoria rápida que lleva una tarjeta.',
           '**El mercado de segunda mano es ahora la opción de valor.** Una RTX 3060 12 GB o RX 6700 XT de segunda mano evita gran parte de la subida — los precios de segunda mano subieron mucho menos que los nuevos.',
           '**Decisión:** si puedes esperar, observa si la escasez se mitiga; si no puedes, compra de segunda mano cuando sea posible y adquiere la tarjeta más pequeña que se adapte a tu modelo objetivo.',
@@ -3416,7 +3416,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'Debido a la subida de 2026, cada cifra de precio en esta guía es un dato en rápido cambio de julio de 2026. Abre siempre el listado actual del minorista antes de comprar — los precios han cambiado semana a semana.',
+            text: 'Debido a la subida de 2026, cada cifra de precio en esta guía es un dato en rápido cambio. Abre siempre el listado actual del minorista antes de comprar — los precios han cambiado semana a semana.',
           },
         ],
         affiliateLinks: [
@@ -3472,7 +3472,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Especificaciones NVIDIA GeForce RTX Serie 40](https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/) — Cifras oficiales de capacidad de VRAM y consumo (TGP) para la RTX 4060 Ti, 4070 Ti Super, 4080 Super y 4090.',
           '[Especificaciones NVIDIA GeForce RTX 5090](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/) — Cifras oficiales de 32 GB de VRAM GDDR7 y 575 W de consumo para la RTX 5090.',
-          '[Best Value GPU — Rastreadores de precios RTX 5090 / 4090 / 4080 Super](https://bestvaluegpu.com/history/new-and-used-rtx-5090-price-history-and-specs/) — Historial de precios nuevos y de segunda mano en EE. UU. usado para el dato de precios de julio de 2026.',
+          '[Best Value GPU — Rastreadores de precios RTX 5090 / 4090 / 4080 Super](https://bestvaluegpu.com/history/new-and-used-rtx-5090-price-history-and-specs/) — Historial de precios nuevos y de segunda mano en EE. UU. usado para el dato de precios.',
           '[Especificaciones AMD Radeon](https://www.amd.com/en/products/graphics/desktops/radeon.html) — Cifras oficiales de VRAM y consumo para la RX 7800 XT y RX 6700 XT.',
           '[Mejores GPUs para LLMs locales 2026](/es/local-llms/best-gpus-for-local-llms) — Pruebas de hardware de PromptQuorum: velocidades de inferencia medidas de 7B Q4 para la RTX 3060, 4080, 4090 y 5090.',
         ],
@@ -3487,7 +3487,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '¿Por qué los precios de GPU son tan altos en 2026?',
-            a: 'Una escasez de chips de memoria impulsó la subida de precios de GPU de 2026. El suministro de GDDR y HBM se ajustó, elevando el costo de cada tarjeta gráfica con memoria rápida, y las tarjetas de alta VRAM capaces de LLMs fueron las más afectadas. Para julio de 2026, la mayoría de las tarjetas se venden entre 1,5 y 2 veces por encima de su precio de lista original — una RTX 5090 se lanzó a $1.999 pero se vende cerca de $3.950. El mercado de segunda mano evitó la mayor parte del aumento.',
+            a: 'Una escasez de chips de memoria impulsó la subida de precios de GPU de 2026. El suministro de GDDR y HBM se ajustó, elevando el costo de cada tarjeta gráfica con memoria rápida, y las tarjetas de alta VRAM capaces de LLMs fueron las más afectadas. La mayoría de las tarjetas se venden entre 1,5 y 2 veces por encima de su precio de lista original — una RTX 5090 se lanzó a $1.999 pero se vende cerca de $3.950. El mercado de segunda mano evitó la mayor parte del aumento.',
           },
           {
             q: '¿Cuánta VRAM necesito para LLMs locales?',
@@ -3557,7 +3557,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'Melhores GPUs para LLMs locais: guia de compra completo 2026',
     seoTitle: 'Melhor GPU para LLMs locais 2026: do básico ao RTX 5090',
     intro:
-      'A maioria dos conselhos sobre GPUs para LLMs locais otimiza o número errado. A velocidade em tokens por segundo decide a rapidez com que um modelo responde, mas a VRAM decide se o modelo executa — e um modelo que não cabe na memória é infinitamente mais lento do que um que cabe. Este guia compara oito GPUs de consumo em quatro faixas de preço pelos números que realmente determinam uma compra: capacidade de VRAM, velocidade de inferência medida, consumo de energia e preço. Uma ressalva sobre o preço: os preços de GPUs dispararam em 2026 devido a uma escassez de memória, e as placas agora são vendidas de 1,5 a 2 vezes acima do preço de lista original — cada preço aqui é uma captura de julho de 2026, então confirme o preço atual antes de comprar.',
+      'A maioria dos conselhos sobre GPUs para LLMs locais otimiza o número errado. A velocidade em tokens por segundo decide a rapidez com que um modelo responde, mas a VRAM decide se o modelo executa — e um modelo que não cabe na memória é infinitamente mais lento do que um que cabe. Este guia compara oito GPUs de consumo em quatro faixas de preço pelos números que realmente determinam uma compra: capacidade de VRAM, velocidade de inferência medida, consumo de energia e preço. Uma ressalva sobre o preço: os preços de GPUs dispararam em 2026 devido a uma escassez de memória, e as placas agora são vendidas de 1,5 a 2 vezes acima do preço de lista original — cada preço aqui é uma captura, então confirme o preço atual antes de comprar.',
     metaDescription:
       'Oito GPUs comparadas para LLMs locais em 4 orçamentos: RTX 3060 ao RTX 5090. VRAM, tokens/s, consumo de energia e preços atuais — com o tamanho de modelo que cada faixa executa.',
     heroImage: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-pt.webp',
@@ -3634,7 +3634,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '**A VRAM é a restrição determinante.** Um modelo que não cabe na VRAM falha ao carregar ou transborda para a RAM do sistema e fica lento demais para uso interativo. Escolha a faixa cuja VRAM se encaixa no seu modelo alvo e depois otimize a velocidade dentro dessa faixa.',
-          '**Os preços dispararam em 2026.** Uma escassez de memória empurrou os preços de GPU de 1,5 a 2 vezes acima do preço de lista em todos os mercados — uma RTX 5090 custa ~$3.949, não seu preço de lançamento de $1.999. Trate cada preço aqui como uma captura de julho de 2026 e prefira o mercado de usados.',
+          '**Os preços dispararam em 2026.** Uma escassez de memória empurrou os preços de GPU de 1,5 a 2 vezes acima do preço de lista em todos os mercados — uma RTX 5090 custa ~$3.949, não seu preço de lançamento de $1.999. Trate cada preço aqui como uma captura e prefira o mercado de usados.',
           '**Escolha econômica: NVIDIA RTX 3060 12 GB** ($150–250 usada, $350–680 nova) — executa qualquer modelo 7B a 15–20 tok/s e a maioria dos modelos 13B em Q4. O melhor ponto de entrada em termos de custo-benefício para LLMs locais em 2026.',
           '**Escolha intermediária: NVIDIA RTX 4060 Ti 16 GB** (~$424 nova, $290 usada) — 16 GB de VRAM lida com modelos 14B com margem de contexto, e é a GPU mais próxima do preço de lista, então o aumento de preços a afetou menos.',
           '**Escolha de alta faixa: NVIDIA RTX 4080 Super 16 GB** (~$1.100–1.200) — a placa de 16 GB mais rápida e, após os movimentos de preço de 2026, custa aproximadamente o mesmo que a RTX 4070 Ti Super mais lenta ($1.179).',
@@ -3689,7 +3689,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Como as oito GPUs se comparam para LLMs locais em 2026',
         content:
-          'As cifras de VRAM e consumo de energia são especificações do fabricante. As velocidades de inferência para a RTX 3060, RTX 4080 Super, RTX 4090 e RTX 5090 são valores medidos de 7B Q4 dos testes de hardware do PromptQuorum; os valores para a RTX 4060 Ti 16 GB, RX 7800 XT e RTX 4070 Ti Super são estimativas a nível de família. Os preços são uma captura de julho de 2026 nos EUA — a escassez de memória de 2026 os empurrou de 1,5 a 2 vezes acima do preço de lista, então verifique antes de comprar.',
+          'As cifras de VRAM e consumo de energia são especificações do fabricante. As velocidades de inferência para a RTX 3060, RTX 4080 Super, RTX 4090 e RTX 5090 são valores medidos de 7B Q4 dos testes de hardware do PromptQuorum; os valores para a RTX 4060 Ti 16 GB, RX 7800 XT e RTX 4070 Ti Super são estimativas a nível de família. Os preços são uma captura dos EUA — a escassez de memória de 2026 os empurrou de 1,5 a 2 vezes acima do preço de lista, então verifique antes de comprar.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -3769,7 +3769,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         ],
         image: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-pt.webp',
         imageCaption:
-          'Oito GPUs de consumo para LLMs locais comparadas por VRAM, velocidade de inferência 7B Q4, consumo de energia e preço de julho de 2026 em quatro faixas de orçamento. A VRAM sobe de 12 GB (RTX 3060) a 32 GB (RTX 5090); compre pelo tamanho de modelo que você precisa antes de otimizar a velocidade.',
+          'Oito GPUs de consumo para LLMs locais comparadas por VRAM, velocidade de inferência 7B Q4, consumo de energia e preço em quatro faixas de orçamento. A VRAM sobe de 12 GB (RTX 3060) a 32 GB (RTX 5090); compre pelo tamanho de modelo que você precisa antes de otimizar a velocidade.',
       },
       whichGpu: {
         id: 'which-gpu',
@@ -3958,7 +3958,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Os preços de GPU subiram acentuadamente em 2026 devido a uma escassez de memória, empurrando as placas de consumo de 1,5 a 2 vezes acima do preço de lista original.** Isso muda o cálculo de compra, então planeje em torno disso em vez de em torno dos preços de lançamento.',
         items: [
           '**A causa é a memória, não as GPUs.** Uma escassez de fornecimento de GDDR e HBM elevou o custo de cada placa com memória rápida — e as GPUs capazes de LLMs são exatamente as placas de alta VRAM mais afetadas.',
-          '**A RTX 5090 é o exemplo mais claro:** preço de lançamento de $1.999, mas ~$3.949 no varejo em julho de 2026 — quase o dobro.',
+          '**A RTX 5090 é o exemplo mais claro:** preço de lançamento de $1.999, mas ~$3.949 no varejo — quase o dobro.',
           '**As placas de gama baixa resistiram melhor.** A RTX 4060 Ti 16 GB permanece próxima do seu MSRP de $399; o aumento escala com a quantidade de memória rápida que uma placa carrega.',
           '**O mercado de usados é agora o jogo de valor.** Uma RTX 3060 12 GB ou RX 6700 XT usada escapa da maior parte do aumento — os preços usados subiram muito menos do que os novos.',
           '**Decisão:** se você pode esperar, observe se a escassez diminui; se não pode, compre usado onde possível e compre a menor placa que se encaixe no seu modelo alvo.',
@@ -4014,7 +4014,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'Devido ao aumento de 2026, cada cifra de preço neste guia é uma captura de movimento rápido de julho de 2026. Sempre abra o anúncio atual do varejista antes de comprar — os preços se moveram semana a semana.',
+            text: 'Devido ao aumento de 2026, cada cifra de preço neste guia é uma captura de movimento rápido. Sempre abra o anúncio atual do varejista antes de comprar — os preços se moveram semana a semana.',
           },
         ],
         affiliateLinks: [
@@ -4070,7 +4070,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[Especificações NVIDIA GeForce RTX Série 40](https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/) — Cifras oficiais de capacidade de VRAM e consumo (TGP) para a RTX 4060 Ti, 4070 Ti Super, 4080 Super e 4090.',
           '[Especificações NVIDIA GeForce RTX 5090](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/) — Cifras oficiais de 32 GB de VRAM GDDR7 e 575 W de consumo para a RTX 5090.',
-          '[Best Value GPU — Rastreadores de preço RTX 5090 / 4090 / 4080 Super](https://bestvaluegpu.com/history/new-and-used-rtx-5090-price-history-and-specs/) — Histórico de preços novos e usados nos EUA usado para a captura de preços de julho de 2026.',
+          '[Best Value GPU — Rastreadores de preço RTX 5090 / 4090 / 4080 Super](https://bestvaluegpu.com/history/new-and-used-rtx-5090-price-history-and-specs/) — Histórico de preços novos e usados nos EUA usado para a captura de preços.',
           '[Especificações AMD Radeon](https://www.amd.com/en/products/graphics/desktops/radeon.html) — Cifras oficiais de VRAM e consumo para a RX 7800 XT e RX 6700 XT.',
           '[Melhores GPUs para LLMs locais 2026](/local-llms/best-gpus-for-local-llms) — Testes de hardware do PromptQuorum: velocidades de inferência medidas de 7B Q4 para a RTX 3060, 4080, 4090 e 5090.',
         ],
@@ -4085,7 +4085,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Por que os preços de GPU estão tão altos em 2026?',
-            a: 'Uma escassez de chips de memória impulsionou o aumento de preços de GPU de 2026. O fornecimento de GDDR e HBM ficou restrito, elevando o custo de cada placa gráfica com memória rápida, e as placas de alta VRAM capazes de LLMs foram as mais afetadas. Em julho de 2026, a maioria das placas é vendida de 1,5 a 2 vezes acima do preço de lista original — uma RTX 5090 foi lançada a $1.999, mas está sendo vendida perto de $3.950. O mercado de usados escapou da maior parte do aumento.',
+            a: 'Uma escassez de chips de memória impulsionou o aumento de preços de GPU de 2026. O fornecimento de GDDR e HBM ficou restrito, elevando o custo de cada placa gráfica com memória rápida, e as placas de alta VRAM capazes de LLMs foram as mais afetadas. A maioria das placas é vendida de 1,5 a 2 vezes acima do preço de lista original — uma RTX 5090 foi lançada a $1.999, mas está sendo vendida perto de $3.950. O mercado de usados escapou da maior parte do aumento.',
           },
           {
             q: 'Quanta VRAM preciso para LLMs locais?',
@@ -4155,7 +4155,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: 'أفضل وحدات معالجة الرسومات لنماذج اللغة المحلية: دليل الشراء الشامل ⁨2026⁩',
     seoTitle: 'أفضل ⁨GPU⁩ لـ ⁨LLM⁩ المحلية ⁨2026⁩: ⁨RTX 3060⁩ إلى ⁨5090⁩',
     intro:
-      'تُحسِّن معظم النصائح المتعلقة بوحدات معالجة الرسومات للنماذج اللغوية المحلية الرقم الخاطئ. سرعة الرموز في الثانية تحدد مدى سرعة استجابة النموذج، لكن VRAM تحدد ما إذا كان النموذج يُشغَّل أصلاً — ونموذج لا يناسب الذاكرة أبطأ من نموذج يناسبها بما لا يُقاس. يقارن هذا الدليل ثماني وحدات معالجة رسومات استهلاكية في أربع فئات سعرية من حيث الأرقام التي تُحدد الشراء فعلاً: سعة VRAM وسرعة الاستدلال المقاسة واستهلاك الطاقة والسعر. تحذير بشأن الأسعار: ارتفعت أسعار وحدات معالجة الرسومات بشكل حاد في 2026 بسبب نقص الذاكرة، وتُباع البطاقات الآن بما يتراوح بين 1.5 و2 ضعف سعر قائمتها الأصلية — كل سعر هنا هو صورة من يوليو 2026، لذا تأكد من السعر الحالي قبل الشراء.',
+      'تُحسِّن معظم النصائح المتعلقة بوحدات معالجة الرسومات للنماذج اللغوية المحلية الرقم الخاطئ. سرعة الرموز في الثانية تحدد مدى سرعة استجابة النموذج، لكن VRAM تحدد ما إذا كان النموذج يُشغَّل أصلاً — ونموذج لا يناسب الذاكرة أبطأ من نموذج يناسبها بما لا يُقاس. يقارن هذا الدليل ثماني وحدات معالجة رسومات استهلاكية في أربع فئات سعرية من حيث الأرقام التي تُحدد الشراء فعلاً: سعة VRAM وسرعة الاستدلال المقاسة واستهلاك الطاقة والسعر. تحذير بشأن الأسعار: ارتفعت أسعار وحدات معالجة الرسومات بشكل حاد في 2026 بسبب نقص الذاكرة، وتُباع البطاقات الآن بما يتراوح بين 1.5 و2 ضعف سعر قائمتها الأصلية — كل سعر هنا هو صورة، لذا تأكد من السعر الحالي قبل الشراء.',
     metaDescription:
       '8 وحدات GPU مقارَنة عبر 4 ميزانيات لنماذج LLM المحلية: VRAM والرموز في الثانية واستهلاك الطاقة والأسعار الحالية. RTX 3060 حتى RTX 5090.',
     heroImage: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-ar.webp',
@@ -4232,7 +4232,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '**VRAM هو القيد الحاسم.** نموذج لا يناسب VRAM يفشل في التحميل أو يفيض إلى RAM النظام ويصبح بطيئاً جداً للاستخدام التفاعلي. اختر الفئة التي تناسب VRAM نموذجك المستهدف ثم حسّن السرعة ضمن تلك الفئة.',
-          '**الأسعار ارتفعت بشكل حاد في 2026.** دفع نقص الذاكرة أسعار GPU بين 1.5 و2 ضعف سعر القائمة في جميع الأسواق — RTX 5090 تكلف نحو 3949 دولاراً لا سعر إطلاقها البالغ 1999 دولاراً. تعامل مع كل سعر هنا كصورة من يوليو 2026 واعتمد على سوق المستعمل.',
+          '**الأسعار ارتفعت بشكل حاد في 2026.** دفع نقص الذاكرة أسعار GPU بين 1.5 و2 ضعف سعر القائمة في جميع الأسواق — RTX 5090 تكلف نحو 3949 دولاراً لا سعر إطلاقها البالغ 1999 دولاراً. تعامل مع كل سعر هنا كصورة واعتمد على سوق المستعمل.',
           '**الاختيار الاقتصادي: NVIDIA RTX 3060 12 GB** (150–250 دولاراً مستعملة، 350–680 دولاراً جديدة) — تُشغّل أي نموذج 7B بـ15–20 رمز/ثانية ومعظم نماذج 13B بـQ4. أفضل نقطة دخول من حيث القيمة للنماذج اللغوية المحلية في 2026.',
           '**الاختيار المتوسط: NVIDIA RTX 4060 Ti 16 GB** (نحو 424 دولاراً جديدة، 290 دولاراً مستعملة) — 16 جيجابايت VRAM يتعامل مع نماذج 14B مع هامش سياق، وهي GPU الأقرب لسعر قائمتها لذا أثّر ارتفاع الأسعار فيها أقل.',
           '**الاختيار عالي الفئة: NVIDIA RTX 4080 Super 16 GB** (نحو 1100–1200 دولاراً) — أسرع بطاقة بـ16 جيجابايت، وبعد تحركات أسعار 2026 تكلف تقريباً نفس تكلفة RTX 4070 Ti Super الأبطأ (1179 دولاراً).',
@@ -4287,7 +4287,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'كيف تتقارن الـ8 وحدات معالجة رسومات للنماذج اللغوية المحلية في 2026؟',
         content:
-          'اختُبرت على Llama 4 Scout وQwen3 8B. الأسعار صورة من يوليو 2026 — تحقق من الأسعار الحالية قبل الشراء. الأرقام وسيط ثلاث تشغيلات بـQ4_K_M، حجم سياق 4096 رمزاً.',
+          'اختُبرت على Llama 4 Scout وQwen3 8B. الأسعار صورة — تحقق من الأسعار الحالية قبل الشراء. الأرقام وسيط ثلاث تشغيلات بـQ4_K_M، حجم سياق 4096 رمزاً.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -4298,16 +4298,16 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'وحدة معالجة الرسومات لها نوعان من الذاكرة: VRAM (ذاكرتها الخاصة) وRAM النظام المنتظمة. النموذج اللغوي يجب أن يناسب VRAM كلياً حتى يُشغَّل بسرعة — إذا لم يناسب، ينهار الأداء. اختر أولاً الفئة التي تناسب VRAM نموذجك المستهدف ثم اختر الأسرع في تلك الفئة.',
           },
         ],
-        columns: ['وحدة معالجة الرسومات', 'VRAM', 'رمز/ثانية 7B', 'رمز/ثانية 14B', 'TDP', 'السعر (يوليو 2026)'],
+        columns: ['وحدة معالجة الرسومات', 'VRAM', 'رمز/ثانية 7B', 'رمز/ثانية 14B', 'TDP', 'السعر '],
         rows: [
-          { 'وحدة معالجة الرسومات': 'RTX 3060 12GB', 'VRAM': '12 GB', 'رمز/ثانية 7B': '15–20', 'رمز/ثانية 14B': '8–11 (حد Q4)', 'TDP': '170 واط', 'السعر (يوليو 2026)': '~350–680 دولاراً (جديدة)' },
-          { 'وحدة معالجة الرسومات': 'RX 6700 XT 12GB', 'VRAM': '12 GB', 'رمز/ثانية 7B': '12–16', 'رمز/ثانية 14B': '6–9 (حد Q4)', 'TDP': '230 واط', 'السعر (يوليو 2026)': '~200–380 دولاراً' },
-          { 'وحدة معالجة الرسومات': 'RTX 4060 Ti 16GB', 'VRAM': '16 GB', 'رمز/ثانية 7B': '20–25', 'رمز/ثانية 14B': '12–15', 'TDP': '165 واط', 'السعر (يوليو 2026)': '~424 دولاراً' },
-          { 'وحدة معالجة الرسومات': 'RX 7800 XT 16GB', 'VRAM': '16 GB', 'رمز/ثانية 7B': '17–22', 'رمز/ثانية 14B': '10–13', 'TDP': '263 واط', 'السعر (يوليو 2026)': '~500–600 دولاراً' },
-          { 'وحدة معالجة الرسومات': 'RTX 4070 Ti Super 16GB', 'VRAM': '16 GB', 'رمز/ثانية 7B': '30–38', 'رمز/ثانية 14B': '18–22', 'TDP': '285 واط', 'السعر (يوليو 2026)': '~1179 دولاراً' },
-          { 'وحدة معالجة الرسومات': 'RTX 4080 Super 16GB', 'VRAM': '16 GB', 'رمز/ثانية 7B': '35–43', 'رمز/ثانية 14B': '20–26', 'TDP': '320 واط', 'السعر (يوليو 2026)': '~1100–1200 دولاراً' },
-          { 'وحدة معالجة الرسومات': 'RTX 4090 24GB', 'VRAM': '24 GB', 'رمز/ثانية 7B': '55–65', 'رمز/ثانية 14B': '33–40', 'TDP': '450 واط', 'السعر (يوليو 2026)': '~2480–2755 دولاراً' },
-          { 'وحدة معالجة الرسومات': 'RTX 5090 32GB', 'VRAM': '32 GB', 'رمز/ثانية 7B': '70–85', 'رمز/ثانية 14B': '42–52', 'TDP': '575 واط', 'السعر (يوليو 2026)': '~3949 دولاراً' },
+          { 'وحدة معالجة الرسومات': 'RTX 3060 12GB', 'VRAM': '12 GB', 'رمز/ثانية 7B': '15–20', 'رمز/ثانية 14B': '8–11 (حد Q4)', 'TDP': '170 واط', 'السعر ': '~350–680 دولاراً (جديدة)' },
+          { 'وحدة معالجة الرسومات': 'RX 6700 XT 12GB', 'VRAM': '12 GB', 'رمز/ثانية 7B': '12–16', 'رمز/ثانية 14B': '6–9 (حد Q4)', 'TDP': '230 واط', 'السعر ': '~200–380 دولاراً' },
+          { 'وحدة معالجة الرسومات': 'RTX 4060 Ti 16GB', 'VRAM': '16 GB', 'رمز/ثانية 7B': '20–25', 'رمز/ثانية 14B': '12–15', 'TDP': '165 واط', 'السعر ': '~424 دولاراً' },
+          { 'وحدة معالجة الرسومات': 'RX 7800 XT 16GB', 'VRAM': '16 GB', 'رمز/ثانية 7B': '17–22', 'رمز/ثانية 14B': '10–13', 'TDP': '263 واط', 'السعر ': '~500–600 دولاراً' },
+          { 'وحدة معالجة الرسومات': 'RTX 4070 Ti Super 16GB', 'VRAM': '16 GB', 'رمز/ثانية 7B': '30–38', 'رمز/ثانية 14B': '18–22', 'TDP': '285 واط', 'السعر ': '~1179 دولاراً' },
+          { 'وحدة معالجة الرسومات': 'RTX 4080 Super 16GB', 'VRAM': '16 GB', 'رمز/ثانية 7B': '35–43', 'رمز/ثانية 14B': '20–26', 'TDP': '320 واط', 'السعر ': '~1100–1200 دولاراً' },
+          { 'وحدة معالجة الرسومات': 'RTX 4090 24GB', 'VRAM': '24 GB', 'رمز/ثانية 7B': '55–65', 'رمز/ثانية 14B': '33–40', 'TDP': '450 واط', 'السعر ': '~2480–2755 دولاراً' },
+          { 'وحدة معالجة الرسومات': 'RTX 5090 32GB', 'VRAM': '32 GB', 'رمز/ثانية 7B': '70–85', 'رمز/ثانية 14B': '42–52', 'TDP': '575 واط', 'السعر ': '~3949 دولاراً' },
         ],
       },
       whichGpu: {
@@ -4454,14 +4454,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**أدى نقص رقائق الذاكرة إلى ارتفاع أسعار GPU بين 1.5 و2 ضعف في عام 2026.** تقييد إمدادات GDDR وHBM رفع تكلفة كل بطاقة رسومية بذاكرة سريعة، والبطاقات عالية VRAM القادرة على النماذج اللغوية كانت الأكثر تأثراً.',
         items: [
           '**السبب:** نقص رقائق الذاكرة GDDR6X/GDDR7 ضرب المصنّعين في 2025–2026، مما رفع تكلفة المواد لجميع البطاقات الرسومية عالية VRAM.',
-          '**الأثر:** في يوليو 2026، RTX 5090 (~3949 دولاراً) أغلى بضعف من سعر إطلاقها (1999 دولاراً). أسعار RTX 4090 و4080 Super ارتفعت بنسبة 40–60%.',
+          '**الأثر:** حاليًا، RTX 5090 (~3949 دولاراً) أغلى بضعف من سعر إطلاقها (1999 دولاراً). أسعار RTX 4090 و4080 Super ارتفعت بنسبة 40–60%.',
           '**سوق المستعمل:** تأثر بشكل أقل حيث البطاقات الأقدم كانت تُباع بالفعل بأسعار عادلة. RTX 3060 مستعملة (150–250 دولاراً) تبقى قيمة استثنائية.',
           '**التوقعات:** الارتفاع قد يتراجع مع تحسن إمدادات الذاكرة. تحقق من الأسعار الحالية بانتظام ولا تتعجل الشراء إذا كانت الحاجة ليست فورية.',
         ],
         callouts: [
           {
             type: 'warning',
-            text: 'كل سعر في هذا الدليل هو صورة من يوليو 2026. قبل الشراء، تحقق من السعر الحالي على Amazon أو Newegg أو موزع محلي — الأسعار تتغير أسبوعياً.',
+            text: 'كل سعر في هذا الدليل هو صورة. قبل الشراء، تحقق من السعر الحالي على Amazon أو Newegg أو موزع محلي — الأسعار تتغير أسبوعياً.',
           },
         ],
       },
@@ -4491,7 +4491,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'where-to-buy',
         title: 'الأسعار الإقليمية وأين تشتري',
         content:
-          '**أسعار GPU تتفاوت بين الأسواق. في يوليو 2026، الأسعار الأمريكية كانت مرجعاً ولكن الأسواق الأوروبية والآسيوية تختلف.** تحقق دائماً من السعر المحلي.',
+          '**أسعار GPU تتفاوت بين الأسواق. الأسعار الأمريكية كانت مرجعاً ولكن الأسواق الأوروبية والآسيوية تختلف.** تحقق دائماً من السعر المحلي.',
         items: [
           '**الولايات المتحدة:** Amazon وNewegg وBest Buy هي المصادر الرئيسية. eBay وSwappa للمستعمل.',
           '**أوروبا:** Amazon.de وAmazon.fr وMedia Markt وCoolblue. إضافة ضريبة القيمة المضافة (20–25%) على الأسعار الأمريكية.',
@@ -4502,7 +4502,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: 'كل رقم سعر في هذا الدليل صورة من يوليو 2026. الأسعار تتغير أسبوعياً — تحقق من السعر الحالي على موقع المورّد قبل الشراء.',
+            text: 'كل رقم سعر في هذا الدليل صورة. الأسعار تتغير أسبوعياً — تحقق من السعر الحالي على موقع المورّد قبل الشراء.',
           },
         ],
         affiliateLinks: [
@@ -4521,7 +4521,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '**الشراء بحسب السرعة بدلاً من VRAM.** GPU سريعة بـ8 جيجابايت لا تستطيع تشغيل نموذج 14B على الإطلاق — GPU أبطأ بـ16 جيجابايت ستتفوق عليها دائماً لذلك النموذج. VRAM أولاً.',
           '**إغفال حساب VRAM للنموذج المستهدف.** نموذج 7B بـQ4_K_M يحتاج 8–9 جيجابايت، لكن نموذج 14B يحتاج 11–13 جيجابايت. لا تفترض — احسب بنفسك: ~0.6 جيجابايت × عدد المليارات + 2–4 جيجابايت overhead.',
-          '**التمسك بأسعار قائمة 2026 المبكرة أو الإطلاق.** RTX 5090 أُطلقت بـ1999 دولاراً لكن تُباع بـ~3949 دولاراً في يوليو 2026. دائماً تحقق من السعر الحالي لا سعر الإطلاق.',
+          '**التمسك بأسعار قائمة 2026 المبكرة أو الإطلاق.** RTX 5090 أُطلقت بـ1999 دولاراً لكن تُباع بـ~3949 دولاراً حاليًا. دائماً تحقق من السعر الحالي لا سعر الإطلاق.',
           '**تجاهل AMD ROCm overhead.** GPU من AMD بنفس VRAM عادةً أرخص، لكن إعداد ROCm على Linux يستغرق عادةً 2–5 ساعات. إذا لم تكن مرتاحاً لـLinux drivers، اختر NVIDIA.',
           '**إغفال متطلبات وحدة الطاقة.** RTX 5090 (575 واطاً) تحتاج وحدة طاقة 850–1000 واط. إذا كانت وحدتك 650 واطاً، تحتاج ترقية أيضاً — أضف تلك التكلفة للميزانية.',
           '**الشراء قبل التحقق من الأسعار الحالية.** ارتفاع 2026 جعل الأسعار متقلبة. ما كان بـ800 دولاراً قبل 6 أشهر قد يكون الآن بـ1200 دولار أو بـ700 دولار.',
@@ -4548,7 +4548,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'لماذا أسعار GPU مرتفعة جداً في 2026؟',
-            a: 'أدى نقص رقائق الذاكرة إلى ارتفاع أسعار GPU في 2026. انخفض إمداد GDDR وHBM مما رفع تكلفة كل بطاقة رسومية بذاكرة سريعة، والبطاقات عالية VRAM القادرة على النماذج اللغوية كانت الأكثر تأثراً. في يوليو 2026، معظم البطاقات تُباع بـ1.5 إلى 2 ضعف سعر قائمتها الأصلية — RTX 5090 أُطلقت بـ1999 دولاراً لكن تُباع بنحو 3950 دولاراً. سوق المستعمل تأثر بشكل أقل.',
+            a: 'أدى نقص رقائق الذاكرة إلى ارتفاع أسعار GPU في 2026. انخفض إمداد GDDR وHBM مما رفع تكلفة كل بطاقة رسومية بذاكرة سريعة، والبطاقات عالية VRAM القادرة على النماذج اللغوية كانت الأكثر تأثراً. معظم البطاقات تُباع بـ1.5 إلى 2 ضعف سعر قائمتها الأصلية — RTX 5090 أُطلقت بـ1999 دولاراً لكن تُباع بنحو 3950 دولاراً. سوق المستعمل تأثر بشكل أقل.',
           },
           {
             q: 'كم VRAM أحتاج للنماذج اللغوية المحلية؟',
@@ -4618,7 +4618,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     title: '로컬 LLM용 최고의 GPU: 2026년 완전 구매 가이드',
     seoTitle: '로컬 LLM용 최고의 GPU 2026: 보급형부터 RTX 5090까지',
     intro:
-      '로컬 LLM용 GPU 관련 조언의 대부분은 잘못된 수치를 최적화하고 있습니다. 초당 토큰 속도는 모델이 얼마나 빠르게 응답하는지를 결정하지만, VRAM은 모델이 실행될 수 있는지 여부를 결정합니다. 메모리에 맞지 않는 모델은 맞는 모델보다 무한히 느립니다. 이 가이드는 실제 구매 결정을 좌우하는 수치인 VRAM 용량, 측정된 추론 속도, 전력 소비, 가격에 따라 네 가지 가격대에서 8개의 소비자용 GPU를 비교합니다. 가격에 관한 주의 사항: 2026년에는 메모리 공급 부족으로 인해 GPU 가격이 급등하여 현재 카드들이 원래 출시 가격보다 1.5~2배에 판매되고 있습니다. 여기의 모든 가격은 2026년 7월 기준 데이터이므로, 구매 전 현재 가격을 반드시 확인하십시오.',
+      '로컬 LLM용 GPU 관련 조언의 대부분은 잘못된 수치를 최적화하고 있습니다. 초당 토큰 속도는 모델이 얼마나 빠르게 응답하는지를 결정하지만, VRAM은 모델이 실행될 수 있는지 여부를 결정합니다. 메모리에 맞지 않는 모델은 맞는 모델보다 무한히 느립니다. 이 가이드는 실제 구매 결정을 좌우하는 수치인 VRAM 용량, 측정된 추론 속도, 전력 소비, 가격에 따라 네 가지 가격대에서 8개의 소비자용 GPU를 비교합니다. 가격에 관한 주의 사항: 2026년에는 메모리 공급 부족으로 인해 GPU 가격이 급등하여 현재 카드들이 원래 출시 가격보다 1.5~2배에 판매되고 있습니다. 여기의 모든 가격은 데이터이므로, 구매 전 현재 가격을 반드시 확인하십시오.',
     metaDescription:
       '4가지 예산별로 로컬 LLM용 8개 GPU 비교: RTX 3060부터 RTX 5090까지. VRAM, 토큰/초, 전력 소비, 현재 가격 — 각 등급에서 실행 가능한 모델 크기 포함.',
     heroImage: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-ko.webp',
@@ -4695,7 +4695,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         isTldr: true,
         items: [
           '**VRAM이 결정적인 제약 조건입니다.** VRAM에 맞지 않는 모델은 로드에 실패하거나 시스템 RAM으로 넘쳐 대화형 사용에 너무 느려집니다. 목표 모델에 맞는 VRAM을 가진 등급을 선택한 후, 해당 등급 내에서 속도를 최적화하십시오.',
-          '**2026년에 가격이 급등했습니다.** 메모리 공급 부족으로 모든 시장에서 소비자용 GPU 가격이 출시 가격보다 1.5~2배 상승했습니다. RTX 5090은 $3,949에 판매되고 있으며, 출시 가격인 $1,999가 아닙니다. 여기의 모든 가격을 2026년 7월 데이터로 취급하고 중고 시장을 적극 활용하십시오.',
+          '**2026년에 가격이 급등했습니다.** 메모리 공급 부족으로 모든 시장에서 소비자용 GPU 가격이 출시 가격보다 1.5~2배 상승했습니다. RTX 5090은 $3,949에 판매되고 있으며, 출시 가격인 $1,999가 아닙니다. 여기의 모든 가격을 데이터로 취급하고 중고 시장을 적극 활용하십시오.',
           '**보급형 추천: NVIDIA RTX 3060 12 GB** (중고 $150-250, 신품 $350-680) — 7B 모델을 15-20 토큰/초로 실행하고 Q4에서 대부분의 13B 모델도 처리합니다. 2026년 로컬 LLM 입문으로 최고의 가성비입니다.',
           '**중급형 추천: NVIDIA RTX 4060 Ti 16 GB** (신품 ~$424, 중고 $290) — 16 GB VRAM으로 여유 있는 컨텍스트와 함께 14B 모델을 해결하며, 가격 급등의 영향을 가장 적게 받은 GPU입니다.',
           '**고급형 추천: NVIDIA RTX 4080 Super 16 GB** (~$1,100-1,200) — 가장 빠른 16 GB 카드로, 2026년 가격 변동 후 더 느린 RTX 4070 Ti Super ($1,179)와 거의 같은 가격입니다.',
@@ -4750,7 +4750,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: '2026년 로컬 LLM용 8개 GPU 비교',
         content:
-          'VRAM과 전력 소비 수치는 제조사 사양입니다. RTX 3060, RTX 4080 Super, RTX 4090, RTX 5090의 추론 속도는 PromptQuorum 하드웨어 테스트에서 측정된 7B Q4 값이며, RTX 4060 Ti 16 GB, RX 7800 XT, RTX 4070 Ti Super의 수치는 제품군 수준 추정치입니다. 가격은 2026년 7월 미국 데이터입니다. 2026년 메모리 공급 부족으로 출시 가격의 1.5~2배에 판매되고 있으므로 구매 전 반드시 확인하십시오.',
+          'VRAM과 전력 소비 수치는 제조사 사양입니다. RTX 3060, RTX 4080 Super, RTX 4090, RTX 5090의 추론 속도는 PromptQuorum 하드웨어 테스트에서 측정된 7B Q4 값이며, RTX 4060 Ti 16 GB, RX 7800 XT, RTX 4070 Ti Super의 수치는 제품군 수준 추정치입니다. 가격은 미국 데이터입니다. 2026년 메모리 공급 부족으로 출시 가격의 1.5~2배에 판매되고 있으므로 구매 전 반드시 확인하십시오.',
         snippetBlocks: [
           {
             type: 'one-sentence',
@@ -4761,14 +4761,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             text: 'VRAM을 책상 크기로, 모델을 그 위에 올려놓는 것으로 생각하십시오. 더 빠른 GPU는 책상을 더 빨리 정리하지만, 모델이 책상에 전혀 맞지 않으면 속도는 아무 의미가 없습니다. 먼저 충분히 큰 책상을 가진 등급을 선택하십시오.',
           },
         ],
-        columns: ['GPU', 'VRAM', '속도 (7B Q4)', '전력 소비', '가격 (2026년 7월)', '적합 용도'],
+        columns: ['GPU', 'VRAM', '속도 (7B Q4)', '전력 소비', '가격 ()', '적합 용도'],
         rows: [
           {
             'GPU': 'RTX 3060 12 GB',
             'VRAM': '12 GB',
             '속도 (7B Q4)': '15-20 토큰/초',
             '전력 소비': '170 W',
-            '가격 (2026년 7월)': '신품 $350-680 / 중고 $150-250',
+            '가격 ()': '신품 $350-680 / 중고 $150-250',
             '적합 용도': '보급형 입문 — 7B 모델',
           },
           {
@@ -4776,7 +4776,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '12 GB',
             '속도 (7B Q4)': '10-14 토큰/초',
             '전력 소비': '230 W',
-            '가격 (2026년 7월)': '중고 $130-200 (신품 단종)',
+            '가격 ()': '중고 $130-200 (신품 단종)',
             '적합 용도': '가장 저렴한 VRAM, AMD 설정 감수',
           },
           {
@@ -4784,7 +4784,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '16 GB',
             '속도 (7B Q4)': '~20-25 토큰/초',
             '전력 소비': '165 W',
-            '가격 (2026년 7월)': '신품 $424 / 중고 $290',
+            '가격 ()': '신품 $424 / 중고 $290',
             '적합 용도': '중급형 — 14B 모델, 저전력',
           },
           {
@@ -4792,7 +4792,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '16 GB',
             '속도 (7B Q4)': '~18-24 토큰/초 (추정)',
             '전력 소비': '263 W',
-            '가격 (2026년 7월)': '신품 ~$480-520',
+            '가격 ()': '신품 ~$480-520',
             '적합 용도': 'AMD에서 16 GB, ROCm 설정 감수',
           },
           {
@@ -4800,7 +4800,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '16 GB',
             '속도 (7B Q4)': '~80-90 토큰/초 (추정)',
             '전력 소비': '285 W',
-            '가격 (2026년 7월)': '신품 $1,179 / 중고 $770',
+            '가격 ()': '신품 $1,179 / 중고 $770',
             '적합 용도': '14B 고속, 저전력 소비',
           },
           {
@@ -4808,7 +4808,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '16 GB',
             '속도 (7B Q4)': '~120 토큰/초',
             '전력 소비': '320 W',
-            '가격 (2026년 7월)': '신품 ~$1,100-1,200 / 중고 ~$900',
+            '가격 ()': '신품 ~$1,100-1,200 / 중고 ~$900',
             '적합 용도': '편집자 추천 — 가장 빠른 16 GB 카드',
           },
           {
@@ -4816,7 +4816,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '24 GB',
             '속도 (7B Q4)': '~150 토큰/초',
             '전력 소비': '450 W',
-            '가격 (2026년 7월)': '신품 $2,755 / 중고 ~$2,268',
+            '가격 ()': '신품 $2,755 / 중고 ~$2,268',
             '적합 용도': '33B 모델, 70B용 이중 GPU',
           },
           {
@@ -4824,13 +4824,13 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'VRAM': '32 GB',
             '속도 (7B Q4)': '~160 토큰/초',
             '전력 소비': '575 W',
-            '가격 (2026년 7월)': '신품 $3,949 / 중고 $3,999',
+            '가격 ()': '신품 $3,949 / 중고 $3,999',
             '적합 용도': '단일 GPU로 Q4에서 70B 실행',
           },
         ],
         image: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-ko.webp',
         imageCaption:
-          '4가지 예산 등급에서 VRAM, 7B Q4 추론 속도, 전력 소비, 2026년 7월 가격으로 비교한 로컬 LLM용 8개 소비자용 GPU. VRAM은 12 GB (RTX 3060)에서 32 GB (RTX 5090)까지 증가합니다. 속도를 최적화하기 전에 필요한 모델 크기에 맞는 카드를 먼저 구매하십시오.',
+          '4가지 예산 등급에서 VRAM, 7B Q4 추론 속도, 전력 소비, 가격으로 비교한 로컬 LLM용 8개 소비자용 GPU. VRAM은 12 GB (RTX 3060)에서 32 GB (RTX 5090)까지 증가합니다. 속도를 최적화하기 전에 필요한 모델 크기에 맞는 카드를 먼저 구매하십시오.',
       },
       whichGpu: {
         id: 'which-gpu',
@@ -5019,7 +5019,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**2026년에 메모리 공급 부족으로 GPU 가격이 크게 상승하여 소비자용 카드가 원래 출시 가격보다 1.5~2배 높게 판매되고 있습니다.** 이로 인해 구매 계산이 달라지므로, 출시 가격이 아닌 현실적인 가격을 기준으로 계획하십시오.',
         items: [
           '**원인은 GPU가 아니라 메모리입니다.** GDDR과 HBM 공급 부족으로 빠른 메모리를 탑재한 모든 카드의 비용이 상승했습니다. LLM 가능 GPU는 정확히 가장 많이 타격 받은 고VRAM 카드들입니다.',
-          '**RTX 5090이 가장 명확한 사례입니다:** 출시 가격 $1,999이지만 2026년 7월에 ~$3,949에 판매 중입니다 — 거의 두 배.',
+          '**RTX 5090이 가장 명확한 사례입니다:** 출시 가격 $1,999이지만 ~$3,949에 판매 중입니다 — 거의 두 배.',
           '**저가형 카드가 더 잘 버텼습니다.** RTX 4060 Ti 16 GB는 $399 출시 가격에 근접하게 유지되고 있습니다. 가격 급등은 카드가 탑재한 빠른 메모리 양에 비례합니다.',
           '**중고 시장이 이제 가성비 선택입니다.** 중고 RTX 3060 12 GB나 RX 6700 XT는 급등의 많은 부분을 피할 수 있습니다 — 중고 가격은 신품보다 훨씬 적게 상승했습니다.',
           '**결정:** 기다릴 수 있다면 공급 부족이 완화되는지 지켜보십시오. 그렇지 않다면 가능한 경우 중고로 구매하고 목표 모델에 맞는 가장 작은 카드를 구매하십시오.',
@@ -5075,7 +5075,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         callouts: [
           {
             type: 'warning',
-            text: '2026년 급등으로 인해 이 가이드의 모든 가격 수치는 2026년 7월에서 빠르게 변하는 데이터입니다. 구매 전 항상 소매업체의 현재 목록을 열어 확인하십시오 — 가격은 주별로 변동되었습니다.',
+            text: '2026년 급등으로 인해 이 가이드의 모든 가격 수치는 에서 빠르게 변하는 데이터입니다. 구매 전 항상 소매업체의 현재 목록을 열어 확인하십시오 — 가격은 주별로 변동되었습니다.',
           },
         ],
         affiliateLinks: [
@@ -5131,7 +5131,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         items: [
           '[NVIDIA GeForce RTX 40 시리즈 사양](https://www.nvidia.com/en-us/geforce/graphics-cards/40-series/) — RTX 4060 Ti, 4070 Ti Super, 4080 Super, 4090의 공식 VRAM 용량 및 전력 소비 (TGP) 수치.',
           '[NVIDIA GeForce RTX 5090 사양](https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5090/) — RTX 5090의 공식 32 GB GDDR7 VRAM 및 575 W 전력 소비 수치.',
-          '[Best Value GPU — RTX 5090 / 4090 / 4080 Super 가격 추적기](https://bestvaluegpu.com/history/new-and-used-rtx-5090-price-history-and-specs/) — 2026년 7월 가격 데이터 포인트에 사용된 미국 신품 및 중고 가격 기록.',
+          '[Best Value GPU — RTX 5090 / 4090 / 4080 Super 가격 추적기](https://bestvaluegpu.com/history/new-and-used-rtx-5090-price-history-and-specs/) — 가격 데이터 포인트에 사용된 미국 신품 및 중고 가격 기록.',
           '[AMD Radeon 사양](https://www.amd.com/en/products/graphics/desktops/radeon.html) — RX 7800 XT 및 RX 6700 XT의 공식 VRAM 및 전력 수치.',
           '[2026년 로컬 LLM 최고의 GPU](/ko/local-llms/best-gpus-for-local-llms) — PromptQuorum 하드웨어 테스트: RTX 3060, 4080, 4090, 5090의 7B Q4 추론 속도 측정값.',
         ],
@@ -5146,7 +5146,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: '2026년에 GPU 가격이 왜 이렇게 높습니까?',
-            a: '메모리 칩 공급 부족이 2026년 GPU 가격 급등을 이끌었습니다. GDDR 및 HBM 공급이 타이트해져 빠른 메모리를 탑재한 모든 그래픽 카드의 비용이 상승했으며, LLM 가능 고VRAM 카드가 가장 많이 영향을 받았습니다. 2026년 7월까지 대부분의 카드가 원래 출시 가격의 1.5~2배에 판매됩니다 — RTX 5090은 $1,999에 출시되었지만 ~$3,950에 판매되고 있습니다. 중고 시장은 가격 인상의 대부분을 피했습니다.',
+            a: '메모리 칩 공급 부족이 2026년 GPU 가격 급등을 이끌었습니다. GDDR 및 HBM 공급이 타이트해져 빠른 메모리를 탑재한 모든 그래픽 카드의 비용이 상승했으며, LLM 가능 고VRAM 카드가 가장 많이 영향을 받았습니다. 대부분의 카드가 원래 출시 가격의 1.5~2배에 판매됩니다 — RTX 5090은 $1,999에 출시되었지만 ~$3,950에 판매되고 있습니다. 중고 시장은 가격 인상의 대부분을 피했습니다.',
           },
           {
             q: '로컬 LLM에 VRAM이 얼마나 필요합니까?',
@@ -5197,7 +5197,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: '로컬 LLM용 최고의 GPU: 2026년 완전 구매 가이드',
-      description: '4가지 예산별로 로컬 LLM용 8개 GPU 비교: RTX 3060부터 RTX 5090까지. VRAM, 초당 토큰, 전력 소비, 2026년 7월 가격 — 각 등급에서 실행되는 모델 크기 포함.',
+      description: '4가지 예산별로 로컬 LLM용 8개 GPU 비교: RTX 3060부터 RTX 5090까지. VRAM, 초당 토큰, 전력 소비, 가격 — 각 등급에서 실행되는 모델 크기 포함.',
       url: 'https://www.promptquorum.com/ko/power-local-llm/best-gpu-buying-guide-local-llm-2026',
       inLanguage: 'ko',
       datePublished: '2026-05-22',

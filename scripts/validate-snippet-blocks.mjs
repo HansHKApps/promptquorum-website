@@ -27,6 +27,13 @@
  *              language, which cannot be auto-generated, so blocking a commit
  *              would only push authors to --no-verify.
  *
+ * NOTE ON FIELD NAMES: the clusters are not consistent. prompt-engineering's
+ * PESection type declares `snippets` with 'in-one-sentence' / 'in-plain-terms',
+ * while every other cluster uses `snippetBlocks` with 'one-sentence' /
+ * 'plain-terms'. Checking only the latter reports prompt-engineering as 100%
+ * missing when it is not — its type does not even permit `snippetBlocks`, so a
+ * naive check is not just wrong, it points at a fix that would fail to compile.
+ *
  * Regex-based heuristic, not a parser — tuned to answer "does this locale
  * block declare both snippet types anywhere", which is what the rule asks.
  */
@@ -74,8 +81,10 @@ for (const file of files) {
   const missingHere = []
   for (const [loc, block] of localeBlocks(text)) {
     perLocale[loc].total++
-    const hasOne = block.includes("'one-sentence'")
-    const hasPlain = block.includes("'plain-terms'")
+    // prompt-engineering uses a different field + enum (see NOTE above)
+    const pe = file.includes('/prompt-engineering/')
+    const hasOne = block.includes(pe ? "'in-one-sentence'" : "'one-sentence'")
+    const hasPlain = block.includes(pe ? "'in-plain-terms'" : "'plain-terms'")
     if (!hasOne || !hasPlain) {
       perLocale[loc].missing++
       missingHere.push(loc)

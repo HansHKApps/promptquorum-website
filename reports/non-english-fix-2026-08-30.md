@@ -537,3 +537,71 @@ Recovery: verified `apple-silicon-local-llm-guide-2026.ts` was byte-identical on
 re-applied the edit and re-logged. All 11 changelog entries and the report are intact.
 
 **`e1e42e8b0` is another session's commit and was left untouched.**
+
+---
+
+# Outstanding-backlog pass, 2026-08-30 (later)
+
+## Month price-disclaimers in body prose — 2 worst pages DONE, site-wide NOT
+
+`local-llm-hardware-guide-2026.ts` **93 → 0** and `best-gpu-buying-guide-local-llm-2026.ts`
+**128 → 0**, across all 9 locales each (`912d324ef`).
+
+The `fr` block used `'Prix (juillet 2026)'` as **both** a table column header and the row key in
+8 rows. Renaming only the header would have silently emptied the column — all 9 were rekeyed
+together per the geo-translation table rule.
+
+**Site-wide: not done, and deliberately.** A tight pattern still matches **2,019 instances across
+205 files**, but that set mixes banned price disclaimers with legitimate scoped facts CLAUDE.md
+explicitly permits — "as of August 2026, GLM-5.2 leads open weights" is a fact, not a currency
+claim. Separating them needs per-case reading. Regexing 2,019 strings blind would damage correct
+content.
+
+## USD prices on localized buying guides — NOT fixable without data
+
+Web search returns **launch MSRPs and rumour** (RTX 5090 ¥18,999 launch, RTX 4090 ¥12,999, plus a
+conditional "could reach ¥35,000"), not verified current street prices — and this article's whole
+thesis is that street prices run 1.5–2x above MSRP. Publishing MSRP would contradict the page.
+
+Worth recording precisely: **de/fr/ja are genuinely localized**, with local tax basis
+(`3.659–3.889 € inkl. MwSt.`, `TTC`, `¥659,800 税込`). **es/pt/ko/zh/ar carry USD and already say
+so** ("US snapshot", "EE. UU.", "nos EUA", "미국 데이터"). So this is a localization gap, not a
+deception. Closing it needs a real per-market price source — affiliate feeds or a manual pull.
+
+## snippetBlocks — THE HEADLINE NUMBER WAS WRONG
+
+**1,818 was incorrect. The real figure is 1,532** (`4dadfd4e3`).
+
+The validator I shipped checked every cluster for `snippetBlocks` with
+`'one-sentence'`/`'plain-terms'`. **prompt-engineering does not use that field.** Its `PESection`
+type declares `snippets` with `'in-one-sentence'`/`'in-plain-terms'` and does not permit
+`snippetBlocks` at all.
+
+So "prompt-engineering 712/712 — an entire cluster that never adopted the convention" was wrong.
+It is **286 present / 426 missing**. The cluster adopted the convention under a different name.
+
+This mattered beyond the number: acting on the bad report, I added `snippetBlocks` to a PE article
+and it **failed to compile**. A wrong validator does not just misreport — it points at a fix that
+cannot work.
+
+| Cluster | was | now |
+|---|---|---|
+| prompt-bites | 669 | 669 |
+| prompt-engineering | 712 | **426** |
+| balcony-solar | 252 | 252 |
+| local-llms | 112 | 112 |
+| power-local-llm | 73 | 73 |
+| smart-home | 0 | 0 |
+| **total** | **1,818** | **1,532** |
+
+**Progress:** the highest-impression PE page, `context-windows-explained` (16,225 impressions),
+now has snippets in all 9 locales (`5114a2a90`). EN already had them; the 8 non-EN locales did not.
+
+Two structural notes found doing it:
+- That article is the **only one in the repo** keeping non-EN sections in a separate module
+  (`contextWindowsTranslations.ts`) — 8 of 4,597 locale blocks. The validator's article-file scan
+  cannot see them.
+- The PE renderer gates snippets on `!section.isTldr`, so they must sit on a content section, not
+  the TL;DR, or they are stored and never rendered.
+
+**Remaining: 1,524 blocks.** This is per-page authoring in 9 languages, not a sweep.

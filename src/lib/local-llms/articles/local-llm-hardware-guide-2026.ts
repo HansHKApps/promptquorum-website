@@ -21,7 +21,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       theme: 'Hardware & Performance',
       title: 'Local LLM Hardware in 2026: GPU vs Mini PC vs Mac Compared',
       seoTitle: 'Local LLM Hardware Requirements 2026: 8GB to 70B by VRAM',
-      intro: 'Running a local LLM means matching the model to your GPU\'s VRAM. As of July 2026, a 7B model needs about 4-5 GB VRAM at Q4_K_M (the standard rule of thumb: roughly 0.6 GB per billion parameters at 4-bit) or 8-9 GB at Q8, a 14B model needs ~9 GB at Q4_K_M, and most 70B models need ~40 GB -- more than a single RTX 4090 (24 GB) holds. This guide gives the exact hardware requirement per model size, then the best model for 8 GB, 12 GB, 16 GB, and 24 GB VRAM tiers, what it really takes to run 70B (and the far larger GLM-5.3) locally, CPU-only inference on 16 GB system RAM, MacBook 8 GB options, and current July 2026 GPU prices after this year\'s memory shortage.',
+      intro: 'Running a local LLM means matching the model to your GPU\'s VRAM. A 7B model needs about 4-5 GB VRAM at Q4_K_M (the standard rule of thumb: roughly 0.6 GB per billion parameters at 4-bit) or 8-9 GB at Q8, a 14B model needs ~9 GB at Q4_K_M, and most 70B models need ~40 GB -- more than a single RTX 4090 (24 GB) holds. This guide gives the exact hardware requirement per model size, then the best model for 8 GB, 12 GB, 16 GB, and 24 GB VRAM tiers, what it really takes to run 70B (and the far larger GLM-5.3) locally, CPU-only inference on 16 GB system RAM, MacBook 8 GB options, and current GPU prices after this year\'s memory shortage.',
       metaDescription: 'Local LLM hardware requirements by VRAM: best models for 8, 16 & 24 GB GPUs plus exact 70B and GLM-5.3 needs. RTX 50-series, Apple M5.',
       heroImage: '/images/local-llm-hardware-guide-2026-gpu-tiers-hero-en.webp',
       publishDate: '2026-04-04',
@@ -100,7 +100,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**CPU-only (16 GB system RAM)**: Llama 3.2 3B Q8 (20 tok/sec) or Phi-4 Mini Q4_K_M (25 tok/sec). A used RTX 4060 8 GB (~$250) or new RTX 5060 Ti 16 GB (~$394) is 5-10× faster.',
             '**MacBook on 8 GB RAM**: run 3-4B models only — Phi-4 Mini, Llama 3.2 3B, or Gemma 3 4B at Q4_K_M via llama.cpp/Ollama (Metal). 7B is borderline on 8 GB; 16 GB is the comfortable Mac minimum.',
             '**Apple M5 Max (128 GB unified)**: runs 70B models at Q4_K_M comfortably (~12-15 tok/sec) in a laptop or Mac Studio — alongside Mac Studio and 128 GB AMD Strix Halo systems that also hold a 70B model. None of these fit GLM-5.3 (needs ~239 GB even at 2-bit).',
-            '**July 2026 prices**: the GDDR7 shortage has worsened, not eased — RTX 5090 street pricing has climbed from ~$4,000 in June to $4,300–$5,000+ as of mid-July, and the RTX 4090 remains discontinued. Budget-conscious buyers should also check AMD\'s RX 9070 XT (16 GB GDDR6, ~$630–700) — GDDR6 has dodged most of the shortage, making it noticeably cheaper than the RTX 5070 Ti at similar VRAM. Buy from in-stock listings; check live prices before purchase.',
+            '**Current prices**: the GDDR7 shortage has worsened, not eased — RTX 5090 street pricing has climbed from ~$4,000 in June to $4,300–$5,000+ as of mid-July, and the RTX 4090 remains discontinued. Budget-conscious buyers should also check AMD\'s RX 9070 XT (16 GB GDDR6, ~$630–700) — GDDR6 has dodged most of the shortage, making it noticeably cheaper than the RTX 5070 Ti at similar VRAM. Buy from in-stock listings; check live prices before purchase.',
             '**llama.cpp speed tip**: Always set `--n-gpu-layers 99`. This alone doubles speed on RTX 4070 Ti from ~40 to ~85 tok/sec.',
             '**Quick reference:** 7B@Q4_K_M = 4-5 GB | 70B@Q4_K_M = 40 GB | GLM-5.3@2-bit = ~239 GB | RTX 4070 Ti = ~80 tok/s | RTX 4090 = ~150 tok/s | CPU-only 16 GB = 12-28 tok/s',
           ],
@@ -130,7 +130,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'best-gpus-to-buy',
           title: 'Best GPUs to Buy — 2026 Recommendations',
           content: [
-            '**The in-stock choice for local LLMs in July 2026 is the NVIDIA RTX 50-series (Blackwell): 5060 Ti, 5070, 5070 Ti, 5080, 5090.** The RTX 40-series (4060, 4070 Ti, 4090) is discontinued and now sells scarce and above its old prices on the used market. A 2026 GDDR7/memory shortage has continued to worsen through July, pushing even 50-series cards further above MSRP, so treat every figure below as a typical mid-July 2026 street price and check live listings before buying. Recommendations by use case:',
+            '**The in-stock choice for local LLMs is the NVIDIA RTX 50-series (Blackwell): 5060 Ti, 5070, 5070 Ti, 5080, 5090.** The RTX 40-series (4060, 4070 Ti, 4090) is discontinued and now sells scarce and above its old prices on the used market. A 2026 GDDR7/memory shortage has continued to worsen through July, pushing even 50-series cards further above MSRP, so treat every figure below as a typical street price and check live listings before buying. Recommendations by use case:',
           ],
           items: [
             '**For 7B Models (Mistral, Phi-4, Llama 3.1) — Budget:** RTX 5060 Ti 16 GB (~$394, near MSRP) or a used RTX 4060 8 GB (~$250). Runs any 7B model at Q4_K_M (~4-5 GB). Speed: 50–70 tok/sec. Tier: Budget enthusiasts.',
@@ -154,7 +154,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           columns: ['GPU', 'Best For', 'Price', 'Speed', 'Tier'],
           callouts: [
-            { type: 'warning', text: 'July 2026 pricing is volatile and still worsening. The GDDR7 shortage has pushed the RTX 5090 from roughly $4,000 street in June to $4,300–$5,000+ by mid-July — more than double its $1,999 MSRP — and the discontinued RTX 4090 now costs more used than it did new. The prices above are typical street figures — always check current listings before buying. AMD\'s GDDR6-based RX 9070 XT is a notable exception: it has largely avoided the price spike.' },
+            { type: 'warning', text: 'GPU pricing is volatile and still worsening. The GDDR7 shortage has pushed the RTX 5090 from roughly $4,000 street in June to $4,300–$5,000+ by mid-July — more than double its $1,999 MSRP — and the discontinued RTX 4090 now costs more used than it did new. The prices above are typical street figures — always check current listings before buying. AMD\'s GDDR6-based RX 9070 XT is a notable exception: it has largely avoided the price spike.' },
           ],
         },
         vramMath: {
@@ -207,7 +207,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         gpuRecommendations: {
           id: 'gpu-recommendations',
           title: 'Which GPU Tier Matches Your Workload?',
-          content: '**As of July 2026, NVIDIA GPUs deliver the highest tokens/sec for local LLM inference across all price points.** The sections below each tier give specific model recommendations. For a detailed benchmark comparison, see the [best GPUs for local LLM guide](/local-llms/best-gpus-for-local-llms).',
+          content: '**NVIDIA GPUs deliver the highest tokens/sec for local LLM inference across all price points.** The sections below each tier give specific model recommendations. For a detailed benchmark comparison, see the [best GPUs for local LLM guide](/local-llms/best-gpus-for-local-llms).',
           columns: ['Tier', 'GPU', 'VRAM', 'Best For', 'Speed'],
           rows: [
             { 'Tier': 'Budget (~$394)', 'GPU': 'RTX 5060 Ti', 'VRAM': '16 GB', 'Best For': '7-13B models', 'Speed': '~60 tok/s' },
@@ -219,10 +219,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { 'Tier': 'Desktop AI ($4,699)', 'GPU': 'NVIDIA DGX Spark', 'VRAM': '128 GB', 'Best For': 'Large MoE models (not GLM-5.3)', 'Speed': '~3 tok/s (dense 70B)' },
           ],
           callouts: [
-            { type: 'keyPoint', text: 'As of July 2026, the RTX 50-series (Blackwell) is the current generation and the only NVIDIA consumer cards still in production — the RTX 40-series is discontinued. The RTX 5090 (32 GB) is the card to buy for 70B work, though the worsening memory shortage has pushed street prices to more than double its $1,999 MSRP.' },
+            { type: 'keyPoint', text: 'The RTX 50-series (Blackwell) is the current generation and the only NVIDIA consumer cards still in production — the RTX 40-series is discontinued. The RTX 5090 (32 GB) is the card to buy for 70B work, though the worsening memory shortage has pushed street prices to more than double its $1,999 MSRP.' },
           ],
           image: '/images/gpu-tier-comparison-en.svg',
-          imageCaption: 'GPU tier recommendations (July 2026 street prices): ~$394 RTX 5060 Ti (16GB, 7-13B, 60 tok/s), ~$609 RTX 5070 (12GB, 14B, 90 tok/s), ~$1,249 RTX 5080 (16GB, 14-32B, 130 tok/s), ~$4,300–5,000+ RTX 5090 (32GB, 70B, 200 tok/s), $4,699 DGX Spark (128GB, large MoE). GPU choice matters 10× more than CPU.',
+          imageCaption: 'GPU tier recommendations (street prices): ~$394 RTX 5060 Ti (16GB, 7-13B, 60 tok/s), ~$609 RTX 5070 (12GB, 14B, 90 tok/s), ~$1,249 RTX 5080 (16GB, 14-32B, 130 tok/s), ~$4,300–5,000+ RTX 5090 (32GB, 70B, 200 tok/s), $4,699 DGX Spark (128GB, large MoE). GPU choice matters 10× more than CPU.',
         },
         vramTiers: {
           id: 'vram-tiers',
@@ -330,7 +330,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'Which Models Run Well on 16 GB System RAM Without a GPU?',
           content: [
             '**Without a GPU, a machine with 16 GB system RAM can run 3B-7B models at 8-20 tokens/sec using CPU inference.** The bottleneck is memory bandwidth, not RAM capacity -- CPUs have far lower bandwidth than GPUs, which is why inference is 5-10× slower.',
-            'On 16 GB system RAM, the practical rule is: model file size + 4 GB OS overhead ≤ 16 GB. A 7B model at Q4_K_M (4.9 GB) fits, but leaves little headroom for long contexts. The table below shows realistic options as of July 2026.',
+            'On 16 GB system RAM, the practical rule is: model file size + 4 GB OS overhead ≤ 16 GB. A 7B model at Q4_K_M (4.9 GB) fits, but leaves little headroom for long contexts. The table below shows realistic options.',
             'For a complete speed-optimized model guide covering CPU-only, 4 GB, 6 GB, and 8 GB VRAM tiers with real benchmarks, see **[Fastest Local LLMs for Low-End PCs](/local-llms/fastest-local-llms-low-end-pcs)**.',
           ],
           rows: [
@@ -444,7 +444,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**For production deployment (24/7 operation, multiple users), server-grade hardware is recommended over consumer GPUs.** Consumer hardware is optimized for gaming, not sustained inference.',
           ],
           items: [
-            '**Consumer (RTX 5090)**: ~$2,000 MSRP (~$4,300–5,000+ street as of July 2026), 32 GB VRAM, single-user, prone to thermal throttling under sustained load.',
+            '**Consumer (RTX 5090)**: ~$2,000 MSRP (~$4,300–5,000+ street), 32 GB VRAM, single-user, prone to thermal throttling under sustained load.',
             '**Server (RTX 6000 Ada)**: ~$7,000, 48 GB VRAM, designed for 24/7 use, better cooling, error correction.',
             '**Recommendation**: Start with an RTX 5090. If running 70B models 24/7 for multiple users, upgrade to dual A100 or RTX 6000 Ada.',
           ],
@@ -710,7 +710,7 @@ schema: {
       theme: 'Hardware & Performance',
       title: 'Hardware para LLM locales en 2026: GPU vs Mini PC vs Mac comparados',
       seoTitle: 'Requisitos de hardware para LLM locales 2026: de 8GB a 70B por VRAM',
-      intro: 'Ejecutar un LLM local significa ajustar el modelo a la VRAM de tu GPU. A fecha de julio de 2026, un modelo de 7B necesita unos 4-5 GB de VRAM en Q4_K_M (la regla general habitual: aproximadamente 0,6 GB por cada mil millones de parámetros en 4 bits) u 8-9 GB en Q8, un modelo de 14B necesita ~9 GB en Q4_K_M, y la mayoría de los modelos de 70B necesitan ~40 GB -- más de lo que contiene una sola RTX 4090 (24 GB). Esta guía ofrece el requisito de hardware exacto por tamaño de modelo, luego el mejor modelo para los niveles de VRAM de 8 GB, 12 GB, 16 GB y 24 GB, qué hace falta realmente para ejecutar un 70B (y el mucho más grande GLM-5.3) en local, inferencia solo en CPU con 16 GB de RAM del sistema, opciones de MacBook de 8 GB, y los precios actuales de GPU de julio de 2026 tras la escasez de memoria de este año.',
+      intro: 'Ejecutar un LLM local significa ajustar el modelo a la VRAM de tu GPU. Un modelo de 7B necesita unos 4-5 GB de VRAM en Q4_K_M (la regla general habitual: aproximadamente 0,6 GB por cada mil millones de parámetros en 4 bits) u 8-9 GB en Q8, un modelo de 14B necesita ~9 GB en Q4_K_M, y la mayoría de los modelos de 70B necesitan ~40 GB -- más de lo que contiene una sola RTX 4090 (24 GB). Esta guía ofrece el requisito de hardware exacto por tamaño de modelo, luego el mejor modelo para los niveles de VRAM de 8 GB, 12 GB, 16 GB y 24 GB, qué hace falta realmente para ejecutar un 70B (y el mucho más grande GLM-5.3) en local, inferencia solo en CPU con 16 GB de RAM del sistema, opciones de MacBook de 8 GB, y los precios actuales de GPU tras la escasez de memoria de este año.',
       metaDescription: 'Requisitos de hardware para LLM locales por VRAM: mejores modelos para GPU de 8, 16 y 24 GB, además de las necesidades exactas para 70B y GLM-5.3. RTX serie 50, Apple M5.',
       heroImage: '/images/local-llm-hardware-guide-2026-gpu-tiers-hero-es.webp',
       publishDate: '2026-04-04',
@@ -789,7 +789,7 @@ schema: {
             '**Solo CPU (16 GB de RAM del sistema)**: Llama 3.2 3B Q8 (20 tok/seg) o Phi-4 Mini Q4_K_M (25 tok/seg). Una RTX 4060 8 GB usada (~$250) o una RTX 5060 Ti 16 GB nueva (~$394) es 5-10× más rápida.',
             '**MacBook con 8 GB de RAM**: ejecuta solo modelos de 3-4B — Phi-4 Mini, Llama 3.2 3B o Gemma 3 4B en Q4_K_M vía llama.cpp/Ollama (Metal). 7B está al límite en 8 GB; 16 GB es el mínimo cómodo en Mac.',
             '**Apple M5 Max (128 GB unificada)**: ejecuta modelos de 70B en Q4_K_M con comodidad (~12-15 tok/seg) en un portátil o Mac Studio — junto con sistemas Mac Studio y AMD Strix Halo de 128 GB que también albergan un modelo de 70B. Ninguno de ellos cabe con GLM-5.3 (necesita ~239 GB incluso a 2 bits).',
-            '**Precios de julio de 2026**: la escasez de GDDR7 ha empeorado, no se ha aliviado — el precio de calle de la RTX 5090 ha subido de ~$4.000 en junio a $4.300–$5.000+ a mediados de julio, y la RTX 4090 sigue descontinuada. Los compradores con presupuesto ajustado también deberían fijarse en la AMD RX 9070 XT (16 GB GDDR6, ~$630–700) — la GDDR6 ha esquivado la mayor parte de la escasez, lo que la hace notablemente más barata que la RTX 5070 Ti con una VRAM similar. Compra en anuncios con stock disponible; comprueba los precios actuales antes de comprar.',
+            '**Precios actuales**: la escasez de GDDR7 ha empeorado, no se ha aliviado — el precio de calle de la RTX 5090 ha subido de ~$4.000 en junio a $4.300–$5.000+ a mediados de julio, y la RTX 4090 sigue descontinuada. Los compradores con presupuesto ajustado también deberían fijarse en la AMD RX 9070 XT (16 GB GDDR6, ~$630–700) — la GDDR6 ha esquivado la mayor parte de la escasez, lo que la hace notablemente más barata que la RTX 5070 Ti con una VRAM similar. Compra en anuncios con stock disponible; comprueba los precios actuales antes de comprar.',
             '**Consejo de velocidad de llama.cpp**: Configura siempre `--n-gpu-layers 99`. Esto por sí solo duplica la velocidad en la RTX 4070 Ti de ~40 a ~85 tok/seg.',
             '**Referencia rápida:** 7B@Q4_K_M = 4-5 GB | 70B@Q4_K_M = 40 GB | GLM-5.3@2-bit = ~239 GB | RTX 4070 Ti = ~80 tok/s | RTX 4090 = ~150 tok/s | Solo CPU 16 GB = 12-28 tok/s',
           ],
@@ -819,7 +819,7 @@ schema: {
           id: 'best-gpus-to-buy',
           title: 'Mejores GPU para comprar — recomendaciones 2026',
           content: [
-            '**La opción en stock para LLM locales en julio de 2026 es la NVIDIA serie RTX 50 (Blackwell): 5060 Ti, 5070, 5070 Ti, 5080, 5090.** La serie RTX 40 (4060, 4070 Ti, 4090) está descontinuada y ahora se vende escasa y por encima de sus precios antiguos en el mercado de segunda mano. Una escasez de GDDR7/memoria en 2026 ha seguido empeorando a lo largo de julio, empujando incluso a las tarjetas de la serie 50 aún más por encima del MSRP, así que trata cada cifra de abajo como un precio de calle típico de mediados de julio de 2026 y comprueba los anuncios actuales antes de comprar. Recomendaciones por caso de uso:',
+            '**La opción en stock para LLM locales es la NVIDIA serie RTX 50 (Blackwell): 5060 Ti, 5070, 5070 Ti, 5080, 5090.** La serie RTX 40 (4060, 4070 Ti, 4090) está descontinuada y ahora se vende escasa y por encima de sus precios antiguos en el mercado de segunda mano. Una escasez de GDDR7/memoria en 2026 ha seguido empeorando a lo largo de julio, empujando incluso a las tarjetas de la serie 50 aún más por encima del MSRP, así que trata cada cifra de abajo como un precio de calle típico y comprueba los anuncios actuales antes de comprar. Recomendaciones por caso de uso:',
           ],
           items: [
             '**Para modelos de 7B (Mistral, Phi-4, Llama 3.1) — Económica:** RTX 5060 Ti 16 GB (~$394, cerca del MSRP) o una RTX 4060 8 GB usada (~$250). Ejecuta cualquier modelo de 7B en Q4_K_M (~4-5 GB). Velocidad: 50–70 tok/seg. Nivel: Entusiastas con presupuesto ajustado.',
@@ -843,7 +843,7 @@ schema: {
           ],
           columns: ['GPU', 'Mejor para', 'Precio', 'Velocidad', 'Nivel'],
           callouts: [
-            { type: 'warning', text: 'Los precios de julio de 2026 son volátiles y siguen empeorando. La escasez de GDDR7 ha empujado la RTX 5090 de aproximadamente $4.000 de calle en junio a $4.300–$5.000+ a mediados de julio — más del doble de su MSRP de $1.999 — y la descontinuada RTX 4090 ahora cuesta más usada de lo que costaba nueva. Los precios anteriores son cifras de calle típicas — comprueba siempre los anuncios actuales antes de comprar. La AMD RX 9070 XT, basada en GDDR6, es una excepción notable: ha evitado en gran medida el pico de precios.' },
+            { type: 'warning', text: 'Los precios de GPU son volátiles y siguen empeorando. La escasez de GDDR7 ha empujado la RTX 5090 de aproximadamente $4.000 de calle en junio a $4.300–$5.000+ a mediados de julio — más del doble de su MSRP de $1.999 — y la descontinuada RTX 4090 ahora cuesta más usada de lo que costaba nueva. Los precios anteriores son cifras de calle típicas — comprueba siempre los anuncios actuales antes de comprar. La AMD RX 9070 XT, basada en GDDR6, es una excepción notable: ha evitado en gran medida el pico de precios.' },
           ],
         },
         vramMath: {
@@ -896,7 +896,7 @@ schema: {
         gpuRecommendations: {
           id: 'gpu-recommendations',
           title: '¿Qué nivel de GPU se ajusta a tu carga de trabajo?',
-          content: '**A fecha de julio de 2026, las GPU NVIDIA ofrecen la mayor cantidad de tokens/seg para la inferencia de LLM locales en todos los puntos de precio.** Las secciones bajo cada nivel dan recomendaciones de modelos específicas. Para una comparación detallada de benchmarks, consulta la [guía de las mejores GPU para LLM locales](/es/local-llms/best-gpus-for-local-llms).',
+          content: '**Las GPU NVIDIA ofrecen la mayor cantidad de tokens/seg para la inferencia de LLM locales en todos los puntos de precio.** Las secciones bajo cada nivel dan recomendaciones de modelos específicas. Para una comparación detallada de benchmarks, consulta la [guía de las mejores GPU para LLM locales](/es/local-llms/best-gpus-for-local-llms).',
           columns: ['Nivel', 'GPU', 'VRAM', 'Mejor para', 'Velocidad'],
           rows: [
             { 'Nivel': 'Económica (~$394)', 'GPU': 'RTX 5060 Ti', 'VRAM': '16 GB', 'Mejor para': 'Modelos de 7-13B', 'Velocidad': '~60 tok/s' },
@@ -908,10 +908,10 @@ schema: {
             { 'Nivel': 'IA de escritorio ($4.699)', 'GPU': 'NVIDIA DGX Spark', 'VRAM': '128 GB', 'Mejor para': 'Modelos MoE grandes (no GLM-5.3)', 'Velocidad': '~3 tok/s (70B denso)' },
           ],
           callouts: [
-            { type: 'keyPoint', text: 'A fecha de julio de 2026, la serie RTX 50 (Blackwell) es la generación actual y las únicas tarjetas de consumo NVIDIA aún en producción — la serie RTX 40 está descontinuada. La RTX 5090 (32 GB) es la tarjeta a comprar para trabajo con 70B, aunque la escasez de memoria, que sigue empeorando, ha empujado los precios de calle a más del doble de su MSRP de $1.999.' },
+            { type: 'keyPoint', text: 'La serie RTX 50 (Blackwell) es la generación actual y las únicas tarjetas de consumo NVIDIA aún en producción — la serie RTX 40 está descontinuada. La RTX 5090 (32 GB) es la tarjeta a comprar para trabajo con 70B, aunque la escasez de memoria, que sigue empeorando, ha empujado los precios de calle a más del doble de su MSRP de $1.999.' },
           ],
           image: '/images/gpu-tier-comparison-es.svg',
-          imageCaption: 'Recomendaciones de niveles de GPU (precios de calle de julio de 2026): ~$394 RTX 5060 Ti (16GB, 7-13B, 60 tok/s), ~$609 RTX 5070 (12GB, 14B, 90 tok/s), ~$1.249 RTX 5080 (16GB, 14-32B, 130 tok/s), ~$4.300–5.000+ RTX 5090 (32GB, 70B, 200 tok/s), $4.699 DGX Spark (128GB, MoE grande). La elección de GPU importa 10× más que la CPU.',
+          imageCaption: 'Recomendaciones de niveles de GPU (precios de calle): ~$394 RTX 5060 Ti (16GB, 7-13B, 60 tok/s), ~$609 RTX 5070 (12GB, 14B, 90 tok/s), ~$1.249 RTX 5080 (16GB, 14-32B, 130 tok/s), ~$4.300–5.000+ RTX 5090 (32GB, 70B, 200 tok/s), $4.699 DGX Spark (128GB, MoE grande). La elección de GPU importa 10× más que la CPU.',
         },
         vramTiers: {
           id: 'vram-tiers',
@@ -1019,7 +1019,7 @@ schema: {
           title: '¿Qué modelos funcionan bien en 16 GB de RAM del sistema sin GPU?',
           content: [
             '**Sin GPU, una máquina con 16 GB de RAM del sistema puede ejecutar modelos de 3B-7B a 8-20 tokens/seg usando inferencia por CPU.** El cuello de botella es el ancho de banda de memoria, no la capacidad de RAM -- las CPU tienen un ancho de banda mucho menor que las GPU, por lo que la inferencia es 5-10× más lenta.',
-            'Con 16 GB de RAM del sistema, la regla práctica es: tamaño del archivo del modelo + 4 GB de sobrecarga del SO ≤ 16 GB. Un modelo de 7B en Q4_K_M (4,9 GB) cabe, pero deja poco margen para contextos largos. La tabla de abajo muestra opciones realistas a fecha de julio de 2026.',
+            'Con 16 GB de RAM del sistema, la regla práctica es: tamaño del archivo del modelo + 4 GB de sobrecarga del SO ≤ 16 GB. Un modelo de 7B en Q4_K_M (4,9 GB) cabe, pero deja poco margen para contextos largos. La tabla de abajo muestra opciones realistas.',
             'Para una guía completa de modelos optimizados en velocidad que cubre los niveles de solo CPU y de 4 GB, 6 GB y 8 GB de VRAM con benchmarks reales, consulta **[LLM locales más rápidos para PC de gama baja](/es/local-llms/fastest-local-llms-low-end-pcs)**.',
           ],
           rows: [
@@ -1133,7 +1133,7 @@ schema: {
             '**Para despliegue en producción (operación 24/7, múltiples usuarios), se recomienda hardware de grado servidor frente a GPU de consumo.** El hardware de consumo está optimizado para juegos, no para inferencia sostenida.',
           ],
           items: [
-            '**Consumo (RTX 5090)**: ~$2.000 MSRP (~$4.300–5.000+ de calle a fecha de julio de 2026), 32 GB de VRAM, monousuario, propenso al throttling térmico bajo carga sostenida.',
+            '**Consumo (RTX 5090)**: ~$2.000 MSRP (~$4.300–5.000+ de calle), 32 GB de VRAM, monousuario, propenso al throttling térmico bajo carga sostenida.',
             '**Servidor (RTX 6000 Ada)**: ~$7.000, 48 GB de VRAM, diseñada para uso 24/7, mejor refrigeración, corrección de errores.',
             '**Recomendación**: Empieza con una RTX 5090. Si ejecutas modelos de 70B 24/7 para múltiples usuarios, sube a A100 dual o RTX 6000 Ada.',
           ],
@@ -1399,7 +1399,7 @@ schema: {
       theme: 'Hardware & Performance',
       title: 'عتاد ⁨LLM⁩ المحلي في ⁨2026⁩: مقارنة بين ⁨GPU⁩ و⁨Mini PC⁩ و⁨Mac⁩',
       seoTitle: 'متطلبات عتاد ⁨LLM⁩ المحلي ⁨2026⁩: من ⁨8GB⁩ إلى ⁨70B⁩ حسب ⁨VRAM⁩',
-      intro: 'تشغيل LLM محلي يعني مطابقة النموذج مع VRAM الخاص بـ GPU لديك. **قاعدة سريعة:** يحتاج نموذج 7B عند Q4 إلى ~4-5 GB VRAM فقط -- نحو 0.6 GB لكل مليار معامل عند دقة 4-بت. اعتبارًا من يوليو 2026، يحتاج نموذج 7B إلى 8-9 GB VRAM عند Q8، ويحتاج نموذج 14B إلى ~9 GB عند Q4_K_M، وتحتاج معظم نماذج 70B إلى ~40 GB -- أكثر مما يحمله RTX 4090 (24 GB) الواحد. يقدم هذا الدليل متطلبات العتاد الدقيقة لكل حجم نموذج، ثم أفضل نموذج لمستويات 8 GB و12 GB و16 GB و24 GB VRAM، وما يتطلبه فعليًا تشغيل 70B (وGLM-5.3 الأكبر بكثير) محليًا، والاستدلال على CPU فقط بذاكرة نظام 16 GB، وخيارات MacBook بسعة 8 GB، وأسعار GPU الحالية في يوليو 2026 بعد نقص الذاكرة هذا العام.',
+      intro: 'تشغيل LLM محلي يعني مطابقة النموذج مع VRAM الخاص بـ GPU لديك. **قاعدة سريعة:** يحتاج نموذج 7B عند Q4 إلى ~4-5 GB VRAM فقط -- نحو 0.6 GB لكل مليار معامل عند دقة 4-بت. يحتاج نموذج 7B إلى 8-9 GB VRAM عند Q8، ويحتاج نموذج 14B إلى ~9 GB عند Q4_K_M، وتحتاج معظم نماذج 70B إلى ~40 GB -- أكثر مما يحمله RTX 4090 (24 GB) الواحد. يقدم هذا الدليل متطلبات العتاد الدقيقة لكل حجم نموذج، ثم أفضل نموذج لمستويات 8 GB و12 GB و16 GB و24 GB VRAM، وما يتطلبه فعليًا تشغيل 70B (وGLM-5.3 الأكبر بكثير) محليًا، والاستدلال على CPU فقط بذاكرة نظام 16 GB، وخيارات MacBook بسعة 8 GB، وأسعار GPU الحالية بعد نقص الذاكرة هذا العام.',
       metaDescription: 'متطلبات عتاد ⁨LLM⁩ المحلي حسب ⁨VRAM⁩: أفضل النماذج لبطاقات ⁨8⁩ و⁨16⁩ و⁨24 GB⁩ إضافة إلى الاحتياجات الدقيقة لـ ⁨70B⁩ و⁨GLM-5.3⁩. ⁨RTX 50-series⁩ و⁨Apple M5⁩.',
       heroImage: '/images/local-llm-hardware-guide-2026-gpu-tiers-hero-ar.webp',
       publishDate: '2026-04-04',
@@ -1478,7 +1478,7 @@ schema: {
             '**CPU فقط (ذاكرة نظام 16 GB)**: Llama 3.2 3B Q8 (20 tok/sec) أو Phi-4 Mini Q4_K_M (25 tok/sec). بطاقة RTX 4060 8 GB مستعملة (~$250) أو RTX 5060 Ti 16 GB جديدة (~$394) أسرع 5-10×.',
             '**MacBook بذاكرة 8 GB**: شغّل نماذج 3-4B فقط — Phi-4 Mini أو Llama 3.2 3B أو Gemma 3 4B عند Q4_K_M عبر llama.cpp/Ollama (Metal). نموذج 7B على الحافة عند 8 GB؛ 16 GB هو الحد الأدنى المريح لـ Mac.',
             '**Apple M5 Max (128 GB موحدة)**: يشغّل نماذج 70B عند Q4_K_M بشكل مريح (~12-15 tok/sec) في حاسوب محمول أو Mac Studio — إلى جانب أنظمة Mac Studio وأنظمة AMD Strix Halo بسعة 128 GB التي تحمل أيضًا نموذج 70B.',
-            '**أسعار يوليو 2026**: ارتفع سعر RTX 5090 في السوق من نحو $4,000 في يونيو إلى $4,300-$5,000+ في منتصف يوليو، ولا يزال يرتفع، بسبب استمرار نقص GDDR7 وإيقاف RTX 4090. بديل أرخص إلى حد كبير غير متأثر تقريبًا بالنقص: AMD RX 9070 XT (16 GB GDDR6، ~$630-700). اشترِ من سلسلة RTX 50 المتوفرة في المخزون أو فكّر في بطاقة AMD؛ تحقق من الأسعار الحية قبل الشراء.',
+            '**الأسعار الحالية**: ارتفع سعر RTX 5090 في السوق من نحو $4,000 في يونيو إلى $4,300-$5,000+ في منتصف يوليو، ولا يزال يرتفع، بسبب استمرار نقص GDDR7 وإيقاف RTX 4090. بديل أرخص إلى حد كبير غير متأثر تقريبًا بالنقص: AMD RX 9070 XT (16 GB GDDR6، ~$630-700). اشترِ من سلسلة RTX 50 المتوفرة في المخزون أو فكّر في بطاقة AMD؛ تحقق من الأسعار الحية قبل الشراء.',
             '**نصيحة سرعة llama.cpp**: اضبط دائمًا `--n-gpu-layers 99`. هذا وحده يضاعف السرعة على RTX 4070 Ti من ~40 إلى ~85 tok/sec.',
             '**مرجع سريع:** 7B@Q4_K_M = 4-5 GB | 70B@Q4_K_M = 40 GB | GLM-5.3@2-bit = ~239 GB | RTX 4070 Ti = ~80 tok/s | RTX 4090 = ~150 tok/s | CPU فقط 16 GB = 12-28 tok/s',
           ],
@@ -1508,7 +1508,7 @@ schema: {
           id: 'best-gpus-to-buy',
           title: 'أفضل بطاقات GPU للشراء — توصيات 2026',
           content: [
-            '**الخيار المتوفر في المخزون لـ LLM المحلي في يوليو 2026 هو سلسلة NVIDIA RTX 50 (Blackwell): 5060 Ti، 5070، 5070 Ti، 5080، 5090.** سلسلة RTX 40 (4060، 4070 Ti، 4090) موقوفة وتُباع الآن نادرة وفوق أسعارها القديمة في السوق المستعمل. دفع نقص GDDR7/الذاكرة المتفاقم في 2026 حتى بطاقات سلسلة 50 إلى ما فوق MSRP بكثير، لذا تعامل مع كل رقم أدناه على أنه سعر سوق نموذجي ليوليو 2026 وتحقق من القوائم الحية قبل الشراء. التوصيات حسب حالة الاستخدام:',
+            '**الخيار المتوفر في المخزون لـ LLM المحلي هو سلسلة NVIDIA RTX 50 (Blackwell): 5060 Ti، 5070، 5070 Ti، 5080، 5090.** سلسلة RTX 40 (4060، 4070 Ti، 4090) موقوفة وتُباع الآن نادرة وفوق أسعارها القديمة في السوق المستعمل. دفع نقص GDDR7/الذاكرة المتفاقم في 2026 حتى بطاقات سلسلة 50 إلى ما فوق MSRP بكثير، لذا تعامل مع كل رقم أدناه على أنه سعر سوق نموذجي وتحقق من القوائم الحية قبل الشراء. التوصيات حسب حالة الاستخدام:',
           ],
           items: [
             '**لنماذج 7B (Mistral، Phi-4، Llama 3.1) — اقتصادية:** RTX 5060 Ti 16 GB (~$394، قريب من MSRP) أو RTX 4060 8 GB مستعملة (~$250). تشغّل أي نموذج 7B عند Q4_K_M. السرعة: 50–70 tok/sec. المستوى: الهواة الاقتصاديون.',
@@ -1532,7 +1532,7 @@ schema: {
           ],
           columns: ['GPU', 'الأفضل لـ', 'السعر', 'السرعة', 'المستوى'],
           callouts: [
-            { type: 'warning', text: 'تسعير يوليو 2026 متقلب ويزداد سوءًا. دفع نقص GDDR7/الذاكرة المستمر سعر RTX 5090 في السوق إلى $4,300-$5,000+، أكثر من ضعف MSRP البالغ $1,999، وتكلف RTX 4090 الموقوفة الآن مستعملة أكثر مما كانت جديدة. الاستثناء: AMD RX 9070 XT (16 GB GDDR6، ~$630-700) غير متأثر تقريبًا بالنقص. الأسعار أعلاه أرقام سوق نموذجية — تحقق دائمًا من القوائم الحالية قبل الشراء.' },
+            { type: 'warning', text: 'تسعير بطاقات GPU متقلب ويزداد سوءًا. دفع نقص GDDR7/الذاكرة المستمر سعر RTX 5090 في السوق إلى $4,300-$5,000+، أكثر من ضعف MSRP البالغ $1,999، وتكلف RTX 4090 الموقوفة الآن مستعملة أكثر مما كانت جديدة. الاستثناء: AMD RX 9070 XT (16 GB GDDR6، ~$630-700) غير متأثر تقريبًا بالنقص. الأسعار أعلاه أرقام سوق نموذجية — تحقق دائمًا من القوائم الحالية قبل الشراء.' },
           ],
         },
         vramMath: {
@@ -1585,7 +1585,7 @@ schema: {
         gpuRecommendations: {
           id: 'gpu-recommendations',
           title: 'أي مستوى GPU يطابق عبء عملك؟',
-          content: '**اعتبارًا من يوليو 2026، توفر بطاقات NVIDIA أعلى عدد رموز/ثانية لاستدلال LLM المحلي عبر جميع نقاط الأسعار.** تقدم الأقسام الخاصة بكل مستوى أدناه توصيات نماذج محددة. للحصول على مقارنة قياس مرجعي مفصلة، راجع [دليل أفضل بطاقات GPU لـ LLM المحلي](/ar/local-llms/best-gpus-for-local-llms).',
+          content: '**توفر بطاقات NVIDIA أعلى عدد رموز/ثانية لاستدلال LLM المحلي عبر جميع نقاط الأسعار.** تقدم الأقسام الخاصة بكل مستوى أدناه توصيات نماذج محددة. للحصول على مقارنة قياس مرجعي مفصلة، راجع [دليل أفضل بطاقات GPU لـ LLM المحلي](/ar/local-llms/best-gpus-for-local-llms).',
           columns: ['المستوى', 'GPU', 'VRAM', 'الأفضل لـ', 'السرعة'],
           rows: [
             { 'المستوى': 'اقتصادية (~$394)', 'GPU': 'RTX 5060 Ti', 'VRAM': '16 GB', 'الأفضل لـ': 'نماذج 7-13B', 'السرعة': '~60 tok/s' },
@@ -1597,10 +1597,10 @@ schema: {
             { 'المستوى': 'ذكاء اصطناعي مكتبي ($4,699)', 'GPU': 'NVIDIA DGX Spark', 'VRAM': '128 GB', 'الأفضل لـ': 'نماذج MoE كبيرة (لا يشمل GLM-5.3)', 'السرعة': '~3 tok/s (70B كثيف)' },
           ],
           callouts: [
-            { type: 'keyPoint', text: 'اعتبارًا من يوليو 2026، سلسلة RTX 50 (Blackwell) هي الجيل الحالي والبطاقات الاستهلاكية الوحيدة من NVIDIA التي لا تزال في الإنتاج — سلسلة RTX 40 موقوفة. RTX 5090 (32 GB) هي البطاقة التي يجب شراؤها لأعمال 70B، رغم أن نقص الذاكرة المتفاقم يبقي أسعار السوق فوق MSRP البالغ $1,999 بكثير.' },
+            { type: 'keyPoint', text: 'سلسلة RTX 50 (Blackwell) هي الجيل الحالي والبطاقات الاستهلاكية الوحيدة من NVIDIA التي لا تزال في الإنتاج — سلسلة RTX 40 موقوفة. RTX 5090 (32 GB) هي البطاقة التي يجب شراؤها لأعمال 70B، رغم أن نقص الذاكرة المتفاقم يبقي أسعار السوق فوق MSRP البالغ $1,999 بكثير.' },
           ],
           image: '/images/gpu-tier-comparison-ar.svg',
-          imageCaption: 'توصيات مستويات GPU (أسعار سوق يوليو 2026): ~$394 RTX 5060 Ti (16GB، 7-13B، 60 tok/s)، ~$609 RTX 5070 (12GB، 14B، 90 tok/s)، ~$1,249 RTX 5080 (16GB، 14-32B، 130 tok/s)، ~$4,300–5,000+ RTX 5090 (32GB، 70B، 200 tok/s)، $4,699 DGX Spark (128GB، MoE كبير). اختيار GPU يهم 10× أكثر من CPU.',
+          imageCaption: 'توصيات مستويات GPU (أسعار السوق): ~$394 RTX 5060 Ti (16GB، 7-13B، 60 tok/s)، ~$609 RTX 5070 (12GB، 14B، 90 tok/s)، ~$1,249 RTX 5080 (16GB، 14-32B، 130 tok/s)، ~$4,300–5,000+ RTX 5090 (32GB، 70B، 200 tok/s)، $4,699 DGX Spark (128GB، MoE كبير). اختيار GPU يهم 10× أكثر من CPU.',
         },
         vramTiers: {
           id: 'vram-tiers',
@@ -1708,7 +1708,7 @@ schema: {
           title: 'أي النماذج تعمل جيدًا على ذاكرة نظام 16 GB دون GPU؟',
           content: [
             '**بدون GPU، يمكن لجهاز بذاكرة نظام 16 GB تشغيل نماذج 3B-7B بسرعة 8-20 رمز/ثانية باستخدام استدلال CPU.** عنق الزجاجة هو عرض نطاق الذاكرة، وليس سعة الذاكرة -- تملك المعالجات عرض نطاق أقل بكثير من بطاقات GPU، ولهذا يكون الاستدلال أبطأ 5-10×.',
-            'على ذاكرة نظام 16 GB، القاعدة العملية هي: حجم ملف النموذج + 4 GB حمل نظام التشغيل ≤ 16 GB. يتسع نموذج 7B عند Q4_K_M (4.9 GB)، لكنه يترك هامشًا ضئيلًا للسياقات الطويلة. يُظهر الجدول أدناه خيارات واقعية اعتبارًا من يوليو 2026.',
+            'على ذاكرة نظام 16 GB، القاعدة العملية هي: حجم ملف النموذج + 4 GB حمل نظام التشغيل ≤ 16 GB. يتسع نموذج 7B عند Q4_K_M (4.9 GB)، لكنه يترك هامشًا ضئيلًا للسياقات الطويلة. يُظهر الجدول أدناه خيارات واقعية حاليًا.',
             'للحصول على دليل نماذج كامل محسّن للسرعة يغطي CPU فقط ومستويات 4 GB و6 GB و8 GB VRAM مع قياسات مرجعية حقيقية، راجع **[أسرع نماذج LLM المحلية لأجهزة الكمبيوتر الضعيفة](/ar/local-llms/fastest-local-llms-low-end-pcs)**.',
           ],
           rows: [
@@ -1822,12 +1822,12 @@ schema: {
             '**للنشر الإنتاجي (تشغيل 24/7، مستخدمون متعددون)، يُوصى بعتاد من فئة الخادم على بطاقات GPU الاستهلاكية.** العتاد الاستهلاكي محسّن للألعاب، وليس للاستدلال المستدام.',
           ],
           items: [
-            '**استهلاكي (RTX 5090)**: ~$2,000 MSRP (~$4,300–5,000+ في السوق اعتبارًا من يوليو 2026)، 32 GB VRAM، مستخدم واحد، عرضة للخنق الحراري تحت الحمل المستدام.',
+            '**استهلاكي (RTX 5090)**: ~$2,000 MSRP (~$4,300–5,000+ في السوق حاليًا)، 32 GB VRAM، مستخدم واحد، عرضة للخنق الحراري تحت الحمل المستدام.',
             '**خادم (RTX 6000 Ada)**: ~$7,000، 48 GB VRAM، مصمم للاستخدام 24/7، تبريد أفضل، تصحيح أخطاء.',
             '**التوصية**: ابدأ بـ RTX 5090. إذا كنت تشغّل نماذج 70B على مدار 24/7 لمستخدمين متعددين، رقِّ إلى A100 مزدوجة أو RTX 6000 Ada.',
           ],
           image: '/images/server-vs-consumer-ar.svg',
-          imageCaption: 'العتاد الاستهلاكي مقابل الخادم: RTX 5090 (~$4,300–5,000+ في السوق اعتبارًا من يوليو 2026، 32GB، مستخدم واحد، جزئي الوقت) مقابل RTX 6000 Ada ($7,000+، 48GB، متعدد المستخدمين، عمل 24/7). ابدأ بالعتاد الاستهلاكي؛ رقِّ إلى فئة الخادم فقط إذا كنت تشغّل خدمات إنتاجية.',
+          imageCaption: 'العتاد الاستهلاكي مقابل الخادم: RTX 5090 (~$4,300–5,000+ في السوق 32GB، مستخدم واحد، جزئي الوقت) مقابل RTX 6000 Ada ($7,000+، 48GB، متعدد المستخدمين، عمل 24/7). ابدأ بالعتاد الاستهلاكي؛ رقِّ إلى فئة الخادم فقط إذا كنت تشغّل خدمات إنتاجية.',
         },
         dgxSpark: {
           id: 'dgx-spark',
@@ -2088,7 +2088,7 @@ schema: {
       theme: 'Hardware & Performance',
       title: 'Hardware para LLM Local em 2026: GPU vs Mini PC vs Mac Comparados',
       seoTitle: 'Requisitos de Hardware para LLM Local 2026: 8GB a 70B por VRAM',
-      intro: 'Rodar um LLM local significa combinar o modelo com a VRAM da sua GPU. Em julho de 2026, um modelo 7B precisa de cerca de 4-5 GB de VRAM em Q4_K_M (regra prática padrão: aproximadamente 0,6 GB por bilhão de parâmetros em 4 bits) ou 8-9 GB em Q8, um modelo 14B precisa de ~9 GB em Q4_K_M, e a maioria dos modelos 70B precisa de ~40 GB -- mais do que uma única RTX 4090 (24 GB) comporta. Este guia traz o requisito exato de hardware por tamanho de modelo, depois o melhor modelo para as faixas de 8 GB, 12 GB, 16 GB e 24 GB de VRAM, o que realmente é preciso para rodar 70B (e o muito maior GLM-5.3) localmente, inferência apenas em CPU com 16 GB de RAM do sistema, opções de MacBook com 8 GB, e os preços atuais de GPU de julho de 2026 após a escassez de memória deste ano.',
+      intro: 'Rodar um LLM local significa combinar o modelo com a VRAM da sua GPU. Um modelo 7B precisa de cerca de 4-5 GB de VRAM em Q4_K_M (regra prática padrão: aproximadamente 0,6 GB por bilhão de parâmetros em 4 bits) ou 8-9 GB em Q8, um modelo 14B precisa de ~9 GB em Q4_K_M, e a maioria dos modelos 70B precisa de ~40 GB -- mais do que uma única RTX 4090 (24 GB) comporta. Este guia traz o requisito exato de hardware por tamanho de modelo, depois o melhor modelo para as faixas de 8 GB, 12 GB, 16 GB e 24 GB de VRAM, o que realmente é preciso para rodar 70B (e o muito maior GLM-5.3) localmente, inferência apenas em CPU com 16 GB de RAM do sistema, opções de MacBook com 8 GB, e os preços atuais de GPU após a escassez de memória deste ano.',
       metaDescription: 'Requisitos de hardware para LLM local por VRAM: melhores modelos para GPUs de 8, 16 e 24 GB e o que 70B e GLM-5.3 precisam. RTX série 50, Apple M5.',
       heroImage: '/images/local-llm-hardware-guide-2026-gpu-tiers-hero-pt.webp',
       publishDate: '2026-04-04',
@@ -2167,7 +2167,7 @@ schema: {
             '**Apenas CPU (16 GB de RAM do sistema)**: Llama 3.2 3B Q8 (20 tok/sec) ou Phi-4 Mini Q4_K_M (25 tok/sec). Uma RTX 4060 8 GB usada (~$250) ou uma RTX 5060 Ti 16 GB nova (~$394) é 5-10× mais rápida.',
             '**MacBook com 8 GB de RAM**: rode apenas modelos 3-4B — Phi-4 Mini, Llama 3.2 3B ou Gemma 3 4B em Q4_K_M via llama.cpp/Ollama (Metal). 7B fica no limite com 8 GB; 16 GB é o mínimo confortável no Mac.',
             '**Apple M5 Max (128 GB unificada)**: roda modelos 70B em Q4_K_M confortavelmente (~12-15 tok/sec) em um laptop ou Mac Studio — junto com o Mac Studio e os sistemas AMD Strix Halo de 128 GB que também comportam um modelo 70B. Nenhum deles comporta o GLM-5.3 (precisa de ~239 GB mesmo em 2 bits).',
-            '**Preços de julho de 2026**: a escassez de GDDR7 piorou, não melhorou — o preço de rua da RTX 5090 subiu de ~$4.000 em junho para $4.300–$5.000+ em meados de julho, e a RTX 4090 continua descontinuada. Compradores com orçamento apertado também devem considerar a RX 9070 XT da AMD (16 GB GDDR6, ~$630–700) — a GDDR6 escapou da maior parte da escassez, tornando-a visivelmente mais barata que a RTX 5070 Ti com VRAM similar. Compre de anúncios em estoque; verifique os preços ao vivo antes da compra.',
+            '**Preços atuais**: a escassez de GDDR7 piorou, não melhorou — o preço de rua da RTX 5090 subiu de ~$4.000 em junho para $4.300–$5.000+ em meados de julho, e a RTX 4090 continua descontinuada. Compradores com orçamento apertado também devem considerar a RX 9070 XT da AMD (16 GB GDDR6, ~$630–700) — a GDDR6 escapou da maior parte da escassez, tornando-a visivelmente mais barata que a RTX 5070 Ti com VRAM similar. Compre de anúncios em estoque; verifique os preços ao vivo antes da compra.',
             '**Dica de velocidade do llama.cpp**: Sempre defina `--n-gpu-layers 99`. Só isso já dobra a velocidade na RTX 4070 Ti, de ~40 para ~85 tok/sec.',
             '**Referência rápida:** 7B@Q4_K_M = 4-5 GB | 70B@Q4_K_M = 40 GB | GLM-5.3@2-bit = ~239 GB | RTX 4070 Ti = ~80 tok/s | RTX 4090 = ~150 tok/s | Apenas CPU 16 GB = 12-28 tok/s',
           ],
@@ -2197,7 +2197,7 @@ schema: {
           id: 'best-gpus-to-buy',
           title: 'Melhores GPUs para Comprar — Recomendações 2026',
           content: [
-            '**A escolha disponível em estoque para LLMs locais em julho de 2026 é a NVIDIA RTX série 50 (Blackwell): 5060 Ti, 5070, 5070 Ti, 5080, 5090.** A RTX série 40 (4060, 4070 Ti, 4090) foi descontinuada e agora é vendida escassa e acima dos seus preços antigos no mercado usado. Uma escassez de GDDR7/memória em 2026 continuou piorando ao longo de julho, empurrando até mesmo as placas da série 50 ainda mais acima do MSRP, então trate cada valor abaixo como um preço de rua típico de meados de julho de 2026 e verifique os anúncios ao vivo antes de comprar. Recomendações por caso de uso:',
+            '**A escolha disponível em estoque para LLMs locais é a NVIDIA RTX série 50 (Blackwell): 5060 Ti, 5070, 5070 Ti, 5080, 5090.** A RTX série 40 (4060, 4070 Ti, 4090) foi descontinuada e agora é vendida escassa e acima dos seus preços antigos no mercado usado. Uma escassez de GDDR7/memória em 2026 continuou piorando ao longo de julho, empurrando até mesmo as placas da série 50 ainda mais acima do MSRP, então trate cada valor abaixo como um preço de rua típico e verifique os anúncios ao vivo antes de comprar. Recomendações por caso de uso:',
           ],
           items: [
             '**Para Modelos 7B (Mistral, Phi-4, Llama 3.1) — Econômica:** RTX 5060 Ti 16 GB (~$394, próximo ao MSRP) ou uma RTX 4060 8 GB usada (~$250). Roda qualquer modelo 7B em Q4_K_M (~4-5 GB). Velocidade: 50–70 tok/sec. Faixa: Entusiastas econômicos.',
@@ -2221,7 +2221,7 @@ schema: {
           ],
           columns: ['GPU', 'Melhor Para', 'Preço', 'Velocidade', 'Faixa'],
           callouts: [
-            { type: 'warning', text: 'Os preços de julho de 2026 são voláteis e continuam piorando. A escassez de GDDR7 empurrou a RTX 5090 de cerca de $4.000 de rua em junho para $4.300–$5.000+ em meados de julho — mais que o dobro do seu MSRP de $1,999 — e a descontinuada RTX 4090 agora custa mais usada do que custava nova. Os preços acima são valores de rua típicos — sempre verifique os anúncios atuais antes de comprar. A RX 9070 XT da AMD, baseada em GDDR6, é uma exceção notável: ela escapou em grande parte do salto de preços.' },
+            { type: 'warning', text: 'Os preços de GPU são voláteis e continuam piorando. A escassez de GDDR7 empurrou a RTX 5090 de cerca de $4.000 de rua em junho para $4.300–$5.000+ em meados de julho — mais que o dobro do seu MSRP de $1,999 — e a descontinuada RTX 4090 agora custa mais usada do que custava nova. Os preços acima são valores de rua típicos — sempre verifique os anúncios atuais antes de comprar. A RX 9070 XT da AMD, baseada em GDDR6, é uma exceção notável: ela escapou em grande parte do salto de preços.' },
           ],
         },
         vramMath: {
@@ -2274,7 +2274,7 @@ schema: {
         gpuRecommendations: {
           id: 'gpu-recommendations',
           title: 'Qual Faixa de GPU Combina com a Sua Carga de Trabalho?',
-          content: '**Em julho de 2026, as GPUs NVIDIA entregam o maior número de tokens/sec para inferência de LLM local em todas as faixas de preço.** As seções abaixo de cada faixa trazem recomendações de modelos específicos. Para uma comparação detalhada de benchmarks, veja o [guia das melhores GPUs para LLM local](/pt/local-llms/best-gpus-for-local-llms).',
+          content: '**As GPUs NVIDIA entregam o maior número de tokens/sec para inferência de LLM local em todas as faixas de preço.** As seções abaixo de cada faixa trazem recomendações de modelos específicos. Para uma comparação detalhada de benchmarks, veja o [guia das melhores GPUs para LLM local](/pt/local-llms/best-gpus-for-local-llms).',
           columns: ['Faixa', 'GPU', 'VRAM', 'Melhor Para', 'Velocidade'],
           rows: [
             { 'Faixa': 'Econômica (~$394)', 'GPU': 'RTX 5060 Ti', 'VRAM': '16 GB', 'Melhor Para': 'modelos 7-13B', 'Velocidade': '~60 tok/s' },
@@ -2286,10 +2286,10 @@ schema: {
             { 'Faixa': 'IA de Desktop ($4,699)', 'GPU': 'NVIDIA DGX Spark', 'VRAM': '128 GB', 'Melhor Para': 'Grandes modelos MoE (não o GLM-5.3)', 'Velocidade': '~3 tok/s (70B denso)' },
           ],
           callouts: [
-            { type: 'keyPoint', text: 'Em julho de 2026, a RTX série 50 (Blackwell) é a geração atual e as únicas placas de consumo NVIDIA ainda em produção — a RTX série 40 foi descontinuada. A RTX 5090 (32 GB) é a placa a comprar para trabalho com 70B, embora a escassez de memória, que continua piorando, mantenha os preços de rua bem mais que o dobro do seu MSRP de $1,999.' },
+            { type: 'keyPoint', text: 'A RTX série 50 (Blackwell) é a geração atual e as únicas placas de consumo NVIDIA ainda em produção — a RTX série 40 foi descontinuada. A RTX 5090 (32 GB) é a placa a comprar para trabalho com 70B, embora a escassez de memória, que continua piorando, mantenha os preços de rua bem mais que o dobro do seu MSRP de $1,999.' },
           ],
           image: '/images/gpu-tier-comparison-pt.svg',
-          imageCaption: 'Recomendações de faixas de GPU (preços de rua de julho de 2026): ~$394 RTX 5060 Ti (16GB, 7-13B, 60 tok/s), ~$609 RTX 5070 (12GB, 14B, 90 tok/s), ~$1,249 RTX 5080 (16GB, 14-32B, 130 tok/s), ~$4,300–5,000+ RTX 5090 (32GB, 70B, 200 tok/s), $4,699 DGX Spark (128GB, grande MoE). A escolha da GPU importa 10× mais que a CPU.',
+          imageCaption: 'Recomendações de faixas de GPU (preços de rua): ~$394 RTX 5060 Ti (16GB, 7-13B, 60 tok/s), ~$609 RTX 5070 (12GB, 14B, 90 tok/s), ~$1,249 RTX 5080 (16GB, 14-32B, 130 tok/s), ~$4,300–5,000+ RTX 5090 (32GB, 70B, 200 tok/s), $4,699 DGX Spark (128GB, grande MoE). A escolha da GPU importa 10× mais que a CPU.',
         },
         vramTiers: {
           id: 'vram-tiers',
@@ -2397,7 +2397,7 @@ schema: {
           title: 'Quais Modelos Rodam Bem em 16 GB de RAM do Sistema Sem uma GPU?',
           content: [
             '**Sem uma GPU, uma máquina com 16 GB de RAM do sistema pode rodar modelos 3B-7B a 8-20 tokens/sec usando inferência por CPU.** O gargalo é a largura de banda de memória, não a capacidade de RAM -- as CPUs têm largura de banda muito menor que as GPUs, e é por isso que a inferência é 5-10× mais lenta.',
-            'Com 16 GB de RAM do sistema, a regra prática é: tamanho do arquivo do modelo + 4 GB de sobrecarga do SO ≤ 16 GB. Um modelo 7B em Q4_K_M (4,9 GB) cabe, mas deixa pouca folga para contextos longos. A tabela abaixo mostra opções realistas em julho de 2026.',
+            'Com 16 GB de RAM do sistema, a regra prática é: tamanho do arquivo do modelo + 4 GB de sobrecarga do SO ≤ 16 GB. Um modelo 7B em Q4_K_M (4,9 GB) cabe, mas deixa pouca folga para contextos longos. A tabela abaixo mostra opções realistas.',
             'Para um guia completo de modelos otimizados para velocidade cobrindo as faixas de apenas CPU, 4 GB, 6 GB e 8 GB de VRAM com benchmarks reais, veja **[LLMs Locais Mais Rápidos para PCs de Baixo Desempenho](/pt/local-llms/fastest-local-llms-low-end-pcs)**.',
           ],
           rows: [
@@ -2511,7 +2511,7 @@ schema: {
             '**Para implantação em produção (operação 24/7, múltiplos usuários), recomenda-se hardware de nível servidor em vez de GPUs de consumo.** O hardware de consumo é otimizado para jogos, não para inferência sustentada.',
           ],
           items: [
-            '**Consumidor (RTX 5090)**: ~$2,000 MSRP (~$4,300–5,000+ de rua a partir de julho de 2026), 32 GB de VRAM, monousuário, propenso a throttling térmico sob carga sustentada.',
+            '**Consumidor (RTX 5090)**: ~$2,000 MSRP (~$4,300–5,000+ de rua), 32 GB de VRAM, monousuário, propenso a throttling térmico sob carga sustentada.',
             '**Servidor (RTX 6000 Ada)**: ~$7,000, 48 GB de VRAM, projetada para uso 24/7, melhor refrigeração, correção de erros.',
             '**Recomendação**: Comece com uma RTX 5090. Se for rodar modelos 70B 24/7 para múltiplos usuários, migre para A100 dupla ou RTX 6000 Ada.',
           ],
@@ -2777,7 +2777,7 @@ schema: {
       theme: 'Hardware & Performance',
       title: 'Lokale-LLM-Hardware 2026: GPU vs. Mini-PC vs. Mac im Vergleich',
       seoTitle: 'Lokale LLM Hardware-Anforderungen 2026: 8GB bis 70B nach VRAM',
-      intro: 'Ein lokales LLM zu betreiben bedeutet, das Modell auf den VRAM deiner GPU abzustimmen. Stand Juli 2026 braucht ein 7B-Modell bei Q4_K_M etwa 4-5 GB VRAM (Faustregel: rund 0,6 GB pro Milliarde Parameter bei 4-Bit) oder 8-9 GB bei Q8, ein 14B-Modell ~9 GB bei Q4_K_M und die meisten 70B-Modelle benoetigen ~40 GB -- mehr, als eine einzelne RTX 4090 (24 GB) fasst. Dieser Leitfaden nennt die exakte Hardware-Anforderung pro Modellgroesse, dann das beste Modell fuer die VRAM-Stufen 8 GB, 12 GB, 16 GB und 24 GB, was es wirklich braucht, um 70B (und das weit groessere GLM-5.3) lokal zu betreiben, CPU-only-Inferenz auf 16 GB Arbeitsspeicher, MacBook-8-GB-Optionen und die aktuellen GPU-Preise von Juli 2026 nach der diesjaehrigen Speicherknappheit.',
+      intro: 'Ein lokales LLM zu betreiben bedeutet, das Modell auf den VRAM deiner GPU abzustimmen. Braucht ein 7B-Modell bei Q4_K_M etwa 4-5 GB VRAM (Faustregel: rund 0,6 GB pro Milliarde Parameter bei 4-Bit) oder 8-9 GB bei Q8, ein 14B-Modell ~9 GB bei Q4_K_M und die meisten 70B-Modelle benoetigen ~40 GB -- mehr, als eine einzelne RTX 4090 (24 GB) fasst. Dieser Leitfaden nennt die exakte Hardware-Anforderung pro Modellgroesse, dann das beste Modell fuer die VRAM-Stufen 8 GB, 12 GB, 16 GB und 24 GB, was es wirklich braucht, um 70B (und das weit groessere GLM-5.3) lokal zu betreiben, CPU-only-Inferenz auf 16 GB Arbeitsspeicher, MacBook-8-GB-Optionen und die aktuellen GPU-Preise nach der diesjaehrigen Speicherknappheit.',
       metaDescription: 'Lokale LLM Hardware-Anforderungen nach VRAM: beste Modelle fuer 8-, 16- und 24-GB-GPUs plus exakter Bedarf fuer 70B und GLM-5.3. RTX-50-Serie, Apple M5.',
       heroImage: '/images/local-llm-hardware-guide-2026-gpu-tiers-hero-de.webp',
       publishDate: '2026-04-04',
@@ -2856,7 +2856,7 @@ schema: {
             '**CPU-only (16 GB Arbeitsspeicher)**: Llama 3.2 3B Q8 (20 tok/sec) oder Phi-4 Mini Q4_K_M (25 tok/sec). Eine gebrauchte RTX 4060 8 GB (~$250) oder neue RTX 5060 Ti 16 GB (~$394) ist 5-10x schneller.',
             '**MacBook mit 8 GB RAM**: nur 3-4B-Modelle ausfuehren — Phi-4 Mini, Llama 3.2 3B oder Gemma 3 4B bei Q4_K_M ueber llama.cpp/Ollama (Metal). 7B ist auf 8 GB grenzwertig; 16 GB ist das komfortable Mac-Minimum.',
             '**Apple M5 Max (128 GB unified)**: betreibt 70B-Modelle bei Q4_K_M bequem (~12-15 tok/sec) in einem Laptop oder Mac Studio — neben Mac Studio und 128-GB-AMD-Strix-Halo-Systemen, die ebenfalls ein 70B-Modell fassen. Keines davon fasst GLM-5.3 (braucht ~239 GB selbst bei 2-Bit).',
-            '**Preise Juli 2026**: Die GDDR7-Knappheit hat sich verschaerft statt entspannt -- der RTX-5090-Strassenpreis ist von ~$4.000 im Juni auf $4.300-$5.000+ Mitte Juli gestiegen, und die RTX 4090 bleibt eingestellt. Budgetbewusste Kaeufer sollten auch AMDs RX 9070 XT pruefen (16 GB GDDR6, ~$630-700) -- GDDR6 ist der Knappheit weitgehend entgangen, wodurch sie bei aehnlichem VRAM deutlich guenstiger ist als die RTX 5070 Ti. Kaufe aus lieferbaren Angeboten; pruefe vor dem Kauf die Live-Preise.',
+            '**Aktuelle Preise**: Die GDDR7-Knappheit hat sich verschaerft statt entspannt -- der RTX-5090-Strassenpreis ist von ~$4.000 im Juni auf $4.300-$5.000+ Mitte Juli gestiegen, und die RTX 4090 bleibt eingestellt. Budgetbewusste Kaeufer sollten auch AMDs RX 9070 XT pruefen (16 GB GDDR6, ~$630-700) -- GDDR6 ist der Knappheit weitgehend entgangen, wodurch sie bei aehnlichem VRAM deutlich guenstiger ist als die RTX 5070 Ti. Kaufe aus lieferbaren Angeboten; pruefe vor dem Kauf die Live-Preise.',
             '**llama.cpp-Geschwindigkeitstipp**: Setze immer `--n-gpu-layers 99`. Allein das verdoppelt die Geschwindigkeit auf der RTX 4070 Ti von ~40 auf ~85 tok/sec.',
             '**Kurzreferenz:** 7B@Q4_K_M = 4-5 GB | 70B@Q4_K_M = 40 GB | GLM-5.3@2-Bit = ~239 GB | RTX 4070 Ti = ~80 tok/s | RTX 4090 = ~150 tok/s | CPU-only 16 GB = 12-28 tok/s',
           ],
@@ -2886,7 +2886,7 @@ schema: {
           id: 'best-gpus-to-buy',
           title: 'Beste GPUs zum Kauf — Empfehlungen 2026',
           content: [
-            '**Die lieferbare Wahl fuer lokale LLMs im Juli 2026 ist die NVIDIA RTX-50-Serie (Blackwell): 5060 Ti, 5070, 5070 Ti, 5080, 5090.** Die RTX-40-Serie (4060, 4070 Ti, 4090) ist eingestellt und wird nun knapp und ueber ihren alten Preisen auf dem Gebrauchtmarkt verkauft. Eine GDDR7-/Speicherknappheit 2026 hat sich bis Juli weiter verschaerft und selbst die 50-Serie-Karten noch staerker ueber die UVP getrieben, behandle daher jede Zahl unten als typischen Strassenpreis von Mitte Juli 2026 und pruefe Live-Angebote vor dem Kauf. Empfehlungen nach Anwendungsfall:',
+            '**Die lieferbare Wahl fuer lokale LLMs ist die NVIDIA RTX-50-Serie (Blackwell): 5060 Ti, 5070, 5070 Ti, 5080, 5090.** Die RTX-40-Serie (4060, 4070 Ti, 4090) ist eingestellt und wird nun knapp und ueber ihren alten Preisen auf dem Gebrauchtmarkt verkauft. Eine GDDR7-/Speicherknappheit 2026 hat sich bis Juli weiter verschaerft und selbst die 50-Serie-Karten noch staerker ueber die UVP getrieben, behandle daher jede Zahl unten als typischen Strassenpreis und pruefe Live-Angebote vor dem Kauf. Empfehlungen nach Anwendungsfall:',
           ],
           items: [
             '**Fuer 7B-Modelle (Mistral, Phi-4, Llama 3.1) — Budget:** RTX 5060 Ti 16 GB (~$394, nahe UVP) oder eine gebrauchte RTX 4060 8 GB (~$250). Betreibt jedes 7B-Modell bei Q4_K_M (~4-5 GB). Geschwindigkeit: 50–70 tok/sec. Stufe: Budget-Enthusiasten.',
@@ -2910,7 +2910,7 @@ schema: {
           ],
           columns: ['GPU', 'Best For', 'Price', 'Speed', 'Tier'],
           callouts: [
-            { type: 'warning', text: 'Die Preisgestaltung im Juli 2026 ist volatil und verschaerft sich weiter. Die GDDR7-Knappheit hat die RTX 5090 von rund $4.000 Strasse im Juni auf $4.300–$5.000+ Mitte Juli getrieben — mehr als das Doppelte ihrer UVP von $1.999 — und die eingestellte RTX 4090 kostet gebraucht nun mehr als neu. Die obigen Preise sind typische Strassenwerte — pruefe vor dem Kauf stets die aktuellen Angebote. AMDs GDDR6-basierte RX 9070 XT ist eine bemerkenswerte Ausnahme: Sie ist dem Preisanstieg weitgehend entgangen.' },
+            { type: 'warning', text: 'Die Preisgestaltung ist volatil und verschaerft sich weiter. Die GDDR7-Knappheit hat die RTX 5090 von rund $4.000 Strasse im Juni auf $4.300–$5.000+ Mitte Juli getrieben — mehr als das Doppelte ihrer UVP von $1.999 — und die eingestellte RTX 4090 kostet gebraucht nun mehr als neu. Die obigen Preise sind typische Strassenwerte — pruefe vor dem Kauf stets die aktuellen Angebote. AMDs GDDR6-basierte RX 9070 XT ist eine bemerkenswerte Ausnahme: Sie ist dem Preisanstieg weitgehend entgangen.' },
           ],
         },
         vramMath: {
@@ -2963,7 +2963,7 @@ schema: {
         gpuRecommendations: {
           id: 'gpu-recommendations',
           title: 'Welche GPU-Stufe passt zu deiner Workload?',
-          content: '**Stand Juli 2026 liefern NVIDIA-GPUs ueber alle Preisklassen hinweg die hoechsten Token/sec fuer lokale LLM-Inferenz.** Die Abschnitte unter jeder Stufe geben konkrete Modellempfehlungen. Fuer einen detaillierten Benchmark-Vergleich siehe den [Leitfaden zu den besten GPUs fuer lokale LLMs](/de/local-llms/best-gpus-for-local-llms).',
+          content: '**Liefern NVIDIA-GPUs ueber alle Preisklassen hinweg die hoechsten Token/sec fuer lokale LLM-Inferenz.** Die Abschnitte unter jeder Stufe geben konkrete Modellempfehlungen. Fuer einen detaillierten Benchmark-Vergleich siehe den [Leitfaden zu den besten GPUs fuer lokale LLMs](/de/local-llms/best-gpus-for-local-llms).',
           columns: ['Stufe', 'GPU', 'VRAM', 'Best For', 'Geschwindigkeit'],
           rows: [
             { 'Stufe': 'Budget (~$394)', 'GPU': 'RTX 5060 Ti', 'VRAM': '16 GB', 'Best For': '7-13B-Modelle', 'Geschwindigkeit': '~60 tok/s' },
@@ -2975,10 +2975,10 @@ schema: {
             { 'Stufe': 'Desktop-KI ($4.699)', 'GPU': 'NVIDIA DGX Spark', 'VRAM': '128 GB', 'Best For': 'Grosse MoE-Modelle (nicht GLM-5.3)', 'Geschwindigkeit': '~3 tok/s (dichtes 70B)' },
           ],
           callouts: [
-            { type: 'keyPoint', text: 'Stand Juli 2026 ist die RTX-50-Serie (Blackwell) die aktuelle Generation und die einzigen NVIDIA-Consumer-Karten, die noch produziert werden — die RTX-40-Serie ist eingestellt. Die RTX 5090 (32 GB) ist die Karte fuer 70B-Arbeit, auch wenn die sich verschaerfende Speicherknappheit die Strassenpreise auf mehr als das Doppelte ihrer UVP von $1.999 getrieben hat.' },
+            { type: 'keyPoint', text: 'Ist die RTX-50-Serie (Blackwell) die aktuelle Generation und die einzigen NVIDIA-Consumer-Karten, die noch produziert werden — die RTX-40-Serie ist eingestellt. Die RTX 5090 (32 GB) ist die Karte fuer 70B-Arbeit, auch wenn die sich verschaerfende Speicherknappheit die Strassenpreise auf mehr als das Doppelte ihrer UVP von $1.999 getrieben hat.' },
           ],
           image: '/images/gpu-tier-comparison-de.svg',
-          imageCaption: 'GPU-Stufenempfehlungen (Strassenpreise Juli 2026): ~$394 RTX 5060 Ti (16GB, 7-13B, 60 tok/s), ~$609 RTX 5070 (12GB, 14B, 90 tok/s), ~$1.249 RTX 5080 (16GB, 14-32B, 130 tok/s), ~$4.300–5.000+ RTX 5090 (32GB, 70B, 200 tok/s), $4.699 DGX Spark (128GB, grosse MoE). Die GPU-Wahl ist 10x wichtiger als die CPU.',
+          imageCaption: 'GPU-Stufenempfehlungen (Strassenpreise): ~$394 RTX 5060 Ti (16GB, 7-13B, 60 tok/s), ~$609 RTX 5070 (12GB, 14B, 90 tok/s), ~$1.249 RTX 5080 (16GB, 14-32B, 130 tok/s), ~$4.300–5.000+ RTX 5090 (32GB, 70B, 200 tok/s), $4.699 DGX Spark (128GB, grosse MoE). Die GPU-Wahl ist 10x wichtiger als die CPU.',
         },
         vramTiers: {
           id: 'vram-tiers',
@@ -3086,7 +3086,7 @@ schema: {
           title: 'Welche Modelle laufen gut auf 16 GB Arbeitsspeicher ohne GPU?',
           content: [
             '**Ohne GPU kann ein Rechner mit 16 GB Arbeitsspeicher 3B-7B-Modelle mit 8-20 Token/sec ueber CPU-Inferenz ausfuehren.** Der Engpass ist die Speicherbandbreite, nicht die RAM-Kapazitaet -- CPUs haben weit niedrigere Bandbreite als GPUs, weshalb die Inferenz 5-10x langsamer ist.',
-            'Auf 16 GB Arbeitsspeicher lautet die praktische Regel: Modelldateigroesse + 4 GB Betriebssystem-Overhead ≤ 16 GB. Ein 7B-Modell bei Q4_K_M (4,9 GB) passt, laesst aber wenig Reserve fuer lange Kontexte. Die Tabelle unten zeigt realistische Optionen Stand Juli 2026.',
+            'Auf 16 GB Arbeitsspeicher lautet die praktische Regel: Modelldateigroesse + 4 GB Betriebssystem-Overhead ≤ 16 GB. Ein 7B-Modell bei Q4_K_M (4,9 GB) passt, laesst aber wenig Reserve fuer lange Kontexte. Die Tabelle unten zeigt realistische Optionen.',
             'Fuer einen vollstaendigen, geschwindigkeitsoptimierten Modellleitfaden, der CPU-only, 4 GB, 6 GB und 8 GB VRAM-Stufen mit echten Benchmarks abdeckt, siehe **[Schnellste lokale LLMs fuer schwache PCs](/de/local-llms/fastest-local-llms-low-end-pcs)**.',
           ],
           rows: [
@@ -3200,7 +3200,7 @@ schema: {
             '**Fuer Produktionseinsatz (24/7-Betrieb, mehrere Nutzer) wird Server-Hardware gegenueber Consumer-GPUs empfohlen.** Consumer-Hardware ist fuer Gaming optimiert, nicht fuer dauerhafte Inferenz.',
           ],
           items: [
-            '**Consumer (RTX 5090)**: ~$2.000 UVP (~$4.300–5.000+ Strasse, Stand Juli 2026), 32 GB VRAM, Einzelnutzer, anfaellig fuer thermisches Throttling unter Dauerlast.',
+            '**Consumer (RTX 5090)**: ~$2.000 UVP (~$4.300–5.000+ Strasse), 32 GB VRAM, Einzelnutzer, anfaellig fuer thermisches Throttling unter Dauerlast.',
             '**Server (RTX 6000 Ada)**: ~$7.000, 48 GB VRAM, ausgelegt fuer 24/7-Betrieb, bessere Kuehlung, Fehlerkorrektur.',
             '**Empfehlung**: Beginne mit einer RTX 5090. Wenn du 70B-Modelle 24/7 fuer mehrere Nutzer betreibst, ruestest du auf Dual A100 oder RTX 6000 Ada auf.',
           ],
@@ -3466,7 +3466,7 @@ schema: {
       theme: 'Hardware & Performance',
       title: 'Materiel pour LLM local en 2026 : GPU, mini PC et Mac compares',
       seoTitle: 'Configuration materielle LLM local 2026 : de 8 Go a 70B par VRAM',
-      intro: 'Faire tourner un LLM local consiste a adapter le modele a la VRAM de votre GPU. Regle empirique pour un 7B en Q4 : comptez 4-5 Go de VRAM, soit environ 0,6 Go par milliard de parametres en 4 bits. En juillet 2026, un modele 7B necessite 8-9 Go de VRAM en Q8, un modele 14B environ 9 Go en Q4_K_M, et la plupart des modeles 70B ont besoin d\'environ 40 Go -- soit plus que ce que contient une seule RTX 4090 (24 Go). Ce guide donne le besoin materiel exact par taille de modele, puis le meilleur modele pour les paliers de VRAM de 8 Go, 12 Go, 16 Go et 24 Go, ce qu\'il faut vraiment pour faire tourner du 70B (et le bien plus grand GLM-5.3) en local, l\'inference CPU seul sur 16 Go de RAM systeme, les options MacBook 8 Go, et les prix GPU actuels de juillet 2026 apres la penurie de memoire de cette annee.',
+      intro: 'Faire tourner un LLM local consiste a adapter le modele a la VRAM de votre GPU. Regle empirique pour un 7B en Q4 : comptez 4-5 Go de VRAM, soit environ 0,6 Go par milliard de parametres en 4 bits. Un modele 7B necessite 8-9 Go de VRAM en Q8, un modele 14B environ 9 Go en Q4_K_M, et la plupart des modeles 70B ont besoin d\'environ 40 Go -- soit plus que ce que contient une seule RTX 4090 (24 Go). Ce guide donne le besoin materiel exact par taille de modele, puis le meilleur modele pour les paliers de VRAM de 8 Go, 12 Go, 16 Go et 24 Go, ce qu\'il faut vraiment pour faire tourner du 70B (et le bien plus grand GLM-5.3) en local, l\'inference CPU seul sur 16 Go de RAM systeme, les options MacBook 8 Go, et les prix GPU actuels apres la penurie de memoire de cette annee.',
       metaDescription: 'Besoins materiels LLM local par VRAM : meilleurs modeles pour GPU 8, 16 et 24 Go plus ce qu\'exigent exactement le 70B et GLM-5.3. RTX serie 50, Apple M5.',
       heroImage: '/images/local-llm-hardware-guide-2026-gpu-tiers-hero-fr.webp',
       publishDate: '2026-04-04',
@@ -3545,7 +3545,7 @@ schema: {
             '**CPU seul (16 Go de RAM systeme)** : Llama 3.2 3B Q8 (20 tok/sec) ou Phi-4 Mini Q4_K_M (25 tok/sec). Une RTX 4060 8 Go d\'occasion (~$250) ou une RTX 5060 Ti 16 Go neuve (~$394) est 5-10x plus rapide.',
             '**MacBook avec 8 Go de RAM** : faites tourner uniquement des modeles 3-4B — Phi-4 Mini, Llama 3.2 3B ou Gemma 3 4B en Q4_K_M via llama.cpp/Ollama (Metal). Le 7B est limite sur 8 Go ; 16 Go est le minimum confortable sur Mac.',
             '**Apple M5 Max (128 Go unifies)** : fait tourner les modeles 70B en Q4_K_M confortablement (~12-15 tok/sec) dans un portable ou un Mac Studio — aux cotes du Mac Studio et des systemes AMD Strix Halo 128 Go qui contiennent aussi un modele 70B.',
-            '**Prix de juillet 2026** : une penurie de GDDR7 a pousse le prix de rue de la RTX 5090 de ~$4,000 en juin a $4,300-5,000+ mi-juillet, et ca continue de grimper. La serie RTX 40 (dont la RTX 4090) est arretee. La AMD RX 9070 XT (16 Go GDDR6, ~$630-700) est une alternative moins chere largement epargnee par la penurie de GDDR7.',
+            '**Prix actuels** : une penurie de GDDR7 a pousse le prix de rue de la RTX 5090 de ~$4,000 en juin a $4,300-5,000+ mi-juillet, et ca continue de grimper. La serie RTX 40 (dont la RTX 4090) est arretee. La AMD RX 9070 XT (16 Go GDDR6, ~$630-700) est une alternative moins chere largement epargnee par la penurie de GDDR7.',
             '**Astuce vitesse llama.cpp** : reglez toujours `--n-gpu-layers 99`. Cela double a lui seul la vitesse sur RTX 4070 Ti, de ~40 a ~85 tok/sec.',
             '**Reference rapide :** 7B@Q4_K_M = 4-5 Go | 70B@Q4_K_M = 40 Go | GLM-5.3@2-bit = ~239 Go | RTX 4070 Ti = ~80 tok/s | RTX 4090 = ~150 tok/s | CPU seul 16 Go = 12-28 tok/s',
           ],
@@ -3575,7 +3575,7 @@ schema: {
           id: 'best-gpus-to-buy',
           title: 'Meilleurs GPU a acheter — recommandations 2026',
           content: [
-            '**Le choix disponible pour les LLM locaux en juillet 2026 est la serie NVIDIA RTX 50 (Blackwell) : 5060 Ti, 5070, 5070 Ti, 5080, 5090.** La serie RTX 40 (4060, 4070 Ti, 4090) est arretee et se vend desormais rare et au-dessus de ses anciens prix sur le marche de l\'occasion. Une penurie de GDDR7/memoire en 2026 a pousse meme les cartes de la serie 50 bien au-dessus du prix conseille, alors traitez chaque chiffre ci-dessous comme un prix de rue typique de juillet 2026 et verifiez les annonces en direct avant d\'acheter. Recommandations par cas d\'usage :',
+            '**Le choix disponible pour les LLM locaux est la serie NVIDIA RTX 50 (Blackwell) : 5060 Ti, 5070, 5070 Ti, 5080, 5090.** La serie RTX 40 (4060, 4070 Ti, 4090) est arretee et se vend desormais rare et au-dessus de ses anciens prix sur le marche de l\'occasion. Une penurie de GDDR7/memoire en 2026 a pousse meme les cartes de la serie 50 bien au-dessus du prix conseille, alors traitez chaque chiffre ci-dessous comme un prix de rue typique et verifiez les annonces en direct avant d\'acheter. Recommandations par cas d\'usage :',
           ],
           items: [
             '**Pour les modeles 7B (Mistral, Phi-4, Llama 3.1) — Economique :** RTX 5060 Ti 16 Go (~$394, proche du prix conseille) ou une RTX 4060 8 Go d\'occasion (~$250). Fait tourner tout modele 7B en Q4_K_M. Vitesse : 50-70 tok/sec. Palier : passionnes a budget serre.',
@@ -3599,7 +3599,7 @@ schema: {
           ],
           columns: ['GPU', 'Best For', 'Price', 'Speed', 'Tier'],
           callouts: [
-            { type: 'warning', text: 'Les prix de juillet 2026 sont volatils et la penurie de GDDR7/memoire s\'aggrave. La RTX 5090 est passee d\'environ $4,000 en juin a $4,300-5,000+ mi-juillet, et la RTX 4090 arretee coute desormais plus cher d\'occasion que neuve. Exception notable : la AMD RX 9070 XT (GDDR6) reste largement epargnee et proche de son prix conseille. Les prix ci-dessus sont des chiffres de rue typiques — verifiez toujours les annonces actuelles avant d\'acheter.' },
+            { type: 'warning', text: 'Les prix des GPU sont volatils et la penurie de GDDR7/memoire s\'aggrave. La RTX 5090 est passee d\'environ $4,000 en juin a $4,300-5,000+ mi-juillet, et la RTX 4090 arretee coute desormais plus cher d\'occasion que neuve. Exception notable : la AMD RX 9070 XT (GDDR6) reste largement epargnee et proche de son prix conseille. Les prix ci-dessus sont des chiffres de rue typiques — verifiez toujours les annonces actuelles avant d\'acheter.' },
           ],
         },
         vramMath: {
@@ -3652,7 +3652,7 @@ schema: {
         gpuRecommendations: {
           id: 'gpu-recommendations',
           title: 'Quel palier de GPU correspond a votre charge de travail ?',
-          content: '**En juillet 2026, les GPU NVIDIA offrent le plus de tokens/sec pour l\'inference LLM locale a tous les niveaux de prix.** Les sections sous chaque palier donnent des recommandations de modeles precises. Pour une comparaison detaillee de benchmarks, voir le [guide des meilleurs GPU pour LLM local](/fr/local-llms/best-gpus-for-local-llms).',
+          content: '**Les GPU NVIDIA offrent le plus de tokens/sec pour l\'inference LLM locale a tous les niveaux de prix.** Les sections sous chaque palier donnent des recommandations de modeles precises. Pour une comparaison detaillee de benchmarks, voir le [guide des meilleurs GPU pour LLM local](/fr/local-llms/best-gpus-for-local-llms).',
           columns: ['Tier', 'GPU', 'VRAM', 'Best For', 'Speed'],
           rows: [
             { 'Tier': 'Economique (~$394)', 'GPU': 'RTX 5060 Ti', 'VRAM': '16 GB', 'Best For': 'modeles 7-13B', 'Speed': '~60 tok/s' },
@@ -3664,10 +3664,10 @@ schema: {
             { 'Tier': 'IA de bureau ($4,699)', 'GPU': 'NVIDIA DGX Spark', 'VRAM': '128 GB', 'Best For': 'Grands modeles MoE (pas GLM-5.3)', 'Speed': '~3 tok/s (70B dense)' },
           ],
           callouts: [
-            { type: 'keyPoint', text: 'En juillet 2026, la serie RTX 50 (Blackwell) est la generation actuelle et les seules cartes grand public NVIDIA encore en production — la serie RTX 40 est arretee. La RTX 5090 (32 Go) est la carte a acheter pour le 70B, bien qu\'une penurie de memoire qui s\'aggrave maintienne les prix de rue bien au-dessus de son prix conseille de $1,999.' },
+            { type: 'keyPoint', text: 'La serie RTX 50 (Blackwell) est la generation actuelle et les seules cartes grand public NVIDIA encore en production — la serie RTX 40 est arretee. La RTX 5090 (32 Go) est la carte a acheter pour le 70B, bien qu\'une penurie de memoire qui s\'aggrave maintienne les prix de rue bien au-dessus de son prix conseille de $1,999.' },
           ],
           image: '/images/gpu-tier-comparison-fr.svg',
-          imageCaption: 'Recommandations de paliers de GPU (prix de rue juillet 2026) : ~$394 RTX 5060 Ti (16 Go, 7-13B, 60 tok/s), ~$609 RTX 5070 (12 Go, 14B, 90 tok/s), ~$1,249 RTX 5080 (16 Go, 14-32B, 130 tok/s), ~$4,300-5,000+ RTX 5090 (32 Go, 70B, 200 tok/s), $4,699 DGX Spark (128 Go, grand MoE). Le choix du GPU compte 10x plus que le CPU.',
+          imageCaption: 'Recommandations de paliers de GPU (prix de rue) : ~$394 RTX 5060 Ti (16 Go, 7-13B, 60 tok/s), ~$609 RTX 5070 (12 Go, 14B, 90 tok/s), ~$1,249 RTX 5080 (16 Go, 14-32B, 130 tok/s), ~$4,300-5,000+ RTX 5090 (32 Go, 70B, 200 tok/s), $4,699 DGX Spark (128 Go, grand MoE). Le choix du GPU compte 10x plus que le CPU.',
         },
         vramTiers: {
           id: 'vram-tiers',
@@ -3775,7 +3775,7 @@ schema: {
           title: 'Quels modeles tournent bien sur 16 Go de RAM systeme sans GPU ?',
           content: [
             '**Sans GPU, une machine avec 16 Go de RAM systeme peut faire tourner des modeles 3B-7B a 8-20 tokens/sec via l\'inference CPU.** Le goulot d\'etranglement est la bande passante memoire, pas la capacite de RAM -- les CPU ont une bande passante bien inferieure aux GPU, ce qui explique une inference 5-10x plus lente.',
-            'Sur 16 Go de RAM systeme, la regle pratique est : taille du fichier de modele + 4 Go de surcharge OS ≤ 16 Go. Un modele 7B en Q4_K_M (4,9 Go) tient, mais laisse peu de marge pour les contextes longs. Le tableau ci-dessous montre les options realistes en juillet 2026.',
+            'Sur 16 Go de RAM systeme, la regle pratique est : taille du fichier de modele + 4 Go de surcharge OS ≤ 16 Go. Un modele 7B en Q4_K_M (4,9 Go) tient, mais laisse peu de marge pour les contextes longs. Le tableau ci-dessous montre les options realistes.',
             'Pour un guide complet de modeles optimises en vitesse couvrant les paliers CPU seul, 4 Go, 6 Go et 8 Go de VRAM avec de vrais benchmarks, voir **[Les LLM locaux les plus rapides pour PC d\'entree de gamme](/fr/local-llms/fastest-local-llms-low-end-pcs)**.',
           ],
           rows: [
@@ -3890,12 +3890,12 @@ schema: {
             '**Pour un deploiement en production (fonctionnement 24h/24 et 7j/7, plusieurs utilisateurs), le materiel de classe serveur est recommande plutot que les GPU grand public.** Le materiel grand public est optimise pour le jeu, pas pour l\'inference soutenue.',
           ],
           items: [
-            '**Grand public (RTX 5090)** : ~$2,000 prix conseille (~$4,300-5,000+ en rue au juillet 2026), 32 Go de VRAM, mono-utilisateur, sujet au throttling thermique sous charge soutenue.',
+            '**Grand public (RTX 5090)** : ~$2,000 prix conseille (~$4,300-5,000+ en rue), 32 Go de VRAM, mono-utilisateur, sujet au throttling thermique sous charge soutenue.',
             '**Serveur (RTX 6000 Ada)** : ~$7,000, 48 Go de VRAM, concu pour un usage 24h/24, meilleur refroidissement, correction d\'erreurs.',
             '**Recommandation** : commencez par une RTX 5090. Si vous faites tourner des modeles 70B 24h/24 pour plusieurs utilisateurs, passez a une double A100 ou RTX 6000 Ada.',
           ],
           image: '/images/server-vs-consumer-fr.svg',
-          imageCaption: 'Materiel grand public vs serveur : RTX 5090 (~$4,300-5,000+ rue au juillet 2026, 32 Go, mono-utilisateur, temps partiel) vs RTX 6000 Ada ($7,000+, 48 Go, multi-utilisateur, service 24h/24). Commencez par du materiel grand public ; passez au niveau serveur uniquement pour des services de production.',
+          imageCaption: 'Materiel grand public vs serveur : RTX 5090 (~$4,300-5,000+ rue, 32 Go, mono-utilisateur, temps partiel) vs RTX 6000 Ada ($7,000+, 48 Go, multi-utilisateur, service 24h/24). Commencez par du materiel grand public ; passez au niveau serveur uniquement pour des services de production.',
         },
         dgxSpark: {
           id: 'dgx-spark',
@@ -4156,7 +4156,7 @@ schema: {
       theme: 'Hardware & Performance',
       title: '2026年のローカルLLMハードウェア：GPU vs ミニPC vs Mac 比較',
       seoTitle: '2026年ローカルLLMハードウェア要件：8GBから70BまでVRAM別解説',
-      intro: 'ローカルLLMを実行するということは、モデルをGPUのVRAMに合わせることを意味します。2026年7月時点で、7BモデルはQ4_K_Mで約4〜5 GBのVRAM（標準的な目安：4ビットでパラメータ10億あたり約0.6 GB）またはQ8で8〜9 GB、14BモデルはQ4_K_Mで約9 GB、そしてほとんどの70Bモデルは約40 GB（単一のRTX 4090の24 GBを超える）を必要とします。本ガイドでは、モデルサイズごとの正確なハードウェア要件を示し、続いて8 GB、12 GB、16 GB、24 GBの各VRAMティアに最適なモデル、70B（そしてはるかに巨大なGLM-5.3）をローカルで実行するために実際に必要なもの、システムRAM 16 GBでのCPUのみの推論、MacBook 8 GBの選択肢、そして今年のメモリ不足を経た2026年7月現在のGPU価格を解説します。',
+      intro: 'ローカルLLMを実行するということは、モデルをGPUのVRAMに合わせることを意味します。7BモデルはQ4_K_Mで約4〜5 GBのVRAM（標準的な目安：4ビットでパラメータ10億あたり約0.6 GB）またはQ8で8〜9 GB、14BモデルはQ4_K_Mで約9 GB、そしてほとんどの70Bモデルは約40 GB（単一のRTX 4090の24 GBを超える）を必要とします。本ガイドでは、モデルサイズごとの正確なハードウェア要件を示し、続いて8 GB、12 GB、16 GB、24 GBの各VRAMティアに最適なモデル、70B（そしてはるかに巨大なGLM-5.3）をローカルで実行するために実際に必要なもの、システムRAM 16 GBでのCPUのみの推論、MacBook 8 GBの選択肢、そして今年のメモリ不足を経た現在のGPU価格を解説します。',
       metaDescription: 'VRAM別ローカルLLMハードウェア要件：8、16、24 GB GPU向けベストモデルと70BおよびGLM-5.3をローカルで動かすために必要なもの。RTX 50シリーズ、Apple M5。',
       heroImage: '/images/local-llm-hardware-guide-2026-gpu-tiers-hero-ja.webp',
       publishDate: '2026-04-04',
@@ -4235,7 +4235,7 @@ schema: {
             '**CPUのみ（システムRAM 16 GB）**：Llama 3.2 3B Q8（20 tok/sec）またはPhi-4 Mini Q4_K_M（25 tok/sec）。中古のRTX 4060 8 GB（約$250）または新品のRTX 5060 Ti 16 GB（約$394）なら5〜10倍高速です。',
             '**RAM 8 GBのMacBook**：3〜4Bモデルのみ実行可能 — Phi-4 Mini、Llama 3.2 3B、またはGemma 3 4BをQ4_K_Mでllama.cpp/Ollama（Metal）経由で。7Bは8 GBではぎりぎりで、16 GBがMacの快適な最小値です。',
             '**Apple M5 Max（128 GBユニファイド）**：ラップトップまたはMac Studioで70BモデルをQ4_K_Mで快適に実行（約12〜15 tok/sec） — Mac Studioや、同じく70Bモデルを保持できる128 GB AMD Strix Haloシステムと並んで。',
-            '**2026年7月の価格**：GDDR7不足は緩和されずむしろ悪化しており、RTX 5090の実勢価格は6月の約$4,000から7月中旬には$4,300〜$5,000以上に上昇し、なお上昇を続けています。生産終了のRTX 4090も高止まりしたままです。予算重視の購入者はAMDのRX 9070 XT（16 GB GDDR6、約$630〜700）もチェックしましょう — GDDR6は不足の影響をほとんど受けておらず、GDDR7不足の影響を大きく受けていない分、割安な代替になっています。在庫のあるRTX 50シリーズから購入し、購入前にライブ価格を確認してください。',
+            '**現在の価格**：GDDR7不足は緩和されずむしろ悪化しており、RTX 5090の実勢価格は6月の約$4,000から7月中旬には$4,300〜$5,000以上に上昇し、なお上昇を続けています。生産終了のRTX 4090も高止まりしたままです。予算重視の購入者はAMDのRX 9070 XT（16 GB GDDR6、約$630〜700）もチェックしましょう — GDDR6は不足の影響をほとんど受けておらず、GDDR7不足の影響を大きく受けていない分、割安な代替になっています。在庫のあるRTX 50シリーズから購入し、購入前にライブ価格を確認してください。',
             '**llama.cpp速度のヒント**：常に `--n-gpu-layers 99` を設定してください。これだけでRTX 4070 Tiの速度が約40から約85 tok/secへと倍増します。',
             '**クイックリファレンス：** 7B@Q4_K_M = 4-5 GB | 70B@Q4_K_M = 40 GB | GLM-5.3@2-bit = 約239 GB | RTX 4070 Ti = 約80 tok/s | RTX 4090 = 約150 tok/s | CPUのみ16 GB = 12〜28 tok/s',
           ],
@@ -4265,7 +4265,7 @@ schema: {
           id: 'best-gpus-to-buy',
           title: '購入すべきベストGPU — 2026年の推奨',
           content: [
-            '**2026年7月時点でローカルLLM向けの在庫がある選択肢はNVIDIA RTX 50シリーズ（Blackwell）：5060 Ti、5070、5070 Ti、5080、5090です。** RTX 40シリーズ（4060、4070 Ti、4090）は生産終了となり、中古市場では希少で旧価格を上回る値段で取引されています。2026年のGDDR7／メモリ不足は7月にかけて悪化を続けており、50シリーズのカードでさえさらにMSRPを上回っているため、以下の各数値は2026年7月中旬時点の典型的な実勢価格として扱い、購入前にライブの出品を確認してください。用途別の推奨：',
+            '**ローカルLLM向けの在庫がある選択肢はNVIDIA RTX 50シリーズ（Blackwell）：5060 Ti、5070、5070 Ti、5080、5090です。** RTX 40シリーズ（4060、4070 Ti、4090）は生産終了となり、中古市場では希少で旧価格を上回る値段で取引されています。2026年のGDDR7／メモリ不足は7月にかけて悪化を続けており、50シリーズのカードでさえさらにMSRPを上回っているため、以下の各数値は典型的な実勢価格として扱い、購入前にライブの出品を確認してください。用途別の推奨：',
           ],
           items: [
             '**7Bモデル（Mistral、Phi-4、Llama 3.1）向け — 予算重視：** RTX 5060 Ti 16 GB（約$394、MSRPに近い）または中古のRTX 4060 8 GB（約$250）。あらゆる7BモデルをQ4_K_M（約4〜5 GB）で実行。速度：50〜70 tok/sec。ティア：予算重視の愛好家。',
@@ -4289,7 +4289,7 @@ schema: {
           ],
           columns: ['GPU', 'Best For', 'Price', 'Speed', 'Tier'],
           callouts: [
-            { type: 'warning', text: '2026年7月の価格は変動が激しく、なお悪化しています。GDDR7不足によりRTX 5090は6月の実勢約$4,000から7月中旬には$4,300〜$5,000以上まで上昇しました — $1,999のMSRPの2倍以上です。生産終了のRTX 4090は新品時より中古の方が高くなっています。上記の価格は典型的な実勢価格です — 購入前に必ず現在の出品を確認してください。AMDのGDDR6ベースのRX 9070 XTは注目すべき例外で、価格急騰をほぼ回避しています。' },
+            { type: 'warning', text: '現在の価格は変動が激しく、なお悪化しています。GDDR7不足によりRTX 5090は6月の実勢約$4,000から7月中旬には$4,300〜$5,000以上まで上昇しました — $1,999のMSRPの2倍以上です。生産終了のRTX 4090は新品時より中古の方が高くなっています。上記の価格は典型的な実勢価格です — 購入前に必ず現在の出品を確認してください。AMDのGDDR6ベースのRX 9070 XTは注目すべき例外で、価格急騰をほぼ回避しています。' },
           ],
         },
         vramMath: {
@@ -4342,7 +4342,7 @@ schema: {
         gpuRecommendations: {
           id: 'gpu-recommendations',
           title: 'どのGPUティアがあなたのワークロードに合うか？',
-          content: '**2026年7月時点で、NVIDIA GPUはすべての価格帯においてローカルLLM推論で最高のトークン/秒を提供します。** 各ティアのセクションでは、具体的なモデルの推奨を示します。詳細なベンチマーク比較については、[ローカルLLM向けベストGPUガイド](/ja/local-llms/best-gpus-for-local-llms)を参照してください。',
+          content: '**NVIDIA GPUはすべての価格帯においてローカルLLM推論で最高のトークン/秒を提供します。** 各ティアのセクションでは、具体的なモデルの推奨を示します。詳細なベンチマーク比較については、[ローカルLLM向けベストGPUガイド](/ja/local-llms/best-gpus-for-local-llms)を参照してください。',
           columns: ['ティア', 'GPU', 'VRAM', '最適な用途', '速度'],
           rows: [
             { 'ティア': 'Budget (~$394)', 'GPU': 'RTX 5060 Ti', 'VRAM': '16 GB', '最適な用途': '7-13B models', '速度': '~60 tok/s' },
@@ -4354,10 +4354,10 @@ schema: {
             { 'ティア': 'Desktop AI ($4,699)', 'GPU': 'NVIDIA DGX Spark', 'VRAM': '128 GB', '最適な用途': 'Large MoE models (not GLM-5.3)', '速度': '~3 tok/s (dense 70B)' },
           ],
           callouts: [
-            { type: 'keyPoint', text: '2026年7月時点で、RTX 50シリーズ（Blackwell）は現行世代であり、まだ生産されている唯一のNVIDIAコンシューマーカードです — RTX 40シリーズは生産終了です。RTX 5090（32 GB）は70B作業のために購入すべきカードですが、悪化するメモリ不足により実勢価格は$1,999のMSRPの2倍以上まで上昇しています。' },
+            { type: 'keyPoint', text: 'RTX 50シリーズ（Blackwell）は現行世代であり、まだ生産されている唯一のNVIDIAコンシューマーカードです — RTX 40シリーズは生産終了です。RTX 5090（32 GB）は70B作業のために購入すべきカードですが、悪化するメモリ不足により実勢価格は$1,999のMSRPの2倍以上まで上昇しています。' },
           ],
           image: '/images/gpu-tier-comparison-ja.svg',
-          imageCaption: 'GPUティアの推奨（2026年7月実勢価格）：約$394 RTX 5060 Ti（16GB、7-13B、60 tok/s）、約$609 RTX 5070（12GB、14B、90 tok/s）、約$1,249 RTX 5080（16GB、14-32B、130 tok/s）、約$4,300〜5,000以上 RTX 5090（32GB、70B、200 tok/s）、$4,699 DGX Spark（128GB、大規模MoE）。GPUの選択はCPUより10倍重要です。',
+          imageCaption: 'GPUティアの推奨（実勢価格）：約$394 RTX 5060 Ti（16GB、7-13B、60 tok/s）、約$609 RTX 5070（12GB、14B、90 tok/s）、約$1,249 RTX 5080（16GB、14-32B、130 tok/s）、約$4,300〜5,000以上 RTX 5090（32GB、70B、200 tok/s）、$4,699 DGX Spark（128GB、大規模MoE）。GPUの選択はCPUより10倍重要です。',
         },
         vramTiers: {
           id: 'vram-tiers',
@@ -4465,7 +4465,7 @@ schema: {
           title: 'GPUなしのシステムRAM 16 GBでどのモデルが良く動作するか？',
           content: [
             '**GPUなしでも、システムRAM 16 GBのマシンはCPU推論を使って3B〜7Bモデルを8〜20トークン/秒で実行できます。** ボトルネックはメモリ帯域幅であり、RAM容量ではありません — CPUはGPUよりはるかに低い帯域幅しか持たず、これが推論が5〜10倍遅い理由です。',
-            'システムRAM 16 GBでは、実用的なルールは：モデルファイルサイズ + 4 GBのOSオーバーヘッド ≤ 16 GBです。7BモデルのQ4_K_M（4.9 GB）は収まりますが、長いコンテキストには余裕がほとんど残りません。下記の表は2026年7月時点の現実的な選択肢を示します。',
+            'システムRAM 16 GBでは、実用的なルールは：モデルファイルサイズ + 4 GBのOSオーバーヘッド ≤ 16 GBです。7BモデルのQ4_K_M（4.9 GB）は収まりますが、長いコンテキストには余裕がほとんど残りません。下記の表は時点の現実的な選択肢を示します。',
             'CPUのみ、4 GB、6 GB、8 GB VRAMの各ティアを実際のベンチマークと共にカバーする速度最適化モデルの完全ガイドについては、**[ローエンドPC向け最速ローカルLLM](/ja/local-llms/fastest-local-llms-low-end-pcs)**を参照してください。',
           ],
           rows: [
@@ -4579,7 +4579,7 @@ schema: {
             '**本番デプロイ（24時間365日の運用、複数ユーザー）には、コンシューマーGPUよりサーバーグレードのハードウェアが推奨されます。** コンシューマーハードウェアはゲーム向けに最適化されており、持続的な推論向けではありません。',
           ],
           items: [
-            '**コンシューマー（RTX 5090）**：MSRP約$2,000（2026年7月時点の実勢約$4,300〜5,000以上）、32 GB VRAM、シングルユーザー、持続負荷下でサーマルスロットリングを起こしやすい。',
+            '**コンシューマー（RTX 5090）**：MSRP約$2,000（時点の実勢約$4,300〜5,000以上）、32 GB VRAM、シングルユーザー、持続負荷下でサーマルスロットリングを起こしやすい。',
             '**サーバー（RTX 6000 Ada）**：約$7,000、48 GB VRAM、24時間365日の使用向けに設計、より良い冷却、エラー訂正。',
             '**推奨**：RTX 5090から始めましょう。複数ユーザー向けに70Bモデルを24時間365日実行する場合は、デュアルA100またはRTX 6000 Adaにアップグレードしてください。',
           ],
@@ -4845,7 +4845,7 @@ schema: {
       theme: 'Hardware & Performance',
       title: '2026年本地LLM硬件：GPU vs 迷你PC vs Mac 对比',
       seoTitle: '2026年本地LLM硬件要求：8GB到70B，按显存划分',
-      intro: '运行本地LLM意味着将模型与GPU的显存相匹配。截至2026年7月，一个7B模型在Q4_K_M下大约需要4-5 GB显存（标准经验法则：4位精度下每十亿参数约0.6 GB），在Q8下需要8-9 GB，14B模型在Q4_K_M下需要约9 GB，而大多数70B模型需要约40 GB——超过单张RTX 4090（24 GB）的容量。本指南给出每种模型规模的精确硬件要求，然后是8 GB、12 GB、16 GB和24 GB显存档位的最佳模型，本地运行70B（以及规模大得多的GLM-5.3）真正需要什么，16 GB系统内存上的纯CPU推理，MacBook 8 GB的选项，以及今年内存短缺之后2026年7月的当前GPU价格。',
+      intro: '运行本地LLM意味着将模型与GPU的显存相匹配。截至，一个7B模型在Q4_K_M下大约需要4-5 GB显存（标准经验法则：4位精度下每十亿参数约0.6 GB），在Q8下需要8-9 GB，14B模型在Q4_K_M下需要约9 GB，而大多数70B模型需要约40 GB——超过单张RTX 4090（24 GB）的容量。本指南给出每种模型规模的精确硬件要求，然后是8 GB、12 GB、16 GB和24 GB显存档位的最佳模型，本地运行70B（以及规模大得多的GLM-5.3）真正需要什么，16 GB系统内存上的纯CPU推理，MacBook 8 GB的选项，以及今年内存短缺之后的当前GPU价格。',
       metaDescription: '按显存划分的本地LLM硬件要求：8、16和24 GB GPU的最佳模型，以及70B和GLM-5.3的精确需求。RTX 50系列、Apple M5。',
       heroImage: '/images/local-llm-hardware-guide-2026-gpu-tiers-hero-zh.webp',
       publishDate: '2026-04-04',
@@ -4924,7 +4924,7 @@ schema: {
             '**纯CPU（16 GB 系统内存）**：Llama 3.2 3B Q8（20 tok/sec）或 Phi-4 Mini Q4_K_M（25 tok/sec）。一张二手 RTX 4060 8 GB（~$250）或全新 RTX 5060 Ti 16 GB（~$394）要快 5-10 倍。',
             '**8 GB 内存的 MacBook**：只能运行 3-4B 模型 — 通过 llama.cpp/Ollama（Metal）运行 Q4_K_M 下的 Phi-4 Mini、Llama 3.2 3B 或 Gemma 3 4B。7B 在 8 GB 上勉强可行；16 GB 是舒适的 Mac 最低配置。',
             '**Apple M5 Max（128 GB 统一内存）**：在笔记本或 Mac Studio 中可舒适地运行 Q4_K_M 下的 70B 模型（~12-15 tok/sec）——与同样能容纳 70B 模型的 Mac Studio 和 128 GB AMD Strix Halo 系统并列。以上均无法容纳 GLM-5.3（即使 2-bit 量化也需要约 239 GB）。',
-            '**2026年7月价格**：GDDR7 短缺不但没有缓解反而恶化——RTX 5090 街价从6月的约 4,000 美元攀升至7月中旬的 4,300-5,000 美元以上，且仍在上涨，RTX 4090 仍处于停产状态。预算有限的买家可关注 AMD RX 9070 XT（16 GB GDDR6，约 630-700 美元）——GDDR6 基本躲过了此次短缺，价格明显低于同显存的 RTX 5070 Ti。从有货的渠道购买；购买前查看实时价格。',
+            '**价格**：GDDR7 短缺不但没有缓解反而恶化——RTX 5090 街价从6月的约 4,000 美元攀升至7月中旬的 4,300-5,000 美元以上，且仍在上涨，RTX 4090 仍处于停产状态。预算有限的买家可关注 AMD RX 9070 XT（16 GB GDDR6，约 630-700 美元）——GDDR6 基本躲过了此次短缺，价格明显低于同显存的 RTX 5070 Ti。从有货的渠道购买；购买前查看实时价格。',
             '**llama.cpp 速度提示**：始终设置 `--n-gpu-layers 99`。仅此一项就能将 RTX 4070 Ti 的速度从约 40 翻倍到约 85 tok/sec。',
             '**快速参考：** 7B@Q4_K_M = 4-5 GB | 70B@Q4_K_M = 40 GB | GLM-5.3@2-bit = ~239 GB | RTX 4070 Ti = ~80 tok/s | RTX 4090 = ~150 tok/s | 纯CPU 16 GB = 12-28 tok/s',
           ],
@@ -4954,7 +4954,7 @@ schema: {
           id: 'best-gpus-to-buy',
           title: '最值得购买的GPU — 2026年推荐',
           content: [
-            '**2026年7月用于本地LLM的有货选择是 NVIDIA RTX 50 系列（Blackwell）：5060 Ti、5070、5070 Ti、5080、5090。** RTX 40 系列（4060、4070 Ti、4090）已停产，目前在二手市场上稀缺且售价高于旧价。2026年的 GDDR7/内存短缺到7月持续恶化，甚至将 50 系列卡片推得更高于 MSRP，因此请将下面的每个数字视为典型的 2026 年 7 月中旬市场价，购买前查看实时报价。按使用场景的推荐：',
+            '**用于本地LLM的有货选择是 NVIDIA RTX 50 系列（Blackwell）：5060 Ti、5070、5070 Ti、5080、5090。** RTX 40 系列（4060、4070 Ti、4090）已停产，目前在二手市场上稀缺且售价高于旧价。2026年的 GDDR7/内存短缺到7月持续恶化，甚至将 50 系列卡片推得更高于 MSRP，因此请将下面的每个数字视为典型的 2026 年 7 月中旬市场价，购买前查看实时报价。按使用场景的推荐：',
           ],
           items: [
             '**用于 7B 模型（Mistral、Phi-4、Llama 3.1）— 预算型：** RTX 5060 Ti 16 GB（~$394，接近 MSRP）或二手 RTX 4060 8 GB（~$250）。可在 Q4_K_M（~4-5 GB）下运行任何 7B 模型。速度：50–70 tok/sec。档位：预算型爱好者。',
@@ -4978,7 +4978,7 @@ schema: {
           ],
           columns: ['GPU', '最适合', '价格', '速度', '档位'],
           callouts: [
-            { type: 'warning', text: '2026年7月的价格波动剧烈且仍在恶化。GDDR7/内存短缺已将 RTX 5090 从6月约 4,000 美元的街价推高至7月中旬的 4,300-5,000 美元以上——超过其 $1,999 MSRP 的两倍以上，而停产的 RTX 4090 现在的二手价格比新机时还高。上面的价格是典型街价——购买前请始终查看当前报价。AMD 基于 GDDR6 的 RX 9070 XT 是一个明显的例外：它基本未受此次涨价影响。' },
+            { type: 'warning', text: '的价格波动剧烈且仍在恶化。GDDR7/内存短缺已将 RTX 5090 从6月约 4,000 美元的街价推高至7月中旬的 4,300-5,000 美元以上——超过其 $1,999 MSRP 的两倍以上，而停产的 RTX 4090 现在的二手价格比新机时还高。上面的价格是典型街价——购买前请始终查看当前报价。AMD 基于 GDDR6 的 RX 9070 XT 是一个明显的例外：它基本未受此次涨价影响。' },
           ],
         },
         vramMath: {
@@ -5031,7 +5031,7 @@ schema: {
         gpuRecommendations: {
           id: 'gpu-recommendations',
           title: '哪个GPU档位匹配你的工作负载？',
-          content: '**截至2026年7月，NVIDIA GPU 在所有价位上都为本地LLM推理提供最高的每秒 token 数。** 下面每个档位的小节给出具体的模型推荐。要查看详细的基准对比，请参见[本地LLM最佳GPU指南](/zh/local-llms/best-gpus-for-local-llms)。',
+          content: '**截至，NVIDIA GPU 在所有价位上都为本地LLM推理提供最高的每秒 token 数。** 下面每个档位的小节给出具体的模型推荐。要查看详细的基准对比，请参见[本地LLM最佳GPU指南](/zh/local-llms/best-gpus-for-local-llms)。',
           columns: ['档位', 'GPU', '显存', '最适合', '速度'],
           rows: [
             { '档位': '预算型 (~$394)', 'GPU': 'RTX 5060 Ti', '显存': '16 GB', '最适合': '7-13B 模型', '速度': '~60 tok/s' },
@@ -5043,10 +5043,10 @@ schema: {
             { '档位': '桌面AI ($4,699)', 'GPU': 'NVIDIA DGX Spark', '显存': '128 GB', '最适合': '大型 MoE 模型（不含 GLM-5.3）', '速度': '~3 tok/s (稠密 70B)' },
           ],
           callouts: [
-            { type: 'keyPoint', text: '截至2026年7月，RTX 50 系列（Blackwell）是当前世代，也是唯一仍在生产的 NVIDIA 消费级卡——RTX 40 系列已停产。RTX 5090（32 GB）是 70B 工作要购买的卡，尽管持续恶化的内存短缺已使街价超过其 $1,999 MSRP 的两倍。' },
+            { type: 'keyPoint', text: '截至，RTX 50 系列（Blackwell）是当前世代，也是唯一仍在生产的 NVIDIA 消费级卡——RTX 40 系列已停产。RTX 5090（32 GB）是 70B 工作要购买的卡，尽管持续恶化的内存短缺已使街价超过其 $1,999 MSRP 的两倍。' },
           ],
           image: '/images/gpu-tier-comparison-zh.svg',
-          imageCaption: 'GPU 档位推荐（2026年7月街价）：~$394 RTX 5060 Ti（16GB，7-13B，60 tok/s），~$609 RTX 5070（12GB，14B，90 tok/s），~$1,249 RTX 5080（16GB，14-32B，130 tok/s），~$4,300–5,000+ RTX 5090（32GB，70B，200 tok/s），$4,699 DGX Spark（128GB，大型 MoE）。GPU 选择比 CPU 重要 10 倍。',
+          imageCaption: 'GPU 档位推荐（街价）：~$394 RTX 5060 Ti（16GB，7-13B，60 tok/s），~$609 RTX 5070（12GB，14B，90 tok/s），~$1,249 RTX 5080（16GB，14-32B，130 tok/s），~$4,300–5,000+ RTX 5090（32GB，70B，200 tok/s），$4,699 DGX Spark（128GB，大型 MoE）。GPU 选择比 CPU 重要 10 倍。',
         },
         vramTiers: {
           id: 'vram-tiers',
@@ -5154,7 +5154,7 @@ schema: {
           title: '哪些模型在无GPU的16 GB系统内存上运行良好？',
           content: [
             '**无 GPU 时，配备 16 GB 系统内存的机器可以使用 CPU 推理以 8-20 tokens/sec 运行 3B-7B 模型。** 瓶颈是内存带宽，而非内存容量——CPU 的带宽远低于 GPU，这就是推理慢 5-10 倍的原因。',
-            '在 16 GB 系统内存上，实用法则是：模型文件大小 + 4 GB 操作系统开销 ≤ 16 GB。Q4_K_M 下的 7B 模型（4.9 GB）可装入，但为长上下文留下的余量很少。下表显示截至2026年7月的现实选择。',
+            '在 16 GB 系统内存上，实用法则是：模型文件大小 + 4 GB 操作系统开销 ≤ 16 GB。Q4_K_M 下的 7B 模型（4.9 GB）可装入，但为长上下文留下的余量很少。下表显示截至的现实选择。',
             '要查看涵盖纯CPU、4 GB、6 GB 和 8 GB 显存档位并带真实基准的完整速度优化模型指南，请参见 **[低端PC最快本地LLM](/zh/local-llms/fastest-local-llms-low-end-pcs)**。',
           ],
           rows: [
@@ -5534,7 +5534,7 @@ schema: {
       theme: 'Hardware & Performance',
       title: '2026년 로컬 LLM 하드웨어: GPU vs 미니 PC vs Mac 비교',
       seoTitle: '2026년 LLM 하드웨어 요구 사항: 8GB부터 70B까지 VRAM별 가이드',
-      intro: '로컬 LLM을 실행하려면 GPU의 VRAM을 실행하려는 모델에 맞게 설정해야 합니다. 기본 경험 법칙: 7B 모델은 Q4_K_M에서 약 4~5GB VRAM이 필요합니다(4비트 기준 파라미터 10억 개당 약 0.6GB). 2026년 7월 기준으로 7B 모델은 Q8에서 8~9GB VRAM이 필요하고, 14B 모델은 15GB, 대부분의 70B 모델은 Q4_K_M에서 39GB가 필요합니다. 이는 단일 RTX 4090의 용량을 초과합니다. 이 가이드는 12GB, 16GB, 24GB VRAM 티어별 모델 권장 사항, 70B(그리고 훨씬 더 큰 GLM-5.3)를 로컬에서 실행하는 데 실제로 필요한 것, 16GB 시스템 RAM에서의 CPU 전용 추론, RTX 4070 Ti에서의 llama.cpp 속도 설정, 그리고 완전한 하드웨어 빌드 구성을 다룹니다.',
+      intro: '로컬 LLM을 실행하려면 GPU의 VRAM을 실행하려는 모델에 맞게 설정해야 합니다. 기본 경험 법칙: 7B 모델은 Q4_K_M에서 약 4~5GB VRAM이 필요합니다(4비트 기준 파라미터 10억 개당 약 0.6GB). 7B 모델은 Q8에서 8~9GB VRAM이 필요하고, 14B 모델은 15GB, 대부분의 70B 모델은 Q4_K_M에서 39GB가 필요합니다. 이는 단일 RTX 4090의 용량을 초과합니다. 이 가이드는 12GB, 16GB, 24GB VRAM 티어별 모델 권장 사항, 70B(그리고 훨씬 더 큰 GLM-5.3)를 로컬에서 실행하는 데 실제로 필요한 것, 16GB 시스템 RAM에서의 CPU 전용 추론, RTX 4070 Ti에서의 llama.cpp 속도 설정, 그리고 완전한 하드웨어 빌드 구성을 다룹니다.',
       metaDescription: 'VRAM별 LLM 하드웨어 요구 사항: 8, 16, 24GB GPU를 위한 최적 모델과 70B 및 GLM-5.3에 정확히 필요한 사양. RTX 50 시리즈, Apple M5.',
       heroImage: '/images/local-llm-hardware-guide-2026-gpu-tiers-hero-ko.webp',
       publishDate: '2026-04-04',
@@ -5610,7 +5610,7 @@ schema: {
             '**24GB VRAM(RTX 4090)**: 대부분의 70B 모델은 Q4_K_M(39GB)으로 맞지 않습니다. 최적 선택: DeepSeek-R1 32B Q4_K_M(~19GB, 60 tok/sec) 또는 Qwen 3.6 27B(~16GB, SWE-bench 77.2%).',
             '**CPU 전용(16GB 시스템 RAM)**: Llama 3.2 3B Q8(20 tok/sec) 또는 Phi-4 Mini Q4_K_M(25 tok/sec). 중고 RTX 4060 8GB(~$150) 또는 RTX 5060 Ti 12GB(~$250)는 5~10배 더 빠릅니다.',
             '**Apple M5 Max(128GB 통합)**: 최초로 70B 모델을 Q4_K_M으로 실행하는 Mac — 노트북 또는 Mac Studio 폼 팩터에서 듀얼 RTX 4090 데스크톱과 비교 가능한 성능.',
-            '**2026년 7월 가격**: GDDR7 공급 부족이 완화되지 않고 악화되었습니다 — RTX 5090 실거래가는 6월 약 $4,000에서 7월 중순 $4,300~$5,000+로 계속 상승 중입니다. 예산이 부족하다면 AMD RX 9070 XT(16GB GDDR6, ~$630~700)도 확인하십시오 — GDDR6는 이번 공급 부족의 영향을 크게 받지 않아 상대적으로 저렴합니다.',
+            '**현재 가격**: GDDR7 공급 부족이 완화되지 않고 악화되었습니다 — RTX 5090 실거래가는 6월 약 $4,000에서 7월 중순 $4,300~$5,000+로 계속 상승 중입니다. 예산이 부족하다면 AMD RX 9070 XT(16GB GDDR6, ~$630~700)도 확인하십시오 — GDDR6는 이번 공급 부족의 영향을 크게 받지 않아 상대적으로 저렴합니다.',
             '**llama.cpp 속도 팁**: 항상 `--n-gpu-layers 99`를 설정하십시오. 이 설정만으로 RTX 4070 Ti에서 속도가 ~40에서 ~85 tok/sec로 두 배 증가합니다.',
             '**빠른 참조:** 7B@Q4_K_M = 4~5GB | 70B@Q4_K_M = 40GB | GLM-5.3@2-bit = ~239GB | RTX 4070 Ti = ~80 tok/s | RTX 4090 = ~150 tok/s | CPU 전용 16GB = 12~28 tok/s',
           ],
@@ -5692,7 +5692,7 @@ schema: {
         gpuRecommendations: {
           id: 'gpu-recommendations',
           title: '어떤 GPU 티어가 귀하의 워크로드에 적합합니까?',
-          content: '**2026년 7월 기준으로 NVIDIA GPU는 모든 가격대에서 로컬 LLM 추론에 가장 높은 tok/sec를 제공합니다.** 아래 각 티어에서 구체적인 모델 권장 사항을 확인하십시오. 자세한 벤치마크 비교는 [로컬 LLM 최고 GPU 가이드](/ko/local-llms/best-gpus-for-local-llms)를 참조하십시오.',
+          content: '**NVIDIA GPU는 모든 가격대에서 로컬 LLM 추론에 가장 높은 tok/sec를 제공합니다.** 아래 각 티어에서 구체적인 모델 권장 사항을 확인하십시오. 자세한 벤치마크 비교는 [로컬 LLM 최고 GPU 가이드](/ko/local-llms/best-gpus-for-local-llms)를 참조하십시오.',
           columns: ['티어', 'GPU', 'VRAM', '최적 용도', '속도'],
           rows: [
             { '티어': '예산형($600)', 'GPU': 'RTX 4070 Ti / RTX 5070', 'VRAM': '12GB', '최적 용도': '7~13B 모델', '속도': '~80 tok/s' },
@@ -5703,7 +5703,7 @@ schema: {
             { '티어': '데스크톱 AI($4,699)', 'GPU': 'NVIDIA DGX Spark', 'VRAM': '128GB', '최적 용도': '대형 MoE 모델 (GLM-5.3 제외)', '속도': '18~28 tok/s' },
           ],
           callouts: [
-            { type: 'keyPoint', text: '2026년 7월 기준으로 RTX 50 시리즈(Blackwell)가 현재 세대입니다. GDDR7 공급 부족이 악화되면서 RTX 5090(32GB) 실거래가는 $1,999 MSRP의 두 배 이상인 ~$4,300~5,000+까지 올랐습니다. RTX 4090은 기존 구매자에게 여전히 뛰어난 가성비를 제공합니다.' },
+            { type: 'keyPoint', text: 'RTX 50 시리즈(Blackwell)가 현재 세대입니다. GDDR7 공급 부족이 악화되면서 RTX 5090(32GB) 실거래가는 $1,999 MSRP의 두 배 이상인 ~$4,300~5,000+까지 올랐습니다. RTX 4090은 기존 구매자에게 여전히 뛰어난 가성비를 제공합니다.' },
           ],
           image: '/images/gpu-tier-comparison-en.svg',
           imageCaption: 'GPU 티어 권장 사항: $600 RTX 4070 Ti(12GB, 7~13B 모델, 80 tok/s), $1,200 RTX 4080(16GB, 13~30B, 120 tok/s), ~$2,300 RTX 4090(24GB, 중고/EOL, 70B, 150 tok/s), $2,000 RTX 5090(32GB, 70B+, 200 tok/s), $4,699 DGX Spark(128GB, 모든 모델). GPU 선택은 CPU보다 10배 더 중요합니다.',
@@ -5814,7 +5814,7 @@ schema: {
           title: 'GPU 없이 16GB 시스템 RAM에서 잘 실행되는 모델은?',
           content: [
             '**GPU 없이 16GB 시스템 RAM이 있는 컴퓨터에서는 CPU 추론으로 3B~7B 모델을 초당 8~20 토큰으로 실행할 수 있습니다.** 병목 현상은 RAM 용량이 아닌 메모리 대역폭입니다 — CPU는 GPU보다 훨씬 낮은 대역폭을 가지고 있어 추론이 5~10배 느린 이유입니다.',
-            '16GB 시스템 RAM에서 실용적인 규칙은: 모델 파일 크기 + 4GB OS 오버헤드 ≤ 16GB. Q4_K_M의 7B 모델(4.9GB)은 맞지만 긴 컨텍스트를 위한 여유 공간이 거의 없습니다. 아래 표는 2026년 7월 기준 현실적인 옵션을 보여줍니다.',
+            '16GB 시스템 RAM에서 실용적인 규칙은: 모델 파일 크기 + 4GB OS 오버헤드 ≤ 16GB. Q4_K_M의 7B 모델(4.9GB)은 맞지만 긴 컨텍스트를 위한 여유 공간이 거의 없습니다. 아래 표는 현실적인 옵션을 보여줍니다.',
             'CPU 전용, 4GB, 6GB, 8GB VRAM 티어별 실제 벤치마크를 포함한 완전한 속도 최적화 모델 가이드는 **[저사양 PC용 가장 빠른 로컬 LLM](/ko/local-llms/fastest-local-llms-low-end-pcs)**을 참조하십시오.',
           ],
           rows: [
