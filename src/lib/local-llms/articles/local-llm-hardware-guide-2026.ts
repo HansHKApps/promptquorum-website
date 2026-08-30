@@ -22,7 +22,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       title: 'Local LLM Hardware in 2026: GPU vs Mini PC vs Mac Compared',
       seoTitle: 'Local LLM Hardware Requirements 2026: 8GB to 70B by VRAM',
       intro: 'Running a local LLM means matching the model to your GPU\'s VRAM. A 7B model needs about 4-5 GB VRAM at Q4_K_M (the standard rule of thumb: roughly 0.6 GB per billion parameters at 4-bit) or 8-9 GB at Q8, a 14B model needs ~9 GB at Q4_K_M, and most 70B models need ~40 GB -- more than a single RTX 4090 (24 GB) holds. This guide gives the exact hardware requirement per model size, then the best model for 8 GB, 12 GB, 16 GB, and 24 GB VRAM tiers, what it really takes to run 70B (and the far larger GLM-5.3) locally, CPU-only inference on 16 GB system RAM, MacBook 8 GB options, and current GPU prices after this year\'s memory shortage.',
-      metaDescription: 'Local LLM hardware requirements by VRAM: best models for 8, 16 & 24 GB GPUs plus exact 70B and GLM-5.3 needs. RTX 50-series, Apple M5.',
+      metaDescription: 'Local LLM system requirements by VRAM: best models for 8, 16 and 24 GB GPUs, exact 70B and GLM-5.3 needs. RTX 50-series, Apple M5, and AI PC builds.',
       heroImage: '/images/local-llm-hardware-guide-2026-gpu-tiers-hero-en.webp',
       publishDate: '2026-04-04',
       readTime: '13 min read',
@@ -491,7 +491,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'regional-context',
           title: 'What Regional Compliance Rules Apply to Local LLM Hardware?',
           content: [
-            '**EU (GDPR + EU AI Act):** Running LLMs locally keeps all inference data within your infrastructure, eliminating cross-border data transfer concerns under GDPR Article 44. The EU AI Act\'s obligations for stand-alone high-risk AI systems (Annex III) were originally set to apply from August 2, 2026, but the "Digital Omnibus on AI" — provisionally agreed in May 2026 and awaiting formal adoption as of June 2026 — pushes that date to December 2, 2027 (with high-risk AI embedded in regulated products deferred to August 2, 2028). The AI Act\'s Article 50 transparency duties still apply on the original schedule. Local hardware satisfies data residency requirements by default.',
+            '**EU (GDPR + EU AI Act):** Running LLMs locally keeps all inference data within your infrastructure, eliminating cross-border data transfer concerns under GDPR Article 44. The EU AI Act\'s obligations for stand-alone high-risk AI systems (Annex III) were originally set to apply from August 2, 2026, but the "Digital Omnibus on AI" — provisionally agreed in May 2026 and awaiting formal adoption — pushes that date to December 2, 2027 (with high-risk AI embedded in regulated products deferred to August 2, 2028). The AI Act\'s Article 50 transparency duties still apply on the original schedule. Local hardware satisfies data residency requirements by default.',
             '**Japan (APPI):** Japan\'s 2022 APPI amendment tightened breach-notification and cross-border-transfer rules but does not impose an AI-specific data-minimization requirement (it relies on general purpose-limitation duties). More relevant to AI are Japan\'s 2025 APPI reform package and its first AI law — the AI Promotion Act (in force since June 2025), an innovation-first framework with no penalties. On-premises LLM hardware keeps personal data inside your infrastructure for document processing and customer-support automation.',
             '**China:** China\'s Cyberspace Administration of China (CAC) Interim Measures for Generative AI Services (effective August 2023) require providers with public-opinion influence to complete a CAC security assessment and algorithm filing. Since September 1, 2025, China also mandates labeling of AI-generated content under the CAC labeling Measures and national standard GB 45438-2025. Running local hardware with open-weight models avoids API-based compliance exposure for internal enterprise use.',
           ],
@@ -523,6 +523,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: 'How much VRAM do you need for 7B, 13B, and 30B models?', a: '7B models: 8-10 GB at Q4, 9-11 GB at Q5, 16 GB at FP16. 13B models: 12-14 GB at Q4, 16-18 GB at Q5, 26 GB at FP16. 30B models: 16-20 GB at Q4, 22-26 GB at Q5, 60 GB at FP16. Q4 is the recommended quantization level for 2026 hardware.' },
             { q: 'What is the best GPU configuration for enterprise LLM deployment in 2026?', a: 'For enterprise: 2× RTX 5090 (64 GB total VRAM) for redundancy and load distribution, or A100 (80 GB) for multi-tenant systems. RTX 5090 is $2,000 per unit; A100 is $10,000+. Docker-based orchestration (vLLM, Ollama Serve) enables multi-model serving and concurrent user handling.' },
             { q: 'Does an RTX 4070 laptop support LLM quantization?', a: 'Yes. RTX 4070 laptops (8 GB VRAM) support Q4 and Q5 quantization for 7-13B models at 50-70 tokens/sec. Higher-end laptops with the RTX 4090 mobile GPU (16 GB) handle up to 24B models. Quantization is essential for laptop inference—without it, only 3-7B models fit in 8 GB VRAM.' },
+            { q: 'What specs should an AI PC have to run local LLMs fully offline?', a: 'Start from VRAM, then system RAM, then CPU cores — in that order, because that is the order in which they stop you. A 16GB-VRAM card covers most models people actually want; 24GB is where 32B-class models stop needing awkward compromises. System RAM matters second, and 32GB is a sensible floor for an AI PC that also does other work. CPU cores matter least for inference, though they decide how fast a model loads. Running fully offline is a software question rather than a hardware one: once the weights are on disk, Ollama and LM Studio both run with networking off, so nothing in this build needs an internet connection to answer a prompt. The tables above give exact system requirements per model size.' },
           ],
         },
         relatedReading: {
@@ -789,6 +790,14 @@ schema: {
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': 'Yes. RTX 4070 laptops (8 GB VRAM) support Q4 and Q5 quantization for 7-13B models at 50-70 tokens/sec. Higher-end laptops with the RTX 4090 mobile GPU (16 GB) handle up to 24B models. Quantization is essential for laptop inference—without it, only 3-7B models fit in 8 GB VRAM.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What specs should an AI PC have to run local LLMs fully offline?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Start from VRAM, then system RAM, then CPU cores — in that order, because that is the order in which they stop you. A 16GB-VRAM card covers most models people actually want; 24GB is where 32B-class models stop needing awkward compromises. System RAM matters second, and 32GB is a sensible floor for an AI PC that also does other work. CPU cores matter least for inference, though they decide how fast a model loads. Running fully offline is a software question rather than a hardware one: once the weights are on disk, Ollama and LM Studio both run with networking off, so nothing in this build needs an internet connection to answer a prompt. The tables above give exact system requirements per model size.',
             },
           },
         ],
