@@ -8,6 +8,7 @@ Scores are the geo-meta-optimizer 10-point perfect-page rubric.
 | # | Page | Before | After | Δ | Diagnosis | Baseline (clicks / impr / CTR / pos) |
 |---|---|---|---|---|---|---|
 | 1 | `/ja/power-local-llm/uncensored-local-llm-creative-writing-ethics` | 5/10 | 9/10 | **+4** | B2 | 596 / 9,008 / 6.6% / 5.3 |
+| 2 | `/de/local-llms` (hub) | 8/10 | 9/10 | **+1** | A | 273 / 7,883 / 3.5% / 4.9 |
 
 ## Page 1 — /ja/power-local-llm/uncensored-local-llm-creative-writing-ethics
 
@@ -69,3 +70,75 @@ Rough, and labelled as a projection:
 
 Re-pull the same URLs in GSC and compare clicks/impressions/CTR/position against the baselines
 in the scoreboard above. Until then, no claim that this work paid off is supportable.
+
+## Page 2 — /de/local-llms (hub)
+
+Hub page, not an article: metadata in `src/translations.ts`, body copy in
+`src/components/LocalLLMsHub.tsx` as `Record<lang, string>` maps.
+
+| # | Criterion | Before | After |
+|---|---|---|---|
+| 1 | Title covers top-3 query terms | ❌ | ❌ |
+| 2 | Title has required entity | ✅ | ✅ |
+| 3 | Year handled correctly | ✅ | ✅ |
+| 4 | Meta answers intent in first 80 chars | ❌ | ✅ |
+| 5 | Body covers high-impression queries | ✅ | ✅ |
+| 6 | FAQ covers top-5 long-tail | ✅ | ✅ |
+| 7 | No model-version drift | ✅ | ✅ |
+| 8 | Title length + form (Rule 2d) | ✅ | ✅ |
+| 9 | Rule 4 entity naming | ✅ | ✅ |
+| 10 | Rules 33 + 36 opening block | ✅ | ✅ |
+| | **Total** | **8/10** | **9/10** |
+
+### Diagnosis A — body ahead of title
+
+The body was already comprehensive (`lokales llm` 11x, `lokale llm` 27x, VRAM 46x, Ollama 46x,
+13 German FAQs). The title was the problem: `Beste lokale LLMs nach VRAM-Tier 2026: 12GB, 24GB,
+48GB` spent ~35 of 55 characters on hardware segmentation.
+
+**The segmentation was not earning its space.** The only VRAM-numeric query, `llm 16gb vram`,
+gets 4 impressions and **0 clicks** at position 8.5. The whole zero-click hardware cluster
+(`lokale llm hardware`, `local llm hardware`, `pc für lokale llm`, `lokaler llm server`,
+`llm auf eigener hardware`) is ~36 impressions and **0 clicks**.
+
+Meanwhile the split by query type is stark:
+
+| Query type | Impr | CTR | Position |
+|---|---|---|---|
+| contains `beste` / `vergleich` | ~236 | **10-18%** | 1.4-2.5 |
+| generic (`local llm`, `lokales llm`, `lokale llm(s)`, `lokale llm modelle`) | ~1,112 | **0-5.8%** | 3.7-5.6 |
+
+`lokales llm` alone: **204 impressions, 0 clicks, position 5.6.**
+
+### Fixed
+
+- Title → `Beste lokale LLMs 2026: Modelle & Hardware im Vergleich` (55 chars). Keeps the exact
+  `Beste lokale LLMs` phrase that ranks 1.4-2.5; drops the GB stuffing; adds `Vergleich`, which
+  appears in the page's two highest-CTR queries (18.2% and 8.3%).
+- Meta → answer-first in 77 chars (`Lokale LLMs … laufen komplett auf Ihrem Rechner – ohne
+  API-Kosten`), 153 chars total, with a natural `(Local LLMs)` gloss.
+- H1 and hero intro de-narrowed; intro now glosses `Local LLMs` and `lokale KI` (both were
+  **0 occurrences** in the German body).
+- Stale `Mai 2026` stripped from the German Ollama-models FAQ heading and answer.
+
+### #1 still red — open decision
+
+The page's single biggest query is the **English** string `local llm`: 554 impressions (32% of
+all listed), position 4.1, 3.6% CTR. With `local llms`, `llm local`, `local llm pc` and the typo
+tail it is ~700 impressions. A German title carries no English, so criterion #1 fails strictly.
+Fixing it means putting `Local-LLM` into a German title — a brand-voice call, not a data call.
+
+### Out-of-scope defect found
+
+`Was sind die besten Ollama-Modelle im Mai 2026?` was stale. The same FAQ carries a **May 2026**
+heading in **en, fr, ja, zh** too (`LocalLLMsHub.tsx` lines ~1083, ~1207, ~1265, ~1323). The
+month-drift validator misses these because they are not in trailing-stamp position. Only `de`
+was fixed here — the English hub alone gets 46,114 impressions/month.
+
+### Projected impact (NOT measured)
+
+- ~1,112 impr of generic queries moving from 0-5.8% toward the 8-10% the same page already earns
+  on comparable positions: **~+40-70/mo**
+- `lokales llm` (204 impr, 0 clicks, pos 5.6) is the single largest recoverable block
+
+**Projected ~+40-70 clicks/month.**

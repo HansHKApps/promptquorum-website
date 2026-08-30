@@ -1191,5 +1191,30 @@
       "ctr": 0.06616341030195382,
       "period": "GSC last 28d as pasted 2026-08-30"
     }
+  },
+  {
+    "id": "12c7235d-b7ec-4770-be12-9add658b07e1",
+    "slug": "/de/local-llms",
+    "date": "2026-08-30T08:45:17.984Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Beste lokale LLMs nach VRAM-Tier 2026: 12GB, 24GB, 48GB",
+        "new": "Beste lokale LLMs 2026: Modelle & Hardware im Vergleich"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Beste lokale LLM-Modelle nach VRAM-Tier (4–48 GB): RTX 3060 12GB, RTX 4090, Apple Silicon-Leitfäden. Ollama-Einrichtung, Hardware-Tier-Vergleich, Anfänger-Anleitungen.",
+        "new": "Lokale LLMs (Local LLMs) laufen komplett auf Ihrem Rechner – ohne API-Kosten. Beste Modelle von 4 bis 48 GB VRAM, Hardware und Ollama-Setup im Vergleich."
+      }
+    ],
+    "reason": "geo-meta-optimizer: coherence-A-fix — body was already full-coverage, title over-narrowed to VRAM tiers. Dropped '12GB, 24GB, 48GB' (only VRAM-numeric query gets 0 clicks at pos 8.5), kept the 'Beste lokale LLMs' phrase that ranks 1.4-2.5, added Vergleich (18.2% CTR query). Meta now answer-first. Perfect-page 8/10 -> 9/10",
+    "baseline": {
+      "position": 4.9,
+      "impressions": 7883,
+      "clicks": 273,
+      "ctr": 0.03463148547507294,
+      "period": "GSC last 28d as pasted 2026-08-30"
+    }
   }
 ]

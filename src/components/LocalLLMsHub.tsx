@@ -45,7 +45,7 @@ function renderDescription(text: string, lang: Language): React.ReactNode {
 
 const HUB_HERO_TITLE: Record<string, string> = {
   en: 'Best Local LLMs by VRAM Tier 2026: Ollama, LM Studio & Hardware Guide',
-  de: 'Beste Lokale LLMs nach VRAM-Tier 2026: Ollama, LM Studio & Hardware-Guide',
+  de: 'Beste lokale LLMs 2026: Modelle, Hardware, Ollama & LM Studio im Vergleich',
   fr: 'Meilleurs LLMs Locaux par Palier VRAM 2026 : Ollama, LM Studio & Guide Matériel',
   ja: 'VRAM別ベストローカルLLM 2026：Ollama・LM Studio・ハードウェアガイド',
   zh: '按VRAM档位划分的最佳本地LLM 2026：Ollama、LM Studio与硬件指南',
@@ -57,7 +57,7 @@ const HUB_HERO_TITLE: Record<string, string> = {
 
 const HUB_HERO_DESC: Record<string, string> = {
   en: 'Local LLMs are large language models that run entirely on your own computer — no internet connection, no API fees, and no data leaving your machine. If you are just starting, install Ollama and run Llama 3.2 3B or Qwen3 4B on 8 GB of RAM in under 10 minutes; the guides below rank the best models, GPUs, and tools for every budget.',
-  de: 'Lokale LLMs sind große Sprachmodelle, die vollständig auf Ihrem eigenen Computer laufen — ohne Internetverbindung, ohne API-Gebühren und ohne dass Daten Ihr Gerät verlassen. Für den Einstieg installieren Sie Ollama und führen Llama 3.2 3B oder Qwen3 4B mit 8 GB RAM in unter 10 Minuten aus; die folgenden Leitfäden bewerten die besten Modelle, GPUs und Tools für jedes Budget.',
+  de: 'Lokale LLMs — international meist als Local LLMs bezeichnet — sind große Sprachmodelle, die vollständig auf Ihrem eigenen Computer laufen: ohne Internetverbindung, ohne API-Gebühren und ohne dass Daten Ihr Gerät verlassen. Als lokale KI ersetzen sie ChatGPT für viele Aufgaben. Für den Einstieg installieren Sie Ollama und führen Llama 3.2 3B oder Qwen3 4B mit 8 GB RAM in unter 10 Minuten aus; die folgenden Leitfäden bewerten die besten Modelle, GPUs und Tools für jedes Budget.',
   fr: 'Les LLMs locaux sont de grands modèles de langage qui s\'exécutent entièrement sur votre propre ordinateur — sans connexion Internet, sans frais d\'API et sans qu\'aucune donnée ne quitte votre machine. Pour débuter, installez Ollama et exécutez Llama 3.2 3B ou Qwen3 4B avec 8 Go de RAM en moins de 10 minutes ; les guides ci-dessous classent les meilleurs modèles, GPU et outils pour chaque budget.',
   ja: 'ローカルLLMとは、インターネット接続・API料金・データ送信なしで、自分のパソコン上だけで動作する大規模言語モデルです。初めての方は、Ollamaをインストールして8GBのRAMでLlama 3.2 3BまたはQwen3 4Bを10分以内に実行できます。以下のガイドでは、あらゆる予算に最適なモデル・GPU・ツールをランク付けしています。',
   zh: '本地LLM是完全在你自己的电脑上运行的大语言模型——无需联网、没有API费用，数据也不会离开你的设备。新手只需安装Ollama，用8GB内存即可在10分钟内运行Llama 3.2 3B或Qwen3 4B；以下指南为各种预算评选最佳模型、GPU和工具。',
@@ -1146,8 +1146,8 @@ const HUB_FAQS: Record<string, {q:string, a:string}[]> = {
       a: 'Llama 4 und Qwen3.5 für allgemeine Verwendung, DeepSeek-Coder für Softwareentwicklung, beide sind BSI-kompatibel wenn On-Premises bereitgestellt. Diese Modelle ermöglichen DSGVO-konforme KI-Nutzung ohne Anbieter-Lock-in.'
     },
     {
-      q: 'Was sind die besten Ollama-Modelle im Mai 2026?',
-      a: 'Top Ollama-Modelle Mai 2026: Llama 4 Scout 17B (beste Gesamtqualität auf 12 GB VRAM, `ollama pull llama4:scout`), Qwen3 8B (bestes Coding, 5 GB VRAM), Gemma 3 12B (starkes Reasoning auf RTX 3060, 8 GB VRAM), DeepSeek-R2 8B (beste Mathe/Logik, 5 GB VRAM).'
+      q: 'Was sind die besten Ollama-Modelle 2026?',
+      a: 'Top Ollama-Modelle 2026: Llama 4 Scout 17B (beste Gesamtqualität auf 12 GB VRAM, `ollama pull llama4:scout`), Qwen3 8B (bestes Coding, 5 GB VRAM), Gemma 3 12B (starkes Reasoning auf RTX 3060, 8 GB VRAM), DeepSeek-R2 8B (beste Mathe/Logik, 5 GB VRAM).'
     },
     {
       q: 'Welches lokale LLM eignet sich für eine RTX 3060 12 GB?',
