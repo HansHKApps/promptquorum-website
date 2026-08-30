@@ -1939,9 +1939,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       related: {
         title: '관련 가이드',
         items: [
-          '[Coqui XTTS v2 라이선스와 로컬 보이스 클로닝](/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) -- CPML 상업적 사용 완전 가이드',
-          '[ChatGPT Plus의 최고 오픈소스 대안](/prompt-bites/best-open-source-alternatives-to-chatgpt-plus) -- ChatGPT 대안',
-          '[창작 글쓰기에 최적인 로컬 LLM](/local-llms/best-local-llms-for-creative-writing) -- 창작 글쓰기 가이드',
+          '[Coqui XTTS v2 라이선스와 로컬 보이스 클로닝](/ko/power-local-llm/local-tts-voice-cloning-piper-coqui-xtts) -- CPML 상업적 사용 완전 가이드',
+          '[ChatGPT Plus의 최고 오픈소스 대안](/ko/prompt-bites/best-open-source-alternatives-to-chatgpt-plus) -- ChatGPT 대안',
+          '[창작 글쓰기에 최적인 로컬 LLM](/ko/local-llms/best-local-llms-for-creative-writing) -- 창작 글쓰기 가이드',
         ],
       },
     },

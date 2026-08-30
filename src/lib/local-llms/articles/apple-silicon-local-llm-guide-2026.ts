@@ -1961,9 +1961,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     specific_year: 2026,
     theme: 'Hardware & Performance',
     title: 'Apple Silicon本地LLM完整指南2026：M1至M6',
-    seoTitle: 'Apple Silicon 2026：M6至M5 Ultra',
+    seoTitle: 'Mac 本地大模型 2026：M5 Pro/Max/Ultra',
     intro: '2026年在Apple Silicon上运行本地LLM的完整指南。比较M1芯片直至2026年8月Mac mini和Mac Studio的更新（M6、M5 Pro、M5 Max、M5 Ultra）、统一内存层级、Metal GPU加速基准、功耗分析以及按Mac配置的模型建议。统一内存消除了困扰离散GPU的VRAM瓶颈，在消费级硬件上实现70B模型——现在借助全新的Mac Studio M5 Ultra配置，还能实现120B+模型。发现M5 Pro（307 GB/s）如何以15-20 tok/s处理34B模型，M5 Max（614 GB/s）如何仅消耗60-100W功率处理70B模型。',
-    metaDescription: 'Apple于2026年8月25日更新了Mac mini（M6、M5 Pro）和Mac Studio（M5 Max、M5 Ultra最高512GB）。完整指南：内存层级、基准测试、Mac选购建议。',
+    metaDescription: '本地大模型选 Mac：32GB 最高跑 13B，64GB 跑到 34B，128GB 跑 70B。M5 Pro 307 GB/s、M5 Max 614 GB/s 的带宽差距与各机型选购建议。',
     heroImage: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-zh.webp',
     twitterDescription: 'Apple Silicon本地LLM：M1→M6、2026年8月Mac mini/Studio更新、统一内存、Metal GPU、MLX vs Ollama。完整2026指南。',
     publishDate: '2026-05-15',
@@ -1992,8 +1992,9 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       { label: '核心要点', anchor: '#key-takeaways' },
       { label: 'Apple Silicon为何适合本地LLM', anchor: '#why-apple-silicon' },
       { label: 'Apple Silicon芯片完整对比', anchor: '#chip-comparison' },
-      { label: '2026年8月更新：Mac mini M6/M5 Pro、Mac Studio M5 Max/M5 Ultra', anchor: '#m5-ultra' },
+      { label: 'Mac mini M6/M5 Pro 与 Mac Studio M5 Max/M5 Ultra 更新', anchor: '#m5-ultra' },
       { label: '内存带宽比内存大小更重要', anchor: '#memory-bandwidth' },
+      { label: '32GB 还是 64GB：按用途选内存', anchor: '#memory-by-workload' },
       { label: '功耗效率和热管理', anchor: '#power-thermals' },
       { label: '真实用户场景', anchor: '#scenarios' },
       { label: '应购买哪种Mac', anchor: '#which-mac' },
@@ -2091,6 +2092,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         image: '/images/apple-silicon-local-llm-guide-2026-bandwidth-speed-hero-zh.webp',
         imageCaption: '购买时应优先考虑内存带宽而非GPU核心数量 — 这才是LLM推理的真正瓶颈。',
       },
+      memoryForWorkload: {
+        id: 'memory-by-workload',
+        title: '32GB 还是 64GB：按用途选内存',
+        content: [
+          '**内存容量决定你能跑多大的模型，内存带宽决定它跑多快——选机时要分开看这两件事。** 32GB 可以稳妥地跑到 13B 级别，64GB 能跑到 34B 级别，128GB 才能舒服地跑 70B。如果主要用途是本地推理，先按目标模型规模定内存容量，再看芯片档位。Mac 的内存焊死在芯片上，购买后无法升级，所以这一步一次到位比事后更换整机便宜。',
+          '**视频剪辑、三维渲染和本地大模型推理的瓶颈并不相同，不能用同一套标准选机。** 视频剪辑主要吃媒体引擎和 GPU 核心数，三维渲染吃 GPU 核心与内存容量，而大模型推理几乎完全受内存带宽和容量限制。同一台机器可能很适合剪辑，却在跑大模型时明显吃力。三种用途都要兼顾时，先按最吃内存的那一项（通常是大模型）确定容量，再按 GPU 需求选择芯片档位。',
+        ],
+        items: [
+          '**32GB** — 13B 以内的模型。日常问答、写作、代码补全够用，M5 基础版或 M6 即可。',
+          '**64GB** — 34B 级别模型，约 40-50 tok/s。M5 Pro（307 GB/s）是这一档的主力选择。',
+          '**128GB** — 70B 模型，约 15-20 tok/s。需要 M5 Max（614 GB/s）。',
+          '**带宽决定速度：** M5 基础 150 GB/s、M6 170 GB/s、M5 Pro 307 GB/s、M5 Max 614 GB/s。同一个模型，带宽大致翻倍，token/s 也大致翻倍。',
+          '**M5 Ultra 的内存带宽 Apple 尚未公布**，在出现独立基准测试之前，不要把任何 tok/s 估算当作已验证数据。',
+        ],
+        snippetBlocks: [
+          { type: 'one-sentence', text: '本地大模型选 Mac 时，32GB 对应 13B 级模型、64GB 对应 34B、128GB 对应 70B，而生成速度由内存带宽决定。' },
+          { type: 'plain-terms', text: '内存大小决定你能跑多大的模型，内存带宽决定它跑多快。想跑常见的中型模型，64GB 是比较稳妥的起点；只做日常问答，32GB 也够用。视频剪辑和三维渲染看重的是别的指标，不能照搬这套标准。' },
+        ],
+      },
       powerThermals: {
         id: 'power-thermals',
         title: '功耗效率和热管理——无声优势',
@@ -2145,7 +2165,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       },
       m5Ultra: {
         id: 'm5-ultra',
-        title: '2026年8月更新：Mac mini M6/M5 Pro、Mac Studio M5 Max/M5 Ultra',
+        title: 'Mac mini M6/M5 Pro 与 Mac Studio M5 Max/M5 Ultra 更新',
         content: [
           'Apple于2026年8月25日宣布了Mac mini和Mac Studio的更新。两款设备均于2026年9月22日发货（最高内存的M5 Ultra配置于2026年10月下旬发货）。四款新芯片目前均无独立基准测试——请将以下性能数字视为Apple自身的宣称，并明确标注为宣称而非实测结果。',
           'Mac mini M6：起价899美元。12核CPU、12核GPU、双16核神经网络引擎、170 GB/s内存带宽，最高32GB统一内存。Apple宣称CPU性能较M4提升约40%，AI性能最高提升4倍——这是Apple自己的数字，未经独立验证。',
@@ -2162,6 +2182,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: '常见问题',
         faqs: [
+          { q: '个人做视频剪辑、三维和本地大模型，M5、M5 Pro、M5 Max 该怎么选？', a: '按最吃资源的那一项定档。只做日常问答和写作，M5 基础版加 32GB 就够。要跑 34B 级模型或做较重的剪辑，选 M5 Pro 加 64GB——它的 307 GB/s 带宽是基础版的两倍。要跑 70B 模型或做三维渲染，才需要 M5 Max 加 128GB（614 GB/s）。注意三种用途的瓶颈不同：剪辑看媒体引擎和 GPU 核心，三维看 GPU 与容量，大模型几乎只看内存带宽和容量。' },
+          { q: '32GB 还是 64GB 更合适？', a: '看你要跑多大的模型。32GB 能稳妥地跑 13B 以内，适合日常问答、写作和代码补全；64GB 才能跑到 34B 级别，是想认真用本地大模型的实际起点。Mac 的内存无法在购买后升级，因此如果预算允许且打算长期使用，64GB 比 32GB 更保险。如果只把本地模型当辅助工具，32GB 完全够用，把预算留给存储更划算。' },
+          { q: 'Mac mini M5 Pro 64GB 能跑什么模型？', a: '可以跑到 34B 级别的模型，速度约 40-50 tok/s。它的内存带宽为 307 GB/s，是 M5 基础版 150 GB/s 的两倍，在 Llama 3.1 8B Q4 上约 50-60 tok/s。64GB 统一内存全部可供模型使用，没有独立显卡那样的显存上限，所以能装下 24GB 显存的 NVIDIA 显卡装不下的模型。' },
+          { q: 'M5 Ultra 的内存带宽是多少？', a: 'Apple 目前尚未公布 M5 Ultra 的内存带宽。作为参考，M5 Max 为 614 GB/s。在出现独立第三方基准测试之前，请不要把任何 M5 Ultra 的 tok/s 估算当作已验证数据——包括本文中的推测值。M5 Ultra 已确认的是最高 512GB 统一内存配置，这决定了它能装下多大的模型，但装得下不等于跑得快。' },
           { q: 'Apple于2026年8月25日为Mac mini和Mac Studio发布了什么？', a: 'Apple以全新M6芯片（899美元，最高32GB）和M5 Pro（1,699美元，最高64GB）更新了Mac mini，并以M5 Max（2,499美元，最高128GB）和M5 Ultra（5,499美元，顶配最高512GB）更新了Mac Studio。除M5 Ultra的512GB配置于2026年10月下旬发货外，其余均于2026年9月22日发货。' },
           { q: 'M5 Pro或M5 Max哪个更适合本地LLM？', a: 'M5 Pro（64GB）提供最佳价值——运行34B模型良好且起价1,699美元。M5 Max（起价2,499美元）仅在定期需要70B模型时才值得。大多数用户对M5 Pro满意。' },
           { q: '购买Mac后可升级内存吗？', a: '不可以。Apple Silicon内存焊接，无法升级。购买时在预算范围内选择最大内存。' },

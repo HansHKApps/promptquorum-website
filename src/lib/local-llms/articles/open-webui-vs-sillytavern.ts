@@ -1896,13 +1896,13 @@ schema: {
         'relatedReading': {
           title: '관련 자료',
           items: [
-            '[최고의 로컬 LLM 프론트엔드](/local-llms/best-local-llm-frontends) — 로컬 LLM을 위한 5개 이상의 채팅 UI와 인터페이스를 비교합니다.',
-            '[데스크톱 vs WebUI 로컬 LLM](/local-llms/desktop-vs-webui-local-llm) — 데스크톱 애플리케이션과 브라우저 기반 인터페이스를 언제 사용할지 알아봅니다.',
-            '[사용 사례별 최고의 로컬 LLM 스택](/local-llms/best-local-llm-stack-use-case) — 워크플로우에 맞는 백엔드와 프론트엔드 조합을 선택하십시오.',
-            '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio) — 가장 인기 있는 두 로컬 LLM 설치 프로그램을 비교합니다.',
-            '[Ollama 설치 방법](/local-llms/how-to-install-ollama) — 두 UI 모두 사용하는 Ollama 백엔드를 위한 단계별 설정 가이드.',
-            '[창작 글쓰기를 위한 최고의 로컬 LLM](/local-llms/best-local-llms-for-creative-writing) — 픽션, 캐릭터 글쓰기, 롤플레이를 위한 최고의 모델.',
-            '[로컬 LLM 개발자 스택](/local-llms/local-llm-developer-stack) — 로컬 LLM 프론트엔드 위에서 구축하기 위한 완전한 3단계 스택(CLI → API → 프로덕션).',
+            '[최고의 로컬 LLM 프론트엔드](/ko/local-llms/best-local-llm-frontends) — 로컬 LLM을 위한 5개 이상의 채팅 UI와 인터페이스를 비교합니다.',
+            '[데스크톱 vs WebUI 로컬 LLM](/ko/local-llms/desktop-vs-webui-local-llm) — 데스크톱 애플리케이션과 브라우저 기반 인터페이스를 언제 사용할지 알아봅니다.',
+            '[사용 사례별 최고의 로컬 LLM 스택](/ko/local-llms/best-local-llm-stack-use-case) — 워크플로우에 맞는 백엔드와 프론트엔드 조합을 선택하십시오.',
+            '[Ollama vs LM Studio](/ko/local-llms/ollama-vs-lm-studio) — 가장 인기 있는 두 로컬 LLM 설치 프로그램을 비교합니다.',
+            '[Ollama 설치 방법](/ko/local-llms/how-to-install-ollama) — 두 UI 모두 사용하는 Ollama 백엔드를 위한 단계별 설정 가이드.',
+            '[창작 글쓰기를 위한 최고의 로컬 LLM](/ko/local-llms/best-local-llms-for-creative-writing) — 픽션, 캐릭터 글쓰기, 롤플레이를 위한 최고의 모델.',
+            '[로컬 LLM 개발자 스택](/ko/local-llms/local-llm-developer-stack) — 로컬 LLM 프론트엔드 위에서 구축하기 위한 완전한 3단계 스택(CLI → API → 프로덕션).',
           ],
         },
         'sources': {

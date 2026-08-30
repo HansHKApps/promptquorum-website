@@ -1657,7 +1657,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'GMKtec NucBox G3 Plus（Intel N150、シングルチャネル DDR4 は32 GBまで増設可能）は、ローカル優先のスマートホーム向けに作られた格安ミニPCです。16 GB／512 GB構成で約¥29,000〜33,000（価格確認：2026年8月25日）で、Home Assistant と小型ローカルモデルを動かせます。一部のライバルに対する明確な利点は、RAM がオンボード実装ではなく交換可能な SO-DIMM である点です。このレビューではメーカーおよび独立系情報源に照らして仕様を検証し、ローカルLLMの速度について正直な期待値を示したうえで、Beelink EQ14 や Ryzen 系の上位機種と直接スコアを比較します。',
     metaDescription:
-      'GMKtec G3 Plus N150 レビュー2026：実勢価格（2026年8月）、スコアカード、構成ガイド、EQ14との直接比較。RAM 増設可能な格安 Home Assistant 機の完全解説。',
+      'GMKtec G3 Plus N150 レビュー2026：実勢価格、スコアカード、構成ガイド、EQ14との直接比較。RAM 増設可能な格安 Home Assistant 機の完全解説。',
     twitterDescription:
       'GMKtec G3 Plus（2026）：Intel N150、DDR4 は32 GBまで増設可（オンボード実装ではない）、約¥29,000〜33,000。スコアカード、構成の選び方、Beelink EQ14 に勝る点・劣る点を解説。',
     readTime: '9分で読める',
@@ -2066,7 +2066,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'GMKtec NucBox G3 Plus（Intel N150，单通道 DDR4 可升级至 32 GB）是一款面向本地优先智能家居的预算迷你主机。16 GB / 512 GB 版本约 $180–200（价格核实于 2026年8月25日），可运行 Home Assistant 和一个小型本地模型，并相比部分竞品有一个真正的优势：它的内存是可更换的 SO-DIMM，而非板载焊接。本评测对照厂商和独立来源核实其规格，对本地 LLM 速度给出务实预期，并直接与 Beelink EQ14 以及 Ryzen 级升级主机做评分对比。',
     metaDescription:
-      'GMKtec G3 Plus N150 评测 2026：真实价格（2026年8月）、评分卡、配置指南，以及与 EQ14 的直接对比。内存可升级的预算级 Home Assistant 主机。',
+      'GMKtec G3 Plus N150 评测 2026：真实价格、评分卡、配置指南，以及与 EQ14 的直接对比。内存可升级的预算级 Home Assistant 主机。',
     twitterDescription:
       'GMKtec G3 Plus（2026）：Intel N150，DDR4 可升级至 32 GB（非板载焊接），约 $180–200。评分卡、配置建议，以及它相对 Beelink EQ14 的胜负点。',
     readTime: '阅读约9分钟',
@@ -2474,7 +2474,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'GMKtec NucBox G3 Plus(Intel N150, 싱글 채널 DDR4로 32 GB까지 확장 가능)는 로컬 우선 스마트홈을 위해 설계된 저가형 미니PC입니다. 16 GB / 512 GB 구성 기준 약 $180–200(2026년 8월 25일 확인)로 Home Assistant와 소형 로컬 모델을 실행하며, 일부 경쟁 제품 대비 실질적인 강점이 있습니다. RAM이 납땜형이 아니라 교체 가능한 SO-DIMM이라는 점입니다. 이 리뷰는 제조사 및 독립 출처를 대조해 사양을 검증하고, 로컬 LLM 속도에 대한 현실적인 기대치를 제시하며, Beelink EQ14 및 Ryzen급 상위 제품과 직접 비교해 점수를 매깁니다.',
     metaDescription:
-      'GMKtec G3 Plus N150 리뷰 2026: 실제 가격(2026년 8월), 스코어카드, 구성 가이드, EQ14와의 직접 비교. RAM 확장이 가능한 저가형 Home Assistant 미니PC입니다.',
+      'GMKtec G3 Plus N150 리뷰 2026: 실제 가격, 스코어카드, 구성 가이드, EQ14와의 직접 비교. RAM 확장이 가능한 저가형 Home Assistant 미니PC입니다.',
     twitterDescription:
       'GMKtec G3 Plus(2026): Intel N150, DDR4 32 GB까지 확장 가능(납땜형 아님), 약 $180–200. 스코어카드, 구성 추천, Beelink EQ14 대비 강점과 약점을 정리했습니다.',
     readTime: '9분 읽기',

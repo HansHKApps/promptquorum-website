@@ -2756,7 +2756,7 @@ schema: {
         error1: {
           id: 'error-1-out-of-memory',
           title: '오류 1: "메모리 부족" / OOM 충돌',
-          content: '**메모리 부족 오류는 모델에 사용 가능한 것보다 더 많은 RAM이 필요하다는 의미이지 하드웨어 오류가 아닙니다.** 처음 사용하는 분들에게 가장 흔한 오류입니다. 양자화가 RAM 요구 사항을 줄이는 방법에 대한 배경은 [LLM 양자화 설명](/local-llms/llm-quantization-explained)을 참고하십시오.',
+          content: '**메모리 부족 오류는 모델에 사용 가능한 것보다 더 많은 RAM이 필요하다는 의미이지 하드웨어 오류가 아닙니다.** 처음 사용하는 분들에게 가장 흔한 오류입니다. 양자화가 RAM 요구 사항을 줄이는 방법에 대한 배경은 [LLM 양자화 설명](/ko/local-llms/llm-quantization-explained)을 참고하십시오.',
           items: [
             '**사용 가능한 RAM 확인**: macOS/Linux에서 `free -h`를 실행하거나, Windows에서 작업 관리자 → 성능 → 메모리를 여십시오.',
             '**더 작은 양자화로 전환**: `Q8_0` 또는 `Q5_K_M`을 `Q4_K_M`으로 교체하십시오. Ollama에서는 `ollama run llama3.2-instruct-q4_K_M`을 실행하십시오.',
@@ -2868,7 +2868,7 @@ schema: {
           title: '오류 8: 비정상, 반복, 또는 무의미한 출력',
           content: [
             '**비정상 출력은 거의 항상 Instruct/채팅 변형 대신 기본 모델을 사용하고 있음을 의미합니다.** 기본 모델은 질문에 대한 답변이 아닌 원시 텍스트 완성을 생성합니다.',
-            '기본 모델(예: `llama3.1:8b`)은 대화용으로 파인튜닝되지 않았으며, 질문으로 프롬프트하면 횡설수설처럼 보이는 원시 완성을 생성합니다. 항상 Instruct 변형을 사용하십시오: `llama3.1:8b-instruct`. 모델 변형을 전환하는 GUI 기반 방법은 [LM Studio 설치 방법](/local-llms/how-to-install-lm-studio)을 참고하십시오.',
+            '기본 모델(예: `llama3.1:8b`)은 대화용으로 파인튜닝되지 않았으며, 질문으로 프롬프트하면 횡설수설처럼 보이는 원시 완성을 생성합니다. 항상 Instruct 변형을 사용하십시오: `llama3.1:8b-instruct`. 모델 변형을 전환하는 GUI 기반 방법은 [LM Studio 설치 방법](/ko/local-llms/how-to-install-lm-studio)을 참고하십시오.',
             'Ollama에서 대부분의 모델에 대한 기본 태그는 이미 Instruct 변형을 가리킵니다. Hugging Face에서 수동으로 다운로드한 경우 파일 이름에 "Instruct" 또는 "chat"이 포함되어 있는지 확인하십시오.',
           ],
         },
@@ -2903,18 +2903,18 @@ schema: {
         relatedReading: {
           title: '관련 자료',
           items: [
-            '[LLM 양자화 설명](/local-llms/llm-quantization-explained) — Q4_K_M이 기본값인 이유와 양자화가 RAM에 미치는 영향',
-            '[로컬 LLM 하드웨어 가이드 2026](/local-llms/local-llm-hardware-guide-2026) — 7B~70B 모델 실행을 위한 하드웨어 요구 사항',
-            '[Ollama 설치 방법](/local-llms/how-to-install-ollama) — 설치 및 설정 가이드',
-            '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio) — 가장 인기 있는 두 로컬 LLM 도구 비교',
-            '[노트북에서 로컬 LLM 실행하기](/local-llms/local-llm-on-laptop) — 노트북 특화 열 및 배터리 최적화',
-            '[초보자를 위한 최고의 로컬 LLM 모델](/local-llms/best-beginner-local-llm-models) — 8GB RAM에 대한 모델 추천',
-            '[2026년 코딩용 최고의 로컬 LLM](/local-llms/best-local-llms-for-coding) — Qwen3-Coder vs DeepSeek 벤치마크 비교',
+            '[LLM 양자화 설명](/ko/local-llms/llm-quantization-explained) — Q4_K_M이 기본값인 이유와 양자화가 RAM에 미치는 영향',
+            '[로컬 LLM 하드웨어 가이드 2026](/ko/local-llms/local-llm-hardware-guide-2026) — 7B~70B 모델 실행을 위한 하드웨어 요구 사항',
+            '[Ollama 설치 방법](/ko/local-llms/how-to-install-ollama) — 설치 및 설정 가이드',
+            '[Ollama vs LM Studio](/ko/local-llms/ollama-vs-lm-studio) — 가장 인기 있는 두 로컬 LLM 도구 비교',
+            '[노트북에서 로컬 LLM 실행하기](/ko/local-llms/local-llm-on-laptop) — 노트북 특화 열 및 배터리 최적화',
+            '[초보자를 위한 최고의 로컬 LLM 모델](/ko/local-llms/best-beginner-local-llm-models) — 8GB RAM에 대한 모델 추천',
+            '[2026년 코딩용 최고의 로컬 LLM](/ko/local-llms/best-local-llms-for-coding) — Qwen3-Coder vs DeepSeek 벤치마크 비교',
           ],
         },
         moreTroubleshooting: {
           title: '추가 도움 받는 곳',
-          content: '노트북의 하드웨어 특화 문제(열 제한, 배터리 소모)는 [노트북에서 로컬 LLM 실행하기](/local-llms/local-llm-on-laptop)를 참고하십시오. 보안 및 개인 정보 설정 질문은 [로컬 LLM 보안 및 개인 정보 체크리스트](/local-llms/local-llm-security-privacy-checklist)를 참고하십시오. Ollama GitHub 이슈 페이지(github.com/ollama/ollama/issues)와 r/LocalLLaMA 서브레딧은 모델별 버그에 대한 가장 활발한 커뮤니티 자원입니다.',
+          content: '노트북의 하드웨어 특화 문제(열 제한, 배터리 소모)는 [노트북에서 로컬 LLM 실행하기](/ko/local-llms/local-llm-on-laptop)를 참고하십시오. 보안 및 개인 정보 설정 질문은 [로컬 LLM 보안 및 개인 정보 체크리스트](/ko/local-llms/local-llm-security-privacy-checklist)를 참고하십시오. Ollama GitHub 이슈 페이지(github.com/ollama/ollama/issues)와 r/LocalLLaMA 서브레딧은 모델별 버그에 대한 가장 활발한 커뮤니티 자원입니다.',
         },
         commonMistakes: {
           title: '로컬 LLM 문제 해결의 흔한 실수',

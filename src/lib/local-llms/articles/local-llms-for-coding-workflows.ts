@@ -2062,7 +2062,7 @@ schema: {
           id: 'ide-integration',
           title: 'IDE 연동을 어떻게 설정합니까?',
           content: [
-            '**[VS Code와 Continue.dev](/local-llms/local-llms-with-vscode-cursor)를 사용하거나 기본 로컬 LLM 지원이 내장된 Cursor 에디터로 전환하십시오. 두 방법 모두 키보드 단축키로 인라인 코드 제안을 트리거할 수 있습니다.**',
+            '**[VS Code와 Continue.dev](/ko/local-llms/local-llms-with-vscode-cursor)를 사용하거나 기본 로컬 LLM 지원이 내장된 Cursor 에디터로 전환하십시오. 두 방법 모두 키보드 단축키로 인라인 코드 제안을 트리거할 수 있습니다.**',
           ],
           callouts: [
             { type: 'note', text: '📌 **참고:** Continue.dev는 로컬에서 Ollama를 실행해야 합니다. VS Code 기반의 Cursor 에디터는 Ollama를 기본 지원하므로 추가 설정이 필요하지 않습니다.' },
@@ -2130,13 +2130,13 @@ schema: {
           id: 'related-reading',
           title: '관련 자료',
           items: [
-            '[로컬 LLM을 위한 최고의 AI 코딩 어시스턴트](/local-llms/best-ai-coding-assistant-local-llm) — 코딩 모델을 위한 Cursor, Continue.dev, Cody 및 기타 IDE 도구 선택 가이드.',
-            '[VS Code와 Cursor로 로컬 LLM 사용하기](/local-llms/local-llms-with-vscode-cursor) — 두 IDE에 대한 상세 설정 가이드',
+            '[로컬 LLM을 위한 최고의 AI 코딩 어시스턴트](/ko/local-llms/best-ai-coding-assistant-local-llm) — 코딩 모델을 위한 Cursor, Continue.dev, Cody 및 기타 IDE 도구 선택 가이드.',
+            '[VS Code와 Cursor로 로컬 LLM 사용하기](/ko/local-llms/local-llms-with-vscode-cursor) — 두 IDE에 대한 상세 설정 가이드',
             '[프롬프트 엔지니어링 가이드](/prompt-engineering) — 코드 생성 개선을 위한 프롬프팅 기법 마스터',
-            '[코딩을 위한 최고의 로컬 LLM](/local-llms/best-local-llms-for-coding) — 상세 벤치마크 및 모델 비교',
-            '[로컬 LLM 하드웨어 가이드 2026](/local-llms/local-llm-hardware-guide-2026) — GPU 요구 사항 및 비용 분석',
-            '[코드 검색을 위한 로컬 RAG](/local-llms/local-rag-2026) — 의미론적 이해로 기존 코드 검색',
-            '[비즈니스를 위한 프라이빗 로컬 AI](/local-llms/private-local-ai-for-business) — 엔터프라이즈 배포 및 규정 준수',
+            '[코딩을 위한 최고의 로컬 LLM](/ko/local-llms/best-local-llms-for-coding) — 상세 벤치마크 및 모델 비교',
+            '[로컬 LLM 하드웨어 가이드 2026](/ko/local-llms/local-llm-hardware-guide-2026) — GPU 요구 사항 및 비용 분석',
+            '[코드 검색을 위한 로컬 RAG](/ko/local-llms/local-rag-2026) — 의미론적 이해로 기존 코드 검색',
+            '[비즈니스를 위한 프라이빗 로컬 AI](/ko/local-llms/private-local-ai-for-business) — 엔터프라이즈 배포 및 규정 준수',
           ],
         },
         sources: {

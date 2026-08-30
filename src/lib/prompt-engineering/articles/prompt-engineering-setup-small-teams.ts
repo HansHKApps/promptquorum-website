@@ -2799,7 +2799,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         ],
         callouts: [
           { type: 'key-point', label: '최소 테스트 세트 크기', text: '20개는 최소치입니다. 그보다 적으면 너무 많은 엣지 케이스를 놓칩니다. 50개를 초과하면 대부분의 소규모 팀 프로덕션 프롬프트에서 추가적인 커버리지 이점이 감소합니다. 20개로 시작하고, 커버해야 할 특정 실패 카테고리를 파악한 경우에만 확장하십시오.' },
-          { type: 'pro-tip', label: '멀티 모델 기준선', text: '배포 전마다 GPT-5.6와 Claude Sonnet 5에서 테스트 세트를 실행하십시오. 모델은 예고 없이 업데이트됩니다. 버전 변경이 특정 작업의 합격률을 조용히 변경할 수 있습니다. 전체 비교 워크플로우는 [여러 모델에서 프롬프트 테스트하는 방법](/prompt-engineering/how-to-test-prompts-across-models)을 참조하십시오.' },
+          { type: 'pro-tip', label: '멀티 모델 기준선', text: '배포 전마다 GPT-5.6와 Claude Sonnet 5에서 테스트 세트를 실행하십시오. 모델은 예고 없이 업데이트됩니다. 버전 변경이 특정 작업의 합격률을 조용히 변경할 수 있습니다. 전체 비교 워크플로우는 [여러 모델에서 프롬프트 테스트하는 방법](/ko/prompt-engineering/how-to-test-prompts-across-models)을 참조하십시오.' },
         ],
       },
       modelSelection: {
@@ -2807,7 +2807,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         title: '구조화된 출력에는 GPT-5.6, 뉘앙스 처리에는 Claude Sonnet 5 선택',
         content: [
           '**대부분의 작업에는 GPT-5.6와 Claude Sonnet 5으로 시작하십시오. 하나의 모델을 확정하기 전에 두 모델을 실행하고 특정 사용 사례의 합격률을 비교하십시오.** 올바른 모델은 일반적인 리더보드 순위가 아닌 작업 유형에 달려 있습니다.',
-          '[OpenAI의 GPT-5.6](https://platform.openai.com/playground)와 [Anthropic의 Claude 4.6 Sonnet](https://docs.anthropic.com/)은 [2026년 4월 기준](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) 프로덕션 프롬프트 엔지니어링에서 가장 널리 사용되는 두 개의 프론티어 모델입니다. 100k 토큰을 초과하는 문서의 경우 Gemini 2.5 Pro를 추가하십시오. 비용에 민감한 대용량 작업에는 Claude 4.5 Haiku 또는 GPT-5.6 Luna를 사용하십시오.',
+          '[OpenAI의 GPT-5.6](https://platform.openai.com/playground)와 [Anthropic의 Claude 4.6 Sonnet](https://docs.anthropic.com/)은 [2026년 4월 기준](/ko/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) 프로덕션 프롬프트 엔지니어링에서 가장 널리 사용되는 두 개의 프론티어 모델입니다. 100k 토큰을 초과하는 문서의 경우 Gemini 2.5 Pro를 추가하십시오. 비용에 민감한 대용량 작업에는 Claude 4.5 Haiku 또는 GPT-5.6 Luna를 사용하십시오.',
         ],
         columns: ['작업 유형', '권장 모델', '이유'],
         rows: [
@@ -2848,9 +2848,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**1일차 — 점검 및 담당자 배정.** 팀이 사용하는 모든 프롬프트를 나열하십시오. 각 프롬프트에 대해 다음을 기록하십시오: 어디에 있는지, 누가 작성했는지, 어떤 모델에서 실행되는지. 각 프롬프트에 담당자 한 명을 배정하십시오. 이 작업은 1~2시간이 걸리며, 즉시 프롬프트 확산을 드러냅니다. 대부분의 팀은 생각보다 30~50% 더 많은 프롬프트가 있다는 것을 발견합니다.',
           '**2일차 — 공유 프롬프트 저장소 생성.** 기존 코드 저장소에 `/prompts` 폴더를 만들거나 새로운 전용 Git 저장소를 만드십시오. 필수 메타데이터 필드가 포함된 `README.md`를 추가하십시오: name, version, owner, model, template, last_tested.',
           '**3일차 — 가장 중요한 프롬프트 3개를 YAML 파일로 이전.** 전체 메타데이터 템플릿으로 작성하십시오. `feat(prompts): migrate summarise-for-pm to library v1.0.0`과 같은 메시지로 공유 저장소에 커밋하십시오. 이 3개 파일이 라이브러리의 기반입니다.',
-          '**4일차 — 가장 중요한 프롬프트에 대한 20개 케이스 테스트 세트 구축.** 정상 경로 입력 10개, 엣지 케이스 5개 (비정상적인 형식, 긴 입력, 필수 필드 누락), 적대적 입력 5개 (프롬프트 지시를 무시하려는 입력). 각 케이스에 대한 이진 합격/불합격 기준을 정의하십시오. 채점 프레임워크는 [프롬프트 품질 평가 방법](/prompt-engineering/how-to-evaluate-prompt-quality)을 참조하십시오.',
+          '**4일차 — 가장 중요한 프롬프트에 대한 20개 케이스 테스트 세트 구축.** 정상 경로 입력 10개, 엣지 케이스 5개 (비정상적인 형식, 긴 입력, 필수 필드 누락), 적대적 입력 5개 (프롬프트 지시를 무시하려는 입력). 각 케이스에 대한 이진 합격/불합격 기준을 정의하십시오. 채점 프레임워크는 [프롬프트 품질 평가 방법](/ko/prompt-engineering/how-to-evaluate-prompt-quality)을 참조하십시오.',
           '**5일차 — 최소 2개 모델에서 테스트 세트 실행.** PromptQuorum 또는 자체 API 호출을 사용하여 GPT-5.6와 Claude Sonnet 5에서 20개 케이스를 실행하십시오. 각 모델의 합격률을 기록하십시오. 이 기준선이 팀이 추적할 가장 중요한 수치입니다. 향후 모든 프롬프트 변경은 이 기준선과 같거나 더 높은 점수를 받아야 합니다.',
-          '**2주차 이후 — 라이브러리 확장 및 리뷰 추가.** 다음 중요한 프롬프트 5개를 YAML 파일로 이전하십시오. 팀이 5인 이상이라면 `/prompts` 폴더에 PR 리뷰를 추가하십시오. main에 병합할 때마다 CI에서 전체 테스트 세트를 실행하십시오. 20개 이상의 프롬프트로 확장하는 가이드는 [프롬프트 라이브러리 구축하기](/prompt-engineering/build-a-prompt-library)를 참조하십시오.',
+          '**2주차 이후 — 라이브러리 확장 및 리뷰 추가.** 다음 중요한 프롬프트 5개를 YAML 파일로 이전하십시오. 팀이 5인 이상이라면 `/prompts` 폴더에 PR 리뷰를 추가하십시오. main에 병합할 때마다 CI에서 전체 테스트 세트를 실행하십시오. 20개 이상의 프롬프트로 확장하는 가이드는 [프롬프트 라이브러리 구축하기](/ko/prompt-engineering/build-a-prompt-library)를 참조하십시오.',
         ],
         callouts: [
           { type: 'key-point', label: '가장 중요한 단계 하나', text: '이 가이드에서 한 가지만 실행한다면 5일차를 선택하십시오: 가장 중요한 프롬프트에 대한 멀티 모델 기준선 합격률을 설정하십시오. 그 하나의 수치가 모델 업데이트, 표현 변경, 또는 새로운 엣지 케이스로 인해 문제가 발생했을 때 즉시 알려줍니다.' },
@@ -2884,7 +2884,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           {
             mistake: '3인 팀에 엔터프라이즈급 툴링 추가',
             problem: '오버헤드가 이점을 초과합니다. 팀이 프롬프트를 사용하는 기능 개발보다 도구 스택 유지에 더 많은 시간을 씁니다.',
-            fix: 'Git + YAML로 시작하십시오. Git의 한계가 실제 제약 사항이 될 때만 [프롬프트 관리 플랫폼](/prompt-engineering/best-prompt-management-platforms) (Braintrust, PromptHub, Vellum)을 추가하십시오. 일반적으로 10인 이상이거나 50개 이상의 프로덕션 프롬프트가 생겼을 때입니다.',
+            fix: 'Git + YAML로 시작하십시오. Git의 한계가 실제 제약 사항이 될 때만 [프롬프트 관리 플랫폼](/ko/prompt-engineering/best-prompt-management-platforms) (Braintrust, PromptHub, Vellum)을 추가하십시오. 일반적으로 10인 이상이거나 50개 이상의 프로덕션 프롬프트가 생겼을 때입니다.',
           },
         ],
       },
@@ -2931,12 +2931,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: '관련 자료',
         items: [
-          '[팀을 위한 프롬프트 라이브러리 구축하기](/prompt-engineering/build-a-prompt-library) — 메타데이터 구조, 폴더 구성, 50개 이상의 프롬프트로 거버넌스 확장',
-          '[프롬프트 품질 평가 방법: 지표, 테스트 및 체크리스트](/prompt-engineering/how-to-evaluate-prompt-quality) — 20개 케이스 테스트 세트 구성, 이진 합격/불합격 채점, LLM-as-judge 루브릭',
-          '[여러 모델에서 프롬프트 테스트하는 방법](/prompt-engineering/how-to-test-prompts-across-models) — GPT-5.6, Claude Sonnet 5, Gemini 2.5 Pro에서 동일한 프롬프트를 실행하여 작업별 최적 모델 찾기',
-          '[최고의 프롬프트 관리 플랫폼 (2026)](/prompt-engineering/best-prompt-management-platforms) — Git의 한계를 넘어설 때: 성장하는 팀을 위한 Braintrust, PromptHub, Vellum 비교',
-          '[GPT-5.6 대 Claude 대 Gemini: 어떤 모델을 선택할까?](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — 작업 유형, 지연 시간, 비용, 컨텍스트 창별 모델 선택',
-          '[최고의 프롬프트 엔지니어링 IDE (2026)](/prompt-engineering/best-prompt-engineering-ides) — 문법 강조와 팀 공유 스니펫을 활용한 YAML 프롬프트 파일 편집을 위한 VS Code 및 Cursor 설정',
+          '[팀을 위한 프롬프트 라이브러리 구축하기](/ko/prompt-engineering/build-a-prompt-library) — 메타데이터 구조, 폴더 구성, 50개 이상의 프롬프트로 거버넌스 확장',
+          '[프롬프트 품질 평가 방법: 지표, 테스트 및 체크리스트](/ko/prompt-engineering/how-to-evaluate-prompt-quality) — 20개 케이스 테스트 세트 구성, 이진 합격/불합격 채점, LLM-as-judge 루브릭',
+          '[여러 모델에서 프롬프트 테스트하는 방법](/ko/prompt-engineering/how-to-test-prompts-across-models) — GPT-5.6, Claude Sonnet 5, Gemini 2.5 Pro에서 동일한 프롬프트를 실행하여 작업별 최적 모델 찾기',
+          '[최고의 프롬프트 관리 플랫폼 (2026)](/ko/prompt-engineering/best-prompt-management-platforms) — Git의 한계를 넘어설 때: 성장하는 팀을 위한 Braintrust, PromptHub, Vellum 비교',
+          '[GPT-5.6 대 Claude 대 Gemini: 어떤 모델을 선택할까?](/ko/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model) — 작업 유형, 지연 시간, 비용, 컨텍스트 창별 모델 선택',
+          '[최고의 프롬프트 엔지니어링 IDE (2026)](/ko/prompt-engineering/best-prompt-engineering-ides) — 문법 강조와 팀 공유 스니펫을 활용한 YAML 프롬프트 파일 편집을 위한 VS Code 및 Cursor 설정',
         ],
       },
       sources: {

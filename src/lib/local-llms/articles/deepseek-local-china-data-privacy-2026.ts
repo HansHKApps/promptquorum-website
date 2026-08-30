@@ -1754,8 +1754,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**DeepSeek 오픈 가중치 모델을 자체 호스팅하면 경로에 DeepSeek 서버가 없으므로 중국으로의 국경 간 데이터 흐름이 없습니다 — 프롬프트와 출력이 결코 사용자의 기기를 떠나지 않습니다.** 이것이 데이터 보호 문제를 해결하는 단 하나의 변화입니다: 데이터를 해외에 저장하던 서비스를 제거한 것입니다.',
           '이를 신뢰에 맡길 필요는 없습니다. 모델에 텔레메트리가 없으므로 유출이 없음을 직접 검증할 수 있습니다: 네트워크를 모니터링한 상태로 모델을 실행하고 추론 중 아웃바운드 연결이 없음을 확인하십시오. 간단한 방화벽 규칙이나 세션 중 패킷 캡처만으로도 이를 입증할 수 있습니다.',
-          '실용적이고 완전히 오프라인인 구성 — 트래픽 모니터링으로 "진정한 오프라인"을 검증하는 방법 포함 — 은 [DeepSeek 오프라인 실행 2026: 자체 호스팅 구성](/power-local-llm/deepseek-offline-china-self-hosted-2026)을 참조하십시오. 어떤 디스틸을 실행할지 선택하려면 [최고의 로컬 추론 모델 2026](/local-llms/best-local-reasoning-model-deepseek-r1-2026)을 참조하십시오.',
-          '이는 R1뿐 아니라 DeepSeek가 출시한 모든 세대의 오픈 가중치에 적용됩니다. DeepSeek-V3.2와 더 최신인 DeepSeek-V4(Flash 및 Pro, 2026년 8월부터 정식 출시)도 데이터 유출 없이 자체 호스팅할 수 있습니다. 실질적인 차이는 개인정보가 아니라 하드웨어에 있습니다 — V4-Pro는 양자화하더라도 약 48~80GB의 VRAM이 필요하므로, 단일 GPU를 사용하는 대부분의 개인정보 중시 팀에게는 R1 디스틸이 여전히 현실적인 로컬 선택지입니다. 하드웨어별 세부 내용은 [최고의 로컬 추론 모델 2026](/local-llms/best-local-reasoning-model-deepseek-r1-2026)을 참조하십시오.',
+          '실용적이고 완전히 오프라인인 구성 — 트래픽 모니터링으로 "진정한 오프라인"을 검증하는 방법 포함 — 은 [DeepSeek 오프라인 실행 2026: 자체 호스팅 구성](/ko/power-local-llm/deepseek-offline-china-self-hosted-2026)을 참조하십시오. 어떤 디스틸을 실행할지 선택하려면 [최고의 로컬 추론 모델 2026](/ko/local-llms/best-local-reasoning-model-deepseek-r1-2026)을 참조하십시오.',
+          '이는 R1뿐 아니라 DeepSeek가 출시한 모든 세대의 오픈 가중치에 적용됩니다. DeepSeek-V3.2와 더 최신인 DeepSeek-V4(Flash 및 Pro, 2026년 8월부터 정식 출시)도 데이터 유출 없이 자체 호스팅할 수 있습니다. 실질적인 차이는 개인정보가 아니라 하드웨어에 있습니다 — V4-Pro는 양자화하더라도 약 48~80GB의 VRAM이 필요하므로, 단일 GPU를 사용하는 대부분의 개인정보 중시 팀에게는 R1 디스틸이 여전히 현실적인 로컬 선택지입니다. 하드웨어별 세부 내용은 [최고의 로컬 추론 모델 2026](/ko/local-llms/best-local-reasoning-model-deepseek-r1-2026)을 참조하십시오.',
         ],
         snippetBlocks: [
           {
@@ -1771,7 +1771,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**자체 호스팅은 데이터 흐름 문제를 해결하지만 모든 우려를 해결하지는 않습니다: 일부 보안 연구자는 모델 가중치 수준의 문제 — 탈옥 취약성과 출력의 서사적 정렬 — 를 지적하며, 이는 모델을 어디서 실행하든 존재합니다.** 이를 분명히 말하고 로컬이 곧 무위험이라고 암시하기보다 양쪽 모두를 제시하는 것이 중요합니다.',
           '우려를 공정하게 제시하면: 연구자들은 DeepSeek 모델이 상대적으로 탈옥에 취약할 수 있고, 특정 정치적으로 민감한 주제에서 출력이 특정한 서사적 정렬을 반영한다고 보고했습니다. 이는 가중치 자체의 속성이므로 로컬 실행이 이를 바꾸지 않습니다.',
           '반대 관점도 똑같이 공정하게 제시하면: 모든 오픈 모델은 어느 정도의 탈옥 표면을 지니며, 서사적 정렬은 학습 데이터와 튜닝 선택에 따라 모든 출신국의 모델에 존재합니다. 수학, 논리, 코딩, 대부분의 비즈니스 추론 — 사람들이 실제로 R1 디스틸을 자체 호스팅하는 작업 — 에 대해 이러한 우려는 작업과 대체로 직교합니다.',
-          '실용적 결론은 두 질문을 분리하는 것입니다. "내 데이터가 유출되는가?"는 답이 나왔습니다(자체 호스팅하고 검증하면 아니오). "민감한 주제에서 이 모델의 출력을 신뢰하는가?"는 어떤 모델에 대해서든 그러하듯 그 자체의 장단점으로 답해야 하는 모델 선택 문제입니다. 규제 준수 질문에 집중한 내용은 [DeepSeek는 개인정보 보호에 안전합니까?](/prompt-bites/is-deepseek-gdpr-safe)를 참조하십시오.',
+          '실용적 결론은 두 질문을 분리하는 것입니다. "내 데이터가 유출되는가?"는 답이 나왔습니다(자체 호스팅하고 검증하면 아니오). "민감한 주제에서 이 모델의 출력을 신뢰하는가?"는 어떤 모델에 대해서든 그러하듯 그 자체의 장단점으로 답해야 하는 모델 선택 문제입니다. 규제 준수 질문에 집중한 내용은 [DeepSeek는 개인정보 보호에 안전합니까?](/ko/prompt-bites/is-deepseek-gdpr-safe)를 참조하십시오.',
         ],
       },
       gdprAngle: {
@@ -1840,10 +1840,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-articles',
         title: '관련 가이드',
         items: [
-          '[DeepSeek 오프라인 실행 2026: 자체 호스팅 구성](/power-local-llm/deepseek-offline-china-self-hosted-2026) — 실용적 오프라인 배포와 검증 방법',
-          '[최고의 로컬 추론 모델 2026: DeepSeek-R1 순위](/local-llms/best-local-reasoning-model-deepseek-r1-2026) — 자체 호스팅할 오픈 가중치 디스틸 선택',
-          '[DeepSeek는 개인정보 보호에 안전합니까?](/prompt-bites/is-deepseek-gdpr-safe) — 규제 준수 질문을 간결하게',
-          '[DeepSeek-R1 vs 디스틸](/power-local-llm/deepseek-r1-vs-distills-explained-2026) — 오픈 가중치 디스틸이 전체 모델 대비 무엇을 유지하고 잃는가',
+          '[DeepSeek 오프라인 실행 2026: 자체 호스팅 구성](/ko/power-local-llm/deepseek-offline-china-self-hosted-2026) — 실용적 오프라인 배포와 검증 방법',
+          '[최고의 로컬 추론 모델 2026: DeepSeek-R1 순위](/ko/local-llms/best-local-reasoning-model-deepseek-r1-2026) — 자체 호스팅할 오픈 가중치 디스틸 선택',
+          '[DeepSeek는 개인정보 보호에 안전합니까?](/ko/prompt-bites/is-deepseek-gdpr-safe) — 규제 준수 질문을 간결하게',
+          '[DeepSeek-R1 vs 디스틸](/ko/power-local-llm/deepseek-r1-vs-distills-explained-2026) — 오픈 가중치 디스틸이 전체 모델 대비 무엇을 유지하고 잃는가',
         ],
       },
       updateLog: {

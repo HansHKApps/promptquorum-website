@@ -2294,14 +2294,14 @@ schema: {
         'relatedReading': {
           title: '관련 읽을거리',
           items: [
-            '[로컬 LLM vs ChatGPT Plus: 비용 비교](/local-llms/local-llms-vs-chatgpt-plus)',
-            '[로컬 LLM vs Claude Pro: 프라이버시와 비용](/local-llms/local-llms-vs-claude-pro)',
-            '[로컬 LLM vs 클라우드 GPU: 어느 쪽이 더 저렴합니까?](/local-llms/local-llm-vs-cloud-gpu-cost)',
-            '[클라우드 GPU 임대 비교: RunPod vs Vast.ai vs Lambda Labs](/local-llms/cloud-gpu-rental-comparison-2026)',
-            '[로컬 LLM을 위한 최고의 저가 GPU](/local-llms/best-budget-gpus-local-llm)',
-            '[로컬 LLM에 필요한 VRAM 용량은?](/local-llms/how-much-vram-local-llm)',
-            '[로컬 LLM 하드웨어 가이드 2026: GPU, CPU, RAM](/local-llms/local-llm-hardware-guide-2026)',
-            '[로컬 LLM과 클라우드 API 사용 시점](/local-llms/local-llms-vs-cloud-apis)',
+            '[로컬 LLM vs ChatGPT Plus: 비용 비교](/ko/local-llms/local-llms-vs-chatgpt-plus)',
+            '[로컬 LLM vs Claude Pro: 프라이버시와 비용](/ko/local-llms/local-llms-vs-claude-pro)',
+            '[로컬 LLM vs 클라우드 GPU: 어느 쪽이 더 저렴합니까?](/ko/local-llms/local-llm-vs-cloud-gpu-cost)',
+            '[클라우드 GPU 임대 비교: RunPod vs Vast.ai vs Lambda Labs](/ko/local-llms/cloud-gpu-rental-comparison-2026)',
+            '[로컬 LLM을 위한 최고의 저가 GPU](/ko/local-llms/best-budget-gpus-local-llm)',
+            '[로컬 LLM에 필요한 VRAM 용량은?](/ko/local-llms/how-much-vram-local-llm)',
+            '[로컬 LLM 하드웨어 가이드 2026: GPU, CPU, RAM](/ko/local-llms/local-llm-hardware-guide-2026)',
+            '[로컬 LLM과 클라우드 API 사용 시점](/ko/local-llms/local-llms-vs-cloud-apis)',
           ],
         },
         'sources': {

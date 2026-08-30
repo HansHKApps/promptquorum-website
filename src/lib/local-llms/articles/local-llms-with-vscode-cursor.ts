@@ -2112,12 +2112,12 @@ schema: {
           id: 'related-reading',
           title: '관련 자료',
           items: [
-            '[로컬 LLM용 최고의 AI 코딩 어시스턴트](/local-llms/best-ai-coding-assistant-local-llm) -- 로컬 LLM을 지원하는 Cursor, Continue.dev, Cody, Tabnine, Windsurf의 종합 비교.',
-            '[로컬 LLM 개발자 스택](/local-llms/local-llm-developer-stack) -- IDE 통합을 넘어 API 서버 설정 및 프로덕션 모니터링을 포함한 완전한 스택.',
-            '[Ollama 설치 방법](/local-llms/how-to-install-ollama) -- 코드 자동 완성을 위한 Ollama 설정.',
-            '[코딩용 최고의 로컬 LLM](/local-llms/best-local-llms-for-coding) -- 상세한 코딩 모델 벤치마크.',
-            '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio) -- 어떤 도구를 사용해야 하는지.',
-            '[로컬 LLM OpenAI 호환 API](/local-llms/local-llm-openai-compatible-api) -- 코드 자동 완성 API.',
+            '[로컬 LLM용 최고의 AI 코딩 어시스턴트](/ko/local-llms/best-ai-coding-assistant-local-llm) -- 로컬 LLM을 지원하는 Cursor, Continue.dev, Cody, Tabnine, Windsurf의 종합 비교.',
+            '[로컬 LLM 개발자 스택](/ko/local-llms/local-llm-developer-stack) -- IDE 통합을 넘어 API 서버 설정 및 프로덕션 모니터링을 포함한 완전한 스택.',
+            '[Ollama 설치 방법](/ko/local-llms/how-to-install-ollama) -- 코드 자동 완성을 위한 Ollama 설정.',
+            '[코딩용 최고의 로컬 LLM](/ko/local-llms/best-local-llms-for-coding) -- 상세한 코딩 모델 벤치마크.',
+            '[Ollama vs LM Studio](/ko/local-llms/ollama-vs-lm-studio) -- 어떤 도구를 사용해야 하는지.',
+            '[로컬 LLM OpenAI 호환 API](/ko/local-llms/local-llm-openai-compatible-api) -- 코드 자동 완성 API.',
           ],
         },
         sources: {

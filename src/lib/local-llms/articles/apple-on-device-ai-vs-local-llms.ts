@@ -2080,11 +2080,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 자료',
         items: [
-          '[로컬 LLM이란 무엇인가?](/local-llms/what-are-local-llms) — 자체 호스팅 모델의 작동 방식',
-          '[로컬 LLM의 한계](/local-llms/local-llm-limitations) — 클라우드 API 대비 로컬 모델의 부족한 점',
-          '[민감한 데이터를 위한 프라이빗 로컬 LLM](/local-llms/private-local-llm-sensitive-data) — 민감한 워크로드를 위한 데이터 상주, GDPR, 모델 선택',
-          '[모바일 로컬 LLM 2026](/local-llms/mobile-local-llms) — 오늘날 iPhone과 Android에서의 온디바이스 추론 비교',
-          '[로컬 스마트홈 완전 가이드](/smart-home/local-smart-home-complete-guide) — homeOS, HomePad, 스마트홈 맥락의 로컬 AI',
+          '[로컬 LLM이란 무엇인가?](/ko/local-llms/what-are-local-llms) — 자체 호스팅 모델의 작동 방식',
+          '[로컬 LLM의 한계](/ko/local-llms/local-llm-limitations) — 클라우드 API 대비 로컬 모델의 부족한 점',
+          '[민감한 데이터를 위한 프라이빗 로컬 LLM](/ko/local-llms/private-local-llm-sensitive-data) — 민감한 워크로드를 위한 데이터 상주, GDPR, 모델 선택',
+          '[모바일 로컬 LLM 2026](/ko/local-llms/mobile-local-llms) — 오늘날 iPhone과 Android에서의 온디바이스 추론 비교',
+          '[로컬 스마트홈 완전 가이드](/ko/smart-home/local-smart-home-complete-guide) — homeOS, HomePad, 스마트홈 맥락의 로컬 AI',
         ],
       },
       faqSection: {
@@ -2109,7 +2109,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           },
           {
             q: 'Apple Intelligence 대신 자체 로컬 LLM을 실행할 수 있습니까?',
-            a: '예. Ollama(무료, 크로스 플랫폼)를 사용하면 오픈 가중치 모델(Qwen, Llama, Gemma)을 자체 하드웨어에서 완전히 실행할 수 있습니다. Apple Silicon에서는 Ollama의 MLX 엔진(v0.30부터 안정화되었으며, 2026년 8월까지 Qwen 3.8 지원을 포함한 속도 및 모델 지원 업데이트가 이어지고 있습니다)이 Apple 자체 온디바이스 모델과 동일한 Apple 제작 MLX 프레임워크를 사용하여, 모델 선택의 자유를 유지하면서 Apple Intelligence와의 속도 격차를 줄이고 있습니다. Apple Intelligence와 달리 자체 호스팅 LLM은 완전 오프라인이며, 검사 및 파인튜닝이 가능한 오픈 가중치를 사용하고, Apple이나 Google의 인프라를 통해 라우팅되지 않습니다. 시작하려면 [로컬 LLM이란 무엇인가?](/local-llms/what-are-local-llms)를 참조하십시오.',
+            a: '예. Ollama(무료, 크로스 플랫폼)를 사용하면 오픈 가중치 모델(Qwen, Llama, Gemma)을 자체 하드웨어에서 완전히 실행할 수 있습니다. Apple Silicon에서는 Ollama의 MLX 엔진(v0.30부터 안정화되었으며, 2026년 8월까지 Qwen 3.8 지원을 포함한 속도 및 모델 지원 업데이트가 이어지고 있습니다)이 Apple 자체 온디바이스 모델과 동일한 Apple 제작 MLX 프레임워크를 사용하여, 모델 선택의 자유를 유지하면서 Apple Intelligence와의 속도 격차를 줄이고 있습니다. Apple Intelligence와 달리 자체 호스팅 LLM은 완전 오프라인이며, 검사 및 파인튜닝이 가능한 오픈 가중치를 사용하고, Apple이나 Google의 인프라를 통해 라우팅되지 않습니다. 시작하려면 [로컬 LLM이란 무엇인가?](/ko/local-llms/what-are-local-llms)를 참조하십시오.',
           },
           {
             q: 'Apple Intelligence는 EU/GDPR 준수에 충분히 프라이빗합니까?',

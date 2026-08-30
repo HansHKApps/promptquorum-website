@@ -23,7 +23,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Most local-LLM GPU advice optimizes for the wrong number. Speed in tokens per second decides how fast a model answers, but VRAM decides whether the model runs at all — and a model that does not fit is infinitely slower than one that does. This guide compares eight consumer GPUs across four price tiers on the figures that actually bind a purchase: VRAM capacity, measured inference speed, power draw, and price. One caveat on price: GPU prices surged in 2026 on a memory shortage, and cards now sell 1.5-2x above original MSRP — every price here is a July 2026 snapshot, so confirm current pricing before you buy.',
     metaDescription:
-      'Eight GPUs compared for local LLMs across four budgets: RTX 3060 to RTX 5090. VRAM, tokens/sec, power draw, and July 2026 prices — with the model size each tier runs.',
+      'Eight GPUs compared for local LLMs across four budgets: RTX 3060 to RTX 5090. VRAM, tokens/sec, power draw, and current prices — with the model size each tier runs.',
     heroImage: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-en.webp',
     twitterDescription:
       'RTX 3060, RX 6700 XT, RTX 4060 Ti 16GB, RX 7800 XT, RTX 4070 Ti Super, RTX 4080 Super, RTX 4090, RTX 5090 — eight GPUs, four budgets, one decision rule: buy for VRAM.',
@@ -1779,7 +1779,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'ローカルLLM向けのGPUアドバイスの多くは、見るべきでない数値を最適化しています。トークン毎秒の速度はモデルが答える速さを決めますが、VRAMはそもそもモデルが動くかどうかを決めます。そして収まらないモデルは、収まるモデルよりも無限に遅いのです。本ガイドは、購入を実際に左右する数値、つまりVRAM容量・実測した推論速度・消費電力・価格で、4つの価格帯にわたり8枚のコンシューマーGPUを比較します。価格について1点注意があります。GPU価格はメモリ不足により2026年に急騰し、カードは現在、当初のメーカー希望小売価格の1.5～2倍で売られています。本記事の価格はすべて2026年7月時点のスナップショットですので、購入前に最新価格を確認してください。',
     metaDescription:
-      'ローカルLLM向けに8枚のGPUを4つの予算帯で比較：RTX 3060からRTX 5090まで。VRAM、トークン毎秒、消費電力、2026年7月の価格、各価格帯が動かせるモデルサイズを掲載。',
+      'ローカルLLM向けに8枚のGPUを4つの予算帯で比較：RTX 3060からRTX 5090まで。VRAM、トークン毎秒、消費電力、価格、各価格帯が動かせるモデルサイズを掲載。',
     heroImage: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-ja.webp',
     twitterDescription:
       'RTX 3060、RX 6700 XT、RTX 4060 Ti 16GB、RX 7800 XT、RTX 4070 Ti Super、RTX 4080 Super、RTX 4090、RTX 5090 — 8枚のGPU、4つの予算、ひとつの判断基準：VRAMで選ぶ。',
@@ -2360,11 +2360,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     next_refresh_due: '2026-11-22',
     theme: 'Overview & Reference',
     title: '本地大模型显卡选购指南 2026',
-    seoTitle: '2026 本地大模型最佳显卡：从入门到 RTX 5090',
+    seoTitle: '本地大模型显卡价格 2026：RTX 4090/5090 选购',
     intro:
       '大多数关于本地大模型显卡的建议都在优化错误的数字。每秒 token 的速度决定模型回答的快慢，但显存决定模型能否运行——一个装不下的模型，比一个装得下的模型慢无数倍。本指南在四个价位档次中比较八款消费级显卡，依据真正决定购买的数字：显存容量、实测推理速度、功耗和价格。关于价格有一点提醒：2026 年因内存短缺，显卡价格大涨，目前售价为原始建议零售价的 1.5 到 2 倍——本文每个价格都是 2026 年 7 月的快照，购买前请确认当前价格。',
     metaDescription:
-      '八款显卡在四个预算档次中对比本地大模型表现：从 RTX 3060 到 RTX 5090。显存、token/s、功耗和 2026 年 7 月价格，附每档可运行的模型规模。',
+      '本地大模型显卡怎么选：入门看 RTX 4060 Ti 16GB，跑 70B 看 RTX 4090 与 5090。八款显卡按显存、token/s、功耗和价格对比，含二手行情与各档可运行的模型规模。',
     heroImage: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-zh.webp',
     twitterDescription:
       'RTX 3060、RX 6700 XT、RTX 4060 Ti 16GB、RX 7800 XT、RTX 4070 Ti Super、RTX 4080 Super、RTX 4090、RTX 5090——八款显卡，四个预算，一条原则：按显存买。',
@@ -2884,6 +2884,18 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'faq',
         title: '常见问题',
         faqs: [
+          {
+            q: '本文的价格和中国大陆的实际价格差多少？',
+            a: '本文列出的是国际市场参考价，中国大陆的实际成交价通常不同：受渠道、税费和供货影响，同一型号在京东、淘宝等平台的标价与海外零售价可能有明显差距，高端型号尤其如此。请把本文价格当作各档次之间的相对关系来看，购买前在京东或天猫查询当前标价，二手行情参考闲鱼的实际成交价。显存、token/s 和功耗这些硬件参数不随地区变化，可以直接参考。',
+          },
+          {
+            q: '二手 RTX 4090 值得买吗？',
+            a: '对本地大模型来说，二手 4090 的 24 GB 显存仍然是性价比很高的选择，尤其在新卡溢价明显的时候。需要注意三点：一是确认是否为矿卡或长期满载使用过的卡，重点检查散热和供电部分；二是要求卖家提供实际跑分或长时间负载测试记录；三是二手卡通常没有保修，出问题只能自行承担。购买前先在闲鱼比对近期成交价，而不是只看挂牌价。',
+          },
+          {
+            q: '有 RTX 5090 Ti 吗？',
+            a: '本文对比的是已经上市的 50 系型号。NVIDIA 在过去几代中常在首发之后再推出 Ti 版本，因此这类搜索很常见，但请以官方发布和零售渠道的实际上架情况为准，不要根据传闻做购买决定。如果您在等待尚未上市的型号，本文中 RTX 5090 的显存和 token/s 数据可以作为该档次性能的参考。',
+          },
           {
             q: '能把本地大模型跑好的最便宜显卡是哪款？',
             a: '二手 NVIDIA RTX 3060 12 GB（$150-250）是能把本地大模型跑好的最便宜显卡。它的 12 GB 显存能以 Q4 量化装下每一款 7B 模型和大多数 13B 模型，达到 15-20 token 每秒。更便宜的 RX 6700 XT 也可以用，但更慢且需要 AMD ROCm 配置。买二手——全新价格在 2026 年涨价中大约翻了一番。',
@@ -3547,7 +3559,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'A maioria dos conselhos sobre GPUs para LLMs locais otimiza o número errado. A velocidade em tokens por segundo decide a rapidez com que um modelo responde, mas a VRAM decide se o modelo executa — e um modelo que não cabe na memória é infinitamente mais lento do que um que cabe. Este guia compara oito GPUs de consumo em quatro faixas de preço pelos números que realmente determinam uma compra: capacidade de VRAM, velocidade de inferência medida, consumo de energia e preço. Uma ressalva sobre o preço: os preços de GPUs dispararam em 2026 devido a uma escassez de memória, e as placas agora são vendidas de 1,5 a 2 vezes acima do preço de lista original — cada preço aqui é uma captura de julho de 2026, então confirme o preço atual antes de comprar.',
     metaDescription:
-      'Oito GPUs comparadas para LLMs locais em 4 orçamentos: RTX 3060 ao RTX 5090. VRAM, tokens/s, consumo de energia e preços de julho de 2026 — com o tamanho de modelo que cada faixa executa.',
+      'Oito GPUs comparadas para LLMs locais em 4 orçamentos: RTX 3060 ao RTX 5090. VRAM, tokens/s, consumo de energia e preços atuais — com o tamanho de modelo que cada faixa executa.',
     heroImage: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-pt.webp',
     twitterDescription:
       'RTX 3060, RX 6700 XT, RTX 4060 Ti 16GB, RX 7800 XT, RTX 4070 Ti Super, RTX 4080 Super, RTX 4090, RTX 5090 — oito GPUs, quatro orçamentos, uma regra: compre pela VRAM.',
@@ -4124,7 +4136,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'Melhores GPUs para LLMs locais: guia de compra completo 2026',
-      description: 'Oito GPUs comparadas para LLMs locais em quatro orçamentos: RTX 3060 ao RTX 5090. VRAM, tokens/s, consumo de energia e preços de julho de 2026 — com o tamanho de modelo que cada faixa executa.',
+      description: 'Oito GPUs comparadas para LLMs locais em quatro orçamentos: RTX 3060 ao RTX 5090. VRAM, tokens/s, consumo de energia e preços atuais — com o tamanho de modelo que cada faixa executa.',
       url: 'https://www.promptquorum.com/pt/power-local-llm/best-gpu-buying-guide-local-llm-2026',
       inLanguage: 'pt-BR',
       datePublished: '2026-05-22',
@@ -4145,7 +4157,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'تُحسِّن معظم النصائح المتعلقة بوحدات معالجة الرسومات للنماذج اللغوية المحلية الرقم الخاطئ. سرعة الرموز في الثانية تحدد مدى سرعة استجابة النموذج، لكن VRAM تحدد ما إذا كان النموذج يُشغَّل أصلاً — ونموذج لا يناسب الذاكرة أبطأ من نموذج يناسبها بما لا يُقاس. يقارن هذا الدليل ثماني وحدات معالجة رسومات استهلاكية في أربع فئات سعرية من حيث الأرقام التي تُحدد الشراء فعلاً: سعة VRAM وسرعة الاستدلال المقاسة واستهلاك الطاقة والسعر. تحذير بشأن الأسعار: ارتفعت أسعار وحدات معالجة الرسومات بشكل حاد في 2026 بسبب نقص الذاكرة، وتُباع البطاقات الآن بما يتراوح بين 1.5 و2 ضعف سعر قائمتها الأصلية — كل سعر هنا هو صورة من يوليو 2026، لذا تأكد من السعر الحالي قبل الشراء.',
     metaDescription:
-      '8 وحدات GPU مقارَنة عبر 4 ميزانيات لنماذج LLM المحلية: VRAM والرموز في الثانية واستهلاك الطاقة وأسعار يوليو 2026. RTX 3060 حتى RTX 5090.',
+      '8 وحدات GPU مقارَنة عبر 4 ميزانيات لنماذج LLM المحلية: VRAM والرموز في الثانية واستهلاك الطاقة والأسعار الحالية. RTX 3060 حتى RTX 5090.',
     heroImage: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-ar.webp',
     twitterDescription:
       'RTX 3060 وRX 6700 XT وRTX 4060 Ti 16GB وRX 7800 XT وRTX 4070 Ti Super وRTX 4080 Super وRTX 4090 وRTX 5090 — ثماني وحدات معالجة رسومات وأربع ميزانيات وقاعدة واحدة: اشترِ بحسب VRAM.',
@@ -4587,7 +4599,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       headline: 'أفضل وحدات معالجة الرسومات لنماذج اللغة المحلية: دليل الشراء الشامل 2026',
-      description: 'ثماني وحدات معالجة رسومات مقارَنة للنماذج اللغوية المحلية في أربع ميزانيات: من RTX 3060 إلى RTX 5090. VRAM والرموز في الثانية واستهلاك الطاقة وأسعار يوليو 2026.',
+      description: 'ثماني وحدات معالجة رسومات مقارَنة للنماذج اللغوية المحلية في أربع ميزانيات: من RTX 3060 إلى RTX 5090. VRAM والرموز في الثانية واستهلاك الطاقة والأسعار الحالية.',
       url: 'https://www.promptquorum.com/ar/power-local-llm/best-gpu-buying-guide-local-llm-2026',
       inLanguage: 'ar',
       datePublished: '2026-05-22',
@@ -4608,7 +4620,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       '로컬 LLM용 GPU 관련 조언의 대부분은 잘못된 수치를 최적화하고 있습니다. 초당 토큰 속도는 모델이 얼마나 빠르게 응답하는지를 결정하지만, VRAM은 모델이 실행될 수 있는지 여부를 결정합니다. 메모리에 맞지 않는 모델은 맞는 모델보다 무한히 느립니다. 이 가이드는 실제 구매 결정을 좌우하는 수치인 VRAM 용량, 측정된 추론 속도, 전력 소비, 가격에 따라 네 가지 가격대에서 8개의 소비자용 GPU를 비교합니다. 가격에 관한 주의 사항: 2026년에는 메모리 공급 부족으로 인해 GPU 가격이 급등하여 현재 카드들이 원래 출시 가격보다 1.5~2배에 판매되고 있습니다. 여기의 모든 가격은 2026년 7월 기준 데이터이므로, 구매 전 현재 가격을 반드시 확인하십시오.',
     metaDescription:
-      '4가지 예산별로 로컬 LLM용 8개 GPU 비교: RTX 3060부터 RTX 5090까지. VRAM, 토큰/초, 전력 소비, 2026년 7월 가격 — 각 등급에서 실행 가능한 모델 크기 포함.',
+      '4가지 예산별로 로컬 LLM용 8개 GPU 비교: RTX 3060부터 RTX 5090까지. VRAM, 토큰/초, 전력 소비, 현재 가격 — 각 등급에서 실행 가능한 모델 크기 포함.',
     heroImage: '/images/best-gpu-buying-guide-local-llm-2026-comparison-hero-ko.webp',
     twitterDescription:
       'RTX 3060, RX 6700 XT, RTX 4060 Ti 16GB, RX 7800 XT, RTX 4070 Ti Super, RTX 4080 Super, RTX 4090, RTX 5090 — 8개 GPU, 4가지 예산, 하나의 규칙: VRAM으로 구매하십시오.',

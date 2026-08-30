@@ -793,9 +793,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'related',
         title: '관련 읽을거리',
         items: [
-          '[70B 모델에는 얼마나 많은 VRAM이 필요한가?](/prompt-bites/vram-for-70b-model) — 근본적인 VRAM 계산',
-          '[로컬 LLM 추론을 위한 1,000달러 이하 최적의 GPU](/prompt-bites/best-gpu-under-1000-local-llm) — 단일 4090 등급',
-          '[2026년 로컬 LLM GPU 구매 가이드](/power-local-llm/best-gpu-buying-guide-local-llm-2026) — 전체 예산 등급 비교',
+          '[70B 모델에는 얼마나 많은 VRAM이 필요한가?](/ko/prompt-bites/vram-for-70b-model) — 근본적인 VRAM 계산',
+          '[로컬 LLM 추론을 위한 1,000달러 이하 최적의 GPU](/ko/prompt-bites/best-gpu-under-1000-local-llm) — 단일 4090 등급',
+          '[2026년 로컬 LLM GPU 구매 가이드](/ko/power-local-llm/best-gpu-buying-guide-local-llm-2026) — 전체 예산 등급 비교',
         ],
       },
     },

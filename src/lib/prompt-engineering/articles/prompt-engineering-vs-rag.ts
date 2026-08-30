@@ -209,12 +209,12 @@ export const article: Partial<Record<Language, PEArticle>> = { en: { theme: 'Fra
       id: 'related-reading',
       title: '관련 읽기',
       items: [
-        '[프롬프트 엔지니어링이란? 초보자 가이드](/prompt-engineering/what-is-prompt-engineering)',
-        '[2026년 최고의 프롬프트 엔지니어링 도구: 사용 사례별 순위](/prompt-engineering/best-prompt-engineering-tools-2026)',
-        '[RAG 아키텍처: 검색 증강 생성 시스템 구축](/prompt-engineering/rag-explained)',
-        '[파인튜닝 vs 프롬프트 엔지니어링: 각각의 사용 시점](/prompt-engineering/prompt-engineering-vs-fine-tuning)',
-        '[팀을 위한 프롬프트 라이브러리 구축 방법](/prompt-engineering/build-a-prompt-library)',
-        '[LLM의 환각: 원인과 해결 방법](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up)'
+        '[프롬프트 엔지니어링이란? 초보자 가이드](/ko/prompt-engineering/what-is-prompt-engineering)',
+        '[2026년 최고의 프롬프트 엔지니어링 도구: 사용 사례별 순위](/ko/prompt-engineering/best-prompt-engineering-tools-2026)',
+        '[RAG 아키텍처: 검색 증강 생성 시스템 구축](/ko/prompt-engineering/rag-explained)',
+        '[파인튜닝 vs 프롬프트 엔지니어링: 각각의 사용 시점](/ko/prompt-engineering/prompt-engineering-vs-fine-tuning)',
+        '[팀을 위한 프롬프트 라이브러리 구축 방법](/ko/prompt-engineering/build-a-prompt-library)',
+        '[LLM의 환각: 원인과 해결 방법](/ko/prompt-engineering/ai-hallucinations-why-ai-makes-things-up)'
       ]
     },
     faq: {

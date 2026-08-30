@@ -667,9 +667,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'related',
         title: '관련 읽을거리',
         items: [
-          '[어떤 로컬 LLM 모델이 일본어를 가장 잘 지원하는가?](/prompt-bites/best-japanese-language-models-local) — 일본어를 위한 동등한 가이드',
-          '[코딩을 위한 최적의 14B 모델은?](/prompt-bites/best-14b-models-coding) — 범용 모델 등급 비교',
-          '[중국어 대 영어 프롬프팅: 어느 것이 더 나은가?](/prompt-bites/chinese-prompting-vs-english-prompting) — 다국어 프롬프팅 고려사항',
+          '[어떤 로컬 LLM 모델이 일본어를 가장 잘 지원하는가?](/ko/prompt-bites/best-japanese-language-models-local) — 일본어를 위한 동등한 가이드',
+          '[코딩을 위한 최적의 14B 모델은?](/ko/prompt-bites/best-14b-models-coding) — 범용 모델 등급 비교',
+          '[중국어 대 영어 프롬프팅: 어느 것이 더 나은가?](/ko/prompt-bites/chinese-prompting-vs-english-prompting) — 다국어 프롬프팅 고려사항',
         ],
       },
     },

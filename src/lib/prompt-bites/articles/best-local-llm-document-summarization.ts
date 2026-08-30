@@ -667,9 +667,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'related',
         title: '관련 읽을거리',
         items: [
-          '[어떤 Ollama 모델이 128K 컨텍스트를 지원하는가?](/prompt-bites/ollama-128k-context-models) — 긴 컨텍스트 모델 전체 목록',
-          '[로컬 RAG를 위한 최적의 임베딩 모델](/prompt-bites/best-embedding-model-local-rag) — 청크 분할 기반 대안 접근 방식',
-          '[로컬 LLM에는 얼마나 많은 VRAM이 필요한가?](/prompt-bites/how-much-vram-for-local-llm) — 긴 컨텍스트 작업을 위한 하드웨어 산정',
+          '[어떤 Ollama 모델이 128K 컨텍스트를 지원하는가?](/ko/prompt-bites/ollama-128k-context-models) — 긴 컨텍스트 모델 전체 목록',
+          '[로컬 RAG를 위한 최적의 임베딩 모델](/ko/prompt-bites/best-embedding-model-local-rag) — 청크 분할 기반 대안 접근 방식',
+          '[로컬 LLM에는 얼마나 많은 VRAM이 필요한가?](/ko/prompt-bites/how-much-vram-for-local-llm) — 긴 컨텍스트 작업을 위한 하드웨어 산정',
         ],
       },
     },

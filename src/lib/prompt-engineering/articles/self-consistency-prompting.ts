@@ -2652,12 +2652,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         relatedReading: {
           title: '관련 읽기',
           items: [
-            '[Chain-of-Thought 프롬프팅](/prompt-engineering/chain-of-thought-prompting) — 자기 일관성이 여러 경로로 확장하는 단일 경로 추론 기법',
-            '[Tree-of-Thought 및 ReAct](/prompt-engineering/tree-of-thought-and-react) — 자기 일관성과 관련된 분기 추론 접근법',
-            '[프롬프트 인젝션 및 보안](/prompt-engineering/prompt-injection-and-security) — 다중 샘플 파이프라인 구현 시 보안 고려 사항',
-            '[Temperature 및 Top-P](/prompt-engineering/temperature-and-top-p-control-ai-creativity) — 자기 일관성을 작동시키는 샘플링 파라미터',
-            '[프롬프트 체이닝](/prompt-engineering/prompt-chaining) — 각 단계에서 자기 일관성을 적용할 수 있는 다단계 워크플로',
-            '[AI 환각: 감지 및 방지 방법](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — 환각 감지 방법으로서의 자기 일관성',
+            '[Chain-of-Thought 프롬프팅](/ko/prompt-engineering/chain-of-thought-prompting) — 자기 일관성이 여러 경로로 확장하는 단일 경로 추론 기법',
+            '[Tree-of-Thought 및 ReAct](/ko/prompt-engineering/tree-of-thought-and-react) — 자기 일관성과 관련된 분기 추론 접근법',
+            '[프롬프트 인젝션 및 보안](/ko/prompt-engineering/prompt-injection-and-security) — 다중 샘플 파이프라인 구현 시 보안 고려 사항',
+            '[Temperature 및 Top-P](/ko/prompt-engineering/temperature-and-top-p-control-ai-creativity) — 자기 일관성을 작동시키는 샘플링 파라미터',
+            '[프롬프트 체이닝](/ko/prompt-engineering/prompt-chaining) — 각 단계에서 자기 일관성을 적용할 수 있는 다단계 워크플로',
+            '[AI 환각: 감지 및 방지 방법](/ko/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — 환각 감지 방법으로서의 자기 일관성',
           ],
         },
         sources: {

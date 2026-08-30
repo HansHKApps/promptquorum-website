@@ -787,7 +787,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     heroImage: '/images/best-workstation-build-local-ai-2026-overview-hero-fr.webp',
     title: 'Meilleure configuration workstation IA locale 2026 : 3 budgets',
     seoTitle: 'Meilleure workstation IA locale 2026 : 3 builds + prix',
-    metaDescription: 'Trois configurations workstation IA locale 2026, prix vérifiés cette semaine : ~2 500 € budget, ~4 950 € recommandé (RTX 4090), ~8 200 € professionnel (dual RTX 3090). Listes complètes, liens d\'achat, et pourquoi les prix RAM/SSD ont explosé.',
+    metaDescription: 'Trois configurations workstation IA locale 2026, prix vérifiés : ~2 500 € budget, ~4 950 € recommandé (RTX 4090), ~8 200 € professionnel (dual RTX 3090). Listes complètes, liens d\'achat, et pourquoi les prix RAM/SSD ont explosé.',
     educationalLevel: 'Intermediate',
     affiliateDisclosure: true,
     affiliateLinks: [

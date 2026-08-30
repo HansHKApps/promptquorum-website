@@ -1438,7 +1438,7 @@ schema: {
             },
             {
               q: 'GDPR 규정 준수가 필요한 EU 고객의 비용은 어떻게 됩니까?',
-              a: 'EU 고객은 클라우드 옵션 비교 시 규정 준수를 고려해야 합니다: [EU GDPR 클라우드 GPU 비교 →](/local-llms/eu-cloud-gpu-gdpr-2026)에서 Hetzner(€0.40/시간), Scaleway, OVHcloud 및 전체 비용 분석을 포함한 GDPR 준수 대안을 확인하실 수 있습니다.',
+              a: 'EU 고객은 클라우드 옵션 비교 시 규정 준수를 고려해야 합니다: [EU GDPR 클라우드 GPU 비교 →](/ko/local-llms/eu-cloud-gpu-gdpr-2026)에서 Hetzner(€0.40/시간), Scaleway, OVHcloud 및 전체 비용 분석을 포함한 GDPR 준수 대안을 확인하실 수 있습니다.',
             },
           ],
         },
@@ -1456,11 +1456,11 @@ schema: {
         'relatedReading': {
           title: '관련 읽기',
           items: [
-            '[클라우드 GPU 렌탈 비교: RunPod vs Vast.ai vs Lambda Labs](/local-llms/cloud-gpu-rental-comparison-2026)',
-            '[GPU 구매 vs AI 구독: 어느 쪽이 더 이득입니까?](/local-llms/gpu-vs-ai-subscription-roi)',
-            '[로컬 LLM을 위한 최고의 보급형 GPU](/local-llms/best-budget-gpus-local-llm)',
-            '[로컬 LLM vs ChatGPT Plus 비용 비교](/local-llms/local-llms-vs-chatgpt-plus)',
-            '[멀티 GPU 로컬 LLM: 단일 GPU를 넘어서는 확장](/local-llms/multi-gpu-local-llms)',
+            '[클라우드 GPU 렌탈 비교: RunPod vs Vast.ai vs Lambda Labs](/ko/local-llms/cloud-gpu-rental-comparison-2026)',
+            '[GPU 구매 vs AI 구독: 어느 쪽이 더 이득입니까?](/ko/local-llms/gpu-vs-ai-subscription-roi)',
+            '[로컬 LLM을 위한 최고의 보급형 GPU](/ko/local-llms/best-budget-gpus-local-llm)',
+            '[로컬 LLM vs ChatGPT Plus 비용 비교](/ko/local-llms/local-llms-vs-chatgpt-plus)',
+            '[멀티 GPU 로컬 LLM: 단일 GPU를 넘어서는 확장](/ko/local-llms/multi-gpu-local-llms)',
           '[로컬과 클라우드 LLM 추론을 언제 결합해야 할까요?](/ko/prompt-bites/hybrid-local-cloud-llm-strategy) -- 어느 쪽이 더 저렴한지 이미 알고 난 뒤의 아키텍처 문제.',
           ],
         },

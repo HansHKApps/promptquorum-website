@@ -2213,7 +2213,7 @@ schema: {
           id: 'cost',
           title: '각 방식의 비용은 얼마입니까?',
           content: [
-            '**월 5,000만 토큰 미만에서는 클라우드가 더 저렴합니다. 그 이상에서는 로컬이 더 저렴합니다.** 로컬의 "상각된 비용"에는 3년에 걸쳐 분산된 GPU 비용(RTX 4090 EOL $2,000–$2,600)과 전기료(연간 약 $200)가 포함됩니다. [하드웨어 가이드](/local-llms/local-llm-hardware-guide-2026)에서 정확한 GPU 비용을 확인하실 수 있습니다.',
+            '**월 5,000만 토큰 미만에서는 클라우드가 더 저렴합니다. 그 이상에서는 로컬이 더 저렴합니다.** 로컬의 "상각된 비용"에는 3년에 걸쳐 분산된 GPU 비용(RTX 4090 EOL $2,000–$2,600)과 전기료(연간 약 $200)가 포함됩니다. [하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide-2026)에서 정확한 GPU 비용을 확인하실 수 있습니다.',
           ],
           columns: ['월간 사용량', '클라우드 (GPT-5.6)', '클라우드 (Claude)', '로컬 (상각)'],
           rows: [
@@ -2230,7 +2230,7 @@ schema: {
           title: '개인정보 보호 및 규정 준수에 어느 쪽이 더 유리합니까?',
           content: [
             '**로컬 에이전트는 개인정보 보호 측면에서 우위를 가집니다. 데이터가 기기 밖으로 나가지 않습니다.** 클라우드 에이전트는 모든 프롬프트와 응답을 벤더 서버(OpenAI, Anthropic)로 전송하며, 이는 해당 업체의 데이터 보존 정책을 따릅니다.',
-            '**GDPR 제28조**는 클라우드 AI에 대한 데이터 처리 계약을 요구하지만, 로컬 에이전트를 사용하면 이 요건이 완전히 없어집니다. HIPAA 규제를 받는 [의료 데이터](/local-llms/private-local-ai-for-business)와 SOC2 기준의 금융 데이터는 로컬 에이전트를 사용하는 것이 가장 좋습니다.',
+            '**GDPR 제28조**는 클라우드 AI에 대한 데이터 처리 계약을 요구하지만, 로컬 에이전트를 사용하면 이 요건이 완전히 없어집니다. HIPAA 규제를 받는 [의료 데이터](/ko/local-llms/private-local-ai-for-business)와 SOC2 기준의 금융 데이터는 로컬 에이전트를 사용하는 것이 가장 좋습니다.',
             '**클라우드의 타협점:** Anthropic Claude는 귀하의 데이터로 학습하지 않습니다(정책에 따름). OpenAI는 데이터 격리 기능이 있는 엔터프라이즈 플랜을 제공합니다. 그러나 어느 쪽도 데이터 전송 자체를 없애지는 못합니다.',
           ],
         },
@@ -2244,7 +2244,7 @@ schema: {
           rows: [
             { '작업': '다단계 추론', '클라우드 에이전트': '우수 (GPT-5.6, Claude)', '로컬 에이전트': '양호 (13B+, DeepSeek-R1)' },
             { '작업': '코드 생성', '클라우드 에이전트': '우수', '로컬 에이전트': '양호 (Qwen3-Coder 32B)' },
-            { '작업': '웹 검색/브라우징', '클라우드 에이전트': '기본 제공 (내장)', '로컬 에이전트': '[LangGraph](/local-llms/local-ai-agents-langgraph-ollama)를 통한 직접 구현' },
+            { '작업': '웹 검색/브라우징', '클라우드 에이전트': '기본 제공 (내장)', '로컬 에이전트': '[LangGraph](/ko/local-llms/local-ai-agents-langgraph-ollama)를 통한 직접 구현' },
             { '작업': '문서 처리', '클라우드 에이전트': '우수', '로컬 에이전트': '양호 (로컬 RAG를 통해)' },
             { '작업': '도구 사용', '클라우드 에이전트': '기본 함수 호출', '로컬 에이전트': 'Ollama tool API를 통해 지원됨' },
             { '작업': '장기 메모리', '클라우드 에이전트': '제한적 (벤더 관리)', '로컬 에이전트': '완전한 제어 (커스텀 DB)' },
@@ -2297,7 +2297,7 @@ schema: {
           content: [
             '**EU/DACH:** GDPR 제28조 및 BSI-Grundschutz 요건은 EU 시민 데이터 처리를 위해 로컬 에이전트를 강력히 권장합니다. 클라우드 에이전트는 미국 제공업체로의 국경 간 전송에 표준 계약 조항이 필요합니다.',
             '**일본:** APPI 요건은 민감한 비즈니스 데이터에 로컬 에이전트를 선호합니다. 일본 금융 및 의료 기업들은 규정 준수를 위해 점점 더 로컬 에이전트를 배포하고 있습니다.',
-            '**중국:** 미국 제공업체(OpenAI, Anthropic)의 클라우드 에이전트는 직접 이용할 수 없습니다. [Qwen3](/local-llms/top-open-source-models-ollama) 또는 DeepSeek를 실행하는 로컬 에이전트는 중국의 2021년 데이터 보안법을 준수합니다.',
+            '**중국:** 미국 제공업체(OpenAI, Anthropic)의 클라우드 에이전트는 직접 이용할 수 없습니다. [Qwen3](/ko/local-llms/top-open-source-models-ollama) 또는 DeepSeek를 실행하는 로컬 에이전트는 중국의 2021년 데이터 보안법을 준수합니다.',
           ],
         },
         faqSection: {
@@ -2314,7 +2314,7 @@ schema: {
             },
             {
               q: '소비자용 하드웨어에서 로컬 에이전트를 실행할 수 있습니까?',
-              a: '네. Llama 13B 에이전트는 RTX 4090(24GB VRAM)에서 단계당 2–3초로 실행됩니다. 7B 에이전트의 경우 RTX 4070 Ti(12GB)로 충분합니다. 정확한 사양은 [하드웨어 가이드](/local-llms/local-llm-hardware-guide-2026)를 참조하십시오.',
+              a: '네. Llama 13B 에이전트는 RTX 4090(24GB VRAM)에서 단계당 2–3초로 실행됩니다. 7B 에이전트의 경우 RTX 4070 Ti(12GB)로 충분합니다. 정확한 사양은 [하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide-2026)를 참조하십시오.',
             },
             {
               q: '로컬 에이전트는 도구 사용과 함수 호출을 지원합니까?',
@@ -2342,12 +2342,12 @@ schema: {
           id: 'related-reading',
           title: '관련 자료',
           items: [
-            '[LangGraph & Ollama를 활용한 로컬 AI 에이전트](/local-llms/local-ai-agents-langgraph-ollama) — 도구 사용 및 메모리를 갖춘 다단계 로컬 에이전트 구축',
-            '[비즈니스를 위한 프라이빗 로컬 AI](/local-llms/private-local-ai-for-business) — 기업 규정 준수를 위한 온프레미스 AI 배포',
-            '[로컬 LLM 하드웨어 가이드 2026](/local-llms/local-llm-hardware-guide-2026) — 에이전트 워크로드를 위한 GPU 및 하드웨어 추천',
-            '[로컬 LLM vs ChatGPT Plus](/local-llms/local-llms-vs-chatgpt-plus) — 비용 비교: 구독 vs 로컬 추론',
-            '[Ollama를 위한 최고의 오픈소스 모델](/local-llms/top-open-source-models-ollama) — 로컬 에이전트 배포를 위한 최적 모델',
-            '[기업이 로컬 LLM을 사용하는 이유](/local-llms/why-enterprises-use-local-llms) — 비용, 규정 준수 및 제어 분석',
+            '[LangGraph & Ollama를 활용한 로컬 AI 에이전트](/ko/local-llms/local-ai-agents-langgraph-ollama) — 도구 사용 및 메모리를 갖춘 다단계 로컬 에이전트 구축',
+            '[비즈니스를 위한 프라이빗 로컬 AI](/ko/local-llms/private-local-ai-for-business) — 기업 규정 준수를 위한 온프레미스 AI 배포',
+            '[로컬 LLM 하드웨어 가이드 2026](/ko/local-llms/local-llm-hardware-guide-2026) — 에이전트 워크로드를 위한 GPU 및 하드웨어 추천',
+            '[로컬 LLM vs ChatGPT Plus](/ko/local-llms/local-llms-vs-chatgpt-plus) — 비용 비교: 구독 vs 로컬 추론',
+            '[Ollama를 위한 최고의 오픈소스 모델](/ko/local-llms/top-open-source-models-ollama) — 로컬 에이전트 배포를 위한 최적 모델',
+            '[기업이 로컬 LLM을 사용하는 이유](/ko/local-llms/why-enterprises-use-local-llms) — 비용, 규정 준수 및 제어 분석',
           ],
         },
         sources: {

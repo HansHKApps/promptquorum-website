@@ -3155,7 +3155,7 @@ schema: {
             '**RAM 16 GB, GPU 없음:** Qwen3 8B Q4_K_M — 초당 8–15 토큰, 우수한 품질. `ollama run qwen3:8b`',
             '**RAM 8 GB + Intel Iris iGPU:** Qwen3 4B — 부분 오프로드를 위해 `OLLAMA_NUM_GPU=1` 사용, 초당 12–20 토큰. `ollama run qwen3:4b`',
             '**다국어 지원(128K 컨텍스트)이 필요한 경우:** Qwen3 4B 또는 Llama 3.2 3B — 둘 다 Ollama에서 128K 컨텍스트를 지원합니다.',
-            '**RAM 티어별 권장 사항 및 발열 관리는** [노트북에서 로컬 LLM 실행하는 방법](/local-llms/local-llm-on-laptop)**을 참조하십시오.**',
+            '**RAM 티어별 권장 사항 및 발열 관리는** [노트북에서 로컬 LLM 실행하는 방법](/ko/local-llms/local-llm-on-laptop)**을 참조하십시오.**',
           ],
         },
         'by-hardware': {
@@ -3177,7 +3177,7 @@ schema: {
           id: 'gpu-vs-cpu',
           title: '저사양 하드웨어에서 GPU와 CPU 중 어느 것이 더 빠릅니까?',
           content: [
-            '**GPU 추론:** RTX 3060에서 초당 15–20 토큰. CUDA 설정 필요. 빠르고 최고 품질. 비용 효율적인 옵션은 [예산 GPU 가이드](/local-llms/best-budget-gpus-local-llm)를 참조하십시오.',
+            '**GPU 추론:** RTX 3060에서 초당 15–20 토큰. CUDA 설정 필요. 빠르고 최고 품질. 비용 효율적인 옵션은 [예산 GPU 가이드](/ko/local-llms/best-budget-gpus-local-llm)를 참조하십시오.',
             '**iGPU (내장형):** Intel Iris에서 초당 5–8 토큰. 설정 불필요. 독립 GPU보다 느림.',
             '**CPU 추론:** 최신 멀티코어에서 초당 1–5 토큰. 어디서나 실행 가능. 가장 느림.',
             '**규칙:** GPU가 있다면 (내장 GPU라도) 사용하십시오. CPU는 최후의 수단입니다.',
@@ -3214,7 +3214,7 @@ schema: {
           id: 'quantization',
           title: '양자화는 저사양 PC의 속도에 어떤 영향을 미칩니까?',
           content: [
-            '**Q4 (4비트):** 품질 손실 약 1%, VRAM 절감 50%. 표준 선택. 모든 [양자화](/local-llms/llm-quantization-explained) 수준과 작동 방식에 대한 자세한 내용은 전체 가이드를 참조하십시오.',
+            '**Q4 (4비트):** 품질 손실 약 1%, VRAM 절감 50%. 표준 선택. 모든 [양자화](/ko/local-llms/llm-quantization-explained) 수준과 작동 방식에 대한 자세한 내용은 전체 가이드를 참조하십시오.',
             '**Q3 (3비트):** 품질 손실 약 3%, VRAM 절감 62%. 채팅에 허용 가능.',
             '**Q2 (2비트):** 품질 손실 약 10%, VRAM 절감 75%. 위험함; OOM 시에만 사용.',
             '**속도 영향:** Q2는 메모리 대역폭 감소로 인해 Q4보다 약 30% 빠름 (계산 때문이 아님).',
@@ -3231,7 +3231,7 @@ schema: {
           items: [
             '**AVX-512 활성화:** CPU가 지원하는 경우 `LLAMACPP_AVX512=1 ollama run phi`를 사용하십시오. 약 20% 속도 향상.',
             '**컨텍스트 창 줄이기:** 짧은 컨텍스트 = 더 빠름. 4096 대신 `--ctx-size 1024`를 사용하십시오.',
-            '**Ollama 대신 [llama.cpp](/local-llms/how-to-install-ollama) 사용:** 오버헤드가 적어 CPU에서 약간 더 빠름 (약 10% 향상).',
+            '**Ollama 대신 [llama.cpp](/ko/local-llms/how-to-install-ollama) 사용:** 오버헤드가 적어 CPU에서 약간 더 빠름 (약 10% 향상).',
             '**멀티스레딩 비활성화:** 직관에 반하지만, 약한 CPU에서는 싱글스레드가 더 빠릅니다 (스레드 오버헤드 없음).',
             '**iGPU로 오프로드:** 약한 내장 GPU도 CPU를 능가합니다. GPU 가용성을 확인하려면 `lspci`를 실행하십시오.',
           ],
@@ -3316,12 +3316,12 @@ schema: {
           id: 'related',
           title: '관련 자료',
           items: [
-            '[로컬 LLM을 위한 최고의 예산 GPU](/local-llms/best-budget-gpus-local-llm) — 13B–70B 모델을 위한 GPU 권장 사항.',
-            '[VRAM은 얼마나 필요합니까?](/local-llms/how-much-vram-local-llm) — 모든 모델 크기 및 양자화에 대한 VRAM 요구 사항 계산.',
-            '[LLM 양자화 설명](/local-llms/llm-quantization-explained) — Q4, Q3, Q2 양자화 트레이드오프에 대한 심층 분석.',
-            '[노트북에서의 로컬 LLM](/local-llms/local-llm-on-laptop) — MacBook Air, Windows 노트북 또는 Chromebook에서 추론 최적화.',
-            '[2026년 최고의 입문자 로컬 LLM 모델](/local-llms/best-beginner-local-llm-models) — 어떤 하드웨어에서든 신규 사용자를 위한 권장 시작 모델.',
-            '[2026년 로컬 LLM 하드웨어 가이드](/local-llms/local-llm-hardware-guide-2026) — 2026년 모델 크기별 전체 하드웨어 요구 사항.',
+            '[로컬 LLM을 위한 최고의 예산 GPU](/ko/local-llms/best-budget-gpus-local-llm) — 13B–70B 모델을 위한 GPU 권장 사항.',
+            '[VRAM은 얼마나 필요합니까?](/ko/local-llms/how-much-vram-local-llm) — 모든 모델 크기 및 양자화에 대한 VRAM 요구 사항 계산.',
+            '[LLM 양자화 설명](/ko/local-llms/llm-quantization-explained) — Q4, Q3, Q2 양자화 트레이드오프에 대한 심층 분석.',
+            '[노트북에서의 로컬 LLM](/ko/local-llms/local-llm-on-laptop) — MacBook Air, Windows 노트북 또는 Chromebook에서 추론 최적화.',
+            '[2026년 최고의 입문자 로컬 LLM 모델](/ko/local-llms/best-beginner-local-llm-models) — 어떤 하드웨어에서든 신규 사용자를 위한 권장 시작 모델.',
+            '[2026년 로컬 LLM 하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide-2026) — 2026년 모델 크기별 전체 하드웨어 요구 사항.',
           ],
         },
         'sources': {

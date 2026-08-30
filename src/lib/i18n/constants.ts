@@ -27,10 +27,13 @@ export type Lang = typeof ALL_LANGS[number];
  *
  * The internal code stays `'pt'` (used in URLs, type unions, validation arrays);
  * only the emitted locale is regionalized. Portuguese targets Brazil (`pt-BR`):
- * BR vocabulary/spelling, LGPD-relevant market. Any code not listed here is
- * emitted unchanged.
+ * BR vocabulary/spelling, LGPD-relevant market. Chinese content is written in
+ * Simplified script, so it is emitted as `zh-Hans` rather than a bare `zh`:
+ * Google treats bare `zh` as generic Chinese, which mis-serves the Traditional
+ * (TW/HK) audience that makes up most Chinese-language Google traffic. Any code
+ * not listed here is emitted unchanged.
  */
-export const OUTPUT_LOCALE: Record<string, string> = { pt: 'pt-BR', ko: 'ko' };
+export const OUTPUT_LOCALE: Record<string, string> = { pt: 'pt-BR', ko: 'ko', zh: 'zh-Hans' };
 
 /** Convert an internal language code to its outward-facing locale (e.g. pt → pt-BR). */
 export function toOutputLocale(lang: string): string {

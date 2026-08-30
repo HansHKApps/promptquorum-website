@@ -2452,7 +2452,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           content: [
             '**LLM(대규모 언어 모델)은 입력 토큰 시퀀스가 주어졌을 때 다음으로 가장 확률이 높은 토큰을 예측하도록 학습된 트랜스포머 기반 신경망입니다 — 데이터베이스, 검색 엔진, 또는 추론 시스템이 아닙니다.** 모델은 학습 중 웹 페이지, 책, 코드 및 기타 텍스트에서 수천억 개의 단어를 처리함으로써 토큰 간의 통계적 관계를 학습합니다.',
             '프롬프트를 입력하면 모델은 텍스트를 숫자 토큰 ID 시퀀스로 변환하고, 이를 수십 개의 트랜스포머 레이어를 통해 전달한 뒤, 전체 어휘(일반적으로 50,000–100,000개 토큰)에 대한 확률 분포를 출력합니다. 그 분포에서 토큰 하나를 샘플링하여 시퀀스에 추가하고, 정지 토큰이 생성되거나 출력 한계에 도달할 때까지 이 과정을 반복합니다.',
-            '이 아키텍처는 사용자들을 혼란스럽게 하는 여러 행동을 설명합니다: LLM이 그럴듯하지만 거짓된 사실을 "[환각](/prompt-engineering/prompt-engineering-glossary#hallucination)"하는 이유(검증된 진실이 아닌 확률적으로 그럴듯한 텍스트를 예측하기 때문), 산술 계산에 실패할 수 있는 이유(실제 계산이 아닌 토큰 패턴 때문), 그리고 프롬프트를 바꾸면 출력이 달라지는 이유(서로 다른 토큰 시퀀스가 서로 다른 확률 분포를 유발하기 때문)입니다.',
+            '이 아키텍처는 사용자들을 혼란스럽게 하는 여러 행동을 설명합니다: LLM이 그럴듯하지만 거짓된 사실을 "[환각](/ko/prompt-engineering/prompt-engineering-glossary#hallucination)"하는 이유(검증된 진실이 아닌 확률적으로 그럴듯한 텍스트를 예측하기 때문), 산술 계산에 실패할 수 있는 이유(실제 계산이 아닌 토큰 패턴 때문), 그리고 프롬프트를 바꾸면 출력이 달라지는 이유(서로 다른 토큰 시퀀스가 서로 다른 확률 분포를 유발하기 때문)입니다.',
           ],
           tableFormat: true,
           columns: ['속성', 'LLM', '전통적인 소프트웨어'],
@@ -2470,16 +2470,16 @@ export const article: Partial<Record<Language, PEArticle>> = {
           items: [
             '**LLM은 답변이 아닌 토큰을 예측합니다.** 통계적으로 확률이 높은 텍스트 시퀀스를 생성합니다 — 검색된 사실, 논리적 추론, 또는 검증된 정보가 아닙니다.',
             '**1 토큰 ≈ 영어 단어 0.75개.** 1,000단어 문서는 약 1,300개의 토큰을 사용합니다. 중국어와 일본어는 약 50% 더 밀도가 높습니다.',
-            '**[온도](/prompt-engineering/prompt-engineering-glossary#temperature)는 창의성과 결정론을 조절합니다.** 온도 0 = 결정론적. 온도 1.0 = 비례 샘플링. 1.5 초과 = 높은 환각 위험.',
-            '**[컨텍스트 윈도우](/prompt-engineering/prompt-engineering-glossary#context-window)는 메모리가 아닙니다.** GPT-5.6: 128k 토큰. Claude Opus 5: 200k 토큰. Gemini 3.1 Pro: 200만 토큰. 세션 간에는 아무것도 유지되지 않습니다.',
-            '**위치가 중요합니다.** 트랜스포머 [어텐션](/prompt-engineering/prompt-engineering-glossary#attention)은 컨텍스트의 처음과 끝 부분에 더 높은 가중치를 부여합니다. 중요한 지시사항은 중간이 아닌 처음과 끝에 배치하십시오.',
-            '**[RLHF](/prompt-engineering/prompt-engineering-glossary#rlhf)는 능력이 아닌 행동을 형성합니다.** 거절, 어조, 유용성은 기본 아키텍처가 아닌 학습 후 파인튜닝에서 비롯됩니다.',
+            '**[온도](/ko/prompt-engineering/prompt-engineering-glossary#temperature)는 창의성과 결정론을 조절합니다.** 온도 0 = 결정론적. 온도 1.0 = 비례 샘플링. 1.5 초과 = 높은 환각 위험.',
+            '**[컨텍스트 윈도우](/ko/prompt-engineering/prompt-engineering-glossary#context-window)는 메모리가 아닙니다.** GPT-5.6: 128k 토큰. Claude Opus 5: 200k 토큰. Gemini 3.1 Pro: 200만 토큰. 세션 간에는 아무것도 유지되지 않습니다.',
+            '**위치가 중요합니다.** 트랜스포머 [어텐션](/ko/prompt-engineering/prompt-engineering-glossary#attention)은 컨텍스트의 처음과 끝 부분에 더 높은 가중치를 부여합니다. 중요한 지시사항은 중간이 아닌 처음과 끝에 배치하십시오.',
+            '**[RLHF](/ko/prompt-engineering/prompt-engineering-glossary#rlhf)는 능력이 아닌 행동을 형성합니다.** 거절, 어조, 유용성은 기본 아키텍처가 아닌 학습 후 파인튜닝에서 비롯됩니다.',
           ],
         },
         tokenization: {
-          title: '[토크나이제이션](/prompt-engineering/prompt-engineering-glossary#tokenization): 텍스트가 숫자가 되는 방법',
+          title: '[토크나이제이션](/ko/prompt-engineering/prompt-engineering-glossary#tokenization): 텍스트가 숫자가 되는 방법',
           content: [
-            '**LLM이 텍스트를 처리하기 전에 먼저 정수 토큰 ID 시퀀스로 변환해야 합니다 — 이 과정을 [토크나이제이션](/prompt-engineering/prompt-engineering-glossary#tokenization)이라고 합니다.** GPT-5.6는 자주 등장하는 서브워드 단위로 텍스트를 분할하는 BPE(Byte Pair Encoding)를 사용합니다. Claude Opus 5과 Gemini 3.1 Pro도 유사한 서브워드 토크나이제이션 방식을 사용합니다.',
+            '**LLM이 텍스트를 처리하기 전에 먼저 정수 토큰 ID 시퀀스로 변환해야 합니다 — 이 과정을 [토크나이제이션](/ko/prompt-engineering/prompt-engineering-glossary#tokenization)이라고 합니다.** GPT-5.6는 자주 등장하는 서브워드 단위로 텍스트를 분할하는 BPE(Byte Pair Encoding)를 사용합니다. Claude Opus 5과 Gemini 3.1 Pro도 유사한 서브워드 토크나이제이션 방식을 사용합니다.',
             '토크나이제이션은 언어에 따라 다릅니다. 영어 텍스트는 평균적으로 단어 0.75개당 토큰 1개에 해당합니다. 중국어와 일본어는 단어 0.5개당 토큰 1개에 해당합니다 — 동일한 문서가 영어보다 중국어로 작성될 때 약 두 배의 토큰이 필요하며, 이는 API 비용과 컨텍스트 윈도우 사용에 직접적인 영향을 미칩니다.',
           ],
           tableFormat: true,
@@ -2516,7 +2516,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         inference: {
           title: '추론 작동 방식: 샘플링과 디코딩',
           content: [
-            '**추론 중에 모델은 토큰 단위로 출력을 생성합니다 — 전체 어휘에 대한 확률 분포를 계산하고 사용자가 제어하는 디코딩 매개변수에 따라 샘플링합니다.** 가장 중요한 세 가지 매개변수는 [온도](/prompt-engineering/prompt-engineering-glossary#temperature), [top-p](/prompt-engineering/prompt-engineering-glossary#top-p)(핵 샘플링), 최대 토큰 수입니다.',
+            '**추론 중에 모델은 토큰 단위로 출력을 생성합니다 — 전체 어휘에 대한 확률 분포를 계산하고 사용자가 제어하는 디코딩 매개변수에 따라 샘플링합니다.** 가장 중요한 세 가지 매개변수는 [온도](/ko/prompt-engineering/prompt-engineering-glossary#temperature), [top-p](/ko/prompt-engineering/prompt-engineering-glossary#top-p)(핵 샘플링), 최대 토큰 수입니다.',
           ],
           tableFormat: true,
           columns: ['매개변수', '범위', '효과', '최적 용도'],
@@ -2529,9 +2529,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
           ],
         },
         contextWindowSection: {
-          title: '[컨텍스트 윈도우](/prompt-engineering/prompt-engineering-glossary#context-window): 모델이 볼 수 있는 것',
+          title: '[컨텍스트 윈도우](/ko/prompt-engineering/prompt-engineering-glossary#context-window): 모델이 볼 수 있는 것',
           content: [
-            '**[컨텍스트 윈도우](/prompt-engineering/prompt-engineering-glossary#context-window)는 모델이 단일 추론 호출에서 처리할 수 있는 최대 토큰 수입니다 — 시스템 프롬프트, 대화 기록, 문서, 현재 사용자 메시지를 모두 합한 것입니다.** 세션 간에는 아무것도 유지되지 않으며, 모델은 매번 새롭게 시작합니다.',
+            '**[컨텍스트 윈도우](/ko/prompt-engineering/prompt-engineering-glossary#context-window)는 모델이 단일 추론 호출에서 처리할 수 있는 최대 토큰 수입니다 — 시스템 프롬프트, 대화 기록, 문서, 현재 사용자 메시지를 모두 합한 것입니다.** 세션 간에는 아무것도 유지되지 않으며, 모델은 매번 새롭게 시작합니다.',
             '컨텍스트 윈도우 크기는 모델에 따라 크게 다르며, 어떤 사용 사례가 실용적인지에 직접적으로 영향을 미칩니다:',
           ],
           tableFormat: true,
@@ -2580,7 +2580,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: '지역별 LLM 아키텍처 차이',
           content: [
             '**LLM의 아키텍처와 성능은 학습 데이터 구성, 토크나이제이션 전략, 규제 제약 등에 따라 지역별로 크게 다릅니다.** 이러한 차이를 이해하는 것은 모델을 전 세계적으로 배포하는 팀에게 매우 중요합니다.',
-            '**[Qwen 3](/prompt-engineering/prompt-engineering-glossary#tokenization)은 CJK(중국어, 일본어, 한국어) 스크립트에 대한 뛰어난 토크나이제이션 효율성을 달성합니다** — 만다린 중국어에서 문자당 약 0.3 토큰을 사용하는 반면 GPT-5.6는 문자당 0.5 토큰을 사용합니다. 이 40% 토큰 감소는 아시아 언어 애플리케이션의 API 비용과 지연 시간을 직접적으로 줄여 줍니다. Qwen의 학습 데이터는 20%가 CJK 콘텐츠로 구성되어 있어, 문자 대 의미 밀도가 가장 높은 스크립트에 맞게 토크나이저를 최적화합니다.',
+            '**[Qwen 3](/ko/prompt-engineering/prompt-engineering-glossary#tokenization)은 CJK(중국어, 일본어, 한국어) 스크립트에 대한 뛰어난 토크나이제이션 효율성을 달성합니다** — 만다린 중국어에서 문자당 약 0.3 토큰을 사용하는 반면 GPT-5.6는 문자당 0.5 토큰을 사용합니다. 이 40% 토큰 감소는 아시아 언어 애플리케이션의 API 비용과 지연 시간을 직접적으로 줄여 줍니다. Qwen의 학습 데이터는 20%가 CJK 콘텐츠로 구성되어 있어, 문자 대 의미 밀도가 가장 높은 스크립트에 맞게 토크나이저를 최적화합니다.',
             '**Mistral Small과 Mistral Large는 유럽 배포를 위해 명시적으로 설계되었으며**, 학습 데이터는 GDPR, 프랑스 AI 법, 데이터 보존 및 모델 투명성에 관한 EU 규정을 준수하도록 필터링되었습니다. 필터링되지 않은 웹 데이터를 주로 학습에 사용하는 모델과 달리, Mistral은 데이터 출처를 문서화하고 EU 시민의 개인 정보를 학습에서 제외시켜, 유럽의 규제 산업(은행, 의료, 법률 기술)에서 기본 선택지가 되었습니다.',
             '**DeepSeek의 아키텍처는 학습 구성을 반영합니다**: 사전 학습 데이터의 70%가 중국어와 영어, 15%가 코드, 15%가 기타 언어입니다. 이 비율은 중국어 언어 유창성과 코드 생성 속도에 편향된 모델을 만들어 내며, 저자원 언어에서는 성능이 크게 떨어집니다. 토큰 분포와 어텐션 패턴은 영어가 아닌 만다린 중국어의 빈도 패턴에 최적화되어 있습니다.',
           ],
@@ -2588,11 +2588,11 @@ export const article: Partial<Record<Language, PEArticle>> = {
         relatedReading: {
           title: '관련 읽을거리',
           items: [
-            '[기초: 프롬프트 엔지니어링이란?](/prompt-engineering/what-is-prompt-engineering) — LLM 아키텍처 지식을 체계적인 프롬프트 설계에 적용하는 방법',
-            '[기초: 컨텍스트 윈도우 설명 — AI가 잊는 이유](/prompt-engineering/context-windows-explained-why-ai-forgets) — 컨텍스트 윈도우 한계와 검색 전략에 대한 심층 분석',
-            '[기초: 토큰, 비용, 한계: AI 프롬프팅의 경제학](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — 토큰 가격 책정, 요청 한도, GPT-5.6, Claude, Gemini 전반의 비용 최적화',
-            '[기초: AI 환각 설명 — LLM이 정보를 꾸며내는 이유](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — 토큰 예측과 사실 검색 부재가 어떻게 신뢰도 오류로 이어지는지',
-            '[AI 한계: LLM이 할 수 없는 것들](/prompt-engineering/ai-limitations-what-llms-cant-do) — 모든 LLM이 공유하는 8가지 구조적 제약과 각각에 대한 엔지니어링 해결책',
+            '[기초: 프롬프트 엔지니어링이란?](/ko/prompt-engineering/what-is-prompt-engineering) — LLM 아키텍처 지식을 체계적인 프롬프트 설계에 적용하는 방법',
+            '[기초: 컨텍스트 윈도우 설명 — AI가 잊는 이유](/ko/prompt-engineering/context-windows-explained-why-ai-forgets) — 컨텍스트 윈도우 한계와 검색 전략에 대한 심층 분석',
+            '[기초: 토큰, 비용, 한계: AI 프롬프팅의 경제학](/ko/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — 토큰 가격 책정, 요청 한도, GPT-5.6, Claude, Gemini 전반의 비용 최적화',
+            '[기초: AI 환각 설명 — LLM이 정보를 꾸며내는 이유](/ko/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — 토큰 예측과 사실 검색 부재가 어떻게 신뢰도 오류로 이어지는지',
+            '[AI 한계: LLM이 할 수 없는 것들](/ko/prompt-engineering/ai-limitations-what-llms-cant-do) — 모든 LLM이 공유하는 8가지 구조적 제약과 각각에 대한 엔지니어링 해결책',
           ],
         },
         howToStart: {

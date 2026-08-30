@@ -2828,7 +2828,7 @@ schema: {
           content: [
             '의사결정 매트릭스:',
             'LoRA 파인튜닝에 투자하기 전에 먼저 더 나은 프롬프팅으로 문제를 해결할 수 없는지 확인하십시오 — 프롬프트 엔지니어링은 더 빠르고, 되돌릴 수 있으며, 모델에 구애받지 않습니다. 전체 의사결정 프레임워크는 [프롬프트 엔지니어링 vs 파인튜닝: 결정 방법](https://www.promptquorum.com/prompt-engineering/prompt-engineering-vs-fine-tuning)을 참조하십시오.',
-            '파인튜닝은 오프라인에서 코딩 워크플로를 생산적으로 유지하는 방법 중 하나입니다. 모델, IDE, 패키지 캐시, 문서 미러 등 더 넓은 오프라인 설정에 대해서는 [인터넷 없이 로컬 코딩 LLM](/power-local-llm/local-coding-llm-without-internet)을 참조하십시오.',
+            '파인튜닝은 오프라인에서 코딩 워크플로를 생산적으로 유지하는 방법 중 하나입니다. 모델, IDE, 패키지 캐시, 문서 미러 등 더 넓은 오프라인 설정에 대해서는 [인터넷 없이 로컬 코딩 LLM](/ko/power-local-llm/local-coding-llm-without-internet)을 참조하십시오.',
           ],
           rows: [
             { 'Criteria': '문서 변경 빈도', 'Fine-Tuning': '연 1회 이하', 'RAG': '주 1회 이상' },
@@ -2937,12 +2937,12 @@ schema: {
           id: 'related-reading',
           title: '관련 자료',
           items: [
-            '[로컬 RAG 2026](/local-llms/local-rag-2026) -- 파인튜닝과 RAG를 결합하십시오.',
+            '[로컬 RAG 2026](/ko/local-llms/local-rag-2026) -- 파인튜닝과 RAG를 결합하십시오.',
             '[프롬프트 엔지니어링 가이드](/prompt-engineering) -- 파인튜닝된 모델을 위한 프롬프트를 최적화하십시오.',
-            '[커스텀 로컬 모델 만들기](/local-llms/create-custom-local-models) -- 모델을 처음부터 구축하십시오.',
-            '[LLM 양자화 설명](/local-llms/llm-quantization-explained) -- Q4_K_M 및 GGUF 형식이 파인튜닝된 모델과 어떻게 작동하는지 알아보십시오.',
-            '[로컬 모델을 위한 프롬프트 엔지니어링](/local-llms/prompt-engineering-for-local-models) -- 정확도 기준선을 확립하기 위해 파인튜닝 전에 프롬프트를 최적화하십시오.',
-            '[로컬 LLM 하드웨어 가이드 2026](/local-llms/local-llm-hardware-guide-2026) -- 모든 모델 크기에서 LoRA 학습을 위한 GPU VRAM 요구 사항.',
+            '[커스텀 로컬 모델 만들기](/ko/local-llms/create-custom-local-models) -- 모델을 처음부터 구축하십시오.',
+            '[LLM 양자화 설명](/ko/local-llms/llm-quantization-explained) -- Q4_K_M 및 GGUF 형식이 파인튜닝된 모델과 어떻게 작동하는지 알아보십시오.',
+            '[로컬 모델을 위한 프롬프트 엔지니어링](/ko/local-llms/prompt-engineering-for-local-models) -- 정확도 기준선을 확립하기 위해 파인튜닝 전에 프롬프트를 최적화하십시오.',
+            '[로컬 LLM 하드웨어 가이드 2026](/ko/local-llms/local-llm-hardware-guide-2026) -- 모든 모델 크기에서 LoRA 학습을 위한 GPU VRAM 요구 사항.',
           ],
         },
         sources: {

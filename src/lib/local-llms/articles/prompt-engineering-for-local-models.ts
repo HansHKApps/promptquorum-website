@@ -3019,7 +3019,7 @@ schema: {
             '**Chain-of-thought(CoT) 프롬프팅은 LLM에게 답변하기 전에 추론 과정을 단계별로 보여달라고 요청합니다.** 이 기법은 로컬 7B–13B 모델에 특히 효과적입니다. 이러한 모델들은 더 큰 클라우드 모델의 암묵적 추론 능력이 부족하기 때문입니다. "17 × 24"와 같은 수학 문제에서, CoT 없이는 로컬 모델이 자주 잘못 추측합니다. 명시적인 단계별 추론을 사용하면 문제를 부분으로 분해하여 10–20% 더 높은 정확도를 달성합니다.',
             '**CoT 없이:** "17 × 24는 얼마입니까?" → 모델이 직접 답변하며 자주 틀림.',
             '**CoT 사용:** "단계별로 풀어보십시오: 17 × 24" → 모델이 표시: 17 × 20 = 340, 17 × 4 = 68, 합계 = 408. 더 정확함.',
-            '이 기법이 도구 선택을 위해 [내부적으로 추론을 사용하는 로컬 AI 에이전트](/local-llms/local-ai-agents-langgraph-ollama)까지 어떻게 확장되는지 알아보십시오.',
+            '이 기법이 도구 선택을 위해 [내부적으로 추론을 사용하는 로컬 AI 에이전트](/ko/local-llms/local-ai-agents-langgraph-ollama)까지 어떻게 확장되는지 알아보십시오.',
           ],
           callouts: [
             { type: '💡', text: '프로 팁: CoT는 부분적인 추론으로 출력을 준비할 때 가장 효과적입니다. 예시: "단계별로 분석해 보겠습니다: 먼저, 다음을 알아차립니다..."' },
@@ -3034,7 +3034,7 @@ schema: {
           id: 'structured-output',
           title: '출력 형식 지정이 로컬 모델에 왜 중요합니까?',
           content: [
-            '**정확한 출력 형식(JSON, Markdown, 일반 텍스트)을 지정하는 것은 로컬 모델에 매우 중요합니다. 명시적인 지침 없이는 예측 불가능한 출력을 생성하기 때문입니다.** GPT-5.6와 같은 클라우드 모델은 모호한 요청에서도 의도를 추론할 수 있지만, 로컬 7B–13B 모델은 그렇지 않습니다. [구조화된 문서 추출이 필요한 로컬 RAG 시스템](/local-llms/local-rag-2026)의 경우, JSON 형식 명세는 파싱 오류를 방지하고 추출 정확도를 30–40% 향상시킵니다.',
+            '**정확한 출력 형식(JSON, Markdown, 일반 텍스트)을 지정하는 것은 로컬 모델에 매우 중요합니다. 명시적인 지침 없이는 예측 불가능한 출력을 생성하기 때문입니다.** GPT-5.6와 같은 클라우드 모델은 모호한 요청에서도 의도를 추론할 수 있지만, 로컬 7B–13B 모델은 그렇지 않습니다. [구조화된 문서 추출이 필요한 로컬 RAG 시스템](/ko/local-llms/local-rag-2026)의 경우, JSON 형식 명세는 파싱 오류를 방지하고 추출 정확도를 30–40% 향상시킵니다.',
             '**예시:** "텍스트에서 엔티티를 추출하십시오"는 목록 대신 서술형 텍스트를 반환할 수 있습니다.',
             '**개선:** "JSON 형식으로 엔티티를 추출하십시오: person, location, organization 키 포함".',
           ],
@@ -3052,7 +3052,7 @@ schema: {
             '- "당신은 Python 전문가입니다" → 더 나은 코드 설명',
             '- "당신은 의학 연구원입니다" → 더 상세한 생의학 응답',
             '- "당신은 회의적인 분석가입니다" → 더 비판적인 사고',
-            '여러 사용 사례에 걸쳐 배포하는 경우 더 강력한 도메인 정렬을 위해 역할 정의와 [파인튜닝을 결합하십시오](/local-llms/fine-tuning-local-llms-lora).',
+            '여러 사용 사례에 걸쳐 배포하는 경우 더 강력한 도메인 정렬을 위해 역할 정의와 [파인튜닝을 결합하십시오](/ko/local-llms/fine-tuning-local-llms-lora).',
           ],
           callouts: [
             { type: '🎯', text: '모범 사례: 구체성이 중요합니다. "당신은 전문가입니다"는 약합니다. "당신은 async/await 패턴에 집중하는 10년 경력의 Python 백엔드 전문가입니다"가 강합니다.' },
@@ -3173,12 +3173,12 @@ schema: {
           id: 'related-reading',
           title: '관련 읽기',
           items: [
-            '[Chain-of-Thought 프롬프팅 설명](/prompt-engineering/chain-of-thought-prompting) -- 더 나은 출력을 위한 구조화된 추론.',
-            '[LoRA를 사용한 로컬 LLM 파인튜닝](/local-llms/fine-tuning-local-llms-lora) -- 프롬프트 엔지니어링을 넘어 모델을 적응시켜야 할 때.',
-            '[로컬 RAG 2026: 검색 증강 생성](/local-llms/local-rag-2026) -- 더 나은 컨텍스트를 위해 문서 검색으로 프롬프트를 강화합니다.',
-            '[LangGraph 및 Ollama를 사용한 로컬 AI 에이전트](/local-llms/local-ai-agents-langgraph-ollama) -- 에이전트는 도구 선택을 위해 내부적으로 프롬프팅을 사용합니다.',
-            '[Ollama 설치 방법](/local-llms/how-to-install-ollama) -- 로컬 LLM 환경을 설정하십시오.',
-            '[2026 최고의 오픈소스 로컬 LLM](/local-llms/top-open-source-models-ollama) -- 프롬프팅 요구에 맞는 적절한 모델을 선택하십시오.',
+            '[Chain-of-Thought 프롬프팅 설명](/ko/prompt-engineering/chain-of-thought-prompting) -- 더 나은 출력을 위한 구조화된 추론.',
+            '[LoRA를 사용한 로컬 LLM 파인튜닝](/ko/local-llms/fine-tuning-local-llms-lora) -- 프롬프트 엔지니어링을 넘어 모델을 적응시켜야 할 때.',
+            '[로컬 RAG 2026: 검색 증강 생성](/ko/local-llms/local-rag-2026) -- 더 나은 컨텍스트를 위해 문서 검색으로 프롬프트를 강화합니다.',
+            '[LangGraph 및 Ollama를 사용한 로컬 AI 에이전트](/ko/local-llms/local-ai-agents-langgraph-ollama) -- 에이전트는 도구 선택을 위해 내부적으로 프롬프팅을 사용합니다.',
+            '[Ollama 설치 방법](/ko/local-llms/how-to-install-ollama) -- 로컬 LLM 환경을 설정하십시오.',
+            '[2026 최고의 오픈소스 로컬 LLM](/ko/local-llms/top-open-source-models-ollama) -- 프롬프팅 요구에 맞는 적절한 모델을 선택하십시오.',
           ],
         },
         sources: {

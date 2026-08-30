@@ -1877,7 +1877,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Ein lokales LLM hält Ihre Prompts und Dokumente von Cloud-Servern fern, doch sobald Sie aus der Ferne auf dieses LLM zugreifen — oder nach Modellen, Gewichten und Updates suchen — verlässt Ihr Netzwerkverkehr weiterhin das Haus. Ein VPN schließt diese letzte Lücke: Es verschlüsselt die Verbindung zwischen einem entfernten Rechner und dem LLM-Server, und es verbirgt vor Ihrem Internetanbieter, welche KI-Dienste Sie ansteuern. Dieser Leitfaden vergleicht vier Verbraucher-VPN-Anbieter — ProtonVPN, NordVPN, Mullvad und Surfshark — anhand der Kriterien, die für ein KI-Datenschutz-Setup wirklich zählen: No-Logs-Richtlinie, Rechtsprechung, WireGuard-Unterstützung und Preis. Ein Vorbehalt zum Preis: Die VPN-Preise schwanken stark mit den Aktionszyklen, daher ist jede Angabe hier eine Momentaufnahme vom August 2026 — prüfen Sie den aktuellen Tarif auf der Anbieterseite, bevor Sie ein Abonnement abschließen.',
     metaDescription:
-      'ProtonVPN, NordVPN, Mullvad und Surfshark im Vergleich für lokale LLM-Setups: No-Logs, Rechtsprechung, WireGuard und Preise. Stand August 2026.',
+      'ProtonVPN, NordVPN, Mullvad und Surfshark im Vergleich für lokale LLM-Setups: No-Logs, Rechtsprechung, WireGuard und Preise.',
     twitterDescription:
       'ProtonVPN, NordVPN, Mullvad, Surfshark — vier VPNs im Vergleich für den Datenschutz lokaler LLMs. Die Entscheidungsregel: nach Rechtsprechung und No-Logs-Nachweis wählen, nicht nach reiner Geschwindigkeit.',
     affiliateDisclosure: true,
@@ -2797,7 +2797,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'ローカルLLMは、プロンプトやドキュメントをクラウドサーバーから遠ざけてくれます。しかし、そのLLMにリモートでアクセスした瞬間、あるいはモデル・重み・アップデートを探して閲覧した瞬間、ネットワークトラフィックは依然として建物の外へ出ていきます。VPNはこの最後の隙間をふさぎます。リモートマシンとLLMサーバー間の接続を暗号化し、どのAIサービスに接続しているかをインターネットプロバイダーから隠します。本ガイドでは、4つのコンシューマー向けVPNプロバイダー — ProtonVPN、NordVPN、Mullvad、Surfshark — を、AIプライバシー環境にとって本当に重要な点で比較します。すなわち、ノーログポリシー、管轄地、WireGuardのサポート、そして価格です。価格について一点ご注意ください。VPNの価格はキャンペーンサイクルによって大きく変動するため、ここに記載した数値はすべて2026年8月時点のスナップショットです。契約前にプロバイダーのサイトで最新の料金をご確認ください。',
     metaDescription:
-      'ProtonVPN、NordVPN、Mullvad、SurfsharkをローカルLLM環境の保護という観点で比較：ノーログポリシー、管轄地、WireGuard、2026年8月時点の価格。',
+      'ProtonVPN、NordVPN、Mullvad、SurfsharkをローカルLLM環境の保護という観点で比較：ノーログポリシー、管轄地、WireGuard、価格。',
     twitterDescription:
       'ProtonVPN、NordVPN、Mullvad、Surfshark — ローカルLLMのプライバシーのために4つのVPNを比較。判断基準は、生の速度ではなく管轄地とノーログの証明で選ぶこと。',
     affiliateDisclosure: true,
@@ -3253,7 +3253,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       '本地 LLM 让你的提示词和文档远离云服务器，但一旦你远程访问该 LLM——或浏览查找模型、权重和更新——你的网络流量仍会离开本地。VPN 弥补了这最后一道缺口：它加密远程设备与 LLM 服务器之间的连接，并向你的网络服务商隐藏你访问了哪些 AI 服务。本指南针对 AI 隐私环境真正重要的方面，对比四家面向消费者的 VPN 提供商——ProtonVPN、NordVPN、Mullvad 和 Surfshark：无日志政策、司法管辖区、WireGuard 支持以及价格。关于价格有一点提醒：VPN 价格随促销周期大幅波动，因此这里的每个数字都是 2026 年 8 月的快照——订阅前请在提供商网站上确认当前费率。',
     metaDescription:
-      '对比 ProtonVPN、NordVPN、Mullvad 和 Surfshark 对本地 LLM 环境的保护：无日志政策、司法管辖区、WireGuard 以及 2026 年 8 月价格。',
+      '对比 ProtonVPN、NordVPN、Mullvad 和 Surfshark 对本地 LLM 环境的保护：无日志政策、司法管辖区、WireGuard 以及价格。',
     twitterDescription:
       'ProtonVPN、NordVPN、Mullvad、Surfshark——为本地 LLM 隐私对比四款 VPN。决策原则：按司法管辖区和无日志证明来选，而非看原始速度。',
     affiliateDisclosure: true,

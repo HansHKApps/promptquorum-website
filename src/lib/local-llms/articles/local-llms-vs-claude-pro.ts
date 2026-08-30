@@ -2061,7 +2061,7 @@ schema: {
           content: [
             '**Claude Pro는 별도 하드웨어 없이 월 $20이며, 로컬 Llama 3.3 70B는 권장되는 듀얼 RTX 4070 기준 초기 비용 약 $550, 또는 NVIDIA가 단종한 중고 RTX 4090 기준 $2,000~2,600이며, 여기에 연간 전기료 약 $60이 추가됩니다.** 절대 금액으로는 1년차는 여전히 Claude Pro가 저렴하지만, 듀얼 RTX 4070은 약 37개월차에 손익분기점에 도달합니다.',
             '**5년 총 소유 비용:** Claude Pro $1,200 vs 로컬 Llama(중고 듀얼 RTX 4070) $850 vs 로컬 Llama(중고 RTX 4090) $2,300~2,900. 1년차: Claude Pro $240 vs 로컬 $610(4070) 또는 $2,060~2,660(4090). 3년차: Claude Pro $720 vs 로컬 $730(4070) 또는 $2,180~2,780(4090). 5년차: Claude Pro $1,200 vs 로컬 $850(4070) 또는 $2,300~2,900(4090).',
-            '[로컬 LLM용 최적 GPU](/local-llms/best-gpus-for-local-llms)에서 상세 하드웨어 옵션과 현재 시장 가격을 확인하실 수 있습니다.',
+            '[로컬 LLM용 최적 GPU](/ko/local-llms/best-gpus-for-local-llms)에서 상세 하드웨어 옵션과 현재 시장 가격을 확인하실 수 있습니다.',
           ],
           callouts: [
             { type: '⚠️ 주의', text: 'NVIDIA는 2026년 RTX 4090을 단종했습니다. 중고 가격은 $2,000~2,600까지 상승했으며, 이로 인해 5년 내 Claude Pro 대비 손익분기점에 도달하지 못할 수 있습니다.' },
@@ -2086,7 +2086,7 @@ schema: {
           content: [
             '**Claude Sonnet 5 (Anthropic, 2026): Anthropic 벤치마크 데이터 기준 추론, 뉘앙스, 지시 이행에서 선도적.** MMLU(언어 이해) 점수 97%. 복잡한 분석, 카피라이팅, 코드 리뷰에 탁월합니다. MMLU 점수: 97%. 컨텍스트 창: 200K 토큰. 이미지 이해: 네이티브. 파인튜닝: 불가. 오프라인: 불가. 속도 제한: 있음.',
             'Llama 3.3 70B(Meta, 2024년 4월): MMLU 점수 96%. 탁월한 추론 능력, 벤치마크에서 Claude와 거의 동등한 수준. 코딩 성능이 더 우수함(HumanEval에서 +2%). 창작/서사 작업에서는 미세하게 부족. MMLU 점수: 96%. HumanEval: Claude 대비 +2%. 컨텍스트 창: 128K 토큰. 이미지 이해: 어댑터 통해서만 가능. 파인튜닝: 완전 지원(LoRA, 전체). 오프라인: 가능. 속도 제한: 없음.',
-            '실제 업무의 80%(요약, Q&A, 데이터 추출, 코딩)에서 Llama 3.3 70B와 Claude Sonnet 5은 동등한 결과를 냅니다. 엣지 케이스(미묘한 서사 분석, 도메인별 창작)에서는 Claude가 미세하게 우위입니다. [로컬 LLM에 필요한 VRAM 용량](/local-llms/how-much-vram-local-llm)에서 70B 모델 구동을 위한 하드웨어 요구 사항을 확인하실 수 있습니다.',
+            '실제 업무의 80%(요약, Q&A, 데이터 추출, 코딩)에서 Llama 3.3 70B와 Claude Sonnet 5은 동등한 결과를 냅니다. 엣지 케이스(미묘한 서사 분석, 도메인별 창작)에서는 Claude가 미세하게 우위입니다. [로컬 LLM에 필요한 VRAM 용량](/ko/local-llms/how-much-vram-local-llm)에서 70B 모델 구동을 위한 하드웨어 요구 사항을 확인하실 수 있습니다.',
           ],
           callouts: [
             { type: '💡 Pro Tip', text: 'HumanEval 코딩 벤치마크에서 Llama 3.3 70B는 2026년 4월 테스트 기준 Claude Sonnet 5보다 약 2퍼센트포인트 높은 점수를 기록했습니다(EvalPlus 리더보드; 결과는 벤치마크 버전 및 작업 분포에 따라 다를 수 있습니다).' },
@@ -2188,12 +2188,12 @@ schema: {
         'relatedReading': {
           title: '관련 글',
           items: [
-            '[로컬 LLM vs ChatGPT Plus: 비용 비교](/local-llms/local-llms-vs-chatgpt-plus)',
-            '[로컬 LLM vs 클라우드 GPU: 비용 분석](/local-llms/local-llm-vs-cloud-gpu-cost)',
-            '[로컬 LLM용 최적 GPU](/local-llms/best-gpus-for-local-llms)',
-            '[로컬 LLM에 필요한 VRAM 용량](/local-llms/how-much-vram-local-llm)',
-            '[LLM 양자화 설명](/local-llms/llm-quantization-explained)',
-            '[GPU 구매 vs AI 구독: 수익성 비교](/local-llms/gpu-vs-ai-subscription-roi)',
+            '[로컬 LLM vs ChatGPT Plus: 비용 비교](/ko/local-llms/local-llms-vs-chatgpt-plus)',
+            '[로컬 LLM vs 클라우드 GPU: 비용 분석](/ko/local-llms/local-llm-vs-cloud-gpu-cost)',
+            '[로컬 LLM용 최적 GPU](/ko/local-llms/best-gpus-for-local-llms)',
+            '[로컬 LLM에 필요한 VRAM 용량](/ko/local-llms/how-much-vram-local-llm)',
+            '[LLM 양자화 설명](/ko/local-llms/llm-quantization-explained)',
+            '[GPU 구매 vs AI 구독: 수익성 비교](/ko/local-llms/gpu-vs-ai-subscription-roi)',
           ],
         },
         'sources': {

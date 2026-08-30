@@ -1670,10 +1670,10 @@ schema: {
           id: 'related-reading',
           title: '관련 읽을거리',
           items: [
-            '[최고의 로컬 LLM 프론트엔드](/local-llms/best-local-llm-frontends) -- 인터페이스 전체 목록.',
-            '[LM Studio 설치 방법](/local-llms/how-to-install-lm-studio) -- 데스크톱 앱 설정.',
-            '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio) -- 두 도구의 비교.',
-            '[최고의 로컬 LLM 프론트엔드](/local-llms/best-local-llm-frontends) -- Open WebUI 및 웹 대안.',
+            '[최고의 로컬 LLM 프론트엔드](/ko/local-llms/best-local-llm-frontends) -- 인터페이스 전체 목록.',
+            '[LM Studio 설치 방법](/ko/local-llms/how-to-install-lm-studio) -- 데스크톱 앱 설정.',
+            '[Ollama vs LM Studio](/ko/local-llms/ollama-vs-lm-studio) -- 두 도구의 비교.',
+            '[최고의 로컬 LLM 프론트엔드](/ko/local-llms/best-local-llm-frontends) -- Open WebUI 및 웹 대안.',
           ],
         },
         sources: {

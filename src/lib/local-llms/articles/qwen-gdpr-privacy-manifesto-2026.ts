@@ -1663,10 +1663,10 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-reading',
         title: '관련 자료',
         items: [
-          '[Qwen 3 vs Claude Sonnet 5 vs DeepSeek R2 — 2026년 비교](/local-llms/qwen-vs-claude-vs-deepseek-local-2026)',
+          '[Qwen 3 vs Claude Sonnet 5 vs DeepSeek R2 — 2026년 비교](/ko/local-llms/qwen-vs-claude-vs-deepseek-local-2026)',
           '[EU 기업들이 로컬 Qwen으로 전환하는 이유](/blog/eu-companies-local-qwen-gdpr-shift)',
-          '[Qwen 3 로컬 실행 방법 — Ollama + LM Studio 가이드](/local-llms/run-qwen-locally-guide-2026)',
-          '[로컬 LLM을 활용한 엔터프라이즈 컴플라이언스](/local-llms/enterprise-compliance-local-llms)',
+          '[Qwen 3 로컬 실행 방법 — Ollama + LM Studio 가이드](/ko/local-llms/run-qwen-locally-guide-2026)',
+          '[로컬 LLM을 활용한 엔터프라이즈 컴플라이언스](/ko/local-llms/enterprise-compliance-local-llms)',
         ],
       },
       faq: {

@@ -3176,7 +3176,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'what-is-constrained-prompting',
         title: '제약 프롬프팅이란?',
         content: [
-          '**제약 프롬프팅이란 콘텐츠, 구조, 길이, 동작에 관한 명시적인 규칙을 프롬프트에 직접 추가하는 것을 의미합니다.** "이것을 요약하라"와 같은 느슨한 지시어 대신, 허용되는 형식, 필수 필드, 금지된 주제, 검증 규칙을 명시합니다. 이것은 핵심 [프롬프트 엔지니어링](/prompt-engineering/what-is-prompt-engineering) 기법입니다.',
+          '**제약 프롬프팅이란 콘텐츠, 구조, 길이, 동작에 관한 명시적인 규칙을 프롬프트에 직접 추가하는 것을 의미합니다.** "이것을 요약하라"와 같은 느슨한 지시어 대신, 허용되는 형식, 필수 필드, 금지된 주제, 검증 규칙을 명시합니다. 이것은 핵심 [프롬프트 엔지니어링](/ko/prompt-engineering/what-is-prompt-engineering) 기법입니다.',
           '제약에는 출력 스키마(고정 키가 있는 JSON 등), 단어 제한, 어조 요구사항, "의료 진단을 제공하지 마십시오"와 같은 안전 제한이 포함될 수 있습니다. 이러한 규칙을 프롬프트의 일부로 만들면 모호성이 줄어들고 모델을 프로덕션 워크플로우에 더 쉽게 통합할 수 있습니다.',
         ],
         snippets: [
@@ -3207,7 +3207,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'which-constraint-types-can-you-use',
         title: '사용할 수 있는 제약 유형',
         content: [
-          '**프롬프트를 여러 차원으로 제약할 수 있습니다: 구조, 콘텐츠, 스타일, 길이, 안전.** 더 정밀할수록 출력이 더 일관됩니다. 이것이 [구조화된 프롬프트](/prompt-engineering/rtf-framework)에 어떻게 맞는지 알아보십시오.',
+          '**프롬프트를 여러 차원으로 제약할 수 있습니다: 구조, 콘텐츠, 스타일, 길이, 안전.** 더 정밀할수록 출력이 더 일관됩니다. 이것이 [구조화된 프롬프트](/ko/prompt-engineering/rtf-framework)에 어떻게 맞는지 알아보십시오.',
           '일반적인 제약 유형에는 다음이 포함됩니다:',
         ],
         items: [
@@ -3254,7 +3254,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'when-should-you-use-constrained-prompting',
         title: '제약 프롬프팅을 언제 사용해야 하는가?',
         content: [
-          '**최대한의 창의성보다 정확성과 일관성이 더 중요할 때 제약 프롬프팅을 사용해야 합니다.** 이는 운영적, 분석적, 규제적 맥락에서 특히 사실입니다. [퓨샷 예시](/prompt-engineering/zero-shot-vs-few-shot)와 결합하면 제약이 훨씬 더 강력해집니다.',
+          '**최대한의 창의성보다 정확성과 일관성이 더 중요할 때 제약 프롬프팅을 사용해야 합니다.** 이는 운영적, 분석적, 규제적 맥락에서 특히 사실입니다. [퓨샷 예시](/ko/prompt-engineering/zero-shot-vs-few-shot)와 결합하면 제약이 훨씬 더 강력해집니다.',
           '일반적인 사용 사례에는 다음이 포함됩니다:',
         ],
         items: [
@@ -3271,7 +3271,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'how-does-promptquorum-support-constrained-prompting',
         title: 'PromptQuorum이 제약 프롬프팅을 지원하는 방법',
         content: [
-          '**PromptQuorum은 구조화된 프롬프트 프레임워크를 정의, 저장, 재사용할 수 있도록 하여 제약 프롬프팅과 잘 작동하도록 설계된 다중 모델 AI 디스패치 도구입니다.** [SPECS](/prompt-engineering/specs-framework), [RTF](/prompt-engineering/rtf-framework), 또는 Google의 프롬프팅 가이드와 같은 프레임워크와 제약을 결합하여 여러 모델에 동시에 전송할 수 있습니다.',
+          '**PromptQuorum은 구조화된 프롬프트 프레임워크를 정의, 저장, 재사용할 수 있도록 하여 제약 프롬프팅과 잘 작동하도록 설계된 다중 모델 AI 디스패치 도구입니다.** [SPECS](/ko/prompt-engineering/specs-framework), [RTF](/ko/prompt-engineering/rtf-framework), 또는 Google의 프롬프팅 가이드와 같은 프레임워크와 제약을 결합하여 여러 모델에 동시에 전송할 수 있습니다.',
           'PromptQuorum에서 다음을 할 수 있습니다:',
         ],
         items: [
@@ -3372,12 +3372,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[프롬프트 엔지니어링이란?](/prompt-engineering/what-is-prompt-engineering) — 제약을 적용하기 전의 기초.',
-          '[구조화된 출력: JSON 모드](/prompt-engineering/structured-output-and-json-mode) — 출력 스키마의 API 수준 적용.',
-          '[RTF 프레임워크](/prompt-engineering/rtf-framework) — 역할-작업-형식: 제약 프롬프팅과 자연스럽게 결합되는 구조화된 프레임워크.',
-          '[퓨샷 프롬프팅](/prompt-engineering/zero-shot-vs-few-shot) — 예시 제공은 암묵적 제약의 한 형태입니다.',
-          '[여러 모델에서 프롬프트를 테스트하는 방법](/prompt-engineering/how-to-test-prompts-across-models) — 여러 LLM에서 제약 프롬프트 검증.',
-          '[프롬프트 인젝션과 보안](/prompt-engineering/prompt-injection-and-security) — 안전 제약이 적대적 입력을 방어합니다.',
+          '[프롬프트 엔지니어링이란?](/ko/prompt-engineering/what-is-prompt-engineering) — 제약을 적용하기 전의 기초.',
+          '[구조화된 출력: JSON 모드](/ko/prompt-engineering/structured-output-and-json-mode) — 출력 스키마의 API 수준 적용.',
+          '[RTF 프레임워크](/ko/prompt-engineering/rtf-framework) — 역할-작업-형식: 제약 프롬프팅과 자연스럽게 결합되는 구조화된 프레임워크.',
+          '[퓨샷 프롬프팅](/ko/prompt-engineering/zero-shot-vs-few-shot) — 예시 제공은 암묵적 제약의 한 형태입니다.',
+          '[여러 모델에서 프롬프트를 테스트하는 방법](/ko/prompt-engineering/how-to-test-prompts-across-models) — 여러 LLM에서 제약 프롬프트 검증.',
+          '[프롬프트 인젝션과 보안](/ko/prompt-engineering/prompt-injection-and-security) — 안전 제약이 적대적 입력을 방어합니다.',
           '[로컬 LLM으로 더 스마트한 홈 자동화](/ko/smart-home/ai-automations-local-llm) — 제약 프롬프팅 실제 적용: 홈 기기를 제어할 때 LLM이 할 수 있는 것과 할 수 없는 것을 정확하게 정의',
         ],
       },

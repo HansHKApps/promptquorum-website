@@ -1883,10 +1883,10 @@ schema: {
           id: 'related-reading',
           title: '관련 읽기',
           items: [
-            '[로컬 LLM용 최고의 저예산 GPU](/local-llms/best-budget-gpus-local-llm)',
-            '[RTX 5090 vs RTX 4090](/local-llms/rtx-5090-vs-rtx-4090-local-llm)',
-            '[로컬 LLM용 최고의 GPU](/local-llms/best-gpus-for-local-llms)',
-            '[로컬 LLM 하드웨어 가이드 2026](/local-llms/local-llm-hardware-guide-2026)',
+            '[로컬 LLM용 최고의 저예산 GPU](/ko/local-llms/best-budget-gpus-local-llm)',
+            '[RTX 5090 vs RTX 4090](/ko/local-llms/rtx-5090-vs-rtx-4090-local-llm)',
+            '[로컬 LLM용 최고의 GPU](/ko/local-llms/best-gpus-for-local-llms)',
+            '[로컬 LLM 하드웨어 가이드 2026](/ko/local-llms/local-llm-hardware-guide-2026)',
           ],
         },
         'sources': {

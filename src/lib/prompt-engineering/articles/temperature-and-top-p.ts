@@ -2028,9 +2028,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
 
         relatedReading: {
           content: [
-            '[프롬프트 엔지니어링이란 무엇입니까?](/prompt-engineering/what-is-prompt-engineering) — 파라미터보다 프롬프트 구조가 왜 더 중요한지',
-            '[모든 프롬프트에 필요한 5가지 구성 요소](/prompt-engineering/5-building-blocks-every-prompt-needs) — 파라미터를 조정하기 전에 프롬프트를 구조화하는 방법',
-            '[AI 환각: AI가 허구를 만드는 이유](/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — 왜 낮은 temperature가 환각을 제거하지 못하는지',
+            '[프롬프트 엔지니어링이란 무엇입니까?](/ko/prompt-engineering/what-is-prompt-engineering) — 파라미터보다 프롬프트 구조가 왜 더 중요한지',
+            '[모든 프롬프트에 필요한 5가지 구성 요소](/ko/prompt-engineering/5-building-blocks-every-prompt-needs) — 파라미터를 조정하기 전에 프롬프트를 구조화하는 방법',
+            '[AI 환각: AI가 허구를 만드는 이유](/ko/prompt-engineering/ai-hallucinations-why-ai-makes-things-up) — 왜 낮은 temperature가 환각을 제거하지 못하는지',
           ],
         },
 

@@ -1862,9 +1862,9 @@ schema: {
           id: 'related-reading',
           title: '관련 읽기',
           items: [
-            '[팀을 위한 로컬 LLM 설정](/local-llms/local-llm-setup-for-teams)',
-            '[민감한 데이터를 위한 프라이빗 로컬 LLM](/local-llms/private-local-llm-sensitive-data)',
-            '[개발자를 위한 최고의 로컬 LLM 스택](/local-llms/local-llm-developer-stack)',
+            '[팀을 위한 로컬 LLM 설정](/ko/local-llms/local-llm-setup-for-teams)',
+            '[민감한 데이터를 위한 프라이빗 로컬 LLM](/ko/local-llms/private-local-llm-sensitive-data)',
+            '[개발자를 위한 최고의 로컬 LLM 스택](/ko/local-llms/local-llm-developer-stack)',
           ],
         },
         'sources': {

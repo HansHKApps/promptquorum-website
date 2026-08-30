@@ -1342,9 +1342,9 @@ schema: {
         'relatedReading': {
           title: '관련 읽기 자료',
           items: [
-            '[팀을 위한 로컬 LLM 설정](/local-llms/local-llm-setup-for-teams)',
-            '[안전한 오프라인 로컬 LLM 워크플로](/local-llms/secure-offline-local-llm-workflow)',
-            '[민감한 데이터를 위한 프라이빗 로컬 LLM](/local-llms/private-local-llm-sensitive-data)',
+            '[팀을 위한 로컬 LLM 설정](/ko/local-llms/local-llm-setup-for-teams)',
+            '[안전한 오프라인 로컬 LLM 워크플로](/ko/local-llms/secure-offline-local-llm-workflow)',
+            '[민감한 데이터를 위한 프라이빗 로컬 LLM](/ko/local-llms/private-local-llm-sensitive-data)',
           ],
         },
         'sources': {

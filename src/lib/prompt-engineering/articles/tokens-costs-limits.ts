@@ -1449,7 +1449,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         definition: {
           title: '토큰이란 무엇인가?',
           content: [
-            '**토큰은 AI 모델이 처리하는 가장 작은 텍스트 단위로, 약 3~4자 또는 영어 단어의 ¾에 해당합니다.** 영어 텍스트에서 "ChatGPT"는 2개의 토큰으로 계산되며, "Hello, how are you?"는 약 5~6개의 토큰입니다. 다른 언어들은 토큰화 효율이 낮습니다. 독일어나 일본어로 같은 문구는 20~40% 더 많은 토큰을 소비할 수 있습니다. 프롬프트(입력)의 모든 토큰과 모델이 출력하는 모든 토큰에 대해 요금이 청구됩니다. 토큰을 이해하는 것은 [프롬프트 엔지니어링이란 무엇인가](/prompt-engineering/what-is-prompt-engineering)의 기초입니다. 이는 신뢰할 수 있는 출력을 얻기 위해 입력을 구조화하는 실践입니다.',
+            '**토큰은 AI 모델이 처리하는 가장 작은 텍스트 단위로, 약 3~4자 또는 영어 단어의 ¾에 해당합니다.** 영어 텍스트에서 "ChatGPT"는 2개의 토큰으로 계산되며, "Hello, how are you?"는 약 5~6개의 토큰입니다. 다른 언어들은 토큰화 효율이 낮습니다. 독일어나 일본어로 같은 문구는 20~40% 더 많은 토큰을 소비할 수 있습니다. 프롬프트(입력)의 모든 토큰과 모델이 출력하는 모든 토큰에 대해 요금이 청구됩니다. 토큰을 이해하는 것은 [프롬프트 엔지니어링이란 무엇인가](/ko/prompt-engineering/what-is-prompt-engineering)의 기초입니다. 이는 신뢰할 수 있는 출력을 얻기 위해 입력을 구조화하는 실践입니다.',
             '모델은 단어나 문자로 "생각"하지 않습니다. 내부적으로 텍스트를 토큰 ID로 변환하고 수치적으로 처리합니다. 이것이 토큰화가 중요한 이유입니다. 문자 하나를 변경하면 토큰 경계가 바뀔 수 있고, 불필요한 단어가 많은 잘못 구성된 프롬프트는 출력 품질을 개선하지 않으면서 수백 개의 토큰을 낭비할 수 있습니다.',
             '한 문장으로 요약하면: 토큰은 AI 모델이 처리하는 가장 작은 텍스트 단위로, 약 3~4자 또는 영어 단어의 ¾에 해당하며, 입력되는 모든 토큰과 출력되는 모든 토큰에 대해 요금이 청구됩니다.'
           ]
@@ -1468,7 +1468,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         tokenCounting: {
           title: '토큰 계산 방식',
-          content: '**API 호출의 모든 요소 — 시스템 프롬프트, 대화 기록, 새 메시지, 파일, 모델의 출력 — 은 할당량에서 토큰을 소비합니다.** 작은 메시지로 시작한 대화가 5번의 주고받기 후에 갑자기 비용이 높아지는 이유가 여기에 있습니다. 축적된 모든 것에 대해 비용을 지불합니다. [시스템 프롬프트와 사용자 프롬프트](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference)의 차이를 이해하는 것이 중요합니다. 두 가지 모두 매 호출마다 청구되기 때문입니다.',
+          content: '**API 호출의 모든 요소 — 시스템 프롬프트, 대화 기록, 새 메시지, 파일, 모델의 출력 — 은 할당량에서 토큰을 소비합니다.** 작은 메시지로 시작한 대화가 5번의 주고받기 후에 갑자기 비용이 높아지는 이유가 여기에 있습니다. 축적된 모든 것에 대해 비용을 지불합니다. [시스템 프롬프트와 사용자 프롬프트](/ko/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference)의 차이를 이해하는 것이 중요합니다. 두 가지 모두 매 호출마다 청구되기 때문입니다.',
           items: [
             '**시스템 프롬프트:** 메시지당 한 번 계산됩니다. 200단어 시스템 프롬프트 = 모든 API 호출마다 약 250토큰.',
             '**전체 대화 기록:** 명시적으로 요약하거나 제거하지 않는 한 모든 요청에 포함됩니다. 턴당 500토큰인 10턴 대화 = 11번째 턴에 5,000토큰이 다시 계산됩니다.',
@@ -1481,7 +1481,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         pricing: {
           title: '클라우드 제공업체별 가격 비교',
           content: [
-            '모델 성능에 따라 가격이 크게 다릅니다. 아래의 모든 수치는 2026년 4월 기준 공개 가격입니다. 출력 토큰은 일반적으로 입력 토큰보다 2~5배 더 비싸다는 점에 유의하십시오. 비용이 가장 빠르게 누적되는 부분입니다. 올바른 모델 선택이 가장 큰 비용 조절 수단입니다. 자세한 비교는 [GPT-5.6, Claude, Gemini 중 선택하는 방법](/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model)을 참고하십시오.',
+            '모델 성능에 따라 가격이 크게 다릅니다. 아래의 모든 수치는 2026년 4월 기준 공개 가격입니다. 출력 토큰은 일반적으로 입력 토큰보다 2~5배 더 비싸다는 점에 유의하십시오. 비용이 가장 빠르게 누적되는 부분입니다. 올바른 모델 선택이 가장 큰 비용 조절 수단입니다. 자세한 비교는 [GPT-5.6, Claude, Gemini 중 선택하는 방법](/ko/prompt-engineering/gpt-claude-or-gemini-how-to-pick-the-right-model)을 참고하십시오.',
             '2026년 4월 기준 가격. 현재 요금을 확인하십시오: [OpenAI 가격](https://openai.com/pricing) · [Anthropic 가격](https://www.anthropic.com/api) · [Google 가격](https://ai.google.dev/pricing)'
           ],
           columns: ['모델', '입력 (100만 토큰당)', '출력 (100만 토큰당)'],
@@ -1509,7 +1509,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         promptDesign: {
           title: '프롬프트 설계로 비용 제어하기',
           content: [
-            '**PromptQuorum에서 테스트 완료 — GPT-5.6, Claude Opus 5, Gemini 3.1 Pro에서 시스템 프롬프트 상세도를 달리하여 동일한 리서치 요약 프롬프트 20개 실행:** 500토큰 시스템 프롬프트를 사용할 때, 평균 출력은 450토큰이었고 호출당 평균 비용은 $0.032였습니다. 동일한 지시사항을 200토큰으로 줄인 프롬프트를 사용했을 때, 평균 출력은 460토큰이었고 호출당 비용은 $0.025였습니다. 동일한 출력 품질에서 18% 비용 절감. 이는 [속도를 위한 프롬프팅 방법](/prompt-engineering/faster-ai-answers-how-to-prompt-for-speed)과 일치합니다. 효율성은 지연 시간과 비용 모두를 줄입니다.',
+            '**PromptQuorum에서 테스트 완료 — GPT-5.6, Claude Opus 5, Gemini 3.1 Pro에서 시스템 프롬프트 상세도를 달리하여 동일한 리서치 요약 프롬프트 20개 실행:** 500토큰 시스템 프롬프트를 사용할 때, 평균 출력은 450토큰이었고 호출당 평균 비용은 $0.032였습니다. 동일한 지시사항을 200토큰으로 줄인 프롬프트를 사용했을 때, 평균 출력은 460토큰이었고 호출당 비용은 $0.025였습니다. 동일한 출력 품질에서 18% 비용 절감. 이는 [속도를 위한 프롬프팅 방법](/ko/prompt-engineering/faster-ai-answers-how-to-prompt-for-speed)과 일치합니다. 효율성은 지연 시간과 비용 모두를 줄입니다.',
             '**프롬프트의 불필요한 모든 토큰은 비용을 낭비합니다. 대화에서 모든 API 호출에 전체 프롬프트가 다시 포함되기 때문에 비용이 더 빠르게 축적됩니다.** 500토큰 시스템 프롬프트를 300토큰으로 줄이면 호출당 $0.001를 절약합니다. 하루 1,000번 호출 시, 하루에 $1, 연간 $365가 절약됩니다.'
           ],
           items: [
@@ -1526,7 +1526,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           title: 'LLM API 비용 5단계 절감법',
           numberedItems: [
             '모델을 작업 복잡도에 맞추십시오: 간단한 분류 및 질의응답에는 GPT-5.6 Luna 또는 Claude Haiku 4.5를 사용하십시오. 프론티어 모델보다 33배 저렴합니다.',
-            '5턴마다 대화 기록을 요약하십시오: 모든 호출에 전체 기록이 다시 청구되는 것을 방지합니다 ([생각의 사슬 프롬프팅](/prompt-engineering/chain-of-thought-prompting)과 일치하는 기법입니다. 추론을 미리 구조화하십시오).',
+            '5턴마다 대화 기록을 요약하십시오: 모든 호출에 전체 기록이 다시 청구되는 것을 방지합니다 ([생각의 사슬 프롬프팅](/ko/prompt-engineering/chain-of-thought-prompting)과 일치하는 기법입니다. 추론을 미리 구조화하십시오).',
             '출력 길이를 명시적으로 제한하십시오: "3개의 글머리로 답하십시오" 또는 "최대 100단어"는 장황한 토큰 집약적 응답을 방지합니다.',
             '시스템 프롬프트를 필수 내용으로만 줄이십시오: 불필요한 문구를 제거하십시오. 모든 불필요한 단어는 모든 API 호출에 다시 청구됩니다.',
             '대용량 비공개 워크플로에는 Ollama를 통한 로컬 LLM을 테스트하십시오: 프론티어 모델 성능을 포기하는 대신 토큰당 비용이 없습니다.',
@@ -1547,7 +1547,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
         },
         localLLMs: {
           title: '로컬 LLM — 무비용 옵션',
-          content: '**Ollama 또는 LM Studio를 통한 로컬 모델은 토큰당 API 비용이 없습니다. 하드웨어(VRAM 및 전기) 비용만 지불합니다.** 따라서 대용량 워크플로, 개인정보 보호가 중요한 애플리케이션, 비용이 중요한 파이프라인에 이상적입니다. 절충점은 성능(로컬 모델은 프론티어 모델에 뒤처짐)과 지연 시간(소비자용 VRAM에서 실행하면 더 느림)입니다. 로컬 배포를 계획할 때는 [컨텍스트 윈도우 이해](/prompt-engineering/context-windows-explained-why-ai-forgets)가 필수입니다. VRAM이 지원할 수 있는 컨텍스트 윈도우 크기를 제한하기 때문입니다.',
+          content: '**Ollama 또는 LM Studio를 통한 로컬 모델은 토큰당 API 비용이 없습니다. 하드웨어(VRAM 및 전기) 비용만 지불합니다.** 따라서 대용량 워크플로, 개인정보 보호가 중요한 애플리케이션, 비용이 중요한 파이프라인에 이상적입니다. 절충점은 성능(로컬 모델은 프론티어 모델에 뒤처짐)과 지연 시간(소비자용 VRAM에서 실행하면 더 느림)입니다. 로컬 배포를 계획할 때는 [컨텍스트 윈도우 이해](/ko/prompt-engineering/context-windows-explained-why-ai-forgets)가 필수입니다. VRAM이 지원할 수 있는 컨텍스트 윈도우 크기를 제한하기 때문입니다.',
           items: [
             '**하드웨어 비용:** LLaMA 3.1 7B와 같은 Ollama 모델은 약 8GB VRAM이 필요하고, 13B 모델은 약 16GB, 70B 모델은 40GB 이상이 필요합니다. GPU 메모리가 제한 요인입니다.',
             '**성능 절충점:** 로컬 모델은 분류, 요약, 반복 작업에 탁월합니다. GPT-5.6나 Claude Opus 5에 비해 다단계 추론, 코드 생성, 창의적 글쓰기에서 어려움을 겪습니다.',
@@ -1674,12 +1674,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
         relatedReading: {
           title: '관련 읽을거리',
           items: [
-            '[LLM 실제 작동 원리](/prompt-engineering/how-llms-actually-work) — 이 비용을 구동하는 토큰화, 컨텍스트 윈도우, 추론 파라미터',
-            '[시스템 프롬프트 vs 사용자 프롬프트](/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) — 시스템 프롬프트 길이가 모든 API 호출의 토큰 비용에 직접 미치는 영향',
-            '[컨텍스트 윈도우 설명](/prompt-engineering/context-windows-explained-why-ai-forgets) — "중간에서 길을 잃는" 문제와 컨텍스트 윈도우 크기가 비용과 품질에 미치는 영향',
-            '[Ollama 설치 방법](/local-llms/how-to-install-ollama) — 대용량 또는 개인정보 보호 민감 워크플로를 위한 무비용 로컬 추론 설정',
-            '[LLM 양자화 설명](/local-llms/llm-quantization-explained) — 클라우드 API 비용을 대체하는 로컬 모델의 RAM 요구 사항',
-            '[2026년 최고의 로컬 LLM](/local-llms/best-local-llms-2026) — 특정 작업 유형에서 클라우드 API를 대체할 수 있는 로컬 모델'
+            '[LLM 실제 작동 원리](/ko/prompt-engineering/how-llms-actually-work) — 이 비용을 구동하는 토큰화, 컨텍스트 윈도우, 추론 파라미터',
+            '[시스템 프롬프트 vs 사용자 프롬프트](/ko/prompt-engineering/system-prompt-vs-user-prompt-whats-the-difference) — 시스템 프롬프트 길이가 모든 API 호출의 토큰 비용에 직접 미치는 영향',
+            '[컨텍스트 윈도우 설명](/ko/prompt-engineering/context-windows-explained-why-ai-forgets) — "중간에서 길을 잃는" 문제와 컨텍스트 윈도우 크기가 비용과 품질에 미치는 영향',
+            '[Ollama 설치 방법](/ko/local-llms/how-to-install-ollama) — 대용량 또는 개인정보 보호 민감 워크플로를 위한 무비용 로컬 추론 설정',
+            '[LLM 양자화 설명](/ko/local-llms/llm-quantization-explained) — 클라우드 API 비용을 대체하는 로컬 모델의 RAM 요구 사항',
+            '[2026년 최고의 로컬 LLM](/ko/local-llms/best-local-llms-2026) — 특정 작업 유형에서 클라우드 API를 대체할 수 있는 로컬 모델'
           ]
         },
         sources: {

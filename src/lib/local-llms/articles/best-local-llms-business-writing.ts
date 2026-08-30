@@ -1775,12 +1775,12 @@ schema: {
           id: 'related-reading',
           title: '관련 읽을거리',
           items: [
-            '[2026년 최고의 로컬 LLM](/local-llms/best-local-llms-2026) -- 비즈니스 문서 작성에 추천되는 모든 모델을 포함한 전체 모델 순위',
-            '[로컬 LLM vs 클라우드 API](/local-llms/local-llms-vs-cloud-apis) -- 로컬 대 클라우드 모델을 사용한 비즈니스 문서 작성의 개인 정보 보호 및 비용 비교',
-            '[입문자를 위한 최고의 로컬 LLM 모델](/local-llms/best-beginner-local-llm-models) -- Mistral Small 3.1(24B, 14GB RAM)이 너무 크다면 7B 모델 옵션',
-            '[LLM 양자화 설명](/local-llms/llm-quantization-explained) -- 다양한 양자화 수준에서 Mistral Small 3.1의 RAM 요구 사항',
-            '[노트북에서 로컬 LLM 실행](/local-llms/local-llm-on-laptop) -- 발열 관리를 포함한 노트북 하드웨어에서 문서 작성 도우미 실행',
-            '[Ollama 설치 방법](/local-llms/how-to-install-ollama) -- 이 페이지의 모든 모델을 10분 이내에 설정',
+            '[2026년 최고의 로컬 LLM](/ko/local-llms/best-local-llms-2026) -- 비즈니스 문서 작성에 추천되는 모든 모델을 포함한 전체 모델 순위',
+            '[로컬 LLM vs 클라우드 API](/ko/local-llms/local-llms-vs-cloud-apis) -- 로컬 대 클라우드 모델을 사용한 비즈니스 문서 작성의 개인 정보 보호 및 비용 비교',
+            '[입문자를 위한 최고의 로컬 LLM 모델](/ko/local-llms/best-beginner-local-llm-models) -- Mistral Small 3.1(24B, 14GB RAM)이 너무 크다면 7B 모델 옵션',
+            '[LLM 양자화 설명](/ko/local-llms/llm-quantization-explained) -- 다양한 양자화 수준에서 Mistral Small 3.1의 RAM 요구 사항',
+            '[노트북에서 로컬 LLM 실행](/ko/local-llms/local-llm-on-laptop) -- 발열 관리를 포함한 노트북 하드웨어에서 문서 작성 도우미 실행',
+            '[Ollama 설치 방법](/ko/local-llms/how-to-install-ollama) -- 이 페이지의 모든 모델을 10분 이내에 설정',
           ],
         },
         'sources': {

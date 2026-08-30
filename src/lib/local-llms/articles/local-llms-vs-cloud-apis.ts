@@ -2090,7 +2090,7 @@ schema: {
           content: [
             '**로컬 LLM이 범주적으로 더 프라이버시가 보장됩니다.** 프롬프트 텍스트, 컨텍스트, 응답 데이터 중 어느 것도 외부 서버로 전송되지 않습니다. 이로 인해 로컬 추론은 규제 산업(의료 HIPAA, 금융 PCI-DSS, 법적 특권)과 장치 내에 머물러야 하는 개인 데이터에 대한 유일한 실행 가능 옵션입니다.',
             '클라우드 API 공급자는 일반적으로 API 입력을 학습에 사용하지 않는 데이터 사용 정책을 공개하지만, 데이터는 여전히 해당 인프라를 통과하며 법적 절차의 대상이 됩니다. 엔터프라이즈 등급(OpenAI Enterprise, Google Workspace)은 더 엄격한 데이터 격리를 제공하지만 상당한 비용이 추가됩니다.',
-            '로컬 모델에 대한 전체 보안 감사 체크리스트는 [로컬 LLM 보안 및 프라이버시 체크리스트](/local-llms/local-llm-security-privacy-checklist)를 참조하십시오.',
+            '로컬 모델에 대한 전체 보안 감사 체크리스트는 [로컬 LLM 보안 및 프라이버시 체크리스트](/ko/local-llms/local-llm-security-privacy-checklist)를 참조하십시오.',
           ],
           callouts: [
             { type: '⚠️ 주의', text: '클라우드 API 약관은 사전 통보 없이 변경될 수 있습니다. 민감한 데이터를 처리하기 전에 해당 등급의 현재 데이터 사용 정책을 반드시 검토하십시오.' },
@@ -2146,12 +2146,12 @@ schema: {
           id: 'related-reading',
           title: '관련 자료',
           items: [
-            '[Ollama 설치 방법](/local-llms/how-to-install-ollama) — 5분 안에 로컬 LLM을 실행하여 클라우드 API 워크플로우와 비교해 보십시오',
-            '[2026 최고의 로컬 LLM](/local-llms/best-local-llms-2026) — 어떤 로컬 모델이 어떤 작업에서 클라우드 품질과 대등한지 — 벤치마크와 RAM 요구 사항',
-            '[LLM 양자화 설명](/local-llms/llm-quantization-explained) — 양자화가 품질 손실 없이 로컬 모델의 하드웨어 요구 사항을 줄이는 방법',
-            '[로컬 LLM 보안 및 프라이버시 체크리스트](/local-llms/local-llm-security-privacy-checklist) — 규제 및 프라이버시 민감 환경에서 로컬 LLM을 안전하게 실행하기 위한 12단계 감사',
-            '[토큰, 비용 및 한계](/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — 클라우드 API 가격 책정 및 로컬 모델이 더 비용 효율적이 되는 시점에 대한 상세 분석',
-            '[초보자를 위한 최고의 로컬 LLM 모델](/local-llms/best-beginner-local-llm-models) — 클라우드 API에서 로컬 추론으로 처음 전환하는 경우 시작 지점',
+            '[Ollama 설치 방법](/ko/local-llms/how-to-install-ollama) — 5분 안에 로컬 LLM을 실행하여 클라우드 API 워크플로우와 비교해 보십시오',
+            '[2026 최고의 로컬 LLM](/ko/local-llms/best-local-llms-2026) — 어떤 로컬 모델이 어떤 작업에서 클라우드 품질과 대등한지 — 벤치마크와 RAM 요구 사항',
+            '[LLM 양자화 설명](/ko/local-llms/llm-quantization-explained) — 양자화가 품질 손실 없이 로컬 모델의 하드웨어 요구 사항을 줄이는 방법',
+            '[로컬 LLM 보안 및 프라이버시 체크리스트](/ko/local-llms/local-llm-security-privacy-checklist) — 규제 및 프라이버시 민감 환경에서 로컬 LLM을 안전하게 실행하기 위한 12단계 감사',
+            '[토큰, 비용 및 한계](/ko/prompt-engineering/tokens-costs-limits-economics-of-ai-prompting) — 클라우드 API 가격 책정 및 로컬 모델이 더 비용 효율적이 되는 시점에 대한 상세 분석',
+            '[초보자를 위한 최고의 로컬 LLM 모델](/ko/local-llms/best-beginner-local-llm-models) — 클라우드 API에서 로컬 추론으로 처음 전환하는 경우 시작 지점',
             '[LLMs Locais vs APIs na Nuvem (Português)](/pt/local-llms/local-llms-vs-cloud-apis) — versão em português deste guia',
           ],
         },

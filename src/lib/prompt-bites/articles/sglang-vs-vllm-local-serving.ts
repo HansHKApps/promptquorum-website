@@ -1436,8 +1436,8 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'related',
         title: '관련 읽을거리',
         items: [
-          '[Ollama vs vLLM vs TGI](/prompt-bites/ollama-vs-vllm-vs-tgi) -- 이러한 서빙 옵션들이 더 단순한 로컬 프런트엔드와 어떻게 비교되는지',
-          '[최고의 로컬 LLM 벤치마킹 도구](/prompt-bites/best-local-llm-benchmarking-tool) -- 자신의 하드웨어에서 처리량과 지연 시간을 측정하기',
+          '[Ollama vs vLLM vs TGI](/ko/prompt-bites/ollama-vs-vllm-vs-tgi) -- 이러한 서빙 옵션들이 더 단순한 로컬 프런트엔드와 어떻게 비교되는지',
+          '[최고의 로컬 LLM 벤치마킹 도구](/ko/prompt-bites/best-local-llm-benchmarking-tool) -- 자신의 하드웨어에서 처리량과 지연 시간을 측정하기',
         ],
       },
     },

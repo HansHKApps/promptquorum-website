@@ -3377,7 +3377,7 @@ curl http://localhost:11434/v1/chat/completions \\
         ],
         columns: ['하위 패밀리', '제공 크기', '주요 용도', 'Ollama 태그 접두사'],
         tableFormat: true,
-        note: 'Qwen 3.6 27B(2026년 4월 출시)는 새로운 플래그십 모델입니다 — 256K 컨텍스트 창을 갖춘 밀집 모델로 `ollama run qwen3.6:27b`를 통해 Q4_K_M 기준 약 17GB의 VRAM으로 실행됩니다. Qwen2.5는 2026년 중반 기준 가장 폭넓게 검증된 패밀리로, Ollama와 GGUF 지원 범위가 가장 넓습니다. 더 넓은 모델 비교는 [2026년 최고의 로컬 LLM](/local-llms/best-local-llms-2026)을 참조하십시오.',
+        note: 'Qwen 3.6 27B(2026년 4월 출시)는 새로운 플래그십 모델입니다 — 256K 컨텍스트 창을 갖춘 밀집 모델로 `ollama run qwen3.6:27b`를 통해 Q4_K_M 기준 약 17GB의 VRAM으로 실행됩니다. Qwen2.5는 2026년 중반 기준 가장 폭넓게 검증된 패밀리로, Ollama와 GGUF 지원 범위가 가장 넓습니다. 더 넓은 모델 비교는 [2026년 최고의 로컬 LLM](/ko/local-llms/best-local-llms-2026)을 참조하십시오.',
       },
       hardwareTiers: {
         id: 'hardware-tiers',
@@ -3409,7 +3409,7 @@ curl http://localhost:11434/v1/chat/completions \\
         id: 'ollama-setup',
         title: 'Ollama로 설정하기',
         content: [
-          '**Ollama는 Qwen3 모델을 로컬에서 실행하는 가장 빠른 방법입니다** — 별도 설정 없이 모델 다운로드, GGUF 양자화 처리, `localhost:11434`의 로컬 API를 자동으로 관리합니다. [ollama.com](https://ollama.com/download)에서 설치하십시오. Ollama를 처음 사용하신다면 먼저 [Ollama 설치 방법](/local-llms/how-to-install-ollama)을 읽어보십시오.',
+          '**Ollama는 Qwen3 모델을 로컬에서 실행하는 가장 빠른 방법입니다** — 별도 설정 없이 모델 다운로드, GGUF 양자화 처리, `localhost:11434`의 로컬 API를 자동으로 관리합니다. [ollama.com](https://ollama.com/download)에서 설치하십시오. Ollama를 처음 사용하신다면 먼저 [Ollama 설치 방법](/ko/local-llms/how-to-install-ollama)을 읽어보십시오.',
         ],
         numberedItems: [
           { title: 'Ollama 설치', whyItMatters: 'macOS, Linux(한 줄 설치), Windows에서 사용 가능합니다. GPU 드라이버를 별도로 설정할 필요가 없습니다 — Ollama가 CUDA, ROCm, Metal을 자동으로 감지합니다.' },
@@ -3446,7 +3446,7 @@ curl http://localhost:11434/v1/chat/completions \\
         id: 'lm-studio-setup',
         title: 'LM Studio로 설정하기',
         content: [
-          '**LM Studio는 터미널 명령어 없이 Qwen3를 위한 GUI 인터페이스를 제공합니다.** [lmstudio.ai](https://lmstudio.ai)에서 다운로드하거나 [LM Studio 설치 방법](/local-llms/how-to-install-lm-studio)을 참조하십시오. macOS, Windows, Linux에서 실행됩니다.',
+          '**LM Studio는 터미널 명령어 없이 Qwen3를 위한 GUI 인터페이스를 제공합니다.** [lmstudio.ai](https://lmstudio.ai)에서 다운로드하거나 [LM Studio 설치 방법](/ko/local-llms/how-to-install-lm-studio)을 참조하십시오. macOS, Windows, Linux에서 실행됩니다.',
         ],
         numberedItems: [
           { title: '모델 브라우저 열기', whyItMatters: '"Qwen3" 또는 "Qwen Coder"를 검색하여 사용 가능한 모든 GGUF 빌드를 탐색하십시오. 권장 품질/크기 비율을 위해 Q4_K_M으로 필터링하십시오.' },
@@ -3468,7 +3468,7 @@ curl http://localhost:11434/v1/chat/completions \\
           '**Q2_K**: 7B 기준 약 3 GB. 가장 작은 파일이지만 중국어 출력 품질이 눈에 띄게 저하됩니다 — 중국어 텍스트가 포함된 경우 Qwen3에서 피하십시오.',
           '**IQ4_XS**: 7B 기준 약 4.8 GB. 최신 imatrix 양자화로 Q4_K_M보다 약간 작은 크기에서 더 높은 품질을 제공합니다 — 최신 llama.cpp 릴리즈 및 LM Studio 0.3+에서 사용 가능합니다.',
         ],
-        note: '전체 양자화 설명은 [LLM 양자화 설명](/local-llms/llm-quantization-explained)을 참조하십시오.',
+        note: '전체 양자화 설명은 [LLM 양자화 설명](/ko/local-llms/llm-quantization-explained)을 참조하십시오.',
         snippetBlocks: [
           { type: 'one-sentence', text: 'Q4_K_M은 대부분의 사용자에게 최고의 Qwen3 양자화입니다: FP16 대비 VRAM을 55% 절감하면서 품질 손실이 1% 미만입니다.' },
           { type: 'plain-terms', text: '양자화는 모델 수치를 16비트에서 4비트로 압축하여 파일 크기와 필요한 VRAM을 대략 절반으로 줄입니다. TIFF 이미지를 고품질 JPEG로 저장하는 것과 같습니다 — 파일이 작아지지만 대부분의 용도에서 결과는 거의 동일합니다.' },
@@ -3511,7 +3511,7 @@ curl http://localhost:11434/v1/chat/completions \\
         ],
         columns: ['VRAM 티어', '최고 Qwen', '최고 경쟁자', '결론'],
         tableFormat: true,
-        content2: '코딩, 추론, 다국어 작업에서 DeepSeek와 Qwen의 심층 비교는 [DeepSeek vs Qwen 로컬 비교 2026](/power-local-llm/deepseek-vs-qwen-local-comparison-2026)을 참조하십시오.',
+        content2: '코딩, 추론, 다국어 작업에서 DeepSeek와 Qwen의 심층 비교는 [DeepSeek vs Qwen 로컬 비교 2026](/ko/power-local-llm/deepseek-vs-qwen-local-comparison-2026)을 참조하십시오.',
       },
       regionalContext: {
         id: 'regional-context',
@@ -3519,7 +3519,7 @@ curl http://localhost:11434/v1/chat/completions \\
         content: [
           '**Qwen3를 로컬에서 실행하면 데이터가 외부 기기로 전혀 전송되지 않습니다 — 중국의 데이터 보안법(DSL) 또는 사이버보안법에 따른 컴플라이언스 위험이 없습니다.** 클라우드 기반 LLM API는 프롬프트를 해외 서버로 전송해야 하며, 이는 DSL 제31조에 따른 국경 간 데이터 전송 위험을 초래합니다.',
           'Qwen3는 Alibaba의 Qwen 팀이 주로 중국어 및 다국어 코퍼스로 학습시킨 모델입니다. 이로 인해 간체 중국어, 번체 중국어, 고전 중국어, 혼합 언어(중국어/영어) 문서에서 로컬로 배포 가능한 가장 강력한 모델이 됩니다.',
-          '**중국 내 엔터프라이즈 배포의 경우**: 에어갭(인터넷 차단) Qwen3 설정은 생성형 AI에 관한 CAC 규정을 완전히 준수합니다. 모델은 전적으로 로컬 컴퓨팅에서 실행됩니다 — 규제 기관의 관심사는 학습 데이터와 출력 모더레이션이지, 오프라인 하드웨어에서의 추론이 아닙니다. 완전한 에어갭 설정 가이드는 [완전 오프라인 AI 실행](/power-local-llm/local-ai-behind-firewall-offline-2026)을 참조하십시오.',
+          '**중국 내 엔터프라이즈 배포의 경우**: 에어갭(인터넷 차단) Qwen3 설정은 생성형 AI에 관한 CAC 규정을 완전히 준수합니다. 모델은 전적으로 로컬 컴퓨팅에서 실행됩니다 — 규제 기관의 관심사는 학습 데이터와 출력 모더레이션이지, 오프라인 하드웨어에서의 추론이 아닙니다. 완전한 에어갭 설정 가이드는 [완전 오프라인 AI 실행](/ko/power-local-llm/local-ai-behind-firewall-offline-2026)을 참조하십시오.',
         ],
         snippetBlocks: [
           { type: 'one-sentence', text: 'Qwen3는 다운로드 후 완전히 오프라인으로 실행됩니다 — 데이터가 기기를 떠나지 않아 중국의 데이터 보안법에 따른 국경 간 데이터 전송 위험을 없앱니다.' },

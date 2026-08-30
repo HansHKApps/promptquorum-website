@@ -1141,5 +1141,257 @@
     ],
     "reason": "Page 49 batch: this is the single largest query-volume page found this campaign. The literal spelled-out phrase co-star prompt framework context objective style tone audience response alone gets 373 impr at pos 5.3 with 0% CTR, plus 20+ near-identical variants (official/source/format/singapore suffixes) totaling well over 1,500 combined impressions - all 0% CTR despite decent positions, because seoTitle never spelled out the acronym while the H1 title already did. Fixed EN and generalized the same fix to all 8 other locales since it is the same literal fact in every language, not an EN-specific query pattern. Separately found the co-star framework singapore / govtech singapore cluster (~60 impr combined) completely uncovered - CO-STAR's real, verifiable origin (Sheila Teo, GovTech Singapore prompt engineering competition) was never mentioned. Added a sourced FAQ to all 9 locales.",
     "baseline": null
+  },
+  {
+    "id": "77a6297a-9f52-4285-a602-296f0cc21f18",
+    "slug": "/ja/power-local-llm/uncensored-local-llm-creative-writing-ethics",
+    "date": "2026-08-30T08:14:39.227Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "無検閲ローカルLLMと創作活動：適切な用途と倫理 2026",
+        "new": "無検閲ローカルLLM 5選：小説創作の設定と倫理 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "無検閲ローカルLLMと創作活動：推奨モデル、Ollama設定、倫理的責任、適切な用途、創作者が守るべきガイドラインを網羅。",
+        "new": "小説・ダークフィクション向け無検閲ローカルLLMはHermes 3とDolphin 3.0が最適。無修正/非検閲モデル5つをVRAM別に比較し、LM StudioとOllamaの設定手順と倫理的責任まで解説。2026年版。"
+      }
+    ],
+    "reason": "geo-meta-optimizer: coherence-B2-fix — added 小説 + 5選 to title (206 impr @14.6% CTR query), swapped Ollama-only meta for LM Studio+Ollama, added 無修正/非検閲 synonym coverage (~680 impr at pos 7-11.5 with near-zero clicks) + JA-language and terminology FAQs",
+    "baseline": {
+      "position": 5.3,
+      "impressions": 9008,
+      "clicks": 596,
+      "ctr": 0.06616341030195382,
+      "period": "GSC last 28d as pasted 2026-08-30"
+    }
+  },
+  {
+    "id": "321aee8f-434c-475d-8c31-fbbde7f797e2",
+    "slug": "/ja/power-local-llm/uncensored-local-llm-creative-writing-ethics",
+    "date": "2026-08-30T08:32:51.154Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "無検閲ローカルLLM 5選：小説創作の設定と倫理 2026",
+        "new": "無検閲ローカルLLM 5選：日本語小説と倫理 2026"
+      },
+      {
+        "field": "metaDescription",
+        "old": "小説・ダークフィクション向け無検閲ローカルLLMはHermes 3とDolphin 3.0が最適。無修正/非検閲モデル5つをVRAM別に比較し、LM StudioとOllamaの設定手順と倫理的責任まで解説。2026年版。",
+        "new": "小説・ダークフィクション向け無検閲ローカルLLMはHermes 3とDolphin 3.0が最適。無修正/非検閲モデル5つをVRAM別に比較し、日本語で書く場合のモデル選び、LM StudioとOllamaの設定、倫理的責任まで解説。"
+      }
+    ],
+    "reason": "geo-meta-optimizer: coherence-B2-fix part 2 — added 日本語 to title + new japanese section (536 impr query, 日本語 was 0 occurrences) + 4 FAQs for zero-click clusters (画像生成/脱獄/NSFW/LM Studio). Perfect-page 6/10 -> 9/10",
+    "baseline": {
+      "position": 5.3,
+      "impressions": 9008,
+      "clicks": 596,
+      "ctr": 0.06616341030195382,
+      "period": "GSC last 28d as pasted 2026-08-30"
+    }
+  },
+  {
+    "id": "12c7235d-b7ec-4770-be12-9add658b07e1",
+    "slug": "/de/local-llms",
+    "date": "2026-08-30T08:45:17.984Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Beste lokale LLMs nach VRAM-Tier 2026: 12GB, 24GB, 48GB",
+        "new": "Beste lokale LLMs 2026: Modelle & Hardware im Vergleich"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Beste lokale LLM-Modelle nach VRAM-Tier (4–48 GB): RTX 3060 12GB, RTX 4090, Apple Silicon-Leitfäden. Ollama-Einrichtung, Hardware-Tier-Vergleich, Anfänger-Anleitungen.",
+        "new": "Lokale LLMs (Local LLMs) laufen komplett auf Ihrem Rechner – ohne API-Kosten. Beste Modelle von 4 bis 48 GB VRAM, Hardware und Ollama-Setup im Vergleich."
+      }
+    ],
+    "reason": "geo-meta-optimizer: coherence-A-fix — body was already full-coverage, title over-narrowed to VRAM tiers. Dropped '12GB, 24GB, 48GB' (only VRAM-numeric query gets 0 clicks at pos 8.5), kept the 'Beste lokale LLMs' phrase that ranks 1.4-2.5, added Vergleich (18.2% CTR query). Meta now answer-first. Perfect-page 8/10 -> 9/10",
+    "baseline": {
+      "position": 4.9,
+      "impressions": 7883,
+      "clicks": 273,
+      "ctr": 0.03463148547507294,
+      "period": "GSC last 28d as pasted 2026-08-30"
+    }
+  },
+  {
+    "id": "729892c7-1f8a-469f-a324-c7a001a52a01",
+    "slug": "/de/local-llms",
+    "date": "2026-08-30T08:49:21.263Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Beste lokale LLMs 2026: Modelle & Hardware im Vergleich",
+        "new": "Beste lokale LLMs 2026: Local-LLM-Modelle im Vergleich"
+      }
+    ],
+    "reason": "geo-meta-optimizer: criterion #1 fix — 'local llm' is the page's single biggest query at 554 impr (32% of listed), pos 4.1, 3.6% CTR, and the German title carried no English. Local-LLM-Modelle is a natural German compound. Traded out 'Hardware' (36 impr, 0 clicks). Perfect-page 9/10 -> 10/10",
+    "baseline": {
+      "position": 4.9,
+      "impressions": 7883,
+      "clicks": 273,
+      "ctr": 0.03463148547507294,
+      "period": "GSC last 28d as pasted 2026-08-30"
+    }
+  },
+  {
+    "id": "f14d50fb-607c-4d27-bab2-638138baf27f",
+    "slug": "/ko/local-llms/what-are-local-llms",
+    "date": "2026-08-30T08:58:21.355Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "로컬 LLM이란? 자체 하드웨어에서 AI 모델을 실행하는 방법",
+        "new": "로컬 AI와 로컬 LLM 2026: 개념과 구축 방법"
+      },
+      {
+        "field": "metaDescription",
+        "old": "로컬 LLM은 인터넷 없이 자체 하드웨어에서 AI 모델을 실행합니다. 로컬 LLM이 무엇인지, 어떻게 작동하는지, 언제 사용해야 하는지 알아보세요. 2026년 가이드.",
+        "new": "로컬 AI는 인터넷 없이 내 하드웨어에서 실행되는 AI이고, 로컬 LLM은 그중 텍스트를 다루는 언어 모델입니다. 개념, 필요한 하드웨어, 4단계 구축 순서까지 정리한 2026년 가이드."
+      }
+    ],
+    "reason": "geo-meta-optimizer: coherence-C-fix — 로컬 AI cluster is ~2,780 impr at 1.4% CTR but appeared once in the body; 구축 cluster ~690 impr at 5% CTR barely covered. Old title was 34 CJK chars (over 32), question-form, and had no year despite semi_annual. Added localAiTerms + buildSteps sections, FAQs 4->11, fixed 14 ko internal links missing the /ko/ prefix. Perfect-page 5/10 -> 10/10",
+    "baseline": {
+      "position": 5.9,
+      "impressions": 7491,
+      "clicks": 183,
+      "ctr": 0.024429315178213857,
+      "period": "GSC last 28d as pasted 2026-08-30"
+    }
+  },
+  {
+    "id": "24589aa6-b762-4d6f-8980-de6196619d9a",
+    "slug": "/zh/local-llms/local-llm-hardware-guide-2026",
+    "date": "2026-08-30T09:04:47.519Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "按显存划分的本地LLM硬件要求：8、16和24 GB GPU的最佳模型，以及70B和GLM-5.3的精确需求。RTX 50系列、Apple M5、2026年7月价格。",
+        "new": "按显存划分的本地LLM硬件要求：8、16和24 GB GPU的最佳模型，以及70B和GLM-5.3的精确需求。RTX 50系列、Apple M5。"
+      }
+    ],
+    "reason": "month-drift fix: stale 'July 2026 prices' clause survived the 2026-08-28 sweep in ja/zh/ko only — en/es/ar/pt/de/fr metas were already clean. Classic locale drift; validator misses it (not trailing-stamp form).",
+    "baseline": null
+  },
+  {
+    "id": "58e1dfdd-6ed0-4c4a-bd5a-5b0044ac9144",
+    "slug": "/ja/local-llms/local-llm-hardware-guide-2026",
+    "date": "2026-08-30T09:04:47.614Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "VRAM別ローカルLLMハードウェア要件：8、16、24 GB GPU向けベストモデルと70BおよびGLM-5.3をローカルで動かすために必要なもの。RTX 50シリーズ、Apple M5、2026年7月価格。",
+        "new": "VRAM別ローカルLLMハードウェア要件：8、16、24 GB GPU向けベストモデルと70BおよびGLM-5.3をローカルで動かすために必要なもの。RTX 50シリーズ、Apple M5。"
+      }
+    ],
+    "reason": "month-drift fix: stale 'July 2026 prices' clause survived the 2026-08-28 sweep in ja/zh/ko only — en/es/ar/pt/de/fr metas were already clean. Classic locale drift; validator misses it (not trailing-stamp form).",
+    "baseline": null
+  },
+  {
+    "id": "8487fda1-100f-4bca-b30f-65ee1757a1a7",
+    "slug": "/ko/local-llms/local-llm-hardware-guide-2026",
+    "date": "2026-08-30T09:04:47.709Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "VRAM별 LLM 하드웨어 요구 사항: 8, 16, 24GB GPU를 위한 최적 모델과 70B 및 GLM-5.3에 정확히 필요한 사양. RTX 50 시리즈, Apple M5, 2026년 7월 가격.",
+        "new": "VRAM별 LLM 하드웨어 요구 사항: 8, 16, 24GB GPU를 위한 최적 모델과 70B 및 GLM-5.3에 정확히 필요한 사양. RTX 50 시리즈, Apple M5."
+      }
+    ],
+    "reason": "month-drift fix: stale 'July 2026 prices' clause survived the 2026-08-28 sweep in ja/zh/ko only — en/es/ar/pt/de/fr metas were already clean. Classic locale drift; validator misses it (not trailing-stamp form).",
+    "baseline": null
+  },
+  {
+    "id": "3b51b317-38a9-4804-975b-5a094324211d",
+    "slug": "/de/smart-home/best-mini-pc-home-assistant-local-ai",
+    "date": "2026-08-30T09:14:20.360Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Bester Mini-PC für Home Assistant 2026: Beelink SER8 (~650 €) für Frigate + ein 7B-Modell; Intel-N150-Geräte (~180–230 €) fürs Budget; GEEKOM A9 Max (~1.099 €+) für On-Device-KI. Direkt verglichen.",
+        "new": "Bester Mini-PC für Home Assistant 2026: Beelink SER8 (~650 €) für Frigate plus 7B-Modell, Intel-N150-Rechner ab ~180 € fürs Budget. Empfehlung nach Bedarf."
+      }
+    ],
+    "reason": "geo-meta-optimizer: meta was 197 chars (truncated ~155, so the GEEKOM pick never displayed). Rewritten to 155 with 'Rechner' (~85 impr, 0 clicks) and 'Empfehlung' (Empfehlung queries convert at 12-13%). FAQs 5->12 covering the zero-click tail. Perfect-page 9/10 -> 10/10",
+    "baseline": {
+      "position": 6.3,
+      "impressions": 6517,
+      "clicks": 235,
+      "ctr": 0.03605953659659353,
+      "period": "GSC last 28d as pasted 2026-08-30"
+    }
+  },
+  {
+    "id": "37a21ae1-43f1-4dfd-9a5c-eeb4c6d6d1ef",
+    "slug": "/de/local-llms/llm-quantization-explained",
+    "date": "2026-08-30T09:21:35.118Z",
+    "fields": [
+      {
+        "field": "metaDescription",
+        "old": "Q4_K_M vs Q4_0, Q4_K_M vs Q4_K_S, Q8_0 vs Q4_K_M und Q8_0 vs Q8_K_XL im Vergleich. Bits, VRAM pro 7B, Qualitätsverlust und welche GGUF-Quantisierung Sie 2026 für Ihren VRAM wählen sollten.",
+        "new": "Q4_K_M ist für die meisten die richtige Wahl: ~4,5 GB pro 7B-Modell bei 1–3% Qualitätsverlust. Vergleich mit Q4_K_S, Q4_K_XL, Q5_K_M und Q8_0 nach VRAM."
+      }
+    ],
+    "reason": "geo-meta-optimizer: meta was 188 chars (truncated) and led with a list of vs-pairs instead of an answer. q4_k_m = 332 impr at 0.9% CTR despite position 3.4 — likely AI Overview absorption on a definitional token query, so the snippet must offer what the AIO does not. Added Q4_K_XL section (q4_k_m vs q4_k_xl = 21 impr, 0 coverage in ALL locales), mandatory snippetBlocks (missing in 6 of 9 locales), FAQs 17->21. 7/10 -> 10/10",
+    "baseline": {
+      "position": 3.7,
+      "impressions": 2415,
+      "clicks": 48,
+      "ctr": 0.01987577639751553,
+      "period": "GSC last 28d as pasted 2026-08-30"
+    }
+  },
+  {
+    "id": "f045b705-8aa9-4141-8b72-446548306eca",
+    "slug": "/zh/power-local-llm/best-gpu-buying-guide-local-llm-2026",
+    "date": "2026-08-30T09:45:56.948Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "2026 本地大模型最佳显卡：从入门到 RTX 5090",
+        "new": "本地大模型显卡价格 2026：RTX 4090/5090 选购"
+      },
+      {
+        "field": "metaDescription",
+        "old": "八款显卡在四个预算档次中对比本地大模型表现：从 RTX 3060 到 RTX 5090。显存、token/s、功耗和 2026 年 7 月价格，附每档可运行的模型规模。",
+        "new": "本地大模型显卡怎么选：入门看 RTX 4060 Ti 16GB，跑 70B 看 RTX 4090 与 5090。八款显卡按显存、token/s、功耗和价格对比，含二手行情与各档可运行的模型规模。"
+      }
+    ],
+    "reason": "geo-meta-optimizer: 价格 appears in ~15 of 17 zh queries but was absent from the title; 4090 is the most-searched model (7 queries) and was absent too. Meta carried a stale '2026 年 7 月价格'. Added FAQs for China-market pricing (京东/天猫/闲鱼), used 4090 buying, and RTX 5090 Ti (6 impr, 0 body coverage). 6/10 -> 10/10",
+    "baseline": {
+      "position": 5.3,
+      "impressions": 4930,
+      "clicks": 46,
+      "ctr": 0.009330628803245436,
+      "period": "GSC last 28d as pasted 2026-08-30"
+    }
+  },
+  {
+    "id": "6137c6bc-0e25-4df9-876e-66f66ede59cd",
+    "slug": "/zh/local-llms/apple-silicon-local-llm-guide-2026",
+    "date": "2026-08-30T10:03:10.842Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Apple Silicon 2026：M6至M5 Ultra",
+        "new": "Mac 本地大模型 2026：M5 Pro/Max/Ultra"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Apple于2026年8月25日更新了Mac mini（M6、M5 Pro）和Mac Studio（M5 Max、M5 Ultra最高512GB）。完整指南：内存层级、基准测试、Mac选购建议。",
+        "new": "本地大模型选 Mac：32GB 最高跑 13B，64GB 跑到 34B，128GB 跑 70B。M5 Pro 307 GB/s、M5 Max 614 GB/s 的带宽差距与各机型选购建议。"
+      }
+    ],
+    "reason": "geo-meta-optimizer: seoTitle of a local-LLM guide had no LLM term; meta opened with a launch announcement not a buying answer. Top query (13 impr, 32% of listed, 0 clicks) is a conversational buying question about M5/Pro/Max + 32 vs 64GB for video/3D/local AI — 视频/剪辑/三维 had ZERO coverage. Added memoryForWorkload section + 4 FAQs, de-stamped month from heading. 6/10 -> 10/10",
+    "baseline": {
+      "position": 5.1,
+      "impressions": 4648,
+      "clicks": 163,
+      "ctr": 0.03506884681583477,
+      "period": "GSC last 28d as pasted 2026-08-30"
+    }
   }
 ]

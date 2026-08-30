@@ -3201,7 +3201,7 @@ schema: {
           '다국어 및 코딩 최고: **Qwen3 8B** -- HumanEval 57.3%, MMLU에서 Llama 3.1 8B와 동등하거나 그 이상이며, 29개 이상 언어를 기본 지원합니다.',
           '**7B/8B Q4 어림 계산**: Q4_K_M 양자화의 8B 모델은 약 5-5.5 GB RAM이 필요합니다 -- 4비트 기준 파라미터 10억 개당 약 0.6-0.7 GB.',
           'RAM 2 GB 이하 최적: **Llama 3.2 1B** -- 다운로드 약 1.3 GB, 사용 가능한 가장 작은 옵션이며, 품질은 3B 이상 모델보다 눈에 띄게 낮지만 매우 오래된 하드웨어에서도 실행됩니다.',
-          '👉 **로컬이 적합한지 확신이 없으신가요?** 선택 전에 [로컬 LLM vs 클라우드 비교](/local-llms/local-llm-limitations)를 읽어보세요 -- 속도, 품질, 비용 상충 관계를 다룹니다.',
+          '👉 **로컬이 적합한지 확신이 없으신가요?** 선택 전에 [로컬 LLM vs 클라우드 비교](/ko/local-llms/local-llm-limitations)를 읽어보세요 -- 속도, 품질, 비용 상충 관계를 다룹니다.',
         ],
       },
       quickStart: {
@@ -3237,7 +3237,7 @@ schema: {
         title: '초보자용 로컬 LLM 모델을 어떻게 선택할까요?',
         content: [
           '**로컬 LLM의 모델 선택은 세 가지 제약 조건에 달려 있습니다: 사용 가능한 RAM, 추론 속도, 작업 유형 -- 이 우선순위 순서로.**',
-          '파라미터 수(3B, 7B, 13B)가 RAM 요구사항의 주요 결정 요인입니다. 대부분의 로컬 추론 도구의 기본값인 [4비트 양자화](/local-llms/llm-quantization-explained)에서는 파라미터 수에 약 0.5를 곱하여 필요한 GB RAM을 추정할 수 있습니다. Q4_K_M 기준 7B 모델은 약 4.5 GB RAM이 필요합니다.',
+          '파라미터 수(3B, 7B, 13B)가 RAM 요구사항의 주요 결정 요인입니다. 대부분의 로컬 추론 도구의 기본값인 [4비트 양자화](/ko/local-llms/llm-quantization-explained)에서는 파라미터 수에 약 0.5를 곱하여 필요한 GB RAM을 추정할 수 있습니다. Q4_K_M 기준 7B 모델은 약 4.5 GB RAM이 필요합니다.',
           '대부분의 초보자에게는 **Q4_K_M 양자화의 7B 모델**이 8 GB 이상의 기기에서 품질, 속도, RAM 사용의 최적 균형을 제공합니다. 4-6 GB RAM 기기에서는 3B 모델이 실질적인 상한선입니다.',
         ],
         image: '/images/best-beginner-local-llm-models-3b-vs-7b-hero-ko.webp',
@@ -3318,7 +3318,7 @@ schema: {
         title: '#5 Qwen3 8B -- 다국어 및 코딩 최고 모델',
         content: [
           '**Qwen3 8B(82억 파라미터)는 HumanEval에서 57.3%를 기록하고, MMLU에서 Llama 3.1 8B와 동등하거나 그 이상이며, 한국어, 중국어, 일본어, 아랍어, 주요 유럽 언어를 포함한 29개 이상 언어를 기본 지원합니다.** 비영어권 워크플로우나 코딩 집약적 사용 사례에 추천하는 선택이며, 이 목록의 다국어 추천 자리에서 이전 Qwen2.5 7B를 대체합니다.',
-          'Qwen3 8B는 32K 컨텍스트 윈도우(YaRN으로 131K까지 확장 가능)를 사용하며 JSON 모드로 구조화된 출력을 지원하고, 더 어려운 추론 작업을 위한 선택적 "생각 모드"도 제공합니다(느리지만 더 정확). 모델은 instruct 버전과 base 버전으로 제공되며 -- 채팅 용도에는 항상 instruct 버전을 사용하십시오. 자세한 벤치마크 데이터는 [Qwen vs Llama vs Mistral 벤치마크 비교](/local-llms/qwen-vs-llama-vs-mistral)를 참조하세요.',
+          'Qwen3 8B는 32K 컨텍스트 윈도우(YaRN으로 131K까지 확장 가능)를 사용하며 JSON 모드로 구조화된 출력을 지원하고, 더 어려운 추론 작업을 위한 선택적 "생각 모드"도 제공합니다(느리지만 더 정확). 모델은 instruct 버전과 base 버전으로 제공되며 -- 채팅 용도에는 항상 instruct 버전을 사용하십시오. 자세한 벤치마크 데이터는 [Qwen vs Llama vs Mistral 벤치마크 비교](/ko/local-llms/qwen-vs-llama-vs-mistral)를 참조하세요.',
         ],
         rows: [
           { '사양': '파라미터', '값': '8.2B' },
@@ -3364,8 +3364,8 @@ schema: {
         id: 'regional-context',
         title: '지역에 따라 어떤 모델을 선택해야 할까요?',
         content: [
-          '**한국 (개인정보보호법)**: 한국 개인정보보호법(PIPA)에 따라 개인 데이터를 로컬에서 처리하는 조직은 데이터 처리 내역을 문서화해야 합니다. Ollama를 통한 로컬 추론은 데이터가 외부 서버로 전송되지 않으므로 데이터 현지화 요건을 충족합니다. 금융, 의료, 법률 등 규제 산업의 경우 로컬 LLM 추론은 API 호출의 규정 준수 대안입니다. 이 다섯 가지 초보자 추천 모델 중에서는 Qwen3 8B가 가장 강력한 네이티브 한국어 토크나이제이션을 갖추고 있습니다. 이 입문 등급을 넘어서는 전용 한국어 로컬 모델은 [로컬용 최고의 한국어 언어 모델](/prompt-bites/best-korean-language-models-local)을 참조하세요.',
-          '**EU / GDPR**: EU 조직이 개인 데이터를 로컬에서 처리할 때 컴플라이언스 문서화를 위해 모델 출처가 중요합니다. 독일 BSI 지침은 전문적 맥락에서 사용되는 AI 시스템에 대해 모델 출처와 라이선스 유형의 문서화를 요구합니다. Llama(Meta/미국), Gemma(Google/미국), Qwen(Alibaba/중국)은 모두 로컬 추론에서 GDPR 상 기술적으로 사용 가능합니다 -- 가장 깔끔한 EU 출처 서술을 원한다면 Mistral AI(프랑스)가 Apache 2.0 라이선스 모델을 제공하지만, 현재 Mistral Small 릴리스(24B 이상)는 이 페이지의 4-8 GB 초보자 RAM 범위를 초과합니다. 실행에 필요한 GPU 등급은 [하드웨어 가이드](/local-llms/local-llm-hardware-guide-2026)를 참조하세요.',
+          '**한국 (개인정보보호법)**: 한국 개인정보보호법(PIPA)에 따라 개인 데이터를 로컬에서 처리하는 조직은 데이터 처리 내역을 문서화해야 합니다. Ollama를 통한 로컬 추론은 데이터가 외부 서버로 전송되지 않으므로 데이터 현지화 요건을 충족합니다. 금융, 의료, 법률 등 규제 산업의 경우 로컬 LLM 추론은 API 호출의 규정 준수 대안입니다. 이 다섯 가지 초보자 추천 모델 중에서는 Qwen3 8B가 가장 강력한 네이티브 한국어 토크나이제이션을 갖추고 있습니다. 이 입문 등급을 넘어서는 전용 한국어 로컬 모델은 [로컬용 최고의 한국어 언어 모델](/ko/prompt-bites/best-korean-language-models-local)을 참조하세요.',
+          '**EU / GDPR**: EU 조직이 개인 데이터를 로컬에서 처리할 때 컴플라이언스 문서화를 위해 모델 출처가 중요합니다. 독일 BSI 지침은 전문적 맥락에서 사용되는 AI 시스템에 대해 모델 출처와 라이선스 유형의 문서화를 요구합니다. Llama(Meta/미국), Gemma(Google/미국), Qwen(Alibaba/중국)은 모두 로컬 추론에서 GDPR 상 기술적으로 사용 가능합니다 -- 가장 깔끔한 EU 출처 서술을 원한다면 Mistral AI(프랑스)가 Apache 2.0 라이선스 모델을 제공하지만, 현재 Mistral Small 릴리스(24B 이상)는 이 페이지의 4-8 GB 초보자 RAM 범위를 초과합니다. 실행에 필요한 GPU 등급은 [하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide-2026)를 참조하세요.',
           '**중국**: Qwen3 8B (Alibaba)가 중국어 워크플로우의 첫 번째 모델로 자연스러운 선택입니다. 네이티브 중국어 토크나이제이션과 29개 이상 언어 지원으로 중국어 우선 워크플로우의 표준이 됩니다. 중국 데이터 보안법(数据安全法)에 따른 중국 기업 배포의 경우, Ollama를 통한 로컬 실행의 Qwen3가 데이터 현지화 요건을 충족합니다.',
         ],
       },
@@ -3373,7 +3373,7 @@ schema: {
         id: 'how-to-download',
         title: '이 모델들을 어떻게 다운로드하고 실행하나요?',
         content: [
-          '**5개 모델 모두 단 하나의 Ollama 명령으로 설치됩니다 -- 수동 설정이 필요 없습니다.** 설치는 [Ollama 설치 방법](/local-llms/how-to-install-ollama)을 참조하고, 단계별 첫 실행 안내는 [첫 로컬 LLM 실행](/local-llms/run-first-local-llm)을 참조하세요. RAM이 제한된 노트북에서 실행하는 경우 [노트북에서 로컬 LLM 실행 방법](/local-llms/local-llm-on-laptop)에서 제한된 하드웨어를 위한 양자화 및 성능 튜닝을 다룹니다.',
+          '**5개 모델 모두 단 하나의 Ollama 명령으로 설치됩니다 -- 수동 설정이 필요 없습니다.** 설치는 [Ollama 설치 방법](/ko/local-llms/how-to-install-ollama)을 참조하고, 단계별 첫 실행 안내는 [첫 로컬 LLM 실행](/ko/local-llms/run-first-local-llm)을 참조하세요. RAM이 제한된 노트북에서 실행하는 경우 [노트북에서 로컬 LLM 실행 방법](/ko/local-llms/local-llm-on-laptop)에서 제한된 하드웨어를 위한 양자화 및 성능 튜닝을 다룹니다.',
           '첫 번째 모델이 실행되면 다음 단계는 효과적으로 프롬프트를 작성하는 방법을 배우는 것입니다. [프롬프트 엔지니어링 기초](https://www.promptquorum.com/prompt-engineering)부터 시작하세요 -- 온도 설정부터 출력 형식까지 모든 프롬프트에 필요한 빌딩 블록을 다루는 16개 가이드입니다.',
         ],
       },
@@ -3392,14 +3392,14 @@ schema: {
         id: 'related-reading',
         title: '관련 읽을거리',
         items: [
-          '[Ollama 설치 방법](/local-llms/how-to-install-ollama) -- 설치 및 첫 모델 다운로드',
-          '[첫 로컬 LLM 실행](/local-llms/run-first-local-llm) -- 설치 후 시작하기',
-          '[노트북에서 로컬 LLM 실행 방법](/local-llms/local-llm-on-laptop) -- RAM 및 발열 최적화',
-          '[로컬 LLM 설정 트러블슈팅](/local-llms/troubleshooting-local-llm-setup) -- 일반적인 문제 디버깅',
-          '[Qwen vs Llama vs Mistral](/local-llms/qwen-vs-llama-vs-mistral) -- 7B, 13B, 70B의 세 모델 패밀리 전체 벤치마크 비교',
-          '[로컬 LLM 하드웨어 가이드 2026](/local-llms/local-llm-hardware-guide-2026) -- 3B에서 7B, 13B 모델로 업그레이드하기 위한 GPU 및 RAM 요구사항',
-          '[Qwen 로컬 배포 가이드 (2026)](/local-llms/qwen-local-deployment-guide-2026) -- Ollama를 통한 초보자 친화적 Qwen3 8B 설정: 실행까지 한 명령으로.',
-          '[ChatGPT Plus 최고의 오픈소스 대안](/prompt-bites/best-open-source-alternatives-to-chatgpt-plus) -- 처음 로컬 LLM을 사용하는 사용자를 위한 노코드 프론트엔드.',
+          '[Ollama 설치 방법](/ko/local-llms/how-to-install-ollama) -- 설치 및 첫 모델 다운로드',
+          '[첫 로컬 LLM 실행](/ko/local-llms/run-first-local-llm) -- 설치 후 시작하기',
+          '[노트북에서 로컬 LLM 실행 방법](/ko/local-llms/local-llm-on-laptop) -- RAM 및 발열 최적화',
+          '[로컬 LLM 설정 트러블슈팅](/ko/local-llms/troubleshooting-local-llm-setup) -- 일반적인 문제 디버깅',
+          '[Qwen vs Llama vs Mistral](/ko/local-llms/qwen-vs-llama-vs-mistral) -- 7B, 13B, 70B의 세 모델 패밀리 전체 벤치마크 비교',
+          '[로컬 LLM 하드웨어 가이드 2026](/ko/local-llms/local-llm-hardware-guide-2026) -- 3B에서 7B, 13B 모델로 업그레이드하기 위한 GPU 및 RAM 요구사항',
+          '[Qwen 로컬 배포 가이드 (2026)](/ko/local-llms/qwen-local-deployment-guide-2026) -- Ollama를 통한 초보자 친화적 Qwen3 8B 설정: 실행까지 한 명령으로.',
+          '[ChatGPT Plus 최고의 오픈소스 대안](/ko/prompt-bites/best-open-source-alternatives-to-chatgpt-plus) -- 처음 로컬 LLM을 사용하는 사용자를 위한 노코드 프론트엔드.',
           '[소비자 하드웨어를 위한 최고의 7B 모델](/ko/local-llms/best-7b-models-consumer-hardware) -- 소비자 하드웨어를 위한 최고의 7B 모델',
         ],
       },
@@ -3421,7 +3421,7 @@ schema: {
           },
           {
             q: 'Mistral Small 3.2는 좋은 초보자용 로컬 LLM인가요?',
-            a: '아닙니다 -- Mistral Small 3.2는 24B 파라미터 모델로 약 14 GB 이상의 RAM/VRAM이 필요하며, 이 페이지가 다루는 4-8 GB 초보자 범위를 크게 초과합니다. 이는 과거 이 페이지에서 추천했던 7B "Mistral Small v0.3"와는 다른, 더 큰 모델입니다. RAM이 8 GB라면 대신 Llama 3.1 8B나 Qwen3 8B로 시작하세요. Mistral Small 3.2를 실행하는 데 필요한 16GB 이상 GPU 등급은 [하드웨어 가이드](/local-llms/local-llm-hardware-guide-2026)를 참조하세요.',
+            a: '아닙니다 -- Mistral Small 3.2는 24B 파라미터 모델로 약 14 GB 이상의 RAM/VRAM이 필요하며, 이 페이지가 다루는 4-8 GB 초보자 범위를 크게 초과합니다. 이는 과거 이 페이지에서 추천했던 7B "Mistral Small v0.3"와는 다른, 더 큰 모델입니다. RAM이 8 GB라면 대신 Llama 3.1 8B나 Qwen3 8B로 시작하세요. Mistral Small 3.2를 실행하는 데 필요한 16GB 이상 GPU 등급은 [하드웨어 가이드](/ko/local-llms/local-llm-hardware-guide-2026)를 참조하세요.',
           },
           {
             q: 'Ollama로 이 모델들을 어떻게 실행하나요?',

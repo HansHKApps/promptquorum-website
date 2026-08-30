@@ -3590,7 +3590,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
             '**AI 코딩 세션의 출력은 제공하는 지시만큼만 좋습니다 — 모호한 프롬프트는 모호한 코드를 생성하고, 구조화된 프롬프트는 프로덕션 준비 코드를 생성합니다.** 대형 언어 모델(LLM) — GPT-5.6, Claude Opus 5, Gemini 3.1 Pro를 뒷받침하는 신경망 계열 — 은 사용자의 프로젝트를 "이해"하지 않습니다. 수십억 줄의 코드에서 학습한 패턴을 기반으로 다음으로 가장 가능성 있는 토큰을 예측합니다.',
             '이는 프롬프트가 단순한 질문이 아닌 아키텍처 계약임을 의미합니다. 프로그래밍 언어, 예상 입출력, 처리할 엣지 케이스를 명시하면 프로덕션에 더 가까운 코드를 일관되게 받을 수 있습니다.',
             '한 문장으로: 개발자의 역할은 모든 줄을 직접 작성하는 것에서 AI가 실행하는 지시를 작성하는 것으로 전환되었습니다 — 필요한 기술은 키보딩 속도가 아닌 프롬프트 엔지니어링입니다.',
-            '이러한 프롬프팅 기법은 로컬 코딩 스택에도 동일하게 적용됩니다. Continue.dev + Ollama + Qwen3-Coder의 오픈 소스 조합으로 클라우드 보조 도구를 대체하려면 [GitHub Copilot을 로컬 LLM으로 교체하기](/power-local-llm/replace-github-copilot-with-local-llm)를 참조하십시오.',
+            '이러한 프롬프팅 기법은 로컬 코딩 스택에도 동일하게 적용됩니다. Continue.dev + Ollama + Qwen3-Coder의 오픈 소스 조합으로 클라우드 보조 도구를 대체하려면 [GitHub Copilot을 로컬 LLM으로 교체하기](/ko/power-local-llm/replace-github-copilot-with-local-llm)를 참조하십시오.',
           ],
         },
         modelComparison: {
@@ -3653,14 +3653,14 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'how-does-chain-of-thought-prompting-improve-debugging',
           title: 'Chain-of-Thought 프롬프팅은 어떻게 디버깅을 개선합니까?',
           content: [
-            '**[Chain-of-Thought (CoT) 프롬프팅](/prompt-engineering/chain-of-thought-prompting) — 최종 답변을 생성하기 전에 모델이 단계별로 추론하도록 요청하는 것 — 은 모델의 논리를 검사 가능하게 만들어 디버깅 오류를 줄입니다.** CoT 프롬프팅은 LLM이 출력을 생성하기 전에 중간 추론 단계를 생성하도록 요청하는 기법입니다. 디버깅의 경우, 이는 모델이 오류 경로를 명시적으로 추적하여 논리가 어디서 무너지는지 정확히 파악할 수 있음을 의미합니다.',
+            '**[Chain-of-Thought (CoT) 프롬프팅](/ko/prompt-engineering/chain-of-thought-prompting) — 최종 답변을 생성하기 전에 모델이 단계별로 추론하도록 요청하는 것 — 은 모델의 논리를 검사 가능하게 만들어 디버깅 오류를 줄입니다.** CoT 프롬프팅은 LLM이 출력을 생성하기 전에 중간 추론 단계를 생성하도록 요청하는 기법입니다. 디버깅의 경우, 이는 모델이 오류 경로를 명시적으로 추적하여 논리가 어디서 무너지는지 정확히 파악할 수 있음을 의미합니다.',
           ],
         },
         rules: {
           id: 'how-to-inject-coding-rules-as-persistent-instructions',
           title: '영구 지침으로 코딩 규칙을 주입하는 방법',
           content: [
-            '**규칙 — 시스템 프롬프트 또는 프로젝트 구성에 삽입된 명시적 지시의 짧은 집합 — 은 단일 생성뿐만 아니라 세션 전체에 걸쳐 AI 코딩 도구를 일관성 있게 만듭니다.** 최신 코딩 도구(Cursor, GitHub Copilot, Claude Code)는 모든 상호 작용에 걸쳐 지속되는 프로젝트 수준 규칙을 지원합니다. 이는 사용자와 모델 간의 아키텍처 계약으로 기능합니다. 기초 규칙으로 [역할 정의](/prompt-engineering/persona-prompting)를 사용하면 모든 후속 요청이 일관성을 갖습니다. 효과적인 규칙의 예:',
+            '**규칙 — 시스템 프롬프트 또는 프로젝트 구성에 삽입된 명시적 지시의 짧은 집합 — 은 단일 생성뿐만 아니라 세션 전체에 걸쳐 AI 코딩 도구를 일관성 있게 만듭니다.** 최신 코딩 도구(Cursor, GitHub Copilot, Claude Code)는 모든 상호 작용에 걸쳐 지속되는 프로젝트 수준 규칙을 지원합니다. 이는 사용자와 모델 간의 아키텍처 계약으로 기능합니다. 기초 규칙으로 [역할 정의](/ko/prompt-engineering/persona-prompting)를 사용하면 모든 후속 요청이 일관성을 갖습니다. 효과적인 규칙의 예:',
           ],
           items: [
             '항상 TypeScript strict mode를 사용하십시오. `any` 타입은 사용하지 마십시오.',
@@ -3714,7 +3714,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'the-security-problem-what-ai-gets-wrong',
           title: '보안 문제: AI가 잘못 처리하는 것',
           content: [
-            '**2026년 4월 기준으로, AI는 45%의 경우에서 보안 취약점이 있는 코드를 생성합니다 — 모델이 더 발전해도 개선되지 않은 비율입니다.** 2025년 Veracode 보고서에 따르면 안전한 구현과 안전하지 않은 구현 중 선택이 주어졌을 때, 생성형 AI 모델은 45%의 경우에 안전하지 않은 옵션을 선택했습니다. 학술 연구에서도 이 패턴이 확인됩니다: AI 생성 코드 솔루션의 40% 이상에 [보안 결함](/prompt-engineering/prompt-injection-and-security)이 있습니다.',
+            '**2026년 4월 기준으로, AI는 45%의 경우에서 보안 취약점이 있는 코드를 생성합니다 — 모델이 더 발전해도 개선되지 않은 비율입니다.** 2025년 Veracode 보고서에 따르면 안전한 구현과 안전하지 않은 구현 중 선택이 주어졌을 때, 생성형 AI 모델은 45%의 경우에 안전하지 않은 옵션을 선택했습니다. 학술 연구에서도 이 패턴이 확인됩니다: AI 생성 코드 솔루션의 40% 이상에 [보안 결함](/ko/prompt-engineering/prompt-injection-and-security)이 있습니다.',
             '세 가지 가장 심각한 실패 범주:',
           ],
           items: [
@@ -3735,7 +3735,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'how-do-temperature-and-context-window-settings-affect-code-quality',
           title: 'Temperature 및 Context Window 설정은 코드 품질에 어떤 영향을 미칩니까?',
           content: [
-            '**[Temperature (T)](/prompt-engineering/temperature-and-top-p-control-ai-creativity)는 AI 출력의 무작위성을 제어합니다: 코드 생성의 경우, T = 0.0–0.3은 결정론적이고 보수적인 출력을 생성하며; T = 0.7–1.0은 창의적 변동을 늘리지만 오류율도 증가합니다.** Temperature는 모델 어휘에 대한 소프트맥스 확률 분포에 적용되는 하이퍼파라미터입니다. T = 0.0에서 모델은 항상 가장 높은 확률의 토큰을 선택합니다 — 결정론적 출력을 생성합니다.',
+            '**[Temperature (T)](/ko/prompt-engineering/temperature-and-top-p-control-ai-creativity)는 AI 출력의 무작위성을 제어합니다: 코드 생성의 경우, T = 0.0–0.3은 결정론적이고 보수적인 출력을 생성하며; T = 0.7–1.0은 창의적 변동을 늘리지만 오류율도 증가합니다.** Temperature는 모델 어휘에 대한 소프트맥스 확률 분포에 적용되는 하이퍼파라미터입니다. T = 0.0에서 모델은 항상 가장 높은 확률의 토큰을 선택합니다 — 결정론적 출력을 생성합니다.',
             '프로덕션 코드 생성에는 안정성을 위해 Temperature (T)를 0.1–0.2로 설정하십시오. 알고리즘 접근 방식의 탐색적 브레인스토밍에는 T = 0.7–0.9가 평가할 더 다양한 옵션을 생성합니다.',
             '**컨텍스트 창은 모델이 단일 요청에서 처리할 수 있는 최대 토큰 수(입력 + 출력 합계)입니다.** 더 큰 컨텍스트 창은 모델이 코드베이스를 더 많이 볼 수 있게 하여 다중 파일 리팩토링 작업의 일관성을 개선합니다. 컨텍스트 창 크기는 생성 중에 모델이 코드베이스를 얼마나 "볼 수 있는지" 결정합니다:',
           ],
@@ -3786,12 +3786,12 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'related-reading',
           title: '관련 읽기',
           items: [
-            '[Chain-of-Thought 프롬프팅](/prompt-engineering/chain-of-thought-prompting) — 논리 및 디버깅 작업을 위한 단계별 추론',
-            '[AI 코드 리뷰: 도구, 환각률, 검증 워크플로우](/prompt-engineering/ai-code-review) — AI 생성 코드에 대한 체계적인 리뷰 워크플로우',
-            '[Temperature 및 Top-P 설명](/prompt-engineering/temperature-and-top-p-control-ai-creativity) — 무작위성 파라미터가 모든 모델 출력에 미치는 영향',
-            '[프롬프트 인젝션 및 보안](/prompt-engineering/prompt-injection-and-security) — AI 보조 개발 워크플로우의 보안 위험',
-            '[페르소나 프롬프팅](/prompt-engineering/persona-prompting) — "시니어 Python 엔지니어"와 같은 역할 정의가 모델 출력 품질을 어떻게 변화시키는지',
-            '[프롬프트 엔지니어링이란 무엇입니까?](/prompt-engineering/what-is-prompt-engineering) — 기초 정의 및 핵심 개념',
+            '[Chain-of-Thought 프롬프팅](/ko/prompt-engineering/chain-of-thought-prompting) — 논리 및 디버깅 작업을 위한 단계별 추론',
+            '[AI 코드 리뷰: 도구, 환각률, 검증 워크플로우](/ko/prompt-engineering/ai-code-review) — AI 생성 코드에 대한 체계적인 리뷰 워크플로우',
+            '[Temperature 및 Top-P 설명](/ko/prompt-engineering/temperature-and-top-p-control-ai-creativity) — 무작위성 파라미터가 모든 모델 출력에 미치는 영향',
+            '[프롬프트 인젝션 및 보안](/ko/prompt-engineering/prompt-injection-and-security) — AI 보조 개발 워크플로우의 보안 위험',
+            '[페르소나 프롬프팅](/ko/prompt-engineering/persona-prompting) — "시니어 Python 엔지니어"와 같은 역할 정의가 모델 출력 품질을 어떻게 변화시키는지',
+            '[프롬프트 엔지니어링이란 무엇입니까?](/ko/prompt-engineering/what-is-prompt-engineering) — 기초 정의 및 핵심 개념',
           ],
         },
         howToStart: {

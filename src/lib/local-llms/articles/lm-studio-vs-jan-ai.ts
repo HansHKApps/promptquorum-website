@@ -2079,10 +2079,10 @@ schema: {
         'relatedReading': {
           title: '관련 읽기',
           items: [
-            '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio)',
-            '[최고의 로컬 LLM 프론트엔드](/local-llms/best-local-llm-frontends)',
-            '[Ollama 설치 및 설정 가이드](/local-llms/how-to-install-ollama)',
-            '[사용 사례별 최고의 로컬 LLM 스택](/local-llms/best-local-llm-stack-use-case)',
+            '[Ollama vs LM Studio](/ko/local-llms/ollama-vs-lm-studio)',
+            '[최고의 로컬 LLM 프론트엔드](/ko/local-llms/best-local-llm-frontends)',
+            '[Ollama 설치 및 설정 가이드](/ko/local-llms/how-to-install-ollama)',
+            '[사용 사례별 최고의 로컬 LLM 스택](/ko/local-llms/best-local-llm-stack-use-case)',
           ],
         },
         'sources': {

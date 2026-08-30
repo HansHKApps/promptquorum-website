@@ -2134,10 +2134,10 @@ schema: {
           id: 'related-reading',
           title: '관련 읽을거리',
           items: [
-            '[Ollama 설치 방법](/local-llms/how-to-install-ollama) -- 설치 가이드.',
-            '[로컬 LLM OpenAI 호환 API](/local-llms/local-llm-openai-compatible-api) -- 코드에서 Ollama API 사용하기.',
-            '[최고의 로컬 LLM 프론트엔드](/local-llms/best-local-llm-frontends) -- Ollama용 채팅 UI.',
-            '[Ollama vs LM Studio](/local-llms/ollama-vs-lm-studio) -- LM Studio와의 비교.',
+            '[Ollama 설치 방법](/ko/local-llms/how-to-install-ollama) -- 설치 가이드.',
+            '[로컬 LLM OpenAI 호환 API](/ko/local-llms/local-llm-openai-compatible-api) -- 코드에서 Ollama API 사용하기.',
+            '[최고의 로컬 LLM 프론트엔드](/ko/local-llms/best-local-llm-frontends) -- Ollama용 채팅 UI.',
+            '[Ollama vs LM Studio](/ko/local-llms/ollama-vs-lm-studio) -- LM Studio와의 비교.',
           ],
         },
         sources: {

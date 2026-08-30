@@ -161,7 +161,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       howVisionWorks: {
         title: '비전-언어 모델이 이미지를 인식하는 방법',
         content: [
-          '**GPT-5.6, Claude Opus 5, Gemini 3.1 Pro와 같은 비전-언어 모델은 시각적 인코더를 사용하여 이미지를 고차원 벡터(임베딩)로 변환한 다음, 공유된 의미 공간에서 텍스트 토큰과 함께 해당 임베딩을 처리합니다.** 이 접근 방식은 VLM에게 여러 작업에 걸쳐 명확한 강점을 부여합니다. 객체를 식별하고 텍스트를 읽으며 공간적 관계를 이해하고 여러 이미지에 걸쳐 콘텐츠를 추론합니다. GPT-5.6, Claude Opus 5, Gemini 3.1 Pro는 이제 모두 100만 토큰 컨텍스트 창을 지원하여, 잘림 없이 긴 멀티모달 시퀀스를 분석할 수 있습니다. [컨텍스트 창 한계](/prompt-engineering/context-windows-explained-why-ai-forgets)를 이해하면 긴 이미지 설명이나 다중 이미지 시퀀스 작업 시 잘림을 방지하는 프롬프트를 구성하는 데 도움이 됩니다.',
+          '**GPT-5.6, Claude Opus 5, Gemini 3.1 Pro와 같은 비전-언어 모델은 시각적 인코더를 사용하여 이미지를 고차원 벡터(임베딩)로 변환한 다음, 공유된 의미 공간에서 텍스트 토큰과 함께 해당 임베딩을 처리합니다.** 이 접근 방식은 VLM에게 여러 작업에 걸쳐 명확한 강점을 부여합니다. 객체를 식별하고 텍스트를 읽으며 공간적 관계를 이해하고 여러 이미지에 걸쳐 콘텐츠를 추론합니다. GPT-5.6, Claude Opus 5, Gemini 3.1 Pro는 이제 모두 100만 토큰 컨텍스트 창을 지원하여, 잘림 없이 긴 멀티모달 시퀀스를 분석할 수 있습니다. [컨텍스트 창 한계](/ko/prompt-engineering/context-windows-explained-why-ai-forgets)를 이해하면 긴 이미지 설명이나 다중 이미지 시퀀스 작업 시 잘림을 방지하는 프롬프트를 구성하는 데 도움이 됩니다.',
           'VLM은 장면 이해, 문서 분석, 시각적 요소 비교에 뛰어납니다. 그러나 예측 가능한 약점도 있습니다:',
         ],
         items: [
@@ -209,7 +209,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
           '**세부 수준 지정:** 모호한 요청은 모호한 결과를 낳습니다. "이 이미지를 극도로 상세하게 분석하십시오"는 "이 이미지를 분석하십시오"보다 효과적입니다. 생성의 경우: "사실적, 4K 품질, 모든 세부 사항이 선명한"은 "좋은 이미지"보다 낫습니다.',
           '**긍정적 프레이밍 사용:** 모델에게 무엇을 제외할지가 아니라 무엇을 포함할지 알려주십시오. "색상을 너무 밝게 만들지 마십시오" 대신 "채도가 낮은 차분하고 쿨한 톤의 색상을 사용하십시오"라고 하십시오. "텍스트를 추가하지 마십시오" 대신 "가시적인 텍스트가 나타나지 않도록 하십시오"라고 하십시오.',
           '**명시적 제약 설정:** 제약은 출력을 고정합니다. "이 이미지에서 빈도순으로 정확히 10가지 색상을 추출하십시오"는 "이 이미지에는 어떤 색상이 있습니까?"보다 낫습니다. 생성의 경우: "1:1 정사각형, 정확히 두 사람, 단일 실내 공간."',
-          '**전후 예시 제공:** 모델에게 좋은 결과가 어떻게 생겼는지 보여주십시오. 요청과 함께 예시 이미지를 포함하십시오. [Few-shot 예시](/prompt-engineering/zero-shot-vs-few-shot)는 편집 및 스타일 전이의 일관성을 크게 향상시킵니다.',
+          '**전후 예시 제공:** 모델에게 좋은 결과가 어떻게 생겼는지 보여주십시오. 요청과 함께 예시 이미지를 포함하십시오. [Few-shot 예시](/ko/prompt-engineering/zero-shot-vs-few-shot)는 편집 및 스타일 전이의 일관성을 크게 향상시킵니다.',
         ],
       },
       pitfalls: {
@@ -238,7 +238,7 @@ export const article: Partial<Record<Language, PEArticle>> = {
       },
       recipes: {
         title: '미니 레시피: 복사-붙여넣기 멀티모달 프롬프트',
-        content: '이 템플릿을 일반적인 작업의 시작점으로 사용하십시오. 각각은 일관성과 반복 가능성을 보장하기 위해 [구조화된 프롬프트 구성 요소](/prompt-engineering/5-building-blocks-every-prompt-needs)를 따릅니다.',
+        content: '이 템플릿을 일반적인 작업의 시작점으로 사용하십시오. 각각은 일관성과 반복 가능성을 보장하기 위해 [구조화된 프롬프트 구성 요소](/ko/prompt-engineering/5-building-blocks-every-prompt-needs)를 따릅니다.',
         items: [
           '**제품 사진:** "이 제품 이미지를 분석하고 다음을 추출하십시오: (1) 주요 소재, (2) 색상 팔레트, (3) 주변 환경 대비 크기, (4) 조명 방향, (5) 결함. 구체적으로 하고 일반적인 형용사는 피하십시오."',
           '**문서 추출:** "이 문서에서 모든 가시적 텍스트를 추출하십시오. 서식, 줄바꿈, 강조를 보존하십시오. 텍스트가 부분적으로 읽기 어려운 경우 [UNCLEAR]로 표시하고 최선의 추측을 제공하십시오. 마크다운 코드 블록으로 형식을 지정하십시오."',
@@ -296,9 +296,9 @@ export const article: Partial<Record<Language, PEArticle>> = {
       relatedReading: {
         title: '관련 자료',
         items: [
-          '[프롬프트 엔지니어링이란 무엇입니까?](/prompt-engineering/what-is-prompt-engineering) — 모든 프롬프팅의 기본 개념',
-          '[모든 프롬프트에 필요한 5가지 구성 요소](/prompt-engineering/5-building-blocks-every-prompt-needs) — 멀티모달을 포함한 모든 프롬프트에 구조가 적용되는 방법',
-          '[Chain-of-Thought 프롬프팅](/prompt-engineering/chain-of-thought-prompting) — 복잡한 작업을 위해 이미지 프롬프팅과 결합하는 추론 패턴',
+          '[프롬프트 엔지니어링이란 무엇입니까?](/ko/prompt-engineering/what-is-prompt-engineering) — 모든 프롬프팅의 기본 개념',
+          '[모든 프롬프트에 필요한 5가지 구성 요소](/ko/prompt-engineering/5-building-blocks-every-prompt-needs) — 멀티모달을 포함한 모든 프롬프트에 구조가 적용되는 방법',
+          '[Chain-of-Thought 프롬프팅](/ko/prompt-engineering/chain-of-thought-prompting) — 복잡한 작업을 위해 이미지 프롬프팅과 결합하는 추론 패턴',
         ],
       },
       sources: {

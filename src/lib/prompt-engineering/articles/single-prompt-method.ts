@@ -2572,8 +2572,8 @@ ja: {
             { type: 'in-plain-terms', text: 'AI와 여러 번 주고받는 대화를 나누는 대신, 모델이 어떤 역할을 해야 하는지, 무엇을 해야 하는지, 무엇을 알아야 하는지, 어떤 규칙을 따라야 하는지, 그리고 답변 형식은 어때야 하는지를 정확히 알려주는 상세한 지시문 하나를 작성합니다. 한 번 전송하면 됩니다. 작동합니다.' },
           ],
           content: [
-            '**단일 단계 프롬프트 방법론은 역할, 목표, 맥락, 제약 조건, 출력 형식을 하나의 메시지에 담는 원샷(one-shot) 프롬프트 구조입니다.** 여러 턴에 걸쳐 AI에게 "함께 브레인스토밍"을 요청하는 대신, 모델이 필요한 모든 정보를 처음부터 제공합니다. 이 접근법은 GPT-5.6, Claude Opus 5, Gemini 3.1 Pro, 그리고 [Ollama](/local-llms/how-to-install-ollama)나 LM Studio를 통해 실행하는 로컬 모델에서 모두 작동합니다.',
-            '핵심 아이디어는 한 번 생각하고, 한 번 작성하고, 한 번 실행하는 것입니다. 하나의 정밀한 [프롬프트](/prompt-engineering/what-is-prompt-engineering)를 설계하는 데 노력을 투자하고, 이를 작업, 프로젝트, 모델 전반에 걸쳐 재사용합니다. 구조가 고정되어 있으므로 품질을 측정하고, 한 번에 하나의 파라미터를 변경하며, 체계적으로 프롬프트를 개선할 수 있습니다.',
+            '**단일 단계 프롬프트 방법론은 역할, 목표, 맥락, 제약 조건, 출력 형식을 하나의 메시지에 담는 원샷(one-shot) 프롬프트 구조입니다.** 여러 턴에 걸쳐 AI에게 "함께 브레인스토밍"을 요청하는 대신, 모델이 필요한 모든 정보를 처음부터 제공합니다. 이 접근법은 GPT-5.6, Claude Opus 5, Gemini 3.1 Pro, 그리고 [Ollama](/ko/local-llms/how-to-install-ollama)나 LM Studio를 통해 실행하는 로컬 모델에서 모두 작동합니다.',
+            '핵심 아이디어는 한 번 생각하고, 한 번 작성하고, 한 번 실행하는 것입니다. 하나의 정밀한 [프롬프트](/ko/prompt-engineering/what-is-prompt-engineering)를 설계하는 데 노력을 투자하고, 이를 작업, 프로젝트, 모델 전반에 걸쳐 재사용합니다. 구조가 고정되어 있으므로 품질을 측정하고, 한 번에 하나의 파라미터를 변경하며, 체계적으로 프롬프트를 개선할 수 있습니다.',
           ],
         },
         whySingleStepWorks: {
@@ -2606,7 +2606,7 @@ ja: {
         singleVsMulti: {
           title: '단일 단계 vs 멀티 단계 프롬프팅',
           content: [
-            '**원하는 결과를 이미 알고 처음부터 명확히 지정할 수 있는 경우에는 단일 단계 프롬프트 방법론을 사용하고, 진정으로 모호하거나 탐색적인 작업에만 [멀티 단계 프롬프팅](/prompt-engineering/chain-of-thought-prompting)을 활용하십시오.** 목표가 명확하다면 원샷 지시가 일반적으로 모델과 실행 간에 더 일관된 결과를 제공합니다.',
+            '**원하는 결과를 이미 알고 처음부터 명확히 지정할 수 있는 경우에는 단일 단계 프롬프트 방법론을 사용하고, 진정으로 모호하거나 탐색적인 작업에만 [멀티 단계 프롬프팅](/ko/prompt-engineering/chain-of-thought-prompting)을 활용하십시오.** 목표가 명확하다면 원샷 지시가 일반적으로 모델과 실행 간에 더 일관된 결과를 제공합니다.',
             '주요 차이점은 다음과 같습니다:',
           ],
           items: [
@@ -2633,7 +2633,7 @@ ja: {
         whenToStart: {
           title: '단일 단계로 시작해야 하는 시점',
           content: [
-            '**PromptQuorum에서 어떤 프레임워크를 선택할지 확신이 서지 않는다면, 단일 단계 프롬프트 방법론으로 시작하고 명확한 한계에 부딪혔을 때만 [CRAFT](/prompt-engineering/craft-framework)나 [APE](/prompt-engineering/ape-framework)와 같은 더 전문화된 프레임워크로 전환하십시오.** 이렇게 하면 나중에 고급 최적화를 가능하게 하면서도 워크플로를 단순하게 유지할 수 있습니다.',
+            '**PromptQuorum에서 어떤 프레임워크를 선택할지 확신이 서지 않는다면, 단일 단계 프롬프트 방법론으로 시작하고 명확한 한계에 부딪혔을 때만 [CRAFT](/ko/prompt-engineering/craft-framework)나 [APE](/ko/prompt-engineering/ape-framework)와 같은 더 전문화된 프레임워크로 전환하십시오.** 이렇게 하면 나중에 고급 최적화를 가능하게 하면서도 워크플로를 단순하게 유지할 수 있습니다.',
             '단일 단계가 올바른 시작점인 전형적인 상황:',
           ],
           items: [
@@ -2834,16 +2834,16 @@ ja: {
           title: '관련 읽기',
           id: 'related-reading',
           items: [
-            '[CO-STAR 프레임워크](/prompt-engineering/co-star-framework) — 대상 독자 적응 및 톤 제어가 필요한 작업용',
-            '[CRAFT 프레임워크](/prompt-engineering/craft-framework) — 여러 변수를 독립적으로 제어해야 할 때',
-            '[Chain-of-Thought 프롬프팅](/prompt-engineering/chain-of-thought-prompting) — 단계별 추론이 필요한 복잡한 추론용',
-            '[프롬프트 테스트 및 반복](/prompt-engineering/how-to-test-prompts-across-models) — 여러 모델에서 프롬프트를 검증하는 방법론',
+            '[CO-STAR 프레임워크](/ko/prompt-engineering/co-star-framework) — 대상 독자 적응 및 톤 제어가 필요한 작업용',
+            '[CRAFT 프레임워크](/ko/prompt-engineering/craft-framework) — 여러 변수를 독립적으로 제어해야 할 때',
+            '[Chain-of-Thought 프롬프팅](/ko/prompt-engineering/chain-of-thought-prompting) — 단계별 추론이 필요한 복잡한 추론용',
+            '[프롬프트 테스트 및 반복](/ko/prompt-engineering/how-to-test-prompts-across-models) — 여러 모델에서 프롬프트를 검증하는 방법론',
             '[Anthropic 프롬프트 엔지니어링 가이드](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering) — Claude 팀의 모범 사례',
-            '[SPECS 프레임워크](/prompt-engineering/specs-framework) — 엄격한 출력 검증 및 제약 조건을 적용해야 할 때',
-            '[프롬프트 구성 요소](/prompt-engineering/5-building-blocks-every-prompt-needs) — 효과적인 프롬프트를 구성하는 핵심 구성 요소',
-            '[Temperature 및 Top-P](/prompt-engineering/temperature-and-top-p-control-ai-creativity) — 프롬프트 구조와 함께 모델 무작위성을 제어하는 방법',
-            '[Zero-Shot vs Few-Shot 프롬프팅](/prompt-engineering/zero-shot-vs-few-shot) — 단일 단계 프롬프트에 예제를 포함할 시점',
-            '[여러 모델에서 프롬프트를 테스트하는 방법](/prompt-engineering/how-to-test-prompts-across-models) — 여러 LLM에서 단일 단계 프롬프트 검증',
+            '[SPECS 프레임워크](/ko/prompt-engineering/specs-framework) — 엄격한 출력 검증 및 제약 조건을 적용해야 할 때',
+            '[프롬프트 구성 요소](/ko/prompt-engineering/5-building-blocks-every-prompt-needs) — 효과적인 프롬프트를 구성하는 핵심 구성 요소',
+            '[Temperature 및 Top-P](/ko/prompt-engineering/temperature-and-top-p-control-ai-creativity) — 프롬프트 구조와 함께 모델 무작위성을 제어하는 방법',
+            '[Zero-Shot vs Few-Shot 프롬프팅](/ko/prompt-engineering/zero-shot-vs-few-shot) — 단일 단계 프롬프트에 예제를 포함할 시점',
+            '[여러 모델에서 프롬프트를 테스트하는 방법](/ko/prompt-engineering/how-to-test-prompts-across-models) — 여러 LLM에서 단일 단계 프롬프트 검증',
           ],
         },
         sources: {

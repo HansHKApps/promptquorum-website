@@ -1126,8 +1126,8 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           id: 'related-reading',
           title: '관련 자료',
           items: [
-            '[코딩에 최적화된 로컬 LLM](/local-llms/best-local-llms-for-coding) -- 비전은 코드 이해에 도움이 될 수 있습니다.',
-            '[로컬 RAG 2026](/local-llms/local-rag-2026) -- 문서 처리를 위해 비전과 RAG를 결합하십시오.',
+            '[코딩에 최적화된 로컬 LLM](/ko/local-llms/best-local-llms-for-coding) -- 비전은 코드 이해에 도움이 될 수 있습니다.',
+            '[로컬 RAG 2026](/ko/local-llms/local-rag-2026) -- 문서 처리를 위해 비전과 RAG를 결합하십시오.',
           ],
         },
         sources: {

@@ -1936,9 +1936,9 @@ schema: {
         'relatedReading': {
           title: '관련 자료',
           items: [
-            '[민감한 데이터를 위한 프라이빗 로컬 LLM](/local-llms/private-local-llm-sensitive-data)',
-            '[팀을 위한 로컬 LLM 설정](/local-llms/local-llm-setup-for-teams)',
-            '[로컬 LLM을 통한 엔터프라이즈 컴플라이언스](/local-llms/enterprise-compliance-local-llms)',
+            '[민감한 데이터를 위한 프라이빗 로컬 LLM](/ko/local-llms/private-local-llm-sensitive-data)',
+            '[팀을 위한 로컬 LLM 설정](/ko/local-llms/local-llm-setup-for-teams)',
+            '[로컬 LLM을 통한 엔터프라이즈 컴플라이언스](/ko/local-llms/enterprise-compliance-local-llms)',
           ],
         },
         'sources': {

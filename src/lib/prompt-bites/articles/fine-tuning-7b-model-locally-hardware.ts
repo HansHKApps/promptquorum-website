@@ -793,9 +793,9 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'related',
         title: '관련 읽을거리',
         items: [
-          '[시간당 1달러 이하 최적의 파인튜닝 클라우드 GPU](/prompt-bites/best-cloud-gpu-for-fine-tuning-under-1-per-hour) — 대여 대안',
-          '[로컬 LLM 추론을 위한 1,000달러 이하 최적의 GPU](/prompt-bites/best-gpu-under-1000-local-llm) — RTX 4090 등급 전체',
-          '[GGUF 대 GPTQ 대 AWQ](/prompt-bites/gguf-vs-gptq-vs-awq) — 파인튜닝 이후의 양자화 형식',
+          '[시간당 1달러 이하 최적의 파인튜닝 클라우드 GPU](/ko/prompt-bites/best-cloud-gpu-for-fine-tuning-under-1-per-hour) — 대여 대안',
+          '[로컬 LLM 추론을 위한 1,000달러 이하 최적의 GPU](/ko/prompt-bites/best-gpu-under-1000-local-llm) — RTX 4090 등급 전체',
+          '[GGUF 대 GPTQ 대 AWQ](/ko/prompt-bites/gguf-vs-gptq-vs-awq) — 파인튜닝 이후의 양자화 형식',
         ],
       },
     },

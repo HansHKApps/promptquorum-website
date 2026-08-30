@@ -1768,7 +1768,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         content: [
           '**`ollama run deepseek-r1:14b`을 입력할 때, 여러분은 DeepSeek-R1의 더 작은 버전을 실행하는 것이 아니라 R1의 추론을 모방하도록 학습된 Qwen2.5 14B를 실행하는 것입니다.** "DeepSeek-R1-Distill-Qwen-14B"라는 이름은 정확하지만 오해하기 쉽습니다. "DeepSeek-R1" 부분은 추론이 어디에서 왔는지를 설명하고, "Qwen-14B" 부분이 실제로 여러분의 GPU에서 실행되는 모델입니다.',
           '이것이 중요한 이유는 기대가 이름을 따라가기 때문입니다. 사람들은 디스틸을 "R1인데 더 작고 조금 못한 것"이라고 가정합니다. 실제로는 "R1처럼 사고하는 법을 배운 유능한 오픈 모델"에 가깝습니다. 이 관점은 여러분이 실제로 보게 될 행동을 예측합니다. 뛰어난 추론 구조와, 원시 지식이나 가장 어려운 경우의 안정성에서의 간헐적 공백입니다.',
-          '완전한 모델이 집에서 사용할 수 없는 이유의 하드웨어 현실에 대해서는 [DeepSeek V3 로컬 하드웨어 요구 사항](/prompt-bites/deepseek-v3-local-hardware-requirements)을 참고하십시오. V3는 동일한 671B급 용량을 가진 챗 모델 형제입니다.',
+          '완전한 모델이 집에서 사용할 수 없는 이유의 하드웨어 현실에 대해서는 [DeepSeek V3 로컬 하드웨어 요구 사항](/ko/prompt-bites/deepseek-v3-local-hardware-requirements)을 참고하십시오. V3는 동일한 671B급 용량을 가진 챗 모델 형제입니다.',
           '**업데이트:** DeepSeek는 이후 새로운 플래그십 세대인 DeepSeek-V4(Flash 및 Pro)를 출시했으며, 이 역시 오픈 웨이트로 제공됩니다. 여기서 다루는 R1 증류 모델은 단종되지 않았으며 로컬에서 계속 문제없이 실행할 수 있습니다 — 최신 아키텍처를 원한다면 V4도 함께 검토할 가치가 있습니다.',
         ],
         snippetBlocks: [
@@ -1893,11 +1893,11 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'related-articles',
         title: '관련 가이드',
         items: [
-          '[최고의 로컬 추론 모델 2026: DeepSeek-R1 순위](/local-llms/best-local-reasoning-model-deepseek-r1-2026) — 여섯 디스틸을 하드웨어 등급별로 벤치마크와 함께 순위 매김',
-          '[당신의 GPU에 맞는 최고의 DeepSeek 디스틸](/prompt-bites/best-deepseek-distill-for-your-gpu) — 당신의 카드를 디스틸에 맞추고 Ollama 명령도 안내',
-          '[DeepSeek-R1 디스틸 VRAM 치트시트](/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — 각 디스틸을 양자화별 VRAM과 최소 GPU로 정리',
-          '[DeepSeek V3 로컬 하드웨어 요구 사항](/prompt-bites/deepseek-v3-local-hardware-requirements) — 671B V3 챗 모델도 집에서 쓸 수 없는 이유',
-          '[로컬 DeepSeek가 중국 데이터 문제를 해결하는가?](/local-llms/deepseek-local-china-data-privacy-2026) — 오픈 웨이트를 자체 호스팅하는 프라이버시 관점',
+          '[최고의 로컬 추론 모델 2026: DeepSeek-R1 순위](/ko/local-llms/best-local-reasoning-model-deepseek-r1-2026) — 여섯 디스틸을 하드웨어 등급별로 벤치마크와 함께 순위 매김',
+          '[당신의 GPU에 맞는 최고의 DeepSeek 디스틸](/ko/prompt-bites/best-deepseek-distill-for-your-gpu) — 당신의 카드를 디스틸에 맞추고 Ollama 명령도 안내',
+          '[DeepSeek-R1 디스틸 VRAM 치트시트](/ko/prompt-bites/deepseek-r1-distill-vram-cheatsheet) — 각 디스틸을 양자화별 VRAM과 최소 GPU로 정리',
+          '[DeepSeek V3 로컬 하드웨어 요구 사항](/ko/prompt-bites/deepseek-v3-local-hardware-requirements) — 671B V3 챗 모델도 집에서 쓸 수 없는 이유',
+          '[로컬 DeepSeek가 중국 데이터 문제를 해결하는가?](/ko/local-llms/deepseek-local-china-data-privacy-2026) — 오픈 웨이트를 자체 호스팅하는 프라이버시 관점',
         ],
       },
       updateLog: {
