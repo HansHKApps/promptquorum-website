@@ -627,27 +627,13 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
         id: 'faq',
         title: 'Questions fréquentes',
         faqs: [
-          {
-            q: "Est-il légal d'utiliser un VPN pour le développement IA en Chine ?",
-            a: "Juridiquement complexe, et l'application de la loi s'est durcie. L'usage commercial de VPN par les entreprises est réglementé et nécessite une autorisation. L'usage individuel se situe dans une zone grise ; un accès non autorisé à l'internet international peut entraîner une amende pouvant atteindre environ 5 000 RMB (environ 750 $) selon la réglementation chinoise actuelle sur la cybersécurité, et un projet de loi de 2026 sur la cybercriminalité alourdirait sensiblement les sanctions s'il était adopté. Ceci n'est pas un conseil juridique — évaluez votre propre tolérance au risque avant d'utiliser un VPN en Chine.",
-          },
-          {
-            q: 'Puis-je accéder à GitHub et Hugging Face depuis la Chine avec un VPN ?',
-            a: "En général oui, via un VPN prenant en charge l'obfuscation comme NordVPN ou ExpressVPN — GitHub et Hugging Face sont tous deux bloqués sans VPN. Pour les téléchargements de modèles très volumineux (40 Go et plus), attendez-vous à une connexion moins stable aux heures de pointe ou lors de périodes politiquement sensibles, et envisagez de lancer le téléchargement la nuit.",
-          },
-          {
-            q: "Dois-je acheter le VPN avant d'arriver en Chine ?",
-            a: "Oui — fortement recommandé. Le site du fournisseur VPN peut lui-même être bloqué en Chine, rendant l'inscription difficile voire impossible. Téléchargez et installez l'application VPN, et vérifiez qu'elle fonctionne avant d'entrer en Chine.",
-          },
-          {
-            q: "Qu'en est-il des miroirs Alibaba Cloud pour le téléchargement de modèles au lieu d'un VPN ?",
-            a: "Alibaba Cloud ModelScope et les miroirs domestiques de Hugging Face (hf-mirror.com) constituent une bonne alternative aux VPN pour le téléchargement de modèles — ils sont accessibles sans VPN et souvent plus rapides pour les connexions basées en Chine. Cependant, ils ne résolvent pas l'accès à GitHub, Docker Hub ou npm, qui nécessitent toujours un VPN.",
-          },
-          {
-            q: 'Le protocole NordWhisper de NordVPN est-il déjà disponible ?',
-            a: "NordVPN indique que sa catégorie Serveurs obfusqués migre vers le protocole NordWhisper depuis 2026. Le déploiement peut varier selon la région et le forfait — vérifiez la disponibilité exacte dans l'application actuelle de NordVPN avant de vous y fier.",
-          },
-        ],
+            { q: "Est-il légal d'utiliser un VPN pour le développement IA en Chine ?", a: "Juridiquement complexe, et l'application de la loi s'est durcie. L'usage commercial de VPN par les entreprises est réglementé et nécessite une autorisation. L'usage individuel se situe dans une zone grise ; un accès non autorisé à l'internet international peut entraîner une amende pouvant atteindre environ 5 000 RMB (environ 750 $) selon la réglementation chinoise actuelle sur la cybersécurité, et un projet de loi de 2026 sur la cybercriminalité alourdirait sensiblement les sanctions s'il était adopté. Ceci n'est pas un conseil juridique — évaluez votre propre tolérance au risque avant d'utiliser un VPN en Chine." },
+            { q: 'Puis-je accéder à GitHub et Hugging Face depuis la Chine avec un VPN ?', a: "En général oui, via un VPN prenant en charge l'obfuscation comme NordVPN ou ExpressVPN — GitHub et Hugging Face sont tous deux bloqués sans VPN. Pour les téléchargements de modèles très volumineux (40 Go et plus), attendez-vous à une connexion moins stable aux heures de pointe ou lors de périodes politiquement sensibles, et envisagez de lancer le téléchargement la nuit." },
+            { q: "Dois-je acheter le VPN avant d'arriver en Chine ?", a: "Oui — fortement recommandé. Le site du fournisseur VPN peut lui-même être bloqué en Chine, rendant l'inscription difficile voire impossible. Téléchargez et installez l'application VPN, et vérifiez qu'elle fonctionne avant d'entrer en Chine." },
+            { q: "Qu'en est-il des miroirs Alibaba Cloud pour le téléchargement de modèles au lieu d'un VPN ?", a: "Alibaba Cloud ModelScope et les miroirs domestiques de Hugging Face (hf-mirror.com) constituent une bonne alternative aux VPN pour le téléchargement de modèles — ils sont accessibles sans VPN et souvent plus rapides pour les connexions basées en Chine. Cependant, ils ne résolvent pas l'accès à GitHub, Docker Hub ou npm, qui nécessitent toujours un VPN." },
+            { q: 'Le protocole NordWhisper de NordVPN est-il déjà disponible ?', a: "NordVPN indique que sa catégorie Serveurs obfusqués migre vers le protocole NordWhisper depuis 2026. Le déploiement peut varier selon la région et le forfait — vérifiez la disponibilité exacte dans l'application actuelle de NordVPN avant de vous y fier." },
+            { q: "Puis-je utiliser les miroirs ModelScope à la place d'un VPN ?", a: 'Oui, pour le téléchargement de modèles. Alibaba Cloud ModelScope et hf-mirror.com sont accessibles sans VPN. Mais GitHub, Docker Hub et npm nécessitent toujours un VPN.' },
+          ],
       },
       relatedReading: {
         title: 'Guides associés',
@@ -663,47 +649,55 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: "Est-il légal d'utiliser un VPN pour le développement IA en Chine ?",
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: "Juridiquement complexe, et l'application de la loi s'est durcie. L'usage individuel se situe dans une zone grise, avec des amendes pouvant atteindre environ 5 000 RMB (~750 $) actuellement, et un projet de loi de 2026 alourdirait les sanctions. Ce n'est pas un conseil juridique — évaluez votre propre tolérance au risque.",
+          {
+            '@type': 'Question',
+            'name': "Est-il légal d'utiliser un VPN pour le développement IA en Chine ?",
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': "Juridiquement complexe, et l'application de la loi s'est durcie. L'usage commercial de VPN par les entreprises est réglementé et nécessite une autorisation. L'usage individuel se situe dans une zone grise ; un accès non autorisé à l'internet international peut entraîner une amende pouvant atteindre environ 5 000 RMB (environ 750 $) selon la réglementation chinoise actuelle sur la cybersécurité, et un projet de loi de 2026 sur la cybercriminalité alourdirait sensiblement les sanctions s'il était adopté. Ceci n'est pas un conseil juridique — évaluez votre propre tolérance au risque avant d'utiliser un VPN en Chine.",
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Puis-je accéder à GitHub et Hugging Face depuis la Chine avec un VPN ?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: "En général oui, via un VPN prenant en charge l'obfuscation comme NordVPN ou ExpressVPN. Pour les fichiers très volumineux (40 Go et plus), attendez-vous à une stabilité variable et envisagez des téléchargements nocturnes.",
+          {
+            '@type': 'Question',
+            'name': 'Puis-je accéder à GitHub et Hugging Face depuis la Chine avec un VPN ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': "En général oui, via un VPN prenant en charge l'obfuscation comme NordVPN ou ExpressVPN — GitHub et Hugging Face sont tous deux bloqués sans VPN. Pour les téléchargements de modèles très volumineux (40 Go et plus), attendez-vous à une connexion moins stable aux heures de pointe ou lors de périodes politiquement sensibles, et envisagez de lancer le téléchargement la nuit.",
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: "Dois-je acheter un VPN avant d'arriver en Chine ?",
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: "Oui. Le site du fournisseur VPN peut être bloqué en Chine. Achetez, téléchargez et testez le VPN avant d'entrer en Chine.",
+          {
+            '@type': 'Question',
+            'name': "Dois-je acheter le VPN avant d'arriver en Chine ?",
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': "Oui — fortement recommandé. Le site du fournisseur VPN peut lui-même être bloqué en Chine, rendant l'inscription difficile voire impossible. Téléchargez et installez l'application VPN, et vérifiez qu'elle fonctionne avant d'entrer en Chine.",
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: "Puis-je utiliser les miroirs ModelScope à la place d'un VPN ?",
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Oui, pour le téléchargement de modèles. Alibaba Cloud ModelScope et hf-mirror.com sont accessibles sans VPN. Mais GitHub, Docker Hub et npm nécessitent toujours un VPN.',
+          {
+            '@type': 'Question',
+            'name': "Qu'en est-il des miroirs Alibaba Cloud pour le téléchargement de modèles au lieu d'un VPN ?",
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': "Alibaba Cloud ModelScope et les miroirs domestiques de Hugging Face (hf-mirror.com) constituent une bonne alternative aux VPN pour le téléchargement de modèles — ils sont accessibles sans VPN et souvent plus rapides pour les connexions basées en Chine. Cependant, ils ne résolvent pas l'accès à GitHub, Docker Hub ou npm, qui nécessitent toujours un VPN.",
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Le protocole NordWhisper de NordVPN est-il déjà disponible ?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: "NordVPN indique que ses serveurs obfusqués migrent vers NordWhisper depuis 2026. La disponibilité varie selon la région et le forfait — vérifiez l'application actuelle de NordVPN.",
+          {
+            '@type': 'Question',
+            'name': 'Le protocole NordWhisper de NordVPN est-il déjà disponible ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': "NordVPN indique que sa catégorie Serveurs obfusqués migre vers le protocole NordWhisper depuis 2026. Le déploiement peut varier selon la région et le forfait — vérifiez la disponibilité exacte dans l'application actuelle de NordVPN avant de vous y fier.",
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': "Puis-je utiliser les miroirs ModelScope à la place d'un VPN ?",
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui, pour le téléchargement de modèles. Alibaba Cloud ModelScope et hf-mirror.com sont accessibles sans VPN. Mais GitHub, Docker Hub et npm nécessitent toujours un VPN.',
+            },
+          },
+        ],
     },
     schema: {
       '@context': 'https://schema.org',

@@ -534,16 +534,134 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'mainEntity': [
-          { '@type': 'Question', 'name': 'What is the best local LLM for coding in 2026?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Kimi K2.6 -- 58.6 SWE-Bench Pro (MoE, Modified MIT license) is the best overall. Best dense model: Qwen 3.6 27B -- 77.2% SWE-bench, 22 GB VRAM. Newest agentic challenger: Laguna XS 2.1 -- SWE-bench Verified 70.9%. For agentic coding at 24B: Devstral Small 24B. For 8 GB machines: Qwen3 8B.' } },
-          { '@type': 'Question', 'name': 'What is HumanEval and why does it matter?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'HumanEval is a benchmark of 164 Python programming problems. The model must generate a correct function body for each. Pass@1 (percentage solved on first attempt) is the standard metric. It is the most widely-used measure for comparing coding models.' } },
-          { '@type': 'Question', 'name': 'What is fill-in-the-middle (FIM) and which models support it?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'FIM is the ability to complete code given both the code before and after the cursor -- the pattern used by IDE autocomplete. Qwen3-Coder, DeepSeek-Coder, and Starcoder2 all support FIM. Llama 3.1 8B general does not. For IDE integration, use an FIM-capable model.' } },
-          { '@type': 'Question', 'name': 'Can local coding models replace GitHub Copilot?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'For function-level generation and bug explanation, Qwen3-Coder 32B matches or approaches Copilot quality. For real-time multi-line autocomplete in a live typing flow, Copilot remains smoother. Local models via Continue.dev provide a comparable experience for deliberate generation (request-and-review) but not keystroke-level completion.' } },
-          { '@type': 'Question', 'name': 'How much context does a 500-line Python file use?', 'acceptedAnswer': { '@type': 'Answer', 'text': "Approximately 2,000-3,000 tokens for a 500-line Python file. Ollama's runtime default (VRAM-scaled) token context is insufficient. Set `PARAMETER num_ctx 16384` minimum for single-file code review. For multi-file analysis, use 32768 or 65536 context." } },
-          { '@type': 'Question', 'name': 'Which language does Qwen3-Coder support best?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Python is the primary training language. JavaScript, TypeScript, Java, C++, Go, Rust, and SQL are all well-supported. The model also handles PHP, Ruby, Swift, and Kotlin. For non-Python languages, HumanEval scores are lower but still competitive.' } },
-          { '@type': 'Question', 'name': 'Is DeepSeek-Coder safe to use for proprietary code?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'When running locally via Ollama, DeepSeek-Coder makes no external connections. Your code stays on your hardware. The data concern with DeepSeek applies to their cloud API (api.deepseek.com), not to local Ollama inference. Local inference is completely private.' } },
-          { '@type': 'Question', 'name': 'What is the difference between Qwen3-Coder and Qwen3?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Qwen3-Coder is fine-tuned specifically on code corpora and includes FIM support. Qwen3 is a general-purpose model. On HumanEval, Qwen3 8B and Qwen3 7B score similarly (72%) -- but Qwen3-Coder includes code completion features that the general model does not.' } },
-          { '@type': 'Question', 'name': 'Can I use local coding models for SQL generation?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes -- Qwen3-Coder 32B and DeepSeek-Coder V2 both perform well on SQL generation tasks. Provide the table schema in the prompt context. For complex multi-join queries, use 32K context to include the full schema. Set a system prompt: "You are an expert SQL developer. Generate only valid SQL."' } },
-          { '@type': 'Question', 'name': 'How do I connect a local coding model to VS Code?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Install the Continue.dev extension from the VS Code marketplace. In Continue settings, select Ollama as the provider and specify your model: `qwen2.5-coder:7b` or `qwen2.5-coder:32b`. The extension connects to Ollama at localhost:11434 automatically. Use Cmd+I (macOS) or Ctrl+I (Windows) to trigger inline code generation.' } },
+          {
+            '@type': 'Question',
+            'name': 'What is the best local LLM for coding in July 2026?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Kimi K2.6 — 58.6 SWE-Bench Pro (MoE, Modified MIT license). Best dense model: Qwen 3.6 27B — 77.2% SWE-bench, 22 GB VRAM. Newest agentic challenger: Laguna XS 2.1 — SWE-bench Verified 70.9%. For 8 GB machines: Qwen3 8B. For IDE autocomplete: Codestral 22B.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What are Kimi K2.7 Code and Laguna XS 2.1?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Both are new agentic coding models added to Ollama in July 2026. Kimi K2.7 Code (Moonshot AI) is a coding-focused evolution of Kimi K2.6, tuned for long-horizon coding sessions -- `ollama run kimi-k2.7-code`. Laguna XS 2.1 (Poolside, July 2, 2026) is a 33B total / 3B active MoE model built for agentic coding with a 256K context window, scoring 70.9% on SWE-bench Verified and 63.1% on SWE-bench Multilingual under the OpenMDW-1.1 license -- `ollama run laguna-xs-2.1`.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What is HumanEval and why does it matter?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'HumanEval is a benchmark of 164 Python programming problems. The model must generate a correct function body for each. Pass@1 (percentage solved on first attempt) is the standard metric. It is the most widely-used measure for comparing coding models.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What is fill-in-the-middle (FIM) and which models support it?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'FIM is the ability to complete code given both the code before and after the cursor -- the pattern used by IDE autocomplete. Qwen3-Coder, DeepSeek-Coder, and Starcoder2 all support FIM. Llama 3.1 8B general does not. For IDE integration, use an FIM-capable model.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can local coding models replace GitHub Copilot?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Codestral 22B via Continue.dev now closely matches Copilot for most autocomplete tasks. For complex multi-file reasoning, cloud models still have an edge on the hardest 20%. Trade-off: Codestral is slower but fully private and runs locally.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'How much RAM do I need for local coding LLMs?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Minimum 4 GB (tiny 3B models), practically 8 GB+ for usable coding. Recommended: 16 GB for 7B–16B models with headroom. High-end: 32 GB+ for 32B models. Use this formula: model size in GB ≈ parameter count ÷ 4 (e.g., 7B ÷ 4 ≈ 1.75 GB at FP16, ~4.7 GB at Q4_K_M).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'How much context does a 500-line Python file use?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': "Approximately 2,000-3,000 tokens for a 500-line Python file. Ollama's runtime default (VRAM-scaled) token context is insufficient. Set `PARAMETER num_ctx 16384` minimum for single-file code review. For multi-file analysis, use 32768 or 65536 context.",
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Are local coding models fast enough for development?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes for iterative workflows (10–50 tokens/sec). Qwen3 8B runs at 20–35 tokens/sec on laptops — waiting 5–10 seconds per response is acceptable for batch generation. No for real-time autocomplete (<1 sec required). For IDE use, local models are suitable for request-and-review, not keystroke completion.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can local LLMs replace GPT-5.6 for coding?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No. Local models (Kimi K2.6 58.6 SWE-Bench Pro, Qwen 3.6 27B 77.2% SWE-bench) lag on: latest framework knowledge (APIs post-training cutoff), complex multi-file reasoning (100k+ tokens), and debugging accuracy. However, Kimi K2.6 and Qwen 3.6 have narrowed the gap significantly on multi-file coding tasks.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Which language does Qwen3-Coder support best?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Python is the primary training language. JavaScript, TypeScript, Java, C++, Go, Rust, and SQL are all well-supported. The model also handles PHP, Ruby, Swift, and Kotlin. For non-Python languages, HumanEval scores are lower but still competitive.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Is DeepSeek-Coder safe to use for proprietary code?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'When running locally via Ollama, DeepSeek-Coder makes no external connections. Your code stays on your hardware. The data concern with DeepSeek applies to their cloud API (api.deepseek.com), not to local Ollama inference. Local inference is completely private.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What is the difference between Qwen3-Coder and Qwen3?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Qwen3-Coder is fine-tuned specifically on code corpora and includes FIM support. Qwen3 is a general-purpose model. On HumanEval, Qwen3 8B and Qwen3 7B score similarly (72%) -- but Qwen3-Coder includes code completion features that the general model does not.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I use local coding models for SQL generation?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes -- Qwen 3.6 27B and Kimi K2.6 both perform well on SQL generation tasks. Provide the table schema in the prompt context. For complex multi-join queries, use 32K context to include the full schema. Set a system prompt: "You are an expert SQL developer. Generate only valid SQL."',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What is SWE-bench and why is it replacing HumanEval?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'SWE-bench tests a model\'s ability to resolve real GitHub issues — reading codebases, making multi-file changes, and writing tests. Unlike HumanEval (which tests single Python functions), SWE-bench predicts how a model performs in actual development workflows. Qwen 3.6 27B scores 77.2% on SWE-bench. In 2026, SWE-bench is the primary benchmark for evaluating coding models for real-world use.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What is Kimi K2.6 and is it safe to use?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Kimi K2.6 is an open-source coding model from Moonshot AI (China), released under a Modified MIT license. It uses MoE architecture (32B active / 1T total parameters) and scored 58.6 on SWE-Bench Pro. When running locally via Ollama, no data is sent externally — your code stays on your machine regardless of the model\'s origin. Modified MIT license permits commercial use.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'How do I connect a local coding model to VS Code?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Install the Continue.dev extension from the VS Code marketplace. In Continue settings, select Ollama as the provider and specify your model (e.g., `qwen3:8b`, `qwen3.6:27b`, `codestral:22b`). The extension connects to Ollama at localhost:11434 automatically. Use Cmd+I (macOS) or Ctrl+I (Windows) to trigger inline code generation.',
+            },
+          },
         ],
       },
       itemListSchema: {

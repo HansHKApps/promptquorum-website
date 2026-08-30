@@ -1235,6 +1235,7 @@ schema: {
             { q: 'Qual quantização usar no LM Studio com 8 GB de RAM?', a: 'Q4_K_M é a quantização recomendada para sistemas com 8 GB de RAM. Ela oferece o melhor equilíbrio entre qualidade do modelo e uso de memória para modelos 7B (~4,5 GB de arquivo).' },
             { q: 'O LM Studio inclui uma API compatível com a OpenAI?', a: 'Sim. Ative a aba Local Server no LM Studio para iniciar uma API compatível com a OpenAI em http://localhost:1234. Qualquer app que use o SDK da OpenAI pode se conectar usando essa URL como base_url.' },
             { q: 'Posso usar o LM Studio no Linux?', a: 'Sim. Baixe o arquivo .AppImage em lmstudio.ai. Torne-o executável com chmod +x LM-Studio-*.AppImage e execute-o. Não é necessária instalação no sistema -- ele roda como um app portátil.' },
+            { q: 'Como encontro e baixo modelos no LM Studio?', a: 'Clique na aba Search (lupa) na barra lateral, busque pelo nome do modelo (ex.: "llama 3.1"), selecione um nível de quantização (Q4_K_M para 8 GB de RAM) e clique na seta de download.' },
           ],
         },
         relatedReading: {
@@ -1275,14 +1276,102 @@ schema: {
         '@type': 'FAQPage',
         inLanguage: 'pt-BR',
         mainEntity: [
-          { '@type': 'Question', name: 'O LM Studio é gratuito?', acceptedAnswer: { '@type': 'Answer', text: 'Sim, o LM Studio é gratuito para uso pessoal. Requer uma licença comercial para uso em produção em contextos empresariais.' } },
-          { '@type': 'Question', name: 'LM Studio ou Ollama — qual devo usar?', acceptedAnswer: { '@type': 'Answer', text: 'LM Studio para iniciantes que preferem GUI. Ollama para usuários avançados que preferem linha de comando e integração com API. Ambos são gratuitos e executam os mesmos modelos.' } },
-          { '@type': 'Question', name: 'Posso usar o LM Studio em português?', acceptedAnswer: { '@type': 'Answer', text: 'A interface do LM Studio está em inglês, mas você pode conversar com os modelos em qualquer idioma, incluindo português. Escolha modelos multilíngues como Aya 8B ou Qwen para melhor suporte ao PT-BR.' } },
-          { '@type': 'Question', name: 'Quais são os requisitos mínimos do LM Studio?', acceptedAnswer: { '@type': 'Answer', text: 'Mínimo: 8 GB de RAM, macOS 13.6, Windows 10 ou Ubuntu 22.04. GPU não é obrigatória -- Macs com Apple Silicon e GPUs NVIDIA/AMD são suportados para aceleração.' } },
-          { '@type': 'Question', name: 'Como encontro e baixo modelos no LM Studio?', acceptedAnswer: { '@type': 'Answer', text: 'Clique na aba Search (lupa) na barra lateral, busque pelo nome do modelo (ex.: "llama 3.1"), selecione um nível de quantização (Q4_K_M para 8 GB de RAM) e clique na seta de download.' } },
-          { '@type': 'Question', name: 'Qual quantização usar no LM Studio com 8 GB de RAM?', acceptedAnswer: { '@type': 'Answer', text: 'Q4_K_M é a quantização recomendada para sistemas com 8 GB de RAM. Ela oferece o melhor equilíbrio entre qualidade do modelo e uso de memória para modelos 7B (~4,5 GB de arquivo).' } },
-          { '@type': 'Question', name: 'O LM Studio inclui uma API compatível com a OpenAI?', acceptedAnswer: { '@type': 'Answer', text: 'Sim. Ative a aba Local Server no LM Studio para iniciar uma API compatível com a OpenAI em http://localhost:1234. Qualquer app que use o SDK da OpenAI pode se conectar usando essa URL como base_url.' } },
-          { '@type': 'Question', name: 'Posso usar o LM Studio no Linux?', acceptedAnswer: { '@type': 'Answer', text: 'Sim. Baixe o arquivo .AppImage em lmstudio.ai. Torne-o executável com chmod +x LM-Studio-*.AppImage e execute-o. Não é necessária instalação no sistema -- ele roda como um app portátil.' } },
+          {
+            '@type': 'Question',
+            'name': 'O LM Studio mostra "Not enough memory to load model"',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'O modelo requer mais RAM do que a disponível. Feche outros aplicativos para liberar memória ou selecione uma quantização menor (Q3_K_S em vez de Q4_K_M). Regra geral: multiplique o tamanho do arquivo do modelo por 1,2 para estimar a RAM necessária. Um arquivo de 4,5 GB precisa de ~5,4 GB de RAM livre.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'O modelo gera texto muito devagar (menos de 5 tokens/seg)',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'O modelo está rodando totalmente na CPU. Verifique GPU Layers no painel direito -- se mostrar 0, sua GPU não está sendo usada. No macOS, o LM Studio ativa o Metal (GPU) automaticamente para Apple Silicon. No Windows/Linux com NVIDIA, verifique se o driver está atualizado e aumente GPU Layers para o valor máximo exibido.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Não encontro um modelo específico na busca do LM Studio',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'O LM Studio busca arquivos GGUF no Hugging Face. Se um modelo não aparecer, tente buscar diretamente pelo nome do repositório do Hugging Face (ex.: "bartowski/Llama-3.1-8B-Instruct-GGUF"). Alguns modelos mais recentes podem ainda não estar indexados.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'O servidor local retorna erros "model not found"',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'É necessário carregar um modelo na aba Local Server antes que o servidor possa responder. Abra a aba Local Server, selecione um modelo no menu suspenso e clique em Start Server. O nome do modelo nas requisições de API pode ser qualquer string -- o LM Studio usa o modelo atualmente carregado.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'O LM Studio é gratuito?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim, o LM Studio é gratuito para uso pessoal. Requer uma licença comercial para uso em produção em contextos empresariais.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'LM Studio ou Ollama — qual devo usar?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'LM Studio para iniciantes que preferem GUI. Ollama para usuários avançados que preferem linha de comando e integração com API. Ambos são gratuitos e executam os mesmos modelos.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Posso usar o LM Studio em português?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'A interface do LM Studio está em inglês, mas você pode conversar com os modelos em qualquer idioma, incluindo português. Escolha modelos multilíngues como Aya 8B ou Qwen para melhor suporte ao PT-BR.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quais são os requisitos mínimos do LM Studio?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Mínimo: 8 GB de RAM, macOS 13.6, Windows 10 ou Ubuntu 22.04. GPU não é obrigatória -- Macs com Apple Silicon e GPUs NVIDIA/AMD são suportados para aceleração.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qual quantização usar no LM Studio com 8 GB de RAM?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Q4_K_M é a quantização recomendada para sistemas com 8 GB de RAM. Ela oferece o melhor equilíbrio entre qualidade do modelo e uso de memória para modelos 7B (~4,5 GB de arquivo).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'O LM Studio inclui uma API compatível com a OpenAI?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim. Ative a aba Local Server no LM Studio para iniciar uma API compatível com a OpenAI em http://localhost:1234. Qualquer app que use o SDK da OpenAI pode se conectar usando essa URL como base_url.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Posso usar o LM Studio no Linux?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sim. Baixe o arquivo .AppImage em lmstudio.ai. Torne-o executável com chmod +x LM-Studio-*.AppImage e execute-o. Não é necessária instalação no sistema -- ele roda como um app portátil.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Como encontro e baixo modelos no LM Studio?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Clique na aba Search (lupa) na barra lateral, busque pelo nome do modelo (ex.: "llama 3.1"), selecione um nível de quantização (Q4_K_M para 8 GB de RAM) e clique na seta de download.',
+            },
+          },
         ],
       },
     },

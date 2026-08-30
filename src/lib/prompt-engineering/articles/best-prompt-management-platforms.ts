@@ -2250,87 +2250,87 @@ export const article: Partial<Record<Language, PEArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: "Qu'est-ce que la gestion des prompts?",
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: "La gestion des prompts est le stockage, le versioning et le déploiement des prompts en production avec collaboration d'équipe. Elle résout: où stocker (base de données), comment versionner (contrôle de version), comment déployer (API) et qui accède (permissions).",
+          {
+            '@type': 'Question',
+            'name': "Qu'est-ce que la gestion des prompts?",
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': "La gestion des prompts est le stockage, le versioning et le déploiement des prompts en production avec collaboration d'équipe. Elle résout: où stocker (base de données), comment versionner (contrôle de version), comment déployer (API) et qui accède (permissions).",
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: "Pourquoi ai-je besoin d'une plateforme de gestion des prompts?",
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: "Sans cela, les équipes éditent les prompts ad hoc dans les notebooks, perdent l'historique, ne peuvent pas annuler les mauvaises modifications et n'ont pas de journal d'audit. Les plateformes permettent une itération sûre avec contrôle de version et workflows d'approbation.",
+          {
+            '@type': 'Question',
+            'name': "Pourquoi ai-je besoin d'une plateforme de gestion des prompts?",
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': "Sans cela, les équipes éditent les prompts ad hoc, perdent l'historique et ne peuvent pas annuler. Les plateformes permettent une itération sûre avec versioning et workflows d'approbation.",
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Quelle est la différence entre PromptHub et Vellum?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'PromptHub est le versioning Git (axé sur le développement). Vellum est le déploiement en production (axé sur le déploiement). Nombreuses équipes utilisent les deux: PromptHub pour le développement, Vellum pour la production.',
+          {
+            '@type': 'Question',
+            'name': 'Quelle est la différence entre PromptHub et Vellum?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'PromptHub est versioning Git (dev-focused). Vellum est déploiement (deploy-focused). Nombreuses équipes utilisent les deux.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: "PromptHub supporte-t-il les reviews d'équipe?",
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: "Oui. PromptHub a les pull requests, code review et workflows d'approbation comme GitHub. Essentiel pour la gouvernance et la conformité.",
+          {
+            '@type': 'Question',
+            'name': "PromptHub supporte-t-il les reviews d'équipe?",
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': "Oui. PromptHub a pull requests, code review et workflows d'approbation. Essentiel pour la gouvernance.",
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'PromptHub peut-il déployer les prompts en production?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: "PromptHub fournit une API REST pour récupérer les prompts, mais ne gère pas l'infrastructure de déploiement (A/B testing, surveillance). Utilisez Vellum pour cela.",
+          {
+            '@type': 'Question',
+            'name': 'PromptHub peut-il déployer en production?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': "PromptHub fournit une API REST, mais ne gère pas l'infrastructure (A/B testing, monitoring). Utilisez Vellum.",
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'À quoi sert PromptLayer?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: "PromptLayer enregistre chaque appel API LLM (requête, réponse, coût). C'est l'observabilité, pas la gestion. Utilisez-le pour l'analytique, le débogage et le suivi des coûts.",
+          {
+            '@type': 'Question',
+            'name': 'À quoi sert PromptLayer?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': "PromptLayer enregistre chaque appel API LLM avec coûts. C'est l'observabilité pour l'analytique et le suivi des coûts.",
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Puis-je combiner ces plateformes?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Oui. Pile courante: PromptHub (développement) → Vellum (production) → PromptLayer (logging) → LangSmith (tracing).',
+          {
+            '@type': 'Question',
+            'name': 'Puis-je combiner ces plateformes?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui. Pile: PromptHub (dev) → Vellum (prod) → PromptLayer (logging) → LangSmith (tracing).',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Dois-je construire une base de données de prompts à la place?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: "La construction ajoute 2–4 semaines de travail d'ingénierie pour le versioning, l'API, les permissions et les logs d'audit. Les plateformes le font d'emblée. Construisez seulement si vous avez besoin de fonctionnalités que les plateformes n'offrent pas.",
+          {
+            '@type': 'Question',
+            'name': 'Dois-je construire une base de données?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Non. La construction prend 2–4 semaines. Les plateformes le font mieux. Achetez sauf si vous avez besoin de fonctionnalités custom.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Dois-je respecter la CNIL?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: "Oui. Les recommandations de la CNIL pour l'IA locale s'appliquent au traitement de données sensibles (données financières, médicales, juridiques). L'inférence locale satisfait les obligations de résidence des données au sein de l'UE. Examinez les contrats de traitement des données avec les fournisseurs.",
+          {
+            '@type': 'Question',
+            'name': 'Dois-je respecter la CNIL?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': "Oui. Les recommandations CNIL pour l'IA locale s'appliquent aux données sensibles. L'inférence locale satisfait les obligations de résidence des données dans l'UE.",
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Ces plateformes conviennent-elles aux PME françaises?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: "Oui, plusieurs. PromptHub et Vellum sont utilisées par les entreprises françaises. Les PME doivent vérifier la conformité RGPD et les normes de sécurité informatique. Les tiers gratuits (PromptLayer, LangSmith) sont budget-friendly pour les petites équipes. Les déploiements d'entreprise profitent des forfaits Enterprise.",
+          {
+            '@type': 'Question',
+            'name': 'Ces plateformes conviennent-elles aux PME?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui. PromptHub et Vellum sont utilisées en France. Les PME doivent vérifier la conformité RGPD. Les tiers gratuits sont budget-friendly.',
+            },
           },
-        },
-      ],
+        ],
     },
     itemListSchema: {
       '@context': 'https://schema.org',
@@ -2530,47 +2530,17 @@ export const article: Partial<Record<Language, PEArticle>> = {
         id: 'faq',
         title: 'Frequently Asked Questions',
         faqs: [
-          {
-            q: "Qu'est-ce que la gestion des prompts?",
-            a: "La gestion des prompts est le stockage, le versioning et le déploiement des prompts en production avec collaboration d'équipe. Elle résout: où stocker (base de données), comment versionner (contrôle de version), comment déployer (API) et qui accède (permissions).",
-          },
-          {
-            q: "Pourquoi ai-je besoin d'une plateforme de gestion des prompts?",
-            a: "Sans cela, les équipes éditent les prompts ad hoc, perdent l'historique et ne peuvent pas annuler. Les plateformes permettent une itération sûre avec versioning et workflows d'approbation.",
-          },
-          {
-            q: 'Quelle est la différence entre PromptHub et Vellum?',
-            a: 'PromptHub est versioning Git (dev-focused). Vellum est déploiement (deploy-focused). Nombreuses équipes utilisent les deux.',
-          },
-          {
-            q: "PromptHub supporte-t-il les reviews d'équipe?",
-            a: "Oui. PromptHub a pull requests, code review et workflows d'approbation. Essentiel pour la gouvernance.",
-          },
-          {
-            q: 'PromptHub peut-il déployer en production?',
-            a: "PromptHub fournit une API REST, mais ne gère pas l'infrastructure (A/B testing, monitoring). Utilisez Vellum.",
-          },
-          {
-            q: 'À quoi sert PromptLayer?',
-            a: "PromptLayer enregistre chaque appel API LLM avec coûts. C'est l'observabilité pour l'analytique et le suivi des coûts.",
-          },
-          {
-            q: 'Puis-je combiner ces plateformes?',
-            a: 'Oui. Pile: PromptHub (dev) → Vellum (prod) → PromptLayer (logging) → LangSmith (tracing).',
-          },
-          {
-            q: 'Dois-je construire une base de données?',
-            a: 'Non. La construction prend 2–4 semaines. Les plateformes le font mieux. Achetez sauf si vous avez besoin de fonctionnalités custom.',
-          },
-          {
-            q: 'Dois-je respecter la CNIL?',
-            a: "Oui. Les recommandations CNIL pour l'IA locale s'appliquent aux données sensibles. L'inférence locale satisfait les obligations de résidence des données dans l'UE.",
-          },
-          {
-            q: 'Ces plateformes conviennent-elles aux PME?',
-            a: 'Oui. PromptHub et Vellum sont utilisées en France. Les PME doivent vérifier la conformité RGPD. Les tiers gratuits sont budget-friendly.',
-          },
-        ],
+            { q: "Qu'est-ce que la gestion des prompts?", a: "La gestion des prompts est le stockage, le versioning et le déploiement des prompts en production avec collaboration d'équipe. Elle résout: où stocker (base de données), comment versionner (contrôle de version), comment déployer (API) et qui accède (permissions)." },
+            { q: "Pourquoi ai-je besoin d'une plateforme de gestion des prompts?", a: "Sans cela, les équipes éditent les prompts ad hoc, perdent l'historique et ne peuvent pas annuler. Les plateformes permettent une itération sûre avec versioning et workflows d'approbation." },
+            { q: 'Quelle est la différence entre PromptHub et Vellum?', a: 'PromptHub est versioning Git (dev-focused). Vellum est déploiement (deploy-focused). Nombreuses équipes utilisent les deux.' },
+            { q: "PromptHub supporte-t-il les reviews d'équipe?", a: "Oui. PromptHub a pull requests, code review et workflows d'approbation. Essentiel pour la gouvernance." },
+            { q: 'PromptHub peut-il déployer en production?', a: "PromptHub fournit une API REST, mais ne gère pas l'infrastructure (A/B testing, monitoring). Utilisez Vellum." },
+            { q: 'À quoi sert PromptLayer?', a: "PromptLayer enregistre chaque appel API LLM avec coûts. C'est l'observabilité pour l'analytique et le suivi des coûts." },
+            { q: 'Puis-je combiner ces plateformes?', a: 'Oui. Pile: PromptHub (dev) → Vellum (prod) → PromptLayer (logging) → LangSmith (tracing).' },
+            { q: 'Dois-je construire une base de données?', a: 'Non. La construction prend 2–4 semaines. Les plateformes le font mieux. Achetez sauf si vous avez besoin de fonctionnalités custom.' },
+            { q: 'Dois-je respecter la CNIL?', a: "Oui. Les recommandations CNIL pour l'IA locale s'appliquent aux données sensibles. L'inférence locale satisfait les obligations de résidence des données dans l'UE." },
+            { q: 'Ces plateformes conviennent-elles aux PME?', a: 'Oui. PromptHub et Vellum sont utilisées en France. Les PME doivent vérifier la conformité RGPD. Les tiers gratuits sont budget-friendly.' },
+          ],
       },
       sources: {
         title: 'Sources',

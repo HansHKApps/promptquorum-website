@@ -916,78 +916,25 @@ schema: {
           id: 'common-questions',
           title: 'Preguntas frecuentes sobre modelos de código abierto en Ollama',
           faqs: [
-            {
-              q: '¿Cuál es el mejor modelo de Ollama para programar?',
-              a: 'Para programación de frontera y flujos agénticos, Kimi K2.6 y Laguna XS 2.1 son las opciones más capaces de la biblioteca; Kimi K2.7 Code, derivado de K2.6, está directamente enfocado en programación. Si trabajas con 16 GB de RAM, gpt-oss:20b es la mejor opción pequeña, y qwen3:30b ofrece el equilibrio más razonable entre calidad y tamaño. Elige según la RAM disponible antes que por el ranking: un modelo que no cabe en memoria no te sirve por muy bueno que sea.',
-            },
-            {
-              q: '¿Qué es Laguna XS 2.1 y para qué sirve?',
-              a: 'Laguna XS 2.1 es un modelo de Poolside disponible en la biblioteca de Ollama. Usa una arquitectura MoE de 33B parámetros con 3B activos, lo que le permite rendir por encima de su coste de memoria, y está orientado a programación agéntica de largo alcance: tareas en las que el modelo encadena varios pasos sobre un repositorio en lugar de completar una sola función. Es uno de los añadidos más recientes a la biblioteca, junto con Kimi K2.7 Code.',
-            },
-            {
-              q: '¿Cuántos modelos hay en la biblioteca de Ollama?',
-              a: 'La biblioteca de Ollama contiene varios cientos de modelos seleccionados (con soporte oficial), y crece cada semana con nuevos lanzamientos de peso abierto. Hugging Face aloja miles de modelos GGUF adicionales que se pueden cargar mediante Ollama usando Modelfiles personalizados.',
-            },
-            {
-              q: '¿Cuál es el nombre oficial de la empresa detrás de Ollama?',
-              a: 'La empresa es Ollama Inc., una startup con financiación Serie B con sede en Palo Alto, California, fundada en 2023 por Jeffrey Morgan y Michael Chiang. "Ollama" se refiere tanto a la empresa como a la herramienta CLI/runtime de modelos que publica.',
-            },
-            {
-              q: '¿Puedo usar modelos de Hugging Face directamente en Ollama?',
-              a: 'Sí. Descarga un archivo GGUF de Hugging Face y crea un Modelfile: `FROM ./model.gguf`. Luego ejecuta `ollama create mimodelo -f Modelfile`. Esto funciona para cualquier archivo GGUF incluyendo ajustes finos y modelos que no están en la biblioteca oficial de Ollama.',
-            },
-            {
-              q: '¿Qué modelo de Ollama es mejor para construir un chatbot local?',
-              a: 'Para un chatbot local de propósito general: `qwen3.8:27b` (mejor general en hardware de consumo, cabe en 24 GB con Q4), o `llama3.2:3b` con 8 GB de RAM (punto de entrada más sencillo). Para máquinas de 16 GB: `gpt-oss:20b` (~nivel o3-mini) o `mistral-small3.1`. Para un chatbot asistente de programación: `qwen3.8:27b` (61,7% SWE-bench), `kimi-k2.6` (MoE de frontera) o `laguna-xs-2.1` (agéntico, largo alcance). Combínalo con Open WebUI para una interfaz web que se conecta a la API de Ollama en localhost:11434.',
-            },
-            {
-              q: '¿Son todos los modelos de Ollama verdaderamente de código abierto?',
-              a: 'No todos. La biblioteca de Ollama incluye modelos con licencias variadas. Llama 3.x/4.x usan la Meta Llama Community Licence (no aprobada por OSI como código abierto -- restringe el uso comercial por encima de 700M de usuarios activos mensuales). Mistral Small, Qwen3, Qwen3.8, Devstral y los modelos Gemma son Apache 2.0 (completamente de código abierto). Kimi K2.6 tiene licencia Modified MIT (compatible con uso comercial con cláusula de atribución). Laguna XS 2.1 usa OpenMDW-1.1 (permisiva, uso comercial permitido, no aprobada por OSI). Siempre verifica la licencia antes del despliegue comercial.',
-            },
-            {
-              q: '¿Qué modelo Dolphin debería usar con Ollama?',
-              a: 'Usa Dolphin 3.0 (`ollama pull dolphin3`), no el más antiguo `dolphin-mistral` (última actualización en 2024, basado en Mistral 0.2). Dolphin 3.0, mantenido por Cognitive Computations (Eric Hartford), está basado en Llama 3.1, no tiene filtrado de contenido integrado y está diseñado como modelo local de propósito general para programación, matemáticas, tareas agénticas y chat sin restricciones.',
-            },
-            {
-              q: '¿Qué modelo de embeddings debería usar con Ollama para RAG?',
-              a: '`nomic-embed-text` es la opción estándar -- un modelo de 137M de parámetros que genera embeddings de 768 dimensiones, se ejecuta en milisegundos por documento y está específicamente diseñado para tareas de recuperación. Descárgalo con `ollama pull nomic-embed-text`. Úsalo con el RAG integrado de Open WebUI, OllamaEmbeddings de LangChain o LlamaIndex.',
-            },
-            {
-              q: '¿Cuál es la última versión de Ollama?',
-              a: 'La última versión estable de Ollama es la v0.33.1, publicada el 26 de agosto de 2026. El 27 de agosto apareció una candidata v0.33.2 que todavía no está marcada como estable. Descárgala en ollama.com/download o actualiza con `curl https://ollama.ai/install.sh | sh` en Linux y `brew upgrade ollama` en macOS.',
-            },
-            {
-              q: '¿Dónde puedo ver el changelog y las notas de versión de Ollama?',
-              a: 'Las notas de cada versión están en github.com/ollama/ollama/releases, con la fecha y el changelog de cada tag. Las entradas más recientes son v0.33.1 (26 de agosto de 2026 -- MLX Qwen3.8 Flash Next, salida estructurada, correcciones de timeout de GPU), v0.33.0 (21 de agosto -- gateway de Claude Desktop, puntos de restauración de la caché KV) y v0.32.15 (19 de agosto -- nuevo onboarding de escritorio, carga de modelos ~2x más rápida).',
-            },
-            {
-              q: '¿Cómo compruebo qué versión de Ollama tengo instalada?',
-              a: 'Ejecuta `ollama --version` en la terminal. Devuelve una línea como `ollama version 0.33.1`. Si el número es inferior al de la versión actual, actualiza con `curl https://ollama.ai/install.sh | sh` (Linux) o `brew upgrade ollama` (macOS) y vuelve a ejecutar `ollama --version` para confirmarlo.',
-            },
-            {
-              q: '¿Con qué frecuencia se actualiza la biblioteca de Ollama con nuevos modelos?',
-              a: 'El equipo de Ollama añade nuevos modelos en días o semanas tras los lanzamientos principales. Laguna XS 2.1 (2 de julio de 2026), Kimi K2.7 Code, Kimi K2.6 y Qwen3.8 aparecieron a los pocos días de sus lanzamientos. La versión actual de Ollama es v0.33.1 (11 de julio de 2026). Sigue el repositorio GitHub de Ollama (github.com/ollama/ollama) o la cuenta de Twitter/X de Ollama para anuncios de nuevos modelos.',
-            },
-            {
-              q: '¿Cuál es la diferencia entre `ollama pull` y `ollama run`?',
-              a: '`ollama pull` descarga el archivo del modelo al almacenamiento local (operación única). `ollama run` inicia una sesión interactiva inmediatamente después de descargar, o reutiliza el modelo ya descargado si está disponible. Puedes descargar una vez y ejecutar múltiples veces sin volver a descargar.',
-            },
-            {
-              q: '¿Puedo ejecutar varios modelos simultáneamente en la misma máquina?',
-              a: 'Sí, si tu hardware tiene suficiente VRAM. Usa ventanas de terminal o sesiones de shell separadas -- una ventana ejecuta `ollama run llama3.2` mientras otra ejecuta `ollama run qwen2.5:7b`. Ollama gestiona automáticamente el uso compartido de VRAM. Monitorea `nvidia-smi` o la actividad del sistema para evitar sobrecargas.',
-            },
-            {
-              q: '¿Cómo actualizo un modelo a la última versión?',
-              a: '`ollama pull [nombre-del-modelo]` verifica las actualizaciones y descarga la última versión si está disponible. Para revertir o usar versiones específicas, usa tags de versión: `ollama pull llama3.1:8b` o `ollama pull llama3.1:8b-instruct-q4_K_M`. Comprueba las versiones disponibles con `ollama show [nombre-del-modelo]`.',
-            },
-            {
-              q: '¿Los modelos de código abierto en Ollama son realmente gratuitos para uso comercial?',
-              a: 'La mayoría sí, pero no todos. Llama 3.x (Meta Llama Community Licence) restringe el uso comercial por encima de 700M de usuarios activos mensuales. Mistral Small, Qwen3 y Gemma 3 usan Apache 2.0 (completamente compatible con uso comercial). Verifica siempre la licencia antes del despliegue empresarial -- consulta la página de Hugging Face del modelo o la entrada de la biblioteca de Ollama.',
-            },
-            {
-              q: '¿Qué modelos de Ollama funcionan mejor para tareas en ruso?',
-              a: 'Qwen3 / Qwen3.8 (`ollama run qwen3:7b` o `ollama run qwen3.8:27b`) y Mistral Small 3.1 (`ollama run mistral-small3.1`) incluyen ambos el ruso en su entrenamiento multilingüe nativo. Qwen3 obtiene mejores resultados en tareas de benchmark no inglesas; Mistral Small 3.1 tiene una fluidez conversacional en ruso más sólida en pruebas informales. Ninguno es de origen ruso.',
-            },
+            { q: '¿Cuál es el mejor modelo de Ollama para programar?', a: 'Para programación de frontera y flujos agénticos, Kimi K2.6 y Laguna XS 2.1 son las opciones más capaces de la biblioteca; Kimi K2.7 Code, derivado de K2.6, está directamente enfocado en programación. Si trabajas con 16 GB de RAM, gpt-oss:20b es la mejor opción pequeña, y qwen3:30b ofrece el equilibrio más razonable entre calidad y tamaño. Elige según la RAM disponible antes que por el ranking: un modelo que no cabe en memoria no te sirve por muy bueno que sea.' },
+            { q: '¿Qué es Laguna XS 2.1 y para qué sirve?', a: 'Laguna XS 2.1 es un modelo de Poolside disponible en la biblioteca de Ollama. Usa una arquitectura MoE de 33B parámetros con 3B activos, lo que le permite rendir por encima de su coste de memoria, y está orientado a programación agéntica de largo alcance: tareas en las que el modelo encadena varios pasos sobre un repositorio en lugar de completar una sola función. Es uno de los añadidos más recientes a la biblioteca, junto con Kimi K2.7 Code.' },
+            { q: '¿Cuántos modelos hay en la biblioteca de Ollama?', a: 'La biblioteca de Ollama contiene varios cientos de modelos seleccionados (con soporte oficial), y crece cada semana con nuevos lanzamientos de peso abierto. Hugging Face aloja miles de modelos GGUF adicionales que se pueden cargar mediante Ollama usando Modelfiles personalizados.' },
+            { q: '¿Cuál es el nombre oficial de la empresa detrás de Ollama?', a: 'La empresa es Ollama Inc., una startup con financiación Serie B con sede en Palo Alto, California, fundada en 2023 por Jeffrey Morgan y Michael Chiang. "Ollama" se refiere tanto a la empresa como a la herramienta CLI/runtime de modelos que publica.' },
+            { q: '¿Puedo usar modelos de Hugging Face directamente en Ollama?', a: 'Sí. Descarga un archivo GGUF de Hugging Face y crea un Modelfile: `FROM ./model.gguf`. Luego ejecuta `ollama create mimodelo -f Modelfile`. Esto funciona para cualquier archivo GGUF incluyendo ajustes finos y modelos que no están en la biblioteca oficial de Ollama.' },
+            { q: '¿Qué modelo de Ollama es mejor para construir un chatbot local?', a: 'Para un chatbot local de propósito general: `qwen3.8:27b` (mejor general en hardware de consumo, cabe en 24 GB con Q4), o `llama3.2:3b` con 8 GB de RAM (punto de entrada más sencillo). Para máquinas de 16 GB: `gpt-oss:20b` (~nivel o3-mini) o `mistral-small3.1`. Para un chatbot asistente de programación: `qwen3.8:27b` (61,7% SWE-bench), `kimi-k2.6` (MoE de frontera) o `laguna-xs-2.1` (agéntico, largo alcance). Combínalo con Open WebUI para una interfaz web que se conecta a la API de Ollama en localhost:11434.' },
+            { q: '¿Son todos los modelos de Ollama verdaderamente de código abierto?', a: 'No todos. La biblioteca de Ollama incluye modelos con licencias variadas. Llama 3.x/4.x usan la Meta Llama Community Licence (no aprobada por OSI como código abierto -- restringe el uso comercial por encima de 700M de usuarios activos mensuales). Mistral Small, Qwen3, Qwen3.8, Devstral y los modelos Gemma son Apache 2.0 (completamente de código abierto). Kimi K2.6 tiene licencia Modified MIT (compatible con uso comercial con cláusula de atribución). Laguna XS 2.1 usa OpenMDW-1.1 (permisiva, uso comercial permitido, no aprobada por OSI). Siempre verifica la licencia antes del despliegue comercial.' },
+            { q: '¿Qué modelo Dolphin debería usar con Ollama?', a: 'Usa Dolphin 3.0 (`ollama pull dolphin3`), no el más antiguo `dolphin-mistral` (última actualización en 2024, basado en Mistral 0.2). Dolphin 3.0, mantenido por Cognitive Computations (Eric Hartford), está basado en Llama 3.1, no tiene filtrado de contenido integrado y está diseñado como modelo local de propósito general para programación, matemáticas, tareas agénticas y chat sin restricciones.' },
+            { q: '¿Qué modelo de embeddings debería usar con Ollama para RAG?', a: '`nomic-embed-text` es la opción estándar -- un modelo de 137M de parámetros que genera embeddings de 768 dimensiones, se ejecuta en milisegundos por documento y está específicamente diseñado para tareas de recuperación. Descárgalo con `ollama pull nomic-embed-text`. Úsalo con el RAG integrado de Open WebUI, OllamaEmbeddings de LangChain o LlamaIndex.' },
+            { q: '¿Cuál es la última versión de Ollama?', a: 'La última versión estable de Ollama es la v0.33.1, publicada el 26 de agosto de 2026. El 27 de agosto apareció una candidata v0.33.2 que todavía no está marcada como estable. Descárgala en ollama.com/download o actualiza con `curl https://ollama.ai/install.sh | sh` en Linux y `brew upgrade ollama` en macOS.' },
+            { q: '¿Dónde puedo ver el changelog y las notas de versión de Ollama?', a: 'Las notas de cada versión están en github.com/ollama/ollama/releases, con la fecha y el changelog de cada tag. Las entradas más recientes son v0.33.1 (26 de agosto de 2026 -- MLX Qwen3.8 Flash Next, salida estructurada, correcciones de timeout de GPU), v0.33.0 (21 de agosto -- gateway de Claude Desktop, puntos de restauración de la caché KV) y v0.32.15 (19 de agosto -- nuevo onboarding de escritorio, carga de modelos ~2x más rápida).' },
+            { q: '¿Cómo compruebo qué versión de Ollama tengo instalada?', a: 'Ejecuta `ollama --version` en la terminal. Devuelve una línea como `ollama version 0.33.1`. Si el número es inferior al de la versión actual, actualiza con `curl https://ollama.ai/install.sh | sh` (Linux) o `brew upgrade ollama` (macOS) y vuelve a ejecutar `ollama --version` para confirmarlo.' },
+            { q: '¿Con qué frecuencia se actualiza la biblioteca de Ollama con nuevos modelos?', a: 'El equipo de Ollama añade nuevos modelos en días o semanas tras los lanzamientos principales. Laguna XS 2.1 (2 de julio de 2026), Kimi K2.7 Code, Kimi K2.6 y Qwen3.8 aparecieron a los pocos días de sus lanzamientos. La versión actual de Ollama es v0.33.1 (11 de julio de 2026). Sigue el repositorio GitHub de Ollama (github.com/ollama/ollama) o la cuenta de Twitter/X de Ollama para anuncios de nuevos modelos.' },
+            { q: '¿Cuál es la diferencia entre `ollama pull` y `ollama run`?', a: '`ollama pull` descarga el archivo del modelo al almacenamiento local (operación única). `ollama run` inicia una sesión interactiva inmediatamente después de descargar, o reutiliza el modelo ya descargado si está disponible. Puedes descargar una vez y ejecutar múltiples veces sin volver a descargar.' },
+            { q: '¿Puedo ejecutar varios modelos simultáneamente en la misma máquina?', a: 'Sí, si tu hardware tiene suficiente VRAM. Usa ventanas de terminal o sesiones de shell separadas -- una ventana ejecuta `ollama run llama3.2` mientras otra ejecuta `ollama run qwen2.5:7b`. Ollama gestiona automáticamente el uso compartido de VRAM. Monitorea `nvidia-smi` o la actividad del sistema para evitar sobrecargas.' },
+            { q: '¿Cómo actualizo un modelo a la última versión?', a: '`ollama pull [nombre-del-modelo]` verifica las actualizaciones y descarga la última versión si está disponible. Para revertir o usar versiones específicas, usa tags de versión: `ollama pull llama3.1:8b` o `ollama pull llama3.1:8b-instruct-q4_K_M`. Comprueba las versiones disponibles con `ollama show [nombre-del-modelo]`.' },
+            { q: '¿Los modelos de código abierto en Ollama son realmente gratuitos para uso comercial?', a: 'La mayoría sí, pero no todos. Llama 3.x (Meta Llama Community Licence) restringe el uso comercial por encima de 700M de usuarios activos mensuales. Mistral Small, Qwen3 y Gemma 3 usan Apache 2.0 (completamente compatible con uso comercial). Verifica siempre la licencia antes del despliegue empresarial -- consulta la página de Hugging Face del modelo o la entrada de la biblioteca de Ollama.' },
+            { q: '¿Qué modelos de Ollama funcionan mejor para tareas en ruso?', a: 'Qwen3 / Qwen3.8 (`ollama run qwen3:7b` o `ollama run qwen3.8:27b`) y Mistral Small 3.1 (`ollama run mistral-small3.1`) incluyen ambos el ruso en su entrenamiento multilingüe nativo. Qwen3 obtiene mejores resultados en tareas de benchmark no inglesas; Mistral Small 3.1 tiene una fluidez conversacional en ruso más sólida en pruebas informales. Ninguno es de origen ruso.' },
+            { q: '¿Cuáles son los mejores nuevos modelos de Ollama en julio de 2026?', a: 'Las últimas incorporaciones son Laguna XS 2.1 (Poolside, OpenMDW-1.1 -- programación agéntica de largo alcance, SWE-bench Verified 70,9%, 33B/3B activos MoE) y Kimi K2.7 Code (Moonshot AI -- modelo agéntico enfocado en programación basado en Kimi K2.6). Ambos se suman a la alineación establecida de julio: Kimi K2.6 (Modified MIT, MoE de frontera para programación, SWE-Bench Pro 58.6), Qwen3.8-27B (mejor general en hardware de consumo, 61,7% SWE-bench), GLM-5.3 (744B/40B activos MoE, MIT, SWE-Bench Pro 58.4) y gpt-oss:20b (mejor pequeño / 16 GB, ~o3-mini). Comandos: ollama run laguna-xs-2.1, ollama run kimi-k2.7-code, ollama run qwen3.8:27b, ollama run kimi-k2.6.' },
           ],
         },
         sources: {
@@ -1051,19 +998,75 @@ schema: {
         'mainEntity': [
           {
             '@type': 'Question',
+            'name': 'Descargar el tag de modelo más grande por defecto sin verificar la RAM',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ejecutar `ollama pull llama3.3` sin especificar un tag descarga la variante predeterminada, que suele ser la cuantización estándar más grande. En una máquina con 8 GB de RAM, descargar llama3.3 (70B a ~40 GB) fallará o causará un uso severo de swap. Siempre especifica la variante: `ollama pull llama3.2:3b` para máquinas de 8 GB.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Usar un modelo general cuando existe un modelo específico para la tarea',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Para tareas de programación, `qwen2.5-coder:7b` obtiene un 72% en HumanEval mientras que el general `qwen2.5:7b` también obtiene un 72% -- pero `qwen2.5-coder` incluye soporte FIM para completado de código. Para razonamiento/matemáticas, `deepseek-r1:7b` obtiene 52% en MATH frente al 28% de `mistral:7b`. Los modelos específicos de tarea existen en la biblioteca de Ollama por una razón.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'No verificar que un modelo está disponible antes de construir un flujo de trabajo',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'La biblioteca de Ollama cambia con el tiempo -- los modelos se añaden y ocasionalmente se eliminan. Antes de construir un pipeline de producción en torno a un modelo específico, confirma que está en la biblioteca (`ollama list` localmente, o consulta ollama.com/library). Fija versiones específicas de modelos en flujos de trabajo de producción: `ollama pull llama3.1:8b-instruct-q4_K_M`.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'No especificar un tag de cuantización para modelos grandes',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Ejecutar `ollama pull qwen2.5-coder:32b` sin un sufijo de cuantización descarga la variante predeterminada -- que puede ser mayor de lo que tu VRAM puede manejar. Para 16 GB de VRAM, descarga la variante explícita Q4_K_M: `ollama pull qwen2.5-coder:32b-instruct-q4_K_M`. Ejecuta `ollama show <modelo>` después de descargar para confirmar que los requisitos de VRAM coinciden con tu hardware.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Esperar que DeepSeek-R1 sea tan rápido como los modelos de chat estándar',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'DeepSeek-R1 genera tokens de razonamiento chain-of-thought explícito antes de su respuesta final -- por eso supera a los modelos estándar en matemáticas y lógica, pero produce entre 3 y 5 veces más tokens por respuesta. Para chat rápido o respuestas de una línea, usa `llama3.1:8b`. Reserva DeepSeek-R1 para tareas donde la precisión del razonamiento importa más que la velocidad.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuál es el mejor modelo de Ollama para programar?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Para programación de frontera y flujos agénticos, Kimi K2.6 y Laguna XS 2.1 son las opciones más capaces de la biblioteca; Kimi K2.7 Code, derivado de K2.6, está directamente enfocado en programación. Si trabajas con 16 GB de RAM, gpt-oss:20b es la mejor opción pequeña, y qwen3:30b ofrece el equilibrio más razonable entre calidad y tamaño. Elige según la RAM disponible antes que por el ranking: un modelo que no cabe en memoria no te sirve por muy bueno que sea.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué es Laguna XS 2.1 y para qué sirve?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Laguna XS 2.1 es un modelo de Poolside disponible en la biblioteca de Ollama. Usa una arquitectura MoE de 33B parámetros con 3B activos, lo que le permite rendir por encima de su coste de memoria, y está orientado a programación agéntica de largo alcance: tareas en las que el modelo encadena varios pasos sobre un repositorio en lugar de completar una sola función. Es uno de los añadidos más recientes a la biblioteca, junto con Kimi K2.7 Code.',
+            },
+          },
+          {
+            '@type': 'Question',
             'name': '¿Cuántos modelos hay en la biblioteca de Ollama?',
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': 'La biblioteca de Ollama contiene varios cientos de modelos seleccionados (con soporte oficial), y crece cada semana con nuevos lanzamientos de peso abierto. Hugging Face aloja miles de modelos GGUF adicionales que se pueden cargar mediante Ollama usando Modelfiles personalizados.',
-            }
+            },
           },
           {
             '@type': 'Question',
             'name': '¿Cuál es el nombre oficial de la empresa detrás de Ollama?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'La empresa es Ollama Inc., una startup con financiación Serie B con sede en Palo Alto, California, fundada en 2023 por Jeffrey Morgan y Michael Chiang.',
-            }
+              'text': 'La empresa es Ollama Inc., una startup con financiación Serie B con sede en Palo Alto, California, fundada en 2023 por Jeffrey Morgan y Michael Chiang. "Ollama" se refiere tanto a la empresa como a la herramienta CLI/runtime de modelos que publica.',
+            },
           },
           {
             '@type': 'Question',
@@ -1071,7 +1074,7 @@ schema: {
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': 'Sí. Descarga un archivo GGUF de Hugging Face y crea un Modelfile: `FROM ./model.gguf`. Luego ejecuta `ollama create mimodelo -f Modelfile`. Esto funciona para cualquier archivo GGUF incluyendo ajustes finos y modelos que no están en la biblioteca oficial de Ollama.',
-            }
+            },
           },
           {
             '@type': 'Question',
@@ -1079,7 +1082,7 @@ schema: {
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': 'Para un chatbot local de propósito general: `qwen3.8:27b` (mejor general en hardware de consumo, cabe en 24 GB con Q4), o `llama3.2:3b` con 8 GB de RAM (punto de entrada más sencillo). Para máquinas de 16 GB: `gpt-oss:20b` (~nivel o3-mini) o `mistral-small3.1`. Para un chatbot asistente de programación: `qwen3.8:27b` (61,7% SWE-bench), `kimi-k2.6` (MoE de frontera) o `laguna-xs-2.1` (agéntico, largo alcance). Combínalo con Open WebUI para una interfaz web que se conecta a la API de Ollama en localhost:11434.',
-            }
+            },
           },
           {
             '@type': 'Question',
@@ -1087,7 +1090,7 @@ schema: {
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': 'No todos. La biblioteca de Ollama incluye modelos con licencias variadas. Llama 3.x/4.x usan la Meta Llama Community Licence (no aprobada por OSI como código abierto -- restringe el uso comercial por encima de 700M de usuarios activos mensuales). Mistral Small, Qwen3, Qwen3.8, Devstral y los modelos Gemma son Apache 2.0 (completamente de código abierto). Kimi K2.6 tiene licencia Modified MIT (compatible con uso comercial con cláusula de atribución). Laguna XS 2.1 usa OpenMDW-1.1 (permisiva, uso comercial permitido, no aprobada por OSI). Siempre verifica la licencia antes del despliegue comercial.',
-            }
+            },
           },
           {
             '@type': 'Question',
@@ -1095,7 +1098,7 @@ schema: {
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': 'Usa Dolphin 3.0 (`ollama pull dolphin3`), no el más antiguo `dolphin-mistral` (última actualización en 2024, basado en Mistral 0.2). Dolphin 3.0, mantenido por Cognitive Computations (Eric Hartford), está basado en Llama 3.1, no tiene filtrado de contenido integrado y está diseñado como modelo local de propósito general para programación, matemáticas, tareas agénticas y chat sin restricciones.',
-            }
+            },
           },
           {
             '@type': 'Question',
@@ -1103,7 +1106,7 @@ schema: {
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': '`nomic-embed-text` es la opción estándar -- un modelo de 137M de parámetros que genera embeddings de 768 dimensiones, se ejecuta en milisegundos por documento y está específicamente diseñado para tareas de recuperación. Descárgalo con `ollama pull nomic-embed-text`. Úsalo con el RAG integrado de Open WebUI, OllamaEmbeddings de LangChain o LlamaIndex.',
-            }
+            },
           },
           {
             '@type': 'Question',
@@ -1111,7 +1114,7 @@ schema: {
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': 'La última versión estable de Ollama es la v0.33.1, publicada el 26 de agosto de 2026. El 27 de agosto apareció una candidata v0.33.2 que todavía no está marcada como estable. Descárgala en ollama.com/download o actualiza con `curl https://ollama.ai/install.sh | sh` en Linux y `brew upgrade ollama` en macOS.',
-            }
+            },
           },
           {
             '@type': 'Question',
@@ -1119,7 +1122,7 @@ schema: {
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': 'Las notas de cada versión están en github.com/ollama/ollama/releases, con la fecha y el changelog de cada tag. Las entradas más recientes son v0.33.1 (26 de agosto de 2026 -- MLX Qwen3.8 Flash Next, salida estructurada, correcciones de timeout de GPU), v0.33.0 (21 de agosto -- gateway de Claude Desktop, puntos de restauración de la caché KV) y v0.32.15 (19 de agosto -- nuevo onboarding de escritorio, carga de modelos ~2x más rápida).',
-            }
+            },
           },
           {
             '@type': 'Question',
@@ -1127,7 +1130,7 @@ schema: {
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': 'Ejecuta `ollama --version` en la terminal. Devuelve una línea como `ollama version 0.33.1`. Si el número es inferior al de la versión actual, actualiza con `curl https://ollama.ai/install.sh | sh` (Linux) o `brew upgrade ollama` (macOS) y vuelve a ejecutar `ollama --version` para confirmarlo.',
-            }
+            },
           },
           {
             '@type': 'Question',
@@ -1135,7 +1138,7 @@ schema: {
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': 'El equipo de Ollama añade nuevos modelos en días o semanas tras los lanzamientos principales. Laguna XS 2.1 (2 de julio de 2026), Kimi K2.7 Code, Kimi K2.6 y Qwen3.8 aparecieron a los pocos días de sus lanzamientos. La versión actual de Ollama es v0.33.1 (11 de julio de 2026). Sigue el repositorio GitHub de Ollama (github.com/ollama/ollama) o la cuenta de Twitter/X de Ollama para anuncios de nuevos modelos.',
-            }
+            },
           },
           {
             '@type': 'Question',
@@ -1143,7 +1146,7 @@ schema: {
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': '`ollama pull` descarga el archivo del modelo al almacenamiento local (operación única). `ollama run` inicia una sesión interactiva inmediatamente después de descargar, o reutiliza el modelo ya descargado si está disponible. Puedes descargar una vez y ejecutar múltiples veces sin volver a descargar.',
-            }
+            },
           },
           {
             '@type': 'Question',
@@ -1151,7 +1154,7 @@ schema: {
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': 'Sí, si tu hardware tiene suficiente VRAM. Usa ventanas de terminal o sesiones de shell separadas -- una ventana ejecuta `ollama run llama3.2` mientras otra ejecuta `ollama run qwen2.5:7b`. Ollama gestiona automáticamente el uso compartido de VRAM. Monitorea `nvidia-smi` o la actividad del sistema para evitar sobrecargas.',
-            }
+            },
           },
           {
             '@type': 'Question',
@@ -1159,7 +1162,7 @@ schema: {
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': '`ollama pull [nombre-del-modelo]` verifica las actualizaciones y descarga la última versión si está disponible. Para revertir o usar versiones específicas, usa tags de versión: `ollama pull llama3.1:8b` o `ollama pull llama3.1:8b-instruct-q4_K_M`. Comprueba las versiones disponibles con `ollama show [nombre-del-modelo]`.',
-            }
+            },
           },
           {
             '@type': 'Question',
@@ -1167,15 +1170,7 @@ schema: {
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': 'La mayoría sí, pero no todos. Llama 3.x (Meta Llama Community Licence) restringe el uso comercial por encima de 700M de usuarios activos mensuales. Mistral Small, Qwen3 y Gemma 3 usan Apache 2.0 (completamente compatible con uso comercial). Verifica siempre la licencia antes del despliegue empresarial -- consulta la página de Hugging Face del modelo o la entrada de la biblioteca de Ollama.',
-            }
-          },
-          {
-            '@type': 'Question',
-            'name': '¿Cuáles son los mejores nuevos modelos de Ollama en julio de 2026?',
-            'acceptedAnswer': {
-              '@type': 'Answer',
-              'text': 'Las últimas incorporaciones son Laguna XS 2.1 (Poolside, OpenMDW-1.1 -- programación agéntica de largo alcance, SWE-bench Verified 70,9%, 33B/3B activos MoE) y Kimi K2.7 Code (Moonshot AI -- modelo agéntico enfocado en programación basado en Kimi K2.6). Ambos se suman a la alineación establecida de julio: Kimi K2.6 (Modified MIT, MoE de frontera para programación, SWE-Bench Pro 58.6), Qwen3.8-27B (mejor general en hardware de consumo, 61,7% SWE-bench), GLM-5.3 (744B/40B activos MoE, MIT, SWE-Bench Pro 58.4) y gpt-oss:20b (mejor pequeño / 16 GB, ~o3-mini). Comandos: ollama run laguna-xs-2.1, ollama run kimi-k2.7-code, ollama run qwen3.8:27b, ollama run kimi-k2.6.',
-            }
+            },
           },
           {
             '@type': 'Question',
@@ -1183,7 +1178,15 @@ schema: {
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': 'Qwen3 / Qwen3.8 (`ollama run qwen3:7b` o `ollama run qwen3.8:27b`) y Mistral Small 3.1 (`ollama run mistral-small3.1`) incluyen ambos el ruso en su entrenamiento multilingüe nativo. Qwen3 obtiene mejores resultados en tareas de benchmark no inglesas; Mistral Small 3.1 tiene una fluidez conversacional en ruso más sólida en pruebas informales. Ninguno es de origen ruso.',
-            }
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuáles son los mejores nuevos modelos de Ollama en julio de 2026?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Las últimas incorporaciones son Laguna XS 2.1 (Poolside, OpenMDW-1.1 -- programación agéntica de largo alcance, SWE-bench Verified 70,9%, 33B/3B activos MoE) y Kimi K2.7 Code (Moonshot AI -- modelo agéntico enfocado en programación basado en Kimi K2.6). Ambos se suman a la alineación establecida de julio: Kimi K2.6 (Modified MIT, MoE de frontera para programación, SWE-Bench Pro 58.6), Qwen3.8-27B (mejor general en hardware de consumo, 61,7% SWE-bench), GLM-5.3 (744B/40B activos MoE, MIT, SWE-Bench Pro 58.4) y gpt-oss:20b (mejor pequeño / 16 GB, ~o3-mini). Comandos: ollama run laguna-xs-2.1, ollama run kimi-k2.7-code, ollama run qwen3.8:27b, ollama run kimi-k2.6.',
+            },
           },
         ]
       },

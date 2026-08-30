@@ -827,6 +827,7 @@ schema: {
         { label: 'Erros comuns ao escalar na empresa', anchor: '#common-mistakes' },
         { label: 'Leitura relacionada', anchor: '#related-reading' },
         { label: 'Fontes', anchor: '#sources' },
+        { label: 'Perguntas frequentes', anchor: 'faq' },
       ],
       sections: {
         tldr: {
@@ -888,6 +889,18 @@ schema: {
             '**Não configurar `num_ctx` adequado.** O padrão de 2048 tokens do Ollama é insuficiente para a maioria dos casos de uso empresariais. Defina no mínimo 8192.',
             '**Ignorar conformidade com LGPD/ANPD.** Para empresas brasileiras processando dados pessoais de clientes, o DPO deve ser consultado antes de implantar qualquer LLM — local ou na nuvem.',
             '**Não implementar logging de auditoria.** Registre prompts, respostas e metadados de usuário para conformidade regulatória e debugging.',
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: 'Perguntas frequentes',
+          faqs: [
+            { q: 'Quantas GPUs precisamos para implantação empresarial?', a: 'Depende da concorrência e dos requisitos de latência. 100 usuários simultâneos em modelo 7B: ~5-8 GPUs. 500 usuários simultâneos: 20-30 GPUs. Fórmula: (usuários simultâneos × latência esperada) / (tokens/seg por GPU).' },
+            { q: 'Qual a diferença entre balanceamento de carga e auto-scaling?', a: 'O balanceamento de carga distribui requisições entre pods existentes. O auto-scaling adiciona/remove pods com base na carga. Ambos são necessários: o balanceamento distribui o trabalho agora, o auto-scaling ajusta a capacidade.' },
+            { q: 'Como lidamos com falhas de GPU?', a: 'O Kubernetes reagenda automaticamente os pods para GPUs saudáveis. Se uma GPU falhar, o Kubernetes a marca como indisponível e redireciona o tráfego para as demais. Mantenha redundância: se precisar de 8 GPUs, provisione 10.' },
+            { q: 'Qual SLA de latência devemos almejar?', a: 'p99 de latência <2 segundos é padrão para chatbots. p99 <500ms para autocompletar em tempo real. Defina o SLA com base na experiência do usuário e escolha hardware/tamanho de lote para atingi-lo.' },
+            { q: 'Como monitoramos um cluster de inferência distribuído?', a: 'Monitore por pod e no nível do cluster: utilização de GPU, profundidade da fila, latência (p50/p95/p99), taxa de erro, throughput e uptime. Use Prometheus + Grafana ou equivalente.' },
+            { q: 'A escala on-premises é mais barata que a nuvem?', a: 'Sim, em escala. O ponto de equilíbrio é de ~500 mil tokens/mês. On-premises: alto custo inicial ($500 mil-2 milhões em hardware), depois baixo custo por requisição. Nuvem: sem custo inicial, alto custo por requisição ($0,15-60/1M tokens).' },
           ],
         },
         relatedReading: {

@@ -859,6 +859,7 @@ schema: {
         { label: 'Erros comuns de conformidade', anchor: '#common-mistakes' },
         { label: 'Leituras relacionadas', anchor: '#related-reading' },
         { label: 'Fontes', anchor: '#sources' },
+        { label: 'Perguntas frequentes', anchor: 'faq' },
       ],
       sections: {
         tldr: {
@@ -950,6 +951,14 @@ schema: {
             '**Ignorar os direitos do titular dos dados.** Os usuários podem solicitar acesso ou exclusão de seus dados — certifique-se de que seu sistema possa atender a essas solicitações.',
             '**Pular a avaliação de impacto de proteção de dados.** Para processamento de alto risco, uma RIPD é obrigatória pela LGPD.',
             '**Não documentar a base legal.** Cada operação de tratamento de dados deve ter uma base legal documentada.',
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: 'Perguntas frequentes',
+          faqs: [
+            { q: 'LLMs locais são conformes com a LGPD por padrão?', a: 'Não automaticamente. A conformidade com a LGPD requer: dados pessoais no local (os LLMs locais atendem a isso), logs de auditoria de quem processou o quê, avaliações de impacto de proteção de dados (RIPD) para processamento de alto risco, e notificação à ANPD em caso de violações de dados.' },
+            { q: 'Que documentação de conformidade os LLMs locais precisam?', a: 'Documentação mínima: (1) registro de atividades de tratamento (exigido pela LGPD), (2) avaliação de impacto de proteção de dados para sistemas de alto risco, (3) políticas de retenção de dados, (4) registros de treinamento de funcionários, (5) plano de resposta a incidentes.' },
           ],
         },
         relatedReading: {

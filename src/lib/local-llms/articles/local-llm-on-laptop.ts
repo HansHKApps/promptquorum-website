@@ -2849,17 +2849,262 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         mainEntity: [
-          { '@type': 'Question', name: 'Quels sont les meilleurs modèles Ollama pour Intel Iris Xe avec 16 Go de RAM ?', acceptedAnswer: { '@type': 'Answer', text: 'Sur un portable doté d\'un graphique intégré Intel Iris Xe et de 16 Go de RAM, l\'inférence s\'exécute sur le CPU (Iris Xe ne l\'accélère pas) : choisissez un modèle 3B–7B en Q4_K_M. Llama 3.2 3B est le plus rapide, en haut de la plage 8–20 token/sec ; Mistral Small (7B) est plus lent mais de meilleure qualité.' } },
-          { '@type': 'Question', name: 'Peut-on faire du RAG localement sur un ordinateur portable ?', acceptedAnswer: { '@type': 'Answer', text: 'Oui. Une pile RAG sur portable se compose d\'un petit modèle d\'embeddings, d\'un magasin de vecteurs local et de votre modèle de chat. Le modèle d\'embeddings ne pèse que quelques centaines de Mo : le modèle de chat reste donc la contrainte déterminante de RAM — un portable 8 Go exécute confortablement un modèle de chat 3B avec récupération. 2 Go de RAM ne suffisent pas pour le RAG.' } },
-          { '@type': 'Question', name: 'Quel est le meilleur LLM local CPU uniquement pour un portable ?', acceptedAnswer: { '@type': 'Answer', text: 'Pour les portables sans GPU, Llama 3.2 3B (25–45 token/sec) et Mistral Small 7B (10–20 token/sec) en Q4_K_M offrent le meilleur équilibre vitesse/qualité. Consultez le guide dédié Meilleurs LLM locaux CPU uniquement 2026 pour un comparatif classé complet.' } },
-          { '@type': 'Question', name: 'L\'exécution d\'un Local LLM endommagera-t-elle mon ordinateur portable au fil du temps?', acceptedAnswer: { '@type': 'Answer', text: 'Non -- les CPU et GPU modernes gèrent les charges élevées continues en toute sécurité. Un support d\'ordinateur portable et une ventilation adéquate préviennent l\'accumulation excessive de chaleur.' } },
-          { '@type': 'Question', name: 'Puis-je exécuter un Local LLM sur un ordinateur portable 4 GB RAM?', acceptedAnswer: { '@type': 'Answer', text: 'À peine. Un modèle 2B nécessite environ 1,7 GB de RAM, l\'OS a besoin de 2-3 GB simultanément. Avec 4 GB au total, l\'utilisation d\'échange rendra l\'inférence 5-10× plus lente.' } },
-          { '@type': 'Question', name: 'Mon ordinateur portable a-t-il besoin d\'un GPU dédié?', acceptedAnswer: { '@type': 'Answer', text: 'Non. Tous les principaux outils Local LLM fonctionnent uniquement sur CPU. Un GPU dédié accélère l\'inférence, mais les modèles 3B-7B sont utilisables à 10-30 token/sec uniquement sur CPU.' } },
-          { '@type': 'Question', name: 'Quel est l\'ordinateur portable le plus rapide?', acceptedAnswer: { '@type': 'Answer', text: 'Depuis mars 2026, Apple MacBook Pro M5 Max (jusqu\'à 128 GB mémoire unifiée) est le plus rapide. Il atteint 80-120 token/sec sur un modèle 13B.' } },
-          { '@type': 'Question', name: 'Comment savoir si mon ordinateur portable fait l\'étranglement thermique?', acceptedAnswer: { '@type': 'Answer', text: 'Sur macOS: ouvrez Activity Monitor → Window → Historique d\'utilisation CPU. Une chute soudaine indique l\'étranglement.' } },
-          { '@type': 'Question', name: 'Puis-je exécuter avec l\'alimentation par batterie?', acceptedAnswer: { '@type': 'Answer', text: 'Oui, mais la vitesse et la durée sont réduites. macOS limite automatiquement la consommation d\'énergie, réduisant la vitesse de 20-35%.' } },
-          { '@type': 'Question', name: 'Quelle est la meilleure taille de modèle pour 8 GB RAM?', acceptedAnswer: { '@type': 'Answer', text: 'Un modèle 7B en Q4_K_M est le maximum pratique. Le standard recommandé est llama3.2:3b pour le multitâche.' } },
-          { '@type': 'Question', name: 'Ollama utilise-t-il automatiquement le GPU?', acceptedAnswer: { '@type': 'Answer', text: 'Oui. Ollama détecte et utilise automatiquement l\'accélération GPU. Vous pouvez vérifier en exécutant `ollama ps`.' } }
+          {
+            '@type': 'Question',
+            'name': 'Quels sont les meilleurs modèles Ollama pour Intel Iris Xe avec 16 Go de RAM ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sur un portable doté d\'un graphique intégré Intel Iris Xe et de 16 Go de RAM, l\'inférence s\'exécute sur le CPU (Iris Xe ne l\'accélère pas) : choisissez donc un modèle 3B–7B en Q4_K_M. Llama 3.2 3B est le plus rapide, en haut de la plage 8–20 token/sec ; Mistral Small (7B) est plus lent mais de meilleure qualité. Lancez l\'un ou l\'autre avec `ollama run llama3.2:3b` ou `ollama run mistral`.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Peut-on faire du RAG localement sur un ordinateur portable ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui. Une pile RAG sur portable se compose d\'un petit modèle d\'embeddings, d\'un magasin de vecteurs local et de votre modèle de chat. Le modèle d\'embeddings ne pèse que quelques centaines de Mo : le modèle de chat reste donc la contrainte déterminante de RAM — un portable 8 Go exécute confortablement un modèle de chat 3B avec récupération. Voir la [section RAG sur portable](#rag-laptop) ci-dessus pour le détail de la RAM.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quel est le meilleur LLM local CPU uniquement pour un portable ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Pour les portables sans GPU, Llama 3.2 3B (25–45 token/sec) et Mistral Small 7B (10–20 token/sec) en Q4_K_M offrent le meilleur équilibre vitesse/qualité. Pour un comparatif classé complet et les commandes Ollama, consultez le guide dédié : [Meilleurs LLM locaux CPU uniquement 2026](/fr/local-llms/best-cpu-only-llm).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'L\'exécution d\'un Local LLM endommagera-t-elle mon ordinateur portable au fil du temps?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Non -- les CPU et GPU modernes sont conçus pour gérer en toute sécurité les charges élevées continues via l\'étranglement thermique. L\'exécution de l\'inférence pendant des heures est équivalente à l\'encodage vidéo ou aux jeux. Un support d\'ordinateur portable et une ventilation adéquate préviennent l\'accumulation excessive de chaleur. Le nombre de cycles de batterie augmente avec les recharges prolongées branchées, ce qui est un modèle d\'usure normal.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Puis-je exécuter un Local LLM sur un ordinateur portable 4 GB RAM?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'À peine. Un modèle 2B comme Gemma 2 2B nécessite environ 1,7 GB de RAM pour le modèle, mais l\'OS a besoin de 2-3 GB simultanément. Sur 4 GB de RAM total, vous connaîtrez probablement une utilisation d\'échange ce qui rend l\'inférence 5-10× plus lente. Le minimum pratique pour une expérience utilisable est 8 GB.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Mon ordinateur portable a-t-il besoin d\'un GPU dédié pour exécuter des Local LLMs?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Non. Tous les principaux outils Local LLM (Ollama, LM Studio, GPT4All) fonctionnent uniquement sur CPU. Un GPU dédié accélère considérablement l\'inférence, mais les modèles 3B-7B sont utilisables à 10-30 token/sec uniquement sur CPU. Voir [Meilleurs modèles Local LLM pour débutants](/local-llms/best-beginner-local-llm-models) pour les recommandations de modèles optimisés CPU.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quel est l\'ordinateur portable le plus rapide pour exécuter des Local LLMs?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Depuis mars 2026, le MacBook Pro Apple M5 Max (jusqu\'à 128 GB de mémoire unifiée, 614 GB/s de bande passante) est l\'ordinateur portable grand public le plus rapide pour l\'inférence Local LLM. Il atteint 80-120 token/sec sur un modèle 13B et peut exécuter des modèles 30B à Q4_K_M. Pour les ordinateurs portables Windows, un GPU ordinateur portable RTX 4090 (16 GB VRAM) produit 100-130 token/sec sur des modèles 7B mais consomme considérablement plus d\'énergie et génère plus de chaleur.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Comment savoir si mon ordinateur portable fait l\'étranglement thermique?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sur macOS: ouvrez Activity Monitor → Window → Historique d\'utilisation CPU. Une chute soudaine de la fréquence CPU lors d\'une génération continue indique l\'étranglement. Sur Windows: utilisez HWiNFO64 pour surveiller en temps réel les températures et vitesses d\'horloge du CPU/GPU. L\'étranglement se produit généralement lorsque la température du CPU dépasse 95-100°C.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Puis-je exécuter un Local LLM avec l\'alimentation par batterie?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui, mais la vitesse et la durée sont réduites. En mode batterie, macOS limite automatiquement la consommation d\'énergie du CPU/GPU, réduisant la vitesse d\'inférence de 20-35% par rapport aux performances branchées. Un modèle 7B sur un MacBook M3 Pro consomme environ 12-18 W lors de l\'inférence -- attendez-vous à 3-4 heures de génération active à partir d\'une charge complète avant de tomber à 20%. Pour les sessions économes en batterie, utilisez un modèle 3B (6-10 W).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quelle est la meilleure taille de modèle pour un ordinateur portable 8 GB RAM?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Un modèle 7B en Q4_K_M est le maximum pratique pour les ordinateurs portables 8 GB RAM lors de l\'exécution avec un navigateur ou d\'autres applications ouvertes. Pour juste le modèle avec toutes les autres applications fermées, un modèle 9B peut tenir. Le standard recommandé est llama3.2:3b pour le multitâche ou mistral:7b pour la qualité lorsque vous pouvez fermer le navigateur.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ollama utilise-t-il automatiquement le GPU sur un ordinateur portable?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui. Ollama détecte et utilise automatiquement l\'accélération GPU disponible. Sur Apple Silicon, il utilise l\'accélération GPU Metal. Sur les ordinateurs portables NVIDIA, il utilise CUDA. Sur les ordinateurs portables AMD, il utilise ROCm (avec une configuration supplémentaire sur Linux). Vous pouvez vérifier que le GPU est utilisé en exécutant `ollama ps` après le démarrage d\'un modèle -- cela montre si les couches sont chargées vers GPU ou CPU.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Puis-je exécuter un Local LLM sur 8 GB RAM?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui. Un ordinateur portable de 8 GB exécute des modèles 7B à Q4_K_M (4,5 GB) à 10–25 token/sec sur CPU, ou 30–80 token/sec sur Apple Silicon.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quel est l\'ordinateur portable le plus rapide pour les Local LLMs?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Apple MacBook Pro M5 Pro/M5 Max avec jusqu\'à 64–128 GB de mémoire unifiée atteint 80–120 token/sec sur des modèles 13B. Sur Windows, un GPU ordinateur portable NVIDIA RTX 4070/4090 (8–16 GB VRAM) réalise 60–130 token/sec sur des modèles 7B.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ai-je besoin d\'un GPU pour les Local LLMs?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Non — Ollama et LM Studio fonctionnent uniquement sur CPU. Un GPU accélère l\'inférence de 10–25 à 50–90 token/sec sur des modèles 7B, mais n\'est pas nécessaire.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'À quelle vitesse les Local LLMs s\'exécutent-ils sur CPU?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Un modèle 7B à Q4_K_M s\'exécute à 10–25 token/sec sur un CPU d\'ordinateur portable moderne — assez lent pour lire au fil et à mesure, mais suffisamment rapide pour les discussions et les résumés. Apple Silicon atteint 30–80 token/sec en utilisant la mémoire unifiée comme GPU.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'L\'exécution de LLMs endommage-t-elle un ordinateur portable?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Non. Les CPU et GPU sont conçus pour une charge continue via l\'étranglement thermique. Un support d\'ordinateur portable pour l\'aération et des pauses occasionnelles préviennent la chaleur excessive ; le bruit normal du ventilateur n\'est pas un signe de dommages.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '16GB RAMのIntel Iris Xeに最適なOllamaモデルは何ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Intel Iris Xe統合グラフィックスと16GB RAMを搭載したノートパソコンでは、推論はCPUで実行されるため（Iris Xeは加速しません）、Q4_K_Mの3B–7Bモデルを選んでください。Llama 3.2 3Bは8–20トークン/秒の範囲の上限で最速です。Mistral Small（7B）は遅いですが高品質です。どちらも`ollama run llama3.2:3b`または`ollama run mistral`で実行できます。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ノートパソコンでローカルにRAGを実行できますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい。ノートパソコンのRAGスタックは、小さな埋め込みモデル、ローカルのベクトルストア、そしてチャットモデルで構成されます。埋め込みモデルはわずか数百MBなので、チャットモデルが依然としてRAMの制約となります――8GBのノートパソコンは検索付きで3Bのチャットモデルを快適に実行します。RAMの内訳については上記の[ノートパソコンでのRAGセクション](#rag-laptop)をご覧ください。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ノートパソコンに最適なCPUのみのローカルLLMは何ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'CPUのみのノートパソコンでは、Q4_K_MのLlama 3.2 3B（25–45トークン/秒）とMistral Small 7B（10–20トークン/秒）が速度と品質の最良のバランスです。完全なランキング比較とOllamaコマンドについては、専用ガイド[CPUのみのベストローカルLLM 2026](/ja/local-llms/best-cpu-only-llm)をご覧ください。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ローカルLLMを実行することはノートパソコンに時間をかけて損傷を与えますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'いいえ--最新のCPUおよびGPUはサーマルスロットリングを介して継続的な高負荷を安全に処理するために設計されています。推論を数時間実行することはビデオエンコーディングやゲームに相当します。ノートパソコンスタンドと適切な換気により、過剰な熱の蓄積が防止されます。バッテリーサイクル数は長時間のプラグイン充電で増加し、これは通常の摩耗パターンです。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '4GB RAMノートパソコンでローカルLLMを実行できますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ほぼ。Gemma 2 2Bのような2Bモデルは、モデル用に約1.7GB RAMが必要ですが、OSは同時に2-3GB必要です。合計4GBでは、スワップ使用により推論が5-10倍遅くなります。実用的な最小値は8GBです。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ノートパソコンはローカルLLMを実行するために専用GPUを必要とますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'いいえ。すべての主要なローカルLLMツール（Ollama、LM Studio、GPT4All）はCPUのみで実行されます。専用GPUはウォーム推論を大幅に加速しますが、3B-7Bモデルは10-30トークン/秒でCPU単独で使用可能です。[初心者向けのベストローカルLLMモデル](/local-llms/best-beginner-local-llm-models)を参照してください。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ローカルLLMを実行するための最速のノートパソコンは何ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '2026年3月以降、Apple MacBook Pro M5 Max（最大128GB統合メモリ、614GB/秒帯域幅）はローカルLLM推論のための最速のコンシューマーノートパソコンです。13Bモデルで80-120トークン/秒を達成でき、Q4_K_Mで30Bモデルを実行できます。Windowsノートパソコンの場合、RTX 4090ノートパソコンGPU（16GB VRAM）は7Bモデルで100-130トークン/秒を生成しますが、かなり多くの電力を消費し、より多くの熱を生成します。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ノートパソコンがサーマルスロットリングしているかどうかを知るにはどうすればよいですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'macOSで：Activity Monitor→Window→CPU使用履歴を開きます。継続生成中のCPU周波数の急激な低下はスロットリングを示します。Windowsで：HWiNFO64を使用してCPU/GPUの温度とクロック速度をリアルタイムで監視します。スロットリングは通常、CPUの温度が95-100°Cを超えるときに発生します。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'バッテリー電力でローカルLLMを実行できますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい、ただし速度と期間は削減されます。バッテリーモードでは、macOSは自動的にCPU/GPU電力出力を制限し、プラグイン性能と比較して推論速度を20-35%削減します。MacBook M3 Proの7Bモデルは推論中に約12-18Wを引き出します--フル充電から3-4時間のアクティブな生成を期待してください。バッテリー効率的なセッションには、3Bモデル（6-10W）を使用してください。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '8GB RAMノートパソコンに最適なモデルサイズは何ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Q4_K_Mの7Bモデルは、ブラウザまたは他のアプリが開いた状態で実行する8GB RAMノートパソコンの実用的な最大値です。すべての他のアプリがクローズされただけのモデル、9Bモデルが収まる場合があります。推奨される標準はマルチタスク用のllama3.2:3b、またはブラウザを閉じることができる場合の品質用のmistral:7bです。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Ollamaはノートパソコンで自動的にGPUを使用しますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい。Ollamaは利用可能なGPU加速を自動的に検出して使用します。Apple Siliconでは、Metal GPU加速を使用します。NVIDIAノートパソコンではCUDAを使用します。AMDノートパソコンではROCmを使用します。GPUが使用されているかを確認するには、モデルを開始後に`ollama ps`を実行します--レイヤーがGPUまたはCPUに読み込まれているかどうかが表示されます。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '8GB RAMでローカルLLMを実行できますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'はい。8GBのノートパソコンはQ4_K_M量子化（4.5GB）の7BモデルをCPUで10–25トークン/秒、Apple Siliconで30–80トークン/秒で実行できます。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ローカルLLMに最速のノートパソコンは何ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '最大64–128GBの統合メモリを搭載したApple MacBook Pro M5 Pro/M5 Maxが13Bモデルで80–120トークン/秒を達成します。WindowsではNVIDIA RTX 4070/4090ノートパソコンGPU（8–16GB VRAM）が7Bモデルで60–130トークン/秒を実現します。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ローカルLLMにGPUは必要ですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'いいえ — OllamaとLM StudioはCPUのみで動作します。GPUがあると7Bモデルの推論が10–25から50–90トークン/秒に高速化されますが、必須ではありません。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'CPU上でのローカルLLMの速度はどのくらいですか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '最新のノートパソコンCPUでQ4_K_Mの7Bモデルは10–25トークン/秒で動作します — チャットや要約には十分な速度です。Apple Siliconは統合メモリをGPUとして使用し30–80トークン/秒を達成します。',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'LLMの実行はノートパソコンに損傷を与えますか？',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'いいえ。CPUとGPUはサーマルスロットリングによる継続的な負荷に対応するよう設計されています。ノートパソコンスタンドで気流を確保し適度な休憩を取れば過熱を防げます；通常のファン音は損傷の兆候ではありません。',
+            },
+          },
         ]
       },
       itemListSchema: {
@@ -3137,70 +3382,22 @@ schema: {
           id: 'faq',
           title: 'ノートパソコンでのローカルLLM実行に関するよくある質問',
           faqs: [
-            {
-              q: '16GB RAMのIntel Iris Xeに最適なOllamaモデルは何ですか？',
-              a: 'Intel Iris Xe統合グラフィックスと16GB RAMを搭載したノートパソコンでは、推論はCPUで実行されるため（Iris Xeは加速しません）、Q4_K_Mの3B–7Bモデルを選んでください。Llama 3.2 3Bは8–20トークン/秒の範囲の上限で最速です。Mistral Small（7B）は遅いですが高品質です。どちらも`ollama run llama3.2:3b`または`ollama run mistral`で実行できます。',
-            },
-            {
-              q: 'ノートパソコンでローカルにRAGを実行できますか？',
-              a: 'はい。ノートパソコンのRAGスタックは、小さな埋め込みモデル、ローカルのベクトルストア、そしてチャットモデルで構成されます。埋め込みモデルはわずか数百MBなので、チャットモデルが依然としてRAMの制約となります――8GBのノートパソコンは検索付きで3Bのチャットモデルを快適に実行します。RAMの内訳については上記の[ノートパソコンでのRAGセクション](#rag-laptop)をご覧ください。',
-            },
-            {
-              q: 'ノートパソコンに最適なCPUのみのローカルLLMは何ですか？',
-              a: 'CPUのみのノートパソコンでは、Q4_K_MのLlama 3.2 3B（25–45トークン/秒）とMistral Small 7B（10–20トークン/秒）が速度と品質の最良のバランスです。完全なランキング比較とOllamaコマンドについては、専用ガイド[CPUのみのベストローカルLLM 2026](/ja/local-llms/best-cpu-only-llm)をご覧ください。',
-            },
-            {
-              q: 'ローカルLLMを実行することはノートパソコンに時間をかけて損傷を与えますか？',
-              a: 'いいえ--最新のCPUおよびGPUはサーマルスロットリングを介して継続的な高負荷を安全に処理するために設計されています。推論を数時間実行することはビデオエンコーディングやゲームに相当します。ノートパソコンスタンドと適切な換気により、過剰な熱の蓄積が防止されます。バッテリーサイクル数は長時間のプラグイン充電で増加し、これは通常の摩耗パターンです。',
-            },
-            {
-              q: '4GB RAMノートパソコンでローカルLLMを実行できますか？',
-              a: 'ほぼ。Gemma 2 2Bのような2Bモデルは、モデル用に約1.7GB RAMが必要ですが、OSは同時に2-3GB必要です。合計4GBでは、スワップ使用により推論が5-10倍遅くなります。実用的な最小値は8GBです。',
-            },
-            {
-              q: 'ノートパソコンはローカルLLMを実行するために専用GPUを必要とますか？',
-              a: 'いいえ。すべての主要なローカルLLMツール（Ollama、LM Studio、GPT4All）はCPUのみで実行されます。専用GPUはウォーム推論を大幅に加速しますが、3B-7Bモデルは10-30トークン/秒でCPU単独で使用可能です。[初心者向けのベストローカルLLMモデル](/local-llms/best-beginner-local-llm-models)を参照してください。',
-            },
-            {
-              q: 'ローカルLLMを実行するための最速のノートパソコンは何ですか？',
-              a: '2026年3月以降、Apple MacBook Pro M5 Max（最大128GB統合メモリ、614GB/秒帯域幅）はローカルLLM推論のための最速のコンシューマーノートパソコンです。13Bモデルで80-120トークン/秒を達成でき、Q4_K_Mで30Bモデルを実行できます。Windowsノートパソコンの場合、RTX 4090ノートパソコンGPU（16GB VRAM）は7Bモデルで100-130トークン/秒を生成しますが、かなり多くの電力を消費し、より多くの熱を生成します。',
-            },
-            {
-              q: 'ノートパソコンがサーマルスロットリングしているかどうかを知るにはどうすればよいですか？',
-              a: 'macOSで：Activity Monitor→Window→CPU使用履歴を開きます。継続生成中のCPU周波数の急激な低下はスロットリングを示します。Windowsで：HWiNFO64を使用してCPU/GPUの温度とクロック速度をリアルタイムで監視します。スロットリングは通常、CPUの温度が95-100°Cを超えるときに発生します。',
-            },
-            {
-              q: 'バッテリー電力でローカルLLMを実行できますか？',
-              a: 'はい、ただし速度と期間は削減されます。バッテリーモードでは、macOSは自動的にCPU/GPU電力出力を制限し、プラグイン性能と比較して推論速度を20-35%削減します。MacBook M3 Proの7Bモデルは推論中に約12-18Wを引き出します--フル充電から3-4時間のアクティブな生成を期待してください。バッテリー効率的なセッションには、3Bモデル（6-10W）を使用してください。',
-            },
-            {
-              q: '8GB RAMノートパソコンに最適なモデルサイズは何ですか？',
-              a: 'Q4_K_Mの7Bモデルは、ブラウザまたは他のアプリが開いた状態で実行する8GB RAMノートパソコンの実用的な最大値です。すべての他のアプリがクローズされただけのモデル、9Bモデルが収まる場合があります。推奨される標準はマルチタスク用のllama3.2:3b、またはブラウザを閉じることができる場合の品質用のmistral:7bです。',
-            },
-            {
-              q: 'Ollamaはノートパソコンで自動的にGPUを使用しますか？',
-              a: 'はい。Ollamaは利用可能なGPU加速を自動的に検出して使用します。Apple Siliconでは、Metal GPU加速を使用します。NVIDIAノートパソコンではCUDAを使用します。AMDノートパソコンではROCmを使用します。GPUが使用されているかを確認するには、モデルを開始後に`ollama ps`を実行します--レイヤーがGPUまたはCPUに読み込まれているかどうかが表示されます。',
-            },
-            {
-              q: '8GB RAMでローカルLLMを実行できますか？',
-              a: 'はい。8GBのノートパソコンはQ4_K_M量子化（4.5GB）の7BモデルをCPUで10–25トークン/秒、Apple Siliconで30–80トークン/秒で実行できます。',
-            },
-            {
-              q: 'ローカルLLMに最速のノートパソコンは何ですか？',
-              a: '最大64–128GBの統合メモリを搭載したApple MacBook Pro M5 Pro/M5 Maxが13Bモデルで80–120トークン/秒を達成します。WindowsではNVIDIA RTX 4070/4090ノートパソコンGPU（8–16GB VRAM）が7Bモデルで60–130トークン/秒を実現します。',
-            },
-            {
-              q: 'ローカルLLMにGPUは必要ですか？',
-              a: 'いいえ — OllamaとLM StudioはCPUのみで動作します。GPUがあると7Bモデルの推論が10–25から50–90トークン/秒に高速化されますが、必須ではありません。',
-            },
-            {
-              q: 'CPU上でのローカルLLMの速度はどのくらいですか？',
-              a: '最新のノートパソコンCPUでQ4_K_Mの7Bモデルは10–25トークン/秒で動作します — チャットや要約には十分な速度です。Apple Siliconは統合メモリをGPUとして使用し30–80トークン/秒を達成します。',
-            },
-            {
-              q: 'LLMの実行はノートパソコンに損傷を与えますか？',
-              a: 'いいえ。CPUとGPUはサーマルスロットリングによる継続的な負荷に対応するよう設計されています。ノートパソコンスタンドで気流を確保し適度な休憩を取れば過熱を防げます；通常のファン音は損傷の兆候ではありません。',
-            },
+            { q: '16GB RAMのIntel Iris Xeに最適なOllamaモデルは何ですか？', a: 'Intel Iris Xe統合グラフィックスと16GB RAMを搭載したノートパソコンでは、推論はCPUで実行されるため（Iris Xeは加速しません）、Q4_K_Mの3B–7Bモデルを選んでください。Llama 3.2 3Bは8–20トークン/秒の範囲の上限で最速です。Mistral Small（7B）は遅いですが高品質です。どちらも`ollama run llama3.2:3b`または`ollama run mistral`で実行できます。' },
+            { q: 'ノートパソコンでローカルにRAGを実行できますか？', a: 'はい。ノートパソコンのRAGスタックは、小さな埋め込みモデル、ローカルのベクトルストア、そしてチャットモデルで構成されます。埋め込みモデルはわずか数百MBなので、チャットモデルが依然としてRAMの制約となります――8GBのノートパソコンは検索付きで3Bのチャットモデルを快適に実行します。RAMの内訳については上記の[ノートパソコンでのRAGセクション](#rag-laptop)をご覧ください。' },
+            { q: 'ノートパソコンに最適なCPUのみのローカルLLMは何ですか？', a: 'CPUのみのノートパソコンでは、Q4_K_MのLlama 3.2 3B（25–45トークン/秒）とMistral Small 7B（10–20トークン/秒）が速度と品質の最良のバランスです。完全なランキング比較とOllamaコマンドについては、専用ガイド[CPUのみのベストローカルLLM 2026](/ja/local-llms/best-cpu-only-llm)をご覧ください。' },
+            { q: 'ローカルLLMを実行することはノートパソコンに時間をかけて損傷を与えますか？', a: 'いいえ--最新のCPUおよびGPUはサーマルスロットリングを介して継続的な高負荷を安全に処理するために設計されています。推論を数時間実行することはビデオエンコーディングやゲームに相当します。ノートパソコンスタンドと適切な換気により、過剰な熱の蓄積が防止されます。バッテリーサイクル数は長時間のプラグイン充電で増加し、これは通常の摩耗パターンです。' },
+            { q: '4GB RAMノートパソコンでローカルLLMを実行できますか？', a: 'ほぼ。Gemma 2 2Bのような2Bモデルは、モデル用に約1.7GB RAMが必要ですが、OSは同時に2-3GB必要です。合計4GBでは、スワップ使用により推論が5-10倍遅くなります。実用的な最小値は8GBです。' },
+            { q: 'ノートパソコンはローカルLLMを実行するために専用GPUを必要とますか？', a: 'いいえ。すべての主要なローカルLLMツール（Ollama、LM Studio、GPT4All）はCPUのみで実行されます。専用GPUはウォーム推論を大幅に加速しますが、3B-7Bモデルは10-30トークン/秒でCPU単独で使用可能です。[初心者向けのベストローカルLLMモデル](/local-llms/best-beginner-local-llm-models)を参照してください。' },
+            { q: 'ローカルLLMを実行するための最速のノートパソコンは何ですか？', a: '2026年3月以降、Apple MacBook Pro M5 Max（最大128GB統合メモリ、614GB/秒帯域幅）はローカルLLM推論のための最速のコンシューマーノートパソコンです。13Bモデルで80-120トークン/秒を達成でき、Q4_K_Mで30Bモデルを実行できます。Windowsノートパソコンの場合、RTX 4090ノートパソコンGPU（16GB VRAM）は7Bモデルで100-130トークン/秒を生成しますが、かなり多くの電力を消費し、より多くの熱を生成します。' },
+            { q: 'ノートパソコンがサーマルスロットリングしているかどうかを知るにはどうすればよいですか？', a: 'macOSで：Activity Monitor→Window→CPU使用履歴を開きます。継続生成中のCPU周波数の急激な低下はスロットリングを示します。Windowsで：HWiNFO64を使用してCPU/GPUの温度とクロック速度をリアルタイムで監視します。スロットリングは通常、CPUの温度が95-100°Cを超えるときに発生します。' },
+            { q: 'バッテリー電力でローカルLLMを実行できますか？', a: 'はい、ただし速度と期間は削減されます。バッテリーモードでは、macOSは自動的にCPU/GPU電力出力を制限し、プラグイン性能と比較して推論速度を20-35%削減します。MacBook M3 Proの7Bモデルは推論中に約12-18Wを引き出します--フル充電から3-4時間のアクティブな生成を期待してください。バッテリー効率的なセッションには、3Bモデル（6-10W）を使用してください。' },
+            { q: '8GB RAMノートパソコンに最適なモデルサイズは何ですか？', a: 'Q4_K_Mの7Bモデルは、ブラウザまたは他のアプリが開いた状態で実行する8GB RAMノートパソコンの実用的な最大値です。すべての他のアプリがクローズされただけのモデル、9Bモデルが収まる場合があります。推奨される標準はマルチタスク用のllama3.2:3b、またはブラウザを閉じることができる場合の品質用のmistral:7bです。' },
+            { q: 'Ollamaはノートパソコンで自動的にGPUを使用しますか？', a: 'はい。Ollamaは利用可能なGPU加速を自動的に検出して使用します。Apple Siliconでは、Metal GPU加速を使用します。NVIDIAノートパソコンではCUDAを使用します。AMDノートパソコンではROCmを使用します。GPUが使用されているかを確認するには、モデルを開始後に`ollama ps`を実行します--レイヤーがGPUまたはCPUに読み込まれているかどうかが表示されます。' },
+            { q: '8GB RAMでローカルLLMを実行できますか？', a: 'はい。8GBのノートパソコンはQ4_K_M量子化（4.5GB）の7BモデルをCPUで10–25トークン/秒、Apple Siliconで30–80トークン/秒で実行できます。' },
+            { q: 'ローカルLLMに最速のノートパソコンは何ですか？', a: '最大64–128GBの統合メモリを搭載したApple MacBook Pro M5 Pro/M5 Maxが13Bモデルで80–120トークン/秒を達成します。WindowsではNVIDIA RTX 4070/4090ノートパソコンGPU（8–16GB VRAM）が7Bモデルで60–130トークン/秒を実現します。' },
+            { q: 'ローカルLLMにGPUは必要ですか？', a: 'いいえ — OllamaとLM StudioはCPUのみで動作します。GPUがあると7Bモデルの推論が10–25から50–90トークン/秒に高速化されますが、必須ではありません。' },
+            { q: 'CPU上でのローカルLLMの速度はどのくらいですか？', a: '最新のノートパソコンCPUでQ4_K_Mの7Bモデルは10–25トークン/秒で動作します — チャットや要約には十分な速度です。Apple Siliconは統合メモリをGPUとして使用し30–80トークン/秒を達成します。' },
+            { q: 'LLMの実行はノートパソコンに損傷を与えますか？', a: 'いいえ。CPUとGPUはサーマルスロットリングによる継続的な負荷に対応するよう設計されています。ノートパソコンスタンドで気流を確保し適度な休憩を取れば過熱を防げます；通常のファン音は損傷の兆候ではありません。' },
           ],
         },
         sources: {

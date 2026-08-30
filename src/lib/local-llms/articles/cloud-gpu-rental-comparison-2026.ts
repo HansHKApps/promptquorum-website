@@ -475,22 +475,24 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Frequently Asked Questions',
         content: 'Common questions about cloud GPU rental providers.',
         faqs: [
-          { q: 'RunPod vs Vast.ai vs Lambda Labs: which is cheapest for LLM inference?', a: 'Vast.ai is cheapest on paper ($0.08–0.59/hr RTX 4090) but interruptible. RunPod ($0.34–0.69/hr RTX 4090) is the best balance of price and stability for LLM inference. Lambda Labs ($1.99–3.99/hr A100/H100) has no consumer GPU tier and costs more, but includes managed support and a 99.9% SLA.' },
-          { q: 'Does this comparison cover Stable Diffusion and image generation, or only LLM inference?', a: 'The pricing, GPU tiers, and providers in this guide apply to both. Stable Diffusion and other image-generation workloads run on the same RTX 4090/RTX 5090/A100/H100 instances as LLM inference. See the Vast.ai section above for image-generation-specific guidance on spot vs. stable instances.' },
-          { q: 'Is the RTX 5090 available for cloud rental yet?', a: 'Yes, on a growing but still limited number of RunPod and Vast.ai listings as of August 2026. Availability and pricing are less consistent than the established RTX 4090 tier — check current listings on the provider dashboard rather than assuming stock. Lambda Labs does not offer any consumer-tier GPU, including RTX 5090.' },
-          { q: 'Can I pause and resume my instance?', a: 'Yes. RunPod and Vast.ai allow you to pause instances (snapshot saved). Lambda Labs can pause via API. While paused, you pay storage only (negligible cost, typically <$0.01/day).' },
-          { q: 'What happens if my instance runs out of disk space?', a: 'The instance will crash. Add an extra disk via provider dashboard and mount to /mnt/ before it fills. Standard practice: monitor disk usage weekly.' },
-          { q: 'Can I use these for commercial AI inference?', a: 'Yes, but check provider terms. RunPod and Lambda Labs allow commercial workloads. Vast.ai individual providers may have restrictions — read the listing carefully.' },
-          { q: 'How do I transfer large datasets (>100 GB)?', a: 'For <100 GB: rsync over SSH. For >100 GB: (1) store on cloud (S3, Google Drive), download on instance, or (2) request attached /mnt/ disk from provider (small surcharge).' },
-          { q: 'Which provider is best for distributed training across multiple GPUs?', a: 'Lambda Labs (simplest setup, support included). RunPod (good API for multi-node). Vast.ai (cheapest, requires manual cluster setup).' },
-          { q: 'Do these providers offer free credits?', a: 'RunPod $10, Vast.ai $5 (varies), Lambda Labs $15. Use credits to test pricing and provider UX before committing budget.' },
-          { q: 'Can I use custom Docker images?', a: 'RunPod: yes (upload to registry). Vast.ai: yes (tools pre-installed). Lambda Labs: limited (predefined images for simplicity).' },
-          { q: 'What is the best provider for 24/7 production inference?', a: 'Lambda Labs (99.9% SLA, reserved instances). RunPod Secure Cloud (99% SLA, cheaper). Avoid Vast.ai spot for 24/7 (interruptible).' },
-          { q: 'How do I minimize costs with spot instances?', a: 'Use Vast.ai with "Interruptible: On" (cheapest), keep instances running continuously (not start-stop), monitor price trends before committing.' },
-          { q: 'Which has the best API for automation?', a: 'RunPod (robust Python API). Lambda Labs (REST API with webhooks). Vast.ai (older API, web interface primary).' },
-          { q: 'Can I get a dedicated IP?', a: 'RunPod: yes (on request). Lambda Labs: yes (managed). Vast.ai: depends on provider.' },
-          { q: 'What is the pricing if I rent for exactly 1 hour?', a: 'RunPod: 60-minute minimum (rounded up). Lambda Labs: full hour charged. Vast.ai: billed per-second (you pay exactly for 1 hour, not more).' },
-        ],
+            { q: 'RunPod vs Vast.ai vs Lambda Labs: which is cheapest for LLM inference?', a: 'Vast.ai is cheapest on paper ($0.08–0.59/hr RTX 4090) but interruptible. RunPod ($0.34–0.69/hr RTX 4090) is the best balance of price and stability for LLM inference. Lambda Labs ($1.99–3.99/hr A100/H100) has no consumer GPU tier and costs more, but includes managed support and a 99.9% SLA.' },
+            { q: 'Does this comparison cover Stable Diffusion and image generation, or only LLM inference?', a: 'The pricing, GPU tiers, and providers in this guide apply to both. Stable Diffusion and other image-generation workloads run on the same RTX 4090/RTX 5090/A100/H100 instances as LLM inference. See the Vast.ai section above for image-generation-specific guidance on spot vs. stable instances.' },
+            { q: 'Is the RTX 5090 available for cloud rental yet?', a: 'Yes, on a growing but still limited number of RunPod and Vast.ai listings as of August 2026. Availability and pricing are less consistent than the established RTX 4090 tier — check current listings on the provider dashboard rather than assuming stock. Lambda Labs does not offer any consumer-tier GPU, including RTX 5090.' },
+            { q: 'Can I pause and resume my instance?', a: 'Yes. RunPod and Vast.ai allow you to pause instances (snapshot saved). Lambda Labs can pause via API. While paused, you pay storage only (negligible cost, typically <$0.01/day).' },
+            { q: 'What happens if my instance runs out of disk space?', a: 'The instance will crash. Add an extra disk via provider dashboard and mount to /mnt/ before it fills. Standard practice: monitor disk usage weekly.' },
+            { q: 'Can I use these for commercial AI inference?', a: 'Yes, but check provider terms. RunPod and Lambda Labs allow commercial workloads. Vast.ai individual providers may have restrictions — read the listing carefully.' },
+            { q: 'How do I transfer large datasets (>100 GB)?', a: 'For <100 GB: rsync over SSH. For >100 GB: (1) store on cloud (S3, Google Drive), download on instance, or (2) request attached /mnt/ disk from provider (small surcharge).' },
+            { q: 'Which provider is best for distributed training across multiple GPUs?', a: 'Lambda Labs (simplest setup, support included). RunPod (good API for multi-node). Vast.ai (cheapest, requires manual cluster setup).' },
+            { q: 'Do these providers offer free credits?', a: 'RunPod $10, Vast.ai $5 (varies), Lambda Labs $15. Use credits to test pricing and provider UX before committing budget.' },
+            { q: 'Can I use custom Docker images?', a: 'RunPod: yes (upload to registry). Vast.ai: yes (tools pre-installed). Lambda Labs: limited (predefined images for simplicity).' },
+            { q: 'What is the best provider for 24/7 production inference?', a: 'Lambda Labs (99.9% SLA, reserved instances). RunPod Secure Cloud (99% SLA, cheaper). Avoid Vast.ai spot for 24/7 (interruptible).' },
+            { q: 'How do I minimize costs with spot instances?', a: 'Use Vast.ai with "Interruptible: On" (cheapest), keep instances running continuously (not start-stop), monitor price trends before committing.' },
+            { q: 'Which has the best API for automation?', a: 'RunPod (robust Python API). Lambda Labs (REST API with webhooks). Vast.ai (older API, web interface primary).' },
+            { q: 'Can I get a dedicated IP?', a: 'RunPod: yes (on request). Lambda Labs: yes (managed). Vast.ai: depends on provider.' },
+            { q: 'What is the pricing if I rent for exactly 1 hour?', a: 'RunPod: 60-minute minimum (rounded up). Lambda Labs: full hour charged. Vast.ai: billed per-second (you pay exactly for 1 hour, not more).' },
+            { q: 'Which cloud GPU rental is cheapest?', a: 'Vast.ai spot instances cost 30–50% less but are interruptible. RunPod is 40% cheaper than Lambda Labs. Price depends on GPU type and market demand.' },
+            { q: 'Is cloud GPU rental GDPR-compliant?', a: 'RunPod with EU regions is GDPR-compliant. Lambda Labs is US-only (not compliant for EU personal data). Vast.ai is peer-to-peer (depends on host location). See GDPR section for compliant alternatives.' },
+          ],
       },
     },
     schema: {
@@ -555,31 +557,247 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'FAQPage',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'Which cloud GPU rental is cheapest?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Vast.ai spot instances cost 30–50% less but are interruptible. RunPod is 40% cheaper than Lambda Labs. Price depends on GPU type and market demand.',
+          {
+            '@type': 'Question',
+            'name': 'Is RunPod Secure Cloud reliable?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes. Secure Cloud instances have 99% uptime SLA and are not interrupted unless the provider cancels the instance (very rare). On-Demand instances can be interrupted with 5 minutes notice.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Is cloud GPU rental GDPR-compliant?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'RunPod with EU regions is GDPR-compliant. Lambda Labs is US-only (not compliant for EU personal data). Vast.ai is peer-to-peer (depends on host location). See GDPR section for compliant alternatives.',
+          {
+            '@type': 'Question',
+            'name': 'Can I use custom Docker images?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes. RunPod allows custom Docker images; upload to Docker Hub or a registry and reference by URL. One-click template deployment with pre-installed ML frameworks also available.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'Can my instance be interrupted?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Vast.ai spot: yes (15 seconds notice). RunPod Secure Cloud: no (99% SLA). Lambda Labs: no (99.9% SLA). Choose based on workload criticality.',
+          {
+            '@type': 'Question',
+            'name': 'How do I pause an instance?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Pause button in the dashboard. Snapshot is saved. While paused, you pay storage only (negligible cost).',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'Can I scale to multiple GPUs?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes. RunPod supports multi-GPU instances and distributed training via API.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What if my spot instance is interrupted?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Spot instances can be interrupted with 15 seconds notice if the provider reclaims the GPU. Use "Interruptible: Off" filter for stable instances (higher prices, more stable).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Do I have root/sudo access?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Most providers give sudo; some don\'t. Check instance details before renting. Not guaranteed by Vast.ai.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'How do I upload data?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Use rsync or scp over SSH. For large datasets (>100GB), store on /mnt/ attached drive (small surcharge) or use cloud storage bridge (S3, Google Drive).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Are prices really that much cheaper?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes, but spot prices fluctuate. $0.08/hr is real but rare (peak demand). Median $0.21/hr is more typical. Monitor before committing to spot for production.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Does Vast.ai pricing work the same for Stable Diffusion as for LLM inference?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes — the same RTX 4090 and RTX 5090 spot instances used for LLM inference also run Stable Diffusion and other image-generation workloads. Image generation is typically more VRAM-bound and less latency-sensitive than chat inference, so spot/interruptible instances (cheaper, can be reclaimed) are usually a good fit for batch image-generation jobs; reserve stable "Interruptible: Off" instances only if you need an uninterrupted long render queue.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Is Lambda Labs worth the premium price?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes, if you need 99.9% uptime SLA, US infrastructure is acceptable, and you value live support. For experimentation, RunPod or Vast.ai are cheaper. For production, Lambda Labs SLA justifies cost.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I scale to multiple GPUs?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes. Lambda Labs allows multi-GPU instances and distributed training. Jupyter environment handles setup.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What is your refund policy?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': '30-day refund if unsatisfied. Most users don\'t need it after trying free $15 credit.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Why no RTX 4090 or RTX 5090?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Lambda Labs focuses on the enterprise A100/H100 market, not the consumer GPU tier. Strategy is deliberate.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'RunPod vs Vast.ai vs Lambda Labs: which is cheapest for LLM inference?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Vast.ai is cheapest on paper ($0.08–0.59/hr RTX 4090) but interruptible. RunPod ($0.34–0.69/hr RTX 4090) is the best balance of price and stability for LLM inference. Lambda Labs ($1.99–3.99/hr A100/H100) has no consumer GPU tier and costs more, but includes managed support and a 99.9% SLA.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Does this comparison cover Stable Diffusion and image generation, or only LLM inference?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'The pricing, GPU tiers, and providers in this guide apply to both. Stable Diffusion and other image-generation workloads run on the same RTX 4090/RTX 5090/A100/H100 instances as LLM inference. See the Vast.ai section above for image-generation-specific guidance on spot vs. stable instances.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Is the RTX 5090 available for cloud rental yet?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes, on a growing but still limited number of RunPod and Vast.ai listings as of August 2026. Availability and pricing are less consistent than the established RTX 4090 tier — check current listings on the provider dashboard rather than assuming stock. Lambda Labs does not offer any consumer-tier GPU, including RTX 5090.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I pause and resume my instance?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes. RunPod and Vast.ai allow you to pause instances (snapshot saved). Lambda Labs can pause via API. While paused, you pay storage only (negligible cost, typically <$0.01/day).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What happens if my instance runs out of disk space?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'The instance will crash. Add an extra disk via provider dashboard and mount to /mnt/ before it fills. Standard practice: monitor disk usage weekly.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I use these for commercial AI inference?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes, but check provider terms. RunPod and Lambda Labs allow commercial workloads. Vast.ai individual providers may have restrictions — read the listing carefully.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'How do I transfer large datasets (>100 GB)?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'For <100 GB: rsync over SSH. For >100 GB: (1) store on cloud (S3, Google Drive), download on instance, or (2) request attached /mnt/ disk from provider (small surcharge).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Which provider is best for distributed training across multiple GPUs?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Lambda Labs (simplest setup, support included). RunPod (good API for multi-node). Vast.ai (cheapest, requires manual cluster setup).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Do these providers offer free credits?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RunPod $10, Vast.ai $5 (varies), Lambda Labs $15. Use credits to test pricing and provider UX before committing budget.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I use custom Docker images?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RunPod: yes (upload to registry). Vast.ai: yes (tools pre-installed). Lambda Labs: limited (predefined images for simplicity).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What is the best provider for 24/7 production inference?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Lambda Labs (99.9% SLA, reserved instances). RunPod Secure Cloud (99% SLA, cheaper). Avoid Vast.ai spot for 24/7 (interruptible).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'How do I minimize costs with spot instances?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Use Vast.ai with "Interruptible: On" (cheapest), keep instances running continuously (not start-stop), monitor price trends before committing.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Which has the best API for automation?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RunPod (robust Python API). Lambda Labs (REST API with webhooks). Vast.ai (older API, web interface primary).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I get a dedicated IP?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RunPod: yes (on request). Lambda Labs: yes (managed). Vast.ai: depends on provider.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'What is the pricing if I rent for exactly 1 hour?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RunPod: 60-minute minimum (rounded up). Lambda Labs: full hour charged. Vast.ai: billed per-second (you pay exactly for 1 hour, not more).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Which cloud GPU rental is cheapest?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Vast.ai spot instances cost 30–50% less but are interruptible. RunPod is 40% cheaper than Lambda Labs. Price depends on GPU type and market demand.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Is cloud GPU rental GDPR-compliant?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RunPod with EU regions is GDPR-compliant. Lambda Labs is US-only (not compliant for EU personal data). Vast.ai is peer-to-peer (depends on host location). See GDPR section for compliant alternatives.',
+            },
+          },
+        ],
     },
   },
   es: {
@@ -1014,22 +1232,24 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'Preguntas Frecuentes',
         content: 'Preguntas comunes sobre proveedores de alquiler de GPU en la nube.',
         faqs: [
-          { q: 'RunPod vs Vast.ai vs Lambda Labs: ¿cuál es el más barato para inferencia LLM?', a: 'Vast.ai es el más barato sobre el papel ($0.08–0.59/hr RTX 4090) pero es interrumpible. RunPod ($0.34–0.69/hr RTX 4090) ofrece el mejor equilibrio entre precio y estabilidad para inferencia LLM. Lambda Labs ($1.99–3.99/hr A100/H100) no tiene nivel de GPU de consumo y cuesta más, pero incluye soporte gestionado y SLA del 99.9%.' },
-          { q: '¿Esta comparativa cubre Stable Diffusion y generación de imágenes, o solo inferencia LLM?', a: 'Los precios, niveles de GPU y proveedores de esta guía aplican a ambos. Stable Diffusion y otras cargas de generación de imágenes se ejecutan en las mismas instancias RTX 4090/RTX 5090/A100/H100 que la inferencia LLM. Consulta la sección de Vast.ai arriba para guía específica sobre instancias spot vs. estables para generación de imágenes.' },
-          { q: '¿Ya está disponible RTX 5090 para alquiler en la nube?', a: 'Sí, en un número creciente pero aún limitado de listados de RunPod y Vast.ai a agosto de 2026. La disponibilidad y el precio son menos consistentes que el nivel establecido de RTX 4090 — comprueba los listados actuales en el panel del proveedor en lugar de asumir stock. Lambda Labs no ofrece ninguna GPU de gama consumidor, incluida RTX 5090.' },
-          { q: '¿Puedo pausar y reanudar mi instancia?', a: 'Sí. RunPod y Vast.ai permiten pausar instancias (se guarda la instantánea). Lambda Labs puede pausar a través de la API. Mientras está pausada, solo pagas el almacenamiento (coste despreciable, normalmente <$0.01/día).' },
-          { q: '¿Qué pasa si mi instancia se queda sin espacio en disco?', a: 'La instancia se caerá. Añade un disco adicional desde el panel del proveedor y monta en /mnt/ antes de que se llene. Práctica estándar: monitoriza el uso del disco semanalmente.' },
-          { q: '¿Puedo usar estos servicios para inferencia de IA comercial?', a: 'Sí, pero revisa los términos del proveedor. RunPod y Lambda Labs permiten cargas de trabajo comerciales. Los proveedores individuales de Vast.ai pueden tener restricciones — lee el listado detenidamente.' },
-          { q: '¿Cómo transfiero conjuntos de datos grandes (>100 GB)?', a: 'Para <100 GB: rsync por SSH. Para >100 GB: (1) almacena en la nube (S3, Google Drive) y descarga en la instancia, o (2) solicita un disco /mnt/ adjunto al proveedor (pequeño recargo).' },
-          { q: '¿Qué proveedor es mejor para entrenamiento distribuido con múltiples GPUs?', a: 'Lambda Labs (configuración más sencilla, soporte incluido). RunPod (buena API para multi-nodo). Vast.ai (más barato, requiere configuración manual del clúster).' },
-          { q: '¿Estos proveedores ofrecen créditos gratuitos?', a: 'RunPod $10, Vast.ai $5 (varía), Lambda Labs $15. Usa los créditos para probar los precios y la UX del proveedor antes de comprometer presupuesto.' },
-          { q: '¿Puedo usar imágenes Docker personalizadas?', a: 'RunPod: sí (súbelas al registro). Vast.ai: sí (herramientas preinstaladas). Lambda Labs: limitado (imágenes predefinidas para mayor simplicidad).' },
-          { q: '¿Cuál es el mejor proveedor para inferencia en producción 24/7?', a: 'Lambda Labs (SLA 99.9%, instancias reservadas). RunPod Secure Cloud (SLA 99%, más barato). Evita las instancias spot de Vast.ai para uso 24/7 (interrumpibles).' },
-          { q: '¿Cómo minimizo costes con instancias spot?', a: 'Usa Vast.ai con "Interruptible: On" (más barato), mantén las instancias funcionando de forma continua (no las pares y reinicies), monitoriza las tendencias de precios antes de comprometerte.' },
-          { q: '¿Cuál tiene la mejor API para automatización?', a: 'RunPod (API Python robusta). Lambda Labs (API REST con webhooks). Vast.ai (API más antigua, interfaz web como principal).' },
-          { q: '¿Puedo obtener una IP dedicada?', a: 'RunPod: sí (previa solicitud). Lambda Labs: sí (gestionado). Vast.ai: depende del proveedor.' },
-          { q: '¿Cuál es el precio si alquilo exactamente 1 hora?', a: 'RunPod: mínimo 60 minutos (redondeado). Lambda Labs: se cobra la hora completa. Vast.ai: facturado por segundo (pagas exactamente por 1 hora, ni más).' },
-        ],
+            { q: 'RunPod vs Vast.ai vs Lambda Labs: ¿cuál es el más barato para inferencia LLM?', a: 'Vast.ai es el más barato sobre el papel ($0.08–0.59/hr RTX 4090) pero es interrumpible. RunPod ($0.34–0.69/hr RTX 4090) ofrece el mejor equilibrio entre precio y estabilidad para inferencia LLM. Lambda Labs ($1.99–3.99/hr A100/H100) no tiene nivel de GPU de consumo y cuesta más, pero incluye soporte gestionado y SLA del 99.9%.' },
+            { q: '¿Esta comparativa cubre Stable Diffusion y generación de imágenes, o solo inferencia LLM?', a: 'Los precios, niveles de GPU y proveedores de esta guía aplican a ambos. Stable Diffusion y otras cargas de generación de imágenes se ejecutan en las mismas instancias RTX 4090/RTX 5090/A100/H100 que la inferencia LLM. Consulta la sección de Vast.ai arriba para guía específica sobre instancias spot vs. estables para generación de imágenes.' },
+            { q: '¿Ya está disponible RTX 5090 para alquiler en la nube?', a: 'Sí, en un número creciente pero aún limitado de listados de RunPod y Vast.ai a agosto de 2026. La disponibilidad y el precio son menos consistentes que el nivel establecido de RTX 4090 — comprueba los listados actuales en el panel del proveedor en lugar de asumir stock. Lambda Labs no ofrece ninguna GPU de gama consumidor, incluida RTX 5090.' },
+            { q: '¿Puedo pausar y reanudar mi instancia?', a: 'Sí. RunPod y Vast.ai permiten pausar instancias (se guarda la instantánea). Lambda Labs puede pausar a través de la API. Mientras está pausada, solo pagas el almacenamiento (coste despreciable, normalmente <$0.01/día).' },
+            { q: '¿Qué pasa si mi instancia se queda sin espacio en disco?', a: 'La instancia se caerá. Añade un disco adicional desde el panel del proveedor y monta en /mnt/ antes de que se llene. Práctica estándar: monitoriza el uso del disco semanalmente.' },
+            { q: '¿Puedo usar estos servicios para inferencia de IA comercial?', a: 'Sí, pero revisa los términos del proveedor. RunPod y Lambda Labs permiten cargas de trabajo comerciales. Los proveedores individuales de Vast.ai pueden tener restricciones — lee el listado detenidamente.' },
+            { q: '¿Cómo transfiero conjuntos de datos grandes (>100 GB)?', a: 'Para <100 GB: rsync por SSH. Para >100 GB: (1) almacena en la nube (S3, Google Drive) y descarga en la instancia, o (2) solicita un disco /mnt/ adjunto al proveedor (pequeño recargo).' },
+            { q: '¿Qué proveedor es mejor para entrenamiento distribuido con múltiples GPUs?', a: 'Lambda Labs (configuración más sencilla, soporte incluido). RunPod (buena API para multi-nodo). Vast.ai (más barato, requiere configuración manual del clúster).' },
+            { q: '¿Estos proveedores ofrecen créditos gratuitos?', a: 'RunPod $10, Vast.ai $5 (varía), Lambda Labs $15. Usa los créditos para probar los precios y la UX del proveedor antes de comprometer presupuesto.' },
+            { q: '¿Puedo usar imágenes Docker personalizadas?', a: 'RunPod: sí (súbelas al registro). Vast.ai: sí (herramientas preinstaladas). Lambda Labs: limitado (imágenes predefinidas para mayor simplicidad).' },
+            { q: '¿Cuál es el mejor proveedor para inferencia en producción 24/7?', a: 'Lambda Labs (SLA 99.9%, instancias reservadas). RunPod Secure Cloud (SLA 99%, más barato). Evita las instancias spot de Vast.ai para uso 24/7 (interrumpibles).' },
+            { q: '¿Cómo minimizo costes con instancias spot?', a: 'Usa Vast.ai con "Interruptible: On" (más barato), mantén las instancias funcionando de forma continua (no las pares y reinicies), monitoriza las tendencias de precios antes de comprometerte.' },
+            { q: '¿Cuál tiene la mejor API para automatización?', a: 'RunPod (API Python robusta). Lambda Labs (API REST con webhooks). Vast.ai (API más antigua, interfaz web como principal).' },
+            { q: '¿Puedo obtener una IP dedicada?', a: 'RunPod: sí (previa solicitud). Lambda Labs: sí (gestionado). Vast.ai: depende del proveedor.' },
+            { q: '¿Cuál es el precio si alquilo exactamente 1 hora?', a: 'RunPod: mínimo 60 minutos (redondeado). Lambda Labs: se cobra la hora completa. Vast.ai: facturado por segundo (pagas exactamente por 1 hora, ni más).' },
+            { q: '¿Qué alquiler de GPU en la nube es el más barato?', a: 'Las instancias spot de Vast.ai cuestan un 30–50% menos pero son interrumpibles. RunPod es un 40% más barato que Lambda Labs. El precio depende del tipo de GPU y la demanda del mercado.' },
+            { q: '¿El alquiler de GPU en la nube cumple con el GDPR?', a: 'RunPod con regiones EU cumple con el GDPR. Lambda Labs es solo EE. UU. (no conforme para datos personales EU). Vast.ai es peer-to-peer (depende de la ubicación del host). Consulta la sección GDPR para ver alternativas conformes.' },
+          ],
       },
     },
     schema: {
@@ -1115,31 +1335,247 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'es',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: '¿Qué alquiler de GPU en la nube es el más barato?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Las instancias spot de Vast.ai cuestan un 30–50% menos pero son interrumpibles. RunPod es un 40% más barato que Lambda Labs. El precio depende del tipo de GPU y la demanda del mercado.',
+          {
+            '@type': 'Question',
+            'name': '¿Es fiable RunPod Secure Cloud?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí. Las instancias de Secure Cloud tienen un SLA de uptime del 99% y no se interrumpen a menos que el proveedor cancele la instancia (muy poco frecuente). Las instancias On-Demand pueden interrumpirse con 5 minutos de aviso.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '¿El alquiler de GPU en la nube cumple con el GDPR?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'RunPod con regiones EU cumple con el GDPR. Lambda Labs es solo EE. UU. (no conforme para datos personales EU). Vast.ai es peer-to-peer (depende de la ubicación del host). Consulta la sección GDPR para ver alternativas conformes.',
+          {
+            '@type': 'Question',
+            'name': '¿Puedo usar imágenes Docker personalizadas?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí. RunPod permite imágenes Docker personalizadas; súbelas a Docker Hub o a un registro y referencialas por URL. También está disponible el despliegue de plantillas con un clic con frameworks de ML preinstalados.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: '¿Puede mi instancia ser interrumpida?',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Vast.ai spot: sí (15 segundos de aviso). RunPod Secure Cloud: no (SLA 99%). Lambda Labs: no (SLA 99.9%). Elige según la criticidad de tu carga de trabajo.',
+          {
+            '@type': 'Question',
+            'name': '¿Cómo pauso una instancia?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Con el botón de pausa en el panel de control. La instantánea se guarda. Mientras está en pausa, solo pagas por el almacenamiento (coste despreciable).',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': '¿Puedo escalar a múltiples GPUs?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí. RunPod soporta instancias multi-GPU y entrenamiento distribuido a través de la API.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué pasa si mi instancia spot es interrumpida?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Las instancias spot pueden interrumpirse con 15 segundos de aviso si el proveedor reclama la GPU. Usa el filtro "Interruptible: Off" para instancias más estables (precios más altos, más estables).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Tengo acceso root/sudo?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'La mayoría de proveedores dan sudo; algunos no. Revisa los detalles de la instancia antes de alquilar. Vast.ai no lo garantiza.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cómo subo datos?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Usa rsync o scp por SSH. Para conjuntos de datos grandes (>100GB), almacénalos en una unidad /mnt/ adjunta (pequeño recargo) o usa un puente de almacenamiento en la nube (S3, Google Drive).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Los precios son realmente tan baratos?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí, pero los precios spot fluctúan. $0.08/hr es real pero poco frecuente (picos de demanda). La mediana de $0.21/hr es más habitual. Monitoriza antes de comprometerte con spot para producción.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Los precios de Vast.ai funcionan igual para Stable Diffusion que para inferencia LLM?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí — las mismas instancias spot de RTX 4090 y RTX 5090 usadas para inferencia LLM también ejecutan Stable Diffusion y otras cargas de generación de imágenes. La generación de imágenes suele depender más de la VRAM y ser menos sensible a la latencia que la inferencia de chat, así que las instancias spot/interrumpibles suelen ser adecuadas para lotes de generación de imágenes; reserva instancias estables ("Interruptible: Off") solo si necesitas una cola de renderizado larga sin interrupciones.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Vale la pena el precio premium de Lambda Labs?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí, si necesitas un SLA de uptime del 99.9%, la infraestructura en EE. UU. es aceptable y valoras el soporte en directo. Para experimentación, RunPod o Vast.ai son más baratos. Para producción, el SLA de Lambda Labs justifica el coste.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedo escalar a múltiples GPUs?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí. Lambda Labs permite instancias multi-GPU y entrenamiento distribuido. El entorno Jupyter gestiona la configuración.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuál es vuestra política de reembolso?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Reembolso en 30 días si no estás satisfecho. La mayoría de los usuarios no lo necesitan tras probar los $15 de crédito gratuito.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Por qué no ofrecen RTX 4090?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Lambda Labs se enfoca en el mercado empresarial A100/H100, no en el nivel de GPU de consumo. Es una estrategia deliberada.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'RunPod vs Vast.ai vs Lambda Labs: ¿cuál es el más barato para inferencia LLM?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Vast.ai es el más barato sobre el papel ($0.08–0.59/hr RTX 4090) pero es interrumpible. RunPod ($0.34–0.69/hr RTX 4090) ofrece el mejor equilibrio entre precio y estabilidad para inferencia LLM. Lambda Labs ($1.99–3.99/hr A100/H100) no tiene nivel de GPU de consumo y cuesta más, pero incluye soporte gestionado y SLA del 99.9%.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Esta comparativa cubre Stable Diffusion y generación de imágenes, o solo inferencia LLM?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Los precios, niveles de GPU y proveedores de esta guía aplican a ambos. Stable Diffusion y otras cargas de generación de imágenes se ejecutan en las mismas instancias RTX 4090/RTX 5090/A100/H100 que la inferencia LLM. Consulta la sección de Vast.ai arriba para guía específica sobre instancias spot vs. estables para generación de imágenes.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Ya está disponible RTX 5090 para alquiler en la nube?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí, en un número creciente pero aún limitado de listados de RunPod y Vast.ai a agosto de 2026. La disponibilidad y el precio son menos consistentes que el nivel establecido de RTX 4090 — comprueba los listados actuales en el panel del proveedor en lugar de asumir stock. Lambda Labs no ofrece ninguna GPU de gama consumidor, incluida RTX 5090.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedo pausar y reanudar mi instancia?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí. RunPod y Vast.ai permiten pausar instancias (se guarda la instantánea). Lambda Labs puede pausar a través de la API. Mientras está pausada, solo pagas el almacenamiento (coste despreciable, normalmente <$0.01/día).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué pasa si mi instancia se queda sin espacio en disco?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'La instancia se caerá. Añade un disco adicional desde el panel del proveedor y monta en /mnt/ antes de que se llene. Práctica estándar: monitoriza el uso del disco semanalmente.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedo usar estos servicios para inferencia de IA comercial?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Sí, pero revisa los términos del proveedor. RunPod y Lambda Labs permiten cargas de trabajo comerciales. Los proveedores individuales de Vast.ai pueden tener restricciones — lee el listado detenidamente.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cómo transfiero conjuntos de datos grandes (>100 GB)?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Para <100 GB: rsync por SSH. Para >100 GB: (1) almacena en la nube (S3, Google Drive) y descarga en la instancia, o (2) solicita un disco /mnt/ adjunto al proveedor (pequeño recargo).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué proveedor es mejor para entrenamiento distribuido con múltiples GPUs?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Lambda Labs (configuración más sencilla, soporte incluido). RunPod (buena API para multi-nodo). Vast.ai (más barato, requiere configuración manual del clúster).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Estos proveedores ofrecen créditos gratuitos?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RunPod $10, Vast.ai $5 (varía), Lambda Labs $15. Usa los créditos para probar los precios y la UX del proveedor antes de comprometer presupuesto.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedo usar imágenes Docker personalizadas?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RunPod: sí (súbelas al registro). Vast.ai: sí (herramientas preinstaladas). Lambda Labs: limitado (imágenes predefinidas para mayor simplicidad).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuál es el mejor proveedor para inferencia en producción 24/7?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Lambda Labs (SLA 99.9%, instancias reservadas). RunPod Secure Cloud (SLA 99%, más barato). Evita las instancias spot de Vast.ai para uso 24/7 (interrumpibles).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cómo minimizo costes con instancias spot?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Usa Vast.ai con "Interruptible: On" (más barato), mantén las instancias funcionando de forma continua (no las pares y reinicies), monitoriza las tendencias de precios antes de comprometerte.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuál tiene la mejor API para automatización?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RunPod (API Python robusta). Lambda Labs (API REST con webhooks). Vast.ai (API más antigua, interfaz web como principal).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Puedo obtener una IP dedicada?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RunPod: sí (previa solicitud). Lambda Labs: sí (gestionado). Vast.ai: depende del proveedor.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Cuál es el precio si alquilo exactamente 1 hora?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RunPod: mínimo 60 minutos (redondeado). Lambda Labs: se cobra la hora completa. Vast.ai: facturado por segundo (pagas exactamente por 1 hora, ni más).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Qué alquiler de GPU en la nube es el más barato?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Las instancias spot de Vast.ai cuestan un 30–50% menos pero son interrumpibles. RunPod es un 40% más barato que Lambda Labs. El precio depende del tipo de GPU y la demanda del mercado.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿El alquiler de GPU en la nube cumple con el GDPR?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RunPod con regiones EU cumple con el GDPR. Lambda Labs es solo EE. UU. (no conforme para datos personales EU). Vast.ai es peer-to-peer (depende de la ubicación del host). Consulta la sección GDPR para ver alternativas conformes.',
+            },
+          },
+        ],
     },
   },
   ar: {
@@ -1574,22 +2010,25 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         title: 'الأسئلة الشائعة',
         content: 'أسئلة شائعة حول مزودي استئجار GPU السحابية.',
         faqs: [
-          { q: 'RunPod مقابل Vast.ai مقابل Lambda Labs: أيها الأرخص لاستدلال LLM؟', a: 'Vast.ai هو الأرخص نظرياً (0.08–0.59 دولار/ساعة لـ RTX 4090) لكنه قابل للمقاطعة. RunPod (0.34–0.69 دولار/ساعة لـ RTX 4090) يقدّم أفضل توازن بين السعر والاستقرار لاستدلال LLM. Lambda Labs (1.99–3.99 دولار/ساعة A100/H100) دون فئة GPU استهلاكية وأعلى تكلفة، لكنه يشمل دعماً مُدَاراً واتفاقية 99.9%.' },
-          { q: 'هل تغطي هذه المقارنة Stable Diffusion وتوليد الصور، أم استدلال LLM فقط؟', a: 'الأسعار وفئات GPU والمزودون في هذا الدليل تنطبق على كليهما. Stable Diffusion وأعباء توليد الصور الأخرى تعمل على نفس نسخ RTX 4090/RTX 5090/A100/H100 المستخدمة لاستدلال LLM. راجع قسم Vast.ai أعلاه للحصول على إرشادات خاصة بتوليد الصور حول النسخ الفورية مقابل المستقرة.' },
-          { q: 'هل RTX 5090 متاحة للاستئجار السحابي الآن؟', a: 'نعم، في عدد متزايد لكن لا يزال محدوداً من قوائم RunPod وVast.ai كما في أغسطس 2026. التوفر والسعر أقل اتساقاً من فئة RTX 4090 الراسخة — تحقّق من القوائم الحالية في لوحة المزود بدلاً من افتراض وجود مخزون. لا تقدّم Lambda Labs أي وحدة GPU من فئة المستهلك، بما في ذلك RTX 5090.' },
-          { q: 'هل يمكنني إيقاف نسختي مؤقتاً واستئنافها؟', a: 'نعم. يسمح RunPod وVast.ai بإيقاف النسخ مؤقتاً (تُحفظ اللقطة). يمكن لـ Lambda Labs الإيقاف عبر API. أثناء الإيقاف، تدفع التخزين فقط (تكلفة ضئيلة، عادةً أقل من 0.01 دولار/يومياً).' },
-          { q: 'ماذا يحدث إن نفدت مساحة القرص في نسختي؟', a: 'ستتعطل النسخة. أضف قرصاً إضافياً من لوحة المزود وركّبه على /mnt/ قبل أن يمتلئ. ممارسة قياسية: راقب استخدام القرص أسبوعياً.' },
-          { q: 'هل يمكنني استخدام هذه الخدمات لاستدلال ذكاء اصطناعي تجاري؟', a: 'نعم، لكن راجع شروط المزود. يسمح RunPod وLambda Labs بأعباء العمل التجارية. قد يكون لمزودي Vast.ai الأفراد قيود — اقرأ القائمة بعناية.' },
-          { q: 'كيف أنقل مجموعات بيانات كبيرة (>100 GB)؟', a: 'لأقل من 100 GB: rsync عبر SSH. لأكثر من 100 GB: (1) خزّن في السحابة (S3، Google Drive) ونزّل على النسخة، أو (2) اطلب قرص /mnt/ مُرفقاً من المزود (رسوم صغيرة).' },
-          { q: 'أي مزود أفضل للتدريب الموزّع بعدة وحدات GPU؟', a: 'Lambda Labs (إعداد أبسط، دعم مشمول). RunPod (API جيد لمتعدد العقد). Vast.ai (أرخص، يتطلب إعداد عنقود يدوياً).' },
-          { q: 'هل يقدّم هؤلاء المزودون أرصدة مجانية؟', a: 'RunPod 10 دولارات، Vast.ai 5 دولارات (متغير)، Lambda Labs 15 دولاراً. استخدم الأرصدة لاختبار أسعار المزود وتجربة الاستخدام قبل الالتزام بالميزانية.' },
-          { q: 'هل يمكنني استخدام صور Docker مخصصة؟', a: 'RunPod: نعم (ارفعها إلى السجل). Vast.ai: نعم (أدوات مثبَّتة مسبقاً). Lambda Labs: محدود (صور محدَّدة مسبقاً للبساطة).' },
-          { q: 'أي مزود أفضل للاستدلال الإنتاجي على مدار الساعة؟', a: 'Lambda Labs (اتفاقية 99.9%، نسخ محجوزة). RunPod Secure Cloud (اتفاقية 99%، أرخص). تجنّب نسخ Vast.ai الفورية للاستخدام على مدار الساعة (قابلة للمقاطعة).' },
-          { q: 'كيف أقلّل التكاليف بالنسخ الفورية؟', a: 'استخدم Vast.ai بـ "Interruptible: On" (أرخص)، أبقِ النسخ تعمل باستمرار (لا توقفها وتعيد تشغيلها)، راقب اتجاهات الأسعار قبل الالتزام.' },
-          { q: 'أيها لديه أفضل API للأتمتة؟', a: 'RunPod (API Python قوي). Lambda Labs (API REST مع webhooks). Vast.ai (API أقدم، الواجهة الويب هي الأساس).' },
-          { q: 'هل يمكنني الحصول على IP مخصص؟', a: 'RunPod: نعم (عند الطلب). Lambda Labs: نعم (مُدَار). Vast.ai: يعتمد على المزود.' },
-          { q: 'ما السعر إن استأجرت ساعة واحدة بالضبط؟', a: 'RunPod: حد أدنى 60 دقيقة (مُقرَّب). Lambda Labs: تُحاسب الساعة كاملة. Vast.ai: مفوتر بالثانية (تدفع ساعة واحدة بالضبط، لا أكثر).' },
-        ],
+            { q: 'RunPod مقابل Vast.ai مقابل Lambda Labs: أيها الأرخص لاستدلال LLM؟', a: 'Vast.ai هو الأرخص نظرياً (0.08–0.59 دولار/ساعة لـ RTX 4090) لكنه قابل للمقاطعة. RunPod (0.34–0.69 دولار/ساعة لـ RTX 4090) يقدّم أفضل توازن بين السعر والاستقرار لاستدلال LLM. Lambda Labs (1.99–3.99 دولار/ساعة A100/H100) دون فئة GPU استهلاكية وأعلى تكلفة، لكنه يشمل دعماً مُدَاراً واتفاقية 99.9%.' },
+            { q: 'هل تغطي هذه المقارنة Stable Diffusion وتوليد الصور، أم استدلال LLM فقط؟', a: 'الأسعار وفئات GPU والمزودون في هذا الدليل تنطبق على كليهما. Stable Diffusion وأعباء توليد الصور الأخرى تعمل على نفس نسخ RTX 4090/RTX 5090/A100/H100 المستخدمة لاستدلال LLM. راجع قسم Vast.ai أعلاه للحصول على إرشادات خاصة بتوليد الصور حول النسخ الفورية مقابل المستقرة.' },
+            { q: 'هل RTX 5090 متاحة للاستئجار السحابي الآن؟', a: 'نعم، في عدد متزايد لكن لا يزال محدوداً من قوائم RunPod وVast.ai كما في أغسطس 2026. التوفر والسعر أقل اتساقاً من فئة RTX 4090 الراسخة — تحقّق من القوائم الحالية في لوحة المزود بدلاً من افتراض وجود مخزون. لا تقدّم Lambda Labs أي وحدة GPU من فئة المستهلك، بما في ذلك RTX 5090.' },
+            { q: 'هل يمكنني إيقاف نسختي مؤقتاً واستئنافها؟', a: 'نعم. يسمح RunPod وVast.ai بإيقاف النسخ مؤقتاً (تُحفظ اللقطة). يمكن لـ Lambda Labs الإيقاف عبر API. أثناء الإيقاف، تدفع التخزين فقط (تكلفة ضئيلة، عادةً أقل من 0.01 دولار/يومياً).' },
+            { q: 'ماذا يحدث إن نفدت مساحة القرص في نسختي؟', a: 'ستتعطل النسخة. أضف قرصاً إضافياً من لوحة المزود وركّبه على /mnt/ قبل أن يمتلئ. ممارسة قياسية: راقب استخدام القرص أسبوعياً.' },
+            { q: 'هل يمكنني استخدام هذه الخدمات لاستدلال ذكاء اصطناعي تجاري؟', a: 'نعم، لكن راجع شروط المزود. يسمح RunPod وLambda Labs بأعباء العمل التجارية. قد يكون لمزودي Vast.ai الأفراد قيود — اقرأ القائمة بعناية.' },
+            { q: 'كيف أنقل مجموعات بيانات كبيرة (>100 GB)؟', a: 'لأقل من 100 GB: rsync عبر SSH. لأكثر من 100 GB: (1) خزّن في السحابة (S3، Google Drive) ونزّل على النسخة، أو (2) اطلب قرص /mnt/ مُرفقاً من المزود (رسوم صغيرة).' },
+            { q: 'أي مزود أفضل للتدريب الموزّع بعدة وحدات GPU؟', a: 'Lambda Labs (إعداد أبسط، دعم مشمول). RunPod (API جيد لمتعدد العقد). Vast.ai (أرخص، يتطلب إعداد عنقود يدوياً).' },
+            { q: 'هل يقدّم هؤلاء المزودون أرصدة مجانية؟', a: 'RunPod 10 دولارات، Vast.ai 5 دولارات (متغير)، Lambda Labs 15 دولاراً. استخدم الأرصدة لاختبار أسعار المزود وتجربة الاستخدام قبل الالتزام بالميزانية.' },
+            { q: 'هل يمكنني استخدام صور Docker مخصصة؟', a: 'RunPod: نعم (ارفعها إلى السجل). Vast.ai: نعم (أدوات مثبَّتة مسبقاً). Lambda Labs: محدود (صور محدَّدة مسبقاً للبساطة).' },
+            { q: 'أي مزود أفضل للاستدلال الإنتاجي على مدار الساعة؟', a: 'Lambda Labs (اتفاقية 99.9%، نسخ محجوزة). RunPod Secure Cloud (اتفاقية 99%، أرخص). تجنّب نسخ Vast.ai الفورية للاستخدام على مدار الساعة (قابلة للمقاطعة).' },
+            { q: 'كيف أقلّل التكاليف بالنسخ الفورية؟', a: 'استخدم Vast.ai بـ "Interruptible: On" (أرخص)، أبقِ النسخ تعمل باستمرار (لا توقفها وتعيد تشغيلها)، راقب اتجاهات الأسعار قبل الالتزام.' },
+            { q: 'أيها لديه أفضل API للأتمتة؟', a: 'RunPod (API Python قوي). Lambda Labs (API REST مع webhooks). Vast.ai (API أقدم، الواجهة الويب هي الأساس).' },
+            { q: 'هل يمكنني الحصول على IP مخصص؟', a: 'RunPod: نعم (عند الطلب). Lambda Labs: نعم (مُدَار). Vast.ai: يعتمد على المزود.' },
+            { q: 'ما السعر إن استأجرت ساعة واحدة بالضبط؟', a: 'RunPod: حد أدنى 60 دقيقة (مُقرَّب). Lambda Labs: تُحاسب الساعة كاملة. Vast.ai: مفوتر بالثانية (تدفع ساعة واحدة بالضبط، لا أكثر).' },
+            { q: 'أي استئجار GPU سحابية هو الأرخص؟', a: 'تكلّف نسخ Vast.ai الفورية أقل بنسبة 30–50% لكنها قابلة للمقاطعة. RunPod أرخص بنسبة 40% من Lambda Labs. يعتمد السعر على نوع GPU وطلب السوق.' },
+            { q: 'هل استئجار GPU السحابية ممتثل لـ GDPR؟', a: 'RunPod مع مناطق EU ممتثل لـ GDPR. Lambda Labs في الولايات المتحدة فقط (غير ممتثل للبيانات الشخصية في EU). Vast.ai نظير-إلى-نظير (يعتمد على موقع المضيف). راجع قسم GDPR للبدائل الممتثلة.' },
+            { q: 'هل يمكن مقاطعة نسختي؟', a: 'Vast.ai الفوري: نعم (إشعار 15 ثانية). RunPod Secure Cloud: لا (اتفاقية 99%). Lambda Labs: لا (اتفاقية 99.9%). اختر حسب حرجية عبء عملك.' },
+          ],
       },
     },
     schema: {
@@ -1675,31 +2114,255 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@type': 'FAQPage',
       inLanguage: 'ar',
       mainEntity: [
-        {
-          '@type': 'Question',
-          name: 'أي استئجار GPU سحابية هو الأرخص؟',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'تكلّف نسخ Vast.ai الفورية أقل بنسبة 30–50% لكنها قابلة للمقاطعة. RunPod أرخص بنسبة 40% من Lambda Labs. يعتمد السعر على نوع GPU وطلب السوق.',
+          {
+            '@type': 'Question',
+            'name': 'هل RunPod Secure Cloud موثوق؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم. نسخ Secure Cloud لها اتفاقية مستوى وقت تشغيل 99% ولا تُقاطَع ما لم يُلغِ المزود النسخة (نادر جداً). يمكن مقاطعة نسخ On-Demand بإشعار 5 دقائق.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'هل استئجار GPU السحابية ممتثل لـ GDPR؟',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'RunPod مع مناطق EU ممتثل لـ GDPR. Lambda Labs في الولايات المتحدة فقط (غير ممتثل للبيانات الشخصية في EU). Vast.ai نظير-إلى-نظير (يعتمد على موقع المضيف). راجع قسم GDPR للبدائل الممتثلة.',
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني استخدام صور Docker مخصصة؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم. يسمح RunPod بصور Docker مخصصة؛ ارفعها إلى Docker Hub أو سجل وأشِر إليها بـ URL. يتوفر أيضاً نشر القوالب بنقرة واحدة مع أطر ML مثبَّتة مسبقاً.',
+            },
           },
-        },
-        {
-          '@type': 'Question',
-          name: 'هل يمكن مقاطعة نسختي؟',
-          acceptedAnswer: {
-            '@type': 'Answer',
-            text: 'Vast.ai الفوري: نعم (إشعار 15 ثانية). RunPod Secure Cloud: لا (اتفاقية 99%). Lambda Labs: لا (اتفاقية 99.9%). اختر حسب حرجية عبء عملك.',
+          {
+            '@type': 'Question',
+            'name': 'كيف أوقف نسخة مؤقتاً؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'بزر الإيقاف المؤقت في لوحة التحكم. تُحفظ اللقطة. أثناء الإيقاف، تدفع فقط مقابل التخزين (تكلفة ضئيلة).',
+            },
           },
-        },
-      ],
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني التوسّع إلى عدة وحدات GPU؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم. يدعم RunPod النسخ متعددة GPU والتدريب الموزّع عبر API.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ماذا يحدث إن قُوطعت نسختي الفورية؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'يمكن مقاطعة النسخ الفورية بإشعار 15 ثانية إن استعاد المزود GPU. استخدم مرشّح "Interruptible: Off" لنسخ أكثر استقراراً (أسعار أعلى، أكثر استقراراً).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل لدي وصول root/sudo؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'يمنح معظم المزودين sudo؛ بعضهم لا. راجع تفاصيل النسخة قبل الاستئجار. Vast.ai لا يضمنه.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'كيف أرفع البيانات؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'استخدم rsync أو scp عبر SSH. لمجموعات البيانات الكبيرة (>100GB)، خزّنها في محرّك /mnt/ مُرفق (رسوم صغيرة) أو استخدم جسر تخزين سحابي (S3، Google Drive).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل الأسعار رخيصة بهذا القدر فعلاً؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم، لكن الأسعار الفورية تتقلب. 0.08 دولار/ساعة حقيقي لكنه نادر (ذروات طلب). وسيط 0.21 دولار/ساعة أكثر شيوعاً. راقب قبل الالتزام بالنسخ الفورية للإنتاج.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل أسعار Vast.ai تنطبق بنفس الطريقة على Stable Diffusion كما على استدلال LLM؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم — نفس نسخ RTX 4090 وRTX 5090 الفورية المستخدمة لاستدلال LLM تُشغّل أيضاً Stable Diffusion وأعباء توليد الصور الأخرى. توليد الصور عادة أكثر اعتماداً على VRAM وأقل حساسية لزمن الاستجابة من استدلال الدردشة، لذا فإن النسخ الفورية/القابلة للمقاطعة (أرخص، يمكن استردادها) عادة ما تكون مناسبة لمهام توليد الصور الدُفعية؛ احجز نسخاً مستقرة ("Interruptible: Off") فقط إن احتجت قائمة انتظار عرض طويلة دون مقاطعة.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يستحق سعر Lambda Labs المتميز؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم، إن كنت تحتاج اتفاقية وقت تشغيل 99.9%، والبنية التحتية في الولايات المتحدة مقبولة، وتقدّر الدعم المباشر. للتجربة، RunPod أو Vast.ai أرخص. للإنتاج، تبرّر اتفاقية Lambda Labs التكلفة.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني التوسّع إلى عدة وحدات GPU؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم. يسمح Lambda Labs بنسخ متعددة GPU والتدريب الموزّع. تدير بيئة Jupyter الإعداد.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما سياسة الاسترداد لديكم؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'استرداد خلال 30 يوماً إن لم تكن راضياً. لا يحتاجه معظم المستخدمين بعد تجربة رصيد 15 دولاراً المجاني.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'لماذا لا تقدّمون RTX 4090؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'يركّز Lambda Labs على سوق المؤسسات A100/H100، لا على فئة GPU الاستهلاكية. هذه استراتيجية متعمَّدة.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'RunPod مقابل Vast.ai مقابل Lambda Labs: أيها الأرخص لاستدلال LLM؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Vast.ai هو الأرخص نظرياً (0.08–0.59 دولار/ساعة لـ RTX 4090) لكنه قابل للمقاطعة. RunPod (0.34–0.69 دولار/ساعة لـ RTX 4090) يقدّم أفضل توازن بين السعر والاستقرار لاستدلال LLM. Lambda Labs (1.99–3.99 دولار/ساعة A100/H100) دون فئة GPU استهلاكية وأعلى تكلفة، لكنه يشمل دعماً مُدَاراً واتفاقية 99.9%.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل تغطي هذه المقارنة Stable Diffusion وتوليد الصور، أم استدلال LLM فقط؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'الأسعار وفئات GPU والمزودون في هذا الدليل تنطبق على كليهما. Stable Diffusion وأعباء توليد الصور الأخرى تعمل على نفس نسخ RTX 4090/RTX 5090/A100/H100 المستخدمة لاستدلال LLM. راجع قسم Vast.ai أعلاه للحصول على إرشادات خاصة بتوليد الصور حول النسخ الفورية مقابل المستقرة.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل RTX 5090 متاحة للاستئجار السحابي الآن؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم، في عدد متزايد لكن لا يزال محدوداً من قوائم RunPod وVast.ai كما في أغسطس 2026. التوفر والسعر أقل اتساقاً من فئة RTX 4090 الراسخة — تحقّق من القوائم الحالية في لوحة المزود بدلاً من افتراض وجود مخزون. لا تقدّم Lambda Labs أي وحدة GPU من فئة المستهلك، بما في ذلك RTX 5090.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني إيقاف نسختي مؤقتاً واستئنافها؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم. يسمح RunPod وVast.ai بإيقاف النسخ مؤقتاً (تُحفظ اللقطة). يمكن لـ Lambda Labs الإيقاف عبر API. أثناء الإيقاف، تدفع التخزين فقط (تكلفة ضئيلة، عادةً أقل من 0.01 دولار/يومياً).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ماذا يحدث إن نفدت مساحة القرص في نسختي؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'ستتعطل النسخة. أضف قرصاً إضافياً من لوحة المزود وركّبه على /mnt/ قبل أن يمتلئ. ممارسة قياسية: راقب استخدام القرص أسبوعياً.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني استخدام هذه الخدمات لاستدلال ذكاء اصطناعي تجاري؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'نعم، لكن راجع شروط المزود. يسمح RunPod وLambda Labs بأعباء العمل التجارية. قد يكون لمزودي Vast.ai الأفراد قيود — اقرأ القائمة بعناية.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'كيف أنقل مجموعات بيانات كبيرة (>100 GB)؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'لأقل من 100 GB: rsync عبر SSH. لأكثر من 100 GB: (1) خزّن في السحابة (S3، Google Drive) ونزّل على النسخة، أو (2) اطلب قرص /mnt/ مُرفقاً من المزود (رسوم صغيرة).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'أي مزود أفضل للتدريب الموزّع بعدة وحدات GPU؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Lambda Labs (إعداد أبسط، دعم مشمول). RunPod (API جيد لمتعدد العقد). Vast.ai (أرخص، يتطلب إعداد عنقود يدوياً).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يقدّم هؤلاء المزودون أرصدة مجانية؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RunPod 10 دولارات، Vast.ai 5 دولارات (متغير)، Lambda Labs 15 دولاراً. استخدم الأرصدة لاختبار أسعار المزود وتجربة الاستخدام قبل الالتزام بالميزانية.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني استخدام صور Docker مخصصة؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RunPod: نعم (ارفعها إلى السجل). Vast.ai: نعم (أدوات مثبَّتة مسبقاً). Lambda Labs: محدود (صور محدَّدة مسبقاً للبساطة).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'أي مزود أفضل للاستدلال الإنتاجي على مدار الساعة؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Lambda Labs (اتفاقية 99.9%، نسخ محجوزة). RunPod Secure Cloud (اتفاقية 99%، أرخص). تجنّب نسخ Vast.ai الفورية للاستخدام على مدار الساعة (قابلة للمقاطعة).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'كيف أقلّل التكاليف بالنسخ الفورية؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'استخدم Vast.ai بـ "Interruptible: On" (أرخص)، أبقِ النسخ تعمل باستمرار (لا توقفها وتعيد تشغيلها)، راقب اتجاهات الأسعار قبل الالتزام.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'أيها لديه أفضل API للأتمتة؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RunPod (API Python قوي). Lambda Labs (API REST مع webhooks). Vast.ai (API أقدم، الواجهة الويب هي الأساس).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكنني الحصول على IP مخصص؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RunPod: نعم (عند الطلب). Lambda Labs: نعم (مُدَار). Vast.ai: يعتمد على المزود.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما السعر إن استأجرت ساعة واحدة بالضبط؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RunPod: حد أدنى 60 دقيقة (مُقرَّب). Lambda Labs: تُحاسب الساعة كاملة. Vast.ai: مفوتر بالثانية (تدفع ساعة واحدة بالضبط، لا أكثر).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'أي استئجار GPU سحابية هو الأرخص؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'تكلّف نسخ Vast.ai الفورية أقل بنسبة 30–50% لكنها قابلة للمقاطعة. RunPod أرخص بنسبة 40% من Lambda Labs. يعتمد السعر على نوع GPU وطلب السوق.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل استئجار GPU السحابية ممتثل لـ GDPR؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'RunPod مع مناطق EU ممتثل لـ GDPR. Lambda Labs في الولايات المتحدة فقط (غير ممتثل للبيانات الشخصية في EU). Vast.ai نظير-إلى-نظير (يعتمد على موقع المضيف). راجع قسم GDPR للبدائل الممتثلة.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل يمكن مقاطعة نسختي؟',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Vast.ai الفوري: نعم (إشعار 15 ثانية). RunPod Secure Cloud: لا (اتفاقية 99%). Lambda Labs: لا (اتفاقية 99.9%). اختر حسب حرجية عبء عملك.',
+            },
+          },
+        ],
     },
   },
   pt: {

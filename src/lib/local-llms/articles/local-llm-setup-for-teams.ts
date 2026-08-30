@@ -2113,6 +2113,7 @@ schema: {
       toc: [
         { label: 'Pontos principais', anchor: '#tldr' },
         { label: 'Arquitetura do servidor', anchor: '#server-architecture' },
+        { label: 'Perguntas frequentes', anchor: 'faq' },
       ],
       schema: {
         '@context': 'https://schema.org',
@@ -2207,6 +2208,20 @@ schema: {
             '**A LGPD (Lei nº 13.709/2018) e as diretrizes da ANPD** exigem que dados pessoais sensíveis sejam processados com controles adequados. Um servidor LLM local compartilhado satisfaz os requisitos de residência de dados por padrão.',
             'Para implantações empresariais no Brasil: (1) documente quais dados são processados pelos modelos de IA (registro de atividades de tratamento), (2) implemente controle de acesso baseado em papéis (RBAC), (3) registre todas as consultas com ID de usuário e timestamp para auditoria, (4) criptografe dados em repouso e em trânsito (TLS para a API interna).',
             'Setores financeiros (Banco Central) e de saúde (ANS/ANVISA) no Brasil têm requisitos adicionais de localização de dados que a inferência local satisfaz nativamente.',
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: 'Perguntas frequentes',
+          faqs: [
+            { q: 'Quanto custa um servidor LLM local de equipe comparado a APIs na nuvem?', a: 'Configuração de servidor único: R$15.000 em hardware + R$250/mês em eletricidade (R$3.000/ano) frente a R$5.000+/mês em APIs na nuvem (R$60.000+/ano). Prazo de retorno para equipes ativas: 2 a 3 meses.' },
+            { q: 'Como configurar a autenticação de usuários no servidor LLM da equipe?', a: 'Empresas usam SSO (Active Directory / Okta) com OAuth 2.0. Equipes pequenas e médias usam autenticação simples por token. Todas as consultas são registradas com ID de usuário, timestamp e número de tokens para atribuição de custos.' },
+            { q: 'O que acontece se uma GPU falhar na configuração da equipe?', a: 'Use um cluster dual-GPU com load balancer: se a GPU 0 falhar, todas as requisições são roteadas automaticamente para a GPU 1, sem indisponibilidade. Em uma configuração de servidor único, o RAID protege os dados, mas a recuperação de falha de GPU exige redundância.' },
+            { q: 'É possível adicionar mais usuários sem comprar novo hardware?', a: 'Sim, até 20-30 usuários simultâneos por GPU. Acima disso, adicione uma placa de GPU e reequilibre o load balancer. Uma RTX 4090 processa aproximadamente 5 tokens/s por usuário simultâneo.' },
+            { q: 'Como lidar com atualizações de modelo na configuração da equipe?', a: 'Baixe e teste o novo modelo em uma máquina separada antes de substituí-lo. O vLLM suporta hot-swap sem indisponibilidade: pausa novas requisições, conclui as consultas em andamento e então substitui os arquivos do modelo.' },
+            { q: 'Devo usar Kubernetes na implantação de LLM local para equipes?', a: 'Desnecessário para menos de 50 usuários. Docker + docker-compose simples é mais direto e tem menos overhead. Kubernetes adiciona complexidade sem benefício correspondente para equipes pequenas.' },
+            { q: 'É possível cobrar dos membros da equipe com base no uso de tokens?', a: 'Sim, por meio de relatórios showback. Use métricas do Prometheus para rastrear os tokens diários por usuário e depois rateie o custo do servidor proporcionalmente. Defina antes a política: custo compartilhado ou cobrança por departamento.' },
+            { q: 'Como fazer backup dos dados e logs dos usuários no servidor da equipe?', a: 'Faça backup diário de todos os logs de entrada e saída em armazenamento externo. Use redundância RAID 6 (sobrevive a 2 falhas simultâneas de disco). Teste a recuperação mensalmente para confirmar que os backups são válidos.' },
           ],
         },
       },

@@ -3476,21 +3476,374 @@ export const article: Partial<Record<Language, PEArticle>> = {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'mainEntity': [
-          { '@type': 'Question', 'name': 'Qu\'est-ce que la loi IA de l\'UE ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'La loi IA de l\'UE est le premier cadre legal complet au monde sur l\'intelligence artificielle, adoptee par le Parlement europeen en mars 2024 avec 523 voix pour. Elle classe les systemes d\'IA en quatre niveaux de risque — Inacceptable, Eleve, Limite et Minimal — avec des exigences et amendes differentes. L\'application complete entre en vigueur en aout 2026.' } },
-          { '@type': 'Question', 'name': 'La loi IA de l\'UE s\'applique-t-elle aux entreprises hors UE ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. La loi IA de l\'UE s\'applique a toute organisation qui commercialise des systemes d\'IA dans l\'UE ou dont les resultats d\'IA sont utilises dans l\'UE, independamment du siege de l\'organisation. Cette portee extraterritoriale, appelee effet Bruxelles, oblige les fournisseurs americains et asiatiques a se conformer s\'ils servent des utilisateurs europeens.' } },
-          { '@type': 'Question', 'name': 'Quelles sont les amendes en cas de violation de la loi IA de l\'UE ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Les amendes atteignent jusqu\'a 35 millions d\'euros ou 7 % du chiffre d\'affaires mondial annuel pour les pratiques d\'IA interdites. Les violations liees a l\'IA a haut risque entrainent des amendes jusqu\'a 15 millions d\'euros ou 3 % du chiffre d\'affaires. Les informations incorrectes transmises aux autorites coutent jusqu\'a 7,5 millions d\'euros ou 1 % du chiffre d\'affaires.' } },
-          { '@type': 'Question', 'name': 'Quelles applications d\'IA l\'UE interdit-elle formellement ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'La loi IA de l\'UE interdit : les systemes de notation sociale par les autorites publiques, la surveillance biometrique en temps reel dans les espaces publics (avec exceptions etroites), les IA exploitant des vulnerabilites cognitives, et la collecte non ciblee d\'images faciales sur internet pour creer des bases de donnees de reconnaissance.' } },
-          { '@type': 'Question', 'name': 'En quoi la reglementation americaine de l\'IA differe-t-elle de l\'approche europeenne ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Les Etats-Unis adoptent une approche sectorielle et volontaire — les regulateurs existants (FTC, FDA, CFPB, EEOC) appliquent leurs mandats a l\'IA dans leurs domaines. Il n\'existe pas de loi federale sur l\'IA equivalente a la loi UE. Le decret Biden sur la securite de l\'IA (octobre 2023) a ete revoque par l\'administration Trump en janvier 2025.' } },
-          { '@type': 'Question', 'name': 'L\'IA chinoise est-elle aussi avancee que l\'IA americaine ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'DeepSeek R1 (janvier 2025) a egale GPT-5.6 sur plusieurs benchmarks (AIME 2024, MATH-500, HumanEval) tout en se formant apparemment a une fraction du cout. Les modeles chinois de pointe — Qwen d\'Alibaba et ERNIE de Baidu — sont competitifs sur de nombreuses taches mais restent en retrait sur le raisonnement multilingue et les benchmarks de securite.' } },
-          { '@type': 'Question', 'name': 'Les entreprises europeennes peuvent-elles utiliser GPT-5.6 et Claude sous la loi IA ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui, pour la plupart des applications professionnelles. GPT-5.6 et Claude sont classifies comme IA a usage general (GPAI). Les entreprises europeennes doivent cependant assumer leurs propres obligations de diligence, notamment pour les applications a haut risque comme les decisions RH, l\'octroi de credit ou les infrastructures critiques.' } },
-          { '@type': 'Question', 'name': 'Qu\'est-ce que l\'UK AI Safety Institute (AISI) ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'L\'AISI a ete cree en novembre 2023 comme premiere agence gouvernementale de securite IA au monde. Il effectue des tests pre-deploiement sur les modeles frontier, a signe des memorandums avec OpenAI, Anthropic, Google DeepMind et Meta, et coordonne les standards de securite internationaux.' } },
-          { '@type': 'Question', 'name': 'Comment DeepSeek modifie-t-il la geopolitique de l\'IA ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'DeepSeek R1 a prouve que des capacites IA frontier sont atteignables avec beaucoup moins de puissance de calcul, et que les controles a l\'exportation des puces Nvidia seuls sont insuffisants. Ces resultats ont pousse les legislateurs americains a reexaminer la politique d\'exportation de puces et accelere les investissements europeens dans des infrastructures IA souveraines.' } },
-          { '@type': 'Question', 'name': 'Qu\'est-ce que l\'effet Bruxelles dans l\'IA ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'L\'effet Bruxelles decrit le phenomene par lequel la reglementation de l\'UE devient de facto un standard mondial, car les entreprises globales adaptent leurs produits aux regles europeennes plutot que de maintenir des versions multiples. Pour l\'IA, cela signifie que la loi IA de l\'UE cree des obligations de conformite pour les fournisseurs americains et asiatiques qui servent des utilisateurs europeens.' } },
-          { '@type': 'Question', 'name': 'Qu\'est-ce que le processus IA d\'Hiroshima ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Le processus IA d\'Hiroshima a ete lance lors du sommet du G7 en 2023 et a developpe des principes directeurs internationaux pour l\'IA frontier. Il a abouti au code de conduite IA du G7 — un cadre volontaire pour les fournisseurs de systemes IA avances, avec des engagements sur les tests de securite, la transparence et la gestion des risques.' } },
-          { '@type': 'Question', 'name': 'Les organisations europeennes peuvent-elles utiliser DeepSeek pour des usages commerciaux ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Avec prudence. DeepSeek est soumis au droit chinois, qui permet l\'acces des autorites chinoises aux donnees. Les preoccupations ont conduit l\'Italie, l\'Irlande et l\'Allemagne a saisir leurs autorites de protection des donnees. Pour les applications d\'entreprise, les versions open source (DeepSeek R1 en local) ou les fournisseurs bases dans l\'UE sont les options les plus conformes au RGPD.' } },
-          { '@type': 'Question', 'name': 'L\'EU AI Act aide-t-il ou nuit-il à la compétitivité de l\'IA en Europe?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'C\'est un dilemme stratégique réel : l\'EU AI Act peut ralentir les startups IA européennes mais renforce la crédibilité réglementaire de l\'Europe mondialement. D\'un côté, les coûts de conformité et les évaluations créent des frictions pour les entreprises européennes — Mistral AI français est plus contraint que les concurrents américains. De l\'autre, l\'effet Bruxelles signifie que le cadre réglementaire de l\'UE devient le standard mondial, donnant aux entreprises basées en UE un avantage compétitif en conformité et à l\'UE un levier sur les géants technologiques US/chinois.' } },
-          { '@type': 'Question', 'name': 'Comment la capacité informatique de l\'Europe se compare-t-elle aux États-Unis et à la Chine?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'L\'Europe accuse un retard important. Les États-Unis dominent la fabrication de GPU (Nvidia ~80 % part de marché) et le silicium personnalisé. La Chine fabrique chez TSMC (Taïwan) et utilise des GPU Nvidia restreints. L\'Europe n\'a pas d\'équivalent : ASML (Pays-Bas) fabrique des équipements mais ne possède pas de fabs. L\'EU Chips Act (43 milliards d\'euros) vise à construire des fabs Intel et TSMC, mais aucune ne sera opérationnelle avant 2027–2029. C\'est la vulnérabilité centrale de l\'Europe : l\'entraînement de modèles frontier nécessite des milliers de GPU pendant des mois. Sans fab nationale, l\'Europe dépend de l\'approvisionnement US (Nvidia) et taïwanais (TSMC).' } },
-          { '@type': 'Question', 'name': 'Quel est l\'avantage de l\'Europe en matière d\'IA au-delà de la réglementation?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'L\'Europe a trois avantages non-réglementaires : (1) Mistral AI et autres modèles open-source financés par l\'UE offrent des alternatives conformes à GDPR sans dépendance US ou chinoise; (2) L\'Europe mène la recherche en sécurité de l\'IA via le UK AI Safety Institute et les centres de recherche français; (3) La main-d\'œuvre éduquée et le talent logiciel/semi-conducteur donnent un avantage en applications IA et silicium personnalisé. Cependant, aucun ne compense le désavantage en capacité des modèles frontier — les États-Unis mènent sur GPT-5.6 et Claude, la Chine sur l\'échelle et le volume. La stratégie de l\'Europe est faire ce que tu sais bien (sécurité, régulation, éthique) plutôt que de concourir sur la capacité brute.' } },
+          {
+            '@type': 'Question',
+            'name': 'Pourquoi les gouvernements investissent-ils des dizaines de milliards en IA ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'L\'IA affecte trois domaines critiques : (1) puissance militaire — IA autonome, warfare cyber, reconnaissance ; (2) productivité économique — qui construit les meilleurs modèles exporte son avantage compétitif ; (3) soft power — les pays qui définissent les normes IA influencent la technologie mondiale.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qu\'est-ce que le Brussels Effect en matière d\'IA ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Les règles strictes de l\'UE deviennent normes mondiales car les entreprises mondiales s\'y conforment. Le RGPD de l\'UE a changé la confidentialité des données partout. La loi IA de l\'UE fait de même — si vous opérez en UE, vous appliquez ses règles globalement.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quel pays gagne la course IA en 2026 ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Pas de vainqueur unique. Les États-Unis dominent les modèles (OpenAI, Anthropic, Google) et les puces (NVIDIA). La Chine excelle en mise en œuvre rapide et déploiement pratique (DeepSeek, recherche vidéo). L\'UE construit une approche réglementaire cohérente (loi IA), lente mais rigoureuse.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Les modèles chinois rattraperont-ils les modèles US ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Déjà partiellement. DeepSeek R1 offre une performance brute comparable à GPT-5.6, mais sous contrôles gouvernementaux. L\'écart diminue rapidement. L\'enjeu clé : NVIDIA (puces) — sans accès illimité, la Chine reste légèrement en retard.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Pourquoi NVIDIA et les puces sont-elles au centre de la géopolitique IA ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Les puces (H100, H200) sont les goulots critiques. Sans elles, vous ne pouvez pas entraîner des modèles fondamentaux. Les États-Unis contrôlent la conception (NVIDIA) et la fabrication (TSMC). La Chine ne peut pas acheter les puces US avancées — elle doit construire ses substituts, plus lents.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qui fabrique les puces IA ? Peuvent-elles être relocalisées ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'TSMC (Taiwan) fabrique 90+ % des puces avancées au monde. Le CHIPS Act (US) et les initiatives EU veulent relocaliser la fabrication, mais c\'est coûteux (10+ ans, 100+ milliards $). TSMC restera dominante jusqu\'à 2030+.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Comment l\'IA change-t-elle la puissance militaire ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Trois façons : (1) intelligence — IA analyse les données satellites, prévoit les mouvements ; (2) autonomie — drones autonomes plus rapides que les humains ; (3) cyber — IA lance et défend les attaques. Les nations avec les meilleurs modèles IA obtiennent un avantage asymétrique.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Comment l\'IA affecte-t-elle le commerce et l\'emploi mondialement ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Les pays avec accès aux meilleurs modèles (US, partiellement Chine) verront une productivité accrue et un déplacement d\'emplois vers les rôles créatifs. Les pays sans accès risquent une divergence de richesse accrue. Le capital et le talent suivent l\'IA.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qu\'est-ce que la géopolitique de l\'IA ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'C\'est l\'étude de comment la concurrence pour la dominance technologique IA remodèle le pouvoir mondial. Cela inclut : qui contrôle les modèles fondamentaux, qui fabrique les puces, qui a le talent, et qui impose les règles. La géopolitique IA détermine qui prospère et qui décline économiquement, militairement, et culturellement.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Pourquoi ça compte pour moi ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Parce que vous travaillez probablement avec l\'IA (ou le ferez bientôt), et les règles qui vous encadrent dépendent de où vous êtes et qui contrôle les modèles. Comprendre la géopolitique IA vous aide à anticiper les changements réglementaires, les restrictions d\'accès, et les opportunités.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qui gagne actuellement la course IA ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Les États-Unis dominent l\'innovation brute (modèles, puces, talent). La Chine excelle au déploiement pratique et à l\'innovation rapide. L\'UE construit une approche de long terme (conformité, indépendance). Aucun vainqueur clair. La course durera des décennies.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qui aura l\'avantage en 2030 ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Si les tendances actuelles persistent : États-Unis en modèles fondamentaux, Chine en déploiement, UE en régulation. Mais la technologie se déplace vite. Des surprises arrivent (nouveau leader, nouvelle approche, découverte inattendue).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qu\'est-ce que le Brussels Effect et comment s\'applique-t-il à l\'IA ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Le Brussels Effect est le phénomène où les régulations strictes de l\'UE deviennent les standards mondiaux car les entreprises mondiales les adoptent. Exemple : RGPD de l\'UE a changé la privacy partout, pas seulement en UE. La loi IA de l\'UE fait de même — si vous opérez globalement, vous appliquez les règles de l\'UE partout pour la simplicité.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quel est l\'impact sur les startups IA ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Les startups doivent se préparer aux règles les plus strictes (UE) plutôt que aux moins strictes (US). Cela ralentit l\'innovation mais augmente la conformité. Les startups européennes ont un avantage : elles connaissent déjà les règles strictes.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quelle est l\'approche réglementaire chinoise pour l\'IA ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'L\'État chinois régule l\'IA via la Cyberspace Administration of China (CAC). Tous les modèles et services doivent être approuvés. L\'approbation dépend de : contenu (pas de politique critique), données (résidence en Chine), et contrôle (l\'État doit pouvoir déchiffrer). C\'est plus restrictif mais plus rapide que l\'UE.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Peux-tu opérer l\'IA en Chine sans État ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Non. L\'État approuve explicitement chaque modèle et service. Pas d\'approbation = pas d\'opération. Pas de gris zones. C\'est clairement défini mais inflexible.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qu\'est-ce que la loi IA de l\'UE demande aux organisations ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'La loi IA de l\'UE classe l\'IA par risque et demande : (1) audit de conformité pour tous les systèmes IA ; (2) documentation complète (données, entraînement, tests) ; (3) tests de non-discrimination et de biais ; (4) suivi humain pour les systèmes à haut risque ; (5) notification des incidents graves à l\'autorité.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Combien ça coûte de se conformer ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Pour une startup : 20-30% du budget IA. Pour une grande org : 10-15% (économies d\'échelle). Cela inclut : audit, documentation, tests, monitoring, legal review. C\'est un coût sans fin (pas juste une fois).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quels sont les contrôles à l\'export US sur la technologie IA ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Les États-Unis contrôlent l\'export de puces IA (NVIDIA H100+) et de certains logiciels vers la Chine via l\'Administration for Export Control (EAC). Cela signifie que la Chine ne peut pas accéder aux puces les plus avancées légalement. La Chine contourne cela en achetant via des intermédiaires ou en construisant ses substituts.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'L\'UE a-t-elle des contrôles d\'export similaires ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'L\'UE se coordonne avec les États-Unis via l\'Export Control Regulation (ECR), mais elle est moins stricte. L\'UE n\'interdit pas les puces à la Chine, seulement les technologies militaires. C\'est une faiblesse dans la stratégie occidentale — la Chine peut acheter en UE ce qu\'elle ne peut pas acheter aux US.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Pourquoi TSMC est-elle si importante pour la géopolitique IA ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'TSMC (Taiwan Semiconductor Manufacturing Company) fabrique 90%+ des puces les plus avancées au monde, y compris NVIDIA H100. Elle est l\'unique goulot critique. Si TSMC s\'arrête (war, accident, politique), toute l\'industrie IA s\'arrête. C\'est pourquoi les États-Unis soutiennent Taiwan militairement et pourquoi la Chine veut le contrôle politique de Taiwan.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Que se passe-t-il si la Chine prend Taiwan ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Scénario catastrophique pour l\'Occident. La Chine contrôlerait la production mondiale de puces. Les États-Unis et l\'UE n\'auraient accès aux puces avancées que si la Chine les autorise. C\'est une dépendance stratégique inacceptable. C\'est pourquoi les États-Unis considèrent la défense de Taiwan comme intérêt vital.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quelles sont les différences clés entre les approches US, UE et Chine sur l\'IA ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'US : Innovation rapide, peu de régulation fédérale, exporte les standards technologiques. UE : Conformité stricte, droits fondamentaux d\'abord, régulation globale (Brussels Effect). Chine : Contrôle d\'État total, approbation requise, filtrage du contenu, données résidentes.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Laquelle est la meilleure approche ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Dépend de ce que tu values. US = innovation rapide mais risque élevé. UE = lenteur mais sécurité. Chine = contrôle mais censure. Il n\'y a pas de "meilleure" approche — ce sont des trade-offs.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Pourquoi la géopolitique de l\'IA compte pour moi personnellement ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Parce que les règles qui encadrent votre travail en IA dépendent de votre localisation et du contrôle des modèles. Si vous êtes en UE, la conformité est obligatoire. Si vous êtes aux US, moins de contraintes. Si vous êtes en Chine, l\'approbation gouvernementale est requise. Comprendre la géopolitique IA vous aide à anticiper les changements et à planifier votre carrière/entreprise.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quelle technologie IA dominera en 2030 ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Probablement une combinaison : modèles fondamentaux américains (OpenAI, Anthropic) + déploiement rapide chinois (DeepSeek) + régulation européenne (loi IA). Pas de vainqueur unique. La fragmentation technologique est plus probable que la domination d\'un bloc.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Dois-je m\'inquiéter des restrictions chinoises si je travaille en Occident ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Seulement si vous utilisez des services cloud chinois (Alibaba, Baidu) ou des modèles chinois. Si vous utilisez OpenAI, Anthropic, ou Google, vous êtes en sécurité. Mais soyez conscient : si vous exportez vers la Chine, les restrictions s\'appliquent.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'L\'UE ralentit-elle l\'innovation IA avec sa loi stricte ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Peut-être un peu (20-30% plus lent que les États-Unis), mais cela pousse aussi vers une IA plus responsable et plus sûre. Le trade-off : innovation rapide vs conformité + éthique. L\'UE choisit le deuxième. C\'est intentionnel, pas une limitation involontaire.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Pourquoi NVIDIA et TSMC sont-elles si stratégiques ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Parce qu\'elles sont les goulots critiques. Sans puces avancées, vous ne pouvez pas entraîner de modèles fondamentaux. NVIDIA conçoit, TSMC fabrique. Contrôler cela = contrôler qui peut faire de l\'IA. C\'est pourquoi les États-Unis soutiennent NVIDIA et Taiwan si fortement.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Que se passe-t-il si la Chine isolée technologiquement ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Peut-être une fission technologique complète : "Occident IA" vs "Chine IA". Deux internets IA distincts. Cela serait mauvais pour l\'innovation (moins de collaboration) mais réduirait les tensions géopolitiques. Peu probable mais possible.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Comment Mistral pourrait-elle rivaliser avec OpenAI ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Difficile. Mistral a moins de capital, moins de talent, moins de données. Son avantage : soutien gouvernemental français/européen + focus sur l\'indépendance. Elle pourrait dominer en Europe mais sera toujours n°2 ou #3 mondialement.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qu\'est-ce que le Brussels Effect signifie pour mon entreprise IA ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Si vous opérez globalement, vous devez respecter les règles les plus strictes (UE). C\'est plus coûteux mais plus simple que d\'avoir trois stacks différentes. Le Brussels Effect signifie : conformité UE = conformité mondiale pour la plupart des cas.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'La loi IA de l\'UE s\'applique-t-elle aux entreprises hors UE ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui. La loi IA de l\'UE s\'applique a toute organisation qui commercialise des systemes d\'IA dans l\'UE ou dont les resultats d\'IA sont utilises dans l\'UE, independamment du siege de l\'organisation. Cette portee extraterritoriale, appelee effet Bruxelles, oblige les fournisseurs americains et asiatiques a se conformer s\'ils servent des utilisateurs europeens.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quelles sont les amendes en cas de violation de la loi IA de l\'UE ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Les amendes atteignent jusqu\'a 35 millions d\'euros ou 7 % du chiffre d\'affaires mondial annuel pour les pratiques d\'IA interdites. Les violations liees a l\'IA a haut risque entrainent des amendes jusqu\'a 15 millions d\'euros ou 3 % du chiffre d\'affaires. Les informations incorrectes transmises aux autorites coutent jusqu\'a 7,5 millions d\'euros ou 1 % du chiffre d\'affaires.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quelles applications d\'IA l\'UE interdit-elle formellement ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'La loi IA de l\'UE interdit : les systemes de notation sociale par les autorites publiques, la surveillance biometrique en temps reel dans les espaces publics (avec exceptions etroites), les IA exploitant des vulnerabilites cognitives, et la collecte non ciblee d\'images faciales sur internet pour creer des bases de donnees de reconnaissance.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'En quoi la reglementation americaine de l\'IA differe-t-elle de l\'approche europeenne ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Les Etats-Unis adoptent une approche sectorielle et volontaire — les regulateurs existants (FTC, FDA, CFPB, EEOC) appliquent leurs mandats a l\'IA dans leurs domaines. Il n\'existe pas de loi federale sur l\'IA equivalente a la loi UE. Le decret Biden sur la securite de l\'IA (octobre 2023) a ete revoque par l\'administration Trump en janvier 2025.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'L\'IA chinoise est-elle aussi avancee que l\'IA americaine ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'DeepSeek R1 (janvier 2025) a egale GPT-5.6 sur plusieurs benchmarks (AIME 2024, MATH-500, HumanEval) tout en se formant apparemment a une fraction du cout. Les modeles chinois de pointe — Qwen d\'Alibaba et ERNIE de Baidu — sont competitifs sur de nombreuses taches mais restent en retrait sur le raisonnement multilingue et les benchmarks de securite.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Les entreprises europeennes peuvent-elles utiliser GPT-5.6 et Claude sous la loi IA ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui, pour la plupart des applications professionnelles. GPT-5.6 et Claude sont classifies comme IA a usage general (GPAI). Les entreprises europeennes doivent cependant assumer leurs propres obligations de diligence, notamment pour les applications a haut risque comme les decisions RH, l\'octroi de credit ou les infrastructures critiques.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qu\'est-ce que l\'UK AI Safety Institute (AISI) ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'L\'AISI a ete cree en novembre 2023 comme premiere agence gouvernementale de securite IA au monde. Il effectue des tests pre-deploiement sur les modeles frontier, a signe des memorandums avec OpenAI, Anthropic, Google DeepMind et Meta, et coordonne les standards de securite internationaux.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Comment DeepSeek modifie-t-il la geopolitique de l\'IA ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'DeepSeek R1 a prouve que des capacites IA frontier sont atteignables avec beaucoup moins de puissance de calcul, et que les controles a l\'exportation des puces Nvidia seuls sont insuffisants. Ces resultats ont pousse les legislateurs americains a reexaminer la politique d\'exportation de puces et accelere les investissements europeens dans des infrastructures IA souveraines.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qu\'est-ce que l\'effet Bruxelles dans l\'IA ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'L\'effet Bruxelles decrit le phenomene par lequel la reglementation de l\'UE devient de facto un standard mondial, car les entreprises globales adaptent leurs produits aux regles europeennes plutot que de maintenir des versions multiples. Pour l\'IA, cela signifie que la loi IA de l\'UE cree des obligations de conformite pour les fournisseurs americains et asiatiques qui servent des utilisateurs europeens.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Qu\'est-ce que le processus IA d\'Hiroshima ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Le processus IA d\'Hiroshima a ete lance lors du sommet du G7 en 2023 et a developpe des principes directeurs internationaux pour l\'IA frontier. Il a abouti au code de conduite IA du G7 — un cadre volontaire pour les fournisseurs de systemes IA avances, avec des engagements sur les tests de securite, la transparence et la gestion des risques.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Les organisations europeennes peuvent-elles utiliser DeepSeek pour des usages commerciaux ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Avec prudence. DeepSeek est soumis au droit chinois, qui permet l\'acces des autorites chinoises aux donnees. Les preoccupations ont conduit l\'Italie, l\'Irlande et l\'Allemagne a saisir leurs autorites de protection des donnees. Pour les applications d\'entreprise, les versions open source (DeepSeek R1 en local) ou les fournisseurs bases dans l\'UE sont les options les plus conformes au RGPD.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'L\'EU AI Act aide-t-il ou nuit-il à la compétitivité de l\'IA en Europe?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'C\'est un dilemme stratégique réel : l\'EU AI Act peut ralentir les startups IA européennes mais renforce la crédibilité réglementaire de l\'Europe mondialement. D\'un côté, les coûts de conformité et les évaluations créent des frictions pour les entreprises européennes — Mistral AI français est plus contraint que les concurrents américains. De l\'autre, l\'effet Bruxelles signifie que le cadre réglementaire de l\'UE devient le standard mondial, donnant aux entreprises basées en UE un avantage compétitif en conformité et à l\'UE un levier sur les géants technologiques US/chinois.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Comment la capacité informatique de l\'Europe se compare-t-elle aux États-Unis et à la Chine?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'L\'Europe accuse un retard important. Les États-Unis dominent la fabrication de GPU (Nvidia ~80 % part de marché) et le silicium personnalisé. La Chine fabrique chez TSMC (Taïwan) et utilise des GPU Nvidia restreints. L\'Europe n\'a pas d\'équivalent : ASML (Pays-Bas) fabrique des équipements mais ne possède pas de fabs. L\'EU Chips Act (43 milliards d\'euros) vise à construire des fabs Intel et TSMC, mais aucune ne sera opérationnelle avant 2027–2029. C\'est la vulnérabilité centrale de l\'Europe : l\'entraînement de modèles frontier nécessite des milliers de GPU pendant des mois. Sans fab nationale, l\'Europe dépend de l\'approvisionnement US (Nvidia) et taïwanais (TSMC).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Quel est l\'avantage de l\'Europe en matière d\'IA au-delà de la réglementation?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'L\'Europe a trois avantages non-réglementaires : (1) Mistral AI et autres modèles open-source financés par l\'UE offrent des alternatives conformes à GDPR sans dépendance US ou chinoise; (2) L\'Europe mène la recherche en sécurité de l\'IA via le UK AI Safety Institute et les centres de recherche français; (3) La main-d\'œuvre éduquée et le talent logiciel/semi-conducteur donnent un avantage en applications IA et silicium personnalisé. Cependant, aucun ne compense le désavantage en capacité des modèles frontier — les États-Unis mènent sur GPT-5.6 et Claude, la Chine sur l\'échelle et le volume. La stratégie de l\'Europe est faire ce que tu sais bien (sécurité, régulation, éthique) plutôt que de concourir sur la capacité brute.',
+            },
+          },
         ],
       },
       gammaEmbedUrl: '/presentations/geopolitics-and-ai-static.html',
@@ -4098,38 +4451,28 @@ export const article: Partial<Record<Language, PEArticle>> = {
           id: 'faq',
           title: 'FAQ : Géopolitique de l\'IA',
           faqs: [
-            {
-              q: 'Pourquoi la géopolitique de l\'IA compte pour moi personnellement ?',
-              a: 'Parce que les règles qui encadrent votre travail en IA dépendent de votre localisation et du contrôle des modèles. Si vous êtes en UE, la conformité est obligatoire. Si vous êtes aux US, moins de contraintes. Si vous êtes en Chine, l\'approbation gouvernementale est requise. Comprendre la géopolitique IA vous aide à anticiper les changements et à planifier votre carrière/entreprise.',
-            },
-            {
-              q: 'Quelle technologie IA dominera en 2030 ?',
-              a: 'Probablement une combinaison : modèles fondamentaux américains (OpenAI, Anthropic) + déploiement rapide chinois (DeepSeek) + régulation européenne (loi IA). Pas de vainqueur unique. La fragmentation technologique est plus probable que la domination d\'un bloc.',
-            },
-            {
-              q: 'Dois-je m\'inquiéter des restrictions chinoises si je travaille en Occident ?',
-              a: 'Seulement si vous utilisez des services cloud chinois (Alibaba, Baidu) ou des modèles chinois. Si vous utilisez OpenAI, Anthropic, ou Google, vous êtes en sécurité. Mais soyez conscient : si vous exportez vers la Chine, les restrictions s\'appliquent.',
-            },
-            {
-              q: 'L\'UE ralentit-elle l\'innovation IA avec sa loi stricte ?',
-              a: 'Peut-être un peu (20-30% plus lent que les États-Unis), mais cela pousse aussi vers une IA plus responsable et plus sûre. Le trade-off : innovation rapide vs conformité + éthique. L\'UE choisit le deuxième. C\'est intentionnel, pas une limitation involontaire.',
-            },
-            {
-              q: 'Pourquoi NVIDIA et TSMC sont-elles si stratégiques ?',
-              a: 'Parce qu\'elles sont les goulots critiques. Sans puces avancées, vous ne pouvez pas entraîner de modèles fondamentaux. NVIDIA conçoit, TSMC fabrique. Contrôler cela = contrôler qui peut faire de l\'IA. C\'est pourquoi les États-Unis soutiennent NVIDIA et Taiwan si fortement.',
-            },
-            {
-              q: 'Que se passe-t-il si la Chine isolée technologiquement ?',
-              a: 'Peut-être une fission technologique complète : "Occident IA" vs "Chine IA". Deux internets IA distincts. Cela serait mauvais pour l\'innovation (moins de collaboration) mais réduirait les tensions géopolitiques. Peu probable mais possible.',
-            },
-            {
-              q: 'Comment Mistral pourrait-elle rivaliser avec OpenAI ?',
-              a: 'Difficile. Mistral a moins de capital, moins de talent, moins de données. Son avantage : soutien gouvernemental français/européen + focus sur l\'indépendance. Elle pourrait dominer en Europe mais sera toujours n°2 ou #3 mondialement.',
-            },
-            {
-              q: 'Qu\'est-ce que le Brussels Effect signifie pour mon entreprise IA ?',
-              a: 'Si vous opérez globalement, vous devez respecter les règles les plus strictes (UE). C\'est plus coûteux mais plus simple que d\'avoir trois stacks différentes. Le Brussels Effect signifie : conformité UE = conformité mondiale pour la plupart des cas.',
-            },
+            { q: 'Pourquoi la géopolitique de l\'IA compte pour moi personnellement ?', a: 'Parce que les règles qui encadrent votre travail en IA dépendent de votre localisation et du contrôle des modèles. Si vous êtes en UE, la conformité est obligatoire. Si vous êtes aux US, moins de contraintes. Si vous êtes en Chine, l\'approbation gouvernementale est requise. Comprendre la géopolitique IA vous aide à anticiper les changements et à planifier votre carrière/entreprise.' },
+            { q: 'Quelle technologie IA dominera en 2030 ?', a: 'Probablement une combinaison : modèles fondamentaux américains (OpenAI, Anthropic) + déploiement rapide chinois (DeepSeek) + régulation européenne (loi IA). Pas de vainqueur unique. La fragmentation technologique est plus probable que la domination d\'un bloc.' },
+            { q: 'Dois-je m\'inquiéter des restrictions chinoises si je travaille en Occident ?', a: 'Seulement si vous utilisez des services cloud chinois (Alibaba, Baidu) ou des modèles chinois. Si vous utilisez OpenAI, Anthropic, ou Google, vous êtes en sécurité. Mais soyez conscient : si vous exportez vers la Chine, les restrictions s\'appliquent.' },
+            { q: 'L\'UE ralentit-elle l\'innovation IA avec sa loi stricte ?', a: 'Peut-être un peu (20-30% plus lent que les États-Unis), mais cela pousse aussi vers une IA plus responsable et plus sûre. Le trade-off : innovation rapide vs conformité + éthique. L\'UE choisit le deuxième. C\'est intentionnel, pas une limitation involontaire.' },
+            { q: 'Pourquoi NVIDIA et TSMC sont-elles si stratégiques ?', a: 'Parce qu\'elles sont les goulots critiques. Sans puces avancées, vous ne pouvez pas entraîner de modèles fondamentaux. NVIDIA conçoit, TSMC fabrique. Contrôler cela = contrôler qui peut faire de l\'IA. C\'est pourquoi les États-Unis soutiennent NVIDIA et Taiwan si fortement.' },
+            { q: 'Que se passe-t-il si la Chine isolée technologiquement ?', a: 'Peut-être une fission technologique complète : "Occident IA" vs "Chine IA". Deux internets IA distincts. Cela serait mauvais pour l\'innovation (moins de collaboration) mais réduirait les tensions géopolitiques. Peu probable mais possible.' },
+            { q: 'Comment Mistral pourrait-elle rivaliser avec OpenAI ?', a: 'Difficile. Mistral a moins de capital, moins de talent, moins de données. Son avantage : soutien gouvernemental français/européen + focus sur l\'indépendance. Elle pourrait dominer en Europe mais sera toujours n°2 ou #3 mondialement.' },
+            { q: 'Qu\'est-ce que le Brussels Effect signifie pour mon entreprise IA ?', a: 'Si vous opérez globalement, vous devez respecter les règles les plus strictes (UE). C\'est plus coûteux mais plus simple que d\'avoir trois stacks différentes. Le Brussels Effect signifie : conformité UE = conformité mondiale pour la plupart des cas.' },
+            { q: 'La loi IA de l\'UE s\'applique-t-elle aux entreprises hors UE ?', a: 'Oui. La loi IA de l\'UE s\'applique a toute organisation qui commercialise des systemes d\'IA dans l\'UE ou dont les resultats d\'IA sont utilises dans l\'UE, independamment du siege de l\'organisation. Cette portee extraterritoriale, appelee effet Bruxelles, oblige les fournisseurs americains et asiatiques a se conformer s\'ils servent des utilisateurs europeens.' },
+            { q: 'Quelles sont les amendes en cas de violation de la loi IA de l\'UE ?', a: 'Les amendes atteignent jusqu\'a 35 millions d\'euros ou 7 % du chiffre d\'affaires mondial annuel pour les pratiques d\'IA interdites. Les violations liees a l\'IA a haut risque entrainent des amendes jusqu\'a 15 millions d\'euros ou 3 % du chiffre d\'affaires. Les informations incorrectes transmises aux autorites coutent jusqu\'a 7,5 millions d\'euros ou 1 % du chiffre d\'affaires.' },
+            { q: 'Quelles applications d\'IA l\'UE interdit-elle formellement ?', a: 'La loi IA de l\'UE interdit : les systemes de notation sociale par les autorites publiques, la surveillance biometrique en temps reel dans les espaces publics (avec exceptions etroites), les IA exploitant des vulnerabilites cognitives, et la collecte non ciblee d\'images faciales sur internet pour creer des bases de donnees de reconnaissance.' },
+            { q: 'En quoi la reglementation americaine de l\'IA differe-t-elle de l\'approche europeenne ?', a: 'Les Etats-Unis adoptent une approche sectorielle et volontaire — les regulateurs existants (FTC, FDA, CFPB, EEOC) appliquent leurs mandats a l\'IA dans leurs domaines. Il n\'existe pas de loi federale sur l\'IA equivalente a la loi UE. Le decret Biden sur la securite de l\'IA (octobre 2023) a ete revoque par l\'administration Trump en janvier 2025.' },
+            { q: 'L\'IA chinoise est-elle aussi avancee que l\'IA americaine ?', a: 'DeepSeek R1 (janvier 2025) a egale GPT-5.6 sur plusieurs benchmarks (AIME 2024, MATH-500, HumanEval) tout en se formant apparemment a une fraction du cout. Les modeles chinois de pointe — Qwen d\'Alibaba et ERNIE de Baidu — sont competitifs sur de nombreuses taches mais restent en retrait sur le raisonnement multilingue et les benchmarks de securite.' },
+            { q: 'Les entreprises europeennes peuvent-elles utiliser GPT-5.6 et Claude sous la loi IA ?', a: 'Oui, pour la plupart des applications professionnelles. GPT-5.6 et Claude sont classifies comme IA a usage general (GPAI). Les entreprises europeennes doivent cependant assumer leurs propres obligations de diligence, notamment pour les applications a haut risque comme les decisions RH, l\'octroi de credit ou les infrastructures critiques.' },
+            { q: 'Qu\'est-ce que l\'UK AI Safety Institute (AISI) ?', a: 'L\'AISI a ete cree en novembre 2023 comme premiere agence gouvernementale de securite IA au monde. Il effectue des tests pre-deploiement sur les modeles frontier, a signe des memorandums avec OpenAI, Anthropic, Google DeepMind et Meta, et coordonne les standards de securite internationaux.' },
+            { q: 'Comment DeepSeek modifie-t-il la geopolitique de l\'IA ?', a: 'DeepSeek R1 a prouve que des capacites IA frontier sont atteignables avec beaucoup moins de puissance de calcul, et que les controles a l\'exportation des puces Nvidia seuls sont insuffisants. Ces resultats ont pousse les legislateurs americains a reexaminer la politique d\'exportation de puces et accelere les investissements europeens dans des infrastructures IA souveraines.' },
+            { q: 'Qu\'est-ce que l\'effet Bruxelles dans l\'IA ?', a: 'L\'effet Bruxelles decrit le phenomene par lequel la reglementation de l\'UE devient de facto un standard mondial, car les entreprises globales adaptent leurs produits aux regles europeennes plutot que de maintenir des versions multiples. Pour l\'IA, cela signifie que la loi IA de l\'UE cree des obligations de conformite pour les fournisseurs americains et asiatiques qui servent des utilisateurs europeens.' },
+            { q: 'Qu\'est-ce que le processus IA d\'Hiroshima ?', a: 'Le processus IA d\'Hiroshima a ete lance lors du sommet du G7 en 2023 et a developpe des principes directeurs internationaux pour l\'IA frontier. Il a abouti au code de conduite IA du G7 — un cadre volontaire pour les fournisseurs de systemes IA avances, avec des engagements sur les tests de securite, la transparence et la gestion des risques.' },
+            { q: 'Les organisations europeennes peuvent-elles utiliser DeepSeek pour des usages commerciaux ?', a: 'Avec prudence. DeepSeek est soumis au droit chinois, qui permet l\'acces des autorites chinoises aux donnees. Les preoccupations ont conduit l\'Italie, l\'Irlande et l\'Allemagne a saisir leurs autorites de protection des donnees. Pour les applications d\'entreprise, les versions open source (DeepSeek R1 en local) ou les fournisseurs bases dans l\'UE sont les options les plus conformes au RGPD.' },
+            { q: 'L\'EU AI Act aide-t-il ou nuit-il à la compétitivité de l\'IA en Europe?', a: 'C\'est un dilemme stratégique réel : l\'EU AI Act peut ralentir les startups IA européennes mais renforce la crédibilité réglementaire de l\'Europe mondialement. D\'un côté, les coûts de conformité et les évaluations créent des frictions pour les entreprises européennes — Mistral AI français est plus contraint que les concurrents américains. De l\'autre, l\'effet Bruxelles signifie que le cadre réglementaire de l\'UE devient le standard mondial, donnant aux entreprises basées en UE un avantage compétitif en conformité et à l\'UE un levier sur les géants technologiques US/chinois.' },
+            { q: 'Comment la capacité informatique de l\'Europe se compare-t-elle aux États-Unis et à la Chine?', a: 'L\'Europe accuse un retard important. Les États-Unis dominent la fabrication de GPU (Nvidia ~80 % part de marché) et le silicium personnalisé. La Chine fabrique chez TSMC (Taïwan) et utilise des GPU Nvidia restreints. L\'Europe n\'a pas d\'équivalent : ASML (Pays-Bas) fabrique des équipements mais ne possède pas de fabs. L\'EU Chips Act (43 milliards d\'euros) vise à construire des fabs Intel et TSMC, mais aucune ne sera opérationnelle avant 2027–2029. C\'est la vulnérabilité centrale de l\'Europe : l\'entraînement de modèles frontier nécessite des milliers de GPU pendant des mois. Sans fab nationale, l\'Europe dépend de l\'approvisionnement US (Nvidia) et taïwanais (TSMC).' },
+            { q: 'Quel est l\'avantage de l\'Europe en matière d\'IA au-delà de la réglementation?', a: 'L\'Europe a trois avantages non-réglementaires : (1) Mistral AI et autres modèles open-source financés par l\'UE offrent des alternatives conformes à GDPR sans dépendance US ou chinoise; (2) L\'Europe mène la recherche en sécurité de l\'IA via le UK AI Safety Institute et les centres de recherche français; (3) La main-d\'œuvre éduquée et le talent logiciel/semi-conducteur donnent un avantage en applications IA et silicium personnalisé. Cependant, aucun ne compense le désavantage en capacité des modèles frontier — les États-Unis mènent sur GPT-5.6 et Claude, la Chine sur l\'échelle et le volume. La stratégie de l\'Europe est faire ce que tu sais bien (sécurité, régulation, éthique) plutôt que de concourir sur la capacité brute.' },
           ],
         },
 

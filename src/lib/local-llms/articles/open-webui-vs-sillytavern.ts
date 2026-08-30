@@ -152,6 +152,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: 'Can I import SillyTavern characters into Open WebUI?', a: 'No. Different formats. SillyTavern uses character cards; Open WebUI uses system prompts.' },
             { q: 'Which one should a beginner start with?', a: 'Open WebUI. Simpler, cleaner, less overwhelming. SillyTavern if you like character-building.' },
             { q: 'Can I run both simultaneously?', a: 'Yes, on different ports. E.g., Ollama on 11434, Open WebUI on 3000, SillyTavern on 3001.' },
+            { q: 'Can I run Open WebUI and SillyTavern simultaneously?', a: 'Yes. Run them on different ports sharing the same Ollama backend. Example: Ollama on 11434, Open WebUI on 3000, SillyTavern on 8000. Both can query the same Ollama instance simultaneously.' },
           ],
         },
         'relatedReading': {
@@ -198,12 +199,70 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'mainEntity': [
-          { '@type': 'Question', 'name': 'Should I use Open WebUI or SillyTavern?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Open WebUI for work, research, and team deployment (built-in multi-user, professional interface, Docker). SillyTavern for creative writing and character roleplay (character cards, lorebooks, group chat, voice integration). Both connect to the same inference backends (Ollama, vLLM, llama.cpp) so speed is comparable.' } },
-          { '@type': 'Question', 'name': 'Can I use SillyTavern for team chat?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'No. SillyTavern is single-user by design — conversations overwrite each other when shared. For teams, use Open WebUI which has built-in multi-user support, per-user conversation history, and API key management.' } },
-          { '@type': 'Question', 'name': 'Is Open WebUI faster than SillyTavern?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'No meaningful difference. Both are UI layers on top of Ollama, vLLM, or llama.cpp. The inference backend is the bottleneck, not the frontend. Open WebUI uses Python FastAPI + Svelte; SillyTavern uses Node.js + browser.' } },
-          { '@type': 'Question', 'name': 'Can I import SillyTavern character cards into Open WebUI?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'No. SillyTavern uses TavernAI JSON character cards storing personality, appearance, and speech patterns. Open WebUI uses simple system prompts. Conversion is lossy — maintain both tools for their respective use cases.' } },
-          { '@type': 'Question', 'name': 'Which should a beginner start with?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Open WebUI. Simpler installation (Docker), cleaner interface, less configuration required. SillyTavern suits users who already know they want character-driven roleplay.' } },
-          { '@type': 'Question', 'name': 'Can I run Open WebUI and SillyTavern simultaneously?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes. Run them on different ports sharing the same Ollama backend. Example: Ollama on 11434, Open WebUI on 3000, SillyTavern on 8000. Both can query the same Ollama instance simultaneously.' } },
+          {
+            '@type': 'Question',
+            'name': 'What is the best backend for SillyTavern?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': "There isn't a single best one — SillyTavern connects equally well to Ollama, vLLM, or llama.cpp, and the choice depends on your setup, not SillyTavern itself. Ollama is the simplest to install and manage day-to-day. vLLM gives the highest throughput if you're running multiple chats or characters concurrently. Raw llama.cpp offers the most manual control over quantization and runtime flags. For most roleplay users starting out, Ollama is the lowest-friction choice.",
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Should I use Open WebUI or SillyTavern?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Open WebUI for work/research. SillyTavern for creative writing/roleplay. Different tools, different jobs.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I use SillyTavern for team chat?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Not easily. Single-user design. For teams, use Open WebUI (built-in multi-user).',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Is one faster than the other?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No. Both are UI layer on top of Ollama/vLLM. Backend speed is comparable.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I import SillyTavern characters into Open WebUI?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'No. Different formats. SillyTavern uses character cards; Open WebUI uses system prompts.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Which one should a beginner start with?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Open WebUI. Simpler, cleaner, less overwhelming. SillyTavern if you like character-building.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I run both simultaneously?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes, on different ports. E.g., Ollama on 11434, Open WebUI on 3000, SillyTavern on 3001.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Can I run Open WebUI and SillyTavern simultaneously?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Yes. Run them on different ports sharing the same Ollama backend. Example: Ollama on 11434, Open WebUI on 3000, SillyTavern on 8000. Both can query the same Ollama instance simultaneously.',
+            },
+          },
         ],
       },
       itemListSchema: {
@@ -622,34 +681,13 @@ schema: {
           id: 'faq',
           title: 'Questions fréquemment posées',
           faqs: [
-            {
-              q: 'Quel est le meilleur backend pour SillyTavern ?',
-              a: "Il n'y a pas de backend unique idéal — SillyTavern se connecte tout aussi bien à Ollama, vLLM ou llama.cpp, et le choix dépend de votre installation, pas de SillyTavern lui-même. Ollama est le plus simple à installer et à gérer au quotidien. vLLM offre le débit le plus élevé si vous exécutez plusieurs discussions ou personnages simultanément. llama.cpp brut offre le plus de contrôle manuel sur la quantification et les options d'exécution. Pour la plupart des débutants en jeu de rôle, Ollama est le choix le plus simple.",
-            },
-            {
-              q: 'Dois-je utiliser Open WebUI ou SillyTavern ?',
-              a: 'Open WebUI pour le travail, la recherche et le déploiement en équipe (multi-utilisateur intégré, interface professionnelle, Docker). SillyTavern pour l\'écriture créative et le roleplay (fiches de personnages, lorebooks, chat de groupe, intégration vocale). Les deux utilisent les mêmes backends (Ollama, vLLM, llama.cpp), la vitesse est donc comparable.',
-            },
-            {
-              q: 'Puis-je utiliser SillyTavern pour le chat d\'équipe ?',
-              a: 'Non. SillyTavern est mono-utilisateur par conception — les conversations s\'écrasent en cas d\'utilisation partagée. Pour les équipes, utilisez Open WebUI avec support multi-utilisateur intégré, historiques par utilisateur et gestion des clés API.',
-            },
-            {
-              q: 'Open WebUI est-il plus rapide que SillyTavern ?',
-              a: 'Aucune différence significative. Les deux sont des couches d\'interface sur Ollama, vLLM ou llama.cpp. Le backend d\'inférence est le goulot d\'étranglement, pas le frontend. Open WebUI utilise Python FastAPI + Svelte ; SillyTavern utilise Node.js + navigateur.',
-            },
-            {
-              q: 'Puis-je importer des fiches de personnages SillyTavern dans Open WebUI ?',
-              a: 'Non. SillyTavern utilise des fiches JSON TavernAI stockant personnalité, apparence et style de langage. Open WebUI utilise de simples system prompts. La conversion est avec perte — utilisez les deux outils pour leurs usages respectifs.',
-            },
-            {
-              q: 'Par lequel un débutant doit-il commencer ?',
-              a: 'Open WebUI. Installation plus simple (Docker), interface plus épurée, moins de configuration requise. SillyTavern convient aux utilisateurs qui savent déjà qu\'ils ont besoin de roleplay de personnages.',
-            },
-            {
-              q: 'Puis-je faire fonctionner Open WebUI et SillyTavern simultanément ?',
-              a: 'Oui. Faites-les tourner sur des ports différents en partageant le même backend Ollama. Exemple : Ollama sur 11434, Open WebUI sur 3000, SillyTavern sur 8000. Les deux peuvent interroger le même service Ollama simultanément.',
-            },
+            { q: 'Quel est le meilleur backend pour SillyTavern ?', a: "Il n'y a pas de backend unique idéal — SillyTavern se connecte tout aussi bien à Ollama, vLLM ou llama.cpp, et le choix dépend de votre installation, pas de SillyTavern lui-même. Ollama est le plus simple à installer et à gérer au quotidien. vLLM offre le débit le plus élevé si vous exécutez plusieurs discussions ou personnages simultanément. llama.cpp brut offre le plus de contrôle manuel sur la quantification et les options d'exécution. Pour la plupart des débutants en jeu de rôle, Ollama est le choix le plus simple." },
+            { q: 'Dois-je utiliser Open WebUI ou SillyTavern ?', a: 'Open WebUI pour le travail, la recherche et le déploiement en équipe (multi-utilisateur intégré, interface professionnelle, Docker). SillyTavern pour l\'écriture créative et le roleplay (fiches de personnages, lorebooks, chat de groupe, intégration vocale). Les deux utilisent les mêmes backends (Ollama, vLLM, llama.cpp), la vitesse est donc comparable.' },
+            { q: 'Puis-je utiliser SillyTavern pour le chat d\'équipe ?', a: 'Non. SillyTavern est mono-utilisateur par conception — les conversations s\'écrasent en cas d\'utilisation partagée. Pour les équipes, utilisez Open WebUI avec support multi-utilisateur intégré, historiques par utilisateur et gestion des clés API.' },
+            { q: 'Open WebUI est-il plus rapide que SillyTavern ?', a: 'Aucune différence significative. Les deux sont des couches d\'interface sur Ollama, vLLM ou llama.cpp. Le backend d\'inférence est le goulot d\'étranglement, pas le frontend. Open WebUI utilise Python FastAPI + Svelte ; SillyTavern utilise Node.js + navigateur.' },
+            { q: 'Puis-je importer des fiches de personnages SillyTavern dans Open WebUI ?', a: 'Non. SillyTavern utilise des fiches JSON TavernAI stockant personnalité, apparence et style de langage. Open WebUI utilise de simples system prompts. La conversion est avec perte — utilisez les deux outils pour leurs usages respectifs.' },
+            { q: 'Par lequel un débutant doit-il commencer ?', a: 'Open WebUI. Installation plus simple (Docker), interface plus épurée, moins de configuration requise. SillyTavern convient aux utilisateurs qui savent déjà qu\'ils ont besoin de roleplay de personnages.' },
+            { q: 'Puis-je faire fonctionner Open WebUI et SillyTavern simultanément ?', a: 'Oui. Faites-les tourner sur des ports différents en partageant le même backend Ollama. Exemple : Ollama sur 11434, Open WebUI sur 3000, SillyTavern sur 8000. Les deux peuvent interroger le même service Ollama simultanément.' },
           ],
         },
         relatedReading: {
@@ -696,12 +734,62 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'mainEntity': [
-          { '@type': 'Question', 'name': 'Dois-je utiliser Open WebUI ou SillyTavern ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Open WebUI pour le travail, la recherche et le déploiement en équipe (multi-utilisateur, interface professionnelle, Docker). SillyTavern pour l\'écriture créative et le roleplay (fiches, lorebooks, chat de groupe). Les deux utilisent les mêmes backends (Ollama, vLLM, llama.cpp).' } },
-          { '@type': 'Question', 'name': 'Puis-je utiliser SillyTavern pour le chat d\'équipe ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Non. SillyTavern est mono-utilisateur. Pour les équipes, utilisez Open WebUI avec support multi-utilisateur intégré, historiques par utilisateur et gestion des clés API.' } },
-          { '@type': 'Question', 'name': 'Open WebUI est-il plus rapide que SillyTavern ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Aucune différence significative. Le backend d\'inférence est le goulot d\'étranglement, pas le frontend. Open WebUI utilise Python FastAPI + Svelte ; SillyTavern Node.js + navigateur.' } },
-          { '@type': 'Question', 'name': 'Puis-je importer des fiches SillyTavern dans Open WebUI ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Non. SillyTavern utilise des fiches JSON TavernAI. Open WebUI utilise de simples system prompts. La conversion est avec perte — utilisez les deux outils pour leurs usages respectifs.' } },
-          { '@type': 'Question', 'name': 'Par lequel un débutant doit-il commencer ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Open WebUI. Installation plus simple (Docker), interface plus épurée, moins de configuration. SillyTavern convient aux utilisateurs qui ont besoin de roleplay de personnages.' } },
-          { '@type': 'Question', 'name': 'Puis-je faire fonctionner les deux simultanément ?', 'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui. Sur des ports différents avec le même backend Ollama. Exemple : Ollama sur 11434, Open WebUI sur 3000, SillyTavern sur 8000.' } },
+          {
+            '@type': 'Question',
+            'name': 'Quel est le meilleur backend pour SillyTavern ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': "Il n'y a pas de backend unique idéal — SillyTavern se connecte tout aussi bien à Ollama, vLLM ou llama.cpp, et le choix dépend de votre installation, pas de SillyTavern lui-même. Ollama est le plus simple à installer et à gérer au quotidien. vLLM offre le débit le plus élevé si vous exécutez plusieurs discussions ou personnages simultanément. llama.cpp brut offre le plus de contrôle manuel sur la quantification et les options d'exécution. Pour la plupart des débutants en jeu de rôle, Ollama est le choix le plus simple.",
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Dois-je utiliser Open WebUI ou SillyTavern ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Open WebUI pour le travail, la recherche et le déploiement en équipe (multi-utilisateur intégré, interface professionnelle, Docker). SillyTavern pour l\'écriture créative et le roleplay (fiches de personnages, lorebooks, chat de groupe, intégration vocale). Les deux utilisent les mêmes backends (Ollama, vLLM, llama.cpp), la vitesse est donc comparable.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Puis-je utiliser SillyTavern pour le chat d\'équipe ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Non. SillyTavern est mono-utilisateur par conception — les conversations s\'écrasent en cas d\'utilisation partagée. Pour les équipes, utilisez Open WebUI avec support multi-utilisateur intégré, historiques par utilisateur et gestion des clés API.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Open WebUI est-il plus rapide que SillyTavern ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Aucune différence significative. Les deux sont des couches d\'interface sur Ollama, vLLM ou llama.cpp. Le backend d\'inférence est le goulot d\'étranglement, pas le frontend. Open WebUI utilise Python FastAPI + Svelte ; SillyTavern utilise Node.js + navigateur.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Puis-je importer des fiches de personnages SillyTavern dans Open WebUI ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Non. SillyTavern utilise des fiches JSON TavernAI stockant personnalité, apparence et style de langage. Open WebUI utilise de simples system prompts. La conversion est avec perte — utilisez les deux outils pour leurs usages respectifs.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Par lequel un débutant doit-il commencer ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Open WebUI. Installation plus simple (Docker), interface plus épurée, moins de configuration requise. SillyTavern convient aux utilisateurs qui savent déjà qu\'ils ont besoin de roleplay de personnages.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Puis-je faire fonctionner Open WebUI et SillyTavern simultanément ?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Oui. Faites-les tourner sur des ports différents en partageant le même backend Ollama. Exemple : Ollama sur 11434, Open WebUI sur 3000, SillyTavern sur 8000. Les deux peuvent interroger le même service Ollama simultanément.',
+            },
+          },
         ],
       },
       itemListSchema: {

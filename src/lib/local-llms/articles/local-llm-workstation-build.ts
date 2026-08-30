@@ -2618,6 +2618,7 @@ schema: {
       primaryTerm: 'estação de trabalho LLM local',
       toc: [
         { label: 'Pontos principais', anchor: '#tldr' },
+        { label: 'Perguntas frequentes', anchor: 'faq' },
       ],
       schema: {
         '@context': 'https://schema.org',
@@ -2643,6 +2644,17 @@ schema: {
             'Alternativa Apple: Mac Studio M5 Max ($2.499, até 128GB de memória unificada) ou Mac Studio M5 Ultra ($5.499, até 512GB), disponível a partir de 22 de setembro de 2026 (configuração de 512GB em outubro de 2026). Mais silencioso, menor consumo de energia, sem necessidade de montar um PC — em troca de menor throughput multiusuário.',
             'Fonte mínima: 1.200W para RTX 4090 única. 2.000W+ para dual RTX 4090.',
             'Refrigeração: AIO 360 mm ou circuito personalizado para inferência 70B sustentada.',
+          ],
+        },
+        faqSection: {
+          id: 'faq',
+          title: 'Perguntas frequentes',
+          faqs: [
+            { q: 'Um Threadripper é necessário, ou posso usar um Ryzen 9?', a: 'Apenas para inferência: o Ryzen 9 funciona bem. Para inferência + fine-tuning paralelo: os núcleos extras do Threadripper (32 vs. 16) são essenciais.' },
+            { q: 'Devo usar NVLink para fundir as duas 4090?', a: 'Opcional. Pule se estiver rodando modelos separados em cada GPU (7B + 70B). Use se estiver distribuindo um único 70B entre as duas GPUs para batches maiores.' },
+            { q: 'Quantos usuários simultâneos uma configuração dual-4090 suporta?', a: 'Para 70B: 2–3 usuários (14 tok/s cada). Para 7B: 8+ usuários (30+ tok/s cada).' },
+            { q: 'Posso migrar para uma RTX 5090 em vez de dual 4090?', a: 'RTX 5090 única: desempenho semelhante ao dual 4090, metade da VRAM (24 GB vs. 48 GB), $1.999. Dual 5090: $4.000 (exagero, pior custo-benefício).' },
+            { q: 'Qual o ROI de uma estação de $5.000 vs. API de LLM na nuvem?', a: 'Nuvem: $0,001 por 1K tokens. Estação: $5.000 amortizados em 2 anos = $2.500/ano, ~$0,000001 por token. Ponto de equilíbrio em 2,5 bilhões de tokens/ano (uso leve).' },
           ],
         },
       },
