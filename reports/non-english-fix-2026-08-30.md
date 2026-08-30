@@ -20,6 +20,7 @@ every page.
 | 4 | `/zh/local-llms/local-llm-hardware-guide-2026` | 10/10 | 10/10 | 0 | **E** | 0 / 109 / 0% / 8.7 |
 | 5 | `/de/smart-home/best-mini-pc-home-assistant-local-ai` | 9/10 | **10/10** | **+1** | A | 235 / 6,517 / 3.6% / 6.3 |
 | 6 | `/de/local-llms/llm-quantization-explained` | 7/10 | **10/10** | **+3** | C | 48 / 2,415 / 2.0% / 3.7 |
+| 7 | `/zh/power-local-llm/best-gpu-buying-guide-local-llm-2026` | 6/10 | **10/10** | **+4** | C | 46 / 4,930 / 0.9% / 5.3 |
 
 ## Page 1 — /ja/power-local-llm/uncensored-local-llm-creative-writing-ethics
 
@@ -418,3 +419,54 @@ rendering change in every locale.
 Traditional-only characters), but bare `zh` reads as generic Chinese to Google — which
 mis-serves the Traditional TW/HK audience that makes up most Chinese-language Google traffic.
 Affects every Chinese URL via `toOutputLocale()`.
+
+## Page 7 — /zh/power-local-llm/best-gpu-buying-guide-local-llm-2026
+
+**6/10 → 10/10.** Red before: #1, #4, #6, #7.
+
+### What the Chinese queries actually want
+
+Every listed query has **zero clicks**. The pattern is unusually consistent:
+
+- **价格 (price) appears in ~15 of 17 queries** — and was **not in the title**
+- **中国 (China) in 6 queries**, **二手 (used/second-hand) in 4**, **京东 (JD.com) in 1**
+- **RTX 4090 in 7 queries** — the most-searched model, also absent from the title
+- `rtx 5090 ti` (6 impr) had **zero** body coverage
+- One query is Traditional (`哪款 gpu 最適合專業內容創作工作流程？`)
+
+### Fixed
+
+- Title → `本地大模型显卡价格 2026：RTX 4090/5090 选购` (31 chars). Adds 价格 and 4090.
+- Meta → answer-first, stale `2026 年 7 月价格` removed, adds 二手行情.
+- FAQs **8 → 11**: China-market price differences (京东/天猫/闲鱼), whether a used RTX 4090 is
+  worth buying, and RTX 5090 Ti. 二手 now 51 mentions, 京东 3, 闲鱼 2.
+- **Stale July stripped from 5 more locales' metas** (en, ja, pt, ar, ko — 7 strings total).
+  de/fr/es were already clean. Same locale-drift shape as page 4.
+
+### ⚠️ NOT fixed — USD prices on four localized buying guides
+
+This is the significant finding and it needs a decision, not a patch.
+
+`feedback_affiliate_localization` says: localize buying pages per market with **real local prices
+and local retailers — never USD-convert**. Currency audit of this file:
+
+| Locale | `$` | local currency | local retailers | verdict |
+|---|---|---|---|---|
+| de | 4 | **32 €** | 20 hits | localized ✓ |
+| fr | 4 | **38 €** | 4 hits | localized ✓ |
+| ja | 0 | **38 ¥** | 4 hits | localized ✓ |
+| **zh** | **70** | 0 ¥ | 1 hit | **raw USD** ❌ |
+| **es** | **76** | 0 € | 2 hits | **raw USD** ❌ |
+| **pt** | **76** | 0 R$ | 2 hits | **raw USD** ❌ |
+| **ko** | **74** | 0 ₩ | 2 hits | **raw USD** ❌ |
+
+**de, fr and ja got real price localization. zh, es, pt and ko did not** — they carry the English
+page's USD figures on a buying guide, which is exactly what the rule forbids.
+
+I did not fix this, because doing it correctly means sourcing **real** CNY / EUR / BRL / KRW
+street prices per market, and the rule explicitly bans deriving them by converting USD. Inventing
+them would be worse than leaving them. The zh FAQ I added is an honest interim: it tells the
+reader the listed figures are international reference prices and points them at 京东/天猫 for
+current listings and 闲鱼 for used — without fabricating numbers.
+
+**This affects the whole affiliate surface, not just this page.** Needs a per-market pricing pass.
