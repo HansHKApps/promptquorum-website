@@ -3960,7 +3960,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Tools & Interfaces',
     title: 'CodeRabbit·Greptile·Qodo 비교: 2026년 AI 코드 리뷰',
     seoTitle: '2026년 최고의 AI 코드 리뷰 도구 비교',
-    metaDescription: 'CodeRabbit은 사용자당 월 24달러이며 공개 저장소는 무료, Greptile은 50크레딧, Qodo는 월 30달러 크레딧제. 2026년 8월 확인된 가격.',
+    metaDescription: 'CodeRabbit은 사용자당 월 24달러이며 공개 저장소는 무료, Greptile은 50크레딧, Qodo는 월 30달러 크레딧제. 확인된 가격.',
     educationalLevel: 'Advanced',
     audience: '풀 리퀘스트 리뷰를 자동화하려는 엔지니어링 팀',
     affiliateDisclosure: true,

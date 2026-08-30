@@ -574,7 +574,7 @@ export const article: Partial<Record<Language, PromptBiteArticle>> = {
     heroImage: '/images/cloud-gpu-cost-per-hour-overview-hero-zh.webp',
     title: '2026年云GPU每小时多少钱？',
     seoTitle: '云GPU每小时价格 2026 | Prompt Bites',
-    metaDescription: '云GPU每小时价格(2026年7月):RTX 4090 ~$0.30-0.80,A100 80 GB ~$0.90-2.00,H100 ~$2.50-4.00。主要提供商概算区间。',
+    metaDescription: '云GPU每小时价格:RTX 4090 ~$0.30-0.80,A100 80 GB ~$0.90-2.00,H100 ~$2.50-4.00。主要提供商概算区间。',
     publishDate: '2026-05-22',
     dateModified: '2026-07-02',
     freshness_tier: 'semi_annual',

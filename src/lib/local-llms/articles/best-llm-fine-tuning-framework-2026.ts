@@ -4288,7 +4288,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Tools & Interfaces',
     title: '2026년 최고의 LLM 파인튜닝 프레임워크: Unsloth, Axolotl, 클라우드',
     seoTitle: '2026년 최고의 LLM 파인튜닝 프레임워크',
-    metaDescription: 'Unsloth는 Apache-2.0으로 무료이며 멀티 GPU를 포함하고, Axolotl은 멀티노드 학습을 더하며, Together.ai는 100만 토큰당 0.48달러입니다. 2026년 8월 확인된 가격.',
+    metaDescription: 'Unsloth는 Apache-2.0으로 무료이며 멀티 GPU를 포함하고, Axolotl은 멀티노드 학습을 더하며, Together.ai는 100만 토큰당 0.48달러입니다. 확인된 가격.',
     educationalLevel: 'Advanced',
     audience: 'LLM을 파인튜닝하는 ML 엔지니어와 개발자',
     affiliateDisclosure: true,

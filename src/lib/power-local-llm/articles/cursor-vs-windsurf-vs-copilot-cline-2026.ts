@@ -343,7 +343,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Cursor, Windsurf, GitHub Copilot und Cline verfügen alle über einen "Agentenmodus", der mehrere Dateien bearbeitet und Terminalbefehle in Ihrem Auftrag ausführt — sie unterscheiden sich jedoch bei Preis, Modellzugriff und dem Umgang mit Ihrem Code. Dieser Leitfaden vergleicht die vier Tools anhand der Kriterien, die eine echte Kaufentscheidung bestimmen: agentische Fähigkeiten, Preise (im August 2026 direkt auf den Preisseiten der Anbieter verifiziert), Modellflexibilität und IDE-Unterstützung.',
     metaDescription:
-      'Cursor vs. Windsurf vs. GitHub Copilot vs. Cline im Vergleich: Agentenmodus, Preise und Modellzugriff. Preisstand August 2026, direkt bei jedem Anbieter verifiziert.',
+      'Cursor vs. Windsurf vs. GitHub Copilot vs. Cline im Vergleich: Agentenmodus, Preise und Modellzugriff. Preise direkt bei jedem Anbieter verifiziert.',
     publishDate: '2026-08-27',
     dateModified: '2026-08-27',
     readTime: '12 Min. Lesezeit',
@@ -588,7 +588,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       'headline': 'Bester agentischer KI-Coding-Assistent 2026: Cursor vs. Windsurf vs. GitHub Copilot vs. Cline',
-      'description': 'Cursor vs. Windsurf vs. GitHub Copilot vs. Cline im Vergleich: Agentenmodus, Preise und Modellzugriff. Preisstand August 2026, direkt bei jedem Anbieter verifiziert.',
+      'description': 'Cursor vs. Windsurf vs. GitHub Copilot vs. Cline im Vergleich: Agentenmodus, Preise und Modellzugriff. Preise direkt bei jedem Anbieter verifiziert.',
       'image': 'https://www.promptquorum.com/images/cursor-vs-windsurf-vs-copilot-cline-2026-hero-de.webp',
       'datePublished': '2026-08-27',
       'dateModified': '2026-08-27',
@@ -1201,7 +1201,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Cursor、Windsurf、GitHub Copilot、Clineはいずれも複数ファイルを編集しターミナルコマンドを代行実行する「エージェントモード」を備えていますが、価格・モデルアクセス・コードの送信先が異なります。本ガイドは、実際の購入判断を左右する基準——エージェント能力、価格（2026年8月に各社公式価格ページで検証）、モデルの柔軟性、IDE対応——で4製品を比較します。',
     metaDescription:
-      'Cursor対Windsurf対GitHub Copilot対Clineをエージェントモード・価格・モデルアクセスで比較。2026年8月時点の価格を各社公式サイトで検証済み。',
+      'Cursor対Windsurf対GitHub Copilot対Clineをエージェントモード・価格・モデルアクセスで比較。価格は各社公式サイトで検証済み。',
     publishDate: '2026-08-27',
     dateModified: '2026-08-27',
     readTime: '12分で読める',
@@ -1446,7 +1446,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       'headline': '2026年ベストのエージェント型AIコーディングアシスタント：Cursor対Windsurf対GitHub Copilot対Cline',
-      'description': 'Cursor対Windsurf対GitHub Copilot対Clineをエージェントモード・価格・モデルアクセスで比較。2026年8月時点の価格を各社公式サイトで検証済み。',
+      'description': 'Cursor対Windsurf対GitHub Copilot対Clineをエージェントモード・価格・モデルアクセスで比較。価格は各社公式サイトで検証済み。',
       'image': 'https://www.promptquorum.com/images/cursor-vs-windsurf-vs-copilot-cline-2026-hero-ja.webp',
       'datePublished': '2026-08-27',
       'dateModified': '2026-08-27',
@@ -2345,7 +2345,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Cursor, Windsurf, GitHub Copilot, Cline은 모두 여러 파일을 수정하고 터미널 명령을 대신 실행하는 "에이전트 모드"를 제공하지만, 가격, 모델 접근성, 코드가 어디로 전송되는지가 서로 다릅니다. 이 가이드는 실제 구매 결정을 좌우하는 기준 — 에이전트 능력, 가격(2026년 8월 각 공급업체 공식 가격 페이지에서 확인), 모델 유연성, IDE 지원 — 으로 네 도구를 비교합니다.',
     metaDescription:
-      'Cursor vs Windsurf vs GitHub Copilot vs Cline을 에이전트 모드, 가격, 모델 접근성 기준으로 비교. 2026년 8월 가격은 각 공식 사이트에서 확인했습니다.',
+      'Cursor vs Windsurf vs GitHub Copilot vs Cline을 에이전트 모드, 가격, 모델 접근성 기준으로 비교. 가격은 각 공식 사이트에서 확인했습니다.',
     publishDate: '2026-08-27',
     dateModified: '2026-08-27',
     readTime: '12분 읽기',
@@ -2590,7 +2590,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       '@context': 'https://schema.org',
       '@type': 'TechArticle',
       'headline': '2026년 최고의 에이전틱 AI 코딩 어시스턴트: Cursor vs Windsurf vs GitHub Copilot vs Cline',
-      'description': 'Cursor vs Windsurf vs GitHub Copilot vs Cline을 에이전트 모드, 가격, 모델 접근성 기준으로 비교. 2026년 8월 가격은 각 공식 사이트에서 확인했습니다.',
+      'description': 'Cursor vs Windsurf vs GitHub Copilot vs Cline을 에이전트 모드, 가격, 모델 접근성 기준으로 비교. 가격은 각 공식 사이트에서 확인했습니다.',
       'image': 'https://www.promptquorum.com/images/cursor-vs-windsurf-vs-copilot-cline-2026-hero-ko.webp',
       'datePublished': '2026-08-27',
       'dateModified': '2026-08-27',

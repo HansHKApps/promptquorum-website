@@ -4080,7 +4080,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     theme: 'Tools & Interfaces',
     title: '2026년 최고의 LLM 평가 도구: Braintrust, Weave, Promptfoo',
     seoTitle: '2026년 최고의 LLM 평가 도구',
-    metaDescription: 'Braintrust는 월 1만 건 채점까지 무료이고 Pro가 249달러, Weave는 60달러부터, Promptfoo는 MIT 라이선스로 규모와 무관하게 무료입니다. 2026년 8월 확인된 가격.',
+    metaDescription: 'Braintrust는 월 1만 건 채점까지 무료이고 Pro가 249달러, Weave는 60달러부터, Promptfoo는 MIT 라이선스로 규모와 무관하게 무료입니다. 확인된 가격.',
     educationalLevel: 'Advanced',
     audience: '출시 전에 LLM 애플리케이션을 테스트하는 엔지니어링 팀',
     affiliateDisclosure: true,

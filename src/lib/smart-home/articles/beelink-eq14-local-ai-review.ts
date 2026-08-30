@@ -1694,7 +1694,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Beelink EQ14（Intel N150、16GB DDR4、主流SKUはデュアル2.5GbE）は、ローカル優先のスマートホーム向けに作られた低価格ミニPCです。16GB／500GB構成で約29,000〜33,000円相当（2026年8月25日、米国価格$189〜199を基準に算出した推定値。日本での正規販売は限定的）でHome Assistantと小型ローカルモデルを快適に動かせますが、本当の強みは2つの2.5GbEイーサネットポートです — 同価格帯の多くのライバルはポート1つ、あるいはゼロです。このレビューではメーカーおよび独立系情報源に照らして仕様を検証し、ローカルLLM速度について現実的な期待値を示したうえで、GMKtec G3 PlusやRyzen系の上位機種と直接スコアを比較します。',
     metaDescription:
-      'Beelink EQ14 N150 レビュー2026：実勢価格（2026年8月確認）、スコアカード、LAN仕様の注意点、G3 Plusとの直接比較。デュアル2.5GbEを備えた低価格Home Assistant機。',
+      'Beelink EQ14 N150 レビュー2026：実勢価格（確認済み）、スコアカード、LAN仕様の注意点、G3 Plusとの直接比較。デュアル2.5GbEを備えた低価格Home Assistant機。',
     twitterDescription:
       'Beelink EQ14（2026）：Intel N150、16GB DDR4、デュアル2.5GbE、約3万円台。スコアカード、構成の選び方、AIではなくネットワークが「買い」の理由を解説。',
     readTime: '9分で読める',
@@ -2111,7 +2111,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Beelink EQ14（Intel N150、16GB DDR4、主流 SKU 配双 2.5GbE）是一款为本地优先智能家居打造的预算迷你主机。16 GB / 500 GB 版本约 $189–199（价格核实于 2026年8月25日），可流畅运行 Home Assistant 和一个小型本地模型，但它真正的优势在于两个 2.5GbE 以太网口——在这个价位上，大多数竞品只有一个，甚至没有。本评测对照厂商和独立来源核实其规格，对本地 LLM 速度给出务实预期，并直接与 GMKtec G3 Plus 以及 Ryzen 级升级主机做评分对比。',
     metaDescription:
-      'Beelink EQ14 N150 评测 2026：真实价格（2026年8月）、评分卡、LAN 版本提醒，以及与 G3 Plus 的直接对比。配双 2.5GbE 的预算级 Home Assistant 主机。',
+      'Beelink EQ14 N150 评测 2026：真实价格、评分卡、LAN 版本提醒，以及与 G3 Plus 的直接对比。配双 2.5GbE 的预算级 Home Assistant 主机。',
     twitterDescription:
       'Beelink EQ14（2026）：Intel N150，16GB DDR4，双 2.5GbE，约 $189–199。评分卡、配置建议，以及为什么它的胜负点是网络而非 AI。',
     readTime: '阅读约9分钟',
@@ -2528,7 +2528,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
     intro:
       'Beelink EQ14(Intel N150, 16GB DDR4, 주류 SKU 기준 듀얼 2.5GbE)는 로컬 우선 스마트홈을 위해 설계된 저가형 미니 PC입니다. 16GB/500GB 구성 기준 약 $189–199(가격 확인일: 2026년 8월 25일)에 Home Assistant와 소형 로컬 모델을 잘 구동하지만, 진짜 강점은 대부분의 경쟁 제품이 포트 하나 혹은 아예 없는 가격대에서 2.5GbE 이더넷 포트 두 개를 제공한다는 점입니다. 이 리뷰는 제조사 및 독립 출처를 기준으로 사양을 검증하고, 로컬 LLM 속도에 대한 솔직한 기대치를 제시하며, GMKtec G3 Plus 및 상위 Ryzen급 장비와 직접 비교하여 점수를 매깁니다.',
     metaDescription:
-      'Beelink EQ14 N150 리뷰 2026: 실제 가격(2026년 8월), 평가 점수표, LAN 버전 주의사항, G3 Plus와의 직접 비교. 듀얼 2.5GbE를 갖춘 저가형 Home Assistant 박스입니다.',
+      'Beelink EQ14 N150 리뷰 2026: 실제 가격, 평가 점수표, LAN 버전 주의사항, G3 Plus와의 직접 비교. 듀얼 2.5GbE를 갖춘 저가형 Home Assistant 박스입니다.',
     twitterDescription:
       'Beelink EQ14(2026): Intel N150, 16GB DDR4, 듀얼 2.5GbE, 약 $189–199. 평가 점수표, 구성 선택 가이드, 그리고 AI가 아니라 네트워킹이 구매 이유인 까닭.',
     readTime: '9분 읽기',
