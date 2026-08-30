@@ -108,6 +108,17 @@ export const POWER_LLM_PUBLISHED_SLUGS: ReadonlySet<string> = new Set([
   // Category 11 — Image & Video Generation
   'local-ai-video-generation-vs-cloud',
   'local-ai-image-generation-vs-cloud',
+
+  // Web Hosting Series 2026-08-30 — 9 localized pages, en+native per file
+  'best-web-hosting-2026',
+  'beste-webhosting-anbieter-deutschland-2026',
+  'meilleur-hebergeur-web-france-2026',
+  'mejor-hosting-web-espana-latinoamerica-2026',
+  'best-web-hosting-japan-2026',
+  'best-web-hosting-china-2026',
+  'melhor-hospedagem-site-brasil-2026',
+  'best-web-hosting-arab-gulf-2026',
+  'best-web-hosting-korea-2026',
 ])
 
 export const POWER_LLM_HUB_PUBLISHED = true
