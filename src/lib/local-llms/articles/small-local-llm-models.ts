@@ -82,7 +82,7 @@ schema: {
             'name': 'What is the smallest local LLM that produces useful output?',
             'acceptedAnswer': {
               '@type': 'Answer',
-              'text': 'As of August 2026, the practical minimum for useful output is a 3B model at Q4_K_M quantization. Llama 3.2 1B produces coherent single sentences but struggles with multi-step instructions, longer responses, and complex reasoning. Gemma 4 E2B (2.3B effective) is more capable than that -- usable for summarization and simple Q&A, and its 128K context handles longer documents. For anything more complex, start with a 3B model.',
+              'text': 'The practical minimum for useful output is a 3B model at Q4_K_M quantization. Llama 3.2 1B produces coherent single sentences but struggles with multi-step instructions, longer responses, and complex reasoning. Gemma 4 E2B (2.3B effective) is more capable than that -- usable for summarization and simple Q&A, and its 128K context handles longer documents. For anything more complex, start with a 3B model.',
             },
           },
           {
@@ -197,7 +197,7 @@ schema: {
             '**Best small/edge model**: Gemma 4 E2B -- MMLU Pro 60%, 128K context, ~2 GB RAM, Apache 2.0.',
             '**Best small coding model**: Qwen3 3B -- 65% HumanEval at ~2 GB RAM.',
             '**Best general-purpose 3B**: Llama 3.2 3B -- most community support, 128K context, 2.5 GB RAM.',
-            'As of August 2026, no sub-2B-effective model produces output quality suitable for professional tasks. Use 3B+ (or Gemma 4 E2B) for real work.',
+            'No sub-2B-effective model produces output quality suitable for professional tasks. Use 3B+ (or Gemma 4 E2B) for real work.',
           ],
         },
         whatIsSmall: {
@@ -205,7 +205,7 @@ schema: {
           title: 'What Is a "Small" Local LLM and When Should You Use One?',
           content: [
             '**A small local LLM is typically defined as a model with fewer than 4 billion parameters.** At Q4_K_M quantization, these models require 1.5-3 GB of RAM -- well within the constraints of entry-level laptops with 4-8 GB total memory.',
-            'As of August 2026, small models are appropriate for: quick summarization, simple Q&A, code snippet explanation, translation of short texts, and classification tasks. They are not suitable for multi-step reasoning, complex code generation, or writing long-form coherent documents.',
+            'Small models are appropriate for: quick summarization, simple Q&A, code snippet explanation, translation of short texts, and classification tasks. They are not suitable for multi-step reasoning, complex code generation, or writing long-form coherent documents.',
             'The quality gap between a 3B and 7B model is significant -- roughly equivalent to the gap between GPT-4o mini and GPT-5.5. For users with 8 GB RAM, a 7B model at Q4_K_M is almost always the better choice if the machine has headroom. See [Best Beginner Local LLM Models](/local-llms/best-beginner-local-llm-models) for 7B recommendations.',
           ],
         },
@@ -285,7 +285,7 @@ schema: {
         llama32_1b: {
           id: 'llama-3-2-1b',
           title: 'Llama 3.2 1B -- Absolute Minimum for Any Useful Output',
-          content: 'Llama 3.2 1B requires only 1.3 GB of RAM and generates 60-90 tok/sec on CPU -- the fastest locally-runnable model. Output quality is marginal: it handles very simple classification and keyword extraction but struggles with coherent multi-sentence responses. As of August 2026, use Llama 3.2 1B only when RAM is genuinely the binding constraint (under 3 GB available) or for testing tool integrations.',
+          content: 'Llama 3.2 1B requires only 1.3 GB of RAM and generates 60-90 tok/sec on CPU -- the fastest locally-runnable model. Output quality is marginal: it handles very simple classification and keyword extraction but struggles with coherent multi-sentence responses. Use Llama 3.2 1B only when RAM is genuinely the binding constraint (under 3 GB available) or for testing tool integrations.',
         },
         comparisonTable: {
           id: 'comparison-table',
@@ -342,7 +342,7 @@ schema: {
           id: 'faq',
           title: 'Common Questions About Small Local LLM Models',
           faqs: [
-            { q: 'What is the smallest local LLM that produces useful output?', a: 'As of August 2026, the practical minimum for useful output is a 3B model at Q4_K_M quantization. Llama 3.2 1B produces coherent single sentences but struggles with multi-step instructions, longer responses, and complex reasoning. Gemma 4 E2B (2.3B effective) is more capable than that -- usable for summarization and simple Q&A, and its 128K context handles longer documents. For anything more complex, start with a 3B model.' },
+            { q: 'What is the smallest local LLM that produces useful output?', a: 'The practical minimum for useful output is a 3B model at Q4_K_M quantization. Llama 3.2 1B produces coherent single sentences but struggles with multi-step instructions, longer responses, and complex reasoning. Gemma 4 E2B (2.3B effective) is more capable than that -- usable for summarization and simple Q&A, and its 128K context handles longer documents. For anything more complex, start with a 3B model.' },
             { q: 'Can a 3B model run on a phone?', a: 'Yes -- Llama 3.2 1B and 3B are specifically designed for on-device mobile deployment. Meta provides optimized builds for iOS (via MLC LLM) and Android. Inference on a modern phone (Snapdragon 8 Gen 3 or Apple A17 Pro) produces 15-30 tok/sec for 1B models. LM Studio and Ollama do not currently run on iOS or Android -- mobile requires separate frameworks.' },
             { q: 'Are small models good for summarization?', a: 'Yes -- summarization is one of the strongest use cases for small models. Gemma 4 E2B and Llama 3.2 3B reliably produce accurate summaries, and Gemma 4 E2B\'s upgrade to a 128K context window (from the older Gemma 2\'s 8K) means document length is rarely the limiting factor at this scale anymore.' },
             { q: 'How much faster is a 2B model than a 7B model on the same hardware?', a: 'Meaningfully faster on CPU, though the multiple depends heavily on hardware and quantization -- Google\'s own figures for Gemma 4 E2B show ~7.6 tok/sec decode on a Raspberry Pi 5, while independent x86 CPU reports range 8-48 tok/sec depending on quantization level. On a GPU, the speed advantage narrows because GPU throughput is less constrained by model size. Check current benchmarks for your specific hardware rather than assuming a fixed multiplier.' },
@@ -355,6 +355,7 @@ schema: {
             { q: 'Using Q8_0 quantization instead of Q4_K_M', a: 'Q8_0 requires nearly double the RAM of Q4_K_M for minimal quality improvement at small scale. A Llama 3.2 3B model at Q8_0 needs ~3.8 GB RAM vs ~2.5 GB for Q4_K_M. On a 4 GB machine, Q8_0 may trigger swap usage and make inference 3-5× slower. Always use Q4_K_M as the default for sub-4B models.' },
             { q: 'Running a base model instead of the instruct variant', a: 'Base models (e.g., llama3.2:3b-text) are pre-fine-tuning checkpoints trained to predict the next token in text. They do not follow instructions. When you ask a base model "What is 2+2?", it may complete the sentence as a quiz rather than answer "4". Always use the instruct variant: llama3.2:3b (Ollama defaults to instruct for named models).' },
             { q: 'Expecting 7B model quality from a 3B model', a: 'A 3B model at 68% MMLU (Phi-4 Mini) performs similarly to a 2023-era GPT-3.5 Mini on general tasks. Complex reasoning chains, long-form writing, and nuanced code generation will produce noticeably lower quality than a 7B model. If output quality is insufficient, upgrade to a 7B model -- the RAM difference is ~2 GB (2.5 GB → 4.5 GB).' },
+            { q: 'What is the smallest local LLM that is actually usable?', a: 'Around 1B parameters is the floor for coherent output, and Llama 3.2 1B is the smallest model here worth running for real work. Below that, tiny models will load and generate on almost anything, but the text stops holding together across a few sentences, so they are better treated as autocomplete than as an assistant. If your constraint is disk and RAM rather than quality, the smallest usable local LLM with a small footprint is a sub-2B model at Q4; if you have 4GB or more to spend, a 4B model is a large step up in coherence for very little extra memory.' },
           ],
         },
         sources: {

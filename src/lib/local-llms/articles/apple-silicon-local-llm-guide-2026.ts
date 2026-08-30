@@ -270,6 +270,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Can I run Apple Silicon LLMs on a MacBook Air?',
             a: 'Yes, with limitations. MacBook Air M5 (16–32GB) runs 7–13B models comfortably. Thermal throttling kicks in after 10–15 minutes of sustained inference on the fanless design. For occasional use: fine. For always-on inference: Mac Mini M5 Pro is a better fit.',
           },
+            { q: 'Can a MacBook Air run local LLMs, and how does M3 Ultra compare to M5 Max?', a: 'Yes. A MacBook Air is fanless, so it will thermally throttle on a long generation where a MacBook Pro holds its clocks, but for chat-length responses the difference is small and the Air runs the same models. Unified memory is what decides which models fit: a 24GB Air is comfortable up to the mid sizes, and 32GB opens up more. On the M3 Ultra question, an Ultra-tier chip of the previous generation still beats an M5 Max on memory capacity, which is what lets it hold the largest models; the M5 Max is the faster chip per token. A 48GB M5 Pro sits between them and is the sweet spot for most people who want headroom without Ultra pricing.' },
         ],
       },
       benchmarkNote: {
