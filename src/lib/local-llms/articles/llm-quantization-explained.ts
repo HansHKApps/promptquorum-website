@@ -198,6 +198,20 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           ],
           columns: ['Format', 'Method', 'RAM (7B)', 'Quality', 'Pick When'],
         },
+        compareQ4KMQ4KXL: {
+          id: 'q4-k-m-vs-q4-k-xl',
+          title: 'Q4_K_M vs Q4_K_XL: Standard K-Quant vs Dynamic Upcast',
+          content: [
+            '**Q4_K_M is llama.cpp\'s standard 4-bit K-quant. Q4_K_XL is not a standard type — it is an Unsloth "Dynamic" GGUF variant that keeps a 4-bit base but upcasts the most sensitive layers (embeddings, attention and output) to higher precision.** File size and quality land between Q4_K_M and Q5_K_M — the same principle Q8_K_XL applies over Q8_0, just on a 4-bit base.',
+            'Exact Q4_K_XL file sizes vary by model and by how many layers Unsloth upcasts, so check the size shown in LM Studio or on Hugging Face before downloading rather than planning around a fixed number. Practical rule: if Q5_K_M fits your VRAM, take Q5_K_M — it is a standard format with wider tool support. Q4_K_XL is the in-between step for when Q4_K_M fits but Q5_K_M just misses.',
+          ],
+          rows: [
+            { 'Format': 'Q4_K_M', 'Type': 'Standard llama.cpp', 'Precision': 'Mixed 4/6-bit', 'Quality': '1–3% loss', 'Choose when': 'Default for almost everyone' },
+            { 'Format': 'Q4_K_XL', 'Type': 'Unsloth Dynamic', 'Precision': '4-bit + sensitive layers higher', 'Quality': 'Between Q4_K_M and Q5_K_M', 'Choose when': 'Q5_K_M just misses your VRAM' },
+            { 'Format': 'Q5_K_M', 'Type': 'Standard llama.cpp', 'Precision': 'Mixed 5/6-bit', 'Quality': 'Under 1% loss', 'Choose when': 'VRAM free, standard tooling' },
+          ],
+          columns: ['Format', 'Type', 'Precision', 'Quality', 'Choose when'],
+        },
         compareQ4KMQ4KS: {
           id: 'q4-k-m-vs-q4-k-s',
           title: 'Q4_K_M vs Q4_K_S: Which Should You Choose?',
@@ -439,6 +453,22 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           title: 'Common Questions About LLM Quantization',
           faqs: [
             {
+              q: 'What is Q4_K_XL and is it worth it over Q4_K_M?',
+              a: 'Q4_K_XL is not a standard llama.cpp format but an Unsloth Dynamic GGUF variant. It keeps Q4_K_M\'s 4-bit base but stores the most sensitive layers at higher precision, so file size and quality land between Q4_K_M and Q5_K_M. It is worth it mainly when Q5_K_M just misses your VRAM — if Q5_K_M fits, take Q5_K_M, because it is a standard format with wider tool support.',
+            },
+            {
+              q: 'Q5_K_M or Q5_K_XL — what is the difference?',
+              a: 'The same principle as at Q4 and Q8: Q5_K_M is llama.cpp\'s standard K-quant, Q5_K_XL is Unsloth\'s Dynamic variant with higher-resolution sensitive layers and a correspondingly larger file. Since Q5_K_M already sits under 1% quality loss, the practical gain is small. Check the actual file size in your tool before choosing the XL variant.',
+            },
+            {
+              q: 'FP8 or Q8_0 — which should I use?',
+              a: 'For local execution through llama.cpp, Ollama or LM Studio, Q8_0 is the relevant format. FP8 is a datatype that matters mainly for server inference on current NVIDIA hardware and is not a common download option in the GGUF ecosystem. Q8_0 already sits under 0.5% quality loss against FP16, so the real choice is between Q8_0 and the smaller K-quants.',
+            },
+            {
+              q: 'Are Q4_0 and Q4_1 still relevant?',
+              a: 'No — both are older formats without the K-quant improvements. Q4_0 quantizes all weights uniformly at 4 bits; Q4_1 adds an offset but is equally superseded. Q4_K_M reaches noticeably better quality at practically the same memory footprint. If you see both in a repository, take Q4_K_M — Q4_0 and Q4_1 now appear only on older model uploads.',
+            },
+            {
               q: 'Does Ollama automatically use the best quantization?',
               a: 'Yes -- when you run `ollama pull llama3.1:8b`, Ollama downloads the Q4_K_M variant by default. To pull a specific quantization, append the tag: `ollama pull llama3.1:8b-instruct-q5_K_M`. Available quantization tags for each model are listed on the model\'s page at ollama.com/library.',
             },
@@ -611,6 +641,26 @@ schema: {
         'mainEntity': [
           {
             '@type': 'Question',
+            'name': 'What is Q4_K_XL and is it worth it over Q4_K_M?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Q4_K_XL is not a standard llama.cpp format but an Unsloth Dynamic GGUF variant. It keeps Q4_K_M\'s 4-bit base but stores the most sensitive layers at higher precision, so file size and quality land between Q4_K_M and Q5_K_M. It is worth it mainly when Q5_K_M just misses your VRAM — if Q5_K_M fits, take Q5_K_M, because it is a standard format with wider tool support.' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Q5_K_M or Q5_K_XL — what is the difference?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'The same principle as at Q4 and Q8: Q5_K_M is llama.cpp\'s standard K-quant, Q5_K_XL is Unsloth\'s Dynamic variant with higher-resolution sensitive layers and a correspondingly larger file. Since Q5_K_M already sits under 1% quality loss, the practical gain is small. Check the actual file size in your tool before choosing the XL variant.' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'FP8 or Q8_0 — which should I use?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'For local execution through llama.cpp, Ollama or LM Studio, Q8_0 is the relevant format. FP8 is a datatype that matters mainly for server inference on current NVIDIA hardware and is not a common download option in the GGUF ecosystem. Q8_0 already sits under 0.5% quality loss against FP16, so the real choice is between Q8_0 and the smaller K-quants.' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Are Q4_0 and Q4_1 still relevant?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'No — both are older formats without the K-quant improvements. Q4_0 quantizes all weights uniformly at 4 bits; Q4_1 adds an offset but is equally superseded. Q4_K_M reaches noticeably better quality at practically the same memory footprint. If you see both in a repository, take Q4_K_M — Q4_0 and Q4_1 now appear only on older model uploads.' },
+          },
+          {
+            '@type': 'Question',
             'name': 'Does Ollama automatically use the best quantization?',
             'acceptedAnswer': { '@type': 'Answer', 'text': 'Yes -- when you run `ollama pull llama3.1:8b`, Ollama downloads the Q4_K_M variant by default. To pull a specific quantization, append the tag: `ollama pull llama3.1:8b-instruct-q5_K_M`. Available quantization tags for each model are listed on the model\'s page at ollama.com/library.' },
           },
@@ -754,6 +804,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Q4_K_M es la cuantización estándar para LLMs locales: un modelo de 7B ocupa unos 4,5 GB en lugar de ~14 GB en FP16, con un 1–3% de pérdida de calidad en MMLU.' },
+            { type: 'plain-terms', text: 'La cuantización reduce el tamaño de un modelo de IA guardando sus números con menos detalle. Q4_K_M es el nivel que casi todo el mundo debería elegir: el modelo cabe en hardware normal y la diferencia de calidad apenas se nota en el día a día. Si le sobra VRAM, entran en juego Q5_K_M o Q8_0.' },
+          ],
           items: [
             'La cuantización convierte los pesos del modelo de 16 bits a 4 u 8 bits, reduciendo la RAM entre un 50–75%.',
             '**Q4_K_M** es el nivel estándar recomendado — mejor equilibrio entre calidad y RAM para hardware de consumo.',
@@ -825,6 +879,20 @@ schema: {
             { 'Formato': 'Q4_K_M', 'Método': 'K-quant, mixto 4/6 bits', 'RAM (7B)': '~4,5 GB', 'Calidad': 'Pérdida del 1–3% vs FP16', 'Elige cuando': 'Predeterminado para casi todos' },
           ],
           columns: ['Formato', 'Método', 'RAM (7B)', 'Calidad', 'Elige cuando'],
+        },
+        compareQ4KMQ4KXL: {
+          id: 'q4-k-m-vs-q4-k-xl',
+          title: 'Q4_K_M vs Q4_K_XL: K-quant estándar vs upcast dinámico',
+          content: [
+            '**Q4_K_M es el K-quant estándar de 4 bits de llama.cpp. Q4_K_XL no es un tipo estándar: es una variante GGUF "Dynamic" de Unsloth que mantiene la base de 4 bits pero eleva a mayor precisión las capas más sensibles (embeddings, attention y salida).** El tamaño de archivo y la calidad quedan entre Q4_K_M y Q5_K_M, el mismo principio que Q8_K_XL aplica sobre Q8_0, pero sobre una base de 4 bits.',
+            'Los tamaños exactos de Q4_K_XL varían según el modelo y según cuántas capas eleva Unsloth, así que consulte el tamaño que muestra LM Studio o Hugging Face antes de descargar en lugar de contar con una cifra fija. Regla práctica: si Q5_K_M cabe en su VRAM, elija Q5_K_M, porque es un formato estándar con mayor soporte de herramientas. Q4_K_XL es el paso intermedio para cuando Q4_K_M cabe pero Q5_K_M se queda justo fuera.',
+          ],
+          rows: [
+            { 'Formato': 'Q4_K_M', 'Tipo': 'llama.cpp estándar', 'Precisión': 'Mixta 4/6 bits', 'Calidad': '1–3% de pérdida', 'Elegir cuando': 'Opción por defecto para casi todos' },
+            { 'Formato': 'Q4_K_XL', 'Tipo': 'Unsloth Dynamic', 'Precisión': '4 bits + capas sensibles mayores', 'Calidad': 'Entre Q4_K_M y Q5_K_M', 'Elegir cuando': 'Q5_K_M no cabe por poco' },
+            { 'Formato': 'Q5_K_M', 'Tipo': 'llama.cpp estándar', 'Precisión': 'Mixta 5/6 bits', 'Calidad': 'Menos del 1% de pérdida', 'Elegir cuando': 'Hay VRAM libre, herramientas estándar' },
+          ],
+          columns: ['Formato', 'Tipo', 'Precisión', 'Calidad', 'Elegir cuando'],
         },
         compareQ4KMQ4KS: {
           id: 'q4-k-m-vs-q4-k-s',
@@ -1062,6 +1130,22 @@ schema: {
           title: 'Preguntas frecuentes sobre cuantización de LLM',
           faqs: [
             {
+              q: '¿Qué es Q4_K_XL y merece la pena frente a Q4_K_M?',
+              a: 'Q4_K_XL no es un formato estándar de llama.cpp, sino una variante GGUF Dynamic de Unsloth. Mantiene la base de 4 bits de Q4_K_M pero guarda las capas más sensibles con mayor precisión, de modo que tamaño y calidad quedan entre Q4_K_M y Q5_K_M. Merece la pena sobre todo cuando Q5_K_M no cabe por poco en su VRAM: si Q5_K_M cabe, elija Q5_K_M, porque es un formato estándar con mayor soporte de herramientas.',
+            },
+            {
+              q: 'Q5_K_M o Q5_K_XL: ¿cuál es la diferencia?',
+              a: 'El mismo principio que en Q4 y Q8: Q5_K_M es el K-quant estándar de llama.cpp y Q5_K_XL es la variante Dynamic de Unsloth, con capas sensibles de mayor resolución y un archivo algo más grande. Como Q5_K_M ya está por debajo del 1% de pérdida de calidad, la ganancia práctica es pequeña. Compruebe el tamaño real del archivo en su herramienta antes de decidirse por la variante XL.',
+            },
+            {
+              q: '¿FP8 o Q8_0? ¿Cuál debería usar?',
+              a: 'Para la ejecución local con llama.cpp, Ollama o LM Studio, el formato relevante es Q8_0. FP8 es un tipo de dato que importa sobre todo en la inferencia de servidor sobre hardware NVIDIA actual y no es una opción de descarga habitual en el ecosistema GGUF. Q8_0 ya está por debajo del 0,5% de pérdida frente a FP16, así que la decisión real es entre Q8_0 y los K-quants más pequeños.',
+            },
+            {
+              q: '¿Siguen siendo relevantes Q4_0 y Q4_1?',
+              a: 'No: ambos son formatos antiguos sin las mejoras de los K-quants. Q4_0 cuantiza todos los pesos de forma uniforme a 4 bits; Q4_1 añade un desplazamiento, pero está igualmente superado. Q4_K_M alcanza una calidad claramente mejor con prácticamente la misma huella de memoria. Si ve ambos en un repositorio, elija Q4_K_M: Q4_0 y Q4_1 solo aparecen ya en subidas de modelos antiguos.',
+            },
+            {
               q: '¿Ollama usa automáticamente la mejor cuantización?',
               a: 'Sí — cuando ejecutas `ollama pull llama3.1:8b`, Ollama descarga la variante Q4_K_M por defecto. Para obtener una cuantización específica, añade el tag: `ollama pull llama3.1:8b-instruct-q5_K_M`. Los tags de cuantización disponibles para cada modelo están listados en la página del modelo en ollama.com/library.',
             },
@@ -1197,6 +1281,26 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': '¿Qué es Q4_K_XL y merece la pena frente a Q4_K_M?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Q4_K_XL no es un formato estándar de llama.cpp, sino una variante GGUF Dynamic de Unsloth. Mantiene la base de 4 bits de Q4_K_M pero guarda las capas más sensibles con mayor precisión, de modo que tamaño y calidad quedan entre Q4_K_M y Q5_K_M. Merece la pena sobre todo cuando Q5_K_M no cabe por poco en su VRAM: si Q5_K_M cabe, elija Q5_K_M, porque es un formato estándar con mayor soporte de herramientas.' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Q5_K_M o Q5_K_XL: ¿cuál es la diferencia?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'El mismo principio que en Q4 y Q8: Q5_K_M es el K-quant estándar de llama.cpp y Q5_K_XL es la variante Dynamic de Unsloth, con capas sensibles de mayor resolución y un archivo algo más grande. Como Q5_K_M ya está por debajo del 1% de pérdida de calidad, la ganancia práctica es pequeña. Compruebe el tamaño real del archivo en su herramienta antes de decidirse por la variante XL.' },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿FP8 o Q8_0? ¿Cuál debería usar?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Para la ejecución local con llama.cpp, Ollama o LM Studio, el formato relevante es Q8_0. FP8 es un tipo de dato que importa sobre todo en la inferencia de servidor sobre hardware NVIDIA actual y no es una opción de descarga habitual en el ecosistema GGUF. Q8_0 ya está por debajo del 0,5% de pérdida frente a FP16, así que la decisión real es entre Q8_0 y los K-quants más pequeños.' },
+          },
+          {
+            '@type': 'Question',
+            'name': '¿Siguen siendo relevantes Q4_0 y Q4_1?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'No: ambos son formatos antiguos sin las mejoras de los K-quants. Q4_0 cuantiza todos los pesos de forma uniforme a 4 bits; Q4_1 añade un desplazamiento, pero está igualmente superado. Q4_K_M alcanza una calidad claramente mejor con prácticamente la misma huella de memoria. Si ve ambos en un repositorio, elija Q4_K_M: Q4_0 y Q4_1 solo aparecen ya en subidas de modelos antiguos.' },
+          },
           {
             '@type': 'Question',
             'name': '¿Ollama usa automáticamente la mejor cuantización?',
@@ -1342,6 +1446,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: '‏Q4_K_M هو الكمّ الافتراضي للنماذج المحلية: يشغل نموذج بحجم 7B نحو 4.5 غيغابايت بدل نحو 14 غيغابايت عند FP16، بخسارة جودة تتراوح بين 1% و3% على MMLU.' },
+            { type: 'plain-terms', text: 'الكمّ يصغّر حجم النموذج بتخزين الأرقام داخله بدقة أقل. وQ4_K_M هو المستوى الذي ينبغي لأغلب الناس اختياره: يتّسع النموذج على عتاد عادي ولا يكاد فارق الجودة يُلاحَظ في الاستخدام اليومي. وإن توفّرت ذاكرة VRAM إضافية فيمكن التفكير في Q5_K_M أو Q8_0.' },
+          ],
           items: [
             'يحوّل التكميم أوزان النموذج من 16 بت إلى 4 أو 8 بت، مقلِّصاً RAM بنسبة 50–75%.',
             '**Q4_K_M** هو المستوى القياسي الموصى به — أفضل توازن بين الجودة وRAM للعتاد الاستهلاكي.',
@@ -1413,6 +1521,20 @@ schema: {
             { 'الصيغة': 'Q4_K_M', 'الطريقة': 'K-Quant، 4/6 بت مختلط', 'RAM (7B)': '~4.5 GB', 'الجودة': 'فقدان 1-3% مقارنةً بـ FP16', 'متى تختار': 'الافتراضي لمعظم المستخدمين' },
           ],
           columns: ['الصيغة', 'الطريقة', 'RAM (7B)', 'الجودة', 'متى تختار'],
+        },
+        compareQ4KMQ4KXL: {
+          id: 'q4-k-m-vs-q4-k-xl',
+          title: 'Q4_K_M مقابل Q4_K_XL: الكمّ القياسي مقابل الرفع الديناميكي',
+          content: [
+            '**‏Q4_K_M هو الكمّ القياسي بأربع بتات في llama.cpp. أما Q4_K_XL فليس نوعًا قياسيًا، بل صيغة GGUF من نوع "Dynamic" من Unsloth تحافظ على أساس أربع بتات لكنها ترفع دقة أكثر الطبقات حساسية (التضمين والانتباه والمخرجات).** يقع حجم الملف والجودة بين Q4_K_M وQ5_K_M — وهو المبدأ نفسه الذي يطبقه Q8_K_XL على Q8_0، لكن على أساس أربع بتات.',
+            'تختلف أحجام ملفات Q4_K_XL بحسب النموذج وبحسب عدد الطبقات التي ترفعها Unsloth، لذا تحقق من الحجم المعروض في LM Studio أو على Hugging Face قبل التنزيل بدل الاعتماد على رقم ثابت. القاعدة العملية: إذا كان Q5_K_M يتّسع في ذاكرة VRAM لديك فاختره، لأنه صيغة قياسية بدعم أوسع من الأدوات. أما Q4_K_XL فهو الخطوة الوسطى حين يتّسع Q4_K_M ولا يتّسع Q5_K_M إلا بفارق ضئيل.',
+          ],
+          rows: [
+            { 'الصيغة': 'Q4_K_M', 'النوع': 'llama.cpp قياسي', 'الدقة': 'مختلطة 4/6 بت', 'الجودة': 'خسارة 1–3%', 'متى تختارها': 'الخيار الافتراضي لمعظم الناس' },
+            { 'الصيغة': 'Q4_K_XL', 'النوع': 'Unsloth Dynamic', 'الدقة': '4 بت مع رفع الطبقات الحساسة', 'الجودة': 'بين Q4_K_M وQ5_K_M', 'متى تختارها': 'Q5_K_M لا يتّسع بفارق ضئيل' },
+            { 'الصيغة': 'Q5_K_M', 'النوع': 'llama.cpp قياسي', 'الدقة': 'مختلطة 5/6 بت', 'الجودة': 'خسارة أقل من 1%', 'متى تختارها': 'توفر VRAM وأدوات قياسية' },
+          ],
+          columns: ['الصيغة', 'النوع', 'الدقة', 'الجودة', 'متى تختارها'],
         },
         compareQ4KMQ4KS: {
           id: 'q4-k-m-vs-q4-k-s',
@@ -1650,6 +1772,22 @@ schema: {
           title: 'الأسئلة الشائعة حول تكميم LLM',
           faqs: [
             {
+              q: 'ما هو Q4_K_XL وهل يستحق العناء مقارنة بـ Q4_K_M؟',
+              a: '‏Q4_K_XL ليس صيغة قياسية في llama.cpp بل صيغة GGUF من نوع Dynamic من Unsloth. تحافظ على أساس الأربع بتات في Q4_K_M لكنها تخزّن أكثر الطبقات حساسية بدقة أعلى، فيقع حجم الملف والجودة بين Q4_K_M وQ5_K_M. يستحق الاختيار أساسًا حين لا يتّسع Q5_K_M في ذاكرتك إلا بفارق ضئيل؛ فإن اتّسع Q5_K_M فاختره لأنه صيغة قياسية بدعم أوسع.',
+            },
+            {
+              q: 'ما الفرق بين Q5_K_M وQ5_K_XL؟',
+              a: 'المبدأ نفسه كما في Q4 وQ8: ‏Q5_K_M هو الكمّ القياسي في llama.cpp، وQ5_K_XL هو صيغة Dynamic من Unsloth بطبقات حساسة أعلى دقة وملف أكبر قليلًا. وبما أن خسارة الجودة في Q5_K_M أقل من 1% أصلًا، فالمكسب العملي محدود. تحقق من حجم الملف الفعلي في أداتك قبل اختيار صيغة XL.',
+            },
+            {
+              q: '‏FP8 أم Q8_0: أيهما أستخدم؟',
+              a: 'للتشغيل المحلي عبر llama.cpp أو Ollama أو LM Studio، الصيغة المعنية هي Q8_0. أما FP8 فهو نوع بيانات يهمّ أساسًا في استدلال الخوادم على عتاد NVIDIA الحديث، وليس خيار تنزيل شائعًا في منظومة GGUF. وبما أن خسارة Q8_0 مقابل FP16 أقل من 0.5% أصلًا، فالاختيار الحقيقي بين Q8_0 والكمّيات الأصغر.',
+            },
+            {
+              q: 'هل ما زال Q4_0 وQ4_1 مفيدين؟',
+              a: 'لا، فكلاهما صيغتان قديمتان بلا تحسينات الكمّ من نوع K. يكمّم Q4_0 كل الأوزان بأربع بتات بالتساوي، ويضيف Q4_1 إزاحة لكنه متجاوَز كذلك. ويحقق Q4_K_M جودة أفضل بوضوح مع بصمة ذاكرة متطابقة عمليًا. إذا رأيت الصيغتين في مستودع فاختر Q4_K_M — إذ لم يعد Q4_0 وQ4_1 يظهران إلا في رفعات النماذج القديمة.',
+            },
+            {
               q: 'هل يستخدم Ollama أفضل تكميم تلقائياً؟',
               a: 'نعم — عند تشغيل `ollama pull llama3.1:8b`، ينزّل Ollama نسخة Q4_K_M افتراضياً. للحصول على تكميم محدد، أضف الوسم: `ollama pull llama3.1:8b-instruct-q5_K_M`. وسوم التكميم المتاحة لكل نموذج مدرجة في صفحة النموذج على ollama.com/library.',
             },
@@ -1785,6 +1923,26 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': 'ما هو Q4_K_XL وهل يستحق العناء مقارنة بـ Q4_K_M؟',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '‏Q4_K_XL ليس صيغة قياسية في llama.cpp بل صيغة GGUF من نوع Dynamic من Unsloth. تحافظ على أساس الأربع بتات في Q4_K_M لكنها تخزّن أكثر الطبقات حساسية بدقة أعلى، فيقع حجم الملف والجودة بين Q4_K_M وQ5_K_M. يستحق الاختيار أساسًا حين لا يتّسع Q5_K_M في ذاكرتك إلا بفارق ضئيل؛ فإن اتّسع Q5_K_M فاختره لأنه صيغة قياسية بدعم أوسع.' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'ما الفرق بين Q5_K_M وQ5_K_XL؟',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'المبدأ نفسه كما في Q4 وQ8: ‏Q5_K_M هو الكمّ القياسي في llama.cpp، وQ5_K_XL هو صيغة Dynamic من Unsloth بطبقات حساسة أعلى دقة وملف أكبر قليلًا. وبما أن خسارة الجودة في Q5_K_M أقل من 1% أصلًا، فالمكسب العملي محدود. تحقق من حجم الملف الفعلي في أداتك قبل اختيار صيغة XL.' },
+          },
+          {
+            '@type': 'Question',
+            'name': '‏FP8 أم Q8_0: أيهما أستخدم؟',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'للتشغيل المحلي عبر llama.cpp أو Ollama أو LM Studio، الصيغة المعنية هي Q8_0. أما FP8 فهو نوع بيانات يهمّ أساسًا في استدلال الخوادم على عتاد NVIDIA الحديث، وليس خيار تنزيل شائعًا في منظومة GGUF. وبما أن خسارة Q8_0 مقابل FP16 أقل من 0.5% أصلًا، فالاختيار الحقيقي بين Q8_0 والكمّيات الأصغر.' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'هل ما زال Q4_0 وQ4_1 مفيدين؟',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'لا، فكلاهما صيغتان قديمتان بلا تحسينات الكمّ من نوع K. يكمّم Q4_0 كل الأوزان بأربع بتات بالتساوي، ويضيف Q4_1 إزاحة لكنه متجاوَز كذلك. ويحقق Q4_K_M جودة أفضل بوضوح مع بصمة ذاكرة متطابقة عمليًا. إذا رأيت الصيغتين في مستودع فاختر Q4_K_M — إذ لم يعد Q4_0 وQ4_1 يظهران إلا في رفعات النماذج القديمة.' },
+          },
           {
             '@type': 'Question',
             'name': 'هل يستخدم Ollama أفضل تكميم تلقائياً؟',
@@ -1982,6 +2140,26 @@ schema: {
         'mainEntity': [
           {
             '@type': 'Question',
+            'name': 'O que é Q4_K_XL e vale a pena em relação ao Q4_K_M?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Q4_K_XL não é um formato padrão do llama.cpp, e sim uma variante GGUF Dynamic da Unsloth. Ela mantém a base de 4 bits do Q4_K_M mas armazena as camadas mais sensíveis com maior precisão, de modo que tamanho e qualidade ficam entre Q4_K_M e Q5_K_M. Vale a pena principalmente quando Q5_K_M fica de fora por pouco da sua VRAM: se Q5_K_M couber, escolha Q5_K_M, por ser um formato padrão com suporte mais amplo.' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Q5_K_M ou Q5_K_XL: qual é a diferença?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'O mesmo princípio de Q4 e Q8: Q5_K_M é o K-quant padrão do llama.cpp e Q5_K_XL é a variante Dynamic da Unsloth, com camadas sensíveis em maior resolução e um arquivo um pouco maior. Como Q5_K_M já fica abaixo de 1% de perda de qualidade, o ganho prático é pequeno. Confira o tamanho real do arquivo na sua ferramenta antes de optar pela variante XL.' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'FP8 ou Q8_0: qual devo usar?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Para execução local via llama.cpp, Ollama ou LM Studio, o formato relevante é Q8_0. FP8 é um tipo de dado que importa sobretudo na inferência em servidor com hardware NVIDIA atual e não é uma opção comum de download no ecossistema GGUF. Q8_0 já fica abaixo de 0,5% de perda em relação ao FP16, então a decisão real é entre Q8_0 e os K-quants menores.' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Q4_0 e Q4_1 ainda são relevantes?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Não: ambos são formatos antigos, sem as melhorias dos K-quants. Q4_0 quantiza todos os pesos uniformemente em 4 bits; Q4_1 acrescenta um deslocamento, mas está igualmente superado. Q4_K_M alcança qualidade nitidamente melhor com praticamente o mesmo consumo de memória. Se vir os dois em um repositório, escolha Q4_K_M — Q4_0 e Q4_1 aparecem hoje apenas em uploads de modelos antigos.' },
+          },
+          {
+            '@type': 'Question',
             'name': 'O Ollama usa automaticamente a melhor quantização?',
             'acceptedAnswer': { '@type': 'Answer', 'text': 'Sim — quando você executa `ollama pull llama3.1:8b`, o Ollama baixa a variante Q4_K_M por padrão. Para baixar uma quantização específica, adicione a tag: `ollama pull llama3.1:8b-instruct-q5_K_M`.' },
           },
@@ -2149,6 +2327,20 @@ schema: {
             { 'Formato': 'Q4_K_M', 'Método': 'K-quant, misto 4/6 bits', 'RAM (7B)': '~4,5 GB', 'Qualidade': 'Perda de 1–3% vs FP16', 'Quando usar': 'Padrão para quase todos' },
           ],
           columns: ['Formato', 'Método', 'RAM (7B)', 'Qualidade', 'Quando usar'],
+        },
+        compareQ4KMQ4KXL: {
+          id: 'q4-k-m-vs-q4-k-xl',
+          title: 'Q4_K_M vs Q4_K_XL: K-quant padrão vs upcast dinâmico',
+          content: [
+            '**Q4_K_M é o K-quant padrão de 4 bits do llama.cpp. Q4_K_XL não é um tipo padrão: é uma variante GGUF "Dynamic" da Unsloth que mantém a base de 4 bits mas eleva para maior precisão as camadas mais sensíveis (embeddings, attention e saída).** O tamanho do arquivo e a qualidade ficam entre Q4_K_M e Q5_K_M — o mesmo princípio que Q8_K_XL aplica sobre Q8_0, só que sobre uma base de 4 bits.',
+            'Os tamanhos exatos do Q4_K_XL variam conforme o modelo e conforme quantas camadas a Unsloth eleva, então confira o tamanho exibido no LM Studio ou no Hugging Face antes de baixar, em vez de contar com um número fixo. Regra prática: se Q5_K_M couber na sua VRAM, escolha Q5_K_M — é um formato padrão com suporte mais amplo nas ferramentas. Q4_K_XL é o passo intermediário para quando Q4_K_M cabe mas Q5_K_M fica de fora por pouco.',
+          ],
+          rows: [
+            { 'Formato': 'Q4_K_M', 'Tipo': 'llama.cpp padrão', 'Precisão': 'Mista 4/6 bits', 'Qualidade': '1–3% de perda', 'Escolher quando': 'Padrão para quase todos' },
+            { 'Formato': 'Q4_K_XL', 'Tipo': 'Unsloth Dynamic', 'Precisão': '4 bits + camadas sensíveis maiores', 'Qualidade': 'Entre Q4_K_M e Q5_K_M', 'Escolher quando': 'Q5_K_M fica de fora por pouco' },
+            { 'Formato': 'Q5_K_M', 'Tipo': 'llama.cpp padrão', 'Precisão': 'Mista 5/6 bits', 'Qualidade': 'Menos de 1% de perda', 'Escolher quando': 'Há VRAM livre, ferramentas padrão' },
+          ],
+          columns: ['Formato', 'Tipo', 'Precisão', 'Qualidade', 'Escolher quando'],
         },
         compareQ4KMQ4KS: {
           id: 'q4-k-m-vs-q4-k-s',
@@ -2383,6 +2575,22 @@ schema: {
           id: 'common-questions',
           title: 'Perguntas comuns sobre quantização de LLM',
           faqs: [
+            {
+              q: 'O que é Q4_K_XL e vale a pena em relação ao Q4_K_M?',
+              a: 'Q4_K_XL não é um formato padrão do llama.cpp, e sim uma variante GGUF Dynamic da Unsloth. Ela mantém a base de 4 bits do Q4_K_M mas armazena as camadas mais sensíveis com maior precisão, de modo que tamanho e qualidade ficam entre Q4_K_M e Q5_K_M. Vale a pena principalmente quando Q5_K_M fica de fora por pouco da sua VRAM: se Q5_K_M couber, escolha Q5_K_M, por ser um formato padrão com suporte mais amplo.',
+            },
+            {
+              q: 'Q5_K_M ou Q5_K_XL: qual é a diferença?',
+              a: 'O mesmo princípio de Q4 e Q8: Q5_K_M é o K-quant padrão do llama.cpp e Q5_K_XL é a variante Dynamic da Unsloth, com camadas sensíveis em maior resolução e um arquivo um pouco maior. Como Q5_K_M já fica abaixo de 1% de perda de qualidade, o ganho prático é pequeno. Confira o tamanho real do arquivo na sua ferramenta antes de optar pela variante XL.',
+            },
+            {
+              q: 'FP8 ou Q8_0: qual devo usar?',
+              a: 'Para execução local via llama.cpp, Ollama ou LM Studio, o formato relevante é Q8_0. FP8 é um tipo de dado que importa sobretudo na inferência em servidor com hardware NVIDIA atual e não é uma opção comum de download no ecossistema GGUF. Q8_0 já fica abaixo de 0,5% de perda em relação ao FP16, então a decisão real é entre Q8_0 e os K-quants menores.',
+            },
+            {
+              q: 'Q4_0 e Q4_1 ainda são relevantes?',
+              a: 'Não: ambos são formatos antigos, sem as melhorias dos K-quants. Q4_0 quantiza todos os pesos uniformemente em 4 bits; Q4_1 acrescenta um deslocamento, mas está igualmente superado. Q4_K_M alcança qualidade nitidamente melhor com praticamente o mesmo consumo de memória. Se vir os dois em um repositório, escolha Q4_K_M — Q4_0 e Q4_1 aparecem hoje apenas em uploads de modelos antigos.',
+            },
             { q: 'O Ollama usa automaticamente a melhor quantização?', a: 'Sim — quando você executa `ollama pull llama3.1:8b`, o Ollama baixa a variante Q4_K_M por padrão. Para baixar uma quantização específica, adicione a tag: `ollama pull llama3.1:8b-instruct-q5_K_M`. As tags de quantização disponíveis para cada modelo estão listadas na página do modelo em ollama.com/library.' },
             { q: 'Posso quantizar um modelo eu mesmo em vez de baixar uma versão pré-quantizada?', a: 'Sim — llama.cpp inclui um binário `quantize` que converte arquivos GGUF para qualquer nível de quantização suportado. O processo leva 5–30 minutos dependendo do tamanho do modelo. A maioria dos usuários deve baixar arquivos GGUF pré-quantizados do Hugging Face em vez de quantizar eles mesmos, já que os resultados são equivalentes.' },
             { q: 'A quantização afeta a janela de contexto do modelo?', a: 'Não — a quantização afeta apenas a precisão dos pesos do modelo, não o comprimento do contexto. Um modelo Llama 3.1 8B suporta 128K tokens seja em Q4_K_M ou FP16. No entanto, processar contextos mais longos exige mais RAM independentemente da quantização — processar um contexto de 64K tokens com um modelo 7B Q4_K_M pode exigir 10+ GB de RAM.' },
@@ -2977,6 +3185,26 @@ schema: {
         'mainEntity': [
           {
             '@type': 'Question',
+            'name': 'Was ist Q4_K_XL und lohnt es sich gegenüber Q4_K_M?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Q4_K_XL ist kein Standardformat von llama.cpp, sondern eine Dynamic-GGUF-Variante von Unsloth. Sie behält die 4-Bit-Basis von Q4_K_M bei, speichert die empfindlichsten Schichten aber mit höherer Präzision. Dateigröße und Qualität liegen dadurch zwischen Q4_K_M und Q5_K_M. Es lohnt sich vor allem dann, wenn Q5_K_M knapp nicht mehr in den VRAM passt — passt Q5_K_M, nehmen Sie Q5_K_M, weil es ein Standardformat mit breiterer Tool-Unterstützung ist.' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Q5_K_M oder Q5_K_XL – was ist der Unterschied?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Dasselbe Prinzip wie bei Q4 und Q8: Q5_K_M ist der Standard-K-Quant von llama.cpp, Q5_K_XL die Dynamic-Variante von Unsloth mit höher aufgelösten sensiblen Schichten und entsprechend etwas größerer Datei. Da Q5_K_M bereits unter 1% Qualitätsverlust liegt, ist der praktische Gewinn klein. Prüfen Sie die tatsächliche Dateigröße im Tool, bevor Sie sich für die XL-Variante entscheiden.' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'FP8 oder Q8_0 – was sollte ich nehmen?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Für die lokale Ausführung über llama.cpp, Ollama oder LM Studio ist Q8_0 das relevante Format. FP8 ist ein Datentyp, der vor allem beim Server-Inferencing auf aktueller NVIDIA-Hardware eine Rolle spielt und im GGUF-Ökosystem keine übliche Download-Option ist. Q8_0 liegt bereits unter 0,5% Qualitätsverlust gegenüber FP16, sodass die Entscheidung praktisch zwischen Q8_0 und den kleineren K-Quants fällt.' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Sind Q4_0 und Q4_1 noch relevant?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Nein, beide sind ältere Formate ohne die K-Quant-Verbesserungen. Q4_0 quantisiert alle Gewichte gleichmäßig mit 4 Bit; Q4_1 ergänzt einen Offset, ist aber ebenfalls überholt. Q4_K_M erreicht bei praktisch gleichem Speicherbedarf eine spürbar bessere Qualität. Wenn Sie in einem Repository beide Varianten sehen, nehmen Sie Q4_K_M — Q4_0 und Q4_1 begegnen Ihnen nur noch bei älteren Modell-Uploads.' },
+          },
+          {
+            '@type': 'Question',
             'name': 'Verwendet Ollama automatisch die beste Quantisierung?',
             'acceptedAnswer': { '@type': 'Answer', 'text': 'Ja -- wenn Sie `ollama pull llama3.1:8b` ausführen, lädt Ollama standardmäßig die Q4_K_M-Variante herunter.' },
           },
@@ -3127,6 +3355,10 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Q4_K_M est la quantification par défaut des LLM locaux : un modèle 7B occupe environ 4,5 Go au lieu de ~14 Go en FP16, pour 1–3% de perte de qualité sur MMLU.' },
+            { type: 'plain-terms', text: 'La quantification réduit la taille d\'un modèle d\'IA en stockant ses nombres de façon plus grossière. Q4_K_M est le niveau que presque tout le monde devrait choisir : le modèle tient sur du matériel ordinaire et la différence de qualité se remarque à peine au quotidien. S\'il reste de la VRAM, Q5_K_M ou Q8_0 entrent en jeu.' },
+          ],
           items: [
             'La quantification convertit les poids 16 bits en 4 bits ou 8 bits, réduisant la RAM de 50-75%.',
             '**Q4_K_M** est le niveau standard recommandé -- meilleur équilibre entre qualité et RAM pour le matériel grand public.',
@@ -3198,6 +3430,20 @@ schema: {
             { 'Format': 'Q4_K_M', 'Méthode': 'K-quant, 4/6 bits mixte', 'RAM (7B)': '~4.5 GB', 'Qualité': '1–3% de perte vs FP16', 'À choisir quand': 'Par défaut pour presque tout le monde' },
           ],
           columns: ['Format', 'Méthode', 'RAM (7B)', 'Qualité', 'À choisir quand'],
+        },
+        compareQ4KMQ4KXL: {
+          id: 'q4-k-m-vs-q4-k-xl',
+          title: 'Q4_K_M vs Q4_K_XL : K-quant standard vs upcast dynamique',
+          content: [
+            '**Q4_K_M est le K-quant 4 bits standard de llama.cpp. Q4_K_XL n\'est pas un type standard : c\'est une variante GGUF "Dynamic" d\'Unsloth qui conserve une base 4 bits mais remonte en précision les couches les plus sensibles (embeddings, attention et sortie).** La taille de fichier et la qualité se situent entre Q4_K_M et Q5_K_M — le même principe que Q8_K_XL applique au-dessus de Q8_0, mais sur une base 4 bits.',
+            'Les tailles exactes de Q4_K_XL varient selon le modèle et selon le nombre de couches remontées par Unsloth : vérifiez la taille affichée dans LM Studio ou sur Hugging Face avant de télécharger plutôt que de tabler sur un chiffre fixe. Règle pratique : si Q5_K_M tient dans votre VRAM, prenez Q5_K_M — c\'est un format standard, mieux pris en charge par les outils. Q4_K_XL est l\'étape intermédiaire lorsque Q4_K_M passe mais que Q5_K_M dépasse de peu.',
+          ],
+          rows: [
+            { 'Format': 'Q4_K_M', 'Type': 'llama.cpp standard', 'Précision': 'Mixte 4/6 bits', 'Qualité': '1–3% de perte', 'Choisir quand': 'Choix par défaut pour presque tous' },
+            { 'Format': 'Q4_K_XL', 'Type': 'Unsloth Dynamic', 'Précision': '4 bits + couches sensibles plus hautes', 'Qualité': 'Entre Q4_K_M et Q5_K_M', 'Choisir quand': 'Q5_K_M dépasse de peu la VRAM' },
+            { 'Format': 'Q5_K_M', 'Type': 'llama.cpp standard', 'Précision': 'Mixte 5/6 bits', 'Qualité': 'Moins de 1% de perte', 'Choisir quand': 'VRAM disponible, outils standard' },
+          ],
+          columns: ['Format', 'Type', 'Précision', 'Qualité', 'Choisir quand'],
         },
         compareQ4KMQ4KS: {
           id: 'q4-k-m-vs-q4-k-s',
@@ -3420,6 +3666,22 @@ schema: {
           title: 'Questions fréquemment posées sur la quantification LLM',
           faqs: [
             {
+              q: 'Qu\'est-ce que Q4_K_XL et cela vaut-il le coup face à Q4_K_M ?',
+              a: 'Q4_K_XL n\'est pas un format standard de llama.cpp mais une variante GGUF Dynamic d\'Unsloth. Elle conserve la base 4 bits de Q4_K_M mais stocke les couches les plus sensibles avec plus de précision, si bien que taille et qualité se situent entre Q4_K_M et Q5_K_M. L\'intérêt est surtout réel quand Q5_K_M dépasse de peu votre VRAM : si Q5_K_M tient, prenez Q5_K_M, car c\'est un format standard mieux pris en charge.',
+            },
+            {
+              q: 'Q5_K_M ou Q5_K_XL : quelle différence ?',
+              a: 'Le même principe qu\'en Q4 et Q8 : Q5_K_M est le K-quant standard de llama.cpp, Q5_K_XL la variante Dynamic d\'Unsloth, avec des couches sensibles en meilleure résolution et un fichier un peu plus gros. Comme Q5_K_M reste déjà sous 1% de perte de qualité, le gain pratique est faible. Vérifiez la taille réelle du fichier dans votre outil avant d\'opter pour la variante XL.',
+            },
+            {
+              q: 'FP8 ou Q8_0 : que choisir ?',
+              a: 'Pour l\'exécution locale via llama.cpp, Ollama ou LM Studio, le format pertinent est Q8_0. FP8 est un type de données qui compte surtout pour l\'inférence serveur sur matériel NVIDIA récent et n\'est pas une option de téléchargement courante dans l\'écosystème GGUF. Q8_0 reste déjà sous 0,5% de perte face à FP16 : le vrai choix se joue donc entre Q8_0 et les K-quants plus petits.',
+            },
+            {
+              q: 'Q4_0 et Q4_1 sont-ils encore pertinents ?',
+              a: 'Non : ce sont des formats anciens, sans les améliorations des K-quants. Q4_0 quantifie tous les poids uniformément sur 4 bits ; Q4_1 ajoute un décalage mais est tout aussi dépassé. Q4_K_M atteint une qualité nettement meilleure pour une empreinte mémoire quasi identique. Si vous voyez les deux dans un dépôt, prenez Q4_K_M — Q4_0 et Q4_1 ne se rencontrent plus que sur d\'anciens dépôts de modèles.',
+            },
+            {
               q: 'Ollama utilise-t-il automatiquement la meilleure quantification ?',
               a: 'Oui -- lorsque vous exécutez `ollama pull llama3.1:8b`, Ollama télécharge la variante Q4_K_M par défaut. Pour tirer une quantification spécifique, ajoutez le tag : `ollama pull llama3.1:8b-instruct-q5_K_M`. Les tags de quantification disponibles pour chaque modèle sont listés sur la page du modèle sur ollama.com/library.',
             },
@@ -3584,6 +3846,26 @@ schema: {
         'mainEntity': [
           {
             '@type': 'Question',
+            'name': 'Qu\'est-ce que Q4_K_XL et cela vaut-il le coup face à Q4_K_M ?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Q4_K_XL n\'est pas un format standard de llama.cpp mais une variante GGUF Dynamic d\'Unsloth. Elle conserve la base 4 bits de Q4_K_M mais stocke les couches les plus sensibles avec plus de précision, si bien que taille et qualité se situent entre Q4_K_M et Q5_K_M. L\'intérêt est surtout réel quand Q5_K_M dépasse de peu votre VRAM : si Q5_K_M tient, prenez Q5_K_M, car c\'est un format standard mieux pris en charge.' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Q5_K_M ou Q5_K_XL : quelle différence ?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Le même principe qu\'en Q4 et Q8 : Q5_K_M est le K-quant standard de llama.cpp, Q5_K_XL la variante Dynamic d\'Unsloth, avec des couches sensibles en meilleure résolution et un fichier un peu plus gros. Comme Q5_K_M reste déjà sous 1% de perte de qualité, le gain pratique est faible. Vérifiez la taille réelle du fichier dans votre outil avant d\'opter pour la variante XL.' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'FP8 ou Q8_0 : que choisir ?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Pour l\'exécution locale via llama.cpp, Ollama ou LM Studio, le format pertinent est Q8_0. FP8 est un type de données qui compte surtout pour l\'inférence serveur sur matériel NVIDIA récent et n\'est pas une option de téléchargement courante dans l\'écosystème GGUF. Q8_0 reste déjà sous 0,5% de perte face à FP16 : le vrai choix se joue donc entre Q8_0 et les K-quants plus petits.' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Q4_0 et Q4_1 sont-ils encore pertinents ?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Non : ce sont des formats anciens, sans les améliorations des K-quants. Q4_0 quantifie tous les poids uniformément sur 4 bits ; Q4_1 ajoute un décalage mais est tout aussi dépassé. Q4_K_M atteint une qualité nettement meilleure pour une empreinte mémoire quasi identique. Si vous voyez les deux dans un dépôt, prenez Q4_K_M — Q4_0 et Q4_1 ne se rencontrent plus que sur d\'anciens dépôts de modèles.' },
+          },
+          {
+            '@type': 'Question',
             'name': 'Ollama utilise-t-il automatiquement la meilleure quantification ?',
             'acceptedAnswer': { '@type': 'Answer', 'text': 'Oui -- lorsque vous exécutez `ollama pull llama3.1:8b`, Ollama télécharge la variante Q4_K_M par défaut.' },
           },
@@ -3724,6 +4006,10 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Q4_K_Mはローカルモデルの標準的な量子化です。7BモデルがFP16の約14 GBに対して約4.5 GBに収まり、MMLUでの品質劣化は1〜3%にとどまります。' },
+            { type: 'plain-terms', text: '量子化とは、モデル内部の数値を粗く保存してサイズを小さくする仕組みです。Q4_K_Mはほとんどの人が選ぶべき水準で、普通のパソコンに収まり、日常的な用途では品質の違いをほとんど感じません。VRAMに余裕があればQ5_K_MやQ8_0も選択肢になります。' },
+          ],
           items: [
             '量子化はモデルの重みを16ビットから4～8ビットに圧縮し、RAM使用量を50～75%削減する技術です。',
             '**Q4_K_M**は標準推奨レベル -- 品質とRAMのバランスが最適な一般的なユースケース向けです。',
@@ -3795,6 +4081,20 @@ schema: {
             { '形式': 'Q4_K_M', '方式': 'K-quant、4/6ビット混合', 'RAM (7B)': '約4.5GB', '品質': 'FP16比1～3%低下', '選ぶ場面': 'ほぼ全員のデフォルト' },
           ],
           columns: ['形式', '方式', 'RAM (7B)', '品質', '選ぶ場面'],
+        },
+        compareQ4KMQ4KXL: {
+          id: 'q4-k-m-vs-q4-k-xl',
+          title: 'Q4_K_M vs Q4_K_XL：標準K-quantとDynamic Upcastの違い',
+          content: [
+            '**Q4_K_Mはllama.cppの標準的な4ビットK-quantです。Q4_K_XLは標準タイプではなく、Unslothの「Dynamic」GGUFバリアントで、4ビットを基本としながら最も影響の大きい層（埋め込み・アテンション・出力）だけを高い精度に引き上げます。** ファイルサイズと品質はQ4_K_MとQ5_K_Mの中間に位置します。Q8_K_XLがQ8_0に対して行っているのと同じ仕組みを、4ビットの土台に適用したものです。',
+            'Q4_K_XLの正確なファイルサイズはモデルごと、またUnslothが引き上げる層の数によって変わります。固定の数値を前提にせず、LM StudioやHugging Faceに表示されるサイズをダウンロード前に確認してください。実用的な判断基準として、Q5_K_MがVRAMに収まるならQ5_K_Mを選びます。標準フォーマットでツールの対応範囲が広いためです。Q4_K_XLは、Q4_K_Mは収まるがQ5_K_Mはわずかに収まらない場合の中間手段です。',
+          ],
+          rows: [
+            { 'フォーマット': 'Q4_K_M', '種類': 'llama.cpp標準', '精度': '4/6ビット混在', '品質': '1〜3%の劣化', '選ぶ場面': 'ほぼ全員の標準' },
+            { 'フォーマット': 'Q4_K_XL', '種類': 'Unsloth Dynamic', '精度': '4ビット＋重要層は高精度', '品質': 'Q4_K_MとQ5_K_Mの中間', '選ぶ場面': 'Q5_K_Mがわずかに収まらない' },
+            { 'フォーマット': 'Q5_K_M', '種類': 'llama.cpp標準', '精度': '5/6ビット混在', '品質': '1%未満の劣化', '選ぶ場面': 'VRAMに余裕、標準ツール' },
+          ],
+          columns: ['フォーマット', '種類', '精度', '品質', '選ぶ場面'],
         },
         compareQ4KMQ4KS: {
           id: 'q4-k-m-vs-q4-k-s',
@@ -4017,6 +4317,22 @@ schema: {
           title: 'LLM量子化についてのよくある質問',
           faqs: [
             {
+              q: 'Q4_K_XLとは何ですか。Q4_K_Mより優れていますか？',
+              a: 'Q4_K_XLはllama.cppの標準フォーマットではなく、UnslothのDynamic GGUFバリアントです。Q4_K_Mと同じ4ビットを基本としながら、最も影響の大きい層をより高い精度で保存するため、ファイルサイズと品質はQ4_K_MとQ5_K_Mの中間になります。価値があるのは主に、Q5_K_MがVRAMにわずかに収まらない場合です。Q5_K_Mが収まるならQ5_K_Mを選んでください。標準フォーマットでツールの対応が広いためです。',
+            },
+            {
+              q: 'Q5_K_MとQ5_K_XLの違いは何ですか？',
+              a: 'Q4やQ8と同じ仕組みです。Q5_K_Mはllama.cppの標準K-quant、Q5_K_XLはUnslothのDynamicバリアントで、重要な層をより高い解像度で保持する分ファイルがやや大きくなります。Q5_K_Mは既に品質劣化が1%未満のため、実用上の差は小さめです。XLバリアントを選ぶ前に、ツール上で実際のファイルサイズを確認してください。',
+            },
+            {
+              q: 'FP8とQ8_0のどちらを使うべきですか？',
+              a: 'llama.cpp、Ollama、LM Studioでローカル実行する場合に関係するのはQ8_0です。FP8は主に現行のNVIDIAハードウェアでのサーバー推論で意味を持つデータ型で、GGUFの配布形式として一般的な選択肢ではありません。Q8_0はすでにFP16比0.5%未満の劣化に収まっているため、実際の判断はQ8_0とより小さいK-quantのどちらを取るかになります。',
+            },
+            {
+              q: 'Q4_0やQ4_1は今も使う意味がありますか？',
+              a: 'ありません。どちらもK-quantの改良が入る前の古いフォーマットです。Q4_0はすべての重みを一律4ビットで量子化し、Q4_1はオフセットを加えたものですが、いずれも役割を終えています。Q4_K_Mはほぼ同じメモリ使用量で明確に高い品質を得られます。リポジトリで両方を見かけた場合はQ4_K_Mを選んでください。Q4_0とQ4_1は古いモデルのアップロードでのみ見かけます。',
+            },
+            {
               q: 'Ollamaは自動的に最適な量子化を使用しますか？',
               a: 'はい -- `ollama pull llama3.1:8b`を実行すると、Ollamaはデフォルトでq4_k_mバリアントをダウンロードします。特定の量子化を取得するには、タグを追加してください：`ollama pull llama3.1:8b-instruct-q5_K_M`。各モデルの利用可能な量子化タグはollama.com/libraryのモデルページに表示されます。',
             },
@@ -4181,6 +4497,26 @@ schema: {
         'mainEntity': [
           {
             '@type': 'Question',
+            'name': 'Q4_K_XLとは何ですか。Q4_K_Mより優れていますか？',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Q4_K_XLはllama.cppの標準フォーマットではなく、UnslothのDynamic GGUFバリアントです。Q4_K_Mと同じ4ビットを基本としながら、最も影響の大きい層をより高い精度で保存するため、ファイルサイズと品質はQ4_K_MとQ5_K_Mの中間になります。価値があるのは主に、Q5_K_MがVRAMにわずかに収まらない場合です。Q5_K_Mが収まるならQ5_K_Mを選んでください。標準フォーマットでツールの対応が広いためです。' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Q5_K_MとQ5_K_XLの違いは何ですか？',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Q4やQ8と同じ仕組みです。Q5_K_Mはllama.cppの標準K-quant、Q5_K_XLはUnslothのDynamicバリアントで、重要な層をより高い解像度で保持する分ファイルがやや大きくなります。Q5_K_Mは既に品質劣化が1%未満のため、実用上の差は小さめです。XLバリアントを選ぶ前に、ツール上で実際のファイルサイズを確認してください。' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'FP8とQ8_0のどちらを使うべきですか？',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'llama.cpp、Ollama、LM Studioでローカル実行する場合に関係するのはQ8_0です。FP8は主に現行のNVIDIAハードウェアでのサーバー推論で意味を持つデータ型で、GGUFの配布形式として一般的な選択肢ではありません。Q8_0はすでにFP16比0.5%未満の劣化に収まっているため、実際の判断はQ8_0とより小さいK-quantのどちらを取るかになります。' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Q4_0やQ4_1は今も使う意味がありますか？',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'ありません。どちらもK-quantの改良が入る前の古いフォーマットです。Q4_0はすべての重みを一律4ビットで量子化し、Q4_1はオフセットを加えたものですが、いずれも役割を終えています。Q4_K_Mはほぼ同じメモリ使用量で明確に高い品質を得られます。リポジトリで両方を見かけた場合はQ4_K_Mを選んでください。Q4_0とQ4_1は古いモデルのアップロードでのみ見かけます。' },
+          },
+          {
+            '@type': 'Question',
             'name': 'Ollamaは自動的に最適な量子化を使用しますか？',
             'acceptedAnswer': { '@type': 'Answer', 'text': 'はい -- `ollama pull llama3.1:8b`を実行すると、OllamaはデフォルトでQ4_K_Mバリアントをダウンロードします。' },
           },
@@ -4321,6 +4657,10 @@ schema: {
           id: 'key-takeaways',
 
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Q4_K_M 是本地 LLM 的标准量化级别：7B 模型约占 4.5 GB，而 FP16 需要约 14 GB，在 MMLU 上的质量损失为 1–3%。' },
+            { type: 'plain-terms', text: '量化就是把模型内部的数字存得更粗略，从而缩小体积。Q4_K_M 是绝大多数人应该选择的级别：模型能装进普通电脑，日常使用几乎察觉不到质量差别。如果显存有富余，可以考虑 Q5_K_M 或 Q8_0。' },
+          ],
           items: [
             '量化将模型权重从32位压缩到4～8位，RAM使用量减少50～75%。',
             '**Q4_K_M**是标准推荐级别----质量与RAM的最佳平衡，适用于消费级硬件。',
@@ -4392,6 +4732,20 @@ schema: {
             { '格式': 'Q4_K_M', '方法': 'K-quant，混合4/6位', 'RAM (7B)': '~4.5 GB', '质量': '相比FP16损失1～3%', '选择时机': '几乎所有人的默认选择' },
           ],
           columns: ['格式', '方法', 'RAM (7B)', '质量', '选择时机'],
+        },
+        compareQ4KMQ4KXL: {
+          id: 'q4-k-m-vs-q4-k-xl',
+          title: 'Q4_K_M 与 Q4_K_XL：标准 K-quant 和 Dynamic Upcast',
+          content: [
+            '**Q4_K_M 是 llama.cpp 的标准 4 位 K-quant。Q4_K_XL 并非标准类型，而是 Unsloth 的「Dynamic」GGUF 变体：它保持 4 位基础，但把最敏感的层（嵌入层、注意力层和输出层）提升到更高精度。** 文件大小和质量介于 Q4_K_M 与 Q5_K_M 之间——这与 Q8_K_XL 相对于 Q8_0 的做法是同一原理，只是应用在 4 位基础上。',
+            'Q4_K_XL 的具体文件大小因模型而异，也取决于 Unsloth 提升了多少层，因此下载前请查看 LM Studio 或 Hugging Face 上显示的实际大小，不要按固定数值估算。实用原则：如果 Q5_K_M 能装进你的显存，就选 Q5_K_M——它是标准格式，工具支持更广。Q4_K_XL 适用于 Q4_K_M 装得下、而 Q5_K_M 差一点装不下的情况。',
+          ],
+          rows: [
+            { '格式': 'Q4_K_M', '类型': 'llama.cpp 标准', '精度': '4/6 位混合', '质量': '1–3% 损失', '适用场景': '绝大多数人的默认选择' },
+            { '格式': 'Q4_K_XL', '类型': 'Unsloth Dynamic', '精度': '4 位＋敏感层更高精度', '质量': '介于 Q4_K_M 和 Q5_K_M', '适用场景': 'Q5_K_M 差一点装不下' },
+            { '格式': 'Q5_K_M', '类型': 'llama.cpp 标准', '精度': '5/6 位混合', '质量': '低于 1% 损失', '适用场景': '显存有余，使用标准工具' },
+          ],
+          columns: ['格式', '类型', '精度', '质量', '适用场景'],
         },
         compareQ4KMQ4KS: {
           id: 'q4-k-m-vs-q4-k-s',
@@ -4614,6 +4968,22 @@ schema: {
           title: '关于大语言模型量化的常见问题',
           faqs: [
             {
+              q: '什么是 Q4_K_XL？相比 Q4_K_M 值得用吗？',
+              a: 'Q4_K_XL 不是 llama.cpp 的标准格式，而是 Unsloth 的 Dynamic GGUF 变体。它保持 Q4_K_M 的 4 位基础，但以更高精度存储最敏感的层，因此文件大小和质量介于 Q4_K_M 与 Q5_K_M 之间。主要在 Q5_K_M 差一点装不进显存时才值得选用；如果 Q5_K_M 装得下，就选 Q5_K_M，因为它是标准格式，工具支持更广。',
+            },
+            {
+              q: 'Q5_K_M 和 Q5_K_XL 有什么区别？',
+              a: '原理与 Q4、Q8 相同：Q5_K_M 是 llama.cpp 的标准 K-quant，Q5_K_XL 是 Unsloth 的 Dynamic 变体，敏感层分辨率更高，文件也相应更大。由于 Q5_K_M 的质量损失已低于 1%，实际收益很小。选择 XL 变体前，请先在工具中查看实际文件大小。',
+            },
+            {
+              q: 'FP8 和 Q8_0 应该选哪个？',
+              a: '通过 llama.cpp、Ollama 或 LM Studio 在本地运行时，相关的格式是 Q8_0。FP8 主要用于当前 NVIDIA 硬件上的服务器推理，在 GGUF 生态中并不是常见的下载选项。Q8_0 相对 FP16 的质量损失已低于 0.5%，因此真正的取舍是在 Q8_0 与更小的 K-quant 之间。',
+            },
+            {
+              q: 'Q4_0 和 Q4_1 现在还有用吗？',
+              a: '没有了。两者都是没有 K-quant 改进的旧格式。Q4_0 将所有权重统一量化为 4 位；Q4_1 增加了一个偏移量，但同样已被取代。在内存占用几乎相同的情况下，Q4_K_M 的质量明显更好。如果在仓库中同时看到它们，请选 Q4_K_M——Q4_0 和 Q4_1 现在只出现在较早的模型上传中。',
+            },
+            {
               q: 'Ollama会自动使用最佳量化吗？',
               a: '是的----运行`ollama pull llama3.1:8b`时，Ollama默认下载Q4_K_M变体。要获取特定量化，请附加标签：`ollama pull llama3.1:8b-instruct-q5_K_M`。每个模型的可用量化标签列在ollama.com/library上的模型页面上。',
             },
@@ -4769,6 +5139,26 @@ schema: {
         'mainEntity': [
           {
             '@type': 'Question',
+            'name': '什么是 Q4_K_XL？相比 Q4_K_M 值得用吗？',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Q4_K_XL 不是 llama.cpp 的标准格式，而是 Unsloth 的 Dynamic GGUF 变体。它保持 Q4_K_M 的 4 位基础，但以更高精度存储最敏感的层，因此文件大小和质量介于 Q4_K_M 与 Q5_K_M 之间。主要在 Q5_K_M 差一点装不进显存时才值得选用；如果 Q5_K_M 装得下，就选 Q5_K_M，因为它是标准格式，工具支持更广。' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Q5_K_M 和 Q5_K_XL 有什么区别？',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '原理与 Q4、Q8 相同：Q5_K_M 是 llama.cpp 的标准 K-quant，Q5_K_XL 是 Unsloth 的 Dynamic 变体，敏感层分辨率更高，文件也相应更大。由于 Q5_K_M 的质量损失已低于 1%，实际收益很小。选择 XL 变体前，请先在工具中查看实际文件大小。' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'FP8 和 Q8_0 应该选哪个？',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '通过 llama.cpp、Ollama 或 LM Studio 在本地运行时，相关的格式是 Q8_0。FP8 主要用于当前 NVIDIA 硬件上的服务器推理，在 GGUF 生态中并不是常见的下载选项。Q8_0 相对 FP16 的质量损失已低于 0.5%，因此真正的取舍是在 Q8_0 与更小的 K-quant 之间。' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Q4_0 和 Q4_1 现在还有用吗？',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '没有了。两者都是没有 K-quant 改进的旧格式。Q4_0 将所有权重统一量化为 4 位；Q4_1 增加了一个偏移量，但同样已被取代。在内存占用几乎相同的情况下，Q4_K_M 的质量明显更好。如果在仓库中同时看到它们，请选 Q4_K_M——Q4_0 和 Q4_1 现在只出现在较早的模型上传中。' },
+          },
+          {
+            '@type': 'Question',
             'name': 'Ollama会自动使用最佳量化吗？',
             'acceptedAnswer': { '@type': 'Answer', 'text': '是的----运行`ollama pull llama3.1:8b`时，Ollama默认下载Q4_K_M变体。' },
           },
@@ -4916,6 +5306,26 @@ schema: {
         '@context': 'https://schema.org',
         '@type': 'FAQPage',
         'mainEntity': [
+          {
+            '@type': 'Question',
+            'name': 'Q4_K_XL은 무엇이고 Q4_K_M보다 나을까요?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Q4_K_XL은 llama.cpp의 표준 형식이 아니라 Unsloth의 Dynamic GGUF 변형입니다. Q4_K_M과 같은 4비트 기반을 유지하면서 가장 민감한 레이어를 더 높은 정밀도로 저장하므로, 파일 크기와 품질이 Q4_K_M과 Q5_K_M 사이에 놓입니다. Q5_K_M이 VRAM에 아슬아슬하게 들어가지 않을 때 주로 의미가 있습니다. Q5_K_M이 들어간다면 표준 형식이고 도구 지원이 넓은 Q5_K_M을 선택하세요.' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Q5_K_M과 Q5_K_XL은 무엇이 다른가요?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'Q4, Q8과 같은 원리입니다. Q5_K_M은 llama.cpp의 표준 K-quant이고, Q5_K_XL은 민감한 레이어를 더 높은 해상도로 담아 파일이 조금 커지는 Unsloth의 Dynamic 변형입니다. Q5_K_M은 이미 품질 손실이 1% 미만이므로 실질적인 이득은 크지 않습니다. XL 변형을 고르기 전에 도구에서 실제 파일 크기를 확인하세요.' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'FP8과 Q8_0 중 무엇을 써야 하나요?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': 'llama.cpp, Ollama, LM Studio로 로컬 실행할 때 관련 있는 형식은 Q8_0입니다. FP8은 주로 최신 NVIDIA 하드웨어의 서버 추론에서 의미가 있는 자료형이며 GGUF 생태계에서 흔한 다운로드 선택지는 아닙니다. Q8_0은 이미 FP16 대비 품질 손실이 0.5% 미만이므로, 실제 선택은 Q8_0과 더 작은 K-quant 사이에서 이루어집니다.' },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Q4_0과 Q4_1은 아직 의미가 있나요?',
+            'acceptedAnswer': { '@type': 'Answer', 'text': '없습니다. 둘 다 K-quant 개선이 들어가기 전의 오래된 형식입니다. Q4_0은 모든 가중치를 4비트로 균일하게 양자화하고, Q4_1은 오프셋을 더했지만 마찬가지로 대체되었습니다. Q4_K_M은 사실상 같은 메모리 사용량으로 눈에 띄게 나은 품질을 냅니다. 저장소에서 둘 다 보인다면 Q4_K_M을 고르십시오. Q4_0과 Q4_1은 이제 오래된 모델 업로드에서만 보입니다.' },
+          },
           {
             '@type': 'Question',
             'name': 'Ollama는 자동으로 최적의 양자화를 사용합니까?',
@@ -5067,6 +5477,10 @@ schema: {
         tldr: {
           id: 'key-takeaways',
           isTldr: true,
+          snippetBlocks: [
+            { type: 'one-sentence', text: 'Q4_K_M은 로컬 LLM의 표준 양자화입니다. 7B 모델이 FP16의 약 14 GB 대신 약 4.5 GB를 차지하며, MMLU 기준 품질 손실은 1~3%입니다.' },
+            { type: 'plain-terms', text: '양자화는 모델 안의 숫자를 더 거칠게 저장해 크기를 줄이는 방식입니다. Q4_K_M은 거의 모든 사용자가 선택하면 되는 수준으로, 일반적인 하드웨어에 들어가고 일상적인 사용에서는 품질 차이를 거의 느끼기 어렵습니다. VRAM에 여유가 있다면 Q5_K_M이나 Q8_0을 고려할 수 있습니다.' },
+          ],
           items: [
             '양자화는 16비트 모델 가중치를 4비트 또는 8비트로 변환하여 RAM을 50–75% 절약합니다.',
             '**Q4_K_M**은 표준 권장 수준으로, 소비자용 하드웨어에서 품질과 RAM의 최적 균형을 제공합니다.',
@@ -5138,6 +5552,20 @@ schema: {
             { '형식': 'Q4_K_M', '방식': 'K-퀀트, 4/6비트 혼합', 'RAM (7B)': '~4.5 GB', '품질': 'FP16 대비 1–3% 손실', '선택 시기': '거의 모든 사용자에게 기본값' },
           ],
           columns: ['형식', '방식', 'RAM (7B)', '품질', '선택 시기'],
+        },
+        compareQ4KMQ4KXL: {
+          id: 'q4-k-m-vs-q4-k-xl',
+          title: 'Q4_K_M vs Q4_K_XL: 표준 K-quant와 Dynamic Upcast',
+          content: [
+            '**Q4_K_M은 llama.cpp의 표준 4비트 K-quant입니다. Q4_K_XL은 표준 형식이 아니라 Unsloth의 "Dynamic" GGUF 변형으로, 4비트 기반을 유지하면서 가장 민감한 레이어(임베딩, 어텐션, 출력)만 더 높은 정밀도로 올립니다.** 파일 크기와 품질은 Q4_K_M과 Q5_K_M 사이에 위치합니다. Q8_K_XL이 Q8_0에 대해 적용하는 것과 같은 원리를 4비트 기반에 적용한 것입니다.',
+            'Q4_K_XL의 정확한 파일 크기는 모델마다, 그리고 Unsloth가 몇 개 레이어를 올렸는지에 따라 달라집니다. 고정된 수치를 가정하지 말고 LM Studio나 Hugging Face에 표시된 크기를 내려받기 전에 확인하세요. 실용적인 기준은 이렇습니다. Q5_K_M이 VRAM에 들어가면 Q5_K_M을 고르십시오. 표준 형식이라 도구 지원이 넓습니다. Q4_K_XL은 Q4_K_M은 들어가지만 Q5_K_M이 아슬아슬하게 들어가지 않을 때의 중간 단계입니다.',
+          ],
+          rows: [
+            { '형식': 'Q4_K_M', '종류': 'llama.cpp 표준', '정밀도': '4/6비트 혼합', '품질': '1~3% 손실', '선택 기준': '대부분의 사용자에게 기본' },
+            { '형식': 'Q4_K_XL', '종류': 'Unsloth Dynamic', '정밀도': '4비트 + 민감 레이어 상향', '품질': 'Q4_K_M과 Q5_K_M 사이', '선택 기준': 'Q5_K_M이 아슬아슬하게 안 들어갈 때' },
+            { '형식': 'Q5_K_M', '종류': 'llama.cpp 표준', '정밀도': '5/6비트 혼합', '품질': '1% 미만 손실', '선택 기준': 'VRAM 여유, 표준 도구 사용' },
+          ],
+          columns: ['형식', '종류', '정밀도', '품질', '선택 기준'],
         },
         compareQ4KMQ4KS: {
           id: 'q4-k-m-vs-q4-k-s',
@@ -5374,6 +5802,22 @@ schema: {
           id: 'common-questions',
           title: 'LLM 양자화에 관한 자주 묻는 질문',
           faqs: [
+            {
+              q: 'Q4_K_XL은 무엇이고 Q4_K_M보다 나을까요?',
+              a: 'Q4_K_XL은 llama.cpp의 표준 형식이 아니라 Unsloth의 Dynamic GGUF 변형입니다. Q4_K_M과 같은 4비트 기반을 유지하면서 가장 민감한 레이어를 더 높은 정밀도로 저장하므로, 파일 크기와 품질이 Q4_K_M과 Q5_K_M 사이에 놓입니다. Q5_K_M이 VRAM에 아슬아슬하게 들어가지 않을 때 주로 의미가 있습니다. Q5_K_M이 들어간다면 표준 형식이고 도구 지원이 넓은 Q5_K_M을 선택하세요.',
+            },
+            {
+              q: 'Q5_K_M과 Q5_K_XL은 무엇이 다른가요?',
+              a: 'Q4, Q8과 같은 원리입니다. Q5_K_M은 llama.cpp의 표준 K-quant이고, Q5_K_XL은 민감한 레이어를 더 높은 해상도로 담아 파일이 조금 커지는 Unsloth의 Dynamic 변형입니다. Q5_K_M은 이미 품질 손실이 1% 미만이므로 실질적인 이득은 크지 않습니다. XL 변형을 고르기 전에 도구에서 실제 파일 크기를 확인하세요.',
+            },
+            {
+              q: 'FP8과 Q8_0 중 무엇을 써야 하나요?',
+              a: 'llama.cpp, Ollama, LM Studio로 로컬 실행할 때 관련 있는 형식은 Q8_0입니다. FP8은 주로 최신 NVIDIA 하드웨어의 서버 추론에서 의미가 있는 자료형이며 GGUF 생태계에서 흔한 다운로드 선택지는 아닙니다. Q8_0은 이미 FP16 대비 품질 손실이 0.5% 미만이므로, 실제 선택은 Q8_0과 더 작은 K-quant 사이에서 이루어집니다.',
+            },
+            {
+              q: 'Q4_0과 Q4_1은 아직 의미가 있나요?',
+              a: '없습니다. 둘 다 K-quant 개선이 들어가기 전의 오래된 형식입니다. Q4_0은 모든 가중치를 4비트로 균일하게 양자화하고, Q4_1은 오프셋을 더했지만 마찬가지로 대체되었습니다. Q4_K_M은 사실상 같은 메모리 사용량으로 눈에 띄게 나은 품질을 냅니다. 저장소에서 둘 다 보인다면 Q4_K_M을 고르십시오. Q4_0과 Q4_1은 이제 오래된 모델 업로드에서만 보입니다.',
+            },
             {
               q: 'Ollama는 자동으로 최적의 양자화를 사용합니까?',
               a: '그렇습니다 — `ollama pull llama3.1:8b`를 실행하면 Ollama는 기본적으로 Q4_K_M 변형을 다운로드합니다. 특정 양자화를 가져오려면 태그를 추가하십시오: `ollama pull llama3.1:8b-instruct-q5_K_M`. 각 모델의 사용 가능한 양자화 태그는 ollama.com/library의 모델 페이지에 나열되어 있습니다.',
