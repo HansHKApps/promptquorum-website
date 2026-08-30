@@ -21,6 +21,7 @@ every page.
 | 5 | `/de/smart-home/best-mini-pc-home-assistant-local-ai` | 9/10 | **10/10** | **+1** | A | 235 / 6,517 / 3.6% / 6.3 |
 | 6 | `/de/local-llms/llm-quantization-explained` | 7/10 | **10/10** | **+3** | C | 48 / 2,415 / 2.0% / 3.7 |
 | 7 | `/zh/power-local-llm/best-gpu-buying-guide-local-llm-2026` | 6/10 | **10/10** | **+4** | C | 46 / 4,930 / 0.9% / 5.3 |
+| 8 | `/zh/local-llms/apple-silicon-local-llm-guide-2026` | 6/10 | **10/10** | **+4** | C | 163 / 4,648 / 3.5% / 5.1 |
 
 ## Page 1 — /ja/power-local-llm/uncensored-local-llm-creative-writing-ethics
 
@@ -470,3 +471,61 @@ reader the listed figures are international reference prices and points them at 
 current listings and 闲鱼 for used — without fabricating numbers.
 
 **This affects the whole affiliate surface, not just this page.** Needs a per-market pricing pass.
+
+## Page 8 — /zh/local-llms/apple-silicon-local-llm-guide-2026
+
+**6/10 → 10/10.** Red before: #1, #4, #5, #6.
+
+### The query set is conversational, not keyword
+
+The largest query is **13 impressions (32% of everything listed), 0 clicks** — a full sentence:
+
+> 个人做视频剪辑、三维或本地 ai 推理，mac 的 m5、m5 pro、m5 max 三档芯片该怎么选？内存配 32gb 还是 64gb 更合适？
+
+The tail confirms it: `有推荐的吗？`, `512g呢`, `需要`, `性能对比`, `具体参数` are **conversational
+follow-up fragments** — the shape of an AI-assistant session, not keyword search.
+
+### Defects
+
+- **The seoTitle of a local-LLM guide contained no LLM term** — `Apple Silicon 2026：M6至M5 Ultra`.
+  Every query carries `llm`, `大模型` or `ai 推理`. `apple silicon` appears in **no** query.
+- Meta opened with a launch announcement instead of a buying answer.
+- **`视频` / `剪辑` / `三维` had ZERO occurrences** — the exact workloads the top query names.
+- FAQs answered neither 32 vs 64GB nor the three-way chip choice.
+- The `m5Ultra` section title and toc label were month-stamped (`2026年8月更新：…`).
+
+### Fixed
+
+- Title → `Mac 本地大模型 2026：M5 Pro/Max/Ultra` (31 chars)
+- Meta → answer-first: 32GB→13B, 64GB→34B, 128GB→70B, plus the M5 Pro / M5 Max bandwidth gap
+- New `memoryForWorkload` section + toc entry. 视频 0→4, 剪辑 0→7, 三维 0→6
+- FAQs **10 → 14**; month de-stamped from heading and toc (day-precise date stays in body)
+
+Every figure came from the article's own `memoryBandwidth` / `whichMac` sections (M5 150, M6 170,
+M5 Pro 307, M5 Max 614 GB/s). The existing hedge is preserved verbatim: Apple has not published
+M5 Ultra bandwidth, so no tok/s estimate is verified — including this page's own.
+
+---
+
+# ⚠️ Branch incident, 2026-08-30 ~11:56
+
+A parallel session **committed onto this branch and then checked out `main`**, leaving this
+session on `main` mid-task. Reflog:
+
+```
+e1e42e8b0 commit: feat(local-llms): add partial affiliate scaffolding to eu-cloud-gpu-gdpr-2026
+           ^ another session's commit, landed on THIS branch
+           checkout: moving from seo/ja-uncensored-llm-meta-2026-08-30 to main
+```
+
+Consequences caught and corrected:
+- The tracking report appeared "deleted" — it was only ever on the branch, and `main` has no copy.
+- `src/data/seo-changelog.json` in the working tree was **main's version carrying only 1 of the
+  11 entries** from this session. Committing it would have silently destroyed the other 10.
+- Page 8's edits were sitting uncommitted on `main`.
+
+Recovery: verified `apple-silicon-local-llm-guide-2026.ts` was byte-identical on both branches
+(so the edit could be carried safely), discarded the main-based changelog, returned to the branch,
+re-applied the edit and re-logged. All 11 changelog entries and the report are intact.
+
+**`e1e42e8b0` is another session's commit and was left untouched.**

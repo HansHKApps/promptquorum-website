@@ -1368,5 +1368,30 @@
       "ctr": 0.009330628803245436,
       "period": "GSC last 28d as pasted 2026-08-30"
     }
+  },
+  {
+    "id": "6137c6bc-0e25-4df9-876e-66f66ede59cd",
+    "slug": "/zh/local-llms/apple-silicon-local-llm-guide-2026",
+    "date": "2026-08-30T10:03:10.842Z",
+    "fields": [
+      {
+        "field": "seoTitle",
+        "old": "Apple Silicon 2026：M6至M5 Ultra",
+        "new": "Mac 本地大模型 2026：M5 Pro/Max/Ultra"
+      },
+      {
+        "field": "metaDescription",
+        "old": "Apple于2026年8月25日更新了Mac mini（M6、M5 Pro）和Mac Studio（M5 Max、M5 Ultra最高512GB）。完整指南：内存层级、基准测试、Mac选购建议。",
+        "new": "本地大模型选 Mac：32GB 最高跑 13B，64GB 跑到 34B，128GB 跑 70B。M5 Pro 307 GB/s、M5 Max 614 GB/s 的带宽差距与各机型选购建议。"
+      }
+    ],
+    "reason": "geo-meta-optimizer: seoTitle of a local-LLM guide had no LLM term; meta opened with a launch announcement not a buying answer. Top query (13 impr, 32% of listed, 0 clicks) is a conversational buying question about M5/Pro/Max + 32 vs 64GB for video/3D/local AI — 视频/剪辑/三维 had ZERO coverage. Added memoryForWorkload section + 4 FAQs, de-stamped month from heading. 6/10 -> 10/10",
+    "baseline": {
+      "position": 5.1,
+      "impressions": 4648,
+      "clicks": 163,
+      "ctr": 0.03506884681583477,
+      "period": "GSC last 28d as pasted 2026-08-30"
+    }
   }
 ]
