@@ -432,7 +432,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             '**Japan (METI)**',
             'METI cybersecurity guidelines increasingly cover AI tool usage in software development. Qwen3-Coder handles Japanese code comments and variable naming conventions natively -- useful for Japanese-developed codebases with Japanese inline documentation. For compliance records, the Ollama tag (e.g., qwen2.5-coder:32b) provides the exact version identifier required by METI AI governance documentation.',
             '**China**',
-            "Under China's Data Security Law (数据安全法), source code for critical information infrastructure may not be processed by foreign cloud services. Qwen3-Coder (Alibaba, Apache 2.0) is the natural choice for Chinese enterprise coding workflows -- Chinese developer, Apache 2.0 licence, full on-premises deployment via Ollama. As of July 2026, Qwen3-Coder 32B remains the highest-scoring Chinese-origin coding model on HumanEval, though Kimi K2.6 (Moonshot AI) now leads overall on SWE-Bench Pro.",
+            "Under China's Data Security Law (数据安全法), source code for critical information infrastructure may not be processed by foreign cloud services. Qwen3-Coder (Alibaba, Apache 2.0) is the natural choice for Chinese enterprise coding workflows -- Chinese developer, Apache 2.0 licence, full on-premises deployment via Ollama. Qwen3-Coder 32B remains the highest-scoring Chinese-origin coding model on HumanEval, though Kimi K2.6 (Moonshot AI) now leads overall on SWE-Bench Pro.",
           ],
         },
         commonMistakes: {

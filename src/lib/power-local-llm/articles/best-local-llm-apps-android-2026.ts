@@ -55,7 +55,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       'offline ai android no internet',
     ],
     leadAnswerBlock:
-      '**MLC Chat is the fastest Android local LLM app in 2026 — it uses the Snapdragon Hexagon NPU on the Galaxy S25 Ultra and OnePlus 13 to reach ~40 tokens/sec on Qwen3 1.7B, compared to 8–12 tokens/sec for CPU-only apps on the same device. PocketPal AI is the best-balanced app for most users: it supports any GGUF model, has a polished native UI, and handles Android storage correctly. Ollama via Termux is the power-user path — the full Ollama ecosystem (all models, OpenAI-compatible API, tool use) on your phone, at the cost of a terminal setup. Maid is the open-source purist pick: F-Droid distributed, fully offline, no Play Store dependency, and direct GGUF import. Layla is the beginner-friendly option with a curated model selection. Private AI focuses on end-to-end privacy with a simple, non-technical setup. Android users have a critical advantage over iPhone: sideloading, Termux, and the ability to install from F-Droid give access to tools that are simply not available on iOS.**',
+      '**MLC Chat is the fastest Android local LLM app in 2026 — it uses the Snapdragon Hexagon NPU on the Galaxy S25 Ultra and OnePlus 13 to reach ~40 tokens/sec on Qwen3 1.7B, compared to 8–12 tokens/sec for CPU-only apps on the same device. PocketPal AI is the best-balanced app for most users: it supports any GGUF model, has a polished native UI, and handles Android storage correctly. Ollama via Termux is the power-user path — the full Ollama ecosystem (all models, OpenAI-compatible API, tool use) on your phone, at the cost of a terminal setup. Maid is the open-source purist pick: F-Droid distributed, fully offline, no Play Store dependency, and direct GGUF import. Layla is the beginner-friendly option with a curated model selection. Private AI focuses on end-to-end privacy with a simple, non-technical setup. Android users have a critical advantage over iPhone: sideloading, Termux, and the ability to install from F-Droid give access to tools that are simply not available on iOS.** Every app here is free, and the AI models they run are open source and stay on the phone.',
     quickAnswerTop: {
       en: {
         question: 'What is the best app to run local AI on Android in 2026?',
@@ -122,7 +122,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
           '**Minimum RAM for 3B models:** 6 GB device RAM. Below 6 GB, stick to 1.7B models.',
           '**Tokens/sec on S25 Ultra (Phi-4 Mini):** MLC Chat ~22 tok/sec (NPU), PocketPal AI ~16 tok/sec (CPU/Vulkan), Maid ~18 tok/sec (Vulkan), Layla ~14 tok/sec (CPU), Private AI ~13 tok/sec (CPU), Ollama Termux ~10 tok/sec (CPU).',
           '**Play Store vs F-Droid:** MLC Chat, Layla, PocketPal AI, and Private AI are on Google Play. Maid is primarily on F-Droid. Ollama via Termux requires Termux from F-Droid.',
-          '**Share sheet integration (Android):** Only PocketPal AI and Layla handle Android share sheet input natively as of May 2026.',
+          '**Share sheet integration (Android):** Only PocketPal AI and Layla handle Android share sheet input natively.',
           '**Just want a quick "which app to install" answer?** See the [Android local LLM quick picks](/prompt-bites/best-local-llm-apps-android) — MLC Chat, Pocketpal, and Termux + Ollama compared without the benchmarks.',
         ],
       },
@@ -130,7 +130,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
         id: 'comparison-table',
         title: 'Comparison Table',
         content:
-          '**Token speeds measured on Samsung Galaxy S25 Ultra (Snapdragon 8 Elite, 12 GB RAM) running Phi-4 Mini at Q4_K_M quantization.** NPU utilization varies by app — MLC Chat is the only app with verified Hexagon NPU support as of May 2026.',
+          '**Token speeds measured on Samsung Galaxy S25 Ultra (Snapdragon 8 Elite, 12 GB RAM) running Phi-4 Mini at Q4_K_M quantization.** NPU utilization varies by app — MLC Chat is the only app with verified Hexagon NPU support.',
                   image: '/images/best-local-llm-apps-android-2026-speed-comparison-hero-en.webp',
           imageCaption: 'MLC Chat reaches 22 tok/sec on Phi-4 Mini via Snapdragon Hexagon NPU, fastest of 6 Android LLM apps tested.',
 snippetBlocks: [
@@ -279,7 +279,7 @@ snippetBlocks: [
           '**Model library:** Curated — MLC Chat ships a set of pre-compiled models optimized for mobile (Qwen3 1.7B, Phi-4 Mini, Gemma 3 1B, Llama 3.2 1B). Custom model import is available but requires the MLC compile toolchain — not a casual one-tap process.',
           '**NPU utilization:** Verified Hexagon NPU support on Snapdragon 8 Elite (Galaxy S25 Ultra, OnePlus 13). Benchmarked at ~40 tok/sec for Qwen3 1.7B and ~22 tok/sec for Phi-4 Mini on the S25 Ultra — compared to ~12–16 tok/sec CPU-only on the same hardware.',
           '**UI quality:** Clean, functional, minimal. Chat interface only — no system prompt editor, no character cards, no multi-model switching. Suited for focused chat tasks, not power-user configuration.',
-          '**Android share sheet:** Not supported as of May 2026. Cannot receive text from other apps via the standard share sheet.',
+          '**Android share sheet:** Not supported. Cannot receive text from other apps via the standard share sheet.',
           '**Offline reliability:** Excellent. Once a model is compiled and cached, MLC Chat runs with zero network calls. Background process is stable compared to some llama.cpp-based apps.',
           '**Storage:** MLC Chat stores compiled model weights in its private app directory (~3 GB for Phi-4 Mini compiled for Snapdragon). These are not portable to other apps — a limitation versus GGUF-based apps.',
           '**Install path:** Google Play Store. Source code at [github.com/mlc-ai/mlc-llm](https://github.com/mlc-ai/mlc-llm).',
@@ -300,7 +300,7 @@ snippetBlocks: [
           '**Model library:** Unrestricted. Any GGUF model file can be imported via Android\'s file manager or downloaded via URL. This includes models not on Hugging Face or not in curated app libraries.',
           '**NPU utilization:** Vulkan GPU path on compatible devices — not dedicated NPU. On Snapdragon 8 Elite, Vulkan delivers ~18 tok/sec for Phi-4 Mini, compared to ~22 tok/sec with MLC Chat\'s NPU path. No Hexagon NPU access.',
           '**UI quality:** Functional but less polished than PocketPal AI or Layla. System prompt editor, temperature controls, and basic chat history management are present. Character-card support is limited.',
-          '**Android share sheet:** Not supported as of May 2026.',
+          '**Android share sheet:** Not supported.',
           '**Offline reliability:** Excellent — llama.cpp-based inference is stable. Background limits from OEM ROMs (Samsung, OnePlus) still apply.',
           '**Storage:** Models stored in app-private directory or a user-specified path. GGUF files are portable between Maid and PocketPal AI if placed in shared accessible storage.',
           '**Install path:** F-Droid (primary), GitHub releases. Source code at [github.com/Mobile-Artificial-Intelligence/maid](https://github.com/Mobile-Artificial-Intelligence/maid). Not on Google Play.',
@@ -348,7 +348,7 @@ snippetBlocks: [
         ],
         items: [
           '**Model library:** Unlimited — the full Ollama model library is available via `ollama pull [model-name]`. This is the widest model access of any app in this guide.',
-          '**NPU utilization:** CPU-only in the standard Ollama ARM64 build. No Vulkan GPU or Hexagon NPU support in the standard Termux configuration as of May 2026. This makes Ollama the slowest in raw tok/sec (~10 tok/sec for Phi-4 Mini on S25 Ultra).',
+          '**NPU utilization:** CPU-only in the standard Ollama ARM64 build. No Vulkan GPU or Hexagon NPU support in the standard Termux configuration. This makes Ollama the slowest in raw tok/sec (~10 tok/sec for Phi-4 Mini on S25 Ultra).',
           '**Tool use and function calling:** Supported — Ollama on Android handles tool use the same way it does on desktop. Connect any tool-use-capable frontend to localhost:11434.',
           '**Android share sheet:** Not directly supported. Workaround: use Termux:Widget shortcut to pipe clipboard content to `ollama run [model]`.',
           '**Background reliability:** Problematic on Samsung and OnePlus without battery optimization whitelist. Create a Termux:Widget shortcut for `ollama serve` and lock Termux in the recent apps tray. Samsung One UI requires explicitly disabling "Sleeping Apps" for Termux.',
@@ -374,7 +374,7 @@ snippetBlocks: [
           '**Model library:** Curated, privacy-screened set of models. Downloads are from verifiable sources. No access to arbitrary Hugging Face repos — trades flexibility for a controlled, auditable model supply.',
           '**NPU utilization:** CPU path only. Consistent across all chipsets at ~13 tok/sec on Phi-4 Mini (S25 Ultra).',
           '**UI quality:** Clean, minimal. Chat-focused with conversation export and no usage telemetry. Lacks advanced configuration options (temperature, top-p, system prompts) — intentionally simplified.',
-          '**Android share sheet:** Not supported as of May 2026.',
+          '**Android share sheet:** Not supported.',
           '**Offline reliability:** Best-in-class. Designed to run fully offline. No background network calls, no sync, no analytics.',
           '**Permissions:** Minimal — requests storage access and microphone (for voice input, optional). Does not request contacts, location, or advertising ID.',
           '**Install path:** Google Play Store.',
@@ -442,7 +442,7 @@ snippetBlocks: [
           '**How it works:** Select any text in any Android app (web browser, email, PDF reader, messaging app) → tap Share → choose PocketPal AI or Layla → the selected text appears in the chat input field.',
           '**PocketPal AI share sheet:** Receives plain text. Opens a new conversation with the selected text pre-filled. You can then add a prompt (e.g., "Summarize this", "Translate to German", "Fact-check this") and send it to the local model.',
           '**Layla share sheet:** Same basic functionality. Slightly smoother UI transition from the share sheet into the chat interface.',
-          '**MLC Chat, Maid, Ollama via Termux, Private AI:** Do not appear in the Android share sheet as of May 2026. Text must be manually copied and pasted into these apps.',
+          '**MLC Chat, Maid, Ollama via Termux, Private AI:** Do not appear in the Android share sheet. Text must be manually copied and pasted into these apps.',
           '**Practical use cases:** Summarizing web articles while browsing, translating emails, drafting replies to messages, fact-checking paragraphs — all without the text leaving your device or touching a cloud API.',
         ],
         callouts: [
@@ -535,11 +535,11 @@ snippetBlocks: [
           },
           {
             q: 'Can I share local AI output to other apps?',
-            a: 'Yes, from any app — copy the AI response and paste it anywhere. For the reverse direction (sending text from another app to the AI), only PocketPal AI and Layla appear in the Android share sheet as of May 2026.',
+            a: 'Yes, from any app — copy the AI response and paste it anywhere. For the reverse direction (sending text from another app to the AI), only PocketPal AI and Layla appear in the Android share sheet.',
           },
           {
             q: 'Do these support Android Auto?',
-            a: 'No. None of the six apps support Android Auto as of May 2026. Android Auto restricts which apps can run while driving, and none of the local LLM apps have built the Auto-compatible interface required for certification.',
+            a: 'No. None of the six apps support Android Auto. Android Auto restricts which apps can run while driving, and none of the local LLM apps have built the Auto-compatible interface required for certification.',
           },
           {
             q: 'Which app handles model storage best?',
