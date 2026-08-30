@@ -22,7 +22,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
       current_models_mentioned: ['Phi-4 Mini', 'Gemma 4 E2B', 'Llama 3.2 3B', 'Qwen3 8B', 'DeepSeek-R1 7B', 'Qwen3 8B'],
       current_benchmarks_used: ['HumanEval', 'MATH', 'MMLU'],
       current_hardware_mentioned: ['Intel i7-12700', 'AMD Ryzen 7 5700X', 'Apple M3', 'Apple M4'],
-      leadAnswerBlock: '**CPU-only inference works well for 3–13B models on modern processors. Best picks: Phi-4 Mini (3.8B, 2.3 GB, 12 tokens/sec on CPU) for general chat, Gemma 4 E2B (1.5 GB, fastest) for speed-critical tasks, and Llama 3.2 3B (2 GB, balanced) for quality. Use Ollama or llama.cpp with CPU mode. CPU inference is 10–30× slower than GPU but uses no dedicated video VRAM — just system RAM.**',
+      leadAnswerBlock: '**CPU-only inference works well for 3–13B models on modern processors. Best picks: Phi-4 Mini (3.8B, 2.3 GB, 12 tokens/sec on CPU) for general chat, Gemma 4 E2B (1.5 GB, fastest) for speed-critical tasks, and Llama 3.2 3B (2 GB, balanced) for quality. Use Ollama or llama.cpp with CPU mode. CPU inference is 10–30× slower than GPU but uses no dedicated video VRAM — just system RAM.** Every AI model here is open source and runs on the CPU alone, with no GPU and no cloud API.',
       quickAnswerTop: {
         en: {
           question: 'Can I run an LLM without a GPU and which models work on CPU only?',
@@ -228,6 +228,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             { q: 'How much RAM do I need for CPU-only inference?', a: 'Use the rule: GGUF file size + 500 MB overhead. Phi-4 Mini (2.3 GB) needs 3 GB RAM. Gemma 4 E2B (1.5 GB) needs 2 GB RAM. Qwen3 8B (5 GB) needs 5 GB RAM.' },
             { q: 'How do I enable CPU-only mode?', a: 'In Ollama, simply run: ollama run phi:mini. Ollama auto-detects CPU-only systems. In llama.cpp, use --n-gpu-layers 0. In LM Studio, set GPU to None under Settings.' },
             { q: 'Is CPU inference practical for production?', a: 'Yes, if you don\'t need real-time latency. Batch processing, asynchronous APIs, and offline workflows all work great on CPU. For interactive chat (sub-1-second latency), use GPU.' },
+            { q: 'Which CPU-only models handle long context best?', a: 'Gemma 4 E2B and DeepSeek-R1 7B both carry 128K context windows, the widest of the five models compared here. Qwen3 8B follows at 32K, Llama 3.2 3B at 8K, and Phi-4 Mini \u2014 the speed pick \u2014 is capped at 4K, so it is the wrong choice if you need to feed in long documents. One caveat that matters more on CPU than on a GPU: a long context is not free. Prompt processing scales with the number of tokens you load, so a 128K window that fits in RAM can still take minutes to fill before the first token appears. If you do not need the whole window, cap it with --context and you will get answers back noticeably faster.' },
           ],
         },
         nextSteps: {
@@ -454,6 +455,14 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             'acceptedAnswer': {
               '@type': 'Answer',
               'text': 'Yes, if you don\'t need real-time latency. Batch processing, asynchronous APIs, and offline workflows all work great on CPU. For interactive chat (sub-1-second latency), use GPU.',
+            },
+          },
+          {
+            '@type': 'Question',
+            'name': 'Which CPU-only models handle long context best?',
+            'acceptedAnswer': {
+              '@type': 'Answer',
+              'text': 'Gemma 4 E2B and DeepSeek-R1 7B both carry 128K context windows, the widest of the five models compared here. Qwen3 8B follows at 32K, Llama 3.2 3B at 8K, and Phi-4 Mini \u2014 the speed pick \u2014 is capped at 4K, so it is the wrong choice if you need to feed in long documents. One caveat that matters more on CPU than on a GPU: a long context is not free. Prompt processing scales with the number of tokens you load, so a 128K window that fits in RAM can still take minutes to fill before the first token appears. If you do not need the whole window, cap it with --context and you will get answers back noticeably faster.',
             },
           },
         ],
