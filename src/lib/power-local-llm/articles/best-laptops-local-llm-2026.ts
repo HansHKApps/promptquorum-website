@@ -497,6 +497,7 @@ export const article: Partial<Record<Language, LLMArticle>> = {
             q: 'Can I upgrade the GPU in a laptop later?',
             a: 'In almost all laptops, no — the GPU is soldered to the motherboard and cannot be changed. That makes VRAM a permanent choice you must get right at purchase: an 8 GB GPU fits 7B models, a 12 GB GPU is the safer floor for 13B. The Framework Laptop 16 is modular for RAM and some components, but the GPU is still chosen at configuration time.',
           },
+            { q: 'What is the best computer for running AI models locally — laptop or desktop?', a: 'A desktop wins on raw capability for the same money: you can put a 24GB card in one, run it at full power, and cool it properly. A laptop wins when the machine has to travel, and the gap has narrowed enough that it is no longer a compromise for most work. If you want one computer for running AI models locally and it must be portable, the deciding number is unified memory or VRAM, not the CPU. The picks above are ranked on exactly that, with measured token speeds for large language models at each price tier.' },
         ],
       },
       relatedReading: {
